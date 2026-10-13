@@ -109,6 +109,7 @@ namespace JE
 
             AZStd::unique_ptr<MaterialWorkspaceSession> m_workspaceSession;
             bool m_workspacePaneRegistered = false;
+            bool m_graphWorkspacePaneRegistered = false;
             AZStd::unique_ptr<MaterialBrowserInteractions> m_materialBrowserInteractions;
             AZStd::unordered_set<AZStd::pair<AZ::EntityId, JE::Render::MaterialAssignmentId>> m_materialPreviewRequests;
             AZStd::unordered_map<AZ::EntityId, AZStd::unordered_map<JE::Render::MaterialAssignmentId, QPixmap>> m_materialPreviews;

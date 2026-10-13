@@ -1,0 +1,167 @@
+{
+  "capturedUtc": "2026-10-13T06:32:20.1918281Z",
+  "execution": "APBatch execution2; no rerun",
+  "apBatchExitCode": 1,
+  "apBatchSummary": {
+    "failedAssets": 347,
+    "errorsReported": 385,
+    "warningsReported": 2028,
+    "successfulAssets": 2
+  },
+  "jobLogInventory": {
+    "allJobLogs": 694,
+    "processLogs": 348,
+    "processLogsWithFirstError": 347,
+    "processLogsWithoutError": 1,
+    "noErrorProcessLogSources": [
+      {
+        "source": null,
+        "log": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-passgraph-workspace-rev1\\ap-migration-attempt1\\execution2\\logs\\JobLogs\\engine.json-815265798-44308.log"
+      }
+    ]
+  },
+  "firstErrorClassification": [
+    {
+      "cause": "Image loader failed to load image file",
+      "count": 327,
+      "sourceTypeCounts": [
+        {
+          "extension": ".bmp",
+          "count": 1
+        },
+        {
+          "extension": ".gif",
+          "count": 1
+        },
+        {
+          "extension": ".jpg",
+          "count": 3
+        },
+        {
+          "extension": ".png",
+          "count": 271
+        },
+        {
+          "extension": ".tif",
+          "count": 51
+        }
+      ],
+      "normalizedFirstErrorText": "Image Processing: Load image file <source> failed",
+      "examples": [
+        {
+          "source": "F:/JericoEngine/JericoEngine/Gems/EMotionFX/Assets/Editor/Images/DockHandle.png",
+          "logPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-passgraph-workspace-rev1\\ap-migration-attempt1\\execution2\\logs\\JobLogs\\Editor\\Images\\DockHandle.png-774478516-43684.log",
+          "logSha256": "D813A1B176F14C53A7546577C584FA42DC7888FB0652E331EB81B8226B2E440E",
+          "firstErrorLine": 27,
+          "firstErrorText": "~~1791872296050~~1~~000000000002D138~~AssetBuilder~~E: Image Processing: Load image file F:/JericoEngine/JericoEngine/Gems/EMotionFX/Assets/Editor/Images/DockHandle.png failed",
+          "precedingWarning": {
+            "line": 24,
+            "text": "~~1791872296050~~1~~000000000002D138~~AssetBuilder~~W: ImageProcessing: Failed to load image file: F:/JericoEngine/JericoEngine/Gems/EMotionFX/Assets/Editor/Images/DockHandle.png"
+          }
+        },
+        {
+          "source": "F:/JericoEngine/JericoEngine/Assets/Engine/EngineAssets/Icons/AverageMemoryUsage.TIF",
+          "logPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-passgraph-workspace-rev1\\ap-migration-attempt1\\execution2\\logs\\JobLogs\\EngineAssets\\Icons\\AverageMemoryUsage.TIF-1264314670-43896.log",
+          "logSha256": "3D870E99D04F3EF0F5BA9DD2AAF6B983BC25AC5C8188102FB49C68DA5A81DDCC",
+          "firstErrorLine": 36,
+          "firstErrorText": "~~1791872295186~~1~~000000000002D138~~AssetBuilder~~E: Image Processing: Load image file F:/JericoEngine/JericoEngine/Assets/Engine/EngineAssets/Icons/AverageMemoryUsage.TIF failed",
+          "precedingWarning": {
+            "line": 33,
+            "text": "~~1791872295186~~1~~000000000002D138~~AssetBuilder~~W: ImageProcessing: Failed to load image file: F:/JericoEngine/JericoEngine/Assets/Engine/EngineAssets/Icons/AverageMemoryUsage.TIF"
+          }
+        },
+        {
+          "source": "F:/JericoEngine/JericoEngine/Gems/Atom/Feature/Common/Assets/Materials/Presets/MacBeth/.source/tTail9S.jpg",
+          "logPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-passgraph-workspace-rev1\\ap-migration-attempt1\\execution2\\logs\\JobLogs\\Materials\\Presets\\MacBeth\\.source\\tTail9S.jpg-694661226-44290.log",
+          "logSha256": "3BF8DDE1D387D11ACFBE64884932B15A4F40E8F0A79FA13DB76990EA5EE841B1",
+          "firstErrorLine": 27,
+          "firstErrorText": "~~1791872295455~~1~~000000000002D138~~AssetBuilder~~E: Image Processing: Load image file F:/JericoEngine/JericoEngine/Gems/Atom/Feature/Common/Assets/Materials/Presets/MacBeth/.source/tTail9S.jpg failed",
+          "precedingWarning": {
+            "line": 24,
+            "text": "~~1791872295455~~1~~000000000002D138~~AssetBuilder~~W: ImageProcessing: Failed to load image file: F:/JericoEngine/JericoEngine/Gems/Atom/Feature/Common/Assets/Materials/Presets/MacBeth/.source/tTail9S.jpg"
+          }
+        }
+      ]
+    },
+    {
+      "cause": "EXR loader rejected invalid EXR",
+      "count": 11,
+      "sourceTypeCounts": [
+        {
+          "extension": ".exr",
+          "count": 11
+        }
+      ],
+      "normalizedFirstErrorText": "Image Processing: ExrLoader: file [<source>] is not a valid exr file",
+      "examples": [
+        {
+          "source": "F:/JericoEngine/JericoEngine/Gems/AtomLyIntegration/CommonFeatures/Assets/EnvHDRi/photo_studio_01_4k_iblskyboxcm.exr",
+          "logPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-passgraph-workspace-rev1\\ap-migration-attempt1\\execution2\\logs\\JobLogs\\EnvHDRi\\photo_studio_01_4k_iblskyboxcm.exr-2875038196-43774.log",
+          "logSha256": "A1B2E8326A30C3D3B19324AB7A59CEBB5C71A48D5638885C8FB5577E3A100D82",
+          "firstErrorLine": 9,
+          "firstErrorText": "~~1791872295937~~1~~0000000000038CFC~~AssetBuilder~~E: Image Processing: ExrLoader: file [F:/JericoEngine/JericoEngine/Gems/AtomLyIntegration/CommonFeatures/Assets/EnvHDRi/photo_studio_01_4k_iblskyboxcm.exr] is not a valid exr file",
+          "precedingWarning": null
+        },
+        {
+          "source": "F:/JericoEngine/JericoEngine/Gems/Atom/Feature/Common/Assets/LightingPresets/default_iblskyboxcm.exr",
+          "logPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-passgraph-workspace-rev1\\ap-migration-attempt1\\execution2\\logs\\JobLogs\\LightingPresets\\default_iblskyboxcm.exr-3674127609-44284.log",
+          "logSha256": "A78E9CC354BDD11D6857669FA77ADF312399503EC9C2B9A25F74D6F62E7367A2",
+          "firstErrorLine": 9,
+          "firstErrorText": "~~1791872295413~~1~~0000000000038CFC~~AssetBuilder~~E: Image Processing: ExrLoader: file [F:/JericoEngine/JericoEngine/Gems/Atom/Feature/Common/Assets/LightingPresets/default_iblskyboxcm.exr] is not a valid exr file",
+          "precedingWarning": null
+        },
+        {
+          "source": "F:/JericoEngine/JericoEngine/Gems/Atom/Feature/Common/Assets/LightingPresets/HighContrast/goegap_4k_iblglobalcm.exr",
+          "logPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-passgraph-workspace-rev1\\ap-migration-attempt1\\execution2\\logs\\JobLogs\\LightingPresets\\HighContrast\\goegap_4k_iblglobalcm.exr-3503639192-43662.log",
+          "logSha256": "A07E7BB0A1E3AEA1FF9494BB5BCA1D839DC095F5A14ACF5F3C9B79D3984E37CF",
+          "firstErrorLine": 9,
+          "firstErrorText": "~~1791872295372~~1~~000000000002D138~~AssetBuilder~~E: Image Processing: ExrLoader: file [F:/JericoEngine/JericoEngine/Gems/Atom/Feature/Common/Assets/LightingPresets/HighContrast/goegap_4k_iblglobalcm.exr] is not a valid exr file",
+          "precedingWarning": null
+        }
+      ]
+    },
+    {
+      "cause": "FBX parser rejected source (TOK_DATA at line 1 col 8)",
+      "count": 9,
+      "sourceTypeCounts": [
+        {
+          "extension": ".fbx",
+          "count": 9
+        }
+      ],
+      "normalizedFirstErrorText": "Error: Failed to import Asset Importer Scene. Error returned: FBX-Parser (TOK_DATA, line 1, col 8) unexpected token, expected TOK_KEY",
+      "examples": [
+        {
+          "source": "F:/JericoEngine/JericoEngine/Gems/Atom/Feature/Common/Assets/Models/DiffuseProbeSphere.fbx",
+          "logPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-passgraph-workspace-rev1\\ap-migration-attempt1\\execution2\\logs\\JobLogs\\Models\\DiffuseProbeSphere.fbx-675297323-43878.log",
+          "logSha256": "699E945E5201016BA778783401630FF3E09E3EED97F119B8A27590C6C6A82805",
+          "firstErrorLine": 29,
+          "firstErrorText": "~~1791872291872~~1~~0000000000038CFC~~AssetBuilder~~E: Error: Failed to import Asset Importer Scene. Error returned: FBX-Parser (TOK_DATA, line 1, col 8) unexpected token, expected TOK_KEY",
+          "precedingWarning": null
+        },
+        {
+          "source": "F:/JericoEngine/JericoEngine/Gems/Atom/Feature/Common/Assets/Models/OcclusionCullingPlane.fbx",
+          "logPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-passgraph-workspace-rev1\\ap-migration-attempt1\\execution2\\logs\\JobLogs\\Models\\OcclusionCullingPlane.fbx-2174563544-43716.log",
+          "logSha256": "614482F5D941C1B83BC59613595CDE055AD58E9EA9D5DCC4F1BF1D78907C5F71",
+          "firstErrorLine": 17,
+          "firstErrorText": "~~1791872291876~~1~~000000000002D138~~AssetBuilder~~E: Error: Failed to import Asset Importer Scene. Error returned: FBX-Parser (TOK_DATA, line 1, col 8) unexpected token, expected TOK_KEY",
+          "precedingWarning": null
+        },
+        {
+          "source": "F:/JericoEngine/JericoEngine/Gems/Atom/Feature/Common/Assets/Models/ReflectionProbeSphere.fbx",
+          "logPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-passgraph-workspace-rev1\\ap-migration-attempt1\\execution2\\logs\\JobLogs\\Models\\ReflectionProbeSphere.fbx-1026687048-44164.log",
+          "logSha256": "89E16950B2DA1CC46C31CA46341F7A70EA0EB01D9BD23239AC507ACC6E8B12A1",
+          "firstErrorLine": 17,
+          "firstErrorText": "~~1791872291880~~1~~0000000000038CFC~~AssetBuilder~~E: Error: Failed to import Asset Importer Scene. Error returned: FBX-Parser (TOK_DATA, line 1, col 8) unexpected token, expected TOK_KEY",
+          "precedingWarning": null
+        }
+      ]
+    }
+  ],
+  "limits": [
+    "Counts use each process JobLog first AssetBuilder E line; they reconcile exactly to the 347 failed assets in AP_Batch summary.",
+    "Image loader category is the logged failure text; this classification does not establish one common cause or assume LFS pointers. TIFF sample has a specific bad-magic warning; other image samples say QImage could not load.",
+    "Batch totals include unrelated project/engine assets and are not attributed to PassCanvas.",
+    "No source files, build, AP rerun, or other jobs were changed or started."
+  ]
+}

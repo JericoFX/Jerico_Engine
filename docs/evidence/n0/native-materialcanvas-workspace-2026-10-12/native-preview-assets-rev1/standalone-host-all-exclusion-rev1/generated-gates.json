@@ -1,0 +1,97 @@
+{
+  "capturedUtc": "2026-10-13T01:46:01.5359797Z",
+  "configureExit": 0,
+  "configureResultPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\standalone-host-all-exclusion-rev1\\native-attempt1\\configure.result.json",
+  "configureResultSha256": "AD60DA77B31AF6C4069021DC453DBC5828E8E191B1BEAC97E5105F052164ADC8",
+  "configureStderrSha256": "E4AAD40ADB2F7C1F6FD6443D22D5B73B58448EA48F5654D451726CDB24C33803",
+  "cache": {
+    "capturedUtc": "2026-10-13T01:46:00.8763364Z",
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\CMakeCache.txt",
+    "sha256": "ED5C27F041BD233556170A9E95B8F1F2CD5DD305AA4F10FB6504E1A9AFB96ABB",
+    "requiredLines": [
+      "CMAKE_GENERATOR:INTERNAL=Visual Studio 17 2022",
+      "CMAKE_GENERATOR_PLATFORM:INTERNAL=x64",
+      "FETCHCONTENT_FULLY_DISCONNECTED:BOOL=ON",
+      "LY_PACKAGE_SERVER_URLS:STRING=",
+      "O3DE_EXTERNAL_SUBDIRS:STRING=",
+      "LY_PROJECTS:STRING=F:/JericoEngine/JericoEngine/Projects/JEEditorFixture"
+    ],
+    "missingLines": []
+  },
+  "allBuildPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\ALL_BUILD.vcxproj",
+  "allBuildSha256": "A60BADB24B3FE43BF450290F55A9C8544CDD8A03A5BA8A4531A68151274F2848",
+  "allBuildProjectReferenceCount": 263,
+  "allBuildMaterialEditorReferences": [],
+  "allBuildMaterialCanvasReferences": [],
+  "explicitToolProjects": [
+    "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\External\\MaterialEditor-a211cd26\\Code\\MaterialEditor.vcxproj",
+    "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\External\\MaterialCanvas-21c43004\\Code\\MaterialCanvas.vcxproj"
+  ],
+  "explicitToolProjectsPresent": true,
+  "editorProjectPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\Code\\Editor\\Editor.vcxproj",
+  "editorProjectSha256": "0D7D60D50411A3D026F9A4ABA00AC0573F5DFF204DC02463D3F4CA821C066349",
+  "editorProjectMaterialToolMentions": 0,
+  "editorRegistryFlags": {
+    "materialEditor": false,
+    "materialCanvas": false,
+    "passCanvas": true,
+    "shaderManagementConsole": true
+  },
+  "runtimeRegistries": [
+    {
+      "file": "cmake_dependencies.assetprocessor.setreg",
+      "materialEditor": false,
+      "materialCanvas": false,
+      "sha256": "60BDC590AC9DFCD4F77F95CB9D80BA0AA7A1D3CE07683FAD467375C5D92AE547"
+    },
+    {
+      "file": "cmake_dependencies.assetprocessorbatch.setreg",
+      "materialEditor": false,
+      "materialCanvas": false,
+      "sha256": "60BDC590AC9DFCD4F77F95CB9D80BA0AA7A1D3CE07683FAD467375C5D92AE547"
+    },
+    {
+      "file": "cmake_dependencies.assetbuilder.setreg",
+      "materialEditor": false,
+      "materialCanvas": false,
+      "sha256": "60BDC590AC9DFCD4F77F95CB9D80BA0AA7A1D3CE07683FAD467375C5D92AE547"
+    },
+    {
+      "file": "cmake_dependencies.jeeditorfixture_gamelauncher.setreg",
+      "materialEditor": false,
+      "materialCanvas": false,
+      "sha256": "97115F5B2950A6A656D89718700DFA57E79FF02F11D868B89BCCA276398F23EB"
+    },
+    {
+      "file": "cmake_dependencies.jeeditorfixture.editor.setreg",
+      "materialEditor": false,
+      "materialCanvas": false,
+      "sha256": "9245697AE593C1C0B226CAFB24D31037FCB13CF68BF3E4257ED3172749756454"
+    },
+    {
+      "file": "cmake_dependencies.jeeditorfixture.assetprocessor.setreg",
+      "materialEditor": false,
+      "materialCanvas": false,
+      "sha256": "D5D01535004A9B9F01676E3F8B49F440ECF8385A57924D670AED791461888AF0"
+    },
+    {
+      "file": "cmake_dependencies.jeeditorfixture.assetprocessorbatch.setreg",
+      "materialEditor": false,
+      "materialCanvas": false,
+      "sha256": "D5D01535004A9B9F01676E3F8B49F440ECF8385A57924D670AED791461888AF0"
+    },
+    {
+      "file": "cmake_dependencies.jeeditorfixture.assetbuilder.setreg",
+      "materialEditor": false,
+      "materialCanvas": false,
+      "sha256": "D5D01535004A9B9F01676E3F8B49F440ECF8385A57924D670AED791461888AF0"
+    },
+    {
+      "file": "cmake_dependencies.jeeditorfixture.jeeditorfixture_gamelauncher.setreg",
+      "materialEditor": false,
+      "materialCanvas": false,
+      "sha256": "79DFA32E57D2168F8C5D83082B3C48250BB881961157A392F590396785DFA1E4"
+    }
+  ],
+  "processesBeforeEditorBuild": []
+}

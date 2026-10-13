@@ -1,0 +1,1554 @@
+{
+  "utc": "2026-10-13T12:34:46.0992064Z",
+  "owner": "root",
+  "scope": "Raw SDK configure/build/install/import/link/loader proof; no installed SDK or build binaries archived.",
+  "sourceEvidenceRoot": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-passgraph-workspace-rev1\\sdk-legacy-install-analysis-rev1",
+  "archive": "sdk-validation-raw-rev1.zip",
+  "archiveBytes": 7774751,
+  "archiveSHA256": "A5BF658ACAC502A2D34C031DC4A2959B99D3FC8E1ED522C9438CA803E546E3BF",
+  "entries": 308,
+  "uncompressedBytes": 65638443.0,
+  "everyEntryReopenedAndHashVerified": true,
+  "artifacts": [
+    {
+      "entry": "analysis-receipt.json",
+      "bytes": 8788,
+      "sha256": "EF9CBF36015B1CEDB45F046146BCCFC71EAB1E4294D0E25F1B10EF8A17F5C1C4"
+    },
+    {
+      "entry": "CheckGeneratedSdk.ps1",
+      "bytes": 9334,
+      "sha256": "557E851A95232FAFB3B0C8DEF547F44FACCDF25E14C321D1F28BE117BA55B667"
+    },
+    {
+      "entry": "evidence-freeze.json",
+      "bytes": 7229,
+      "sha256": "46D0A71B8A6F21AD3DF36089E2200BECC98CCB103363FD3FDD8079D8C8CDD040"
+    },
+    {
+      "entry": "git-safe-sync-before-sdk-closure.json",
+      "bytes": 612,
+      "sha256": "16E2CC942B759CFC094EA4E771B1D6CA1F47A44CD4D0C56245FDD3625DAC58FA"
+    },
+    {
+      "entry": "graft-mcp-timeout-resource-snapshot-rev1.json",
+      "bytes": 7453,
+      "sha256": "47846494FA571B311E70D055BF1D7C73DCB49E3057941C6DF2D003FE1A687F5A"
+    },
+    {
+      "entry": "native-fileutil-source-validation-attempt1/source-green-postflight.json",
+      "bytes": 1155,
+      "sha256": "72A754E33E724A3E3C4014A52B7C4D7A3B7ED1F1D6E270A12C8112D283DAEA8C"
+    },
+    {
+      "entry": "native-fileutil-source-validation-attempt1/source-green-start.json",
+      "bytes": 1068,
+      "sha256": "C657C187D4090FD9856455B610F7872E3C519E8740CB901F30D805DA5CAF8D03"
+    },
+    {
+      "entry": "native-fileutil-source-validation-attempt1/source-green-summary.json",
+      "bytes": 5342,
+      "sha256": "4C7481EDFD31C92608FAE528D5C71CB9D3BB80D8FFD50D246F8C2CFA5D795BAA"
+    },
+    {
+      "entry": "native-fileutil-source-validation-attempt1/source-green.stderr.log",
+      "bytes": 0,
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "entry": "native-fileutil-source-validation-attempt1/source-green.stdout.log",
+      "bytes": 375,
+      "sha256": "9BD8EB438F4661A4FF586D532AB888B22148F02B01AC85FED310B8481ECD9464"
+    },
+    {
+      "entry": "native-fileutil-source-validation-attempt2/cmake-native-exit.txt",
+      "bytes": 1,
+      "sha256": "5FECEB66FFC86F38D952786C6D696C79C2DBC239DD4E91B46729D73A27FB57E9"
+    },
+    {
+      "entry": "native-fileutil-source-validation-attempt2/source-green-postflight.json",
+      "bytes": 536,
+      "sha256": "E742EF1807969CC91892904684F9D3502A2E156940B4E87F144ECB7F6DB79501"
+    },
+    {
+      "entry": "native-fileutil-source-validation-attempt2/source-green-preflight.json",
+      "bytes": 454,
+      "sha256": "C29D78BC833AE804CDE6C639354147C3270C2F06E37352E587DF10951A789AB0"
+    },
+    {
+      "entry": "native-fileutil-source-validation-attempt2/source-green-result.json",
+      "bytes": 1181,
+      "sha256": "D9E048EC4AE795FBD873428AA5B9E541B793E850540AA86DD64931AD64E8218B"
+    },
+    {
+      "entry": "native-fileutil-source-validation-attempt2/source-green-start.json",
+      "bytes": 1340,
+      "sha256": "1437E99820B67B294D54C6462B59F6C8D3ACA29121D6F9326CEC51A6BE5DF61D"
+    },
+    {
+      "entry": "native-fileutil-source-validation-attempt2/source-green-summary.json",
+      "bytes": 2871,
+      "sha256": "E5B232093D3F869F507CCE9B566AD1409425F0020DF5C6A0025B629B2134F4B1"
+    },
+    {
+      "entry": "native-fileutil-source-validation-attempt2/source-green.stderr.log",
+      "bytes": 0,
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "entry": "native-fileutil-source-validation-attempt2/source-green.stdout.log",
+      "bytes": 375,
+      "sha256": "292B12FC4E604F9E96AEFC6098298675E4EDC74AC8446EEE8099AF5CCDDCCA1C"
+    },
+    {
+      "entry": "native-tests-input-comparison-after-configure6.json",
+      "bytes": 684,
+      "sha256": "DF3449FCA47A2BB9E72BE95D0D036B25C2A9782F7248AD957C38AE36F23C881C"
+    },
+    {
+      "entry": "parent-nine-profile-payloads-build-review-rev1.json",
+      "bytes": 2929,
+      "sha256": "97A59E43288B9F251FFC5FA2568D84A638583B2348D35935A1EC72A8B30C1CFA"
+    },
+    {
+      "entry": "parent-productive-compile-options-parity-rev1.json",
+      "bytes": 600,
+      "sha256": "0292CF9CBD37018FC018F1650241B4D54867877393B3E79ADA7A2E816DA1164A"
+    },
+    {
+      "entry": "PrepareSdkProfileInstall-rev4.ps1",
+      "bytes": 13793,
+      "sha256": "D8B46EADC25B8F32C86C5F5F97C3E5CE25EF9DE59A687645417E05C6642079D1"
+    },
+    {
+      "entry": "profile-full-install-script-audit-rev1.json",
+      "bytes": 111795,
+      "sha256": "A5773DC814E94873D3E81730843BB596118EFE07CC577CA2C4F1F0E74A5F874D"
+    },
+    {
+      "entry": "profile-full-install-script-parent-review-rev1.json",
+      "bytes": 1410,
+      "sha256": "DDEBD17FE8E63B0146FCF59922F589120B996BC857D45C648B91218232E9622F"
+    },
+    {
+      "entry": "sdk-authoring-example-exclusion-rev1/preservation-status-before.txt",
+      "bytes": 30993,
+      "sha256": "060405C9B55507428533C1110565C7CF16B05354610B650C49F2E9DD78D335C8"
+    },
+    {
+      "entry": "sdk-authoring-example-exclusion-rev1/receipt.json",
+      "bytes": 565,
+      "sha256": "29FE3D0465055B124BA2D3D2190B0835A96687EB1024683A11EDCE66A1DC2D4F"
+    },
+    {
+      "entry": "sdk-authoring-example-exclusion-rev1/source-diff.patch",
+      "bytes": 1147,
+      "sha256": "A1C234770BD0A61C07DDA78588AAC818260FEB5F9B4CFDED1E2AA9068F3791E0"
+    },
+    {
+      "entry": "sdk-build-requirements-install-rev1/before.bin",
+      "bytes": 711,
+      "sha256": "61E3641F04E67E8393FFF8BCACD02DC6C60F2CCEE2D934B73DEAD13AB7B61A4E"
+    },
+    {
+      "entry": "sdk-build-requirements-install-rev1/before.json",
+      "bytes": 806,
+      "sha256": "13D6E2878F36194573AE72DEB2E70DCDBBCE036F27DEDEF996643F97B427CB91"
+    },
+    {
+      "entry": "sdk-external-public-headers-rev1/generated-metadata-deltas-after-configure.json",
+      "bytes": 8263,
+      "sha256": "63A6FA911405BB1E7C95CEC4796E05152026DA4BFFA91488B0766366B3E77494"
+    },
+    {
+      "entry": "sdk-external-public-headers-rev1/generated-notfound-red-files.txt",
+      "bytes": 2523,
+      "sha256": "89BA0545E19C933D77F036199B966A85721FD9713C753C7A5A1FCEBD674F23E0"
+    },
+    {
+      "entry": "sdk-external-public-headers-rev1/Install_common.cmake.before-notfound-guard.bin",
+      "bytes": 71803,
+      "sha256": "28542B327A68C85328AE43E16609AFC124D2623FD8A25B2D3BB944E5E5CFFB9A"
+    },
+    {
+      "entry": "sdk-external-public-headers-rev1/Install_common.cmake.before.bin",
+      "bytes": 70652,
+      "sha256": "1D7AD52061E842C853F3754354F0E56F649BF424071948C62557A16208322EE2"
+    },
+    {
+      "entry": "sdk-external-public-headers-rev1/receipt-final-rev2.json",
+      "bytes": 1505,
+      "sha256": "3DE9345DD9B441B8316654B9088DE4A238ECC66496B8226FEB6F48C6F426E755"
+    },
+    {
+      "entry": "sdk-external-public-headers-rev1/receipt-final.json",
+      "bytes": 1282,
+      "sha256": "554FA3B82DFDB9E33F31CEFFC34BBF62B66F9BD957185474D8C201AD771125A4"
+    },
+    {
+      "entry": "sdk-external-public-headers-rev1/receipt.json",
+      "bytes": 1282,
+      "sha256": "C83D4ED7B513820B2A3CB0D0902E546A2B9F3F89964E85A19E464E8DB299ECC5"
+    },
+    {
+      "entry": "sdk-external-public-headers-rev1/review-luna-notfound.json",
+      "bytes": 2496,
+      "sha256": "E9F03D86998EE8BD0F30663A9E792B93055AB270E743210979602EC3D926BC74"
+    },
+    {
+      "entry": "sdk-external-public-headers-rev1/review-luna.json",
+      "bytes": 2768,
+      "sha256": "7520798AF2D0D2876FA44D11D4AE488F6C688843D13BC84341995EF59F5CD259"
+    },
+    {
+      "entry": "sdk-external-public-headers-rev1/source-diff-final.patch",
+      "bytes": 7314,
+      "sha256": "1D95F3E5BD93A810EC9E57490848FDAECE5B4F43F0EF37E7BA539210FB78C7E4"
+    },
+    {
+      "entry": "sdk-external-public-headers-rev1/source-diff.patch",
+      "bytes": 7187,
+      "sha256": "76CB39CD5C56AF63E6AA075EB8DD85F7D73D62EADD9744DD275398C6A936623F"
+    },
+    {
+      "entry": "sdk-missing-profile-payloads-build-attempt1/build-result.json",
+      "bytes": 1804,
+      "sha256": "96AB3CFDC567B350E900C601BA5B5CE7D53D269C4CEFB9BDB52C4D4A786D88C6"
+    },
+    {
+      "entry": "sdk-missing-profile-payloads-build-attempt1/frozen-build-inputs.json",
+      "bytes": 3055901,
+      "sha256": "8C1C3CD68ADB20F6743433382801091CD69C53C6BFD688F39BD306910968B692"
+    },
+    {
+      "entry": "sdk-missing-profile-payloads-build-attempt1/native-exit.txt",
+      "bytes": 1,
+      "sha256": "6B86B273FF34FCE19D6B804EFF5A3F5747ADA4EAA22F1D49C01E52DDB7875B4B"
+    },
+    {
+      "entry": "sdk-missing-profile-payloads-build-attempt1/parent-live-native-pid-snapshot.json",
+      "bytes": 111,
+      "sha256": "61B4713CA3A4762C73DABB33232551E493773B84551C0DFEB11433920BADCC99"
+    },
+    {
+      "entry": "sdk-missing-profile-payloads-build-attempt1/start.json",
+      "bytes": 989,
+      "sha256": "6E4C0301172395CD9DAA1DC03ADC9B6DEB5F63C2DEAF013BF158B0A7B6183B6D"
+    },
+    {
+      "entry": "sdk-missing-profile-payloads-build-attempt1/stderr.log",
+      "bytes": 0,
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "entry": "sdk-missing-profile-payloads-build-attempt1/stdout.log",
+      "bytes": 2429,
+      "sha256": "C3140DC6E1662849CF3AAAE4F80DF10CA266933E8CEF715827EFE0EB11FA9188"
+    },
+    {
+      "entry": "sdk-missing-profile-payloads-build-attempt2/build-result.json",
+      "bytes": 2606,
+      "sha256": "CDC8615C1FE3B6DF1CFC9B89D6D6576D5B3FCCD3DA628907B78DC44C0D5616E9"
+    },
+    {
+      "entry": "sdk-missing-profile-payloads-build-attempt2/frozen-build-inputs.json",
+      "bytes": 3056109,
+      "sha256": "BE3CF736A3ACC8BEE7518FAD8336196902F447B7444355A23684B8335F62A939"
+    },
+    {
+      "entry": "sdk-missing-profile-payloads-build-attempt2/native-exit.txt",
+      "bytes": 1,
+      "sha256": "5FECEB66FFC86F38D952786C6D696C79C2DBC239DD4E91B46729D73A27FB57E9"
+    },
+    {
+      "entry": "sdk-missing-profile-payloads-build-attempt2/postflight.json",
+      "bytes": 3132,
+      "sha256": "CF62815B6DDF7F96DB36FE04027EBCA3794A1D8F1C0C46EF9786D7F00A369AAC"
+    },
+    {
+      "entry": "sdk-missing-profile-payloads-build-attempt2/start.json",
+      "bytes": 1082,
+      "sha256": "52015FF3C4F51D4D62E83847F396597710CF80375F3CD9D2D2FEDC581950F12A"
+    },
+    {
+      "entry": "sdk-missing-profile-payloads-build-attempt2/stderr.log",
+      "bytes": 0,
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "entry": "sdk-missing-profile-payloads-build-attempt2/stdout.log",
+      "bytes": 53170,
+      "sha256": "AA058C45B7576C1D43E36FB1D2F30CFEC343FF242DD755F8FFD4D19BFB30B6F0"
+    },
+    {
+      "entry": "sdk-profile-configure-attempt4/final-native-test-freeze-comparison.json",
+      "bytes": 632,
+      "sha256": "B6A93EAD0151CE67474B99D5672407CD4F9C0BF87D6B243EEF762F43731047D8"
+    },
+    {
+      "entry": "sdk-profile-configure-attempt4/generated-config-check.json",
+      "bytes": 36898,
+      "sha256": "7A548580A63C74C2ED363871D6DE576E37F828E913A4E73C9A0260303067AC1C"
+    },
+    {
+      "entry": "sdk-profile-configure-attempt4/native-exit.txt",
+      "bytes": 1,
+      "sha256": "5FECEB66FFC86F38D952786C6D696C79C2DBC239DD4E91B46729D73A27FB57E9"
+    },
+    {
+      "entry": "sdk-profile-configure-attempt4/normalized-install-script-audit.json",
+      "bytes": 953747,
+      "sha256": "8EFDEA58824E21194EA5FBC78ED4604AF65C9A69895002EA42E601E1991031D7"
+    },
+    {
+      "entry": "sdk-profile-configure-attempt4/owned-graft-aborted-cleanup.json",
+      "bytes": 32033,
+      "sha256": "180DCB7216A359AEC9B98878ADE0947E2AB3127B3478BE6D7B4D92A82F01D8D2"
+    },
+    {
+      "entry": "sdk-profile-configure-attempt4/owned-graft-aborted-closure.json",
+      "bytes": 435,
+      "sha256": "FA0ED58EA3B182C0E2B81C88A64A515A5910F32C41B152B59EBBB00249274391"
+    },
+    {
+      "entry": "sdk-profile-configure-attempt4/productive-options-parity.json",
+      "bytes": 454,
+      "sha256": "38A64A655DA95256E5B0A28F49FB5666E8442DF82E778381F11E7B989CF5E42D"
+    },
+    {
+      "entry": "sdk-profile-configure-attempt4/result.json",
+      "bytes": 609,
+      "sha256": "B4FA2E63292227FF7A2DBBDA580994AB2B47FA48D7714384D4E2F66B3D6B6D4C"
+    },
+    {
+      "entry": "sdk-profile-configure-attempt4/stderr.log",
+      "bytes": 1099,
+      "sha256": "5ABD3515CC9C086990B87AD32EEE85F2A13798D05D5AC3BC341755E977014895"
+    },
+    {
+      "entry": "sdk-profile-configure-attempt4/stdout.log",
+      "bytes": 65546,
+      "sha256": "FDC865FFB1B38414363CED2AFA3EF8E8B96B22A940F309A362B7A51CC373250C"
+    },
+    {
+      "entry": "sdk-profile-configure-attempt5/configure-path-reconciliation.json",
+      "bytes": 242,
+      "sha256": "A4F9FEBA7E3FF7244BDC013B410F803BBF1511920C3826F49A4A3AFC0C7CC648"
+    },
+    {
+      "entry": "sdk-profile-configure-attempt5/configure-result.json",
+      "bytes": 668,
+      "sha256": "A907ACA4351AB276F645E1BB2742A53CC6FE41BED3B56C7BEFE9A45BB8C603E6"
+    },
+    {
+      "entry": "sdk-profile-configure-attempt5/configure-start.json",
+      "bytes": 801,
+      "sha256": "9D281742DE8BA8687934310EE4E8D58691A3AD7C2504FEB86D4132DD9BD76475"
+    },
+    {
+      "entry": "sdk-profile-configure-attempt5/configure-stderr.log",
+      "bytes": 1099,
+      "sha256": "5ABD3515CC9C086990B87AD32EEE85F2A13798D05D5AC3BC341755E977014895"
+    },
+    {
+      "entry": "sdk-profile-configure-attempt5/configure-stdout.log",
+      "bytes": 65546,
+      "sha256": "D971283B286B923C022C9621927AC0D559FC8087B606ABDD62293F7B90D67152"
+    },
+    {
+      "entry": "sdk-profile-configure-attempt5/generated-config-check.json",
+      "bytes": 36898,
+      "sha256": "EF225529217B032BE73D3C1B3E3EA9788E674D9AAEBD2C37F9273C9F2E52A488"
+    },
+    {
+      "entry": "sdk-profile-configure-attempt5/native-exit.txt",
+      "bytes": 1,
+      "sha256": "5FECEB66FFC86F38D952786C6D696C79C2DBC239DD4E91B46729D73A27FB57E9"
+    },
+    {
+      "entry": "sdk-profile-configure-attempt5/normalized-install-script-audit.json",
+      "bytes": 941318,
+      "sha256": "DD9012EA28BC086F7966279F48A0F74EB526436528739276E00B648BA162CCCA"
+    },
+    {
+      "entry": "sdk-profile-configure-attempt5/postflight.json",
+      "bytes": 1824,
+      "sha256": "06E74995650DBF0F411CC7E79B8EE118E30EB836E6E54758B9CC2A1228C9DC6C"
+    },
+    {
+      "entry": "sdk-profile-configure-attempt5/productive-options-parity.json",
+      "bytes": 454,
+      "sha256": "D4686734D2E38C00C13D396CFD0CA18AE66235AAB3C77FA3AF1D4FF2989B62DC"
+    },
+    {
+      "entry": "sdk-profile-configure-attempt5/python-install-before.bin",
+      "bytes": 2241,
+      "sha256": "EF57377F38CC90B5931A167452D6674F18082DE9076C0D378C1C42605C2DABFC"
+    },
+    {
+      "entry": "sdk-profile-configure-attempt6/configure-result.json",
+      "bytes": 380,
+      "sha256": "9B07879CF1B83563CB2DBD1C8EBDD956A6260A926981B2B2EA21345E39F26A4A"
+    },
+    {
+      "entry": "sdk-profile-configure-attempt6/configure-start.json",
+      "bytes": 633,
+      "sha256": "E21A7751F9A6059AFACB72D0E30051BC99C679CD99FCC91F99B09DEECC24EBE6"
+    },
+    {
+      "entry": "sdk-profile-configure-attempt6/configure-stderr.log",
+      "bytes": 1084,
+      "sha256": "EAE78D81117939632167B1C182E11CE1242206450AB4094A6B8E040F10E63419"
+    },
+    {
+      "entry": "sdk-profile-configure-attempt6/configure-stdout.log",
+      "bytes": 65546,
+      "sha256": "256CDE16C3F889FC041B2DAD4326D36EDAC713A3BB2D7CD571A7C5E4B53BA217"
+    },
+    {
+      "entry": "sdk-profile-configure-attempt6/frozen-configure-inputs.json",
+      "bytes": 482750,
+      "sha256": "A62F67D1C6EFA98D8F8A76367B19D569A36F4754600CACF06C46502ED9D127DD"
+    },
+    {
+      "entry": "sdk-profile-configure-attempt6/generated-config-check.json",
+      "bytes": 36898,
+      "sha256": "CE0998AD03A6971A12803ECC284860E620123C16D00F8215694102A5047DBD1E"
+    },
+    {
+      "entry": "sdk-profile-configure-attempt6/generated-engine-before.json",
+      "bytes": 2595,
+      "sha256": "EA2AFB1DFC1AB2EC4A3C0A23CDB3E362E3249FDB6E7E6156EBAEA632029F53F3"
+    },
+    {
+      "entry": "sdk-profile-configure-attempt6/native-exit.txt",
+      "bytes": 1,
+      "sha256": "5FECEB66FFC86F38D952786C6D696C79C2DBC239DD4E91B46729D73A27FB57E9"
+    },
+    {
+      "entry": "sdk-profile-configure-attempt6/normalized-install-script-audit.json",
+      "bytes": 941322,
+      "sha256": "7DA154C74D7A03D0EEF935F9064DA213A3210B8C7BF08CD245825D3118A6BE70"
+    },
+    {
+      "entry": "sdk-profile-configure-attempt6/postflight.json",
+      "bytes": 1723,
+      "sha256": "1507DD5F4200F594A18C2CE07EED8C5AF052884BE0D3F7CEFBE7B9E11613360F"
+    },
+    {
+      "entry": "sdk-profile-configure-attempt6/preflight.json",
+      "bytes": 1076,
+      "sha256": "AE4DFACDF83A508CBCA5C00355BA17590AD9420FD4A2005CFFCC8C5FC5DE3ACA"
+    },
+    {
+      "entry": "sdk-profile-configure-attempt6/productive-options-parity.json",
+      "bytes": 454,
+      "sha256": "5F47D80B4309E2E9C8ED4507F966850E128E2462508DF48901E71C45367DDA62"
+    },
+    {
+      "entry": "sdk-profile-configure-attempt6/run-configure.ps1",
+      "bytes": 3039,
+      "sha256": "76E7A8270AF93AEEFCFA410165549B8982C6D4F92E5127453216398316D6E46B"
+    },
+    {
+      "entry": "sdk-profile-configure-attempt6/source-build-inputs-after-sdk-config.json",
+      "bytes": 3057255,
+      "sha256": "E2DD5BDF624F4E91AFEE1271D7C451FB6109F5730EC314655653C4868447189D"
+    },
+    {
+      "entry": "sdk-profile-import-smoke-attempt1/configure-argv-preparation-rev1.json",
+      "bytes": 6375,
+      "sha256": "9FD44874331A70A97E4B4652320B20E6063B66107D8839CFD61503ABB733CE1A"
+    },
+    {
+      "entry": "sdk-profile-import-smoke-attempt1/configure-argv-preparation-rev2.json",
+      "bytes": 6418,
+      "sha256": "5D3C01338089C81CE926A8739B1DBAB05981283C14335E92DA86BA0DC72154E6"
+    },
+    {
+      "entry": "sdk-profile-import-smoke-attempt1/configure-native-exit.txt",
+      "bytes": 1,
+      "sha256": "6B86B273FF34FCE19D6B804EFF5A3F5747ADA4EAA22F1D49C01E52DDB7875B4B"
+    },
+    {
+      "entry": "sdk-profile-import-smoke-attempt1/configure-postflight.json",
+      "bytes": 1493,
+      "sha256": "4AFE86B1282F4D3F5CF8C0F58133B1C7BF505F0EAEF67042ACDAF03DB7A6F4AE"
+    },
+    {
+      "entry": "sdk-profile-import-smoke-attempt1/configure-result.json",
+      "bytes": 406,
+      "sha256": "EA1A7A709CA191D8751A5D88AA390EE1520C8EFE5B9FD2FB7B66F10E2C53BF73"
+    },
+    {
+      "entry": "sdk-profile-import-smoke-attempt1/configure-start.json",
+      "bytes": 4712,
+      "sha256": "310DE66EC6DA0D4B28B7C7CD86BA3D30A45DD0F12764B0B8D2BA0FB432135B89"
+    },
+    {
+      "entry": "sdk-profile-import-smoke-attempt1/configure-stderr.log",
+      "bytes": 245,
+      "sha256": "2B92B498394A07584EBF50AF085BFDB3A2DD8FB9C96452DFB710E00843E899B7"
+    },
+    {
+      "entry": "sdk-profile-import-smoke-attempt1/configure-stdout.log",
+      "bytes": 44,
+      "sha256": "204E913B87CF5C75B808CA3186AAB27BF7D903DEB3392DA1736BC0C966BA1151"
+    },
+    {
+      "entry": "sdk-profile-import-smoke-attempt1/source-preparation-rev2.json",
+      "bytes": 1167,
+      "sha256": "72539B55A91C9410408CEEE54914BD7522F80D63257EC77FC7D782984C83EC58"
+    },
+    {
+      "entry": "sdk-profile-import-smoke-attempt1/source-preparation.json",
+      "bytes": 1564,
+      "sha256": "D71E0F642D258E48602DC1171D25078402935DE877661A4BFA1971F6E89C6BCE"
+    },
+    {
+      "entry": "sdk-profile-import-smoke-attempt1/source/CMakeLists.txt",
+      "bytes": 2677,
+      "sha256": "67D44F37BADCA88B575C4FD52C4EB34921558139DA7C9AD431873CFA234A4077"
+    },
+    {
+      "entry": "sdk-profile-import-smoke-attempt1/source/main.cpp",
+      "bytes": 681,
+      "sha256": "E558158058893C8611A761F402AAF7BC26E8933A6F3E3C60AF79475C2725109F"
+    },
+    {
+      "entry": "sdk-profile-import-smoke-attempt1/source/project.json",
+      "bytes": 388,
+      "sha256": "3A7625CD2BE22DFD8B3C36C4C68932693611513A980111870371A291F12197C4"
+    },
+    {
+      "entry": "sdk-profile-import-smoke-attempt2/configure-argv-preparation.json",
+      "bytes": 6381,
+      "sha256": "FFAEA28A6F7280A04591D9F5AD486DAE5C92F77DC0208A1225B989CC0F8858B2"
+    },
+    {
+      "entry": "sdk-profile-import-smoke-attempt2/configure-native-exit.txt",
+      "bytes": 1,
+      "sha256": "6B86B273FF34FCE19D6B804EFF5A3F5747ADA4EAA22F1D49C01E52DDB7875B4B"
+    },
+    {
+      "entry": "sdk-profile-import-smoke-attempt2/configure-postflight.json",
+      "bytes": 8239,
+      "sha256": "7735614F0CDFF3C605AA60E0BADAD9C6DCD5E4D0FC8CDCEDA4DEDBDEB748AD2A"
+    },
+    {
+      "entry": "sdk-profile-import-smoke-attempt2/configure-result.json",
+      "bytes": 409,
+      "sha256": "3BA1363AC81D334AC079894927C7A5811D7D45BE58F9D4AC198401B324065CBF"
+    },
+    {
+      "entry": "sdk-profile-import-smoke-attempt2/configure-start.json",
+      "bytes": 4712,
+      "sha256": "1A2AEA8C98230C4445267F9E49DFB8D4F2379F948CA00D62ABF787116CA9C2A5"
+    },
+    {
+      "entry": "sdk-profile-import-smoke-attempt2/configure-stderr.log",
+      "bytes": 736,
+      "sha256": "D6E24EB9FD8460A7586C6FA6ED69E8F95BCC76EFB8C7648C558BAE5F6E9E6697"
+    },
+    {
+      "entry": "sdk-profile-import-smoke-attempt2/configure-stdout.log",
+      "bytes": 4896,
+      "sha256": "ACD47FC3E015AD435DE00A12CD5E670DCAF4DED6930D82752E95E14B2C1D455E"
+    },
+    {
+      "entry": "sdk-profile-import-smoke-attempt2/fixture-repair-plan.json",
+      "bytes": 1263,
+      "sha256": "27838D8A9B49B2628FE414D29E90A0F00CDB0DE601E04B7B58D59CDD1B0B3C29"
+    },
+    {
+      "entry": "sdk-profile-import-smoke-attempt2/preflight.json",
+      "bytes": 6606,
+      "sha256": "0066347E98F57452D3631B9377D0A3C78E0C939AA3A4915BE7A2CC2219099D04"
+    },
+    {
+      "entry": "sdk-profile-import-smoke-attempt2/source/CMakeLists.txt",
+      "bytes": 2811,
+      "sha256": "729B169C3694DE9AC2ACBE733FFC05685F9F7887210656B61CEECE93EBEB9537"
+    },
+    {
+      "entry": "sdk-profile-import-smoke-attempt2/source/main.cpp",
+      "bytes": 681,
+      "sha256": "E558158058893C8611A761F402AAF7BC26E8933A6F3E3C60AF79475C2725109F"
+    },
+    {
+      "entry": "sdk-profile-import-smoke-attempt2/source/project.json",
+      "bytes": 388,
+      "sha256": "3A7625CD2BE22DFD8B3C36C4C68932693611513A980111870371A291F12197C4"
+    },
+    {
+      "entry": "sdk-profile-import-smoke-attempt3/configure-argv-preparation.json",
+      "bytes": 6377,
+      "sha256": "428040AEC601D118400FD22A7088246FBAC42178FF867CC39FD35F80A8E5F94B"
+    },
+    {
+      "entry": "sdk-profile-import-smoke-attempt3/configure-native-exit.txt",
+      "bytes": 1,
+      "sha256": "6B86B273FF34FCE19D6B804EFF5A3F5747ADA4EAA22F1D49C01E52DDB7875B4B"
+    },
+    {
+      "entry": "sdk-profile-import-smoke-attempt3/configure-postflight.json",
+      "bytes": 12216,
+      "sha256": "C0787F59265772846916EE91422E3D703D329C69A6799DEE73406B0AD7385DA0"
+    },
+    {
+      "entry": "sdk-profile-import-smoke-attempt3/configure-result.json",
+      "bytes": 500,
+      "sha256": "4EC707761E17CF31B68EC5FF70AA5D7FA8392B61D2B3B7C9C69C5174A103A94F"
+    },
+    {
+      "entry": "sdk-profile-import-smoke-attempt3/configure-start.json",
+      "bytes": 4780,
+      "sha256": "281E86581D9E4A778984036B2A2250BC4E2BE4533CC0020C1103D36ADA7F6436"
+    },
+    {
+      "entry": "sdk-profile-import-smoke-attempt3/configure-stderr.log",
+      "bytes": 3093,
+      "sha256": "0554FA264A0C82A2FD1198F4018D4774EB957305284264140B5F35C2AB1CBF76"
+    },
+    {
+      "entry": "sdk-profile-import-smoke-attempt3/configure-stdout.log",
+      "bytes": 11534,
+      "sha256": "E4F779EE81C76B653C172C297F6071BB5B1724386A7E3B0FF44B593C16843234"
+    },
+    {
+      "entry": "sdk-profile-import-smoke-attempt3/preflight.json",
+      "bytes": 7005,
+      "sha256": "B987A9CCF40D0E64926C64A790252D2CDF6B220CFD194B452E79F30E873EBD03"
+    },
+    {
+      "entry": "sdk-profile-import-smoke-attempt3/source/CMakeLists.txt",
+      "bytes": 2811,
+      "sha256": "729B169C3694DE9AC2ACBE733FFC05685F9F7887210656B61CEECE93EBEB9537"
+    },
+    {
+      "entry": "sdk-profile-import-smoke-attempt3/source/main.cpp",
+      "bytes": 681,
+      "sha256": "E558158058893C8611A761F402AAF7BC26E8933A6F3E3C60AF79475C2725109F"
+    },
+    {
+      "entry": "sdk-profile-import-smoke-attempt3/source/project.json",
+      "bytes": 388,
+      "sha256": "3A7625CD2BE22DFD8B3C36C4C68932693611513A980111870371A291F12197C4"
+    },
+    {
+      "entry": "sdk-profile-import-smoke-attempt4/build-native-exit.txt",
+      "bytes": 1,
+      "sha256": "6B86B273FF34FCE19D6B804EFF5A3F5747ADA4EAA22F1D49C01E52DDB7875B4B"
+    },
+    {
+      "entry": "sdk-profile-import-smoke-attempt4/build-result.json",
+      "bytes": 389,
+      "sha256": "8C4B2101D15827A0DC00358F6BC6B421DE7E3BCE1F5DAD70922E9EEF864A6BE5"
+    },
+    {
+      "entry": "sdk-profile-import-smoke-attempt4/build-start.json",
+      "bytes": 1023,
+      "sha256": "7024E3F7C367826752644331F7464920B0F418B5BD8D5D6F5AD714228C9AA8B5"
+    },
+    {
+      "entry": "sdk-profile-import-smoke-attempt4/build-stderr.log",
+      "bytes": 0,
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "entry": "sdk-profile-import-smoke-attempt4/build-stdout.log",
+      "bytes": 837,
+      "sha256": "89C3140DDE3B94625B4B69861373B79E6EBB31592741DBD0DA34F79C5E1534D0"
+    },
+    {
+      "entry": "sdk-profile-import-smoke-attempt4/build/JENativeSdkConsumer.vcxproj",
+      "bytes": 58196,
+      "sha256": "A75972E8DBB2F9C39FAAEB235B3A0F61F4DE8622BF9C12E39EB55B57624F6E71"
+    },
+    {
+      "entry": "sdk-profile-import-smoke-attempt4/build/native-EditorCamera-profile.txt",
+      "bytes": 10448,
+      "sha256": "CCBAEBE5E22625F480B70658262FC19ED85BD8E688807629A7F20DF48760AFB8"
+    },
+    {
+      "entry": "sdk-profile-import-smoke-attempt4/build/native-EditorMaterials-profile.txt",
+      "bytes": 11781,
+      "sha256": "75161FD61D63684D463C661C1E8BAE2E4FA65A953F613FD7E7DD2E94228C2A5B"
+    },
+    {
+      "entry": "sdk-profile-import-smoke-attempt4/build/native-EditorRenderIntegration-profile.txt",
+      "bytes": 4304,
+      "sha256": "91F9AB6ED5FDB3C8C1E9736339F398D95A0E6734B1659371E32DFE9A4A08D659"
+    },
+    {
+      "entry": "sdk-profile-import-smoke-attempt4/configure-argv-preparation.json",
+      "bytes": 6389,
+      "sha256": "EC041BE25A57B7BCBFC35FFFE3F74375B83DA7B307FCA1A899C052327626D9BE"
+    },
+    {
+      "entry": "sdk-profile-import-smoke-attempt4/configure-native-exit.txt",
+      "bytes": 1,
+      "sha256": "5FECEB66FFC86F38D952786C6D696C79C2DBC239DD4E91B46729D73A27FB57E9"
+    },
+    {
+      "entry": "sdk-profile-import-smoke-attempt4/configure-result.json",
+      "bytes": 395,
+      "sha256": "F2C92AEEF837F4F7D246D8AC63730AD122888F5450964E1FE404C257F7AB4D6B"
+    },
+    {
+      "entry": "sdk-profile-import-smoke-attempt4/configure-sdk-delta.json",
+      "bytes": 9486,
+      "sha256": "11B6972C4A25E896AB1E0A7528FBD682DCC05F5479F548DFF491A972D55E3627"
+    },
+    {
+      "entry": "sdk-profile-import-smoke-attempt4/configure-start.json",
+      "bytes": 5090,
+      "sha256": "332E60443E3F04B1CDD373037103096FE3E56718CB2A057C37C1852E1BAAD838"
+    },
+    {
+      "entry": "sdk-profile-import-smoke-attempt4/configure-stderr.log",
+      "bytes": 3483,
+      "sha256": "9842F2C01F4C5ED35ABFD5229F27A69F777057E040112E6C4558E01E8E1DAAA4"
+    },
+    {
+      "entry": "sdk-profile-import-smoke-attempt4/configure-stdout.log",
+      "bytes": 11735,
+      "sha256": "48AD5BC69DDDE616AC68D37CA93C6022D6F02498A5B4521D1460D46B45EB1FEF"
+    },
+    {
+      "entry": "sdk-profile-import-smoke-attempt4/parent-wrapper-cwd-reconciliation.json",
+      "bytes": 735,
+      "sha256": "1C23B2A41A750A106C96FAB2FE12A0CD833A39AC16C69C8C2C10CDFA80C1DE47"
+    },
+    {
+      "entry": "sdk-profile-import-smoke-attempt4/postflight.json",
+      "bytes": 1718,
+      "sha256": "738CC56CED62F4B4CEE7BCB2EC06B2398BEFDED5D9523D95A9DA42CE301E055E"
+    },
+    {
+      "entry": "sdk-profile-import-smoke-attempt4/preflight-reconciled.json",
+      "bytes": 1435,
+      "sha256": "BC394E94BF224D74662CBBAF9F37932DC57E73B531F4EAD523F4F8E4DEC439A2"
+    },
+    {
+      "entry": "sdk-profile-import-smoke-attempt4/preflight.json",
+      "bytes": 1350,
+      "sha256": "BEA1F7AC2B55481DD8C91E9F15DC94C906A03E8938E4E336DB9168D8E6C0FE00"
+    },
+    {
+      "entry": "sdk-profile-import-smoke-attempt4/run-build.ps1",
+      "bytes": 3358,
+      "sha256": "D0B8A939E07A676C00F40ACF409C4846E8FEF0CC71B82D4744AB1CE26745AF51"
+    },
+    {
+      "entry": "sdk-profile-import-smoke-attempt4/run-configure-cwd-reconciled.ps1",
+      "bytes": 3134,
+      "sha256": "62D677B61ECB42E255AD8A0ED2DFE89413BBEC8E83D09DD74D2238CB147AA09D"
+    },
+    {
+      "entry": "sdk-profile-import-smoke-attempt4/run-configure.ps1",
+      "bytes": 3097,
+      "sha256": "840FA9859FE8C25A971EADC77B1841FA1452D95EBDBB55D5D4122CB67088C2B2"
+    },
+    {
+      "entry": "sdk-profile-import-smoke-attempt4/source/CMakeLists.txt",
+      "bytes": 2811,
+      "sha256": "729B169C3694DE9AC2ACBE733FFC05685F9F7887210656B61CEECE93EBEB9537"
+    },
+    {
+      "entry": "sdk-profile-import-smoke-attempt4/source/main.cpp",
+      "bytes": 681,
+      "sha256": "E558158058893C8611A761F402AAF7BC26E8933A6F3E3C60AF79475C2725109F"
+    },
+    {
+      "entry": "sdk-profile-import-smoke-attempt4/source/project.json",
+      "bytes": 388,
+      "sha256": "3A7625CD2BE22DFD8B3C36C4C68932693611513A980111870371A291F12197C4"
+    },
+    {
+      "entry": "sdk-profile-import-smoke-attempt5/build-native-exit.txt",
+      "bytes": 1,
+      "sha256": "6B86B273FF34FCE19D6B804EFF5A3F5747ADA4EAA22F1D49C01E52DDB7875B4B"
+    },
+    {
+      "entry": "sdk-profile-import-smoke-attempt5/build-result.json",
+      "bytes": 391,
+      "sha256": "2231F8125E24F1880BAA86E48FCAF775BE966FE0DD0C22DA2289ADD2B90A0196"
+    },
+    {
+      "entry": "sdk-profile-import-smoke-attempt5/build-start.json",
+      "bytes": 1023,
+      "sha256": "FA445C1E107CCCCC3629F836522F304A27885EB1F8F4A649534825725EEB68CA"
+    },
+    {
+      "entry": "sdk-profile-import-smoke-attempt5/build-stderr.log",
+      "bytes": 0,
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "entry": "sdk-profile-import-smoke-attempt5/build-stdout.log",
+      "bytes": 37158,
+      "sha256": "3C43CAC49CAEDD483735FD4747AFF062E7E8342E14650041E83B16C32B5CF2D8"
+    },
+    {
+      "entry": "sdk-profile-import-smoke-attempt5/build/External/source-bbf39075/JENativeSdkConsumer.vcxproj",
+      "bytes": 66015,
+      "sha256": "628DB71CF7F2402ABD98228F8AD534D3510ADA0A9C94E191CBBFC12663691A63"
+    },
+    {
+      "entry": "sdk-profile-import-smoke-attempt5/build/native-EditorCamera-profile.txt",
+      "bytes": 10448,
+      "sha256": "976B5564FA5606F52F3FD9708D15AFD8BF9E46A987E6D6BEAF46BE0BFBA59C2A"
+    },
+    {
+      "entry": "sdk-profile-import-smoke-attempt5/build/native-EditorMaterials-profile.txt",
+      "bytes": 11781,
+      "sha256": "BEF2349568CBAE035475EC45435BC8EF8B99C607261CCC668F5BD50F4AE2E3C9"
+    },
+    {
+      "entry": "sdk-profile-import-smoke-attempt5/build/native-EditorRenderIntegration-profile.txt",
+      "bytes": 4304,
+      "sha256": "8786244C74AF9AEF21CD115CE09997956AD7693F2FDB76B72ED452F8E6841841"
+    },
+    {
+      "entry": "sdk-profile-import-smoke-attempt5/configure-argv-preparation.json",
+      "bytes": 6739,
+      "sha256": "92D9494DFA69198128A6495E1B93042F2D83A90175795E8F479E0C01DA0B1C59"
+    },
+    {
+      "entry": "sdk-profile-import-smoke-attempt5/configure-import-check.json",
+      "bytes": 4696,
+      "sha256": "4A00932E3FAB7562A46B4AF467FE400490A2CB6BAF622CF0B4DDA7F9F48E1F59"
+    },
+    {
+      "entry": "sdk-profile-import-smoke-attempt5/configure-native-exit.txt",
+      "bytes": 1,
+      "sha256": "5FECEB66FFC86F38D952786C6D696C79C2DBC239DD4E91B46729D73A27FB57E9"
+    },
+    {
+      "entry": "sdk-profile-import-smoke-attempt5/configure-result.json",
+      "bytes": 394,
+      "sha256": "DF3B4945C5D568F93C4CD962BF3FBA51DFB1EE368837D6971C3F06BAC5132F51"
+    },
+    {
+      "entry": "sdk-profile-import-smoke-attempt5/configure-sdk-delta.json",
+      "bytes": 289,
+      "sha256": "811CED192A25BA06AE1DBC10C8E032F0B5D53787F0BC5A572A2C788C82842E50"
+    },
+    {
+      "entry": "sdk-profile-import-smoke-attempt5/configure-start.json",
+      "bytes": 5090,
+      "sha256": "1CBD60F3CBFAF4EB078C1594C30D109635DAB6D0F91E46A131AD3D590A70807F"
+    },
+    {
+      "entry": "sdk-profile-import-smoke-attempt5/configure-stderr.log",
+      "bytes": 3483,
+      "sha256": "9842F2C01F4C5ED35ABFD5229F27A69F777057E040112E6C4558E01E8E1DAAA4"
+    },
+    {
+      "entry": "sdk-profile-import-smoke-attempt5/configure-stdout.log",
+      "bytes": 8956,
+      "sha256": "93FC164780FDC5907C24807067C05914AA8153F6283E0BCAADC0BB6E1B7729F7"
+    },
+    {
+      "entry": "sdk-profile-import-smoke-attempt5/final-result.json",
+      "bytes": 7129,
+      "sha256": "627709327B49C465A0883433A0C9F857744FF79CDB19854D1A3DA957E9F586CE"
+    },
+    {
+      "entry": "sdk-profile-import-smoke-attempt5/parent-compiler-contract-review.json",
+      "bytes": 1733,
+      "sha256": "B7037708EF171FD8AD2294F2B6E9AEC2E11D23ABF96B797423BBB14B910A8138"
+    },
+    {
+      "entry": "sdk-profile-import-smoke-attempt5/parent-private-build-contract-repair.json",
+      "bytes": 2799,
+      "sha256": "8E4072887A557C6D6ADF661202B5CFAC1131215B3459963D8531C59978716D36"
+    },
+    {
+      "entry": "sdk-profile-import-smoke-attempt5/postflight.json",
+      "bytes": 1524,
+      "sha256": "02073B4B8CE2FEB4AD85889EBF3AA2D95E3E3897C3A952B903E07CA0BCB90A37"
+    },
+    {
+      "entry": "sdk-profile-import-smoke-attempt5/preflight-initial-strict-cache-gate.json",
+      "bytes": 1337,
+      "sha256": "7F46CF53190AFF743D3885B544E8D16AB33D532412950A3ACBAAB19017E304E1"
+    },
+    {
+      "entry": "sdk-profile-import-smoke-attempt5/preflight-reconciled.json",
+      "bytes": 1782,
+      "sha256": "126DFE5B707D4AEC7BDE65266A759F3C98CBA8F3981F9E9F2D22924D2CC5B4F8"
+    },
+    {
+      "entry": "sdk-profile-import-smoke-attempt5/preflight.json",
+      "bytes": 1782,
+      "sha256": "126DFE5B707D4AEC7BDE65266A759F3C98CBA8F3981F9E9F2D22924D2CC5B4F8"
+    },
+    {
+      "entry": "sdk-profile-import-smoke-attempt5/run-build.ps1",
+      "bytes": 3358,
+      "sha256": "8D34064D8ADF64E6008A6D1E6341C8D18FC897CCC86780A0FE7E3B317076BCED"
+    },
+    {
+      "entry": "sdk-profile-import-smoke-attempt5/run-configure-cwd-reconciled.ps1",
+      "bytes": 3134,
+      "sha256": "6E632CB60A0C0C3C3F5AF86341825A4BDC7F11F381C8443D9C60FFD04C198F91"
+    },
+    {
+      "entry": "sdk-profile-import-smoke-attempt5/source/CMakeLists.txt",
+      "bytes": 2811,
+      "sha256": "1B91CE1882A5F883ECECB8ACC353711B2D67EAAE7E827C6DCF92F8E2FD630D93"
+    },
+    {
+      "entry": "sdk-profile-import-smoke-attempt5/source/consumer_files.cmake",
+      "bytes": 25,
+      "sha256": "2F0ACA6BAD0CF988A388EC9D4664ED2E2D507B4E03958E23730768D314E3006E"
+    },
+    {
+      "entry": "sdk-profile-import-smoke-attempt5/source/main.cpp",
+      "bytes": 681,
+      "sha256": "E558158058893C8611A761F402AAF7BC26E8933A6F3E3C60AF79475C2725109F"
+    },
+    {
+      "entry": "sdk-profile-import-smoke-attempt5/source/project.json",
+      "bytes": 388,
+      "sha256": "3A7625CD2BE22DFD8B3C36C4C68932693611513A980111870371A291F12197C4"
+    },
+    {
+      "entry": "sdk-profile-import-smoke-attempt6/build-artifact-provenance.json",
+      "bytes": 3276,
+      "sha256": "5CD7D074FA45F51498A5AC641B27E3039B1F8066D71228FDE79E645FA012C679"
+    },
+    {
+      "entry": "sdk-profile-import-smoke-attempt6/build-native-exit.txt",
+      "bytes": 1,
+      "sha256": "5FECEB66FFC86F38D952786C6D696C79C2DBC239DD4E91B46729D73A27FB57E9"
+    },
+    {
+      "entry": "sdk-profile-import-smoke-attempt6/build-result.json",
+      "bytes": 391,
+      "sha256": "9C0AB5E7496B74C9D09811FDCD790870379E669124D62BDCCAD7E35F547B6E7D"
+    },
+    {
+      "entry": "sdk-profile-import-smoke-attempt6/build-start.json",
+      "bytes": 707,
+      "sha256": "5E03FC5F8C684AF34FE55040EF4ED7EB11B26E75C03212CC20FDC97674252E88"
+    },
+    {
+      "entry": "sdk-profile-import-smoke-attempt6/build-stderr.log",
+      "bytes": 0,
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "entry": "sdk-profile-import-smoke-attempt6/build-stdout.log",
+      "bytes": 23552,
+      "sha256": "FA544836AD825B9D5129907F2C6FC0B1A4271A65EDA0C15CB813DDA6BF83B20A"
+    },
+    {
+      "entry": "sdk-profile-import-smoke-attempt6/build/External/source-85384ae8/JENativeSdkConsumer.vcxproj",
+      "bytes": 46342,
+      "sha256": "0A5EEC4B8E60EC0FAE6EE4257DFAD5D3907044026F302565DCD4A0B2175D94ED"
+    },
+    {
+      "entry": "sdk-profile-import-smoke-attempt6/build/native-EditorCamera-profile.txt",
+      "bytes": 5466,
+      "sha256": "5D01FA854B3711E1F6F1BF0D78951628A7EE01E59ECBB126AE083BFF105E27CF"
+    },
+    {
+      "entry": "sdk-profile-import-smoke-attempt6/build/native-EditorMaterials-profile.txt",
+      "bytes": 6235,
+      "sha256": "D2B378A5356EC6980261793EC0B909EC93D20EBA8CC8A22014468D6DAB84B520"
+    },
+    {
+      "entry": "sdk-profile-import-smoke-attempt6/build/native-EditorRenderIntegration-profile.txt",
+      "bytes": 2330,
+      "sha256": "D45F92E572F86987C10000852D5C02AE59AD375F36F3D2F52CC313F9C63762A7"
+    },
+    {
+      "entry": "sdk-profile-import-smoke-attempt6/configure-argv-preparation.json",
+      "bytes": 6328,
+      "sha256": "70712553B32E9AE05294BC571164D5146F34AB873F09A7BE1791AA5F93EB19D5"
+    },
+    {
+      "entry": "sdk-profile-import-smoke-attempt6/configure-import-check.json",
+      "bytes": 32101,
+      "sha256": "D235B85E9AB37CD4C5E69FBBFD1500742EC572353E325085A71DED916F0BE209"
+    },
+    {
+      "entry": "sdk-profile-import-smoke-attempt6/configure-native-exit.txt",
+      "bytes": 1,
+      "sha256": "5FECEB66FFC86F38D952786C6D696C79C2DBC239DD4E91B46729D73A27FB57E9"
+    },
+    {
+      "entry": "sdk-profile-import-smoke-attempt6/configure-result.json",
+      "bytes": 394,
+      "sha256": "6D035444E1CB7CF18D89C4D175B84032C147A0B7F640073E0E11889E9493B865"
+    },
+    {
+      "entry": "sdk-profile-import-smoke-attempt6/configure-sdk-delta-comparison.json",
+      "bytes": 642,
+      "sha256": "E60F925C0096251261081EF103A87E1402DDCEB39472B219ADB0A3707E22F33E"
+    },
+    {
+      "entry": "sdk-profile-import-smoke-attempt6/configure-start.json",
+      "bytes": 4676,
+      "sha256": "177ADAAF7E375ACD21044170B6D0CC99FC8E15997C304BE30BBF87D518E2E816"
+    },
+    {
+      "entry": "sdk-profile-import-smoke-attempt6/configure-stderr.log",
+      "bytes": 2825,
+      "sha256": "1352F50F0D297081EEC8452034A53C1435FCFF30A18C1BAC3BE654BD0B4B8AA7"
+    },
+    {
+      "entry": "sdk-profile-import-smoke-attempt6/configure-stdout.log",
+      "bytes": 10972,
+      "sha256": "474007F1D653D7925541440D97EA3A4B04010286C2F5F22F270DB1392548329F"
+    },
+    {
+      "entry": "sdk-profile-import-smoke-attempt6/final-result.json",
+      "bytes": 1108,
+      "sha256": "7B15FFB359C2982F67BB0A52E4EFAB5CDBA03B3C90F2C516E73E6A28AA11DE32"
+    },
+    {
+      "entry": "sdk-profile-import-smoke-attempt6/loader-native-exit.txt",
+      "bytes": 1,
+      "sha256": "5FECEB66FFC86F38D952786C6D696C79C2DBC239DD4E91B46729D73A27FB57E9"
+    },
+    {
+      "entry": "sdk-profile-import-smoke-attempt6/loader-result.json",
+      "bytes": 678,
+      "sha256": "E25CD199721CBDDFF20D4F9F36CBFFA76412A7A7FA6835DA79D10AE7D6BF73A5"
+    },
+    {
+      "entry": "sdk-profile-import-smoke-attempt6/loader-start.json",
+      "bytes": 703,
+      "sha256": "00F7B2389844051B44146DD431D316013642B4C79B7F71469EE78D18AE064596"
+    },
+    {
+      "entry": "sdk-profile-import-smoke-attempt6/loader-stderr.log",
+      "bytes": 0,
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "entry": "sdk-profile-import-smoke-attempt6/loader-stdout.log",
+      "bytes": 67,
+      "sha256": "A81E788C037570468E71644BE95812B54CA778FDAB8FFA540D20125FC8BE2099"
+    },
+    {
+      "entry": "sdk-profile-import-smoke-attempt6/parent-consumer-review.json",
+      "bytes": 3890,
+      "sha256": "AB415D2A982B9C37486A6984086784E3A6ED1281EEC78EA4BC8754F725B2309D"
+    },
+    {
+      "entry": "sdk-profile-import-smoke-attempt6/parent-path-length-diagnostic-preparation.json",
+      "bytes": 1408,
+      "sha256": "A3A747228DDDCCEDA245628FE2C60820C9B31391E4A9BDC332BDB438BD1D115A"
+    },
+    {
+      "entry": "sdk-profile-import-smoke-attempt6/postflight.json",
+      "bytes": 7480,
+      "sha256": "DD24D715C7CAF0581E264A27BA14829B797533C2A480026DD8DC5FFD16ED13EF"
+    },
+    {
+      "entry": "sdk-profile-import-smoke-attempt6/prebuild-gate.json",
+      "bytes": 2429,
+      "sha256": "8EEA524547A38135042CCF05AB9DEB809BBFB962D45CA40B010D8B5F91CB263E"
+    },
+    {
+      "entry": "sdk-profile-import-smoke-attempt6/preflight-initial-review-field.json",
+      "bytes": 4261,
+      "sha256": "B2B72441BAE86898C38CBA3F627B0F5EF7300F30159541CF7DA55935FCE1D8BC"
+    },
+    {
+      "entry": "sdk-profile-import-smoke-attempt6/preflight-reconciled.json",
+      "bytes": 4548,
+      "sha256": "F7299AE20C350BBAA47F7ED72B9BB35A5B81D9909D874F7506335F91887E9200"
+    },
+    {
+      "entry": "sdk-profile-import-smoke-attempt6/preflight.json",
+      "bytes": 4548,
+      "sha256": "F7299AE20C350BBAA47F7ED72B9BB35A5B81D9909D874F7506335F91887E9200"
+    },
+    {
+      "entry": "sdk-profile-import-smoke-attempt6/run-build.ps1",
+      "bytes": 3358,
+      "sha256": "66153F88C002189555A81406DE6A9865F8539F4FE658A16E1753AE4695AFA6BE"
+    },
+    {
+      "entry": "sdk-profile-import-smoke-attempt6/run-configure-cwd-reconciled.ps1",
+      "bytes": 3134,
+      "sha256": "082D1F2CD9E8B1ACB6F8A2C2BEE807E1854CC2882E146479769988B4A99FFA60"
+    },
+    {
+      "entry": "sdk-profile-import-smoke-attempt6/sdk-after-configure-delta.json",
+      "bytes": 9240,
+      "sha256": "14B64B662CCEFE8FDC1782C38E7DE4E877AE64540A8D3C91D4D3D48AE9E6CE8E"
+    },
+    {
+      "entry": "sdk-profile-import-smoke-attempt6/sdk-after-loader-delta.json",
+      "bytes": 549,
+      "sha256": "8BC6448824F330295BD2380F00FDE2396BBAA5449CBA515A1E314A08171B1213"
+    },
+    {
+      "entry": "sdk-profile-import-smoke-attempt6/source/CMakeLists.txt",
+      "bytes": 2811,
+      "sha256": "1B91CE1882A5F883ECECB8ACC353711B2D67EAAE7E827C6DCF92F8E2FD630D93"
+    },
+    {
+      "entry": "sdk-profile-import-smoke-attempt6/source/consumer_files.cmake",
+      "bytes": 25,
+      "sha256": "2F0ACA6BAD0CF988A388EC9D4664ED2E2D507B4E03958E23730768D314E3006E"
+    },
+    {
+      "entry": "sdk-profile-import-smoke-attempt6/source/main.cpp",
+      "bytes": 681,
+      "sha256": "E558158058893C8611A761F402AAF7BC26E8933A6F3E3C60AF79475C2725109F"
+    },
+    {
+      "entry": "sdk-profile-import-smoke-attempt6/source/project.json",
+      "bytes": 388,
+      "sha256": "3A7625CD2BE22DFD8B3C36C4C68932693611513A980111870371A291F12197C4"
+    },
+    {
+      "entry": "sdk-profile-install-attempt1/install_manifest.txt",
+      "bytes": 6896311,
+      "sha256": "2DAABEFCB21D6D3BD3689A0104BF2244A3FDEB79213DCDD7174825841E2BEDCB"
+    },
+    {
+      "entry": "sdk-profile-install-attempt1/install-result.json",
+      "bytes": 255,
+      "sha256": "50F7B70C4AE43B943D611D8937AC0BEAA5761AB3B09DF634DF92FBEC8A3696F1"
+    },
+    {
+      "entry": "sdk-profile-install-attempt1/install-verification.json",
+      "bytes": 161044,
+      "sha256": "FD4A8756A72CDA2A9BAD95F2717363DE136880D9FC971017C883EA13B26FFC40"
+    },
+    {
+      "entry": "sdk-profile-install-attempt1/layout-status.json",
+      "bytes": 1827,
+      "sha256": "BB4CC872088D9F29957F5F4F3478D75A3FFF80ED5BA5F1B993B13DD836062AE3"
+    },
+    {
+      "entry": "sdk-profile-install-attempt1/native-exit.txt",
+      "bytes": 1,
+      "sha256": "5FECEB66FFC86F38D952786C6D696C79C2DBC239DD4E91B46729D73A27FB57E9"
+    },
+    {
+      "entry": "sdk-profile-install-attempt1/start.json",
+      "bytes": 1160,
+      "sha256": "96077479E830A79A1CE91A2EEA20B4FFAAC640F95FC8526AAFA1D5E5D411464F"
+    },
+    {
+      "entry": "sdk-profile-install-attempt1/stderr.log",
+      "bytes": 0,
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "entry": "sdk-profile-install-attempt1/stdout.log",
+      "bytes": 70650,
+      "sha256": "1E7267E36F96DB16D27207786FCD905AF9727F36DB2691F265A09C065367F3BA"
+    },
+    {
+      "entry": "sdk-profile-install-attempt2/install_manifest.txt",
+      "bytes": 6864558,
+      "sha256": "5F06B58DD6C3362077B1106FA87EAFAE10BFA7382BF0DEB46F95CE49895C4840"
+    },
+    {
+      "entry": "sdk-profile-install-attempt2/install-result.json",
+      "bytes": 255,
+      "sha256": "B4C7F2093EE487735C95339FC4A0D158F0D3639696F8EA3B1D61510D45BEDEED"
+    },
+    {
+      "entry": "sdk-profile-install-attempt2/install-verification-supplement.json",
+      "bytes": 2958,
+      "sha256": "DB601FB055514A61A193327A70A6D1F2127201E334CA27B461782CEB2F69001F"
+    },
+    {
+      "entry": "sdk-profile-install-attempt2/install-verification.json",
+      "bytes": 130215,
+      "sha256": "DE0F1DAAD4B3A03FC975F0EA9E0060450EB8002E9C7C940E444193F4FEAE6976"
+    },
+    {
+      "entry": "sdk-profile-install-attempt2/native-exit.txt",
+      "bytes": 1,
+      "sha256": "5FECEB66FFC86F38D952786C6D696C79C2DBC239DD4E91B46729D73A27FB57E9"
+    },
+    {
+      "entry": "sdk-profile-install-attempt2/parent-extra-origin-check.json",
+      "bytes": 46280,
+      "sha256": "7262E228F60E8612527AEAB9A9B912FD9E9385C12DCFC9DFB45AB76DD008096D"
+    },
+    {
+      "entry": "sdk-profile-install-attempt2/parent-extra-runtime-copy-review-final.json",
+      "bytes": 64117,
+      "sha256": "5CE673374383040BE215B23F1025FBBADB178DFF13099DADE89759F7EA2B5C06"
+    },
+    {
+      "entry": "sdk-profile-install-attempt2/parent-extra-runtime-copy-review-rev2.json",
+      "bytes": 62952,
+      "sha256": "8D7CAA27A04CADF8C97DE5B70F924DDBD93A9758BB0EDF51BF44468F233D0A62"
+    },
+    {
+      "entry": "sdk-profile-install-attempt2/parent-extra-runtime-copy-review.json",
+      "bytes": 63200,
+      "sha256": "84859D731F8F36E1916555655092D3FACC7641B021E70595831A439589AC16BC"
+    },
+    {
+      "entry": "sdk-profile-install-attempt2/parent-install-review.json",
+      "bytes": 2106,
+      "sha256": "C4CF45CA2F6BD92333D45BCA2BC74EA20FBD93F26BAFD3FA3E5088ADAB89E74C"
+    },
+    {
+      "entry": "sdk-profile-install-attempt2/postflight-inventory.ps1",
+      "bytes": 8898,
+      "sha256": "41A9ECCB66649DE475C083D374395E1906EF615C9E07AC3FAC37945EEF047EB7"
+    },
+    {
+      "entry": "sdk-profile-install-attempt2/postflight.json",
+      "bytes": 1992,
+      "sha256": "AE77FFD631C308B7FD8AAF58C8DAB52FDB9D6BAE4F48C8455226279E2CB3525F"
+    },
+    {
+      "entry": "sdk-profile-install-attempt2/start.json",
+      "bytes": 1169,
+      "sha256": "8F8E715702F3148433770E0CD0252E149FDF4C3206CE2D68319BDFD571168F25"
+    },
+    {
+      "entry": "sdk-profile-install-attempt2/stderr.log",
+      "bytes": 0,
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "entry": "sdk-profile-install-attempt2/stdout.log",
+      "bytes": 70650,
+      "sha256": "3DA0B248DDE16ADB63699D4BA4980C13EF694D7F41C735178F9A0EC2379896EB"
+    },
+    {
+      "entry": "sdk-profile-install-attempt3/install_manifest.txt",
+      "bytes": 6864739,
+      "sha256": "34AF6D98C5758A1E22A03AA1A8EAAE16D7AC838706F776CE9F7D23B64C8A57F8"
+    },
+    {
+      "entry": "sdk-profile-install-attempt3/install-result.json",
+      "bytes": 433,
+      "sha256": "D1DB0771D6786D6DC464F79F47A1DAC73869F95043C6ED22A840AFF8C163A1C1"
+    },
+    {
+      "entry": "sdk-profile-install-attempt3/install-verification.json",
+      "bytes": 26976,
+      "sha256": "468A19458E0C6BC04F60DFD7DFCB2AB7A2A74D0166EB486C2668FD4433353CEC"
+    },
+    {
+      "entry": "sdk-profile-install-attempt3/native-exit.txt",
+      "bytes": 1,
+      "sha256": "5FECEB66FFC86F38D952786C6D696C79C2DBC239DD4E91B46729D73A27FB57E9"
+    },
+    {
+      "entry": "sdk-profile-install-attempt3/parent-install-review.json",
+      "bytes": 799,
+      "sha256": "19EF203A66CDA58863094D553A114E3305F21126DC28DA11799EDF5B8CC70714"
+    },
+    {
+      "entry": "sdk-profile-install-attempt3/postflight-inventory.ps1",
+      "bytes": 9244,
+      "sha256": "9F72DAF3A2184707D70D76E8E97933319DD144B81988116D9441E0D9B2BBDAEF"
+    },
+    {
+      "entry": "sdk-profile-install-attempt3/postflight.json",
+      "bytes": 1539,
+      "sha256": "9E05A05824C54DDDEE98B748A97A6B69973F5935DF547AE9A4BF5430279114A6"
+    },
+    {
+      "entry": "sdk-profile-install-attempt3/preflight-reuse.json",
+      "bytes": 1407,
+      "sha256": "783382E7C6BB98A110F0A119F9AEFCE0B674F45E6F1BE9A55C8FF85616581445"
+    },
+    {
+      "entry": "sdk-profile-install-attempt3/preflight.json",
+      "bytes": 2056,
+      "sha256": "4B523ADE202AFD4483DD77EA9515B49EE9B2F458C84C5C60F3058392F6184386"
+    },
+    {
+      "entry": "sdk-profile-install-attempt3/start.json",
+      "bytes": 1290,
+      "sha256": "95B0C43199E037D0E633BB3768B247082FA89D4F94D9AC004DA029A7487E5290"
+    },
+    {
+      "entry": "sdk-profile-install-attempt3/stderr.log",
+      "bytes": 0,
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "entry": "sdk-profile-install-attempt3/stdout.log",
+      "bytes": 70650,
+      "sha256": "C41CD9A54B101043069CFEE3BBFEA009FD035F9210D021DC2B8093A8E956F61D"
+    },
+    {
+      "entry": "sdk-profile-install-attempt4/frozen-install-inputs.json",
+      "bytes": 437380,
+      "sha256": "79A7A249EF3CC52FB59FC4E248B181916E88D8FE9EB1FC884C8C3993424F653A"
+    },
+    {
+      "entry": "sdk-profile-install-attempt4/install_manifest.txt",
+      "bytes": 6864739,
+      "sha256": "308252E0380DEB3EBA5A816F36FFCAFDD88FC2E7FC829AE5517387C9F812E57E"
+    },
+    {
+      "entry": "sdk-profile-install-attempt4/install-result.json",
+      "bytes": 391,
+      "sha256": "4A5F275AF6033BEA5AB837464D52B1E78B8099E30D4AB9F7651E0C6F52824226"
+    },
+    {
+      "entry": "sdk-profile-install-attempt4/install-start.json",
+      "bytes": 911,
+      "sha256": "F663308B73CC33B9F662C00E78131AF4B0350CE95F8F98743655B78595CBAC0C"
+    },
+    {
+      "entry": "sdk-profile-install-attempt4/install-verification.json",
+      "bytes": 26976,
+      "sha256": "439454621DFD8A895F395D2D8F2D17DAC5195E7A6593AB902674BF1AC5F67D42"
+    },
+    {
+      "entry": "sdk-profile-install-attempt4/installed-files.json",
+      "bytes": 2335468,
+      "sha256": "429EB9484165A3DCB1636474FA6183A8B1242D89BA93177F0CA5687D3013F0FB"
+    },
+    {
+      "entry": "sdk-profile-install-attempt4/lfs-pointer-files.json",
+      "bytes": 114549,
+      "sha256": "07DE8D81FBCD0E11BCF0C9824A245D88D8CE29576B1688A9390A61E512B6F68F"
+    },
+    {
+      "entry": "sdk-profile-install-attempt4/manifest-files.json",
+      "bytes": 6608486,
+      "sha256": "6AD5FE027863CD502BDF500D9D24F09ED5623A34F0FB86B73C065F3B443B1325"
+    },
+    {
+      "entry": "sdk-profile-install-attempt4/native-exit.txt",
+      "bytes": 1,
+      "sha256": "5FECEB66FFC86F38D952786C6D696C79C2DBC239DD4E91B46729D73A27FB57E9"
+    },
+    {
+      "entry": "sdk-profile-install-attempt4/parent-install-review-rev2.json",
+      "bytes": 2122,
+      "sha256": "BE77E60C0F73F6E3F248ED142308DDED04A87AC68A6C82007C9EF892A947981A"
+    },
+    {
+      "entry": "sdk-profile-install-attempt4/parent-install-review.json",
+      "bytes": 1906,
+      "sha256": "814D34F0CAA71F0890F29F4DDCF756614215AD523CF5EFC336DED65FB2CFD2E7"
+    },
+    {
+      "entry": "sdk-profile-install-attempt4/postflight-inventory-attempt4.ps1",
+      "bytes": 9244,
+      "sha256": "0427A758CD58E49DDDAB10ED1DA2FDDE3230888D076252466876F5304C5C263E"
+    },
+    {
+      "entry": "sdk-profile-install-attempt4/postflight-script-derivation.json",
+      "bytes": 640,
+      "sha256": "509F3BFCB2F027F8AC93B6F2A8F6675124829CFC74698F1E38854E0AFBAF743C"
+    },
+    {
+      "entry": "sdk-profile-install-attempt4/postflight.json",
+      "bytes": 1539,
+      "sha256": "F190000E28419874323E30A4CCA2BA914A2C3F4F2C2142CC882190512206CFBD"
+    },
+    {
+      "entry": "sdk-profile-install-attempt4/preflight-reconciled.json",
+      "bytes": 1939,
+      "sha256": "7856EB887F8BCBAE184D59BBADD9C4E38021AC8A517618D0D22760C6C0A251B8"
+    },
+    {
+      "entry": "sdk-profile-install-attempt4/preflight.json",
+      "bytes": 2954,
+      "sha256": "40959321FBC0AA34DC243B93A043FBFD0ED9D9BDBCC543C1DC432ADF918D339C"
+    },
+    {
+      "entry": "sdk-profile-install-attempt4/run-install.ps1",
+      "bytes": 3184,
+      "sha256": "9962BA2943BB72EFFD96908F79D31C093ABB25011089943DE563E38E67E22F9E"
+    },
+    {
+      "entry": "sdk-profile-install-attempt4/stderr.log",
+      "bytes": 0,
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "entry": "sdk-profile-install-attempt4/stdout.log",
+      "bytes": 70650,
+      "sha256": "BF4CEB772C0BB5A9A697CFEB65F6BDB9D097E8EAFFE456B578C0D82E8D75FC06"
+    },
+    {
+      "entry": "sdk-profile-install-attempt5/frozen-install-inputs.json",
+      "bytes": 437197,
+      "sha256": "762450D7A21B43CAD10F6CAE6EA118AA890BE891B47B94313198DB149ABF9B62"
+    },
+    {
+      "entry": "sdk-profile-install-attempt5/install_manifest.txt",
+      "bytes": 3959575,
+      "sha256": "F4F1C7148A7B956FEB321C145AE5B3C9A162A48030AC12395666C236F3C54C92"
+    },
+    {
+      "entry": "sdk-profile-install-attempt5/install-result.json",
+      "bytes": 392,
+      "sha256": "D06CF1BC0502F38DA716811510C51472620CB178ECB1AFCF90174E29AD5650DA"
+    },
+    {
+      "entry": "sdk-profile-install-attempt5/install-start.json",
+      "bytes": 715,
+      "sha256": "A49E50FB80E4EB8ABCCFB27AA85A978C585181983FC700380B310F7733FCC851"
+    },
+    {
+      "entry": "sdk-profile-install-attempt5/install-verification.json",
+      "bytes": 26878,
+      "sha256": "C65752A3FAEFF3133B9A8FFBFDE9BEA14A4346CC50B8C7893A196EA66843DE9A"
+    },
+    {
+      "entry": "sdk-profile-install-attempt5/install4-baseline-comparison.json",
+      "bytes": 4497,
+      "sha256": "454FD2532B9BB2DCB846976AB121D1E65FD77DA36048719260DAEC1A58AE6F51"
+    },
+    {
+      "entry": "sdk-profile-install-attempt5/installed-files.json",
+      "bytes": 2335468,
+      "sha256": "429EB9484165A3DCB1636474FA6183A8B1242D89BA93177F0CA5687D3013F0FB"
+    },
+    {
+      "entry": "sdk-profile-install-attempt5/installed-key-metadata/cmake/Platform/Common/Install_common.cmake",
+      "bytes": 72274,
+      "sha256": "68127B0ED707885E71F3B7ED6C22AA359E9A065A81735CB50E63B8F1B3573EC3"
+    },
+    {
+      "entry": "sdk-profile-install-attempt5/installed-key-metadata/engine.json",
+      "bytes": 2558,
+      "sha256": "D52BD8578FD797446779D1E20976FA88989D22E2C8C097372A7CBFF4284F9454"
+    },
+    {
+      "entry": "sdk-profile-install-attempt5/installed-key-metadata/python/requirements-build.txt",
+      "bytes": 288,
+      "sha256": "B94DFF298C27659DBC486D62109F34795BD4A4DBE8EAD3CD44D9044FBE6FFAD6"
+    },
+    {
+      "entry": "sdk-profile-install-attempt5/lfs-pointer-files.json",
+      "bytes": 114549,
+      "sha256": "07DE8D81FBCD0E11BCF0C9824A245D88D8CE29576B1688A9390A61E512B6F68F"
+    },
+    {
+      "entry": "sdk-profile-install-attempt5/manifest-files.json",
+      "bytes": 6608486,
+      "sha256": "6AD5FE027863CD502BDF500D9D24F09ED5623A34F0FB86B73C065F3B443B1325"
+    },
+    {
+      "entry": "sdk-profile-install-attempt5/native-exit.txt",
+      "bytes": 1,
+      "sha256": "5FECEB66FFC86F38D952786C6D696C79C2DBC239DD4E91B46729D73A27FB57E9"
+    },
+    {
+      "entry": "sdk-profile-install-attempt5/parent-install-review.json",
+      "bytes": 3051,
+      "sha256": "2B00D06962C4DBC7E9DD2A109C9CDF3B210AE54548F7DE4B2946E0D41F4C433D"
+    },
+    {
+      "entry": "sdk-profile-install-attempt5/postflight-console.log",
+      "bytes": 26878,
+      "sha256": "C65752A3FAEFF3133B9A8FFBFDE9BEA14A4346CC50B8C7893A196EA66843DE9A"
+    },
+    {
+      "entry": "sdk-profile-install-attempt5/postflight-inventory.ps1",
+      "bytes": 9244,
+      "sha256": "C2D5FA38EC1342136367CC56ECD35B3C1DFC0037EDE6FFB9325AD2F4EE461454"
+    },
+    {
+      "entry": "sdk-profile-install-attempt5/postflight.json",
+      "bytes": 1539,
+      "sha256": "D8BFC1BAAD411980F06E76F9120B1EB48F3D69EBB38EA2809F0FA4D01EB70CE4"
+    },
+    {
+      "entry": "sdk-profile-install-attempt5/preflight-reconciled.json",
+      "bytes": 1380,
+      "sha256": "8FD159905B5F51B3507097145B6A5FA36B227C98979E5AF5D673ED90385A959F"
+    },
+    {
+      "entry": "sdk-profile-install-attempt5/run-install.ps1",
+      "bytes": 3184,
+      "sha256": "EB1F4CBB798F724AC8EE26A721D41828C2486AE6AE6A0C289BBACC3C69945478"
+    },
+    {
+      "entry": "sdk-profile-install-attempt5/stderr.log",
+      "bytes": 0,
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "entry": "sdk-profile-install-attempt5/stdout.log",
+      "bytes": 50252,
+      "sha256": "EF61E38F15E99206957BDCB3C09E8D7DD1ED467E99D1AE2555C116BECD8A4E62"
+    },
+    {
+      "entry": "sdk-project-root-exclusion-rev1/before.bin",
+      "bytes": 71921,
+      "sha256": "3830B3D226EEC3F9D133F5C2FE63958136C14D211E1A0BE31E213930F1553B21"
+    },
+    {
+      "entry": "sdk-project-root-exclusion-rev1/generated-engine-before.json",
+      "bytes": 2595,
+      "sha256": "EA2AFB1DFC1AB2EC4A3C0A23CDB3E362E3249FDB6E7E6156EBAEA632029F53F3"
+    },
+    {
+      "entry": "sdk-project-root-exclusion-rev1/source-repair.json",
+      "bytes": 411,
+      "sha256": "CE962920EC123237C0AACF3C97D6AF07F61842D479C8E7A827CE40A95A81CE25"
+    },
+    {
+      "entry": "sdk-shared-tool-icons-rev1/Code__Tools__AssetBundler__source__AssetBundler.rc.before.bin",
+      "bytes": 74,
+      "sha256": "1596A657063D590AB2B6615F2662AE72CA27A756BF86DD933CA99E5D5A19556C"
+    },
+    {
+      "entry": "sdk-shared-tool-icons-rev1/Code__Tools__AssetBundler__source__AssetBundlerBatch.rc.before.bin",
+      "bytes": 52,
+      "sha256": "C3FE1012EF281889E81AFCD5B504E2B76618557B484341A790C26515DF8CCB2F"
+    },
+    {
+      "entry": "sdk-shared-tool-icons-rev1/Code__Tools__AssetBundler__source__ui__style__AssetBundler.qrc.before.bin",
+      "bytes": 216,
+      "sha256": "8028E1FF475376FB60F747A908AD9F8473A35C013E495D46BF0E725871900C25"
+    },
+    {
+      "entry": "sdk-shared-tool-icons-rev1/Code__Tools__DeltaCataloger__source__DeltaCataloger.rc.before.bin",
+      "bytes": 49,
+      "sha256": "043CF95AB86EAA36C55F3BA4869B9CA7CCCBAABB310CD5BE45035BC6E9C3179D"
+    },
+    {
+      "entry": "sdk-shared-tool-icons-rev1/preservation-status-before.txt",
+      "bytes": 31042,
+      "sha256": "DADDB6C644A135758391A102835FCE4ECA37EFF48738B2AAACD91FDA8422DD43"
+    },
+    {
+      "entry": "sdk-shared-tool-icons-rev1/receipt.json",
+      "bytes": 3048,
+      "sha256": "2DB8A58754403FF1FCAA5D6CD9DA7DF37C48B78CF649AA1A927E16BD0AF6CB46"
+    },
+    {
+      "entry": "sdk-shared-tool-icons-rev1/source-diff.patch",
+      "bytes": 1883,
+      "sha256": "E5BA9A6EE306EEA2CD99C5952A654F1C9CC4C5B7EC361607A720EDCAF962E55D"
+    },
+    {
+      "entry": "source-application-rev1/source-application-receipt.json",
+      "bytes": 2782,
+      "sha256": "554E16ECCB1628FCAD9DB724E28FF964A6EEB8E6AD5846B7B5606A34D6D5651C"
+    },
+    {
+      "entry": "source-application-rev1/source-freeze.json",
+      "bytes": 1149,
+      "sha256": "0C219C6606790450D82435DF4BC65516761CE98D72688301FC414933077B830E"
+    },
+    {
+      "entry": "source-application-rev1/source-incremental.patch",
+      "bytes": 5001,
+      "sha256": "E575DD6111A7674263DD5BB18D9C227A532A7C6CE1AF589DA30C776ABCF2AE19"
+    }
+  ]
+}

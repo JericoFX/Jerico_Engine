@@ -1,0 +1,76 @@
+diff --git "a/F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-passgraph-workspace-rev1\\pass-node-layout-settle-fixture-repair-rev1\\before.cpp" "b/F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Tests\\GraphDocumentHistoryTests.cpp"
+index 19464d0087..0e1abb1230 100644
+--- "a/F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-passgraph-workspace-rev1\\pass-node-layout-settle-fixture-repair-rev1\\before.cpp"
++++ "b/F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Tests\\GraphDocumentHistoryTests.cpp"
+@@ -51,6 +51,7 @@
+ #include <GraphModel/Model/GraphContext.h>
+ #include <GraphModel/Model/Module/InputOutputNodes.h>
+ #include <QApplication>
++#include <QElapsedTimer>
+ #include <QEventLoop>
+ #include <QLabel>
+ #include <QLayout>
+@@ -904,18 +905,27 @@ namespace UnitTest
+             }
+         }
+         ASSERT_NE(propertyEditor, nullptr);
++        auto* reflectedEditor = static_cast<AzToolsFramework::ReflectedPropertyEditor*>(
++            propertyEditor->qt_metacast("AzToolsFramework::ReflectedPropertyEditor"));
++        ASSERT_NE(reflectedEditor, nullptr);
+ 
+         for (const QSize size : {QSize(900, 650), QSize(1400, 900)})
+         {
+             SCOPED_TRACE(testing::Message() << "workspace " << size.width() << "x" << size.height());
+             widget.resize(size);
+             widget.show();
+-            // Process the real queued property population and Qt layout, without a nested dialog/event loop.
+-            for (int update = 0; update < 2; ++update)
++            // Property population and ancestor layout requests span multiple queued event turns.
++            QElapsedTimer layoutDeadline;
++            layoutDeadline.start();
++            do
+             {
+                 QApplication::processEvents(QEventLoop::AllEvents);
+                 widget.layout()->activate();
+-            }
++            } while (layoutDeadline.elapsed() < 1000 &&
++                (reflectedEditor->GetWidgets().empty() || reflectedEditor->GetContentHeight() <= 0 ||
++                    propertyEditor->height() < propertyEditor->sizeHint().height()));
++            EXPECT_FALSE(reflectedEditor->GetWidgets().empty());
++            EXPECT_GT(reflectedEditor->GetContentHeight(), 0);
+             EXPECT_TRUE(notice->isVisible());
+             EXPECT_FALSE(notice->text().isEmpty());
+             EXPECT_LE(notice->height(), 4 * notice->fontMetrics().height());
+@@ -926,32 +936,6 @@ namespace UnitTest
+             EXPECT_TRUE(propertyEditor->isEnabled());
+             const QRect propertyBounds(propertyEditor->mapTo(inspector, QPoint()), propertyEditor->size());
+             EXPECT_GE(propertyBounds.intersected(inspector->rect()).height(), 6 * propertyEditor->fontMetrics().height());
+-            if (size == QSize(900, 650))
+-            {
+-                auto* reflectedEditor = static_cast<AzToolsFramework::ReflectedPropertyEditor*>(
+-                    propertyEditor->qt_metacast("AzToolsFramework::ReflectedPropertyEditor"));
+-                ASSERT_NE(reflectedEditor, nullptr);
+-                const auto recordLayout = [&](const char* phase)
+-                {
+-                    const AZStd::string prefix = AZStd::string::format("rpe_900_%s_", phase);
+-                    const QRect bounds(propertyEditor->mapTo(inspector, QPoint()), propertyEditor->size());
+-                    testing::Test::RecordProperty((prefix + "rows").c_str(), aznumeric_cast<int>(reflectedEditor->GetWidgets().size()));
+-                    testing::Test::RecordProperty((prefix + "content_height").c_str(), reflectedEditor->GetContentHeight());
+-                    testing::Test::RecordProperty((prefix + "size_hint_width").c_str(), reflectedEditor->sizeHint().width());
+-                    testing::Test::RecordProperty((prefix + "size_hint_height").c_str(), reflectedEditor->sizeHint().height());
+-                    testing::Test::RecordProperty((prefix + "height").c_str(), propertyEditor->height());
+-                    testing::Test::RecordProperty((prefix + "intersection_height").c_str(), bounds.intersected(inspector->rect()).height());
+-                    testing::Test::RecordProperty((prefix + "workspace_width").c_str(), widget.width());
+-                    testing::Test::RecordProperty((prefix + "workspace_height").c_str(), widget.height());
+-                };
+-                recordLayout("before");
+-                for (int update = 0; update < 2; ++update)
+-                {
+-                    QApplication::processEvents(QEventLoop::AllEvents);
+-                    widget.layout()->activate();
+-                }
+-                recordLayout("after");
+-            }
+         }
+     }
+ 

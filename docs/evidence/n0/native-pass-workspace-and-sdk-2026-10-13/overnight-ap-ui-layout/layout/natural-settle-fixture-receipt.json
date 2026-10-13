@@ -1,0 +1,10 @@
+{
+  "capturedUtc": "2026-10-13T08:14:07.6085556Z",
+  "status": "HOLD_FINAL_FIXTURE_NATIVE_RED_GREEN_PENDING",
+  "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Tests\\GraphDocumentHistoryTests.cpp",
+  "sourceSHA256": "A8588445AF05BBE3C585DF1B736F3A873550636EA06FD4A8B8FE405EB10121EF",
+  "cause": "Natural diagnostic shows populated13rows/content198/hint203 while geometry5; two additional natural turns settle geometry203 without invalidation or resize",
+  "operation": "Bounded1000ms natural event/layout readiness, no forced invalidation, setters or resize workaround. Remove diagnostic RecordProperty block",
+  "existingOracles": "Unchanged notice max4font lines, Inspector min half workspace and20avgchars, RPE visible/enabled andmin6fontlines",
+  "otherTestsUnchanged": true
+}

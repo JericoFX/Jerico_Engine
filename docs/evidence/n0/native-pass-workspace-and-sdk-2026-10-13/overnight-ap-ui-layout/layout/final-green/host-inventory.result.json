@@ -1,0 +1,32 @@
+{
+  "phase": "host-inventory",
+  "startedUtc": "2026-10-13T08:23:07.4207261Z",
+  "finishedUtc": "2026-10-13T08:23:07.4881554Z",
+  "elapsedSeconds": 0.067,
+  "pid": 141056,
+  "processCreationUtc": "2026-10-13T08:23:07.4214517Z",
+  "ramBefore": {
+    "capturedUtc": "2026-10-13T08:23:07.4206831Z",
+    "totalBytes": 34265743360,
+    "freeBytes": 14533656576,
+    "usedPercent": 57.59,
+    "thresholdPercent": 80
+  },
+  "peakRamUsedPercent": 57.59,
+  "ramWaitSamples": [],
+  "executable": "C:\\Program Files\\CMake\\bin\\ctest.exe",
+  "argv": [
+    "--test-dir",
+    "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine",
+    "-C",
+    "Profile",
+    "--show-only=json-v1",
+    "-R",
+    "^(Legacy::EditorLib\\.Tests\\.main::TEST_RUN)$"
+  ],
+  "exitCode": 0,
+  "stdout": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-passgraph-workspace-rev1\\native-final-green-layout-attempt1\\host-inventory.stdout.log",
+  "stdoutSha256": "0BE0988C615C4B6B7EEA4BD268DB249EB57FC2C06A33CC400E1B9F1C1B2C5ADF",
+  "stderr": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-passgraph-workspace-rev1\\native-final-green-layout-attempt1\\host-inventory.stderr.log",
+  "stderrSha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+}

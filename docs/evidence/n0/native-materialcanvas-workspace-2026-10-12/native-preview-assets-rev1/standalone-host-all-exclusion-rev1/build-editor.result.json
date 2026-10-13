@@ -1,0 +1,25 @@
+{
+  "phase": "build-editor",
+  "startedUtc": "2026-10-13T01:46:34.5080425Z",
+  "endedUtc": "2026-10-13T01:46:43.7367985Z",
+  "elapsedSeconds": 9.229,
+  "pid": 276764,
+  "executable": "C:\\Program Files\\CMake\\bin\\cmake.exe",
+  "argv": [
+    "--build",
+    "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine",
+    "--config",
+    "Profile",
+    "--target",
+    "Editor",
+    "--parallel",
+    "6"
+  ],
+  "exitCode": 0,
+  "stdout": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\standalone-host-all-exclusion-rev1\\native-attempt1\\build-editor.stdout.log",
+  "stdoutBytes": 18673,
+  "stdoutSha256": "2A4C727C7EF527C2E68D3751475B6BBCF4F8911C955B6A59FF10509D92EE82EE",
+  "stderr": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\standalone-host-all-exclusion-rev1\\native-attempt1\\build-editor.stderr.log",
+  "stderrBytes": 0,
+  "stderrSha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+}

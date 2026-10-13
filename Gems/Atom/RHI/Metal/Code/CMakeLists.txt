@@ -175,6 +175,8 @@ if (PAL_TRAIT_BUILD_HOST_TOOLS)
                 Gem::Atom_RHI.Reflect
                 Gem::${gem_name}.Reflect
                 Gem::${gem_name}.Builders.Static
+        RUNTIME_DEPENDENCIES
+            3rdParty::SPIRVCross
     )
 
     # Inject the gem name into the Module source file

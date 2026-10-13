@@ -65,7 +65,7 @@ namespace GraphCanvas
     class TintableIcon
     {
     public:
-        virtual ~TintableIcon() = default;
+        virtual ~TintableIcon();
 
         virtual AZ::Crc32 GetIconId() const = 0;
 
@@ -76,7 +76,7 @@ namespace GraphCanvas
     protected:
 
         AZStd::vector< QColor > m_paletteSwatches;
-        QPixmap* m_sourcePixmap;
+        QPixmap* m_sourcePixmap = nullptr;
     };
     
     class StyleManager

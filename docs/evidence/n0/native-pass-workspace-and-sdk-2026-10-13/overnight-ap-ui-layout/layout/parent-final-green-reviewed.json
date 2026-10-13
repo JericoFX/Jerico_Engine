@@ -1,0 +1,104 @@
+{
+  "capturedUtc": "2026-10-13T08:24:52.9698611Z",
+  "status": "NATIVE_FINAL_LAYOUT_GREEN_PARENT_VERIFIED_UI_SDK_PENDING",
+  "phases": [
+    {
+      "phase": "build-focal",
+      "exitCode": 0,
+      "elapsedSeconds": 41.864,
+      "peakRamUsedPercent": 60.3
+    },
+    {
+      "phase": "focal-inventory",
+      "exitCode": 0,
+      "elapsedSeconds": 0.067,
+      "peakRamUsedPercent": 57.52
+    },
+    {
+      "phase": "focal-test-JE__EditorMaterials.Tests.main__TEST_RUN",
+      "exitCode": 0,
+      "elapsedSeconds": 5.454,
+      "peakRamUsedPercent": 57.53
+    },
+    {
+      "phase": "focal-test-Gem__AtomToolsFramework.Tests.main__TEST_RUN",
+      "exitCode": 0,
+      "elapsedSeconds": 0.102,
+      "peakRamUsedPercent": 57.55
+    },
+    {
+      "phase": "focal-test-Gem__GraphModel.Editor.Tests.main__TEST_RUN",
+      "exitCode": 0,
+      "elapsedSeconds": 0.159,
+      "peakRamUsedPercent": 57.5
+    },
+    {
+      "phase": "build-hosts",
+      "exitCode": 0,
+      "elapsedSeconds": 69.72,
+      "peakRamUsedPercent": 58.51
+    },
+    {
+      "phase": "host-inventory",
+      "exitCode": 0,
+      "elapsedSeconds": 0.067,
+      "peakRamUsedPercent": 57.59
+    },
+    {
+      "phase": "host-test-Legacy__EditorLib.Tests.main__TEST_RUN",
+      "exitCode": 0,
+      "elapsedSeconds": 5.64,
+      "peakRamUsedPercent": 57.58
+    }
+  ],
+  "freezePath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-passgraph-workspace-rev1\\integrated-final-green-layout-freeze-rev14.json",
+  "inputCount": 1135,
+  "parentRehashed": 1135,
+  "drift": [],
+  "xml": [
+    {
+      "xml": "Gem_AtomToolsFramework.Tests.xml",
+      "tests": 13,
+      "sha256": "FCE07F6B6F7E18CCB72E34E0426570FC9D4FDF835541EA268D5BFA5538A44EE6",
+      "lastWriteUtc": "2026-10-13T08:21:57.3737247Z"
+    },
+    {
+      "xml": "Gem_GraphModel.Editor.Tests.xml",
+      "tests": 13,
+      "sha256": "4AF6F027DB499E1CE190A99CCFEBBDF787A4205A57CFBC698402E2829064D381",
+      "lastWriteUtc": "2026-10-13T08:21:57.5816034Z"
+    },
+    {
+      "xml": "JE_EditorMaterials.Tests.xml",
+      "tests": 50,
+      "sha256": "BD7BF0591FCB5A45066938620B8510255E317DEB513FD489AF589170CD237909",
+      "lastWriteUtc": "2026-10-13T08:21:57.2093681Z"
+    },
+    {
+      "xml": "Legacy_EditorLib.Tests.xml",
+      "tests": 72,
+      "sha256": "C7B76A0095280BD6F5BA781BE114CD600C9B93E015ED590F6C4479FB25928635",
+      "lastWriteUtc": "2026-10-13T08:23:13.1519622Z"
+    }
+  ],
+  "uniqueCases": 148,
+  "binaries": [
+    {
+      "name": "Editor.exe",
+      "bytes": 171520,
+      "sha256": "13C847A9421CFB0E3A84964247EE034E4BEC45A494A75CF965992C072D396704"
+    },
+    {
+      "name": "EditorMaterials.dll",
+      "bytes": 6876672,
+      "sha256": "A082122D619D52EA2EBDD132C726804BC8B4FD3BA035022BE960CA0AC539C4AF"
+    },
+    {
+      "name": "GraphCanvas.Editor.dll",
+      "bytes": 7212544,
+      "sha256": "7D8878A8D91DDEFCEFFEC3C0E1240FE462CFAFDAED98246F402664D92A94832E"
+    }
+  ],
+  "nativeProcesses": 0,
+  "scope": "Compilation,offscreen behavior and preserved leak checks only. Same final regression as authentic RED, one product line differs. No UI/render/SDK/global completion."
+}

@@ -1,0 +1,10 @@
+{
+  "capturedUtc": "2026-10-13T07:01:25.5166517Z",
+  "auditPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-passgraph-workspace-rev1\\ap-migration-attempt1\\execution2\\failure-source-header-audit-rev1.json",
+  "auditSha256": "8987A928CEBB3EC8817173B306000C250367CAB877CD1219D573D1183169ADAF",
+  "sourceCount": 347,
+  "verifiedSourceHashSizeAndPointerHeader": 347,
+  "mismatches": [],
+  "downloads": 0,
+  "limits": "Source pointer bytes verified; payload bytes not present or acquired."
+}

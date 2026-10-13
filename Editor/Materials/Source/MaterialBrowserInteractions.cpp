@@ -58,9 +58,10 @@ namespace JE
             if (path.ends_with(JE::Editor::EditorMaterialComponentUtil::MaterialGraphExtensionWithDot) ||
                 path.ends_with(JE::Editor::EditorMaterialComponentUtil::MaterialGraphNodeExtensionWithDot) ||
                 path.ends_with(JE::Editor::EditorMaterialComponentUtil::MaterialGraphTemplateExtensionWithDot) ||
+                path.ends_with(".passgraph") || path.ends_with(".passgraphtemplate") || path.ends_with(".passgraphnode") ||
                 path.ends_with(JE::Editor::EditorMaterialComponentUtil::ShaderExtensionWithDot))
             {
-                openers.push_back({ "Material_Canvas", "Open in Material Canvas...", QIcon(":/Menu/material_canvas.svg"),
+                openers.push_back({ "Material_Canvas", "Open in Graph Workspace...", QIcon(":/Menu/material_canvas.svg"),
                     [&](const char* fullSourceFileNameInCallback, [[maybe_unused]] const AZ::Uuid& sourceUUID)
                     {
                         EditorMaterialSystemComponentRequestBus::Broadcast(
@@ -92,7 +93,7 @@ namespace JE
                       const AZStd::string defaultMaterialGraphTemplate =
                           AtomToolsFramework::GetPathWithoutAlias(AtomToolsFramework::GetSettingsValue<AZStd::string>(
                               "/O3DE/Atom/MaterialCanvas/DefaultMaterialGraphTemplate",
-                              "@gemroot:MaterialCanvas@/Assets/MaterialCanvas/GraphData/blank_graph.materialgraphtemplate"));
+                              "@engroot@/Editor/Materials/Assets/MaterialCanvas/GraphData/blank_graph.materialgraphtemplate"));
 
                       QWidget* mainWindow = nullptr;
                       AzToolsFramework::EditorRequests::Bus::BroadcastResult(
@@ -239,6 +240,7 @@ namespace JE
                 fileName.ends_with(JE::Editor::EditorMaterialComponentUtil::MaterialGraphExtensionWithDot) ||
                 fileName.ends_with(JE::Editor::EditorMaterialComponentUtil::MaterialGraphNodeExtensionWithDot) ||
                 fileName.ends_with(JE::Editor::EditorMaterialComponentUtil::MaterialGraphTemplateExtensionWithDot) ||
+                fileName.ends_with(".passgraph") || fileName.ends_with(".passgraphtemplate") || fileName.ends_with(".passgraphnode") ||
                 fileName.ends_with(JE::Editor::EditorMaterialComponentUtil::ShaderExtensionWithDot);
         }
     } // namespace Editor

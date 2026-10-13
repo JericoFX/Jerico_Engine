@@ -1,0 +1,17 @@
+{
+  "status": "PARENT_REVIEWED_CAUSAL_RED",
+  "capturedUtc": "2026-10-12T21:45:15.9084468Z",
+  "buildExitCode": 0,
+  "ctestExitCode": 8,
+  "actualTests": 13,
+  "actualFailures": [
+    "GraphModelIntegrationTests.ParentNodeCacheDoesNotKeepTheOwnerAlive"
+  ],
+  "controlPassed": "RemovingTheParentNodeInvalidatesTheCachedLookup",
+  "xml": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\slot-parent-cache-red-native-attempt1\\GraphModel.Editor.Tests.red.xml",
+  "xmlSha256": "63D3352EF07984D08FC65692E31AECB7E79945203E47644D30F2B38EE656A592",
+  "freezeSha256": "39453638C8CE55FAFA0FC68A34DA23F5694E97FA2070B341543CFFD1FCF0C682",
+  "inputCount": 1055,
+  "postflightMismatches": 0,
+  "scope": "Model lifetime only; no UI/render acceptance"
+}

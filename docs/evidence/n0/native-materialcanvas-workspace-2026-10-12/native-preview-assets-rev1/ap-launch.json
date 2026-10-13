@@ -1,0 +1,21 @@
+{
+  "startedUtc": "2026-10-13T01:28:23.2135845Z",
+  "pid": 143912,
+  "executable": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AssetProcessorBatch.exe",
+  "executableSha256": "2394807FD94C4BC36EDBE40ADCDA51FE4E74D46DCBD15DAE36F4E4306012A615",
+  "argv": [
+    "--engine-path=F:\\JericoEngine\\JericoEngine",
+    "--project-path=F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture",
+    "--platforms=pc",
+    "--logDir=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\ap-migration-attempt1\\logs",
+    "--zeroAnalysisMode"
+  ],
+  "workingDirectory": "F:\\JericoEngine\\JericoEngine",
+  "logDir": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\ap-migration-attempt1\\logs",
+  "stdout": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\ap-migration-attempt1\\apbatch.stdout.log",
+  "stderr": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\ap-migration-attempt1\\apbatch.stderr.log",
+  "engineFreezeSha256": "119A5EAAA88F1060DCB49678610C57BB3EBD65B0149413D588C0066C59BC12BF",
+  "apFreezeSha256": "3856DEA35586808F4803DC60F4E9819AD74A7CA7B60F4CF88EE2EF4176408F6C",
+  "protectedInputSha256": "992BF09C25EB38264CFF0A87AB63B078FEB6A3CDB7438452578D44C01C4FDB21",
+  "inspectorSha256": "B8D93734872487021A8A5241937B0107BDE9EBDA0AAB114EB4B680A16B330C4C"
+}

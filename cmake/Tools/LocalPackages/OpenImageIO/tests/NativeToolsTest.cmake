@@ -1,0 +1,27 @@
+# Copyright (c) Contributors to the Open 3D Engine Project.
+# SPDX-License-Identifier: Apache-2.0 OR MIT
+include("${CMAKE_CURRENT_LIST_DIR}/../../Python/JERequireLocalPath.cmake")
+foreach(JE_PATH IN ITEMS JE_PACKAGE_ROOT JE_OUTPUT JE_CONSUMER)
+    JE_python_require_local_path(${JE_PATH})
+endforeach()
+if(EXISTS "${JE_OUTPUT}")
+    message(FATAL_ERROR "JE OIIO tools: owned output must be new")
+endif()
+file(MAKE_DIRECTORY "${JE_OUTPUT}")
+function(JE_tools_run JE_LABEL)
+    execute_process(COMMAND ${ARGN} RESULT_VARIABLE JE_RESULT
+        OUTPUT_VARIABLE JE_STDOUT ERROR_VARIABLE JE_STDERR)
+    file(WRITE "${JE_OUTPUT}/${JE_LABEL}.stdout.log" "${JE_STDOUT}")
+    file(WRITE "${JE_OUTPUT}/${JE_LABEL}.stderr.log" "${JE_STDERR}")
+    file(WRITE "${JE_OUTPUT}/${JE_LABEL}.exitcode.txt" "${JE_RESULT}\n")
+    if(NOT JE_RESULT EQUAL 0)
+        message(FATAL_ERROR "JE OIIO tools: ${JE_LABEL} failed (${JE_RESULT}): ${JE_STDERR}")
+    endif()
+endfunction()
+set(JE_BIN "${JE_PACKAGE_ROOT}/OpenImageIO/bin")
+JE_tools_run(pattern "${JE_BIN}/oiiotool.exe" --pattern checker:width=4:height=4 32x32 3 -d uint8 -o "${JE_OUTPUT}/checker.tif")
+JE_tools_run(iconvert "${JE_BIN}/iconvert.exe" "${JE_OUTPUT}/checker.tif" "${JE_OUTPUT}/checker.png")
+JE_tools_run(idiff "${JE_BIN}/idiff.exe" "${JE_OUTPUT}/checker.tif" "${JE_OUTPUT}/checker.png")
+JE_tools_run(maketx "${JE_BIN}/maketx.exe" --nchannels 3 --no-compute-average
+    "${JE_OUTPUT}/checker.tif" -o "${JE_OUTPUT}/checker.tx")
+JE_tools_run(readback "${JE_CONSUMER}" tools-verify "${JE_OUTPUT}")

@@ -1,0 +1,17 @@
+{
+  "capturedUtc": "2026-10-13T08:19:55.0411289Z",
+  "status": "FINAL_REGRESSION_RED_WITH_ORIGINAL_PRODUCT",
+  "inputCount": 1135,
+  "parentRehashed": 1135,
+  "drift": [],
+  "xmlSHA256": "CD50F129862FAF393AB56ED469A6BF822999734777A629CAD2E683602C5E731B",
+  "tests": 50,
+  "failedCases": 1,
+  "failedAssertions": 3,
+  "failureMessages": [
+    "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Tests\\GraphDocumentHistoryTests.cpp:931\nExpected: (notice->height()) <= (4 * notice->fontMetrics().height()), actual: 219 vs 68\nGoogle Test trace:\nF:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Tests\\GraphDocumentHistoryTests.cpp(914): workspace 900x650\n",
+    "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Tests\\GraphDocumentHistoryTests.cpp:931\nExpected: (notice->height()) <= (4 * notice->fontMetrics().height()), actual: 420 vs 68\nGoogle Test trace:\nF:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Tests\\GraphDocumentHistoryTests.cpp(914): workspace 1400x900\n",
+    "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Tests\\GraphDocumentHistoryTests.cpp:933\nExpected: (inspector->height()) >= (widget.height() / 2), actual: 419 vs 450\nGoogle Test trace:\nF:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Tests\\GraphDocumentHistoryTests.cpp(914): workspace 1400x900\n"
+  ],
+  "scope": "Same final bounded-readiness test retained for GREEN. No RPE5px artifact; notice and outer Inspector reproduce product failure."
+}

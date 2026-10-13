@@ -1,0 +1,14 @@
+{
+  "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\CMakeCache.txt",
+  "sha256": "ED5C27F041BD233556170A9E95B8F1F2CD5DD305AA4F10FB6504E1A9AFB96ABB",
+  "requiredLines": [
+    "CMAKE_GENERATOR:INTERNAL=Visual Studio 17 2022",
+    "CMAKE_GENERATOR_PLATFORM:INTERNAL=x64",
+    "FETCHCONTENT_FULLY_DISCONNECTED:BOOL=ON",
+    "LY_PACKAGE_SERVER_URLS:STRING=",
+    "O3DE_EXTERNAL_SUBDIRS:STRING=",
+    "LY_PROJECTS:STRING=F:/JericoEngine/JericoEngine/Projects/JEEditorFixture"
+  ],
+  "missingLines": [],
+  "valid": true
+}

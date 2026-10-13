@@ -1,0 +1,14 @@
+{
+    "Amazon": {
+        "AssetProcessor": {
+            "Settings": {
+                "ScanFolder gemassets-{34AA759E-8E7A-5713-A885-D7E548B234FE}": {
+                    "watch": "@ENGINEROOT@/Editor/Materials/RenderPass/Assets",
+                    "display": "Editor/RenderPass",
+                    "recursive": 1,
+                    "order": 100
+                }
+            }
+        }
+    }
+}

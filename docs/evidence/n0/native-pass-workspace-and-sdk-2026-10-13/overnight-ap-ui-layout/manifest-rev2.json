@@ -1,0 +1,956 @@
+{
+  "capturedUtc": "2026-10-13T09:20:38.4637223Z",
+  "status": "NATIVE_LAYOUT_AND_REAL_REOPEN_VERIFIED_SDK_PASS_COMPILATION_GLOBAL_AP_PENDING",
+  "sourceEvidenceRoot": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-passgraph-workspace-rev1",
+  "previousManifest": "manifest-rev1.json",
+  "previousManifestSHA256": "6E5C482A93D6F54DB94E00B1E24E706375CAE83D83B740ECA0ECC3BD0062BB61",
+  "claims": [
+    "FINAL authentic layout RED and GREEN use identical final regression source and exact original or corrected one-line product. 148 unique completed cases, zero failures/errors/disabled/skips; eight phases exit0; six hosts compiled.",
+    "Fresh Editor processes Vulkan and DX12 reopen saved Pass graph/node and native material graph/material; screenshots are original1920x1032 JPEG. Preexisting38 authored inputs and both private authored files preserved.",
+    "Keyboard title focus/Tab observed in Vulkan. No physical-DPI, moving-runtime benchmark, Beauty, VR or Pass generation/application acceptance.",
+    "Native context action opens Pass; double-click invokes Windows Open With and remains a UX limitation.",
+    "Fresh native material/materialtype AP jobs are verified; whole AP batch remains failed on347 LFS-pointer sources. Local cache audit finds6 valid payloads covering9 source paths; no materialization/download.",
+    "Editor and AP/builders owned by this GUI validation ended. Closure rev2 verifies zero remaining; transient rev1 is superseded.",
+    "SDK configuration/install/import/link and Shipping metrics remain pending. Engine GOAL/N0 are not complete."
+  ],
+  "artifactCount": 156,
+  "totalBytes": 6025636.0,
+  "artifacts": [
+    {
+      "source": "parent/ap-execution2-parent-reviewed-rev1.json",
+      "artifact": "ap/parent-migration-reviewed.json",
+      "bytes": 2028,
+      "sha256": "0EBC51D048D616420EE0D1D216BDD837D69532889203DC615F071747F5320F57"
+    },
+    {
+      "source": "parent/ap-failed-source-headers-parent-reviewed-rev1.json",
+      "artifact": "ap/parent-lfs-headers-reviewed.json",
+      "bytes": 519,
+      "sha256": "4453DB52CB7A53F966E76D8BF22B3712387FC333E9FC0F62E2AC46B6084E8328"
+    },
+    {
+      "source": "ap-migration-attempt1/execution2/migration-observation.json",
+      "artifact": "ap/migration-observation.json",
+      "bytes": 4947,
+      "sha256": "D5EA77B3814B681F0EAD0B632B04B92503EB75FD36A44E117F1EB5BBE0527F6C"
+    },
+    {
+      "source": "ap-migration-attempt1/execution2/failure-classification-rev1.json",
+      "artifact": "ap/failure-classification.json",
+      "bytes": 10297,
+      "sha256": "805A17D64D8C60C513F9EF93C7AD651AF63BC6D0F82B8A55C462237483AAD492"
+    },
+    {
+      "source": "ap-migration-attempt1/execution2/failure-source-header-audit-rev1.json",
+      "artifact": "ap/failed-source-header-audit.json",
+      "bytes": 360437,
+      "sha256": "8987A928CEBB3EC8817173B306000C250367CAB877CD1219D573D1183169ADAF"
+    },
+    {
+      "source": "ap-migration-attempt1/execution2/probe-after.stdout.json",
+      "artifact": "ap/probe-after.json",
+      "bytes": 2048,
+      "sha256": "12DF6C07F90101A8FB1D213BD086EA7D49AD47959F080A0742793DD0E5B73E72"
+    },
+    {
+      "source": "ap-migration-attempt1/execution2/postflight.json",
+      "artifact": "ap/postflight.json",
+      "bytes": 2539,
+      "sha256": "690086A964CF43E71BDA55E79F9D5D89F260E6D924AD821192A3312F7A4CE2F9"
+    },
+    {
+      "source": "ap-migration-attempt1/protected-authored-inputs.json",
+      "artifact": "ui/protected-authored-inputs-before.json",
+      "bytes": 9577,
+      "sha256": "43D7A492D0704E824357CAC08451E8FA59148E47363CA44846685042253F38B0"
+    },
+    {
+      "source": "parent/layout-red-parent-reviewed-rev1.json",
+      "artifact": "layout/red-parent-reviewed.json",
+      "bytes": 927,
+      "sha256": "37847EEB2D1E9A966E835F2ACA795D895B623A3D64C8D5315DA7B0CA0BA7C7E8"
+    },
+    {
+      "source": "native-red-layout-attempt1/junit/JE_EditorMaterials.Tests.xml",
+      "artifact": "layout/red/JE_EditorMaterials.Tests.xml",
+      "bytes": 19496,
+      "sha256": "5A7CCD247FD3BBA886FEB08CA62CED471CF732CFED31BFB8167BFB88820889C7"
+    },
+    {
+      "source": "native-red-layout-attempt1/summary.json",
+      "artifact": "layout/red/native-summary.json",
+      "bytes": 5837,
+      "sha256": "2305D762165DD85717F0B3285A509499F77C01F2A1DE1B892E5F784B96BB6EF8"
+    },
+    {
+      "source": "parent/layout-green1-parent-reviewed-rev2.json",
+      "artifact": "layout/green1-parent-reviewed.json",
+      "bytes": 1960,
+      "sha256": "08D63B38E267654546301985C762F9C35D31D2EBFACE37E8C3B0CDCAAA5D7EE6"
+    },
+    {
+      "source": "native-green-layout-attempt1/junit/JE_EditorMaterials.Tests.xml",
+      "artifact": "layout/green1/JE_EditorMaterials.Tests.xml",
+      "bytes": 17456,
+      "sha256": "1AD166B71F5F8F7DE9732D5BEACD44E3370AB145E8EE00703646935DC46247C6"
+    },
+    {
+      "source": "native-green-layout-attempt1/summary.json",
+      "artifact": "layout/green1/native-summary.json",
+      "bytes": 6020,
+      "sha256": "09B48DC75E51CEC4CD4C08C13C9F6598CF3DA8A8E1250F03845E804473AD1255"
+    },
+    {
+      "source": "pass-node-layout-product-repair-rev1/source-diff.patch",
+      "artifact": "layout/product-repair.patch",
+      "bytes": 243,
+      "sha256": "53375D1A1D05BBBAEE3D54028C97FAE99A0636AD28F54E3049B596F1E6A437C6"
+    },
+    {
+      "source": "pass-node-layout-product-repair-rev1/receipt.json",
+      "artifact": "layout/product-repair-receipt.json",
+      "bytes": 754,
+      "sha256": "801D3DB5C12B9B18BBE27049CAF9158B974C9948CC1AB59F1024AC7DCF67D797"
+    },
+    {
+      "source": "pass-node-layout-regression-rev1/source-diff.patch",
+      "artifact": "layout/regression.patch",
+      "bytes": 3093,
+      "sha256": "5BBBE9331C236BE954D9CE0043A41E9690AF81E8B4FFFECAF2018B90CAA0F12B"
+    },
+    {
+      "source": "pass-node-layout-regression-rev1/receipt.json",
+      "artifact": "layout/regression-receipt.json",
+      "bytes": 1351,
+      "sha256": "1C2D764C81BE77286C45552D1F43E949B0829A079DF03F2F688B79E7C7BC1744"
+    },
+    {
+      "source": "parent/native7-parent-reviewed-validation-rev1.json",
+      "artifact": "baseline/native7-parent-reviewed.json",
+      "bytes": 6595,
+      "sha256": "E730A4B7093B50CEAEA06F81F0E280274F1FB83536E2FB976EF114A4379E0DB5"
+    },
+    {
+      "source": "editor-vulkan-pass-workspace-attempt1/01-new-document-types.jpg",
+      "artifact": "ui/01-new-document-types.jpg",
+      "bytes": 108187,
+      "sha256": "B40F9B90759C809F5EE9E27FA0F0F08ACFD909750D27FB4D6FA99355D9BFCF2B"
+    },
+    {
+      "source": "editor-vulkan-pass-workspace-attempt1/02-native-pass-empty.jpg",
+      "artifact": "ui/02-native-pass-empty.jpg",
+      "bytes": 92367,
+      "sha256": "475DC9003F1F9D142D516AD262FED285176250F97AAB4E445B1CD107A8F83AEF"
+    },
+    {
+      "source": "editor-vulkan-pass-workspace-attempt1/03-native-pass-comment-inspector.jpg",
+      "artifact": "ui/03-native-pass-comment-inspector.jpg",
+      "bytes": 97149,
+      "sha256": "77597401723C5D77F4A360098490969323046656C00F2EA5F84F4EC9DF36F573"
+    },
+    {
+      "source": "editor-vulkan-pass-workspace-attempt1/04-native-pass-undo.jpg",
+      "artifact": "ui/04-native-pass-undo.jpg",
+      "bytes": 114821,
+      "sha256": "D520908667A2D6E9F12DBFBA3BC1D58901507F847E5E4DD5434AF20794965EF1"
+    },
+    {
+      "source": "editor-vulkan-pass-workspace-attempt1/05-native-pass-undo-empty-comment.jpg",
+      "artifact": "ui/05-native-pass-undo-empty-comment.jpg",
+      "bytes": 110828,
+      "sha256": "122E9A479237D9320F3A22065F73D3E8BA406F313C7672F29B462242D413C748"
+    },
+    {
+      "source": "editor-vulkan-pass-workspace-attempt1/06-native-pass-redo-comment.jpg",
+      "artifact": "ui/06-native-pass-redo-comment.jpg",
+      "bytes": 114431,
+      "sha256": "818F2A1AAD71CC2F1DC932ACE2E436746916A5FE81494A4D283727DD0282E3CC"
+    },
+    {
+      "source": "editor-vulkan-pass-workspace-attempt1/07-native-pass-redo-restored.jpg",
+      "artifact": "ui/07-native-pass-redo-restored.jpg",
+      "bytes": 96669,
+      "sha256": "6735D9D7491590595FA985EE5850D5C20556BA5C3DF2074AC5208B0AFE4F4C5D"
+    },
+    {
+      "source": "editor-vulkan-pass-workspace-attempt1/08-native-pass-saved.jpg",
+      "artifact": "ui/08-native-pass-saved.jpg",
+      "bytes": 96253,
+      "sha256": "1C42DFB78DE13E001E32A381FCCB7DE8CA80F355957E8FA4C35E3FA2CADDE967"
+    },
+    {
+      "source": "editor-vulkan-pass-workspace-attempt1/09-native-pass-node-config.jpg",
+      "artifact": "ui/09-native-pass-node-config.jpg",
+      "bytes": 101274,
+      "sha256": "0429E41A943EA9DFB0374B47698E0C764E26D6BD9BD1685B0F6AD34A626E2F02"
+    },
+    {
+      "source": "editor-vulkan-pass-workspace-attempt1/10-native-pass-node-undo.jpg",
+      "artifact": "ui/10-native-pass-node-undo.jpg",
+      "bytes": 100965,
+      "sha256": "58AA8398FBF85DE1CE542941429E7DF658AA008ADEAA66F3823600CE1EF12B80"
+    },
+    {
+      "source": "editor-vulkan-pass-workspace-attempt1/11-native-pass-node-redo.jpg",
+      "artifact": "ui/11-native-pass-node-redo.jpg",
+      "bytes": 104382,
+      "sha256": "E36EFBCE6120B18C960B5891681FDE3BAA3B6051CCCD34E28B44A4F69B71A82F"
+    },
+    {
+      "source": "editor-vulkan-pass-workspace-attempt1/12-native-pass-node-saved-layout-red.jpg",
+      "artifact": "ui/12-native-pass-node-saved-layout-red.jpg",
+      "bytes": 101181,
+      "sha256": "6038BCDA896C199064B174C01CCE2AD50B8D1078FBED9C158E1CD42946C9CF1F"
+    },
+    {
+      "source": "editor-vulkan-pass-workspace-attempt1/13-native-editor-vulkan-scene-before-close.jpg",
+      "artifact": "ui/13-native-editor-vulkan-scene-before-close.jpg",
+      "bytes": 202257,
+      "sha256": "1B3538D3E8050CE3A5D85602C91C77C49BD4C3790C2301262AA696B2A7156C4B"
+    },
+    {
+      "source": "editor-vulkan-pass-workspace-attempt1/assetprocessor-launch.json",
+      "artifact": "ui/assetprocessor-launch.json",
+      "bytes": 958,
+      "sha256": "D1446B95879760787965E3791F82E00EB22844551136D3BC04BBF04F5595CB4B"
+    },
+    {
+      "source": "editor-vulkan-pass-workspace-attempt1/Editor-after-normal-close.log",
+      "artifact": "ui/Editor-after-normal-close.log",
+      "bytes": 7426,
+      "sha256": "39B416DB2811570E22D15A312636F33612E0BF13C79079BB8C55FE5F30171B90"
+    },
+    {
+      "source": "editor-vulkan-pass-workspace-attempt1/Editor-before.log",
+      "artifact": "ui/Editor-before.log",
+      "bytes": 13186,
+      "sha256": "48093BD2D1EA7092CBECDBB74FE4E131C6DC4C4CBA9B9559E53330B69C358793"
+    },
+    {
+      "source": "editor-vulkan-pass-workspace-attempt1/launch.json",
+      "artifact": "ui/launch.json",
+      "bytes": 1489,
+      "sha256": "EF2500CBD426F1EDB2476E249C995FB42207A19FCF6126B048F9C6AE4E25B99C"
+    },
+    {
+      "source": "editor-vulkan-pass-workspace-attempt1/owned-process-closure-rev1.json",
+      "artifact": "ui/owned-process-closure-rev1.json",
+      "bytes": 1525,
+      "sha256": "3E78F044AAF5D87AF53273BD8F85494FEE5D2FB2E82286E01B43BC9EC0CFB570"
+    },
+    {
+      "source": "editor-vulkan-pass-workspace-attempt1/private-fixture-ownership.json",
+      "artifact": "ui/private-fixture-ownership.json",
+      "bytes": 282,
+      "sha256": "11CCD026EBD73DA18D23FEC211414111084950BD6C5114F6113805AC4603A38D"
+    },
+    {
+      "source": "editor-vulkan-pass-workspace-attempt1/protected-inputs-postflight-rev1.json",
+      "artifact": "ui/protected-inputs-postflight-rev1.json",
+      "bytes": 776,
+      "sha256": "1788C2D83D2EA5258E1CEACF63C9BE7489EBA4F503885265F2D3185B18B0D5F7"
+    },
+    {
+      "source": "native-final-red-layout-attempt1/build-focal.native-exit.txt",
+      "artifact": "layout/final-red/build-focal.native-exit.txt",
+      "bytes": 1,
+      "sha256": "5FECEB66FFC86F38D952786C6D696C79C2DBC239DD4E91B46729D73A27FB57E9"
+    },
+    {
+      "source": "native-final-red-layout-attempt1/build-focal.result.json",
+      "artifact": "layout/final-red/build-focal.result.json",
+      "bytes": 2156,
+      "sha256": "2189112C5EFFEDAC55F66DE955CCEA18CE5DF4C69A4B5E0740A6B0327A861C1E"
+    },
+    {
+      "source": "native-final-red-layout-attempt1/build-focal.start.json",
+      "artifact": "layout/final-red/build-focal.start.json",
+      "bytes": 1007,
+      "sha256": "2CFDCA7EB2DCCFAB1D7DF254E4A79AA223847E79272EAD0F438E37F0C349EB7D"
+    },
+    {
+      "source": "native-final-red-layout-attempt1/build-focal.stderr.log",
+      "artifact": "layout/final-red/build-focal.stderr.log",
+      "bytes": 0,
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "native-final-red-layout-attempt1/build-focal.stdout.log",
+      "artifact": "layout/final-red/build-focal.stdout.log",
+      "bytes": 6187,
+      "sha256": "A453A74A6D35CA68136DE3D689F382FC539005D12A16E3FFE06B1AC4A653C36C"
+    },
+    {
+      "source": "native-final-red-layout-attempt1/cache-after-configure.json",
+      "artifact": "layout/final-red/cache-after-configure.json",
+      "bytes": 559,
+      "sha256": "9BD7D163E77287E139F6D0B809DFEC88CA3BE1A7D4B97A2F3EC0882CA988140F"
+    },
+    {
+      "source": "native-final-red-layout-attempt1/cache-before-configure.json",
+      "artifact": "layout/final-red/cache-before-configure.json",
+      "bytes": 559,
+      "sha256": "9BD7D163E77287E139F6D0B809DFEC88CA3BE1A7D4B97A2F3EC0882CA988140F"
+    },
+    {
+      "source": "native-final-red-layout-attempt1/failure.json",
+      "artifact": "layout/final-red/failure.json",
+      "bytes": 6165,
+      "sha256": "FD458E73278317587E0E8E76AF855EA73B0B242FA1C5AC652362B9A48AFDDF56"
+    },
+    {
+      "source": "native-final-red-layout-attempt1/focal-ctest-inventory.json",
+      "artifact": "layout/final-red/focal-ctest-inventory.json",
+      "bytes": 2141,
+      "sha256": "6A1C6F66ECE3A7457A49CE1BE33FEEE3DC8E57FDF6E641E6EA6758F8866FE8CB"
+    },
+    {
+      "source": "native-final-red-layout-attempt1/focal-inventory.native-exit.txt",
+      "artifact": "layout/final-red/focal-inventory.native-exit.txt",
+      "bytes": 1,
+      "sha256": "5FECEB66FFC86F38D952786C6D696C79C2DBC239DD4E91B46729D73A27FB57E9"
+    },
+    {
+      "source": "native-final-red-layout-attempt1/focal-inventory.result.json",
+      "artifact": "layout/final-red/focal-inventory.result.json",
+      "bytes": 1305,
+      "sha256": "91008386F7A9A18907F75D286A9E67222EC22A1875530B586C3479483466E3FE"
+    },
+    {
+      "source": "native-final-red-layout-attempt1/focal-inventory.start.json",
+      "artifact": "layout/final-red/focal-inventory.start.json",
+      "bytes": 1035,
+      "sha256": "0AD250D384D8013601651D8BBFD983949F4A7784BB07E79951BD7A99589A100D"
+    },
+    {
+      "source": "native-final-red-layout-attempt1/focal-inventory.stderr.log",
+      "artifact": "layout/final-red/focal-inventory.stderr.log",
+      "bytes": 0,
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "native-final-red-layout-attempt1/focal-inventory.stdout.log",
+      "artifact": "layout/final-red/focal-inventory.stdout.log",
+      "bytes": 2158,
+      "sha256": "3AF0DD17DFE8E16576E5DAAFF5A8FC05ED9AE3BD581AB722EDB0848EFB544DFE"
+    },
+    {
+      "source": "native-final-red-layout-attempt1/focal-test-JE__EditorMaterials.Tests.main__TEST_RUN.native-exit.txt",
+      "artifact": "layout/final-red/focal-test-JE__EditorMaterials.Tests.main__TEST_RUN.native-exit.txt",
+      "bytes": 1,
+      "sha256": "2C624232CDD221771294DFBB310ACA000A0DF6AC8B66B696D90EF06FDEFB64A3"
+    },
+    {
+      "source": "native-final-red-layout-attempt1/focal-test-JE__EditorMaterials.Tests.main__TEST_RUN.result.json",
+      "artifact": "layout/final-red/focal-test-JE__EditorMaterials.Tests.main__TEST_RUN.result.json",
+      "bytes": 1467,
+      "sha256": "B356F35B0B9CD319AE75A9DC6F41B4E627D5E92ACED8CFA2DA3413E25E078C80"
+    },
+    {
+      "source": "native-final-red-layout-attempt1/focal-test-JE__EditorMaterials.Tests.main__TEST_RUN.start.json",
+      "artifact": "layout/final-red/focal-test-JE__EditorMaterials.Tests.main__TEST_RUN.start.json",
+      "bytes": 1197,
+      "sha256": "FFA0B67467C7F8E536A60714E41E80CF305B6F618C81D294E6AB79315A61A6E7"
+    },
+    {
+      "source": "native-final-red-layout-attempt1/focal-test-JE__EditorMaterials.Tests.main__TEST_RUN.stderr.log",
+      "artifact": "layout/final-red/focal-test-JE__EditorMaterials.Tests.main__TEST_RUN.stderr.log",
+      "bytes": 27,
+      "sha256": "18E00877DC1071C85CD4F479D451BEBEEF8309022E46CF8C63B0BED5151984A4"
+    },
+    {
+      "source": "native-final-red-layout-attempt1/focal-test-JE__EditorMaterials.Tests.main__TEST_RUN.stdout.log",
+      "artifact": "layout/final-red/focal-test-JE__EditorMaterials.Tests.main__TEST_RUN.stdout.log",
+      "bytes": 13304,
+      "sha256": "2FD3F4D8C1266180803F174370EE150A64381B4E05655D2DC598D1D762327FF1"
+    },
+    {
+      "source": "native-final-red-layout-attempt1/postflight.json",
+      "artifact": "layout/final-red/postflight.json",
+      "bytes": 284279,
+      "sha256": "3ABA8F2714723D0567A611C56AF217B1642E426E89ED1A7D71812B609343B22A"
+    },
+    {
+      "source": "native-final-red-layout-attempt1/preflight.json",
+      "artifact": "layout/final-red/preflight.json",
+      "bytes": 278889,
+      "sha256": "4DF642655D34E19F0606F001379BD667BA39E0A7A00458B1BC2981290893882D"
+    },
+    {
+      "source": "native-final-red-layout-attempt1/summary.json",
+      "artifact": "layout/final-red/summary.json",
+      "bytes": 6366,
+      "sha256": "342C61D99AE3C5BBF342792E991B02BFF493DACF29D7E05024EC01187A84E097"
+    },
+    {
+      "source": "native-final-red-layout-attempt1/junit/JE_EditorMaterials.Tests.xml",
+      "artifact": "layout/final-red/junit/JE_EditorMaterials.Tests.xml",
+      "bytes": 18723,
+      "sha256": "CD50F129862FAF393AB56ED469A6BF822999734777A629CAD2E683602C5E731B"
+    },
+    {
+      "source": "native-final-green-layout-attempt1/build-focal.native-exit.txt",
+      "artifact": "layout/final-green/build-focal.native-exit.txt",
+      "bytes": 1,
+      "sha256": "5FECEB66FFC86F38D952786C6D696C79C2DBC239DD4E91B46729D73A27FB57E9"
+    },
+    {
+      "source": "native-final-green-layout-attempt1/build-focal.result.json",
+      "artifact": "layout/final-green/build-focal.result.json",
+      "bytes": 1786,
+      "sha256": "2F33A7EC996FD7D0B92A2E59B8D9978FC7A515FBA785F21E2B8ACAADF3C3852D"
+    },
+    {
+      "source": "native-final-green-layout-attempt1/build-focal.start.json",
+      "artifact": "layout/final-green/build-focal.start.json",
+      "bytes": 1076,
+      "sha256": "271B036E9D624A161A90817B0B1B411803001DDAE9D0D11444F9CA54545B25D8"
+    },
+    {
+      "source": "native-final-green-layout-attempt1/build-focal.stderr.log",
+      "artifact": "layout/final-green/build-focal.stderr.log",
+      "bytes": 0,
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "native-final-green-layout-attempt1/build-focal.stdout.log",
+      "artifact": "layout/final-green/build-focal.stdout.log",
+      "bytes": 13772,
+      "sha256": "8E9423F31E11625D7677257B08F71BD3E6C6D2D67DF887573D6A6EA2BE5E40EE"
+    },
+    {
+      "source": "native-final-green-layout-attempt1/build-hosts.native-exit.txt",
+      "artifact": "layout/final-green/build-hosts.native-exit.txt",
+      "bytes": 1,
+      "sha256": "5FECEB66FFC86F38D952786C6D696C79C2DBC239DD4E91B46729D73A27FB57E9"
+    },
+    {
+      "source": "native-final-green-layout-attempt1/build-hosts.result.json",
+      "artifact": "layout/final-green/build-hosts.result.json",
+      "bytes": 2266,
+      "sha256": "C6F9DA8109799216129CD6A2F910E14E495B153CE024640DBBF6C08BFC4078B3"
+    },
+    {
+      "source": "native-final-green-layout-attempt1/build-hosts.start.json",
+      "artifact": "layout/final-green/build-hosts.start.json",
+      "bytes": 1117,
+      "sha256": "C8644931FC987BEDFB5AF3004131B2541D30AFA8D822C775D1BD4FB9638F35BB"
+    },
+    {
+      "source": "native-final-green-layout-attempt1/build-hosts.stderr.log",
+      "artifact": "layout/final-green/build-hosts.stderr.log",
+      "bytes": 0,
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "native-final-green-layout-attempt1/build-hosts.stdout.log",
+      "artifact": "layout/final-green/build-hosts.stdout.log",
+      "bytes": 92766,
+      "sha256": "ADB5FB9933032BDDF40E3A15FCD8F2B8A5D53CB8AB8787B0DE7631E4FC5C6325"
+    },
+    {
+      "source": "native-final-green-layout-attempt1/cache-after-configure.json",
+      "artifact": "layout/final-green/cache-after-configure.json",
+      "bytes": 559,
+      "sha256": "9BD7D163E77287E139F6D0B809DFEC88CA3BE1A7D4B97A2F3EC0882CA988140F"
+    },
+    {
+      "source": "native-final-green-layout-attempt1/cache-before-configure.json",
+      "artifact": "layout/final-green/cache-before-configure.json",
+      "bytes": 559,
+      "sha256": "9BD7D163E77287E139F6D0B809DFEC88CA3BE1A7D4B97A2F3EC0882CA988140F"
+    },
+    {
+      "source": "native-final-green-layout-attempt1/focal-ctest-inventory.json",
+      "artifact": "layout/final-green/focal-ctest-inventory.json",
+      "bytes": 5228,
+      "sha256": "CEC718C31608809CB7F13C155073B251825EE59DC92B8DD453C53FCCE9659C06"
+    },
+    {
+      "source": "native-final-green-layout-attempt1/focal-inventory.native-exit.txt",
+      "artifact": "layout/final-green/focal-inventory.native-exit.txt",
+      "bytes": 1,
+      "sha256": "5FECEB66FFC86F38D952786C6D696C79C2DBC239DD4E91B46729D73A27FB57E9"
+    },
+    {
+      "source": "native-final-green-layout-attempt1/focal-inventory.result.json",
+      "artifact": "layout/final-green/focal-inventory.result.json",
+      "bytes": 1408,
+      "sha256": "0B02579A565A8F1A5E6636E3457899B4DD2DBDB2AF86F86887EBE52C91242F54"
+    },
+    {
+      "source": "native-final-green-layout-attempt1/focal-inventory.start.json",
+      "artifact": "layout/final-green/focal-inventory.start.json",
+      "bytes": 1138,
+      "sha256": "B41DC2B0A48FD84FB9354A1425D4AEF064F3AF49A7FFA0C3F3EDACC7B5F48202"
+    },
+    {
+      "source": "native-final-green-layout-attempt1/focal-inventory.stderr.log",
+      "artifact": "layout/final-green/focal-inventory.stderr.log",
+      "bytes": 0,
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "native-final-green-layout-attempt1/focal-inventory.stdout.log",
+      "artifact": "layout/final-green/focal-inventory.stdout.log",
+      "bytes": 5241,
+      "sha256": "4A978D342256BD27ADFEDE5FDC83ABDC5AF6C94FFAC91D2142484AE6AE7D7776"
+    },
+    {
+      "source": "native-final-green-layout-attempt1/focal-test-Gem__AtomToolsFramework.Tests.main__TEST_RUN.native-exit.txt",
+      "artifact": "layout/final-green/focal-test-Gem__AtomToolsFramework.Tests.main__TEST_RUN.native-exit.txt",
+      "bytes": 1,
+      "sha256": "5FECEB66FFC86F38D952786C6D696C79C2DBC239DD4E91B46729D73A27FB57E9"
+    },
+    {
+      "source": "native-final-green-layout-attempt1/focal-test-Gem__AtomToolsFramework.Tests.main__TEST_RUN.result.json",
+      "artifact": "layout/final-green/focal-test-Gem__AtomToolsFramework.Tests.main__TEST_RUN.result.json",
+      "bytes": 1486,
+      "sha256": "619F4CA976D0A3BB7B2002DA7EC438C5A0B5BE4F337B6E38849F38734EE614CD"
+    },
+    {
+      "source": "native-final-green-layout-attempt1/focal-test-Gem__AtomToolsFramework.Tests.main__TEST_RUN.start.json",
+      "artifact": "layout/final-green/focal-test-Gem__AtomToolsFramework.Tests.main__TEST_RUN.start.json",
+      "bytes": 1216,
+      "sha256": "92D6471D36C1BA501C2D88262418A8503F5AEE8C29EE675D8089C11FA5402B91"
+    },
+    {
+      "source": "native-final-green-layout-attempt1/focal-test-Gem__AtomToolsFramework.Tests.main__TEST_RUN.stderr.log",
+      "artifact": "layout/final-green/focal-test-Gem__AtomToolsFramework.Tests.main__TEST_RUN.stderr.log",
+      "bytes": 0,
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "native-final-green-layout-attempt1/focal-test-Gem__AtomToolsFramework.Tests.main__TEST_RUN.stdout.log",
+      "artifact": "layout/final-green/focal-test-Gem__AtomToolsFramework.Tests.main__TEST_RUN.stdout.log",
+      "bytes": 425,
+      "sha256": "827CB0FF55543E93F37AA958B75BB30CFA10CA8F59F21BA081D1342438ECD6BA"
+    },
+    {
+      "source": "native-final-green-layout-attempt1/focal-test-Gem__GraphModel.Editor.Tests.main__TEST_RUN.native-exit.txt",
+      "artifact": "layout/final-green/focal-test-Gem__GraphModel.Editor.Tests.main__TEST_RUN.native-exit.txt",
+      "bytes": 1,
+      "sha256": "5FECEB66FFC86F38D952786C6D696C79C2DBC239DD4E91B46729D73A27FB57E9"
+    },
+    {
+      "source": "native-final-green-layout-attempt1/focal-test-Gem__GraphModel.Editor.Tests.main__TEST_RUN.result.json",
+      "artifact": "layout/final-green/focal-test-Gem__GraphModel.Editor.Tests.main__TEST_RUN.result.json",
+      "bytes": 1483,
+      "sha256": "4A6F23B3FC7AE576A650F12A6AAD2EEB9D8D7FD33D8D2A947445C05C51B0EE5F"
+    },
+    {
+      "source": "native-final-green-layout-attempt1/focal-test-Gem__GraphModel.Editor.Tests.main__TEST_RUN.start.json",
+      "artifact": "layout/final-green/focal-test-Gem__GraphModel.Editor.Tests.main__TEST_RUN.start.json",
+      "bytes": 1214,
+      "sha256": "462A5626AC8B21FF491B22BF6A08FBAFE4C131758C0C01DD63E6F5AB6964A304"
+    },
+    {
+      "source": "native-final-green-layout-attempt1/focal-test-Gem__GraphModel.Editor.Tests.main__TEST_RUN.stderr.log",
+      "artifact": "layout/final-green/focal-test-Gem__GraphModel.Editor.Tests.main__TEST_RUN.stderr.log",
+      "bytes": 0,
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "native-final-green-layout-attempt1/focal-test-Gem__GraphModel.Editor.Tests.main__TEST_RUN.stdout.log",
+      "artifact": "layout/final-green/focal-test-Gem__GraphModel.Editor.Tests.main__TEST_RUN.stdout.log",
+      "bytes": 423,
+      "sha256": "658E4D230FF80FF022F55A9ABF980508F98AF0151A286CD111F439980DF65BAE"
+    },
+    {
+      "source": "native-final-green-layout-attempt1/focal-test-JE__EditorMaterials.Tests.main__TEST_RUN.native-exit.txt",
+      "artifact": "layout/final-green/focal-test-JE__EditorMaterials.Tests.main__TEST_RUN.native-exit.txt",
+      "bytes": 1,
+      "sha256": "5FECEB66FFC86F38D952786C6D696C79C2DBC239DD4E91B46729D73A27FB57E9"
+    },
+    {
+      "source": "native-final-green-layout-attempt1/focal-test-JE__EditorMaterials.Tests.main__TEST_RUN.result.json",
+      "artifact": "layout/final-green/focal-test-JE__EditorMaterials.Tests.main__TEST_RUN.result.json",
+      "bytes": 1470,
+      "sha256": "1A7AF14AD0C76431E56F18AA35C3AAD8652E9D02C1CEA71F3E77CDA250CD1B26"
+    },
+    {
+      "source": "native-final-green-layout-attempt1/focal-test-JE__EditorMaterials.Tests.main__TEST_RUN.start.json",
+      "artifact": "layout/final-green/focal-test-JE__EditorMaterials.Tests.main__TEST_RUN.start.json",
+      "bytes": 1200,
+      "sha256": "878C07E4D0AEDB468C6188969BDB402D8E9DFED1A3460F05FC5AAAC00E2BAD01"
+    },
+    {
+      "source": "native-final-green-layout-attempt1/focal-test-JE__EditorMaterials.Tests.main__TEST_RUN.stderr.log",
+      "artifact": "layout/final-green/focal-test-JE__EditorMaterials.Tests.main__TEST_RUN.stderr.log",
+      "bytes": 0,
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "native-final-green-layout-attempt1/focal-test-JE__EditorMaterials.Tests.main__TEST_RUN.stdout.log",
+      "artifact": "layout/final-green/focal-test-JE__EditorMaterials.Tests.main__TEST_RUN.stdout.log",
+      "bytes": 419,
+      "sha256": "9740878749355CAAF78EE022DD82E3B762C3765DF45B883F7D78B12B32C898EC"
+    },
+    {
+      "source": "native-final-green-layout-attempt1/host-ctest-inventory.json",
+      "artifact": "layout/final-green/host-ctest-inventory.json",
+      "bytes": 1815,
+      "sha256": "A7622B535F4CF95AE722285EB8F4288C6619EA0716A9C4C56D82C5D4EECEA8FA"
+    },
+    {
+      "source": "native-final-green-layout-attempt1/host-inventory.native-exit.txt",
+      "artifact": "layout/final-green/host-inventory.native-exit.txt",
+      "bytes": 1,
+      "sha256": "5FECEB66FFC86F38D952786C6D696C79C2DBC239DD4E91B46729D73A27FB57E9"
+    },
+    {
+      "source": "native-final-green-layout-attempt1/host-inventory.result.json",
+      "artifact": "layout/final-green/host-inventory.result.json",
+      "bytes": 1305,
+      "sha256": "268C7AF91CD388A6FE3F094719C6FAD18BB4A0459DC0F4A4828561850D1E4E2D"
+    },
+    {
+      "source": "native-final-green-layout-attempt1/host-inventory.start.json",
+      "artifact": "layout/final-green/host-inventory.start.json",
+      "bytes": 1035,
+      "sha256": "617F6CA576FDC06D8B70D2E0E167A87FE81421A27054E7DA5B93B46EDB551B9B"
+    },
+    {
+      "source": "native-final-green-layout-attempt1/host-inventory.stderr.log",
+      "artifact": "layout/final-green/host-inventory.stderr.log",
+      "bytes": 0,
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "native-final-green-layout-attempt1/host-inventory.stdout.log",
+      "artifact": "layout/final-green/host-inventory.stdout.log",
+      "bytes": 1826,
+      "sha256": "0BE0988C615C4B6B7EEA4BD268DB249EB57FC2C06A33CC400E1B9F1C1B2C5ADF"
+    },
+    {
+      "source": "native-final-green-layout-attempt1/host-test-Legacy__EditorLib.Tests.main__TEST_RUN.native-exit.txt",
+      "artifact": "layout/final-green/host-test-Legacy__EditorLib.Tests.main__TEST_RUN.native-exit.txt",
+      "bytes": 1,
+      "sha256": "5FECEB66FFC86F38D952786C6D696C79C2DBC239DD4E91B46729D73A27FB57E9"
+    },
+    {
+      "source": "native-final-green-layout-attempt1/host-test-Legacy__EditorLib.Tests.main__TEST_RUN.result.json",
+      "artifact": "layout/final-green/host-test-Legacy__EditorLib.Tests.main__TEST_RUN.result.json",
+      "bytes": 1458,
+      "sha256": "91C399BB6ED01A6A93F1726C8ADFE4E97A4C349A271A1A27AA4D47E6A33F05BF"
+    },
+    {
+      "source": "native-final-green-layout-attempt1/host-test-Legacy__EditorLib.Tests.main__TEST_RUN.start.json",
+      "artifact": "layout/final-green/host-test-Legacy__EditorLib.Tests.main__TEST_RUN.start.json",
+      "bytes": 1189,
+      "sha256": "20012AE604E899F4278058FB92EE1D888F23B316763D7879B3A1658BC8868569"
+    },
+    {
+      "source": "native-final-green-layout-attempt1/host-test-Legacy__EditorLib.Tests.main__TEST_RUN.stderr.log",
+      "artifact": "layout/final-green/host-test-Legacy__EditorLib.Tests.main__TEST_RUN.stderr.log",
+      "bytes": 0,
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "native-final-green-layout-attempt1/host-test-Legacy__EditorLib.Tests.main__TEST_RUN.stdout.log",
+      "artifact": "layout/final-green/host-test-Legacy__EditorLib.Tests.main__TEST_RUN.stdout.log",
+      "bytes": 413,
+      "sha256": "BD4FC12D0A8FADCD023E33D25648DA05020F225FC75F62EEA1CA26B90CAA533A"
+    },
+    {
+      "source": "native-final-green-layout-attempt1/postflight.json",
+      "artifact": "layout/final-green/postflight.json",
+      "bytes": 292740,
+      "sha256": "17101E7A6F22FF9361F9AC42E66B31A67B78F84A02E2F6378B3A65D77852E517"
+    },
+    {
+      "source": "native-final-green-layout-attempt1/preflight.json",
+      "artifact": "layout/final-green/preflight.json",
+      "bytes": 279250,
+      "sha256": "7CE3AEAE32480F7D26E23F0D987E58D2FF248935575C725A4CE380DA5B9B9928"
+    },
+    {
+      "source": "native-final-green-layout-attempt1/summary.json",
+      "artifact": "layout/final-green/summary.json",
+      "bytes": 14825,
+      "sha256": "5F82D936EEC0BCF094AB54807520AB56E57F2866A4342E85249A906205CF4CF1"
+    },
+    {
+      "source": "native-final-green-layout-attempt1/junit/Gem_AtomToolsFramework.Tests.xml",
+      "artifact": "layout/final-green/junit/Gem_AtomToolsFramework.Tests.xml",
+      "bytes": 4918,
+      "sha256": "FCE07F6B6F7E18CCB72E34E0426570FC9D4FDF835541EA268D5BFA5538A44EE6"
+    },
+    {
+      "source": "native-final-green-layout-attempt1/junit/Gem_GraphModel.Editor.Tests.xml",
+      "artifact": "layout/final-green/junit/Gem_GraphModel.Editor.Tests.xml",
+      "bytes": 4168,
+      "sha256": "4AF6F027DB499E1CE190A99CCFEBBDF787A4205A57CFBC698402E2829064D381"
+    },
+    {
+      "source": "native-final-green-layout-attempt1/junit/JE_EditorMaterials.Tests.xml",
+      "artifact": "layout/final-green/junit/JE_EditorMaterials.Tests.xml",
+      "bytes": 16664,
+      "sha256": "BD7BF0591FCB5A45066938620B8510255E317DEB513FD489AF589170CD237909"
+    },
+    {
+      "source": "native-final-green-layout-attempt1/junit/Legacy_EditorLib.Tests.xml",
+      "artifact": "layout/final-green/junit/Legacy_EditorLib.Tests.xml",
+      "bytes": 24870,
+      "sha256": "C7B76A0095280BD6F5BA781BE114CD600C9B93E015ED590F6C4479FB25928635"
+    },
+    {
+      "source": "native-layout-diagnostic-attempt1/summary.json",
+      "artifact": "layout/native-layout-diagnostic-attempt1/summary.json",
+      "bytes": 5876,
+      "sha256": "8A3FD8C405AB24999C252655B5465D2C4A088675E26BDBDDA2EC8673C9BC4BDF"
+    },
+    {
+      "source": "native-layout-diagnostic-attempt1/junit/JE_EditorMaterials.Tests.xml",
+      "artifact": "layout/native-layout-diagnostic-attempt1/junit/JE_EditorMaterials.Tests.xml",
+      "bytes": 18592,
+      "sha256": "832BF86202467665EBADD0AFA412B2166462AD2C7E5EA8E32CD1E9CAFB4EE6FD"
+    },
+    {
+      "source": "native-layout-natural-diagnostic-attempt1/summary.json",
+      "artifact": "layout/native-layout-natural-diagnostic-attempt1/summary.json",
+      "bytes": 5925,
+      "sha256": "7641932E5EAF81F32C5CE3FA25C647F14290DE34D3A2AD5BB1BE4110C8C5AF5A"
+    },
+    {
+      "source": "native-layout-natural-diagnostic-attempt1/junit/JE_EditorMaterials.Tests.xml",
+      "artifact": "layout/native-layout-natural-diagnostic-attempt1/junit/JE_EditorMaterials.Tests.xml",
+      "bytes": 18586,
+      "sha256": "1B1CB9F2A3CEF558E3F9B98CA3FBD260E656E2E794F0ED6D8E8EABF14E14E222"
+    },
+    {
+      "source": "editor-vulkan-pass-workspace-layout-green-attempt1/01-pass-graph-reopened-comment.jpg",
+      "artifact": "ui/reopen-vulkan/01-pass-graph-reopened-comment.jpg",
+      "bytes": 112983,
+      "sha256": "3FA6CF640EE1BDB7C662527B7F7515277FF880D56B79D4776B9547A74CABCC94"
+    },
+    {
+      "source": "editor-vulkan-pass-workspace-layout-green-attempt1/02-pass-node-reopened-layout-green.jpg",
+      "artifact": "ui/reopen-vulkan/02-pass-node-reopened-layout-green.jpg",
+      "bytes": 101380,
+      "sha256": "45063E2D798ECBAACD01BDCF2AB8EE0930A1745FBAEC9216CE930EFBE931F219"
+    },
+    {
+      "source": "editor-vulkan-pass-workspace-layout-green-attempt1/03-pass-node-title-keyboard-focus.jpg",
+      "artifact": "ui/reopen-vulkan/03-pass-node-title-keyboard-focus.jpg",
+      "bytes": 101131,
+      "sha256": "47C736FC1C8CC5D82A2DF4CEAC9DC953EB552DA6C29CE186A527CCB44CB4FECA"
+    },
+    {
+      "source": "editor-vulkan-pass-workspace-layout-green-attempt1/04-pass-node-tab-to-subtitle.jpg",
+      "artifact": "ui/reopen-vulkan/04-pass-node-tab-to-subtitle.jpg",
+      "bytes": 101507,
+      "sha256": "87262E4E980D192C947766DBCFEEEB94E68C5BDE1F2CF9F0D495CC3C256C632F"
+    },
+    {
+      "source": "editor-vulkan-pass-workspace-layout-green-attempt1/05-material-graph-reopened-palette.jpg",
+      "artifact": "ui/reopen-vulkan/05-material-graph-reopened-palette.jpg",
+      "bytes": 99242,
+      "sha256": "950C00905F8847EC93AD91396E173014B44225046E01F5900ED6B23A9410684D"
+    },
+    {
+      "source": "editor-vulkan-pass-workspace-layout-green-attempt1/06-material-graph-reopened-inspector.jpg",
+      "artifact": "ui/reopen-vulkan/06-material-graph-reopened-inspector.jpg",
+      "bytes": 145649,
+      "sha256": "A70667E94F5F8C1A8BCC3BF7B97315890938063802048988A04CEC2A61E6B776"
+    },
+    {
+      "source": "editor-vulkan-pass-workspace-layout-green-attempt1/07-native-generated-material-and-vulkan-scene.jpg",
+      "artifact": "ui/reopen-vulkan/07-native-generated-material-and-vulkan-scene.jpg",
+      "bytes": 225861,
+      "sha256": "C501679FF1C5D4FEF08871856160C155EA7636DA2CD08BED3D7C17C3305C35E4"
+    },
+    {
+      "source": "editor-vulkan-pass-workspace-layout-green-attempt1/assetprocessor-launch.json",
+      "artifact": "ui/reopen-vulkan/assetprocessor-launch.json",
+      "bytes": 964,
+      "sha256": "A922155C31814E73430B18275662CE5D60E920056684E8B4B0B55039C4E81B25"
+    },
+    {
+      "source": "editor-vulkan-pass-workspace-layout-green-attempt1/Editor.log",
+      "artifact": "ui/reopen-vulkan/Editor.log",
+      "bytes": 7557,
+      "sha256": "0AC2397A48BE2D27D866E407D4419466EA26DA530E975D56DB0C7C38A9D1961C"
+    },
+    {
+      "source": "editor-vulkan-pass-workspace-layout-green-attempt1/launch.json",
+      "artifact": "ui/reopen-vulkan/launch.json",
+      "bytes": 1271,
+      "sha256": "B770D5C109848CC182220A837CCD93652A354CB41E20495B1EBFCE441A2376A1"
+    },
+    {
+      "source": "editor-vulkan-pass-workspace-layout-green-attempt1/postflight-authored-inputs.json",
+      "artifact": "ui/reopen-vulkan/postflight-authored-inputs.json",
+      "bytes": 739,
+      "sha256": "41CED7762C73AA817CE0CB635CA4426612E4053B31D9E724BB8E45C8C7B44DDA"
+    },
+    {
+      "source": "editor-dx12-pass-workspace-layout-green-attempt1/01-dx12-scene.jpg",
+      "artifact": "ui/reopen-dx12/01-dx12-scene.jpg",
+      "bytes": 187657,
+      "sha256": "251148E53651F55476A2BB9348013C86841621C220E21ED5A4FFF748F53DA866"
+    },
+    {
+      "source": "editor-dx12-pass-workspace-layout-green-attempt1/02-dx12-native-material-reopened.jpg",
+      "artifact": "ui/reopen-dx12/02-dx12-native-material-reopened.jpg",
+      "bytes": 198875,
+      "sha256": "72F2A88BFB04C32827ED67986A215C64FD1E499406E806E07C2B50BC70E50DC7"
+    },
+    {
+      "source": "editor-dx12-pass-workspace-layout-green-attempt1/03-pass-source-open-with-red.jpg",
+      "artifact": "ui/reopen-dx12/03-pass-source-open-with-red.jpg",
+      "bytes": 188246,
+      "sha256": "E69E3D39F512ACD1787E3B85DF5D8409C10DABC751F0A377312FB0DE705B1C81"
+    },
+    {
+      "source": "editor-dx12-pass-workspace-layout-green-attempt1/04-native-pass-template-context-open.jpg",
+      "artifact": "ui/reopen-dx12/04-native-pass-template-context-open.jpg",
+      "bytes": 94615,
+      "sha256": "09A76C72D41C2EA278A74F03AF276F2A57AAE993EF3BE7C2E11083FB0B3B071F"
+    },
+    {
+      "source": "editor-dx12-pass-workspace-layout-green-attempt1/05-dx12-pass-graph-reopened-inspector.jpg",
+      "artifact": "ui/reopen-dx12/05-dx12-pass-graph-reopened-inspector.jpg",
+      "bytes": 113733,
+      "sha256": "CD51FD70FA9B483901154A156E0472A285DD94E3FCDA43F5E4CAC5C7BC7AB1F8"
+    },
+    {
+      "source": "editor-dx12-pass-workspace-layout-green-attempt1/06-dx12-pass-node-reopened-inspector.jpg",
+      "artifact": "ui/reopen-dx12/06-dx12-pass-node-reopened-inspector.jpg",
+      "bytes": 101359,
+      "sha256": "B85EC6444D3C00A2161FA594CBAB2F9DFF997CBBC3E9BB000B343B8D9CA82CF5"
+    },
+    {
+      "source": "editor-dx12-pass-workspace-layout-green-attempt1/Editor.log",
+      "artifact": "ui/reopen-dx12/Editor.log",
+      "bytes": 6836,
+      "sha256": "56819255191FE04A9E3A4E2E0AC5A337DBB13DB7DD91AD0DA40F9ED33217F511"
+    },
+    {
+      "source": "editor-dx12-pass-workspace-layout-green-attempt1/launch.json",
+      "artifact": "ui/reopen-dx12/launch.json",
+      "bytes": 1616,
+      "sha256": "F10493178A9D59AFB8FFFF83C3DB0ACE3CB2B2801B55365E8FED73F71EF19DE9"
+    },
+    {
+      "source": "editor-dx12-pass-workspace-layout-green-attempt1/postflight-authored-inputs.json",
+      "artifact": "ui/reopen-dx12/postflight-authored-inputs.json",
+      "bytes": 738,
+      "sha256": "91343C8A06E63ACD7E00A7EFF9F04345BEE709F77809BA309B5FBCDC0708538C"
+    },
+    {
+      "source": "editor-dx12-pass-workspace-layout-green-attempt1/stderr.txt",
+      "artifact": "ui/reopen-dx12/stderr.txt",
+      "bytes": 0,
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "editor-dx12-pass-workspace-layout-green-attempt1/stdout.txt",
+      "artifact": "ui/reopen-dx12/stdout.txt",
+      "bytes": 4148,
+      "sha256": "6AC4797D86929352A47C446BC3318D630D47FBADAB7858DF22BC4813F07767DB"
+    },
+    {
+      "source": "editor-vulkan-pass-workspace-layout-green-attempt1/ap-logs/AP_GUI.log",
+      "artifact": "ap/native-material-fresh/AP_GUI.log",
+      "bytes": 121824,
+      "sha256": "5733EB5516A10A4CC65ECD73525975E10A1162030BEFB8F0092CF4B23F0EE79E"
+    },
+    {
+      "source": "editor-vulkan-pass-workspace-layout-green-attempt1/ap-logs/JobLogs/assets/jenative_graph_workspace_test_generated.materialtype-0D2D104F-9CC6-456E-88D9-24BCDA6C0465_createJobs.log",
+      "artifact": "ap/native-material-fresh/jenative_graph_workspace_test_generated.materialtype-0D2D104F-9CC6-456E-88D9-24BCDA6C0465_createJobs.log",
+      "bytes": 1073,
+      "sha256": "8CC39F027E0658F35F722D957C9741F5D92AA7C4BF6E4976BDE90C43F9EDA4C2"
+    },
+    {
+      "source": "editor-vulkan-pass-workspace-layout-green-attempt1/ap-logs/JobLogs/assets/jenative_graph_workspace_test_generated.materialtype-3414677540-46080.log",
+      "artifact": "ap/native-material-fresh/jenative_graph_workspace_test_generated.materialtype-3414677540-46080.log",
+      "bytes": 1430,
+      "sha256": "050ECFF894BF0280C336339EF1664892E3FEBEF16C757D8AE4EE6B3C63763A5F"
+    },
+    {
+      "source": "editor-vulkan-pass-workspace-layout-green-attempt1/ap-logs/JobLogs/assets/jenative_graph_workspace_test.material-4252947250-46044.log",
+      "artifact": "ap/native-material-fresh/jenative_graph_workspace_test.material-4252947250-46044.log",
+      "bytes": 1099,
+      "sha256": "3C499A1198BFE3E9C4CDE7E1B767184776470E34F7F471985AE49220B7C604A8"
+    },
+    {
+      "source": "editor-vulkan-pass-workspace-layout-green-attempt1/ap-logs/JobLogs/assets/jenative_graph_workspace_test.material-861C0937-7671-40DC-8E44-6D432ABB9932_createJobs.log",
+      "artifact": "ap/native-material-fresh/jenative_graph_workspace_test.material-861C0937-7671-40DC-8E44-6D432ABB9932_createJobs.log",
+      "bytes": 1004,
+      "sha256": "EF441BD0C558E1177D7007E47C728AB650CE12B92AD04A674F8AE849B1C3D120"
+    },
+    {
+      "source": "editor-vulkan-pass-workspace-layout-green-attempt1/ap-logs/JobLogs/assets/jenative_graph_workspace_test.materialtype-0D2D104F-9CC6-456E-88D9-24BCDA6C0465_createJobs.log",
+      "artifact": "ap/native-material-fresh/jenative_graph_workspace_test.materialtype-0D2D104F-9CC6-456E-88D9-24BCDA6C0465_createJobs.log",
+      "bytes": 1017,
+      "sha256": "6709A02E573E20940C07AD1EDBCEB8208AC0811584EF5FD0A01C496739C0FB29"
+    },
+    {
+      "source": "editor-vulkan-pass-workspace-layout-green-attempt1/ap-logs/JobLogs/assets/jenative_graph_workspace_test.materialtype-3523802723-46022.log",
+      "artifact": "ap/native-material-fresh/jenative_graph_workspace_test.materialtype-3523802723-46022.log",
+      "bytes": 1778,
+      "sha256": "7309EC00AA0FD639EEFE1ADA631AA4CDBFADFC48039CE466FC2EE859891C3F08"
+    },
+    {
+      "source": "integrated-final-red-layout-freeze-rev13.json",
+      "artifact": "layout/final-red-freeze.json",
+      "bytes": 285294,
+      "sha256": "2F2553C63A43B146A7A596B796229535AB6B5A4742B5215EB6FD37DC426CF147"
+    },
+    {
+      "source": "integrated-final-green-layout-freeze-rev14.json",
+      "artifact": "layout/final-green-freeze.json",
+      "bytes": 284945,
+      "sha256": "6C0C295CBEA6D9FE5DE337A71F75B24416949EF366B13F33773FFFDA38489A22"
+    },
+    {
+      "source": "parent/layout-final-red-parent-reviewed-rev1.json",
+      "artifact": "layout/parent-final-red-reviewed.json",
+      "bytes": 1460,
+      "sha256": "2D29F855BE39131AD6BA08F1298BC059876B4C26ECFADDBEDE647BBEEBFF769F"
+    },
+    {
+      "source": "parent/layout-final-green-parent-reviewed-rev1.json",
+      "artifact": "layout/parent-final-green-reviewed.json",
+      "bytes": 3247,
+      "sha256": "73941DECD0EC6F14DA2C230929A65B0A1CEF3829649A1EB1EA59D1AD4C54378F"
+    },
+    {
+      "source": "parent/native-final-green-post-ui-freeze-reviewed-rev1.json",
+      "artifact": "layout/parent-post-ui-freeze-reviewed.json",
+      "bytes": 250,
+      "sha256": "197F805BEACF2D3592F8E6DC0CF35E567E0CB2321744B2B3B21E8C48598B0B19"
+    },
+    {
+      "source": "parent/ui-vulkan-dx12-owned-process-closure-rev2.json",
+      "artifact": "ui/owned-process-closure-rev2.json",
+      "bytes": 1828,
+      "sha256": "FA6611C7138F3385FCB4038D96127D6E6AAEE00661B2F226F4EF1233AA9C0E27"
+    },
+    {
+      "source": "parent/final-ui-sdk-checkpoint-docs-receipt-rev2.json",
+      "artifact": "parent/checkpoint-docs-receipt-rev2.json",
+      "bytes": 1108,
+      "sha256": "A83C56A0C7E8E373E09050C13C2913FCAA4A410C4980E88FFAF87A02C1660917"
+    },
+    {
+      "source": "pass-node-layout-settle-fixture-repair-rev1/receipt.json",
+      "artifact": "layout/natural-settle-fixture-receipt.json",
+      "bytes": 804,
+      "sha256": "B442EACC028376D9E05EDA0061B6B3F5B5F5C84F253E087960100BB80CD5AEBA"
+    },
+    {
+      "source": "pass-node-layout-settle-fixture-repair-rev1/source-diff.patch",
+      "artifact": "layout/natural-settle-fixture-source-diff.patch",
+      "bytes": 4670,
+      "sha256": "D5831B1C9F21029DF8EE4610BEA7742A418190B153B3C7868F19654717964698"
+    },
+    {
+      "source": "ap-migration-attempt1/execution2/local-lfs-cache-audit-rev1.json",
+      "artifact": "ap/local-lfs-cache-audit.json",
+      "bytes": 134926,
+      "sha256": "A1A881460AC6DA3163503CBAFAB1A5FE7BAB809353930B17A9581EDAF430F5B8"
+    }
+  ]
+}

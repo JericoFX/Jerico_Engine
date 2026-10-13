@@ -1,0 +1,19 @@
+{
+  "capturedUtc": "2026-10-13T08:26:03.2414180Z",
+  "owner": "/root",
+  "purpose": "Existing guarded local AP for real editor document reopen/layout check",
+  "pid": 25064,
+  "creationUtc": "2026-10-13T08:26:03.1946920Z",
+  "exe": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AssetProcessor.exe",
+  "sha256": "5490C4D1F178203A29769EE36931AABC695D99C738F3D76AC8A1789B00F940B2",
+  "argv": [
+    "--engine-path=F:\\JericoEngine\\JericoEngine",
+    "--project-path=F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture",
+    "--platforms=pc",
+    "--logDir=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-passgraph-workspace-rev1\\editor-vulkan-pass-workspace-layout-green-attempt1\\ap-logs",
+    "--zeroAnalysisMode",
+    "--regset=/Amazon/AssetProcessor/Settings/Jobs/maxJobs=2",
+    "--regset=/Amazon/AssetProcessor/Settings/Jobs/AlwaysUseMaxJobs=false"
+  ],
+  "ramBeforePercent": 57.35
+}

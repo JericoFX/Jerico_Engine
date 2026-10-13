@@ -23,6 +23,9 @@ ly_add_target(
     NAMESPACE Gem
     AUTOMOC
     AUTORCC
+    TARGET_PROPERTIES
+        EXCLUDE_FROM_ALL TRUE
+        JE_EXCLUDE_FROM_SDK TRUE
     FILES_CMAKE
         passcanvas_files.cmake
         ${pal_source_dir}/platform_${PAL_PLATFORM_NAME_LOWERCASE}_files.cmake
@@ -39,6 +42,7 @@ ly_add_target(
         PRIVATE
             Gem::CommonFeaturesAtom.Static
             JE::RenderMaterials
+            JE::EditorMaterials
             JE::EditorCamera
             Gem::AtomToolsFramework.Static
     RUNTIME_DEPENDENCIES
@@ -51,13 +55,9 @@ endif()
 
 ly_set_gem_variant_to_load(TARGETS PassCanvas VARIANTS Tools)
 
-# Add a 'builders' alias to allow the PassCanvas root gem path to be added to the generated
-# cmake_dependencies.<project>.assetprocessor.setreg to allow the asset scan folder for it to be added
+# Compatibility alias for explicitly selected standalone tools. Native authoring assets
+# are registered by the engine registry and no longer activate this Gem for Editor or AP.
 ly_create_alias(NAME PassCanvas.Builders NAMESPACE Gem)
-
-# Add build dependency to Editor for the PassCanvas application since
-# Editor opens up the PassCanvas
-ly_add_dependencies(Editor Gem::PassCanvas)
 
 # Inject the project path into the PassCanvas VS debugger command arguments if the build system being invoked
 # in a project centric view

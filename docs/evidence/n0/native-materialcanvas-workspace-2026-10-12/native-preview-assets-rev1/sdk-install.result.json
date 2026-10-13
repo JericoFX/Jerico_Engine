@@ -1,0 +1,19 @@
+{
+  "startedUtc": "2026-10-13T01:14:17.6108024Z",
+  "endedUtc": "2026-10-13T01:14:18.1069068Z",
+  "elapsedSeconds": 0.496,
+  "pid": 172972,
+  "executable": "C:\\Program Files\\CMake\\bin\\cmake.exe",
+  "argv": [
+    "-DCMAKE_INSTALL_PREFIX=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root",
+    "-DCMAKE_INSTALL_COMPONENT=CORE",
+    "-DCMAKE_INSTALL_CONFIG_NAME=profile",
+    "-P",
+    "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\Engine\\Editor\\Materials\\cmake_install.cmake"
+  ],
+  "exitCode": 0,
+  "stdout": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\install.stdout.log",
+  "stdoutSha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+  "stderr": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\install.stderr.log",
+  "stderrSha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+}

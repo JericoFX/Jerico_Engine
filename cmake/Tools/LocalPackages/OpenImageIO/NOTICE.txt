@@ -1,0 +1,46 @@
+JE native OIIO/OCIO Windows package
+
+Provider/Find glue: Copyright (c) Contributors to the Open 3D Engine Project.
+SPDX-License-Identifier: Apache-2.0 OR MIT. Adapted from the historical Windows
+rev4 o3de/3p-package-source recipe 70aed4dedc1f6a1f7ef5415c02bc555f24b3d8f9.
+The full O3DE license alternatives are preserved under LICENSES/LocalDependencies.
+
+OpenImageIO 2.3.17.0 and OpenColorIO 2.1.1: BSD-3-Clause, including their complete
+LICENSE and THIRD-PARTY notices and the notices in distributed public headers.
+Exact source commit/archive identities for all nine acquired components are in
+JERecipe.json. The PackageInfo source identifies OIIO, not the legacy combined
+Windows binary. This package has a new JE artifact identity and measured hash.
+
+Private native components: Boost 1.76.0 (BSL-1.0), libjpeg-turbo 2.1.2
+(IJG/BSD-3-Clause/Zlib), yaml-cpp 0.6.3 (MIT), pystring 1.1.3 (BSD-3-Clause,
+native C++ only), fmt 8.0.0 (MIT), robin-map 0.6.2 (MIT), Little CMS 2.2 (MIT).
+Full license texts are in LICENSES, including JPEG README.ijg and Boost
+LICENSE_1_0.txt. Original Boost compiled-source notices are retained there;
+BSL's compiled-binary exception applies to reproduction of source copyright
+headers, not to removing the license. The original codec package notices for
+zlib, PNG, TIFF, FreeType, Expat, OpenEXR and Imath are retained in full under
+LICENSES/LocalDependencies. Those existing archives have their own provenance.
+
+Adaptations: v143 instead of the historical compiler, no Python bindings or
+PythonPlugins product targets, explicit local native dependency discovery.
+Only the original Windows stacktrace and rpath executable edits are applied
+in fresh private OIIO work; immutable snapshots are unchanged. BuildNativeDependencies
+preloads exact native configs/targets instead of removing FindOpenColorIO from
+upstream. The three exact patched-file hashes/inverse proof are retained with
+build evidence. Debug YAML uses its exported MDd target, not a Release path.
+
+OIIO snapshot has exactly 1276 original regular files and omits only 15 approved
+links in testsuite/texture-udim/ref and testsuite/texture-udim2/ref. Those links
+point to verified regular test fixtures within the archive; upstream tests are
+explicitly OFF. The codec/UDIM runtime sources remain. JPEG has the 510 original
+exported regular members and omits seven administrative .git* export-ignore
+members as committed upstream. Neither snapshot is described as a full Git-tree
+byte match. Boost is the complete official source release (69,300 regular files),
+not a synthetic archive of its superproject or submodules.
+
+Only OIIO/OCIO public headers, Debug/Release DLL/import libraries and the original
+six/eight Release native executables are staged. Private dependency libraries,
+Python, NASM, b2, compiler tools and MSVC redistributables are not staged.
+Tools are selected by GradientSignal.Editor.Static/CommonFeaturesAtom.Editor.Static;
+this preparation does not establish Runtime use, Editor execution, visual quality,
+security currency or complete legal redistribution acceptance.

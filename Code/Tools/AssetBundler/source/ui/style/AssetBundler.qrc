@@ -2,6 +2,6 @@
     <qresource prefix="/AssetBundler/style">
         <file>AssetBundler.qss</file>
         <file>AssetBundlerConfig.ini</file>
-        <file>AssetBundler-Icon-256x256@x2.ico</file>
+        <file alias="AssetBundler-Icon-256x256@x2.ico">../../../../../Editor/res/o3de_editor.ico</file>
     </qresource>
 </RCC>

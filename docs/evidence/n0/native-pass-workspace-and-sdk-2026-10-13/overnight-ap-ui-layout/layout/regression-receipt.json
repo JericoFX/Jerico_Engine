@@ -1,0 +1,26 @@
+{
+  "eventLoop": "Two bounded processEvents/layout activation passes per size; no test execution by writer",
+  "limitations": "Native RED and GREEN pending Luna. Offscreen geometry cannot establish full desktop UI acceptance.",
+  "beforeBytes": 55823,
+  "inverseByteExact": true,
+  "beforeSha256": "98FBA45FCC250A0C9DB62FF062B7006524CA88DFB944702D9081D6E5697BAA08",
+  "bytesCompared": 55823,
+  "afterBytes": 58709,
+  "existingFixtureAndAssertionsUnchanged": true,
+  "afterSha256": "D6E9B6371FAA1D2638FA8623CE3632FC88529CD3F7F6EBF0A956965964E09611",
+  "gates": [
+    "Real Pass Graph Node Config loaded and inspected",
+    "Notice visible/nonempty and <=4 font lines",
+    "Inspector visible, >=half workspace height and >=20 average characters width",
+    "Real property editor visible/enabled and >=6 font lines within Inspector"
+  ],
+  "redEvidence": "editor-vulkan-pass-workspace-attempt1/12-native-pass-node-saved-layout-red.jpg",
+  "test": "PassGraphWorkspaceTests.PassNodeConfigurationKeepsNoticeCompactAndInspectorUsable",
+  "scope": "One new test plus three required Qt includes only; no fixture/providers/product/CMake edits",
+  "source": "F:/JericoEngine/JericoEngine/Editor/Materials/Tests/GraphDocumentHistoryTests.cpp",
+  "status": "HOLD_TEST_SOURCE_RED_NOT_RUN",
+  "sizes": [
+    "900x650",
+    "1400x900"
+  ]
+}

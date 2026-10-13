@@ -1,0 +1,338 @@
+{
+  "endedUtc": "2026-10-13T08:23:13.8881946Z",
+  "exitCode": 0,
+  "inputCount": 1135,
+  "postflightMismatches": 0,
+  "phases": [
+    {
+      "phase": "build-focal",
+      "startedUtc": "2026-10-13T08:21:09.7154175Z",
+      "finishedUtc": "2026-10-13T08:21:51.5789926Z",
+      "elapsedSeconds": 41.864,
+      "pid": 150236,
+      "processCreationUtc": "2026-10-13T08:21:09.7243004Z",
+      "ramBefore": {
+        "capturedUtc": "2026-10-13T08:21:09.7140819Z",
+        "totalBytes": 34265743360,
+        "freeBytes": 14626123776,
+        "usedPercent": 57.32,
+        "thresholdPercent": 80
+      },
+      "peakRamUsedPercent": 60.3,
+      "ramWaitSamples": [
+        {
+          "capturedUtc": "2026-10-13T08:21:24.7947053Z",
+          "ramUsedPercent": 60.3,
+          "pid": 150236,
+          "processCreationUtc": "2026-10-13T08:21:09.7243004Z",
+          "workingSetBytes": 17158144
+        },
+        {
+          "capturedUtc": "2026-10-13T08:21:39.8746261Z",
+          "ramUsedPercent": 58.81,
+          "pid": 150236,
+          "processCreationUtc": "2026-10-13T08:21:09.7243004Z",
+          "workingSetBytes": 17096704
+        }
+      ],
+      "executable": "C:\\Program Files\\CMake\\bin\\cmake.exe",
+      "argv": [
+        "--build",
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine",
+        "--config",
+        "Profile",
+        "--target",
+        "EditorMaterials.Tests",
+        "AtomToolsFramework.Tests",
+        "GraphModel.Editor.Tests",
+        "--parallel",
+        "1"
+      ],
+      "exitCode": 0,
+      "stdout": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-passgraph-workspace-rev1\\native-final-green-layout-attempt1\\build-focal.stdout.log",
+      "stdoutSha256": "8E9423F31E11625D7677257B08F71BD3E6C6D2D67DF887573D6A6EA2BE5E40EE",
+      "stderr": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-passgraph-workspace-rev1\\native-final-green-layout-attempt1\\build-focal.stderr.log",
+      "stderrSha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "phase": "focal-inventory",
+      "startedUtc": "2026-10-13T08:21:51.6476836Z",
+      "finishedUtc": "2026-10-13T08:21:51.7151577Z",
+      "elapsedSeconds": 0.067,
+      "pid": 16256,
+      "processCreationUtc": "2026-10-13T08:21:51.6491254Z",
+      "ramBefore": {
+        "capturedUtc": "2026-10-13T08:21:51.6476187Z",
+        "totalBytes": 34265743360,
+        "freeBytes": 14555602944,
+        "usedPercent": 57.52,
+        "thresholdPercent": 80
+      },
+      "peakRamUsedPercent": 57.52,
+      "ramWaitSamples": [],
+      "executable": "C:\\Program Files\\CMake\\bin\\ctest.exe",
+      "argv": [
+        "--test-dir",
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine",
+        "-C",
+        "Profile",
+        "--show-only=json-v1",
+        "-R",
+        "^(JE::EditorMaterials\\.Tests\\.main::TEST_RUN|Gem::AtomToolsFramework\\.Tests\\.main::TEST_RUN|Gem::GraphModel\\.Editor\\.Tests\\.main::TEST_RUN)$"
+      ],
+      "exitCode": 0,
+      "stdout": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-passgraph-workspace-rev1\\native-final-green-layout-attempt1\\focal-inventory.stdout.log",
+      "stdoutSha256": "4A978D342256BD27ADFEDE5FDC83ABDC5AF6C94FFAC91D2142484AE6AE7D7776",
+      "stderr": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-passgraph-workspace-rev1\\native-final-green-layout-attempt1\\focal-inventory.stderr.log",
+      "stderrSha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "phase": "focal-test-JE__EditorMaterials.Tests.main__TEST_RUN",
+      "startedUtc": "2026-10-13T08:21:51.7768751Z",
+      "finishedUtc": "2026-10-13T08:21:57.2311391Z",
+      "elapsedSeconds": 5.454,
+      "pid": 89160,
+      "processCreationUtc": "2026-10-13T08:21:51.7776006Z",
+      "ramBefore": {
+        "capturedUtc": "2026-10-13T08:21:51.7768184Z",
+        "totalBytes": 34265743360,
+        "freeBytes": 14553657344,
+        "usedPercent": 57.53,
+        "thresholdPercent": 80
+      },
+      "peakRamUsedPercent": 57.53,
+      "ramWaitSamples": [],
+      "executable": "C:\\Program Files\\CMake\\bin\\ctest.exe",
+      "argv": [
+        "--test-dir",
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine",
+        "-C",
+        "Profile",
+        "--output-on-failure",
+        "--no-tests=error",
+        "--timeout",
+        "180",
+        "-R",
+        "^JE::EditorMaterials\\.Tests\\.main::TEST_RUN$"
+      ],
+      "exitCode": 0,
+      "stdout": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-passgraph-workspace-rev1\\native-final-green-layout-attempt1\\focal-test-JE__EditorMaterials.Tests.main__TEST_RUN.stdout.log",
+      "stdoutSha256": "9740878749355CAAF78EE022DD82E3B762C3765DF45B883F7D78B12B32C898EC",
+      "stderr": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-passgraph-workspace-rev1\\native-final-green-layout-attempt1\\focal-test-JE__EditorMaterials.Tests.main__TEST_RUN.stderr.log",
+      "stderrSha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "phase": "focal-test-Gem__AtomToolsFramework.Tests.main__TEST_RUN",
+      "startedUtc": "2026-10-13T08:21:57.2843165Z",
+      "finishedUtc": "2026-10-13T08:21:57.3868027Z",
+      "elapsedSeconds": 0.102,
+      "pid": 55264,
+      "processCreationUtc": "2026-10-13T08:21:57.2850379Z",
+      "ramBefore": {
+        "capturedUtc": "2026-10-13T08:21:57.2842695Z",
+        "totalBytes": 34265743360,
+        "freeBytes": 14544703488,
+        "usedPercent": 57.55,
+        "thresholdPercent": 80
+      },
+      "peakRamUsedPercent": 57.55,
+      "ramWaitSamples": [],
+      "executable": "C:\\Program Files\\CMake\\bin\\ctest.exe",
+      "argv": [
+        "--test-dir",
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine",
+        "-C",
+        "Profile",
+        "--output-on-failure",
+        "--no-tests=error",
+        "--timeout",
+        "180",
+        "-R",
+        "^Gem::AtomToolsFramework\\.Tests\\.main::TEST_RUN$"
+      ],
+      "exitCode": 0,
+      "stdout": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-passgraph-workspace-rev1\\native-final-green-layout-attempt1\\focal-test-Gem__AtomToolsFramework.Tests.main__TEST_RUN.stdout.log",
+      "stdoutSha256": "827CB0FF55543E93F37AA958B75BB30CFA10CA8F59F21BA081D1342438ECD6BA",
+      "stderr": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-passgraph-workspace-rev1\\native-final-green-layout-attempt1\\focal-test-Gem__AtomToolsFramework.Tests.main__TEST_RUN.stderr.log",
+      "stderrSha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "phase": "focal-test-Gem__GraphModel.Editor.Tests.main__TEST_RUN",
+      "startedUtc": "2026-10-13T08:21:57.4372188Z",
+      "finishedUtc": "2026-10-13T08:21:57.5959839Z",
+      "elapsedSeconds": 0.159,
+      "pid": 148228,
+      "processCreationUtc": "2026-10-13T08:21:57.4379627Z",
+      "ramBefore": {
+        "capturedUtc": "2026-10-13T08:21:57.4371665Z",
+        "totalBytes": 34265743360,
+        "freeBytes": 14564286464,
+        "usedPercent": 57.5,
+        "thresholdPercent": 80
+      },
+      "peakRamUsedPercent": 57.5,
+      "ramWaitSamples": [],
+      "executable": "C:\\Program Files\\CMake\\bin\\ctest.exe",
+      "argv": [
+        "--test-dir",
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine",
+        "-C",
+        "Profile",
+        "--output-on-failure",
+        "--no-tests=error",
+        "--timeout",
+        "180",
+        "-R",
+        "^Gem::GraphModel\\.Editor\\.Tests\\.main::TEST_RUN$"
+      ],
+      "exitCode": 0,
+      "stdout": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-passgraph-workspace-rev1\\native-final-green-layout-attempt1\\focal-test-Gem__GraphModel.Editor.Tests.main__TEST_RUN.stdout.log",
+      "stdoutSha256": "658E4D230FF80FF022F55A9ABF980508F98AF0151A286CD111F439980DF65BAE",
+      "stderr": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-passgraph-workspace-rev1\\native-final-green-layout-attempt1\\focal-test-Gem__GraphModel.Editor.Tests.main__TEST_RUN.stderr.log",
+      "stderrSha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "phase": "build-hosts",
+      "startedUtc": "2026-10-13T08:21:57.6468255Z",
+      "finishedUtc": "2026-10-13T08:23:07.3663891Z",
+      "elapsedSeconds": 69.72,
+      "pid": 178592,
+      "processCreationUtc": "2026-10-13T08:21:57.6475645Z",
+      "ramBefore": {
+        "capturedUtc": "2026-10-13T08:21:57.6467732Z",
+        "totalBytes": 34265743360,
+        "freeBytes": 14550343680,
+        "usedPercent": 57.54,
+        "thresholdPercent": 80
+      },
+      "peakRamUsedPercent": 58.51,
+      "ramWaitSamples": [
+        {
+          "capturedUtc": "2026-10-13T08:22:12.7033280Z",
+          "ramUsedPercent": 57.71,
+          "pid": 178592,
+          "processCreationUtc": "2026-10-13T08:21:57.6475645Z",
+          "workingSetBytes": 17264640
+        },
+        {
+          "capturedUtc": "2026-10-13T08:22:27.7627748Z",
+          "ramUsedPercent": 58.05,
+          "pid": 178592,
+          "processCreationUtc": "2026-10-13T08:21:57.6475645Z",
+          "workingSetBytes": 17203200
+        },
+        {
+          "capturedUtc": "2026-10-13T08:22:42.8182871Z",
+          "ramUsedPercent": 58.21,
+          "pid": 178592,
+          "processCreationUtc": "2026-10-13T08:21:57.6475645Z",
+          "workingSetBytes": 17203200
+        },
+        {
+          "capturedUtc": "2026-10-13T08:22:57.8738289Z",
+          "ramUsedPercent": 58.51,
+          "pid": 178592,
+          "processCreationUtc": "2026-10-13T08:21:57.6475645Z",
+          "workingSetBytes": 17203200
+        }
+      ],
+      "executable": "C:\\Program Files\\CMake\\bin\\cmake.exe",
+      "argv": [
+        "--build",
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine",
+        "--config",
+        "Profile",
+        "--target",
+        "Editor",
+        "MaterialCanvas",
+        "MaterialEditor",
+        "PassCanvas",
+        "ShaderManagementConsole",
+        "EditorLib.Tests",
+        "--parallel",
+        "1"
+      ],
+      "exitCode": 0,
+      "stdout": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-passgraph-workspace-rev1\\native-final-green-layout-attempt1\\build-hosts.stdout.log",
+      "stdoutSha256": "ADB5FB9933032BDDF40E3A15FCD8F2B8A5D53CB8AB8787B0DE7631E4FC5C6325",
+      "stderr": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-passgraph-workspace-rev1\\native-final-green-layout-attempt1\\build-hosts.stderr.log",
+      "stderrSha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "phase": "host-inventory",
+      "startedUtc": "2026-10-13T08:23:07.4207261Z",
+      "finishedUtc": "2026-10-13T08:23:07.4881554Z",
+      "elapsedSeconds": 0.067,
+      "pid": 141056,
+      "processCreationUtc": "2026-10-13T08:23:07.4214517Z",
+      "ramBefore": {
+        "capturedUtc": "2026-10-13T08:23:07.4206831Z",
+        "totalBytes": 34265743360,
+        "freeBytes": 14533656576,
+        "usedPercent": 57.59,
+        "thresholdPercent": 80
+      },
+      "peakRamUsedPercent": 57.59,
+      "ramWaitSamples": [],
+      "executable": "C:\\Program Files\\CMake\\bin\\ctest.exe",
+      "argv": [
+        "--test-dir",
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine",
+        "-C",
+        "Profile",
+        "--show-only=json-v1",
+        "-R",
+        "^(Legacy::EditorLib\\.Tests\\.main::TEST_RUN)$"
+      ],
+      "exitCode": 0,
+      "stdout": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-passgraph-workspace-rev1\\native-final-green-layout-attempt1\\host-inventory.stdout.log",
+      "stdoutSha256": "0BE0988C615C4B6B7EEA4BD268DB249EB57FC2C06A33CC400E1B9F1C1B2C5ADF",
+      "stderr": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-passgraph-workspace-rev1\\native-final-green-layout-attempt1\\host-inventory.stderr.log",
+      "stderrSha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "phase": "host-test-Legacy__EditorLib.Tests.main__TEST_RUN",
+      "startedUtc": "2026-10-13T08:23:07.5354536Z",
+      "finishedUtc": "2026-10-13T08:23:13.1755565Z",
+      "elapsedSeconds": 5.64,
+      "pid": 78044,
+      "processCreationUtc": "2026-10-13T08:23:07.5361632Z",
+      "ramBefore": {
+        "capturedUtc": "2026-10-13T08:23:07.5354086Z",
+        "totalBytes": 34265743360,
+        "freeBytes": 14536171520,
+        "usedPercent": 57.58,
+        "thresholdPercent": 80
+      },
+      "peakRamUsedPercent": 57.58,
+      "ramWaitSamples": [],
+      "executable": "C:\\Program Files\\CMake\\bin\\ctest.exe",
+      "argv": [
+        "--test-dir",
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine",
+        "-C",
+        "Profile",
+        "--output-on-failure",
+        "--no-tests=error",
+        "--timeout",
+        "180",
+        "-R",
+        "^Legacy::EditorLib\\.Tests\\.main::TEST_RUN$"
+      ],
+      "exitCode": 0,
+      "stdout": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-passgraph-workspace-rev1\\native-final-green-layout-attempt1\\host-test-Legacy__EditorLib.Tests.main__TEST_RUN.stdout.log",
+      "stdoutSha256": "BD4FC12D0A8FADCD023E33D25648DA05020F225FC75F62EEA1CA26B90CAA533A",
+      "stderr": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-passgraph-workspace-rev1\\native-final-green-layout-attempt1\\host-test-Legacy__EditorLib.Tests.main__TEST_RUN.stderr.log",
+      "stderrSha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    }
+  ],
+  "configure": {
+    "reused": true,
+    "evidence": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-passgraph-workspace-rev1\\native-green-attempt4\\configure.result.json",
+    "evidenceSha256": "7D58C3D0AF9C4B35CC8C521A2C86B5AB64D369E1035F0D2B199CB04DDD798A59",
+    "cacheEvidence": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-passgraph-workspace-rev1\\native-green-attempt4\\cache-after-configure.json",
+    "cacheSha256": "ED5C27F041BD233556170A9E95B8F1F2CD5DD305AA4F10FB6504E1A9AFB96ABB",
+    "reason": "Parent verified unchanged CMake and file lists against configure attempt4; subsequent changes are fixture preparation and QObject ownership."
+  },
+  "fatal": null
+}

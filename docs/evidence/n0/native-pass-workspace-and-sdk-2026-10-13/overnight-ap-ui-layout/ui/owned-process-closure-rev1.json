@@ -1,0 +1,37 @@
+{
+  "capturedUtc": "2026-10-13T07:03:50.8374973Z",
+  "editorPid": 308200,
+  "editorNormalWindowCloseObserved": true,
+  "editorProcessAbsent": true,
+  "editorExitCodeCaptured": false,
+  "helperActions": [
+    {
+      "pid": 148372,
+      "parentPid": 318872,
+      "exe": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AssetProcessor.exe",
+      "creationUtc": "2026-10-13T06:30:57.8986290Z",
+      "action": "Stopped verified obsolete task helper after X minimized it",
+      "purpose": "Guarded AP GUI used by the completed Vulkan UI test"
+    },
+    {
+      "pid": 146684,
+      "parentPid": 148372,
+      "exe": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AssetBuilder.exe",
+      "creationUtc": "2026-10-13T06:30:59.1739930Z",
+      "action": "Stopped verified obsolete task helper after X minimized it",
+      "purpose": "Idle builder of parent-owned AP"
+    },
+    {
+      "pid": 57400,
+      "parentPid": 148372,
+      "exe": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AssetBuilder.exe",
+      "creationUtc": "2026-10-13T06:31:01.6193290Z",
+      "action": "Stopped verified obsolete task helper after X minimized it",
+      "purpose": "Idle builder of parent-owned AP"
+    }
+  ],
+  "remainingOwnedProcesses": [],
+  "ramUsedPercent": 56.73,
+  "freeGiB": 13.81,
+  "preserved": "All unknown and shared MCP/Graft, Codex, CrosshairX, FxSound and other tasks"
+}

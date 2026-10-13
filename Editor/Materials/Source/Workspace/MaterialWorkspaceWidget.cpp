@@ -44,7 +44,7 @@ namespace JE::Editor
         connect(open, &QPushButton::clicked, this, [this]() { OpenDocumentDialog(); });
         connect(m_save, &QPushButton::clicked, this, [this]() {
             FinishEditing();
-            if (m_session)
+            if (m_session && m_session->SelectDocument(m_displayedDocumentId))
             {
                 m_session->SaveActiveDocument();
             }
@@ -162,7 +162,7 @@ namespace JE::Editor
                                 &AzToolsFramework::ToolsApplicationRequests::RedoPressed);
                         }
                     }
-                    else if (m_session)
+                    else if (m_session && m_session->SelectDocument(m_displayedDocumentId))
                     {
                         FinishEditing();
                         m_session->SaveActiveDocument();
@@ -178,12 +178,13 @@ namespace JE::Editor
     {
         const QSignalBlocker blocker(m_documents);
         m_documents->clear();
+        const auto previousId = m_displayedDocumentId;
         m_displayedDocumentId = AZ::Uuid::CreateNull();
         if (m_session)
         {
             for (const auto& id : m_session->GetDocumentIds())
             {
-                if (id == excludedDocumentId)
+                if (id == excludedDocumentId || m_session->IsGraphDocument(id))
                 {
                     continue;
                 }
@@ -207,12 +208,18 @@ namespace JE::Editor
                 }
                 m_documents->addItem(label, QString::fromUtf8(id.ToString<AZStd::string>().c_str()));
                 m_documents->setItemData(m_documents->count() - 1, QString::fromUtf8(path.c_str()), Qt::ToolTipRole);
-                if (id == m_session->GetActiveDocumentId())
+                if (id == m_session->GetActiveDocumentId() ||
+                    (m_session->IsGraphDocument(m_session->GetActiveDocumentId()) && id == previousId))
                 {
                     m_documents->setCurrentIndex(m_documents->count() - 1);
                     m_displayedDocumentId = id;
                 }
             }
+        }
+        if (m_displayedDocumentId.IsNull() && m_documents->count() > 0)
+        {
+            m_documents->setCurrentIndex(0);
+            m_displayedDocumentId = AZ::Uuid::CreateString(m_documents->itemData(0).toString().toUtf8().constData());
         }
         m_inspector->SetDocumentId(m_displayedDocumentId);
         RefreshActions();
@@ -220,7 +227,7 @@ namespace JE::Editor
 
     void MaterialWorkspaceWidget::RefreshActions()
     {
-        m_save->setEnabled(m_session && !m_session->GetActiveDocumentId().IsNull());
+        m_save->setEnabled(m_session && !m_displayedDocumentId.IsNull());
         AzToolsFramework::UndoSystem::UndoStack* stack = nullptr;
         AzToolsFramework::ToolsApplicationRequestBus::BroadcastResult(
             stack, &AzToolsFramework::ToolsApplicationRequests::GetUndoStack);
@@ -245,6 +252,10 @@ namespace JE::Editor
 
     void MaterialWorkspaceWidget::OnDocumentOpened(const AZ::Uuid& id)
     {
+        if (m_session && m_session->IsGraphDocument(id))
+        {
+            return;
+        }
         if (m_session)
         {
             m_session->SelectDocument(id);

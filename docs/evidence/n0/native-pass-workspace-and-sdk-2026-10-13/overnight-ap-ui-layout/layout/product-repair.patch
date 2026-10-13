@@ -1,0 +1,7 @@
+--- a/Editor/Materials/Source/Workspace/MaterialGraphWorkspaceWidget.cpp
++++ b/Editor/Materials/Source/Workspace/MaterialGraphWorkspaceWidget.cpp
+@@ -96,1 +96,1 @@
+-
+        layout->addWidget(columns);
++
+        layout->addWidget(columns, 1);

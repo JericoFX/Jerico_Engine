@@ -21,7 +21,6 @@ namespace MaterialCanvas
         const AZ::Crc32& toolId, AtomToolsFramework::GraphViewSettingsPtr graphViewSettingsPtr, QWidget* parent)
         : Base(toolId, "MaterialCanvasMainWindow", parent)
         , m_graphViewSettingsPtr(graphViewSettingsPtr)
-        , m_styleManager(toolId, graphViewSettingsPtr->m_styleManagerPath)
     {
         m_assetBrowser->GetSearchWidget()->ClearTypeFilter();
         m_assetBrowser->GetSearchWidget()->SetTypeFilterVisible(false);
@@ -96,21 +95,6 @@ namespace MaterialCanvas
 
         m_nodePalette = aznew GraphCanvas::NodePaletteDockWidget(this, tr("Node Palette"), nodePaletteConfig);
         AddDockWidget(tr("Node Palette").toUtf8().constData(), m_nodePalette, Qt::LeftDockWidgetArea);
-
-        AZ::IO::FixedMaxPath resolvedPath;
-        AZ::IO::FileIOBase::GetInstance()->ReplaceAlias(resolvedPath, m_graphViewSettingsPtr->m_translationPath.c_str());
-        const AZ::IO::FixedMaxPathString translationFilePath = resolvedPath.LexicallyNormal().FixedMaxPathString();
-        if (m_translator.load(QLocale::Language::English, translationFilePath.c_str()))
-        {
-            if (!qApp->installTranslator(&m_translator))
-            {
-                AZ_Warning("MaterialCanvas", false, "Error installing translation %s!", translationFilePath.c_str());
-            }
-        }
-        else
-        {
-            AZ_Warning("MaterialCanvas", false, "Error loading translation file %s", translationFilePath.c_str());
-        }
 
         // Set up style sheet to fix highlighting in the node palette
         AzQtComponents::StyleManager::setStyleSheet(this, QStringLiteral(":/GraphView/GraphView.qss"));

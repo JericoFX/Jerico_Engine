@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="50" failures="1" disabled="0" errors="0" time="5.352" timestamp="2026-10-13T04:42:55.959" name="AllTests">
+  <testsuite name="MaterialGraphCompilerGenerationTests" tests="2" failures="0" disabled="0" skipped="0" errors="0" time="1.564" timestamp="2026-10-13T04:42:55.959">
+    <testcase name="ConnectedStandardPBRGeneratesRealSourcesWithoutClaimingAPSuccess" file="F:\JericoEngine\JericoEngine\Editor\Materials\Tests\GraphDocumentHistoryTests.cpp" line="553" status="run" result="completed" time="0.933" timestamp="2026-10-13T04:42:55.959" classname="MaterialGraphCompilerGenerationTests" />
+    <testcase name="MissingTemplateFailsBeforeAPReportingOrSourcePublication" file="F:\JericoEngine\JericoEngine\Editor\Materials\Tests\GraphDocumentHistoryTests.cpp" line="605" status="run" result="completed" time="0.631" timestamp="2026-10-13T04:42:56.892" classname="MaterialGraphCompilerGenerationTests" />
+  </testsuite>
+  <testsuite name="PassGraphWorkspaceTests" tests="4" failures="1" disabled="0" skipped="0" errors="0" time="1.122" timestamp="2026-10-13T04:42:57.524">
+    <testcase name="PassEditingSaveReopenAndGlobalUndoNeverQueueAutomaticCompilation" file="F:\JericoEngine\JericoEngine\Editor\Materials\Tests\GraphDocumentHistoryTests.cpp" line="749" status="run" result="completed" time="0.438" timestamp="2026-10-13T04:42:57.524" classname="PassGraphWorkspaceTests" />
+    <testcase name="SharedPaneSwitchesPaletteAndActionsWithoutClosingEitherDocument" file="F:\JericoEngine\JericoEngine\Editor\Materials\Tests\GraphDocumentHistoryTests.cpp" line="824" status="run" result="completed" time="0.28" timestamp="2026-10-13T04:42:57.962" classname="PassGraphWorkspaceTests" />
+    <testcase name="PassNodeConfigurationKeepsNoticeCompactAndInspectorUsable" file="F:\JericoEngine\JericoEngine\Editor\Materials\Tests\GraphDocumentHistoryTests.cpp" line="874" status="run" result="completed" time="0.265" timestamp="2026-10-13T04:42:58.242" classname="PassGraphWorkspaceTests">
+      <failure message="F:\JericoEngine\JericoEngine\Editor\Materials\Tests\GraphDocumentHistoryTests.cpp:928&#x0A;Expected: (propertyBounds.intersected(inspector-&gt;rect()).height()) &gt;= (6 * propertyEditor-&gt;fontMetrics().height()), actual: 5 vs 102&#x0A;Google Test trace:&#x0A;F:\JericoEngine\JericoEngine\Editor\Materials\Tests\GraphDocumentHistoryTests.cpp(910): workspace 900x650&#x0A;" type=""><![CDATA[F:\JericoEngine\JericoEngine\Editor\Materials\Tests\GraphDocumentHistoryTests.cpp:928
+Expected: (propertyBounds.intersected(inspector->rect()).height()) >= (6 * propertyEditor->fontMetrics().height()), actual: 5 vs 102
+Google Test trace:
+F:\JericoEngine\JericoEngine\Editor\Materials\Tests\GraphDocumentHistoryTests.cpp(910): workspace 900x650
+]]></failure>
+      <properties>
+        <property name="rpe_900_before_rows" value="13"/>
+        <property name="rpe_900_before_content_height" value="198"/>
+        <property name="rpe_900_before_size_hint_width" value="286"/>
+        <property name="rpe_900_before_size_hint_height" value="203"/>
+        <property name="rpe_900_before_height" value="5"/>
+        <property name="rpe_900_before_intersection_height" value="5"/>
+        <property name="rpe_900_before_workspace_width" value="898"/>
+        <property name="rpe_900_before_workspace_height" value="617"/>
+        <property name="rpe_900_after_rows" value="13"/>
+        <property name="rpe_900_after_content_height" value="198"/>
+        <property name="rpe_900_after_size_hint_width" value="286"/>
+        <property name="rpe_900_after_size_hint_height" value="203"/>
+        <property name="rpe_900_after_height" value="203"/>
+        <property name="rpe_900_after_intersection_height" value="203"/>
+        <property name="rpe_900_after_workspace_width" value="898"/>
+        <property name="rpe_900_after_workspace_height" value="617"/>
+      </properties>
+    </testcase>
+    <testcase name="LegacyDefaultIsCanonicalizedButCustomTemplateIsPreserved" file="F:\JericoEngine\JericoEngine\Editor\Materials\Tests\GraphDocumentHistoryTests.cpp" line="959" status="run" result="completed" time="0.138" timestamp="2026-10-13T04:42:58.508" classname="PassGraphWorkspaceTests" />
+  </testsuite>
+  <testsuite name="PassGraphCollisionTests" tests="1" failures="0" disabled="0" skipped="0" errors="0" time="0.247" timestamp="2026-10-13T04:42:58.646">
+    <testcase name="DuplicateUuidDoesNotReplaceMaterialConfigOrEnterPassPalette" file="F:\JericoEngine\JericoEngine\Editor\Materials\Tests\GraphDocumentHistoryTests.cpp" line="978" status="run" result="completed" time="0.247" timestamp="2026-10-13T04:42:58.646" classname="PassGraphCollisionTests" />
+  </testsuite>
+  <testsuite name="GraphDocumentHistoryTests" tests="2" failures="0" disabled="0" skipped="0" errors="0" time="1.423" timestamp="2026-10-13T04:42:58.894">
+    <testcase name="RealCanvasReplayAndReopenPreserveLogicalReferencesAndGlobalChronology" file="F:\JericoEngine\JericoEngine\Editor\Materials\Tests\GraphDocumentHistoryTests.cpp" line="999" status="run" result="completed" time="1.15" timestamp="2026-10-13T04:42:58.894" classname="GraphDocumentHistoryTests" />
+    <testcase name="RejectedReplayPreservesLiveGraphSceneAndController" file="F:\JericoEngine\JericoEngine\Editor\Materials\Tests\GraphDocumentHistoryTests.cpp" line="1041" status="run" result="completed" time="0.272" timestamp="2026-10-13T04:43:00.044" classname="GraphDocumentHistoryTests" />
+  </testsuite>
+  <testsuite name="GraphHistoryTests" tests="8" failures="0" disabled="0" skipped="0" errors="0" time="0.173" timestamp="2026-10-13T04:43:00.317">
+    <testcase name="AnyDocumentAndEntityShareOneChronologicalHistory" file="F:\JericoEngine\JericoEngine\Editor\Materials\Tests\GraphHistoryTests.cpp" line="142" status="run" result="completed" time="0.021" timestamp="2026-10-13T04:43:00.317" classname="GraphHistoryTests" />
+    <testcase name="StandaloneRetainsLocalHistory" file="F:\JericoEngine\JericoEngine\Editor\Materials\Tests\GraphHistoryTests.cpp" line="168" status="run" result="completed" time="0.02" timestamp="2026-10-13T04:43:00.339" classname="GraphHistoryTests" />
+    <testcase name="DestroyedDocumentCannotTargetAnotherDocument" file="F:\JericoEngine\JericoEngine\Editor\Materials\Tests\GraphHistoryTests.cpp" line="179" status="run" result="completed" time="0.021" timestamp="2026-10-13T04:43:00.359" classname="GraphHistoryTests" />
+    <testcase name="ChangedPathOrExternalContentRejectsReplayWithoutMutation" file="F:\JericoEngine\JericoEngine\Editor\Materials\Tests\GraphHistoryTests.cpp" line="193" status="run" result="completed" time="0.02" timestamp="2026-10-13T04:43:00.380" classname="GraphHistoryTests" />
+    <testcase name="InvalidSnapshotDoesNotReplaceAnyContent" file="F:\JericoEngine\JericoEngine\Editor\Materials\Tests\GraphHistoryTests.cpp" line="213" status="run" result="completed" time="0.02" timestamp="2026-10-13T04:43:00.401" classname="GraphHistoryTests" />
+    <testcase name="UnorderedContentReplayUsesValuesInsteadOfBinaryIterationOrder" file="F:\JericoEngine\JericoEngine\Editor\Materials\Tests\GraphHistoryTests.cpp" line="224" status="run" result="completed" time="0.02" timestamp="2026-10-13T04:43:00.421" classname="GraphHistoryTests" />
+    <testcase name="OpeningThenFinishingWithoutAnEditAddsNoHistory" file="F:\JericoEngine\JericoEngine\Editor\Materials\Tests\GraphHistoryTests.cpp" line="246" status="run" result="completed" time="0.022" timestamp="2026-10-13T04:43:00.442" classname="GraphHistoryTests" />
+    <testcase name="ReopenPreservesGlobalHistoryButChangedSchemaRejectsOldCommands" file="F:\JericoEngine\JericoEngine\Editor\Materials\Tests\GraphHistoryTests.cpp" line="263" status="run" result="completed" time="0.025" timestamp="2026-10-13T04:43:00.465" classname="GraphHistoryTests" />
+  </testsuite>
+  <testsuite name="MaterialDocumentTests" tests="12" failures="0" disabled="0" skipped="0" errors="0" time="0.238" timestamp="2026-10-13T04:43:00.490">
+    <testcase name="RegistryObjectWritesKeepReporterLifetimeWithinEachOperation" file="F:\JericoEngine\JericoEngine\Editor\Materials\Tests\MaterialDocumentTests.cpp" line="169" status="run" result="completed" time="0.02" timestamp="2026-10-13T04:43:00.490" classname="MaterialDocumentTests" />
+    <testcase name="NativeDocumentPreservesTypeIdentityAndBothFactoryModes" file="F:\JericoEngine\JericoEngine\Editor\Materials\Tests\MaterialDocumentTests.cpp" line="233" status="run" result="completed" time="0.02" timestamp="2026-10-13T04:43:00.511" classname="MaterialDocumentTests" />
+    <testcase name="OwnReflectionDoesNotClaimBaseInEitherRegistrationOrder" file="F:\JericoEngine\JericoEngine\Editor\Materials\Tests\MaterialDocumentTests.cpp" line="253" status="run" result="completed" time="0.02" timestamp="2026-10-13T04:43:00.531" classname="MaterialDocumentTests" />
+    <testcase name="MaterialAndEntityEditsReplayInOneChronologicalHistory" file="F:\JericoEngine\JericoEngine\Editor\Materials\Tests\MaterialDocumentTests.cpp" line="274" status="run" result="completed" time="0.019" timestamp="2026-10-13T04:43:00.551" classname="MaterialDocumentTests" />
+    <testcase name="SeparateDocumentsRemainIsolatedDuringGlobalUndo" file="F:\JericoEngine\JericoEngine\Editor\Materials\Tests\MaterialDocumentTests.cpp" line="300" status="run" result="completed" time="0.019" timestamp="2026-10-13T04:43:00.571" classname="MaterialDocumentTests" />
+    <testcase name="StandaloneRetainsLocalUndoWithoutPostingToEditor" file="F:\JericoEngine\JericoEngine\Editor\Materials\Tests\MaterialDocumentTests.cpp" line="313" status="run" result="completed" time="0.019" timestamp="2026-10-13T04:43:00.591" classname="MaterialDocumentTests" />
+    <testcase name="UnchangedOrCancelledEditDoesNotPostHistory" file="F:\JericoEngine\JericoEngine\Editor\Materials\Tests\MaterialDocumentTests.cpp" line="324" status="run" result="completed" time="0.019" timestamp="2026-10-13T04:43:00.610" classname="MaterialDocumentTests" />
+    <testcase name="DestroyedDocumentRejectsReplayWithoutTargetingAnotherDocument" file="F:\JericoEngine\JericoEngine\Editor\Materials\Tests\MaterialDocumentTests.cpp" line="337" status="run" result="completed" time="0.019" timestamp="2026-10-13T04:43:00.630" classname="MaterialDocumentTests" />
+    <testcase name="ChangedSourcePathRejectsReplayAndPreservesCurrentValues" file="F:\JericoEngine\JericoEngine\Editor\Materials\Tests\MaterialDocumentTests.cpp" line="351" status="run" result="completed" time="0.019" timestamp="2026-10-13T04:43:00.650" classname="MaterialDocumentTests" />
+    <testcase name="ExternalContentChangeRejectsReplayInsteadOfOverwritingNewValues" file="F:\JericoEngine\JericoEngine\Editor\Materials\Tests\MaterialDocumentTests.cpp" line="362" status="run" result="completed" time="0.019" timestamp="2026-10-13T04:43:00.669" classname="MaterialDocumentTests" />
+    <testcase name="ChangedPropertyTypeRejectsReplayWithoutApplyingOldType" file="F:\JericoEngine\JericoEngine\Editor\Materials\Tests\MaterialDocumentTests.cpp" line="373" status="run" result="completed" time="0.019" timestamp="2026-10-13T04:43:00.689" classname="MaterialDocumentTests" />
+    <testcase name="DependencyReopenStatePreservesEditorHistoryWithoutLocalHistory" file="F:\JericoEngine\JericoEngine\Editor\Materials\Tests\MaterialDocumentTests.cpp" line="388" status="run" result="completed" time="0.02" timestamp="2026-10-13T04:43:00.709" classname="MaterialDocumentTests" />
+  </testsuite>
+  <testsuite name="PassGraphCompilerTests" tests="1" failures="0" disabled="0" skipped="0" errors="0" time="0." timestamp="2026-10-13T04:43:00.729">
+    <testcase name="UnimplementedGenerationFailsWithoutPublishingOutputs" file="F:\JericoEngine\JericoEngine\Editor\Materials\Tests\PassGraphCompilerTests.cpp" line="30" status="run" result="completed" time="0." timestamp="2026-10-13T04:43:00.729" classname="PassGraphCompilerTests" />
+  </testsuite>
+  <testsuite name="MaterialWorkspaceTests" tests="11" failures="0" disabled="0" skipped="0" errors="0" time="0.304" timestamp="2026-10-13T04:43:00.730">
+    <testcase name="ColorPickerAlphaResourceIsARealImage" file="F:\JericoEngine\JericoEngine\Editor\Materials\Tests\Workspace\MaterialWorkspaceTests.cpp" line="156" status="run" result="completed" time="0.025" timestamp="2026-10-13T04:43:00.730" classname="MaterialWorkspaceTests" />
+    <testcase name="NativeAlphaBrushComposesColorsWithoutMutatingTheCachedBackground" file="F:\JericoEngine\JericoEngine\Editor\Materials\Tests\Workspace\MaterialWorkspaceTests.cpp" line="168" status="run" result="completed" time="0.025" timestamp="2026-10-13T04:43:00.755" classname="MaterialWorkspaceTests" />
+    <testcase name="BareInspectorDestruction" file="F:\JericoEngine\JericoEngine\Editor\Materials\Tests\Workspace\MaterialWorkspaceTests.cpp" line="192" status="run" result="completed" time="0.028" timestamp="2026-10-13T04:43:00.780" classname="MaterialWorkspaceTests" />
+    <testcase name="SelectedInspectorDestruction" file="F:\JericoEngine\JericoEngine\Editor\Materials\Tests\Workspace\MaterialWorkspaceTests.cpp" line="198" status="run" result="completed" time="0.028" timestamp="2026-10-13T04:43:00.809" classname="MaterialWorkspaceTests" />
+    <testcase name="ClosingAndRecreatingPaneRetainsTheNativeDocument" file="F:\JericoEngine\JericoEngine\Editor\Materials\Tests\Workspace\MaterialWorkspaceTests.cpp" line="210" status="run" result="completed" time="0.031" timestamp="2026-10-13T04:43:00.838" classname="MaterialWorkspaceTests" />
+    <testcase name="HiddenModifiedDocumentCanCancelMainWindowClose" file="F:\JericoEngine\JericoEngine\Editor\Materials\Tests\Workspace\MaterialWorkspaceTests.cpp" line="228" status="run" result="completed" time="0.03" timestamp="2026-10-13T04:43:00.869" classname="MaterialWorkspaceTests" />
+    <testcase name="DiscardApprovalKeepsDocumentAndHistoryUntilActualShutdown" file="F:\JericoEngine\JericoEngine\Editor\Materials\Tests\Workspace\MaterialWorkspaceTests.cpp" line="247" status="run" result="completed" time="0.031" timestamp="2026-10-13T04:43:00.900" classname="MaterialWorkspaceTests" />
+    <testcase name="SessionClosesBeforeDestroyingItsDocuments" file="F:\JericoEngine\JericoEngine\Editor\Materials\Tests\Workspace\MaterialWorkspaceTests.cpp" line="275" status="run" result="completed" time="0.025" timestamp="2026-10-13T04:43:00.931" classname="MaterialWorkspaceTests" />
+    <testcase name="NativeNodeAndShaderDocumentsShareTheRetainedSession" file="F:\JericoEngine\JericoEngine\Editor\Materials\Tests\Workspace\MaterialWorkspaceTests.cpp" line="302" status="run" result="completed" time="0.025" timestamp="2026-10-13T04:43:00.957" classname="MaterialWorkspaceTests" />
+    <testcase name="CompilationStateOutlivesObserversAndRetainsEditsDuringTheJob" file="F:\JericoEngine\JericoEngine\Editor\Materials\Tests\Workspace\MaterialWorkspaceTests.cpp" line="343" status="run" result="completed" time="0.025" timestamp="2026-10-13T04:43:00.982" classname="MaterialWorkspaceTests" />
+    <testcase name="DestroyedDocumentRejectsLateCompilationNotifications" file="F:\JericoEngine\JericoEngine\Editor\Materials\Tests\Workspace\MaterialWorkspaceTests.cpp" line="397" status="run" result="completed" time="0.026" timestamp="2026-10-13T04:43:01.008" classname="MaterialWorkspaceTests" />
+  </testsuite>
+  <testsuite name="GraphDocumentCreationTests" tests="4" failures="0" disabled="0" skipped="0" errors="0" time="0.126" timestamp="2026-10-13T04:43:01.034">
+    <testcase name="CreatesAtTheFinalPathBeforeEditingAndRemovesItsTemporary" file="F:\JericoEngine\JericoEngine\Editor\Materials\Tests\Workspace\MaterialWorkspaceTests.cpp" line="488" status="run" result="completed" time="0.029" timestamp="2026-10-13T04:43:01.034" classname="GraphDocumentCreationTests" />
+    <testcase name="MaterialPaneKeepsItsDocumentWhileANodeDocumentOpens" file="F:\JericoEngine\JericoEngine\Editor\Materials\Tests\Workspace\MaterialWorkspaceTests.cpp" line="509" status="run" result="completed" time="0.038" timestamp="2026-10-13T04:43:01.063" classname="GraphDocumentCreationTests" />
+    <testcase name="RejectsExistingAndRelativeDestinationsWithoutChangingThem" file="F:\JericoEngine\JericoEngine\Editor\Materials\Tests\Workspace\MaterialWorkspaceTests.cpp" line="541" status="run" result="completed" time="0.028" timestamp="2026-10-13T04:43:01.102" classname="GraphDocumentCreationTests" />
+    <testcase name="DestinationAppearingDuringSaveIsPreservedAndTheNewDocumentIsDestroyed" file="F:\JericoEngine\JericoEngine\Editor\Materials\Tests\Workspace\MaterialWorkspaceTests.cpp" line="555" status="run" result="completed" time="0.029" timestamp="2026-10-13T04:43:01.131" classname="GraphDocumentCreationTests" />
+  </testsuite>
+  <testsuite name="MaterialSourceCreationTests" tests="5" failures="0" disabled="0" skipped="0" errors="0" time="0.151" timestamp="2026-10-13T04:43:01.160">
+    <testcase name="CreatesNativeMaterialSchemaWithTheSelectedTypeVersion" file="F:\JericoEngine\JericoEngine\Editor\Materials\Tests\Workspace\MaterialWorkspaceTests.cpp" line="588" status="run" result="completed" time="0.029" timestamp="2026-10-13T04:43:01.160" classname="MaterialSourceCreationTests" />
+    <testcase name="CreatesFromTheAliasedSourceReturnedByTheNativeDialog" file="F:\JericoEngine\JericoEngine\Editor\Materials\Tests\Workspace\MaterialWorkspaceTests.cpp" line="611" status="run" result="completed" time="0.034" timestamp="2026-10-13T04:43:01.190" classname="MaterialSourceCreationTests" />
+    <testcase name="ExistingDestinationAndMaterialTypeAreNeverOverwritten" file="F:\JericoEngine\JericoEngine\Editor\Materials\Tests\Workspace\MaterialWorkspaceTests.cpp" line="653" status="run" result="completed" time="0.029" timestamp="2026-10-13T04:43:01.225" classname="MaterialSourceCreationTests" />
+    <testcase name="MissingMaterialTypeFailsWithoutCreatingADestination" file="F:\JericoEngine\JericoEngine\Editor\Materials\Tests\Workspace\MaterialWorkspaceTests.cpp" line="671" status="run" result="completed" time="0.028" timestamp="2026-10-13T04:43:01.254" classname="MaterialSourceCreationTests" />
+    <testcase name="DestinationWriteFailureIsReportedWithoutCreatingAMaterial" file="F:\JericoEngine\JericoEngine\Editor\Materials\Tests\Workspace\MaterialWorkspaceTests.cpp" line="700" status="run" result="completed" time="0.028" timestamp="2026-10-13T04:43:01.282" classname="MaterialSourceCreationTests" />
+  </testsuite>
+</testsuites>

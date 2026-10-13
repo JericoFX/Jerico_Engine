@@ -1,0 +1,13 @@
+# Copyright (c) Contributors to the Open 3D Engine Project.
+# SPDX-License-Identifier: Apache-2.0 OR MIT
+# Pinned data witness supplied separately, never an executable downloaded recipe.
+set(JE_OIIO_INPUTS_SHA256 "f411b122bcb84851715ed98e171f6fee54a7477a3edeb409ac525421d550a298")
+set(JE_PIN_Boost "f0397ba6e982c4450f27bf32a2a83292aba035b827a5623a14636ea583318c41")
+set(JE_PIN_fmt "fbeb82c8dab8285919e2816a489a5f8f5564212de5a9f9b2308ca584f2e2f427")
+set(JE_PIN_libjpeg_turbo "4da34053c31593b350e957124bc299198b8906db62ce695b3d45b190c9726dd1")
+set(JE_PIN_Little_CMS "9ac59679eea1c367dbb1a1b5edc9d8d8fa84832c872bc5c422b82cbd7597e0c3")
+set(JE_PIN_OpenColorIO "d9ffe89250cf3282e8098fe0dc17da90f6c7fd23503063d499bf6a9dcc3a8eb3")
+set(JE_PIN_OpenImageIO "1219c94ca7e19f8f900a1b0b02749a9d46a747faf6c5039999b8653286cf5b84")
+set(JE_PIN_pystring "6be0f6dbef6f3cad0f3844a17cb54e704e2dba84a06625ee3eb1bb2afd24f463")
+set(JE_PIN_robin_map "374dcfa5933eb2ae1b86123691198991bade6c4d1263e62ccc6a76f56304e1a1")
+set(JE_PIN_yaml_cpp "e39f54bd2927692603378e373009e56b4891701cee8af7c27370c36978a43ffa")

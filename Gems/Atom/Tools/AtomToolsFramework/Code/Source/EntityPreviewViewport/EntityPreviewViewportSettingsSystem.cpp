@@ -15,6 +15,7 @@
 #include <AtomToolsFramework/EntityPreviewViewport/EntityPreviewViewportSettingsRequestBus.h>
 #include <AtomToolsFramework/EntityPreviewViewport/EntityPreviewViewportSettingsSystem.h>
 #include <AtomToolsFramework/Util/Util.h>
+#include <AzCore/IO/Path/Path.h>
 #include <AzCore/Jobs/Algorithms.h>
 #include <AzCore/Jobs/JobFunction.h>
 #include <AzCore/RTTI/BehaviorContext.h>
@@ -27,6 +28,54 @@
 #include <AzToolsFramework/API/EditorAssetSystemAPI.h>
 #include <AzToolsFramework/AssetBrowser/AssetBrowserEntry.h>
 #include <AzFramework/Translation/TranslationDef.h>
+
+namespace JE::Editor
+{
+    namespace
+    {
+        constexpr AZStd::string_view NativePreviewPrefix = "@engroot@/Editor/Materials/Preview/Assets/MaterialEditor/";
+
+        AZStd::string CanonicalPreviewPath(const AZStd::string& path)
+        {
+            constexpr AZStd::string_view legacyPrefix = "@gemroot:MaterialEditor@/Assets/MaterialEditor/";
+            const auto normalized = AZ::IO::FixedMaxPath(path).LexicallyNormal().StringAsPosix();
+            if (normalized.starts_with(legacyPrefix))
+            {
+                return AZStd::string(NativePreviewPrefix) + normalized.substr(legacyPrefix.size());
+            }
+
+            // Only the former preview root moves; project/custom presets retain their paths.
+            const auto absolute = AZ::IO::FixedMaxPath(AtomToolsFramework::GetPathWithoutAlias(path)).LexicallyNormal();
+            for (const auto root : {
+                "@engroot@/Gems/Atom/Tools/MaterialEditor/Assets/MaterialEditor",
+                "@engroot@/Editor/Materials/Preview/Assets/MaterialEditor"})
+            {
+                const auto absoluteRoot = AZ::IO::FixedMaxPath(AtomToolsFramework::GetPathWithoutAlias(root)).LexicallyNormal();
+                if (absolute.IsAbsolute() && absoluteRoot.IsAbsolute() && absolute.IsRelativeTo(absoluteRoot))
+                {
+                    return AZStd::string(NativePreviewPrefix) + absolute.LexicallyRelative(absoluteRoot).StringAsPosix();
+                }
+            }
+            return path;
+        }
+
+        AZStd::string CanonicalPreviewAlias(const AZStd::string& path)
+        {
+            const auto canonical = CanonicalPreviewPath(path);
+            return canonical.starts_with(NativePreviewPrefix) ? canonical : AtomToolsFramework::GetPathWithAlias(canonical);
+        }
+
+        AZStd::set<AZStd::string> CanonicalPreviewPaths(const AZStd::set<AZStd::string>& paths)
+        {
+            AZStd::set<AZStd::string> result;
+            for (const auto& path : paths)
+            {
+                result.insert(CanonicalPreviewPath(path));
+            }
+            return result;
+        }
+    }
+} // namespace JE::Editor
 
 namespace AtomToolsFramework
 {
@@ -151,8 +200,8 @@ namespace AtomToolsFramework
 
     bool EntityPreviewViewportSettingsSystem::SaveLightingPreset(const AZStd::string& path)
     {
-        const auto& pathWithAlias = GetPathWithAlias(path);
-        const auto& pathWithoutAlias = GetPathWithoutAlias(path);
+        const auto& pathWithAlias = JE::Editor::CanonicalPreviewAlias(path);
+        const auto& pathWithoutAlias = GetPathWithoutAlias(JE::Editor::CanonicalPreviewPath(path));
         if (!pathWithoutAlias.empty() && AZ::JsonSerializationUtils::SaveObjectToFile(&m_lightingPreset, pathWithoutAlias).IsSuccess())
         {
             SetSettingsValue("/O3DE/AtomToolsFramework/EntityPreviewViewportSettings/LightingPresetPath", pathWithAlias);
@@ -164,8 +213,8 @@ namespace AtomToolsFramework
 
     bool EntityPreviewViewportSettingsSystem::LoadLightingPreset(const AZStd::string& path)
     {
-        const auto& pathWithAlias = GetPathWithAlias(path);
-        const auto& pathWithoutAlias = GetPathWithoutAlias(path);
+        const auto& pathWithAlias = JE::Editor::CanonicalPreviewAlias(path);
+        const auto& pathWithoutAlias = GetPathWithoutAlias(JE::Editor::CanonicalPreviewPath(path));
         auto cacheItr = m_lightingPresetCache.find(pathWithAlias);
         if (cacheItr != m_lightingPresetCache.end())
         {
@@ -196,9 +245,9 @@ namespace AtomToolsFramework
 
     AZStd::string EntityPreviewViewportSettingsSystem::GetLastLightingPresetPath() const
     {
-        return GetSettingsValue<AZStd::string>(
+        return JE::Editor::CanonicalPreviewPath(GetSettingsValue<AZStd::string>(
             "/O3DE/AtomToolsFramework/EntityPreviewViewportSettings/LightingPresetPath",
-            "@gemroot:MaterialEditor@/Assets/MaterialEditor/LightingPresets/neutral_urban.lightingpreset.azasset");
+            "@engroot@/Editor/Materials/Preview/Assets/MaterialEditor/LightingPresets/neutral_urban.lightingpreset.azasset"));
     }
 
     AZStd::string EntityPreviewViewportSettingsSystem::GetLastLightingPresetPathWithoutAlias() const
@@ -217,7 +266,7 @@ namespace AtomToolsFramework
         if (path.ends_with(AZ::Render::LightingPreset::Extension))
         {
             auto paths = GetRegisteredLightingPresetPaths();
-            paths.insert(GetPathWithAlias(path));
+            paths.insert(JE::Editor::CanonicalPreviewAlias(path));
             SetSettingsObject<AZStd::set<AZStd::string>>(
                 "/O3DE/AtomToolsFramework/EntityPreviewViewportSettings/RegisteredLightingPresetPaths", paths);
         }
@@ -228,7 +277,7 @@ namespace AtomToolsFramework
         if (path.ends_with(AZ::Render::LightingPreset::Extension))
         {
             auto paths = GetRegisteredLightingPresetPaths();
-            paths.erase(GetPathWithAlias(path));
+            paths.erase(JE::Editor::CanonicalPreviewAlias(path));
             SetSettingsObject<AZStd::set<AZStd::string>>(
                 "/O3DE/AtomToolsFramework/EntityPreviewViewportSettings/RegisteredLightingPresetPaths", paths);
         }
@@ -236,11 +285,11 @@ namespace AtomToolsFramework
 
     AZStd::set<AZStd::string> EntityPreviewViewportSettingsSystem::GetRegisteredLightingPresetPaths() const
     {
-        return GetSettingsObject<AZStd::set<AZStd::string>>(
+        return JE::Editor::CanonicalPreviewPaths(GetSettingsObject<AZStd::set<AZStd::string>>(
             "/O3DE/AtomToolsFramework/EntityPreviewViewportSettings/RegisteredLightingPresetPaths",
             AZStd::set<AZStd::string>{
-                "@gemroot:MaterialEditor@/Assets/MaterialEditor/LightingPresets/lythwood_room.lightingpreset.azasset",
-                "@gemroot:MaterialEditor@/Assets/MaterialEditor/LightingPresets/neutral_urban.lightingpreset.azasset" });
+                "@engroot@/Editor/Materials/Preview/Assets/MaterialEditor/LightingPresets/lythwood_room.lightingpreset.azasset",
+                "@engroot@/Editor/Materials/Preview/Assets/MaterialEditor/LightingPresets/neutral_urban.lightingpreset.azasset" }));
     }
 
     void EntityPreviewViewportSettingsSystem::SetModelPreset(const AZ::Render::ModelPreset& preset)
@@ -256,8 +305,8 @@ namespace AtomToolsFramework
 
     bool EntityPreviewViewportSettingsSystem::SaveModelPreset(const AZStd::string& path)
     {
-        const auto& pathWithAlias = GetPathWithAlias(path);
-        const auto& pathWithoutAlias = GetPathWithoutAlias(path);
+        const auto& pathWithAlias = JE::Editor::CanonicalPreviewAlias(path);
+        const auto& pathWithoutAlias = GetPathWithoutAlias(JE::Editor::CanonicalPreviewPath(path));
         if (!pathWithoutAlias.empty() && AZ::JsonSerializationUtils::SaveObjectToFile(&m_modelPreset, pathWithoutAlias).IsSuccess())
         {
             SetSettingsValue("/O3DE/AtomToolsFramework/EntityPreviewViewportSettings/ModelPresetPath", pathWithAlias);
@@ -269,8 +318,8 @@ namespace AtomToolsFramework
 
     bool EntityPreviewViewportSettingsSystem::LoadModelPreset(const AZStd::string& path)
     {
-        const auto& pathWithAlias = GetPathWithAlias(path);
-        const auto& pathWithoutAlias = GetPathWithoutAlias(path);
+        const auto& pathWithAlias = JE::Editor::CanonicalPreviewAlias(path);
+        const auto& pathWithoutAlias = GetPathWithoutAlias(JE::Editor::CanonicalPreviewPath(path));
         auto cacheItr = m_modelPresetCache.find(pathWithAlias);
         if (cacheItr != m_modelPresetCache.end())
         {
@@ -301,9 +350,9 @@ namespace AtomToolsFramework
 
     AZStd::string EntityPreviewViewportSettingsSystem::GetLastModelPresetPath() const
     {
-        return GetSettingsValue<AZStd::string>(
+        return JE::Editor::CanonicalPreviewPath(GetSettingsValue<AZStd::string>(
             "/O3DE/AtomToolsFramework/EntityPreviewViewportSettings/ModelPresetPath",
-            "@gemroot:MaterialEditor@/Assets/MaterialEditor/ViewportModels/Shaderball.modelpreset.azasset");
+            "@engroot@/Editor/Materials/Preview/Assets/MaterialEditor/ViewportModels/Shaderball.modelpreset.azasset"));
     }
 
     AZStd::string EntityPreviewViewportSettingsSystem::GetLastModelPresetPathWithoutAlias() const
@@ -322,7 +371,7 @@ namespace AtomToolsFramework
         if (path.ends_with(AZ::Render::ModelPreset::Extension))
         {
             auto paths = GetRegisteredModelPresetPaths();
-            paths.insert(GetPathWithAlias(path));
+            paths.insert(JE::Editor::CanonicalPreviewAlias(path));
             SetSettingsObject<AZStd::set<AZStd::string>>(
                 "/O3DE/AtomToolsFramework/EntityPreviewViewportSettings/RegisteredModelPresetPaths", paths);
         }
@@ -333,7 +382,7 @@ namespace AtomToolsFramework
         if (path.ends_with(AZ::Render::ModelPreset::Extension))
         {
             auto paths = GetRegisteredModelPresetPaths();
-            paths.erase(GetPathWithAlias(path));
+            paths.erase(JE::Editor::CanonicalPreviewAlias(path));
             SetSettingsObject<AZStd::set<AZStd::string>>(
                 "/O3DE/AtomToolsFramework/EntityPreviewViewportSettings/RegisteredModelPresetPaths", paths);
         }
@@ -341,30 +390,30 @@ namespace AtomToolsFramework
 
     AZStd::set<AZStd::string> EntityPreviewViewportSettingsSystem::GetRegisteredModelPresetPaths() const
     {
-        return GetSettingsObject<AZStd::set<AZStd::string>>(
+        return JE::Editor::CanonicalPreviewPaths(GetSettingsObject<AZStd::set<AZStd::string>>(
             "/O3DE/AtomToolsFramework/EntityPreviewViewportSettings/RegisteredModelPresetPaths",
             AZStd::set<AZStd::string>{
-                "@gemroot:MaterialEditor@/Assets/MaterialEditor/ViewportModels/BeveledCone.modelpreset.azasset",
-                "@gemroot:MaterialEditor@/Assets/MaterialEditor/ViewportModels/BeveledCube.modelpreset.azasset",
-                "@gemroot:MaterialEditor@/Assets/MaterialEditor/ViewportModels/BeveledCylinder.modelpreset.azasset",
-                "@gemroot:MaterialEditor@/Assets/MaterialEditor/ViewportModels/Caduceus.modelpreset.azasset",
-                "@gemroot:MaterialEditor@/Assets/MaterialEditor/ViewportModels/Cone.modelpreset.azasset",
-                "@gemroot:MaterialEditor@/Assets/MaterialEditor/ViewportModels/Cube.modelpreset.azasset",
-                "@gemroot:MaterialEditor@/Assets/MaterialEditor/ViewportModels/Cylinder.modelpreset.azasset",
-                "@gemroot:MaterialEditor@/Assets/MaterialEditor/ViewportModels/Hermanubis.modelpreset.azasset",
-                "@gemroot:MaterialEditor@/Assets/MaterialEditor/ViewportModels/Plane_1x1.modelpreset.azasset",
-                "@gemroot:MaterialEditor@/Assets/MaterialEditor/ViewportModels/Plane_3x3.modelpreset.azasset",
-                "@gemroot:MaterialEditor@/Assets/MaterialEditor/ViewportModels/PlatonicSphere.modelpreset.azasset",
-                "@gemroot:MaterialEditor@/Assets/MaterialEditor/ViewportModels/PolarSphere.modelpreset.azasset",
-                "@gemroot:MaterialEditor@/Assets/MaterialEditor/ViewportModels/QuadSphere.modelpreset.azasset",
-                "@gemroot:MaterialEditor@/Assets/MaterialEditor/ViewportModels/Shaderball.modelpreset.azasset",
-                "@gemroot:MaterialEditor@/Assets/MaterialEditor/ViewportModels/Torus.modelpreset.azasset" });
+                "@engroot@/Editor/Materials/Preview/Assets/MaterialEditor/ViewportModels/BeveledCone.modelpreset.azasset",
+                "@engroot@/Editor/Materials/Preview/Assets/MaterialEditor/ViewportModels/BeveledCube.modelpreset.azasset",
+                "@engroot@/Editor/Materials/Preview/Assets/MaterialEditor/ViewportModels/BeveledCylinder.modelpreset.azasset",
+                "@engroot@/Editor/Materials/Preview/Assets/MaterialEditor/ViewportModels/Caduceus.modelpreset.azasset",
+                "@engroot@/Editor/Materials/Preview/Assets/MaterialEditor/ViewportModels/Cone.modelpreset.azasset",
+                "@engroot@/Editor/Materials/Preview/Assets/MaterialEditor/ViewportModels/Cube.modelpreset.azasset",
+                "@engroot@/Editor/Materials/Preview/Assets/MaterialEditor/ViewportModels/Cylinder.modelpreset.azasset",
+                "@engroot@/Editor/Materials/Preview/Assets/MaterialEditor/ViewportModels/Hermanubis.modelpreset.azasset",
+                "@engroot@/Editor/Materials/Preview/Assets/MaterialEditor/ViewportModels/Plane_1x1.modelpreset.azasset",
+                "@engroot@/Editor/Materials/Preview/Assets/MaterialEditor/ViewportModels/Plane_3x3.modelpreset.azasset",
+                "@engroot@/Editor/Materials/Preview/Assets/MaterialEditor/ViewportModels/PlatonicSphere.modelpreset.azasset",
+                "@engroot@/Editor/Materials/Preview/Assets/MaterialEditor/ViewportModels/PolarSphere.modelpreset.azasset",
+                "@engroot@/Editor/Materials/Preview/Assets/MaterialEditor/ViewportModels/QuadSphere.modelpreset.azasset",
+                "@engroot@/Editor/Materials/Preview/Assets/MaterialEditor/ViewportModels/Shaderball.modelpreset.azasset",
+                "@engroot@/Editor/Materials/Preview/Assets/MaterialEditor/ViewportModels/Torus.modelpreset.azasset" }));
     }
 
     bool EntityPreviewViewportSettingsSystem::LoadRenderPipeline(const AZStd::string& path)
     {
-        const auto& pathWithAlias = GetPathWithAlias(path);
-        const auto& pathWithoutAlias = GetPathWithoutAlias(path);
+        const auto& pathWithAlias = JE::Editor::CanonicalPreviewAlias(path);
+        const auto& pathWithoutAlias = GetPathWithoutAlias(JE::Editor::CanonicalPreviewPath(path));
         auto cacheItr = m_renderPipelineDescriptorCache.find(pathWithAlias);
         if (cacheItr != m_renderPipelineDescriptorCache.end())
         {
@@ -416,7 +465,7 @@ namespace AtomToolsFramework
         if (path.ends_with(AZ::RPI::RenderPipelineDescriptor::Extension))
         {
             auto paths = GetRegisteredRenderPipelinePaths();
-            paths.insert(GetPathWithAlias(path));
+            paths.insert(JE::Editor::CanonicalPreviewAlias(path));
             SetSettingsObject<AZStd::set<AZStd::string>>(
                 "/O3DE/AtomToolsFramework/EntityPreviewViewportSettings/RegisteredRenderPipelinePaths", paths);
         }
@@ -427,7 +476,7 @@ namespace AtomToolsFramework
         if (path.ends_with(AZ::RPI::RenderPipelineDescriptor::Extension))
         {
             auto paths = GetRegisteredRenderPipelinePaths();
-            paths.erase(GetPathWithAlias(path));
+            paths.erase(JE::Editor::CanonicalPreviewAlias(path));
             SetSettingsObject<AZStd::set<AZStd::string>>(
                 "/O3DE/AtomToolsFramework/EntityPreviewViewportSettings/RegisteredRenderPipelinePaths", paths);
         }
@@ -435,10 +484,10 @@ namespace AtomToolsFramework
 
     AZStd::set<AZStd::string> EntityPreviewViewportSettingsSystem::GetRegisteredRenderPipelinePaths() const
     {
-        return GetSettingsObject<AZStd::set<AZStd::string>>(
+        return JE::Editor::CanonicalPreviewPaths(GetSettingsObject<AZStd::set<AZStd::string>>(
             "/O3DE/AtomToolsFramework/EntityPreviewViewportSettings/RegisteredRenderPipelinePaths",
             AZStd::set<AZStd::string>{
-                "@gemroot:Atom_Feature_Common@/Assets/Passes/MainRenderPipeline.azasset" });
+                "@gemroot:Atom_Feature_Common@/Assets/Passes/MainRenderPipeline.azasset" }));
     }
 
     void EntityPreviewViewportSettingsSystem::SetShadowCatcherEnabled(bool enable)
@@ -516,9 +565,10 @@ namespace AtomToolsFramework
 
     void EntityPreviewViewportSettingsSystem::PreloadPreset(const AZStd::string& path)
     {
+        const auto pathWithoutAlias = GetPathWithoutAlias(JE::Editor::CanonicalPreviewPath(path));
         if (path.ends_with(AZ::Render::LightingPreset::Extension))
         {
-            auto loadResult = AZ::JsonSerializationUtils::LoadAnyObjectFromFile(path);
+            auto loadResult = AZ::JsonSerializationUtils::LoadAnyObjectFromFile(pathWithoutAlias);
             if (loadResult && loadResult.GetValue().is<AZ::Render::LightingPreset>())
             {
                 RegisterLightingPreset(path, AZStd::any_cast<AZ::Render::LightingPreset>(loadResult.GetValue()));
@@ -528,7 +578,7 @@ namespace AtomToolsFramework
 
         if (path.ends_with(AZ::Render::ModelPreset::Extension))
         {
-            auto loadResult = AZ::JsonSerializationUtils::LoadAnyObjectFromFile(path);
+            auto loadResult = AZ::JsonSerializationUtils::LoadAnyObjectFromFile(pathWithoutAlias);
             if (loadResult && loadResult.GetValue().is<AZ::Render::ModelPreset>())
             {
                 RegisterModelPreset(path, AZStd::any_cast<AZ::Render::ModelPreset>(loadResult.GetValue()));
@@ -538,7 +588,7 @@ namespace AtomToolsFramework
 
         if (path.ends_with(AZ::RPI::RenderPipelineDescriptor::Extension))
         {
-            auto loadResult = AZ::JsonSerializationUtils::LoadAnyObjectFromFile(path);
+            auto loadResult = AZ::JsonSerializationUtils::LoadAnyObjectFromFile(pathWithoutAlias);
             if (loadResult && loadResult.GetValue().is<AZ::RPI::RenderPipelineDescriptor>())
             {
                 RegisterRenderPipeline(path, AZStd::any_cast<AZ::RPI::RenderPipelineDescriptor>(loadResult.GetValue()));
@@ -549,7 +599,7 @@ namespace AtomToolsFramework
 
     void EntityPreviewViewportSettingsSystem::RegisterLightingPreset(const AZStd::string& path, const AZ::Render::LightingPreset& preset)
     {
-        const auto& pathWithAlias = GetPathWithAlias(path);
+        const auto& pathWithAlias = JE::Editor::CanonicalPreviewAlias(path);
         m_lightingPresetCache[pathWithAlias] = preset;
         m_settingsNotificationPending = true;
         RegisterLightingPresetPath(pathWithAlias);
@@ -559,7 +609,7 @@ namespace AtomToolsFramework
 
     void EntityPreviewViewportSettingsSystem::RegisterModelPreset(const AZStd::string& path, const AZ::Render::ModelPreset& preset)
     {
-        const auto& pathWithAlias = GetPathWithAlias(path);
+        const auto& pathWithAlias = JE::Editor::CanonicalPreviewAlias(path);
         m_modelPresetCache[pathWithAlias] = preset;
         m_settingsNotificationPending = true;
         RegisterModelPresetPath(pathWithAlias);
@@ -569,7 +619,7 @@ namespace AtomToolsFramework
 
     void EntityPreviewViewportSettingsSystem::RegisterRenderPipeline(const AZStd::string& path, const AZ::RPI::RenderPipelineDescriptor& preset)
     {
-        const auto& pathWithAlias = GetPathWithAlias(path);
+        const auto& pathWithAlias = JE::Editor::CanonicalPreviewAlias(path);
         m_renderPipelineDescriptorCache[pathWithAlias] = preset;
         m_settingsNotificationPending = true;
         RegisterRenderPipelinePath(pathWithAlias);

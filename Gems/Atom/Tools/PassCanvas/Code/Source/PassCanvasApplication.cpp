@@ -24,6 +24,7 @@
 #include <Document/PassGraphCompiler.h>
 #include <GraphModel/Model/DataType.h>
 #include <PassCanvasApplication.h>
+#include <JE/Editor/Materials/Graph/MaterialGraphEnvironment.h>
 #include <JE/Render/Materials/MaterialsRegistration.h>
 #include <Window/PassCanvasMainWindow.h>
 
@@ -222,9 +223,7 @@ namespace PassCanvas
             "Pass Graph",
             { "passgraph" },
             { "passgraphtemplate" },
-            AtomToolsFramework::GetPathWithoutAlias(AtomToolsFramework::GetSettingsValue<AZStd::string>(
-                "/O3DE/Atom/PassCanvas/DefaultPassGraphTemplate",
-                "@gemroot:PassCanvas@/Assets/PassCanvas/GraphData/blank_graph.passgraphtemplate")),
+            JE::Editor::MaterialGraphEnvironment::GetDefaultPassGraphTemplatePath(),
             m_graphContext,
             [toolId = m_toolId](){ return AZStd::make_shared<PassGraphCompiler>(toolId); });
 

@@ -59,6 +59,7 @@ namespace AtomToolsFramework
         bool CanRedo() const override;
         bool Undo() override;
         bool Redo() override;
+        bool SetHistoryPolicy(const DocumentHistoryPolicy& policy) override;
         bool BeginEdit() override;
         bool EndEdit() override;
 
@@ -118,6 +119,10 @@ namespace AtomToolsFramework
 
         //! Add new undo redo command functions at the current position in the undo history.
         void AddUndoRedoHistory(const UndoRedoFunction& undoCommand, const UndoRedoFunction& redoCommand);
+
+        //! Snapshot commit shared by graph and Any documents.
+        bool AddUndoRedoHistory(const DocumentHistoryState& before, const DocumentHistoryState& after);
+        DocumentHistoryPolicy m_historyPolicy;
 
         // AzToolsFramework::AssetSystemBus::Handler overrides...
         void SourceFileChanged(AZStd::string relativePath, AZStd::string scanFolder, AZ::Uuid sourceUUID) override;

@@ -1,0 +1,19 @@
+{
+  "capturedUtc": "2026-10-13T06:30:57.9083019Z",
+  "pid": 148372,
+  "creationUtc": "2026-10-13T06:30:57.8986295Z",
+  "exe": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AssetProcessor.exe",
+  "sha256": "5490C4D1F178203A29769EE36931AABC695D99C738F3D76AC8A1789B00F940B2",
+  "argv": [
+    "--engine-path=F:\\JericoEngine\\JericoEngine",
+    "--project-path=F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture",
+    "--platforms=pc",
+    "--logDir=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-passgraph-workspace-rev1\\editor-vulkan-pass-workspace-attempt1\\ap-logs",
+    "--zeroAnalysisMode",
+    "--regset=/Amazon/AssetProcessor/Settings/Jobs/maxJobs=2",
+    "--regset=/Amazon/AssetProcessor/Settings/Jobs/AlwaysUseMaxJobs=false"
+  ],
+  "ramBeforePercent": 58.11,
+  "owner": "/root",
+  "purpose": "Guarded existing local AP for real Editor/UI validation, normal1 critical2"
+}

@@ -1,0 +1,22 @@
+--- a/Gems/Atom/Tools/MaterialEditor/Code/CMakeLists.txt
++++ b/Gems/Atom/Tools/MaterialEditor/Code/CMakeLists.txt
+@@ -43,6 +43,8 @@
+             Gem::AtomToolsFramework.Editor
+             JE::EditorCamera
+             Gem::AtomToolsFramework.Static
++    TARGET_PROPERTIES
++        EXCLUDE_FROM_ALL TRUE
+     RUNTIME_DEPENDENCIES
+         Gem::AtomToolsFramework.Editor
+ )
+--- a/Gems/Atom/Tools/MaterialCanvas/Code/CMakeLists.txt
++++ b/Gems/Atom/Tools/MaterialCanvas/Code/CMakeLists.txt
+@@ -42,6 +42,8 @@
+             Gem::AtomToolsFramework.Editor
+             JE::EditorCamera
+             Gem::AtomToolsFramework.Static
++    TARGET_PROPERTIES
++        EXCLUDE_FROM_ALL TRUE
+     RUNTIME_DEPENDENCIES
+         Gem::AtomToolsFramework.Editor
+ )

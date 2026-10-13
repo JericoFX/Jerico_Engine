@@ -1,0 +1,39 @@
+{
+  "capturedUtc": "2026-10-13T08:40:49.6812773Z",
+  "owner": "/root",
+  "pid": 46540,
+  "creationUtc": "2026-10-13T08:40:49.6302530Z",
+  "exe": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Editor.exe",
+  "argv": [
+    "--project-path",
+    "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture",
+    "--rhi=dx12",
+    "--skipWelcomeScreen",
+    "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Levels\\JENativeIntegration\\JENativeIntegration.prefab"
+  ],
+  "backend": "dx12",
+  "ramBeforePercent": 58.05,
+  "hashes": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Editor.exe",
+      "bytes": 171520,
+      "sha256": "13C847A9421CFB0E3A84964247EE034E4BEC45A494A75CF965992C072D396704"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\EditorMaterials.dll",
+      "bytes": 6876672,
+      "sha256": "A082122D619D52EA2EBDD132C726804BC8B4FD3BA035022BE960CA0AC539C4AF"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\GraphCanvas.Editor.dll",
+      "bytes": 7212544,
+      "sha256": "7D8878A8D91DDEFCEFFEC3C0E1240FE462CFAFDAED98246F402664D92A94832E"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Levels\\JENativeIntegration\\JENativeIntegration.prefab",
+      "bytes": 349567,
+      "sha256": "4C5E436524DD9EA5EB4FAE0B8BF61DF1024D5B7784D4C92EA242A28298C70040"
+    }
+  ],
+  "apReusedPid": 25064
+}

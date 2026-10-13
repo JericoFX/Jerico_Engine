@@ -9,6 +9,7 @@
 // AZ
 #include <AzCore/Debug/StackTracer.h>
 #include <AzCore/std/smart_ptr/unique_ptr.h>
+#include <AzCore/std/smart_ptr/weak_ptr.h>
 #include <AzCore/UnitTest/TestTypes.h>
 #include <AzTest/AzTest.h>
 
@@ -334,5 +335,51 @@ namespace GraphModelIntegrationTest
         testNode->DeleteSlot(inputSlot);
         auto afterSlots = testNode->GetSlots();
         EXPECT_EQ(beforeSlots.size(), afterSlots.size());
+    }
+
+    TEST_F(GraphModelIntegrationTests, ParentNodeCacheDoesNotKeepTheOwnerAlive)
+    {
+        GraphModel::GraphPtr graph = AZStd::make_shared<GraphModel::Graph>(m_graphContext);
+        GraphModel::NodePtr node = AZStd::make_shared<TestNode>(graph, m_graphContext);
+        graph->AddNode(node);
+        GraphModel::SlotPtr retainedSlot = node->GetSlot(TEST_STRING_INPUT_ID);
+        ASSERT_NE(retainedSlot, nullptr);
+
+        EXPECT_EQ(retainedSlot->GetParentNode(), node);
+        EXPECT_EQ(retainedSlot->GetParentNode(), node);
+        retainedSlot->ClearCachedData();
+        EXPECT_EQ(retainedSlot->GetParentNode(), node);
+        EXPECT_EQ(retainedSlot->GetParentNode(), node);
+
+        AZStd::weak_ptr<GraphModel::Node> weakNode = node;
+        AZStd::weak_ptr<GraphModel::Graph> weakGraph = graph;
+        node.reset();
+        graph.reset();
+
+        EXPECT_TRUE(weakNode.expired());
+        EXPECT_EQ(retainedSlot->GetParentNode(), nullptr);
+        EXPECT_TRUE(weakGraph.expired());
+
+        // Cleanup after the ownership oracles breaks the RED implementation's cycle, so it cannot leak into other tests.
+        // Passing behavior does not need this cleanup; do not query the dirty cache after its graph has been destroyed.
+        retainedSlot->ClearCachedData();
+    }
+
+    TEST_F(GraphModelIntegrationTests, RemovingTheParentNodeInvalidatesTheCachedLookup)
+    {
+        GraphModel::GraphPtr graph = AZStd::make_shared<GraphModel::Graph>(m_graphContext);
+        GraphModel::NodePtr node = AZStd::make_shared<TestNode>(graph, m_graphContext);
+        graph->AddNode(node);
+        GraphModel::SlotPtr retainedSlot = node->GetSlot(TEST_STRING_INPUT_ID);
+        ASSERT_NE(retainedSlot, nullptr);
+        EXPECT_EQ(retainedSlot->GetParentNode(), node);
+        EXPECT_EQ(retainedSlot->GetParentNode(), node);
+
+        EXPECT_TRUE(graph->RemoveNode(node));
+        EXPECT_EQ(retainedSlot->GetParentNode(), nullptr);
+        EXPECT_EQ(retainedSlot->GetParentNode(), nullptr);
+        AZStd::weak_ptr<GraphModel::Node> weakNode = node;
+        node.reset();
+        EXPECT_TRUE(weakNode.expired());
     }
 }

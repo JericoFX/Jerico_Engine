@@ -1,0 +1,166 @@
+{
+  "capturedUtc": "2026-10-13T01:33:00.7486591Z",
+  "reviewer": "parent",
+  "nativeProcessExit": 0,
+  "nativeCases": 142,
+  "nativeFailures": 0,
+  "nativeSkips": 0,
+  "frozenInputs": 1114,
+  "sourceDrift": 0,
+  "sdkAssetFiles": 203,
+  "sdkHashSizeMismatches": 0,
+  "scope": "Native material workspace/graph tests and isolated authoring asset installation",
+  "pending": [
+    "UI interaction and rendering gates",
+    "Full native absorption and N0/Goal acceptance",
+    "Global asset cook has 347 failures; no global PASS"
+  ],
+  "files": [
+    {
+      "name": "ap-after.json",
+      "bytes": 174098,
+      "sha256": "2EE87867D72CD50CA4072C1E829EE341FD0101F09F63B738238CE4C394EC9EFA"
+    },
+    {
+      "name": "ap-ap-config-binary-freeze.json",
+      "bytes": 8272,
+      "sha256": "3856DEA35586808F4803DC60F4E9819AD74A7CA7B60F4CF88EE2EF4176408F6C"
+    },
+    {
+      "name": "ap-apbatch.stdout.log",
+      "bytes": 209182,
+      "sha256": "E25A505B1AEBD7AB9E60562A09C4EF61BDCBEF42D21BF71A4FBE40AC01DF1BDD"
+    },
+    {
+      "name": "ap-before.json",
+      "bytes": 170456,
+      "sha256": "06B6F0C4DDA2436CE54E0FCC5B164344AC9692818D03C1AE827B1072F8243077"
+    },
+    {
+      "name": "ap-CompareMigration.ps1",
+      "bytes": 3662,
+      "sha256": "F54CE1F84F2EF3B8548BA1AFA808F3A5F26B968CBDC06CE71B94ACAF26A35535"
+    },
+    {
+      "name": "ap-fresh-products.json",
+      "bytes": 15622,
+      "sha256": "8F204CD71F5E3BC05AC899E86D5CA1CAF56CCE17C5A876DCF98A823348FB87FD"
+    },
+    {
+      "name": "ap-inspect-preview-assets.py",
+      "bytes": 3776,
+      "sha256": "B8D93734872487021A8A5241937B0107BDE9EBDA0AAB114EB4B680A16B330C4C"
+    },
+    {
+      "name": "ap-launch.json",
+      "bytes": 1601,
+      "sha256": "D504666232E32FD79B50135539B6B4EF8BCC3D277FE125F47C06914D8F81DE8D"
+    },
+    {
+      "name": "ap-migration-comparison.json",
+      "bytes": 730,
+      "sha256": "87469875309E299557463154F753826191A0209300238C2F53ADA66579F83700"
+    },
+    {
+      "name": "ap-postflight.json",
+      "bytes": 2051,
+      "sha256": "E1032C473432727CE9D8DC320914BD4149F9ADD678C046428834207D729524D8"
+    },
+    {
+      "name": "ap-process-sample.json",
+      "bytes": 89845,
+      "sha256": "B540967E3CC4B78714349FDA5EA8E5C08C009904D2FE9B3C544D1CBAA622ADEB"
+    },
+    {
+      "name": "ap-protected-authored-inputs.json",
+      "bytes": 8519,
+      "sha256": "992BF09C25EB38264CFF0A87AB63B078FEB6A3CDB7438452578D44C01C4FDB21"
+    },
+    {
+      "name": "ap-scoped-job-summary.json",
+      "bytes": 26240,
+      "sha256": "7DF2BBE84A6E8A446892EB6DDA7705B924A913C9DCE90E901D2AC8DD3C75C1E4"
+    },
+    {
+      "name": "ap-terminal.json",
+      "bytes": 300029,
+      "sha256": "1338BC5B7CB4F2E523B79C3A839BFF5AFB8DB26730C8CD95B53E83075CDBE5D7"
+    },
+    {
+      "name": "native-Gem_AtomToolsFramework.Tests.xml",
+      "bytes": 4930,
+      "sha256": "AF1BC1C60B88DB49794A690777FF85711BD77D6ADC14BC640744AE8577BA6163"
+    },
+    {
+      "name": "native-Gem_GraphModel.Editor.Tests.xml",
+      "bytes": 4174,
+      "sha256": "5EC09F8FD73064C0063142193FEB33BD73577180A818F334FF899FF5D2AC087F"
+    },
+    {
+      "name": "native-JE_EditorMaterials.Tests.xml",
+      "bytes": 14357,
+      "sha256": "194ADD69DF39507DA4474B4F382A5C41F611563C96F236744CDD7869A452EE1D"
+    },
+    {
+      "name": "native-Legacy_EditorLib.Tests.xml",
+      "bytes": 24878,
+      "sha256": "CE081BA1FE08705EE3F43C52F9B67F81CD24396B5E7C8F9A64331D883447DD1C"
+    },
+    {
+      "name": "native-native-output-inventory.json",
+      "bytes": 12166,
+      "sha256": "DBF2A6834180BE15E4944241993F147A4FDA9EAF1B26D0E914CE6259315256E0"
+    },
+    {
+      "name": "native-postflight.json",
+      "bytes": 283706,
+      "sha256": "3F7E30B7C3FF59CD36A40F39238C3AF3D01F47A5935151F671346DB73EC7A03F"
+    },
+    {
+      "name": "native-summary.json",
+      "bytes": 10305,
+      "sha256": "D9ACFF42E6ABE29575ED2084788DE0142E3513E350CBD514A0AA8E596193FA64"
+    },
+    {
+      "name": "sdk-install.result.json",
+      "bytes": 1172,
+      "sha256": "FFFC21420EEF56714B9752BFB2AA1ED8BD821320586AE89D6DFC4FD98E9F37E6"
+    },
+    {
+      "name": "sdk-installed-files.json",
+      "bytes": 108265,
+      "sha256": "BBB534F1E8FAD24E0441FF48795C51BACE8656D137523DD2F124E038AC8CDB47"
+    },
+    {
+      "name": "sdk-verification.json",
+      "bytes": 746,
+      "sha256": "4C636BA619480BEA5305283263C3A0461896A3D939411AFD9F7EAA8F9709B40C"
+    },
+    {
+      "name": "source-freeze-rev4.json",
+      "bytes": 280003,
+      "sha256": "119A5EAAA88F1060DCB49678610C57BB3EBD65B0149413D588C0066C59BC12BF"
+    }
+  ],
+  "apMigration": {
+    "sourceCount": 44,
+    "previewSources": 35,
+    "canvasSources": 9,
+    "sourceIdentityChanges": 0,
+    "sourceHashSizeChanges": 0,
+    "preservedProductIdentities": 255,
+    "productByteEquality": "NOT VERIFIED",
+    "nativeRootsVerified": true,
+    "processExit": 1,
+    "elapsedSeconds": 52.024,
+    "globalFailures": 347,
+    "globalCookPassed": false,
+    "postflightInputs": 1178,
+    "postflightDrift": 0,
+    "authoredProtectedFiles": 34,
+    "uiUsed": false,
+    "freshJobCount": 3,
+    "freshJobErrors": 0,
+    "freshProductsPresent": 21
+  }
+}

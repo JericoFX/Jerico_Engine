@@ -170,6 +170,11 @@ namespace GraphCanvas
     // TintableIcon
     /////////////////
 
+    TintableIcon::~TintableIcon()
+    {
+        delete m_sourcePixmap;
+    }
+
     QPixmap* TintableIcon::CreatePixmap(const AZStd::vector< QColor >& colors) const
     {
         if (m_sourcePixmap == nullptr)
@@ -310,6 +315,12 @@ namespace GraphCanvas
 
         ClearCache();
         ClearStyles();
+
+        for (auto& mapPair : m_patternIcons)
+        {
+            delete mapPair.second;
+        }
+        m_patternIcons.clear();
     }
 
     void StyleManager::OnCatalogAssetChanged(const AZ::Data::AssetId& asset)

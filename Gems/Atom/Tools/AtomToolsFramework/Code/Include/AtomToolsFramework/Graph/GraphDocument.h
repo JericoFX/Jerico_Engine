@@ -62,6 +62,8 @@ namespace AtomToolsFramework
         bool IsModified() const override;
         bool BeginEdit() override;
         bool EndEdit() override;
+        DocumentHistoryState GetHistoryState() override;
+        bool RestoreHistoryState(const DocumentHistoryState& expected, const DocumentHistoryState& target) override;
         void Clear() override;
 
         // GraphDocumentRequestBus::Handler overrides...

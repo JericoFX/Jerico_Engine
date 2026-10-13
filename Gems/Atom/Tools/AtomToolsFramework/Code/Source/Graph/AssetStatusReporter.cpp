@@ -8,6 +8,7 @@
 
 #include <AtomToolsFramework/Graph/AssetStatusReporter.h>
 #include <AzToolsFramework/API/EditorAssetSystemAPI.h>
+#include <AzCore/Debug/Trace.h>
 
 namespace AtomToolsFramework
 {
@@ -35,6 +36,12 @@ namespace AtomToolsFramework
                     case AzToolsFramework::AssetSystem::JobStatus::Failed:
                     case AzToolsFramework::AssetSystem::JobStatus::Failed_InvalidSourceNameExceedsMaxLimit:
                         // If any of the asset jobs failed then the entire operation is a failure.
+                        AZ_Error(
+                            "AssetStatusReporter", false,
+                            "Asset Processor job failed for source '%s': job key '%s', platform '%s', job run key %llu. "
+                            "Inspect this job in Asset Processor for its failure log.",
+                            sourcePath.c_str(), job.m_jobKey.c_str(), job.m_platform.c_str(),
+                            static_cast<unsigned long long>(job.m_jobRunKey));
                         m_failed = true;
                         return GetCurrentState();
                     }

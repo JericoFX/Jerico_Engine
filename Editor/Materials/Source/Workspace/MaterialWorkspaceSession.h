@@ -5,8 +5,10 @@
 #include <JE/Editor/Materials/Base.h>
 #include <AtomToolsFramework/Document/AtomToolsDocumentNotificationBus.h>
 #include <AtomToolsFramework/Document/AtomToolsDocumentTypeInfo.h>
+#include <AtomToolsFramework/Graph/GraphDocumentNotificationBus.h>
 #include <AzCore/Math/Crc.h>
 #include <AzCore/std/smart_ptr/unique_ptr.h>
+#include <AzCore/std/containers/unordered_map.h>
 #include <QObject>
 #include <QPointer>
 
@@ -18,12 +20,16 @@ namespace AtomToolsFramework
 
 namespace JE::Editor
 {
+    class MaterialGraphEnvironment;
     //! Documents outlive their panes so closing a pane cannot invalidate editor undo commands.
     class JE_EDITOR_MATERIALS_API MaterialWorkspaceSession final
         : public QObject
         , private AtomToolsFramework::AtomToolsDocumentNotificationBus::Handler
+        , private AtomToolsFramework::GraphDocumentNotificationBus::Handler
     {
+        Q_OBJECT
     public:
+        enum class CompileState { NotCompiled, Modified, Compiling, CompilingModified, Completed, Failed };
         explicit MaterialWorkspaceSession(const AtomToolsFramework::DocumentTypeInfo& documentType);
         ~MaterialWorkspaceSession() override;
 
@@ -31,11 +37,22 @@ namespace JE::Editor
         const AZStd::vector<AZ::Uuid>& GetDocumentIds() const;
         const AZ::Uuid& GetActiveDocumentId() const;
         const AtomToolsFramework::DocumentTypeInfo& GetDocumentType() const;
+        const AtomToolsFramework::DocumentTypeInfoVector& GetGraphDocumentTypes() const;
+        void RegisterGraphDocumentTypes(const AtomToolsFramework::DocumentTypeInfoVector& types);
+        MaterialGraphEnvironment& EnableGraphDocuments();
+        bool IsGraphDocument(const AZ::Uuid& documentId) const;
         AZ::Uuid OpenDocument(const AZStd::string& sourcePath);
+        AZ::Uuid CreateDocument(const AZStd::string& sourcePath, const AZStd::string& targetPath);
         bool SelectDocument(const AZ::Uuid& documentId);
         bool SaveActiveDocument();
         void SetMainWindow(QWidget* mainWindow);
         bool ConfirmApplicationClose(QWidget* parent);
+        CompileState GetCompileState(const AZ::Uuid& documentId) const;
+        bool RequestCompile(const AZ::Uuid& documentId);
+
+    Q_SIGNALS:
+        // Document/compiler notifications are dispatched on the main thread; observers see the updated session state.
+        void CompileStateChanged(const AZ::Uuid& documentId);
 
     private:
         bool eventFilter(QObject* watched, QEvent* event) override;
@@ -43,10 +60,18 @@ namespace JE::Editor
         void OnDocumentOpened(const AZ::Uuid& documentId) override;
         void OnDocumentClosed(const AZ::Uuid& documentId) override;
         void OnDocumentDestroyed(const AZ::Uuid& documentId) override;
+        void OnDocumentModified(const AZ::Uuid& documentId) override;
+        void OnCompileGraphStarted(const AZ::Uuid& documentId) override;
+        void OnCompileGraphCompleted(const AZ::Uuid& documentId) override;
+        void OnCompileGraphFailed(const AZ::Uuid& documentId) override;
+        void SetCompileState(const AZ::Uuid& documentId, CompileState state);
 
         AtomToolsFramework::DocumentTypeInfo m_documentType;
+        AtomToolsFramework::DocumentTypeInfoVector m_graphDocumentTypes;
+        AZStd::unique_ptr<MaterialGraphEnvironment> m_graphEnvironment;
         AZStd::unique_ptr<AtomToolsFramework::AtomToolsDocumentSystem> m_documentSystem;
         AZStd::vector<AZ::Uuid> m_documentIds;
+        AZStd::unordered_map<AZ::Uuid, CompileState> m_compileStates;
         AZ::Uuid m_activeDocumentId = AZ::Uuid::CreateNull();
         QPointer<QWidget> m_mainWindow;
         bool m_confirmingClose = false;

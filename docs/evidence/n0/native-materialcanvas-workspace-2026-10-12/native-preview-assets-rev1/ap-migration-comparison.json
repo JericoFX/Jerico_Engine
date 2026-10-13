@@ -1,0 +1,21 @@
+{
+  "capturedUtc": "2026-10-13T01:31:55.5871613Z",
+  "scope": "44 existing preview/material graph sources; GUID/SourceID/name/portable key; source bytes/SHA256; existing product GUID/SubID/name/type. Does not certify global cook, product bytes, rendering or UI.",
+  "passed": true,
+  "beforeSources": 44,
+  "afterSources": 44,
+  "previewSources": 35,
+  "canvasSources": 9,
+  "sourceIdentityChangeCount": 0,
+  "sourceBytesOrHashChangeCount": 0,
+  "wrongRootCount": 0,
+  "beforeProducts": 255,
+  "afterProducts": 255,
+  "missingProductIdentityCount": 0,
+  "newProductIdentityCount": 0,
+  "sourceIdentityChanges": [],
+  "sourceFileChanges": [],
+  "wrongRoots": [],
+  "missingProducts": [],
+  "newProducts": []
+}

@@ -1,0 +1,14 @@
+{
+  "capturedUtc": "2026-10-13T07:20:34.9822096Z",
+  "owner": "parent",
+  "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Source\\Workspace\\MaterialGraphWorkspaceWidget.cpp",
+  "beforeBytes": 23456,
+  "beforeSha256": "1A6222359B29C061308B02CC7CE67D5AAC7C9B1610272DA0F17A56F8F0D78656",
+  "afterBytes": 23459,
+  "afterSha256": "F2803AE91E94564189B656A0E84715BCE86D12C68729EECB4214AC5D93CC4088",
+  "inverseByteExact": true,
+  "changedLines": 1,
+  "unchangedRegressionSha256": "D6E9B6371FAA1D2638FA8623CE3632FC88529CD3F7F6EBF0A956965964E09611",
+  "status": "IMPLEMENTED_GREEN_PENDING",
+  "rationale": "Give remaining vertical space to the body splitter; keep compile notice at natural height and preserve manual splitter state."
+}

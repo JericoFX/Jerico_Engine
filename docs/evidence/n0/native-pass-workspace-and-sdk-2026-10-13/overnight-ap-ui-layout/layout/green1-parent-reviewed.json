@@ -1,0 +1,43 @@
+{
+  "capturedUtc": "2026-10-13T07:34:11.3779913Z",
+  "status": "BUILD_PASSED_NOTICE_CORRECTED_INSPECTOR_GEOMETRY_FAILED",
+  "freezePath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-passgraph-workspace-rev1\\integrated-green-layout-freeze-rev10.json",
+  "freezeSHA256": "3A72E2E40E2AD8D884BB4D63FC69B88530FC75523194C0EFED723E493AE6C851",
+  "inputCount": 1135,
+  "parentRehashed": 1135,
+  "drift": [],
+  "phases": [
+    {
+      "phase": "build-focal",
+      "exitCode": 0,
+      "elapsedSeconds": 42.588
+    },
+    {
+      "phase": "focal-inventory",
+      "exitCode": 0,
+      "elapsedSeconds": 0.069
+    },
+    {
+      "phase": "focal-test-JE__EditorMaterials.Tests.main__TEST_RUN",
+      "exitCode": 8,
+      "elapsedSeconds": 5.491
+    }
+  ],
+  "gtest": {
+    "tests": "50",
+    "failures": "1",
+    "errors": "0",
+    "disabled": "0",
+    "xmlPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-passgraph-workspace-rev1\\native-green-layout-attempt1\\junit\\JE_EditorMaterials.Tests.xml",
+    "sha256": "1AD166B71F5F8F7DE9732D5BEACD44E3370AB145E8EE00703646935DC46247C6",
+    "failedCases": [
+      {
+        "name": "PassNodeConfigurationKeepsNoticeCompactAndInspectorUsable",
+        "message": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Tests\\GraphDocumentHistoryTests.cpp:927\nExpected: (propertyBounds.intersected(inspector->rect()).height()) >= (6 * propertyEditor->fontMetrics().height()), actual: 5 vs 102\nGoogle Test trace:\nF:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Tests\\GraphDocumentHistoryTests.cpp(909): workspace 900x650\n"
+      }
+    ]
+  },
+  "remainingGates": "NOT_RUN after focal failure; no UI acceptance or full SDK import",
+  "nativeProcessCount": 0,
+  "supersedes": "layout-green1-parent-reviewed-rev1.json: parent hash loop treated array inputs as object properties; that hash count/drift is invalid. XML and phase exits unaffected."
+}

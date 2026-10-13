@@ -15,13 +15,11 @@
 #include <AtomToolsFramework/EntityPreviewViewport/EntityPreviewViewportWidget.h>
 #include <AtomToolsFramework/Graph/GraphViewSettings.h>
 #include <AzCore/Component/ComponentApplicationBus.h>
-#include <GraphCanvas/Styling/StyleManager.h>
 #include <GraphCanvas/Widgets/Bookmarks/BookmarkDockWidget.h>
 #include <GraphCanvas/Widgets/MiniMapGraphicsView/MiniMapGraphicsView.h>
 #include <GraphCanvas/Widgets/NodePalette/NodePaletteDockWidget.h>
 #include <GraphCanvas/Widgets/NodePalette/NodePaletteWidget.h>
 
-#include <QTranslator>
 
 namespace MaterialCanvas
 {
@@ -60,8 +58,6 @@ namespace MaterialCanvas
         AtomToolsFramework::GraphViewSettingsPtr m_graphViewSettingsPtr;
         GraphCanvas::BookmarkDockWidget* m_bookmarkDockWidget = {};
         GraphCanvas::NodePaletteDockWidget* m_nodePalette = {};
-        GraphCanvas::StyleManager m_styleManager;
-        QTranslator m_translator;
         mutable AZStd::shared_ptr<AtomToolsFramework::DynamicPropertyGroup> m_materialCanvasCompileSettingsGroup;
     };
 } // namespace MaterialCanvas

@@ -1,0 +1,67 @@
+{
+  "phase": "build-hosts",
+  "startedUtc": "2026-10-13T08:21:57.6468255Z",
+  "finishedUtc": "2026-10-13T08:23:07.3663891Z",
+  "elapsedSeconds": 69.72,
+  "pid": 178592,
+  "processCreationUtc": "2026-10-13T08:21:57.6475645Z",
+  "ramBefore": {
+    "capturedUtc": "2026-10-13T08:21:57.6467732Z",
+    "totalBytes": 34265743360,
+    "freeBytes": 14550343680,
+    "usedPercent": 57.54,
+    "thresholdPercent": 80
+  },
+  "peakRamUsedPercent": 58.51,
+  "ramWaitSamples": [
+    {
+      "capturedUtc": "2026-10-13T08:22:12.7033280Z",
+      "ramUsedPercent": 57.71,
+      "pid": 178592,
+      "processCreationUtc": "2026-10-13T08:21:57.6475645Z",
+      "workingSetBytes": 17264640
+    },
+    {
+      "capturedUtc": "2026-10-13T08:22:27.7627748Z",
+      "ramUsedPercent": 58.05,
+      "pid": 178592,
+      "processCreationUtc": "2026-10-13T08:21:57.6475645Z",
+      "workingSetBytes": 17203200
+    },
+    {
+      "capturedUtc": "2026-10-13T08:22:42.8182871Z",
+      "ramUsedPercent": 58.21,
+      "pid": 178592,
+      "processCreationUtc": "2026-10-13T08:21:57.6475645Z",
+      "workingSetBytes": 17203200
+    },
+    {
+      "capturedUtc": "2026-10-13T08:22:57.8738289Z",
+      "ramUsedPercent": 58.51,
+      "pid": 178592,
+      "processCreationUtc": "2026-10-13T08:21:57.6475645Z",
+      "workingSetBytes": 17203200
+    }
+  ],
+  "executable": "C:\\Program Files\\CMake\\bin\\cmake.exe",
+  "argv": [
+    "--build",
+    "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine",
+    "--config",
+    "Profile",
+    "--target",
+    "Editor",
+    "MaterialCanvas",
+    "MaterialEditor",
+    "PassCanvas",
+    "ShaderManagementConsole",
+    "EditorLib.Tests",
+    "--parallel",
+    "1"
+  ],
+  "exitCode": 0,
+  "stdout": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-passgraph-workspace-rev1\\native-final-green-layout-attempt1\\build-hosts.stdout.log",
+  "stdoutSha256": "ADB5FB9933032BDDF40E3A15FCD8F2B8A5D53CB8AB8787B0DE7631E4FC5C6325",
+  "stderr": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-passgraph-workspace-rev1\\native-final-green-layout-attempt1\\build-hosts.stderr.log",
+  "stderrSha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+}

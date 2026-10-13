@@ -1,0 +1,62 @@
+{
+  "capturedUtc": "2026-10-13T12:54:16.6260140Z",
+  "status": "NATIVE_GRAPH_EDITOR_REOPEN_AND_SDK_IMPORT_LINK_LOADER_VERIFIED_WITH_LIMITS",
+  "scope": "Existing native authoring vertical and SDK distribution; no full N0/GOAL acceptance.",
+  "nativeCases": 148,
+  "separateUIProcesses": [
+    "Windows DX12",
+    "Windows Vulkan"
+  ],
+  "sdkImportTargets": [
+    "JE::EditorMaterials",
+    "JE::EditorCamera",
+    "JE::EditorRenderIntegration"
+  ],
+  "sdkFactoriesActivated": false,
+  "sourceFixtureSameAsConsumer5": true,
+  "legacySdkExecutablesAbsent": 6,
+  "artifacts": [
+    {
+      "artifact": "README.md",
+      "bytes": 4253,
+      "sha256": "B090F631803639A7D24CF3D40BD1749B68011735CDE9AE8893BC1A443992FB34"
+    },
+    {
+      "artifact": "sdk-install-import/archive-manifest-rev1.json",
+      "bytes": 61137,
+      "sha256": "5F33ADB81E05216284EBFC39E39396CB6CD1AB3718B0375F754A36954F0A380E"
+    },
+    {
+      "artifact": "sdk-install-import/sdk-validation-raw-rev1.zip",
+      "bytes": 7774751,
+      "sha256": "A5BF658ACAC502A2D34C031DC4A2959B99D3FC8E1ED522C9438CA803E546E3BF"
+    },
+    {
+      "artifact": "sdk-install-import/obsolete-sdk-prefix-cleanup-preflight.json",
+      "bytes": 1712,
+      "sha256": "3075B95C3DD16C095C1EC63526E640EBBA9EF845FAFE5CFB79DB029C796E1329"
+    },
+    {
+      "artifact": "sdk-install-import/obsolete-sdk-prefix-cleanup-result.json",
+      "bytes": 1899,
+      "sha256": "CB7E25C894B5303012F9C091EFCC7DAF63FDE43C9274E95472EB4E019F2F6AE2"
+    },
+    {
+      "artifact": "sdk-install-import/publication-metadata-delta-rev1.json",
+      "bytes": 730,
+      "sha256": "4FCA1217DC43668DAE4584DEB848F32AA4DCC38673050F3D2E82FEE7A421BE57"
+    },
+    {
+      "artifact": "overnight-ap-ui-layout/manifest-rev2.json",
+      "bytes": 46296,
+      "sha256": "9A144DC9DEBCDC5951455738B2C3A327879C62A10C9FB513C7A490514658E1B2"
+    }
+  ],
+  "limitations": [
+    "Pass generation/application and default-open pending",
+    "Global AP failed on347 LFS-pointer sources",
+    "SDK558 LFS pointers and audited external packages remain",
+    "Clean-machine SDK, Shipping, Linux Vulkan and VR unverified"
+  ],
+  "metadataDelta": "Git attributes changed after terminal postflight to preserve original binary proof in ordinary Git; native source/tests/outputs unchanged."
+}

@@ -1,0 +1,20 @@
+{
+  "capturedUtc": "2026-10-13T08:37:40.5190387Z",
+  "editorPid": 188836,
+  "editorEnded": true,
+  "exitCode": null,
+  "protectedCount": 38,
+  "protectedDrift": [],
+  "privateInputs": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Assets\\JENativePassWorkspaceValidation_20261013\\PassGraph.passgraph",
+      "bytes": 2330,
+      "sha256": "483F1D6627AA1123060A55656D223A43C3942253472134A0F39B37D2184ED0E2"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Assets\\JENativePassWorkspaceValidation_20261013\\PassNode.passgraphnode",
+      "bytes": 211,
+      "sha256": "BA267F4A528DE20FEA94A1B93F72335CC1E7E5A26E442FFB698DB9F066843A93"
+    }
+  ]
+}

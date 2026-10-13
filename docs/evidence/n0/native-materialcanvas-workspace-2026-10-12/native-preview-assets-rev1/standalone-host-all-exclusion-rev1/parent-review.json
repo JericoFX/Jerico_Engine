@@ -1,0 +1,88 @@
+{
+  "capturedUtc": "2026-10-13T01:50:14.8109257Z",
+  "reviewer": "parent",
+  "configureExit": 0,
+  "editorBuildExit": 0,
+  "defaultAllExcluded": [
+    "MaterialEditor",
+    "MaterialCanvas"
+  ],
+  "explicitTargetsRetained": true,
+  "passCanvasAndShaderManagementRetained": true,
+  "frozenInputs": 1114,
+  "sourceDrift": 0,
+  "changeScope": "Default build host exclusion only; native subsystem unchanged",
+  "pending": [
+    "Full SDK installer closure",
+    "New shipping footprint measurements",
+    "UI/render acceptance",
+    "Full native absorption/N0/Goal"
+  ],
+  "files": [
+    {
+      "name": "ALL_BUILD.vcxproj",
+      "bytes": 310516,
+      "sha256": "A60BADB24B3FE43BF450290F55A9C8544CDD8A03A5BA8A4531A68151274F2848"
+    },
+    {
+      "name": "build-editor.result.json",
+      "bytes": 1050,
+      "sha256": "F4D8EB467A81C81919CD71628665BA42CBEFFFBEE26B2E1DE894BE4E16D9FF2A"
+    },
+    {
+      "name": "cache-before-configure.json",
+      "bytes": 593,
+      "sha256": "5A9154A865BD48392BF95A4F1422D6110A1D9C6F9DF8E8CB98F963492B4B20C6"
+    },
+    {
+      "name": "candidate-unified.patch",
+      "bytes": 768,
+      "sha256": "B84DCEA6EBB85BBF6DEF1E627F972D76591316208EFEF417D09D05631C3CA17C"
+    },
+    {
+      "name": "configure.result.json",
+      "bytes": 996,
+      "sha256": "AD60DA77B31AF6C4069021DC453DBC5828E8E191B1BEAC97E5105F052164ADC8"
+    },
+    {
+      "name": "configure.stderr.log",
+      "bytes": 1189,
+      "sha256": "E4AAD40ADB2F7C1F6FD6443D22D5B73B58448EA48F5654D451726CDB24C33803"
+    },
+    {
+      "name": "generated-gates.json",
+      "bytes": 4376,
+      "sha256": "9E37BA0ED9BA0D7292CDB038F360C4068B2D66F426A16BF8E89BABA320EAA9A4"
+    },
+    {
+      "name": "integrated-source-freeze-rev5.json",
+      "bytes": 280208,
+      "sha256": "FA6C8E251DCCBE633296139FC14D9368A05A8C8B063993755A3ADC6DF7A3BA3F"
+    },
+    {
+      "name": "MaterialCanvas.CMakeLists.before.txt",
+      "bytes": 2964,
+      "sha256": "30752667EB14FAEACF5486CE63A75B78685C8FE92970A28F7D011DBD6078D0E7"
+    },
+    {
+      "name": "MaterialEditor.CMakeLists.before.txt",
+      "bytes": 2899,
+      "sha256": "85AD0D0DEE3F8559C4F3C90B4219E379233AFDE0D1A346C9F4BD942417164DD0"
+    },
+    {
+      "name": "postflight.json",
+      "bytes": 273587,
+      "sha256": "6ED2B5CCA397B6757ECDC74D911847B77FC9F239DC220E09668E3CFF9CF9404E"
+    },
+    {
+      "name": "receipt.json",
+      "bytes": 1816,
+      "sha256": "C18CB8790C4F8E0CB66DBB0F55DB6BC85DBE1C7A5E7F98F948BAF51ADF141294"
+    },
+    {
+      "name": "source-freeze.json",
+      "bytes": 1015,
+      "sha256": "B31F3D723B61C78CCACC1BFA293B4AC5A1A7F88D3A4BC6126F748210A6A310A4"
+    }
+  ]
+}

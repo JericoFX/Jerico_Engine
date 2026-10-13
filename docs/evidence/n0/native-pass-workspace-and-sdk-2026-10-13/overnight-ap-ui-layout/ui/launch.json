@@ -1,0 +1,34 @@
+{
+  "startedUtc": "2026-10-13T06:32:01.7859633Z",
+  "pid": 308200,
+  "creationUtc": "2026-10-13T06:32:01.7770947Z",
+  "exe": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Editor.exe",
+  "argv": [
+    "--project-path",
+    "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture",
+    "--rhi=vulkan",
+    "--skipWelcomeScreen",
+    "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Levels\\JENativeIntegration\\JENativeIntegration.prefab"
+  ],
+  "owner": "/root",
+  "backend": "vulkan",
+  "ramBeforePercent": 62.42,
+  "hashes": [
+    {
+      "Path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Editor.exe",
+      "Hash": "13C847A9421CFB0E3A84964247EE034E4BEC45A494A75CF965992C072D396704"
+    },
+    {
+      "Path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\EditorMaterials.dll",
+      "Hash": "D60D7441A4235A176F5B98C6DC024A58E0CD153D5C1C30FA92E20C4B460424DC"
+    },
+    {
+      "Path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\GraphCanvas.Editor.dll",
+      "Hash": "7D8878A8D91DDEFCEFFEC3C0E1240FE462CFAFDAED98246F402664D92A94832E"
+    },
+    {
+      "Path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Levels\\JENativeIntegration\\JENativeIntegration.prefab",
+      "Hash": "4C5E436524DD9EA5EB4FAE0B8BF61DF1024D5B7784D4C92EA242A28298C70040"
+    }
+  ]
+}

@@ -248,18 +248,30 @@ namespace AtomToolsFramework
 
     bool AtomToolsDocument::CanUndo() const
     {
+        if (m_historyPolicy.m_commit)
+        {
+            return m_historyPolicy.m_canUndo();
+        }
         // Undo will only be allowed if something has been recorded and we're not at the beginning of history
         return !m_undoHistory.empty() && m_undoHistoryIndex > 0;
     }
 
     bool AtomToolsDocument::CanRedo() const
     {
+        if (m_historyPolicy.m_commit)
+        {
+            return m_historyPolicy.m_canRedo();
+        }
         // Redo will only be allowed if something has been recorded and we're not at the end of history
         return !m_undoHistory.empty() && m_undoHistoryIndex < m_undoHistory.size();
     }
 
     bool AtomToolsDocument::Undo()
     {
+        if (m_historyPolicy.m_commit)
+        {
+            return m_historyPolicy.m_undo();
+        }
         if (CanUndo())
         {
             // The history index is one beyond the last executed command. Decrement the index then execute undo.
@@ -273,6 +285,10 @@ namespace AtomToolsFramework
 
     bool AtomToolsDocument::Redo()
     {
+        if (m_historyPolicy.m_commit)
+        {
+            return m_historyPolicy.m_redo();
+        }
         if (CanRedo())
         {
             // Execute the current redo command then move the history index to the next position.
@@ -282,6 +298,28 @@ namespace AtomToolsFramework
             return true;
         }
         return false;
+    }
+
+    bool AtomToolsDocument::SetHistoryPolicy(const DocumentHistoryPolicy& policy)
+    {
+        if (!m_undoHistory.empty() || m_historyPolicy.m_commit || !policy.m_commit || !policy.m_canUndo ||
+            !policy.m_canRedo || !policy.m_undo || !policy.m_redo || GetHistoryState().empty())
+        {
+            return false;
+        }
+        m_historyPolicy = policy;
+        return true;
+    }
+
+    bool AtomToolsDocument::AddUndoRedoHistory(const DocumentHistoryState& before, const DocumentHistoryState& after)
+    {
+        if (!m_historyPolicy.m_commit || !m_historyPolicy.m_commit(m_id, m_absolutePath, before, after))
+        {
+            RestoreHistoryState(after, before);
+            return false;
+        }
+        AtomToolsDocumentNotificationBus::Event(m_toolId, &AtomToolsDocumentNotificationBus::Events::OnDocumentUndoStateChanged, m_id);
+        return true;
     }
 
     bool AtomToolsDocument::BeginEdit()

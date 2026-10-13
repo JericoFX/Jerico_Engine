@@ -11,7 +11,6 @@ set(FILES
     Source/PassCanvasApplication.cpp
     Source/PassCanvasApplication.h
 
-    Source/Document/PassGraphCompiler.cpp
     Source/Document/PassGraphCompiler.h
 
     Source/Window/PassCanvas.qrc

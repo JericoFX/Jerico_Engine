@@ -3,6 +3,9 @@
 
 set(FILES
     Tests/Tests.cpp
+    Tests/GraphDocumentHistoryTests.cpp
+    Tests/GraphHistoryTests.cpp
     Tests/MaterialDocumentTests.cpp
+    Tests/PassGraphCompilerTests.cpp
     Tests/Workspace/MaterialWorkspaceTests.cpp
 )

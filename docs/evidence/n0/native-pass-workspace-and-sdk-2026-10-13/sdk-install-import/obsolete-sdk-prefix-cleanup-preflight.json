@@ -1,0 +1,40 @@
+{
+  "utc": "2026-10-13T12:35:36.8854220Z",
+  "scope": "Four exact obsolete private SDK prefixes only, not original-engine, packages, sources, other repositories or evidence",
+  "archiveSHA256": "A5BF658ACAC502A2D34C031DC4A2959B99D3FC8E1ED522C9438CA803E546E3BF",
+  "totalBytes": 11437827904.0,
+  "prefixes": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-passgraph-workspace-rev1\\sdk-legacy-install-analysis-rev1\\sdk-profile-install-attempt1\\prefix",
+      "creationUtc": "2026-10-13T10:00:31.1132020Z",
+      "files": 11060,
+      "bytes": 2858466967.0,
+      "reparseEntries": 0,
+      "exists": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-passgraph-workspace-rev1\\sdk-legacy-install-analysis-rev1\\sdk-profile-install-attempt2\\prefix",
+      "creationUtc": "2026-10-13T10:31:41.1210311Z",
+      "files": 11062,
+      "bytes": 2859197781.0,
+      "reparseEntries": 0,
+      "exists": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-passgraph-workspace-rev1\\sdk-legacy-install-analysis-rev1\\sdk-profile-install-attempt3\\prefix",
+      "creationUtc": "2026-10-13T10:51:20.4452849Z",
+      "files": 11107,
+      "bytes": 2860081420.0,
+      "reparseEntries": 0,
+      "exists": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-passgraph-workspace-rev1\\sdk-legacy-install-analysis-rev1\\sdk-profile-install-attempt4\\prefix",
+      "creationUtc": "2026-10-13T11:14:20.8964514Z",
+      "files": 11107,
+      "bytes": 2860081736.0,
+      "reparseEntries": 0,
+      "exists": true
+    }
+  ]
+}

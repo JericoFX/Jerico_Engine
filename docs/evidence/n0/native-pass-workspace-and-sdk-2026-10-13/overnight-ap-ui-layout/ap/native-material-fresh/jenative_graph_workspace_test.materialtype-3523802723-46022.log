@@ -1,0 +1,12 @@
+~~1791880575798~~1~~0000000000041694~~Builder::RunJob~~Request started builder [41B21DD12D9B431CBB7105603AE8F1C3 - 1] task (process) Assets/jenative_graph_workspace_test.materialtype 
+~~1791880575851~~1~~0000000000041694~~AssetBuilder~~AssetBuilder: AllocatorManager before: allocatedBytes = 59233527 capacityBytes = 55834574848
+~~1791880575851~~1~~0000000000041694~~AssetBuilder~~AssetBuilder: Running processJob task
+~~1791880575851~~1~~0000000000041694~~AssetBuilder~~AssetBuilder: Source = F:/JericoEngine/JericoEngine/Projects/JEEditorFixture/Assets/jenative_graph_workspace_test.materialtype
+~~1791880575851~~1~~0000000000041694~~AssetBuilder~~AssetBuilder: Platform = common
+~~1791880575851~~1~~0000000000041694~~AssetBuilder~~C: [Material Pipeline] = F:/JericoEngine/JericoEngine/Gems/Atom/Feature/Common/Assets/Materials/Pipelines/LowEndPipeline/LowEndPipeline.materialpipeline
+~~1791880575851~~1~~0000000000041694~~AssetBuilder~~LuaScriptUtilities: Lua script: Material type uses lighting model "Standard".
+~~1791880575851~~1~~0000000000041694~~AssetBuilder~~C: [Material Pipeline] = F:/JericoEngine/JericoEngine/Gems/Atom/Feature/Common/Assets/Materials/Pipelines/MainPipeline/MainPipeline.materialpipeline
+~~1791880575851~~1~~0000000000041694~~AssetBuilder~~LuaScriptUtilities: Lua script: Material type uses lighting model "Standard".
+~~1791880575851~~1~~0000000000041694~~AssetBuilder~~AssetBuilder: AllocatorManager after: allocatedBytes = 59266775 capacityBytes = 55834574848; allocated change = 33248
+~~1791880575851~~1~~0000000000041694~~AssetBuilder~~S: 0 errors, 0 warnings
+~~1791880575851~~1~~0000000000041694~~Builder::RunJob~~Request stopped builder [41B21DD12D9B431CBB7105603AE8F1C3 - 1] task (process) Assets/jenative_graph_workspace_test.materialtype 

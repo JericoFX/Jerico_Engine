@@ -1,0 +1,529 @@
+{
+  "schemaVersion": 1,
+  "review": "READ_ONLY_OIIO_PROVIDER_PUBLICATION_COHERENCE",
+  "createdUtc": "2026-10-13T12:58:56.7984275Z",
+  "readingCoverage": {
+    "cppPro": {
+      "sha256": "53017F862C526DF6080210A1A00E6678C2CD5382B5D1A51026BF3B0BDE7F7ED2",
+      "fullReadReused": true,
+      "path": "C:\\Users\\Jerico\\.codex\\skills\\cpp-pro\\SKILL.md"
+    },
+    "gameDeveloper": {
+      "sha256": "4578FACCE19AC99396E5FE904EAC173066FA517AF16AE0F49B03F9082A1057EC",
+      "fullReadReused": true,
+      "path": "C:\\Users\\Jerico\\.codex\\skills\\game-developer\\SKILL.md"
+    },
+    "graft": "No new Graft process. Prior unavailability was documented by parent; package CMake/JSON/config evidence read directly. The 11,265-byte consumer test was bounded-read directly because package helper files are outside available Graft coverage."
+  },
+  "catalogue": {
+    "currentEntry": "ly_associate_package(PACKAGE_NAME openimageio-opencolorio-2.3.17-je-rev1-windows        TARGETS OpenImageIO OpenColorIO OpenColorIO::Runtime OpenImageIO::Tools::Binaries OpenColorIO::Tools::Binaries PACKAGE_HASH 268ecbe940f16f729248679b586542e0154195eb66ae7ac29bccc409e5cf6611)",
+    "parentIntegrationSHA256": "9FCFD6E3ECE5DE18CCF2911ED483A214AA9EB7E8C716706FF94CCF4320F54E61",
+    "parentReportsInverseByteExact": true,
+    "parentIntegrationReceipt": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\oiio-consumer-preparation-rev5\\parent-package-integration.json",
+    "path": "F:\\JericoEngine\\JericoEngine\\cmake\\3rdParty\\Platform\\Windows\\BuiltInPackages_windows.cmake",
+    "sourceBuildFreeze6": {
+      "sourceInputs": 11998,
+      "matchesCurrent": true,
+      "projects": 139,
+      "sha256": "8BD022E76B8DD4410A5ADE10F100627CB995B96C3EA0D61BF5791B3432B7B0C3"
+    },
+    "lineNumber": 30,
+    "bytes": 6795,
+    "sha256": "8BD022E76B8DD4410A5ADE10F100627CB995B96C3EA0D61BF5791B3432B7B0C3",
+    "previousEntry": "ly_associate_package(PACKAGE_NAME openimageio-opencolorio-2.3.17-rev4-windows TARGETS OpenImageIO OpenColorIO OpenColorIO::Runtime OpenImageIO::Tools::Binaries OpenImageIO::Tools::PythonPlugins PACKAGE_HASH d542198653b33640268a999de542c9c5adf4a29322ed04858c730bc82eb34b09)"
+  },
+  "providerDirectory": {
+    "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\OpenImageIO",
+    "acceptedConsumerRev5Matches": 7,
+    "currentFileCount": 14,
+    "note": "The engine source-build freeze covers the catalogue entry, not the separately validated local package-provider directory.",
+    "files": [
+      {
+        "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\OpenImageIO\\ApplyHistoricalPatches.cmake",
+        "bytes": 3044,
+        "sha256": "1578D9DE9253423009916F647856F798C81931B9EBF9D242899C8F51578F6CA2",
+        "producerRev4CandidatePinned": true,
+        "producerRev4CandidateMatch": true,
+        "acceptedConsumerRev5Pinned": false,
+        "acceptedConsumerRev5Match": false,
+        "sdkEngineBuild6Pinned": false
+      },
+      {
+        "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\OpenImageIO\\BuildNativeDependencies.cmake",
+        "bytes": 5373,
+        "sha256": "8BD28CF583344FF899D1DF1C02C95C9AA974A91748A9F2D10765B7F198DE4687",
+        "producerRev4CandidatePinned": true,
+        "producerRev4CandidateMatch": true,
+        "acceptedConsumerRev5Pinned": false,
+        "acceptedConsumerRev5Match": false,
+        "sdkEngineBuild6Pinned": false
+      },
+      {
+        "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\OpenImageIO\\BuildOpenImageIOPackage.cmake",
+        "bytes": 12251,
+        "sha256": "1A23476DDE0458952B7F7C1EEA670E58F8385FC27B6AA6CF8E9356FEF6C5BB2E",
+        "producerRev4CandidatePinned": true,
+        "producerRev4CandidateMatch": true,
+        "acceptedConsumerRev5Pinned": false,
+        "acceptedConsumerRev5Match": false,
+        "sdkEngineBuild6Pinned": false
+      },
+      {
+        "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\OpenImageIO\\FindNativeDependencies.cmake",
+        "bytes": 2109,
+        "sha256": "74186455C684EFC65E6B16E6DC4DCCE2594B286D5DA5569FB924D26F74041E7A",
+        "producerRev4CandidatePinned": true,
+        "producerRev4CandidateMatch": false,
+        "acceptedConsumerRev5Pinned": true,
+        "acceptedConsumerRev5Match": true,
+        "sdkEngineBuild6Pinned": false
+      },
+      {
+        "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\OpenImageIO\\FindOpenColorIO.cmake",
+        "bytes": 3671,
+        "sha256": "D70A6B681E3F5D99A51BC12C3FC4A4EDC0B0152CE37E2FBDFD3A0F9D0A3A566A",
+        "producerRev4CandidatePinned": true,
+        "producerRev4CandidateMatch": true,
+        "acceptedConsumerRev5Pinned": true,
+        "acceptedConsumerRev5Match": true,
+        "sdkEngineBuild6Pinned": false
+      },
+      {
+        "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\OpenImageIO\\FindOpenImageIO.cmake",
+        "bytes": 4158,
+        "sha256": "A29866B151005423F3B5816B3E671347F0705FB10770BFF3089D02D37C6BA016",
+        "producerRev4CandidatePinned": true,
+        "producerRev4CandidateMatch": true,
+        "acceptedConsumerRev5Pinned": true,
+        "acceptedConsumerRev5Match": true,
+        "sdkEngineBuild6Pinned": false
+      },
+      {
+        "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\OpenImageIO\\JERecipe.json",
+        "bytes": 5327,
+        "sha256": "9C4948F1A4305F21027EDE42B52547B0B0DC47E8E7D8FFDCACE5DDD135F71804",
+        "producerRev4CandidatePinned": true,
+        "producerRev4CandidateMatch": true,
+        "acceptedConsumerRev5Pinned": false,
+        "acceptedConsumerRev5Match": false,
+        "sdkEngineBuild6Pinned": false
+      },
+      {
+        "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\OpenImageIO\\NOTICE.txt",
+        "bytes": 3081,
+        "sha256": "4086C8E854A108CB4A2F72EAC44A3409E3B2C4F2D3BD460D4F16F50FA39EA2E5",
+        "producerRev4CandidatePinned": true,
+        "producerRev4CandidateMatch": true,
+        "acceptedConsumerRev5Pinned": false,
+        "acceptedConsumerRev5Match": false,
+        "sdkEngineBuild6Pinned": false
+      },
+      {
+        "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\OpenImageIO\\README.md",
+        "bytes": 4807,
+        "sha256": "FE7FB42012CC7E2D523249F8F4D61BC6B473EC9F4AEE8E58DEC66513759EF1AB",
+        "producerRev4CandidatePinned": true,
+        "producerRev4CandidateMatch": false,
+        "acceptedConsumerRev5Pinned": false,
+        "acceptedConsumerRev5Match": false,
+        "sdkEngineBuild6Pinned": false
+      },
+      {
+        "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\OpenImageIO\\SourcePins.cmake",
+        "bytes": 1079,
+        "sha256": "268F440C9B0AE524CA9371139A3A12DBF6EEC43644ECA02A6BD090724A96CA77",
+        "producerRev4CandidatePinned": true,
+        "producerRev4CandidateMatch": true,
+        "acceptedConsumerRev5Pinned": true,
+        "acceptedConsumerRev5Match": true,
+        "sdkEngineBuild6Pinned": false
+      },
+      {
+        "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\OpenImageIO\\StageNativePackage.cmake",
+        "bytes": 4915,
+        "sha256": "2B6DE6A2B99E2AF7D9045D5124B2F9D15DC8E024257EEA4C5D9112041FD6381B",
+        "producerRev4CandidatePinned": true,
+        "producerRev4CandidateMatch": true,
+        "acceptedConsumerRev5Pinned": false,
+        "acceptedConsumerRev5Match": false,
+        "sdkEngineBuild6Pinned": false
+      },
+      {
+        "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\OpenImageIO\\tests\\CMakeLists.txt",
+        "bytes": 3072,
+        "sha256": "F61C5A873279499FC4607BDC3166A001EA304E7FA70329D1322A51352C79D261",
+        "producerRev4CandidatePinned": true,
+        "producerRev4CandidateMatch": true,
+        "acceptedConsumerRev5Pinned": true,
+        "acceptedConsumerRev5Match": true,
+        "sdkEngineBuild6Pinned": false
+      },
+      {
+        "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\OpenImageIO\\tests\\NativeToolsTest.cmake",
+        "bytes": 1537,
+        "sha256": "9C0802F7B185C1257573D9773E60E90ACDF41D372A6555018B3BA2B72DE7B578",
+        "producerRev4CandidatePinned": true,
+        "producerRev4CandidateMatch": true,
+        "acceptedConsumerRev5Pinned": true,
+        "acceptedConsumerRev5Match": true,
+        "sdkEngineBuild6Pinned": false
+      },
+      {
+        "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\OpenImageIO\\tests\\OpenImageIOConsumer.cpp",
+        "bytes": 11265,
+        "sha256": "0B98DFCAD25281453F4D22B3F90831518870B9FAFCBB79349D20FACDABA836D8",
+        "producerRev4CandidatePinned": true,
+        "producerRev4CandidateMatch": false,
+        "acceptedConsumerRev5Pinned": true,
+        "acceptedConsumerRev5Match": true,
+        "sdkEngineBuild6Pinned": false
+      }
+    ],
+    "sdkEngineBuild6ProviderFilesPinned": 0,
+    "producerRev4CandidateMatches": 11
+  },
+  "producer": {
+    "producerReviewPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\oiio-rev4-preparation\\parent-producer-result-review.json",
+    "dependencyHook": {
+      "summary": "requires exact local package roots; private-prefix config lookups use NO_DEFAULT_PATH",
+      "sha256": "8BD28CF583344FF899D1DF1C02C95C9AA974A91748A9F2D10765B7F198DE4687",
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\OpenImageIO\\BuildNativeDependencies.cmake"
+    },
+    "frozenInputCount": 77213,
+    "separateEngineDependencyResolver": {
+      "line": 10,
+      "fact": "When invoked in an engine context, it calls ly_download_associated_package; this is a consumer lookup path, not called by the standalone package producer script. Keep the producer offline claim scoped to the producer.",
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\OpenImageIO\\FindNativeDependencies.cmake"
+    },
+    "buildScript": {
+      "offlineGitControls": "lines 112-120 set FETCHCONTENT_FULLY_DISCONNECTED=ON, CMAKE_DISABLE_FIND_PACKAGE_Git=ON, GIT_EXECUTABLE=NOTFOUND",
+      "localInputChecks": "lines 24-70 verify input witness, source archive hashes, manifest hashes/sizes, exact source-root membership and symlink absence",
+      "sha256": "1A23476DDE0458952B7F7C1EEA670E58F8385FC27B6AA6CF8E9356FEF6C5BB2E",
+      "execution": "lines 89-110 record and execute explicit local commands with stdout/stderr/native result; local CMake build/install, Boost bootstrap, no toolchain installer",
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\OpenImageIO\\BuildOpenImageIOPackage.cmake"
+    },
+    "status": "PARENT_PRODUCER_RESULT_REVIEW_ONLY",
+    "nativeExit": 0,
+    "producerPostflightDeltas": 0,
+    "sourcePins": {
+      "witnessSha256": "F411B122BCB84851715ED98E171F6FEE54A7477A3EDEB409AC525421D550A298",
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\OpenImageIO\\SourcePins.cmake",
+      "allRecipePinsMatch": true,
+      "sources": [
+        {
+          "id": "Boost",
+          "version": "1.76.0",
+          "commit": "ccb2ab3b4384a16deafaa849de509bce2b2cbada",
+          "url": "https://archives.boost.io/release/1.76.0/source/boost_1_76_0.tar.bz2",
+          "recipeArchiveSHA256": "f0397ba6e982c4450f27bf32a2a83292aba035b827a5623a14636ea583318c41",
+          "sourcePin": "f0397ba6e982c4450f27bf32a2a83292aba035b827a5623a14636ea583318c41",
+          "matches": true
+        },
+        {
+          "id": "fmt",
+          "version": "8.0.0",
+          "commit": "9e8b86fd2d9806672cc73133d21780dd182bfd24",
+          "url": "https://codeload.github.com/fmtlib/fmt/tar.gz/9e8b86fd2d9806672cc73133d21780dd182bfd24",
+          "recipeArchiveSHA256": "fbeb82c8dab8285919e2816a489a5f8f5564212de5a9f9b2308ca584f2e2f427",
+          "sourcePin": "fbeb82c8dab8285919e2816a489a5f8f5564212de5a9f9b2308ca584f2e2f427",
+          "matches": true
+        },
+        {
+          "id": "libjpeg-turbo",
+          "version": "2.1.2",
+          "commit": "ecf021bc0d6f435daacff7c35ccaeef0145df1b9",
+          "url": "https://codeload.github.com/libjpeg-turbo/libjpeg-turbo/tar.gz/ecf021bc0d6f435daacff7c35ccaeef0145df1b9",
+          "recipeArchiveSHA256": "4da34053c31593b350e957124bc299198b8906db62ce695b3d45b190c9726dd1",
+          "sourcePin": "4da34053c31593b350e957124bc299198b8906db62ce695b3d45b190c9726dd1",
+          "matches": true
+        },
+        {
+          "id": "Little-CMS",
+          "version": "2.2",
+          "commit": "401d006836ca9fbbec9ba507d7f863fd7d2b14b6",
+          "url": "https://codeload.github.com/mm2/Little-CMS/tar.gz/401d006836ca9fbbec9ba507d7f863fd7d2b14b6",
+          "recipeArchiveSHA256": "9ac59679eea1c367dbb1a1b5edc9d8d8fa84832c872bc5c422b82cbd7597e0c3",
+          "sourcePin": "9ac59679eea1c367dbb1a1b5edc9d8d8fa84832c872bc5c422b82cbd7597e0c3",
+          "matches": true
+        },
+        {
+          "id": "OpenColorIO",
+          "version": "2.1.1",
+          "commit": "32b01f64d6e483aec9fb8839b5caa0af0e0e1ebe",
+          "url": "https://codeload.github.com/AcademySoftwareFoundation/OpenColorIO/tar.gz/32b01f64d6e483aec9fb8839b5caa0af0e0e1ebe",
+          "recipeArchiveSHA256": "d9ffe89250cf3282e8098fe0dc17da90f6c7fd23503063d499bf6a9dcc3a8eb3",
+          "sourcePin": "d9ffe89250cf3282e8098fe0dc17da90f6c7fd23503063d499bf6a9dcc3a8eb3",
+          "matches": true
+        },
+        {
+          "id": "OpenImageIO",
+          "version": "2.3.17.0",
+          "commit": "14d38284c54bce02f8228ea87cdfa93dc0afda77",
+          "url": "https://codeload.github.com/AcademySoftwareFoundation/OpenImageIO/tar.gz/14d38284c54bce02f8228ea87cdfa93dc0afda77",
+          "recipeArchiveSHA256": "1219c94ca7e19f8f900a1b0b02749a9d46a747faf6c5039999b8653286cf5b84",
+          "sourcePin": "1219c94ca7e19f8f900a1b0b02749a9d46a747faf6c5039999b8653286cf5b84",
+          "matches": true
+        },
+        {
+          "id": "pystring",
+          "version": "1.1.3",
+          "commit": "c2de99deb4f0bd13751f8436400b5e8662301769",
+          "url": "https://codeload.github.com/imageworks/pystring/tar.gz/c2de99deb4f0bd13751f8436400b5e8662301769",
+          "recipeArchiveSHA256": "6be0f6dbef6f3cad0f3844a17cb54e704e2dba84a06625ee3eb1bb2afd24f463",
+          "sourcePin": "6be0f6dbef6f3cad0f3844a17cb54e704e2dba84a06625ee3eb1bb2afd24f463",
+          "matches": true
+        },
+        {
+          "id": "robin-map",
+          "version": "0.6.2",
+          "commit": "908ccf9f039a0e50813544c0444ca664ca292d7c",
+          "url": "https://codeload.github.com/Tessil/robin-map/tar.gz/908ccf9f039a0e50813544c0444ca664ca292d7c",
+          "recipeArchiveSHA256": "374dcfa5933eb2ae1b86123691198991bade6c4d1263e62ccc6a76f56304e1a1",
+          "sourcePin": "374dcfa5933eb2ae1b86123691198991bade6c4d1263e62ccc6a76f56304e1a1",
+          "matches": true
+        },
+        {
+          "id": "yaml-cpp",
+          "version": "0.6.3",
+          "commit": "9a3624205e8774953ef18f57067b3426c1c5ada6",
+          "url": "https://codeload.github.com/jbeder/yaml-cpp/tar.gz/9a3624205e8774953ef18f57067b3426c1c5ada6",
+          "recipeArchiveSHA256": "e39f54bd2927692603378e373009e56b4891701cee8af7c27370c36978a43ffa",
+          "sourcePin": "e39f54bd2927692603378e373009e56b4891701cee8af7c27370c36978a43ffa",
+          "matches": true
+        }
+      ],
+      "sha256": "268F440C9B0AE524CA9371139A3A12DBF6EEC43644ECA02A6BD090724A96CA77",
+      "sourceCount": 9
+    },
+    "producerReviewSHA256": "4AE1A20B7F78B6092A1BCEDF5D257C31B8241042F8063C9FDCC145CFFBFF52AC",
+    "producerScope": "Full offline producer only; no archive payload, binary execution, codec/ABI/CRT, engine/Editor or visual acceptance",
+    "nativePhaseCount": 23
+  },
+  "package": {
+    "archivedRecipe": {
+      "matchesCurrentSource": true,
+      "sha256": "9C4948F1A4305F21027EDE42B52547B0B0DC47E8E7D8FFDCACE5DDD135F71804",
+      "validationField": "PENDING NATIVE PRODUCER/CONSUMER EXECUTION; no engine/Editor/AP or redistribution acceptance",
+      "path": "JERecipe.json"
+    },
+    "audit": {
+      "dlls": 6,
+      "nativeConsumerAtThisAudit": "NOT_RUN",
+      "engineAcceptedAtThisAudit": false,
+      "files": 699,
+      "status": "STATIC_DATA_AUDIT_AND_FRESH_EXTRACTION_ONLY",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\oiio-package-audit-preparation-rev5\\data-run-parent-assigned\\package-audit-summary.json",
+      "releaseTools": 14,
+      "importLibraries": 6,
+      "sha256": "AC2BBAAEE45BDA7AC4B37068AD6E540A2FB83AF30796C98109A26B5E40010BC6"
+    },
+    "acceptedStatus": "PARENT_FOCAL_NATIVE_PACKAGE_ACCEPTED",
+    "sha256": "268ECBE940F16F729248679B586542E0154195EB66AE7AC29BCCC409E5CF6611",
+    "packageInfo": {
+      "license": "BSD-3-Clause and bundled third-party notices",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\oiio-package-audit-preparation-rev5\\data-run-parent-assigned\\extracted\\openimageio-opencolorio-2.3.17-je-rev1-windows\\PackageInfo.json",
+      "sourceCommit": "14d38284c54bce02f8228ea87cdfa93dc0afda77",
+      "sourceSHA256": "1219c94ca7e19f8f900a1b0b02749a9d46a747faf6c5039999b8653286cf5b84",
+      "name": "openimageio-opencolorio-2.3.17-je-rev1-windows",
+      "version": "2.3.17.0"
+    },
+    "manifest": {
+      "entries": 699,
+      "bytes": 151413,
+      "sha256": "5B467C1F13837C68EFA2E7EA7D6EE91E8A97E87E4C23F3CB1BFF9B0BBEC4D71F",
+      "byteExactArchive": true,
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\oiio-package-audit-preparation-rev5\\data-run-parent-assigned\\extracted-package-manifest.json"
+    },
+    "producerReuse": "Rev4 reviewed 23 native phases; reused exact binaries, no rebuild",
+    "executableNames": [
+      "ociobakelut.exe",
+      "ociocheck.exe",
+      "ociochecklut.exe",
+      "ocioconvert.exe",
+      "ociolutimage.exe",
+      "ociomakeclf.exe",
+      "ocioperf.exe",
+      "ociowrite.exe",
+      "iconvert.exe",
+      "idiff.exe",
+      "igrep.exe",
+      "iinfo.exe",
+      "maketx.exe",
+      "oiiotool.exe"
+    ],
+    "pythonPayloadManifestMatches": 0,
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\oiio-local-rev7\\packages\\openimageio-opencolorio-2.3.17-je-rev1-windows.tar.xz",
+    "parentFocalAcceptance": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\oiio-consumer-preparation-rev5\\parent-focal-acceptance-rev5.json",
+    "repack": "Rev7 configuration only; audit rev5 verifies699members/698hashes and697 unchanged other files",
+    "bytes": 12939864,
+    "parentFocalAcceptanceSHA256": "5C4AB0906DE13920B5F8B8C85F629E5B46672657E5A92CFE0D5FCB3F51591B1C"
+  },
+  "acceptedConsumerTests": {
+    "failed": 0,
+    "currentTestDirectory": [
+      {
+        "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\OpenImageIO\\tests\\CMakeLists.txt",
+        "bytes": 3072,
+        "sha256": "F61C5A873279499FC4607BDC3166A001EA304E7FA70329D1322A51352C79D261",
+        "producerRev4CandidatePinned": true,
+        "producerRev4CandidateMatch": true,
+        "acceptedConsumerRev5Pinned": true,
+        "acceptedConsumerRev5Match": true,
+        "sdkEngineBuild6Pinned": false
+      },
+      {
+        "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\OpenImageIO\\tests\\NativeToolsTest.cmake",
+        "bytes": 1537,
+        "sha256": "9C0802F7B185C1257573D9773E60E90ACDF41D372A6555018B3BA2B72DE7B578",
+        "producerRev4CandidatePinned": true,
+        "producerRev4CandidateMatch": true,
+        "acceptedConsumerRev5Pinned": true,
+        "acceptedConsumerRev5Match": true,
+        "sdkEngineBuild6Pinned": false
+      },
+      {
+        "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\OpenImageIO\\tests\\OpenImageIOConsumer.cpp",
+        "bytes": 11265,
+        "sha256": "0B98DFCAD25281453F4D22B3F90831518870B9FAFCBB79349D20FACDABA836D8",
+        "producerRev4CandidatePinned": true,
+        "producerRev4CandidateMatch": false,
+        "acceptedConsumerRev5Pinned": true,
+        "acceptedConsumerRev5Match": true,
+        "sdkEngineBuild6Pinned": false
+      }
+    ],
+    "phaseCount": 5,
+    "declaredTests": null,
+    "inputCount": 1638,
+    "validationResultPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\oiio-consumer-preparation-rev5\\attempt1\\validation-result.json",
+    "status": "FOCAL_CONSUMERS_18_CASES_COMPLETED",
+    "skipped": 0,
+    "allThreeTestFilesPinnedAndMatchCurrent": true,
+    "releaseCases": 9,
+    "validationResultSHA256": "C7380ADEA06D86BBB5022AF53BE0A5F0B47DFD2A3C63FF4AFA9D37C89BB81360",
+    "junit": [
+      {
+        "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\oiio-consumer-preparation-rev5\\attempt1\\Release.xml",
+        "bytes": 3032,
+        "sha256": "99809646579451F9B676B5FF5D3B2B6154FE4001BEE2F1919EA06019BD9FC31A",
+        "attributes": {
+          "skipped": "0",
+          "tests": "9",
+          "timestamp": "2026-10-11T13:27:32",
+          "time": "0",
+          "failures": "0",
+          "disabled": "0",
+          "hostname": "",
+          "name": "(empty)"
+        }
+      },
+      {
+        "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\oiio-consumer-preparation-rev5\\attempt1\\Debug.xml",
+        "bytes": 3029,
+        "sha256": "9A30F05DB2B776BEF9753C3E98F6A21536C540EAEF00FBE87CAE14165052F868",
+        "attributes": {
+          "skipped": "0",
+          "tests": "9",
+          "timestamp": "2026-10-11T13:27:38",
+          "time": "1",
+          "failures": "0",
+          "disabled": "0",
+          "hostname": "",
+          "name": "(empty)"
+        }
+      }
+    ],
+    "debugCases": 9
+  },
+  "resolver": {
+    "findOpenColorIO": {
+      "sha256": "D70A6B681E3F5D99A51BC12C3FC4A4EDC0B0152CE37E2FBDFD3A0F9D0A3A566A",
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\OpenImageIO\\FindOpenColorIO.cmake"
+    },
+    "findOpenImageIO": {
+      "sha256": "A29866B151005423F3B5816B3E671347F0705FB10770BFF3089D02D37C6BA016",
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Tools\\LocalPackages\\OpenImageIO\\FindOpenImageIO.cmake"
+    },
+    "contract": "Tests require exact OIIO 2.3.17.0 and OCIO 2.1.1; imported release/debug locations and implibs are checked before linking. Three OIIO and three OCIO DLL/import-library pairs audited; release tool aliases are associated in Windows catalogue."
+  },
+  "limitations": {
+    "scope": "No engine/Editor/AP/DX12/Vulkan/runtime/visual/performance acceptance, and no legal/redistribution or final shipping graph/load acceptance.",
+    "producerNegativeCoverage": "15 specific early/helper rejects previously reviewed; snapshot negatives and linked ancestor still pending",
+    "warningSet": "C4996/STL4043 headers in Debug; CMake package-name dev warning and six unused variables retained",
+    "recipeStatusMismatch": "JERecipe validation is still the archived PENDING string although the separate producer and consumer receipts now record completed gates; parent says retain this historical metadata as-is, not repack or retest from this review.",
+    "parentAcceptance": [
+      "Focal API/codecs/native CLI only, not actual engine consumers",
+      "JPEG Release MD used with Debug; general CRT/ABI not certified",
+      "No Editor/AP/DX12/Vulkan/runtime/performance acceptance",
+      "Distribution/legal and shipping graph/link/deploy/load separation remain open"
+    ],
+    "priorAccessViolation": "Original RED retained, not reproduced by isolated probes, original composite case and fresh suites; causal fix not asserted"
+  },
+  "durableReceipts": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\oiio-rev4-preparation\\parent-producer-result-review.json",
+      "bytes": 58434,
+      "sha256": "4AE1A20B7F78B6092A1BCEDF5D257C31B8241042F8063C9FDCC145CFFBFF52AC"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\oiio-consumer-preparation-rev5\\parent-focal-acceptance-rev5.json",
+      "bytes": 1964,
+      "sha256": "5C4AB0906DE13920B5F8B8C85F629E5B46672657E5A92CFE0D5FCB3F51591B1C"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\oiio-consumer-preparation-rev5\\parent-focal-acceptance-rev5.json",
+      "bytes": 1964,
+      "sha256": "5C4AB0906DE13920B5F8B8C85F629E5B46672657E5A92CFE0D5FCB3F51591B1C"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\oiio-consumer-preparation-rev5\\parent-package-integration.json",
+      "bytes": 9513,
+      "sha256": "9FCFD6E3ECE5DE18CCF2911ED483A214AA9EB7E8C716706FF94CCF4320F54E61"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\oiio-package-audit-preparation-rev5\\data-run-parent-assigned\\extracted-package-manifest.json",
+      "bytes": 151413,
+      "sha256": "5B467C1F13837C68EFA2E7EA7D6EE91E8A97E87E4C23F3CB1BFF9B0BBEC4D71F"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\oiio-package-audit-preparation-rev5\\data-run-parent-assigned\\package-audit-summary.json",
+      "bytes": 1173,
+      "sha256": "AC2BBAAEE45BDA7AC4B37068AD6E540A2FB83AF30796C98109A26B5E40010BC6"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\oiio-package-audit-preparation-rev5\\data-run-parent-assigned\\pe-coff-audit.json",
+      "bytes": 2905664,
+      "sha256": "5D4442A0246355D09E52D8D157E6AB9E23D67C1E140E47CBD77AD47D11F60FCA"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\oiio-package-audit-preparation-rev5\\parent-data-result-review-rev5.json",
+      "bytes": 1222,
+      "sha256": "121B9D143D1B03E1004CA7482E0BDA1B255D0BA6F87A25F0948947DB71BD714E"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\oiio-consumer-preparation-rev5\\attempt1\\validation-result.json",
+      "bytes": 8297,
+      "sha256": "C7380ADEA06D86BBB5022AF53BE0A5F0B47DFD2A3C63FF4AFA9D37C89BB81360"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\oiio-consumer-preparation-rev5\\attempt1\\Release.xml",
+      "bytes": 3032,
+      "sha256": "99809646579451F9B676B5FF5D3B2B6154FE4001BEE2F1919EA06019BD9FC31A"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\oiio-consumer-preparation-rev5\\attempt1\\Debug.xml",
+      "bytes": 3029,
+      "sha256": "9A30F05DB2B776BEF9753C3E98F6A21536C540EAEF00FBE87CAE14165052F868"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\local-packages\\oiio-rev4-preparation\\source-freeze-oiio-candidate.json",
+      "bytes": 17323892,
+      "sha256": "E36ACB917883C196538EC979EB3550CAFB392FE272D87C4B332D95DFFBC7665D"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-passgraph-workspace-rev1\\sdk-legacy-install-analysis-rev1\\sdk-profile-configure-attempt6\\source-build-inputs-after-sdk-config.json",
+      "bytes": 3057255,
+      "sha256": "E2DD5BDF624F4E91AFEE1271D7C451FB6109F5730EC314655653C4868447189D"
+    }
+  ]
+}

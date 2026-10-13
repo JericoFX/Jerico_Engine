@@ -1,0 +1,70 @@
+{
+  "utc": "2026-10-13T13:07:43.3870567Z",
+  "archive": "provider-validation-raw-rev1.zip",
+  "bytes": 4632000,
+  "sha256": "550104FD212C0EE6E486F637BBCC246E82759D2C439CE9E9F336B2BFCDF58BE9",
+  "entries": [
+    {
+      "artifact": "local-packages/oiio-consumer-preparation-rev5/attempt1/Debug.xml",
+      "bytes": 3029,
+      "sha256": "9A30F05DB2B776BEF9753C3E98F6A21536C540EAEF00FBE87CAE14165052F868"
+    },
+    {
+      "artifact": "local-packages/oiio-consumer-preparation-rev5/attempt1/Release.xml",
+      "bytes": 3032,
+      "sha256": "99809646579451F9B676B5FF5D3B2B6154FE4001BEE2F1919EA06019BD9FC31A"
+    },
+    {
+      "artifact": "local-packages/oiio-consumer-preparation-rev5/attempt1/validation-result.json",
+      "bytes": 8297,
+      "sha256": "C7380ADEA06D86BBB5022AF53BE0A5F0B47DFD2A3C63FF4AFA9D37C89BB81360"
+    },
+    {
+      "artifact": "local-packages/oiio-consumer-preparation-rev5/parent-focal-acceptance-rev5.json",
+      "bytes": 1964,
+      "sha256": "5C4AB0906DE13920B5F8B8C85F629E5B46672657E5A92CFE0D5FCB3F51591B1C"
+    },
+    {
+      "artifact": "local-packages/oiio-consumer-preparation-rev5/parent-package-integration.json",
+      "bytes": 9513,
+      "sha256": "9FCFD6E3ECE5DE18CCF2911ED483A214AA9EB7E8C716706FF94CCF4320F54E61"
+    },
+    {
+      "artifact": "local-packages/oiio-package-audit-preparation-rev5/data-run-parent-assigned/extracted-package-manifest.json",
+      "bytes": 151413,
+      "sha256": "5B467C1F13837C68EFA2E7EA7D6EE91E8A97E87E4C23F3CB1BFF9B0BBEC4D71F"
+    },
+    {
+      "artifact": "local-packages/oiio-package-audit-preparation-rev5/data-run-parent-assigned/package-audit-summary.json",
+      "bytes": 1173,
+      "sha256": "AC2BBAAEE45BDA7AC4B37068AD6E540A2FB83AF30796C98109A26B5E40010BC6"
+    },
+    {
+      "artifact": "local-packages/oiio-package-audit-preparation-rev5/data-run-parent-assigned/pe-coff-audit.json",
+      "bytes": 2905664,
+      "sha256": "5D4442A0246355D09E52D8D157E6AB9E23D67C1E140E47CBD77AD47D11F60FCA"
+    },
+    {
+      "artifact": "local-packages/oiio-package-audit-preparation-rev5/parent-data-result-review-rev5.json",
+      "bytes": 1222,
+      "sha256": "121B9D143D1B03E1004CA7482E0BDA1B255D0BA6F87A25F0948947DB71BD714E"
+    },
+    {
+      "artifact": "local-packages/oiio-rev4-preparation/parent-producer-result-review.json",
+      "bytes": 58434,
+      "sha256": "4AE1A20B7F78B6092A1BCEDF5D257C31B8241042F8063C9FDCC145CFFBFF52AC"
+    },
+    {
+      "artifact": "local-packages/oiio-rev4-preparation/source-freeze-oiio-candidate.json",
+      "bytes": 17323892,
+      "sha256": "E36ACB917883C196538EC979EB3550CAFB392FE272D87C4B332D95DFFBC7665D"
+    },
+    {
+      "artifact": "native-passgraph-workspace-rev1/sdk-legacy-install-analysis-rev1/sdk-profile-configure-attempt6/source-build-inputs-after-sdk-config.json",
+      "bytes": 3057255,
+      "sha256": "E2DD5BDF624F4E91AFEE1271D7C451FB6109F5730EC314655653C4868447189D"
+    }
+  ],
+  "entryHashesVerified": 12,
+  "scope": "Reused producer/archive/focal consumer receipts and current provider review; no new build or engine/Shipping acceptance"
+}

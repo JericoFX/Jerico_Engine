@@ -33,9 +33,6 @@ set(JE_RENDER_INTEGRATION_TOOL_DEPENDENCIES
     Gem::AtomToolsFramework.Editor
     Gem::AtomViewportDisplayInfo
     Gem::AtomViewportDisplayIcons.Editor
-    Gem::MaterialCanvas.Builders
-    Gem::MaterialEditor.Builders
-    Gem::PassCanvas.Builders
     Gem::ShaderManagementConsole.Builders
 )
 

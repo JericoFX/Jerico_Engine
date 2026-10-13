@@ -1,0 +1,26 @@
+{
+  "state": "HOLD",
+  "count": 2,
+  "entries": [
+    {
+      "path": "Gems/Atom/Tools/MaterialEditor/Code/CMakeLists.txt",
+      "absolutePath": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\MaterialEditor\\Code\\CMakeLists.txt",
+      "beforeBytes": 2899,
+      "beforeSHA256": "85AD0D0DEE3F8559C4F3C90B4219E379233AFDE0D1A346C9F4BD942417164DD0",
+      "bytes": 2953,
+      "sha256": "D00F9B3481E95602A6098FA44B33237EDF49B06623DA1E7DD5FE71E4B992A0B2",
+      "inverseByteExact": true,
+      "CRLF": true
+    },
+    {
+      "path": "Gems/Atom/Tools/MaterialCanvas/Code/CMakeLists.txt",
+      "absolutePath": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\MaterialCanvas\\Code\\CMakeLists.txt",
+      "beforeBytes": 2964,
+      "beforeSHA256": "30752667EB14FAEACF5486CE63A75B78685C8FE92970A28F7D011DBD6078D0E7",
+      "bytes": 3018,
+      "sha256": "31A786B9F4DA2554D50EF8F49B96A09030CFDC207231DCA3749E5B979E687878",
+      "inverseByteExact": true,
+      "CRLF": true
+    }
+  ]
+}

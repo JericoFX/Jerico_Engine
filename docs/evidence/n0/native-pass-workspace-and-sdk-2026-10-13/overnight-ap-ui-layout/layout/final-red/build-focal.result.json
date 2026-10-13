@@ -1,0 +1,62 @@
+{
+  "phase": "build-focal",
+  "startedUtc": "2026-10-13T08:15:42.0657141Z",
+  "finishedUtc": "2026-10-13T08:16:47.7724098Z",
+  "elapsedSeconds": 65.707,
+  "pid": 140692,
+  "processCreationUtc": "2026-10-13T08:15:42.0742623Z",
+  "ramBefore": {
+    "capturedUtc": "2026-10-13T08:15:42.0643478Z",
+    "totalBytes": 34265743360,
+    "freeBytes": 14759182336,
+    "usedPercent": 56.93,
+    "thresholdPercent": 80
+  },
+  "peakRamUsedPercent": 60.96,
+  "ramWaitSamples": [
+    {
+      "capturedUtc": "2026-10-13T08:15:57.1506639Z",
+      "ramUsedPercent": 60.24,
+      "pid": 140692,
+      "processCreationUtc": "2026-10-13T08:15:42.0742623Z",
+      "workingSetBytes": 17186816
+    },
+    {
+      "capturedUtc": "2026-10-13T08:16:12.2123228Z",
+      "ramUsedPercent": 58.5,
+      "pid": 140692,
+      "processCreationUtc": "2026-10-13T08:15:42.0742623Z",
+      "workingSetBytes": 17129472
+    },
+    {
+      "capturedUtc": "2026-10-13T08:16:27.2779920Z",
+      "ramUsedPercent": 60.96,
+      "pid": 140692,
+      "processCreationUtc": "2026-10-13T08:15:42.0742623Z",
+      "workingSetBytes": 17129472
+    },
+    {
+      "capturedUtc": "2026-10-13T08:16:42.3496459Z",
+      "ramUsedPercent": 58.14,
+      "pid": 140692,
+      "processCreationUtc": "2026-10-13T08:15:42.0742623Z",
+      "workingSetBytes": 17129472
+    }
+  ],
+  "executable": "C:\\Program Files\\CMake\\bin\\cmake.exe",
+  "argv": [
+    "--build",
+    "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine",
+    "--config",
+    "Profile",
+    "--target",
+    "EditorMaterials.Tests",
+    "--parallel",
+    "1"
+  ],
+  "exitCode": 0,
+  "stdout": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-passgraph-workspace-rev1\\native-final-red-layout-attempt1\\build-focal.stdout.log",
+  "stdoutSha256": "A453A74A6D35CA68136DE3D689F382FC539005D12A16E3FFE06B1AC4A653C36C",
+  "stderr": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-passgraph-workspace-rev1\\native-final-red-layout-attempt1\\build-focal.stderr.log",
+  "stderrSha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+}

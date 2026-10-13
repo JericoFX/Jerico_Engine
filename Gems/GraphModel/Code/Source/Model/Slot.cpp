@@ -348,11 +348,11 @@ namespace GraphModel
                 if (nodePair.second->Contains(shared_from_this()))
                 {
                     m_parentNode = nodePair.second;
-                    return m_parentNode;
+                    return nodePair.second;
                 }
             }
         }
-        return m_parentNode;
+        return m_parentNode.lock();
     }
 
     AZStd::any Slot::GetValue() const

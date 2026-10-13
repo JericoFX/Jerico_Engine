@@ -1,0 +1,191 @@
+<16:14:04> BackupNameAttachment=" Build(0) 12 Oct 26 (16 14 04)"  -- used by backup system
+<16:14:04> Log Started at Mon Oct 12 16:14:04 2026
+<16:14:04> Built on Oct 11 2026 18:12:26
+<16:14:04> Running 64 bit Windows version
+<16:14:04> FileVersion: 0.0.0.0
+<16:14:04> ProductVersion: 0.0.0.0
+<16:14:04> Using Microsoft (tm) C++ Standard Library implementation
+<16:14:04> Project Path: F:\JericoEngine\JericoEngine\Projects\JEEditorFixture
+
+<16:14:04> Project Name: JEEditorFixture
+
+<16:14:04> [Warning] Config file game.cfg not found!
+<16:14:04> creating CVarGroups from directory 'Config/CVarGroups' ...
+<16:14:04> Loading Config file user.cfg (F:/JericoEngine/JericoEngine/Projects/JEEditorFixture/Cache/pc/config/user.cfg)
+<16:14:04> GameName: JEEditorFixture
+<16:14:04> BuildTime: Oct 11 2026 18:12:26
+<16:14:04> > g_languageAudio : en-US
+
+<16:14:04> Running without any Audio Engine!
+
+<16:14:04> Audio System is initialized and ready!
+
+<16:14:04> Initializing additional systems
+
+<16:14:04> Using FreeType 2.11.1
+<16:14:08> Current Language: Spanish 
+<16:14:08> Microsoft Windows 11 Pro|C:\WINDOWS|\Device\Harddisk3\Partition2 10.0.26300
+<16:14:08> Local time is 16:14:08 10/12/26, system running for 3988 minutes
+<16:14:08> 32679MB phys. memory installed, 21492MB paging available
+<16:14:08> Current display mode is 1920x1080x32, (Unknown graphics card)
+<16:14:08> IBM enhanced (101/102-key) keyboard and 6+ button mouse installed
+<16:14:08> --------------------------------------------------------------------------------
+<16:14:09> > r_streamingImagePoolBudgetMb : 0
+
+<16:14:09> > r_streamingImageMipBias : 0
+
+<16:14:11> (RPI system) - System assets initialized
+
+<16:14:11> project_path = F:\JericoEngine\JericoEngine\Projects\JEEditorFixture
+<16:14:11> sys_localization_folder = Localization
+<16:14:11> (SceneAPI) - AssImp Import Context was registered.
+
+<16:14:11> (EMotionFX) - -----------------------------------------------
+
+<16:14:11> (EMotionFX) - EMotion Studio Core - Information
+
+<16:14:11> (EMotionFX) - -----------------------------------------------
+
+<16:14:11> (EMotionFX) - Compilation date: Oct 12 2026
+
+<16:14:11> (EMotionFX) - -----------------------------------------------
+
+<16:14:11> (EMotionFX) - EMotion Studio initialized...
+
+<16:14:11> > r_shadowCascadeExtrusionAmount : -1
+
+<16:14:12> > r_enablePerMeshShaderOptionFlags : false
+
+<16:14:12> > r_meshInstancingEnabled : false
+
+<16:14:12> > r_meshInstancingEnabledForTransparentObjects : false
+
+<16:14:12> > r_meshInstancingBucketSortScatterBatchSize : 512
+
+<16:14:12> [Warning] (Az Console) - attempted to assign out of range value 32
+<16:14:15> [Warning] XML reader: Can't open file (F:/JericoEngine/JericoEngine/Projects/JEEditorFixture/user/Sandbox/Macros.xml)
+<16:14:15> Document created
+<16:14:15> Adding '*$tmp*' to ignore masks for changed files.
+<16:14:15> [Warning] (Application) - 'IsPrefabSystemEnabled' is deprecated, the editor only supports prefabs for level editing.
+<16:14:16> Engine initialized, took 25.32s.
+<16:14:16> [CONSOLE] Executing console command 'exec editor_autoexec.cfg'
+<16:14:16> Executing console batch file (try game,config,root): "@products@/editor_autoexec.cfg" not found!
+<16:14:16> [CONSOLE] Executing console command 'exec editor.cfg'
+<16:14:16> Executing console batch file (try game,config,root): "@products@/editor.cfg" not found!
+<16:14:16> [CONSOLE] Executing console command 'exec user.cfg'
+<16:14:16> Executing console batch file (try game,config,root): "user.cfg" found in game/config/ ...
+<16:14:16> Opening level levels/jenativeintegration/jenativeintegration.spawnable
+<16:14:16> Loading from F:/JericoEngine/JericoEngine/Projects/JEEditorFixture/Levels/JENativeIntegration/JENativeIntegration.prefab...
+<16:14:16> ---- Start: Game Engine level load
+<16:14:16> Loading map 'F:/JericoEngine/JericoEngine/Projects/JEEditorFixture/Levels/JENativeIntegration' into engine...
+<16:14:16> ---- End: Game Engine level load (0 seconds)
+<16:14:16> ---- Start: Post Load
+<16:14:16> ---- End: Post Load (0 seconds)
+<16:14:16> [LevelLoadTime] Level F:/JericoEngine/JericoEngine/Projects/JEEditorFixture/Levels/JENativeIntegration loaded in 0 seconds
+<16:14:16> -----------------------------------------------------------
+<16:14:16> Successfully opened document F:/JericoEngine/JericoEngine/Projects/JEEditorFixture/Levels/JENativeIntegration/JENativeIntegration.prefab
+<16:14:16> Level loading time: 0.07 seconds
+<16:14:16> -----------------------------------------------------------
+<16:14:16> (RHI) - ****************************************************************
+
+<16:14:16> (RHI) -                     Registering vulkan RHI                          
+
+<16:14:16> (RHI) - ****************************************************************
+
+<16:14:16> [Warning] (AssetContainer) - Asset lightingpresets/thumbnail.lightingpreset.azasset ({4F3761EF-E279-5FDD-98C3-EF90F924FBAC}:0) references/depends on asset {A5767C6B-5DB4-5999-A717-4587BEDF5CDE}:bb8 which does not exist in the catalog and cannot be loaded.
+<16:14:16> [Warning] (AssetContainer) - Asset lightingpresets/thumbnail.lightingpreset.azasset ({4F3761EF-E279-5FDD-98C3-EF90F924FBAC}:0) references/depends on asset {A5767C6B-5DB4-5999-A717-4587BEDF5CDE}:7d0 which does not exist in the catalog and cannot be loaded.
+<16:14:16> [Error] (PassFactory) - FAILED TO CREATE PASS [DiffuseProbeGridUpdatePass]. Could not find pass template [DiffuseProbeGridUpdatePassTemplate]
+<16:14:16> > r_shadowCascadeExtrusionAmount : -1
+
+<16:14:16> > r_enablePerMeshShaderOptionFlags : false
+
+<16:14:16> > r_meshInstancingEnabled : false
+
+<16:14:16> > r_meshInstancingEnabledForTransparentObjects : false
+
+<16:14:16> > r_meshInstancingBucketSortScatterBatchSize : 512
+
+<16:14:16> [Warning] (Az Console) - attempted to assign out of range value 16
+<16:14:45> (DynamicNodeManager) - Load materialgraphnode config files started.
+<16:14:46> (DynamicNodeManager) - Load materialgraphnode config files finished.
+<16:18:06> (AtomToolsDocument) - Document opened: 'F:\JericoEngine\JericoEngine\Editor\Materials\Assets\MaterialCanvas\GraphData\blank_graph.materialgraphtemplate' (uuid {BE12DEF2-8C91-45E9-BB7C-B97921B2C51E})
+
+<16:18:06> (AtomToolsDocument) - Document saved: 'F:\JericoEngine\JericoEngine\Projects\JEEditorFixture\Assets\.je-create-{C16A9516-E25C-476A-92FD-1F4062020013}.materialgraph'.
+
+<16:18:06> (AtomToolsDocument) - Document opened: 'F:\JericoEngine\JericoEngine\Projects\JEEditorFixture\Assets\JENativeGraphWorkspaceTest.materialgraph' (uuid {BE12DEF2-8C91-45E9-BB7C-B97921B2C51E})
+
+<16:20:32> (AtomToolsDocument) - Document saved: 'F:\JericoEngine\JericoEngine\Projects\JEEditorFixture\Assets\JENativeGraphWorkspaceTest.materialgraph'.
+
+<16:20:55> (AtomToolsDocument) - Document opened: 'F:\JericoEngine\JericoEngine\Projects\JEEditorFixture\Assets\jenative_graph_workspace_test.material' (uuid {A9A3E703-F600-48D8-94EC-5F633C66EE1F})
+
+<16:21:43> (AtomToolsDocument) - Document changed externally: 'F:\JericoEngine\JericoEngine\Projects\JEEditorFixture\Assets\jenative_graph_workspace_test.material'.
+
+<16:21:44> (AtomToolsDocument) - Document dependency changed: 'F:\JericoEngine\JericoEngine\Projects\JEEditorFixture\Assets\jenative_graph_workspace_test.material'.
+
+<16:21:46> (AtomToolsDocument) - Document opened: 'F:\JericoEngine\JericoEngine\Projects\JEEditorFixture\Assets\jenative_graph_workspace_test.material' (uuid {A9A3E703-F600-48D8-94EC-5F633C66EE1F})
+
+<16:21:47> (AtomToolsDocument) - Document opened: 'F:\JericoEngine\JericoEngine\Projects\JEEditorFixture\Assets\jenative_graph_workspace_test.material' (uuid {A9A3E703-F600-48D8-94EC-5F633C66EE1F})
+
+<16:22:53> (AtomToolsDocument) - Document changed externally: 'F:\JericoEngine\JericoEngine\Projects\JEEditorFixture\Assets\jenative_graph_workspace_test.material'.
+
+<16:22:55> (AtomToolsDocument) - Document dependency changed: 'F:\JericoEngine\JericoEngine\Projects\JEEditorFixture\Assets\jenative_graph_workspace_test.material'.
+
+<16:22:56> (AtomToolsDocument) - Document opened: 'F:\JericoEngine\JericoEngine\Projects\JEEditorFixture\Assets\jenative_graph_workspace_test.material' (uuid {A9A3E703-F600-48D8-94EC-5F633C66EE1F})
+
+<16:22:57> (AtomToolsDocument) - Document opened: 'F:\JericoEngine\JericoEngine\Projects\JEEditorFixture\Assets\jenative_graph_workspace_test.material' (uuid {A9A3E703-F600-48D8-94EC-5F633C66EE1F})
+
+<16:23:36> (AtomToolsDocument) - Document changed externally: 'F:\JericoEngine\JericoEngine\Projects\JEEditorFixture\Assets\jenative_graph_workspace_test.material'.
+
+<16:23:37> (AtomToolsDocument) - Document dependency changed: 'F:\JericoEngine\JericoEngine\Projects\JEEditorFixture\Assets\jenative_graph_workspace_test.material'.
+
+<16:23:38> (AtomToolsDocument) - Document opened: 'F:\JericoEngine\JericoEngine\Projects\JEEditorFixture\Assets\jenative_graph_workspace_test.material' (uuid {A9A3E703-F600-48D8-94EC-5F633C66EE1F})
+
+<16:23:39> (AtomToolsDocument) - Document opened: 'F:\JericoEngine\JericoEngine\Projects\JEEditorFixture\Assets\jenative_graph_workspace_test.material' (uuid {A9A3E703-F600-48D8-94EC-5F633C66EE1F})
+
+<16:23:44> (AtomToolsDocument) - Document changed externally: 'F:\JericoEngine\JericoEngine\Projects\JEEditorFixture\Assets\jenative_graph_workspace_test.material'.
+
+<16:23:45> (AtomToolsDocument) - Document dependency changed: 'F:\JericoEngine\JericoEngine\Projects\JEEditorFixture\Assets\jenative_graph_workspace_test.material'.
+
+<16:23:47> (AtomToolsDocument) - Document changed externally: 'F:\JericoEngine\JericoEngine\Projects\JEEditorFixture\Assets\jenative_graph_workspace_test.material'.
+
+<16:23:48> (AtomToolsDocument) - Document opened: 'F:\JericoEngine\JericoEngine\Projects\JEEditorFixture\Assets\jenative_graph_workspace_test.material' (uuid {A9A3E703-F600-48D8-94EC-5F633C66EE1F})
+
+<16:23:49> (AtomToolsDocument) - Document opened: 'F:\JericoEngine\JericoEngine\Projects\JEEditorFixture\Assets\jenative_graph_workspace_test.material' (uuid {A9A3E703-F600-48D8-94EC-5F633C66EE1F})
+
+<16:23:49> (AtomToolsDocument) - Document dependency changed: 'F:\JericoEngine\JericoEngine\Projects\JEEditorFixture\Assets\jenative_graph_workspace_test.material'.
+
+<16:23:51> (AtomToolsDocument) - Document opened: 'F:\JericoEngine\JericoEngine\Projects\JEEditorFixture\Assets\jenative_graph_workspace_test.material' (uuid {A9A3E703-F600-48D8-94EC-5F633C66EE1F})
+
+<16:23:59> (AtomToolsDocument) - Document changed externally: 'F:\JericoEngine\JericoEngine\Projects\JEEditorFixture\Assets\jenative_graph_workspace_test.material'.
+
+<16:24:00> [Warning] (Asset Browser) - Add source failed: file 3217 not found, retrying later
+<16:24:02> (AtomToolsDocument) - Document dependency changed: 'F:\JericoEngine\JericoEngine\Projects\JEEditorFixture\Assets\jenative_graph_workspace_test.material'.
+
+<16:24:02> (AtomToolsDocument) - Document changed externally: 'F:\JericoEngine\JericoEngine\Projects\JEEditorFixture\Assets\jenative_graph_workspace_test.material'.
+
+<16:24:03> (AtomToolsDocument) - Document opened: 'F:\JericoEngine\JericoEngine\Projects\JEEditorFixture\Assets\jenative_graph_workspace_test.material' (uuid {A9A3E703-F600-48D8-94EC-5F633C66EE1F})
+
+<16:24:03> (AtomToolsDocument) - Document dependency changed: 'F:\JericoEngine\JericoEngine\Projects\JEEditorFixture\Assets\jenative_graph_workspace_test.material'.
+
+<16:24:05> (AtomToolsDocument) - Document opened: 'F:\JericoEngine\JericoEngine\Projects\JEEditorFixture\Assets\jenative_graph_workspace_test.material' (uuid {A9A3E703-F600-48D8-94EC-5F633C66EE1F})
+
+<16:24:13> (AtomToolsDocument) - Document changed externally: 'F:\JericoEngine\JericoEngine\Projects\JEEditorFixture\Assets\jenative_graph_workspace_test.material'.
+
+<16:24:15> (AtomToolsDocument) - Document dependency changed: 'F:\JericoEngine\JericoEngine\Projects\JEEditorFixture\Assets\jenative_graph_workspace_test.material'.
+
+<16:24:16> (AtomToolsDocument) - Document opened: 'F:\JericoEngine\JericoEngine\Projects\JEEditorFixture\Assets\jenative_graph_workspace_test.material' (uuid {A9A3E703-F600-48D8-94EC-5F633C66EE1F})
+
+<16:24:16> (AtomToolsDocument) - Document opened: 'F:\JericoEngine\JericoEngine\Projects\JEEditorFixture\Assets\jenative_graph_workspace_test.material' (uuid {A9A3E703-F600-48D8-94EC-5F633C66EE1F})
+
+<16:25:07> (AtomToolsDocument) - Document opened: 'F:\JericoEngine\JericoEngine\Projects\JEEditorFixture\Assets\untitled.material' (uuid {24D78158-B301-450B-91AA-D2DE7BA84080})
+
+<16:26:33> (AtomToolsDocument) - Document saved: 'F:\JericoEngine\JericoEngine\Projects\JEEditorFixture\Assets\untitled.material'.
+
+<16:26:34> (AtomToolsDocument) - Document saved: 'F:\JericoEngine\JericoEngine\Projects\JEEditorFixture\Assets\untitled.material'.
+
+<16:26:35> (AtomToolsDocument) - Document changed externally: 'F:\JericoEngine\JericoEngine\Projects\JEEditorFixture\Assets\untitled.material'.
+
+<16:26:42> (AtomToolsDocument) - Document opened: 'F:\JericoEngine\JericoEngine\Projects\JEEditorFixture\Assets\untitled.material' (uuid {24D78158-B301-450B-91AA-D2DE7BA84080})
+
+<16:31:38> [Warning] (RPI) - Failed to initialize PipelineState for DynamicDrawContext
+<16:31:38> [Warning] (RPI) - Failed to initialize PipelineState for DynamicDrawContext

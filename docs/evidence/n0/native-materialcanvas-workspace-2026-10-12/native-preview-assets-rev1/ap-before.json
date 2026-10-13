@@ -1,0 +1,4371 @@
+{
+  "capturedUtc": "2026-10-13T01:23:12.998541+00:00",
+  "mode": "SQLite URI mode=ro; PRAGMA query_only=ON",
+  "dbFiles": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Cache\\assetdb.sqlite",
+      "bytes": 10465280,
+      "sha256": "5736006E63C80E614447E0E4ACDEC0F7AECEB9EEC093203779AB21F2E155E186",
+      "lastWriteUtc": "2026-10-12T19:24:15.624592+00:00"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Cache\\assetdb.sqlite-wal",
+      "bytes": 12924472,
+      "sha256": "BD7C74A49A0FE5598E6230DE33821688BDDCD8C2D6E628288A89C7029D40EF3D",
+      "lastWriteUtc": "2026-10-12T19:26:35.290699+00:00"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Cache\\assetdb.sqlite-shm",
+      "bytes": 32768,
+      "sha256": "34001EF90F18DF7B505F9056A1B07800CAACEEF8F3CD88F6C9BC88F9C18766B9",
+      "lastWriteUtc": "2026-10-13T01:23:12.928323+00:00"
+    }
+  ],
+  "scanFolderColumns": [
+    {
+      "cid": 0,
+      "name": "ScanFolderID",
+      "type": "INTEGER",
+      "notnull": 0,
+      "dflt_value": null,
+      "pk": 1
+    },
+    {
+      "cid": 1,
+      "name": "ScanFolder",
+      "type": "TEXT",
+      "notnull": 1,
+      "dflt_value": null,
+      "pk": 0
+    },
+    {
+      "cid": 2,
+      "name": "DisplayName",
+      "type": "TEXT",
+      "notnull": 1,
+      "dflt_value": null,
+      "pk": 0
+    },
+    {
+      "cid": 3,
+      "name": "PortableKey",
+      "type": "TEXT",
+      "notnull": 1,
+      "dflt_value": null,
+      "pk": 0
+    },
+    {
+      "cid": 4,
+      "name": "IsRoot",
+      "type": "INTEGER",
+      "notnull": 1,
+      "dflt_value": null,
+      "pk": 0
+    }
+  ],
+  "sourceColumns": [
+    {
+      "cid": 0,
+      "name": "SourceID",
+      "type": "INTEGER",
+      "notnull": 0,
+      "dflt_value": null,
+      "pk": 1
+    },
+    {
+      "cid": 1,
+      "name": "ScanFolderPK",
+      "type": "INTEGER",
+      "notnull": 1,
+      "dflt_value": null,
+      "pk": 0
+    },
+    {
+      "cid": 2,
+      "name": "SourceName",
+      "type": "TEXT",
+      "notnull": 1,
+      "dflt_value": null,
+      "pk": 0
+    },
+    {
+      "cid": 3,
+      "name": "SourceGuid",
+      "type": "BLOB",
+      "notnull": 1,
+      "dflt_value": null,
+      "pk": 0
+    },
+    {
+      "cid": 4,
+      "name": "AnalysisFingerprint",
+      "type": "TEXT",
+      "notnull": 0,
+      "dflt_value": "''",
+      "pk": 0
+    }
+  ],
+  "productColumns": [
+    {
+      "cid": 0,
+      "name": "ProductID",
+      "type": "INTEGER",
+      "notnull": 0,
+      "dflt_value": null,
+      "pk": 1
+    },
+    {
+      "cid": 1,
+      "name": "JobPK",
+      "type": "INTEGER",
+      "notnull": 1,
+      "dflt_value": null,
+      "pk": 0
+    },
+    {
+      "cid": 2,
+      "name": "ProductName",
+      "type": "TEXT",
+      "notnull": 1,
+      "dflt_value": null,
+      "pk": 0
+    },
+    {
+      "cid": 3,
+      "name": "SubID",
+      "type": "INTEGER",
+      "notnull": 1,
+      "dflt_value": null,
+      "pk": 0
+    },
+    {
+      "cid": 4,
+      "name": "AssetType",
+      "type": "BLOB",
+      "notnull": 1,
+      "dflt_value": null,
+      "pk": 0
+    },
+    {
+      "cid": 5,
+      "name": "LegacyGuid",
+      "type": "BLOB",
+      "notnull": 1,
+      "dflt_value": null,
+      "pk": 0
+    },
+    {
+      "cid": 6,
+      "name": "Hash",
+      "type": "INTEGER",
+      "notnull": 1,
+      "dflt_value": null,
+      "pk": 0
+    },
+    {
+      "cid": 7,
+      "name": "Flags",
+      "type": "INTEGER",
+      "notnull": 1,
+      "dflt_value": "1",
+      "pk": 0
+    }
+  ],
+  "jobColumns": [
+    {
+      "cid": 0,
+      "name": "JobID",
+      "type": "INTEGER",
+      "notnull": 0,
+      "dflt_value": null,
+      "pk": 1
+    },
+    {
+      "cid": 1,
+      "name": "SourcePK",
+      "type": "INTEGER",
+      "notnull": 1,
+      "dflt_value": null,
+      "pk": 0
+    },
+    {
+      "cid": 2,
+      "name": "JobKey",
+      "type": "TEXT",
+      "notnull": 1,
+      "dflt_value": null,
+      "pk": 0
+    },
+    {
+      "cid": 3,
+      "name": "Fingerprint",
+      "type": "INTEGER",
+      "notnull": 1,
+      "dflt_value": null,
+      "pk": 0
+    },
+    {
+      "cid": 4,
+      "name": "Platform",
+      "type": "TEXT",
+      "notnull": 1,
+      "dflt_value": null,
+      "pk": 0
+    },
+    {
+      "cid": 5,
+      "name": "BuilderGuid",
+      "type": "BLOB",
+      "notnull": 1,
+      "dflt_value": null,
+      "pk": 0
+    },
+    {
+      "cid": 6,
+      "name": "Status",
+      "type": "INTEGER",
+      "notnull": 1,
+      "dflt_value": null,
+      "pk": 0
+    },
+    {
+      "cid": 7,
+      "name": "JobRunKey",
+      "type": "INTEGER",
+      "notnull": 1,
+      "dflt_value": null,
+      "pk": 0
+    },
+    {
+      "cid": 8,
+      "name": "FailureCauseSourcePK",
+      "type": "INTEGER",
+      "notnull": 0,
+      "dflt_value": null,
+      "pk": 0
+    },
+    {
+      "cid": 9,
+      "name": "FailureCauseFingerprint",
+      "type": "INTEGER",
+      "notnull": 0,
+      "dflt_value": null,
+      "pk": 0
+    },
+    {
+      "cid": 10,
+      "name": "FirstFailLogTime",
+      "type": "INTEGER",
+      "notnull": 1,
+      "dflt_value": null,
+      "pk": 0
+    },
+    {
+      "cid": 11,
+      "name": "FirstFailLogFile",
+      "type": "TEXT",
+      "notnull": 0,
+      "dflt_value": null,
+      "pk": 0
+    },
+    {
+      "cid": 12,
+      "name": "LastFailLogTime",
+      "type": "INTEGER",
+      "notnull": 1,
+      "dflt_value": null,
+      "pk": 0
+    },
+    {
+      "cid": 13,
+      "name": "LastFailLogFile",
+      "type": "TEXT",
+      "notnull": 0,
+      "dflt_value": null,
+      "pk": 0
+    },
+    {
+      "cid": 14,
+      "name": "LastLogTime",
+      "type": "INTEGER",
+      "notnull": 1,
+      "dflt_value": null,
+      "pk": 0
+    },
+    {
+      "cid": 15,
+      "name": "LastLogFile",
+      "type": "TEXT",
+      "notnull": 0,
+      "dflt_value": null,
+      "pk": 0
+    },
+    {
+      "cid": 16,
+      "name": "ErrorCount",
+      "type": "INTEGER",
+      "notnull": 1,
+      "dflt_value": null,
+      "pk": 0
+    },
+    {
+      "cid": 17,
+      "name": "WarningCount",
+      "type": "INTEGER",
+      "notnull": 1,
+      "dflt_value": null,
+      "pk": 0
+    }
+  ],
+  "scanFolders": [
+    {
+      "ScanFolderID": 74,
+      "ScanFolder": "F:/JericoEngine/JericoEngine/Editor/Materials/Assets",
+      "DisplayName": "Editor/Materials",
+      "PortableKey": "gemassets-{BA3076F4-E9F4-5243-9754-E19A40F6B90C}",
+      "IsRoot": 0
+    },
+    {
+      "ScanFolderID": 76,
+      "ScanFolder": "F:/JericoEngine/JericoEngine/Gems/Atom/Tools/MaterialEditor/Assets",
+      "DisplayName": "Assets",
+      "PortableKey": "gemassets-{0CF3D5DF-4FD1-5108-B937-DC20B6A53B48}",
+      "IsRoot": 0
+    },
+    {
+      "ScanFolderID": 77,
+      "ScanFolder": "F:/JericoEngine/JericoEngine/Gems/Atom/Tools/MaterialEditor/Registry",
+      "DisplayName": "Registry",
+      "PortableKey": "gemregistry-{0CF3D5DF-4FD1-5108-B937-DC20B6A53B48}",
+      "IsRoot": 0
+    }
+  ],
+  "sourceIdentities": [
+    {
+      "SourceID": 568,
+      "ScanFolderPK": 74,
+      "ScanFolder": "F:/JericoEngine/JericoEngine/Editor/Materials/Assets",
+      "DisplayName": "Editor/Materials",
+      "PortableKey": "gemassets-{BA3076F4-E9F4-5243-9754-E19A40F6B90C}",
+      "SourceName": "MaterialCanvas/GraphData/Nodes/MaterialOutputs/BasePBR/HandleDoubleSided.lua",
+      "SourceGuid": "040B8D93496F5498A38170B17BF5B7ED"
+    },
+    {
+      "SourceID": 1402,
+      "ScanFolderPK": 74,
+      "ScanFolder": "F:/JericoEngine/JericoEngine/Editor/Materials/Assets",
+      "DisplayName": "Editor/Materials",
+      "PortableKey": "gemassets-{BA3076F4-E9F4-5243-9754-E19A40F6B90C}",
+      "SourceName": "MaterialCanvas/GraphData/Nodes/MaterialOutputs/BasePBR/MaterialGraphName.material",
+      "SourceGuid": "65F067852DD95572909891B798D328B8"
+    },
+    {
+      "SourceID": 5,
+      "ScanFolderPK": 74,
+      "ScanFolder": "F:/JericoEngine/JericoEngine/Editor/Materials/Assets",
+      "DisplayName": "Editor/Materials",
+      "PortableKey": "gemassets-{BA3076F4-E9F4-5243-9754-E19A40F6B90C}",
+      "SourceName": "MaterialCanvas/GraphData/Nodes/MaterialOutputs/BasePBR/MaterialGraphName.materialtype",
+      "SourceGuid": "19A178BB2F835565AE03322684639089"
+    },
+    {
+      "SourceID": 566,
+      "ScanFolderPK": 74,
+      "ScanFolder": "F:/JericoEngine/JericoEngine/Editor/Materials/Assets",
+      "DisplayName": "Editor/Materials",
+      "PortableKey": "gemassets-{BA3076F4-E9F4-5243-9754-E19A40F6B90C}",
+      "SourceName": "MaterialCanvas/GraphData/Nodes/MaterialOutputs/StandardPBR/HandleDoubleSided.lua",
+      "SourceGuid": "2E08BCF3897659F1AB2A1A3092403D3A"
+    },
+    {
+      "SourceID": 567,
+      "ScanFolderPK": 74,
+      "ScanFolder": "F:/JericoEngine/JericoEngine/Editor/Materials/Assets",
+      "DisplayName": "Editor/Materials",
+      "PortableKey": "gemassets-{BA3076F4-E9F4-5243-9754-E19A40F6B90C}",
+      "SourceName": "MaterialCanvas/GraphData/Nodes/MaterialOutputs/StandardPBR/HandleOpacityMode.lua",
+      "SourceGuid": "6DE87B078E6251D2B02219243998B986"
+    },
+    {
+      "SourceID": 1437,
+      "ScanFolderPK": 74,
+      "ScanFolder": "F:/JericoEngine/JericoEngine/Editor/Materials/Assets",
+      "DisplayName": "Editor/Materials",
+      "PortableKey": "gemassets-{BA3076F4-E9F4-5243-9754-E19A40F6B90C}",
+      "SourceName": "MaterialCanvas/GraphData/Nodes/MaterialOutputs/StandardPBR/MaterialGraphName.material",
+      "SourceGuid": "F617976138D25312B270E5483457E955"
+    },
+    {
+      "SourceID": 10,
+      "ScanFolderPK": 74,
+      "ScanFolder": "F:/JericoEngine/JericoEngine/Editor/Materials/Assets",
+      "DisplayName": "Editor/Materials",
+      "PortableKey": "gemassets-{BA3076F4-E9F4-5243-9754-E19A40F6B90C}",
+      "SourceName": "MaterialCanvas/GraphData/Nodes/MaterialOutputs/StandardPBR/MaterialGraphName.materialtype",
+      "SourceGuid": "D2CF9BC13E975839AA5CBA12B2D0E4F9"
+    },
+    {
+      "SourceID": 340,
+      "ScanFolderPK": 74,
+      "ScanFolder": "F:/JericoEngine/JericoEngine/Editor/Materials/Assets",
+      "DisplayName": "Editor/Materials",
+      "PortableKey": "gemassets-{BA3076F4-E9F4-5243-9754-E19A40F6B90C}",
+      "SourceName": "MaterialCanvas/StyleSheet/materialcanvas_style.json",
+      "SourceGuid": "9B10761FCA245589B22F03B77BCAC80D"
+    },
+    {
+      "SourceID": 218,
+      "ScanFolderPK": 74,
+      "ScanFolder": "F:/JericoEngine/JericoEngine/Editor/Materials/Assets",
+      "DisplayName": "Editor/Materials",
+      "PortableKey": "gemassets-{BA3076F4-E9F4-5243-9754-E19A40F6B90C}",
+      "SourceName": "MaterialCanvas/Translation/materialcanvas_en_us.ts",
+      "SourceGuid": "142B8806A327512CB38C449E768B90DC"
+    },
+    {
+      "SourceID": 1339,
+      "ScanFolderPK": 76,
+      "ScanFolder": "F:/JericoEngine/JericoEngine/Gems/Atom/Tools/MaterialEditor/Assets",
+      "DisplayName": "Assets",
+      "PortableKey": "gemassets-{0CF3D5DF-4FD1-5108-B937-DC20B6A53B48}",
+      "SourceName": "MaterialEditor/LightingPresets/konzerthaus_latlong_iblskyboxcm.exr",
+      "SourceGuid": "AA144B9D68F651919DD1211B8D72802C"
+    },
+    {
+      "SourceID": 580,
+      "ScanFolderPK": 76,
+      "ScanFolder": "F:/JericoEngine/JericoEngine/Gems/Atom/Tools/MaterialEditor/Assets",
+      "DisplayName": "Assets",
+      "PortableKey": "gemassets-{0CF3D5DF-4FD1-5108-B937-DC20B6A53B48}",
+      "SourceName": "MaterialEditor/LightingPresets/lythwood_room.lightingpreset.azasset",
+      "SourceGuid": "B9AA460C622D5F38A02CC0BCB0B65D96"
+    },
+    {
+      "SourceID": 1341,
+      "ScanFolderPK": 76,
+      "ScanFolder": "F:/JericoEngine/JericoEngine/Gems/Atom/Tools/MaterialEditor/Assets",
+      "DisplayName": "Assets",
+      "PortableKey": "gemassets-{0CF3D5DF-4FD1-5108-B937-DC20B6A53B48}",
+      "SourceName": "MaterialEditor/LightingPresets/lythwood_room_4k_latlong_iblskyboxcm.exr",
+      "SourceGuid": "720DF96E6A6E552FAC82835BB4888FE3"
+    },
+    {
+      "SourceID": 585,
+      "ScanFolderPK": 76,
+      "ScanFolder": "F:/JericoEngine/JericoEngine/Gems/Atom/Tools/MaterialEditor/Assets",
+      "DisplayName": "Assets",
+      "PortableKey": "gemassets-{0CF3D5DF-4FD1-5108-B937-DC20B6A53B48}",
+      "SourceName": "MaterialEditor/LightingPresets/neutral_urban.lightingpreset.azasset",
+      "SourceGuid": "683EC47B9BB352EC96C87B255FBA5E32"
+    },
+    {
+      "SourceID": 1340,
+      "ScanFolderPK": 76,
+      "ScanFolder": "F:/JericoEngine/JericoEngine/Gems/Atom/Tools/MaterialEditor/Assets",
+      "DisplayName": "Assets",
+      "PortableKey": "gemassets-{0CF3D5DF-4FD1-5108-B937-DC20B6A53B48}",
+      "SourceName": "MaterialEditor/ViewportModels/_dev_shaderball_00_basecolor.png",
+      "SourceGuid": "AC61A15C967C5146B586DEE918C253E4"
+    },
+    {
+      "SourceID": 880,
+      "ScanFolderPK": 76,
+      "ScanFolder": "F:/JericoEngine/JericoEngine/Gems/Atom/Tools/MaterialEditor/Assets",
+      "DisplayName": "Assets",
+      "PortableKey": "gemassets-{0CF3D5DF-4FD1-5108-B937-DC20B6A53B48}",
+      "SourceName": "MaterialEditor/ViewportModels/BeveledCone.fbx",
+      "SourceGuid": "51B1B230910D500D8BDBD72F5DA9507E"
+    },
+    {
+      "SourceID": 570,
+      "ScanFolderPK": 76,
+      "ScanFolder": "F:/JericoEngine/JericoEngine/Gems/Atom/Tools/MaterialEditor/Assets",
+      "DisplayName": "Assets",
+      "PortableKey": "gemassets-{0CF3D5DF-4FD1-5108-B937-DC20B6A53B48}",
+      "SourceName": "MaterialEditor/ViewportModels/BeveledCone.modelpreset.azasset",
+      "SourceGuid": "9B61FAD72717528C9EBFC1324D46ED56"
+    },
+    {
+      "SourceID": 881,
+      "ScanFolderPK": 76,
+      "ScanFolder": "F:/JericoEngine/JericoEngine/Gems/Atom/Tools/MaterialEditor/Assets",
+      "DisplayName": "Assets",
+      "PortableKey": "gemassets-{0CF3D5DF-4FD1-5108-B937-DC20B6A53B48}",
+      "SourceName": "MaterialEditor/ViewportModels/BeveledCube.fbx",
+      "SourceGuid": "8F19FB6DDF185CC0B9216755089004D7"
+    },
+    {
+      "SourceID": 573,
+      "ScanFolderPK": 76,
+      "ScanFolder": "F:/JericoEngine/JericoEngine/Gems/Atom/Tools/MaterialEditor/Assets",
+      "DisplayName": "Assets",
+      "PortableKey": "gemassets-{0CF3D5DF-4FD1-5108-B937-DC20B6A53B48}",
+      "SourceName": "MaterialEditor/ViewportModels/BeveledCube.modelpreset.azasset",
+      "SourceGuid": "8C0A15EBB5EA522AB11D74DF7E77856C"
+    },
+    {
+      "SourceID": 882,
+      "ScanFolderPK": 76,
+      "ScanFolder": "F:/JericoEngine/JericoEngine/Gems/Atom/Tools/MaterialEditor/Assets",
+      "DisplayName": "Assets",
+      "PortableKey": "gemassets-{0CF3D5DF-4FD1-5108-B937-DC20B6A53B48}",
+      "SourceName": "MaterialEditor/ViewportModels/BeveledCylinder.fbx",
+      "SourceGuid": "0C731B0218BC58ED9DEDB22375D43B2B"
+    },
+    {
+      "SourceID": 571,
+      "ScanFolderPK": 76,
+      "ScanFolder": "F:/JericoEngine/JericoEngine/Gems/Atom/Tools/MaterialEditor/Assets",
+      "DisplayName": "Assets",
+      "PortableKey": "gemassets-{0CF3D5DF-4FD1-5108-B937-DC20B6A53B48}",
+      "SourceName": "MaterialEditor/ViewportModels/BeveledCylinder.modelpreset.azasset",
+      "SourceGuid": "56C021997B4F5896A713F70E6EBA0726"
+    },
+    {
+      "SourceID": 883,
+      "ScanFolderPK": 76,
+      "ScanFolder": "F:/JericoEngine/JericoEngine/Gems/Atom/Tools/MaterialEditor/Assets",
+      "DisplayName": "Assets",
+      "PortableKey": "gemassets-{0CF3D5DF-4FD1-5108-B937-DC20B6A53B48}",
+      "SourceName": "MaterialEditor/ViewportModels/Caduceus.fbx",
+      "SourceGuid": "ECB56B9312F256FF94ABE14F61885ACB"
+    },
+    {
+      "SourceID": 569,
+      "ScanFolderPK": 76,
+      "ScanFolder": "F:/JericoEngine/JericoEngine/Gems/Atom/Tools/MaterialEditor/Assets",
+      "DisplayName": "Assets",
+      "PortableKey": "gemassets-{0CF3D5DF-4FD1-5108-B937-DC20B6A53B48}",
+      "SourceName": "MaterialEditor/ViewportModels/Caduceus.modelpreset.azasset",
+      "SourceGuid": "46D4B53FA900591BB4CD75A79E47749B"
+    },
+    {
+      "SourceID": 884,
+      "ScanFolderPK": 76,
+      "ScanFolder": "F:/JericoEngine/JericoEngine/Gems/Atom/Tools/MaterialEditor/Assets",
+      "DisplayName": "Assets",
+      "PortableKey": "gemassets-{0CF3D5DF-4FD1-5108-B937-DC20B6A53B48}",
+      "SourceName": "MaterialEditor/ViewportModels/Cone.fbx",
+      "SourceGuid": "8E6D29E300195C5A9F5D61656BC02DD7"
+    },
+    {
+      "SourceID": 572,
+      "ScanFolderPK": 76,
+      "ScanFolder": "F:/JericoEngine/JericoEngine/Gems/Atom/Tools/MaterialEditor/Assets",
+      "DisplayName": "Assets",
+      "PortableKey": "gemassets-{0CF3D5DF-4FD1-5108-B937-DC20B6A53B48}",
+      "SourceName": "MaterialEditor/ViewportModels/Cone.modelpreset.azasset",
+      "SourceGuid": "7467489E10D951B6A5FA4CEF6258B27F"
+    },
+    {
+      "SourceID": 885,
+      "ScanFolderPK": 76,
+      "ScanFolder": "F:/JericoEngine/JericoEngine/Gems/Atom/Tools/MaterialEditor/Assets",
+      "DisplayName": "Assets",
+      "PortableKey": "gemassets-{0CF3D5DF-4FD1-5108-B937-DC20B6A53B48}",
+      "SourceName": "MaterialEditor/ViewportModels/Cube.fbx",
+      "SourceGuid": "B991E03BF50D552E9E2D64FA6DAB1CCB"
+    },
+    {
+      "SourceID": 574,
+      "ScanFolderPK": 76,
+      "ScanFolder": "F:/JericoEngine/JericoEngine/Gems/Atom/Tools/MaterialEditor/Assets",
+      "DisplayName": "Assets",
+      "PortableKey": "gemassets-{0CF3D5DF-4FD1-5108-B937-DC20B6A53B48}",
+      "SourceName": "MaterialEditor/ViewportModels/Cube.modelpreset.azasset",
+      "SourceGuid": "E1B23617811755139E1957574F8218FF"
+    },
+    {
+      "SourceID": 886,
+      "ScanFolderPK": 76,
+      "ScanFolder": "F:/JericoEngine/JericoEngine/Gems/Atom/Tools/MaterialEditor/Assets",
+      "DisplayName": "Assets",
+      "PortableKey": "gemassets-{0CF3D5DF-4FD1-5108-B937-DC20B6A53B48}",
+      "SourceName": "MaterialEditor/ViewportModels/Cylinder.fbx",
+      "SourceGuid": "8A2E7A82D7C35E9CA56C6EDA70876347"
+    },
+    {
+      "SourceID": 576,
+      "ScanFolderPK": 76,
+      "ScanFolder": "F:/JericoEngine/JericoEngine/Gems/Atom/Tools/MaterialEditor/Assets",
+      "DisplayName": "Assets",
+      "PortableKey": "gemassets-{0CF3D5DF-4FD1-5108-B937-DC20B6A53B48}",
+      "SourceName": "MaterialEditor/ViewportModels/Cylinder.modelpreset.azasset",
+      "SourceGuid": "7873427E11B952D28136B022B1E9D533"
+    },
+    {
+      "SourceID": 887,
+      "ScanFolderPK": 76,
+      "ScanFolder": "F:/JericoEngine/JericoEngine/Gems/Atom/Tools/MaterialEditor/Assets",
+      "DisplayName": "Assets",
+      "PortableKey": "gemassets-{0CF3D5DF-4FD1-5108-B937-DC20B6A53B48}",
+      "SourceName": "MaterialEditor/ViewportModels/Hermanubis.fbx",
+      "SourceGuid": "1F650917AA7451079C49648C957B33DA"
+    },
+    {
+      "SourceID": 575,
+      "ScanFolderPK": 76,
+      "ScanFolder": "F:/JericoEngine/JericoEngine/Gems/Atom/Tools/MaterialEditor/Assets",
+      "DisplayName": "Assets",
+      "PortableKey": "gemassets-{0CF3D5DF-4FD1-5108-B937-DC20B6A53B48}",
+      "SourceName": "MaterialEditor/ViewportModels/Hermanubis.modelpreset.azasset",
+      "SourceGuid": "7EAE3342C6855406A3617299B5AABCA6"
+    },
+    {
+      "SourceID": 888,
+      "ScanFolderPK": 76,
+      "ScanFolder": "F:/JericoEngine/JericoEngine/Gems/Atom/Tools/MaterialEditor/Assets",
+      "DisplayName": "Assets",
+      "PortableKey": "gemassets-{0CF3D5DF-4FD1-5108-B937-DC20B6A53B48}",
+      "SourceName": "MaterialEditor/ViewportModels/Plane_1x1.fbx",
+      "SourceGuid": "767B3209EDF7503ABF3D6A69DAABC966"
+    },
+    {
+      "SourceID": 579,
+      "ScanFolderPK": 76,
+      "ScanFolder": "F:/JericoEngine/JericoEngine/Gems/Atom/Tools/MaterialEditor/Assets",
+      "DisplayName": "Assets",
+      "PortableKey": "gemassets-{0CF3D5DF-4FD1-5108-B937-DC20B6A53B48}",
+      "SourceName": "MaterialEditor/ViewportModels/Plane_1x1.modelpreset.azasset",
+      "SourceGuid": "FA91BEC44BF05A3F97C0BB50082F5C5B"
+    },
+    {
+      "SourceID": 889,
+      "ScanFolderPK": 76,
+      "ScanFolder": "F:/JericoEngine/JericoEngine/Gems/Atom/Tools/MaterialEditor/Assets",
+      "DisplayName": "Assets",
+      "PortableKey": "gemassets-{0CF3D5DF-4FD1-5108-B937-DC20B6A53B48}",
+      "SourceName": "MaterialEditor/ViewportModels/Plane_3x3.fbx",
+      "SourceGuid": "21839E4C2A3B538A9D48D04A157DD675"
+    },
+    {
+      "SourceID": 577,
+      "ScanFolderPK": 76,
+      "ScanFolder": "F:/JericoEngine/JericoEngine/Gems/Atom/Tools/MaterialEditor/Assets",
+      "DisplayName": "Assets",
+      "PortableKey": "gemassets-{0CF3D5DF-4FD1-5108-B937-DC20B6A53B48}",
+      "SourceName": "MaterialEditor/ViewportModels/Plane_3x3.modelpreset.azasset",
+      "SourceGuid": "DF65EF7EE1A25F53A2CE208E34E2D132"
+    },
+    {
+      "SourceID": 890,
+      "ScanFolderPK": 76,
+      "ScanFolder": "F:/JericoEngine/JericoEngine/Gems/Atom/Tools/MaterialEditor/Assets",
+      "DisplayName": "Assets",
+      "PortableKey": "gemassets-{0CF3D5DF-4FD1-5108-B937-DC20B6A53B48}",
+      "SourceName": "MaterialEditor/ViewportModels/PlatonicSphere.fbx",
+      "SourceGuid": "5D4A455DE58454EDACBADE780F1FB00F"
+    },
+    {
+      "SourceID": 578,
+      "ScanFolderPK": 76,
+      "ScanFolder": "F:/JericoEngine/JericoEngine/Gems/Atom/Tools/MaterialEditor/Assets",
+      "DisplayName": "Assets",
+      "PortableKey": "gemassets-{0CF3D5DF-4FD1-5108-B937-DC20B6A53B48}",
+      "SourceName": "MaterialEditor/ViewportModels/PlatonicSphere.modelpreset.azasset",
+      "SourceGuid": "4F273FA5404F50C290893D36896BF990"
+    },
+    {
+      "SourceID": 891,
+      "ScanFolderPK": 76,
+      "ScanFolder": "F:/JericoEngine/JericoEngine/Gems/Atom/Tools/MaterialEditor/Assets",
+      "DisplayName": "Assets",
+      "PortableKey": "gemassets-{0CF3D5DF-4FD1-5108-B937-DC20B6A53B48}",
+      "SourceName": "MaterialEditor/ViewportModels/PolarSphere.fbx",
+      "SourceGuid": "6373F5F5C4035126A9A98682C321579B"
+    },
+    {
+      "SourceID": 581,
+      "ScanFolderPK": 76,
+      "ScanFolder": "F:/JericoEngine/JericoEngine/Gems/Atom/Tools/MaterialEditor/Assets",
+      "DisplayName": "Assets",
+      "PortableKey": "gemassets-{0CF3D5DF-4FD1-5108-B937-DC20B6A53B48}",
+      "SourceName": "MaterialEditor/ViewportModels/PolarSphere.modelpreset.azasset",
+      "SourceGuid": "C0A4A54B74955EB48CD355A409CA5D40"
+    },
+    {
+      "SourceID": 892,
+      "ScanFolderPK": 76,
+      "ScanFolder": "F:/JericoEngine/JericoEngine/Gems/Atom/Tools/MaterialEditor/Assets",
+      "DisplayName": "Assets",
+      "PortableKey": "gemassets-{0CF3D5DF-4FD1-5108-B937-DC20B6A53B48}",
+      "SourceName": "MaterialEditor/ViewportModels/QuadSphere.fbx",
+      "SourceGuid": "2C665021133A538FAEE397DE948C4D6D"
+    },
+    {
+      "SourceID": 583,
+      "ScanFolderPK": 76,
+      "ScanFolder": "F:/JericoEngine/JericoEngine/Gems/Atom/Tools/MaterialEditor/Assets",
+      "DisplayName": "Assets",
+      "PortableKey": "gemassets-{0CF3D5DF-4FD1-5108-B937-DC20B6A53B48}",
+      "SourceName": "MaterialEditor/ViewportModels/QuadSphere.modelpreset.azasset",
+      "SourceGuid": "7AA7B7646DE852EF8655715E6A18F333"
+    },
+    {
+      "SourceID": 893,
+      "ScanFolderPK": 76,
+      "ScanFolder": "F:/JericoEngine/JericoEngine/Gems/Atom/Tools/MaterialEditor/Assets",
+      "DisplayName": "Assets",
+      "PortableKey": "gemassets-{0CF3D5DF-4FD1-5108-B937-DC20B6A53B48}",
+      "SourceName": "MaterialEditor/ViewportModels/Shaderball.fbx",
+      "SourceGuid": "682C0F6C7C6D5C08B6416D0C49AF0B7B"
+    },
+    {
+      "SourceID": 586,
+      "ScanFolderPK": 76,
+      "ScanFolder": "F:/JericoEngine/JericoEngine/Gems/Atom/Tools/MaterialEditor/Assets",
+      "DisplayName": "Assets",
+      "PortableKey": "gemassets-{0CF3D5DF-4FD1-5108-B937-DC20B6A53B48}",
+      "SourceName": "MaterialEditor/ViewportModels/Shaderball.modelpreset.azasset",
+      "SourceGuid": "B4966B04D539527085FD0FEEF562B7CD"
+    },
+    {
+      "SourceID": 894,
+      "ScanFolderPK": 76,
+      "ScanFolder": "F:/JericoEngine/JericoEngine/Gems/Atom/Tools/MaterialEditor/Assets",
+      "DisplayName": "Assets",
+      "PortableKey": "gemassets-{0CF3D5DF-4FD1-5108-B937-DC20B6A53B48}",
+      "SourceName": "MaterialEditor/ViewportModels/Torus.fbx",
+      "SourceGuid": "0FF7CB5925195D49BAADFC3F552D26B6"
+    },
+    {
+      "SourceID": 584,
+      "ScanFolderPK": 76,
+      "ScanFolder": "F:/JericoEngine/JericoEngine/Gems/Atom/Tools/MaterialEditor/Assets",
+      "DisplayName": "Assets",
+      "PortableKey": "gemassets-{0CF3D5DF-4FD1-5108-B937-DC20B6A53B48}",
+      "SourceName": "MaterialEditor/ViewportModels/Torus.modelpreset.azasset",
+      "SourceGuid": "6EEB795C71BA593D862DD4C095C13AB7"
+    }
+  ],
+  "sourceFiles": [
+    {
+      "sourceId": 568,
+      "sourceName": "MaterialCanvas/GraphData/Nodes/MaterialOutputs/BasePBR/HandleDoubleSided.lua",
+      "path": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\MaterialOutputs\\BasePBR\\HandleDoubleSided.lua",
+      "exists": true,
+      "bytes": 983,
+      "sha256": "3A01A31FBCFBF1D3CDBC515CFFC6A39D30B48E08ECCFE42DE5001B3B5FA29B4E"
+    },
+    {
+      "sourceId": 1402,
+      "sourceName": "MaterialCanvas/GraphData/Nodes/MaterialOutputs/BasePBR/MaterialGraphName.material",
+      "path": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\MaterialOutputs\\BasePBR\\MaterialGraphName.material",
+      "exists": true,
+      "bytes": 62,
+      "sha256": "9995323A5E67F610EBDD42B4A8FB1A0636400EE7CC28083D6BF4AB68C0713218"
+    },
+    {
+      "sourceId": 5,
+      "sourceName": "MaterialCanvas/GraphData/Nodes/MaterialOutputs/BasePBR/MaterialGraphName.materialtype",
+      "path": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\MaterialOutputs\\BasePBR\\MaterialGraphName.materialtype",
+      "exists": true,
+      "bytes": 577,
+      "sha256": "F309C2020C04FE9D46E4011E4B65CE615E42B141085D9F85D7DE065DAF7D76AF"
+    },
+    {
+      "sourceId": 566,
+      "sourceName": "MaterialCanvas/GraphData/Nodes/MaterialOutputs/StandardPBR/HandleDoubleSided.lua",
+      "path": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\MaterialOutputs\\StandardPBR\\HandleDoubleSided.lua",
+      "exists": true,
+      "bytes": 983,
+      "sha256": "3A01A31FBCFBF1D3CDBC515CFFC6A39D30B48E08ECCFE42DE5001B3B5FA29B4E"
+    },
+    {
+      "sourceId": 567,
+      "sourceName": "MaterialCanvas/GraphData/Nodes/MaterialOutputs/StandardPBR/HandleOpacityMode.lua",
+      "path": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\MaterialOutputs\\StandardPBR\\HandleOpacityMode.lua",
+      "exists": true,
+      "bytes": 1194,
+      "sha256": "B77F8EC0C441E18801695A65C38C0ADFCB03EC351ED733F4D3D81F5E552B3ADC"
+    },
+    {
+      "sourceId": 1437,
+      "sourceName": "MaterialCanvas/GraphData/Nodes/MaterialOutputs/StandardPBR/MaterialGraphName.material",
+      "path": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\MaterialOutputs\\StandardPBR\\MaterialGraphName.material",
+      "exists": true,
+      "bytes": 62,
+      "sha256": "9995323A5E67F610EBDD42B4A8FB1A0636400EE7CC28083D6BF4AB68C0713218"
+    },
+    {
+      "sourceId": 10,
+      "sourceName": "MaterialCanvas/GraphData/Nodes/MaterialOutputs/StandardPBR/MaterialGraphName.materialtype",
+      "path": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\MaterialOutputs\\StandardPBR\\MaterialGraphName.materialtype",
+      "exists": true,
+      "bytes": 907,
+      "sha256": "5253083139470A71007AF24ADC3C03D5B63504903ADAB74CEC2DCE8B3F82FF89"
+    },
+    {
+      "sourceId": 340,
+      "sourceName": "MaterialCanvas/StyleSheet/materialcanvas_style.json",
+      "path": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\StyleSheet\\materialcanvas_style.json",
+      "exists": true,
+      "bytes": 53950,
+      "sha256": "CF51A7EB35A99E0EF5CFA0FA2F3E485F4C616BE6B06CBBA91BE369DD3B55B1BB"
+    },
+    {
+      "sourceId": 218,
+      "sourceName": "MaterialCanvas/Translation/materialcanvas_en_us.ts",
+      "path": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\Translation\\materialcanvas_en_us.ts",
+      "exists": true,
+      "bytes": 297,
+      "sha256": "EBE982CEB9F3C51DA0AA73A2049C7F1FC2347806C0EAFC039109A9DE3A1F343B"
+    },
+    {
+      "sourceId": 1339,
+      "sourceName": "MaterialEditor/LightingPresets/konzerthaus_latlong_iblskyboxcm.exr",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\MaterialEditor\\Assets\\MaterialEditor\\LightingPresets\\konzerthaus_latlong_iblskyboxcm.exr",
+      "exists": false
+    },
+    {
+      "sourceId": 580,
+      "sourceName": "MaterialEditor/LightingPresets/lythwood_room.lightingpreset.azasset",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\MaterialEditor\\Assets\\MaterialEditor\\LightingPresets\\lythwood_room.lightingpreset.azasset",
+      "exists": false
+    },
+    {
+      "sourceId": 1341,
+      "sourceName": "MaterialEditor/LightingPresets/lythwood_room_4k_latlong_iblskyboxcm.exr",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\MaterialEditor\\Assets\\MaterialEditor\\LightingPresets\\lythwood_room_4k_latlong_iblskyboxcm.exr",
+      "exists": false
+    },
+    {
+      "sourceId": 585,
+      "sourceName": "MaterialEditor/LightingPresets/neutral_urban.lightingpreset.azasset",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\MaterialEditor\\Assets\\MaterialEditor\\LightingPresets\\neutral_urban.lightingpreset.azasset",
+      "exists": false
+    },
+    {
+      "sourceId": 1340,
+      "sourceName": "MaterialEditor/ViewportModels/_dev_shaderball_00_basecolor.png",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\MaterialEditor\\Assets\\MaterialEditor\\ViewportModels\\_dev_shaderball_00_basecolor.png",
+      "exists": false
+    },
+    {
+      "sourceId": 880,
+      "sourceName": "MaterialEditor/ViewportModels/BeveledCone.fbx",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\MaterialEditor\\Assets\\MaterialEditor\\ViewportModels\\BeveledCone.fbx",
+      "exists": false
+    },
+    {
+      "sourceId": 570,
+      "sourceName": "MaterialEditor/ViewportModels/BeveledCone.modelpreset.azasset",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\MaterialEditor\\Assets\\MaterialEditor\\ViewportModels\\BeveledCone.modelpreset.azasset",
+      "exists": false
+    },
+    {
+      "sourceId": 881,
+      "sourceName": "MaterialEditor/ViewportModels/BeveledCube.fbx",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\MaterialEditor\\Assets\\MaterialEditor\\ViewportModels\\BeveledCube.fbx",
+      "exists": false
+    },
+    {
+      "sourceId": 573,
+      "sourceName": "MaterialEditor/ViewportModels/BeveledCube.modelpreset.azasset",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\MaterialEditor\\Assets\\MaterialEditor\\ViewportModels\\BeveledCube.modelpreset.azasset",
+      "exists": false
+    },
+    {
+      "sourceId": 882,
+      "sourceName": "MaterialEditor/ViewportModels/BeveledCylinder.fbx",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\MaterialEditor\\Assets\\MaterialEditor\\ViewportModels\\BeveledCylinder.fbx",
+      "exists": false
+    },
+    {
+      "sourceId": 571,
+      "sourceName": "MaterialEditor/ViewportModels/BeveledCylinder.modelpreset.azasset",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\MaterialEditor\\Assets\\MaterialEditor\\ViewportModels\\BeveledCylinder.modelpreset.azasset",
+      "exists": false
+    },
+    {
+      "sourceId": 883,
+      "sourceName": "MaterialEditor/ViewportModels/Caduceus.fbx",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\MaterialEditor\\Assets\\MaterialEditor\\ViewportModels\\Caduceus.fbx",
+      "exists": false
+    },
+    {
+      "sourceId": 569,
+      "sourceName": "MaterialEditor/ViewportModels/Caduceus.modelpreset.azasset",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\MaterialEditor\\Assets\\MaterialEditor\\ViewportModels\\Caduceus.modelpreset.azasset",
+      "exists": false
+    },
+    {
+      "sourceId": 884,
+      "sourceName": "MaterialEditor/ViewportModels/Cone.fbx",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\MaterialEditor\\Assets\\MaterialEditor\\ViewportModels\\Cone.fbx",
+      "exists": false
+    },
+    {
+      "sourceId": 572,
+      "sourceName": "MaterialEditor/ViewportModels/Cone.modelpreset.azasset",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\MaterialEditor\\Assets\\MaterialEditor\\ViewportModels\\Cone.modelpreset.azasset",
+      "exists": false
+    },
+    {
+      "sourceId": 885,
+      "sourceName": "MaterialEditor/ViewportModels/Cube.fbx",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\MaterialEditor\\Assets\\MaterialEditor\\ViewportModels\\Cube.fbx",
+      "exists": false
+    },
+    {
+      "sourceId": 574,
+      "sourceName": "MaterialEditor/ViewportModels/Cube.modelpreset.azasset",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\MaterialEditor\\Assets\\MaterialEditor\\ViewportModels\\Cube.modelpreset.azasset",
+      "exists": false
+    },
+    {
+      "sourceId": 886,
+      "sourceName": "MaterialEditor/ViewportModels/Cylinder.fbx",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\MaterialEditor\\Assets\\MaterialEditor\\ViewportModels\\Cylinder.fbx",
+      "exists": false
+    },
+    {
+      "sourceId": 576,
+      "sourceName": "MaterialEditor/ViewportModels/Cylinder.modelpreset.azasset",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\MaterialEditor\\Assets\\MaterialEditor\\ViewportModels\\Cylinder.modelpreset.azasset",
+      "exists": false
+    },
+    {
+      "sourceId": 887,
+      "sourceName": "MaterialEditor/ViewportModels/Hermanubis.fbx",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\MaterialEditor\\Assets\\MaterialEditor\\ViewportModels\\Hermanubis.fbx",
+      "exists": false
+    },
+    {
+      "sourceId": 575,
+      "sourceName": "MaterialEditor/ViewportModels/Hermanubis.modelpreset.azasset",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\MaterialEditor\\Assets\\MaterialEditor\\ViewportModels\\Hermanubis.modelpreset.azasset",
+      "exists": false
+    },
+    {
+      "sourceId": 888,
+      "sourceName": "MaterialEditor/ViewportModels/Plane_1x1.fbx",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\MaterialEditor\\Assets\\MaterialEditor\\ViewportModels\\Plane_1x1.fbx",
+      "exists": false
+    },
+    {
+      "sourceId": 579,
+      "sourceName": "MaterialEditor/ViewportModels/Plane_1x1.modelpreset.azasset",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\MaterialEditor\\Assets\\MaterialEditor\\ViewportModels\\Plane_1x1.modelpreset.azasset",
+      "exists": false
+    },
+    {
+      "sourceId": 889,
+      "sourceName": "MaterialEditor/ViewportModels/Plane_3x3.fbx",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\MaterialEditor\\Assets\\MaterialEditor\\ViewportModels\\Plane_3x3.fbx",
+      "exists": false
+    },
+    {
+      "sourceId": 577,
+      "sourceName": "MaterialEditor/ViewportModels/Plane_3x3.modelpreset.azasset",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\MaterialEditor\\Assets\\MaterialEditor\\ViewportModels\\Plane_3x3.modelpreset.azasset",
+      "exists": false
+    },
+    {
+      "sourceId": 890,
+      "sourceName": "MaterialEditor/ViewportModels/PlatonicSphere.fbx",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\MaterialEditor\\Assets\\MaterialEditor\\ViewportModels\\PlatonicSphere.fbx",
+      "exists": false
+    },
+    {
+      "sourceId": 578,
+      "sourceName": "MaterialEditor/ViewportModels/PlatonicSphere.modelpreset.azasset",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\MaterialEditor\\Assets\\MaterialEditor\\ViewportModels\\PlatonicSphere.modelpreset.azasset",
+      "exists": false
+    },
+    {
+      "sourceId": 891,
+      "sourceName": "MaterialEditor/ViewportModels/PolarSphere.fbx",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\MaterialEditor\\Assets\\MaterialEditor\\ViewportModels\\PolarSphere.fbx",
+      "exists": false
+    },
+    {
+      "sourceId": 581,
+      "sourceName": "MaterialEditor/ViewportModels/PolarSphere.modelpreset.azasset",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\MaterialEditor\\Assets\\MaterialEditor\\ViewportModels\\PolarSphere.modelpreset.azasset",
+      "exists": false
+    },
+    {
+      "sourceId": 892,
+      "sourceName": "MaterialEditor/ViewportModels/QuadSphere.fbx",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\MaterialEditor\\Assets\\MaterialEditor\\ViewportModels\\QuadSphere.fbx",
+      "exists": false
+    },
+    {
+      "sourceId": 583,
+      "sourceName": "MaterialEditor/ViewportModels/QuadSphere.modelpreset.azasset",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\MaterialEditor\\Assets\\MaterialEditor\\ViewportModels\\QuadSphere.modelpreset.azasset",
+      "exists": false
+    },
+    {
+      "sourceId": 893,
+      "sourceName": "MaterialEditor/ViewportModels/Shaderball.fbx",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\MaterialEditor\\Assets\\MaterialEditor\\ViewportModels\\Shaderball.fbx",
+      "exists": false
+    },
+    {
+      "sourceId": 586,
+      "sourceName": "MaterialEditor/ViewportModels/Shaderball.modelpreset.azasset",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\MaterialEditor\\Assets\\MaterialEditor\\ViewportModels\\Shaderball.modelpreset.azasset",
+      "exists": false
+    },
+    {
+      "sourceId": 894,
+      "sourceName": "MaterialEditor/ViewportModels/Torus.fbx",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\MaterialEditor\\Assets\\MaterialEditor\\ViewportModels\\Torus.fbx",
+      "exists": false
+    },
+    {
+      "sourceId": 584,
+      "sourceName": "MaterialEditor/ViewportModels/Torus.modelpreset.azasset",
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\MaterialEditor\\Assets\\MaterialEditor\\ViewportModels\\Torus.modelpreset.azasset",
+      "exists": false
+    }
+  ],
+  "products": [
+    {
+      "SourceID": 568,
+      "SourceName": "MaterialCanvas/GraphData/Nodes/MaterialOutputs/BasePBR/HandleDoubleSided.lua",
+      "SourceGuid": "040B8D93496F5498A38170B17BF5B7ED",
+      "ProductID": 770,
+      "SubID": 1,
+      "ProductName": "pc/materialcanvas/graphdata/nodes/materialoutputs/basepbr/handledoublesided.luac",
+      "AssetType": "825573264AE3416C95D6C70635AB7588",
+      "JobPK": 570
+    },
+    {
+      "SourceID": 1402,
+      "SourceName": "MaterialCanvas/GraphData/Nodes/MaterialOutputs/BasePBR/MaterialGraphName.material",
+      "SourceGuid": "65F067852DD95572909891B798D328B8",
+      "ProductID": 7156,
+      "SubID": 0,
+      "ProductName": "pc/materialcanvas/graphdata/nodes/materialoutputs/basepbr/materialgraphname.azmaterial",
+      "AssetType": "522C7BE0501D463E92C615184A2B7AD8",
+      "JobPK": 1462
+    },
+    {
+      "SourceID": 5,
+      "SourceName": "MaterialCanvas/GraphData/Nodes/MaterialOutputs/BasePBR/MaterialGraphName.materialtype",
+      "SourceGuid": "19A178BB2F835565AE03322684639089",
+      "ProductID": 68,
+      "SubID": 2,
+      "ProductName": "common/materialcanvas/graphdata/nodes/materialoutputs/basepbr/materialgraphname_common_0_depthpass.azsl",
+      "AssetType": "00000000000000000000000000000000",
+      "JobPK": 5
+    },
+    {
+      "SourceID": 5,
+      "SourceName": "MaterialCanvas/GraphData/Nodes/MaterialOutputs/BasePBR/MaterialGraphName.materialtype",
+      "SourceGuid": "19A178BB2F835565AE03322684639089",
+      "ProductID": 69,
+      "SubID": 3,
+      "ProductName": "common/materialcanvas/graphdata/nodes/materialoutputs/basepbr/materialgraphname_common_0_depthpass.shader",
+      "AssetType": "00000000000000000000000000000000",
+      "JobPK": 5
+    },
+    {
+      "SourceID": 5,
+      "SourceName": "MaterialCanvas/GraphData/Nodes/MaterialOutputs/BasePBR/MaterialGraphName.materialtype",
+      "SourceGuid": "19A178BB2F835565AE03322684639089",
+      "ProductID": 72,
+      "SubID": 6,
+      "ProductName": "common/materialcanvas/graphdata/nodes/materialoutputs/basepbr/materialgraphname_common_1_shadowmappass.azsl",
+      "AssetType": "00000000000000000000000000000000",
+      "JobPK": 5
+    },
+    {
+      "SourceID": 5,
+      "SourceName": "MaterialCanvas/GraphData/Nodes/MaterialOutputs/BasePBR/MaterialGraphName.materialtype",
+      "SourceGuid": "19A178BB2F835565AE03322684639089",
+      "ProductID": 73,
+      "SubID": 7,
+      "ProductName": "common/materialcanvas/graphdata/nodes/materialoutputs/basepbr/materialgraphname_common_1_shadowmappass.shader",
+      "AssetType": "00000000000000000000000000000000",
+      "JobPK": 5
+    },
+    {
+      "SourceID": 5,
+      "SourceName": "MaterialCanvas/GraphData/Nodes/MaterialOutputs/BasePBR/MaterialGraphName.materialtype",
+      "SourceGuid": "19A178BB2F835565AE03322684639089",
+      "ProductID": 78,
+      "SubID": 0,
+      "ProductName": "common/materialcanvas/graphdata/nodes/materialoutputs/basepbr/materialgraphname_generated.materialtype",
+      "AssetType": "14085B6F42E8447D9833E1E45C2510B2",
+      "JobPK": 5
+    },
+    {
+      "SourceID": 5,
+      "SourceName": "MaterialCanvas/GraphData/Nodes/MaterialOutputs/BasePBR/MaterialGraphName.materialtype",
+      "SourceGuid": "19A178BB2F835565AE03322684639089",
+      "ProductID": 74,
+      "SubID": 8,
+      "ProductName": "common/materialcanvas/graphdata/nodes/materialoutputs/basepbr/materialgraphname_lowendpipeline_forwardpass_baselighting.azsl",
+      "AssetType": "00000000000000000000000000000000",
+      "JobPK": 5
+    },
+    {
+      "SourceID": 5,
+      "SourceName": "MaterialCanvas/GraphData/Nodes/MaterialOutputs/BasePBR/MaterialGraphName.materialtype",
+      "SourceGuid": "19A178BB2F835565AE03322684639089",
+      "ProductID": 75,
+      "SubID": 9,
+      "ProductName": "common/materialcanvas/graphdata/nodes/materialoutputs/basepbr/materialgraphname_lowendpipeline_forwardpass_baselighting.shader",
+      "AssetType": "00000000000000000000000000000000",
+      "JobPK": 5
+    },
+    {
+      "SourceID": 5,
+      "SourceName": "MaterialCanvas/GraphData/Nodes/MaterialOutputs/BasePBR/MaterialGraphName.materialtype",
+      "SourceGuid": "19A178BB2F835565AE03322684639089",
+      "ProductID": 76,
+      "SubID": 10,
+      "ProductName": "common/materialcanvas/graphdata/nodes/materialoutputs/basepbr/materialgraphname_mainpipeline_forwardpass_baselighting.azsl",
+      "AssetType": "00000000000000000000000000000000",
+      "JobPK": 5
+    },
+    {
+      "SourceID": 5,
+      "SourceName": "MaterialCanvas/GraphData/Nodes/MaterialOutputs/BasePBR/MaterialGraphName.materialtype",
+      "SourceGuid": "19A178BB2F835565AE03322684639089",
+      "ProductID": 77,
+      "SubID": 11,
+      "ProductName": "common/materialcanvas/graphdata/nodes/materialoutputs/basepbr/materialgraphname_mainpipeline_forwardpass_baselighting.shader",
+      "AssetType": "00000000000000000000000000000000",
+      "JobPK": 5
+    },
+    {
+      "SourceID": 5,
+      "SourceName": "MaterialCanvas/GraphData/Nodes/MaterialOutputs/BasePBR/MaterialGraphName.materialtype",
+      "SourceGuid": "19A178BB2F835565AE03322684639089",
+      "ProductID": 70,
+      "SubID": 4,
+      "ProductName": "common/materialcanvas/graphdata/nodes/materialoutputs/basepbr/materialgraphname_mainpipeline_meshmotionvector.azsl",
+      "AssetType": "00000000000000000000000000000000",
+      "JobPK": 5
+    },
+    {
+      "SourceID": 5,
+      "SourceName": "MaterialCanvas/GraphData/Nodes/MaterialOutputs/BasePBR/MaterialGraphName.materialtype",
+      "SourceGuid": "19A178BB2F835565AE03322684639089",
+      "ProductID": 71,
+      "SubID": 5,
+      "ProductName": "common/materialcanvas/graphdata/nodes/materialoutputs/basepbr/materialgraphname_mainpipeline_meshmotionvector.shader",
+      "AssetType": "00000000000000000000000000000000",
+      "JobPK": 5
+    },
+    {
+      "SourceID": 5,
+      "SourceName": "MaterialCanvas/GraphData/Nodes/MaterialOutputs/BasePBR/MaterialGraphName.materialtype",
+      "SourceGuid": "19A178BB2F835565AE03322684639089",
+      "ProductID": 67,
+      "SubID": 1,
+      "ProductName": "common/materialcanvas/graphdata/nodes/materialoutputs/basepbr/materialgraphname_parameters.azsli",
+      "AssetType": "14085B6F42E8447D9833E1E45C2510B2",
+      "JobPK": 5
+    },
+    {
+      "SourceID": 566,
+      "SourceName": "MaterialCanvas/GraphData/Nodes/MaterialOutputs/StandardPBR/HandleDoubleSided.lua",
+      "SourceGuid": "2E08BCF3897659F1AB2A1A3092403D3A",
+      "ProductID": 768,
+      "SubID": 1,
+      "ProductName": "pc/materialcanvas/graphdata/nodes/materialoutputs/standardpbr/handledoublesided.luac",
+      "AssetType": "825573264AE3416C95D6C70635AB7588",
+      "JobPK": 568
+    },
+    {
+      "SourceID": 567,
+      "SourceName": "MaterialCanvas/GraphData/Nodes/MaterialOutputs/StandardPBR/HandleOpacityMode.lua",
+      "SourceGuid": "6DE87B078E6251D2B02219243998B986",
+      "ProductID": 769,
+      "SubID": 1,
+      "ProductName": "pc/materialcanvas/graphdata/nodes/materialoutputs/standardpbr/handleopacitymode.luac",
+      "AssetType": "825573264AE3416C95D6C70635AB7588",
+      "JobPK": 569
+    },
+    {
+      "SourceID": 1437,
+      "SourceName": "MaterialCanvas/GraphData/Nodes/MaterialOutputs/StandardPBR/MaterialGraphName.material",
+      "SourceGuid": "F617976138D25312B270E5483457E955",
+      "ProductID": 7180,
+      "SubID": 0,
+      "ProductName": "pc/materialcanvas/graphdata/nodes/materialoutputs/standardpbr/materialgraphname.azmaterial",
+      "AssetType": "522C7BE0501D463E92C615184A2B7AD8",
+      "JobPK": 1497
+    },
+    {
+      "SourceID": 10,
+      "SourceName": "MaterialCanvas/GraphData/Nodes/MaterialOutputs/StandardPBR/MaterialGraphName.materialtype",
+      "SourceGuid": "D2CF9BC13E975839AA5CBA12B2D0E4F9",
+      "ProductID": 148,
+      "SubID": 2,
+      "ProductName": "common/materialcanvas/graphdata/nodes/materialoutputs/standardpbr/materialgraphname_common_0_depthpass.azsl",
+      "AssetType": "00000000000000000000000000000000",
+      "JobPK": 10
+    },
+    {
+      "SourceID": 10,
+      "SourceName": "MaterialCanvas/GraphData/Nodes/MaterialOutputs/StandardPBR/MaterialGraphName.materialtype",
+      "SourceGuid": "D2CF9BC13E975839AA5CBA12B2D0E4F9",
+      "ProductID": 149,
+      "SubID": 3,
+      "ProductName": "common/materialcanvas/graphdata/nodes/materialoutputs/standardpbr/materialgraphname_common_0_depthpass.shader",
+      "AssetType": "00000000000000000000000000000000",
+      "JobPK": 10
+    },
+    {
+      "SourceID": 10,
+      "SourceName": "MaterialCanvas/GraphData/Nodes/MaterialOutputs/StandardPBR/MaterialGraphName.materialtype",
+      "SourceGuid": "D2CF9BC13E975839AA5CBA12B2D0E4F9",
+      "ProductID": 150,
+      "SubID": 4,
+      "ProductName": "common/materialcanvas/graphdata/nodes/materialoutputs/standardpbr/materialgraphname_common_1_depthpasstransparentmax.azsl",
+      "AssetType": "00000000000000000000000000000000",
+      "JobPK": 10
+    },
+    {
+      "SourceID": 10,
+      "SourceName": "MaterialCanvas/GraphData/Nodes/MaterialOutputs/StandardPBR/MaterialGraphName.materialtype",
+      "SourceGuid": "D2CF9BC13E975839AA5CBA12B2D0E4F9",
+      "ProductID": 151,
+      "SubID": 5,
+      "ProductName": "common/materialcanvas/graphdata/nodes/materialoutputs/standardpbr/materialgraphname_common_1_depthpasstransparentmax.shader",
+      "AssetType": "00000000000000000000000000000000",
+      "JobPK": 10
+    },
+    {
+      "SourceID": 10,
+      "SourceName": "MaterialCanvas/GraphData/Nodes/MaterialOutputs/StandardPBR/MaterialGraphName.materialtype",
+      "SourceGuid": "D2CF9BC13E975839AA5CBA12B2D0E4F9",
+      "ProductID": 152,
+      "SubID": 6,
+      "ProductName": "common/materialcanvas/graphdata/nodes/materialoutputs/standardpbr/materialgraphname_common_2_depthpasstransparentmin.azsl",
+      "AssetType": "00000000000000000000000000000000",
+      "JobPK": 10
+    },
+    {
+      "SourceID": 10,
+      "SourceName": "MaterialCanvas/GraphData/Nodes/MaterialOutputs/StandardPBR/MaterialGraphName.materialtype",
+      "SourceGuid": "D2CF9BC13E975839AA5CBA12B2D0E4F9",
+      "ProductID": 153,
+      "SubID": 7,
+      "ProductName": "common/materialcanvas/graphdata/nodes/materialoutputs/standardpbr/materialgraphname_common_2_depthpasstransparentmin.shader",
+      "AssetType": "00000000000000000000000000000000",
+      "JobPK": 10
+    },
+    {
+      "SourceID": 10,
+      "SourceName": "MaterialCanvas/GraphData/Nodes/MaterialOutputs/StandardPBR/MaterialGraphName.materialtype",
+      "SourceGuid": "D2CF9BC13E975839AA5CBA12B2D0E4F9",
+      "ProductID": 154,
+      "SubID": 8,
+      "ProductName": "common/materialcanvas/graphdata/nodes/materialoutputs/standardpbr/materialgraphname_common_3_depthpass_customz.azsl",
+      "AssetType": "00000000000000000000000000000000",
+      "JobPK": 10
+    },
+    {
+      "SourceID": 10,
+      "SourceName": "MaterialCanvas/GraphData/Nodes/MaterialOutputs/StandardPBR/MaterialGraphName.materialtype",
+      "SourceGuid": "D2CF9BC13E975839AA5CBA12B2D0E4F9",
+      "ProductID": 155,
+      "SubID": 9,
+      "ProductName": "common/materialcanvas/graphdata/nodes/materialoutputs/standardpbr/materialgraphname_common_3_depthpass_customz.shader",
+      "AssetType": "00000000000000000000000000000000",
+      "JobPK": 10
+    },
+    {
+      "SourceID": 10,
+      "SourceName": "MaterialCanvas/GraphData/Nodes/MaterialOutputs/StandardPBR/MaterialGraphName.materialtype",
+      "SourceGuid": "D2CF9BC13E975839AA5CBA12B2D0E4F9",
+      "ProductID": 158,
+      "SubID": 12,
+      "ProductName": "common/materialcanvas/graphdata/nodes/materialoutputs/standardpbr/materialgraphname_common_4_shadowmappass.azsl",
+      "AssetType": "00000000000000000000000000000000",
+      "JobPK": 10
+    },
+    {
+      "SourceID": 10,
+      "SourceName": "MaterialCanvas/GraphData/Nodes/MaterialOutputs/StandardPBR/MaterialGraphName.materialtype",
+      "SourceGuid": "D2CF9BC13E975839AA5CBA12B2D0E4F9",
+      "ProductID": 159,
+      "SubID": 13,
+      "ProductName": "common/materialcanvas/graphdata/nodes/materialoutputs/standardpbr/materialgraphname_common_4_shadowmappass.shader",
+      "AssetType": "00000000000000000000000000000000",
+      "JobPK": 10
+    },
+    {
+      "SourceID": 10,
+      "SourceName": "MaterialCanvas/GraphData/Nodes/MaterialOutputs/StandardPBR/MaterialGraphName.materialtype",
+      "SourceGuid": "D2CF9BC13E975839AA5CBA12B2D0E4F9",
+      "ProductID": 160,
+      "SubID": 14,
+      "ProductName": "common/materialcanvas/graphdata/nodes/materialoutputs/standardpbr/materialgraphname_common_5_shadowmappass_customz.azsl",
+      "AssetType": "00000000000000000000000000000000",
+      "JobPK": 10
+    },
+    {
+      "SourceID": 10,
+      "SourceName": "MaterialCanvas/GraphData/Nodes/MaterialOutputs/StandardPBR/MaterialGraphName.materialtype",
+      "SourceGuid": "D2CF9BC13E975839AA5CBA12B2D0E4F9",
+      "ProductID": 161,
+      "SubID": 15,
+      "ProductName": "common/materialcanvas/graphdata/nodes/materialoutputs/standardpbr/materialgraphname_common_5_shadowmappass_customz.shader",
+      "AssetType": "00000000000000000000000000000000",
+      "JobPK": 10
+    },
+    {
+      "SourceID": 10,
+      "SourceName": "MaterialCanvas/GraphData/Nodes/MaterialOutputs/StandardPBR/MaterialGraphName.materialtype",
+      "SourceGuid": "D2CF9BC13E975839AA5CBA12B2D0E4F9",
+      "ProductID": 178,
+      "SubID": 0,
+      "ProductName": "common/materialcanvas/graphdata/nodes/materialoutputs/standardpbr/materialgraphname_generated.materialtype",
+      "AssetType": "14085B6F42E8447D9833E1E45C2510B2",
+      "JobPK": 10
+    },
+    {
+      "SourceID": 10,
+      "SourceName": "MaterialCanvas/GraphData/Nodes/MaterialOutputs/StandardPBR/MaterialGraphName.materialtype",
+      "SourceGuid": "D2CF9BC13E975839AA5CBA12B2D0E4F9",
+      "ProductID": 162,
+      "SubID": 16,
+      "ProductName": "common/materialcanvas/graphdata/nodes/materialoutputs/standardpbr/materialgraphname_lowendpipeline_forwardpass_standardlighting.azsl",
+      "AssetType": "00000000000000000000000000000000",
+      "JobPK": 10
+    },
+    {
+      "SourceID": 10,
+      "SourceName": "MaterialCanvas/GraphData/Nodes/MaterialOutputs/StandardPBR/MaterialGraphName.materialtype",
+      "SourceGuid": "D2CF9BC13E975839AA5CBA12B2D0E4F9",
+      "ProductID": 163,
+      "SubID": 17,
+      "ProductName": "common/materialcanvas/graphdata/nodes/materialoutputs/standardpbr/materialgraphname_lowendpipeline_forwardpass_standardlighting.shader",
+      "AssetType": "00000000000000000000000000000000",
+      "JobPK": 10
+    },
+    {
+      "SourceID": 10,
+      "SourceName": "MaterialCanvas/GraphData/Nodes/MaterialOutputs/StandardPBR/MaterialGraphName.materialtype",
+      "SourceGuid": "D2CF9BC13E975839AA5CBA12B2D0E4F9",
+      "ProductID": 164,
+      "SubID": 18,
+      "ProductName": "common/materialcanvas/graphdata/nodes/materialoutputs/standardpbr/materialgraphname_lowendpipeline_forwardpass_standardlighting_customz.azsl",
+      "AssetType": "00000000000000000000000000000000",
+      "JobPK": 10
+    },
+    {
+      "SourceID": 10,
+      "SourceName": "MaterialCanvas/GraphData/Nodes/MaterialOutputs/StandardPBR/MaterialGraphName.materialtype",
+      "SourceGuid": "D2CF9BC13E975839AA5CBA12B2D0E4F9",
+      "ProductID": 165,
+      "SubID": 19,
+      "ProductName": "common/materialcanvas/graphdata/nodes/materialoutputs/standardpbr/materialgraphname_lowendpipeline_forwardpass_standardlighting_customz.shader",
+      "AssetType": "00000000000000000000000000000000",
+      "JobPK": 10
+    },
+    {
+      "SourceID": 10,
+      "SourceName": "MaterialCanvas/GraphData/Nodes/MaterialOutputs/StandardPBR/MaterialGraphName.materialtype",
+      "SourceGuid": "D2CF9BC13E975839AA5CBA12B2D0E4F9",
+      "ProductID": 166,
+      "SubID": 20,
+      "ProductName": "common/materialcanvas/graphdata/nodes/materialoutputs/standardpbr/materialgraphname_lowendpipeline_tintedtransparent_standardlighting.azsl",
+      "AssetType": "00000000000000000000000000000000",
+      "JobPK": 10
+    },
+    {
+      "SourceID": 10,
+      "SourceName": "MaterialCanvas/GraphData/Nodes/MaterialOutputs/StandardPBR/MaterialGraphName.materialtype",
+      "SourceGuid": "D2CF9BC13E975839AA5CBA12B2D0E4F9",
+      "ProductID": 167,
+      "SubID": 21,
+      "ProductName": "common/materialcanvas/graphdata/nodes/materialoutputs/standardpbr/materialgraphname_lowendpipeline_tintedtransparent_standardlighting.shader",
+      "AssetType": "00000000000000000000000000000000",
+      "JobPK": 10
+    },
+    {
+      "SourceID": 10,
+      "SourceName": "MaterialCanvas/GraphData/Nodes/MaterialOutputs/StandardPBR/MaterialGraphName.materialtype",
+      "SourceGuid": "D2CF9BC13E975839AA5CBA12B2D0E4F9",
+      "ProductID": 168,
+      "SubID": 22,
+      "ProductName": "common/materialcanvas/graphdata/nodes/materialoutputs/standardpbr/materialgraphname_lowendpipeline_transparent_standardlighting.azsl",
+      "AssetType": "00000000000000000000000000000000",
+      "JobPK": 10
+    },
+    {
+      "SourceID": 10,
+      "SourceName": "MaterialCanvas/GraphData/Nodes/MaterialOutputs/StandardPBR/MaterialGraphName.materialtype",
+      "SourceGuid": "D2CF9BC13E975839AA5CBA12B2D0E4F9",
+      "ProductID": 169,
+      "SubID": 23,
+      "ProductName": "common/materialcanvas/graphdata/nodes/materialoutputs/standardpbr/materialgraphname_lowendpipeline_transparent_standardlighting.shader",
+      "AssetType": "00000000000000000000000000000000",
+      "JobPK": 10
+    },
+    {
+      "SourceID": 10,
+      "SourceName": "MaterialCanvas/GraphData/Nodes/MaterialOutputs/StandardPBR/MaterialGraphName.materialtype",
+      "SourceGuid": "D2CF9BC13E975839AA5CBA12B2D0E4F9",
+      "ProductID": 170,
+      "SubID": 24,
+      "ProductName": "common/materialcanvas/graphdata/nodes/materialoutputs/standardpbr/materialgraphname_mainpipeline_forwardpass_standardlighting.azsl",
+      "AssetType": "00000000000000000000000000000000",
+      "JobPK": 10
+    },
+    {
+      "SourceID": 10,
+      "SourceName": "MaterialCanvas/GraphData/Nodes/MaterialOutputs/StandardPBR/MaterialGraphName.materialtype",
+      "SourceGuid": "D2CF9BC13E975839AA5CBA12B2D0E4F9",
+      "ProductID": 171,
+      "SubID": 25,
+      "ProductName": "common/materialcanvas/graphdata/nodes/materialoutputs/standardpbr/materialgraphname_mainpipeline_forwardpass_standardlighting.shader",
+      "AssetType": "00000000000000000000000000000000",
+      "JobPK": 10
+    },
+    {
+      "SourceID": 10,
+      "SourceName": "MaterialCanvas/GraphData/Nodes/MaterialOutputs/StandardPBR/MaterialGraphName.materialtype",
+      "SourceGuid": "D2CF9BC13E975839AA5CBA12B2D0E4F9",
+      "ProductID": 172,
+      "SubID": 26,
+      "ProductName": "common/materialcanvas/graphdata/nodes/materialoutputs/standardpbr/materialgraphname_mainpipeline_forwardpass_standardlighting_customz.azsl",
+      "AssetType": "00000000000000000000000000000000",
+      "JobPK": 10
+    },
+    {
+      "SourceID": 10,
+      "SourceName": "MaterialCanvas/GraphData/Nodes/MaterialOutputs/StandardPBR/MaterialGraphName.materialtype",
+      "SourceGuid": "D2CF9BC13E975839AA5CBA12B2D0E4F9",
+      "ProductID": 173,
+      "SubID": 27,
+      "ProductName": "common/materialcanvas/graphdata/nodes/materialoutputs/standardpbr/materialgraphname_mainpipeline_forwardpass_standardlighting_customz.shader",
+      "AssetType": "00000000000000000000000000000000",
+      "JobPK": 10
+    },
+    {
+      "SourceID": 10,
+      "SourceName": "MaterialCanvas/GraphData/Nodes/MaterialOutputs/StandardPBR/MaterialGraphName.materialtype",
+      "SourceGuid": "D2CF9BC13E975839AA5CBA12B2D0E4F9",
+      "ProductID": 156,
+      "SubID": 10,
+      "ProductName": "common/materialcanvas/graphdata/nodes/materialoutputs/standardpbr/materialgraphname_mainpipeline_meshmotionvector.azsl",
+      "AssetType": "00000000000000000000000000000000",
+      "JobPK": 10
+    },
+    {
+      "SourceID": 10,
+      "SourceName": "MaterialCanvas/GraphData/Nodes/MaterialOutputs/StandardPBR/MaterialGraphName.materialtype",
+      "SourceGuid": "D2CF9BC13E975839AA5CBA12B2D0E4F9",
+      "ProductID": 157,
+      "SubID": 11,
+      "ProductName": "common/materialcanvas/graphdata/nodes/materialoutputs/standardpbr/materialgraphname_mainpipeline_meshmotionvector.shader",
+      "AssetType": "00000000000000000000000000000000",
+      "JobPK": 10
+    },
+    {
+      "SourceID": 10,
+      "SourceName": "MaterialCanvas/GraphData/Nodes/MaterialOutputs/StandardPBR/MaterialGraphName.materialtype",
+      "SourceGuid": "D2CF9BC13E975839AA5CBA12B2D0E4F9",
+      "ProductID": 174,
+      "SubID": 28,
+      "ProductName": "common/materialcanvas/graphdata/nodes/materialoutputs/standardpbr/materialgraphname_mainpipeline_tintedtransparent_standardlighting.azsl",
+      "AssetType": "00000000000000000000000000000000",
+      "JobPK": 10
+    },
+    {
+      "SourceID": 10,
+      "SourceName": "MaterialCanvas/GraphData/Nodes/MaterialOutputs/StandardPBR/MaterialGraphName.materialtype",
+      "SourceGuid": "D2CF9BC13E975839AA5CBA12B2D0E4F9",
+      "ProductID": 175,
+      "SubID": 29,
+      "ProductName": "common/materialcanvas/graphdata/nodes/materialoutputs/standardpbr/materialgraphname_mainpipeline_tintedtransparent_standardlighting.shader",
+      "AssetType": "00000000000000000000000000000000",
+      "JobPK": 10
+    },
+    {
+      "SourceID": 10,
+      "SourceName": "MaterialCanvas/GraphData/Nodes/MaterialOutputs/StandardPBR/MaterialGraphName.materialtype",
+      "SourceGuid": "D2CF9BC13E975839AA5CBA12B2D0E4F9",
+      "ProductID": 176,
+      "SubID": 30,
+      "ProductName": "common/materialcanvas/graphdata/nodes/materialoutputs/standardpbr/materialgraphname_mainpipeline_transparent_standardlighting.azsl",
+      "AssetType": "00000000000000000000000000000000",
+      "JobPK": 10
+    },
+    {
+      "SourceID": 10,
+      "SourceName": "MaterialCanvas/GraphData/Nodes/MaterialOutputs/StandardPBR/MaterialGraphName.materialtype",
+      "SourceGuid": "D2CF9BC13E975839AA5CBA12B2D0E4F9",
+      "ProductID": 177,
+      "SubID": 31,
+      "ProductName": "common/materialcanvas/graphdata/nodes/materialoutputs/standardpbr/materialgraphname_mainpipeline_transparent_standardlighting.shader",
+      "AssetType": "00000000000000000000000000000000",
+      "JobPK": 10
+    },
+    {
+      "SourceID": 10,
+      "SourceName": "MaterialCanvas/GraphData/Nodes/MaterialOutputs/StandardPBR/MaterialGraphName.materialtype",
+      "SourceGuid": "D2CF9BC13E975839AA5CBA12B2D0E4F9",
+      "ProductID": 147,
+      "SubID": 1,
+      "ProductName": "common/materialcanvas/graphdata/nodes/materialoutputs/standardpbr/materialgraphname_parameters.azsli",
+      "AssetType": "14085B6F42E8447D9833E1E45C2510B2",
+      "JobPK": 10
+    },
+    {
+      "SourceID": 340,
+      "SourceName": "MaterialCanvas/StyleSheet/materialcanvas_style.json",
+      "SourceGuid": "9B10761FCA245589B22F03B77BCAC80D",
+      "ProductID": 540,
+      "SubID": 0,
+      "ProductName": "pc/materialcanvas/stylesheet/materialcanvas_style.json",
+      "AssetType": "00000000000000000000000000000000",
+      "JobPK": 340
+    },
+    {
+      "SourceID": 218,
+      "SourceName": "MaterialCanvas/Translation/materialcanvas_en_us.ts",
+      "SourceGuid": "142B8806A327512CB38C449E768B90DC",
+      "ProductID": 418,
+      "SubID": 0,
+      "ProductName": "pc/materialcanvas/translation/materialcanvas_en_us.qm",
+      "AssetType": "00000000000000000000000000000000",
+      "JobPK": 218
+    },
+    {
+      "SourceID": 1339,
+      "SourceName": "MaterialEditor/LightingPresets/konzerthaus_latlong_iblskyboxcm.exr",
+      "SourceGuid": "AA144B9D68F651919DD1211B8D72802C",
+      "ProductID": 7254,
+      "SubID": 4195304,
+      "ProductName": "pc/materialeditor/lightingpresets/konzerthaus_latlong_iblskyboxcm.exr.abdata.json",
+      "AssetType": "D0A5E84E98664AD7A6A14D28FE7871C5",
+      "JobPK": 1396
+    },
+    {
+      "SourceID": 1339,
+      "SourceName": "MaterialEditor/LightingPresets/konzerthaus_latlong_iblskyboxcm.exr",
+      "SourceGuid": "AA144B9D68F651919DD1211B8D72802C",
+      "ProductID": 7255,
+      "SubID": 1000,
+      "ProductName": "pc/materialeditor/lightingpresets/konzerthaus_latlong_iblskyboxcm.exr.streamingimage",
+      "AssetType": "3C96A82690994308A6047B19ADBF8761",
+      "JobPK": 1396
+    },
+    {
+      "SourceID": 1339,
+      "SourceName": "MaterialEditor/LightingPresets/konzerthaus_latlong_iblskyboxcm.exr",
+      "SourceGuid": "AA144B9D68F651919DD1211B8D72802C",
+      "ProductID": 7252,
+      "SubID": 4197304,
+      "ProductName": "pc/materialeditor/lightingpresets/konzerthaus_latlong_iblskyboxcm_ibldiffuse.exr.abdata.json",
+      "AssetType": "D0A5E84E98664AD7A6A14D28FE7871C5",
+      "JobPK": 1396
+    },
+    {
+      "SourceID": 1339,
+      "SourceName": "MaterialEditor/LightingPresets/konzerthaus_latlong_iblskyboxcm.exr",
+      "SourceGuid": "AA144B9D68F651919DD1211B8D72802C",
+      "ProductID": 7253,
+      "SubID": 3000,
+      "ProductName": "pc/materialeditor/lightingpresets/konzerthaus_latlong_iblskyboxcm_ibldiffuse.exr.streamingimage",
+      "AssetType": "3C96A82690994308A6047B19ADBF8761",
+      "JobPK": 1396
+    },
+    {
+      "SourceID": 1339,
+      "SourceName": "MaterialEditor/LightingPresets/konzerthaus_latlong_iblskyboxcm.exr",
+      "SourceGuid": "AA144B9D68F651919DD1211B8D72802C",
+      "ProductID": 7247,
+      "SubID": 2002,
+      "ProductName": "pc/materialeditor/lightingpresets/konzerthaus_latlong_iblskyboxcm_iblspecular.exr.2002.imagemipchain",
+      "AssetType": "CB403C8A69824C9F809078C9C36FBEDB",
+      "JobPK": 1396
+    },
+    {
+      "SourceID": 1339,
+      "SourceName": "MaterialEditor/LightingPresets/konzerthaus_latlong_iblskyboxcm.exr",
+      "SourceGuid": "AA144B9D68F651919DD1211B8D72802C",
+      "ProductID": 7248,
+      "SubID": 2003,
+      "ProductName": "pc/materialeditor/lightingpresets/konzerthaus_latlong_iblskyboxcm_iblspecular.exr.2003.imagemipchain",
+      "AssetType": "CB403C8A69824C9F809078C9C36FBEDB",
+      "JobPK": 1396
+    },
+    {
+      "SourceID": 1339,
+      "SourceName": "MaterialEditor/LightingPresets/konzerthaus_latlong_iblskyboxcm.exr",
+      "SourceGuid": "AA144B9D68F651919DD1211B8D72802C",
+      "ProductID": 7249,
+      "SubID": 2004,
+      "ProductName": "pc/materialeditor/lightingpresets/konzerthaus_latlong_iblskyboxcm_iblspecular.exr.2004.imagemipchain",
+      "AssetType": "CB403C8A69824C9F809078C9C36FBEDB",
+      "JobPK": 1396
+    },
+    {
+      "SourceID": 1339,
+      "SourceName": "MaterialEditor/LightingPresets/konzerthaus_latlong_iblskyboxcm.exr",
+      "SourceGuid": "AA144B9D68F651919DD1211B8D72802C",
+      "ProductID": 7250,
+      "SubID": 4196304,
+      "ProductName": "pc/materialeditor/lightingpresets/konzerthaus_latlong_iblskyboxcm_iblspecular.exr.abdata.json",
+      "AssetType": "D0A5E84E98664AD7A6A14D28FE7871C5",
+      "JobPK": 1396
+    },
+    {
+      "SourceID": 1339,
+      "SourceName": "MaterialEditor/LightingPresets/konzerthaus_latlong_iblskyboxcm.exr",
+      "SourceGuid": "AA144B9D68F651919DD1211B8D72802C",
+      "ProductID": 7251,
+      "SubID": 2000,
+      "ProductName": "pc/materialeditor/lightingpresets/konzerthaus_latlong_iblskyboxcm_iblspecular.exr.streamingimage",
+      "AssetType": "3C96A82690994308A6047B19ADBF8761",
+      "JobPK": 1396
+    },
+    {
+      "SourceID": 580,
+      "SourceName": "MaterialEditor/LightingPresets/lythwood_room.lightingpreset.azasset",
+      "SourceGuid": "B9AA460C622D5F38A02CC0BCB0B65D96",
+      "ProductID": 782,
+      "SubID": 0,
+      "ProductName": "pc/materialeditor/lightingpresets/lythwood_room.lightingpreset.azasset",
+      "AssetType": "2643D6863E7C450CBB61427EDEBF13D5",
+      "JobPK": 582
+    },
+    {
+      "SourceID": 1341,
+      "SourceName": "MaterialEditor/LightingPresets/lythwood_room_4k_latlong_iblskyboxcm.exr",
+      "SourceGuid": "720DF96E6A6E552FAC82835BB4888FE3",
+      "ProductID": 7412,
+      "SubID": 4195304,
+      "ProductName": "pc/materialeditor/lightingpresets/lythwood_room_4k_latlong_iblskyboxcm.exr.abdata.json",
+      "AssetType": "D0A5E84E98664AD7A6A14D28FE7871C5",
+      "JobPK": 1398
+    },
+    {
+      "SourceID": 1341,
+      "SourceName": "MaterialEditor/LightingPresets/lythwood_room_4k_latlong_iblskyboxcm.exr",
+      "SourceGuid": "720DF96E6A6E552FAC82835BB4888FE3",
+      "ProductID": 7413,
+      "SubID": 1000,
+      "ProductName": "pc/materialeditor/lightingpresets/lythwood_room_4k_latlong_iblskyboxcm.exr.streamingimage",
+      "AssetType": "3C96A82690994308A6047B19ADBF8761",
+      "JobPK": 1398
+    },
+    {
+      "SourceID": 1341,
+      "SourceName": "MaterialEditor/LightingPresets/lythwood_room_4k_latlong_iblskyboxcm.exr",
+      "SourceGuid": "720DF96E6A6E552FAC82835BB4888FE3",
+      "ProductID": 7410,
+      "SubID": 4197304,
+      "ProductName": "pc/materialeditor/lightingpresets/lythwood_room_4k_latlong_iblskyboxcm_ibldiffuse.exr.abdata.json",
+      "AssetType": "D0A5E84E98664AD7A6A14D28FE7871C5",
+      "JobPK": 1398
+    },
+    {
+      "SourceID": 1341,
+      "SourceName": "MaterialEditor/LightingPresets/lythwood_room_4k_latlong_iblskyboxcm.exr",
+      "SourceGuid": "720DF96E6A6E552FAC82835BB4888FE3",
+      "ProductID": 7411,
+      "SubID": 3000,
+      "ProductName": "pc/materialeditor/lightingpresets/lythwood_room_4k_latlong_iblskyboxcm_ibldiffuse.exr.streamingimage",
+      "AssetType": "3C96A82690994308A6047B19ADBF8761",
+      "JobPK": 1398
+    },
+    {
+      "SourceID": 1341,
+      "SourceName": "MaterialEditor/LightingPresets/lythwood_room_4k_latlong_iblskyboxcm.exr",
+      "SourceGuid": "720DF96E6A6E552FAC82835BB4888FE3",
+      "ProductID": 7405,
+      "SubID": 2002,
+      "ProductName": "pc/materialeditor/lightingpresets/lythwood_room_4k_latlong_iblskyboxcm_iblspecular.exr.2002.imagemipchain",
+      "AssetType": "CB403C8A69824C9F809078C9C36FBEDB",
+      "JobPK": 1398
+    },
+    {
+      "SourceID": 1341,
+      "SourceName": "MaterialEditor/LightingPresets/lythwood_room_4k_latlong_iblskyboxcm.exr",
+      "SourceGuid": "720DF96E6A6E552FAC82835BB4888FE3",
+      "ProductID": 7406,
+      "SubID": 2003,
+      "ProductName": "pc/materialeditor/lightingpresets/lythwood_room_4k_latlong_iblskyboxcm_iblspecular.exr.2003.imagemipchain",
+      "AssetType": "CB403C8A69824C9F809078C9C36FBEDB",
+      "JobPK": 1398
+    },
+    {
+      "SourceID": 1341,
+      "SourceName": "MaterialEditor/LightingPresets/lythwood_room_4k_latlong_iblskyboxcm.exr",
+      "SourceGuid": "720DF96E6A6E552FAC82835BB4888FE3",
+      "ProductID": 7407,
+      "SubID": 2004,
+      "ProductName": "pc/materialeditor/lightingpresets/lythwood_room_4k_latlong_iblskyboxcm_iblspecular.exr.2004.imagemipchain",
+      "AssetType": "CB403C8A69824C9F809078C9C36FBEDB",
+      "JobPK": 1398
+    },
+    {
+      "SourceID": 1341,
+      "SourceName": "MaterialEditor/LightingPresets/lythwood_room_4k_latlong_iblskyboxcm.exr",
+      "SourceGuid": "720DF96E6A6E552FAC82835BB4888FE3",
+      "ProductID": 7408,
+      "SubID": 4196304,
+      "ProductName": "pc/materialeditor/lightingpresets/lythwood_room_4k_latlong_iblskyboxcm_iblspecular.exr.abdata.json",
+      "AssetType": "D0A5E84E98664AD7A6A14D28FE7871C5",
+      "JobPK": 1398
+    },
+    {
+      "SourceID": 1341,
+      "SourceName": "MaterialEditor/LightingPresets/lythwood_room_4k_latlong_iblskyboxcm.exr",
+      "SourceGuid": "720DF96E6A6E552FAC82835BB4888FE3",
+      "ProductID": 7409,
+      "SubID": 2000,
+      "ProductName": "pc/materialeditor/lightingpresets/lythwood_room_4k_latlong_iblskyboxcm_iblspecular.exr.streamingimage",
+      "AssetType": "3C96A82690994308A6047B19ADBF8761",
+      "JobPK": 1398
+    },
+    {
+      "SourceID": 585,
+      "SourceName": "MaterialEditor/LightingPresets/neutral_urban.lightingpreset.azasset",
+      "SourceGuid": "683EC47B9BB352EC96C87B255FBA5E32",
+      "ProductID": 787,
+      "SubID": 0,
+      "ProductName": "pc/materialeditor/lightingpresets/neutral_urban.lightingpreset.azasset",
+      "AssetType": "2643D6863E7C450CBB61427EDEBF13D5",
+      "JobPK": 587
+    },
+    {
+      "SourceID": 1340,
+      "SourceName": "MaterialEditor/ViewportModels/_dev_shaderball_00_basecolor.png",
+      "SourceGuid": "AC61A15C967C5146B586DEE918C253E4",
+      "ProductID": 7232,
+      "SubID": 1002,
+      "ProductName": "pc/materialeditor/viewportmodels/_dev_shaderball_00_basecolor.png.1002.imagemipchain",
+      "AssetType": "CB403C8A69824C9F809078C9C36FBEDB",
+      "JobPK": 1397
+    },
+    {
+      "SourceID": 1340,
+      "SourceName": "MaterialEditor/ViewportModels/_dev_shaderball_00_basecolor.png",
+      "SourceGuid": "AC61A15C967C5146B586DEE918C253E4",
+      "ProductID": 7233,
+      "SubID": 4195304,
+      "ProductName": "pc/materialeditor/viewportmodels/_dev_shaderball_00_basecolor.png.abdata.json",
+      "AssetType": "D0A5E84E98664AD7A6A14D28FE7871C5",
+      "JobPK": 1397
+    },
+    {
+      "SourceID": 1340,
+      "SourceName": "MaterialEditor/ViewportModels/_dev_shaderball_00_basecolor.png",
+      "SourceGuid": "AC61A15C967C5146B586DEE918C253E4",
+      "ProductID": 7234,
+      "SubID": 1000,
+      "ProductName": "pc/materialeditor/viewportmodels/_dev_shaderball_00_basecolor.png.streamingimage",
+      "AssetType": "3C96A82690994308A6047B19ADBF8761",
+      "JobPK": 1397
+    },
+    {
+      "SourceID": 880,
+      "SourceName": "MaterialEditor/ViewportModels/BeveledCone.fbx",
+      "SourceGuid": "51B1B230910D500D8BDBD72F5DA9507E",
+      "ProductID": 7284,
+      "SubID": 4194304,
+      "ProductName": "pc/materialeditor/viewportmodels/beveledcone.fbx.abdata.json",
+      "AssetType": "D0A5E84E98664AD7A6A14D28FE7871C5",
+      "JobPK": 893
+    },
+    {
+      "SourceID": 880,
+      "SourceName": "MaterialEditor/ViewportModels/BeveledCone.fbx",
+      "SourceGuid": "51B1B230910D500D8BDBD72F5DA9507E",
+      "ProductID": 7294,
+      "SubID": 274738010,
+      "ProductName": "pc/materialeditor/viewportmodels/beveledcone.fbx.azmodel",
+      "AssetType": "2C7477B669C545BE8163BCD6A275B6D8",
+      "JobPK": 893
+    },
+    {
+      "SourceID": 880,
+      "SourceName": "MaterialEditor/ViewportModels/BeveledCone.fbx",
+      "SourceGuid": "51B1B230910D500D8BDBD72F5DA9507E",
+      "ProductID": 7285,
+      "SubID": 1803671422,
+      "ProductName": "pc/materialeditor/viewportmodels/beveledcone_default_12399812254575482750.fbx.azmaterial",
+      "AssetType": "522C7BE0501D463E92C615184A2B7AD8",
+      "JobPK": 893
+    },
+    {
+      "SourceID": 880,
+      "SourceName": "MaterialEditor/ViewportModels/BeveledCone.fbx",
+      "SourceGuid": "51B1B230910D500D8BDBD72F5DA9507E",
+      "ProductID": 7293,
+      "SubID": 278958602,
+      "ProductName": "pc/materialeditor/viewportmodels/beveledcone_lod0.fbx.azlod",
+      "AssetType": "65B5A801B9B941609CB4D40DAA50B15C",
+      "JobPK": 893
+    },
+    {
+      "SourceID": 880,
+      "SourceName": "MaterialEditor/ViewportModels/BeveledCone.fbx",
+      "SourceGuid": "51B1B230910D500D8BDBD72F5DA9507E",
+      "ProductID": 7292,
+      "SubID": 282285609,
+      "ProductName": "pc/materialeditor/viewportmodels/beveledcone_lod0_bitangent0.fbx.azbuffer",
+      "AssetType": "F6C5EA8A1DB3456EB970B6E2AB262AED",
+      "JobPK": 893
+    },
+    {
+      "SourceID": 880,
+      "SourceName": "MaterialEditor/ViewportModels/BeveledCone.fbx",
+      "SourceGuid": "51B1B230910D500D8BDBD72F5DA9507E",
+      "ProductID": 7286,
+      "SubID": 279856940,
+      "ProductName": "pc/materialeditor/viewportmodels/beveledcone_lod0_index.fbx.azbuffer",
+      "AssetType": "F6C5EA8A1DB3456EB970B6E2AB262AED",
+      "JobPK": 893
+    },
+    {
+      "SourceID": 880,
+      "SourceName": "MaterialEditor/ViewportModels/BeveledCone.fbx",
+      "SourceGuid": "51B1B230910D500D8BDBD72F5DA9507E",
+      "ProductID": 7288,
+      "SubID": 282659538,
+      "ProductName": "pc/materialeditor/viewportmodels/beveledcone_lod0_normal0.fbx.azbuffer",
+      "AssetType": "F6C5EA8A1DB3456EB970B6E2AB262AED",
+      "JobPK": 893
+    },
+    {
+      "SourceID": 880,
+      "SourceName": "MaterialEditor/ViewportModels/BeveledCone.fbx",
+      "SourceGuid": "51B1B230910D500D8BDBD72F5DA9507E",
+      "ProductID": 7287,
+      "SubID": 276771628,
+      "ProductName": "pc/materialeditor/viewportmodels/beveledcone_lod0_position0.fbx.azbuffer",
+      "AssetType": "F6C5EA8A1DB3456EB970B6E2AB262AED",
+      "JobPK": 893
+    },
+    {
+      "SourceID": 880,
+      "SourceName": "MaterialEditor/ViewportModels/BeveledCone.fbx",
+      "SourceGuid": "51B1B230910D500D8BDBD72F5DA9507E",
+      "ProductID": 7291,
+      "SubID": 274591764,
+      "ProductName": "pc/materialeditor/viewportmodels/beveledcone_lod0_tangent0.fbx.azbuffer",
+      "AssetType": "F6C5EA8A1DB3456EB970B6E2AB262AED",
+      "JobPK": 893
+    },
+    {
+      "SourceID": 880,
+      "SourceName": "MaterialEditor/ViewportModels/BeveledCone.fbx",
+      "SourceGuid": "51B1B230910D500D8BDBD72F5DA9507E",
+      "ProductID": 7289,
+      "SubID": 277062181,
+      "ProductName": "pc/materialeditor/viewportmodels/beveledcone_lod0_uv0.fbx.azbuffer",
+      "AssetType": "F6C5EA8A1DB3456EB970B6E2AB262AED",
+      "JobPK": 893
+    },
+    {
+      "SourceID": 880,
+      "SourceName": "MaterialEditor/ViewportModels/BeveledCone.fbx",
+      "SourceGuid": "51B1B230910D500D8BDBD72F5DA9507E",
+      "ProductID": 7290,
+      "SubID": 277123763,
+      "ProductName": "pc/materialeditor/viewportmodels/beveledcone_lod0_uv1.fbx.azbuffer",
+      "AssetType": "F6C5EA8A1DB3456EB970B6E2AB262AED",
+      "JobPK": 893
+    },
+    {
+      "SourceID": 570,
+      "SourceName": "MaterialEditor/ViewportModels/BeveledCone.modelpreset.azasset",
+      "SourceGuid": "9B61FAD72717528C9EBFC1324D46ED56",
+      "ProductID": 772,
+      "SubID": 0,
+      "ProductName": "pc/materialeditor/viewportmodels/beveledcone.modelpreset.azasset",
+      "AssetType": "2643D6863E7C450CBB61427EDEBF13D5",
+      "JobPK": 572
+    },
+    {
+      "SourceID": 881,
+      "SourceName": "MaterialEditor/ViewportModels/BeveledCube.fbx",
+      "SourceGuid": "8F19FB6DDF185CC0B9216755089004D7",
+      "ProductID": 7372,
+      "SubID": 4194304,
+      "ProductName": "pc/materialeditor/viewportmodels/beveledcube.fbx.abdata.json",
+      "AssetType": "D0A5E84E98664AD7A6A14D28FE7871C5",
+      "JobPK": 894
+    },
+    {
+      "SourceID": 881,
+      "SourceName": "MaterialEditor/ViewportModels/BeveledCube.fbx",
+      "SourceGuid": "8F19FB6DDF185CC0B9216755089004D7",
+      "ProductID": 7382,
+      "SubID": 275006192,
+      "ProductName": "pc/materialeditor/viewportmodels/beveledcube.fbx.azmodel",
+      "AssetType": "2C7477B669C545BE8163BCD6A275B6D8",
+      "JobPK": 894
+    },
+    {
+      "SourceID": 881,
+      "SourceName": "MaterialEditor/ViewportModels/BeveledCube.fbx",
+      "SourceGuid": "8F19FB6DDF185CC0B9216755089004D7",
+      "ProductID": 7373,
+      "SubID": 1803671422,
+      "ProductName": "pc/materialeditor/viewportmodels/beveledcube_default_12399812254575482750.fbx.azmaterial",
+      "AssetType": "522C7BE0501D463E92C615184A2B7AD8",
+      "JobPK": 894
+    },
+    {
+      "SourceID": 881,
+      "SourceName": "MaterialEditor/ViewportModels/BeveledCube.fbx",
+      "SourceGuid": "8F19FB6DDF185CC0B9216755089004D7",
+      "ProductID": 7381,
+      "SubID": 276551069,
+      "ProductName": "pc/materialeditor/viewportmodels/beveledcube_lod0.fbx.azlod",
+      "AssetType": "65B5A801B9B941609CB4D40DAA50B15C",
+      "JobPK": 894
+    },
+    {
+      "SourceID": 881,
+      "SourceName": "MaterialEditor/ViewportModels/BeveledCube.fbx",
+      "SourceGuid": "8F19FB6DDF185CC0B9216755089004D7",
+      "ProductID": 7380,
+      "SubID": 276631389,
+      "ProductName": "pc/materialeditor/viewportmodels/beveledcube_lod0_bitangent0.fbx.azbuffer",
+      "AssetType": "F6C5EA8A1DB3456EB970B6E2AB262AED",
+      "JobPK": 894
+    },
+    {
+      "SourceID": 881,
+      "SourceName": "MaterialEditor/ViewportModels/BeveledCube.fbx",
+      "SourceGuid": "8F19FB6DDF185CC0B9216755089004D7",
+      "ProductID": 7374,
+      "SubID": 277944352,
+      "ProductName": "pc/materialeditor/viewportmodels/beveledcube_lod0_index.fbx.azbuffer",
+      "AssetType": "F6C5EA8A1DB3456EB970B6E2AB262AED",
+      "JobPK": 894
+    },
+    {
+      "SourceID": 881,
+      "SourceName": "MaterialEditor/ViewportModels/BeveledCube.fbx",
+      "SourceGuid": "8F19FB6DDF185CC0B9216755089004D7",
+      "ProductID": 7376,
+      "SubID": 280504196,
+      "ProductName": "pc/materialeditor/viewportmodels/beveledcube_lod0_normal0.fbx.azbuffer",
+      "AssetType": "F6C5EA8A1DB3456EB970B6E2AB262AED",
+      "JobPK": 894
+    },
+    {
+      "SourceID": 881,
+      "SourceName": "MaterialEditor/ViewportModels/BeveledCube.fbx",
+      "SourceGuid": "8F19FB6DDF185CC0B9216755089004D7",
+      "ProductID": 7375,
+      "SubID": 272745194,
+      "ProductName": "pc/materialeditor/viewportmodels/beveledcube_lod0_position0.fbx.azbuffer",
+      "AssetType": "F6C5EA8A1DB3456EB970B6E2AB262AED",
+      "JobPK": 894
+    },
+    {
+      "SourceID": 881,
+      "SourceName": "MaterialEditor/ViewportModels/BeveledCube.fbx",
+      "SourceGuid": "8F19FB6DDF185CC0B9216755089004D7",
+      "ProductID": 7379,
+      "SubID": 268592632,
+      "ProductName": "pc/materialeditor/viewportmodels/beveledcube_lod0_tangent0.fbx.azbuffer",
+      "AssetType": "F6C5EA8A1DB3456EB970B6E2AB262AED",
+      "JobPK": 894
+    },
+    {
+      "SourceID": 881,
+      "SourceName": "MaterialEditor/ViewportModels/BeveledCube.fbx",
+      "SourceGuid": "8F19FB6DDF185CC0B9216755089004D7",
+      "ProductID": 7377,
+      "SubID": 280376703,
+      "ProductName": "pc/materialeditor/viewportmodels/beveledcube_lod0_uv0.fbx.azbuffer",
+      "AssetType": "F6C5EA8A1DB3456EB970B6E2AB262AED",
+      "JobPK": 894
+    },
+    {
+      "SourceID": 881,
+      "SourceName": "MaterialEditor/ViewportModels/BeveledCube.fbx",
+      "SourceGuid": "8F19FB6DDF185CC0B9216755089004D7",
+      "ProductID": 7378,
+      "SubID": 280036841,
+      "ProductName": "pc/materialeditor/viewportmodels/beveledcube_lod0_uv1.fbx.azbuffer",
+      "AssetType": "F6C5EA8A1DB3456EB970B6E2AB262AED",
+      "JobPK": 894
+    },
+    {
+      "SourceID": 573,
+      "SourceName": "MaterialEditor/ViewportModels/BeveledCube.modelpreset.azasset",
+      "SourceGuid": "8C0A15EBB5EA522AB11D74DF7E77856C",
+      "ProductID": 775,
+      "SubID": 0,
+      "ProductName": "pc/materialeditor/viewportmodels/beveledcube.modelpreset.azasset",
+      "AssetType": "2643D6863E7C450CBB61427EDEBF13D5",
+      "JobPK": 575
+    },
+    {
+      "SourceID": 882,
+      "SourceName": "MaterialEditor/ViewportModels/BeveledCylinder.fbx",
+      "SourceGuid": "0C731B0218BC58ED9DEDB22375D43B2B",
+      "ProductID": 7273,
+      "SubID": 4194304,
+      "ProductName": "pc/materialeditor/viewportmodels/beveledcylinder.fbx.abdata.json",
+      "AssetType": "D0A5E84E98664AD7A6A14D28FE7871C5",
+      "JobPK": 895
+    },
+    {
+      "SourceID": 882,
+      "SourceName": "MaterialEditor/ViewportModels/BeveledCylinder.fbx",
+      "SourceGuid": "0C731B0218BC58ED9DEDB22375D43B2B",
+      "ProductID": 7283,
+      "SubID": 274477424,
+      "ProductName": "pc/materialeditor/viewportmodels/beveledcylinder.fbx.azmodel",
+      "AssetType": "2C7477B669C545BE8163BCD6A275B6D8",
+      "JobPK": 895
+    },
+    {
+      "SourceID": 882,
+      "SourceName": "MaterialEditor/ViewportModels/BeveledCylinder.fbx",
+      "SourceGuid": "0C731B0218BC58ED9DEDB22375D43B2B",
+      "ProductID": 7274,
+      "SubID": 1803671422,
+      "ProductName": "pc/materialeditor/viewportmodels/beveledcylinder_default_12399812254575482750.fbx.azmaterial",
+      "AssetType": "522C7BE0501D463E92C615184A2B7AD8",
+      "JobPK": 895
+    },
+    {
+      "SourceID": 882,
+      "SourceName": "MaterialEditor/ViewportModels/BeveledCylinder.fbx",
+      "SourceGuid": "0C731B0218BC58ED9DEDB22375D43B2B",
+      "ProductID": 7282,
+      "SubID": 270476092,
+      "ProductName": "pc/materialeditor/viewportmodels/beveledcylinder_lod0.fbx.azlod",
+      "AssetType": "65B5A801B9B941609CB4D40DAA50B15C",
+      "JobPK": 895
+    },
+    {
+      "SourceID": 882,
+      "SourceName": "MaterialEditor/ViewportModels/BeveledCylinder.fbx",
+      "SourceGuid": "0C731B0218BC58ED9DEDB22375D43B2B",
+      "ProductID": 7281,
+      "SubID": 278527144,
+      "ProductName": "pc/materialeditor/viewportmodels/beveledcylinder_lod0_bitangent0.fbx.azbuffer",
+      "AssetType": "F6C5EA8A1DB3456EB970B6E2AB262AED",
+      "JobPK": 895
+    },
+    {
+      "SourceID": 882,
+      "SourceName": "MaterialEditor/ViewportModels/BeveledCylinder.fbx",
+      "SourceGuid": "0C731B0218BC58ED9DEDB22375D43B2B",
+      "ProductID": 7275,
+      "SubID": 284889070,
+      "ProductName": "pc/materialeditor/viewportmodels/beveledcylinder_lod0_index.fbx.azbuffer",
+      "AssetType": "F6C5EA8A1DB3456EB970B6E2AB262AED",
+      "JobPK": 895
+    },
+    {
+      "SourceID": 882,
+      "SourceName": "MaterialEditor/ViewportModels/BeveledCylinder.fbx",
+      "SourceGuid": "0C731B0218BC58ED9DEDB22375D43B2B",
+      "ProductID": 7277,
+      "SubID": 269616105,
+      "ProductName": "pc/materialeditor/viewportmodels/beveledcylinder_lod0_normal0.fbx.azbuffer",
+      "AssetType": "F6C5EA8A1DB3456EB970B6E2AB262AED",
+      "JobPK": 895
+    },
+    {
+      "SourceID": 882,
+      "SourceName": "MaterialEditor/ViewportModels/BeveledCylinder.fbx",
+      "SourceGuid": "0C731B0218BC58ED9DEDB22375D43B2B",
+      "ProductID": 7276,
+      "SubID": 269608315,
+      "ProductName": "pc/materialeditor/viewportmodels/beveledcylinder_lod0_position0.fbx.azbuffer",
+      "AssetType": "F6C5EA8A1DB3456EB970B6E2AB262AED",
+      "JobPK": 895
+    },
+    {
+      "SourceID": 882,
+      "SourceName": "MaterialEditor/ViewportModels/BeveledCylinder.fbx",
+      "SourceGuid": "0C731B0218BC58ED9DEDB22375D43B2B",
+      "ProductID": 7280,
+      "SubID": 282579513,
+      "ProductName": "pc/materialeditor/viewportmodels/beveledcylinder_lod0_tangent0.fbx.azbuffer",
+      "AssetType": "F6C5EA8A1DB3456EB970B6E2AB262AED",
+      "JobPK": 895
+    },
+    {
+      "SourceID": 882,
+      "SourceName": "MaterialEditor/ViewportModels/BeveledCylinder.fbx",
+      "SourceGuid": "0C731B0218BC58ED9DEDB22375D43B2B",
+      "ProductID": 7278,
+      "SubID": 282836355,
+      "ProductName": "pc/materialeditor/viewportmodels/beveledcylinder_lod0_uv0.fbx.azbuffer",
+      "AssetType": "F6C5EA8A1DB3456EB970B6E2AB262AED",
+      "JobPK": 895
+    },
+    {
+      "SourceID": 882,
+      "SourceName": "MaterialEditor/ViewportModels/BeveledCylinder.fbx",
+      "SourceGuid": "0C731B0218BC58ED9DEDB22375D43B2B",
+      "ProductID": 7279,
+      "SubID": 282889493,
+      "ProductName": "pc/materialeditor/viewportmodels/beveledcylinder_lod0_uv1.fbx.azbuffer",
+      "AssetType": "F6C5EA8A1DB3456EB970B6E2AB262AED",
+      "JobPK": 895
+    },
+    {
+      "SourceID": 571,
+      "SourceName": "MaterialEditor/ViewportModels/BeveledCylinder.modelpreset.azasset",
+      "SourceGuid": "56C021997B4F5896A713F70E6EBA0726",
+      "ProductID": 773,
+      "SubID": 0,
+      "ProductName": "pc/materialeditor/viewportmodels/beveledcylinder.modelpreset.azasset",
+      "AssetType": "2643D6863E7C450CBB61427EDEBF13D5",
+      "JobPK": 573
+    },
+    {
+      "SourceID": 883,
+      "SourceName": "MaterialEditor/ViewportModels/Caduceus.fbx",
+      "SourceGuid": "ECB56B9312F256FF94ABE14F61885ACB",
+      "ProductID": 7350,
+      "SubID": 4194304,
+      "ProductName": "pc/materialeditor/viewportmodels/caduceus.fbx.abdata.json",
+      "AssetType": "D0A5E84E98664AD7A6A14D28FE7871C5",
+      "JobPK": 896
+    },
+    {
+      "SourceID": 883,
+      "SourceName": "MaterialEditor/ViewportModels/Caduceus.fbx",
+      "SourceGuid": "ECB56B9312F256FF94ABE14F61885ACB",
+      "ProductID": 7360,
+      "SubID": 270262656,
+      "ProductName": "pc/materialeditor/viewportmodels/caduceus.fbx.azmodel",
+      "AssetType": "2C7477B669C545BE8163BCD6A275B6D8",
+      "JobPK": 896
+    },
+    {
+      "SourceID": 883,
+      "SourceName": "MaterialEditor/ViewportModels/Caduceus.fbx",
+      "SourceGuid": "ECB56B9312F256FF94ABE14F61885ACB",
+      "ProductID": 7351,
+      "SubID": 1803671422,
+      "ProductName": "pc/materialeditor/viewportmodels/caduceus_default_12399812254575482750.fbx.azmaterial",
+      "AssetType": "522C7BE0501D463E92C615184A2B7AD8",
+      "JobPK": 896
+    },
+    {
+      "SourceID": 883,
+      "SourceName": "MaterialEditor/ViewportModels/Caduceus.fbx",
+      "SourceGuid": "ECB56B9312F256FF94ABE14F61885ACB",
+      "ProductID": 7359,
+      "SubID": 279243517,
+      "ProductName": "pc/materialeditor/viewportmodels/caduceus_lod0.fbx.azlod",
+      "AssetType": "65B5A801B9B941609CB4D40DAA50B15C",
+      "JobPK": 896
+    },
+    {
+      "SourceID": 883,
+      "SourceName": "MaterialEditor/ViewportModels/Caduceus.fbx",
+      "SourceGuid": "ECB56B9312F256FF94ABE14F61885ACB",
+      "ProductID": 7358,
+      "SubID": 281725253,
+      "ProductName": "pc/materialeditor/viewportmodels/caduceus_lod0_bitangent0.fbx.azbuffer",
+      "AssetType": "F6C5EA8A1DB3456EB970B6E2AB262AED",
+      "JobPK": 896
+    },
+    {
+      "SourceID": 883,
+      "SourceName": "MaterialEditor/ViewportModels/Caduceus.fbx",
+      "SourceGuid": "ECB56B9312F256FF94ABE14F61885ACB",
+      "ProductID": 7352,
+      "SubID": 279397772,
+      "ProductName": "pc/materialeditor/viewportmodels/caduceus_lod0_index.fbx.azbuffer",
+      "AssetType": "F6C5EA8A1DB3456EB970B6E2AB262AED",
+      "JobPK": 896
+    },
+    {
+      "SourceID": 883,
+      "SourceName": "MaterialEditor/ViewportModels/Caduceus.fbx",
+      "SourceGuid": "ECB56B9312F256FF94ABE14F61885ACB",
+      "ProductID": 7354,
+      "SubID": 282111774,
+      "ProductName": "pc/materialeditor/viewportmodels/caduceus_lod0_normal0.fbx.azbuffer",
+      "AssetType": "F6C5EA8A1DB3456EB970B6E2AB262AED",
+      "JobPK": 896
+    },
+    {
+      "SourceID": 883,
+      "SourceName": "MaterialEditor/ViewportModels/Caduceus.fbx",
+      "SourceGuid": "ECB56B9312F256FF94ABE14F61885ACB",
+      "ProductID": 7353,
+      "SubID": 277658624,
+      "ProductName": "pc/materialeditor/viewportmodels/caduceus_lod0_position0.fbx.azbuffer",
+      "AssetType": "F6C5EA8A1DB3456EB970B6E2AB262AED",
+      "JobPK": 896
+    },
+    {
+      "SourceID": 883,
+      "SourceName": "MaterialEditor/ViewportModels/Caduceus.fbx",
+      "SourceGuid": "ECB56B9312F256FF94ABE14F61885ACB",
+      "ProductID": 7357,
+      "SubID": 282031914,
+      "ProductName": "pc/materialeditor/viewportmodels/caduceus_lod0_tangent0.fbx.azbuffer",
+      "AssetType": "F6C5EA8A1DB3456EB970B6E2AB262AED",
+      "JobPK": 896
+    },
+    {
+      "SourceID": 883,
+      "SourceName": "MaterialEditor/ViewportModels/Caduceus.fbx",
+      "SourceGuid": "ECB56B9312F256FF94ABE14F61885ACB",
+      "ProductID": 7355,
+      "SubID": 269080621,
+      "ProductName": "pc/materialeditor/viewportmodels/caduceus_lod0_uv0.fbx.azbuffer",
+      "AssetType": "F6C5EA8A1DB3456EB970B6E2AB262AED",
+      "JobPK": 896
+    },
+    {
+      "SourceID": 883,
+      "SourceName": "MaterialEditor/ViewportModels/Caduceus.fbx",
+      "SourceGuid": "ECB56B9312F256FF94ABE14F61885ACB",
+      "ProductID": 7356,
+      "SubID": 269412539,
+      "ProductName": "pc/materialeditor/viewportmodels/caduceus_lod0_uv1.fbx.azbuffer",
+      "AssetType": "F6C5EA8A1DB3456EB970B6E2AB262AED",
+      "JobPK": 896
+    },
+    {
+      "SourceID": 569,
+      "SourceName": "MaterialEditor/ViewportModels/Caduceus.modelpreset.azasset",
+      "SourceGuid": "46D4B53FA900591BB4CD75A79E47749B",
+      "ProductID": 771,
+      "SubID": 0,
+      "ProductName": "pc/materialeditor/viewportmodels/caduceus.modelpreset.azasset",
+      "AssetType": "2643D6863E7C450CBB61427EDEBF13D5",
+      "JobPK": 571
+    },
+    {
+      "SourceID": 884,
+      "SourceName": "MaterialEditor/ViewportModels/Cone.fbx",
+      "SourceGuid": "8E6D29E300195C5A9F5D61656BC02DD7",
+      "ProductID": 7262,
+      "SubID": 4194304,
+      "ProductName": "pc/materialeditor/viewportmodels/cone.fbx.abdata.json",
+      "AssetType": "D0A5E84E98664AD7A6A14D28FE7871C5",
+      "JobPK": 897
+    },
+    {
+      "SourceID": 884,
+      "SourceName": "MaterialEditor/ViewportModels/Cone.fbx",
+      "SourceGuid": "8E6D29E300195C5A9F5D61656BC02DD7",
+      "ProductID": 7272,
+      "SubID": 284874770,
+      "ProductName": "pc/materialeditor/viewportmodels/cone.fbx.azmodel",
+      "AssetType": "2C7477B669C545BE8163BCD6A275B6D8",
+      "JobPK": 897
+    },
+    {
+      "SourceID": 884,
+      "SourceName": "MaterialEditor/ViewportModels/Cone.fbx",
+      "SourceGuid": "8E6D29E300195C5A9F5D61656BC02DD7",
+      "ProductID": 7263,
+      "SubID": 1803671422,
+      "ProductName": "pc/materialeditor/viewportmodels/cone_default_12399812254575482750.fbx.azmaterial",
+      "AssetType": "522C7BE0501D463E92C615184A2B7AD8",
+      "JobPK": 897
+    },
+    {
+      "SourceID": 884,
+      "SourceName": "MaterialEditor/ViewportModels/Cone.fbx",
+      "SourceGuid": "8E6D29E300195C5A9F5D61656BC02DD7",
+      "ProductID": 7271,
+      "SubID": 283947066,
+      "ProductName": "pc/materialeditor/viewportmodels/cone_lod0.fbx.azlod",
+      "AssetType": "65B5A801B9B941609CB4D40DAA50B15C",
+      "JobPK": 897
+    },
+    {
+      "SourceID": 884,
+      "SourceName": "MaterialEditor/ViewportModels/Cone.fbx",
+      "SourceGuid": "8E6D29E300195C5A9F5D61656BC02DD7",
+      "ProductID": 7270,
+      "SubID": 269225952,
+      "ProductName": "pc/materialeditor/viewportmodels/cone_lod0_bitangent0.fbx.azbuffer",
+      "AssetType": "F6C5EA8A1DB3456EB970B6E2AB262AED",
+      "JobPK": 897
+    },
+    {
+      "SourceID": 884,
+      "SourceName": "MaterialEditor/ViewportModels/Cone.fbx",
+      "SourceGuid": "8E6D29E300195C5A9F5D61656BC02DD7",
+      "ProductID": 7264,
+      "SubID": 271677456,
+      "ProductName": "pc/materialeditor/viewportmodels/cone_lod0_index.fbx.azbuffer",
+      "AssetType": "F6C5EA8A1DB3456EB970B6E2AB262AED",
+      "JobPK": 897
+    },
+    {
+      "SourceID": 884,
+      "SourceName": "MaterialEditor/ViewportModels/Cone.fbx",
+      "SourceGuid": "8E6D29E300195C5A9F5D61656BC02DD7",
+      "ProductID": 7266,
+      "SubID": 273427599,
+      "ProductName": "pc/materialeditor/viewportmodels/cone_lod0_normal0.fbx.azbuffer",
+      "AssetType": "F6C5EA8A1DB3456EB970B6E2AB262AED",
+      "JobPK": 897
+    },
+    {
+      "SourceID": 884,
+      "SourceName": "MaterialEditor/ViewportModels/Cone.fbx",
+      "SourceGuid": "8E6D29E300195C5A9F5D61656BC02DD7",
+      "ProductID": 7265,
+      "SubID": 275206237,
+      "ProductName": "pc/materialeditor/viewportmodels/cone_lod0_position0.fbx.azbuffer",
+      "AssetType": "F6C5EA8A1DB3456EB970B6E2AB262AED",
+      "JobPK": 897
+    },
+    {
+      "SourceID": 884,
+      "SourceName": "MaterialEditor/ViewportModels/Cone.fbx",
+      "SourceGuid": "8E6D29E300195C5A9F5D61656BC02DD7",
+      "ProductID": 7269,
+      "SubID": 272779387,
+      "ProductName": "pc/materialeditor/viewportmodels/cone_lod0_tangent0.fbx.azbuffer",
+      "AssetType": "F6C5EA8A1DB3456EB970B6E2AB262AED",
+      "JobPK": 897
+    },
+    {
+      "SourceID": 884,
+      "SourceName": "MaterialEditor/ViewportModels/Cone.fbx",
+      "SourceGuid": "8E6D29E300195C5A9F5D61656BC02DD7",
+      "ProductID": 7267,
+      "SubID": 270194791,
+      "ProductName": "pc/materialeditor/viewportmodels/cone_lod0_uv0.fbx.azbuffer",
+      "AssetType": "F6C5EA8A1DB3456EB970B6E2AB262AED",
+      "JobPK": 897
+    },
+    {
+      "SourceID": 884,
+      "SourceName": "MaterialEditor/ViewportModels/Cone.fbx",
+      "SourceGuid": "8E6D29E300195C5A9F5D61656BC02DD7",
+      "ProductID": 7268,
+      "SubID": 270395633,
+      "ProductName": "pc/materialeditor/viewportmodels/cone_lod0_uv1.fbx.azbuffer",
+      "AssetType": "F6C5EA8A1DB3456EB970B6E2AB262AED",
+      "JobPK": 897
+    },
+    {
+      "SourceID": 572,
+      "SourceName": "MaterialEditor/ViewportModels/Cone.modelpreset.azasset",
+      "SourceGuid": "7467489E10D951B6A5FA4CEF6258B27F",
+      "ProductID": 774,
+      "SubID": 0,
+      "ProductName": "pc/materialeditor/viewportmodels/cone.modelpreset.azasset",
+      "AssetType": "2643D6863E7C450CBB61427EDEBF13D5",
+      "JobPK": 574
+    },
+    {
+      "SourceID": 885,
+      "SourceName": "MaterialEditor/ViewportModels/Cube.fbx",
+      "SourceGuid": "B991E03BF50D552E9E2D64FA6DAB1CCB",
+      "ProductID": 7361,
+      "SubID": 4194304,
+      "ProductName": "pc/materialeditor/viewportmodels/cube.fbx.abdata.json",
+      "AssetType": "D0A5E84E98664AD7A6A14D28FE7871C5",
+      "JobPK": 898
+    },
+    {
+      "SourceID": 885,
+      "SourceName": "MaterialEditor/ViewportModels/Cube.fbx",
+      "SourceGuid": "B991E03BF50D552E9E2D64FA6DAB1CCB",
+      "ProductID": 7371,
+      "SubID": 285127096,
+      "ProductName": "pc/materialeditor/viewportmodels/cube.fbx.azmodel",
+      "AssetType": "2C7477B669C545BE8163BCD6A275B6D8",
+      "JobPK": 898
+    },
+    {
+      "SourceID": 885,
+      "SourceName": "MaterialEditor/ViewportModels/Cube.fbx",
+      "SourceGuid": "B991E03BF50D552E9E2D64FA6DAB1CCB",
+      "ProductID": 7362,
+      "SubID": 1803671422,
+      "ProductName": "pc/materialeditor/viewportmodels/cube_default_12399812254575482750.fbx.azmaterial",
+      "AssetType": "522C7BE0501D463E92C615184A2B7AD8",
+      "JobPK": 898
+    },
+    {
+      "SourceID": 885,
+      "SourceName": "MaterialEditor/ViewportModels/Cube.fbx",
+      "SourceGuid": "B991E03BF50D552E9E2D64FA6DAB1CCB",
+      "ProductID": 7370,
+      "SubID": 272103341,
+      "ProductName": "pc/materialeditor/viewportmodels/cube_lod0.fbx.azlod",
+      "AssetType": "65B5A801B9B941609CB4D40DAA50B15C",
+      "JobPK": 898
+    },
+    {
+      "SourceID": 885,
+      "SourceName": "MaterialEditor/ViewportModels/Cube.fbx",
+      "SourceGuid": "B991E03BF50D552E9E2D64FA6DAB1CCB",
+      "ProductID": 7369,
+      "SubID": 279074452,
+      "ProductName": "pc/materialeditor/viewportmodels/cube_lod0_bitangent0.fbx.azbuffer",
+      "AssetType": "F6C5EA8A1DB3456EB970B6E2AB262AED",
+      "JobPK": 898
+    },
+    {
+      "SourceID": 885,
+      "SourceName": "MaterialEditor/ViewportModels/Cube.fbx",
+      "SourceGuid": "B991E03BF50D552E9E2D64FA6DAB1CCB",
+      "ProductID": 7363,
+      "SubID": 269362972,
+      "ProductName": "pc/materialeditor/viewportmodels/cube_lod0_index.fbx.azbuffer",
+      "AssetType": "F6C5EA8A1DB3456EB970B6E2AB262AED",
+      "JobPK": 898
+    },
+    {
+      "SourceID": 885,
+      "SourceName": "MaterialEditor/ViewportModels/Cube.fbx",
+      "SourceGuid": "B991E03BF50D552E9E2D64FA6DAB1CCB",
+      "ProductID": 7365,
+      "SubID": 271385049,
+      "ProductName": "pc/materialeditor/viewportmodels/cube_lod0_normal0.fbx.azbuffer",
+      "AssetType": "F6C5EA8A1DB3456EB970B6E2AB262AED",
+      "JobPK": 898
+    },
+    {
+      "SourceID": 885,
+      "SourceName": "MaterialEditor/ViewportModels/Cube.fbx",
+      "SourceGuid": "B991E03BF50D552E9E2D64FA6DAB1CCB",
+      "ProductID": 7364,
+      "SubID": 274309531,
+      "ProductName": "pc/materialeditor/viewportmodels/cube_lod0_position0.fbx.azbuffer",
+      "AssetType": "F6C5EA8A1DB3456EB970B6E2AB262AED",
+      "JobPK": 898
+    },
+    {
+      "SourceID": 885,
+      "SourceName": "MaterialEditor/ViewportModels/Cube.fbx",
+      "SourceGuid": "B991E03BF50D552E9E2D64FA6DAB1CCB",
+      "ProductID": 7368,
+      "SubID": 270392727,
+      "ProductName": "pc/materialeditor/viewportmodels/cube_lod0_tangent0.fbx.azbuffer",
+      "AssetType": "F6C5EA8A1DB3456EB970B6E2AB262AED",
+      "JobPK": 898
+    },
+    {
+      "SourceID": 885,
+      "SourceName": "MaterialEditor/ViewportModels/Cube.fbx",
+      "SourceGuid": "B991E03BF50D552E9E2D64FA6DAB1CCB",
+      "ProductID": 7366,
+      "SubID": 271535933,
+      "ProductName": "pc/materialeditor/viewportmodels/cube_lod0_uv0.fbx.azbuffer",
+      "AssetType": "F6C5EA8A1DB3456EB970B6E2AB262AED",
+      "JobPK": 898
+    },
+    {
+      "SourceID": 885,
+      "SourceName": "MaterialEditor/ViewportModels/Cube.fbx",
+      "SourceGuid": "B991E03BF50D552E9E2D64FA6DAB1CCB",
+      "ProductID": 7367,
+      "SubID": 271089579,
+      "ProductName": "pc/materialeditor/viewportmodels/cube_lod0_uv1.fbx.azbuffer",
+      "AssetType": "F6C5EA8A1DB3456EB970B6E2AB262AED",
+      "JobPK": 898
+    },
+    {
+      "SourceID": 574,
+      "SourceName": "MaterialEditor/ViewportModels/Cube.modelpreset.azasset",
+      "SourceGuid": "E1B23617811755139E1957574F8218FF",
+      "ProductID": 776,
+      "SubID": 0,
+      "ProductName": "pc/materialeditor/viewportmodels/cube.modelpreset.azasset",
+      "AssetType": "2643D6863E7C450CBB61427EDEBF13D5",
+      "JobPK": 576
+    },
+    {
+      "SourceID": 886,
+      "SourceName": "MaterialEditor/ViewportModels/Cylinder.fbx",
+      "SourceGuid": "8A2E7A82D7C35E9CA56C6EDA70876347",
+      "ProductID": 7317,
+      "SubID": 4194304,
+      "ProductName": "pc/materialeditor/viewportmodels/cylinder.fbx.abdata.json",
+      "AssetType": "D0A5E84E98664AD7A6A14D28FE7871C5",
+      "JobPK": 899
+    },
+    {
+      "SourceID": 886,
+      "SourceName": "MaterialEditor/ViewportModels/Cylinder.fbx",
+      "SourceGuid": "8A2E7A82D7C35E9CA56C6EDA70876347",
+      "ProductID": 7327,
+      "SubID": 268721130,
+      "ProductName": "pc/materialeditor/viewportmodels/cylinder.fbx.azmodel",
+      "AssetType": "2C7477B669C545BE8163BCD6A275B6D8",
+      "JobPK": 899
+    },
+    {
+      "SourceID": 886,
+      "SourceName": "MaterialEditor/ViewportModels/Cylinder.fbx",
+      "SourceGuid": "8A2E7A82D7C35E9CA56C6EDA70876347",
+      "ProductID": 7318,
+      "SubID": 1803671422,
+      "ProductName": "pc/materialeditor/viewportmodels/cylinder_default_12399812254575482750.fbx.azmaterial",
+      "AssetType": "522C7BE0501D463E92C615184A2B7AD8",
+      "JobPK": 899
+    },
+    {
+      "SourceID": 886,
+      "SourceName": "MaterialEditor/ViewportModels/Cylinder.fbx",
+      "SourceGuid": "8A2E7A82D7C35E9CA56C6EDA70876347",
+      "ProductID": 7326,
+      "SubID": 277240190,
+      "ProductName": "pc/materialeditor/viewportmodels/cylinder_lod0.fbx.azlod",
+      "AssetType": "65B5A801B9B941609CB4D40DAA50B15C",
+      "JobPK": 899
+    },
+    {
+      "SourceID": 886,
+      "SourceName": "MaterialEditor/ViewportModels/Cylinder.fbx",
+      "SourceGuid": "8A2E7A82D7C35E9CA56C6EDA70876347",
+      "ProductID": 7325,
+      "SubID": 270214304,
+      "ProductName": "pc/materialeditor/viewportmodels/cylinder_lod0_bitangent0.fbx.azbuffer",
+      "AssetType": "F6C5EA8A1DB3456EB970B6E2AB262AED",
+      "JobPK": 899
+    },
+    {
+      "SourceID": 886,
+      "SourceName": "MaterialEditor/ViewportModels/Cylinder.fbx",
+      "SourceGuid": "8A2E7A82D7C35E9CA56C6EDA70876347",
+      "ProductID": 7319,
+      "SubID": 283339935,
+      "ProductName": "pc/materialeditor/viewportmodels/cylinder_lod0_index.fbx.azbuffer",
+      "AssetType": "F6C5EA8A1DB3456EB970B6E2AB262AED",
+      "JobPK": 899
+    },
+    {
+      "SourceID": 886,
+      "SourceName": "MaterialEditor/ViewportModels/Cylinder.fbx",
+      "SourceGuid": "8A2E7A82D7C35E9CA56C6EDA70876347",
+      "ProductID": 7321,
+      "SubID": 277718692,
+      "ProductName": "pc/materialeditor/viewportmodels/cylinder_lod0_normal0.fbx.azbuffer",
+      "AssetType": "F6C5EA8A1DB3456EB970B6E2AB262AED",
+      "JobPK": 899
+    },
+    {
+      "SourceID": 886,
+      "SourceName": "MaterialEditor/ViewportModels/Cylinder.fbx",
+      "SourceGuid": "8A2E7A82D7C35E9CA56C6EDA70876347",
+      "ProductID": 7320,
+      "SubID": 276455883,
+      "ProductName": "pc/materialeditor/viewportmodels/cylinder_lod0_position0.fbx.azbuffer",
+      "AssetType": "F6C5EA8A1DB3456EB970B6E2AB262AED",
+      "JobPK": 899
+    },
+    {
+      "SourceID": 886,
+      "SourceName": "MaterialEditor/ViewportModels/Cylinder.fbx",
+      "SourceGuid": "8A2E7A82D7C35E9CA56C6EDA70876347",
+      "ProductID": 7324,
+      "SubID": 274231473,
+      "ProductName": "pc/materialeditor/viewportmodels/cylinder_lod0_tangent0.fbx.azbuffer",
+      "AssetType": "F6C5EA8A1DB3456EB970B6E2AB262AED",
+      "JobPK": 899
+    },
+    {
+      "SourceID": 886,
+      "SourceName": "MaterialEditor/ViewportModels/Cylinder.fbx",
+      "SourceGuid": "8A2E7A82D7C35E9CA56C6EDA70876347",
+      "ProductID": 7322,
+      "SubID": 273587166,
+      "ProductName": "pc/materialeditor/viewportmodels/cylinder_lod0_uv0.fbx.azbuffer",
+      "AssetType": "F6C5EA8A1DB3456EB970B6E2AB262AED",
+      "JobPK": 899
+    },
+    {
+      "SourceID": 886,
+      "SourceName": "MaterialEditor/ViewportModels/Cylinder.fbx",
+      "SourceGuid": "8A2E7A82D7C35E9CA56C6EDA70876347",
+      "ProductID": 7323,
+      "SubID": 273263432,
+      "ProductName": "pc/materialeditor/viewportmodels/cylinder_lod0_uv1.fbx.azbuffer",
+      "AssetType": "F6C5EA8A1DB3456EB970B6E2AB262AED",
+      "JobPK": 899
+    },
+    {
+      "SourceID": 576,
+      "SourceName": "MaterialEditor/ViewportModels/Cylinder.modelpreset.azasset",
+      "SourceGuid": "7873427E11B952D28136B022B1E9D533",
+      "ProductID": 778,
+      "SubID": 0,
+      "ProductName": "pc/materialeditor/viewportmodels/cylinder.modelpreset.azasset",
+      "AssetType": "2643D6863E7C450CBB61427EDEBF13D5",
+      "JobPK": 578
+    },
+    {
+      "SourceID": 887,
+      "SourceName": "MaterialEditor/ViewportModels/Hermanubis.fbx",
+      "SourceGuid": "1F650917AA7451079C49648C957B33DA",
+      "ProductID": 7394,
+      "SubID": 4194304,
+      "ProductName": "pc/materialeditor/viewportmodels/hermanubis.fbx.abdata.json",
+      "AssetType": "D0A5E84E98664AD7A6A14D28FE7871C5",
+      "JobPK": 900
+    },
+    {
+      "SourceID": 887,
+      "SourceName": "MaterialEditor/ViewportModels/Hermanubis.fbx",
+      "SourceGuid": "1F650917AA7451079C49648C957B33DA",
+      "ProductID": 7404,
+      "SubID": 275904906,
+      "ProductName": "pc/materialeditor/viewportmodels/hermanubis.fbx.azmodel",
+      "AssetType": "2C7477B669C545BE8163BCD6A275B6D8",
+      "JobPK": 900
+    },
+    {
+      "SourceID": 887,
+      "SourceName": "MaterialEditor/ViewportModels/Hermanubis.fbx",
+      "SourceGuid": "1F650917AA7451079C49648C957B33DA",
+      "ProductID": 7403,
+      "SubID": 271181667,
+      "ProductName": "pc/materialeditor/viewportmodels/hermanubis_lod0.fbx.azlod",
+      "AssetType": "65B5A801B9B941609CB4D40DAA50B15C",
+      "JobPK": 900
+    },
+    {
+      "SourceID": 887,
+      "SourceName": "MaterialEditor/ViewportModels/Hermanubis.fbx",
+      "SourceGuid": "1F650917AA7451079C49648C957B33DA",
+      "ProductID": 7402,
+      "SubID": 274679318,
+      "ProductName": "pc/materialeditor/viewportmodels/hermanubis_lod0_bitangent0.fbx.azbuffer",
+      "AssetType": "F6C5EA8A1DB3456EB970B6E2AB262AED",
+      "JobPK": 900
+    },
+    {
+      "SourceID": 887,
+      "SourceName": "MaterialEditor/ViewportModels/Hermanubis.fbx",
+      "SourceGuid": "1F650917AA7451079C49648C957B33DA",
+      "ProductID": 7396,
+      "SubID": 270388638,
+      "ProductName": "pc/materialeditor/viewportmodels/hermanubis_lod0_index.fbx.azbuffer",
+      "AssetType": "F6C5EA8A1DB3456EB970B6E2AB262AED",
+      "JobPK": 900
+    },
+    {
+      "SourceID": 887,
+      "SourceName": "MaterialEditor/ViewportModels/Hermanubis.fbx",
+      "SourceGuid": "1F650917AA7451079C49648C957B33DA",
+      "ProductID": 7398,
+      "SubID": 273133669,
+      "ProductName": "pc/materialeditor/viewportmodels/hermanubis_lod0_normal0.fbx.azbuffer",
+      "AssetType": "F6C5EA8A1DB3456EB970B6E2AB262AED",
+      "JobPK": 900
+    },
+    {
+      "SourceID": 887,
+      "SourceName": "MaterialEditor/ViewportModels/Hermanubis.fbx",
+      "SourceGuid": "1F650917AA7451079C49648C957B33DA",
+      "ProductID": 7397,
+      "SubID": 273648223,
+      "ProductName": "pc/materialeditor/viewportmodels/hermanubis_lod0_position0.fbx.azbuffer",
+      "AssetType": "F6C5EA8A1DB3456EB970B6E2AB262AED",
+      "JobPK": 900
+    },
+    {
+      "SourceID": 887,
+      "SourceName": "MaterialEditor/ViewportModels/Hermanubis.fbx",
+      "SourceGuid": "1F650917AA7451079C49648C957B33DA",
+      "ProductID": 7401,
+      "SubID": 277039233,
+      "ProductName": "pc/materialeditor/viewportmodels/hermanubis_lod0_tangent0.fbx.azbuffer",
+      "AssetType": "F6C5EA8A1DB3456EB970B6E2AB262AED",
+      "JobPK": 900
+    },
+    {
+      "SourceID": 887,
+      "SourceName": "MaterialEditor/ViewportModels/Hermanubis.fbx",
+      "SourceGuid": "1F650917AA7451079C49648C957B33DA",
+      "ProductID": 7399,
+      "SubID": 280768649,
+      "ProductName": "pc/materialeditor/viewportmodels/hermanubis_lod0_uv0.fbx.azbuffer",
+      "AssetType": "F6C5EA8A1DB3456EB970B6E2AB262AED",
+      "JobPK": 900
+    },
+    {
+      "SourceID": 887,
+      "SourceName": "MaterialEditor/ViewportModels/Hermanubis.fbx",
+      "SourceGuid": "1F650917AA7451079C49648C957B33DA",
+      "ProductID": 7400,
+      "SubID": 280690719,
+      "ProductName": "pc/materialeditor/viewportmodels/hermanubis_lod0_uv1.fbx.azbuffer",
+      "AssetType": "F6C5EA8A1DB3456EB970B6E2AB262AED",
+      "JobPK": 900
+    },
+    {
+      "SourceID": 887,
+      "SourceName": "MaterialEditor/ViewportModels/Hermanubis.fbx",
+      "SourceGuid": "1F650917AA7451079C49648C957B33DA",
+      "ProductID": 7395,
+      "SubID": 772225844,
+      "ProductName": "pc/materialeditor/viewportmodels/hermanubis_lucy_low1_15528762986004429620.fbx.azmaterial",
+      "AssetType": "522C7BE0501D463E92C615184A2B7AD8",
+      "JobPK": 900
+    },
+    {
+      "SourceID": 575,
+      "SourceName": "MaterialEditor/ViewportModels/Hermanubis.modelpreset.azasset",
+      "SourceGuid": "7EAE3342C6855406A3617299B5AABCA6",
+      "ProductID": 777,
+      "SubID": 0,
+      "ProductName": "pc/materialeditor/viewportmodels/hermanubis.modelpreset.azasset",
+      "AssetType": "2643D6863E7C450CBB61427EDEBF13D5",
+      "JobPK": 577
+    },
+    {
+      "SourceID": 888,
+      "SourceName": "MaterialEditor/ViewportModels/Plane_1x1.fbx",
+      "SourceGuid": "767B3209EDF7503ABF3D6A69DAABC966",
+      "ProductID": 7218,
+      "SubID": 4194304,
+      "ProductName": "pc/materialeditor/viewportmodels/plane_1x1.fbx.abdata.json",
+      "AssetType": "D0A5E84E98664AD7A6A14D28FE7871C5",
+      "JobPK": 901
+    },
+    {
+      "SourceID": 888,
+      "SourceName": "MaterialEditor/ViewportModels/Plane_1x1.fbx",
+      "SourceGuid": "767B3209EDF7503ABF3D6A69DAABC966",
+      "ProductID": 7228,
+      "SubID": 285003870,
+      "ProductName": "pc/materialeditor/viewportmodels/plane_1x1.fbx.azmodel",
+      "AssetType": "2C7477B669C545BE8163BCD6A275B6D8",
+      "JobPK": 901
+    },
+    {
+      "SourceID": 888,
+      "SourceName": "MaterialEditor/ViewportModels/Plane_1x1.fbx",
+      "SourceGuid": "767B3209EDF7503ABF3D6A69DAABC966",
+      "ProductID": 7219,
+      "SubID": 1803671422,
+      "ProductName": "pc/materialeditor/viewportmodels/plane_1x1_default_12399812254575482750.fbx.azmaterial",
+      "AssetType": "522C7BE0501D463E92C615184A2B7AD8",
+      "JobPK": 901
+    },
+    {
+      "SourceID": 888,
+      "SourceName": "MaterialEditor/ViewportModels/Plane_1x1.fbx",
+      "SourceGuid": "767B3209EDF7503ABF3D6A69DAABC966",
+      "ProductID": 7227,
+      "SubID": 274427641,
+      "ProductName": "pc/materialeditor/viewportmodels/plane_1x1_lod0.fbx.azlod",
+      "AssetType": "65B5A801B9B941609CB4D40DAA50B15C",
+      "JobPK": 901
+    },
+    {
+      "SourceID": 888,
+      "SourceName": "MaterialEditor/ViewportModels/Plane_1x1.fbx",
+      "SourceGuid": "767B3209EDF7503ABF3D6A69DAABC966",
+      "ProductID": 7226,
+      "SubID": 281882585,
+      "ProductName": "pc/materialeditor/viewportmodels/plane_1x1_lod0_bitangent0.fbx.azbuffer",
+      "AssetType": "F6C5EA8A1DB3456EB970B6E2AB262AED",
+      "JobPK": 901
+    },
+    {
+      "SourceID": 888,
+      "SourceName": "MaterialEditor/ViewportModels/Plane_1x1.fbx",
+      "SourceGuid": "767B3209EDF7503ABF3D6A69DAABC966",
+      "ProductID": 7220,
+      "SubID": 279789309,
+      "ProductName": "pc/materialeditor/viewportmodels/plane_1x1_lod0_index.fbx.azbuffer",
+      "AssetType": "F6C5EA8A1DB3456EB970B6E2AB262AED",
+      "JobPK": 901
+    },
+    {
+      "SourceID": 888,
+      "SourceName": "MaterialEditor/ViewportModels/Plane_1x1.fbx",
+      "SourceGuid": "767B3209EDF7503ABF3D6A69DAABC966",
+      "ProductID": 7222,
+      "SubID": 270790167,
+      "ProductName": "pc/materialeditor/viewportmodels/plane_1x1_lod0_normal0.fbx.azbuffer",
+      "AssetType": "F6C5EA8A1DB3456EB970B6E2AB262AED",
+      "JobPK": 901
+    },
+    {
+      "SourceID": 888,
+      "SourceName": "MaterialEditor/ViewportModels/Plane_1x1.fbx",
+      "SourceGuid": "767B3209EDF7503ABF3D6A69DAABC966",
+      "ProductID": 7221,
+      "SubID": 278235068,
+      "ProductName": "pc/materialeditor/viewportmodels/plane_1x1_lod0_position0.fbx.azbuffer",
+      "AssetType": "F6C5EA8A1DB3456EB970B6E2AB262AED",
+      "JobPK": 901
+    },
+    {
+      "SourceID": 888,
+      "SourceName": "MaterialEditor/ViewportModels/Plane_1x1.fbx",
+      "SourceGuid": "767B3209EDF7503ABF3D6A69DAABC966",
+      "ProductID": 7225,
+      "SubID": 283262159,
+      "ProductName": "pc/materialeditor/viewportmodels/plane_1x1_lod0_tangent0.fbx.azbuffer",
+      "AssetType": "F6C5EA8A1DB3456EB970B6E2AB262AED",
+      "JobPK": 901
+    },
+    {
+      "SourceID": 888,
+      "SourceName": "MaterialEditor/ViewportModels/Plane_1x1.fbx",
+      "SourceGuid": "767B3209EDF7503ABF3D6A69DAABC966",
+      "ProductID": 7223,
+      "SubID": 282046215,
+      "ProductName": "pc/materialeditor/viewportmodels/plane_1x1_lod0_uv0.fbx.azbuffer",
+      "AssetType": "F6C5EA8A1DB3456EB970B6E2AB262AED",
+      "JobPK": 901
+    },
+    {
+      "SourceID": 888,
+      "SourceName": "MaterialEditor/ViewportModels/Plane_1x1.fbx",
+      "SourceGuid": "767B3209EDF7503ABF3D6A69DAABC966",
+      "ProductID": 7224,
+      "SubID": 281583505,
+      "ProductName": "pc/materialeditor/viewportmodels/plane_1x1_lod0_uv1.fbx.azbuffer",
+      "AssetType": "F6C5EA8A1DB3456EB970B6E2AB262AED",
+      "JobPK": 901
+    },
+    {
+      "SourceID": 579,
+      "SourceName": "MaterialEditor/ViewportModels/Plane_1x1.modelpreset.azasset",
+      "SourceGuid": "FA91BEC44BF05A3F97C0BB50082F5C5B",
+      "ProductID": 781,
+      "SubID": 0,
+      "ProductName": "pc/materialeditor/viewportmodels/plane_1x1.modelpreset.azasset",
+      "AssetType": "2643D6863E7C450CBB61427EDEBF13D5",
+      "JobPK": 581
+    },
+    {
+      "SourceID": 889,
+      "SourceName": "MaterialEditor/ViewportModels/Plane_3x3.fbx",
+      "SourceGuid": "21839E4C2A3B538A9D48D04A157DD675",
+      "ProductID": 7295,
+      "SubID": 4194304,
+      "ProductName": "pc/materialeditor/viewportmodels/plane_3x3.fbx.abdata.json",
+      "AssetType": "D0A5E84E98664AD7A6A14D28FE7871C5",
+      "JobPK": 902
+    },
+    {
+      "SourceID": 889,
+      "SourceName": "MaterialEditor/ViewportModels/Plane_3x3.fbx",
+      "SourceGuid": "21839E4C2A3B538A9D48D04A157DD675",
+      "ProductID": 7305,
+      "SubID": 276194588,
+      "ProductName": "pc/materialeditor/viewportmodels/plane_3x3.fbx.azmodel",
+      "AssetType": "2C7477B669C545BE8163BCD6A275B6D8",
+      "JobPK": 902
+    },
+    {
+      "SourceID": 889,
+      "SourceName": "MaterialEditor/ViewportModels/Plane_3x3.fbx",
+      "SourceGuid": "21839E4C2A3B538A9D48D04A157DD675",
+      "ProductID": 7296,
+      "SubID": 1803671422,
+      "ProductName": "pc/materialeditor/viewportmodels/plane_3x3_default_12399812254575482750.fbx.azmaterial",
+      "AssetType": "522C7BE0501D463E92C615184A2B7AD8",
+      "JobPK": 902
+    },
+    {
+      "SourceID": 889,
+      "SourceName": "MaterialEditor/ViewportModels/Plane_3x3.fbx",
+      "SourceGuid": "21839E4C2A3B538A9D48D04A157DD675",
+      "ProductID": 7304,
+      "SubID": 280414351,
+      "ProductName": "pc/materialeditor/viewportmodels/plane_3x3_lod0.fbx.azlod",
+      "AssetType": "65B5A801B9B941609CB4D40DAA50B15C",
+      "JobPK": 902
+    },
+    {
+      "SourceID": 889,
+      "SourceName": "MaterialEditor/ViewportModels/Plane_3x3.fbx",
+      "SourceGuid": "21839E4C2A3B538A9D48D04A157DD675",
+      "ProductID": 7303,
+      "SubID": 273005039,
+      "ProductName": "pc/materialeditor/viewportmodels/plane_3x3_lod0_bitangent0.fbx.azbuffer",
+      "AssetType": "F6C5EA8A1DB3456EB970B6E2AB262AED",
+      "JobPK": 902
+    },
+    {
+      "SourceID": 889,
+      "SourceName": "MaterialEditor/ViewportModels/Plane_3x3.fbx",
+      "SourceGuid": "21839E4C2A3B538A9D48D04A157DD675",
+      "ProductID": 7297,
+      "SubID": 284714191,
+      "ProductName": "pc/materialeditor/viewportmodels/plane_3x3_lod0_index.fbx.azbuffer",
+      "AssetType": "F6C5EA8A1DB3456EB970B6E2AB262AED",
+      "JobPK": 902
+    },
+    {
+      "SourceID": 889,
+      "SourceName": "MaterialEditor/ViewportModels/Plane_3x3.fbx",
+      "SourceGuid": "21839E4C2A3B538A9D48D04A157DD675",
+      "ProductID": 7299,
+      "SubID": 283971545,
+      "ProductName": "pc/materialeditor/viewportmodels/plane_3x3_lod0_normal0.fbx.azbuffer",
+      "AssetType": "F6C5EA8A1DB3456EB970B6E2AB262AED",
+      "JobPK": 902
+    },
+    {
+      "SourceID": 889,
+      "SourceName": "MaterialEditor/ViewportModels/Plane_3x3.fbx",
+      "SourceGuid": "21839E4C2A3B538A9D48D04A157DD675",
+      "ProductID": 7298,
+      "SubID": 283232604,
+      "ProductName": "pc/materialeditor/viewportmodels/plane_3x3_lod0_position0.fbx.azbuffer",
+      "AssetType": "F6C5EA8A1DB3456EB970B6E2AB262AED",
+      "JobPK": 902
+    },
+    {
+      "SourceID": 889,
+      "SourceName": "MaterialEditor/ViewportModels/Plane_3x3.fbx",
+      "SourceGuid": "21839E4C2A3B538A9D48D04A157DD675",
+      "ProductID": 7302,
+      "SubID": 274210201,
+      "ProductName": "pc/materialeditor/viewportmodels/plane_3x3_lod0_tangent0.fbx.azbuffer",
+      "AssetType": "F6C5EA8A1DB3456EB970B6E2AB262AED",
+      "JobPK": 902
+    },
+    {
+      "SourceID": 889,
+      "SourceName": "MaterialEditor/ViewportModels/Plane_3x3.fbx",
+      "SourceGuid": "21839E4C2A3B538A9D48D04A157DD675",
+      "ProductID": 7300,
+      "SubID": 268558757,
+      "ProductName": "pc/materialeditor/viewportmodels/plane_3x3_lod0_uv0.fbx.azbuffer",
+      "AssetType": "F6C5EA8A1DB3456EB970B6E2AB262AED",
+      "JobPK": 902
+    },
+    {
+      "SourceID": 889,
+      "SourceName": "MaterialEditor/ViewportModels/Plane_3x3.fbx",
+      "SourceGuid": "21839E4C2A3B538A9D48D04A157DD675",
+      "ProductID": 7301,
+      "SubID": 268882227,
+      "ProductName": "pc/materialeditor/viewportmodels/plane_3x3_lod0_uv1.fbx.azbuffer",
+      "AssetType": "F6C5EA8A1DB3456EB970B6E2AB262AED",
+      "JobPK": 902
+    },
+    {
+      "SourceID": 577,
+      "SourceName": "MaterialEditor/ViewportModels/Plane_3x3.modelpreset.azasset",
+      "SourceGuid": "DF65EF7EE1A25F53A2CE208E34E2D132",
+      "ProductID": 779,
+      "SubID": 0,
+      "ProductName": "pc/materialeditor/viewportmodels/plane_3x3.modelpreset.azasset",
+      "AssetType": "2643D6863E7C450CBB61427EDEBF13D5",
+      "JobPK": 579
+    },
+    {
+      "SourceID": 890,
+      "SourceName": "MaterialEditor/ViewportModels/PlatonicSphere.fbx",
+      "SourceGuid": "5D4A455DE58454EDACBADE780F1FB00F",
+      "ProductID": 7383,
+      "SubID": 4194304,
+      "ProductName": "pc/materialeditor/viewportmodels/platonicsphere.fbx.abdata.json",
+      "AssetType": "D0A5E84E98664AD7A6A14D28FE7871C5",
+      "JobPK": 903
+    },
+    {
+      "SourceID": 890,
+      "SourceName": "MaterialEditor/ViewportModels/PlatonicSphere.fbx",
+      "SourceGuid": "5D4A455DE58454EDACBADE780F1FB00F",
+      "ProductID": 7393,
+      "SubID": 270370614,
+      "ProductName": "pc/materialeditor/viewportmodels/platonicsphere.fbx.azmodel",
+      "AssetType": "2C7477B669C545BE8163BCD6A275B6D8",
+      "JobPK": 903
+    },
+    {
+      "SourceID": 890,
+      "SourceName": "MaterialEditor/ViewportModels/PlatonicSphere.fbx",
+      "SourceGuid": "5D4A455DE58454EDACBADE780F1FB00F",
+      "ProductID": 7384,
+      "SubID": 1803671422,
+      "ProductName": "pc/materialeditor/viewportmodels/platonicsphere_default_12399812254575482750.fbx.azmaterial",
+      "AssetType": "522C7BE0501D463E92C615184A2B7AD8",
+      "JobPK": 903
+    },
+    {
+      "SourceID": 890,
+      "SourceName": "MaterialEditor/ViewportModels/PlatonicSphere.fbx",
+      "SourceGuid": "5D4A455DE58454EDACBADE780F1FB00F",
+      "ProductID": 7392,
+      "SubID": 272492824,
+      "ProductName": "pc/materialeditor/viewportmodels/platonicsphere_lod0.fbx.azlod",
+      "AssetType": "65B5A801B9B941609CB4D40DAA50B15C",
+      "JobPK": 903
+    },
+    {
+      "SourceID": 890,
+      "SourceName": "MaterialEditor/ViewportModels/PlatonicSphere.fbx",
+      "SourceGuid": "5D4A455DE58454EDACBADE780F1FB00F",
+      "ProductID": 7391,
+      "SubID": 280095243,
+      "ProductName": "pc/materialeditor/viewportmodels/platonicsphere_lod0_bitangent0.fbx.azbuffer",
+      "AssetType": "F6C5EA8A1DB3456EB970B6E2AB262AED",
+      "JobPK": 903
+    },
+    {
+      "SourceID": 890,
+      "SourceName": "MaterialEditor/ViewportModels/PlatonicSphere.fbx",
+      "SourceGuid": "5D4A455DE58454EDACBADE780F1FB00F",
+      "ProductID": 7385,
+      "SubID": 278379808,
+      "ProductName": "pc/materialeditor/viewportmodels/platonicsphere_lod0_index.fbx.azbuffer",
+      "AssetType": "F6C5EA8A1DB3456EB970B6E2AB262AED",
+      "JobPK": 903
+    },
+    {
+      "SourceID": 890,
+      "SourceName": "MaterialEditor/ViewportModels/PlatonicSphere.fbx",
+      "SourceGuid": "5D4A455DE58454EDACBADE780F1FB00F",
+      "ProductID": 7387,
+      "SubID": 268722917,
+      "ProductName": "pc/materialeditor/viewportmodels/platonicsphere_lod0_normal0.fbx.azbuffer",
+      "AssetType": "F6C5EA8A1DB3456EB970B6E2AB262AED",
+      "JobPK": 903
+    },
+    {
+      "SourceID": 890,
+      "SourceName": "MaterialEditor/ViewportModels/PlatonicSphere.fbx",
+      "SourceGuid": "5D4A455DE58454EDACBADE780F1FB00F",
+      "ProductID": 7386,
+      "SubID": 269585327,
+      "ProductName": "pc/materialeditor/viewportmodels/platonicsphere_lod0_position0.fbx.azbuffer",
+      "AssetType": "F6C5EA8A1DB3456EB970B6E2AB262AED",
+      "JobPK": 903
+    },
+    {
+      "SourceID": 890,
+      "SourceName": "MaterialEditor/ViewportModels/PlatonicSphere.fbx",
+      "SourceGuid": "5D4A455DE58454EDACBADE780F1FB00F",
+      "ProductID": 7390,
+      "SubID": 269584499,
+      "ProductName": "pc/materialeditor/viewportmodels/platonicsphere_lod0_tangent0.fbx.azbuffer",
+      "AssetType": "F6C5EA8A1DB3456EB970B6E2AB262AED",
+      "JobPK": 903
+    },
+    {
+      "SourceID": 890,
+      "SourceName": "MaterialEditor/ViewportModels/PlatonicSphere.fbx",
+      "SourceGuid": "5D4A455DE58454EDACBADE780F1FB00F",
+      "ProductID": 7388,
+      "SubID": 269436996,
+      "ProductName": "pc/materialeditor/viewportmodels/platonicsphere_lod0_uv0.fbx.azbuffer",
+      "AssetType": "F6C5EA8A1DB3456EB970B6E2AB262AED",
+      "JobPK": 903
+    },
+    {
+      "SourceID": 890,
+      "SourceName": "MaterialEditor/ViewportModels/PlatonicSphere.fbx",
+      "SourceGuid": "5D4A455DE58454EDACBADE780F1FB00F",
+      "ProductID": 7389,
+      "SubID": 268990674,
+      "ProductName": "pc/materialeditor/viewportmodels/platonicsphere_lod0_uv1.fbx.azbuffer",
+      "AssetType": "F6C5EA8A1DB3456EB970B6E2AB262AED",
+      "JobPK": 903
+    },
+    {
+      "SourceID": 578,
+      "SourceName": "MaterialEditor/ViewportModels/PlatonicSphere.modelpreset.azasset",
+      "SourceGuid": "4F273FA5404F50C290893D36896BF990",
+      "ProductID": 780,
+      "SubID": 0,
+      "ProductName": "pc/materialeditor/viewportmodels/platonicsphere.modelpreset.azasset",
+      "AssetType": "2643D6863E7C450CBB61427EDEBF13D5",
+      "JobPK": 580
+    },
+    {
+      "SourceID": 891,
+      "SourceName": "MaterialEditor/ViewportModels/PolarSphere.fbx",
+      "SourceGuid": "6373F5F5C4035126A9A98682C321579B",
+      "ProductID": 7306,
+      "SubID": 4194304,
+      "ProductName": "pc/materialeditor/viewportmodels/polarsphere.fbx.abdata.json",
+      "AssetType": "D0A5E84E98664AD7A6A14D28FE7871C5",
+      "JobPK": 904
+    },
+    {
+      "SourceID": 891,
+      "SourceName": "MaterialEditor/ViewportModels/PolarSphere.fbx",
+      "SourceGuid": "6373F5F5C4035126A9A98682C321579B",
+      "ProductID": 7316,
+      "SubID": 278095953,
+      "ProductName": "pc/materialeditor/viewportmodels/polarsphere.fbx.azmodel",
+      "AssetType": "2C7477B669C545BE8163BCD6A275B6D8",
+      "JobPK": 904
+    },
+    {
+      "SourceID": 891,
+      "SourceName": "MaterialEditor/ViewportModels/PolarSphere.fbx",
+      "SourceGuid": "6373F5F5C4035126A9A98682C321579B",
+      "ProductID": 7307,
+      "SubID": 1803671422,
+      "ProductName": "pc/materialeditor/viewportmodels/polarsphere_default_12399812254575482750.fbx.azmaterial",
+      "AssetType": "522C7BE0501D463E92C615184A2B7AD8",
+      "JobPK": 904
+    },
+    {
+      "SourceID": 891,
+      "SourceName": "MaterialEditor/ViewportModels/PolarSphere.fbx",
+      "SourceGuid": "6373F5F5C4035126A9A98682C321579B",
+      "ProductID": 7315,
+      "SubID": 282074583,
+      "ProductName": "pc/materialeditor/viewportmodels/polarsphere_lod0.fbx.azlod",
+      "AssetType": "65B5A801B9B941609CB4D40DAA50B15C",
+      "JobPK": 904
+    },
+    {
+      "SourceID": 891,
+      "SourceName": "MaterialEditor/ViewportModels/PolarSphere.fbx",
+      "SourceGuid": "6373F5F5C4035126A9A98682C321579B",
+      "ProductID": 7314,
+      "SubID": 277329262,
+      "ProductName": "pc/materialeditor/viewportmodels/polarsphere_lod0_bitangent0.fbx.azbuffer",
+      "AssetType": "F6C5EA8A1DB3456EB970B6E2AB262AED",
+      "JobPK": 904
+    },
+    {
+      "SourceID": 891,
+      "SourceName": "MaterialEditor/ViewportModels/PolarSphere.fbx",
+      "SourceGuid": "6373F5F5C4035126A9A98682C321579B",
+      "ProductID": 7308,
+      "SubID": 268942246,
+      "ProductName": "pc/materialeditor/viewportmodels/polarsphere_lod0_index.fbx.azbuffer",
+      "AssetType": "F6C5EA8A1DB3456EB970B6E2AB262AED",
+      "JobPK": 904
+    },
+    {
+      "SourceID": 891,
+      "SourceName": "MaterialEditor/ViewportModels/PolarSphere.fbx",
+      "SourceGuid": "6373F5F5C4035126A9A98682C321579B",
+      "ProductID": 7310,
+      "SubID": 280906637,
+      "ProductName": "pc/materialeditor/viewportmodels/polarsphere_lod0_normal0.fbx.azbuffer",
+      "AssetType": "F6C5EA8A1DB3456EB970B6E2AB262AED",
+      "JobPK": 904
+    },
+    {
+      "SourceID": 891,
+      "SourceName": "MaterialEditor/ViewportModels/PolarSphere.fbx",
+      "SourceGuid": "6373F5F5C4035126A9A98682C321579B",
+      "ProductID": 7309,
+      "SubID": 277313238,
+      "ProductName": "pc/materialeditor/viewportmodels/polarsphere_lod0_position0.fbx.azbuffer",
+      "AssetType": "F6C5EA8A1DB3456EB970B6E2AB262AED",
+      "JobPK": 904
+    },
+    {
+      "SourceID": 891,
+      "SourceName": "MaterialEditor/ViewportModels/PolarSphere.fbx",
+      "SourceGuid": "6373F5F5C4035126A9A98682C321579B",
+      "ProductID": 7313,
+      "SubID": 285006640,
+      "ProductName": "pc/materialeditor/viewportmodels/polarsphere_lod0_tangent0.fbx.azbuffer",
+      "AssetType": "F6C5EA8A1DB3456EB970B6E2AB262AED",
+      "JobPK": 904
+    },
+    {
+      "SourceID": 891,
+      "SourceName": "MaterialEditor/ViewportModels/PolarSphere.fbx",
+      "SourceGuid": "6373F5F5C4035126A9A98682C321579B",
+      "ProductID": 7311,
+      "SubID": 276949905,
+      "ProductName": "pc/materialeditor/viewportmodels/polarsphere_lod0_uv0.fbx.azbuffer",
+      "AssetType": "F6C5EA8A1DB3456EB970B6E2AB262AED",
+      "JobPK": 904
+    },
+    {
+      "SourceID": 891,
+      "SourceName": "MaterialEditor/ViewportModels/PolarSphere.fbx",
+      "SourceGuid": "6373F5F5C4035126A9A98682C321579B",
+      "ProductID": 7312,
+      "SubID": 277273351,
+      "ProductName": "pc/materialeditor/viewportmodels/polarsphere_lod0_uv1.fbx.azbuffer",
+      "AssetType": "F6C5EA8A1DB3456EB970B6E2AB262AED",
+      "JobPK": 904
+    },
+    {
+      "SourceID": 581,
+      "SourceName": "MaterialEditor/ViewportModels/PolarSphere.modelpreset.azasset",
+      "SourceGuid": "C0A4A54B74955EB48CD355A409CA5D40",
+      "ProductID": 783,
+      "SubID": 0,
+      "ProductName": "pc/materialeditor/viewportmodels/polarsphere.modelpreset.azasset",
+      "AssetType": "2643D6863E7C450CBB61427EDEBF13D5",
+      "JobPK": 583
+    },
+    {
+      "SourceID": 892,
+      "SourceName": "MaterialEditor/ViewportModels/QuadSphere.fbx",
+      "SourceGuid": "2C665021133A538FAEE397DE948C4D6D",
+      "ProductID": 7339,
+      "SubID": 4194304,
+      "ProductName": "pc/materialeditor/viewportmodels/quadsphere.fbx.abdata.json",
+      "AssetType": "D0A5E84E98664AD7A6A14D28FE7871C5",
+      "JobPK": 905
+    },
+    {
+      "SourceID": 892,
+      "SourceName": "MaterialEditor/ViewportModels/QuadSphere.fbx",
+      "SourceGuid": "2C665021133A538FAEE397DE948C4D6D",
+      "ProductID": 7349,
+      "SubID": 280367037,
+      "ProductName": "pc/materialeditor/viewportmodels/quadsphere.fbx.azmodel",
+      "AssetType": "2C7477B669C545BE8163BCD6A275B6D8",
+      "JobPK": 905
+    },
+    {
+      "SourceID": 892,
+      "SourceName": "MaterialEditor/ViewportModels/QuadSphere.fbx",
+      "SourceGuid": "2C665021133A538FAEE397DE948C4D6D",
+      "ProductID": 7340,
+      "SubID": 1803671422,
+      "ProductName": "pc/materialeditor/viewportmodels/quadsphere_default_12399812254575482750.fbx.azmaterial",
+      "AssetType": "522C7BE0501D463E92C615184A2B7AD8",
+      "JobPK": 905
+    },
+    {
+      "SourceID": 892,
+      "SourceName": "MaterialEditor/ViewportModels/QuadSphere.fbx",
+      "SourceGuid": "2C665021133A538FAEE397DE948C4D6D",
+      "ProductID": 7348,
+      "SubID": 269412982,
+      "ProductName": "pc/materialeditor/viewportmodels/quadsphere_lod0.fbx.azlod",
+      "AssetType": "65B5A801B9B941609CB4D40DAA50B15C",
+      "JobPK": 905
+    },
+    {
+      "SourceID": 892,
+      "SourceName": "MaterialEditor/ViewportModels/QuadSphere.fbx",
+      "SourceGuid": "2C665021133A538FAEE397DE948C4D6D",
+      "ProductID": 7347,
+      "SubID": 279278737,
+      "ProductName": "pc/materialeditor/viewportmodels/quadsphere_lod0_bitangent0.fbx.azbuffer",
+      "AssetType": "F6C5EA8A1DB3456EB970B6E2AB262AED",
+      "JobPK": 905
+    },
+    {
+      "SourceID": 892,
+      "SourceName": "MaterialEditor/ViewportModels/QuadSphere.fbx",
+      "SourceGuid": "2C665021133A538FAEE397DE948C4D6D",
+      "ProductID": 7341,
+      "SubID": 276991128,
+      "ProductName": "pc/materialeditor/viewportmodels/quadsphere_lod0_index.fbx.azbuffer",
+      "AssetType": "F6C5EA8A1DB3456EB970B6E2AB262AED",
+      "JobPK": 905
+    },
+    {
+      "SourceID": 892,
+      "SourceName": "MaterialEditor/ViewportModels/QuadSphere.fbx",
+      "SourceGuid": "2C665021133A538FAEE397DE948C4D6D",
+      "ProductID": 7343,
+      "SubID": 281433978,
+      "ProductName": "pc/materialeditor/viewportmodels/quadsphere_lod0_normal0.fbx.azbuffer",
+      "AssetType": "F6C5EA8A1DB3456EB970B6E2AB262AED",
+      "JobPK": 905
+    },
+    {
+      "SourceID": 892,
+      "SourceName": "MaterialEditor/ViewportModels/QuadSphere.fbx",
+      "SourceGuid": "2C665021133A538FAEE397DE948C4D6D",
+      "ProductID": 7342,
+      "SubID": 276538523,
+      "ProductName": "pc/materialeditor/viewportmodels/quadsphere_lod0_position0.fbx.azbuffer",
+      "AssetType": "F6C5EA8A1DB3456EB970B6E2AB262AED",
+      "JobPK": 905
+    },
+    {
+      "SourceID": 892,
+      "SourceName": "MaterialEditor/ViewportModels/QuadSphere.fbx",
+      "SourceGuid": "2C665021133A538FAEE397DE948C4D6D",
+      "ProductID": 7346,
+      "SubID": 282903699,
+      "ProductName": "pc/materialeditor/viewportmodels/quadsphere_lod0_tangent0.fbx.azbuffer",
+      "AssetType": "F6C5EA8A1DB3456EB970B6E2AB262AED",
+      "JobPK": 905
+    },
+    {
+      "SourceID": 892,
+      "SourceName": "MaterialEditor/ViewportModels/QuadSphere.fbx",
+      "SourceGuid": "2C665021133A538FAEE397DE948C4D6D",
+      "ProductID": 7344,
+      "SubID": 280484952,
+      "ProductName": "pc/materialeditor/viewportmodels/quadsphere_lod0_uv0.fbx.azbuffer",
+      "AssetType": "F6C5EA8A1DB3456EB970B6E2AB262AED",
+      "JobPK": 905
+    },
+    {
+      "SourceID": 892,
+      "SourceName": "MaterialEditor/ViewportModels/QuadSphere.fbx",
+      "SourceGuid": "2C665021133A538FAEE397DE948C4D6D",
+      "ProductID": 7345,
+      "SubID": 280030414,
+      "ProductName": "pc/materialeditor/viewportmodels/quadsphere_lod0_uv1.fbx.azbuffer",
+      "AssetType": "F6C5EA8A1DB3456EB970B6E2AB262AED",
+      "JobPK": 905
+    },
+    {
+      "SourceID": 583,
+      "SourceName": "MaterialEditor/ViewportModels/QuadSphere.modelpreset.azasset",
+      "SourceGuid": "7AA7B7646DE852EF8655715E6A18F333",
+      "ProductID": 785,
+      "SubID": 0,
+      "ProductName": "pc/materialeditor/viewportmodels/quadsphere.modelpreset.azasset",
+      "AssetType": "2643D6863E7C450CBB61427EDEBF13D5",
+      "JobPK": 585
+    },
+    {
+      "SourceID": 893,
+      "SourceName": "MaterialEditor/ViewportModels/Shaderball.fbx",
+      "SourceGuid": "682C0F6C7C6D5C08B6416D0C49AF0B7B",
+      "ProductID": 7235,
+      "SubID": 4194304,
+      "ProductName": "pc/materialeditor/viewportmodels/shaderball.fbx.abdata.json",
+      "AssetType": "D0A5E84E98664AD7A6A14D28FE7871C5",
+      "JobPK": 906
+    },
+    {
+      "SourceID": 893,
+      "SourceName": "MaterialEditor/ViewportModels/Shaderball.fbx",
+      "SourceGuid": "682C0F6C7C6D5C08B6416D0C49AF0B7B",
+      "ProductID": 7246,
+      "SubID": 279578499,
+      "ProductName": "pc/materialeditor/viewportmodels/shaderball.fbx.azmodel",
+      "AssetType": "2C7477B669C545BE8163BCD6A275B6D8",
+      "JobPK": 906
+    },
+    {
+      "SourceID": 893,
+      "SourceName": "MaterialEditor/ViewportModels/Shaderball.fbx",
+      "SourceGuid": "682C0F6C7C6D5C08B6416D0C49AF0B7B",
+      "ProductID": 7236,
+      "SubID": -1473514053,
+      "ProductName": "pc/materialeditor/viewportmodels/shaderball_blinn1_2076548245838624187.fbx.azmaterial",
+      "AssetType": "522C7BE0501D463E92C615184A2B7AD8",
+      "JobPK": 906
+    },
+    {
+      "SourceID": 893,
+      "SourceName": "MaterialEditor/ViewportModels/Shaderball.fbx",
+      "SourceGuid": "682C0F6C7C6D5C08B6416D0C49AF0B7B",
+      "ProductID": 7245,
+      "SubID": 285014874,
+      "ProductName": "pc/materialeditor/viewportmodels/shaderball_lod0.fbx.azlod",
+      "AssetType": "65B5A801B9B941609CB4D40DAA50B15C",
+      "JobPK": 906
+    },
+    {
+      "SourceID": 893,
+      "SourceName": "MaterialEditor/ViewportModels/Shaderball.fbx",
+      "SourceGuid": "682C0F6C7C6D5C08B6416D0C49AF0B7B",
+      "ProductID": 7244,
+      "SubID": 272771070,
+      "ProductName": "pc/materialeditor/viewportmodels/shaderball_lod0_bitangent0.fbx.azbuffer",
+      "AssetType": "F6C5EA8A1DB3456EB970B6E2AB262AED",
+      "JobPK": 906
+    },
+    {
+      "SourceID": 893,
+      "SourceName": "MaterialEditor/ViewportModels/Shaderball.fbx",
+      "SourceGuid": "682C0F6C7C6D5C08B6416D0C49AF0B7B",
+      "ProductID": 7242,
+      "SubID": 275550352,
+      "ProductName": "pc/materialeditor/viewportmodels/shaderball_lod0_color0.fbx.azbuffer",
+      "AssetType": "F6C5EA8A1DB3456EB970B6E2AB262AED",
+      "JobPK": 906
+    },
+    {
+      "SourceID": 893,
+      "SourceName": "MaterialEditor/ViewportModels/Shaderball.fbx",
+      "SourceGuid": "682C0F6C7C6D5C08B6416D0C49AF0B7B",
+      "ProductID": 7237,
+      "SubID": 285165965,
+      "ProductName": "pc/materialeditor/viewportmodels/shaderball_lod0_index.fbx.azbuffer",
+      "AssetType": "F6C5EA8A1DB3456EB970B6E2AB262AED",
+      "JobPK": 906
+    },
+    {
+      "SourceID": 893,
+      "SourceName": "MaterialEditor/ViewportModels/Shaderball.fbx",
+      "SourceGuid": "682C0F6C7C6D5C08B6416D0C49AF0B7B",
+      "ProductID": 7239,
+      "SubID": 276672300,
+      "ProductName": "pc/materialeditor/viewportmodels/shaderball_lod0_normal0.fbx.azbuffer",
+      "AssetType": "F6C5EA8A1DB3456EB970B6E2AB262AED",
+      "JobPK": 906
+    },
+    {
+      "SourceID": 893,
+      "SourceName": "MaterialEditor/ViewportModels/Shaderball.fbx",
+      "SourceGuid": "682C0F6C7C6D5C08B6416D0C49AF0B7B",
+      "ProductID": 7238,
+      "SubID": 285014236,
+      "ProductName": "pc/materialeditor/viewportmodels/shaderball_lod0_position0.fbx.azbuffer",
+      "AssetType": "F6C5EA8A1DB3456EB970B6E2AB262AED",
+      "JobPK": 906
+    },
+    {
+      "SourceID": 893,
+      "SourceName": "MaterialEditor/ViewportModels/Shaderball.fbx",
+      "SourceGuid": "682C0F6C7C6D5C08B6416D0C49AF0B7B",
+      "ProductID": 7243,
+      "SubID": 268995498,
+      "ProductName": "pc/materialeditor/viewportmodels/shaderball_lod0_tangent0.fbx.azbuffer",
+      "AssetType": "F6C5EA8A1DB3456EB970B6E2AB262AED",
+      "JobPK": 906
+    },
+    {
+      "SourceID": 893,
+      "SourceName": "MaterialEditor/ViewportModels/Shaderball.fbx",
+      "SourceGuid": "682C0F6C7C6D5C08B6416D0C49AF0B7B",
+      "ProductID": 7240,
+      "SubID": 271671060,
+      "ProductName": "pc/materialeditor/viewportmodels/shaderball_lod0_uv0.fbx.azbuffer",
+      "AssetType": "F6C5EA8A1DB3456EB970B6E2AB262AED",
+      "JobPK": 906
+    },
+    {
+      "SourceID": 893,
+      "SourceName": "MaterialEditor/ViewportModels/Shaderball.fbx",
+      "SourceGuid": "682C0F6C7C6D5C08B6416D0C49AF0B7B",
+      "ProductID": 7241,
+      "SubID": 272002946,
+      "ProductName": "pc/materialeditor/viewportmodels/shaderball_lod0_uv1.fbx.azbuffer",
+      "AssetType": "F6C5EA8A1DB3456EB970B6E2AB262AED",
+      "JobPK": 906
+    },
+    {
+      "SourceID": 586,
+      "SourceName": "MaterialEditor/ViewportModels/Shaderball.modelpreset.azasset",
+      "SourceGuid": "B4966B04D539527085FD0FEEF562B7CD",
+      "ProductID": 788,
+      "SubID": 0,
+      "ProductName": "pc/materialeditor/viewportmodels/shaderball.modelpreset.azasset",
+      "AssetType": "2643D6863E7C450CBB61427EDEBF13D5",
+      "JobPK": 588
+    },
+    {
+      "SourceID": 894,
+      "SourceName": "MaterialEditor/ViewportModels/Torus.fbx",
+      "SourceGuid": "0FF7CB5925195D49BAADFC3F552D26B6",
+      "ProductID": 7328,
+      "SubID": 4194304,
+      "ProductName": "pc/materialeditor/viewportmodels/torus.fbx.abdata.json",
+      "AssetType": "D0A5E84E98664AD7A6A14D28FE7871C5",
+      "JobPK": 907
+    },
+    {
+      "SourceID": 894,
+      "SourceName": "MaterialEditor/ViewportModels/Torus.fbx",
+      "SourceGuid": "0FF7CB5925195D49BAADFC3F552D26B6",
+      "ProductID": 7338,
+      "SubID": 268715852,
+      "ProductName": "pc/materialeditor/viewportmodels/torus.fbx.azmodel",
+      "AssetType": "2C7477B669C545BE8163BCD6A275B6D8",
+      "JobPK": 907
+    },
+    {
+      "SourceID": 894,
+      "SourceName": "MaterialEditor/ViewportModels/Torus.fbx",
+      "SourceGuid": "0FF7CB5925195D49BAADFC3F552D26B6",
+      "ProductID": 7329,
+      "SubID": 1803671422,
+      "ProductName": "pc/materialeditor/viewportmodels/torus_default_12399812254575482750.fbx.azmaterial",
+      "AssetType": "522C7BE0501D463E92C615184A2B7AD8",
+      "JobPK": 907
+    },
+    {
+      "SourceID": 894,
+      "SourceName": "MaterialEditor/ViewportModels/Torus.fbx",
+      "SourceGuid": "0FF7CB5925195D49BAADFC3F552D26B6",
+      "ProductID": 7337,
+      "SubID": 269555548,
+      "ProductName": "pc/materialeditor/viewportmodels/torus_lod0.fbx.azlod",
+      "AssetType": "65B5A801B9B941609CB4D40DAA50B15C",
+      "JobPK": 907
+    },
+    {
+      "SourceID": 894,
+      "SourceName": "MaterialEditor/ViewportModels/Torus.fbx",
+      "SourceGuid": "0FF7CB5925195D49BAADFC3F552D26B6",
+      "ProductID": 7336,
+      "SubID": 279427141,
+      "ProductName": "pc/materialeditor/viewportmodels/torus_lod0_bitangent0.fbx.azbuffer",
+      "AssetType": "F6C5EA8A1DB3456EB970B6E2AB262AED",
+      "JobPK": 907
+    },
+    {
+      "SourceID": 894,
+      "SourceName": "MaterialEditor/ViewportModels/Torus.fbx",
+      "SourceGuid": "0FF7CB5925195D49BAADFC3F552D26B6",
+      "ProductID": 7330,
+      "SubID": 274234250,
+      "ProductName": "pc/materialeditor/viewportmodels/torus_lod0_index.fbx.azbuffer",
+      "AssetType": "F6C5EA8A1DB3456EB970B6E2AB262AED",
+      "JobPK": 907
+    },
+    {
+      "SourceID": 894,
+      "SourceName": "MaterialEditor/ViewportModels/Torus.fbx",
+      "SourceGuid": "0FF7CB5925195D49BAADFC3F552D26B6",
+      "ProductID": 7332,
+      "SubID": 283839436,
+      "ProductName": "pc/materialeditor/viewportmodels/torus_lod0_normal0.fbx.azbuffer",
+      "AssetType": "F6C5EA8A1DB3456EB970B6E2AB262AED",
+      "JobPK": 907
+    },
+    {
+      "SourceID": 894,
+      "SourceName": "MaterialEditor/ViewportModels/Torus.fbx",
+      "SourceGuid": "0FF7CB5925195D49BAADFC3F552D26B6",
+      "ProductID": 7331,
+      "SubID": 272231255,
+      "ProductName": "pc/materialeditor/viewportmodels/torus_lod0_position0.fbx.azbuffer",
+      "AssetType": "F6C5EA8A1DB3456EB970B6E2AB262AED",
+      "JobPK": 907
+    },
+    {
+      "SourceID": 894,
+      "SourceName": "MaterialEditor/ViewportModels/Torus.fbx",
+      "SourceGuid": "0FF7CB5925195D49BAADFC3F552D26B6",
+      "ProductID": 7335,
+      "SubID": 277217142,
+      "ProductName": "pc/materialeditor/viewportmodels/torus_lod0_tangent0.fbx.azbuffer",
+      "AssetType": "F6C5EA8A1DB3456EB970B6E2AB262AED",
+      "JobPK": 907
+    },
+    {
+      "SourceID": 894,
+      "SourceName": "MaterialEditor/ViewportModels/Torus.fbx",
+      "SourceGuid": "0FF7CB5925195D49BAADFC3F552D26B6",
+      "ProductID": 7333,
+      "SubID": 276577461,
+      "ProductName": "pc/materialeditor/viewportmodels/torus_lod0_uv0.fbx.azbuffer",
+      "AssetType": "F6C5EA8A1DB3456EB970B6E2AB262AED",
+      "JobPK": 907
+    },
+    {
+      "SourceID": 894,
+      "SourceName": "MaterialEditor/ViewportModels/Torus.fbx",
+      "SourceGuid": "0FF7CB5925195D49BAADFC3F552D26B6",
+      "ProductID": 7334,
+      "SubID": 276499491,
+      "ProductName": "pc/materialeditor/viewportmodels/torus_lod0_uv1.fbx.azbuffer",
+      "AssetType": "F6C5EA8A1DB3456EB970B6E2AB262AED",
+      "JobPK": 907
+    },
+    {
+      "SourceID": 584,
+      "SourceName": "MaterialEditor/ViewportModels/Torus.modelpreset.azasset",
+      "SourceGuid": "6EEB795C71BA593D862DD4C095C13AB7",
+      "ProductID": 786,
+      "SubID": 0,
+      "ProductName": "pc/materialeditor/viewportmodels/torus.modelpreset.azasset",
+      "AssetType": "2643D6863E7C450CBB61427EDEBF13D5",
+      "JobPK": 586
+    }
+  ],
+  "jobs": [
+    {
+      "SourceID": 568,
+      "SourceName": "MaterialCanvas/GraphData/Nodes/MaterialOutputs/BasePBR/HandleDoubleSided.lua",
+      "SourceGuid": "040B8D93496F5498A38170B17BF5B7ED",
+      "JobID": 570,
+      "JobKey": "Lua Compile",
+      "Platform": "pc",
+      "Status": 4,
+      "JobRunKey": 280,
+      "ErrorCount": 0,
+      "WarningCount": 0,
+      "FirstFailLogTime": 0,
+      "FirstFailLogFile": "",
+      "LastFailLogTime": 0,
+      "LastFailLogFile": "",
+      "LastLogTime": 1791754663022,
+      "LastLogFile": "@log@/JobLogs/MaterialCanvas/GraphData/Nodes/MaterialOutputs/BasePBR/HandleDoubleSided.lua-1853690867-280.log"
+    },
+    {
+      "SourceID": 1402,
+      "SourceName": "MaterialCanvas/GraphData/Nodes/MaterialOutputs/BasePBR/MaterialGraphName.material",
+      "SourceGuid": "65F067852DD95572909891B798D328B8",
+      "JobID": 1462,
+      "JobKey": "Material Builder",
+      "Platform": "pc",
+      "Status": 4,
+      "JobRunKey": 41320,
+      "ErrorCount": 0,
+      "WarningCount": 0,
+      "FirstFailLogTime": 0,
+      "FirstFailLogFile": "",
+      "LastFailLogTime": 0,
+      "LastFailLogFile": "",
+      "LastLogTime": 1791832477598,
+      "LastLogFile": "@log@/JobLogs/MaterialCanvas/GraphData/Nodes/MaterialOutputs/BasePBR/MaterialGraphName.material-1119154393-41320.log"
+    },
+    {
+      "SourceID": 5,
+      "SourceName": "MaterialCanvas/GraphData/Nodes/MaterialOutputs/BasePBR/MaterialGraphName.materialtype",
+      "SourceGuid": "19A178BB2F835565AE03322684639089",
+      "JobID": 5,
+      "JobKey": "Material Type Builder (Pipeline Stage)",
+      "Platform": "common",
+      "Status": 4,
+      "JobRunKey": 41238,
+      "ErrorCount": 0,
+      "WarningCount": 0,
+      "FirstFailLogTime": 0,
+      "FirstFailLogFile": "",
+      "LastFailLogTime": 0,
+      "LastFailLogFile": "",
+      "LastLogTime": 1791832448368,
+      "LastLogFile": "@log@/JobLogs/MaterialCanvas/GraphData/Nodes/MaterialOutputs/BasePBR/MaterialGraphName.materialtype-3222552072-41238.log"
+    },
+    {
+      "SourceID": 566,
+      "SourceName": "MaterialCanvas/GraphData/Nodes/MaterialOutputs/StandardPBR/HandleDoubleSided.lua",
+      "SourceGuid": "2E08BCF3897659F1AB2A1A3092403D3A",
+      "JobID": 568,
+      "JobKey": "Lua Compile",
+      "Platform": "pc",
+      "Status": 4,
+      "JobRunKey": 1582,
+      "ErrorCount": 0,
+      "WarningCount": 0,
+      "FirstFailLogTime": 0,
+      "FirstFailLogFile": "",
+      "LastFailLogTime": 0,
+      "LastFailLogFile": "",
+      "LastLogTime": 1791754663016,
+      "LastLogFile": "@log@/JobLogs/MaterialCanvas/GraphData/Nodes/MaterialOutputs/StandardPBR/HandleDoubleSided.lua-3367778643-1582.log"
+    },
+    {
+      "SourceID": 567,
+      "SourceName": "MaterialCanvas/GraphData/Nodes/MaterialOutputs/StandardPBR/HandleOpacityMode.lua",
+      "SourceGuid": "6DE87B078E6251D2B02219243998B986",
+      "JobID": 569,
+      "JobKey": "Lua Compile",
+      "Platform": "pc",
+      "Status": 4,
+      "JobRunKey": 1360,
+      "ErrorCount": 0,
+      "WarningCount": 0,
+      "FirstFailLogTime": 0,
+      "FirstFailLogFile": "",
+      "LastFailLogTime": 0,
+      "LastFailLogFile": "",
+      "LastLogTime": 1791754663019,
+      "LastLogFile": "@log@/JobLogs/MaterialCanvas/GraphData/Nodes/MaterialOutputs/StandardPBR/HandleOpacityMode.lua-3657668022-1360.log"
+    },
+    {
+      "SourceID": 1437,
+      "SourceName": "MaterialCanvas/GraphData/Nodes/MaterialOutputs/StandardPBR/MaterialGraphName.material",
+      "SourceGuid": "F617976138D25312B270E5483457E955",
+      "JobID": 1497,
+      "JobKey": "Material Builder",
+      "Platform": "pc",
+      "Status": 4,
+      "JobRunKey": 41314,
+      "ErrorCount": 0,
+      "WarningCount": 0,
+      "FirstFailLogTime": 0,
+      "FirstFailLogFile": "",
+      "LastFailLogTime": 0,
+      "LastFailLogFile": "",
+      "LastLogTime": 1791832488059,
+      "LastLogFile": "@log@/JobLogs/MaterialCanvas/GraphData/Nodes/MaterialOutputs/StandardPBR/MaterialGraphName.material-484141729-41314.log"
+    },
+    {
+      "SourceID": 10,
+      "SourceName": "MaterialCanvas/GraphData/Nodes/MaterialOutputs/StandardPBR/MaterialGraphName.materialtype",
+      "SourceGuid": "D2CF9BC13E975839AA5CBA12B2D0E4F9",
+      "JobID": 10,
+      "JobKey": "Material Type Builder (Pipeline Stage)",
+      "Platform": "common",
+      "Status": 4,
+      "JobRunKey": 41270,
+      "ErrorCount": 0,
+      "WarningCount": 0,
+      "FirstFailLogTime": 0,
+      "FirstFailLogFile": "",
+      "LastFailLogTime": 0,
+      "LastFailLogFile": "",
+      "LastLogTime": 1791832448515,
+      "LastLogFile": "@log@/JobLogs/MaterialCanvas/GraphData/Nodes/MaterialOutputs/StandardPBR/MaterialGraphName.materialtype-2726584657-41270.log"
+    },
+    {
+      "SourceID": 340,
+      "SourceName": "MaterialCanvas/StyleSheet/materialcanvas_style.json",
+      "SourceGuid": "9B10761FCA245589B22F03B77BCAC80D",
+      "JobID": 340,
+      "JobKey": "json",
+      "Platform": "pc",
+      "Status": 4,
+      "JobRunKey": 1769,
+      "ErrorCount": 0,
+      "WarningCount": 0,
+      "FirstFailLogTime": 0,
+      "FirstFailLogFile": "",
+      "LastFailLogTime": 0,
+      "LastFailLogFile": "",
+      "LastLogTime": 1791754654841,
+      "LastLogFile": "@log@/JobLogs/MaterialCanvas/StyleSheet/materialcanvas_style.json-1341451479-1769.log"
+    },
+    {
+      "SourceID": 218,
+      "SourceName": "MaterialCanvas/Translation/materialcanvas_en_us.ts",
+      "SourceGuid": "142B8806A327512CB38C449E768B90DC",
+      "JobID": 218,
+      "JobKey": "Translation Compile",
+      "Platform": "pc",
+      "Status": 4,
+      "JobRunKey": 2696,
+      "ErrorCount": 0,
+      "WarningCount": 0,
+      "FirstFailLogTime": 0,
+      "FirstFailLogFile": "",
+      "LastFailLogTime": 0,
+      "LastFailLogFile": "",
+      "LastLogTime": 1791754654299,
+      "LastLogFile": "@log@/JobLogs/MaterialCanvas/Translation/materialcanvas_en_us.ts-830669184-2696.log"
+    },
+    {
+      "SourceID": 1339,
+      "SourceName": "MaterialEditor/LightingPresets/konzerthaus_latlong_iblskyboxcm.exr",
+      "SourceGuid": "AA144B9D68F651919DD1211B8D72802C",
+      "JobID": 1396,
+      "JobKey": "Image Compile: EXR",
+      "Platform": "pc",
+      "Status": 4,
+      "JobRunKey": 13822,
+      "ErrorCount": 0,
+      "WarningCount": 0,
+      "FirstFailLogTime": 0,
+      "FirstFailLogFile": "",
+      "LastFailLogTime": 0,
+      "LastFailLogFile": "",
+      "LastLogTime": 1791772014904,
+      "LastLogFile": "@log@/JobLogs/MaterialEditor/LightingPresets/konzerthaus_latlong_iblskyboxcm.exr-1440410114-13822.log"
+    },
+    {
+      "SourceID": 580,
+      "SourceName": "MaterialEditor/LightingPresets/lythwood_room.lightingpreset.azasset",
+      "SourceGuid": "B9AA460C622D5F38A02CC0BCB0B65D96",
+      "JobID": 582,
+      "JobKey": "Any Asset Builder",
+      "Platform": "pc",
+      "Status": 4,
+      "JobRunKey": 550,
+      "ErrorCount": 0,
+      "WarningCount": 0,
+      "FirstFailLogTime": 0,
+      "FirstFailLogFile": "",
+      "LastFailLogTime": 0,
+      "LastFailLogFile": "",
+      "LastLogTime": 1791754663058,
+      "LastLogFile": "@log@/JobLogs/MaterialEditor/LightingPresets/lythwood_room.lightingpreset.azasset-368718062-550.log"
+    },
+    {
+      "SourceID": 1341,
+      "SourceName": "MaterialEditor/LightingPresets/lythwood_room_4k_latlong_iblskyboxcm.exr",
+      "SourceGuid": "720DF96E6A6E552FAC82835BB4888FE3",
+      "JobID": 1398,
+      "JobKey": "Image Compile: EXR",
+      "Platform": "pc",
+      "Status": 4,
+      "JobRunKey": 22394,
+      "ErrorCount": 0,
+      "WarningCount": 0,
+      "FirstFailLogTime": 0,
+      "FirstFailLogFile": "",
+      "LastFailLogTime": 0,
+      "LastFailLogFile": "",
+      "LastLogTime": 1791787532738,
+      "LastLogFile": "@log@/JobLogs/MaterialEditor/LightingPresets/lythwood_room_4k_latlong_iblskyboxcm.exr-3848100320-22394.log"
+    },
+    {
+      "SourceID": 585,
+      "SourceName": "MaterialEditor/LightingPresets/neutral_urban.lightingpreset.azasset",
+      "SourceGuid": "683EC47B9BB352EC96C87B255FBA5E32",
+      "JobID": 587,
+      "JobKey": "Any Asset Builder",
+      "Platform": "pc",
+      "Status": 4,
+      "JobRunKey": 1749,
+      "ErrorCount": 0,
+      "WarningCount": 0,
+      "FirstFailLogTime": 0,
+      "FirstFailLogFile": "",
+      "LastFailLogTime": 0,
+      "LastFailLogFile": "",
+      "LastLogTime": 1791754663073,
+      "LastLogFile": "@log@/JobLogs/MaterialEditor/LightingPresets/neutral_urban.lightingpreset.azasset-840805612-1749.log"
+    },
+    {
+      "SourceID": 1340,
+      "SourceName": "MaterialEditor/ViewportModels/_dev_shaderball_00_basecolor.png",
+      "SourceGuid": "AC61A15C967C5146B586DEE918C253E4",
+      "JobID": 1397,
+      "JobKey": "Image Compile: PNG",
+      "Platform": "pc",
+      "Status": 4,
+      "JobRunKey": 13426,
+      "ErrorCount": 0,
+      "WarningCount": 0,
+      "FirstFailLogTime": 0,
+      "FirstFailLogFile": "",
+      "LastFailLogTime": 0,
+      "LastFailLogFile": "",
+      "LastLogTime": 1791771577107,
+      "LastLogFile": "@log@/JobLogs/MaterialEditor/ViewportModels/_dev_shaderball_00_basecolor.png-4121919799-13426.log"
+    },
+    {
+      "SourceID": 880,
+      "SourceName": "MaterialEditor/ViewportModels/BeveledCone.fbx",
+      "SourceGuid": "51B1B230910D500D8BDBD72F5DA9507E",
+      "JobID": 893,
+      "JobKey": "Scene compilation",
+      "Platform": "pc",
+      "Status": 4,
+      "JobRunKey": 23018,
+      "ErrorCount": 0,
+      "WarningCount": 0,
+      "FirstFailLogTime": 0,
+      "FirstFailLogFile": "",
+      "LastFailLogTime": 0,
+      "LastFailLogFile": "",
+      "LastLogTime": 1791787500506,
+      "LastLogFile": "@log@/JobLogs/MaterialEditor/ViewportModels/BeveledCone.fbx-1406299739-23018.log"
+    },
+    {
+      "SourceID": 570,
+      "SourceName": "MaterialEditor/ViewportModels/BeveledCone.modelpreset.azasset",
+      "SourceGuid": "9B61FAD72717528C9EBFC1324D46ED56",
+      "JobID": 572,
+      "JobKey": "Any Asset Builder",
+      "Platform": "pc",
+      "Status": 4,
+      "JobRunKey": 1082,
+      "ErrorCount": 0,
+      "WarningCount": 0,
+      "FirstFailLogTime": 0,
+      "FirstFailLogFile": "",
+      "LastFailLogTime": 0,
+      "LastFailLogFile": "",
+      "LastLogTime": 1791754663027,
+      "LastLogFile": "@log@/JobLogs/MaterialEditor/ViewportModels/BeveledCone.modelpreset.azasset-1471147869-1082.log"
+    },
+    {
+      "SourceID": 881,
+      "SourceName": "MaterialEditor/ViewportModels/BeveledCube.fbx",
+      "SourceGuid": "8F19FB6DDF185CC0B9216755089004D7",
+      "JobID": 894,
+      "JobKey": "Scene compilation",
+      "Platform": "pc",
+      "Status": 4,
+      "JobRunKey": 22820,
+      "ErrorCount": 0,
+      "WarningCount": 0,
+      "FirstFailLogTime": 0,
+      "FirstFailLogFile": "",
+      "LastFailLogTime": 0,
+      "LastFailLogFile": "",
+      "LastLogTime": 1791787502030,
+      "LastLogFile": "@log@/JobLogs/MaterialEditor/ViewportModels/BeveledCube.fbx-3684519697-22820.log"
+    },
+    {
+      "SourceID": 573,
+      "SourceName": "MaterialEditor/ViewportModels/BeveledCube.modelpreset.azasset",
+      "SourceGuid": "8C0A15EBB5EA522AB11D74DF7E77856C",
+      "JobID": 575,
+      "JobKey": "Any Asset Builder",
+      "Platform": "pc",
+      "Status": 4,
+      "JobRunKey": 2342,
+      "ErrorCount": 0,
+      "WarningCount": 0,
+      "FirstFailLogTime": 0,
+      "FirstFailLogFile": "",
+      "LastFailLogTime": 0,
+      "LastFailLogFile": "",
+      "LastLogTime": 1791754663037,
+      "LastLogFile": "@log@/JobLogs/MaterialEditor/ViewportModels/BeveledCube.modelpreset.azasset-1360589696-2342.log"
+    },
+    {
+      "SourceID": 882,
+      "SourceName": "MaterialEditor/ViewportModels/BeveledCylinder.fbx",
+      "SourceGuid": "0C731B0218BC58ED9DEDB22375D43B2B",
+      "JobID": 895,
+      "JobKey": "Scene compilation",
+      "Platform": "pc",
+      "Status": 4,
+      "JobRunKey": 22774,
+      "ErrorCount": 0,
+      "WarningCount": 0,
+      "FirstFailLogTime": 0,
+      "FirstFailLogFile": "",
+      "LastFailLogTime": 0,
+      "LastFailLogFile": "",
+      "LastLogTime": 1791787500470,
+      "LastLogFile": "@log@/JobLogs/MaterialEditor/ViewportModels/BeveledCylinder.fbx-1011667039-22774.log"
+    },
+    {
+      "SourceID": 571,
+      "SourceName": "MaterialEditor/ViewportModels/BeveledCylinder.modelpreset.azasset",
+      "SourceGuid": "56C021997B4F5896A713F70E6EBA0726",
+      "JobID": 573,
+      "JobKey": "Any Asset Builder",
+      "Platform": "pc",
+      "Status": 4,
+      "JobRunKey": 2216,
+      "ErrorCount": 0,
+      "WarningCount": 0,
+      "FirstFailLogTime": 0,
+      "FirstFailLogFile": "",
+      "LastFailLogTime": 0,
+      "LastFailLogFile": "",
+      "LastLogTime": 1791754663030,
+      "LastLogFile": "@log@/JobLogs/MaterialEditor/ViewportModels/BeveledCylinder.modelpreset.azasset-3943981984-2216.log"
+    },
+    {
+      "SourceID": 883,
+      "SourceName": "MaterialEditor/ViewportModels/Caduceus.fbx",
+      "SourceGuid": "ECB56B9312F256FF94ABE14F61885ACB",
+      "JobID": 896,
+      "JobKey": "Scene compilation",
+      "Platform": "pc",
+      "Status": 4,
+      "JobRunKey": 22528,
+      "ErrorCount": 0,
+      "WarningCount": 0,
+      "FirstFailLogTime": 0,
+      "FirstFailLogFile": "",
+      "LastFailLogTime": 0,
+      "LastFailLogFile": "",
+      "LastLogTime": 1791787501514,
+      "LastLogFile": "@log@/JobLogs/MaterialEditor/ViewportModels/Caduceus.fbx-3188300848-22528.log"
+    },
+    {
+      "SourceID": 569,
+      "SourceName": "MaterialEditor/ViewportModels/Caduceus.modelpreset.azasset",
+      "SourceGuid": "46D4B53FA900591BB4CD75A79E47749B",
+      "JobID": 571,
+      "JobKey": "Any Asset Builder",
+      "Platform": "pc",
+      "Status": 4,
+      "JobRunKey": 862,
+      "ErrorCount": 0,
+      "WarningCount": 0,
+      "FirstFailLogTime": 0,
+      "FirstFailLogFile": "",
+      "LastFailLogTime": 0,
+      "LastFailLogFile": "",
+      "LastLogTime": 1791754663024,
+      "LastLogFile": "@log@/JobLogs/MaterialEditor/ViewportModels/Caduceus.modelpreset.azasset-3600634436-862.log"
+    },
+    {
+      "SourceID": 884,
+      "SourceName": "MaterialEditor/ViewportModels/Cone.fbx",
+      "SourceGuid": "8E6D29E300195C5A9F5D61656BC02DD7",
+      "JobID": 897,
+      "JobKey": "Scene compilation",
+      "Platform": "pc",
+      "Status": 4,
+      "JobRunKey": 22668,
+      "ErrorCount": 0,
+      "WarningCount": 0,
+      "FirstFailLogTime": 0,
+      "FirstFailLogFile": "",
+      "LastFailLogTime": 0,
+      "LastFailLogFile": "",
+      "LastLogTime": 1791787500457,
+      "LastLogFile": "@log@/JobLogs/MaterialEditor/ViewportModels/Cone.fbx-2308820551-22668.log"
+    },
+    {
+      "SourceID": 572,
+      "SourceName": "MaterialEditor/ViewportModels/Cone.modelpreset.azasset",
+      "SourceGuid": "7467489E10D951B6A5FA4CEF6258B27F",
+      "JobID": 574,
+      "JobKey": "Any Asset Builder",
+      "Platform": "pc",
+      "Status": 4,
+      "JobRunKey": 1970,
+      "ErrorCount": 0,
+      "WarningCount": 0,
+      "FirstFailLogTime": 0,
+      "FirstFailLogFile": "",
+      "LastFailLogTime": 0,
+      "LastFailLogFile": "",
+      "LastLogTime": 1791754663033,
+      "LastLogFile": "@log@/JobLogs/MaterialEditor/ViewportModels/Cone.modelpreset.azasset-1417345897-1970.log"
+    },
+    {
+      "SourceID": 885,
+      "SourceName": "MaterialEditor/ViewportModels/Cube.fbx",
+      "SourceGuid": "B991E03BF50D552E9E2D64FA6DAB1CCB",
+      "JobID": 898,
+      "JobKey": "Scene compilation",
+      "Platform": "pc",
+      "Status": 4,
+      "JobRunKey": 22428,
+      "ErrorCount": 0,
+      "WarningCount": 0,
+      "FirstFailLogTime": 0,
+      "FirstFailLogFile": "",
+      "LastFailLogTime": 0,
+      "LastFailLogFile": "",
+      "LastLogTime": 1791787501991,
+      "LastLogFile": "@log@/JobLogs/MaterialEditor/ViewportModels/Cube.fbx-30600973-22428.log"
+    },
+    {
+      "SourceID": 574,
+      "SourceName": "MaterialEditor/ViewportModels/Cube.modelpreset.azasset",
+      "SourceGuid": "E1B23617811755139E1957574F8218FF",
+      "JobID": 576,
+      "JobKey": "Any Asset Builder",
+      "Platform": "pc",
+      "Status": 4,
+      "JobRunKey": 2066,
+      "ErrorCount": 0,
+      "WarningCount": 0,
+      "FirstFailLogTime": 0,
+      "FirstFailLogFile": "",
+      "LastFailLogTime": 0,
+      "LastFailLogFile": "",
+      "LastLogTime": 1791754663039,
+      "LastLogFile": "@log@/JobLogs/MaterialEditor/ViewportModels/Cube.modelpreset.azasset-1389225908-2066.log"
+    },
+    {
+      "SourceID": 886,
+      "SourceName": "MaterialEditor/ViewportModels/Cylinder.fbx",
+      "SourceGuid": "8A2E7A82D7C35E9CA56C6EDA70876347",
+      "JobID": 899,
+      "JobKey": "Scene compilation",
+      "Platform": "pc",
+      "Status": 4,
+      "JobRunKey": 22766,
+      "ErrorCount": 0,
+      "WarningCount": 0,
+      "FirstFailLogTime": 0,
+      "FirstFailLogFile": "",
+      "LastFailLogTime": 0,
+      "LastFailLogFile": "",
+      "LastLogTime": 1791787501161,
+      "LastLogFile": "@log@/JobLogs/MaterialEditor/ViewportModels/Cylinder.fbx-3994815768-22766.log"
+    },
+    {
+      "SourceID": 576,
+      "SourceName": "MaterialEditor/ViewportModels/Cylinder.modelpreset.azasset",
+      "SourceGuid": "7873427E11B952D28136B022B1E9D533",
+      "JobID": 578,
+      "JobKey": "Any Asset Builder",
+      "Platform": "pc",
+      "Status": 4,
+      "JobRunKey": 202,
+      "ErrorCount": 0,
+      "WarningCount": 0,
+      "FirstFailLogTime": 0,
+      "FirstFailLogFile": "",
+      "LastFailLogTime": 0,
+      "LastFailLogFile": "",
+      "LastLogTime": 1791754663046,
+      "LastLogFile": "@log@/JobLogs/MaterialEditor/ViewportModels/Cylinder.modelpreset.azasset-3929302810-202.log"
+    },
+    {
+      "SourceID": 887,
+      "SourceName": "MaterialEditor/ViewportModels/Hermanubis.fbx",
+      "SourceGuid": "1F650917AA7451079C49648C957B33DA",
+      "JobID": 900,
+      "JobKey": "Scene compilation",
+      "Platform": "pc",
+      "Status": 4,
+      "JobRunKey": 22592,
+      "ErrorCount": 0,
+      "WarningCount": 0,
+      "FirstFailLogTime": 0,
+      "FirstFailLogFile": "",
+      "LastFailLogTime": 0,
+      "LastFailLogFile": "",
+      "LastLogTime": 1791787503090,
+      "LastLogFile": "@log@/JobLogs/MaterialEditor/ViewportModels/Hermanubis.fbx-525385299-22592.log"
+    },
+    {
+      "SourceID": 575,
+      "SourceName": "MaterialEditor/ViewportModels/Hermanubis.modelpreset.azasset",
+      "SourceGuid": "7EAE3342C6855406A3617299B5AABCA6",
+      "JobID": 577,
+      "JobKey": "Any Asset Builder",
+      "Platform": "pc",
+      "Status": 4,
+      "JobRunKey": 2510,
+      "ErrorCount": 0,
+      "WarningCount": 0,
+      "FirstFailLogTime": 0,
+      "FirstFailLogFile": "",
+      "LastFailLogTime": 0,
+      "LastFailLogFile": "",
+      "LastLogTime": 1791754663042,
+      "LastLogFile": "@log@/JobLogs/MaterialEditor/ViewportModels/Hermanubis.modelpreset.azasset-2710071172-2510.log"
+    },
+    {
+      "SourceID": 888,
+      "SourceName": "MaterialEditor/ViewportModels/Plane_1x1.fbx",
+      "SourceGuid": "767B3209EDF7503ABF3D6A69DAABC966",
+      "JobID": 901,
+      "JobKey": "Scene compilation",
+      "Platform": "pc",
+      "Status": 4,
+      "JobRunKey": 10966,
+      "ErrorCount": 1,
+      "WarningCount": 1,
+      "FirstFailLogTime": 0,
+      "FirstFailLogFile": "",
+      "LastFailLogTime": 0,
+      "LastFailLogFile": "",
+      "LastLogTime": 1791768749194,
+      "LastLogFile": "@log@/JobLogs/MaterialEditor/ViewportModels/Plane_1x1.fbx-2328804674-10966.log"
+    },
+    {
+      "SourceID": 579,
+      "SourceName": "MaterialEditor/ViewportModels/Plane_1x1.modelpreset.azasset",
+      "SourceGuid": "FA91BEC44BF05A3F97C0BB50082F5C5B",
+      "JobID": 581,
+      "JobKey": "Any Asset Builder",
+      "Platform": "pc",
+      "Status": 4,
+      "JobRunKey": 476,
+      "ErrorCount": 0,
+      "WarningCount": 0,
+      "FirstFailLogTime": 0,
+      "FirstFailLogFile": "",
+      "LastFailLogTime": 0,
+      "LastFailLogFile": "",
+      "LastLogTime": 1791754663055,
+      "LastLogFile": "@log@/JobLogs/MaterialEditor/ViewportModels/Plane_1x1.modelpreset.azasset-3751941154-476.log"
+    },
+    {
+      "SourceID": 889,
+      "SourceName": "MaterialEditor/ViewportModels/Plane_3x3.fbx",
+      "SourceGuid": "21839E4C2A3B538A9D48D04A157DD675",
+      "JobID": 902,
+      "JobKey": "Scene compilation",
+      "Platform": "pc",
+      "Status": 4,
+      "JobRunKey": 22582,
+      "ErrorCount": 0,
+      "WarningCount": 0,
+      "FirstFailLogTime": 0,
+      "FirstFailLogFile": "",
+      "LastFailLogTime": 0,
+      "LastFailLogFile": "",
+      "LastLogTime": 1791787501106,
+      "LastLogFile": "@log@/JobLogs/MaterialEditor/ViewportModels/Plane_3x3.fbx-4170393224-22582.log"
+    },
+    {
+      "SourceID": 577,
+      "SourceName": "MaterialEditor/ViewportModels/Plane_3x3.modelpreset.azasset",
+      "SourceGuid": "DF65EF7EE1A25F53A2CE208E34E2D132",
+      "JobID": 579,
+      "JobKey": "Any Asset Builder",
+      "Platform": "pc",
+      "Status": 4,
+      "JobRunKey": 1857,
+      "ErrorCount": 0,
+      "WarningCount": 0,
+      "FirstFailLogTime": 0,
+      "FirstFailLogFile": "",
+      "LastFailLogTime": 0,
+      "LastFailLogFile": "",
+      "LastLogTime": 1791754663049,
+      "LastLogFile": "@log@/JobLogs/MaterialEditor/ViewportModels/Plane_3x3.modelpreset.azasset-3352956419-1857.log"
+    },
+    {
+      "SourceID": 890,
+      "SourceName": "MaterialEditor/ViewportModels/PlatonicSphere.fbx",
+      "SourceGuid": "5D4A455DE58454EDACBADE780F1FB00F",
+      "JobID": 903,
+      "JobKey": "Scene compilation",
+      "Platform": "pc",
+      "Status": 4,
+      "JobRunKey": 22292,
+      "ErrorCount": 0,
+      "WarningCount": 0,
+      "FirstFailLogTime": 0,
+      "FirstFailLogFile": "",
+      "LastFailLogTime": 0,
+      "LastFailLogFile": "",
+      "LastLogTime": 1791787502042,
+      "LastLogFile": "@log@/JobLogs/MaterialEditor/ViewportModels/PlatonicSphere.fbx-833055622-22292.log"
+    },
+    {
+      "SourceID": 578,
+      "SourceName": "MaterialEditor/ViewportModels/PlatonicSphere.modelpreset.azasset",
+      "SourceGuid": "4F273FA5404F50C290893D36896BF990",
+      "JobID": 580,
+      "JobKey": "Any Asset Builder",
+      "Platform": "pc",
+      "Status": 4,
+      "JobRunKey": 630,
+      "ErrorCount": 0,
+      "WarningCount": 0,
+      "FirstFailLogTime": 0,
+      "FirstFailLogFile": "",
+      "LastFailLogTime": 0,
+      "LastFailLogFile": "",
+      "LastLogTime": 1791754663052,
+      "LastLogFile": "@log@/JobLogs/MaterialEditor/ViewportModels/PlatonicSphere.modelpreset.azasset-4188374050-630.log"
+    },
+    {
+      "SourceID": 891,
+      "SourceName": "MaterialEditor/ViewportModels/PolarSphere.fbx",
+      "SourceGuid": "6373F5F5C4035126A9A98682C321579B",
+      "JobID": 904,
+      "JobKey": "Scene compilation",
+      "Platform": "pc",
+      "Status": 4,
+      "JobRunKey": 22924,
+      "ErrorCount": 0,
+      "WarningCount": 0,
+      "FirstFailLogTime": 0,
+      "FirstFailLogFile": "",
+      "LastFailLogTime": 0,
+      "LastFailLogFile": "",
+      "LastLogTime": 1791787501118,
+      "LastLogFile": "@log@/JobLogs/MaterialEditor/ViewportModels/PolarSphere.fbx-2712667651-22924.log"
+    },
+    {
+      "SourceID": 581,
+      "SourceName": "MaterialEditor/ViewportModels/PolarSphere.modelpreset.azasset",
+      "SourceGuid": "C0A4A54B74955EB48CD355A409CA5D40",
+      "JobID": 583,
+      "JobKey": "Any Asset Builder",
+      "Platform": "pc",
+      "Status": 4,
+      "JobRunKey": 1096,
+      "ErrorCount": 0,
+      "WarningCount": 0,
+      "FirstFailLogTime": 0,
+      "FirstFailLogFile": "",
+      "LastFailLogTime": 0,
+      "LastFailLogFile": "",
+      "LastLogTime": 1791754663061,
+      "LastLogFile": "@log@/JobLogs/MaterialEditor/ViewportModels/PolarSphere.modelpreset.azasset-1982043726-1096.log"
+    },
+    {
+      "SourceID": 892,
+      "SourceName": "MaterialEditor/ViewportModels/QuadSphere.fbx",
+      "SourceGuid": "2C665021133A538FAEE397DE948C4D6D",
+      "JobID": 905,
+      "JobKey": "Scene compilation",
+      "Platform": "pc",
+      "Status": 4,
+      "JobRunKey": 22932,
+      "ErrorCount": 0,
+      "WarningCount": 0,
+      "FirstFailLogTime": 0,
+      "FirstFailLogFile": "",
+      "LastFailLogTime": 0,
+      "LastFailLogFile": "",
+      "LastLogTime": 1791787501472,
+      "LastLogFile": "@log@/JobLogs/MaterialEditor/ViewportModels/QuadSphere.fbx-153379820-22932.log"
+    },
+    {
+      "SourceID": 583,
+      "SourceName": "MaterialEditor/ViewportModels/QuadSphere.modelpreset.azasset",
+      "SourceGuid": "7AA7B7646DE852EF8655715E6A18F333",
+      "JobID": 585,
+      "JobKey": "Any Asset Builder",
+      "Platform": "pc",
+      "Status": 4,
+      "JobRunKey": 2254,
+      "ErrorCount": 0,
+      "WarningCount": 0,
+      "FirstFailLogTime": 0,
+      "FirstFailLogFile": "",
+      "LastFailLogTime": 0,
+      "LastFailLogFile": "",
+      "LastLogTime": 1791754663067,
+      "LastLogFile": "@log@/JobLogs/MaterialEditor/ViewportModels/QuadSphere.modelpreset.azasset-1505135477-2254.log"
+    },
+    {
+      "SourceID": 893,
+      "SourceName": "MaterialEditor/ViewportModels/Shaderball.fbx",
+      "SourceGuid": "682C0F6C7C6D5C08B6416D0C49AF0B7B",
+      "JobID": 906,
+      "JobKey": "Scene compilation",
+      "Platform": "pc",
+      "Status": 4,
+      "JobRunKey": 16336,
+      "ErrorCount": 0,
+      "WarningCount": 1,
+      "FirstFailLogTime": 0,
+      "FirstFailLogFile": "",
+      "LastFailLogTime": 0,
+      "LastFailLogFile": "",
+      "LastLogTime": 1791774350309,
+      "LastLogFile": "@log@/JobLogs/MaterialEditor/ViewportModels/Shaderball.fbx-2283785088-16336.log"
+    },
+    {
+      "SourceID": 586,
+      "SourceName": "MaterialEditor/ViewportModels/Shaderball.modelpreset.azasset",
+      "SourceGuid": "B4966B04D539527085FD0FEEF562B7CD",
+      "JobID": 588,
+      "JobKey": "Any Asset Builder",
+      "Platform": "pc",
+      "Status": 4,
+      "JobRunKey": 2280,
+      "ErrorCount": 0,
+      "WarningCount": 0,
+      "FirstFailLogTime": 0,
+      "FirstFailLogFile": "",
+      "LastFailLogTime": 0,
+      "LastFailLogFile": "",
+      "LastLogTime": 1791754663077,
+      "LastLogFile": "@log@/JobLogs/MaterialEditor/ViewportModels/Shaderball.modelpreset.azasset-1460425811-2280.log"
+    },
+    {
+      "SourceID": 894,
+      "SourceName": "MaterialEditor/ViewportModels/Torus.fbx",
+      "SourceGuid": "0FF7CB5925195D49BAADFC3F552D26B6",
+      "JobID": 907,
+      "JobKey": "Scene compilation",
+      "Platform": "pc",
+      "Status": 4,
+      "JobRunKey": 22856,
+      "ErrorCount": 0,
+      "WarningCount": 0,
+      "FirstFailLogTime": 0,
+      "FirstFailLogFile": "",
+      "LastFailLogTime": 0,
+      "LastFailLogFile": "",
+      "LastLogTime": 1791787501181,
+      "LastLogFile": "@log@/JobLogs/MaterialEditor/ViewportModels/Torus.fbx-3647272600-22856.log"
+    },
+    {
+      "SourceID": 584,
+      "SourceName": "MaterialEditor/ViewportModels/Torus.modelpreset.azasset",
+      "SourceGuid": "6EEB795C71BA593D862DD4C095C13AB7",
+      "JobID": 586,
+      "JobKey": "Any Asset Builder",
+      "Platform": "pc",
+      "Status": 4,
+      "JobRunKey": 2752,
+      "ErrorCount": 0,
+      "WarningCount": 0,
+      "FirstFailLogTime": 0,
+      "FirstFailLogFile": "",
+      "LastFailLogTime": 0,
+      "LastFailLogFile": "",
+      "LastLogTime": 1791754663070,
+      "LastLogFile": "@log@/JobLogs/MaterialEditor/ViewportModels/Torus.modelpreset.azasset-2212118531-2752.log"
+    }
+  ]
+}

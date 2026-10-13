@@ -1,0 +1,39 @@
+{
+  "utc": "2026-10-13T12:40:16.5867142Z",
+  "removed": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-passgraph-workspace-rev1\\sdk-legacy-install-analysis-rev1\\sdk-profile-install-attempt1\\prefix",
+      "verifiedAbsent": true,
+      "files": 11060,
+      "bytes": 2858466967.0
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-passgraph-workspace-rev1\\sdk-legacy-install-analysis-rev1\\sdk-profile-install-attempt2\\prefix",
+      "verifiedAbsent": true,
+      "files": 11062,
+      "bytes": 2859197781.0
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-passgraph-workspace-rev1\\sdk-legacy-install-analysis-rev1\\sdk-profile-install-attempt3\\prefix",
+      "verifiedAbsent": true,
+      "files": 11107,
+      "bytes": 2860081420.0
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-passgraph-workspace-rev1\\sdk-legacy-install-analysis-rev1\\sdk-profile-install-attempt4\\prefix",
+      "verifiedAbsent": true,
+      "files": 11107,
+      "bytes": 2860081736.0
+    }
+  ],
+  "removedFileCount": 44336.0,
+  "removedLogicalBytes": 11437827904.0,
+  "driveFreeObservedBefore": 382648496128,
+  "driveFreeAfter": 394166169600,
+  "observedFreeDeltaBytes": 11517673472,
+  "originalBuildPreserved": true,
+  "verifiedSDKPreserved": true,
+  "archiveSHA256": "A5BF658ACAC502A2D34C031DC4A2959B99D3FC8E1ED522C9438CA803E546E3BF",
+  "method": "Four exact literal paths, individually checked; native PowerShell Remove-Item -Recurse, no Force. Collective variable-based cleanup was rejected by automatic review before execution; narrower requests succeeded.",
+  "scope": "Only four obsolete private SDK prefix directories; current SDK, source/build, approved packages, logs/evidence and prior repositories retained."
+}

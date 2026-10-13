@@ -87,9 +87,11 @@ namespace GraphCanvas
         m_ui->m_quickFilter->setEnabled(false);
 
         m_model = aznew BookmarkTableSourceModel();
+        m_model->setParent(this);
         BookmarkTableRequestBus::Handler::BusConnect(m_model);
 
         m_proxyModel = aznew GraphCanvas::BookmarkTableSortProxyModel(m_model);
+        m_proxyModel->setParent(this);
 
         m_ui->bookmarkTable->setModel(m_proxyModel);
         m_ui->bookmarkTable->setSelectionBehavior(QAbstractItemView::SelectionBehavior::SelectRows);

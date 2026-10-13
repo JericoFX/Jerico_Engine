@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="13" failures="0" disabled="0" errors="0" time="0.013" timestamp="2026-10-12T22:17:40.662" name="AllTests">
+  <testsuite name="AtomToolsFrameworkTest" tests="3" failures="0" disabled="0" skipped="0" errors="0" time="0.002" timestamp="2026-10-12T22:17:40.662">
+    <testcase name="GetPathToExteralReference_Succeeds" file="F:/JericoEngine/JericoEngine/Gems/Atom/Tools/AtomToolsFramework/Code/Tests/AtomToolsFrameworkTest.cpp" line="95" status="run" result="completed" time="0.002" timestamp="2026-10-12T22:17:40.662" classname="AtomToolsFrameworkTest" />
+    <testcase name="IsDocumentPathInSupportedFolder_Succeeds" file="F:/JericoEngine/JericoEngine/Gems/Atom/Tools/AtomToolsFramework/Code/Tests/AtomToolsFrameworkTest.cpp" line="104" status="run" result="completed" time="0." timestamp="2026-10-12T22:17:40.665" classname="AtomToolsFrameworkTest" />
+    <testcase name="ValidateDocumentPath_Succeeds" file="F:/JericoEngine/JericoEngine/Gems/Atom/Tools/AtomToolsFramework/Code/Tests/AtomToolsFrameworkTest.cpp" line="120" status="run" result="completed" time="0." timestamp="2026-10-12T22:17:40.665" classname="AtomToolsFrameworkTest" />
+  </testsuite>
+  <testsuite name="NativePreviewSettingsTest" tests="3" failures="0" disabled="0" skipped="0" errors="0" time="0.003" timestamp="2026-10-12T22:17:40.665">
+    <testcase name="DefaultsUseTheNativePreviewOwner" file="F:/JericoEngine/JericoEngine/Gems/Atom/Tools/AtomToolsFramework/Code/Tests/AtomToolsFrameworkTest.cpp" line="207" status="run" result="completed" time="0.001" timestamp="2026-10-12T22:17:40.665" classname="NativePreviewSettingsTest" />
+    <testcase name="PersistedAliasAndAbsolutePathsKeepTheirSourceIdentity" file="F:/JericoEngine/JericoEngine/Gems/Atom/Tools/AtomToolsFramework/Code/Tests/AtomToolsFrameworkTest.cpp" line="226" status="run" result="completed" time="0." timestamp="2026-10-12T22:17:40.667" classname="NativePreviewSettingsTest" />
+    <testcase name="FavoritesRegisterAndUnregisterUseOneCanonicalPathWithoutRemovingCustomPresets" file="F:/JericoEngine/JericoEngine/Gems/Atom/Tools/AtomToolsFramework/Code/Tests/AtomToolsFrameworkTest.cpp" line="251" status="run" result="completed" time="0.001" timestamp="2026-10-12T22:17:40.667" classname="NativePreviewSettingsTest" />
+  </testsuite>
+  <testsuite name="AssetStatusReporterTest" tests="2" failures="0" disabled="0" skipped="0" errors="0" time="0." timestamp="2026-10-12T22:17:40.668">
+    <testcase name="FailedJobsReportIdentityOnceAndRemainTerminal" file="F:/JericoEngine/JericoEngine/Gems/Atom/Tools/AtomToolsFramework/Code/Tests/AtomToolsFrameworkTest.cpp" line="330" status="run" result="completed" time="0." timestamp="2026-10-12T22:17:40.668" classname="AssetStatusReporterTest" />
+    <testcase name="CompletedJobAdvancesWithoutAnError" file="F:/JericoEngine/JericoEngine/Gems/Atom/Tools/AtomToolsFramework/Code/Tests/AtomToolsFrameworkTest.cpp" line="356" status="run" result="completed" time="0." timestamp="2026-10-12T22:17:40.669" classname="AssetStatusReporterTest" />
+  </testsuite>
+  <testsuite name="ViewportInteractionImplFixture" tests="5" failures="0" disabled="0" skipped="0" errors="0" time="0.006" timestamp="2026-10-12T22:17:40.669">
+    <testcase name="ViewportInteractionRequestsMapsFromScreenToWorldAndBack" file="F:/JericoEngine/JericoEngine/Gems/Atom/Tools/AtomToolsFramework/Code/Tests/ViewportInteractionImplTests.cpp" line="88" status="run" result="completed" time="0.006" timestamp="2026-10-12T22:17:40.669" classname="ViewportInteractionImplFixture" />
+    <testcase name="ScreenToWorldReturnsPositionOnNearClipPlaneInWorldSpace" file="F:/JericoEngine/JericoEngine/Gems/Atom/Tools/AtomToolsFramework/Code/Tests/ViewportInteractionImplTests.cpp" line="121" status="run" result="completed" time="0." timestamp="2026-10-12T22:17:40.675" classname="ViewportInteractionImplFixture" />
+    <testcase name="WorldToScreenGivesExpectedScreenCoordinates" file="F:/JericoEngine/JericoEngine/Gems/Atom/Tools/AtomToolsFramework/Code/Tests/ViewportInteractionImplTests.cpp" line="131" status="run" result="completed" time="0." timestamp="2026-10-12T22:17:40.676" classname="ViewportInteractionImplFixture" />
+    <testcase name="ScreenToWorldRayGivesGivesExpectedOriginAndDirection" file="F:/JericoEngine/JericoEngine/Gems/Atom/Tools/AtomToolsFramework/Code/Tests/ViewportInteractionImplTests.cpp" line="163" status="run" result="completed" time="0." timestamp="2026-10-12T22:17:40.676" classname="ViewportInteractionImplFixture" />
+    <testcase name="ViewportInteractionRequestsReturnsNewViewWhenItIsChanged" file="F:/JericoEngine/JericoEngine/Gems/Atom/Tools/AtomToolsFramework/Code/Tests/ViewportInteractionImplTests.cpp" line="180" status="run" result="completed" time="0." timestamp="2026-10-12T22:17:40.676" classname="ViewportInteractionImplFixture" />
+  </testsuite>
+</testsuites>

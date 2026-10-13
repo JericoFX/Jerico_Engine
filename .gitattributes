@@ -178,3 +178,17 @@ Gems/AtomLyIntegration/CommonFeatures/Assets/Objects/Lucy/.wip/stone/stone_bake.
 
 # Original screenshots for the native material workspace acceptance.
 /docs/evidence/n0/native-material-workspace-2026-10-12/*.png -filter -diff -merge -text
+
+/Editor/Materials/Resources/Icons/screenshot.png -filter -diff -merge
+
+# Native material preview: audited original payloads, independent of legacy LFS endpoints.
+/Editor/Materials/Preview/Assets/MaterialEditor/ViewportModels/*.fbx -filter -diff -merge -text
+/Editor/Materials/Preview/Assets/MaterialEditor/ViewportModels/*.png -filter -diff -merge -text
+/Editor/Materials/Preview/Assets/MaterialEditor/LightingPresets/*.exr -filter -diff -merge -text
+
+# Native graph workspace and SDK evidence stays in Git, without legacy LFS endpoints.
+/docs/evidence/n0/native-materialcanvas-workspace-2026-10-12/** -text
+/docs/evidence/n0/native-pass-workspace-and-sdk-2026-10-13/** -text
+/docs/evidence/n0/native-materialcanvas-workspace-2026-10-12/**/*.png -filter -diff -merge -text
+/docs/evidence/n0/native-pass-workspace-and-sdk-2026-10-13/**/*.jpg -filter -diff -merge -text
+/docs/evidence/n0/native-pass-workspace-and-sdk-2026-10-13/**/*.zip -filter -diff -merge -text

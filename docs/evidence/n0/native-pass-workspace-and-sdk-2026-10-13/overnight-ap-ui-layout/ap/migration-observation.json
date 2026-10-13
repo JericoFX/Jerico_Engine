@@ -1,0 +1,141 @@
+{
+  "capturedUtc": "2026-10-13T06:20:43.8556417Z",
+  "scope": "PassCanvas portable scanfolder migration; observation only",
+  "beforeScanFolders": [
+    {
+      "ScanFolderID": 78,
+      "ScanFolder": "F:/JericoEngine/JericoEngine/Gems/Atom/Tools/PassCanvas/Assets",
+      "DisplayName": "Assets",
+      "PortableKey": "gemassets-{34AA759E-8E7A-5713-A885-D7E548B234FE}",
+      "IsRoot": 0
+    },
+    {
+      "ScanFolderID": 79,
+      "ScanFolder": "F:/JericoEngine/JericoEngine/Gems/Atom/Tools/PassCanvas/Registry",
+      "DisplayName": "Registry",
+      "PortableKey": "gemregistry-{34AA759E-8E7A-5713-A885-D7E548B234FE}",
+      "IsRoot": 0
+    }
+  ],
+  "afterScanFolders": [
+    {
+      "ScanFolderID": 78,
+      "ScanFolder": "F:/JericoEngine/JericoEngine/Editor/Materials/RenderPass/Assets",
+      "DisplayName": "Editor/RenderPass",
+      "PortableKey": "gemassets-{34AA759E-8E7A-5713-A885-D7E548B234FE}",
+      "IsRoot": 0
+    }
+  ],
+  "sourceIdentityBefore": [
+    {
+      "SourceID": 341,
+      "ScanFolderPK": 78,
+      "SourceName": "PassCanvas/StyleSheet/passcanvas_style.json",
+      "SourceGuid": "01916B60E26159899F066C358B01BF44"
+    },
+    {
+      "SourceID": 400,
+      "ScanFolderPK": 78,
+      "SourceName": "PassCanvas/Translation/passcanvas_en_us.ts",
+      "SourceGuid": "4960DA14708357ECA55771B4A02239E7"
+    }
+  ],
+  "sourceIdentityAfter": [
+    {
+      "sourceId": 341,
+      "scanFolderId": 78,
+      "sourceName": "PassCanvas/StyleSheet/passcanvas_style.json",
+      "sourceGuid": "01916B60E26159899F066C358B01BF44"
+    },
+    {
+      "sourceId": 400,
+      "scanFolderId": 78,
+      "sourceName": "PassCanvas/Translation/passcanvas_en_us.ts",
+      "sourceGuid": "4960DA14708357ECA55771B4A02239E7"
+    }
+  ],
+  "productsBefore": [
+    {
+      "productName": "pc/passcanvas/stylesheet/passcanvas_style.json",
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Cache\\pc\\passcanvas\\stylesheet\\passcanvas_style.json",
+      "present": true,
+      "bytes": 53585,
+      "sha256": "779BE86AAC6A112106EF5AE1C76A303617A75EBA5C68164DEFF3B6D06A513183"
+    },
+    {
+      "productName": "pc/passcanvas/translation/passcanvas_en_us.qm",
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Cache\\pc\\passcanvas\\translation\\passcanvas_en_us.qm",
+      "present": true,
+      "bytes": 142,
+      "sha256": "BA0B01CAA2775402A64211552EC99E5697DBADFFF56D18D60F280346AC39F6BF"
+    }
+  ],
+  "productsAfter": [
+    {
+      "productName": "pc/passcanvas/stylesheet/passcanvas_style.json",
+      "productId": 541,
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Cache\\pc\\passcanvas\\stylesheet\\passcanvas_style.json",
+      "present": true,
+      "expectedBytes": 53585,
+      "actualBytes": 53585,
+      "expectedSha256": "779BE86AAC6A112106EF5AE1C76A303617A75EBA5C68164DEFF3B6D06A513183",
+      "actualSha256": "779BE86AAC6A112106EF5AE1C76A303617A75EBA5C68164DEFF3B6D06A513183",
+      "matches": true
+    },
+    {
+      "productName": "pc/passcanvas/translation/passcanvas_en_us.qm",
+      "productId": 601,
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Cache\\pc\\passcanvas\\translation\\passcanvas_en_us.qm",
+      "present": true,
+      "expectedBytes": 142,
+      "actualBytes": 142,
+      "expectedSha256": "BA0B01CAA2775402A64211552EC99E5697DBADFFF56D18D60F280346AC39F6BF",
+      "actualSha256": "BA0B01CAA2775402A64211552EC99E5697DBADFFF56D18D60F280346AC39F6BF",
+      "matches": true
+    }
+  ],
+  "targetJobsAfter": [
+    {
+      "sourceId": 341,
+      "jobId": 341,
+      "jobKey": "json",
+      "platform": "pc",
+      "status": 4,
+      "jobRunKey": 514,
+      "errorCount": 0,
+      "warningCount": 0,
+      "lastLogTimeUnixMs": 1791754654849,
+      "lastLogTimeUtc": "2026-10-11T21:37:34.8490000Z",
+      "lastLogFile": "@log@/JobLogs/PassCanvas/StyleSheet/passcanvas_style.json-3893429451-514.log"
+    },
+    {
+      "sourceId": 400,
+      "jobId": 401,
+      "jobKey": "Translation Compile",
+      "platform": "pc",
+      "status": 4,
+      "jobRunKey": 2588,
+      "errorCount": 0,
+      "warningCount": 0,
+      "lastLogTimeUnixMs": 1791754655095,
+      "lastLogTimeUtc": "2026-10-11T21:37:35.0950000Z",
+      "lastLogFile": "@log@/JobLogs/PassCanvas/Translation/passcanvas_en_us.ts-86709983-2588.log"
+    }
+  ],
+  "targetJobLogFiles": [],
+  "batchSummary": {
+    "exitCode": 1,
+    "successfulAssets": 2,
+    "failedAssets": 347,
+    "warnings": 2028,
+    "errors": 385,
+    "totalAssetsProcessingSeconds": 11.626,
+    "note": "Batch totals include unrelated project and engine inputs."
+  },
+  "observations": {
+    "scanFolderRootMoved": true,
+    "sourceIdsGuidsNamesPreserved": true,
+    "productsByteIdentical": true,
+    "freshTargetJobExecutionProven": false
+  }
+}

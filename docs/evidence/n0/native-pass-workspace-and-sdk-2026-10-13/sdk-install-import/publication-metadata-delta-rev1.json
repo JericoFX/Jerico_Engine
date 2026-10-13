@@ -1,0 +1,14 @@
+{
+  "utc": "2026-10-13T12:48:39.5796851Z",
+  "metadataPins": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\.gitattributes",
+      "beforeSHA256": "7148566BE9C62D67BF8337A2059F4CAEB213E52C0CD3538E842D6718626C09A9",
+      "afterSHA256": "90ABB95838E209429C46B9B4B04EF07399E228F3D95A3F4B895702F4BFD566FB",
+      "unchanged": false
+    }
+  ],
+  "priorSdkPostflight": "DD24D715C7CAF0581E264A27BA14829B797533C2A480026DD8DC5FFD16ED13EF",
+  "attributesAfter": "90ABB95838E209429C46B9B4B04EF07399E228F3D95A3F4B895702F4BFD566FB",
+  "note": "Evidence remains scoped to historical pinned native inputs. Git attribute exception changes proof storage only; docs-only updates need diff/content checks, no engine rebuild."
+}

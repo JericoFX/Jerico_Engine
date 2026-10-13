@@ -5,6 +5,7 @@
 #include <JE/Editor/Materials/MaterialBrowserInteractions.h>
 #include <Atom/RPI.Edit/Material/MaterialSourceData.h>
 #include <Atom/RPI.Edit/Material/MaterialTypeSourceData.h>
+#include <Atom/RPI.Edit/Shader/ShaderSourceData.h>
 
 #include <AtomToolsFramework/Document/AtomToolsAnyDocument.h>
 #include <AtomToolsFramework/Document/AtomToolsDocumentInspector.h>
@@ -12,6 +13,8 @@
 #include <AtomToolsFramework/AssetSelection/AssetSelectionComboBox.h>
 #include <AtomToolsFramework/Inspector/InspectorWidget.h>
 #include <AtomToolsFramework/Document/AtomToolsDocumentSystemRequestBus.h>
+#include <AtomToolsFramework/Graph/DynamicNode/DynamicNodeConfig.h>
+#include <Tests/AssetSystemMocks.h>
 #include <AzCore/Component/ComponentApplication.h>
 #include <AzCore/Debug/TraceMessageBus.h>
 #include <AzCore/IO/SystemFile.h>
@@ -31,6 +34,8 @@
 #include <QTimer>
 #include <QTemporaryDir>
 #include <QImage>
+#include <QComboBox>
+#include <QDir>
 
 namespace UnitTest
 {
@@ -294,6 +299,136 @@ namespace UnitTest
         EXPECT_FALSE(AtomToolsFramework::AtomToolsDocumentRequestBus::HasHandlers(id));
     }
 
+    TEST_F(MaterialWorkspaceTests, NativeNodeAndShaderDocumentsShareTheRetainedSession)
+    {
+        JE::Editor::MaterialWorkspaceSession session(EmptyDocumentType());
+        const AtomToolsFramework::DocumentTypeInfoVector types = {
+            AtomToolsFramework::AtomToolsAnyDocument::BuildDocumentTypeInfo("Material Graph Node Config",
+                {"materialgraphnode"}, {"materialgraphnodetemplate"}, AZStd::any(AtomToolsFramework::DynamicNodeConfig()), AZ::Uuid::CreateNull()),
+            AtomToolsFramework::AtomToolsAnyDocument::BuildDocumentTypeInfo("Shader Source Data",
+                {"shader"}, {}, AZStd::any(AZ::RPI::ShaderSourceData()), azrtti_typeid<AZ::RPI::ShaderSourceData>())};
+        session.RegisterGraphDocumentTypes(types);
+        session.RegisterGraphDocumentTypes(types);
+        ASSERT_EQ(session.GetGraphDocumentTypes().size(), 2);
+        const auto materialId = CreateDocument(session);
+        ASSERT_FALSE(materialId.IsNull());
+        EXPECT_FALSE(session.IsGraphDocument(materialId));
+        const AZ::Uuid expectedTypes[] = {azrtti_typeid<AtomToolsFramework::DynamicNodeConfig>(), azrtti_typeid<AZ::RPI::ShaderSourceData>()};
+        AZ::Uuid ids[2];
+        for (size_t index = 0; index < types.size(); ++index)
+        {
+            AtomToolsFramework::AtomToolsDocumentSystemRequestBus::EventResult(ids[index], session.GetToolId(),
+                &AtomToolsFramework::AtomToolsDocumentSystemRequests::CreateDocumentFromTypeName, types[index].m_documentTypeName);
+            ASSERT_FALSE(ids[index].IsNull());
+            EXPECT_TRUE(session.IsGraphDocument(ids[index]));
+            AtomToolsFramework::DocumentObjectInfoVector objects;
+            AtomToolsFramework::AtomToolsDocumentRequestBus::EventResult(objects, ids[index],
+                &AtomToolsFramework::AtomToolsDocumentRequests::GetObjectInfo);
+            ASSERT_EQ(objects.size(), 1);
+            EXPECT_EQ(objects.front().m_objectType, expectedTypes[index]);
+            EXPECT_NE(objects.front().m_objectPtr, nullptr);
+        }
+        EXPECT_NE(ids[0], ids[1]);
+        EXPECT_EQ(session.GetDocumentIds().size(), 3);
+        AZ::u32 count = 0;
+        AtomToolsFramework::AtomToolsDocumentSystemRequestBus::EventResult(count, session.GetToolId(),
+            &AtomToolsFramework::AtomToolsDocumentSystemRequests::GetDocumentCount);
+        EXPECT_EQ(count, 3);
+        ASSERT_TRUE(session.SelectDocument(ids[0]));
+        ASSERT_TRUE(session.SelectDocument(ids[1]));
+        EXPECT_TRUE(AtomToolsFramework::AtomToolsDocumentRequestBus::HasHandlers(ids[0]));
+        EXPECT_EQ(session.GetActiveDocumentId(), ids[1]);
+    }
+
+    TEST_F(MaterialWorkspaceTests, CompilationStateOutlivesObserversAndRetainsEditsDuringTheJob)
+    {
+        using Session = JE::Editor::MaterialWorkspaceSession;
+        using State = Session::CompileState;
+        JE::Editor::MaterialWorkspaceSession session(EmptyDocumentType());
+        const auto type = EditableDocumentType();
+        session.RegisterGraphDocumentTypes({type});
+        AZ::Uuid id;
+        AtomToolsFramework::AtomToolsDocumentSystemRequestBus::EventResult(id, session.GetToolId(),
+            &AtomToolsFramework::AtomToolsDocumentSystemRequests::CreateDocumentFromTypeName, type.m_documentTypeName);
+        ASSERT_FALSE(id.IsNull());
+        int notifications = 0;
+        {
+            QWidget observer;
+            QObject::connect(&session, &Session::CompileStateChanged, &observer, [&](const AZ::Uuid& changedId)
+            {
+                EXPECT_EQ(changedId, id);
+                EXPECT_EQ(session.GetCompileState(id), State::Compiling);
+                ++notifications;
+            });
+            AtomToolsFramework::GraphDocumentNotificationBus::Event(session.GetToolId(),
+                &AtomToolsFramework::GraphDocumentNotifications::OnCompileGraphStarted, id);
+            EXPECT_EQ(session.GetCompileState(id), State::Compiling);
+            EXPECT_EQ(notifications, 1);
+        }
+        // The observer is gone. Edit the real native document, then deliver the job's completion contract.
+        Edit(id);
+        EXPECT_EQ(session.GetCompileState(id), State::CompilingModified);
+        AtomToolsFramework::GraphDocumentNotificationBus::Event(session.GetToolId(),
+            &AtomToolsFramework::GraphDocumentNotifications::OnCompileGraphCompleted, id);
+        EXPECT_EQ(session.GetCompileState(id), State::Modified);
+        EXPECT_EQ(notifications, 1); // QObject context destruction disconnected the old pane observer.
+
+        QWidget reopenedObserver;
+        State displayed = session.GetCompileState(id);
+        EXPECT_EQ(displayed, State::Modified);
+        QObject::connect(&session, &Session::CompileStateChanged, &reopenedObserver, [&](const AZ::Uuid& changedId)
+        {
+            EXPECT_EQ(changedId, id);
+            displayed = session.GetCompileState(id);
+        });
+        AtomToolsFramework::GraphDocumentNotificationBus::Event(session.GetToolId(),
+            &AtomToolsFramework::GraphDocumentNotifications::OnCompileGraphStarted, id);
+        EXPECT_EQ(displayed, State::Compiling);
+        AtomToolsFramework::GraphDocumentNotificationBus::Event(session.GetToolId(),
+            &AtomToolsFramework::GraphDocumentNotifications::OnCompileGraphFailed, id);
+        EXPECT_EQ(displayed, State::Failed);
+        AtomToolsFramework::GraphDocumentNotificationBus::Event(session.GetToolId(),
+            &AtomToolsFramework::GraphDocumentNotifications::OnCompileGraphStarted, id);
+        AtomToolsFramework::GraphDocumentNotificationBus::Event(session.GetToolId(),
+            &AtomToolsFramework::GraphDocumentNotifications::OnCompileGraphCompleted, id);
+        EXPECT_EQ(displayed, State::Completed);
+    }
+
+    TEST_F(MaterialWorkspaceTests, DestroyedDocumentRejectsLateCompilationNotifications)
+    {
+        using Session = JE::Editor::MaterialWorkspaceSession;
+        using State = Session::CompileState;
+        JE::Editor::MaterialWorkspaceSession session(EmptyDocumentType());
+        const auto type = EditableDocumentType();
+        session.RegisterGraphDocumentTypes({type});
+        AZ::Uuid id;
+        AtomToolsFramework::AtomToolsDocumentSystemRequestBus::EventResult(id, session.GetToolId(),
+            &AtomToolsFramework::AtomToolsDocumentSystemRequests::CreateDocumentFromTypeName, type.m_documentTypeName);
+        ASSERT_FALSE(id.IsNull());
+        AtomToolsFramework::GraphDocumentNotificationBus::Event(session.GetToolId(),
+            &AtomToolsFramework::GraphDocumentNotifications::OnCompileGraphStarted, id);
+        EXPECT_EQ(session.GetCompileState(id), State::Compiling);
+        bool destroyed = false;
+        AtomToolsFramework::AtomToolsDocumentSystemRequestBus::EventResult(destroyed, session.GetToolId(),
+            &AtomToolsFramework::AtomToolsDocumentSystemRequests::DestroyDocument, id);
+        ASSERT_TRUE(destroyed);
+        EXPECT_EQ(session.GetCompileState(id), State::NotCompiled);
+        EXPECT_TRUE(session.GetDocumentIds().empty());
+        int notifications = 0;
+        QWidget observer;
+        QObject::connect(&session, &Session::CompileStateChanged, &observer, [&](const AZ::Uuid&) { ++notifications; });
+        for (const auto event : {&AtomToolsFramework::GraphDocumentNotifications::OnCompileGraphStarted,
+            &AtomToolsFramework::GraphDocumentNotifications::OnCompileGraphCompleted,
+            &AtomToolsFramework::GraphDocumentNotifications::OnCompileGraphFailed})
+        {
+            AtomToolsFramework::GraphDocumentNotificationBus::Event(session.GetToolId(), event, id);
+            EXPECT_EQ(session.GetCompileState(id), State::NotCompiled);
+        }
+        EXPECT_EQ(notifications, 0);
+        EXPECT_FALSE(session.RequestCompile(id));
+        EXPECT_FALSE(session.RequestCompile(AZ::Uuid::CreateNull()));
+    }
+
     class MaterialSourceCreationTests : public MaterialWorkspaceTests
     {
     protected:
@@ -324,6 +459,131 @@ namespace UnitTest
 
         AZStd::unique_ptr<AZ::IO::LocalFileIO> m_fileIO;
     };
+
+    class GraphDocumentCreationTests : public MaterialSourceCreationTests
+    {
+    protected:
+        void SetUp() override
+        {
+            MaterialSourceCreationTests::SetUp();
+            ASSERT_TRUE(m_directory.isValid());
+            // Only the source-folder boundary is supplied. Document JSON, save/open and rename remain native.
+            ON_CALL(m_assetSystem, GetAssetSafeFolders(testing::_)).WillByDefault(
+                [this](AZStd::vector<AZStd::string>& folders)
+                {
+                    folders.push_back(m_directory.path().toUtf8().constData());
+                    return true;
+                });
+            m_assetSystem.BusConnect();
+        }
+        void TearDown() override
+        {
+            m_assetSystem.BusDisconnect();
+            MaterialSourceCreationTests::TearDown();
+        }
+        QTemporaryDir m_directory;
+        testing::NiceMock<UnitTests::MockAssetSystemRequest> m_assetSystem;
+    };
+
+    TEST_F(GraphDocumentCreationTests, CreatesAtTheFinalPathBeforeEditingAndRemovesItsTemporary)
+    {
+        const AZStd::string path = m_directory.filePath("created.workspace").toUtf8().constData();
+        JE::Editor::MaterialWorkspaceSession session(EditableDocumentType());
+        const auto id = session.CreateDocument({}, path);
+        ASSERT_FALSE(id.IsNull());
+        EXPECT_EQ(session.GetActiveDocumentId(), id);
+        EXPECT_EQ(session.GetDocumentIds().size(), 1);
+        AZStd::string actualPath;
+        AtomToolsFramework::AtomToolsDocumentRequestBus::EventResult(actualPath, id,
+            &AtomToolsFramework::AtomToolsDocumentRequests::GetAbsolutePath);
+        EXPECT_EQ(QDir::fromNativeSeparators(QString::fromUtf8(actualPath.c_str())),
+            QDir::fromNativeSeparators(QString::fromUtf8(path.c_str())));
+        auto json = AZ::JsonSerializationUtils::ReadJsonFile(path);
+        ASSERT_TRUE(json.IsSuccess());
+        EXPECT_FALSE(IsModified(id));
+        Edit(id);
+        EXPECT_TRUE(IsModified(id));
+        EXPECT_EQ(QDir(m_directory.path()).entryList({".je-create-*"}, QDir::Files | QDir::Hidden).size(), 0);
+    }
+
+    TEST_F(GraphDocumentCreationTests, MaterialPaneKeepsItsDocumentWhileANodeDocumentOpens)
+    {
+        JE::Editor::MaterialWorkspaceSession session(EditableDocumentType());
+        const auto nodeType = AtomToolsFramework::AtomToolsAnyDocument::BuildDocumentTypeInfo(
+            "Workspace node config", {"materialgraphnode"}, {}, AZStd::any(0.25f), AZ::Uuid::CreateNull());
+        session.RegisterGraphDocumentTypes({nodeType});
+        const AZStd::string materialPath = m_directory.filePath("material.workspace").toUtf8().constData();
+        const auto materialId = session.CreateDocument({}, materialPath);
+        ASSERT_FALSE(materialId.IsNull());
+        {
+            JE::Editor::MaterialWorkspaceWidget pane(session);
+            auto* documents = pane.findChild<QComboBox*>();
+            ASSERT_NE(documents, nullptr);
+            ASSERT_EQ(documents->count(), 1);
+            const AZStd::string nodePath = m_directory.filePath("node.materialgraphnode").toUtf8().constData();
+            const auto nodeId = session.CreateDocument({}, nodePath);
+            ASSERT_FALSE(nodeId.IsNull());
+            EXPECT_TRUE(session.IsGraphDocument(nodeId));
+            EXPECT_EQ(session.GetActiveDocumentId(), nodeId);
+            EXPECT_EQ(documents->count(), 1);
+            EXPECT_EQ(AZ::Uuid::CreateString(documents->currentData().toString().toUtf8().constData()), materialId);
+            pane.close();
+            EXPECT_TRUE(AtomToolsFramework::AtomToolsDocumentRequestBus::HasHandlers(nodeId));
+        }
+        JE::Editor::MaterialWorkspaceWidget reopened(session);
+        auto* documents = reopened.findChild<QComboBox*>();
+        ASSERT_NE(documents, nullptr);
+        EXPECT_EQ(documents->count(), 1);
+        EXPECT_EQ(AZ::Uuid::CreateString(documents->currentData().toString().toUtf8().constData()), materialId);
+        EXPECT_EQ(session.GetDocumentIds().size(), 2);
+    }
+
+    TEST_F(GraphDocumentCreationTests, RejectsExistingAndRelativeDestinationsWithoutChangingThem)
+    {
+        const AZStd::string path = m_directory.filePath("existing.workspace").toUtf8().constData();
+        ASSERT_TRUE(AZ::Utils::WriteFile("existing sentinel", path).IsSuccess());
+        JE::Editor::MaterialWorkspaceSession session(EditableDocumentType());
+        EXPECT_TRUE(session.CreateDocument({}, path).IsNull());
+        EXPECT_TRUE(session.CreateDocument({}, "relative.workspace").IsNull());
+        EXPECT_TRUE(session.GetDocumentIds().empty());
+        auto existing = AZ::Utils::ReadFile<AZStd::string>(path);
+        ASSERT_TRUE(existing.IsSuccess());
+        EXPECT_EQ(existing.GetValue(), "existing sentinel");
+        EXPECT_EQ(QDir(m_directory.path()).entryList({".je-create-*"}, QDir::Files | QDir::Hidden).size(), 0);
+    }
+
+    TEST_F(GraphDocumentCreationTests, DestinationAppearingDuringSaveIsPreservedAndTheNewDocumentIsDestroyed)
+    {
+        class ConcurrentDestinationDocument final : public AtomToolsFramework::AtomToolsAnyDocument
+        {
+        public:
+            AZ_CLASS_ALLOCATOR(ConcurrentDestinationDocument, AZ::SystemAllocator);
+            ConcurrentDestinationDocument(const AZ::Crc32& toolId, const AtomToolsFramework::DocumentTypeInfo& type, const AZStd::string& target)
+                : AtomToolsAnyDocument(toolId, type, AZStd::any(0.25f), AZ::Uuid::CreateNull()), m_target(target) {}
+            bool SaveAsChild(const AZStd::string& path) override
+            {
+                if (!AtomToolsAnyDocument::SaveAsChild(path)) { return false; }
+                // Introduce the competing file after the native temporary save and before publication.
+                return AZ::Utils::WriteFile("concurrent sentinel", m_target).IsSuccess();
+            }
+        private:
+            AZStd::string m_target;
+        };
+        const AZStd::string path = m_directory.filePath("concurrent.workspace").toUtf8().constData();
+        auto type = EditableDocumentType();
+        type.m_documentFactoryCallback = [path](const AZ::Crc32& toolId, const AtomToolsFramework::DocumentTypeInfo& info)
+            -> AtomToolsFramework::AtomToolsDocumentRequests*
+        {
+            return aznew ConcurrentDestinationDocument(toolId, info, path);
+        };
+        JE::Editor::MaterialWorkspaceSession session(type);
+        EXPECT_TRUE(session.CreateDocument({}, path).IsNull());
+        EXPECT_TRUE(session.GetDocumentIds().empty());
+        auto existing = AZ::Utils::ReadFile<AZStd::string>(path);
+        ASSERT_TRUE(existing.IsSuccess());
+        EXPECT_EQ(existing.GetValue(), "concurrent sentinel");
+        EXPECT_EQ(QDir(m_directory.path()).entryList({".je-create-*"}, QDir::Files | QDir::Hidden).size(), 0);
+    }
 
     TEST_F(MaterialSourceCreationTests, CreatesNativeMaterialSchemaWithTheSelectedTypeVersion)
     {

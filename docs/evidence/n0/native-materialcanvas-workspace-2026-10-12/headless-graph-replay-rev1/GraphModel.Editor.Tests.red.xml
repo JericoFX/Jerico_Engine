@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="13" failures="1" disabled="0" errors="0" time="0.061" timestamp="2026-10-12T18:44:13.978" name="AllTests">
+  <testsuite name="GraphModelIntegrationTests" tests="11" failures="1" disabled="0" skipped="0" errors="0" time="0.001" timestamp="2026-10-12T18:44:14.036">
+    <testcase name="NodeAddedToScene" file="F:/JericoEngine/JericoEngine/Gems/GraphModel/Code/Tests/GraphModelIntegrationTest.cpp" line="79" status="run" result="completed" time="0." timestamp="2026-10-12T18:44:14.036" classname="GraphModelIntegrationTests" />
+    <testcase name="NodeWithDataSlotHasProperDataType" file="F:/JericoEngine/JericoEngine/Gems/GraphModel/Code/Tests/GraphModelIntegrationTest.cpp" line="102" status="run" result="completed" time="0." timestamp="2026-10-12T18:44:14.036" classname="GraphModelIntegrationTests" />
+    <testcase name="GetNodeById" file="F:/JericoEngine/JericoEngine/Gems/GraphModel/Code/Tests/GraphModelIntegrationTest.cpp" line="131" status="run" result="completed" time="0." timestamp="2026-10-12T18:44:14.036" classname="GraphModelIntegrationTests" />
+    <testcase name="GetNodesFromGraphNodeIds" file="F:/JericoEngine/JericoEngine/Gems/GraphModel/Code/Tests/GraphModelIntegrationTest.cpp" line="158" status="run" result="completed" time="0." timestamp="2026-10-12T18:44:14.036" classname="GraphModelIntegrationTests" />
+    <testcase name="ExtendableSlotsWithDifferentMinimumValues" file="F:/JericoEngine/JericoEngine/Gems/GraphModel/Code/Tests/GraphModelIntegrationTest.cpp" line="184" status="run" result="completed" time="0." timestamp="2026-10-12T18:44:14.036" classname="GraphModelIntegrationTests" />
+    <testcase name="AddingExtendableSlotsPastMaximum" file="F:/JericoEngine/JericoEngine/Gems/GraphModel/Code/Tests/GraphModelIntegrationTest.cpp" line="216" status="run" result="completed" time="0." timestamp="2026-10-12T18:44:14.036" classname="GraphModelIntegrationTests" />
+    <testcase name="RemovingExtendableSlotsBelowMinimum" file="F:/JericoEngine/JericoEngine/Gems/GraphModel/Code/Tests/GraphModelIntegrationTest.cpp" line="260" status="run" result="completed" time="0." timestamp="2026-10-12T18:44:14.036" classname="GraphModelIntegrationTests" />
+    <testcase name="CannotAddNonExtendableSlot" file="F:/JericoEngine/JericoEngine/Gems/GraphModel/Code/Tests/GraphModelIntegrationTest.cpp" line="303" status="run" result="completed" time="0." timestamp="2026-10-12T18:44:14.036" classname="GraphModelIntegrationTests" />
+    <testcase name="CannotDeleteNonExtendableSlot" file="F:/JericoEngine/JericoEngine/Gems/GraphModel/Code/Tests/GraphModelIntegrationTest.cpp" line="321" status="run" result="completed" time="0." timestamp="2026-10-12T18:44:14.036" classname="GraphModelIntegrationTests" />
+    <testcase name="ParentNodeCacheDoesNotKeepTheOwnerAlive" file="F:/JericoEngine/JericoEngine/Gems/GraphModel/Code/Tests/GraphModelIntegrationTest.cpp" line="340" status="run" result="completed" time="0." timestamp="2026-10-12T18:44:14.036" classname="GraphModelIntegrationTests">
+      <failure message="F:/JericoEngine/JericoEngine/Gems/GraphModel/Code/Tests/GraphModelIntegrationTest.cpp:359&#x0A;Value of: weakNode.expired()&#x0A;  Actual: false&#x0A;Expected: true&#x0A;" type=""><![CDATA[F:/JericoEngine/JericoEngine/Gems/GraphModel/Code/Tests/GraphModelIntegrationTest.cpp:359
+Value of: weakNode.expired()
+  Actual: false
+Expected: true
+]]></failure>
+      <failure message="F:/JericoEngine/JericoEngine/Gems/GraphModel/Code/Tests/GraphModelIntegrationTest.cpp:360&#x0A;Expected equality of these values:&#x0A;  retainedSlot-&gt;GetParentNode()&#x0A;    Which is: 1&#x0A;  nullptr&#x0A;    Which is: (nullptr)&#x0A;" type=""><![CDATA[F:/JericoEngine/JericoEngine/Gems/GraphModel/Code/Tests/GraphModelIntegrationTest.cpp:360
+Expected equality of these values:
+  retainedSlot->GetParentNode()
+    Which is: 1
+  nullptr
+    Which is: (nullptr)
+]]></failure>
+    </testcase>
+    <testcase name="RemovingTheParentNodeInvalidatesTheCachedLookup" file="F:/JericoEngine/JericoEngine/Gems/GraphModel/Code/Tests/GraphModelIntegrationTest.cpp" line="368" status="run" result="completed" time="0." timestamp="2026-10-12T18:44:14.037" classname="GraphModelIntegrationTests" />
+  </testsuite>
+  <testsuite name="GraphModelPythonBindingsFixture" tests="2" failures="0" disabled="0" skipped="0" errors="0" time="0." timestamp="2026-10-12T18:44:14.037">
+    <testcase name="GraphModelGraphManagerRequests_ApiExists" file="F:/JericoEngine/JericoEngine/Gems/GraphModel/Code/Tests/GraphModelPythonBindingsTest.cpp" line="24" status="run" result="completed" time="0." timestamp="2026-10-12T18:44:14.037" classname="GraphModelPythonBindingsFixture" />
+    <testcase name="GraphModelGraphControllerRequests_ApiExists" file="F:/JericoEngine/JericoEngine/Gems/GraphModel/Code/Tests/GraphModelPythonBindingsTest.cpp" line="38" status="run" result="completed" time="0." timestamp="2026-10-12T18:44:14.037" classname="GraphModelPythonBindingsFixture" />
+  </testsuite>
+</testsuites>

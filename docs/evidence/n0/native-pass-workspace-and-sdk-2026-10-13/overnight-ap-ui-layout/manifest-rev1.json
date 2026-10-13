@@ -1,0 +1,242 @@
+{
+  "capturedUtc": "2026-10-13T07:42:56.8756853Z",
+  "status": "PARTIAL_NATIVE_LAYOUT_PENDING_NO_GLOBAL_ACCEPTANCE",
+  "sourceEvidenceRoot": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-passgraph-workspace-rev1",
+  "claims": "AP migration identity/cache verified, all347 failed source files confirmed LFS pointers; real Vulkan Pass editing/history/save observed. Reopen/new layout/DX12/SDK import pending.",
+  "artifacts": [
+    {
+      "source": "parent/ap-execution2-parent-reviewed-rev1.json",
+      "artifact": "ap/parent-migration-reviewed.json",
+      "bytes": 2028,
+      "sha256": "0EBC51D048D616420EE0D1D216BDD837D69532889203DC615F071747F5320F57"
+    },
+    {
+      "source": "parent/ap-failed-source-headers-parent-reviewed-rev1.json",
+      "artifact": "ap/parent-lfs-headers-reviewed.json",
+      "bytes": 519,
+      "sha256": "4453DB52CB7A53F966E76D8BF22B3712387FC333E9FC0F62E2AC46B6084E8328"
+    },
+    {
+      "source": "ap-migration-attempt1/execution2/migration-observation.json",
+      "artifact": "ap/migration-observation.json",
+      "bytes": 4947,
+      "sha256": "D5EA77B3814B681F0EAD0B632B04B92503EB75FD36A44E117F1EB5BBE0527F6C"
+    },
+    {
+      "source": "ap-migration-attempt1/execution2/failure-classification-rev1.json",
+      "artifact": "ap/failure-classification.json",
+      "bytes": 10297,
+      "sha256": "805A17D64D8C60C513F9EF93C7AD651AF63BC6D0F82B8A55C462237483AAD492"
+    },
+    {
+      "source": "ap-migration-attempt1/execution2/failure-source-header-audit-rev1.json",
+      "artifact": "ap/failed-source-header-audit.json",
+      "bytes": 360437,
+      "sha256": "8987A928CEBB3EC8817173B306000C250367CAB877CD1219D573D1183169ADAF"
+    },
+    {
+      "source": "ap-migration-attempt1/execution2/probe-after.stdout.json",
+      "artifact": "ap/probe-after.json",
+      "bytes": 2048,
+      "sha256": "12DF6C07F90101A8FB1D213BD086EA7D49AD47959F080A0742793DD0E5B73E72"
+    },
+    {
+      "source": "ap-migration-attempt1/execution2/postflight.json",
+      "artifact": "ap/postflight.json",
+      "bytes": 2539,
+      "sha256": "690086A964CF43E71BDA55E79F9D5D89F260E6D924AD821192A3312F7A4CE2F9"
+    },
+    {
+      "source": "ap-migration-attempt1/protected-authored-inputs.json",
+      "artifact": "ui/protected-authored-inputs-before.json",
+      "bytes": 9577,
+      "sha256": "43D7A492D0704E824357CAC08451E8FA59148E47363CA44846685042253F38B0"
+    },
+    {
+      "source": "parent/layout-red-parent-reviewed-rev1.json",
+      "artifact": "layout/red-parent-reviewed.json",
+      "bytes": 927,
+      "sha256": "37847EEB2D1E9A966E835F2ACA795D895B623A3D64C8D5315DA7B0CA0BA7C7E8"
+    },
+    {
+      "source": "native-red-layout-attempt1/junit/JE_EditorMaterials.Tests.xml",
+      "artifact": "layout/red/JE_EditorMaterials.Tests.xml",
+      "bytes": 19496,
+      "sha256": "5A7CCD247FD3BBA886FEB08CA62CED471CF732CFED31BFB8167BFB88820889C7"
+    },
+    {
+      "source": "native-red-layout-attempt1/summary.json",
+      "artifact": "layout/red/native-summary.json",
+      "bytes": 5837,
+      "sha256": "2305D762165DD85717F0B3285A509499F77C01F2A1DE1B892E5F784B96BB6EF8"
+    },
+    {
+      "source": "parent/layout-green1-parent-reviewed-rev2.json",
+      "artifact": "layout/green1-parent-reviewed.json",
+      "bytes": 1960,
+      "sha256": "08D63B38E267654546301985C762F9C35D31D2EBFACE37E8C3B0CDCAAA5D7EE6"
+    },
+    {
+      "source": "native-green-layout-attempt1/junit/JE_EditorMaterials.Tests.xml",
+      "artifact": "layout/green1/JE_EditorMaterials.Tests.xml",
+      "bytes": 17456,
+      "sha256": "1AD166B71F5F8F7DE9732D5BEACD44E3370AB145E8EE00703646935DC46247C6"
+    },
+    {
+      "source": "native-green-layout-attempt1/summary.json",
+      "artifact": "layout/green1/native-summary.json",
+      "bytes": 6020,
+      "sha256": "09B48DC75E51CEC4CD4C08C13C9F6598CF3DA8A8E1250F03845E804473AD1255"
+    },
+    {
+      "source": "pass-node-layout-product-repair-rev1/source-diff.patch",
+      "artifact": "layout/product-repair.patch",
+      "bytes": 243,
+      "sha256": "53375D1A1D05BBBAEE3D54028C97FAE99A0636AD28F54E3049B596F1E6A437C6"
+    },
+    {
+      "source": "pass-node-layout-product-repair-rev1/receipt.json",
+      "artifact": "layout/product-repair-receipt.json",
+      "bytes": 754,
+      "sha256": "801D3DB5C12B9B18BBE27049CAF9158B974C9948CC1AB59F1024AC7DCF67D797"
+    },
+    {
+      "source": "pass-node-layout-regression-rev1/source-diff.patch",
+      "artifact": "layout/regression.patch",
+      "bytes": 3093,
+      "sha256": "5BBBE9331C236BE954D9CE0043A41E9690AF81E8B4FFFECAF2018B90CAA0F12B"
+    },
+    {
+      "source": "pass-node-layout-regression-rev1/receipt.json",
+      "artifact": "layout/regression-receipt.json",
+      "bytes": 1351,
+      "sha256": "1C2D764C81BE77286C45552D1F43E949B0829A079DF03F2F688B79E7C7BC1744"
+    },
+    {
+      "source": "parent/native7-parent-reviewed-validation-rev1.json",
+      "artifact": "baseline/native7-parent-reviewed.json",
+      "bytes": 6595,
+      "sha256": "E730A4B7093B50CEAEA06F81F0E280274F1FB83536E2FB976EF114A4379E0DB5"
+    },
+    {
+      "source": "editor-vulkan-pass-workspace-attempt1/01-new-document-types.jpg",
+      "artifact": "ui/01-new-document-types.jpg",
+      "bytes": 108187,
+      "sha256": "B40F9B90759C809F5EE9E27FA0F0F08ACFD909750D27FB4D6FA99355D9BFCF2B"
+    },
+    {
+      "source": "editor-vulkan-pass-workspace-attempt1/02-native-pass-empty.jpg",
+      "artifact": "ui/02-native-pass-empty.jpg",
+      "bytes": 92367,
+      "sha256": "475DC9003F1F9D142D516AD262FED285176250F97AAB4E445B1CD107A8F83AEF"
+    },
+    {
+      "source": "editor-vulkan-pass-workspace-attempt1/03-native-pass-comment-inspector.jpg",
+      "artifact": "ui/03-native-pass-comment-inspector.jpg",
+      "bytes": 97149,
+      "sha256": "77597401723C5D77F4A360098490969323046656C00F2EA5F84F4EC9DF36F573"
+    },
+    {
+      "source": "editor-vulkan-pass-workspace-attempt1/04-native-pass-undo.jpg",
+      "artifact": "ui/04-native-pass-undo.jpg",
+      "bytes": 114821,
+      "sha256": "D520908667A2D6E9F12DBFBA3BC1D58901507F847E5E4DD5434AF20794965EF1"
+    },
+    {
+      "source": "editor-vulkan-pass-workspace-attempt1/05-native-pass-undo-empty-comment.jpg",
+      "artifact": "ui/05-native-pass-undo-empty-comment.jpg",
+      "bytes": 110828,
+      "sha256": "122E9A479237D9320F3A22065F73D3E8BA406F313C7672F29B462242D413C748"
+    },
+    {
+      "source": "editor-vulkan-pass-workspace-attempt1/06-native-pass-redo-comment.jpg",
+      "artifact": "ui/06-native-pass-redo-comment.jpg",
+      "bytes": 114431,
+      "sha256": "818F2A1AAD71CC2F1DC932ACE2E436746916A5FE81494A4D283727DD0282E3CC"
+    },
+    {
+      "source": "editor-vulkan-pass-workspace-attempt1/07-native-pass-redo-restored.jpg",
+      "artifact": "ui/07-native-pass-redo-restored.jpg",
+      "bytes": 96669,
+      "sha256": "6735D9D7491590595FA985EE5850D5C20556BA5C3DF2074AC5208B0AFE4F4C5D"
+    },
+    {
+      "source": "editor-vulkan-pass-workspace-attempt1/08-native-pass-saved.jpg",
+      "artifact": "ui/08-native-pass-saved.jpg",
+      "bytes": 96253,
+      "sha256": "1C42DFB78DE13E001E32A381FCCB7DE8CA80F355957E8FA4C35E3FA2CADDE967"
+    },
+    {
+      "source": "editor-vulkan-pass-workspace-attempt1/09-native-pass-node-config.jpg",
+      "artifact": "ui/09-native-pass-node-config.jpg",
+      "bytes": 101274,
+      "sha256": "0429E41A943EA9DFB0374B47698E0C764E26D6BD9BD1685B0F6AD34A626E2F02"
+    },
+    {
+      "source": "editor-vulkan-pass-workspace-attempt1/10-native-pass-node-undo.jpg",
+      "artifact": "ui/10-native-pass-node-undo.jpg",
+      "bytes": 100965,
+      "sha256": "58AA8398FBF85DE1CE542941429E7DF658AA008ADEAA66F3823600CE1EF12B80"
+    },
+    {
+      "source": "editor-vulkan-pass-workspace-attempt1/11-native-pass-node-redo.jpg",
+      "artifact": "ui/11-native-pass-node-redo.jpg",
+      "bytes": 104382,
+      "sha256": "E36EFBCE6120B18C960B5891681FDE3BAA3B6051CCCD34E28B44A4F69B71A82F"
+    },
+    {
+      "source": "editor-vulkan-pass-workspace-attempt1/12-native-pass-node-saved-layout-red.jpg",
+      "artifact": "ui/12-native-pass-node-saved-layout-red.jpg",
+      "bytes": 101181,
+      "sha256": "6038BCDA896C199064B174C01CCE2AD50B8D1078FBED9C158E1CD42946C9CF1F"
+    },
+    {
+      "source": "editor-vulkan-pass-workspace-attempt1/13-native-editor-vulkan-scene-before-close.jpg",
+      "artifact": "ui/13-native-editor-vulkan-scene-before-close.jpg",
+      "bytes": 202257,
+      "sha256": "1B3538D3E8050CE3A5D85602C91C77C49BD4C3790C2301262AA696B2A7156C4B"
+    },
+    {
+      "source": "editor-vulkan-pass-workspace-attempt1/assetprocessor-launch.json",
+      "artifact": "ui/assetprocessor-launch.json",
+      "bytes": 958,
+      "sha256": "D1446B95879760787965E3791F82E00EB22844551136D3BC04BBF04F5595CB4B"
+    },
+    {
+      "source": "editor-vulkan-pass-workspace-attempt1/Editor-after-normal-close.log",
+      "artifact": "ui/Editor-after-normal-close.log",
+      "bytes": 7426,
+      "sha256": "39B416DB2811570E22D15A312636F33612E0BF13C79079BB8C55FE5F30171B90"
+    },
+    {
+      "source": "editor-vulkan-pass-workspace-attempt1/Editor-before.log",
+      "artifact": "ui/Editor-before.log",
+      "bytes": 13186,
+      "sha256": "48093BD2D1EA7092CBECDBB74FE4E131C6DC4C4CBA9B9559E53330B69C358793"
+    },
+    {
+      "source": "editor-vulkan-pass-workspace-attempt1/launch.json",
+      "artifact": "ui/launch.json",
+      "bytes": 1489,
+      "sha256": "EF2500CBD426F1EDB2476E249C995FB42207A19FCF6126B048F9C6AE4E25B99C"
+    },
+    {
+      "source": "editor-vulkan-pass-workspace-attempt1/owned-process-closure-rev1.json",
+      "artifact": "ui/owned-process-closure-rev1.json",
+      "bytes": 1525,
+      "sha256": "3E78F044AAF5D87AF53273BD8F85494FEE5D2FB2E82286E01B43BC9EC0CFB570"
+    },
+    {
+      "source": "editor-vulkan-pass-workspace-attempt1/private-fixture-ownership.json",
+      "artifact": "ui/private-fixture-ownership.json",
+      "bytes": 282,
+      "sha256": "11CCD026EBD73DA18D23FEC211414111084950BD6C5114F6113805AC4603A38D"
+    },
+    {
+      "source": "editor-vulkan-pass-workspace-attempt1/protected-inputs-postflight-rev1.json",
+      "artifact": "ui/protected-inputs-postflight-rev1.json",
+      "bytes": 776,
+      "sha256": "1788C2D83D2EA5258E1CEACF63C9BE7489EBA4F503885265F2D3185B18B0D5F7"
+    }
+  ]
+}

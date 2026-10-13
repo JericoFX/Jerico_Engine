@@ -1,0 +1,48 @@
+# Copyright (c) Contributors to the Open 3D Engine Project.
+# SPDX-License-Identifier: Apache-2.0 OR MIT
+cmake_minimum_required(VERSION 3.24)
+include("${CMAKE_CURRENT_LIST_DIR}/../../Python/JERequireLocalPath.cmake")
+include("${CMAKE_CURRENT_LIST_DIR}/../SourcePins.cmake")
+JE_python_require_local_path(JE_OIIO_PACKAGE_ROOT)
+JE_python_verify_file("${JE_OIIO_INPUTS}" "${JE_OIIO_INPUTS_SHA256}" "pinned OIIO consumer witness")
+include("${JE_OIIO_INPUTS}")
+project(JE_OpenImageIO_NativeConsumer LANGUAGES CXX)
+if(NOT WIN32 OR NOT CMAKE_SIZEOF_VOID_P EQUAL 8)
+    message(FATAL_ERROR "JE OIIO consumer requires Windows x64")
+endif()
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>DLL")
+set(CMAKE_FIND_USE_PACKAGE_REGISTRY OFF)
+set(CMAKE_FIND_USE_SYSTEM_PACKAGE_REGISTRY OFF)
+list(PREPEND CMAKE_MODULE_PATH "${JE_OIIO_PACKAGE_ROOT}")
+find_package(OpenImageIO 2.3.17.0 EXACT REQUIRED MODULE)
+find_package(OpenColorIO 2.1.1 EXACT REQUIRED MODULE)
+foreach(JE_TARGET IN ITEMS OpenImageIO::OpenImageIO OpenImageIO::OpenImageIO_Util OpenColorIO::OpenColorIO)
+    foreach(JE_PROP IN ITEMS IMPORTED_LOCATION IMPORTED_LOCATION_DEBUG IMPORTED_IMPLIB IMPORTED_IMPLIB_DEBUG)
+        get_target_property(JE_FILE ${JE_TARGET} ${JE_PROP})
+        JE_python_require_local_path(JE_FILE)
+        if(NOT EXISTS "${JE_FILE}")
+            message(FATAL_ERROR "JE OIIO consumer: ${JE_TARGET}/${JE_PROP} is missing")
+        endif()
+    endforeach()
+endforeach()
+add_executable(JE_OpenImageIO_NativeConsumer OpenImageIOConsumer.cpp)
+target_link_libraries(JE_OpenImageIO_NativeConsumer PRIVATE 3rdParty::OpenImageIO)
+add_custom_command(TARGET JE_OpenImageIO_NativeConsumer POST_BUILD
+    COMMAND "${CMAKE_COMMAND}" -E copy_if_different $<TARGET_RUNTIME_DLLS:JE_OpenImageIO_NativeConsumer>
+        $<TARGET_FILE_DIR:JE_OpenImageIO_NativeConsumer> COMMAND_EXPAND_LISTS)
+enable_testing()
+foreach(JE_CASE IN ITEMS r8 r16 r32 rgba jpeg color invalid)
+    add_test(NAME JE_OIIO_${JE_CASE} COMMAND JE_OpenImageIO_NativeConsumer "${JE_CASE}" "${CMAKE_BINARY_DIR}/outputs/$<CONFIG>/${JE_CASE}")
+endforeach()
+set_tests_properties(JE_OIIO_color PROPERTIES FIXTURES_SETUP JE_OCIO_CONFIG)
+add_test(NAME JE_OIIO_native_tools COMMAND "${CMAKE_COMMAND}"
+    "-DJE_PACKAGE_ROOT=${JE_OIIO_PACKAGE_ROOT}" "-DJE_OUTPUT=${CMAKE_BINARY_DIR}/outputs/$<CONFIG>/native-tools"
+    "-DJE_CONSUMER=$<TARGET_FILE:JE_OpenImageIO_NativeConsumer>" -P "${CMAKE_CURRENT_LIST_DIR}/NativeToolsTest.cmake")
+add_test(NAME JE_OCIO_native_tool COMMAND "${OpenColorIO_BIN_DIR}/ociocheck.exe"
+    --iconfig "${CMAKE_BINARY_DIR}/outputs/$<CONFIG>/color/raw.ocio")
+set_tests_properties(JE_OCIO_native_tool PROPERTIES FIXTURES_REQUIRED JE_OCIO_CONFIG)
+get_property(JE_TESTS DIRECTORY PROPERTY TESTS)
+set_tests_properties(${JE_TESTS} PROPERTIES ENVIRONMENT_MODIFICATION
+    "PATH=path_list_prepend:${JE_OIIO_PACKAGE_ROOT}/OpenImageIO/bin;PATH=path_list_prepend:${JE_OIIO_PACKAGE_ROOT}/OpenColorIO/bin;PATH=path_list_prepend:${JE_DEP_OpenEXR_ROOT}/OpenEXR/bin")

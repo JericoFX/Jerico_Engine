@@ -1,0 +1,48 @@
+{
+  "capturedUtc": "2026-10-13T01:31:26.9994776Z",
+  "phase": "AP migration attempt1 postflight",
+  "groups": [
+    {
+      "name": "engine",
+      "freezePath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\parent\\integrated-preview-native-freeze-rev4.json",
+      "expectedFreezeSha256": "119A5EAAA88F1060DCB49678610C57BB3EBD65B0149413D588C0066C59BC12BF",
+      "actualFreezeSha256": "119A5EAAA88F1060DCB49678610C57BB3EBD65B0149413D588C0066C59BC12BF",
+      "freezeHashMatches": true,
+      "expectedCount": 1114,
+      "actualCount": 1114,
+      "missingCount": 0,
+      "mismatchCount": 0,
+      "missing": [],
+      "mismatches": []
+    },
+    {
+      "name": "ap",
+      "freezePath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\ap-migration-attempt1\\ap-config-binary-freeze.json",
+      "expectedFreezeSha256": "3856DEA35586808F4803DC60F4E9819AD74A7CA7B60F4CF88EE2EF4176408F6C",
+      "actualFreezeSha256": "3856DEA35586808F4803DC60F4E9819AD74A7CA7B60F4CF88EE2EF4176408F6C",
+      "freezeHashMatches": true,
+      "expectedCount": 30,
+      "actualCount": 30,
+      "missingCount": 0,
+      "mismatchCount": 0,
+      "missing": [],
+      "mismatches": []
+    },
+    {
+      "name": "protected",
+      "freezePath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\ap-migration-attempt1\\protected-authored-inputs.json",
+      "expectedFreezeSha256": "992BF09C25EB38264CFF0A87AB63B078FEB6A3CDB7438452578D44C01C4FDB21",
+      "actualFreezeSha256": "992BF09C25EB38264CFF0A87AB63B078FEB6A3CDB7438452578D44C01C4FDB21",
+      "freezeHashMatches": true,
+      "expectedCount": 34,
+      "actualCount": 34,
+      "missingCount": 0,
+      "mismatchCount": 0,
+      "missing": [],
+      "mismatches": []
+    }
+  ],
+  "allFreezeHashesMatch": true,
+  "allInputsMatch": true,
+  "currentRelevantProcesses": []
+}

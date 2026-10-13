@@ -48,6 +48,9 @@ ly_add_target(
 ly_add_target(
     NAME O3DEQtControlGallery APPLICATION
     NAMESPACE AZ
+    TARGET_PROPERTIES
+        EXCLUDE_FROM_ALL TRUE
+        JE_EXCLUDE_FROM_SDK TRUE
     AUTOMOC
     AUTOUIC
     FILES_CMAKE
@@ -69,6 +72,9 @@ ly_add_target(
 ly_add_target(
     NAME ReflectedPropertyEditorStandalone APPLICATION
     NAMESPACE AZ
+    TARGET_PROPERTIES
+        EXCLUDE_FROM_ALL TRUE
+        JE_EXCLUDE_FROM_SDK TRUE
     FILES_CMAKE
         AzQtComponents/azqtcomponents_rpestandalone_files.cmake
     BUILD_DEPENDENCIES
@@ -80,6 +86,9 @@ ly_add_target(
 ly_add_target(
     NAME DPEDebugViewStandalone APPLICATION
     NAMESPACE AZ
+    TARGET_PROPERTIES
+        EXCLUDE_FROM_ALL TRUE
+        JE_EXCLUDE_FROM_SDK TRUE
     FILES_CMAKE
         AzQtComponents/azqtcomponents_debugviewstandalone_files.cmake
     BUILD_DEPENDENCIES

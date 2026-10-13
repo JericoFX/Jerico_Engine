@@ -34,8 +34,6 @@
         "AtomShader",
         "ImageProcessingAtom",
         "AtomToolsFramework",
-        "MaterialCanvas",
-        "MaterialEditor",
         "PassCanvas",
         "ShaderManagementConsole"
     ],

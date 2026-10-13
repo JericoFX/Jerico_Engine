@@ -2,7 +2,18 @@
 # SPDX-License-Identifier: Apache-2.0 OR MIT
 
 set(FILES
+    Resources/MaterialCanvas.qrc
+    Include/JE/Editor/Materials/Graph/MaterialCanvasDocumentHistory.h
+    Source/Graph/MaterialCanvasDocumentHistory.cpp
     Include/JE/Editor/Materials/Base.h
+    Include/JE/Editor/Materials/Graph/MaterialGraphCompiler.h
+    Include/JE/Editor/Materials/Graph/MaterialGraphEnvironment.h
+    Include/JE/Editor/Materials/Graph/PassGraphCompiler.h
+    Source/Graph/MaterialGraphCompiler.cpp
+    Source/Graph/MaterialGraphEnvironment.cpp
+    Source/Graph/PassGraphCompiler.cpp
+    Source/Workspace/MaterialGraphWorkspaceWidget.cpp
+    Source/Workspace/MaterialGraphWorkspaceWidget.h
     Include/JE/Editor/Materials/Document/MaterialDocument.h
     Include/JE/Editor/Materials/Document/MaterialDocumentRequestBus.h
     Include/JE/Editor/Materials/EditorMaterialComponent.h

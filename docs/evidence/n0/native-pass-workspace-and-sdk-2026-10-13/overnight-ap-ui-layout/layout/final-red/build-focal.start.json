@@ -1,0 +1,27 @@
+{
+  "phase": "build-focal",
+  "startedUtc": "2026-10-13T08:15:42.0657141Z",
+  "pid": 140692,
+  "processCreationUtc": "2026-10-13T08:15:42.0742623Z",
+  "ramBefore": {
+    "capturedUtc": "2026-10-13T08:15:42.0643478Z",
+    "totalBytes": 34265743360,
+    "freeBytes": 14759182336,
+    "usedPercent": 56.93,
+    "thresholdPercent": 80
+  },
+  "executable": "C:\\Program Files\\CMake\\bin\\cmake.exe",
+  "argv": [
+    "--build",
+    "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine",
+    "--config",
+    "Profile",
+    "--target",
+    "EditorMaterials.Tests",
+    "--parallel",
+    "1"
+  ],
+  "workingDirectory": "F:\\JericoEngine\\JericoEngine",
+  "stdout": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-passgraph-workspace-rev1\\native-final-red-layout-attempt1\\build-focal.stdout.log",
+  "stderr": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-passgraph-workspace-rev1\\native-final-red-layout-attempt1\\build-focal.stderr.log"
+}

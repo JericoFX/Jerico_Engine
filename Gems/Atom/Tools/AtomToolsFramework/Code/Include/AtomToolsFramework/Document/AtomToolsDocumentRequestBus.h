@@ -11,9 +11,24 @@
 #include <AtomToolsFramework/Document/AtomToolsDocumentObjectInfo.h>
 #include <AtomToolsFramework/Document/AtomToolsDocumentTypeInfo.h>
 #include <AzCore/EBus/EBus.h>
+#include <AzCore/std/containers/vector.h>
+#include <AzCore/std/functional.h>
 
 namespace AtomToolsFramework
 {
+    using DocumentHistoryState = AZStd::vector<AZ::u8>;
+
+    //! Optional host-owned history. Callbacks capture host state, never a document pointer.
+    //! Share one policy across the retained session. An empty policy preserves standalone history.
+    struct DocumentHistoryPolicy
+    {
+        AZStd::function<bool(const AZ::Uuid&, const AZStd::string&, const DocumentHistoryState&, const DocumentHistoryState&)> m_commit;
+        AZStd::function<bool()> m_canUndo;
+        AZStd::function<bool()> m_canRedo;
+        AZStd::function<bool()> m_undo;
+        AZStd::function<bool()> m_redo;
+    };
+
     //! This bus provides the most basic interface for implementing a document that works with the document system.
     //! Any extensions or application specific functionality should be added using a domain specific buses.
     class AtomToolsDocumentRequests : public AZ::EBusTraits
@@ -81,6 +96,12 @@ namespace AtomToolsFramework
 
         //! Restores the next state of the document
         virtual bool Redo() = 0;
+
+        //! Install host history before the first edit. Unsupported documents reject it by default.
+        virtual bool SetHistoryPolicy(const DocumentHistoryPolicy&) { return false; }
+        virtual DocumentHistoryState GetHistoryState() { return {}; }
+        //! Validate expected current state and deserialize target before changing the document.
+        virtual bool RestoreHistoryState(const DocumentHistoryState&, const DocumentHistoryState&) { return false; }
 
         //! Signal that editing is about to begin, like beginning to drag a slider control
         virtual bool BeginEdit() = 0;

@@ -1,0 +1,53 @@
+{
+  "capturedUtc": "2026-10-13T08:59:09.1055632Z",
+  "owner": "/root",
+  "before": [
+    {
+      "pid": 25064,
+      "parent": 224812,
+      "exe": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AssetProcessor.exe",
+      "creationUtc": "2026-10-13T08:26:03.194692Z",
+      "owner": "DESKTOP-288HHOD\\Jerico",
+      "workingSetMiB": 195.36,
+      "purpose": "Guarded AP GUI for root Vulkan/DX12 validation"
+    },
+    {
+      "pid": 314704,
+      "parent": 25064,
+      "exe": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AssetBuilder.exe",
+      "creationUtc": "2026-10-13T08:26:04.231535Z",
+      "owner": "DESKTOP-288HHOD\\Jerico",
+      "workingSetMiB": 201.14,
+      "purpose": "AP 25064 owned builder"
+    },
+    {
+      "pid": 94364,
+      "parent": 25064,
+      "exe": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AssetBuilder.exe",
+      "creationUtc": "2026-10-13T08:26:06.581297Z",
+      "owner": "DESKTOP-288HHOD\\Jerico",
+      "workingSetMiB": 185.16,
+      "purpose": "AP 25064 owned builder"
+    }
+  ],
+  "actions": [
+    {
+      "pid": 25064,
+      "action": "stopped obsolete owned helper after idle AP/editor closure"
+    },
+    {
+      "pid": 314704,
+      "action": "stopped obsolete owned helper after idle AP/editor closure"
+    },
+    {
+      "pid": 94364,
+      "action": "stopped obsolete owned helper after idle AP/editor closure"
+    }
+  ],
+  "remaining": [],
+  "allEnded": true,
+  "ramBeforePercent": 58.41,
+  "ramAfterPercent": 57.28,
+  "supersedes": "rev1 immediate CIM snapshot included terminating children and full CIM serialization; this compact final snapshot confirms termination",
+  "preservedSharedHelpers": true
+}

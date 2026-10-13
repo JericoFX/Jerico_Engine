@@ -1,0 +1,30 @@
+{
+  "capturedUtc": "2026-10-13T08:26:25.4042639Z",
+  "owner": "/root",
+  "pid": 188836,
+  "creationUtc": "2026-10-13T08:26:25.3555230Z",
+  "exe": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Editor.exe",
+  "argv": [
+    "--project-path",
+    "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture",
+    "--rhi=vulkan",
+    "--skipWelcomeScreen",
+    "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Levels\\JENativeIntegration\\JENativeIntegration.prefab"
+  ],
+  "backend": "vulkan",
+  "ramBeforePercent": 58.73,
+  "hashes": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Editor.exe",
+      "sha256": "13C847A9421CFB0E3A84964247EE034E4BEC45A494A75CF965992C072D396704"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\EditorMaterials.dll",
+      "sha256": "A082122D619D52EA2EBDD132C726804BC8B4FD3BA035022BE960CA0AC539C4AF"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Levels\\JENativeIntegration\\JENativeIntegration.prefab",
+      "sha256": "4C5E436524DD9EA5EB4FAE0B8BF61DF1024D5B7784D4C92EA242A28298C70040"
+    }
+  ]
+}

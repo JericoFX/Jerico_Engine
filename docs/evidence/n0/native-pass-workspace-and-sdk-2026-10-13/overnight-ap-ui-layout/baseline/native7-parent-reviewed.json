@@ -1,0 +1,162 @@
+{
+  "capturedUtc": "2026-10-13T05:59:25.2133160Z",
+  "status": "NATIVE_GATE_VERIFIED_UI_AP_SDK_PENDING",
+  "sourceFreezePath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-passgraph-workspace-rev1\\integrated-green-freeze-rev8.json",
+  "sourceFreezeSha256": "5755AB7EB1FFDFFBD6D92DD6F225032D90507FFB37C6CA5D55E2272CB09E03BE",
+  "inputCount": 1135,
+  "parentFinalRehashCount": 1135,
+  "driftCount": 0,
+  "nativeExit": 0,
+  "phases": [
+    {
+      "phase": "build-focal",
+      "exitCode": 0,
+      "elapsedSeconds": 43.209,
+      "peakRamUsedPercent": 57.08
+    },
+    {
+      "phase": "focal-inventory",
+      "exitCode": 0,
+      "elapsedSeconds": 0.069,
+      "peakRamUsedPercent": 54.28
+    },
+    {
+      "phase": "focal-test-JE__EditorMaterials.Tests.main__TEST_RUN",
+      "exitCode": 0,
+      "elapsedSeconds": 5.211,
+      "peakRamUsedPercent": 54.28
+    },
+    {
+      "phase": "focal-test-Gem__AtomToolsFramework.Tests.main__TEST_RUN",
+      "exitCode": 0,
+      "elapsedSeconds": 0.126,
+      "peakRamUsedPercent": 54.28
+    },
+    {
+      "phase": "focal-test-Gem__GraphModel.Editor.Tests.main__TEST_RUN",
+      "exitCode": 0,
+      "elapsedSeconds": 0.249,
+      "peakRamUsedPercent": 54.26
+    },
+    {
+      "phase": "build-hosts",
+      "exitCode": 0,
+      "elapsedSeconds": 172.596,
+      "peakRamUsedPercent": 66.54
+    },
+    {
+      "phase": "host-inventory",
+      "exitCode": 0,
+      "elapsedSeconds": 0.071,
+      "peakRamUsedPercent": 56.05
+    },
+    {
+      "phase": "host-test-Legacy__EditorLib.Tests.main__TEST_RUN",
+      "exitCode": 0,
+      "elapsedSeconds": 5.91,
+      "peakRamUsedPercent": 56.1
+    }
+  ],
+  "configure": {
+    "reused": true,
+    "evidence": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-passgraph-workspace-rev1\\native-green-attempt4\\configure.result.json",
+    "evidenceSha256": "7D58C3D0AF9C4B35CC8C521A2C86B5AB64D369E1035F0D2B199CB04DDD798A59",
+    "cacheEvidence": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-passgraph-workspace-rev1\\native-green-attempt4\\cache-after-configure.json",
+    "cacheSha256": "ED5C27F041BD233556170A9E95B8F1F2CD5DD305AA4F10FB6504E1A9AFB96ABB",
+    "reason": "Parent verified unchanged CMake and file lists against configure attempt4; subsequent changes are fixture preparation and QObject ownership."
+  },
+  "xml": [
+    {
+      "name": "JE_EditorMaterials.Tests.xml",
+      "sourceXmlPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\Testing\\Gtest\\JE_EditorMaterials.Tests.xml",
+      "copiedXmlPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-passgraph-workspace-rev1\\native-green-attempt7\\junit\\JE_EditorMaterials.Tests.xml",
+      "lastWriteUtc": "2026-10-13T05:48:22.4454495Z",
+      "sha256": "AD3F458FCB710CDD8EA063E9084435DB7597FB11762603E59B9F5992AABF918E",
+      "bytes": 16362,
+      "tests": 49,
+      "failures": 0,
+      "errors": 0,
+      "disabled": 0,
+      "skipped": 0,
+      "parsedCases": 49,
+      "parsedFailures": 0,
+      "parsedErrors": 0,
+      "parsedSkipped": 0,
+      "expectedHint": 49,
+      "ctestPhase": "focal-test-JE__EditorMaterials.Tests.main__TEST_RUN"
+    },
+    {
+      "name": "Gem_AtomToolsFramework.Tests.xml",
+      "sourceXmlPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\Testing\\Gtest\\Gem_AtomToolsFramework.Tests.xml",
+      "copiedXmlPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-passgraph-workspace-rev1\\native-green-attempt7\\junit\\Gem_AtomToolsFramework.Tests.xml",
+      "lastWriteUtc": "2026-10-13T05:48:22.6292347Z",
+      "sha256": "BBF59B6BDE15D4E0DAB887C52D60CF067D4FB80BE6B6B50B1CE48AFD62B0B56A",
+      "bytes": 4927,
+      "tests": 13,
+      "failures": 0,
+      "errors": 0,
+      "disabled": 0,
+      "skipped": 0,
+      "parsedCases": 13,
+      "parsedFailures": 0,
+      "parsedErrors": 0,
+      "parsedSkipped": 0,
+      "expectedHint": 13,
+      "ctestPhase": "focal-test-Gem__AtomToolsFramework.Tests.main__TEST_RUN"
+    },
+    {
+      "name": "Gem_GraphModel.Editor.Tests.xml",
+      "sourceXmlPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\Testing\\Gtest\\Gem_GraphModel.Editor.Tests.xml",
+      "copiedXmlPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-passgraph-workspace-rev1\\native-green-attempt7\\junit\\Gem_GraphModel.Editor.Tests.xml",
+      "lastWriteUtc": "2026-10-13T05:48:22.9239719Z",
+      "sha256": "BBA2E97C45E24E6C9BCE414C39118DF20F16FAAC063BAB2112AB9BDF329D69F5",
+      "bytes": 4168,
+      "tests": 13,
+      "failures": 0,
+      "errors": 0,
+      "disabled": 0,
+      "skipped": 0,
+      "parsedCases": 13,
+      "parsedFailures": 0,
+      "parsedErrors": 0,
+      "parsedSkipped": 0,
+      "expectedHint": 13,
+      "ctestPhase": "focal-test-Gem__GraphModel.Editor.Tests.main__TEST_RUN"
+    },
+    {
+      "name": "Legacy_EditorLib.Tests.xml",
+      "sourceXmlPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\Testing\\Gtest\\Legacy_EditorLib.Tests.xml",
+      "copiedXmlPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-passgraph-workspace-rev1\\native-green-attempt7\\junit\\Legacy_EditorLib.Tests.xml",
+      "lastWriteUtc": "2026-10-13T05:51:21.6474607Z",
+      "sha256": "C03B2FAEA2B78555CAE7B610BDCD1B4A8ED14429584D31F60AD3681A59B72C1E",
+      "bytes": 24874,
+      "tests": 72,
+      "failures": 0,
+      "errors": 0,
+      "disabled": 0,
+      "skipped": 0,
+      "parsedCases": 72,
+      "parsedFailures": 0,
+      "parsedErrors": 0,
+      "parsedSkipped": 0,
+      "expectedHint": 72,
+      "ctestPhase": "host-test-Legacy__EditorLib.Tests.main__TEST_RUN"
+    }
+  ],
+  "tests": 147,
+  "failures": 0,
+  "errors": 0,
+  "disabled": 0,
+  "skipped": 0,
+  "sourceReview": "Actual LOCAL/GLOBAL fixture, checked Qt lookup and two Bookmark QObject-owner diffs reviewed; inverse byte identity verified against preimages",
+  "generatedSDK": "reader2:96 active exports/115 pinned inputs rehashed; full install/import not accepted",
+  "notVerified": [
+    "UI DX12/Vulkan of current cut",
+    "AP migration current cut",
+    "complete SDK install/import",
+    "new Shipping size/performance",
+    "full GOAL"
+  ],
+  "summarySha256": "C6C3C553243EDB62F86D77D41BB10DE8EB2F87BD9BCBA03058D4A2BE16C8D933",
+  "postflightSha256": "5A78CEC6678A5EB2CDE316B77BCD21BEED013D88C437BB2B4F918A2966B663C0"
+}

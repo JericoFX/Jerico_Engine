@@ -1,0 +1,29 @@
+{
+  "phase": "focal-test-Gem__AtomToolsFramework.Tests.main__TEST_RUN",
+  "startedUtc": "2026-10-13T08:21:57.2843165Z",
+  "pid": 55264,
+  "processCreationUtc": "2026-10-13T08:21:57.2850379Z",
+  "ramBefore": {
+    "capturedUtc": "2026-10-13T08:21:57.2842695Z",
+    "totalBytes": 34265743360,
+    "freeBytes": 14544703488,
+    "usedPercent": 57.55,
+    "thresholdPercent": 80
+  },
+  "executable": "C:\\Program Files\\CMake\\bin\\ctest.exe",
+  "argv": [
+    "--test-dir",
+    "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine",
+    "-C",
+    "Profile",
+    "--output-on-failure",
+    "--no-tests=error",
+    "--timeout",
+    "180",
+    "-R",
+    "^Gem::AtomToolsFramework\\.Tests\\.main::TEST_RUN$"
+  ],
+  "workingDirectory": "F:\\JericoEngine\\JericoEngine",
+  "stdout": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-passgraph-workspace-rev1\\native-final-green-layout-attempt1\\focal-test-Gem__AtomToolsFramework.Tests.main__TEST_RUN.stdout.log",
+  "stderr": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-passgraph-workspace-rev1\\native-final-green-layout-attempt1\\focal-test-Gem__AtomToolsFramework.Tests.main__TEST_RUN.stderr.log"
+}

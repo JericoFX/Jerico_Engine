@@ -163,7 +163,7 @@ namespace GraphCanvas
         displayLayout->setContentsMargins(0, 0, 0, 0);
         displayLayout->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
 
-        m_iconDisplay = new IconLayoutItem();
+        m_iconDisplay = new IconLayoutItem(m_displayWidget);
         m_iconDisplay->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
 
         displayLayout->addItem(m_iconDisplay);

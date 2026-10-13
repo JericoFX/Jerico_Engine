@@ -7,7 +7,16 @@
  */
 
 #include <Atom/Utils/TestUtils/AssetSystemStub.h>
+#include <AtomToolsFramework/EntityPreviewViewport/EntityPreviewViewportSettingsSystem.h>
+#include <AzCore/Serialization/Json/RegistrationContext.h>
+#include <AzCore/Serialization/Json/JsonSystemComponent.h>
+#include <AzCore/Serialization/SerializeContext.h>
+#include <AzCore/Settings/SettingsRegistryImpl.h>
 #include <AtomToolsFramework/Util/Util.h>
+#include <AtomToolsFramework/Graph/AssetStatusReporter.h>
+#include <AzCore/Debug/TraceMessageBus.h>
+#include <AzCore/std/string/string_view.h>
+#include <AzToolsFramework/API/EditorAssetSystemAPI.h>
 #include <AzCore/Utils/Utils.h>
 #include <AzFramework/IO/LocalFileIO.h>
 #include <AzTest/AzTest.h>
@@ -142,5 +151,219 @@ namespace UnitTest
         ASSERT_TRUE(AtomToolsFramework::ValidateDocumentPath(testPath));
     }
 
+    class NativePreviewSettingsTest : public AtomToolsFrameworkTest
+    {
+    protected:
+        void SetUp() override
+        {
+            AtomToolsFrameworkTest::SetUp();
+            m_localFileIO->SetAlias("@engroot@", AtomToolsFramework::GetPathWithoutAlias("@exefolder@/preview-engine").c_str());
+            m_localFileIO->SetAlias("@gemroot:MaterialEditor@",
+                AtomToolsFramework::GetPathWithoutAlias("@engroot@/Gems/Atom/Tools/MaterialEditor").c_str());
+            m_serializeContext = AZStd::make_unique<AZ::SerializeContext>();
+            m_serializeContext->RegisterGenericType<AZStd::set<AZStd::string>>();
+            m_jsonContext = AZStd::make_unique<AZ::JsonRegistrationContext>();
+            AZ::JsonSystemComponent::Reflect(m_jsonContext.get());
+            m_registry = AZStd::make_unique<AZ::SettingsRegistryImpl>();
+            m_registry->SetContext(m_serializeContext.get());
+            m_registry->SetContext(m_jsonContext.get());
+            m_priorRegistry = AZ::SettingsRegistry::Get();
+            if (m_priorRegistry)
+            {
+                AZ::SettingsRegistry::Unregister(m_priorRegistry);
+            }
+            AZ::SettingsRegistry::Register(m_registry.get());
+        }
+
+        void TearDown() override
+        {
+            AZ::SettingsRegistry::Unregister(m_registry.get());
+            if (m_priorRegistry)
+            {
+                AZ::SettingsRegistry::Register(m_priorRegistry);
+            }
+            m_registry.reset();
+            m_jsonContext->EnableRemoveReflection();
+            AZ::JsonSystemComponent::Reflect(m_jsonContext.get());
+            m_jsonContext->DisableRemoveReflection();
+            m_jsonContext.reset();
+            m_serializeContext.reset();
+            // Release reflected generic types before the fixture and its allocator lifetime end.
+            AZ::GetGlobalSerializeContextModule().Cleanup();
+            AtomToolsFrameworkTest::TearDown();
+        }
+
+        static AZStd::string NativePath(const AZStd::string& suffix)
+        {
+            return "@engroot@/Editor/Materials/Preview/Assets/MaterialEditor/" + suffix;
+        }
+
+        AZ::SettingsRegistryInterface* m_priorRegistry = nullptr;
+        AZStd::unique_ptr<AZ::SerializeContext> m_serializeContext;
+        AZStd::unique_ptr<AZ::JsonRegistrationContext> m_jsonContext;
+        AZStd::unique_ptr<AZ::SettingsRegistryImpl> m_registry;
+    };
+
+    TEST_F(NativePreviewSettingsTest, DefaultsUseTheNativePreviewOwner)
+    {
+        AtomToolsFramework::EntityPreviewViewportSettingsSystem settings;
+        EXPECT_EQ(settings.GetLastLightingPresetPath(), NativePath("LightingPresets/neutral_urban.lightingpreset.azasset"));
+        EXPECT_EQ(settings.GetLastModelPresetPath(), NativePath("ViewportModels/Shaderball.modelpreset.azasset"));
+        const auto lights = settings.GetRegisteredLightingPresetPaths();
+        const auto models = settings.GetRegisteredModelPresetPaths();
+        ASSERT_EQ(lights.size(), 2);
+        ASSERT_EQ(models.size(), 15);
+        for (const auto& path : lights)
+        {
+            EXPECT_TRUE(path.starts_with(NativePath("LightingPresets/")));
+        }
+        for (const auto& path : models)
+        {
+            EXPECT_TRUE(path.starts_with(NativePath("ViewportModels/")));
+        }
+    }
+
+    TEST_F(NativePreviewSettingsTest, PersistedAliasAndAbsolutePathsKeepTheirSourceIdentity)
+    {
+        AtomToolsFramework::EntityPreviewViewportSettingsSystem settings;
+        const AZStd::string suffix = "ViewportModels/Shaderball.modelpreset.azasset";
+        const AZStd::string legacy = "@gemroot:MaterialEditor@/Assets/MaterialEditor/" + suffix;
+        const auto native = NativePath(suffix);
+        const AZ::Data::AssetId sourceId(AZ::Uuid::CreateString("{AE9105C0-0FC4-555D-BB6F-A1BAA8F11C3E}"), 0);
+        // AP retains the source GUID when the scan folder owner moves; both lookups represent that identity.
+        m_assetSystemStub.RegisterSourceInfo(AtomToolsFramework::GetPathWithoutAlias(legacy), sourceId);
+        m_assetSystemStub.RegisterSourceInfo(AtomToolsFramework::GetPathWithoutAlias(native), sourceId);
+        for (const auto& oldPath : {legacy, AtomToolsFramework::GetPathWithoutAlias(legacy)})
+        {
+            ASSERT_TRUE(m_registry->Set("/O3DE/AtomToolsFramework/EntityPreviewViewportSettings/ModelPresetPath", oldPath));
+            EXPECT_EQ(settings.GetLastModelPresetPath(), native);
+            EXPECT_EQ(settings.GetLastModelPresetPathWithoutAlias(), AtomToolsFramework::GetPathWithoutAlias(native));
+            EXPECT_EQ(settings.GetLastModelPresetAssetId(), sourceId);
+        }
+        const AZStd::string lighting = "@gemroot:MaterialEditor@/Assets/MaterialEditor/LightingPresets/neutral_urban.lightingpreset.azasset";
+        ASSERT_TRUE(m_registry->Set("/O3DE/AtomToolsFramework/EntityPreviewViewportSettings/LightingPresetPath", lighting));
+        EXPECT_EQ(settings.GetLastLightingPresetPath(), NativePath("LightingPresets/neutral_urban.lightingpreset.azasset"));
+        const AZStd::string custom = "@engroot@/Gems/Atom/Tools/MaterialEditor/Assets/MaterialEditorCustom/custom.modelpreset.azasset";
+        ASSERT_TRUE(m_registry->Set("/O3DE/AtomToolsFramework/EntityPreviewViewportSettings/ModelPresetPath", custom));
+        EXPECT_EQ(settings.GetLastModelPresetPath(), custom);
+    }
+
+    TEST_F(NativePreviewSettingsTest, FavoritesRegisterAndUnregisterUseOneCanonicalPathWithoutRemovingCustomPresets)
+    {
+        AtomToolsFramework::EntityPreviewViewportSettingsSystem settings;
+        const AZStd::string suffix = "ViewportModels/Shaderball.modelpreset.azasset";
+        const AZStd::string legacy = "@gemroot:MaterialEditor@/Assets/MaterialEditor/" + suffix;
+        const auto native = NativePath(suffix);
+        const AZStd::string custom = "@exefolder@/custom/Shaderball.modelpreset.azasset";
+        const AZStd::set<AZStd::string> stored{legacy, AtomToolsFramework::GetPathWithoutAlias(legacy), native, custom};
+        ASSERT_TRUE(AtomToolsFramework::SetSettingsObject(
+            "/O3DE/AtomToolsFramework/EntityPreviewViewportSettings/RegisteredModelPresetPaths", stored));
+        EXPECT_EQ(settings.GetRegisteredModelPresetPaths(), (AZStd::set<AZStd::string>{native, custom}));
+        settings.RegisterModelPresetPath(legacy);
+        settings.RegisterModelPresetPath(AtomToolsFramework::GetPathWithoutAlias(native));
+        EXPECT_EQ(settings.GetRegisteredModelPresetPaths(), (AZStd::set<AZStd::string>{native, custom}));
+        settings.UnregisterModelPresetPath(AtomToolsFramework::GetPathWithoutAlias(legacy));
+        EXPECT_EQ(settings.GetRegisteredModelPresetPaths(), (AZStd::set<AZStd::string>{custom}));
+        settings.RegisterModelPresetPath(legacy);
+        EXPECT_EQ(settings.GetRegisteredModelPresetPaths(), (AZStd::set<AZStd::string>{native, custom}));
+
+        const AZStd::string oldLighting = "@gemroot:MaterialEditor@/Assets/MaterialEditor/LightingPresets/neutral_urban.lightingpreset.azasset";
+        const auto nativeLighting = NativePath("LightingPresets/neutral_urban.lightingpreset.azasset");
+        const AZStd::string customLighting = "@exefolder@/custom/custom.lightingpreset.azasset";
+        ASSERT_TRUE(AtomToolsFramework::SetSettingsObject(
+            "/O3DE/AtomToolsFramework/EntityPreviewViewportSettings/RegisteredLightingPresetPaths",
+            AZStd::set<AZStd::string>{oldLighting, customLighting}));
+        settings.RegisterLightingPresetPath(AtomToolsFramework::GetPathWithoutAlias(oldLighting));
+        EXPECT_EQ(settings.GetRegisteredLightingPresetPaths(), (AZStd::set<AZStd::string>{nativeLighting, customLighting}));
+        settings.UnregisterLightingPresetPath(oldLighting);
+        EXPECT_EQ(settings.GetRegisteredLightingPresetPaths(), (AZStd::set<AZStd::string>{customLighting}));
+    }
+
+    class ReporterJobSource final : public AzToolsFramework::AssetSystemJobRequestBus::Handler
+    {
+    public:
+        ReporterJobSource() { BusConnect(); }
+        ~ReporterJobSource() override { BusDisconnect(); }
+
+        AZ::Outcome<AzToolsFramework::AssetSystem::JobInfoContainer> GetAssetJobsInfo(
+            const AZStd::string& sourcePath, const bool escalateJobs) override
+        {
+            ++m_queryCount;
+            m_sourcePath = sourcePath;
+            EXPECT_FALSE(escalateJobs);
+            return AZ::Success(AzToolsFramework::AssetSystem::JobInfoContainer{m_job});
+        }
+        AZ::Outcome<AzToolsFramework::AssetSystem::JobInfoContainer> GetAssetJobsInfoByAssetID(
+            const AZ::Data::AssetId&, const bool, bool) override { return AZ::Failure(); }
+        AZ::Outcome<AzToolsFramework::AssetSystem::JobInfoContainer> GetAssetJobsInfoByJobKey(
+            const AZStd::string&, const bool) override { return AZ::Failure(); }
+        AZ::Outcome<AzToolsFramework::AssetSystem::JobStatus> GetAssetJobsStatusByJobKey(
+            const AZStd::string&, const bool) override { return AZ::Failure(); }
+        AZ::Outcome<AZStd::string> GetJobLog(AZ::u64) override
+        {
+            ADD_FAILURE() << "Reporting a failure must not retrieve the full job log.";
+            return AZ::Failure();
+        }
+
+        AzToolsFramework::AssetSystem::JobInfo m_job;
+        AZStd::string m_sourcePath;
+        int m_queryCount = 0;
+    };
+
+    class ReporterErrorCapture final : public AZ::Debug::TraceMessageBus::Handler
+    {
+    public:
+        ReporterErrorCapture() { BusConnect(); }
+        ~ReporterErrorCapture() override { BusDisconnect(); }
+        bool OnPreError(const char* window, const char*, int, const char*, const char* message) override
+        {
+            if (AZStd::string_view(window) != "AssetStatusReporter")
+            {
+                return false;
+            }
+            m_messages.emplace_back(message);
+            return true;
+        }
+        AZStd::vector<AZStd::string> m_messages;
+    };
+
+    TEST(AssetStatusReporterTest, FailedJobsReportIdentityOnceAndRemainTerminal)
+    {
+        for (const auto status : {AzToolsFramework::AssetSystem::JobStatus::Failed,
+                                 AzToolsFramework::AssetSystem::JobStatus::Failed_InvalidSourceNameExceedsMaxLimit})
+        {
+            ReporterJobSource jobs;
+            jobs.m_job.m_status = status;
+            jobs.m_job.m_jobKey = "Material Builder";
+            jobs.m_job.m_platform = "pc";
+            jobs.m_job.m_jobRunKey = 18446744073709551614ULL;
+            ReporterErrorCapture errors;
+            AtomToolsFramework::AssetStatusReporter reporter({"/project/graph.material"});
+
+            EXPECT_EQ(reporter.Update(), AtomToolsFramework::AssetStatusReporterState::Failed);
+            ASSERT_EQ(errors.m_messages.size(), 1);
+            EXPECT_NE(errors.m_messages.front().find(jobs.m_sourcePath), AZStd::string::npos);
+            EXPECT_NE(errors.m_messages.front().find(jobs.m_job.m_jobKey), AZStd::string::npos);
+            EXPECT_NE(errors.m_messages.front().find("platform 'pc'"), AZStd::string::npos);
+            EXPECT_NE(errors.m_messages.front().find("18446744073709551614"), AZStd::string::npos);
+            EXPECT_EQ(reporter.GetCurrentPath(), "/project/graph.material");
+            EXPECT_EQ(reporter.Update(), AtomToolsFramework::AssetStatusReporterState::Failed);
+            EXPECT_EQ(jobs.m_queryCount, 1);
+            EXPECT_EQ(errors.m_messages.size(), 1);
+        }
+    }
+
+    TEST(AssetStatusReporterTest, CompletedJobAdvancesWithoutAnError)
+    {
+        ReporterJobSource jobs;
+        jobs.m_job.m_status = AzToolsFramework::AssetSystem::JobStatus::Completed;
+        ReporterErrorCapture errors;
+        AtomToolsFramework::AssetStatusReporter reporter({"/project/graph.material"});
+
+        EXPECT_EQ(reporter.Update(), AtomToolsFramework::AssetStatusReporterState::Succeeded);
+        EXPECT_TRUE(reporter.GetCurrentPath().empty());
+        EXPECT_TRUE(errors.m_messages.empty());
+        EXPECT_EQ(jobs.m_queryCount, 1);
+    }
     AZ_UNIT_TEST_HOOK(new AtomToolsFrameworkTestEnvironment);
 } // namespace UnitTest

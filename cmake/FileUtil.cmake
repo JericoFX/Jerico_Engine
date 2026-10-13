@@ -223,11 +223,12 @@ function(ly_get_engine_relative_source_dir absolute_target_source_dir output_sou
 
     # Get a relative target source directory to the LY root folder if possible
     # Otherwise use the top most source directory which led to calling add_subdirectory on the input directory
-    ly_get_root_subdirectory_which_is_parent(${absolute_target_source_dir} root_subdir_of_target)
-    cmake_path(RELATIVE_PATH absolute_target_source_dir BASE_DIRECTORY ${root_subdir_of_target} OUTPUT_VARIABLE relative_target_source_dir)
-
     cmake_path(IS_PREFIX LY_ROOT_FOLDER ${absolute_target_source_dir} is_target_source_dir_subdirectory_of_engine)
-    if(NOT is_target_source_dir_subdirectory_of_engine)
+    if(is_target_source_dir_subdirectory_of_engine)
+        cmake_path(RELATIVE_PATH absolute_target_source_dir BASE_DIRECTORY ${LY_ROOT_FOLDER} OUTPUT_VARIABLE relative_target_source_dir)
+    else()
+        ly_get_root_subdirectory_which_is_parent(${absolute_target_source_dir} root_subdir_of_target)
+        cmake_path(RELATIVE_PATH absolute_target_source_dir BASE_DIRECTORY ${root_subdir_of_target} OUTPUT_VARIABLE relative_target_source_dir)
         cmake_path(GET root_subdir_of_target FILENAME root_subdir_dirname)
         set(relative_subdir ${relative_target_source_dir})
         unset(relative_target_source_dir)

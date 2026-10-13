@@ -1,0 +1,72 @@
+{
+  "mode": "SQLite URI mode=ro; PRAGMA query_only=ON",
+  "portableKeys": [
+    "gemassets-{34AA759E-8E7A-5713-A885-D7E548B234FE}",
+    "gemregistry-{34AA759E-8E7A-5713-A885-D7E548B234FE}"
+  ],
+  "folders": [
+    {
+      "ScanFolderID": 78,
+      "ScanFolder": "F:/JericoEngine/JericoEngine/Editor/Materials/RenderPass/Assets",
+      "DisplayName": "Editor/RenderPass",
+      "PortableKey": "gemassets-{34AA759E-8E7A-5713-A885-D7E548B234FE}",
+      "IsRoot": 0
+    }
+  ],
+  "sources": [
+    {
+      "SourceID": 341,
+      "ScanFolderPK": 78,
+      "SourceName": "PassCanvas/StyleSheet/passcanvas_style.json",
+      "SourceGuid": "01916B60E26159899F066C358B01BF44"
+    },
+    {
+      "SourceID": 400,
+      "ScanFolderPK": 78,
+      "SourceName": "PassCanvas/Translation/passcanvas_en_us.ts",
+      "SourceGuid": "4960DA14708357ECA55771B4A02239E7"
+    }
+  ],
+  "products": [
+    {
+      "SourceID": 341,
+      "ProductID": 541,
+      "SubID": 0,
+      "ProductName": "pc/passcanvas/stylesheet/passcanvas_style.json",
+      "AssetType": "00000000000000000000000000000000"
+    },
+    {
+      "SourceID": 400,
+      "ProductID": 601,
+      "SubID": 0,
+      "ProductName": "pc/passcanvas/translation/passcanvas_en_us.qm",
+      "AssetType": "00000000000000000000000000000000"
+    }
+  ],
+  "jobs": [
+    {
+      "SourceID": 341,
+      "JobID": 341,
+      "JobKey": "json",
+      "Platform": "pc",
+      "Status": 4,
+      "JobRunKey": 514,
+      "ErrorCount": 0,
+      "WarningCount": 0,
+      "LastLogTime": 1791754654849,
+      "LastLogFile": "@log@/JobLogs/PassCanvas/StyleSheet/passcanvas_style.json-3893429451-514.log"
+    },
+    {
+      "SourceID": 400,
+      "JobID": 401,
+      "JobKey": "Translation Compile",
+      "Platform": "pc",
+      "Status": 4,
+      "JobRunKey": 2588,
+      "ErrorCount": 0,
+      "WarningCount": 0,
+      "LastLogTime": 1791754655095,
+      "LastLogFile": "@log@/JobLogs/PassCanvas/Translation/passcanvas_en_us.ts-86709983-2588.log"
+    }
+  ]
+}

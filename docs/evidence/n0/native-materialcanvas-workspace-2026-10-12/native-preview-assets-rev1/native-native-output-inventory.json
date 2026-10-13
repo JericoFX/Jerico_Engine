@@ -1,0 +1,308 @@
+{
+  "capturedUtc": "2026-10-13T01:20:39.7113007Z",
+  "attempt": "native-attempt4",
+  "freeze": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\parent\\integrated-preview-native-freeze-rev4.json",
+  "inputCount": 1114,
+  "postflightMismatches": 0,
+  "runnerExit": 0,
+  "phases": [
+    {
+      "phase": "build-focal",
+      "exitCode": 0,
+      "elapsedSeconds": 97.406,
+      "pid": 42952,
+      "argv": [
+        "--build",
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine",
+        "--config",
+        "Profile",
+        "--target",
+        "GraphModel.Editor.Tests",
+        "EditorMaterials.Tests",
+        "AtomToolsFramework.Tests",
+        "--parallel",
+        "6"
+      ]
+    },
+    {
+      "phase": "focal-inventory",
+      "exitCode": 0,
+      "elapsedSeconds": 1.902,
+      "pid": 139412,
+      "argv": [
+        "--test-dir",
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine",
+        "-C",
+        "Profile",
+        "--show-only=json-v1",
+        "-R",
+        "^(Gem::GraphModel\\.Editor\\.Tests\\.main::TEST_RUN|JE::EditorMaterials\\.Tests\\.main::TEST_RUN|Gem::AtomToolsFramework\\.Tests\\.main::TEST_RUN)$"
+      ]
+    },
+    {
+      "phase": "focal-test-Gem__GraphModel.Editor.Tests.main__TEST_RUN",
+      "exitCode": 0,
+      "elapsedSeconds": 2.536,
+      "pid": 236960,
+      "argv": [
+        "--test-dir",
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine",
+        "-C",
+        "Profile",
+        "--output-on-failure",
+        "--no-tests=error",
+        "-R",
+        "^Gem::GraphModel\\.Editor\\.Tests\\.main::TEST_RUN$"
+      ]
+    },
+    {
+      "phase": "focal-test-JE__EditorMaterials.Tests.main__TEST_RUN",
+      "exitCode": 0,
+      "elapsedSeconds": 8.571,
+      "pid": 161796,
+      "argv": [
+        "--test-dir",
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine",
+        "-C",
+        "Profile",
+        "--output-on-failure",
+        "--no-tests=error",
+        "-R",
+        "^JE::EditorMaterials\\.Tests\\.main::TEST_RUN$"
+      ]
+    },
+    {
+      "phase": "focal-test-Gem__AtomToolsFramework.Tests.main__TEST_RUN",
+      "exitCode": 0,
+      "elapsedSeconds": 0.315,
+      "pid": 309560,
+      "argv": [
+        "--test-dir",
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine",
+        "-C",
+        "Profile",
+        "--output-on-failure",
+        "--no-tests=error",
+        "-R",
+        "^Gem::AtomToolsFramework\\.Tests\\.main::TEST_RUN$"
+      ]
+    },
+    {
+      "phase": "build-hosts",
+      "exitCode": 0,
+      "elapsedSeconds": 111.004,
+      "pid": 240940,
+      "argv": [
+        "--build",
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine",
+        "--config",
+        "Profile",
+        "--target",
+        "Editor",
+        "MaterialCanvas",
+        "MaterialEditor",
+        "PassCanvas",
+        "ShaderManagementConsole",
+        "EditorLib.Tests",
+        "--parallel",
+        "6"
+      ]
+    },
+    {
+      "phase": "host-inventory",
+      "exitCode": 0,
+      "elapsedSeconds": 0.227,
+      "pid": 307940,
+      "argv": [
+        "--test-dir",
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine",
+        "-C",
+        "Profile",
+        "--show-only=json-v1",
+        "-R",
+        "^(Legacy::EditorLib\\.Tests\\.main::TEST_RUN)$"
+      ]
+    },
+    {
+      "phase": "host-test-Legacy__EditorLib.Tests.main__TEST_RUN",
+      "exitCode": 0,
+      "elapsedSeconds": 8.424,
+      "pid": 214656,
+      "argv": [
+        "--test-dir",
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine",
+        "-C",
+        "Profile",
+        "--output-on-failure",
+        "--no-tests=error",
+        "-R",
+        "^Legacy::EditorLib\\.Tests\\.main::TEST_RUN$"
+      ]
+    }
+  ],
+  "testSuites": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\native-attempt4\\Gem_GraphModel.Editor.Tests.xml",
+      "tests": 13,
+      "failures": 0,
+      "errors": 0,
+      "disabled": 0,
+      "skipped": 0,
+      "sha256": "5EC09F8FD73064C0063142193FEB33BD73577180A818F334FF899FF5D2AC087F"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\native-attempt4\\JE_EditorMaterials.Tests.xml",
+      "tests": 44,
+      "failures": 0,
+      "errors": 0,
+      "disabled": 0,
+      "skipped": 0,
+      "sha256": "194ADD69DF39507DA4474B4F382A5C41F611563C96F236744CDD7869A452EE1D"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\native-attempt4\\Gem_AtomToolsFramework.Tests.xml",
+      "tests": 13,
+      "failures": 0,
+      "errors": 0,
+      "disabled": 0,
+      "skipped": 0,
+      "sha256": "AF1BC1C60B88DB49794A690777FF85711BD77D6ADC14BC640744AE8577BA6163"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\native-attempt4\\Legacy_EditorLib.Tests.xml",
+      "tests": 72,
+      "failures": 0,
+      "errors": 0,
+      "disabled": 0,
+      "skipped": 0,
+      "sha256": "CE081BA1FE08705EE3F43C52F9B67F81CD24396B5E7C8F9A64331D883447DD1C"
+    }
+  ],
+  "binaries": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\GraphCanvas.Editor.dll",
+      "bytes": 7212544,
+      "lastWriteUtc": "2026-10-12T22:48:08.6070617Z",
+      "sha256": "BCE5F23A7EC45A4B38CA942F8FDC5CBEC9C973A30C37ACD0175D978C0EEDD176"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\GraphModel.Editor.dll",
+      "bytes": 4177408,
+      "lastWriteUtc": "2026-10-12T21:51:34.6130537Z",
+      "sha256": "07C376668F79B82EDD5545CA1820B8ED1AE2FF31DBEF25A45D25E567C110E28F"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\EditorMaterials.dll",
+      "bytes": 6848512,
+      "lastWriteUtc": "2026-10-12T22:36:58.6411159Z",
+      "sha256": "0E3B355C01CE3A864DF86BBEDA567A553819F377EEFFE72AF29C66A9DAE2CC9A"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\EditorMaterials.Tests.dll",
+      "bytes": 5315584,
+      "lastWriteUtc": "2026-10-12T22:40:49.3017322Z",
+      "sha256": "3225FDAB852A3CC6DC3A6824B2A98A6812940656CD2C3DCD4AB96D150D0B35C5"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AtomToolsFramework.Tests.dll",
+      "bytes": 2705408,
+      "lastWriteUtc": "2026-10-13T01:17:26.8856889Z",
+      "sha256": "ED0EFC285C7D979472A5DE11137304F58E8CE1904C502D5D8E2B8903B4CA5957"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Editor.exe",
+      "bytes": 171520,
+      "lastWriteUtc": "2026-10-11T21:35:58.0228058Z",
+      "sha256": "13C847A9421CFB0E3A84964247EE034E4BEC45A494A75CF965992C072D396704"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AssetProcessor.exe",
+      "bytes": 6669824,
+      "lastWriteUtc": "2026-10-13T01:18:21.2449537Z",
+      "sha256": "016631ABB83E3B84D94BB88CAE55ACB9DF2F6A481EE4E2E3995FA709951E0C28"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AssetProcessorBatch.exe",
+      "bytes": 5895680,
+      "lastWriteUtc": "2026-10-12T15:15:09.1253436Z",
+      "sha256": "2394807FD94C4BC36EDBE40ADCDA51FE4E74D46DCBD15DAE36F4E4306012A615"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AssetBuilder.exe",
+      "bytes": 2790400,
+      "lastWriteUtc": "2026-10-13T01:18:17.0842534Z",
+      "sha256": "36C4C97A528416AD8595ACCF3AA60AFCC99676E6F28254A60D26FD2B7E8813D7"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\MaterialCanvas.exe",
+      "bytes": 4834304,
+      "lastWriteUtc": "2026-10-13T01:18:36.6323648Z",
+      "sha256": "554293C50C413B8E64B792CB29CCF01E7C6D246FBE4F0646CC0650EB2356E5E0"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\MaterialEditor.exe",
+      "bytes": 3839488,
+      "lastWriteUtc": "2026-10-13T01:18:51.8376865Z",
+      "sha256": "B4FBC83170B7C2AA65BC43787D10A241429759340492FFAC9B8FB0192BBE0878"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\PassCanvas.exe",
+      "bytes": 5820928,
+      "lastWriteUtc": "2026-10-13T01:18:19.0191998Z",
+      "sha256": "AB9E4C4AF3206E1568F21143EC538D304BF07DDD8DB02D12292CB85115CD861B"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\ShaderManagementConsole.exe",
+      "bytes": 4025856,
+      "lastWriteUtc": "2026-10-13T01:18:19.1318928Z",
+      "sha256": "63AEF3348F4C52DBFB4D11C090C8D8792011D302B79A40CE4AD54B764E49664A"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\EditorLib.Tests.dll",
+      "bytes": 5007360,
+      "lastWriteUtc": "2026-10-13T01:19:31.4155017Z",
+      "sha256": "217052A641B58908A15E496BA1B7FFA6BF6C234DF3DEA56123874EB7486F2C98"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\GraphModel.Editor.Tests.dll",
+      "bytes": 4886528,
+      "lastWriteUtc": "2026-10-12T21:50:26.1668621Z",
+      "sha256": "D05291753C6E93E52078822B3D4A4046F773FAC7075943678E18B733C4AF9FB7"
+    }
+  ],
+  "generatedRegistry": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Registry\\cmake_dependencies.jeeditorfixture.assetbuilder.setreg",
+      "bytes": 7780,
+      "lastWriteUtc": "2026-10-12T22:35:40.9446016Z",
+      "sha256": "D5D01535004A9B9F01676E3F8B49F440ECF8385A57924D670AED791461888AF0"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Registry\\cmake_dependencies.jeeditorfixture.assetprocessor.setreg",
+      "bytes": 7780,
+      "lastWriteUtc": "2026-10-12T22:35:40.9525804Z",
+      "sha256": "D5D01535004A9B9F01676E3F8B49F440ECF8385A57924D670AED791461888AF0"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Registry\\cmake_dependencies.jeeditorfixture.editor.setreg",
+      "bytes": 7590,
+      "lastWriteUtc": "2026-10-12T22:35:40.9376204Z",
+      "sha256": "9245697AE593C1C0B226CAFB24D31037FCB13CF68BF3E4257ED3172749756454"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Registry\\cmake_dependencies.jeeditorfixture.materialcanvas.setreg",
+      "bytes": 7590,
+      "lastWriteUtc": "2026-10-12T22:35:40.9979717Z",
+      "sha256": "9245697AE593C1C0B226CAFB24D31037FCB13CF68BF3E4257ED3172749756454"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Registry\\cmake_dependencies.materialcanvas.setreg",
+      "bytes": 8513,
+      "lastWriteUtc": "2026-10-12T22:35:40.9939826Z",
+      "sha256": "894C8DB4E70E0841D36CEB28B076EEAEF3B6E2D540CB13B21A72F867C7DEFD83"
+    }
+  ],
+  "activeRelevantProcesses": [],
+  "installPhase": "NOT_RUN in this native attempt; SDK assets-only install is separately evidenced",
+  "freezeSha256": "119A5EAAA88F1060DCB49678610C57BB3EBD65B0149413D588C0066C59BC12BF"
+}

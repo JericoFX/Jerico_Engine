@@ -1,0 +1,2695 @@
+{
+  "capturedUtc": "2026-10-13T01:28:29.6931755Z",
+  "rootPid": 143912,
+  "processes": [
+    {
+      "pid": 143912,
+      "parentPid": 312952,
+      "name": "AssetProcessorBatch.exe",
+      "executablePath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AssetProcessorBatch.exe",
+      "commandLine": "\"F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AssetProcessorBatch.exe\" --engine-path=F:\\JericoEngine\\JericoEngine --project-path=F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture --platforms=pc --logDir=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\ap-migration-attempt1\\logs --zeroAnalysisMode"
+    },
+    {
+      "pid": 283688,
+      "parentPid": 143912,
+      "name": "conhost.exe",
+      "executablePath": "C:\\WINDOWS\\system32\\conhost.exe",
+      "commandLine": "\\??\\C:\\WINDOWS\\system32\\conhost.exe 0x4"
+    },
+    {
+      "pid": 206072,
+      "parentPid": 143912,
+      "name": "AssetBuilder.exe",
+      "executablePath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AssetBuilder.exe",
+      "commandLine": "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/profile/AssetBuilder.exe -task=\"\\\"resident\"\\\" -id=\"\\\"E50BE6CD6CFC4CCEAAE4EDD2584B5B52\"\\\" -project-name=\"\\\"JEEditorFixture\"\\\" -project-cache-path=\"\\\"F:/JericoEngine/JericoEngine/Projects/JEEditorFixture/Cache\"\\\" -project-path=\"\\\"F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\"\\\" -engine-path=\"\\\"F:\\JericoEngine\\JericoEngine\"\\\" -port=45644 --register -module=\"\\\"F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Builders\"\\\" --regset=\"\\\"/Amazon/AzCore/Bootstrap/engine_path=F:\\JericoEngine\\JericoEngine\"\\\""
+    },
+    {
+      "pid": 233136,
+      "parentPid": 143912,
+      "name": "AssetBuilder.exe",
+      "executablePath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AssetBuilder.exe",
+      "commandLine": "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/profile/AssetBuilder.exe -task=\"\\\"resident\"\\\" -id=\"\\\"49943A645C10448C9765472443ABC49A\"\\\" -project-name=\"\\\"JEEditorFixture\"\\\" -project-cache-path=\"\\\"F:/JericoEngine/JericoEngine/Projects/JEEditorFixture/Cache\"\\\" -project-path=\"\\\"F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\"\\\" -engine-path=\"\\\"F:\\JericoEngine\\JericoEngine\"\\\" -port=45644 -module=\"\\\"F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Builders\"\\\" --regset=\"\\\"/Amazon/AzCore/Bootstrap/engine_path=F:\\JericoEngine\\JericoEngine\"\\\""
+    }
+  ],
+  "loadedModules": [
+    {
+      "pid": 143912,
+      "process": "AssetProcessorBatch.exe",
+      "module": "AssetProcessorBatch.exe",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AssetProcessorBatch.exe"
+    },
+    {
+      "pid": 143912,
+      "process": "AssetProcessorBatch.exe",
+      "module": "ntdll.dll",
+      "path": "C:\\WINDOWS\\SYSTEM32\\ntdll.dll"
+    },
+    {
+      "pid": 143912,
+      "process": "AssetProcessorBatch.exe",
+      "module": "KERNEL32.DLL",
+      "path": "C:\\WINDOWS\\System32\\KERNEL32.DLL"
+    },
+    {
+      "pid": 143912,
+      "process": "AssetProcessorBatch.exe",
+      "module": "KERNELBASE.dll",
+      "path": "C:\\WINDOWS\\System32\\KERNELBASE.dll"
+    },
+    {
+      "pid": 143912,
+      "process": "AssetProcessorBatch.exe",
+      "module": "apphelp.dll",
+      "path": "C:\\WINDOWS\\SYSTEM32\\apphelp.dll"
+    },
+    {
+      "pid": 143912,
+      "process": "AssetProcessorBatch.exe",
+      "module": "ucrtbase.dll",
+      "path": "C:\\WINDOWS\\System32\\ucrtbase.dll"
+    },
+    {
+      "pid": 143912,
+      "process": "AssetProcessorBatch.exe",
+      "module": "EditorCamera.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\EditorCamera.dll"
+    },
+    {
+      "pid": 143912,
+      "process": "AssetProcessorBatch.exe",
+      "module": "EditorMaterials.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\EditorMaterials.dll"
+    },
+    {
+      "pid": 143912,
+      "process": "AssetProcessorBatch.exe",
+      "module": "PrefabBuilder.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\PrefabBuilder.dll"
+    },
+    {
+      "pid": 143912,
+      "process": "AssetProcessorBatch.exe",
+      "module": "Geometry.Authoring.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Geometry.Authoring.dll"
+    },
+    {
+      "pid": 143912,
+      "process": "AssetProcessorBatch.exe",
+      "module": "EditorRenderIntegration.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\EditorRenderIntegration.dll"
+    },
+    {
+      "pid": 143912,
+      "process": "AssetProcessorBatch.exe",
+      "module": "Qt6Network.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Qt6Network.dll"
+    },
+    {
+      "pid": 143912,
+      "process": "AssetProcessorBatch.exe",
+      "module": "WorldCamera.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\WorldCamera.dll"
+    },
+    {
+      "pid": 143912,
+      "process": "AssetProcessorBatch.exe",
+      "module": "ADVAPI32.dll",
+      "path": "C:\\WINDOWS\\System32\\ADVAPI32.dll"
+    },
+    {
+      "pid": 143912,
+      "process": "AssetProcessorBatch.exe",
+      "module": "msvcrt.dll",
+      "path": "C:\\WINDOWS\\System32\\msvcrt.dll"
+    },
+    {
+      "pid": 143912,
+      "process": "AssetProcessorBatch.exe",
+      "module": "sechost.dll",
+      "path": "C:\\WINDOWS\\System32\\sechost.dll"
+    },
+    {
+      "pid": 143912,
+      "process": "AssetProcessorBatch.exe",
+      "module": "RPCRT4.dll",
+      "path": "C:\\WINDOWS\\System32\\RPCRT4.dll"
+    },
+    {
+      "pid": 143912,
+      "process": "AssetProcessorBatch.exe",
+      "module": "WS2_32.dll",
+      "path": "C:\\WINDOWS\\System32\\WS2_32.dll"
+    },
+    {
+      "pid": 143912,
+      "process": "AssetProcessorBatch.exe",
+      "module": "AzFramework.NativeUI.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AzFramework.NativeUI.dll"
+    },
+    {
+      "pid": 143912,
+      "process": "AssetProcessorBatch.exe",
+      "module": "AzQtComponents.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AzQtComponents.dll"
+    },
+    {
+      "pid": 143912,
+      "process": "AssetProcessorBatch.exe",
+      "module": "AzToolsFramework.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AzToolsFramework.dll"
+    },
+    {
+      "pid": 143912,
+      "process": "AssetProcessorBatch.exe",
+      "module": "GDI32.dll",
+      "path": "C:\\WINDOWS\\System32\\GDI32.dll"
+    },
+    {
+      "pid": 143912,
+      "process": "AssetProcessorBatch.exe",
+      "module": "win32u.dll",
+      "path": "C:\\WINDOWS\\System32\\win32u.dll"
+    },
+    {
+      "pid": 143912,
+      "process": "AssetProcessorBatch.exe",
+      "module": "gdi32full.dll",
+      "path": "C:\\WINDOWS\\System32\\gdi32full.dll"
+    },
+    {
+      "pid": 143912,
+      "process": "AssetProcessorBatch.exe",
+      "module": "msvcp_win.dll",
+      "path": "C:\\WINDOWS\\System32\\msvcp_win.dll"
+    },
+    {
+      "pid": 143912,
+      "process": "AssetProcessorBatch.exe",
+      "module": "USER32.dll",
+      "path": "C:\\WINDOWS\\System32\\USER32.dll"
+    },
+    {
+      "pid": 143912,
+      "process": "AssetProcessorBatch.exe",
+      "module": "RenderMaterials.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\RenderMaterials.dll"
+    },
+    {
+      "pid": 143912,
+      "process": "AssetProcessorBatch.exe",
+      "module": "Qt6Gui.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Qt6Gui.dll"
+    },
+    {
+      "pid": 143912,
+      "process": "AssetProcessorBatch.exe",
+      "module": "DebugImGui.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\DebugImGui.dll"
+    },
+    {
+      "pid": 143912,
+      "process": "AssetProcessorBatch.exe",
+      "module": "ole32.dll",
+      "path": "C:\\WINDOWS\\System32\\ole32.dll"
+    },
+    {
+      "pid": 143912,
+      "process": "AssetProcessorBatch.exe",
+      "module": "combase.dll",
+      "path": "C:\\WINDOWS\\System32\\combase.dll"
+    },
+    {
+      "pid": 143912,
+      "process": "AssetProcessorBatch.exe",
+      "module": "ProfilerCapture.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\ProfilerCapture.dll"
+    },
+    {
+      "pid": 143912,
+      "process": "AssetProcessorBatch.exe",
+      "module": "SHELL32.dll",
+      "path": "C:\\WINDOWS\\System32\\SHELL32.dll"
+    },
+    {
+      "pid": 143912,
+      "process": "AssetProcessorBatch.exe",
+      "module": "Qt6Core.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Qt6Core.dll"
+    },
+    {
+      "pid": 143912,
+      "process": "AssetProcessorBatch.exe",
+      "module": "OLEAUT32.dll",
+      "path": "C:\\WINDOWS\\System32\\OLEAUT32.dll"
+    },
+    {
+      "pid": 143912,
+      "process": "AssetProcessorBatch.exe",
+      "module": "VCRUNTIME140.dll",
+      "path": "C:\\WINDOWS\\SYSTEM32\\VCRUNTIME140.dll"
+    },
+    {
+      "pid": 143912,
+      "process": "AssetProcessorBatch.exe",
+      "module": "MSVCP140.dll",
+      "path": "C:\\WINDOWS\\SYSTEM32\\MSVCP140.dll"
+    },
+    {
+      "pid": 143912,
+      "process": "AssetProcessorBatch.exe",
+      "module": "AzCore.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AzCore.dll"
+    },
+    {
+      "pid": 143912,
+      "process": "AssetProcessorBatch.exe",
+      "module": "VCRUNTIME140_1.dll",
+      "path": "C:\\WINDOWS\\SYSTEM32\\VCRUNTIME140_1.dll"
+    },
+    {
+      "pid": 143912,
+      "process": "AssetProcessorBatch.exe",
+      "module": "Atom_RPI.Edit.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_RPI.Edit.dll"
+    },
+    {
+      "pid": 143912,
+      "process": "AssetProcessorBatch.exe",
+      "module": "AzFramework.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AzFramework.dll"
+    },
+    {
+      "pid": 143912,
+      "process": "AssetProcessorBatch.exe",
+      "module": "RenderDebug.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\RenderDebug.dll"
+    },
+    {
+      "pid": 143912,
+      "process": "AssetProcessorBatch.exe",
+      "module": "CRYPT32.dll",
+      "path": "C:\\WINDOWS\\System32\\CRYPT32.dll"
+    },
+    {
+      "pid": 143912,
+      "process": "AssetProcessorBatch.exe",
+      "module": "Atom_Feature_Common.Public.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_Feature_Common.Public.dll"
+    },
+    {
+      "pid": 143912,
+      "process": "AssetProcessorBatch.exe",
+      "module": "Atom_RHI.Reflect.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_RHI.Reflect.dll"
+    },
+    {
+      "pid": 143912,
+      "process": "AssetProcessorBatch.exe",
+      "module": "Qt6Widgets.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Qt6Widgets.dll"
+    },
+    {
+      "pid": 143912,
+      "process": "AssetProcessorBatch.exe",
+      "module": "Atom_RPI.Public.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_RPI.Public.dll"
+    },
+    {
+      "pid": 143912,
+      "process": "AssetProcessorBatch.exe",
+      "module": "Geometry.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Geometry.dll"
+    },
+    {
+      "pid": 143912,
+      "process": "AssetProcessorBatch.exe",
+      "module": "Atom_RHI.Public.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_RHI.Public.dll"
+    },
+    {
+      "pid": 143912,
+      "process": "AssetProcessorBatch.exe",
+      "module": "SceneData.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\SceneData.dll"
+    },
+    {
+      "pid": 143912,
+      "process": "AssetProcessorBatch.exe",
+      "module": "SceneCore.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\SceneCore.dll"
+    },
+    {
+      "pid": 143912,
+      "process": "AssetProcessorBatch.exe",
+      "module": "DNSAPI.dll",
+      "path": "C:\\WINDOWS\\SYSTEM32\\DNSAPI.dll"
+    },
+    {
+      "pid": 143912,
+      "process": "AssetProcessorBatch.exe",
+      "module": "IPHLPAPI.DLL",
+      "path": "C:\\WINDOWS\\SYSTEM32\\IPHLPAPI.DLL"
+    },
+    {
+      "pid": 143912,
+      "process": "AssetProcessorBatch.exe",
+      "module": "RenderIntegration.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\RenderIntegration.dll"
+    },
+    {
+      "pid": 143912,
+      "process": "AssetProcessorBatch.exe",
+      "module": "Secur32.dll",
+      "path": "C:\\WINDOWS\\SYSTEM32\\Secur32.dll"
+    },
+    {
+      "pid": 143912,
+      "process": "AssetProcessorBatch.exe",
+      "module": "WINHTTP.dll",
+      "path": "C:\\WINDOWS\\SYSTEM32\\WINHTTP.dll"
+    },
+    {
+      "pid": 143912,
+      "process": "AssetProcessorBatch.exe",
+      "module": "MSVCP140_1.dll",
+      "path": "C:\\WINDOWS\\SYSTEM32\\MSVCP140_1.dll"
+    },
+    {
+      "pid": 143912,
+      "process": "AssetProcessorBatch.exe",
+      "module": "Qt6SvgWidgets.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Qt6SvgWidgets.dll"
+    },
+    {
+      "pid": 143912,
+      "process": "AssetProcessorBatch.exe",
+      "module": "Qt6Xml.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Qt6Xml.dll"
+    },
+    {
+      "pid": 143912,
+      "process": "AssetProcessorBatch.exe",
+      "module": "Qt6Svg.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Qt6Svg.dll"
+    },
+    {
+      "pid": 143912,
+      "process": "AssetProcessorBatch.exe",
+      "module": "MAGNIFICATION.dll",
+      "path": "C:\\WINDOWS\\SYSTEM32\\MAGNIFICATION.dll"
+    },
+    {
+      "pid": 143912,
+      "process": "AssetProcessorBatch.exe",
+      "module": "DearImGui.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\DearImGui.dll"
+    },
+    {
+      "pid": 143912,
+      "process": "AssetProcessorBatch.exe",
+      "module": "dxgi.dll",
+      "path": "C:\\WINDOWS\\SYSTEM32\\dxgi.dll"
+    },
+    {
+      "pid": 143912,
+      "process": "AssetProcessorBatch.exe",
+      "module": "d3d11.dll",
+      "path": "C:\\WINDOWS\\SYSTEM32\\d3d11.dll"
+    },
+    {
+      "pid": 143912,
+      "process": "AssetProcessorBatch.exe",
+      "module": "d3d12.dll",
+      "path": "C:\\WINDOWS\\SYSTEM32\\d3d12.dll"
+    },
+    {
+      "pid": 143912,
+      "process": "AssetProcessorBatch.exe",
+      "module": "UxTheme.dll",
+      "path": "C:\\WINDOWS\\SYSTEM32\\UxTheme.dll"
+    },
+    {
+      "pid": 143912,
+      "process": "AssetProcessorBatch.exe",
+      "module": "DWrite.dll",
+      "path": "C:\\WINDOWS\\SYSTEM32\\DWrite.dll"
+    },
+    {
+      "pid": 143912,
+      "process": "AssetProcessorBatch.exe",
+      "module": "MPR.dll",
+      "path": "C:\\WINDOWS\\SYSTEM32\\MPR.dll"
+    },
+    {
+      "pid": 143912,
+      "process": "AssetProcessorBatch.exe",
+      "module": "USERENV.dll",
+      "path": "C:\\WINDOWS\\SYSTEM32\\USERENV.dll"
+    },
+    {
+      "pid": 143912,
+      "process": "AssetProcessorBatch.exe",
+      "module": "AUTHZ.dll",
+      "path": "C:\\WINDOWS\\SYSTEM32\\AUTHZ.dll"
+    },
+    {
+      "pid": 143912,
+      "process": "AssetProcessorBatch.exe",
+      "module": "NETAPI32.dll",
+      "path": "C:\\WINDOWS\\SYSTEM32\\NETAPI32.dll"
+    },
+    {
+      "pid": 143912,
+      "process": "AssetProcessorBatch.exe",
+      "module": "VERSION.dll",
+      "path": "C:\\WINDOWS\\SYSTEM32\\VERSION.dll"
+    },
+    {
+      "pid": 143912,
+      "process": "AssetProcessorBatch.exe",
+      "module": "WINMM.dll",
+      "path": "C:\\WINDOWS\\SYSTEM32\\WINMM.dll"
+    },
+    {
+      "pid": 143912,
+      "process": "AssetProcessorBatch.exe",
+      "module": "MSVCP140_2.dll",
+      "path": "C:\\WINDOWS\\SYSTEM32\\MSVCP140_2.dll"
+    },
+    {
+      "pid": 143912,
+      "process": "AssetProcessorBatch.exe",
+      "module": "MSVCP140_ATOMIC_WAIT.dll",
+      "path": "C:\\WINDOWS\\SYSTEM32\\MSVCP140_ATOMIC_WAIT.dll"
+    },
+    {
+      "pid": 143912,
+      "process": "AssetProcessorBatch.exe",
+      "module": "ProfilerView.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\ProfilerView.dll"
+    },
+    {
+      "pid": 143912,
+      "process": "AssetProcessorBatch.exe",
+      "module": "bcrypt.dll",
+      "path": "C:\\WINDOWS\\SYSTEM32\\bcrypt.dll"
+    },
+    {
+      "pid": 143912,
+      "process": "AssetProcessorBatch.exe",
+      "module": "dwmapi.dll",
+      "path": "C:\\WINDOWS\\SYSTEM32\\dwmapi.dll"
+    },
+    {
+      "pid": 143912,
+      "process": "AssetProcessorBatch.exe",
+      "module": "DSPARSE.dll",
+      "path": "C:\\WINDOWS\\SYSTEM32\\DSPARSE.dll"
+    },
+    {
+      "pid": 143912,
+      "process": "AssetProcessorBatch.exe",
+      "module": "WTSAPI32.dll",
+      "path": "C:\\WINDOWS\\SYSTEM32\\WTSAPI32.dll"
+    },
+    {
+      "pid": 143912,
+      "process": "AssetProcessorBatch.exe",
+      "module": "gdiplus.dll",
+      "path": "C:\\WINDOWS\\WinSxS\\amd64_microsoft.windows.gdiplus_6595b64144ccf1df_1.1.26100.9549_none_6ef4f67c3dc57a5e\\gdiplus.dll"
+    },
+    {
+      "pid": 143912,
+      "process": "AssetProcessorBatch.exe",
+      "module": "d3d9.dll",
+      "path": "C:\\WINDOWS\\SYSTEM32\\d3d9.dll"
+    },
+    {
+      "pid": 143912,
+      "process": "AssetProcessorBatch.exe",
+      "module": "powrprof.dll",
+      "path": "C:\\WINDOWS\\SYSTEM32\\powrprof.dll"
+    },
+    {
+      "pid": 143912,
+      "process": "AssetProcessorBatch.exe",
+      "module": "SSPICLI.DLL",
+      "path": "C:\\WINDOWS\\SYSTEM32\\SSPICLI.DLL"
+    },
+    {
+      "pid": 143912,
+      "process": "AssetProcessorBatch.exe",
+      "module": "dxcore.dll",
+      "path": "C:\\WINDOWS\\SYSTEM32\\dxcore.dll"
+    },
+    {
+      "pid": 143912,
+      "process": "AssetProcessorBatch.exe",
+      "module": "icuuc.dll",
+      "path": "C:\\WINDOWS\\SYSTEM32\\icuuc.dll"
+    },
+    {
+      "pid": 143912,
+      "process": "AssetProcessorBatch.exe",
+      "module": "CRYPTBASE.DLL",
+      "path": "C:\\WINDOWS\\SYSTEM32\\CRYPTBASE.DLL"
+    },
+    {
+      "pid": 143912,
+      "process": "AssetProcessorBatch.exe",
+      "module": "SRVCLI.DLL",
+      "path": "C:\\WINDOWS\\SYSTEM32\\SRVCLI.DLL"
+    },
+    {
+      "pid": 143912,
+      "process": "AssetProcessorBatch.exe",
+      "module": "NETUTILS.DLL",
+      "path": "C:\\WINDOWS\\SYSTEM32\\NETUTILS.DLL"
+    },
+    {
+      "pid": 143912,
+      "process": "AssetProcessorBatch.exe",
+      "module": "icu.DLL",
+      "path": "C:\\WINDOWS\\SYSTEM32\\icu.DLL"
+    },
+    {
+      "pid": 143912,
+      "process": "AssetProcessorBatch.exe",
+      "module": "IMM32.DLL",
+      "path": "C:\\WINDOWS\\System32\\IMM32.DLL"
+    },
+    {
+      "pid": 143912,
+      "process": "AssetProcessorBatch.exe",
+      "module": "bcryptprimitives.dll",
+      "path": "C:\\WINDOWS\\System32\\bcryptprimitives.dll"
+    },
+    {
+      "pid": 143912,
+      "process": "AssetProcessorBatch.exe",
+      "module": "UMPDC.dll",
+      "path": "C:\\WINDOWS\\SYSTEM32\\UMPDC.dll"
+    },
+    {
+      "pid": 143912,
+      "process": "AssetProcessorBatch.exe",
+      "module": "NSI.dll",
+      "path": "C:\\WINDOWS\\System32\\NSI.dll"
+    },
+    {
+      "pid": 143912,
+      "process": "AssetProcessorBatch.exe",
+      "module": "windows.storage.dll",
+      "path": "C:\\WINDOWS\\SYSTEM32\\windows.storage.dll"
+    },
+    {
+      "pid": 143912,
+      "process": "AssetProcessorBatch.exe",
+      "module": "SHCORE.dll",
+      "path": "C:\\WINDOWS\\System32\\SHCORE.dll"
+    },
+    {
+      "pid": 143912,
+      "process": "AssetProcessorBatch.exe",
+      "module": "shlwapi.dll",
+      "path": "C:\\WINDOWS\\System32\\shlwapi.dll"
+    },
+    {
+      "pid": 143912,
+      "process": "AssetProcessorBatch.exe",
+      "module": "profapi.dll",
+      "path": "C:\\WINDOWS\\SYSTEM32\\profapi.dll"
+    },
+    {
+      "pid": 143912,
+      "process": "AssetProcessorBatch.exe",
+      "module": "CRYPTSP.dll",
+      "path": "C:\\WINDOWS\\SYSTEM32\\CRYPTSP.dll"
+    },
+    {
+      "pid": 143912,
+      "process": "AssetProcessorBatch.exe",
+      "module": "rsaenh.dll",
+      "path": "C:\\WINDOWS\\system32\\rsaenh.dll"
+    },
+    {
+      "pid": 143912,
+      "process": "AssetProcessorBatch.exe",
+      "module": "kernel.appcore.dll",
+      "path": "C:\\WINDOWS\\SYSTEM32\\kernel.appcore.dll"
+    },
+    {
+      "pid": 143912,
+      "process": "AssetProcessorBatch.exe",
+      "module": "clbcatq.dll",
+      "path": "C:\\WINDOWS\\System32\\clbcatq.dll"
+    },
+    {
+      "pid": 143912,
+      "process": "AssetProcessorBatch.exe",
+      "module": "amsi.dll",
+      "path": "C:\\WINDOWS\\SYSTEM32\\amsi.dll"
+    },
+    {
+      "pid": 143912,
+      "process": "AssetProcessorBatch.exe",
+      "module": "MpOav.dll",
+      "path": "C:\\ProgramData\\Microsoft\\Windows Defender\\Platform\\4.18.26080.4-0\\MpOav.dll"
+    },
+    {
+      "pid": 143912,
+      "process": "AssetProcessorBatch.exe",
+      "module": "mswsock.dll",
+      "path": "C:\\WINDOWS\\system32\\mswsock.dll"
+    },
+    {
+      "pid": 143912,
+      "process": "AssetProcessorBatch.exe",
+      "module": "dhcpcsvc6.DLL",
+      "path": "C:\\WINDOWS\\SYSTEM32\\dhcpcsvc6.DLL"
+    },
+    {
+      "pid": 143912,
+      "process": "AssetProcessorBatch.exe",
+      "module": "dhcpcsvc.DLL",
+      "path": "C:\\WINDOWS\\SYSTEM32\\dhcpcsvc.DLL"
+    },
+    {
+      "pid": 283688,
+      "process": "conhost.exe",
+      "module": "conhost.exe",
+      "path": "C:\\WINDOWS\\system32\\conhost.exe"
+    },
+    {
+      "pid": 283688,
+      "process": "conhost.exe",
+      "module": "ntdll.dll",
+      "path": "C:\\WINDOWS\\SYSTEM32\\ntdll.dll"
+    },
+    {
+      "pid": 283688,
+      "process": "conhost.exe",
+      "module": "KERNEL32.DLL",
+      "path": "C:\\WINDOWS\\System32\\KERNEL32.DLL"
+    },
+    {
+      "pid": 283688,
+      "process": "conhost.exe",
+      "module": "KERNELBASE.dll",
+      "path": "C:\\WINDOWS\\System32\\KERNELBASE.dll"
+    },
+    {
+      "pid": 283688,
+      "process": "conhost.exe",
+      "module": "msvcp_win.dll",
+      "path": "C:\\WINDOWS\\System32\\msvcp_win.dll"
+    },
+    {
+      "pid": 283688,
+      "process": "conhost.exe",
+      "module": "ucrtbase.dll",
+      "path": "C:\\WINDOWS\\System32\\ucrtbase.dll"
+    },
+    {
+      "pid": 283688,
+      "process": "conhost.exe",
+      "module": "advapi32.dll",
+      "path": "C:\\WINDOWS\\System32\\advapi32.dll"
+    },
+    {
+      "pid": 283688,
+      "process": "conhost.exe",
+      "module": "msvcrt.dll",
+      "path": "C:\\WINDOWS\\System32\\msvcrt.dll"
+    },
+    {
+      "pid": 283688,
+      "process": "conhost.exe",
+      "module": "sechost.dll",
+      "path": "C:\\WINDOWS\\System32\\sechost.dll"
+    },
+    {
+      "pid": 283688,
+      "process": "conhost.exe",
+      "module": "RPCRT4.dll",
+      "path": "C:\\WINDOWS\\System32\\RPCRT4.dll"
+    },
+    {
+      "pid": 283688,
+      "process": "conhost.exe",
+      "module": "combase.dll",
+      "path": "C:\\WINDOWS\\System32\\combase.dll"
+    },
+    {
+      "pid": 283688,
+      "process": "conhost.exe",
+      "module": "user32.dll",
+      "path": "C:\\WINDOWS\\System32\\user32.dll"
+    },
+    {
+      "pid": 283688,
+      "process": "conhost.exe",
+      "module": "win32u.dll",
+      "path": "C:\\WINDOWS\\System32\\win32u.dll"
+    },
+    {
+      "pid": 283688,
+      "process": "conhost.exe",
+      "module": "GDI32.dll",
+      "path": "C:\\WINDOWS\\System32\\GDI32.dll"
+    },
+    {
+      "pid": 283688,
+      "process": "conhost.exe",
+      "module": "gdi32full.dll",
+      "path": "C:\\WINDOWS\\System32\\gdi32full.dll"
+    },
+    {
+      "pid": 283688,
+      "process": "conhost.exe",
+      "module": "IMM32.DLL",
+      "path": "C:\\WINDOWS\\System32\\IMM32.DLL"
+    },
+    {
+      "pid": 283688,
+      "process": "conhost.exe",
+      "module": "uxtheme.dll",
+      "path": "C:\\WINDOWS\\system32\\uxtheme.dll"
+    },
+    {
+      "pid": 283688,
+      "process": "conhost.exe",
+      "module": "MSCTF.dll",
+      "path": "C:\\WINDOWS\\System32\\MSCTF.dll"
+    },
+    {
+      "pid": 283688,
+      "process": "conhost.exe",
+      "module": "shcore.dll",
+      "path": "C:\\WINDOWS\\System32\\shcore.dll"
+    },
+    {
+      "pid": 283688,
+      "process": "conhost.exe",
+      "module": "TextShaping.dll",
+      "path": "C:\\WINDOWS\\SYSTEM32\\TextShaping.dll"
+    },
+    {
+      "pid": 283688,
+      "process": "conhost.exe",
+      "module": "comctl32.DLL",
+      "path": "C:\\WINDOWS\\WinSxS\\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.26100.9549_none_3e0a0396e3330090\\comctl32.DLL"
+    },
+    {
+      "pid": 283688,
+      "process": "conhost.exe",
+      "module": "dwmapi.dll",
+      "path": "C:\\WINDOWS\\SYSTEM32\\dwmapi.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "AssetBuilder.exe",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AssetBuilder.exe"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "ntdll.dll",
+      "path": "C:\\WINDOWS\\SYSTEM32\\ntdll.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "KERNEL32.DLL",
+      "path": "C:\\WINDOWS\\System32\\KERNEL32.DLL"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "KERNELBASE.dll",
+      "path": "C:\\WINDOWS\\System32\\KERNELBASE.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "apphelp.dll",
+      "path": "C:\\WINDOWS\\SYSTEM32\\apphelp.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "ucrtbase.dll",
+      "path": "C:\\WINDOWS\\System32\\ucrtbase.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "AzCore.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AzCore.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "Qt6Core.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Qt6Core.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "AzToolsFramework.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AzToolsFramework.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "Geometry.Authoring.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Geometry.Authoring.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "ADVAPI32.dll",
+      "path": "C:\\WINDOWS\\System32\\ADVAPI32.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "ole32.dll",
+      "path": "C:\\WINDOWS\\System32\\ole32.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "msvcrt.dll",
+      "path": "C:\\WINDOWS\\System32\\msvcrt.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "EditorCamera.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\EditorCamera.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "PrefabBuilder.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\PrefabBuilder.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "msvcp_win.dll",
+      "path": "C:\\WINDOWS\\System32\\msvcp_win.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "sechost.dll",
+      "path": "C:\\WINDOWS\\System32\\sechost.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "GDI32.dll",
+      "path": "C:\\WINDOWS\\System32\\GDI32.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "RPCRT4.dll",
+      "path": "C:\\WINDOWS\\System32\\RPCRT4.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "win32u.dll",
+      "path": "C:\\WINDOWS\\System32\\win32u.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "USER32.dll",
+      "path": "C:\\WINDOWS\\System32\\USER32.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "gdi32full.dll",
+      "path": "C:\\WINDOWS\\System32\\gdi32full.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "EditorMaterials.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\EditorMaterials.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "WorldCamera.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\WorldCamera.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "combase.dll",
+      "path": "C:\\WINDOWS\\System32\\combase.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "SHELL32.dll",
+      "path": "C:\\WINDOWS\\System32\\SHELL32.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "WS2_32.dll",
+      "path": "C:\\WINDOWS\\System32\\WS2_32.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "EditorRenderIntegration.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\EditorRenderIntegration.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "OLEAUT32.dll",
+      "path": "C:\\WINDOWS\\System32\\OLEAUT32.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "AzFramework.NativeUI.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AzFramework.NativeUI.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "RenderMaterials.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\RenderMaterials.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "DebugImGui.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\DebugImGui.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "ProfilerCapture.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\ProfilerCapture.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "AzFramework.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AzFramework.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "MSVCP140.dll",
+      "path": "C:\\WINDOWS\\SYSTEM32\\MSVCP140.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "CRYPT32.dll",
+      "path": "C:\\WINDOWS\\System32\\CRYPT32.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "VCRUNTIME140_1.dll",
+      "path": "C:\\WINDOWS\\SYSTEM32\\VCRUNTIME140_1.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "VCRUNTIME140.dll",
+      "path": "C:\\WINDOWS\\SYSTEM32\\VCRUNTIME140.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "Geometry.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Geometry.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "AzQtComponents.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AzQtComponents.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "Qt6Widgets.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Qt6Widgets.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "MPR.dll",
+      "path": "C:\\WINDOWS\\SYSTEM32\\MPR.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "USERENV.dll",
+      "path": "C:\\WINDOWS\\SYSTEM32\\USERENV.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "Qt6Gui.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Qt6Gui.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "Atom_Feature_Common.Public.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_Feature_Common.Public.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "Atom_RPI.Public.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_RPI.Public.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "Atom_RHI.Public.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_RHI.Public.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "Atom_RHI.Reflect.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_RHI.Reflect.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "NETAPI32.dll",
+      "path": "C:\\WINDOWS\\SYSTEM32\\NETAPI32.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "AUTHZ.dll",
+      "path": "C:\\WINDOWS\\SYSTEM32\\AUTHZ.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "SceneCore.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\SceneCore.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "SceneData.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\SceneData.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "VERSION.dll",
+      "path": "C:\\WINDOWS\\SYSTEM32\\VERSION.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "RenderDebug.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\RenderDebug.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "Atom_RPI.Edit.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_RPI.Edit.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "WINMM.dll",
+      "path": "C:\\WINDOWS\\SYSTEM32\\WINMM.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "Qt6Network.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Qt6Network.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "MSVCP140_ATOMIC_WAIT.dll",
+      "path": "C:\\WINDOWS\\SYSTEM32\\MSVCP140_ATOMIC_WAIT.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "MSVCP140_1.dll",
+      "path": "C:\\WINDOWS\\SYSTEM32\\MSVCP140_1.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "RenderIntegration.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\RenderIntegration.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "DearImGui.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\DearImGui.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "bcrypt.dll",
+      "path": "C:\\WINDOWS\\SYSTEM32\\bcrypt.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "Qt6Svg.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Qt6Svg.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "Qt6SvgWidgets.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Qt6SvgWidgets.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "Qt6Xml.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Qt6Xml.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "MAGNIFICATION.dll",
+      "path": "C:\\WINDOWS\\SYSTEM32\\MAGNIFICATION.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "dwmapi.dll",
+      "path": "C:\\WINDOWS\\SYSTEM32\\dwmapi.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "UxTheme.dll",
+      "path": "C:\\WINDOWS\\SYSTEM32\\UxTheme.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "d3d11.dll",
+      "path": "C:\\WINDOWS\\SYSTEM32\\d3d11.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "dxgi.dll",
+      "path": "C:\\WINDOWS\\SYSTEM32\\dxgi.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "d3d12.dll",
+      "path": "C:\\WINDOWS\\SYSTEM32\\d3d12.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "DWrite.dll",
+      "path": "C:\\WINDOWS\\SYSTEM32\\DWrite.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "MSVCP140_2.dll",
+      "path": "C:\\WINDOWS\\SYSTEM32\\MSVCP140_2.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "ProfilerView.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\ProfilerView.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "DNSAPI.dll",
+      "path": "C:\\WINDOWS\\SYSTEM32\\DNSAPI.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "IPHLPAPI.DLL",
+      "path": "C:\\WINDOWS\\SYSTEM32\\IPHLPAPI.DLL"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "Secur32.dll",
+      "path": "C:\\WINDOWS\\SYSTEM32\\Secur32.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "WINHTTP.dll",
+      "path": "C:\\WINDOWS\\SYSTEM32\\WINHTTP.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "WTSAPI32.dll",
+      "path": "C:\\WINDOWS\\SYSTEM32\\WTSAPI32.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "gdiplus.dll",
+      "path": "C:\\WINDOWS\\WinSxS\\amd64_microsoft.windows.gdiplus_6595b64144ccf1df_1.1.26100.9549_none_6ef4f67c3dc57a5e\\gdiplus.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "d3d9.dll",
+      "path": "C:\\WINDOWS\\SYSTEM32\\d3d9.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "powrprof.dll",
+      "path": "C:\\WINDOWS\\SYSTEM32\\powrprof.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "DSPARSE.dll",
+      "path": "C:\\WINDOWS\\SYSTEM32\\DSPARSE.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "SspiCli.dll",
+      "path": "C:\\WINDOWS\\SYSTEM32\\SspiCli.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "dxcore.dll",
+      "path": "C:\\WINDOWS\\SYSTEM32\\dxcore.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "icuuc.dll",
+      "path": "C:\\WINDOWS\\SYSTEM32\\icuuc.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "CRYPTBASE.DLL",
+      "path": "C:\\WINDOWS\\SYSTEM32\\CRYPTBASE.DLL"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "SRVCLI.DLL",
+      "path": "C:\\WINDOWS\\SYSTEM32\\SRVCLI.DLL"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "NETUTILS.DLL",
+      "path": "C:\\WINDOWS\\SYSTEM32\\NETUTILS.DLL"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "icu.DLL",
+      "path": "C:\\WINDOWS\\SYSTEM32\\icu.DLL"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "IMM32.DLL",
+      "path": "C:\\WINDOWS\\System32\\IMM32.DLL"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "bcryptPrimitives.dll",
+      "path": "C:\\WINDOWS\\System32\\bcryptPrimitives.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "UMPDC.dll",
+      "path": "C:\\WINDOWS\\SYSTEM32\\UMPDC.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "NSI.dll",
+      "path": "C:\\WINDOWS\\System32\\NSI.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "shcore.dll",
+      "path": "C:\\WINDOWS\\System32\\shcore.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "windows.storage.dll",
+      "path": "C:\\WINDOWS\\SYSTEM32\\windows.storage.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "shlwapi.dll",
+      "path": "C:\\WINDOWS\\System32\\shlwapi.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "profapi.dll",
+      "path": "C:\\WINDOWS\\SYSTEM32\\profapi.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "CRYPTSP.dll",
+      "path": "C:\\WINDOWS\\SYSTEM32\\CRYPTSP.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "rsaenh.dll",
+      "path": "C:\\WINDOWS\\system32\\rsaenh.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "kernel.appcore.dll",
+      "path": "C:\\WINDOWS\\SYSTEM32\\kernel.appcore.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "clbcatq.dll",
+      "path": "C:\\WINDOWS\\System32\\clbcatq.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "amsi.dll",
+      "path": "C:\\WINDOWS\\SYSTEM32\\amsi.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "MpOav.dll",
+      "path": "C:\\ProgramData\\Microsoft\\Windows Defender\\Platform\\4.18.26080.4-0\\MpOav.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "AtomShader.Builders.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AtomShader.Builders.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "mcpp0.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\mcpp0.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "AudioSystem.Editor.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AudioSystem.Editor.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "EditorCore.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\EditorCore.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "Atom_RHI.Private.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_RHI.Private.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "Atom_RHI_DX12.Builders.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_RHI_DX12.Builders.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "Atom_RHI_DX12.Private.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_RHI_DX12.Private.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "Atom_RHI_Metal.Builders.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_RHI_Metal.Builders.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "Atom_RHI_Metal.Private.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_RHI_Metal.Private.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "Atom_RHI_Vulkan.Builders.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_RHI_Vulkan.Builders.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "Atom_RHI_Vulkan.Private.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_RHI_Vulkan.Private.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "Atom_Feature_Common.Builders.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_Feature_Common.Builders.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "Atom_Feature_Common.Editor.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_Feature_Common.Editor.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "Atom_RPI.Builders.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_RPI.Builders.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "Atom_RPI.Editor.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_RPI.Editor.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "CommonFeaturesAtom.Editor.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\CommonFeaturesAtom.Editor.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "LmbrCentral.Editor.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\LmbrCentral.Editor.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "GradientSignal.Editor.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\GradientSignal.Editor.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "OpenImageIO_Util.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\OpenImageIO_Util.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "OpenImageIO.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\OpenImageIO.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "OpenColorIO_2_1.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\OpenColorIO_2_1.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "EditorModeFeedback.Editor.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\EditorModeFeedback.Editor.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "Maestro.Editor.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Maestro.Editor.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "SceneProcessing.Editor.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\SceneProcessing.Editor.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "Atom_RHI_Null.Builders.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_RHI_Null.Builders.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "Atom_RHI_Null.Private.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_RHI_Null.Private.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "SurfaceData.Editor.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\SurfaceData.Editor.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "AtomToolsFramework.Editor.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AtomToolsFramework.Editor.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "GraphCanvas.Editor.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\GraphCanvas.Editor.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "GraphModel.Editor.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\GraphModel.Editor.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "AtomFont.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AtomFont.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "AtomRenderOptions.Editor.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AtomRenderOptions.Editor.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "Atom_Bootstrap.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_Bootstrap.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "ImageProcessingAtom.Editor.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\ImageProcessingAtom.Editor.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "ispc_texcomp.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\ispc_texcomp.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "AtomViewportDisplayIcons.Editor.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AtomViewportDisplayIcons.Editor.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "AtomViewportDisplayInfo.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AtomViewportDisplayInfo.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "EMotionFX.Editor.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\EMotionFX.Editor.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "SceneUI.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\SceneUI.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "EMotionFX_Atom.Editor.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\EMotionFX_Atom.Editor.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "PhysX5.Editor.Gem.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\PhysX5.Editor.Gem.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "SceneBuilder.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\SceneBuilder.dll"
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "module": "mswsock.dll",
+      "path": "C:\\WINDOWS\\system32\\mswsock.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "AssetBuilder.exe",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AssetBuilder.exe"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "ntdll.dll",
+      "path": "C:\\WINDOWS\\SYSTEM32\\ntdll.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "KERNEL32.DLL",
+      "path": "C:\\WINDOWS\\System32\\KERNEL32.DLL"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "KERNELBASE.dll",
+      "path": "C:\\WINDOWS\\System32\\KERNELBASE.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "ucrtbase.dll",
+      "path": "C:\\WINDOWS\\System32\\ucrtbase.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "Qt6Core.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Qt6Core.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "AzToolsFramework.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AzToolsFramework.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "AzCore.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AzCore.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "Geometry.Authoring.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Geometry.Authoring.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "ADVAPI32.dll",
+      "path": "C:\\WINDOWS\\System32\\ADVAPI32.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "USER32.dll",
+      "path": "C:\\WINDOWS\\System32\\USER32.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "msvcrt.dll",
+      "path": "C:\\WINDOWS\\System32\\msvcrt.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "EditorCamera.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\EditorCamera.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "PrefabBuilder.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\PrefabBuilder.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "win32u.dll",
+      "path": "C:\\WINDOWS\\System32\\win32u.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "sechost.dll",
+      "path": "C:\\WINDOWS\\System32\\sechost.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "GDI32.dll",
+      "path": "C:\\WINDOWS\\System32\\GDI32.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "RPCRT4.dll",
+      "path": "C:\\WINDOWS\\System32\\RPCRT4.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "gdi32full.dll",
+      "path": "C:\\WINDOWS\\System32\\gdi32full.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "ole32.dll",
+      "path": "C:\\WINDOWS\\System32\\ole32.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "msvcp_win.dll",
+      "path": "C:\\WINDOWS\\System32\\msvcp_win.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "EditorMaterials.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\EditorMaterials.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "WorldCamera.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\WorldCamera.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "combase.dll",
+      "path": "C:\\WINDOWS\\System32\\combase.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "SHELL32.dll",
+      "path": "C:\\WINDOWS\\System32\\SHELL32.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "WS2_32.dll",
+      "path": "C:\\WINDOWS\\System32\\WS2_32.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "OLEAUT32.dll",
+      "path": "C:\\WINDOWS\\System32\\OLEAUT32.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "EditorRenderIntegration.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\EditorRenderIntegration.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "AzFramework.NativeUI.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AzFramework.NativeUI.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "RenderMaterials.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\RenderMaterials.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "DebugImGui.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\DebugImGui.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "ProfilerCapture.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\ProfilerCapture.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "AzFramework.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AzFramework.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "MSVCP140.dll",
+      "path": "C:\\WINDOWS\\SYSTEM32\\MSVCP140.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "VCRUNTIME140.dll",
+      "path": "C:\\WINDOWS\\SYSTEM32\\VCRUNTIME140.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "CRYPT32.dll",
+      "path": "C:\\WINDOWS\\System32\\CRYPT32.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "VCRUNTIME140_1.dll",
+      "path": "C:\\WINDOWS\\SYSTEM32\\VCRUNTIME140_1.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "MPR.dll",
+      "path": "C:\\WINDOWS\\SYSTEM32\\MPR.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "Geometry.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Geometry.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "USERENV.dll",
+      "path": "C:\\WINDOWS\\SYSTEM32\\USERENV.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "AzQtComponents.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AzQtComponents.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "Qt6Widgets.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Qt6Widgets.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "Qt6Gui.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Qt6Gui.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "Atom_Feature_Common.Public.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_Feature_Common.Public.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "Atom_RPI.Public.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_RPI.Public.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "Atom_RHI.Public.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_RHI.Public.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "Atom_RHI.Reflect.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_RHI.Reflect.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "SceneData.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\SceneData.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "SceneCore.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\SceneCore.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "AUTHZ.dll",
+      "path": "C:\\WINDOWS\\SYSTEM32\\AUTHZ.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "NETAPI32.dll",
+      "path": "C:\\WINDOWS\\SYSTEM32\\NETAPI32.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "VERSION.dll",
+      "path": "C:\\WINDOWS\\SYSTEM32\\VERSION.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "WINMM.dll",
+      "path": "C:\\WINDOWS\\SYSTEM32\\WINMM.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "RenderDebug.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\RenderDebug.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "Atom_RPI.Edit.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_RPI.Edit.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "Qt6Network.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Qt6Network.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "MSVCP140_ATOMIC_WAIT.dll",
+      "path": "C:\\WINDOWS\\SYSTEM32\\MSVCP140_ATOMIC_WAIT.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "MSVCP140_1.dll",
+      "path": "C:\\WINDOWS\\SYSTEM32\\MSVCP140_1.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "RenderIntegration.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\RenderIntegration.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "DearImGui.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\DearImGui.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "bcrypt.dll",
+      "path": "C:\\WINDOWS\\SYSTEM32\\bcrypt.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "Qt6Svg.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Qt6Svg.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "Qt6SvgWidgets.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Qt6SvgWidgets.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "Qt6Xml.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Qt6Xml.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "MAGNIFICATION.dll",
+      "path": "C:\\WINDOWS\\SYSTEM32\\MAGNIFICATION.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "dwmapi.dll",
+      "path": "C:\\WINDOWS\\SYSTEM32\\dwmapi.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "UxTheme.dll",
+      "path": "C:\\WINDOWS\\SYSTEM32\\UxTheme.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "d3d11.dll",
+      "path": "C:\\WINDOWS\\SYSTEM32\\d3d11.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "dxgi.dll",
+      "path": "C:\\WINDOWS\\SYSTEM32\\dxgi.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "d3d12.dll",
+      "path": "C:\\WINDOWS\\SYSTEM32\\d3d12.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "DWrite.dll",
+      "path": "C:\\WINDOWS\\SYSTEM32\\DWrite.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "MSVCP140_2.dll",
+      "path": "C:\\WINDOWS\\SYSTEM32\\MSVCP140_2.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "ProfilerView.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\ProfilerView.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "DNSAPI.dll",
+      "path": "C:\\WINDOWS\\SYSTEM32\\DNSAPI.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "IPHLPAPI.DLL",
+      "path": "C:\\WINDOWS\\SYSTEM32\\IPHLPAPI.DLL"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "Secur32.dll",
+      "path": "C:\\WINDOWS\\SYSTEM32\\Secur32.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "WINHTTP.dll",
+      "path": "C:\\WINDOWS\\SYSTEM32\\WINHTTP.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "gdiplus.dll",
+      "path": "C:\\WINDOWS\\WinSxS\\amd64_microsoft.windows.gdiplus_6595b64144ccf1df_1.1.26100.9549_none_6ef4f67c3dc57a5e\\gdiplus.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "WTSAPI32.dll",
+      "path": "C:\\WINDOWS\\SYSTEM32\\WTSAPI32.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "d3d9.dll",
+      "path": "C:\\WINDOWS\\SYSTEM32\\d3d9.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "powrprof.dll",
+      "path": "C:\\WINDOWS\\SYSTEM32\\powrprof.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "DSPARSE.dll",
+      "path": "C:\\WINDOWS\\SYSTEM32\\DSPARSE.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "SspiCli.dll",
+      "path": "C:\\WINDOWS\\SYSTEM32\\SspiCli.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "dxcore.dll",
+      "path": "C:\\WINDOWS\\SYSTEM32\\dxcore.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "icuuc.dll",
+      "path": "C:\\WINDOWS\\SYSTEM32\\icuuc.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "CRYPTBASE.DLL",
+      "path": "C:\\WINDOWS\\SYSTEM32\\CRYPTBASE.DLL"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "SRVCLI.DLL",
+      "path": "C:\\WINDOWS\\SYSTEM32\\SRVCLI.DLL"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "NETUTILS.DLL",
+      "path": "C:\\WINDOWS\\SYSTEM32\\NETUTILS.DLL"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "icu.DLL",
+      "path": "C:\\WINDOWS\\SYSTEM32\\icu.DLL"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "IMM32.DLL",
+      "path": "C:\\WINDOWS\\System32\\IMM32.DLL"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "bcryptPrimitives.dll",
+      "path": "C:\\WINDOWS\\System32\\bcryptPrimitives.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "UMPDC.dll",
+      "path": "C:\\WINDOWS\\SYSTEM32\\UMPDC.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "NSI.dll",
+      "path": "C:\\WINDOWS\\System32\\NSI.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "shcore.dll",
+      "path": "C:\\WINDOWS\\System32\\shcore.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "windows.storage.dll",
+      "path": "C:\\WINDOWS\\SYSTEM32\\windows.storage.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "shlwapi.dll",
+      "path": "C:\\WINDOWS\\System32\\shlwapi.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "profapi.dll",
+      "path": "C:\\WINDOWS\\SYSTEM32\\profapi.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "CRYPTSP.dll",
+      "path": "C:\\WINDOWS\\SYSTEM32\\CRYPTSP.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "rsaenh.dll",
+      "path": "C:\\WINDOWS\\system32\\rsaenh.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "kernel.appcore.dll",
+      "path": "C:\\WINDOWS\\SYSTEM32\\kernel.appcore.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "clbcatq.dll",
+      "path": "C:\\WINDOWS\\System32\\clbcatq.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "amsi.dll",
+      "path": "C:\\WINDOWS\\SYSTEM32\\amsi.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "MpOav.dll",
+      "path": "C:\\ProgramData\\Microsoft\\Windows Defender\\Platform\\4.18.26080.4-0\\MpOav.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "AtomShader.Builders.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AtomShader.Builders.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "mcpp0.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\mcpp0.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "AudioSystem.Editor.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AudioSystem.Editor.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "EditorCore.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\EditorCore.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "Atom_RHI.Private.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_RHI.Private.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "Atom_RHI_DX12.Builders.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_RHI_DX12.Builders.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "Atom_RHI_DX12.Private.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_RHI_DX12.Private.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "Atom_RHI_Metal.Builders.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_RHI_Metal.Builders.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "Atom_RHI_Metal.Private.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_RHI_Metal.Private.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "Atom_RHI_Vulkan.Builders.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_RHI_Vulkan.Builders.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "Atom_RHI_Vulkan.Private.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_RHI_Vulkan.Private.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "Atom_Feature_Common.Builders.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_Feature_Common.Builders.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "Atom_Feature_Common.Editor.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_Feature_Common.Editor.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "Atom_RPI.Builders.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_RPI.Builders.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "Atom_RPI.Editor.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_RPI.Editor.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "CommonFeaturesAtom.Editor.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\CommonFeaturesAtom.Editor.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "LmbrCentral.Editor.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\LmbrCentral.Editor.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "GradientSignal.Editor.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\GradientSignal.Editor.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "OpenImageIO.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\OpenImageIO.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "OpenImageIO_Util.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\OpenImageIO_Util.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "OpenColorIO_2_1.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\OpenColorIO_2_1.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "EditorModeFeedback.Editor.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\EditorModeFeedback.Editor.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "Maestro.Editor.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Maestro.Editor.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "SceneProcessing.Editor.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\SceneProcessing.Editor.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "Atom_RHI_Null.Builders.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_RHI_Null.Builders.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "Atom_RHI_Null.Private.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_RHI_Null.Private.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "SurfaceData.Editor.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\SurfaceData.Editor.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "AtomToolsFramework.Editor.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AtomToolsFramework.Editor.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "GraphCanvas.Editor.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\GraphCanvas.Editor.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "GraphModel.Editor.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\GraphModel.Editor.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "AtomFont.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AtomFont.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "AtomRenderOptions.Editor.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AtomRenderOptions.Editor.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "Atom_Bootstrap.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_Bootstrap.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "ImageProcessingAtom.Editor.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\ImageProcessingAtom.Editor.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "ispc_texcomp.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\ispc_texcomp.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "AtomViewportDisplayIcons.Editor.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AtomViewportDisplayIcons.Editor.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "AtomViewportDisplayInfo.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AtomViewportDisplayInfo.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "EMotionFX.Editor.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\EMotionFX.Editor.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "SceneUI.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\SceneUI.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "EMotionFX_Atom.Editor.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\EMotionFX_Atom.Editor.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "PhysX5.Editor.Gem.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\PhysX5.Editor.Gem.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "SceneBuilder.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\SceneBuilder.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "mswsock.dll",
+      "path": "C:\\WINDOWS\\system32\\mswsock.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "qgif.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\imageformats\\qgif.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "qicns.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\imageformats\\qicns.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "qico.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\imageformats\\qico.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "qjpeg.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\imageformats\\qjpeg.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "qsvg.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\imageformats\\qsvg.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "qtga.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\imageformats\\qtga.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "qtiff.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\imageformats\\qtiff.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "qwbmp.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\imageformats\\qwbmp.dll"
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "module": "qwebp.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\imageformats\\qwebp.dll"
+    }
+  ],
+  "tcpConnections": [
+    {
+      "pid": 143912,
+      "process": "AssetProcessorBatch.exe",
+      "state": 5,
+      "localAddress": "127.0.0.1",
+      "localPort": 45644,
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 51196,
+      "remoteIsLoopback": true
+    },
+    {
+      "pid": 143912,
+      "process": "AssetProcessorBatch.exe",
+      "state": 5,
+      "localAddress": "127.0.0.1",
+      "localPort": 45644,
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 51194,
+      "remoteIsLoopback": true
+    },
+    {
+      "pid": 143912,
+      "process": "AssetProcessorBatch.exe",
+      "state": 2,
+      "localAddress": "127.0.0.1",
+      "localPort": 45644,
+      "remoteAddress": "0.0.0.0",
+      "remotePort": 0,
+      "remoteIsLoopback": false
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "state": 100,
+      "localAddress": "0.0.0.0",
+      "localPort": 51194,
+      "remoteAddress": "0.0.0.0",
+      "remotePort": 0,
+      "remoteIsLoopback": false
+    },
+    {
+      "pid": 206072,
+      "process": "AssetBuilder.exe",
+      "state": 5,
+      "localAddress": "127.0.0.1",
+      "localPort": 51194,
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 45644,
+      "remoteIsLoopback": true
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "state": 100,
+      "localAddress": "0.0.0.0",
+      "localPort": 51196,
+      "remoteAddress": "0.0.0.0",
+      "remotePort": 0,
+      "remoteIsLoopback": false
+    },
+    {
+      "pid": 233136,
+      "process": "AssetBuilder.exe",
+      "state": 5,
+      "localAddress": "127.0.0.1",
+      "localPort": 51196,
+      "remoteAddress": "127.0.0.1",
+      "remotePort": 45644,
+      "remoteIsLoopback": true
+    }
+  ],
+  "tcpInspectionError": null
+}

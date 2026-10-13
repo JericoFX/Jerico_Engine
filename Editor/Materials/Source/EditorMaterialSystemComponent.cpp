@@ -6,7 +6,6 @@
  *
  */
 
-#include <Atom/RHI/Factory.h>
 #include <Atom/RPI.Edit/Material/MaterialSourceData.h>
 #include <Atom/RPI.Edit/Material/MaterialTypeSourceData.h>
 #include <Atom/RPI.Reflect/Asset/AssetUtils.h>
@@ -38,6 +37,8 @@
 #include <JE/Editor/Materials/Document/MaterialDocument.h>
 #include <AzToolsFramework/API/EditorWindowRequestBus.h>
 #include "Workspace/MaterialWorkspaceWidget.h"
+#include "Workspace/MaterialGraphWorkspaceWidget.h"
+#include <JE/Editor/Materials/Graph/MaterialGraphEnvironment.h>
 
 // Disables warning messages triggered by the Qt library
 // 4251: class needs to have dll-interface to be used by clients of class
@@ -71,6 +72,7 @@ namespace JE
         void EditorMaterialSystemComponent::Reflect(AZ::ReflectContext* context)
         {
             MaterialDocument::Reflect(context);
+            MaterialGraphEnvironment::Reflect(context);
             if (AZ::SerializeContext* serialize = azrtti_cast<AZ::SerializeContext*>(context))
             {
                 serialize->Class<EditorMaterialSystemComponent, AZ::Component>()
@@ -148,6 +150,11 @@ namespace JE
                 AzToolsFramework::UnregisterViewPane(MaterialWorkspaceWidget::PaneName);
                 m_workspacePaneRegistered = false;
             }
+            if (m_graphWorkspacePaneRegistered)
+            {
+                AzToolsFramework::UnregisterViewPane(MaterialGraphWorkspaceWidget::PaneName);
+                m_graphWorkspacePaneRegistered = false;
+            }
             m_workspaceSession.reset();
 
             AZ::EntitySystemBus::Handler::BusDisconnect();
@@ -190,24 +197,14 @@ namespace JE
 
         void EditorMaterialSystemComponent::OpenMaterialCanvas(const AZStd::string& sourcePath)
         {
-            QStringList arguments;
-            arguments.append(QString(R"("%1")").arg(sourcePath.c_str()));
-
-            // Use the same RHI as the main Canvas
-            AZ::Name apiName = AZ::RHI::Factory::Get().GetName();
-            if (!apiName.IsEmpty())
+            AzToolsFramework::OpenViewPane(MaterialGraphWorkspaceWidget::PaneName);
+            if (!sourcePath.empty())
             {
-                arguments.append(QString("--rhi=%1").arg(apiName.GetCStr()));
+                if (auto* workspace = AzToolsFramework::GetViewPaneWidget<MaterialGraphWorkspaceWidget>(MaterialGraphWorkspaceWidget::PaneName))
+                {
+                    workspace->OpenDocument(sourcePath);
+                }
             }
-
-            AZ::IO::FixedMaxPathString projectPath(AZ::Utils::GetProjectPath());
-            if (!projectPath.empty())
-            {
-                arguments.append(QString(R"(--project-path="%1")").arg(projectPath.c_str()));
-            }
-
-            AZ_TracePrintf("MaterialComponent", "Launching Material Canvas");
-            AtomToolsFramework::LaunchTool("MaterialCanvas", arguments);
         }
 
         void EditorMaterialSystemComponent::OpenMaterialInspector(
@@ -380,6 +377,17 @@ namespace JE
                 });
             m_workspacePaneRegistered = true;
 
+            AzToolsFramework::ViewPaneOptions graphOptions;
+            graphOptions.canHaveMultipleInstances = false;
+            graphOptions.preferedDockingArea = Qt::BottomDockWidgetArea;
+            graphOptions.paneRect = QRect(50, 50, 1200, 700);
+            AzToolsFramework::RegisterViewPane<MaterialGraphWorkspaceWidget>(MaterialGraphWorkspaceWidget::PaneName,
+                LyViewPane::CategoryTools, graphOptions, [this](QWidget* parent) -> QWidget*
+                {
+                    return new MaterialGraphWorkspaceWidget(*m_workspaceSession, parent);
+                });
+            m_graphWorkspacePaneRegistered = true;
+
             AzToolsFramework::ViewPaneOptions inspectorOptions;
             inspectorOptions.canHaveMultipleInstances = true;
             inspectorOptions.preferedDockingArea = Qt::NoDockWidgetArea;
@@ -425,7 +433,8 @@ namespace JE
             }
             if (path.ends_with(JE::Editor::EditorMaterialComponentUtil::MaterialGraphExtensionWithDot) ||
                 path.ends_with(JE::Editor::EditorMaterialComponentUtil::MaterialGraphNodeExtensionWithDot) ||
-                path.ends_with(JE::Editor::EditorMaterialComponentUtil::MaterialGraphTemplateExtensionWithDot))
+                path.ends_with(JE::Editor::EditorMaterialComponentUtil::MaterialGraphTemplateExtensionWithDot) ||
+                path.ends_with(".passgraph") || path.ends_with(".passgraphtemplate") || path.ends_with(".passgraphnode"))
             {
                 return AzToolsFramework::AssetBrowser::SourceFileDetails(":/Icons/MaterialGraph_80.svg");
             }
@@ -469,7 +478,7 @@ namespace JE
 
             {
                 AzToolsFramework::ActionProperties actionProperties;
-                actionProperties.m_name = QObject::tr("Material Canvas").toUtf8().constData();
+                actionProperties.m_name = QObject::tr("Graph Workspace").toUtf8().constData();
                 actionProperties.m_iconPath = ":/Menu/material_canvas.svg";
 
                 auto outcome = actionManagerInterface->RegisterAction(

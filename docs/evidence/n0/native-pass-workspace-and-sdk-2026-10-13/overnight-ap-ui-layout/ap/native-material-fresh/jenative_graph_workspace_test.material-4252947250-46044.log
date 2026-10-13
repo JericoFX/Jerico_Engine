@@ -1,0 +1,8 @@
+~~1791880575983~~1~~0000000000041694~~Builder::RunJob~~Request started builder [41B21DD12D9B431CBB7105603AE8F1C3 - 1] task (process) Assets/jenative_graph_workspace_test.material 
+~~1791880576194~~1~~0000000000041694~~AssetBuilder~~AssetBuilder: AllocatorManager before: allocatedBytes = 59246439 capacityBytes = 55834574848
+~~1791880576194~~1~~0000000000041694~~AssetBuilder~~AssetBuilder: Running processJob task
+~~1791880576194~~1~~0000000000041694~~AssetBuilder~~AssetBuilder: Source = F:/JericoEngine/JericoEngine/Projects/JEEditorFixture/Assets/jenative_graph_workspace_test.material
+~~1791880576194~~1~~0000000000041694~~AssetBuilder~~AssetBuilder: Platform = pc
+~~1791880576194~~1~~0000000000041694~~AssetBuilder~~AssetBuilder: AllocatorManager after: allocatedBytes = 71505823 capacityBytes = 55834574848; allocated change = 12259384
+~~1791880576194~~1~~0000000000041694~~AssetBuilder~~S: 0 errors, 0 warnings
+~~1791880576194~~1~~0000000000041694~~Builder::RunJob~~Request stopped builder [41B21DD12D9B431CBB7105603AE8F1C3 - 1] task (process) Assets/jenative_graph_workspace_test.material 

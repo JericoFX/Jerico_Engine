@@ -1,0 +1,29 @@
+{
+  "phase": "focal-test-JE__EditorMaterials.Tests.main__TEST_RUN",
+  "startedUtc": "2026-10-13T08:16:47.9626370Z",
+  "pid": 119660,
+  "processCreationUtc": "2026-10-13T08:16:47.9633769Z",
+  "ramBefore": {
+    "capturedUtc": "2026-10-13T08:16:47.9625803Z",
+    "totalBytes": 34265743360,
+    "freeBytes": 14620598272,
+    "usedPercent": 57.33,
+    "thresholdPercent": 80
+  },
+  "executable": "C:\\Program Files\\CMake\\bin\\ctest.exe",
+  "argv": [
+    "--test-dir",
+    "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine",
+    "-C",
+    "Profile",
+    "--output-on-failure",
+    "--no-tests=error",
+    "--timeout",
+    "180",
+    "-R",
+    "^JE::EditorMaterials\\.Tests\\.main::TEST_RUN$"
+  ],
+  "workingDirectory": "F:\\JericoEngine\\JericoEngine",
+  "stdout": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-passgraph-workspace-rev1\\native-final-red-layout-attempt1\\focal-test-JE__EditorMaterials.Tests.main__TEST_RUN.stdout.log",
+  "stderr": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-passgraph-workspace-rev1\\native-final-red-layout-attempt1\\focal-test-JE__EditorMaterials.Tests.main__TEST_RUN.stderr.log"
+}

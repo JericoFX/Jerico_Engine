@@ -16,6 +16,7 @@ ly_install_files(
         get_python.cmake
         get_python_package_hash.cmake
         readme.md
+        requirements-build.txt
         requirements.txt
     DESTINATION python
 )

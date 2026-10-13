@@ -1,0 +1,17 @@
+{
+  "capturedUtc": "2026-10-13T07:18:03.2207117Z",
+  "xmlSource": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\Testing\\Gtest\\JE_EditorMaterials.Tests.xml",
+  "xmlWriteUtc": "2026-10-13T07:15:10.1080088Z",
+  "copiedXml": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-passgraph-workspace-rev1\\native-red-layout-attempt1\\junit\\JE_EditorMaterials.Tests.xml",
+  "xmlSha256": "5A7CCD247FD3BBA886FEB08CA62CED471CF732CFED31BFB8167BFB88820889C7",
+  "cases": 50,
+  "failingCases": 1,
+  "failedCase": "PassNodeConfigurationKeepsNoticeCompactAndInspectorUsable",
+  "assertionFailures": 4,
+  "buildExit": 0,
+  "ctestExit": 8,
+  "inputCount": 1135,
+  "inputDrift": 0,
+  "status": "AUTHENTIC_RED_GEOMETRIC_LAYOUT_ONLY",
+  "diagnosis": "Compile notice consumes 219/420px at two sizes; Inspector clipped. Fresh XML located from real CTest command, outside evidence before copy."
+}

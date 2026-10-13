@@ -60,6 +60,11 @@ cmake_path(APPEND runtime_output_directory "${PAL_PLATFORM_NAME}/$<CONFIG>/${LY_
 function(ly_setup_target OUTPUT_CONFIGURED_TARGET ALIAS_TARGET_NAME absolute_target_source_dir)
     # De-alias target name
     ly_de_alias_target(${ALIAS_TARGET_NAME} TARGET_NAME)
+    get_target_property(exclude_from_sdk ${TARGET_NAME} JE_EXCLUDE_FROM_SDK)
+    if(exclude_from_sdk)
+        set(${OUTPUT_CONFIGURED_TARGET} "" PARENT_SCOPE)
+        return()
+    endif()
 
     # Get the target source directory relative to the LY root folder
     ly_get_engine_relative_source_dir(${absolute_target_source_dir} relative_target_source_dir)
@@ -69,6 +74,9 @@ function(ly_setup_target OUTPUT_CONFIGURED_TARGET ALIAS_TARGET_NAME absolute_tar
     # headers end up in one folder instead of duplicating the folder structure of the public/interface include directory.
     # Instead, we install them with install(DIRECTORY)
     get_target_property(include_directories ${TARGET_NAME} INTERFACE_INCLUDE_DIRECTORIES)
+    if(include_directories STREQUAL "include_directories-NOTFOUND")
+        unset(include_directories)
+    endif()
     if (include_directories)
         unset(public_headers)
         foreach(include_directory ${include_directories})
@@ -100,13 +108,18 @@ function(ly_setup_target OUTPUT_CONFIGURED_TARGET ALIAS_TARGET_NAME absolute_tar
                     # relative path if the build folder is outside the engine root.
                     cmake_path(RELATIVE_PATH include_directory BASE_DIRECTORY ${CMAKE_BINARY_DIR} OUTPUT_VARIABLE rel_include_dir)
                 else()
-                    cmake_path(RELATIVE_PATH include_directory BASE_DIRECTORY ${LY_ROOT_FOLDER} OUTPUT_VARIABLE rel_include_dir)
+                    cmake_path(IS_PREFIX LY_ROOT_FOLDER "${include_directory}" NORMALIZE include_directory_child_of_engine)
+                    if(include_directory_child_of_engine)
+                        cmake_path(RELATIVE_PATH include_directory BASE_DIRECTORY ${LY_ROOT_FOLDER} OUTPUT_VARIABLE rel_include_dir)
+                    else()
+                        # Public headers fetched outside the engine must remain inside the installed owner.
+                        ly_get_last_path_segment_concat_sha256("${include_directory}" external_include_name)
+                        cmake_path(SET rel_include_dir NORMALIZE "${relative_target_source_dir}/ExternalHeaders/${external_include_name}")
+                    endif()
                 endif()
-                cmake_path(APPEND rel_include_dir "..")
-                cmake_path(NORMAL_PATH rel_include_dir OUTPUT_VARIABLE destination_dir)
 
-                ly_install(DIRECTORY ${include_directory}
-                    DESTINATION ${destination_dir}
+                ly_install(DIRECTORY "${include_directory}/"
+                    DESTINATION "${rel_include_dir}"
                     COMPONENT ${include_directory_component}
                     FILES_MATCHING
                         PATTERN *.h
@@ -210,7 +223,16 @@ function(ly_setup_target OUTPUT_CONFIGURED_TARGET ALIAS_TARGET_NAME absolute_tar
                 cmake_path(APPEND base_path ${rel_include} OUTPUT_VARIABLE absolute_include)
                 cmake_path(RELATIVE_PATH absolute_include BASE_DIRECTORY ${absolute_target_source_dir} OUTPUT_VARIABLE target_include)
             else()
-                cmake_path(RELATIVE_PATH include BASE_DIRECTORY ${absolute_target_source_dir} OUTPUT_VARIABLE target_include)
+                cmake_path(IS_PREFIX LY_ROOT_FOLDER "${absolute_target_source_dir}" NORMALIZE target_source_child_of_engine)
+                cmake_path(IS_PREFIX LY_ROOT_FOLDER "${include}" NORMALIZE include_directory_child_of_engine)
+                if(target_source_child_of_engine AND NOT include_directory_child_of_engine)
+                    cmake_path(NORMAL_PATH include)
+                    string(REGEX REPLACE "/$" "" include "${include}")
+                    ly_get_last_path_segment_concat_sha256("${include}" external_include_name)
+                    set(target_include "ExternalHeaders/${external_include_name}")
+                else()
+                    cmake_path(RELATIVE_PATH include BASE_DIRECTORY ${absolute_target_source_dir} OUTPUT_VARIABLE target_include)
+                endif()
             endif()
             list(APPEND INCLUDE_DIRECTORIES_PLACEHOLDER "${PLACEHOLDER_INDENT}${target_include}")
         endif()
@@ -647,6 +669,12 @@ function(ly_setup_cmake_install)
     set(indent "        ")
 
     get_external_subdirectories_in_use(external_subdirs)
+    # Project roots belong to downstream builds, not the installed engine.
+    # Keep their external dependencies, which the SDK still needs to export.
+    get_property(configured_project_paths GLOBAL PROPERTY O3DE_PROJECTS_PATHS)
+    if(configured_project_paths)
+        list(REMOVE_ITEM external_subdirs ${configured_project_paths})
+    endif()
     foreach(external_subdir ${external_subdirs})
         # If an external subdirectory is not a subdirectory of the engine root, then
         # prepend "External" to its subdirectory root
@@ -786,16 +814,7 @@ function(ly_setup_cmake_install)
         if(is_external_subdir)
             continue()
         endif()
-        ly_get_root_subdirectory_which_is_parent(${target_subdirectory} root_subdir_of_target)
-        cmake_path(RELATIVE_PATH target_subdirectory BASE_DIRECTORY ${root_subdir_of_target} OUTPUT_VARIABLE relative_target_subdirectory)
-
-        cmake_path(IS_PREFIX LY_ROOT_FOLDER ${target_subdirectory} is_subdirectory_of_engine)
-        if(NOT is_subdirectory_of_engine)
-            cmake_path(GET root_subdir_of_target FILENAME root_subdir_dirname)
-            set(relative_subdir ${relative_target_subdirectory})
-            unset(relative_target_subdirectory)
-            cmake_path(APPEND relative_target_subdirectory "External" ${root_subdir_dirname} ${relative_subdir})
-        endif()
+        ly_get_engine_relative_source_dir(${target_subdirectory} relative_target_subdirectory)
 
         get_property(provider_owner GLOBAL PROPERTY "O3DE_3RDPARTY_DIRECTORY_OWNER_${target_subdirectory}")
         if(provider_owner)
@@ -913,6 +932,10 @@ function(ly_setup_runtime_dependencies)
     get_property(all_targets GLOBAL PROPERTY LY_ALL_TARGETS)
     foreach(alias_target IN LISTS all_targets)
         ly_de_alias_target(${alias_target} target)
+        get_target_property(exclude_from_sdk ${target} JE_EXCLUDE_FROM_SDK)
+        if(exclude_from_sdk)
+            continue()
+        endif()
 
         # Exclude targets that dont produce runtime outputs
         get_target_property(target_type ${target} TYPE)
@@ -1186,6 +1209,27 @@ function(ly_setup_subdirectory_set_gem_variant_to_load absolute_target_source_di
     unset(${output_script} PARENT_SCOPE)
     get_property(set_gem_variant_args_lists DIRECTORY ${absolute_target_source_dir} PROPERTY LY_SET_GEM_VARIANT_TO_LOAD_ARGUMENTS)
     foreach(set_gem_variant_args IN LISTS set_gem_variant_args_lists)
+        separate_arguments(sdk_variant_args NATIVE_COMMAND "${set_gem_variant_args}")
+        cmake_parse_arguments(sdk_variant "" "" "TARGETS;VARIANTS" ${sdk_variant_args})
+        set(sdk_variant_changed FALSE)
+        foreach(sdk_target IN LISTS sdk_variant_TARGETS)
+            if(TARGET ${sdk_target})
+                ly_de_alias_target(${sdk_target} sdk_target_name)
+                get_target_property(exclude_from_sdk ${sdk_target_name} JE_EXCLUDE_FROM_SDK)
+                if(exclude_from_sdk)
+                    list(REMOVE_ITEM sdk_variant_TARGETS ${sdk_target})
+                    set(sdk_variant_changed TRUE)
+                endif()
+            endif()
+        endforeach()
+        if(NOT sdk_variant_TARGETS)
+            continue()
+        endif()
+        if(sdk_variant_changed)
+            list(JOIN sdk_variant_TARGETS " " sdk_targets)
+            list(JOIN sdk_variant_VARIANTS " " sdk_variants)
+            set(set_gem_variant_args "TARGETS ${sdk_targets} VARIANTS ${sdk_variants}")
+        endif()
         string(CONFIGURE "${set_gem_variant_args_template}" set_gem_variant_to_load_command @ONLY)
         string(APPEND set_gem_variant_calls ${set_gem_variant_to_load_command})
     endforeach()

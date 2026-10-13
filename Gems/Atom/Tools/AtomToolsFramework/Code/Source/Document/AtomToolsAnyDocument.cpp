@@ -17,6 +17,7 @@
 #include <AzCore/RTTI/RTTI.h>
 #include <AzCore/Serialization/EditContext.h>
 #include <AzCore/Serialization/ObjectStream.h>
+#include <AzCore/Serialization/Json/JsonSerialization.h>
 #include <AzCore/Serialization/SerializeContext.h>
 #include <AzCore/Serialization/Utils.h>
 #include <AzCore/Utils/Utils.h>
@@ -119,6 +120,10 @@ namespace AtomToolsFramework
         }
 
         m_modified = false;
+        if (m_historyPolicy.m_commit)
+        {
+            RecordContentState();
+        }
         return OpenSucceeded();
     }
 
@@ -199,9 +204,19 @@ namespace AtomToolsFramework
 
         if (undoState != redoState)
         {
-            AddUndoRedoHistory(
-                [this, undoState]() { RestoreContentState(undoState); },
-                [this, redoState]() { RestoreContentState(redoState); });
+            if (m_historyPolicy.m_commit)
+            {
+                if (!AddUndoRedoHistory(undoState, redoState))
+                {
+                    return false;
+                }
+            }
+            else
+            {
+                AddUndoRedoHistory(
+                    [this, undoState]() { RestoreContentState(undoState); },
+                    [this, redoState]() { RestoreContentState(redoState); });
+            }
 
             m_modified = true;
             AtomToolsDocumentNotificationBus::Event(m_toolId, &AtomToolsDocumentNotificationBus::Events::OnDocumentModified, m_id);
@@ -221,6 +236,60 @@ namespace AtomToolsFramework
     const AZStd::any& AtomToolsAnyDocument::GetContent() const
     {
         return m_content;
+    }
+
+    DocumentHistoryState AtomToolsAnyDocument::GetHistoryState()
+    {
+        RecordContentState();
+        return m_contentStateForUndoRedo;
+    }
+
+    bool AtomToolsAnyDocument::RestoreHistoryState(const DocumentHistoryState& expected, const DocumentHistoryState& target)
+    {
+        if (target.empty())
+        {
+            AZ_Error("AtomToolsAnyDocument", false, "Cannot replay document edit: invalid target.");
+            return false;
+        }
+        if (GetHistoryState() != expected)
+        {
+            AZStd::any expectedContent;
+            if (!AZ::Utils::LoadObjectFromBufferInPlace(expected.data(), expected.size(), expectedContent) ||
+                expectedContent.type() != m_content.type())
+            {
+                AZ_Error("AtomToolsAnyDocument", false, "Cannot replay document edit: expected snapshot could not be loaded or changed type.");
+                return false;
+            }
+            // JSON's existing unordered-container serializers sort keys, unlike binary streams.
+            // Compare persisted content, not unordered-map iteration order after a reload.
+            rapidjson::Document actualJson;
+            rapidjson::Document expectedJson;
+            const AZ::JsonSerializerSettings settings;
+            const auto actualResult = AZ::JsonSerialization::Store(actualJson, actualJson.GetAllocator(),
+                AZStd::any_cast<void>(&m_content), nullptr, m_content.type(), settings);
+            const auto expectedResult = AZ::JsonSerialization::Store(expectedJson, expectedJson.GetAllocator(),
+                AZStd::any_cast<void>(&expectedContent), nullptr, expectedContent.type(), settings);
+            if (actualResult.GetProcessing() != AZ::JsonSerializationResult::Processing::Completed ||
+                expectedResult.GetProcessing() != AZ::JsonSerializationResult::Processing::Completed ||
+                AZ::JsonSerialization::Compare(actualJson, expectedJson) != AZ::JsonSerializerCompareResult::Equal)
+            {
+                AZ_Error("AtomToolsAnyDocument", false, "Cannot replay document edit: content changed outside retained history.");
+                return false;
+            }
+        }
+        AZStd::any candidate;
+        if (!AZ::Utils::LoadObjectFromBufferInPlace(target.data(), target.size(), candidate) ||
+            candidate.empty() || candidate.type() != m_content.type())
+        {
+            AZ_Error("AtomToolsAnyDocument", false, "Cannot replay document edit: snapshot could not be loaded or changed content type.");
+            return false;
+        }
+        m_content = AZStd::move(candidate);
+        m_contentStateForUndoRedo = target;
+        m_modified = true;
+        AtomToolsDocumentNotificationBus::Event(m_toolId, &AtomToolsDocumentNotificationBus::Events::OnDocumentObjectInfoInvalidated, m_id);
+        AtomToolsDocumentNotificationBus::Event(m_toolId, &AtomToolsDocumentNotificationBus::Events::OnDocumentModified, m_id);
+        return true;
     }
 
     void AtomToolsAnyDocument::RecordContentState()

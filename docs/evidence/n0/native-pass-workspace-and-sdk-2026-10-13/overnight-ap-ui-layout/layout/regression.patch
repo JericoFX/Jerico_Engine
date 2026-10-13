@@ -1,0 +1,67 @@
+--- a/Editor/Materials/Tests/GraphDocumentHistoryTests.cpp
++++ b/Editor/Materials/Tests/GraphDocumentHistoryTests.cpp
+@@ -52,1 +52,4 @@
+-#include <QApplication>
++#include <QApplication>
++#include <QEventLoop>
++#include <QLabel>
++#include <QLayout>
+@@ -869,0 +873,58 @@
++    TEST_F(PassGraphWorkspaceTests, PassNodeConfigurationKeepsNoticeCompactAndInspectorUsable)
++    {
++        JE::Editor::MaterialGraphWorkspaceWidget widget(*m_session);
++        const auto node = m_session->OpenDocument(m_directory->Resolve("source/pass.passgraphnode").Native());
++        ASSERT_FALSE(node.IsNull());
++        AtomToolsFramework::DocumentObjectInfoVector objects;
++        AtomToolsFramework::AtomToolsDocumentRequestBus::EventResult(objects, node,
++            &AtomToolsFramework::AtomToolsDocumentRequests::GetObjectInfo);
++        ASSERT_EQ(objects.size(), 1);
++        EXPECT_EQ(objects.front().m_objectType, azrtti_typeid<AtomToolsFramework::DynamicNodeConfig>());
++
++        auto* notice = widget.findChild<QLabel*>(QStringLiteral("GraphCompileStatus"));
++        ASSERT_NE(notice, nullptr);
++        QWidget* inspector = nullptr;
++        for (auto* child : widget.findChildren<QWidget*>())
++        {
++            if (child->qt_metacast("AtomToolsFramework::AtomToolsDocumentInspector"))
++            {
++                inspector = child;
++                break;
++            }
++        }
++        ASSERT_NE(inspector, nullptr);
++        QWidget* propertyEditor = nullptr;
++        for (auto* child : inspector->findChildren<QWidget*>())
++        {
++            if (child->qt_metacast("AzToolsFramework::ReflectedPropertyEditor"))
++            {
++                propertyEditor = child;
++                break;
++            }
++        }
++        ASSERT_NE(propertyEditor, nullptr);
++
++        for (const QSize size : {QSize(900, 650), QSize(1400, 900)})
++        {
++            SCOPED_TRACE(testing::Message() << "workspace " << size.width() << "x" << size.height());
++            widget.resize(size);
++            widget.show();
++            // Process the real queued property population and Qt layout, without a nested dialog/event loop.
++            for (int update = 0; update < 2; ++update)
++            {
++                QApplication::processEvents(QEventLoop::AllEvents);
++                widget.layout()->activate();
++            }
++            EXPECT_TRUE(notice->isVisible());
++            EXPECT_FALSE(notice->text().isEmpty());
++            EXPECT_LE(notice->height(), 4 * notice->fontMetrics().height());
++            EXPECT_TRUE(inspector->isVisible());
++            EXPECT_GE(inspector->height(), widget.height() / 2);
++            EXPECT_GE(inspector->width(), 20 * inspector->fontMetrics().averageCharWidth());
++            EXPECT_TRUE(propertyEditor->isVisible());
++            EXPECT_TRUE(propertyEditor->isEnabled());
++            const QRect propertyBounds(propertyEditor->mapTo(inspector, QPoint()), propertyEditor->size());
++            EXPECT_GE(propertyBounds.intersected(inspector->rect()).height(), 6 * propertyEditor->fontMetrics().height());
++        }
++    }
++

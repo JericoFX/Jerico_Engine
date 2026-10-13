@@ -18,6 +18,7 @@
 #include <AzCore/Serialization/EditContext.h>
 #include <AzCore/Serialization/Json/JsonUtils.h>
 #include <AzCore/Serialization/ObjectStream.h>
+#include <AzCore/Serialization/Json/JsonSerialization.h>
 #include <AzCore/Serialization/SerializeContext.h>
 #include <AzCore/Serialization/Utils.h>
 #include <AzCore/Utils/Utils.h>
@@ -307,9 +308,19 @@ namespace AtomToolsFramework
 
         if (undoState != redoState)
         {
-            AddUndoRedoHistory(
-                [this, undoState]() { RestoreGraphState(undoState); },
-                [this, redoState]() { RestoreGraphState(redoState); });
+            if (m_historyPolicy.m_commit)
+            {
+                if (!AddUndoRedoHistory(undoState, redoState))
+                {
+                    return false;
+                }
+            }
+            else
+            {
+                AddUndoRedoHistory(
+                    [this, undoState]() { RestoreGraphState(undoState); },
+                    [this, redoState]() { RestoreGraphState(redoState); });
+            }
 
             m_modified = true;
             AtomToolsDocumentNotificationBus::Event(m_toolId, &AtomToolsDocumentNotificationBus::Events::OnDocumentModified, m_id);
@@ -446,9 +457,19 @@ namespace AtomToolsFramework
 
         if (undoState != redoState)
         {
-            AddUndoRedoHistory(
-                [this, undoState]() { RestoreGraphState(undoState); },
-                [this, redoState]() { RestoreGraphState(redoState); });
+            if (m_historyPolicy.m_commit)
+            {
+                if (!AddUndoRedoHistory(undoState, redoState))
+                {
+                    return;
+                }
+            }
+            else
+            {
+                AddUndoRedoHistory(
+                    [this, undoState]() { RestoreGraphState(undoState); },
+                    [this, redoState]() { RestoreGraphState(redoState); });
+            }
 
             m_modified = true;
             m_buildPropertiesQueued = true;
@@ -470,6 +491,55 @@ namespace AtomToolsFramework
     void GraphDocument::OnSelectionChanged()
     {
         m_buildPropertiesQueued = true;
+    }
+
+    DocumentHistoryState GraphDocument::GetHistoryState()
+    {
+        RecordGraphState();
+        return m_graphStateForUndoRedo;
+    }
+
+    bool GraphDocument::RestoreHistoryState(const DocumentHistoryState& expected, const DocumentHistoryState& target)
+    {
+        if (!m_graph || target.empty())
+        {
+            AZ_Error("GraphDocument", false, "Cannot replay graph edit: graph closed or invalid target.");
+            return false;
+        }
+        if (GetHistoryState() != expected)
+        {
+            auto expectedGraph = AZStd::make_shared<GraphModel::Graph>(m_graphContext);
+            if (!AZ::Utils::LoadObjectFromBufferInPlace(expected.data(), expected.size(), *expectedGraph))
+            {
+                AZ_Error("GraphDocument", false, "Cannot replay graph edit: expected snapshot could not be loaded.");
+                return false;
+            }
+            // Binary node/wrapping maps may reorder on deserialize. Existing JSON serializers sort unordered containers.
+            rapidjson::Document actualJson;
+            rapidjson::Document expectedJson;
+            const AZ::JsonSerializerSettings settings;
+            const auto actualResult = AZ::JsonSerialization::Store(actualJson, actualJson.GetAllocator(), *m_graph, settings);
+            const auto expectedResult = AZ::JsonSerialization::Store(expectedJson, expectedJson.GetAllocator(), *expectedGraph, settings);
+            if (actualResult.GetProcessing() != AZ::JsonSerializationResult::Processing::Completed ||
+                expectedResult.GetProcessing() != AZ::JsonSerializationResult::Processing::Completed ||
+                AZ::JsonSerialization::Compare(actualJson, expectedJson) != AZ::JsonSerializerCompareResult::Equal)
+            {
+                AZ_Error("GraphDocument", false, "Cannot replay graph edit: graph changed outside retained history.");
+                return false;
+            }
+        }
+        // Do not clear the canvas or replace its graph until the complete snapshot is loaded.
+        auto candidate = AZStd::make_shared<GraphModel::Graph>(m_graphContext);
+        if (!AZ::Utils::LoadObjectFromBufferInPlace(target.data(), target.size(), *candidate))
+        {
+            AZ_Error("GraphDocument", false, "Cannot replay graph edit: snapshot could not be loaded.");
+            return false;
+        }
+        CreateGraph(candidate);
+        m_modified = true;
+        AtomToolsDocumentNotificationBus::Event(m_toolId, &AtomToolsDocumentNotificationBus::Events::OnDocumentModified, m_id);
+        m_compileGraphQueued |= GetSettingsValue("/O3DE/AtomToolsFramework/GraphCompiler/CompileOnEdit", true);
+        return true;
     }
 
     void GraphDocument::RecordGraphState()

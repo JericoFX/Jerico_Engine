@@ -1,0 +1,1220 @@
+[
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\blank_graph.materialgraphtemplate",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\blank_graph.materialgraphtemplate",
+    "bytes": 111,
+    "sha256": "FE7EFB1F829A7010D33174577F32F863B440C12B28BA6FAF54F59E312F57445C"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\blank_node.materialgraphnodetemplate",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\blank_node.materialgraphnodetemplate",
+    "bytes": 154,
+    "sha256": "699C53C26820FC5C5AE63B6F08112BDAF72690516F17A4C46426A682F3C2A151"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\material_input_node.materialgraphnodetemplate",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\material_input_node.materialgraphnodetemplate",
+    "bytes": 3398,
+    "sha256": "94C03FC581040B71E5F4FBC9C5D554162A576A0AC039CCB7F4B53359C2D8A6F7"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\material_output_node.materialgraphnodetemplate",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\material_output_node.materialgraphnodetemplate",
+    "bytes": 776,
+    "sha256": "517CF0C13594A7E4CF40E3488C9E00F8DA1DB09E25421CAC19402911E8992D1F"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Constants\\bool.materialgraphnode",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Constants\\bool.materialgraphnode",
+    "bytes": 1383,
+    "sha256": "18712460BD787355D78489C75E3C4C216F7361A93D5B5DDE12F364EF9EA69B3A"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Constants\\color.materialgraphnode",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Constants\\color.materialgraphnode",
+    "bytes": 3042,
+    "sha256": "C5378A49F78AF5304C29AE9D5DEA760E42CF8D8A59D3C9BC5334B1A47C814B9D"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Constants\\float.materialgraphnode",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Constants\\float.materialgraphnode",
+    "bytes": 1388,
+    "sha256": "3AEF49761B22BE29790FDD553EBC72CDC8377211A5FD13CEBEA2B939C2D53EDD"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Constants\\float2.materialgraphnode",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Constants\\float2.materialgraphnode",
+    "bytes": 2229,
+    "sha256": "FA5B3CEF3077ADD5EAF66A665AB34B90385277E8B3F653A4DA9F2EFC5FFA54DE"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Constants\\float3.materialgraphnode",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Constants\\float3.materialgraphnode",
+    "bytes": 2639,
+    "sha256": "2CB6409755B70E3E9C722CAAEEF7E3CA9C079ADAD1BD24D25DF7761327D7555E"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Constants\\float3x3.materialgraphnode",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Constants\\float3x3.materialgraphnode",
+    "bytes": 3000,
+    "sha256": "932784E0172CD84142B0469DC4B9B70DB2C249E10A99F9835DEDA08F776F5E35"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Constants\\float4.materialgraphnode",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Constants\\float4.materialgraphnode",
+    "bytes": 3049,
+    "sha256": "AA40664AE2875E8B4D405BFF17A660CFDCCAAC79460BB1CF73DB57DF48313419"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Constants\\float4x3.materialgraphnode",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Constants\\float4x3.materialgraphnode",
+    "bytes": 3090,
+    "sha256": "8034B6E23ECC405D48FD5BE043E45AB07290EEB3239A3F2D9F6E2B7DB2AA9ACE"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Constants\\float4x4.materialgraphnode",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Constants\\float4x4.materialgraphnode",
+    "bytes": 3790,
+    "sha256": "FB0C9342EA28D895FA28D101FF9EC5BB38739E51403C99649B709D7F13EAE0A7"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Constants\\int.materialgraphnode",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Constants\\int.materialgraphnode",
+    "bytes": 1378,
+    "sha256": "F9D03FF5FA220C4EE7CC364C5529E4569FADF994A6E11771C3F20A1A45C5EEEB"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Constants\\uint.materialgraphnode",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Constants\\uint.materialgraphnode",
+    "bytes": 1383,
+    "sha256": "918341150212BC1C6E3E1CC586F2310CB079678CB4D8A46912AA0FEB169A623B"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\abs.materialgraphnode",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\abs.materialgraphnode",
+    "bytes": 1384,
+    "sha256": "45A4B92A73185371FCBCBDE94AF219F1092F90B5D5F9E625E819685EE112B7F9"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\acos.materialgraphnode",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\acos.materialgraphnode",
+    "bytes": 1411,
+    "sha256": "975552C04E6D488C418DE070AB30AAACE2BAF0AA1204F1EA1B43D64C16E4B11B"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\add.materialgraphnode",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\add.materialgraphnode",
+    "bytes": 1843,
+    "sha256": "7A71775149313453BC59215480BFB3AB3B7C40A040C26C10D310F2800F1AE0B3"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\all.materialgraphnode",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\all.materialgraphnode",
+    "bytes": 1417,
+    "sha256": "0D7F9F3664FF362EE8FE56E3505AE787D1CD613C82560FC7DC6ED4AC51051DF0"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\any.materialgraphnode",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\any.materialgraphnode",
+    "bytes": 1415,
+    "sha256": "3F052E77DD9944D5CB11771897D28A8994F1E63611885B3545DAD6CDAC8E60C2"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\asin.materialgraphnode",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\asin.materialgraphnode",
+    "bytes": 1407,
+    "sha256": "29A4BBBB3697402F6BEF4C7CCB8E8B36F2566C59E2D251636791ADF7E0E06EF2"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\atan.materialgraphnode",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\atan.materialgraphnode",
+    "bytes": 1413,
+    "sha256": "1E14F521E775751614DCD639012C015AD03CF7065AE766CEF1D1622EB19E2544"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\atan2.materialgraphnode",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\atan2.materialgraphnode",
+    "bytes": 1844,
+    "sha256": "582C2218C4928F888C1BDA19E247228678FBF83965544C3094BF1B8E893E533E"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\ceil.materialgraphnode",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\ceil.materialgraphnode",
+    "bytes": 1442,
+    "sha256": "366DB8FBD8201862B64001DF7063C890852A80C0DA641CD4313B4B291D8FD303"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\clamp.materialgraphnode",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\clamp.materialgraphnode",
+    "bytes": 2317,
+    "sha256": "265DE09DDAF9E4B1CF39C092D5E9BD7FB3A2B45987F86CE5E1B4443A7C060107"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\clip.materialgraphnode",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\clip.materialgraphnode",
+    "bytes": 1072,
+    "sha256": "763E65C693E4052DDE4D1CBCB56EB74B80D0ABC6544BA1EA862FC4861B7879E9"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\cos.materialgraphnode",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\cos.materialgraphnode",
+    "bytes": 1399,
+    "sha256": "7075B0E44D283932CB570FB40DD50786E3501F57F71E75F31AC193E4E4E691F1"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\cosh.materialgraphnode",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\cosh.materialgraphnode",
+    "bytes": 1422,
+    "sha256": "26958BAC46D9A3FE2B4D4486CD278D7E6B24822F1BA8C7217A8D12498AC64217"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\cross.materialgraphnode",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\cross.materialgraphnode",
+    "bytes": 1888,
+    "sha256": "E121E7446A8F7E027ED69154CBEFD9D6ACE958D298BEF02ECB43AA247FA1A5CD"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\ddx_coarse.materialgraphnode",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\ddx_coarse.materialgraphnode",
+    "bytes": 1446,
+    "sha256": "DFAC42C334B532E9683F6E5FB55B54B364CB367B0E2AC49056A974B989B60E3E"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\ddx_fine.materialgraphnode",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\ddx_fine.materialgraphnode",
+    "bytes": 1443,
+    "sha256": "A9B0A62F9A05D4D644E4830A0AB793D98C8D29080271D496329CACEF92AD59F0"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\ddx.materialgraphnode",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\ddx.materialgraphnode",
+    "bytes": 1438,
+    "sha256": "EC3CADE7D1595B833A4347ABBAB629FABDAE11DFF6C8D8E5F8C3B492788A133A"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\ddy_coarse.materialgraphnode",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\ddy_coarse.materialgraphnode",
+    "bytes": 1446,
+    "sha256": "141B70F42B390D205126C1F524E7058FA13AC77563403470B514C250E661708B"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\ddy_fine.materialgraphnode",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\ddy_fine.materialgraphnode",
+    "bytes": 1443,
+    "sha256": "AF03CF94E575D6CA9F975A8B000B3A921EC5D6A5F205ADD6B2EACBEB5014E386"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\ddy.materialgraphnode",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\ddy.materialgraphnode",
+    "bytes": 1438,
+    "sha256": "C31DC17CEE8270AE24EA374402668ACB99A681CCE94772938B5B7C6810BC6B68"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\degrees.materialgraphnode",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\degrees.materialgraphnode",
+    "bytes": 1415,
+    "sha256": "0A805811D775AA28C8488501DC5F6284814BEE4C38B19C42529CD42250456402"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\distance.materialgraphnode",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\distance.materialgraphnode",
+    "bytes": 1880,
+    "sha256": "886C7094100B9D2BE2571527C3A4DD886D29C6B2FF2E61FF227D3141230215D5"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\divide.materialgraphnode",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\divide.materialgraphnode",
+    "bytes": 2385,
+    "sha256": "B98D4F0F5FEBD4BC698544E4D1D2D7731CE42DD4AA718D721890E7AF3D1BD332"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\dot.materialgraphnode",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\dot.materialgraphnode",
+    "bytes": 1861,
+    "sha256": "844199C75B011B283B773A2CAFF4D1A4E5BAED70726BCA0E2B16629BB6ED9B1B"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\exp.materialgraphnode",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\exp.materialgraphnode",
+    "bytes": 1391,
+    "sha256": "45C9B345F4014DBD1DECC97A1F7D71CD1F3F0C2AE2A153BD4D23B754302FBAC8"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\exp2.materialgraphnode",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\exp2.materialgraphnode",
+    "bytes": 1382,
+    "sha256": "EFD91BCC5FD01D31B4D782C774E82618C4713304D089816407B0E2B0BE4414F0"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\float2fromvalues.materialgraphnode",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\float2fromvalues.materialgraphnode",
+    "bytes": 1843,
+    "sha256": "C4BCF9529C7060C7062CFE047722EFCBB7E863E4DBB1F82532E14A643B295FE2"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\float3fromvalues.materialgraphnode",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\float3fromvalues.materialgraphnode",
+    "bytes": 2293,
+    "sha256": "5C4CDE438EB0028F871A74AD13E0D4198CC1D10F68E1360B3918550DC1251758"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\float4fromvalues.materialgraphnode",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\float4fromvalues.materialgraphnode",
+    "bytes": 2743,
+    "sha256": "8F1D603EFE614B6954A9DB12F61FCD3439DBE514F5055488B38D88E1ABC88B80"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\floor.materialgraphnode",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\floor.materialgraphnode",
+    "bytes": 1438,
+    "sha256": "633C3882E769F6F99E29268C2F199FC285D0D5386112F6A7829A15DDF94FDA99"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\fmod.materialgraphnode",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\fmod.materialgraphnode",
+    "bytes": 1900,
+    "sha256": "A3A71C786F78374A502B323286288FDC7F89D6CD3163B89ACE277DA07CEAF61D"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\frac.materialgraphnode",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\frac.materialgraphnode",
+    "bytes": 1413,
+    "sha256": "1A1D6D5A4A5D5424A1C231ECB273D5104E47CB4D41C43E5AE03C468FFC86A421"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\frexp.materialgraphnode",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\frexp.materialgraphnode",
+    "bytes": 1873,
+    "sha256": "78EB2C452511E685DBFB4694AF599C50FEB7A8D911C5D44514424EBBDE5C2EC9"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\fwidth.materialgraphnode",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\fwidth.materialgraphnode",
+    "bytes": 1379,
+    "sha256": "AD40F2B9728D49838BA24F93427BBD584BFFFF9838E41367F9EF23B5770B773C"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\ldexp.materialgraphnode",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\ldexp.materialgraphnode",
+    "bytes": 1837,
+    "sha256": "A43529442263392FD9C689C7DB201D265DB2B17E8FB5B0E4614D025DB3B03287"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\length.materialgraphnode",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\length.materialgraphnode",
+    "bytes": 1401,
+    "sha256": "A84B434D8E39E0E5D24DAFAFC8819FE4385DC324B335CC3227E66758BEF521D4"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\lerp.materialgraphnode",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\lerp.materialgraphnode",
+    "bytes": 2312,
+    "sha256": "C5C9741DA38D72D6E80C4034AB542AD2478A40467F1802E1C76F2CF6A3680A30"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\lit.materialgraphnode",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\lit.materialgraphnode",
+    "bytes": 2368,
+    "sha256": "DBED322EB1D68D95824552F96BD0163B86665B6D06410E5AEDDF961B08FF7D1E"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\log.materialgraphnode",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\log.materialgraphnode",
+    "bytes": 1413,
+    "sha256": "F8ABBFF8D0F0BC1BFF074A195428D788E60F023F08CDF909F14F0A946A8B4097"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\log10.materialgraphnode",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\log10.materialgraphnode",
+    "bytes": 1417,
+    "sha256": "783C13ACB9A1785C2368939566801198D91D4693CF29B07C9D85E6C01A379D11"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\log2.materialgraphnode",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\log2.materialgraphnode",
+    "bytes": 1414,
+    "sha256": "557A3F8C5A9D9E63666CE95F0F1A7BD5C6426C0006E9B487DAF60FB3E0BF1946"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\mad.materialgraphnode",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\mad.materialgraphnode",
+    "bytes": 2356,
+    "sha256": "510C8C233BB67E1A71E1E3E07559F0DECA23736AF849FB0BFCA5DA774E7060A4"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\max.materialgraphnode",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\max.materialgraphnode",
+    "bytes": 1867,
+    "sha256": "26A1D61E60D99A79F1021973732CCE8A46ACE660E286D480C112796593F616CB"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\min.materialgraphnode",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\min.materialgraphnode",
+    "bytes": 1866,
+    "sha256": "658AA03A12EA66FD074D0DBAE22D2D61D718679EFEA22F15C3ACC494DF8597A2"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\mul.materialgraphnode",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\mul.materialgraphnode",
+    "bytes": 2413,
+    "sha256": "6F6ADE9BD8A79159643514F9A5B13F51F108B90210C3093B38BE26CB2B298C2A"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\multiply.materialgraphnode",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\multiply.materialgraphnode",
+    "bytes": 2387,
+    "sha256": "6376653F351D5A035AEDFA00CE7EEAB15C39A72624BE411B9CAB301E655162F7"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\normalize.materialgraphnode",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\normalize.materialgraphnode",
+    "bytes": 1652,
+    "sha256": "6F726A611457B22B00447278CE39D3EA3DD0B0BF0E870BD0B3A18F8072E3628E"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\pow.materialgraphnode",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\pow.materialgraphnode",
+    "bytes": 1846,
+    "sha256": "682C8FBC3600F3E978A5A9F5794200E4EE35AB3265CCFC3D97F5DB68DF1F9627"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\radians.materialgraphnode",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\radians.materialgraphnode",
+    "bytes": 1415,
+    "sha256": "7097F331AFEE311E009506360E3B9C2A86C0F9D85651D2C6BACD1FF70ED20282"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\rcp.materialgraphnode",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\rcp.materialgraphnode",
+    "bytes": 1422,
+    "sha256": "D63E7C62A7271055A45D1FC649D5B2A318A5ECB6A6B863B9B9A82CE213E63321"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\reflect.materialgraphnode",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\reflect.materialgraphnode",
+    "bytes": 1862,
+    "sha256": "5FB571AA8F8BDD468461CD3805211A56F030ACC7E7224F2266F405FCD801DC59"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\round.materialgraphnode",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\round.materialgraphnode",
+    "bytes": 1408,
+    "sha256": "B677CAFF027380709F929281513780C3916C7EE8C7D12152A4BAA63AAF448C96"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\rsqrt.materialgraphnode",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\rsqrt.materialgraphnode",
+    "bytes": 1396,
+    "sha256": "969C741B795FAF101798F7AD4A97CB9E20D50A3F405B934DEEDA53474DA2E1AB"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\saturate.materialgraphnode",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\saturate.materialgraphnode",
+    "bytes": 1411,
+    "sha256": "88E3211770FD1F8211FB388CE5F9DF58F37FF99ECE98EDFE2186312217D5E69D"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\sign.materialgraphnode",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\sign.materialgraphnode",
+    "bytes": 1397,
+    "sha256": "CA3E81C1A116BC02274A5CE713C4C69F14FA8773F7F3A9EDBCF727E23D5F3669"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\sin.materialgraphnode",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\sin.materialgraphnode",
+    "bytes": 1395,
+    "sha256": "375E3CD47FB03AE201F7234397C99F8F6E788E6FF8897C10A8E09E120264C73F"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\sincos.materialgraphnode",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\sincos.materialgraphnode",
+    "bytes": 1665,
+    "sha256": "9E1C2A85DE7AC74621CB646E03405B4A92E8B52AD74809940E2196848A9E0959"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\sinh.materialgraphnode",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\sinh.materialgraphnode",
+    "bytes": 1418,
+    "sha256": "52C966F88A09A3F1CB50AD1774CFA0936A73ADEB94703A6E155BA390D95F6B6B"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\smoothstep.materialgraphnode",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\smoothstep.materialgraphnode",
+    "bytes": 2371,
+    "sha256": "7729AAEF8724A1168524831CF990CF5D269DDF26FD621CB34382A91C951736A0"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\split2.materialgraphnode",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\split2.materialgraphnode",
+    "bytes": 1858,
+    "sha256": "49FE611A3DF0A79339936E3BD0ED3B6B0D3D6DD3692FFCCCEC3F59F7D6A51DFF"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\split3.materialgraphnode",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\split3.materialgraphnode",
+    "bytes": 2268,
+    "sha256": "C5EC4955CFF20865C863AC8F969D446C8C0BBC7BA1601B705B8D90CC5223DF09"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\split4.materialgraphnode",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\split4.materialgraphnode",
+    "bytes": 2678,
+    "sha256": "B159FE36F3A7378C2ADA31E5745C49A28A9F02613446BCB34C3932622D8EA534"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\sqrt.materialgraphnode",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\sqrt.materialgraphnode",
+    "bytes": 1379,
+    "sha256": "5C237403E9807A782625E58F5C74FD71ACED919FF2E5BC65DB129C60A8ED97F4"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\step.materialgraphnode",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\step.materialgraphnode",
+    "bytes": 1921,
+    "sha256": "502A82744978D213C6779DF6614D0E89C3264ECC835366C9B4BFF92C4F9E5464"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\subtract.materialgraphnode",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\subtract.materialgraphnode",
+    "bytes": 1848,
+    "sha256": "EE84D7C293A2C4E36ECA4057DCE030EE3B47F9512EC315B9277D40CC33D391D2"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\tan.materialgraphnode",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\tan.materialgraphnode",
+    "bytes": 1401,
+    "sha256": "6D1670E955658710682E7E081EC17720851AC011176F8FD74ED4D18059C03BC0"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\tanh.materialgraphnode",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\tanh.materialgraphnode",
+    "bytes": 1424,
+    "sha256": "8F97DE667CC48596879B36577B60A59897A24DD3E050F20968F2CB6B87348538"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\transform_color.materialgraphnode",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\transform_color.materialgraphnode",
+    "bytes": 5378,
+    "sha256": "60886A3A34F6D7DB4E7A9AC8C9DE2739315DB254E24F09679E1F8284AD94DD4B"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\transform2.materialgraphnode",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\transform2.materialgraphnode",
+    "bytes": 1890,
+    "sha256": "0C1BA3BC2AFDBCD4951B3054E2AF7F8EED6AD0D8DBCBCAD67D5FF7E0AE1A04EE"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\transform3.materialgraphnode",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\transform3.materialgraphnode",
+    "bytes": 1890,
+    "sha256": "8BBAAB01E4FDAFCCF00E361AFBEA4892720550074EE8912B67EE41CB1461B652"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\transform4.materialgraphnode",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\transform4.materialgraphnode",
+    "bytes": 1890,
+    "sha256": "64A586B3638D71272F9C5717FC22C6754E5F8790F9260DED1C1818EC88DB5DF8"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\trunc.materialgraphnode",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Functions\\trunc.materialgraphnode",
+    "bytes": 1413,
+    "sha256": "E351364139EC35A45FC2BBB8425098C1E1F108CA0265B9E4F23F10CFA2AEBDF3"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\MaterialInputs\\bool.materialgraphnode",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\MaterialInputs\\bool.materialgraphnode",
+    "bytes": 2858,
+    "sha256": "6C3B9036C0B1E3AD53D1625682DD6515C859FA287B6BD69A442A7ACFFFD49AC6"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\MaterialInputs\\color.materialgraphnode",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\MaterialInputs\\color.materialgraphnode",
+    "bytes": 4650,
+    "sha256": "3D326FBDB148BB05A4F953CBBD57CE60640AC6AE53AA9A6B3527DF5F9E6BADB6"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\MaterialInputs\\float.materialgraphnode",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\MaterialInputs\\float.materialgraphnode",
+    "bytes": 2864,
+    "sha256": "F41EA33A6E0910FF1916DB0BD431E26A22A0A5F72D3B4AE48A8CA7BEE0F09BB6"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\MaterialInputs\\float2.materialgraphnode",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\MaterialInputs\\float2.materialgraphnode",
+    "bytes": 3718,
+    "sha256": "6A9D8B3D4A3B9EF1BA6A1D1D7605E27C295BF7C7B7B4C6AC04A80489F0BF4A52"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\MaterialInputs\\float3.materialgraphnode",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\MaterialInputs\\float3.materialgraphnode",
+    "bytes": 4135,
+    "sha256": "E559F2263A7B8B78BE8BCC6023F901FD301C715A015501461AFA3C64DD405975"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\MaterialInputs\\float3x3.materialgraphnode",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\MaterialInputs\\float3x3.materialgraphnode",
+    "bytes": 4698,
+    "sha256": "61842EB8425EFD913E45CA4DEEE3C18D5B6476DFC2BA255A341EDD431D63B258"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\MaterialInputs\\float4.materialgraphnode",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\MaterialInputs\\float4.materialgraphnode",
+    "bytes": 4552,
+    "sha256": "A2CE754A192832D06F3BD7FADA0E39CC99089F72914BB833DF8A018420B38073"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\MaterialInputs\\float4x3.materialgraphnode",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\MaterialInputs\\float4x3.materialgraphnode",
+    "bytes": 4788,
+    "sha256": "1ACE0143D646B4464FF5511557E054B5B32675E4E77226ABCDC8EEDAEB1D86C7"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\MaterialInputs\\float4x4.materialgraphnode",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\MaterialInputs\\float4x4.materialgraphnode",
+    "bytes": 5617,
+    "sha256": "447334007FA7F5F70261A1A5A4300017385F6DB40DFC6DE347085A5ED6207AEF"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\MaterialInputs\\image.materialgraphnode",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\MaterialInputs\\image.materialgraphnode",
+    "bytes": 2589,
+    "sha256": "BF62ABA157295A7CB7E3A422701D327CF2DA2EE2D41BB3310297C144241DED95"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\MaterialInputs\\int.materialgraphnode",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\MaterialInputs\\int.materialgraphnode",
+    "bytes": 2853,
+    "sha256": "B37F614391D61B666170743C089C64673195AA4C6A8AA3659E3F011785C99B86"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\MaterialInputs\\uint.materialgraphnode",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\MaterialInputs\\uint.materialgraphnode",
+    "bytes": 2858,
+    "sha256": "19311177000D42E5C7BFB626E844A6725D9BE224354332950A11C07A5C699DA0"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\MaterialOutputs\\BasePBR\\BasePBR.materialgraphnode",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\MaterialOutputs\\BasePBR\\BasePBR.materialgraphnode",
+    "bytes": 13994,
+    "sha256": "5627FAF2E05CC61D9B538A95A8B6AC6CC497F9F8A2DFCD39DC84A300AF96A346"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\MaterialOutputs\\BasePBR\\BasePBR.materialgraphtemplate",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\MaterialOutputs\\BasePBR\\BasePBR.materialgraphtemplate",
+    "bytes": 29098,
+    "sha256": "4D86242C6E5A112F1491BCA8E5FCFEFAAB6FF89F359FD4400A5130278DDB4ACF"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\MaterialOutputs\\BasePBR\\HandleDoubleSided.lua",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\MaterialOutputs\\BasePBR\\HandleDoubleSided.lua",
+    "bytes": 983,
+    "sha256": "3A01A31FBCFBF1D3CDBC515CFFC6A39D30B48E08ECCFE42DE5001B3B5FA29B4E"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\MaterialOutputs\\BasePBR\\MaterialGraphName_Common.azsli",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\MaterialOutputs\\BasePBR\\MaterialGraphName_Common.azsli",
+    "bytes": 1176,
+    "sha256": "662165C5BEE50AFC26B3A178CA8FA363A25B9B7C8239FBAB4AEE88693548CAD7"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\MaterialOutputs\\BasePBR\\MaterialGraphName_Defines.azsli",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\MaterialOutputs\\BasePBR\\MaterialGraphName_Defines.azsli",
+    "bytes": 1827,
+    "sha256": "41DEE2A51D2267A0DF364D3B8C8C87F20BF1597B1DA7BD3883C6FCD8BBBCA754"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\MaterialOutputs\\BasePBR\\MaterialGraphName_DepthVertexData.azsli",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\MaterialOutputs\\BasePBR\\MaterialGraphName_DepthVertexData.azsli",
+    "bytes": 844,
+    "sha256": "83623533CCB8B48DC65BDABC1D55BA6E55B5242749605B6D896988DC8A94701F"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\MaterialOutputs\\BasePBR\\MaterialGraphName_DepthVertexEval.azsli",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\MaterialOutputs\\BasePBR\\MaterialGraphName_DepthVertexEval.azsli",
+    "bytes": 3000,
+    "sha256": "21834B439ABD550748AC66CFA8A5DF78BFBABA4FBFC7172D1DAF4484E6B1F3CE"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\MaterialOutputs\\BasePBR\\MaterialGraphName_SurfaceEval.azsli",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\MaterialOutputs\\BasePBR\\MaterialGraphName_SurfaceEval.azsli",
+    "bytes": 4495,
+    "sha256": "241480287573C015CBA70B287A9BF547C2F2304153A42A4B4D21EEC81CE70390"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\MaterialOutputs\\BasePBR\\MaterialGraphName_VertexEval.azsli",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\MaterialOutputs\\BasePBR\\MaterialGraphName_VertexEval.azsli",
+    "bytes": 3709,
+    "sha256": "3883895B8D7C3C7BCE6021CB24316DD1B844397905F6AD3BA609C8F9A6F77712"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\MaterialOutputs\\BasePBR\\MaterialGraphName.material",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\MaterialOutputs\\BasePBR\\MaterialGraphName.material",
+    "bytes": 62,
+    "sha256": "9995323A5E67F610EBDD42B4A8FB1A0636400EE7CC28083D6BF4AB68C0713218"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\MaterialOutputs\\BasePBR\\MaterialGraphName.materialtype",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\MaterialOutputs\\BasePBR\\MaterialGraphName.materialtype",
+    "bytes": 577,
+    "sha256": "F309C2020C04FE9D46E4011E4B65CE615E42B141085D9F85D7DE065DAF7D76AF"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\MaterialOutputs\\StandardPBR\\HandleDoubleSided.lua",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\MaterialOutputs\\StandardPBR\\HandleDoubleSided.lua",
+    "bytes": 983,
+    "sha256": "3A01A31FBCFBF1D3CDBC515CFFC6A39D30B48E08ECCFE42DE5001B3B5FA29B4E"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\MaterialOutputs\\StandardPBR\\HandleOpacityMode.lua",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\MaterialOutputs\\StandardPBR\\HandleOpacityMode.lua",
+    "bytes": 1194,
+    "sha256": "B77F8EC0C441E18801695A65C38C0ADFCB03EC351ED733F4D3D81F5E552B3ADC"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\MaterialOutputs\\StandardPBR\\MaterialGraphName_Common.azsli",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\MaterialOutputs\\StandardPBR\\MaterialGraphName_Common.azsli",
+    "bytes": 4154,
+    "sha256": "24AE5447F7EC5D4961DB29D5B0A6C1D326583748FD0907F49E8211D4A33A2E75"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\MaterialOutputs\\StandardPBR\\MaterialGraphName_Defines.azsli",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\MaterialOutputs\\StandardPBR\\MaterialGraphName_Defines.azsli",
+    "bytes": 2174,
+    "sha256": "F172C634E839CFA4CF91EA0EF513F7CC74B9C83488BAA1D289B829BEACA050C8"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\MaterialOutputs\\StandardPBR\\MaterialGraphName_DepthVertexData.azsli",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\MaterialOutputs\\StandardPBR\\MaterialGraphName_DepthVertexData.azsli",
+    "bytes": 842,
+    "sha256": "FA4174E5299301CA7EE26CDE232885B91300112994CDEB7BE675C20798D3E1D2"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\MaterialOutputs\\StandardPBR\\MaterialGraphName_DepthVertexEval.azsli",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\MaterialOutputs\\StandardPBR\\MaterialGraphName_DepthVertexEval.azsli",
+    "bytes": 2819,
+    "sha256": "33A2F7B8C9BC2725BB0278777EA2577DE3C82513697E4B89958019A720CDCB05"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\MaterialOutputs\\StandardPBR\\MaterialGraphName_PixelGeometryEval.azsli",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\MaterialOutputs\\StandardPBR\\MaterialGraphName_PixelGeometryEval.azsli",
+    "bytes": 2093,
+    "sha256": "05BF91151D1CF48AEF7558BE06E0420F7C396BCD141929A5F094C9FDB7C93865"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\MaterialOutputs\\StandardPBR\\MaterialGraphName_SurfaceEval.azsli",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\MaterialOutputs\\StandardPBR\\MaterialGraphName_SurfaceEval.azsli",
+    "bytes": 6374,
+    "sha256": "3458810790B4C7B2409BF6802449220E1CB410F82895C3DCB23CC3B188A9A365"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\MaterialOutputs\\StandardPBR\\MaterialGraphName_VertexEval.azsli",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\MaterialOutputs\\StandardPBR\\MaterialGraphName_VertexEval.azsli",
+    "bytes": 3776,
+    "sha256": "B2EC9FCD94012884436B6B111774F5562D1C368022AB36FEFC85746CC37B5DFE"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\MaterialOutputs\\StandardPBR\\MaterialGraphName.material",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\MaterialOutputs\\StandardPBR\\MaterialGraphName.material",
+    "bytes": 62,
+    "sha256": "9995323A5E67F610EBDD42B4A8FB1A0636400EE7CC28083D6BF4AB68C0713218"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\MaterialOutputs\\StandardPBR\\MaterialGraphName.materialtype",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\MaterialOutputs\\StandardPBR\\MaterialGraphName.materialtype",
+    "bytes": 907,
+    "sha256": "5253083139470A71007AF24ADC3C03D5B63504903ADAB74CEC2DCE8B3F82FF89"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\MaterialOutputs\\StandardPBR\\StandardPBR.materialgraphnode",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\MaterialOutputs\\StandardPBR\\StandardPBR.materialgraphnode",
+    "bytes": 23332,
+    "sha256": "C4857D88423F6E11FA0C6B4CDFF19686B39A4A65980C2F9662D687DF3B260C42"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\MaterialOutputs\\StandardPBR\\StandardPBR.materialgraphtemplate",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\MaterialOutputs\\StandardPBR\\StandardPBR.materialgraphtemplate",
+    "bytes": 40418,
+    "sha256": "112F746D8F11CF50A15FCD9E0F5327E6518DA987C4B5840979561B1769174683"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Scene\\time.materialgraphnode",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Scene\\time.materialgraphnode",
+    "bytes": 904,
+    "sha256": "CEDDD11EE2C1FD787DA6AB4C9915CE4D69F9E85F379F5FFEF9AC83C8D76FAEDD"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Textures\\sample_texture_2d.materialgraphnode",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Textures\\sample_texture_2d.materialgraphnode",
+    "bytes": 8181,
+    "sha256": "7B6C2DE551D305AA6557791D9A30A4F9D13E5BA722F17EBFDC5B4E1D6350AAEC"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Vertex\\bitangent.materialgraphnode",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Vertex\\bitangent.materialgraphnode",
+    "bytes": 2204,
+    "sha256": "456107994482523C9733A996FA4D83BCDE27031588C62A2AFF746F2D1F7517DE"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Vertex\\color.materialgraphnode",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Vertex\\color.materialgraphnode",
+    "bytes": 2493,
+    "sha256": "E280B8F97E46FA3655DFAE07EC6FFA36A0AF401F6B28BF2AA07C80465C6B629B"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Vertex\\normal.materialgraphnode",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Vertex\\normal.materialgraphnode",
+    "bytes": 2174,
+    "sha256": "D134BCFA01CC633CCD3D6CBEEDFDF95401B969BBCF08E7A5F4D03A4AEF5C1339"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Vertex\\position.materialgraphnode",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Vertex\\position.materialgraphnode",
+    "bytes": 2192,
+    "sha256": "63EE77AFB76BCB48E63A1DF5D8C13013E88C815D842FDC86E08B90D760B17103"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Vertex\\tangent.materialgraphnode",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Vertex\\tangent.materialgraphnode",
+    "bytes": 2184,
+    "sha256": "4DDFAB02F96356292B5417875CAF0F1FE7CFE69A28704C100A50AC72D3AC7677"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Vertex\\uv.materialgraphnode",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Vertex\\uv.materialgraphnode",
+    "bytes": 2189,
+    "sha256": "5E1C778FB7674D06D87E6B195E60548B03DFE901F53A004E9F95871BCA16DAB3"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Vertex\\worldbitangent.materialgraphnode",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Vertex\\worldbitangent.materialgraphnode",
+    "bytes": 2237,
+    "sha256": "C0DBAF2231F8E5209B768121C2C878EC6D2C5958D15C2156B071DDBE2A32A347"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Vertex\\worldnormal.materialgraphnode",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Vertex\\worldnormal.materialgraphnode",
+    "bytes": 2207,
+    "sha256": "AF019727AFF0277C71481F60E29B1125EC54B2326F8F1364ADF62EAB5A6F3E3B"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Vertex\\worldposition.materialgraphnode",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Vertex\\worldposition.materialgraphnode",
+    "bytes": 2210,
+    "sha256": "4107400978EDBF2B9192A8999E5EC958E9B50FC8C7B57E5A5F8E7E33DBFBB11D"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Vertex\\worldtangent.materialgraphnode",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\Vertex\\worldtangent.materialgraphnode",
+    "bytes": 2217,
+    "sha256": "1CADB7F3B621CC351F200E1B9A7281292C54F80420A3C95F577DA545A2F73733"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\View\\viewworldposition.materialgraphnode",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\GraphData\\Nodes\\View\\viewworldposition.materialgraphnode",
+    "bytes": 2202,
+    "sha256": "7D5BAE0EE79798FE794E35BF26FCF2AB244AAE40C06CAC5129AC0AD587FBA8E2"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\StyleSheet\\materialcanvas_style.json",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\StyleSheet\\materialcanvas_style.json",
+    "bytes": 53950,
+    "sha256": "CF51A7EB35A99E0EF5CFA0FA2F3E485F4C616BE6B06CBBA91BE369DD3B55B1BB"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\TestData\\test_color_spaces.materialgraph",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\TestData\\test_color_spaces.materialgraph",
+    "bytes": 20394,
+    "sha256": "DAF8CCE557A75A188792E4ACFFF29603A446AF532D39726C9169221C36F78F33"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\TestData\\test_double_sided.materialgraph",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\TestData\\test_double_sided.materialgraph",
+    "bytes": 27073,
+    "sha256": "488182502CB2AEDEF9648C120757F8FE7E90DCDF3B5459F05F8187B5AC44121D"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\TestData\\test_normalmaps.materialgraph",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\TestData\\test_normalmaps.materialgraph",
+    "bytes": 20493,
+    "sha256": "3FE1598D0E7E0FD561337A7FD6BD6BF29834C35C09EDF804F01A41E98BEF33CF"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\TestData\\test_propertysorting.materialgraph",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\TestData\\test_propertysorting.materialgraph",
+    "bytes": 103995,
+    "sha256": "33F5326F3B237FC3D492CA74B30F88383807FE16C35A113EACC087E2A7FF2334"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\TestData\\test_scrolling_uvs.materialgraph",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\TestData\\test_scrolling_uvs.materialgraph",
+    "bytes": 45747,
+    "sha256": "28FEC743CCEA8C9754A594A1CAA1318AAB56101311D3BD9EE9A7F9DC3692945A"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\TestData\\test_split_conversions.materialgraph",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\TestData\\test_split_conversions.materialgraph",
+    "bytes": 41667,
+    "sha256": "C503638D592A4652F322B3F2E3F63F470D5BF4EF9787B20594E5DE579E51C8E5"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\TestData\\test_vertex_color.materialgraph",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\TestData\\test_vertex_color.materialgraph",
+    "bytes": 30612,
+    "sha256": "1B3B08CD010C36880E79C38C1E971C10FC7B6CB000C1378229E55116FBFDEF00"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\TestData\\test_view_position.materialgraph",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\TestData\\test_view_position.materialgraph",
+    "bytes": 56015,
+    "sha256": "5C4B9CEE6DE8007E66DD0D697BB66B9914775B81D81617723D8C5914FA7F2E88"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\TestData\\test1.materialgraph",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\TestData\\test1.materialgraph",
+    "bytes": 29098,
+    "sha256": "4D86242C6E5A112F1491BCA8E5FCFEFAAB6FF89F359FD4400A5130278DDB4ACF"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\TestData\\test2.materialgraph",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\TestData\\test2.materialgraph",
+    "bytes": 40418,
+    "sha256": "112F746D8F11CF50A15FCD9E0F5327E6518DA987C4B5840979561B1769174683"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\TestData\\test3.materialgraph",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\TestData\\test3.materialgraph",
+    "bytes": 23499,
+    "sha256": "7993081807F165910D62739B40F332F73F7D2137EFCA360AC1975677EF76EF90"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\TestData\\test4.materialgraph",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\TestData\\test4.materialgraph",
+    "bytes": 35614,
+    "sha256": "AF016B4166545AE13D4968413A6B78C0200CFCB3FAECB4EDF9F4D60691558EE4"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\TestData\\test5.materialgraph",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\TestData\\test5.materialgraph",
+    "bytes": 65633,
+    "sha256": "A092130E3F0DB070EB260E15218B6FBC80C1E308B437295919AE485B4101C822"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\TestData\\test8.materialgraph",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\TestData\\test8.materialgraph",
+    "bytes": 34440,
+    "sha256": "AC8093DF032EAA19A5026E8DA2FD79886B0DD3BD78BF4EBFA7CE15EB1877F975"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\TestData\\test9.materialgraph",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\TestData\\test9.materialgraph",
+    "bytes": 27737,
+    "sha256": "55613B406566A957BB6C44C7A841BC7C1B5C1874188A7A2E8DBA3E5239532321"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Assets\\MaterialCanvas\\Translation\\materialcanvas_en_us.ts",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Assets\\MaterialCanvas\\Translation\\materialcanvas_en_us.ts",
+    "bytes": 297,
+    "sha256": "EBE982CEB9F3C51DA0AA73A2049C7F1FC2347806C0EAFC039109A9DE3A1F343B"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Preview\\Assets\\MaterialEditor\\LightingPresets\\konzerthaus_latlong_iblskyboxcm.exr",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Preview\\Assets\\MaterialEditor\\LightingPresets\\konzerthaus_latlong_iblskyboxcm.exr",
+    "bytes": 12599609,
+    "sha256": "F10BC383B9990F2DA83BF73FDCF990283B9E3746F88C4F898C056E75849E93DF"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Preview\\Assets\\MaterialEditor\\LightingPresets\\lythwood_room_4k_latlong_iblskyboxcm.exr",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Preview\\Assets\\MaterialEditor\\LightingPresets\\lythwood_room_4k_latlong_iblskyboxcm.exr",
+    "bytes": 15851407,
+    "sha256": "E9A21BE76B24C46E64C426BE9D293AF8B20611B144EE81949FED92D5EE9ABA78"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Preview\\Assets\\MaterialEditor\\LightingPresets\\lythwood_room.lightingpreset.azasset",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Preview\\Assets\\MaterialEditor\\LightingPresets\\lythwood_room.lightingpreset.azasset",
+    "bytes": 1765,
+    "sha256": "0CF41011F2AF4A0AE779022AD414155E95E710F892E0E5E3BD0C6CF02288396F"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Preview\\Assets\\MaterialEditor\\LightingPresets\\neutral_urban.lightingpreset.azasset",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Preview\\Assets\\MaterialEditor\\LightingPresets\\neutral_urban.lightingpreset.azasset",
+    "bytes": 1762,
+    "sha256": "FE7565D7AC97EB46FAB7006B421186C8530D83D1EC714F531C67D7FEC3455710"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Preview\\Assets\\MaterialEditor\\ViewportModels\\_dev_shaderball_00_basecolor.png",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Preview\\Assets\\MaterialEditor\\ViewportModels\\_dev_shaderball_00_basecolor.png",
+    "bytes": 38689,
+    "sha256": "513F47F6FEA5105F603170A8881B7E3B1CD2C4258636D64A6399C725032B500D"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Preview\\Assets\\MaterialEditor\\ViewportModels\\BeveledCone.fbx",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Preview\\Assets\\MaterialEditor\\ViewportModels\\BeveledCone.fbx",
+    "bytes": 232704,
+    "sha256": "620BE514958DF58A8FBA11B286F1C5B3BC814333D60A2A7D446DF7A60A7F373A"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Preview\\Assets\\MaterialEditor\\ViewportModels\\BeveledCone.fbx.assetinfo",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Preview\\Assets\\MaterialEditor\\ViewportModels\\BeveledCone.fbx.assetinfo",
+    "bytes": 1442,
+    "sha256": "B200F7B9939FF0A76E023C5362084E77E8AF16E201392E0F984C6023715D4675"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Preview\\Assets\\MaterialEditor\\ViewportModels\\BeveledCone.modelpreset.azasset",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Preview\\Assets\\MaterialEditor\\ViewportModels\\BeveledCone.modelpreset.azasset",
+    "bytes": 390,
+    "sha256": "415A1D38654361F6C5C4C92A327EC28E8C7C26200E7B64CD7D7E4E16D775262D"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Preview\\Assets\\MaterialEditor\\ViewportModels\\BeveledCube.fbx",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Preview\\Assets\\MaterialEditor\\ViewportModels\\BeveledCube.fbx",
+    "bytes": 42864,
+    "sha256": "665DBC9994637538257D9DB7FD7B0428D49D51A58EF8E7789C2FAA3767E6FA26"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Preview\\Assets\\MaterialEditor\\ViewportModels\\BeveledCube.fbx.assetinfo",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Preview\\Assets\\MaterialEditor\\ViewportModels\\BeveledCube.fbx.assetinfo",
+    "bytes": 1460,
+    "sha256": "1F5E3BE00B518DE66ECE634AAA2049576E7D3BD7829EE69D01E0368FA949416F"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Preview\\Assets\\MaterialEditor\\ViewportModels\\BeveledCube.modelpreset.azasset",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Preview\\Assets\\MaterialEditor\\ViewportModels\\BeveledCube.modelpreset.azasset",
+    "bytes": 390,
+    "sha256": "CE8819AD07D4BE792E8808B9F64A20FB52C6BB506F69B189738848AB5DEA9239"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Preview\\Assets\\MaterialEditor\\ViewportModels\\BeveledCylinder.fbx",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Preview\\Assets\\MaterialEditor\\ViewportModels\\BeveledCylinder.fbx",
+    "bytes": 166352,
+    "sha256": "AE659B468DEC57978FB70BE5B1E541CB09C8C42B81A04CB0DB2FC51F54FDDCDD"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Preview\\Assets\\MaterialEditor\\ViewportModels\\BeveledCylinder.fbx.assetinfo",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Preview\\Assets\\MaterialEditor\\ViewportModels\\BeveledCylinder.fbx.assetinfo",
+    "bytes": 1460,
+    "sha256": "2C490056C2552FEEC26952184371DAA4E913CDC03F98790462B2BBA2E750BA69"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Preview\\Assets\\MaterialEditor\\ViewportModels\\BeveledCylinder.modelpreset.azasset",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Preview\\Assets\\MaterialEditor\\ViewportModels\\BeveledCylinder.modelpreset.azasset",
+    "bytes": 394,
+    "sha256": "302878C10F665CCF79DC8CAE33B0BE0A7F2F821EBC881FA671DFE849551B3CB3"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Preview\\Assets\\MaterialEditor\\ViewportModels\\Caduceus.fbx",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Preview\\Assets\\MaterialEditor\\ViewportModels\\Caduceus.fbx",
+    "bytes": 414848,
+    "sha256": "33DAA7008F4942FBD9CF7C3552ADCE29E4993EF31B15DE965ED54BB30E372386"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Preview\\Assets\\MaterialEditor\\ViewportModels\\Caduceus.fbx.assetinfo",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Preview\\Assets\\MaterialEditor\\ViewportModels\\Caduceus.fbx.assetinfo",
+    "bytes": 1424,
+    "sha256": "5DD3AB51639AB0E3505FB4CC3EED51E9BC33FC7FDB2DD9C61BEBCD15F3007D41"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Preview\\Assets\\MaterialEditor\\ViewportModels\\Caduceus.modelpreset.azasset",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Preview\\Assets\\MaterialEditor\\ViewportModels\\Caduceus.modelpreset.azasset",
+    "bytes": 387,
+    "sha256": "A03504569AE552C084221786B4E8C03C250401356430136D2984BDD8FCF3FC73"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Preview\\Assets\\MaterialEditor\\ViewportModels\\Cone.fbx",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Preview\\Assets\\MaterialEditor\\ViewportModels\\Cone.fbx",
+    "bytes": 173056,
+    "sha256": "36A483660A00FB104E3C7550703DE1206EC0C7F7080387765E75837311A48C2F"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Preview\\Assets\\MaterialEditor\\ViewportModels\\Cone.fbx.assetinfo",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Preview\\Assets\\MaterialEditor\\ViewportModels\\Cone.fbx.assetinfo",
+    "bytes": 1416,
+    "sha256": "D44900FCE890C2B412BAD12C2B789DE5AB68F2B387B625C9B9098C81F2DBAA9A"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Preview\\Assets\\MaterialEditor\\ViewportModels\\Cone.modelpreset.azasset",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Preview\\Assets\\MaterialEditor\\ViewportModels\\Cone.modelpreset.azasset",
+    "bytes": 383,
+    "sha256": "102ACF055A475F7302696EA24205C5BA3CEE63D9B05EED1450F0419A5D5E7FA3"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Preview\\Assets\\MaterialEditor\\ViewportModels\\Cube.fbx",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Preview\\Assets\\MaterialEditor\\ViewportModels\\Cube.fbx",
+    "bytes": 30656,
+    "sha256": "9C9E212AD50C78CD759156F4F47BF5C9FE61149472648DFD467341895F6ED914"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Preview\\Assets\\MaterialEditor\\ViewportModels\\Cube.fbx.assetinfo",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Preview\\Assets\\MaterialEditor\\ViewportModels\\Cube.fbx.assetinfo",
+    "bytes": 1432,
+    "sha256": "C5EBF2BE282EBBE186C7603B3B0552968428196468B36113811FAE63B92B6777"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Preview\\Assets\\MaterialEditor\\ViewportModels\\Cube.modelpreset.azasset",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Preview\\Assets\\MaterialEditor\\ViewportModels\\Cube.modelpreset.azasset",
+    "bytes": 383,
+    "sha256": "08773E60B05C2C641FF4C140FB2D2BBAD2E58731D6E9C29356CB31C7840EDD2C"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Preview\\Assets\\MaterialEditor\\ViewportModels\\Cylinder.fbx",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Preview\\Assets\\MaterialEditor\\ViewportModels\\Cylinder.fbx",
+    "bytes": 104160,
+    "sha256": "D5BFEC31EBD8274809E071E2CEDF63A4933563ECF51B7B4CC03E9EDA5CE6C848"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Preview\\Assets\\MaterialEditor\\ViewportModels\\Cylinder.fbx.assetinfo",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Preview\\Assets\\MaterialEditor\\ViewportModels\\Cylinder.fbx.assetinfo",
+    "bytes": 1430,
+    "sha256": "15C19333B91A4D7713CF574B168EE6AF4221AE62DDC006B20B96CC156AAF7089"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Preview\\Assets\\MaterialEditor\\ViewportModels\\Cylinder.modelpreset.azasset",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Preview\\Assets\\MaterialEditor\\ViewportModels\\Cylinder.modelpreset.azasset",
+    "bytes": 387,
+    "sha256": "968F056D7B14919BCBA4F43EDAB9F3168DEF325F54D77D5608BF6293ED413964"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Preview\\Assets\\MaterialEditor\\ViewportModels\\Hermanubis.fbx",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Preview\\Assets\\MaterialEditor\\ViewportModels\\Hermanubis.fbx",
+    "bytes": 9021888,
+    "sha256": "AC53DA9855838FCF6782C990247C69C14C2FF5C10624DC5AFE89617DEF9CC7CA"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Preview\\Assets\\MaterialEditor\\ViewportModels\\Hermanubis.fbx.assetinfo",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Preview\\Assets\\MaterialEditor\\ViewportModels\\Hermanubis.fbx.assetinfo",
+    "bytes": 1436,
+    "sha256": "D0F7CEDFB31A0D6516159E70F45E8BCE2B1A06D3FB5E4BD7A526EFA82032F890"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Preview\\Assets\\MaterialEditor\\ViewportModels\\Hermanubis.modelpreset.azasset",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Preview\\Assets\\MaterialEditor\\ViewportModels\\Hermanubis.modelpreset.azasset",
+    "bytes": 387,
+    "sha256": "5B8983848527A3565DF775E7D5A760E5EA1FA3B642F94B83FFE46B7C7FBB29A2"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Preview\\Assets\\MaterialEditor\\ViewportModels\\Plane_1x1.fbx",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Preview\\Assets\\MaterialEditor\\ViewportModels\\Plane_1x1.fbx",
+    "bytes": 33408,
+    "sha256": "703969F5DABF3A6AD5BCF26ECA132558BA1E4EEF7D0531B1108BCE4BB3A9AD8F"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Preview\\Assets\\MaterialEditor\\ViewportModels\\Plane_1x1.fbx.assetinfo",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Preview\\Assets\\MaterialEditor\\ViewportModels\\Plane_1x1.fbx.assetinfo",
+    "bytes": 1430,
+    "sha256": "09052B80B47EA15DE01DAB60C7385648A02D62DB68D4E58D39BA170A4EE64BD0"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Preview\\Assets\\MaterialEditor\\ViewportModels\\Plane_1x1.modelpreset.azasset",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Preview\\Assets\\MaterialEditor\\ViewportModels\\Plane_1x1.modelpreset.azasset",
+    "bytes": 388,
+    "sha256": "8EB3FFEECE682A03CA6EBF66BC709B991B32B3598435BF24521F9EE3746E8597"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Preview\\Assets\\MaterialEditor\\ViewportModels\\Plane_3x3.fbx",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Preview\\Assets\\MaterialEditor\\ViewportModels\\Plane_3x3.fbx",
+    "bytes": 54912,
+    "sha256": "28605D80C87A76A07CD40A052330F86AFF31576450131F080AE28B63D3CD117D"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Preview\\Assets\\MaterialEditor\\ViewportModels\\Plane_3x3.fbx.assetinfo",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Preview\\Assets\\MaterialEditor\\ViewportModels\\Plane_3x3.fbx.assetinfo",
+    "bytes": 1430,
+    "sha256": "A0C7175D09A5F5FC3767F84EAD28EB21F20A05E4FE68809021E27B2593894FC0"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Preview\\Assets\\MaterialEditor\\ViewportModels\\Plane_3x3.modelpreset.azasset",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Preview\\Assets\\MaterialEditor\\ViewportModels\\Plane_3x3.modelpreset.azasset",
+    "bytes": 388,
+    "sha256": "93C27B5A2CB4104994090B586D798E2BED24A1412E0F7CB14FC73ACE357FFFB6"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Preview\\Assets\\MaterialEditor\\ViewportModels\\PlatonicSphere.fbx",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Preview\\Assets\\MaterialEditor\\ViewportModels\\PlatonicSphere.fbx",
+    "bytes": 83680,
+    "sha256": "91E64822552C58775C3E051CD11B11AE5AC35471614DFCDC51612FB65877D56C"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Preview\\Assets\\MaterialEditor\\ViewportModels\\PlatonicSphere.fbx.assetinfo",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Preview\\Assets\\MaterialEditor\\ViewportModels\\PlatonicSphere.fbx.assetinfo",
+    "bytes": 1472,
+    "sha256": "F2056E104324415B0651BFD9C9F5CBB4D61A0639A1272E8E5F457A9774D17444"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Preview\\Assets\\MaterialEditor\\ViewportModels\\PlatonicSphere.modelpreset.azasset",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Preview\\Assets\\MaterialEditor\\ViewportModels\\PlatonicSphere.modelpreset.azasset",
+    "bytes": 393,
+    "sha256": "E67BC97EB847B5CC460838736DD74807FFDA7D9D7C468ED2E21FB947AB53BDD8"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Preview\\Assets\\MaterialEditor\\ViewportModels\\PolarSphere.fbx",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Preview\\Assets\\MaterialEditor\\ViewportModels\\PolarSphere.fbx",
+    "bytes": 103472,
+    "sha256": "838830C99F344F5B68E5E85C9BC52751350CAF48E662C9C2B767AB77039BBD8F"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Preview\\Assets\\MaterialEditor\\ViewportModels\\PolarSphere.fbx.assetinfo",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Preview\\Assets\\MaterialEditor\\ViewportModels\\PolarSphere.fbx.assetinfo",
+    "bytes": 1464,
+    "sha256": "932F126443458F86171637BD21C9B19E156E9FD1E1560F05BACC1F6130648496"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Preview\\Assets\\MaterialEditor\\ViewportModels\\PolarSphere.modelpreset.azasset",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Preview\\Assets\\MaterialEditor\\ViewportModels\\PolarSphere.modelpreset.azasset",
+    "bytes": 390,
+    "sha256": "839E9FC4D7ADED8DEB7D8A15728419ACE031F60DEE648172AA7549E8608A952B"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Preview\\Assets\\MaterialEditor\\ViewportModels\\QuadSphere.fbx",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Preview\\Assets\\MaterialEditor\\ViewportModels\\QuadSphere.fbx",
+    "bytes": 97632,
+    "sha256": "963B315BA0D4E5024F177DB17207A83A9B638200B43B5093F2512490131D6E8E"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Preview\\Assets\\MaterialEditor\\ViewportModels\\QuadSphere.fbx.assetinfo",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Preview\\Assets\\MaterialEditor\\ViewportModels\\QuadSphere.fbx.assetinfo",
+    "bytes": 1454,
+    "sha256": "E4E60E6974064C76702B2E1CD3AAA324D7DAAB0E64D53451F69815BD9B4501AC"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Preview\\Assets\\MaterialEditor\\ViewportModels\\QuadSphere.modelpreset.azasset",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Preview\\Assets\\MaterialEditor\\ViewportModels\\QuadSphere.modelpreset.azasset",
+    "bytes": 389,
+    "sha256": "234819A73F3757B6AFDDCA91A64CFC60D08F43835D38D775DA15D6F480E75C33"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Preview\\Assets\\MaterialEditor\\ViewportModels\\Shaderball.fbx",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Preview\\Assets\\MaterialEditor\\ViewportModels\\Shaderball.fbx",
+    "bytes": 2709532,
+    "sha256": "AD3B5915D503FAA0F2EBEDB80D6C2D6999F31E108834CC3702153D06C1B2D0CF"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Preview\\Assets\\MaterialEditor\\ViewportModels\\Shaderball.fbx.assetinfo",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Preview\\Assets\\MaterialEditor\\ViewportModels\\Shaderball.fbx.assetinfo",
+    "bytes": 3870,
+    "sha256": "21CEFADBA32B04BC253C268CA352E9802B5244DE651DC0DB999291165882875B"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Preview\\Assets\\MaterialEditor\\ViewportModels\\Shaderball.modelpreset.azasset",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Preview\\Assets\\MaterialEditor\\ViewportModels\\Shaderball.modelpreset.azasset",
+    "bytes": 389,
+    "sha256": "CCEA84CA79B1E9231C77EEF3D2ED36D8A1C8A77B2FF76CCDC64FA85D8C16C4C3"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Preview\\Assets\\MaterialEditor\\ViewportModels\\Torus.fbx",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Preview\\Assets\\MaterialEditor\\ViewportModels\\Torus.fbx",
+    "bytes": 461232,
+    "sha256": "87B6F04D0A04499DD2C15885EAC0CB5B741995C754FBF4E6B4339676EF69001A"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Preview\\Assets\\MaterialEditor\\ViewportModels\\Torus.fbx.assetinfo",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Preview\\Assets\\MaterialEditor\\ViewportModels\\Torus.fbx.assetinfo",
+    "bytes": 1420,
+    "sha256": "6221F45B80767B7B5EA35F39B4328CEA8DD6E5DC2C636F65C2B5C926BBAFDA4B"
+  },
+  {
+    "source": "F:\\JericoEngine\\JericoEngine\\Editor\\Materials\\Preview\\Assets\\MaterialEditor\\ViewportModels\\Torus.modelpreset.azasset",
+    "destination": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-preview-assets-rev1\\sdk-install-attempt1\\sdk-root\\Editor\\Materials\\Preview\\Assets\\MaterialEditor\\ViewportModels\\Torus.modelpreset.azasset",
+    "bytes": 384,
+    "sha256": "421F10BCB8436C3FD02AE32C025EF5BD33C9B17D7A57C7B0B3711CED531E0911"
+  }
+]

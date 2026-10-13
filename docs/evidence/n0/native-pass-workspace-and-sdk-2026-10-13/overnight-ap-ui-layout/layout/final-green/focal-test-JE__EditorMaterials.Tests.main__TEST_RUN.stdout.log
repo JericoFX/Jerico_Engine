@@ -1,0 +1,11 @@
+Test project F:/JericoEngine/JericoEngine/build/n0-validation/original-engine
+    Start 108: JE::EditorMaterials.Tests.main::TEST_RUN
+1/1 Test #108: JE::EditorMaterials.Tests.main::TEST_RUN ...   Passed    5.39 sec
+
+100% tests passed, 0 tests failed out of 1
+
+Label Time Summary:
+FRAMEWORK_googletest    =   5.39 sec*proc (1 test)
+SUITE_main              =   5.39 sec*proc (1 test)
+
+Total Test time (real) =   5.42 sec

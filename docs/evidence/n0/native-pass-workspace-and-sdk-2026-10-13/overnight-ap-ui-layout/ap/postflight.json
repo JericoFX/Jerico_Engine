@@ -1,0 +1,53 @@
+{
+  "capturedUtc": "2026-10-13T06:20:08.6207411Z",
+  "freezePath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-passgraph-workspace-rev1\\integrated-green-freeze-rev8.json",
+  "freezeSha256": "5755AB7EB1FFDFFBD6D92DD6F225032D90507FFB37C6CA5D55E2272CB09E03BE",
+  "freezeInputCount": 1135,
+  "protectedCount": 38,
+  "apBinaryConfigCount": 30,
+  "nativePassAssetCount": 3,
+  "uniqueChecked": 1198,
+  "mismatchCount": 0,
+  "mismatches": [],
+  "apBatchExitCode": 1,
+  "blockingProcessCount": 0,
+  "blockingProcesses": [],
+  "ramPercent": 55.35,
+  "freeGiB": 14.25,
+  "logs": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-passgraph-workspace-rev1\\ap-migration-attempt1\\execution2\\apbatch.stdout.log",
+      "bytes": 187383,
+      "sha256": "10CAFDA6E72AD3C458CE1E7E0C8574D862A8B7C0DE85D45980FB78F647557DCD",
+      "lastWriteUtc": "2026-10-13T06:17:49.8778473Z"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-passgraph-workspace-rev1\\ap-migration-attempt1\\execution2\\apbatch.stderr.log",
+      "bytes": 0,
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "lastWriteUtc": "2026-10-13T06:17:37.6909853Z"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-passgraph-workspace-rev1\\ap-migration-attempt1\\execution2\\apbatch.result.json",
+      "bytes": 244063,
+      "sha256": "19500766F203D3B68C2080F0BE10BBE70CC612CB4B5AAE179AFEBD97D6A9ADCB",
+      "lastWriteUtc": "2026-10-13T06:17:50.1134329Z"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-passgraph-workspace-rev1\\ap-migration-attempt1\\execution2\\probe-after.stdout.json",
+      "bytes": 2048,
+      "sha256": "12DF6C07F90101A8FB1D213BD086EA7D49AD47959F080A0742793DD0E5B73E72",
+      "lastWriteUtc": "2026-10-13T06:18:47.9926818Z"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-passgraph-workspace-rev1\\ap-migration-attempt1\\execution2\\logs\\AP_Batch.log",
+      "bytes": 235459,
+      "sha256": "3B53F4B3940BF2EBEAD8C2DE3813249DE6100D132C709233326AC3A5B5F6A9F0",
+      "lastWriteUtc": "2026-10-13T06:17:49.8374509Z"
+    }
+  ],
+  "checkedEntryCount": 1206,
+  "uniquePathCount": 1198,
+  "duplicatePathOccurrences": 8,
+  "note": "1206 entries checked across freeze/protected/AP manifests; 8 duplicate paths deduplicated for hash work. All 1198 unique paths matched."
+}

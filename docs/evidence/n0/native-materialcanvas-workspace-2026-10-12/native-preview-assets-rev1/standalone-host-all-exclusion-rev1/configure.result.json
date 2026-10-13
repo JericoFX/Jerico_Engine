@@ -1,0 +1,21 @@
+{
+  "phase": "configure",
+  "startedUtc": "2026-10-13T01:40:48.4126058Z",
+  "endedUtc": "2026-10-13T01:43:17.3835988Z",
+  "elapsedSeconds": 148.971,
+  "pid": 88284,
+  "executable": "C:\\Program Files\\CMake\\bin\\cmake.exe",
+  "argv": [
+    "-S",
+    "F:\\JericoEngine\\JericoEngine",
+    "-B",
+    "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine"
+  ],
+  "exitCode": 0,
+  "stdout": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\standalone-host-all-exclusion-rev1\\native-attempt1\\configure.stdout.log",
+  "stdoutBytes": 66702,
+  "stdoutSha256": "F39D007D3287466BBBA2D645AC16804F883702F5FFCA0C45A7D3170A5F1ADFC8",
+  "stderr": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\standalone-host-all-exclusion-rev1\\native-attempt1\\configure.stderr.log",
+  "stderrBytes": 1189,
+  "stderrSha256": "E4AAD40ADB2F7C1F6FD6443D22D5B73B58448EA48F5654D451726CDB24C33803"
+}

@@ -1,0 +1,195 @@
+{
+  "status": "PARENT_REVIEWED_NATIVE_PASS_UI_PENDING",
+  "capturedUtc": "2026-10-12T21:56:27.6394993Z",
+  "branch": "development",
+  "head": "b8ba2effe175d4c37e922aa80c3014a3d3b783d7",
+  "freezeSha256": "4768B0FA477C422326A05E72F1801D2DA09503E36F4E8AD7C6270F9BD046FC10",
+  "inputCount": 1055,
+  "postflightMismatches": 0,
+  "parentFinalInputMismatches": 0,
+  "totalUniqueCases": 137,
+  "reports": [
+    {
+      "file": "Gem_GraphModel.Editor.Tests.xml",
+      "actualCases": 13,
+      "failures": 0,
+      "errors": 0,
+      "disabled": 0,
+      "skipped": 0,
+      "sha256": "21CE9BF20F80A3793B2F20EC0CA61DA85DCB79A8B40DD5BF3CA8E4EE78655D4C"
+    },
+    {
+      "file": "JE_EditorMaterials.Tests.xml",
+      "actualCases": 42,
+      "failures": 0,
+      "errors": 0,
+      "disabled": 0,
+      "skipped": 0,
+      "sha256": "453C7823513430F0FE288084A461946C0610F4157B7D31E6C3B0AB23737193ED"
+    },
+    {
+      "file": "Gem_AtomToolsFramework.Tests.xml",
+      "actualCases": 10,
+      "failures": 0,
+      "errors": 0,
+      "disabled": 0,
+      "skipped": 0,
+      "sha256": "ADA178A28BB5BF4218626ACE4D29E48C7F266B088188009334A38DB49882FAE5"
+    },
+    {
+      "file": "Legacy_EditorLib.Tests.xml",
+      "actualCases": 72,
+      "failures": 0,
+      "errors": 0,
+      "disabled": 0,
+      "skipped": 0,
+      "sha256": "0E267EB6594C31477AB033D3FC4DED257BE1F55C4120E9CB7690F6E5BFB7BA53"
+    }
+  ],
+  "phases": [
+    {
+      "phase": "build-focal",
+      "exitCode": 0,
+      "elapsedSeconds": 240.105,
+      "startedUtc": "2026-10-12T21:49:06.2379567Z",
+      "finishedUtc": "2026-10-12T21:53:06.3434239Z",
+      "stdoutSha256": "3F087357FED463B5AE97AEAD4731470D3AF74E981E9AE7E70677E849CC6E16E2",
+      "stderrSha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "phase": "focal-inventory",
+      "exitCode": 0,
+      "elapsedSeconds": 0.069,
+      "startedUtc": "2026-10-12T21:53:06.3689599Z",
+      "finishedUtc": "2026-10-12T21:53:06.438182Z",
+      "stdoutSha256": "C3D03E0EFD09DBB8E9D680430F231929E0448159B4E86E12B41C210214842071",
+      "stderrSha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "phase": "focal-test-Gem__GraphModel.Editor.Tests.main__TEST_RUN",
+      "exitCode": 0,
+      "elapsedSeconds": 0.183,
+      "startedUtc": "2026-10-12T21:53:06.4577425Z",
+      "finishedUtc": "2026-10-12T21:53:06.6409539Z",
+      "stdoutSha256": "0FD53570195C7A4F1FD1FAE4B481F530F4F131D59579DEC88F2D36CE641F9CBB",
+      "stderrSha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "phase": "focal-test-JE__EditorMaterials.Tests.main__TEST_RUN",
+      "exitCode": 0,
+      "elapsedSeconds": 2.715,
+      "startedUtc": "2026-10-12T21:53:06.6468336Z",
+      "finishedUtc": "2026-10-12T21:53:09.3614996Z",
+      "stdoutSha256": "38D2246D462350FE34B1130A973B68E2BCF4494E736BAC4AD4A3D42BFB64F0AC",
+      "stderrSha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "phase": "focal-test-Gem__AtomToolsFramework.Tests.main__TEST_RUN",
+      "exitCode": 0,
+      "elapsedSeconds": 0.117,
+      "startedUtc": "2026-10-12T21:53:09.3673406Z",
+      "finishedUtc": "2026-10-12T21:53:09.4839741Z",
+      "stdoutSha256": "87B3B1A5937E007CB123387EA054800F473B10A9E36FC32C1FB7E738DE769E07",
+      "stderrSha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "phase": "build-hosts",
+      "exitCode": 0,
+      "elapsedSeconds": 98.181,
+      "startedUtc": "2026-10-12T21:53:09.4893625Z",
+      "finishedUtc": "2026-10-12T21:54:47.6702982Z",
+      "stdoutSha256": "A050226B6426FD1058B6D5F9AFA50EA727A320AEEDCBD5BB046E5E3F86F4C53C",
+      "stderrSha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "phase": "host-inventory",
+      "exitCode": 0,
+      "elapsedSeconds": 0.067,
+      "startedUtc": "2026-10-12T21:54:47.6771247Z",
+      "finishedUtc": "2026-10-12T21:54:47.7443314Z",
+      "stdoutSha256": "0BE0988C615C4B6B7EEA4BD268DB249EB57FC2C06A33CC400E1B9F1C1B2C5ADF",
+      "stderrSha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "phase": "host-test-Legacy__EditorLib.Tests.main__TEST_RUN",
+      "exitCode": 0,
+      "elapsedSeconds": 5.761,
+      "startedUtc": "2026-10-12T21:54:47.7511477Z",
+      "finishedUtc": "2026-10-12T21:54:53.5121083Z",
+      "stdoutSha256": "EC999A314C887147F3B2392EEA8B46CB4C359C6A0E37F1894DD2A6355EF5DD26",
+      "stderrSha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    }
+  ],
+  "configure": {
+    "reused": true,
+    "evidence": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-attempt7\\configure.result.json",
+    "reason": "Graph lifetime tests, private fixture setup and cache/icon ownership changed only C++ sources; CMake and file-list inputs remain unchanged from validated configuration attempt7."
+  },
+  "outputs": [
+    {
+      "file": "Editor.exe",
+      "bytes": 171520,
+      "sha256": "13C847A9421CFB0E3A84964247EE034E4BEC45A494A75CF965992C072D396704"
+    },
+    {
+      "file": "EditorMaterials.dll",
+      "bytes": 6848000,
+      "sha256": "82D49AC7089C28522591BF36BF262D3B3D1861D9B711A504C459336BB1208462"
+    },
+    {
+      "file": "EditorMaterials.Tests.dll",
+      "bytes": 4353024,
+      "sha256": "21FFC071B778C630D761850AD2D5751866DFD412973B5E7956C0037370B7A3E9"
+    },
+    {
+      "file": "GraphModel.Editor.dll",
+      "bytes": 4177408,
+      "sha256": "07C376668F79B82EDD5545CA1820B8ED1AE2FF31DBEF25A45D25E567C110E28F"
+    },
+    {
+      "file": "GraphModel.Editor.Tests.dll",
+      "bytes": 4886528,
+      "sha256": "D05291753C6E93E52078822B3D4A4046F773FAC7075943678E18B733C4AF9FB7"
+    },
+    {
+      "file": "GraphCanvas.Editor.dll",
+      "bytes": 7212544,
+      "sha256": "0BC23E4C9CBC42DD754FF8779E084B907B62904CE1BB45C45C6D164E151D81CB"
+    },
+    {
+      "file": "AtomToolsFramework.Tests.dll",
+      "bytes": 2590208,
+      "sha256": "5C2BC83B0370CDBA7DE8202D3A1A810748F1D679804DECAFE050C97B581A61E5"
+    },
+    {
+      "file": "EditorLib.Tests.dll",
+      "bytes": 5007360,
+      "sha256": "2A733065A5FB16C63ED2BC2D09512D523ED0EED653F07E85A64C6AD0C5446BED"
+    },
+    {
+      "file": "MaterialCanvas.exe",
+      "bytes": 4830208,
+      "sha256": "C34BE1B2EFCF5105FCA297CA01D71AC0E9DEBCFABA679F319D14A902402A1E33"
+    },
+    {
+      "file": "MaterialEditor.exe",
+      "bytes": 3835392,
+      "sha256": "28338330C3A7BBE9D2F96DF5201781CB77EDA77EFD339732A9E895A516E34222"
+    },
+    {
+      "file": "PassCanvas.exe",
+      "bytes": 5817344,
+      "sha256": "C81DD29A9686688DB49A00596F1B1CA7D239511246E190CC4BE47E18E00F3878"
+    },
+    {
+      "file": "ShaderManagementConsole.exe",
+      "bytes": 4025856,
+      "sha256": "B7985F2FF62C6B222B59E198242602A8D5F6A05A3B8D5639FBB32121AF608FEF"
+    }
+  ],
+  "causalRedReceipt": "parent-reviewed-slot-parent-cache-red-rev1.json",
+  "verified": "Real GraphDocument/GraphCanvas replay, logical references, global mixed Undo, Save/reopen, invalid replay atomicity and allocator leak checks; GraphModel owner lifetime and removal invalidation",
+  "pending": "Actual viewport UI, connections and Inspector, mixed entity/material global Undo, compile/AP/generated material on same BSP, close/reopen/application decisions, DX12/Vulkan visual equivalence; N0, shipping metrics, Linux and VR",
+  "uiPolicy": "Human asked to continue source work without controlling windows; no UI automation executed",
+  "publication": "No commit/push; native nodes vertical slice remains unaccepted until real UI gates"
+}

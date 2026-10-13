@@ -13,10 +13,7 @@ set(FILES
     Source/MaterialCanvasTestData.cpp
     Source/MaterialCanvasTestData.h
 
-    Source/Document/MaterialGraphCompiler.cpp
-    Source/Document/MaterialGraphCompiler.h
 
-    Source/Window/MaterialCanvas.qrc
     Source/Window/MaterialCanvasMainWindow.cpp
     Source/Window/MaterialCanvasMainWindow.h
     Source/Window/MaterialCanvasViewportContent.cpp

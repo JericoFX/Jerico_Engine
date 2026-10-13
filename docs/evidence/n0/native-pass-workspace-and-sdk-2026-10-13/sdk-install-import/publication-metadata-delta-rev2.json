@@ -1,0 +1,9 @@
+{
+  "utc": "2026-10-13T13:07:43.4172978Z",
+  "priorSdkPostflight": "DD24D715C7CAF0581E264A27BA14829B797533C2A480026DD8DC5FFD16ED13EF",
+  "priorAttributeDigest": "90ABB95838E209429C46B9B4B04EF07399E228F3D95A3F4B895702F4BFD566FB",
+  "attributesAfter": "6E5995172ED60F99E72171108F40A0350FFC22CEE4B63C5622922F3203CCE75A",
+  "change": "Preserve raw evidence text and binary bytes in ordinary Git; source index normalized with repository core.autocrlf=true without changing worktree bytes",
+  "nativeSourceTestsBinariesUnchanged": true,
+  "wholeGoalComplete": false
+}

@@ -22,7 +22,6 @@ ly_add_target(
     NAME MaterialCanvas APPLICATION
     NAMESPACE Gem
     AUTOMOC
-    AUTORCC
     FILES_CMAKE
         materialcanvas_files.cmake
         ${pal_source_dir}/platform_${PAL_PLATFORM_NAME_LOWERCASE}_files.cmake
@@ -39,9 +38,13 @@ ly_add_target(
         PRIVATE
             Gem::CommonFeaturesAtom.Static
             JE::RenderMaterials
+            JE::EditorMaterials
             Gem::AtomToolsFramework.Editor
             JE::EditorCamera
             Gem::AtomToolsFramework.Static
+    TARGET_PROPERTIES
+        EXCLUDE_FROM_ALL TRUE
+        JE_EXCLUDE_FROM_SDK TRUE
     RUNTIME_DEPENDENCIES
         Gem::AtomToolsFramework.Editor
 )
@@ -56,9 +59,7 @@ ly_set_gem_variant_to_load(TARGETS MaterialCanvas VARIANTS Tools)
 # cmake_dependencies.<project>.assetprocessor.setreg to allow the asset scan folder for it to be added
 ly_create_alias(NAME MaterialCanvas.Builders NAMESPACE Gem)
 
-# Add build dependency to Editor for the MaterialCanvas application since
-# Editor opens up the MaterialCanvas
-ly_add_dependencies(Editor Gem::MaterialCanvas)
+# Material graph authoring is hosted by JE::EditorMaterials inside Editor.
 
 # Inject the project path into the MaterialCanvas VS debugger command arguments if the build system being invoked
 # in a project centric view

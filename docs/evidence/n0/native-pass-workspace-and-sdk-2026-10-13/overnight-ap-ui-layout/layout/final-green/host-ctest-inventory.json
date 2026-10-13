@@ -1,0 +1,72 @@
+{
+  "backtraceGraph": {
+    "commands": [
+      "add_test",
+      "ly_add_test",
+      "ly_add_googletest"
+    ],
+    "files": [
+      "F:/JericoEngine/JericoEngine/cmake/LYTestWrappers.cmake",
+      "F:/JericoEngine/JericoEngine/Code/Editor/CMakeLists.txt"
+    ],
+    "nodes": [
+      {
+        "file": 1
+      },
+      {
+        "command": 2,
+        "file": 1,
+        "line": 252,
+        "parent": 0
+      },
+      {
+        "command": 1,
+        "file": 0,
+        "line": 425,
+        "parent": 1
+      },
+      {
+        "command": 0,
+        "file": 0,
+        "line": 148,
+        "parent": 2
+      }
+    ]
+  },
+  "kind": "ctestInfo",
+  "tests": [
+    {
+      "backtrace": 3,
+      "command": [
+        "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/profile/AzTestRunner.exe",
+        "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/profile/EditorLib.Tests.dll",
+        "AzRunUnitTests",
+        "--gtest_output=xml:F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/Testing/Gtest/Legacy_EditorLib.Tests.xml",
+        "--gtest_filter=-*SUITE_smoke*:*SUITE_periodic*:*SUITE_benchmark*:*SUITE_sandbox*:*SUITE_awsi*"
+      ],
+      "config": "Profile",
+      "name": "Legacy::EditorLib.Tests.main::TEST_RUN",
+      "properties": [
+        {
+          "name": "LABELS",
+          "value": [
+            "FRAMEWORK_googletest",
+            "SUITE_main"
+          ]
+        },
+        {
+          "name": "TIMEOUT",
+          "value": 1500.0
+        },
+        {
+          "name": "WORKING_DIRECTORY",
+          "value": "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/Code/Editor"
+        }
+      ]
+    }
+  ],
+  "version": {
+    "major": 1,
+    "minor": 0
+  }
+}

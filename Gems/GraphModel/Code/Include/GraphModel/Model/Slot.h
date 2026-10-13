@@ -14,6 +14,7 @@
 #include <AzCore/std/containers/list.h>
 #include <AzCore/std/containers/set.h>
 #include <AzCore/std/smart_ptr/enable_shared_from_this.h>
+#include <AzCore/std/smart_ptr/weak_ptr.h>
 
 // Graph Model
 #include <GraphModel/Model/Common.h>
@@ -286,7 +287,7 @@ namespace GraphModel
         // Storing the parent node so that it only needs to be looked up once unless the graph state and cached data is clear
         mutable AZStd::mutex m_parentNodeMutex;
         mutable bool m_parentNodeDirty = true;
-        mutable NodePtr m_parentNode;
+        mutable AZStd::weak_ptr<Node> m_parentNode;
 
         // Storing a list of connections for this slot, copied From the owner graph object.
         mutable AZStd::mutex m_connectionsMutex;

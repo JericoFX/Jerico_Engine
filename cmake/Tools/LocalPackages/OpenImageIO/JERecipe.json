@@ -1,0 +1,117 @@
+{
+  "schemaVersion": 1,
+  "name": "openimageio-opencolorio-2.3.17-je-rev1-windows",
+  "historicalRecipe": {
+    "repository": "o3de/3p-package-source",
+    "commit": "70aed4dedc1f6a1f7ef5415c02bc555f24b3d8f9",
+    "revision": "Windows rev4"
+  },
+  "sources": [
+    {
+      "id": "Boost",
+      "version": "1.76.0",
+      "commit": "ccb2ab3b4384a16deafaa849de509bce2b2cbada",
+      "url": "https://archives.boost.io/release/1.76.0/source/boost_1_76_0.tar.bz2",
+      "archiveSHA256": "f0397ba6e982c4450f27bf32a2a83292aba035b827a5623a14636ea583318c41",
+      "license": "BSL-1.0"
+    },
+    {
+      "id": "fmt",
+      "version": "8.0.0",
+      "commit": "9e8b86fd2d9806672cc73133d21780dd182bfd24",
+      "url": "https://codeload.github.com/fmtlib/fmt/tar.gz/9e8b86fd2d9806672cc73133d21780dd182bfd24",
+      "archiveSHA256": "fbeb82c8dab8285919e2816a489a5f8f5564212de5a9f9b2308ca584f2e2f427",
+      "license": "MIT"
+    },
+    {
+      "id": "libjpeg-turbo",
+      "version": "2.1.2",
+      "commit": "ecf021bc0d6f435daacff7c35ccaeef0145df1b9",
+      "url": "https://codeload.github.com/libjpeg-turbo/libjpeg-turbo/tar.gz/ecf021bc0d6f435daacff7c35ccaeef0145df1b9",
+      "archiveSHA256": "4da34053c31593b350e957124bc299198b8906db62ce695b3d45b190c9726dd1",
+      "license": "IJG AND BSD-3-Clause AND Zlib"
+    },
+    {
+      "id": "Little-CMS",
+      "version": "2.2",
+      "commit": "401d006836ca9fbbec9ba507d7f863fd7d2b14b6",
+      "url": "https://codeload.github.com/mm2/Little-CMS/tar.gz/401d006836ca9fbbec9ba507d7f863fd7d2b14b6",
+      "archiveSHA256": "9ac59679eea1c367dbb1a1b5edc9d8d8fa84832c872bc5c422b82cbd7597e0c3",
+      "license": "MIT"
+    },
+    {
+      "id": "OpenColorIO",
+      "version": "2.1.1",
+      "commit": "32b01f64d6e483aec9fb8839b5caa0af0e0e1ebe",
+      "url": "https://codeload.github.com/AcademySoftwareFoundation/OpenColorIO/tar.gz/32b01f64d6e483aec9fb8839b5caa0af0e0e1ebe",
+      "archiveSHA256": "d9ffe89250cf3282e8098fe0dc17da90f6c7fd23503063d499bf6a9dcc3a8eb3",
+      "license": "BSD-3-Clause plus embedded notices"
+    },
+    {
+      "id": "OpenImageIO",
+      "version": "2.3.17.0",
+      "commit": "14d38284c54bce02f8228ea87cdfa93dc0afda77",
+      "url": "https://codeload.github.com/AcademySoftwareFoundation/OpenImageIO/tar.gz/14d38284c54bce02f8228ea87cdfa93dc0afda77",
+      "archiveSHA256": "1219c94ca7e19f8f900a1b0b02749a9d46a747faf6c5039999b8653286cf5b84",
+      "license": "BSD-3-Clause plus embedded notices"
+    },
+    {
+      "id": "pystring",
+      "version": "1.1.3",
+      "commit": "c2de99deb4f0bd13751f8436400b5e8662301769",
+      "url": "https://codeload.github.com/imageworks/pystring/tar.gz/c2de99deb4f0bd13751f8436400b5e8662301769",
+      "archiveSHA256": "6be0f6dbef6f3cad0f3844a17cb54e704e2dba84a06625ee3eb1bb2afd24f463",
+      "license": "BSD-3-Clause"
+    },
+    {
+      "id": "robin-map",
+      "version": "0.6.2",
+      "commit": "908ccf9f039a0e50813544c0444ca664ca292d7c",
+      "url": "https://codeload.github.com/Tessil/robin-map/tar.gz/908ccf9f039a0e50813544c0444ca664ca292d7c",
+      "archiveSHA256": "374dcfa5933eb2ae1b86123691198991bade6c4d1263e62ccc6a76f56304e1a1",
+      "license": "MIT"
+    },
+    {
+      "id": "yaml-cpp",
+      "version": "0.6.3",
+      "commit": "9a3624205e8774953ef18f57067b3426c1c5ada6",
+      "url": "https://codeload.github.com/jbeder/yaml-cpp/tar.gz/9a3624205e8774953ef18f57067b3426c1c5ada6",
+      "archiveSHA256": "e39f54bd2927692603378e373009e56b4891701cee8af7c27370c36978a43ffa",
+      "license": "MIT"
+    }
+  ],
+  "toolchain": {
+    "generator": "Visual Studio 17 2022",
+    "toolset": "v143",
+    "architecture": "x64",
+    "configs": [
+      "Debug",
+      "Release"
+    ],
+    "runtime": "MD/MDd",
+    "cxx": "17 except original lcms2/ociobakelut C++11",
+    "parallelJobs": "Required JE_OIIO_PARALLEL_JOBS, initial dispatch 6",
+    "nasm": "Audited local 2.16.03 build tool only"
+  },
+  "localPackages": {
+    "ZLIB": "1.2.11",
+    "PNG": "1.6.37",
+    "TIFF": "4.2.0.15",
+    "Freetype": "2.11.1",
+    "expat": "2.4.2",
+    "OpenEXR": "3.1.3",
+    "Imath": "3.1.3"
+  },
+  "adaptations": [
+    "VS2022/v143 compiler; original codec/native tools and DLL names preserved",
+    "No Python interpreter/bindings/Plugins targets or payload; native pystring remains",
+    "Exact original stacktrace/rpath executable patches only in fresh OIIO work",
+    "Source manifest regular-copy only: 15 OIIO test fixture links omitted and 7 JPEG export-ignore files unavailable, with exact approved receipts",
+    "Child package discovery requires existing exact native roots/private prefixes; OCIO_INSTALL_EXT_PACKAGES=NONE",
+    "OIIO_BUILD_TESTS=OFF and BUILD_TESTING=OFF; upstream fixtures are unselected; native provider consumers remain separate",
+    "JPEG is original Release static SIMD dependency in both configurations; YAML/pystring/lcms2/Boost are private Debug/Release static builds",
+    "Boost full official source release SHA is authority; superproject metadata commit is not a whole-tree Git identity",
+    "No global install, compiler installer, source VCS calls or implicit acquisition"
+  ],
+  "validation": "PENDING NATIVE PRODUCER/CONSUMER EXECUTION; no engine/Editor/AP or redistribution acceptance"
+}

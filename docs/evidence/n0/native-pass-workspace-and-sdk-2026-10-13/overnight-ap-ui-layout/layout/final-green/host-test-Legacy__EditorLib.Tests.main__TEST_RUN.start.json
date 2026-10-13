@@ -1,0 +1,29 @@
+{
+  "phase": "host-test-Legacy__EditorLib.Tests.main__TEST_RUN",
+  "startedUtc": "2026-10-13T08:23:07.5354536Z",
+  "pid": 78044,
+  "processCreationUtc": "2026-10-13T08:23:07.5361632Z",
+  "ramBefore": {
+    "capturedUtc": "2026-10-13T08:23:07.5354086Z",
+    "totalBytes": 34265743360,
+    "freeBytes": 14536171520,
+    "usedPercent": 57.58,
+    "thresholdPercent": 80
+  },
+  "executable": "C:\\Program Files\\CMake\\bin\\ctest.exe",
+  "argv": [
+    "--test-dir",
+    "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine",
+    "-C",
+    "Profile",
+    "--output-on-failure",
+    "--no-tests=error",
+    "--timeout",
+    "180",
+    "-R",
+    "^Legacy::EditorLib\\.Tests\\.main::TEST_RUN$"
+  ],
+  "workingDirectory": "F:\\JericoEngine\\JericoEngine",
+  "stdout": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-passgraph-workspace-rev1\\native-final-green-layout-attempt1\\host-test-Legacy__EditorLib.Tests.main__TEST_RUN.stdout.log",
+  "stderr": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-passgraph-workspace-rev1\\native-final-green-layout-attempt1\\host-test-Legacy__EditorLib.Tests.main__TEST_RUN.stderr.log"
+}

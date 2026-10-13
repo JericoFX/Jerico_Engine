@@ -1,0 +1,48 @@
+{
+  "capturedUtc": "2026-10-13T06:29:33.0325348Z",
+  "status": "MIGRATION_IDENTITY_VERIFIED_FRESH_COOK_NOT_PROVEN_GLOBAL_BATCH_FAILED",
+  "apExitCode": 1,
+  "actualArgv": [
+    "--engine-path=F:\\JericoEngine\\JericoEngine",
+    "--project-path=F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture",
+    "--platforms=pc",
+    "--logDir=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-passgraph-workspace-rev1\\ap-migration-attempt1\\execution2\\logs",
+    "--zeroAnalysisMode",
+    "--regset=/Amazon/AssetProcessor/Settings/Jobs/maxJobs=2",
+    "--regset=/Amazon/AssetProcessor/Settings/Jobs/AlwaysUseMaxJobs=false"
+  ],
+  "elapsedSeconds": 12.218,
+  "inputEntries": 1206,
+  "uniquePaths": 1198,
+  "mismatchCount": 0,
+  "mismatches": [],
+  "observations": {
+    "scanFolderRootMoved": true,
+    "sourceIdsGuidsNamesPreserved": true,
+    "productsByteIdentical": true,
+    "freshTargetJobExecutionProven": false
+  },
+  "globalTotals": {
+    "exitCode": 1,
+    "successfulAssets": 2,
+    "failedAssets": 347,
+    "warnings": 2028,
+    "errors": 385,
+    "totalAssetsProcessingSeconds": 11.626,
+    "note": "Batch totals include unrelated project and engine inputs."
+  },
+  "evidenceHashes": [
+    {
+      "Path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-passgraph-workspace-rev1\\ap-migration-attempt1\\execution2\\migration-observation.json",
+      "Hash": "D5EA77B3814B681F0EAD0B632B04B92503EB75FD36A44E117F1EB5BBE0527F6C"
+    },
+    {
+      "Path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-passgraph-workspace-rev1\\ap-migration-attempt1\\execution2\\postflight.json",
+      "Hash": "690086A964CF43E71BDA55E79F9D5D89F260E6D924AD821192A3312F7A4CE2F9"
+    },
+    {
+      "Path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-passgraph-workspace-rev1\\ap-migration-attempt1\\execution2\\probe-after.stdout.json",
+      "Hash": "12DF6C07F90101A8FB1D213BD086EA7D49AD47959F080A0742793DD0E5B73E72"
+    }
+  ]
+}

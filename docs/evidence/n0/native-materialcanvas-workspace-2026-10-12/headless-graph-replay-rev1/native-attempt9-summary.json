@@ -1,0 +1,203 @@
+{
+  "endedUtc": "2026-10-12T21:54:54.0591120Z",
+  "exitCode": 0,
+  "inputCount": 1055,
+  "postflightMismatches": 0,
+  "phases": [
+    {
+      "phase": "build-focal",
+      "startedUtc": "2026-10-12T21:49:06.2379567Z",
+      "finishedUtc": "2026-10-12T21:53:06.3434239Z",
+      "elapsedSeconds": 240.105,
+      "pid": 182100,
+      "executable": "C:\\Program Files\\CMake\\bin\\cmake.exe",
+      "argv": [
+        "--build",
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine",
+        "--config",
+        "Profile",
+        "--target",
+        "GraphModel.Editor.Tests",
+        "EditorMaterials.Tests",
+        "AtomToolsFramework.Tests",
+        "--parallel",
+        "6"
+      ],
+      "exitCode": 0,
+      "stdout": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-attempt9\\build-focal.stdout.log",
+      "stdoutSha256": "3F087357FED463B5AE97AEAD4731470D3AF74E981E9AE7E70677E849CC6E16E2",
+      "stderr": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-attempt9\\build-focal.stderr.log",
+      "stderrSha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "phase": "focal-inventory",
+      "startedUtc": "2026-10-12T21:53:06.3689599Z",
+      "finishedUtc": "2026-10-12T21:53:06.4381820Z",
+      "elapsedSeconds": 0.069,
+      "pid": 198404,
+      "executable": "C:\\Program Files\\CMake\\bin\\ctest.exe",
+      "argv": [
+        "--test-dir",
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine",
+        "-C",
+        "Profile",
+        "--show-only=json-v1",
+        "-R",
+        "^(Gem::GraphModel\\.Editor\\.Tests\\.main::TEST_RUN|JE::EditorMaterials\\.Tests\\.main::TEST_RUN|Gem::AtomToolsFramework\\.Tests\\.main::TEST_RUN)$"
+      ],
+      "exitCode": 0,
+      "stdout": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-attempt9\\focal-inventory.stdout.log",
+      "stdoutSha256": "C3D03E0EFD09DBB8E9D680430F231929E0448159B4E86E12B41C210214842071",
+      "stderr": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-attempt9\\focal-inventory.stderr.log",
+      "stderrSha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "phase": "focal-test-Gem__GraphModel.Editor.Tests.main__TEST_RUN",
+      "startedUtc": "2026-10-12T21:53:06.4577425Z",
+      "finishedUtc": "2026-10-12T21:53:06.6409539Z",
+      "elapsedSeconds": 0.183,
+      "pid": 321272,
+      "executable": "C:\\Program Files\\CMake\\bin\\ctest.exe",
+      "argv": [
+        "--test-dir",
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine",
+        "-C",
+        "Profile",
+        "--output-on-failure",
+        "--no-tests=error",
+        "-R",
+        "^Gem::GraphModel\\.Editor\\.Tests\\.main::TEST_RUN$"
+      ],
+      "exitCode": 0,
+      "stdout": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-attempt9\\focal-test-Gem__GraphModel.Editor.Tests.main__TEST_RUN.stdout.log",
+      "stdoutSha256": "0FD53570195C7A4F1FD1FAE4B481F530F4F131D59579DEC88F2D36CE641F9CBB",
+      "stderr": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-attempt9\\focal-test-Gem__GraphModel.Editor.Tests.main__TEST_RUN.stderr.log",
+      "stderrSha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "phase": "focal-test-JE__EditorMaterials.Tests.main__TEST_RUN",
+      "startedUtc": "2026-10-12T21:53:06.6468336Z",
+      "finishedUtc": "2026-10-12T21:53:09.3614996Z",
+      "elapsedSeconds": 2.715,
+      "pid": 235120,
+      "executable": "C:\\Program Files\\CMake\\bin\\ctest.exe",
+      "argv": [
+        "--test-dir",
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine",
+        "-C",
+        "Profile",
+        "--output-on-failure",
+        "--no-tests=error",
+        "-R",
+        "^JE::EditorMaterials\\.Tests\\.main::TEST_RUN$"
+      ],
+      "exitCode": 0,
+      "stdout": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-attempt9\\focal-test-JE__EditorMaterials.Tests.main__TEST_RUN.stdout.log",
+      "stdoutSha256": "38D2246D462350FE34B1130A973B68E2BCF4494E736BAC4AD4A3D42BFB64F0AC",
+      "stderr": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-attempt9\\focal-test-JE__EditorMaterials.Tests.main__TEST_RUN.stderr.log",
+      "stderrSha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "phase": "focal-test-Gem__AtomToolsFramework.Tests.main__TEST_RUN",
+      "startedUtc": "2026-10-12T21:53:09.3673406Z",
+      "finishedUtc": "2026-10-12T21:53:09.4839741Z",
+      "elapsedSeconds": 0.117,
+      "pid": 135008,
+      "executable": "C:\\Program Files\\CMake\\bin\\ctest.exe",
+      "argv": [
+        "--test-dir",
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine",
+        "-C",
+        "Profile",
+        "--output-on-failure",
+        "--no-tests=error",
+        "-R",
+        "^Gem::AtomToolsFramework\\.Tests\\.main::TEST_RUN$"
+      ],
+      "exitCode": 0,
+      "stdout": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-attempt9\\focal-test-Gem__AtomToolsFramework.Tests.main__TEST_RUN.stdout.log",
+      "stdoutSha256": "87B3B1A5937E007CB123387EA054800F473B10A9E36FC32C1FB7E738DE769E07",
+      "stderr": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-attempt9\\focal-test-Gem__AtomToolsFramework.Tests.main__TEST_RUN.stderr.log",
+      "stderrSha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "phase": "build-hosts",
+      "startedUtc": "2026-10-12T21:53:09.4893625Z",
+      "finishedUtc": "2026-10-12T21:54:47.6702982Z",
+      "elapsedSeconds": 98.181,
+      "pid": 328728,
+      "executable": "C:\\Program Files\\CMake\\bin\\cmake.exe",
+      "argv": [
+        "--build",
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine",
+        "--config",
+        "Profile",
+        "--target",
+        "Editor",
+        "MaterialCanvas",
+        "MaterialEditor",
+        "PassCanvas",
+        "ShaderManagementConsole",
+        "EditorLib.Tests",
+        "--parallel",
+        "6"
+      ],
+      "exitCode": 0,
+      "stdout": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-attempt9\\build-hosts.stdout.log",
+      "stdoutSha256": "A050226B6426FD1058B6D5F9AFA50EA727A320AEEDCBD5BB046E5E3F86F4C53C",
+      "stderr": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-attempt9\\build-hosts.stderr.log",
+      "stderrSha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "phase": "host-inventory",
+      "startedUtc": "2026-10-12T21:54:47.6771247Z",
+      "finishedUtc": "2026-10-12T21:54:47.7443314Z",
+      "elapsedSeconds": 0.067,
+      "pid": 162872,
+      "executable": "C:\\Program Files\\CMake\\bin\\ctest.exe",
+      "argv": [
+        "--test-dir",
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine",
+        "-C",
+        "Profile",
+        "--show-only=json-v1",
+        "-R",
+        "^(Legacy::EditorLib\\.Tests\\.main::TEST_RUN)$"
+      ],
+      "exitCode": 0,
+      "stdout": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-attempt9\\host-inventory.stdout.log",
+      "stdoutSha256": "0BE0988C615C4B6B7EEA4BD268DB249EB57FC2C06A33CC400E1B9F1C1B2C5ADF",
+      "stderr": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-attempt9\\host-inventory.stderr.log",
+      "stderrSha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "phase": "host-test-Legacy__EditorLib.Tests.main__TEST_RUN",
+      "startedUtc": "2026-10-12T21:54:47.7511477Z",
+      "finishedUtc": "2026-10-12T21:54:53.5121083Z",
+      "elapsedSeconds": 5.761,
+      "pid": 18804,
+      "executable": "C:\\Program Files\\CMake\\bin\\ctest.exe",
+      "argv": [
+        "--test-dir",
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine",
+        "-C",
+        "Profile",
+        "--output-on-failure",
+        "--no-tests=error",
+        "-R",
+        "^Legacy::EditorLib\\.Tests\\.main::TEST_RUN$"
+      ],
+      "exitCode": 0,
+      "stdout": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-attempt9\\host-test-Legacy__EditorLib.Tests.main__TEST_RUN.stdout.log",
+      "stdoutSha256": "EC999A314C887147F3B2392EEA8B46CB4C359C6A0E37F1894DD2A6355EF5DD26",
+      "stderr": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-attempt9\\host-test-Legacy__EditorLib.Tests.main__TEST_RUN.stderr.log",
+      "stderrSha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    }
+  ],
+  "configure": {
+    "reused": true,
+    "evidence": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-materialcanvas-workspace-rev1\\native-attempt7\\configure.result.json",
+    "reason": "Graph lifetime tests, private fixture setup and cache/icon ownership changed only C++ sources; CMake and file-list inputs remain unchanged from validated configuration attempt7."
+  },
+  "fatal": null
+}

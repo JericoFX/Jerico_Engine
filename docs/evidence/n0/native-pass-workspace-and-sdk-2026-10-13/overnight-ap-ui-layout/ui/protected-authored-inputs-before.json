@@ -1,0 +1,196 @@
+{
+  "capturedUtc": "2026-10-13T06:01:42.7786201Z",
+  "scope": "All current tracked and untracked fixture Assets/Levels/Registry from rg inventory",
+  "inputs": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Assets\\jenative_graph_workspace_test_001_Common.azsli",
+      "bytes": 1224,
+      "sha256": "E23A0778E15213467E56CEDB66FB3DFA44E15361281DB6DC73C5F79ADFD6BB3F"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Assets\\jenative_graph_workspace_test_001_Defines.azsli",
+      "bytes": 1843,
+      "sha256": "3FD0251F9D397C6EF65434F96B1C7EF096A1A6A9032C5A54A8C9AF60E0EC1D31"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Assets\\jenative_graph_workspace_test_001_DepthVertexData.azsli",
+      "bytes": 844,
+      "sha256": "83623533CCB8B48DC65BDABC1D55BA6E55B5242749605B6D896988DC8A94701F"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Assets\\jenative_graph_workspace_test_001_DepthVertexEval.azsli",
+      "bytes": 3254,
+      "sha256": "15663905D154C2DDF815F0BCA67E20ACF22796CF6B775AE852C45B324A8D4A59"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Assets\\jenative_graph_workspace_test_001_SurfaceEval.azsli",
+      "bytes": 4592,
+      "sha256": "848C14CE233BA30AFC747F6D34B4839BE02D45209E55CE74F5D1EA32CAD14A1A"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Assets\\jenative_graph_workspace_test_001_VertexEval.azsli",
+      "bytes": 3995,
+      "sha256": "8D38801463C7B98472B6731C7AE2DD3F87E9BE8B9141BD0AB2DEAF6183FA9FEF"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Assets\\jenative_graph_workspace_test_001.material",
+      "bytes": 78,
+      "sha256": "CA5A7A8502876EFAC686B28068D36BB79519929F442543EBAFABFCFB1CDFC9D0"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Assets\\jenative_graph_workspace_test_001.materialtype",
+      "bytes": 5746,
+      "sha256": "136B7DD77C4AE0B5558BB9E66435F434674DA2B0B6731F1FE6E9A4C75561959A"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Assets\\jenative_graph_workspace_test_Common.azsli",
+      "bytes": 4214,
+      "sha256": "587ACE9E7883328DF76CCE289159B7275693F80D79D38E4A63D6F72FC94BBF53"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Assets\\jenative_graph_workspace_test_Defines.azsli",
+      "bytes": 2186,
+      "sha256": "C2059FD67B1E4C21A5D3047ABA92B80DE98D927BF69384C661A7F9F197FE330B"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Assets\\jenative_graph_workspace_test_DepthVertexData.azsli",
+      "bytes": 842,
+      "sha256": "FA4174E5299301CA7EE26CDE232885B91300112994CDEB7BE675C20798D3E1D2"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Assets\\jenative_graph_workspace_test_DepthVertexEval.azsli",
+      "bytes": 2832,
+      "sha256": "1729E42510245A126E05D9094FE03BE93AFC4DA6C0CDDB37B24F12AE1E45EA2E"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Assets\\jenative_graph_workspace_test_PixelGeometryEval.azsli",
+      "bytes": 2117,
+      "sha256": "1CF48EE1CB0EF501260843CE40FD2B24C722951016695A3CCBE37ECC2BA1188A"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Assets\\jenative_graph_workspace_test_SurfaceEval.azsli",
+      "bytes": 6390,
+      "sha256": "4E82C214FEA299B015D7BC40EDEBA28A646A7FB853104595E3E3FD52E81044E5"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Assets\\jenative_graph_workspace_test_VertexEval.azsli",
+      "bytes": 3837,
+      "sha256": "2BBFB1900F32FD38663062DAD817577DB2FABD2341699721F1181A96D155ACE3"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Assets\\jenative_graph_workspace_test.material",
+      "bytes": 74,
+      "sha256": "8D8141C0522FD57148158DD5DF22C6FF2801FD82404D4577A806F536AF8B4D3D"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Assets\\jenative_graph_workspace_test.materialtype",
+      "bytes": 8228,
+      "sha256": "086C6EA40B83871F7F9C9DD616377A58F8CE001E64F5FF8358E5A82F6EC4E4E7"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Assets\\JENativeGraphWorkspaceTest.materialgraph",
+      "bytes": 15678,
+      "sha256": "92314AB74A94F4596D05A03AE872D12016F665474066EC3DD4EB795422A8D2E2"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Assets\\materials\\JENativeWorkspaceCreated.material",
+      "bytes": 133,
+      "sha256": "65FAFC37C85608A5FA14EE50484EBCF53D336930C2D09759C98F46582240D34F"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Assets\\materials\\JENativeWorkspaceTest.material",
+      "bytes": 503,
+      "sha256": "04E1B3A21A4C2E4C7FE2852A4A298D1BEA9BD6D6B1154204E072212BC6BF3FFD"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Assets\\materials\\WhiteBoxDefault.material",
+      "bytes": 434,
+      "sha256": "37DE6D5E6914D038DB2A11032FDA0B1AA4E378C8E08D882C20A08CC0DA205E0C"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Assets\\NativePrefabBuilder\\NativePrefabCube.fbx",
+      "bytes": 30656,
+      "sha256": "9C9E212AD50C78CD759156F4F47BF5C9FE61149472648DFD467341895F6ED914"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Assets\\NativePrefabBuilder\\README.md",
+      "bytes": 1007,
+      "sha256": "27E7F6A91E2E328AB1B3E0ECEBA9353661D0086A64995132F5484606334D3A67"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Assets\\untitled.material",
+      "bytes": 404,
+      "sha256": "A20DBD875FA67EBDB4C5D7981BAC0134577A9F97130DA4C4F69950927C61F809"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Assets\\untitled.materialgraph",
+      "bytes": 111,
+      "sha256": "FE7EFB1F829A7010D33174577F32F863B440C12B28BA6FAF54F59E312F57445C"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Assets\\vcsncbkew_4K_Albedo.png",
+      "bytes": 23124411,
+      "sha256": "F71234AF464FB28E2DD069ACB00C4DD5D62D82EB60FAB05F70E286FDF2D8AA26"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Assets\\vcsncbkew_4K_Displacement.png",
+      "bytes": 68244247,
+      "sha256": "51158A234ABDFA4C634CAFE345C7B380A6B1E7A1E98C369F9946B8C1490F899F"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Assets\\vcsncbkew_8K_Displacement.exr",
+      "bytes": 188110754,
+      "sha256": "29B9A4EA86069CF9B26E2DDC8EBD8041C0896D41DC685246D79CE7793DF560B4"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Assets\\vcsncbkew_8K_Normal.jpg",
+      "bytes": 56893964,
+      "sha256": "7272063571DF7BC30337E0269DE3C788CA1BC09D17400D5376BBFE252E2382DA"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Assets\\vcsncbkew_8K_Roughness.jpg",
+      "bytes": 17522633,
+      "sha256": "0824B61AD6F0A91F9AD395C019B6239DCCD392A773220CFF310870A587B85C5C"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Levels\\JEEditorFixture\\JEEditorFixture.prefab",
+      "bytes": 349143,
+      "sha256": "FEE55849A032D29059D4369112047DC27E281D39631D0F0DF87D8BCF5EF517AA"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Levels\\JELutEffectiveValidation\\JELutEffectiveValidation.prefab",
+      "bytes": 349143,
+      "sha256": "FEE55849A032D29059D4369112047DC27E281D39631D0F0DF87D8BCF5EF517AA"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Levels\\JELutValidation\\JELutValidation.prefab",
+      "bytes": 350505,
+      "sha256": "EBB764624D75D0056981A591C00DC04D8A16C3D27DAC55FB5F4AD5AB5AA94994"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Levels\\JENativeIntegration\\JENativeIntegration.prefab",
+      "bytes": 349567,
+      "sha256": "4C5E436524DD9EA5EB4FAE0B8BF61DF1024D5B7784D4C92EA242A28298C70040"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Registry\\assetprocessor_settings.setreg",
+      "bytes": 890,
+      "sha256": "0A88D47A79F716D27C72FEA79F0C112AE6C9CBF21918DBFBC523E597E0CA7224"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Registry\\physxdebugconfiguration.setreg",
+      "bytes": 186,
+      "sha256": "3ACAA9516ACF331B062D13960DF2E133E7998F9B45BE1021BF2E50D7600BD04A"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Registry\\physxdefaultsceneconfiguration.setreg",
+      "bytes": 139,
+      "sha256": "01125C0C15EA52CAB5BE46110710771FAF35238D5799054A538C962A4ABA61FC"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Registry\\physxsystemconfiguration.setreg",
+      "bytes": 3460,
+      "sha256": "842BF45CFEDCB0C0EF5ACBE25C9A58F992B5CD7A43CEE18B70CA413113A44B94"
+    }
+  ]
+}
