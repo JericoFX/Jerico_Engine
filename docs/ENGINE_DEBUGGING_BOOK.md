@@ -1,5 +1,12 @@
 # Libro de errores y aprendizaje de JericoEngine
 
+## O-46 — Canales ORM y preset explícito ausente (2026-10-14)
+
+En el material PBR original, Roughness/Metallic/AO muestrean siempre .r; asignar una imagen ORM no basta para seleccionar G/B. RED con cuerpos AZSL reales incluidos como C++ y sampler de test devuelve0.2 en lugar de0.6/0.9; selector RGBA explícito, default Red y propagación por seis tipos pasa la misma prueba. El harness no compila AZSL ni ejecuta GPU/SRG/AP: la aceptación nativa continúa pendiente. Conservar defaults y versiones/acciones anteriores al ampliar propiedades.
+
+InitFromPath también aplicaba un preset sugerido si faltaba el explícito, perdiendo reducción/mips. RED ejecutado del método con seams de test reproduce cuatro pérdidas; GREEN conserva settings. Preservar el nombre requiere proteger resolución/mips/preview e info/reset, porque las listas vacías y el preset nulo tenían consumidores que asumían éxito; recuperar mediante selección manual existente. Nueva regresión de XML/patches/save/reopen escrita NOT_RUN. No confundir una dependencia OIIO/OCIO aceptada con su conexión al decoder: ImageProcessingAtom no la enlaza y KTX2 carece de registro. Evidencia y límites: [auditoría](research/JE_IMAGE_MATERIAL_PIPELINE_AUDIT_2026_10_14.md), [RED/GREEN](evidence/n2/image-material-audit-2026-10-14/validation-status.json). Primer diagnóstico del harness de wiring incluyó llamadas comentadas de Eye; corregir el parser no fue una reparación productiva. Evidencia anterior y fuentes originales conservadas.
+
+
 ## O-45 — Pass Node: reparto del panel y asentamiento Qt (2026-10-13)
 
 UI real Vulkan, PassNodeConfig después de PassGraph: el aviso consume unos480px y comprime Inspector/palette al pie. QVBoxLayout reparte espacio entre QLabel Preferred y cuerpo sin stretch; MaterialGraph añade una vista Expanding, pero node config no la añade. Cambio productivo único: addWidget(columns,1), sin alturas fijas, sin modificar splitters manuales ni rediseñar. RED final con fuente original y test asentado:50 casos/1 falla/3 aserciones; aviso219 frente a68px a900x650, aviso420 frente a68 e Inspector419 frente a450 a1400x900. La regresión conserva esos mismos límites en GREEN.

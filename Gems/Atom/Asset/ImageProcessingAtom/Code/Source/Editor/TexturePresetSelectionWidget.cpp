@@ -68,14 +68,20 @@ namespace ImageProcessingAtomEditor
         if (presetSetting)
         {
             m_ui->presetComboBox->setCurrentText(presetSetting->m_name.GetCStr());
-            QObject::connect(m_ui->presetComboBox, static_cast<void(QComboBox::*)(int)>(&QComboBox::currentIndexChanged), this, &TexturePresetSelectionWidget::OnChangePreset);
-
-            // Suppress engine reduction checkbox
-            m_ui->serCheckBox->setCheckState(m_textureSetting->GetMultiplatformTextureSetting().m_suppressEngineReduce ? Qt::CheckState::Checked : Qt::CheckState::Unchecked);
-
-            SetCheckBoxReadOnly(m_ui->serCheckBox, presetSetting->m_suppressEngineReduce);
-            QObject::connect(m_ui->serCheckBox, &QCheckBox::clicked, this, &TexturePresetSelectionWidget::OnCheckBoxStateChanged);
         }
+        else
+        {
+            m_ui->presetComboBox->setCurrentIndex(-1);
+            m_ui->activePresetLabel->setText(QString("Unavailable preset: %1").arg(currPreset.GetCStr()));
+        }
+        QObject::connect(m_ui->presetComboBox, static_cast<void(QComboBox::*)(int)>(&QComboBox::currentIndexChanged), this, &TexturePresetSelectionWidget::OnChangePreset);
+        m_ui->infoBtn->setEnabled(presetSetting != nullptr);
+        m_ui->resetBtn->setEnabled(presetSetting != nullptr);
+
+        // Preserve the stored value while the preset is unavailable.
+        m_ui->serCheckBox->setCheckState(m_textureSetting->GetMultiplatformTextureSetting().m_suppressEngineReduce ? Qt::CheckState::Checked : Qt::CheckState::Unchecked);
+        SetCheckBoxReadOnly(m_ui->serCheckBox, !presetSetting || presetSetting->m_suppressEngineReduce);
+        QObject::connect(m_ui->serCheckBox, &QCheckBox::clicked, this, &TexturePresetSelectionWidget::OnCheckBoxStateChanged);
 
         // Reset btn
         QObject::connect(m_ui->resetBtn, &QPushButton::clicked, this, &TexturePresetSelectionWidget::OnRestButton);
@@ -136,6 +142,10 @@ namespace ImageProcessingAtomEditor
 
     void TexturePresetSelectionWidget::OnChangePreset(int index)
     {
+        if (index < 0)
+        {
+            return;
+        }
         QString text = m_ui->presetComboBox->itemText(index);
         m_textureSetting->SetToPreset(PresetName(text.toUtf8().data()));
         EditorInternalNotificationBus::Broadcast(&EditorInternalNotificationBus::Events::OnEditorSettingsChanged, true, BuilderSettingManager::s_defaultPlatform);
@@ -145,6 +155,10 @@ namespace ImageProcessingAtomEditor
     {
         const auto& currPreset = m_textureSetting->GetMultiplatformTextureSetting().m_preset;
         const PresetSettings* presetSetting = BuilderSettingManager::Instance()->GetPreset(currPreset);
+        if (!presetSetting)
+        {
+            return;
+        }
         m_presetPopup.reset(new PresetInfoPopup(presetSetting, this));
         m_presetPopup->installEventFilter(this);
         m_presetPopup->show();
@@ -190,9 +204,12 @@ namespace ImageProcessingAtomEditor
             // If the preset's SER is true, texture setting should not override
             const auto& currPreset = m_textureSetting->GetMultiplatformTextureSetting().m_preset;
             const PresetSettings* presetSetting = BuilderSettingManager::Instance()->GetPreset(currPreset);
+            m_ui->infoBtn->setEnabled(presetSetting != nullptr);
+            m_ui->resetBtn->setEnabled(presetSetting != nullptr);
+            m_ui->activePresetLabel->setText(presetSetting ? QString("Preset") : QString("Unavailable preset: %1").arg(currPreset.GetCStr()));
+            SetCheckBoxReadOnly(m_ui->serCheckBox, !presetSetting || presetSetting->m_suppressEngineReduce);
             if (presetSetting)
             {
-                SetCheckBoxReadOnly(m_ui->serCheckBox, presetSetting->m_suppressEngineReduce);
                 // If there is preset info dialog open, update the text
                 if (m_presetPopup && m_presetPopup->isVisible())
                 {

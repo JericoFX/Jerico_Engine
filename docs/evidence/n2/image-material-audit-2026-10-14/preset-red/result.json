@@ -1,0 +1,18 @@
+{
+  "scope": "Exact production InitFromPath definition; test-only decoding/settings/configuration seams. No real image import or sidecar/Qt/AP/cook execution.",
+  "sourceSha256": "c46714be7b1fcc39d9b6874f92f9f7a5a421fb7f179696fd673f251603c4b032",
+  "definitionSha256": "9259a56ef550ff1079e24b0028d136e1815ac54bd5abbc09642cdcb865b03010",
+  "command": [
+    "g++",
+    "-std=c++17",
+    "-Wall",
+    "-Wextra",
+    "-Werror",
+    "/workspace/scratch/eb3880adfce2/preset-red/preset_cpu.cpp",
+    "-o",
+    "/workspace/scratch/eb3880adfce2/preset-red/preset-control-flow"
+  ],
+  "buildExit": 0,
+  "runExit": 1,
+  "passed": false
+}

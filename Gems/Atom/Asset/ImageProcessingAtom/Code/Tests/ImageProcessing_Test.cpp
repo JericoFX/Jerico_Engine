@@ -57,6 +57,8 @@
 #include <Atom/RHI.Reflect/ReflectSystemComponent.h>
 
 #include <QFileInfo>
+#include <QFile>
+#include <QTemporaryDir>
 #include <qdir.h>
 #include <QDirIterator>
 #include <QIODevice>
@@ -1068,6 +1070,77 @@ namespace UnitTest
 
             delete process;
         }
+    }
+
+    TEST_F(ImageProcessingTest, EditorTextureSetting_UnavailableExplicitPreset_PreservesSettingsUntilManualSelection)
+    {
+        ASSERT_TRUE(BuilderSettingManager::Instance()->LoadConfigFromFolder(m_defaultSettingFolder.Native()).IsSuccess());
+        const auto platforms = BuilderSettingManager::Instance()->GetPlatformList();
+        ASSERT_FALSE(platforms.empty());
+
+        QTemporaryDir temporaryDirectory;
+        ASSERT_TRUE(temporaryDirectory.isValid());
+        const QString imagePath = temporaryDirectory.filePath("arbitrary_diff.png");
+        ASSERT_TRUE(QFile::copy(m_imagFileNameMap[Image_32X32_checkerboard_png].c_str(), imagePath));
+        QFile imageFile(imagePath);
+        ASSERT_TRUE(imageFile.open(QIODevice::ReadOnly));
+        const QByteArray originalImageBytes = imageFile.readAll();
+        imageFile.close();
+
+        TextureSettings original;
+        original.m_preset = "UnavailableExplicitPreset";
+        original.m_sizeReduceLevel = 3;
+        original.m_suppressEngineReduce = true;
+        original.m_enableMipmap = false;
+        original.m_mipGenType = MipGenType::quadratic;
+        original.m_maintainAlphaCoverage = true;
+        original.m_tags.insert("preserve-me");
+        TextureSettings platformOverride = original;
+        platformOverride.m_sizeReduceLevel = 4;
+        ASSERT_TRUE(original.ApplySettings(platformOverride, platforms.front(), m_context.get()).IsSuccess());
+
+        const AZStd::string sourcePath(imagePath.toUtf8().constData());
+        const AZStd::string sidecarPath = sourcePath + TextureSettings::ExtensionName;
+        ASSERT_TRUE(TextureSettings::WriteTextureSetting(sidecarPath, original, m_context.get()).IsSuccess());
+        const auto expected = TextureSettings::GetMultiplatformTextureSetting(original, m_context.get());
+
+        ImageProcessingAtomEditor::EditorTextureSetting editorSettings(sourcePath);
+        ASSERT_TRUE(editorSettings.m_img);
+        ASSERT_EQ(editorSettings.m_settingsMap.size(), expected.size());
+        for (const auto& [platform, settings] : expected)
+        {
+            ASSERT_NE(editorSettings.m_settingsMap.find(platform), editorSettings.m_settingsMap.end());
+            EXPECT_TRUE(editorSettings.m_settingsMap.at(platform).Equals(settings, m_context.get()));
+            EXPECT_EQ(editorSettings.m_settingsMap.at(platform).m_enableMipmap, settings.m_enableMipmap);
+            AZ::u32 minReduce = 0;
+            AZ::u32 maxReduce = 0;
+            EXPECT_TRUE(editorSettings.GetResolutionInfo(platform, minReduce, maxReduce).empty());
+            EXPECT_TRUE(editorSettings.GetResolutionInfoForMipmap(platform).empty());
+        }
+
+        // Mirror the existing Save path: recombine platform patches, then reopen.
+        TextureSettings& saved = editorSettings.GetMultiplatformTextureSetting();
+        for (const auto& [platform, settings] : editorSettings.m_settingsMap)
+        {
+            ASSERT_TRUE(saved.ApplySettings(settings, platform, m_context.get()).IsSuccess());
+        }
+        ASSERT_TRUE(TextureSettings::WriteTextureSetting(sidecarPath, saved, m_context.get()).IsSuccess());
+        ImageProcessingAtomEditor::EditorTextureSetting reopened(sourcePath);
+        for (const auto& [platform, settings] : expected)
+        {
+            EXPECT_TRUE(reopened.m_settingsMap.at(platform).Equals(settings, m_context.get()));
+            EXPECT_EQ(reopened.m_settingsMap.at(platform).m_enableMipmap, settings.m_enableMipmap);
+        }
+
+        // Changing the preset explicitly remains available after preserving it.
+        reopened.SetToPreset(PresetName("Normals"));
+        for (const auto& [platform, settings] : reopened.m_settingsMap)
+        {
+            EXPECT_EQ(settings.m_preset, PresetName("Normals"));
+            EXPECT_FALSE(reopened.GetResolutionInfoForMipmap(platform).empty());
+        }
+        ASSERT_TRUE(imageFile.open(QIODevice::ReadOnly));
+        EXPECT_EQ(imageFile.readAll(), originalImageBytes);
     }
 
     TEST_F(ImageProcessingTest, TextureSettingReflect_SerializingModernDataInAndOut_WritesAndParsesFileAccurately)

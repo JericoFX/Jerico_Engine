@@ -1,0 +1,155 @@
+{
+  "baseline": "10d53925a5ed73e32f5eeae16d781d3168af9582",
+  "files": [
+    {
+      "path": "Gems/Atom/Feature/Common/Assets/Materials/Types/MaterialInputs/RoughnessPropertyGroup.json",
+      "beforeSha256": "401c7a3a79ef11fd7ae5a186e16154a15e37bbbd2760d7289c72a7300dfc6a98",
+      "afterSha256": "b672dc6512066bea0c1cad818b2e80a002dbe7a2001c0b845f0f0f1867e71dfc",
+      "originalBlobSha": "14b8781b8f6eddeb802f22ac132e62a2b0023320"
+    },
+    {
+      "path": "Gems/Atom/Feature/Common/Assets/Materials/Types/MaterialInputs/MetallicPropertyGroup.json",
+      "beforeSha256": "396794776db4b3f85ad51c4e80713278577404ed4ac03a5642df326891e0ccf1",
+      "afterSha256": "c2cf41b863ce050cbe809fb3c860a2b6816a4b76b0914d96f9ee1d9e6d111f6f",
+      "originalBlobSha": "cd91dbe24a19ab06b1335acdcd9af18f45e42beb"
+    },
+    {
+      "path": "Gems/Atom/Feature/Common/Assets/Materials/Types/MaterialInputs/OcclusionPropertyGroup.json",
+      "beforeSha256": "313dba6619e2e52bb82e8bc438dc58e3876549208cbf538f4c2f0eb3a8589174",
+      "afterSha256": "24bd046d61038f6ffcf897f9a293bfba1b20bdb69204489381dca2bcedb6477d",
+      "originalBlobSha": "b3e0d7491e090cd5124d47c53cbf1e72e1cf5cd5"
+    },
+    {
+      "path": "Gems/Atom/Feature/Common/Assets/Shaders/Materials/MaterialInputs/RoughnessInput.azsli",
+      "beforeSha256": "b6076f61578e0d519aec78261fcd884d7bae2bc1aa55a9e2609be3b9979a7a2e",
+      "afterSha256": "9c2e707e4fc11d50237b4ea50ea6369144c8c99c2e38a66a0e33f783f5397d2e",
+      "originalBlobSha": "14f34247b95bda840b9a1d41938c4bd81909bbb9"
+    },
+    {
+      "path": "Gems/Atom/Feature/Common/Assets/Shaders/Materials/MaterialInputs/MetallicInput.azsli",
+      "beforeSha256": "a507ea6e22a4a099d9dca0613d7aa485a1f458bb0c6254d907313684dde32808",
+      "afterSha256": "7df7decbc86329153d4fe1bfbffef7f1ee6b1ac0b193b31bee5702de5369a07a",
+      "originalBlobSha": "d01c5355fe8b8f8608a91684c16fca58f3bbe27d"
+    },
+    {
+      "path": "Gems/Atom/Feature/Common/Assets/Shaders/Materials/MaterialInputs/OcclusionInput.azsli",
+      "beforeSha256": "7b7c29ef79bb5d257cfcfefdc1ee2f13603ef5df4385afeee0fcba160e2a8b41",
+      "afterSha256": "386f6a6e71edc14a5351e130afe0a66032e6966a8199aa72be5ca0b3e111422d",
+      "originalBlobSha": "ffb396ef63664dfe4e45e24fb8819e22547af420"
+    },
+    {
+      "path": "Gems/Atom/Feature/Common/Assets/Shaders/Materials/BasePBR/BasePBR_SurfaceEval.azsli",
+      "beforeSha256": "5bb1e5bdba6eb0dee8c8ec58d256c329f6cf0c22039b1abb123648165a9584aa",
+      "afterSha256": "a063d9358b46bc3b2e934ef4eb9080d6401afb4a006c84fcc37a0e27b7d53a8a",
+      "originalBlobSha": "b0dc86dd86bc91f6222f0e765ca3f52fe719cedb"
+    },
+    {
+      "path": "Gems/Atom/Feature/Common/Assets/Shaders/Materials/StandardPBR/StandardPBR_SurfaceEval.azsli",
+      "beforeSha256": "625714d7d74d7a89bb22fbcb8012654f92b66ab5480cacde01a93fd2c08a3b5d",
+      "afterSha256": "e7f86800e49e3ea311bca7f91757140e8278a11bc7a343ec62667835212db5f4",
+      "originalBlobSha": "d482220b53652b2af22253379059423be6406e74"
+    },
+    {
+      "path": "Gems/Atom/Feature/Common/Assets/Shaders/Materials/EnhancedPBR/EnhancedPBR_SurfaceEval.azsli",
+      "beforeSha256": "0924224d2dd312607da57714027eb1c8c1f0cc4f0293dc081e64eeba23bf5872",
+      "afterSha256": "77ccacc1f315e3db25f98e58678c19f6bfceefb08cfddc4eb0b3586853b5ae7b",
+      "originalBlobSha": "c803cd958911fc1a88beb258f8d1acb37cff38e3"
+    },
+    {
+      "path": "Gems/Atom/Feature/Common/Assets/Shaders/Materials/Skin/Skin_SurfaceEval.azsli",
+      "beforeSha256": "29c09ca0d7dab98c14919e4cd478ab02377423a93b1e977c063e61df36974377",
+      "afterSha256": "c9f284257e6ddeabd271719c938c1ea9f2a0223488e1fcb24aab800380f8a558",
+      "originalBlobSha": "6af36f1ff459e3c235ca18af8a7790c735dd9d12"
+    },
+    {
+      "path": "Gems/Atom/Feature/Common/Assets/Shaders/Materials/Eye/Eye_SurfaceEval.azsli",
+      "beforeSha256": "0fec38f39d0e96878902b240d3d9e4b860e9822a400c603609bf6e9ffe7c4b9c",
+      "afterSha256": "a1d7f8125967f62e5224a4e7b9d031548c73d7d41152609a9bcec0c8036dee3f",
+      "originalBlobSha": "caa918c1395601357a1fa7880d9ba8c0218d55c2"
+    },
+    {
+      "path": "Gems/Atom/Feature/Common/Assets/Shaders/Materials/StandardMultilayerPBR/StandardMultilayerPBR_SurfaceEval.azsli",
+      "beforeSha256": "a78fdadd47ece918c96876f252f6d8ee039b97406cda7e8244a20056a810c599",
+      "afterSha256": "80f5d12645b800f64c4e0b70702d54b913fad28271a1d45171020ec241b85f52",
+      "originalBlobSha": "3d860c9e2622eb656896ed1f59a759ddd1c65402"
+    },
+    {
+      "path": "Gems/Atom/Feature/Common/Assets/Materials/Types/StandardPBR_Roughness.lua",
+      "beforeSha256": "2fc2387c2e8d0a567ca9c40647e7b7c2337ec5a05697b2d32eddc30c9f9b748b",
+      "afterSha256": "b4ca2c5fc870f80ef83b8af702120621f18c78b9cb449e76ca94453122da042b",
+      "originalBlobSha": "7122e3083c924e231ed22f8bca0b2237a3520041"
+    },
+    {
+      "path": "Gems/Atom/Feature/Common/Assets/Materials/Types/StandardPBR_Metallic.lua",
+      "beforeSha256": "6c2613e67c3412435ada5c7a5f48428f6047c23a8810bc0001814d0dc83a11cc",
+      "afterSha256": "0079985228fd6bd3ee3214f845171b05ed725980e52fd6d92f6a5cfd0278a252",
+      "originalBlobSha": "ddccc5d0ce8fc76a62c975e7cd27c6e806db22b5"
+    },
+    {
+      "path": "Gems/Atom/Feature/Common/Assets/Materials/Types/BasePBR.materialtype",
+      "beforeSha256": "3f1bcd2963f2f0bf9add0a6f5d7ed7874c14e402bd2cd23863203c3528b499b5",
+      "afterSha256": "19175ee7d046d156a8c5aac0f412e708ffc0c8cd72202fb4357888d84b0291d2",
+      "originalBlobSha": "b1487307cd20adce6fda515c1c090306aae5a599"
+    },
+    {
+      "path": "Gems/Atom/Feature/Common/Assets/Materials/Types/StandardPBR.materialtype",
+      "beforeSha256": "6f57d21c226e87103e9e89d1057dff588639ce5d168516ea29ed0424e5706eb5",
+      "afterSha256": "9b90263f8c1b8264f139a813413e1788d8920a8241bab9d72a676513ebb7fc03",
+      "originalBlobSha": "73d88e0473117df60af65403f97b4c11aa229fe9"
+    },
+    {
+      "path": "Gems/Atom/Feature/Common/Assets/Materials/Types/EnhancedPBR.materialtype",
+      "beforeSha256": "691780de26da34a408c8945291ffca83f06440ca7ba6c58a515dc48b497a310a",
+      "afterSha256": "54027b398b3abe8ecb07dcc4bd3d2a0e6f642c816c80e42a5589bcdaceab5a39",
+      "originalBlobSha": "79331a806e519117c99722c8bffcd524979dded1"
+    },
+    {
+      "path": "Gems/Atom/Feature/Common/Assets/Materials/Types/Skin.materialtype",
+      "beforeSha256": "4fd3fca3fc1d75c277c104aecf191bca1e9b80d37d0f3f8e1f3e956cd44d3709",
+      "afterSha256": "4b4a4681665f81292e583e28deeaa36832d2d29955ea2469248793926142f6ae",
+      "originalBlobSha": "95db86823965d776a2a81cc8b3753e1fef93e863"
+    },
+    {
+      "path": "Gems/Atom/Feature/Common/Assets/Materials/Types/Eye.materialtype",
+      "beforeSha256": "3e1184ece717c066322611652a2043e9efab8a12440401c906558fee0c0c9625",
+      "afterSha256": "859defa25ef2542896f7736b54a18775e8eb52459c7b120d59a4827e67f09bce",
+      "originalBlobSha": "aace72018b0df4329bd70a94feae77c05f7b6e26"
+    },
+    {
+      "path": "Gems/Atom/Feature/Common/Assets/Materials/Types/StandardMultilayerPBR.materialtype",
+      "beforeSha256": "6e3cece896551df8693a52c6f9971cc49e2399bc9e93e650e1680087be6227d8",
+      "afterSha256": "9437c7187ae5f39f51552bcd0714288fe23cfad497c95ec1fabf0380b71efe91",
+      "originalBlobSha": "77f1eeb112382889642332ba7be8eff36ac21f9b"
+    },
+    {
+      "path": "Gems/Atom/Asset/ImageProcessingAtom/Code/Source/Editor/EditorCommon.cpp",
+      "beforeSha256": "c46714be7b1fcc39d9b6874f92f9f7a5a421fb7f179696fd673f251603c4b032",
+      "afterSha256": "2f5c06c4664d2b7dc444600f0d0f26cd3e8b7c8553c982b6f05fbaa84b991034",
+      "originalBlobSha": "e5004cd3e3e12b320fed2699ded422930bad9715"
+    },
+    {
+      "path": "Gems/Atom/Asset/ImageProcessingAtom/Code/Source/Editor/TexturePresetSelectionWidget.cpp",
+      "beforeSha256": "4b5fe67ee1e3e4526994b5fdaa2e76d99a3a23d3cd2d268e73a3452083fa3ac4",
+      "afterSha256": "f7b50e97d8d8c1e4260a557cfe0ce5bef32b9087c1f20260b6f3ec6b10e9d8cb",
+      "originalBlobSha": "09c53f6db530b05044d683f91305dfe92c89f690"
+    },
+    {
+      "path": "Gems/Atom/Asset/ImageProcessingAtom/Code/Source/Editor/ResolutionSettingItemWidget.cpp",
+      "beforeSha256": "1eb07538d520e0248ca7f922ef130ee390fc582f2d95c73f21fc1aad496e3dca",
+      "afterSha256": "2b4de49c0664e52821d5737ae12a93701d25f1be3dda73bcf6c15428149167cd",
+      "originalBlobSha": "a7f20559bcaea43f734c6c90ae3f3010fc607c44"
+    },
+    {
+      "path": "Gems/Atom/Asset/ImageProcessingAtom/Code/Source/Editor/TexturePreviewWidget.cpp",
+      "beforeSha256": "0d7e2ae51832ad63260385dce6831102a46609f173e7b1c3d841eb0b4d6090e8",
+      "afterSha256": "7e14e704f67c265e5f134c2f54c5fd6a008e8154f3f89ec10cfe1a702fb46b5e",
+      "originalBlobSha": "ef7f28be5dc3aba8dc8233ea02dff59798be2f73"
+    },
+    {
+      "path": "Gems/Atom/Asset/ImageProcessingAtom/Code/Tests/ImageProcessing_Test.cpp",
+      "beforeSha256": "7ad756141e8d89f83641fc470da61997a98e1508279d8ea3188f571e9c3c636e",
+      "afterSha256": "b4ac69110d31caa1a3c093ca4ee2317ae0f24031042a9e8ba1450b498ae31d2b",
+      "originalBlobSha": "2e5acdf7d115aa9fbe9dafde402e671b90b59fed"
+    }
+  ]
+}

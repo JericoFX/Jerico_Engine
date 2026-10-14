@@ -109,7 +109,14 @@ namespace ImageProcessingAtomEditor
         m_ui->refreshBtn->setIcon(m_alwaysRefreshIcon);
 
         m_ui->busyLabel->SetBusyIconSize(16);
-        SetImageLabelText(QString(), false);
+        if (BuilderSettingManager::Instance()->GetPreset(m_textureSetting->GetMultiplatformTextureSetting().m_preset))
+        {
+            SetImageLabelText(QString(), false);
+        }
+        else
+        {
+            SetImageLabelText(QString("Select an available texture preset to preview."), false);
+        }
 
         // Tooltips
         m_ui->mainWidget->setToolTip(QString("Display hotkeys:\nShift - RGBA\nAlt - Alpha\nSpace - Full Resolution"));
@@ -205,7 +212,14 @@ namespace ImageProcessingAtomEditor
         }
         else
         {
-            AZ_Error("Texture Setting", false, "Cannot find mip reduce level for mip %d", m_currentMipIndex);
+            if (!BuilderSettingManager::Instance()->GetPreset(m_textureSetting->GetMultiplatformTextureSetting().m_preset))
+            {
+                SetImageLabelText(QString("Select an available texture preset to preview."), false);
+            }
+            else
+            {
+                AZ_Error("Texture Setting", false, "Cannot find mip reduce level for mip %d", m_currentMipIndex);
+            }
         }
     }
 
@@ -348,6 +362,11 @@ namespace ImageProcessingAtomEditor
 
     void TexturePreviewWidget::RefreshPreviewImage(RefreshMode mode)
     {
+        if (!BuilderSettingManager::Instance()->GetPreset(m_textureSetting->GetMultiplatformTextureSetting().m_preset))
+        {
+            SetImageLabelText(QString("Select an available texture preset to preview."), false);
+            return;
+        }
         // Ignore any none-conversion refresh request when the image is being converted
         if (m_updateTimer->isActive() && mode != RefreshMode::Convert)
         {

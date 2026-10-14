@@ -17,30 +17,32 @@
 #define COMMON_SRG_INPUTS_OCCLUSION(prefix)        \
 float       prefix##m_diffuseOcclusionFactor;      \
 Texture2D   prefix##m_diffuseOcclusionMap;         \
+uint        prefix##m_diffuseOcclusionMapChannel;  \
 uint        prefix##m_diffuseOcclusionMapUvIndex;  \
 float       prefix##m_specularOcclusionFactor;     \
 Texture2D   prefix##m_specularOcclusionMap;        \
+uint        prefix##m_specularOcclusionMapChannel;  \
 uint        prefix##m_specularOcclusionMapUvIndex;
 
 #define COMMON_OPTIONS_OCCLUSION(prefix) \
 option bool prefix##o_diffuseOcclusion_useTexture; \
 option bool prefix##o_specularOcclusion_useTexture; 
 
-real GetOcclusionInput(Texture2D map, sampler mapSampler, float2 uv, real factor, bool useTexture, float4 uvDxDy = float4(0.0, 0.0, 0.0, 0.0), bool customDerivatives = false)
+real GetOcclusionInput(Texture2D map, sampler mapSampler, float2 uv, real factor, bool useTexture, float4 uvDxDy = float4(0.0, 0.0, 0.0, 0.0), bool customDerivatives = false, uint textureChannel = 0)
 {
     real occlusion = 1.0;
     if(useTexture)
     {
         if (customDerivatives)
         {
-            occlusion = real(map.SampleGrad(mapSampler, uv, uvDxDy.xy, uvDxDy.zw).r);
+            occlusion = real(map.SampleGrad(mapSampler, uv, uvDxDy.xy, uvDxDy.zw)[textureChannel < 4 ? textureChannel : 0]);
         }
         else
         {
             #ifdef CS_SAMPLERS
-            occlusion = real(map.SampleLevel(mapSampler, uv, 0).r);
+            occlusion = real(map.SampleLevel(mapSampler, uv, 0)[textureChannel < 4 ? textureChannel : 0]);
             #else
-            occlusion = real(map.Sample(mapSampler, uv).r);
+            occlusion = real(map.Sample(mapSampler, uv)[textureChannel < 4 ? textureChannel : 0]);
             #endif
         }
         occlusion = pow(occlusion, factor);

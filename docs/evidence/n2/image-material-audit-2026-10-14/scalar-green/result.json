@@ -1,0 +1,54 @@
+{
+  "scope": "Actual AZSL scalar function bodies compiled as C++; test-only texture/type/debug shims. No GPU/AZSL/Editor/AP/cook acceptance.",
+  "sourceSha256": {
+    "Gems/Atom/Feature/Common/Assets/Shaders/Materials/MaterialInputs/RoughnessInput.azsli": "9c2e707e4fc11d50237b4ea50ea6369144c8c99c2e38a66a0e33f783f5397d2e",
+    "Gems/Atom/Feature/Common/Assets/Shaders/Materials/MaterialInputs/MetallicInput.azsli": "7df7decbc86329153d4fe1bfbffef7f1ee6b1ac0b193b31bee5702de5369a07a",
+    "Gems/Atom/Feature/Common/Assets/Shaders/Materials/MaterialInputs/OcclusionInput.azsli": "386f6a6e71edc14a5351e130afe0a66032e6966a8199aa72be5ca0b3e111422d"
+  },
+  "outcomes": [
+    {
+      "mode": "pixel",
+      "command": [
+        "g++",
+        "-std=c++17",
+        "-Wall",
+        "-Wextra",
+        "-Wno-unused-parameter",
+        "-Werror",
+        "-DJE_TEST_ROUGHNESS_CHANNEL",
+        "-DJE_TEST_METALLIC_CHANNEL",
+        "-DJE_TEST_OCCLUSION_CHANNEL",
+        "-I/workspace/scratch/eb3880adfce2/scalar-green/include",
+        "/workspace/scratch/eb3880adfce2/scalar-green/scalar_shader_cpu.cpp",
+        "-o",
+        "/workspace/scratch/eb3880adfce2/scalar-green/scalar-pixel"
+      ],
+      "buildExit": 0,
+      "runExit": 0,
+      "output": "scalar shader CPU arithmetic failures=0\n"
+    },
+    {
+      "mode": "compute",
+      "command": [
+        "g++",
+        "-std=c++17",
+        "-Wall",
+        "-Wextra",
+        "-Wno-unused-parameter",
+        "-Werror",
+        "-DJE_TEST_ROUGHNESS_CHANNEL",
+        "-DJE_TEST_METALLIC_CHANNEL",
+        "-DJE_TEST_OCCLUSION_CHANNEL",
+        "-DCS_SAMPLERS",
+        "-I/workspace/scratch/eb3880adfce2/scalar-green/include",
+        "/workspace/scratch/eb3880adfce2/scalar-green/scalar_shader_cpu.cpp",
+        "-o",
+        "/workspace/scratch/eb3880adfce2/scalar-green/scalar-compute"
+      ],
+      "buildExit": 0,
+      "runExit": 0,
+      "output": "scalar shader CPU arithmetic failures=0\n"
+    }
+  ],
+  "passed": true
+}

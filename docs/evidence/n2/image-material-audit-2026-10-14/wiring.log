@@ -1,0 +1,3 @@
+PASS schema: selectors, legacy properties/defaults, six additive version updates
+PASS shader source wiring: 17 scalar callsites and four multilayer channel copies
+PASS actual Lua functors: missing/disabled/enabled image channel visibility

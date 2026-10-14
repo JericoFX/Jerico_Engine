@@ -77,7 +77,7 @@ Surface EvaluateSurface_BasePBR(
     // ------- Metallic -------
 
     float2 metallicUv = uvs[params.m_metallicMapUvIndex];
-    real metallic = GetMetallicInput(GetMaterialTexture(params.m_metallicMap), GetMaterialTextureSampler(), metallicUv, real(params.m_metallicFactor), o_metallic_useTexture, uvDxDy, customDerivatives);
+    real metallic = GetMetallicInput(GetMaterialTexture(params.m_metallicMap), GetMaterialTextureSampler(), metallicUv, real(params.m_metallicFactor), o_metallic_useTexture, uvDxDy, customDerivatives, params.m_metallicMapChannel);
 
     // ------- Specular -------
 
@@ -90,7 +90,7 @@ Surface EvaluateSurface_BasePBR(
 
     float2 roughnessUv = uvs[params.m_roughnessMapUvIndex];
     surface.roughnessLinear = GetRoughnessInput(GetMaterialTexture(params.m_roughnessMap), GetMaterialTextureSampler(), roughnessUv, real(params.m_roughnessFactor),
-                                        real(params.m_roughnessLowerBound), real(params.m_roughnessUpperBound), o_roughness_useTexture, uvDxDy, customDerivatives);
+                                        real(params.m_roughnessLowerBound), real(params.m_roughnessUpperBound), o_roughness_useTexture, uvDxDy, customDerivatives, params.m_roughnessMapChannel);
     surface.CalculateRoughnessA();
 
     return surface;

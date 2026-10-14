@@ -1,0 +1,260 @@
+--- a/Gems/Atom/Asset/ImageProcessingAtom/Code/Source/Editor/EditorCommon.cpp
++++ b/Gems/Atom/Asset/ImageProcessingAtom/Code/Source/Editor/EditorCommon.cpp
+@@ -177,13 +177,7 @@
+ 
+         if (!preset)
+         {
+-            AZ_Warning("Texture Editor", false, "Cannot find preset %s! Will assign a suggested one for the texture.", presetName.GetCStr());
+-            presetName = BuilderSettingManager::Instance()->GetSuggestedPreset(m_fullPath);
+-
+-            for (auto& settingIter : m_settingsMap)
+-            {
+-                settingIter.second.ApplyPreset(presetName);
+-            }
++            AZ_Warning("Texture Editor", false, "Cannot find preset %s! Preserving texture settings until an available preset is selected.", presetName.GetCStr());
+         }
+     }
+     
+@@ -359,7 +353,10 @@
+         for (AZ::u32 i = s_MinReduceLevel; i <= s_MaxReduceLevel; i++)
+         {
+             ResolutionInfo resolutionInfo;
+-            GetFinalInfoForTextureOnPlatform(platform, i, resolutionInfo);
++            if (!GetFinalInfoForTextureOnPlatform(platform, i, resolutionInfo))
++            {
++                return resolutionInfos;
++            }
+             // If actual reduce is lower than desired reduce, it reaches the limit and we can stop try lower resolution
+             if (i > resolutionInfo.reduce)
+             {
+@@ -378,7 +375,10 @@
+         AZStd::list<ResolutionInfo> resolutionInfos;
+         unsigned int baseReduce = m_settingsMap[platform].m_sizeReduceLevel;
+         ResolutionInfo baseInfo;
+-        GetFinalInfoForTextureOnPlatform(platform, baseReduce, baseInfo);
++        if (!GetFinalInfoForTextureOnPlatform(platform, baseReduce, baseInfo))
++        {
++            return resolutionInfos;
++        }
+         resolutionInfos.push_back(baseInfo);
+         for (AZ::u32 i = 1; i < baseInfo.mipCount; i++)
+         { 
+--- a/Gems/Atom/Asset/ImageProcessingAtom/Code/Source/Editor/TexturePresetSelectionWidget.cpp
++++ b/Gems/Atom/Asset/ImageProcessingAtom/Code/Source/Editor/TexturePresetSelectionWidget.cpp
+@@ -68,14 +68,20 @@
+         if (presetSetting)
+         {
+             m_ui->presetComboBox->setCurrentText(presetSetting->m_name.GetCStr());
+-            QObject::connect(m_ui->presetComboBox, static_cast<void(QComboBox::*)(int)>(&QComboBox::currentIndexChanged), this, &TexturePresetSelectionWidget::OnChangePreset);
+-
+-            // Suppress engine reduction checkbox
+-            m_ui->serCheckBox->setCheckState(m_textureSetting->GetMultiplatformTextureSetting().m_suppressEngineReduce ? Qt::CheckState::Checked : Qt::CheckState::Unchecked);
+-
+-            SetCheckBoxReadOnly(m_ui->serCheckBox, presetSetting->m_suppressEngineReduce);
+-            QObject::connect(m_ui->serCheckBox, &QCheckBox::clicked, this, &TexturePresetSelectionWidget::OnCheckBoxStateChanged);
+-        }
++        }
++        else
++        {
++            m_ui->presetComboBox->setCurrentIndex(-1);
++            m_ui->activePresetLabel->setText(QString("Unavailable preset: %1").arg(currPreset.GetCStr()));
++        }
++        QObject::connect(m_ui->presetComboBox, static_cast<void(QComboBox::*)(int)>(&QComboBox::currentIndexChanged), this, &TexturePresetSelectionWidget::OnChangePreset);
++        m_ui->infoBtn->setEnabled(presetSetting != nullptr);
++        m_ui->resetBtn->setEnabled(presetSetting != nullptr);
++
++        // Preserve the stored value while the preset is unavailable.
++        m_ui->serCheckBox->setCheckState(m_textureSetting->GetMultiplatformTextureSetting().m_suppressEngineReduce ? Qt::CheckState::Checked : Qt::CheckState::Unchecked);
++        SetCheckBoxReadOnly(m_ui->serCheckBox, !presetSetting || presetSetting->m_suppressEngineReduce);
++        QObject::connect(m_ui->serCheckBox, &QCheckBox::clicked, this, &TexturePresetSelectionWidget::OnCheckBoxStateChanged);
+ 
+         // Reset btn
+         QObject::connect(m_ui->resetBtn, &QPushButton::clicked, this, &TexturePresetSelectionWidget::OnRestButton);
+@@ -136,6 +142,10 @@
+ 
+     void TexturePresetSelectionWidget::OnChangePreset(int index)
+     {
++        if (index < 0)
++        {
++            return;
++        }
+         QString text = m_ui->presetComboBox->itemText(index);
+         m_textureSetting->SetToPreset(PresetName(text.toUtf8().data()));
+         EditorInternalNotificationBus::Broadcast(&EditorInternalNotificationBus::Events::OnEditorSettingsChanged, true, BuilderSettingManager::s_defaultPlatform);
+@@ -145,6 +155,10 @@
+     {
+         const auto& currPreset = m_textureSetting->GetMultiplatformTextureSetting().m_preset;
+         const PresetSettings* presetSetting = BuilderSettingManager::Instance()->GetPreset(currPreset);
++        if (!presetSetting)
++        {
++            return;
++        }
+         m_presetPopup.reset(new PresetInfoPopup(presetSetting, this));
+         m_presetPopup->installEventFilter(this);
+         m_presetPopup->show();
+@@ -190,9 +204,12 @@
+             // If the preset's SER is true, texture setting should not override
+             const auto& currPreset = m_textureSetting->GetMultiplatformTextureSetting().m_preset;
+             const PresetSettings* presetSetting = BuilderSettingManager::Instance()->GetPreset(currPreset);
++            m_ui->infoBtn->setEnabled(presetSetting != nullptr);
++            m_ui->resetBtn->setEnabled(presetSetting != nullptr);
++            m_ui->activePresetLabel->setText(presetSetting ? QString("Preset") : QString("Unavailable preset: %1").arg(currPreset.GetCStr()));
++            SetCheckBoxReadOnly(m_ui->serCheckBox, !presetSetting || presetSetting->m_suppressEngineReduce);
+             if (presetSetting)
+             {
+-                SetCheckBoxReadOnly(m_ui->serCheckBox, presetSetting->m_suppressEngineReduce);
+                 // If there is preset info dialog open, update the text
+                 if (m_presetPopup && m_presetPopup->isVisible())
+                 {
+--- a/Gems/Atom/Asset/ImageProcessingAtom/Code/Source/Editor/ResolutionSettingItemWidget.cpp
++++ b/Gems/Atom/Asset/ImageProcessingAtom/Code/Source/Editor/ResolutionSettingItemWidget.cpp
+@@ -57,6 +57,14 @@
+     void ResolutionSettingItemWidget::RefreshUI()
+     {
+         m_ui->platformLabel->setText(EditorHelper::ToReadablePlatformString(m_platform).c_str());
++
++        m_ui->downResSpinBox->setEnabled(!m_resolutionInfos.empty());
++        if (m_resolutionInfos.empty())
++        {
++            m_ui->sizeLabel->setText(QString("Unavailable"));
++            m_ui->formatLabel->setText(QString("Unavailable"));
++            return;
++        }
+ 
+         m_ui->downResSpinBox->setRange(m_minReduce, m_maxReduce);
+         int clampedReduce = AZStd::min<int>(AZStd::max<int>(m_textureSetting->m_sizeReduceLevel, s_MinReduceLevel), s_MaxReduceLevel);
+--- a/Gems/Atom/Asset/ImageProcessingAtom/Code/Source/Editor/TexturePreviewWidget.cpp
++++ b/Gems/Atom/Asset/ImageProcessingAtom/Code/Source/Editor/TexturePreviewWidget.cpp
+@@ -109,7 +109,14 @@
+         m_ui->refreshBtn->setIcon(m_alwaysRefreshIcon);
+ 
+         m_ui->busyLabel->SetBusyIconSize(16);
+-        SetImageLabelText(QString(), false);
++        if (BuilderSettingManager::Instance()->GetPreset(m_textureSetting->GetMultiplatformTextureSetting().m_preset))
++        {
++            SetImageLabelText(QString(), false);
++        }
++        else
++        {
++            SetImageLabelText(QString("Select an available texture preset to preview."), false);
++        }
+ 
+         // Tooltips
+         m_ui->mainWidget->setToolTip(QString("Display hotkeys:\nShift - RGBA\nAlt - Alpha\nSpace - Full Resolution"));
+@@ -205,7 +212,14 @@
+         }
+         else
+         {
+-            AZ_Error("Texture Setting", false, "Cannot find mip reduce level for mip %d", m_currentMipIndex);
++            if (!BuilderSettingManager::Instance()->GetPreset(m_textureSetting->GetMultiplatformTextureSetting().m_preset))
++            {
++                SetImageLabelText(QString("Select an available texture preset to preview."), false);
++            }
++            else
++            {
++                AZ_Error("Texture Setting", false, "Cannot find mip reduce level for mip %d", m_currentMipIndex);
++            }
+         }
+     }
+ 
+@@ -348,6 +362,11 @@
+ 
+     void TexturePreviewWidget::RefreshPreviewImage(RefreshMode mode)
+     {
++        if (!BuilderSettingManager::Instance()->GetPreset(m_textureSetting->GetMultiplatformTextureSetting().m_preset))
++        {
++            SetImageLabelText(QString("Select an available texture preset to preview."), false);
++            return;
++        }
+         // Ignore any none-conversion refresh request when the image is being converted
+         if (m_updateTimer->isActive() && mode != RefreshMode::Convert)
+         {
+--- a/Gems/Atom/Asset/ImageProcessingAtom/Code/Tests/ImageProcessing_Test.cpp
++++ b/Gems/Atom/Asset/ImageProcessingAtom/Code/Tests/ImageProcessing_Test.cpp
+@@ -57,6 +57,8 @@
+ #include <Atom/RHI.Reflect/ReflectSystemComponent.h>
+ 
+ #include <QFileInfo>
++#include <QFile>
++#include <QTemporaryDir>
+ #include <qdir.h>
+ #include <QDirIterator>
+ #include <QIODevice>
+@@ -1070,6 +1072,77 @@
+         }
+     }
+ 
++    TEST_F(ImageProcessingTest, EditorTextureSetting_UnavailableExplicitPreset_PreservesSettingsUntilManualSelection)
++    {
++        ASSERT_TRUE(BuilderSettingManager::Instance()->LoadConfigFromFolder(m_defaultSettingFolder.Native()).IsSuccess());
++        const auto platforms = BuilderSettingManager::Instance()->GetPlatformList();
++        ASSERT_FALSE(platforms.empty());
++
++        QTemporaryDir temporaryDirectory;
++        ASSERT_TRUE(temporaryDirectory.isValid());
++        const QString imagePath = temporaryDirectory.filePath("arbitrary_diff.png");
++        ASSERT_TRUE(QFile::copy(m_imagFileNameMap[Image_32X32_checkerboard_png].c_str(), imagePath));
++        QFile imageFile(imagePath);
++        ASSERT_TRUE(imageFile.open(QIODevice::ReadOnly));
++        const QByteArray originalImageBytes = imageFile.readAll();
++        imageFile.close();
++
++        TextureSettings original;
++        original.m_preset = "UnavailableExplicitPreset";
++        original.m_sizeReduceLevel = 3;
++        original.m_suppressEngineReduce = true;
++        original.m_enableMipmap = false;
++        original.m_mipGenType = MipGenType::quadratic;
++        original.m_maintainAlphaCoverage = true;
++        original.m_tags.insert("preserve-me");
++        TextureSettings platformOverride = original;
++        platformOverride.m_sizeReduceLevel = 4;
++        ASSERT_TRUE(original.ApplySettings(platformOverride, platforms.front(), m_context.get()).IsSuccess());
++
++        const AZStd::string sourcePath(imagePath.toUtf8().constData());
++        const AZStd::string sidecarPath = sourcePath + TextureSettings::ExtensionName;
++        ASSERT_TRUE(TextureSettings::WriteTextureSetting(sidecarPath, original, m_context.get()).IsSuccess());
++        const auto expected = TextureSettings::GetMultiplatformTextureSetting(original, m_context.get());
++
++        ImageProcessingAtomEditor::EditorTextureSetting editorSettings(sourcePath);
++        ASSERT_TRUE(editorSettings.m_img);
++        ASSERT_EQ(editorSettings.m_settingsMap.size(), expected.size());
++        for (const auto& [platform, settings] : expected)
++        {
++            ASSERT_NE(editorSettings.m_settingsMap.find(platform), editorSettings.m_settingsMap.end());
++            EXPECT_TRUE(editorSettings.m_settingsMap.at(platform).Equals(settings, m_context.get()));
++            EXPECT_EQ(editorSettings.m_settingsMap.at(platform).m_enableMipmap, settings.m_enableMipmap);
++            AZ::u32 minReduce = 0;
++            AZ::u32 maxReduce = 0;
++            EXPECT_TRUE(editorSettings.GetResolutionInfo(platform, minReduce, maxReduce).empty());
++            EXPECT_TRUE(editorSettings.GetResolutionInfoForMipmap(platform).empty());
++        }
++
++        // Mirror the existing Save path: recombine platform patches, then reopen.
++        TextureSettings& saved = editorSettings.GetMultiplatformTextureSetting();
++        for (const auto& [platform, settings] : editorSettings.m_settingsMap)
++        {
++            ASSERT_TRUE(saved.ApplySettings(settings, platform, m_context.get()).IsSuccess());
++        }
++        ASSERT_TRUE(TextureSettings::WriteTextureSetting(sidecarPath, saved, m_context.get()).IsSuccess());
++        ImageProcessingAtomEditor::EditorTextureSetting reopened(sourcePath);
++        for (const auto& [platform, settings] : expected)
++        {
++            EXPECT_TRUE(reopened.m_settingsMap.at(platform).Equals(settings, m_context.get()));
++            EXPECT_EQ(reopened.m_settingsMap.at(platform).m_enableMipmap, settings.m_enableMipmap);
++        }
++
++        // Changing the preset explicitly remains available after preserving it.
++        reopened.SetToPreset(PresetName("Normals"));
++        for (const auto& [platform, settings] : reopened.m_settingsMap)
++        {
++            EXPECT_EQ(settings.m_preset, PresetName("Normals"));
++            EXPECT_FALSE(reopened.GetResolutionInfoForMipmap(platform).empty());
++        }
++        ASSERT_TRUE(imageFile.open(QIODevice::ReadOnly));
++        EXPECT_EQ(imageFile.readAll(), originalImageBytes);
++    }
++
+     TEST_F(ImageProcessingTest, TextureSettingReflect_SerializingModernDataInAndOut_WritesAndParsesFileAccurately)
+     {
+         AZStd::string filepath = "test.xml";

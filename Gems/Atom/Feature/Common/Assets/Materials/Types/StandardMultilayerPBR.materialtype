@@ -1,6 +1,6 @@
 {
     "description": "Similar to StandardPBR but supports multiple layers blended together.",
-    "version": 4,
+    "version": 5,
     "versionUpdates": [
         {
             "toVersion": 4,
@@ -9,6 +9,10 @@
                 {"op": "renamePrefix", "from": "layer2_", "to": "layer2."},
                 {"op": "renamePrefix", "from": "layer3_", "to": "layer3."}
             ]
+        },
+        {
+            "toVersion": 5,
+            "actions": []
         }
     ],
     "propertyLayout": {

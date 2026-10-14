@@ -196,11 +196,11 @@ Surface EvaluateSurface_Eye(
     // Get surface roughness for each layer (iris/sclera) and blend using the mask defined above
     real2 irisRoughnessUv = irisRefractionUv;
     real irisRoughnessLinear = GetRoughnessInput(GetMaterialTexture(params.m_iris_m_roughnessMap), GetEyeSampler(params), irisRoughnessUv, real(params.m_iris_m_roughnessFactor),
-                                        real(params.m_iris_m_roughnessLowerBound), real(params.m_iris_m_roughnessUpperBound), o_iris_o_roughness_useTexture, uvDxDy, customDerivatives);
+                                        real(params.m_iris_m_roughnessLowerBound), real(params.m_iris_m_roughnessUpperBound), o_iris_o_roughness_useTexture, uvDxDy, customDerivatives, params.m_iris_m_roughnessMapChannel);
 
     real2 scleraRoughnessUv = uvs[params.m_sclera_m_roughnessMapUvIndex];
     real scleraRoughnessLinear = GetRoughnessInput(GetMaterialTexture(params.m_sclera_m_roughnessMap), GetEyeSampler(params), scleraRoughnessUv, real(params.m_sclera_m_roughnessFactor),
-                                        real(params.m_sclera_m_roughnessLowerBound), real(params.m_sclera_m_roughnessUpperBound), o_sclera_o_roughness_useTexture, uvDxDy, customDerivatives);
+                                        real(params.m_sclera_m_roughnessLowerBound), real(params.m_sclera_m_roughnessUpperBound), o_sclera_o_roughness_useTexture, uvDxDy, customDerivatives, params.m_sclera_m_roughnessMapChannel);
 
     surface.roughnessLinear = lerp(irisRoughnessLinear, scleraRoughnessLinear, mask);
     surface.CalculateRoughnessA();

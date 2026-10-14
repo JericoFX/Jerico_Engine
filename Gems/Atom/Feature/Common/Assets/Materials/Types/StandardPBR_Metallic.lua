@@ -30,14 +30,17 @@ function ProcessEditor(context)
     if(nil == textureMap) then
         context:SetMaterialPropertyVisibility("useTexture", MaterialPropertyVisibility_Hidden)
         context:SetMaterialPropertyVisibility("textureMapUv", MaterialPropertyVisibility_Hidden)
+        context:SetMaterialPropertyVisibility("textureMapChannel", MaterialPropertyVisibility_Hidden)
         context:SetMaterialPropertyVisibility("factor", MaterialPropertyVisibility_Enabled)
     elseif(not useTexture) then
         context:SetMaterialPropertyVisibility("useTexture", MaterialPropertyVisibility_Enabled)
         context:SetMaterialPropertyVisibility("textureMapUv", MaterialPropertyVisibility_Disabled)
+        context:SetMaterialPropertyVisibility("textureMapChannel", MaterialPropertyVisibility_Disabled)
         context:SetMaterialPropertyVisibility("factor", MaterialPropertyVisibility_Enabled)
     else
         context:SetMaterialPropertyVisibility("useTexture", MaterialPropertyVisibility_Enabled)
         context:SetMaterialPropertyVisibility("textureMapUv", MaterialPropertyVisibility_Enabled)
+        context:SetMaterialPropertyVisibility("textureMapChannel", MaterialPropertyVisibility_Enabled)
         context:SetMaterialPropertyVisibility("factor", MaterialPropertyVisibility_Hidden)
     end
 end

@@ -97,7 +97,7 @@ Surface EvaluateSurface_EnhancedPBR(
     if(!o_enableSubsurfaceScattering)   // If subsurface scattering is enabled skip texture lookup for metallic, as this quantity won't be used anyway
     {
         float2 metallicUv = uvs[params.m_metallicMapUvIndex];
-        metallic = GetMetallicInput(GetMaterialTexture(params.m_metallicMap), GetMaterialTextureSampler(), metallicUv, real(params.m_metallicFactor), o_metallic_useTexture, uvDxDy, customDerivatives);
+        metallic = GetMetallicInput(GetMaterialTexture(params.m_metallicMap), GetMaterialTextureSampler(), metallicUv, real(params.m_metallicFactor), o_metallic_useTexture, uvDxDy, customDerivatives, params.m_metallicMapChannel);
     }
 
     // ------- Specular -------
@@ -111,7 +111,7 @@ Surface EvaluateSurface_EnhancedPBR(
 
     float2 roughnessUv = uvs[params.m_roughnessMapUvIndex];
     surface.roughnessLinear = GetRoughnessInput(GetMaterialTexture(params.m_roughnessMap), GetMaterialTextureSampler(), roughnessUv, real(params.m_roughnessFactor),
-                                        real(params.m_roughnessLowerBound), real(params.m_roughnessUpperBound), o_roughness_useTexture, uvDxDy, customDerivatives);
+                                        real(params.m_roughnessLowerBound), real(params.m_roughnessUpperBound), o_roughness_useTexture, uvDxDy, customDerivatives, params.m_roughnessMapChannel);
     surface.CalculateRoughnessA();
 
     // ------- Subsurface -------
@@ -149,8 +149,8 @@ Surface EvaluateSurface_EnhancedPBR(
 
     // ------- Occlusion -------
     
-    surface.diffuseAmbientOcclusion = GetOcclusionInput(GetMaterialTexture(params.m_diffuseOcclusionMap), GetMaterialTextureSampler(), uvs[params.m_diffuseOcclusionMapUvIndex], real(params.m_diffuseOcclusionFactor), o_diffuseOcclusion_useTexture, uvDxDy, customDerivatives);
-    surface.specularOcclusion = GetOcclusionInput(GetMaterialTexture(params.m_specularOcclusionMap), GetMaterialTextureSampler(), uvs[params.m_specularOcclusionMapUvIndex], real(params.m_specularOcclusionFactor), o_specularOcclusion_useTexture, uvDxDy, customDerivatives);
+    surface.diffuseAmbientOcclusion = GetOcclusionInput(GetMaterialTexture(params.m_diffuseOcclusionMap), GetMaterialTextureSampler(), uvs[params.m_diffuseOcclusionMapUvIndex], real(params.m_diffuseOcclusionFactor), o_diffuseOcclusion_useTexture, uvDxDy, customDerivatives, params.m_diffuseOcclusionMapChannel);
+    surface.specularOcclusion = GetOcclusionInput(GetMaterialTexture(params.m_specularOcclusionMap), GetMaterialTextureSampler(), uvs[params.m_specularOcclusionMapUvIndex], real(params.m_specularOcclusionFactor), o_specularOcclusion_useTexture, uvDxDy, customDerivatives, params.m_specularOcclusionMapChannel);
 
     // ------- Clearcoat -------
     

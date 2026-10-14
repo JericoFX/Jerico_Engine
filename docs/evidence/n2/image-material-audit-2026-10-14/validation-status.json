@@ -1,0 +1,22 @@
+{
+  "recordedUtc": "2026-10-14T13:38:33.568783+00:00",
+  "sourceState": "25 paths frozen, hashes match",
+  "scope": "isolated CPU arithmetic/control flow and source/Lua wiring; native acceptance NOT_RUN",
+  "native": {
+    "cmake": null,
+    "Editor": null,
+    "AssetProcessorBatch": null,
+    "oiiotool": null,
+    "qt": false,
+    "WindowsProviderBinaries": false
+  },
+  "nativeSuites": "ImageProcessingAtom.Tests and Atom material/shader suites NOT_RUN",
+  "backends": {
+    "Windows-DX12": "NOT_RUN",
+    "Windows-Vulkan": "NOT_RUN",
+    "Linux-Vulkan": "NOT_RUN"
+  },
+  "fixture": "11 reproducible synthetic inputs; PNG independently decoded, ORM/separated pixel equality; KTX2 header/DFD boundary/payload structure only; no independent KTX validator",
+  "review": "independent read-only reviewer found no critical/important source defect; native compiler/runtime still not verified",
+  "harnessDiagnostic": "First wiring run falsely included commented-out Eye AO calls; comment filtering corrected, active 17-call closure passes. No product change for this harness issue."
+}

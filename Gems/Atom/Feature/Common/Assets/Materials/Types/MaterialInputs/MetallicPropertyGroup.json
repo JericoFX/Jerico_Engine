@@ -27,6 +27,18 @@
             }
         },
         {
+            "name": "textureMapChannel",
+            "displayName": "Texture Channel",
+            "description": "Texture channel to use. Packed ORM uses Red for AO, Green for roughness, and Blue for metallic.",
+            "type": "Enum",
+            "enumValues": ["Red", "Green", "Blue", "Alpha"],
+            "defaultValue": "Red",
+            "connection": {
+                "type": "ShaderInput",
+                "name": "m_metallicMapChannel"
+            }
+        },
+        {
             "name": "useTexture",
             "displayName": "Use Texture",
             "description": "Whether to use the texture, or just default to the Factor value.",

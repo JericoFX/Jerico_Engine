@@ -58,6 +58,14 @@ namespace ImageProcessingAtomEditor
     {
         m_ui->platformLabel->setText(EditorHelper::ToReadablePlatformString(m_platform).c_str());
 
+        m_ui->downResSpinBox->setEnabled(!m_resolutionInfos.empty());
+        if (m_resolutionInfos.empty())
+        {
+            m_ui->sizeLabel->setText(QString("Unavailable"));
+            m_ui->formatLabel->setText(QString("Unavailable"));
+            return;
+        }
+
         m_ui->downResSpinBox->setRange(m_minReduce, m_maxReduce);
         int clampedReduce = AZStd::min<int>(AZStd::max<int>(m_textureSetting->m_sizeReduceLevel, s_MinReduceLevel), s_MaxReduceLevel);
         auto it = m_resolutionInfos.begin();

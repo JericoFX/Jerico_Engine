@@ -1,0 +1,48 @@
+{
+  "scope": "Actual AZSL scalar function bodies compiled as C++; test-only texture/type/debug shims. No GPU/AZSL/Editor/AP/cook acceptance.",
+  "sourceSha256": {
+    "Gems/Atom/Feature/Common/Assets/Shaders/Materials/MaterialInputs/RoughnessInput.azsli": "b6076f61578e0d519aec78261fcd884d7bae2bc1aa55a9e2609be3b9979a7a2e",
+    "Gems/Atom/Feature/Common/Assets/Shaders/Materials/MaterialInputs/MetallicInput.azsli": "a507ea6e22a4a099d9dca0613d7aa485a1f458bb0c6254d907313684dde32808",
+    "Gems/Atom/Feature/Common/Assets/Shaders/Materials/MaterialInputs/OcclusionInput.azsli": "7b7c29ef79bb5d257cfcfefdc1ee2f13603ef5df4385afeee0fcba160e2a8b41"
+  },
+  "outcomes": [
+    {
+      "mode": "pixel",
+      "command": [
+        "g++",
+        "-std=c++17",
+        "-Wall",
+        "-Wextra",
+        "-Wno-unused-parameter",
+        "-Werror",
+        "-I/workspace/scratch/eb3880adfce2/scalar-red/include",
+        "/workspace/scratch/eb3880adfce2/scalar-red/scalar_shader_cpu.cpp",
+        "-o",
+        "/workspace/scratch/eb3880adfce2/scalar-red/scalar-pixel"
+      ],
+      "buildExit": 0,
+      "runExit": 1,
+      "output": "FAIL packed-ORM-vs-separated-roughness got=0.20000000 expected=0.60000002\nFAIL packed-ORM-vs-separated-metallic got=0.20000000 expected=0.89999998\nFAIL roughness-selected-channel got=0.20000000 expected=0.60000002\nFAIL metallic-selected-channel got=0.20000000 expected=0.60000002\nFAIL AO-selected-channel got=0.20000000 expected=0.60000002\nFAIL roughness-selected-channel got=0.20000000 expected=0.89999998\nFAIL metallic-selected-channel got=0.20000000 expected=0.89999998\nFAIL AO-selected-channel got=0.20000000 expected=0.89999998\nFAIL roughness-selected-channel got=0.20000000 expected=0.40000001\nFAIL metallic-selected-channel got=0.20000000 expected=0.40000001\nFAIL AO-selected-channel got=0.20000000 expected=0.40000001\nFAIL roughness-bounds got=0.24000001 expected=0.51999998\nFAIL AO-strength got=0.04000000 expected=0.16000000\nFAIL packed-ORM-vs-separated-roughness got=0.20000000 expected=0.60000002\nFAIL packed-ORM-vs-separated-metallic got=0.20000000 expected=0.89999998\nFAIL roughness-selected-channel got=0.20000000 expected=0.60000002\nFAIL metallic-selected-channel got=0.20000000 expected=0.60000002\nFAIL AO-selected-channel got=0.20000000 expected=0.60000002\nFAIL roughness-selected-channel got=0.20000000 expected=0.89999998\nFAIL metallic-selected-channel got=0.20000000 expected=0.89999998\nFAIL AO-selected-channel got=0.20000000 expected=0.89999998\nFAIL roughness-selected-channel got=0.20000000 expected=0.40000001\nFAIL metallic-selected-channel got=0.20000000 expected=0.40000001\nFAIL AO-selected-channel got=0.20000000 expected=0.40000001\nFAIL roughness-bounds got=0.24000001 expected=0.51999998\nFAIL AO-strength got=0.04000000 expected=0.16000000\nscalar shader CPU arithmetic failures=26\n"
+    },
+    {
+      "mode": "compute",
+      "command": [
+        "g++",
+        "-std=c++17",
+        "-Wall",
+        "-Wextra",
+        "-Wno-unused-parameter",
+        "-Werror",
+        "-DCS_SAMPLERS",
+        "-I/workspace/scratch/eb3880adfce2/scalar-red/include",
+        "/workspace/scratch/eb3880adfce2/scalar-red/scalar_shader_cpu.cpp",
+        "-o",
+        "/workspace/scratch/eb3880adfce2/scalar-red/scalar-compute"
+      ],
+      "buildExit": 0,
+      "runExit": 1,
+      "output": "FAIL packed-ORM-vs-separated-roughness got=0.20000000 expected=0.60000002\nFAIL packed-ORM-vs-separated-metallic got=0.20000000 expected=0.89999998\nFAIL roughness-selected-channel got=0.20000000 expected=0.60000002\nFAIL metallic-selected-channel got=0.20000000 expected=0.60000002\nFAIL AO-selected-channel got=0.20000000 expected=0.60000002\nFAIL roughness-selected-channel got=0.20000000 expected=0.89999998\nFAIL metallic-selected-channel got=0.20000000 expected=0.89999998\nFAIL AO-selected-channel got=0.20000000 expected=0.89999998\nFAIL roughness-selected-channel got=0.20000000 expected=0.40000001\nFAIL metallic-selected-channel got=0.20000000 expected=0.40000001\nFAIL AO-selected-channel got=0.20000000 expected=0.40000001\nFAIL roughness-bounds got=0.24000001 expected=0.51999998\nFAIL AO-strength got=0.04000000 expected=0.16000000\nFAIL packed-ORM-vs-separated-roughness got=0.20000000 expected=0.60000002\nFAIL packed-ORM-vs-separated-metallic got=0.20000000 expected=0.89999998\nFAIL roughness-selected-channel got=0.20000000 expected=0.60000002\nFAIL metallic-selected-channel got=0.20000000 expected=0.60000002\nFAIL AO-selected-channel got=0.20000000 expected=0.60000002\nFAIL roughness-selected-channel got=0.20000000 expected=0.89999998\nFAIL metallic-selected-channel got=0.20000000 expected=0.89999998\nFAIL AO-selected-channel got=0.20000000 expected=0.89999998\nFAIL roughness-selected-channel got=0.20000000 expected=0.40000001\nFAIL metallic-selected-channel got=0.20000000 expected=0.40000001\nFAIL AO-selected-channel got=0.20000000 expected=0.40000001\nFAIL roughness-bounds got=0.24000001 expected=0.51999998\nFAIL AO-strength got=0.04000000 expected=0.16000000\nscalar shader CPU arithmetic failures=26\n"
+    }
+  ],
+  "passed": false
+}

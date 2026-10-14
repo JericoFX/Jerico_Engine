@@ -30,6 +30,7 @@ function ProcessEditor(context)
     if(nil == textureMap) then
         context:SetMaterialPropertyVisibility("useTexture", MaterialPropertyVisibility_Hidden)
         context:SetMaterialPropertyVisibility("textureMapUv", MaterialPropertyVisibility_Hidden)
+        context:SetMaterialPropertyVisibility("textureMapChannel", MaterialPropertyVisibility_Hidden)
 
         context:SetMaterialPropertyVisibility("lowerBound", MaterialPropertyVisibility_Hidden)
         context:SetMaterialPropertyVisibility("upperBound", MaterialPropertyVisibility_Hidden)
@@ -38,6 +39,7 @@ function ProcessEditor(context)
     elseif(not useTexture) then
         context:SetMaterialPropertyVisibility("useTexture", MaterialPropertyVisibility_Enabled)
         context:SetMaterialPropertyVisibility("textureMapUv", MaterialPropertyVisibility_Disabled)
+        context:SetMaterialPropertyVisibility("textureMapChannel", MaterialPropertyVisibility_Disabled)
 
         context:SetMaterialPropertyVisibility("lowerBound", MaterialPropertyVisibility_Disabled)
         context:SetMaterialPropertyVisibility("upperBound", MaterialPropertyVisibility_Disabled)
@@ -46,6 +48,7 @@ function ProcessEditor(context)
     else
         context:SetMaterialPropertyVisibility("useTexture", MaterialPropertyVisibility_Enabled)
         context:SetMaterialPropertyVisibility("textureMapUv", MaterialPropertyVisibility_Enabled)
+        context:SetMaterialPropertyVisibility("textureMapChannel", MaterialPropertyVisibility_Enabled)
 
         context:SetMaterialPropertyVisibility("lowerBound", MaterialPropertyVisibility_Enabled)
         context:SetMaterialPropertyVisibility("upperBound", MaterialPropertyVisibility_Enabled)

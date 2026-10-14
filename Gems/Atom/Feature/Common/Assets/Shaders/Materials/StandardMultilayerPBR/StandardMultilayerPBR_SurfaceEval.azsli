@@ -101,11 +101,11 @@ ProcessedMaterialInputs ProcessStandardMaterialInputs(StandardMaterialInputs inp
     real3 sampledBaseColor = GetBaseColorInput(inputs.m_baseColorMap, inputs.m_sampler, transformedUv[inputs.m_baseColorMapUvIndex], real3(inputs.m_baseColor.rgb), inputs.m_baseColor_useTexture, uvDxDy, customDerivatives);
     result.m_baseColor = BlendBaseColor(sampledBaseColor, real3(inputs.m_baseColor.rgb), real(inputs.m_baseColorFactor), inputs.m_baseColorTextureBlendMode, inputs.m_baseColor_useTexture);
     result.m_specularF0Factor = GetSpecularInput(inputs.m_specularF0Map, inputs.m_sampler, transformedUv[inputs.m_specularF0MapUvIndex], real(inputs.m_specularF0Factor), inputs.m_specularF0_useTexture, uvDxDy, customDerivatives);
-    result.m_metallic = GetMetallicInput(inputs.m_metallicMap, inputs.m_sampler, transformedUv[inputs.m_metallicMapUvIndex], real(inputs.m_metallicFactor), inputs.m_metallic_useTexture, uvDxDy, customDerivatives);
-    result.m_roughness = GetRoughnessInput(inputs.m_roughnessMap, GetMaterialTextureSampler(), transformedUv[inputs.m_roughnessMapUvIndex], real(inputs.m_roughnessFactor), real(inputs.m_roughnessLowerBound), real(inputs.m_roughnessUpperBound), inputs.m_roughness_useTexture, uvDxDy, customDerivatives);
+    result.m_metallic = GetMetallicInput(inputs.m_metallicMap, inputs.m_sampler, transformedUv[inputs.m_metallicMapUvIndex], real(inputs.m_metallicFactor), inputs.m_metallic_useTexture, uvDxDy, customDerivatives, inputs.m_metallicMapChannel);
+    result.m_roughness = GetRoughnessInput(inputs.m_roughnessMap, GetMaterialTextureSampler(), transformedUv[inputs.m_roughnessMapUvIndex], real(inputs.m_roughnessFactor), real(inputs.m_roughnessLowerBound), real(inputs.m_roughnessUpperBound), inputs.m_roughness_useTexture, uvDxDy, customDerivatives, inputs.m_roughnessMapChannel);
     result.m_emissiveLighting = GetEmissiveInput(inputs.m_emissiveMap, inputs.m_sampler, transformedUv[inputs.m_emissiveMapUvIndex], real(inputs.m_emissiveIntensity), real3(inputs.m_emissiveColor.rgb), 0.0, 1.0, inputs.m_emissiveEnabled, inputs.m_emissive_useTexture, uvDxDy, customDerivatives);
-    result.m_diffuseAmbientOcclusion = GetOcclusionInput(inputs.m_diffuseOcclusionMap, inputs.m_sampler, transformedUv[inputs.m_diffuseOcclusionMapUvIndex], real(inputs.m_diffuseOcclusionFactor), inputs.m_diffuseOcclusion_useTexture, uvDxDy, customDerivatives);
-    result.m_specularOcclusion = GetOcclusionInput(inputs.m_specularOcclusionMap, GetMaterialTextureSampler(), transformedUv[inputs.m_specularOcclusionMapUvIndex], real(inputs.m_specularOcclusionFactor), inputs.m_specularOcclusion_useTexture, uvDxDy, customDerivatives);
+    result.m_diffuseAmbientOcclusion = GetOcclusionInput(inputs.m_diffuseOcclusionMap, inputs.m_sampler, transformedUv[inputs.m_diffuseOcclusionMapUvIndex], real(inputs.m_diffuseOcclusionFactor), inputs.m_diffuseOcclusion_useTexture, uvDxDy, customDerivatives, inputs.m_diffuseOcclusionMapChannel);
+    result.m_specularOcclusion = GetOcclusionInput(inputs.m_specularOcclusionMap, GetMaterialTextureSampler(), transformedUv[inputs.m_specularOcclusionMapUvIndex], real(inputs.m_specularOcclusionFactor), inputs.m_specularOcclusion_useTexture, uvDxDy, customDerivatives, inputs.m_specularOcclusionMapChannel);
 
 #if ENABLE_CLEAR_COAT
     result.m_clearCoat.InitializeToZero();
@@ -145,6 +145,7 @@ ProcessedMaterialInputs ProcessStandardMaterialInputs(StandardMaterialInputs inp
     inputs.m_baseColorFactor = srgLayerPrefix##m_baseColorFactor;                                                  \
     inputs.m_baseColorTextureBlendMode = optionsLayerPrefix##o_baseColorTextureBlendMode;                          \
     inputs.m_metallicMap = GetMaterialTexture(srgLayerPrefix##m_metallicMap);                                      \
+    inputs.m_metallicMapChannel = srgLayerPrefix##m_metallicMapChannel; \
     inputs.m_metallicMapUvIndex = srgLayerPrefix##m_metallicMapUvIndex;                                            \
     inputs.m_metallicFactor = srgLayerPrefix##m_metallicFactor;                                                    \
     inputs.m_metallic_useTexture = optionsLayerPrefix##o_metallic_useTexture;                                      \
@@ -153,6 +154,7 @@ ProcessedMaterialInputs ProcessStandardMaterialInputs(StandardMaterialInputs inp
     inputs.m_specularF0Factor = srgLayerPrefix##m_specularF0Factor;                                                \
     inputs.m_specularF0_useTexture = optionsLayerPrefix##o_specularF0_useTexture;                                  \
     inputs.m_roughnessMap = GetMaterialTexture(srgLayerPrefix##m_roughnessMap);                                    \
+    inputs.m_roughnessMapChannel = srgLayerPrefix##m_roughnessMapChannel; \
     inputs.m_roughnessMapUvIndex = srgLayerPrefix##m_roughnessMapUvIndex;                                          \
     inputs.m_roughnessFactor = srgLayerPrefix##m_roughnessFactor;                                                  \
     inputs.m_roughnessLowerBound = srgLayerPrefix##m_roughnessLowerBound;                                          \
@@ -168,11 +170,13 @@ ProcessedMaterialInputs ProcessStandardMaterialInputs(StandardMaterialInputs inp
     inputs.m_emissive_useTexture = optionsLayerPrefix##o_emissive_useTexture;                                      \
                                                                                                                    \
     inputs.m_diffuseOcclusionMap = GetMaterialTexture(srgLayerPrefix##m_diffuseOcclusionMap);                      \
+    inputs.m_diffuseOcclusionMapChannel = srgLayerPrefix##m_diffuseOcclusionMapChannel; \
     inputs.m_diffuseOcclusionMapUvIndex = srgLayerPrefix##m_diffuseOcclusionMapUvIndex;                            \
     inputs.m_diffuseOcclusionFactor = srgLayerPrefix##m_diffuseOcclusionFactor;                                    \
     inputs.m_diffuseOcclusion_useTexture = optionsLayerPrefix##o_diffuseOcclusion_useTexture;                      \
                                                                                                                    \
     inputs.m_specularOcclusionMap = GetMaterialTexture(srgLayerPrefix##m_specularOcclusionMap);                    \
+    inputs.m_specularOcclusionMapChannel = srgLayerPrefix##m_specularOcclusionMapChannel; \
     inputs.m_specularOcclusionMapUvIndex = srgLayerPrefix##m_specularOcclusionMapUvIndex;                          \
     inputs.m_specularOcclusionFactor = srgLayerPrefix##m_specularOcclusionFactor;                                  \
     inputs.m_specularOcclusion_useTexture = optionsLayerPrefix##o_specularOcclusion_useTexture;                    

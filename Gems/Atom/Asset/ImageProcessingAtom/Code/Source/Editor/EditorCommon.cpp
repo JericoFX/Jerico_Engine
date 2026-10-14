@@ -177,13 +177,7 @@ namespace ImageProcessingAtomEditor
 
         if (!preset)
         {
-            AZ_Warning("Texture Editor", false, "Cannot find preset %s! Will assign a suggested one for the texture.", presetName.GetCStr());
-            presetName = BuilderSettingManager::Instance()->GetSuggestedPreset(m_fullPath);
-
-            for (auto& settingIter : m_settingsMap)
-            {
-                settingIter.second.ApplyPreset(presetName);
-            }
+            AZ_Warning("Texture Editor", false, "Cannot find preset %s! Preserving texture settings until an available preset is selected.", presetName.GetCStr());
         }
     }
     
@@ -359,7 +353,10 @@ namespace ImageProcessingAtomEditor
         for (AZ::u32 i = s_MinReduceLevel; i <= s_MaxReduceLevel; i++)
         {
             ResolutionInfo resolutionInfo;
-            GetFinalInfoForTextureOnPlatform(platform, i, resolutionInfo);
+            if (!GetFinalInfoForTextureOnPlatform(platform, i, resolutionInfo))
+            {
+                return resolutionInfos;
+            }
             // If actual reduce is lower than desired reduce, it reaches the limit and we can stop try lower resolution
             if (i > resolutionInfo.reduce)
             {
@@ -378,7 +375,10 @@ namespace ImageProcessingAtomEditor
         AZStd::list<ResolutionInfo> resolutionInfos;
         unsigned int baseReduce = m_settingsMap[platform].m_sizeReduceLevel;
         ResolutionInfo baseInfo;
-        GetFinalInfoForTextureOnPlatform(platform, baseReduce, baseInfo);
+        if (!GetFinalInfoForTextureOnPlatform(platform, baseReduce, baseInfo))
+        {
+            return resolutionInfos;
+        }
         resolutionInfos.push_back(baseInfo);
         for (AZ::u32 i = 1; i < baseInfo.mipCount; i++)
         { 

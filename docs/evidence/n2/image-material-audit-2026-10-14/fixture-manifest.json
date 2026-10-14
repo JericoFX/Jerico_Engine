@@ -1,0 +1,67 @@
+{
+  "scope": "Fixture bytes/material source assignments generated and locally checked; native import/metadata/cook/reimport/save-reopen NOT_RUN.",
+  "ktxSpecification": "https://github.khronos.org/KTX-Specification/ktxspec.v2.html",
+  "ktxLimit": "Local structural check only; no Khronos validator/decoder. Single level does not test mip generation or Basis supercompression.",
+  "manualTexturePresets": {
+    "vacaciones.png": "Albedo",
+    "tornillo.png": "Normals",
+    "cuaderno.png": "Normals",
+    "caja.png": "ReferenceImage_Linear",
+    "papel.png": "ReferenceImage_Linear",
+    "boton.png": "ReferenceImage_Linear",
+    "taza.png": "ReferenceImage_Linear"
+  },
+  "presetLimit": "ReferenceImage_Linear preserves RGBA, no mip chain; full mips/compression gate stays open.",
+  "expectedOrmLinear": {
+    "AO": 0.2,
+    "Roughness": 0.6,
+    "Metallic": 0.9019607843137255
+  },
+  "sourceIdentity": "First import obtains UUIDs/subIDs from the existing AP. Record them before reimport; this generator never invents UUIDs.",
+  "files": {
+    "JeKtx2.material": {
+      "size": 888,
+      "sha256": "5e7d0f53154219cdc00fbe50b00465fbec30d3b5f975e637f0dfdd5d564e96c2"
+    },
+    "JePacked.material": {
+      "size": 876,
+      "sha256": "56e3db15632c4de9764ec3db53459fcea798a2220a2fe81a0a47d19ab45de2eb"
+    },
+    "JeSeparate.material": {
+      "size": 875,
+      "sha256": "cf35dc3bb503c210438de91d284667137fa28c02802837f3c85632d98e4fd13f"
+    },
+    "archivo.ktx2": {
+      "size": 260,
+      "sha256": "6125bd0b36b39e32f477992f007c1b91dfc8a42c34f2a7b50189e0a6dce6633d"
+    },
+    "boton.png": {
+      "size": 75,
+      "sha256": "c5a12d733552a7d15969957d8813105bd27759bbf9a113c4a9c1a9e856c266f0"
+    },
+    "caja.png": {
+      "size": 75,
+      "sha256": "45dcfc51b1abc17e568f2082471ad9105de7d129879ea8fbc657ca465fdf22dd"
+    },
+    "cuaderno.png": {
+      "size": 75,
+      "sha256": "9da39d9d57e978e2e595b4b43508721b2d4b7f80204e80765859639a88c7d6c7"
+    },
+    "papel.png": {
+      "size": 75,
+      "sha256": "8737035fff120ee7df521e0520b10738b1a098d25019dee8b44cefdbb86910b2"
+    },
+    "taza.png": {
+      "size": 75,
+      "sha256": "2c1f78f79ab329a94e89c549de216dc59d78f2c85b7be7206f52a83e3b9f5103"
+    },
+    "tornillo.png": {
+      "size": 75,
+      "sha256": "8e2b644c1be78f77ab56cd0ba2d59c5c4d8dbfd35e746262a7fdac7dc8b88314"
+    },
+    "vacaciones.png": {
+      "size": 75,
+      "sha256": "2991d969a3370e83f87049aeef1c0b7a50a2ece3f4000a5186fe5fe121e36096"
+    }
+  }
+}

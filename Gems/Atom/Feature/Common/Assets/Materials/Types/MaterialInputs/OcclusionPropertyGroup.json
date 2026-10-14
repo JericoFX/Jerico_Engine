@@ -14,6 +14,18 @@
             }
         },
         {
+            "name": "diffuseTextureMapChannel",
+            "displayName": "    Texture Channel",
+            "description": "Texture channel to use. Packed ORM uses Red for AO, Green for roughness, and Blue for metallic.",
+            "type": "Enum",
+            "enumValues": ["Red", "Green", "Blue", "Alpha"],
+            "defaultValue": "Red",
+            "connection": {
+                "type": "ShaderInput",
+                "name": "m_diffuseOcclusionMapChannel"
+            }
+        },
+        {
             "name": "diffuseUseTexture",
             "displayName": "    Use Texture",
             "description": "Whether to use the Diffuse AO map.",
@@ -56,6 +68,18 @@
             }
         },
         {
+            "name": "specularTextureMapChannel",
+            "displayName": "    Texture Channel",
+            "description": "Texture channel to use. Packed ORM uses Red for AO, Green for roughness, and Blue for metallic.",
+            "type": "Enum",
+            "enumValues": ["Red", "Green", "Blue", "Alpha"],
+            "defaultValue": "Red",
+            "connection": {
+                "type": "ShaderInput",
+                "name": "m_specularOcclusionMapChannel"
+            }
+        },
+        {
             "name": "specularUseTexture",
             "displayName": "    Use Texture",
             "description": "Whether to use the Specular Cavity map.",
@@ -94,7 +118,7 @@
             "args": {
                 "textureProperty": "diffuseTextureMap",
                 "useTextureProperty": "diffuseUseTexture",
-                "dependentProperties": ["diffuseTextureMapUv", "diffuseFactor"],
+                "dependentProperties": ["diffuseTextureMapUv", "diffuseTextureMapChannel", "diffuseFactor"],
                 "shaderOption": "o_diffuseOcclusion_useTexture"    
             }
         },
@@ -103,7 +127,7 @@
             "args": {
                 "textureProperty": "specularTextureMap",
                 "useTextureProperty": "specularUseTexture",
-                "dependentProperties": ["specularTextureMapUv", "specularFactor"],
+                "dependentProperties": ["specularTextureMapUv", "specularTextureMapChannel", "specularFactor"],
                 "shaderOption": "o_specularOcclusion_useTexture"    
             }
         }

@@ -1,0 +1,5 @@
+FAIL explicit-preset-preservation vacaciones.png linux preset=Albedo reduction=0 mipmaps=1
+FAIL explicit-preset-preservation vacaciones.png pc preset=Albedo reduction=0 mipmaps=1
+FAIL explicit-preset-preservation contradictorio_diff.png linux preset=Albedo reduction=0 mipmaps=1
+FAIL explicit-preset-preservation contradictorio_diff.png pc preset=Albedo reduction=0 mipmaps=1
+preset-selection CPU control flow failures=4
