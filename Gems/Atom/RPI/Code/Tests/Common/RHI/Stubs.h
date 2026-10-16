@@ -30,6 +30,7 @@
 #include <Atom/RHI/DeviceStreamingImagePool.h>
 #include <Atom/RHI/DeviceSwapChain.h>
 #include <Atom/RHI/DeviceTransientAttachmentPool.h>
+#include <AzCore/std/functional.h>
 
 namespace UnitTest
 {
@@ -231,8 +232,21 @@ namespace UnitTest
 
             void ComputeFragmentation() const override {}
 
+            AZStd::function<void()> m_onNextInitImage;
+            uint32_t m_initImageCount = 0;
+
         private:
-            AZ::RHI::ResultCode InitImageInternal([[maybe_unused]] const AZ::RHI::DeviceStreamingImageInitRequest& request) override { return AZ::RHI::ResultCode::Success; }
+            AZ::RHI::ResultCode InitImageInternal([[maybe_unused]] const AZ::RHI::DeviceStreamingImageInitRequest& request) override
+            {
+                ++m_initImageCount;
+                auto callback = AZStd::move(m_onNextInitImage);
+                m_onNextInitImage = {};
+                if (callback)
+                {
+                    callback();
+                }
+                return AZ::RHI::ResultCode::Success;
+            }
             void ShutdownInternal() override {}
             void ShutdownResourceInternal(AZ::RHI::DeviceResource&) override {}
             AZ::RHI::ResultCode ExpandImageInternal(const AZ::RHI::DeviceStreamingImageExpandRequest&) override { return AZ::RHI::ResultCode::Success; }

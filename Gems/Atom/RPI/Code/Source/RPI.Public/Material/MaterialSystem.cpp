@@ -449,14 +449,14 @@ namespace AZ::RPI
             for (int32_t instanceIndex = 0; instanceIndex < materialTypeEntry.m_instanceIndices.MaxCount(); instanceIndex++)
             {
                 auto& instanceData = materialTypeEntry.m_instanceData[instanceIndex];
-                if (instanceData.m_material && instanceData.m_material->GetCurrentChangeId() != instanceData.m_compiledChangeId)
+                if (instanceData.m_material && instanceData.m_material->m_compiledChangeId != instanceData.m_compiledChangeId)
                 {
                     if (materialTypeEntry.m_useSceneMaterialSrg)
                     {
                         auto shaderParamsData = instanceData.m_shaderParameter->GetStructuredBufferData();
                         materialTypeEntry.m_parameterBuffer->UpdateData(
                             shaderParamsData, shaderParamsSize, instanceIndex * shaderParamsSize);
-                        instanceData.m_compiledChangeId = instanceData.m_material->GetCurrentChangeId();
+                        instanceData.m_compiledChangeId = instanceData.m_material->m_compiledChangeId;
                         // we are only changing the data of a buffer registered in the SceneMaterialSrg, no need to compile it
                     }
                     else if (instanceData.m_shaderResourceGroup)
@@ -500,7 +500,7 @@ namespace AZ::RPI
                         }
 
                         instanceData.m_shaderResourceGroup->Compile();
-                        instanceData.m_compiledChangeId = instanceData.m_material->GetCurrentChangeId();
+                        instanceData.m_compiledChangeId = instanceData.m_material->m_compiledChangeId;
                     }
                 }
             }

@@ -7,6 +7,10 @@
  */
 
 #include <AzTest/AzTest.h>
+#include <AzCore/Component/TickBus.h>
+#include <AzCore/std/smart_ptr/unique_ptr.h>
+#include <Common/RHI/Factory.h>
+#include <Common/RHI/Stubs.h>
 #include <Common/RPITestFixture.h>
 #include <Common/ErrorMessageFinder.h>
 #include <Common/ShaderAssetTestUtils.h>
@@ -28,6 +32,29 @@ namespace UnitTest
     using namespace AZ;
     using namespace RPI;
 
+    namespace
+    {
+        class ReloadBindlessImageView final
+            : public StubRHI::ImageView
+        {
+        public:
+            AZ_CLASS_ALLOCATOR(ReloadBindlessImageView, AZ::SystemAllocator);
+
+            explicit ReloadBindlessImageView(uint32_t readIndex)
+                : m_readIndex(readIndex)
+            {
+            }
+
+            uint32_t GetBindlessReadIndex() const override
+            {
+                return m_readIndex;
+            }
+
+        private:
+            const uint32_t m_readIndex;
+        };
+    }
+
     class MaterialTests
         : public RPITestFixture
     {
@@ -41,6 +68,16 @@ namespace UnitTest
         Data::Asset<AttachmentImageAsset> m_testAttachmentImageAsset;
         Data::Instance<StreamingImage> m_testImage;
         Data::Instance<AttachmentImage> m_testAttachmentImage;
+
+        enum class BindlessReloadScenario
+        {
+            SingleReload,
+            RepeatedReload,
+            EditBeforeReload,
+            EditAfterReload,
+            DestroyBeforeTick
+        };
+        void CheckBindlessImageReload(BindlessReloadScenario scenario);
 
         Data::Asset<StreamingImageAsset> CreateTestImageAsset() const
         {
@@ -371,6 +408,252 @@ namespace UnitTest
         AZ::Name m_enablePropertyName;
         AZ::Name m_shaderTag;
     };
+
+    void MaterialTests::CheckBindlessImageReload(BindlessReloadScenario scenario)
+    {
+        auto& factory = static_cast<StubRHI::Factory&>(RHI::Factory::Get());
+        using ImageViewCreator = decltype(factory.m_createImageViewOverride);
+        auto previousCreator = AZStd::move(factory.m_createImageViewOverride);
+        auto restoreCreator = [&previousCreator](ImageViewCreator* creator)
+        {
+            *creator = AZStd::move(previousCreator);
+        };
+        uint32_t nextReadIndex = 37;
+        AZStd::unique_ptr<ImageViewCreator, decltype(restoreCreator)> restoreFactory(
+            &factory.m_createImageViewOverride, restoreCreator);
+        factory.m_createImageViewOverride = [&nextReadIndex]() -> RHI::Ptr<RHI::DeviceImageView>
+        {
+            return aznew ReloadBindlessImageView(nextReadIndex++);
+        };
+
+        const auto createImageAsset = [](const Data::AssetId& assetId)
+        {
+            Data::Asset<ImageMipChainAsset> mipChain;
+            ImageMipChainAssetCreator mipCreator;
+            mipCreator.Begin(Uuid::CreateRandom(), 1, 1);
+            mipCreator.BeginMip(RHI::GetImageSubresourceLayout(RHI::Size{ 1, 1, 1 }, RHI::Format::R8G8B8A8_UNORM));
+            const uint8_t pixel[] = { 32, 64, 128, 255 };
+            mipCreator.AddSubImage(pixel, sizeof(pixel));
+            mipCreator.EndMip();
+            EXPECT_TRUE(mipCreator.End(mipChain));
+            StreamingImageAssetCreator creator;
+            creator.Begin(assetId);
+            creator.SetImageDescriptor(RHI::ImageDescriptor::Create2D(
+                RHI::ImageBindFlags::ShaderRead, 1, 1, RHI::Format::R8G8B8A8_UNORM));
+            creator.AddMipChainAsset(*mipChain.Get());
+            creator.SetFlags(StreamingImageFlags::NotStreamable);
+            creator.SetPoolAssetId(ImageSystemInterface::Get()->GetSystemStreamingPool()->GetAssetId());
+            Data::Asset<StreamingImageAsset> result;
+            EXPECT_TRUE(creator.End(result));
+            return result;
+        };
+        auto imageAsset = createImageAsset(Data::AssetId(Uuid::CreateRandom()));
+        ASSERT_TRUE(imageAsset.IsReady());
+        auto image = StreamingImage::FindOrCreate(imageAsset);
+        ASSERT_NE(image.get(), nullptr);
+        auto originalView = image->GetImageView()->GetDeviceImageView(0);
+        ASSERT_NE(originalView.get(), nullptr);
+        const uint32_t originalIndex = originalView->GetBindlessReadIndex();
+        ASSERT_NE(originalIndex, RHI::DeviceImageView::InvalidBindlessIndex);
+
+        auto srgLayout = RHI::ShaderResourceGroupLayout::Create();
+        srgLayout->SetName(Name("MaterialSrg"));
+        srgLayout->SetBindingSlot(SrgBindingSlot::Material);
+        srgLayout->AddShaderInput(RHI::ShaderInputConstantDescriptor{ Name("m_image"), 0, 4, 0, 0 });
+        ASSERT_TRUE(srgLayout->Finalize());
+        auto shaderAsset = CreateTestShaderAsset(Uuid::CreateRandom(), srgLayout);
+        ASSERT_TRUE(shaderAsset.IsReady());
+        MaterialShaderParameterLayout parameterLayout;
+        parameterLayout.AddMaterialParameter<uint32_t>("m_materialType", true);
+        parameterLayout.AddMaterialParameter<uint32_t>("m_materialInstance", true);
+        parameterLayout.AddMaterialParameter<Data::Asset<Image>>("m_image");
+        parameterLayout.FinalizeLayout();
+        MaterialTypeAssetCreator typeCreator;
+        typeCreator.Begin(Uuid::CreateRandom());
+        typeCreator.AddShader(shaderAsset);
+        typeCreator.SetMaterialShaderParameterLayout(parameterLayout);
+        typeCreator.BeginMaterialProperty(Name("TestImage"), MaterialPropertyDataType::Image);
+        typeCreator.ConnectMaterialPropertyToShaderParameter(Name("m_image"));
+        typeCreator.EndMaterialProperty();
+        typeCreator.UpdateShaderParameterConnections();
+        Data::Asset<MaterialTypeAsset> typeAsset;
+        ASSERT_TRUE(typeCreator.End(typeAsset));
+        MaterialAssetCreator materialCreator;
+        materialCreator.Begin(Uuid::CreateRandom(), typeAsset);
+        materialCreator.SetPropertyValue(Name("TestImage"), Data::Asset<ImageAsset>(imageAsset));
+        Data::Asset<MaterialAsset> materialAsset;
+        ASSERT_TRUE(materialCreator.End(materialAsset));
+        auto material = Material::FindOrCreate(materialAsset);
+        ASSERT_NE(material.get(), nullptr);
+        auto parameters = material->GetMaterialShaderParameter();
+        ASSERT_NE(parameters, nullptr);
+        const auto parameterIndex = typeAsset->GetMaterialShaderParameterLayout().GetParameterIndex("m_image");
+        ASSERT_TRUE(parameterIndex.IsValid());
+        const auto* descriptor = typeAsset->GetMaterialShaderParameterLayout().GetDescriptor(parameterIndex);
+        ASSERT_NE(descriptor, nullptr);
+        ASSERT_TRUE(descriptor->m_isBindlessReadIndex);
+        ASSERT_TRUE(AZStd::holds_alternative<RHI::ShaderInputConstantIndex>(descriptor->m_srgInputIndex));
+        ASSERT_TRUE(material->Compile());
+        MaterialInstanceHandlerInterface::Get()->Compile();
+        ProcessQueuedSrgCompilations(shaderAsset, srgLayout->GetName());
+        auto deviceSrg = material->GetRHIShaderResourceGroup()->GetDeviceShaderResourceGroup(0);
+        ASSERT_NE(deviceSrg.get(), nullptr);
+        const auto constantIndex = deviceSrg->GetData().FindShaderInputConstantIndex(Name("m_image"));
+        ASSERT_TRUE(constantIndex.IsValid());
+        ASSERT_EQ(parameters->GetShaderParameterData<uint32_t>(parameterIndex), originalIndex);
+        ASSERT_EQ(deviceSrg->GetData().GetConstant<uint32_t>(constantIndex), originalIndex);
+
+        const auto handlersBeforeReload = SystemTickBus::GetTotalNumOfEventHandlers();
+        const bool hasManualEdit = scenario == BindlessReloadScenario::EditBeforeReload ||
+            scenario == BindlessReloadScenario::EditAfterReload;
+        Data::Instance<StreamingImage> manualImage;
+        uint32_t manualIndex = RHI::DeviceImageView::InvalidBindlessIndex;
+        if (hasManualEdit)
+        {
+            auto manualAsset = createImageAsset(Data::AssetId(Uuid::CreateRandom()));
+            ASSERT_TRUE(manualAsset.IsReady());
+            manualImage = StreamingImage::FindOrCreate(manualAsset);
+            ASSERT_NE(manualImage.get(), nullptr);
+            auto manualView = manualImage->GetImageView()->GetDeviceImageView(0);
+            ASSERT_NE(manualView.get(), nullptr);
+            manualIndex = manualView->GetBindlessReadIndex();
+            ASSERT_NE(manualIndex, RHI::DeviceImageView::InvalidBindlessIndex);
+            ASSERT_NE(manualIndex, originalIndex);
+            if (scenario == BindlessReloadScenario::EditBeforeReload)
+            {
+                ASSERT_TRUE(material->SetPropertyValue<Data::Instance<Image>>(
+                    material->FindPropertyIndex(Name("TestImage")), manualImage));
+                ASSERT_TRUE(material->NeedsCompile());
+            }
+        }
+
+        auto replacementAsset = createImageAsset(imageAsset.GetId());
+        ASSERT_TRUE(replacementAsset.IsReady());
+        ASSERT_NE(replacementAsset.Get(), imageAsset.Get());
+        auto replacementView = image->GetImageView()->GetDeviceImageView(0);
+        ASSERT_NE(replacementView.get(), nullptr);
+        ASSERT_NE(replacementView.get(), originalView.get());
+        uint32_t replacementIndex = replacementView->GetBindlessReadIndex();
+        ASSERT_NE(replacementIndex, RHI::DeviceImageView::InvalidBindlessIndex);
+        ASSERT_NE(replacementIndex, originalIndex);
+        if (scenario == BindlessReloadScenario::RepeatedReload)
+        {
+            auto firstReplacementView = replacementView;
+            const auto firstReplacementIndex = replacementIndex;
+            replacementAsset = createImageAsset(imageAsset.GetId());
+            ASSERT_TRUE(replacementAsset.IsReady());
+            replacementView = image->GetImageView()->GetDeviceImageView(0);
+            ASSERT_NE(replacementView.get(), nullptr);
+            ASSERT_NE(replacementView.get(), firstReplacementView.get());
+            replacementIndex = replacementView->GetBindlessReadIndex();
+            ASSERT_NE(replacementIndex, RHI::DeviceImageView::InvalidBindlessIndex);
+            ASSERT_NE(replacementIndex, originalIndex);
+            ASSERT_NE(replacementIndex, firstReplacementIndex);
+        }
+        if (scenario == BindlessReloadScenario::EditAfterReload)
+        {
+            ASSERT_TRUE(material->SetPropertyValue<Data::Instance<Image>>(
+                material->FindPropertyIndex(Name("TestImage")), manualImage));
+            ASSERT_TRUE(material->NeedsCompile());
+        }
+        RHI::ResourceInvalidateBus::ExecuteQueuedEvents();
+        if (scenario == BindlessReloadScenario::DestroyBeforeTick)
+        {
+            EXPECT_EQ(SystemTickBus::GetTotalNumOfEventHandlers(), handlersBeforeReload + 1);
+            material = nullptr;
+            EXPECT_EQ(SystemTickBus::GetTotalNumOfEventHandlers(), handlersBeforeReload);
+            SystemTickBus::Broadcast(&SystemTickBus::Events::OnSystemTick);
+            SystemTickBus::Broadcast(&SystemTickBus::Events::OnSystemTick);
+            EXPECT_EQ(SystemTickBus::GetTotalNumOfEventHandlers(), handlersBeforeReload);
+            EXPECT_EQ(image->GetImageView()->GetDeviceImageView(0).get(), replacementView.get());
+            return;
+        }
+        SystemTickBus::Broadcast(&SystemTickBus::Events::OnSystemTick);
+        MaterialInstanceHandlerInterface::Get()->Compile();
+        ProcessQueuedSrgCompilations(shaderAsset, srgLayout->GetName());
+
+        if (hasManualEdit)
+        {
+            EXPECT_TRUE(material->NeedsCompile());
+            EXPECT_EQ(material->GetPropertyValue<Data::Instance<Image>>(material->FindPropertyIndex(Name("TestImage"))).get(), manualImage.get());
+            EXPECT_EQ(parameters->GetShaderParameterData<uint32_t>(parameterIndex), originalIndex);
+            EXPECT_EQ(deviceSrg->GetData().GetConstant<uint32_t>(constantIndex), originalIndex);
+            EXPECT_EQ(SystemTickBus::GetTotalNumOfEventHandlers(), handlersBeforeReload);
+            ASSERT_TRUE(material->Compile());
+            MaterialInstanceHandlerInterface::Get()->Compile();
+            ProcessQueuedSrgCompilations(shaderAsset, srgLayout->GetName());
+            EXPECT_FALSE(material->NeedsCompile());
+            EXPECT_EQ(material->GetPropertyValue<Data::Instance<Image>>(material->FindPropertyIndex(Name("TestImage"))).get(), manualImage.get());
+            EXPECT_EQ(parameters->GetShaderParameterData<uint32_t>(parameterIndex), manualIndex);
+            EXPECT_EQ(deviceSrg->GetData().GetConstant<uint32_t>(constantIndex), manualIndex);
+            return;
+        }
+        EXPECT_FALSE(material->NeedsCompile());
+        EXPECT_EQ(SystemTickBus::GetTotalNumOfEventHandlers(), handlersBeforeReload);
+        EXPECT_EQ(parameters->GetShaderParameterData<uint32_t>(parameterIndex), replacementIndex);
+        EXPECT_EQ(deviceSrg->GetData().GetConstant<uint32_t>(constantIndex), replacementIndex);
+        EXPECT_EQ(material->GetPropertyValue<Data::Instance<Image>>(material->FindPropertyIndex(Name("TestImage"))).get(), image.get());
+        EXPECT_TRUE(imageAsset.IsReady());
+    }
+
+    TEST_F(MaterialTests, BindlessImageReloadPublishesReplacementIndexWithoutPropertyEdit)
+    {
+        ASSERT_NO_FATAL_FAILURE(CheckBindlessImageReload(BindlessReloadScenario::SingleReload));
+    }
+
+    TEST_F(MaterialTests, BindlessImageDoubleReloadPublishesLatestIndexOnSystemTick)
+    {
+        ASSERT_NO_FATAL_FAILURE(CheckBindlessImageReload(BindlessReloadScenario::RepeatedReload));
+    }
+
+    TEST_F(MaterialTests, ImageReloadPreservesManualEditPendingBeforeReload)
+    {
+        ASSERT_NO_FATAL_FAILURE(CheckBindlessImageReload(BindlessReloadScenario::EditBeforeReload));
+    }
+
+    TEST_F(MaterialTests, ImageReloadPreservesManualEditMadeAfterReload)
+    {
+        ASSERT_NO_FATAL_FAILURE(CheckBindlessImageReload(BindlessReloadScenario::EditAfterReload));
+    }
+
+    TEST_F(MaterialTests, DestroyMaterialWithImageReloadPendingDisconnectsSystemTick)
+    {
+        ASSERT_NO_FATAL_FAILURE(CheckBindlessImageReload(BindlessReloadScenario::DestroyBeforeTick));
+    }
+
+    TEST_F(MaterialTests, MaterialPublicationWaitsForExplicitCompile)
+    {
+        auto material = Material::FindOrCreate(m_testMaterialAsset);
+        ASSERT_NE(material.get(), nullptr);
+        ASSERT_TRUE(m_testMaterialAsset.IsReady());
+        MaterialInstanceHandlerInterface::Get()->Compile();
+        ProcessQueuedSrgCompilations(m_testMaterialShaderAsset, m_testMaterialSrgLayout->GetName());
+        auto parameters = material->GetMaterialShaderParameter();
+        ASSERT_NE(parameters, nullptr);
+        const auto parameterIndex = m_testMaterialTypeAsset->GetMaterialShaderParameterLayout().GetParameterIndex("m_float");
+        ASSERT_TRUE(parameterIndex.IsValid());
+        auto deviceSrg = material->GetRHIShaderResourceGroup()->GetDeviceShaderResourceGroup(0);
+        ASSERT_NE(deviceSrg.get(), nullptr);
+        const auto constantIndex = deviceSrg->GetData().FindShaderInputConstantIndex(Name("m_float"));
+        ASSERT_TRUE(constantIndex.IsValid());
+        ASSERT_EQ(parameters->GetShaderParameterData<float>(parameterIndex), 1.5f);
+        ASSERT_EQ(deviceSrg->GetData().GetConstant<float>(constantIndex), 1.5f);
+        ASSERT_TRUE(material->SetPropertyValue<float>(material->FindPropertyIndex(Name("MyFloat")), 2.5f));
+        ASSERT_TRUE(material->NeedsCompile());
+
+        MaterialInstanceHandlerInterface::Get()->Compile();
+        ProcessQueuedSrgCompilations(m_testMaterialShaderAsset, m_testMaterialSrgLayout->GetName());
+        EXPECT_TRUE(material->NeedsCompile());
+        EXPECT_EQ(parameters->GetShaderParameterData<float>(parameterIndex), 1.5f);
+        EXPECT_EQ(deviceSrg->GetData().GetConstant<float>(constantIndex), 1.5f);
+
+        ASSERT_TRUE(material->Compile());
+        MaterialInstanceHandlerInterface::Get()->Compile();
+        ProcessQueuedSrgCompilations(m_testMaterialShaderAsset, m_testMaterialSrgLayout->GetName());
+        EXPECT_FALSE(material->NeedsCompile());
+        EXPECT_EQ(parameters->GetShaderParameterData<float>(parameterIndex), 2.5f);
+        EXPECT_EQ(deviceSrg->GetData().GetConstant<float>(constantIndex), 2.5f);
+    }
 
     TEST_F(MaterialTests, TestCreateVsFindOrCreate)
     {

@@ -7,6 +7,14 @@
  */
 
 #include <AzTest/AzTest.h>
+#include <AzCore/Debug/TraceMessageBus.h>
+#include <Atom/RHI/StreamingImagePool.h>
+#include <Atom/RHI/DeviceImage.h>
+#include <Atom/RHI/DeviceImageView.h>
+#include <Atom/RHI/ShaderResourceGroup.h>
+#include <Atom/RHI.Reflect/ShaderResourceGroupLayout.h>
+#include <Atom/RPI.Public/Shader/ShaderResourceGroup.h>
+#include <Common/ShaderAssetTestUtils.h>
 
 #include <Atom/RPI.Reflect/Image/ImageMipChainAsset.h>
 #include <Atom/RPI.Reflect/Image/ImageMipChainAssetCreator.h>
@@ -27,6 +35,7 @@
 #include <AzCore/std/containers/intrusive_list.h>
 
 #include <Common/RPITestFixture.h>
+#include <Common/RHI/Stubs.h>
 #include <Common/ErrorMessageFinder.h>
 #include <Common/SerializeTester.h>
 
@@ -635,6 +644,146 @@ namespace UnitTest
 
             EXPECT_TRUE(mipChainAsset.IsReady());
         }
+    }
+
+    TEST_F(StreamingImageTests, AssetReloadUpdatesRetainedShaderResourceGroupImageBinding)
+    {
+        using namespace AZ;
+
+        const auto createImageAsset = [this](const Data::AssetId& assetId)
+        {
+            auto mipChain = BuildMipChainAsset(0, 1, 1, 4);
+            RPI::StreamingImageAssetCreator creator;
+            creator.Begin(assetId);
+            creator.SetImageDescriptor(RHI::ImageDescriptor::Create2D(
+                RHI::ImageBindFlags::ShaderRead, 2, 2, RHI::Format::R8G8B8A8_UNORM));
+            creator.AddMipChainAsset(*mipChain.Get());
+            creator.SetPoolAssetId(m_defaultPool->GetAssetId());
+            Data::Asset<RPI::StreamingImageAsset> asset;
+            EXPECT_TRUE(creator.End(asset));
+            return asset;
+        };
+
+        auto originalAsset = createImageAsset(Data::AssetId(Uuid::CreateRandom()));
+        ASSERT_TRUE(originalAsset.IsReady());
+        auto image = RPI::StreamingImage::FindOrCreate(originalAsset);
+        ASSERT_NE(image.get(), nullptr);
+        auto* rhiImage = image->GetRHIImage();
+        ASSERT_NE(rhiImage, nullptr);
+        constexpr int deviceIndex = 0;
+        ASSERT_TRUE(rhiImage->IsDeviceSet(deviceIndex));
+        auto originalDeviceImage = rhiImage->GetDeviceImage(deviceIndex);
+        ASSERT_NE(originalDeviceImage.get(), nullptr);
+
+        auto layout = RHI::ShaderResourceGroupLayout::Create();
+        layout->SetName(Name("ReloadImageSrg"));
+        layout->SetBindingSlot(0);
+        layout->AddShaderInput(RHI::ShaderInputImageDescriptor{
+            Name("m_image"), RHI::ShaderInputImageAccess::Read, RHI::ShaderInputImageType::Image2D, 1, 1, 1 });
+        ASSERT_TRUE(layout->Finalize());
+        auto shaderAsset = CreateTestShaderAsset(Uuid::CreateRandom(), layout);
+        ASSERT_TRUE(shaderAsset.IsReady());
+        auto srg = RPI::ShaderResourceGroup::Create(shaderAsset, RPI::DefaultSupervariantIndex, layout->GetName());
+        ASSERT_NE(srg.get(), nullptr);
+        const RHI::ShaderInputImageIndex inputIndex(0);
+        ASSERT_TRUE(srg->SetImage(inputIndex, image));
+        srg->Compile();
+        ProcessQueuedSrgCompilations(shaderAsset, layout->GetName());
+        ASSERT_FALSE(srg->IsQueuedForCompile());
+        auto deviceSrg = srg->GetRHIShaderResourceGroup()->GetDeviceShaderResourceGroup(deviceIndex);
+        ASSERT_NE(deviceSrg.get(), nullptr);
+        auto originalDeviceView = deviceSrg->GetData().GetImageView(inputIndex, 0);
+        ASSERT_NE(originalDeviceView.get(), nullptr);
+        ASSERT_EQ(&originalDeviceView->GetImage(), originalDeviceImage.get());
+
+        // The creator publishes through AssetManager::AssignAssetData and the real AssetBus reload notification.
+        auto replacementAsset = createImageAsset(originalAsset.GetId());
+        ASSERT_TRUE(replacementAsset.IsReady());
+        EXPECT_EQ(replacementAsset.GetId(), originalAsset.GetId());
+        EXPECT_NE(replacementAsset.Get(), originalAsset.Get());
+        EXPECT_EQ(image->GetRHIImage(), rhiImage);
+        ASSERT_TRUE(image->IsInitialized());
+        ASSERT_TRUE(rhiImage->IsDeviceSet(deviceIndex));
+        ASSERT_NE(image->GetImageView(), nullptr);
+        auto replacementDeviceImage = rhiImage->GetDeviceImage(deviceIndex);
+        ASSERT_NE(replacementDeviceImage.get(), nullptr);
+        ASSERT_NE(replacementDeviceImage.get(), originalDeviceImage.get());
+
+        RHI::ResourceInvalidateBus::ExecuteQueuedEvents();
+        if (!srg->IsQueuedForCompile())
+        {
+            srg->Compile();
+        }
+        ProcessQueuedSrgCompilations(shaderAsset, layout->GetName());
+        EXPECT_FALSE(srg->IsQueuedForCompile());
+
+        // A bound SRG must reference the current image after invalidation/compilation, without another SetImage.
+        const auto& boundView = deviceSrg->GetData().GetImageView(inputIndex, 0);
+        ASSERT_NE(boundView.get(), nullptr);
+        EXPECT_EQ(&boundView->GetImage(), replacementDeviceImage.get());
+        EXPECT_EQ(boundView.get(), image->GetImageView()->GetDeviceImageView(deviceIndex).get());
+        EXPECT_EQ(srg->GetImage(inputIndex).get(), image.get());
+        EXPECT_TRUE(originalAsset.IsReady());
+        EXPECT_EQ(originalAsset->GetImageDescriptor().m_size.m_width, 2);
+        EXPECT_EQ(originalAsset->GetImageDescriptor().m_format, RHI::Format::R8G8B8A8_UNORM);
+    }
+
+    TEST_F(StreamingImageTests, RedundantImageCreationDisconnectsItsAssetHandler)
+    {
+        using namespace AZ;
+
+        Data::Asset<RPI::StreamingImageAsset> imageAsset = BuildTestImage();
+        auto devicePool = m_defaultPool->GetRHIPool()->GetDeviceStreamingImagePool(0);
+        ASSERT_NE(devicePool, nullptr);
+        auto* stubPool = static_cast<StubRHI::StreamingImagePool*>(devicePool.get());
+        Data::Instance<RPI::StreamingImage> retainedWinner;
+
+        struct RestorePoolHook
+        {
+            StubRHI::StreamingImagePool& m_pool;
+            AZStd::function<void()> m_previousCallback;
+            uint32_t m_previousCount;
+            ~RestorePoolHook()
+            {
+                m_pool.m_onNextInitImage = AZStd::move(m_previousCallback);
+                m_pool.m_initImageCount = m_previousCount;
+            }
+        } restoreHook{ *stubPool, AZStd::move(stubPool->m_onNextInitImage), stubPool->m_initImageCount };
+
+        class AssertObserver final : public Debug::TraceMessageBus::Handler
+        {
+        public:
+            AssertObserver() { BusConnect(); }
+            ~AssertObserver() override { BusDisconnect(); }
+            bool OnPreAssert(const char*, int, const char*, const char*) override
+            {
+                ++m_count;
+                return false;
+            }
+            uint32_t m_count = 0;
+        } assertObserver;
+
+        const uint32_t initialInitCount = stubPool->m_initImageCount;
+        stubPool->m_onNextInitImage = [&]()
+        {
+            // Reenter before the outer instance can be inserted; the hook is already consumed.
+            retainedWinner = RPI::StreamingImage::FindOrCreate(imageAsset);
+        };
+        auto imageInstance = RPI::StreamingImage::FindOrCreate(imageAsset);
+
+        EXPECT_EQ(stubPool->m_initImageCount - initialInitCount, 2u);
+        EXPECT_FALSE(stubPool->m_onNextInitImage);
+        ASSERT_NE(retainedWinner, nullptr);
+        ASSERT_NE(imageInstance, nullptr);
+        EXPECT_EQ(imageInstance, retainedWinner);
+        EXPECT_TRUE(imageInstance->IsInitialized());
+        EXPECT_EQ(imageInstance->GetAssetId(), imageAsset.GetId());
+        EXPECT_EQ(Data::InstanceDatabase<RPI::StreamingImage>::Instance().Find(
+            Data::InstanceId::CreateFromAsset(imageAsset)), retainedWinner);
+
+        imageInstance = nullptr;
+        retainedWinner = nullptr;
+        EXPECT_EQ(assertObserver.m_count, 0u);
     }
 
     TEST_F(StreamingImageTests, ImageInstanceResidency)

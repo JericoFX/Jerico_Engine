@@ -116,6 +116,10 @@ namespace UnitTest
 
         RHI::Ptr<RHI::DeviceImageView> Factory::CreateImageView()
         {
+            if (m_createImageViewOverride)
+            {
+                return m_createImageViewOverride();
+            }
             return aznew ImageView;
         }
 

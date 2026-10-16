@@ -17,9 +17,33 @@ namespace AZ::RHI
     {
         m_data = groupData;
 
-        IterateObjects<DeviceShaderResourceGroup>([&groupData, compileMode](auto deviceIndex, auto deviceShaderResourceGroup)
+        // Reload can replace the device images while the multi-device image views stay bound.
+        for (uint32_t imageInputIndex = 0; imageInputIndex < m_data.GetLayout()->GetShaderInputListForImages().size(); ++imageInputIndex)
         {
-            deviceShaderResourceGroup->Compile(groupData.GetDeviceShaderResourceGroupData(deviceIndex), compileMode);
+            const ShaderInputImageIndex inputIndex(imageInputIndex);
+            const auto imageViews = m_data.GetImageViewArray(inputIndex);
+            for (uint32_t arrayIndex = 0; arrayIndex < imageViews.size(); ++arrayIndex)
+            {
+                const ImageView* imageView = imageViews[arrayIndex].get();
+                bool needsRefresh = false;
+                IterateObjects<DeviceShaderResourceGroup>([&](auto deviceIndex, [[maybe_unused]] auto deviceShaderResourceGroup)
+                {
+                    const DeviceImageView* currentView = imageView && imageView->GetImage()->IsDeviceSet(deviceIndex)
+                        ? imageView->GetDeviceImageView(deviceIndex).get()
+                        : nullptr;
+                    needsRefresh |= m_data.GetDeviceShaderResourceGroupData(deviceIndex).GetImageView(inputIndex, arrayIndex).get()
+                        != currentView;
+                });
+                if (needsRefresh)
+                {
+                    m_data.SetImageView(inputIndex, imageView, arrayIndex);
+                }
+            }
+        }
+
+        IterateObjects<DeviceShaderResourceGroup>([this, compileMode](auto deviceIndex, auto deviceShaderResourceGroup)
+        {
+            deviceShaderResourceGroup->Compile(m_data.GetDeviceShaderResourceGroupData(deviceIndex), compileMode);
         });
     }
 

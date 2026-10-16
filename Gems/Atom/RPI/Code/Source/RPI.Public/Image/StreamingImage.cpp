@@ -214,7 +214,7 @@ namespace AZ
             if (IsInitialized())
             {
 #if defined (AZ_RPI_STREAMING_IMAGE_HOT_RELOADING)
-                Data::AssetBus::MultiHandler::BusDisconnect(GetAssetId());
+                Data::AssetBus::MultiHandler::BusDisconnect(m_imageAsset.GetId());
 #endif
                 StreamingImageUploadNotificationBus::Handler::BusDisconnect();
                 if(m_pool)

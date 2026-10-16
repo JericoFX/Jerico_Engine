@@ -9,6 +9,7 @@
 #pragma once
 
 #include <AzCore/Asset/AssetCommon.h>
+#include <AzCore/Component/TickBus.h>
 #include <AzCore/Instance/InstanceData.h>
 
 #include <Atom/RPI.Reflect/Material/MaterialAsset.h>
@@ -50,6 +51,8 @@ namespace AZ
         class ATOM_RPI_PUBLIC_API Material
             : public Data::InstanceData
             , public ShaderReloadNotificationBus::MultiHandler
+            , private Data::AssetBus::MultiHandler
+            , private SystemTickBus::Handler
         {
             friend class MaterialSystem;
         public:
@@ -176,6 +179,11 @@ namespace AZ
             void OnShaderVariantReinitialized(const ShaderVariant& shaderVariant) override;
             ///////////////////////////////////////////////////////////////////
 
+            void OnAssetReloaded(Data::Asset<Data::AssetData> asset) override;
+            void OnSystemTick() override;
+            void UpdateImageAssetSubscriptions();
+            void CancelPendingImageReload();
+
             //! Helper function for setting the value of a shader parameter, allowing for specialized handling of specific types,
             //! converting to the native type before passing to the MaterialShaderParameters.
             bool SetShaderParameterValue(const MaterialShaderParameterLayout::Index& index, const MaterialPropertyValue& value);
@@ -232,6 +240,9 @@ namespace AZ
 
             //! Records the m_currentChangeId when the material was last compiled.
             ChangeId m_compiledChangeId = DEFAULT_CHANGE_ID;
+
+            //! Cancels reload-only work if an ordinary property edit advances the change id before the system tick.
+            ChangeId m_pendingImageReloadChangeId = DEFAULT_CHANGE_ID;
 
             bool m_isInitializing = false;
 

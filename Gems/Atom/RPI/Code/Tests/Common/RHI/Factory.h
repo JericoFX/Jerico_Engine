@@ -8,6 +8,7 @@
 #pragma once
 
 #include <Atom/RHI/Factory.h>
+#include <AzCore/std/function/function_template.h>
 #include <Atom/RHI/DeviceRayTracingAccelerationStructure.h>
 
 namespace UnitTest
@@ -24,6 +25,9 @@ namespace UnitTest
             AZ_CLASS_ALLOCATOR(Factory, AZ::SystemAllocator);
 
             static AZ::RHI::Ptr<AZ::RHI::Device> CreateDefaultDevice();
+
+            // Optional per-fixture override; unset keeps the default image-view stub.
+            AZStd::function<AZ::RHI::Ptr<AZ::RHI::DeviceImageView>()> m_createImageViewOverride;
 
         private:
             const AZ::Name m_platformName;

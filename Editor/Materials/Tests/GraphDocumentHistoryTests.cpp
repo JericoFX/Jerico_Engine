@@ -45,6 +45,8 @@
 #include <GraphCanvas/Components/SceneBus.h>
 #include <GraphCanvas/GraphCanvasBus.h>
 #include <GraphCanvas/Styling/StyleManager.h>
+#include <QDataStream>
+#include <GraphCanvas/Types/QtMetaTypes.h>
 #include <GraphCanvas/Widgets/NodePalette/NodePaletteWidget.h>
 #include <GraphModel/GraphModelBus.h>
 #include <GraphModel/Model/Connection.h>
@@ -53,6 +55,7 @@
 #include <QApplication>
 #include <QElapsedTimer>
 #include <QEventLoop>
+#include <QFont>
 #include <QLabel>
 #include <QLayout>
 #include <QPushButton>
@@ -176,6 +179,17 @@ namespace UnitTest
             ASSERT_NE(system->FindComponent<AZ::JobManagerComponent>(), nullptr);
             ASSERT_NE(system->FindComponent<AZ::TaskGraphSystemComponent>(), nullptr);
             ASSERT_NE(system->FindComponent<AZ::StreamerComponent>(), nullptr);
+
+            // Keep style-enum Qt metatype interfaces in this test DLL across production module reloads.
+            qRegisterMetaType<QFont::Weight>();
+            qRegisterMetaType<QFont::Style>();
+            qRegisterMetaType<QFont::Capitalization>();
+            qRegisterMetaType<Qt::PenStyle>();
+            qRegisterMetaType<Qt::PenCapStyle>();
+            qRegisterMetaType<Qt::Orientation>();
+            qRegisterMetaType<Qt::AlignmentFlag>();
+            qRegisterMetaType<GraphCanvas::Styling::ConnectionCurveType>();
+            qRegisterMetaType<GraphCanvas::Styling::PaletteStyle>();
 
             // Register both production modules before activation so their required services are sorted together.
             for (const char* name : {"GraphCanvas.Editor", "GraphModel.Editor"})

@@ -57,6 +57,9 @@ namespace AZ
 
             ScopedValue isInitializing(&m_isInitializing, true, false);
 
+            CancelPendingImageReload();
+            Data::AssetBus::MultiHandler::BusDisconnect();
+
             // All of these members must be reset if the material can be reinitialized because of the shader reload notification bus
             m_instanceData = {};
             m_rhiShaderResourceGroup = {};
@@ -152,6 +155,9 @@ namespace AZ
 
         Material::~Material()
         {
+            CancelPendingImageReload();
+            Data::AssetBus::MultiHandler::BusDisconnect();
+
             if (m_instanceData.m_materialTypeId >= 0)
             {
                 auto instanceHandler = MaterialInstanceHandlerInterface::Get();
@@ -670,6 +676,78 @@ namespace AZ
             }
         }
 
+        void Material::OnAssetReloaded([[maybe_unused]] Data::Asset<Data::AssetData> asset)
+        {
+            const bool reloadOnly = !NeedsCompile() ||
+                (m_pendingImageReloadChangeId != DEFAULT_CHANGE_ID && m_pendingImageReloadChangeId == m_currentChangeId);
+
+            // StreamingImage may handle this notification after us. Only invalidate here; read indices on a later system tick.
+            m_materialProperties.SetAllPropertyDirtyFlags();
+            for (auto& materialPipelinePair : m_materialPipelineData)
+            {
+                materialPipelinePair.second.m_materialProperties.SetAllPropertyDirtyFlags();
+            }
+            ++m_currentChangeId;
+
+            if (reloadOnly)
+            {
+                m_pendingImageReloadChangeId = m_currentChangeId;
+                if (!SystemTickBus::Handler::BusIsConnected())
+                {
+                    SystemTickBus::Handler::BusConnect();
+                }
+            }
+            else
+            {
+                // An explicit compile remains responsible for ordinary edits already pending.
+                CancelPendingImageReload();
+            }
+        }
+
+        void Material::OnSystemTick()
+        {
+            if (m_pendingImageReloadChangeId == DEFAULT_CHANGE_ID || m_pendingImageReloadChangeId != m_currentChangeId || !NeedsCompile())
+            {
+                // An ordinary edit after the reload cancels automatic compilation without discarding its dirty image flags.
+                CancelPendingImageReload();
+                return;
+            }
+
+            // Success cancels this task in Compile; failure keeps only this material connected for a later retry.
+            Compile();
+        }
+
+        void Material::CancelPendingImageReload()
+        {
+            SystemTickBus::Handler::BusDisconnect();
+            m_pendingImageReloadChangeId = DEFAULT_CHANGE_ID;
+        }
+
+        void Material::UpdateImageAssetSubscriptions()
+        {
+            Data::AssetBus::MultiHandler::BusDisconnect();
+            const auto connectImages = [this](const MaterialPropertyCollection& properties)
+            {
+                for (const auto& value : properties.GetPropertyValues())
+                {
+                    if (value.Is<Data::Instance<Image>>())
+                    {
+                        const auto& image = value.GetValue<Data::Instance<Image>>();
+                        if (image && image->GetAssetId().IsValid())
+                        {
+                            Data::AssetBus::MultiHandler::BusConnect(image->GetAssetId());
+                        }
+                    }
+                }
+            };
+
+            connectImages(m_materialProperties);
+            for (const auto& materialPipelinePair : m_materialPipelineData)
+            {
+                connectImages(materialPipelinePair.second.m_materialProperties);
+            }
+        }
+
         bool Material::Compile()
         {
             AZ_PROFILE_FUNCTION(RPI);
@@ -695,6 +773,8 @@ namespace AZ
                 }
 
                 m_compiledChangeId = m_currentChangeId;
+                CancelPendingImageReload();
+                UpdateImageAssetSubscriptions();
 
                 return true;
             }
