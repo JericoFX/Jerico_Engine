@@ -23,12 +23,12 @@ namespace AZ
         SkinnedMeshDebugDisplay::SkinnedMeshDebugDisplay()
         {
             CrySystemEventBus::Handler::BusConnect();
-            AZ::Render::Bootstrap::NotificationBus::Handler::BusConnect();
+            JE::Render::Bootstrap::NotificationBus::Handler::BusConnect();
         }
 
         SkinnedMeshDebugDisplay::~SkinnedMeshDebugDisplay()
         {
-            AZ::Render::Bootstrap::NotificationBus::Handler::BusDisconnect();
+            JE::Render::Bootstrap::NotificationBus::Handler::BusDisconnect();
             CrySystemEventBus::Handler::BusDisconnect();
             AzFramework::ViewportDebugDisplayEventBus::Handler::BusDisconnect();
         }

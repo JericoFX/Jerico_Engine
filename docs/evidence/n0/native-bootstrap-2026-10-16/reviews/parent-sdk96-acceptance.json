@@ -1,0 +1,73 @@
+{
+  "utc": "2026-10-16T21:25:06.2456898+00:00",
+  "owner": "/root",
+  "state": "SDK96_ACCEPTED_FOR_PROFILE_PUBLIC_IMPORT_AND_FACTORY_ABI",
+  "parentReadActualResultsLogsAndWarnings": true,
+  "newNativeExecutionByParent": false,
+  "existingResultSHA256": "B5F513EEF1DE12D01985CCA01F2976D263AE98DEDB8B35EE21CFFFD7AD3992DE",
+  "phases": [
+    {
+      "name": "install",
+      "exitCode": 0,
+      "seconds": 51.1733961,
+      "sha256": "50E3A10C69FFECFCD1E7D6AFE3A3CF19FC983E6FAE5D2862F35A00E3ECBA0C10"
+    },
+    {
+      "name": "configure",
+      "exitCode": 0,
+      "seconds": 78.8577922,
+      "sha256": "2896DF81C820B888D21057407F10C43BE2D105CA0B6D30C49AA93DE19E2F73FB"
+    },
+    {
+      "name": "build-consumer",
+      "exitCode": 0,
+      "seconds": 18.2948671,
+      "sha256": "89B9E3BACF7EAE325EE5EB7B7B38501F485E6D330BB91CC1D08D88926D29A4E8"
+    },
+    {
+      "name": "pe-imports",
+      "exitCode": 0,
+      "seconds": 0.0438064,
+      "sha256": "30EEEAE54737A7980357BF37E0E2B888B2B363DF2BFF6B50FA5D84049B7D4121"
+    },
+    {
+      "name": "loader",
+      "exitCode": 0,
+      "seconds": 0.1124539,
+      "sha256": "623EE4909513DA6A62BBE430F0C7B6B066E7B51AEC6EC96988A8077A8E851D6E"
+    }
+  ],
+  "installedFiles": 11149,
+  "manifestEntries": 11043,
+  "configureAdded": 44,
+  "finalInventoryPin": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atom-next-native-scope-rev1\\validation-preparation\\parent-approved-r2\\execution-bootstrap96-attempt1\\sdk-final-inventory.json",
+    "bytes": 2303616,
+    "sha256": "668580281C7653BF11DC3DF359022C3727CB93DA7F4134725E0BCBBDF0DCEE20"
+  },
+  "publicTargets": 6,
+  "runtimeDllCopies": 32,
+  "factoryLifecycleMessages": [
+    "JE SDK: Materials, Camera and RenderIntegration exports resolved; empty PassPipelinePreview exercised.",
+    "JE SDK: native RenderAssetBuilders factory/descriptors/recreation and three public contexts exercised without activation or cook.",
+    "JE SDK: shader compiler factory/descriptors/services/recreation and exported shader option hash exercised without activation or cook.",
+    "JE SDK: native Bootstrap true/false factory/descriptors/services/reflection/recreation and stable buses exercised without activation or window."
+  ],
+  "consumerExe": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-vk-consumer96\\bin\\profile\\JENativeSdkConsumer.exe",
+    "bytes": 117248,
+    "sha256": "6CBAF3908F7E042FB6EE1EA4C9A529DC49D167D8B68083258314219F626B51D1"
+  },
+  "frozenSources": 14064,
+  "authored": 40,
+  "ownerInputs": 26,
+  "nativeProcessesRemaining": [],
+  "warnings": "OpenColorIO package-name mismatch; unused FETCHCONTENT_* and O3DE_EXTERNAL_SUBDIRS. Preserved unchanged, not proof of offline network isolation.",
+  "wholeGemIncrement": 0,
+  "limits": [
+    "No module activation, AssetManager, JobManager, AP, renderer, import/cook, scene mutation, GPU or Shipping acceptance",
+    "Minimal ComponentApplication owns allocator/reflection lifecycle but no static/dynamic modules or catalog/settings load",
+    "PostBuild constructor is inline in real public header; virtual base dispatch/destruction plus actual PE imports must establish its vtable/ABI use"
+  ],
+  "validationPolicy": "Reuse SDK96 baseline for unchanged API, dependency and install-layout inputs. No full SDK replay for body-only fixes; use affected target/test/runtime checks. A full replay needs a demonstrated ABI/dependency/packaging change."
+}

@@ -10,7 +10,7 @@
 #include <LyShine/IDraw2d.h>
 
 #include <AzFramework/Font/FontInterface.h>
-#include <Atom/Bootstrap/BootstrapNotificationBus.h>
+#include <JE/Render/Bootstrap/BootstrapNotificationBus.h>
 #include <Atom/RPI.Public/DynamicDraw/DynamicDrawInterface.h>
 #include <Atom/RPI.Public/ViewportContext.h>
 
@@ -21,7 +21,7 @@
 //! Positions and sizes are specified in pixels in the associated 2D viewport.
 class CDraw2d
     : public IDraw2d
-    , public AZ::Render::Bootstrap::NotificationBus::Handler
+    , public JE::Render::Bootstrap::NotificationBus::Handler
 {
 public: // types
 
@@ -175,7 +175,7 @@ private:
 
     AZ_DISABLE_COPY_MOVE(CDraw2d);
 
-    // AZ::Render::Bootstrap::NotificationBus overrides
+    // JE::Render::Bootstrap::NotificationBus overrides
     void OnBootstrapSceneReady(AZ::RPI::Scene* bootstrapScene) override;
 
 public: // static member functions

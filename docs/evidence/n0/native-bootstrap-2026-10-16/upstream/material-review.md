@@ -1,0 +1,34 @@
+# Upstream O3DE: último material liberado antes del primer Compile
+
+Revisión primaria acotada, 2026-10-16. No se identificó una corrección upstream del caso exacto en las búsquedas descritas. Esto no afirma ausencia en todo GitHub o en todas las ramas. No se importó código, descargaron paquetes, ejecutaron nativos ni consultó Graft local. El diagnóstico local pertenece a W1/padre.
+
+## Fuente upstream fijada
+
+La API devolvió `development=74006f539d581ea2ae8d21d4ef629d7a610a3e01`. Su MaterialSystem.cpp tiene34279 bytes UTF-8 y SHA256 `BB693C2F352326CB1D2DE164B7F741B6E2C85EED824EB86200BB38BD8BA3ECAA`. El commit más reciente del historial de ese archivo es `ce15af5c3ad4d3f92c651a9e7b78e9c8121223bb` (2026-09-02, retiro de AtomCore); la copia en ese commit tiene el mismo hash. Fuentes: [ref development](https://api.github.com/repos/o3de/o3de/git/ref/heads/development), [historial exacto del archivo](https://api.github.com/repos/o3de/o3de/commits?path=Gems%2FAtom%2FRPI%2FCode%2FSource%2FRPI.Public%2FMaterial%2FMaterialSystem.cpp&per_page=20), [archivo inmutable](https://github.com/o3de/o3de/blob/74006f539d581ea2ae8d21d4ef629d7a610a3e01/Gems/Atom/RPI/Code/Source/RPI.Public/Material/MaterialSystem.cpp).
+
+En esa fuente, ReleaseMaterialInstance319–353 marca los índices dirty y, al liberar el último tipo, vacía los datos y resetea el asignador de índices. UpdateSceneMaterialSrg593–650 calcula tamaño desde MaxCount; con buffer inexistente llama a createBuffer usando la cantidad de tipos634 y después dereferencia el resultado636. No hay guarda para cantidad cero ni para resultado nulo en ese tramo. Por tanto upstream conserva la misma precondición peligrosa descrita por el padre; esta lectura estática no sustituye su reproducción. [Release inmutable](https://github.com/o3de/o3de/blob/74006f539d581ea2ae8d21d4ef629d7a610a3e01/Gems/Atom/RPI/Code/Source/RPI.Public/Material/MaterialSystem.cpp#L319-L353), [UpdateSceneMaterialSrg inmutable](https://github.com/o3de/o3de/blob/74006f539d581ea2ae8d21d4ef629d7a610a3e01/Gems/Atom/RPI/Code/Source/RPI.Public/Material/MaterialSystem.cpp#L593-L650).
+
+## PRs contrastados
+
+| PR | Estado verificado / revisión | Qué aporta y límite |
+|---|---|---|
+| [19132 — Defuse an assert when not using the SceneMaterialSrg](https://github.com/o3de/o3de/pull/19132) | merged2025-07-15; head `cd5f60b6ea70284795a1530b791ba2f4d5a959de`; merge `bbe3860a0a0d7ab8c69c4e014b752e99d5923d26` | Diff completo de un archivo/una línea: cambia la comparación de capacidad del array de samplers de igualdad a mayor-o-igual. No modifica Release ni la creación del buffer de índices. No es reparación del caso95. [Metadatos](https://api.github.com/repos/o3de/o3de/pulls/19132), [diff primario](https://api.github.com/repos/o3de/o3de/pulls/19132/files?per_page=100). |
+| [19233 — Fix crash when accessing unbound textures in materials](https://github.com/o3de/o3de/pull/19233) | merged2025-09-08; head `97e7e2d5cb713bb55cd6727035c0c933a6da204a`; merge `284aee19368c9eea25f12b79987cea1c0024cc6c` | Revisión de la lista9archivos y del patch MaterialSystem: añade textura de sustitución para imágenes no enlazadas y su índice, además de lifecycle de esa textura. El tramo UpdateScene sólo añade su constante; no añade tratamiento de buffer vacío. La descripción advierte recook de shaders para ese cambio. No corresponde adoptar ese recook/fix por este fallo. [Metadatos](https://api.github.com/repos/o3de/o3de/pulls/19233), [diff primario](https://api.github.com/repos/o3de/o3de/pulls/19233/files?per_page=100). |
+| [18392 — Move Material Parameters from the MaterialSrg to a Material Parameter Struct](https://github.com/o3de/o3de/pull/18392) | merged2025-05-28; head `09bf449aee2fbee669b3daec978185113a2bdbbc`; merge `c08f103f6c99a73e360d147afbd4b8a813a23c9e` | Contexto de origen del registro global y buffers de parámetros; la descripción explica registro durante construcción y publicación por Compile. Es un refactor188archivos contra material_refactoring, no una reparación localizada. Sólo se revisaron metadatos/descripción; no se auditó su diff completo ni se propone importarlo. [Metadatos primarios](https://api.github.com/repos/o3de/o3de/pulls/18392). |
+
+## Búsqueda reproducible y alcance
+
+GitHub REST search/issues incluye incidencias y PRs de o3de/o3de. Resultados observados:
+
+- [MaterialSystem](https://api.github.com/search/issues?q=repo%3Ao3de%2Fo3de%20MaterialSystem&per_page=20):8 resultados; permitió localizar los PRs anteriores. Otros títulos no se convierten aquí en evidencia de una reparación.
+- [SceneMaterialSrg](https://api.github.com/search/issues?q=repo%3Ao3de%2Fo3de%20%22SceneMaterialSrg%22&per_page=20):4 resultados.
+- [material + zero + buffer](https://api.github.com/search/issues?q=repo%3Ao3de%2Fo3de%20%22material%22%20%22zero%22%20%22buffer%22&per_page=20):7 resultados; ninguno de sus títulos identifica el caso exacto, y no se amplió a ramas de partículas/terrain.
+- [UpdateSceneMaterialSrg](https://api.github.com/search/issues?q=repo%3Ao3de%2Fo3de%20%22UpdateSceneMaterialSrg%22&per_page=20), [MaterialTypeBufferIndicesBuffer](https://api.github.com/search/issues?q=repo%3Ao3de%2Fo3de%20%22MaterialTypeBufferIndicesBuffer%22&per_page=20) y [ReleaseMaterialInstance](https://api.github.com/search/issues?q=repo%3Ao3de%2Fo3de%20%22ReleaseMaterialInstance%22&per_page=20):0 cada una. Esta búsqueda no indexa exhaustivamente todos los diffs de código.
+
+La búsqueda web pública inicial no dio resultados específicos útiles para esos símbolos; se pasó a API y raw oficiales. El visor web no pudo abrir endpoints REST; las respuestas primarias se leyeron directamente por HTTPS con PowerShell, sin autenticación, clones, paquetes o helpers persistentes.
+
+## Aplicabilidad / licencia / pendiente
+
+El header del archivo inmutable declara Apache-2.0 OR MIT. Eso respalda la licencia de esta fuente, no una revisión de dependencias de los188archivos del refactor. No hay parche upstream recomendado ni cambio de API/renderer/dependencias autorizado por esta investigación. Cualquier reparación debe conservar el owner y contratos vigentes y demostrar el caso release-before-first-compile mediante el RED local que prepara W1, además de controles con materiales activos. No se atribuye este resultado al wiring Bootstrap ni se adjudica cierre visual/Gem.
+
+Cobertura completa cpp-pro `53017F862C526DF6080210A1A00E6678C2CD5382B5D1A51026BF3B0BDE7F7ED2` y game-developer `4578FACCE19AC99396E5FE904EAC173066FA517AF16AE0F49B03F9082A1057EC` reutilizada y revalidada; systematic-debugging leído completo y aplicado. Sin cambios productivos/config/Git. Native0; helpers persistentes0; HOLD.

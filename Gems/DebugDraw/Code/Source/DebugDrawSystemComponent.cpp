@@ -118,7 +118,7 @@ namespace DebugDraw
     {
         DebugDrawInternalRequestBus::Handler::BusConnect();
         DebugDrawRequestBus::Handler::BusConnect();
-        AZ::Render::Bootstrap::NotificationBus::Handler::BusConnect();
+        JE::Render::Bootstrap::NotificationBus::Handler::BusConnect();
 
         #ifdef DEBUGDRAW_GEM_EDITOR
         AzToolsFramework::EditorEntityContextNotificationBus::Handler::BusConnect();

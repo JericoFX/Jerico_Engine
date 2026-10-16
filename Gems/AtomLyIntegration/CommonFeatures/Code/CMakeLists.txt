@@ -49,7 +49,7 @@ ly_add_target(
             Gem::SurfaceData.Static
             Gem::Atom_Feature_Common.Public
             JE::RenderMaterials
-            Gem::Atom_Bootstrap.Headers
+            JE::RenderIntegration.Public
             JE::RenderDebug
 )
 

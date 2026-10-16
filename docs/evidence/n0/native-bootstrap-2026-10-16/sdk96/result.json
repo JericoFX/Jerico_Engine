@@ -1,0 +1,30 @@
+{
+  "dynamicNoPythonNoNullShipping": "NOT_TESTED_BY_THIS_CONSUMER",
+  "sdkInventory": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atom-next-native-scope-rev1\\validation-preparation\\parent-approved-r2\\execution-bootstrap96-attempt1\\sdk-final-inventory.json",
+    "bytes": 2303616,
+    "sha256": "668580281C7653BF11DC3DF359022C3727CB93DA7F4134725E0BCBBDF0DCEE20"
+  },
+  "limits": [
+    "No module activation, AssetManager, JobManager, AP, renderer, import/cook, scene mutation, GPU or Shipping acceptance",
+    "Minimal ComponentApplication owns allocator/reflection lifecycle but no static/dynamic modules or catalog/settings load",
+    "PostBuild constructor is inline in real public header; virtual base dispatch/destruction plus actual PE imports must establish its vtable/ABI use"
+  ],
+  "hosts": 11,
+  "state": "SDK_PROFILE_IMPORT_LIFECYCLE_REPLAY_PASSED_NOT_PRODUCT_ACCEPTANCE",
+  "authoredInputs": 40,
+  "effectiveMaterialReview": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atom-next-native-scope-rev1\\validation-preparation\\parent-approved-r2\\parent-effective-material96-review.json",
+    "bytes": 2650,
+    "sha256": "465615552A3E740E7EC2A22B018E6AC9824DD7CE9D3A5766E52AE9B5214901D2"
+  },
+  "backendProfile": "Vulkan-only; Null explicit Tools permitted",
+  "privateSources": 4,
+  "sourceInputs": 14064,
+  "exe": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-vk-consumer96\\bin\\profile\\JENativeSdkConsumer.exe",
+    "bytes": 117248,
+    "sha256": "6CBAF3908F7E042FB6EE1EA4C9A529DC49D167D8B68083258314219F626B51D1"
+  },
+  "ownerInputs": 26
+}

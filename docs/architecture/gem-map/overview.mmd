@@ -1,0 +1,65 @@
+flowchart LR
+  f0["asset-pipeline: 1 Gems"]
+  f1["atom-core: 1 Gems"]
+  f2["atom-rhi: 5 Gems"]
+  f3["atom-rpi: 1 Gems"]
+  f4["atom-tools: 5 Gems"]
+  f5["audio-media: 4 Gems"]
+  f6["content: 4 Gems"]
+  f7["editor-script: 13 Gems"]
+  f8["engine-gameplay: 32 Gems"]
+  f9["online-platform: 7 Gems"]
+  f10["physics-animation: 7 Gems"]
+  f11["render-features: 16 Gems"]
+  f12["testing: 3 Gems"]
+  f13["ui: 5 Gems"]
+  f14["world: 6 Gems"]
+  f0 -->|"1 manifest"| f2
+  f0 -->|"1 manifest"| f3
+  f1 -->|"1 manifest"| f0
+  f1 -->|"2 manifest"| f2
+  f1 -->|"1 manifest"| f3
+  f1 -->|"2 manifest"| f4
+  f1 -->|"7 manifest"| f11
+  f3 -->|"1 manifest"| f2
+  f4 -->|"4 manifest"| f0
+  f4 -->|"5 manifest"| f2
+  f4 -->|"5 manifest"| f3
+  f4 -->|"2 manifest"| f7
+  f4 -->|"8 manifest"| f11
+  f5 -->|"1 manifest"| f8
+  f8 -->|"1 manifest"| f1
+  f8 -->|"1 manifest"| f2
+  f8 -->|"4 manifest"| f3
+  f8 -->|"1 manifest"| f7
+  f8 -->|"6 manifest"| f13
+  f9 -->|"1 manifest"| f7
+  f9 -->|"1 manifest"| f11
+  f10 -->|"1 manifest"| f3
+  f10 -->|"2 manifest"| f8
+  f10 -->|"2 manifest"| f11
+  f11 -->|"1 manifest"| f0
+  f11 -->|"1 manifest"| f1
+  f11 -->|"8 manifest"| f2
+  f11 -->|"12 manifest"| f3
+  f11 -->|"4 manifest"| f4
+  f11 -->|"1 manifest"| f7
+  f11 -->|"2 manifest"| f8
+  f11 -->|"1 manifest"| f10
+  f11 -->|"2 manifest"| f14
+  f13 -->|"1 manifest"| f0
+  f13 -->|"1 manifest"| f1
+  f13 -->|"2 manifest"| f3
+  f13 -->|"1 manifest"| f4
+  f13 -->|"2 manifest"| f8
+  f13 -->|"1 manifest"| f11
+  f14 -->|"1 manifest"| f0
+  f14 -->|"1 manifest"| f1
+  f14 -->|"2 manifest"| f3
+  f14 -->|"2 manifest"| f7
+  f14 -->|"6 manifest"| f8
+  f14 -->|"2 manifest"| f11
+  u0["Sponza: multiple local manifests; PENDIENTE"]
+  f6 -->|"manifest PENDIENTE"| u0
+  u1["PhysX: local provider not resolved; PENDIENTE"]
+  f9 -->|"manifest PENDIENTE"| u1

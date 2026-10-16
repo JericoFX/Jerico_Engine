@@ -1,0 +1,384 @@
+{
+  "notAdded": [
+    {
+      "name": "DebugDraw",
+      "legacyRoot": "Gems/DebugDraw",
+      "nativeCapabilityOwner": "No native absorption acceptance demonstrated by this document-only review",
+      "reasonNotAdded": "Present Gem metadata/active CMake consumer; not named in the seven published integration scopes above. Do not silently use it as the eleventh item.",
+      "nominalContribution": 0,
+      "manifestPresent": true,
+      "metadata": {
+        "path": "F:\\JericoEngine\\JericoEngine\\Gems\\DebugDraw\\gem.json",
+        "bytes": 783,
+        "sha256": "BB06AEF5BC7C4F73D05CB21D13A7105978C2FD15A388D2DF0ADE7F05A6807F9B"
+      },
+      "gemName": "DebugDraw"
+    },
+    {
+      "name": "MaterialEditor",
+      "legacyRoot": "Gems/Atom/Tools/MaterialEditor",
+      "nativeCapabilityOwner": "Editor/Materials; Engine/Render/Materials",
+      "reasonNotAdded": "Own gem.json exists under Atom/Tools; workspace acceptance is a bounded capability gate and fullMaterialsAbsorptionAccepted=false remains documented.",
+      "nominalContribution": 0,
+      "manifestPresent": true,
+      "metadata": {
+        "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\MaterialEditor\\gem.json",
+        "bytes": 743,
+        "sha256": "2A976C491179A54C1355D0574ECDBCC148C635AEEBD334FDF79E40FAECF3AF72"
+      },
+      "gemName": "MaterialEditor"
+    },
+    {
+      "name": "MaterialCanvas",
+      "legacyRoot": "Gems/Atom/Tools/MaterialCanvas",
+      "nativeCapabilityOwner": "Editor/Materials graph workspace",
+      "reasonNotAdded": "Own gem.json exists; integrated graph functionality does not automatically close GraphCanvas/GraphModel/Atom dependencies or add a whole Gem.",
+      "nominalContribution": 0,
+      "manifestPresent": true,
+      "metadata": {
+        "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\MaterialCanvas\\gem.json",
+        "bytes": 743,
+        "sha256": "E1FD99CCF33085BBCE8050A7BA22D20A9A2E88D9B4DF9D98815BCAAA0F376CC9"
+      },
+      "gemName": "MaterialCanvas"
+    },
+    {
+      "name": "PassCanvas",
+      "legacyRoot": "Gems/Atom/Tools/PassCanvas",
+      "nativeCapabilityOwner": "Editor/Materials pass workspace",
+      "reasonNotAdded": "Own gem.json exists; preserve integrated pass capability acceptance without a new whole-Gem increment.",
+      "nominalContribution": 0,
+      "manifestPresent": true,
+      "metadata": {
+        "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\PassCanvas\\gem.json",
+        "bytes": 732,
+        "sha256": "9315F0AAFB6C7801080C2302DD9C8BBA7A75296522BB9D25BE42AEC9336897A4"
+      },
+      "gemName": "PassCanvas"
+    },
+    {
+      "name": "AtomShader",
+      "legacyRoot": "Gems/Atom/Asset/Shader",
+      "nativeCapabilityOwner": "Engine/Assets/RenderBuilders/Shader",
+      "reasonNotAdded": "Seventh deleted gem.json in the parent-supplied baseline-to-HEAD inventory. Durable later closures explicitly retain11/increment0; not one of the historical eleven.",
+      "nominalContribution": 0,
+      "manifestPresent": false
+    },
+    {
+      "name": "Atom_Bootstrap",
+      "legacyRoot": "Gems/Atom/Bootstrap",
+      "nativeCapabilityOwner": "Engine/Render/Integration/Source/Bootstrap",
+      "reasonNotAdded": "Current94 work in progress; configure/CPU8 alone does not close host/SDK/visual/product gates or increment the historical count.",
+      "nominalContribution": 0,
+      "manifestPresent": false
+    }
+  ],
+  "limit": "Eleven nominal identities can be reconstructed, but no explicit historical eleven-row parent acceptance ledger was found in the cited records. This does not independently certify eleven entire Gems against every current NATIVE/DEPENDENCY/VISUAL, source-free SDK, Linux/VR/Shipping gate. The published documents accept bounded integration slices and retain those limits. The parent must decide any stronger terminology or counter correction; this review makes neither.",
+  "nominalRows": [
+    {
+      "legacyName": "WhiteBox",
+      "capability": "Geometry/BSP",
+      "nativeOwner": "Engine/Geometry; Editor/geometry authoring owners",
+      "legacyRoot": "Gems/WhiteBox",
+      "nominalContribution": 1,
+      "countCriterion": "One original named Gem identity; never one DLL/target/owner or every capability inside Atom.",
+      "acceptanceScope": "Published, documented Windows integration slice with explicit per-slice limits. Not proof of all GOAL/global gates or clean-source-free replay.",
+      "publicationCommit": "eafa47ab7ab6760396ddd5177a05627baf816aef",
+      "readme": {
+        "path": "F:\\JericoEngine\\JericoEngine\\docs\\evidence\\n0\\native-geometry-materials-2026-10-12\\README.md",
+        "bytes": 2888,
+        "sha256": "5A1494E02D3AA31D7C6DDA67CB6D1809FA83C56EAF6F661CF2DD51FD1104DDF9"
+      },
+      "publication": {
+        "path": "F:\\JericoEngine\\JericoEngine\\docs\\evidence\\n0\\native-geometry-materials-2026-10-12\\publication.json",
+        "bytes": 304,
+        "sha256": "1BE216B5F69CDBA8ABC3CB1774DED2F44F0C51D1EAD0EF56C4E803A430A949F0"
+      },
+      "gemManifestPresent": false,
+      "status": "HISTORICAL_NOMINAL_RECONSTRUCTION_NOT_NEW_ACCEPTANCE"
+    },
+    {
+      "legacyName": "Camera",
+      "capability": "Camera runtime/editor",
+      "nativeOwner": "Engine/World/Camera; Editor/Camera",
+      "legacyRoot": "Gems/Camera",
+      "nominalContribution": 1,
+      "countCriterion": "One original named Gem identity; never one DLL/target/owner or every capability inside Atom.",
+      "acceptanceScope": "Published, documented Windows integration slice with explicit per-slice limits. Not proof of all GOAL/global gates or clean-source-free replay.",
+      "publicationCommit": "c45f2402487960766ddb90031a616af707a1c153",
+      "readme": {
+        "path": "F:\\JericoEngine\\JericoEngine\\docs\\evidence\\n0\\native-camera-integration-2026-10-12\\README.md",
+        "bytes": 6663,
+        "sha256": "DA18CDA4196D708994350A66DFCD67BB32BE2F96DA6837F0AD8B096BA782F8A3"
+      },
+      "publication": {
+        "path": "F:\\JericoEngine\\JericoEngine\\docs\\evidence\\n0\\native-camera-integration-2026-10-12\\publication.json",
+        "bytes": 309,
+        "sha256": "8531E860D7BE827CBF62FCF8F51D268D5FABC67F4E538C436DDB8A54812C5664"
+      },
+      "gemManifestPresent": true,
+      "status": "HISTORICAL_NOMINAL_RECONSTRUCTION_NOT_NEW_ACCEPTANCE",
+      "currentGemName": "Camera",
+      "metadataPin": {
+        "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Camera\\gem.json",
+        "bytes": 817,
+        "sha256": "40100FCEBBF996D5268AF795B3EE0BE55C70A53CBF1A39B73228B8BC558018E2"
+      },
+      "historicalCMakePin": {
+        "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Camera\\CMakeLists.txt",
+        "bytes": 416,
+        "sha256": "F077F85C86A0D400ED58873637FF235089B4768918464D2A767F52433E5F6CC3"
+      },
+      "wrapperBehavior": "FATAL_ERROR: activation rejected"
+    },
+    {
+      "legacyName": "CameraFramework",
+      "capability": "Camera rig/controllers/framework",
+      "nativeOwner": "Engine/World/Camera; Editor/Camera",
+      "legacyRoot": "Gems/CameraFramework",
+      "nominalContribution": 1,
+      "countCriterion": "One original named Gem identity; never one DLL/target/owner or every capability inside Atom.",
+      "acceptanceScope": "Published, documented Windows integration slice with explicit per-slice limits. Not proof of all GOAL/global gates or clean-source-free replay.",
+      "publicationCommit": "c45f2402487960766ddb90031a616af707a1c153",
+      "readme": {
+        "path": "F:\\JericoEngine\\JericoEngine\\docs\\evidence\\n0\\native-camera-integration-2026-10-12\\README.md",
+        "bytes": 6663,
+        "sha256": "DA18CDA4196D708994350A66DFCD67BB32BE2F96DA6837F0AD8B096BA782F8A3"
+      },
+      "publication": {
+        "path": "F:\\JericoEngine\\JericoEngine\\docs\\evidence\\n0\\native-camera-integration-2026-10-12\\publication.json",
+        "bytes": 309,
+        "sha256": "8531E860D7BE827CBF62FCF8F51D268D5FABC67F4E538C436DDB8A54812C5664"
+      },
+      "gemManifestPresent": true,
+      "status": "HISTORICAL_NOMINAL_RECONSTRUCTION_NOT_NEW_ACCEPTANCE",
+      "currentGemName": "CameraFramework",
+      "metadataPin": {
+        "path": "F:\\JericoEngine\\JericoEngine\\Gems\\CameraFramework\\gem.json",
+        "bytes": 847,
+        "sha256": "AF524D4A51A3306CFB1199A1364C0E18D3FB7806E9FCABF80F46DB621C9F3B51"
+      },
+      "historicalCMakePin": {
+        "path": "F:\\JericoEngine\\JericoEngine\\Gems\\CameraFramework\\CMakeLists.txt",
+        "bytes": 425,
+        "sha256": "A420EF41D93FFD614CDE2DDA047F4D6179ABA07C1BA266314C4C1DF84595A468"
+      },
+      "wrapperBehavior": "FATAL_ERROR: activation rejected"
+    },
+    {
+      "legacyName": "PrefabBuilder",
+      "capability": "Prefab asset builder",
+      "nativeOwner": "Engine/Assets/PrefabBuilder (JE::PrefabBuilder, tools only)",
+      "legacyRoot": "Gems/Prefab/PrefabBuilder",
+      "nominalContribution": 1,
+      "countCriterion": "One original named Gem identity; never one DLL/target/owner or every capability inside Atom.",
+      "acceptanceScope": "Published, documented Windows integration slice with explicit per-slice limits. Not proof of all GOAL/global gates or clean-source-free replay.",
+      "publicationCommit": "c195be28476940e3632253c3c0a49c09f06d8f50",
+      "readme": {
+        "path": "F:\\JericoEngine\\JericoEngine\\docs\\evidence\\n0\\native-prefab-builder-integration-2026-10-12\\README.md",
+        "bytes": 4696,
+        "sha256": "52005F9B4230895343D3A386F87A76FB32B2EA882364F3F6D05D488FE1CAFABA"
+      },
+      "publication": {
+        "path": "F:\\JericoEngine\\JericoEngine\\docs\\evidence\\n0\\native-prefab-builder-integration-2026-10-12\\publication.json",
+        "bytes": 461,
+        "sha256": "DED36AD1C7847D5A80B3AAE36881DAC9BE5E7AF317EE26D9DC960DDFBBAEA343"
+      },
+      "gemManifestPresent": true,
+      "status": "HISTORICAL_NOMINAL_RECONSTRUCTION_NOT_NEW_ACCEPTANCE",
+      "currentGemName": "PrefabBuilder",
+      "metadataPin": {
+        "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Prefab\\PrefabBuilder\\gem.json",
+        "bytes": 795,
+        "sha256": "FBC9F6654F91520000E94803F0150A7A0EFE7ACEE0BA1F331AB0C7DCD2A36C25"
+      },
+      "historicalCMakePin": {
+        "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Prefab\\PrefabBuilder\\CMakeLists.txt",
+        "bytes": 206,
+        "sha256": "486EA2226F401007CF9FA56571562C219A8323D3BA6315DCB36A775C2489DF69"
+      },
+      "wrapperBehavior": "return(): historical metadata only"
+    },
+    {
+      "legacyName": "PrimitiveAssets",
+      "capability": "Primitive asset content",
+      "nativeOwner": "Engine/Assets/Primitives (content; no new DLL)",
+      "legacyRoot": "Gems/PrimitiveAssets",
+      "nominalContribution": 1,
+      "countCriterion": "One original named Gem identity; never one DLL/target/owner or every capability inside Atom.",
+      "acceptanceScope": "Published, documented Windows integration slice with explicit per-slice limits. Not proof of all GOAL/global gates or clean-source-free replay.",
+      "publicationCommit": "7fb11d84cbee82e59c47756c52d7e777bc22a2d0",
+      "readme": {
+        "path": "F:\\JericoEngine\\JericoEngine\\docs\\evidence\\n0\\native-primitives-integration-2026-10-12\\README.md",
+        "bytes": 5389,
+        "sha256": "9D52888C2A9082452749CD994A45E2D62B225532CB9A9DB7CC53A2FA41E947AA"
+      },
+      "publication": {
+        "path": "F:\\JericoEngine\\JericoEngine\\docs\\evidence\\n0\\native-primitives-integration-2026-10-12\\publication.json",
+        "bytes": 303,
+        "sha256": "463B8873B2AF885C79DD7E16372BE98D40E89FCCB3DF709EE12D10C5A6D7CE6A"
+      },
+      "gemManifestPresent": true,
+      "status": "HISTORICAL_NOMINAL_RECONSTRUCTION_NOT_NEW_ACCEPTANCE",
+      "currentGemName": "PrimitiveAssets",
+      "metadataPin": {
+        "path": "F:\\JericoEngine\\JericoEngine\\Gems\\PrimitiveAssets\\gem.json",
+        "bytes": 761,
+        "sha256": "C2A989F660374EDC360FB16A10219A7FB113FF0CB12AA52F702B406BCC926C04"
+      },
+      "historicalCMakePin": {
+        "path": "F:\\JericoEngine\\JericoEngine\\Gems\\PrimitiveAssets\\CMakeLists.txt",
+        "bytes": 413,
+        "sha256": "560DFA8F556EBBA013BBE61AF05B31500EF6603FE8BDEAA8563348C5A21A6E7C"
+      },
+      "wrapperBehavior": "FATAL_ERROR: activation rejected"
+    },
+    {
+      "legacyName": "ImGui",
+      "capability": "Debug GUI",
+      "nativeOwner": "Engine/Debug/ImGui (JE::DebugImGui / JE::DearImGui)",
+      "legacyRoot": "Gems/ImGui",
+      "nominalContribution": 1,
+      "countCriterion": "One original named Gem identity; never one DLL/target/owner or every capability inside Atom.",
+      "acceptanceScope": "Published, documented Windows integration slice with explicit per-slice limits. Not proof of all GOAL/global gates or clean-source-free replay.",
+      "publicationCommit": "0703f5b0972cfbca3a6c4de72e88aa83302f1d86",
+      "readme": {
+        "path": "F:\\JericoEngine\\JericoEngine\\docs\\evidence\\n0\\native-imgui-integration-2026-10-12\\README.md",
+        "bytes": 6241,
+        "sha256": "BDEDD4CC278C4899A4287DC62D36282A2AC5551C14F89D692EEC5968E48FD635"
+      },
+      "publication": {
+        "path": "F:\\JericoEngine\\JericoEngine\\docs\\evidence\\n0\\native-imgui-integration-2026-10-12\\publication.json",
+        "bytes": 328,
+        "sha256": "77420A7FB3BE156F452BE22F905B2F4878B7FC51A3BDE2566C39FB980439B181"
+      },
+      "gemManifestPresent": true,
+      "status": "HISTORICAL_NOMINAL_RECONSTRUCTION_NOT_NEW_ACCEPTANCE",
+      "currentGemName": "ImGui",
+      "metadataPin": {
+        "path": "F:\\JericoEngine\\JericoEngine\\Gems\\ImGui\\gem.json",
+        "bytes": 886,
+        "sha256": "9C12D69AA518FC172FF91E7DEE09E6F9EAFEF5E4307597961A2B51835353908F"
+      },
+      "historicalCMakePin": {
+        "path": "F:\\JericoEngine\\JericoEngine\\Gems\\ImGui\\CMakeLists.txt",
+        "bytes": 230,
+        "sha256": "D46AF24F9758C20FE91A1415F0C9EFBF7C38632095BFD9253734482B3B7286D8"
+      },
+      "wrapperBehavior": "FATAL_ERROR: activation rejected"
+    },
+    {
+      "legacyName": "Profiler",
+      "capability": "CPU capture/profiler views",
+      "nativeOwner": "Engine/Debug/Profiler (JE::ProfilerCapture / JE::ProfilerView)",
+      "legacyRoot": "Gems/Profiler",
+      "nominalContribution": 1,
+      "countCriterion": "One original named Gem identity; never one DLL/target/owner or every capability inside Atom.",
+      "acceptanceScope": "Published, documented Windows integration slice with explicit per-slice limits. Not proof of all GOAL/global gates or clean-source-free replay.",
+      "publicationCommit": "2f981d73b24237d3739a6f1fd11a253b4ffffbfc",
+      "readme": {
+        "path": "F:\\JericoEngine\\JericoEngine\\docs\\evidence\\n0\\native-render-diagnostics-integration-2026-10-12\\README.md",
+        "bytes": 6428,
+        "sha256": "0B87A8520873ADCD75AED8B4E64535CFC701682EFD866DC0BDBD24AD6127A02F"
+      },
+      "publication": {
+        "path": "F:\\JericoEngine\\JericoEngine\\docs\\evidence\\n0\\native-render-diagnostics-integration-2026-10-12\\publication.json",
+        "bytes": 522,
+        "sha256": "E50F2788C8F2BF42CC32794EF24AFD5ED07D6D4A2A49D8C814E3BDAD8EACF60F"
+      },
+      "gemManifestPresent": false,
+      "status": "HISTORICAL_NOMINAL_RECONSTRUCTION_NOT_NEW_ACCEPTANCE"
+    },
+    {
+      "legacyName": "ImguiAtom",
+      "capability": "Atom debug adapter",
+      "nativeOwner": "Engine/Render/Debug (JE::RenderDebug)",
+      "legacyRoot": "Gems/AtomLyIntegration/ImguiAtom",
+      "nominalContribution": 1,
+      "countCriterion": "One original named Gem identity; never one DLL/target/owner or every capability inside Atom.",
+      "acceptanceScope": "Published, documented Windows integration slice with explicit per-slice limits. Not proof of all GOAL/global gates or clean-source-free replay.",
+      "publicationCommit": "2f981d73b24237d3739a6f1fd11a253b4ffffbfc",
+      "readme": {
+        "path": "F:\\JericoEngine\\JericoEngine\\docs\\evidence\\n0\\native-render-diagnostics-integration-2026-10-12\\README.md",
+        "bytes": 6428,
+        "sha256": "0B87A8520873ADCD75AED8B4E64535CFC701682EFD866DC0BDBD24AD6127A02F"
+      },
+      "publication": {
+        "path": "F:\\JericoEngine\\JericoEngine\\docs\\evidence\\n0\\native-render-diagnostics-integration-2026-10-12\\publication.json",
+        "bytes": 522,
+        "sha256": "E50F2788C8F2BF42CC32794EF24AFD5ED07D6D4A2A49D8C814E3BDAD8EACF60F"
+      },
+      "gemManifestPresent": false,
+      "status": "HISTORICAL_NOMINAL_RECONSTRUCTION_NOT_NEW_ACCEPTANCE"
+    },
+    {
+      "legacyName": "AtomImGuiTools",
+      "capability": "Atom tooling/debug adapter",
+      "nativeOwner": "Engine/Render/Debug (JE::RenderDebug)",
+      "legacyRoot": "Gems/AtomLyIntegration/AtomImGuiTools",
+      "nominalContribution": 1,
+      "countCriterion": "One original named Gem identity; never one DLL/target/owner or every capability inside Atom.",
+      "acceptanceScope": "Published, documented Windows integration slice with explicit per-slice limits. Not proof of all GOAL/global gates or clean-source-free replay.",
+      "publicationCommit": "2f981d73b24237d3739a6f1fd11a253b4ffffbfc",
+      "readme": {
+        "path": "F:\\JericoEngine\\JericoEngine\\docs\\evidence\\n0\\native-render-diagnostics-integration-2026-10-12\\README.md",
+        "bytes": 6428,
+        "sha256": "0B87A8520873ADCD75AED8B4E64535CFC701682EFD866DC0BDBD24AD6127A02F"
+      },
+      "publication": {
+        "path": "F:\\JericoEngine\\JericoEngine\\docs\\evidence\\n0\\native-render-diagnostics-integration-2026-10-12\\publication.json",
+        "bytes": 522,
+        "sha256": "E50F2788C8F2BF42CC32794EF24AFD5ED07D6D4A2A49D8C814E3BDAD8EACF60F"
+      },
+      "gemManifestPresent": false,
+      "status": "HISTORICAL_NOMINAL_RECONSTRUCTION_NOT_NEW_ACCEPTANCE"
+    },
+    {
+      "legacyName": "Atom_AtomBridge",
+      "capability": "Runtime/editor Atom host bridge",
+      "nativeOwner": "Engine/Render/Integration; Editor/Render/Integration",
+      "legacyRoot": "Gems/AtomLyIntegration/AtomBridge",
+      "nominalContribution": 1,
+      "countCriterion": "One original named Gem identity; never one DLL/target/owner or every capability inside Atom.",
+      "acceptanceScope": "Published, documented Windows integration slice with explicit per-slice limits. Not proof of all GOAL/global gates or clean-source-free replay.",
+      "publicationCommit": "faea0e3e88d789ba8323512c8146b2fb1efb54c3",
+      "readme": {
+        "path": "F:\\JericoEngine\\JericoEngine\\docs\\evidence\\n0\\native-render-hosts-integration-2026-10-12\\README.md",
+        "bytes": 4297,
+        "sha256": "8E6E024A31BFD9C6B2CD1938A3288F83DA2C16125CF9B1BAEC67FF4261D378C6"
+      },
+      "publication": {
+        "path": "F:\\JericoEngine\\JericoEngine\\docs\\evidence\\n0\\native-render-hosts-integration-2026-10-12\\publication.json",
+        "bytes": 341,
+        "sha256": "15C88F845BD9554CB75596B5C8B78FD4CA164C764F9456F4F967A8DA797302C3"
+      },
+      "gemManifestPresent": false,
+      "status": "HISTORICAL_NOMINAL_RECONSTRUCTION_NOT_NEW_ACCEPTANCE"
+    },
+    {
+      "legacyName": "DebugCamera",
+      "capability": "Debug camera",
+      "nativeOwner": "Engine/World/Camera/Debug",
+      "legacyRoot": "Gems/Atom/Component/DebugCamera",
+      "nominalContribution": 1,
+      "countCriterion": "One original named Gem identity; never one DLL/target/owner or every capability inside Atom.",
+      "acceptanceScope": "Published, documented Windows integration slice with explicit per-slice limits. Not proof of all GOAL/global gates or clean-source-free replay.",
+      "publicationCommit": "faea0e3e88d789ba8323512c8146b2fb1efb54c3",
+      "readme": {
+        "path": "F:\\JericoEngine\\JericoEngine\\docs\\evidence\\n0\\native-render-hosts-integration-2026-10-12\\README.md",
+        "bytes": 4297,
+        "sha256": "8E6E024A31BFD9C6B2CD1938A3288F83DA2C16125CF9B1BAEC67FF4261D378C6"
+      },
+      "publication": {
+        "path": "F:\\JericoEngine\\JericoEngine\\docs\\evidence\\n0\\native-render-hosts-integration-2026-10-12\\publication.json",
+        "bytes": 341,
+        "sha256": "15C88F845BD9554CB75596B5C8B78FD4CA164C764F9456F4F967A8DA797302C3"
+      },
+      "gemManifestPresent": false,
+      "status": "HISTORICAL_NOMINAL_RECONSTRUCTION_NOT_NEW_ACCEPTANCE"
+    }
+  ],
+  "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atom-next-native-scope-rev1\\gem-accepted-count-reconciliation\\reconciliation.json",
+  "sha256": "E98C2516049A11A7AF6D728821DA8FC8C66E632C688EBFAF48D7D107C74E6B11",
+  "arithmetic": "6 accepted-slice manifest retirements +5 retained historical manifest wrappers =11 named legacy identities. The parent-supplied seventh retirement is AtomShader, explicitly not a counter increment. Camera and CameraFramework are separate names sharing owners; DebugDraw is not substituted."
+}

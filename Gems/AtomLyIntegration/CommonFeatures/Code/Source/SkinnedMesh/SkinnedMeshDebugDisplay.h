@@ -11,7 +11,7 @@
 #include <Atom/RPI.Public/Base.h>
 #include <AzFramework/Entity/EntityDebugDisplayBus.h>
 #include <CrySystemBus.h>
-#include <Atom/Bootstrap/BootstrapNotificationBus.h>
+#include <JE/Render/Bootstrap/BootstrapNotificationBus.h>
 
 
 namespace AZ
@@ -22,7 +22,7 @@ namespace AZ
         class SkinnedMeshDebugDisplay
             : private AzFramework::ViewportDebugDisplayEventBus::Handler
             , private CrySystemEventBus::Handler
-            , private AZ::Render::Bootstrap::NotificationBus::Handler
+            , private JE::Render::Bootstrap::NotificationBus::Handler
         {
         public:
             SkinnedMeshDebugDisplay();

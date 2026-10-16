@@ -1,0 +1,38 @@
+flowchart LR
+  n4["Atom [configured]"]
+  n7["Atom_Feature_Common [configured]"]
+  n13["Atom_RPI [configured]"]
+  n31["CommonFeaturesAtom [configured]"]
+  n45["FastNoise"]
+  n49["GradientSignal [configured]"]
+  n50["GraphCanvas [configured]"]
+  n51["GraphModel [configured]"]
+  n52["ImageProcessingAtom [configured]"]
+  n56["LandscapeCanvas"]
+  n57["LmbrCentral [configured]"]
+  n108["SurfaceData [configured]"]
+  n109["Terrain"]
+  n114["Vegetation"]
+  n45 -->|"manifest"| n49
+  n45 -->|"manifest"| n57
+  n45 -->|"manifest"| n108
+  n49 -->|"manifest"| n108
+  n49 -->|"manifest"| n52
+  n49 -->|"manifest"| n57
+  n56 -->|"manifest"| n51
+  n56 -->|"manifest"| n49
+  n56 -->|"manifest"| n108
+  n56 -->|"manifest"| n57
+  n56 -->|"manifest"| n50
+  n108 -->|"manifest"| n57
+  n108 -->|"manifest"| n13
+  n108 -->|"manifest"| n7
+  n109 -->|"manifest"| n13
+  n109 -->|"manifest"| n4
+  n109 -->|"manifest"| n49
+  n109 -->|"manifest"| n108
+  n109 -->|"manifest"| n57
+  n114 -->|"manifest"| n57
+  n114 -->|"manifest"| n108
+  n114 -->|"manifest"| n31
+  n114 -->|"manifest"| n49

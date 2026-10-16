@@ -1,0 +1,22 @@
+{
+  "utc": "2026-10-16T19:55:46.5395637Z",
+  "reviewer": "/root",
+  "state": "CAUSAL_CRASH_REGRESSION_CONFIRMED_NOT_COMPLETED_GTEST_RESULT",
+  "buildExit": 0,
+  "nativeTestExit": -1073741819,
+  "testStarted": 1,
+  "completedCaseCount": 0,
+  "xmlExists": false,
+  "focalStdoutSHA256": "6A7B6F7260D5062841E5B33C252B8A0934D060BF2C9E85972918B2CF1B81756C",
+  "receiptSHA256": "DB38317F1DA461A35DD5AED697C5B8A9553CDA20B9D9FBFFAC255B1CCE67DCA0",
+  "nativeRpiUnchanged": true,
+  "causeMatchesProductCrash": true,
+  "sourceDrift": 0,
+  "productionEdited": false,
+  "testPreimageMatchesHEAD": true,
+  "testPreimageGitBlob": "2862a03bba07d7cd3060a6626b9413a74f111a84",
+  "normalRedXmlClaim": false,
+  "approvedNext": "Apply only reviewed minimum-capacity MaterialSystem.cpp patch, then require completed passing focal XML and full RPI suite plus actual Vulkan replay",
+  "globalAcceptance": false,
+  "wholeGemIncrement": 0
+}

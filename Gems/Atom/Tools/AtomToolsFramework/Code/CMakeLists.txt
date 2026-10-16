@@ -40,7 +40,7 @@ ly_add_target(
             JE::RenderDebug
             JE::EditorRenderIntegration
             JE::RenderAssetBuilders
-            Gem::Atom_Bootstrap.Headers
+            JE::RenderIntegration.Public
             JE::WorldCamera
             Gem::Atom_Feature_Common
             Gem::Atom_Feature_Common.Public
@@ -69,7 +69,7 @@ ly_add_target(
         PRIVATE
             Gem::${gem_name}.Static
     RUNTIME_DEPENDENCIES
-        Gem::Atom_Bootstrap
+        JE::RenderIntegration
         Gem::Atom_Feature_Common.Editor
         Gem::Atom_RHI.Private
         Gem::Atom_RPI.Editor

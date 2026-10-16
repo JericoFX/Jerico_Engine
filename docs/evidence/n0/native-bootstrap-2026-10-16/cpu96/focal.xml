@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="1" failures="0" disabled="0" errors="0" time="0.052" timestamp="2026-10-16T17:09:47.925" name="AllTests">
+  <testsuite name="MaterialTests" tests="1" failures="0" disabled="0" skipped="0" errors="0" time="0.052" timestamp="2026-10-16T17:09:47.925">
+    <testcase name="SceneMaterialSrgSurvivesLastReleaseBeforeFirstCompileAndReregistration" file="F:/JericoEngine/JericoEngine/Gems/Atom/RPI/Code/Tests/Material/MaterialTests.cpp" line="659" status="run" result="completed" time="0.052" timestamp="2026-10-16T17:09:47.925" classname="MaterialTests" />
+  </testsuite>
+</testsuites>

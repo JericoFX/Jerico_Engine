@@ -6,7 +6,6 @@ set(JE_RENDER_INTEGRATION_RUNTIME_DEPENDENCIES
     Gem::Atom_RHI.Private
     Gem::Atom_RPI.Private
     Gem::Atom_Feature_Common
-    Gem::Atom_Bootstrap
     JE::WorldCamera
     Gem::CommonFeaturesAtom
     Gem::EMotionFX_Atom
@@ -19,7 +18,6 @@ set(JE_RENDER_INTEGRATION_TOOL_DEPENDENCIES
     Gem::Atom_RPI.Editor
     Gem::Atom_Feature_Common.Builders
     Gem::Atom_Feature_Common.Editor
-    Gem::Atom_Bootstrap
     JE::WorldCamera
     Gem::AtomRenderOptions.Editor
     Gem::CommonFeaturesAtom.Editor

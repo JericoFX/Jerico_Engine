@@ -89,13 +89,13 @@ namespace AZ::Render
 
         AzToolsFramework::EditorViewportIconDisplay::Register(this);
 
-        Bootstrap::NotificationBus::Handler::BusConnect();
+        JE::Render::Bootstrap::NotificationBus::Handler::BusConnect();
     }
 
     void AtomViewportDisplayIconsSystemComponent::Deactivate()
     {
         Data::AssetBus::Handler::BusDisconnect();
-        Bootstrap::NotificationBus::Handler::BusDisconnect();
+        JE::Render::Bootstrap::NotificationBus::Handler::BusDisconnect();
 
         JE::Render::Integration::PerViewportDynamicDrawInterface* perViewportDynamicDrawInterface = JE::Render::Integration::PerViewportDynamicDraw::Get();
         if (!perViewportDynamicDrawInterface)

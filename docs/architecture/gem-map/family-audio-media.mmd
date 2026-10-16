@@ -1,0 +1,8 @@
+flowchart LR
+  n25["AudioSystem [configured]"]
+  n57["LmbrCentral [configured]"]
+  n66["Microphone"]
+  n67["MiniAudio"]
+  n115["VideoPlaybackFramework"]
+  n25 -->|"manifest"| n57
+  n66 -->|"manifest"| n25

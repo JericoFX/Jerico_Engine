@@ -1,0 +1,18 @@
+cwd = F:\JericoEngine\JericoEngine
+LIB: F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_RPI.Tests.dll
+Loading: F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_RPI.Tests.dll
+OKAY Library loaded: F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_RPI.Tests.dll
+OKAY Symbol found: AzRunUnitTests
+Note: Google Test filter = MaterialTests.SceneMaterialSrgSurvivesLastReleaseBeforeFirstCompileAndReregistration
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from MaterialTests
+[ RUN      ] MaterialTests.SceneMaterialSrgSurvivesLastReleaseBeforeFirstCompileAndReregistration
+F:\JericoEngine\JericoEngine\Code\Framework\AzCore\AzCore/UnitTest/UnitTest.h(175): error: Size of the buffer in the descriptor was 0
+
+
+F:\JericoEngine\JericoEngine\Code\Framework\AzCore\AzCore/UnitTest/UnitTest.h(175): error: Cannot continue building BufferAsset because 1 error(s) reported
+
+
+F:\JericoEngine\JericoEngine\Code\Framework\AzCore\AzCore/std/smart_ptr/intrusive_ptr.h(194): error: You can't dereference a null pointer
+

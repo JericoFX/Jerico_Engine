@@ -64,13 +64,13 @@ CDraw2d::CDraw2d(AZ::RPI::ViewportContextPtr viewportContext)
     m_defaultTextOptions.rotation = 0.0f;
     m_defaultTextOptions.depthTestEnabled = false;
 
-    AZ::Render::Bootstrap::NotificationBus::Handler::BusConnect();
+    JE::Render::Bootstrap::NotificationBus::Handler::BusConnect();
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 CDraw2d::~CDraw2d()
 {
-    AZ::Render::Bootstrap::NotificationBus::Handler::BusDisconnect();
+    JE::Render::Bootstrap::NotificationBus::Handler::BusDisconnect();
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////

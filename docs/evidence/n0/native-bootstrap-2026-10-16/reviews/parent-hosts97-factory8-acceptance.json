@@ -1,0 +1,36 @@
+{
+  "utc": "2026-10-16T21:01:03.8495640+00:00",
+  "owner": "/root",
+  "state": "HOSTS11_AND_FACTORY8_ACCEPTED_GPU_SHUTDOWN_PENDING",
+  "parentReadActualSummaryPostflightAndXml": true,
+  "freezeSHA256": "61847525B4CFD0C95E174AB7B2C2858D5881EA7483AF8613FC97414029AF349A",
+  "frozenInputs": 14064,
+  "absenceChecks": 44,
+  "inputMismatches": 0,
+  "hostBuildExit": 0,
+  "hostBuildSeconds": 156.649,
+  "hostPeakRamPct": 48.21,
+  "hostSummarySHA256": "8DC9C74F9F691855CED7F32ABBBD14FA2E9126CA736EFE32A7E37F991AF75209",
+  "ctestNativeExit": 0,
+  "ctestSeconds": 0.948,
+  "ctestResultSHA256": "49A58350A6FA6420D410872682E8D81A1769178D779CB44FD7BEA2E1A9FB9688",
+  "tests": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\native-bootstrap97-factory8-attempt1\\JE_RenderIntegration.Tests.xml",
+      "cases": 6,
+      "sha256": "381B2B8CC7520A8DA2B6F224E3174F8B6F26605A188A0E42719E76E309632720"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\native-bootstrap97-factory8-attempt1\\JE_EditorRenderIntegration.Tests.xml",
+      "cases": 2,
+      "sha256": "817DDC1B6D896C7CD08F9B76464DDB3119A2E6946D86787ACF798DFDF1E204BA"
+    }
+  ],
+  "currentIntegrationSHA256": "897FD69198465E04D5A7A64229980A58146564D9D61F668E3084CBE9A57BB3B7",
+  "rpi576ReusedBecauseUnchangedSourcesAndDll": true,
+  "rpiSHA256": "D651A668A35752ED1F8A707782891F79A9EF23D0BE05F05CCFC0A142BD9218E5",
+  "configure": "NOT_RUN",
+  "wholeGemIncrement": 0,
+  "nativeRuntimeShutdown": "PENDING",
+  "reviewerCorrection": "The runner summary stores missing/output/process counts as numbers; checked numeric zero after an initial reader incorrectly counted scalar zero as one array entry. Native results were unchanged."
+}

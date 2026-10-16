@@ -11,7 +11,7 @@
 #include <Atom/RPI.Public/WindowContext.h>
 #include <Atom/RPI.Public/ViewportContext.h>
 #include <Atom/RHI.Reflect/RenderStates.h>
-#include <Atom/Bootstrap/BootstrapNotificationBus.h>
+#include <JE/Render/Bootstrap/BootstrapNotificationBus.h>
 
 #ifndef _RELEASE
 #include <AzCore/std/containers/unordered_set.h>
@@ -21,7 +21,7 @@
 //! UI render interface
 //
 class UiRenderer
-    : public AZ::Render::Bootstrap::NotificationBus::Handler
+    : public JE::Render::Bootstrap::NotificationBus::Handler
 {
 public: // types
 
@@ -142,9 +142,9 @@ private: // member functions
 
     AZ_DISABLE_COPY_MOVE(UiRenderer);
 
-    // AZ::Render::Bootstrap::Notification
+    // JE::Render::Bootstrap::Notification
     void OnBootstrapSceneReady(AZ::RPI::Scene* bootstrapScene) override;
-    // ~AZ::Render::Bootstrap::Notification
+    // ~JE::Render::Bootstrap::Notification
 
     //! Create a scene for the user defined viewportContext
     AZ::RPI::ScenePtr CreateScene(AZStd::shared_ptr<AZ::RPI::ViewportContext> viewportContext);

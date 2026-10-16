@@ -1,0 +1,20 @@
+flowchart LR
+  n13["Atom_RPI [configured]"]
+  n31["CommonFeaturesAtom [configured]"]
+  n42["EMotionFX [configured]"]
+  n57["LmbrCentral [configured]"]
+  n68["MotionMatching"]
+  n72["NvCloth"]
+  n75["PhysX5 [configured]"]
+  n76["PhysX5Debug"]
+  n77["PhysXCommon [configured]"]
+  n85["RecastNavigation"]
+  n42 -->|"manifest"| n13
+  n42 -->|"manifest"| n57
+  n68 -->|"manifest"| n42
+  n72 -->|"manifest"| n31
+  n72 -->|"manifest"| n42
+  n75 -->|"manifest"| n77
+  n75 -->|"manifest"| n57
+  n75 -->|"manifest"| n31
+  n76 -->|"manifest"| n75

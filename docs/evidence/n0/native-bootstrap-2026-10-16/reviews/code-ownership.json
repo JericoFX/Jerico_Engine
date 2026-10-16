@@ -1,0 +1,544 @@
+{
+  "utc": "2026-10-16T21:21:37.7867145+00:00",
+  "owner": "/root",
+  "head": "4e26562ae9dc05d4c013ffb9d959cc19b2435d68",
+  "scope": "Bootstrap86 plus two causal RPI files; Bridge lifetime insertion is within existing86",
+  "baseOwnershipReviewSHA256": "7B448010BE6C4C3B071FC9BA6103AEF4705FBD5F58390ECE1C3B1DAE1DAC2243",
+  "boundedPrerequisiteReviewSHA256": "1F39ED78B648736F7A5DFB1AA59C3D6BDC742A24B3A72412DE93622CCC121DB7",
+  "all88InputsMatch": true,
+  "records": [
+    {
+      "path": "Engine/Render/Integration/Include/JE/Render/Bootstrap/BootstrapRequestBus.h",
+      "expectedPresent": true,
+      "sha256": "60E73715E8E7F9C9A797E12F451B5E224647FDD608BC7E3A6C595CF0988792C6",
+      "matches": true
+    },
+    {
+      "path": "Gems/Atom/Bootstrap/Code/Include/Atom/Bootstrap/BootstrapRequestBus.h",
+      "expectedPresent": false,
+      "sha256": null,
+      "matches": true
+    },
+    {
+      "path": "Engine/Render/Integration/Include/JE/Render/Bootstrap/BootstrapNotificationBus.h",
+      "expectedPresent": true,
+      "sha256": "E010FBC6DB4AAEB28DBC91C438CB6AF105C95DB92212CA28032D87A6D86C27B9",
+      "matches": true
+    },
+    {
+      "path": "Gems/Atom/Bootstrap/Code/Include/Atom/Bootstrap/BootstrapNotificationBus.h",
+      "expectedPresent": false,
+      "sha256": null,
+      "matches": true
+    },
+    {
+      "path": "Engine/Render/Integration/Include/JE/Render/Bootstrap/DefaultWindowBus.h",
+      "expectedPresent": true,
+      "sha256": "12DAEB647ACCB20D6E4FF958FC6F4CFA3A7F8F5D0C36D490136BBF892138BC8A",
+      "matches": true
+    },
+    {
+      "path": "Gems/Atom/Bootstrap/Code/Include/Atom/Bootstrap/DefaultWindowBus.h",
+      "expectedPresent": false,
+      "sha256": null,
+      "matches": true
+    },
+    {
+      "path": "Engine/Render/Integration/Source/Bootstrap/BootstrapSystemComponent.cpp",
+      "expectedPresent": true,
+      "sha256": "A5AFB7DA98888F2DF1CB2738956E060A2820DCFD993AAAE6D297EC9DF8A70CEF",
+      "matches": true
+    },
+    {
+      "path": "Gems/Atom/Bootstrap/Code/Source/BootstrapSystemComponent.cpp",
+      "expectedPresent": false,
+      "sha256": null,
+      "matches": true
+    },
+    {
+      "path": "Engine/Render/Integration/Source/Bootstrap/BootstrapSystemComponent.h",
+      "expectedPresent": true,
+      "sha256": "EE22ABA8E72B6DDD738CFBC1EEC070662B4FBF5DCB17FA8B3B2BCF6177473275",
+      "matches": true
+    },
+    {
+      "path": "Gems/Atom/Bootstrap/Code/Source/BootstrapSystemComponent.h",
+      "expectedPresent": false,
+      "sha256": null,
+      "matches": true
+    },
+    {
+      "path": "Engine/Render/Integration/Source/Bootstrap/BootstrapModule.cpp",
+      "expectedPresent": true,
+      "sha256": "90EEC25963293CB32BA4F2BA54528ABA7B4D545B546B82ED031BD57A49ED12CC",
+      "matches": true
+    },
+    {
+      "path": "Gems/Atom/Bootstrap/Code/Source/BootstrapModule.cpp",
+      "expectedPresent": false,
+      "sha256": null,
+      "matches": true
+    },
+    {
+      "path": "Engine/Render/Integration/Source/Bootstrap/Platform/Android/BootstrapSystemComponent_Traits_Platform.h",
+      "expectedPresent": true,
+      "sha256": "089E4ED2BA65E1808464A2C08E648C03339F8EA4FB1081BED2CEC999136DCC6B",
+      "matches": true
+    },
+    {
+      "path": "Gems/Atom/Bootstrap/Code/Source/Platform/Android/BootstrapSystemComponent_Traits_Platform.h",
+      "expectedPresent": false,
+      "sha256": null,
+      "matches": true
+    },
+    {
+      "path": "Engine/Render/Integration/Source/Bootstrap/Platform/Emscripten/BootstrapSystemComponent_Traits_Platform.h",
+      "expectedPresent": true,
+      "sha256": "089E4ED2BA65E1808464A2C08E648C03339F8EA4FB1081BED2CEC999136DCC6B",
+      "matches": true
+    },
+    {
+      "path": "Gems/Atom/Bootstrap/Code/Source/Platform/Emscripten/BootstrapSystemComponent_Traits_Platform.h",
+      "expectedPresent": false,
+      "sha256": null,
+      "matches": true
+    },
+    {
+      "path": "Engine/Render/Integration/Source/Bootstrap/Platform/iOS/BootstrapSystemComponent_Traits_Platform.h",
+      "expectedPresent": true,
+      "sha256": "B114EC626CB23A72B3C1A8C7768F15B01F9FC42789F5C51FCD02C656595FCD49",
+      "matches": true
+    },
+    {
+      "path": "Gems/Atom/Bootstrap/Code/Source/Platform/iOS/BootstrapSystemComponent_Traits_Platform.h",
+      "expectedPresent": false,
+      "sha256": null,
+      "matches": true
+    },
+    {
+      "path": "Engine/Render/Integration/Source/Bootstrap/Platform/Linux/BootstrapSystemComponent_Traits_Platform.h",
+      "expectedPresent": true,
+      "sha256": "1AB4DFD918B01333C55DD17B99F86ED46F58D2ED2A9F83B909616BCED184568F",
+      "matches": true
+    },
+    {
+      "path": "Gems/Atom/Bootstrap/Code/Source/Platform/Linux/BootstrapSystemComponent_Traits_Platform.h",
+      "expectedPresent": false,
+      "sha256": null,
+      "matches": true
+    },
+    {
+      "path": "Engine/Render/Integration/Source/Bootstrap/Platform/Mac/BootstrapSystemComponent_Traits_Platform.h",
+      "expectedPresent": true,
+      "sha256": "1AB4DFD918B01333C55DD17B99F86ED46F58D2ED2A9F83B909616BCED184568F",
+      "matches": true
+    },
+    {
+      "path": "Gems/Atom/Bootstrap/Code/Source/Platform/Mac/BootstrapSystemComponent_Traits_Platform.h",
+      "expectedPresent": false,
+      "sha256": null,
+      "matches": true
+    },
+    {
+      "path": "Engine/Render/Integration/Source/Bootstrap/Platform/Windows/BootstrapSystemComponent_Traits_Platform.h",
+      "expectedPresent": true,
+      "sha256": "1AB4DFD918B01333C55DD17B99F86ED46F58D2ED2A9F83B909616BCED184568F",
+      "matches": true
+    },
+    {
+      "path": "Gems/Atom/Bootstrap/Code/Source/Platform/Windows/BootstrapSystemComponent_Traits_Platform.h",
+      "expectedPresent": false,
+      "sha256": null,
+      "matches": true
+    },
+    {
+      "path": "Engine/Render/Integration/Include/JE/Render/Integration/RenderIntegrationModule.h",
+      "expectedPresent": true,
+      "sha256": "E8CB431FBE07683DB628A01B8F6DC337D205738641098851B5349EF396677755",
+      "matches": true
+    },
+    {
+      "path": "Engine/Render/Integration/Tests/RenderIntegrationTests.cpp",
+      "expectedPresent": true,
+      "sha256": "FCD95FC2A4A08AD8DFFA36E2106D683AB29A86C2105325C38EDCF84716089F3E",
+      "matches": true
+    },
+    {
+      "path": "Assets/Engine/SeedAssetList.seed",
+      "expectedPresent": true,
+      "sha256": "9FD1B916C4BDA94D758F87F2F0C1AA1B16B22AF34F41CC4057EE572E6BCAE8D4",
+      "matches": true
+    },
+    {
+      "path": "Engine/Render/Integration/Assets/seedList.seed",
+      "expectedPresent": true,
+      "sha256": "663ADFCB3CAC386EA468ADB50A143A3EF013A57EDDBC42D8BD7EE1D31F71E0B2",
+      "matches": true
+    },
+    {
+      "path": "Engine/Render/Integration/CMakeLists.txt",
+      "expectedPresent": true,
+      "sha256": "94EA95EAE54A9B3A5246878F54CA5937A92265284862FD2D174D92DE5806A73A",
+      "matches": true
+    },
+    {
+      "path": "Engine/Render/Integration/Source/AtomBridgeSystemComponent.cpp",
+      "expectedPresent": true,
+      "sha256": "616388C67FAFC0139AF870B141D83464618155DFFE27CF8A10B34BAFE3933BBA",
+      "matches": true
+    },
+    {
+      "path": "Engine/Render/Integration/Source/AtomBridgeSystemComponent.h",
+      "expectedPresent": true,
+      "sha256": "134905D934FD6E60544D9233C5C0BF3C51298C5AC3626DF50307608335CF3DEB",
+      "matches": true
+    },
+    {
+      "path": "Engine/Render/Integration/Source/Bootstrap/Platform/Android/bootstrap_android_files.cmake",
+      "expectedPresent": true,
+      "sha256": "10F25C1D2F0B68586AE3391E9C63E733096C1B4C74A5987B5B69EB81D26B88B7",
+      "matches": true
+    },
+    {
+      "path": "Engine/Render/Integration/Source/Bootstrap/Platform/Emscripten/bootstrap_emscripten_files.cmake",
+      "expectedPresent": true,
+      "sha256": "10F25C1D2F0B68586AE3391E9C63E733096C1B4C74A5987B5B69EB81D26B88B7",
+      "matches": true
+    },
+    {
+      "path": "Engine/Render/Integration/Source/Bootstrap/Platform/Linux/bootstrap_linux_files.cmake",
+      "expectedPresent": true,
+      "sha256": "10F25C1D2F0B68586AE3391E9C63E733096C1B4C74A5987B5B69EB81D26B88B7",
+      "matches": true
+    },
+    {
+      "path": "Engine/Render/Integration/Source/Bootstrap/Platform/Mac/bootstrap_mac_files.cmake",
+      "expectedPresent": true,
+      "sha256": "10F25C1D2F0B68586AE3391E9C63E733096C1B4C74A5987B5B69EB81D26B88B7",
+      "matches": true
+    },
+    {
+      "path": "Engine/Render/Integration/Source/Bootstrap/Platform/Windows/bootstrap_windows_files.cmake",
+      "expectedPresent": true,
+      "sha256": "10F25C1D2F0B68586AE3391E9C63E733096C1B4C74A5987B5B69EB81D26B88B7",
+      "matches": true
+    },
+    {
+      "path": "Engine/Render/Integration/Source/Bootstrap/Platform/iOS/bootstrap_ios_files.cmake",
+      "expectedPresent": true,
+      "sha256": "10F25C1D2F0B68586AE3391E9C63E733096C1B4C74A5987B5B69EB81D26B88B7",
+      "matches": true
+    },
+    {
+      "path": "Engine/Render/Integration/render_integration_dependencies.cmake",
+      "expectedPresent": true,
+      "sha256": "F379D2F883BD5B2B88FDE648F44E9D98131C2A0055C65FFB9718B8D2DF367AF8",
+      "matches": true
+    },
+    {
+      "path": "Engine/Render/Integration/render_integration_files.cmake",
+      "expectedPresent": true,
+      "sha256": "1B2965FF6AB2DA4877A31F69DC623DED74E8B929187507DDADEF33C984289298",
+      "matches": true
+    },
+    {
+      "path": "Engine/Render/Integration/render_integration_public_files.cmake",
+      "expectedPresent": true,
+      "sha256": "BD4F479820411190142AC89488FE5EB10D8AD0DC799FE974E91477566766AEE2",
+      "matches": true
+    },
+    {
+      "path": "Gems/Atom/Bootstrap/Assets/seedList.seed",
+      "expectedPresent": false,
+      "sha256": null,
+      "matches": true
+    },
+    {
+      "path": "Gems/Atom/Bootstrap/CMakeLists.txt",
+      "expectedPresent": false,
+      "sha256": null,
+      "matches": true
+    },
+    {
+      "path": "Gems/Atom/Bootstrap/Code/CMakeLists.txt",
+      "expectedPresent": false,
+      "sha256": null,
+      "matches": true
+    },
+    {
+      "path": "Gems/Atom/Bootstrap/Code/Source/Platform/Android/bootstrap_android_files.cmake",
+      "expectedPresent": false,
+      "sha256": null,
+      "matches": true
+    },
+    {
+      "path": "Gems/Atom/Bootstrap/Code/Source/Platform/Emscripten/bootstrap_emscripten_files.cmake",
+      "expectedPresent": false,
+      "sha256": null,
+      "matches": true
+    },
+    {
+      "path": "Gems/Atom/Bootstrap/Code/Source/Platform/Linux/bootstrap_linux_files.cmake",
+      "expectedPresent": false,
+      "sha256": null,
+      "matches": true
+    },
+    {
+      "path": "Gems/Atom/Bootstrap/Code/Source/Platform/Mac/bootstrap_mac_files.cmake",
+      "expectedPresent": false,
+      "sha256": null,
+      "matches": true
+    },
+    {
+      "path": "Gems/Atom/Bootstrap/Code/Source/Platform/Windows/bootstrap_windows_files.cmake",
+      "expectedPresent": false,
+      "sha256": null,
+      "matches": true
+    },
+    {
+      "path": "Gems/Atom/Bootstrap/Code/Source/Platform/iOS/bootstrap_ios_files.cmake",
+      "expectedPresent": false,
+      "sha256": null,
+      "matches": true
+    },
+    {
+      "path": "Gems/Atom/Bootstrap/Code/bootstrap_files.cmake",
+      "expectedPresent": false,
+      "sha256": null,
+      "matches": true
+    },
+    {
+      "path": "Gems/Atom/Bootstrap/Code/bootstrap_headers_files.cmake",
+      "expectedPresent": false,
+      "sha256": null,
+      "matches": true
+    },
+    {
+      "path": "Gems/Atom/Bootstrap/gem.json",
+      "expectedPresent": false,
+      "sha256": null,
+      "matches": true
+    },
+    {
+      "path": "Gems/Atom/Bootstrap/preview.png",
+      "expectedPresent": false,
+      "sha256": null,
+      "matches": true
+    },
+    {
+      "path": "Gems/Atom/Tools/AtomToolsFramework/Code/CMakeLists.txt",
+      "expectedPresent": true,
+      "sha256": "84D800997B2D082EF3DED72BBC2BE9D38439B5645F6A68E53184DC9AC16985CC",
+      "matches": true
+    },
+    {
+      "path": "Gems/Atom/Tools/AtomToolsFramework/Code/Source/Viewport/RenderViewportWidget.cpp",
+      "expectedPresent": true,
+      "sha256": "6A3B78B497414CE1C2D938A5867EAE2FF7F2D4A78E11D9E95FE599A944579081",
+      "matches": true
+    },
+    {
+      "path": "Gems/Atom/Tools/AtomToolsFramework/gem.json",
+      "expectedPresent": true,
+      "sha256": "AE1139338A95F281AF0F59CC0553E790792BBB8B7AED92AACC9D8A8BEC330FA7",
+      "matches": true
+    },
+    {
+      "path": "Gems/Atom/gem.json",
+      "expectedPresent": true,
+      "sha256": "D20C64A00440037E54460487D007435ADEB400639A0C93F7C8C8F4C0BB5C597C",
+      "matches": true
+    },
+    {
+      "path": "Gems/AtomLyIntegration/AtomViewportDisplayIcons/Code/CMakeLists.txt",
+      "expectedPresent": true,
+      "sha256": "33386A3786597F10C51B03F54D96A9E2A58639A2079A26ECA1458DCE54AB7E55",
+      "matches": true
+    },
+    {
+      "path": "Gems/AtomLyIntegration/AtomViewportDisplayIcons/Code/Source/AtomViewportDisplayIconsSystemComponent.cpp",
+      "expectedPresent": true,
+      "sha256": "B7C212FD563727CB4C5F6AF063778FF40C83147E63366128B45DAE2466240AC5",
+      "matches": true
+    },
+    {
+      "path": "Gems/AtomLyIntegration/AtomViewportDisplayIcons/Code/Source/AtomViewportDisplayIconsSystemComponent.h",
+      "expectedPresent": true,
+      "sha256": "379C400D5A7CAC2476E48691BCCDBE5FBEC3818B76D4910E3FD65F47AF2F7521",
+      "matches": true
+    },
+    {
+      "path": "Gems/AtomLyIntegration/AtomViewportDisplayIcons/gem.json",
+      "expectedPresent": true,
+      "sha256": "1AD43B95DB232B06809B616D39DDD655B8AC2205533F83C35683CBD30FE3A062",
+      "matches": true
+    },
+    {
+      "path": "Gems/AtomLyIntegration/CommonFeatures/Code/CMakeLists.txt",
+      "expectedPresent": true,
+      "sha256": "B2E228A21CCFA11374D772C2C01828E24C5FC64572123148C604CC0A9F8D6B17",
+      "matches": true
+    },
+    {
+      "path": "Gems/AtomLyIntegration/CommonFeatures/Code/Source/SkinnedMesh/SkinnedMeshDebugDisplay.cpp",
+      "expectedPresent": true,
+      "sha256": "BDCF8F9B3FFE848CF29D40C06A65390C97E49B6C5F8D6DF076F2EBFE390D9A5D",
+      "matches": true
+    },
+    {
+      "path": "Gems/AtomLyIntegration/CommonFeatures/Code/Source/SkinnedMesh/SkinnedMeshDebugDisplay.h",
+      "expectedPresent": true,
+      "sha256": "F10995F16D71C2E88377F526D2CC96FFDE0249C1832C2C6B158BD4261960F114",
+      "matches": true
+    },
+    {
+      "path": "Gems/AtomLyIntegration/CommonFeatures/gem.json",
+      "expectedPresent": true,
+      "sha256": "B6FCF194B7E7836C544DC61233DDCB36C11F2224A0941451639857C92C7F84CA",
+      "matches": true
+    },
+    {
+      "path": "Gems/AtomLyIntegration/gem.json",
+      "expectedPresent": true,
+      "sha256": "AEA5DC5E4673E50FED12F29019A73E910692A2E0637605C658B7B1F1B7022C7E",
+      "matches": true
+    },
+    {
+      "path": "Gems/DebugDraw/Code/CMakeLists.txt",
+      "expectedPresent": true,
+      "sha256": "4B9366C4D98262B40B8F7E6CE4D0B04C3021CCCFEECA34BE68677D8243BAC8C3",
+      "matches": true
+    },
+    {
+      "path": "Gems/DebugDraw/Code/Source/DebugDrawSystemComponent.cpp",
+      "expectedPresent": true,
+      "sha256": "A576158DF7C435F8010E5CBEE918A58812D267B4AD5647681EB62EDEEA6DE67A",
+      "matches": true
+    },
+    {
+      "path": "Gems/DebugDraw/Code/Source/DebugDrawSystemComponent.h",
+      "expectedPresent": true,
+      "sha256": "D2E6B41779FED34F7892CDBBCB8F4BE0E30FEC8F9091F4D075955F876437CD9B",
+      "matches": true
+    },
+    {
+      "path": "Gems/DebugDraw/gem.json",
+      "expectedPresent": true,
+      "sha256": "BB06AEF5BC7C4F73D05CB21D13A7105978C2FD15A388D2DF0ADE7F05A6807F9B",
+      "matches": true
+    },
+    {
+      "path": "Gems/LyShine/Code/CMakeLists.txt",
+      "expectedPresent": true,
+      "sha256": "E60A7A68E3794B79866376E37077FFBC300486D777933F59CF336A1EE84A6DD9",
+      "matches": true
+    },
+    {
+      "path": "Gems/LyShine/Code/Source/Draw2d.cpp",
+      "expectedPresent": true,
+      "sha256": "ECD781881290BB4F08D6820CB206A0F46E21011E383B7102F2B3DFB20BC75C2D",
+      "matches": true
+    },
+    {
+      "path": "Gems/LyShine/Code/Source/Draw2d.h",
+      "expectedPresent": true,
+      "sha256": "F5349CF5C37D0DACEB5F850D708C4B8A7B25114FDE92F91DD986F009D13B4D3B",
+      "matches": true
+    },
+    {
+      "path": "Gems/LyShine/Code/Source/LyShine.cpp",
+      "expectedPresent": true,
+      "sha256": "4603BF7E11F989AC01298DE8091D224154925484E2199663A0EFEC5E54EFC493",
+      "matches": true
+    },
+    {
+      "path": "Gems/LyShine/Code/Source/LyShine.h",
+      "expectedPresent": true,
+      "sha256": "4BB0D3BBD996FB09D0D3C9D8C9E9F427949700471993F2E397548D505951E207",
+      "matches": true
+    },
+    {
+      "path": "Gems/LyShine/Code/Source/UiRenderer.cpp",
+      "expectedPresent": true,
+      "sha256": "C6D62E4037DEB2E4A3FFD88ACB68D2E4DC7068C1538C5F6F71D2721B9CC5F378",
+      "matches": true
+    },
+    {
+      "path": "Gems/LyShine/Code/Source/UiRenderer.h",
+      "expectedPresent": true,
+      "sha256": "1C234E66695A51F4EA4EB6776137DA89220AA45C4EACE4F81B9E3E95055EAC43",
+      "matches": true
+    },
+    {
+      "path": "Gems/LyShine/gem.json",
+      "expectedPresent": true,
+      "sha256": "06BD5287B69570D8C83B59864E77B4D3224FC7339627E4A5EE17D7C55BA5E597",
+      "matches": true
+    },
+    {
+      "path": "Gems/Maestro/Code/CMakeLists.txt",
+      "expectedPresent": true,
+      "sha256": "CBA454FAC788F89C51D24786FBB882A460EC6C29CBD392F7ABEBB09F0A317B84",
+      "matches": true
+    },
+    {
+      "path": "Gems/Maestro/gem.json",
+      "expectedPresent": true,
+      "sha256": "93321AABBBF36610F828B0F97DF8E8FCAB62E00327E8B59EAE1D5607CB0C1D94",
+      "matches": true
+    },
+    {
+      "path": "engine.json",
+      "expectedPresent": true,
+      "sha256": "560A23F16BA13D2EBF5FF5AE12DD590081B76EBAF0F4037338DB6725946C851A",
+      "matches": true
+    },
+    {
+      "path": "Code/LauncherUnified/Launcher.cpp",
+      "expectedPresent": true,
+      "sha256": "A04FBBF994F63BCEF115446DCDC24E5E9611DC3C6E7D795BEAFDCB2B3C4862DD",
+      "matches": true
+    },
+    {
+      "path": "Code/Editor/EditorToolsApplication.cpp",
+      "expectedPresent": true,
+      "sha256": "49F26CA4D25A65F7534E2FE9CE30574179060C8FA527BFBD7E9019D0C2A03095",
+      "matches": true
+    },
+    {
+      "path": "Code/Tools/AssetProcessor/native/utilities/ApplicationManager.cpp",
+      "expectedPresent": true,
+      "sha256": "DCB93B22BBCF8AD933FAABF8BF54B019DA8D641D64258D3E4C0CF87CEE0D989C",
+      "matches": true
+    },
+    {
+      "path": "Code/Tools/AssetProcessor/AssetBuilder/AssetBuilderApplication.cpp",
+      "expectedPresent": true,
+      "sha256": "693311C86DD724430FAFDB402C625B916BFF88C674AAE342D1F79C181F5ED687",
+      "matches": true
+    },
+    {
+      "path": "Gems/Atom/Tools/AtomToolsFramework/Code/Source/Application/AtomToolsApplication.cpp",
+      "expectedPresent": true,
+      "sha256": "CD039C72D61437FEC0D71AA0FF88CBB67062DD1FE676088F944E2F45E1547789",
+      "matches": true
+    },
+    {
+      "path": "Gems/Atom/RPI/Code/Source/RPI.Public/Material/MaterialSystem.cpp",
+      "expectedPresent": true,
+      "sha256": "5F9C69084561DC9F78A81472E7EFE05126BD452A38F1844A475CA71BFEC317E1",
+      "matches": true
+    },
+    {
+      "path": "Gems/Atom/RPI/Code/Tests/Material/MaterialTests.cpp",
+      "expectedPresent": true,
+      "sha256": "0DF033DCBFD93B35D3190CF06C0A015C9442940BF170F7C13A27FD3787AADFAA",
+      "matches": true
+    }
+  ],
+  "sourceWrites": false,
+  "gitMutations": false,
+  "cleanHeadBuild": "NOT_RUN",
+  "sdkFinal": "PENDING",
+  "wholeGemIncrement": 0
+}

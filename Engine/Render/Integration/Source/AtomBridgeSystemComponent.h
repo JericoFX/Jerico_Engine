@@ -23,7 +23,7 @@
 #include <Atom/RPI.Public/View.h>
 #include <Atom/RPI.Public/Shader/ShaderResourceGroup.h>
 #include <Atom/RPI.Public/ViewportContextBus.h>
-#include <Atom/Bootstrap/BootstrapNotificationBus.h>
+#include <JE/Render/Bootstrap/BootstrapNotificationBus.h>
 
 namespace JE::Render::Integration
 {
@@ -35,7 +35,7 @@ namespace JE::Render::Integration
             : public AZ::Component
             , public AzFramework::Render::RenderSystemRequestBus::Handler
             , public AzFramework::Components::DeprecatedComponentsRequestBus::Handler
-            , public AZ::Render::Bootstrap::NotificationBus::Handler
+            , public JE::Render::Bootstrap::NotificationBus::Handler
             , protected AtomBridgeRequestBus::Handler
             , public AZ::RPI::ViewportContextManagerNotificationsBus::Handler
         {
@@ -67,7 +67,7 @@ namespace JE::Render::Integration
             // AtomBridgeRequestBus::Handler overrides ...
             // (Empty)
 
-            // AZ::Render::Bootstrap::NotificationBus overrides
+            // JE::Render::Bootstrap::NotificationBus overrides
             void OnBootstrapSceneReady(AZ::RPI::Scene* bootstrapScene) override;
 
             // ViewportContextManagerNotificationsBus overrides

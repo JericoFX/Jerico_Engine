@@ -14,7 +14,7 @@
 
 #include <AzToolsFramework/API/EditorViewportIconDisplayInterface.h>
 #include <Atom/RPI.Public/DynamicDraw/DynamicDrawInterface.h>
-#include <Atom/Bootstrap/BootstrapNotificationBus.h>
+#include <JE/Render/Bootstrap/BootstrapNotificationBus.h>
 
 #include <QImage>
 #include <QSize>
@@ -29,7 +29,7 @@ namespace AZ
         class AtomViewportDisplayIconsSystemComponent
             : public AZ::Component
             , public AzToolsFramework::EditorViewportIconDisplayInterface
-            , public AZ::Render::Bootstrap::NotificationBus::Handler
+            , public JE::Render::Bootstrap::NotificationBus::Handler
             , private Data::AssetBus::Handler
         {
         public:
@@ -55,7 +55,7 @@ namespace AZ
             IconId GetOrLoadIconForPath(AZStd::string_view path) override;
             IconLoadStatus GetIconLoadStatus(IconId icon) override;
 
-            // AZ::Render::Bootstrap::NotificationBus::Handler overrides...
+            // JE::Render::Bootstrap::NotificationBus::Handler overrides...
             void OnBootstrapSceneReady(AZ::RPI::Scene* bootstrapScene) override;
 
             // Data::AssetBus::Handler overrides...

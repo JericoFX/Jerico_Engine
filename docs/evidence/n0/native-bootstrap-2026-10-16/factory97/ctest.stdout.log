@@ -1,0 +1,13 @@
+Test project F:/JericoEngine/JericoEngine/build/n0-validation/original-engine
+    Start 103: JE::RenderIntegration.Tests.main::TEST_RUN
+1/2 Test #103: JE::RenderIntegration.Tests.main::TEST_RUN .........   Passed    0.04 sec
+    Start 104: JE::EditorRenderIntegration.Tests.main::TEST_RUN
+2/2 Test #104: JE::EditorRenderIntegration.Tests.main::TEST_RUN ...   Passed    0.04 sec
+
+100% tests passed, 0 tests failed out of 2
+
+Label Time Summary:
+FRAMEWORK_googletest    =   0.08 sec*proc (2 tests)
+SUITE_main              =   0.08 sec*proc (2 tests)
+
+Total Test time (real) =   0.89 sec

@@ -17,7 +17,6 @@
     "dependencies": [
         "Atom_RPI",
         "Atom_RHI",
-        "Atom_Bootstrap",
         "GraphCanvas",
         "GraphModel"
     ]

@@ -1,0 +1,76 @@
+flowchart LR
+  n4["Atom [configured]"]
+  n7["Atom_Feature_Common [configured]"]
+  n8["Atom_RHI [configured]"]
+  n11["Atom_RHI_Null [configured]"]
+  n13["Atom_RPI [configured]"]
+  n16["AtomFont [configured]"]
+  n18["AtomLyIntegration"]
+  n19["AtomRenderOptions [configured]"]
+  n21["AtomToolsFramework [configured]"]
+  n22["AtomTressFX"]
+  n23["AtomViewportDisplayIcons [configured]"]
+  n24["AtomViewportDisplayInfo [configured]"]
+  n31["CommonFeaturesAtom [configured]"]
+  n35["DccScriptingInterface"]
+  n37["DebugDraw"]
+  n39["DiffuseProbeGrid"]
+  n40["EditorModeFeedback [configured]"]
+  n42["EMotionFX [configured]"]
+  n43["EMotionFX_Atom [configured]"]
+  n49["GradientSignal [configured]"]
+  n52["ImageProcessingAtom [configured]"]
+  n57["LmbrCentral [configured]"]
+  n64["Meshlets"]
+  n74["PassCanvas"]
+  n84["QtForPython"]
+  n98["ShaderManagementConsole [configured]"]
+  n99["SkyAtmosphere"]
+  n102["Stars"]
+  n108["SurfaceData [configured]"]
+  n7 -->|"manifest"| n13
+  n7 -->|"manifest"| n8
+  n16 -->|"manifest"| n8
+  n16 -->|"manifest"| n13
+  n19 -->|"manifest"| n13
+  n23 -->|"manifest"| n8
+  n23 -->|"manifest"| n13
+  n24 -->|"manifest"| n8
+  n24 -->|"manifest"| n13
+  n31 -->|"manifest"| n7
+  n31 -->|"manifest"| n57
+  n31 -->|"manifest"| n49
+  n31 -->|"manifest"| n108
+  n31 -->|"manifest"| n13
+  n31 -->|"manifest"| n21
+  n40 -->|"manifest"| n7
+  n40 -->|"manifest"| n13
+  n40 -->|"manifest"| n8
+  n40 -->|"manifest"| n31
+  n43 -->|"manifest"| n42
+  n43 -->|"manifest"| n7
+  n43 -->|"manifest"| n13
+  n43 -->|"manifest"| n8
+  n43 -->|"manifest"| n31
+  n18 -->|"manifest"| n16
+  n18 -->|"manifest"| n19
+  n18 -->|"manifest"| n23
+  n18 -->|"manifest"| n24
+  n18 -->|"manifest"| n31
+  n18 -->|"manifest"| n40
+  n18 -->|"manifest"| n43
+  n18 -->|"manifest"| n13
+  n18 -->|"manifest"| n8
+  n18 -->|"manifest"| n11
+  n18 -->|"manifest"| n7
+  n18 -->|"manifest"| n52
+  n18 -->|"manifest"| n21
+  n18 -->|"manifest"| n74
+  n18 -->|"manifest"| n98
+  n35 -->|"manifest"| n84
+  n37 -->|"manifest"| n13
+  n39 -->|"manifest"| n13
+  n39 -->|"manifest"| n4
+  n39 -->|"manifest"| n57
+  n99 -->|"manifest"| n13
+  n99 -->|"manifest"| n31

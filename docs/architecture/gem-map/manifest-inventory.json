@@ -1,0 +1,1886 @@
+[
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\AutomatedTesting\\Gem\\gem.json",
+    "relativePath": "AutomatedTesting/Gem/gem.json",
+    "classification": "source-gem",
+    "name": "AutomatedTesting",
+    "version": "0.0.0",
+    "type": "Code",
+    "summary": "Project Gem for customizing the AutomatedTesting project functionality.",
+    "dependencies": [],
+    "externalSubdirectories": [
+      "PythonCoverage"
+    ]
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\AutomatedTesting\\Gem\\PythonCoverage\\gem.json",
+    "relativePath": "AutomatedTesting/Gem/PythonCoverage/gem.json",
+    "classification": "source-gem",
+    "name": "PythonCoverage",
+    "version": "0.0.0",
+    "type": "Tool",
+    "summary": "A tool for generating gem coverage for Python tests.",
+    "dependencies": [],
+    "externalSubdirectories": [
+      null
+    ]
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\AutomatedTesting\\Gem\\Sponza\\gem.json",
+    "relativePath": "AutomatedTesting/Gem/Sponza/gem.json",
+    "classification": "source-gem",
+    "name": "Sponza",
+    "version": "0.0.0",
+    "type": "Asset",
+    "summary": "A standard test scene for Global Illumination (forked from crytek sponza scene)",
+    "dependencies": [],
+    "externalSubdirectories": [
+      null
+    ]
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Code\\Tools\\AssetBundler\\tests\\Gems\\GemA\\gem.json",
+    "relativePath": "Code/Tools/AssetBundler/tests/Gems/GemA/gem.json",
+    "classification": "test-fixture",
+    "name": null,
+    "version": "0.1.0",
+    "type": null,
+    "summary": "Only for unit test purposes.",
+    "dependencies": [
+      null
+    ],
+    "externalSubdirectories": [
+      null
+    ]
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Code\\Tools\\AssetBundler\\tests\\Gems\\GemB\\gem.json",
+    "relativePath": "Code/Tools/AssetBundler/tests/Gems/GemB/gem.json",
+    "classification": "test-fixture",
+    "name": null,
+    "version": "0.1.0",
+    "type": null,
+    "summary": "Only for unit test purposes.",
+    "dependencies": [
+      null
+    ],
+    "externalSubdirectories": [
+      null
+    ]
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Code\\Tools\\AssetBundler\\tests\\Gems\\GemC\\gem.json",
+    "relativePath": "Code/Tools/AssetBundler/tests/Gems/GemC/gem.json",
+    "classification": "test-fixture",
+    "name": null,
+    "version": "0.1.0",
+    "type": null,
+    "summary": "Only for unit test purposes.",
+    "dependencies": [
+      null
+    ],
+    "externalSubdirectories": [
+      null
+    ]
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Achievements\\gem.json",
+    "relativePath": "Gems/Achievements/gem.json",
+    "classification": "source-gem",
+    "name": "Achievements",
+    "version": "0.0.0",
+    "type": "Code",
+    "summary": "The Achievements Gem provides a target platform agnostic interface for retrieving achievement details and unlocking achievements.",
+    "dependencies": [],
+    "externalSubdirectories": [
+      null
+    ]
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AFR\\gem.json",
+    "relativePath": "Gems/AFR/gem.json",
+    "classification": "source-gem",
+    "name": "AFR",
+    "version": "1.0.0",
+    "type": "Code",
+    "summary": "This gem enables alternate frame rendering (AFR) by alterating rendering tasks over the GPUs. The Gem is enabled by passing --afr <pipelinename> (as well as --device-count <#gpus> with the number of GPUs to use) to the executable on the command line. <pipelinename> should be a (at least partial) match for a RenderPipeline name, for which AFR should execute. This RenderPipeline needs to have a CopyToSwapChain pass at the end. If no <pipelinename> is passed, AFR is applied to the first pipeline that posses such a CopyToSwapChain pass.",
+    "dependencies": [],
+    "externalSubdirectories": [
+      null
+    ]
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Archive\\gem.json",
+    "relativePath": "Gems/Archive/gem.json",
+    "classification": "source-gem",
+    "name": "Archive",
+    "version": "1.0.0",
+    "type": "Code",
+    "summary": "The Archive Gem provides reading and writing support of file contents to the O3AR archive format with optional per file compression support.",
+    "dependencies": [
+      "Compression"
+    ],
+    "externalSubdirectories": [
+      null
+    ]
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AssetValidation\\gem.json",
+    "relativePath": "Gems/AssetValidation/gem.json",
+    "classification": "source-gem",
+    "name": "AssetValidation",
+    "version": "0.0.0",
+    "type": "Code",
+    "summary": "The Asset Validation Gem provides seed-related commands to ensure assets have valid seeds for asset bundling.",
+    "dependencies": [],
+    "externalSubdirectories": [
+      null
+    ]
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Asset\\ImageProcessingAtom\\gem.json",
+    "relativePath": "Gems/Atom/Asset/ImageProcessingAtom/gem.json",
+    "classification": "source-gem",
+    "name": "ImageProcessingAtom",
+    "version": "0.0.0",
+    "type": "Code",
+    "summary": "Image processing for Atom",
+    "dependencies": [
+      "Atom_RPI",
+      "Atom_RHI"
+    ],
+    "externalSubdirectories": [
+      null
+    ]
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Feature\\Common\\gem.json",
+    "relativePath": "Gems/Atom/Feature/Common/gem.json",
+    "classification": "source-gem",
+    "name": "Atom_Feature_Common",
+    "version": "1.0.0",
+    "type": "Code",
+    "summary": "Common features for Atom",
+    "dependencies": [
+      "Atom_RPI",
+      "Atom_RHI"
+    ],
+    "externalSubdirectories": [
+      null
+    ]
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\gem.json",
+    "relativePath": "Gems/Atom/gem.json",
+    "classification": "source-gem",
+    "name": "Atom",
+    "version": "0.1.0",
+    "type": "Code",
+    "summary": "The Atom Renderer Gem provides Atom Renderer and its associated tools (such as Material Editor), utilites, libraries, and interfaces.",
+    "dependencies": [
+      "Atom_Feature_Common",
+      "Atom_RHI",
+      "Atom_RPI",
+      "AtomToolsFramework",
+      "ShaderManagementConsole",
+      "Atom_RHI_Null",
+      "AtomRenderOptions",
+      "CommonFeaturesAtom",
+      "EMotionFX_Atom",
+      "AtomFont",
+      "AtomViewportDisplayInfo",
+      "ImageProcessingAtom",
+      "AtomViewportDisplayIcons"
+    ],
+    "externalSubdirectories": [
+      "Asset/ImageProcessingAtom",
+      "Feature/Common",
+      "RHI",
+      "RPI",
+      "Tools/AtomToolsFramework",
+      "Tools/MaterialCanvas",
+      "Tools/MaterialEditor",
+      "Tools/PassCanvas",
+      "Tools/ShaderManagementConsole"
+    ]
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\RHI\\DX12\\gem.json",
+    "relativePath": "Gems/Atom/RHI/DX12/gem.json",
+    "classification": "source-gem",
+    "name": "Atom_RHI_DX12",
+    "version": "0.0.0",
+    "type": "Code",
+    "summary": "DX12 RHI for Atom",
+    "dependencies": [],
+    "externalSubdirectories": [
+      null
+    ]
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\RHI\\gem.json",
+    "relativePath": "Gems/Atom/RHI/gem.json",
+    "classification": "source-gem",
+    "name": "Atom_RHI",
+    "version": "0.0.0",
+    "type": "Code",
+    "summary": "RHI for Atom",
+    "dependencies": [
+      "Atom_RHI_DX12",
+      "Atom_RHI_Metal",
+      "Atom_RHI_Vulkan",
+      "Atom_RHI_Null"
+    ],
+    "externalSubdirectories": [
+      "DX12",
+      "Metal",
+      "Null",
+      "Vulkan"
+    ]
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\RHI\\Metal\\gem.json",
+    "relativePath": "Gems/Atom/RHI/Metal/gem.json",
+    "classification": "source-gem",
+    "name": "Atom_RHI_Metal",
+    "version": "0.0.0",
+    "type": "Code",
+    "summary": "Metal RHI for Atom",
+    "dependencies": [],
+    "externalSubdirectories": [
+      null
+    ]
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\RHI\\Null\\gem.json",
+    "relativePath": "Gems/Atom/RHI/Null/gem.json",
+    "classification": "source-gem",
+    "name": "Atom_RHI_Null",
+    "version": "0.0.0",
+    "type": "Code",
+    "summary": "Atom Null RHI",
+    "dependencies": [],
+    "externalSubdirectories": [
+      null
+    ]
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\RHI\\Vulkan\\gem.json",
+    "relativePath": "Gems/Atom/RHI/Vulkan/gem.json",
+    "classification": "source-gem",
+    "name": "Atom_RHI_Vulkan",
+    "version": "0.0.0",
+    "type": "Code",
+    "summary": "Vulcan RHI for Atom",
+    "dependencies": [],
+    "externalSubdirectories": [
+      null
+    ]
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\RPI\\gem.json",
+    "relativePath": "Gems/Atom/RPI/gem.json",
+    "classification": "source-gem",
+    "name": "Atom_RPI",
+    "version": "0.0.1",
+    "type": "Code",
+    "summary": "RPI for Atom",
+    "dependencies": [
+      "Atom_RHI"
+    ],
+    "externalSubdirectories": [
+      null
+    ]
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\AtomToolsFramework\\gem.json",
+    "relativePath": "Gems/Atom/Tools/AtomToolsFramework/gem.json",
+    "classification": "source-gem",
+    "name": "AtomToolsFramework",
+    "version": "0.0.0",
+    "type": "Code",
+    "summary": "Tools Framework for Atom",
+    "dependencies": [
+      "Atom_RPI",
+      "Atom_RHI",
+      "GraphCanvas",
+      "GraphModel"
+    ],
+    "externalSubdirectories": [
+      null
+    ]
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\MaterialCanvas\\gem.json",
+    "relativePath": "Gems/Atom/Tools/MaterialCanvas/gem.json",
+    "classification": "source-gem",
+    "name": "MaterialCanvas",
+    "version": "0.0.0",
+    "type": "Tool",
+    "summary": "Editor for creating, modifying, and previewing materials",
+    "dependencies": [
+      "AtomToolsFramework",
+      "Atom_RPI",
+      "Atom_RHI",
+      "Atom_Feature_Common",
+      "ImageProcessingAtom",
+      "CommonFeaturesAtom"
+    ],
+    "externalSubdirectories": [
+      null
+    ]
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\MaterialEditor\\gem.json",
+    "relativePath": "Gems/Atom/Tools/MaterialEditor/gem.json",
+    "classification": "source-gem",
+    "name": "MaterialEditor",
+    "version": "0.0.0",
+    "type": "Tool",
+    "summary": "Editor for creating, modifying, and previewing materials",
+    "dependencies": [
+      "AtomToolsFramework",
+      "Atom_RPI",
+      "Atom_RHI",
+      "Atom_Feature_Common",
+      "ImageProcessingAtom",
+      "CommonFeaturesAtom"
+    ],
+    "externalSubdirectories": [
+      null
+    ]
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\PassCanvas\\gem.json",
+    "relativePath": "Gems/Atom/Tools/PassCanvas/gem.json",
+    "classification": "source-gem",
+    "name": "PassCanvas",
+    "version": "0.0.0",
+    "type": "Tool",
+    "summary": "Editor for creating, modifying, and previewing passes",
+    "dependencies": [
+      "AtomToolsFramework",
+      "Atom_RPI",
+      "Atom_RHI",
+      "Atom_Feature_Common",
+      "ImageProcessingAtom",
+      "CommonFeaturesAtom"
+    ],
+    "externalSubdirectories": [
+      null
+    ]
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\ShaderManagementConsole\\gem.json",
+    "relativePath": "Gems/Atom/Tools/ShaderManagementConsole/gem.json",
+    "classification": "source-gem",
+    "name": "ShaderManagementConsole",
+    "version": "0.0.0",
+    "type": "Tool",
+    "summary": "Tool for generating and inspecting shader variant lists",
+    "dependencies": [
+      "AtomToolsFramework",
+      "Atom_RPI",
+      "Atom_RHI",
+      "Atom_Feature_Common",
+      "ImageProcessingAtom",
+      "CommonFeaturesAtom"
+    ],
+    "externalSubdirectories": [
+      null
+    ]
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomContent\\gem.json",
+    "relativePath": "Gems/AtomContent/gem.json",
+    "classification": "source-gem",
+    "name": "AtomContent",
+    "version": "0.0.0",
+    "type": "Asset",
+    "summary": "The Atom Content Gem provides assets for Atom Renderer and a modified version of the <a href='https://renderman.pixar.com/look-development-studio'>Pixar Look Development Studio</a>.",
+    "dependencies": [
+      "Sponza",
+      "ReferenceMaterials"
+    ],
+    "externalSubdirectories": [
+      "Sponza",
+      "ReferenceMaterials",
+      "TestData"
+    ]
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomContent\\ReferenceMaterials\\gem.json",
+    "relativePath": "Gems/AtomContent/ReferenceMaterials/gem.json",
+    "classification": "source-gem",
+    "name": "ReferenceMaterials",
+    "version": "0.0.0",
+    "type": "Asset",
+    "summary": "Atom Asset Gem with a library of reference materials for StandardPBR (and others in the future)",
+    "dependencies": [],
+    "externalSubdirectories": [
+      null
+    ]
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomContent\\Sponza\\gem.json",
+    "relativePath": "Gems/AtomContent/Sponza/gem.json",
+    "classification": "source-gem",
+    "name": "Sponza",
+    "version": "0.0.0",
+    "type": "Asset",
+    "summary": "A standard test scene for Global Illumination (forked from crytek sponza scene)",
+    "dependencies": [],
+    "externalSubdirectories": [
+      null
+    ]
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomContent\\TestData\\gem.json",
+    "relativePath": "Gems/AtomContent/TestData/gem.json",
+    "classification": "source-gem",
+    "name": "Atom_TestData",
+    "version": "1.0.0",
+    "type": "Asset",
+    "summary": "A set of Test Asset Data to use with Atom",
+    "dependencies": [],
+    "externalSubdirectories": [
+      null
+    ]
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\AtomFont\\gem.json",
+    "relativePath": "Gems/AtomLyIntegration/AtomFont/gem.json",
+    "classification": "source-gem",
+    "name": "AtomFont",
+    "version": "0.0.0",
+    "type": "Code",
+    "summary": "Font Rendering for Atom",
+    "dependencies": [
+      "Atom_RHI",
+      "Atom_RPI"
+    ],
+    "externalSubdirectories": [
+      null
+    ]
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\AtomRenderOptions\\gem.json",
+    "relativePath": "Gems/AtomLyIntegration/AtomRenderOptions/gem.json",
+    "classification": "source-gem",
+    "name": "AtomRenderOptions",
+    "version": "0.0.0",
+    "type": "Code",
+    "summary": "Allow to toggle and edit render passes in the viewport",
+    "dependencies": [
+      "Atom_RPI"
+    ],
+    "externalSubdirectories": [
+      null
+    ]
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\AtomViewportDisplayIcons\\gem.json",
+    "relativePath": "Gems/AtomLyIntegration/AtomViewportDisplayIcons/gem.json",
+    "classification": "source-gem",
+    "name": "AtomViewportDisplayIcons",
+    "version": "0.0.0",
+    "type": "Code",
+    "summary": "Viewport display icons for Atom",
+    "dependencies": [
+      "Atom_RHI",
+      "Atom_RPI"
+    ],
+    "externalSubdirectories": [
+      null
+    ]
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\AtomViewportDisplayInfo\\gem.json",
+    "relativePath": "Gems/AtomLyIntegration/AtomViewportDisplayInfo/gem.json",
+    "classification": "source-gem",
+    "name": "AtomViewportDisplayInfo",
+    "version": "0.0.0",
+    "type": "Code",
+    "summary": "Viewport Display Information for Atom",
+    "dependencies": [
+      "Atom_RHI",
+      "Atom_RPI"
+    ],
+    "externalSubdirectories": [
+      null
+    ]
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\CommonFeatures\\gem.json",
+    "relativePath": "Gems/AtomLyIntegration/CommonFeatures/gem.json",
+    "classification": "source-gem",
+    "name": "CommonFeaturesAtom",
+    "version": "0.0.0",
+    "type": "Code",
+    "summary": "Common features for Atom",
+    "dependencies": [
+      "Atom_Feature_Common",
+      "LmbrCentral",
+      "GradientSignal",
+      "SurfaceData",
+      "Atom_RPI",
+      "AtomToolsFramework"
+    ],
+    "externalSubdirectories": [
+      null
+    ]
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\EditorModeFeedback\\gem.json",
+    "relativePath": "Gems/AtomLyIntegration/EditorModeFeedback/gem.json",
+    "classification": "source-gem",
+    "name": "EditorModeFeedback",
+    "version": "0.0.0",
+    "type": "Code",
+    "summary": "Editor Mode Visual Feedback Effects for Atom",
+    "dependencies": [
+      "Atom_Feature_Common",
+      "Atom_RPI",
+      "Atom_RHI",
+      "CommonFeaturesAtom"
+    ],
+    "externalSubdirectories": [
+      null
+    ]
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\EMotionFXAtom\\gem.json",
+    "relativePath": "Gems/AtomLyIntegration/EMotionFXAtom/gem.json",
+    "classification": "source-gem",
+    "name": "EMotionFX_Atom",
+    "version": "0.0.0",
+    "type": "Code",
+    "summary": "EmotionFX for Atom",
+    "dependencies": [
+      "EMotionFX",
+      "Atom_Feature_Common",
+      "Atom_RPI",
+      "Atom_RHI",
+      "CommonFeaturesAtom"
+    ],
+    "externalSubdirectories": [
+      null
+    ]
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\gem.json",
+    "relativePath": "Gems/AtomLyIntegration/gem.json",
+    "classification": "source-gem",
+    "name": "AtomLyIntegration",
+    "version": "0.0.1",
+    "type": "Code",
+    "summary": "The Atom O3DE Integration Gem provides components, libraries, and functionality to support and integrate Atom Renderer in Open 3D Engine.",
+    "dependencies": [
+      "AtomFont",
+      "AtomRenderOptions",
+      "AtomViewportDisplayIcons",
+      "AtomViewportDisplayInfo",
+      "CommonFeaturesAtom",
+      "EditorModeFeedback",
+      "EMotionFX_Atom",
+      "Atom_RPI",
+      "Atom_RHI",
+      "Atom_RHI_Null",
+      "Atom_Feature_Common",
+      "ImageProcessingAtom",
+      "AtomToolsFramework",
+      "PassCanvas",
+      "ShaderManagementConsole"
+    ],
+    "externalSubdirectories": [
+      "AtomFont",
+      "AtomRenderOptions",
+      "AtomViewportDisplayIcons",
+      "AtomViewportDisplayInfo",
+      "CommonFeatures",
+      "EditorModeFeedback",
+      "EMotionFXAtom"
+    ]
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\TechnicalArt\\DccScriptingInterface\\gem.json",
+    "relativePath": "Gems/AtomLyIntegration/TechnicalArt/DccScriptingInterface/gem.json",
+    "classification": "source-gem",
+    "name": "DccScriptingInterface",
+    "version": "0.0.2",
+    "type": "Code",
+    "summary": "A python framework for working with various DCC tools and workflows.",
+    "dependencies": [
+      "QtForPython"
+    ],
+    "externalSubdirectories": [
+      null
+    ]
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomTressFX\\gem.json",
+    "relativePath": "Gems/AtomTressFX/gem.json",
+    "classification": "source-gem",
+    "name": "AtomTressFX",
+    "version": "0.0.0",
+    "type": "Code",
+    "summary": "Atom TressFX Gem provides a cutting edge hair and fur simulation and rendering in Atom enhancing the AMD TressFX 4.1.  The open source TressFX can be found here: https://github.com/GPUOpen-Effects/TressFX",
+    "dependencies": [],
+    "externalSubdirectories": [
+      null
+    ]
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Gems\\AudioSystem\\gem.json",
+    "relativePath": "Gems/AudioSystem/gem.json",
+    "classification": "source-gem",
+    "name": "AudioSystem",
+    "version": "0.0.0",
+    "type": "Code",
+    "summary": "The Audio System Gem provides the Audio Translation Layer (ATL) and Audio Controls Editor, which add support for audio in Open 3D Engine.",
+    "dependencies": [
+      "LmbrCentral"
+    ],
+    "externalSubdirectories": [
+      null
+    ]
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Gems\\BarrierInput\\gem.json",
+    "relativePath": "Gems/BarrierInput/gem.json",
+    "classification": "source-gem",
+    "name": "BarrierInput",
+    "version": "0.0.0",
+    "type": "Code",
+    "summary": "The Barrier Input Gem allows the Open 3D Engine to function as a Barrier client so that it can receive input from a remote Barrier server.",
+    "dependencies": [
+      "Atom_RPI"
+    ],
+    "externalSubdirectories": [
+      null
+    ]
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Camera\\gem.json",
+    "relativePath": "Gems/Camera/gem.json",
+    "classification": "source-gem",
+    "name": "Camera",
+    "version": "0.1.0",
+    "type": "Code",
+    "summary": "Historical Camera metadata. Implementation and registration are absorbed into JE::WorldCamera and JE::EditorCamera; this Gem is no longer activatable.",
+    "dependencies": [
+      "Atom_RPI"
+    ],
+    "externalSubdirectories": [
+      null
+    ]
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Gems\\CameraFramework\\gem.json",
+    "relativePath": "Gems/CameraFramework/gem.json",
+    "classification": "source-gem",
+    "name": "CameraFramework",
+    "version": "0.0.0",
+    "type": "Code",
+    "summary": "Historical CameraFramework metadata. Implementation and registration are absorbed into JE::WorldCamera and JE::EditorCamera; this Gem is no longer activatable.",
+    "dependencies": [],
+    "externalSubdirectories": [
+      null
+    ]
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Gems\\CertificateManager\\gem.json",
+    "relativePath": "Gems/CertificateManager/gem.json",
+    "classification": "source-gem",
+    "name": "CertificateManager",
+    "version": "0.0.0",
+    "type": "Code",
+    "summary": "The Certificate Manager Gem provides access to authentication files for secure game connections from Amazon S3, files on disk, and other 3rd party sources.",
+    "dependencies": [],
+    "externalSubdirectories": [
+      null
+    ]
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Compression\\gem.json",
+    "relativePath": "Gems/Compression/gem.json",
+    "classification": "source-gem",
+    "name": "Compression",
+    "version": "0.0.0",
+    "type": "Code",
+    "summary": "Compression Interface Gem which provides an API for registering Compression Algoirithms interfaces with. Comes with a sub gem implementation for LZ4 Compression",
+    "dependencies": [],
+    "externalSubdirectories": []
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Gems\\CrashReporting\\gem.json",
+    "relativePath": "Gems/CrashReporting/gem.json",
+    "classification": "source-gem",
+    "name": "CrashReporting",
+    "version": "0.0.0",
+    "type": "Code",
+    "summary": "The Crash Reporting Gem provides support for external crash reporting for Open 3D Engine projects.",
+    "dependencies": [],
+    "externalSubdirectories": [
+      null
+    ]
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Gems\\CustomAssetExample\\gem.json",
+    "relativePath": "Gems/CustomAssetExample/gem.json",
+    "classification": "source-gem",
+    "name": "CustomAssetExample",
+    "version": "0.0.0",
+    "type": "Code",
+    "summary": "The Custom Asset Example Gem provides example code for creating a custom asset for Open 3D Engine's asset pipeline.",
+    "dependencies": [],
+    "externalSubdirectories": [
+      null
+    ]
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Gems\\DebugDraw\\gem.json",
+    "relativePath": "Gems/DebugDraw/gem.json",
+    "classification": "source-gem",
+    "name": "DebugDraw",
+    "version": "0.0.0",
+    "type": "Code",
+    "summary": "The Debug Draw Gem provides Editor and runtime debug visualization features for Open 3D Engine.",
+    "dependencies": [
+      "Atom_RPI"
+    ],
+    "externalSubdirectories": [
+      null
+    ]
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Gems\\DevTextures\\gem.json",
+    "relativePath": "Gems/DevTextures/gem.json",
+    "classification": "source-gem",
+    "name": "DevTextures",
+    "version": "0.0.0",
+    "type": "Asset",
+    "summary": "The Dev Textures Gem provides a collection of general purpose texture assets useful for prototypes and preproduction.",
+    "dependencies": [],
+    "externalSubdirectories": [
+      null
+    ]
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Gems\\DiffuseProbeGrid\\gem.json",
+    "relativePath": "Gems/DiffuseProbeGrid/gem.json",
+    "classification": "source-gem",
+    "name": "DiffuseProbeGrid",
+    "version": "0.0.0",
+    "type": "Code",
+    "summary": "The DiffuseProbeGrid Gem implements Diffuse Global Illumination using the Nvidia RTX-GI SDK.  It renders global illumination on any meshes inside a user-placed volume, and can be set to real-time or baked.",
+    "dependencies": [
+      "Atom_RPI",
+      "Atom",
+      "LmbrCentral"
+    ],
+    "externalSubdirectories": [
+      null
+    ]
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Gems\\EditorPythonBindings\\gem.json",
+    "relativePath": "Gems/EditorPythonBindings/gem.json",
+    "classification": "source-gem",
+    "name": "EditorPythonBindings",
+    "version": "0.0.0",
+    "type": "Tool",
+    "summary": "The Editor Python Bindings Gem provides Python commands for Open 3D Engine Editor functions.",
+    "dependencies": [],
+    "externalSubdirectories": [
+      null
+    ]
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Gems\\EMotionFX\\gem.json",
+    "relativePath": "Gems/EMotionFX/gem.json",
+    "classification": "source-gem",
+    "name": "EMotionFX",
+    "version": "0.0.0",
+    "type": "Code",
+    "summary": "The EMotion FX Animation Gem provides Open 3D Engine's animation system for rigged actors and includes Animation Editor, a tool for creating animated behaviors, simulated objects, and colliders for rigged actors.",
+    "dependencies": [
+      "Atom_RPI",
+      "LmbrCentral"
+    ],
+    "externalSubdirectories": [
+      null
+    ]
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Gems\\ExpressionEvaluation\\gem.json",
+    "relativePath": "Gems/ExpressionEvaluation/gem.json",
+    "classification": "source-gem",
+    "name": "ExpressionEvaluation",
+    "version": "0.0.0",
+    "type": "Code",
+    "summary": "The Expression Evaluation Gem provides a method for parsing and executing string expressions in Open 3D Engine.",
+    "dependencies": [],
+    "externalSubdirectories": [
+      null
+    ]
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Gems\\FastNoise\\gem.json",
+    "relativePath": "Gems/FastNoise/gem.json",
+    "classification": "source-gem",
+    "name": "FastNoise",
+    "version": "0.0.0",
+    "type": "Code",
+    "summary": "The FastNoise Gradient Gem uses the third-party, open source FastNoise library to provide a variety of high-performance noise generation algorithms.",
+    "dependencies": [
+      "GradientSignal",
+      "LmbrCentral",
+      "SurfaceData"
+    ],
+    "externalSubdirectories": [
+      null
+    ]
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Gems\\GameState\\gem.json",
+    "relativePath": "Gems/GameState/gem.json",
+    "classification": "source-gem",
+    "name": "GameState",
+    "version": "0.0.0",
+    "type": "Code",
+    "summary": "The Game State Gem provides a generic framework to determine and manage game states and game state transitions in Open 3D Engine.",
+    "dependencies": [],
+    "externalSubdirectories": [
+      null
+    ]
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Gems\\GameStateSamples\\gem.json",
+    "relativePath": "Gems/GameStateSamples/gem.json",
+    "classification": "source-gem",
+    "name": "GameStateSamples",
+    "version": "0.0.0",
+    "type": "Code",
+    "summary": "The Game State Samples Gem provides a set of sample game states (built on top of the Game State Gem), including primary user selection, main menu, level loading, level running, and level paused.",
+    "dependencies": [
+      "GameState",
+      "LocalUser",
+      "LyShine",
+      "SaveData",
+      "MessagePopup",
+      "LmbrCentral",
+      "UiBasics",
+      "LyShineExamples"
+    ],
+    "externalSubdirectories": [
+      null
+    ]
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Gestures\\gem.json",
+    "relativePath": "Gems/Gestures/gem.json",
+    "classification": "source-gem",
+    "name": "Gestures",
+    "version": "0.0.0",
+    "type": "Code",
+    "summary": "The Gestures Gem provides detection for common gesture-based input actions on iOS and Android devices.",
+    "dependencies": [
+      "Atom_RPI"
+    ],
+    "externalSubdirectories": [
+      null
+    ]
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Gems\\GradientSignal\\gem.json",
+    "relativePath": "Gems/GradientSignal/gem.json",
+    "classification": "source-gem",
+    "name": "GradientSignal",
+    "version": "0.0.0",
+    "type": "Code",
+    "summary": "The Gradient Signal Gem provides a number of components for generating, modifying, and mixing gradient signals.",
+    "dependencies": [
+      "SurfaceData",
+      "ImageProcessingAtom",
+      "LmbrCentral"
+    ],
+    "externalSubdirectories": [
+      null
+    ]
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Gems\\GraphCanvas\\gem.json",
+    "relativePath": "Gems/GraphCanvas/gem.json",
+    "classification": "source-gem",
+    "name": "GraphCanvas",
+    "version": "0.0.0",
+    "type": "Tool",
+    "summary": "The Graph Canvas Gem provides a C++ framework for creating custom graphical node based editors for Open 3D Engine.",
+    "dependencies": [],
+    "externalSubdirectories": [
+      null
+    ]
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Gems\\GraphModel\\gem.json",
+    "relativePath": "Gems/GraphModel/gem.json",
+    "classification": "source-gem",
+    "name": "GraphModel",
+    "version": "0.0.0",
+    "type": "Code",
+    "summary": "The Graph Model Gem provides a generic node graph data model framework for Open 3D Engine.",
+    "dependencies": [
+      "GraphCanvas"
+    ],
+    "externalSubdirectories": [
+      null
+    ]
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Gems\\ImGui\\gem.json",
+    "relativePath": "Gems/ImGui/gem.json",
+    "classification": "source-gem",
+    "name": "ImGui",
+    "version": "1.0.0",
+    "type": "Tool",
+    "summary": "The Immediate Mode GUI Gem provides the 3rdParty library IMGUI which can be used to create run time immediate mode overlays for debugging and profiling information in Open 3D Engine.",
+    "dependencies": [
+      "LmbrCentral"
+    ],
+    "externalSubdirectories": [
+      null
+    ]
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Gems\\InAppPurchases\\gem.json",
+    "relativePath": "Gems/InAppPurchases/gem.json",
+    "classification": "source-gem",
+    "name": "InAppPurchases",
+    "version": "0.0.0",
+    "type": "Code",
+    "summary": "The In-App Purchases Gem provides functionality for in app purchases for iOS and Android.",
+    "dependencies": [],
+    "externalSubdirectories": [
+      null
+    ]
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Gems\\LandscapeCanvas\\gem.json",
+    "relativePath": "Gems/LandscapeCanvas/gem.json",
+    "classification": "source-gem",
+    "name": "LandscapeCanvas",
+    "version": "0.0.0",
+    "type": "Tool",
+    "summary": "The Landscape Canvas Gem provides the Landscape Canvas editor, a node-based graph tool for authoring gradient-based workflows to populate the landscape, such as dynamic vegetation and/or terrain.",
+    "dependencies": [
+      "GraphModel",
+      "GradientSignal",
+      "SurfaceData",
+      "LmbrCentral",
+      "GraphCanvas"
+    ],
+    "externalSubdirectories": [
+      null
+    ]
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Gems\\LmbrCentral\\gem.json",
+    "relativePath": "Gems/LmbrCentral/gem.json",
+    "classification": "source-gem",
+    "name": "LmbrCentral",
+    "version": "0.0.0",
+    "type": "Code",
+    "summary": "The O3DE Core (LmbrCentral) Gem provides required code and assets for running Open 3D Engine Editor.",
+    "dependencies": [],
+    "externalSubdirectories": [
+      null
+    ]
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Gems\\LocalUser\\gem.json",
+    "relativePath": "Gems/LocalUser/gem.json",
+    "classification": "source-gem",
+    "name": "LocalUser",
+    "version": "0.0.0",
+    "type": "Code",
+    "summary": "The Local User Gem provides functionality for mapping local user ids to local player slots and managing local user profiles.",
+    "dependencies": [],
+    "externalSubdirectories": [
+      null
+    ]
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Gems\\LyShine\\gem.json",
+    "relativePath": "Gems/LyShine/gem.json",
+    "classification": "source-gem",
+    "name": "LyShine",
+    "version": "0.0.0",
+    "type": "Code",
+    "summary": "The LyShine Gem provides the runtime UI system and creation tools for Open 3D Engine projects.",
+    "dependencies": [
+      "LmbrCentral",
+      "Atom_RPI",
+      "Atom",
+      "AtomFont",
+      "TextureAtlas",
+      "AtomToolsFramework",
+      "UiBasics"
+    ],
+    "externalSubdirectories": [
+      null
+    ]
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Gems\\LyShineExamples\\gem.json",
+    "relativePath": "Gems/LyShineExamples/gem.json",
+    "classification": "source-gem",
+    "name": "LyShineExamples",
+    "version": "0.0.0",
+    "type": "Code",
+    "summary": "The LyShine Examples Gem provides example code and assets for LyShine, the runtime UI system and editor for Open 3D Engine projects.",
+    "dependencies": [
+      "LmbrCentral",
+      "LyShine"
+    ],
+    "externalSubdirectories": [
+      null
+    ]
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Maestro\\gem.json",
+    "relativePath": "Gems/Maestro/gem.json",
+    "classification": "source-gem",
+    "name": "Maestro",
+    "version": "0.0.0",
+    "type": "Code",
+    "summary": "The Maestro Cinematics Gem provides Track View, Open 3D Engine's animated sequence and cinematics editor.",
+    "dependencies": [
+      "LmbrCentral",
+      "Atom",
+      "Atom_RHI",
+      "Atom_RPI"
+    ],
+    "externalSubdirectories": [
+      null
+    ]
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Meshlets\\gem.json",
+    "relativePath": "Gems/Meshlets/gem.json",
+    "classification": "source-gem",
+    "name": "Meshlets",
+    "version": "0.0.0",
+    "type": "Code",
+    "summary": "The Meshlets Gem is a POC for rendering meshes solely on the GPU using meshlets / mesh clusters.",
+    "dependencies": [],
+    "externalSubdirectories": [
+      null
+    ]
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Gems\\MessagePopup\\gem.json",
+    "relativePath": "Gems/MessagePopup/gem.json",
+    "classification": "source-gem",
+    "name": "MessagePopup",
+    "version": "0.0.0",
+    "type": "Code",
+    "summary": "The Message Popup Gem provides an example implementation of popup messages using LyShine in Open 3D Engine.",
+    "dependencies": [
+      "LyShine"
+    ],
+    "externalSubdirectories": [
+      null
+    ]
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Microphone\\gem.json",
+    "relativePath": "Gems/Microphone/gem.json",
+    "classification": "source-gem",
+    "name": "Microphone",
+    "version": "0.0.0",
+    "type": "Code",
+    "summary": "The Microphone Gem provides support for audio input through microphones.",
+    "dependencies": [
+      "AudioSystem"
+    ],
+    "externalSubdirectories": [
+      null
+    ]
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Gems\\MiniAudio\\gem.json",
+    "relativePath": "Gems/MiniAudio/gem.json",
+    "classification": "source-gem",
+    "name": "MiniAudio",
+    "version": "0.1.0",
+    "type": "Code",
+    "summary": "The MiniAudio Gem provides support for audio playback using MiniAudio (https://miniaud.io)",
+    "dependencies": [],
+    "externalSubdirectories": [
+      null
+    ]
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Gems\\MotionMatching\\gem.json",
+    "relativePath": "Gems/MotionMatching/gem.json",
+    "classification": "source-gem",
+    "name": "MotionMatching",
+    "version": "0.0.0",
+    "type": "Code",
+    "summary": "Motion matching is a data-driven animation technique that synthesizes motions based on existing animation data and the current character and input contexts.",
+    "dependencies": [
+      "EMotionFX"
+    ],
+    "externalSubdirectories": [
+      null
+    ]
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Multiplayer\\gem.json",
+    "relativePath": "Gems/Multiplayer/gem.json",
+    "classification": "source-gem",
+    "name": "Multiplayer",
+    "version": "0.0.0",
+    "type": "Code",
+    "summary": "The Multiplayer Gem provides a public API for multiplayer functionality such as connecting and hosting.",
+    "dependencies": [
+      "PhysX",
+      "CertificateManager",
+      "Atom_Feature_Common"
+    ],
+    "externalSubdirectories": [
+      "Multiplayer_ScriptCanvas"
+    ]
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Multiplayer\\Multiplayer_ScriptCanvas\\gem.json",
+    "relativePath": "Gems/Multiplayer/Multiplayer_ScriptCanvas/gem.json",
+    "classification": "source-gem",
+    "name": "Multiplayer_ScriptCanvas",
+    "version": "0.0.0",
+    "type": "Code",
+    "summary": "The Script Canvas Multiplayer Gem provides Script Canvas nodes for multiplayer logic.",
+    "dependencies": [
+      "ScriptCanvas"
+    ],
+    "externalSubdirectories": [
+      null
+    ]
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Gems\\MultiplayerCompression\\gem.json",
+    "relativePath": "Gems/MultiplayerCompression/gem.json",
+    "classification": "source-gem",
+    "name": "MultiplayerCompression",
+    "version": "0.0.0",
+    "type": "Code",
+    "summary": "The Multiplayer Compression Gem provides an open source Compressor for use with AzNetworking's transport layer.",
+    "dependencies": [],
+    "externalSubdirectories": [
+      null
+    ]
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Gems\\NvCloth\\gem.json",
+    "relativePath": "Gems/NvCloth/gem.json",
+    "classification": "source-gem",
+    "name": "NvCloth",
+    "version": "0.0.0",
+    "type": "Code",
+    "summary": "The NVIDIA Cloth Gem provides functionality to create fast, realistic cloth simulation with the NVIDIA Cloth library.",
+    "dependencies": [
+      "CommonFeaturesAtom",
+      "EMotionFX"
+    ],
+    "externalSubdirectories": [
+      null
+    ]
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Gems\\OpenParticleSystem\\gem.json",
+    "relativePath": "Gems/OpenParticleSystem/gem.json",
+    "classification": "source-gem",
+    "name": "OpenParticleSystem",
+    "version": "0.0.0",
+    "type": "Code",
+    "summary": "WARNING: This gem is in preview, file formats and data may change before official release. The OpenParticleSystem Gem provides a particle system framework alongside a dedicated toolset for creating natural phenomena (such as flames, smoke, rainfall, and snowfall) and specialized effects (including explosions), leveraging vast numbers of micro-particle elements and dynamic motion simulations to achieve realistic visual representations.",
+    "dependencies": [
+      null
+    ],
+    "externalSubdirectories": [
+      null
+    ]
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Gems\\PhysX\\Common\\gem.json",
+    "relativePath": "Gems/PhysX/Common/gem.json",
+    "classification": "source-gem",
+    "name": "PhysXCommon",
+    "version": "1.0.0",
+    "type": "Code",
+    "summary": "The PhysX Common Gem provides the necessary assets and common libraries to support the PhysX Gems in the catalog.",
+    "dependencies": [],
+    "externalSubdirectories": [
+      null
+    ]
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Gems\\PhysX\\Core\\PhysX5\\gem.json",
+    "relativePath": "Gems/PhysX/Core/PhysX5/gem.json",
+    "classification": "source-gem",
+    "name": "PhysX5",
+    "version": "2.0.0",
+    "type": "Code",
+    "summary": "The PhysX5 Gem provides physics simulation with NVIDIA PhysX including static and dynamic rigid body simulation, force regions, ragdolls, articulations, and dynamic PhysX joints. This Gem is based on version 5 of the <a href='https://developer.nvidia.com/physx-sdk'>NVIDIA PhysX SDK</a>.",
+    "dependencies": [
+      "PhysXCommon",
+      "LmbrCentral",
+      "CommonFeaturesAtom"
+    ],
+    "externalSubdirectories": [
+      null
+    ]
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Gems\\PhysX\\Debug\\PhysX5\\gem.json",
+    "relativePath": "Gems/PhysX/Debug/PhysX5/gem.json",
+    "classification": "source-gem",
+    "name": "PhysX5Debug",
+    "version": "2.0.0",
+    "type": "Tool",
+    "summary": "The PhysX5 Debug Gem, in conjunction with the PhysX5 Gem, provides debugging functionality and visualizations for NVIDIA PhysX in Open 3D Engine.",
+    "dependencies": [
+      "PhysX5"
+    ],
+    "externalSubdirectories": [
+      null
+    ]
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Prefab\\PrefabBuilder\\gem.json",
+    "relativePath": "Gems/Prefab/PrefabBuilder/gem.json",
+    "classification": "source-gem",
+    "name": "PrefabBuilder",
+    "version": "0.0.0",
+    "type": "Code",
+    "summary": "The Prefab Builder Gem provides an Asset Processor module for prefabs, which are complex assets built by combining smaller entities.",
+    "dependencies": [],
+    "externalSubdirectories": [
+      null
+    ]
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Presence\\gem.json",
+    "relativePath": "Gems/Presence/gem.json",
+    "classification": "source-gem",
+    "name": "Presence",
+    "version": "0.0.0",
+    "type": "Code",
+    "summary": "The Presence Gem provides a target platform agnostic interface for Presence services.",
+    "dependencies": [],
+    "externalSubdirectories": [
+      null
+    ]
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Gems\\PrimitiveAssets\\gem.json",
+    "relativePath": "Gems/PrimitiveAssets/gem.json",
+    "classification": "source-gem",
+    "name": "PrimitiveAssets",
+    "version": "0.0.0",
+    "type": "Asset",
+    "summary": "The Primitive Assets Gem provides primitive shape mesh assets with physics enabled.",
+    "dependencies": [],
+    "externalSubdirectories": [
+      null
+    ]
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Gems\\PythonAssetBuilder\\gem.json",
+    "relativePath": "Gems/PythonAssetBuilder/gem.json",
+    "classification": "source-gem",
+    "name": "PythonAssetBuilder",
+    "version": "0.0.0",
+    "type": "Code",
+    "summary": "The Python Asset Builder Gem provides functionality to implement custom asset builders in Python for Asset Processor.",
+    "dependencies": [
+      "EditorPythonBindings"
+    ],
+    "externalSubdirectories": [
+      null
+    ]
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Gems\\QtForPython\\gem.json",
+    "relativePath": "Gems/QtForPython/gem.json",
+    "classification": "source-gem",
+    "name": "QtForPython",
+    "version": "0.0.2",
+    "type": "Tool",
+    "summary": "The Qt for Python Gem provides the PySide Python libraries to manage Qt widgets.",
+    "dependencies": [
+      "EditorPythonBindings"
+    ],
+    "externalSubdirectories": [
+      null
+    ]
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Gems\\RecastNavigation\\gem.json",
+    "relativePath": "Gems/RecastNavigation/gem.json",
+    "classification": "source-gem",
+    "name": "RecastNavigation",
+    "version": "0.0.0",
+    "type": "Code",
+    "summary": "Recast Navigation gem provides navigation features using Recast/Detour library that can be found at https://github.com/recastnavigation/recastnavigation",
+    "dependencies": [],
+    "externalSubdirectories": [
+      null
+    ]
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Gems\\RemoteTools\\gem.json",
+    "relativePath": "Gems/RemoteTools/gem.json",
+    "classification": "source-gem",
+    "name": "RemoteTools",
+    "version": "0.0.0",
+    "type": "Code",
+    "summary": "The Remote Tools Connection Gem implements a public API for connecting remote debug and tools O3DE applications.",
+    "dependencies": [],
+    "externalSubdirectories": [
+      null
+    ]
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Gems\\SaveData\\gem.json",
+    "relativePath": "Gems/SaveData/gem.json",
+    "classification": "source-gem",
+    "name": "SaveData",
+    "version": "0.0.0",
+    "type": "Code",
+    "summary": "The Save Data Gem provides a platform independent API to save and load persistent user data in Open 3D Engine projects.",
+    "dependencies": [],
+    "externalSubdirectories": [
+      null
+    ]
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Gems\\SceneLoggingExample\\gem.json",
+    "relativePath": "Gems/SceneLoggingExample/gem.json",
+    "classification": "source-gem",
+    "name": "SceneLoggingExample",
+    "version": "0.0.0",
+    "type": "Code",
+    "summary": "The Scene Logging Example Gem demonstrates the basics of extending the Open 3D Engine Scene API by adding additional logging to the pipeline.",
+    "dependencies": [],
+    "externalSubdirectories": [
+      null
+    ]
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Gems\\SceneProcessing\\gem.json",
+    "relativePath": "Gems/SceneProcessing/gem.json",
+    "classification": "source-gem",
+    "name": "SceneProcessing",
+    "version": "0.0.0",
+    "type": "Tool",
+    "summary": "The Scene Processing Gem provides Scene Settings, a tool you can use to specify the default settings for processing asset files for actors, meshes, motions, and PhysX.",
+    "dependencies": [],
+    "externalSubdirectories": [
+      null
+    ]
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Gems\\ScriptAutomation\\gem.json",
+    "relativePath": "Gems/ScriptAutomation/gem.json",
+    "classification": "source-gem",
+    "name": "ScriptAutomation",
+    "version": "0.0.0",
+    "type": "Code",
+    "summary": "A collection of specialized script bindings useful for automation in the game launcher",
+    "dependencies": [
+      null
+    ],
+    "externalSubdirectories": [
+      null
+    ]
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Gems\\ScriptCanvas\\gem.json",
+    "relativePath": "Gems/ScriptCanvas/gem.json",
+    "classification": "source-gem",
+    "name": "ScriptCanvas",
+    "version": "2.0.0",
+    "type": "Tool",
+    "summary": "The Script Canvas Gem provides Open 3D Engine's visual scripting environment, Script Canvas.",
+    "dependencies": [
+      "ScriptEvents",
+      "ExpressionEvaluation",
+      "GraphCanvas"
+    ],
+    "externalSubdirectories": [
+      null
+    ]
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Gems\\ScriptCanvasDeveloper\\gem.json",
+    "relativePath": "Gems/ScriptCanvasDeveloper/gem.json",
+    "classification": "source-gem",
+    "name": "ScriptCanvasDeveloper",
+    "version": "0.0.0",
+    "type": "Tool",
+    "summary": "The Script Canvas Developer Gem provides a suite of utility features for the development and debugging of Script Canvas systems.",
+    "dependencies": [
+      "ScriptCanvas",
+      "GraphCanvas"
+    ],
+    "externalSubdirectories": [
+      null
+    ]
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Gems\\ScriptCanvasPhysics\\gem.json",
+    "relativePath": "Gems/ScriptCanvasPhysics/gem.json",
+    "classification": "source-gem",
+    "name": "ScriptCanvasPhysics",
+    "version": "0.0.0",
+    "type": "Code",
+    "summary": "The Script Canvas Physics Gem provides Script Canvas nodes for physics scene queries such as raycasts.",
+    "dependencies": [
+      "ScriptCanvas"
+    ],
+    "externalSubdirectories": [
+      null
+    ]
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Gems\\ScriptCanvasTesting\\gem.json",
+    "relativePath": "Gems/ScriptCanvasTesting/gem.json",
+    "classification": "source-gem",
+    "name": "ScriptCanvasTesting",
+    "version": "1.0.0",
+    "type": "Tool",
+    "summary": "The Script Canvas Testing Gem provides a framework for testing for and with Script Canvas.",
+    "dependencies": [
+      "ScriptCanvas",
+      "GraphCanvas",
+      "ScriptEvents"
+    ],
+    "externalSubdirectories": [
+      null
+    ]
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Gems\\ScriptedEntityTweener\\gem.json",
+    "relativePath": "Gems/ScriptedEntityTweener/gem.json",
+    "classification": "source-gem",
+    "name": "ScriptedEntityTweener",
+    "version": "0.0.0",
+    "type": "Tool",
+    "summary": "The Scripted Entity Tweener Gem provides a script driven animation system for Open 3D Engine projects.",
+    "dependencies": [],
+    "externalSubdirectories": [
+      null
+    ]
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Gems\\ScriptEvents\\gem.json",
+    "relativePath": "Gems/ScriptEvents/gem.json",
+    "classification": "source-gem",
+    "name": "ScriptEvents",
+    "version": "0.0.0",
+    "type": "Code",
+    "summary": "The Script Events Gem provides a framework for creating event assets usable from any scripting solution in Open 3D Engine.",
+    "dependencies": [],
+    "externalSubdirectories": [
+      null
+    ]
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Gems\\SkyAtmosphere\\gem.json",
+    "relativePath": "Gems/SkyAtmosphere/gem.json",
+    "classification": "source-gem",
+    "name": "SkyAtmosphere",
+    "version": "1.0.0",
+    "type": "Code",
+    "summary": "The Sky Atmosphere Gem provides a physically based model for sky atmosphere.",
+    "dependencies": [
+      "Atom_RPI",
+      "CommonFeaturesAtom"
+    ],
+    "externalSubdirectories": [
+      null
+    ]
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Stars\\gem.json",
+    "relativePath": "Gems/Stars/gem.json",
+    "classification": "source-gem",
+    "name": "Stars",
+    "version": "0.0.0",
+    "type": "Code",
+    "summary": "The Stars gem provides ability to render physically-based animated resolution-independant distant stars.",
+    "dependencies": [],
+    "externalSubdirectories": [
+      null
+    ]
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Gems\\StartingPointCamera\\gem.json",
+    "relativePath": "Gems/StartingPointCamera/gem.json",
+    "classification": "source-gem",
+    "name": "StartingPointCamera",
+    "version": "0.0.0",
+    "type": "Code",
+    "summary": "The Starting Point Camera Gem provides the behaviors used with the Camera Framework Gem to define a camera rig.",
+    "dependencies": [
+      "LmbrCentral"
+    ],
+    "externalSubdirectories": [
+      null
+    ]
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Gems\\StartingPointInput\\gem.json",
+    "relativePath": "Gems/StartingPointInput/gem.json",
+    "classification": "source-gem",
+    "name": "StartingPointInput",
+    "version": "0.0.0",
+    "type": "Code",
+    "summary": "The Starting Point Input Gem provides functionality to map low-level input events to high-level actions.",
+    "dependencies": [
+      "ScriptCanvas"
+    ],
+    "externalSubdirectories": [
+      null
+    ]
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Gems\\StartingPointMovement\\gem.json",
+    "relativePath": "Gems/StartingPointMovement/gem.json",
+    "classification": "source-gem",
+    "name": "StartingPointMovement",
+    "version": "0.0.0",
+    "type": "Code",
+    "summary": "The Starting Point Movement Gem provides a series of Lua scripts that listen and respond to input events and trigger transform operations such as translation and rotation.",
+    "dependencies": [],
+    "externalSubdirectories": [
+      null
+    ]
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Streamer\\gem.json",
+    "relativePath": "Gems/Streamer/gem.json",
+    "classification": "source-gem",
+    "name": "Streamer",
+    "version": "0.0.0",
+    "type": "Code",
+    "summary": "The parent gem for AZ::IO::Streamer related implementations.",
+    "dependencies": [],
+    "externalSubdirectories": [
+      "StreamerProfiler"
+    ]
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Streamer\\StreamerProfiler\\gem.json",
+    "relativePath": "Gems/Streamer/StreamerProfiler/gem.json",
+    "classification": "source-gem",
+    "name": "StreamerProfiler",
+    "version": "0.0.0",
+    "type": "Code",
+    "summary": "A profiler that extracts and displays information collected from AZ::IO::Streamer.",
+    "dependencies": [],
+    "externalSubdirectories": [
+      null
+    ]
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Gems\\SurfaceData\\gem.json",
+    "relativePath": "Gems/SurfaceData/gem.json",
+    "classification": "source-gem",
+    "name": "SurfaceData",
+    "version": "0.0.0",
+    "type": "Code",
+    "summary": "The Surface Data Gem provides functionality to emit signals or tags from surfaces such as meshes and terrain.",
+    "dependencies": [
+      "LmbrCentral",
+      "Atom_RPI",
+      "Atom_Feature_Common"
+    ],
+    "externalSubdirectories": [
+      null
+    ]
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Terrain\\gem.json",
+    "relativePath": "Gems/Terrain/gem.json",
+    "classification": "source-gem",
+    "name": "Terrain",
+    "version": "0.0.0",
+    "type": "Code",
+    "summary": "The Terrain Gem is an experimental terrain system.  The terrain system maps height, color, and surface data to regions of the world, provides gradient-based and shape-based authoring tools and workflows, includes specialized rendering for efficient display, and integrates with physics for physical simulation.",
+    "dependencies": [
+      "Atom_RPI",
+      "Atom",
+      "GradientSignal",
+      "SurfaceData",
+      "LmbrCentral"
+    ],
+    "externalSubdirectories": [
+      null
+    ]
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Gems\\TestAssetBuilder\\gem.json",
+    "relativePath": "Gems/TestAssetBuilder/gem.json",
+    "classification": "source-gem",
+    "name": "TestAssetBuilder",
+    "version": "0.0.0",
+    "type": "Code",
+    "summary": "The Test Asset Builder Gem is used to feature test Asset Processor.",
+    "dependencies": [],
+    "externalSubdirectories": [
+      null
+    ]
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Gems\\TextureAtlas\\gem.json",
+    "relativePath": "Gems/TextureAtlas/gem.json",
+    "classification": "source-gem",
+    "name": "TextureAtlas",
+    "version": "0.0.0",
+    "type": "Code",
+    "summary": "The Texture Atlas Gem provides the formatting for texture atlases from 2D textures for LyShine.",
+    "dependencies": [
+      "Atom_RPI",
+      "ImageProcessingAtom"
+    ],
+    "externalSubdirectories": [
+      null
+    ]
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Gems\\TickBusOrderViewer\\gem.json",
+    "relativePath": "Gems/TickBusOrderViewer/gem.json",
+    "classification": "source-gem",
+    "name": "TickBusOrderViewer",
+    "version": "0.0.0",
+    "type": "Tool",
+    "summary": "The Tick Bus Order Viewer Gem provides a console variable that displays the order of runtime tick events.",
+    "dependencies": [],
+    "externalSubdirectories": [
+      null
+    ]
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Gems\\UiBasics\\gem.json",
+    "relativePath": "Gems/UiBasics/gem.json",
+    "classification": "source-gem",
+    "name": "UiBasics",
+    "version": "0.0.0",
+    "type": "Asset",
+    "summary": "The UI Basics Gem provides a collection of basic UI prefabs such as image, text, and button, that can be used with LyShine, the Open 3D Engine runtime User Interface system and editor.",
+    "dependencies": [],
+    "externalSubdirectories": [
+      null
+    ]
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Vegetation\\gem.json",
+    "relativePath": "Gems/Vegetation/gem.json",
+    "classification": "source-gem",
+    "name": "Vegetation",
+    "version": "0.0.0",
+    "type": "Code",
+    "summary": "The Vegetation Gem provides tools to place natural-looking vegetation in Open 3D Engine.",
+    "dependencies": [
+      "LmbrCentral",
+      "SurfaceData",
+      "CommonFeaturesAtom",
+      "GradientSignal"
+    ],
+    "externalSubdirectories": [
+      null
+    ]
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Gems\\VideoPlaybackFramework\\gem.json",
+    "relativePath": "Gems/VideoPlaybackFramework/gem.json",
+    "classification": "source-gem",
+    "name": "VideoPlaybackFramework",
+    "version": "0.0.0",
+    "type": "Code",
+    "summary": "The Video Playback Framework Gem provides the interface to play back video.",
+    "dependencies": [],
+    "externalSubdirectories": [
+      null
+    ]
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Gems\\VirtualGamepad\\gem.json",
+    "relativePath": "Gems/VirtualGamepad/gem.json",
+    "classification": "source-gem",
+    "name": "VirtualGamepad",
+    "version": "0.0.0",
+    "type": "Code",
+    "summary": "The Virtual Gamepad Gem provides controls that emulate a gamepad on touch screen devices.",
+    "dependencies": [
+      "LyShine",
+      "UiBasics"
+    ],
+    "externalSubdirectories": [
+      null
+    ]
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Templates\\AssetGem\\Template\\gem.json",
+    "relativePath": "Templates/AssetGem/Template/gem.json",
+    "classification": "template",
+    "name": "${Name}",
+    "version": "${Version}",
+    "type": "Asset",
+    "summary": "${Summary}",
+    "dependencies": [],
+    "externalSubdirectories": [
+      null
+    ]
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Templates\\CppToolGem\\Template\\gem.json",
+    "relativePath": "Templates/CppToolGem/Template/gem.json",
+    "classification": "template",
+    "name": "${Name}",
+    "version": "${Version}",
+    "type": "Code",
+    "summary": "${Summary}",
+    "dependencies": [],
+    "externalSubdirectories": [
+      null
+    ]
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Templates\\DefaultGem\\Template\\gem.json",
+    "relativePath": "Templates/DefaultGem/Template/gem.json",
+    "classification": "template",
+    "name": "${Name}",
+    "version": "${Version}",
+    "type": "Code",
+    "summary": "${Summary}",
+    "dependencies": [],
+    "externalSubdirectories": [
+      null
+    ]
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Templates\\DefaultProject\\Template\\Gem\\gem.json",
+    "relativePath": "Templates/DefaultProject/Template/Gem/gem.json",
+    "classification": "template",
+    "name": "${Name}",
+    "version": "${Version}",
+    "type": "",
+    "summary": "A short description of ${Name}.",
+    "dependencies": [],
+    "externalSubdirectories": [
+      null
+    ]
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Templates\\GameplayGem\\Template\\gem.json",
+    "relativePath": "Templates/GameplayGem/Template/gem.json",
+    "classification": "template",
+    "name": "${Name}",
+    "version": "${Version}",
+    "type": "Code",
+    "summary": "${Summary}",
+    "dependencies": [],
+    "externalSubdirectories": [
+      null
+    ]
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Templates\\GemRepo\\Template\\gem.json",
+    "relativePath": "Templates/GemRepo/Template/gem.json",
+    "classification": "template",
+    "name": "${Name}",
+    "version": "${Version}",
+    "type": "Code",
+    "summary": "${Summary}",
+    "dependencies": [],
+    "externalSubdirectories": [
+      null
+    ]
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Templates\\GraphicsGem\\Template\\gem.json",
+    "relativePath": "Templates/GraphicsGem/Template/gem.json",
+    "classification": "template",
+    "name": "${Name}",
+    "version": "${Version}",
+    "type": "Code",
+    "summary": "${Summary}",
+    "dependencies": [
+      "Atom_RPI",
+      "Atom"
+    ],
+    "externalSubdirectories": [
+      null
+    ]
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Templates\\MinimalProject\\Template\\Gem\\gem.json",
+    "relativePath": "Templates/MinimalProject/Template/Gem/gem.json",
+    "classification": "template",
+    "name": "${Name}",
+    "version": "${Version}",
+    "type": "",
+    "summary": "A short description of ${Name}.",
+    "dependencies": [],
+    "externalSubdirectories": [
+      null
+    ]
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Templates\\PrebuiltGem\\Template\\gem.json",
+    "relativePath": "Templates/PrebuiltGem/Template/gem.json",
+    "classification": "template",
+    "name": "${Name}",
+    "version": "${Version}",
+    "type": "Code",
+    "summary": "A short description for Gem ${Name} which provides pre-built binaries and API interfaces goes here.",
+    "dependencies": [],
+    "externalSubdirectories": [
+      null
+    ]
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Templates\\PythonToolGem\\Template\\gem.json",
+    "relativePath": "Templates/PythonToolGem/Template/gem.json",
+    "classification": "template",
+    "name": "${Name}",
+    "version": "${Version}",
+    "type": "Code",
+    "summary": "${Summary}",
+    "dependencies": [
+      "QtForPython"
+    ],
+    "externalSubdirectories": [
+      null
+    ]
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\Templates\\UnifiedMultiplayerGem\\Template\\gem.json",
+    "relativePath": "Templates/UnifiedMultiplayerGem/Template/gem.json",
+    "classification": "template",
+    "name": "${Name}",
+    "version": "${Version}",
+    "type": "Code",
+    "summary": "${Summary}",
+    "dependencies": [
+      "Multiplayer"
+    ],
+    "externalSubdirectories": [
+      null
+    ]
+  }
+]

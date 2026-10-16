@@ -1,0 +1,102 @@
+<18:02:40> BackupNameAttachment=" Build(0) 16 Oct 26 (18 02 40)"  -- used by backup system
+<18:02:40> Log Started at Fri Oct 16 18:02:40 2026
+<18:02:40> Built on Oct 14 2026 22:00:40
+<18:02:40> Running 64 bit Windows version
+<18:02:40> FileVersion: 0.0.0.0
+<18:02:40> ProductVersion: 0.0.0.0
+<18:02:40> Using Microsoft (tm) C++ Standard Library implementation
+<18:02:40> Project Path: F:\JericoEngine\JericoEngine\Projects\JEEditorFixture
+
+<18:02:40> Project Name: JEEditorFixture
+
+<18:02:40> [Warning] Config file game.cfg not found!
+<18:02:40> creating CVarGroups from directory 'Config/CVarGroups' ...
+<18:02:40> Loading Config file user.cfg (F:/JericoEngine/JericoEngine/Projects/JEEditorFixture/Cache/pc/config/user.cfg)
+<18:02:40> GameName: JEEditorFixture
+<18:02:40> BuildTime: Oct 14 2026 22:00:40
+<18:02:40> > g_languageAudio : en-US
+
+<18:02:40> Running without any Audio Engine!
+
+<18:02:40> Audio System is initialized and ready!
+
+<18:02:40> Initializing additional systems
+
+<18:02:40> Using FreeType 2.11.1
+<18:02:40> > r_streamingImagePoolBudgetMb : 0
+
+<18:02:40> > r_streamingImageMipBias : 0
+
+<18:02:40> (RPI system) - System assets initialized
+
+<18:02:40> > r_shadowCascadeExtrusionAmount : -1
+
+<18:02:40> > r_enablePerMeshShaderOptionFlags : false
+
+<18:02:40> > r_meshInstancingEnabled : false
+
+<18:02:40> > r_meshInstancingEnabledForTransparentObjects : false
+
+<18:02:40> > r_meshInstancingBucketSortScatterBatchSize : 512
+
+<18:02:40> SetGlobalState 1->3 'INIT'->'LEVEL_LOAD_PREPARE' 0.4 seconds
+<18:02:40> (LevelSystem) - Level system is preparing to load 'Levels/JEEditorFixture/JEEditorFixture.spawnable'
+
+<18:02:40> SetGlobalState 3->4 'LEVEL_LOAD_PREPARE'->'LEVEL_LOAD_START' 0.0 seconds
+<18:02:40> (LevelSystem) - Level system is loading 'Levels/JEEditorFixture/JEEditorFixture.spawnable'
+
+<18:02:40> (Spawnables) - Root spawnable set to 'levels/jeeditorfixture/jeeditorfixture.spawnable' at generation 1.
+
+<18:02:40> SetGlobalState 4->8 'LEVEL_LOAD_START'->'LEVEL_LOAD_PRECACHE' 0.0 seconds
+<18:02:40> SetGlobalState 8->10 'LEVEL_LOAD_PRECACHE'->'LEVEL_LOAD_END' 0.0 seconds
+<18:02:40> Game Level Load Time: [0.0.0.0] Level Levels/JEEditorFixture/JEEditorFixture.spawnable loaded in 0.00 seconds
+<18:02:40> (LevelSystem) - Level load complete: 'Levels/JEEditorFixture/JEEditorFixture.spawnable'
+
+<18:02:40> > LoadLevel : JEEditorFixture
+
+<18:02:40> Executing command from command line: 
+LoadLevel levels/jematerialcooknative5/jematerialcooknative5.spawnable
+<18:02:40> [CONSOLE] Executing console command 'LoadLevel levels/jematerialcooknative5/jematerialcooknative5.spawnable'
+<18:02:40> (LevelSystem) - UnloadLevel Start
+
+<18:02:40> (LevelSystem) - Level unload complete: 'Levels/JEEditorFixture/JEEditorFixture.spawnable'
+
+<18:02:40> (Spawnables) - New root spawnable 'levels/jeeditorfixture/jeeditorfixture.spawnable' assigned (generation: 1).
+
+<18:02:40> (LevelSystem) - UnloadLevel End: 0.0 sec
+
+<18:02:40> SetGlobalState 10->3 'LEVEL_LOAD_END'->'LEVEL_LOAD_PREPARE' 0.0 seconds
+<18:02:40> (LevelSystem) - Level system is preparing to load 'levels/jematerialcooknative5/jematerialcooknative5.spawnable'
+
+<18:02:40> SetGlobalState 3->4 'LEVEL_LOAD_PREPARE'->'LEVEL_LOAD_START' 0.0 seconds
+<18:02:40> (LevelSystem) - Level system is loading 'levels/jematerialcooknative5/jematerialcooknative5.spawnable'
+
+<18:02:40> (Spawnables) - Root spawnable set to 'levels/jematerialcooknative5/jematerialcooknative5.spawnable' at generation 2.
+
+<18:02:40> SetGlobalState 4->8 'LEVEL_LOAD_START'->'LEVEL_LOAD_PRECACHE' 0.0 seconds
+<18:02:40> SetGlobalState 8->10 'LEVEL_LOAD_PRECACHE'->'LEVEL_LOAD_END' 0.0 seconds
+<18:02:40> Game Level Load Time: [0.0.0.0] Level levels/jematerialcooknative5/jematerialcooknative5.spawnable loaded in 0.00 seconds (Chained)
+<18:02:40> (LevelSystem) - Level load complete: 'levels/jematerialcooknative5/jematerialcooknative5.spawnable'
+
+<18:02:40> (RHI) - ****************************************************************
+
+<18:02:40> (RHI) -                     Registering vulkan RHI                          
+
+<18:02:40> (RHI) - ****************************************************************
+
+<18:02:40> (Spawnables) - New root spawnable 'levels/jematerialcooknative5/jematerialcooknative5.spawnable' assigned (generation: 2).
+
+<18:02:40> (Spawnables) - Entities from new root spawnable 'levels/jeeditorfixture/jeeditorfixture.spawnable' are ready (generation: 1).
+
+<18:02:40> (Spawnables) - Generation 1 of the root spawnable has been released.
+
+<18:02:40> (Spawnables) - Entities from new root spawnable 'levels/jematerialcooknative5/jematerialcooknative5.spawnable' are ready (generation: 2).
+
+<18:03:46> [Warning] (RPI) - Failed to initialize PipelineState for DynamicDrawContext
+<18:03:46> System Shutdown
+<18:03:46> (LevelSystem) - UnloadLevel Start
+
+<18:03:46> (LevelSystem) - Level unload complete: 'levels/jematerialcooknative5/jematerialcooknative5.spawnable'
+
+<18:03:46> (LevelSystem) - UnloadLevel End: 0.0 sec
+

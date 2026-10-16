@@ -25,7 +25,6 @@ if(PAL_TRAIT_BUILD_HOST_TOOLS)
                 3rdParty::Qt::Svg
                 Gem::Atom_RHI.Reflect
                 Gem::Atom_RPI.Public
-                Gem::Atom_Bootstrap.Headers
                 JE::RenderIntegration.Public
     )
 

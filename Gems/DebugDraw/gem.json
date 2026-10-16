@@ -20,7 +20,6 @@
     "requirements": "",
     "documentation_url": "https://www.o3de.org/docs/user-guide/gems/reference/debug/debug-draw/",
     "dependencies": [
-        "Atom_RPI",
-        "Atom_Bootstrap"
+        "Atom_RPI"
     ]
 }

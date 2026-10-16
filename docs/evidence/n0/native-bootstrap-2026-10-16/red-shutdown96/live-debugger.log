@@ -1,0 +1,424 @@
+
+************* Path validation summary **************
+Response                         Time (ms)     Location
+OK                                             F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile
+Opened log file 'F:\JericoEngine\JericoEngine\build\n0-validation\native-render-builders-integration-rev1\native-bootstrap96-launcher-vulkan-attempt2\crash\cdb-review-luna-attempt1\live-debugger.log'
+
+************* Preparing the environment for Debugger Extensions Gallery repositories **************
+   ExtensionRepository : Implicit
+   UseExperimentalFeatureForNugetShare : true
+   AllowNugetExeUpdate : true
+   NonInteractiveNuget : true
+   AllowNugetMSCredentialProviderInstall : true
+   AllowParallelInitializationOfLocalRepositories : true
+
+   -- Configuring repositories
+      ----> Repository : LocalInstalled, Enabled: true
+      ----> Repository : UserExtensions, Enabled: true
+
+>>>>>>>>>>>>> Preparing the environment for Debugger Extensions Gallery repositories completed, duration 0.016 seconds
+
+************* Waiting for Debugger Extensions Gallery to Initialize **************
+
+>>>>>>>>>>>>> Waiting for Debugger Extensions Gallery to Initialize completed, duration 0.016 seconds
+   ----> Repository : UserExtensions, Enabled: true, Packages count: 0
+   ----> Repository : LocalInstalled, Enabled: true, Packages count: 46
+
+Microsoft (R) Windows Debugger Version 10.0.29617.1000 AMD64
+Copyright (c) Microsoft Corporation. All rights reserved.
+
+CommandLine: F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\JEEditorFixture.GameLauncher.exe --project-path F:/JericoEngine/JericoEngine/Projects/JEEditorFixture --rhi=vulkan --bg_ConnectToAssetProcessor=false --regset=/Amazon/AzCore/Bootstrap/wait_for_connect=0 --regset=/Amazon/AzCore/Bootstrap/remote_filesystem=0 +LoadLevel levels/jematerialcooknative5/jematerialcooknative5.spawnable
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\atlmfc.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\concurrency.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\cpp_rest.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\ObjectiveC.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\stl.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Windows.Data.Json.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Windows.Devices.Geolocation.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Windows.Devices.Sensors.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Windows.Media.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\windows.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\winrt.natvis'
+
+************* Path validation summary **************
+Response                         Time (ms)     Location
+OK                                             F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile
+Symbol search path is: F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile
+Executable search path is: 
+ModLoad: 00007ff6`70260000 00007ff6`703cf000   JEEditorFixture.GameLauncher.exe
+ModLoad: 00007ffc`2d7a0000 00007ffc`2da08000   ntdll.dll
+ModLoad: 00007ffc`2c540000 00007ffc`2c60b000   C:\WINDOWS\System32\KERNEL32.DLL
+ModLoad: 00007ffc`2ab30000 00007ffc`2af31000   C:\WINDOWS\System32\KERNELBASE.dll
+ModLoad: 00007ffc`27420000 00007ffc`274bf000   C:\WINDOWS\SYSTEM32\apphelp.dll
+ModLoad: 00007ffc`2b1c0000 00007ffc`2b30c000   C:\WINDOWS\System32\ucrtbase.dll
+ModLoad: 00007ffc`0fe90000 00007ffc`0febc000   C:\WINDOWS\SYSTEM32\VCRUNTIME140.dll
+ModLoad: 00007ffc`2c2d0000 00007ffc`2c4a7000   C:\WINDOWS\System32\USER32.dll
+ModLoad: 00007ffb`9d4a0000 00007ffb`9d55e000   F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Geometry.dll
+ModLoad: 00007ffb`9d340000 00007ffb`9d49b000   F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\WorldCamera.dll
+ModLoad: 00007ffc`2a990000 00007ffc`2a9b7000   C:\WINDOWS\System32\win32u.dll
+ModLoad: 00007ffb`9d180000 00007ffb`9d242000   F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\RenderDebug.dll
+ModLoad: 00007ffc`2c800000 00007ffc`2c82b000   C:\WINDOWS\System32\GDI32.dll
+ModLoad: 00007ffc`2b090000 00007ffc`2b1ba000   C:\WINDOWS\System32\gdi32full.dll
+ModLoad: 00007ffc`2aa80000 00007ffc`2ab23000   C:\WINDOWS\System32\msvcp_win.dll
+ModLoad: 00007ffb`a27c0000 00007ffb`a2813000   F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\ProfilerView.dll
+ModLoad: 00007ffb`9cf00000 00007ffb`9cfd7000   F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\RenderIntegration.dll
+ModLoad: 00007ffb`9ce10000 00007ffb`9cefe000   F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\DebugImGui.dll
+ModLoad: 00007ffb`98400000 00007ffb`98632000   F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\RenderMaterials.dll
+ModLoad: 00007ffb`982f0000 00007ffb`983fc000   F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AzFramework.NativeUI.dll
+ModLoad: 00007ffb`95c20000 00007ffb`96dc9000   F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AzCore.dll
+ModLoad: 000002bb`a1dd0000 000002bb`a2f79000   F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AzCore.dll
+ModLoad: 00007ffc`2c150000 00007ffc`2c20c000   C:\WINDOWS\System32\ADVAPI32.dll
+ModLoad: 00007ffc`2c220000 00007ffc`2c2c9000   C:\WINDOWS\System32\msvcrt.dll
+ModLoad: 00007ffb`96dd0000 00007ffb`982ee000   F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AzFramework.dll
+ModLoad: 000002bb`a1de0000 000002bb`a32fe000   F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AzFramework.dll
+ModLoad: 00007ffc`2d100000 00007ffc`2d1a8000   C:\WINDOWS\System32\sechost.dll
+ModLoad: 00007ffc`2bec0000 00007ffc`2bfd8000   C:\WINDOWS\System32\RPCRT4.dll
+ModLoad: 00007ffc`2b320000 00007ffc`2b49f000   C:\WINDOWS\System32\CRYPT32.dll
+ModLoad: 00007ffb`95450000 00007ffb`95c18000   F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_RPI.Public.dll
+ModLoad: 00007ffb`95390000 00007ffb`9544c000   F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\DearImGui.dll
+ModLoad: 00007ffc`2c950000 00007ffc`2d0ec000   C:\WINDOWS\System32\SHELL32.dll
+ModLoad: 00007ffc`2c0c0000 00007ffc`2c141000   C:\WINDOWS\System32\WS2_32.dll
+ModLoad: 00007ffc`2bba0000 00007ffc`2bd3a000   C:\WINDOWS\System32\ole32.dll
+ModLoad: 00007ffc`0fdf0000 00007ffc`0fe8d000   C:\WINDOWS\SYSTEM32\MSVCP140.dll
+ModLoad: 00007ffc`2d250000 00007ffc`2d5db000   C:\WINDOWS\System32\combase.dll
+ModLoad: 00007ffb`95180000 00007ffb`95386000   F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_RHI.Public.dll
+ModLoad: 00007ffc`2bfe0000 00007ffc`2c0b9000   C:\WINDOWS\System32\OLEAUT32.dll
+ModLoad: 00007ffb`94e60000 00007ffb`9517b000   F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_RHI.Reflect.dll
+ModLoad: 000002bb`a1e10000 000002bb`a212b000   F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_RHI.Reflect.dll
+ModLoad: 00007ffc`0fae0000 00007ffc`0faec000   C:\WINDOWS\SYSTEM32\VCRUNTIME140_1.dll
+ModLoad: 00007ffb`9d2f0000 00007ffb`9d33a000   F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\ProfilerCapture.dll
+ModLoad: 00007ffb`88a80000 00007ffb`88a96000   C:\WINDOWS\SYSTEM32\MSVCP140_ATOMIC_WAIT.dll
+ModLoad: 00007ffc`23640000 00007ffc`2364b000   C:\WINDOWS\SYSTEM32\VERSION.dll
+ModLoad: 00007ffc`2a870000 00007ffc`2a89a000   C:\WINDOWS\SYSTEM32\bcrypt.dll
+(29c4.605c): Break instruction exception - code 80000003 (first chance)
+ntdll!RtlGetReturnAddressHijackTarget+0x749:
+00007ffc`2d8c26c9 cc              int     3
+0:000> sxd av
+0:000> sxd eh
+0:000> g
+ModLoad: 00007ffc`2bb60000 00007ffc`2bb91000   C:\WINDOWS\System32\IMM32.DLL
+ModLoad: 00007ffc`2af40000 00007ffc`2afec000   C:\WINDOWS\System32\bcryptprimitives.dll
+ModLoad: 00007ffc`28410000 00007ffc`28cbe000   C:\WINDOWS\SYSTEM32\windows.storage.dll
+ModLoad: 00007ffc`2bd40000 00007ffc`2be39000   C:\WINDOWS\System32\SHCORE.dll
+ModLoad: 00007ffc`2d1c0000 00007ffc`2d226000   C:\WINDOWS\System32\shlwapi.dll
+ModLoad: 00007ffc`2a8a0000 00007ffc`2a8c9000   C:\WINDOWS\SYSTEM32\profapi.dll
+Launcher: Running project "JEEditorFixture"
+The project name has been successfully set in the Settings Registry at key "/O3DE/Runtime/Manifest/Project/project_name" for Launcher target "JEEditorFixture_GameLauncher"
+Launcher: The asset cache folder of F:\JericoEngine\JericoEngine\Projects\JEEditorFixture\Cache\pc has been successfully read from the Settings Registry
+ModLoad: 00007ffc`29ee0000 00007ffc`29efb000   C:\WINDOWS\SYSTEM32\CRYPTSP.dll
+ModLoad: 00007ffc`29590000 00007ffc`295c9000   C:\WINDOWS\system32\rsaenh.dll
+ModLoad: 00007ffc`29f00000 00007ffc`29f0c000   C:\WINDOWS\SYSTEM32\CRYPTBASE.dll
+ModLoad: 00007ffb`9d2b0000 00007ffb`9d2ee000   F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AtomViewportDisplayInfo.dll
+ModLoad: 00007ffb`94900000 00007ffb`949e3000   F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AudioSystem.dll
+ModLoad: 00007ffb`948a0000 00007ffb`948f3000   F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_RHI.Private.dll
+ModLoad: 00007ffb`94850000 00007ffb`94891000   F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_RPI.Private.dll
+ModLoad: 00007ffb`902f0000 00007ffb`908ec000   F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\CommonFeaturesAtom.dll
+ModLoad: 00007ffb`93510000 00007ffb`93686000   F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_Feature_Common.Public.dll
+ModLoad: 00007ffb`8fe90000 00007ffb`902ee000   F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\LmbrCentral.dll
+ModLoad: 00007ffb`8fb30000 00007ffb`8fe83000   F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\GradientSignal.dll
+ModLoad: 00007ffb`8f8e0000 00007ffb`8fb29000   F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Maestro.dll
+ModLoad: 00007ffb`8f7c0000 00007ffb`8f8d3000   F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\SurfaceData.dll
+ModLoad: 00007ffb`8f6c0000 00007ffb`8f7b8000   F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AtomFont.dll
+ModLoad: 00007ffb`8f4e0000 00007ffb`8f6bc000   F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_RHI_Vulkan.Private.dll
+ModLoad: 00007ffb`8a380000 00007ffb`8a843000   F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_Feature_Common.dll
+ModLoad: 00007ffb`882b0000 00007ffb`88a0d000   F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\EMotionFX.dll
+ModLoad: 00007ffb`8f3f0000 00007ffb`8f4e0000   F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\EMotionFX_Atom.dll
+ModLoad: 00007ffb`85ee0000 00007ffb`8667e000   F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\PhysX5.Gem.dll
+Launcher: 
+==================================================================
+Launcher: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzGameFramework/AzGameFramework/Application/GameApplication.cpp(149): 'void __cdecl AzGameFramework::GameApplication::StartCommon(class AZ::Entity *)'
+Launcher: Console-mode was requested but not supported on this platform
+
+Launcher: ==================================================================
+ModLoad: 00007ffc`29630000 00007ffc`2964b000   C:\WINDOWS\SYSTEM32\kernel.appcore.dll
+Streamer: Storage drive (C) created.
+Streamer: Storage drive (F) created.
+ModLoad: 00007ffc`298f0000 00007ffc`2993a000   C:\WINDOWS\SYSTEM32\SspiCli.dll
+ModLoad: 00007ffc`093d0000 00007ffc`0966e000   C:\WINDOWS\SYSTEM32\icu.dll
+ModLoad: 00007ffb`edcc0000 00007ffb`edcc9000   C:\WINDOWS\SYSTEM32\XInput9_1_0.dll
+System: AudioSystem created!
+ModLoad: 00007ffc`26fd0000 00007ffc`27077000   C:\WINDOWS\system32\uxtheme.dll
+ModLoad: 00007ffc`2c830000 00007ffc`2c8df000   C:\WINDOWS\System32\clbcatq.dll
+ModLoad: 00007ffc`097f0000 00007ffc`09802000   C:\WINDOWS\system32\wbem\wbemprox.dll
+ModLoad: 00007ffc`100e0000 00007ffc`10166000   C:\WINDOWS\SYSTEM32\wbemcomn.dll
+ModLoad: 00007ffc`08e60000 00007ffc`08e75000   C:\WINDOWS\system32\wbem\wbemsvc.dll
+ModLoad: 00007ffc`08f00000 00007ffc`08ff6000   C:\WINDOWS\system32\wbem\fastprox.dll
+ModLoad: 00007ffc`08980000 00007ffc`0899d000   C:\WINDOWS\SYSTEM32\amsi.dll
+ModLoad: 00007ffc`29ca0000 00007ffc`29cd4000   C:\WINDOWS\SYSTEM32\USERENV.dll
+ModLoad: 00007ffc`088d0000 00007ffc`08975000   C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.26090.9-0\MpOav.dll
+ModLoad: 00007ffb`8f240000 00007ffb`8f3f0000   C:\WINDOWS\SYSTEM32\vulkan-1.dll
+ModLoad: 00007ffc`2a570000 00007ffc`2a5c2000   C:\WINDOWS\SYSTEM32\CFGMGR32.dll
+ModLoad: 00007ffc`276e0000 00007ffc`2781b000   C:\WINDOWS\system32\dxgi.dll
+ModLoad: 00007ffc`2a620000 00007ffc`2a67e000   C:\WINDOWS\SYSTEM32\powrprof.dll
+ModLoad: 00007ffc`2a600000 00007ffc`2a615000   C:\WINDOWS\SYSTEM32\UMPDC.dll
+ModLoad: 00007ffc`0ada0000 00007ffc`0adbe000   C:\WINDOWS\SYSTEM32\windows.staterepositorycore.dll
+ModLoad: 00007ffc`27690000 00007ffc`276d4000   C:\WINDOWS\SYSTEM32\dxcore.dll
+ModLoad: 00007ffc`27ad0000 00007ffc`27ae4000   C:\WINDOWS\SYSTEM32\resourcepolicyclient.dll
+ModLoad: 00007ffc`24a60000 00007ffc`24abf000   C:\WINDOWS\SYSTEM32\directxdatabasehelper.dll
+ModLoad: 00007ffb`7e190000 00007ffb`8103b000   C:\WINDOWS\System32\DriverStore\FileRepository\nvmdi.inf_amd64_21e6b42b376b80b2\nvoglv64.dll
+ModLoad: 00007ffc`2b6d0000 00007ffc`2bb57000   C:\WINDOWS\System32\SETUPAPI.dll
+ModLoad: 00007ffc`273f0000 00007ffc`2741a000   C:\WINDOWS\SYSTEM32\WTSAPI32.dll
+ModLoad: 00007ffc`29f60000 00007ffc`29f73000   C:\WINDOWS\SYSTEM32\msasn1.dll
+ModLoad: 00007ffc`23510000 00007ffc`2354b000   C:\WINDOWS\SYSTEM32\cryptnet.dll
+ModLoad: 00007ffc`29fe0000 00007ffc`2a061000   C:\WINDOWS\SYSTEM32\wldp.dll
+ModLoad: 00007ffc`23370000 00007ffc`234ea000   C:\WINDOWS\SYSTEM32\drvstore.dll
+ModLoad: 00007ffc`2a530000 00007ffc`2a55f000   C:\WINDOWS\SYSTEM32\devobj.dll
+ModLoad: 00007ffc`29760000 00007ffc`29796000   C:\WINDOWS\SYSTEM32\ntmarta.dll
+ModLoad: 00007ffc`2b000000 00007ffc`2b082000   C:\WINDOWS\System32\WINTRUST.dll
+ModLoad: 00007ffc`2b540000 00007ffc`2b560000   C:\WINDOWS\System32\imagehlp.dll
+ModLoad: 00007ffc`1bd70000 00007ffc`22718000   C:\WINDOWS\System32\DriverStore\FileRepository\nvmdi.inf_amd64_21e6b42b376b80b2\nvgpucomp64.dll
+ModLoad: 00007ffc`240b0000 00007ffc`2421a000   C:\Windows\System32\WinTypes.dll
+ModLoad: 00007ffc`0d160000 00007ffc`0d199000   C:\WINDOWS\SYSTEM32\rometadata.dll
+ModLoad: 000002bc`26a20000 000002bc`26afd000   C:\Windows\System32\WinMetadata\Windows.Devices.winmd
+ModLoad: 00007ffb`91020000 00007ffb`9118d000   C:\WINDOWS\system32\nvspcap64.dll
+ModLoad: 00007ffc`2c7f0000 00007ffc`2c7f8000   C:\WINDOWS\System32\PSAPI.DLL
+ModLoad: 00007ffc`27ff0000 00007ffc`2823c000   C:\WINDOWS\SYSTEM32\dbghelp.dll
+ModLoad: 00007ffc`27a40000 00007ffc`27a6e000   C:\WINDOWS\SYSTEM32\dwmapi.dll
+ModLoad: 00007ffc`2c7f0000 00007ffc`2c7f8000   C:\WINDOWS\System32\PSAPI.DLL
+ModLoad: 00007ffc`27ff0000 00007ffc`2823c000   C:\WINDOWS\SYSTEM32\dbghelp.dll
+ModLoad: 00007ffc`2c7f0000 00007ffc`2c7f8000   C:\WINDOWS\System32\PSAPI.DLL
+ModLoad: 00007ffc`27ff0000 00007ffc`2823c000   C:\WINDOWS\SYSTEM32\dbghelp.dll
+ModLoad: 00007ffc`2c7f0000 00007ffc`2c7f8000   C:\WINDOWS\System32\PSAPI.DLL
+ModLoad: 00007ffc`27ff0000 00007ffc`2823c000   C:\WINDOWS\SYSTEM32\dbghelp.dll
+ModLoad: 00007ffb`7b550000 00007ffb`7e183000   C:\WINDOWS\System32\DriverStore\FileRepository\nvmdi.inf_amd64_21e6b42b376b80b2\nvrtum64.dll
+RHISystem: Initializing RHI...
+RHISystem: 	Enumerated physical device: NVIDIA GeForce RTX 3090
+RHISystem: 	Using physical device: NVIDIA GeForce RTX 3090
+ModLoad: 00007ffb`7aa00000 00007ffb`7b54a000   C:\WINDOWS\System32\DriverStore\FileRepository\nvmdi.inf_amd64_21e6b42b376b80b2\nvcuda64.dll
+ModLoad: 00007ffc`2c7f0000 00007ffc`2c7f8000   C:\WINDOWS\System32\PSAPI.DLL
+ModLoad: 00007ffc`27ff0000 00007ffc`2823c000   C:\WINDOWS\SYSTEM32\dbghelp.dll
+ModLoad: 00007ffb`79ba0000 00007ffb`7a9fb000   C:\WINDOWS\System32\DriverStore\FileRepository\nvmdi.inf_amd64_21e6b42b376b80b2\nvobjectloader64.dll
+ModLoad: 00007ffc`2d5f0000 00007ffc`2d74c000   C:\WINDOWS\System32\MSCTF.dll
+ModLoad: 00007ffc`09680000 00007ffc`097c6000   C:\WINDOWS\SYSTEM32\textinputframework.dll
+ModLoad: 00007ffc`26ea0000 00007ffc`26fca000   C:\WINDOWS\SYSTEM32\CoreMessaging.dll
+ModLoad: 00007ffc`24250000 00007ffc`24535000   C:\WINDOWS\SYSTEM32\CoreUIComponents.dll
+PhysXSystem: PhysXConfiguration was read from settings registry at pointer path "/Amazon/Gems/PhysX5/PhysXSystemConfiguration
+PhysXSystem: Default Scene Configuration was read from settings registry at pointer path "/Amazon/Gems/PhysX5/DefaultSceneConfiguration
+PhysXSystem: Debug::DebugConfiguration was read from settings registry at pointer path "/Amazon/Gems/PhysX5/Debug/PhysXDebugConfiguration
+AssetCatalog: Initializing asset catalog with root "F:\JericoEngine\JericoEngine\Projects\JEEditorFixture\Cache\pc"AssetCatalog: Loaded registry containing 4513 assets.
+AssetCatalog: Initializing asset catalog with root "F:\JericoEngine\JericoEngine\Projects\JEEditorFixture\Cache\pc"AssetCatalog: Loaded registry containing 4513 assets.
+Launcher: CriticalAssetsCompiled
+Launcher: Application is configured to use device local files at F:\JericoEngine\JericoEngine\Projects\JEEditorFixture\Cache\pc
+Launcher: Log and cache files will be written to device storage
+ModLoad: 00007ffb`8f120000 00007ffb`8f23a000   F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\CrySystem.dll
+<17:37:20> BackupNameAttachment=" Build(0) 16 Oct 26 (17 37 20)"  -- used by backup system
+<17:37:20> Log Started at Fri Oct 16 17:37:20 2026
+<17:37:20> Built on Oct 14 2026 22:00:40
+<17:37:20> Running 64 bit Windows version
+<17:37:20> FileVersion: 0.0.0.0
+<17:37:20> ProductVersion: 0.0.0.0
+<17:37:20> Using Microsoft (tm) C++ Standard Library implementation
+<17:37:20> Project Path: F:\JericoEngine\JericoEngine\Projects\JEEditorFixture
+
+<17:37:20> Project Name: JEEditorFixture
+
+<17:37:20> [Warning] Config file game.cfg not found!
+<17:37:20> creating CVarGroups from directory 'Config/CVarGroups' ...
+<17:37:20> Loading Config file user.cfg (F:/JericoEngine/JericoEngine/Projects/JEEditorFixture/Cache/pc/config/user.cfg)
+<17:37:20> GameName: JEEditorFixture
+<17:37:20> BuildTime: Oct 14 2026 22:00:40
+<17:37:20> > g_languageAudio : en-US
+
+<17:37:20> Running without any Audio Engine!
+
+<17:37:20> Audio System is initialized and ready!
+
+<17:37:20> Initializing additional systems
+
+<17:37:20> Using FreeType 2.11.1
+<17:37:20> > r_streamingImagePoolBudgetMb : 0
+
+<17:37:20> > r_streamingImageMipBias : 0
+
+<17:37:20> (RPI system) - System assets initialized
+
+<17:37:20> > r_shadowCascadeExtrusionAmount : -1
+
+<17:37:20> > r_enablePerMeshShaderOptionFlags : false
+
+<17:37:20> > r_meshInstancingEnabled : false
+
+<17:37:20> > r_meshInstancingEnabledForTransparentObjects : false
+
+<17:37:20> > r_meshInstancingBucketSortScatterBatchSize : 512
+
+ModLoad: 00007ffc`10f40000 00007ffc`10fc9000   C:\WINDOWS\SYSTEM32\nvapi64.dll
+ModLoad: 00007ffc`109a0000 00007ffc`10f32000   C:\WINDOWS\system32\DriverStore\FileRepository\nvmdi.inf_amd64_21e6b42b376b80b2\nvapi64_impl.dll
+ModLoad: 00007ffc`18d00000 00007ffc`18d37000   C:\WINDOWS\SYSTEM32\WINMM.dll
+ModLoad: 00007ffc`092e0000 00007ffc`0936f000   C:\Windows\System32\DispBroker.dll
+ModLoad: 00007ffb`c2560000 00007ffb`c266c000   C:\WINDOWS\SYSTEM32\opengl32.dll
+ModLoad: 00007ffc`0d1a0000 00007ffc`0d1d9000   C:\WINDOWS\SYSTEM32\GLU32.dll
+ModLoad: 00007ffb`908f0000 00007ffb`91017000   C:\WINDOWS\System32\DriverStore\FileRepository\nvmdi.inf_amd64_21e6b42b376b80b2\nvppex.dll
+ModLoad: 00007ffc`2a140000 00007ffc`2a1a6000   C:\WINDOWS\SYSTEM32\WINSTA.dll
+<17:37:20> SetGlobalState 1->3 'INIT'->'LEVEL_LOAD_PREPARE' 0.6 seconds
+<17:37:20> (LevelSystem) - Level system is preparing to load 'Levels/JEEditorFixture/JEEditorFixture.spawnable'
+
+<17:37:20> SetGlobalState 3->4 'LEVEL_LOAD_PREPARE'->'LEVEL_LOAD_START' 0.0 seconds
+<17:37:20> (LevelSystem) - Level system is loading 'Levels/JEEditorFixture/JEEditorFixture.spawnable'
+
+<17:37:20> (Spawnables) - Root spawnable set to 'levels/jeeditorfixture/jeeditorfixture.spawnable' at generation 1.
+
+<17:37:20> SetGlobalState 4->8 'LEVEL_LOAD_START'->'LEVEL_LOAD_PRECACHE' 0.0 seconds
+<17:37:20> SetGlobalState 8->10 'LEVEL_LOAD_PRECACHE'->'LEVEL_LOAD_END' 0.0 seconds
+<17:37:20> Game Level Load Time: [0.0.0.0] Level Levels/JEEditorFixture/JEEditorFixture.spawnable loaded in 0.00 seconds
+<17:37:20> (LevelSystem) - Level load complete: 'Levels/JEEditorFixture/JEEditorFixture.spawnable'
+
+<17:37:20> > LoadLevel : JEEditorFixture
+
+<17:37:20> Executing command from command line: 
+LoadLevel levels/jematerialcooknative5/jematerialcooknative5.spawnable
+<17:37:20> [CONSOLE] Executing console command 'LoadLevel levels/jematerialcooknative5/jematerialcooknative5.spawnable'
+<17:37:20> (LevelSystem) - UnloadLevel Start
+
+<17:37:20> (LevelSystem) - Level unload complete: 'Levels/JEEditorFixture/JEEditorFixture.spawnable'
+
+<17:37:20> (Spawnables) - New root spawnable 'levels/jeeditorfixture/jeeditorfixture.spawnable' assigned (generation: 1).
+
+<17:37:20> (LevelSystem) - UnloadLevel End: 0.0 sec
+
+<17:37:20> SetGlobalState 10->3 'LEVEL_LOAD_END'->'LEVEL_LOAD_PREPARE' 0.0 seconds
+<17:37:20> (LevelSystem) - Level system is preparing to load 'levels/jematerialcooknative5/jematerialcooknative5.spawnable'
+
+<17:37:20> SetGlobalState 3->4 'LEVEL_LOAD_PREPARE'->'LEVEL_LOAD_START' 0.0 seconds
+<17:37:20> (LevelSystem) - Level system is loading 'levels/jematerialcooknative5/jematerialcooknative5.spawnable'
+
+<17:37:20> (Spawnables) - Root spawnable set to 'levels/jematerialcooknative5/jematerialcooknative5.spawnable' at generation 2.
+
+<17:37:20> SetGlobalState 4->8 'LEVEL_LOAD_START'->'LEVEL_LOAD_PRECACHE' 0.0 seconds
+<17:37:20> SetGlobalState 8->10 'LEVEL_LOAD_PRECACHE'->'LEVEL_LOAD_END' 0.0 seconds
+<17:37:20> Game Level Load Time: [0.0.0.0] Level levels/jematerialcooknative5/jematerialcooknative5.spawnable loaded in 0.00 seconds (Chained)
+<17:37:20> (LevelSystem) - Level load complete: 'levels/jematerialcooknative5/jematerialcooknative5.spawnable'
+
+ModLoad: 00007ffb`f3280000 00007ffb`f36a0000   C:\Windows\System32\uiautomationcore.dll
+<17:37:20> (RHI) - ****************************************************************
+
+<17:37:20> (RHI) -                     Registering vulkan RHI                          
+
+<17:37:20> (RHI) - ****************************************************************
+
+ModLoad: 00007ffb`c2680000 00007ffb`c269b000   C:\WINDOWS\SYSTEM32\XInput1_4.dll
+ModLoad: 00007ffc`00d80000 00007ffc`00f66000   C:\WINDOWS\SYSTEM32\inputhost.dll
+<17:37:20> (Spawnables) - New root spawnable 'levels/jematerialcooknative5/jematerialcooknative5.spawnable' assigned (generation: 2).
+
+<17:37:21> (Spawnables) - Entities from new root spawnable 'levels/jeeditorfixture/jeeditorfixture.spawnable' are ready (generation: 1).
+
+<17:37:21> (Spawnables) - Generation 1 of the root spawnable has been released.
+
+<17:37:21> (Spawnables) - Entities from new root spawnable 'levels/jematerialcooknative5/jematerialcooknative5.spawnable' are ready (generation: 2).
+
+ModLoad: 00007ffc`01940000 00007ffc`019b5000   C:\Windows\System32\OLEACC.dll
+ModLoad: 00007ffc`00c30000 00007ffc`00c46000   C:\Windows\System32\threadpoolwinrt.dll
+<17:38:18> [Warning] (RPI) - Failed to initialize PipelineState for DynamicDrawContext
+<17:38:18> System Shutdown
+<17:38:18> (LevelSystem) - UnloadLevel Start
+
+<17:38:18> (LevelSystem) - Level unload complete: 'levels/jematerialcooknative5/jematerialcooknative5.spawnable'
+
+<17:38:18> (LevelSystem) - UnloadLevel End: 0.0 sec
+
+(29c4.fc0): C++ EH exception - code e06d7363 (first chance)
+(29c4.fc0): C++ EH exception - code e06d7363 (first chance)
+(29c4.fc0): C++ EH exception - code e06d7363 (first chance)
+(29c4.fc0): C++ EH exception - code e06d7363 (first chance)
+(29c4.6294): C++ EH exception - code e06d7363 (first chance)
+(29c4.6294): C++ EH exception - code e06d7363 (first chance)
+(29c4.6294): C++ EH exception - code e06d7363 (first chance)
+(29c4.6294): C++ EH exception - code e06d7363 (first chance)
+(29c4.fc0): C++ EH exception - code e06d7363 (first chance)
+(29c4.fc0): C++ EH exception - code e06d7363 (first chance)
+(29c4.fc0): C++ EH exception - code e06d7363 (first chance)
+(29c4.fc0): C++ EH exception - code e06d7363 (first chance)
+(29c4.fc0): C++ EH exception - code e06d7363 (first chance)
+(29c4.fc0): C++ EH exception - code e06d7363 (first chance)
+(29c4.fc0): C++ EH exception - code e06d7363 (first chance)
+(29c4.fc0): C++ EH exception - code e06d7363 (first chance)
+(29c4.fc0): C++ EH exception - code e06d7363 (first chance)
+(29c4.fc0): C++ EH exception - code e06d7363 (first chance)
+(29c4.fc0): C++ EH exception - code e06d7363 (first chance)
+(29c4.fc0): C++ EH exception - code e06d7363 (first chance)
+Streamer: Storage drive (F) destroyed.
+Streamer: Storage drive (C) destroyed.
+(29c4.605c): Access violation - code c0000005 (first chance)
+(29c4.605c): Access violation - code c0000005 (!!! second chance !!!)
+*** WARNING: Unable to verify checksum for F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\RenderIntegration.dll
+RenderIntegration!AZStd::Internal::sp_counted_base::release+0x12 [inlined in RenderIntegration!JE::Render::Integration::AtomDebugDisplayViewportInterface::~AtomDebugDisplayViewportInterface+0xc1]:
+00007ffb`9cf3c3a1 ff5008          call    qword ptr [rax+8] ds:00007ffb`8a63b630=????????????????
+0:000> .ecxr
+Unable to get exception context, HRESULT 0x8000FFFF
+0:000> kv
+Child-SP          RetAddr               : Args to Child                                                           : Call Site
+(Inline Function) --------`--------     : --------`-------- --------`-------- --------`-------- --------`-------- : RenderIntegration!AZStd::Internal::sp_counted_base::release+0x12 (Inline Function @ 00007ffb`9cf3c3a1)
+(Inline Function) --------`--------     : --------`-------- --------`-------- --------`-------- --------`-------- : RenderIntegration!AZStd::Internal::shared_count::{dtor}+0x3c (Inline Function @ 00007ffb`9cf3c3a1)
+(Inline Function) --------`--------     : --------`-------- --------`-------- --------`-------- --------`-------- : RenderIntegration!AZStd::shared_ptr<AZ::RPI::AuxGeomDraw>::operator=+0x43 (Inline Function @ 00007ffb`9cf3c3a1)
+000000bf`c36f8950 00007ffb`9cf383f8     : 000002ff`2ecb1000 000002ff`21c341d8 000002ff`20e0b500 00000000`00000000 : RenderIntegration!JE::Render::Integration::AtomDebugDisplayViewportInterface::~AtomDebugDisplayViewportInterface+0xc1
+000000bf`c36f8980 00007ffb`9cf364bf     : 000002bb`a1be0000 00007ffb`00000000 00000000`00000000 000002bb`a1be0000 : RenderIntegration!AZStd::Internal::sp_counted_impl_pda<JE::Render::Integration::AtomDebugDisplayViewportInterface *,AZStd::Internal::sp_ms_deleter<JE::Render::Integration::AtomDebugDisplayViewportInterface>,AZStd::allocator>::dispose+0x18
+(Inline Function) --------`--------     : --------`-------- --------`-------- --------`-------- --------`-------- : RenderIntegration!AZStd::Internal::sp_counted_base::release+0x18 (Inline Function @ 00007ffb`9cf364bf)
+(Inline Function) --------`--------     : --------`-------- --------`-------- --------`-------- --------`-------- : RenderIntegration!AZStd::Internal::shared_count::{dtor}+0x27 (Inline Function @ 00007ffb`9cf364bf)
+(Inline Function) --------`--------     : --------`-------- --------`-------- --------`-------- --------`-------- : RenderIntegration!AZStd::Internal::destroy<std::pair<int,AZStd::shared_ptr<JE::Render::Integration::AtomDebugDisplayViewportInterface> > *,std::pair<int,AZStd::shared_ptr<JE::Render::Integration::AtomDebugDisplayViewportInterface> >,0>::single+0x27 (Inline Function @ 00007ffb`9cf364bf)
+(Inline Function) --------`--------     : --------`-------- --------`-------- --------`-------- --------`-------- : RenderIntegration!AZStd::list<std::pair<int,AZStd::shared_ptr<JE::Render::Integration::AtomDebugDisplayViewportInterface> >,AZStd::allocator_ref<AZStd::allocator> >::clear+0x3e (Inline Function @ 00007ffb`9cf364bf)
+(Inline Function) --------`--------     : --------`-------- --------`-------- --------`-------- --------`-------- : RenderIntegration!AZStd::list<std::pair<int,AZStd::shared_ptr<JE::Render::Integration::AtomDebugDisplayViewportInterface> >,AZStd::allocator_ref<AZStd::allocator> >::{dtor}+0x3e (Inline Function @ 00007ffb`9cf364bf)
+000000bf`c36f89b0 00007ffb`9cf3659e     : 000002ff`21c34100 00000000`00000001 000002ff`21c34100 000000bf`c36fae88 : RenderIntegration!AZStd::Internal::hash_table_storage<AZStd::Internal::UnorderedMapTableTraits<int,AZStd::shared_ptr<JE::Render::Integration::AtomDebugDisplayViewportInterface>,AZStd::hash<int>,AZStd::equal_to<int>,AZStd::allocator,0> >::~hash_table_storage<AZStd::Internal::UnorderedMapTableTraits<int,AZStd::shared_ptr<JE::Render::Integration::AtomDebugDisplayViewportInterface>,AZStd::hash<int>,AZStd::equal_to<int>,AZStd::allocator,0> >+0x6f
+000000bf`c36f89e0 00007ffb`9cf367d6     : 000000bf`c36fae80 000002ff`201f0f38 000000bf`c36fae88 000002ff`20e0b500 : RenderIntegration!JE::Render::Integration::AtomBridgeSystemComponent::~AtomBridgeSystemComponent+0x7e
+*** WARNING: Unable to verify checksum for F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AzCore.dll
+000000bf`c36f8a10 00007ffb`963e0f93     : 000002ff`20e0b500 00000010`7d88a78a 000002ff`20e0b508 000002ff`20e0b508 : RenderIntegration!JE::Render::Integration::AtomBridgeSystemComponent::`vector deleting destructor'+0xd6
+000000bf`c36f8a50 00007ffb`963cfbb8     : 000002ff`20d10006 000000bf`c36fae02 000002ff`20e0b500 00000000`00000000 : AzCore!AZ::Entity::Reset+0x143
+000000bf`c36f8ab0 00007ffb`95f273c7     : 000002ff`20d10000 000002ff`20080000 00000000`00000008 000002bb`a1c29780 : AzCore!AZ::Entity::~Entity+0x18
+000000bf`c36f8ae0 00007ffb`960099db     : 000002ff`20730280 00007ffb`965a8070 00000000`00000000 00007ffb`9646af7b : AzCore!AZ::ModuleEntity::`vector deleting destructor'+0x97
+(Inline Function) --------`--------     : --------`-------- --------`-------- --------`-------- --------`-------- : AzCore!std::default_delete<AZ::ModuleEntity>::operator()+0xb (Inline Function @ 00007ffb`960099db)
+(Inline Function) --------`--------     : --------`-------- --------`-------- --------`-------- --------`-------- : AzCore!std::unique_ptr<AZ::ModuleEntity,std::default_delete<AZ::ModuleEntity> >::reset+0x1a (Inline Function @ 00007ffb`960099db)
+000000bf`c36f8b20 00007ffb`9600cdcc     : 000002ff`20730280 00007ffb`965a8070 00000000`00000000 00000000`00000000 : AzCore!AZ::ModuleDataImpl::~ModuleDataImpl+0x3b
+000000bf`c36f8b70 00007ffb`95c738cb     : 000002ff`20730260 000002ff`20174650 000002bb`a1c2a618 000000bf`c36fae88 : AzCore!AZ::ModuleDataImpl::`vector deleting destructor'+0x9c
+(Inline Function) --------`--------     : --------`-------- --------`-------- --------`-------- --------`-------- : AzCore!AZStd::Internal::sp_ms_deleter<AZ::IO::StorageDriveWin>::destroy+0x15 (Inline Function @ 00007ffb`95c738cb)
+(Inline Function) --------`--------     : --------`-------- --------`-------- --------`-------- --------`-------- : AzCore!AZStd::Internal::sp_ms_deleter<AZ::IO::StorageDriveWin>::operator()+0x15 (Inline Function @ 00007ffb`95c738cb)
+000000bf`c36f8bb0 00007ffb`96017d2d     : 000002ff`20d133c0 00007ffb`965a8070 000002ff`20174660 000002bb`a1c2a618 : AzCore!AZStd::Internal::sp_counted_impl_pda<AZ::IO::StorageDriveWin *,AZStd::Internal::sp_ms_deleter<AZ::IO::StorageDriveWin>,AZStd::allocator>::dispose+0x1b
+(Inline Function) --------`--------     : --------`-------- --------`-------- --------`-------- --------`-------- : AzCore!AZStd::Internal::sp_counted_base::release+0x18 (Inline Function @ 00007ffb`96017d2d)
+(Inline Function) --------`--------     : --------`-------- --------`-------- --------`-------- --------`-------- : AzCore!AZStd::Internal::shared_count::{dtor}+0x21 (Inline Function @ 00007ffb`96017d2d)
+(Inline Function) --------`--------     : --------`-------- --------`-------- --------`-------- --------`-------- : AzCore!AZStd::Internal::destroy<AZStd::shared_ptr<AZ::ModuleDataImpl> *,AZStd::shared_ptr<AZ::ModuleDataImpl>,0>::single+0x21 (Inline Function @ 00007ffb`96017d2d)
+(Inline Function) --------`--------     : --------`-------- --------`-------- --------`-------- --------`-------- : AzCore!AZStd::vector<AZStd::shared_ptr<AZ::ModuleDataImpl>,AZStd::allocator>::pop_back+0x60 (Inline Function @ 00007ffb`96017d2d)
+000000bf`c36f8be0 00007ffb`964512bb     : 000000bf`c36fac20 000000bf`c36f8cf9 000000bf`c36fae88 000000bf`c36fac20 : AzCore!AZ::ModuleManager::UnloadModules+0x9d
+*** WARNING: Unable to verify checksum for F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AzFramework.dll
+000000bf`c36f8ca0 00007ffb`97737e4a     : 000000bf`c36fac20 000000bf`c36fac20 000002bb`a1c29f18 00007ff6`70271028 : AzCore!AZ::ComponentApplication::Destroy+0x39b
+*** WARNING: Unable to verify checksum for JEEditorFixture.GameLauncher.exe
+000000bf`c36f8d60 00007ff6`70267f8f     : 000002bc`2be3bf60 000002bb`a1c29f18 00007ff6`70271028 000002ff`2c7c6020 : AzFramework!AzFramework::Application::Stop+0xba
+000000bf`c36f8e20 00007ff6`70268dda     : 000002bb`a1c047e0 000002bb`a1c047e0 00000000`00000000 00000000`00000000 : JEEditorFixture_GameLauncher!O3DELauncher::Run+0xc7f
+000000bf`c36fca30 00007ff6`7026160e     : 00000000`0000000a 00000000`00000000 00000000`00000000 00000000`00000000 : JEEditorFixture_GameLauncher!WinMain+0x11a
+(Inline Function) --------`--------     : --------`-------- --------`-------- --------`-------- --------`-------- : JEEditorFixture_GameLauncher!invoke_main+0x21 (Inline Function @ 00007ff6`7026160e)
+000000bf`c36ffae0 00007ffc`2c56dda7     : 00000000`00000000 00000000`00000000 00000000`00000000 00000000`00000000 : JEEditorFixture_GameLauncher!__scrt_common_main_seh+0x106
+000000bf`c36ffb20 00007ffc`2d81ee4c     : 00000000`00000000 00000000`00000000 000004f0`fffffb30 000004d0`fffffb30 : KERNEL32!BaseThreadInitThunk+0x17
+000000bf`c36ffb50 00000000`00000000     : 00000000`00000000 00000000`00000000 00000000`00000000 00000000`00000000 : ntdll!RtlUserThreadStart+0x2c
+0:000> .exr -1
+ExceptionAddress: 00007ffb9cf3c3a1 (RenderIntegration!AZStd::Internal::sp_counted_base::release+0x0000000000000012)
+   ExceptionCode: c0000005 (Access violation)
+  ExceptionFlags: 00000000
+NumberParameters: 2
+   Parameter[0]: 0000000000000000
+   Parameter[1]: 00007ffb8a63b630
+Attempt to read from address 00007ffb8a63b630
+0:000> r
+rax=00007ffb8a63b628 rbx=000002ff2ecb1030 rcx=000002ff2823b4e0
+rdx=000002ff2ecb1050 rsi=00000000ffffffff rdi=000002ff2823b4e0
+rip=00007ffb9cf3c3a1 rsp=000000bfc36f8950 rbp=000002ff2de4bcc0
+ r8=0000000000000000  r9=000002bc4e7100b0 r10=000002bba1be0000
+r11=000000bfc36f86f0 r12=000000bfc36fae88 r13=0000000000000000
+r14=0000000000000000 r15=000000bfc36fae80
+iopl=0         nv up ei pl zr na pe nc
+cs=0033  ss=002b  ds=002b  es=002b  fs=0053  gs=002b             efl=00010244
+RenderIntegration!AZStd::Internal::sp_counted_base::release+0x12 [inlined in RenderIntegration!JE::Render::Integration::AtomDebugDisplayViewportInterface::~AtomDebugDisplayViewportInterface+0xc1]:
+00007ffb`9cf3c3a1 ff5008          call    qword ptr [rax+8] ds:00007ffb`8a63b630=????????????????
+0:000> .dump /m "F:\JericoEngine\JericoEngine\build\n0-validation\native-render-builders-integration-rev1\native-bootstrap96-launcher-vulkan-attempt2\crash\cdb-review-luna-attempt1\shutdown-live.dmp"
+Creating F:\JericoEngine\JericoEngine\build\n0-validation\native-render-builders-integration-rev1\native-bootstrap96-launcher-vulkan-attempt2\crash\cdb-review-luna-attempt1\shutdown-live.dmp - mini user dump
+Dump successfully written
+0:000> q
+quit:
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\atlmfc.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\concurrency.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\cpp_rest.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\ObjectiveC.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\stl.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Windows.Data.Json.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Windows.Devices.Geolocation.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Windows.Devices.Sensors.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Windows.Media.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\windows.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\winrt.natvis'

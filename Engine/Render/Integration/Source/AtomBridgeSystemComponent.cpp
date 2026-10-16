@@ -32,7 +32,7 @@
 #include <Atom/RPI.Public/Shader/ShaderResourceGroup.h>
 #include <Atom/RPI.Public/AuxGeom/AuxGeomFeatureProcessorInterface.h>
 
-#include <Atom/Bootstrap/DefaultWindowBus.h>
+#include <JE/Render/Bootstrap/DefaultWindowBus.h>
 
 #include <AzFramework/Translation/TranslationDef.h>
 
@@ -99,7 +99,7 @@ namespace JE::Render::Integration
             AzFramework::Components::DeprecatedComponentsRequestBus::Handler::BusConnect();
             AzFramework::GameEntityContextRequestBus::BroadcastResult(m_entityContextId, &AzFramework::GameEntityContextRequestBus::Events::GetGameEntityContextId);
 
-            AZ::Render::Bootstrap::NotificationBus::Handler::BusConnect();
+            JE::Render::Bootstrap::NotificationBus::Handler::BusConnect();
             m_dynamicDrawManager = AZStd::make_unique<PerViewportDynamicDrawManager>();
         }
 
@@ -120,11 +120,14 @@ namespace JE::Render::Integration
             // Don't want to leave this until our destructor because the AZ::Data::InstanceDatabase may not be valid at that point
             m_view = nullptr;
 
-            AZ::Render::Bootstrap::NotificationBus::Handler::BusDisconnect();
+            JE::Render::Bootstrap::NotificationBus::Handler::BusDisconnect();
 
             AzFramework::Components::DeprecatedComponentsRequestBus::Handler::BusDisconnect();
             AtomBridgeRequestBus::Handler::BusDisconnect();
             AzFramework::Render::RenderSystemRequestBus::Handler::BusDisconnect();
+
+            // Release viewport-owned AuxGeom queues before module unloading.
+            m_activeViewportsList.clear();
         }
 
         AZStd::string AtomBridgeSystemComponent::GetRendererName() const

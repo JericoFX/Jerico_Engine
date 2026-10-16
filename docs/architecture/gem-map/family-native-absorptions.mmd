@@ -1,0 +1,71 @@
+flowchart LR
+  n5["Atom_AtomBridge [native-owner evidence]"]
+  n6["Atom_Bootstrap [native-owner evidence] [candidate, gates pending]"]
+  n7["Atom_Feature_Common [configured]"]
+  n8["Atom_RHI [configured]"]
+  n13["Atom_RPI [configured]"]
+  n17["AtomImGuiTools [native-owner evidence]"]
+  n20["AtomShader"]
+  n21["AtomToolsFramework [configured]"]
+  n28["Camera [native-owner evidence]"]
+  n29["CameraFramework [native-owner evidence]"]
+  n31["CommonFeaturesAtom [configured]"]
+  n36["DebugCamera [native-owner evidence]"]
+  n52["ImageProcessingAtom [configured]"]
+  n53["ImGui [native-owner evidence]"]
+  n54["ImguiAtom [native-owner evidence]"]
+  n57["LmbrCentral [configured]"]
+  n62["MaterialCanvas"]
+  n63["MaterialEditor [native-owner evidence]"]
+  n74["PassCanvas"]
+  n78["PrefabBuilder [native-owner evidence]"]
+  n80["PrimitiveAssets [native-owner evidence]"]
+  n81["Profiler [native-owner evidence]"]
+  n117["WhiteBox [native-owner evidence]"]
+  n118["Editor/Camera"]
+  n119["Editor/Materials"]
+  n121["Engine/Assets/PrefabBuilder"]
+  n122["Engine/Assets/Primitives"]
+  n123["Engine/Assets/RenderBuilders"]
+  n124["Engine/Debug/ImGui"]
+  n125["Engine/Debug/Profiler"]
+  n126["Engine/Geometry"]
+  n127["Engine/Render/Debug"]
+  n128["Engine/Render/Integration"]
+  n130["Engine/World/Camera"]
+  n62 -->|"manifest"| n21
+  n62 -->|"manifest"| n13
+  n62 -->|"manifest"| n8
+  n62 -->|"manifest"| n7
+  n62 -->|"manifest"| n52
+  n62 -->|"manifest"| n31
+  n63 -->|"manifest"| n21
+  n63 -->|"manifest"| n13
+  n63 -->|"manifest"| n8
+  n63 -->|"manifest"| n7
+  n63 -->|"manifest"| n52
+  n63 -->|"manifest"| n31
+  n74 -->|"manifest"| n21
+  n74 -->|"manifest"| n13
+  n74 -->|"manifest"| n8
+  n74 -->|"manifest"| n7
+  n74 -->|"manifest"| n52
+  n74 -->|"manifest"| n31
+  n28 -->|"manifest"| n13
+  n53 -->|"manifest"| n57
+  n28 -.->|"native ownership"| n130
+  n29 -.->|"native ownership"| n118
+  n80 -.->|"native ownership"| n122
+  n78 -.->|"native ownership"| n121
+  n53 -.->|"native ownership"| n124
+  n117 -.->|"native ownership"| n126
+  n81 -.->|"native ownership"| n125
+  n54 -.->|"native ownership"| n127
+  n17 -.->|"native ownership"| n127
+  n5 -.->|"native ownership"| n128
+  n36 -.->|"native ownership"| n130
+  n63 -.->|"native ownership"| n119
+  n6 -.->|"native ownership"| n128
+  n62 -.->|"native ownership"| n119
+  n74 -.->|"native ownership"| n119
+  n20 -.->|"native ownership"| n123

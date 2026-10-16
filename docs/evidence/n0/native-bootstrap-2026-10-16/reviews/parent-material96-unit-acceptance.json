@@ -1,0 +1,59 @@
+{
+  "utc": "2026-10-16T20:11:14.8146385Z",
+  "reviewer": "/root",
+  "state": "ACCEPTED_NATIVE_UNIT_SCOPE_ONLY",
+  "buildExit": 0,
+  "focalExit": 0,
+  "focalCompleted": 1,
+  "fullRpiExit": 0,
+  "fullRpiCompleted": 576,
+  "failureErrorSkippedDisabled": 0,
+  "sourceCount": 14064,
+  "protectedCount": 86,
+  "absenceCount": 56,
+  "sourceDrift": 0,
+  "source": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\RPI\\Code\\Source\\RPI.Public\\Material\\MaterialSystem.cpp",
+      "bytes": 35257,
+      "sha256": "5F9C69084561DC9F78A81472E7EFE05126BD452A38F1844A475CA71BFEC317E1"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\RPI\\Code\\Tests\\Material\\MaterialTests.cpp",
+      "bytes": 123259,
+      "sha256": "0DF033DCBFD93B35D3190CF06C0A015C9442940BF170F7C13A27FD3787AADFAA"
+    }
+  ],
+  "evidence": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-buffer96-green-attempt1\\result.json",
+      "bytes": 1090,
+      "sha256": "B1F4A9F64AE5B29197EFF4C67AFC6B1C0E4F42921868553D0A118BDFFCFCEAE0"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-buffer96-green-attempt1\\focal.xml",
+      "bytes": 643,
+      "sha256": "7A8AC3E4E534FCCD61A331D4AA87AE8371888AE1744EBAF3B004CFCB904DC1B6"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-buffer96-green-attempt1\\full-rpi.xml",
+      "bytes": 195628,
+      "sha256": "97E12DD2C572E9CE79A98C90886160AD7DD0D82F3A205971D4881254DE6AB04E"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-buffer96-green-attempt1\\full-rpi-suite.result.json",
+      "bytes": 1035,
+      "sha256": "A2C3AA4825D4D2CBA8D6DEA08F3284A61184B9225DBF8750D0400C96802A29A2"
+    }
+  ],
+  "parentReadActualDiff": true,
+  "red": "Original unmodified production crashed before a completed result; RED0completed preserved separately",
+  "fixtureCorrection": "Default0.5 so1.5/2.5 are actual changes; all assertions retained",
+  "pending": [
+    "current11hosts",
+    "real Vulkan Editor and standalone room",
+    "current SDK install/consumer"
+  ],
+  "wholeGemIncrement": 0,
+  "noGpuOrPerformanceClaim": true
+}

@@ -28,7 +28,7 @@ ly_add_target(
             Gem::Atom_RPI.Public
             Gem::Atom_Utils.Static
             Gem::CommonFeaturesAtom.Static
-            Gem::Atom_Bootstrap.Headers
+            JE::RenderIntegration.Public
             Gem::AtomFont
             Gem::TextureAtlas
 )
@@ -107,7 +107,7 @@ if (PAL_TRAIT_BUILD_HOST_TOOLS)
                 Gem::Atom_RPI.Public
                 Gem::Atom_Utils.Static
                 Gem::CommonFeaturesAtom.Static
-                Gem::Atom_Bootstrap.Headers
+                JE::RenderIntegration.Public
     )
 
     ly_add_target(
@@ -166,7 +166,7 @@ if (PAL_TRAIT_BUILD_HOST_TOOLS)
                 Gem::Atom_RPI.Public
                 Gem::Atom_Utils.Static
                 Gem::CommonFeaturesAtom.Static
-                Gem::Atom_Bootstrap.Headers
+                JE::RenderIntegration.Public
     )
 
     ly_add_target(

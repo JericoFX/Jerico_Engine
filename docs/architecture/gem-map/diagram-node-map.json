@@ -1,0 +1,940 @@
+[
+  {
+    "mermaidId": "n0",
+    "name": "Achievements",
+    "kind": "source-gem",
+    "family": "online-platform",
+    "id": "gem:Achievements"
+  },
+  {
+    "mermaidId": "n1",
+    "name": "AFR",
+    "kind": "source-gem",
+    "family": "engine-gameplay",
+    "id": "gem:AFR"
+  },
+  {
+    "mermaidId": "n2",
+    "name": "Archive",
+    "kind": "source-gem",
+    "family": "engine-gameplay",
+    "id": "gem:Archive"
+  },
+  {
+    "mermaidId": "n3",
+    "name": "AssetValidation",
+    "kind": "source-gem",
+    "family": "engine-gameplay",
+    "id": "gem:AssetValidation"
+  },
+  {
+    "mermaidId": "n4",
+    "name": "Atom",
+    "kind": "source-gem",
+    "family": "atom-core",
+    "id": "gem:Atom"
+  },
+  {
+    "mermaidId": "n5",
+    "name": "Atom_AtomBridge",
+    "kind": "historical-absorbed-gem",
+    "family": "native-absorptions",
+    "id": "gem:Atom_AtomBridge"
+  },
+  {
+    "mermaidId": "n6",
+    "name": "Atom_Bootstrap",
+    "kind": "retired-candidate-gem",
+    "family": "native-absorptions",
+    "id": "gem:Atom_Bootstrap"
+  },
+  {
+    "mermaidId": "n7",
+    "name": "Atom_Feature_Common",
+    "kind": "source-gem",
+    "family": "render-features",
+    "id": "gem:Atom_Feature_Common"
+  },
+  {
+    "mermaidId": "n8",
+    "name": "Atom_RHI",
+    "kind": "source-gem",
+    "family": "atom-rhi",
+    "id": "gem:Atom_RHI"
+  },
+  {
+    "mermaidId": "n9",
+    "name": "Atom_RHI_DX12",
+    "kind": "source-gem",
+    "family": "atom-rhi",
+    "id": "gem:Atom_RHI_DX12"
+  },
+  {
+    "mermaidId": "n10",
+    "name": "Atom_RHI_Metal",
+    "kind": "source-gem",
+    "family": "atom-rhi",
+    "id": "gem:Atom_RHI_Metal"
+  },
+  {
+    "mermaidId": "n11",
+    "name": "Atom_RHI_Null",
+    "kind": "source-gem",
+    "family": "atom-rhi",
+    "id": "gem:Atom_RHI_Null"
+  },
+  {
+    "mermaidId": "n12",
+    "name": "Atom_RHI_Vulkan",
+    "kind": "source-gem",
+    "family": "atom-rhi",
+    "id": "gem:Atom_RHI_Vulkan"
+  },
+  {
+    "mermaidId": "n13",
+    "name": "Atom_RPI",
+    "kind": "source-gem",
+    "family": "atom-rpi",
+    "id": "gem:Atom_RPI"
+  },
+  {
+    "mermaidId": "n14",
+    "name": "Atom_TestData",
+    "kind": "source-gem",
+    "family": "content",
+    "id": "gem:Atom_TestData"
+  },
+  {
+    "mermaidId": "n15",
+    "name": "AtomContent",
+    "kind": "source-gem",
+    "family": "content",
+    "id": "gem:AtomContent"
+  },
+  {
+    "mermaidId": "n16",
+    "name": "AtomFont",
+    "kind": "source-gem",
+    "family": "render-features",
+    "id": "gem:AtomFont"
+  },
+  {
+    "mermaidId": "n17",
+    "name": "AtomImGuiTools",
+    "kind": "historical-absorbed-gem",
+    "family": "native-absorptions",
+    "id": "gem:AtomImGuiTools"
+  },
+  {
+    "mermaidId": "n18",
+    "name": "AtomLyIntegration",
+    "kind": "source-gem",
+    "family": "render-features",
+    "id": "gem:AtomLyIntegration"
+  },
+  {
+    "mermaidId": "n19",
+    "name": "AtomRenderOptions",
+    "kind": "source-gem",
+    "family": "render-features",
+    "id": "gem:AtomRenderOptions"
+  },
+  {
+    "mermaidId": "n20",
+    "name": "AtomShader",
+    "kind": "historical-partial-gem",
+    "family": "native-absorptions",
+    "id": "gem:AtomShader"
+  },
+  {
+    "mermaidId": "n21",
+    "name": "AtomToolsFramework",
+    "kind": "source-gem",
+    "family": "atom-tools",
+    "id": "gem:AtomToolsFramework"
+  },
+  {
+    "mermaidId": "n22",
+    "name": "AtomTressFX",
+    "kind": "source-gem",
+    "family": "render-features",
+    "id": "gem:AtomTressFX"
+  },
+  {
+    "mermaidId": "n23",
+    "name": "AtomViewportDisplayIcons",
+    "kind": "source-gem",
+    "family": "render-features",
+    "id": "gem:AtomViewportDisplayIcons"
+  },
+  {
+    "mermaidId": "n24",
+    "name": "AtomViewportDisplayInfo",
+    "kind": "source-gem",
+    "family": "render-features",
+    "id": "gem:AtomViewportDisplayInfo"
+  },
+  {
+    "mermaidId": "n25",
+    "name": "AudioSystem",
+    "kind": "source-gem",
+    "family": "audio-media",
+    "id": "gem:AudioSystem"
+  },
+  {
+    "mermaidId": "n26",
+    "name": "AutomatedTesting",
+    "kind": "source-gem",
+    "family": "testing",
+    "id": "gem:AutomatedTesting"
+  },
+  {
+    "mermaidId": "n27",
+    "name": "BarrierInput",
+    "kind": "source-gem",
+    "family": "engine-gameplay",
+    "id": "gem:BarrierInput"
+  },
+  {
+    "mermaidId": "n28",
+    "name": "Camera",
+    "kind": "source-gem",
+    "family": "engine-gameplay",
+    "id": "gem:Camera"
+  },
+  {
+    "mermaidId": "n29",
+    "name": "CameraFramework",
+    "kind": "source-gem",
+    "family": "engine-gameplay",
+    "id": "gem:CameraFramework"
+  },
+  {
+    "mermaidId": "n30",
+    "name": "CertificateManager",
+    "kind": "source-gem",
+    "family": "online-platform",
+    "id": "gem:CertificateManager"
+  },
+  {
+    "mermaidId": "n31",
+    "name": "CommonFeaturesAtom",
+    "kind": "source-gem",
+    "family": "render-features",
+    "id": "gem:CommonFeaturesAtom"
+  },
+  {
+    "mermaidId": "n32",
+    "name": "Compression",
+    "kind": "source-gem",
+    "family": "engine-gameplay",
+    "id": "gem:Compression"
+  },
+  {
+    "mermaidId": "n33",
+    "name": "CrashReporting",
+    "kind": "source-gem",
+    "family": "engine-gameplay",
+    "id": "gem:CrashReporting"
+  },
+  {
+    "mermaidId": "n34",
+    "name": "CustomAssetExample",
+    "kind": "source-gem",
+    "family": "engine-gameplay",
+    "id": "gem:CustomAssetExample"
+  },
+  {
+    "mermaidId": "n35",
+    "name": "DccScriptingInterface",
+    "kind": "source-gem",
+    "family": "render-features",
+    "id": "gem:DccScriptingInterface"
+  },
+  {
+    "mermaidId": "n36",
+    "name": "DebugCamera",
+    "kind": "historical-absorbed-gem",
+    "family": "native-absorptions",
+    "id": "gem:DebugCamera"
+  },
+  {
+    "mermaidId": "n37",
+    "name": "DebugDraw",
+    "kind": "source-gem",
+    "family": "render-features",
+    "id": "gem:DebugDraw"
+  },
+  {
+    "mermaidId": "n38",
+    "name": "DevTextures",
+    "kind": "source-gem",
+    "family": "engine-gameplay",
+    "id": "gem:DevTextures"
+  },
+  {
+    "mermaidId": "n39",
+    "name": "DiffuseProbeGrid",
+    "kind": "source-gem",
+    "family": "render-features",
+    "id": "gem:DiffuseProbeGrid"
+  },
+  {
+    "mermaidId": "n40",
+    "name": "EditorModeFeedback",
+    "kind": "source-gem",
+    "family": "render-features",
+    "id": "gem:EditorModeFeedback"
+  },
+  {
+    "mermaidId": "n41",
+    "name": "EditorPythonBindings",
+    "kind": "source-gem",
+    "family": "editor-script",
+    "id": "gem:EditorPythonBindings"
+  },
+  {
+    "mermaidId": "n42",
+    "name": "EMotionFX",
+    "kind": "source-gem",
+    "family": "physics-animation",
+    "id": "gem:EMotionFX"
+  },
+  {
+    "mermaidId": "n43",
+    "name": "EMotionFX_Atom",
+    "kind": "source-gem",
+    "family": "render-features",
+    "id": "gem:EMotionFX_Atom"
+  },
+  {
+    "mermaidId": "n44",
+    "name": "ExpressionEvaluation",
+    "kind": "source-gem",
+    "family": "editor-script",
+    "id": "gem:ExpressionEvaluation"
+  },
+  {
+    "mermaidId": "n45",
+    "name": "FastNoise",
+    "kind": "source-gem",
+    "family": "world",
+    "id": "gem:FastNoise"
+  },
+  {
+    "mermaidId": "n46",
+    "name": "GameState",
+    "kind": "source-gem",
+    "family": "engine-gameplay",
+    "id": "gem:GameState"
+  },
+  {
+    "mermaidId": "n47",
+    "name": "GameStateSamples",
+    "kind": "source-gem",
+    "family": "engine-gameplay",
+    "id": "gem:GameStateSamples"
+  },
+  {
+    "mermaidId": "n48",
+    "name": "Gestures",
+    "kind": "source-gem",
+    "family": "engine-gameplay",
+    "id": "gem:Gestures"
+  },
+  {
+    "mermaidId": "n49",
+    "name": "GradientSignal",
+    "kind": "source-gem",
+    "family": "world",
+    "id": "gem:GradientSignal"
+  },
+  {
+    "mermaidId": "n50",
+    "name": "GraphCanvas",
+    "kind": "source-gem",
+    "family": "editor-script",
+    "id": "gem:GraphCanvas"
+  },
+  {
+    "mermaidId": "n51",
+    "name": "GraphModel",
+    "kind": "source-gem",
+    "family": "editor-script",
+    "id": "gem:GraphModel"
+  },
+  {
+    "mermaidId": "n52",
+    "name": "ImageProcessingAtom",
+    "kind": "source-gem",
+    "family": "asset-pipeline",
+    "id": "gem:ImageProcessingAtom"
+  },
+  {
+    "mermaidId": "n53",
+    "name": "ImGui",
+    "kind": "source-gem",
+    "family": "engine-gameplay",
+    "id": "gem:ImGui"
+  },
+  {
+    "mermaidId": "n54",
+    "name": "ImguiAtom",
+    "kind": "historical-absorbed-gem",
+    "family": "native-absorptions",
+    "id": "gem:ImguiAtom"
+  },
+  {
+    "mermaidId": "n55",
+    "name": "InAppPurchases",
+    "kind": "source-gem",
+    "family": "online-platform",
+    "id": "gem:InAppPurchases"
+  },
+  {
+    "mermaidId": "n56",
+    "name": "LandscapeCanvas",
+    "kind": "source-gem",
+    "family": "world",
+    "id": "gem:LandscapeCanvas"
+  },
+  {
+    "mermaidId": "n57",
+    "name": "LmbrCentral",
+    "kind": "source-gem",
+    "family": "engine-gameplay",
+    "id": "gem:LmbrCentral"
+  },
+  {
+    "mermaidId": "n58",
+    "name": "LocalUser",
+    "kind": "source-gem",
+    "family": "engine-gameplay",
+    "id": "gem:LocalUser"
+  },
+  {
+    "mermaidId": "n59",
+    "name": "LyShine",
+    "kind": "source-gem",
+    "family": "ui",
+    "id": "gem:LyShine"
+  },
+  {
+    "mermaidId": "n60",
+    "name": "LyShineExamples",
+    "kind": "source-gem",
+    "family": "ui",
+    "id": "gem:LyShineExamples"
+  },
+  {
+    "mermaidId": "n61",
+    "name": "Maestro",
+    "kind": "source-gem",
+    "family": "engine-gameplay",
+    "id": "gem:Maestro"
+  },
+  {
+    "mermaidId": "n62",
+    "name": "MaterialCanvas",
+    "kind": "source-gem",
+    "family": "atom-tools",
+    "id": "gem:MaterialCanvas"
+  },
+  {
+    "mermaidId": "n63",
+    "name": "MaterialEditor",
+    "kind": "source-gem",
+    "family": "atom-tools",
+    "id": "gem:MaterialEditor"
+  },
+  {
+    "mermaidId": "n64",
+    "name": "Meshlets",
+    "kind": "source-gem",
+    "family": "render-features",
+    "id": "gem:Meshlets"
+  },
+  {
+    "mermaidId": "n65",
+    "name": "MessagePopup",
+    "kind": "source-gem",
+    "family": "ui",
+    "id": "gem:MessagePopup"
+  },
+  {
+    "mermaidId": "n66",
+    "name": "Microphone",
+    "kind": "source-gem",
+    "family": "audio-media",
+    "id": "gem:Microphone"
+  },
+  {
+    "mermaidId": "n67",
+    "name": "MiniAudio",
+    "kind": "source-gem",
+    "family": "audio-media",
+    "id": "gem:MiniAudio"
+  },
+  {
+    "mermaidId": "n68",
+    "name": "MotionMatching",
+    "kind": "source-gem",
+    "family": "physics-animation",
+    "id": "gem:MotionMatching"
+  },
+  {
+    "mermaidId": "n69",
+    "name": "Multiplayer",
+    "kind": "source-gem",
+    "family": "online-platform",
+    "id": "gem:Multiplayer"
+  },
+  {
+    "mermaidId": "n70",
+    "name": "Multiplayer_ScriptCanvas",
+    "kind": "source-gem",
+    "family": "online-platform",
+    "id": "gem:Multiplayer_ScriptCanvas"
+  },
+  {
+    "mermaidId": "n71",
+    "name": "MultiplayerCompression",
+    "kind": "source-gem",
+    "family": "online-platform",
+    "id": "gem:MultiplayerCompression"
+  },
+  {
+    "mermaidId": "n72",
+    "name": "NvCloth",
+    "kind": "source-gem",
+    "family": "physics-animation",
+    "id": "gem:NvCloth"
+  },
+  {
+    "mermaidId": "n73",
+    "name": "OpenParticleSystem",
+    "kind": "source-gem",
+    "family": "engine-gameplay",
+    "id": "gem:OpenParticleSystem"
+  },
+  {
+    "mermaidId": "n74",
+    "name": "PassCanvas",
+    "kind": "source-gem",
+    "family": "atom-tools",
+    "id": "gem:PassCanvas"
+  },
+  {
+    "mermaidId": "n75",
+    "name": "PhysX5",
+    "kind": "source-gem",
+    "family": "physics-animation",
+    "id": "gem:PhysX5"
+  },
+  {
+    "mermaidId": "n76",
+    "name": "PhysX5Debug",
+    "kind": "source-gem",
+    "family": "physics-animation",
+    "id": "gem:PhysX5Debug"
+  },
+  {
+    "mermaidId": "n77",
+    "name": "PhysXCommon",
+    "kind": "source-gem",
+    "family": "physics-animation",
+    "id": "gem:PhysXCommon"
+  },
+  {
+    "mermaidId": "n78",
+    "name": "PrefabBuilder",
+    "kind": "source-gem",
+    "family": "engine-gameplay",
+    "id": "gem:PrefabBuilder"
+  },
+  {
+    "mermaidId": "n79",
+    "name": "Presence",
+    "kind": "source-gem",
+    "family": "online-platform",
+    "id": "gem:Presence"
+  },
+  {
+    "mermaidId": "n80",
+    "name": "PrimitiveAssets",
+    "kind": "source-gem",
+    "family": "engine-gameplay",
+    "id": "gem:PrimitiveAssets"
+  },
+  {
+    "mermaidId": "n81",
+    "name": "Profiler",
+    "kind": "historical-absorbed-gem",
+    "family": "native-absorptions",
+    "id": "gem:Profiler"
+  },
+  {
+    "mermaidId": "n82",
+    "name": "PythonAssetBuilder",
+    "kind": "source-gem",
+    "family": "editor-script",
+    "id": "gem:PythonAssetBuilder"
+  },
+  {
+    "mermaidId": "n83",
+    "name": "PythonCoverage",
+    "kind": "source-gem",
+    "family": "testing",
+    "id": "gem:PythonCoverage"
+  },
+  {
+    "mermaidId": "n84",
+    "name": "QtForPython",
+    "kind": "source-gem",
+    "family": "editor-script",
+    "id": "gem:QtForPython"
+  },
+  {
+    "mermaidId": "n85",
+    "name": "RecastNavigation",
+    "kind": "source-gem",
+    "family": "physics-animation",
+    "id": "gem:RecastNavigation"
+  },
+  {
+    "mermaidId": "n86",
+    "name": "ReferenceMaterials",
+    "kind": "source-gem",
+    "family": "content",
+    "id": "gem:ReferenceMaterials"
+  },
+  {
+    "mermaidId": "n87",
+    "name": "RemoteTools",
+    "kind": "source-gem",
+    "family": "engine-gameplay",
+    "id": "gem:RemoteTools"
+  },
+  {
+    "mermaidId": "n88",
+    "name": "SaveData",
+    "kind": "source-gem",
+    "family": "engine-gameplay",
+    "id": "gem:SaveData"
+  },
+  {
+    "mermaidId": "n89",
+    "name": "SceneLoggingExample",
+    "kind": "source-gem",
+    "family": "engine-gameplay",
+    "id": "gem:SceneLoggingExample"
+  },
+  {
+    "mermaidId": "n90",
+    "name": "SceneProcessing",
+    "kind": "source-gem",
+    "family": "engine-gameplay",
+    "id": "gem:SceneProcessing"
+  },
+  {
+    "mermaidId": "n91",
+    "name": "ScriptAutomation",
+    "kind": "source-gem",
+    "family": "editor-script",
+    "id": "gem:ScriptAutomation"
+  },
+  {
+    "mermaidId": "n92",
+    "name": "ScriptCanvas",
+    "kind": "source-gem",
+    "family": "editor-script",
+    "id": "gem:ScriptCanvas"
+  },
+  {
+    "mermaidId": "n93",
+    "name": "ScriptCanvasDeveloper",
+    "kind": "source-gem",
+    "family": "editor-script",
+    "id": "gem:ScriptCanvasDeveloper"
+  },
+  {
+    "mermaidId": "n94",
+    "name": "ScriptCanvasPhysics",
+    "kind": "source-gem",
+    "family": "editor-script",
+    "id": "gem:ScriptCanvasPhysics"
+  },
+  {
+    "mermaidId": "n95",
+    "name": "ScriptCanvasTesting",
+    "kind": "source-gem",
+    "family": "editor-script",
+    "id": "gem:ScriptCanvasTesting"
+  },
+  {
+    "mermaidId": "n96",
+    "name": "ScriptedEntityTweener",
+    "kind": "source-gem",
+    "family": "editor-script",
+    "id": "gem:ScriptedEntityTweener"
+  },
+  {
+    "mermaidId": "n97",
+    "name": "ScriptEvents",
+    "kind": "source-gem",
+    "family": "editor-script",
+    "id": "gem:ScriptEvents"
+  },
+  {
+    "mermaidId": "n98",
+    "name": "ShaderManagementConsole",
+    "kind": "source-gem",
+    "family": "atom-tools",
+    "id": "gem:ShaderManagementConsole"
+  },
+  {
+    "mermaidId": "n99",
+    "name": "SkyAtmosphere",
+    "kind": "source-gem",
+    "family": "render-features",
+    "id": "gem:SkyAtmosphere"
+  },
+  {
+    "mermaidId": "n100",
+    "name": "Sponza",
+    "kind": "source-gem",
+    "family": "testing",
+    "id": "gem:Sponza@AutomatedTesting/Gem/Sponza"
+  },
+  {
+    "mermaidId": "n101",
+    "name": "Sponza",
+    "kind": "source-gem",
+    "family": "content",
+    "id": "gem:Sponza@Gems/AtomContent/Sponza"
+  },
+  {
+    "mermaidId": "n102",
+    "name": "Stars",
+    "kind": "source-gem",
+    "family": "render-features",
+    "id": "gem:Stars"
+  },
+  {
+    "mermaidId": "n103",
+    "name": "StartingPointCamera",
+    "kind": "source-gem",
+    "family": "engine-gameplay",
+    "id": "gem:StartingPointCamera"
+  },
+  {
+    "mermaidId": "n104",
+    "name": "StartingPointInput",
+    "kind": "source-gem",
+    "family": "engine-gameplay",
+    "id": "gem:StartingPointInput"
+  },
+  {
+    "mermaidId": "n105",
+    "name": "StartingPointMovement",
+    "kind": "source-gem",
+    "family": "engine-gameplay",
+    "id": "gem:StartingPointMovement"
+  },
+  {
+    "mermaidId": "n106",
+    "name": "Streamer",
+    "kind": "source-gem",
+    "family": "engine-gameplay",
+    "id": "gem:Streamer"
+  },
+  {
+    "mermaidId": "n107",
+    "name": "StreamerProfiler",
+    "kind": "source-gem",
+    "family": "engine-gameplay",
+    "id": "gem:StreamerProfiler"
+  },
+  {
+    "mermaidId": "n108",
+    "name": "SurfaceData",
+    "kind": "source-gem",
+    "family": "world",
+    "id": "gem:SurfaceData"
+  },
+  {
+    "mermaidId": "n109",
+    "name": "Terrain",
+    "kind": "source-gem",
+    "family": "world",
+    "id": "gem:Terrain"
+  },
+  {
+    "mermaidId": "n110",
+    "name": "TestAssetBuilder",
+    "kind": "source-gem",
+    "family": "engine-gameplay",
+    "id": "gem:TestAssetBuilder"
+  },
+  {
+    "mermaidId": "n111",
+    "name": "TextureAtlas",
+    "kind": "source-gem",
+    "family": "ui",
+    "id": "gem:TextureAtlas"
+  },
+  {
+    "mermaidId": "n112",
+    "name": "TickBusOrderViewer",
+    "kind": "source-gem",
+    "family": "engine-gameplay",
+    "id": "gem:TickBusOrderViewer"
+  },
+  {
+    "mermaidId": "n113",
+    "name": "UiBasics",
+    "kind": "source-gem",
+    "family": "ui",
+    "id": "gem:UiBasics"
+  },
+  {
+    "mermaidId": "n114",
+    "name": "Vegetation",
+    "kind": "source-gem",
+    "family": "world",
+    "id": "gem:Vegetation"
+  },
+  {
+    "mermaidId": "n115",
+    "name": "VideoPlaybackFramework",
+    "kind": "source-gem",
+    "family": "audio-media",
+    "id": "gem:VideoPlaybackFramework"
+  },
+  {
+    "mermaidId": "n116",
+    "name": "VirtualGamepad",
+    "kind": "source-gem",
+    "family": "engine-gameplay",
+    "id": "gem:VirtualGamepad"
+  },
+  {
+    "mermaidId": "n117",
+    "name": "WhiteBox",
+    "kind": "historical-absorbed-gem",
+    "family": "native-absorptions",
+    "id": "gem:WhiteBox"
+  },
+  {
+    "mermaidId": "n118",
+    "name": "Editor/Camera",
+    "kind": "native-owner",
+    "family": "native-absorptions",
+    "id": "native:Editor/Camera"
+  },
+  {
+    "mermaidId": "n119",
+    "name": "Editor/Materials",
+    "kind": "native-owner",
+    "family": "native-absorptions",
+    "id": "native:Editor/Materials"
+  },
+  {
+    "mermaidId": "n120",
+    "name": "Editor/Render/Integration",
+    "kind": "native-owner",
+    "family": "native-owners",
+    "id": "native:Editor/Render/Integration"
+  },
+  {
+    "mermaidId": "n121",
+    "name": "Engine/Assets/PrefabBuilder",
+    "kind": "native-owner",
+    "family": "native-absorptions",
+    "id": "native:Engine/Assets/PrefabBuilder"
+  },
+  {
+    "mermaidId": "n122",
+    "name": "Engine/Assets/Primitives",
+    "kind": "native-owner",
+    "family": "native-absorptions",
+    "id": "native:Engine/Assets/Primitives"
+  },
+  {
+    "mermaidId": "n123",
+    "name": "Engine/Assets/RenderBuilders",
+    "kind": "native-owner",
+    "family": "native-absorptions",
+    "id": "native:Engine/Assets/RenderBuilders"
+  },
+  {
+    "mermaidId": "n124",
+    "name": "Engine/Debug/ImGui",
+    "kind": "native-owner",
+    "family": "native-absorptions",
+    "id": "native:Engine/Debug/ImGui"
+  },
+  {
+    "mermaidId": "n125",
+    "name": "Engine/Debug/Profiler",
+    "kind": "native-owner",
+    "family": "native-absorptions",
+    "id": "native:Engine/Debug/Profiler"
+  },
+  {
+    "mermaidId": "n126",
+    "name": "Engine/Geometry",
+    "kind": "native-owner",
+    "family": "native-absorptions",
+    "id": "native:Engine/Geometry"
+  },
+  {
+    "mermaidId": "n127",
+    "name": "Engine/Render/Debug",
+    "kind": "native-owner",
+    "family": "native-absorptions",
+    "id": "native:Engine/Render/Debug"
+  },
+  {
+    "mermaidId": "n128",
+    "name": "Engine/Render/Integration",
+    "kind": "native-owner",
+    "family": "native-absorptions",
+    "id": "native:Engine/Render/Integration"
+  },
+  {
+    "mermaidId": "n129",
+    "name": "Engine/Render/Materials",
+    "kind": "native-owner",
+    "family": "native-owners",
+    "id": "native:Engine/Render/Materials"
+  },
+  {
+    "mermaidId": "n130",
+    "name": "Engine/World/Camera",
+    "kind": "native-owner",
+    "family": "native-absorptions",
+    "id": "native:Engine/World/Camera"
+  },
+  {
+    "mermaidId": "n131",
+    "name": "unresolved-gem:PhysX",
+    "kind": "unresolved-reference",
+    "family": "reference-layer",
+    "id": "unresolved-gem:PhysX"
+  },
+  {
+    "mermaidId": "n132",
+    "name": "unresolved-gem:Sponza",
+    "kind": "unresolved-reference",
+    "family": "reference-layer",
+    "id": "unresolved-gem:Sponza"
+  },
+  {
+    "mermaidId": "n133",
+    "name": "unresolved-gem:WhiteBox",
+    "kind": "unresolved-reference",
+    "family": "reference-layer",
+    "id": "unresolved-gem:WhiteBox"
+  }
+]

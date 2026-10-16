@@ -17,7 +17,7 @@
 #include <AzCore/Math/MathUtils.h>
 #include <AzCore/Console/IConsole.h>
 #include <Atom/RHI/RHISystemInterface.h>
-#include <Atom/Bootstrap/BootstrapRequestBus.h>
+#include <JE/Render/Bootstrap/BootstrapRequestBus.h>
 
 #include <QApplication>
 #include <QCursor>
@@ -170,7 +170,7 @@ namespace AtomToolsFramework
         }
 
         AZ::RPI::ScenePtr atomScene;
-        auto initializeScene = [&](AZ::Render::Bootstrap::Request* bootstrapRequests)
+        auto initializeScene = [&](JE::Render::Bootstrap::Request* bootstrapRequests)
         {
             atomScene = bootstrapRequests->GetOrCreateAtomSceneFromAzScene(scene.get());
             if (useDefaultRenderPipeline)
@@ -180,7 +180,7 @@ namespace AtomToolsFramework
                 bootstrapRequests->EnsureDefaultRenderPipelineInstalledForScene(atomScene, m_viewportContext);
             }
         };
-        AZ::Render::Bootstrap::RequestBus::Broadcast(initializeScene);
+        JE::Render::Bootstrap::RequestBus::Broadcast(initializeScene);
         m_viewportContext->SetRenderScene(atomScene);
         if (auto auxGeomFP = atomScene->GetFeatureProcessor<AZ::RPI::AuxGeomFeatureProcessorInterface>())
         {

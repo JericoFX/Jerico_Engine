@@ -1,0 +1,900 @@
+{
+  "schema": "je-gem-composition-map-validation-v1",
+  "sourceGemManifests": 110,
+  "allSourceGemsInOwnFamily": true,
+  "sourceCoverage": [
+    {
+      "manifest": "AutomatedTesting/Gem/gem.json",
+      "family": "testing",
+      "presentInOwnFamily": true,
+      "id": "gem:AutomatedTesting"
+    },
+    {
+      "manifest": "AutomatedTesting/Gem/PythonCoverage/gem.json",
+      "family": "testing",
+      "presentInOwnFamily": true,
+      "id": "gem:PythonCoverage"
+    },
+    {
+      "manifest": "AutomatedTesting/Gem/Sponza/gem.json",
+      "family": "testing",
+      "presentInOwnFamily": true,
+      "id": "gem:Sponza@AutomatedTesting/Gem/Sponza"
+    },
+    {
+      "manifest": "Gems/Achievements/gem.json",
+      "family": "online-platform",
+      "presentInOwnFamily": true,
+      "id": "gem:Achievements"
+    },
+    {
+      "manifest": "Gems/AFR/gem.json",
+      "family": "engine-gameplay",
+      "presentInOwnFamily": true,
+      "id": "gem:AFR"
+    },
+    {
+      "manifest": "Gems/Archive/gem.json",
+      "family": "engine-gameplay",
+      "presentInOwnFamily": true,
+      "id": "gem:Archive"
+    },
+    {
+      "manifest": "Gems/AssetValidation/gem.json",
+      "family": "engine-gameplay",
+      "presentInOwnFamily": true,
+      "id": "gem:AssetValidation"
+    },
+    {
+      "manifest": "Gems/Atom/Asset/ImageProcessingAtom/gem.json",
+      "family": "asset-pipeline",
+      "presentInOwnFamily": true,
+      "id": "gem:ImageProcessingAtom"
+    },
+    {
+      "manifest": "Gems/Atom/Feature/Common/gem.json",
+      "family": "render-features",
+      "presentInOwnFamily": true,
+      "id": "gem:Atom_Feature_Common"
+    },
+    {
+      "manifest": "Gems/Atom/gem.json",
+      "family": "atom-core",
+      "presentInOwnFamily": true,
+      "id": "gem:Atom"
+    },
+    {
+      "manifest": "Gems/Atom/RHI/DX12/gem.json",
+      "family": "atom-rhi",
+      "presentInOwnFamily": true,
+      "id": "gem:Atom_RHI_DX12"
+    },
+    {
+      "manifest": "Gems/Atom/RHI/gem.json",
+      "family": "atom-rhi",
+      "presentInOwnFamily": true,
+      "id": "gem:Atom_RHI"
+    },
+    {
+      "manifest": "Gems/Atom/RHI/Metal/gem.json",
+      "family": "atom-rhi",
+      "presentInOwnFamily": true,
+      "id": "gem:Atom_RHI_Metal"
+    },
+    {
+      "manifest": "Gems/Atom/RHI/Null/gem.json",
+      "family": "atom-rhi",
+      "presentInOwnFamily": true,
+      "id": "gem:Atom_RHI_Null"
+    },
+    {
+      "manifest": "Gems/Atom/RHI/Vulkan/gem.json",
+      "family": "atom-rhi",
+      "presentInOwnFamily": true,
+      "id": "gem:Atom_RHI_Vulkan"
+    },
+    {
+      "manifest": "Gems/Atom/RPI/gem.json",
+      "family": "atom-rpi",
+      "presentInOwnFamily": true,
+      "id": "gem:Atom_RPI"
+    },
+    {
+      "manifest": "Gems/Atom/Tools/AtomToolsFramework/gem.json",
+      "family": "atom-tools",
+      "presentInOwnFamily": true,
+      "id": "gem:AtomToolsFramework"
+    },
+    {
+      "manifest": "Gems/Atom/Tools/MaterialCanvas/gem.json",
+      "family": "atom-tools",
+      "presentInOwnFamily": true,
+      "id": "gem:MaterialCanvas"
+    },
+    {
+      "manifest": "Gems/Atom/Tools/MaterialEditor/gem.json",
+      "family": "atom-tools",
+      "presentInOwnFamily": true,
+      "id": "gem:MaterialEditor"
+    },
+    {
+      "manifest": "Gems/Atom/Tools/PassCanvas/gem.json",
+      "family": "atom-tools",
+      "presentInOwnFamily": true,
+      "id": "gem:PassCanvas"
+    },
+    {
+      "manifest": "Gems/Atom/Tools/ShaderManagementConsole/gem.json",
+      "family": "atom-tools",
+      "presentInOwnFamily": true,
+      "id": "gem:ShaderManagementConsole"
+    },
+    {
+      "manifest": "Gems/AtomContent/gem.json",
+      "family": "content",
+      "presentInOwnFamily": true,
+      "id": "gem:AtomContent"
+    },
+    {
+      "manifest": "Gems/AtomContent/ReferenceMaterials/gem.json",
+      "family": "content",
+      "presentInOwnFamily": true,
+      "id": "gem:ReferenceMaterials"
+    },
+    {
+      "manifest": "Gems/AtomContent/Sponza/gem.json",
+      "family": "content",
+      "presentInOwnFamily": true,
+      "id": "gem:Sponza@Gems/AtomContent/Sponza"
+    },
+    {
+      "manifest": "Gems/AtomContent/TestData/gem.json",
+      "family": "content",
+      "presentInOwnFamily": true,
+      "id": "gem:Atom_TestData"
+    },
+    {
+      "manifest": "Gems/AtomLyIntegration/AtomFont/gem.json",
+      "family": "render-features",
+      "presentInOwnFamily": true,
+      "id": "gem:AtomFont"
+    },
+    {
+      "manifest": "Gems/AtomLyIntegration/AtomRenderOptions/gem.json",
+      "family": "render-features",
+      "presentInOwnFamily": true,
+      "id": "gem:AtomRenderOptions"
+    },
+    {
+      "manifest": "Gems/AtomLyIntegration/AtomViewportDisplayIcons/gem.json",
+      "family": "render-features",
+      "presentInOwnFamily": true,
+      "id": "gem:AtomViewportDisplayIcons"
+    },
+    {
+      "manifest": "Gems/AtomLyIntegration/AtomViewportDisplayInfo/gem.json",
+      "family": "render-features",
+      "presentInOwnFamily": true,
+      "id": "gem:AtomViewportDisplayInfo"
+    },
+    {
+      "manifest": "Gems/AtomLyIntegration/CommonFeatures/gem.json",
+      "family": "render-features",
+      "presentInOwnFamily": true,
+      "id": "gem:CommonFeaturesAtom"
+    },
+    {
+      "manifest": "Gems/AtomLyIntegration/EditorModeFeedback/gem.json",
+      "family": "render-features",
+      "presentInOwnFamily": true,
+      "id": "gem:EditorModeFeedback"
+    },
+    {
+      "manifest": "Gems/AtomLyIntegration/EMotionFXAtom/gem.json",
+      "family": "render-features",
+      "presentInOwnFamily": true,
+      "id": "gem:EMotionFX_Atom"
+    },
+    {
+      "manifest": "Gems/AtomLyIntegration/gem.json",
+      "family": "render-features",
+      "presentInOwnFamily": true,
+      "id": "gem:AtomLyIntegration"
+    },
+    {
+      "manifest": "Gems/AtomLyIntegration/TechnicalArt/DccScriptingInterface/gem.json",
+      "family": "render-features",
+      "presentInOwnFamily": true,
+      "id": "gem:DccScriptingInterface"
+    },
+    {
+      "manifest": "Gems/AtomTressFX/gem.json",
+      "family": "render-features",
+      "presentInOwnFamily": true,
+      "id": "gem:AtomTressFX"
+    },
+    {
+      "manifest": "Gems/AudioSystem/gem.json",
+      "family": "audio-media",
+      "presentInOwnFamily": true,
+      "id": "gem:AudioSystem"
+    },
+    {
+      "manifest": "Gems/BarrierInput/gem.json",
+      "family": "engine-gameplay",
+      "presentInOwnFamily": true,
+      "id": "gem:BarrierInput"
+    },
+    {
+      "manifest": "Gems/Camera/gem.json",
+      "family": "engine-gameplay",
+      "presentInOwnFamily": true,
+      "id": "gem:Camera"
+    },
+    {
+      "manifest": "Gems/CameraFramework/gem.json",
+      "family": "engine-gameplay",
+      "presentInOwnFamily": true,
+      "id": "gem:CameraFramework"
+    },
+    {
+      "manifest": "Gems/CertificateManager/gem.json",
+      "family": "online-platform",
+      "presentInOwnFamily": true,
+      "id": "gem:CertificateManager"
+    },
+    {
+      "manifest": "Gems/Compression/gem.json",
+      "family": "engine-gameplay",
+      "presentInOwnFamily": true,
+      "id": "gem:Compression"
+    },
+    {
+      "manifest": "Gems/CrashReporting/gem.json",
+      "family": "engine-gameplay",
+      "presentInOwnFamily": true,
+      "id": "gem:CrashReporting"
+    },
+    {
+      "manifest": "Gems/CustomAssetExample/gem.json",
+      "family": "engine-gameplay",
+      "presentInOwnFamily": true,
+      "id": "gem:CustomAssetExample"
+    },
+    {
+      "manifest": "Gems/DebugDraw/gem.json",
+      "family": "render-features",
+      "presentInOwnFamily": true,
+      "id": "gem:DebugDraw"
+    },
+    {
+      "manifest": "Gems/DevTextures/gem.json",
+      "family": "engine-gameplay",
+      "presentInOwnFamily": true,
+      "id": "gem:DevTextures"
+    },
+    {
+      "manifest": "Gems/DiffuseProbeGrid/gem.json",
+      "family": "render-features",
+      "presentInOwnFamily": true,
+      "id": "gem:DiffuseProbeGrid"
+    },
+    {
+      "manifest": "Gems/EditorPythonBindings/gem.json",
+      "family": "editor-script",
+      "presentInOwnFamily": true,
+      "id": "gem:EditorPythonBindings"
+    },
+    {
+      "manifest": "Gems/EMotionFX/gem.json",
+      "family": "physics-animation",
+      "presentInOwnFamily": true,
+      "id": "gem:EMotionFX"
+    },
+    {
+      "manifest": "Gems/ExpressionEvaluation/gem.json",
+      "family": "editor-script",
+      "presentInOwnFamily": true,
+      "id": "gem:ExpressionEvaluation"
+    },
+    {
+      "manifest": "Gems/FastNoise/gem.json",
+      "family": "world",
+      "presentInOwnFamily": true,
+      "id": "gem:FastNoise"
+    },
+    {
+      "manifest": "Gems/GameState/gem.json",
+      "family": "engine-gameplay",
+      "presentInOwnFamily": true,
+      "id": "gem:GameState"
+    },
+    {
+      "manifest": "Gems/GameStateSamples/gem.json",
+      "family": "engine-gameplay",
+      "presentInOwnFamily": true,
+      "id": "gem:GameStateSamples"
+    },
+    {
+      "manifest": "Gems/Gestures/gem.json",
+      "family": "engine-gameplay",
+      "presentInOwnFamily": true,
+      "id": "gem:Gestures"
+    },
+    {
+      "manifest": "Gems/GradientSignal/gem.json",
+      "family": "world",
+      "presentInOwnFamily": true,
+      "id": "gem:GradientSignal"
+    },
+    {
+      "manifest": "Gems/GraphCanvas/gem.json",
+      "family": "editor-script",
+      "presentInOwnFamily": true,
+      "id": "gem:GraphCanvas"
+    },
+    {
+      "manifest": "Gems/GraphModel/gem.json",
+      "family": "editor-script",
+      "presentInOwnFamily": true,
+      "id": "gem:GraphModel"
+    },
+    {
+      "manifest": "Gems/ImGui/gem.json",
+      "family": "engine-gameplay",
+      "presentInOwnFamily": true,
+      "id": "gem:ImGui"
+    },
+    {
+      "manifest": "Gems/InAppPurchases/gem.json",
+      "family": "online-platform",
+      "presentInOwnFamily": true,
+      "id": "gem:InAppPurchases"
+    },
+    {
+      "manifest": "Gems/LandscapeCanvas/gem.json",
+      "family": "world",
+      "presentInOwnFamily": true,
+      "id": "gem:LandscapeCanvas"
+    },
+    {
+      "manifest": "Gems/LmbrCentral/gem.json",
+      "family": "engine-gameplay",
+      "presentInOwnFamily": true,
+      "id": "gem:LmbrCentral"
+    },
+    {
+      "manifest": "Gems/LocalUser/gem.json",
+      "family": "engine-gameplay",
+      "presentInOwnFamily": true,
+      "id": "gem:LocalUser"
+    },
+    {
+      "manifest": "Gems/LyShine/gem.json",
+      "family": "ui",
+      "presentInOwnFamily": true,
+      "id": "gem:LyShine"
+    },
+    {
+      "manifest": "Gems/LyShineExamples/gem.json",
+      "family": "ui",
+      "presentInOwnFamily": true,
+      "id": "gem:LyShineExamples"
+    },
+    {
+      "manifest": "Gems/Maestro/gem.json",
+      "family": "engine-gameplay",
+      "presentInOwnFamily": true,
+      "id": "gem:Maestro"
+    },
+    {
+      "manifest": "Gems/Meshlets/gem.json",
+      "family": "render-features",
+      "presentInOwnFamily": true,
+      "id": "gem:Meshlets"
+    },
+    {
+      "manifest": "Gems/MessagePopup/gem.json",
+      "family": "ui",
+      "presentInOwnFamily": true,
+      "id": "gem:MessagePopup"
+    },
+    {
+      "manifest": "Gems/Microphone/gem.json",
+      "family": "audio-media",
+      "presentInOwnFamily": true,
+      "id": "gem:Microphone"
+    },
+    {
+      "manifest": "Gems/MiniAudio/gem.json",
+      "family": "audio-media",
+      "presentInOwnFamily": true,
+      "id": "gem:MiniAudio"
+    },
+    {
+      "manifest": "Gems/MotionMatching/gem.json",
+      "family": "physics-animation",
+      "presentInOwnFamily": true,
+      "id": "gem:MotionMatching"
+    },
+    {
+      "manifest": "Gems/Multiplayer/gem.json",
+      "family": "online-platform",
+      "presentInOwnFamily": true,
+      "id": "gem:Multiplayer"
+    },
+    {
+      "manifest": "Gems/Multiplayer/Multiplayer_ScriptCanvas/gem.json",
+      "family": "online-platform",
+      "presentInOwnFamily": true,
+      "id": "gem:Multiplayer_ScriptCanvas"
+    },
+    {
+      "manifest": "Gems/MultiplayerCompression/gem.json",
+      "family": "online-platform",
+      "presentInOwnFamily": true,
+      "id": "gem:MultiplayerCompression"
+    },
+    {
+      "manifest": "Gems/NvCloth/gem.json",
+      "family": "physics-animation",
+      "presentInOwnFamily": true,
+      "id": "gem:NvCloth"
+    },
+    {
+      "manifest": "Gems/OpenParticleSystem/gem.json",
+      "family": "engine-gameplay",
+      "presentInOwnFamily": true,
+      "id": "gem:OpenParticleSystem"
+    },
+    {
+      "manifest": "Gems/PhysX/Common/gem.json",
+      "family": "physics-animation",
+      "presentInOwnFamily": true,
+      "id": "gem:PhysXCommon"
+    },
+    {
+      "manifest": "Gems/PhysX/Core/PhysX5/gem.json",
+      "family": "physics-animation",
+      "presentInOwnFamily": true,
+      "id": "gem:PhysX5"
+    },
+    {
+      "manifest": "Gems/PhysX/Debug/PhysX5/gem.json",
+      "family": "physics-animation",
+      "presentInOwnFamily": true,
+      "id": "gem:PhysX5Debug"
+    },
+    {
+      "manifest": "Gems/Prefab/PrefabBuilder/gem.json",
+      "family": "engine-gameplay",
+      "presentInOwnFamily": true,
+      "id": "gem:PrefabBuilder"
+    },
+    {
+      "manifest": "Gems/Presence/gem.json",
+      "family": "online-platform",
+      "presentInOwnFamily": true,
+      "id": "gem:Presence"
+    },
+    {
+      "manifest": "Gems/PrimitiveAssets/gem.json",
+      "family": "engine-gameplay",
+      "presentInOwnFamily": true,
+      "id": "gem:PrimitiveAssets"
+    },
+    {
+      "manifest": "Gems/PythonAssetBuilder/gem.json",
+      "family": "editor-script",
+      "presentInOwnFamily": true,
+      "id": "gem:PythonAssetBuilder"
+    },
+    {
+      "manifest": "Gems/QtForPython/gem.json",
+      "family": "editor-script",
+      "presentInOwnFamily": true,
+      "id": "gem:QtForPython"
+    },
+    {
+      "manifest": "Gems/RecastNavigation/gem.json",
+      "family": "physics-animation",
+      "presentInOwnFamily": true,
+      "id": "gem:RecastNavigation"
+    },
+    {
+      "manifest": "Gems/RemoteTools/gem.json",
+      "family": "engine-gameplay",
+      "presentInOwnFamily": true,
+      "id": "gem:RemoteTools"
+    },
+    {
+      "manifest": "Gems/SaveData/gem.json",
+      "family": "engine-gameplay",
+      "presentInOwnFamily": true,
+      "id": "gem:SaveData"
+    },
+    {
+      "manifest": "Gems/SceneLoggingExample/gem.json",
+      "family": "engine-gameplay",
+      "presentInOwnFamily": true,
+      "id": "gem:SceneLoggingExample"
+    },
+    {
+      "manifest": "Gems/SceneProcessing/gem.json",
+      "family": "engine-gameplay",
+      "presentInOwnFamily": true,
+      "id": "gem:SceneProcessing"
+    },
+    {
+      "manifest": "Gems/ScriptAutomation/gem.json",
+      "family": "editor-script",
+      "presentInOwnFamily": true,
+      "id": "gem:ScriptAutomation"
+    },
+    {
+      "manifest": "Gems/ScriptCanvas/gem.json",
+      "family": "editor-script",
+      "presentInOwnFamily": true,
+      "id": "gem:ScriptCanvas"
+    },
+    {
+      "manifest": "Gems/ScriptCanvasDeveloper/gem.json",
+      "family": "editor-script",
+      "presentInOwnFamily": true,
+      "id": "gem:ScriptCanvasDeveloper"
+    },
+    {
+      "manifest": "Gems/ScriptCanvasPhysics/gem.json",
+      "family": "editor-script",
+      "presentInOwnFamily": true,
+      "id": "gem:ScriptCanvasPhysics"
+    },
+    {
+      "manifest": "Gems/ScriptCanvasTesting/gem.json",
+      "family": "editor-script",
+      "presentInOwnFamily": true,
+      "id": "gem:ScriptCanvasTesting"
+    },
+    {
+      "manifest": "Gems/ScriptedEntityTweener/gem.json",
+      "family": "editor-script",
+      "presentInOwnFamily": true,
+      "id": "gem:ScriptedEntityTweener"
+    },
+    {
+      "manifest": "Gems/ScriptEvents/gem.json",
+      "family": "editor-script",
+      "presentInOwnFamily": true,
+      "id": "gem:ScriptEvents"
+    },
+    {
+      "manifest": "Gems/SkyAtmosphere/gem.json",
+      "family": "render-features",
+      "presentInOwnFamily": true,
+      "id": "gem:SkyAtmosphere"
+    },
+    {
+      "manifest": "Gems/Stars/gem.json",
+      "family": "render-features",
+      "presentInOwnFamily": true,
+      "id": "gem:Stars"
+    },
+    {
+      "manifest": "Gems/StartingPointCamera/gem.json",
+      "family": "engine-gameplay",
+      "presentInOwnFamily": true,
+      "id": "gem:StartingPointCamera"
+    },
+    {
+      "manifest": "Gems/StartingPointInput/gem.json",
+      "family": "engine-gameplay",
+      "presentInOwnFamily": true,
+      "id": "gem:StartingPointInput"
+    },
+    {
+      "manifest": "Gems/StartingPointMovement/gem.json",
+      "family": "engine-gameplay",
+      "presentInOwnFamily": true,
+      "id": "gem:StartingPointMovement"
+    },
+    {
+      "manifest": "Gems/Streamer/gem.json",
+      "family": "engine-gameplay",
+      "presentInOwnFamily": true,
+      "id": "gem:Streamer"
+    },
+    {
+      "manifest": "Gems/Streamer/StreamerProfiler/gem.json",
+      "family": "engine-gameplay",
+      "presentInOwnFamily": true,
+      "id": "gem:StreamerProfiler"
+    },
+    {
+      "manifest": "Gems/SurfaceData/gem.json",
+      "family": "world",
+      "presentInOwnFamily": true,
+      "id": "gem:SurfaceData"
+    },
+    {
+      "manifest": "Gems/Terrain/gem.json",
+      "family": "world",
+      "presentInOwnFamily": true,
+      "id": "gem:Terrain"
+    },
+    {
+      "manifest": "Gems/TestAssetBuilder/gem.json",
+      "family": "engine-gameplay",
+      "presentInOwnFamily": true,
+      "id": "gem:TestAssetBuilder"
+    },
+    {
+      "manifest": "Gems/TextureAtlas/gem.json",
+      "family": "ui",
+      "presentInOwnFamily": true,
+      "id": "gem:TextureAtlas"
+    },
+    {
+      "manifest": "Gems/TickBusOrderViewer/gem.json",
+      "family": "engine-gameplay",
+      "presentInOwnFamily": true,
+      "id": "gem:TickBusOrderViewer"
+    },
+    {
+      "manifest": "Gems/UiBasics/gem.json",
+      "family": "ui",
+      "presentInOwnFamily": true,
+      "id": "gem:UiBasics"
+    },
+    {
+      "manifest": "Gems/Vegetation/gem.json",
+      "family": "world",
+      "presentInOwnFamily": true,
+      "id": "gem:Vegetation"
+    },
+    {
+      "manifest": "Gems/VideoPlaybackFramework/gem.json",
+      "family": "audio-media",
+      "presentInOwnFamily": true,
+      "id": "gem:VideoPlaybackFramework"
+    },
+    {
+      "manifest": "Gems/VirtualGamepad/gem.json",
+      "family": "engine-gameplay",
+      "presentInOwnFamily": true,
+      "id": "gem:VirtualGamepad"
+    }
+  ],
+  "catalogueNodeCount": 783,
+  "duplicateNodeIds": [],
+  "edgeCount": 4066,
+  "missingEdgeEndpoints": [],
+  "diagrams": [
+    {
+      "file": "family-asset-pipeline.mmd",
+      "nodeCount": 3,
+      "edgeCount": 2,
+      "undefinedNodeIds": [],
+      "unexpectedSyntaxLines": [],
+      "within500Edges": true,
+      "nonEmpty": true,
+      "check": "bounded structural grammar, not a Mermaid renderer execution"
+    },
+    {
+      "file": "family-atom-core.mmd",
+      "nodeCount": 14,
+      "edgeCount": 13,
+      "undefinedNodeIds": [],
+      "unexpectedSyntaxLines": [],
+      "within500Edges": true,
+      "nonEmpty": true,
+      "check": "bounded structural grammar, not a Mermaid renderer execution"
+    },
+    {
+      "file": "family-atom-rhi.mmd",
+      "nodeCount": 5,
+      "edgeCount": 4,
+      "undefinedNodeIds": [],
+      "unexpectedSyntaxLines": [],
+      "within500Edges": true,
+      "nonEmpty": true,
+      "check": "bounded structural grammar, not a Mermaid renderer execution"
+    },
+    {
+      "file": "family-atom-rpi.mmd",
+      "nodeCount": 2,
+      "edgeCount": 1,
+      "undefinedNodeIds": [],
+      "unexpectedSyntaxLines": [],
+      "within500Edges": true,
+      "nonEmpty": true,
+      "check": "bounded structural grammar, not a Mermaid renderer execution"
+    },
+    {
+      "file": "family-atom-tools.mmd",
+      "nodeCount": 13,
+      "edgeCount": 31,
+      "undefinedNodeIds": [],
+      "unexpectedSyntaxLines": [],
+      "within500Edges": true,
+      "nonEmpty": true,
+      "check": "bounded structural grammar, not a Mermaid renderer execution"
+    },
+    {
+      "file": "family-audio-media.mmd",
+      "nodeCount": 5,
+      "edgeCount": 2,
+      "undefinedNodeIds": [],
+      "unexpectedSyntaxLines": [],
+      "within500Edges": true,
+      "nonEmpty": true,
+      "check": "bounded structural grammar, not a Mermaid renderer execution"
+    },
+    {
+      "file": "family-content.mmd",
+      "nodeCount": 5,
+      "edgeCount": 2,
+      "undefinedNodeIds": [],
+      "unexpectedSyntaxLines": [],
+      "within500Edges": true,
+      "nonEmpty": true,
+      "check": "bounded structural grammar, not a Mermaid renderer execution"
+    },
+    {
+      "file": "family-editor-script.mmd",
+      "nodeCount": 13,
+      "edgeCount": 12,
+      "undefinedNodeIds": [],
+      "unexpectedSyntaxLines": [],
+      "within500Edges": true,
+      "nonEmpty": true,
+      "check": "bounded structural grammar, not a Mermaid renderer execution"
+    },
+    {
+      "file": "family-engine-gameplay.mmd",
+      "nodeCount": 45,
+      "edgeCount": 26,
+      "undefinedNodeIds": [],
+      "unexpectedSyntaxLines": [],
+      "within500Edges": true,
+      "nonEmpty": true,
+      "check": "bounded structural grammar, not a Mermaid renderer execution"
+    },
+    {
+      "file": "family-native-absorptions.mmd",
+      "nodeCount": 34,
+      "edgeCount": 36,
+      "undefinedNodeIds": [],
+      "unexpectedSyntaxLines": [],
+      "within500Edges": true,
+      "nonEmpty": true,
+      "check": "bounded structural grammar, not a Mermaid renderer execution"
+    },
+    {
+      "file": "family-online-platform.mmd",
+      "nodeCount": 10,
+      "edgeCount": 4,
+      "undefinedNodeIds": [],
+      "unexpectedSyntaxLines": [],
+      "within500Edges": true,
+      "nonEmpty": true,
+      "check": "bounded structural grammar, not a Mermaid renderer execution"
+    },
+    {
+      "file": "family-physics-animation.mmd",
+      "nodeCount": 10,
+      "edgeCount": 9,
+      "undefinedNodeIds": [],
+      "unexpectedSyntaxLines": [],
+      "within500Edges": true,
+      "nonEmpty": true,
+      "check": "bounded structural grammar, not a Mermaid renderer execution"
+    },
+    {
+      "file": "family-render-features.mmd",
+      "nodeCount": 29,
+      "edgeCount": 46,
+      "undefinedNodeIds": [],
+      "unexpectedSyntaxLines": [],
+      "within500Edges": true,
+      "nonEmpty": true,
+      "check": "bounded structural grammar, not a Mermaid renderer execution"
+    },
+    {
+      "file": "family-testing.mmd",
+      "nodeCount": 3,
+      "edgeCount": 0,
+      "undefinedNodeIds": [],
+      "unexpectedSyntaxLines": [],
+      "within500Edges": true,
+      "nonEmpty": true,
+      "check": "bounded structural grammar, not a Mermaid renderer execution"
+    },
+    {
+      "file": "family-ui.mmd",
+      "nodeCount": 11,
+      "edgeCount": 12,
+      "undefinedNodeIds": [],
+      "unexpectedSyntaxLines": [],
+      "within500Edges": true,
+      "nonEmpty": true,
+      "check": "bounded structural grammar, not a Mermaid renderer execution"
+    },
+    {
+      "file": "family-world.mmd",
+      "nodeCount": 14,
+      "edgeCount": 23,
+      "undefinedNodeIds": [],
+      "unexpectedSyntaxLines": [],
+      "within500Edges": true,
+      "nonEmpty": true,
+      "check": "bounded structural grammar, not a Mermaid renderer execution"
+    },
+    {
+      "file": "host-factories.mmd",
+      "nodeCount": 24,
+      "edgeCount": 51,
+      "undefinedNodeIds": [],
+      "unexpectedSyntaxLines": [],
+      "within500Edges": true,
+      "nonEmpty": true,
+      "check": "bounded structural grammar, not a Mermaid renderer execution"
+    },
+    {
+      "file": "overview.mmd",
+      "nodeCount": 17,
+      "edgeCount": 47,
+      "undefinedNodeIds": [],
+      "unexpectedSyntaxLines": [],
+      "within500Edges": true,
+      "nonEmpty": true,
+      "check": "bounded structural grammar, not a Mermaid renderer execution"
+    }
+  ],
+  "invalidDiagramCount": 0,
+  "parserErrors": [],
+  "bootstrapFactorySites": [
+    {
+      "arguments": "",
+      "phase": "runtime/non-headless-static-module-registration",
+      "line": 85,
+      "file": "Code/LauncherUnified/Launcher.cpp",
+      "symbol": "JE::Render::Integration::CreateBootstrapModule"
+    },
+    {
+      "arguments": "",
+      "phase": "Editor/tools-static-module-registration",
+      "line": 127,
+      "file": "Code/Editor/EditorToolsApplication.cpp",
+      "symbol": "JE::Render::Integration::CreateBootstrapModule"
+    },
+    {
+      "arguments": "false",
+      "phase": "asset-processing/static-module-registration",
+      "line": 234,
+      "file": "Code/Tools/AssetProcessor/native/utilities/ApplicationManager.cpp",
+      "symbol": "JE::Render::Integration::CreateBootstrapModule"
+    },
+    {
+      "arguments": "false",
+      "phase": "asset-processing/static-module-registration",
+      "line": 134,
+      "file": "Code/Tools/AssetProcessor/AssetBuilder/AssetBuilderApplication.cpp",
+      "symbol": "JE::Render::Integration::CreateBootstrapModule"
+    },
+    {
+      "arguments": "",
+      "phase": "Editor/tools-static-module-registration",
+      "line": 174,
+      "file": "Gems/Atom/Tools/AtomToolsFramework/Code/Source/Application/AtomToolsApplication.cpp",
+      "symbol": "JE::Render::Integration::CreateBootstrapModule"
+    }
+  ],
+  "bootstrapSitesExactly5": true,
+  "bootstrapFalseExactly2": true,
+  "inputDrift": [],
+  "mermaidRendered": false,
+  "noPackagesInstalled": true,
+  "nativeExecuted": false,
+  "graphProcessesCreated": 0,
+  "helpersPersistent": 0
+}

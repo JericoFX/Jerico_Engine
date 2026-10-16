@@ -1,0 +1,31 @@
+{
+  "utc": "2026-10-16T21:04:41.6895124+00:00",
+  "owner": "/root",
+  "state": "REAL_VULKAN_ROOM_AND_SHUTDOWN_GREEN",
+  "redNativeExit": -1073741819,
+  "greenNativeExit": 0,
+  "sameExecutableAndArgumentsVerified": true,
+  "sameOsNonforceRequest": true,
+  "forceKillUsed": false,
+  "nativeResultSHA256": "36443D88F6C380A1FEAFADC8F2B7B429F37987323895A582CAC96E8120D1A8BF",
+  "liveModuleProofSHA256": "8DE020ADA1A4DB7D9796DBAD1DCAD24D0342171AEE85D8FD981DABA7D18A241D",
+  "stopRequestSHA256": "77D98E18D17FB991631E38B76D0B49FE2489B0AEBA372D7962363E35642EE3C8",
+  "gameLogSHA256": "1AF943583AC3A27794314D2016DDBE91E1D0D187E3DCE444A875E0638CB77548",
+  "originalVisualSHA256": "367C4E6D1A1EEC24E9832ACB236FD9EB62615BA99DC49DD54543268D14D76295",
+  "visualDimensions": "1913x1080",
+  "redCdbDumpSHA256": "FE42F6B90AD9899520F63939D8185BBC36283028741F2CA150C56B22459B21B8",
+  "bridgeSourceSHA256": "616388C67FAFC0139AF870B141D83464618155DFFE27CF8A10B34BAFE3933BBA",
+  "renderIntegrationSHA256": "897FD69198465E04D5A7A64229980A58146564D9D61F668E3084CBE9A57BB3B7",
+  "rpiSHA256": "D651A668A35752ED1F8A707782891F79A9EF23D0BE05F05CCFC0A142BD9218E5",
+  "moduleLimits": "No old Bootstrap DLL, Editor libraries, Python, DX12 provider or AP present; product uses Vulkan.",
+  "shutdownWarning": {
+    "text": "Failed to initialize PipelineState for DynamicDrawContext",
+    "presentGreen": true,
+    "presentRed": true
+  },
+  "peakRamPct": 46.19,
+  "peakWorkingSetBytes": 580378624.0,
+  "limits": "Profile Windows Vulkan; no new Beauty/frame pacing/VR/Linux/Shipping or clean-HEAD build acceptance.",
+  "sdkAndEditorCurrent": "PENDING",
+  "wholeGemIncrement": 0
+}

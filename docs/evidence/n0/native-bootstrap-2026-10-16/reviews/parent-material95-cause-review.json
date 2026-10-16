@@ -1,0 +1,63 @@
+{
+  "utc": "2026-10-16T19:53:08.2104329Z",
+  "reviewer": "/root",
+  "state": "CAUSE_CONFIRMED_EMPTY_DIRTY_MATERIAL_INDEX_TABLE",
+  "nativeCrash": "C0000005 before focal room draw",
+  "dumpSHA256": "0EA6A3A6A8CC7A5281A8251199D4CA1E11A0B7F6B9DA6EDEBFBA5E28E2B37681",
+  "sourceProofSHA256": "CAC7E852F986406CA186946364F136861BDBDD392D2A1C26EF857BCDEB7AD66F",
+  "cdbReceipts": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\native-bootstrap95-launcher-vulkan-attempt1\\crash\\cdb-review-luna-attempt4\\receipt.json",
+      "sha256": "F733752D243F054579BBC7F2443132C9406B7CE1E0C0CD3185708F48641D0B29",
+      "nativeExit": 0
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\native-bootstrap95-launcher-vulkan-attempt1\\crash\\cdb-review-luna-attempt5\\receipt.json",
+      "sha256": "6A350EDD2FD2E64E493F474E2BF8CE6320D49F3D10B5B4AAFC00D2C624F4F396",
+      "nativeExit": 0
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\native-bootstrap95-launcher-vulkan-attempt1\\crash\\cdb-review-luna-attempt6\\receipt.json",
+      "sha256": "5BFF036D228EDA214FE197B595788C37015E47D5CBFB2A6E1043D65F60EE3C56",
+      "nativeExit": 0
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\native-bootstrap95-launcher-vulkan-attempt1\\crash\\cdb-review-luna-attempt7\\receipt.json",
+      "sha256": "B0C5ADADB18551FAC89C84777BD202F4F3D611D7D5D004828397B2B199571D35",
+      "nativeExit": 0
+    }
+  ],
+  "verifiedFields": {
+    "materialTypeDataLength": 0,
+    "materialTypeBufferIndicesBuffer": "null",
+    "bufferReadIndicesDirty": 1,
+    "initialized": 1,
+    "indicesBufferSize": 0,
+    "deviceCount": 1,
+    "materialTypeIndex": 0,
+    "deviceBufferDataCount": "not exposed",
+    "constDeviceBufferDataCount": "not exposed"
+  },
+  "faultAddress": {
+    "dump": "0x90",
+    "errorLog": "0x144",
+    "handling": "Preserve distinct source observations; no formatter change in this scope"
+  },
+  "causalChain": [
+    "Last release resets type table and indices, retaining dirty state",
+    "First empty UpdateSceneMaterialSrg requests zero bytes",
+    "Existing BufferAsset validation rejects descriptor0; factory returns null",
+    "Unchecked GetBufferSize dereferences null and crashes"
+  ],
+  "bootstrapAttribution": "Not demonstrated as direct fault; stack is MaterialSystem/RPI/RHI; no Bootstrap/RenderIntegration frame",
+  "approvedRepair": "Keep at least one invalid read-index entry (-1) for empty table, consistently for CPU payload, requested GPU bytes and creation; retain zero logical types and subsequent registration",
+  "acceptance": [
+    "New causal regression must fail for this reason before production edit",
+    "Focal regression and full native RPI suite green after minimal repair",
+    "Current Vulkan Editor and focal standalone room draw and shutdown",
+    "Affected SDK/factory and preservation gates"
+  ],
+  "productionEdited": false,
+  "wholeGemIncrement": 0,
+  "persistentGoal": "ACTIVE"
+}

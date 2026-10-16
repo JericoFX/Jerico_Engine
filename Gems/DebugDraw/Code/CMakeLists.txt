@@ -35,7 +35,7 @@ ly_add_target(
             AZ::AzCore
             AZ::AzFramework
             Gem::Atom_RPI.Public
-            Gem::Atom_Bootstrap.Headers
+            JE::RenderIntegration.Public
             Gem::Atom_Feature_Common.Public
 )
 
@@ -88,7 +88,7 @@ if(PAL_TRAIT_BUILD_HOST_TOOLS)
                 AZ::AzCore
                 AZ::AzFramework
                 Gem::Atom_RPI.Public
-                Gem::Atom_Bootstrap.Headers
+                JE::RenderIntegration.Public
                 Gem::Atom_Feature_Common.Public
                 AZ::AzToolsFramework
     )

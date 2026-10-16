@@ -606,11 +606,14 @@ namespace AZ::RPI
         if (m_sceneMaterialSrg)
         {
             const auto deviceCount{ AZ::RHI::RHISystemInterface::Get()->GetDeviceCount() };
+            // Keep a valid sentinel buffer even when no material types are registered.
+            const auto logicalTypeCount = m_materialTypeIndices.MaxCount();
+            const auto bufferElementCount = logicalTypeCount > 0 ? logicalTypeCount : 1;
             // init the data to upload: Material-Types without parameter buffer get a -1 read index
             AZStd::unordered_map<int, AZStd::vector<int32_t>> deviceBufferData;
             for (auto deviceIndex{ 0 }; deviceIndex < deviceCount; ++deviceIndex)
             {
-                deviceBufferData[deviceIndex].resize(m_materialTypeIndices.MaxCount(), -1);
+                deviceBufferData[deviceIndex].resize(bufferElementCount, -1);
             }
 
             // collect the per-device read indices of the material parameter buffers
@@ -628,10 +631,10 @@ namespace AZ::RPI
             }
 
             // prepare / resize the GPU buffer
-            auto indicesBufferSize = static_cast<uint64_t>(sizeof(int32_t) * m_materialTypeIndices.MaxCount());
+            auto indicesBufferSize = static_cast<uint64_t>(sizeof(int32_t) * bufferElementCount);
             if (!m_materialTypeBufferIndicesBuffer)
             {
-                m_materialTypeBufferIndicesBuffer = createBuffer(m_materialTypeData.size());
+                m_materialTypeBufferIndicesBuffer = createBuffer(bufferElementCount);
             }
             if (m_materialTypeBufferIndicesBuffer->GetBufferSize() < indicesBufferSize)
             {

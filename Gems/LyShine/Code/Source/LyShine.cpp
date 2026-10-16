@@ -163,7 +163,7 @@ CLyShine::CLyShine()
     AZ::TickBus::Handler::BusConnect();
     AZ::RPI::ViewportContextNotificationBus::Handler::BusConnect(
         AZ::RPI::ViewportContextRequests::Get()->GetDefaultViewportContextName());
-    AZ::Render::Bootstrap::NotificationBus::Handler::BusConnect();
+    JE::Render::Bootstrap::NotificationBus::Handler::BusConnect();
 
     // These are internal Amazon components, so register them so that we can send back their names to our metrics collection
     // IF YOU ARE A THIRDPARTY WRITING A GEM, DO NOT REGISTER YOUR COMPONENTS WITH EditorMetricsComponentRegistrationBus
@@ -244,7 +244,7 @@ CLyShine::~CLyShine()
     AZ::RPI::ViewportContextNotificationBus::Handler::BusDisconnect();
     AzFramework::InputTextEventListener::Disconnect();
     AzFramework::InputChannelEventListener::Disconnect();
-    AZ::Render::Bootstrap::NotificationBus::Handler::BusDisconnect();
+    JE::Render::Bootstrap::NotificationBus::Handler::BusDisconnect();
     LyShinePassDataRequestBus::Handler::BusDisconnect();
 
     UiCanvasComponent::Shutdown();

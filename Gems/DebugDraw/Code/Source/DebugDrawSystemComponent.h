@@ -31,7 +31,7 @@
 #include <Atom/RPI.Public/SceneBus.h>
 #include <Atom/RPI.Public/Shader/Shader.h>
 #include <Atom/RPI.Public/Shader/ShaderResourceGroup.h>
-#include <Atom/Bootstrap/BootstrapNotificationBus.h>
+#include <JE/Render/Bootstrap/BootstrapNotificationBus.h>
 #include <Atom/Feature/RayTracing/RayTracingFeatureProcessorInterface.h>
 
 namespace DebugDraw
@@ -67,7 +67,7 @@ namespace DebugDraw
         , protected DebugDrawRequestBus::Handler
         , protected DebugDrawInternalRequestBus::Handler
         , public AZ::RPI::SceneNotificationBus::Handler
-        , public AZ::Render::Bootstrap::NotificationBus::Handler
+        , public JE::Render::Bootstrap::NotificationBus::Handler
 
 #ifdef DEBUGDRAW_GEM_EDITOR
         , protected AzToolsFramework::EditorEntityContextNotificationBus::Handler
@@ -121,7 +121,7 @@ namespace DebugDraw
         // SceneNotificationBus
         void OnBeginPrepareRender() override;
 
-        // AZ::Render::Bootstrap::NotificationBus
+        // JE::Render::Bootstrap::NotificationBus
         void OnBootstrapSceneReady(AZ::RPI::Scene* scene) override;
 
         // EntityBus

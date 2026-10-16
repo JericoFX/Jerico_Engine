@@ -1,0 +1,26 @@
+flowchart LR
+  n41["EditorPythonBindings"]
+  n44["ExpressionEvaluation"]
+  n50["GraphCanvas [configured]"]
+  n51["GraphModel [configured]"]
+  n82["PythonAssetBuilder"]
+  n84["QtForPython"]
+  n91["ScriptAutomation"]
+  n92["ScriptCanvas"]
+  n93["ScriptCanvasDeveloper"]
+  n94["ScriptCanvasPhysics"]
+  n95["ScriptCanvasTesting"]
+  n96["ScriptedEntityTweener"]
+  n97["ScriptEvents"]
+  n51 -->|"manifest"| n50
+  n82 -->|"manifest"| n41
+  n84 -->|"manifest"| n41
+  n92 -->|"manifest"| n97
+  n92 -->|"manifest"| n44
+  n92 -->|"manifest"| n50
+  n93 -->|"manifest"| n92
+  n93 -->|"manifest"| n50
+  n94 -->|"manifest"| n92
+  n95 -->|"manifest"| n92
+  n95 -->|"manifest"| n50
+  n95 -->|"manifest"| n97

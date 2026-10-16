@@ -1,0 +1,14 @@
+{
+  "manifestCount": 11043,
+  "files": 11149,
+  "currentPayloadsVerified": true,
+  "scope": "Profile SDK installation, not Shipping or dynamic noPython/noNull acceptance.",
+  "forbiddenCount": 0,
+  "profilerHeader": [
+    {
+      "relativePath": "Code/Framework/AzCore/AzCore/Debug/Profiler.h",
+      "bytes": 3841,
+      "sha256": "4102602F89D545776D274EEBEDD34F26111A3D19927329B8E282416699D5CFAE"
+    }
+  ]
+}

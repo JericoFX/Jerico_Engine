@@ -1,0 +1,41 @@
+{
+  "compiler": "/MD C++20 conformant preprocessor",
+  "sdkAdds": 44,
+  "project": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-vk-consumer96\\External\\source-d38793b1\\JENativeSdkConsumer.vcxproj",
+    "bytes": 46381,
+    "sha256": "72038984DE4A2A7635263E9D60A26493421F5E83B05A6954BED9866FDD4FD3CD"
+  },
+  "imports": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-vk-consumer96\\native-EditorCamera-profile.txt",
+      "bytes": 4914,
+      "sha256": "DA47677E7C10666B4220C5E14BD6076312876A770AA9CA3C407133CEBC1C613F"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-vk-consumer96\\native-EditorMaterials-profile.txt",
+      "bytes": 5611,
+      "sha256": "DC1BFB158D55260B10775927B114EE73AB3683168EDE09377AB61FCFFB6C2D70"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-vk-consumer96\\native-EditorRenderIntegration-profile.txt",
+      "bytes": 2078,
+      "sha256": "C105C2E1760EC3D2C5EA18885E54C8E598D0E52B983B7E234A9A8C566545481C"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-vk-consumer96\\native-RenderAssetBuilders-profile.txt",
+      "bytes": 1253,
+      "sha256": "77C44FE7D79F912F4161B1B7D4D6CB69CE3BC82C470D64D162A3FE2B0B2BDD92"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-vk-consumer96\\native-RenderIntegration-profile.txt",
+      "bytes": 1989,
+      "sha256": "EBF457F15C0F0B6D35C9EEDC76136428701CC66A9D2CDA8F37D4967D618BAFDB"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-vk-consumer96\\native-SceneData-profile.txt",
+      "bytes": 327,
+      "sha256": "1966EEC8AF806390BAADC5C35924D37A7FAFCFE08B37B88B472666A57F12EBD5"
+    }
+  ]
+}

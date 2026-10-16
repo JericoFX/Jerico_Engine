@@ -1,0 +1,10 @@
+flowchart LR
+  n8["Atom_RHI [configured]"]
+  n9["Atom_RHI_DX12"]
+  n10["Atom_RHI_Metal"]
+  n11["Atom_RHI_Null [configured]"]
+  n12["Atom_RHI_Vulkan [configured]"]
+  n8 -->|"manifest"| n9
+  n8 -->|"manifest"| n10
+  n8 -->|"manifest"| n12
+  n8 -->|"manifest"| n11

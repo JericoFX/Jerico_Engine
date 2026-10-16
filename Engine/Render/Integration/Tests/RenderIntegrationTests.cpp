@@ -2,6 +2,8 @@
  * SPDX-License-Identifier: Apache-2.0 OR MIT */
 #include <JE/Render/Integration/RenderIntegrationModule.h>
 #include <JE/Render/Integration/FlyCameraInputBus.h>
+#include <JE/Render/Bootstrap/BootstrapRequestBus.h>
+#include <JE/Render/Bootstrap/DefaultWindowBus.h>
 #include <AtomBridgeSystemComponent.h>
 #include <FlyCameraInputComponent.h>
 #include <PerViewportDynamicDrawManager.h>
@@ -87,6 +89,82 @@ namespace JE::Render::Integration
         ASSERT_NE(reflected, nullptr);
         EXPECT_STREQ(reflected->m_name, "AtomBridgeSystemComponent");
         EXPECT_EQ(reflected->m_version, 0);
+    }
+
+    TEST_F(RenderIntegrationTests, BootstrapFactoryPreservesLegacyIdentityDescriptorServicesAndReflection)
+    {
+        const AZ::Uuid moduleId("{ADDE20F4-03E6-4692-A736-E56B87952727}");
+        const AZ::Uuid componentId("{1EAFD87D-A64A-4612-93D8-B3AFFA70F09B}");
+        const AZ::ComponentTypeList requiredComponents{ componentId };
+        AZStd::unique_ptr<AZ::Module> module(CreateBootstrapModule());
+        ASSERT_NE(module, nullptr);
+        EXPECT_EQ(module->RTTI_GetType(), moduleId);
+        EXPECT_STREQ(module->RTTI_GetTypeName(), "BootstrapModule");
+        EXPECT_EQ(module->GetRequiredSystemComponents(), requiredComponents);
+        ASSERT_EQ(module->GetComponentDescriptors().size(), 1);
+        auto* descriptor = module->GetComponentDescriptors().front();
+        ASSERT_NE(descriptor, nullptr);
+        EXPECT_EQ(descriptor->GetUuid(), componentId);
+        AZ::ComponentDescriptor::DependencyArrayType provided, incompatible, required, dependent;
+        descriptor->GetProvidedServices(provided, nullptr);
+        descriptor->GetIncompatibleServices(incompatible, nullptr);
+        descriptor->GetRequiredServices(required, nullptr);
+        descriptor->GetDependentServices(dependent, nullptr);
+        const AZ::ComponentDescriptor::DependencyArrayType bootstrapService{ AZ_CRC_CE("BootstrapSystemComponent") };
+        const AZ::ComponentDescriptor::DependencyArrayType requiredServices{
+            AZ_CRC_CE("RPISystem"), AZ_CRC_CE("SceneSystemComponentService") };
+        const AZ::ComponentDescriptor::DependencyArrayType dependentServices{
+            AZ_CRC_CE("ImGuiSystemComponent"), AZ_CRC_CE("PrimitiveSystemComponent"), AZ_CRC_CE("MeshSystemComponent"),
+            AZ_CRC_CE("CoreLightsService"), AZ_CRC_CE("DynamicDrawService"), AZ_CRC_CE("CommonService"), AZ_CRC_CE("HairService") };
+        EXPECT_EQ(provided, bootstrapService);
+        EXPECT_EQ(incompatible, bootstrapService);
+        EXPECT_EQ(required, requiredServices);
+        EXPECT_EQ(dependent, dependentServices);
+        AZ::SerializeContext context;
+        AZ::Entity::Reflect(&context);
+        descriptor->Reflect(&context);
+        const auto* reflected = context.FindClassData(componentId);
+        ASSERT_NE(reflected, nullptr);
+        EXPECT_STREQ(reflected->m_name, "BootstrapSystemComponent");
+        EXPECT_EQ(reflected->m_version, 1);
+        {
+            AZStd::unique_ptr<AZ::Component> component(descriptor->CreateComponent());
+            ASSERT_NE(component, nullptr);
+            EXPECT_EQ(component->RTTI_GetType(), componentId);
+        }
+        module.reset();
+        module.reset(CreateBootstrapModule(true));
+        ASSERT_NE(module, nullptr);
+        EXPECT_EQ(module->RTTI_GetType(), moduleId);
+        EXPECT_EQ(module->GetRequiredSystemComponents(), requiredComponents);
+        ASSERT_EQ(module->GetComponentDescriptors().size(), 1);
+        ASSERT_NE(module->GetComponentDescriptors().front(), nullptr);
+        EXPECT_EQ(module->GetComponentDescriptors().front()->GetUuid(), componentId);
+    }
+
+    TEST_F(RenderIntegrationTests, BootstrapDescriptorOnlyFactoryDoesNotRequireOrActivateRenderer)
+    {
+        const bool hadRequests = JE::Render::Bootstrap::RequestBus::HasHandlers();
+        const bool hadWindow = JE::Render::Bootstrap::DefaultWindowBus::HasHandlers();
+        for (int attempt = 0; attempt < 2; ++attempt)
+        {
+            AZStd::unique_ptr<AZ::Module> module(CreateBootstrapModule(false));
+            ASSERT_NE(module, nullptr);
+            EXPECT_EQ(module->RTTI_GetType(), AZ::Uuid("{ADDE20F4-03E6-4692-A736-E56B87952727}"));
+            EXPECT_STREQ(module->RTTI_GetTypeName(), "BootstrapModule");
+            EXPECT_TRUE(module->GetRequiredSystemComponents().empty());
+            ASSERT_EQ(module->GetComponentDescriptors().size(), 1);
+            auto* descriptor = module->GetComponentDescriptors().front();
+            ASSERT_NE(descriptor, nullptr);
+            EXPECT_EQ(descriptor->GetUuid(), AZ::Uuid("{1EAFD87D-A64A-4612-93D8-B3AFFA70F09B}"));
+            AZStd::unique_ptr<AZ::Component> component(descriptor->CreateComponent());
+            ASSERT_NE(component, nullptr);
+            EXPECT_EQ(component->RTTI_GetType(), descriptor->GetUuid());
+            EXPECT_EQ(JE::Render::Bootstrap::RequestBus::HasHandlers(), hadRequests);
+            EXPECT_EQ(JE::Render::Bootstrap::DefaultWindowBus::HasHandlers(), hadWindow);
+        }
+        EXPECT_EQ(JE::Render::Bootstrap::RequestBus::HasHandlers(), hadRequests);
+        EXPECT_EQ(JE::Render::Bootstrap::DefaultWindowBus::HasHandlers(), hadWindow);
     }
 
     TEST_F(RenderIntegrationTests, FlyCameraXmlRoundTripPreservesLegacyIdentityAndAllFields)

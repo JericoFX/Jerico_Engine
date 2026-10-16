@@ -1,0 +1,72 @@
+flowchart LR
+  n1["AFR"]
+  n2["Archive"]
+  n3["AssetValidation"]
+  n4["Atom [configured]"]
+  n8["Atom_RHI [configured]"]
+  n13["Atom_RPI [configured]"]
+  n27["BarrierInput"]
+  n28["Camera [native-owner evidence]"]
+  n29["CameraFramework [native-owner evidence]"]
+  n32["Compression"]
+  n33["CrashReporting"]
+  n34["CustomAssetExample"]
+  n38["DevTextures"]
+  n46["GameState"]
+  n47["GameStateSamples"]
+  n48["Gestures"]
+  n53["ImGui [native-owner evidence]"]
+  n57["LmbrCentral [configured]"]
+  n58["LocalUser"]
+  n59["LyShine"]
+  n60["LyShineExamples"]
+  n61["Maestro [configured]"]
+  n65["MessagePopup"]
+  n73["OpenParticleSystem"]
+  n78["PrefabBuilder [native-owner evidence]"]
+  n80["PrimitiveAssets [native-owner evidence]"]
+  n87["RemoteTools"]
+  n88["SaveData"]
+  n89["SceneLoggingExample"]
+  n90["SceneProcessing [configured]"]
+  n92["ScriptCanvas"]
+  n103["StartingPointCamera"]
+  n104["StartingPointInput"]
+  n105["StartingPointMovement"]
+  n106["Streamer"]
+  n107["StreamerProfiler"]
+  n110["TestAssetBuilder"]
+  n112["TickBusOrderViewer"]
+  n113["UiBasics"]
+  n116["VirtualGamepad"]
+  n118["Editor/Camera"]
+  n121["Engine/Assets/PrefabBuilder"]
+  n122["Engine/Assets/Primitives"]
+  n124["Engine/Debug/ImGui"]
+  n130["Engine/World/Camera"]
+  n2 -->|"manifest"| n32
+  n27 -->|"manifest"| n13
+  n28 -->|"manifest"| n13
+  n47 -->|"manifest"| n46
+  n47 -->|"manifest"| n58
+  n47 -->|"manifest"| n59
+  n47 -->|"manifest"| n88
+  n47 -->|"manifest"| n65
+  n47 -->|"manifest"| n57
+  n47 -->|"manifest"| n113
+  n47 -->|"manifest"| n60
+  n48 -->|"manifest"| n13
+  n53 -->|"manifest"| n57
+  n61 -->|"manifest"| n57
+  n61 -->|"manifest"| n4
+  n61 -->|"manifest"| n8
+  n61 -->|"manifest"| n13
+  n103 -->|"manifest"| n57
+  n104 -->|"manifest"| n92
+  n116 -->|"manifest"| n59
+  n116 -->|"manifest"| n113
+  n28 -.->|"native ownership"| n130
+  n29 -.->|"native ownership"| n118
+  n80 -.->|"native ownership"| n122
+  n78 -.->|"native ownership"| n121
+  n53 -.->|"native ownership"| n124

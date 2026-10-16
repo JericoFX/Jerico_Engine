@@ -1,0 +1,345 @@
+{
+  "wholeGemAcceptedCounter": 11,
+  "nativeExecuted": false,
+  "factoryCallSites": 51,
+  "targetDeclarations": 899,
+  "gameSHA256": "4578FACCE19AC99396E5FE904EAC173066FA517AF16AE0F49B03F9082A1057EC",
+  "cmakeFiles": 2186,
+  "repository": "F:\\JericoEngine\\JericoEngine",
+  "sourceGemCount": 110,
+  "resourceStart": {
+    "freeGiB": 15.85,
+    "usedPercent": 50.33
+  },
+  "gemsRootCount": 107,
+  "newGraftProcess": false,
+  "wholeGemNominalList": "11 nominal rows reconciled; not all global gates accepted",
+  "graftCoverageReused": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Integration\\Include\\JE\\Render\\Bootstrap\\BootstrapRequestBus.h",
+      "expected": "60E73715E8E7F9C9A797E12F451B5E224647FDD608BC7E3A6C595CF0988792C6",
+      "actual": "60E73715E8E7F9C9A797E12F451B5E224647FDD608BC7E3A6C595CF0988792C6",
+      "matches": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Integration\\Include\\JE\\Render\\Bootstrap\\BootstrapNotificationBus.h",
+      "expected": "E010FBC6DB4AAEB28DBC91C438CB6AF105C95DB92212CA28032D87A6D86C27B9",
+      "actual": "E010FBC6DB4AAEB28DBC91C438CB6AF105C95DB92212CA28032D87A6D86C27B9",
+      "matches": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Integration\\Include\\JE\\Render\\Bootstrap\\DefaultWindowBus.h",
+      "expected": "12DAEB647ACCB20D6E4FF958FC6F4CFA3A7F8F5D0C36D490136BBF892138BC8A",
+      "actual": "12DAEB647ACCB20D6E4FF958FC6F4CFA3A7F8F5D0C36D490136BBF892138BC8A",
+      "matches": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Integration\\Source\\Bootstrap\\BootstrapSystemComponent.cpp",
+      "expected": "A5AFB7DA98888F2DF1CB2738956E060A2820DCFD993AAAE6D297EC9DF8A70CEF",
+      "actual": "A5AFB7DA98888F2DF1CB2738956E060A2820DCFD993AAAE6D297EC9DF8A70CEF",
+      "matches": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\LauncherUnified\\Launcher.cpp",
+      "expected": "A04FBBF994F63BCEF115446DCDC24E5E9611DC3C6E7D795BEAFDCB2B3C4862DD",
+      "actual": "A04FBBF994F63BCEF115446DCDC24E5E9611DC3C6E7D795BEAFDCB2B3C4862DD",
+      "matches": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Editor\\EditorToolsApplication.cpp",
+      "expected": "49F26CA4D25A65F7534E2FE9CE30574179060C8FA527BFBD7E9019D0C2A03095",
+      "actual": "49F26CA4D25A65F7534E2FE9CE30574179060C8FA527BFBD7E9019D0C2A03095",
+      "matches": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Tools\\AssetProcessor\\native\\utilities\\ApplicationManager.cpp",
+      "expected": "DCB93B22BBCF8AD933FAABF8BF54B019DA8D641D64258D3E4C0CF87CEE0D989C",
+      "actual": "DCB93B22BBCF8AD933FAABF8BF54B019DA8D641D64258D3E4C0CF87CEE0D989C",
+      "matches": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Code\\Tools\\AssetProcessor\\AssetBuilder\\AssetBuilderApplication.cpp",
+      "expected": "693311C86DD724430FAFDB402C625B916BFF88C674AAE342D1F79C181F5ED687",
+      "actual": "693311C86DD724430FAFDB402C625B916BFF88C674AAE342D1F79C181F5ED687",
+      "matches": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Tools\\AtomToolsFramework\\Code\\Source\\Application\\AtomToolsApplication.cpp",
+      "expected": "CD039C72D61437FEC0D71AA0FF88CBB67062DD1FE676088F944E2F45E1547789",
+      "actual": "CD039C72D61437FEC0D71AA0FF88CBB67062DD1FE676088F944E2F45E1547789",
+      "matches": true
+    }
+  ],
+  "edgeKinds": [
+    {
+      "count": 366,
+      "kind": "cmake-alias"
+    },
+    {
+      "count": 2023,
+      "kind": "cmake-dependency-reference"
+    },
+    {
+      "count": 503,
+      "kind": "cmake-target-reference"
+    },
+    {
+      "count": 769,
+      "kind": "configured-module-composition"
+    },
+    {
+      "count": 51,
+      "kind": "cpp-factory-call"
+    },
+    {
+      "count": 179,
+      "kind": "manifest-dependency"
+    },
+    {
+      "count": 97,
+      "kind": "manifest-external-subdirectory"
+    },
+    {
+      "count": 16,
+      "kind": "native-absorption-evidence"
+    },
+    {
+      "count": 1,
+      "kind": "runtime-ebus-contract"
+    },
+    {
+      "count": 61,
+      "kind": "selection-root"
+    }
+  ],
+  "schema": "je-gem-dependency-map-review-v1",
+  "resourceEnd": {
+    "freeGiB": 16.88,
+    "usedPercent": 47.1
+  },
+  "edgeCount": 4066,
+  "cppSHA256": "53017F862C526DF6080210A1A00E6678C2CD5382B5D1A51026BF3B0BDE7F7ED2",
+  "excludedCount": 14,
+  "status": "COMPOSITION_MAP_CANDIDATE",
+  "acceptance": "Parent only; no product acceptance from this map",
+  "configuredHostPlans": 22,
+  "families": [
+    {
+      "count": 1,
+      "name": "asset-pipeline",
+      "gems": [
+        "ImageProcessingAtom"
+      ]
+    },
+    {
+      "count": 1,
+      "name": "atom-core",
+      "gems": [
+        "Atom"
+      ]
+    },
+    {
+      "count": 5,
+      "name": "atom-rhi",
+      "gems": [
+        "Atom_RHI",
+        "Atom_RHI_DX12",
+        "Atom_RHI_Metal",
+        "Atom_RHI_Null",
+        "Atom_RHI_Vulkan"
+      ]
+    },
+    {
+      "count": 1,
+      "name": "atom-rpi",
+      "gems": [
+        "Atom_RPI"
+      ]
+    },
+    {
+      "count": 5,
+      "name": "atom-tools",
+      "gems": [
+        "AtomToolsFramework",
+        "MaterialCanvas",
+        "MaterialEditor",
+        "PassCanvas",
+        "ShaderManagementConsole"
+      ]
+    },
+    {
+      "count": 4,
+      "name": "audio-media",
+      "gems": [
+        "AudioSystem",
+        "Microphone",
+        "MiniAudio",
+        "VideoPlaybackFramework"
+      ]
+    },
+    {
+      "count": 4,
+      "name": "content",
+      "gems": [
+        "Atom_TestData",
+        "AtomContent",
+        "ReferenceMaterials",
+        "Sponza"
+      ]
+    },
+    {
+      "count": 13,
+      "name": "editor-script",
+      "gems": [
+        "EditorPythonBindings",
+        "ExpressionEvaluation",
+        "GraphCanvas",
+        "GraphModel",
+        "PythonAssetBuilder",
+        "QtForPython",
+        "ScriptAutomation",
+        "ScriptCanvas",
+        "ScriptCanvasDeveloper",
+        "ScriptCanvasPhysics",
+        "ScriptCanvasTesting",
+        "ScriptedEntityTweener",
+        "ScriptEvents"
+      ]
+    },
+    {
+      "count": 32,
+      "name": "engine-gameplay",
+      "gems": [
+        "AFR",
+        "Archive",
+        "AssetValidation",
+        "BarrierInput",
+        "Camera",
+        "CameraFramework",
+        "Compression",
+        "CrashReporting",
+        "CustomAssetExample",
+        "DevTextures",
+        "GameState",
+        "GameStateSamples",
+        "Gestures",
+        "ImGui",
+        "LmbrCentral",
+        "LocalUser",
+        "Maestro",
+        "OpenParticleSystem",
+        "PrefabBuilder",
+        "PrimitiveAssets",
+        "RemoteTools",
+        "SaveData",
+        "SceneLoggingExample",
+        "SceneProcessing",
+        "StartingPointCamera",
+        "StartingPointInput",
+        "StartingPointMovement",
+        "Streamer",
+        "StreamerProfiler",
+        "TestAssetBuilder",
+        "TickBusOrderViewer",
+        "VirtualGamepad"
+      ]
+    },
+    {
+      "count": 7,
+      "name": "online-platform",
+      "gems": [
+        "Achievements",
+        "CertificateManager",
+        "InAppPurchases",
+        "Multiplayer",
+        "Multiplayer_ScriptCanvas",
+        "MultiplayerCompression",
+        "Presence"
+      ]
+    },
+    {
+      "count": 7,
+      "name": "physics-animation",
+      "gems": [
+        "EMotionFX",
+        "MotionMatching",
+        "NvCloth",
+        "PhysX5",
+        "PhysX5Debug",
+        "PhysXCommon",
+        "RecastNavigation"
+      ]
+    },
+    {
+      "count": 16,
+      "name": "render-features",
+      "gems": [
+        "Atom_Feature_Common",
+        "AtomFont",
+        "AtomLyIntegration",
+        "AtomRenderOptions",
+        "AtomTressFX",
+        "AtomViewportDisplayIcons",
+        "AtomViewportDisplayInfo",
+        "CommonFeaturesAtom",
+        "DccScriptingInterface",
+        "DebugDraw",
+        "DiffuseProbeGrid",
+        "EditorModeFeedback",
+        "EMotionFX_Atom",
+        "Meshlets",
+        "SkyAtmosphere",
+        "Stars"
+      ]
+    },
+    {
+      "count": 3,
+      "name": "testing",
+      "gems": [
+        "AutomatedTesting",
+        "PythonCoverage",
+        "Sponza"
+      ]
+    },
+    {
+      "count": 5,
+      "name": "ui",
+      "gems": [
+        "LyShine",
+        "LyShineExamples",
+        "MessagePopup",
+        "TextureAtlas",
+        "UiBasics"
+      ]
+    },
+    {
+      "count": 6,
+      "name": "world",
+      "gems": [
+        "FastNoise",
+        "GradientSignal",
+        "LandscapeCanvas",
+        "SurfaceData",
+        "Terrain",
+        "Vegetation"
+      ]
+    }
+  ],
+  "privateOutput": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atom-next-native-scope-rev1\\validation-preparation\\gem-dependency-map",
+  "inputDrift": [],
+  "skillReading": "complete prior reading reused; SHA256 unchanged",
+  "manifestCount": 124,
+  "sourceModified": false,
+  "helpers": 0,
+  "validation": {
+    "parserErrors": 0,
+    "file": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atom-next-native-scope-rev1\\validation-preparation\\gem-dependency-map\\validation.json",
+    "sourceGemCoverage": "110/110",
+    "result": "STATIC_MAP_CHECKS_PASSED; rendering not run",
+    "diagramCount": 18,
+    "sha256": "29AA7EF08C963E81F637CDD8ADB76AA67D6190C3A03F58EA625F367961DEA0D6",
+    "missingEndpoints": 0,
+    "duplicateNodeIds": 0,
+    "maxEdges": 51.0
+  }
+}

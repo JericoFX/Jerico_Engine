@@ -1,0 +1,139 @@
+{
+  "schema": "je-upstream-atombridge97-review-v2",
+  "state": "READONLY_HOLD",
+  "developmentSHA": "74006f539d581ea2ae8d21d4ef629d7a610a3e01",
+  "httpCalls": [
+    {
+      "url": "https://api.github.com/repos/o3de/o3de/git/ref/heads/development",
+      "utc": "2026-10-16T21:20:19.0707453+00:00",
+      "status": 200,
+      "headers": {
+        "Date": "Fri, 16 Oct 2026 21:17:44 GMT",
+        "ETag": "W/\"ec39971c5d763341548982bc06ec4c937678b4dc0378f1ece28a105a611a1bd1\"",
+        "X-RateLimit-Limit": "60",
+        "X-RateLimit-Remaining": "58",
+        "X-RateLimit-Reset": "1792189022",
+        "X-GitHub-Request-Id": "DF38:287FEF:D98A5D:1670714:6AD29478",
+        "Last-Modified": "Fri, 16 Oct 2026 19:07:23 GMT",
+        "Content-Type": "application/json; charset=utf-8"
+      },
+      "redirectsEnabled": false,
+      "actualRequestUri": "https://api.github.com/repos/o3de/o3de/git/ref/heads/development",
+      "bytes": 347,
+      "body": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atom-next-native-scope-rev1\\validation-preparation\\registry-retirement95-research\\upstream-bridge97\\http-attempt2\\development-ref.json",
+      "sha256": "B9AD691BC0FECA54A7E1E429F86D8FF19CDF2A44B9E48730432713190BCFBB78"
+    },
+    {
+      "url": "https://api.github.com/search/issues?q=repo%3Ao3de%2Fo3de%20is%3Apr%20%22m_activeViewportsList%22&per_page=30",
+      "utc": "2026-10-16T21:20:19.6194480+00:00",
+      "status": 200,
+      "headers": {
+        "Date": "Fri, 16 Oct 2026 21:17:44 GMT",
+        "X-RateLimit-Limit": "10",
+        "X-RateLimit-Remaining": "7",
+        "X-RateLimit-Reset": "1792185482",
+        "X-GitHub-Request-Id": "DF38:287FEF:D98A9C:1670785:6AD29478",
+        "Content-Type": "application/json; charset=utf-8"
+      },
+      "redirectsEnabled": false,
+      "actualRequestUri": "https://api.github.com/search/issues?q=repo%3Ao3de%2Fo3de%20is%3Apr%20%22m_activeViewportsList%22&per_page=30",
+      "bytes": 79,
+      "body": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atom-next-native-scope-rev1\\validation-preparation\\registry-retirement95-research\\upstream-bridge97\\http-attempt2\\pr-search-1.json",
+      "sha256": "C9938EDECB99D754B2D039AC9EEC320A94C769B6A6417921E2DCBEF9E2FE01A0"
+    },
+    {
+      "url": "https://api.github.com/search/issues?q=repo%3Ao3de%2Fo3de%20is%3Apr%20AuxGeom%20shutdown&per_page=30",
+      "utc": "2026-10-16T21:20:19.8892544+00:00",
+      "status": 200,
+      "headers": {
+        "Date": "Fri, 16 Oct 2026 21:17:45 GMT",
+        "X-RateLimit-Limit": "10",
+        "X-RateLimit-Remaining": "6",
+        "X-RateLimit-Reset": "1792185482",
+        "X-GitHub-Request-Id": "DF38:287FEF:D98ACC:16707EE:6AD29478",
+        "Content-Type": "application/json; charset=utf-8"
+      },
+      "redirectsEnabled": false,
+      "actualRequestUri": "https://api.github.com/search/issues?q=repo%3Ao3de%2Fo3de%20is%3Apr%20AuxGeom%20shutdown&per_page=30",
+      "bytes": 79,
+      "body": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atom-next-native-scope-rev1\\validation-preparation\\registry-retirement95-research\\upstream-bridge97\\http-attempt2\\pr-search-2.json",
+      "sha256": "C9938EDECB99D754B2D039AC9EEC320A94C769B6A6417921E2DCBEF9E2FE01A0"
+    },
+    {
+      "url": "https://api.github.com/repos/o3de/o3de/contents/Gems/AtomLyIntegration/AtomBridge/Code/Source/AtomBridgeSystemComponent.cpp?ref=74006f539d581ea2ae8d21d4ef629d7a610a3e01",
+      "utc": "2026-10-16T21:20:20.1651973+00:00",
+      "status": 200,
+      "headers": {
+        "Date": "Fri, 16 Oct 2026 21:17:45 GMT",
+        "ETag": "\"93f5931723cfa72171c8c31cf7629a184368f994\"",
+        "X-RateLimit-Limit": "60",
+        "X-RateLimit-Remaining": "57",
+        "X-RateLimit-Reset": "1792189022",
+        "X-GitHub-Request-Id": "DF38:287FEF:D98B08:167083E:6AD29479",
+        "Content-Type": "application/json; charset=utf-8",
+        "Last-Modified": "Wed, 14 Oct 2026 12:08:36 GMT"
+      },
+      "redirectsEnabled": false,
+      "actualRequestUri": "https://api.github.com/repos/o3de/o3de/contents/Gems/AtomLyIntegration/AtomBridge/Code/Source/AtomBridgeSystemComponent.cpp?ref=74006f539d581ea2ae8d21d4ef629d7a610a3e01",
+      "bytes": 12457,
+      "body": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atom-next-native-scope-rev1\\validation-preparation\\registry-retirement95-research\\upstream-bridge97\\http-attempt2\\source-contents.json",
+      "sha256": "8A51A351DD9AFE8619118DCC8CEFC7D64362BEA44B2C11BB8BB526B106F75413"
+    }
+  ],
+  "queries": [
+    {
+      "query": "repo:o3de/o3de is:pr \"m_activeViewportsList\"",
+      "successful": true,
+      "totalCount": 0,
+      "incompleteResults": false,
+      "items": null
+    },
+    {
+      "query": "repo:o3de/o3de is:pr AuxGeom shutdown",
+      "successful": true,
+      "totalCount": 0,
+      "incompleteResults": false,
+      "items": null
+    }
+  ],
+  "deactivate": {
+    "url": "https://github.com/o3de/o3de/blob/74006f539d581ea2ae8d21d4ef629d7a610a3e01/Gems/AtomLyIntegration/AtomBridge/Code/Source/AtomBridgeSystemComponent.cpp#L108-L130",
+    "gitBlobSHA": "93f5931723cfa72171c8c31cf7629a184368f994",
+    "startLine": 108,
+    "endLine": 130,
+    "lines": [
+      "        void AtomBridgeSystemComponent::Deactivate()",
+      "        { ",
+      "            m_dynamicDrawManager.reset();",
+      "            AZ::RPI::ViewportContextManagerNotificationsBus::Handler::BusDisconnect();",
+      "            RPI::Scene* scene = AZ::RPI::Scene::GetSceneForEntityContextId(m_entityContextId);",
+      "            // Check if scene is emptry since scene might be released already when running AtomSampleViewer ",
+      "            if (scene)",
+      "            {",
+      "                auto auxGeomFP = scene->GetFeatureProcessor<RPI::AuxGeomFeatureProcessorInterface>();",
+      "                if (auxGeomFP)",
+      "                {",
+      "                    auxGeomFP->ReleaseDrawQueueForView(m_view.get());",
+      "                }",
+      "            }",
+      "            // Don't want to leave this until our destructor because the AZ::Data::InstanceDatabase may not be valid at that point",
+      "            m_view = nullptr;",
+      "",
+      "            AZ::Render::Bootstrap::NotificationBus::Handler::BusDisconnect();",
+      "",
+      "            AzFramework::Components::DeprecatedComponentsRequestBus::Handler::BusDisconnect();",
+      "            AtomBridgeRequestBus::Handler::BusDisconnect();",
+      "            AzFramework::Render::RenderSystemRequestBus::Handler::BusDisconnect();",
+      "        }"
+    ],
+    "containsMapClear": false
+  },
+  "priorAttempt": {
+    "receipt": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atom-next-native-scope-rev1\\validation-preparation\\registry-retirement95-research\\upstream-bridge97\\receipt.json",
+    "sha256": "903DEAECAF881F0B4D56626A96D698DA036907C73666C628F5425CA4880AD8B6",
+    "failure": "Metadata collector queried Content header Last-Modified in response.Headers; response bodies retained. Same endpoints retried once with safe header enumeration; no new search terms."
+  },
+  "limit": "Only two exact keyword searches at recorded UTC. Zero hits is not global PR absence. No source/config/docs/Git/native changes or PR import.",
+  "helpers": 0,
+  "skills": "Complete CPP53017F/Game4578FA coverage reused, hashes verified."
+}

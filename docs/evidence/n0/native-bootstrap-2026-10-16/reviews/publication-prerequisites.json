@@ -1,0 +1,152 @@
+{
+  "schema": "je-bootstrap97-publication-dependencies-review-v1",
+  "state": "READONLY_DELIMITED_REVIEW_HOLD",
+  "baseCommit": "4e26562ae9dc05d4c013ffb9d959cc19b2435d68",
+  "scope": "86 ledger paths plus MaterialSystem.cpp and MaterialTests.cpp; no clean-tree build performed.",
+  "finding": "No concrete unpublished prerequisite outside the88 paths detected within reviewed new headers/factory calls/wiring and the two RPI additions.",
+  "historicalHypothesis": {
+    "receipt75": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\material-reload-publication-scope75-review-rev1\\receipt.json",
+    "base75": "a1f8436196bcceec493b0c274eb7524f7daecbad",
+    "currentResult": "Not carried forward: HEAD4e26562 already contains Factory image-view override and Material reload/SystemTick behavior; four corresponding files equal working tree after only CRLF normalization."
+  },
+  "headFour": [
+    {
+      "path": "Gems/Atom/RPI/Code/Tests/Common/RHI/Factory.h",
+      "headSHA256": "17F89F79BB9C3FACCB8C9ED7F5DD33C7D31AF76EBA2B1BD8F5B305ED2CC4B020",
+      "workingSHA256": "EDFC13FCA94D3506B7A0F7B7359987293FC56FFFB7032820EF9133241552001A",
+      "equalIgnoringCRLF": true,
+      "imageViewOverrideInHead": true,
+      "imageReloadTickInHead": false,
+      "compiledChangeIdInHead": false
+    },
+    {
+      "path": "Gems/Atom/RPI/Code/Tests/Common/RHI/Factory.cpp",
+      "headSHA256": "D0B90AA953956E45A523650D6D6831E9725F706175E19D6FB6E388107C63D9EC",
+      "workingSHA256": "DF3254D00E5260A601D94DC0A84A474C56AB6E750789CEA2865CE90DC5CC8069",
+      "equalIgnoringCRLF": true,
+      "imageViewOverrideInHead": true,
+      "imageReloadTickInHead": false,
+      "compiledChangeIdInHead": false
+    },
+    {
+      "path": "Gems/Atom/RPI/Code/Include/Atom/RPI.Public/Material/Material.h",
+      "headSHA256": "BA2312336DEF77866E28324590B096D24DFD6D1DEB1BF844DA26AFCF08E83DC2",
+      "workingSHA256": "44D49DE78DB1E63E40CB416850E41787679FED9982370FEDDE8B8DCFF50F246C",
+      "equalIgnoringCRLF": true,
+      "imageViewOverrideInHead": false,
+      "imageReloadTickInHead": true,
+      "compiledChangeIdInHead": true
+    },
+    {
+      "path": "Gems/Atom/RPI/Code/Source/RPI.Public/Material/Material.cpp",
+      "headSHA256": "6E70B3011D1A23BDB12DD71753AE90A16090D53A05E5415BB72D6FC9CA79D810",
+      "workingSHA256": "2F635FC221FB9E3EF98F1E03CC37A17813BDDB36784D54D0D0FFE356CC881EE8",
+      "equalIgnoringCRLF": true,
+      "imageViewOverrideInHead": false,
+      "imageReloadTickInHead": true,
+      "compiledChangeIdInHead": true
+    }
+  ],
+  "newTestPrerequisites": [
+    {
+      "path": "Gems/Atom/RPI/Code/Tests/Common/RHI/Stubs.h",
+      "exists": true,
+      "sha256": "E59498CC55EB764D933F7ED896679999B123F1ACBD5AA750DE9CEAA447D900D8",
+      "graphFresh": true
+    },
+    {
+      "path": "Gems/Atom/RPI/Code/Tests/Common/RPITestFixture.cpp",
+      "exists": true,
+      "sha256": "E01E7182469EB23EFB84FFE7DB7811FEF8AC1D54E3EE379CAF78A3C8B8C0BF31",
+      "graphFresh": true
+    },
+    {
+      "path": "Gems/Atom/RPI/Code/Tests/Common/RPITestFixture.h",
+      "exists": true,
+      "sha256": "0E9D50EBED1F4EEC09D38E92168857AD228F4C71C27265B9F9C2D4AEFD9E11CA",
+      "graphFresh": true
+    },
+    {
+      "path": "Gems/Atom/RPI/Code/Tests/Common/ShaderAssetTestUtils.h",
+      "exists": true,
+      "sha256": "B344B0729B086861E6C8DF03CD47C8698287E61B5089F4638EB9ED61D3E34BF9",
+      "graphFresh": true
+    },
+    {
+      "path": "Gems/Atom/RPI/Code/Tests/Common/ShaderAssetTestUtils.cpp",
+      "exists": true,
+      "sha256": "4AD09B473AE11E580590DB51BB205E086DDC6EF39DB052349575E212B7267350",
+      "graphFresh": true
+    },
+    {
+      "path": "Gems/Atom/RPI/Code/Include/Atom/RPI.Public/Buffer/Buffer.h",
+      "exists": true,
+      "sha256": "180636C3B6831D29901B87954BDDE1C0CC60BF93401E057B6BA847E0F6414704",
+      "graphFresh": true
+    },
+    {
+      "path": "Gems/Atom/RHI/Code/Include/Atom/RHI/DeviceShaderResourceGroupData.h",
+      "exists": true,
+      "sha256": "12B67E9496766ED51AC19764D1B3685C5B5F343ECAB66423E498113D2F9D0144",
+      "graphFresh": true
+    },
+    {
+      "path": "Code/Framework/AzCore/AzCore/Asset/AssetManagerBus.h",
+      "exists": true,
+      "sha256": "820E1ACA52A40A9B9E137B58975A16EFF40B014DC3E7C9820E3CACB9B306034E",
+      "graphFresh": true
+    },
+    {
+      "path": "Gems/Atom/RHI/Code/Include/Atom/RHI.Reflect/ShaderResourceGroupLayoutDescriptor.h",
+      "exists": true,
+      "sha256": "1102C48F4F741ECF9A75C3F9C73377356343A8D1D2E9EF8D6762289F16DFFCCD",
+      "graphFresh": true
+    }
+  ],
+  "newTest": "HEAD diff contains only three includes, ScopedSceneMaterialCatalog and SceneMaterialSrgSurvivesLastReleaseBeforeFirstCompileAndReregistration. Earlier bindless/publication tests are already HEAD, not added by this candidate.",
+  "materialSystem": "HEAD diff only sentinel capacity locals and three uses (vector size/byte size/createBuffer). No new include, external symbol or target.",
+  "bootstrap": "Prior publication94 ledgers compare all86 against same HEAD4e26562, record0 preexisting content hunks, W1 26+W2 55+hosts5. New three public bus headers/factory/module/PAL/target source wiring are inside that ledger; W2 added link references point to existing JE::RenderIntegration/Public targets, not a new unowned Gem target.",
+  "livePins": [
+    {
+      "path": "Engine/Render/Integration/Source/AtomBridgeSystemComponent.cpp",
+      "sha256": "616388C67FAFC0139AF870B141D83464618155DFFE27CF8A10B34BAFE3933BBA",
+      "graphFresh": true
+    },
+    {
+      "path": "Gems/Atom/RPI/Code/Tests/Material/MaterialTests.cpp",
+      "sha256": "0DF033DCBFD93B35D3190CF06C0A015C9442940BF170F7C13A27FD3787AADFAA",
+      "graphFresh": true
+    },
+    {
+      "path": "Gems/Atom/RPI/Code/Source/RPI.Public/Material/MaterialSystem.cpp",
+      "sha256": "5F9C69084561DC9F78A81472E7EFE05126BD452A38F1844A475CA71BFEC317E1",
+      "graphFresh": true
+    }
+  ],
+  "evidence": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atom-next-native-scope-rev1\\implementation\\parent-integration-review\\parent-publication94-code-ownership-review.json",
+      "sha256": "7B448010BE6C4C3B071FC9BA6103AEF4705FBD5F58390ECE1C3B1DAE1DAC2243"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atom-next-native-scope-rev1\\implementation\\writer1-source\\publication94\\receipt.json",
+      "sha256": "D8B9E5D238442E6BF88AEB744B542A2B7A77A012143E5F14BB959A225B71CCDA"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atom-next-native-scope-rev1\\implementation\\writer2-wiring\\publication94\\receipt.json",
+      "sha256": "E9053571E709D65600F623A7A0F81572F98A4C58D76FECF87FAB4EE793406319"
+    }
+  ],
+  "graft": "Reused current refreshed97 fingerprints/cards and prior focused consumer packets. All newly inspected semantic owners already covered; historical Git HEAD blobs are outside current graph, so parent explicitly authorized Git read-only. No new Graft process/load/server/refresh.",
+  "limits": [
+    "Not a clean-tree configure/build/link or runtime proof; native validation so far used preserved WIP.",
+    "No full transitive C++ callgraph/dependency audit repeated. Conclusion limited to new owned symbols/includes/target references and nine named test API paths, excluding absent helper cpp.",
+    "Resources/cooked cache/install side effects and unowned dirty work are not promoted by this review.",
+    "Retain standalone activation, SDK, runtime and applicable acceptance gates; no publication performed."
+  ],
+  "skills": "Full unchanged CPP53017F/Game4578FA coverage reused and hashes reverified.",
+  "helpers": 0,
+  "gitMutations": false,
+  "sourceEdits": false,
+  "native": "NOT_RUN"
+}

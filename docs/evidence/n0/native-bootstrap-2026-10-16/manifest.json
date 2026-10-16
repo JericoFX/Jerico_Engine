@@ -1,0 +1,474 @@
+{
+  "schema": "je-bootstrap97-publication-evidence-draft-v1",
+  "state": "VERIFIED_WINDOWS_PROFILE_VULKAN_BOOTSTRAP_SCOPE",
+  "utc": "2026-10-16T21:31:52.5058388+00:00",
+  "files": [
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-buffer96-green-attempt1\\focal.xml",
+      "destination": "cpu96/focal.xml",
+      "bytes": 643,
+      "sha256": "7A8AC3E4E534FCCD61A331D4AA87AE8371888AE1744EBAF3B004CFCB904DC1B6",
+      "byteexact": true
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-buffer96-green-attempt1\\full-rpi.xml",
+      "destination": "cpu96/full-rpi.xml",
+      "bytes": 195628,
+      "sha256": "97E12DD2C572E9CE79A98C90886160AD7DD0D82F3A205971D4881254DE6AB04E",
+      "byteexact": true
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\native-bootstrap97-factory8-attempt1\\JE_RenderIntegration.Tests.xml",
+      "destination": "factory97/JE_RenderIntegration.Tests.xml",
+      "bytes": 2206,
+      "sha256": "381B2B8CC7520A8DA2B6F224E3174F8B6F26605A188A0E42719E76E309632720",
+      "byteexact": true
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\native-bootstrap97-factory8-attempt1\\JE_EditorRenderIntegration.Tests.xml",
+      "destination": "factory97/JE_EditorRenderIntegration.Tests.xml",
+      "bytes": 989,
+      "sha256": "817DDC1B6D896C7CD08F9B76464DDB3119A2E6946D86787ACF798DFDF1E204BA",
+      "byteexact": true
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\native-bootstrap97-factory8-attempt1\\ctest.stdout.log",
+      "destination": "factory97/ctest.stdout.log",
+      "bytes": 584,
+      "sha256": "7120A22B809F7F4EFF27ED44AEEA9974A9FCAC4F9672859C6DE56CB343F3AEB3",
+      "byteexact": true
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\native-bootstrap97-launcher-vulkan-attempt1\\Game-final.log",
+      "destination": "launcher97/Game-final.log",
+      "bytes": 4976,
+      "sha256": "1AF943583AC3A27794314D2016DDBE91E1D0D187E3DCE444A875E0638CB77548",
+      "byteexact": true
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\native-bootstrap97-editor-vulkan-attempt1\\Editor-final.log",
+      "destination": "editor97/Editor-final.log",
+      "bytes": 6765,
+      "sha256": "45EDD3124086393C45BE346501D66655716A2CE81FCDE35E2005DD2098C6613A",
+      "byteexact": true
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\native-bootstrap96-launcher-vulkan-attempt2\\crash\\cdb-review-luna-attempt1\\live-debugger.log",
+      "destination": "red-shutdown96/live-debugger.log",
+      "bytes": 39339,
+      "sha256": "66940A556EFC2C50951BF5C6A2372F363F69305CE210BFBB1C0165DE1AE8B19C",
+      "byteexact": true
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atom-next-native-scope-rev1\\implementation\\parent-integration-review\\parent-hosts97-factory8-acceptance.json",
+      "destination": "reviews/parent-hosts97-factory8-acceptance.json",
+      "bytes": 1850,
+      "sha256": "344BECB271F2B83B7EDB5A706BAB32F0EBCD1259D4724683E0899E6FDBC31939",
+      "byteexact": true
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atom-next-native-scope-rev1\\implementation\\parent-integration-review\\parent-launcher97-shutdown-acceptance.json",
+      "destination": "reviews/parent-launcher97-shutdown-acceptance.json",
+      "bytes": 1675,
+      "sha256": "A3B4EA37C11E015B2A80DF76DEE547E7494EBB8C2419324AD85CEFF1CD577317",
+      "byteexact": true
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atom-next-native-scope-rev1\\implementation\\parent-integration-review\\parent-gui97-postflight.json",
+      "destination": "reviews/parent-gui97-postflight.json",
+      "bytes": 1066,
+      "sha256": "CA2D691BF6DCD37DF227EB35B5F245BFC19922A4165DF87A1AAA8D3E101415E4",
+      "byteexact": true
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atom-next-native-scope-rev1\\implementation\\parent-integration-review\\parent-material95-red-review.json",
+      "destination": "reviews/parent-material95-red-review.json",
+      "bytes": 936,
+      "sha256": "6B233256BFDF6B7D73220B2111741B69A081E878F5DBAE602B7F10C88438F9AB",
+      "byteexact": true
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atom-next-native-scope-rev1\\implementation\\parent-integration-review\\parent-material95-cause-review.json",
+      "destination": "reviews/parent-material95-cause-review.json",
+      "bytes": 3249,
+      "sha256": "8B6169FE6F17172E739D30509CB4B8F94B5E59D7FE2FA8D6590F0EE5E3510F56",
+      "byteexact": true
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atom-next-native-scope-rev1\\implementation\\parent-integration-review\\parent-material96-unit-acceptance.json",
+      "destination": "reviews/parent-material96-unit-acceptance.json",
+      "bytes": 2442,
+      "sha256": "9EC88ACB81BFA73DAEEC17D29E602C7C57A27CFF91B107F1ACA01FB43D54C9D2",
+      "byteexact": true
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-buffer95-red-attempt1\\focal-test.result.json",
+      "destination": "red-startup95/focal-test.result.json",
+      "bytes": 233,
+      "sha256": "A09B5394EBADDE452351DC05521D2D771688A57CFA07D58D4BC1AB35BEA38E08",
+      "byteexact": true
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-buffer95-red-attempt1\\focal-test.stdout.log",
+      "destination": "red-startup95/focal-test.stdout.log",
+      "bytes": 1184,
+      "sha256": "6A7B6F7260D5062841E5B33C252B8A0934D060BF2C9E85972918B2CF1B81756C",
+      "byteexact": true
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\native-bootstrap97-launcher-vulkan-attempt1\\native-result.json",
+      "destination": "launcher97/native-result.json",
+      "bytes": 4041,
+      "sha256": "36443D88F6C380A1FEAFADC8F2B7B429F37987323895A582CAC96E8120D1A8BF",
+      "byteexact": true
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\native-bootstrap97-launcher-vulkan-attempt1\\native-exit.txt",
+      "destination": "launcher97/native-exit.txt",
+      "bytes": 1,
+      "sha256": "5FECEB66FFC86F38D952786C6D696C79C2DBC239DD4E91B46729D73A27FB57E9",
+      "byteexact": true
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\native-bootstrap97-launcher-vulkan-attempt1\\parent-graceful-stop-request.json",
+      "destination": "launcher97/parent-graceful-stop-request.json",
+      "bytes": 550,
+      "sha256": "77D98E18D17FB991631E38B76D0B49FE2489B0AEBA372D7962363E35642EE3C8",
+      "byteexact": true
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\native-bootstrap97-editor-vulkan-attempt1\\native-result.json",
+      "destination": "editor97/native-result.json",
+      "bytes": 12833,
+      "sha256": "C8CE419F014006C35CFD07C232BAEE4D1F9568A4BBED503EBC5E91AA657CA5CD",
+      "byteexact": true
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\native-bootstrap97-editor-vulkan-attempt1\\native-exit.txt",
+      "destination": "editor97/native-exit.txt",
+      "bytes": 1,
+      "sha256": "5FECEB66FFC86F38D952786C6D696C79C2DBC239DD4E91B46729D73A27FB57E9",
+      "byteexact": true
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atom-next-native-scope-rev1\\validation-preparation\\parent-approved-r2\\execution-bootstrap96-attempt1\\result.json",
+      "destination": "sdk96/result.json",
+      "bytes": 1808,
+      "sha256": "B5F513EEF1DE12D01985CCA01F2976D263AE98DEDB8B35EE21CFFFD7AD3992DE",
+      "byteexact": true
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atom-next-native-scope-rev1\\validation-preparation\\parent-approved-r2\\execution-bootstrap96-attempt1\\install-verification.json",
+      "destination": "sdk96/install-verification.json",
+      "bytes": 423,
+      "sha256": "2739159135895CC8CA5373C9B380F8E3443132D14968E864C436C32FD531D0E1",
+      "byteexact": true
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atom-next-native-scope-rev1\\validation-preparation\\parent-approved-r2\\execution-bootstrap96-attempt1\\configure-verification.json",
+      "destination": "sdk96/configure-verification.json",
+      "bytes": 1744,
+      "sha256": "8D07FA99E50FBE7E6F2B822BBE23E6E30D66C5D00FC14F5C3B031C4372F532E8",
+      "byteexact": true
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atom-next-native-scope-rev1\\validation-preparation\\parent-approved-r2\\execution-bootstrap96-attempt1\\runtime-deploy-review.json",
+      "destination": "sdk96/runtime-deploy-review.json",
+      "bytes": 15987,
+      "sha256": "A531579020C1001E7535D0DDEF5304BEFF9BDF8DA2BBCF94391B804B16609A5B",
+      "byteexact": true
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atom-next-native-scope-rev1\\validation-preparation\\parent-approved-r2\\execution-bootstrap96-attempt1\\loader.stdout.log",
+      "destination": "sdk96/loader.stdout.log",
+      "bytes": 515,
+      "sha256": "6CDF5F87875B542EF2AB0EFC11C8C507F4E50B64B6ACDCC3862261C39EB1F6BE",
+      "byteexact": true
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atom-next-native-scope-rev1\\validation-preparation\\parent-approved-r2\\execution-bootstrap96-attempt1\\configure.stderr.log",
+      "destination": "sdk96/configure.stderr.log",
+      "bytes": 2741,
+      "sha256": "C31957D2F47E5165E6C8381975E7951533354C114E0CBD2FAD302E556D2DF6C0",
+      "byteexact": true
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atom-next-native-scope-rev1\\validation-preparation\\parent-approved-r2\\execution-bootstrap96-attempt1\\install.result.json",
+      "destination": "sdk96/install.result.json",
+      "bytes": 957,
+      "sha256": "50E3A10C69FFECFCD1E7D6AFE3A3CF19FC983E6FAE5D2862F35A00E3ECBA0C10",
+      "byteexact": true
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atom-next-native-scope-rev1\\validation-preparation\\parent-approved-r2\\execution-bootstrap96-attempt1\\configure.result.json",
+      "destination": "sdk96/configure.result.json",
+      "bytes": 964,
+      "sha256": "2896DF81C820B888D21057407F10C43BE2D105CA0B6D30C49AA93DE19E2F73FB",
+      "byteexact": true
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atom-next-native-scope-rev1\\validation-preparation\\parent-approved-r2\\execution-bootstrap96-attempt1\\build-consumer.result.json",
+      "destination": "sdk96/build-consumer.result.json",
+      "bytes": 971,
+      "sha256": "89B9E3BACF7EAE325EE5EB7B7B38501F485E6D330BB91CC1D08D88926D29A4E8",
+      "byteexact": true
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atom-next-native-scope-rev1\\validation-preparation\\parent-approved-r2\\execution-bootstrap96-attempt1\\pe-imports.result.json",
+      "destination": "sdk96/pe-imports.result.json",
+      "bytes": 962,
+      "sha256": "30EEEAE54737A7980357BF37E0E2B888B2B363DF2BFF6B50FA5D84049B7D4121",
+      "byteexact": true
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atom-next-native-scope-rev1\\validation-preparation\\parent-approved-r2\\execution-bootstrap96-attempt1\\loader.result.json",
+      "destination": "sdk96/loader.result.json",
+      "bytes": 952,
+      "sha256": "623EE4909513DA6A62BBE430F0C7B6B066E7B51AEC6EC96988A8077A8E851D6E",
+      "byteexact": true
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atom-next-native-scope-rev1\\implementation\\parent-integration-review\\parent-sdk96-acceptance.json",
+      "destination": "reviews/parent-sdk96-acceptance.json",
+      "bytes": 3591,
+      "sha256": "05ECA819F39C6F9B98322E800405AA1BFF2594F8543B91A1C6D37F3376E48543",
+      "byteexact": true
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atom-next-native-scope-rev1\\implementation\\parent-integration-review\\parent-publication97-code-ownership-review.json",
+      "destination": "reviews/code-ownership.json",
+      "bytes": 19895,
+      "sha256": "BA3A5B1CA109D6401F0F756AFE1F341726FB7B15BEC96D3FE7870774ADE3228B",
+      "byteexact": true
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atom-next-native-scope-rev1\\validation-preparation\\registry-retirement95-research\\research97publication-dependencies\\receipt.json",
+      "destination": "reviews/publication-prerequisites.json",
+      "bytes": 8202,
+      "sha256": "1F39ED78B648736F7A5DFB1AA59C3D6BDC742A24B3A72412DE93622CCC121DB7",
+      "byteexact": true
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atom-next-native-scope-rev1\\validation-preparation\\registry-retirement95-research\\upstream-bridge97\\http-attempt2\\receipt.json",
+      "destination": "upstream/bridge-review.json",
+      "bytes": 7899,
+      "sha256": "6F2C7DC16D5E45443AA687947957D5C2C0010242EACDA2363D6466A65CA41FCD",
+      "byteexact": true
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atom-next-native-scope-rev1\\validation-preparation\\bootstrap95-material-startup-upstream\\upstream-review.md",
+      "destination": "upstream/material-review.md",
+      "bytes": 6717,
+      "sha256": "BD8036990B6179499CDB5B3C2691DFB0C2D1E128FB70694FD1E152ABA7B64D25",
+      "byteexact": true
+    }
+  ],
+  "fileCount": 37,
+  "payloadBytes": 355519,
+  "readme": {
+    "sha256": "FDF9763ED6AF5ACA66431A87FC5E2C8D8349801E398F1F0E5009046E67DCBAF7",
+    "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atom-next-native-scope-rev1\\implementation\\parent-integration-review\\publication97-draft\\README.md",
+    "destination": "README.md",
+    "bytes": 5003
+  },
+  "xmlSummary": [
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-buffer96-green-attempt1\\focal.xml",
+      "destination": "cpu96/focal.xml",
+      "tests": 1,
+      "completed": 1,
+      "failures": 0,
+      "errors": 0,
+      "disabled": "0",
+      "skipped": 0
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-buffer96-green-attempt1\\full-rpi.xml",
+      "destination": "cpu96/full-rpi.xml",
+      "tests": 576,
+      "completed": 576,
+      "failures": 0,
+      "errors": 0,
+      "disabled": "0",
+      "skipped": 0
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\native-bootstrap97-factory8-attempt1\\JE_RenderIntegration.Tests.xml",
+      "destination": "factory97/JE_RenderIntegration.Tests.xml",
+      "tests": 6,
+      "completed": 6,
+      "failures": 0,
+      "errors": 0,
+      "disabled": "0",
+      "skipped": 0
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\native-bootstrap97-factory8-attempt1\\JE_EditorRenderIntegration.Tests.xml",
+      "destination": "factory97/JE_EditorRenderIntegration.Tests.xml",
+      "tests": 2,
+      "completed": 2,
+      "failures": 0,
+      "errors": 0,
+      "disabled": "0",
+      "skipped": 0
+    }
+  ],
+  "externalVisualReferences": [
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\native-bootstrap97-launcher-vulkan-attempt1\\visual\\01-room-before-shutdown-0.jpg",
+      "bytes": 85506,
+      "sha256": "367C4E6D1A1EEC24E9832ACB236FD9EB62615BA99DC49DD54543268D14D76295",
+      "destination": null,
+      "copied": false,
+      "kind": "original-jpeg-metadata-only"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\native-bootstrap97-launcher-vulkan-attempt1\\visual\\metadata.json",
+      "bytes": 627,
+      "sha256": "534283830A5B79043A23EA9313166C33EB031FA05854975059EB00E2568F4F27",
+      "destination": null,
+      "copied": false,
+      "kind": "original-capture-metadata-reference-only"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\native-bootstrap97-editor-vulkan-attempt1\\visual\\01-room-vulkan-0.jpg",
+      "bytes": 168179,
+      "sha256": "89EB0F8BD6BB1DA94C7E908487BEE3FD8C32004FEE716DA8BC7B461F6DDA8C78",
+      "destination": null,
+      "copied": false,
+      "kind": "original-jpeg-metadata-only"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\native-bootstrap97-editor-vulkan-attempt1\\visual\\01-room-vulkan-1.jpg",
+      "bytes": 46996,
+      "sha256": "9FB4A8652735A3C73FA2BB3CBDAE89375237D773272AE4462752F56F3F02C389",
+      "destination": null,
+      "copied": false,
+      "kind": "original-jpeg-metadata-only"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\native-bootstrap97-editor-vulkan-attempt1\\visual\\01-room-vulkan.json",
+      "bytes": 891,
+      "sha256": "74AAA8DA080279224E1F515AE5E539BEB2749CD939C1B1AA17CC60863A312373",
+      "destination": null,
+      "copied": false,
+      "kind": "original-capture-metadata-reference-only"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\native-bootstrap97-editor-vulkan-attempt1\\visual\\02-whitebox-inspector-uv-0.jpg",
+      "bytes": 221414,
+      "sha256": "28DF0F1CC1A7BE4C22130768B719CC28784F9CE71F56CD9493F23685BAB92980",
+      "destination": null,
+      "copied": false,
+      "kind": "original-jpeg-metadata-only"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\native-bootstrap97-editor-vulkan-attempt1\\visual\\02-whitebox-inspector-uv-1.jpg",
+      "bytes": 48377,
+      "sha256": "2380455DC779E6392C07B1372E323001C0A6D486869B47AC0EB99C49E52150FD",
+      "destination": null,
+      "copied": false,
+      "kind": "original-jpeg-metadata-only"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\native-bootstrap97-editor-vulkan-attempt1\\visual\\02-whitebox-inspector-uv.json",
+      "bytes": 911,
+      "sha256": "4A6248D77A49E55A2323B2AD1F0E5AF7D005DB604421D018BB386BE966487B8F",
+      "destination": null,
+      "copied": false,
+      "kind": "original-capture-metadata-reference-only"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\native-bootstrap97-editor-vulkan-attempt1\\visual\\03-material-workspace-preview-0.jpg",
+      "bytes": 202902,
+      "sha256": "97C1B474CF31FF34DF7DF820CB775C900124BAF45606104022FDBB97B124407A",
+      "destination": null,
+      "copied": false,
+      "kind": "original-jpeg-metadata-only"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\native-bootstrap97-editor-vulkan-attempt1\\visual\\03-material-workspace-preview-1.jpg",
+      "bytes": 71221,
+      "sha256": "E3357F8AB9BB5D680B139C551A5A94777FB8A5E680502FE2EF7567306D17FF1A",
+      "destination": null,
+      "copied": false,
+      "kind": "original-jpeg-metadata-only"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\native-bootstrap97-editor-vulkan-attempt1\\visual\\03-material-workspace-preview-2.jpg",
+      "bytes": 202902,
+      "sha256": "97C1B474CF31FF34DF7DF820CB775C900124BAF45606104022FDBB97B124407A",
+      "destination": null,
+      "copied": false,
+      "kind": "original-jpeg-metadata-only"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\native-bootstrap97-editor-vulkan-attempt1\\visual\\03-material-workspace-preview.json",
+      "bytes": 1242,
+      "sha256": "A672DBE84F0625E737F5FBB777127E5617EC0106AB7B9CC8BF88507865E8B100",
+      "destination": null,
+      "copied": false,
+      "kind": "original-capture-metadata-reference-only"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\native-bootstrap97-editor-vulkan-attempt1\\visual\\04-editor-after-workspace-close-0.jpg",
+      "bytes": 166279,
+      "sha256": "6E90469A78DFDB57A9E0841CD5703F8668BC223E0CD66769B93FD02A99B973C8",
+      "destination": null,
+      "copied": false,
+      "kind": "original-jpeg-metadata-only"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\native-bootstrap97-editor-vulkan-attempt1\\visual\\04-editor-after-workspace-close-1.jpg",
+      "bytes": 47010,
+      "sha256": "A7831E6BA7B09789B01736F27423E3F56E5A8BA6C013DBB90619A66CC0D9FB88",
+      "destination": null,
+      "copied": false,
+      "kind": "original-jpeg-metadata-only"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\native-bootstrap97-editor-vulkan-attempt1\\visual\\04-editor-after-workspace-close.json",
+      "bytes": 925,
+      "sha256": "F8D9B8B6F5FA4A1CE75E87C7708D5858A28A9C1540969D8ED7A9CD24B0FAB4E9",
+      "destination": null,
+      "copied": false,
+      "kind": "original-capture-metadata-reference-only"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\native-bootstrap97-editor-vulkan-attempt1\\visual\\editor-close-action.json",
+      "bytes": 484,
+      "sha256": "3159AE4787AE490E557C7781BCDCECDBDA63A9360A3660D5A3D8419C04FDCCAE",
+      "destination": null,
+      "copied": false,
+      "kind": "original-capture-metadata-reference-only"
+    }
+  ],
+  "pending": [
+    "N0 global; AP338/template warnings; VR/OpenXR/Linux/Shipping; clean-HEAD replay and performance/Beauty gates remain open."
+  ],
+  "limits": [
+    "No SDK outputs sampled while native lease active",
+    "No images/dumps/binaries/freeze multiMB/full exports copied",
+    "No clean-HEAD replay or whole-Gem acceptance; Profile Windows Vulkan only; AP338/global dependency limits retained"
+  ],
+  "verification": {
+    "helpersCreated": 0,
+    "allCopiedPayloadsReopenedAndSHA256Compared": true,
+    "nativeExecution": "NOT_RUN",
+    "mandatoryCppGameCompleteCoverageReused": true
+  },
+  "externalPatchReferences": [
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atom-next-native-scope-rev1\\validation-preparation\\atom-bridge-shutdown97-candidate\\source.patch",
+      "bytes": 611,
+      "sha256": "0D27CC804429A7A81922E2646F3851E5EE6D23FE6FC39A248B0837532675538E",
+      "note": "Original byteexact patch retained privately; productive changes are present in the commit diff. Redundant copied patch context blank-lines were the only diff-check whitespace violations."
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atom-next-native-scope-rev1\\validation-preparation\\material-empty-buffer-source-candidate95\\source.patch",
+      "bytes": 1806,
+      "sha256": "C1955A4CAC82EA8098A5906835D7B0937DEB86551F7F5D5F28412CFE1287C071",
+      "note": "Original byteexact patch retained privately; productive changes are present in the commit diff. Redundant copied patch context blank-lines were the only diff-check whitespace violations."
+    }
+  ]
+}

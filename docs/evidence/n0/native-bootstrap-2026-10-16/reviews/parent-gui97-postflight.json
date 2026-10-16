@@ -1,0 +1,34 @@
+{
+  "utc": "2026-10-16T21:09:47.7431091+00:00",
+  "owner": "/root",
+  "state": "GUI97_POSTFLIGHT",
+  "sourceChecks": 14064,
+  "protectedChecks": 86,
+  "absenceChecks": 56,
+  "mismatches": [],
+  "remainingNativeProcesses": [],
+  "editorNativeExit": 0,
+  "editorRamGuard": false,
+  "editorPeakRamPct": 60.72,
+  "editorWorkingSetPeakBytes": 951177216.0,
+  "editorResultSHA256": "C8CE419F014006C35CFD07C232BAEE4D1F9568A4BBED503EBC5E91AA657CA5CD",
+  "liveEditorProofSHA256": "0911FF0EFA3C6EDAA8F1EA872BE2E00C92295106669DAD17A249DDCFC18C5935",
+  "logsUpdated": [
+    {
+      "Name": "AP_GUI.log",
+      "Length": 609837,
+      "lastWriteUtc": "2026-10-16T21:05:08.6181731Z"
+    },
+    {
+      "Name": "Editor.log",
+      "Length": 6765,
+      "lastWriteUtc": "2026-10-16T21:08:44.3447184Z"
+    },
+    {
+      "Name": "PakMissingAssets.log",
+      "Length": 11336,
+      "lastWriteUtc": "2026-10-16T21:04:58.0921011Z"
+    }
+  ],
+  "limits": "Current protected WIP, no clean-HEAD build/VR/Linux/Shipping/Beauty or measured pacing claim."
+}

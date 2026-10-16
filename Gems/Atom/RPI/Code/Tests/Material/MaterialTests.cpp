@@ -7,6 +7,7 @@
  */
 
 #include <AzTest/AzTest.h>
+#include <AzCore/Asset/AssetManagerBus.h>
 #include <AzCore/Component/TickBus.h>
 #include <AzCore/std/smart_ptr/unique_ptr.h>
 #include <Common/RHI/Factory.h>
@@ -16,6 +17,7 @@
 #include <Common/ShaderAssetTestUtils.h>
 #include <Material/MaterialAssetTestUtils.h>
 
+#include <Atom/RPI.Public/Buffer/Buffer.h>
 #include <Atom/RPI.Public/ColorManagement/TransformColor.h>
 #include <Atom/RPI.Public/Material/Material.h>
 #include <Atom/RPI.Public/Image/ImageSystemInterface.h>
@@ -27,6 +29,8 @@
 #include <Atom/RPI.Reflect/Image/StreamingImageAssetCreator.h>
 #include <Atom/RPI.Edit/Material/MaterialFunctorSourceData.h>
 
+#include <cstring>
+
 namespace UnitTest
 {
     using namespace AZ;
@@ -34,6 +38,37 @@ namespace UnitTest
 
     namespace
     {
+        // Resolve only the in-memory shader used by the real MaterialSystem path.
+        class ScopedSceneMaterialCatalog final
+            : public Data::AssetCatalogRequestBus::Handler
+        {
+        public:
+            explicit ScopedSceneMaterialCatalog(const Data::AssetId& shaderAssetId)
+                : m_shaderAssetId(shaderAssetId)
+            {
+                BusConnect();
+            }
+
+            ~ScopedSceneMaterialCatalog() override
+            {
+                BusDisconnect();
+            }
+
+            Data::AssetId GetAssetIdByPath(
+                const char* path, const Data::AssetType& typeToRegister, bool autoRegisterIfNotFound) override
+            {
+                if (!autoRegisterIfNotFound && AZStd::string_view(path) == "shaders/scenematerialsrg.azshader" &&
+                    (typeToRegister.IsNull() || typeToRegister == azrtti_typeid<ShaderAsset>()))
+                {
+                    return m_shaderAssetId;
+                }
+                return {};
+            }
+
+        private:
+            const Data::AssetId m_shaderAssetId;
+        };
+
         class ReloadBindlessImageView final
             : public StubRHI::ImageView
         {
@@ -619,6 +654,105 @@ namespace UnitTest
     TEST_F(MaterialTests, DestroyMaterialWithImageReloadPendingDisconnectsSystemTick)
     {
         ASSERT_NO_FATAL_FAILURE(CheckBindlessImageReload(BindlessReloadScenario::DestroyBeforeTick));
+    }
+
+    TEST_F(MaterialTests, SceneMaterialSrgSurvivesLastReleaseBeforeFirstCompileAndReregistration)
+    {
+        auto layout = RHI::ShaderResourceGroupLayout::Create();
+        layout->SetName(Name("SceneMaterialSrg"));
+        layout->SetUniqueId(Uuid::CreateRandom().ToString<AZStd::string>());
+        layout->SetBindingSlot(SrgBindingSlot::Material);
+        layout->AddShaderInput(RHI::ShaderInputConstantDescriptor{ Name("m_nullTextureIndex"), 0, 4, 0, 0 });
+        layout->AddShaderInput(RHI::ShaderInputSamplerDescriptor{ Name("m_samplers"), 8, 1, 0 });
+        layout->AddShaderInput(RHI::ShaderInputBufferDescriptor{
+            Name("m_materialTypeBufferIndices"), RHI::ShaderInputBufferAccess::Read,
+            RHI::ShaderInputBufferType::Typed, 1, 4, 2, 0 });
+        ASSERT_TRUE(layout->Finalize());
+        auto shaderAsset = CreateTestShaderAsset(Uuid::CreateRandom(), layout);
+        ASSERT_TRUE(shaderAsset.IsReady());
+        ScopedSceneMaterialCatalog catalog(shaderAsset.GetId());
+
+        MaterialShaderParameterLayout parameters;
+        parameters.AddMaterialParameter<uint32_t>("m_materialType", true);
+        parameters.AddMaterialParameter<uint32_t>("m_materialInstance", true);
+        parameters.AddMaterialParameter<float>("m_float");
+        parameters.FinalizeLayout();
+        MaterialTypeAssetCreator typeCreator;
+        Data::Asset<MaterialTypeAsset> typeAsset;
+        typeCreator.Begin(Uuid::CreateRandom());
+        typeCreator.AddShader(shaderAsset);
+        typeCreator.SetMaterialShaderParameterLayout(AZStd::move(parameters));
+        AddMaterialPropertyForSrg(typeCreator, Name("MyFloat"), MaterialPropertyDataType::Float, Name("m_float"));
+        typeCreator.UpdateShaderParameterConnections();
+        typeCreator.SetPropertyValue(Name("MyFloat"), 0.5f);
+        ASSERT_TRUE(typeCreator.End(typeAsset));
+        MaterialAssetCreator materialCreator;
+        Data::Asset<MaterialAsset> materialAsset;
+        materialCreator.Begin(Uuid::CreateRandom(), typeAsset);
+        ASSERT_TRUE(materialCreator.End(materialAsset));
+
+        auto material = Material::FindOrCreate(materialAsset);
+        ASSERT_NE(material.get(), nullptr);
+        auto sceneSrg = material->GetShaderResourceGroup();
+        ASSERT_NE(sceneSrg.get(), nullptr);
+        ASSERT_EQ(sceneSrg->GetLayout()->GetName(), Name("SceneMaterialSrg"));
+        const auto bufferIndex = sceneSrg->FindShaderInputBufferIndex(Name("m_materialTypeBufferIndices"));
+        ASSERT_TRUE(bufferIndex.IsValid());
+        auto instanceHandler = MaterialInstanceHandlerInterface::Get();
+        ASSERT_NE(instanceHandler, nullptr);
+
+        auto checkEmptyBinding = [&]()
+        {
+            const auto buffer = sceneSrg->GetBuffer(bufferIndex);
+            ASSERT_NE(buffer.get(), nullptr);
+            ASSERT_GE(buffer->GetBufferSize(), 4u);
+            auto deviceBuffer = buffer->GetRHIBuffer()->GetDeviceBuffer(0);
+            ASSERT_NE(deviceBuffer.get(), nullptr);
+            const auto& uploadedBytes = static_cast<const StubRHI::Buffer*>(deviceBuffer.get())->GetData();
+            ASSERT_GE(uploadedBytes.size(), 4u);
+            int32_t firstIndex = 0;
+            std::memcpy(&firstIndex, uploadedBytes.data(), sizeof(firstIndex));
+            EXPECT_EQ(firstIndex, -1);
+            const auto deviceSrg = sceneSrg->GetRHIShaderResourceGroup()->GetDeviceShaderResourceGroup(0);
+            ASSERT_NE(deviceSrg.get(), nullptr);
+            const auto view = deviceSrg->GetData().GetBufferView(bufferIndex, 0);
+            ASSERT_NE(view.get(), nullptr);
+            EXPECT_EQ(&view->GetBuffer(), deviceBuffer.get());
+        };
+
+        // No MaterialSystem Compile has allocated the index buffer before this last release.
+        ASSERT_EQ(sceneSrg->GetBuffer(bufferIndex).get(), nullptr);
+        material = nullptr;
+        instanceHandler->Compile();
+        ProcessQueuedSrgCompilations(shaderAsset, layout->GetName());
+        ASSERT_NO_FATAL_FAILURE(checkEmptyBinding());
+
+        for (float value : { 1.5f, 2.5f })
+        {
+            material = Material::FindOrCreate(materialAsset);
+            ASSERT_NE(material.get(), nullptr);
+            EXPECT_EQ(material->GetMaterialTypeId(), 0);
+            EXPECT_EQ(material->GetMaterialInstanceId(), 0);
+            EXPECT_EQ(material->GetShaderResourceGroup(), sceneSrg);
+            ASSERT_TRUE(material->SetPropertyValue<float>(material->FindPropertyIndex(Name("MyFloat")), value));
+            ASSERT_TRUE(material->Compile());
+            instanceHandler->Compile();
+            ProcessQueuedSrgCompilations(shaderAsset, layout->GetName());
+            const auto parameterIndex = typeAsset->GetMaterialShaderParameterLayout().GetParameterIndex("m_float");
+            ASSERT_TRUE(parameterIndex.IsValid());
+            ASSERT_NE(material->GetMaterialShaderParameter(), nullptr);
+            EXPECT_EQ(material->GetMaterialShaderParameter()->GetShaderParameterData<float>(parameterIndex), value);
+            const auto buffer = sceneSrg->GetBuffer(bufferIndex);
+            ASSERT_NE(buffer.get(), nullptr);
+            EXPECT_GE(buffer->GetBufferSize(), 4u);
+
+            // Empty the system again after it has a buffer, then prove the next registration still works.
+            material = nullptr;
+            instanceHandler->Compile();
+            ProcessQueuedSrgCompilations(shaderAsset, layout->GetName());
+            ASSERT_NO_FATAL_FAILURE(checkEmptyBinding());
+        }
+        RHI::ResourceInvalidateBus::ExecuteQueuedEvents();
     }
 
     TEST_F(MaterialTests, MaterialPublicationWaitsForExplicitCompile)

@@ -1,0 +1,45 @@
+flowchart LR
+  n7["Atom_Feature_Common [configured]"]
+  n8["Atom_RHI [configured]"]
+  n13["Atom_RPI [configured]"]
+  n21["AtomToolsFramework [configured]"]
+  n31["CommonFeaturesAtom [configured]"]
+  n50["GraphCanvas [configured]"]
+  n51["GraphModel [configured]"]
+  n52["ImageProcessingAtom [configured]"]
+  n62["MaterialCanvas"]
+  n63["MaterialEditor [native-owner evidence]"]
+  n74["PassCanvas"]
+  n98["ShaderManagementConsole [configured]"]
+  n119["Editor/Materials"]
+  n21 -->|"manifest"| n13
+  n21 -->|"manifest"| n8
+  n21 -->|"manifest"| n50
+  n21 -->|"manifest"| n51
+  n62 -->|"manifest"| n21
+  n62 -->|"manifest"| n13
+  n62 -->|"manifest"| n8
+  n62 -->|"manifest"| n7
+  n62 -->|"manifest"| n52
+  n62 -->|"manifest"| n31
+  n63 -->|"manifest"| n21
+  n63 -->|"manifest"| n13
+  n63 -->|"manifest"| n8
+  n63 -->|"manifest"| n7
+  n63 -->|"manifest"| n52
+  n63 -->|"manifest"| n31
+  n74 -->|"manifest"| n21
+  n74 -->|"manifest"| n13
+  n74 -->|"manifest"| n8
+  n74 -->|"manifest"| n7
+  n74 -->|"manifest"| n52
+  n74 -->|"manifest"| n31
+  n98 -->|"manifest"| n21
+  n98 -->|"manifest"| n13
+  n98 -->|"manifest"| n8
+  n98 -->|"manifest"| n7
+  n98 -->|"manifest"| n52
+  n98 -->|"manifest"| n31
+  n63 -.->|"native ownership"| n119
+  n62 -.->|"native ownership"| n119
+  n74 -.->|"native ownership"| n119

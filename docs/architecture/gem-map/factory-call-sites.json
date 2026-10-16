@@ -1,0 +1,359 @@
+[
+  {
+    "arguments": "",
+    "phase": "runtime/non-headless-static-module-registration",
+    "line": 75,
+    "file": "Code/LauncherUnified/Launcher.cpp",
+    "symbol": "JE::Geometry::CreateRuntimeModule"
+  },
+  {
+    "arguments": "",
+    "phase": "runtime/non-headless-static-module-registration",
+    "line": 76,
+    "file": "Code/LauncherUnified/Launcher.cpp",
+    "symbol": "JE::World::Camera::CreateRuntimeModule"
+  },
+  {
+    "arguments": "",
+    "phase": "runtime/non-headless-static-module-registration",
+    "line": 77,
+    "file": "Code/LauncherUnified/Launcher.cpp",
+    "symbol": "JE::Debug::CreateRuntimeModule"
+  },
+  {
+    "arguments": "",
+    "phase": "runtime/non-headless-static-module-registration",
+    "line": 79,
+    "file": "Code/LauncherUnified/Launcher.cpp",
+    "symbol": "JE::Debug::Profiler::CreateCaptureModule"
+  },
+  {
+    "arguments": "",
+    "phase": "runtime/non-headless-static-module-registration",
+    "line": 81,
+    "file": "Code/LauncherUnified/Launcher.cpp",
+    "symbol": "JE::Debug::Profiler::CreateVisualModule"
+  },
+  {
+    "arguments": "",
+    "phase": "runtime/non-headless-static-module-registration",
+    "line": 82,
+    "file": "Code/LauncherUnified/Launcher.cpp",
+    "symbol": "JE::Render::Debug::CreateViewportModule"
+  },
+  {
+    "arguments": "",
+    "phase": "runtime/non-headless-static-module-registration",
+    "line": 83,
+    "file": "Code/LauncherUnified/Launcher.cpp",
+    "symbol": "JE::Render::Debug::CreateToolsModule"
+  },
+  {
+    "arguments": "",
+    "phase": "runtime/non-headless-static-module-registration",
+    "line": 84,
+    "file": "Code/LauncherUnified/Launcher.cpp",
+    "symbol": "JE::World::Camera::Debug::CreateDebugModule"
+  },
+  {
+    "arguments": "",
+    "phase": "runtime/non-headless-static-module-registration",
+    "line": 85,
+    "file": "Code/LauncherUnified/Launcher.cpp",
+    "symbol": "JE::Render::Integration::CreateBootstrapModule"
+  },
+  {
+    "arguments": "",
+    "phase": "runtime/non-headless-static-module-registration",
+    "line": 86,
+    "file": "Code/LauncherUnified/Launcher.cpp",
+    "symbol": "JE::Render::Integration::CreateRuntimeModule"
+  },
+  {
+    "arguments": "",
+    "phase": "Editor/tools-static-module-registration",
+    "line": 124,
+    "file": "Code/Editor/EditorToolsApplication.cpp",
+    "symbol": "JE::Geometry::CreateAuthoringModule"
+  },
+  {
+    "arguments": "",
+    "phase": "Editor/tools-static-module-registration",
+    "line": 125,
+    "file": "Code/Editor/EditorToolsApplication.cpp",
+    "symbol": "JE::Editor::Camera::CreateAuthoringModule"
+  },
+  {
+    "arguments": "",
+    "phase": "Editor/tools-static-module-registration",
+    "line": 126,
+    "file": "Code/Editor/EditorToolsApplication.cpp",
+    "symbol": "JE::World::Camera::Debug::CreateDebugModule"
+  },
+  {
+    "arguments": "",
+    "phase": "Editor/tools-static-module-registration",
+    "line": 127,
+    "file": "Code/Editor/EditorToolsApplication.cpp",
+    "symbol": "JE::Render::Integration::CreateBootstrapModule"
+  },
+  {
+    "arguments": "",
+    "phase": "Editor/tools-static-module-registration",
+    "line": 128,
+    "file": "Code/Editor/EditorToolsApplication.cpp",
+    "symbol": "JE::Editor::RenderIntegration::CreateAuthoringModule"
+  },
+  {
+    "arguments": "",
+    "phase": "Editor/tools-static-module-registration",
+    "line": 129,
+    "file": "Code/Editor/EditorToolsApplication.cpp",
+    "symbol": "JE::Assets::Prefab::CreateToolsModule"
+  },
+  {
+    "arguments": "",
+    "phase": "Editor/tools-static-module-registration",
+    "line": 130,
+    "file": "Code/Editor/EditorToolsApplication.cpp",
+    "symbol": "JE::Assets::RenderBuilders::CreateToolsModule"
+  },
+  {
+    "arguments": "",
+    "phase": "Editor/tools-static-module-registration",
+    "line": 131,
+    "file": "Code/Editor/EditorToolsApplication.cpp",
+    "symbol": "JE::Assets::RenderBuilders::CreateShaderCompilerToolsModule"
+  },
+  {
+    "arguments": "",
+    "phase": "Editor/tools-static-module-registration",
+    "line": 132,
+    "file": "Code/Editor/EditorToolsApplication.cpp",
+    "symbol": "JE::Debug::CreateToolsModule"
+  },
+  {
+    "arguments": "",
+    "phase": "Editor/tools-static-module-registration",
+    "line": 133,
+    "file": "Code/Editor/EditorToolsApplication.cpp",
+    "symbol": "JE::Debug::Profiler::CreateVisualModule"
+  },
+  {
+    "arguments": "",
+    "phase": "Editor/tools-static-module-registration",
+    "line": 134,
+    "file": "Code/Editor/EditorToolsApplication.cpp",
+    "symbol": "JE::Render::Debug::CreateViewportModule"
+  },
+  {
+    "arguments": "",
+    "phase": "Editor/tools-static-module-registration",
+    "line": 135,
+    "file": "Code/Editor/EditorToolsApplication.cpp",
+    "symbol": "JE::Render::Debug::CreateToolsModule"
+  },
+  {
+    "arguments": "",
+    "phase": "Editor/tools-static-module-registration",
+    "line": 136,
+    "file": "Code/Editor/EditorToolsApplication.cpp",
+    "symbol": "JE::Editor::CreateMaterialsModule"
+  },
+  {
+    "arguments": "",
+    "phase": "asset-processing/static-module-registration",
+    "line": 231,
+    "file": "Code/Tools/AssetProcessor/native/utilities/ApplicationManager.cpp",
+    "symbol": "JE::Geometry::CreateAuthoringModule"
+  },
+  {
+    "arguments": "",
+    "phase": "asset-processing/static-module-registration",
+    "line": 232,
+    "file": "Code/Tools/AssetProcessor/native/utilities/ApplicationManager.cpp",
+    "symbol": "JE::Editor::Camera::CreateAuthoringModule"
+  },
+  {
+    "arguments": "",
+    "phase": "asset-processing/static-module-registration",
+    "line": 233,
+    "file": "Code/Tools/AssetProcessor/native/utilities/ApplicationManager.cpp",
+    "symbol": "JE::World::Camera::Debug::CreateDebugModule"
+  },
+  {
+    "arguments": "false",
+    "phase": "asset-processing/static-module-registration",
+    "line": 234,
+    "file": "Code/Tools/AssetProcessor/native/utilities/ApplicationManager.cpp",
+    "symbol": "JE::Render::Integration::CreateBootstrapModule"
+  },
+  {
+    "arguments": "",
+    "phase": "asset-processing/static-module-registration",
+    "line": 235,
+    "file": "Code/Tools/AssetProcessor/native/utilities/ApplicationManager.cpp",
+    "symbol": "JE::Editor::RenderIntegration::CreateAssetProcessingModule"
+  },
+  {
+    "arguments": "",
+    "phase": "asset-processing/static-module-registration",
+    "line": 236,
+    "file": "Code/Tools/AssetProcessor/native/utilities/ApplicationManager.cpp",
+    "symbol": "JE::Assets::Prefab::CreateToolsModule"
+  },
+  {
+    "arguments": "",
+    "phase": "asset-processing/static-module-registration",
+    "line": 237,
+    "file": "Code/Tools/AssetProcessor/native/utilities/ApplicationManager.cpp",
+    "symbol": "JE::Assets::RenderBuilders::CreateToolsModule"
+  },
+  {
+    "arguments": "",
+    "phase": "asset-processing/static-module-registration",
+    "line": 238,
+    "file": "Code/Tools/AssetProcessor/native/utilities/ApplicationManager.cpp",
+    "symbol": "JE::Assets::RenderBuilders::CreateShaderCompilerToolsModule"
+  },
+  {
+    "arguments": "",
+    "phase": "asset-processing/static-module-registration",
+    "line": 239,
+    "file": "Code/Tools/AssetProcessor/native/utilities/ApplicationManager.cpp",
+    "symbol": "JE::Debug::CreateToolsModule"
+  },
+  {
+    "arguments": "",
+    "phase": "asset-processing/static-module-registration",
+    "line": 240,
+    "file": "Code/Tools/AssetProcessor/native/utilities/ApplicationManager.cpp",
+    "symbol": "JE::Debug::Profiler::CreateCaptureModule"
+  },
+  {
+    "arguments": "",
+    "phase": "asset-processing/static-module-registration",
+    "line": 131,
+    "file": "Code/Tools/AssetProcessor/AssetBuilder/AssetBuilderApplication.cpp",
+    "symbol": "JE::Geometry::CreateAuthoringModule"
+  },
+  {
+    "arguments": "",
+    "phase": "asset-processing/static-module-registration",
+    "line": 132,
+    "file": "Code/Tools/AssetProcessor/AssetBuilder/AssetBuilderApplication.cpp",
+    "symbol": "JE::Editor::Camera::CreateAuthoringModule"
+  },
+  {
+    "arguments": "",
+    "phase": "asset-processing/static-module-registration",
+    "line": 133,
+    "file": "Code/Tools/AssetProcessor/AssetBuilder/AssetBuilderApplication.cpp",
+    "symbol": "JE::World::Camera::Debug::CreateDebugModule"
+  },
+  {
+    "arguments": "false",
+    "phase": "asset-processing/static-module-registration",
+    "line": 134,
+    "file": "Code/Tools/AssetProcessor/AssetBuilder/AssetBuilderApplication.cpp",
+    "symbol": "JE::Render::Integration::CreateBootstrapModule"
+  },
+  {
+    "arguments": "",
+    "phase": "asset-processing/static-module-registration",
+    "line": 135,
+    "file": "Code/Tools/AssetProcessor/AssetBuilder/AssetBuilderApplication.cpp",
+    "symbol": "JE::Editor::RenderIntegration::CreateAssetProcessingModule"
+  },
+  {
+    "arguments": "",
+    "phase": "asset-processing/static-module-registration",
+    "line": 136,
+    "file": "Code/Tools/AssetProcessor/AssetBuilder/AssetBuilderApplication.cpp",
+    "symbol": "JE::Assets::Prefab::CreateToolsModule"
+  },
+  {
+    "arguments": "",
+    "phase": "asset-processing/static-module-registration",
+    "line": 137,
+    "file": "Code/Tools/AssetProcessor/AssetBuilder/AssetBuilderApplication.cpp",
+    "symbol": "JE::Assets::RenderBuilders::CreateToolsModule"
+  },
+  {
+    "arguments": "",
+    "phase": "asset-processing/static-module-registration",
+    "line": 138,
+    "file": "Code/Tools/AssetProcessor/AssetBuilder/AssetBuilderApplication.cpp",
+    "symbol": "JE::Assets::RenderBuilders::CreateShaderCompilerToolsModule"
+  },
+  {
+    "arguments": "",
+    "phase": "asset-processing/static-module-registration",
+    "line": 139,
+    "file": "Code/Tools/AssetProcessor/AssetBuilder/AssetBuilderApplication.cpp",
+    "symbol": "JE::Debug::CreateToolsModule"
+  },
+  {
+    "arguments": "",
+    "phase": "asset-processing/static-module-registration",
+    "line": 140,
+    "file": "Code/Tools/AssetProcessor/AssetBuilder/AssetBuilderApplication.cpp",
+    "symbol": "JE::Debug::Profiler::CreateCaptureModule"
+  },
+  {
+    "arguments": "",
+    "phase": "Editor/tools-static-module-registration",
+    "line": 170,
+    "file": "Gems/Atom/Tools/AtomToolsFramework/Code/Source/Application/AtomToolsApplication.cpp",
+    "symbol": "JE::Debug::Profiler::CreateVisualModule"
+  },
+  {
+    "arguments": "",
+    "phase": "Editor/tools-static-module-registration",
+    "line": 171,
+    "file": "Gems/Atom/Tools/AtomToolsFramework/Code/Source/Application/AtomToolsApplication.cpp",
+    "symbol": "JE::Render::Debug::CreateViewportModule"
+  },
+  {
+    "arguments": "",
+    "phase": "Editor/tools-static-module-registration",
+    "line": 172,
+    "file": "Gems/Atom/Tools/AtomToolsFramework/Code/Source/Application/AtomToolsApplication.cpp",
+    "symbol": "JE::Render::Debug::CreateToolsModule"
+  },
+  {
+    "arguments": "",
+    "phase": "Editor/tools-static-module-registration",
+    "line": 173,
+    "file": "Gems/Atom/Tools/AtomToolsFramework/Code/Source/Application/AtomToolsApplication.cpp",
+    "symbol": "JE::World::Camera::Debug::CreateDebugModule"
+  },
+  {
+    "arguments": "",
+    "phase": "Editor/tools-static-module-registration",
+    "line": 174,
+    "file": "Gems/Atom/Tools/AtomToolsFramework/Code/Source/Application/AtomToolsApplication.cpp",
+    "symbol": "JE::Render::Integration::CreateBootstrapModule"
+  },
+  {
+    "arguments": "",
+    "phase": "Editor/tools-static-module-registration",
+    "line": 175,
+    "file": "Gems/Atom/Tools/AtomToolsFramework/Code/Source/Application/AtomToolsApplication.cpp",
+    "symbol": "JE::Editor::RenderIntegration::CreateAuthoringModule"
+  },
+  {
+    "arguments": "",
+    "phase": "Editor/tools-static-module-registration",
+    "line": 176,
+    "file": "Gems/Atom/Tools/AtomToolsFramework/Code/Source/Application/AtomToolsApplication.cpp",
+    "symbol": "JE::Assets::RenderBuilders::CreateToolsModule"
+  },
+  {
+    "arguments": "",
+    "phase": "Editor/tools-static-module-registration",
+    "line": 177,
+    "file": "Gems/Atom/Tools/AtomToolsFramework/Code/Source/Application/AtomToolsApplication.cpp",
+    "symbol": "JE::Assets::RenderBuilders::CreateShaderCompilerToolsModule"
+  }
+]

@@ -1,0 +1,18 @@
+{
+  "stderr": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atom-next-native-scope-rev1\\validation-preparation\\parent-approved-r2\\execution-bootstrap96-attempt1\\loader.stderr.log",
+    "bytes": 0,
+    "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+  },
+  "priorityRequested": "BelowNormal",
+  "ramGuardTriggered": false,
+  "priorityError": null,
+  "timedOut": false,
+  "stdout": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atom-next-native-scope-rev1\\validation-preparation\\parent-approved-r2\\execution-bootstrap96-attempt1\\loader.stdout.log",
+    "bytes": 515,
+    "sha256": "6CDF5F87875B542EF2AB0EFC11C8C507F4E50B64B6ACDCC3862261C39EB1F6BE"
+  },
+  "exitCode": 0,
+  "seconds": 0.1124539
+}

@@ -1,0 +1,148 @@
+{
+  "utc": "2026-10-16T21:03:47.6843998Z",
+  "owner": "/root",
+  "pid": 19764,
+  "creationUtc": "2026-10-16T21:02:39.4430150Z",
+  "nativeExit": 0,
+  "elapsedSeconds": 68.2601629,
+  "stoppedByRamGuard": false,
+  "samples": [
+    {
+      "workingSetBytes": 580378624,
+      "ramPercent": 46.19,
+      "utc": "2026-10-16T21:02:42.6041763Z",
+      "privateBytes": 1959276544
+    },
+    {
+      "workingSetBytes": 576552960,
+      "ramPercent": 46.16,
+      "utc": "2026-10-16T21:02:45.6571470Z",
+      "privateBytes": 1684025344
+    },
+    {
+      "workingSetBytes": 576167936,
+      "ramPercent": 46.17,
+      "utc": "2026-10-16T21:02:48.7178413Z",
+      "privateBytes": 1670529024
+    },
+    {
+      "workingSetBytes": 576380928,
+      "ramPercent": 46.05,
+      "utc": "2026-10-16T21:02:51.7656288Z",
+      "privateBytes": 1670709248
+    },
+    {
+      "workingSetBytes": 576024576,
+      "ramPercent": 46.12,
+      "utc": "2026-10-16T21:02:54.8221965Z",
+      "privateBytes": 1670119424
+    },
+    {
+      "workingSetBytes": 576069632,
+      "ramPercent": 46.0,
+      "utc": "2026-10-16T21:02:57.8707997Z",
+      "privateBytes": 1669726208
+    },
+    {
+      "workingSetBytes": 576163840,
+      "ramPercent": 45.99,
+      "utc": "2026-10-16T21:03:00.9177734Z",
+      "privateBytes": 1669988352
+    },
+    {
+      "workingSetBytes": 576151552,
+      "ramPercent": 45.97,
+      "utc": "2026-10-16T21:03:03.9834388Z",
+      "privateBytes": 1669791744
+    },
+    {
+      "workingSetBytes": 576188416,
+      "ramPercent": 45.97,
+      "utc": "2026-10-16T21:03:07.0399006Z",
+      "privateBytes": 1669734400
+    },
+    {
+      "workingSetBytes": 576180224,
+      "ramPercent": 45.97,
+      "utc": "2026-10-16T21:03:10.0998764Z",
+      "privateBytes": 1669693440
+    },
+    {
+      "workingSetBytes": 576180224,
+      "ramPercent": 45.98,
+      "utc": "2026-10-16T21:03:13.1587549Z",
+      "privateBytes": 1669693440
+    },
+    {
+      "workingSetBytes": 576270336,
+      "ramPercent": 45.99,
+      "utc": "2026-10-16T21:03:16.2110993Z",
+      "privateBytes": 1669758976
+    },
+    {
+      "workingSetBytes": 576307200,
+      "ramPercent": 46.01,
+      "utc": "2026-10-16T21:03:19.2692877Z",
+      "privateBytes": 1669758976
+    },
+    {
+      "workingSetBytes": 576258048,
+      "ramPercent": 45.91,
+      "utc": "2026-10-16T21:03:22.3266740Z",
+      "privateBytes": 1669693440
+    },
+    {
+      "workingSetBytes": 576335872,
+      "ramPercent": 45.89,
+      "utc": "2026-10-16T21:03:25.3772873Z",
+      "privateBytes": 1669758976
+    },
+    {
+      "workingSetBytes": 576348160,
+      "ramPercent": 45.88,
+      "utc": "2026-10-16T21:03:28.4259035Z",
+      "privateBytes": 1669758976
+    },
+    {
+      "workingSetBytes": 576286720,
+      "ramPercent": 45.88,
+      "utc": "2026-10-16T21:03:31.4806044Z",
+      "privateBytes": 1669697536
+    },
+    {
+      "workingSetBytes": 576290816,
+      "ramPercent": 45.93,
+      "utc": "2026-10-16T21:03:34.5358773Z",
+      "privateBytes": 1669697536
+    },
+    {
+      "workingSetBytes": 576352256,
+      "ramPercent": 45.89,
+      "utc": "2026-10-16T21:03:37.5889749Z",
+      "privateBytes": 1669697536
+    },
+    {
+      "workingSetBytes": 576282624,
+      "ramPercent": 45.89,
+      "utc": "2026-10-16T21:03:40.6510146Z",
+      "privateBytes": 1669586944
+    },
+    {
+      "workingSetBytes": 576286720,
+      "ramPercent": 45.9,
+      "utc": "2026-10-16T21:03:43.7023462Z",
+      "privateBytes": 1669586944
+    },
+    {
+      "workingSetBytes": 576221184,
+      "ramPercent": 46.12,
+      "utc": "2026-10-16T21:03:46.7571872Z",
+      "privateBytes": 1669558272
+    }
+  ],
+  "stdoutSHA256": "BB457874DD627E7CBB471D67DC3A837A4679742878D8B6F416DD7E6372100002",
+  "stderrSHA256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+  "ownProcessHasExited": true,
+  "ownPIDStillPresent": false,
+  "noProductAcceptanceFromExitAlone": true
+}

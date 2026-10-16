@@ -13,7 +13,7 @@
 #include <Atom/RPI.Public/RPISystemInterface.h>
 #include <Atom/RPI.Public/RPIUtils.h>
 #include <Atom/RPI.Reflect/Asset/AssetUtils.h>
-#include <Atom/Bootstrap/DefaultWindowBus.h>
+#include <JE/Render/Bootstrap/DefaultWindowBus.h>
 #include <Atom/RPI.Public/ViewportContextBus.h>
 #include <Atom/RPI.Public/RenderPipeline.h>
 #include <Atom/RPI.Public/Pass/RasterPass.h>
@@ -34,13 +34,13 @@ UiRenderer::UiRenderer(AZ::RPI::ViewportContextPtr viewportContext)
 {
     // Use bootstrap scene event to indicate when the RPI has fully
     // initialized with all assets loaded and is ready to be used
-    AZ::Render::Bootstrap::NotificationBus::Handler::BusConnect();
+    JE::Render::Bootstrap::NotificationBus::Handler::BusConnect();
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 UiRenderer::~UiRenderer()
 {
-    AZ::Render::Bootstrap::NotificationBus::Handler::BusDisconnect();
+    JE::Render::Bootstrap::NotificationBus::Handler::BusDisconnect();
 
     if (m_viewportContext)
     {

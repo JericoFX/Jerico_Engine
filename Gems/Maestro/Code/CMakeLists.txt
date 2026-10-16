@@ -20,7 +20,7 @@ ly_add_target(
         PRIVATE
             Legacy::CryCommon
         PUBLIC
-            Gem::Atom_Bootstrap.Headers
+            JE::RenderIntegration.Public
             Gem::Atom_RHI.Public
             Gem::Atom_RHI.Reflect
             Gem::Atom_RPI.Public
@@ -42,7 +42,7 @@ ly_add_target(
             Legacy::CryCommon
             Gem::${gem_name}.Static
         PUBLIC
-            Gem::Atom_Bootstrap.Headers
+            JE::RenderIntegration.Public
             Gem::Atom_RHI.Public
             Gem::Atom_RHI.Reflect
             Gem::Atom_RPI.Public
@@ -91,7 +91,7 @@ if (PAL_TRAIT_BUILD_HOST_TOOLS)
                 AZ::AssetBuilderSDK
                 Gem::${gem_name}.Static
             PUBLIC
-                Gem::Atom_Bootstrap.Headers
+                JE::RenderIntegration.Public
                 Gem::Atom_RHI.Public
                 Gem::Atom_RHI.Reflect
                 Gem::Atom_RPI.Public

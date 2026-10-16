@@ -1,0 +1,133 @@
+{
+  "count": 25,
+  "sha256": "4246D2534E06B80CD6B0AC8ADA7460D85B9676D966156E583F3A3758F9169768",
+  "paths": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Bootstrap\\Assets\\seedList.seed",
+      "absent": true,
+      "phase": "source retirement; candidate not an accepted extra Gem"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Bootstrap\\CMakeLists.txt",
+      "absent": true,
+      "phase": "source retirement; candidate not an accepted extra Gem"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Bootstrap\\Code\\bootstrap_files.cmake",
+      "absent": true,
+      "phase": "source retirement; candidate not an accepted extra Gem"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Bootstrap\\Code\\bootstrap_headers_files.cmake",
+      "absent": true,
+      "phase": "source retirement; candidate not an accepted extra Gem"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Bootstrap\\Code\\CMakeLists.txt",
+      "absent": true,
+      "phase": "source retirement; candidate not an accepted extra Gem"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Bootstrap\\Code\\Include\\Atom\\Bootstrap\\BootstrapNotificationBus.h",
+      "absent": true,
+      "phase": "source retirement; candidate not an accepted extra Gem"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Bootstrap\\Code\\Include\\Atom\\Bootstrap\\BootstrapRequestBus.h",
+      "absent": true,
+      "phase": "source retirement; candidate not an accepted extra Gem"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Bootstrap\\Code\\Include\\Atom\\Bootstrap\\DefaultWindowBus.h",
+      "absent": true,
+      "phase": "source retirement; candidate not an accepted extra Gem"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Bootstrap\\Code\\Source\\BootstrapModule.cpp",
+      "absent": true,
+      "phase": "source retirement; candidate not an accepted extra Gem"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Bootstrap\\Code\\Source\\BootstrapSystemComponent.cpp",
+      "absent": true,
+      "phase": "source retirement; candidate not an accepted extra Gem"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Bootstrap\\Code\\Source\\BootstrapSystemComponent.h",
+      "absent": true,
+      "phase": "source retirement; candidate not an accepted extra Gem"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Bootstrap\\Code\\Source\\Platform\\Android\\bootstrap_android_files.cmake",
+      "absent": true,
+      "phase": "source retirement; candidate not an accepted extra Gem"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Bootstrap\\Code\\Source\\Platform\\Android\\BootstrapSystemComponent_Traits_Platform.h",
+      "absent": true,
+      "phase": "source retirement; candidate not an accepted extra Gem"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Bootstrap\\Code\\Source\\Platform\\Emscripten\\bootstrap_emscripten_files.cmake",
+      "absent": true,
+      "phase": "source retirement; candidate not an accepted extra Gem"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Bootstrap\\Code\\Source\\Platform\\Emscripten\\BootstrapSystemComponent_Traits_Platform.h",
+      "absent": true,
+      "phase": "source retirement; candidate not an accepted extra Gem"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Bootstrap\\Code\\Source\\Platform\\iOS\\bootstrap_ios_files.cmake",
+      "absent": true,
+      "phase": "source retirement; candidate not an accepted extra Gem"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Bootstrap\\Code\\Source\\Platform\\iOS\\BootstrapSystemComponent_Traits_Platform.h",
+      "absent": true,
+      "phase": "source retirement; candidate not an accepted extra Gem"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Bootstrap\\Code\\Source\\Platform\\Linux\\bootstrap_linux_files.cmake",
+      "absent": true,
+      "phase": "source retirement; candidate not an accepted extra Gem"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Bootstrap\\Code\\Source\\Platform\\Linux\\BootstrapSystemComponent_Traits_Platform.h",
+      "absent": true,
+      "phase": "source retirement; candidate not an accepted extra Gem"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Bootstrap\\Code\\Source\\Platform\\Mac\\bootstrap_mac_files.cmake",
+      "absent": true,
+      "phase": "source retirement; candidate not an accepted extra Gem"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Bootstrap\\Code\\Source\\Platform\\Mac\\BootstrapSystemComponent_Traits_Platform.h",
+      "absent": true,
+      "phase": "source retirement; candidate not an accepted extra Gem"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Bootstrap\\Code\\Source\\Platform\\Windows\\bootstrap_windows_files.cmake",
+      "absent": true,
+      "phase": "source retirement; candidate not an accepted extra Gem"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Bootstrap\\Code\\Source\\Platform\\Windows\\BootstrapSystemComponent_Traits_Platform.h",
+      "absent": true,
+      "phase": "source retirement; candidate not an accepted extra Gem"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Bootstrap\\gem.json",
+      "absent": true,
+      "phase": "source retirement; candidate not an accepted extra Gem"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Bootstrap\\preview.png",
+      "absent": true,
+      "phase": "source retirement; candidate not an accepted extra Gem"
+    }
+  ],
+  "notGemCount": true,
+  "freeze": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atom-next-native-scope-rev1\\implementation\\parent-integration-review\\parent-freeze94-bootstrap-inputs.json"
+}

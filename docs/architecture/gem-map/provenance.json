@@ -1,0 +1,184 @@
+{
+  "schema": "je-gem-map-parent-promotion-v1",
+  "utc": "2026-10-16T16:46:34.5645660Z",
+  "owner": "/root",
+  "sourceDirectory": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atom-next-native-scope-rev1\\validation-preparation\\gem-dependency-map",
+  "sourceMapSHA256": "CAE217D9D20118CAC5C331F5428D879462FAC2BDA41F468E9E00A43AF9278B8F",
+  "sourceReceiptSHA256": "5EDDF0AB7638AE4CF137B3DA7D5781A431134F059927097DA3EDAA73399ADA7B",
+  "sourceInputsVerified": 2362,
+  "sourceDrift": 0,
+  "copyByteExact": true,
+  "copiedFiles": [
+    {
+      "name": "bootstrap-retired-source25.json",
+      "bytes": 6241,
+      "sha256": "AE494573B668D945DBBA90DCB5635EC20D7F3A107B3DBD18DEBD4A03B5E15F35"
+    },
+    {
+      "name": "catalogue.json",
+      "bytes": 347415,
+      "sha256": "F078A94B98DC91C6ED0E9B7EC4810B00A0766BFBF54C45C7B22704863FDD0D42"
+    },
+    {
+      "name": "cmake-reference-contexts.json",
+      "bytes": 894431,
+      "sha256": "1D2A015D536EDDD1BE9685892DE989194EC9E936678BE5E6FD5B85E06254D46E"
+    },
+    {
+      "name": "cmake-targets.json",
+      "bytes": 519485,
+      "sha256": "5CBD4B6F3E0153B5E85D0F277E572AE820D96D64BD3B774A03EA4EACA2C84049"
+    },
+    {
+      "name": "configured-module-composition.json",
+      "bytes": 225567,
+      "sha256": "AA250595CB02CA6EC29D48FC7411ADD2D2C391A6C15BBB90A90CB808772FCB4F"
+    },
+    {
+      "name": "diagram-node-map.json",
+      "bytes": 21511,
+      "sha256": "57D51C86730AA43FB2EC6EE3A7A51F51CEBA8B589C7C55F7561E17B3FFC81479"
+    },
+    {
+      "name": "edges.json",
+      "bytes": 2262233,
+      "sha256": "E23C76C80F9CFE1E568B72DBA521619B4D89911963CFB134596074AB7ED12529"
+    },
+    {
+      "name": "factory-call-sites.json",
+      "bytes": 12398,
+      "sha256": "5BCF980158D72C0670105A40C9DC1F51BE1D9A7DABA0A94E24926141B6A23B73"
+    },
+    {
+      "name": "family-asset-pipeline.mmd",
+      "bytes": 173,
+      "sha256": "5EAAC54EF1ECAC256CE8ECECCFA6089DF0B7F8C0F7022786F3B644402E228533"
+    },
+    {
+      "name": "family-atom-core.mmd",
+      "bytes": 899,
+      "sha256": "D018C7E9CA956A187CC7B42F4F154EA87D1E37B9B7DE18AFA9C8BDA8C0190479"
+    },
+    {
+      "name": "family-atom-rhi.mmd",
+      "bytes": 272,
+      "sha256": "B486601D87876C46C5619A768A5BA9404E1A3E79818C268A90AC8441A5227A13"
+    },
+    {
+      "name": "family-atom-rpi.mmd",
+      "bytes": 103,
+      "sha256": "EC4AEF0DB6DDC2DE6593E7051F2C3BCD1D64655343638726CE3BE3399B98607E"
+    },
+    {
+      "name": "family-atom-tools.mmd",
+      "bytes": 1343,
+      "sha256": "2639746A7F3F320F6ADB12351B8FEC6C99BB04C5466AAE3B685ADB74966A8DF8"
+    },
+    {
+      "name": "family-audio-media.mmd",
+      "bytes": 213,
+      "sha256": "48A0202C0836117A7CFC24DA885AD8754513B376476BF7193C5B591CBB4ABEE0"
+    },
+    {
+      "name": "family-content.mmd",
+      "bytes": 242,
+      "sha256": "3586F320A1DF67DD45B58784820592D858F462FB2DCDE532895AB534B993A6B3"
+    },
+    {
+      "name": "family-editor-script.mmd",
+      "bytes": 717,
+      "sha256": "9E25B8609170AF5F955DC1841268425CAAA1A4ED7ABC64CEBB239CC0B47ADE00"
+    },
+    {
+      "name": "family-engine-gameplay.mmd",
+      "bytes": 2052,
+      "sha256": "C7BEF15D884944DDC2792D3875899EC970C6949105F5A1950D3A5213C45FFFC2"
+    },
+    {
+      "name": "family-native-absorptions.mmd",
+      "bytes": 2458,
+      "sha256": "7FABCCAB80210D39470C008554F87576C6495BC5676F006DDFF154CB91471DE3"
+    },
+    {
+      "name": "family-online-platform.mmd",
+      "bytes": 416,
+      "sha256": "41B4B041BC5B6AEE3C37B1894F4A2DA2944C95CE9CDBCAE5683FB0E0F730A1EA"
+    },
+    {
+      "name": "family-physics-animation.mmd",
+      "bytes": 556,
+      "sha256": "D1CCD124ACEF89C84D3AAA26174229655E2E5F84B868E8B5651C1D815BF801AA"
+    },
+    {
+      "name": "family-render-features.mmd",
+      "bytes": 2208,
+      "sha256": "C48B1E5F4B4FEB0B95AEB2D916EB53575CB71620F694B3532C0ABDA835BECB30"
+    },
+    {
+      "name": "family-testing.mmd",
+      "bytes": 123,
+      "sha256": "AB65F5222C6DB2C95B1FAC9DBC3A9181716E1F76C2BBE24588923E2C8B4A2E77"
+    },
+    {
+      "name": "family-ui.mmd",
+      "bytes": 663,
+      "sha256": "B2C502BA6836132EFBF35023C27546356D91CBA38FD89291294F6FF26316BA04"
+    },
+    {
+      "name": "family-world.mmd",
+      "bytes": 1101,
+      "sha256": "B2FBA74B4E0C818BAF7683E327DB658F90F124525D1305C4112AF52BFD9C97AC"
+    },
+    {
+      "name": "historical-nominal11.json",
+      "bytes": 21327,
+      "sha256": "BB415C49692711E71CF531CC815ECE7572B4D1B4403318C8864B7E665F82AD4D"
+    },
+    {
+      "name": "host-factories.mmd",
+      "bytes": 2828,
+      "sha256": "742E1E5E4C3F96FBEE7548030FA805FC972904E6F3B195117AD11AB5BE31EDD8"
+    },
+    {
+      "name": "input-pins.json",
+      "bytes": 737691,
+      "sha256": "B1ED424B7BB318A6B9B0B2FD119DF00C986F31FB610340850E9DA4BFAC68B5DA"
+    },
+    {
+      "name": "manifest-discovery-closure.json",
+      "bytes": 659,
+      "sha256": "A7FD0760FD4BEF5076E9E0D574C4EFD159C045D1D2AB72ED65383AB7F025162C"
+    },
+    {
+      "name": "manifest-inventory.json",
+      "bytes": 62455,
+      "sha256": "10CEBD0F0B00AD984A1867192F3E7D85C9CD6084C5A1995EE07A0A96FD2BE66B"
+    },
+    {
+      "name": "map.md",
+      "bytes": 41271,
+      "sha256": "CAE217D9D20118CAC5C331F5428D879462FAC2BDA41F468E9E00A43AF9278B8F"
+    },
+    {
+      "name": "overview.mmd",
+      "bytes": 1875,
+      "sha256": "15C41D85B44ECA480C33D7548373BA79E4BB0125D3B160541D8C0E07E9D7F08F"
+    },
+    {
+      "name": "receipt.json",
+      "bytes": 9914,
+      "sha256": "5EDDF0AB7638AE4CF137B3DA7D5781A431134F059927097DA3EDAA73399ADA7B"
+    },
+    {
+      "name": "validation.json",
+      "bytes": 26175,
+      "sha256": "29AA7EF08C963E81F637CDD8ADB76AA67D6190C3A03F58EA625F367961DEA0D6"
+    }
+  ],
+  "mermaidRender": "NOT_RUN",
+  "productAcceptance": false,
+  "wholeGemIncrement": 0,
+  "build94InputsTouched": false,
+  "publication": "PENDING",
+  "limits": "Composition/declarations complete for captured source manifests; only actual traced factory/bus contracts are runtime edges; global callgraph not claimed."
+}

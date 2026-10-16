@@ -1,0 +1,76 @@
+flowchart LR
+  h0["Launcher"]
+  c0["JE::Geometry::CreateRuntimeModule"]
+  h0 -->|"register module"| c0
+  c1["JE::World::Camera::CreateRuntimeModule"]
+  h0 -->|"register module"| c1
+  c2["JE::Debug::CreateRuntimeModule"]
+  h0 -->|"register module"| c2
+  c3["JE::Debug::Profiler::CreateCaptureModule"]
+  h0 -->|"register module"| c3
+  c4["JE::Debug::Profiler::CreateVisualModule"]
+  h0 -->|"register module"| c4
+  c5["JE::Render::Debug::CreateViewportModule"]
+  h0 -->|"register module"| c5
+  c6["JE::Render::Debug::CreateToolsModule"]
+  h0 -->|"register module"| c6
+  c7["JE::World::Camera::Debug::CreateDebugModule"]
+  h0 -->|"register module"| c7
+  c8["JE::Render::Integration::CreateBootstrapModule"]
+  h0 -->|"true: Required bootstrap"| c8
+  c9["JE::Render::Integration::CreateRuntimeModule"]
+  h0 -->|"register module"| c9
+  h1["EditorToolsApplication"]
+  c10["JE::Geometry::CreateAuthoringModule"]
+  h1 -->|"register module"| c10
+  c11["JE::Editor::Camera::CreateAuthoringModule"]
+  h1 -->|"register module"| c11
+  h1 -->|"register module"| c7
+  h1 -->|"true: Required bootstrap"| c8
+  c12["JE::Editor::RenderIntegration::CreateAuthoringModule"]
+  h1 -->|"register module"| c12
+  c13["JE::Assets::Prefab::CreateToolsModule"]
+  h1 -->|"register module"| c13
+  c14["JE::Assets::RenderBuilders::CreateToolsModule"]
+  h1 -->|"register module"| c14
+  c15["JE::Assets::RenderBuilders::CreateShaderCompilerToolsModule"]
+  h1 -->|"register module"| c15
+  c16["JE::Debug::CreateToolsModule"]
+  h1 -->|"register module"| c16
+  h1 -->|"register module"| c4
+  h1 -->|"register module"| c5
+  h1 -->|"register module"| c6
+  c17["JE::Editor::CreateMaterialsModule"]
+  h1 -->|"register module"| c17
+  h2["ApplicationManager"]
+  h2 -->|"register module"| c10
+  h2 -->|"register module"| c11
+  h2 -->|"register module"| c7
+  h2 -->|"false: descriptor only"| c8
+  c18["JE::Editor::RenderIntegration::CreateAssetProcessingModule"]
+  h2 -->|"register module"| c18
+  h2 -->|"register module"| c13
+  h2 -->|"register module"| c14
+  h2 -->|"register module"| c15
+  h2 -->|"register module"| c16
+  h2 -->|"register module"| c3
+  h3["AssetBuilderApplication"]
+  h3 -->|"register module"| c10
+  h3 -->|"register module"| c11
+  h3 -->|"register module"| c7
+  h3 -->|"false: descriptor only"| c8
+  h3 -->|"register module"| c18
+  h3 -->|"register module"| c13
+  h3 -->|"register module"| c14
+  h3 -->|"register module"| c15
+  h3 -->|"register module"| c16
+  h3 -->|"register module"| c3
+  h4["AtomToolsApplication"]
+  h4 -->|"register module"| c4
+  h4 -->|"register module"| c5
+  h4 -->|"register module"| c6
+  h4 -->|"register module"| c7
+  h4 -->|"true: Required bootstrap"| c8
+  h4 -->|"register module"| c12
+  h4 -->|"register module"| c14
+  h4 -->|"register module"| c15

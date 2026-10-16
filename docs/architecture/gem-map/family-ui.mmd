@@ -1,0 +1,24 @@
+flowchart LR
+  n4["Atom [configured]"]
+  n13["Atom_RPI [configured]"]
+  n16["AtomFont [configured]"]
+  n21["AtomToolsFramework [configured]"]
+  n52["ImageProcessingAtom [configured]"]
+  n57["LmbrCentral [configured]"]
+  n59["LyShine"]
+  n60["LyShineExamples"]
+  n65["MessagePopup"]
+  n111["TextureAtlas"]
+  n113["UiBasics"]
+  n59 -->|"manifest"| n57
+  n59 -->|"manifest"| n13
+  n59 -->|"manifest"| n4
+  n59 -->|"manifest"| n16
+  n59 -->|"manifest"| n111
+  n59 -->|"manifest"| n21
+  n59 -->|"manifest"| n113
+  n60 -->|"manifest"| n57
+  n60 -->|"manifest"| n59
+  n65 -->|"manifest"| n59
+  n111 -->|"manifest"| n13
+  n111 -->|"manifest"| n52
