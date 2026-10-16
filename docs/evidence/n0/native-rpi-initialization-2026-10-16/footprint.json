@@ -1,0 +1,42 @@
+{
+  "scope": "Deployment DLL cohort only; no overall engine/RAM/VRAM saving claim",
+  "before": {
+    "total": 2053632,
+    "Atom_RPI_Private": 239104,
+    "RenderIntegration": 842752,
+    "EditorRenderIntegration": 721920,
+    "Atom_RPI_Editor": 249856
+  },
+  "after": {
+    "RenderIntegration": 986624,
+    "EditorRenderIntegration": 835584,
+    "total": 1822208
+  },
+  "deltaBytes": -231424,
+  "percent": -11.269010221889802,
+  "runtimeOldCohortBytes": 1081856,
+  "runtimeNewCohortBytes": 986624,
+  "editorOldLoadedCohortBytes": 1814528,
+  "editorNewLoadedCohortBytes": 1822208,
+  "editorDeltaBytes": 7680,
+  "removedFromProfile": [
+    "Atom_RPI.Private.dll",
+    "Atom_RPI.Editor.dll"
+  ],
+  "quarantinedLocalNotDeleted": true,
+  "nativeR4BuildSeconds": 66.354,
+  "nativeR4CTestSeconds": 19.243,
+  "editorR5": {
+    "peakEditorWorkingSetBytes": 982597632,
+    "peakEditorPrivateBytes": 2058248192,
+    "seconds": 249.8998728,
+    "peakWholeSystemRamPercent": 71.7
+  },
+  "runtimeR5": {
+    "peakRuntimeWorkingSetBytes": 582352896,
+    "peakRuntimePrivateBytes": 1973141504,
+    "seconds": 22.1914495,
+    "peakWholeSystemRamPercent": 45.69
+  },
+  "benchmark": false
+}

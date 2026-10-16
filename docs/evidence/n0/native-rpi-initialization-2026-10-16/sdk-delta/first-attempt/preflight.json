@@ -1,0 +1,461 @@
+{
+  "publicCaseCount": 576,
+  "recipe": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atom-next-native-scope-rev1\\validation-preparation\\atom-rpi98-sdk-delta-candidate\\recipe.json",
+    "bytes": 16574,
+    "sha256": "6B153CE1D33AC7CF4F6F9EB9DB955C44BCA41E243CFBAC7455FB1DF87FBF966F"
+  },
+  "baseline32": [
+    {
+      "name": "Atom_Feature_Common.Public.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-vk96\\bin\\Windows\\profile\\Default\\Atom_Feature_Common.Public.dll",
+      "bytes": 1419264,
+      "sha256": "44A2CB857482456EF5A52C427F369E7232F9B88124E520BB8237987C61DBAFF1",
+      "action": "read-only-hardlink-to-new-overlay-only"
+    },
+    {
+      "name": "Atom_RHI.Public.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-vk96\\bin\\Windows\\profile\\Default\\Atom_RHI.Public.dll",
+      "bytes": 2096128,
+      "sha256": "85872600F4AB13F6C4DDF9D58B350A4D4A2ECDF64B6370500B7E642BD13E5D88",
+      "action": "read-only-hardlink-to-new-overlay-only"
+    },
+    {
+      "name": "Atom_RHI.Reflect.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-vk96\\bin\\Windows\\profile\\Default\\Atom_RHI.Reflect.dll",
+      "bytes": 2979840,
+      "sha256": "FA762F84C1912EE9EA315067F65171F8EE86BFDADC19758804374FD519E149FA",
+      "action": "read-only-hardlink-to-new-overlay-only"
+    },
+    {
+      "name": "Atom_RPI.Edit.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-vk96\\bin\\Windows\\profile\\Default\\Atom_RPI.Edit.dll",
+      "bytes": 2591232,
+      "sha256": "376540A5FC1CDCDFB66644FD56AEEEA86CCDA57AA9CE1C9404E0E0B0375FCFAB",
+      "action": "read-only-hardlink-to-new-overlay-only"
+    },
+    {
+      "name": "Atom_RPI.Public.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-vk96\\bin\\Windows\\profile\\Default\\Atom_RPI.Public.dll",
+      "bytes": 7858688,
+      "sha256": "D651A668A35752ED1F8A707782891F79A9EF23D0BE05F05CCFC0A142BD9218E5",
+      "action": "replace-in-new-overlay-only"
+    },
+    {
+      "name": "AzCore.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-vk96\\bin\\Windows\\profile\\Default\\AzCore.dll",
+      "bytes": 15256576,
+      "sha256": "5699C61A11F2952239CB2885E227A7E1EF6DC0488F09119623853E0F2F5857D4",
+      "action": "read-only-hardlink-to-new-overlay-only"
+    },
+    {
+      "name": "AzFramework.NativeUI.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-vk96\\bin\\Windows\\profile\\Default\\AzFramework.NativeUI.dll",
+      "bytes": 1073152,
+      "sha256": "4CE9B354BE461C2F8F717BDC3E26A2DD5C308A63F799894B523607FC034B8940",
+      "action": "read-only-hardlink-to-new-overlay-only"
+    },
+    {
+      "name": "AzFramework.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-vk96\\bin\\Windows\\profile\\Default\\AzFramework.dll",
+      "bytes": 21512192,
+      "sha256": "61FEFD874D58E614066053FCB8A30E002CA04A1AEC9BD95AAD3D1C8E0D716054",
+      "action": "read-only-hardlink-to-new-overlay-only"
+    },
+    {
+      "name": "AzQtComponents.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-vk96\\bin\\Windows\\profile\\Default\\AzQtComponents.dll",
+      "bytes": 4408832,
+      "sha256": "8BBC726D22686B796A085BBACECB7210F73F95FB53927197995DB1243603C439",
+      "action": "read-only-hardlink-to-new-overlay-only"
+    },
+    {
+      "name": "AzToolsFramework.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-vk96\\bin\\Windows\\profile\\Default\\AzToolsFramework.dll",
+      "bytes": 31171584,
+      "sha256": "AE1C10A8C67C7740BD9AAEB09205BA6F8A02B3EF1DC35EC79298358011F8D5AF",
+      "action": "read-only-hardlink-to-new-overlay-only"
+    },
+    {
+      "name": "DearImGui.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-vk96\\bin\\Windows\\profile\\Default\\DearImGui.dll",
+      "bytes": 737792,
+      "sha256": "9CA08DB915179B6B6E44A5AD746E4EC47979AA8C06559F070E2A19ABA5D9B067",
+      "action": "read-only-hardlink-to-new-overlay-only"
+    },
+    {
+      "name": "DebugImGui.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-vk96\\bin\\Windows\\profile\\Default\\DebugImGui.dll",
+      "bytes": 952320,
+      "sha256": "5B1F40D89BF0E9CEACFDBC207AF23F7794147290A1F74438AC539556D0DE0493",
+      "action": "read-only-hardlink-to-new-overlay-only"
+    },
+    {
+      "name": "EditorCamera.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-vk96\\bin\\Windows\\profile\\Default\\EditorCamera.dll",
+      "bytes": 589824,
+      "sha256": "1254CE4D3A8555980F1CDD11120E571005D25675771CBDC353C8BCA789B9A171",
+      "action": "read-only-hardlink-to-new-overlay-only"
+    },
+    {
+      "name": "EditorMaterials.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-vk96\\bin\\Windows\\profile\\Default\\EditorMaterials.dll",
+      "bytes": 7515648,
+      "sha256": "377C468378FE8B9C6098B00F4089B8167AB980B93F36CD783915354BAA54EC96",
+      "action": "read-only-hardlink-to-new-overlay-only"
+    },
+    {
+      "name": "EditorRenderIntegration.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-vk96\\bin\\Windows\\profile\\Default\\EditorRenderIntegration.dll",
+      "bytes": 721920,
+      "sha256": "3165B338983759569EEAFEF8BB2E7395A72D25BE78D1FA9F3DAC65DBE9E79174",
+      "action": "replace-in-new-overlay-only"
+    },
+    {
+      "name": "ProfilerCapture.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-vk96\\bin\\Windows\\profile\\Default\\ProfilerCapture.dll",
+      "bytes": 273920,
+      "sha256": "6024775F53C43E5BC8FFFE8D0009DB1AB35F1575614D18421142319C26042C97",
+      "action": "read-only-hardlink-to-new-overlay-only"
+    },
+    {
+      "name": "ProfilerView.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-vk96\\bin\\Windows\\profile\\Default\\ProfilerView.dll",
+      "bytes": 311808,
+      "sha256": "7109F65E1AA915D34B0E9B6B2C4040E3A5F07EADA7A05924155B511FB8D4D1FF",
+      "action": "read-only-hardlink-to-new-overlay-only"
+    },
+    {
+      "name": "Qt6Core.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-vk96\\bin\\Windows\\profile\\Default\\Qt6Core.dll",
+      "bytes": 9853440,
+      "sha256": "DC1BBB428ED61680ECB99FBD2C4D55ECF213BE48FFBA042C945EB90E961EBBEB",
+      "action": "read-only-hardlink-to-new-overlay-only"
+    },
+    {
+      "name": "Qt6Gui.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-vk96\\bin\\Windows\\profile\\Default\\Qt6Gui.dll",
+      "bytes": 8307200,
+      "sha256": "4033D497344488BB55A5562D45F08982BD5945A5F3E83E82EC00EC5276B05BD7",
+      "action": "read-only-hardlink-to-new-overlay-only"
+    },
+    {
+      "name": "Qt6Network.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-vk96\\bin\\Windows\\profile\\Default\\Qt6Network.dll",
+      "bytes": 1590784,
+      "sha256": "BA9FB87A5661A6E3EAA8344608F899493A29BAE567634E99872258BBC8922B8C",
+      "action": "read-only-hardlink-to-new-overlay-only"
+    },
+    {
+      "name": "Qt6Svg.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-vk96\\bin\\Windows\\profile\\Default\\Qt6Svg.dll",
+      "bytes": 564224,
+      "sha256": "B475308F6F5FA272F37A6DAA01AC0764106491F9A5B014FD48F9F3F3522A8B5A",
+      "action": "read-only-hardlink-to-new-overlay-only"
+    },
+    {
+      "name": "Qt6SvgWidgets.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-vk96\\bin\\Windows\\profile\\Default\\Qt6SvgWidgets.dll",
+      "bytes": 46080,
+      "sha256": "AC286220D49A65F3230E38FAC3CBEFB4092D16CF97829891EADCAF09F7DA05EC",
+      "action": "read-only-hardlink-to-new-overlay-only"
+    },
+    {
+      "name": "Qt6Widgets.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-vk96\\bin\\Windows\\profile\\Default\\Qt6Widgets.dll",
+      "bytes": 5945344,
+      "sha256": "48C813DFA4F22D1FE2CF6E0DB66D9319096EAA82D29A19AE5CA52657708A9542",
+      "action": "read-only-hardlink-to-new-overlay-only"
+    },
+    {
+      "name": "Qt6Xml.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-vk96\\bin\\Windows\\profile\\Default\\Qt6Xml.dll",
+      "bytes": 136704,
+      "sha256": "5FC854116DF23A81BCE1B217ABEBDAF6D5F93D1AD2D790DD5694B59960597381",
+      "action": "read-only-hardlink-to-new-overlay-only"
+    },
+    {
+      "name": "RenderAssetBuilders.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-vk96\\bin\\Windows\\profile\\Default\\RenderAssetBuilders.dll",
+      "bytes": 2238464,
+      "sha256": "9712DB080A2AF5EEC74C7A0E302C301B7929F0528581986F4DC6A46034573812",
+      "action": "read-only-hardlink-to-new-overlay-only"
+    },
+    {
+      "name": "RenderDebug.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-vk96\\bin\\Windows\\profile\\Default\\RenderDebug.dll",
+      "bytes": 768512,
+      "sha256": "56FA428315407915218736A3EF68B7659FC90A662D08950A2010E9EE5E4A26F1",
+      "action": "read-only-hardlink-to-new-overlay-only"
+    },
+    {
+      "name": "RenderIntegration.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-vk96\\bin\\Windows\\profile\\Default\\RenderIntegration.dll",
+      "bytes": 842752,
+      "sha256": "897FD69198465E04D5A7A64229980A58146564D9D61F668E3084CBE9A57BB3B7",
+      "action": "replace-in-new-overlay-only"
+    },
+    {
+      "name": "RenderMaterials.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-vk96\\bin\\Windows\\profile\\Default\\RenderMaterials.dll",
+      "bytes": 2171904,
+      "sha256": "AAEE676DA6F27AF0D5A86C7A0ECFC2F9BCB3B8F6E615D034F02B7610999E60B2",
+      "action": "read-only-hardlink-to-new-overlay-only"
+    },
+    {
+      "name": "SceneCore.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-vk96\\bin\\Windows\\profile\\Default\\SceneCore.dll",
+      "bytes": 1544704,
+      "sha256": "E5E21D917FF07B35BAE698FBD19DDA8A46956EA5E135426869E4981FE24D4933",
+      "action": "read-only-hardlink-to-new-overlay-only"
+    },
+    {
+      "name": "SceneData.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-vk96\\bin\\Windows\\profile\\Default\\SceneData.dll",
+      "bytes": 2212352,
+      "sha256": "B9FAC58EAF1605AB5EED21B1559708BD1C5097BA72CA201E2358151AD7A0CB3A",
+      "action": "read-only-hardlink-to-new-overlay-only"
+    },
+    {
+      "name": "WorldCamera.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-vk96\\bin\\Windows\\profile\\Default\\WorldCamera.dll",
+      "bytes": 1360384,
+      "sha256": "DB3ECCAD5296156DAEF878DC92AAF5EC7A460B2056E61625B6C0A69BB2EBE5E7",
+      "action": "read-only-hardlink-to-new-overlay-only"
+    },
+    {
+      "name": "mcpp0.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-vk96\\bin\\Windows\\profile\\Default\\mcpp0.dll",
+      "bytes": 135168,
+      "sha256": "E28DB7EF935D6584D0F3EF38849F17D3475F3413251B205C59A5B15484DD66E9",
+      "action": "read-only-hardlink-to-new-overlay-only"
+    }
+  ],
+  "functions": [
+    {
+      "endLine": 25,
+      "text": "function Json($path) { Get-Content -LiteralPath $path -Raw | ConvertFrom-Json }",
+      "startLine": 25,
+      "name": "Json"
+    },
+    {
+      "endLine": 29,
+      "text": "function Save($name, $data) {\n    $stream = [IO.File]::Open(\"$out/$name\", [IO.FileMode]::CreateNew)\n    try { $bytes = [Text.UTF8Encoding]::new($false).GetBytes((ConvertTo-Json -InputObject $data -Depth 16)); $stream.Write($bytes, 0, $bytes.Length) } finally { $stream.Dispose() }\n}",
+      "startLine": 26,
+      "name": "Save"
+    },
+    {
+      "endLine": 30,
+      "text": "function Pin($path) { $f = Get-Item -LiteralPath $path; [pscustomobject]@{path=$f.FullName;bytes=$f.Length;sha256=(Get-FileHash -LiteralPath $f.FullName -Algorithm SHA256).Hash} }",
+      "startLine": 30,
+      "name": "Pin"
+    },
+    {
+      "endLine": 31,
+      "text": "function Verify($pins) { foreach ($p in $pins) { $now = Pin $p.path; if ($now.bytes -ne $p.bytes -or $now.sha256 -cne $p.sha256) { throw \"Input drift: $($p.path)\" } } }",
+      "startLine": 31,
+      "name": "Verify"
+    },
+    {
+      "endLine": 37,
+      "text": "function NativeAdmission {\n    $os = Get-CimInstance Win32_OperatingSystem\n    $used = 100 * (1 - $os.FreePhysicalMemory / $os.TotalVisibleMemorySize)\n    $freeGiB = $os.FreePhysicalMemory / 1MB\n    if ($used -ge 70 -or $freeGiB -lt 10) { throw \"Native admission requires RAM <70% and >=10 GiB free: used=$used freeGiB=$freeGiB\" }\n}",
+      "startLine": 32,
+      "name": "NativeAdmission"
+    },
+    {
+      "endLine": 104,
+      "text": "function Resources {\n    $os = Get-CimInstance Win32_OperatingSystem\n    $used = 100 * (1 - $os.FreePhysicalMemory / $os.TotalVisibleMemorySize)\n    if ($used -ge 80) { throw \"RAM guard: $used\" }\n    $jobs = @(Get-CimInstance Win32_Process | Where-Object { $_.Name -match '^(cmake|MSBuild|cl|link|ctest|AzTestRunner|Editor|AssetProcessor|AssetProcessorBatch|AssetBuilder|JEEditorFixture\\.GameLauncher|AssetBundler|AssetBundlerBatch|MaterialEditor|MaterialCanvas|PassCanvas|ShaderManagementConsole|JENativeSdkConsumer)\\.exe$' })\n    if ($jobs.Count) { throw 'Another native phase is active; preserve its ownership.' }\n}",
+      "startLine": 98,
+      "name": "Resources"
+    },
+    {
+      "endLine": 138,
+      "text": "function Run($phase, $exe, $arguments, $cwd, $pathValue = $null, $timeoutMs = 1800000) {\n    Resources\n    NativeAdmission\n    $info = [Diagnostics.ProcessStartInfo]::new(); $info.FileName = $exe; $info.WorkingDirectory = $cwd\n    $info.UseShellExecute = $false; $info.CreateNoWindow = $true; $info.RedirectStandardOutput = $true; $info.RedirectStandardError = $true\n    $info.Environment['MSBUILDDISABLENODEREUSE'] = '1'\n    if ($pathValue) { $info.Environment['PATH'] = $pathValue }\n    foreach ($arg in $arguments) { $info.ArgumentList.Add([string]$arg) }\n    $process = [Diagnostics.Process]::new(); $process.StartInfo = $info\n    $clock = [Diagnostics.Stopwatch]::StartNew()\n    if (!$process.Start()) { throw \"Cannot start $phase\" }\n    $ownedPid = $process.Id; $creation = $process.StartTime.ToUniversalTime()\n    Save \"$phase.start.json\" @{pid=$ownedPid;creationUtc=$creation.ToString('o');executable=$exe;argv=@($arguments);cwd=$cwd;path=$pathValue}\n    $stdout = $process.StandardOutput.ReadToEndAsync(); $stderr = $process.StandardError.ReadToEndAsync()\n    $priorityError = $null\n    try { $process.PriorityClass = [Diagnostics.ProcessPriorityClass]::BelowNormal } catch { $priorityError = $_.Exception.Message }\n    $guard = $false; $timedOut = $false\n    while (!$process.WaitForExit(3000)) {\n        $os = Get-CimInstance Win32_OperatingSystem\n        $guard = (100 * (1 - $os.FreePhysicalMemory / $os.TotalVisibleMemorySize)) -ge 80\n        $timedOut = $clock.ElapsedMilliseconds -ge $timeoutMs\n        if ($guard -or $timedOut -or $priorityError) {\n            $identity = Get-CimInstance Win32_Process -Filter \"ProcessId=$ownedPid\"\n            if ($identity -and ([IO.Path]::GetFullPath($identity.ExecutablePath) -ine [IO.Path]::GetFullPath($exe) -or [Math]::Abs((([DateTime]$identity.CreationDate).ToUniversalTime() - $creation).TotalMilliseconds) -ge 1000)) { throw 'PID identity changed; cannot terminate safely.' }\n            if (!$process.HasExited) { $process.Kill($true) }; break\n        }\n    }\n    $process.WaitForExit(); $code = $process.ExitCode; $clock.Stop()\n    [IO.File]::WriteAllText(\"$out/$phase.stdout.log\", $stdout.GetAwaiter().GetResult())\n    [IO.File]::WriteAllText(\"$out/$phase.stderr.log\", $stderr.GetAwaiter().GetResult())\n    Save \"$phase.result.json\" @{exitCode=$code;seconds=$clock.Elapsed.TotalSeconds;ramGuardTriggered=$guard;timedOut=$timedOut;priorityRequested='BelowNormal';priorityError=$priorityError;stdout=(Pin \"$out/$phase.stdout.log\");stderr=(Pin \"$out/$phase.stderr.log\")}\n    $process.Dispose()\n    if ($code -ne 0 -or $guard -or $timedOut -or $priorityError) { throw \"Native phase failed: $phase, exit=$code, RAM=$guard, timeout=$timedOut\" }\n}",
+      "startLine": 105,
+      "name": "Run"
+    }
+  ],
+  "status": "READY_TO_EXECUTE_ONLY_WITH_PARENT_LEASE",
+  "boundary16": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atom-next-native-scope-rev1\\validation-preparation\\sdk-bootstrap96-runner\\recipe96.json",
+      "bytes": 10044,
+      "sha256": "6FCFEE70E4815943E3C53DD78298F27F5AD12103EE492AD61F7318D9E237E8D2"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atom-next-native-scope-rev1\\validation-preparation\\sdk-bootstrap96-runner\\run-sdk-bootstrap96.ps1",
+      "bytes": 38697,
+      "sha256": "2D7923F74BF21D856063251EBA2EF123C33A1A844DB5052618ED28B46B05A9CD"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atom-next-native-scope-rev1\\validation-preparation\\sdk-bootstrap-contract93-candidate\\source\\main.cpp",
+      "bytes": 17520,
+      "sha256": "B5CFA152DB530A01A4F0FF2634F2F3EF4AA88E10D5157629EB274CA79193A0B6"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atom-next-native-scope-rev1\\validation-preparation\\sdk-bootstrap-contract93-candidate\\source\\CMakeLists.txt",
+      "bytes": 3187,
+      "sha256": "327D11194D303C0873B1A627F284F2911032FCAFB3E7FC26D9801E6320A0685D"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atom-next-native-scope-rev1\\validation-preparation\\sdk-bootstrap-contract93-candidate\\source\\consumer_files.cmake",
+      "bytes": 25,
+      "sha256": "2F0ACA6BAD0CF988A388EC9D4664ED2E2D507B4E03958E23730768D314E3006E"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atom-next-native-scope-rev1\\validation-preparation\\sdk-bootstrap-contract93-candidate\\source\\project.json",
+      "bytes": 388,
+      "sha256": "3A7625CD2BE22DFD8B3C36C4C68932693611513A980111870371A291F12197C4"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atom-next-native-scope-rev1\\validation-preparation\\parent-approved-r2\\execution-bootstrap96-attempt1\\sdk-final-inventory.json",
+      "bytes": 2303616,
+      "sha256": "668580281C7653BF11DC3DF359022C3727CB93DA7F4134725E0BCBBDF0DCEE20"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atom-next-native-scope-rev1\\validation-preparation\\parent-approved-r2\\execution-bootstrap96-attempt1\\loader.result.json",
+      "bytes": 952,
+      "sha256": "623EE4909513DA6A62BBE430F0C7B6B066E7B51AEC6EC96988A8077A8E851D6E"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-vk96\\Engine\\Render\\Integration\\Platform\\Windows\\Default\\RenderIntegration_profile.cmake",
+      "bytes": 725,
+      "sha256": "04395976E2CBF67DCD9E289CE21FF735EEAC0A36D21173BE3EDC67E0161F4D65"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-vk96\\Engine\\Render\\Integration\\Platform\\Windows\\Default\\permutation.cmake",
+      "bytes": 1356,
+      "sha256": "6E7043BC836915BE03EFED466CBDF137B85607C418F5DB97C764FA3C2EC2951F"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-vk96\\Editor\\Render\\Integration\\Platform\\Windows\\Default\\EditorRenderIntegration_profile.cmake",
+      "bytes": 773,
+      "sha256": "2F648DAA217B6950668412CF96F11C5E440A92A884909226D1F18740AA0BD0BD"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-vk96\\Editor\\Render\\Integration\\Platform\\Windows\\Default\\permutation.cmake",
+      "bytes": 867,
+      "sha256": "4CD0336913EA77D69D0945E20050A2589B95BDCBF66E60D4777B21C6F2470B07"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-vk96\\Engine\\Render\\Integration\\Include\\JE\\Render\\Integration\\RenderIntegrationModule.h",
+      "bytes": 1109,
+      "sha256": "E8CB431FBE07683DB628A01B8F6DC337D205738641098851B5349EF396677755"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-vk96\\Editor\\Render\\Integration\\Include\\JE\\Editor\\RenderIntegration\\RenderIntegrationModule.h",
+      "bytes": 352,
+      "sha256": "27BE154DA54ADEA4AE1D56D9CB8E513DAF9A677111B560539C7F2D191CA571A1"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-vk96\\lib\\Windows\\profile\\Default\\RenderIntegration.lib",
+      "bytes": 226512,
+      "sha256": "FE1A0FE12FD3399735943AA1F044575ABEDDDBB38EFA2972259C39EEE8AE4E7A"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-vk96\\lib\\Windows\\profile\\Default\\EditorRenderIntegration.lib",
+      "bytes": 131852,
+      "sha256": "3F4D444B16890F2452C5A8E5B40CA4DCC8D6955B86CA2DB031AE63F134B5308D"
+    }
+  ],
+  "binding": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\parent-sdk98-delta-binding-r5.json",
+    "bytes": 6006,
+    "sha256": "481564C33C6DEC28EDE9CECDA727B6971B54219772954039ABE2F70B9F693FF0"
+  },
+  "source6": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atom-next-native-scope-rev1\\validation-preparation\\atom-rpi98-sdk-delta-candidate\\source\\CMakeLists.txt",
+      "bytes": 5603,
+      "sha256": "69975FE551C5632CBFFC94F76DA5B78990C5C95F405C876F8DA175643F5A114D"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atom-next-native-scope-rev1\\validation-preparation\\atom-rpi98-sdk-delta-candidate\\source\\consumer_files.cmake",
+      "bytes": 25,
+      "sha256": "2F0ACA6BAD0CF988A388EC9D4664ED2E2D507B4E03958E23730768D314E3006E"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atom-next-native-scope-rev1\\validation-preparation\\atom-rpi98-sdk-delta-candidate\\source\\main.cpp",
+      "bytes": 21527,
+      "sha256": "E60118196720630A279BBF40B46EAC15087A67899F110A2F4963B2F2174ED093"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atom-next-native-scope-rev1\\validation-preparation\\atom-rpi98-sdk-delta-candidate\\source\\project.json",
+      "bytes": 388,
+      "sha256": "3A7625CD2BE22DFD8B3C36C4C68932693611513A980111870371A291F12197C4"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atom-next-native-scope-rev1\\validation-preparation\\atom-rpi98-sdk-delta-candidate\\headers\\JE\\Editor\\RenderIntegration\\RenderIntegrationModule.h",
+      "relative": "JE/Editor/RenderIntegration/RenderIntegrationModule.h",
+      "bytes": 427,
+      "sha256": "352D95EA3BC55CE6B41F67CFC812F64E6334CD6B5C5892108792B00582CD0E2C"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atom-next-native-scope-rev1\\validation-preparation\\atom-rpi98-sdk-delta-candidate\\headers\\JE\\Render\\Integration\\RenderIntegrationModule.h",
+      "relative": "JE/Render/Integration/RenderIntegrationModule.h",
+      "bytes": 1178,
+      "sha256": "1B830A371CDDB0C15965DAF75DBACBEF5F7652AFED7161B76E874E8D924AC074"
+    }
+  ],
+  "publicEvidence": {
+    "status": "MEASURED_PARENT_PROVIDED_NOT_EXECUTED_SDK",
+    "publicBodyDllPin": {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_RPI.Public.dll",
+      "bytes": 7858688,
+      "sha256": "F10958165992BB366C032CABF192738069D53B5A9EE0443D9BEDF22E48527D45"
+    },
+    "publicPeProofPin": {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\pe-boundary\\review.json",
+      "bytes": 7525,
+      "sha256": "DF4845E31CEF803BBE5F023761C18ECDD730927094F13E0DFC0C9046F50AEA64"
+    },
+    "publicXmlPin": {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\green-r4-tests-attempt1\\Gem_Atom_RPI.Tests.xml",
+      "bytes": 195629,
+      "sha256": "6DA2F3C6082E4C390132DD1E786B2E29BA70E678A27B9C6E8341936B4213423F"
+    },
+    "freezePin": {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\freeze98-green-r5.json",
+      "bytes": 3496137,
+      "sha256": "D3C81B7804AB0658D82D319F7C109D025665FC3AE3B6C3EF1F35C9FB0898BA0A"
+    },
+    "publicCases": 576,
+    "publicNotCompletedOrFailed": 0,
+    "sdkBoundaryPins": [
+      {
+        "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-vk96\\Gems\\Atom\\RPI\\Code\\Platform\\Windows\\Default\\permutation.cmake",
+        "bytes": 4074,
+        "sha256": "679597268FDCBAA9359AA527F27E5638D7AB17242489C24E7A23AD7DA2DD4465"
+      },
+      {
+        "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-vk96\\Gems\\Atom\\RPI\\Code\\Platform\\Windows\\Default\\Atom_RPI.Public_profile.cmake",
+        "bytes": 709,
+        "sha256": "272F56CEBE639D6DF82A9C53DF3CBED0DF950116EB4F33B960CC467451E472A5"
+      },
+      {
+        "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-vk96\\lib\\Windows\\profile\\Default\\Atom_RPI.Public.lib",
+        "bytes": 3865542,
+        "sha256": "D103ABDBE2F1BD14B7C986F6E5A933F8406BB721AD84B044B918D424D947DC09"
+      }
+    ],
+    "actualImportedTarget": "Atom_RPI.Public",
+    "alias": "Gem::Atom_RPI.Public",
+    "overrideProperty": "IMPORTED_LOCATION_PROFILE",
+    "retainedProperty": "IMPORTED_IMPLIB_PROFILE",
+    "report": "rpi-body-provider-profile.txt"
+  },
+  "greenCases": [
+    "RenderIntegrationTests.RuntimeFactoryPreservesIdentityDescriptorsAndRendererServices",
+    "RenderIntegrationTests.BootstrapFactoryPreservesLegacyIdentityDescriptorServicesAndReflection",
+    "RenderIntegrationTests.BootstrapDescriptorOnlyFactoryDoesNotRequireOrActivateRenderer",
+    "RenderIntegrationTests.FlyCameraXmlRoundTripPreservesLegacyIdentityAndAllFields",
+    "RenderIntegrationTests.FlyCameraBusLifecycleAndDisabledTickPreserveExistingTransform",
+    "RenderIntegrationTests.DynamicDrawOwnerRegistersDisconnectsAndRejectsUnknownNamesWithoutGpuWork",
+    "RenderIntegrationTests.NativeRpiRuntimeFactoryPreservesRegistrationAndLifecycle",
+    "RenderIntegrationTests.NativeRpiDescriptorRoundTripPreservesDefaultsAndPartialRegistryOverrides",
+    "EditorRenderIntegration.AuthoringFactoryPreservesRuntimeDescriptorsExactlyOnceAndEditorSchema",
+    "EditorRenderIntegration.AssetProcessingFactoryPreservesDescriptorsAndSchemaWithoutRendererActivation",
+    "EditorRenderIntegration.NativeRpiEditorFactoryPreservesRegistrationAndLifecycle",
+    "EditorRenderIntegration.NativeRpiDescriptorRoundTripPreservesDefaultsAndPartialRegistryOverrides"
+  ]
+}

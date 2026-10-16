@@ -1,0 +1,38 @@
+{
+  "cdbPid": 5380,
+  "cdbCreationUtc": "2026-10-16T22:55:39.9986799Z",
+  "cdbExit": 1,
+  "debuggee": {
+    "pid": 11852,
+    "parentPid": 5380,
+    "creationUtc": "2026-10-16T22:55:40.4557410Z",
+    "executable": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AzTestRunner.exe",
+    "commandLine": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AzTestRunner.exe F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\RenderIntegration.Tests.dll AzRunUnitTests --gtest_filter=RenderIntegrationTests.NativeRpiRuntimeFactoryPreservesRegistrationAndLifecycle --gtest_output=xml:F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\thread-shutdown-diagnostic\\cdb-attempt1\\diagnostic.xml"
+  },
+  "debuggeeHasExited": null,
+  "debuggeeExit": null,
+  "elapsedSeconds": 1.16,
+  "timedOut45": false,
+  "ramGuardTriggered": false,
+  "termination": [],
+  "samples": [
+    {
+      "utc": "2026-10-16T22:55:41.1798522Z",
+      "ramUsedPercent": 43.5,
+      "freeGiB": 18.03,
+      "debuggee": {
+        "pid": 11852,
+        "parentPid": 5380,
+        "creationUtc": "2026-10-16T22:55:40.4557410Z",
+        "executable": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AzTestRunner.exe",
+        "commandLine": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AzTestRunner.exe F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\RenderIntegration.Tests.dll AzRunUnitTests --gtest_filter=RenderIntegrationTests.NativeRpiRuntimeFactoryPreservesRegistrationAndLifecycle --gtest_output=xml:F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\thread-shutdown-diagnostic\\cdb-attempt1\\diagnostic.xml"
+      }
+    }
+  ],
+  "cdbLogSha256": "AE2B4F9AC6DBE3AAEDAE22D701E05C2EF7DA12FB2223CFD7F14F231DA579D60C",
+  "cdbStdoutSha256": "103C660B0C80F0674501E3E8CA6F98FF305C7437D936B2E11FA300DE8F24669B",
+  "cdbStderrSha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+  "cdbLogBytes": 22115,
+  "stdoutBytes": 22067,
+  "stderrBytes": 0
+}

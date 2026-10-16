@@ -1,0 +1,32 @@
+{
+  "utc": "2026-10-16T23:33:24.2425250Z",
+  "owner": "/root",
+  "status": "R5_SOURCE_PRESERVED_EDITOR_MATERIAL_RUNTIME_VULKAN_PASS_SDK_DELTA_PENDING",
+  "freezeSHA256": "D3C81B7804AB0658D82D319F7C109D025665FC3AE3B6C3EF1F35C9FB0898BA0A",
+  "inputCount": 14063,
+  "inputDrift": [],
+  "absentCount": 61,
+  "unexpectedPresent": [],
+  "protectedCount": 86,
+  "protectedDrift": [],
+  "protectedAbsenceCount": 73,
+  "protectedUnexpectedPresent": [],
+  "hostProviderCount": 13,
+  "hostProviderDrift": [],
+  "nativeProcesses": [],
+  "actualNativeTestCasesReused": 588,
+  "testCodeAndProvidersUnchangedAfterR4": true,
+  "editorVulkanNativeExit": 0,
+  "runtimeVulkanNativeExit": 0,
+  "assetDiscoveryRed": "AssetStatus_Missing1 and9productsremoved, EditorAV",
+  "assetDiscoveryGreen": "SourceProcessing-to-Processed/new9products, real Editor and runtime draw",
+  "wholeSdkReplays": 0,
+  "wholeGemIncrement": 0,
+  "limits": [
+    "Global AP338 failed jobs remain",
+    "No fresh RunKey/UUID for focal AP job: source events/products only",
+    "Partial RPI: Public/Edit/assets/gem manifest retained",
+    "No Linux,VR/Shipping/Beauty/performance acceptance",
+    "WIP-based validation; no clean HEAD replay"
+  ]
+}

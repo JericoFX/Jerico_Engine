@@ -1,0 +1,111 @@
+{
+  "capturedUtc": "2026-10-16T23:05:04.1483926Z",
+  "freezePath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\freeze98-green-r4.json",
+  "freezeSha256": "493CF7F87E7F3684A4051AB0ADCCDDDCFEA2A5C99AD269E173AD1F94B139B7FF",
+  "freezeExpectedSha256": "493CF7F87E7F3684A4051AB0ADCCDDDCFEA2A5C99AD269E173AD1F94B139B7FF",
+  "inputCountExpected": 14062,
+  "inputMismatchCount": 0,
+  "inputMismatches": [],
+  "expectedAbsentCount": 61,
+  "unexpectedPresentCount": 0,
+  "unexpectedlyPresent": [],
+  "xml": [
+    {
+      "name": "JE_RenderIntegration.Tests.xml",
+      "bytes": 2828,
+      "sha256": "21AF3AAEEACADE1882157294B3DD884A258B3C1C49607800BD942CD29309113F",
+      "testcases": 8,
+      "failures": 0,
+      "errors": 0,
+      "skips": 0,
+      "nonRunOrIncomplete": 0
+    },
+    {
+      "name": "JE_EditorRenderIntegration.Tests.xml",
+      "bytes": 1611,
+      "sha256": "AC99666E9A2445BBE99B877198BE711DB95DE2E03DAB1A90624A37F33977E4ED",
+      "testcases": 4,
+      "failures": 0,
+      "errors": 0,
+      "skips": 0,
+      "nonRunOrIncomplete": 0
+    },
+    {
+      "name": "Gem_Atom_RPI.Tests.xml",
+      "bytes": 195629,
+      "sha256": "6DA2F3C6082E4C390132DD1E786B2E29BA70E678A27B9C6E8341936B4213423F",
+      "testcases": 576,
+      "failures": 0,
+      "errors": 0,
+      "skips": 0,
+      "nonRunOrIncomplete": 0
+    }
+  ],
+  "caseCount": 588,
+  "uniqueCaseCount": 588,
+  "duplicateCaseCount": 0,
+  "casesNotRunOrIncomplete": [],
+  "caseFailuresAndErrors": [],
+  "binaryPins": [
+    {
+      "name": "RenderIntegration.Tests.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\RenderIntegration.Tests.dll",
+      "bytes": 726528,
+      "mtimeUtc": "2026-10-16T23:00:58.4513822Z",
+      "sha256": "06F832A83695C1E948C3C9A528A5C477AF4D1B3B7A046F9B59C254F4F92E5B52"
+    },
+    {
+      "name": "EditorRenderIntegration.Tests.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\EditorRenderIntegration.Tests.dll",
+      "bytes": 600576,
+      "mtimeUtc": "2026-10-16T23:01:11.3587584Z",
+      "sha256": "A39DAA8DC9B51168EDF041984A932EB7BB7A0E86FD9681107F89BF099E72963A"
+    },
+    {
+      "name": "Atom_RPI.Tests.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_RPI.Tests.dll",
+      "bytes": 5017600,
+      "mtimeUtc": "2026-10-16T20:09:47.5207869Z",
+      "sha256": "1F57AB88B0A23A782F77E22F0F7298493CC0C228569793974E8830255C066053"
+    },
+    {
+      "name": "RenderIntegration.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\RenderIntegration.dll",
+      "bytes": 986624,
+      "mtimeUtc": "2026-10-16T22:32:44.1837266Z",
+      "sha256": "07985010C1315BA0477E8F2660DCD2A837A93DFFAC1E6D0D7E8D7A0F0A098E10"
+    },
+    {
+      "name": "EditorRenderIntegration.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\EditorRenderIntegration.dll",
+      "bytes": 835584,
+      "mtimeUtc": "2026-10-16T22:33:37.5604016Z",
+      "sha256": "98FA5315F3C33748F526301E28D27C1B02D55406AEE2A85432651697E9179B3D"
+    },
+    {
+      "name": "Atom_RPI.Public.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_RPI.Public.dll",
+      "bytes": 7858688,
+      "mtimeUtc": "2026-10-16T23:00:38.9417615Z",
+      "sha256": "F10958165992BB366C032CABF192738069D53B5A9EE0443D9BEDF22E48527D45"
+    },
+    {
+      "name": "AzTestRunner.exe",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AzTestRunner.exe",
+      "bytes": 105984,
+      "mtimeUtc": "2026-10-15T12:38:38.1516236Z",
+      "sha256": "A0D0294309F7965E88A102F83B37923F1B7D52DC0ABC464A69D7D293D681FA72"
+    }
+  ],
+  "hostProviderPinCount": 13,
+  "hostProviderPinDrift": [],
+  "nativeProcesses": [],
+  "ram": {
+    "usedPercent": 43.76,
+    "freeGiB": 17.95
+  },
+  "ctestResultSha256": "7EED3AC3B11EF63C00D286DC2E4BF999C111D1FA248DAC3DBC53C9536AFCFCDC",
+  "ctestStdoutSha256": "3E0D135E44B08E3C7B7C6FAF327B3447527A0130DB9B78F43683FAABFC67EC6D",
+  "ctestStderrSha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+  "buildResultSha256": "35E81BDE3697B2BA9AB80ED4EC6036625F19FBA83BC682A39366BF12E6004D82"
+}

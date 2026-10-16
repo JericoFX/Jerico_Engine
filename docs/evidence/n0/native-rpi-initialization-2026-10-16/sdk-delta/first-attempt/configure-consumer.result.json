@@ -1,0 +1,18 @@
+{
+  "stdout": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atom-next-native-scope-rev1\\validation-preparation\\atom-rpi98-sdk-delta-candidate\\execution-delta98-attempt1\\configure-consumer.stdout.log",
+    "bytes": 8306,
+    "sha256": "130AE47163480E299376F110BC4B92DFBBBD703E8390A44006BAB666DF6DFF70"
+  },
+  "priorityRequested": "BelowNormal",
+  "seconds": 28.2685426,
+  "ramGuardTriggered": false,
+  "stderr": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atom-next-native-scope-rev1\\validation-preparation\\atom-rpi98-sdk-delta-candidate\\execution-delta98-attempt1\\configure-consumer.stderr.log",
+    "bytes": 2741,
+    "sha256": "C31957D2F47E5165E6C8381975E7951533354C114E0CBD2FAD302E556D2DF6C0"
+  },
+  "exitCode": 0,
+  "timedOut": false,
+  "priorityError": null
+}

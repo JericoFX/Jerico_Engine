@@ -1,0 +1,21 @@
+{
+  "noGlobalCleanup": true,
+  "error": null,
+  "verificationErrors": [],
+  "phaseRoots": [
+    {
+      "creationUtc": "2026-10-16T23:47:27.0793109Z",
+      "stillSameIdentity": false,
+      "pid": 7560,
+      "livePidObserved": false
+    },
+    {
+      "creationUtc": "2026-10-16T23:47:26.3182838Z",
+      "stillSameIdentity": false,
+      "pid": 20240,
+      "livePidObserved": false
+    }
+  ],
+  "sdk96AndConsumer96NeverWrittenByWrapper": true,
+  "baseline32AndBoundary16Unchanged": true
+}

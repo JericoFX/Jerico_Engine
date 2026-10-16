@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="4" failures="2" disabled="0" errors="0" time="0.009" timestamp="2026-10-16T19:48:19.280" name="AllTests">
+  <testsuite name="EditorRenderIntegration" tests="4" failures="2" disabled="0" skipped="0" errors="0" time="0.009" timestamp="2026-10-16T19:48:19.280">
+    <testcase name="AuthoringFactoryPreservesRuntimeDescriptorsExactlyOnceAndEditorSchema" file="F:\JericoEngine\JericoEngine\Editor\Render\Integration\Tests\RenderIntegrationTests.cpp" line="54" status="run" result="completed" time="0.001" timestamp="2026-10-16T19:48:19.280" classname="EditorRenderIntegration" />
+    <testcase name="AssetProcessingFactoryPreservesDescriptorsAndSchemaWithoutRendererActivation" file="F:\JericoEngine\JericoEngine\Editor\Render\Integration\Tests\RenderIntegrationTests.cpp" line="94" status="run" result="completed" time="0." timestamp="2026-10-16T19:48:19.282" classname="EditorRenderIntegration" />
+    <testcase name="NativeRpiEditorFactoryPreservesRegistrationAndLifecycle" file="F:\JericoEngine\JericoEngine\Editor\Render\Integration\Tests\RenderIntegrationTests.cpp" line="133" status="run" result="completed" time="0." timestamp="2026-10-16T19:48:19.283" classname="EditorRenderIntegration">
+      <failure message="F:/JericoEngine/JericoEngine/Code/Framework/AzCore/Platform/Common/WinAPI/AzCore/std/parallel/internal/thread_WinAPI.cpp:107&#x0A;Thread must be joinable!&#x0A;" type=""><![CDATA[F:/JericoEngine/JericoEngine/Code/Framework/AzCore/Platform/Common/WinAPI/AzCore/std/parallel/internal/thread_WinAPI.cpp:107
+Thread must be joinable!
+]]></failure>
+      <failure message="F:/JericoEngine/JericoEngine/Code/Framework/AzCore/Platform/Common/WinAPI/AzCore/std/parallel/internal/thread_WinAPI.cpp:107&#x0A;Thread must be joinable!&#x0A;" type=""><![CDATA[F:/JericoEngine/JericoEngine/Code/Framework/AzCore/Platform/Common/WinAPI/AzCore/std/parallel/internal/thread_WinAPI.cpp:107
+Thread must be joinable!
+]]></failure>
+    </testcase>
+    <testcase name="NativeRpiDescriptorRoundTripPreservesDefaultsAndPartialRegistryOverrides" file="F:\JericoEngine\JericoEngine\Editor\Render\Integration\Tests\RenderIntegrationTests.cpp" line="177" status="run" result="completed" time="0.006" timestamp="2026-10-16T19:48:19.283" classname="EditorRenderIntegration">
+      <failure message="F:/JericoEngine/JericoEngine/Code/Framework/AzCore/Platform/Common/WinAPI/AzCore/std/parallel/internal/thread_WinAPI.cpp:107&#x0A;Thread must be joinable!&#x0A;" type=""><![CDATA[F:/JericoEngine/JericoEngine/Code/Framework/AzCore/Platform/Common/WinAPI/AzCore/std/parallel/internal/thread_WinAPI.cpp:107
+Thread must be joinable!
+]]></failure>
+      <failure message="F:/JericoEngine/JericoEngine/Code/Framework/AzCore/AzCore/Serialization/Json/RegistrationContext.cpp:18&#x0A;JsonRegistrationContext is being destroyed without unreflecting all serializers. Check your reflection functions.&#x0A;" type=""><![CDATA[F:/JericoEngine/JericoEngine/Code/Framework/AzCore/AzCore/Serialization/Json/RegistrationContext.cpp:18
+JsonRegistrationContext is being destroyed without unreflecting all serializers. Check your reflection functions.
+]]></failure>
+      <failure message="F:/JericoEngine/JericoEngine/Code/Framework/AzCore/AzCore/Serialization/Json/RegistrationContext.cpp:19&#x0A;JsonRegistrationContext is being destroyed without unreflecting all serializers. Check your reflection functions.&#x0A;" type=""><![CDATA[F:/JericoEngine/JericoEngine/Code/Framework/AzCore/AzCore/Serialization/Json/RegistrationContext.cpp:19
+JsonRegistrationContext is being destroyed without unreflecting all serializers. Check your reflection functions.
+]]></failure>
+      <failure message="F:/JericoEngine/JericoEngine/Code/Framework/AzCore/Platform/Common/WinAPI/AzCore/std/parallel/internal/thread_WinAPI.cpp:107&#x0A;Thread must be joinable!&#x0A;" type=""><![CDATA[F:/JericoEngine/JericoEngine/Code/Framework/AzCore/Platform/Common/WinAPI/AzCore/std/parallel/internal/thread_WinAPI.cpp:107
+Thread must be joinable!
+]]></failure>
+    </testcase>
+  </testsuite>
+</testsuites>

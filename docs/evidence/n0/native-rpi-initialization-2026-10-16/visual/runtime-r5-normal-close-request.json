@@ -1,0 +1,7 @@
+{
+  "utc": "2026-10-16T23:32:11.1517823Z",
+  "pid": 16892,
+  "creationUtc": "2026-10-16T23:31:50.1324230Z",
+  "method": "Normal OS WM_CLOSE through System.Diagnostics.Process.CloseMainWindow; lifecycle harness, no force",
+  "returned": true
+}

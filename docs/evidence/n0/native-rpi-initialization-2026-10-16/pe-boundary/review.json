@@ -1,0 +1,146 @@
+{
+  "utc": "2026-10-16T23:05:50.0333734Z",
+  "owner": "/root",
+  "publicBodyOnlyDelta": true,
+  "publicExportOrdinalsCompared": 7836,
+  "publicAbiDiffCount": 0,
+  "publicDependentsSame": true,
+  "publicDependents": [
+    "api-ms-win-crt-convert-l1-1-0.dll",
+    "api-ms-win-crt-heap-l1-1-0.dll",
+    "api-ms-win-crt-math-l1-1-0.dll",
+    "api-ms-win-crt-runtime-l1-1-0.dll",
+    "api-ms-win-crt-stdio-l1-1-0.dll",
+    "api-ms-win-crt-string-l1-1-0.dll",
+    "atom_rhi.public.dll",
+    "atom_rhi.reflect.dll",
+    "azcore.dll",
+    "azframework.dll",
+    "kernel32.dll",
+    "msvcp140.dll",
+    "vcruntime140.dll"
+  ],
+  "nativeFactoryExportsPresent": true,
+  "performanceCvars": [
+    {
+      "name": "r_metricsDataLogType",
+      "runtimeExport": true,
+      "editorExport": false,
+      "editorImport": true
+    },
+    {
+      "name": "r_metricsWaitTimePerCaptureBatch",
+      "runtimeExport": true,
+      "editorExport": false,
+      "editorImport": true
+    },
+    {
+      "name": "r_metricsFrameCountPerCaptureBatch",
+      "runtimeExport": true,
+      "editorExport": false,
+      "editorImport": true
+    },
+    {
+      "name": "r_metricsMeasureGpuTime",
+      "runtimeExport": true,
+      "editorExport": false,
+      "editorImport": true
+    },
+    {
+      "name": "r_metricsQuitUponCompletion",
+      "runtimeExport": true,
+      "editorExport": false,
+      "editorImport": true
+    },
+    {
+      "name": "r_metricsNumberOfCaptureBatches",
+      "runtimeExport": true,
+      "editorExport": false,
+      "editorImport": true
+    }
+  ],
+  "nativeProcessesStarted": "nine short-lived dumpbin reads only",
+  "results": [
+    {
+      "name": "runtime-exports",
+      "nativeExit": 0,
+      "input": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile/RenderIntegration.dll",
+      "inputSHA256": "07985010C1315BA0477E8F2660DCD2A837A93DFFAC1E6D0D7E8D7A0F0A098E10",
+      "stdout": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\pe-boundary\\runtime-exports.stdout.log",
+      "stdoutSHA256": "2BD42AFCA175993BF5A888EC9F12AE9FE9BC8E6D939FBB59261AEBC0DD6565C5",
+      "stderr": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\pe-boundary\\runtime-exports.stderr.log"
+    },
+    {
+      "name": "editor-exports",
+      "nativeExit": 0,
+      "input": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile/EditorRenderIntegration.dll",
+      "inputSHA256": "98FA5315F3C33748F526301E28D27C1B02D55406AEE2A85432651697E9179B3D",
+      "stdout": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\pe-boundary\\editor-exports.stdout.log",
+      "stdoutSHA256": "8257927133B50954FDD8FFD39DFA1F1C6CADA5FA674CE0560ED31AD5C4D9157E",
+      "stderr": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\pe-boundary\\editor-exports.stderr.log"
+    },
+    {
+      "name": "editor-imports",
+      "nativeExit": 0,
+      "input": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile/EditorRenderIntegration.dll",
+      "inputSHA256": "98FA5315F3C33748F526301E28D27C1B02D55406AEE2A85432651697E9179B3D",
+      "stdout": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\pe-boundary\\editor-imports.stdout.log",
+      "stdoutSHA256": "B6F87E497B3630FEA7C7E6412DE06843315CEBCE77174B1734043EC7C0F65D29",
+      "stderr": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\pe-boundary\\editor-imports.stderr.log"
+    },
+    {
+      "name": "public-current-exports",
+      "nativeExit": 0,
+      "input": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile/Atom_RPI.Public.dll",
+      "inputSHA256": "F10958165992BB366C032CABF192738069D53B5A9EE0443D9BEDF22E48527D45",
+      "stdout": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\pe-boundary\\public-current-exports.stdout.log",
+      "stdoutSHA256": "16CDE120DFE3574162C6FE45E0AF7127B1DC689837A23F2E9047E108E216CE42",
+      "stderr": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\pe-boundary\\public-current-exports.stderr.log"
+    },
+    {
+      "name": "public-baseline-exports",
+      "nativeExit": 0,
+      "input": "F:\\JericoEngine\\JericoEngine\\build\\sdk-vk96\\bin\\Windows\\profile\\Default/Atom_RPI.Public.dll",
+      "inputSHA256": "D651A668A35752ED1F8A707782891F79A9EF23D0BE05F05CCFC0A142BD9218E5",
+      "stdout": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\pe-boundary\\public-baseline-exports.stdout.log",
+      "stdoutSHA256": "4420C300308A3D8D01C048B21C5D3CFC0AEB352B973F7807F309B41F74310636",
+      "stderr": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\pe-boundary\\public-baseline-exports.stderr.log"
+    },
+    {
+      "name": "public-current-dependents",
+      "nativeExit": 0,
+      "input": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile/Atom_RPI.Public.dll",
+      "inputSHA256": "F10958165992BB366C032CABF192738069D53B5A9EE0443D9BEDF22E48527D45",
+      "stdout": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\pe-boundary\\public-current-dependents.stdout.log",
+      "stdoutSHA256": "EBD5252F1DA63C0A86538F3D42F7DFAFF1D57F02D97CA78EA992AA6327748FCF",
+      "stderr": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\pe-boundary\\public-current-dependents.stderr.log"
+    },
+    {
+      "name": "public-baseline-dependents",
+      "nativeExit": 0,
+      "input": "F:\\JericoEngine\\JericoEngine\\build\\sdk-vk96\\bin\\Windows\\profile\\Default/Atom_RPI.Public.dll",
+      "inputSHA256": "D651A668A35752ED1F8A707782891F79A9EF23D0BE05F05CCFC0A142BD9218E5",
+      "stdout": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\pe-boundary\\public-baseline-dependents.stdout.log",
+      "stdoutSHA256": "B04FC29958AD03D4DAD96ABCEF9E0C5238A4CD14F5C29CF92CC77FAE6A21DBD4",
+      "stderr": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\pe-boundary\\public-baseline-dependents.stderr.log"
+    },
+    {
+      "name": "runtime-dependents",
+      "nativeExit": 0,
+      "input": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile/RenderIntegration.dll",
+      "inputSHA256": "07985010C1315BA0477E8F2660DCD2A837A93DFFAC1E6D0D7E8D7A0F0A098E10",
+      "stdout": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\pe-boundary\\runtime-dependents.stdout.log",
+      "stdoutSHA256": "8EC3C5CE1961FAA6DA23A5F10DC82A78A27BC5852694F745AA35ED52C9373A29",
+      "stderr": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\pe-boundary\\runtime-dependents.stderr.log"
+    },
+    {
+      "name": "editor-dependents",
+      "nativeExit": 0,
+      "input": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile/EditorRenderIntegration.dll",
+      "inputSHA256": "98FA5315F3C33748F526301E28D27C1B02D55406AEE2A85432651697E9179B3D",
+      "stdout": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\pe-boundary\\editor-dependents.stdout.log",
+      "stdoutSHA256": "843F8A3E8A930B66913375FE0AC6466D32B715744BD2717574F6E0271A94DAEA",
+      "stderr": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\pe-boundary\\editor-dependents.stderr.log"
+    }
+  ]
+}

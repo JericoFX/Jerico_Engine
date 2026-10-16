@@ -1,0 +1,29 @@
+
+Dump of file F:\JericoEngine\JericoEngine\build\sdk-vk96\bin\Windows\profile\Default\Atom_RPI.Public.dll
+
+File Type: DLL
+
+  Image has the following dependencies:
+
+    AzCore.dll
+    AzFramework.dll
+    Atom_RHI.Public.dll
+    Atom_RHI.Reflect.dll
+    KERNEL32.dll
+    MSVCP140.dll
+    VCRUNTIME140.dll
+    api-ms-win-crt-runtime-l1-1-0.dll
+    api-ms-win-crt-heap-l1-1-0.dll
+    api-ms-win-crt-stdio-l1-1-0.dll
+    api-ms-win-crt-string-l1-1-0.dll
+    api-ms-win-crt-math-l1-1-0.dll
+    api-ms-win-crt-convert-l1-1-0.dll
+
+  Summary
+
+       9D000 .data
+       40000 .pdata
+      287000 .rdata
+        C000 .reloc
+        1000 .rsrc
+      456000 .text

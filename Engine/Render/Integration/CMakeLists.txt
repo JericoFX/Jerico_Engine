@@ -24,7 +24,7 @@ ly_add_target(
     COMPILE_DEFINITIONS PRIVATE JE_RENDER_INTEGRATION_EXPORTS ENABLE_ATOM_DEBUG_DISPLAY=1
     BUILD_DEPENDENCIES
         PUBLIC JE::RenderIntegration.Public
-        PRIVATE Legacy::CryCommon
+        PRIVATE Legacy::CryCommon Gem::Atom_RHI.Reflect
 )
 set_target_properties(RenderIntegration PROPERTIES UNITY_BUILD OFF)
 

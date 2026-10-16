@@ -1,0 +1,45 @@
+{
+  "schema": "je-sdk98-completion-static-v1",
+  "state": "HOLD_NOT_RUN",
+  "parserErrors": 0,
+  "nativeRunCalls": 2,
+  "nativeNames": [
+    "pe-imports",
+    "loader"
+  ],
+  "reusedSourceRanges": [
+    {
+      "first": "$runtime = Json $recipe.baselineRuntimePins",
+      "last": "function CopyPinned(",
+      "parserErrors": 0
+    },
+    {
+      "first": "    $reports = @(Get-ChildItem",
+      "last": "    Run 'build-consumer'",
+      "parserErrors": 0
+    },
+    {
+      "first": "    $commands = @(Get-ChildItem",
+      "last": "    $generated = ",
+      "parserErrors": 0
+    }
+  ],
+  "originalNativeTailByteExact": true,
+  "originalBindingPathCheckOnlyChange": "PSCommandPath to originalRunner in reused validation prefix",
+  "closedEvidencePins": 28,
+  "generatedBeforePins": 32,
+  "consumerExePdbPins": 2,
+  "inputPinsDrift": 0,
+  "onlyUnexpectedGeneratedCopies": "two authorized exact SDK96 old native providers",
+  "publicGeneratedAlreadyCurrent": true,
+  "originalRunnerAndRecipeUnchanged": true,
+  "outputAbsent": true,
+  "overlayExePdbAbsent": true,
+  "noNativeExecution": true,
+  "noCopiesPerformed": true,
+  "resources": {
+    "ramUsedPercent": 43.42,
+    "freeGiB": 18.06,
+    "taskOwnedPersistentHelpers": 0
+  }
+}

@@ -217,7 +217,10 @@ namespace AZ
             }
 
             m_workCondition.notify_one();
-            m_serviceThread.join();
+            if (m_serviceThread.joinable())
+            {
+                m_serviceThread.join();
+            }
             Data::AssetBus::MultiHandler::BusDisconnect();
 
             m_newShaderVariantPendingRequests.clear();

@@ -7,4 +7,5 @@
 namespace JE::Editor::RenderIntegration
 {
     JE_EDITOR_RENDER_INTEGRATION_API AZ::Module* CreateAuthoringModule();
+    JE_EDITOR_RENDER_INTEGRATION_API AZ::Module* CreateRpiEditorModule();
 }

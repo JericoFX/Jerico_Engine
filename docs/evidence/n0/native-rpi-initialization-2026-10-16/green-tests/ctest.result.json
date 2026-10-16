@@ -1,0 +1,227 @@
+{
+  "startedUtc": "2026-10-16T23:04:01.2648923Z",
+  "finishedUtc": "2026-10-16T23:04:20.5076220Z",
+  "elapsedSeconds": 19.243,
+  "pid": 10424,
+  "creationUtc": "2026-10-16T23:04:01.2668594Z",
+  "executable": "C:\\Program Files\\CMake\\bin\\ctest.exe",
+  "argv": [
+    "--test-dir",
+    "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine",
+    "-C",
+    "Profile",
+    "--output-on-failure",
+    "--no-tests=error",
+    "--parallel",
+    "1",
+    "-R",
+    "^(JE::RenderIntegration\\.Tests\\.main::TEST_RUN|JE::EditorRenderIntegration\\.Tests\\.main::TEST_RUN|Gem::Atom_RPI\\.Tests\\.main::TEST_RUN)$"
+  ],
+  "cwd": "F:\\JericoEngine\\JericoEngine",
+  "nativeExit": 0,
+  "ramGuardTriggered": false,
+  "timedOut180": false,
+  "peakUsedPercent": 43.93,
+  "ramAfter": {
+    "usedPercent": 43.61,
+    "freeGiB": 18.0
+  },
+  "stdoutSha256": "3E0D135E44B08E3C7B7C6FAF327B3447527A0130DB9B78F43683FAABFC67EC6D",
+  "stderrSha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+  "xml": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\Testing\\Gtest\\JE_RenderIntegration.Tests.xml",
+      "fresh": true,
+      "bytes": 2828,
+      "lastWriteUtc": "2026-10-16T23:04:20.4381655Z",
+      "sha256": "21AF3AAEEACADE1882157294B3DD884A258B3C1C49607800BD942CD29309113F",
+      "copy": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\green-r4-tests-attempt1\\JE_RenderIntegration.Tests.xml"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\Testing\\Gtest\\JE_EditorRenderIntegration.Tests.xml",
+      "fresh": true,
+      "bytes": 1611,
+      "lastWriteUtc": "2026-10-16T23:04:20.4806976Z",
+      "sha256": "AC99666E9A2445BBE99B877198BE711DB95DE2E03DAB1A90624A37F33977E4ED",
+      "copy": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\green-r4-tests-attempt1\\JE_EditorRenderIntegration.Tests.xml"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\Testing\\Gtest\\Gem_Atom_RPI.Tests.xml",
+      "fresh": true,
+      "bytes": 195629,
+      "lastWriteUtc": "2026-10-16T23:04:20.3901026Z",
+      "sha256": "6DA2F3C6082E4C390132DD1E786B2E29BA70E678A27B9C6E8341936B4213423F",
+      "copy": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\green-r4-tests-attempt1\\Gem_Atom_RPI.Tests.xml"
+    }
+  ],
+  "samples": [
+    {
+      "utc": "2026-10-16T23:04:04.5242012Z",
+      "usedPercent": 43.71,
+      "freeBytes": 19287437312,
+      "directChildren": [
+        {
+          "ProcessId": 10424,
+          "ParentProcessId": 21976,
+          "Name": "ctest.exe",
+          "ExecutablePath": "C:\\Program Files\\CMake\\bin\\ctest.exe",
+          "CreationDate": "2026-10-16T20:04:01.266859-03:00"
+        },
+        {
+          "ProcessId": 14776,
+          "ParentProcessId": 10424,
+          "Name": "conhost.exe",
+          "ExecutablePath": "C:\\WINDOWS\\system32\\conhost.exe",
+          "CreationDate": "2026-10-16T20:04:01.276748-03:00"
+        },
+        {
+          "ProcessId": 10120,
+          "ParentProcessId": 10424,
+          "Name": "AzTestRunner.exe",
+          "ExecutablePath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AzTestRunner.exe",
+          "CreationDate": "2026-10-16T20:04:01.339293-03:00"
+        }
+      ]
+    },
+    {
+      "utc": "2026-10-16T23:04:07.6473695Z",
+      "usedPercent": 43.93,
+      "freeBytes": 19213770752,
+      "directChildren": [
+        {
+          "ProcessId": 10424,
+          "ParentProcessId": 21976,
+          "Name": "ctest.exe",
+          "ExecutablePath": "C:\\Program Files\\CMake\\bin\\ctest.exe",
+          "CreationDate": "2026-10-16T20:04:01.266859-03:00"
+        },
+        {
+          "ProcessId": 14776,
+          "ParentProcessId": 10424,
+          "Name": "conhost.exe",
+          "ExecutablePath": "C:\\WINDOWS\\system32\\conhost.exe",
+          "CreationDate": "2026-10-16T20:04:01.276748-03:00"
+        },
+        {
+          "ProcessId": 10120,
+          "ParentProcessId": 10424,
+          "Name": "AzTestRunner.exe",
+          "ExecutablePath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AzTestRunner.exe",
+          "CreationDate": "2026-10-16T20:04:01.339293-03:00"
+        }
+      ]
+    },
+    {
+      "utc": "2026-10-16T23:04:10.7446030Z",
+      "usedPercent": 43.81,
+      "freeBytes": 19255369728,
+      "directChildren": [
+        {
+          "ProcessId": 10424,
+          "ParentProcessId": 21976,
+          "Name": "ctest.exe",
+          "ExecutablePath": "C:\\Program Files\\CMake\\bin\\ctest.exe",
+          "CreationDate": "2026-10-16T20:04:01.266859-03:00"
+        },
+        {
+          "ProcessId": 14776,
+          "ParentProcessId": 10424,
+          "Name": "conhost.exe",
+          "ExecutablePath": "C:\\WINDOWS\\system32\\conhost.exe",
+          "CreationDate": "2026-10-16T20:04:01.276748-03:00"
+        },
+        {
+          "ProcessId": 10120,
+          "ParentProcessId": 10424,
+          "Name": "AzTestRunner.exe",
+          "ExecutablePath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AzTestRunner.exe",
+          "CreationDate": "2026-10-16T20:04:01.339293-03:00"
+        }
+      ]
+    },
+    {
+      "utc": "2026-10-16T23:04:13.8413167Z",
+      "usedPercent": 43.75,
+      "freeBytes": 19272859648,
+      "directChildren": [
+        {
+          "ProcessId": 10424,
+          "ParentProcessId": 21976,
+          "Name": "ctest.exe",
+          "ExecutablePath": "C:\\Program Files\\CMake\\bin\\ctest.exe",
+          "CreationDate": "2026-10-16T20:04:01.266859-03:00"
+        },
+        {
+          "ProcessId": 14776,
+          "ParentProcessId": 10424,
+          "Name": "conhost.exe",
+          "ExecutablePath": "C:\\WINDOWS\\system32\\conhost.exe",
+          "CreationDate": "2026-10-16T20:04:01.276748-03:00"
+        },
+        {
+          "ProcessId": 10120,
+          "ParentProcessId": 10424,
+          "Name": "AzTestRunner.exe",
+          "ExecutablePath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AzTestRunner.exe",
+          "CreationDate": "2026-10-16T20:04:01.339293-03:00"
+        }
+      ]
+    },
+    {
+      "utc": "2026-10-16T23:04:16.9324523Z",
+      "usedPercent": 43.78,
+      "freeBytes": 19265212416,
+      "directChildren": [
+        {
+          "ProcessId": 10424,
+          "ParentProcessId": 21976,
+          "Name": "ctest.exe",
+          "ExecutablePath": "C:\\Program Files\\CMake\\bin\\ctest.exe",
+          "CreationDate": "2026-10-16T20:04:01.266859-03:00"
+        },
+        {
+          "ProcessId": 14776,
+          "ParentProcessId": 10424,
+          "Name": "conhost.exe",
+          "ExecutablePath": "C:\\WINDOWS\\system32\\conhost.exe",
+          "CreationDate": "2026-10-16T20:04:01.276748-03:00"
+        },
+        {
+          "ProcessId": 10120,
+          "ParentProcessId": 10424,
+          "Name": "AzTestRunner.exe",
+          "ExecutablePath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AzTestRunner.exe",
+          "CreationDate": "2026-10-16T20:04:01.339293-03:00"
+        }
+      ]
+    },
+    {
+      "utc": "2026-10-16T23:04:20.0349417Z",
+      "usedPercent": 43.77,
+      "freeBytes": 19268849664,
+      "directChildren": [
+        {
+          "ProcessId": 10424,
+          "ParentProcessId": 21976,
+          "Name": "ctest.exe",
+          "ExecutablePath": "C:\\Program Files\\CMake\\bin\\ctest.exe",
+          "CreationDate": "2026-10-16T20:04:01.266859-03:00"
+        },
+        {
+          "ProcessId": 14776,
+          "ParentProcessId": 10424,
+          "Name": "conhost.exe",
+          "ExecutablePath": "C:\\WINDOWS\\system32\\conhost.exe",
+          "CreationDate": "2026-10-16T20:04:01.276748-03:00"
+        },
+        {
+          "ProcessId": 10120,
+          "ParentProcessId": 10424,
+          "Name": "AzTestRunner.exe",
+          "ExecutablePath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AzTestRunner.exe",
+          "CreationDate": "2026-10-16T20:04:01.339293-03:00"
+        }
+      ]
+    }
+  ]
+}

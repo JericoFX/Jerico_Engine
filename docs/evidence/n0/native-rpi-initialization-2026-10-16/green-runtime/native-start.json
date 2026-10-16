@@ -1,0 +1,32 @@
+{
+  "utc": "2026-10-16T23:31:50.1766060Z",
+  "owner": "/root",
+  "nativeOwner": "/root",
+  "kind": "GameLauncher",
+  "backend": "vulkan",
+  "pid": 16892,
+  "creationUtc": "2026-10-16T23:31:50.1324230Z",
+  "executable": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\JEEditorFixture.GameLauncher.exe",
+  "argv": [
+    "--project-path",
+    "F:/JericoEngine/JericoEngine/Projects/JEEditorFixture",
+    "--rhi=vulkan",
+    "--bg_ConnectToAssetProcessor=false",
+    "--regset=/Amazon/AzCore/Bootstrap/wait_for_connect=0",
+    "--regset=/Amazon/AzCore/Bootstrap/remote_filesystem=0",
+    "+LoadLevel",
+    "levels/jematerialcooknative5/jematerialcooknative5.spawnable"
+  ],
+  "cwd": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile",
+  "exeSHA256": "4242D92ED101AF7DA21450975D5704D8487DFFA6E5BDB7018E9E9E8B10ACB981",
+  "editorMaterialsSHA256": "6BFEED286F0E802731FA9F31935B7F625D4AE0E145648E1CF7C053DAAD5C4575",
+  "nativeBuilderSHA256": "9712DB080A2AF5EEC74C7A0E302C301B7929F0528581986F4DC6A46034573812",
+  "freezeSHA256": "D3C81B7804AB0658D82D319F7C109D025665FC3AE3B6C3EF1F35C9FB0898BA0A",
+  "sourceCount": 14063,
+  "protectedCount": 40,
+  "ramBeforePercent": 43.98,
+  "environment": "Inherited task PowerShell environment; no new PATH/toolchain/global setting mutation.",
+  "nativeExitObserver": true,
+  "launchNormalForAuthorizedInteractiveVisualCheck": true,
+  "profileNotShipping": true
+}

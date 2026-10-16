@@ -1,0 +1,662 @@
+
+Dump of file F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\EditorRenderIntegration.dll
+
+File Type: DLL
+
+  Section contains the following imports:
+
+    RenderIntegration.dll
+             180060F78 Import Address Table
+             1800AF0A0 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                         10E ?RTTI_EnumHierarchy@Module@RPI@Render@JE@@SAXP6AXAEBUUuid@AZ@@PEAX@Z1@Z
+                         10A ?RTTI_AddressOf@Module@RPI@Render@JE@@UEBAPEBXAEBUUuid@AZ@@@Z
+                         109 ?RTTI_AddressOf@Module@RPI@Render@JE@@UEAAPEAXAEBUUuid@AZ@@@Z
+                          1A ??0Module@RPI@Render@JE@@IEAA@PEAVComponentDescriptor@AZ@@@Z
+                          DD ?GetRequiredSystemComponents@Module@RPI@Render@JE@@UEBA?AV?$vector@UUuid@AZ@@Uallocator@AZStd@@@AZStd@@XZ
+                          CA ?GetDataLogTypeFromCVar@RPI@Render@JE@@YA?AW4DataLogType@PerformanceCollector@Debug@AZ@@AEBV?$basic_fixed_string@D$0BAA@U?$char_traits@D@AZStd@@@AZStd@@@Z
+                         13D ?r_metricsDataLogType@RPI@Render@JE@@3V?$ConsoleDataWrapper@V?$basic_fixed_string@D$0BAA@U?$char_traits@D@AZStd@@@AZStd@@$0A@@AZ@@A
+                         142 ?r_metricsWaitTimePerCaptureBatch@RPI@Render@JE@@3V?$ConsoleDataWrapper@I$00@AZ@@A
+                         13E ?r_metricsFrameCountPerCaptureBatch@RPI@Render@JE@@3V?$ConsoleDataWrapper@I$00@AZ@@A
+                         13F ?r_metricsMeasureGpuTime@RPI@Render@JE@@3V?$ConsoleDataWrapper@_N$00@AZ@@A
+                         141 ?r_metricsQuitUponCompletion@RPI@Render@JE@@3V?$ConsoleDataWrapper@_N$00@AZ@@A
+                         140 ?r_metricsNumberOfCaptureBatches@RPI@Render@JE@@3V?$ConsoleDataWrapper@I$00@AZ@@A
+                         11D ?RTTI_IsContainType@Module@Integration@Render@JE@@SA_NAEBUUuid@AZ@@@Z
+                         10D ?RTTI_EnumHierarchy@Module@Integration@Render@JE@@SAXP6AXAEBUUuid@AZ@@PEAX@Z1@Z
+                         108 ?RTTI_AddressOf@Module@Integration@Render@JE@@UEBAPEBXAEBUUuid@AZ@@@Z
+                         107 ?RTTI_AddressOf@Module@Integration@Render@JE@@UEAAPEAXAEBUUuid@AZ@@@Z
+                          19 ??0Module@Integration@Render@JE@@QEAA@XZ
+                          DC ?GetRequiredSystemComponents@Module@Integration@Render@JE@@UEBA?AV?$vector@UUuid@AZ@@Uallocator@AZStd@@@AZStd@@XZ
+                         11E ?RTTI_IsContainType@Module@RPI@Render@JE@@SA_NAEBUUuid@AZ@@@Z
+
+    AzToolsFramework.dll
+             180060DE0 Import Address Table
+             1800AEF08 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                        603F ?RTTI_IsContainType@EditorComponentBase@Components@AzToolsFramework@@SA_NAEBUUuid@AZ@@@Z
+                         56D ??0EditorComponentBase@Components@AzToolsFramework@@QEAA@$$QEAV012@@Z
+                        2078 ??4EditorComponentBase@Components@AzToolsFramework@@QEAAAEAV012@$$QEAV012@@Z
+                        4233 ?DisconnectInternal@?$EBus@VEditorComponentDescriptor@Components@AzToolsFramework@@UComponentDescriptorBusTraits@AZ@@@AZ@@SAXAEAVContext@12@AEAV?$HandlerNode@VEditorComponentDescriptor@Components@AzToolsFramework@@UComponentDescriptorBusTraits@AZ@@UHandlerHolder@?$EBusContainer@VEditorComponentDescriptor@Components@AzToolsFramework@@UComponentDescriptorBusTraits@AZ@@$00$0A@@Internal@5@$00@Internal@2@@Z
+                        476A ?GetContext@?$EBus@VEditorComponentDescriptor@Components@AzToolsFramework@@UComponentDescriptorBusTraits@AZ@@@AZ@@SAPEAVContext@12@_N@Z
+                        3EAB ?ConnectInternal@?$EBus@VEditorComponentDescriptor@Components@AzToolsFramework@@UComponentDescriptorBusTraits@AZ@@@AZ@@SAXAEAVContext@12@AEAV?$HandlerNode@VEditorComponentDescriptor@Components@AzToolsFramework@@UComponentDescriptorBusTraits@AZ@@UHandlerHolder@?$EBusContainer@VEditorComponentDescriptor@Components@AzToolsFramework@@UComponentDescriptorBusTraits@AZ@@$00$0A@@Internal@5@$00@Internal@2@AEAV?$unique_lock@Vrecursive_mutex@AZStd@@@AZStd@@AEBUUuid@2@@Z
+                        4D17 ?GetOrCreateContext@?$EBus@VEditorComponentDescriptor@Components@AzToolsFramework@@UComponentDescriptorBusTraits@AZ@@@AZ@@SAAEAVContext@12@_N@Z
+                        38F4 ?BuildGameEntity@EditorComponentBase@Components@AzToolsFramework@@UEAAXPEAVEntity@AZ@@@Z
+                        689C ?SetPrimaryAsset@EditorComponentBase@Components@AzToolsFramework@@UEAAXAEBUAssetId@Data@AZ@@@Z
+                        3734 ?AddContextMenuActions@EditorComponentBase@Components@AzToolsFramework@@UEAAXPEAVQMenu@@@Z
+                        5311 ?Init@EditorComponentBase@Components@AzToolsFramework@@UEAAXXZ
+                        57D6 ?OnAfterEntitySet@EditorComponentBase@Components@AzToolsFramework@@UEAAXXZ
+                        6968 ?SetSerializedIdentifier@EditorComponentBase@Components@AzToolsFramework@@UEAAXV?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@@Z
+                        4E3D ?GetSerializedIdentifier@EditorComponentBase@Components@AzToolsFramework@@UEBA?AV?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@XZ
+                        23EB ??_7?$IdHandler@VEditorComponentDescriptor@Components@AzToolsFramework@@UComponentDescriptorBusTraits@AZ@@U?$EBusContainer@VEditorComponentDescriptor@Components@AzToolsFramework@@UComponentDescriptorBusTraits@AZ@@$00$0A@@Internal@5@@Internal@AZ@@6B@
+                         56F ??0EditorComponentBase@Components@AzToolsFramework@@QEAA@XZ
+                        5B3E ?RTTI_AddressOf@EditorComponentBase@Components@AzToolsFramework@@UEAAPEAXAEBUUuid@AZ@@@Z
+                        5B3F ?RTTI_AddressOf@EditorComponentBase@Components@AzToolsFramework@@UEBAPEBXAEBUUuid@AZ@@@Z
+                        5CCB ?RTTI_EnumHierarchy@EditorComponentBase@Components@AzToolsFramework@@SAXP6AXAEBUUuid@AZ@@PEAX@Z1@Z
+                         AD3 ??1EditorComponentBase@Components@AzToolsFramework@@UEAA@XZ
+
+    Atom_RPI.Edit.dll
+             180060020 Import Address Table
+             1800AE148 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                         287 ?RTTI_AddressOf@MaterialFunctorSourceDataRegistration@RPI@AZ@@UEBAPEBXAEBUUuid@3@@Z
+                         286 ?RTTI_AddressOf@MaterialFunctorSourceDataRegistration@RPI@AZ@@UEAAPEAXAEBUUuid@3@@Z
+                         29E ?RTTI_EnumTypes@MaterialFunctorSourceDataRegistration@RPI@AZ@@UEAAXP6AXAEBUUuid@3@PEAX@Z1@Z
+                         2CA ?RTTI_IsTypeOf@MaterialFunctorSourceDataRegistration@RPI@AZ@@UEBA_NAEBUUuid@3@@Z
+                         2B4 ?RTTI_GetTypeName@MaterialFunctorSourceDataRegistration@RPI@AZ@@UEBAPEBDXZ
+                         2A9 ?RTTI_GetType@MaterialFunctorSourceDataRegistration@RPI@AZ@@UEBA?AUUuid@3@XZ
+                         304 ?Shutdown@MaterialFunctorSourceDataRegistration@RPI@AZ@@QEAAXXZ
+                         259 ?Init@MaterialFunctorSourceDataRegistration@RPI@AZ@@QEAAXXZ
+                          6F ??1MaterialFunctorSourceDataRegistration@RPI@AZ@@UEAA@XZ
+                          2A ??0MaterialFunctorSourceDataRegistration@RPI@AZ@@QEAA@XZ
+
+    AzFramework.NativeUI.dll
+             180060DC0 Import Address Table
+             1800AEEE8 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                         449 ?GetEntry@?$EBusCallstackStorage@U?$CallstackEntryBase@VApplicationRequests@AzFramework@@V12@@Internal@AZ@@$00@Internal@AZ@@AEBAAEAPEAU?$CallstackEntryBase@VApplicationRequests@AzFramework@@V12@@23@XZ
+                         436 ?GetContext@?$EBus@VApplicationRequests@AzFramework@@V12@@AZ@@SAPEAVContext@12@_N@Z
+                         44E ?GetName@?$EBus@VApplicationRequests@AzFramework@@V12@@AZ@@SAPEBDXZ
+
+    Atom_RPI.Public.dll
+             180060078 Import Address Table
+             1800AE1A0 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                        133F ?GetTotalImageDataSize@StreamingImageAsset@RPI@AZ@@QEBA_KXZ
+                        1209 ?GetName@ShaderAsset@RPI@AZ@@QEBAAEBVName@3@XZ
+                        11BB ?GetLodCount@ModelAsset@RPI@AZ@@QEBA_KXZ
+                        15DC ?RTTI_AddressOf@IXRRegisterInterface@RPI@AZ@@UEBAPEBXAEBUUuid@3@@Z
+                        16FD ?RTTI_EnumTypes@IXRRegisterInterface@RPI@AZ@@UEAAXP6AXAEBUUuid@3@PEAX@Z1@Z
+                        15DB ?RTTI_AddressOf@IXRRegisterInterface@RPI@AZ@@UEAAPEAXAEBUUuid@3@@Z
+                        18B9 ?RTTI_IsTypeOf@IXRRegisterInterface@RPI@AZ@@UEBA_NAEBUUuid@3@@Z
+                        17DB ?RTTI_GetTypeName@IXRRegisterInterface@RPI@AZ@@UEBAPEBDXZ
+                        176C ?RTTI_GetType@IXRRegisterInterface@RPI@AZ@@UEBA?AUUuid@3@XZ
+                        10DC ?GetContext@?$EBus@VPerformaceCollectionNotification@RPI@AZ@@V123@@AZ@@SAPEAVContext@12@_N@Z
+                        11FD ?GetName@?$EBus@VPerformaceCollectionNotification@RPI@AZ@@V123@@AZ@@SAPEBDXZ
+                        14D6 ?MeasureGpuTimeInNanoseconds@GpuPassProfiler@RPI@AZ@@QEAA_KV?$intrusive_ptr@VParentPass@RPI@AZ@@@AZStd@@@Z
+                        1DDB ?UnregisterXRSystem@RPISystem@RPI@AZ@@QEAAXXZ
+                        1A69 ?RegisterXRSystem@RPISystem@RPI@AZ@@QEAAXPEAVXRRenderingInterface@23@@Z
+                        1A89 ?RenderTick@RPISystem@RPI@AZ@@UEAAXXZ
+                        1C41 ?SimulationTick@RPISystem@RPI@AZ@@UEAAXXZ
+                        1420 ?InitializeSystemAssets@RPISystem@RPI@AZ@@UEAAXXZ
+                        1C32 ?Shutdown@RPISystem@RPI@AZ@@QEAAXXZ
+                        1411 ?Initialize@RPISystem@RPI@AZ@@QEAAXAEBURPISystemDescriptor@23@@Z
+                         2D0 ??1RPISystem@RPI@AZ@@UEAA@XZ
+                         19B ??0RPISystem@RPI@AZ@@QEAA@XZ
+                        1A2E ?Reflect@RPISystem@RPI@AZ@@SAXPEAVReflectContext@3@@Z
+                          E7 ??0IXRRegisterInterface@RPI@AZ@@QEAA@XZ
+                         19C ??0RPISystemDescriptor@RPI@AZ@@QEAA@$$QEAU012@@Z
+                         19D ??0RPISystemDescriptor@RPI@AZ@@QEAA@AEBU012@@Z
+                         2D1 ??1RPISystemDescriptor@RPI@AZ@@QEAA@XZ
+                         19E ??0RPISystemDescriptor@RPI@AZ@@QEAA@XZ
+                        1056 ?Get@PassSystemInterface@RPI@AZ@@SAPEAV123@XZ
+
+    Atom_RHI.Public.dll
+             180060000 Import Address Table
+             1800AE128 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                         663 ?GetComponentService@Factory@RHI@AZ@@SA?AVCrc32@3@XZ
+                         8B7 ?IsNullRHI@RHI@AZ@@YA_NXZ
+                         5FE ?Get@Factory@RHI@AZ@@SAAEAV123@XZ
+
+    AzFramework.dll
+             180060D90 Import Address Table
+             1800AEEB8 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                        2D79 ?GetName@?$EBus@VConsoleRequests@AzFramework@@V12@@AZ@@SAPEBDXZ
+                        2C14 ?GetEntry@?$EBusCallstackStorage@U?$CallstackEntryBase@VAssetSystemRequests@AssetSystem@AzFramework@@V123@@Internal@AZ@@$00@Internal@AZ@@AEBAAEAPEAU?$CallstackEntryBase@VAssetSystemRequests@AssetSystem@AzFramework@@V123@@23@XZ
+                        2AFE ?GetContext@?$EBus@VAssetSystemRequests@AssetSystem@AzFramework@@V123@@AZ@@SAPEAVContext@12@_N@Z
+                        2D69 ?GetName@?$EBus@VAssetSystemRequests@AssetSystem@AzFramework@@V123@@AZ@@SAPEBDXZ
+                        2B0E ?GetContext@?$EBus@VConsoleRequests@AzFramework@@V12@@AZ@@SAPEAVContext@12@_N@Z
+
+    AzCore.dll
+             180060160 Import Address Table
+             1800AE288 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                         DC1 ??4?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@QEAAAEAV01@V?$basic_string_view@DU?$char_traits@D@AZStd@@@1@@Z
+                        202B ?GetAzBudgetAzCore@@YAPEAVBudget@Debug@AZ@@XZ
+                        1230 ??_7BehaviorEBusEvent@Internal@AZ@@6B@
+                        1233 ??_7BehaviorMethodImpl@Internal@AZ@@6B@
+                        38EE ?s_attributeField@Attribute@AZ@@1VName@2@B
+                        3904 ?s_instanceField@Attribute@AZ@@1VName@2@B
+                        3922 ?s_typeField@Attribute@AZ@@1VName@2@B
+                        29FB ?OverrideParameterTraits@BehaviorEBusEvent@Internal@AZ@@UEAAX_KII@Z
+                        245E ?GetResult@BehaviorEBusEvent@Internal@AZ@@UEBAPEBUBehaviorParameter@3@XZ
+                        2113 ?GetDefaultValue@BehaviorEBusEvent@Internal@AZ@@UEBA?AV?$intrusive_ptr@VBehaviorDefaultValue@AZ@@@AZStd@@_K@Z
+                        3236 ?SetDefaultValue@BehaviorEBusEvent@Internal@AZ@@UEAAX_KV?$intrusive_ptr@VBehaviorDefaultValue@AZ@@@AZStd@@@Z
+                        31F5 ?SetArgumentToolTip@BehaviorEBusEvent@Internal@AZ@@UEAAX_KV?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@@Z
+                        1FFA ?GetArgumentToolTip@BehaviorEBusEvent@Internal@AZ@@UEBAPEBV?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@_K@Z
+                        31F3 ?SetArgumentName@BehaviorEBusEvent@Internal@AZ@@UEAAX_KV?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@@Z
+                        1FF8 ?GetArgumentName@BehaviorEBusEvent@Internal@AZ@@UEBAPEBV?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@_K@Z
+                        1FF6 ?GetArgument@BehaviorEBusEvent@Internal@AZ@@UEBAPEBUBehaviorParameter@3@_K@Z
+                        228C ?GetMinNumberOfArguments@BehaviorEBusEvent@Internal@AZ@@UEBA_KXZ
+                        2051 ?GetBusIdArgument@BehaviorEBusEvent@Internal@AZ@@UEBAPEBUBehaviorParameter@3@XZ
+                        2578 ?HasBusId@BehaviorEBusEvent@Internal@AZ@@UEBA_NXZ
+                        2764 ?IsMember@BehaviorEBusEvent@Internal@AZ@@UEBA_NXZ
+                        2626 ?HasResult@BehaviorEBusEvent@Internal@AZ@@UEBA_NXZ
+                        26B1 ?IsCallable@BehaviorEBusEvent@Internal@AZ@@UEBA?AV?$Outcome@XV?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@@3@V?$span@UBehaviorArgument@AZ@@$0?0@std@@PEAUBehaviorArgument@3@@Z
+                        1AF1 ?Call@BehaviorEBusEvent@Internal@AZ@@UEBA_NV?$span@UBehaviorArgument@AZ@@$0?0@std@@PEAUBehaviorArgument@3@@Z
+                        29FC ?OverrideParameterTraits@BehaviorMethodImpl@Internal@AZ@@UEAAX_KII@Z
+                        245F ?GetResult@BehaviorMethodImpl@Internal@AZ@@UEBAPEBUBehaviorParameter@3@XZ
+                        2114 ?GetDefaultValue@BehaviorMethodImpl@Internal@AZ@@UEBA?AV?$intrusive_ptr@VBehaviorDefaultValue@AZ@@@AZStd@@_K@Z
+                        3237 ?SetDefaultValue@BehaviorMethodImpl@Internal@AZ@@UEAAX_KV?$intrusive_ptr@VBehaviorDefaultValue@AZ@@@AZStd@@@Z
+                        31F6 ?SetArgumentToolTip@BehaviorMethodImpl@Internal@AZ@@UEAAX_KV?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@@Z
+                        1FFB ?GetArgumentToolTip@BehaviorMethodImpl@Internal@AZ@@UEBAPEBV?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@_K@Z
+                        31F4 ?SetArgumentName@BehaviorMethodImpl@Internal@AZ@@UEAAX_KV?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@@Z
+                        1FF9 ?GetArgumentName@BehaviorMethodImpl@Internal@AZ@@UEBAPEBV?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@_K@Z
+                        1FF7 ?GetArgument@BehaviorMethodImpl@Internal@AZ@@UEBAPEBUBehaviorParameter@3@_K@Z
+                        228D ?GetMinNumberOfArguments@BehaviorMethodImpl@Internal@AZ@@UEBA_KXZ
+                        22FB ?GetNumArguments@BehaviorMethodImpl@Internal@AZ@@UEBA_KXZ
+                        2052 ?GetBusIdArgument@BehaviorMethodImpl@Internal@AZ@@UEBAPEBUBehaviorParameter@3@XZ
+                        2579 ?HasBusId@BehaviorMethodImpl@Internal@AZ@@UEBA_NXZ
+                        2765 ?IsMember@BehaviorMethodImpl@Internal@AZ@@UEBA_NXZ
+                        2627 ?HasResult@BehaviorMethodImpl@Internal@AZ@@UEBA_NXZ
+                        26B2 ?IsCallable@BehaviorMethodImpl@Internal@AZ@@UEBA?AV?$Outcome@XV?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@@3@V?$span@UBehaviorArgument@AZ@@$0?0@std@@PEAUBehaviorArgument@3@@Z
+                        1AF3 ?Call@BehaviorMethodImpl@Internal@AZ@@UEBA_NV?$span@UBehaviorArgument@AZ@@$0?0@std@@PEAUBehaviorArgument@3@@Z
+                        2A29 ?PostClone@IDataSerializer@Serialize@AZ@@UEAAXPEAX@Z
+                        2001 ?GetAsDomValue@Attribute@AZ@@UEAA?AVValue@Dom@2@UPointerObject@2@@Z
+                          3B ??$GetO3deTypeId@DU?$char_traits@D@AZStd@@@AZStd@@YA?AUUuid@AZ@@UAdl@2@U?$type_identity@V?$basic_string_view@DU?$char_traits@D@AZStd@@@AZStd@@@std@@@Z
+                          35 ??$GetO3deClassTemplateId@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@YA?AUUuid@AZ@@UAdl@2@U?$type_identity@V?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@@std@@@Z
+                          3C ??$GetO3deTypeId@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@YA?AUUuid@AZ@@UAdl@2@U?$type_identity@V?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@@std@@@Z
+                          43 ??$GetO3deTypeName@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@YA?AV?$basic_fixed_string@D$0CAA@U?$char_traits@D@AZStd@@@0@UAdl@AZ@@U?$type_identity@V?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@@std@@@Z
+                        302B ?ReadJsonFile@JsonSerializationUtils@AZ@@YA?AV?$Outcome@V?$GenericDocument@U?$UTF8@D@rapidjson_ly@@V?$MemoryPoolAllocator@VCrtAllocator@rapidjson_ly@@@2@VCrtAllocator@2@@rapidjson_ly@@V?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@@2@V?$basic_string_view@DU?$char_traits@D@AZStd@@@AZStd@@_K@Z
+                        21B4 ?GetExtension@Path@StringFunc@AZ@@YA_NPEBDAEAV?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@_N@Z
+                        364A ?UIElement@ClassBuilder@EditContext@AZ@@QEAAPEAV123@VCrc32@3@PEBD1@Z
+                        2217 ?GetInstance@NullFactory@Internal@AZ@@SAPEAV123@XZ
+                        1936 ?AddGenericClassInfo@GlobalGenericClassInfo@SerializeContext@AZ@@QEAAXPEAVGenericClassInfo@3@@Z
+                         2DC ??0IDataSerializer@Serialize@AZ@@QEAA@XZ
+                         624 ??1IDataSerializer@Serialize@AZ@@UEAA@XZ
+                        1CE1 ?CreateImpl@ClassData@Serialize@AZ@@CA?AV123@PEBDAEBUUuid@3@PEAVIObjectFactory@23@PEAVIDataSerializer@23@PEAVIDataContainer@23@PEAVIRttiHelper@3@V?$function@$$A6A?AV?$function@$$A6AXW4Action@any@AZStd@@PEAV23@PEBV23@@Z@AZStd@@PEAVSerializeContext@AZ@@@Z@AZStd@@@Z
+                         E2A ??4ClassData@Serialize@AZ@@QEAAAEAV012@$$QEAV012@@Z
+                        395C ?swap@?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@QEAAXAEAV12@@Z
+                         185 ??0AssetLoadParameters@Data@AZ@@QEAA@XZ
+                         5AA ??1AssetLoadParameters@Data@AZ@@QEAA@XZ
+                        1BD6 ?ConnectInternal@?$EBus@VAssetEvents@Data@AZ@@V123@@AZ@@SAXAEAVContext@12@AEAV?$HandlerNode@VAssetEvents@Data@AZ@@V123@UHandlerHolder@?$EBusContainer@VAssetEvents@Data@AZ@@V123@$00$00@Internal@3@$00@Internal@2@AEAV?$unique_lock@Vrecursive_mutex@AZStd@@@AZStd@@AEBUAssetId@Data@2@@Z
+                        23B5 ?GetOrCreateContext@?$EBus@VAssetEvents@Data@AZ@@V123@@AZ@@SAAEAVContext@12@_N@Z
+                        1E9F ?ExecuteQueuedEvents@?$EBusBroadcastQueue@V?$EBus@VAssetCatalogRequests@Data@AZ@@V123@@AZ@@U?$EBusImplTraits@VAssetCatalogRequests@Data@AZ@@V123@@BusInternal@2@@BusInternal@AZ@@SAXXZ
+                        2A8C ?QueuedEventCount@?$EBusBroadcastQueue@V?$EBus@VAssetCatalogRequests@Data@AZ@@V123@@AZ@@U?$EBusImplTraits@VAssetCatalogRequests@Data@AZ@@V123@@BusInternal@2@@BusInternal@AZ@@SA_KXZ
+                        229F ?GetName@?$EBus@VAssetCatalogRequests@Data@AZ@@V123@@AZ@@SAPEBDXZ
+                        208A ?GetContext@?$EBus@VAssetCatalogRequests@Data@AZ@@V123@@AZ@@SAPEAVContext@12@_N@Z
+                        2173 ?GetEntry@?$EBusCallstackStorage@U?$CallstackEntryBase@VAssetCatalogRequests@Data@AZ@@V123@@Internal@AZ@@$00@Internal@AZ@@AEBAAEAPEAU?$CallstackEntryBase@VAssetCatalogRequests@Data@AZ@@V123@@23@XZ
+                        2729 ?IsInDispatchThisThread@?$EBus@VAssetCatalogRequests@Data@AZ@@V123@@AZ@@SA_NPEAVContext@12@@Z
+                        265F ?Instance@AssetManager@Data@AZ@@SAAEAV123@XZ
+                        2008 ?GetAsset@AssetManager@Data@AZ@@QEAA?AV?$Asset@VAssetData@Data@AZ@@@23@AEBUAssetId@23@AEBUUuid@3@W4AssetLoadBehavior@AssetLoadBehaviorNamespace@23@AEBUAssetLoadParameters@23@@Z
+                         40F ??0ProfileScope@Debug@AZ@@QEAA@PEAVBudget@12@PEBDZZ
+                         688 ??1ProfileScope@Debug@AZ@@QEAA@XZ
+                         7F0 ??2JobManager@AZ@@SAPEAX_K@Z
+                         2F7 ??0JobManager@AZ@@QEAA@AEBUJobManagerDesc@1@@Z
+                         2F3 ??0Job@AZ@@QEAA@_NPEAVJobContext@1@0C@Z
+                         62D ??1Job@AZ@@UEAA@XZ
+                        3392 ?Start@Job@AZ@@QEAAXXZ
+                        3158 ?Reset@Job@AZ@@UEAAX_N@Z
+                        3238 ?SetDependent@Job@AZ@@QEAAXPEAV12@@Z
+                        26B3 ?IsCancelled@Job@AZ@@QEBA_NXZ
+                        22FA ?GetNumArguments@BehaviorEBusEvent@Internal@AZ@@UEBA_KXZ
+                        208B ?GetContext@?$EBus@VAssetEvents@Data@AZ@@V123@@AZ@@SAPEAVContext@12@_N@Z
+                         5D4 ??1ClassData@Serialize@AZ@@QEAA@XZ
+                         1EA ??0ClassData@Serialize@AZ@@QEAA@XZ
+                        21DF ?GetGlobalSerializeContextModule@AZ@@YAAEAVGlobalGenericClassInfo@SerializeContext@1@XZ
+                        30C6 ?RegisterGenericClassInfo@SerializeContext@AZ@@QEAAXAEBUUuid@2@PEAVGenericClassInfo@2@AEBQ6A?AVany@AZStd@@PEAV12@@Z@Z
+                        1E9A ?EventWithBusImpl@EBusBuilderBase@Internal@AZ@@AEAAXPEBD0AEAV?$list_iterator@U?$pair@V?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@UBehaviorEBusEventSender@AZ@@@std@@@AZStd@@@Z
+                         600 ??1EBusBuilderBase@Internal@AZ@@QEAA@XZ
+                        2660 ?Instance@ITrace@Debug@AZ@@SAAEAV123@XZ
+                        3833 ?hash_next_bucket_size@AZStd@@YA_K_K@Z
+                        276E ?IsNull@Uuid@AZ@@QEBA_NXZ
+                        35F8 ?ToFixedString@Uuid@AZ@@QEBA?AV?$basic_fixed_string@D$0CH@U?$char_traits@D@AZStd@@@AZStd@@_N0@Z
+                        103B ??8Uuid@AZ@@QEBA_NAEBU01@@Z
+                        247E ?GetSectionAsSizeT@Uuid@AZ@@AEBA_K_K@Z
+                        2215 ?GetInstance@Environment@AZ@@YAPEAVEnvironmentInterface@Internal@2@XZ
+                        3662 ?UnregisterAndDestroy@EnvironmentVariableHolderBase@Internal@AZ@@IEAAXP6AXPEAV123@W4DestroyTarget@123@@Z_N@Z
+                        191D ?AddAndAllocateVariable@Internal@AZ@@YA?AUEnvironmentVariableResult@12@I_K0PEAPEAVrecursive_mutex@AZStd@@@Z
+                        2544 ?GetVariable@Internal@AZ@@YA?AUEnvironmentVariableResult@12@I@Z
+                        1FE7 ?GetAllocator@Internal@AZ@@YAPEAVAllocatorInterface@Environment@2@XZ
+                        1E80 ?EnvironmentVariableNameToId@Internal@AZ@@YAIPEBD@Z
+                         160 ??0AllocatorBase@AZ@@IEAA@XZ
+                         59E ??1AllocatorBase@AZ@@MEAA@XZ
+                        2DD5 ?RTTI_IsContainType@AllocatorBase@AZ@@SA_NAEBUUuid@2@@Z
+                        2BAD ?RTTI_EnumHierarchy@AllocatorBase@AZ@@SAXP6AXAEBUUuid@2@PEAX@Z1@Z
+                        2A9F ?RTTI_AddressOf@AllocatorBase@AZ@@UEBAPEBXAEBUUuid@2@@Z
+                        2A9E ?RTTI_AddressOf@AllocatorBase@AZ@@UEAAPEAXAEBUUuid@2@@Z
+                        2A2A ?PostCreate@AllocatorBase@AZ@@UEAAXXZ
+                        2A2E ?PreDestroy@AllocatorBase@AZ@@UEAAXXZ
+                        2A50 ?ProfileAllocation@AllocatorBase@AZ@@IEAAXPEAX_K1H@Z
+                        2A51 ?ProfileDeallocation@AllocatorBase@AZ@@IEAAXPEAX_K1PEAUAllocationInfo@Debug@2@@Z
+                        2A52 ?ProfileReallocation@AllocatorBase@AZ@@IEAAXPEAX0_K1@Z
+                        238E ?GetO3deTypeName@AZ@@YA?AV?$basic_fixed_string@D$0CAA@U?$char_traits@D@AZStd@@@AZStd@@UAdl@1@U?$type_identity@VSystemAllocator@AZ@@@std@@@Z
+                        2351 ?GetO3deTypeId@AZ@@YA?AUUuid@1@UAdl@1@U?$type_identity@VSystemAllocator@AZ@@@std@@@Z
+                         4D4 ??0SystemAllocator@AZ@@QEAA@XZ
+                         6D1 ??1SystemAllocator@AZ@@UEAA@XZ
+                        36F9 ?allocate@stateless_allocator@AZStd@@QEAAPEAX_K0@Z
+                        37A1 ?deallocate@stateless_allocator@AZStd@@QEAAXPEAX_K1@Z
+                        10B4 ??B?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@QEBA?AV?$basic_string_view@DU?$char_traits@D@AZStd@@@1@XZ
+                         3B8 ??0Name@AZ@@QEAA@XZ
+                         66F ??1Name@AZ@@QEAA@XZ
+                         212 ??0ComponentDescriptor@AZ@@QEAA@XZ
+                        1DF1 ?DisconnectInternal@?$EBus@VComponentDescriptor@AZ@@UComponentDescriptorBusTraits@2@@AZ@@SAXAEAVContext@12@AEAV?$HandlerNode@VComponentDescriptor@AZ@@UComponentDescriptorBusTraits@2@UHandlerHolder@?$EBusContainer@VComponentDescriptor@AZ@@UComponentDescriptorBusTraits@2@$00$0A@@Internal@2@$00@Internal@2@@Z
+                        22A8 ?GetName@?$EBus@VComponentDescriptor@AZ@@UComponentDescriptorBusTraits@2@@AZ@@SAPEBDXZ
+                        2093 ?GetContext@?$EBus@VComponentDescriptor@AZ@@UComponentDescriptorBusTraits@2@@AZ@@SAPEAVContext@12@_N@Z
+                        217C ?GetEntry@?$EBusCallstackStorage@U?$CallstackEntryBase@VComponentDescriptor@AZ@@UComponentDescriptorBusTraits@2@@Internal@AZ@@$00@Internal@AZ@@AEBAAEAPEAU?$CallstackEntryBase@VComponentDescriptor@AZ@@UComponentDescriptorBusTraits@2@@23@XZ
+                        1BDE ?ConnectInternal@?$EBus@VComponentDescriptor@AZ@@UComponentDescriptorBusTraits@2@@AZ@@SAXAEAVContext@12@AEAV?$HandlerNode@VComponentDescriptor@AZ@@UComponentDescriptorBusTraits@2@UHandlerHolder@?$EBusContainer@VComponentDescriptor@AZ@@UComponentDescriptorBusTraits@2@$00$0A@@Internal@2@$00@Internal@2@AEAV?$unique_lock@Vrecursive_mutex@AZStd@@@AZStd@@AEBUUuid@2@@Z
+                        23BD ?GetOrCreateContext@?$EBus@VComponentDescriptor@AZ@@UComponentDescriptorBusTraits@2@@AZ@@SAAEAVContext@12@_N@Z
+                         66A ??1Module@AZ@@UEAA@XZ
+                        2424 ?GetProvidedServices@ComponentDescriptor@AZ@@UEBAXAEAV?$vector@VCrc32@AZ@@V?$AZStdAlloc@VComponentAllocator@AZ@@@2@@AZStd@@PEBVComponent@2@@Z
+                        211B ?GetDependentServices@ComponentDescriptor@AZ@@UEBAXAEAV?$vector@VCrc32@AZ@@V?$AZStdAlloc@VComponentAllocator@AZ@@@2@@AZStd@@PEBVComponent@2@@Z
+                        245A ?GetRequiredServices@ComponentDescriptor@AZ@@UEBAXAEAV?$vector@VCrc32@AZ@@V?$AZStdAlloc@VComponentAllocator@AZ@@@2@@AZStd@@PEBVComponent@2@@Z
+                        2208 ?GetIncompatibleServices@ComponentDescriptor@AZ@@UEBAXAEAV?$vector@VCrc32@AZ@@V?$AZStdAlloc@VComponentAllocator@AZ@@@2@@AZStd@@PEBVComponent@2@@Z
+                        2557 ?GetWarnings@ComponentDescriptor@AZ@@UEBAXAEAV?$vector@V?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@V?$AZStdAlloc@VComponentAllocator@AZ@@@AZ@@@AZStd@@PEBVComponent@2@@Z
+                        2125 ?GetDescriptor@ComponentDescriptor@AZ@@UEAAPEAV12@XZ
+                        30E3 ?ReleaseDescriptor@ComponentDescriptor@AZ@@UEAAXXZ
+                        2448 ?GetRecords@AllocatorBase@AZ@@UEBAPEBVAllocationRecords@Debug@2@XZ
+                        32C8 ?SetRecords@AllocatorBase@AZ@@UEAAXPEAVAllocationRecords@Debug@2@@Z
+                        2789 ?IsReady@AllocatorBase@AZ@@UEBA_NXZ
+                        32C3 ?SetProfilingActive@AllocatorBase@AZ@@UEAAX_N@Z
+                        2788 ?IsProfilingActive@AllocatorBase@AZ@@UEBA_NXZ
+                        2D3F ?RTTI_GetType@SystemAllocator@AZ@@UEBA?AUUuid@2@XZ
+                        2DC9 ?RTTI_GetTypeName@SystemAllocator@AZ@@UEBAPEBDXZ
+                        2EDD ?RTTI_IsTypeOf@SystemAllocator@AZ@@UEBA_NAEBUUuid@2@@Z
+                        2CB5 ?RTTI_EnumTypes@SystemAllocator@AZ@@UEAAXP6AXAEBUUuid@2@PEAX@Z1@Z
+                        2B9A ?RTTI_AddressOf@SystemAllocator@AZ@@UEAAPEAXAEBUUuid@2@@Z
+                        2B9B ?RTTI_AddressOf@SystemAllocator@AZ@@UEBAPEBXAEBUUuid@2@@Z
+                        2103 ?GetDebugConfig@SystemAllocator@AZ@@UEAA?AUAllocatorDebugConfig@2@XZ
+                        36F6 ?allocate@SystemAllocator@AZ@@UEAA?AUAllocateAddress@@_K0@Z
+                        379E ?deallocate@SystemAllocator@AZ@@UEAA_KPEAX_K1@Z
+                        38A0 ?reallocate@SystemAllocator@AZ@@UEAA?AUAllocateAddress@@PEAX_K1@Z
+                        382A ?get_allocated_size@SystemAllocator@AZ@@UEBA_KPEAX_K@Z
+                        1FAD ?GarbageCollect@SystemAllocator@AZ@@UEAAXXZ
+                        2984 ?NumAllocatedBytes@SystemAllocator@AZ@@UEBA_KXZ
+                        11E3 ??_7?$IdHandler@VComponentDescriptor@AZ@@UComponentDescriptorBusTraits@2@U?$EBusContainer@VComponentDescriptor@AZ@@UComponentDescriptorBusTraits@2@$00$0A@@Internal@2@@Internal@AZ@@6B@
+                        1CF3 ?CreateNull@Uuid@AZ@@SA?AU12@XZ
+                        2394 ?GetO3deTypeName@AZ@@YA?AV?$basic_fixed_string@D$0CAA@U?$char_traits@D@AZStd@@@AZStd@@UAdl@1@U?$type_identity@_N@std@@@Z
+                        2357 ?GetO3deTypeId@AZ@@YA?AUUuid@1@UAdl@1@U?$type_identity@_N@std@@@Z
+                        36F8 ?allocate@allocator@AZStd@@QEAAPEAX_K0@Z
+                        37A0 ?deallocate@allocator@AZStd@@QEAAXPEAX_K1@Z
+                         238 ??0Crc32@AZ@@QEAA@V?$basic_string_view@DU?$char_traits@D@AZStd@@@AZStd@@@Z
+                         235 ??0ContextBase@Internal@AZ@@QEAA@XZ
+                         234 ??0ContextBase@Internal@AZ@@QEAA@PEAVEBusEnvironment@2@@Z
+                         5ED ??1ContextBase@Internal@AZ@@UEAA@XZ
+                        1EE5 ?FindContext@EBusEnvironment@AZ@@QEAAPEAVContextBase@Internal@2@H@Z
+                        2654 ?InsertContext@EBusEnvironment@AZ@@QEAA_NHPEAVContextBase@Internal@2@_N@Z
+                         13E ??0?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@QEAA@AEBUallocator@1@@Z
+                         142 ??0?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@QEAA@PEBDAEBUallocator@1@@Z
+                         597 ??1?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@QEAA@XZ
+                        3745 ?begin@?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@QEBAPEBDXZ
+                        37B6 ?end@?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@QEBAPEBDXZ
+                         DC0 ??4?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@QEAAAEAV01@PEBD@Z
+                        3720 ?assign@?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@QEAAAEAV12@PEBD_K@Z
+                        3754 ?c_str@?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@QEBAPEBDXZ
+                        3819 ?format_arg@?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@SA?AV12@PEBDPEAD@Z
+                        2053 ?GetCStr@Name@AZ@@QEBAPEBDXZ
+                         518 ??0Value@Dom@AZ@@QEAA@_N@Z
+                        279D ?IsRemovingReflection@ReflectContext@AZ@@QEBA_NXZ
+                        2AA9 ?RTTI_AddressOf@Attribute@AZ@@UEBAPEBXAEBUUuid@2@@Z
+                        2AA8 ?RTTI_AddressOf@Attribute@AZ@@UEAAPEAXAEBUUuid@2@@Z
+                        2DDA ?RTTI_IsContainType@Attribute@AZ@@SA_NAEBUUuid@2@@Z
+                        2BB2 ?RTTI_EnumHierarchy@Attribute@AZ@@SAXP6AXAEBUUuid@2@PEAX@Z1@Z
+                         191 ??0Attribute@AZ@@QEAA@XZ
+                         5AF ??1Attribute@AZ@@UEAA@XZ
+                        2379 ?GetO3deTypeName@AZ@@YA?AV?$basic_fixed_string@D$0CAA@U?$char_traits@D@AZStd@@@AZStd@@UAdl@1@U?$type_identity@VComponent@AZ@@@std@@@Z
+                        233C ?GetO3deTypeId@AZ@@YA?AUUuid@1@UAdl@1@U?$type_identity@VComponent@AZ@@@std@@@Z
+                        2ABF ?RTTI_AddressOf@Component@AZ@@UEBAPEBXAEBUUuid@2@@Z
+                        2ABE ?RTTI_AddressOf@Component@AZ@@UEAAPEAXAEBUUuid@2@@Z
+                        2DE5 ?RTTI_IsContainType@Component@AZ@@SA_NAEBUUuid@2@@Z
+                        2BBD ?RTTI_EnumHierarchy@Component@AZ@@SAXP6AXAEBUUuid@2@PEAX@Z1@Z
+                         208 ??0Component@AZ@@QEAA@XZ
+                         5DD ??1Component@AZ@@UEAA@XZ
+                         1FE ??0CommandLineArgumentSettings@SettingsRegistryInterface@AZ@@QEAA@XZ
+                         5D9 ??1CommandLineArgumentSettings@SettingsRegistryInterface@AZ@@QEAA@XZ
+                         402 ??0PerformanceCollector@Debug@AZ@@QEAA@V?$basic_string_view@DU?$char_traits@D@AZStd@@@AZStd@@V?$span@$$CBV?$basic_string_view@DU?$char_traits@D@AZStd@@@AZStd@@$0?0@std@@V?$function@$$A6AXI@Z@4@0@Z
+                         683 ??1PerformanceCollector@Debug@AZ@@QEAA@XZ
+                        2818 ?IsWaitingBeforeCapture@PerformanceCollector@Debug@AZ@@QEAA_NXZ
+                        3047 ?RecordSample@PerformanceCollector@Debug@AZ@@QEAAXV?$basic_string_view@DU?$char_traits@D@AZStd@@@AZStd@@V?$duration@_JU?$ratio@$00$0PECEA@@std@@@chrono@std@@@Z
+                        3046 ?RecordPeriodicEvent@PerformanceCollector@Debug@AZ@@QEAAXV?$basic_string_view@DU?$char_traits@D@AZStd@@@AZStd@@@Z
+                        1F95 ?FrameTick@PerformanceCollector@Debug@AZ@@QEAAXXZ
+                        3679 ?UpdateDataLogType@PerformanceCollector@Debug@AZ@@QEAAXW4DataLogType@123@@Z
+                        367B ?UpdateFrameCountPerCaptureBatch@PerformanceCollector@Debug@AZ@@QEAAXI@Z
+                        3686 ?UpdateWaitTimeBeforeEachBatch@PerformanceCollector@Debug@AZ@@QEAAXV?$duration@_JU?$ratio@$00$00@std@@@chrono@std@@@Z
+                        367C ?UpdateNumberOfCaptureBatches@PerformanceCollector@Debug@AZ@@QEAAXI@Z
+                         447 ??0ScopeDuration@Debug@AZ@@QEAA@PEAVPerformanceCollector@12@V?$basic_string_view@DU?$char_traits@D@AZStd@@@AZStd@@@Z
+                         697 ??1ScopeDuration@Debug@AZ@@QEAA@XZ
+                        2350 ?GetO3deTypeId@AZ@@YA?AUUuid@1@UAdl@1@U?$type_identity@VSerializeContext@AZ@@@std@@@Z
+                        2144 ?GetEditContext@SerializeContext@AZ@@QEBAPEAVEditContext@2@XZ
+                        1B6E ?CloneObjectInplace@SerializeContext@AZ@@QEAAXPEAXPEBXAEBUUuid@2@@Z
+                        1EDE ?FindClassData@SerializeContext@AZ@@QEBAPEBVClassData@Serialize@2@AEBUUuid@2@PEBV342@I@Z
+                        1F4B ?FindGenericClassInfo@SerializeContext@AZ@@QEBAPEAVGenericClassInfo@2@AEBUUuid@2@@Z
+                        30A6 ?ReflectClassInternal@SerializeContext@AZ@@AEAA?AVClassBuilder@12@PEBDAEBUUuid@2@PEAVIObjectFactory@Serialize@2@AEBQ6AXAEBV?$function@$$A6AXV?$basic_string_view@DU?$char_traits@D@AZStd@@@AZStd@@@Z@AZStd@@@ZPEAVIRttiHelper@2@P6A?AVany@8@PEAV12@@ZV?$function@$$A6A?AV?$function@$$A6AXW4Action@any@AZStd@@PEAV23@PEBV23@@Z@AZStd@@PEAVSerializeContext@AZ@@@Z@8@@Z
+                        3660 ?UnreflectClassInternal@SerializeContext@AZ@@AEAA?AVClassBuilder@12@PEBDAEBUUuid@2@AEBQ6AXAEBV?$function@$$A6AXV?$basic_string_view@DU?$char_traits@D@AZStd@@@AZStd@@@Z@AZStd@@@Z@Z
+                         5D1 ??1ClassBuilder@SerializeContext@AZ@@QEAA@XZ
+                        3697 ?Version@ClassBuilder@SerializeContext@AZ@@QEAAPEAV123@IP6A_NAEAV23@AEAVDataElementNode@Serialize@3@@Z@Z
+                        1EB8 ?FieldImpl@ClassBuilder@SerializeContext@AZ@@AEAAPEAV123@V?$initializer_list@U?$pair@VCrc32@AZ@@PEAVAttribute@2@@std@@@std@@PEBDAEBUUuid@3@12_K3_N42PEAVIRttiHelper@3@PEAVGenericClassInfo@3@P6A?AVany@AZStd@@PEAV23@@Z@Z
+                         5D5 ??1ClassElement@Serialize@AZ@@QEAA@XZ
+                         1EC ??0ClassElement@Serialize@AZ@@QEAA@XZ
+                         1EB ??0ClassElement@Serialize@AZ@@QEAA@AEBU012@@Z
+                         627 ??1IObjectFactory@Serialize@AZ@@UEAA@XZ
+                        2707 ?IsHeadless@ApplicationTypeQuery@AZ@@QEBA_NXZ
+                        22A7 ?GetName@?$EBus@VComponentApplicationRequests@AZ@@VComponentApplicationRequestsEBusTraits@2@@AZ@@SAPEBDXZ
+                        2092 ?GetContext@?$EBus@VComponentApplicationRequests@AZ@@VComponentApplicationRequestsEBusTraits@2@@AZ@@SAPEAVContext@12@_N@Z
+                        217B ?GetEntry@?$EBusCallstackStorage@U?$CallstackEntryBase@VComponentApplicationRequests@AZ@@VComponentApplicationRequestsEBusTraits@2@@Internal@AZ@@$00@Internal@AZ@@AEBAAEAPEAU?$CallstackEntryBase@VComponentApplicationRequests@AZ@@VComponentApplicationRequestsEBusTraits@2@@23@XZ
+                         273 ??0ElementData@Edit@AZ@@QEAA@XZ
+                         1E8 ??0ClassData@Edit@AZ@@QEAA@XZ
+                         1E2 ??0ClassBuilder@EditContext@AZ@@AEAA@PEAV12@PEAVClassData@Serialize@2@PEAU3Edit@2@@Z
+                        1B2A ?ClassElement@ClassBuilder@EditContext@AZ@@QEAAPEAV123@VCrc32@3@PEBD@Z
+                        23CD ?GetOrCreateContext@?$EBus@VTickEvents@AZ@@V12@@AZ@@SAAEAVContext@12@_N@Z
+                        1E00 ?DisconnectInternal@?$EBus@VSystemTickEvents@AZ@@V12@@AZ@@SAXAEAVContext@12@AEAV?$HandlerNode@VSystemTickEvents@AZ@@V12@UHandlerHolder@?$EBusContainer@VSystemTickEvents@AZ@@V12@$0A@$00@Internal@2@$0A@@Internal@2@@Z
+                        20A2 ?GetContext@?$EBus@VSystemTickEvents@AZ@@V12@@AZ@@SAPEAVContext@12@_N@Z
+                        1BED ?ConnectInternal@?$EBus@VSystemTickEvents@AZ@@V12@@AZ@@SAXAEAVContext@12@AEAV?$HandlerNode@VSystemTickEvents@AZ@@V12@UHandlerHolder@?$EBusContainer@VSystemTickEvents@AZ@@V12@$0A@$00@Internal@2@$0A@@Internal@2@AEAU?$NullLockGuard@UNullMutex@AZ@@@52@AEBUNullBusId@2@@Z
+                        23CC ?GetOrCreateContext@?$EBus@VSystemTickEvents@AZ@@V12@@AZ@@SAAEAVContext@12@_N@Z
+                        23FC ?GetPlatformName@AZ@@YAPEBDW4PlatformID@1@@Z
+                        2316 ?GetNumSwitchValues@CommandLine@AZ@@QEBA_KV?$basic_string_view@DU?$char_traits@D@AZStd@@@AZStd@@@Z
+                        274F ?IsInvokable@Attribute@AZ@@UEBA_NXZ
+                        2408 ?GetPotentialClassTypeId@Attribute@AZ@@UEBA?AUUuid@2@XZ
+                        2551 ?GetVoidInstanceAttributeInvocable@Attribute@AZ@@UEAA?AV?$unique_ptr@VAttribute@AZ@@UAttributeDeleter@Internal@2@@std@@XZ
+                        1AFE ?CanDomInvoke@Attribute@AZ@@UEBA_NAEBVValue@Dom@2@@Z
+                        1E1A ?DomInvoke@Attribute@AZ@@UEAA?AVValue@Dom@2@AEBV342@@Z
+                        2531 ?GetUnderlyingComponentType@Component@AZ@@UEBA?AUUuid@2@XZ
+                        368F ?ValidateComponentRequirements@Component@AZ@@UEBA?AV?$Outcome@XV?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@@2@AEBV?$vector@PEBVEntity@AZ@@Uallocator@AZStd@@@AZStd@@AEBV?$unordered_set@VCrc32@AZ@@U?$hash@VCrc32@AZ@@@AZStd@@U?$equal_to@VCrc32@AZ@@@4@Uallocator@4@@5@@Z
+                        2645 ?Init@Component@AZ@@MEAAXXZ
+                        3303 ?SetSerializedIdentifier@Component@AZ@@UEAAXV?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@@Z
+                        2492 ?GetSerializedIdentifier@Component@AZ@@UEBA?AV?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@XZ
+                        302A ?ReadInConfig@Component@AZ@@MEAA_NPEBVComponentConfig@2@@Z
+                        36DF ?WriteOutConfig@Component@AZ@@MEBA_NPEAVComponentConfig@2@@Z
+                        3254 ?SetEntity@Component@AZ@@MEAAXPEAVEntity@2@@Z
+                        298C ?OnAfterEntitySet@Component@AZ@@MEAAXXZ
+                        120C ??_7?$NonIdHandler@VSystemTickEvents@AZ@@V12@U?$EBusContainer@VSystemTickEvents@AZ@@V12@$0A@$00@Internal@2@@Internal@AZ@@6B@
+                         13D ??0?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@QEAA@$$QEAV01@@Z
+                         DBD ??4?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@QEAAAEAV01@$$QEAV01@@Z
+                         4E9 ??0ThreadPoolAllocator@AZ@@QEAA@XZ
+                         6DA ??1ThreadPoolAllocator@AZ@@UEAA@XZ
+                         A4D ??3JobManager@AZ@@SAXPEAX_K@Z
+                         62E ??1JobManager@AZ@@QEAA@XZ
+                        1013 ??8AssetId@Data@AZ@@QEBA_NAEBU012@@Z
+                        30D9 ?Release@AssetData@Data@AZ@@QEAAXXZ
+                        1DE9 ?DisconnectInternal@?$EBus@VAssetEvents@Data@AZ@@V123@@AZ@@SAXAEAVContext@12@AEAV?$HandlerNode@VAssetEvents@Data@AZ@@V123@UHandlerHolder@?$EBusContainer@VAssetEvents@Data@AZ@@V123@$00$00@Internal@3@$00@Internal@2@@Z
+                         26C ??0EBusBuilderBase@Internal@AZ@@QEAA@PEAVBehaviorContext@2@PEAVBehaviorEBus@2@@Z
+                        2D41 ?RTTI_GetType@ThreadPoolAllocator@AZ@@UEBA?AUUuid@2@XZ
+                        2DCB ?RTTI_GetTypeName@ThreadPoolAllocator@AZ@@UEBAPEBDXZ
+                        2EDF ?RTTI_IsTypeOf@ThreadPoolAllocator@AZ@@UEBA_NAEBUUuid@2@@Z
+                        2CB7 ?RTTI_EnumTypes@ThreadPoolAllocator@AZ@@UEAAXP6AXAEBUUuid@2@PEAX@Z1@Z
+                        2B9F ?RTTI_AddressOf@ThreadPoolAllocator@AZ@@UEBAPEBXAEBUUuid@2@@Z
+                        2B9E ?RTTI_AddressOf@ThreadPoolAllocator@AZ@@UEAAPEAXAEBUUuid@2@@Z
+                        2477 ?GetSchema@?$SimpleSchemaAllocator@V?$ThreadPoolSchemaHelper@VThreadPoolAllocator@AZ@@@AZ@@$00$0A@@AZ@@UEBAPEAVIAllocator@2@XZ
+                        297E ?NumAllocatedBytes@?$SimpleSchemaAllocator@V?$ThreadPoolSchemaHelper@VThreadPoolAllocator@AZ@@@AZ@@$00$0A@@AZ@@UEBA_KXZ
+                        1FA6 ?GarbageCollect@?$SimpleSchemaAllocator@V?$ThreadPoolSchemaHelper@VThreadPoolAllocator@AZ@@@AZ@@$00$0A@@AZ@@UEAAXXZ
+                        3823 ?get_allocated_size@?$SimpleSchemaAllocator@V?$ThreadPoolSchemaHelper@VThreadPoolAllocator@AZ@@@AZ@@$00$0A@@AZ@@UEBA_KPEAX_K@Z
+                        3797 ?deallocate@?$SimpleSchemaAllocator@V?$ThreadPoolSchemaHelper@VThreadPoolAllocator@AZ@@@AZ@@$00$0A@@AZ@@UEAA_KPEAX_K1@Z
+                        36EF ?allocate@?$SimpleSchemaAllocator@V?$ThreadPoolSchemaHelper@VThreadPoolAllocator@AZ@@@AZ@@$00$0A@@AZ@@UEAA?AUAllocateAddress@@_K0@Z
+                        3897 ?reallocate@?$PoolAllocatorHelper@V?$ThreadPoolSchemaHelper@VThreadPoolAllocator@AZ@@@AZ@@@Internal@AZ@@UEAA?AUAllocateAddress@@PEAX_K1@Z
+                        2104 ?GetDebugConfig@ThreadPoolAllocator@AZ@@UEAA?AUAllocatorDebugConfig@2@XZ
+                        11EE ??_7?$MultiHandler@VAssetEvents@Data@AZ@@V123@U?$EBusContainer@VAssetEvents@Data@AZ@@V123@$00$00@Internal@3@@Internal@AZ@@6B@
+                        1069 ??9Uuid@AZ@@QEBA_NAEBU01@@Z
+                        11AD ??YUuid@AZ@@QEAAAEAU01@AEBU01@@Z
+                        10B2 ??B?$basic_fixed_string@D$0CH@U?$char_traits@D@AZStd@@@AZStd@@QEBA?AV?$basic_string_view@DU?$char_traits@D@AZStd@@@1@XZ
+                        2360 ?GetO3deTypeName@AZ@@YA?AV?$basic_fixed_string@D$0CAA@U?$char_traits@D@AZStd@@@AZStd@@UAdl@1@U?$type_identity@D@std@@@Z
+                        2323 ?GetO3deTypeId@AZ@@YA?AUUuid@1@UAdl@1@U?$type_identity@D@std@@@Z
+                        2364 ?GetO3deTypeName@AZ@@YA?AV?$basic_fixed_string@D$0CAA@U?$char_traits@D@AZStd@@@AZStd@@UAdl@1@U?$type_identity@H@std@@@Z
+                        2327 ?GetO3deTypeId@AZ@@YA?AUUuid@1@UAdl@1@U?$type_identity@H@std@@@Z
+                        2365 ?GetO3deTypeName@AZ@@YA?AV?$basic_fixed_string@D$0CAA@U?$char_traits@D@AZStd@@@AZStd@@UAdl@1@U?$type_identity@I@std@@@Z
+                        2328 ?GetO3deTypeId@AZ@@YA?AUUuid@1@UAdl@1@U?$type_identity@I@std@@@Z
+                        2393 ?GetO3deTypeName@AZ@@YA?AV?$basic_fixed_string@D$0CAA@U?$char_traits@D@AZStd@@@AZStd@@UAdl@1@U?$type_identity@_K@std@@@Z
+                        2356 ?GetO3deTypeId@AZ@@YA?AUUuid@1@UAdl@1@U?$type_identity@_K@std@@@Z
+                        2391 ?GetO3deTypeName@AZ@@YA?AV?$basic_fixed_string@D$0CAA@U?$char_traits@D@AZStd@@@AZStd@@UAdl@1@U?$type_identity@X@std@@@Z
+                        2354 ?GetO3deTypeId@AZ@@YA?AUUuid@1@UAdl@1@U?$type_identity@X@std@@@Z
+                        2395 ?GetO3deTypeName@AZStd@@YA?AV?$basic_fixed_string@D$0CAA@U?$char_traits@D@AZStd@@@1@UAdl@AZ@@U?$type_identity@Uallocator@AZStd@@@std@@@Z
+                        2358 ?GetO3deTypeId@AZStd@@YA?AUUuid@AZ@@UAdl@3@U?$type_identity@Uallocator@AZStd@@@std@@@Z
+                        237A ?GetO3deTypeName@AZ@@YA?AV?$basic_fixed_string@D$0CAA@U?$char_traits@D@AZStd@@@AZStd@@UAdl@1@U?$type_identity@VCrc32@AZ@@@std@@@Z
+                        233D ?GetO3deTypeId@AZ@@YA?AUUuid@1@UAdl@1@U?$type_identity@VCrc32@AZ@@@std@@@Z
+                         13F ??0?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@QEAA@AEBV01@@Z
+                         144 ??0?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@QEAA@V?$basic_string_view@DU?$char_traits@D@AZStd@@@1@AEBUallocator@1@@Z
+                         DBE ??4?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@QEAAAEAV01@AEBV01@@Z
+                        3707 ?append@?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@QEAAAEAV12@AEBV12@@Z
+                        3768 ?clear@?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@QEAAXXZ
+                        3948 ?size@?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@QEBA_KXZ
+                        38D7 ?resize@?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@QEAAX_K@Z
+                        37AC ?empty@?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@QEBA_NXZ
+                        37F5 ?find_first_of@?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@QEBA_KPEBD_K@Z
+                        3957 ?substr@?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@QEBA?AV12@_K0@Z
+                        3775 ?compare@?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@QEBAHAEBV12@@Z
+                        3776 ?compare@?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@QEBAHPEBD@Z
+                        3795 ?data@?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@QEAAPEADXZ
+                         3B2 ??0Name@AZ@@QEAA@AEBV01@@Z
+                        26DC ?IsEmpty@Name@AZ@@QEBA_NXZ
+                         515 ??0Value@Dom@AZ@@QEAA@XZ
+                         512 ??0Value@Dom@AZ@@QEAA@V?$basic_string_view@DU?$char_traits@D@AZStd@@@AZStd@@_N@Z
+                         509 ??0Value@Dom@AZ@@QEAA@E@Z
+                         50C ??0Value@Dom@AZ@@QEAA@H@Z
+                         517 ??0Value@Dom@AZ@@QEAA@_K@Z
+                         514 ??0Value@Dom@AZ@@QEAA@W4Type@12@@Z
+                         FF5 ??4Value@Dom@AZ@@QEAAAEAV012@$$QEAV012@@Z
+                        26A3 ?IsArray@Value@Dom@AZ@@QEBA_NXZ
+                        2775 ?IsOpaqueValue@Value@Dom@AZ@@QEBA_NXZ
+                        1082 ??AValue@Dom@AZ@@QEAAAEAV012@VName@2@@Z
+                        19BF ?ArraySize@Value@Dom@AZ@@QEBA_KXZ
+                        1088 ??AValue@Dom@AZ@@QEBAAEBV012@_K@Z
+                        23A2 ?GetOpaqueValue@Value@Dom@AZ@@QEBAAEBVany@AZStd@@XZ
+                         6E4 ??1Value@Dom@AZ@@QEAA@XZ
+                        37A6 ?do_malloc@JSON@AZ@@YAPEAX_K0HPEBD1HI@Z
+                        37A5 ?do_free@JSON@AZ@@YAXPEAX@Z
+                        2412 ?GetProcessing@ResultCode@JsonSerializationResult@AZ@@QEBA?AW4Processing@23@XZ
+                        1B01 ?CanLoadViaJsonSerialization@Utils@Dom@AZ@@YA_NAEBUUuid@3@AEBVValue@23@UJsonDeserializerSettings@3@@Z
+                        28B9 ?LoadViaJsonSerialization@Utils@Dom@AZ@@YA?ATResultCode@JsonSerializationResult@3@PEAXAEBUUuid@3@AEBVValue@23@AEBUJsonDeserializerSettings@3@@Z
+                        3636 ?TryMarshalValueToPointer@Utils@Dom@AZ@@YAPEAXAEBVValue@23@AEBUUuid@3@@Z
+                        28F3 ?MarshalOpaqueValue@Utils@Dom@AZ@@YA?AVValue@23@PEBXAEBUMarshalTypeTraits@123@V?$function@$$A6AXW4Action@any@AZStd@@PEAV23@PEBV23@@Z@AZStd@@@Z
+                        1947 ?AddReflectFunction@OnDemandReflectionOwner@AZ@@QEAAXUUuid@2@P6AXPEAVReflectContext@2@@Z@Z
+                        322F ?SetContextData@Attribute@AZ@@QEAAXPEAXP6AX0@Z@Z
+                        252C ?GetTypeName@Attribute@AZ@@SAPEBDXZ
+                        2167 ?GetEntityId@Component@AZ@@QEBA?AVEntityId@2@XZ
+                         17D ??0AssetId@Data@AZ@@QEAA@XZ
+                        27FF ?IsValid@AssetId@Data@AZ@@QEBA_NXZ
+                        35F7 ?ToFixedString@AssetId@Data@AZ@@QEBA?AV?$basic_fixed_string@D$0DA@U?$char_traits@D@AZStd@@@AZStd@@XZ
+                        18FB ?Acquire@AssetData@Data@AZ@@QEAAXXZ
+                        278C ?IsReady@AssetData@Data@AZ@@QEBA_NXZ
+                        2523 ?GetType@AssetData@Data@AZ@@QEBA?AUUuid@3@XZ
+                        3672 ?UpdateAssetInfo@AssetInternal@Data@AZ@@YAXAEAUAssetId@23@AEAV?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@@Z
+                        22A6 ?GetName@?$EBus@VBehaviorObjectSignalsInterface@AZ@@V12@@AZ@@SAPEBDXZ
+                        2091 ?GetContext@?$EBus@VBehaviorObjectSignalsInterface@AZ@@V12@@AZ@@SAPEAVContext@12@_N@Z
+                         1BF ??0BehaviorParameterMetadata@AZ@@QEAA@V?$basic_string_view@DU?$char_traits@D@AZStd@@@AZStd@@0V?$intrusive_ptr@VBehaviorDefaultValue@AZ@@@3@@Z
+                         5C1 ??1BehaviorParameterMetadata@AZ@@QEAA@XZ
+                         1BE ??0BehaviorParameterMetadata@AZ@@QEAA@AEBU01@@Z
+                         1BD ??0BehaviorParameterMetadata@AZ@@QEAA@$$QEAU01@@Z
+                         E11 ??4BehaviorParameterMetadata@AZ@@QEAAAEAU01@AEBU01@@Z
+                         E10 ??4BehaviorParameterMetadata@AZ@@QEAAAEAU01@$$QEAU01@@Z
+                         1C2 ??0BehaviorParameterOverrides@AZ@@QEAA@V?$basic_string_view@DU?$char_traits@D@AZStd@@@AZStd@@0V?$intrusive_ptr@VBehaviorDefaultValue@AZ@@@3@II@Z
+                         5C2 ??1BehaviorParameterOverrides@AZ@@QEAA@XZ
+                        12FF ??_FBehaviorParameterOverrides@AZ@@QEAAXXZ
+                         1B8 ??0BehaviorMethod@AZ@@QEAA@PEAVBehaviorContext@1@@Z
+                        1942 ?AddOverload@BehaviorMethod@AZ@@QEAA_NPEAV12@@Z
+                         2E9 ??0InputRestriction@AZ@@QEAA@XZ
+                         62A ??1InputRestriction@AZ@@QEAA@XZ
+                        236E ?GetO3deTypeName@AZ@@YA?AV?$basic_fixed_string@D$0CAA@U?$char_traits@D@AZStd@@@AZStd@@UAdl@1@U?$type_identity@UBranchOnResultInfo@AZ@@@std@@@Z
+                        2331 ?GetO3deTypeId@AZ@@YA?AUUuid@1@UAdl@1@U?$type_identity@UBranchOnResultInfo@AZ@@@std@@@Z
+                         1CF ??0BranchOnResultInfo@AZ@@QEAA@XZ
+                         5C9 ??1BranchOnResultInfo@AZ@@QEAA@XZ
+                         1CE ??0BranchOnResultInfo@AZ@@QEAA@AEBU01@@Z
+                         1CD ??0BranchOnResultInfo@AZ@@QEAA@$$QEAU01@@Z
+                        236F ?GetO3deTypeName@AZ@@YA?AV?$basic_fixed_string@D$0CAA@U?$char_traits@D@AZStd@@@AZStd@@UAdl@1@U?$type_identity@UCheckedOperationInfo@AZ@@@std@@@Z
+                        2332 ?GetO3deTypeId@AZ@@YA?AUUuid@1@UAdl@1@U?$type_identity@UCheckedOperationInfo@AZ@@@std@@@Z
+                         1E0 ??0CheckedOperationInfo@AZ@@QEAA@V?$basic_string_view@DU?$char_traits@D@AZStd@@@AZStd@@AEBUInputRestriction@1@00_N@Z
+                         5CF ??1CheckedOperationInfo@AZ@@QEAA@XZ
+                         1DF ??0CheckedOperationInfo@AZ@@QEAA@AEBU01@@Z
+                         1DE ??0CheckedOperationInfo@AZ@@QEAA@$$QEAU01@@Z
+                        2373 ?GetO3deTypeName@AZ@@YA?AV?$basic_fixed_string@D$0CAA@U?$char_traits@D@AZStd@@@AZStd@@UAdl@1@U?$type_identity@UOverloadArgumentGroupInfo@AZ@@@std@@@Z
+                        2336 ?GetO3deTypeId@AZ@@YA?AUUuid@1@UAdl@1@U?$type_identity@UOverloadArgumentGroupInfo@AZ@@@std@@@Z
+                         3E3 ??0OverloadArgumentGroupInfo@AZ@@QEAA@$$QEBV?$vector@V?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@Uallocator@2@@AZStd@@0@Z
+                         67E ??1OverloadArgumentGroupInfo@AZ@@QEAA@XZ
+                         3E4 ??0OverloadArgumentGroupInfo@AZ@@QEAA@AEBU01@@Z
+                         3E2 ??0OverloadArgumentGroupInfo@AZ@@QEAA@$$QEAU01@@Z
+                        2371 ?GetO3deTypeName@AZ@@YA?AV?$basic_fixed_string@D$0CAA@U?$char_traits@D@AZStd@@@AZStd@@UAdl@1@U?$type_identity@UExplicitOverloadInfo@AZ@@@std@@@Z
+                        2334 ?GetO3deTypeId@AZ@@YA?AUUuid@1@UAdl@1@U?$type_identity@UExplicitOverloadInfo@AZ@@@std@@@Z
+                         2A0 ??0ExplicitOverloadInfo@AZ@@QEAA@V?$basic_string_view@DU?$char_traits@D@AZStd@@@AZStd@@0@Z
+                         60E ??1ExplicitOverloadInfo@AZ@@QEAA@XZ
+                         29F ??0ExplicitOverloadInfo@AZ@@QEAA@AEBU01@@Z
+                         29E ??0ExplicitOverloadInfo@AZ@@QEAA@$$QEAU01@@Z
+                        1C24 ?ConvertValueTo@Internal@AZ@@YA_NPEAXPEBVIRttiHelper@2@AEBUUuid@2@AEAPEAXAEAU?$static_buffer_allocator@$0CA@$0CA@@AZStd@@@Z
+                         5C0 ??1BehaviorMethodImpl@Internal@AZ@@UEAA@XZ
+                         5BC ??1BehaviorEBusEvent@Internal@AZ@@UEAA@XZ
+                         1B5 ??0BehaviorEBusEventSender@AZ@@QEAA@XZ
+                         5BD ??1BehaviorEBusEventSender@AZ@@QEAA@XZ
+                         1B4 ??0BehaviorEBusEventSender@AZ@@QEAA@AEBU01@@Z
+                         1B3 ??0BehaviorEBusEventSender@AZ@@QEAA@$$QEAU01@@Z
+                        233A ?GetO3deTypeId@AZ@@YA?AUUuid@1@UAdl@1@U?$type_identity@VBehaviorContext@AZ@@@std@@@Z
+                        1B2B ?ClassImpl@BehaviorContext@AZ@@AEAAPEAVBehaviorClass@2@PEBDAEBUUuid@2@PEAVIRttiHelper@2@_K3@Z
+                        1A04 ?BuildBehaviorEBus@BehaviorContext@AZ@@AEAAPEAVBehaviorEBus@2@PEBD00@Z
+                         1E5 ??0ClassBuilderBase@Internal@AZ@@QEAA@PEAVBehaviorContext@2@PEAVBehaviorClass@2@@Z
+                         5D2 ??1ClassBuilderBase@Internal@AZ@@QEAA@XZ
+                        323D ?SetDeprecatedName@ClassBuilderBase@Internal@AZ@@AEAAXPEBD0@Z
+                        3243 ?SetEBusEventSender@EBusAttributes@Internal@AZ@@IEAAXPEAUBehaviorEBusEventSender@3@@Z
+
+    KERNEL32.dll
+             180060E88 Import Address Table
+             1800AEFB0 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                         109 CreateSemaphoreW
+                         28D GetLastError
+                         4EC ReleaseSemaphore
+                         4EA ReleaseSRWLockExclusive
+                           0 AcquireSRWLockExclusive
+                         62D WakeAllConditionVariable
+                         5CA SleepConditionVariableSRW
+                         509 RtlCaptureContext
+                         511 RtlLookupFunctionEntry
+                         518 RtlVirtualUnwind
+                         5FB UnhandledExceptionFilter
+                         5B8 SetUnhandledExceptionFilter
+                         241 GetCurrentProcess
+                         5D8 TerminateProcess
+                         3B8 IsProcessorFeaturePresent
+                         3B0 IsDebuggerPresent
+                         481 QueryPerformanceCounter
+                         242 GetCurrentProcessId
+                         31A GetSystemTimeAsFileTime
+                         142 DisableThreadLibraryCalls
+                         39A InitializeSListHead
+                         157 EnterCriticalSection
+                         3F0 LeaveCriticalSection
+                         5C8 Sleep
+                         246 GetCurrentThreadId
+                         625 WaitForSingleObject
+                          9D CloseHandle
+
+    MSVCP140.dll
+             180060F68 Import Address Table
+             1800AF090 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                         25C ?_Raise_handler@std@@3P6AXAEBVexception@stdext@@@ZEA
+
+    VCRUNTIME140.dll
+             180061018 Import Address Table
+             1800AF140 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                          36 _purecall
+                          22 __std_exception_destroy
+                          3B memcmp
+                          3C memcpy
+                          21 __std_exception_copy
+                          3D memmove
+                          3E memset
+                          24 __std_type_info_compare
+                           8 __C_specific_handler
+                           1 _CxxThrowException
+                          25 __std_type_info_destroy_list
+
+    api-ms-win-crt-heap-l1-1-0.dll
+             180061078 Import Address Table
+             1800AF1A0 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                          19 malloc
+                           1 _aligned_malloc
+                          18 free
+                           8 _callnewh
+
+    api-ms-win-crt-string-l1-1-0.dll
+             180061128 Import Address Table
+             1800AF250 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                          8B strlen
+
+    api-ms-win-crt-math-l1-1-0.dll
+             1800610A0 Import Address Table
+             1800AF1C8 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                          7D ceilf
+
+    api-ms-win-crt-stdio-l1-1-0.dll
+             180061110 Import Address Table
+             1800AF238 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                           D __stdio_common_vsprintf
+                           B __stdio_common_vsnprintf_s
+
+    api-ms-win-crt-runtime-l1-1-0.dll
+             1800610B0 Import Address Table
+             1800AF1D8 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                          34 _initialize_onexit_table
+                          3C _register_onexit_function
+                          22 _execute_onexit_table
+                          1E _crt_atexit
+                          16 _cexit
+                          3F _seh_filter_dll
+                          3A _invoke_watson
+                          36 _initterm
+                          37 _initterm_e
+                          18 _configure_narrow_argv
+                          33 _initialize_narrow_environment
+
+  Summary
+
+       19000 .data
+        6000 .pdata
+       5A000 .rdata
+        2000 .reloc
+        1000 .rsrc
+       5F000 .text

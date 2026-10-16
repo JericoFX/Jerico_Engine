@@ -840,3 +840,22 @@ flowchart LR
 - Passes, material types, materiales y otras fuentes de authoring siguen siendo datos editables; un archivo JSON no es por sí mismo configuración fija sobrante. Este inventario no prescribe eliminarlo.
 - Build94 estaba activo durante la lectura. No se ejecutó configure/build/test/GUI ni se leyó su resultado como cerrado. Los hashes detectan cambios en metadatos capturados; cualquier drift invalida esa parte de la captura.
 - La evidencia histórica tiene fecha y alcance propios; no sustituye gates runtime/Ready/SDK/Beauty/performance/VR/Linux/Shipping abiertos.
+
+## Delta98 — inicialización RPI nativa (16/10/2026)
+
+El mapa anterior sigue siendo su snapshot estático; este delta registra el ownership verificado sin inventar un callgraph completo. Las dos activaciones Atom_RPI.Private/Editor ya no forman parte de los22 planes actuales de once ejecutables. Las cinco funciones de host enlazan las factorías nativas antes de Bootstrap. Public/Edit/assets/Registry/manifest siguen residuales; Atom_RPI continúa PARTIAL y el incremento de Gems completas es0.
+
+```mermaid
+flowchart LR
+  Runtime["Launcher: CreateStaticModules"] --> RF["JE::Render::Integration::CreateRpiRuntimeModule"]
+  Editor["Editor + AtomToolsApplication"] --> EF["JE::Editor::RenderIntegration::CreateRpiEditorModule"]
+  AP["AssetProcessor + AssetBuilder"] --> EF
+  RF --> RI["RenderIntegration.dll: JE::Render::RPI"]
+  EF --> ERI["EditorRenderIntegration.dll: editor RPI"]
+  ERI --> RI
+  RI --> Public["Atom_RPI.Public residual"]
+  ERI --> Edit["Atom_RPI.Edit residual"]
+  Metadata["Registry/rpi_assets.setreg: Atom_RPI vacío"] -. "descubrimiento sin módulo" .-> Assets["Assets + Registry + aliases residuales"]
+```
+
+Pruebas588/588, PE/consumidor SDK focal, Editor/White Box/Material Workspace y runtime Vulkan reales. Dos DLL de módulos menos; no se afirma absorción de todo Atom, cierre SDK packaging, AP global, Linux, VR, Shipping ni mejora global de RAM. La evidencia y límites están en [corte98](../../evidence/n0/native-rpi-initialization-2026-10-16/README.md). Reutilizar SDK96; no repetir install/configure/build por cambios que no invalidan esa evidencia.

@@ -1,0 +1,21 @@
+{
+  "verificationErrors": [],
+  "baseline32AndBoundary16Unchanged": true,
+  "phaseRoots": [
+    {
+      "livePidObserved": false,
+      "stillSameIdentity": false,
+      "pid": 6596,
+      "creationUtc": "2026-10-16T23:38:47.7770591Z"
+    },
+    {
+      "livePidObserved": false,
+      "stillSameIdentity": false,
+      "pid": 20372,
+      "creationUtc": "2026-10-16T23:38:18.3335304Z"
+    }
+  ],
+  "sdk96AndConsumer96NeverWrittenByWrapper": true,
+  "error": "Input drift: F:\\JericoEngine\\JericoEngine\\build\\sdk-vk-consumer98\\bin\\profile\\EditorRenderIntegration.dll",
+  "noGlobalCleanup": true
+}

@@ -1,0 +1,1015 @@
+{
+  "revision": 98,
+  "capturedUtc": "2026-10-16T23:54:15.3710963Z",
+  "baseGitHEAD": "72bbe49bf23552edb0fc8e9b7264d490884293e6",
+  "checkout": "F:\\JericoEngine\\JericoEngine",
+  "branch": "development",
+  "status": "FOCAL_NATIVE_INITIALIZATION_VULKAN_AND_SDK_DELTA_ACCEPTED_RPI_PARTIAL",
+  "codePaths": 43,
+  "nativeTests": 588,
+  "wholeGemIncrement": 0,
+  "freezeR5": {
+    "inputs": 14063,
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\freeze98-green-r5.json",
+    "sha256": "D3C81B7804AB0658D82D319F7C109D025665FC3AE3B6C3EF1F35C9FB0898BA0A",
+    "absences": 61
+  },
+  "copied": [
+    {
+      "relative": "red-factories/JE_RenderIntegration.Tests.xml",
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\red-tests-attempt1\\JE_RenderIntegration.Tests.xml",
+      "bytes": 3011,
+      "sha256": "FCEBD8FE67B4807682E8074723B15C88D772BE2BE9298FB8029F81DD87DE2526",
+      "copiedByteExact": true
+    },
+    {
+      "relative": "red-factories/JE_EditorRenderIntegration.Tests.xml",
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\red-tests-attempt1\\JE_EditorRenderIntegration.Tests.xml",
+      "bytes": 1803,
+      "sha256": "8CCFCA29AB19B996942DF5B88485A638FD4B97C7F5C6D9AEB92CDA2EF4A7385D",
+      "copiedByteExact": true
+    },
+    {
+      "relative": "red-factories/ctest.result.json",
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\red-tests-attempt1\\ctest.result.json",
+      "bytes": 3433,
+      "sha256": "F3CE71794C679FC28A3608D8AE57169D2AC84026817A8FAA5A5F7DC2A1CEEC0C",
+      "copiedByteExact": true
+    },
+    {
+      "relative": "red-factories/ctest.stdout.log",
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\red-tests-attempt1\\ctest.stdout.log",
+      "bytes": 6051,
+      "sha256": "02F3A083769DD6B0BE63BAAE94FCA809A62767684B7614D975A65EB5F82A5D6C",
+      "copiedByteExact": true
+    },
+    {
+      "relative": "red-factories/ctest.stderr.log",
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\red-tests-attempt1\\ctest.stderr.log",
+      "bytes": 27,
+      "sha256": "18E00877DC1071C85CD4F479D451BEBEEF8309022E46CF8C63B0BED5151984A4",
+      "copiedByteExact": true
+    },
+    {
+      "relative": "red-lifecycle/JE_RenderIntegration.Tests.xml",
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\green-r3-tests-attempt1\\JE_RenderIntegration.Tests.xml",
+      "bytes": 5353,
+      "sha256": "C1EFA14F9A317F481B494C5331C46FCB2E3B07651C082F66F9998EFDBE05D695",
+      "copiedByteExact": true
+    },
+    {
+      "relative": "red-lifecycle/JE_EditorRenderIntegration.Tests.xml",
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\green-r3-tests-attempt1\\JE_EditorRenderIntegration.Tests.xml",
+      "bytes": 4133,
+      "sha256": "278BA2CDE2628E07CB13C77DD3A2753078A21A1A3009284C261BBD1E4DBD9E80",
+      "copiedByteExact": true
+    },
+    {
+      "relative": "red-lifecycle/ctest.result.json",
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\green-r3-tests-attempt1\\ctest.result.json",
+      "bytes": 384,
+      "sha256": "29A2ACADEEEB2D9B2EAFD8DFD0F3278CCB55A7F4810F52C41AA735A1D0D43AFD",
+      "copiedByteExact": true
+    },
+    {
+      "relative": "red-lifecycle/ctest.stdout.log",
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\green-r3-tests-attempt1\\ctest.stdout.log",
+      "bytes": 8482,
+      "sha256": "F3030C078F9E9C9D052CA6957C65DDFE63BFA0A1668918B52EB970F447C18021",
+      "copiedByteExact": true
+    },
+    {
+      "relative": "red-lifecycle/cdb.log",
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\thread-shutdown-diagnostic\\cdb-attempt1\\cdb.log",
+      "bytes": 22115,
+      "sha256": "AE2B4F9AC6DBE3AAEDAE22D701E05C2EF7DA12FB2223CFD7F14F231DA579D60C",
+      "copiedByteExact": true
+    },
+    {
+      "relative": "red-lifecycle/cdb.result.json",
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\thread-shutdown-diagnostic\\cdb-attempt1\\cdb.result.json",
+      "bytes": 2220,
+      "sha256": "187E72B469338B8665C306824BA254E3CCDFF00256411BE2CB6529A78D294613",
+      "copiedByteExact": true
+    },
+    {
+      "relative": "red-lifecycle/diagnostic.xml",
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\thread-shutdown-diagnostic\\cdb-attempt1\\diagnostic.xml",
+      "bytes": 1409,
+      "sha256": "B3E52FBAA070D29C70EEBD8F19E0E6A65AD4B6ADB28B2C31EAFCC37B0F9C52AA",
+      "copiedByteExact": true
+    },
+    {
+      "relative": "native-build/build-targets.result.json",
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\green-r4-attempt1\\build-targets.result.json",
+      "bytes": 43124,
+      "sha256": "35E81BDE3697B2BA9AB80ED4EC6036625F19FBA83BC682A39366BF12E6004D82",
+      "copiedByteExact": true
+    },
+    {
+      "relative": "native-build/build-targets.stdout.log",
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\green-r4-attempt1\\build-targets.stdout.log",
+      "bytes": 10930,
+      "sha256": "D7E70E4BACFBF369B8F4298CC861D3E7352C9DB577DDDBB3CCABC02B12BDAC05",
+      "copiedByteExact": true
+    },
+    {
+      "relative": "native-build/build-targets.native-exit.txt",
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\green-r4-attempt1\\build-targets.native-exit.txt",
+      "bytes": 1,
+      "sha256": "5FECEB66FFC86F38D952786C6D696C79C2DBC239DD4E91B46729D73A27FB57E9",
+      "copiedByteExact": true
+    },
+    {
+      "relative": "native-build/owned-vctip-cleanup.json",
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\green-r4-attempt1\\owned-vctip-cleanup.json",
+      "bytes": 911,
+      "sha256": "64FA1DE195F77EE5A216AC6FFDAC491D293E47B1149FDB8913086BB16D110513",
+      "copiedByteExact": true
+    },
+    {
+      "relative": "green-tests/JE_RenderIntegration.Tests.xml",
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\green-r4-tests-attempt1\\JE_RenderIntegration.Tests.xml",
+      "bytes": 2828,
+      "sha256": "21AF3AAEEACADE1882157294B3DD884A258B3C1C49607800BD942CD29309113F",
+      "copiedByteExact": true
+    },
+    {
+      "relative": "green-tests/JE_EditorRenderIntegration.Tests.xml",
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\green-r4-tests-attempt1\\JE_EditorRenderIntegration.Tests.xml",
+      "bytes": 1611,
+      "sha256": "AC99666E9A2445BBE99B877198BE711DB95DE2E03DAB1A90624A37F33977E4ED",
+      "copiedByteExact": true
+    },
+    {
+      "relative": "green-tests/Gem_Atom_RPI.Tests.xml",
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\green-r4-tests-attempt1\\Gem_Atom_RPI.Tests.xml",
+      "bytes": 195629,
+      "sha256": "6DA2F3C6082E4C390132DD1E786B2E29BA70E678A27B9C6E8341936B4213423F",
+      "copiedByteExact": true
+    },
+    {
+      "relative": "green-tests/ctest.result.json",
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\green-r4-tests-attempt1\\ctest.result.json",
+      "bytes": 8481,
+      "sha256": "7EED3AC3B11EF63C00D286DC2E4BF999C111D1FA248DAC3DBC53C9536AFCFCDC",
+      "copiedByteExact": true
+    },
+    {
+      "relative": "green-tests/ctest.stdout.log",
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\green-r4-tests-attempt1\\ctest.stdout.log",
+      "bytes": 723,
+      "sha256": "3E0D135E44B08E3C7B7C6FAF327B3447527A0130DB9B78F43683FAABFC67EC6D",
+      "copiedByteExact": true
+    },
+    {
+      "relative": "green-tests/ctest.native-exit.txt",
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\green-r4-tests-attempt1\\ctest.native-exit.txt",
+      "bytes": 1,
+      "sha256": "5FECEB66FFC86F38D952786C6D696C79C2DBC239DD4E91B46729D73A27FB57E9",
+      "copiedByteExact": true
+    },
+    {
+      "relative": "green-tests/postflight-r4.json",
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\green-r4-tests-attempt1\\postflight-r4.json",
+      "bytes": 4495,
+      "sha256": "BEB35A82AB8D81309341C6EB127D51E4231D9A56D56C83E22D1E239AE98479FA",
+      "copiedByteExact": true
+    },
+    {
+      "relative": "pe-boundary/review.json",
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\pe-boundary\\review.json",
+      "bytes": 7525,
+      "sha256": "DF4845E31CEF803BBE5F023761C18ECDD730927094F13E0DFC0C9046F50AEA64",
+      "copiedByteExact": true
+    },
+    {
+      "relative": "pe-boundary/runtime-exports.stdout.log",
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\pe-boundary\\runtime-exports.stdout.log",
+      "bytes": 187971,
+      "sha256": "2BD42AFCA175993BF5A888EC9F12AE9FE9BC8E6D939FBB59261AEBC0DD6565C5",
+      "copiedByteExact": true
+    },
+    {
+      "relative": "pe-boundary/editor-exports.stdout.log",
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\pe-boundary\\editor-exports.stdout.log",
+      "bytes": 106415,
+      "sha256": "8257927133B50954FDD8FFD39DFA1F1C6CADA5FA674CE0560ED31AD5C4D9157E",
+      "copiedByteExact": true
+    },
+    {
+      "relative": "pe-boundary/editor-imports.stdout.log",
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\pe-boundary\\editor-imports.stdout.log",
+      "bytes": 59654,
+      "sha256": "B6F87E497B3630FEA7C7E6412DE06843315CEBCE77174B1734043EC7C0F65D29",
+      "copiedByteExact": true
+    },
+    {
+      "relative": "pe-boundary/public-current-exports.stdout.log",
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\pe-boundary\\public-current-exports.stdout.log",
+      "bytes": 2602630,
+      "sha256": "16CDE120DFE3574162C6FE45E0AF7127B1DC689837A23F2E9047E108E216CE42",
+      "copiedByteExact": true
+    },
+    {
+      "relative": "pe-boundary/public-baseline-exports.stdout.log",
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\pe-boundary\\public-baseline-exports.stdout.log",
+      "bytes": 795485,
+      "sha256": "4420C300308A3D8D01C048B21C5D3CFC0AEB352B973F7807F309B41F74310636",
+      "copiedByteExact": true
+    },
+    {
+      "relative": "pe-boundary/public-current-dependents.stdout.log",
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\pe-boundary\\public-current-dependents.stdout.log",
+      "bytes": 685,
+      "sha256": "EBD5252F1DA63C0A86538F3D42F7DFAFF1D57F02D97CA78EA992AA6327748FCF",
+      "copiedByteExact": true
+    },
+    {
+      "relative": "pe-boundary/public-baseline-dependents.stdout.log",
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\pe-boundary\\public-baseline-dependents.stdout.log",
+      "bytes": 680,
+      "sha256": "B04FC29958AD03D4DAD96ABCEF9E0C5238A4CD14F5C29CF92CC77FAE6A21DBD4",
+      "copiedByteExact": true
+    },
+    {
+      "relative": "parent/parent-host98-partial-build-review.json",
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\parent-host98-partial-build-review.json",
+      "bytes": 2738,
+      "sha256": "5B35F6B558138DE768DDF13C4FC5EC79BABF62915C01DA1935895B48D1049645",
+      "copiedByteExact": true
+    },
+    {
+      "relative": "parent/parent-r4-xml-review-final.json",
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\parent-r4-xml-review-final.json",
+      "bytes": 1280,
+      "sha256": "040E9CF9945F84678B341CBEA54279A7346306961F334A51C61187ACAF09F2B2",
+      "copiedByteExact": true
+    },
+    {
+      "relative": "parent/parent-r5-ui-postflight.json",
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\parent-r5-ui-postflight.json",
+      "bytes": 1233,
+      "sha256": "1892036D8741619AA8EEA40AD3F1380622D09230337BB0F01E22CC1D062BF748",
+      "copiedByteExact": true
+    },
+    {
+      "relative": "parent/hosts98-reused-pins.json",
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\hosts98-reused-pins.json",
+      "bytes": 4878,
+      "sha256": "0C2CEF74A6C1F8E2083CDB843D742ED32B61C336B1DF9EAFB14DD3A1585D3928",
+      "copiedByteExact": true
+    },
+    {
+      "relative": "red-editor/Editor.log",
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\editor98-red\\Editor.log",
+      "bytes": 19000,
+      "sha256": "5A1403411709BEAA661E094D7A29B6EBB275141B3C6025EFCB85BED5CDA3532B",
+      "copiedByteExact": true
+    },
+    {
+      "relative": "red-editor/error.log",
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\editor98-red\\error.log",
+      "bytes": 3256,
+      "sha256": "4874B4BA66EB98C100296BCC3329475E47F118BEB4563F553346D3EE6DFA0868",
+      "copiedByteExact": true
+    },
+    {
+      "relative": "red-editor/cleanup-preservation.json",
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\editor98-red\\cleanup-preservation.json",
+      "bytes": 419,
+      "sha256": "5979C4F619B3F5ACD6349A42F845649B997707C4009A8F39D91F42F56CF0E9A6",
+      "copiedByteExact": true
+    },
+    {
+      "relative": "red-editor/AP_GUI.log.current-content-rev2.log",
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\editor98-red-log-diagnosis\\AP_GUI.log.current-content-rev2.log",
+      "bytes": 1101199,
+      "sha256": "901F6DA1C5220219C605CCEF66A16DC1195E4259CF226F1E93A6A592893FDDA1",
+      "copiedByteExact": true
+    },
+    {
+      "relative": "red-editor/log-diagnosis-rev2.json",
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\editor98-red-log-diagnosis\\log-diagnosis-rev2.json",
+      "bytes": 10745,
+      "sha256": "06C7AC70E813FB78E42B2F7F1B212266885DF8DBD2995546A8298D6FE74180F1",
+      "copiedByteExact": true
+    },
+    {
+      "relative": "asset-discovery/activation-plan-comparison.json",
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\rpi-asset-discovery-config-review\\activation-plan-comparison.json",
+      "bytes": 19217,
+      "sha256": "CB98BFC400B3196D25EB549AD91E7BEFB6F1FFF603F7D7D8AE4400356F593227",
+      "copiedByteExact": true
+    },
+    {
+      "relative": "asset-discovery/parent-seam-decision.json",
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\rpi-asset-discovery-config-review\\parent-seam-decision.json",
+      "bytes": 273,
+      "sha256": "1DDA5CC43A2475B083A09F7B294DAA0E79F763078927925D6D2F21E39053CEAC",
+      "copiedByteExact": true
+    },
+    {
+      "relative": "asset-discovery/review.md",
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\rpi-asset-discovery-config-review\\review.md",
+      "bytes": 4297,
+      "sha256": "8D6C70299F75AC3A66FCE946633E7AAD6A5F5EC00EA923562047BC85A435C85C",
+      "copiedByteExact": true
+    },
+    {
+      "relative": "asset-discovery/application-receipt.json",
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\rpi-asset-discovery-config-review\\application-r5\\application-receipt.json",
+      "bytes": 3963,
+      "sha256": "B71B438BCB16A59D7007E02C8E15AFBFF0450419A75BE639977BD9A11DA20DC7",
+      "copiedByteExact": true
+    },
+    {
+      "relative": "green-cook/AP_GUI.log.capture3.log",
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\editor98-r5-cook\\AP_GUI.log.capture3.log",
+      "bytes": 1321456,
+      "sha256": "EC9D0E21D72EFE0E149C95786C6743D59B471BA6BABC0B380A96BD2A5D648E9A",
+      "copiedByteExact": true
+    },
+    {
+      "relative": "green-cook/r5-cook-evidence-rev1.json",
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\editor98-r5-cook\\r5-cook-evidence-rev1.json",
+      "bytes": 8051,
+      "sha256": "0027F32F76FE3C1DF2AD99836F402611116219136CD75227598166B0AFC330D1",
+      "copiedByteExact": true
+    },
+    {
+      "relative": "green-editor/native-start.json",
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\native-rpi98-editor-vulkan-r5-attempt1\\native-start.json",
+      "bytes": 1309,
+      "sha256": "8E4B9F65239B0DC363B4DE3F8C51BCD84739376D9587CDDF2E8F2CAA7666D8AB",
+      "copiedByteExact": true
+    },
+    {
+      "relative": "green-editor/native-result.json",
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\native-rpi98-editor-vulkan-r5-attempt1\\native-result.json",
+      "bytes": 13455,
+      "sha256": "2806BEA5977643E81CAEF929494D6AA2DE269198A82D933598C29E73CCD11D96",
+      "copiedByteExact": true
+    },
+    {
+      "relative": "green-editor/native-exit.txt",
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\native-rpi98-editor-vulkan-r5-attempt1\\native-exit.txt",
+      "bytes": 1,
+      "sha256": "5FECEB66FFC86F38D952786C6D696C79C2DBC239DD4E91B46729D73A27FB57E9",
+      "copiedByteExact": true
+    },
+    {
+      "relative": "green-editor/native.stdout.log",
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\native-rpi98-editor-vulkan-r5-attempt1\\native.stdout.log",
+      "bytes": 4146,
+      "sha256": "4158CF88ABEDBEF82922CD6250C4C3BC9B0117DE47C15781A4488AD5EB3B1B7B",
+      "copiedByteExact": true
+    },
+    {
+      "relative": "green-editor/native.stderr.log",
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\native-rpi98-editor-vulkan-r5-attempt1\\native.stderr.log",
+      "bytes": 0,
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "copiedByteExact": true
+    },
+    {
+      "relative": "green-runtime/native-start.json",
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\native-rpi98-runtime-vulkan-r5-attempt1\\native-start.json",
+      "bytes": 1496,
+      "sha256": "BE9CE016CCFEA5235B5A88D692A51211BB3824719546F5F129485359092CE817",
+      "copiedByteExact": true
+    },
+    {
+      "relative": "green-runtime/native-result.json",
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\native-rpi98-runtime-vulkan-r5-attempt1\\native-result.json",
+      "bytes": 1643,
+      "sha256": "FD19C244C38760E7FA0454594AB5C7ECBC9F88F94430A5BC8A35DBC7BC244154",
+      "copiedByteExact": true
+    },
+    {
+      "relative": "green-runtime/native-exit.txt",
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\native-rpi98-runtime-vulkan-r5-attempt1\\native-exit.txt",
+      "bytes": 1,
+      "sha256": "5FECEB66FFC86F38D952786C6D696C79C2DBC239DD4E91B46729D73A27FB57E9",
+      "copiedByteExact": true
+    },
+    {
+      "relative": "green-runtime/native.stdout.log",
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\native-rpi98-runtime-vulkan-r5-attempt1\\native.stdout.log",
+      "bytes": 5616,
+      "sha256": "1341C27669016E64CDD940399551B19DF59A7FC6AC66DE995E0D7F927447FB32",
+      "copiedByteExact": true
+    },
+    {
+      "relative": "green-runtime/native.stderr.log",
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\native-rpi98-runtime-vulkan-r5-attempt1\\native.stderr.log",
+      "bytes": 0,
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "copiedByteExact": true
+    },
+    {
+      "relative": "red-editor-native/native-start.json",
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\native-rpi98-editor-vulkan-attempt1\\native-start.json",
+      "bytes": 1309,
+      "sha256": "C6FB29311B612F5FD99A1056EBF88997014A5D7FA9D8537E10B4A4BD1EB16602",
+      "copiedByteExact": true
+    },
+    {
+      "relative": "red-editor-native/native-result.json",
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\native-rpi98-editor-vulkan-attempt1\\native-result.json",
+      "bytes": 7048,
+      "sha256": "EDF9FA53B9C03D4060CE44FBDE3261BA0C864574782A4D3817E15A139CDDA8FB",
+      "copiedByteExact": true
+    },
+    {
+      "relative": "red-editor-native/native-exit.txt",
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\native-rpi98-editor-vulkan-attempt1\\native-exit.txt",
+      "bytes": 11,
+      "sha256": "7F841252F42196C985FC00857652AC1C679D26776F0A839D095033F0CD3F701E",
+      "copiedByteExact": true
+    },
+    {
+      "relative": "red-editor-native/native.stdout.log",
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\native-rpi98-editor-vulkan-attempt1\\native.stdout.log",
+      "bytes": 4043,
+      "sha256": "410F1DB75F7ADE9E33A12A5FF203B2F20B018F294C95AFED36106436F56475EE",
+      "copiedByteExact": true
+    },
+    {
+      "relative": "red-editor-native/native.stderr.log",
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\native-rpi98-editor-vulkan-attempt1\\native.stderr.log",
+      "bytes": 0,
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "copiedByteExact": true
+    },
+    {
+      "relative": "visual/editor-r5-ap-builder-live-modules.json",
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\visual\\editor-r5-ap-builder-live-modules.json",
+      "bytes": 59490,
+      "sha256": "031EA5B7F144E47477BD3C9F0DB693E547C3909EF1FBD97220380DE9D72D0809",
+      "copiedByteExact": true
+    },
+    {
+      "relative": "visual/editor-r5-after-material-module-names.json",
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\visual\\editor-r5-after-material-module-names.json",
+      "bytes": 5042,
+      "sha256": "3D766D9F51A7C280BA474A63C52D9395D94269D4A22F003A6AD9226F7E814176",
+      "copiedByteExact": true
+    },
+    {
+      "relative": "visual/editor-r5-normal-close-postflight.json",
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\visual\\editor-r5-normal-close-postflight.json",
+      "bytes": 133,
+      "sha256": "2CD01B71F973980F9CCC9FC61C587C58EC2FD6C1152782E30E415FD7F1E7CD1A",
+      "copiedByteExact": true
+    },
+    {
+      "relative": "visual/runtime-r5-live-modules.json",
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\visual\\runtime-r5-live-modules.json",
+      "bytes": 28308,
+      "sha256": "201E8C7D954AF2D6AFF69597A37973BC21BA2313FAD546FDFE7A8596A3C30B92",
+      "copiedByteExact": true
+    },
+    {
+      "relative": "visual/runtime-r5-normal-close-request.json",
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\visual\\runtime-r5-normal-close-request.json",
+      "bytes": 250,
+      "sha256": "8B530B81B56A4EF33A97FC88A0DB2E1E61F7DD59795D1F6EF3816081332EA8AC",
+      "copiedByteExact": true
+    },
+    {
+      "relative": "visual/ui-helper-reset-postflight.json",
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\visual\\ui-helper-reset-postflight.json",
+      "bytes": 367,
+      "sha256": "5073EC0CEC11184E48B30916F2C2727D369B59A2C35E6828201C2B08E4992159",
+      "copiedByteExact": true
+    },
+    {
+      "relative": "visual/material-workspace-window.json",
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\visual\\material-workspace-window.json",
+      "bytes": 448,
+      "sha256": "CD40B05FE6E36FDDAA444DB5920FBDFE9ECD75FC3C98418F0FF98DB7E9787828",
+      "copiedByteExact": true
+    },
+    {
+      "relative": "parent/acceptance98.json",
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\parent-acceptance98.json",
+      "bytes": 2325,
+      "sha256": "719BE87CA7A98757FACD17A849486A42D49D5A84EE1564DC9ACF7B077F1F806F",
+      "copiedByteExact": true
+    },
+    {
+      "relative": "sdk-delta/first-attempt/actual-command-boundary.json",
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atom-next-native-scope-rev1\\validation-preparation\\atom-rpi98-sdk-delta-candidate\\execution-delta98-attempt1\\actual-command-boundary.json",
+      "bytes": 1761,
+      "sha256": "48FCA27DDA932738965F4D18919FECB423C7D43E351274B39742D550A3B9CBDD",
+      "copiedByteExact": true
+    },
+    {
+      "relative": "sdk-delta/first-attempt/build-consumer.result.json",
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atom-next-native-scope-rev1\\validation-preparation\\atom-rpi98-sdk-delta-candidate\\execution-delta98-attempt1\\build-consumer.result.json",
+      "bytes": 987,
+      "sha256": "084DE0ABD9361CDA2F343CAAB91ACAD73E766D32D7CDBBA7BC4DFEFD87A6F01A",
+      "copiedByteExact": true
+    },
+    {
+      "relative": "sdk-delta/first-attempt/build-consumer.start.json",
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atom-next-native-scope-rev1\\validation-preparation\\atom-rpi98-sdk-delta-candidate\\execution-delta98-attempt1\\build-consumer.start.json",
+      "bytes": 653,
+      "sha256": "D76E4438C7011B16EF8405F5F2BFE4C8FF537249634D5E38383172A11D2BB949",
+      "copiedByteExact": true
+    },
+    {
+      "relative": "sdk-delta/first-attempt/build-consumer.stderr.log",
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atom-next-native-scope-rev1\\validation-preparation\\atom-rpi98-sdk-delta-candidate\\execution-delta98-attempt1\\build-consumer.stderr.log",
+      "bytes": 0,
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "copiedByteExact": true
+    },
+    {
+      "relative": "sdk-delta/first-attempt/build-consumer.stdout.log",
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atom-next-native-scope-rev1\\validation-preparation\\atom-rpi98-sdk-delta-candidate\\execution-delta98-attempt1\\build-consumer.stdout.log",
+      "bytes": 26225,
+      "sha256": "330B6FF2FAAED8EC436EA040E467F6A18E38F359C23CFD8D290E2E9E2CCFD53C",
+      "copiedByteExact": true
+    },
+    {
+      "relative": "sdk-delta/first-attempt/configure-boundary.json",
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atom-next-native-scope-rev1\\validation-preparation\\atom-rpi98-sdk-delta-candidate\\execution-delta98-attempt1\\configure-boundary.json",
+      "bytes": 2395,
+      "sha256": "3426902B49F3F4B303E6626C13A3351C6968205399A6E417378F746DA486EEB5",
+      "copiedByteExact": true
+    },
+    {
+      "relative": "sdk-delta/first-attempt/configure-consumer.result.json",
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atom-next-native-scope-rev1\\validation-preparation\\atom-rpi98-sdk-delta-candidate\\execution-delta98-attempt1\\configure-consumer.result.json",
+      "bytes": 997,
+      "sha256": "912E382ACFC052F4CC5CFF423B0780255E04130A7982077E2DED8CBC285F2262",
+      "copiedByteExact": true
+    },
+    {
+      "relative": "sdk-delta/first-attempt/configure-consumer.start.json",
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atom-next-native-scope-rev1\\validation-preparation\\atom-rpi98-sdk-delta-candidate\\execution-delta98-attempt1\\configure-consumer.start.json",
+      "bytes": 4448,
+      "sha256": "B5825EC63ACAE3A6BA4AD96CFEC2A24AC63C0F25CAA096E52A295450D4E9D6A9",
+      "copiedByteExact": true
+    },
+    {
+      "relative": "sdk-delta/first-attempt/configure-consumer.stderr.log",
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atom-next-native-scope-rev1\\validation-preparation\\atom-rpi98-sdk-delta-candidate\\execution-delta98-attempt1\\configure-consumer.stderr.log",
+      "bytes": 2741,
+      "sha256": "C31957D2F47E5165E6C8381975E7951533354C114E0CBD2FAD302E556D2DF6C0",
+      "copiedByteExact": true
+    },
+    {
+      "relative": "sdk-delta/first-attempt/configure-consumer.stdout.log",
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atom-next-native-scope-rev1\\validation-preparation\\atom-rpi98-sdk-delta-candidate\\execution-delta98-attempt1\\configure-consumer.stdout.log",
+      "bytes": 8306,
+      "sha256": "130AE47163480E299376F110BC4B92DFBBBD703E8390A44006BAB666DF6DFF70",
+      "copiedByteExact": true
+    },
+    {
+      "relative": "sdk-delta/first-attempt/failure.json",
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atom-next-native-scope-rev1\\validation-preparation\\atom-rpi98-sdk-delta-candidate\\execution-delta98-attempt1\\failure.json",
+      "bytes": 184,
+      "sha256": "F47BC89B470CCDEEF6FA7E18A0D4E2CF8037217D3D6363D985C11ADE9CB76E33",
+      "copiedByteExact": true
+    },
+    {
+      "relative": "sdk-delta/first-attempt/overlay-before-configure.json",
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atom-next-native-scope-rev1\\validation-preparation\\atom-rpi98-sdk-delta-candidate\\execution-delta98-attempt1\\overlay-before-configure.json",
+      "bytes": 8141,
+      "sha256": "B3EE9AB6617EB8F107F7E4E58D6EB3FE0B44B702D5433F3AE0B2671FF4377097",
+      "copiedByteExact": true
+    },
+    {
+      "relative": "sdk-delta/first-attempt/postflight.json",
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atom-next-native-scope-rev1\\validation-preparation\\atom-rpi98-sdk-delta-candidate\\execution-delta98-attempt1\\postflight.json",
+      "bytes": 622,
+      "sha256": "AA0094A2CA1A95F7378FC6C0642D2DEB02B7A786D8870235EEFA41334C824D3A",
+      "copiedByteExact": true
+    },
+    {
+      "relative": "sdk-delta/first-attempt/preflight.json",
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atom-next-native-scope-rev1\\validation-preparation\\atom-rpi98-sdk-delta-candidate\\execution-delta98-attempt1\\preflight.json",
+      "bytes": 27818,
+      "sha256": "BACCC24901495BFFACC7E56F189B32BD41CB0DDBE01241DE006FBA0035DBF30B",
+      "copiedByteExact": true
+    },
+    {
+      "relative": "sdk-delta/completion/actual-command-boundary.json",
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\sdk-delta98-completion-attempt1\\actual-command-boundary.json",
+      "bytes": 1761,
+      "sha256": "4805E419F16B1D0F28B37781C33AFD4758310AE23DC9416F05A8FF79C172605B",
+      "copiedByteExact": true
+    },
+    {
+      "relative": "sdk-delta/completion/completion-postflight.json",
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\sdk-delta98-completion-attempt1\\completion-postflight.json",
+      "bytes": 7647,
+      "sha256": "1F17631DD77621C62BBD94F1CCD9CEE64C97EC59D0DB3EB04AF549F4851E8460",
+      "copiedByteExact": true
+    },
+    {
+      "relative": "sdk-delta/completion/configure-boundary.json",
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\sdk-delta98-completion-attempt1\\configure-boundary.json",
+      "bytes": 2395,
+      "sha256": "D8B57A52F43AC37E227D42574888E7CD3412DB3D90C3B612F45C2F382032075D",
+      "copiedByteExact": true
+    },
+    {
+      "relative": "sdk-delta/completion/deployment-repair.json",
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\sdk-delta98-completion-attempt1\\deployment-repair.json",
+      "bytes": 2264,
+      "sha256": "C961120351AABECC76712F524F8B9598622EDBE215C9300C72C78D39EAE342DC",
+      "copiedByteExact": true
+    },
+    {
+      "relative": "sdk-delta/completion/hardlinks-EditorRenderIntegration.dll.json",
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\sdk-delta98-completion-attempt1\\hardlinks-EditorRenderIntegration.dll.json",
+      "bytes": 437,
+      "sha256": "BC4EFC4199203D6416A73CCF620F3E10B2207C64F43FE72D04D360A77F73F663",
+      "copiedByteExact": true
+    },
+    {
+      "relative": "sdk-delta/completion/hardlinks-EditorRenderIntegration.dll.stdout.log",
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\sdk-delta98-completion-attempt1\\hardlinks-EditorRenderIntegration.dll.stdout.log",
+      "bytes": 90,
+      "sha256": "A7CB41B8CAF5C5351A23535B49D3CBABF8413C532E7E369DD39F11F91FB4BD0B",
+      "copiedByteExact": true
+    },
+    {
+      "relative": "sdk-delta/completion/hardlinks-RenderIntegration.dll.json",
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\sdk-delta98-completion-attempt1\\hardlinks-RenderIntegration.dll.json",
+      "bytes": 425,
+      "sha256": "10C716D03A6CA5F96240FDDB6214D040585C5E2E5AD677BCC2B7255D763C8487",
+      "copiedByteExact": true
+    },
+    {
+      "relative": "sdk-delta/completion/hardlinks-RenderIntegration.dll.stdout.log",
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\sdk-delta98-completion-attempt1\\hardlinks-RenderIntegration.dll.stdout.log",
+      "bytes": 84,
+      "sha256": "A562F9368574083E90E577EF8EB0D87854A2DC0F0866A1A7C9705834F4D2BC14",
+      "copiedByteExact": true
+    },
+    {
+      "relative": "sdk-delta/completion/loader.result.json",
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\sdk-delta98-completion-attempt1\\loader.result.json",
+      "bytes": 676,
+      "sha256": "EF269257A8626A60CD706388E2B70AD6DF7049A778A6F4CC651D8E83839ADAB6",
+      "copiedByteExact": true
+    },
+    {
+      "relative": "sdk-delta/completion/loader.start.json",
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\sdk-delta98-completion-attempt1\\loader.start.json",
+      "bytes": 351,
+      "sha256": "AD101B770AC2C4E42EA70DE0AB098111DD194A7A34A1ED8AAA2905231182FF17",
+      "copiedByteExact": true
+    },
+    {
+      "relative": "sdk-delta/completion/loader.stderr.log",
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\sdk-delta98-completion-attempt1\\loader.stderr.log",
+      "bytes": 0,
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "copiedByteExact": true
+    },
+    {
+      "relative": "sdk-delta/completion/loader.stdout.log",
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\sdk-delta98-completion-attempt1\\loader.stdout.log",
+      "bytes": 664,
+      "sha256": "A2C1A7513207DA0EB09F447840F2DA25988140C7A1BC86AFAA2211B35CD83B42",
+      "copiedByteExact": true
+    },
+    {
+      "relative": "sdk-delta/completion/pe-imports.result.json",
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\sdk-delta98-completion-attempt1\\pe-imports.result.json",
+      "bytes": 686,
+      "sha256": "6434E8B68D29D26FA0E0525D7AFBF223E2BABB6D69D8AAA028E5B6A2F8F6F8AB",
+      "copiedByteExact": true
+    },
+    {
+      "relative": "sdk-delta/completion/pe-imports.start.json",
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\sdk-delta98-completion-attempt1\\pe-imports.start.json",
+      "bytes": 442,
+      "sha256": "B58727C211355759849603EFF33355DF4AECD0FCB81DD48060147CB6E655BDDB",
+      "copiedByteExact": true
+    },
+    {
+      "relative": "sdk-delta/completion/pe-imports.stderr.log",
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\sdk-delta98-completion-attempt1\\pe-imports.stderr.log",
+      "bytes": 0,
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "copiedByteExact": true
+    },
+    {
+      "relative": "sdk-delta/completion/pe-imports.stdout.log",
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\sdk-delta98-completion-attempt1\\pe-imports.stdout.log",
+      "bytes": 19050,
+      "sha256": "8CE45A270490925A9FED717039D3597BFAFB42756D0449826FF12812A7EB5D39",
+      "copiedByteExact": true
+    },
+    {
+      "relative": "sdk-delta/completion/postflight.json",
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\sdk-delta98-completion-attempt1\\postflight.json",
+      "bytes": 512,
+      "sha256": "DCBC7934075910B8BB2D053DA4F3A68F2261612CE481B3D6C0F6B255D0C3E9E6",
+      "copiedByteExact": true
+    },
+    {
+      "relative": "sdk-delta/completion/preflight.json",
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\sdk-delta98-completion-attempt1\\preflight.json",
+      "bytes": 9410,
+      "sha256": "BF0F61D529ED373C918C1547F54F5EB114047CA27E8512240BE25D073B8FEDB4",
+      "copiedByteExact": true
+    },
+    {
+      "relative": "sdk-delta/completion/summary.json",
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\sdk-delta98-completion-attempt1\\summary.json",
+      "bytes": 700,
+      "sha256": "8A1E4B736D298C1315381588589752E7BCC2AEF41C7C2870579422EBEF8F75E3",
+      "copiedByteExact": true
+    },
+    {
+      "relative": "sdk-delta/consumer-source/CMakeLists.txt",
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atom-next-native-scope-rev1\\validation-preparation\\atom-rpi98-sdk-delta-candidate\\source\\CMakeLists.txt",
+      "bytes": 5603,
+      "sha256": "69975FE551C5632CBFFC94F76DA5B78990C5C95F405C876F8DA175643F5A114D",
+      "copiedByteExact": true
+    },
+    {
+      "relative": "sdk-delta/consumer-source/consumer_files.cmake",
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atom-next-native-scope-rev1\\validation-preparation\\atom-rpi98-sdk-delta-candidate\\source\\consumer_files.cmake",
+      "bytes": 25,
+      "sha256": "2F0ACA6BAD0CF988A388EC9D4664ED2E2D507B4E03958E23730768D314E3006E",
+      "copiedByteExact": true
+    },
+    {
+      "relative": "sdk-delta/consumer-source/main.cpp",
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atom-next-native-scope-rev1\\validation-preparation\\atom-rpi98-sdk-delta-candidate\\source\\main.cpp",
+      "bytes": 21527,
+      "sha256": "E60118196720630A279BBF40B46EAC15087A67899F110A2F4963B2F2174ED093",
+      "copiedByteExact": true
+    },
+    {
+      "relative": "sdk-delta/consumer-source/project.json",
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atom-next-native-scope-rev1\\validation-preparation\\atom-rpi98-sdk-delta-candidate\\source\\project.json",
+      "bytes": 388,
+      "sha256": "3A7625CD2BE22DFD8B3C36C4C68932693611513A980111870371A291F12197C4",
+      "copiedByteExact": true
+    },
+    {
+      "relative": "sdk-delta/preparation/RunSdkDelta98.ps1",
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atom-next-native-scope-rev1\\validation-preparation\\atom-rpi98-sdk-delta-candidate\\RunSdkDelta98.ps1",
+      "bytes": 23562,
+      "sha256": "31903EC1D010DD36EF4D07E6CB4501B2816800A92F450C7CDC58395A00D07C79",
+      "copiedByteExact": true
+    },
+    {
+      "relative": "sdk-delta/preparation/CompleteSdkDelta98.ps1",
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atom-next-native-scope-rev1\\validation-preparation\\atom-rpi98-sdk-delta-candidate\\CompleteSdkDelta98.ps1",
+      "bytes": 14452,
+      "sha256": "17E334978BF0D389EA4FCFE64BE8779C28306AE8CBE10FAA022D580B8123F226",
+      "copiedByteExact": true
+    },
+    {
+      "relative": "sdk-delta/preparation/completion-inputs.json",
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atom-next-native-scope-rev1\\validation-preparation\\atom-rpi98-sdk-delta-candidate\\completion-inputs.json",
+      "bytes": 19678,
+      "sha256": "8F134D7D60476B1203BC6FA1828A1B6AF019422C25FA68187CB6F79AE933B6AC",
+      "copiedByteExact": true
+    },
+    {
+      "relative": "sdk-delta/preparation/completion-receipt.json",
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atom-next-native-scope-rev1\\validation-preparation\\atom-rpi98-sdk-delta-candidate\\completion-receipt.json",
+      "bytes": 4229,
+      "sha256": "603824630E4E3C409937C423E445EA3EADDF14FEC288336BDF4704CD5BFD7523",
+      "copiedByteExact": true
+    },
+    {
+      "relative": "sdk-delta/preparation/completion-static-proof.json",
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atom-next-native-scope-rev1\\validation-preparation\\atom-rpi98-sdk-delta-candidate\\completion-static-proof.json",
+      "bytes": 1278,
+      "sha256": "656CF8B898350AD4214E2A89598787AAFD53A0A5B46E72AC60F3B60640D23223",
+      "copiedByteExact": true
+    },
+    {
+      "relative": "sdk-delta/preparation/recipe.json",
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atom-next-native-scope-rev1\\validation-preparation\\atom-rpi98-sdk-delta-candidate\\recipe.json",
+      "bytes": 16574,
+      "sha256": "6B153CE1D33AC7CF4F6F9EB9DB955C44BCA41E243CFBAC7455FB1DF87FBF966F",
+      "copiedByteExact": true
+    },
+    {
+      "relative": "sdk-delta/preparation/pins.json",
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atom-next-native-scope-rev1\\validation-preparation\\atom-rpi98-sdk-delta-candidate\\pins.json",
+      "bytes": 2228,
+      "sha256": "19E15DAF7295590B061A4834F7A670949F6A66ABF9A961D85238A1F19A1453D9",
+      "copiedByteExact": true
+    },
+    {
+      "relative": "sdk-delta/preparation/baseline-boundary-pins.json",
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atom-next-native-scope-rev1\\validation-preparation\\atom-rpi98-sdk-delta-candidate\\baseline-boundary-pins.json",
+      "bytes": 5059,
+      "sha256": "EFDEB394EE58664614E80227B8036E06DB3E344315E5E10E7F9FF8E8393AFAEA",
+      "copiedByteExact": true
+    },
+    {
+      "relative": "sdk-delta/preparation/baseline-runtime32-pins.json",
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atom-next-native-scope-rev1\\validation-preparation\\atom-rpi98-sdk-delta-candidate\\baseline-runtime32-pins.json",
+      "bytes": 10238,
+      "sha256": "F3C14ACAB3FA24A22332277F4236E2C8ECCAC49B9C7FB1FB62C9DD79FDDD1A6F",
+      "copiedByteExact": true
+    },
+    {
+      "relative": "sdk-delta/preparation/wrapper-binding-contract.json",
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atom-next-native-scope-rev1\\validation-preparation\\atom-rpi98-sdk-delta-candidate\\wrapper-binding-contract.json",
+      "bytes": 1892,
+      "sha256": "557790EC7023B0622B371F8FA09A1A4F16A4E1964E8588B3B5D3CF5CF05BEE16",
+      "copiedByteExact": true
+    },
+    {
+      "relative": "sdk-delta/preparation/revision-r5-receipt.json",
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atom-next-native-scope-rev1\\validation-preparation\\atom-rpi98-sdk-delta-candidate\\revision-r5-receipt.json",
+      "bytes": 6238,
+      "sha256": "C73380CDF06715D13FD7B8C884A5C6D95BEF7FAF0F70AEBF851F43BB1FDB70F0",
+      "copiedByteExact": true
+    },
+    {
+      "relative": "sdk-delta/parent-binding-r5.json",
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\parent-sdk98-delta-binding-r5.json",
+      "bytes": 6006,
+      "sha256": "481564C33C6DEC28EDE9CECDA727B6971B54219772954039ABE2F70B9F693FF0",
+      "copiedByteExact": true
+    },
+    {
+      "relative": "sdk-delta/parent-completion-approval.json",
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\parent-sdk98-completion-approval.json",
+      "bytes": 596,
+      "sha256": "F2390292C14D7C0B6E4F0249C51FFAA9726112686E535A760A015CCDBCDC8041",
+      "copiedByteExact": true
+    },
+    {
+      "relative": "sdk-delta/powershell-host/failure-receipt.json",
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\execution-delta98-attempt1\\failure-receipt.json",
+      "bytes": 2530,
+      "sha256": "ECE6611EF34754030A68F628DCA0CA65028F0F5838C53B5CF4F451FCC9138AD7",
+      "copiedByteExact": true
+    },
+    {
+      "relative": "sdk-delta/powershell-host/diagnostic.json",
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\execution-delta98-attempt1\\powershell-host-diagnostic.json",
+      "bytes": 1335,
+      "sha256": "0A6612F35E06B15D4B711F98BBA54FEA701D8D056EC2F1E562D256154BC84C2A",
+      "copiedByteExact": true
+    },
+    {
+      "relative": "owned-inputs.json",
+      "source": null,
+      "bytes": 7868,
+      "sha256": "11AFAA33DC28A148AB246E746B74C2AD97C9BE61A49A686187A08063CF9662C1",
+      "copiedByteExact": false,
+      "generatedByParent": true
+    },
+    {
+      "relative": "footprint.json",
+      "source": null,
+      "bytes": 1215,
+      "sha256": "98E8F2E80AD5737B32627B3CAEB17C04B4C32784AD7732A260886572A3B80BAE",
+      "copiedByteExact": false,
+      "generatedByParent": true
+    },
+    {
+      "relative": "README.md",
+      "source": null,
+      "bytes": 7689,
+      "sha256": "23D893AD25B4F98B73F64F1DEFBE9AB6FCFA3DAA2AED6D6151C387AD02C41DA1",
+      "copiedByteExact": false,
+      "generatedByParent": true
+    },
+    {
+      "relative": "parent/cross-review98.json",
+      "source": null,
+      "bytes": 1780,
+      "sha256": "98CA6B3513FB738F0FF037BB8683DD049CBF77E2C2A1FFA680B40BF9C7BCB5BB",
+      "copiedByteExact": false,
+      "generatedByParent": true
+    },
+    {
+      "relative": "parent/upstream-scope98.json",
+      "source": null,
+      "bytes": 994,
+      "sha256": "169D5823F02EB5D593EC7FC477440E4BB490630C7EBAAD0A1E3814BC279F60FC",
+      "copiedByteExact": false,
+      "generatedByParent": true
+    },
+    {
+      "relative": "parent/document-staging-receipt.json",
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\publication\\document-staging-receipt.json",
+      "bytes": 2480,
+      "sha256": "D59195CFEB37C987158F200AA6CA318DD4A0965C677D254A47CF88D677354E79",
+      "copiedByteExact": true
+    }
+  ],
+  "localOriginalVisuals": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\visual\\editor-r5-ap-idle.png",
+      "bytes": 166058,
+      "sha256": "3760A91531EF6172EBE6196810BF1C35094300E42AF74347C7FD8A237B587FDA",
+      "originalResolutionPreserved": true,
+      "copiedToGit": false
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\visual\\editor-r5-camera-room.png",
+      "bytes": 168745,
+      "sha256": "919EA8BDE1F0CBABF6B986304EBF1B9DF385AF7209471A616B756B3A2A7C86BF",
+      "originalResolutionPreserved": true,
+      "copiedToGit": false
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\visual\\editor-r5-material-workspace.png",
+      "bytes": 202557,
+      "sha256": "059A058B70C4F9596664FEE558F438BF66A9A255772E3D256F2B18C972FF993F",
+      "originalResolutionPreserved": true,
+      "copiedToGit": false
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\visual\\editor-r5-whitebox-inspector.png",
+      "bytes": 222443,
+      "sha256": "0C2AB1C4F8BD572277E4E1DBFF66BC31FCD75F422B75EE0B8B445DC98984C720",
+      "originalResolutionPreserved": true,
+      "copiedToGit": false
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\visual\\editor-rpi-crash-dialog.png",
+      "bytes": 26299,
+      "sha256": "4737D3A3BAC719ED4657BBA2D059BA94EC72DCD6E2FB5CC951EBE11C7E387682",
+      "originalResolutionPreserved": true,
+      "copiedToGit": false
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\visual\\editor-rpi-fatal.png",
+      "bytes": 12074,
+      "sha256": "B65B5AE4392FB31865381E5AE4452B3B9A8FF642FBC01D502C20E30C5032AB2D",
+      "originalResolutionPreserved": true,
+      "copiedToGit": false
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\visual\\runtime-console-quit-before-enter.png",
+      "bytes": 210012,
+      "sha256": "4ADDE8C4240BD001B9F595B1547D4625E30FE2D622C2B17F5297E742943A43AD",
+      "originalResolutionPreserved": true,
+      "copiedToGit": false
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\visual\\runtime-r5-vulkan-room.png",
+      "bytes": 85556,
+      "sha256": "407ED9ED5C0B9CA2EAA6C3A56BA2174F659ACBC236BD71E08ED466A5AF4D3538",
+      "originalResolutionPreserved": true,
+      "copiedToGit": false
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\visual\\runtime-vulkan-room.png",
+      "bytes": 85564,
+      "sha256": "3253FB42888CC411E03B87FF19E875C0F6FDB9B6BC268B0AD906CC3FABF1AA77",
+      "originalResolutionPreserved": true,
+      "copiedToGit": false
+    }
+  ],
+  "largeLocalOnly": {
+    "quarantine": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\retired-product-artifacts\\receipt.json",
+    "dump": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\editor98-red\\error.dmp",
+    "pins": [
+      {
+        "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\editor98-red\\error.dmp",
+        "bytes": 40711833,
+        "sha256": "F2D2F06CF721C2FA52CC83F8D30FAC3F5C5EA38E7135DC3D5699B19A931384D3"
+      },
+      {
+        "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\retired-product-artifacts\\receipt.json",
+        "bytes": 2030,
+        "sha256": "04EBE0C267E075832E00F1904346F454A04843E29B0FBDF32F5B8C47D414172A"
+      }
+    ]
+  },
+  "limits": [
+    "On preserved WIP, no clean HEAD replay",
+    "RPI Public/Edit/assets/gem manifest remain",
+    "AP global338 failed jobs remain; focal source events plus nine product pins do not provide a fresh RunKey",
+    "Visuals retained locally, no LFS upload or image conversion",
+    "Windows Profile Vulkan; no VR/Linux/Shipping/Beauty/performance acceptance"
+  ],
+  "sdkDelta": {
+    "fullPackagingRetirementPending": true,
+    "runtimeDlls": 32,
+    "baseline96Unchanged": true,
+    "configureBuildRanOnce": true,
+    "nativePhaseExit": {
+      "build": 0,
+      "imports": 0,
+      "loader": 0,
+      "configure": 0
+    },
+    "repairOnlyTwoGeneratedRegularDlls": true,
+    "fullSdkInstallRepeated": false
+  }
+}

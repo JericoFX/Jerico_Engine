@@ -1,0 +1,23 @@
+{
+  "status": "CONTRACT_ONLY_NOT_A_BINDING",
+  "requiredFields": {
+    "approved": "boolean true",
+    "reviewer": "/root",
+    "revision": 98,
+    "wrapperPin": "path/bytes/sha256 of exact reviewed RunSdkDelta98.ps1",
+    "recipePin": "path/bytes/sha256 of revision2 R5 recipe6B153CE1D33AC7CF4F6F9EB9DB955C44BCA41E243CFBAC7455FB1DF87FBF966F",
+    "freezePin": "exact parent freeze98-green-r5.jsonD3C81B7804AB0658D82D319F7C109D025665FC3AE3B6C3EF1F35C9FB0898BA0A,14063/61",
+    "freezeSHA256": "equal freezePin.sha256",
+    "greenXmlPins": "exact2 closed native Integration XML,12 unique run/completed/no failure/error/skip",
+    "hostEvidencePins": "nonempty parent-reviewed unchanged producer host evidence pins",
+    "providerPins": "exact4 original-engine bin/profile {RenderIntegration,EditorRenderIntegration}.dll and lib/profile same.lib with bytes+SHA",
+    "headerPins": "exact2 production public Module header paths/hash matching already-reviewed private header copies",
+    "exportPins": "exact2 measured report pins with additional provider field RenderIntegration or EditorRenderIntegration; real old+new symbols",
+    "publicBodyDllPin": "Exact original-engine Profile Atom_RPI.Public.dll F10958165992BB366C032CABF192738069D53B5A9EE0443D9BEDF22E48527D45/7858688B",
+    "publicPeProofPin": "Exact parent PEreview DF4845E31CEF803BBE5F023761C18ECDD730927094F13E0DFC0C9046F50AEA64",
+    "publicXmlPin": "Exact Gem_Atom_RPI.Tests.xml6DA2F3C6082E4C390132DD1E786B2E29BA70E678A27B9C6E8341936B4213423F,576run/completed0errors/failures/skips/disabled"
+  },
+  "invocation": "pwsh -NoProfile -File RunSdkDelta98.ps1 -Execute -BindingPath <parent file> -BindingSHA256 <parent exact SHA>",
+  "withoutExecute": "returns PREPARED_NOT_RUN before data read/output/native mutation",
+  "default": "NOT_READY until parent approved finalR5 binding and exclusive native lease"
+}

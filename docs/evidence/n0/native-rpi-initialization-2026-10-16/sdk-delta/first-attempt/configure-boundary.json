@@ -1,0 +1,58 @@
+{
+  "targets": [
+    "JE::EditorCamera",
+    "JE::EditorMaterials",
+    "JE::EditorRenderIntegration",
+    "JE::RenderAssetBuilders",
+    "JE::RenderIntegration",
+    "AZ::SceneData"
+  ],
+  "sourceEngineFallback": false,
+  "reports": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-vk-consumer98\\native-EditorCamera-profile.txt",
+      "bytes": 4914,
+      "sha256": "0E80F4B0F1D1D710B4FEBA8EF5F53B071DFDB4BCA007D9440E598F38B993EBA2"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-vk-consumer98\\native-EditorMaterials-profile.txt",
+      "bytes": 5611,
+      "sha256": "302372C7826D865F7E090E814671F20DCE1063CABF1F551CBAA1F6CA127B7280"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-vk-consumer98\\native-EditorRenderIntegration-profile.txt",
+      "bytes": 2042,
+      "sha256": "397245124CDB03F51FBFC135643BC06265263351E23E273AF787945605BF2154"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-vk-consumer98\\native-RenderAssetBuilders-profile.txt",
+      "bytes": 1253,
+      "sha256": "16F812E2BB590BAEE22E045A2622BFECE333FC35C1CC0F0FCC58C9DC1AF0A488"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-vk-consumer98\\native-RenderIntegration-profile.txt",
+      "bytes": 1953,
+      "sha256": "D03C2D6434DBC48D6544415A62C9DD5619C34E1A52DE5780B7BE89F8432B7FBF"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-vk-consumer98\\native-SceneData-profile.txt",
+      "bytes": 327,
+      "sha256": "1966EEC8AF806390BAADC5C35924D37A7FAFCFE08B37B88B472666A57F12EBD5"
+    }
+  ],
+  "retainedPublicImplib": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-vk96\\lib\\Windows\\profile\\Default\\Atom_RPI.Public.lib",
+    "bytes": 3865542,
+    "sha256": "D103ABDBE2F1BD14B7C986F6E5A933F8406BB721AD84B044B918D424D947DC09"
+  },
+  "publicBodyReport": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-vk-consumer98\\rpi-body-provider-profile.txt",
+    "bytes": 229,
+    "sha256": "4A498B2F4A49AD682F09F39DD1FD5A6C1CB78FC792D03A9E5C8BDAAFDEBF0CA1"
+  },
+  "project": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-vk-consumer98\\External\\source-5812e56f\\JENativeSdkConsumer.vcxproj",
+    "bytes": 46835,
+    "sha256": "5B5AF76AC1DB9C9D2CDC604085B492C636E8F4EE74640514F38B2986C3843C12"
+  }
+}

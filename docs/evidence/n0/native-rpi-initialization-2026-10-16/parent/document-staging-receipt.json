@@ -1,0 +1,50 @@
+[
+  {
+    "relative": "docs/work/ACTIVE_SLICE.md",
+    "workingPreimage": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\publication\\preimages\\docs\\work\\ACTIVE_SLICE.md",
+    "stagedBlob": "4c0e388294a34af0bef328dd536f9868bdaa9118",
+    "headBytes": 107691,
+    "workingAfterSha256": "049C45288B1FF8F240B9D58C5193756C04208E5434D30F520CAB46B197C7D85C",
+    "ownedBytes": 3326,
+    "mode": "prefix",
+    "workingPreimageSha256": "1F049EB6DAD048E102011EB29D454D8F341267A9BE836C356E8FD59E22856919",
+    "selectedOnlyHeadPlusOwned": true,
+    "foreignWorkingBytesPreserved": true
+  },
+  {
+    "relative": "docs/work/HANDOFF.md",
+    "workingPreimage": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\publication\\preimages\\docs\\work\\HANDOFF.md",
+    "stagedBlob": "07a581f72a566bbf8ce1f7eb1b28e42e1397d8d8",
+    "headBytes": 112625,
+    "workingAfterSha256": "473F4F0DF328232A5CBA9ACA7787C618FA9564729815A77EB0A3F2B024DFF1D2",
+    "ownedBytes": 3999,
+    "mode": "prefix",
+    "workingPreimageSha256": "315B8DB17AA6C1F937A96C54D536875318D2D8CD752E2F6765596E3FD8C4A164",
+    "selectedOnlyHeadPlusOwned": true,
+    "foreignWorkingBytesPreserved": true
+  },
+  {
+    "relative": "docs/architecture/gem-map/map.md",
+    "workingPreimage": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\publication\\preimages\\docs\\architecture\\gem-map\\map.md",
+    "stagedBlob": "3d6977e22c34064606da8ec10c353bd9442560df",
+    "headBytes": 40429,
+    "workingAfterSha256": "5F658ED30F4E9944E9FEDC088784B3DA93391D3BD00296A61BC75716700F0317",
+    "ownedBytes": 1585,
+    "mode": "append",
+    "workingPreimageSha256": "CAE217D9D20118CAC5C331F5428D879462FAC2BDA41F468E9E00A43AF9278B8F",
+    "selectedOnlyHeadPlusOwned": true,
+    "foreignWorkingBytesPreserved": true
+  },
+  {
+    "relative": "docs/ENGINE_DEBUGGING_BOOK.md",
+    "workingPreimage": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\publication\\preimages\\docs\\ENGINE_DEBUGGING_BOOK.md",
+    "stagedBlob": "cfea5fa3e396c395b87f289e529fcb6b605df4c5",
+    "headBytes": 117239,
+    "workingAfterSha256": "BC867DBA2C27A4438299EA45AE729A022E98A7B9DA4431B973663A515AE8D5E7",
+    "ownedBytes": 2143,
+    "mode": "append",
+    "workingPreimageSha256": "02DBF9A0766C46E3A5D783EF9665EE2B6E81A6AC5A7F404ED5D90816DD7517EF",
+    "selectedOnlyHeadPlusOwned": true,
+    "foreignWorkingBytesPreserved": true
+  }
+]

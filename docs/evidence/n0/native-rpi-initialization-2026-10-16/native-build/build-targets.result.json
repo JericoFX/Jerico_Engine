@@ -1,0 +1,1167 @@
+{
+  "phase": "build-targets",
+  "startedUtc": "2026-10-16T23:00:17.4985119Z",
+  "finishedUtc": "2026-10-16T23:01:23.8525985Z",
+  "elapsedSeconds": 66.354,
+  "pid": 18880,
+  "creationUtc": "2026-10-16T23:00:17.5003425Z",
+  "executable": "C:\\Program Files\\CMake\\bin\\cmake.exe",
+  "argv": [
+    "--build",
+    "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine",
+    "--config",
+    "Profile",
+    "--target",
+    "RenderIntegration.Tests",
+    "EditorRenderIntegration.Tests",
+    "Atom_RPI.Tests",
+    "--parallel",
+    "1",
+    "--",
+    "/p:UseMultiToolTask=true",
+    "/p:MultiProcCL=true",
+    "/p:MultiProcMaxCount=1",
+    "/p:EnableClServerMode=false",
+    "/p:EnforceProcessCountAcrossBuilds=true",
+    "/p:CL_MPCount=1",
+    "/m:1",
+    "/nr:false"
+  ],
+  "cwd": "F:\\JericoEngine\\JericoEngine",
+  "exitCode": 0,
+  "nativeExitCodeCapturedImmediately": true,
+  "stdout": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\green-r4-attempt1\\build-targets.stdout.log",
+  "stdoutSha256": "D7E70E4BACFBF369B8F4298CC861D3E7352C9DB577DDDBB3CCABC02B12BDAC05",
+  "stderr": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\green-r4-attempt1\\build-targets.stderr.log",
+  "stderrSha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+  "ramBefore": {
+    "capturedUtc": "2026-10-16T23:00:17.4263033Z",
+    "totalBytes": 34265743360,
+    "freeBytes": 19163521024,
+    "usedPercent": 44.07
+  },
+  "ramAfter": {
+    "capturedUtc": "2026-10-16T23:01:16.1574009Z",
+    "totalBytes": 34265743360,
+    "freeBytes": 19134472192,
+    "usedPercent": 44.16
+  },
+  "peakRamUsedPercent": 47.67,
+  "samples": [
+    {
+      "capturedUtc": "2026-10-16T23:00:20.5737697Z",
+      "usedPercent": 44.41,
+      "freeBytes": 19049123840,
+      "ownedProcesses": [
+        {
+          "pid": 18880,
+          "parentPid": 23284,
+          "name": "cmake.exe",
+          "creationUtc": "2026-10-16T23:00:17.5003420Z",
+          "executable": "C:\\Program Files\\CMake\\bin\\cmake.exe",
+          "workingSetBytes": 18993152
+        },
+        {
+          "pid": 22452,
+          "parentPid": 18880,
+          "name": "conhost.exe",
+          "creationUtc": "2026-10-16T23:00:17.5082750Z",
+          "executable": "C:\\WINDOWS\\system32\\conhost.exe",
+          "workingSetBytes": 7921664
+        },
+        {
+          "pid": 19352,
+          "parentPid": 18880,
+          "name": "MSBuild.exe",
+          "creationUtc": "2026-10-16T23:00:17.6416170Z",
+          "executable": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\MSBuild\\Current\\Bin\\amd64\\MSBuild.exe",
+          "workingSetBytes": 108380160
+        }
+      ]
+    },
+    {
+      "capturedUtc": "2026-10-16T23:00:23.7182405Z",
+      "usedPercent": 45.52,
+      "freeBytes": 18669682688,
+      "ownedProcesses": [
+        {
+          "pid": 18880,
+          "parentPid": 23284,
+          "name": "cmake.exe",
+          "creationUtc": "2026-10-16T23:00:17.5003420Z",
+          "executable": "C:\\Program Files\\CMake\\bin\\cmake.exe",
+          "workingSetBytes": 18993152
+        },
+        {
+          "pid": 22452,
+          "parentPid": 18880,
+          "name": "conhost.exe",
+          "creationUtc": "2026-10-16T23:00:17.5082750Z",
+          "executable": "C:\\WINDOWS\\system32\\conhost.exe",
+          "workingSetBytes": 7921664
+        },
+        {
+          "pid": 19352,
+          "parentPid": 18880,
+          "name": "MSBuild.exe",
+          "creationUtc": "2026-10-16T23:00:17.6416170Z",
+          "executable": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\MSBuild\\Current\\Bin\\amd64\\MSBuild.exe",
+          "workingSetBytes": 109105152
+        },
+        {
+          "pid": 5924,
+          "parentPid": 19352,
+          "name": "Tracker.exe",
+          "creationUtc": "2026-10-16T23:00:20.6391920Z",
+          "executable": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\MSBuild\\Current\\Bin\\amd64\\Tracker.exe",
+          "workingSetBytes": 5414912
+        },
+        {
+          "pid": 20576,
+          "parentPid": 5924,
+          "name": "conhost.exe",
+          "creationUtc": "2026-10-16T23:00:20.6462970Z",
+          "executable": "C:\\WINDOWS\\system32\\conhost.exe",
+          "workingSetBytes": 7917568
+        },
+        {
+          "pid": 14940,
+          "parentPid": 5924,
+          "name": "cl.exe",
+          "creationUtc": "2026-10-16T23:00:20.6604530Z",
+          "executable": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe",
+          "workingSetBytes": 302415872
+        },
+        {
+          "pid": 5380,
+          "parentPid": 14940,
+          "name": "mspdbsrv.exe",
+          "creationUtc": "2026-10-16T23:00:20.6929830Z",
+          "executable": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\mspdbsrv.exe",
+          "workingSetBytes": 117125120
+        }
+      ]
+    },
+    {
+      "capturedUtc": "2026-10-16T23:00:26.8313369Z",
+      "usedPercent": 46.07,
+      "freeBytes": 18478710784,
+      "ownedProcesses": [
+        {
+          "pid": 18880,
+          "parentPid": 23284,
+          "name": "cmake.exe",
+          "creationUtc": "2026-10-16T23:00:17.5003420Z",
+          "executable": "C:\\Program Files\\CMake\\bin\\cmake.exe",
+          "workingSetBytes": 18993152
+        },
+        {
+          "pid": 22452,
+          "parentPid": 18880,
+          "name": "conhost.exe",
+          "creationUtc": "2026-10-16T23:00:17.5082750Z",
+          "executable": "C:\\WINDOWS\\system32\\conhost.exe",
+          "workingSetBytes": 7921664
+        },
+        {
+          "pid": 19352,
+          "parentPid": 18880,
+          "name": "MSBuild.exe",
+          "creationUtc": "2026-10-16T23:00:17.6416170Z",
+          "executable": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\MSBuild\\Current\\Bin\\amd64\\MSBuild.exe",
+          "workingSetBytes": 109105152
+        },
+        {
+          "pid": 5924,
+          "parentPid": 19352,
+          "name": "Tracker.exe",
+          "creationUtc": "2026-10-16T23:00:20.6391920Z",
+          "executable": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\MSBuild\\Current\\Bin\\amd64\\Tracker.exe",
+          "workingSetBytes": 5414912
+        },
+        {
+          "pid": 20576,
+          "parentPid": 5924,
+          "name": "conhost.exe",
+          "creationUtc": "2026-10-16T23:00:20.6462970Z",
+          "executable": "C:\\WINDOWS\\system32\\conhost.exe",
+          "workingSetBytes": 7917568
+        },
+        {
+          "pid": 14940,
+          "parentPid": 5924,
+          "name": "cl.exe",
+          "creationUtc": "2026-10-16T23:00:20.6604530Z",
+          "executable": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe",
+          "workingSetBytes": 503242752
+        },
+        {
+          "pid": 5380,
+          "parentPid": 14940,
+          "name": "mspdbsrv.exe",
+          "creationUtc": "2026-10-16T23:00:20.6929830Z",
+          "executable": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\mspdbsrv.exe",
+          "workingSetBytes": 117125120
+        }
+      ]
+    },
+    {
+      "capturedUtc": "2026-10-16T23:00:29.9486925Z",
+      "usedPercent": 46.58,
+      "freeBytes": 18303279104,
+      "ownedProcesses": [
+        {
+          "pid": 18880,
+          "parentPid": 23284,
+          "name": "cmake.exe",
+          "creationUtc": "2026-10-16T23:00:17.5003420Z",
+          "executable": "C:\\Program Files\\CMake\\bin\\cmake.exe",
+          "workingSetBytes": 18993152
+        },
+        {
+          "pid": 22452,
+          "parentPid": 18880,
+          "name": "conhost.exe",
+          "creationUtc": "2026-10-16T23:00:17.5082750Z",
+          "executable": "C:\\WINDOWS\\system32\\conhost.exe",
+          "workingSetBytes": 7921664
+        },
+        {
+          "pid": 19352,
+          "parentPid": 18880,
+          "name": "MSBuild.exe",
+          "creationUtc": "2026-10-16T23:00:17.6416170Z",
+          "executable": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\MSBuild\\Current\\Bin\\amd64\\MSBuild.exe",
+          "workingSetBytes": 109105152
+        },
+        {
+          "pid": 5924,
+          "parentPid": 19352,
+          "name": "Tracker.exe",
+          "creationUtc": "2026-10-16T23:00:20.6391920Z",
+          "executable": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\MSBuild\\Current\\Bin\\amd64\\Tracker.exe",
+          "workingSetBytes": 5414912
+        },
+        {
+          "pid": 20576,
+          "parentPid": 5924,
+          "name": "conhost.exe",
+          "creationUtc": "2026-10-16T23:00:20.6462970Z",
+          "executable": "C:\\WINDOWS\\system32\\conhost.exe",
+          "workingSetBytes": 7917568
+        },
+        {
+          "pid": 14940,
+          "parentPid": 5924,
+          "name": "cl.exe",
+          "creationUtc": "2026-10-16T23:00:20.6604530Z",
+          "executable": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe",
+          "workingSetBytes": 681955328
+        },
+        {
+          "pid": 5380,
+          "parentPid": 14940,
+          "name": "mspdbsrv.exe",
+          "creationUtc": "2026-10-16T23:00:20.6929830Z",
+          "executable": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\mspdbsrv.exe",
+          "workingSetBytes": 117125120
+        }
+      ]
+    },
+    {
+      "capturedUtc": "2026-10-16T23:00:33.0563433Z",
+      "usedPercent": 46.96,
+      "freeBytes": 18175463424,
+      "ownedProcesses": [
+        {
+          "pid": 18880,
+          "parentPid": 23284,
+          "name": "cmake.exe",
+          "creationUtc": "2026-10-16T23:00:17.5003420Z",
+          "executable": "C:\\Program Files\\CMake\\bin\\cmake.exe",
+          "workingSetBytes": 18993152
+        },
+        {
+          "pid": 22452,
+          "parentPid": 18880,
+          "name": "conhost.exe",
+          "creationUtc": "2026-10-16T23:00:17.5082750Z",
+          "executable": "C:\\WINDOWS\\system32\\conhost.exe",
+          "workingSetBytes": 7921664
+        },
+        {
+          "pid": 19352,
+          "parentPid": 18880,
+          "name": "MSBuild.exe",
+          "creationUtc": "2026-10-16T23:00:17.6416170Z",
+          "executable": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\MSBuild\\Current\\Bin\\amd64\\MSBuild.exe",
+          "workingSetBytes": 109105152
+        },
+        {
+          "pid": 5924,
+          "parentPid": 19352,
+          "name": "Tracker.exe",
+          "creationUtc": "2026-10-16T23:00:20.6391920Z",
+          "executable": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\MSBuild\\Current\\Bin\\amd64\\Tracker.exe",
+          "workingSetBytes": 5414912
+        },
+        {
+          "pid": 20576,
+          "parentPid": 5924,
+          "name": "conhost.exe",
+          "creationUtc": "2026-10-16T23:00:20.6462970Z",
+          "executable": "C:\\WINDOWS\\system32\\conhost.exe",
+          "workingSetBytes": 7917568
+        },
+        {
+          "pid": 14940,
+          "parentPid": 5924,
+          "name": "cl.exe",
+          "creationUtc": "2026-10-16T23:00:20.6604530Z",
+          "executable": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe",
+          "workingSetBytes": 810975232
+        },
+        {
+          "pid": 5380,
+          "parentPid": 14940,
+          "name": "mspdbsrv.exe",
+          "creationUtc": "2026-10-16T23:00:20.6929830Z",
+          "executable": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\mspdbsrv.exe",
+          "workingSetBytes": 117125120
+        }
+      ]
+    },
+    {
+      "capturedUtc": "2026-10-16T23:00:36.1833462Z",
+      "usedPercent": 45.09,
+      "freeBytes": 18814230528,
+      "ownedProcesses": [
+        {
+          "pid": 18880,
+          "parentPid": 23284,
+          "name": "cmake.exe",
+          "creationUtc": "2026-10-16T23:00:17.5003420Z",
+          "executable": "C:\\Program Files\\CMake\\bin\\cmake.exe",
+          "workingSetBytes": 18993152
+        },
+        {
+          "pid": 22452,
+          "parentPid": 18880,
+          "name": "conhost.exe",
+          "creationUtc": "2026-10-16T23:00:17.5082750Z",
+          "executable": "C:\\WINDOWS\\system32\\conhost.exe",
+          "workingSetBytes": 7921664
+        },
+        {
+          "pid": 19352,
+          "parentPid": 18880,
+          "name": "MSBuild.exe",
+          "creationUtc": "2026-10-16T23:00:17.6416170Z",
+          "executable": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\MSBuild\\Current\\Bin\\amd64\\MSBuild.exe",
+          "workingSetBytes": 109129728
+        },
+        {
+          "pid": 5924,
+          "parentPid": 19352,
+          "name": "Tracker.exe",
+          "creationUtc": "2026-10-16T23:00:20.6391920Z",
+          "executable": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\MSBuild\\Current\\Bin\\amd64\\Tracker.exe",
+          "workingSetBytes": 5414912
+        },
+        {
+          "pid": 20576,
+          "parentPid": 5924,
+          "name": "conhost.exe",
+          "creationUtc": "2026-10-16T23:00:20.6462970Z",
+          "executable": "C:\\WINDOWS\\system32\\conhost.exe",
+          "workingSetBytes": 7917568
+        },
+        {
+          "pid": 14940,
+          "parentPid": 5924,
+          "name": "cl.exe",
+          "creationUtc": "2026-10-16T23:00:20.6604530Z",
+          "executable": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe",
+          "workingSetBytes": 229142528
+        },
+        {
+          "pid": 5380,
+          "parentPid": 14940,
+          "name": "mspdbsrv.exe",
+          "creationUtc": "2026-10-16T23:00:20.6929830Z",
+          "executable": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\mspdbsrv.exe",
+          "workingSetBytes": 38641664
+        },
+        {
+          "pid": 22172,
+          "parentPid": 14940,
+          "name": "vctip.exe",
+          "creationUtc": "2026-10-16T23:00:34.4856290Z",
+          "executable": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\VCTIP.EXE",
+          "workingSetBytes": 64024576
+        }
+      ]
+    },
+    {
+      "capturedUtc": "2026-10-16T23:00:39.2991420Z",
+      "usedPercent": 44.61,
+      "freeBytes": 18978430976,
+      "ownedProcesses": [
+        {
+          "pid": 18880,
+          "parentPid": 23284,
+          "name": "cmake.exe",
+          "creationUtc": "2026-10-16T23:00:17.5003420Z",
+          "executable": "C:\\Program Files\\CMake\\bin\\cmake.exe",
+          "workingSetBytes": 18993152
+        },
+        {
+          "pid": 22452,
+          "parentPid": 18880,
+          "name": "conhost.exe",
+          "creationUtc": "2026-10-16T23:00:17.5082750Z",
+          "executable": "C:\\WINDOWS\\system32\\conhost.exe",
+          "workingSetBytes": 7921664
+        },
+        {
+          "pid": 19352,
+          "parentPid": 18880,
+          "name": "MSBuild.exe",
+          "creationUtc": "2026-10-16T23:00:17.6416170Z",
+          "executable": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\MSBuild\\Current\\Bin\\amd64\\MSBuild.exe",
+          "workingSetBytes": 116764672
+        }
+      ]
+    },
+    {
+      "capturedUtc": "2026-10-16T23:00:42.4173300Z",
+      "usedPercent": 45.6,
+      "freeBytes": 18639822848,
+      "ownedProcesses": [
+        {
+          "pid": 18880,
+          "parentPid": 23284,
+          "name": "cmake.exe",
+          "creationUtc": "2026-10-16T23:00:17.5003420Z",
+          "executable": "C:\\Program Files\\CMake\\bin\\cmake.exe",
+          "workingSetBytes": 18993152
+        },
+        {
+          "pid": 22452,
+          "parentPid": 18880,
+          "name": "conhost.exe",
+          "creationUtc": "2026-10-16T23:00:17.5082750Z",
+          "executable": "C:\\WINDOWS\\system32\\conhost.exe",
+          "workingSetBytes": 7921664
+        },
+        {
+          "pid": 19352,
+          "parentPid": 18880,
+          "name": "MSBuild.exe",
+          "creationUtc": "2026-10-16T23:00:17.6416170Z",
+          "executable": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\MSBuild\\Current\\Bin\\amd64\\MSBuild.exe",
+          "workingSetBytes": 120954880
+        },
+        {
+          "pid": 17520,
+          "parentPid": 19352,
+          "name": "Tracker.exe",
+          "creationUtc": "2026-10-16T23:00:39.8313280Z",
+          "executable": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\MSBuild\\Current\\Bin\\amd64\\Tracker.exe",
+          "workingSetBytes": 5414912
+        },
+        {
+          "pid": 15660,
+          "parentPid": 17520,
+          "name": "conhost.exe",
+          "creationUtc": "2026-10-16T23:00:39.8379760Z",
+          "executable": "C:\\WINDOWS\\system32\\conhost.exe",
+          "workingSetBytes": 7913472
+        },
+        {
+          "pid": 19608,
+          "parentPid": 17520,
+          "name": "cl.exe",
+          "creationUtc": "2026-10-16T23:00:39.8519010Z",
+          "executable": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe",
+          "workingSetBytes": 294445056
+        }
+      ]
+    },
+    {
+      "capturedUtc": "2026-10-16T23:00:45.5349900Z",
+      "usedPercent": 46.18,
+      "freeBytes": 18441715712,
+      "ownedProcesses": [
+        {
+          "pid": 18880,
+          "parentPid": 23284,
+          "name": "cmake.exe",
+          "creationUtc": "2026-10-16T23:00:17.5003420Z",
+          "executable": "C:\\Program Files\\CMake\\bin\\cmake.exe",
+          "workingSetBytes": 18993152
+        },
+        {
+          "pid": 22452,
+          "parentPid": 18880,
+          "name": "conhost.exe",
+          "creationUtc": "2026-10-16T23:00:17.5082750Z",
+          "executable": "C:\\WINDOWS\\system32\\conhost.exe",
+          "workingSetBytes": 7921664
+        },
+        {
+          "pid": 19352,
+          "parentPid": 18880,
+          "name": "MSBuild.exe",
+          "creationUtc": "2026-10-16T23:00:17.6416170Z",
+          "executable": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\MSBuild\\Current\\Bin\\amd64\\MSBuild.exe",
+          "workingSetBytes": 120954880
+        },
+        {
+          "pid": 17520,
+          "parentPid": 19352,
+          "name": "Tracker.exe",
+          "creationUtc": "2026-10-16T23:00:39.8313280Z",
+          "executable": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\MSBuild\\Current\\Bin\\amd64\\Tracker.exe",
+          "workingSetBytes": 5414912
+        },
+        {
+          "pid": 15660,
+          "parentPid": 17520,
+          "name": "conhost.exe",
+          "creationUtc": "2026-10-16T23:00:39.8379760Z",
+          "executable": "C:\\WINDOWS\\system32\\conhost.exe",
+          "workingSetBytes": 7913472
+        },
+        {
+          "pid": 19608,
+          "parentPid": 17520,
+          "name": "cl.exe",
+          "creationUtc": "2026-10-16T23:00:39.8519010Z",
+          "executable": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe",
+          "workingSetBytes": 506728448
+        }
+      ]
+    },
+    {
+      "capturedUtc": "2026-10-16T23:00:48.6591738Z",
+      "usedPercent": 47.07,
+      "freeBytes": 18137485312,
+      "ownedProcesses": [
+        {
+          "pid": 18880,
+          "parentPid": 23284,
+          "name": "cmake.exe",
+          "creationUtc": "2026-10-16T23:00:17.5003420Z",
+          "executable": "C:\\Program Files\\CMake\\bin\\cmake.exe",
+          "workingSetBytes": 18935808
+        },
+        {
+          "pid": 22452,
+          "parentPid": 18880,
+          "name": "conhost.exe",
+          "creationUtc": "2026-10-16T23:00:17.5082750Z",
+          "executable": "C:\\WINDOWS\\system32\\conhost.exe",
+          "workingSetBytes": 7921664
+        },
+        {
+          "pid": 19352,
+          "parentPid": 18880,
+          "name": "MSBuild.exe",
+          "creationUtc": "2026-10-16T23:00:17.6416170Z",
+          "executable": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\MSBuild\\Current\\Bin\\amd64\\MSBuild.exe",
+          "workingSetBytes": 120918016
+        },
+        {
+          "pid": 17520,
+          "parentPid": 19352,
+          "name": "Tracker.exe",
+          "creationUtc": "2026-10-16T23:00:39.8313280Z",
+          "executable": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\MSBuild\\Current\\Bin\\amd64\\Tracker.exe",
+          "workingSetBytes": 5414912
+        },
+        {
+          "pid": 15660,
+          "parentPid": 17520,
+          "name": "conhost.exe",
+          "creationUtc": "2026-10-16T23:00:39.8379760Z",
+          "executable": "C:\\WINDOWS\\system32\\conhost.exe",
+          "workingSetBytes": 7913472
+        },
+        {
+          "pid": 19608,
+          "parentPid": 17520,
+          "name": "cl.exe",
+          "creationUtc": "2026-10-16T23:00:39.8519010Z",
+          "executable": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe",
+          "workingSetBytes": 807104512
+        }
+      ]
+    },
+    {
+      "capturedUtc": "2026-10-16T23:00:51.7764881Z",
+      "usedPercent": 47.44,
+      "freeBytes": 18009178112,
+      "ownedProcesses": [
+        {
+          "pid": 18880,
+          "parentPid": 23284,
+          "name": "cmake.exe",
+          "creationUtc": "2026-10-16T23:00:17.5003420Z",
+          "executable": "C:\\Program Files\\CMake\\bin\\cmake.exe",
+          "workingSetBytes": 18935808
+        },
+        {
+          "pid": 22452,
+          "parentPid": 18880,
+          "name": "conhost.exe",
+          "creationUtc": "2026-10-16T23:00:17.5082750Z",
+          "executable": "C:\\WINDOWS\\system32\\conhost.exe",
+          "workingSetBytes": 7921664
+        },
+        {
+          "pid": 19352,
+          "parentPid": 18880,
+          "name": "MSBuild.exe",
+          "creationUtc": "2026-10-16T23:00:17.6416170Z",
+          "executable": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\MSBuild\\Current\\Bin\\amd64\\MSBuild.exe",
+          "workingSetBytes": 120918016
+        },
+        {
+          "pid": 17520,
+          "parentPid": 19352,
+          "name": "Tracker.exe",
+          "creationUtc": "2026-10-16T23:00:39.8313280Z",
+          "executable": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\MSBuild\\Current\\Bin\\amd64\\Tracker.exe",
+          "workingSetBytes": 5414912
+        },
+        {
+          "pid": 15660,
+          "parentPid": 17520,
+          "name": "conhost.exe",
+          "creationUtc": "2026-10-16T23:00:39.8379760Z",
+          "executable": "C:\\WINDOWS\\system32\\conhost.exe",
+          "workingSetBytes": 7913472
+        },
+        {
+          "pid": 19608,
+          "parentPid": 17520,
+          "name": "cl.exe",
+          "creationUtc": "2026-10-16T23:00:39.8519010Z",
+          "executable": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe",
+          "workingSetBytes": 970510336
+        }
+      ]
+    },
+    {
+      "capturedUtc": "2026-10-16T23:00:54.8885769Z",
+      "usedPercent": 47.67,
+      "freeBytes": 17930399744,
+      "ownedProcesses": [
+        {
+          "pid": 18880,
+          "parentPid": 23284,
+          "name": "cmake.exe",
+          "creationUtc": "2026-10-16T23:00:17.5003420Z",
+          "executable": "C:\\Program Files\\CMake\\bin\\cmake.exe",
+          "workingSetBytes": 18935808
+        },
+        {
+          "pid": 22452,
+          "parentPid": 18880,
+          "name": "conhost.exe",
+          "creationUtc": "2026-10-16T23:00:17.5082750Z",
+          "executable": "C:\\WINDOWS\\system32\\conhost.exe",
+          "workingSetBytes": 7921664
+        },
+        {
+          "pid": 19352,
+          "parentPid": 18880,
+          "name": "MSBuild.exe",
+          "creationUtc": "2026-10-16T23:00:17.6416170Z",
+          "executable": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\MSBuild\\Current\\Bin\\amd64\\MSBuild.exe",
+          "workingSetBytes": 120901632
+        },
+        {
+          "pid": 17520,
+          "parentPid": 19352,
+          "name": "Tracker.exe",
+          "creationUtc": "2026-10-16T23:00:39.8313280Z",
+          "executable": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\MSBuild\\Current\\Bin\\amd64\\Tracker.exe",
+          "workingSetBytes": 5414912
+        },
+        {
+          "pid": 15660,
+          "parentPid": 17520,
+          "name": "conhost.exe",
+          "creationUtc": "2026-10-16T23:00:39.8379760Z",
+          "executable": "C:\\WINDOWS\\system32\\conhost.exe",
+          "workingSetBytes": 7913472
+        },
+        {
+          "pid": 19608,
+          "parentPid": 17520,
+          "name": "cl.exe",
+          "creationUtc": "2026-10-16T23:00:39.8519010Z",
+          "executable": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe",
+          "workingSetBytes": 1058181120
+        }
+      ]
+    },
+    {
+      "capturedUtc": "2026-10-16T23:00:57.9999933Z",
+      "usedPercent": 45.31,
+      "freeBytes": 18740400128,
+      "ownedProcesses": [
+        {
+          "pid": 18880,
+          "parentPid": 23284,
+          "name": "cmake.exe",
+          "creationUtc": "2026-10-16T23:00:17.5003420Z",
+          "executable": "C:\\Program Files\\CMake\\bin\\cmake.exe",
+          "workingSetBytes": 18935808
+        },
+        {
+          "pid": 22452,
+          "parentPid": 18880,
+          "name": "conhost.exe",
+          "creationUtc": "2026-10-16T23:00:17.5082750Z",
+          "executable": "C:\\WINDOWS\\system32\\conhost.exe",
+          "workingSetBytes": 7921664
+        },
+        {
+          "pid": 19352,
+          "parentPid": 18880,
+          "name": "MSBuild.exe",
+          "creationUtc": "2026-10-16T23:00:17.6416170Z",
+          "executable": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\MSBuild\\Current\\Bin\\amd64\\MSBuild.exe",
+          "workingSetBytes": 120901632
+        },
+        {
+          "pid": 17520,
+          "parentPid": 19352,
+          "name": "Tracker.exe",
+          "creationUtc": "2026-10-16T23:00:39.8313280Z",
+          "executable": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\MSBuild\\Current\\Bin\\amd64\\Tracker.exe",
+          "workingSetBytes": 5414912
+        },
+        {
+          "pid": 15660,
+          "parentPid": 17520,
+          "name": "conhost.exe",
+          "creationUtc": "2026-10-16T23:00:39.8379760Z",
+          "executable": "C:\\WINDOWS\\system32\\conhost.exe",
+          "workingSetBytes": 7913472
+        },
+        {
+          "pid": 19608,
+          "parentPid": 17520,
+          "name": "cl.exe",
+          "creationUtc": "2026-10-16T23:00:39.8519010Z",
+          "executable": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe",
+          "workingSetBytes": 281444352
+        }
+      ]
+    },
+    {
+      "capturedUtc": "2026-10-16T23:01:01.1227598Z",
+      "usedPercent": 44.49,
+      "freeBytes": 19020435456,
+      "ownedProcesses": [
+        {
+          "pid": 18880,
+          "parentPid": 23284,
+          "name": "cmake.exe",
+          "creationUtc": "2026-10-16T23:00:17.5003420Z",
+          "executable": "C:\\Program Files\\CMake\\bin\\cmake.exe",
+          "workingSetBytes": 19013632
+        },
+        {
+          "pid": 22452,
+          "parentPid": 18880,
+          "name": "conhost.exe",
+          "creationUtc": "2026-10-16T23:00:17.5082750Z",
+          "executable": "C:\\WINDOWS\\system32\\conhost.exe",
+          "workingSetBytes": 7921664
+        },
+        {
+          "pid": 8016,
+          "parentPid": 18880,
+          "name": "MSBuild.exe",
+          "creationUtc": "2026-10-16T23:00:58.5482800Z",
+          "executable": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\MSBuild\\Current\\Bin\\amd64\\MSBuild.exe",
+          "workingSetBytes": 108462080
+        }
+      ]
+    },
+    {
+      "capturedUtc": "2026-10-16T23:01:04.2466694Z",
+      "usedPercent": 44.89,
+      "freeBytes": 18884849664,
+      "ownedProcesses": [
+        {
+          "pid": 18880,
+          "parentPid": 23284,
+          "name": "cmake.exe",
+          "creationUtc": "2026-10-16T23:00:17.5003420Z",
+          "executable": "C:\\Program Files\\CMake\\bin\\cmake.exe",
+          "workingSetBytes": 19013632
+        },
+        {
+          "pid": 22452,
+          "parentPid": 18880,
+          "name": "conhost.exe",
+          "creationUtc": "2026-10-16T23:00:17.5082750Z",
+          "executable": "C:\\WINDOWS\\system32\\conhost.exe",
+          "workingSetBytes": 7921664
+        },
+        {
+          "pid": 8016,
+          "parentPid": 18880,
+          "name": "MSBuild.exe",
+          "creationUtc": "2026-10-16T23:00:58.5482800Z",
+          "executable": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\MSBuild\\Current\\Bin\\amd64\\MSBuild.exe",
+          "workingSetBytes": 175734784
+        },
+        {
+          "pid": 10964,
+          "parentPid": 8016,
+          "name": "Tracker.exe",
+          "creationUtc": "2026-10-16T23:01:03.6623130Z",
+          "executable": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\MSBuild\\Current\\Bin\\amd64\\Tracker.exe",
+          "workingSetBytes": 5414912
+        },
+        {
+          "pid": 20916,
+          "parentPid": 10964,
+          "name": "conhost.exe",
+          "creationUtc": "2026-10-16T23:01:03.6693870Z",
+          "executable": "C:\\WINDOWS\\system32\\conhost.exe",
+          "workingSetBytes": 7913472
+        },
+        {
+          "pid": 2404,
+          "parentPid": 10964,
+          "name": "cl.exe",
+          "creationUtc": "2026-10-16T23:01:03.6833180Z",
+          "executable": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe",
+          "workingSetBytes": 93822976
+        }
+      ]
+    },
+    {
+      "capturedUtc": "2026-10-16T23:01:07.3704265Z",
+      "usedPercent": 45.57,
+      "freeBytes": 18651820032,
+      "ownedProcesses": [
+        {
+          "pid": 18880,
+          "parentPid": 23284,
+          "name": "cmake.exe",
+          "creationUtc": "2026-10-16T23:00:17.5003420Z",
+          "executable": "C:\\Program Files\\CMake\\bin\\cmake.exe",
+          "workingSetBytes": 19013632
+        },
+        {
+          "pid": 22452,
+          "parentPid": 18880,
+          "name": "conhost.exe",
+          "creationUtc": "2026-10-16T23:00:17.5082750Z",
+          "executable": "C:\\WINDOWS\\system32\\conhost.exe",
+          "workingSetBytes": 7921664
+        },
+        {
+          "pid": 8016,
+          "parentPid": 18880,
+          "name": "MSBuild.exe",
+          "creationUtc": "2026-10-16T23:00:58.5482800Z",
+          "executable": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\MSBuild\\Current\\Bin\\amd64\\MSBuild.exe",
+          "workingSetBytes": 175734784
+        },
+        {
+          "pid": 10964,
+          "parentPid": 8016,
+          "name": "Tracker.exe",
+          "creationUtc": "2026-10-16T23:01:03.6623130Z",
+          "executable": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\MSBuild\\Current\\Bin\\amd64\\Tracker.exe",
+          "workingSetBytes": 5414912
+        },
+        {
+          "pid": 20916,
+          "parentPid": 10964,
+          "name": "conhost.exe",
+          "creationUtc": "2026-10-16T23:01:03.6693870Z",
+          "executable": "C:\\WINDOWS\\system32\\conhost.exe",
+          "workingSetBytes": 7913472
+        },
+        {
+          "pid": 2404,
+          "parentPid": 10964,
+          "name": "cl.exe",
+          "creationUtc": "2026-10-16T23:01:03.6833180Z",
+          "executable": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe",
+          "workingSetBytes": 346472448
+        }
+      ]
+    },
+    {
+      "capturedUtc": "2026-10-16T23:01:10.4889277Z",
+      "usedPercent": 45.1,
+      "freeBytes": 18812055552,
+      "ownedProcesses": [
+        {
+          "pid": 18880,
+          "parentPid": 23284,
+          "name": "cmake.exe",
+          "creationUtc": "2026-10-16T23:00:17.5003420Z",
+          "executable": "C:\\Program Files\\CMake\\bin\\cmake.exe",
+          "workingSetBytes": 19013632
+        },
+        {
+          "pid": 22452,
+          "parentPid": 18880,
+          "name": "conhost.exe",
+          "creationUtc": "2026-10-16T23:00:17.5082750Z",
+          "executable": "C:\\WINDOWS\\system32\\conhost.exe",
+          "workingSetBytes": 7921664
+        },
+        {
+          "pid": 8016,
+          "parentPid": 18880,
+          "name": "MSBuild.exe",
+          "creationUtc": "2026-10-16T23:00:58.5482800Z",
+          "executable": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\MSBuild\\Current\\Bin\\amd64\\MSBuild.exe",
+          "workingSetBytes": 175734784
+        },
+        {
+          "pid": 10964,
+          "parentPid": 8016,
+          "name": "Tracker.exe",
+          "creationUtc": "2026-10-16T23:01:03.6623130Z",
+          "executable": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\MSBuild\\Current\\Bin\\amd64\\Tracker.exe",
+          "workingSetBytes": 5414912
+        },
+        {
+          "pid": 20916,
+          "parentPid": 10964,
+          "name": "conhost.exe",
+          "creationUtc": "2026-10-16T23:01:03.6693870Z",
+          "executable": "C:\\WINDOWS\\system32\\conhost.exe",
+          "workingSetBytes": 7913472
+        },
+        {
+          "pid": 2404,
+          "parentPid": 10964,
+          "name": "cl.exe",
+          "creationUtc": "2026-10-16T23:01:03.6833180Z",
+          "executable": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe",
+          "workingSetBytes": 172240896
+        }
+      ]
+    },
+    {
+      "capturedUtc": "2026-10-16T23:01:13.6004334Z",
+      "usedPercent": 44.34,
+      "freeBytes": 19073421312,
+      "ownedProcesses": [
+        {
+          "pid": 18880,
+          "parentPid": 23284,
+          "name": "cmake.exe",
+          "creationUtc": "2026-10-16T23:00:17.5003420Z",
+          "executable": "C:\\Program Files\\CMake\\bin\\cmake.exe",
+          "workingSetBytes": 19013632
+        },
+        {
+          "pid": 22452,
+          "parentPid": 18880,
+          "name": "conhost.exe",
+          "creationUtc": "2026-10-16T23:00:17.5082750Z",
+          "executable": "C:\\WINDOWS\\system32\\conhost.exe",
+          "workingSetBytes": 7921664
+        },
+        {
+          "pid": 8856,
+          "parentPid": 18880,
+          "name": "MSBuild.exe",
+          "creationUtc": "2026-10-16T23:01:11.4678220Z",
+          "executable": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\MSBuild\\Current\\Bin\\amd64\\MSBuild.exe",
+          "workingSetBytes": 85188608
+        }
+      ]
+    }
+  ],
+  "ramGuard": null,
+  "observedOwnedProcesses": [
+    {
+      "pid": 22172,
+      "parentPid": 14940,
+      "name": "vctip.exe",
+      "creationUtc": "2026-10-16T23:00:34.4856290Z",
+      "executable": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\VCTIP.EXE",
+      "workingSetBytes": 64024576
+    },
+    {
+      "pid": 14940,
+      "parentPid": 5924,
+      "name": "cl.exe",
+      "creationUtc": "2026-10-16T23:00:20.6604530Z",
+      "executable": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe",
+      "workingSetBytes": 229142528
+    },
+    {
+      "pid": 18880,
+      "parentPid": 23284,
+      "name": "cmake.exe",
+      "creationUtc": "2026-10-16T23:00:17.5003420Z",
+      "executable": "C:\\Program Files\\CMake\\bin\\cmake.exe",
+      "workingSetBytes": 19013632
+    },
+    {
+      "pid": 5924,
+      "parentPid": 19352,
+      "name": "Tracker.exe",
+      "creationUtc": "2026-10-16T23:00:20.6391920Z",
+      "executable": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\MSBuild\\Current\\Bin\\amd64\\Tracker.exe",
+      "workingSetBytes": 5414912
+    },
+    {
+      "pid": 8016,
+      "parentPid": 18880,
+      "name": "MSBuild.exe",
+      "creationUtc": "2026-10-16T23:00:58.5482800Z",
+      "executable": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\MSBuild\\Current\\Bin\\amd64\\MSBuild.exe",
+      "workingSetBytes": 175734784
+    },
+    {
+      "pid": 20916,
+      "parentPid": 10964,
+      "name": "conhost.exe",
+      "creationUtc": "2026-10-16T23:01:03.6693870Z",
+      "executable": "C:\\WINDOWS\\system32\\conhost.exe",
+      "workingSetBytes": 7913472
+    },
+    {
+      "pid": 8856,
+      "parentPid": 18880,
+      "name": "MSBuild.exe",
+      "creationUtc": "2026-10-16T23:01:11.4678220Z",
+      "executable": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\MSBuild\\Current\\Bin\\amd64\\MSBuild.exe",
+      "workingSetBytes": 85188608
+    },
+    {
+      "pid": 2404,
+      "parentPid": 10964,
+      "name": "cl.exe",
+      "creationUtc": "2026-10-16T23:01:03.6833180Z",
+      "executable": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe",
+      "workingSetBytes": 172240896
+    },
+    {
+      "pid": 19608,
+      "parentPid": 17520,
+      "name": "cl.exe",
+      "creationUtc": "2026-10-16T23:00:39.8519010Z",
+      "executable": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe",
+      "workingSetBytes": 281444352
+    },
+    {
+      "pid": 22452,
+      "parentPid": 18880,
+      "name": "conhost.exe",
+      "creationUtc": "2026-10-16T23:00:17.5082750Z",
+      "executable": "C:\\WINDOWS\\system32\\conhost.exe",
+      "workingSetBytes": 7921664
+    },
+    {
+      "pid": 20576,
+      "parentPid": 5924,
+      "name": "conhost.exe",
+      "creationUtc": "2026-10-16T23:00:20.6462970Z",
+      "executable": "C:\\WINDOWS\\system32\\conhost.exe",
+      "workingSetBytes": 7917568
+    },
+    {
+      "pid": 5380,
+      "parentPid": 14940,
+      "name": "mspdbsrv.exe",
+      "creationUtc": "2026-10-16T23:00:20.6929830Z",
+      "executable": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\mspdbsrv.exe",
+      "workingSetBytes": 38641664
+    },
+    {
+      "pid": 10964,
+      "parentPid": 8016,
+      "name": "Tracker.exe",
+      "creationUtc": "2026-10-16T23:01:03.6623130Z",
+      "executable": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\MSBuild\\Current\\Bin\\amd64\\Tracker.exe",
+      "workingSetBytes": 5414912
+    },
+    {
+      "pid": 17520,
+      "parentPid": 19352,
+      "name": "Tracker.exe",
+      "creationUtc": "2026-10-16T23:00:39.8313280Z",
+      "executable": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\MSBuild\\Current\\Bin\\amd64\\Tracker.exe",
+      "workingSetBytes": 5414912
+    },
+    {
+      "pid": 19352,
+      "parentPid": 18880,
+      "name": "MSBuild.exe",
+      "creationUtc": "2026-10-16T23:00:17.6416170Z",
+      "executable": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\MSBuild\\Current\\Bin\\amd64\\MSBuild.exe",
+      "workingSetBytes": 120901632
+    },
+    {
+      "pid": 15660,
+      "parentPid": 17520,
+      "name": "conhost.exe",
+      "creationUtc": "2026-10-16T23:00:39.8379760Z",
+      "executable": "C:\\WINDOWS\\system32\\conhost.exe",
+      "workingSetBytes": 7913472
+    }
+  ],
+  "ownedProcessesStillPresent": [
+    {
+      "pid": 22172,
+      "parentPid": 14940,
+      "name": "vctip.exe",
+      "creationUtc": "2026-10-16T23:00:34.4856290Z",
+      "executable": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\VCTIP.EXE",
+      "workingSetBytes": 64024576
+    },
+    {
+      "pid": 5380,
+      "parentPid": 14940,
+      "name": "mspdbsrv.exe",
+      "creationUtc": "2026-10-16T23:00:20.6929830Z",
+      "executable": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\mspdbsrv.exe",
+      "workingSetBytes": 38641664
+    }
+  ],
+  "ownedActiveProcessesStillPresent": [
+    {
+      "pid": 22172,
+      "parentPid": 14940,
+      "name": "vctip.exe",
+      "creationUtc": "2026-10-16T23:00:34.4856290Z",
+      "executable": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\VCTIP.EXE",
+      "workingSetBytes": 64024576
+    }
+  ],
+  "preservedPdbProcesses": [
+    {
+      "pid": 5380,
+      "parentPid": 14940,
+      "name": "mspdbsrv.exe",
+      "creationUtc": "2026-10-16T23:00:20.6929830Z",
+      "executable": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\mspdbsrv.exe",
+      "workingSetBytes": 38641664
+    }
+  ],
+  "sourceInputCount": 14062,
+  "expectedAbsentInputCount": 61,
+  "checkedEntryCount": 14123,
+  "sourceFreezeInputsMatch": true
+}

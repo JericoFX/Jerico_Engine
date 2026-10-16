@@ -1,0 +1,151 @@
+{
+  "capturedUtc": "2026-10-16T23:29:18.1216882Z",
+  "scope": "Read-only R5 AP shader cook evidence; no native command, process control, source/config/docs/Git changes",
+  "parentProvidedCohort": {
+    "evidence": "native-rpi98-editor-vulkan-r5-attempt1",
+    "editorCreationUtc": "2026-10-16T23:26:58.2388900Z",
+    "editorPid": 25256,
+    "processOwnership": "parent-owned; not revalidated or controlled by Luna"
+  },
+  "apGuiSnapshots": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\editor98-r5-cook\\AP_GUI.log.capture1.log",
+      "bytes": 1245387,
+      "lastWriteUtc": "2026-10-16T23:27:45.1606087Z",
+      "sha256": "94A9560DF067BB9BF376067E791F9423F7A711C856C5D26378DB4A3A10207E4A"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\editor98-r5-cook\\AP_GUI.log.capture2.log",
+      "bytes": 1273827,
+      "lastWriteUtc": "2026-10-16T23:27:57.4573288Z",
+      "sha256": "9FC979F6995F5A4A1F52B05EAC7E66B06C618D8D9782CD71BB736A3FE4ADE50E"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\editor98-r5-cook\\AP_GUI.log.capture3.log",
+      "bytes": 1321456,
+      "lastWriteUtc": "2026-10-16T23:28:45.8714387Z",
+      "sha256": "EC9D0E21D72EFE0E149C95786C6743D59B471BA6BABC0B380A96BD2A5D648E9A"
+    }
+  ],
+  "apGuiFilesystemTimestampNote": "AP log was open during captures; each snapshot used FileShare.ReadWrite|Delete. Capture3 source length/LWT matched before and after, and copy hash pins the captured bytes. Embedded AP timestamps are used to order events because file LWT lagged them in both R4 and R5.",
+  "apEvents": [
+    {
+      "utc": "2026-10-16T23:28:11.665Z",
+      "event": "Processing Shaders/SceneAndViewSrgs.shader (Shader Asset) (pc)",
+      "line": "~~1792193291665~~1~~0000000000005C30~~AssetProcessor~~Processing Shaders/SceneAndViewSrgs.shader \"Shader Asset\" (pc)..."
+    },
+    {
+      "utc": "2026-10-16T23:28:12.342Z",
+      "event": "Processed physical source asset Gems/Atom/RPI/Assets/Shaders/SceneAndViewSrgs.shader",
+      "line": "~~1792193292342~~1~~0000000000005608~~AssetProcessor~~Processed \"F:/JericoEngine/JericoEngine/Gems/Atom/RPI/Assets/Shaders/SceneAndViewSrgs.shader\" (\"pc\")..."
+    }
+  ],
+  "assetSourcePins": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\RPI\\Assets\\Shaders\\SceneAndViewSrgs.shader",
+      "bytes": 761,
+      "lastWriteUtc": "2026-10-10T20:05:08.0977858Z",
+      "sha256": "FAC9F6ADD6605F11DD622417F07794E7BEB604044005C0389A84BD9ECC4CA03F"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\RPI\\Assets\\Shaders\\SceneAndViewSrgs.azsl",
+      "bytes": 556,
+      "lastWriteUtc": "2026-10-10T20:05:08.0977858Z",
+      "sha256": "F9F55FC79080184A88CDAFCBBD012C2D9CE2A182DDD40C2ED670BC4B6BE0A271"
+    }
+  ],
+  "products": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Cache\\pc\\shaders\\sceneandviewsrgs.azshader",
+      "exists": true,
+      "bytes": 118785,
+      "lastWriteUtc": "2026-10-16T23:27:45.1182418Z",
+      "sha256": "A21F4A949CC234FFE1D016E6AEF3B8E771FFA64343613526F30FC4BB8504C059"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Cache\\pc\\shaders\\sceneandviewsrgs_vulkan.azslin",
+      "exists": true,
+      "bytes": 45154,
+      "lastWriteUtc": "2026-10-16T23:27:44.6955696Z",
+      "sha256": "E2971A8C8A900C6086718BB63FE0EC5C6DF4E31E501006EB4B98E4A2C824B104"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Cache\\pc\\shaders\\sceneandviewsrgs_vulkan_0.azshadervariant",
+      "exists": true,
+      "bytes": 1846,
+      "lastWriteUtc": "2026-10-16T23:27:45.1162470Z",
+      "sha256": "A0CD065C882727F422D28F5829D92E734892B164AFE0CF5663FC5914FFD608B7"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Cache\\pc\\shaders\\sceneandviewsrgs_vulkan.srg.json",
+      "exists": true,
+      "bytes": 38341,
+      "lastWriteUtc": "2026-10-16T23:27:44.9051963Z",
+      "sha256": "BFA8A898D6BD4295A515FBC0183226924F4180A5667207B0F7A5E6E3E36051F9"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Cache\\pc\\shaders\\sceneandviewsrgs_vulkan.options.json",
+      "exists": true,
+      "bytes": 119,
+      "lastWriteUtc": "2026-10-16T23:27:44.9091862Z",
+      "sha256": "313C59084EDE5A7E2CE23ADC1E4E2E44C993A8B1FD0B71D63F11547256B85221"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Cache\\pc\\shaders\\sceneandviewsrgs_vulkan.bindingdep.json",
+      "exists": true,
+      "bytes": 18575,
+      "lastWriteUtc": "2026-10-16T23:27:44.9121780Z",
+      "sha256": "BB6B48453AA7D6650A19E2506968E7DB1641FBA2B214460DEC0190A895C15B29"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Cache\\pc\\shaders\\sceneandviewsrgs_vulkan.hlsl",
+      "exists": true,
+      "bytes": 25865,
+      "lastWriteUtc": "2026-10-16T23:27:44.9121780Z",
+      "sha256": "B3E91131DA245B58A9C2D93964DE4A88C854D4F1CCCA00D305D829E508452765"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Cache\\pc\\shaders\\sceneandviewsrgs_vulkan.ia.json",
+      "exists": true,
+      "bytes": 1268,
+      "lastWriteUtc": "2026-10-16T23:27:44.8992126Z",
+      "sha256": "B6E8C07DC43C5D4EC521ED66E6592D651DC794CFBD9A8E022D3901C0E7C1AA81"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Cache\\pc\\shaders\\sceneandviewsrgs_vulkan.om.json",
+      "exists": true,
+      "bytes": 763,
+      "lastWriteUtc": "2026-10-16T23:27:44.9002101Z",
+      "sha256": "79BBBFC6C15205785C2BA137EECC86A5BB58C39F5E37FF971FA6721DD627AC68"
+    }
+  ],
+  "jobEvidence": {
+    "note": "The only fresh JobLog is the Engine settings-registry warning log, not a shader-job log; no matching request/response XML was present in the 15 recent JobTemp directories.",
+    "matchingJobLogsByName": [],
+    "freshJobLogNames": [
+      "engine.json-815265798-104284.log"
+    ],
+    "currentJobLog": {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\user\\log\\JobLogs\\engine.json-815265798-104284.log",
+      "exists": true,
+      "bytes": 1719,
+      "lastWriteUtc": "2026-10-16T23:27:24.6953535Z",
+      "sha256": "03A76F2FFC18E8680599EF997A3FAA276DEB596802FD8DB6D602083D94348081",
+      "sceneAndViewMatches": 0
+    },
+    "requestXmlSearchWindowUtc": "2026-10-16T23:26:58Z through capture time",
+    "exactBasenameSearch": "SceneAndViewSrgs / sceneandviewsrgs",
+    "recentJobTempDirectoriesExamined": 15,
+    "matchingRequestOrResponseXml": 0
+  },
+  "classification": {
+    "errors": "No current-window AP_GUI line naming SceneAndViewSrgs with Error/Failed was found. Other current AP messages include unrelated retried output-file replacement and existing asset failures; not attributed to this shader.",
+    "scopeLimit": "This establishes observed AP source processing and physical outputs only; it is not AP global Ready/PASS, renderer/GPU/visual acceptance, nor an exact backend compile diagnostic.",
+    "observed": "AP GUI logged the actual source shader asset as Processing then Processed. All nine named Vulkan shader products were physically present when sampled; their filesystem LastWriteUtc values fell after R5 Editor start.",
+    "notProven": "No per-asset RunKey/UUID, builder GUID, explicit backend diagnostic, or direct job-to-product hash mapping was present in the bounded logs/XML. Product file timestamps precede the AP embedded Processed event by about 27 seconds, matching the previously observed AP-log versus filesystem-time lag; this is not treated as a standalone proof that this exact AP job wrote every product."
+  },
+  "resourceAndOwnership": {
+    "helpersOwned": 0,
+    "noBuildTestUiOrProcessControl": true
+  }
+}

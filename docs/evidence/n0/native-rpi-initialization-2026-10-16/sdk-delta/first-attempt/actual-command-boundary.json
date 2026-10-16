@@ -1,0 +1,35 @@
+{
+  "sourceEngineFallback": false,
+  "commands": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-vk-consumer98\\CMakeFiles\\4.3.4\\CompilerIdC\\Debug\\CompilerIdC.tlog\\CL.command.1.tlog",
+      "bytes": 784,
+      "sha256": "8060CBA4379106EBBDB7145A76928BDA08E79F6B98A8F8D46541B8AEB11F2275"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-vk-consumer98\\CMakeFiles\\4.3.4\\CompilerIdC\\Debug\\CompilerIdC.tlog\\link.command.1.tlog",
+      "bytes": 1046,
+      "sha256": "423D4B6E30C5D577A26761C5CD274AA9F45FBD138A1E1F6C72DEDC409B35F862"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-vk-consumer98\\CMakeFiles\\4.3.4\\CompilerIdCXX\\Debug\\CompilerIdCXX.tlog\\CL.command.1.tlog",
+      "bytes": 808,
+      "sha256": "629E6CA462C1D22122781E52810B1B67E3C08DCDFFA47E1E24989C9B21ABF08E"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-vk-consumer98\\CMakeFiles\\4.3.4\\CompilerIdCXX\\Debug\\CompilerIdCXX.tlog\\link.command.1.tlog",
+      "bytes": 1070,
+      "sha256": "CF8BF0D4919FED71D5A3E2F59C7750EA6497CD606CB9059584D30B355B4AF50F"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-vk-consumer98\\External\\source-5812e56f\\JENativeSdkConsumer.dir\\profile\\JENative.D3362D24.tlog\\CL.command.1.tlog",
+      "bytes": 16780,
+      "sha256": "00D8A551BFB92C933E4D5CF188A195D099BC378F95546DF0B287D75E80ED1045"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-vk-consumer98\\External\\source-5812e56f\\JENativeSdkConsumer.dir\\profile\\JENative.D3362D24.tlog\\link.command.1.tlog",
+      "bytes": 11806,
+      "sha256": "82C06C602F1AD30E45A7E014BC68F707634F59A0427B45EE4BD909237003BCC7"
+    }
+  ]
+}

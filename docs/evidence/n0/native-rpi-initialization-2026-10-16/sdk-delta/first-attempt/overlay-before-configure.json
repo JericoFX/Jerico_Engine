@@ -1,0 +1,188 @@
+{
+  "copiedHeaders": 2,
+  "files": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-rpi98-delta\\bin\\Atom_Feature_Common.Public.dll",
+      "bytes": 1419264,
+      "sha256": "44A2CB857482456EF5A52C427F369E7232F9B88124E520BB8237987C61DBAFF1"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-rpi98-delta\\bin\\Atom_RHI.Public.dll",
+      "bytes": 2096128,
+      "sha256": "85872600F4AB13F6C4DDF9D58B350A4D4A2ECDF64B6370500B7E642BD13E5D88"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-rpi98-delta\\bin\\Atom_RHI.Reflect.dll",
+      "bytes": 2979840,
+      "sha256": "FA762F84C1912EE9EA315067F65171F8EE86BFDADC19758804374FD519E149FA"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-rpi98-delta\\bin\\Atom_RPI.Edit.dll",
+      "bytes": 2591232,
+      "sha256": "376540A5FC1CDCDFB66644FD56AEEEA86CCDA57AA9CE1C9404E0E0B0375FCFAB"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-rpi98-delta\\bin\\Atom_RPI.Public.dll",
+      "bytes": 7858688,
+      "sha256": "F10958165992BB366C032CABF192738069D53B5A9EE0443D9BEDF22E48527D45"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-rpi98-delta\\bin\\AzCore.dll",
+      "bytes": 15256576,
+      "sha256": "5699C61A11F2952239CB2885E227A7E1EF6DC0488F09119623853E0F2F5857D4"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-rpi98-delta\\bin\\AzFramework.dll",
+      "bytes": 21512192,
+      "sha256": "61FEFD874D58E614066053FCB8A30E002CA04A1AEC9BD95AAD3D1C8E0D716054"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-rpi98-delta\\bin\\AzFramework.NativeUI.dll",
+      "bytes": 1073152,
+      "sha256": "4CE9B354BE461C2F8F717BDC3E26A2DD5C308A63F799894B523607FC034B8940"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-rpi98-delta\\bin\\AzQtComponents.dll",
+      "bytes": 4408832,
+      "sha256": "8BBC726D22686B796A085BBACECB7210F73F95FB53927197995DB1243603C439"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-rpi98-delta\\bin\\AzToolsFramework.dll",
+      "bytes": 31171584,
+      "sha256": "AE1C10A8C67C7740BD9AAEB09205BA6F8A02B3EF1DC35EC79298358011F8D5AF"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-rpi98-delta\\bin\\DearImGui.dll",
+      "bytes": 737792,
+      "sha256": "9CA08DB915179B6B6E44A5AD746E4EC47979AA8C06559F070E2A19ABA5D9B067"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-rpi98-delta\\bin\\DebugImGui.dll",
+      "bytes": 952320,
+      "sha256": "5B1F40D89BF0E9CEACFDBC207AF23F7794147290A1F74438AC539556D0DE0493"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-rpi98-delta\\bin\\EditorCamera.dll",
+      "bytes": 589824,
+      "sha256": "1254CE4D3A8555980F1CDD11120E571005D25675771CBDC353C8BCA789B9A171"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-rpi98-delta\\bin\\EditorMaterials.dll",
+      "bytes": 7515648,
+      "sha256": "377C468378FE8B9C6098B00F4089B8167AB980B93F36CD783915354BAA54EC96"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-rpi98-delta\\bin\\EditorRenderIntegration.dll",
+      "bytes": 835584,
+      "sha256": "98FA5315F3C33748F526301E28D27C1B02D55406AEE2A85432651697E9179B3D"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-rpi98-delta\\bin\\mcpp0.dll",
+      "bytes": 135168,
+      "sha256": "E28DB7EF935D6584D0F3EF38849F17D3475F3413251B205C59A5B15484DD66E9"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-rpi98-delta\\bin\\ProfilerCapture.dll",
+      "bytes": 273920,
+      "sha256": "6024775F53C43E5BC8FFFE8D0009DB1AB35F1575614D18421142319C26042C97"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-rpi98-delta\\bin\\ProfilerView.dll",
+      "bytes": 311808,
+      "sha256": "7109F65E1AA915D34B0E9B6B2C4040E3A5F07EADA7A05924155B511FB8D4D1FF"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-rpi98-delta\\bin\\Qt6Core.dll",
+      "bytes": 9853440,
+      "sha256": "DC1BBB428ED61680ECB99FBD2C4D55ECF213BE48FFBA042C945EB90E961EBBEB"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-rpi98-delta\\bin\\Qt6Gui.dll",
+      "bytes": 8307200,
+      "sha256": "4033D497344488BB55A5562D45F08982BD5945A5F3E83E82EC00EC5276B05BD7"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-rpi98-delta\\bin\\Qt6Network.dll",
+      "bytes": 1590784,
+      "sha256": "BA9FB87A5661A6E3EAA8344608F899493A29BAE567634E99872258BBC8922B8C"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-rpi98-delta\\bin\\Qt6Svg.dll",
+      "bytes": 564224,
+      "sha256": "B475308F6F5FA272F37A6DAA01AC0764106491F9A5B014FD48F9F3F3522A8B5A"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-rpi98-delta\\bin\\Qt6SvgWidgets.dll",
+      "bytes": 46080,
+      "sha256": "AC286220D49A65F3230E38FAC3CBEFB4092D16CF97829891EADCAF09F7DA05EC"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-rpi98-delta\\bin\\Qt6Widgets.dll",
+      "bytes": 5945344,
+      "sha256": "48C813DFA4F22D1FE2CF6E0DB66D9319096EAA82D29A19AE5CA52657708A9542"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-rpi98-delta\\bin\\Qt6Xml.dll",
+      "bytes": 136704,
+      "sha256": "5FC854116DF23A81BCE1B217ABEBDAF6D5F93D1AD2D790DD5694B59960597381"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-rpi98-delta\\bin\\RenderAssetBuilders.dll",
+      "bytes": 2238464,
+      "sha256": "9712DB080A2AF5EEC74C7A0E302C301B7929F0528581986F4DC6A46034573812"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-rpi98-delta\\bin\\RenderDebug.dll",
+      "bytes": 768512,
+      "sha256": "56FA428315407915218736A3EF68B7659FC90A662D08950A2010E9EE5E4A26F1"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-rpi98-delta\\bin\\RenderIntegration.dll",
+      "bytes": 986624,
+      "sha256": "07985010C1315BA0477E8F2660DCD2A837A93DFFAC1E6D0D7E8D7A0F0A098E10"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-rpi98-delta\\bin\\RenderMaterials.dll",
+      "bytes": 2171904,
+      "sha256": "AAEE676DA6F27AF0D5A86C7A0ECFC2F9BCB3B8F6E615D034F02B7610999E60B2"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-rpi98-delta\\bin\\SceneCore.dll",
+      "bytes": 1544704,
+      "sha256": "E5E21D917FF07B35BAE698FBD19DDA8A46956EA5E135426869E4981FE24D4933"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-rpi98-delta\\bin\\SceneData.dll",
+      "bytes": 2212352,
+      "sha256": "B9FAC58EAF1605AB5EED21B1559708BD1C5097BA72CA201E2358151AD7A0CB3A"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-rpi98-delta\\bin\\WorldCamera.dll",
+      "bytes": 1360384,
+      "sha256": "DB3ECCAD5296156DAEF878DC92AAF5EC7A460B2056E61625B6C0A69BB2EBE5E7"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-rpi98-delta\\include\\JE\\Editor\\RenderIntegration\\RenderIntegrationModule.h",
+      "bytes": 427,
+      "sha256": "352D95EA3BC55CE6B41F67CFC812F64E6334CD6B5C5892108792B00582CD0E2C"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-rpi98-delta\\include\\JE\\Render\\Integration\\RenderIntegrationModule.h",
+      "bytes": 1178,
+      "sha256": "1B830A371CDDB0C15965DAF75DBACBEF5F7652AFED7161B76E874E8D924AC074"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-rpi98-delta\\lib\\EditorRenderIntegration.lib",
+      "bytes": 132348,
+      "sha256": "FB0641DC84C23F4510FC62B9792D42B97B6045E81BBD2CEEBBF10CEAF5B13582"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-rpi98-delta\\lib\\RenderIntegration.lib",
+      "bytes": 237150,
+      "sha256": "C9DA8BA5906BEABAC0DBF572938F244DE6F096EB20DDD9E58EE0F0B33B1EA8AB"
+    }
+  ],
+  "copiedImportlibs": 2,
+  "copiedDlls": 3,
+  "hardlinksReadOnlyByUse": 29
+}

@@ -1,0 +1,24 @@
+{
+  "nativeExit": 0,
+  "runtimeDlls": 32,
+  "newFactoryLifecycles": 2,
+  "copiedDlls": 3,
+  "activationOrGpu": false,
+  "imports6": [
+    "JE::EditorCamera",
+    "JE::EditorMaterials",
+    "JE::EditorRenderIntegration",
+    "JE::RenderAssetBuilders",
+    "JE::RenderIntegration",
+    "AZ::SceneData"
+  ],
+  "consumer96Mutation": false,
+  "hardlinks": 29,
+  "sdk96Mutation": false,
+  "status": "FOCAL_API_ABI_LIFECYCLE_COMPLETE_PARENT_ACCEPTANCE_PENDING",
+  "publicBody": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-rpi98-delta\\bin\\Atom_RPI.Public.dll",
+    "bytes": 7858688,
+    "sha256": "F10958165992BB366C032CABF192738069D53B5A9EE0443D9BEDF22E48527D45"
+  }
+}

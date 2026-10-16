@@ -1,0 +1,329 @@
+<20:14:01> BackupNameAttachment=" Build(0) 16 Oct 26 (20 14 01)"  -- used by backup system
+<20:14:01> Log Started at Fri Oct 16 20:14:01 2026
+<20:14:01> Built on Oct 14 2026 22:00:40
+<20:14:01> Running 64 bit Windows version
+<20:14:01> FileVersion: 0.0.0.0
+<20:14:01> ProductVersion: 0.0.0.0
+<20:14:01> Using Microsoft (tm) C++ Standard Library implementation
+<20:14:01> Project Path: F:\JericoEngine\JericoEngine\Projects\JEEditorFixture
+
+<20:14:01> Project Name: JEEditorFixture
+
+<20:14:01> [Warning] Config file game.cfg not found!
+<20:14:01> creating CVarGroups from directory 'Config/CVarGroups' ...
+<20:14:01> Loading Config file user.cfg (F:/JericoEngine/JericoEngine/Projects/JEEditorFixture/Cache/pc/config/user.cfg)
+<20:14:01> GameName: JEEditorFixture
+<20:14:01> BuildTime: Oct 14 2026 22:00:40
+<20:14:01> > g_languageAudio : en-US
+
+<20:14:01> Running without any Audio Engine!
+
+<20:14:01> Audio System is initialized and ready!
+
+<20:14:01> Initializing additional systems
+
+<20:14:01> Using FreeType 2.11.1
+<20:14:02> Current Language: Spanish 
+<20:14:02> Microsoft Windows 11 Pro|C:\WINDOWS|\Device\Harddisk3\Partition2 10.0.26300
+<20:14:02> Local time is 20:14:02 10/16/26, system running for 2426 minutes
+<20:14:02> 32679MB phys. memory installed, 20877MB paging available
+<20:14:02> Current display mode is 1920x1080x32, (Unknown graphics card)
+<20:14:02> IBM enhanced (101/102-key) keyboard and 6+ button mouse installed
+<20:14:02> --------------------------------------------------------------------------------
+<20:14:05> [Error] (AssetUtils) - Could not compile asset 'shaders/sceneandviewsrgs.azshader', status = 1.
+<20:14:08> [Error] (AssetUtils) - Unable to find product asset 'shaders/sceneandviewsrgs.azshader'. Has the source asset finished building?
+<20:14:08> [Error] (RPI system) - Failed to load RPI system asset shaders/sceneandviewsrgs.azshader
+<20:14:36> project_path = F:\JericoEngine\JericoEngine\Projects\JEEditorFixture
+<20:14:36> sys_localization_folder = Localization
+<20:14:36> (SceneAPI) - AssImp Import Context was registered.
+
+<20:14:36> (EMotionFX) - -----------------------------------------------
+
+<20:14:36> (EMotionFX) - EMotion Studio Core - Information
+
+<20:14:36> (EMotionFX) - -----------------------------------------------
+
+<20:14:36> (EMotionFX) - Compilation date: Oct 16 2026
+
+<20:14:36> (EMotionFX) - -----------------------------------------------
+
+<20:14:36> (EMotionFX) - EMotion Studio initialized...
+
+<20:14:37> 
+==================================================================
+
+<20:14:37> Trace::Assert
+ F:/JericoEngine/JericoEngine/Gems/Atom/RPI/Code/Source/RPI.Public/RPISystem.cpp(245): (11324) 'class AZ::Data::Asset<class AZ::RPI::ShaderAsset> __cdecl AZ::RPI::RPISystem::GetCommonShaderAssetForSrgs(void) const'
+
+<20:14:37> InitializeSystemAssets() should be called once when asset catalog loaded'
+
+<20:14:37> ------------------------------------------------
+
+<20:14:37> F:\JericoEngine\JericoEngine\Gems\Atom\RPI\Code\Source\RPI.Public\RPISystem.cpp (246) : AZ::RPI::RPISystem::GetCommonShaderAssetForSrgs
+
+<20:14:37> F:\JericoEngine\JericoEngine\Gems\Atom\RPI\Code\Source\RPI.Public\View.cpp (743) : AZ::RPI::View::TryCreateShaderResourceGroup
+
+<20:14:37> F:\JericoEngine\JericoEngine\Gems\Atom\RPI\Code\Source\RPI.Public\View.cpp (68) : AZ::RPI::View::View
+
+<20:14:37> F:\JericoEngine\JericoEngine\Gems\Atom\RPI\Code\Source\RPI.Public\View.cpp (44) : AZ::RPI::View::CreateView
+
+<20:14:37> F:\JericoEngine\JericoEngine\Gems\Atom\RPI\Code\Source\RPI.Public\ViewGroup.cpp (63) : AZ::RPI::ViewGroup::CreateMainView
+
+<20:14:37> F:\JericoEngine\JericoEngine\Gems\Atom\RPI\Code\Source\RPI.Public\ViewportContextManager.cpp (332) : AZ::RPI::ViewportContextManager::GetOrCreateViewStackForContext
+
+<20:14:37> F:\JericoEngine\JericoEngine\Gems\Atom\RPI\Code\Source\RPI.Public\ViewportContextManager.cpp (84) : AZ::RPI::ViewportContextManager::RegisterViewportContext
+
+<20:14:37> F:\JericoEngine\JericoEngine\Gems\Atom\RPI\Code\Source\RPI.Public\ViewportContextManager.cpp (162) : AZ::RPI::ViewportContextManager::CreateViewportContext
+
+<20:14:37> F:\JericoEngine\JericoEngine\Gems\Atom\Tools\AtomToolsFramework\Code\Source\Viewport\RenderViewportWidget.cpp (68) : AtomToolsFramework::RenderViewportWidget::InitializeViewportContext
+
+<20:14:37> F:\JericoEngine\JericoEngine\Code\Editor\EditorViewportWidget.cpp (797) : EditorViewportWidget::SetViewportId
+
+<20:14:37> F:\JericoEngine\JericoEngine\Code\Editor\ViewPane.cpp (642) : CLayoutViewPane::AttachViewport
+
+<20:14:37> F:\JericoEngine\JericoEngine\Code\Editor\ViewPane.cpp (560) : CLayoutViewPane::SetViewClass
+
+<20:14:37> F:\JericoEngine\JericoEngine\Code\Editor\LayoutWnd.cpp (206) : CLayoutWnd::MaximizeViewport
+
+<20:14:37> F:\JericoEngine\JericoEngine\Code\Editor\LayoutWnd.cpp (474) : CLayoutWnd::LoadConfig
+
+<20:14:37> F:\JericoEngine\JericoEngine\Code\Editor\MainWindow.cpp (400) : MainWindow::InitCentralWidget
+
+<20:14:37> F:\JericoEngine\JericoEngine\Code\Editor\MainWindow.cpp (420) : MainWindow::Initialize
+
+<20:14:37> F:\JericoEngine\JericoEngine\Code\Editor\CryEdit.cpp (1353) : CCryEditApp::InitInstance
+
+<20:14:37> F:\JericoEngine\JericoEngine\Code\Editor\CryEdit.cpp (3283) : CryEditMain
+
+<20:14:37> F:\JericoEngine\JericoEngine\Code\Editor\main.cpp (47) : main
+
+<20:14:37> D:\a\3p-package-source\3p-package-source\source\package-system\Qt\temp\src\qtbase\src\entrypoint\qtentrypoint_win.cpp (59) : qtEntryPoint
+
+<20:14:37> D:\a\_work\1\s\src\vctools\crt\vcstartup\src\startup\exe_common.inl (288) : __scrt_common_main_seh
+
+<20:14:37> 00007FFC2C56DDA7 (KERNEL32) : BaseThreadInitThunk
+
+<20:14:37> 00007FFC2D81EE4C (ntdll) : RtlUserThreadStart
+
+<20:14:37> ==================================================================
+
+<20:14:37> ====Assert added to ignore list by spec and verbosity setting.====
+
+<20:14:37> 
+==================================================================
+
+<20:14:37> Trace::Assert
+ F:/JericoEngine/JericoEngine/Gems/Atom/RPI/Code/Source/RPI.Public/RPISystem.cpp(251): (11324) 'class AZStd::intrusive_ptr<class AZ::RHI::ShaderResourceGroupLayout> __cdecl AZ::RPI::RPISystem::GetSceneSrgLayout(void) const'
+
+<20:14:37> InitializeSystemAssets() should be called once when asset catalog loaded'
+
+<20:14:37> ------------------------------------------------
+
+<20:14:37> F:\JericoEngine\JericoEngine\Gems\Atom\RPI\Code\Source\RPI.Public\RPISystem.cpp (252) : AZ::RPI::RPISystem::GetSceneSrgLayout
+
+<20:14:37> F:\JericoEngine\JericoEngine\Gems\Atom\RPI\Code\Source\RPI.Public\Scene.cpp (49) : AZ::RPI::Scene::CreateScene
+
+<20:14:37> F:\JericoEngine\JericoEngine\Engine\Render\Integration\Source\Bootstrap\BootstrapSystemComponent.cpp (582) : JE::Render::Bootstrap::BootstrapSystemComponent::GetOrCreateAtomSceneFromAzScene
+
+<20:14:37> F:\JericoEngine\JericoEngine\Gems\Atom\Tools\AtomToolsFramework\Code\Source\Viewport\RenderViewportWidget.cpp (175) : `AtomToolsFramework::RenderViewportWidget::SetScene'::`2'::<lambda_1>::operator()
+
+<20:14:37> F:\JericoEngine\JericoEngine\Code\Framework\AzCore\AzCore\EBus\Internal\BusContainer.h (1541) : AZ::Internal::EBusContainer<JE::Render::Bootstrap::Request,JE::Render::Bootstrap::Request,0,0>::Dispatcher<AZ::EBus<JE::Render::Bootstrap::Request,JE::Render:
+
+<20:14:37> F:\JericoEngine\JericoEngine\Gems\Atom\Tools\AtomToolsFramework\Code\Source\Viewport\RenderViewportWidget.cpp (184) : AtomToolsFramework::RenderViewportWidget::SetScene
+
+<20:14:37> F:\JericoEngine\JericoEngine\Code\Editor\EditorViewportWidget.cpp (1979) : EditorViewportWidget::UpdateScene
+
+<20:14:37> F:\JericoEngine\JericoEngine\Code\Editor\EditorViewportWidget.cpp (811) : EditorViewportWidget::SetViewportId
+
+<20:14:37> F:\JericoEngine\JericoEngine\Code\Editor\ViewPane.cpp (642) : CLayoutViewPane::AttachViewport
+
+<20:14:37> F:\JericoEngine\JericoEngine\Code\Editor\ViewPane.cpp (560) : CLayoutViewPane::SetViewClass
+
+<20:14:37> F:\JericoEngine\JericoEngine\Code\Editor\LayoutWnd.cpp (206) : CLayoutWnd::MaximizeViewport
+
+<20:14:37> F:\JericoEngine\JericoEngine\Code\Editor\LayoutWnd.cpp (474) : CLayoutWnd::LoadConfig
+
+<20:14:37> F:\JericoEngine\JericoEngine\Code\Editor\MainWindow.cpp (400) : MainWindow::InitCentralWidget
+
+<20:14:37> F:\JericoEngine\JericoEngine\Code\Editor\MainWindow.cpp (420) : MainWindow::Initialize
+
+<20:14:37> F:\JericoEngine\JericoEngine\Code\Editor\CryEdit.cpp (1353) : CCryEditApp::InitInstance
+
+<20:14:37> F:\JericoEngine\JericoEngine\Code\Editor\CryEdit.cpp (3283) : CryEditMain
+
+<20:14:37> F:\JericoEngine\JericoEngine\Code\Editor\main.cpp (47) : main
+
+<20:14:37> D:\a\3p-package-source\3p-package-source\source\package-system\Qt\temp\src\qtbase\src\entrypoint\qtentrypoint_win.cpp (59) : qtEntryPoint
+
+<20:14:37> D:\a\_work\1\s\src\vctools\crt\vcstartup\src\startup\exe_common.inl (288) : __scrt_common_main_seh
+
+<20:14:37> 00007FFC2C56DDA7 (KERNEL32) : BaseThreadInitThunk
+
+<20:14:37> 00007FFC2D81EE4C (ntdll) : RtlUserThreadStart
+
+<20:14:37> ==================================================================
+
+<20:14:37> ====Assert added to ignore list by spec and verbosity setting.====
+
+<20:14:37> > r_shadowCascadeExtrusionAmount : -1
+
+<20:14:37> 
+==================================================================
+
+<20:14:37> Trace::Assert
+ F:/JericoEngine/JericoEngine/Gems/Atom/RPI/Code/Source/RPI.Public/RPISystem.cpp(257): (11324) 'class AZStd::intrusive_ptr<class AZ::RHI::ShaderResourceGroupLayout> __cdecl AZ::RPI::RPISystem::GetViewSrgLayout(void) const'
+
+<20:14:37> InitializeSystemAssets() should be called once when asset catalog loaded'
+
+<20:14:37> ------------------------------------------------
+
+<20:14:37> F:\JericoEngine\JericoEngine\Gems\Atom\RPI\Code\Source\RPI.Public\RPISystem.cpp (258) : AZ::RPI::RPISystem::GetViewSrgLayout
+
+<20:14:37> F:\JericoEngine\JericoEngine\Gems\Atom\Feature\Common\Code\Source\CoreLights\SimplePointLightFeatureProcessor.cpp (53) : AZ::Render::SimplePointLightFeatureProcessor::Activate
+
+<20:14:37> F:\JericoEngine\JericoEngine\Gems\Atom\RPI\Code\Source\RPI.Public\Scene.cpp (156) : AZ::RPI::Scene::Activate
+
+<20:14:37> F:\JericoEngine\JericoEngine\Engine\Render\Integration\Source\Bootstrap\BootstrapSystemComponent.cpp (586) : JE::Render::Bootstrap::BootstrapSystemComponent::GetOrCreateAtomSceneFromAzScene
+
+<20:14:37> F:\JericoEngine\JericoEngine\Gems\Atom\Tools\AtomToolsFramework\Code\Source\Viewport\RenderViewportWidget.cpp (175) : `AtomToolsFramework::RenderViewportWidget::SetScene'::`2'::<lambda_1>::operator()
+
+<20:14:37> F:\JericoEngine\JericoEngine\Code\Framework\AzCore\AzCore\EBus\Internal\BusContainer.h (1541) : AZ::Internal::EBusContainer<JE::Render::Bootstrap::Request,JE::Render::Bootstrap::Request,0,0>::Dispatcher<AZ::EBus<JE::Render::Bootstrap::Request,JE::Render:
+
+<20:14:37> F:\JericoEngine\JericoEngine\Gems\Atom\Tools\AtomToolsFramework\Code\Source\Viewport\RenderViewportWidget.cpp (184) : AtomToolsFramework::RenderViewportWidget::SetScene
+
+<20:14:37> F:\JericoEngine\JericoEngine\Code\Editor\EditorViewportWidget.cpp (1979) : EditorViewportWidget::UpdateScene
+
+<20:14:37> F:\JericoEngine\JericoEngine\Code\Editor\EditorViewportWidget.cpp (811) : EditorViewportWidget::SetViewportId
+
+<20:14:37> F:\JericoEngine\JericoEngine\Code\Editor\ViewPane.cpp (642) : CLayoutViewPane::AttachViewport
+
+<20:14:37> F:\JericoEngine\JericoEngine\Code\Editor\ViewPane.cpp (560) : CLayoutViewPane::SetViewClass
+
+<20:14:37> F:\JericoEngine\JericoEngine\Code\Editor\LayoutWnd.cpp (206) : CLayoutWnd::MaximizeViewport
+
+<20:14:37> F:\JericoEngine\JericoEngine\Code\Editor\LayoutWnd.cpp (474) : CLayoutWnd::LoadConfig
+
+<20:14:37> F:\JericoEngine\JericoEngine\Code\Editor\MainWindow.cpp (400) : MainWindow::InitCentralWidget
+
+<20:14:37> F:\JericoEngine\JericoEngine\Code\Editor\MainWindow.cpp (420) : MainWindow::Initialize
+
+<20:14:37> F:\JericoEngine\JericoEngine\Code\Editor\CryEdit.cpp (1353) : CCryEditApp::InitInstance
+
+<20:14:37> F:\JericoEngine\JericoEngine\Code\Editor\CryEdit.cpp (3283) : CryEditMain
+
+<20:14:37> F:\JericoEngine\JericoEngine\Code\Editor\main.cpp (47) : main
+
+<20:14:37> D:\a\3p-package-source\3p-package-source\source\package-system\Qt\temp\src\qtbase\src\entrypoint\qtentrypoint_win.cpp (59) : qtEntryPoint
+
+<20:14:37> D:\a\_work\1\s\src\vctools\crt\vcstartup\src\startup\exe_common.inl (288) : __scrt_common_main_seh
+
+<20:14:37> 00007FFC2C56DDA7 (KERNEL32) : BaseThreadInitThunk
+
+<20:14:37> 00007FFC2D81EE4C (ntdll) : RtlUserThreadStart
+
+<20:14:37> ==================================================================
+
+<20:14:37> ====Assert added to ignore list by spec and verbosity setting.====
+
+<20:14:37> (Exit) - Exception with exit code: 0xc0000005
+<20:14:37> (Exit) - F:\JericoEngine\JericoEngine\Code\Legacy\CrySystem\DebugCallStack.cpp (213) : DebugCallStack::handleException
+
+<20:14:37> (Exit) - 00007FFC2AC3F4E3 (KERNELBASE) : UnhandledExceptionFilter
+
+<20:14:37> (Exit) - 00007FFC2D90A030 (ntdll) : strncpy
+
+<20:14:37> (Exit) - 00007FFC2D8C4B93 (ntdll) : _C_specific_handler
+
+<20:14:37> (Exit) - 00007FFC2D9064AF (ntdll) : _chkstk
+
+<20:14:37> (Exit) - 00007FFC2D864065 (ntdll) : RtlWow64GetCurrentMachine
+
+<20:14:37> (Exit) - 00007FFC2D905DEE (ntdll) : KiUserExceptionDispatcher
+
+<20:14:37> (Exit) - F:\JericoEngine\JericoEngine\Gems\Atom\RHI\Code\Source\RHI.Reflect\ShaderResourceGroupLayout.cpp (440) : AZ::RHI::ShaderResourceGroupLayout::FindShaderInputBufferIndex
+
+<20:14:37> (Exit) - F:\JericoEngine\JericoEngine\Gems\Atom\Feature\Common\Code\Source\Utils\GpuBufferHandler.cpp (29) : AZ::Render::GpuBufferHandler::GpuBufferHandler
+
+<20:14:37> (Exit) - F:\JericoEngine\JericoEngine\Gems\Atom\Feature\Common\Code\Source\CoreLights\SimplePointLightFeatureProcessor.cpp (55) : AZ::Render::SimplePointLightFeatureProcessor::Activate
+
+<20:14:37> (Exit) - F:\JericoEngine\JericoEngine\Gems\Atom\RPI\Code\Source\RPI.Public\Scene.cpp (156) : AZ::RPI::Scene::Activate
+
+<20:14:37> (Exit) - F:\JericoEngine\JericoEngine\Engine\Render\Integration\Source\Bootstrap\BootstrapSystemComponent.cpp (586) : JE::Render::Bootstrap::BootstrapSystemComponent::GetOrCreateAtomSceneFromAzScene
+
+<20:14:37> (Exit) - F:\JericoEngine\JericoEngine\Gems\Atom\Tools\AtomToolsFramework\Code\Source\Viewport\RenderViewportWidget.cpp (175) : `AtomToolsFramework::RenderViewportWidget::SetScene'::`2'::<lambda_1>::operator()
+
+<20:14:37> (Exit) - F:\JericoEngine\JericoEngine\Code\Framework\AzCore\AzCore\EBus\Internal\BusContainer.h (1541) : AZ::Internal::EBusContainer<JE::Render::Bootstrap::Request,JE::Render::Bootstrap::Request,0,0>::Dispatcher<AZ::EBus<JE::Render::Bootstrap::Request,JE::Render:
+
+<20:14:37> (Exit) - F:\JericoEngine\JericoEngine\Gems\Atom\Tools\AtomToolsFramework\Code\Source\Viewport\RenderViewportWidget.cpp (184) : AtomToolsFramework::RenderViewportWidget::SetScene
+
+<20:14:37> (Exit) - F:\JericoEngine\JericoEngine\Code\Editor\EditorViewportWidget.cpp (1979) : EditorViewportWidget::UpdateScene
+
+<20:14:37> (Exit) - F:\JericoEngine\JericoEngine\Code\Editor\EditorViewportWidget.cpp (811) : EditorViewportWidget::SetViewportId
+
+<20:14:37> (Exit) - F:\JericoEngine\JericoEngine\Code\Editor\ViewPane.cpp (642) : CLayoutViewPane::AttachViewport
+
+<20:14:37> (Exit) - F:\JericoEngine\JericoEngine\Code\Editor\ViewPane.cpp (560) : CLayoutViewPane::SetViewClass
+
+<20:14:37> (Exit) - F:\JericoEngine\JericoEngine\Code\Editor\LayoutWnd.cpp (206) : CLayoutWnd::MaximizeViewport
+
+<20:14:37> (Exit) - F:\JericoEngine\JericoEngine\Code\Editor\LayoutWnd.cpp (474) : CLayoutWnd::LoadConfig
+
+<20:14:37> (Exit) - F:\JericoEngine\JericoEngine\Code\Editor\MainWindow.cpp (400) : MainWindow::InitCentralWidget
+
+<20:14:37> (Exit) - F:\JericoEngine\JericoEngine\Code\Editor\MainWindow.cpp (420) : MainWindow::Initialize
+
+<20:14:37> (Exit) - F:\JericoEngine\JericoEngine\Code\Editor\CryEdit.cpp (1353) : CCryEditApp::InitInstance
+
+<20:14:37> (Exit) - F:\JericoEngine\JericoEngine\Code\Editor\CryEdit.cpp (3283) : CryEditMain
+
+<20:14:37> 00007FFC2AC3F4E3 (KERNELBASE) : UnhandledExceptionFilter
+
+<20:14:37> 00007FFC2D90A030 (ntdll) : strncpy
+
+<20:14:37> 00007FFC2D8C4B93 (ntdll) : _C_specific_handler
+
+<20:14:37> 00007FFC2D9064AF (ntdll) : _chkstk
+
+<20:14:37> 00007FFC2D864065 (ntdll) : RtlWow64GetCurrentMachine
+
+<20:14:37> 00007FFC2D905DEE (ntdll) : KiUserExceptionDispatcher
+
+<20:14:37> F:\JericoEngine\JericoEngine\Gems\Atom\RHI\Code\Source\RHI.Reflect\ShaderResourceGroupLayout.cpp (440) : AZ::RHI::ShaderResourceGroupLayout::FindShaderInputBufferIndex
+
+<20:14:37> F:\JericoEngine\JericoEngine\Gems\Atom\Feature\Common\Code\Source\Utils\GpuBufferHandler.cpp (29) : AZ::Render::GpuBufferHandler::GpuBufferHandler
+
+<20:14:37> F:\JericoEngine\JericoEngine\Gems\Atom\Feature\Common\Code\Source\CoreLights\SimplePointLightFeatureProcessor.cpp (55) : AZ::Render::SimplePointLightFeatureProcessor::Activate
+
+<20:14:37> F:\JericoEngine\JericoEngine\Gems\Atom\RPI\Code\Source\RPI.Public\Scene.cpp (156) : AZ::RPI::Scene::Activate
+
+<20:14:37> F:\JericoEngine\JericoEngine\Engine\Render\Integration\Source\Bootstrap\BootstrapSystemComponent.cpp (586) : JE::Render::Bootstrap::BootstrapSystemComponent::GetOrCreateAtomSceneFromAzScene
+
+<20:14:37> F:\JericoEngine\JericoEngine\Gems\Atom\Tools\AtomToolsFramework\Code\Source\Viewport\RenderViewportWidget.cpp (175) : `AtomToolsFramework::RenderViewportWidget::SetScene'::`2'::<lambda_1>::operator()
+
+<20:14:37> F:\JericoEngine\JericoEngine\Code\Framework\AzCore\AzCore\EBus\Internal\BusContainer.h (1541) : AZ::Internal::EBusContainer<JE::Render::Bootstrap::Request,JE::Render::Bootstrap::Request,0,0>::Dispatcher<AZ::EBus<JE::Render::Bootstrap::Request,JE::Render:
+
+<20:14:37> F:\JericoEngine\JericoEngine\Gems\Atom\Tools\AtomToolsFramework\Code\Source\Viewport\RenderViewportWidget.cpp (184) : AtomToolsFramework::RenderViewportWidget::SetScene
+
+<20:14:37> F:\JericoEngine\JericoEngine\Code\Editor\EditorViewportWidget.cpp (1979) : EditorViewportWidget::UpdateScene
+
+<20:14:37> F:\JericoEngine\JericoEngine\Code\Editor\EditorViewportWidget.cpp (811) : EditorViewportWidget::SetViewportId
+
+<20:14:37> F:\JericoEngine\JericoEngine\Code\Editor\ViewPane.cpp (642) : CLayoutViewPane::AttachViewport
+
+<20:14:37> F:\JericoEngine\JericoEngine\Code\Editor\ViewPane.cpp (560) : CLayoutViewPane::SetViewClass
+
+<20:14:37> F:\JericoEngine\JericoEngine\Code\Editor\LayoutWnd.cpp (206) : CLayoutWnd::MaximizeViewport
+
+<20:14:37> F:\JericoEngine\JericoEngine\Code\Editor\LayoutWnd.cpp (474) : CLayoutWnd::LoadConfig
+
+<20:14:37> F:\JericoEngine\JericoEngine\Code\Editor\MainWindow.cpp (400) : MainWindow::InitCentralWidget
+
+<20:14:37> F:\JericoEngine\JericoEngine\Code\Editor\MainWindow.cpp (420) : MainWindow::Initialize
+
+<20:14:37> F:\JericoEngine\JericoEngine\Code\Editor\CryEdit.cpp (1353) : CCryEditApp::InitInstance
+
+<20:14:37> F:\JericoEngine\JericoEngine\Code\Editor\CryEdit.cpp (3283) : CryEditMain
+
+<20:14:37> F:\JericoEngine\JericoEngine\Code\Editor\main.cpp (47) : main
+
+<20:14:37> Successfully recorded DMP file:  'F:\JericoEngine\JericoEngine\Projects\JEEditorFixture\user\log\error.dmp'

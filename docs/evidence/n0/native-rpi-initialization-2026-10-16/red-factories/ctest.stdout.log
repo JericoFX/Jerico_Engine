@@ -1,0 +1,89 @@
+Test project F:/JericoEngine/JericoEngine/build/n0-validation/original-engine
+    Start 103: JE::RenderIntegration.Tests.main::TEST_RUN
+1/2 Test #103: JE::RenderIntegration.Tests.main::TEST_RUN .........***Failed    0.08 sec
+cwd = F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\Engine\Render\Integration
+LIB: F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/profile/RenderIntegration.Tests.dll
+Loading: F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/profile/RenderIntegration.Tests.dll
+OKAY Library loaded: F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/profile/RenderIntegration.Tests.dll
+OKAY Symbol found: AzRunUnitTests
+Note: Google Test filter = -*SUITE_smoke*:*SUITE_periodic*:*SUITE_benchmark*:*SUITE_sandbox*:*SUITE_awsi*
+[==========] Running 7 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 7 tests from RenderIntegrationTests
+[ RUN      ] RenderIntegrationTests.RuntimeFactoryPreservesIdentityDescriptorsAndRendererServices
+[       OK ] RenderIntegrationTests.RuntimeFactoryPreservesIdentityDescriptorsAndRendererServices (22 ms)
+[ RUN      ] RenderIntegrationTests.BootstrapFactoryPreservesLegacyIdentityDescriptorServicesAndReflection
+[       OK ] RenderIntegrationTests.BootstrapFactoryPreservesLegacyIdentityDescriptorServicesAndReflection (0 ms)
+[ RUN      ] RenderIntegrationTests.BootstrapDescriptorOnlyFactoryDoesNotRequireOrActivateRenderer
+[       OK ] RenderIntegrationTests.BootstrapDescriptorOnlyFactoryDoesNotRequireOrActivateRenderer (0 ms)
+[ RUN      ] RenderIntegrationTests.FlyCameraXmlRoundTripPreservesLegacyIdentityAndAllFields
+[       OK ] RenderIntegrationTests.FlyCameraXmlRoundTripPreservesLegacyIdentityAndAllFields (3 ms)
+[ RUN      ] RenderIntegrationTests.FlyCameraBusLifecycleAndDisabledTickPreserveExistingTransform
+[       OK ] RenderIntegrationTests.FlyCameraBusLifecycleAndDisabledTickPreserveExistingTransform (9 ms)
+[ RUN      ] RenderIntegrationTests.DynamicDrawOwnerRegistersDisconnectsAndRejectsUnknownNamesWithoutGpuWork
+[       OK ] RenderIntegrationTests.DynamicDrawOwnerRegistersDisconnectsAndRejectsUnknownNamesWithoutGpuWork (0 ms)
+[ RUN      ] RenderIntegrationTests.NativeRpiRuntimeFactoryPreservesRegistrationAndLifecycle
+F:\JericoEngine\JericoEngine\Engine\Render\Integration\Tests\RenderIntegrationTests.cpp(270): error: Expected: (factory) != (nullptr), actual: NULL vs (nullptr)
+Native RPI factory is missing from RenderIntegration
+
+[  FAILED  ] RenderIntegrationTests.NativeRpiRuntimeFactoryPreservesRegistrationAndLifecycle (0 ms)
+[----------] 7 tests from RenderIntegrationTests (36 ms total)
+
+[----------] Global test environment tear-down
+[==========] 7 tests from 1 test suite ran. (37 ms total)
+[  PASSED  ] 6 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] RenderIntegrationTests.NativeRpiRuntimeFactoryPreservesRegistrationAndLifecycle
+
+ 1 FAILED TEST
+OKAY AzRunUnitTests() returned 1
+Retry command: 
+F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/profile/AzTestRunner.exe F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/profile/RenderIntegration.Tests.dll AzRunUnitTests
+Returning code: 1
+
+    Start 104: JE::EditorRenderIntegration.Tests.main::TEST_RUN
+2/2 Test #104: JE::EditorRenderIntegration.Tests.main::TEST_RUN ...***Failed    0.05 sec
+cwd = F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\Engine\Render\Integration\Editor
+LIB: F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/profile/EditorRenderIntegration.Tests.dll
+Loading: F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/profile/EditorRenderIntegration.Tests.dll
+OKAY Library loaded: F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/profile/EditorRenderIntegration.Tests.dll
+OKAY Symbol found: AzRunUnitTests
+Note: Google Test filter = -*SUITE_smoke*:*SUITE_periodic*:*SUITE_benchmark*:*SUITE_sandbox*:*SUITE_awsi*
+[==========] Running 3 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 3 tests from EditorRenderIntegration
+[ RUN      ] EditorRenderIntegration.AuthoringFactoryPreservesRuntimeDescriptorsExactlyOnceAndEditorSchema
+[       OK ] EditorRenderIntegration.AuthoringFactoryPreservesRuntimeDescriptorsExactlyOnceAndEditorSchema (1 ms)
+[ RUN      ] EditorRenderIntegration.AssetProcessingFactoryPreservesDescriptorsAndSchemaWithoutRendererActivation
+[       OK ] EditorRenderIntegration.AssetProcessingFactoryPreservesDescriptorsAndSchemaWithoutRendererActivation (0 ms)
+[ RUN      ] EditorRenderIntegration.NativeRpiEditorFactoryPreservesRegistrationAndLifecycle
+F:\JericoEngine\JericoEngine\Editor\Render\Integration\Tests\RenderIntegrationTests.cpp(134): error: Expected: (factory) != (nullptr), actual: NULL vs (nullptr)
+Native RPI factory is missing from EditorRenderIntegration
+
+[  FAILED  ] EditorRenderIntegration.NativeRpiEditorFactoryPreservesRegistrationAndLifecycle (0 ms)
+[----------] 3 tests from EditorRenderIntegration (2 ms total)
+
+[----------] Global test environment tear-down
+[==========] 3 tests from 1 test suite ran. (2 ms total)
+[  PASSED  ] 2 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] EditorRenderIntegration.NativeRpiEditorFactoryPreservesRegistrationAndLifecycle
+
+ 1 FAILED TEST
+OKAY AzRunUnitTests() returned 1
+Retry command: 
+F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/profile/AzTestRunner.exe F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/profile/EditorRenderIntegration.Tests.dll AzRunUnitTests
+Returning code: 1
+
+
+0% tests passed, 2 tests failed out of 2
+
+Label Time Summary:
+FRAMEWORK_googletest    =   0.13 sec*proc (2 tests)
+SUITE_main              =   0.13 sec*proc (2 tests)
+
+Total Test time (real) =   0.18 sec
+
+The following tests FAILED:
+	103 - JE::RenderIntegration.Tests.main::TEST_RUN (Failed) FRAMEWORK_googletest SUITE_main
+	104 - JE::EditorRenderIntegration.Tests.main::TEST_RUN (Failed) FRAMEWORK_googletest SUITE_main

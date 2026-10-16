@@ -1,0 +1,113 @@
+Test project F:/JericoEngine/JericoEngine/build/n0-validation/original-engine
+    Start 103: JE::RenderIntegration.Tests.main::TEST_RUN
+1/2 Test #103: JE::RenderIntegration.Tests.main::TEST_RUN .........***Failed    0.06 sec
+cwd = F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\Engine\Render\Integration
+LIB: F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/profile/RenderIntegration.Tests.dll
+Loading: F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/profile/RenderIntegration.Tests.dll
+OKAY Library loaded: F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/profile/RenderIntegration.Tests.dll
+OKAY Symbol found: AzRunUnitTests
+Note: Google Test filter = -*SUITE_smoke*:*SUITE_periodic*:*SUITE_benchmark*:*SUITE_sandbox*:*SUITE_awsi*
+[==========] Running 8 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 8 tests from RenderIntegrationTests
+[ RUN      ] RenderIntegrationTests.RuntimeFactoryPreservesIdentityDescriptorsAndRendererServices
+[       OK ] RenderIntegrationTests.RuntimeFactoryPreservesIdentityDescriptorsAndRendererServices (1 ms)
+[ RUN      ] RenderIntegrationTests.BootstrapFactoryPreservesLegacyIdentityDescriptorServicesAndReflection
+[       OK ] RenderIntegrationTests.BootstrapFactoryPreservesLegacyIdentityDescriptorServicesAndReflection (0 ms)
+[ RUN      ] RenderIntegrationTests.BootstrapDescriptorOnlyFactoryDoesNotRequireOrActivateRenderer
+[       OK ] RenderIntegrationTests.BootstrapDescriptorOnlyFactoryDoesNotRequireOrActivateRenderer (0 ms)
+[ RUN      ] RenderIntegrationTests.FlyCameraXmlRoundTripPreservesLegacyIdentityAndAllFields
+[       OK ] RenderIntegrationTests.FlyCameraXmlRoundTripPreservesLegacyIdentityAndAllFields (0 ms)
+[ RUN      ] RenderIntegrationTests.FlyCameraBusLifecycleAndDisabledTickPreserveExistingTransform
+[       OK ] RenderIntegrationTests.FlyCameraBusLifecycleAndDisabledTickPreserveExistingTransform (4 ms)
+[ RUN      ] RenderIntegrationTests.DynamicDrawOwnerRegistersDisconnectsAndRejectsUnknownNamesWithoutGpuWork
+[       OK ] RenderIntegrationTests.DynamicDrawOwnerRegistersDisconnectsAndRejectsUnknownNamesWithoutGpuWork (0 ms)
+[ RUN      ] RenderIntegrationTests.NativeRpiRuntimeFactoryPreservesRegistrationAndLifecycle
+F:/JericoEngine/JericoEngine/Code/Framework/AzCore/Platform/Common/WinAPI/AzCore/std/parallel/internal/thread_WinAPI.cpp(107): error: Thread must be joinable!
+
+F:/JericoEngine/JericoEngine/Code/Framework/AzCore/Platform/Common/WinAPI/AzCore/std/parallel/internal/thread_WinAPI.cpp(107): error: Thread must be joinable!
+
+[  FAILED  ] RenderIntegrationTests.NativeRpiRuntimeFactoryPreservesRegistrationAndLifecycle (2 ms)
+[ RUN      ] RenderIntegrationTests.NativeRpiDescriptorRoundTripPreservesDefaultsAndPartialRegistryOverrides
+F:/JericoEngine/JericoEngine/Code/Framework/AzCore/Platform/Common/WinAPI/AzCore/std/parallel/internal/thread_WinAPI.cpp(107): error: Thread must be joinable!
+
+F:/JericoEngine/JericoEngine/Code/Framework/AzCore/AzCore/Serialization/Json/RegistrationContext.cpp(18): error: JsonRegistrationContext is being destroyed without unreflecting all serializers. Check your reflection functions.
+
+F:/JericoEngine/JericoEngine/Code/Framework/AzCore/AzCore/Serialization/Json/RegistrationContext.cpp(19): error: JsonRegistrationContext is being destroyed without unreflecting all serializers. Check your reflection functions.
+
+F:/JericoEngine/JericoEngine/Code/Framework/AzCore/Platform/Common/WinAPI/AzCore/std/parallel/internal/thread_WinAPI.cpp(107): error: Thread must be joinable!
+
+[  FAILED  ] RenderIntegrationTests.NativeRpiDescriptorRoundTripPreservesDefaultsAndPartialRegistryOverrides (17 ms)
+[----------] 8 tests from RenderIntegrationTests (27 ms total)
+
+[----------] Global test environment tear-down
+[==========] 8 tests from 1 test suite ran. (27 ms total)
+[  PASSED  ] 6 tests.
+[  FAILED  ] 2 tests, listed below:
+[  FAILED  ] RenderIntegrationTests.NativeRpiRuntimeFactoryPreservesRegistrationAndLifecycle
+[  FAILED  ] RenderIntegrationTests.NativeRpiDescriptorRoundTripPreservesDefaultsAndPartialRegistryOverrides
+
+ 2 FAILED TESTS
+OKAY AzRunUnitTests() returned 1
+Retry command: 
+F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/profile/AzTestRunner.exe F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/profile/RenderIntegration.Tests.dll AzRunUnitTests
+Returning code: 1
+
+    Start 104: JE::EditorRenderIntegration.Tests.main::TEST_RUN
+2/2 Test #104: JE::EditorRenderIntegration.Tests.main::TEST_RUN ...***Failed    0.04 sec
+cwd = F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\Engine\Render\Integration\Editor
+LIB: F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/profile/EditorRenderIntegration.Tests.dll
+Loading: F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/profile/EditorRenderIntegration.Tests.dll
+OKAY Library loaded: F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/profile/EditorRenderIntegration.Tests.dll
+OKAY Symbol found: AzRunUnitTests
+Note: Google Test filter = -*SUITE_smoke*:*SUITE_periodic*:*SUITE_benchmark*:*SUITE_sandbox*:*SUITE_awsi*
+[==========] Running 4 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 4 tests from EditorRenderIntegration
+[ RUN      ] EditorRenderIntegration.AuthoringFactoryPreservesRuntimeDescriptorsExactlyOnceAndEditorSchema
+[       OK ] EditorRenderIntegration.AuthoringFactoryPreservesRuntimeDescriptorsExactlyOnceAndEditorSchema (1 ms)
+[ RUN      ] EditorRenderIntegration.AssetProcessingFactoryPreservesDescriptorsAndSchemaWithoutRendererActivation
+[       OK ] EditorRenderIntegration.AssetProcessingFactoryPreservesDescriptorsAndSchemaWithoutRendererActivation (0 ms)
+[ RUN      ] EditorRenderIntegration.NativeRpiEditorFactoryPreservesRegistrationAndLifecycle
+F:/JericoEngine/JericoEngine/Code/Framework/AzCore/Platform/Common/WinAPI/AzCore/std/parallel/internal/thread_WinAPI.cpp(107): error: Thread must be joinable!
+
+F:/JericoEngine/JericoEngine/Code/Framework/AzCore/Platform/Common/WinAPI/AzCore/std/parallel/internal/thread_WinAPI.cpp(107): error: Thread must be joinable!
+
+[  FAILED  ] EditorRenderIntegration.NativeRpiEditorFactoryPreservesRegistrationAndLifecycle (0 ms)
+[ RUN      ] EditorRenderIntegration.NativeRpiDescriptorRoundTripPreservesDefaultsAndPartialRegistryOverrides
+F:/JericoEngine/JericoEngine/Code/Framework/AzCore/Platform/Common/WinAPI/AzCore/std/parallel/internal/thread_WinAPI.cpp(107): error: Thread must be joinable!
+
+F:/JericoEngine/JericoEngine/Code/Framework/AzCore/AzCore/Serialization/Json/RegistrationContext.cpp(18): error: JsonRegistrationContext is being destroyed without unreflecting all serializers. Check your reflection functions.
+
+F:/JericoEngine/JericoEngine/Code/Framework/AzCore/AzCore/Serialization/Json/RegistrationContext.cpp(19): error: JsonRegistrationContext is being destroyed without unreflecting all serializers. Check your reflection functions.
+
+F:/JericoEngine/JericoEngine/Code/Framework/AzCore/Platform/Common/WinAPI/AzCore/std/parallel/internal/thread_WinAPI.cpp(107): error: Thread must be joinable!
+
+[  FAILED  ] EditorRenderIntegration.NativeRpiDescriptorRoundTripPreservesDefaultsAndPartialRegistryOverrides (6 ms)
+[----------] 4 tests from EditorRenderIntegration (9 ms total)
+
+[----------] Global test environment tear-down
+[==========] 4 tests from 1 test suite ran. (9 ms total)
+[  PASSED  ] 2 tests.
+[  FAILED  ] 2 tests, listed below:
+[  FAILED  ] EditorRenderIntegration.NativeRpiEditorFactoryPreservesRegistrationAndLifecycle
+[  FAILED  ] EditorRenderIntegration.NativeRpiDescriptorRoundTripPreservesDefaultsAndPartialRegistryOverrides
+
+ 2 FAILED TESTS
+OKAY AzRunUnitTests() returned 1
+Retry command: 
+F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/profile/AzTestRunner.exe F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/profile/EditorRenderIntegration.Tests.dll AzRunUnitTests
+Returning code: 1
+
+
+0% tests passed, 2 tests failed out of 2
+
+Label Time Summary:
+FRAMEWORK_googletest    =   0.11 sec*proc (2 tests)
+SUITE_main              =   0.11 sec*proc (2 tests)
+
+Total Test time (real) =   0.91 sec
+
+The following tests FAILED:
+	103 - JE::RenderIntegration.Tests.main::TEST_RUN (Failed) FRAMEWORK_googletest SUITE_main
+	104 - JE::EditorRenderIntegration.Tests.main::TEST_RUN (Failed) FRAMEWORK_googletest SUITE_main

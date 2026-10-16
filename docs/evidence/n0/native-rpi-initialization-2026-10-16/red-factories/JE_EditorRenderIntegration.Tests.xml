@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="3" failures="1" disabled="0" errors="0" time="0.002" timestamp="2026-10-16T19:11:25.132" name="AllTests">
+  <testsuite name="EditorRenderIntegration" tests="3" failures="1" disabled="0" skipped="0" errors="0" time="0.002" timestamp="2026-10-16T19:11:25.132">
+    <testcase name="AuthoringFactoryPreservesRuntimeDescriptorsExactlyOnceAndEditorSchema" file="F:\JericoEngine\JericoEngine\Editor\Render\Integration\Tests\RenderIntegrationTests.cpp" line="47" status="run" result="completed" time="0.001" timestamp="2026-10-16T19:11:25.132" classname="EditorRenderIntegration" />
+    <testcase name="AssetProcessingFactoryPreservesDescriptorsAndSchemaWithoutRendererActivation" file="F:\JericoEngine\JericoEngine\Editor\Render\Integration\Tests\RenderIntegrationTests.cpp" line="87" status="run" result="completed" time="0." timestamp="2026-10-16T19:11:25.133" classname="EditorRenderIntegration" />
+    <testcase name="NativeRpiEditorFactoryPreservesRegistrationAndLifecycle" file="F:\JericoEngine\JericoEngine\Editor\Render\Integration\Tests\RenderIntegrationTests.cpp" line="126" status="run" result="completed" time="0." timestamp="2026-10-16T19:11:25.134" classname="EditorRenderIntegration">
+      <failure message="F:\JericoEngine\JericoEngine\Editor\Render\Integration\Tests\RenderIntegrationTests.cpp:134&#x0A;Expected: (factory) != (nullptr), actual: NULL vs (nullptr)&#x0A;Native RPI factory is missing from EditorRenderIntegration&#x0A;" type=""><![CDATA[F:\JericoEngine\JericoEngine\Editor\Render\Integration\Tests\RenderIntegrationTests.cpp:134
+Expected: (factory) != (nullptr), actual: NULL vs (nullptr)
+Native RPI factory is missing from EditorRenderIntegration
+]]></failure>
+    </testcase>
+  </testsuite>
+</testsuites>

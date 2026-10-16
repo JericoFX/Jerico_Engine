@@ -1,0 +1,100 @@
+{
+  "noConfigureBuildInstall": true,
+  "binding": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\parent-sdk98-delta-binding-r5.json",
+    "bytes": 6006,
+    "sha256": "481564C33C6DEC28EDE9CECDA727B6971B54219772954039ABE2F70B9F693FF0"
+  },
+  "functions": [
+    {
+      "endLine": 25,
+      "text": "function Json($path) { Get-Content -LiteralPath $path -Raw | ConvertFrom-Json }",
+      "startLine": 25,
+      "name": "Json"
+    },
+    {
+      "endLine": 29,
+      "text": "function Save($name, $data) {\n    $stream = [IO.File]::Open(\"$out/$name\", [IO.FileMode]::CreateNew)\n    try { $bytes = [Text.UTF8Encoding]::new($false).GetBytes((ConvertTo-Json -InputObject $data -Depth 16)); $stream.Write($bytes, 0, $bytes.Length) } finally { $stream.Dispose() }\n}",
+      "startLine": 26,
+      "name": "Save"
+    },
+    {
+      "endLine": 30,
+      "text": "function Pin($path) { $f = Get-Item -LiteralPath $path; [pscustomobject]@{path=$f.FullName;bytes=$f.Length;sha256=(Get-FileHash -LiteralPath $f.FullName -Algorithm SHA256).Hash} }",
+      "startLine": 30,
+      "name": "Pin"
+    },
+    {
+      "endLine": 31,
+      "text": "function Verify($pins) { foreach ($p in $pins) { $now = Pin $p.path; if ($now.bytes -ne $p.bytes -or $now.sha256 -cne $p.sha256) { throw \"Input drift: $($p.path)\" } } }",
+      "startLine": 31,
+      "name": "Verify"
+    },
+    {
+      "endLine": 37,
+      "text": "function NativeAdmission {\n    $os = Get-CimInstance Win32_OperatingSystem\n    $used = 100 * (1 - $os.FreePhysicalMemory / $os.TotalVisibleMemorySize)\n    $freeGiB = $os.FreePhysicalMemory / 1MB\n    if ($used -ge 70 -or $freeGiB -lt 10) { throw \"Native admission requires RAM <70% and >=10 GiB free: used=$used freeGiB=$freeGiB\" }\n}",
+      "startLine": 32,
+      "name": "NativeAdmission"
+    },
+    {
+      "endLine": 104,
+      "text": "function Resources {\n    $os = Get-CimInstance Win32_OperatingSystem\n    $used = 100 * (1 - $os.FreePhysicalMemory / $os.TotalVisibleMemorySize)\n    if ($used -ge 80) { throw \"RAM guard: $used\" }\n    $jobs = @(Get-CimInstance Win32_Process | Where-Object { $_.Name -match '^(cmake|MSBuild|cl|link|ctest|AzTestRunner|Editor|AssetProcessor|AssetProcessorBatch|AssetBuilder|JEEditorFixture\\.GameLauncher|AssetBundler|AssetBundlerBatch|MaterialEditor|MaterialCanvas|PassCanvas|ShaderManagementConsole|JENativeSdkConsumer)\\.exe$' })\n    if ($jobs.Count) { throw 'Another native phase is active; preserve its ownership.' }\n}",
+      "startLine": 98,
+      "name": "Resources"
+    },
+    {
+      "endLine": 138,
+      "text": "function Run($phase, $exe, $arguments, $cwd, $pathValue = $null, $timeoutMs = 1800000) {\n    Resources\n    NativeAdmission\n    $info = [Diagnostics.ProcessStartInfo]::new(); $info.FileName = $exe; $info.WorkingDirectory = $cwd\n    $info.UseShellExecute = $false; $info.CreateNoWindow = $true; $info.RedirectStandardOutput = $true; $info.RedirectStandardError = $true\n    $info.Environment['MSBUILDDISABLENODEREUSE'] = '1'\n    if ($pathValue) { $info.Environment['PATH'] = $pathValue }\n    foreach ($arg in $arguments) { $info.ArgumentList.Add([string]$arg) }\n    $process = [Diagnostics.Process]::new(); $process.StartInfo = $info\n    $clock = [Diagnostics.Stopwatch]::StartNew()\n    if (!$process.Start()) { throw \"Cannot start $phase\" }\n    $ownedPid = $process.Id; $creation = $process.StartTime.ToUniversalTime()\n    Save \"$phase.start.json\" @{pid=$ownedPid;creationUtc=$creation.ToString('o');executable=$exe;argv=@($arguments);cwd=$cwd;path=$pathValue}\n    $stdout = $process.StandardOutput.ReadToEndAsync(); $stderr = $process.StandardError.ReadToEndAsync()\n    $priorityError = $null\n    try { $process.PriorityClass = [Diagnostics.ProcessPriorityClass]::BelowNormal } catch { $priorityError = $_.Exception.Message }\n    $guard = $false; $timedOut = $false\n    while (!$process.WaitForExit(3000)) {\n        $os = Get-CimInstance Win32_OperatingSystem\n        $guard = (100 * (1 - $os.FreePhysicalMemory / $os.TotalVisibleMemorySize)) -ge 80\n        $timedOut = $clock.ElapsedMilliseconds -ge $timeoutMs\n        if ($guard -or $timedOut -or $priorityError) {\n            $identity = Get-CimInstance Win32_Process -Filter \"ProcessId=$ownedPid\"\n            if ($identity -and ([IO.Path]::GetFullPath($identity.ExecutablePath) -ine [IO.Path]::GetFullPath($exe) -or [Math]::Abs((([DateTime]$identity.CreationDate).ToUniversalTime() - $creation).TotalMilliseconds) -ge 1000)) { throw 'PID identity changed; cannot terminate safely.' }\n            if (!$process.HasExited) { $process.Kill($true) }; break\n        }\n    }\n    $process.WaitForExit(); $code = $process.ExitCode; $clock.Stop()\n    [IO.File]::WriteAllText(\"$out/$phase.stdout.log\", $stdout.GetAwaiter().GetResult())\n    [IO.File]::WriteAllText(\"$out/$phase.stderr.log\", $stderr.GetAwaiter().GetResult())\n    Save \"$phase.result.json\" @{exitCode=$code;seconds=$clock.Elapsed.TotalSeconds;ramGuardTriggered=$guard;timedOut=$timedOut;priorityRequested='BelowNormal';priorityError=$priorityError;stdout=(Pin \"$out/$phase.stdout.log\");stderr=(Pin \"$out/$phase.stderr.log\")}\n    $process.Dispose()\n    if ($code -ne 0 -or $guard -or $timedOut -or $priorityError) { throw \"Native phase failed: $phase, exit=$code, RAM=$guard, timeout=$timedOut\" }\n}",
+      "startLine": 105,
+      "name": "Run"
+    },
+    {
+      "endLine": 20,
+      "text": "function SamePath($a, $b) { [IO.Path]::GetFullPath($a).TrimEnd('\\','/') -ieq [IO.Path]::GetFullPath($b).TrimEnd('\\','/') }",
+      "startLine": 20,
+      "name": "SamePath"
+    },
+    {
+      "endLine": 28,
+      "text": "function NoReparse($path) {\n    $current = [IO.Path]::GetFullPath($path)\n    while ($current) {\n        if ((Test-Path -LiteralPath $current) -and ((Get-Item -LiteralPath $current -Force).Attributes -band [IO.FileAttributes]::ReparsePoint)) { throw \"Reparse point: $current\" }\n        $next = [IO.Path]::GetDirectoryName($current)\n        if ($next -eq $current) { break }; $current = $next\n    }\n}",
+      "startLine": 21,
+      "name": "NoReparse"
+    },
+    {
+      "endLine": 136,
+      "text": "function CopyPinned($pin, $destination) {\n    NoReparse $destination\n    if (Test-Path -LiteralPath $destination) { throw \"No overwrite: $destination\" }\n    [IO.Directory]::CreateDirectory([IO.Path]::GetDirectoryName($destination)) | Out-Null\n    [IO.File]::Copy($pin.path,$destination,$false)\n    Verify @([pscustomobject]@{path=$destination;bytes=$pin.bytes;sha256=$pin.sha256})\n}",
+      "startLine": 130,
+      "name": "CopyPinned"
+    },
+    {
+      "endLine": 145,
+      "text": "function CheckNoEngineFallback($text) {\n    $normal = $text.Replace('\\','/').ToLowerInvariant()\n    foreach ($part in @('Engine','Editor','Code','Gems','Assets','Registry')) {\n        if ($normal.Contains(($repo+'/'+$part+'/').ToLowerInvariant())) { throw \"Source-engine path in external consumer: $part\" }\n    }\n    foreach ($part in @('bin','lib','Engine','Editor','Code','Gems')) {\n        if ($normal.Contains(($producer+'/'+$part+'/').ToLowerInvariant())) { throw \"Original-engine output/include fallback: $part\" }\n    }\n}",
+      "startLine": 137,
+      "name": "CheckNoEngineFallback"
+    },
+    {
+      "endLine": 156,
+      "text": "function VerifyOverlay {\n    $dlls = @(Get-ChildItem -LiteralPath \"$overlay/bin\" -Filter '*.dll' -File)\n    if ($dlls.Count -ne 32 -or (($dlls.Name | Sort-Object) -join '|') -cne (($recipe.expectedRuntimeNames | Sort-Object) -join '|')) { throw 'Overlay runtime closure changed.' }\n    foreach ($dll in $dlls) {\n        NoReparse $dll.FullName\n        $expected = if ($providerMap.ContainsKey($dll.Name)) { $providerMap[$dll.Name] } else { @($runtime | Where-Object { $_.name -ceq $dll.Name })[0] }\n        Verify @([pscustomobject]@{path=$dll.FullName;bytes=$expected.bytes;sha256=$expected.sha256})\n    }\n    foreach ($name in @('RenderIntegration.lib','EditorRenderIntegration.lib')) { $expected=$providerMap[$name]; Verify @([pscustomobject]@{path=\"$overlay/lib/$name\";bytes=$expected.bytes;sha256=$expected.sha256}) }\n    foreach ($pin in $recipe.headerPins) { Verify @([pscustomobject]@{path=\"$overlay/include/$($pin.relative)\";bytes=$pin.bytes;sha256=$pin.sha256}) }\n}",
+      "startLine": 146,
+      "name": "VerifyOverlay"
+    }
+  ],
+  "originalRunner": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atom-next-native-scope-rev1\\validation-preparation\\atom-rpi98-sdk-delta-candidate\\RunSdkDelta98.ps1",
+    "bytes": 23562,
+    "sha256": "31903EC1D010DD36EF4D07E6CB4501B2816800A92F450C7CDC58395A00D07C79"
+  },
+  "pendingNativePhases": [
+    "pe-imports",
+    "loader"
+  ],
+  "completionInputs": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atom-next-native-scope-rev1\\validation-preparation\\atom-rpi98-sdk-delta-candidate\\completion-inputs.json",
+    "bytes": 19678,
+    "sha256": "8F134D7D60476B1203BC6FA1828A1B6AF019422C25FA68187CB6F79AE933B6AC"
+  },
+  "reusedNativePhases": [
+    "configure-consumer",
+    "build-consumer"
+  ]
+}

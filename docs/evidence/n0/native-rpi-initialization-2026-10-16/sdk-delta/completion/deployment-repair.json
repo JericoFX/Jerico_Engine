@@ -1,0 +1,51 @@
+{
+  "baselineSdkNotWritten": true,
+  "publicBodyNotCopiedAgain": true,
+  "files": [
+    {
+      "source": {
+        "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-rpi98-delta\\bin\\RenderIntegration.dll",
+        "bytes": 986624,
+        "sha256": "07985010C1315BA0477E8F2660DCD2A837A93DFFAC1E6D0D7E8D7A0F0A098E10"
+      },
+      "after": {
+        "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-vk-consumer98\\bin\\profile\\RenderIntegration.dll",
+        "bytes": 986624,
+        "sha256": "07985010C1315BA0477E8F2660DCD2A837A93DFFAC1E6D0D7E8D7A0F0A098E10"
+      },
+      "before": {
+        "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-vk-consumer98\\bin\\profile\\RenderIntegration.dll",
+        "bytes": 842752,
+        "sha256": "897FD69198465E04D5A7A64229980A58146564D9D61F668E3084CBE9A57BB3B7"
+      },
+      "backup": {
+        "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\sdk-delta98-completion-attempt1\\deploy-before\\RenderIntegration.dll",
+        "bytes": 842752,
+        "sha256": "897FD69198465E04D5A7A64229980A58146564D9D61F668E3084CBE9A57BB3B7"
+      }
+    },
+    {
+      "source": {
+        "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-rpi98-delta\\bin\\EditorRenderIntegration.dll",
+        "bytes": 835584,
+        "sha256": "98FA5315F3C33748F526301E28D27C1B02D55406AEE2A85432651697E9179B3D"
+      },
+      "after": {
+        "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-vk-consumer98\\bin\\profile\\EditorRenderIntegration.dll",
+        "bytes": 835584,
+        "sha256": "98FA5315F3C33748F526301E28D27C1B02D55406AEE2A85432651697E9179B3D"
+      },
+      "before": {
+        "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-vk-consumer98\\bin\\profile\\EditorRenderIntegration.dll",
+        "bytes": 721920,
+        "sha256": "3165B338983759569EEAFEF8BB2E7395A72D25BE78D1FA9F3DAC65DBE9E79174"
+      },
+      "backup": {
+        "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\sdk-delta98-completion-attempt1\\deploy-before\\EditorRenderIntegration.dll",
+        "bytes": 721920,
+        "sha256": "3165B338983759569EEAFEF8BB2E7395A72D25BE78D1FA9F3DAC65DBE9E79174"
+      }
+    }
+  ],
+  "count": 2
+}

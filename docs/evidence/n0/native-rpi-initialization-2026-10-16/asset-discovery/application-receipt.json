@@ -1,0 +1,89 @@
+{
+  "schema": "je-rpi98-assets-metadata-r5-application-v1",
+  "state": "APPLIED_CONFIG_ONLY_HOLD_NATIVE_NOT_RUN",
+  "approvedBy": "/root explicit metadata-only seam",
+  "before": {
+    "path": "F:/JericoEngine/JericoEngine/Registry/rpi_assets.setreg",
+    "state": "ABSENT"
+  },
+  "after": {
+    "path": "F:\\JericoEngine\\JericoEngine\\Registry\\rpi_assets.setreg",
+    "bytes": 279,
+    "sha256": "5322B4AAD9940F2F311E8AA7EB0017CD62C55D4218D2348F40C6AE59B0E64366"
+  },
+  "privateCandidate": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\rpi-asset-discovery-config-review\\application-r5\\candidate.setreg",
+    "bytes": 279,
+    "sha256": "5322B4AAD9940F2F311E8AA7EB0017CD62C55D4218D2348F40C6AE59B0E64366"
+  },
+  "patch": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\rpi-asset-discovery-config-review\\application-r5\\source.patch",
+    "bytes": 354,
+    "sha256": "125796E7698D24AFAAB4B157EA061BD5F416A375DEEDAA5CCFC44CB01D39EAAB"
+  },
+  "inverse": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\rpi-asset-discovery-config-review\\application-r5\\inverse.patch",
+    "bytes": 354,
+    "sha256": "E7B68D3AF8F9ABECCACFC1453A68F94F28A48B1C699F43AF6B3ADBEBAB7B4A92"
+  },
+  "checks": {
+    "jsonWithCommentsValid": true,
+    "soleMetadataPath": "/O3DE/Gems/Atom_RPI",
+    "rpiObjectProperties": 0,
+    "targets": 0,
+    "modules": 0,
+    "forwardInverseByteExact": true,
+    "UTF8NoBOM": true,
+    "CRLFOnly": true,
+    "addedLines": 9,
+    "removedLines": 0,
+    "trailingWhitespace": 0
+  },
+  "preservedRegistryPins": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\RPI\\Registry\\atom_rpi.release.setreg",
+      "bytes": 144,
+      "sha256": "F0830B888E795A760B32D89F3D550A8127CB5280974F9DA6F450B33206001E48"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\RPI\\Registry\\asset_browser.setreg",
+      "bytes": 514,
+      "sha256": "F434D1CFB2B8FB31F3DB13F084DE8DE374624615E94AFCF374F02CB27B008008"
+    }
+  ],
+  "deployment": {
+    "source": "Registry/CMakeLists.txt:13,15-22",
+    "coreRule": "original-engine/Registry/cmake_install.cmake:36-38 copies entire source Registry directory to <prefix>/Registry, excluding CMake/Python metadata",
+    "profileRule": "original-engine/Registry/cmake_install.cmake:46-48 separately copies generated bin/profile/Registry to <prefix>/bin/Windows/profile/Default",
+    "limit": "Root registry is shared engine configuration, not a new generated Profile bin/Registry module plan. No install/configure or claim of current SDK deployment was made."
+  },
+  "deploymentPins": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Registry\\CMakeLists.txt",
+      "bytes": 678,
+      "sha256": "B985BAEE94EC059B6D2292527479EAF45FE8A3E4F03F71AF087E515B54FFC851"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\Registry\\cmake_install.cmake",
+      "bytes": 3110,
+      "sha256": "E33AD4F2A242957D91B33984CD90E6AC23AA6CBF54CAD855F934587D0A970201"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\cmake\\Install.cmake",
+      "bytes": 7630,
+      "sha256": "8EEEFE0A1C82D738EC7770A7E695EAA7D4D793CCBAAAD365E8504F69969CE3D4"
+    }
+  ],
+  "skillCoverageReused": {
+    "cpp": "53017F862C526DF6080210A1A00E6678C2CD5382B5D1A51026BF3B0BDE7F7ED2",
+    "game": "4578FACCE19AC99396E5FE904EAC173066FA517AF16AE0F49B03F9082A1057EC"
+  },
+  "limits": [
+    "Partial residual RPI asset descriptor; no whole-Gem acceptance.",
+    "No default JSON or legacy module targets restored.",
+    "No native/configure/build/AP/GUI/install/SDK execution, no Git or other source/config edits.",
+    "R4 C++/DLL evidence preserved; parent owns new freeze and behavioral verification."
+  ],
+  "helpersCreated": 0,
+  "utc": "2026-10-16T23:26:03.9250448Z"
+}

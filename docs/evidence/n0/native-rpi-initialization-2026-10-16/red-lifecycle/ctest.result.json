@@ -1,0 +1,12 @@
+{
+  "pid": 22304,
+  "creationUtc": "2026-10-16T22:48:18.3581394Z",
+  "nativeExit": 8,
+  "elapsedSeconds": 0.932,
+  "timedOut180": false,
+  "stdoutSha256": "F3030C078F9E9C9D052CA6957C65DDFE63BFA0A1668918B52EB970F447C18021",
+  "stderrSha256": "18E00877DC1071C85CD4F479D451BEBEEF8309022E46CF8C63B0BED5151984A4",
+  "ramSamples": [],
+  "stdoutBytes": 8482,
+  "stderrBytes": 27
+}

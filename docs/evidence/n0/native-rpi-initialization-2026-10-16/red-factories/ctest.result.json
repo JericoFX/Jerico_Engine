@@ -1,0 +1,78 @@
+{
+  "pid": 2076,
+  "creationUtc": "2026-10-16T22:11:24.9215539Z",
+  "executable": "C:\\Program Files\\CMake\\bin\\ctest.exe",
+  "argv": [
+    "--test-dir",
+    "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine",
+    "-C",
+    "Profile",
+    "--output-on-failure",
+    "--no-tests=error",
+    "--parallel",
+    "1",
+    "-R",
+    "^(JE::RenderIntegration\\.Tests\\.main::TEST_RUN|JE::EditorRenderIntegration\\.Tests\\.main::TEST_RUN)$"
+  ],
+  "cwd": "F:\\JericoEngine\\JericoEngine",
+  "startedUtc": "2026-10-16T22:11:24.9114082Z",
+  "finishedUtc": "2026-10-16T22:11:25.1595806Z",
+  "elapsedSeconds": 0.248,
+  "nativeExitCode": 8,
+  "nativeExitCapturedImmediately": true,
+  "stdout": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\red-tests-attempt1\\ctest.stdout.log",
+  "stderr": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\red-tests-attempt1\\ctest.stderr.log",
+  "stdoutSha256": "02F3A083769DD6B0BE63BAAE94FCA809A62767684B7614D975A65EB5F82A5D6C",
+  "stderrSha256": "18E00877DC1071C85CD4F479D451BEBEEF8309022E46CF8C63B0BED5151984A4",
+  "ramPeakUsedPct": 43.73,
+  "ramAfterUsedPct": 43.77,
+  "freeAfterGiB": 17.94,
+  "samples": [],
+  "xml": [
+    {
+      "name": "JE_RenderIntegration.Tests.xml",
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\Testing\\Gtest\\JE_RenderIntegration.Tests.xml",
+      "fresh": true,
+      "bytes": 3011,
+      "lastWriteUtc": "2026-10-16T22:11:25.0918312Z",
+      "stats": {
+        "caseCount": 7,
+        "failures": 1,
+        "errors": 0,
+        "skips": 0,
+        "disabled": 0,
+        "sha256": "FCEBD8FE67B4807682E8074723B15C88D772BE2BE9298FB8029F81DD87DE2526",
+        "testNames": [
+          "RenderIntegrationTests.RuntimeFactoryPreservesIdentityDescriptorsAndRendererServices",
+          "RenderIntegrationTests.BootstrapFactoryPreservesLegacyIdentityDescriptorServicesAndReflection",
+          "RenderIntegrationTests.BootstrapDescriptorOnlyFactoryDoesNotRequireOrActivateRenderer",
+          "RenderIntegrationTests.FlyCameraXmlRoundTripPreservesLegacyIdentityAndAllFields",
+          "RenderIntegrationTests.FlyCameraBusLifecycleAndDisabledTickPreserveExistingTransform",
+          "RenderIntegrationTests.DynamicDrawOwnerRegistersDisconnectsAndRejectsUnknownNamesWithoutGpuWork",
+          "RenderIntegrationTests.NativeRpiRuntimeFactoryPreservesRegistrationAndLifecycle"
+        ]
+      }
+    },
+    {
+      "name": "JE_EditorRenderIntegration.Tests.xml",
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\Testing\\Gtest\\JE_EditorRenderIntegration.Tests.xml",
+      "fresh": true,
+      "bytes": 1803,
+      "lastWriteUtc": "2026-10-16T22:11:25.1355196Z",
+      "stats": {
+        "caseCount": 3,
+        "failures": 1,
+        "errors": 0,
+        "skips": 0,
+        "disabled": 0,
+        "sha256": "8CCFCA29AB19B996942DF5B88485A638FD4B97C7F5C6D9AEB92CDA2EF4A7385D",
+        "testNames": [
+          "EditorRenderIntegration.AuthoringFactoryPreservesRuntimeDescriptorsExactlyOnceAndEditorSchema",
+          "EditorRenderIntegration.AssetProcessingFactoryPreservesDescriptorsAndSchemaWithoutRendererActivation",
+          "EditorRenderIntegration.NativeRpiEditorFactoryPreservesRegistrationAndLifecycle"
+        ]
+      }
+    }
+  ],
+  "nativeAfter": []
+}

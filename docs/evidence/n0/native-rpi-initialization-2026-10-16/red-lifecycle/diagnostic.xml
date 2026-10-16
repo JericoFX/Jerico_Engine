@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="1" failures="1" disabled="0" errors="0" time="0.388" timestamp="2026-10-16T19:55:40.725" name="AllTests">
+  <testsuite name="RenderIntegrationTests" tests="1" failures="1" disabled="0" skipped="0" errors="0" time="0.388" timestamp="2026-10-16T19:55:40.725">
+    <testcase name="NativeRpiRuntimeFactoryPreservesRegistrationAndLifecycle" file="F:\JericoEngine\JericoEngine\Engine\Render\Integration\Tests\RenderIntegrationTests.cpp" line="266" status="run" result="completed" time="0.388" timestamp="2026-10-16T19:55:40.725" classname="RenderIntegrationTests">
+      <failure message="F:/JericoEngine/JericoEngine/Code/Framework/AzCore/Platform/Common/WinAPI/AzCore/std/parallel/internal/thread_WinAPI.cpp:107&#x0A;Thread must be joinable!&#x0A;" type=""><![CDATA[F:/JericoEngine/JericoEngine/Code/Framework/AzCore/Platform/Common/WinAPI/AzCore/std/parallel/internal/thread_WinAPI.cpp:107
+Thread must be joinable!
+]]></failure>
+      <failure message="F:/JericoEngine/JericoEngine/Code/Framework/AzCore/Platform/Common/WinAPI/AzCore/std/parallel/internal/thread_WinAPI.cpp:107&#x0A;Thread must be joinable!&#x0A;" type=""><![CDATA[F:/JericoEngine/JericoEngine/Code/Framework/AzCore/Platform/Common/WinAPI/AzCore/std/parallel/internal/thread_WinAPI.cpp:107
+Thread must be joinable!
+]]></failure>
+    </testcase>
+  </testsuite>
+</testsuites>

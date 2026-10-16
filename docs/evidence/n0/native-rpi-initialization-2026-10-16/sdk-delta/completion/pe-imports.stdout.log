@@ -1,0 +1,315 @@
+Microsoft (R) COFF/PE Dumper Version 14.44.35228.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+
+Dump of file F:\JericoEngine\JericoEngine\build\sdk-vk-consumer98\bin\profile\JENativeSdkConsumer.exe
+
+File Type: EXECUTABLE IMAGE
+
+  Section contains the following imports:
+
+    EditorMaterials.dll
+             14000E290 Import Address Table
+             14001A950 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                         322 ?Poll@PassPipelinePreview@Materials@Editor@JE@@QEAA?AV?$Outcome@XV?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@@AZ@@XZ
+                         3A5 ?Restore@PassPipelinePreview@Materials@Editor@JE@@QEAA?AV?$Outcome@XV?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@@AZ@@XZ
+                          73 ??1PassPipelinePreview@Materials@Editor@JE@@QEAA@XZ
+                          51 ??0PassPipelinePreview@Materials@Editor@JE@@QEAA@XZ
+                         229 ?CreateMaterialsModule@Editor@JE@@YAPEAVModule@AZ@@XZ
+
+    EditorCamera.dll
+             14000E280 Import Address Table
+             14001A940 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                          55 ?CreateAuthoringModule@Camera@Editor@JE@@YAPEAVModule@AZ@@XZ
+
+    EditorRenderIntegration.dll
+             14000E2C0 Import Address Table
+             14001A980 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                          4B ?CreateAuthoringModule@RenderIntegration@Editor@JE@@YAPEAVModule@AZ@@XZ
+                          4D ?CreateRpiEditorModule@RenderIntegration@Editor@JE@@YAPEAVModule@AZ@@XZ
+
+    RenderAssetBuilders.dll
+             14000E388 Import Address Table
+             14001AA48 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                           1 ??0MaterialAssetBuilderContext@RenderBuilders@Assets@JE@@QEAA@AEBVScene@Containers@SceneAPI@AZ@@AEAV?$unordered_map@_KUNamedMaterialAsset@RenderBuilders@Assets@JE@@U?$hash@_K@AZStd@@U?$equal_to@_K@6@Uallocator@6@@AZStd@@@Z
+                           9 ??1ModelAssetPostBuildContext@RenderBuilders@Assets@JE@@UEAA@XZ
+                          16 ?RTTI_AddressOf@ModelAssetBuilderContext@RenderBuilders@Assets@JE@@UEBAPEBXAEBUUuid@AZ@@@Z
+                           8 ??1ModelAssetBuilderContext@RenderBuilders@Assets@JE@@UEAA@XZ
+                           3 ??0ModelAssetBuilderContext@RenderBuilders@Assets@JE@@QEAA@AEBVScene@Containers@SceneAPI@AZ@@AEBVIMeshGroup@DataTypes@67@VCoordinateSystemConverter@67@AEBV?$unordered_map@_KUNamedMaterialAsset@RenderBuilders@Assets@JE@@U?$hash@_K@AZStd@@U?$equal_to@_K@6@Uallocator@6@@AZStd@@AEAV?$Asset@VModelAsset@RPI@AZ@@@Data@7@AEAV?$Asset@VSkinMetaAsset@RPI@AZ@@@Data@7@AEAV?$Asset@VMorphTargetMetaAsset@RPI@AZ@@@Data@7@@Z
+                           F ?CreateShaderCompilerToolsModule@RenderBuilders@Assets@JE@@YAPEAVModule@AZ@@XZ
+                          10 ?CreateToolsModule@RenderBuilders@Assets@JE@@YAPEAVModule@AZ@@XZ
+                           7 ??1MaterialAssetBuilderContext@RenderBuilders@Assets@JE@@UEAA@XZ
+                          25 ?RTTI_GetType@ModelAssetPostBuildContext@RenderBuilders@Assets@JE@@UEBA?AUUuid@AZ@@XZ
+                          29 ?RTTI_GetTypeName@ModelAssetPostBuildContext@RenderBuilders@Assets@JE@@UEBAPEBDXZ
+                          31 ?RTTI_IsTypeOf@ModelAssetPostBuildContext@RenderBuilders@Assets@JE@@UEBA_NAEBUUuid@AZ@@@Z
+                          21 ?RTTI_EnumTypes@ModelAssetPostBuildContext@RenderBuilders@Assets@JE@@UEAAXP6AXAEBUUuid@AZ@@PEAX@Z1@Z
+                          18 ?RTTI_AddressOf@ModelAssetPostBuildContext@RenderBuilders@Assets@JE@@UEBAPEBXAEBUUuid@AZ@@@Z
+                          17 ?RTTI_AddressOf@ModelAssetPostBuildContext@RenderBuilders@Assets@JE@@UEAAPEAXAEBUUuid@AZ@@@Z
+                          12 ?HashCombineShaderOptionValues@HashedVariantInfoSourceData@Shader@RenderBuilders@Assets@JE@@SA_K_KAEBV?$unordered_map@VName@AZ@@V12@U?$hash@VName@AZ@@@AZStd@@U?$equal_to@VName@AZ@@@4@Uallocator@4@@AZStd@@@Z
+                          20 ?RTTI_EnumTypes@ModelAssetBuilderContext@RenderBuilders@Assets@JE@@UEAAXP6AXAEBUUuid@AZ@@PEAX@Z1@Z
+                          24 ?RTTI_GetType@ModelAssetBuilderContext@RenderBuilders@Assets@JE@@UEBA?AUUuid@AZ@@XZ
+                          28 ?RTTI_GetTypeName@ModelAssetBuilderContext@RenderBuilders@Assets@JE@@UEBAPEBDXZ
+                          30 ?RTTI_IsTypeOf@ModelAssetBuilderContext@RenderBuilders@Assets@JE@@UEBA_NAEBUUuid@AZ@@@Z
+                          15 ?RTTI_AddressOf@ModelAssetBuilderContext@RenderBuilders@Assets@JE@@UEAAPEAXAEBUUuid@AZ@@@Z
+                          23 ?RTTI_GetType@MaterialAssetBuilderContext@RenderBuilders@Assets@JE@@UEBA?AUUuid@AZ@@XZ
+                          27 ?RTTI_GetTypeName@MaterialAssetBuilderContext@RenderBuilders@Assets@JE@@UEBAPEBDXZ
+                          2F ?RTTI_IsTypeOf@MaterialAssetBuilderContext@RenderBuilders@Assets@JE@@UEBA_NAEBUUuid@AZ@@@Z
+                          1F ?RTTI_EnumTypes@MaterialAssetBuilderContext@RenderBuilders@Assets@JE@@UEAAXP6AXAEBUUuid@AZ@@PEAX@Z1@Z
+                          14 ?RTTI_AddressOf@MaterialAssetBuilderContext@RenderBuilders@Assets@JE@@UEBAPEBXAEBUUuid@AZ@@@Z
+                          13 ?RTTI_AddressOf@MaterialAssetBuilderContext@RenderBuilders@Assets@JE@@UEAAPEAXAEBUUuid@AZ@@@Z
+                           5 ??0ModelAssetPostBuildContext@RenderBuilders@Assets@JE@@QEAA@AEBVScene@Containers@SceneAPI@AZ@@V?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@AEAVExportProductList@Events@67@AEBVIMeshGroup@DataTypes@67@AEBV?$Asset@VModelAsset@RPI@AZ@@@Data@7@@Z
+
+    SceneData.dll
+             14000E4A8 Import Address Table
+             14001AB68 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                          18 ??1MeshGroup@SceneData@SceneAPI@AZ@@UEAA@XZ
+                           7 ??0MeshGroup@SceneData@SceneAPI@AZ@@QEAA@XZ
+
+    RenderIntegration.dll
+             14000E468 Import Address Table
+             14001AB28 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                          B6 ?CreateRpiRuntimeModule@Integration@Render@JE@@YAPEAVModule@AZ@@XZ
+                          B3 ?CreateBootstrapModule@Integration@Render@JE@@YAPEAVModule@AZ@@_N@Z
+
+    SceneCore.dll
+             14000E480 Import Address Table
+             14001AB40 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                           7 ??0CoordinateSystemConverter@SceneAPI@AZ@@QEAA@AEBV012@@Z
+                          27 ??0Scene@Containers@SceneAPI@AZ@@QEAA@$$QEAV?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@@Z
+                          32 ??1Scene@Containers@SceneAPI@AZ@@QEAA@XZ
+                           8 ??0CoordinateSystemConverter@SceneAPI@AZ@@QEAA@XZ
+
+    AzCore.dll
+             14000E000 Import Address Table
+             14001A6C0 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                         20C ??0ComponentApplication@AZ@@QEAA@XZ
+                        2654 ?InsertContext@EBusEnvironment@AZ@@QEAA_NHPEAVContextBase@Internal@2@_N@Z
+                        1EE5 ?FindContext@EBusEnvironment@AZ@@QEAAPEAVContextBase@Internal@2@H@Z
+                         5ED ??1ContextBase@Internal@AZ@@UEAA@XZ
+                         234 ??0ContextBase@Internal@AZ@@QEAA@PEAVEBusEnvironment@2@@Z
+                        37A1 ?deallocate@stateless_allocator@AZStd@@QEAAXPEAX_K1@Z
+                        36F9 ?allocate@stateless_allocator@AZStd@@QEAAPEAX_K0@Z
+                         6D1 ??1SystemAllocator@AZ@@UEAA@XZ
+                        2984 ?NumAllocatedBytes@SystemAllocator@AZ@@UEBA_KXZ
+                        1FAD ?GarbageCollect@SystemAllocator@AZ@@UEAAXXZ
+                        382A ?get_allocated_size@SystemAllocator@AZ@@UEBA_KPEAX_K@Z
+                        38A0 ?reallocate@SystemAllocator@AZ@@UEAA?AUAllocateAddress@@PEAX_K1@Z
+                        379E ?deallocate@SystemAllocator@AZ@@UEAA_KPEAX_K1@Z
+                        36F6 ?allocate@SystemAllocator@AZ@@UEAA?AUAllocateAddress@@_K0@Z
+                        2103 ?GetDebugConfig@SystemAllocator@AZ@@UEAA?AUAllocatorDebugConfig@2@XZ
+                        2B9B ?RTTI_AddressOf@SystemAllocator@AZ@@UEBAPEBXAEBUUuid@2@@Z
+                        2B9A ?RTTI_AddressOf@SystemAllocator@AZ@@UEAAPEAXAEBUUuid@2@@Z
+                        2CB5 ?RTTI_EnumTypes@SystemAllocator@AZ@@UEAAXP6AXAEBUUuid@2@PEAX@Z1@Z
+                        2EDD ?RTTI_IsTypeOf@SystemAllocator@AZ@@UEBA_NAEBUUuid@2@@Z
+                        2DC9 ?RTTI_GetTypeName@SystemAllocator@AZ@@UEBAPEBDXZ
+                        2D3F ?RTTI_GetType@SystemAllocator@AZ@@UEBA?AUUuid@2@XZ
+                        2788 ?IsProfilingActive@AllocatorBase@AZ@@UEBA_NXZ
+                        32C3 ?SetProfilingActive@AllocatorBase@AZ@@UEAAX_N@Z
+                        2789 ?IsReady@AllocatorBase@AZ@@UEBA_NXZ
+                        32C8 ?SetRecords@AllocatorBase@AZ@@UEAAXPEAVAllocationRecords@Debug@2@@Z
+                        2448 ?GetRecords@AllocatorBase@AZ@@UEBAPEBVAllocationRecords@Debug@2@XZ
+                        1DAB ?Destroy@ComponentApplication@AZ@@UEAAXXZ
+                        1C34 ?Create@ComponentApplication@AZ@@UEAAPEAVEntity@2@AEBUDescriptor@12@AEBUStartupParameters@12@@Z
+                         5DE ??1ComponentApplication@AZ@@UEAA@XZ
+                         4D4 ??0SystemAllocator@AZ@@QEAA@XZ
+                         5FA ??1Descriptor@ComponentApplication@AZ@@QEAA@XZ
+                         25D ??0Descriptor@ComponentApplication@AZ@@QEAA@XZ
+                        3064 ?Reflect@Entity@AZ@@SAXPEAVReflectContext@2@@Z
+                        207E ?GetComponentDescriptors@Module@AZ@@QEBA?AV?$list@PEAVComponentDescriptor@AZ@@Uallocator@AZStd@@@AZStd@@XZ
+                        30D9 ?Release@AssetData@Data@AZ@@QEAAXXZ
+                         17D ??0AssetId@Data@AZ@@QEAA@XZ
+                         4F0 ??0Transform@AZ@@QEAA@AEBV01@@Z
+                        1EDE ?FindClassData@SerializeContext@AZ@@QEBAPEBVClassData@Serialize@2@AEBUUuid@2@PEBV342@I@Z
+                         6AF ??1SerializeContext@AZ@@UEAA@XZ
+                         487 ??0SerializeContext@AZ@@QEAA@_N0@Z
+                        26DC ?IsEmpty@Name@AZ@@QEBA_NXZ
+                         3B5 ??0Name@AZ@@QEAA@V?$basic_string_view@DU?$char_traits@D@AZStd@@@AZStd@@@Z
+                         66F ??1Name@AZ@@QEAA@XZ
+                         3B1 ??0Name@AZ@@QEAA@$$QEAV01@@Z
+                         3B8 ??0Name@AZ@@QEAA@XZ
+                        3776 ?compare@?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@QEBAHPEBD@Z
+                         597 ??1?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@QEAA@XZ
+                         13D ??0?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@QEAA@$$QEAV01@@Z
+                         142 ??0?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@QEAA@PEBDAEBUallocator@1@@Z
+                        2660 ?Instance@ITrace@Debug@AZ@@SAAEAV123@XZ
+                        3833 ?hash_next_bucket_size@AZStd@@YA_K_K@Z
+                         503 ??0Uuid@AZ@@QEAA@V?$basic_string_view@DU?$char_traits@D@AZStd@@@AZStd@@@Z
+                        1CF3 ?CreateNull@Uuid@AZ@@SA?AU12@XZ
+                        276E ?IsNull@Uuid@AZ@@QEBA_NXZ
+                        103B ??8Uuid@AZ@@QEBA_NAEBU01@@Z
+                        1069 ??9Uuid@AZ@@QEBA_NAEBU01@@Z
+                        247E ?GetSectionAsSizeT@Uuid@AZ@@AEBA_K_K@Z
+                        36F8 ?allocate@allocator@AZStd@@QEAAPEAX_K0@Z
+                        37A0 ?deallocate@allocator@AZStd@@QEAAXPEAX_K1@Z
+                        2215 ?GetInstance@Environment@AZ@@YAPEAVEnvironmentInterface@Internal@2@XZ
+                        3662 ?UnregisterAndDestroy@EnvironmentVariableHolderBase@Internal@AZ@@IEAAXP6AXPEAV123@W4DestroyTarget@123@@Z_N@Z
+                        191D ?AddAndAllocateVariable@Internal@AZ@@YA?AUEnvironmentVariableResult@12@I_K0PEAPEAVrecursive_mutex@AZStd@@@Z
+                        2544 ?GetVariable@Internal@AZ@@YA?AUEnvironmentVariableResult@12@I@Z
+                        1FE7 ?GetAllocator@Internal@AZ@@YAPEAVAllocatorInterface@Environment@2@XZ
+                        1E80 ?EnvironmentVariableNameToId@Internal@AZ@@YAIPEBD@Z
+                         160 ??0AllocatorBase@AZ@@IEAA@XZ
+                         59E ??1AllocatorBase@AZ@@MEAA@XZ
+                        2DD5 ?RTTI_IsContainType@AllocatorBase@AZ@@SA_NAEBUUuid@2@@Z
+                        2BAD ?RTTI_EnumHierarchy@AllocatorBase@AZ@@SAXP6AXAEBUUuid@2@PEAX@Z1@Z
+                        2A9F ?RTTI_AddressOf@AllocatorBase@AZ@@UEBAPEBXAEBUUuid@2@@Z
+                        2A9E ?RTTI_AddressOf@AllocatorBase@AZ@@UEAAPEAXAEBUUuid@2@@Z
+                        2A2A ?PostCreate@AllocatorBase@AZ@@UEAAXXZ
+                        2A2E ?PreDestroy@AllocatorBase@AZ@@UEAAXXZ
+                        2A50 ?ProfileAllocation@AllocatorBase@AZ@@IEAAXPEAX_K1H@Z
+                        2A51 ?ProfileDeallocation@AllocatorBase@AZ@@IEAAXPEAX_K1PEAUAllocationInfo@Debug@2@@Z
+                        2A52 ?ProfileReallocation@AllocatorBase@AZ@@IEAAXPEAX0_K1@Z
+                        238E ?GetO3deTypeName@AZ@@YA?AV?$basic_fixed_string@D$0CAA@U?$char_traits@D@AZStd@@@AZStd@@UAdl@1@U?$type_identity@VSystemAllocator@AZ@@@std@@@Z
+                        2351 ?GetO3deTypeId@AZ@@YA?AUUuid@1@UAdl@1@U?$type_identity@VSystemAllocator@AZ@@@std@@@Z
+                         13E ??0?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@QEAA@AEBUallocator@1@@Z
+
+    KERNEL32.dll
+             14000E2D8 Import Address Table
+             14001A998 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                         509 RtlCaptureContext
+                         511 RtlLookupFunctionEntry
+                         518 RtlVirtualUnwind
+                         3B0 IsDebuggerPresent
+                         31A GetSystemTimeAsFileTime
+                         242 GetCurrentProcessId
+                         481 QueryPerformanceCounter
+                         5FB UnhandledExceptionFilter
+                         5CA SleepConditionVariableSRW
+                         3B8 IsProcessorFeaturePresent
+                         2A5 GetModuleHandleW
+                         241 GetCurrentProcess
+                         5D8 TerminateProcess
+                         246 GetCurrentThreadId
+                         5C8 Sleep
+                         3F0 LeaveCriticalSection
+                         62D WakeAllConditionVariable
+                           0 AcquireSRWLockExclusive
+                         5B8 SetUnhandledExceptionFilter
+                         39A InitializeSListHead
+                         4EA ReleaseSRWLockExclusive
+
+    VCRUNTIME140.dll
+             14000E4C0 Import Address Table
+             14001AB80 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                          1B __current_exception
+                           1 _CxxThrowException
+                          1C __current_exception_context
+                          22 __std_exception_destroy
+                          21 __std_exception_copy
+                           8 __C_specific_handler
+                          3E memset
+                          3D memmove
+                          3C memcpy
+
+    api-ms-win-crt-heap-l1-1-0.dll
+             14000E510 Import Address Table
+             14001ABD0 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                          16 _set_new_mode
+                           8 _callnewh
+                          19 malloc
+                          18 free
+                           1 _aligned_malloc
+
+    api-ms-win-crt-stdio-l1-1-0.dll
+             14000E600 Import Address Table
+             14001ACC0 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                           0 __acrt_iob_func
+                          93 puts
+                          80 fputs
+                           1 __p__commode
+                          54 _set_fmode
+
+    api-ms-win-crt-string-l1-1-0.dll
+             14000E630 Import Address Table
+             14001ACF0 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                          86 strcmp
+                          8B strlen
+
+    api-ms-win-crt-math-l1-1-0.dll
+             14000E550 Import Address Table
+             14001AC10 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                          7D ceilf
+                           9 __setusermatherr
+
+    api-ms-win-crt-runtime-l1-1-0.dll
+             14000E568 Import Address Table
+             14001AC28 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                           5 __p___argv
+                          15 _c_exit
+                          3D _register_thread_local_exe_atexit_callback
+                          23 _exit
+                          3C _register_onexit_function
+                          1E _crt_atexit
+                          67 terminate
+                          37 _initterm_e
+                          34 _initialize_onexit_table
+                          33 _initialize_narrow_environment
+                           4 __p___argc
+                          18 _configure_narrow_argv
+                          36 _initterm
+                          28 _get_initial_narrow_environment
+                          42 _set_app_type
+                          40 _seh_filter_exe
+                          16 _cexit
+                          55 exit
+
+    api-ms-win-crt-locale-l1-1-0.dll
+             14000E540 Import Address Table
+             14001AC00 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                           8 _configthreadlocale
+
+  Summary
+
+        3000 .data
+        1000 .pdata
+       10000 .rdata
+        1000 .reloc
+        1000 .rsrc
+        D000 .text

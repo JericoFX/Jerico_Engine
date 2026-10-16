@@ -48,40 +48,6 @@ ly_add_target(
             Gem::Atom_RHI.Public
 )
 
-################################################################################
-# Private
-################################################################################
-ly_add_target(
-    NAME ${gem_name}.Private ${PAL_TRAIT_MONOLITHIC_DRIVEN_MODULE_TYPE}
-    NAMESPACE Gem
-    FILES_CMAKE
-        atom_rpi_private_files.cmake
-    INCLUDE_DIRECTORIES
-        PRIVATE
-            Source
-            ${pal_source_dir}
-        PUBLIC
-            Include
-    BUILD_DEPENDENCIES
-        PRIVATE
-            AZ::AzCore
-            AZ::AzFramework
-            Gem::${gem_name}.Public
-            Gem::Atom_RHI.Public
-            Gem::Atom_RHI.Reflect
-    RUNTIME_DEPENDENCIES
-        Gem::Atom_RHI.Private
-)
-
-# Inject the gem name into the Module source file
-ly_add_source_properties(
-    SOURCES
-        Source/RPI.Private/Module.cpp
-    PROPERTY COMPILE_DEFINITIONS
-        VALUES
-            O3DE_GEM_NAME=${gem_name}
-            O3DE_GEM_VERSION=${gem_version})
-
 if(PAL_TRAIT_BUILD_HOST_TOOLS)
 
     ly_add_target(
@@ -104,54 +70,6 @@ if(PAL_TRAIT_BUILD_HOST_TOOLS)
                 Gem::${gem_name}.Public
     )
 
-    ly_add_target(
-        NAME ${gem_name}.Editor.Private.Object OBJECT
-        NAMESPACE Gem
-        FILES_CMAKE
-            atom_rpi_private_files.cmake
-        INCLUDE_DIRECTORIES
-            PRIVATE
-                Source
-            PUBLIC
-                Include
-        COMPILE_DEFINITIONS
-            PUBLIC
-                RPI_EDITOR # Compile RPI Editor module
-        BUILD_DEPENDENCIES
-            PUBLIC
-                AZ::AzCore
-                AZ::AzFramework
-                Gem::Atom_RHI.Public
-                Gem::${gem_name}.Public
-    )
-
-    ly_add_target(
-        NAME ${gem_name}.Editor GEM_MODULE
-        NAMESPACE Gem
-        FILES_CMAKE
-            atom_rpi_editor_files.cmake
-        INCLUDE_DIRECTORIES
-            PRIVATE
-                Source
-            PUBLIC
-                Include
-        BUILD_DEPENDENCIES
-            PRIVATE
-                AZ::AzToolsFramework
-                Gem::${gem_name}.Edit
-                Gem::${gem_name}.Editor.Private.Object
-        RUNTIME_DEPENDENCIES
-            Gem::Atom_RHI.Private
-    )
-
-    # Inject the gem name into the Module source file
-    ly_add_source_properties(
-        SOURCES
-            Source/RPI.Editor/EditorModule.cpp
-        PROPERTY COMPILE_DEFINITIONS
-            VALUES
-                O3DE_GEM_NAME=${gem_name}
-                O3DE_GEM_VERSION=${gem_version})
 endif()
 
 ################################################################################

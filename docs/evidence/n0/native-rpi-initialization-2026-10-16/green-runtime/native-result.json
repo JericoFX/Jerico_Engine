@@ -1,0 +1,58 @@
+{
+  "utc": "2026-10-16T23:32:12.3123963Z",
+  "owner": "/root",
+  "pid": 16892,
+  "creationUtc": "2026-10-16T23:31:50.1324230Z",
+  "nativeExit": 0,
+  "elapsedSeconds": 22.1914495,
+  "stoppedByRamGuard": false,
+  "samples": [
+    {
+      "utc": "2026-10-16T23:31:53.2848388Z",
+      "workingSetBytes": 582352896,
+      "ramPercent": 45.57,
+      "privateBytes": 1973141504
+    },
+    {
+      "utc": "2026-10-16T23:31:56.3386965Z",
+      "workingSetBytes": 576311296,
+      "ramPercent": 45.54,
+      "privateBytes": 1691328512
+    },
+    {
+      "utc": "2026-10-16T23:31:59.3940738Z",
+      "workingSetBytes": 576815104,
+      "ramPercent": 45.57,
+      "privateBytes": 1691365376
+    },
+    {
+      "utc": "2026-10-16T23:32:02.4528561Z",
+      "workingSetBytes": 576438272,
+      "ramPercent": 45.54,
+      "privateBytes": 1686376448
+    },
+    {
+      "utc": "2026-10-16T23:32:05.4977112Z",
+      "workingSetBytes": 576372736,
+      "ramPercent": 45.53,
+      "privateBytes": 1686204416
+    },
+    {
+      "utc": "2026-10-16T23:32:08.5567764Z",
+      "workingSetBytes": 576421888,
+      "ramPercent": 45.53,
+      "privateBytes": 1686204416
+    },
+    {
+      "utc": "2026-10-16T23:32:11.6041091Z",
+      "workingSetBytes": 562896896,
+      "ramPercent": 45.69,
+      "privateBytes": 1671704576
+    }
+  ],
+  "stdoutSHA256": "1341C27669016E64CDD940399551B19DF59A7FC6AC66DE995E0D7F927447FB32",
+  "stderrSHA256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+  "ownProcessHasExited": true,
+  "ownPIDStillPresent": false,
+  "noProductAcceptanceFromExitAlone": true
+}

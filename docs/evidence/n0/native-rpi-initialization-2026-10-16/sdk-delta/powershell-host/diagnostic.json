@@ -1,0 +1,18 @@
+{
+  "schema": "sdk98-delta-powershell-host-diagnostic-v1",
+  "timestampUtc": "2026-10-16T23:38:06.0228064Z",
+  "manifestPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atom-next-native-scope-rev1\\validation-preparation\\atom-rpi98-sdk-delta-candidate\\pins.json",
+  "manifestSha256": "19E15DAF7295590B061A4834F7A670949F6A66ABF9A961D85238A1F19A1453D9",
+  "probe": "foreach ($pin in @(Get-Content -LiteralPath manifest -Raw | ConvertFrom-Json))",
+  "windowsPowerShell51": {
+    "executable": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+    "version": "5.1",
+    "result": "{\"count\":1,\"first\":\"System.Object[]:System.Object[]\",\"last\":\"System.Object[]:System.Object[]\"}"
+  },
+  "powershellCore": {
+    "executable": "C:\\Users\\Jerico\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+    "version": "7.6.5",
+    "result": "{\"count\":14,\"first\":\"System.Management.Automation.PSCustomObject:System.String\",\"last\":\"System.Management.Automation.PSCustomObject:System.String\"}"
+  },
+  "note": "The earlier Windows PowerShell 5.1 invocation failed before any phase. This records only read-only reproduction; no code or validation inputs changed."
+}

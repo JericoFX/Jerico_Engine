@@ -1,0 +1,174 @@
+
+************* Path validation summary **************
+Response                         Time (ms)     Location
+OK                                             F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile
+Opened log file 'F:\JericoEngine\JericoEngine\build\n0-validation\native-rpi98\thread-shutdown-diagnostic\cdb-attempt1\cdb.log'
+
+************* Preparing the environment for Debugger Extensions Gallery repositories **************
+   ExtensionRepository : Implicit
+   UseExperimentalFeatureForNugetShare : true
+   AllowNugetExeUpdate : true
+   NonInteractiveNuget : true
+   AllowNugetMSCredentialProviderInstall : true
+   AllowParallelInitializationOfLocalRepositories : true
+
+   -- Configuring repositories
+      ----> Repository : LocalInstalled, Enabled: true
+      ----> Repository : UserExtensions, Enabled: true
+
+>>>>>>>>>>>>> Preparing the environment for Debugger Extensions Gallery repositories completed, duration 0.000 seconds
+
+************* Waiting for Debugger Extensions Gallery to Initialize **************
+
+>>>>>>>>>>>>> Waiting for Debugger Extensions Gallery to Initialize completed, duration 0.250 seconds
+   ----> Repository : UserExtensions, Enabled: true, Packages count: 0
+   ----> Repository : LocalInstalled, Enabled: true, Packages count: 46
+
+Microsoft (R) Windows Debugger Version 10.0.29617.1000 AMD64
+Copyright (c) Microsoft Corporation. All rights reserved.
+
+CommandLine: F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AzTestRunner.exe F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\RenderIntegration.Tests.dll AzRunUnitTests --gtest_filter=RenderIntegrationTests.NativeRpiRuntimeFactoryPreservesRegistrationAndLifecycle --gtest_output=xml:F:\JericoEngine\JericoEngine\build\n0-validation\native-rpi98\thread-shutdown-diagnostic\cdb-attempt1\diagnostic.xml
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\atlmfc.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\concurrency.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\cpp_rest.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\ObjectiveC.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\stl.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Windows.Data.Json.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Windows.Devices.Geolocation.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Windows.Devices.Sensors.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Windows.Media.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\windows.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\winrt.natvis'
+
+************* Path validation summary **************
+Response                         Time (ms)     Location
+OK                                             F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile
+Symbol search path is: F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile
+Executable search path is: 
+ModLoad: 00007ff7`d1320000 00007ff7`d133f000   AzTestRunner.exe
+ModLoad: 00007ffc`2d7a0000 00007ffc`2da08000   ntdll.dll
+ModLoad: 00007ffc`2c540000 00007ffc`2c60b000   C:\WINDOWS\System32\KERNEL32.DLL
+ModLoad: 00007ffc`2ab30000 00007ffc`2af31000   C:\WINDOWS\System32\KERNELBASE.dll
+ModLoad: 00007ffc`27420000 00007ffc`274bf000   C:\WINDOWS\SYSTEM32\apphelp.dll
+ModLoad: 00007ffc`2b1c0000 00007ffc`2b30c000   C:\WINDOWS\System32\ucrtbase.dll
+ModLoad: 00007ffc`0fdf0000 00007ffc`0fe8d000   C:\WINDOWS\SYSTEM32\MSVCP140.dll
+ModLoad: 00007ffc`0fe90000 00007ffc`0febc000   C:\WINDOWS\SYSTEM32\VCRUNTIME140.dll
+ModLoad: 00007ffc`0fae0000 00007ffc`0faec000   C:\WINDOWS\SYSTEM32\VCRUNTIME140_1.dll
+ModLoad: 00007ffb`967c0000 00007ffb`97969000   F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AzCore.dll
+ModLoad: 00007ffc`2c150000 00007ffc`2c20c000   C:\WINDOWS\System32\ADVAPI32.dll
+ModLoad: 00007ffc`2c220000 00007ffc`2c2c9000   C:\WINDOWS\System32\msvcrt.dll
+ModLoad: 00007ffc`2d100000 00007ffc`2d1a8000   C:\WINDOWS\System32\sechost.dll
+ModLoad: 00007ffc`2bec0000 00007ffc`2bfd8000   C:\WINDOWS\System32\RPCRT4.dll
+ModLoad: 00007ffc`2c2d0000 00007ffc`2c4a7000   C:\WINDOWS\System32\USER32.dll
+ModLoad: 00007ffc`2a990000 00007ffc`2a9b7000   C:\WINDOWS\System32\win32u.dll
+ModLoad: 00007ffc`2c800000 00007ffc`2c82b000   C:\WINDOWS\System32\GDI32.dll
+ModLoad: 00007ffc`2b090000 00007ffc`2b1ba000   C:\WINDOWS\System32\gdi32full.dll
+ModLoad: 00007ffc`2aa80000 00007ffc`2ab23000   C:\WINDOWS\System32\msvcp_win.dll
+ModLoad: 00007ffc`2c950000 00007ffc`2d0ec000   C:\WINDOWS\System32\SHELL32.dll
+ModLoad: 00007ffc`2c0c0000 00007ffc`2c141000   C:\WINDOWS\System32\WS2_32.dll
+ModLoad: 00007ffb`88a80000 00007ffb`88a96000   C:\WINDOWS\SYSTEM32\MSVCP140_ATOMIC_WAIT.dll
+ModLoad: 00007ffc`23640000 00007ffc`2364b000   C:\WINDOWS\SYSTEM32\VERSION.dll
+(2e4c.1d00): Break instruction exception - code 80000003 (first chance)
+ntdll!RtlGetReturnAddressHijackTarget+0x749:
+00007ffc`2d8c26c9 cc              int     3
+0:000> .sympath F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile
+Symbol search path is: F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile
+Expanded Symbol search path is: f:\jericoengine\jericoengine\build\n0-validation\original-engine\bin\profile
+
+************* Path validation summary **************
+Response                         Time (ms)     Location
+OK                                             F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile
+0:000> .lines -e
+Line number information will be loaded
+0:000> bu AzCore!AZStd::thread::join ".echo JE_RPI98_THREAD_JOIN_STACK; kpn; gc"
+*** WARNING: Unable to verify checksum for F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AzCore.dll
+0:000> g
+ModLoad: 00007ffc`2bb60000 00007ffc`2bb91000   C:\WINDOWS\System32\IMM32.DLL
+ModLoad: 00007ffc`2a870000 00007ffc`2a89a000   C:\WINDOWS\SYSTEM32\bcrypt.dll
+ModLoad: 00007ffc`2af40000 00007ffc`2afec000   C:\WINDOWS\System32\bcryptprimitives.dll
+ModLoad: 00007ffb`986b0000 00007ffb`98766000   F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\RenderIntegration.Tests.dll
+ModLoad: 00007ffb`95a80000 00007ffb`95b7a000   F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\RenderIntegration.dll
+ModLoad: 00007ffb`95870000 00007ffb`95a76000   F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_RHI.Public.dll
+ModLoad: 00007ffb`8f3d0000 00007ffb`908ee000   F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AzFramework.dll
+ModLoad: 00007ffb`95b80000 00007ffb`96348000   F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_RPI.Public.dll
+ModLoad: 00007ffc`2b320000 00007ffc`2b49f000   C:\WINDOWS\System32\CRYPT32.dll
+ModLoad: 00007ffb`95550000 00007ffb`9586b000   F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_RHI.Reflect.dll
+ModLoad: 00000176`fce80000 00000176`fd19b000   F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_RHI.Reflect.dll
+ModLoad: 00007ffc`2bba0000 00007ffc`2bd3a000   C:\WINDOWS\System32\ole32.dll
+ModLoad: 00007ffc`2d250000 00007ffc`2d5db000   C:\WINDOWS\System32\combase.dll
+ModLoad: 00007ffc`2bfe0000 00007ffc`2c0b9000   C:\WINDOWS\System32\OLEAUT32.dll
+JE_RPI98_THREAD_JOIN_STACK
+*** WARNING: Unable to verify checksum for F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_RPI.Public.dll
+ # Child-SP          RetAddr               Call Site
+00 00000003`7d98d778 00007ffb`95bf79bd     AzCore!AZStd::thread::join(void) [F:\JericoEngine\JericoEngine\Code\Framework\AzCore\Platform\Common\WinAPI\AzCore\std\parallel\internal\thread_WinAPI.cpp @ 106]
+01 00000003`7d98d780 00007ffb`95bccab9     Atom_RPI_Public!AZ::RPI::ShaderVariantAsyncLoader::Shutdown(void)+0x6d [F:\JericoEngine\JericoEngine\Gems\Atom\RPI\Code\Source\RPI.Public\Shader\ShaderVariantAsyncLoader.cpp @ 221]
+02 00000003`7d98d830 00007ffb`95d5b52c     Atom_RPI_Public!AZ::RPI::ShaderVariantAsyncLoader::~ShaderVariantAsyncLoader(void)+0x39 [F:\JericoEngine\JericoEngine\Gems\Atom\RPI\Code\Include\Atom\RPI.Public\Shader\ShaderVariantAsyncLoader.h @ 39]
+*** WARNING: Unable to verify checksum for F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\RenderIntegration.dll
+03 00000003`7d98da20 00007ffb`95a8d45d     Atom_RPI_Public!AZ::RPI::RPISystem::~RPISystem(void)+0x13c [F:\JericoEngine\JericoEngine\Gems\Atom\RPI\Code\Include\Atom\RPI.Public\RPISystem.h @ 64]
+*** WARNING: Unable to verify checksum for F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\RenderIntegration.Tests.dll
+04 (Inline Function) --------`--------     RenderIntegration!JE::Render::RPI::Runtime::RPISystemComponent::{dtor}(void)+0x55 [F:\JericoEngine\JericoEngine\Engine\Render\Integration\Source\RPI\RPISystemComponent.cpp @ 107]
+05 00000003`7d98da60 00007ffb`986bc041     RenderIntegration!JE::Render::RPI::Runtime::RPISystemComponent::`scalar deleting destructor'(void)+0x7d
+06 (Inline Function) --------`--------     RenderIntegration_Tests!std::default_delete<AZ::Component>::operator()(void)+0xe [C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\include\memory @ 3309]
+07 (Inline Function) --------`--------     RenderIntegration_Tests!std::unique_ptr<AZ::Component,std::default_delete<AZ::Component> >::reset(void)+0x13 [C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\include\memory @ 3471]
+08 00000003`7d98dbc0 00007ffb`986d4a9f     RenderIntegration_Tests!JE::Render::Integration::RenderIntegrationTests_NativeRpiRuntimeFactoryPreservesRegistrationAndLifecycle_Test::TestBody(void)+0xff1 [F:\JericoEngine\JericoEngine\Engine\Render\Integration\Tests\RenderIntegrationTests.cpp @ 306]
+09 00000003`7d98df80 00007ffb`986fc6fb     RenderIntegration_Tests!testing::internal::HandleExceptionsInMethodIfSupported<testing::TestSuite,void>(class testing::TestSuite * object = 0x000003f4`800f0100, <function> * method = 0x000003f4`800f0858, char * location = 0x00000000`00000001 "--- memory read error at address 0x00000000`00000001 ---")+0x4f [F:\JericoEngine\Dependencies\googletest-v1.18.0\googletest\src\gtest.cc @ 2756]
+0a (Inline Function) --------`--------     RenderIntegration_Tests!testing::Test::Run(void)+0x9e [F:\JericoEngine\Dependencies\googletest-v1.18.0\googletest\src\gtest.cc @ 2773]
+0b 00000003`7d98e000 00007ffb`986fcac8     RenderIntegration_Tests!testing::TestInfo::Run(void)+0x18b [F:\JericoEngine\Dependencies\googletest-v1.18.0\googletest\src\gtest.cc @ 2919]
+0c 00000003`7d98e040 00007ffb`986fd8dc     RenderIntegration_Tests!testing::TestSuite::Run(void)+0x2a8 [F:\JericoEngine\Dependencies\googletest-v1.18.0\googletest\src\gtest.cc @ 3099]
+0d 00000003`7d98f0d0 00007ffb`986d4b83     RenderIntegration_Tests!testing::internal::UnitTestImpl::RunAllTests(void)+0x99c [F:\JericoEngine\Dependencies\googletest-v1.18.0\googletest\src\gtest.cc @ 6091]
+0e 00000003`7d98f480 00007ffb`986fce00     RenderIntegration_Tests!testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl,bool>(class testing::internal::UnitTestImpl * object = 0x000003f4`800f0100, <function> * method = 0x000003f4`800f0858, char * location = 0x00000000`00000001 "--- memory read error at address 0x00000000`00000001 ---")+0x53 [F:\JericoEngine\Dependencies\googletest-v1.18.0\googletest\src\gtest.cc @ 2756]
+0f 00000003`7d98f500 00007ffb`986d2bf0     RenderIntegration_Tests!testing::UnitTest::Run(void)+0x150 [F:\JericoEngine\Dependencies\googletest-v1.18.0\googletest\src\gtest.cc @ 5631]
+*** WARNING: Unable to verify checksum for AzTestRunner.exe
+10 (Inline Function) --------`--------     RenderIntegration_Tests!RUN_ALL_TESTS(void)+0xd [F:\JericoEngine\Dependencies\googletest-v1.18.0\googletest\include\gtest\gtest.h @ 2344]
+11 00000003`7d98f580 00007ff7`d1325935     RenderIntegration_Tests!AzRunUnitTests(int argc = 0n1, char ** argv = <Value unavailable error>)+0x80 [F:\JericoEngine\JericoEngine\Engine\Render\Integration\Tests\RenderIntegrationTests.cpp @ 434]
+12 00000003`7d98f5d0 00007ff7`d1326015     AzTestRunner!AzTestRunner::wrapped_command_arg_main(int argc = <Value unavailable error>, char ** argv = 0x00000176`fb02b7d0)+0xd55 [F:\JericoEngine\JericoEngine\Code\Tools\AzTestRunner\src\main.cpp @ 223]
+13 (Inline Function) --------`--------     AzTestRunner!AzTestRunner::wrapped_main(void)+0x26 [F:\JericoEngine\JericoEngine\Code\Tools\AzTestRunner\src\main.cpp @ 252]
+14 00000003`7d98f840 00007ff7`d132bfac     AzTestRunner!main(int argc = 0n-2146498472, char ** argv = 0x000003f4`800f0100)+0x35 [F:\JericoEngine\JericoEngine\Code\Tools\AzTestRunner\Platform\Common\platform_host_main.cpp @ 15]
+15 (Inline Function) --------`--------     AzTestRunner!invoke_main(void)+0x22 [D:\a\_work\1\s\src\vctools\crt\vcstartup\src\startup\exe_common.inl @ 78]
+16 00000003`7d98f880 00007ffc`2c56dda7     AzTestRunner!__scrt_common_main_seh(void)+0x10c [D:\a\_work\1\s\src\vctools\crt\vcstartup\src\startup\exe_common.inl @ 288]
+17 00000003`7d98f8c0 00007ffc`2d81ee4c     KERNEL32!BaseThreadInitThunk+0x17
+18 00000003`7d98f8f0 00000000`00000000     ntdll!RtlUserThreadStart+0x2c
+F:/JericoEngine/JericoEngine/Code/Framework/AzCore/Platform/Common/WinAPI/AzCore/std/parallel/internal/thread_WinAPI.cpp(107): error: Thread must be joinable!
+
+JE_RPI98_THREAD_JOIN_STACK
+ # Child-SP          RetAddr               Call Site
+00 00000003`7d98d778 00007ffb`95bf79bd     AzCore!AZStd::thread::join(void) [F:\JericoEngine\JericoEngine\Code\Framework\AzCore\Platform\Common\WinAPI\AzCore\std\parallel\internal\thread_WinAPI.cpp @ 106]
+01 00000003`7d98d780 00007ffb`95bccab9     Atom_RPI_Public!AZ::RPI::ShaderVariantAsyncLoader::Shutdown(void)+0x6d [F:\JericoEngine\JericoEngine\Gems\Atom\RPI\Code\Source\RPI.Public\Shader\ShaderVariantAsyncLoader.cpp @ 221]
+02 00000003`7d98d830 00007ffb`95d5b52c     Atom_RPI_Public!AZ::RPI::ShaderVariantAsyncLoader::~ShaderVariantAsyncLoader(void)+0x39 [F:\JericoEngine\JericoEngine\Gems\Atom\RPI\Code\Include\Atom\RPI.Public\Shader\ShaderVariantAsyncLoader.h @ 39]
+03 00000003`7d98da20 00007ffb`95a8d45d     Atom_RPI_Public!AZ::RPI::RPISystem::~RPISystem(void)+0x13c [F:\JericoEngine\JericoEngine\Gems\Atom\RPI\Code\Include\Atom\RPI.Public\RPISystem.h @ 64]
+04 (Inline Function) --------`--------     RenderIntegration!JE::Render::RPI::Runtime::RPISystemComponent::{dtor}(void)+0x55 [F:\JericoEngine\JericoEngine\Engine\Render\Integration\Source\RPI\RPISystemComponent.cpp @ 107]
+05 00000003`7d98da60 00007ffb`986bc041     RenderIntegration!JE::Render::RPI::Runtime::RPISystemComponent::`scalar deleting destructor'(void)+0x7d
+06 (Inline Function) --------`--------     RenderIntegration_Tests!std::default_delete<AZ::Component>::operator()(void)+0xe [C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\include\memory @ 3309]
+07 (Inline Function) --------`--------     RenderIntegration_Tests!std::unique_ptr<AZ::Component,std::default_delete<AZ::Component> >::reset(void)+0x13 [C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\include\memory @ 3471]
+08 00000003`7d98dbc0 00007ffb`986d4a9f     RenderIntegration_Tests!JE::Render::Integration::RenderIntegrationTests_NativeRpiRuntimeFactoryPreservesRegistrationAndLifecycle_Test::TestBody(void)+0xff1 [F:\JericoEngine\JericoEngine\Engine\Render\Integration\Tests\RenderIntegrationTests.cpp @ 306]
+09 00000003`7d98df80 00007ffb`986fc6fb     RenderIntegration_Tests!testing::internal::HandleExceptionsInMethodIfSupported<testing::TestSuite,void>(class testing::TestSuite * object = 0x000003f4`800f0100, <function> * method = 0x000003f4`800f0858, char * location = 0x00000000`00000001 "--- memory read error at address 0x00000000`00000001 ---")+0x4f [F:\JericoEngine\Dependencies\googletest-v1.18.0\googletest\src\gtest.cc @ 2756]
+0a (Inline Function) --------`--------     RenderIntegration_Tests!testing::Test::Run(void)+0x9e [F:\JericoEngine\Dependencies\googletest-v1.18.0\googletest\src\gtest.cc @ 2773]
+0b 00000003`7d98e000 00007ffb`986fcac8     RenderIntegration_Tests!testing::TestInfo::Run(void)+0x18b [F:\JericoEngine\Dependencies\googletest-v1.18.0\googletest\src\gtest.cc @ 2919]
+0c 00000003`7d98e040 00007ffb`986fd8dc     RenderIntegration_Tests!testing::TestSuite::Run(void)+0x2a8 [F:\JericoEngine\Dependencies\googletest-v1.18.0\googletest\src\gtest.cc @ 3099]
+0d 00000003`7d98f0d0 00007ffb`986d4b83     RenderIntegration_Tests!testing::internal::UnitTestImpl::RunAllTests(void)+0x99c [F:\JericoEngine\Dependencies\googletest-v1.18.0\googletest\src\gtest.cc @ 6091]
+0e 00000003`7d98f480 00007ffb`986fce00     RenderIntegration_Tests!testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl,bool>(class testing::internal::UnitTestImpl * object = 0x000003f4`800f0100, <function> * method = 0x000003f4`800f0858, char * location = 0x00000000`00000001 "--- memory read error at address 0x00000000`00000001 ---")+0x53 [F:\JericoEngine\Dependencies\googletest-v1.18.0\googletest\src\gtest.cc @ 2756]
+0f 00000003`7d98f500 00007ffb`986d2bf0     RenderIntegration_Tests!testing::UnitTest::Run(void)+0x150 [F:\JericoEngine\Dependencies\googletest-v1.18.0\googletest\src\gtest.cc @ 5631]
+10 (Inline Function) --------`--------     RenderIntegration_Tests!RUN_ALL_TESTS(void)+0xd [F:\JericoEngine\Dependencies\googletest-v1.18.0\googletest\include\gtest\gtest.h @ 2344]
+11 00000003`7d98f580 00007ff7`d1325935     RenderIntegration_Tests!AzRunUnitTests(int argc = 0n1, char ** argv = <Value unavailable error>)+0x80 [F:\JericoEngine\JericoEngine\Engine\Render\Integration\Tests\RenderIntegrationTests.cpp @ 434]
+12 00000003`7d98f5d0 00007ff7`d1326015     AzTestRunner!AzTestRunner::wrapped_command_arg_main(int argc = <Value unavailable error>, char ** argv = 0x00000176`fb02b7d0)+0xd55 [F:\JericoEngine\JericoEngine\Code\Tools\AzTestRunner\src\main.cpp @ 223]
+13 (Inline Function) --------`--------     AzTestRunner!AzTestRunner::wrapped_main(void)+0x26 [F:\JericoEngine\JericoEngine\Code\Tools\AzTestRunner\src\main.cpp @ 252]
+14 00000003`7d98f840 00007ff7`d132bfac     AzTestRunner!main(int argc = 0n-2146498472, char ** argv = 0x000003f4`800f0100)+0x35 [F:\JericoEngine\JericoEngine\Code\Tools\AzTestRunner\Platform\Common\platform_host_main.cpp @ 15]
+15 (Inline Function) --------`--------     AzTestRunner!invoke_main(void)+0x22 [D:\a\_work\1\s\src\vctools\crt\vcstartup\src\startup\exe_common.inl @ 78]
+16 00000003`7d98f880 00007ffc`2c56dda7     AzTestRunner!__scrt_common_main_seh(void)+0x10c [D:\a\_work\1\s\src\vctools\crt\vcstartup\src\startup\exe_common.inl @ 288]
+17 00000003`7d98f8c0 00007ffc`2d81ee4c     KERNEL32!BaseThreadInitThunk+0x17
+18 00000003`7d98f8f0 00000000`00000000     ntdll!RtlUserThreadStart+0x2c
+F:/JericoEngine/JericoEngine/Code/Framework/AzCore/Platform/Common/WinAPI/AzCore/std/parallel/internal/thread_WinAPI.cpp(107): error: Thread must be joinable!
+
+ModLoad: 00007ffc`29f60000 00007ffc`29f73000   C:\WINDOWS\SYSTEM32\MSASN1.dll
+ModLoad: 00007ffc`29630000 00007ffc`2964b000   C:\WINDOWS\SYSTEM32\kernel.appcore.dll
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\atlmfc.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\concurrency.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\cpp_rest.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\ObjectiveC.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\stl.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Windows.Data.Json.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Windows.Devices.Geolocation.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Windows.Devices.Sensors.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Windows.Media.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\windows.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\winrt.natvis'

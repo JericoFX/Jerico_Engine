@@ -72,7 +72,6 @@ ly_add_target(
         JE::RenderIntegration
         Gem::Atom_Feature_Common.Editor
         Gem::Atom_RHI.Private
-        Gem::Atom_RPI.Editor
         Gem::GraphCanvas.Editor
         Gem::GraphCanvasWidgets
         Gem::GraphModel.Editor

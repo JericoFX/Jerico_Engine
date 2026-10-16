@@ -70,8 +70,6 @@ ly_add_target(
     BUILD_DEPENDENCIES
         PRIVATE
             Gem::${gem_name}.Static
-    RUNTIME_DEPENDENCIES
-        Gem::Atom_RPI.Private
 )
 
 # Add alias that references the "AtomLyIntegration_CommonFeatures" name for backwards compatibility

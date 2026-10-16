@@ -1,0 +1,21 @@
+{
+  "checkedUtc": "2026-10-16T23:54:15.3098453Z",
+  "scope": "Primary upstream metadata and existing pipeline/XR contract references, not an exhaustive code or PR audit",
+  "sources": [
+    {
+      "observation": "Current first page reviewed; no upstream code imported. Candidate20183 component descriptor ownership merits later scoped review; its body/diff was not evaluated in this cut.",
+      "url": "https://github.com/o3de/o3de/pulls"
+    },
+    {
+      "observation": "Existing runtime pipeline switching uses editable azasset or native descriptor API. Its historical tests do not certify this Vulkan/VR fork.",
+      "url": "https://github.com/o3de/o3de/pull/16171"
+    },
+    {
+      "observation": "Existing native VR null-default-pipeline fix remains a contract reference; this cut does not claim VR acceptance.",
+      "url": "https://github.com/o3de/o3de/pull/16570"
+    }
+  ],
+  "sourceImported": false,
+  "newDependencies": false,
+  "scopeExpanded": false
+}

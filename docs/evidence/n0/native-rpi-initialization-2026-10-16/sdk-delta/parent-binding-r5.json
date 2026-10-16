@@ -1,0 +1,122 @@
+{
+  "approved": true,
+  "reviewer": "/root",
+  "revision": 98,
+  "utc": "2026-10-16T23:34:44.9079798Z",
+  "purpose": "ONE external consumer delta for two newly public native RPI factories; reuse immutable SDK96, no engine install/configure/build or full SDK replay",
+  "wrapperPin": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atom-next-native-scope-rev1\\validation-preparation\\atom-rpi98-sdk-delta-candidate\\RunSdkDelta98.ps1",
+    "bytes": 23562,
+    "sha256": "31903EC1D010DD36EF4D07E6CB4501B2816800A92F450C7CDC58395A00D07C79"
+  },
+  "recipePin": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atom-next-native-scope-rev1\\validation-preparation\\atom-rpi98-sdk-delta-candidate\\recipe.json",
+    "bytes": 16574,
+    "sha256": "6B153CE1D33AC7CF4F6F9EB9DB955C44BCA41E243CFBAC7455FB1DF87FBF966F"
+  },
+  "freezePin": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\freeze98-green-r5.json",
+    "bytes": 3496137,
+    "sha256": "D3C81B7804AB0658D82D319F7C109D025665FC3AE3B6C3EF1F35C9FB0898BA0A"
+  },
+  "freezeSHA256": "D3C81B7804AB0658D82D319F7C109D025665FC3AE3B6C3EF1F35C9FB0898BA0A",
+  "greenXmlPins": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\green-r4-tests-attempt1\\JE_RenderIntegration.Tests.xml",
+      "bytes": 2828,
+      "sha256": "21AF3AAEEACADE1882157294B3DD884A258B3C1C49607800BD942CD29309113F"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\green-r4-tests-attempt1\\JE_EditorRenderIntegration.Tests.xml",
+      "bytes": 1611,
+      "sha256": "AC99666E9A2445BBE99B877198BE711DB95DE2E03DAB1A90624A37F33977E4ED"
+    }
+  ],
+  "hostEvidencePins": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\parent-host98-partial-build-review.json",
+      "bytes": 2738,
+      "sha256": "5B35F6B558138DE768DDF13C4FC5EC79BABF62915C01DA1935895B48D1049645"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\hosts98-reused-pins.json",
+      "bytes": 4878,
+      "sha256": "0C2CEF74A6C1F8E2083CDB843D742ED32B61C336B1DF9EAFB14DD3A1585D3928"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\parent-r5-ui-postflight.json",
+      "bytes": 1233,
+      "sha256": "1892036D8741619AA8EEA40AD3F1380622D09230337BB0F01E22CC1D062BF748"
+    }
+  ],
+  "providerPins": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\RenderIntegration.dll",
+      "bytes": 986624,
+      "sha256": "07985010C1315BA0477E8F2660DCD2A837A93DFFAC1E6D0D7E8D7A0F0A098E10"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\lib\\profile\\RenderIntegration.lib",
+      "bytes": 237150,
+      "sha256": "C9DA8BA5906BEABAC0DBF572938F244DE6F096EB20DDD9E58EE0F0B33B1EA8AB"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\EditorRenderIntegration.dll",
+      "bytes": 835584,
+      "sha256": "98FA5315F3C33748F526301E28D27C1B02D55406AEE2A85432651697E9179B3D"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\lib\\profile\\EditorRenderIntegration.lib",
+      "bytes": 132348,
+      "sha256": "FB0641DC84C23F4510FC62B9792D42B97B6045E81BBD2CEEBBF10CEAF5B13582"
+    }
+  ],
+  "headerPins": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Integration\\Include\\JE\\Render\\Integration\\RenderIntegrationModule.h",
+      "bytes": 1178,
+      "sha256": "1B830A371CDDB0C15965DAF75DBACBEF5F7652AFED7161B76E874E8D924AC074"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Editor\\Render\\Integration\\Include\\JE\\Editor\\RenderIntegration\\RenderIntegrationModule.h",
+      "bytes": 427,
+      "sha256": "352D95EA3BC55CE6B41F67CFC812F64E6334CD6B5C5892108792B00582CD0E2C"
+    }
+  ],
+  "exportPins": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\pe-boundary\\runtime-exports.stdout.log",
+      "bytes": 187971,
+      "sha256": "2BD42AFCA175993BF5A888EC9F12AE9FE9BC8E6D939FBB59261AEBC0DD6565C5",
+      "provider": "RenderIntegration"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\pe-boundary\\editor-exports.stdout.log",
+      "bytes": 106415,
+      "sha256": "8257927133B50954FDD8FFD39DFA1F1C6CADA5FA674CE0560ED31AD5C4D9157E",
+      "provider": "EditorRenderIntegration"
+    }
+  ],
+  "publicBodyDllPin": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_RPI.Public.dll",
+    "bytes": 7858688,
+    "sha256": "F10958165992BB366C032CABF192738069D53B5A9EE0443D9BEDF22E48527D45"
+  },
+  "publicPeProofPin": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\pe-boundary\\review.json",
+    "bytes": 7525,
+    "sha256": "DF4845E31CEF803BBE5F023761C18ECDD730927094F13E0DFC0C9046F50AEA64"
+  },
+  "publicXmlPin": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\green-r4-tests-attempt1\\Gem_Atom_RPI.Tests.xml",
+    "bytes": 195629,
+    "sha256": "6DA2F3C6082E4C390132DD1E786B2E29BA70E678A27B9C6E8341936B4213423F"
+  },
+  "parentReviewed": [
+    "Entire R2 wrapper and CMake; exact R5 13-line rebind patch",
+    "588 actual completed XML cases, R5 unchanged C++ and providers",
+    "Actual parent PE ABI7836 ordinals/names and13dependencies unchanged",
+    "Real R5 Vulkan Editor/material/runtime, normal exit0, all20children absent",
+    "Scoped consumer only; full SDK96 metadata packaging not re-certified"
+  ]
+}

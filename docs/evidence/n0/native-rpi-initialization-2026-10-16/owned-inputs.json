@@ -1,0 +1,234 @@
+[
+  {
+    "relative": "Code/Editor/EditorToolsApplication.cpp",
+    "state": "present",
+    "bytes": 15380,
+    "sha256": "3CB333FEC06B6BC27786177BD6E494FAF396F5DF15CC314D17F2532F04A51CAB"
+  },
+  {
+    "relative": "Code/LauncherUnified/Launcher.cpp",
+    "state": "present",
+    "bytes": 33228,
+    "sha256": "40C1497ED124CCE934EBA08AAF91C8CF596E943CE1CEDF2FC42CF36034D2C261"
+  },
+  {
+    "relative": "Code/Tools/AssetProcessor/AssetBuilder/AssetBuilderApplication.cpp",
+    "state": "present",
+    "bytes": 11466,
+    "sha256": "A964437E3165B5C1147DF673CF013D2C37F00CB3B6EBECF5E9B89E5C36A1EF9C"
+  },
+  {
+    "relative": "Code/Tools/AssetProcessor/native/utilities/ApplicationManager.cpp",
+    "state": "present",
+    "bytes": 33548,
+    "sha256": "2C2205103FF827E472D88D0DBF9810BD47EE31AA89BDB33CA2B1F4532AF525ED"
+  },
+  {
+    "relative": "Editor/Render/Integration/CMakeLists.txt",
+    "state": "present",
+    "bytes": 1203,
+    "sha256": "28EB81823AB32B6479B08A16A9B6A4A1CC74590E91C59FD2B5C175C12117DEAC"
+  },
+  {
+    "relative": "Editor/Render/Integration/Include/JE/Editor/RenderIntegration/RenderIntegrationModule.h",
+    "state": "present",
+    "bytes": 427,
+    "sha256": "352D95EA3BC55CE6B41F67CFC812F64E6334CD6B5C5892108792B00582CD0E2C"
+  },
+  {
+    "relative": "Editor/Render/Integration/render_integration_files.cmake",
+    "state": "present",
+    "bytes": 614,
+    "sha256": "CE267AE6EE37D6E4C05D291EA52A58480EE1AEFD6CCE705767444A38297C86DD"
+  },
+  {
+    "relative": "Editor/Render/Integration/Source/RPI/EditorModule.cpp",
+    "state": "present",
+    "bytes": 971,
+    "sha256": "EACEA0FBC7546E219DC7F3DAD6F773810034414479E103303A3A95B1F7DEA66E"
+  },
+  {
+    "relative": "Editor/Render/Integration/Tests/RenderIntegrationTests.cpp",
+    "state": "present",
+    "bytes": 16150,
+    "sha256": "AD44867F49D58C1F95AF391F3288FD028AD9D404B3DD09B6E0C1E3EB2A01F527"
+  },
+  {
+    "relative": "Engine/Render/Integration/CMakeLists.txt",
+    "state": "present",
+    "bytes": 1918,
+    "sha256": "468F1F11C38DFEF46CCE44E7E49BDFD0E70305B63AFBAA727C1E38F179E8BBD8"
+  },
+  {
+    "relative": "Engine/Render/Integration/Include/JE/Render/Integration/RenderIntegrationModule.h",
+    "state": "present",
+    "bytes": 1178,
+    "sha256": "1B830A371CDDB0C15965DAF75DBACBEF5F7652AFED7161B76E874E8D924AC074"
+  },
+  {
+    "relative": "Engine/Render/Integration/render_integration_dependencies.cmake",
+    "state": "present",
+    "bytes": 2025,
+    "sha256": "AFE4DD01F2A48517582CD5244536E640E3EBC8B5C7E1063A693C9797A20F00A4"
+  },
+  {
+    "relative": "Engine/Render/Integration/render_integration_files.cmake",
+    "state": "present",
+    "bytes": 979,
+    "sha256": "8FA48380BF016C6D90F224A3EAA5A11B5B30B9E2FC1CE12029D876D5E21A62E4"
+  },
+  {
+    "relative": "Engine/Render/Integration/Source/RPI/Module.cpp",
+    "state": "present",
+    "bytes": 1613,
+    "sha256": "BEBC5CFC30B4D97A57462F4EB57757C00B6190709E616BA033C4415F28082A68"
+  },
+  {
+    "relative": "Engine/Render/Integration/Source/RPI/Module.h",
+    "state": "present",
+    "bytes": 845,
+    "sha256": "626012A10A9C6F4B5CB0684AB55C54EDCE1442F8C27D91CF56349A059FB92C26"
+  },
+  {
+    "relative": "Engine/Render/Integration/Source/RPI/PassTemplatesAutoLoader.cpp",
+    "state": "present",
+    "bytes": 5608,
+    "sha256": "FF1835127D2CCCAB4AE1FB2DA221221FFFF15A554179E8DC630B90745064F7E1"
+  },
+  {
+    "relative": "Engine/Render/Integration/Source/RPI/PassTemplatesAutoLoader.h",
+    "state": "present",
+    "bytes": 3919,
+    "sha256": "29116B1D5CA44DE84AC0EAD80D152D046040B4DEEC0F3416934BDB3D3DD06A31"
+  },
+  {
+    "relative": "Engine/Render/Integration/Source/RPI/PerformanceCVarManager.cpp",
+    "state": "present",
+    "bytes": 6565,
+    "sha256": "C8D2E30BFEBB79078DE442F9365B53BEC5E11AFEF7B4A80FF8F85125C8FB3208"
+  },
+  {
+    "relative": "Engine/Render/Integration/Source/RPI/PerformanceCVarManager.h",
+    "state": "present",
+    "bytes": 2236,
+    "sha256": "94137930917C4345FAFDA679BC2B4EA751E2710BE5F9918E46B9076771F52A28"
+  },
+  {
+    "relative": "Engine/Render/Integration/Source/RPI/RPISystemComponent.cpp",
+    "state": "present",
+    "bytes": 12612,
+    "sha256": "019921B44E80C3054F6CA383E0A758F9E8951ECED2B23609B2C99E30FD7E7CD3"
+  },
+  {
+    "relative": "Engine/Render/Integration/Source/RPI/RPISystemComponent.h",
+    "state": "present",
+    "bytes": 5009,
+    "sha256": "7013366B328F5A6A34F34CD63DFC4A38A58E727520195ADB1FBBCF4F014AE3AB"
+  },
+  {
+    "relative": "Engine/Render/Integration/Tests/RenderIntegrationTests.cpp",
+    "state": "present",
+    "bytes": 23978,
+    "sha256": "4C960571E9BE25AD91D68C4D4F7D2EBD2486F0AA116076C0DB0EBEBD64E2CE3A"
+  },
+  {
+    "relative": "Gems/Atom/RPI/Code/atom_rpi_editor_files.cmake",
+    "state": "retired"
+  },
+  {
+    "relative": "Gems/Atom/RPI/Code/atom_rpi_private_files.cmake",
+    "state": "retired"
+  },
+  {
+    "relative": "Gems/Atom/RPI/Code/atom_rpi_private_shared_files.cmake",
+    "state": "retired"
+  },
+  {
+    "relative": "Gems/Atom/RPI/Code/CMakeLists.txt",
+    "state": "present",
+    "bytes": 3923,
+    "sha256": "E90C2CFD28E7A4A00E1E1F7A338A2A1826F46424507EF4D10F25E91B2AF26036"
+  },
+  {
+    "relative": "Gems/Atom/RPI/Code/Source/RPI.Editor/EditorModule.cpp",
+    "state": "retired"
+  },
+  {
+    "relative": "Gems/Atom/RPI/Code/Source/RPI.Private/Module.cpp",
+    "state": "retired"
+  },
+  {
+    "relative": "Gems/Atom/RPI/Code/Source/RPI.Private/Module.h",
+    "state": "retired"
+  },
+  {
+    "relative": "Gems/Atom/RPI/Code/Source/RPI.Private/PassTemplatesAutoLoader.cpp",
+    "state": "retired"
+  },
+  {
+    "relative": "Gems/Atom/RPI/Code/Source/RPI.Private/PassTemplatesAutoLoader.h",
+    "state": "retired"
+  },
+  {
+    "relative": "Gems/Atom/RPI/Code/Source/RPI.Private/PerformanceCVarManager.cpp",
+    "state": "retired"
+  },
+  {
+    "relative": "Gems/Atom/RPI/Code/Source/RPI.Private/PerformanceCVarManager.h",
+    "state": "retired"
+  },
+  {
+    "relative": "Gems/Atom/RPI/Code/Source/RPI.Private/RPISystemComponent.cpp",
+    "state": "retired"
+  },
+  {
+    "relative": "Gems/Atom/RPI/Code/Source/RPI.Private/RPISystemComponent.h",
+    "state": "retired"
+  },
+  {
+    "relative": "Gems/Atom/RPI/Code/Source/RPI.Public/Shader/ShaderVariantAsyncLoader.cpp",
+    "state": "present",
+    "bytes": 37261,
+    "sha256": "0BB2F85A8608865573CBA7CF442D035699FDE555575BFBE9630BCE840933F350"
+  },
+  {
+    "relative": "Gems/Atom/RPI/Registry/atom_rpi.setreg",
+    "state": "retired"
+  },
+  {
+    "relative": "Gems/Atom/Tools/AtomToolsFramework/Code/CMakeLists.txt",
+    "state": "present",
+    "bytes": 3657,
+    "sha256": "C17C133073AE6ED4F795BD9B2E4523E676DAFC8BB6DECF9C518851ACD4594133"
+  },
+  {
+    "relative": "Gems/Atom/Tools/AtomToolsFramework/Code/Source/Application/AtomToolsApplication.cpp",
+    "state": "present",
+    "bytes": 27514,
+    "sha256": "512058360404C61854269ADB75C98773050DD09996D78010F389CB75D87DC9AA"
+  },
+  {
+    "relative": "Gems/AtomLyIntegration/CommonFeatures/Code/CMakeLists.txt",
+    "state": "present",
+    "bytes": 8018,
+    "sha256": "7EC2571F8337E6B3E022A93681EF243187249D94A489E5FCEB2BD054151680A8"
+  },
+  {
+    "relative": "Gems/BarrierInput/Code/CMakeLists.txt",
+    "state": "present",
+    "bytes": 1314,
+    "sha256": "A74F68454776BBD103BF795143495260C63AF3F7D700511B3F3544D3E42FDF4B"
+  },
+  {
+    "relative": "Gems/OpenParticleSystem/Tools/CMakeLists.txt",
+    "state": "present",
+    "bytes": 1647,
+    "sha256": "63E884AB6A953CF195F62C00336C5F4D19E55A7D289E9E63396D3CE7B7253654"
+  },
+  {
+    "relative": "Registry/rpi_assets.setreg",
+    "state": "present",
+    "bytes": 279,
+    "sha256": "5322B4AAD9940F2F311E8AA7EB0017CD62C55D4218D2348F40C6AE59B0E64366"
+  }
+]

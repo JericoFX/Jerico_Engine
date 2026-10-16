@@ -1,0 +1,69 @@
+{
+  "schema": "je-sdk98-completion-preparation-receipt-v1",
+  "state": "HOLD_NOT_RUN_PARENT_REVIEW_AND_LEASE_REQUIRED",
+  "approved": false,
+  "utc": "2026-10-16T23:45:28.4354414Z",
+  "script": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atom-next-native-scope-rev1\\validation-preparation\\atom-rpi98-sdk-delta-candidate\\CompleteSdkDelta98.ps1",
+    "bytes": 14452,
+    "sha256": "17E334978BF0D389EA4FCFE64BE8779C28306AE8CBE10FAA022D580B8123F226"
+  },
+  "inputs": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atom-next-native-scope-rev1\\validation-preparation\\atom-rpi98-sdk-delta-candidate\\completion-inputs.json",
+    "bytes": 19678,
+    "sha256": "8F134D7D60476B1203BC6FA1828A1B6AF019422C25FA68187CB6F79AE933B6AC"
+  },
+  "staticProof": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atom-next-native-scope-rev1\\validation-preparation\\atom-rpi98-sdk-delta-candidate\\completion-static-proof.json",
+    "bytes": 1278,
+    "sha256": "656CF8B898350AD4214E2A89598787AAFD53A0A5B46E72AC60F3B60640D23223"
+  },
+  "originalRunner": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atom-next-native-scope-rev1\\validation-preparation\\atom-rpi98-sdk-delta-candidate\\RunSdkDelta98.ps1",
+    "bytes": 23562,
+    "sha256": "31903EC1D010DD36EF4D07E6CB4501B2816800A92F450C7CDC58395A00D07C79"
+  },
+  "originalBinding": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\parent-sdk98-delta-binding-r5.json",
+    "bytes": 6006,
+    "sha256": "481564C33C6DEC28EDE9CECDA727B6971B54219772954039ABE2F70B9F693FF0"
+  },
+  "originalRecipe": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atom-next-native-scope-rev1\\validation-preparation\\atom-rpi98-sdk-delta-candidate\\recipe.json",
+    "bytes": 16574,
+    "sha256": "6B153CE1D33AC7CF4F6F9EB9DB955C44BCA41E243CFBAC7455FB1DF87FBF966F"
+  },
+  "consumerPins": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-vk-consumer98\\bin\\profile\\JENativeSdkConsumer.exe",
+      "bytes": 123392,
+      "sha256": "63E169F6412ADCE602A1E25DEB80B7B31BA228D8DF79B11F4B4B8190BB0F8340"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-vk-consumer98\\bin\\profile\\JENativeSdkConsumer.pdb",
+      "bytes": 15749120,
+      "sha256": "16833B26853D2975C8163AD664B3E039235E3386ED518D8C2499075D9814A385"
+    }
+  ],
+  "permittedOldDeploymentPins": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-vk-consumer98\\bin\\profile\\RenderIntegration.dll",
+      "bytes": 842752,
+      "sha256": "897FD69198465E04D5A7A64229980A58146564D9D61F668E3084CBE9A57BB3B7"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-vk-consumer98\\bin\\profile\\EditorRenderIntegration.dll",
+      "bytes": 721920,
+      "sha256": "3165B338983759569EEAFEF8BB2E7395A72D25BE78D1FA9F3DAC65DBE9E79174"
+    }
+  ],
+  "repairContract": "Only two owned generated profile DLLs, after NoReparse/exact SDK96 old hash/one fsutil-reported own link; verified backup before overwrite from current overlay; no SDK/hardlink write",
+  "nativeContinuation": "Exactly existing PE imports then existing 10-second loader with five lifecycle messages and actual exit0; no configure/build/install/AP/GUI",
+  "tailContract": "Original pe-imports through final catch/finally and failure propagation retained byteexact",
+  "limits": [
+    "Preparation only. fsutil readonly inspections execute only under future parent lease.",
+    "SDK96 and consumer96 are never written; no metadata-retirement or activation/GPU claim.",
+    "Original attempt evidence preserved; successful native configure/build are reused with exact argv/cwd/pins, never repeated."
+  ],
+  "helperCount": 0
+}

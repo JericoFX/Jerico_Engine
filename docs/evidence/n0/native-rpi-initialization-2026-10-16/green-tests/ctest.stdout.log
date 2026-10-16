@@ -1,0 +1,15 @@
+Test project F:/JericoEngine/JericoEngine/build/n0-validation/original-engine
+    Start  68: Gem::Atom_RPI.Tests.main::TEST_RUN
+1/3 Test  #68: Gem::Atom_RPI.Tests.main::TEST_RUN .................   Passed   19.06 sec
+    Start 103: JE::RenderIntegration.Tests.main::TEST_RUN
+2/3 Test #103: JE::RenderIntegration.Tests.main::TEST_RUN .........   Passed    0.04 sec
+    Start 104: JE::EditorRenderIntegration.Tests.main::TEST_RUN
+3/3 Test #104: JE::EditorRenderIntegration.Tests.main::TEST_RUN ...   Passed    0.04 sec
+
+100% tests passed, 0 tests failed out of 3
+
+Label Time Summary:
+FRAMEWORK_googletest    =  19.15 sec*proc (3 tests)
+SUITE_main              =  19.15 sec*proc (3 tests)
+
+Total Test time (real) =  19.18 sec

@@ -1,0 +1,18 @@
+{
+  "exitCode": 0,
+  "timedOut": false,
+  "stdout": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\sdk-delta98-completion-attempt1\\pe-imports.stdout.log",
+    "bytes": 19050,
+    "sha256": "8CE45A270490925A9FED717039D3597BFAFB42756D0449826FF12812A7EB5D39"
+  },
+  "seconds": 0.0435506,
+  "stderr": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\sdk-delta98-completion-attempt1\\pe-imports.stderr.log",
+    "bytes": 0,
+    "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+  },
+  "ramGuardTriggered": false,
+  "priorityError": null,
+  "priorityRequested": "BelowNormal"
+}

@@ -1,0 +1,508 @@
+[
+  {
+    "name": "cmake_dependencies.assetbuilder.setreg",
+    "baseline": {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-vk96\\bin\\Windows\\profile\\Default\\Registry\\cmake_dependencies.assetbuilder.setreg",
+      "bytes": 7060,
+      "sha256": "CEB37E6251B9CE8A2CDA1A90B6CB10B346368E50F91821600B85FF5FB671AACF"
+    },
+    "current": {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Registry\\cmake_dependencies.assetbuilder.setreg",
+      "bytes": 6844,
+      "sha256": "7B9F9AB366CD83C02C30B836D344779030EA9235F59B6A8E289B0ADAD8A4066D"
+    },
+    "baselineAtomRpi": {
+      "Targets": {
+        "Atom_RPI.Editor": {
+          "Modules": [
+            "Atom_RPI.Editor.dll"
+          ]
+        }
+      }
+    },
+    "currentHasAtomRpi": false
+  },
+  {
+    "name": "cmake_dependencies.assetbundler.setreg",
+    "baseline": {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-vk96\\bin\\Windows\\profile\\Default\\Registry\\cmake_dependencies.assetbundler.setreg",
+      "bytes": 7060,
+      "sha256": "CEB37E6251B9CE8A2CDA1A90B6CB10B346368E50F91821600B85FF5FB671AACF"
+    },
+    "current": {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Registry\\cmake_dependencies.assetbundler.setreg",
+      "bytes": 6844,
+      "sha256": "7B9F9AB366CD83C02C30B836D344779030EA9235F59B6A8E289B0ADAD8A4066D"
+    },
+    "baselineAtomRpi": {
+      "Targets": {
+        "Atom_RPI.Editor": {
+          "Modules": [
+            "Atom_RPI.Editor.dll"
+          ]
+        }
+      }
+    },
+    "currentHasAtomRpi": false
+  },
+  {
+    "name": "cmake_dependencies.assetbundlerbatch.setreg",
+    "baseline": {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-vk96\\bin\\Windows\\profile\\Default\\Registry\\cmake_dependencies.assetbundlerbatch.setreg",
+      "bytes": 7060,
+      "sha256": "CEB37E6251B9CE8A2CDA1A90B6CB10B346368E50F91821600B85FF5FB671AACF"
+    },
+    "current": {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Registry\\cmake_dependencies.assetbundlerbatch.setreg",
+      "bytes": 6844,
+      "sha256": "7B9F9AB366CD83C02C30B836D344779030EA9235F59B6A8E289B0ADAD8A4066D"
+    },
+    "baselineAtomRpi": {
+      "Targets": {
+        "Atom_RPI.Editor": {
+          "Modules": [
+            "Atom_RPI.Editor.dll"
+          ]
+        }
+      }
+    },
+    "currentHasAtomRpi": false
+  },
+  {
+    "name": "cmake_dependencies.assetprocessor.setreg",
+    "baseline": {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-vk96\\bin\\Windows\\profile\\Default\\Registry\\cmake_dependencies.assetprocessor.setreg",
+      "bytes": 7060,
+      "sha256": "CEB37E6251B9CE8A2CDA1A90B6CB10B346368E50F91821600B85FF5FB671AACF"
+    },
+    "current": {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Registry\\cmake_dependencies.assetprocessor.setreg",
+      "bytes": 6844,
+      "sha256": "7B9F9AB366CD83C02C30B836D344779030EA9235F59B6A8E289B0ADAD8A4066D"
+    },
+    "baselineAtomRpi": {
+      "Targets": {
+        "Atom_RPI.Editor": {
+          "Modules": [
+            "Atom_RPI.Editor.dll"
+          ]
+        }
+      }
+    },
+    "currentHasAtomRpi": false
+  },
+  {
+    "name": "cmake_dependencies.assetprocessorbatch.setreg",
+    "baseline": {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-vk96\\bin\\Windows\\profile\\Default\\Registry\\cmake_dependencies.assetprocessorbatch.setreg",
+      "bytes": 7060,
+      "sha256": "CEB37E6251B9CE8A2CDA1A90B6CB10B346368E50F91821600B85FF5FB671AACF"
+    },
+    "current": {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Registry\\cmake_dependencies.assetprocessorbatch.setreg",
+      "bytes": 6844,
+      "sha256": "7B9F9AB366CD83C02C30B836D344779030EA9235F59B6A8E289B0ADAD8A4066D"
+    },
+    "baselineAtomRpi": {
+      "Targets": {
+        "Atom_RPI.Editor": {
+          "Modules": [
+            "Atom_RPI.Editor.dll"
+          ]
+        }
+      }
+    },
+    "currentHasAtomRpi": false
+  },
+  {
+    "name": "cmake_dependencies.editor.setreg",
+    "baseline": {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-vk96\\bin\\Windows\\profile\\Default\\Registry\\cmake_dependencies.editor.setreg",
+      "bytes": 6654,
+      "sha256": "53912681A7E5FA44DE8F8A372A99292926B7B976777225E2AD403DE4BEB906BD"
+    },
+    "current": {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Registry\\cmake_dependencies.editor.setreg",
+      "bytes": 6438,
+      "sha256": "4285034533682AE57F0929DB3C42DBF1D9D5AE5C2B8AA831AD726B2ED6F659B0"
+    },
+    "baselineAtomRpi": {
+      "Targets": {
+        "Atom_RPI.Editor": {
+          "Modules": [
+            "Atom_RPI.Editor.dll"
+          ]
+        }
+      }
+    },
+    "currentHasAtomRpi": false
+  },
+  {
+    "name": "cmake_dependencies.jeeditorfixture_gamelauncher.setreg",
+    "baseline": {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-vk96\\bin\\Windows\\profile\\Default\\Registry\\cmake_dependencies.jeeditorfixture_gamelauncher.setreg",
+      "bytes": 3851,
+      "sha256": "668E2E8DA8DED8472379EA82B41A600884BBC74DCAB53A628D612001AEC44FE0"
+    },
+    "current": {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Registry\\cmake_dependencies.jeeditorfixture_gamelauncher.setreg",
+      "bytes": 3633,
+      "sha256": "70627B850960FB5CAB367FB94F70E203B3EC1C200AC0CEA0E94C5FED61040F53"
+    },
+    "baselineAtomRpi": {
+      "Targets": {
+        "Atom_RPI.Private": {
+          "Modules": [
+            "Atom_RPI.Private.dll"
+          ]
+        }
+      }
+    },
+    "currentHasAtomRpi": false
+  },
+  {
+    "name": "cmake_dependencies.jeeditorfixture.assetbuilder.setreg",
+    "baseline": {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-vk96\\bin\\Windows\\profile\\Default\\Registry\\cmake_dependencies.jeeditorfixture.assetbuilder.setreg",
+      "bytes": 6293,
+      "sha256": "236921E08877F3055B22F3F6384402BF0D30E5B5F3AD79B795F2EC44104446F0"
+    },
+    "current": {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Registry\\cmake_dependencies.jeeditorfixture.assetbuilder.setreg",
+      "bytes": 6077,
+      "sha256": "3DC3BEA7313B628D682D7F835A1B56D24430DE55AAE02931B15403CDC30832D1"
+    },
+    "baselineAtomRpi": {
+      "Targets": {
+        "Atom_RPI.Editor": {
+          "Modules": [
+            "Atom_RPI.Editor.dll"
+          ]
+        }
+      }
+    },
+    "currentHasAtomRpi": false
+  },
+  {
+    "name": "cmake_dependencies.jeeditorfixture.assetbundler.setreg",
+    "baseline": {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-vk96\\bin\\Windows\\profile\\Default\\Registry\\cmake_dependencies.jeeditorfixture.assetbundler.setreg",
+      "bytes": 6293,
+      "sha256": "236921E08877F3055B22F3F6384402BF0D30E5B5F3AD79B795F2EC44104446F0"
+    },
+    "current": {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Registry\\cmake_dependencies.jeeditorfixture.assetbundler.setreg",
+      "bytes": 6077,
+      "sha256": "3DC3BEA7313B628D682D7F835A1B56D24430DE55AAE02931B15403CDC30832D1"
+    },
+    "baselineAtomRpi": {
+      "Targets": {
+        "Atom_RPI.Editor": {
+          "Modules": [
+            "Atom_RPI.Editor.dll"
+          ]
+        }
+      }
+    },
+    "currentHasAtomRpi": false
+  },
+  {
+    "name": "cmake_dependencies.jeeditorfixture.assetbundlerbatch.setreg",
+    "baseline": {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-vk96\\bin\\Windows\\profile\\Default\\Registry\\cmake_dependencies.jeeditorfixture.assetbundlerbatch.setreg",
+      "bytes": 6293,
+      "sha256": "236921E08877F3055B22F3F6384402BF0D30E5B5F3AD79B795F2EC44104446F0"
+    },
+    "current": {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Registry\\cmake_dependencies.jeeditorfixture.assetbundlerbatch.setreg",
+      "bytes": 6077,
+      "sha256": "3DC3BEA7313B628D682D7F835A1B56D24430DE55AAE02931B15403CDC30832D1"
+    },
+    "baselineAtomRpi": {
+      "Targets": {
+        "Atom_RPI.Editor": {
+          "Modules": [
+            "Atom_RPI.Editor.dll"
+          ]
+        }
+      }
+    },
+    "currentHasAtomRpi": false
+  },
+  {
+    "name": "cmake_dependencies.jeeditorfixture.assetprocessor.setreg",
+    "baseline": {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-vk96\\bin\\Windows\\profile\\Default\\Registry\\cmake_dependencies.jeeditorfixture.assetprocessor.setreg",
+      "bytes": 6293,
+      "sha256": "236921E08877F3055B22F3F6384402BF0D30E5B5F3AD79B795F2EC44104446F0"
+    },
+    "current": {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Registry\\cmake_dependencies.jeeditorfixture.assetprocessor.setreg",
+      "bytes": 6077,
+      "sha256": "3DC3BEA7313B628D682D7F835A1B56D24430DE55AAE02931B15403CDC30832D1"
+    },
+    "baselineAtomRpi": {
+      "Targets": {
+        "Atom_RPI.Editor": {
+          "Modules": [
+            "Atom_RPI.Editor.dll"
+          ]
+        }
+      }
+    },
+    "currentHasAtomRpi": false
+  },
+  {
+    "name": "cmake_dependencies.jeeditorfixture.assetprocessorbatch.setreg",
+    "baseline": {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-vk96\\bin\\Windows\\profile\\Default\\Registry\\cmake_dependencies.jeeditorfixture.assetprocessorbatch.setreg",
+      "bytes": 6293,
+      "sha256": "236921E08877F3055B22F3F6384402BF0D30E5B5F3AD79B795F2EC44104446F0"
+    },
+    "current": {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Registry\\cmake_dependencies.jeeditorfixture.assetprocessorbatch.setreg",
+      "bytes": 6077,
+      "sha256": "3DC3BEA7313B628D682D7F835A1B56D24430DE55AAE02931B15403CDC30832D1"
+    },
+    "baselineAtomRpi": {
+      "Targets": {
+        "Atom_RPI.Editor": {
+          "Modules": [
+            "Atom_RPI.Editor.dll"
+          ]
+        }
+      }
+    },
+    "currentHasAtomRpi": false
+  },
+  {
+    "name": "cmake_dependencies.jeeditorfixture.editor.setreg",
+    "baseline": {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-vk96\\bin\\Windows\\profile\\Default\\Registry\\cmake_dependencies.jeeditorfixture.editor.setreg",
+      "bytes": 5731,
+      "sha256": "B53232754E31B17B3E4E892980141B67264BF75F5043D16B5E9C3DCA85BB3837"
+    },
+    "current": {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Registry\\cmake_dependencies.jeeditorfixture.editor.setreg",
+      "bytes": 5515,
+      "sha256": "57D9D7BA6AE9A84F04D9858CB7049E181F8493ECBC82CCEF40B0E64B22C9EFA6"
+    },
+    "baselineAtomRpi": {
+      "Targets": {
+        "Atom_RPI.Editor": {
+          "Modules": [
+            "Atom_RPI.Editor.dll"
+          ]
+        }
+      }
+    },
+    "currentHasAtomRpi": false
+  },
+  {
+    "name": "cmake_dependencies.jeeditorfixture.jeeditorfixture_gamelauncher.setreg",
+    "baseline": {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-vk96\\bin\\Windows\\profile\\Default\\Registry\\cmake_dependencies.jeeditorfixture.jeeditorfixture_gamelauncher.setreg",
+      "bytes": 3570,
+      "sha256": "9DEF2EE9C5B10EE731FC6C0511E766B560E5B7AF0FDB7A07964F21486BDC7933"
+    },
+    "current": {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Registry\\cmake_dependencies.jeeditorfixture.jeeditorfixture_gamelauncher.setreg",
+      "bytes": 3352,
+      "sha256": "0C4AF784DF726227E101814CC559DF33701417341038F3D9F366C585ABE9EAD7"
+    },
+    "baselineAtomRpi": {
+      "Targets": {
+        "Atom_RPI.Private": {
+          "Modules": [
+            "Atom_RPI.Private.dll"
+          ]
+        }
+      }
+    },
+    "currentHasAtomRpi": false
+  },
+  {
+    "name": "cmake_dependencies.jeeditorfixture.materialcanvas.setreg",
+    "baseline": {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-vk96\\bin\\Windows\\profile\\Default\\Registry\\cmake_dependencies.jeeditorfixture.materialcanvas.setreg",
+      "bytes": 5731,
+      "sha256": "B53232754E31B17B3E4E892980141B67264BF75F5043D16B5E9C3DCA85BB3837"
+    },
+    "current": {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Registry\\cmake_dependencies.jeeditorfixture.materialcanvas.setreg",
+      "bytes": 5515,
+      "sha256": "57D9D7BA6AE9A84F04D9858CB7049E181F8493ECBC82CCEF40B0E64B22C9EFA6"
+    },
+    "baselineAtomRpi": {
+      "Targets": {
+        "Atom_RPI.Editor": {
+          "Modules": [
+            "Atom_RPI.Editor.dll"
+          ]
+        }
+      }
+    },
+    "currentHasAtomRpi": false
+  },
+  {
+    "name": "cmake_dependencies.jeeditorfixture.materialeditor.setreg",
+    "baseline": {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-vk96\\bin\\Windows\\profile\\Default\\Registry\\cmake_dependencies.jeeditorfixture.materialeditor.setreg",
+      "bytes": 5731,
+      "sha256": "B53232754E31B17B3E4E892980141B67264BF75F5043D16B5E9C3DCA85BB3837"
+    },
+    "current": {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Registry\\cmake_dependencies.jeeditorfixture.materialeditor.setreg",
+      "bytes": 5515,
+      "sha256": "57D9D7BA6AE9A84F04D9858CB7049E181F8493ECBC82CCEF40B0E64B22C9EFA6"
+    },
+    "baselineAtomRpi": {
+      "Targets": {
+        "Atom_RPI.Editor": {
+          "Modules": [
+            "Atom_RPI.Editor.dll"
+          ]
+        }
+      }
+    },
+    "currentHasAtomRpi": false
+  },
+  {
+    "name": "cmake_dependencies.jeeditorfixture.passcanvas.setreg",
+    "baseline": {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-vk96\\bin\\Windows\\profile\\Default\\Registry\\cmake_dependencies.jeeditorfixture.passcanvas.setreg",
+      "bytes": 5731,
+      "sha256": "B53232754E31B17B3E4E892980141B67264BF75F5043D16B5E9C3DCA85BB3837"
+    },
+    "current": {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Registry\\cmake_dependencies.jeeditorfixture.passcanvas.setreg",
+      "bytes": 5515,
+      "sha256": "57D9D7BA6AE9A84F04D9858CB7049E181F8493ECBC82CCEF40B0E64B22C9EFA6"
+    },
+    "baselineAtomRpi": {
+      "Targets": {
+        "Atom_RPI.Editor": {
+          "Modules": [
+            "Atom_RPI.Editor.dll"
+          ]
+        }
+      }
+    },
+    "currentHasAtomRpi": false
+  },
+  {
+    "name": "cmake_dependencies.jeeditorfixture.shadermanagementconsole.setreg",
+    "baseline": {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-vk96\\bin\\Windows\\profile\\Default\\Registry\\cmake_dependencies.jeeditorfixture.shadermanagementconsole.setreg",
+      "bytes": 5731,
+      "sha256": "B53232754E31B17B3E4E892980141B67264BF75F5043D16B5E9C3DCA85BB3837"
+    },
+    "current": {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Registry\\cmake_dependencies.jeeditorfixture.shadermanagementconsole.setreg",
+      "bytes": 5515,
+      "sha256": "57D9D7BA6AE9A84F04D9858CB7049E181F8493ECBC82CCEF40B0E64B22C9EFA6"
+    },
+    "baselineAtomRpi": {
+      "Targets": {
+        "Atom_RPI.Editor": {
+          "Modules": [
+            "Atom_RPI.Editor.dll"
+          ]
+        }
+      }
+    },
+    "currentHasAtomRpi": false
+  },
+  {
+    "name": "cmake_dependencies.materialcanvas.setreg",
+    "baseline": {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-vk96\\bin\\Windows\\profile\\Default\\Registry\\cmake_dependencies.materialcanvas.setreg",
+      "bytes": 6654,
+      "sha256": "53912681A7E5FA44DE8F8A372A99292926B7B976777225E2AD403DE4BEB906BD"
+    },
+    "current": {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Registry\\cmake_dependencies.materialcanvas.setreg",
+      "bytes": 6438,
+      "sha256": "4285034533682AE57F0929DB3C42DBF1D9D5AE5C2B8AA831AD726B2ED6F659B0"
+    },
+    "baselineAtomRpi": {
+      "Targets": {
+        "Atom_RPI.Editor": {
+          "Modules": [
+            "Atom_RPI.Editor.dll"
+          ]
+        }
+      }
+    },
+    "currentHasAtomRpi": false
+  },
+  {
+    "name": "cmake_dependencies.materialeditor.setreg",
+    "baseline": {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-vk96\\bin\\Windows\\profile\\Default\\Registry\\cmake_dependencies.materialeditor.setreg",
+      "bytes": 6654,
+      "sha256": "53912681A7E5FA44DE8F8A372A99292926B7B976777225E2AD403DE4BEB906BD"
+    },
+    "current": {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Registry\\cmake_dependencies.materialeditor.setreg",
+      "bytes": 6438,
+      "sha256": "4285034533682AE57F0929DB3C42DBF1D9D5AE5C2B8AA831AD726B2ED6F659B0"
+    },
+    "baselineAtomRpi": {
+      "Targets": {
+        "Atom_RPI.Editor": {
+          "Modules": [
+            "Atom_RPI.Editor.dll"
+          ]
+        }
+      }
+    },
+    "currentHasAtomRpi": false
+  },
+  {
+    "name": "cmake_dependencies.passcanvas.setreg",
+    "baseline": {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-vk96\\bin\\Windows\\profile\\Default\\Registry\\cmake_dependencies.passcanvas.setreg",
+      "bytes": 6654,
+      "sha256": "53912681A7E5FA44DE8F8A372A99292926B7B976777225E2AD403DE4BEB906BD"
+    },
+    "current": {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Registry\\cmake_dependencies.passcanvas.setreg",
+      "bytes": 6438,
+      "sha256": "4285034533682AE57F0929DB3C42DBF1D9D5AE5C2B8AA831AD726B2ED6F659B0"
+    },
+    "baselineAtomRpi": {
+      "Targets": {
+        "Atom_RPI.Editor": {
+          "Modules": [
+            "Atom_RPI.Editor.dll"
+          ]
+        }
+      }
+    },
+    "currentHasAtomRpi": false
+  },
+  {
+    "name": "cmake_dependencies.shadermanagementconsole.setreg",
+    "baseline": {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-vk96\\bin\\Windows\\profile\\Default\\Registry\\cmake_dependencies.shadermanagementconsole.setreg",
+      "bytes": 6654,
+      "sha256": "53912681A7E5FA44DE8F8A372A99292926B7B976777225E2AD403DE4BEB906BD"
+    },
+    "current": {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Registry\\cmake_dependencies.shadermanagementconsole.setreg",
+      "bytes": 6438,
+      "sha256": "4285034533682AE57F0929DB3C42DBF1D9D5AE5C2B8AA831AD726B2ED6F659B0"
+    },
+    "baselineAtomRpi": {
+      "Targets": {
+        "Atom_RPI.Editor": {
+          "Modules": [
+            "Atom_RPI.Editor.dll"
+          ]
+        }
+      }
+    },
+    "currentHasAtomRpi": false
+  }
+]

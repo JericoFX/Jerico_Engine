@@ -1,0 +1,23 @@
+{
+  "capturedUtc": "2026-10-16T23:02:10.0281504Z",
+  "action": "Stopped only observed orphan VCTIP after exact identity recheck; preserved mspdbsrv",
+  "before": {
+    "pid": 22172,
+    "parentPid": 14940,
+    "name": "vctip.exe",
+    "executable": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\VCTIP.EXE",
+    "creationUtc": "2026-10-16T23:00:34.4856290Z",
+    "recordedBuildChild": {
+      "pid": 22172,
+      "parentPid": 14940,
+      "name": "vctip.exe",
+      "creationUtc": "2026-10-16T23:00:34.485629Z",
+      "executable": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\VCTIP.EXE",
+      "workingSetBytes": 64024576
+    }
+  },
+  "currentPid22172": null,
+  "cmakeAndClParentsAbsent": true,
+  "ramUsedPercent": 43.52,
+  "freeGiB": 18.02
+}

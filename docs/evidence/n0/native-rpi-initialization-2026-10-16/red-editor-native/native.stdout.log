@@ -1,0 +1,49 @@
+QT CommandLine Parser: QT command line parsing warned with message Unknown option 'skipWelcomeScreen'.. Has the QCommandLineParser had these options added to itStreamer: Storage drive (C) created.
+Streamer: Storage drive (D) created.
+Streamer: Storage drive (E) created.
+Streamer: Storage drive (F) created.
+System: AudioSystem created!
+RHISystem: Initializing RHI...
+RHISystem: 	Enumerated physical device: NVIDIA GeForce RTX 3090
+RHISystem: 	Using physical device: NVIDIA GeForce RTX 3090
+PhysXSystem: PhysXConfiguration was read from settings registry at pointer path "/Amazon/Gems/PhysX5/PhysXSystemConfiguration
+PhysXSystem: Default Scene Configuration was read from settings registry at pointer path "/Amazon/Gems/PhysX5/DefaultSceneConfiguration
+PhysXSystem: Debug::DebugConfiguration was read from settings registry at pointer path "/Amazon/Gems/PhysX5/Debug/PhysXDebugConfiguration
+AssetCatalog: Initializing asset catalog with root "F:\JericoEngine\JericoEngine\Projects\JEEditorFixture\Cache\pc"AssetCatalog: Loaded registry containing 4513 assets.
+QT CommandLine Parser: QT command line parsing warned with message Unknown option 'skipWelcomeScreen'.. Has the QCommandLineParser had these options added to itAsset System Connection: Asset Processor Connection IP: 127.0.0.1, port: 45643, branch token 0x05FD6BD0
+AssetProcessorConnection: 
+==================================================================
+AssetProcessorConnection: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Asset/AssetSystemComponent.cpp(704): 'bool __cdecl AzFramework::AssetSystem::AssetSystemComponent::WaitUntilAssetProcessorConnected(class std::chrono::duration<float,struct std::ratio<1,1> >)'
+AssetProcessorConnection: Network connection attempt failure, Connect returned error AzSockError::eASE_ECONNREFUSED
+AssetProcessorConnection: ==================================================================
+AssetSystem: Ping time to asset processor: 0.23 milliseconds
+Editor: Connected to Asset Processor
+AssetSystem: Ping time to asset processor: 0.24 milliseconds
+Editor: CriticalAssetsCompiled
+AssetCatalog: Initializing asset catalog with root "F:\JericoEngine\JericoEngine\Projects\JEEditorFixture\Cache\pc"AssetCatalog: Loaded registry containing 4477 assets.
+<20:14:01> BackupNameAttachment=" Build(0) 16 Oct 26 (20 14 01)"  -- used by backup system
+<20:14:01> Log Started at Fri Oct 16 20:14:01 2026
+<20:14:01> Built on Oct 14 2026 22:00:40
+<20:14:01> Running 64 bit Windows version
+<20:14:01> FileVersion: 0.0.0.0
+<20:14:01> ProductVersion: 0.0.0.0
+<20:14:01> Using Microsoft (tm) C++ Standard Library implementation
+<20:14:01> [Warning] Config file game.cfg not found!
+<20:14:01> creating CVarGroups from directory 'Config/CVarGroups' ...
+<20:14:01> Loading Config file user.cfg (F:/JericoEngine/JericoEngine/Projects/JEEditorFixture/Cache/pc/config/user.cfg)
+<20:14:01> GameName: JEEditorFixture
+<20:14:01> BuildTime: Oct 14 2026 22:00:40
+<20:14:01> Using FreeType 2.11.1
+<20:14:02> Current Language: Spanish 
+<20:14:02> Microsoft Windows 11 Pro|C:\WINDOWS|\Device\Harddisk3\Partition2 10.0.26300
+<20:14:02> Local time is 20:14:02 10/16/26, system running for 2426 minutes
+<20:14:02> 32679MB phys. memory installed, 20877MB paging available
+<20:14:02> Current display mode is 1920x1080x32, (Unknown graphics card)
+<20:14:02> IBM enhanced (101/102-key) keyboard and 6+ button mouse installed
+<20:14:02> --------------------------------------------------------------------------------
+<20:14:05> [Error] (AssetUtils) - Could not compile asset 'shaders/sceneandviewsrgs.azshader', status = 1.
+<20:14:08> [Error] (AssetUtils) - Unable to find product asset 'shaders/sceneandviewsrgs.azshader'. Has the source asset finished building?
+<20:14:08> [Error] (RPI system) - Failed to load RPI system asset shaders/sceneandviewsrgs.azshader
+<20:14:36> project_path = F:\JericoEngine\JericoEngine\Projects\JEEditorFixture
+<20:14:36> sys_localization_folder = Localization

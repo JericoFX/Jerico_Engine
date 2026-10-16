@@ -124,6 +124,7 @@ namespace EditorInternal
         outModules.emplace_back(JE::Geometry::CreateAuthoringModule());
         outModules.emplace_back(JE::Editor::Camera::CreateAuthoringModule());
         outModules.emplace_back(JE::World::Camera::Debug::CreateDebugModule());
+        outModules.emplace_back(JE::Editor::RenderIntegration::CreateRpiEditorModule());
         outModules.emplace_back(JE::Render::Integration::CreateBootstrapModule());
         outModules.emplace_back(JE::Editor::RenderIntegration::CreateAuthoringModule());
         outModules.emplace_back(JE::Assets::Prefab::CreateToolsModule());

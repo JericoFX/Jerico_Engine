@@ -36,7 +36,6 @@ if(PAL_TRAIT_BUILD_HOST_TOOLS)
         RUNTIME_DEPENDENCIES
             Gem::Atom_RHI_Vulkan.Private
             Gem::Atom_RHI.Private
-            Gem::Atom_RPI.Editor
             JE::RenderAssetBuilders
             Gem::Atom_Feature_Common.Editor
             Gem::AtomToolsFramework.Editor

@@ -1,0 +1,70 @@
+Launcher: Running project "JEEditorFixture"
+The project name has been successfully set in the Settings Registry at key "/O3DE/Runtime/Manifest/Project/project_name" for Launcher target "JEEditorFixture_GameLauncher"
+Launcher: The asset cache folder of F:\JericoEngine\JericoEngine\Projects\JEEditorFixture\Cache\pc has been successfully read from the Settings Registry
+Launcher: 
+==================================================================
+Launcher: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzGameFramework/AzGameFramework/Application/GameApplication.cpp(149): 'void __cdecl AzGameFramework::GameApplication::StartCommon(class AZ::Entity *)'
+Launcher: Console-mode was requested but not supported on this platform
+
+Launcher: ==================================================================
+Streamer: Storage drive (C) created.
+Streamer: Storage drive (F) created.
+System: AudioSystem created!
+RHISystem: Initializing RHI...
+RHISystem: 	Enumerated physical device: NVIDIA GeForce RTX 3090
+RHISystem: 	Using physical device: NVIDIA GeForce RTX 3090
+PhysXSystem: PhysXConfiguration was read from settings registry at pointer path "/Amazon/Gems/PhysX5/PhysXSystemConfiguration
+PhysXSystem: Default Scene Configuration was read from settings registry at pointer path "/Amazon/Gems/PhysX5/DefaultSceneConfiguration
+PhysXSystem: Debug::DebugConfiguration was read from settings registry at pointer path "/Amazon/Gems/PhysX5/Debug/PhysXDebugConfiguration
+AssetCatalog: Initializing asset catalog with root "F:\JericoEngine\JericoEngine\Projects\JEEditorFixture\Cache\pc"AssetCatalog: Loaded registry containing 4513 assets.
+AssetCatalog: Initializing asset catalog with root "F:\JericoEngine\JericoEngine\Projects\JEEditorFixture\Cache\pc"AssetCatalog: Loaded registry containing 4513 assets.
+Launcher: CriticalAssetsCompiled
+Launcher: Application is configured to use device local files at F:\JericoEngine\JericoEngine\Projects\JEEditorFixture\Cache\pc
+Launcher: Log and cache files will be written to device storage
+<20:31:50> BackupNameAttachment=" Build(0) 16 Oct 26 (20 31 50)"  -- used by backup system
+<20:31:50> Log Started at Fri Oct 16 20:31:50 2026
+<20:31:50> Built on Oct 14 2026 22:00:40
+<20:31:50> Running 64 bit Windows version
+<20:31:50> FileVersion: 0.0.0.0
+<20:31:50> ProductVersion: 0.0.0.0
+<20:31:50> Using Microsoft (tm) C++ Standard Library implementation
+<20:31:50> [Warning] Config file game.cfg not found!
+<20:31:50> creating CVarGroups from directory 'Config/CVarGroups' ...
+<20:31:50> Loading Config file user.cfg (F:/JericoEngine/JericoEngine/Projects/JEEditorFixture/Cache/pc/config/user.cfg)
+<20:31:50> GameName: JEEditorFixture
+<20:31:50> BuildTime: Oct 14 2026 22:00:40
+<20:31:50> Using FreeType 2.11.1
+<20:31:51> SetGlobalState 1->3 'INIT'->'LEVEL_LOAD_PREPARE' 0.4 seconds
+<20:31:51> SetGlobalState 3->4 'LEVEL_LOAD_PREPARE'->'LEVEL_LOAD_START' 0.0 seconds
+<20:31:51> SetGlobalState 4->8 'LEVEL_LOAD_START'->'LEVEL_LOAD_PRECACHE' 0.0 seconds
+<20:31:51> SetGlobalState 8->10 'LEVEL_LOAD_PRECACHE'->'LEVEL_LOAD_END' 0.0 seconds
+<20:31:51> Game Level Load Time: [0.0.0.0] Level Levels/JEEditorFixture/JEEditorFixture.spawnable loaded in 0.00 seconds
+<20:31:51> Executing command from command line: 
+LoadLevel levels/jematerialcooknative5/jematerialcooknative5.spawnable
+<20:31:51> [CONSOLE] Executing console command 'LoadLevel levels/jematerialcooknative5/jematerialcooknative5.spawnable'
+<20:31:51> SetGlobalState 10->3 'LEVEL_LOAD_END'->'LEVEL_LOAD_PREPARE' 0.0 seconds
+<20:31:51> SetGlobalState 3->4 'LEVEL_LOAD_PREPARE'->'LEVEL_LOAD_START' 0.0 seconds
+<20:31:51> SetGlobalState 4->8 'LEVEL_LOAD_START'->'LEVEL_LOAD_PRECACHE' 0.0 seconds
+<20:31:51> SetGlobalState 8->10 'LEVEL_LOAD_PRECACHE'->'LEVEL_LOAD_END' 0.0 seconds
+<20:31:51> Game Level Load Time: [0.0.0.0] Level levels/jematerialcooknative5/jematerialcooknative5.spawnable loaded in 0.00 seconds (Chained)
+<20:32:11> [Warning] (RPI) - Failed to initialize PipelineState for DynamicDrawContext
+<20:32:11> System Shutdown
+Streamer: Storage drive (F) destroyed.
+Streamer: Storage drive (C) destroyed.
+NameDictionary: 	Leaked Name [  1 reference(s)]: hash 0x90920A57, 'NoFloat16'
+System: 
+==================================================================
+System: Trace::Assert
+ F:/JericoEngine/JericoEngine/Code/Framework/AzCore/AzCore/Name/NameDictionary.cpp(127): (12044) '__cdecl AZ::NameDictionary::~NameDictionary(void)'
+System: AZ::NameDictionary still has active name references. See debug output for the list of leaked names.
+System: ------------------------------------------------
+System: F:\JericoEngine\JericoEngine\Code\Framework\AzCore\AzCore\Name\NameDictionary.cpp (128) : AZ::NameDictionary::~NameDictionary
+System: F:\JericoEngine\JericoEngine\Code\Framework\AzCore\AzCore\Component\ComponentApplication.cpp (570) : AZ::ComponentApplication::~ComponentApplication
+System: F:\JericoEngine\JericoEngine\Code\Framework\AzFramework\AzFramework\Application\Application.cpp (208) : AzFramework::Application::~Application
+System: F:\JericoEngine\JericoEngine\Code\LauncherUnified\Launcher.cpp (697) : O3DELauncher::Run
+System: F:\JericoEngine\JericoEngine\Code\LauncherUnified\Platform\Windows\Launcher_Windows.cpp (41) : WinMain
+System: D:\a\_work\1\s\src\vctools\crt\vcstartup\src\startup\exe_common.inl (288) : __scrt_common_main_seh
+System: 00007FFC2C56DDA7 (KERNEL32) : BaseThreadInitThunk
+System: 00007FFC2D81EE4C (ntdll) : RtlUserThreadStart
+System: ==================================================================

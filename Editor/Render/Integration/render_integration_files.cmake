@@ -1,6 +1,8 @@
 # Copyright (c) Contributors to the Open 3D Engine Project.
 # SPDX-License-Identifier: Apache-2.0 OR MIT
 set(FILES
+    Source/RPI/EditorModule.cpp
+    ../../../Engine/Render/Integration/Source/RPI/RPISystemComponent.cpp
     Include/JE/Editor/RenderIntegration/RenderIntegrationExports.h
     Include/JE/Editor/RenderIntegration/RenderIntegrationModule.h
     Include/JE/Editor/RenderIntegration/AssetProcessingModule.h

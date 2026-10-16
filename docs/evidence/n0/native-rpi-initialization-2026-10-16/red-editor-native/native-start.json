@@ -1,0 +1,29 @@
+{
+  "utc": "2026-10-16T23:13:31.9933449Z",
+  "owner": "/root",
+  "nativeOwner": "/root",
+  "kind": "Editor",
+  "backend": "vulkan",
+  "pid": 22592,
+  "creationUtc": "2026-10-16T23:13:31.9490220Z",
+  "executable": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Editor.exe",
+  "argv": [
+    "--project-path",
+    "F:/JericoEngine/JericoEngine/Projects/JEEditorFixture",
+    "--rhi=vulkan",
+    "--skipWelcomeScreen",
+    "F:/JericoEngine/JericoEngine/Projects/JEEditorFixture/Levels/JEMaterialCookNative5/JEMaterialCookNative5.prefab"
+  ],
+  "cwd": "F:\\JericoEngine\\JericoEngine",
+  "exeSHA256": "C9A6DB2876168435FCFA63BC1F09AFD8A15719930735938BD82749F91E8BC2B3",
+  "editorMaterialsSHA256": "6BFEED286F0E802731FA9F31935B7F625D4AE0E145648E1CF7C053DAAD5C4575",
+  "nativeBuilderSHA256": "9712DB080A2AF5EEC74C7A0E302C301B7929F0528581986F4DC6A46034573812",
+  "freezeSHA256": "493CF7F87E7F3684A4051AB0ADCCDDDCFEA2A5C99AD269E173AD1F94B139B7FF",
+  "sourceCount": 14062,
+  "protectedCount": 40,
+  "ramBeforePercent": 44.17,
+  "environment": "Inherited task PowerShell environment; no new PATH/toolchain/global setting mutation.",
+  "nativeExitObserver": true,
+  "launchNormalForAuthorizedInteractiveVisualCheck": true,
+  "profileNotShipping": true
+}

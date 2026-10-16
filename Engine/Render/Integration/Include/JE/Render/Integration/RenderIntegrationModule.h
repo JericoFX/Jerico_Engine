@@ -29,5 +29,6 @@ namespace JE::Render::Integration
             AZ::ComponentTypeList GetRequiredSystemComponents() const override;
         };
     JE_RENDER_INTEGRATION_API AZ::Module* CreateRuntimeModule();
+    JE_RENDER_INTEGRATION_API AZ::Module* CreateRpiRuntimeModule();
     JE_RENDER_INTEGRATION_API AZ::Module* CreateBootstrapModule(bool requireRendererSystem = true);
 } // namespace JE::Render::Integration

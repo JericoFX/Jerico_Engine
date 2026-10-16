@@ -1,0 +1,502 @@
+{
+  "utc": "2026-10-16T23:31:08.1199127Z",
+  "owner": "/root",
+  "pid": 25256,
+  "creationUtc": "2026-10-16T23:26:58.2388900Z",
+  "nativeExit": 0,
+  "elapsedSeconds": 249.8998728,
+  "stoppedByRamGuard": false,
+  "samples": [
+    {
+      "workingSetBytes": 391012352,
+      "privateBytes": 331661312,
+      "utc": "2026-10-16T23:27:01.3863842Z",
+      "ramPercent": 45.2
+    },
+    {
+      "workingSetBytes": 391434240,
+      "privateBytes": 332099584,
+      "utc": "2026-10-16T23:27:04.4412760Z",
+      "ramPercent": 46.83
+    },
+    {
+      "workingSetBytes": 390385664,
+      "privateBytes": 331051008,
+      "utc": "2026-10-16T23:27:07.5004992Z",
+      "ramPercent": 48.14
+    },
+    {
+      "workingSetBytes": 390385664,
+      "privateBytes": 331051008,
+      "utc": "2026-10-16T23:27:10.5469119Z",
+      "ramPercent": 48.2
+    },
+    {
+      "workingSetBytes": 390385664,
+      "privateBytes": 331051008,
+      "utc": "2026-10-16T23:27:13.6045602Z",
+      "ramPercent": 48.47
+    },
+    {
+      "workingSetBytes": 390385664,
+      "privateBytes": 331051008,
+      "utc": "2026-10-16T23:27:16.6675935Z",
+      "ramPercent": 48.4
+    },
+    {
+      "workingSetBytes": 390385664,
+      "privateBytes": 331051008,
+      "utc": "2026-10-16T23:27:19.7250986Z",
+      "ramPercent": 48.43
+    },
+    {
+      "workingSetBytes": 390516736,
+      "privateBytes": 331182080,
+      "utc": "2026-10-16T23:27:22.7767287Z",
+      "ramPercent": 48.33
+    },
+    {
+      "workingSetBytes": 390488064,
+      "privateBytes": 331190272,
+      "utc": "2026-10-16T23:27:25.8324708Z",
+      "ramPercent": 51.25
+    },
+    {
+      "workingSetBytes": 390520832,
+      "privateBytes": 331354112,
+      "utc": "2026-10-16T23:27:28.9050706Z",
+      "ramPercent": 55.09
+    },
+    {
+      "workingSetBytes": 390602752,
+      "privateBytes": 331354112,
+      "utc": "2026-10-16T23:27:31.9629133Z",
+      "ramPercent": 58.39
+    },
+    {
+      "workingSetBytes": 390520832,
+      "privateBytes": 331354112,
+      "utc": "2026-10-16T23:27:35.0563891Z",
+      "ramPercent": 61.11
+    },
+    {
+      "workingSetBytes": 390602752,
+      "privateBytes": 331354112,
+      "utc": "2026-10-16T23:27:38.1513139Z",
+      "ramPercent": 63.45
+    },
+    {
+      "workingSetBytes": 390631424,
+      "privateBytes": 331423744,
+      "utc": "2026-10-16T23:27:41.2140843Z",
+      "ramPercent": 65.67
+    },
+    {
+      "workingSetBytes": 390664192,
+      "privateBytes": 332013568,
+      "utc": "2026-10-16T23:27:44.2962570Z",
+      "ramPercent": 68.63
+    },
+    {
+      "workingSetBytes": 573415424,
+      "privateBytes": 866009088,
+      "utc": "2026-10-16T23:27:47.3944921Z",
+      "ramPercent": 69.83
+    },
+    {
+      "workingSetBytes": 735858688,
+      "privateBytes": 1593270272,
+      "utc": "2026-10-16T23:27:50.4909437Z",
+      "ramPercent": 70.18
+    },
+    {
+      "workingSetBytes": 822632448,
+      "privateBytes": 1885822976,
+      "utc": "2026-10-16T23:27:53.5836537Z",
+      "ramPercent": 70.4
+    },
+    {
+      "workingSetBytes": 830566400,
+      "privateBytes": 1802227712,
+      "utc": "2026-10-16T23:27:56.6761281Z",
+      "ramPercent": 69.75
+    },
+    {
+      "workingSetBytes": 832897024,
+      "privateBytes": 1792671744,
+      "utc": "2026-10-16T23:27:59.7707680Z",
+      "ramPercent": 70.51
+    },
+    {
+      "workingSetBytes": 832307200,
+      "privateBytes": 1779961856,
+      "utc": "2026-10-16T23:28:02.8618196Z",
+      "ramPercent": 70.17
+    },
+    {
+      "workingSetBytes": 832782336,
+      "privateBytes": 1780146176,
+      "utc": "2026-10-16T23:28:05.9578000Z",
+      "ramPercent": 71.02
+    },
+    {
+      "workingSetBytes": 831094784,
+      "privateBytes": 1769447424,
+      "utc": "2026-10-16T23:28:09.0430242Z",
+      "ramPercent": 70.6
+    },
+    {
+      "workingSetBytes": 830619648,
+      "privateBytes": 1764536320,
+      "utc": "2026-10-16T23:28:12.1390547Z",
+      "ramPercent": 71.53
+    },
+    {
+      "workingSetBytes": 830812160,
+      "privateBytes": 1764667392,
+      "utc": "2026-10-16T23:28:15.2279464Z",
+      "ramPercent": 70.85
+    },
+    {
+      "workingSetBytes": 830337024,
+      "privateBytes": 1760423936,
+      "utc": "2026-10-16T23:28:18.3174104Z",
+      "ramPercent": 70.65
+    },
+    {
+      "workingSetBytes": 830439424,
+      "privateBytes": 1760423936,
+      "utc": "2026-10-16T23:28:21.4092331Z",
+      "ramPercent": 70.9
+    },
+    {
+      "workingSetBytes": 830562304,
+      "privateBytes": 1760370688,
+      "utc": "2026-10-16T23:28:24.5015681Z",
+      "ramPercent": 70.43
+    },
+    {
+      "workingSetBytes": 831279104,
+      "privateBytes": 1760956416,
+      "utc": "2026-10-16T23:28:27.5977127Z",
+      "ramPercent": 70.41
+    },
+    {
+      "workingSetBytes": 831762432,
+      "privateBytes": 1761509376,
+      "utc": "2026-10-16T23:28:30.6887258Z",
+      "ramPercent": 70.56
+    },
+    {
+      "workingSetBytes": 832598016,
+      "privateBytes": 1762308096,
+      "utc": "2026-10-16T23:28:33.7756971Z",
+      "ramPercent": 70.46
+    },
+    {
+      "workingSetBytes": 832692224,
+      "privateBytes": 1762390016,
+      "utc": "2026-10-16T23:28:36.8760318Z",
+      "ramPercent": 70.32
+    },
+    {
+      "workingSetBytes": 832880640,
+      "privateBytes": 1762000896,
+      "utc": "2026-10-16T23:28:39.9599156Z",
+      "ramPercent": 70.25
+    },
+    {
+      "workingSetBytes": 832819200,
+      "privateBytes": 1761869824,
+      "utc": "2026-10-16T23:28:43.0566316Z",
+      "ramPercent": 70.09
+    },
+    {
+      "workingSetBytes": 832991232,
+      "privateBytes": 1761878016,
+      "utc": "2026-10-16T23:28:46.1439432Z",
+      "ramPercent": 70.33
+    },
+    {
+      "workingSetBytes": 833007616,
+      "privateBytes": 1761878016,
+      "utc": "2026-10-16T23:28:49.2334422Z",
+      "ramPercent": 70.81
+    },
+    {
+      "workingSetBytes": 833056768,
+      "privateBytes": 1762402304,
+      "utc": "2026-10-16T23:28:52.3228793Z",
+      "ramPercent": 70.53
+    },
+    {
+      "workingSetBytes": 833208320,
+      "privateBytes": 1762402304,
+      "utc": "2026-10-16T23:28:55.4167483Z",
+      "ramPercent": 70.35
+    },
+    {
+      "workingSetBytes": 833253376,
+      "privateBytes": 1762467840,
+      "utc": "2026-10-16T23:28:58.5088383Z",
+      "ramPercent": 70.51
+    },
+    {
+      "workingSetBytes": 834011136,
+      "privateBytes": 1770995712,
+      "utc": "2026-10-16T23:29:01.5995811Z",
+      "ramPercent": 70.63
+    },
+    {
+      "workingSetBytes": 844783616,
+      "privateBytes": 1786793984,
+      "utc": "2026-10-16T23:29:04.6871679Z",
+      "ramPercent": 71.28
+    },
+    {
+      "workingSetBytes": 844136448,
+      "privateBytes": 1774854144,
+      "utc": "2026-10-16T23:29:07.7724139Z",
+      "ramPercent": 71.04
+    },
+    {
+      "workingSetBytes": 853520384,
+      "privateBytes": 1781305344,
+      "utc": "2026-10-16T23:29:10.8761400Z",
+      "ramPercent": 71.21
+    },
+    {
+      "workingSetBytes": 857341952,
+      "privateBytes": 1785028608,
+      "utc": "2026-10-16T23:29:13.9732324Z",
+      "ramPercent": 71.18
+    },
+    {
+      "workingSetBytes": 858447872,
+      "privateBytes": 1785778176,
+      "utc": "2026-10-16T23:29:17.0703470Z",
+      "ramPercent": 70.88
+    },
+    {
+      "workingSetBytes": 858927104,
+      "privateBytes": 1786241024,
+      "utc": "2026-10-16T23:29:20.1621703Z",
+      "ramPercent": 71.06
+    },
+    {
+      "workingSetBytes": 860430336,
+      "privateBytes": 1787994112,
+      "utc": "2026-10-16T23:29:23.2504448Z",
+      "ramPercent": 70.91
+    },
+    {
+      "workingSetBytes": 860844032,
+      "privateBytes": 1788329984,
+      "utc": "2026-10-16T23:29:26.3512967Z",
+      "ramPercent": 71.18
+    },
+    {
+      "workingSetBytes": 861523968,
+      "privateBytes": 1788964864,
+      "utc": "2026-10-16T23:29:29.4449748Z",
+      "ramPercent": 71.62
+    },
+    {
+      "workingSetBytes": 861569024,
+      "privateBytes": 1789030400,
+      "utc": "2026-10-16T23:29:32.5406712Z",
+      "ramPercent": 71.7
+    },
+    {
+      "workingSetBytes": 862081024,
+      "privateBytes": 1789612032,
+      "utc": "2026-10-16T23:29:35.6217723Z",
+      "ramPercent": 70.62
+    },
+    {
+      "workingSetBytes": 863395840,
+      "privateBytes": 1790664704,
+      "utc": "2026-10-16T23:29:38.7012698Z",
+      "ramPercent": 69.59
+    },
+    {
+      "workingSetBytes": 863911936,
+      "privateBytes": 1791152128,
+      "utc": "2026-10-16T23:29:41.7571810Z",
+      "ramPercent": 69.34
+    },
+    {
+      "workingSetBytes": 864002048,
+      "privateBytes": 1791086592,
+      "utc": "2026-10-16T23:29:44.8109637Z",
+      "ramPercent": 69.31
+    },
+    {
+      "workingSetBytes": 863985664,
+      "privateBytes": 1790971904,
+      "utc": "2026-10-16T23:29:47.8624745Z",
+      "ramPercent": 69.42
+    },
+    {
+      "workingSetBytes": 863952896,
+      "privateBytes": 1791037440,
+      "utc": "2026-10-16T23:29:50.9207252Z",
+      "ramPercent": 69.4
+    },
+    {
+      "workingSetBytes": 864002048,
+      "privateBytes": 1790910464,
+      "utc": "2026-10-16T23:29:53.9892354Z",
+      "ramPercent": 69.53
+    },
+    {
+      "workingSetBytes": 864178176,
+      "privateBytes": 1791041536,
+      "utc": "2026-10-16T23:29:57.0543067Z",
+      "ramPercent": 69.52
+    },
+    {
+      "workingSetBytes": 864215040,
+      "privateBytes": 1791074304,
+      "utc": "2026-10-16T23:30:00.1183559Z",
+      "ramPercent": 69.51
+    },
+    {
+      "workingSetBytes": 865828864,
+      "privateBytes": 1792315392,
+      "utc": "2026-10-16T23:30:03.1738557Z",
+      "ramPercent": 69.51
+    },
+    {
+      "workingSetBytes": 865767424,
+      "privateBytes": 1784438784,
+      "utc": "2026-10-16T23:30:06.2320801Z",
+      "ramPercent": 69.6
+    },
+    {
+      "workingSetBytes": 865771520,
+      "privateBytes": 1784438784,
+      "utc": "2026-10-16T23:30:09.2927724Z",
+      "ramPercent": 69.53
+    },
+    {
+      "workingSetBytes": 865751040,
+      "privateBytes": 1784307712,
+      "utc": "2026-10-16T23:30:12.3596136Z",
+      "ramPercent": 69.44
+    },
+    {
+      "workingSetBytes": 973996032,
+      "privateBytes": 2049757184,
+      "utc": "2026-10-16T23:30:15.4119024Z",
+      "ramPercent": 70.02
+    },
+    {
+      "workingSetBytes": 982597632,
+      "privateBytes": 2058248192,
+      "utc": "2026-10-16T23:30:18.4729678Z",
+      "ramPercent": 70.08
+    },
+    {
+      "workingSetBytes": 966565888,
+      "privateBytes": 2006921216,
+      "utc": "2026-10-16T23:30:21.5359438Z",
+      "ramPercent": 70.02
+    },
+    {
+      "workingSetBytes": 961622016,
+      "privateBytes": 1993986048,
+      "utc": "2026-10-16T23:30:24.5973433Z",
+      "ramPercent": 69.92
+    },
+    {
+      "workingSetBytes": 962125824,
+      "privateBytes": 1994248192,
+      "utc": "2026-10-16T23:30:27.6594375Z",
+      "ramPercent": 69.91
+    },
+    {
+      "workingSetBytes": 962330624,
+      "privateBytes": 1994117120,
+      "utc": "2026-10-16T23:30:30.7246768Z",
+      "ramPercent": 69.92
+    },
+    {
+      "workingSetBytes": 965754880,
+      "privateBytes": 1997520896,
+      "utc": "2026-10-16T23:30:33.7791675Z",
+      "ramPercent": 69.92
+    },
+    {
+      "workingSetBytes": 965853184,
+      "privateBytes": 1998045184,
+      "utc": "2026-10-16T23:30:36.8378376Z",
+      "ramPercent": 69.92
+    },
+    {
+      "workingSetBytes": 965984256,
+      "privateBytes": 1998102528,
+      "utc": "2026-10-16T23:30:39.9013800Z",
+      "ramPercent": 69.9
+    },
+    {
+      "workingSetBytes": 966139904,
+      "privateBytes": 1998102528,
+      "utc": "2026-10-16T23:30:42.9569833Z",
+      "ramPercent": 69.94
+    },
+    {
+      "workingSetBytes": 966062080,
+      "privateBytes": 1997963264,
+      "utc": "2026-10-16T23:30:46.0166559Z",
+      "ramPercent": 69.96
+    },
+    {
+      "workingSetBytes": 936759296,
+      "privateBytes": 1971154944,
+      "utc": "2026-10-16T23:30:49.0721247Z",
+      "ramPercent": 69.84
+    },
+    {
+      "workingSetBytes": 936931328,
+      "privateBytes": 1912307712,
+      "utc": "2026-10-16T23:30:52.1321011Z",
+      "ramPercent": 69.87
+    },
+    {
+      "workingSetBytes": 930746368,
+      "privateBytes": 1898872832,
+      "utc": "2026-10-16T23:30:55.1898983Z",
+      "ramPercent": 69.9
+    },
+    {
+      "workingSetBytes": 930668544,
+      "privateBytes": 1898741760,
+      "utc": "2026-10-16T23:30:58.2547652Z",
+      "ramPercent": 69.9
+    },
+    {
+      "workingSetBytes": 930734080,
+      "privateBytes": 1898807296,
+      "utc": "2026-10-16T23:31:01.3176395Z",
+      "ramPercent": 69.9
+    },
+    {
+      "workingSetBytes": 930574336,
+      "privateBytes": 1898545152,
+      "utc": "2026-10-16T23:31:04.3819369Z",
+      "ramPercent": 69.89
+    },
+    {
+      "workingSetBytes": 930586624,
+      "privateBytes": 1898610688,
+      "utc": "2026-10-16T23:31:07.4491622Z",
+      "ramPercent": 70.05
+    }
+  ],
+  "stdoutSHA256": "4158CF88ABEDBEF82922CD6250C4C3BC9B0117DE47C15781A4488AD5EB3B1B7B",
+  "stderrSHA256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+  "ownProcessHasExited": true,
+  "ownPIDStillPresent": false,
+  "noProductAcceptanceFromExitAlone": true
+}

@@ -1,0 +1,113 @@
+{
+  "capturedUtc": "2026-10-16T23:19:13.8992975Z",
+  "scope": "Read-only correction of AP_GUI cohort attribution; no build/test/UI/process control",
+  "priorReceiptPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\editor98-red-log-diagnosis\\log-diagnosis.json",
+  "priorReceiptSHA256": "8D68E0C45554547BF1BDEEF5BDCD228B7D53DADBDECB1C692337AC12A9C6A999",
+  "correction": {
+    "note": "Content timestamps take precedence for cohort attribution; filesystem LWT is earlier than the last embedded event and is recorded as a timestamp inconsistency, not proof the content is stale.",
+    "priorClassification": "AP_GUI was labeled stale in missingEvidence using old 21:05Z LWT, despite the receipt pin already recording current hash and 23:14:20Z LWT",
+    "filesystemLastWriteUtc": "2026-10-16T23:14:20.6561563Z",
+    "correctedClassification": "AP_GUI current cohort content confirmed by embedded Unix-epoch events from 23:14:24.670Z through 23:14:25.614Z and later catalog completion at 23:14:47.452Z"
+  },
+  "apGuiLog": {
+    "copiedPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\editor98-red-log-diagnosis\\AP_GUI.log.current-content-rev2.log",
+    "sourceRehashAfterCopy": "901F6DA1C5220219C605CCEF66A16DC1195E4259CF226F1E93A6A592893FDDA1",
+    "shaderDependencyInputFolderWarnings": [
+      "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\RPI\\BitOperations.azsli",
+      "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\RPI\\Math.azsli",
+      "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\RPI\\ShaderResourceGroups\\DefaultSceneSrg.azsli",
+      "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\RPI\\ShaderResourceGroups\\UnusedFallbackDrawSrg.azsli",
+      "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\RPI\\TangentSpace.azsli",
+      "F:\\JericoEngine\\JericoEngine\\Gems\\Terrain\\Assets\\Shaders\\Terrain\\SceneSrg.azsli"
+    ],
+    "copySHA256": "901F6DA1C5220219C605CCEF66A16DC1195E4259CF226F1E93A6A592893FDDA1",
+    "deletedProductMessages": [
+      "~~1792192465608~~1~~000000000000513C~~AssetProcessor~~Deleted product file F:/JericoEngine/JericoEngine/Projects/JEEditorFixture/Cache/pc/shaders/sceneandviewsrgs_vulkan.azslin",
+      "~~1792192465609~~1~~000000000000513C~~AssetProcessor~~Deleted product file F:/JericoEngine/JericoEngine/Projects/JEEditorFixture/Cache/pc/shaders/sceneandviewsrgs_vulkan.ia.json",
+      "~~1792192465610~~1~~000000000000513C~~AssetProcessor~~Deleted product file F:/JericoEngine/JericoEngine/Projects/JEEditorFixture/Cache/pc/shaders/sceneandviewsrgs_vulkan.om.json",
+      "~~1792192465611~~1~~000000000000513C~~AssetProcessor~~Deleted product file F:/JericoEngine/JericoEngine/Projects/JEEditorFixture/Cache/pc/shaders/sceneandviewsrgs_vulkan.srg.json",
+      "~~1792192465612~~1~~000000000000513C~~AssetProcessor~~Deleted product file F:/JericoEngine/JericoEngine/Projects/JEEditorFixture/Cache/pc/shaders/sceneandviewsrgs_vulkan.options.json",
+      "~~1792192465612~~1~~000000000000513C~~AssetProcessor~~Deleted product file F:/JericoEngine/JericoEngine/Projects/JEEditorFixture/Cache/pc/shaders/sceneandviewsrgs_vulkan.bindingdep.json",
+      "~~1792192465613~~1~~000000000000513C~~AssetProcessor~~Deleted product file F:/JericoEngine/JericoEngine/Projects/JEEditorFixture/Cache/pc/shaders/sceneandviewsrgs_vulkan.hlsl",
+      "~~1792192465614~~1~~000000000000513C~~AssetProcessor~~Deleted product file F:/JericoEngine/JericoEngine/Projects/JEEditorFixture/Cache/pc/shaders/sceneandviewsrgs_vulkan_0.azshadervariant",
+      "~~1792192465614~~1~~000000000000513C~~AssetProcessor~~Deleted product file F:/JericoEngine/JericoEngine/Projects/JEEditorFixture/Cache/pc/shaders/sceneandviewsrgs.azshader"
+    ],
+    "sourcePath": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\user\\log\\AP_GUI.log",
+    "sourceBytes": 1101199,
+    "internalSceneEventTimesUtc": [
+      "2026-10-16T23:14:25.6080000Z",
+      "2026-10-16T23:14:25.6090000Z",
+      "2026-10-16T23:14:25.6100000Z",
+      "2026-10-16T23:14:25.6110000Z",
+      "2026-10-16T23:14:25.6120000Z",
+      "2026-10-16T23:14:25.6130000Z",
+      "2026-10-16T23:14:25.6140000Z"
+    ],
+    "copyBytes": 1101199,
+    "matchingCopy": true,
+    "sourceSHA256": "901F6DA1C5220219C605CCEF66A16DC1195E4259CF226F1E93A6A592893FDDA1",
+    "sourceRemovalOrBuilderNoEmitMessages": [
+      "~~1792192465608~~1~~000000000000513C~~AssetProcessor~~Deleting file shaders/sceneandviewsrgs_vulkan.azslin because either its source file Shaders/SceneAndViewSrgs.shader was removed or the builder did not emit this job.",
+      "~~1792192465609~~1~~000000000000513C~~AssetProcessor~~Deleting file shaders/sceneandviewsrgs_vulkan.ia.json because either its source file Shaders/SceneAndViewSrgs.shader was removed or the builder did not emit this job.",
+      "~~1792192465610~~1~~000000000000513C~~AssetProcessor~~Deleting file shaders/sceneandviewsrgs_vulkan.om.json because either its source file Shaders/SceneAndViewSrgs.shader was removed or the builder did not emit this job.",
+      "~~1792192465610~~1~~000000000000513C~~AssetProcessor~~Deleting file shaders/sceneandviewsrgs_vulkan.srg.json because either its source file Shaders/SceneAndViewSrgs.shader was removed or the builder did not emit this job.",
+      "~~1792192465611~~1~~000000000000513C~~AssetProcessor~~Deleting file shaders/sceneandviewsrgs_vulkan.options.json because either its source file Shaders/SceneAndViewSrgs.shader was removed or the builder did not emit this job.",
+      "~~1792192465612~~1~~000000000000513C~~AssetProcessor~~Deleting file shaders/sceneandviewsrgs_vulkan.bindingdep.json because either its source file Shaders/SceneAndViewSrgs.shader was removed or the builder did not emit this job.",
+      "~~1792192465612~~1~~000000000000513C~~AssetProcessor~~Deleting file shaders/sceneandviewsrgs_vulkan.hlsl because either its source file Shaders/SceneAndViewSrgs.shader was removed or the builder did not emit this job.",
+      "~~1792192465613~~1~~000000000000513C~~AssetProcessor~~Deleting file shaders/sceneandviewsrgs_vulkan_0.azshadervariant because either its source file Shaders/SceneAndViewSrgs.shader was removed or the builder did not emit this job.",
+      "~~1792192465614~~1~~000000000000513C~~AssetProcessor~~Deleting file shaders/sceneandviewsrgs.azshader because either its source file Shaders/SceneAndViewSrgs.shader was removed or the builder did not emit this job."
+    ]
+  },
+  "actualSourceAssets": [
+    {
+      "bytes": 761,
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\RPI\\Assets\\Shaders\\SceneAndViewSrgs.shader",
+      "lastWriteUtc": "2026-10-10T20:05:08.0977858Z",
+      "sha256": "FAC9F6ADD6605F11DD622417F07794E7BEB604044005C0389A84BD9ECC4CA03F"
+    },
+    {
+      "bytes": 556,
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\RPI\\Assets\\Shaders\\SceneAndViewSrgs.azsl",
+      "lastWriteUtc": "2026-10-10T20:05:08.0977858Z",
+      "sha256": "F9F55FC79080184A88CDAFCBBD012C2D9CE2A182DDD40C2ED670BC4B6BE0A271"
+    }
+  ],
+  "jobLogs": {
+    "searchedExactNamePattern": "*sceneandview*",
+    "currentWindowFiles": [
+      "engine.json-815265798-102624.log"
+    ],
+    "existingCurrentJobLog": {
+      "content": [
+        "~~1792192468231~~2~~00000000000030DC~~Settings Registry Builder~~Unable to copy setting /Amazon/AzCore/Bootstrap/project_path from AssetProcessor settings registry to local settings registry",
+        "~~1792192468239~~2~~00000000000030DC~~Settings Registry Builder~~Unable to copy setting /Amazon/AzCore/Bootstrap/project_path from AssetProcessor settings registry to local settings registry",
+        "~~1792192468247~~2~~00000000000030DC~~Settings Registry Builder~~Unable to copy setting /Amazon/AzCore/Bootstrap/project_path from AssetProcessor settings registry to local settings registry",
+        "~~1792192468254~~2~~00000000000030DC~~Settings Registry Builder~~Unable to copy setting /Amazon/AzCore/Bootstrap/project_path from AssetProcessor settings registry to local settings registry",
+        "~~1792192468261~~2~~00000000000030DC~~Settings Registry Builder~~Unable to copy setting /Amazon/AzCore/Bootstrap/project_path from AssetProcessor settings registry to local settings registry",
+        "~~1792192468268~~2~~00000000000030DC~~Settings Registry Builder~~Unable to copy setting /Amazon/AzCore/Bootstrap/project_path from AssetProcessor settings registry to local settings registry",
+        "~~1792192468276~~2~~00000000000030DC~~Settings Registry Builder~~Unable to copy setting /Amazon/AzCore/Bootstrap/project_path from AssetProcessor settings registry to local settings registry",
+        "~~1792192468283~~2~~00000000000030DC~~Settings Registry Builder~~Unable to copy setting /Amazon/AzCore/Bootstrap/project_path from AssetProcessor settings registry to local settings registry",
+        "~~1792192468290~~2~~00000000000030DC~~Settings Registry Builder~~Unable to copy setting /Amazon/AzCore/Bootstrap/project_path from AssetProcessor settings registry to local settings registry"
+      ],
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\user\\log\\JobLogs\\engine.json-815265798-102624.log",
+      "sha256": "E9A0ADD9240C406CA6785242FCB5E6D7403B8467917EA4606A293F44CBFA4368",
+      "matchingSceneLines": 0
+    }
+  },
+  "requestXmlSearch": {
+    "recentJobTempDirectories": 603,
+    "searchLiteral": "sceneandviewsrgs (extension omitted)",
+    "scope": "request.xml under JobTemp-* directories whose directory LWT fell in 2026-10-16T23:13:30Z..23:14:40Z",
+    "matches": 0
+  },
+  "findings": {
+    "runtime": "Editor.log still records compile status=1 at 23:14:05Z, missing product/RPI load failure at 23:14:08Z, and AV 0xC0000005 at 23:14:37Z.",
+    "notEstablished": "No per-source AP job UUID, builder GUID, backend-specific compiler error, or one-to-one causal link between the input-folder warnings and this source was recovered. The AP message itself offers two alternatives; current file presence rules out physical absence now but does not prove AP had scanned it as an input at that time.",
+    "confirmed": "The physical shader descriptor and AZSL source exist at Gems/Atom/RPI/Assets/Shaders/SceneAndViewSrgs.shader and .azsl. Current AP_GUI says AP deleted all emitted sceneandviewsrgs Vulkan products, including shaders/sceneandviewsrgs.azshader, because source was removed OR the builder did not emit the job. The surrounding AP log reports absolute RPI/Terrain .azsli paths outside input folders."
+  },
+  "resourceAndOwnership": {
+    "noBuildTestOrProcessControl": true,
+    "helpersOwned": 0,
+    "ownedEditorAndAPIdentitiesPreviouslyConfirmedAbsent": true
+  }
+}

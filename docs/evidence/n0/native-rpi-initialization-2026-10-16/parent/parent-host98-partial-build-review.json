@@ -1,0 +1,63 @@
+{
+  "utc": "2026-10-16T22:39:26.1627510Z",
+  "nativeWholeCommandExit": 1,
+  "state": "11 host completions before test-only C1083; not a whole build PASS",
+  "sourceMatches": true,
+  "targetCompletions": [
+    {
+      "target": "Editor",
+      "completed": true,
+      "line": "  Editor.vcxproj -> F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Editor.exe"
+    },
+    {
+      "target": "AssetProcessor",
+      "completed": true,
+      "line": "  AssetProcessor.vcxproj -> F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AssetProcessor.exe"
+    },
+    {
+      "target": "AssetProcessorBatch",
+      "completed": true,
+      "line": "  AssetProcessorBatch.vcxproj -> F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AssetProcessorBatch.exe"
+    },
+    {
+      "target": "AssetBuilder",
+      "completed": true,
+      "line": "  AssetBuilder.vcxproj -> F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AssetBuilder.exe"
+    },
+    {
+      "target": "JEEditorFixture.GameLauncher",
+      "completed": true,
+      "line": "  JEEditorFixture.GameLauncher.vcxproj -> F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\JEEditorFixture.GameLauncher.exe"
+    },
+    {
+      "target": "MaterialEditor",
+      "completed": true,
+      "line": "  MaterialEditor.vcxproj -> F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\MaterialEditor.exe"
+    },
+    {
+      "target": "MaterialCanvas",
+      "completed": true,
+      "line": "  MaterialCanvas.vcxproj -> F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\MaterialCanvas.exe"
+    },
+    {
+      "target": "PassCanvas",
+      "completed": true,
+      "line": "  PassCanvas.vcxproj -> F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\PassCanvas.exe"
+    },
+    {
+      "target": "ShaderManagementConsole",
+      "completed": true,
+      "line": "  ShaderManagementConsole.vcxproj -> F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\ShaderManagementConsole.exe"
+    },
+    {
+      "target": "AssetBundler",
+      "completed": true,
+      "line": "  AssetBundler.vcxproj -> F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AssetBundler.exe"
+    },
+    {
+      "target": "AssetBundlerBatch",
+      "completed": true,
+      "line": "  AssetBundlerBatch.vcxproj -> F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AssetBundlerBatch.exe"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "reviewer": "/root",
+  "approved": true,
+  "utc": "2026-10-16T23:47:18.4252447Z",
+  "scriptSha256": "17E334978BF0D389EA4FCFE64BE8779C28306AE8CBE10FAA022D580B8123F226",
+  "completionInputsSha256": "8F134D7D60476B1203BC6FA1828A1B6AF019422C25FA68187CB6F79AE933B6AC",
+  "nativeLease": "/root/validation_luna",
+  "pendingOnly": [
+    "pe-imports",
+    "loader"
+  ],
+  "configureBuildInstallRepeated": false,
+  "sourceFrozen": true,
+  "scope": "Repair exactly two stale regular generated provider DLL copies, preserve baseline32 and 588 evidence; then run the two pending phases."
+}

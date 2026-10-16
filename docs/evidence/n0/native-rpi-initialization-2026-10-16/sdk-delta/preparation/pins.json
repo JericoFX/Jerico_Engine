@@ -1,0 +1,72 @@
+[
+  {
+    "relative": "source/CMakeLists.txt",
+    "bytes": 5603,
+    "sha256": "69975FE551C5632CBFFC94F76DA5B78990C5C95F405C876F8DA175643F5A114D"
+  },
+  {
+    "relative": "source/main.cpp",
+    "bytes": 21527,
+    "sha256": "E60118196720630A279BBF40B46EAC15087A67899F110A2F4963B2F2174ED093"
+  },
+  {
+    "relative": "source/consumer_files.cmake",
+    "bytes": 25,
+    "sha256": "2F0ACA6BAD0CF988A388EC9D4664ED2E2D507B4E03958E23730768D314E3006E"
+  },
+  {
+    "relative": "source/project.json",
+    "bytes": 388,
+    "sha256": "3A7625CD2BE22DFD8B3C36C4C68932693611513A980111870371A291F12197C4"
+  },
+  {
+    "relative": "headers/JE/Render/Integration/RenderIntegrationModule.h",
+    "bytes": 1178,
+    "sha256": "1B830A371CDDB0C15965DAF75DBACBEF5F7652AFED7161B76E874E8D924AC074"
+  },
+  {
+    "relative": "headers/JE/Editor/RenderIntegration/RenderIntegrationModule.h",
+    "bytes": 427,
+    "sha256": "352D95EA3BC55CE6B41F67CFC812F64E6334CD6B5C5892108792B00582CD0E2C"
+  },
+  {
+    "relative": "recipe.json",
+    "bytes": 16574,
+    "sha256": "6B153CE1D33AC7CF4F6F9EB9DB955C44BCA41E243CFBAC7455FB1DF87FBF966F"
+  },
+  {
+    "relative": "baseline-runtime32-pins.json",
+    "bytes": 10238,
+    "sha256": "F3C14ACAB3FA24A22332277F4236E2C8ECCAC49B9C7FB1FB62C9DD79FDDD1A6F"
+  },
+  {
+    "relative": "baseline-boundary-pins.json",
+    "bytes": 5059,
+    "sha256": "EFDEB394EE58664614E80227B8036E06DB3E344315E5E10E7F9FF8E8393AFAEA"
+  },
+  {
+    "relative": "source.patch",
+    "bytes": 48919,
+    "sha256": "CCCFF52441FA92928780F488D1677EA4ADC1E18338606877B0902AFC97849CC1"
+  },
+  {
+    "relative": "inverse.patch",
+    "bytes": 48919,
+    "sha256": "1EB61A89341424D4C08022BD7D9C859F13D6D5369263FBE0A654E24519B86588"
+  },
+  {
+    "relative": "static-checks.json",
+    "bytes": 915,
+    "sha256": "05318B60C04059E3112B388CA366EE447B4CBDC455597BD80C8A761AE1A34D0E"
+  },
+  {
+    "relative": "patch-proof.json",
+    "bytes": 180,
+    "sha256": "72AD62C0FD46FDC53E35A69C26B1AF433AD0594BA37EE5BAAB632B8BB922C3DA"
+  },
+  {
+    "relative": "public-body-evidence.json",
+    "bytes": 2147,
+    "sha256": "C9C929188BF3B8FB633096DEE8230B3D6571501C4583DCD9CB4B96E66D45DF42"
+  }
+]

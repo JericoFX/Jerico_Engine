@@ -1,0 +1,51 @@
+{
+  "schema": "sdk98-delta-attempt-failure-v1",
+  "attempt": "execution-delta98-attempt1",
+  "timestampUtc": "2026-10-16T23:35:57.3649165Z",
+  "runner": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atom-next-native-scope-rev1\\validation-preparation\\atom-rpi98-sdk-delta-candidate\\RunSdkDelta98.ps1",
+    "sha256": "31903EC1D010DD36EF4D07E6CB4501B2816800A92F450C7CDC58395A00D07C79"
+  },
+  "binding": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\parent-sdk98-delta-binding-r5.json",
+    "sha256": "481564C33C6DEC28EDE9CECDA727B6971B54219772954039ABE2F70B9F693FF0"
+  },
+  "recipe": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atom-next-native-scope-rev1\\validation-preparation\\atom-rpi98-sdk-delta-candidate\\recipe.json",
+    "sha256": "6B153CE1D33AC7CF4F6F9EB9DB955C44BCA41E243CFBAC7455FB1DF87FBF966F"
+  },
+  "freeze": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\freeze98-green-r5.json",
+    "sha256": "D3C81B7804AB0658D82D319F7C109D025665FC3AE3B6C3EF1F35C9FB0898BA0A"
+  },
+  "invocation": {
+    "executable": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+    "arguments": [
+      "-NoProfile",
+      "-NonInteractive",
+      "-ExecutionPolicy",
+      "Bypass",
+      "-File",
+      "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atom-next-native-scope-rev1\\validation-preparation\\atom-rpi98-sdk-delta-candidate\\RunSdkDelta98.ps1",
+      "-Execute",
+      "-BindingPath",
+      "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\parent-sdk98-delta-binding-r5.json",
+      "-BindingSHA256",
+      "481564C33C6DEC28EDE9CECDA727B6971B54219772954039ABE2F70B9F693FF0"
+    ],
+    "shellExitCode": 1
+  },
+  "failure": {
+    "phase": "candidate manifest preflight, before any configure/build/loader phase",
+    "exception": "Join-Path : Cannot convert System.Object[] to System.String for ChildPath",
+    "location": "RunSdkDelta98.ps1:12",
+    "expression": "Join-Path $PSScriptRoot $pin.relative",
+    "noRetry": true
+  },
+  "postflight": {
+    "outputDirectoryCreatedAfterFailure": true,
+    "nativeProcesses": [],
+    "ramPercent": 43.05,
+    "freeGiB": 18.17
+  }
+}

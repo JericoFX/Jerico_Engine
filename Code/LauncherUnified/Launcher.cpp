@@ -82,6 +82,7 @@ namespace JE::Runtime
             outModules.emplace_back(JE::Render::Debug::CreateViewportModule());
             outModules.emplace_back(JE::Render::Debug::CreateToolsModule());
             outModules.emplace_back(JE::World::Camera::Debug::CreateDebugModule());
+            outModules.emplace_back(JE::Render::Integration::CreateRpiRuntimeModule());
             outModules.emplace_back(JE::Render::Integration::CreateBootstrapModule());
             outModules.emplace_back(JE::Render::Integration::CreateRuntimeModule());
 #endif

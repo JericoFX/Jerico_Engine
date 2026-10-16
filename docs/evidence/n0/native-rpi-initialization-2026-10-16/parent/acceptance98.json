@@ -1,0 +1,59 @@
+{
+  "reviewer": "/root",
+  "utc": "2026-10-16T23:51:59.5027151Z",
+  "acceptedScope": "RPI native initialization/registration only; whole Gem remains PARTIAL",
+  "nativeTests": 588,
+  "xml": [
+    {
+      "file": "Gem_Atom_RPI.Tests.xml",
+      "completed": 576,
+      "sha256": "6DA2F3C6082E4C390132DD1E786B2E29BA70E678A27B9C6E8341936B4213423F"
+    },
+    {
+      "file": "JE_EditorRenderIntegration.Tests.xml",
+      "completed": 4,
+      "sha256": "AC99666E9A2445BBE99B877198BE711DB95DE2E03DAB1A90624A37F33977E4ED"
+    },
+    {
+      "file": "JE_RenderIntegration.Tests.xml",
+      "completed": 8,
+      "sha256": "21AF3AAEEACADE1882157294B3DD884A258B3C1C49607800BD942CD29309113F"
+    }
+  ],
+  "sdkDeltaPhaseResults": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\sdk-delta98-completion-attempt1\\pe-imports.result.json",
+      "bytes": 686,
+      "sha256": "6434E8B68D29D26FA0E0525D7AFBF223E2BABB6D69D8AAA028E5B6A2F8F6F8AB"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\sdk-delta98-completion-attempt1\\loader.result.json",
+      "bytes": 676,
+      "sha256": "EF269257A8626A60CD706388E2B70AD6DF7049A778A6F4CC651D8E83839ADAB6"
+    }
+  ],
+  "sdk96FullReplayRepeated": false,
+  "consumerConfigureBuildReused": true,
+  "wholeGemIncrement": 0,
+  "ownedInputCount": 43,
+  "protectedCount": 86,
+  "protectedAbsentCount": 73,
+  "visualPostflight": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\parent-r5-ui-postflight.json",
+    "bytes": 1233,
+    "sha256": "1892036D8741619AA8EEA40AD3F1380622D09230337BB0F01E22CC1D062BF748"
+  },
+  "sdkCompletionPostflight": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\sdk-delta98-completion-attempt1\\completion-postflight.json",
+    "bytes": 7647,
+    "sha256": "1F17631DD77621C62BBD94F1CCD9CEE64C97EC59D0DB3EB04AF549F4851E8460"
+  },
+  "limitations": [
+    "On preserved WIP; no clean HEAD replay",
+    "SDK full packaging retirement remains pending",
+    "RPI.Public/Edit/assets/Registry/gem.json remain",
+    "AP338 global failures and inherited DiffuseProbeGrid issue remain",
+    "VR/Linux/Shipping/Beauty/performance remain open"
+  ],
+  "goalActive": true
+}

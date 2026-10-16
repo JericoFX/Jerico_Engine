@@ -1,0 +1,97 @@
+Versión de MSBuild 17.14.40+3e7442088 para .NET Framework
+
+  cityhash.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\cityhash.lib
+  mimalloc.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\mimalloc.lib
+  AzCore.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AzCore.dll
+  AzNetworking.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\AzNetworking.lib
+  AzFramework.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AzFramework.dll
+  Atom_RHI.Reflect.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_RHI.Reflect.dll
+  Atom_RHI.Public.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_RHI.Public.dll
+  meshoptimizer.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\meshoptimizer.lib
+  unity_18_cxx.cxx
+     Creando biblioteca F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/lib/profile/Atom_RPI.Public.lib y objeto F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/lib/profile/Atom_RPI.Public.exp
+  Atom_RPI.Public.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_RPI.Public.dll
+  benchmark.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\benchmark.lib
+  gmock.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\gmock.lib
+  gtest.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\gtest.lib
+  AzTest.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\AzTest.lib
+  AzTestRunner.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AzTestRunner.exe
+  AzTestShared.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\AzTestShared.lib
+  CryCommon.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\CryCommon.lib
+  Copying RenderIntegration runtime dependencies to output...
+  RenderIntegration.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\RenderIntegration.dll
+  Copying RenderIntegration.Tests runtime dependencies to output...
+  RenderIntegrationTests.cpp
+     Creando biblioteca F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/lib/profile/RenderIntegration.Tests.lib y objeto F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/lib/profile/RenderIntegration.Tests.exp
+  RenderIntegration.Tests.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\RenderIntegration.Tests.dll
+Versión de MSBuild 17.14.40+3e7442088 para .NET Framework
+
+  cityhash.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\cityhash.lib
+  mimalloc.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\mimalloc.lib
+  AzCore.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AzCore.dll
+  AzNetworking.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\AzNetworking.lib
+  AzFramework.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AzFramework.dll
+  Atom_RHI.Reflect.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_RHI.Reflect.dll
+  Atom_RHI.Public.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_RHI.Public.dll
+  meshoptimizer.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\meshoptimizer.lib
+  Atom_RPI.Public.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_RPI.Public.dll
+  AzFramework.NativeUI.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AzFramework.NativeUI.dll
+  AzQtComponents.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AzQtComponents.dll
+  benchmark.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\benchmark.lib
+  gmock.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\gmock.lib
+  gtest.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\gtest.lib
+  AzTest.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\AzTest.lib
+  AzTestRunner.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AzTestRunner.exe
+  AzTestShared.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\AzTestShared.lib
+  AzToolsFramework.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\AzToolsFramework.Static.lib
+  sqlite.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\sqlite3.lib
+  AzToolsFramework.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AzToolsFramework.dll
+  xxhash.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\xxhash.lib
+  AssetBuilderSDK.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\AssetBuilderSDK.lib
+  Atom_RHI.Edit.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\Atom_RHI.Edit.lib
+  Copying Atom_RPI.Edit runtime dependencies to output...
+  Atom_RPI.Edit.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_RPI.Edit.dll
+  CryCommon.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\CryCommon.lib
+  DearImGui.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\DearImGui.dll
+  DebugImGui.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\DebugImGui.dll
+  ProfilerCapture.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\ProfilerCapture.dll
+  ProfilerView.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\ProfilerView.dll
+  Atom_Utils.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\Atom_Utils.Static.lib
+  RenderIntegration.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\RenderIntegration.dll
+  Copying EditorRenderIntegration runtime dependencies to output...
+  EditorRenderIntegration.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\EditorRenderIntegration.dll
+  Copying EditorRenderIntegration.Tests runtime dependencies to output...
+  RenderIntegrationTests.cpp
+     Creando biblioteca F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/lib/profile/EditorRenderIntegration.Tests.lib y objeto F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/lib/profile/EditorRenderIntegration.Tests.exp
+  EditorRenderIntegration.Tests.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\EditorRenderIntegration.Tests.dll
+Versión de MSBuild 17.14.40+3e7442088 para .NET Framework
+
+  cityhash.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\cityhash.lib
+  mimalloc.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\mimalloc.lib
+  AzCore.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AzCore.dll
+  AzNetworking.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\AzNetworking.lib
+  AzFramework.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AzFramework.dll
+  Atom_RHI.Reflect.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_RHI.Reflect.dll
+  Atom_RHI.Public.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_RHI.Public.dll
+  AzFramework.NativeUI.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AzFramework.NativeUI.dll
+  AzQtComponents.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AzQtComponents.dll
+  AzToolsFramework.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\AzToolsFramework.Static.lib
+  sqlite.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\sqlite3.lib
+  AzToolsFramework.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AzToolsFramework.dll
+  Atom_RHI.Edit.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\Atom_RHI.Edit.lib
+  meshoptimizer.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\meshoptimizer.lib
+  Atom_RPI.Public.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_RPI.Public.dll
+  Atom_RPI.Edit.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_RPI.Edit.dll
+  benchmark.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\benchmark.lib
+  gmock.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\gmock.lib
+  gtest.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\gtest.lib
+  AzTest.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\AzTest.lib
+  AzTestShared.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\AzTestShared.lib
+  Building Custom Rule F:/JericoEngine/JericoEngine/Gems/Atom/RPI/Code/CMakeLists.txt
+  Atom_RPI.TestUtils.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\Atom_RPI.TestUtils.lib
+  Atom_Utils.TestUtils.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\Atom_Utils.TestUtils.Static.lib
+  AzTestRunner.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AzTestRunner.exe
+  CryCommon.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\CryCommon.lib
+  Copying Atom_RPI.Tests runtime dependencies to output...
+  Building Custom Rule F:/JericoEngine/JericoEngine/Gems/Atom/RPI/Code/CMakeLists.txt
+  Atom_RPI.Tests.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_RPI.Tests.dll

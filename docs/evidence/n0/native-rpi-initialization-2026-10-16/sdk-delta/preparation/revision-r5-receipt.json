@@ -1,0 +1,109 @@
+{
+  "schema": "je-sdk98-r2-r5-freeze-rebind-receipt-v1",
+  "state": "HOLD_NOT_RUN_PARENT_BINDING_AND_LEASE_REQUIRED",
+  "approved": false,
+  "utc": "2026-10-16T23:33:28.4426896Z",
+  "preservedR2Archive": "F:/JericoEngine/JericoEngine/build/n0-validation/native-render-builders-integration-rev1/material-pbr-preview-integration-rev1/atom-next-native-scope-rev1/validation-preparation/atom-rpi98-sdk-delta-candidate/revision2-before-r5",
+  "preservedR2Pins": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atom-next-native-scope-rev1\\validation-preparation\\atom-rpi98-sdk-delta-candidate\\revision2-before-r5\\preimage-pins.json",
+    "bytes": 3771,
+    "sha256": "338E6CAE0C8069D8DC5DC1C00DD40B995FEADC52C169161B746EEEEFE0A257F0"
+  },
+  "freezePin": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi98\\freeze98-green-r5.json",
+    "bytes": 3496137,
+    "sha256": "D3C81B7804AB0658D82D319F7C109D025665FC3AE3B6C3EF1F35C9FB0898BA0A"
+  },
+  "pins": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atom-next-native-scope-rev1\\validation-preparation\\atom-rpi98-sdk-delta-candidate\\RunSdkDelta98.ps1",
+      "bytes": 23562,
+      "sha256": "31903EC1D010DD36EF4D07E6CB4501B2816800A92F450C7CDC58395A00D07C79"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atom-next-native-scope-rev1\\validation-preparation\\atom-rpi98-sdk-delta-candidate\\recipe.json",
+      "bytes": 16574,
+      "sha256": "6B153CE1D33AC7CF4F6F9EB9DB955C44BCA41E243CFBAC7455FB1DF87FBF966F"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atom-next-native-scope-rev1\\validation-preparation\\atom-rpi98-sdk-delta-candidate\\pins.json",
+      "bytes": 2228,
+      "sha256": "19E15DAF7295590B061A4834F7A670949F6A66ABF9A961D85238A1F19A1453D9"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atom-next-native-scope-rev1\\validation-preparation\\atom-rpi98-sdk-delta-candidate\\wrapper-binding-contract.json",
+      "bytes": 1892,
+      "sha256": "557790EC7023B0622B371F8FA09A1A4F16A4E1964E8588B3B5D3CF5CF05BEE16"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atom-next-native-scope-rev1\\validation-preparation\\atom-rpi98-sdk-delta-candidate\\public-body-evidence.json",
+      "bytes": 2147,
+      "sha256": "C9C929188BF3B8FB633096DEE8230B3D6571501C4583DCD9CB4B96E66D45DF42"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atom-next-native-scope-rev1\\validation-preparation\\atom-rpi98-sdk-delta-candidate\\revision-r5.patch",
+      "bytes": 3943,
+      "sha256": "9EF22023F9C3029CB266AAC34084C7A4B5DF1FE6F7187E472979A5128E2AA799"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atom-next-native-scope-rev1\\validation-preparation\\atom-rpi98-sdk-delta-candidate\\revision-r5.inverse.patch",
+      "bytes": 3943,
+      "sha256": "41B1A9579266A447B9C58B31D4661547BECC2787BB362B16EC67154366193D33"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atom-next-native-scope-rev1\\validation-preparation\\atom-rpi98-sdk-delta-candidate\\revision-r5-semantic-diff.json",
+      "bytes": 4815,
+      "sha256": "3CF27D8B7B57542E82B6EAD4CDB9821322B17905762CCA469C64FF185A5E4AFF"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atom-next-native-scope-rev1\\validation-preparation\\atom-rpi98-sdk-delta-candidate\\revision-r5-proof.json",
+      "bytes": 741,
+      "sha256": "6C16D1C124E0E9254A6E6795A9C7EDA38118FC592709384850830D4C81939DEB"
+    }
+  ],
+  "proof": {
+    "state": "HOLD_NOT_RUN",
+    "changedFiles": [
+      "RunSdkDelta98.ps1",
+      "recipe.json",
+      "public-body-evidence.json",
+      "pins.json",
+      "wrapper-binding-contract.json"
+    ],
+    "changedLines": 13,
+    "parserErrors": 0,
+    "candidatePins": 14,
+    "candidatePinsDrift": 0,
+    "nativePhases": 4,
+    "configureArgv": 43,
+    "configureArgvByteExact": true,
+    "consumerFourSourcesAndTwoHeadersByteExact": true,
+    "baseline32AndBoundary16ByteExact": true,
+    "publicBodyPeXmlAndSdkBoundaryPinsByteExact": true,
+    "freezeInputs": 14063,
+    "freezeAbsentInputs": 61,
+    "forwardInverseFiles": 5,
+    "forwardInverseBytesExact": true,
+    "originalEolPreserved": true,
+    "destinationsAbsent": true,
+    "nativeExecution": false
+  },
+  "retainedContract": "29 immutable hardlinks+3 DLL copies;2 native importlibs;2 headers;32 names;6 native reports+separate Public report;12 native+576 Public R4 XML;43args;4native phases",
+  "limits": [
+    "Private preparation only, no source/config/SDK96/consumer96 mutation.",
+    "No configure/build/install/AP/GUI/consumer execution.",
+    "R4 native evidence reused unchanged, not claimed repeated; R5 GUI acceptance belongs to parent.",
+    "Single targeted SDK execution requires final parent binding and exclusive Luna lease."
+  ],
+  "skills": {
+    "completeCoverageReused": true,
+    "cpp": "53017F862C526DF6080210A1A00E6678C2CD5382B5D1A51026BF3B0BDE7F7ED2",
+    "game": "4578FACCE19AC99396E5FE904EAC173066FA517AF16AE0F49B03F9082A1057EC"
+  },
+  "resources": {
+    "usedPercent": 43.27,
+    "freeGiB": 18.1,
+    "taskOwnedPersistentHelpers": 0,
+    "nativeProcessesStarted": 0
+  }
+}

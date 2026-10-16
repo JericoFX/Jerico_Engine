@@ -1,0 +1,82 @@
+[
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atom-next-native-scope-rev1\\validation-preparation\\sdk-bootstrap96-runner\\recipe96.json",
+    "bytes": 10044,
+    "sha256": "6FCFEE70E4815943E3C53DD78298F27F5AD12103EE492AD61F7318D9E237E8D2"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atom-next-native-scope-rev1\\validation-preparation\\sdk-bootstrap96-runner\\run-sdk-bootstrap96.ps1",
+    "bytes": 38697,
+    "sha256": "2D7923F74BF21D856063251EBA2EF123C33A1A844DB5052618ED28B46B05A9CD"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atom-next-native-scope-rev1\\validation-preparation\\sdk-bootstrap-contract93-candidate\\source\\main.cpp",
+    "bytes": 17520,
+    "sha256": "B5CFA152DB530A01A4F0FF2634F2F3EF4AA88E10D5157629EB274CA79193A0B6"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atom-next-native-scope-rev1\\validation-preparation\\sdk-bootstrap-contract93-candidate\\source\\CMakeLists.txt",
+    "bytes": 3187,
+    "sha256": "327D11194D303C0873B1A627F284F2911032FCAFB3E7FC26D9801E6320A0685D"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atom-next-native-scope-rev1\\validation-preparation\\sdk-bootstrap-contract93-candidate\\source\\consumer_files.cmake",
+    "bytes": 25,
+    "sha256": "2F0ACA6BAD0CF988A388EC9D4664ED2E2D507B4E03958E23730768D314E3006E"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atom-next-native-scope-rev1\\validation-preparation\\sdk-bootstrap-contract93-candidate\\source\\project.json",
+    "bytes": 388,
+    "sha256": "3A7625CD2BE22DFD8B3C36C4C68932693611513A980111870371A291F12197C4"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atom-next-native-scope-rev1\\validation-preparation\\parent-approved-r2\\execution-bootstrap96-attempt1\\sdk-final-inventory.json",
+    "bytes": 2303616,
+    "sha256": "668580281C7653BF11DC3DF359022C3727CB93DA7F4134725E0BCBBDF0DCEE20"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atom-next-native-scope-rev1\\validation-preparation\\parent-approved-r2\\execution-bootstrap96-attempt1\\loader.result.json",
+    "bytes": 952,
+    "sha256": "623EE4909513DA6A62BBE430F0C7B6B066E7B51AEC6EC96988A8077A8E851D6E"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-vk96\\Engine\\Render\\Integration\\Platform\\Windows\\Default\\RenderIntegration_profile.cmake",
+    "bytes": 725,
+    "sha256": "04395976E2CBF67DCD9E289CE21FF735EEAC0A36D21173BE3EDC67E0161F4D65"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-vk96\\Engine\\Render\\Integration\\Platform\\Windows\\Default\\permutation.cmake",
+    "bytes": 1356,
+    "sha256": "6E7043BC836915BE03EFED466CBDF137B85607C418F5DB97C764FA3C2EC2951F"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-vk96\\Editor\\Render\\Integration\\Platform\\Windows\\Default\\EditorRenderIntegration_profile.cmake",
+    "bytes": 773,
+    "sha256": "2F648DAA217B6950668412CF96F11C5E440A92A884909226D1F18740AA0BD0BD"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-vk96\\Editor\\Render\\Integration\\Platform\\Windows\\Default\\permutation.cmake",
+    "bytes": 867,
+    "sha256": "4CD0336913EA77D69D0945E20050A2589B95BDCBF66E60D4777B21C6F2470B07"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-vk96\\Engine\\Render\\Integration\\Include\\JE\\Render\\Integration\\RenderIntegrationModule.h",
+    "bytes": 1109,
+    "sha256": "E8CB431FBE07683DB628A01B8F6DC337D205738641098851B5349EF396677755"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-vk96\\Editor\\Render\\Integration\\Include\\JE\\Editor\\RenderIntegration\\RenderIntegrationModule.h",
+    "bytes": 352,
+    "sha256": "27BE154DA54ADEA4AE1D56D9CB8E513DAF9A677111B560539C7F2D191CA571A1"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-vk96\\lib\\Windows\\profile\\Default\\RenderIntegration.lib",
+    "bytes": 226512,
+    "sha256": "FE1A0FE12FD3399735943AA1F044575ABEDDDBB38EFA2972259C39EEE8AE4E7A"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-vk96\\lib\\Windows\\profile\\Default\\EditorRenderIntegration.lib",
+    "bytes": 131852,
+    "sha256": "3F4D444B16890F2452C5A8E5B40CA4DCC8D6955B86CA2DB031AE63F134B5308D"
+  }
+]
