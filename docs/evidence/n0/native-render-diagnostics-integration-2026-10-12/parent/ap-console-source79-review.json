@@ -1,0 +1,1624 @@
+{
+  "state": "PARENT_ACCEPTS_FOCAL12_CONSOLE_COOK_EVIDENCE_ONLY",
+  "reviewer": "/root",
+  "utc": "2026-10-16T06:59:14.7038292Z",
+  "sourcesCommit": "cfe29010de9aed4caff49e16360460ad60094709",
+  "sourceFreezeSHA256": "68418908FF9FC4E598FABB725E25FA5FCA4C87F8F8B03839F9A1FB7593AAA519",
+  "rawNativeExit": 1,
+  "elapsedSeconds": 22.196,
+  "peakRamUsedPercent": 57.45,
+  "ramGuardTriggered": false,
+  "oneLiteralJobSlot": true,
+  "checks": {
+    "unchangedGlobalFailedIdentities": 347,
+    "actualProductPinsVerified": 108,
+    "shaderSources": 12,
+    "sourceDependencyRows": 579,
+    "authoredFiles": 40,
+    "frozenInputs": 13995,
+    "ownerTextures": 26,
+    "actualFreshLogsVerified": 12,
+    "productIdentitiesPreserved": 108,
+    "productDependencyRows": 12
+  },
+  "shortLogCountercheck": {
+    "shortAttemptNativeLogOpenWarnings": 0,
+    "firstAttemptMissingLogs": 5,
+    "scope": "Changing only the private log root restored all12job logs; exact unreported Win32 error remains unknown. No engine log-path fix was made.",
+    "firstAttemptMissingPathCharacters": [
+      283,
+      288,
+      295,
+      304,
+      303
+    ],
+    "firstAttempt": "native-apbatch-vulkan-source78-attempt1",
+    "shortAttemptLogPathsComplete": true
+  },
+  "jobs": [
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Cache\\Intermediate Assets\\materials\\reflectionprobe\\reflectionprobevisualization_common_0_depthpass.shader",
+      "sourceGuidHex": "8C26C2FE997E53EAABF42AE7FA18BE82",
+      "portableKey": "Intermediate Assets",
+      "previousRunKey": 91850,
+      "runKey": 92708,
+      "status": 4,
+      "errors": 0,
+      "warnings": 1,
+      "warning": "Unknown encoding: C.UTF-8",
+      "compilerAPI": "vulkan",
+      "log": {
+        "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\ap79-logs\\JobLogs\\materials\\reflectionprobe\\reflectionprobevisualization_common_0_depthpass.shader-901482208-92708.log",
+        "bytes": 7631,
+        "sha256": "57D26D315C4313C058DA1040F2C793EC246F3B68F624B925FAE79822136D141F"
+      },
+      "logPathCharacters": 167
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Cache\\Intermediate Assets\\materials\\reflectionprobe\\reflectionprobevisualization_common_1_shadowmappass.shader",
+      "sourceGuidHex": "EE6E8F530AA857F8843C835794FFEC47",
+      "portableKey": "Intermediate Assets",
+      "previousRunKey": 91854,
+      "runKey": 92710,
+      "status": 4,
+      "errors": 0,
+      "warnings": 1,
+      "warning": "Unknown encoding: C.UTF-8",
+      "compilerAPI": "vulkan",
+      "log": {
+        "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\ap79-logs\\JobLogs\\materials\\reflectionprobe\\reflectionprobevisualization_common_1_shadowmappass.shader-3980760215-92710.log",
+        "bytes": 7701,
+        "sha256": "1F437D3458F5072627C4ECA8C1EE536A257450F866703688FA0692A45B91F67D"
+      },
+      "logPathCharacters": 172
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Cache\\Intermediate Assets\\materials\\reflectionprobe\\reflectionprobevisualization_lowendpipeline_forwardpass_baselighting.shader",
+      "sourceGuidHex": "C53828CB1169595FB331CDCEAA241774",
+      "portableKey": "Intermediate Assets",
+      "previousRunKey": 91858,
+      "runKey": 92714,
+      "status": 4,
+      "errors": 0,
+      "warnings": 1,
+      "warning": "Unknown encoding: C.UTF-8",
+      "compilerAPI": "vulkan",
+      "log": {
+        "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\ap79-logs\\JobLogs\\materials\\reflectionprobe\\reflectionprobevisualization_lowendpipeline_forwardpass_baselighting.shader-664690963-92714.log",
+        "bytes": 10733,
+        "sha256": "C4A68E30EEF1FDA3DF4159160D37AD41A6F9D29A39E28DD15979E4F1B57523DE"
+      },
+      "logPathCharacters": 188
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Cache\\Intermediate Assets\\materials\\reflectionprobe\\reflectionprobevisualization_mainpipeline_forwardpass_baselighting.shader",
+      "sourceGuidHex": "4213879E1F495B5EA4527B26294EF24C",
+      "portableKey": "Intermediate Assets",
+      "previousRunKey": 91862,
+      "runKey": 92718,
+      "status": 4,
+      "errors": 0,
+      "warnings": 1,
+      "warning": "Unknown encoding: C.UTF-8",
+      "compilerAPI": "vulkan",
+      "log": {
+        "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\ap79-logs\\JobLogs\\materials\\reflectionprobe\\reflectionprobevisualization_mainpipeline_forwardpass_baselighting.shader-3423130696-92718.log",
+        "bytes": 10699,
+        "sha256": "D4B1CB2F00A00F1ED19931F9598DB678F973D126C67F4A91556787FC622AD947"
+      },
+      "logPathCharacters": 187
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Cache\\Intermediate Assets\\materials\\reflectionprobe\\reflectionprobevisualization_mainpipeline_meshmotionvector.shader",
+      "sourceGuidHex": "85BF7A40F10456FBBC3EE6CD879DA548",
+      "portableKey": "Intermediate Assets",
+      "previousRunKey": 91866,
+      "runKey": 92722,
+      "status": 4,
+      "errors": 0,
+      "warnings": 1,
+      "warning": "Unknown encoding: C.UTF-8",
+      "compilerAPI": "vulkan",
+      "log": {
+        "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\ap79-logs\\JobLogs\\materials\\reflectionprobe\\reflectionprobevisualization_mainpipeline_meshmotionvector.shader-2183426912-92722.log",
+        "bytes": 9525,
+        "sha256": "1C78462200FB63DDEE55C3F52C31CF653FEB1D9DA398BF32669A384C92E442B3"
+      },
+      "logPathCharacters": 179
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\EditorModeFeedback\\Assets\\Shaders\\editormodeblur.shader",
+      "sourceGuidHex": "184A056F4C4C59A1B9674EF216B49F44",
+      "portableKey": "gemassets-{062E99FC-D97E-54CA-8CAA-3F310B9D460E}",
+      "previousRunKey": 91868,
+      "runKey": 92726,
+      "status": 4,
+      "errors": 0,
+      "warnings": 1,
+      "warning": "Unknown encoding: C.UTF-8",
+      "compilerAPI": "vulkan",
+      "log": {
+        "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\ap79-logs\\JobLogs\\Shaders\\editormodeblur.shader-1554820602-92726.log",
+        "bytes": 8590,
+        "sha256": "A73019660A205B58A9655B1A2DB0AE9927836983D02658EBFDC0AE8F37AF34B4"
+      },
+      "logPathCharacters": 117
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\EditorModeFeedback\\Assets\\Shaders\\editormodebuffercopy.shader",
+      "sourceGuidHex": "2C7AF1BA91CE55F58F48AC6A6570AE51",
+      "portableKey": "gemassets-{062E99FC-D97E-54CA-8CAA-3F310B9D460E}",
+      "previousRunKey": 91872,
+      "runKey": 92730,
+      "status": 4,
+      "errors": 0,
+      "warnings": 1,
+      "warning": "Unknown encoding: C.UTF-8",
+      "compilerAPI": "vulkan",
+      "log": {
+        "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\ap79-logs\\JobLogs\\Shaders\\editormodebuffercopy.shader-3496690812-92730.log",
+        "bytes": 8692,
+        "sha256": "0BD4832D9FF4658DB0D6044196252D63135979E745C65BAD97E01DA65815239D"
+      },
+      "logPathCharacters": 123
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\EditorModeFeedback\\Assets\\Shaders\\editormodedesaturation.shader",
+      "sourceGuidHex": "7B176B56EC495AB6BF34AD403EC07D17",
+      "portableKey": "gemassets-{062E99FC-D97E-54CA-8CAA-3F310B9D460E}",
+      "previousRunKey": 91874,
+      "runKey": 92734,
+      "status": 4,
+      "errors": 0,
+      "warnings": 1,
+      "warning": "Unknown encoding: C.UTF-8",
+      "compilerAPI": "vulkan",
+      "log": {
+        "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\ap79-logs\\JobLogs\\Shaders\\editormodedesaturation.shader-4144907094-92734.log",
+        "bytes": 8726,
+        "sha256": "DD67413E0074636C662EAA5326A9FA1848C5C830E39EEB306F52BC3543888003"
+      },
+      "logPathCharacters": 125
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\EditorModeFeedback\\Assets\\Shaders\\editormodemask.shader",
+      "sourceGuidHex": "E6BAD7BFF9E352EC93C6979582D07009",
+      "portableKey": "gemassets-{062E99FC-D97E-54CA-8CAA-3F310B9D460E}",
+      "previousRunKey": 91880,
+      "runKey": 92736,
+      "status": 4,
+      "errors": 0,
+      "warnings": 1,
+      "warning": "Unknown encoding: C.UTF-8",
+      "compilerAPI": "vulkan",
+      "log": {
+        "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\ap79-logs\\JobLogs\\Shaders\\editormodemask.shader-2309293554-92736.log",
+        "bytes": 8590,
+        "sha256": "0B43425F5BC973BDFDB77F96C59F1FD2589E42DCC315DFD5D23F9B0EAAD91020"
+      },
+      "logPathCharacters": 117
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\EditorModeFeedback\\Assets\\Shaders\\editormodeoutline.shader",
+      "sourceGuidHex": "2BD41DB1AC075E9188EBDD58F9A6E8C6",
+      "portableKey": "gemassets-{062E99FC-D97E-54CA-8CAA-3F310B9D460E}",
+      "previousRunKey": 91884,
+      "runKey": 92742,
+      "status": 4,
+      "errors": 0,
+      "warnings": 1,
+      "warning": "Unknown encoding: C.UTF-8",
+      "compilerAPI": "vulkan",
+      "log": {
+        "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\ap79-logs\\JobLogs\\Shaders\\editormodeoutline.shader-191730245-92742.log",
+        "bytes": 8642,
+        "sha256": "9C0BFD15A2E5D2EA1B1D70C9E45416F668B6BAFC811AF7E1AA8571A510D33B38"
+      },
+      "logPathCharacters": 119
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\EditorModeFeedback\\Assets\\Shaders\\editormodetint.shader",
+      "sourceGuidHex": "8C7DD664E1F35BA68842A2B546F64323",
+      "portableKey": "gemassets-{062E99FC-D97E-54CA-8CAA-3F310B9D460E}",
+      "previousRunKey": 91888,
+      "runKey": 92746,
+      "status": 4,
+      "errors": 0,
+      "warnings": 1,
+      "warning": "Unknown encoding: C.UTF-8",
+      "compilerAPI": "vulkan",
+      "log": {
+        "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\ap79-logs\\JobLogs\\Shaders\\editormodetint.shader-3494204713-92746.log",
+        "bytes": 8590,
+        "sha256": "BE0DEFD1A7843776A6F54D66957DDC7F08218CF8F69FE15A909B607EA0411E5A"
+      },
+      "logPathCharacters": 117
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\Gems\\AtomLyIntegration\\AtomViewportDisplayIcons\\Assets\\Shaders\\TexturedIcon.shader",
+      "sourceGuidHex": "7B093FA3A83450619ADDC6DCA97A4B60",
+      "portableKey": "gemassets-{C63D1442-6928-5FB3-8398-F727B2246AF0}",
+      "previousRunKey": 91892,
+      "runKey": 92750,
+      "status": 4,
+      "errors": 0,
+      "warnings": 1,
+      "warning": "Unknown encoding: C.UTF-8",
+      "compilerAPI": "vulkan",
+      "log": {
+        "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\ap79-logs\\JobLogs\\Shaders\\TexturedIcon.shader-1991558087-92750.log",
+        "bytes": 8576,
+        "sha256": "267C189D54295542177C2E900BE50463CCE47AF14B5CB5E6F458F6B3D465932D"
+      },
+      "logPathCharacters": 115
+    }
+  ],
+  "products": [
+    {
+      "name": "pc/shaders/editormodeblur_vulkan.azslin",
+      "sourceGuidHex": "184A056F4C4C59A1B9674EF216B49F44",
+      "subID": -2147483646,
+      "assetType": "6977AEB117AD4992957B23BB2E85B18B",
+      "bytes": 33776,
+      "sha256": "ED990AF8D3F10DBF9BBC4EEEAE7C962571B33AD3A8F4AC72339CB46428048C6D",
+      "beforeBytes": 33776,
+      "beforeSHA256": "9968D11FE0F704A05A8D836CBB92FB4778769F0E51488F9B691F52AECE549A2A",
+      "byteEqual": false
+    },
+    {
+      "name": "pc/shaders/editormodeblur_vulkan.ia.json",
+      "sourceGuidHex": "184A056F4C4C59A1B9674EF216B49F44",
+      "subID": -2147483645,
+      "assetType": "6977AEB117AD4992957B23BB2E85B18B",
+      "bytes": 1137,
+      "sha256": "D825DF9C85AE527B70807124EB38EA2B129349C7C2C48099C55EB817A60D3F7F",
+      "beforeBytes": 1137,
+      "beforeSHA256": "079C432D4B1E4B53B799FFEFB06FB993A674BBBEC671747FACF7F4FF2CD358F9",
+      "byteEqual": false
+    },
+    {
+      "name": "pc/shaders/editormodeblur_vulkan.om.json",
+      "sourceGuidHex": "184A056F4C4C59A1B9674EF216B49F44",
+      "subID": -2147483644,
+      "assetType": "6977AEB117AD4992957B23BB2E85B18B",
+      "bytes": 539,
+      "sha256": "F4E1DED700D40B67A58A52961A0D5BDAF87D91938774D73C2D234FDD0F7462A5",
+      "beforeBytes": 539,
+      "beforeSHA256": "909A48A3ED7F3B27660AB4BD88F32ABB81F738F105622072B7F77754558D1318",
+      "byteEqual": false
+    },
+    {
+      "name": "pc/shaders/editormodeblur_vulkan.srg.json",
+      "sourceGuidHex": "184A056F4C4C59A1B9674EF216B49F44",
+      "subID": -2147483643,
+      "assetType": "6977AEB117AD4992957B23BB2E85B18B",
+      "bytes": 29923,
+      "sha256": "57302CBCA30C42008176982FCC440A8A0145A00FD90032C2FB9FC9C8362DC1AA",
+      "beforeBytes": 29923,
+      "beforeSHA256": "39861E76C79EA51B04F8C9AE7D0A0767496F97F97523E9DFF88B4F6BEF81173F",
+      "byteEqual": false
+    },
+    {
+      "name": "pc/shaders/editormodeblur_vulkan.options.json",
+      "sourceGuidHex": "184A056F4C4C59A1B9674EF216B49F44",
+      "subID": -2147483642,
+      "assetType": "6977AEB117AD4992957B23BB2E85B18B",
+      "bytes": 119,
+      "sha256": "313C59084EDE5A7E2CE23ADC1E4E2E44C993A8B1FD0B71D63F11547256B85221",
+      "beforeBytes": 119,
+      "beforeSHA256": "313C59084EDE5A7E2CE23ADC1E4E2E44C993A8B1FD0B71D63F11547256B85221",
+      "byteEqual": true
+    },
+    {
+      "name": "pc/shaders/editormodeblur_vulkan.bindingdep.json",
+      "sourceGuidHex": "184A056F4C4C59A1B9674EF216B49F44",
+      "subID": -2147483641,
+      "assetType": "6977AEB117AD4992957B23BB2E85B18B",
+      "bytes": 14910,
+      "sha256": "349E0DE9A5864B317FC7FFAFD3A664CBA0750E2E6BB090B5DEC7F557AE849F2B",
+      "beforeBytes": 14910,
+      "beforeSHA256": "349E0DE9A5864B317FC7FFAFD3A664CBA0750E2E6BB090B5DEC7F557AE849F2B",
+      "byteEqual": true
+    },
+    {
+      "name": "pc/shaders/editormodeblur_vulkan.hlsl",
+      "sourceGuidHex": "184A056F4C4C59A1B9674EF216B49F44",
+      "subID": -2147483640,
+      "assetType": "6977AEB117AD4992957B23BB2E85B18B",
+      "bytes": 21353,
+      "sha256": "CA5F12BBB9B3CE1B47129E0309917B6AAEFDBFD8570C25DEED18AC05A52B5502",
+      "beforeBytes": 21353,
+      "beforeSHA256": "31B237D471D1E68712220A50C1FD059E580EF1687821A4A151F536B05F605FD7",
+      "byteEqual": false
+    },
+    {
+      "name": "pc/shaders/editormodeblur_vulkan_0.azshadervariant",
+      "sourceGuidHex": "184A056F4C4C59A1B9674EF216B49F44",
+      "subID": -2147483647,
+      "assetType": "51BED81536D8410E90F01FA9FF765FBA",
+      "bytes": 8854,
+      "sha256": "CA021E5DDCB7CE8B04DBE1567F3FFDB0B5A0DCFDB200E8468B727AF58B29B5E8",
+      "beforeBytes": 8854,
+      "beforeSHA256": "CA021E5DDCB7CE8B04DBE1567F3FFDB0B5A0DCFDB200E8468B727AF58B29B5E8",
+      "byteEqual": true
+    },
+    {
+      "name": "pc/shaders/editormodeblur.azshader",
+      "sourceGuidHex": "184A056F4C4C59A1B9674EF216B49F44",
+      "subID": 0,
+      "assetType": "823395A3D57049F499A9D820CD1DEF98",
+      "bytes": 93785,
+      "sha256": "CDC49BFB9B9F04C3A1A0FB8658055AFC5CE078AB4CD81A7C2E2BED8AD8C11391",
+      "beforeBytes": 93785,
+      "beforeSHA256": "CDC49BFB9B9F04C3A1A0FB8658055AFC5CE078AB4CD81A7C2E2BED8AD8C11391",
+      "byteEqual": true
+    },
+    {
+      "name": "pc/shaders/editormodedesaturation_vulkan.azslin",
+      "sourceGuidHex": "7B176B56EC495AB6BF34AD403EC07D17",
+      "subID": -2147483646,
+      "assetType": "6977AEB117AD4992957B23BB2E85B18B",
+      "bytes": 33261,
+      "sha256": "4AD9CC9A7B3327914E05C0B4DF99BE373FF06E962DE1E8BD40A082CE93845987",
+      "beforeBytes": 33261,
+      "beforeSHA256": "F7295F43A413CE9AD284AA77B7C002073101CD520256D0C3D7AFDA741FE92962",
+      "byteEqual": false
+    },
+    {
+      "name": "pc/shaders/editormodedesaturation_vulkan.ia.json",
+      "sourceGuidHex": "7B176B56EC495AB6BF34AD403EC07D17",
+      "subID": -2147483645,
+      "assetType": "6977AEB117AD4992957B23BB2E85B18B",
+      "bytes": 1145,
+      "sha256": "06456A0A95E2E19EC2B29C212546E746907C86EA4DDF6E462FFB51CBD52ACFCC",
+      "beforeBytes": 1145,
+      "beforeSHA256": "4288ECA471EAAD3536253FE8767DE05E696174D9354D55147CC01B6A325792D2",
+      "byteEqual": false
+    },
+    {
+      "name": "pc/shaders/editormodedesaturation_vulkan.om.json",
+      "sourceGuidHex": "7B176B56EC495AB6BF34AD403EC07D17",
+      "subID": -2147483644,
+      "assetType": "6977AEB117AD4992957B23BB2E85B18B",
+      "bytes": 547,
+      "sha256": "E35BF5413FD5ED6F09771CA44F7EDBDD7AD0744EEF58EFA16E83FF740E9369C6",
+      "beforeBytes": 547,
+      "beforeSHA256": "4E436AE8AA218458597A96E0CEADB346BC23FA22C917BF958A6DDE693557D063",
+      "byteEqual": false
+    },
+    {
+      "name": "pc/shaders/editormodedesaturation_vulkan.srg.json",
+      "sourceGuidHex": "7B176B56EC495AB6BF34AD403EC07D17",
+      "subID": -2147483643,
+      "assetType": "6977AEB117AD4992957B23BB2E85B18B",
+      "bytes": 29931,
+      "sha256": "4F7FE431DB2C86E7007194498108A2840E102FCAF8105D8161F1BE3583AC8589",
+      "beforeBytes": 29931,
+      "beforeSHA256": "F6E68B0374D59BFDFE8E03618AAC56CC2D9F21B0C50483B98CD5FAFD6B21F91A",
+      "byteEqual": false
+    },
+    {
+      "name": "pc/shaders/editormodedesaturation_vulkan.options.json",
+      "sourceGuidHex": "7B176B56EC495AB6BF34AD403EC07D17",
+      "subID": -2147483642,
+      "assetType": "6977AEB117AD4992957B23BB2E85B18B",
+      "bytes": 119,
+      "sha256": "313C59084EDE5A7E2CE23ADC1E4E2E44C993A8B1FD0B71D63F11547256B85221",
+      "beforeBytes": 119,
+      "beforeSHA256": "313C59084EDE5A7E2CE23ADC1E4E2E44C993A8B1FD0B71D63F11547256B85221",
+      "byteEqual": true
+    },
+    {
+      "name": "pc/shaders/editormodedesaturation_vulkan.bindingdep.json",
+      "sourceGuidHex": "7B176B56EC495AB6BF34AD403EC07D17",
+      "subID": -2147483641,
+      "assetType": "6977AEB117AD4992957B23BB2E85B18B",
+      "bytes": 14871,
+      "sha256": "34902A87D202715B19516EF9730728808C59152F3F44AE14BEC12190373C5DDF",
+      "beforeBytes": 14871,
+      "beforeSHA256": "34902A87D202715B19516EF9730728808C59152F3F44AE14BEC12190373C5DDF",
+      "byteEqual": true
+    },
+    {
+      "name": "pc/shaders/editormodedesaturation_vulkan.hlsl",
+      "sourceGuidHex": "7B176B56EC495AB6BF34AD403EC07D17",
+      "subID": -2147483640,
+      "assetType": "6977AEB117AD4992957B23BB2E85B18B",
+      "bytes": 20593,
+      "sha256": "7D19DD35C1A145A8483428CB52C6FCBC3444C466E4EF63D3A1F70A7B80C1EFFD",
+      "beforeBytes": 20593,
+      "beforeSHA256": "0E3CA4344652AA47D8175729FF08BB240B3FE0D4C48CDC2CB39B9ED63FEDAD74",
+      "byteEqual": false
+    },
+    {
+      "name": "pc/shaders/editormodedesaturation_vulkan_0.azshadervariant",
+      "sourceGuidHex": "7B176B56EC495AB6BF34AD403EC07D17",
+      "subID": -2147483647,
+      "assetType": "51BED81536D8410E90F01FA9FF765FBA",
+      "bytes": 8030,
+      "sha256": "EF289C5E20AADDD0E313EEF336434BB51C10674190B9CBE3D06BA6EF1D5104C9",
+      "beforeBytes": 8030,
+      "beforeSHA256": "EF289C5E20AADDD0E313EEF336434BB51C10674190B9CBE3D06BA6EF1D5104C9",
+      "byteEqual": true
+    },
+    {
+      "name": "pc/shaders/editormodedesaturation.azshader",
+      "sourceGuidHex": "7B176B56EC495AB6BF34AD403EC07D17",
+      "subID": 0,
+      "assetType": "823395A3D57049F499A9D820CD1DEF98",
+      "bytes": 93793,
+      "sha256": "9C899D7CD1D8E775E47DB084555B868155CC8D32038E0A289AF3E1412991EA4A",
+      "beforeBytes": 93793,
+      "beforeSHA256": "9C899D7CD1D8E775E47DB084555B868155CC8D32038E0A289AF3E1412991EA4A",
+      "byteEqual": true
+    },
+    {
+      "name": "pc/shaders/editormodeoutline_vulkan.azslin",
+      "sourceGuidHex": "2BD41DB1AC075E9188EBDD58F9A6E8C6",
+      "subID": -2147483646,
+      "assetType": "6977AEB117AD4992957B23BB2E85B18B",
+      "bytes": 34524,
+      "sha256": "A4471445F6BF2AD5F547DC5254E395A75D620DBDD536262DCD66A75D4A50CC5A",
+      "beforeBytes": 34524,
+      "beforeSHA256": "E6B91E45780160F72EC28E6807E1F992409C6DD787B18AF7139022F68534E548",
+      "byteEqual": false
+    },
+    {
+      "name": "pc/shaders/editormodeoutline_vulkan.ia.json",
+      "sourceGuidHex": "2BD41DB1AC075E9188EBDD58F9A6E8C6",
+      "subID": -2147483645,
+      "assetType": "6977AEB117AD4992957B23BB2E85B18B",
+      "bytes": 1140,
+      "sha256": "2DD2CC57791180CE1B6DCB018C729ED188E3D24CDFA743E12959B025B325F587",
+      "beforeBytes": 1140,
+      "beforeSHA256": "854A58C3A1D03B059BCC1F7692EBDDE2E4020527890312A33AB8FF1C3B8C2E7A",
+      "byteEqual": false
+    },
+    {
+      "name": "pc/shaders/editormodeoutline_vulkan.om.json",
+      "sourceGuidHex": "2BD41DB1AC075E9188EBDD58F9A6E8C6",
+      "subID": -2147483644,
+      "assetType": "6977AEB117AD4992957B23BB2E85B18B",
+      "bytes": 542,
+      "sha256": "CD0192EBE3DB298D3B8DF80C73AF7E5512F18394A5300CEDC5F5985378A5083C",
+      "beforeBytes": 542,
+      "beforeSHA256": "BCE7BEF1D971A95C56C4136BA560556266C23D76FCAF1E74A5F27C6FF3303860",
+      "byteEqual": false
+    },
+    {
+      "name": "pc/shaders/editormodeoutline_vulkan.srg.json",
+      "sourceGuidHex": "2BD41DB1AC075E9188EBDD58F9A6E8C6",
+      "subID": -2147483643,
+      "assetType": "6977AEB117AD4992957B23BB2E85B18B",
+      "bytes": 29926,
+      "sha256": "7DEC77804BCA06B44C317BC7812FBE46D32B30A628F440E13F213050F53D3D9D",
+      "beforeBytes": 29926,
+      "beforeSHA256": "46385653055A30FD78AAC943B19202007F2AEAA22AF222C01CA1517ABA1E3AF4",
+      "byteEqual": false
+    },
+    {
+      "name": "pc/shaders/editormodeoutline_vulkan.options.json",
+      "sourceGuidHex": "2BD41DB1AC075E9188EBDD58F9A6E8C6",
+      "subID": -2147483642,
+      "assetType": "6977AEB117AD4992957B23BB2E85B18B",
+      "bytes": 119,
+      "sha256": "313C59084EDE5A7E2CE23ADC1E4E2E44C993A8B1FD0B71D63F11547256B85221",
+      "beforeBytes": 119,
+      "beforeSHA256": "313C59084EDE5A7E2CE23ADC1E4E2E44C993A8B1FD0B71D63F11547256B85221",
+      "byteEqual": true
+    },
+    {
+      "name": "pc/shaders/editormodeoutline_vulkan.bindingdep.json",
+      "sourceGuidHex": "2BD41DB1AC075E9188EBDD58F9A6E8C6",
+      "subID": -2147483641,
+      "assetType": "6977AEB117AD4992957B23BB2E85B18B",
+      "bytes": 14922,
+      "sha256": "6210306B8218EF5E1F7339D1D53ADB7F198E7D80D20ACAB81814553A9400B543",
+      "beforeBytes": 14922,
+      "beforeSHA256": "6210306B8218EF5E1F7339D1D53ADB7F198E7D80D20ACAB81814553A9400B543",
+      "byteEqual": true
+    },
+    {
+      "name": "pc/shaders/editormodeoutline_vulkan.hlsl",
+      "sourceGuidHex": "2BD41DB1AC075E9188EBDD58F9A6E8C6",
+      "subID": -2147483640,
+      "assetType": "6977AEB117AD4992957B23BB2E85B18B",
+      "bytes": 21699,
+      "sha256": "F7240D9990130A1B63D5B28C6249FCCCCE0F6083838153022D97DB9F0B7B458D",
+      "beforeBytes": 21699,
+      "beforeSHA256": "1D2C090FDEFE256FD7759B06CC128558C4EF00BF8E41C8611904D59FFEDCF53A",
+      "byteEqual": false
+    },
+    {
+      "name": "pc/shaders/editormodeoutline_vulkan_0.azshadervariant",
+      "sourceGuidHex": "2BD41DB1AC075E9188EBDD58F9A6E8C6",
+      "subID": -2147483647,
+      "assetType": "51BED81536D8410E90F01FA9FF765FBA",
+      "bytes": 5922,
+      "sha256": "758FDA235D2FED1A837A9B1294769A7A361BA37AB75E8E400EA621E33DB597D2",
+      "beforeBytes": 5922,
+      "beforeSHA256": "758FDA235D2FED1A837A9B1294769A7A361BA37AB75E8E400EA621E33DB597D2",
+      "byteEqual": true
+    },
+    {
+      "name": "pc/shaders/editormodeoutline.azshader",
+      "sourceGuidHex": "2BD41DB1AC075E9188EBDD58F9A6E8C6",
+      "subID": 0,
+      "assetType": "823395A3D57049F499A9D820CD1DEF98",
+      "bytes": 93788,
+      "sha256": "248EC9B5B36B9B7EF192B269EFE46B80953264E9EFE321E8B0A9E186A09E9F02",
+      "beforeBytes": 93788,
+      "beforeSHA256": "248EC9B5B36B9B7EF192B269EFE46B80953264E9EFE321E8B0A9E186A09E9F02",
+      "byteEqual": true
+    },
+    {
+      "name": "pc/shaders/editormodetint_vulkan.azslin",
+      "sourceGuidHex": "8C7DD664E1F35BA68842A2B546F64323",
+      "subID": -2147483646,
+      "assetType": "6977AEB117AD4992957B23BB2E85B18B",
+      "bytes": 33087,
+      "sha256": "B33BA5D6C495E28CBA80B46920B2837D406D2492B2E5E03B81F45464083A8C4F",
+      "beforeBytes": 33087,
+      "beforeSHA256": "1A07C1E6E0DB71A1A5B5406A855FAF0CE076E889D06F6A70FB472681DC7980E0",
+      "byteEqual": false
+    },
+    {
+      "name": "pc/shaders/editormodetint_vulkan.ia.json",
+      "sourceGuidHex": "8C7DD664E1F35BA68842A2B546F64323",
+      "subID": -2147483645,
+      "assetType": "6977AEB117AD4992957B23BB2E85B18B",
+      "bytes": 1137,
+      "sha256": "8E38F2F6A4142E4C676653B4A3F68051658C7EBDD1BEDCCB2347600C04017700",
+      "beforeBytes": 1137,
+      "beforeSHA256": "C94BE42DDE030FB8EBBF0B7CC6D5486CB165A91781E08BF3DCF631D9F3E39267",
+      "byteEqual": false
+    },
+    {
+      "name": "pc/shaders/editormodetint_vulkan.om.json",
+      "sourceGuidHex": "8C7DD664E1F35BA68842A2B546F64323",
+      "subID": -2147483644,
+      "assetType": "6977AEB117AD4992957B23BB2E85B18B",
+      "bytes": 539,
+      "sha256": "285BD3A82A22E5B75E63E6335B88F83C4ADD1B8E6E60BD06A594A2BF376D50CE",
+      "beforeBytes": 539,
+      "beforeSHA256": "C6FB1BAFCBFBA89EBC9D44CF54B10852F1852151D8EE37A3DA2ECA33E53C7E04",
+      "byteEqual": false
+    },
+    {
+      "name": "pc/shaders/editormodetint_vulkan.srg.json",
+      "sourceGuidHex": "8C7DD664E1F35BA68842A2B546F64323",
+      "subID": -2147483643,
+      "assetType": "6977AEB117AD4992957B23BB2E85B18B",
+      "bytes": 29923,
+      "sha256": "8321CC0880157F1B914F72A9EC78F728EE0A25116B742C1070831CE152A3D138",
+      "beforeBytes": 29923,
+      "beforeSHA256": "2A01FF938D4DBA2CAA00D296F49E635E57BA93AE893C1B77CE55E560B55C874B",
+      "byteEqual": false
+    },
+    {
+      "name": "pc/shaders/editormodetint_vulkan.options.json",
+      "sourceGuidHex": "8C7DD664E1F35BA68842A2B546F64323",
+      "subID": -2147483642,
+      "assetType": "6977AEB117AD4992957B23BB2E85B18B",
+      "bytes": 119,
+      "sha256": "313C59084EDE5A7E2CE23ADC1E4E2E44C993A8B1FD0B71D63F11547256B85221",
+      "beforeBytes": 119,
+      "beforeSHA256": "313C59084EDE5A7E2CE23ADC1E4E2E44C993A8B1FD0B71D63F11547256B85221",
+      "byteEqual": true
+    },
+    {
+      "name": "pc/shaders/editormodetint_vulkan.bindingdep.json",
+      "sourceGuidHex": "8C7DD664E1F35BA68842A2B546F64323",
+      "subID": -2147483641,
+      "assetType": "6977AEB117AD4992957B23BB2E85B18B",
+      "bytes": 14871,
+      "sha256": "34902A87D202715B19516EF9730728808C59152F3F44AE14BEC12190373C5DDF",
+      "beforeBytes": 14871,
+      "beforeSHA256": "34902A87D202715B19516EF9730728808C59152F3F44AE14BEC12190373C5DDF",
+      "byteEqual": true
+    },
+    {
+      "name": "pc/shaders/editormodetint_vulkan.hlsl",
+      "sourceGuidHex": "8C7DD664E1F35BA68842A2B546F64323",
+      "subID": -2147483640,
+      "assetType": "6977AEB117AD4992957B23BB2E85B18B",
+      "bytes": 20483,
+      "sha256": "63475D8817666DEF7527ED8E0501FCD3F999056D2AE98B1FF1400188F24324F3",
+      "beforeBytes": 20483,
+      "beforeSHA256": "B7681AF971B4A4413130A52A1C95C54DBA5157C7DCB963230779AD6CD5D74F9A",
+      "byteEqual": false
+    },
+    {
+      "name": "pc/shaders/editormodetint_vulkan_0.azshadervariant",
+      "sourceGuidHex": "8C7DD664E1F35BA68842A2B546F64323",
+      "subID": -2147483647,
+      "assetType": "51BED81536D8410E90F01FA9FF765FBA",
+      "bytes": 8014,
+      "sha256": "EFF4BF59F4B06D3964374BA82DF745DD658A571BA565715875D5C07C2BE63F76",
+      "beforeBytes": 8014,
+      "beforeSHA256": "EFF4BF59F4B06D3964374BA82DF745DD658A571BA565715875D5C07C2BE63F76",
+      "byteEqual": true
+    },
+    {
+      "name": "pc/shaders/editormodetint.azshader",
+      "sourceGuidHex": "8C7DD664E1F35BA68842A2B546F64323",
+      "subID": 0,
+      "assetType": "823395A3D57049F499A9D820CD1DEF98",
+      "bytes": 93785,
+      "sha256": "CD487765D12FC6989A20C56B075FF8163D15C4AC790B82C26A818C344DBF0762",
+      "beforeBytes": 93785,
+      "beforeSHA256": "CD487765D12FC6989A20C56B075FF8163D15C4AC790B82C26A818C344DBF0762",
+      "byteEqual": true
+    },
+    {
+      "name": "pc/shaders/texturedicon_vulkan.azslin",
+      "sourceGuidHex": "7B093FA3A83450619ADDC6DCA97A4B60",
+      "subID": -2147483646,
+      "assetType": "6977AEB117AD4992957B23BB2E85B18B",
+      "bytes": 5574,
+      "sha256": "79D10ACF6AA7E57DCF47B4E27721E8E90C26F5B10804FFFA3E5F20A3D165C708",
+      "beforeBytes": 5574,
+      "beforeSHA256": "7D6FDFDDDB2D0A9F12FE3CDD8329046A59B03D4C541B911F92651EDC518EFC61",
+      "byteEqual": false
+    },
+    {
+      "name": "pc/shaders/texturedicon_vulkan.ia.json",
+      "sourceGuidHex": "7B093FA3A83450619ADDC6DCA97A4B60",
+      "subID": -2147483645,
+      "assetType": "6977AEB117AD4992957B23BB2E85B18B",
+      "bytes": 1871,
+      "sha256": "9FE3D5D457ABA302D9CB7927E123EB566C06E3D443582829CFB01E07D1F3AE08",
+      "beforeBytes": 1871,
+      "beforeSHA256": "F2939F482EA1681B0FA4DE87FFEB1F9F106275614889F1AE9C8E6FC72C60C4E4",
+      "byteEqual": false
+    },
+    {
+      "name": "pc/shaders/texturedicon_vulkan.om.json",
+      "sourceGuidHex": "7B093FA3A83450619ADDC6DCA97A4B60",
+      "subID": -2147483644,
+      "assetType": "6977AEB117AD4992957B23BB2E85B18B",
+      "bytes": 537,
+      "sha256": "F992338D108C7FB3EC517EA1E02F287C8915E65189B3487441A48DFF448CE4F9",
+      "beforeBytes": 537,
+      "beforeSHA256": "6BB8ACF1D833A4145706516DBBB0B34B397E4A42F0AF75A3A34BDD59A6A88484",
+      "byteEqual": false
+    },
+    {
+      "name": "pc/shaders/texturedicon_vulkan.srg.json",
+      "sourceGuidHex": "7B093FA3A83450619ADDC6DCA97A4B60",
+      "subID": -2147483643,
+      "assetType": "6977AEB117AD4992957B23BB2E85B18B",
+      "bytes": 2700,
+      "sha256": "1F1117CD921ED5C4A3400737D9EACF2F8F625E8EDB7462A0BBBD11A5527C6F3C",
+      "beforeBytes": 2700,
+      "beforeSHA256": "01193FE94069BDF2833551DE794F544CD309D65A5A049E3DEDE1E462BE88316F",
+      "byteEqual": false
+    },
+    {
+      "name": "pc/shaders/texturedicon_vulkan.options.json",
+      "sourceGuidHex": "7B093FA3A83450619ADDC6DCA97A4B60",
+      "subID": -2147483642,
+      "assetType": "6977AEB117AD4992957B23BB2E85B18B",
+      "bytes": 119,
+      "sha256": "313C59084EDE5A7E2CE23ADC1E4E2E44C993A8B1FD0B71D63F11547256B85221",
+      "beforeBytes": 119,
+      "beforeSHA256": "313C59084EDE5A7E2CE23ADC1E4E2E44C993A8B1FD0B71D63F11547256B85221",
+      "byteEqual": true
+    },
+    {
+      "name": "pc/shaders/texturedicon_vulkan.bindingdep.json",
+      "sourceGuidHex": "7B093FA3A83450619ADDC6DCA97A4B60",
+      "subID": -2147483641,
+      "assetType": "6977AEB117AD4992957B23BB2E85B18B",
+      "bytes": 875,
+      "sha256": "74CBF4D892A9F5B817EFA4E9292248C2CF5F07BA10AAF5CFDE72F6F397A66828",
+      "beforeBytes": 875,
+      "beforeSHA256": "74CBF4D892A9F5B817EFA4E9292248C2CF5F07BA10AAF5CFDE72F6F397A66828",
+      "byteEqual": true
+    },
+    {
+      "name": "pc/shaders/texturedicon_vulkan.hlsl",
+      "sourceGuidHex": "7B093FA3A83450619ADDC6DCA97A4B60",
+      "subID": -2147483640,
+      "assetType": "6977AEB117AD4992957B23BB2E85B18B",
+      "bytes": 2128,
+      "sha256": "EF53054BF0E0AC105E3B1EDE88E2942C08C457C096D7035FF339B91D667DAC9C",
+      "beforeBytes": 2128,
+      "beforeSHA256": "2551EBABF1516A1609220F1D851559F7490DACFBCE26529F96A3A9B6C6E812F9",
+      "byteEqual": false
+    },
+    {
+      "name": "pc/shaders/texturedicon_vulkan_0.azshadervariant",
+      "sourceGuidHex": "7B093FA3A83450619ADDC6DCA97A4B60",
+      "subID": -2147483647,
+      "assetType": "51BED81536D8410E90F01FA9FF765FBA",
+      "bytes": 3434,
+      "sha256": "2D1C0E201452CD1838CDC46A2743BE19E8B10CE607458521B22A743E20322A46",
+      "beforeBytes": 3434,
+      "beforeSHA256": "2D1C0E201452CD1838CDC46A2743BE19E8B10CE607458521B22A743E20322A46",
+      "byteEqual": true
+    },
+    {
+      "name": "pc/shaders/texturedicon.azshader",
+      "sourceGuidHex": "7B093FA3A83450619ADDC6DCA97A4B60",
+      "subID": 0,
+      "assetType": "823395A3D57049F499A9D820CD1DEF98",
+      "bytes": 12952,
+      "sha256": "277592757C3A6090A82AE3F24FB4234B43CD47D0BF2BDA46003D0B9A721E556E",
+      "beforeBytes": 12952,
+      "beforeSHA256": "6288083C1CFC56CE984AE72683CA5E563ADB7A9D70E4F04073E2EC532836049E",
+      "byteEqual": false
+    },
+    {
+      "name": "pc/shaders/editormodebuffercopy_vulkan.azslin",
+      "sourceGuidHex": "2C7AF1BA91CE55F58F48AC6A6570AE51",
+      "subID": -2147483646,
+      "assetType": "6977AEB117AD4992957B23BB2E85B18B",
+      "bytes": 32557,
+      "sha256": "C116251E6A5DCC485343A4273F50F7429C5101BDC7F99A12F5A2556990ACC4B2",
+      "beforeBytes": 32557,
+      "beforeSHA256": "1F4FBFF162BA800E52E8BE0B4A71E741CCE558E1FD278FED5D8C6631F765C553",
+      "byteEqual": false
+    },
+    {
+      "name": "pc/shaders/editormodebuffercopy_vulkan.ia.json",
+      "sourceGuidHex": "2C7AF1BA91CE55F58F48AC6A6570AE51",
+      "subID": -2147483645,
+      "assetType": "6977AEB117AD4992957B23BB2E85B18B",
+      "bytes": 1143,
+      "sha256": "AB305B4A9ED1DE0ED9B4D301998E6AEA97A1A769F5E6D6A0016182AD4ADAFEBC",
+      "beforeBytes": 1143,
+      "beforeSHA256": "9934DAD99DEC3D0EE9227B923840E3931BD98185C28B3B5CDD64FD838846F189",
+      "byteEqual": false
+    },
+    {
+      "name": "pc/shaders/editormodebuffercopy_vulkan.om.json",
+      "sourceGuidHex": "2C7AF1BA91CE55F58F48AC6A6570AE51",
+      "subID": -2147483644,
+      "assetType": "6977AEB117AD4992957B23BB2E85B18B",
+      "bytes": 545,
+      "sha256": "9843813D81D78B0DC54AA62DD21879CEC48153E63727C9769CC278195C47E82E",
+      "beforeBytes": 545,
+      "beforeSHA256": "FA0863FCA182B18F78C98B5A6AFD80B72D706E4145C98B0D66FC48EA8F5C1CB7",
+      "byteEqual": false
+    },
+    {
+      "name": "pc/shaders/editormodebuffercopy_vulkan.srg.json",
+      "sourceGuidHex": "2C7AF1BA91CE55F58F48AC6A6570AE51",
+      "subID": -2147483643,
+      "assetType": "6977AEB117AD4992957B23BB2E85B18B",
+      "bytes": 29929,
+      "sha256": "8B3C163F5F77558AA359EAA7D8E140F0BDDB8F2E5B29B6F2A9E3EFF752D452BA",
+      "beforeBytes": 29929,
+      "beforeSHA256": "D5643A822BBEC9E17AC6DB252AD594B6D8A298125FC4676E3A23D9A28D880946",
+      "byteEqual": false
+    },
+    {
+      "name": "pc/shaders/editormodebuffercopy_vulkan.options.json",
+      "sourceGuidHex": "2C7AF1BA91CE55F58F48AC6A6570AE51",
+      "subID": -2147483642,
+      "assetType": "6977AEB117AD4992957B23BB2E85B18B",
+      "bytes": 119,
+      "sha256": "313C59084EDE5A7E2CE23ADC1E4E2E44C993A8B1FD0B71D63F11547256B85221",
+      "beforeBytes": 119,
+      "beforeSHA256": "313C59084EDE5A7E2CE23ADC1E4E2E44C993A8B1FD0B71D63F11547256B85221",
+      "byteEqual": true
+    },
+    {
+      "name": "pc/shaders/editormodebuffercopy_vulkan.bindingdep.json",
+      "sourceGuidHex": "2C7AF1BA91CE55F58F48AC6A6570AE51",
+      "subID": -2147483641,
+      "assetType": "6977AEB117AD4992957B23BB2E85B18B",
+      "bytes": 14760,
+      "sha256": "A1314DBDF475F89B85D7BF944FEAC0EE781C86045D30F2214E4D8FFB0361B7D8",
+      "beforeBytes": 14760,
+      "beforeSHA256": "A1314DBDF475F89B85D7BF944FEAC0EE781C86045D30F2214E4D8FFB0361B7D8",
+      "byteEqual": true
+    },
+    {
+      "name": "pc/shaders/editormodebuffercopy_vulkan.hlsl",
+      "sourceGuidHex": "2C7AF1BA91CE55F58F48AC6A6570AE51",
+      "subID": -2147483640,
+      "assetType": "6977AEB117AD4992957B23BB2E85B18B",
+      "bytes": 19939,
+      "sha256": "F65C4E39EE24E3E1A1049A0D7B6ED4772D20825186A275D29E639A3297FE2519",
+      "beforeBytes": 19939,
+      "beforeSHA256": "BD91D222C9305216CBB11048322B230F0F903DCDB8D0517ED7EA902870105419",
+      "byteEqual": false
+    },
+    {
+      "name": "pc/shaders/editormodebuffercopy_vulkan_0.azshadervariant",
+      "sourceGuidHex": "2C7AF1BA91CE55F58F48AC6A6570AE51",
+      "subID": -2147483647,
+      "assetType": "51BED81536D8410E90F01FA9FF765FBA",
+      "bytes": 2438,
+      "sha256": "0CA5779E12C7FDF2B2A7C5A779F6C06354ABD8A91BF3259A27829BE885B086A1",
+      "beforeBytes": 2438,
+      "beforeSHA256": "0CA5779E12C7FDF2B2A7C5A779F6C06354ABD8A91BF3259A27829BE885B086A1",
+      "byteEqual": true
+    },
+    {
+      "name": "pc/shaders/editormodebuffercopy.azshader",
+      "sourceGuidHex": "2C7AF1BA91CE55F58F48AC6A6570AE51",
+      "subID": 0,
+      "assetType": "823395A3D57049F499A9D820CD1DEF98",
+      "bytes": 93791,
+      "sha256": "6E9DF4601F96A6CE00B6F0DF2E30526E0D8C8D6C33EAF6FAB1C4895AF0C4F462",
+      "beforeBytes": 93791,
+      "beforeSHA256": "6E9DF4601F96A6CE00B6F0DF2E30526E0D8C8D6C33EAF6FAB1C4895AF0C4F462",
+      "byteEqual": true
+    },
+    {
+      "name": "pc/shaders/editormodemask_vulkan.azslin",
+      "sourceGuidHex": "E6BAD7BFF9E352EC93C6979582D07009",
+      "subID": -2147483646,
+      "assetType": "6977AEB117AD4992957B23BB2E85B18B",
+      "bytes": 43945,
+      "sha256": "9F2F5FED612ADA89BAE338D95BFACD86A30BCAE4F349AFBEC11D0C00667A04CE",
+      "beforeBytes": 43945,
+      "beforeSHA256": "75990D9C5D7AC18144EE699C8B8389A8A24970E85562BE89696E9BA2F3CB95E3",
+      "byteEqual": false
+    },
+    {
+      "name": "pc/shaders/editormodemask_vulkan.ia.json",
+      "sourceGuidHex": "E6BAD7BFF9E352EC93C6979582D07009",
+      "subID": -2147483645,
+      "assetType": "6977AEB117AD4992957B23BB2E85B18B",
+      "bytes": 1128,
+      "sha256": "0B448C8BA63E71EFD5D8343C30F4CEDEA56E213E01AF32006F2DD6F338DC78FB",
+      "beforeBytes": 1128,
+      "beforeSHA256": "DD253FF35C7963E1C26A3F7A38A2938789FC680BAB7462235391E96C0633AAA5",
+      "byteEqual": false
+    },
+    {
+      "name": "pc/shaders/editormodemask_vulkan.om.json",
+      "sourceGuidHex": "E6BAD7BFF9E352EC93C6979582D07009",
+      "subID": -2147483644,
+      "assetType": "6977AEB117AD4992957B23BB2E85B18B",
+      "bytes": 539,
+      "sha256": "EA146FA3BDC173E105E2F6610618E93FFF9AED6FEAB6BA046852990F3B246ED1",
+      "beforeBytes": 539,
+      "beforeSHA256": "FEB3B10711275D0BE38C71C4EC010D203AAD6280DD31D8EBB2ADBC9175219ADD",
+      "byteEqual": false
+    },
+    {
+      "name": "pc/shaders/editormodemask_vulkan.srg.json",
+      "sourceGuidHex": "E6BAD7BFF9E352EC93C6979582D07009",
+      "subID": -2147483643,
+      "assetType": "6977AEB117AD4992957B23BB2E85B18B",
+      "bytes": 39458,
+      "sha256": "0831F42E1A749F30F27F897135D3D7D4F598CA3DA42D3193DA352AC2BF3EB424",
+      "beforeBytes": 39458,
+      "beforeSHA256": "DAE4513A41BAE2E83226B9433F399A4DFBECDA1A76871A71967E3A53E2703BBE",
+      "byteEqual": false
+    },
+    {
+      "name": "pc/shaders/editormodemask_vulkan.options.json",
+      "sourceGuidHex": "E6BAD7BFF9E352EC93C6979582D07009",
+      "subID": -2147483642,
+      "assetType": "6977AEB117AD4992957B23BB2E85B18B",
+      "bytes": 119,
+      "sha256": "313C59084EDE5A7E2CE23ADC1E4E2E44C993A8B1FD0B71D63F11547256B85221",
+      "beforeBytes": 119,
+      "beforeSHA256": "313C59084EDE5A7E2CE23ADC1E4E2E44C993A8B1FD0B71D63F11547256B85221",
+      "byteEqual": true
+    },
+    {
+      "name": "pc/shaders/editormodemask_vulkan.bindingdep.json",
+      "sourceGuidHex": "E6BAD7BFF9E352EC93C6979582D07009",
+      "subID": -2147483641,
+      "assetType": "6977AEB117AD4992957B23BB2E85B18B",
+      "bytes": 18736,
+      "sha256": "5A2A770BD227F926AA8C75CFB84C40840990822E1F4CCCF11262AB3ACF102D43",
+      "beforeBytes": 18736,
+      "beforeSHA256": "5A2A770BD227F926AA8C75CFB84C40840990822E1F4CCCF11262AB3ACF102D43",
+      "byteEqual": true
+    },
+    {
+      "name": "pc/shaders/editormodemask_vulkan.hlsl",
+      "sourceGuidHex": "E6BAD7BFF9E352EC93C6979582D07009",
+      "subID": -2147483640,
+      "assetType": "6977AEB117AD4992957B23BB2E85B18B",
+      "bytes": 27056,
+      "sha256": "97EB0D217274C27EDC1CA602D5B81190D9B782A95F96CC584E344148E269C309",
+      "beforeBytes": 27056,
+      "beforeSHA256": "D2E2672DFDDCE2B636F96E564FBFA26E2E2183C31A54E07D06CA46B7E96DF370",
+      "byteEqual": false
+    },
+    {
+      "name": "pc/shaders/editormodemask_vulkan_0.azshadervariant",
+      "sourceGuidHex": "E6BAD7BFF9E352EC93C6979582D07009",
+      "subID": -2147483647,
+      "assetType": "51BED81536D8410E90F01FA9FF765FBA",
+      "bytes": 10190,
+      "sha256": "69F356986D9579FABACF8E637F9B6D52EDC21D0C869FA8C0CF8EEEF40A26A0AD",
+      "beforeBytes": 10190,
+      "beforeSHA256": "69F356986D9579FABACF8E637F9B6D52EDC21D0C869FA8C0CF8EEEF40A26A0AD",
+      "byteEqual": true
+    },
+    {
+      "name": "pc/shaders/editormodemask.azshader",
+      "sourceGuidHex": "E6BAD7BFF9E352EC93C6979582D07009",
+      "subID": 0,
+      "assetType": "823395A3D57049F499A9D820CD1DEF98",
+      "bytes": 120741,
+      "sha256": "1F2055AEDF069CB817F9A54D05450E074F5A0A26E255E7D1CE7AD3E614EA3935",
+      "beforeBytes": 120741,
+      "beforeSHA256": "A1DDD80FE7587842BA8518CED6279551D27DC9C2699C96200E56E754B077E7D4",
+      "byteEqual": false
+    },
+    {
+      "name": "pc/materials/reflectionprobe/reflectionprobevisualization_common_0_depthpass_vulkan.azslin",
+      "sourceGuidHex": "8C26C2FE997E53EAABF42AE7FA18BE82",
+      "subID": -2147483646,
+      "assetType": "6977AEB117AD4992957B23BB2E85B18B",
+      "bytes": 77277,
+      "sha256": "E4D5CF9F5A03590F8714A72EAB0E03594F6F0A888BBB2314C535C8EF0AB27F00",
+      "beforeBytes": 77277,
+      "beforeSHA256": "4D3A13930DC9943E681EE7EC8F71311A748FEF179AFC31D5393F36635CE7ECB0",
+      "byteEqual": false
+    },
+    {
+      "name": "pc/materials/reflectionprobe/reflectionprobevisualization_common_0_depthpass_vulkan.ia.json",
+      "sourceGuidHex": "8C26C2FE997E53EAABF42AE7FA18BE82",
+      "subID": -2147483645,
+      "assetType": "6977AEB117AD4992957B23BB2E85B18B",
+      "bytes": 927,
+      "sha256": "E01C469A2A48E115DB92D9B8579A322F15F6F6A37D50D426BEE97D0F81ED5B43",
+      "beforeBytes": 927,
+      "beforeSHA256": "0946701A4BED90054725CF88DC887EA8DB73A399465E3EB7419BC0460063496B",
+      "byteEqual": false
+    },
+    {
+      "name": "pc/materials/reflectionprobe/reflectionprobevisualization_common_0_depthpass_vulkan.om.json",
+      "sourceGuidHex": "8C26C2FE997E53EAABF42AE7FA18BE82",
+      "subID": -2147483644,
+      "assetType": "6977AEB117AD4992957B23BB2E85B18B",
+      "bytes": 308,
+      "sha256": "D3867BA8232AC403E44A064D8009E1E86CE54F544C3A27BAC917F330C45BF48F",
+      "beforeBytes": 308,
+      "beforeSHA256": "E245B486957B71D27206A976B8F204C2C078FD338BC71494A04D683A4E56826A",
+      "byteEqual": false
+    },
+    {
+      "name": "pc/materials/reflectionprobe/reflectionprobevisualization_common_0_depthpass_vulkan.srg.json",
+      "sourceGuidHex": "8C26C2FE997E53EAABF42AE7FA18BE82",
+      "subID": -2147483643,
+      "assetType": "6977AEB117AD4992957B23BB2E85B18B",
+      "bytes": 46585,
+      "sha256": "5CF7F47E32EC2F2DA6BC6D154DC8086C7228A60FCEC208909C5837B3C5968B57",
+      "beforeBytes": 46585,
+      "beforeSHA256": "0F7DF99FA29889F00024B69AA668640CE4CBA4238C54E8612673D401CC0AE91F",
+      "byteEqual": false
+    },
+    {
+      "name": "pc/materials/reflectionprobe/reflectionprobevisualization_common_0_depthpass_vulkan.options.json",
+      "sourceGuidHex": "8C26C2FE997E53EAABF42AE7FA18BE82",
+      "subID": -2147483642,
+      "assetType": "6977AEB117AD4992957B23BB2E85B18B",
+      "bytes": 437,
+      "sha256": "9FF2C343F6FEEF450992E9836B066E9B17518D8BE4658176AB61E8FEC0CC99D0",
+      "beforeBytes": 437,
+      "beforeSHA256": "9FF2C343F6FEEF450992E9836B066E9B17518D8BE4658176AB61E8FEC0CC99D0",
+      "byteEqual": true
+    },
+    {
+      "name": "pc/materials/reflectionprobe/reflectionprobevisualization_common_0_depthpass_vulkan.bindingdep.json",
+      "sourceGuidHex": "8C26C2FE997E53EAABF42AE7FA18BE82",
+      "subID": -2147483641,
+      "assetType": "6977AEB117AD4992957B23BB2E85B18B",
+      "bytes": 21418,
+      "sha256": "A3EDBC23B6B483B32F8A9712A64E9907D8FCA8D187324A21101DA31699787737",
+      "beforeBytes": 21418,
+      "beforeSHA256": "A3EDBC23B6B483B32F8A9712A64E9907D8FCA8D187324A21101DA31699787737",
+      "byteEqual": true
+    },
+    {
+      "name": "pc/materials/reflectionprobe/reflectionprobevisualization_common_0_depthpass_vulkan.hlsl",
+      "sourceGuidHex": "8C26C2FE997E53EAABF42AE7FA18BE82",
+      "subID": -2147483640,
+      "assetType": "6977AEB117AD4992957B23BB2E85B18B",
+      "bytes": 43570,
+      "sha256": "C9B5C8AE215297A23CEEC6ED8C28BA66CF2FA8E305D7A7FF74E3DD32C2EE9A6E",
+      "beforeBytes": 43570,
+      "beforeSHA256": "5327BABE85E71769E590BC0D8852EE2615FA042DE66E3FF6E78E28D81F15CF50",
+      "byteEqual": false
+    },
+    {
+      "name": "pc/materials/reflectionprobe/reflectionprobevisualization_common_0_depthpass_vulkan_0.azshadervariant",
+      "sourceGuidHex": "8C26C2FE997E53EAABF42AE7FA18BE82",
+      "subID": -2147483647,
+      "assetType": "51BED81536D8410E90F01FA9FF765FBA",
+      "bytes": 7094,
+      "sha256": "2A482236C126141CF5A92FFA98718BBD86CEFA6C14C7BF53A2665D3764BAA589",
+      "beforeBytes": 7094,
+      "beforeSHA256": "2A482236C126141CF5A92FFA98718BBD86CEFA6C14C7BF53A2665D3764BAA589",
+      "byteEqual": true
+    },
+    {
+      "name": "pc/materials/reflectionprobe/reflectionprobevisualization_common_0_depthpass.azshader",
+      "sourceGuidHex": "8C26C2FE997E53EAABF42AE7FA18BE82",
+      "subID": 0,
+      "assetType": "823395A3D57049F499A9D820CD1DEF98",
+      "bytes": 139767,
+      "sha256": "8814843294A8556B6ED0526397CD3AF53D7F4D35062C4330F2E7F24514D06539",
+      "beforeBytes": 139767,
+      "beforeSHA256": "8814843294A8556B6ED0526397CD3AF53D7F4D35062C4330F2E7F24514D06539",
+      "byteEqual": true
+    },
+    {
+      "name": "pc/materials/reflectionprobe/reflectionprobevisualization_common_1_shadowmappass_vulkan.azslin",
+      "sourceGuidHex": "EE6E8F530AA857F8843C835794FFEC47",
+      "subID": -2147483646,
+      "assetType": "6977AEB117AD4992957B23BB2E85B18B",
+      "bytes": 77301,
+      "sha256": "538B84F996B2AF4F2E609938A74FED693E35465DECAD190F6BB979B03698C22D",
+      "beforeBytes": 77301,
+      "beforeSHA256": "DBD79B7A71A22E54135928FC73AFC2F364FFDBAAEAC15496197A32C98FB3ED9C",
+      "byteEqual": false
+    },
+    {
+      "name": "pc/materials/reflectionprobe/reflectionprobevisualization_common_1_shadowmappass_vulkan.ia.json",
+      "sourceGuidHex": "EE6E8F530AA857F8843C835794FFEC47",
+      "subID": -2147483645,
+      "assetType": "6977AEB117AD4992957B23BB2E85B18B",
+      "bytes": 931,
+      "sha256": "CF0DBFA273E95A09B926E466503605B78CD0BA6330EB6F6EA5F81C34285837BC",
+      "beforeBytes": 931,
+      "beforeSHA256": "78F0C7A101873C65161E7961C63C1164816FCDA0563195A8001D52E14169A223",
+      "byteEqual": false
+    },
+    {
+      "name": "pc/materials/reflectionprobe/reflectionprobevisualization_common_1_shadowmappass_vulkan.om.json",
+      "sourceGuidHex": "EE6E8F530AA857F8843C835794FFEC47",
+      "subID": -2147483644,
+      "assetType": "6977AEB117AD4992957B23BB2E85B18B",
+      "bytes": 312,
+      "sha256": "CDD9E6FAE6C7D6F70BD5761718FDBEF21A712AA328BD0BBC907DF2C10BADB93D",
+      "beforeBytes": 312,
+      "beforeSHA256": "B73B9D874EE2AA6B38601384D12BB0869F09F12E9532B273BF3C5C173A918344",
+      "byteEqual": false
+    },
+    {
+      "name": "pc/materials/reflectionprobe/reflectionprobevisualization_common_1_shadowmappass_vulkan.srg.json",
+      "sourceGuidHex": "EE6E8F530AA857F8843C835794FFEC47",
+      "subID": -2147483643,
+      "assetType": "6977AEB117AD4992957B23BB2E85B18B",
+      "bytes": 46589,
+      "sha256": "04F2C2762439BFAA0555D97CBD2CB8FB5277DABD34310795756C866CBF81E49E",
+      "beforeBytes": 46589,
+      "beforeSHA256": "53C72E8BDCED561F28ADF23E02ADFE39139689761D58F6492C68CAAA5065C8FF",
+      "byteEqual": false
+    },
+    {
+      "name": "pc/materials/reflectionprobe/reflectionprobevisualization_common_1_shadowmappass_vulkan.options.json",
+      "sourceGuidHex": "EE6E8F530AA857F8843C835794FFEC47",
+      "subID": -2147483642,
+      "assetType": "6977AEB117AD4992957B23BB2E85B18B",
+      "bytes": 437,
+      "sha256": "9FF2C343F6FEEF450992E9836B066E9B17518D8BE4658176AB61E8FEC0CC99D0",
+      "beforeBytes": 437,
+      "beforeSHA256": "9FF2C343F6FEEF450992E9836B066E9B17518D8BE4658176AB61E8FEC0CC99D0",
+      "byteEqual": true
+    },
+    {
+      "name": "pc/materials/reflectionprobe/reflectionprobevisualization_common_1_shadowmappass_vulkan.bindingdep.json",
+      "sourceGuidHex": "EE6E8F530AA857F8843C835794FFEC47",
+      "subID": -2147483641,
+      "assetType": "6977AEB117AD4992957B23BB2E85B18B",
+      "bytes": 21418,
+      "sha256": "A3EDBC23B6B483B32F8A9712A64E9907D8FCA8D187324A21101DA31699787737",
+      "beforeBytes": 21418,
+      "beforeSHA256": "A3EDBC23B6B483B32F8A9712A64E9907D8FCA8D187324A21101DA31699787737",
+      "byteEqual": true
+    },
+    {
+      "name": "pc/materials/reflectionprobe/reflectionprobevisualization_common_1_shadowmappass_vulkan.hlsl",
+      "sourceGuidHex": "EE6E8F530AA857F8843C835794FFEC47",
+      "subID": -2147483640,
+      "assetType": "6977AEB117AD4992957B23BB2E85B18B",
+      "bytes": 43574,
+      "sha256": "FAFB7B09CFC3D5502025ABB6C36D561A9BAE29A9B7B741D177F056F77EADCB15",
+      "beforeBytes": 43574,
+      "beforeSHA256": "055F1223709C63E60D5D87DB6150602F8A16E02F514D8E4FEFDB0D78358EF801",
+      "byteEqual": false
+    },
+    {
+      "name": "pc/materials/reflectionprobe/reflectionprobevisualization_common_1_shadowmappass_vulkan_0.azshadervariant",
+      "sourceGuidHex": "EE6E8F530AA857F8843C835794FFEC47",
+      "subID": -2147483647,
+      "assetType": "51BED81536D8410E90F01FA9FF765FBA",
+      "bytes": 7094,
+      "sha256": "2A482236C126141CF5A92FFA98718BBD86CEFA6C14C7BF53A2665D3764BAA589",
+      "beforeBytes": 7094,
+      "beforeSHA256": "2A482236C126141CF5A92FFA98718BBD86CEFA6C14C7BF53A2665D3764BAA589",
+      "byteEqual": true
+    },
+    {
+      "name": "pc/materials/reflectionprobe/reflectionprobevisualization_common_1_shadowmappass.azshader",
+      "sourceGuidHex": "EE6E8F530AA857F8843C835794FFEC47",
+      "subID": 0,
+      "assetType": "823395A3D57049F499A9D820CD1DEF98",
+      "bytes": 139772,
+      "sha256": "3646E7C52566423A795F7D1F8381F3F26B963928F75B66409C9E417CFC49DE3E",
+      "beforeBytes": 139772,
+      "beforeSHA256": "3646E7C52566423A795F7D1F8381F3F26B963928F75B66409C9E417CFC49DE3E",
+      "byteEqual": true
+    },
+    {
+      "name": "pc/materials/reflectionprobe/reflectionprobevisualization_mainpipeline_meshmotionvector_vulkan.azslin",
+      "sourceGuidHex": "85BF7A40F10456FBBC3EE6CD879DA548",
+      "subID": -2147483646,
+      "assetType": "6977AEB117AD4992957B23BB2E85B18B",
+      "bytes": 79226,
+      "sha256": "7B90646DEEB386C24E0FDACFEDCB8AE80F1F6997FE4772BACFA2ABA6D5EE6E67",
+      "beforeBytes": 79226,
+      "beforeSHA256": "0FA8DFE8CFD0F907561E1764E464F726E3D11C23677F6AF438539287B9AD4F5D",
+      "byteEqual": false
+    },
+    {
+      "name": "pc/materials/reflectionprobe/reflectionprobevisualization_mainpipeline_meshmotionvector_vulkan.ia.json",
+      "sourceGuidHex": "85BF7A40F10456FBBC3EE6CD879DA548",
+      "subID": -2147483645,
+      "assetType": "6977AEB117AD4992957B23BB2E85B18B",
+      "bytes": 2281,
+      "sha256": "690F3BAECAA529A16FB4014274B2D952225E78F365EB63D76C55C908AF51F9F2",
+      "beforeBytes": 2281,
+      "beforeSHA256": "9B1061724B96133EEBA670A66E3F9F3C96E163D0C3D532F3E5F486BAA7614CD6",
+      "byteEqual": false
+    },
+    {
+      "name": "pc/materials/reflectionprobe/reflectionprobevisualization_mainpipeline_meshmotionvector_vulkan.om.json",
+      "sourceGuidHex": "85BF7A40F10456FBBC3EE6CD879DA548",
+      "subID": -2147483644,
+      "assetType": "6977AEB117AD4992957B23BB2E85B18B",
+      "bytes": 588,
+      "sha256": "2C7239DAD01E2769A6DAAC0531EF2DFC3250048F8E65FCC42099B5AD0CFC2D8C",
+      "beforeBytes": 588,
+      "beforeSHA256": "AC3A4AA43E48D053591B57BDB5DF190E49908D3E7BED61B830B920D62CBF7421",
+      "byteEqual": false
+    },
+    {
+      "name": "pc/materials/reflectionprobe/reflectionprobevisualization_mainpipeline_meshmotionvector_vulkan.srg.json",
+      "sourceGuidHex": "85BF7A40F10456FBBC3EE6CD879DA548",
+      "subID": -2147483643,
+      "assetType": "6977AEB117AD4992957B23BB2E85B18B",
+      "bytes": 46596,
+      "sha256": "B8427D072D418646FCC41849A36FC38071CB14456E558586A2DE669E4A783798",
+      "beforeBytes": 46596,
+      "beforeSHA256": "F9F0621E641FFF3C1F97DFF9D70BE1C25DE68C90378A761E4E04491C9AB14154",
+      "byteEqual": false
+    },
+    {
+      "name": "pc/materials/reflectionprobe/reflectionprobevisualization_mainpipeline_meshmotionvector_vulkan.options.json",
+      "sourceGuidHex": "85BF7A40F10456FBBC3EE6CD879DA548",
+      "subID": -2147483642,
+      "assetType": "6977AEB117AD4992957B23BB2E85B18B",
+      "bytes": 748,
+      "sha256": "A6B2F20F3B5FECABBAE5D702EB0ECE717653F73A48F3DE81DE94D06F6460C60E",
+      "beforeBytes": 748,
+      "beforeSHA256": "A6B2F20F3B5FECABBAE5D702EB0ECE717653F73A48F3DE81DE94D06F6460C60E",
+      "byteEqual": true
+    },
+    {
+      "name": "pc/materials/reflectionprobe/reflectionprobevisualization_mainpipeline_meshmotionvector_vulkan.bindingdep.json",
+      "sourceGuidHex": "85BF7A40F10456FBBC3EE6CD879DA548",
+      "subID": -2147483641,
+      "assetType": "6977AEB117AD4992957B23BB2E85B18B",
+      "bytes": 21685,
+      "sha256": "0DDE0A6CAC32961DC82484DBB8D8859D29CCE475D24C3AD5FDEFCDABE578B149",
+      "beforeBytes": 21685,
+      "beforeSHA256": "0DDE0A6CAC32961DC82484DBB8D8859D29CCE475D24C3AD5FDEFCDABE578B149",
+      "byteEqual": true
+    },
+    {
+      "name": "pc/materials/reflectionprobe/reflectionprobevisualization_mainpipeline_meshmotionvector_vulkan.hlsl",
+      "sourceGuidHex": "85BF7A40F10456FBBC3EE6CD879DA548",
+      "subID": -2147483640,
+      "assetType": "6977AEB117AD4992957B23BB2E85B18B",
+      "bytes": 45584,
+      "sha256": "09A26964697E3B78AFDD819BB42320FC3EA4D667EC528C77ADA18CA17131F555",
+      "beforeBytes": 45584,
+      "beforeSHA256": "48ECDAC36D48C94D9ECB4AE2CAF1FC763C6129F049A03EC6BA1B244BBCF15067",
+      "byteEqual": false
+    },
+    {
+      "name": "pc/materials/reflectionprobe/reflectionprobevisualization_mainpipeline_meshmotionvector_vulkan_0.azshadervariant",
+      "sourceGuidHex": "85BF7A40F10456FBBC3EE6CD879DA548",
+      "subID": -2147483647,
+      "assetType": "51BED81536D8410E90F01FA9FF765FBA",
+      "bytes": 13015,
+      "sha256": "5E023863ADE9E7D81460E8D2FDA7D70234F19775DA8D04A76F87047984E90212",
+      "beforeBytes": 13015,
+      "beforeSHA256": "5E023863ADE9E7D81460E8D2FDA7D70234F19775DA8D04A76F87047984E90212",
+      "byteEqual": true
+    },
+    {
+      "name": "pc/materials/reflectionprobe/reflectionprobevisualization_mainpipeline_meshmotionvector.azshader",
+      "sourceGuidHex": "85BF7A40F10456FBBC3EE6CD879DA548",
+      "subID": 0,
+      "assetType": "823395A3D57049F499A9D820CD1DEF98",
+      "bytes": 140845,
+      "sha256": "81EA44BF6985C370AFE73D41DF05B5996823B63E9ACFEA37B3BBDD6A624F946E",
+      "beforeBytes": 140845,
+      "beforeSHA256": "81EA44BF6985C370AFE73D41DF05B5996823B63E9ACFEA37B3BBDD6A624F946E",
+      "byteEqual": true
+    },
+    {
+      "name": "pc/materials/reflectionprobe/reflectionprobevisualization_lowendpipeline_forwardpass_baselighting_vulkan.azslin",
+      "sourceGuidHex": "C53828CB1169595FB331CDCEAA241774",
+      "subID": -2147483646,
+      "assetType": "6977AEB117AD4992957B23BB2E85B18B",
+      "bytes": 403627,
+      "sha256": "C0F532A454136919F959E5E16E9D41A0FED6F8D716C020C7A50401A46E8EC65B",
+      "beforeBytes": 403627,
+      "beforeSHA256": "0F466B86D70A4DDFF33037877F0ABA023958C48273F3916026E41CC551C46E78",
+      "byteEqual": false
+    },
+    {
+      "name": "pc/materials/reflectionprobe/reflectionprobevisualization_lowendpipeline_forwardpass_baselighting_vulkan.ia.json",
+      "sourceGuidHex": "C53828CB1169595FB331CDCEAA241774",
+      "subID": -2147483645,
+      "assetType": "6977AEB117AD4992957B23BB2E85B18B",
+      "bytes": 3982,
+      "sha256": "A5E54C878BC3F11A2015BA789B8E66F6F7768DE48DA31C442E8FC0AEFEED39FC",
+      "beforeBytes": 3982,
+      "beforeSHA256": "CD81E98BA51C679111AC2035DAE6E9A44CB582DA24B6D76CCEC36F99E8EF0822",
+      "byteEqual": false
+    },
+    {
+      "name": "pc/materials/reflectionprobe/reflectionprobevisualization_lowendpipeline_forwardpass_baselighting_vulkan.om.json",
+      "sourceGuidHex": "C53828CB1169595FB331CDCEAA241774",
+      "subID": -2147483644,
+      "assetType": "6977AEB117AD4992957B23BB2E85B18B",
+      "bytes": 598,
+      "sha256": "6C4377BEAC723FF75720C1443C6F9CF6C4CBE0863FA3528261B405F02AE72F60",
+      "beforeBytes": 598,
+      "beforeSHA256": "30018D642D06CC79730CCD696658452B888A90C98A52BB69001B5B67E45231EE",
+      "byteEqual": false
+    },
+    {
+      "name": "pc/materials/reflectionprobe/reflectionprobevisualization_lowendpipeline_forwardpass_baselighting_vulkan.srg.json",
+      "sourceGuidHex": "C53828CB1169595FB331CDCEAA241774",
+      "subID": -2147483643,
+      "assetType": "6977AEB117AD4992957B23BB2E85B18B",
+      "bytes": 51067,
+      "sha256": "AEA81411ACFBF7C65F526646DA0C58EA4A53CA3BD56CC5025D0811687E096985",
+      "beforeBytes": 51067,
+      "beforeSHA256": "68CEDC28507F013AFBF867A15E5FB2B8C591C334C4B252A10DA643D5A2EAE8C3",
+      "byteEqual": false
+    },
+    {
+      "name": "pc/materials/reflectionprobe/reflectionprobevisualization_lowendpipeline_forwardpass_baselighting_vulkan.options.json",
+      "sourceGuidHex": "C53828CB1169595FB331CDCEAA241774",
+      "subID": -2147483642,
+      "assetType": "6977AEB117AD4992957B23BB2E85B18B",
+      "bytes": 9587,
+      "sha256": "2588B4B1B269677F0C0E64E0E6964A373796705305B836322A3A575FEC839603",
+      "beforeBytes": 9587,
+      "beforeSHA256": "2588B4B1B269677F0C0E64E0E6964A373796705305B836322A3A575FEC839603",
+      "byteEqual": true
+    },
+    {
+      "name": "pc/materials/reflectionprobe/reflectionprobevisualization_lowendpipeline_forwardpass_baselighting_vulkan.bindingdep.json",
+      "sourceGuidHex": "C53828CB1169595FB331CDCEAA241774",
+      "subID": -2147483641,
+      "assetType": "6977AEB117AD4992957B23BB2E85B18B",
+      "bytes": 36384,
+      "sha256": "B3C874E3CB94550D710617BE90A6DB0852D7220F030B404028CFFBB8FA84D36A",
+      "beforeBytes": 36384,
+      "beforeSHA256": "B3C874E3CB94550D710617BE90A6DB0852D7220F030B404028CFFBB8FA84D36A",
+      "byteEqual": true
+    },
+    {
+      "name": "pc/materials/reflectionprobe/reflectionprobevisualization_lowendpipeline_forwardpass_baselighting_vulkan.hlsl",
+      "sourceGuidHex": "C53828CB1169595FB331CDCEAA241774",
+      "subID": -2147483640,
+      "assetType": "6977AEB117AD4992957B23BB2E85B18B",
+      "bytes": 283961,
+      "sha256": "45241E14C7084C9935F0DFA23703F3CCB2C3866FEBB1C31817558CED8E96D06F",
+      "beforeBytes": 283961,
+      "beforeSHA256": "1D2541C8732F3029083343692853E1A90BCEAFB09A8404BA83937EFC1AC8BDE8",
+      "byteEqual": false
+    },
+    {
+      "name": "pc/materials/reflectionprobe/reflectionprobevisualization_lowendpipeline_forwardpass_baselighting_vulkan_0.azshadervariant",
+      "sourceGuidHex": "C53828CB1169595FB331CDCEAA241774",
+      "subID": -2147483647,
+      "assetType": "51BED81536D8410E90F01FA9FF765FBA",
+      "bytes": 213501,
+      "sha256": "349F6E117492A18982AF6B269F5CDEBBDC3CBDE8DF70E5E2CB671A683AA3FC59",
+      "beforeBytes": 213501,
+      "beforeSHA256": "349F6E117492A18982AF6B269F5CDEBBDC3CBDE8DF70E5E2CB671A683AA3FC59",
+      "byteEqual": true
+    },
+    {
+      "name": "pc/materials/reflectionprobe/reflectionprobevisualization_lowendpipeline_forwardpass_baselighting.azshader",
+      "sourceGuidHex": "C53828CB1169595FB331CDCEAA241774",
+      "subID": 0,
+      "assetType": "823395A3D57049F499A9D820CD1DEF98",
+      "bytes": 177385,
+      "sha256": "E2AC709A5677E176E61BB183BF46B0FDFEDDAF6C8A4C782D3631AFC6364ACFBD",
+      "beforeBytes": 177385,
+      "beforeSHA256": "E2AC709A5677E176E61BB183BF46B0FDFEDDAF6C8A4C782D3631AFC6364ACFBD",
+      "byteEqual": true
+    },
+    {
+      "name": "pc/materials/reflectionprobe/reflectionprobevisualization_mainpipeline_forwardpass_baselighting_vulkan.azslin",
+      "sourceGuidHex": "4213879E1F495B5EA4527B26294EF24C",
+      "subID": -2147483646,
+      "assetType": "6977AEB117AD4992957B23BB2E85B18B",
+      "bytes": 404982,
+      "sha256": "1A41DB33DD18C90DC4B41558BEE9BD2F9910921181BE98892275DCCFAB212D4D",
+      "beforeBytes": 404982,
+      "beforeSHA256": "56CDC8FC5161483C83B61E0B02FA3C39961E4B27DA9B00AE1CD3022624B406DB",
+      "byteEqual": false
+    },
+    {
+      "name": "pc/materials/reflectionprobe/reflectionprobevisualization_mainpipeline_forwardpass_baselighting_vulkan.ia.json",
+      "sourceGuidHex": "4213879E1F495B5EA4527B26294EF24C",
+      "subID": -2147483645,
+      "assetType": "6977AEB117AD4992957B23BB2E85B18B",
+      "bytes": 3980,
+      "sha256": "F3FE47D2D2063583959C8BA01D5453396689D95BB775D2C8212A0CAD93F0673F",
+      "beforeBytes": 3980,
+      "beforeSHA256": "7CEB0D85555C0229177B9DB01007E7FCBBF37AA2C5E5759C3D7FA200986C1D3B",
+      "byteEqual": false
+    },
+    {
+      "name": "pc/materials/reflectionprobe/reflectionprobevisualization_mainpipeline_forwardpass_baselighting_vulkan.om.json",
+      "sourceGuidHex": "4213879E1F495B5EA4527B26294EF24C",
+      "subID": -2147483644,
+      "assetType": "6977AEB117AD4992957B23BB2E85B18B",
+      "bytes": 1356,
+      "sha256": "6CED74AAA7877625DC5F113763044FF566A8BDC38BB5C04144D2663027EF7A33",
+      "beforeBytes": 1356,
+      "beforeSHA256": "666388BB54E48276497FA0722624D0F813A6C22E7320C34CD8989567DC0A0A42",
+      "byteEqual": false
+    },
+    {
+      "name": "pc/materials/reflectionprobe/reflectionprobevisualization_mainpipeline_forwardpass_baselighting_vulkan.srg.json",
+      "sourceGuidHex": "4213879E1F495B5EA4527B26294EF24C",
+      "subID": -2147483643,
+      "assetType": "6977AEB117AD4992957B23BB2E85B18B",
+      "bytes": 51065,
+      "sha256": "0ED8B15A0E93AD8E3FAB527ED3181B0599D468267E01C86F6E7883F15DD06712",
+      "beforeBytes": 51065,
+      "beforeSHA256": "FE50040DF1D111A949E4D46E8C11965238C7F99A8E6C1255498BAB9CAB6EB387",
+      "byteEqual": false
+    },
+    {
+      "name": "pc/materials/reflectionprobe/reflectionprobevisualization_mainpipeline_forwardpass_baselighting_vulkan.options.json",
+      "sourceGuidHex": "4213879E1F495B5EA4527B26294EF24C",
+      "subID": -2147483642,
+      "assetType": "6977AEB117AD4992957B23BB2E85B18B",
+      "bytes": 9589,
+      "sha256": "964A2204174654C7042A58DB81F2E0EE3B931BE4D9D8FDA79FEA316E0A0F1FAF",
+      "beforeBytes": 9589,
+      "beforeSHA256": "964A2204174654C7042A58DB81F2E0EE3B931BE4D9D8FDA79FEA316E0A0F1FAF",
+      "byteEqual": true
+    },
+    {
+      "name": "pc/materials/reflectionprobe/reflectionprobevisualization_mainpipeline_forwardpass_baselighting_vulkan.bindingdep.json",
+      "sourceGuidHex": "4213879E1F495B5EA4527B26294EF24C",
+      "subID": -2147483641,
+      "assetType": "6977AEB117AD4992957B23BB2E85B18B",
+      "bytes": 36466,
+      "sha256": "9538DE4AE2D6F09FA670D7FD3EF9FB4E767644CC4458CF831115E83C0906826E",
+      "beforeBytes": 36466,
+      "beforeSHA256": "9538DE4AE2D6F09FA670D7FD3EF9FB4E767644CC4458CF831115E83C0906826E",
+      "byteEqual": true
+    },
+    {
+      "name": "pc/materials/reflectionprobe/reflectionprobevisualization_mainpipeline_forwardpass_baselighting_vulkan.hlsl",
+      "sourceGuidHex": "4213879E1F495B5EA4527B26294EF24C",
+      "subID": -2147483640,
+      "assetType": "6977AEB117AD4992957B23BB2E85B18B",
+      "bytes": 285377,
+      "sha256": "36789DA908D7EA51A45093CEB9C6AAFD6C50B69BB051F70ECE3B58FCCE288892",
+      "beforeBytes": 285377,
+      "beforeSHA256": "89899BE12E9AE3E64348B50E95670B36F1A8362942114A4A3B8B55520FB2495C",
+      "byteEqual": false
+    },
+    {
+      "name": "pc/materials/reflectionprobe/reflectionprobevisualization_mainpipeline_forwardpass_baselighting_vulkan_0.azshadervariant",
+      "sourceGuidHex": "4213879E1F495B5EA4527B26294EF24C",
+      "subID": -2147483647,
+      "assetType": "51BED81536D8410E90F01FA9FF765FBA",
+      "bytes": 228305,
+      "sha256": "70C4F0C384B5516E4B6EE3FCB0F71367F5EB797F15D896764B20C4355028A22E",
+      "beforeBytes": 228305,
+      "beforeSHA256": "70C4F0C384B5516E4B6EE3FCB0F71367F5EB797F15D896764B20C4355028A22E",
+      "byteEqual": true
+    },
+    {
+      "name": "pc/materials/reflectionprobe/reflectionprobevisualization_mainpipeline_forwardpass_baselighting.azshader",
+      "sourceGuidHex": "4213879E1F495B5EA4527B26294EF24C",
+      "subID": 0,
+      "assetType": "823395A3D57049F499A9D820CD1DEF98",
+      "bytes": 177568,
+      "sha256": "1EA7909FE08D47DB9D9AAB13BC7FABB57B4E620645B0F61B4801E6AAC1E8AED1",
+      "beforeBytes": 177568,
+      "beforeSHA256": "1EA7909FE08D47DB9D9AAB13BC7FABB57B4E620645B0F61B4801E6AAC1E8AED1",
+      "byteEqual": true
+    }
+  ],
+  "byteEqualProducts": 46,
+  "changedPayloads": 62,
+  "nativeModules": [
+    {
+      "pid": 20348,
+      "creationUtc": "2026-10-16T06:55:46.700439Z",
+      "verifiedNativePins": [
+        {
+          "bytes": 1238528,
+          "sha256": "925C4F9AA0B4F7D561B0BB0C98EB8C17A541C24BF926724DCFADDA8C3930CB05",
+          "name": "RenderAssetBuilders.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\RenderAssetBuilders.dll"
+        },
+        {
+          "bytes": 7858688,
+          "sha256": "49B7579D2819B5081525B4BF7762AA470E2C02E2F63A3CAF2E7BEA08130421F0",
+          "name": "Atom_RPI.Public.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_RPI.Public.dll"
+        }
+      ],
+      "backendLibrariesObserved": [],
+      "pythonLibrariesObserved": [],
+      "legacyBuilderObserved": false
+    },
+    {
+      "pid": 20376,
+      "creationUtc": "2026-10-16T06:55:46.959246Z",
+      "verifiedNativePins": [
+        {
+          "bytes": 1238528,
+          "sha256": "925C4F9AA0B4F7D561B0BB0C98EB8C17A541C24BF926724DCFADDA8C3930CB05",
+          "name": "RenderAssetBuilders.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\RenderAssetBuilders.dll"
+        },
+        {
+          "bytes": 7858688,
+          "sha256": "49B7579D2819B5081525B4BF7762AA470E2C02E2F63A3CAF2E7BEA08130421F0",
+          "name": "Atom_RPI.Public.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_RPI.Public.dll"
+        }
+      ],
+      "backendLibrariesObserved": [
+        {
+          "name": "Atom_RHI_Vulkan.Builders.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_RHI_Vulkan.Builders.dll"
+        },
+        {
+          "name": "Atom_RHI_Vulkan.Private.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_RHI_Vulkan.Private.dll"
+        },
+        {
+          "name": "Atom_RHI_Null.Builders.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_RHI_Null.Builders.dll"
+        },
+        {
+          "name": "Atom_RHI_Null.Private.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_RHI_Null.Private.dll"
+        }
+      ],
+      "pythonLibrariesObserved": [],
+      "legacyBuilderObserved": false
+    },
+    {
+      "pid": 23396,
+      "creationUtc": "2026-10-16T06:55:49.811547Z",
+      "verifiedNativePins": [
+        {
+          "bytes": 1238528,
+          "sha256": "925C4F9AA0B4F7D561B0BB0C98EB8C17A541C24BF926724DCFADDA8C3930CB05",
+          "name": "RenderAssetBuilders.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\RenderAssetBuilders.dll"
+        },
+        {
+          "bytes": 7858688,
+          "sha256": "49B7579D2819B5081525B4BF7762AA470E2C02E2F63A3CAF2E7BEA08130421F0",
+          "name": "Atom_RPI.Public.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_RPI.Public.dll"
+        }
+      ],
+      "backendLibrariesObserved": [
+        {
+          "name": "Atom_RHI_Vulkan.Builders.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_RHI_Vulkan.Builders.dll"
+        },
+        {
+          "name": "Atom_RHI_Vulkan.Private.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_RHI_Vulkan.Private.dll"
+        },
+        {
+          "name": "Atom_RHI_Null.Builders.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_RHI_Null.Builders.dll"
+        },
+        {
+          "name": "Atom_RHI_Null.Private.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_RHI_Null.Private.dll"
+        }
+      ],
+      "pythonLibrariesObserved": [],
+      "legacyBuilderObserved": false
+    }
+  ],
+  "receipts": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-apbatch-vulkan-source79-attempt1\\preflight.json",
+      "bytes": 1933,
+      "sha256": "718EE4D01DF7E6E85B27B82ED61F9088AC917C921214A7E0F7688DE398AD9AA0"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-apbatch-vulkan-source79-attempt1\\postflight.json",
+      "bytes": 10771,
+      "sha256": "7445EAEF5CE3C2FE95C34FC40DFE240FD2967E4A1660EBFA713D0B97CBF42907"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-apbatch-vulkan-source79-attempt1\\focal12-review.json",
+      "bytes": 1194402,
+      "sha256": "B86844DD8D5F670036A2DC5EF44B6A2847053DD0AD37671D562A1355E0A2352B"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-apbatch-vulkan-source79-attempt1\\before-product-pins.json",
+      "bytes": 108594,
+      "sha256": "C924BD7DFD84198DA5E213EC77B4599C9BB13EE28D09791854EF939EDB80AC01"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-apbatch-vulkan-source79-attempt1\\before-database\\readonly-query.json",
+      "bytes": 911332,
+      "sha256": "BB09F2AA0EF84365440AD772F9AF67927E79907055136ACD41D6A95E5A974F37"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-apbatch-vulkan-source79-attempt1\\after-database\\readonly-query.json",
+      "bytes": 911333,
+      "sha256": "E4C9B3C2C26F65F906FA1077333337BE5152CB721EB977977CF6487DE07F05CC"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-apbatch-vulkan-source79-attempt1\\assetprocessorbatch-vulkan-extra-recook.start.json",
+      "bytes": 1701,
+      "sha256": "8827771C4A0B7C405BCC313785E21649E1F2323451E6D61F68A5123E54AB4747"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-apbatch-vulkan-source79-attempt1\\assetprocessorbatch-vulkan-extra-recook.result.json",
+      "bytes": 3839,
+      "sha256": "FFF3B1515B98EC940D3CB13B3F4A64E9428889FF8DB4CB1A60BA5D2CB394B20C"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-apbatch-vulkan-source79-attempt1\\assetprocessorbatch-vulkan-extra-recook.stdout.log",
+      "bytes": 200030,
+      "sha256": "210570D6CDCE18C81A9CD87D3B8416691FAF4865300123C68B61894093AC959B"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-apbatch-vulkan-source79-attempt1\\assetprocessorbatch-vulkan-extra-recook.stderr.log",
+      "bytes": 0,
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-apbatch-vulkan-source79-attempt1\\slot-limit-observation.json",
+      "bytes": 255,
+      "sha256": "E43D9B0F9A2FE95990403B810A1AAD744577C07D66A807A3E470E1AA55252C1F"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-apbatch-vulkan-source79-attempt1\\native-module-observation.json",
+      "bytes": 66703,
+      "sha256": "9FD42CBFCAB6B85479F742D0476094BFC9250471DF12F28D02B4FBCD3E15035A"
+    }
+  ],
+  "resourcesAtReview": {
+    "freeGiB": 14.73,
+    "ownPersistentHelpers": 0,
+    "nativeProcesses": [],
+    "ramUsedPercent": 53.85
+  },
+  "limits": [
+    "Global AP exit1 and347failed identities remain; no global PASS.",
+    "One C.UTF-8 warning per focal job remains.",
+    "108product identities are stable; changed payload hashes have not been proved deterministic or explained by byte-level comparison.",
+    "Dependency rows are captured, not resolved/Ready acceptance.",
+    "Vulkan and Null libraries observed in headless builders; module presence is not active device evidence.",
+    "No Editor UI/runtime/GPU/Linux/VR/Shipping acceptance; Gem count11, increment0.",
+    "Existing native77/SDK77 evidence is reused for unchanged productive inputs, no new engine build."
+  ]
+}
