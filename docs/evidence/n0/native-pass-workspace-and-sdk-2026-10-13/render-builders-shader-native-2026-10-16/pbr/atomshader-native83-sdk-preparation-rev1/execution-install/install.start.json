@@ -1,0 +1,15 @@
+{
+  "pid": 5796,
+  "path": null,
+  "creationUtc": "2026-10-16T09:05:08.4392532Z",
+  "argv": [
+    "--install",
+    "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine",
+    "--config",
+    "profile",
+    "--prefix",
+    "F:/JericoEngine/JericoEngine/build/sdk-vk77"
+  ],
+  "cwd": "F:/JericoEngine/JericoEngine",
+  "executable": "C:/Program Files/CMake/bin/cmake.exe"
+}

@@ -1,0 +1,26 @@
+{
+  "pid": 7932,
+  "cwd": "F:/JericoEngine/JericoEngine/build/sdk-vk-consumer83",
+  "argv": [
+    "--build",
+    "F:/JericoEngine/JericoEngine/build/sdk-vk-consumer83",
+    "--config",
+    "profile",
+    "--target",
+    "JENativeSdkConsumer",
+    "--parallel",
+    "1",
+    "--",
+    "/m:1",
+    "/nr:false",
+    "/p:UseMultiToolTask=true",
+    "/p:MultiProcCL=true",
+    "/p:MultiProcMaxCount=1",
+    "/p:EnableClServerMode=false",
+    "/p:EnforceProcessCountAcrossBuilds=true",
+    "/p:CL_MPCount=1"
+  ],
+  "path": null,
+  "executable": "C:/Program Files/CMake/bin/cmake.exe",
+  "creationUtc": "2026-10-16T09:24:28.3202322Z"
+}

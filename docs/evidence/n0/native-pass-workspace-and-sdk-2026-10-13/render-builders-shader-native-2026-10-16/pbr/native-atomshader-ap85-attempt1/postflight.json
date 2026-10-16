@@ -1,0 +1,170 @@
+{
+  "limits": "Actual fresh builder jobs/products and dependencies for parent review only; no runtime Ready/render/GPU/Gem acceptance.",
+  "cache": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\CMakeCache.txt",
+    "sha256": "583D5EC400A54D4A036414F26F332B01CDD6CD3B91B011B6B12DD484B71827BC",
+    "requiredLines": [
+      "CMAKE_GENERATOR:INTERNAL=Visual Studio 17 2022",
+      "CMAKE_GENERATOR_PLATFORM:INTERNAL=x64",
+      "FETCHCONTENT_FULLY_DISCONNECTED:BOOL=ON",
+      "LY_PACKAGE_SERVER_URLS:STRING=",
+      "O3DE_EXTERNAL_SUBDIRS:STRING=",
+      "LY_PROJECTS:STRING=F:/JericoEngine/JericoEngine/Projects/JEEditorFixture"
+    ],
+    "missingLines": [],
+    "valid": true
+  },
+  "ownerTextures": {
+    "label": "OwnerTextures",
+    "count": 26,
+    "matched": 26
+  },
+  "preCount": 14037,
+  "GemIncrement": 0,
+  "authored": {
+    "label": "Authored",
+    "count": 40,
+    "matched": 40
+  },
+  "fatal": null,
+  "freeze": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native85-ap-preparation-rev1\\freeze85-positive-variants.json",
+  "globalAPAcceptance": "NOT_CLAIMED; raw exit preserved incl1",
+  "postCount": 14037,
+  "focalComplete": true,
+  "freezeSHA256": "7CAF1FA61BA989143A043F5CE7664D92DE94D375A764979CC330DF0CCC58C381",
+  "allFrozenInputsMatched": true,
+  "phases": [
+    {
+      "phase": "before-snapshot-query",
+      "startedUtc": "2026-10-16T09:44:51.0916116Z",
+      "finishedUtc": "2026-10-16T09:44:52.8869839Z",
+      "elapsedSeconds": 1.795,
+      "pid": 16896,
+      "processCreationUtc": "2026-10-16T09:44:51.1775720Z",
+      "ramBefore": {
+        "capturedUtc": "2026-10-16T09:44:51.0887935Z",
+        "totalBytes": 34265743360,
+        "freeBytes": 20422828032,
+        "usedPercent": 40.4,
+        "thresholdPercent": 80
+      },
+      "peakRamUsedPercent": 40.4,
+      "ramWaitSamples": [],
+      "ramGuardTriggered": null,
+      "ramPollMilliseconds": 3000,
+      "processMemorySamples": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-atomshader-ap85-attempt1\\before-snapshot-query.memory-process-samples.jsonl",
+      "executable": "C:\\Users\\Jerico\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+      "argv": [
+        "-NoProfile",
+        "-NonInteractive",
+        "-File",
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native85-ap-preparation-rev1\\Query-ShaderSources85Snapshot.ps1",
+        "-Execute",
+        "-DatabaseCopyPath",
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-atomshader-ap85-attempt1\\before-database\\assetdb.sqlite",
+        "-ResultPath",
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-atomshader-ap85-attempt1\\before-database\\readonly-query.json"
+      ],
+      "exitCode": 0,
+      "stdout": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-atomshader-ap85-attempt1\\before-snapshot-query.stdout.log",
+      "stdoutSha256": "7569D89BA3B040E425F55B0F53A939629B7A27353A6EE15BD74C3AD649B799ED",
+      "stderr": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-atomshader-ap85-attempt1\\before-snapshot-query.stderr.log",
+      "stderrSha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "phase": "assetprocessorbatch-shader85",
+      "startedUtc": "2026-10-16T09:44:52.9662417Z",
+      "finishedUtc": "2026-10-16T09:45:04.5788762Z",
+      "elapsedSeconds": 11.613,
+      "pid": 24108,
+      "processCreationUtc": "2026-10-16T09:44:53.0030810Z",
+      "ramBefore": {
+        "capturedUtc": "2026-10-16T09:44:52.9661988Z",
+        "totalBytes": 34265743360,
+        "freeBytes": 20410138624,
+        "usedPercent": 40.44,
+        "thresholdPercent": 80
+      },
+      "peakRamUsedPercent": 43.75,
+      "ramWaitSamples": [
+        {
+          "capturedUtc": "2026-10-16T09:44:56.0912326Z",
+          "ramUsedPercent": 42.27,
+          "pid": 24108,
+          "processCreationUtc": "2026-10-16T09:44:53.0030810Z",
+          "workingSetBytes": 136720384
+        },
+        {
+          "capturedUtc": "2026-10-16T09:44:59.5613846Z",
+          "ramUsedPercent": 43.75,
+          "pid": 24108,
+          "processCreationUtc": "2026-10-16T09:44:53.0030810Z",
+          "workingSetBytes": 124575744
+        },
+        {
+          "capturedUtc": "2026-10-16T09:45:02.6808026Z",
+          "ramUsedPercent": 43.69,
+          "pid": 24108,
+          "processCreationUtc": "2026-10-16T09:44:53.0030810Z",
+          "workingSetBytes": 124645376
+        }
+      ],
+      "ramGuardTriggered": null,
+      "ramPollMilliseconds": 3000,
+      "processMemorySamples": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-atomshader-ap85-attempt1\\assetprocessorbatch-shader85.memory-process-samples.jsonl",
+      "executable": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AssetProcessorBatch.exe",
+      "argv": [
+        "--engine-path=F:/JericoEngine/JericoEngine",
+        "--project-path=F:/JericoEngine/JericoEngine/Projects/JEEditorFixture",
+        "--platforms=pc",
+        "--logDir=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\ap85-logs",
+        "--zeroAnalysisMode",
+        "--reprocessFileList=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native85-ap-preparation-rev1\\reprocess-sources.txt",
+        "--regset=/Amazon/AssetProcessor/Settings/Jobs/maxJobs=1",
+        "--regset=/Amazon/AssetProcessor/Settings/Jobs/AlwaysUseMaxJobs=false"
+      ],
+      "exitCode": 1,
+      "stdout": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-atomshader-ap85-attempt1\\assetprocessorbatch-shader85.stdout.log",
+      "stdoutSha256": "6FF09BA31D9F1591CCA7A2E0E0A0A9AD816E84962AA29CA21C7A6A7763F2802C",
+      "stderr": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-atomshader-ap85-attempt1\\assetprocessorbatch-shader85.stderr.log",
+      "stderrSha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "phase": "after-snapshot-query",
+      "startedUtc": "2026-10-16T09:45:04.7640433Z",
+      "finishedUtc": "2026-10-16T09:45:06.5111757Z",
+      "elapsedSeconds": 1.747,
+      "pid": 21868,
+      "processCreationUtc": "2026-10-16T09:45:04.8009130Z",
+      "ramBefore": {
+        "capturedUtc": "2026-10-16T09:45:04.7640020Z",
+        "totalBytes": 34265743360,
+        "freeBytes": 20356321280,
+        "usedPercent": 40.59,
+        "thresholdPercent": 80
+      },
+      "peakRamUsedPercent": 40.59,
+      "ramWaitSamples": [],
+      "ramGuardTriggered": null,
+      "ramPollMilliseconds": 3000,
+      "processMemorySamples": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-atomshader-ap85-attempt1\\after-snapshot-query.memory-process-samples.jsonl",
+      "executable": "C:\\Users\\Jerico\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+      "argv": [
+        "-NoProfile",
+        "-NonInteractive",
+        "-File",
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native85-ap-preparation-rev1\\Query-ShaderSources85Snapshot.ps1",
+        "-Execute",
+        "-DatabaseCopyPath",
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-atomshader-ap85-attempt1\\after-database\\assetdb.sqlite",
+        "-ResultPath",
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-atomshader-ap85-attempt1\\after-database\\readonly-query.json"
+      ],
+      "exitCode": 0,
+      "stdout": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-atomshader-ap85-attempt1\\after-snapshot-query.stdout.log",
+      "stdoutSha256": "8E2F5FDC7CBBF74CB2F3B887943EDB9A96F286A1D37E36182494F557916EEB20",
+      "stderr": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-atomshader-ap85-attempt1\\after-snapshot-query.stderr.log",
+      "stderrSha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    }
+  ]
+}

@@ -98,6 +98,8 @@ if(PAL_TRAIT_BUILD_TESTS_SUPPORTED)
     ly_add_target(
         NAME ${gem_name}.Tests ${PAL_TRAIT_TEST_TARGET_TYPE}
         NAMESPACE Gem
+        TARGET_PROPERTIES
+            JE_EXCLUDE_FROM_SDK TRUE
         FILES_CMAKE
             sceneprocessing_tests_files.cmake
         INCLUDE_DIRECTORIES

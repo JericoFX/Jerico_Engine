@@ -1,0 +1,698 @@
+{
+  "suites": [],
+  "phases": [
+    {
+      "phase": "configure-native-shader81",
+      "startedUtc": "2026-10-16T08:04:14.2292928Z",
+      "finishedUtc": "2026-10-16T08:06:21.5122814Z",
+      "elapsedSeconds": 127.283,
+      "pid": 13352,
+      "processCreationUtc": "2026-10-16T08:04:14.2786110Z",
+      "ramBefore": {
+        "capturedUtc": "2026-10-16T08:04:14.2281915Z",
+        "totalBytes": 34265743360,
+        "freeBytes": 20222951424,
+        "usedPercent": 40.98,
+        "thresholdPercent": 80
+      },
+      "peakRamUsedPercent": 42.22,
+      "ramWaitSamples": [
+        {
+          "capturedUtc": "2026-10-16T08:04:17.3952136Z",
+          "ramUsedPercent": 41.09,
+          "pid": 13352,
+          "processCreationUtc": "2026-10-16T08:04:14.2786110Z",
+          "workingSetBytes": 26046464
+        },
+        {
+          "capturedUtc": "2026-10-16T08:04:20.5912047Z",
+          "ramUsedPercent": 41.14,
+          "pid": 13352,
+          "processCreationUtc": "2026-10-16T08:04:14.2786110Z",
+          "workingSetBytes": 26046464
+        },
+        {
+          "capturedUtc": "2026-10-16T08:04:23.7101315Z",
+          "ramUsedPercent": 41.14,
+          "pid": 13352,
+          "processCreationUtc": "2026-10-16T08:04:14.2786110Z",
+          "workingSetBytes": 26046464
+        },
+        {
+          "capturedUtc": "2026-10-16T08:04:26.8288326Z",
+          "ramUsedPercent": 41.18,
+          "pid": 13352,
+          "processCreationUtc": "2026-10-16T08:04:14.2786110Z",
+          "workingSetBytes": 26046464
+        },
+        {
+          "capturedUtc": "2026-10-16T08:04:29.9497105Z",
+          "ramUsedPercent": 41.16,
+          "pid": 13352,
+          "processCreationUtc": "2026-10-16T08:04:14.2786110Z",
+          "workingSetBytes": 26046464
+        },
+        {
+          "capturedUtc": "2026-10-16T08:04:33.0688937Z",
+          "ramUsedPercent": 41.14,
+          "pid": 13352,
+          "processCreationUtc": "2026-10-16T08:04:14.2786110Z",
+          "workingSetBytes": 26046464
+        },
+        {
+          "capturedUtc": "2026-10-16T08:04:36.1771523Z",
+          "ramUsedPercent": 41.17,
+          "pid": 13352,
+          "processCreationUtc": "2026-10-16T08:04:14.2786110Z",
+          "workingSetBytes": 26046464
+        },
+        {
+          "capturedUtc": "2026-10-16T08:04:39.2943182Z",
+          "ramUsedPercent": 41.23,
+          "pid": 13352,
+          "processCreationUtc": "2026-10-16T08:04:14.2786110Z",
+          "workingSetBytes": 26050560
+        },
+        {
+          "capturedUtc": "2026-10-16T08:04:42.4097249Z",
+          "ramUsedPercent": 41.2,
+          "pid": 13352,
+          "processCreationUtc": "2026-10-16T08:04:14.2786110Z",
+          "workingSetBytes": 26050560
+        },
+        {
+          "capturedUtc": "2026-10-16T08:04:45.5190642Z",
+          "ramUsedPercent": 41.21,
+          "pid": 13352,
+          "processCreationUtc": "2026-10-16T08:04:14.2786110Z",
+          "workingSetBytes": 28315648
+        },
+        {
+          "capturedUtc": "2026-10-16T08:04:48.6405553Z",
+          "ramUsedPercent": 41.23,
+          "pid": 13352,
+          "processCreationUtc": "2026-10-16T08:04:14.2786110Z",
+          "workingSetBytes": 33275904
+        },
+        {
+          "capturedUtc": "2026-10-16T08:04:51.7519398Z",
+          "ramUsedPercent": 41.26,
+          "pid": 13352,
+          "processCreationUtc": "2026-10-16T08:04:14.2786110Z",
+          "workingSetBytes": 33275904
+        },
+        {
+          "capturedUtc": "2026-10-16T08:04:54.8698707Z",
+          "ramUsedPercent": 41.28,
+          "pid": 13352,
+          "processCreationUtc": "2026-10-16T08:04:14.2786110Z",
+          "workingSetBytes": 33275904
+        },
+        {
+          "capturedUtc": "2026-10-16T08:04:57.9798738Z",
+          "ramUsedPercent": 41.35,
+          "pid": 13352,
+          "processCreationUtc": "2026-10-16T08:04:14.2786110Z",
+          "workingSetBytes": 33275904
+        },
+        {
+          "capturedUtc": "2026-10-16T08:05:01.0958238Z",
+          "ramUsedPercent": 41.35,
+          "pid": 13352,
+          "processCreationUtc": "2026-10-16T08:04:14.2786110Z",
+          "workingSetBytes": 33275904
+        },
+        {
+          "capturedUtc": "2026-10-16T08:05:04.2023898Z",
+          "ramUsedPercent": 41.36,
+          "pid": 13352,
+          "processCreationUtc": "2026-10-16T08:04:14.2786110Z",
+          "workingSetBytes": 33275904
+        },
+        {
+          "capturedUtc": "2026-10-16T08:05:07.3123601Z",
+          "ramUsedPercent": 41.43,
+          "pid": 13352,
+          "processCreationUtc": "2026-10-16T08:04:14.2786110Z",
+          "workingSetBytes": 38203392
+        },
+        {
+          "capturedUtc": "2026-10-16T08:05:10.4163607Z",
+          "ramUsedPercent": 41.51,
+          "pid": 13352,
+          "processCreationUtc": "2026-10-16T08:04:14.2786110Z",
+          "workingSetBytes": 51372032
+        },
+        {
+          "capturedUtc": "2026-10-16T08:05:13.5230163Z",
+          "ramUsedPercent": 41.49,
+          "pid": 13352,
+          "processCreationUtc": "2026-10-16T08:04:14.2786110Z",
+          "workingSetBytes": 51372032
+        },
+        {
+          "capturedUtc": "2026-10-16T08:05:16.6367509Z",
+          "ramUsedPercent": 41.6,
+          "pid": 13352,
+          "processCreationUtc": "2026-10-16T08:04:14.2786110Z",
+          "workingSetBytes": 51351552
+        },
+        {
+          "capturedUtc": "2026-10-16T08:05:19.7477529Z",
+          "ramUsedPercent": 41.59,
+          "pid": 13352,
+          "processCreationUtc": "2026-10-16T08:04:14.2786110Z",
+          "workingSetBytes": 56352768
+        },
+        {
+          "capturedUtc": "2026-10-16T08:05:22.8516527Z",
+          "ramUsedPercent": 41.68,
+          "pid": 13352,
+          "processCreationUtc": "2026-10-16T08:04:14.2786110Z",
+          "workingSetBytes": 73183232
+        },
+        {
+          "capturedUtc": "2026-10-16T08:05:25.9681278Z",
+          "ramUsedPercent": 41.78,
+          "pid": 13352,
+          "processCreationUtc": "2026-10-16T08:04:14.2786110Z",
+          "workingSetBytes": 75845632
+        },
+        {
+          "capturedUtc": "2026-10-16T08:05:29.0794925Z",
+          "ramUsedPercent": 41.73,
+          "pid": 13352,
+          "processCreationUtc": "2026-10-16T08:04:14.2786110Z",
+          "workingSetBytes": 90619904
+        },
+        {
+          "capturedUtc": "2026-10-16T08:05:32.1922048Z",
+          "ramUsedPercent": 41.75,
+          "pid": 13352,
+          "processCreationUtc": "2026-10-16T08:04:14.2786110Z",
+          "workingSetBytes": 91004928
+        },
+        {
+          "capturedUtc": "2026-10-16T08:05:35.3019120Z",
+          "ramUsedPercent": 41.84,
+          "pid": 13352,
+          "processCreationUtc": "2026-10-16T08:04:14.2786110Z",
+          "workingSetBytes": 100786176
+        },
+        {
+          "capturedUtc": "2026-10-16T08:05:38.4123586Z",
+          "ramUsedPercent": 41.76,
+          "pid": 13352,
+          "processCreationUtc": "2026-10-16T08:04:14.2786110Z",
+          "workingSetBytes": 100876288
+        },
+        {
+          "capturedUtc": "2026-10-16T08:05:41.5234700Z",
+          "ramUsedPercent": 41.76,
+          "pid": 13352,
+          "processCreationUtc": "2026-10-16T08:04:14.2786110Z",
+          "workingSetBytes": 103731200
+        },
+        {
+          "capturedUtc": "2026-10-16T08:05:44.6290659Z",
+          "ramUsedPercent": 41.86,
+          "pid": 13352,
+          "processCreationUtc": "2026-10-16T08:04:14.2786110Z",
+          "workingSetBytes": 130265088
+        },
+        {
+          "capturedUtc": "2026-10-16T08:05:47.7368908Z",
+          "ramUsedPercent": 41.81,
+          "pid": 13352,
+          "processCreationUtc": "2026-10-16T08:04:14.2786110Z",
+          "workingSetBytes": 171900928
+        },
+        {
+          "capturedUtc": "2026-10-16T08:05:50.8505359Z",
+          "ramUsedPercent": 41.85,
+          "pid": 13352,
+          "processCreationUtc": "2026-10-16T08:04:14.2786110Z",
+          "workingSetBytes": 174604288
+        },
+        {
+          "capturedUtc": "2026-10-16T08:05:53.9900574Z",
+          "ramUsedPercent": 41.97,
+          "pid": 13352,
+          "processCreationUtc": "2026-10-16T08:04:14.2786110Z",
+          "workingSetBytes": 188833792
+        },
+        {
+          "capturedUtc": "2026-10-16T08:05:57.1007312Z",
+          "ramUsedPercent": 41.88,
+          "pid": 13352,
+          "processCreationUtc": "2026-10-16T08:04:14.2786110Z",
+          "workingSetBytes": 188952576
+        },
+        {
+          "capturedUtc": "2026-10-16T08:06:00.2210324Z",
+          "ramUsedPercent": 41.99,
+          "pid": 13352,
+          "processCreationUtc": "2026-10-16T08:04:14.2786110Z",
+          "workingSetBytes": 204316672
+        },
+        {
+          "capturedUtc": "2026-10-16T08:06:03.3317561Z",
+          "ramUsedPercent": 41.94,
+          "pid": 13352,
+          "processCreationUtc": "2026-10-16T08:04:14.2786110Z",
+          "workingSetBytes": 207347712
+        },
+        {
+          "capturedUtc": "2026-10-16T08:06:06.4413581Z",
+          "ramUsedPercent": 41.99,
+          "pid": 13352,
+          "processCreationUtc": "2026-10-16T08:04:14.2786110Z",
+          "workingSetBytes": 212418560
+        },
+        {
+          "capturedUtc": "2026-10-16T08:06:09.5495249Z",
+          "ramUsedPercent": 42.03,
+          "pid": 13352,
+          "processCreationUtc": "2026-10-16T08:04:14.2786110Z",
+          "workingSetBytes": 214708224
+        },
+        {
+          "capturedUtc": "2026-10-16T08:06:12.6650284Z",
+          "ramUsedPercent": 42.05,
+          "pid": 13352,
+          "processCreationUtc": "2026-10-16T08:04:14.2786110Z",
+          "workingSetBytes": 219164672
+        },
+        {
+          "capturedUtc": "2026-10-16T08:06:15.7722231Z",
+          "ramUsedPercent": 42.09,
+          "pid": 13352,
+          "processCreationUtc": "2026-10-16T08:04:14.2786110Z",
+          "workingSetBytes": 225746944
+        },
+        {
+          "capturedUtc": "2026-10-16T08:06:18.8808744Z",
+          "ramUsedPercent": 42.22,
+          "pid": 13352,
+          "processCreationUtc": "2026-10-16T08:04:14.2786110Z",
+          "workingSetBytes": 229527552
+        }
+      ],
+      "ramGuardTriggered": null,
+      "ramPollMilliseconds": 3000,
+      "processMemorySamples": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-shader-compiler-source81-attempt1\\configure-native-shader81.memory-process-samples.jsonl",
+      "executable": "C:\\Program Files\\CMake\\bin\\cmake.exe",
+      "argv": [
+        "-S",
+        "F:\\JericoEngine\\JericoEngine",
+        "-B",
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine"
+      ],
+      "exitCode": 0,
+      "stdout": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-shader-compiler-source81-attempt1\\configure-native-shader81.stdout.log",
+      "stdoutSha256": "54ED82EF5FFB182AD81BF511E46E9A2D34364B6BEE8772BA405F8F559570AB3B",
+      "stderr": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-shader-compiler-source81-attempt1\\configure-native-shader81.stderr.log",
+      "stderrSha256": "E4AAD40ADB2F7C1F6FD6443D22D5B73B58448EA48F5654D451726CDB24C33803"
+    },
+    {
+      "phase": "build-shader-focal81",
+      "startedUtc": "2026-10-16T08:06:21.6182198Z",
+      "finishedUtc": "2026-10-16T08:08:28.8003579Z",
+      "elapsedSeconds": 127.182,
+      "pid": 20148,
+      "processCreationUtc": "2026-10-16T08:06:21.6584240Z",
+      "ramBefore": {
+        "capturedUtc": "2026-10-16T08:06:21.6181836Z",
+        "totalBytes": 34265743360,
+        "freeBytes": 20014874624,
+        "usedPercent": 41.59,
+        "thresholdPercent": 80
+      },
+      "peakRamUsedPercent": 44.36,
+      "ramWaitSamples": [
+        {
+          "capturedUtc": "2026-10-16T08:06:24.7355085Z",
+          "ramUsedPercent": 41.77,
+          "pid": 20148,
+          "processCreationUtc": "2026-10-16T08:06:21.6584240Z",
+          "workingSetBytes": 19030016
+        },
+        {
+          "capturedUtc": "2026-10-16T08:06:27.8636905Z",
+          "ramUsedPercent": 42.33,
+          "pid": 20148,
+          "processCreationUtc": "2026-10-16T08:06:21.6584240Z",
+          "workingSetBytes": 19030016
+        },
+        {
+          "capturedUtc": "2026-10-16T08:06:30.9774329Z",
+          "ramUsedPercent": 43.03,
+          "pid": 20148,
+          "processCreationUtc": "2026-10-16T08:06:21.6584240Z",
+          "workingSetBytes": 19030016
+        },
+        {
+          "capturedUtc": "2026-10-16T08:06:34.0903668Z",
+          "ramUsedPercent": 42.94,
+          "pid": 20148,
+          "processCreationUtc": "2026-10-16T08:06:21.6584240Z",
+          "workingSetBytes": 19030016
+        },
+        {
+          "capturedUtc": "2026-10-16T08:06:37.2082141Z",
+          "ramUsedPercent": 42.36,
+          "pid": 20148,
+          "processCreationUtc": "2026-10-16T08:06:21.6584240Z",
+          "workingSetBytes": 19030016
+        },
+        {
+          "capturedUtc": "2026-10-16T08:06:40.3163272Z",
+          "ramUsedPercent": 43.13,
+          "pid": 20148,
+          "processCreationUtc": "2026-10-16T08:06:21.6584240Z",
+          "workingSetBytes": 19030016
+        },
+        {
+          "capturedUtc": "2026-10-16T08:06:43.4424917Z",
+          "ramUsedPercent": 43.63,
+          "pid": 20148,
+          "processCreationUtc": "2026-10-16T08:06:21.6584240Z",
+          "workingSetBytes": 19030016
+        },
+        {
+          "capturedUtc": "2026-10-16T08:06:46.5797051Z",
+          "ramUsedPercent": 42.53,
+          "pid": 20148,
+          "processCreationUtc": "2026-10-16T08:06:21.6584240Z",
+          "workingSetBytes": 19030016
+        },
+        {
+          "capturedUtc": "2026-10-16T08:06:49.7158228Z",
+          "ramUsedPercent": 42.99,
+          "pid": 20148,
+          "processCreationUtc": "2026-10-16T08:06:21.6584240Z",
+          "workingSetBytes": 19030016
+        },
+        {
+          "capturedUtc": "2026-10-16T08:06:52.8317284Z",
+          "ramUsedPercent": 43.43,
+          "pid": 20148,
+          "processCreationUtc": "2026-10-16T08:06:21.6584240Z",
+          "workingSetBytes": 18993152
+        },
+        {
+          "capturedUtc": "2026-10-16T08:06:55.9443967Z",
+          "ramUsedPercent": 44.1,
+          "pid": 20148,
+          "processCreationUtc": "2026-10-16T08:06:21.6584240Z",
+          "workingSetBytes": 18993152
+        },
+        {
+          "capturedUtc": "2026-10-16T08:06:59.0758963Z",
+          "ramUsedPercent": 42.58,
+          "pid": 20148,
+          "processCreationUtc": "2026-10-16T08:06:21.6584240Z",
+          "workingSetBytes": 18993152
+        },
+        {
+          "capturedUtc": "2026-10-16T08:07:02.2144975Z",
+          "ramUsedPercent": 42.78,
+          "pid": 20148,
+          "processCreationUtc": "2026-10-16T08:06:21.6584240Z",
+          "workingSetBytes": 18993152
+        },
+        {
+          "capturedUtc": "2026-10-16T08:07:05.3354602Z",
+          "ramUsedPercent": 43.22,
+          "pid": 20148,
+          "processCreationUtc": "2026-10-16T08:06:21.6584240Z",
+          "workingSetBytes": 18993152
+        },
+        {
+          "capturedUtc": "2026-10-16T08:07:08.4567757Z",
+          "ramUsedPercent": 43.92,
+          "pid": 20148,
+          "processCreationUtc": "2026-10-16T08:06:21.6584240Z",
+          "workingSetBytes": 18993152
+        },
+        {
+          "capturedUtc": "2026-10-16T08:07:11.5828894Z",
+          "ramUsedPercent": 42.53,
+          "pid": 20148,
+          "processCreationUtc": "2026-10-16T08:06:21.6584240Z",
+          "workingSetBytes": 18993152
+        },
+        {
+          "capturedUtc": "2026-10-16T08:07:14.7043962Z",
+          "ramUsedPercent": 42.92,
+          "pid": 20148,
+          "processCreationUtc": "2026-10-16T08:06:21.6584240Z",
+          "workingSetBytes": 18993152
+        },
+        {
+          "capturedUtc": "2026-10-16T08:07:17.8159803Z",
+          "ramUsedPercent": 43.66,
+          "pid": 20148,
+          "processCreationUtc": "2026-10-16T08:06:21.6584240Z",
+          "workingSetBytes": 18993152
+        },
+        {
+          "capturedUtc": "2026-10-16T08:07:20.9447565Z",
+          "ramUsedPercent": 42.73,
+          "pid": 20148,
+          "processCreationUtc": "2026-10-16T08:06:21.6584240Z",
+          "workingSetBytes": 18993152
+        },
+        {
+          "capturedUtc": "2026-10-16T08:07:24.0816945Z",
+          "ramUsedPercent": 43.01,
+          "pid": 20148,
+          "processCreationUtc": "2026-10-16T08:06:21.6584240Z",
+          "workingSetBytes": 18972672
+        },
+        {
+          "capturedUtc": "2026-10-16T08:07:27.1980766Z",
+          "ramUsedPercent": 43.42,
+          "pid": 20148,
+          "processCreationUtc": "2026-10-16T08:06:21.6584240Z",
+          "workingSetBytes": 18972672
+        },
+        {
+          "capturedUtc": "2026-10-16T08:07:30.3115058Z",
+          "ramUsedPercent": 44.07,
+          "pid": 20148,
+          "processCreationUtc": "2026-10-16T08:06:21.6584240Z",
+          "workingSetBytes": 18984960
+        },
+        {
+          "capturedUtc": "2026-10-16T08:07:33.4299932Z",
+          "ramUsedPercent": 42.44,
+          "pid": 20148,
+          "processCreationUtc": "2026-10-16T08:06:21.6584240Z",
+          "workingSetBytes": 18984960
+        },
+        {
+          "capturedUtc": "2026-10-16T08:07:36.5508357Z",
+          "ramUsedPercent": 42.92,
+          "pid": 20148,
+          "processCreationUtc": "2026-10-16T08:06:21.6584240Z",
+          "workingSetBytes": 18984960
+        },
+        {
+          "capturedUtc": "2026-10-16T08:07:39.6595281Z",
+          "ramUsedPercent": 43.58,
+          "pid": 20148,
+          "processCreationUtc": "2026-10-16T08:06:21.6584240Z",
+          "workingSetBytes": 18984960
+        },
+        {
+          "capturedUtc": "2026-10-16T08:07:42.7867471Z",
+          "ramUsedPercent": 44.0,
+          "pid": 20148,
+          "processCreationUtc": "2026-10-16T08:06:21.6584240Z",
+          "workingSetBytes": 18984960
+        },
+        {
+          "capturedUtc": "2026-10-16T08:07:45.9001441Z",
+          "ramUsedPercent": 42.52,
+          "pid": 20148,
+          "processCreationUtc": "2026-10-16T08:06:21.6584240Z",
+          "workingSetBytes": 18984960
+        },
+        {
+          "capturedUtc": "2026-10-16T08:07:49.0228409Z",
+          "ramUsedPercent": 43.17,
+          "pid": 20148,
+          "processCreationUtc": "2026-10-16T08:06:21.6584240Z",
+          "workingSetBytes": 18984960
+        },
+        {
+          "capturedUtc": "2026-10-16T08:07:52.1394263Z",
+          "ramUsedPercent": 43.65,
+          "pid": 20148,
+          "processCreationUtc": "2026-10-16T08:06:21.6584240Z",
+          "workingSetBytes": 18984960
+        },
+        {
+          "capturedUtc": "2026-10-16T08:07:55.2530196Z",
+          "ramUsedPercent": 42.83,
+          "pid": 20148,
+          "processCreationUtc": "2026-10-16T08:06:21.6584240Z",
+          "workingSetBytes": 18984960
+        },
+        {
+          "capturedUtc": "2026-10-16T08:07:58.3682792Z",
+          "ramUsedPercent": 42.15,
+          "pid": 20148,
+          "processCreationUtc": "2026-10-16T08:06:21.6584240Z",
+          "workingSetBytes": 18984960
+        },
+        {
+          "capturedUtc": "2026-10-16T08:08:01.4803997Z",
+          "ramUsedPercent": 43.08,
+          "pid": 20148,
+          "processCreationUtc": "2026-10-16T08:06:21.6584240Z",
+          "workingSetBytes": 18984960
+        },
+        {
+          "capturedUtc": "2026-10-16T08:08:04.5997055Z",
+          "ramUsedPercent": 43.54,
+          "pid": 20148,
+          "processCreationUtc": "2026-10-16T08:06:21.6584240Z",
+          "workingSetBytes": 18984960
+        },
+        {
+          "capturedUtc": "2026-10-16T08:08:07.7178108Z",
+          "ramUsedPercent": 43.93,
+          "pid": 20148,
+          "processCreationUtc": "2026-10-16T08:06:21.6584240Z",
+          "workingSetBytes": 18984960
+        },
+        {
+          "capturedUtc": "2026-10-16T08:08:10.8373966Z",
+          "ramUsedPercent": 42.47,
+          "pid": 20148,
+          "processCreationUtc": "2026-10-16T08:06:21.6584240Z",
+          "workingSetBytes": 18984960
+        },
+        {
+          "capturedUtc": "2026-10-16T08:08:13.9606698Z",
+          "ramUsedPercent": 43.18,
+          "pid": 20148,
+          "processCreationUtc": "2026-10-16T08:06:21.6584240Z",
+          "workingSetBytes": 18984960
+        },
+        {
+          "capturedUtc": "2026-10-16T08:08:17.0846483Z",
+          "ramUsedPercent": 43.91,
+          "pid": 20148,
+          "processCreationUtc": "2026-10-16T08:06:21.6584240Z",
+          "workingSetBytes": 18984960
+        },
+        {
+          "capturedUtc": "2026-10-16T08:08:20.2073815Z",
+          "ramUsedPercent": 44.36,
+          "pid": 20148,
+          "processCreationUtc": "2026-10-16T08:06:21.6584240Z",
+          "workingSetBytes": 18984960
+        },
+        {
+          "capturedUtc": "2026-10-16T08:08:23.3263242Z",
+          "ramUsedPercent": 42.73,
+          "pid": 20148,
+          "processCreationUtc": "2026-10-16T08:06:21.6584240Z",
+          "workingSetBytes": 18984960
+        },
+        {
+          "capturedUtc": "2026-10-16T08:08:26.4383424Z",
+          "ramUsedPercent": 43.46,
+          "pid": 20148,
+          "processCreationUtc": "2026-10-16T08:06:21.6584240Z",
+          "workingSetBytes": 18984960
+        }
+      ],
+      "ramGuardTriggered": null,
+      "ramPollMilliseconds": 3000,
+      "processMemorySamples": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-shader-compiler-source81-attempt1\\build-shader-focal81.memory-process-samples.jsonl",
+      "executable": "C:\\Program Files\\CMake\\bin\\cmake.exe",
+      "argv": [
+        "--build",
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine",
+        "--config",
+        "profile",
+        "--target",
+        "ShaderCompiler.Tests",
+        "RenderAssetBuilders.Tests",
+        "ShaderManagementConsole.VariantGenerator.Tests",
+        "EditorMaterials.Tests",
+        "AtomToolsFramework.Tests",
+        "GraphModel.Editor.Tests",
+        "EditorLib.Tests",
+        "Atom_RPI.Tests",
+        "--parallel",
+        "1",
+        "--",
+        "/m:1",
+        "/p:UseMultiToolTask=true",
+        "/p:MultiProcCL=true",
+        "/p:MultiProcMaxCount=1",
+        "/p:EnableClServerMode=false",
+        "/p:EnforceProcessCountAcrossBuilds=true",
+        "/p:CL_MPCount=1",
+        "/nodeReuse:false"
+      ],
+      "exitCode": 1,
+      "stdout": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-shader-compiler-source81-attempt1\\build-shader-focal81.stdout.log",
+      "stdoutSha256": "87E384EA7638FAF0E682DF4BE51C165F05093E4C0B00DF248BE57A914FB275E7",
+      "stderr": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-shader-compiler-source81-attempt1\\build-shader-focal81.stderr.log",
+      "stderrSha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    }
+  ],
+  "preCount": 14034,
+  "allFrozenInputsMatched": true,
+  "limits": "Eight native CPU suites and10 host builds only; no AP cook, SDK replay, GPU/UI/VR/Shipping acceptance.",
+  "freezeSHA256": "C1CF4930576FFB9DD5507F511225C5D97C97B59AF7C6183F5F242014DB675DE7",
+  "fatal": "build-shader-focal81 exited 1",
+  "freeze": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native80-parent-composition-rev1\\freeze81-native-shader.json",
+  "GemIncrement": 0,
+  "authored": {
+    "label": "Authored",
+    "count": 40,
+    "matched": 40
+  },
+  "postCount": 14034,
+  "configuredCache": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\CMakeCache.txt",
+    "sha256": "583D5EC400A54D4A036414F26F332B01CDD6CD3B91B011B6B12DD484B71827BC",
+    "requiredLines": [
+      "CMAKE_GENERATOR:INTERNAL=Visual Studio 17 2022",
+      "CMAKE_GENERATOR_PLATFORM:INTERNAL=x64",
+      "FETCHCONTENT_FULLY_DISCONNECTED:BOOL=ON",
+      "LY_PACKAGE_SERVER_URLS:STRING=",
+      "O3DE_EXTERNAL_SUBDIRS:STRING=",
+      "LY_PROJECTS:STRING=F:/JericoEngine/JericoEngine/Projects/JEEditorFixture"
+    ],
+    "missingLines": [],
+    "valid": true
+  },
+  "finalCache": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\CMakeCache.txt",
+    "sha256": "583D5EC400A54D4A036414F26F332B01CDD6CD3B91B011B6B12DD484B71827BC",
+    "requiredLines": [
+      "CMAKE_GENERATOR:INTERNAL=Visual Studio 17 2022",
+      "CMAKE_GENERATOR_PLATFORM:INTERNAL=x64",
+      "FETCHCONTENT_FULLY_DISCONNECTED:BOOL=ON",
+      "LY_PACKAGE_SERVER_URLS:STRING=",
+      "O3DE_EXTERNAL_SUBDIRS:STRING=",
+      "LY_PROJECTS:STRING=F:/JericoEngine/JericoEngine/Projects/JEEditorFixture"
+    ],
+    "missingLines": [],
+    "valid": true
+  },
+  "nativeCases": [],
+  "ownerTextures": {
+    "label": "OwnerTextures",
+    "count": 26,
+    "matched": 26
+  }
+}

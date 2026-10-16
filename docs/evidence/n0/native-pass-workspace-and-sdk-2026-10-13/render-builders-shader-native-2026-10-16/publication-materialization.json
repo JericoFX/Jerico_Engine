@@ -1,0 +1,31 @@
+{
+  "state": "PARENT_MATERIALIZED_BYTE_EXACT_EVIDENCE_NOT_GIT_PUBLICATION",
+  "utc": "2026-10-16T10:04:13.7013363Z",
+  "reviewer": "/root",
+  "selectedFiles": 305,
+  "selectedBytes": 38518571,
+  "selectionSHA256": "E98FECAB7F3E9C29F7AFFAC9EA6B758C68AC4C87CF381C2C649F0E72A4352E05",
+  "selectedFilesRehashedAfterCopy": 305,
+  "gitattributes": "* -text",
+  "gitattributesPurpose": "Preserve original raw stdout/XML/JSON/scripts and their receipt SHA256 despite core.autocrlf; scoped only to this evidence folder",
+  "lfsFilterAudit": "309 planned evidence/doc paths: unspecified; no LFS payload",
+  "binaryProductsPublished": 0,
+  "databaseFamiliesPublished": 0,
+  "globalAPPass": false,
+  "wholeGems": 11,
+  "newWholeGems": 0,
+  "visualAcceptance": false,
+  "sourceIntegrationPaths": 294,
+  "unrelatedDirtyWorkPreserved": true,
+  "cleanHeadReplay": false,
+  "separateUnexecutedSuites": [
+    "Atom_RHI.Tests",
+    "ImageProcessingAtom.Editor.Tests"
+  ],
+  "rawFormattingExceptions": 10,
+  "engineWhitespacePolicyUnchanged": true,
+  "sourcePublicationFormattingDelta": {
+    "sha256": "810F89C940B0BFCB7975F1207D648E041C7AA4268F51CCEC97224A3CAEDF844F",
+    "file": "publication-format-only-delta.json"
+  }
+}

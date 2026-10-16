@@ -1,0 +1,59 @@
+{
+  "state": "READ_ONLY_REPORT_READY_NOT_STAGED_NOT_ACCEPTED",
+  "head": "22cc8f7764481361d5b28e9ebc83c3ed3edc344b",
+  "coreUnionPaths": 279,
+  "currentPhysicalPins": 149,
+  "currentPinDrift": 0,
+  "preloadFlagsDatabaseInteger": 0,
+  "files": [
+    {
+      "path": "publication-ledger.json",
+      "bytes": 29041,
+      "sha256": "A28225753799FE41F20005D334B223DEA67F08A03A26F3975C32371412ABE344"
+    },
+    {
+      "path": "preload-flags-review.json",
+      "bytes": 3497,
+      "sha256": "E0604A5BCC5DD13B38192FCECC57823822B49EA807513FBCB6386FFC616C7890"
+    },
+    {
+      "path": "current-path-pins.json",
+      "bytes": 29736,
+      "sha256": "5E8CCB2B4C401A9230AC8ACDC3825BBA2E4EF7D169F18D15CE67EF4DFA8E60BD"
+    },
+    {
+      "path": "config-diff.txt",
+      "bytes": 12143,
+      "sha256": "95299D96640F39AE311D8E728139992852C4BD196C2FBFF40892A0873465951D"
+    },
+    {
+      "path": "consumers-diff.txt",
+      "bytes": 14173,
+      "sha256": "27E55569C6BF09018C168D03E9E79B52626AACD160DAC6B9C3738350D316E7B0"
+    },
+    {
+      "path": "core-and-profile-working-diff.txt",
+      "bytes": 27711,
+      "sha256": "2CB0CCA0630E08F84F116F6EF95B808694F1C57B47D3D5DC8A50B06789221807"
+    },
+    {
+      "path": "graft-flags-result.json",
+      "bytes": 412,
+      "sha256": "B29DAB4E7E33BF91881D528A34697EA6532694F9587F38937C551E3F095EA9FD"
+    }
+  ],
+  "cppFullCoverageReused": true,
+  "cppSha256": "53017F862C526DF6080210A1A00E6678C2CD5382B5D1A51026BF3B0BDE7F7ED2",
+  "gameFullCoverageReused": true,
+  "gameSha256": "4578FACCE19AC99396E5FE904EAC173066FA517AF16AE0F49B03F9082A1057EC",
+  "sourceEdits": 0,
+  "gitMutations": 0,
+  "buildAPTestCommands": 0,
+  "globalVisualGate": "OPEN",
+  "globalDependencyGate": "OPEN",
+  "cleanHeadReplay": "NOT_RUN; tree811/hosts10 does not prove selectedHEAD closure",
+  "helpers": 0,
+  "ownGraft5768Absent": true,
+  "closingRamPercent": 41.82082465699061,
+  "closingFreeGiB": 18.56640625
+}

@@ -101,6 +101,8 @@ if(PAL_TRAIT_BUILD_TESTS_SUPPORTED)
         ly_add_target(
             NAME ProcessLaunchTest EXECUTABLE
             NAMESPACE AZ
+            TARGET_PROPERTIES
+                JE_EXCLUDE_FROM_SDK TRUE
             FILES_CMAKE
                 Tests/process_launch_test_files.cmake
             INCLUDE_DIRECTORIES

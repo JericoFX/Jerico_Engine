@@ -1,0 +1,72 @@
+{
+  "state": "PRIVATE_PREPARED_NOT_RUN_PARENT_FREEZE84_AND_REVIEW82_BINDINGS_REQUIRED",
+  "owner": "/root designated single native owner, AP84 before SDK83",
+  "executable": "C:\\Users\\Jerico\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+  "argv": [],
+  "cwd": "F:\\JericoEngine\\JericoEngine",
+  "runnerSHA256": "7E3BCF2AC6416DF431D1374A3A9ECBB6644D173F1213062AD9FCB5A24290A5CA",
+  "preparationPinsSHA256": "2C8F20378CDF73018870F4AAFDD3BC00761569A06D54C61D522D8D7FA0B029F0",
+  "apExecutable": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AssetProcessorBatch.exe",
+  "apArgv": [
+    "--engine-path=F:/JericoEngine/JericoEngine",
+    "--project-path=F:/JericoEngine/JericoEngine/Projects/JEEditorFixture",
+    "--platforms=pc",
+    "--logDir=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\ap84-logs",
+    "--zeroAnalysisMode",
+    "--reprocessFileList=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native84-ap-preparation-rev1\\reprocess-sources.txt",
+    "--regset=/Amazon/AssetProcessor/Settings/Jobs/maxJobs=1",
+    "--regset=/Amazon/AssetProcessor/Settings/Jobs/AlwaysUseMaxJobs=false"
+  ],
+  "stagingManifest": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native84-ap-preparation-rev1\\workload.json",
+  "stagingPerformed": false,
+  "apRuns": 1,
+  "automaticRetry": false,
+  "configureOrBuild": false,
+  "queryChildren": 2,
+  "queryTargets": "Only stable closed before/after copied main/WAL/SHM; fixed readonly SELECTs via builtin winsqlite3",
+  "expectedFreshJobs": [
+    "Shader Asset / pc",
+    "HashedShaderVariantList / common",
+    "Shader Variant Asset_varianttree / pc",
+    "Shader Variant Asset_variantbatch / pc",
+    "PrecompiledShader Asset Builder / pc",
+    "azshadervariant / pc (root copy, subID0)"
+  ],
+  "guards": {
+    "minimumFreeGiB": 10,
+    "admissionUsedPercentLessThan": 70,
+    "authored": 40,
+    "pollMilliseconds": 3000,
+    "sourceInputs": 14037,
+    "ownerTexturePins": 26,
+    "activeGuardPercent": 80
+  },
+  "prerequisites": [
+    "Parent reviews native82 real811/10hosts and supplies pinned approved=true,reviewer=/root receipt",
+    "Parent stages exact three fixture files from workload.provenance without overwrite and seals freeze84:14034 unchanged base+3fixture inputs=14037",
+    "Parent binds real freeze84/review82 paths and hashes, reviews helper pins, then authorizes one AP84 execution",
+    "Parent retains staging until snapshot/postflight complete and prunes exact three fixture sources itself before SDK83",
+    "Fresh six jobs/four builder IDs/current logs/nonempty registered products/dependencies and unchanged global347 all mandatory"
+  ],
+  "acceptance": "Parent only. Native exit0/1 preserved,347 global failures must be identical by source/job/status; no global PASS/GPU/Ready/Gem claim.",
+  "argvTemplate": [
+    "-NoProfile",
+    "-NonInteractive",
+    "-File",
+    "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native84-ap-preparation-rev1\\RunFrozenShaderAP84.ps1",
+    "-Execute",
+    "-EvidenceDirectory",
+    "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-atomshader-ap84-attempt1",
+    "-FreezePath",
+    "<parent actual freeze84 path>",
+    "-FreezeSHA256",
+    "<parent actual freeze84 SHA256>",
+    "-InputCount",
+    "14037",
+    "-ParentReview82Path",
+    "<parent actual review82 receipt path>",
+    "-ParentReview82SHA256",
+    "<parent actual review82 receipt SHA256>"
+  ],
+  "baseline82FreezeSHA256": "B65743A66E3837A917C49F479AD4F2F6DEEBBAF5719C49ECE30302A1DE05B0EC"
+}

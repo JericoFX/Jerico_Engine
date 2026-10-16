@@ -1,0 +1,14 @@
+{
+  "utc": "2026-10-16T09:53:19.1120705Z",
+  "nativeProcesses": [],
+  "count": 0,
+  "usedPercent": 40.16,
+  "freeGiB": 19.1,
+  "taskOwnedHelpers": 0,
+  "originalZeroByteCensusPreserved": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-atomshader-ap85-attempt1\\final-native-census.json",
+    "bytes": 0,
+    "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+  },
+  "noProcessTerminatedByThisReview": true
+}

@@ -1,0 +1,14 @@
+{
+  "native82ParentReviewSHA256": "3357F0E78D5436471F4E53DB1C24E15FB849D68C49149B067E266A259C70C17E",
+  "realRunnerAndOracleReview": true,
+  "recipeSHA256": "523192450686949AC787B97D7E065A54928CE46F8CB2A25728CD18BF2C383418",
+  "reviewer": "/root",
+  "quarantine": "Parent only after successful install; exact35 files tied to accepted77 baseline, no wildcard/recursive deletion.",
+  "runnerSHA256": "DB3CE9A55864A0E471952B2BB1AEF89FB9FA8379C277F72A6B1E7A098FE0D763",
+  "ap84TemporarySourcesRemoved": true,
+  "scope": "One SDK83 Install phase only; native source82 reused, existing task-owned SDK77 prefix; no consumer/configure/build/loader before parent exact35 quarantine and new assignment.",
+  "limits": "No SDK Consume or product/GPU/GUI/Shipping acceptance yet.",
+  "GemIncrement": 0,
+  "utc": "2026-10-16T09:01:46.6768525Z",
+  "approved": true
+}

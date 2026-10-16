@@ -1,0 +1,86 @@
+{
+  "artifacts": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native83-sdk-preparation-rev1\\execution-install\\frozen-install-inputs.json",
+      "bytes": 5055186,
+      "sha256": "68857B738A8A9830920FDC700A47B6BE26932481F0181CA39D129BD7C3C53B47"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native83-sdk-preparation-rev1\\execution-install\\installed-before-quarantine.json",
+      "bytes": 2316031,
+      "sha256": "656AFC1B29464DA5F38FD8A5DB5E5E2AC5575F49CDABDCA48BB21620081422DB"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native83-sdk-preparation-rev1\\execution-install\\install_manifest.txt",
+      "bytes": 3544554,
+      "sha256": "E0DC113863D6B4B2D84F9A43224F6F62F642012748DEF4E081C8DCD99EFCA4A4"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native83-sdk-preparation-rev1\\execution-install\\install.start.json",
+      "bytes": 396,
+      "sha256": "92066CD9FFBA183A6034818E82D151D98EC6DCC6690DD03468286997BE26F5C1"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native83-sdk-preparation-rev1\\execution-install\\install.result.json",
+      "bytes": 1596,
+      "sha256": "16F657486F5B0E144FB889051E45E4621D8E13C1765E79B078B5B8442CD91322"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native83-sdk-preparation-rev1\\quarantine-proposal.json",
+      "bytes": 8574,
+      "sha256": "A714692A4B2882C31DC62F7B9C8C8A14BB361B227995D7134C0F23F41DE7AFA2"
+    }
+  ],
+  "state": "INSTALL_COMPLETE_PARENT_EXACT35_QUARANTINE_REQUIRED",
+  "sdk": "F:/JericoEngine/JericoEngine/build/sdk-vk77",
+  "freeze": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native82-private-include-preparation-rev1\\freeze82-native-shader.json",
+    "bytes": 3505834,
+    "sha256": "B65743A66E3837A917C49F479AD4F2F6DEEBBAF5719C49ECE30302A1DE05B0EC"
+  },
+  "nativeInstall": {
+    "ramGuardTriggered": false,
+    "ramSamples": [
+      {
+        "usedPercent": 41.44482324168087,
+        "utc": "2026-10-16T09:05:11.5065528Z",
+        "freeBytes": 20064366592,
+        "originalPid": 5796,
+        "originalCreationUtc": "2026-10-16T09:05:08.4392532Z"
+      },
+      {
+        "usedPercent": 42.33542840612695,
+        "utc": "2026-10-16T09:05:14.5626556Z",
+        "freeBytes": 19759194112,
+        "originalPid": 5796,
+        "originalCreationUtc": "2026-10-16T09:05:08.4392532Z"
+      },
+      {
+        "usedPercent": 42.59614901872656,
+        "utc": "2026-10-16T09:05:17.6119341Z",
+        "freeBytes": 19669856256,
+        "originalPid": 5796,
+        "originalCreationUtc": "2026-10-16T09:05:08.4392532Z"
+      }
+    ],
+    "priorityError": null,
+    "timedOut": false,
+    "ramPollMilliseconds": 3000,
+    "seconds": 9.5570395,
+    "priorityRequested": "BelowNormal",
+    "exitCode": 0,
+    "stderr": {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native83-sdk-preparation-rev1\\execution-install\\install.stderr.log",
+      "bytes": 0,
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    "stdout": {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native83-sdk-preparation-rev1\\execution-install\\install.stdout.log",
+      "bytes": 18978,
+      "sha256": "3BD8EBDB7AB731EADEA301A77D364E084BF217C94C5E55B5BB33604F2E15D4D9"
+    }
+  },
+  "noPruneByRunner": true,
+  "productAcceptance": false,
+  "sourceInputs": 14034
+}

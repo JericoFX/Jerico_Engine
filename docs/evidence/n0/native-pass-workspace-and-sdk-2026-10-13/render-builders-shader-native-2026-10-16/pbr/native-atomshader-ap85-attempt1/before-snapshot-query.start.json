@@ -1,0 +1,28 @@
+{
+  "phase": "before-snapshot-query",
+  "startedUtc": "2026-10-16T09:44:51.0916116Z",
+  "pid": 16896,
+  "processCreationUtc": "2026-10-16T09:44:51.1775720Z",
+  "ramBefore": {
+    "capturedUtc": "2026-10-16T09:44:51.0887935Z",
+    "totalBytes": 34265743360,
+    "freeBytes": 20422828032,
+    "usedPercent": 40.4,
+    "thresholdPercent": 80
+  },
+  "executable": "C:\\Users\\Jerico\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+  "argv": [
+    "-NoProfile",
+    "-NonInteractive",
+    "-File",
+    "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native85-ap-preparation-rev1\\Query-ShaderSources85Snapshot.ps1",
+    "-Execute",
+    "-DatabaseCopyPath",
+    "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-atomshader-ap85-attempt1\\before-database\\assetdb.sqlite",
+    "-ResultPath",
+    "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-atomshader-ap85-attempt1\\before-database\\readonly-query.json"
+  ],
+  "workingDirectory": "F:\\JericoEngine\\JericoEngine",
+  "stdout": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-atomshader-ap85-attempt1\\before-snapshot-query.stdout.log",
+  "stderr": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-atomshader-ap85-attempt1\\before-snapshot-query.stderr.log"
+}

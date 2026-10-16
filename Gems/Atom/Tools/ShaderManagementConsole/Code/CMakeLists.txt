@@ -51,7 +51,7 @@ ly_add_target(
             JE::EditorCamera
             Gem::AtomToolsFramework.Static
             Gem::AtomToolsFramework.Editor
-            Gem::AtomShader.Static
+            JE::RenderAssetBuilders
     RUNTIME_DEPENDENCIES
         Gem::AtomToolsFramework.Editor
 )

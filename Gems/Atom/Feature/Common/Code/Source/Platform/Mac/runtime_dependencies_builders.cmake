@@ -11,3 +11,9 @@ set(LY_RUNTIME_DEPENDENCIES
     Gem::Atom_RHI_Vulkan.Builders
     Gem::Atom_RHI_DX12.Builders
 )
+
+# Cross-cook metadata does not activate additional backends in desktop product hosts.
+if(PAL_PLATFORM_NAME STREQUAL "Windows" OR PAL_PLATFORM_NAME STREQUAL "Linux")
+    list(REMOVE_ITEM LY_RUNTIME_DEPENDENCIES
+        Gem::Atom_RHI_DX12.Builders Gem::Atom_RHI_Metal.Builders)
+endif()

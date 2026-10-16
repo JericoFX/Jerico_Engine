@@ -1,0 +1,25 @@
+Test project F:/JericoEngine/JericoEngine/build/n0-validation/original-engine
+    Start  18: Legacy::EditorLib.Tests.main::TEST_RUN
+1/8 Test  #18: Legacy::EditorLib.Tests.main::TEST_RUN ...............................   Passed    5.80 sec
+    Start  68: Gem::Atom_RPI.Tests.main::TEST_RUN
+2/8 Test  #68: Gem::Atom_RPI.Tests.main::TEST_RUN ...................................   Passed   18.84 sec
+    Start  83: Gem::GraphModel.Editor.Tests.main::TEST_RUN
+3/8 Test  #83: Gem::GraphModel.Editor.Tests.main::TEST_RUN ..........................   Passed    0.13 sec
+    Start  84: Gem::AtomToolsFramework.Tests.main::TEST_RUN
+4/8 Test  #84: Gem::AtomToolsFramework.Tests.main::TEST_RUN .........................   Passed    0.06 sec
+    Start  86: Gem::ShaderManagementConsole.VariantGenerator.Tests.main::TEST_RUN
+5/8 Test  #86: Gem::ShaderManagementConsole.VariantGenerator.Tests.main::TEST_RUN ...   Passed    0.05 sec
+    Start 106: JE::RenderAssetBuilders.Tests.main::TEST_RUN
+6/8 Test #106: JE::RenderAssetBuilders.Tests.main::TEST_RUN .........................   Passed    0.30 sec
+    Start 107: JE::ShaderCompiler.Tests.main::TEST_RUN
+7/8 Test #107: JE::ShaderCompiler.Tests.main::TEST_RUN ..............................   Passed    0.04 sec
+    Start 108: JE::EditorMaterials.Tests.main::TEST_RUN
+8/8 Test #108: JE::EditorMaterials.Tests.main::TEST_RUN .............................   Passed   10.03 sec
+
+100% tests passed, 0 tests failed out of 8
+
+Label Time Summary:
+FRAMEWORK_googletest    =  35.26 sec*proc (8 tests)
+SUITE_main              =  35.26 sec*proc (8 tests)
+
+Total Test time (real) =  35.30 sec

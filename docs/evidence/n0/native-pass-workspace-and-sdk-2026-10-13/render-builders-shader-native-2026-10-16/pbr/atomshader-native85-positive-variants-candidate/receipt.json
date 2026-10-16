@@ -1,0 +1,54 @@
+{
+  "state": "PRIVATE_READY_FOR_PARENT_REVIEW_NOT_STAGED_NOT_RUN",
+  "utc": "2026-10-16T09:01:44.5221464Z",
+  "reading": {
+    "cpp": "53017F862C526DF6080210A1A00E6678C2CD5382B5D1A51026BF3B0BDE7F7ED2",
+    "game": "4578FACCE19AC99396E5FE904EAC173066FA517AF16AE0F49B03F9082A1057EC",
+    "coverage": "Complete prior reading reused; matching current hashes",
+    "qt": "Not UI scope"
+  },
+  "checks": {
+    "candidateFiles": 3,
+    "originalsRehashed": 3,
+    "originalDrift": 0,
+    "jsonParsed": 2,
+    "variantsRetained": 3,
+    "reverseByteExact": "Verified during generation",
+    "specializationSkipAccepted": false,
+    "native": "NOT_RUN",
+    "helpers": 0,
+    "ownedQueryPidsAbsent": true
+  },
+  "artifacts": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native85-positive-variants-candidate\\proposal.json",
+      "bytes": 3743,
+      "sha256": "363AB7DBEFB1D0918CF77A24284A68C90A0C7BC4C540270DCA356DDBAAAA6E64"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native85-positive-variants-candidate\\fixture-pins.json",
+      "bytes": 1603,
+      "sha256": "31E202018D2869C3F4CAB7C65475285922374EBD6908D2E8125696126CD30615"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native85-positive-variants-candidate\\fixture-review.diff",
+      "bytes": 1330,
+      "sha256": "5ED35483BB701B0D2812481E9ADB99F63312F2784FF96A402A89C77491D72D12"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native85-positive-variants-candidate\\graft-result.json",
+      "bytes": 696,
+      "sha256": "6A68DC81BB625B667A5AA297313968723102179701FAC6D494FFADA0CA32521E"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native85-positive-variants-candidate\\graft-remove-result.json",
+      "bytes": 405,
+      "sha256": "8630E298C0C853E75A88FD558864E37F131B0D224AC168CD68DC4515E0295A53"
+    }
+  ],
+  "memory": {
+    "usedPercent": 41.96,
+    "freeGiB": 18.52
+  },
+  "limitations": "Parent staging/freezing/AP execution pending; no positive products or Gem/render acceptance asserted"
+}

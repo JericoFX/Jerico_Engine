@@ -1,0 +1,261 @@
+{
+  "schema": "ap85-physical-products-review-v1",
+  "evidenceDirectory": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-atomshader-ap85-attempt1",
+  "nativeExit": 1,
+  "focalJobs": [
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Assets\\Tests\\JENativeShader85\\JEVariantPositive85.shader",
+      "jobKey": "Shader Asset",
+      "platform": "pc",
+      "jobRunKey": 96090,
+      "builderGuid": "C94DA15182BC447586FAE6C92A0BD6F8",
+      "status": 4,
+      "errors": 0,
+      "warnings": 1,
+      "productCount": 1,
+      "jobLogPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-atomshader-ap85-attempt1\\focal-job-logs\\JEVariantPositive85.shader-1550696461-96090.log",
+      "jobLogSHA256": "C603B1A2C580793FC08350C51A1F6F0087EB89481064FFDF95A107E2CD153EB6"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Assets\\Tests\\JENativeShader85\\JEVariantPositive85.shadervariantlist",
+      "jobKey": "HashedShaderVariantList",
+      "platform": "common",
+      "jobRunKey": 96098,
+      "builderGuid": "D7FB0C17131B43E8BCCC408C1763E538",
+      "status": 4,
+      "errors": 0,
+      "warnings": 0,
+      "productCount": 2,
+      "jobLogPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-atomshader-ap85-attempt1\\focal-job-logs\\JEVariantPositive85.shadervariantlist-4022016676-96098.log",
+      "jobLogSHA256": "43603067A64A94CBA630BDB00597186E9274D4A6B67A823386EB72D1C71700F1"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Cache\\Intermediate Assets\\assets\\tests\\jenativeshader85\\jevariantpositive85.hashedvariantlist",
+      "jobKey": "Shader Variant Asset_varianttree",
+      "platform": "pc",
+      "jobRunKey": 96102,
+      "builderGuid": "C959AEC220834488AD88F61B1144535B",
+      "status": 4,
+      "errors": 0,
+      "warnings": 0,
+      "productCount": 1,
+      "jobLogPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-atomshader-ap85-attempt1\\focal-job-logs\\jevariantpositive85.hashedvariantlist-3585312271-96102.log",
+      "jobLogSHA256": "7A3FA1FDA967E418778C57C058B3B253AFAD906BE09B36C97B59F665610D8268"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Cache\\Intermediate Assets\\assets\\tests\\jenativeshader85\\jevariantpositive85_0.hashedvariantbatch",
+      "jobKey": "Shader Variant Asset_variantbatch",
+      "platform": "pc",
+      "jobRunKey": 96100,
+      "builderGuid": "C959AEC220834488AD88F61B1144535B",
+      "status": 4,
+      "errors": 0,
+      "warnings": 0,
+      "productCount": 3,
+      "jobLogPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-atomshader-ap85-attempt1\\focal-job-logs\\jevariantpositive85_0.hashedvariantbatch-1763740944-96100.log",
+      "jobLogSHA256": "EF19A284BF5E84C15FC7F15529079E4A1D62AB0AB6D8DE0C024C06A0646B552D"
+    }
+  ],
+  "physicalProducts": [
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Assets\\Tests\\JENativeShader85\\JEVariantPositive85.shader",
+      "jobKey": "Shader Asset",
+      "jobRunKey": 96090,
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Cache\\pc\\assets\\tests\\jenativeshader85\\jevariantpositive85.azshader",
+      "databaseSha256": "D57A1EB7C162EB6440292E0950E7E6C5BA22A4B42FB58F7EF8B4D074755EE233",
+      "diskSha256": "D57A1EB7C162EB6440292E0950E7E6C5BA22A4B42FB58F7EF8B4D074755EE233",
+      "databaseBytes": 14933,
+      "diskBytes": 14933,
+      "exists": true,
+      "matches": true
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Assets\\Tests\\JENativeShader85\\JEVariantPositive85.shadervariantlist",
+      "jobKey": "HashedShaderVariantList",
+      "jobRunKey": 96098,
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Cache\\Intermediate Assets\\assets\\tests\\jenativeshader85\\jevariantpositive85.hashedvariantlist",
+      "databaseSha256": "CF11C0977B4C82F6A64629C509DF319379FD341D5F091ABCDA4862E30BA5B529",
+      "diskSha256": "CF11C0977B4C82F6A64629C509DF319379FD341D5F091ABCDA4862E30BA5B529",
+      "databaseBytes": 983,
+      "diskBytes": 983,
+      "exists": true,
+      "matches": true
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Assets\\Tests\\JENativeShader85\\JEVariantPositive85.shadervariantlist",
+      "jobKey": "HashedShaderVariantList",
+      "jobRunKey": 96098,
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Cache\\Intermediate Assets\\assets\\tests\\jenativeshader85\\jevariantpositive85_0.hashedvariantbatch",
+      "databaseSha256": "CF11C0977B4C82F6A64629C509DF319379FD341D5F091ABCDA4862E30BA5B529",
+      "diskSha256": "CF11C0977B4C82F6A64629C509DF319379FD341D5F091ABCDA4862E30BA5B529",
+      "databaseBytes": 983,
+      "diskBytes": 983,
+      "exists": true,
+      "matches": true
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Cache\\Intermediate Assets\\assets\\tests\\jenativeshader85\\jevariantpositive85.hashedvariantlist",
+      "jobKey": "Shader Variant Asset_varianttree",
+      "jobRunKey": 96102,
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Cache\\pc\\assets\\tests\\jenativeshader85\\jevariantpositive85.azshadervarianttree",
+      "databaseSha256": "0839ED5194441B3B2A2AC8CC9C716B9D6B625EB64FE5C6D0D52D6FAFBEF7A8F8",
+      "diskSha256": "0839ED5194441B3B2A2AC8CC9C716B9D6B625EB64FE5C6D0D52D6FAFBEF7A8F8",
+      "databaseBytes": 1071,
+      "diskBytes": 1071,
+      "exists": true,
+      "matches": true
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Cache\\Intermediate Assets\\assets\\tests\\jenativeshader85\\jevariantpositive85_0.hashedvariantbatch",
+      "jobKey": "Shader Variant Asset_variantbatch",
+      "jobRunKey": 96100,
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Cache\\pc\\assets\\tests\\jenativeshader85\\jevariantpositive85_vulkan_1.azshadervariant",
+      "databaseSha256": "70AF8E18D92F7F7016D6ED78C84C973246E6222670C24358680E6122261D74E4",
+      "diskSha256": "70AF8E18D92F7F7016D6ED78C84C973246E6222670C24358680E6122261D74E4",
+      "databaseBytes": 3358,
+      "diskBytes": 3358,
+      "exists": true,
+      "matches": true
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Cache\\Intermediate Assets\\assets\\tests\\jenativeshader85\\jevariantpositive85_0.hashedvariantbatch",
+      "jobKey": "Shader Variant Asset_variantbatch",
+      "jobRunKey": 96100,
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Cache\\pc\\assets\\tests\\jenativeshader85\\jevariantpositive85_vulkan_2.azshadervariant",
+      "databaseSha256": "D17631313003E7F69C3C3EC03AE12C2E5333CC7D5502F8D343F196243826961F",
+      "diskSha256": "D17631313003E7F69C3C3EC03AE12C2E5333CC7D5502F8D343F196243826961F",
+      "databaseBytes": 3410,
+      "diskBytes": 3410,
+      "exists": true,
+      "matches": true
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Cache\\Intermediate Assets\\assets\\tests\\jenativeshader85\\jevariantpositive85_0.hashedvariantbatch",
+      "jobKey": "Shader Variant Asset_variantbatch",
+      "jobRunKey": 96100,
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Cache\\pc\\assets\\tests\\jenativeshader85\\jevariantpositive85_vulkan_3.azshadervariant",
+      "databaseSha256": "DABEF571825AFAFED0C87E6FF23DB14EAEC2DA9BD0B595C1B5DF7FF47D5D8C4D",
+      "diskSha256": "DABEF571825AFAFED0C87E6FF23DB14EAEC2DA9BD0B595C1B5DF7FF47D5D8C4D",
+      "databaseBytes": 3410,
+      "diskBytes": 3410,
+      "exists": true,
+      "matches": true
+    }
+  ],
+  "physicalProductCount": 7,
+  "allProductsMatch": true,
+  "globalNonCompletedBefore": 347,
+  "globalNonCompletedAfter": 347,
+  "globalIdentityStatusDiff": 0,
+  "globalIdentityStatusSHA256": "94B91C7A838E0E34861B7B40BA7008DFF31A077BACFB98E6DECDF28013E16E91",
+  "modules": [
+    {
+      "pid": 24108,
+      "creationUtc": "2026-10-16T09:44:53.003081Z",
+      "executable": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AssetProcessorBatch.exe",
+      "state": "CAPTURED",
+      "moduleCount": 109,
+      "nativeActivation": "BOTH_NATIVE_DLLS_OBSERVED_AND_PINNED",
+      "legacyBuilderObserved": false,
+      "backendLibraries": [],
+      "pythonLibraries": [],
+      "error": null,
+      "nativePins": [
+        {
+          "name": "RenderAssetBuilders.dll",
+          "bytes": 2238464,
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\RenderAssetBuilders.dll",
+          "sha256": "DDC2D553FC54F7F53388B3645E561AF30B21420CAABB52EC1DE0E272D2F97748"
+        },
+        {
+          "name": "Atom_RPI.Public.dll",
+          "bytes": 7858688,
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_RPI.Public.dll",
+          "sha256": "49B7579D2819B5081525B4BF7762AA470E2C02E2F63A3CAF2E7BEA08130421F0"
+        }
+      ]
+    },
+    {
+      "pid": 17872,
+      "creationUtc": "2026-10-16T09:44:53.251796Z",
+      "executable": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AssetBuilder.exe",
+      "state": "CAPTURED",
+      "moduleCount": 143,
+      "nativeActivation": "BOTH_NATIVE_DLLS_OBSERVED_AND_PINNED",
+      "legacyBuilderObserved": false,
+      "backendLibraries": [
+        {
+          "name": "Atom_RHI_Vulkan.Builders.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_RHI_Vulkan.Builders.dll"
+        },
+        {
+          "name": "Atom_RHI_Vulkan.Private.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_RHI_Vulkan.Private.dll"
+        },
+        {
+          "name": "Atom_RHI_Null.Builders.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_RHI_Null.Builders.dll"
+        },
+        {
+          "name": "Atom_RHI_Null.Private.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_RHI_Null.Private.dll"
+        }
+      ],
+      "pythonLibraries": [],
+      "error": null,
+      "nativePins": [
+        {
+          "name": "RenderAssetBuilders.dll",
+          "bytes": 2238464,
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\RenderAssetBuilders.dll",
+          "sha256": "DDC2D553FC54F7F53388B3645E561AF30B21420CAABB52EC1DE0E272D2F97748"
+        },
+        {
+          "name": "Atom_RPI.Public.dll",
+          "bytes": 7858688,
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_RPI.Public.dll",
+          "sha256": "49B7579D2819B5081525B4BF7762AA470E2C02E2F63A3CAF2E7BEA08130421F0"
+        }
+      ]
+    },
+    {
+      "pid": 11952,
+      "creationUtc": "2026-10-16T09:44:56.0839Z",
+      "executable": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AssetBuilder.exe",
+      "state": "CAPTURED",
+      "moduleCount": 104,
+      "nativeActivation": "BOTH_NATIVE_DLLS_OBSERVED_AND_PINNED",
+      "legacyBuilderObserved": false,
+      "backendLibraries": [],
+      "pythonLibraries": [],
+      "error": null,
+      "nativePins": [
+        {
+          "name": "RenderAssetBuilders.dll",
+          "bytes": 2238464,
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\RenderAssetBuilders.dll",
+          "sha256": "DDC2D553FC54F7F53388B3645E561AF30B21420CAABB52EC1DE0E272D2F97748"
+        },
+        {
+          "name": "Atom_RPI.Public.dll",
+          "bytes": 7858688,
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_RPI.Public.dll",
+          "sha256": "49B7579D2819B5081525B4BF7762AA470E2C02E2F63A3CAF2E7BEA08130421F0"
+        }
+      ]
+    }
+  ],
+  "postflight": {
+    "cacheSHA256": "583D5EC400A54D4A036414F26F332B01CDD6CD3B91B011B6B12DD484B71827BC",
+    "ownerTextureMatched": 26,
+    "postCount": 14037,
+    "authoredMatched": 40,
+    "preCount": 14037,
+    "allFrozenInputsMatched": true
+  },
+  "limits": [
+    "Raw AP exit 1 preserved; global acceptance not claimed.",
+    "Four focused builder jobs are Status 4 with ErrorCount 0; shader job has WarningCount 1 for Unknown encoding C.UTF-8.",
+    "Products and DB evidence are factual; no runtime Ready, render, GPU, or Gem acceptance."
+  ]
+}

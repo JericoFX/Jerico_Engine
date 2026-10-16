@@ -1,0 +1,194 @@
+{
+  "state": "PROPOSAL_ONLY_PARENT_QUARANTINE_AFTER_INSTALL",
+  "prefix": "F:\\JericoEngine\\JericoEngine\\build\\sdk-vk77",
+  "baselineInventory": {
+    "bytes": 2314105,
+    "sha256": "179911E66AF67D4ACC4D24FF95C2A1BEACEC201FA9D3D7EBC88BACECDE31E08B",
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\sdk-vulkan-source77-preparation-rev1\\execution-registry-replay-attempt2\\sdk-final-inventory.json"
+  },
+  "fileCount": 35,
+  "entries": [
+    {
+      "relativePath": "bin/Windows/profile/Default/AtomShader.Builders.dll",
+      "bytes": 1364992,
+      "sha256": "23786E5440EFCCFDC7A29DD0DEEBC380D9FA97783C3F46570F03CD94256CBFC9"
+    },
+    {
+      "relativePath": "Gems/Atom/Asset/Shader/CMakeLists.txt",
+      "bytes": 807,
+      "sha256": "169771F6E445CF055A67D604B36F4B7251DD715D1BB0F8FC06661FAC20392C41"
+    },
+    {
+      "relativePath": "Gems/Atom/Asset/Shader/gem.json",
+      "bytes": 603,
+      "sha256": "18843504C9AE1CF037DFB5A4894D6959390E021C59A538A2906231A16D0DEABC"
+    },
+    {
+      "relativePath": "Gems/Atom/Asset/Shader/preview.png",
+      "bytes": 129,
+      "sha256": "6D772860E5576CD53D457F35E861A1D7179106B567922E5DA90091BAD49BCD47"
+    },
+    {
+      "relativePath": "Gems/Atom/Asset/Shader/Assets/Config/Shader/README.md",
+      "bytes": 269,
+      "sha256": "18596A151F1DCD90256D38F4F2953D20DA8D2645DBCED6EC4EC609F3B827F6F6"
+    },
+    {
+      "relativePath": "Gems/Atom/Asset/Shader/Assets/Config/Shader/shader_build_options.settings",
+      "bytes": 1010,
+      "sha256": "60A04C50D752FA133642E59CC153A7D0DD9A11361404D548E45D14159A5CCA82"
+    },
+    {
+      "relativePath": "Gems/Atom/Asset/Shader/Assets/Config/Shader/Platform/Android/shader_build_options.settings",
+      "bytes": 2318,
+      "sha256": "411715B0A230C36285D7B5853C143AD57A864E9E2A3BFEED965B7ADBABA0C2C5"
+    },
+    {
+      "relativePath": "Gems/Atom/Asset/Shader/Assets/Config/Shader/Platform/Emscripten/shader_build_options.settings",
+      "bytes": 136,
+      "sha256": "BDA93918EC16E9BBED547B4F55FF54CE808E2D8E23D37C37B5D3A25F558619FB"
+    },
+    {
+      "relativePath": "Gems/Atom/Asset/Shader/Assets/Config/Shader/Platform/iOS/shader_build_options.settings",
+      "bytes": 842,
+      "sha256": "A80CD34B9721F4D66BE9E55A9CA5D8CA34B8DF9591EA7C4626427EB9661C1653"
+    },
+    {
+      "relativePath": "Gems/Atom/Asset/Shader/Assets/Config/Shader/Platform/Linux/shader_build_options.settings",
+      "bytes": 340,
+      "sha256": "DDBACD37FB0CC6DED4C22BC3A1E4289A902EEC6576FE8F4CA3156168EA418663"
+    },
+    {
+      "relativePath": "Gems/Atom/Asset/Shader/Assets/Config/Shader/Platform/Mac/shader_build_options.settings",
+      "bytes": 798,
+      "sha256": "4E332DB4FC4D3E4D20F8566020AD6FC2957EFEAC75709114EA2786BBAC588A01"
+    },
+    {
+      "relativePath": "Gems/Atom/Asset/Shader/Assets/Config/Shader/Platform/Windows/shader_build_options.settings",
+      "bytes": 136,
+      "sha256": "BDA93918EC16E9BBED547B4F55FF54CE808E2D8E23D37C37B5D3A25F558619FB"
+    },
+    {
+      "relativePath": "Gems/Atom/Asset/Shader/Assets/Config/Shader/Platform/Windows/dx12/shader_build_options.settings",
+      "bytes": 193,
+      "sha256": "14F9ED46151926BA19EFBA60D2F480E27977157DFA8B117311897907731E0709"
+    },
+    {
+      "relativePath": "Gems/Atom/Asset/Shader/Assets/Config/Shader/Platform/Windows/vulkan/shader_build_options.settings",
+      "bytes": 340,
+      "sha256": "DDBACD37FB0CC6DED4C22BC3A1E4289A902EEC6576FE8F4CA3156168EA418663"
+    },
+    {
+      "relativePath": "Gems/Atom/Asset/Shader/Code/CMakeLists.txt",
+      "bytes": 452,
+      "sha256": "E78BDDFE3D9209066C758C1C0C268F5DE5A86C45FEC4BCD857B619B64019BC61"
+    },
+    {
+      "relativePath": "Gems/Atom/Asset/Shader/Code/Platform/Windows/platform_windows.cmake",
+      "bytes": 389,
+      "sha256": "4895F24121229AB2AB96BECAFCC91D4490343C5570C5EEEF50981EE0235127D9"
+    },
+    {
+      "relativePath": "Gems/Atom/Asset/Shader/Code/Platform/Windows/Default/AtomShader.Builders_profile.cmake",
+      "bytes": 388,
+      "sha256": "169776C4679C171E121CCB41237AD02409A92AE9B2B742DED51C2ABB147E5A95"
+    },
+    {
+      "relativePath": "Gems/Atom/Asset/Shader/Code/Platform/Windows/Default/AtomShader.Static_profile.cmake",
+      "bytes": 376,
+      "sha256": "E13BBAC4660769ED7481E5E163C28C1E284FAD561850A5C983A29E76134E83A0"
+    },
+    {
+      "relativePath": "Gems/Atom/Asset/Shader/Code/Platform/Windows/Default/permutation.cmake",
+      "bytes": 1756,
+      "sha256": "107F13A4A57752532C02697FBB9CAC43AF45D36B39D89A6C9DF3A54067693B3C"
+    },
+    {
+      "relativePath": "Gems/Atom/Asset/Shader/Code/Source/Editor/AzslCompiler.h",
+      "bytes": 4964,
+      "sha256": "57DADD973C9F3CAA8FD365A6502F66DA16CACD6C4038667B3521C8EFD2A526CA"
+    },
+    {
+      "relativePath": "Gems/Atom/Asset/Shader/Code/Source/Editor/AzslData.h",
+      "bytes": 4741,
+      "sha256": "0EF7B308FF8D9E5F228F6D34EEEE29BFFB8D5C3B5C36C41FAB9F00F011FDE6D4"
+    },
+    {
+      "relativePath": "Gems/Atom/Asset/Shader/Code/Source/Editor/AzslShaderBuilderSystemComponent.h",
+      "bytes": 3798,
+      "sha256": "ABA36C36DCBA9494FD602070708ABF04A2BF8012C23E3443C6DCBA657C3004FE"
+    },
+    {
+      "relativePath": "Gems/Atom/Asset/Shader/Code/Source/Editor/HashedVariantListSourceData.h",
+      "bytes": 4236,
+      "sha256": "AED838EAD12975A1E2EA8DFF804D125DB633985B40C8B644013159CA9A8F288B"
+    },
+    {
+      "relativePath": "Gems/Atom/Asset/Shader/Code/Source/Editor/PrecompiledShaderBuilder.h",
+      "bytes": 1504,
+      "sha256": "C4330A55E0CF8C754BAE975965CCF9CCA931F4452BABFACC7DAB79783E64915E"
+    },
+    {
+      "relativePath": "Gems/Atom/Asset/Shader/Code/Source/Editor/ShaderAssetBuilder.h",
+      "bytes": 1600,
+      "sha256": "DFFF43EAEC173554D051BBF58927607EFBED1D53D7485DD02EE0AA2660B00999"
+    },
+    {
+      "relativePath": "Gems/Atom/Asset/Shader/Code/Source/Editor/ShaderBuildArgumentsManager.h",
+      "bytes": 8152,
+      "sha256": "DB325113C4D93B66964EADABA841F249FC10AB241D1D5351FD6673D340A4342C"
+    },
+    {
+      "relativePath": "Gems/Atom/Asset/Shader/Code/Source/Editor/ShaderBuilderUtility.h",
+      "bytes": 9723,
+      "sha256": "E1D5B552BD278621A5B5AA55684C74BBDB794EACFFD9A346CA7B478891F004E6"
+    },
+    {
+      "relativePath": "Gems/Atom/Asset/Shader/Code/Source/Editor/ShaderPlatformInterfaceRequest.h",
+      "bytes": 1406,
+      "sha256": "7ECA2C42F75F3C16941EE77F58B26CD4DE7EC0C91644C594A468D83F03AD2373"
+    },
+    {
+      "relativePath": "Gems/Atom/Asset/Shader/Code/Source/Editor/ShaderVariantAssetBuilder.h",
+      "bytes": 6292,
+      "sha256": "F16655CD52BABF1421040FAB7E6C3FB1A7B71B63A951F45AE7B3740053EE91E4"
+    },
+    {
+      "relativePath": "Gems/Atom/Asset/Shader/Code/Source/Editor/ShaderVariantListBuilder.h",
+      "bytes": 3182,
+      "sha256": "639BC4237B09AC26CC3333B7DC596586FE7C696E6A04EDB19E41FB8FBCA5DB98"
+    },
+    {
+      "relativePath": "Gems/Atom/Asset/Shader/Code/Source/Editor/SrgLayoutUtility.h",
+      "bytes": 824,
+      "sha256": "B383244E1A63979CDA1306B6CE1D066678CEC433DC457F57E938E37D56CBC249"
+    },
+    {
+      "relativePath": "Gems/Atom/Asset/Shader/Code/Source/Editor/CommonFiles/CommonTypes.h",
+      "bytes": 10301,
+      "sha256": "35406C59B4B7C1E655DF7306B2C1905BBBBB0F5F57A4AC8C031742A12BEAEF5B"
+    },
+    {
+      "relativePath": "Gems/Atom/Asset/Shader/Code/Source/Editor/CommonFiles/Preprocessor.h",
+      "bytes": 6750,
+      "sha256": "E4A2E643149F284C380BBBE7AA3CC558BB87E1242721275A793A0181100A4EB7"
+    },
+    {
+      "relativePath": "Gems/Atom/Asset/Shader/Registry/atom_shaders.setreg",
+      "bytes": 265,
+      "sha256": "7E00633ED027070771B4753F17801B7949474900046486FE17CABC6997CFADC0"
+    },
+    {
+      "relativePath": "lib/Windows/profile/Default/AtomShader.Static.lib",
+      "bytes": 12694998,
+      "sha256": "82821620A6A32D99CA6C4517064C214FCC77448537F445F8C12CACE9391A9BB9"
+    }
+  ],
+  "rules": [
+    "No deletion/move performed by preparation or runner",
+    "Parent quarantines exact35 after successful Install and keeps every byte/pin; no wildcard or SDK-wide cleanup",
+    "Consume requires exact postinstall inventory minus35 and pinned parent approved quarantine receipt",
+    "AtomShader.Builders.lib/.pdb absent in77 inventory and exact Profile dirs; not proposed",
+    "No unrelated headers or AtomShaderCapabilities.json removed"
+  ]
+}

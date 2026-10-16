@@ -1,0 +1,55 @@
+{
+  "phase": "build-original-shader-tests",
+  "startedUtc": "2026-10-16T07:43:47.6687036Z",
+  "finishedUtc": "2026-10-16T07:43:56.6412956Z",
+  "elapsedSeconds": 8.973,
+  "pid": 23432,
+  "processCreationUtc": "2026-10-16T07:43:47.7206020Z",
+  "ramBefore": {
+    "capturedUtc": "2026-10-16T07:43:47.6675859Z",
+    "totalBytes": 34265743360,
+    "freeBytes": 15664549888,
+    "usedPercent": 54.29,
+    "thresholdPercent": 80
+  },
+  "peakRamUsedPercent": 54.59,
+  "ramWaitSamples": [
+    {
+      "capturedUtc": "2026-10-16T07:43:50.8234371Z",
+      "ramUsedPercent": 54.59,
+      "pid": 23432,
+      "processCreationUtc": "2026-10-16T07:43:47.7206020Z",
+      "workingSetBytes": 18956288
+    },
+    {
+      "capturedUtc": "2026-10-16T07:43:54.0062658Z",
+      "ramUsedPercent": 54.49,
+      "pid": 23432,
+      "processCreationUtc": "2026-10-16T07:43:47.7206020Z",
+      "workingSetBytes": 19038208
+    }
+  ],
+  "ramGuardTriggered": null,
+  "ramPollMilliseconds": 3000,
+  "processMemorySamples": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-original17-before80-attempt2\\build-original-shader-tests.memory-process-samples.jsonl",
+  "executable": "C:\\Program Files\\CMake\\bin\\cmake.exe",
+  "argv": [
+    "--build",
+    "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine",
+    "--config",
+    "profile",
+    "--target",
+    "AtomShader.Tests",
+    "AtomShader.Builders",
+    "--parallel",
+    "1",
+    "--",
+    "/m:1",
+    "/nodeReuse:false"
+  ],
+  "exitCode": 0,
+  "stdout": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-original17-before80-attempt2\\build-original-shader-tests.stdout.log",
+  "stdoutSha256": "9142103ADFC103948F5AF0B0309F4BD5AC38334CE17EED2AF4B8D04235DC37C2",
+  "stderr": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-original17-before80-attempt2\\build-original-shader-tests.stderr.log",
+  "stderrSha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+}

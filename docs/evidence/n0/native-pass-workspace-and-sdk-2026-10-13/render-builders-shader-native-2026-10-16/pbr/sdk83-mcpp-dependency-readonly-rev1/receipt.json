@@ -1,0 +1,282 @@
+{
+  "state": "READ_ONLY_CAUSAL_CMAKE_REVIEW_COMPLETE_NO_FIX",
+  "conclusion": "mcpp0.dll is a real inherited shader preprocessor dependency. Shader absorption into existing RenderAssetBuilders causes its tool SDK consumer closure to gain this DLL. No additional mcpp/native-builder edge observed in current GameLauncher/RPI/RHI runtime deploy closures.",
+  "evidence": {
+    "historical": "Preserved original AtomShader CMake preimage71 PUBLIC mcpp on Static and104 PRIVATE mcpp on Builders; SHA3526753FE888BEA47643C99310E057ECA340011708D5E57B3795A64530935A93",
+    "current": "RenderBuilders CMake5 PAL hosttools guard;37-46 ShaderCompiler.Private.Object PUBLIC mcpp;63 shared RenderAssetBuilders links object PRIVATE;64-65 explicit runtime DXC/Azslc remain separate. ShaderCompiler tests89-99 use original object.",
+    "code": "Preprocessor.cpp82-88 calls mcpp_lib_main;185-190 installs native callbacks;267-310 PreprocessFile invokes binder. shader_compiler_files.cmake6-7 owns TU/header; ShaderAssetBuilder453 calls PreprocessFile.",
+    "producer": "LocalPackages/mcpp/CMakeLists36 creates JEMcppDll SHARED from7C files;43 MCPP_LIB/DLL_EXPORT;45 outputmcpp0 MultiThreadedDLL. BuildMcppPackage66 packages DLL/importlib;88 copies Findmcpp; Windows BuiltInPackages26 selects mcpp-2.7.2_az.2-je-rev1.",
+    "provider": "Findmcpp14 mcpp0.lib,15 mcpp0.dll;47 IMPORTED INTERFACE target;53 linklib;55 registerDLL via ly_add_target_files. Active extracted provider byte-identical SHA B9552D89681D392B85698706F88125A88E4AD0BCE8402D9ED962ADDDF620F786",
+    "runtimePropagation": "LYWrappers757-780 stores INTERFACE_LY_TARGET_FILES;RuntimeDependencies_common250-254 adds copy dependencies; generated profile tool closures ly_copy mcpp0.dll line130.",
+    "scope": "RenderIntegration runtime deps exclude RenderAssetBuilders; tools includes it in JE_RENDER_INTEGRATION_TOOL_DEPENDENCIES. Private shared link keeps shader compiler on tool side; GameLauncher and RPI/RHI runtime generated closure files show no mcpp0/RenderAssetBuilders."
+  },
+  "providerByteExact": true,
+  "effectiveProfileClosures": [
+    {
+      "target": "RenderAssetBuilders",
+      "path": "build/n0-validation/original-engine/runtime_dependencies/profile/RenderAssetBuilders.cmake",
+      "mcppDeclared": true,
+      "renderAssetBuildersDeclared": true,
+      "mcppCopyLines": [
+        130
+      ]
+    },
+    {
+      "target": "Editor",
+      "path": "build/n0-validation/original-engine/runtime_dependencies/profile/Editor.cmake",
+      "mcppDeclared": true,
+      "renderAssetBuildersDeclared": true,
+      "mcppCopyLines": [
+        130
+      ]
+    },
+    {
+      "target": "AssetProcessor",
+      "path": "build/n0-validation/original-engine/runtime_dependencies/profile/AssetProcessor.cmake",
+      "mcppDeclared": true,
+      "renderAssetBuildersDeclared": true,
+      "mcppCopyLines": [
+        130
+      ]
+    },
+    {
+      "target": "AssetProcessorBatch",
+      "path": "build/n0-validation/original-engine/runtime_dependencies/profile/AssetProcessorBatch.cmake",
+      "mcppDeclared": true,
+      "renderAssetBuildersDeclared": true,
+      "mcppCopyLines": [
+        130
+      ]
+    },
+    {
+      "target": "AssetBuilder",
+      "path": "build/n0-validation/original-engine/runtime_dependencies/profile/AssetBuilder.cmake",
+      "mcppDeclared": true,
+      "renderAssetBuildersDeclared": true,
+      "mcppCopyLines": [
+        130
+      ]
+    },
+    {
+      "target": "SerializeContextTools",
+      "path": "build/n0-validation/original-engine/runtime_dependencies/profile/SerializeContextTools.cmake",
+      "mcppDeclared": true,
+      "renderAssetBuildersDeclared": true,
+      "mcppCopyLines": [
+        130
+      ]
+    },
+    {
+      "target": "ShaderManagementConsole",
+      "path": "build/n0-validation/original-engine/runtime_dependencies/profile/ShaderManagementConsole.cmake",
+      "mcppDeclared": true,
+      "renderAssetBuildersDeclared": true,
+      "mcppCopyLines": [
+        130
+      ]
+    },
+    {
+      "target": "JEEditorFixture.GameLauncher",
+      "path": "build/n0-validation/original-engine/runtime_dependencies/profile/JEEditorFixture.GameLauncher.cmake",
+      "mcppDeclared": false,
+      "renderAssetBuildersDeclared": false,
+      "mcppCopyLines": []
+    },
+    {
+      "target": "RenderIntegration",
+      "path": "build/n0-validation/original-engine/runtime_dependencies/profile/RenderIntegration.cmake",
+      "mcppDeclared": false,
+      "renderAssetBuildersDeclared": false,
+      "mcppCopyLines": []
+    },
+    {
+      "target": "Atom_RPI.Public",
+      "path": "build/n0-validation/original-engine/runtime_dependencies/profile/Atom_RPI.Public.cmake",
+      "mcppDeclared": false,
+      "renderAssetBuildersDeclared": false,
+      "mcppCopyLines": []
+    },
+    {
+      "target": "Atom_RPI.Private",
+      "path": "build/n0-validation/original-engine/runtime_dependencies/profile/Atom_RPI.Private.cmake",
+      "mcppDeclared": false,
+      "renderAssetBuildersDeclared": false,
+      "mcppCopyLines": []
+    },
+    {
+      "target": "Atom_RHI.Public",
+      "path": "build/n0-validation/original-engine/runtime_dependencies/profile/Atom_RHI.Public.cmake",
+      "mcppDeclared": false,
+      "renderAssetBuildersDeclared": false,
+      "mcppCopyLines": []
+    },
+    {
+      "target": "Atom_RHI.Private",
+      "path": "build/n0-validation/original-engine/runtime_dependencies/profile/Atom_RHI.Private.cmake",
+      "mcppDeclared": false,
+      "renderAssetBuildersDeclared": false,
+      "mcppCopyLines": []
+    }
+  ],
+  "pins": [
+    {
+      "path": "build/n0-validation/native-render-builders-integration-rev1/material-pbr-preview-integration-rev1/atomshader-native80-parent-composition-rev1/before/Gems/Atom/Asset/Shader/Code/CMakeLists.txt",
+      "bytes": 5117,
+      "sha256": "3526753FE888BEA47643C99310E057ECA340011708D5E57B3795A64530935A93"
+    },
+    {
+      "path": "build/n0-validation/original-engine-deps/packages/mcpp-2.7.2_az.2-je-rev1-windows/Findmcpp.cmake",
+      "bytes": 2585,
+      "sha256": "B9552D89681D392B85698706F88125A88E4AD0BCE8402D9ED962ADDDF620F786"
+    },
+    {
+      "path": "cmake/Tools/LocalPackages/mcpp/Findmcpp.cmake",
+      "bytes": 2585,
+      "sha256": "B9552D89681D392B85698706F88125A88E4AD0BCE8402D9ED962ADDDF620F786"
+    },
+    {
+      "path": "cmake/Tools/LocalPackages/mcpp/CMakeLists.txt",
+      "bytes": 2677,
+      "sha256": "9AC4314CB567685B7565955C02BCD4AA1E07701018AC7E04080D21D56225AA20"
+    },
+    {
+      "path": "cmake/Tools/LocalPackages/mcpp/BuildMcppPackage.cmake",
+      "bytes": 6760,
+      "sha256": "234D2D39993B56B5472A24D61AA95BDCE5239CB0C6F63346A9D6040A7CBDD611"
+    },
+    {
+      "path": "cmake/3rdParty/Platform/Windows/BuiltInPackages_windows.cmake",
+      "bytes": 6795,
+      "sha256": "8BD022E76B8DD4410A5ADE10F100627CB995B96C3EA0D61BF5791B3432B7B0C3"
+    },
+    {
+      "path": "cmake/LYWrappers.cmake",
+      "bytes": 43916,
+      "sha256": "30D7CD12513386B39C89B23AA4CE94E907A376CF0C6C300F9FF19D211E9DA5B4"
+    },
+    {
+      "path": "cmake/Platform/Common/RuntimeDependencies_common.cmake",
+      "bytes": 26909,
+      "sha256": "711632EF9492FEFE7D20A97BBAEE9A9BFD3DD38831396ED7AE6A64069C8D401F"
+    },
+    {
+      "path": "Engine/Assets/RenderBuilders/CMakeLists.txt",
+      "bytes": 4457,
+      "sha256": "C2F819B2BD6B6C4A6356E420EB81EB06B56BBE689D0A12FD62EA1899ACC4B6B9"
+    },
+    {
+      "path": "Engine/Assets/RenderBuilders/shader_compiler_files.cmake",
+      "bytes": 1274,
+      "sha256": "419295F41356106F34828E3A3F869D37886132C1D16CCE1ACA2B1F0DD70F230B"
+    },
+    {
+      "path": "Engine/Assets/RenderBuilders/Source/Shader/CommonFiles/Preprocessor.cpp",
+      "bytes": 20577,
+      "sha256": "CD18E111C71E64126FF3FFCFE8BA03A992E89A8B6569F8746BFD6C6CA8476CBC"
+    },
+    {
+      "path": "Engine/Assets/RenderBuilders/Source/Shader/CommonFiles/Preprocessor.h",
+      "bytes": 6804,
+      "sha256": "1E44347E9EC640E047C65F615D3688484ACAE94C278CA5CF98211CBBB3E9B50B"
+    },
+    {
+      "path": "Engine/Render/Integration/render_integration_dependencies.cmake",
+      "bytes": 2128,
+      "sha256": "53E79B981CEEBCFA71A1F68BBB0DA238A468D5AEFDD524ACAB394F9EB38C2076"
+    },
+    {
+      "path": "build/n0-validation/original-engine/runtime_dependencies/profile/RenderAssetBuilders.cmake",
+      "bytes": 47562,
+      "sha256": "137F473D5C4F83E5FEF29D9D4D1E0AA0731DA110C9EC87F0B6A75CA396ADEA71"
+    },
+    {
+      "path": "build/n0-validation/original-engine/runtime_dependencies/profile/Editor.cmake",
+      "bytes": 89392,
+      "sha256": "DDEE682E67036C515743F80DB74894AA81994727C7B3B606AD23B41E1A27923F"
+    },
+    {
+      "path": "build/n0-validation/original-engine/runtime_dependencies/profile/AssetProcessor.cmake",
+      "bytes": 85206,
+      "sha256": "03F6999044AB0D194592AC34FB3ADA9BAF03C742F8B951AC4FC01BC3FA018248"
+    },
+    {
+      "path": "build/n0-validation/original-engine/runtime_dependencies/profile/AssetProcessorBatch.cmake",
+      "bytes": 85231,
+      "sha256": "76B3FBD7E15C7EF36F9A9C92FD78046312F47EFFFF14561E5CFAD0779ECA8411"
+    },
+    {
+      "path": "build/n0-validation/original-engine/runtime_dependencies/profile/AssetBuilder.cmake",
+      "bytes": 84013,
+      "sha256": "9304AB50A3E90A292C6E0E46F6F43BA9946EAD3058AE1F343C532BAD46A64465"
+    },
+    {
+      "path": "build/n0-validation/original-engine/runtime_dependencies/profile/SerializeContextTools.cmake",
+      "bytes": 54361,
+      "sha256": "4D79DE3FB26588295D722D9624F5972D57EA74255BE0871B8E1CC3501212FE2D"
+    },
+    {
+      "path": "build/n0-validation/original-engine/runtime_dependencies/profile/ShaderManagementConsole.cmake",
+      "bytes": 82199,
+      "sha256": "FED3F352B9C41BD600288562F66CC6CD85A3709F3971390511FB4B60DDDBEEC2"
+    },
+    {
+      "path": "build/n0-validation/original-engine/runtime_dependencies/profile/JEEditorFixture.GameLauncher.cmake",
+      "bytes": 18558,
+      "sha256": "B75D0E63FCDF89E5DBBB73B54F264924F45C496013BCC62E43070D8C7B8DB3ED"
+    },
+    {
+      "path": "build/n0-validation/original-engine/runtime_dependencies/profile/RenderIntegration.cmake",
+      "bytes": 4312,
+      "sha256": "790649D9B7980350F5E055C83077C51656B292B2293F2B12A2D707F1756E4E1D"
+    },
+    {
+      "path": "build/n0-validation/original-engine/runtime_dependencies/profile/Atom_RPI.Public.cmake",
+      "bytes": 3956,
+      "sha256": "8687022EDC28CB497924D9CCCD8CF45719CAC5DA29DDA037ED6EC740A00D20CD"
+    },
+    {
+      "path": "build/n0-validation/original-engine/runtime_dependencies/profile/Atom_RPI.Private.cmake",
+      "bytes": 4670,
+      "sha256": "AEF1FCB6F216BBDB55D8D95298AA264B5790121A7C642D9ADA97766E5B69817F"
+    },
+    {
+      "path": "build/n0-validation/original-engine/runtime_dependencies/profile/Atom_RHI.Public.cmake",
+      "bytes": 3602,
+      "sha256": "C702340557FAA30DB1CFF7A65689E5FA3B99153A96A8D53B17587424DE407CA1"
+    },
+    {
+      "path": "build/n0-validation/original-engine/runtime_dependencies/profile/Atom_RHI.Private.cmake",
+      "bytes": 3957,
+      "sha256": "4DA45CCE2A05015017223A4F1D5BBC93E65982FEE7986ED3FEECAB909AF278AE"
+    }
+  ],
+  "graph": {
+    "authoritativeCheckout": "F:/JericoEngine/JericoEngine",
+    "index": "build/n0-validation/graft-native-owner-rev1",
+    "scope": "17 mcpp hits in9symbols across3files;80indexed nativeownerfiles",
+    "freshness": "Current migrated native file paths+namespace match exact source; graph wiring timestamp2026-10-16T07:55:39.5050175Z. No claim of global index health; CMake/generated config read directly outside code index.",
+    "pid": 25524,
+    "exit": 0,
+    "guard": false,
+    "terminal": true,
+    "pidAbsent": true
+  },
+  "reading": {
+    "fullCPPGameCoverageReused": true,
+    "cpp": "53017F862C526DF6080210A1A00E6678C2CD5382B5D1A51026BF3B0BDE7F7ED2",
+    "game": "4578FACCE19AC99396E5FE904EAC173066FA517AF16AE0F49B03F9082A1057EC",
+    "qt": "No UI reviewed"
+  },
+  "limits": [
+    "No PE inspection, DLL hashing, physical provenance or loader validation duplicated; Luna/root own those actual SDK83 results. Parent reported separate PE verification completed.",
+    "Generated closure absence supports current graph/deploy separation, not proof that arbitrary runtime dynamic loads are impossible.",
+    "Consumer32-vs31 source-level explanation is shader preprocessor incorporation; no SDK oracle changed or acceptance declared here.",
+    "No edits to sources/config/docs/assets/Git, no build/AP/tests, no new dependency or download."
+  ],
+  "closure": {
+    "helpers": 0,
+    "leaseReleased": true,
+    "ramPercent": 40.11,
+    "freeGiB": 19.11
+  }
+}

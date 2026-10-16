@@ -1,0 +1,30 @@
+[
+  {
+    "beforeSHA256": "B2B9A7C30878D8F024CA2B96B8B182C126559DC1ED6606DF3B675D75E287275C",
+    "originalEOFNewline": true,
+    "forwardAndInverseByteExact": true,
+    "candidateSHA256": "DB3CE9A55864A0E471952B2BB1AEF89FB9FA8379C277F72A6B1E7A098FE0D763",
+    "file": "run-sdk-current.ps1"
+  },
+  {
+    "beforeSHA256": "92BB3D793B3A6EA453238295907668289953CD4B4CDDF0225D6E5EA39FF584F5",
+    "originalEOFNewline": false,
+    "forwardAndInverseByteExact": true,
+    "candidateSHA256": "523192450686949AC787B97D7E065A54928CE46F8CB2A25728CD18BF2C383418",
+    "file": "recipe.json"
+  },
+  {
+    "beforeSHA256": "AFD2A59B861D8BA1027F3C8B12E28DEE71C1E461EDB9F4C0D808379445AE753D",
+    "originalEOFNewline": false,
+    "forwardAndInverseByteExact": true,
+    "candidateSHA256": "29B3CA98264D7035CE2B5B96848AD96AE237988FED9E806E88502F1B88193DE7",
+    "file": "preparation.json"
+  },
+  {
+    "beforeSHA256": "2B9E3029CE38B675E5A54D8BE5FE2B0BA6AADEF284AB7D95990A8ABC2710AF53",
+    "originalEOFNewline": true,
+    "forwardAndInverseByteExact": true,
+    "candidateSHA256": "23120ED6BBC038B99E184DEC3594D115F597550BD88DEF07FC1118A07696BF5B",
+    "file": "source\\CMakeLists.txt"
+  }
+]

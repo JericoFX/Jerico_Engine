@@ -1,0 +1,34 @@
+{
+  "directory": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Assets\\Tests\\JENativeShader84",
+  "teardown": "Parent only after closed AP84 snapshots/postflight; verify each file hash before removing only the three files.",
+  "state": "STAGED_EXACT_TEMPORARY_THREE",
+  "owner": "/root",
+  "stagedUtc": "2026-10-16T08:40:23.1395284Z",
+  "copies": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Assets\\Tests\\JENativeShader84\\je_precompiled_base.azshader",
+      "bytes": 14918,
+      "sha256": "CD35FEA42AA0F6FB4EC4884941E96669847AB3866018BBEB9027A2FA7EDFA79D",
+      "provenance": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native81-precompiled-intake\\fixture\\JEPrecompiledVulkan81\\je_precompiled_base.azshader",
+      "absentBefore": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Assets\\Tests\\JENativeShader84\\je_precompiled_vulkan_0.azshadervariant",
+      "bytes": 4002,
+      "sha256": "A4E362BFDB03198DBF63270C2EB4077B460CA244A2693F31EC5D0A1AB1511097",
+      "provenance": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native81-precompiled-intake\\fixture\\JEPrecompiledVulkan81\\je_precompiled_vulkan_0.azshadervariant",
+      "absentBefore": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Assets\\Tests\\JENativeShader84\\JEPrecompiledVulkan81.precompiledshader",
+      "bytes": 508,
+      "sha256": "8D8C5A4161FB0D4287819BD79CDBB319D79D9879C6D2CCA6DCB292EB918FA26C",
+      "provenance": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native81-precompiled-intake\\fixture\\JEPrecompiledVulkan81\\JEPrecompiledVulkan81.precompiledshader",
+      "absentBefore": true
+    }
+  ],
+  "freezeSHA256": "A4FB897D04A87A992D9043DF8910925FF40791CC710383749BC3DE21ECB6669B",
+  "freezePath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native84-ap-preparation-rev1\\freeze84-native-shader.json",
+  "inputCount": 14037,
+  "workloadSHA256": "C21312EDB60909D50A0FDDC0BF1E5340BC39467259FCC2600CD021CB5A986D24"
+}

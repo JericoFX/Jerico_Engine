@@ -1,0 +1,1530 @@
+{
+  "observations": [
+    {
+      "pid": 24108,
+      "creationUtc": "2026-10-16T09:44:53.003081Z",
+      "executable": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AssetProcessorBatch.exe",
+      "state": "CAPTURED",
+      "modules": [
+        {
+          "name": "AssetProcessorBatch.exe",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AssetProcessorBatch.exe"
+        },
+        {
+          "name": "ntdll.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\ntdll.dll"
+        },
+        {
+          "name": "KERNEL32.DLL",
+          "path": "C:\\WINDOWS\\System32\\KERNEL32.DLL"
+        },
+        {
+          "name": "KERNELBASE.dll",
+          "path": "C:\\WINDOWS\\System32\\KERNELBASE.dll"
+        },
+        {
+          "name": "apphelp.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\apphelp.dll"
+        },
+        {
+          "name": "ucrtbase.dll",
+          "path": "C:\\WINDOWS\\System32\\ucrtbase.dll"
+        },
+        {
+          "name": "EditorCamera.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\EditorCamera.dll"
+        },
+        {
+          "name": "PrefabBuilder.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\PrefabBuilder.dll"
+        },
+        {
+          "name": "Geometry.Authoring.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Geometry.Authoring.dll"
+        },
+        {
+          "name": "Qt6Network.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Qt6Network.dll"
+        },
+        {
+          "name": "WorldCamera.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\WorldCamera.dll"
+        },
+        {
+          "name": "EditorMaterials.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\EditorMaterials.dll"
+        },
+        {
+          "name": "ADVAPI32.dll",
+          "path": "C:\\WINDOWS\\System32\\ADVAPI32.dll"
+        },
+        {
+          "name": "EditorRenderIntegration.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\EditorRenderIntegration.dll"
+        },
+        {
+          "name": "msvcrt.dll",
+          "path": "C:\\WINDOWS\\System32\\msvcrt.dll"
+        },
+        {
+          "name": "sechost.dll",
+          "path": "C:\\WINDOWS\\System32\\sechost.dll"
+        },
+        {
+          "name": "RPCRT4.dll",
+          "path": "C:\\WINDOWS\\System32\\RPCRT4.dll"
+        },
+        {
+          "name": "WS2_32.dll",
+          "path": "C:\\WINDOWS\\System32\\WS2_32.dll"
+        },
+        {
+          "name": "AzFramework.NativeUI.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AzFramework.NativeUI.dll"
+        },
+        {
+          "name": "RenderAssetBuilders.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\RenderAssetBuilders.dll"
+        },
+        {
+          "name": "GDI32.dll",
+          "path": "C:\\WINDOWS\\System32\\GDI32.dll"
+        },
+        {
+          "name": "win32u.dll",
+          "path": "C:\\WINDOWS\\System32\\win32u.dll"
+        },
+        {
+          "name": "gdi32full.dll",
+          "path": "C:\\WINDOWS\\System32\\gdi32full.dll"
+        },
+        {
+          "name": "msvcp_win.dll",
+          "path": "C:\\WINDOWS\\System32\\msvcp_win.dll"
+        },
+        {
+          "name": "USER32.dll",
+          "path": "C:\\WINDOWS\\System32\\USER32.dll"
+        },
+        {
+          "name": "AzQtComponents.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AzQtComponents.dll"
+        },
+        {
+          "name": "RenderMaterials.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\RenderMaterials.dll"
+        },
+        {
+          "name": "Qt6Core.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Qt6Core.dll"
+        },
+        {
+          "name": "Qt6Gui.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Qt6Gui.dll"
+        },
+        {
+          "name": "ole32.dll",
+          "path": "C:\\WINDOWS\\System32\\ole32.dll"
+        },
+        {
+          "name": "DebugImGui.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\DebugImGui.dll"
+        },
+        {
+          "name": "combase.dll",
+          "path": "C:\\WINDOWS\\System32\\combase.dll"
+        },
+        {
+          "name": "SHELL32.dll",
+          "path": "C:\\WINDOWS\\System32\\SHELL32.dll"
+        },
+        {
+          "name": "OLEAUT32.dll",
+          "path": "C:\\WINDOWS\\System32\\OLEAUT32.dll"
+        },
+        {
+          "name": "ProfilerCapture.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\ProfilerCapture.dll"
+        },
+        {
+          "name": "MSVCP140.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\MSVCP140.dll"
+        },
+        {
+          "name": "VCRUNTIME140.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\VCRUNTIME140.dll"
+        },
+        {
+          "name": "VCRUNTIME140_1.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\VCRUNTIME140_1.dll"
+        },
+        {
+          "name": "AzToolsFramework.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AzToolsFramework.dll"
+        },
+        {
+          "name": "Qt6Widgets.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Qt6Widgets.dll"
+        },
+        {
+          "name": "Atom_RPI.Public.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_RPI.Public.dll"
+        },
+        {
+          "name": "AzFramework.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AzFramework.dll"
+        },
+        {
+          "name": "AzCore.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AzCore.dll"
+        },
+        {
+          "name": "CRYPT32.dll",
+          "path": "C:\\WINDOWS\\System32\\CRYPT32.dll"
+        },
+        {
+          "name": "SceneCore.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\SceneCore.dll"
+        },
+        {
+          "name": "Geometry.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Geometry.dll"
+        },
+        {
+          "name": "SceneData.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\SceneData.dll"
+        },
+        {
+          "name": "Atom_Feature_Common.Public.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_Feature_Common.Public.dll"
+        },
+        {
+          "name": "Atom_RHI.Public.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_RHI.Public.dll"
+        },
+        {
+          "name": "RenderIntegration.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\RenderIntegration.dll"
+        },
+        {
+          "name": "Atom_RHI.Reflect.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_RHI.Reflect.dll"
+        },
+        {
+          "name": "RenderDebug.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\RenderDebug.dll"
+        },
+        {
+          "name": "Atom_RPI.Edit.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_RPI.Edit.dll"
+        },
+        {
+          "name": "DNSAPI.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\DNSAPI.dll"
+        },
+        {
+          "name": "IPHLPAPI.DLL",
+          "path": "C:\\WINDOWS\\SYSTEM32\\IPHLPAPI.DLL"
+        },
+        {
+          "name": "Secur32.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\Secur32.dll"
+        },
+        {
+          "name": "WINHTTP.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\WINHTTP.dll"
+        },
+        {
+          "name": "MSVCP140_1.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\MSVCP140_1.dll"
+        },
+        {
+          "name": "mcpp0.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\mcpp0.dll"
+        },
+        {
+          "name": "Qt6SvgWidgets.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Qt6SvgWidgets.dll"
+        },
+        {
+          "name": "Qt6Xml.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Qt6Xml.dll"
+        },
+        {
+          "name": "Qt6Svg.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Qt6Svg.dll"
+        },
+        {
+          "name": "MAGNIFICATION.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\MAGNIFICATION.dll"
+        },
+        {
+          "name": "MPR.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\MPR.dll"
+        },
+        {
+          "name": "USERENV.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\USERENV.dll"
+        },
+        {
+          "name": "AUTHZ.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\AUTHZ.dll"
+        },
+        {
+          "name": "NETAPI32.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\NETAPI32.dll"
+        },
+        {
+          "name": "d3d11.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\d3d11.dll"
+        },
+        {
+          "name": "d3d12.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\d3d12.dll"
+        },
+        {
+          "name": "dxgi.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\dxgi.dll"
+        },
+        {
+          "name": "VERSION.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\VERSION.dll"
+        },
+        {
+          "name": "WINMM.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\WINMM.dll"
+        },
+        {
+          "name": "DearImGui.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\DearImGui.dll"
+        },
+        {
+          "name": "UxTheme.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\UxTheme.dll"
+        },
+        {
+          "name": "DWrite.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\DWrite.dll"
+        },
+        {
+          "name": "MSVCP140_2.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\MSVCP140_2.dll"
+        },
+        {
+          "name": "dwmapi.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\dwmapi.dll"
+        },
+        {
+          "name": "bcrypt.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\bcrypt.dll"
+        },
+        {
+          "name": "MSVCP140_ATOMIC_WAIT.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\MSVCP140_ATOMIC_WAIT.dll"
+        },
+        {
+          "name": "ProfilerView.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\ProfilerView.dll"
+        },
+        {
+          "name": "DSPARSE.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\DSPARSE.dll"
+        },
+        {
+          "name": "WTSAPI32.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\WTSAPI32.dll"
+        },
+        {
+          "name": "gdiplus.dll",
+          "path": "C:\\WINDOWS\\WinSxS\\amd64_microsoft.windows.gdiplus_6595b64144ccf1df_1.1.26100.9711_none_6ef2ab963dc761f3\\gdiplus.dll"
+        },
+        {
+          "name": "d3d9.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\d3d9.dll"
+        },
+        {
+          "name": "powrprof.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\powrprof.dll"
+        },
+        {
+          "name": "SSPICLI.DLL",
+          "path": "C:\\WINDOWS\\SYSTEM32\\SSPICLI.DLL"
+        },
+        {
+          "name": "dxcore.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\dxcore.dll"
+        },
+        {
+          "name": "icuuc.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\icuuc.dll"
+        },
+        {
+          "name": "CRYPTBASE.DLL",
+          "path": "C:\\WINDOWS\\SYSTEM32\\CRYPTBASE.DLL"
+        },
+        {
+          "name": "SRVCLI.DLL",
+          "path": "C:\\WINDOWS\\SYSTEM32\\SRVCLI.DLL"
+        },
+        {
+          "name": "NETUTILS.DLL",
+          "path": "C:\\WINDOWS\\SYSTEM32\\NETUTILS.DLL"
+        },
+        {
+          "name": "icu.DLL",
+          "path": "C:\\WINDOWS\\SYSTEM32\\icu.DLL"
+        },
+        {
+          "name": "IMM32.DLL",
+          "path": "C:\\WINDOWS\\System32\\IMM32.DLL"
+        },
+        {
+          "name": "bcryptprimitives.dll",
+          "path": "C:\\WINDOWS\\System32\\bcryptprimitives.dll"
+        },
+        {
+          "name": "UMPDC.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\UMPDC.dll"
+        },
+        {
+          "name": "NSI.dll",
+          "path": "C:\\WINDOWS\\System32\\NSI.dll"
+        },
+        {
+          "name": "windows.storage.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\windows.storage.dll"
+        },
+        {
+          "name": "SHCORE.dll",
+          "path": "C:\\WINDOWS\\System32\\SHCORE.dll"
+        },
+        {
+          "name": "shlwapi.dll",
+          "path": "C:\\WINDOWS\\System32\\shlwapi.dll"
+        },
+        {
+          "name": "profapi.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\profapi.dll"
+        },
+        {
+          "name": "CRYPTSP.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\CRYPTSP.dll"
+        },
+        {
+          "name": "rsaenh.dll",
+          "path": "C:\\WINDOWS\\system32\\rsaenh.dll"
+        },
+        {
+          "name": "kernel.appcore.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\kernel.appcore.dll"
+        },
+        {
+          "name": "clbcatq.dll",
+          "path": "C:\\WINDOWS\\System32\\clbcatq.dll"
+        },
+        {
+          "name": "amsi.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\amsi.dll"
+        },
+        {
+          "name": "MpOav.dll",
+          "path": "C:\\ProgramData\\Microsoft\\Windows Defender\\Platform\\4.18.26090.9-0\\MpOav.dll"
+        },
+        {
+          "name": "mswsock.dll",
+          "path": "C:\\WINDOWS\\system32\\mswsock.dll"
+        },
+        {
+          "name": "dhcpcsvc6.DLL",
+          "path": "C:\\WINDOWS\\SYSTEM32\\dhcpcsvc6.DLL"
+        },
+        {
+          "name": "dhcpcsvc.DLL",
+          "path": "C:\\WINDOWS\\SYSTEM32\\dhcpcsvc.DLL"
+        }
+      ],
+      "verifiedNativePins": [
+        {
+          "name": "RenderAssetBuilders.dll",
+          "bytes": 2238464,
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\RenderAssetBuilders.dll",
+          "sha256": "DDC2D553FC54F7F53388B3645E561AF30B21420CAABB52EC1DE0E272D2F97748"
+        },
+        {
+          "name": "Atom_RPI.Public.dll",
+          "bytes": 7858688,
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_RPI.Public.dll",
+          "sha256": "49B7579D2819B5081525B4BF7762AA470E2C02E2F63A3CAF2E7BEA08130421F0"
+        }
+      ],
+      "legacyBuilderObserved": false,
+      "backendLibrariesObserved": [],
+      "pythonLibrariesObserved": [],
+      "nativeActivation": "BOTH_NATIVE_DLLS_OBSERVED_AND_PINNED",
+      "error": null,
+      "scope": "One point-in-time capture per owned PID+creation, not full-lifetime absence or active graphics-device proof."
+    },
+    {
+      "pid": 17872,
+      "creationUtc": "2026-10-16T09:44:53.251796Z",
+      "executable": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AssetBuilder.exe",
+      "state": "CAPTURED",
+      "modules": [
+        {
+          "name": "AssetBuilder.exe",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AssetBuilder.exe"
+        },
+        {
+          "name": "ntdll.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\ntdll.dll"
+        },
+        {
+          "name": "KERNEL32.DLL",
+          "path": "C:\\WINDOWS\\System32\\KERNEL32.DLL"
+        },
+        {
+          "name": "KERNELBASE.dll",
+          "path": "C:\\WINDOWS\\System32\\KERNELBASE.dll"
+        },
+        {
+          "name": "apphelp.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\apphelp.dll"
+        },
+        {
+          "name": "ucrtbase.dll",
+          "path": "C:\\WINDOWS\\System32\\ucrtbase.dll"
+        },
+        {
+          "name": "Qt6Core.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Qt6Core.dll"
+        },
+        {
+          "name": "AzCore.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AzCore.dll"
+        },
+        {
+          "name": "AzToolsFramework.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AzToolsFramework.dll"
+        },
+        {
+          "name": "Geometry.Authoring.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Geometry.Authoring.dll"
+        },
+        {
+          "name": "ADVAPI32.dll",
+          "path": "C:\\WINDOWS\\System32\\ADVAPI32.dll"
+        },
+        {
+          "name": "EditorCamera.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\EditorCamera.dll"
+        },
+        {
+          "name": "USER32.dll",
+          "path": "C:\\WINDOWS\\System32\\USER32.dll"
+        },
+        {
+          "name": "msvcrt.dll",
+          "path": "C:\\WINDOWS\\System32\\msvcrt.dll"
+        },
+        {
+          "name": "win32u.dll",
+          "path": "C:\\WINDOWS\\System32\\win32u.dll"
+        },
+        {
+          "name": "sechost.dll",
+          "path": "C:\\WINDOWS\\System32\\sechost.dll"
+        },
+        {
+          "name": "PrefabBuilder.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\PrefabBuilder.dll"
+        },
+        {
+          "name": "GDI32.dll",
+          "path": "C:\\WINDOWS\\System32\\GDI32.dll"
+        },
+        {
+          "name": "RPCRT4.dll",
+          "path": "C:\\WINDOWS\\System32\\RPCRT4.dll"
+        },
+        {
+          "name": "gdi32full.dll",
+          "path": "C:\\WINDOWS\\System32\\gdi32full.dll"
+        },
+        {
+          "name": "EditorMaterials.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\EditorMaterials.dll"
+        },
+        {
+          "name": "ole32.dll",
+          "path": "C:\\WINDOWS\\System32\\ole32.dll"
+        },
+        {
+          "name": "msvcp_win.dll",
+          "path": "C:\\WINDOWS\\System32\\msvcp_win.dll"
+        },
+        {
+          "name": "combase.dll",
+          "path": "C:\\WINDOWS\\System32\\combase.dll"
+        },
+        {
+          "name": "WorldCamera.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\WorldCamera.dll"
+        },
+        {
+          "name": "SHELL32.dll",
+          "path": "C:\\WINDOWS\\System32\\SHELL32.dll"
+        },
+        {
+          "name": "WS2_32.dll",
+          "path": "C:\\WINDOWS\\System32\\WS2_32.dll"
+        },
+        {
+          "name": "EditorRenderIntegration.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\EditorRenderIntegration.dll"
+        },
+        {
+          "name": "OLEAUT32.dll",
+          "path": "C:\\WINDOWS\\System32\\OLEAUT32.dll"
+        },
+        {
+          "name": "RenderAssetBuilders.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\RenderAssetBuilders.dll"
+        },
+        {
+          "name": "AzFramework.NativeUI.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AzFramework.NativeUI.dll"
+        },
+        {
+          "name": "RenderMaterials.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\RenderMaterials.dll"
+        },
+        {
+          "name": "DebugImGui.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\DebugImGui.dll"
+        },
+        {
+          "name": "ProfilerCapture.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\ProfilerCapture.dll"
+        },
+        {
+          "name": "AzFramework.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AzFramework.dll"
+        },
+        {
+          "name": "MSVCP140.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\MSVCP140.dll"
+        },
+        {
+          "name": "CRYPT32.dll",
+          "path": "C:\\WINDOWS\\System32\\CRYPT32.dll"
+        },
+        {
+          "name": "VCRUNTIME140.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\VCRUNTIME140.dll"
+        },
+        {
+          "name": "VCRUNTIME140_1.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\VCRUNTIME140_1.dll"
+        },
+        {
+          "name": "Qt6Gui.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Qt6Gui.dll"
+        },
+        {
+          "name": "Qt6Widgets.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Qt6Widgets.dll"
+        },
+        {
+          "name": "AzQtComponents.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AzQtComponents.dll"
+        },
+        {
+          "name": "MPR.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\MPR.dll"
+        },
+        {
+          "name": "Geometry.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Geometry.dll"
+        },
+        {
+          "name": "USERENV.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\USERENV.dll"
+        },
+        {
+          "name": "Atom_Feature_Common.Public.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_Feature_Common.Public.dll"
+        },
+        {
+          "name": "Atom_RPI.Public.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_RPI.Public.dll"
+        },
+        {
+          "name": "Atom_RHI.Public.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_RHI.Public.dll"
+        },
+        {
+          "name": "Atom_RHI.Reflect.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_RHI.Reflect.dll"
+        },
+        {
+          "name": "SceneCore.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\SceneCore.dll"
+        },
+        {
+          "name": "SceneData.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\SceneData.dll"
+        },
+        {
+          "name": "NETAPI32.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\NETAPI32.dll"
+        },
+        {
+          "name": "AUTHZ.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\AUTHZ.dll"
+        },
+        {
+          "name": "Atom_RPI.Edit.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_RPI.Edit.dll"
+        },
+        {
+          "name": "RenderDebug.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\RenderDebug.dll"
+        },
+        {
+          "name": "Qt6Network.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Qt6Network.dll"
+        },
+        {
+          "name": "VERSION.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\VERSION.dll"
+        },
+        {
+          "name": "WINMM.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\WINMM.dll"
+        },
+        {
+          "name": "MSVCP140_ATOMIC_WAIT.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\MSVCP140_ATOMIC_WAIT.dll"
+        },
+        {
+          "name": "MSVCP140_1.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\MSVCP140_1.dll"
+        },
+        {
+          "name": "RenderIntegration.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\RenderIntegration.dll"
+        },
+        {
+          "name": "mcpp0.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\mcpp0.dll"
+        },
+        {
+          "name": "DearImGui.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\DearImGui.dll"
+        },
+        {
+          "name": "bcrypt.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\bcrypt.dll"
+        },
+        {
+          "name": "d3d11.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\d3d11.dll"
+        },
+        {
+          "name": "dxgi.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\dxgi.dll"
+        },
+        {
+          "name": "d3d12.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\d3d12.dll"
+        },
+        {
+          "name": "UxTheme.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\UxTheme.dll"
+        },
+        {
+          "name": "DWrite.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\DWrite.dll"
+        },
+        {
+          "name": "MSVCP140_2.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\MSVCP140_2.dll"
+        },
+        {
+          "name": "dwmapi.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\dwmapi.dll"
+        },
+        {
+          "name": "Qt6Svg.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Qt6Svg.dll"
+        },
+        {
+          "name": "Qt6SvgWidgets.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Qt6SvgWidgets.dll"
+        },
+        {
+          "name": "Qt6Xml.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Qt6Xml.dll"
+        },
+        {
+          "name": "MAGNIFICATION.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\MAGNIFICATION.dll"
+        },
+        {
+          "name": "ProfilerView.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\ProfilerView.dll"
+        },
+        {
+          "name": "DNSAPI.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\DNSAPI.dll"
+        },
+        {
+          "name": "IPHLPAPI.DLL",
+          "path": "C:\\WINDOWS\\SYSTEM32\\IPHLPAPI.DLL"
+        },
+        {
+          "name": "Secur32.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\Secur32.dll"
+        },
+        {
+          "name": "WINHTTP.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\WINHTTP.dll"
+        },
+        {
+          "name": "powrprof.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\powrprof.dll"
+        },
+        {
+          "name": "WTSAPI32.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\WTSAPI32.dll"
+        },
+        {
+          "name": "gdiplus.dll",
+          "path": "C:\\WINDOWS\\WinSxS\\amd64_microsoft.windows.gdiplus_6595b64144ccf1df_1.1.26100.9711_none_6ef2ab963dc761f3\\gdiplus.dll"
+        },
+        {
+          "name": "d3d9.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\d3d9.dll"
+        },
+        {
+          "name": "DSPARSE.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\DSPARSE.dll"
+        },
+        {
+          "name": "SspiCli.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\SspiCli.dll"
+        },
+        {
+          "name": "dxcore.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\dxcore.dll"
+        },
+        {
+          "name": "icuuc.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\icuuc.dll"
+        },
+        {
+          "name": "CRYPTBASE.DLL",
+          "path": "C:\\WINDOWS\\SYSTEM32\\CRYPTBASE.DLL"
+        },
+        {
+          "name": "SRVCLI.DLL",
+          "path": "C:\\WINDOWS\\SYSTEM32\\SRVCLI.DLL"
+        },
+        {
+          "name": "NETUTILS.DLL",
+          "path": "C:\\WINDOWS\\SYSTEM32\\NETUTILS.DLL"
+        },
+        {
+          "name": "icu.DLL",
+          "path": "C:\\WINDOWS\\SYSTEM32\\icu.DLL"
+        },
+        {
+          "name": "IMM32.DLL",
+          "path": "C:\\WINDOWS\\System32\\IMM32.DLL"
+        },
+        {
+          "name": "bcryptPrimitives.dll",
+          "path": "C:\\WINDOWS\\System32\\bcryptPrimitives.dll"
+        },
+        {
+          "name": "UMPDC.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\UMPDC.dll"
+        },
+        {
+          "name": "NSI.dll",
+          "path": "C:\\WINDOWS\\System32\\NSI.dll"
+        },
+        {
+          "name": "shcore.dll",
+          "path": "C:\\WINDOWS\\System32\\shcore.dll"
+        },
+        {
+          "name": "windows.storage.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\windows.storage.dll"
+        },
+        {
+          "name": "shlwapi.dll",
+          "path": "C:\\WINDOWS\\System32\\shlwapi.dll"
+        },
+        {
+          "name": "profapi.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\profapi.dll"
+        },
+        {
+          "name": "CRYPTSP.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\CRYPTSP.dll"
+        },
+        {
+          "name": "rsaenh.dll",
+          "path": "C:\\WINDOWS\\system32\\rsaenh.dll"
+        },
+        {
+          "name": "kernel.appcore.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\kernel.appcore.dll"
+        },
+        {
+          "name": "dbghelp.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\dbghelp.dll"
+        },
+        {
+          "name": "clbcatq.dll",
+          "path": "C:\\WINDOWS\\System32\\clbcatq.dll"
+        },
+        {
+          "name": "amsi.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\amsi.dll"
+        },
+        {
+          "name": "MpOav.dll",
+          "path": "C:\\ProgramData\\Microsoft\\Windows Defender\\Platform\\4.18.26090.9-0\\MpOav.dll"
+        },
+        {
+          "name": "AudioSystem.Editor.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AudioSystem.Editor.dll"
+        },
+        {
+          "name": "EditorCore.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\EditorCore.dll"
+        },
+        {
+          "name": "Atom_RHI.Private.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_RHI.Private.dll"
+        },
+        {
+          "name": "Atom_RHI_Vulkan.Builders.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_RHI_Vulkan.Builders.dll"
+        },
+        {
+          "name": "Atom_RHI_Vulkan.Private.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_RHI_Vulkan.Private.dll"
+        },
+        {
+          "name": "Atom_Feature_Common.Builders.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_Feature_Common.Builders.dll"
+        },
+        {
+          "name": "Atom_Feature_Common.Editor.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_Feature_Common.Editor.dll"
+        },
+        {
+          "name": "CommonFeaturesAtom.Editor.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\CommonFeaturesAtom.Editor.dll"
+        },
+        {
+          "name": "LmbrCentral.Editor.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\LmbrCentral.Editor.dll"
+        },
+        {
+          "name": "GradientSignal.Editor.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\GradientSignal.Editor.dll"
+        },
+        {
+          "name": "OpenImageIO_Util.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\OpenImageIO_Util.dll"
+        },
+        {
+          "name": "OpenImageIO.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\OpenImageIO.dll"
+        },
+        {
+          "name": "OpenColorIO_2_1.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\OpenColorIO_2_1.dll"
+        },
+        {
+          "name": "EditorModeFeedback.Editor.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\EditorModeFeedback.Editor.dll"
+        },
+        {
+          "name": "Maestro.Editor.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Maestro.Editor.dll"
+        },
+        {
+          "name": "SceneProcessing.Editor.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\SceneProcessing.Editor.dll"
+        },
+        {
+          "name": "Atom_RHI_Null.Builders.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_RHI_Null.Builders.dll"
+        },
+        {
+          "name": "Atom_RHI_Null.Private.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_RHI_Null.Private.dll"
+        },
+        {
+          "name": "SurfaceData.Editor.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\SurfaceData.Editor.dll"
+        },
+        {
+          "name": "AtomToolsFramework.Editor.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AtomToolsFramework.Editor.dll"
+        },
+        {
+          "name": "GraphCanvas.Editor.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\GraphCanvas.Editor.dll"
+        },
+        {
+          "name": "GraphModel.Editor.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\GraphModel.Editor.dll"
+        },
+        {
+          "name": "AtomFont.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AtomFont.dll"
+        },
+        {
+          "name": "AtomRenderOptions.Editor.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AtomRenderOptions.Editor.dll"
+        },
+        {
+          "name": "Atom_Bootstrap.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_Bootstrap.dll"
+        },
+        {
+          "name": "Atom_RPI.Editor.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_RPI.Editor.dll"
+        },
+        {
+          "name": "ImageProcessingAtom.Editor.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\ImageProcessingAtom.Editor.dll"
+        },
+        {
+          "name": "ispc_texcomp.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\ispc_texcomp.dll"
+        },
+        {
+          "name": "AtomViewportDisplayIcons.Editor.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AtomViewportDisplayIcons.Editor.dll"
+        },
+        {
+          "name": "AtomViewportDisplayInfo.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AtomViewportDisplayInfo.dll"
+        },
+        {
+          "name": "EMotionFX.Editor.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\EMotionFX.Editor.dll"
+        },
+        {
+          "name": "SceneUI.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\SceneUI.dll"
+        },
+        {
+          "name": "EMotionFX_Atom.Editor.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\EMotionFX_Atom.Editor.dll"
+        },
+        {
+          "name": "PhysX5.Editor.Gem.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\PhysX5.Editor.Gem.dll"
+        },
+        {
+          "name": "SceneBuilder.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\SceneBuilder.dll"
+        },
+        {
+          "name": "mswsock.dll",
+          "path": "C:\\WINDOWS\\system32\\mswsock.dll"
+        }
+      ],
+      "verifiedNativePins": [
+        {
+          "name": "RenderAssetBuilders.dll",
+          "bytes": 2238464,
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\RenderAssetBuilders.dll",
+          "sha256": "DDC2D553FC54F7F53388B3645E561AF30B21420CAABB52EC1DE0E272D2F97748"
+        },
+        {
+          "name": "Atom_RPI.Public.dll",
+          "bytes": 7858688,
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_RPI.Public.dll",
+          "sha256": "49B7579D2819B5081525B4BF7762AA470E2C02E2F63A3CAF2E7BEA08130421F0"
+        }
+      ],
+      "legacyBuilderObserved": false,
+      "backendLibrariesObserved": [
+        {
+          "name": "Atom_RHI_Vulkan.Builders.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_RHI_Vulkan.Builders.dll"
+        },
+        {
+          "name": "Atom_RHI_Vulkan.Private.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_RHI_Vulkan.Private.dll"
+        },
+        {
+          "name": "Atom_RHI_Null.Builders.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_RHI_Null.Builders.dll"
+        },
+        {
+          "name": "Atom_RHI_Null.Private.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_RHI_Null.Private.dll"
+        }
+      ],
+      "pythonLibrariesObserved": [],
+      "nativeActivation": "BOTH_NATIVE_DLLS_OBSERVED_AND_PINNED",
+      "error": null,
+      "scope": "One point-in-time capture per owned PID+creation, not full-lifetime absence or active graphics-device proof."
+    },
+    {
+      "pid": 11952,
+      "creationUtc": "2026-10-16T09:44:56.0839Z",
+      "executable": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AssetBuilder.exe",
+      "state": "CAPTURED",
+      "modules": [
+        {
+          "name": "AssetBuilder.exe",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AssetBuilder.exe"
+        },
+        {
+          "name": "ntdll.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\ntdll.dll"
+        },
+        {
+          "name": "KERNEL32.DLL",
+          "path": "C:\\WINDOWS\\System32\\KERNEL32.DLL"
+        },
+        {
+          "name": "KERNELBASE.dll",
+          "path": "C:\\WINDOWS\\System32\\KERNELBASE.dll"
+        },
+        {
+          "name": "apphelp.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\apphelp.dll"
+        },
+        {
+          "name": "ucrtbase.dll",
+          "path": "C:\\WINDOWS\\System32\\ucrtbase.dll"
+        },
+        {
+          "name": "Qt6Core.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Qt6Core.dll"
+        },
+        {
+          "name": "AzCore.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AzCore.dll"
+        },
+        {
+          "name": "Geometry.Authoring.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Geometry.Authoring.dll"
+        },
+        {
+          "name": "AzToolsFramework.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AzToolsFramework.dll"
+        },
+        {
+          "name": "ADVAPI32.dll",
+          "path": "C:\\WINDOWS\\System32\\ADVAPI32.dll"
+        },
+        {
+          "name": "EditorCamera.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\EditorCamera.dll"
+        },
+        {
+          "name": "msvcrt.dll",
+          "path": "C:\\WINDOWS\\System32\\msvcrt.dll"
+        },
+        {
+          "name": "ole32.dll",
+          "path": "C:\\WINDOWS\\System32\\ole32.dll"
+        },
+        {
+          "name": "msvcp_win.dll",
+          "path": "C:\\WINDOWS\\System32\\msvcp_win.dll"
+        },
+        {
+          "name": "sechost.dll",
+          "path": "C:\\WINDOWS\\System32\\sechost.dll"
+        },
+        {
+          "name": "PrefabBuilder.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\PrefabBuilder.dll"
+        },
+        {
+          "name": "GDI32.dll",
+          "path": "C:\\WINDOWS\\System32\\GDI32.dll"
+        },
+        {
+          "name": "RPCRT4.dll",
+          "path": "C:\\WINDOWS\\System32\\RPCRT4.dll"
+        },
+        {
+          "name": "EditorMaterials.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\EditorMaterials.dll"
+        },
+        {
+          "name": "win32u.dll",
+          "path": "C:\\WINDOWS\\System32\\win32u.dll"
+        },
+        {
+          "name": "USER32.dll",
+          "path": "C:\\WINDOWS\\System32\\USER32.dll"
+        },
+        {
+          "name": "gdi32full.dll",
+          "path": "C:\\WINDOWS\\System32\\gdi32full.dll"
+        },
+        {
+          "name": "SHELL32.dll",
+          "path": "C:\\WINDOWS\\System32\\SHELL32.dll"
+        },
+        {
+          "name": "WorldCamera.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\WorldCamera.dll"
+        },
+        {
+          "name": "combase.dll",
+          "path": "C:\\WINDOWS\\System32\\combase.dll"
+        },
+        {
+          "name": "WS2_32.dll",
+          "path": "C:\\WINDOWS\\System32\\WS2_32.dll"
+        },
+        {
+          "name": "EditorRenderIntegration.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\EditorRenderIntegration.dll"
+        },
+        {
+          "name": "OLEAUT32.dll",
+          "path": "C:\\WINDOWS\\System32\\OLEAUT32.dll"
+        },
+        {
+          "name": "RenderAssetBuilders.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\RenderAssetBuilders.dll"
+        },
+        {
+          "name": "AzFramework.NativeUI.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AzFramework.NativeUI.dll"
+        },
+        {
+          "name": "RenderMaterials.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\RenderMaterials.dll"
+        },
+        {
+          "name": "DebugImGui.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\DebugImGui.dll"
+        },
+        {
+          "name": "ProfilerCapture.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\ProfilerCapture.dll"
+        },
+        {
+          "name": "AzFramework.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AzFramework.dll"
+        },
+        {
+          "name": "MSVCP140.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\MSVCP140.dll"
+        },
+        {
+          "name": "VCRUNTIME140.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\VCRUNTIME140.dll"
+        },
+        {
+          "name": "CRYPT32.dll",
+          "path": "C:\\WINDOWS\\System32\\CRYPT32.dll"
+        },
+        {
+          "name": "Geometry.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Geometry.dll"
+        },
+        {
+          "name": "VCRUNTIME140_1.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\VCRUNTIME140_1.dll"
+        },
+        {
+          "name": "AzQtComponents.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AzQtComponents.dll"
+        },
+        {
+          "name": "Qt6Widgets.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Qt6Widgets.dll"
+        },
+        {
+          "name": "Qt6Gui.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Qt6Gui.dll"
+        },
+        {
+          "name": "Atom_Feature_Common.Public.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_Feature_Common.Public.dll"
+        },
+        {
+          "name": "Atom_RPI.Public.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_RPI.Public.dll"
+        },
+        {
+          "name": "Atom_RHI.Public.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_RHI.Public.dll"
+        },
+        {
+          "name": "Atom_RHI.Reflect.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_RHI.Reflect.dll"
+        },
+        {
+          "name": "MPR.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\MPR.dll"
+        },
+        {
+          "name": "USERENV.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\USERENV.dll"
+        },
+        {
+          "name": "AUTHZ.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\AUTHZ.dll"
+        },
+        {
+          "name": "NETAPI32.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\NETAPI32.dll"
+        },
+        {
+          "name": "SceneData.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\SceneData.dll"
+        },
+        {
+          "name": "SceneCore.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\SceneCore.dll"
+        },
+        {
+          "name": "Atom_RPI.Edit.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_RPI.Edit.dll"
+        },
+        {
+          "name": "RenderDebug.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\RenderDebug.dll"
+        },
+        {
+          "name": "Qt6Network.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Qt6Network.dll"
+        },
+        {
+          "name": "MSVCP140_ATOMIC_WAIT.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\MSVCP140_ATOMIC_WAIT.dll"
+        },
+        {
+          "name": "VERSION.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\VERSION.dll"
+        },
+        {
+          "name": "WINMM.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\WINMM.dll"
+        },
+        {
+          "name": "MSVCP140_1.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\MSVCP140_1.dll"
+        },
+        {
+          "name": "RenderIntegration.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\RenderIntegration.dll"
+        },
+        {
+          "name": "mcpp0.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\mcpp0.dll"
+        },
+        {
+          "name": "DearImGui.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\DearImGui.dll"
+        },
+        {
+          "name": "Qt6Svg.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Qt6Svg.dll"
+        },
+        {
+          "name": "bcrypt.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\bcrypt.dll"
+        },
+        {
+          "name": "Qt6SvgWidgets.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Qt6SvgWidgets.dll"
+        },
+        {
+          "name": "Qt6Xml.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Qt6Xml.dll"
+        },
+        {
+          "name": "MAGNIFICATION.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\MAGNIFICATION.dll"
+        },
+        {
+          "name": "dwmapi.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\dwmapi.dll"
+        },
+        {
+          "name": "UxTheme.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\UxTheme.dll"
+        },
+        {
+          "name": "d3d11.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\d3d11.dll"
+        },
+        {
+          "name": "dxgi.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\dxgi.dll"
+        },
+        {
+          "name": "d3d12.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\d3d12.dll"
+        },
+        {
+          "name": "DWrite.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\DWrite.dll"
+        },
+        {
+          "name": "MSVCP140_2.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\MSVCP140_2.dll"
+        },
+        {
+          "name": "ProfilerView.dll",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\ProfilerView.dll"
+        },
+        {
+          "name": "DNSAPI.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\DNSAPI.dll"
+        },
+        {
+          "name": "IPHLPAPI.DLL",
+          "path": "C:\\WINDOWS\\SYSTEM32\\IPHLPAPI.DLL"
+        },
+        {
+          "name": "Secur32.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\Secur32.dll"
+        },
+        {
+          "name": "WINHTTP.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\WINHTTP.dll"
+        },
+        {
+          "name": "WTSAPI32.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\WTSAPI32.dll"
+        },
+        {
+          "name": "gdiplus.dll",
+          "path": "C:\\WINDOWS\\WinSxS\\amd64_microsoft.windows.gdiplus_6595b64144ccf1df_1.1.26100.9711_none_6ef2ab963dc761f3\\gdiplus.dll"
+        },
+        {
+          "name": "d3d9.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\d3d9.dll"
+        },
+        {
+          "name": "powrprof.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\powrprof.dll"
+        },
+        {
+          "name": "DSPARSE.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\DSPARSE.dll"
+        },
+        {
+          "name": "SspiCli.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\SspiCli.dll"
+        },
+        {
+          "name": "dxcore.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\dxcore.dll"
+        },
+        {
+          "name": "icuuc.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\icuuc.dll"
+        },
+        {
+          "name": "CRYPTBASE.DLL",
+          "path": "C:\\WINDOWS\\SYSTEM32\\CRYPTBASE.DLL"
+        },
+        {
+          "name": "SRVCLI.DLL",
+          "path": "C:\\WINDOWS\\SYSTEM32\\SRVCLI.DLL"
+        },
+        {
+          "name": "NETUTILS.DLL",
+          "path": "C:\\WINDOWS\\SYSTEM32\\NETUTILS.DLL"
+        },
+        {
+          "name": "icu.DLL",
+          "path": "C:\\WINDOWS\\SYSTEM32\\icu.DLL"
+        },
+        {
+          "name": "IMM32.DLL",
+          "path": "C:\\WINDOWS\\System32\\IMM32.DLL"
+        },
+        {
+          "name": "bcryptPrimitives.dll",
+          "path": "C:\\WINDOWS\\System32\\bcryptPrimitives.dll"
+        },
+        {
+          "name": "UMPDC.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\UMPDC.dll"
+        },
+        {
+          "name": "NSI.dll",
+          "path": "C:\\WINDOWS\\System32\\NSI.dll"
+        },
+        {
+          "name": "shcore.dll",
+          "path": "C:\\WINDOWS\\System32\\shcore.dll"
+        },
+        {
+          "name": "windows.storage.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\windows.storage.dll"
+        },
+        {
+          "name": "shlwapi.dll",
+          "path": "C:\\WINDOWS\\System32\\shlwapi.dll"
+        },
+        {
+          "name": "profapi.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\profapi.dll"
+        },
+        {
+          "name": "CRYPTSP.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\CRYPTSP.dll"
+        },
+        {
+          "name": "rsaenh.dll",
+          "path": "C:\\WINDOWS\\system32\\rsaenh.dll"
+        },
+        {
+          "name": "kernel.appcore.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\kernel.appcore.dll"
+        },
+        {
+          "name": "dbghelp.dll",
+          "path": "C:\\WINDOWS\\SYSTEM32\\dbghelp.dll"
+        }
+      ],
+      "verifiedNativePins": [
+        {
+          "name": "RenderAssetBuilders.dll",
+          "bytes": 2238464,
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\RenderAssetBuilders.dll",
+          "sha256": "DDC2D553FC54F7F53388B3645E561AF30B21420CAABB52EC1DE0E272D2F97748"
+        },
+        {
+          "name": "Atom_RPI.Public.dll",
+          "bytes": 7858688,
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_RPI.Public.dll",
+          "sha256": "49B7579D2819B5081525B4BF7762AA470E2C02E2F63A3CAF2E7BEA08130421F0"
+        }
+      ],
+      "legacyBuilderObserved": false,
+      "backendLibrariesObserved": [],
+      "pythonLibrariesObserved": [],
+      "nativeActivation": "BOTH_NATIVE_DLLS_OBSERVED_AND_PINNED",
+      "error": null,
+      "scope": "One point-in-time capture per owned PID+creation, not full-lifetime absence or active graphics-device proof."
+    }
+  ],
+  "scope": "Owned PID/exe/creation captures only; not lifetime absence/device proof."
+}

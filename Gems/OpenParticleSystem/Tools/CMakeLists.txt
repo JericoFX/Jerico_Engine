@@ -34,12 +34,10 @@ if(PAL_TRAIT_BUILD_HOST_TOOLS)
                 JE::WorldCamera
                 Gem::OpenParticleSystem.Editor.Static
         RUNTIME_DEPENDENCIES
-            Gem::Atom_RHI_Null.Private
-            Gem::Atom_RHI_DX12.Private
             Gem::Atom_RHI_Vulkan.Private
             Gem::Atom_RHI.Private
             Gem::Atom_RPI.Editor
-            Gem::Atom_RPI.Builders
+            JE::RenderAssetBuilders
             Gem::Atom_Feature_Common.Editor
             Gem::AtomToolsFramework.Editor
             Gem::AtomLyIntegration_CommonFeatures.Editor

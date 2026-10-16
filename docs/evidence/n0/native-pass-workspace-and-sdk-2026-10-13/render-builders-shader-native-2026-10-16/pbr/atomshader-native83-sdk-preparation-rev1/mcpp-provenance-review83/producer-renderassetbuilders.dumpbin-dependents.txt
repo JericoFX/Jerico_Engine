@@ -1,0 +1,39 @@
+Microsoft (R) COFF/PE Dumper Version 14.44.35228.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+
+Dump of file F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\RenderAssetBuilders.dll
+
+File Type: DLL
+
+  Image has the following dependencies:
+
+    AzCore.dll
+    SceneCore.dll
+    Atom_RPI.Public.dll
+    SceneData.dll
+    Atom_RPI.Edit.dll
+    mcpp0.dll
+    Atom_RHI.Public.dll
+    Atom_RHI.Reflect.dll
+    AzToolsFramework.dll
+    AzFramework.dll
+    KERNEL32.dll
+    MSVCP140.dll
+    VCRUNTIME140.dll
+    VCRUNTIME140_1.dll
+    api-ms-win-crt-heap-l1-1-0.dll
+    api-ms-win-crt-string-l1-1-0.dll
+    api-ms-win-crt-math-l1-1-0.dll
+    api-ms-win-crt-runtime-l1-1-0.dll
+    api-ms-win-crt-stdio-l1-1-0.dll
+    api-ms-win-crt-convert-l1-1-0.dll
+
+  Summary
+
+       29000 .data
+        F000 .pdata
+       CA000 .rdata
+        4000 .reloc
+        1000 .rsrc
+      12E000 .text

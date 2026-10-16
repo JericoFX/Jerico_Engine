@@ -1,0 +1,3283 @@
+{
+  "state": "PARENT_APPROVED_SCOPE_PATHLIST_READY_NOT_STAGED",
+  "head": "22cc8f7764481361d5b28e9ebc83c3ed3edc344b",
+  "counts": {
+    "migration": 279,
+    "profile": 11,
+    "sdk": 4,
+    "union": 294,
+    "currentFiles": 154,
+    "deleted": 140,
+    "priorPinsRehashed": 149,
+    "priorPinDrift": 0
+  },
+  "scopeDelta": {
+    "profileAdded": [
+      "Gems/Atom/RHI/DX12/CMakeLists.txt",
+      "Gems/Atom/RHI/Metal/CMakeLists.txt",
+      "Gems/Atom/Feature/Common/Code/Source/Platform/Windows/runtime_dependencies_builders.cmake",
+      "Gems/Atom/Feature/Common/Code/Source/Platform/Windows/runtime_dependencies_tools.cmake",
+      "Gems/Atom/Feature/Common/Code/Source/Platform/Windows/runtime_dependencies_clients.cmake",
+      "Gems/Atom/Feature/Common/Code/Source/Platform/Linux/runtime_dependencies_builders.cmake",
+      "Gems/Atom/Feature/Common/Code/Source/Platform/Linux/runtime_dependencies_tools.cmake",
+      "Gems/Atom/Feature/Common/Code/Source/Platform/Mac/runtime_dependencies_builders.cmake",
+      "Gems/Atom/Feature/Common/Code/Source/Platform/Mac/runtime_dependencies_tools.cmake",
+      "Registry/AssetProcessorPlatformConfig.setreg",
+      "Gems/Atom/CMakeLists.txt"
+    ],
+    "sdkAdded": [
+      "Code/Framework/AzFramework/CMakeLists.txt",
+      "Gems/EMotionFX/Code/CMakeLists.txt",
+      "Gems/GradientSignal/Code/CMakeLists.txt",
+      "Gems/SceneProcessing/Code/CMakeLists.txt"
+    ],
+    "mixedNowFullFileOwned": [
+      "Engine/Render/Integration/render_integration_dependencies.cmake",
+      "Gems/Atom/Tools/AtomToolsFramework/Code/CMakeLists.txt",
+      "Gems/OpenParticleSystem/Tools/CMakeLists.txt"
+    ],
+    "authority": "Parent explicit promotion of Vulkan profile and SDK flags; no additional source/consumer decisions"
+  },
+  "entries": [
+    {
+      "path": "Code/Editor/CMakeLists.txt",
+      "set": "migration-core279",
+      "status": "M",
+      "head": {
+        "gitBlob": "f5662ea0af7f3dd73daef551ae12800036b20299",
+        "bytes": 7507,
+        "sha256": "C04640A4E96933D1BE49C040003EE63262A7820D16834E889EB828F00FE779F1"
+      },
+      "current": {
+        "bytes": 7801,
+        "sha256": "D079DC8AF8A463B118162DB348852F108D9EC410E015BF82331FF45D5B929284"
+      }
+    },
+    {
+      "path": "Code/Editor/EditorToolsApplication.cpp",
+      "set": "migration-core279",
+      "status": "M",
+      "head": {
+        "gitBlob": "fe04a27b698af6040568ba3e0af9b0208d197fe7",
+        "bytes": 14572,
+        "sha256": "5DDE12EBA66FCD14DCE7ED56C6ECDAB97C1E9BF80A157364DE8F6E72A0A8A27E"
+      },
+      "current": {
+        "bytes": 15146,
+        "sha256": "994E00E95B94CB1E0727658D584E4969CD7EDB1AA30BD39269B159F37849295E"
+      }
+    },
+    {
+      "path": "Code/Framework/AzFramework/CMakeLists.txt",
+      "set": "explicit-sdk-exclusions4",
+      "status": "M",
+      "head": {
+        "gitBlob": "55db750ea456898a7fd8e9c7183f4390febc3526",
+        "bytes": 4938,
+        "sha256": "0541FFB57BDDF30FC0E9C8057523930666ED997AA8049DB1433B601BC666105A"
+      },
+      "current": {
+        "bytes": 5178,
+        "sha256": "BFBF2C9689DA3A6E4F1FAE755E1E98116135D8ED44CB858767C89541905F764A"
+      }
+    },
+    {
+      "path": "Code/Tools/AssetProcessor/AssetBuilder/AssetBuilderApplication.cpp",
+      "set": "migration-core279",
+      "status": "M",
+      "head": {
+        "gitBlob": "c66747d115d25b6ed4384b7f55783b3ed0561f7e",
+        "bytes": 10703,
+        "sha256": "6A2993AD6CEE67F93B45CF6264D96250471E64AA3D4FB759BDCD744DAE32B4D8"
+      },
+      "current": {
+        "bytes": 11169,
+        "sha256": "543A8B0B0A53AE9CBE09E9ED28DF71F9DCD7218565034A66EB57DE12F88A5E65"
+      }
+    },
+    {
+      "path": "Code/Tools/AssetProcessor/AssetBuilder/CMakeLists.txt",
+      "set": "migration-core279",
+      "status": "M",
+      "head": {
+        "gitBlob": "99777a8c96240baf6c4e249409736e5b067f426e",
+        "bytes": 2648,
+        "sha256": "B6A5EF1BC40C3C7CFEF120B57F0AC62E16A822F747114C55FB9BDEF239C6BA87"
+      },
+      "current": {
+        "bytes": 2769,
+        "sha256": "41207C483A6AF76669740BAA2009BFCD25C0C48D8FE040C57900C9EA89029A27"
+      }
+    },
+    {
+      "path": "Code/Tools/AssetProcessor/CMakeLists.txt",
+      "set": "migration-core279",
+      "status": "M",
+      "head": {
+        "gitBlob": "b1ce472c4bdec3907acdb0c702306d41942148c7",
+        "bytes": 9641,
+        "sha256": "A7B0C5B823F911A0A4E2E17D28FCC8CEF2BFE40B154EAD0292DDA8960975CD7E"
+      },
+      "current": {
+        "bytes": 9975,
+        "sha256": "5F5676DA13C9B203F6842A14713763CFFC580D733C7374CDE9E2345DF1F77C7C"
+      }
+    },
+    {
+      "path": "Code/Tools/AssetProcessor/native/utilities/ApplicationManager.cpp",
+      "set": "migration-core279",
+      "status": "M",
+      "head": {
+        "gitBlob": "88311c04b7f1c101300f5d66a0f2917deebb6147",
+        "bytes": 32170,
+        "sha256": "4BE4B9D649C16C459B2776B797B4AE46CE6DF1BCBB4CABD6D2F0284BF8DFFB0D"
+      },
+      "current": {
+        "bytes": 33251,
+        "sha256": "C2D9870291A7154A3FF855649419932071624EB0BC32CD9DE8B796929E5CE843"
+      }
+    },
+    {
+      "path": "Code/Tools/SerializeContextTools/Application.cpp",
+      "set": "migration-core279",
+      "status": "M",
+      "head": {
+        "gitBlob": "31d9faeb35ba6db1c27b8862e69d34ac7072c409",
+        "bytes": 8885,
+        "sha256": "10459009B09D708EFEFB5F6BB7828C01859A62A955A3421B6A871CD240233AC7"
+      },
+      "current": {
+        "bytes": 9210,
+        "sha256": "4C8A0A868FE7DA7A89EF97969BDDF33530F31015F1B3A31529D1D8A2073774F7"
+      }
+    },
+    {
+      "path": "Code/Tools/SerializeContextTools/CMakeLists.txt",
+      "set": "migration-core279",
+      "status": "M",
+      "head": {
+        "gitBlob": "51e6f5c7aada1047fd024c55b526f968ac7085b7",
+        "bytes": 1810,
+        "sha256": "1A415EC42CE3CB97CE09C70A14939A6E3F0A88FDC3FE73318350D2E7A0E5DE2E"
+      },
+      "current": {
+        "bytes": 1919,
+        "sha256": "FE55C17F3F9A84FA54F69CB42CE64AC6110BFC35B085D5067598132F9D865048"
+      }
+    },
+    {
+      "path": "engine.json",
+      "set": "migration-core279",
+      "status": "M",
+      "head": {
+        "gitBlob": "9462a0bfec249e8130690246d2b7a186185ca404",
+        "bytes": 3412,
+        "sha256": "EE32B26397360BB4BD37FF30A1396BF11579A6A963BA9FDDC2B83562EB71730F"
+      },
+      "current": {
+        "bytes": 3511,
+        "sha256": "68C2DF30CC0B55E524E4CE8E97A7F36F9B1B2401210930CA72C0374A09035FB4"
+      }
+    },
+    {
+      "path": "Engine/Assets/RenderBuilders/Assets/Config/Shader/Platform/Android/shader_build_options.settings",
+      "set": "migration-core279",
+      "status": "A",
+      "head": null,
+      "current": {
+        "bytes": 2318,
+        "sha256": "411715B0A230C36285D7B5853C143AD57A864E9E2A3BFEED965B7ADBABA0C2C5"
+      }
+    },
+    {
+      "path": "Engine/Assets/RenderBuilders/Assets/Config/Shader/Platform/Emscripten/shader_build_options.settings",
+      "set": "migration-core279",
+      "status": "A",
+      "head": null,
+      "current": {
+        "bytes": 136,
+        "sha256": "BDA93918EC16E9BBED547B4F55FF54CE808E2D8E23D37C37B5D3A25F558619FB"
+      }
+    },
+    {
+      "path": "Engine/Assets/RenderBuilders/Assets/Config/Shader/Platform/iOS/shader_build_options.settings",
+      "set": "migration-core279",
+      "status": "A",
+      "head": null,
+      "current": {
+        "bytes": 842,
+        "sha256": "A80CD34B9721F4D66BE9E55A9CA5D8CA34B8DF9591EA7C4626427EB9661C1653"
+      }
+    },
+    {
+      "path": "Engine/Assets/RenderBuilders/Assets/Config/Shader/Platform/Linux/shader_build_options.settings",
+      "set": "migration-core279",
+      "status": "A",
+      "head": null,
+      "current": {
+        "bytes": 340,
+        "sha256": "DDBACD37FB0CC6DED4C22BC3A1E4289A902EEC6576FE8F4CA3156168EA418663"
+      }
+    },
+    {
+      "path": "Engine/Assets/RenderBuilders/Assets/Config/Shader/Platform/Mac/shader_build_options.settings",
+      "set": "migration-core279",
+      "status": "A",
+      "head": null,
+      "current": {
+        "bytes": 798,
+        "sha256": "4E332DB4FC4D3E4D20F8566020AD6FC2957EFEAC75709114EA2786BBAC588A01"
+      }
+    },
+    {
+      "path": "Engine/Assets/RenderBuilders/Assets/Config/Shader/Platform/Windows/dx12/shader_build_options.settings",
+      "set": "migration-core279",
+      "status": "A",
+      "head": null,
+      "current": {
+        "bytes": 193,
+        "sha256": "14F9ED46151926BA19EFBA60D2F480E27977157DFA8B117311897907731E0709"
+      }
+    },
+    {
+      "path": "Engine/Assets/RenderBuilders/Assets/Config/Shader/Platform/Windows/shader_build_options.settings",
+      "set": "migration-core279",
+      "status": "A",
+      "head": null,
+      "current": {
+        "bytes": 136,
+        "sha256": "BDA93918EC16E9BBED547B4F55FF54CE808E2D8E23D37C37B5D3A25F558619FB"
+      }
+    },
+    {
+      "path": "Engine/Assets/RenderBuilders/Assets/Config/Shader/Platform/Windows/vulkan/shader_build_options.settings",
+      "set": "migration-core279",
+      "status": "A",
+      "head": null,
+      "current": {
+        "bytes": 340,
+        "sha256": "DDBACD37FB0CC6DED4C22BC3A1E4289A902EEC6576FE8F4CA3156168EA418663"
+      }
+    },
+    {
+      "path": "Engine/Assets/RenderBuilders/Assets/Config/Shader/README.md",
+      "set": "migration-core279",
+      "status": "A",
+      "head": null,
+      "current": {
+        "bytes": 269,
+        "sha256": "18596A151F1DCD90256D38F4F2953D20DA8D2645DBCED6EC4EC609F3B827F6F6"
+      }
+    },
+    {
+      "path": "Engine/Assets/RenderBuilders/Assets/Config/Shader/shader_build_options.settings",
+      "set": "migration-core279",
+      "status": "A",
+      "head": null,
+      "current": {
+        "bytes": 1010,
+        "sha256": "60A04C50D752FA133642E59CC153A7D0DD9A11361404D548E45D14159A5CCA82"
+      }
+    },
+    {
+      "path": "Engine/Assets/RenderBuilders/CMakeLists.txt",
+      "set": "migration-core279",
+      "status": "A",
+      "head": null,
+      "current": {
+        "bytes": 4457,
+        "sha256": "C2F819B2BD6B6C4A6356E420EB81EB06B56BBE689D0A12FD62EA1899ACC4B6B9"
+      }
+    },
+    {
+      "path": "Engine/Assets/RenderBuilders/Include/JE/Assets/RenderBuilders/Model/ModelExporterContexts.h",
+      "set": "migration-core279",
+      "status": "A",
+      "head": null,
+      "current": {
+        "bytes": 4543,
+        "sha256": "2776DC40B2ECC6F22C88D49DA6B6AC66FC870117FE9C539C3AE20596899D99EA"
+      }
+    },
+    {
+      "path": "Engine/Assets/RenderBuilders/Include/JE/Assets/RenderBuilders/RenderAssetBuildersExports.h",
+      "set": "migration-core279",
+      "status": "A",
+      "head": null,
+      "current": {
+        "bytes": 523,
+        "sha256": "835035D62352A0AE6BB3035A2DD1A6832A8445538FED6A4629BC5918A4FF0057"
+      }
+    },
+    {
+      "path": "Engine/Assets/RenderBuilders/Include/JE/Assets/RenderBuilders/RenderAssetBuildersModule.h",
+      "set": "migration-core279",
+      "status": "A",
+      "head": null,
+      "current": {
+        "bytes": 1034,
+        "sha256": "04F9E1A7E75580C9C5C19B58D2E23F051D638C3A55291C703918DD816C7438A1"
+      }
+    },
+    {
+      "path": "Engine/Assets/RenderBuilders/Include/JE/Assets/RenderBuilders/Shader/HashedVariantListSourceData.h",
+      "set": "migration-core279",
+      "status": "A",
+      "head": null,
+      "current": {
+        "bytes": 4391,
+        "sha256": "A00DE644787D3DFC29383D11CE4C918EAAF32F1DAB9A80FA2A749F2B7E13743B"
+      }
+    },
+    {
+      "path": "Engine/Assets/RenderBuilders/render_asset_builders_files.cmake",
+      "set": "migration-core279",
+      "status": "A",
+      "head": null,
+      "current": {
+        "bytes": 1380,
+        "sha256": "FAF2B14DBC15589E6426FE8F8EE8DD0A3D39287271B0E5CB3A98AC616374A9F5"
+      }
+    },
+    {
+      "path": "Engine/Assets/RenderBuilders/render_asset_builders_shared_files.cmake",
+      "set": "migration-core279",
+      "status": "A",
+      "head": null,
+      "current": {
+        "bytes": 330,
+        "sha256": "8B662CF789222F0B569410911D54ACB63F4F88AE6BC820FA72A6BA2D7EB4D43C"
+      }
+    },
+    {
+      "path": "Engine/Assets/RenderBuilders/render_asset_builders_stub_files.cmake",
+      "set": "migration-core279",
+      "status": "A",
+      "head": null,
+      "current": {
+        "bytes": 324,
+        "sha256": "1A59F1E7D9A768C1E713FA40721C54985655E3404811B9FD98D6D5C636A0075D"
+      }
+    },
+    {
+      "path": "Engine/Assets/RenderBuilders/render_asset_builders_tests_files.cmake",
+      "set": "migration-core279",
+      "status": "A",
+      "head": null,
+      "current": {
+        "bytes": 493,
+        "sha256": "FFDD778ACD95E0E271DE0BAD93F0F4F191398AB42424403FD7AE3934304A6378"
+      }
+    },
+    {
+      "path": "Engine/Assets/RenderBuilders/shader_compiler_files.cmake",
+      "set": "migration-core279",
+      "status": "A",
+      "head": null,
+      "current": {
+        "bytes": 1274,
+        "sha256": "419295F41356106F34828E3A3F869D37886132C1D16CCE1ACA2B1F0DD70F230B"
+      }
+    },
+    {
+      "path": "Engine/Assets/RenderBuilders/shader_compiler_platform_files.cmake",
+      "set": "migration-core279",
+      "status": "A",
+      "head": null,
+      "current": {
+        "bytes": 293,
+        "sha256": "6E68FBDC01ECAE6BB50C7198F4FE144CA64341289C42C03F50C54C01B9B44C79"
+      }
+    },
+    {
+      "path": "Engine/Assets/RenderBuilders/shader_compiler_resources.cmake",
+      "set": "migration-core279",
+      "status": "A",
+      "head": null,
+      "current": {
+        "bytes": 1402,
+        "sha256": "CBD34C229A75888A9F5768A4187A2EF6B79F0E98E4C1844249DEB4AF6F029523"
+      }
+    },
+    {
+      "path": "Engine/Assets/RenderBuilders/shader_compiler_tests_files.cmake",
+      "set": "migration-core279",
+      "status": "A",
+      "head": null,
+      "current": {
+        "bytes": 361,
+        "sha256": "5127A4240BB9D93B60B46963CB907A93F134703D68BA29A7C29E8D2F3F8EF342"
+      }
+    },
+    {
+      "path": "Engine/Assets/RenderBuilders/ShaderHeaders/Platform/Android/Null/AzslcHeader.azsli",
+      "set": "migration-core279",
+      "status": "A",
+      "head": null,
+      "current": {
+        "bytes": 527,
+        "sha256": "F71AE0AD5B3FE78C090DB45415759FD9A63B5C9493242D91B69D9FC9B666E359"
+      }
+    },
+    {
+      "path": "Engine/Assets/RenderBuilders/ShaderHeaders/Platform/Android/Vulkan/AzslcHeader.azsli",
+      "set": "migration-core279",
+      "status": "A",
+      "head": null,
+      "current": {
+        "bytes": 1018,
+        "sha256": "BDE767F47E4A8CD188C1B1046626E54C1C35ABC72AC726AD30632EAD9388C18F"
+      }
+    },
+    {
+      "path": "Engine/Assets/RenderBuilders/ShaderHeaders/Platform/Android/Vulkan/PlatformHeader.hlsli",
+      "set": "migration-core279",
+      "status": "A",
+      "head": null,
+      "current": {
+        "bytes": 293,
+        "sha256": "A83435F7E3324BB711A1422EECCC15DCBB132607A16AD4F65ACB3388FFAAE8EC"
+      }
+    },
+    {
+      "path": "Engine/Assets/RenderBuilders/ShaderHeaders/Platform/Emscripten/Null/AzlcHeader.azlsi",
+      "set": "migration-core279",
+      "status": "A",
+      "head": null,
+      "current": {
+        "bytes": 528,
+        "sha256": "FC5BF2B308F0D55D2B9505CD0779793B62EFD770EEFAE0B65C4BF953F264E13C"
+      }
+    },
+    {
+      "path": "Engine/Assets/RenderBuilders/ShaderHeaders/Platform/iOS/Metal/AzslcHeader.azsli",
+      "set": "migration-core279",
+      "status": "A",
+      "head": null,
+      "current": {
+        "bytes": 718,
+        "sha256": "2C963CC922FABC87D75B938B5BC5C36EA815D56804C2E5E0F8892E82ADC379F8"
+      }
+    },
+    {
+      "path": "Engine/Assets/RenderBuilders/ShaderHeaders/Platform/iOS/Metal/PlatformHeader.hlsli",
+      "set": "migration-core279",
+      "status": "A",
+      "head": null,
+      "current": {
+        "bytes": 292,
+        "sha256": "A7848C79948AE5CE497F40DC070E6D9ECBBE248E6C0855DCE54C4544EE852F6D"
+      }
+    },
+    {
+      "path": "Engine/Assets/RenderBuilders/ShaderHeaders/Platform/iOS/Null/AzslcHeader.azsli",
+      "set": "migration-core279",
+      "status": "A",
+      "head": null,
+      "current": {
+        "bytes": 521,
+        "sha256": "0A5739EF711C013A04BF71DD20FEBA7CAECE6D1D9781A0359563FBA2110F4B3C"
+      }
+    },
+    {
+      "path": "Engine/Assets/RenderBuilders/ShaderHeaders/Platform/Linux/Null/AzslcHeader.azsli",
+      "set": "migration-core279",
+      "status": "A",
+      "head": null,
+      "current": {
+        "bytes": 523,
+        "sha256": "304D8B398CA75E948A37DBF0360F6A3B03174D4BB15CC285A575D86A50F6D6D0"
+      }
+    },
+    {
+      "path": "Engine/Assets/RenderBuilders/ShaderHeaders/Platform/Linux/Vulkan/AzslcHeader.azsli",
+      "set": "migration-core279",
+      "status": "A",
+      "head": null,
+      "current": {
+        "bytes": 549,
+        "sha256": "944B2A671ED348D4E89F71DF23221A70D682BFF8A81D9C37F0F7C866F8F67B30"
+      }
+    },
+    {
+      "path": "Engine/Assets/RenderBuilders/ShaderHeaders/Platform/Linux/Vulkan/PlatformHeader.hlsli",
+      "set": "migration-core279",
+      "status": "A",
+      "head": null,
+      "current": {
+        "bytes": 293,
+        "sha256": "A83435F7E3324BB711A1422EECCC15DCBB132607A16AD4F65ACB3388FFAAE8EC"
+      }
+    },
+    {
+      "path": "Engine/Assets/RenderBuilders/ShaderHeaders/Platform/Mac/Metal/AzslcHeader.azsli",
+      "set": "migration-core279",
+      "status": "A",
+      "head": null,
+      "current": {
+        "bytes": 649,
+        "sha256": "CE9D7F332A933F84D4106E2973DE6521918FEC989A0BF91821AA022EC50EEFA3"
+      }
+    },
+    {
+      "path": "Engine/Assets/RenderBuilders/ShaderHeaders/Platform/Mac/Metal/PlatformHeader.hlsli",
+      "set": "migration-core279",
+      "status": "A",
+      "head": null,
+      "current": {
+        "bytes": 292,
+        "sha256": "A7848C79948AE5CE497F40DC070E6D9ECBBE248E6C0855DCE54C4544EE852F6D"
+      }
+    },
+    {
+      "path": "Engine/Assets/RenderBuilders/ShaderHeaders/Platform/Mac/Null/AzslcHeader.azsli",
+      "set": "migration-core279",
+      "status": "A",
+      "head": null,
+      "current": {
+        "bytes": 522,
+        "sha256": "1D4D6ED64F3DF922CE7189FCFA438446EAFA3E5C4DA63F1AC71BA41DE539EA1A"
+      }
+    },
+    {
+      "path": "Engine/Assets/RenderBuilders/ShaderHeaders/Platform/Windows/DX12/AzslcHeader.azsli",
+      "set": "migration-core279",
+      "status": "A",
+      "head": null,
+      "current": {
+        "bytes": 555,
+        "sha256": "67B0009E4BB4B3592EBDA8D85D1CA4AB9AB773CA48647FF7A02CE530F8DBFCCE"
+      }
+    },
+    {
+      "path": "Engine/Assets/RenderBuilders/ShaderHeaders/Platform/Windows/DX12/PlatformHeader.hlsli",
+      "set": "migration-core279",
+      "status": "A",
+      "head": null,
+      "current": {
+        "bytes": 291,
+        "sha256": "4F7EEADD8FBC80381031280ED3443C2D6EA51E06D26F227D44875F190CB78781"
+      }
+    },
+    {
+      "path": "Engine/Assets/RenderBuilders/ShaderHeaders/Platform/Windows/Null/AzslcHeader.azsli",
+      "set": "migration-core279",
+      "status": "A",
+      "head": null,
+      "current": {
+        "bytes": 525,
+        "sha256": "9F553E5314F3C797DE20BCAD29B7BEC64FBC5808953B096332BF4D6E9B2F0055"
+      }
+    },
+    {
+      "path": "Engine/Assets/RenderBuilders/ShaderHeaders/Platform/Windows/Vulkan/AzslcHeader.azsli",
+      "set": "migration-core279",
+      "status": "A",
+      "head": null,
+      "current": {
+        "bytes": 663,
+        "sha256": "B8C60B14D49BFF723436DBA8F59382DCFEC48B103BF6F625CB57EEC99CA4959A"
+      }
+    },
+    {
+      "path": "Engine/Assets/RenderBuilders/ShaderHeaders/Platform/Windows/Vulkan/PlatformHeader.hlsli",
+      "set": "migration-core279",
+      "status": "A",
+      "head": null,
+      "current": {
+        "bytes": 293,
+        "sha256": "A83435F7E3324BB711A1422EECCC15DCBB132607A16AD4F65ACB3388FFAAE8EC"
+      }
+    },
+    {
+      "path": "Engine/Assets/RenderBuilders/Source/BuilderComponent.cpp",
+      "set": "migration-core279",
+      "status": "A",
+      "head": null,
+      "current": {
+        "bytes": 6012,
+        "sha256": "5F6BDFF35DA1EE20E373DE6FC2D3A37AF49FCE940DE82D9868C3BA8FCC8E4D2C"
+      }
+    },
+    {
+      "path": "Engine/Assets/RenderBuilders/Source/BuilderComponent.h",
+      "set": "migration-core279",
+      "status": "A",
+      "head": null,
+      "current": {
+        "bytes": 2315,
+        "sha256": "716C53B39AEFFB578BF61DE4FCC848532715D9FA7E7E7640FBB9EE14698782EE"
+      }
+    },
+    {
+      "path": "Engine/Assets/RenderBuilders/Source/Common/AnyAssetBuilder.cpp",
+      "set": "migration-core279",
+      "status": "A",
+      "head": null,
+      "current": {
+        "bytes": 8508,
+        "sha256": "E89360843510CECF5A8A0DB25EFF1E7B957682DB82AF3EA9AB1BE119FFE8DA60"
+      }
+    },
+    {
+      "path": "Engine/Assets/RenderBuilders/Source/Common/AnyAssetBuilder.h",
+      "set": "migration-core279",
+      "status": "A",
+      "head": null,
+      "current": {
+        "bytes": 1221,
+        "sha256": "84FD75AAE8982D1DEC0A7FCB38B90096F24CF48D565197CCF0BBA84443AB05A4"
+      }
+    },
+    {
+      "path": "Engine/Assets/RenderBuilders/Source/Material/MaterialBuilder.cpp",
+      "set": "migration-core279",
+      "status": "A",
+      "head": null,
+      "current": {
+        "bytes": 14524,
+        "sha256": "B3DBBE0B465F80E048D7AB8141D6CF9199DFDB8FC2B249FD3D42C89E7D1A4D01"
+      }
+    },
+    {
+      "path": "Engine/Assets/RenderBuilders/Source/Material/MaterialBuilder.h",
+      "set": "migration-core279",
+      "status": "A",
+      "head": null,
+      "current": {
+        "bytes": 1592,
+        "sha256": "BAE40AA343E8C9E84867AE57CC79EC5E51F62EA3B569CA0DFB49C684B4CA0C0A"
+      }
+    },
+    {
+      "path": "Engine/Assets/RenderBuilders/Source/Material/MaterialBuilderUtils.cpp",
+      "set": "migration-core279",
+      "status": "A",
+      "head": null,
+      "current": {
+        "bytes": 4815,
+        "sha256": "4634A9213C0E0B92D442121A76EA0B268DFC271125365F461FB7E843321D7921"
+      }
+    },
+    {
+      "path": "Engine/Assets/RenderBuilders/Source/Material/MaterialBuilderUtils.h",
+      "set": "migration-core279",
+      "status": "A",
+      "head": null,
+      "current": {
+        "bytes": 2616,
+        "sha256": "7E69E6D111386D45446CBD2502DD8DAC888A1D9B30F63A0E577ADEDB7F1F2585"
+      }
+    },
+    {
+      "path": "Engine/Assets/RenderBuilders/Source/Material/MaterialPipelineScriptRunner.cpp",
+      "set": "migration-core279",
+      "status": "A",
+      "head": null,
+      "current": {
+        "bytes": 9830,
+        "sha256": "C4B6C936E5B4D691C081DD1E8B3459C88990218C6F2D396207713E4A039A630E"
+      }
+    },
+    {
+      "path": "Engine/Assets/RenderBuilders/Source/Material/MaterialPipelineScriptRunner.h",
+      "set": "migration-core279",
+      "status": "A",
+      "head": null,
+      "current": {
+        "bytes": 2947,
+        "sha256": "3FE209F195E2F2447AEFBC47AE1C939311987A2CED37EB481FFDA830A138A989"
+      }
+    },
+    {
+      "path": "Engine/Assets/RenderBuilders/Source/Material/MaterialTypeBuilder.cpp",
+      "set": "migration-core279",
+      "status": "A",
+      "head": null,
+      "current": {
+        "bytes": 50814,
+        "sha256": "3BEF6F3E452ABEA5DDC0E0F65FC5F12694A790DF2A60385A4A07C1248F815DDC"
+      }
+    },
+    {
+      "path": "Engine/Assets/RenderBuilders/Source/Material/MaterialTypeBuilder.h",
+      "set": "migration-core279",
+      "status": "A",
+      "head": null,
+      "current": {
+        "bytes": 4574,
+        "sha256": "B0738AE12D452FA7416F3C29F291437284D9675535B981584EADBCD6A6BDC32C"
+      }
+    },
+    {
+      "path": "Engine/Assets/RenderBuilders/Source/Model/MaterialAssetBuilderComponent.cpp",
+      "set": "migration-core279",
+      "status": "A",
+      "head": null,
+      "current": {
+        "bytes": 13211,
+        "sha256": "234C1320B810A4C6D6BB8AB11997292F3B838C699F96358DF6D9144C10C91C7D"
+      }
+    },
+    {
+      "path": "Engine/Assets/RenderBuilders/Source/Model/MaterialAssetBuilderComponent.h",
+      "set": "migration-core279",
+      "status": "A",
+      "head": null,
+      "current": {
+        "bytes": 2853,
+        "sha256": "04E67D722616B164A1B99C767F510577F0600F49F7574BD1835BEBDF6F140E0A"
+      }
+    },
+    {
+      "path": "Engine/Assets/RenderBuilders/Source/Model/ModelAssetBuilderComponent.cpp",
+      "set": "migration-core279",
+      "status": "A",
+      "head": null,
+      "current": {
+        "bytes": 139319,
+        "sha256": "A16FDA584C20F11A4610869B41D4A5351F01E90953CC3F917889C829044D5999"
+      }
+    },
+    {
+      "path": "Engine/Assets/RenderBuilders/Source/Model/ModelAssetBuilderComponent.h",
+      "set": "migration-core279",
+      "status": "A",
+      "head": null,
+      "current": {
+        "bytes": 22474,
+        "sha256": "D87A85E21C9DAA2937CB850F61C48896C9E500B227B07B48BF8C7CFCACC6C8C9"
+      }
+    },
+    {
+      "path": "Engine/Assets/RenderBuilders/Source/Model/ModelExporterComponent.cpp",
+      "set": "migration-core279",
+      "status": "A",
+      "head": null,
+      "current": {
+        "bytes": 15882,
+        "sha256": "49F41516291F26D389F1362831700C7601D80EEEFE2758305A2469A1B167E9B4"
+      }
+    },
+    {
+      "path": "Engine/Assets/RenderBuilders/Source/Model/ModelExporterComponent.h",
+      "set": "migration-core279",
+      "status": "A",
+      "head": null,
+      "current": {
+        "bytes": 2238,
+        "sha256": "BBF7314EE80CB785415410298B6B3185FC6AC662EDA68F5C4163858040722FC2"
+      }
+    },
+    {
+      "path": "Engine/Assets/RenderBuilders/Source/Model/ModelExporterContexts.cpp",
+      "set": "migration-core279",
+      "status": "A",
+      "head": null,
+      "current": {
+        "bytes": 1600,
+        "sha256": "3E0B9D38119FCBE3A6377248796621844A5EF6D53E71DB781952A85739032BA5"
+      }
+    },
+    {
+      "path": "Engine/Assets/RenderBuilders/Source/Model/MorphTargetExporter.cpp",
+      "set": "migration-core279",
+      "status": "A",
+      "head": null,
+      "current": {
+        "bytes": 21041,
+        "sha256": "8CCF68D750F6DEBB2094AA9AD2964E1B59B60DFA103FA54E2426376982FC229B"
+      }
+    },
+    {
+      "path": "Engine/Assets/RenderBuilders/Source/Model/MorphTargetExporter.h",
+      "set": "migration-core279",
+      "status": "A",
+      "head": null,
+      "current": {
+        "bytes": 3583,
+        "sha256": "904678FF22CD6CA88D2CD95A2CDAFCFD5CB4B0E5967B22BF3CAA88488246C1EE"
+      }
+    },
+    {
+      "path": "Engine/Assets/RenderBuilders/Source/Pass/PassBuilder.cpp",
+      "set": "migration-core279",
+      "status": "A",
+      "head": null,
+      "current": {
+        "bytes": 15996,
+        "sha256": "DC07D0D9199F1505DB25A4A17CA37B616A1BF20C82EC66C8D538BA9AF8A76FA1"
+      }
+    },
+    {
+      "path": "Engine/Assets/RenderBuilders/Source/Pass/PassBuilder.h",
+      "set": "migration-core279",
+      "status": "A",
+      "head": null,
+      "current": {
+        "bytes": 1242,
+        "sha256": "2EBDA65EEFB821AFDC4940FCB39F72CB200D5F54DF3C9974C6065E7888DF6D1B"
+      }
+    },
+    {
+      "path": "Engine/Assets/RenderBuilders/Source/Platform/Common/Unimplemented/RenderAssetBuildersModule_Stub.cpp",
+      "set": "migration-core279",
+      "status": "A",
+      "head": null,
+      "current": {
+        "bytes": 682,
+        "sha256": "3DDDDDFFDABAD971B73252DFFE6BAAA891BE717C8A36E47ADE9FDF6E58F40B5C"
+      }
+    },
+    {
+      "path": "Engine/Assets/RenderBuilders/Source/RenderAssetBuildersModule.cpp",
+      "set": "migration-core279",
+      "status": "A",
+      "head": null,
+      "current": {
+        "bytes": 1352,
+        "sha256": "8F8573E21125153EC11629709BE40434F602BDC169EA9141B7B4917851D84900"
+      }
+    },
+    {
+      "path": "Engine/Assets/RenderBuilders/Source/ResourcePool/ResourcePoolBuilder.cpp",
+      "set": "migration-core279",
+      "status": "A",
+      "head": null,
+      "current": {
+        "bytes": 9527,
+        "sha256": "F38E33887F8BF7B395AE2AAB36667B2D68FB32803D6797114993884E7CFA1A6B"
+      }
+    },
+    {
+      "path": "Engine/Assets/RenderBuilders/Source/ResourcePool/ResourcePoolBuilder.h",
+      "set": "migration-core279",
+      "status": "A",
+      "head": null,
+      "current": {
+        "bytes": 1773,
+        "sha256": "9DD303C8938DF2B4CEC78F1DE007CEBF2CBC8E711FA0BA3F30654009039486C9"
+      }
+    },
+    {
+      "path": "Engine/Assets/RenderBuilders/Source/Shader/AzslCompiler.cpp",
+      "set": "migration-core279",
+      "status": "A",
+      "head": null,
+      "current": {
+        "bytes": 68214,
+        "sha256": "CD12E35D29FD004016592FA6763E57203DD7651C190475ECAADFA39DE82AFEFE"
+      }
+    },
+    {
+      "path": "Engine/Assets/RenderBuilders/Source/Shader/AzslCompiler.h",
+      "set": "migration-core279",
+      "status": "A",
+      "head": null,
+      "current": {
+        "bytes": 5006,
+        "sha256": "5CE70CF0D9DF6F8E1C2DB911A76B5C85BDE6F0EC521F9F9B987980344DE69C56"
+      }
+    },
+    {
+      "path": "Engine/Assets/RenderBuilders/Source/Shader/AzslData.h",
+      "set": "migration-core279",
+      "status": "A",
+      "head": null,
+      "current": {
+        "bytes": 4795,
+        "sha256": "03EE2B092BC4BE2E7E33D943E1444213F3A440E6B67FA8896D5DFAADD0010010"
+      }
+    },
+    {
+      "path": "Engine/Assets/RenderBuilders/Source/Shader/AzslShaderBuilderSystemComponent.cpp",
+      "set": "migration-core279",
+      "status": "A",
+      "head": null,
+      "current": {
+        "bytes": 12664,
+        "sha256": "C5FA4A84AF579CCD7F8757A55B9B992648CF359CE5BC8DA6B6E2AAD891D23371"
+      }
+    },
+    {
+      "path": "Engine/Assets/RenderBuilders/Source/Shader/AzslShaderBuilderSystemComponent.h",
+      "set": "migration-core279",
+      "status": "A",
+      "head": null,
+      "current": {
+        "bytes": 3864,
+        "sha256": "91807E03A8D02848A3A55A5AA0D86D3F8E6915C91A1AC19648D9D0D2AE79F313"
+      }
+    },
+    {
+      "path": "Engine/Assets/RenderBuilders/Source/Shader/CommonFiles/CommonTypes.cpp",
+      "set": "migration-core279",
+      "status": "A",
+      "head": null,
+      "current": {
+        "bytes": 15842,
+        "sha256": "A6C59E5CD2E33730073BFE8A8B900935331A6DBC4F5E0AB3DF31CDE06FCEF225"
+      }
+    },
+    {
+      "path": "Engine/Assets/RenderBuilders/Source/Shader/CommonFiles/CommonTypes.h",
+      "set": "migration-core279",
+      "status": "A",
+      "head": null,
+      "current": {
+        "bytes": 10391,
+        "sha256": "15FC5340C657FF047D600EE77B1733D85A0B69D9F18A6F9015D239694268DDD5"
+      }
+    },
+    {
+      "path": "Engine/Assets/RenderBuilders/Source/Shader/CommonFiles/Preprocessor.cpp",
+      "set": "migration-core279",
+      "status": "A",
+      "head": null,
+      "current": {
+        "bytes": 20577,
+        "sha256": "CD18E111C71E64126FF3FFCFE8BA03A992E89A8B6569F8746BFD6C6CA8476CBC"
+      }
+    },
+    {
+      "path": "Engine/Assets/RenderBuilders/Source/Shader/CommonFiles/Preprocessor.h",
+      "set": "migration-core279",
+      "status": "A",
+      "head": null,
+      "current": {
+        "bytes": 6804,
+        "sha256": "1E44347E9EC640E047C65F615D3688484ACAE94C278CA5CF98211CBBB3E9B50B"
+      }
+    },
+    {
+      "path": "Engine/Assets/RenderBuilders/Source/Shader/Platform/Android/ShaderBuilder_Traits_Android.h",
+      "set": "migration-core279",
+      "status": "A",
+      "head": null,
+      "current": {
+        "bytes": 373,
+        "sha256": "8E010C179540668CC29B763112D6427B894EEA48833A79B3A61BFC3087ADF3F3"
+      }
+    },
+    {
+      "path": "Engine/Assets/RenderBuilders/Source/Shader/Platform/Android/ShaderBuilder_Traits_Platform.h",
+      "set": "migration-core279",
+      "status": "A",
+      "head": null,
+      "current": {
+        "bytes": 287,
+        "sha256": "BBE0EAEF95E7FAFBD34A4E2E643FF28FA2016511F36588479A5D6B7261E020BB"
+      }
+    },
+    {
+      "path": "Engine/Assets/RenderBuilders/Source/Shader/Platform/Emscripten/ShaderBuilder_Traits_Emscripten.h",
+      "set": "migration-core279",
+      "status": "A",
+      "head": null,
+      "current": {
+        "bytes": 373,
+        "sha256": "8E010C179540668CC29B763112D6427B894EEA48833A79B3A61BFC3087ADF3F3"
+      }
+    },
+    {
+      "path": "Engine/Assets/RenderBuilders/Source/Shader/Platform/Emscripten/ShaderBuilder_Traits_Platform.h",
+      "set": "migration-core279",
+      "status": "A",
+      "head": null,
+      "current": {
+        "bytes": 290,
+        "sha256": "5111700BDC26FCE40A7BE6F77F6D87826E15ED87584FCEAEFAFA3B7D944D6968"
+      }
+    },
+    {
+      "path": "Engine/Assets/RenderBuilders/Source/Shader/Platform/iOS/ShaderBuilder_Traits_iOS.h",
+      "set": "migration-core279",
+      "status": "A",
+      "head": null,
+      "current": {
+        "bytes": 373,
+        "sha256": "8E010C179540668CC29B763112D6427B894EEA48833A79B3A61BFC3087ADF3F3"
+      }
+    },
+    {
+      "path": "Engine/Assets/RenderBuilders/Source/Shader/Platform/iOS/ShaderBuilder_Traits_Platform.h",
+      "set": "migration-core279",
+      "status": "A",
+      "head": null,
+      "current": {
+        "bytes": 283,
+        "sha256": "4CCC6AC9FD4CB6825262C53E215C10E78EFCAAC85AD2306B1E7C73DEEEBE0F20"
+      }
+    },
+    {
+      "path": "Engine/Assets/RenderBuilders/Source/Shader/Platform/Linux/ShaderBuilder_Traits_Linux.h",
+      "set": "migration-core279",
+      "status": "A",
+      "head": null,
+      "current": {
+        "bytes": 389,
+        "sha256": "16B01AA29562C3DD7F1EC1AC6FD64F4D452BCC72B4450890A10C847F84F2EE69"
+      }
+    },
+    {
+      "path": "Engine/Assets/RenderBuilders/Source/Shader/Platform/Linux/ShaderBuilder_Traits_Platform.h",
+      "set": "migration-core279",
+      "status": "A",
+      "head": null,
+      "current": {
+        "bytes": 285,
+        "sha256": "4A9A4A26CF602C7D391F38438B22F525AF4C40D4C1252E42D830552C741C8F4B"
+      }
+    },
+    {
+      "path": "Engine/Assets/RenderBuilders/Source/Shader/Platform/Mac/ShaderBuilder_Traits_Mac.h",
+      "set": "migration-core279",
+      "status": "A",
+      "head": null,
+      "current": {
+        "bytes": 387,
+        "sha256": "2FA9804D2A67108FE0D4D3069F38996EE554C3A7AB2E8E877CA7BF4D58E44499"
+      }
+    },
+    {
+      "path": "Engine/Assets/RenderBuilders/Source/Shader/Platform/Mac/ShaderBuilder_Traits_Platform.h",
+      "set": "migration-core279",
+      "status": "A",
+      "head": null,
+      "current": {
+        "bytes": 283,
+        "sha256": "8D424A6D5B1E6CBB484190986518D7C14608F325215D783C807570267842FC9B"
+      }
+    },
+    {
+      "path": "Engine/Assets/RenderBuilders/Source/Shader/Platform/Windows/ShaderBuilder_Traits_Platform.h",
+      "set": "migration-core279",
+      "status": "A",
+      "head": null,
+      "current": {
+        "bytes": 287,
+        "sha256": "8A60005E3D8A7BD2C81948957F99D1B8E7CD58148193101E5084B666A9F956D8"
+      }
+    },
+    {
+      "path": "Engine/Assets/RenderBuilders/Source/Shader/Platform/Windows/ShaderBuilder_Traits_Windows.h",
+      "set": "migration-core279",
+      "status": "A",
+      "head": null,
+      "current": {
+        "bytes": 387,
+        "sha256": "7C5F60A81B9C839FAB533A9ABB05785B45EC4E0F6F3CD6EC07ECA7B140E57CB6"
+      }
+    },
+    {
+      "path": "Engine/Assets/RenderBuilders/Source/Shader/PrecompiledShaderBuilder.cpp",
+      "set": "migration-core279",
+      "status": "A",
+      "head": null,
+      "current": {
+        "bytes": 14507,
+        "sha256": "BBEFF7123A0AC5A5D9231072A96486A8DB77B9684E37E0BA649A46899457783D"
+      }
+    },
+    {
+      "path": "Engine/Assets/RenderBuilders/Source/Shader/PrecompiledShaderBuilder.h",
+      "set": "migration-core279",
+      "status": "A",
+      "head": null,
+      "current": {
+        "bytes": 1592,
+        "sha256": "56C3E56842B28756F076BAF1DC4887E3CC3D316DFE33E3A8AD7D9247EB909432"
+      }
+    },
+    {
+      "path": "Engine/Assets/RenderBuilders/Source/Shader/ShaderAssetBuilder.cpp",
+      "set": "migration-core279",
+      "status": "A",
+      "head": null,
+      "current": {
+        "bytes": 45855,
+        "sha256": "D2473C7559B3C37ADAC1EAE20A267263F46AEC7150CDD40FADE958D0981EB3D9"
+      }
+    },
+    {
+      "path": "Engine/Assets/RenderBuilders/Source/Shader/ShaderAssetBuilder.h",
+      "set": "migration-core279",
+      "status": "A",
+      "head": null,
+      "current": {
+        "bytes": 1654,
+        "sha256": "21EDEBC6EA47F31BEB3B11AADF2585C68938BD26F640B09CAAA27D96064C365A"
+      }
+    },
+    {
+      "path": "Engine/Assets/RenderBuilders/Source/Shader/ShaderBuildArgumentsManager.cpp",
+      "set": "migration-core279",
+      "status": "A",
+      "head": null,
+      "current": {
+        "bytes": 10897,
+        "sha256": "ED5DBCA7387E072C336C3F7BE48C7B57AB40E83651B92B138308A0BFB0B11622"
+      }
+    },
+    {
+      "path": "Engine/Assets/RenderBuilders/Source/Shader/ShaderBuildArgumentsManager.h",
+      "set": "migration-core279",
+      "status": "A",
+      "head": null,
+      "current": {
+        "bytes": 8211,
+        "sha256": "11431741CF8AC2C661A4DD2938E0A69990D7F9FCD8F6CBEB4A7EC64F086E8AA8"
+      }
+    },
+    {
+      "path": "Engine/Assets/RenderBuilders/Source/Shader/ShaderBuilderUtility.cpp",
+      "set": "migration-core279",
+      "status": "A",
+      "head": null,
+      "current": {
+        "bytes": 49808,
+        "sha256": "86ABA14EF63B514811A96423CD598D301BF2DDB5995DD01FF79AD394B319D545"
+      }
+    },
+    {
+      "path": "Engine/Assets/RenderBuilders/Source/Shader/ShaderBuilderUtility.h",
+      "set": "migration-core279",
+      "status": "A",
+      "head": null,
+      "current": {
+        "bytes": 9864,
+        "sha256": "0B82FB951D7B978477985F6A55CC42D04547906BAD9BFCE4A1BB24972B8545B1"
+      }
+    },
+    {
+      "path": "Engine/Assets/RenderBuilders/Source/Shader/ShaderPlatformInterfaceRequest.h",
+      "set": "migration-core279",
+      "status": "A",
+      "head": null,
+      "current": {
+        "bytes": 1447,
+        "sha256": "46FF5B2EF1C5153610D4D59351F17A7E06078351D6CBC9455BC65A7AE5B3B404"
+      }
+    },
+    {
+      "path": "Engine/Assets/RenderBuilders/Source/Shader/ShaderVariantAssetBuilder.cpp",
+      "set": "migration-core279",
+      "status": "A",
+      "head": null,
+      "current": {
+        "bytes": 67573,
+        "sha256": "C68BF65E10497AC83A54D64785163A4D3C02C1771098047FD1256647B00C7173"
+      }
+    },
+    {
+      "path": "Engine/Assets/RenderBuilders/Source/Shader/ShaderVariantAssetBuilder.h",
+      "set": "migration-core279",
+      "status": "A",
+      "head": null,
+      "current": {
+        "bytes": 6374,
+        "sha256": "7AB5417168FB094C872810206AA7DED01D8B34EA3D8E24135E27392B14B5968C"
+      }
+    },
+    {
+      "path": "Engine/Assets/RenderBuilders/Source/Shader/ShaderVariantListBuilder.cpp",
+      "set": "migration-core279",
+      "status": "A",
+      "head": null,
+      "current": {
+        "bytes": 30787,
+        "sha256": "FFE83B8AED084678219EBD902438D233A6ABDED9B04F0082868A60CAFB2D3F65"
+      }
+    },
+    {
+      "path": "Engine/Assets/RenderBuilders/Source/Shader/ShaderVariantListBuilder.h",
+      "set": "migration-core279",
+      "status": "A",
+      "head": null,
+      "current": {
+        "bytes": 3216,
+        "sha256": "5EB5805C10B60D77BDA5B677AD5AA73814FA00ECD60B9E51BB2D1E6D43F39DB9"
+      }
+    },
+    {
+      "path": "Engine/Assets/RenderBuilders/Source/Shader/SrgLayoutUtility.cpp",
+      "set": "migration-core279",
+      "status": "A",
+      "head": null,
+      "current": {
+        "bytes": 11885,
+        "sha256": "F25C24244DB9D8743E3A256EC128FF654A2C7C9702CC104197595BA06B03FB9B"
+      }
+    },
+    {
+      "path": "Engine/Assets/RenderBuilders/Source/Shader/SrgLayoutUtility.h",
+      "set": "migration-core279",
+      "status": "A",
+      "head": null,
+      "current": {
+        "bytes": 869,
+        "sha256": "9457E4DECD8DDF926F429F39ECE3E71CCD99CBDBA54BAA3C5D749EA8BF0FEDCD"
+      }
+    },
+    {
+      "path": "Engine/Assets/RenderBuilders/Source/ShaderCompilerToolsModule.cpp",
+      "set": "migration-core279",
+      "status": "A",
+      "head": null,
+      "current": {
+        "bytes": 1340,
+        "sha256": "A653955AE349CE1E0766CC561FEAD344D47EE969E41AD187330631BD1EE1F51A"
+      }
+    },
+    {
+      "path": "Engine/Assets/RenderBuilders/Tests/AnyAssetBuilderTest.cpp",
+      "set": "migration-core279",
+      "status": "A",
+      "head": null,
+      "current": {
+        "bytes": 15515,
+        "sha256": "4E5A889EFCF84F01CFEC78B3A52C77BDD6318D8D911A6626D61788A213226554"
+      }
+    },
+    {
+      "path": "Engine/Assets/RenderBuilders/Tests/BuilderTestFixture.cpp",
+      "set": "migration-core279",
+      "status": "A",
+      "head": null,
+      "current": {
+        "bytes": 4313,
+        "sha256": "E1AED8356777307BCBC4D92BAD4153DE063E4EFAF86C4800555219C51163545D"
+      }
+    },
+    {
+      "path": "Engine/Assets/RenderBuilders/Tests/BuilderTestFixture.h",
+      "set": "migration-core279",
+      "status": "A",
+      "head": null,
+      "current": {
+        "bytes": 3362,
+        "sha256": "B5DAF7E4C09A3C83ED67B0E04799813FBE41645D5257FABB5CC1D7D66C03533C"
+      }
+    },
+    {
+      "path": "Engine/Assets/RenderBuilders/Tests/PassBuilderTest.cpp",
+      "set": "migration-core279",
+      "status": "A",
+      "head": null,
+      "current": {
+        "bytes": 5485,
+        "sha256": "450559F3526547AFAB2B1182A3032D90307F1CA388E6AB4CAD430D4E369D69FE"
+      }
+    },
+    {
+      "path": "Engine/Assets/RenderBuilders/Tests/RenderAssetBuildersModuleTests.cpp",
+      "set": "migration-core279",
+      "status": "A",
+      "head": null,
+      "current": {
+        "bytes": 6144,
+        "sha256": "B999D264894D1BA2A9893CACC6E25BE23E5440A5C825A8268B02A53D22D591B3"
+      }
+    },
+    {
+      "path": "Engine/Assets/RenderBuilders/Tests/RenderAssetBuildersTests.cpp",
+      "set": "migration-core279",
+      "status": "A",
+      "head": null,
+      "current": {
+        "bytes": 303,
+        "sha256": "2DBDAD40C5E245BE7CD19312E9F36E4B87F85B4FE62A33F6C017D11DBFCD5EC0"
+      }
+    },
+    {
+      "path": "Engine/Assets/RenderBuilders/Tests/ResourcePoolBuilderTest.cpp",
+      "set": "migration-core279",
+      "status": "A",
+      "head": null,
+      "current": {
+        "bytes": 8958,
+        "sha256": "369D0E2A5A54C111F99E5840525773B7F962609563C70050AF3BE0E09E25F2C7"
+      }
+    },
+    {
+      "path": "Engine/Assets/RenderBuilders/Tests/Shader/Common/ShaderBuilderTestFixture.cpp",
+      "set": "migration-core279",
+      "status": "A",
+      "head": null,
+      "current": {
+        "bytes": 722,
+        "sha256": "EF420E33E57C7A2CFC0038893A128EB6D72E0405232DB09E755344B690A7AFA1"
+      }
+    },
+    {
+      "path": "Engine/Assets/RenderBuilders/Tests/Shader/Common/ShaderBuilderTestFixture.h",
+      "set": "migration-core279",
+      "status": "A",
+      "head": null,
+      "current": {
+        "bytes": 880,
+        "sha256": "6E281AE8CDE8B8371B5274EB00003D8E3D1DD6F525FFEEEC3C18754CB5625C38"
+      }
+    },
+    {
+      "path": "Engine/Assets/RenderBuilders/Tests/Shader/McppBinderTests.cpp",
+      "set": "migration-core279",
+      "status": "A",
+      "head": null,
+      "current": {
+        "bytes": 3882,
+        "sha256": "0E0AE7BD36E82548408A8E559DC7D5DB0DA9D955D5DB1B85F0E853C74F679353"
+      }
+    },
+    {
+      "path": "Engine/Assets/RenderBuilders/Tests/Shader/ShaderBuildArgumentsTests.cpp",
+      "set": "migration-core279",
+      "status": "A",
+      "head": null,
+      "current": {
+        "bytes": 26691,
+        "sha256": "F07ACEF5BFD7A5F217DD7F35A97F1AB5D2731A47FEB9902EC8A1BF31F5549DB4"
+      }
+    },
+    {
+      "path": "Engine/Assets/RenderBuilders/Tests/Shader/ShaderBuilderUtilityTests.cpp",
+      "set": "migration-core279",
+      "status": "A",
+      "head": null,
+      "current": {
+        "bytes": 4403,
+        "sha256": "88244943D246137A147D4890E84CECCB3D4DE68A355E2D4C4DBF1A0F6463D49E"
+      }
+    },
+    {
+      "path": "Engine/CMakeLists.txt",
+      "set": "migration-core279",
+      "status": "M",
+      "head": {
+        "gitBlob": "efef5cd9849576f4a5c4f3fe046fe283d08fd0de",
+        "bytes": 647,
+        "sha256": "054C5B0FF2F024F227AC48092A6539775D1268895D06A27B5306D3E67B786168"
+      },
+      "current": {
+        "bytes": 695,
+        "sha256": "A0A3AB06E7F5ACCC0D325C14D07FDEF71FF9A3271BCDA912BBF4F3243238D598"
+      }
+    },
+    {
+      "path": "Engine/Render/Integration/render_integration_dependencies.cmake",
+      "set": "migration-core279",
+      "status": "M",
+      "head": {
+        "gitBlob": "a6270bf72daf5691ee165a7a22dad833243e7a84",
+        "bytes": 2290,
+        "sha256": "CB5DF3B39F1AF17D0E25D54FDA5293AA6E5A7590B460F86DE5A2F6A65BDA4940"
+      },
+      "current": {
+        "bytes": 2128,
+        "sha256": "53E79B981CEEBCFA71A1F68BBB0DA238A468D5AEFDD524ACAB394F9EB38C2076"
+      }
+    },
+    {
+      "path": "Gems/Atom/Asset/Shader/Assets/Config/Shader/Platform/Android/shader_build_options.settings",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "d1072024f257699c3728001ddf5c759f01f0c4fe",
+        "bytes": 2282,
+        "sha256": "DDFD96C49A8A110637232D6EFEAA0EB7ADD986280E13760F45C147E4F8C82760"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/Asset/Shader/Assets/Config/Shader/Platform/Emscripten/shader_build_options.settings",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "dd4e1b53f999c224e74bd2144409ac498f4488ed",
+        "bytes": 128,
+        "sha256": "9E015F99452393BF06096803DD067A956FA66FE410354D67F72811534AC74010"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/Asset/Shader/Assets/Config/Shader/Platform/iOS/shader_build_options.settings",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "c56b548bde9271e0276adce46bb931d38fc7a818",
+        "bytes": 818,
+        "sha256": "8189990C21979802E2260639F1688C0C05C09B8BD81249C1EB6CF96EB2F9A663"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/Asset/Shader/Assets/Config/Shader/Platform/Linux/shader_build_options.settings",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "ea7bdd7401287200af68fe7db44e330f7baf4aa1",
+        "bytes": 328,
+        "sha256": "5F9D078397748C95B91056FACD4533DB30FF45CEC807CDCD2B90A2CCA7511B5F"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/Asset/Shader/Assets/Config/Shader/Platform/Mac/shader_build_options.settings",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "4f6ea23ec1c868d9d4bf8c76ec620d5766773598",
+        "bytes": 774,
+        "sha256": "E9A1FBFA458747ABFD9821BEFBAF841895C3C763A1CDFE76F3B1F6EF2B10E34E"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/Asset/Shader/Assets/Config/Shader/Platform/Windows/dx12/shader_build_options.settings",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "e009945f91823967c09c67fdda6596be7cc116dc",
+        "bytes": 183,
+        "sha256": "8844F41CDD572C860FCF66275AE6FD220D09DD9C6AAB6C7EB52E373FCA610EA5"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/Asset/Shader/Assets/Config/Shader/Platform/Windows/shader_build_options.settings",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "dd4e1b53f999c224e74bd2144409ac498f4488ed",
+        "bytes": 128,
+        "sha256": "9E015F99452393BF06096803DD067A956FA66FE410354D67F72811534AC74010"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/Asset/Shader/Assets/Config/Shader/Platform/Windows/vulkan/shader_build_options.settings",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "ea7bdd7401287200af68fe7db44e330f7baf4aa1",
+        "bytes": 328,
+        "sha256": "5F9D078397748C95B91056FACD4533DB30FF45CEC807CDCD2B90A2CCA7511B5F"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/Asset/Shader/Assets/Config/Shader/README.md",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "938ae0ecca4b8e77b1353263e7c98c22b0e3ef42",
+        "bytes": 269,
+        "sha256": "18596A151F1DCD90256D38F4F2953D20DA8D2645DBCED6EC4EC609F3B827F6F6"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/Asset/Shader/Assets/Config/Shader/shader_build_options.settings",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "cf51002de0924963227a478350939061e3de7f49",
+        "bytes": 984,
+        "sha256": "FE0D91BDB8AB0FF84B809FD420C6190CD2D2B9894862D88E5736F3B36735BE1F"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/Asset/Shader/CMakeLists.txt",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "ec981ccfd3ac73791da84961f7835fa17b41ce75",
+        "bytes": 268,
+        "sha256": "27C64921B520466623E3FDF23756F197B9C80764B5466589B6A87D4BD068A03C"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/Asset/Shader/Code/atom_asset_shader_builders_files.cmake",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "5e0417831b20190c482dbe0c178d64cc90a22502",
+        "bytes": 1328,
+        "sha256": "BCEEA71EA7CE995E2C89CD04B9A0F38A23DDF6095CA02A2871ECF6DB50614FD3"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/Asset/Shader/Code/atom_asset_shader_builders_shared_files.cmake",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "577788d9b4ca60963d4763bab1881060effb19ba",
+        "bytes": 272,
+        "sha256": "909E87CA741B1C2838A778C62A9D13E47CEA786BA6A5C779D83D8370CD5C10FD"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/Asset/Shader/Code/atom_asset_shader_builders_stub_files.cmake",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "b66204beb660c61a77e222408a4226f00fd76967",
+        "bytes": 296,
+        "sha256": "F5C21F1D6F812F1F183CDE00E6DDDEDE65AC840EE6FFBFA37EE88FB6436D2B28"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/Asset/Shader/Code/atom_asset_shader_builders_tests_files.cmake",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "9b2cc43204e8711508143448173c0a3d94fe8b7e",
+        "bytes": 426,
+        "sha256": "09D7427F1EC507321CE8BEC1CB24841510E6451EE324274B2E72D7420D015C2F"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/Asset/Shader/Code/AZSL/Platform/Android/Null/AzslcHeader.azsli",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "fa03d47ddc423c8eb253b27c9f6cfba71d906c9a",
+        "bytes": 510,
+        "sha256": "3B23858B662E48744ED80BD17308B894EFD38A011FF48A14032DD126205DEC5B"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/Asset/Shader/Code/AZSL/Platform/Android/Vulkan/AzslcHeader.azsli",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "423bac3a3a210ce79ed60dd6847fb050ad9ae781",
+        "bytes": 993,
+        "sha256": "D9BA0559207FCE9058666F321E43FD839B041EE21FA99D208DF1B91AF364B48F"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/Asset/Shader/Code/AZSL/Platform/Android/Vulkan/PlatformHeader.hlsli",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "769f9df5121720ca9fd56cb05189daf187049d02",
+        "bytes": 284,
+        "sha256": "9430EE8F4A6F58D2CC782CBBE2439E7C1C7EC129855357979C86D141F91684C3"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/Asset/Shader/Code/AZSL/Platform/Emscripten/Null/AzlcHeader.azlsi",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "616b86b57fb8150df21b7bc9f2154f566b3a817b",
+        "bytes": 512,
+        "sha256": "D73168D3903BB89E09445FD0B2F6878449C507ED4617CAE1136245F58213A6D8"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/Asset/Shader/Code/AZSL/Platform/iOS/Metal/AzslcHeader.azsli",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "808b062d807189aa91e01991f52eebe55447931f",
+        "bytes": 696,
+        "sha256": "69BA25F218EDED01A44512FA73243F33D74B6693B2421A53320902839D454F8F"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/Asset/Shader/Code/AZSL/Platform/iOS/Metal/PlatformHeader.hlsli",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "de1a1889f28ad5d89a0a3596407dfb69dcd901f4",
+        "bytes": 283,
+        "sha256": "0C3658922B91A1CE716DE30F1F434272C4D83842F462B3C450778FC810CEBD12"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/Asset/Shader/Code/AZSL/Platform/iOS/Null/AzslcHeader.azsli",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "d830d2b09326a81faad55d42a2bf43afae3e17c3",
+        "bytes": 505,
+        "sha256": "92C813F9623FE49D2839F0F89E95C9451FDC8AF18BA8C37FD68487C4588FA9D5"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/Asset/Shader/Code/AZSL/Platform/Linux/Null/AzslcHeader.azsli",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "e4d89b7a13208a0ade290c889a0a2bb5ecac9eaa",
+        "bytes": 507,
+        "sha256": "B94E335C70712C56CD24B0C4507D949311004A6D8CEE1B4E3619164C0359549F"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/Asset/Shader/Code/AZSL/Platform/Linux/Vulkan/AzslcHeader.azsli",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "db4e55e5e1313ad443772fd1e216a9e11d49de53",
+        "bytes": 534,
+        "sha256": "F191A91855186C6B2760B2C81E56FBFCB4B7247A6BBD8F9CF812A174263553E5"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/Asset/Shader/Code/AZSL/Platform/Linux/Vulkan/PlatformHeader.hlsli",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "769f9df5121720ca9fd56cb05189daf187049d02",
+        "bytes": 284,
+        "sha256": "9430EE8F4A6F58D2CC782CBBE2439E7C1C7EC129855357979C86D141F91684C3"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/Asset/Shader/Code/AZSL/Platform/Mac/Metal/AzslcHeader.azsli",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "08745cc3945191f3f15856e18849c7d96d5f1137",
+        "bytes": 629,
+        "sha256": "67C0149E992EDAD4CCA5CB887107E3361B4E1B0E80588A0ADBE1B1B45DA016E6"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/Asset/Shader/Code/AZSL/Platform/Mac/Metal/PlatformHeader.hlsli",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "de1a1889f28ad5d89a0a3596407dfb69dcd901f4",
+        "bytes": 283,
+        "sha256": "0C3658922B91A1CE716DE30F1F434272C4D83842F462B3C450778FC810CEBD12"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/Asset/Shader/Code/AZSL/Platform/Mac/Null/AzslcHeader.azsli",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "77d842784209e484eee221d5501bf2abe5b5ce40",
+        "bytes": 506,
+        "sha256": "659551D3A5C375EC1C6036A08AFB296C305A1CB8D2A0C0587985B4EADFD5C974"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/Asset/Shader/Code/AZSL/Platform/Windows/DX12/AzslcHeader.azsli",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "677fd0a34e1cdd069262878deb599c38480636dc",
+        "bytes": 538,
+        "sha256": "41DC4D4F38BCFCCB845E3D33C767817D8A3CD0AEA8DC49625BCEDB721399AA54"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/Asset/Shader/Code/AZSL/Platform/Windows/DX12/PlatformHeader.hlsli",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "30304068262926e2f71734d709fc2136942135bd",
+        "bytes": 282,
+        "sha256": "FD2D32621405EB7BE60C62B2769E4DDB7439BB223EB8AE531F5E9AA19D8F925C"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/Asset/Shader/Code/AZSL/Platform/Windows/Null/AzslcHeader.azsli",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "42df65c8285e7b4209821e5e093f7b936c03dda7",
+        "bytes": 509,
+        "sha256": "A52E0F9C5A25A5C5704E13D5EF8BE2682B597982A3B35A6D109BD3E9DFE35286"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/Asset/Shader/Code/AZSL/Platform/Windows/Vulkan/AzslcHeader.azsli",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "e49834074868c9bab12ae8c5b130dadd9b2f11df",
+        "bytes": 643,
+        "sha256": "102E5D171BD8C19B5E917DB5D21CC76F0B3FD80CFE92BDE48FBC9C2961453E88"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/Asset/Shader/Code/AZSL/Platform/Windows/Vulkan/PlatformHeader.hlsli",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "769f9df5121720ca9fd56cb05189daf187049d02",
+        "bytes": 284,
+        "sha256": "9430EE8F4A6F58D2CC782CBBE2439E7C1C7EC129855357979C86D141F91684C3"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/Asset/Shader/Code/CMakeLists.txt",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "b0bb074d51a74be58b7ea480023f02053a5d0cd0",
+        "bytes": 4962,
+        "sha256": "A09F9D3869EE062D26037E369CE3A4B1D133F8923D3E3552A88C76F40D432F14"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/Asset/Shader/Code/Source/Editor/AzslCompiler.cpp",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "9b6f7f4e9b6ce06debdb3e757661ec067cbb553b",
+        "bytes": 66749,
+        "sha256": "12F71C51127D856FDDD2DC07560884064CFC1CACE5FE7E6AD7610BE1633FC2EA"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/Asset/Shader/Code/Source/Editor/AzslCompiler.h",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "6d54aad222b3a1ab706e0f57677336f7c4a6d027",
+        "bytes": 4860,
+        "sha256": "CD0621A6D6E246F1BC2D0A213911363E9D0A253473A282CD7C6010D8F731DB5F"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/Asset/Shader/Code/Source/Editor/AzslData.h",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "f3b2023cdea9a47b9e22d9384c600d1a5bde2d13",
+        "bytes": 4621,
+        "sha256": "1EB642648D7ED29D17D68636B0A5A1FA60878960120B4CC45CF4C9109EE464FB"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/Asset/Shader/Code/Source/Editor/AzslShaderBuilderModule.cpp",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "7d28bf10dc6e775469b8333ae01b5a023e2f2bd0",
+        "bytes": 1631,
+        "sha256": "2135AA1C569EA3B72A1986576E2FA44A8C928D399A4292C876CA9FA7AD8B7BB0"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/Asset/Shader/Code/Source/Editor/AzslShaderBuilderSystemComponent.cpp",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "5055d3063ff2d86f04ad5dca48d03d26b96c5ee4",
+        "bytes": 12260,
+        "sha256": "340D0F20544C9D725DB01767C5015C82FD633CD7D975190B396AB0BDC2E86DF3"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/Asset/Shader/Code/Source/Editor/AzslShaderBuilderSystemComponent.h",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "f8e988031ca328d976828485afb0fda484d6933d",
+        "bytes": 3713,
+        "sha256": "BCD536E6CAF29F414349285D81EE2EB50FB8F0546EB80673A45AC91BAD667C84"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/Asset/Shader/Code/Source/Editor/CommonFiles/CommonTypes.cpp",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "d960b25c1051e0b6fc4eb04395074b4fb054111b",
+        "bytes": 15322,
+        "sha256": "1B1CB94B95BA2153443D4712A829758046BD326FEA4FD1F2650E0102D81AAE1F"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/Asset/Shader/Code/Source/Editor/CommonFiles/CommonTypes.h",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "3a8c7b05609895356e526569a72160ad943848b8",
+        "bytes": 10014,
+        "sha256": "32DAA9E272430ED8EB7574A9DC8446AADC2BE63E3F8B733303BF2934B512337B"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/Asset/Shader/Code/Source/Editor/CommonFiles/Preprocessor.cpp",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "9eb63513d512ff761ac30782efda8aca45b40408",
+        "bytes": 20110,
+        "sha256": "8BE2596131355CD4616C9D93FF6ECD8C94C731C8F24C6AD57980AFE3B1B163FF"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/Asset/Shader/Code/Source/Editor/CommonFiles/Preprocessor.h",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "7b5b8c01efcad331df8860d36c52150d303effe9",
+        "bytes": 6588,
+        "sha256": "C70BE07E6419CE433F5D2FD2F754E673D50B217530A8B7619FCB18298D22A368"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/Asset/Shader/Code/Source/Editor/HashedVariantListSourceData.h",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "16659ba16424d222febc93fbb062ff86154b00c0",
+        "bytes": 4150,
+        "sha256": "8D413140D31B3AEA208D3A59DBA1D75C9825FDBFC8E476D52270F8805EFBE7BD"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/Asset/Shader/Code/Source/Editor/PrecompiledShaderBuilder.cpp",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "ea92844708152b99b1e3f2de4d9b3240bf99b424",
+        "bytes": 13985,
+        "sha256": "5A8CBAC05A2EF8BEEA066DC1313509E33965CE9B05853D4CA12880CF403EC347"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/Asset/Shader/Code/Source/Editor/PrecompiledShaderBuilder.h",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "bcfd6851c4456e2ded2948a6ae43f6322fe3713b",
+        "bytes": 1461,
+        "sha256": "61A418E5BC9F7428AD661186FB13BC34B7B1987A8857C6567914E5CA0D294890"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/Asset/Shader/Code/Source/Editor/ShaderAssetBuilder.cpp",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "bbefcdd61fee896f22336d40335f32d6c6a8ccc3",
+        "bytes": 44798,
+        "sha256": "F737243CD343531A82C48F7E3F048991587F5C4DC1CC431805D3A9B9ED1D6A10"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/Asset/Shader/Code/Source/Editor/ShaderAssetBuilder.h",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "86a9b1ab9a9b6c6a9ba3c0d4e4b569ce13b63e6d",
+        "bytes": 1544,
+        "sha256": "9C06FECCF3D527A64E96E9FC9F053545115DE542386444DFBB6339F53FBC854B"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/Asset/Shader/Code/Source/Editor/ShaderBuildArgumentsManager.cpp",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "a2108330eaf10b6466d55ed0056d5bbe7eac0f21",
+        "bytes": 10625,
+        "sha256": "D97C6634E4F5EB52E26FBC690C2AB5DB05463F1C59E86876DCB03513B049B7BB"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/Asset/Shader/Code/Source/Editor/ShaderBuildArgumentsManager.h",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "9009e547618c4375a3ebec8f5305b6ade20dfed6",
+        "bytes": 8000,
+        "sha256": "8DCE4933A1E80FA99D705FE1461918752314EC8C003190B2B751E00930E5E33F"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/Asset/Shader/Code/Source/Editor/ShaderBuilderUtility.cpp",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "b4a66938747de5d168ae9a3a8c6e4c421da8db62",
+        "bytes": 48448,
+        "sha256": "FDB75563AEB1C169E1761D27034B784453AFBD001ACDFDC1316E76665573928F"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/Asset/Shader/Code/Source/Editor/ShaderBuilderUtility.h",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "92887737298d9d3ea8bdc689c18954faca990d82",
+        "bytes": 9547,
+        "sha256": "8F01FBDE56150CBABDE7FD9E0B06D00E0212B29ED9297A3F520BEA26EF7BC3BE"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/Asset/Shader/Code/Source/Editor/ShaderPlatformInterfaceRequest.h",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "3bb5eedeacf2a08f7e60cf36d7c09ffa4198f838",
+        "bytes": 1356,
+        "sha256": "DE841A515ABF979C398A4E8010A95AD38E5BDF3734F481E4C6C5AD6801CC9650"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/Asset/Shader/Code/Source/Editor/ShaderVariantAssetBuilder.cpp",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "3e0ee33149750db35d92a7c34ad515c839c86deb",
+        "bytes": 65916,
+        "sha256": "5F8A69EACCC425263C148CF277190A7B2D65C0CCB5F38681C9A1DC3204945F4D"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/Asset/Shader/Code/Source/Editor/ShaderVariantAssetBuilder.h",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "d7c08907d90440841848966f3475620ddb2f61c0",
+        "bytes": 6171,
+        "sha256": "9D19F90B77AD786616F6EBFB105D31BB0AFAB35EA3078CB4F565A5E0FCEE7F78"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/Asset/Shader/Code/Source/Editor/ShaderVariantListBuilder.cpp",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "30fa03bbc126e5f55cd323fa20e00b084b730ba7",
+        "bytes": 30125,
+        "sha256": "B0F494019D1257058BF9CE5ACBA1C0C9D61ECE4A2C82E919347C55D44CF5F182"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/Asset/Shader/Code/Source/Editor/ShaderVariantListBuilder.h",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "1d17efce7194953d64b4e4a6389cb9369b10e55d",
+        "bytes": 3117,
+        "sha256": "A5ED4653F54F99503772EBC009EC03820BDEB38A4994BD023509536BB4A7DDE9"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/Asset/Shader/Code/Source/Editor/SrgLayoutUtility.cpp",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "887eb8de0d71287930d286dd0986800095fc62a1",
+        "bytes": 11436,
+        "sha256": "AB6F6BEBB92D2340B4814DC21E3F2F5656D9BA9B7E64C8BB509A33DE3C9C4CBF"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/Asset/Shader/Code/Source/Editor/SrgLayoutUtility.h",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "cbcf5072005b05e22d50d7d0683c5587f331a543",
+        "bytes": 793,
+        "sha256": "93CEABF5E923D42238161D62E2DBAE71D6E1604277CE5577185CF21F612C6CC0"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/Asset/Shader/Code/Source/Platform/Android/PAL_android.cmake",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "8cccc827a06e99e3cb0ee522cd5e85a72381c99e",
+        "bytes": 270,
+        "sha256": "BC71840AABB92B6B65D77E544056F503A2368FC52631259DD4827A955F161603"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/Asset/Shader/Code/Source/Platform/Android/platform_android_files.cmake",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "81df2aa701357f21fab8bd8cdd503634f038967a",
+        "bytes": 297,
+        "sha256": "6161D47B3CDEB0819EA404D909880D68D03DFC75C9DE048DF07947AE6C435259"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/Asset/Shader/Code/Source/Platform/Android/ShaderBuilder_Traits_Android.h",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "86afcd201c5bcadfc615ce32604fd4c4f8f49baf",
+        "bytes": 354,
+        "sha256": "8AB63B905B512A1FE52230A24C80C313A814CD27DCCFD64AAC163666B15AED90"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/Asset/Shader/Code/Source/Platform/Android/ShaderBuilder_Traits_Platform.h",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "cb33a782fefd4c3ac58d4822027f4fa57c1c05f6",
+        "bytes": 277,
+        "sha256": "3631A5F65CF8AB984C6AB33BC6A953D9A62C56BBD17CFE4F56F7A655C3AC96AE"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/Asset/Shader/Code/Source/Platform/Common/Clang/atom_asset_shader_static_clang.cmake",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "66b88bd68754cb51cb7344e2a5c7d968aba45b02",
+        "bytes": 406,
+        "sha256": "8372610B0E24F7C50E9D9A9C709D3B815EE9C4E0C9CA5ECBA5A32A0051171E05"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/Asset/Shader/Code/Source/Platform/Common/GCC/atom_asset_shader_static_gcc.cmake",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "9072f0316c185fd2a240f61e0cabde0d308fd6f9",
+        "bytes": 332,
+        "sha256": "6067E8D7E9B541A216FA797AC4474CE32211C3599FEAB537F303C7B60E8A3854"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/Asset/Shader/Code/Source/Platform/Common/MSVC/atom_asset_shader_static_msvc.cmake",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "a7b6fedadac2ac891f806ec8abd8d1ad5896859c",
+        "bytes": 326,
+        "sha256": "DE3FE0F23991D37BCDAEDDAA10564E311515262A57A9DC9D44FB15BBE12A7CBE"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/Asset/Shader/Code/Source/Platform/Common/Unimplemented/ModuleStub_Unimplemented.cpp",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "b8e5096950feb97b8b76223399b9495112b2a1e1",
+        "bytes": 1035,
+        "sha256": "7291EE88B96E092B8A35319A0C8B6572385A4A2B4C3033BA3D9E138524D29B18"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/Asset/Shader/Code/Source/Platform/Emscripten/PAL_emscripten.cmake",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "d910cbb4c38efd3cf51d64cc1dda2570ef11072c",
+        "bytes": 269,
+        "sha256": "5E9E7C614EDDC8739B47F6A35057412CCCA96652CFB3D7D68E81B076955872DA"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/Asset/Shader/Code/Source/Platform/Emscripten/platform_emscripten_files.cmake",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "c2c5a11c4cfcc6c949d1023fade6b9a9fb7e3c85",
+        "bytes": 226,
+        "sha256": "036BABEEB7BBE7378FEEBE8966CB51B600A0D0CCC1A4EF2C5B2E70B6F00CC4C5"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/Asset/Shader/Code/Source/Platform/Emscripten/ShaderBuilder_Traits_Emscripten.h",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "86afcd201c5bcadfc615ce32604fd4c4f8f49baf",
+        "bytes": 354,
+        "sha256": "8AB63B905B512A1FE52230A24C80C313A814CD27DCCFD64AAC163666B15AED90"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/Asset/Shader/Code/Source/Platform/Emscripten/ShaderBuilder_Traits_Platform.h",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "8305a6473cfbfe9e18c1fbfeeb9899902da60f10",
+        "bytes": 280,
+        "sha256": "5DDF190EE255BE130FF3D43A894C0874A057550243BCF1E41575054FDBBDA98F"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/Asset/Shader/Code/Source/Platform/iOS/PAL_ios.cmake",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "8cccc827a06e99e3cb0ee522cd5e85a72381c99e",
+        "bytes": 270,
+        "sha256": "BC71840AABB92B6B65D77E544056F503A2368FC52631259DD4827A955F161603"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/Asset/Shader/Code/Source/Platform/iOS/platform_ios_files.cmake",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "93eba2aea963c2700153a9a006a7cf2c824884d2",
+        "bytes": 293,
+        "sha256": "2E694A4678B5C159E970033DDF8950FEA272EA4A4253533E84B52F53B004E064"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/Asset/Shader/Code/Source/Platform/iOS/ShaderBuilder_Traits_iOS.h",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "86afcd201c5bcadfc615ce32604fd4c4f8f49baf",
+        "bytes": 354,
+        "sha256": "8AB63B905B512A1FE52230A24C80C313A814CD27DCCFD64AAC163666B15AED90"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/Asset/Shader/Code/Source/Platform/iOS/ShaderBuilder_Traits_Platform.h",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "96afc330bd832dfde412629e25b9100af539c53e",
+        "bytes": 273,
+        "sha256": "EC240B9A51C6497A4833FA4D091C60933FE28695920C3C9C401B13A61764C4A1"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/Asset/Shader/Code/Source/Platform/Linux/PAL_linux.cmake",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "5bbf6da43a9b91e8c8701eb1b0d288f8ebbee433",
+        "bytes": 269,
+        "sha256": "66A7B5035A1615F664BAA8DB7F04B698A6E83C8446CA1BB1143133FC66370C30"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/Asset/Shader/Code/Source/Platform/Linux/platform_builders_linux.cmake",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "147e599ea2cf9e3d34da5eee2740dbf287ab4eaf",
+        "bytes": 2712,
+        "sha256": "6E522B6B6B3C0E27917FD860A9625C7D3A46D792678125764198ECF830474A17"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/Asset/Shader/Code/Source/Platform/Linux/platform_linux_files.cmake",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "e1f4fcb971f692dc6759abe26497407a8e4a91c1",
+        "bytes": 295,
+        "sha256": "5FE11DF60813D7195D73588F2D9B2349A45B0B1214D554E55647F7671D9AC9F4"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/Asset/Shader/Code/Source/Platform/Linux/platform_linux.cmake",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "7a325ca97e34773587ecc952e81b71721488dd24",
+        "bytes": 213,
+        "sha256": "49154C4ECB3E6D7544F39392EA5779A5A847EA2AB6C684A90776003A6683C532"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/Asset/Shader/Code/Source/Platform/Linux/ShaderBuilder_Traits_Linux.h",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "54a0a1fd5de19b28b748096adb322da0d54cde4e",
+        "bytes": 370,
+        "sha256": "D0B0E00F9CB30D4705DEF81F4B15B20B831B1F2FC180D8E9C4D5D588AD62433A"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/Asset/Shader/Code/Source/Platform/Linux/ShaderBuilder_Traits_Platform.h",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "ee15dc095a042e02c29d770616cfcc2a9d53bc58",
+        "bytes": 275,
+        "sha256": "EA678BF7A6310D8D8B00207A409534B393BADC1A9064A288BA29EEEFD14B7907"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/Asset/Shader/Code/Source/Platform/Mac/PAL_mac.cmake",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "5bbf6da43a9b91e8c8701eb1b0d288f8ebbee433",
+        "bytes": 269,
+        "sha256": "66A7B5035A1615F664BAA8DB7F04B698A6E83C8446CA1BB1143133FC66370C30"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/Asset/Shader/Code/Source/Platform/Mac/platform_builders_mac.cmake",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "998fcafb3ac6e25996d503aef0ac44592d7a24bd",
+        "bytes": 2873,
+        "sha256": "F783E562A0FC84F791C6A08648D6E478E15C2FCF95F96DB19D52C82415384DAE"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/Asset/Shader/Code/Source/Platform/Mac/platform_mac_files.cmake",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "ac032428ff206f8a47fea8f13edd086442b05759",
+        "bytes": 293,
+        "sha256": "9C682EF5284327AB1F98FD4F96AB13FCA31BBA55EACD318A6C4615F34E77F064"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/Asset/Shader/Code/Source/Platform/Mac/platform_mac.cmake",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "7a325ca97e34773587ecc952e81b71721488dd24",
+        "bytes": 213,
+        "sha256": "49154C4ECB3E6D7544F39392EA5779A5A847EA2AB6C684A90776003A6683C532"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/Asset/Shader/Code/Source/Platform/Mac/ShaderBuilder_Traits_Mac.h",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "7b9332471137d8fe53b266e201eeed521e4dd321",
+        "bytes": 368,
+        "sha256": "BA4956BB1A928B15FA00A021AC5F49547FF35D08E8E014611783A1CAA5D6CF1D"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/Asset/Shader/Code/Source/Platform/Mac/ShaderBuilder_Traits_Platform.h",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "20d98bce316cd1550184b61afba68f124abee054",
+        "bytes": 273,
+        "sha256": "B2ED3C4EA20FBCECCE27548F904B61E78FF97B6D1DB20EA5807E2DB5BE02719E"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/Asset/Shader/Code/Source/Platform/Windows/PAL_windows.cmake",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "5bbf6da43a9b91e8c8701eb1b0d288f8ebbee433",
+        "bytes": 269,
+        "sha256": "66A7B5035A1615F664BAA8DB7F04B698A6E83C8446CA1BB1143133FC66370C30"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/Asset/Shader/Code/Source/Platform/Windows/platform_builders_windows.cmake",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "147e599ea2cf9e3d34da5eee2740dbf287ab4eaf",
+        "bytes": 2712,
+        "sha256": "6E522B6B6B3C0E27917FD860A9625C7D3A46D792678125764198ECF830474A17"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/Asset/Shader/Code/Source/Platform/Windows/platform_windows_files.cmake",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "d20a6b74cf3bfb76285db74c0d774be488c1eb4a",
+        "bytes": 297,
+        "sha256": "18C53B694373B8815DFEB00B5F278EC378180A0BD6C3DF9249D576664F8BBD06"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/Asset/Shader/Code/Source/Platform/Windows/platform_windows.cmake",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "7a325ca97e34773587ecc952e81b71721488dd24",
+        "bytes": 213,
+        "sha256": "49154C4ECB3E6D7544F39392EA5779A5A847EA2AB6C684A90776003A6683C532"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/Asset/Shader/Code/Source/Platform/Windows/ShaderBuilder_Traits_Platform.h",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "736378fa0c7174bbe6b9838775035365888033cf",
+        "bytes": 277,
+        "sha256": "C17F4116A65D80DE9FF2D17969F4CF8372DC2DB2AC5742305A8A631F17ADDC35"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/Asset/Shader/Code/Source/Platform/Windows/ShaderBuilder_Traits_Windows.h",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "d6dd19fbfbbde4479572d6cd2c827ab19b1c1bd0",
+        "bytes": 368,
+        "sha256": "F78F51120CA04B1428200EA4765C920C1F1A067C3595BB52F60614A266CECCF7"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/Asset/Shader/Code/Tests/Common/ShaderBuilderTestFixture.cpp",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "772e1a87f9eb13ace19a8e618dc43be21df851b9",
+        "bytes": 689,
+        "sha256": "9779A91B619818537FB032E8483949A70A09ECB3560CD9B0269067C49605F523"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/Asset/Shader/Code/Tests/Common/ShaderBuilderTestFixture.h",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "e0b3b49f415a3238a476464fc2fd874ce042c210",
+        "bytes": 849,
+        "sha256": "1FCA25D55058BD0B8D6F1299F5BB1C6A4BAD71F34499AF85F0A4627EA77455C4"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/Asset/Shader/Code/Tests/McppBinderTests.cpp",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "f1731c050182ab04ff2a767047dccd835ad504b0",
+        "bytes": 3664,
+        "sha256": "8203CA93CBF49A3EFB1CF1652C6ED7402E260CFA4AF874D896A9C5D8C3979B87"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/Asset/Shader/Code/Tests/ShaderBuildArgumentsTests.cpp",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "9e34214af9355c14679e0b00360da9b39a5bb83b",
+        "bytes": 26137,
+        "sha256": "8B8E0DAA401212C772022F94177B2EF3FED2346B0EAAD8DFF0C8900C64B7154D"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/Asset/Shader/Code/Tests/ShaderBuilderUtilityTests.cpp",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "21e21d77ffef1ef472a4a9a452f5be3b40ddbade",
+        "bytes": 4272,
+        "sha256": "3F56B5565774131C49DB047EE70925786295C58C6B66F3FD9FC6963A7465CEDF"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/Asset/Shader/gem.json",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "681368b2b17c697e05b764a3edb748bad878b0bd",
+        "bytes": 580,
+        "sha256": "49FE8C175842B702494657B4F42D9410AA523DE01C6A82D8BDB7FE57226B238C"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/Asset/Shader/preview.png",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "2979dbb6a4b494e0971938ecee7d028d3976d416",
+        "bytes": 129,
+        "sha256": "6D772860E5576CD53D457F35E861A1D7179106B567922E5DA90091BAD49BCD47"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/Asset/Shader/Registry/atom_shaders.setreg",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "1dd35de46e246261bff6a4f9c3318c5f708b4b9e",
+        "bytes": 253,
+        "sha256": "2B69D52883AD5115674C7838CD16D2CC3B2CD375ECEDEB729BAF157080D7F7FA"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/CMakeLists.txt",
+      "set": "vulkan-profile11",
+      "status": "M",
+      "head": {
+        "gitBlob": "eb313035401b22d86b3f842fbe075601ac090f4c",
+        "bytes": 1031,
+        "sha256": "5AD97444900E23B3909E929B2CF3E6082F00B3A0B0A5BE0EFC9020C1198AE009"
+      },
+      "current": {
+        "bytes": 1130,
+        "sha256": "D66F14A9F32BBC3E2ACC42DCF6C27D99B77073CF2388210E2C812AA7E66CC517"
+      }
+    },
+    {
+      "path": "Gems/Atom/Feature/Common/Code/Source/Platform/Linux/runtime_dependencies_builders.cmake",
+      "set": "vulkan-profile11",
+      "status": "M",
+      "head": {
+        "gitBlob": "fffed49db7f745bdf88f8e181fdd0cc323af3b7e",
+        "bytes": 343,
+        "sha256": "304D68EE92FC0BEA366AFB0C89E1CEC800A6A0AAC4BFE681F78DE06B4F66D276"
+      },
+      "current": {
+        "bytes": 289,
+        "sha256": "1CCD11D59C703BB589C856A1AA95414C8F21BDBDD54CC9C40887CD51245432B1"
+      }
+    },
+    {
+      "path": "Gems/Atom/Feature/Common/Code/Source/Platform/Linux/runtime_dependencies_tools.cmake",
+      "set": "vulkan-profile11",
+      "status": "M",
+      "head": {
+        "gitBlob": "a95cc600bf3524e228c9865e61088ca37db90768",
+        "bytes": 340,
+        "sha256": "93D2290BBBBBCECE7109E42490F340EE55DA30D335E694244665DBD50BB4472C"
+      },
+      "current": {
+        "bytes": 288,
+        "sha256": "5CE97508E1096052871A534E88A0F06FD844E2F5611C88ED4E1141B0283AD9E5"
+      }
+    },
+    {
+      "path": "Gems/Atom/Feature/Common/Code/Source/Platform/Mac/runtime_dependencies_builders.cmake",
+      "set": "vulkan-profile11",
+      "status": "M",
+      "head": {
+        "gitBlob": "fffed49db7f745bdf88f8e181fdd0cc323af3b7e",
+        "bytes": 343,
+        "sha256": "304D68EE92FC0BEA366AFB0C89E1CEC800A6A0AAC4BFE681F78DE06B4F66D276"
+      },
+      "current": {
+        "bytes": 647,
+        "sha256": "14BDB0A06B0EA274F4FACCC958A465FC75BAAE19E7C85B826E813A0737853FD0"
+      }
+    },
+    {
+      "path": "Gems/Atom/Feature/Common/Code/Source/Platform/Mac/runtime_dependencies_tools.cmake",
+      "set": "vulkan-profile11",
+      "status": "M",
+      "head": {
+        "gitBlob": "987da09697731b1d4610c1f1f42ded9c9a9e9426",
+        "bytes": 340,
+        "sha256": "03523E325089D7F10BBF555159EB740469E56615E46861F74DE91531840A2FE1"
+      },
+      "current": {
+        "bytes": 642,
+        "sha256": "1703BD38F0D2B0BB9EFCCC3F7B44C7B514FC784AADE97A7B59BB160DDAB55208"
+      }
+    },
+    {
+      "path": "Gems/Atom/Feature/Common/Code/Source/Platform/Windows/runtime_dependencies_builders.cmake",
+      "set": "vulkan-profile11",
+      "status": "M",
+      "head": {
+        "gitBlob": "fffed49db7f745bdf88f8e181fdd0cc323af3b7e",
+        "bytes": 343,
+        "sha256": "304D68EE92FC0BEA366AFB0C89E1CEC800A6A0AAC4BFE681F78DE06B4F66D276"
+      },
+      "current": {
+        "bytes": 289,
+        "sha256": "1CCD11D59C703BB589C856A1AA95414C8F21BDBDD54CC9C40887CD51245432B1"
+      }
+    },
+    {
+      "path": "Gems/Atom/Feature/Common/Code/Source/Platform/Windows/runtime_dependencies_clients.cmake",
+      "set": "vulkan-profile11",
+      "status": "M",
+      "head": {
+        "gitBlob": "7638f14880221701836785bce8007dc87ea2fecd",
+        "bytes": 339,
+        "sha256": "BABCEB61658C1B23F34E5C0E25CBC3BEE35C7F0127183A3F196ECF78BC65DE97"
+      },
+      "current": {
+        "bytes": 288,
+        "sha256": "5CE97508E1096052871A534E88A0F06FD844E2F5611C88ED4E1141B0283AD9E5"
+      }
+    },
+    {
+      "path": "Gems/Atom/Feature/Common/Code/Source/Platform/Windows/runtime_dependencies_tools.cmake",
+      "set": "vulkan-profile11",
+      "status": "M",
+      "head": {
+        "gitBlob": "a95cc600bf3524e228c9865e61088ca37db90768",
+        "bytes": 340,
+        "sha256": "93D2290BBBBBCECE7109E42490F340EE55DA30D335E694244665DBD50BB4472C"
+      },
+      "current": {
+        "bytes": 288,
+        "sha256": "5CE97508E1096052871A534E88A0F06FD844E2F5611C88ED4E1141B0283AD9E5"
+      }
+    },
+    {
+      "path": "Gems/Atom/gem.json",
+      "set": "migration-core279",
+      "status": "M",
+      "head": {
+        "gitBlob": "de6f6ea7bda8c5cafdf238ec912185d8daa336e5",
+        "bytes": 1487,
+        "sha256": "B633BEEF835A1F8DEC1593CAFD69F0DDC6F21E69223BD538832F16FC7646DB1E"
+      },
+      "current": {
+        "bytes": 1489,
+        "sha256": "950D873C58B63FC692B791FD8278CB40CD157866E657C7456C2BE84CDCA16554"
+      }
+    },
+    {
+      "path": "Gems/Atom/RHI/DX12/CMakeLists.txt",
+      "set": "vulkan-profile11",
+      "status": "M",
+      "head": {
+        "gitBlob": "8cbd5d37430dccaa64d272003f95894128deefc1",
+        "bytes": 335,
+        "sha256": "ED8DADBAB2DD7D0DC2B315D9338EC52489FBC472E6B970EF0C5449EF0E181A6B"
+      },
+      "current": {
+        "bytes": 546,
+        "sha256": "C06F57EF32FBC6F8C7FC412D6EB37598CF86CD1B8EDA7B9E9C6E877246273BE0"
+      }
+    },
+    {
+      "path": "Gems/Atom/RHI/Metal/CMakeLists.txt",
+      "set": "vulkan-profile11",
+      "status": "M",
+      "head": {
+        "gitBlob": "c47ace323e46e9baac7089195966a909714b5ad7",
+        "bytes": 336,
+        "sha256": "7B8D9FBBEC8F7630A2003FC2BABA9CC13125A0791EE9A7B67E03286F0BC0B3B0"
+      },
+      "current": {
+        "bytes": 547,
+        "sha256": "7B3E8F82FCCB98BD9E65ABA2C33596310D93915DCB737558F12ED399712B4C48"
+      }
+    },
+    {
+      "path": "Gems/Atom/RPI/Code/atom_rpi_builders_files.cmake",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "29e77bd8447f339fd646a8b3e6abb9d9a020ca05",
+        "bytes": 1662,
+        "sha256": "62AC3C2A967B28141F2A1A7B08D2140E78A444A12C2A7CC2DFC7B88E084EF052"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/RPI/Code/atom_rpi_builders_shared_files.cmake",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "2dbbfbe6865e1686392df445b1bf826ed7dd53e2",
+        "bytes": 268,
+        "sha256": "63C5BA728C404AADE0093F3186BD163D74F334943CAEDD482F305EA4877D9F0E"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/RPI/Code/atom_rpi_builders_stub_files.cmake",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "46bc2ef8bf4e26dbc8b4b2df3a80570f114cbc4b",
+        "bytes": 290,
+        "sha256": "7A6483FC1FDADA7DA2B38CC599B67FFC70FDA9C90AFE5C755DE180CAE8CCC9BA"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/RPI/Code/atom_rpi_builders_tests_files.cmake",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "eebd1a40c3156221cfa73e5fa6b5b7f289e0e703",
+        "bytes": 481,
+        "sha256": "6B5DBCEC76E925E9EF53DDE69530EBE5B0E954F50AC82E6870DC83F505B98E6E"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/RPI/Code/CMakeLists.txt",
+      "set": "migration-core279",
+      "status": "M",
+      "head": {
+        "gitBlob": "f98ba9b17e2cacfac479f88d28a9574f29711eb7",
+        "bytes": 9544,
+        "sha256": "004AFBDDDFB549901548DC32BC767F8D22E704B9F6C4328616BA4F309FCADC55"
+      },
+      "current": {
+        "bytes": 6328,
+        "sha256": "C2FADD53259ED0123A78B11A4C08656CA900C17799C5F1AE1072FBA6226DF9AB"
+      }
+    },
+    {
+      "path": "Gems/Atom/RPI/Code/Include/Atom/RPI.Builders/Model/ModelExporterContexts.h",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "ca47847c0bbe489feb1f1ee1e50af7ead123b530",
+        "bytes": 4495,
+        "sha256": "6BDCA59FB0D130B4E0FAAB68193EAF2DE4905F83DFE9057FEAFB5EE9C1DFE826"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/RPI/Code/Source/Platform/Common/Unimplemented/BuilderModule_Stub.cpp",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "42d48d84fcd2bc32caeff1a2967a023bd004b847",
+        "bytes": 972,
+        "sha256": "9425B40CB57D6DC8BBDEB13D9EE0C19181E181831054428C703E1104CEF95A28"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/RPI/Code/Source/RPI.Builders/BuilderComponent.cpp",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "04952d288bb466fff3ab6fa8aa1a90885766a932",
+        "bytes": 5816,
+        "sha256": "B72D8D1816BFD99076B05C006D2CCF2E7FA817DE9A1F7355956CB723E93E3895"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/RPI/Code/Source/RPI.Builders/BuilderComponent.h",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "3968df893ab1f1f5ef1f14182413ebb99c06b5dc",
+        "bytes": 2377,
+        "sha256": "E472BB96B57B91A1FCC024D461BBB5160276F5533705A59D0FB2DCAC152BE082"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/RPI/Code/Source/RPI.Builders/BuilderModule.cpp",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "efef25b1648590fec6417e3fed332d68d2c80e0d",
+        "bytes": 1813,
+        "sha256": "30A8975321F9D4431B99898263C1EDFD4DEE73D85150438C3BA8510069FECDD4"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/RPI/Code/Source/RPI.Builders/Common/AnyAssetBuilder.cpp",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "b16c9e6a24fe87352e462ee3fbab4bc8f797fded",
+        "bytes": 8935,
+        "sha256": "A0B89A8928C5B20A61224E8B034701ED5B0C65D3BBB4396744BC92DCCCF9FE4F"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/RPI/Code/Source/RPI.Builders/Common/AnyAssetBuilder.h",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "3103d4022078235ed4c9134bd2a5c1b7e1c95989",
+        "bytes": 1241,
+        "sha256": "99D59A011CBA358A77285458E9D96153B76397EAFD9FBBAE832963C3FAEDDD8E"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/RPI/Code/Source/RPI.Builders/Material/MaterialBuilder.cpp",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "7813a5f99c23651b40496ee6d09853f8309ce421",
+        "bytes": 15014,
+        "sha256": "4EC0F1CD93E3A9734784066EC1CD6ED5ED2E0A20668B5370FE27743B22F93272"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/RPI/Code/Source/RPI.Builders/Material/MaterialBuilder.h",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "9d2c0b9495b027a2badd3e6497fbc1460ea55b57",
+        "bytes": 1637,
+        "sha256": "02F678695CABC4874D69BB83F3DE111A4E32F5579E6CE0F16DA26F2FF310DB24"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/RPI/Code/Source/RPI.Builders/Material/MaterialBuilderUtils.cpp",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "f9f0ad35419ccb80625ebbb9d965565e0bebd212",
+        "bytes": 4609,
+        "sha256": "2BD5E1A4A7CB66BCA9E8FAC0F4F1148CAD5525AEC5D9EC894F82E2E4C4F67FF3"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/RPI/Code/Source/RPI.Builders/Material/MaterialBuilderUtils.h",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "6726766e51aae8fa45a0e72378448d040951a32a",
+        "bytes": 2659,
+        "sha256": "C6363D217BAF92940988673B8AFEA163DC170B13A5E7D9C2A6E36D8DDCBBD3DA"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/RPI/Code/Source/RPI.Builders/Material/MaterialPipelineScriptRunner.cpp",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "f87b25630d1087069172cfd1370668babbb0f1c0",
+        "bytes": 10276,
+        "sha256": "F0F9BA5F001B7882F6BA75CF6B5C881FC25A0F633B68235BF00E810618FD77E8"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/RPI/Code/Source/RPI.Builders/Material/MaterialPipelineScriptRunner.h",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "6f284b09dd131024efdcb585dacc2e8278f60920",
+        "bytes": 2924,
+        "sha256": "13CF9A96F2C64B3BD3132E4DA57682D31CA69E981100662A84A9ADA5BE282735"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/RPI/Code/Source/RPI.Builders/Material/MaterialTypeBuilder.cpp",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "914c975159a42fbe669c47480891cfec4f433dc7",
+        "bytes": 52560,
+        "sha256": "FD2775D503D8F80489545905260D775D2136C4C4D4015B9457A7FED6968FEA2B"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/RPI/Code/Source/RPI.Builders/Material/MaterialTypeBuilder.h",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "4fd42b5d6a8ddf92e338b1e20584695d1e7867ae",
+        "bytes": 4652,
+        "sha256": "F6D1E315E67548535E389C6E966D71680A8EA2CE9E45BFCA873CE36848A4A6CE"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/RPI/Code/Source/RPI.Builders/Model/MaterialAssetBuilderComponent.cpp",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "582db4017dd4e674ea275739d893136f6a849983",
+        "bytes": 13576,
+        "sha256": "B2A672D2D5A7FB2AD5B39F81ED5C4F7065113C13CE7626839D060B392A10A462"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/RPI/Code/Source/RPI.Builders/Model/MaterialAssetBuilderComponent.h",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "1caea5c2f6369b2e1115cc8caf01b6876b4c1c01",
+        "bytes": 2902,
+        "sha256": "BF1AA17EA8F779ADCC2185FA245FC02EFFF1860751C0B06593F024F51206E681"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/RPI/Code/Source/RPI.Builders/Model/ModelAssetBuilderComponent.cpp",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "e992cba2d8cb3d9767497ff05a8e90117123efef",
+        "bytes": 144030,
+        "sha256": "0549DC2E2976E4EFFE1F79D455DF6DE268B86FD6A8F0C7A4BE1F018C66868DA4"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/RPI/Code/Source/RPI.Builders/Model/ModelAssetBuilderComponent.h",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "28adf5553621ada01314423d926914883069ad5b",
+        "bytes": 23007,
+        "sha256": "EBFFE6F0FD900937F6D3C2DB825F9C2A1230F9FDE87492C6B846325C76C4D307"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/RPI/Code/Source/RPI.Builders/Model/ModelExporterComponent.cpp",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "09effd64a76e0b97b09a00496555c24d2164f02a",
+        "bytes": 16320,
+        "sha256": "44FB79C432778FA89E195365E8E293394F123389FB6CF631CE5CF4556CE05AD8"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/RPI/Code/Source/RPI.Builders/Model/ModelExporterComponent.h",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "de4e1a0fe5e3f87b85561bb0e8703eb06445ad2d",
+        "bytes": 2322,
+        "sha256": "9C7D7948F111A2A9AB7CEA0C1462F260BE1F32855ACA924693D0649FEA9567AD"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/RPI/Code/Source/RPI.Builders/Model/ModelExporterContexts.cpp",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "4e5cbf34b235d50eedd2a138c595c2fd200dad52",
+        "bytes": 1604,
+        "sha256": "54631145E25E00C83F8AA4FF4835BC1A9D02012D6882CC154DEEDA6A7744629C"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/RPI/Code/Source/RPI.Builders/Model/MorphTargetExporter.cpp",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "d8bfc6a91f65f477d0ba6c42c330c316676b8d35",
+        "bytes": 20134,
+        "sha256": "79B92D37BBDF3F84657EFA61B3A212FBEC1383EBBB45E31334108D9E245D2ADC"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/RPI/Code/Source/RPI.Builders/Model/MorphTargetExporter.h",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "4bda2a40609de0d9613f16464794d9e0ea7636fc",
+        "bytes": 3658,
+        "sha256": "DF8CDB4ACBBDF163E85FA9B2BDB97FC5C07BE3EE168FB3EBA2687ECBD59F14FC"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/RPI/Code/Source/RPI.Builders/Pass/PassBuilder.cpp",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "a4bc62d739fcad5d109e0f01156142f768eeb227",
+        "bytes": 16618,
+        "sha256": "71A2DB7932873C844C30D687DA07EC9AB31DFD39D1947B44714D1252A44EE949"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/RPI/Code/Source/RPI.Builders/Pass/PassBuilder.h",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "13daa29c7bb713a4cfd601ef95500ff7663769c6",
+        "bytes": 1275,
+        "sha256": "03C1AC867B4183812A9A991252E3554194654E22200F9916F4B2DC57583B94D7"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/RPI/Code/Source/RPI.Builders/ResourcePool/ResourcePoolBuilder.cpp",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "463aa2ea8c75428272bdf86cd12afddd13565c19",
+        "bytes": 9828,
+        "sha256": "FA8F89D1FD82124A2E3E69E349B8333829BD2025FBF0A8220D54E82865E1F05F"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/RPI/Code/Source/RPI.Builders/ResourcePool/ResourcePoolBuilder.h",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "e95cb21d5032fecf71ce93add0c28be9fe5a2099",
+        "bytes": 1786,
+        "sha256": "6F0FA564978A9E0813A86FDC3BC30D42BA67330784F6DA71DE3CD9C809F1151C"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/RPI/Code/Tests.Builders/AnyAssetBuilderTest.cpp",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "8f616581356c37e30f36f8094ae36cff108cc7c4",
+        "bytes": 14992,
+        "sha256": "AC865D7F6C7DFF030D5FAB12CF2EB552003743D113C4FB86200D1C96048364A0"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/RPI/Code/Tests.Builders/AtomRPIBuildersTests.cpp",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "40217ff9bc52c4d919398e8828779566d385e551",
+        "bytes": 292,
+        "sha256": "EAD0116834F2B560BC2FEABFECB1E8883E12C7CAA01420455CC9F2D0B33903BF"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/RPI/Code/Tests.Builders/BuilderTestFixture.cpp",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "04b5b15b7b67307eb9d6a5fcfe5b5ca1f00c6fe2",
+        "bytes": 4134,
+        "sha256": "A447B8D58EE5A709A19B9456BE12D683EC08B9A3AF9FF7A90660E5FE703787E2"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/RPI/Code/Tests.Builders/BuilderTestFixture.h",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "9318c694fc9021ccdc1a870892756d34c27a20ca",
+        "bytes": 3288,
+        "sha256": "3456823953547CC2136E7C6498FFCB1709D39E2B9E519B104C072FE76F25BDEF"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/RPI/Code/Tests.Builders/PassBuilderTest.cpp",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "5dc8226d560c0d35c45a761a81fd08edf667ff0a",
+        "bytes": 5250,
+        "sha256": "894BC604765BB8CB86BB7D13BD1A243A59D268EC7AF2FFE54AB9B4D99AE396A6"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/RPI/Code/Tests.Builders/ResourcePoolBuilderTest.cpp",
+      "set": "migration-core279",
+      "status": "D",
+      "head": {
+        "gitBlob": "35a1829e1be22a9b7eed569c40339ff31832c722",
+        "bytes": 8632,
+        "sha256": "5238120A2D8D484BAD2E3B6FD6D14995AC24640F85B3C397438BC86C54B7B6CC"
+      },
+      "current": null
+    },
+    {
+      "path": "Gems/Atom/Tools/AtomToolsFramework/Code/CMakeLists.txt",
+      "set": "migration-core279",
+      "status": "M",
+      "head": {
+        "gitBlob": "b7cf970b5e0ca69441e14d00cde9d3a9c59f45bd",
+        "bytes": 3559,
+        "sha256": "ABB6516FE1D0105462795FACF12A437C0B430DAC2C1FFEA43CCB3AF61E977807"
+      },
+      "current": {
+        "bytes": 3684,
+        "sha256": "40B157CF6048C3DFE742810C80539F7C4C82C139444FA2E8501C4EECD20348C4"
+      }
+    },
+    {
+      "path": "Gems/Atom/Tools/AtomToolsFramework/Code/Source/Application/AtomToolsApplication.cpp",
+      "set": "migration-core279",
+      "status": "M",
+      "head": {
+        "gitBlob": "19b69a2c8b45001df87eabd6df8298441263cb2a",
+        "bytes": 26437,
+        "sha256": "B6B383C130AD93F27B3C7D66FA8FA1B8F95F048D67D76C0C8128B7A029BE167F"
+      },
+      "current": {
+        "bytes": 27280,
+        "sha256": "6485F43420B164BA468CBD07E431E230BA9B189A120F1B8F3BB43986479D8298"
+      }
+    },
+    {
+      "path": "Gems/Atom/Tools/ShaderManagementConsole/Code/CMakeLists.txt",
+      "set": "migration-core279",
+      "status": "M",
+      "head": {
+        "gitBlob": "21379a004e4cf6cf09b4ad77e2a2f3e2a83546d8",
+        "bytes": 3599,
+        "sha256": "0B61DFFB8E95EDB131CE5CA6241098629D7EEF096AA8D3E5A997DDB973D3FA98"
+      },
+      "current": {
+        "bytes": 3692,
+        "sha256": "C6132B352A09DF18965D40CC5F4CD50A8E32B1A7D44623DE7CD25C5B08EF015A"
+      }
+    },
+    {
+      "path": "Gems/Atom/Tools/ShaderManagementConsole/Code/Source/Document/ShaderManagementConsoleDocument.cpp",
+      "set": "migration-core279",
+      "status": "M",
+      "head": {
+        "gitBlob": "ea2353de185d7f1628d2eeef091ff033b89a96ff",
+        "bytes": 27516,
+        "sha256": "92222AF8E79B1DF0A631570ED93DCB93EC723EB26EFCDC6990E492F7F861B97A"
+      },
+      "current": {
+        "bytes": 28157,
+        "sha256": "32F509348A753BD566E17CB51532A7FEFF0A232F3A29EDDF226E3077A28DF451"
+      }
+    },
+    {
+      "path": "Gems/AtomLyIntegration/CommonFeatures/Code/CMakeLists.txt",
+      "set": "migration-core279",
+      "status": "M",
+      "head": {
+        "gitBlob": "9a1a620d0b72b2abe251e31cd83f2ca57365e208",
+        "bytes": 7834,
+        "sha256": "6F2727E5BFEB4CC8508AEB22900A09B7A83B9BBD02110970E3DFDF4B86DFD979"
+      },
+      "current": {
+        "bytes": 8074,
+        "sha256": "30079BDA676D649EE19EF5ED16DFAE6290CB5D805AE391CD1CFA9C5AB1B5202F"
+      }
+    },
+    {
+      "path": "Gems/AtomLyIntegration/gem.json",
+      "set": "migration-core279",
+      "status": "M",
+      "head": {
+        "gitBlob": "30a93af428529543a12e763e724e3d3756183a17",
+        "bytes": 1492,
+        "sha256": "0A5F1906B9D156E3C8993B00ED16CE69862DDB9A72732D436AF02D28F0A50E64"
+      },
+      "current": {
+        "bytes": 1518,
+        "sha256": "3212CD3206F5A5DDD5B821F5A39F7F2B3590426C34D20FF0E9049D5615156AAF"
+      }
+    },
+    {
+      "path": "Gems/EMotionFX/Code/CMakeLists.txt",
+      "set": "explicit-sdk-exclusions4",
+      "status": "M",
+      "head": {
+        "gitBlob": "bf0cd1250bc2e3cea6a465ce008b10bb90c4b9a2",
+        "bytes": 11542,
+        "sha256": "DD3E57B07F21B097CD6DFAE513293CA1E22CF8E8410281E8AC76E24B93D38651"
+      },
+      "current": {
+        "bytes": 11895,
+        "sha256": "3E417C0F107AE88E9B063CEE1DFC0F8F6EC221B300DDAA5A72A494ABDD02196B"
+      }
+    },
+    {
+      "path": "Gems/GradientSignal/Code/CMakeLists.txt",
+      "set": "explicit-sdk-exclusions4",
+      "status": "M",
+      "head": {
+        "gitBlob": "2b2d92c8cf075384758649f1b79d10bad0fd82e2",
+        "bytes": 6794,
+        "sha256": "F18A71B6A2688C4504B254EF09F25FF27C8777FE1D6756433EF9555691D4EB0E"
+      },
+      "current": {
+        "bytes": 7089,
+        "sha256": "E1D877F620F42E991A504E6AB96E4559A581FA559615469D0B6BA5D8FB097FAE"
+      }
+    },
+    {
+      "path": "Gems/OpenParticleSystem/Tools/CMakeLists.txt",
+      "set": "migration-core279",
+      "status": "M",
+      "head": {
+        "gitBlob": "3b9c7cd9c745d25b4034c6b29cbe4fe614a6f047",
+        "bytes": 1713,
+        "sha256": "20A461BD8D591355B0E0946177BE4302C1C36543E1335FAFBDA42701387C3850"
+      },
+      "current": {
+        "bytes": 1681,
+        "sha256": "B3E352A8AF01FE43105F235A12583E3587B4F21B8FCA04F706EA244F699A3EE4"
+      }
+    },
+    {
+      "path": "Gems/SceneProcessing/Code/CMakeLists.txt",
+      "set": "explicit-sdk-exclusions4",
+      "status": "M",
+      "head": {
+        "gitBlob": "4684b2339470654f7ce9980ad6d42789d2da21fc",
+        "bytes": 4014,
+        "sha256": "C9B0B7BB325AA28802FCADFD2228B524D234100C3118DE6309248EACCF689BB9"
+      },
+      "current": {
+        "bytes": 4219,
+        "sha256": "2B3FD9C36121E22F3C40F47F05CADCDC6D9BFE460EF02CA8DC18319E3D967C23"
+      }
+    },
+    {
+      "path": "Registry/AssetProcessorPlatformConfig.setreg",
+      "set": "vulkan-profile11",
+      "status": "M",
+      "head": {
+        "gitBlob": "fc41e653a9363151a30fdcc11f4e58e86d956731",
+        "bytes": 23166,
+        "sha256": "50EC733651ABD2EF121772402CBA317F8814F818A2BA6CB93ED87BD9912A903B"
+      },
+      "current": {
+        "bytes": 23641,
+        "sha256": "434AB84E0A414DAA379EEF7ADF92F9A7E7F415E908055E79BFFF20F6B5E9C875"
+      }
+    },
+    {
+      "path": "Registry/atom_shaders.setreg",
+      "set": "migration-core279",
+      "status": "A",
+      "head": null,
+      "current": {
+        "bytes": 283,
+        "sha256": "5C9433F2FFB17ED4A518B23664565F1BC2BE32279BA8E62B57B033A04146920D"
+      }
+    },
+    {
+      "path": "Registry/shader_assetprocessor.setreg",
+      "set": "migration-core279",
+      "status": "A",
+      "head": null,
+      "current": {
+        "bytes": 428,
+        "sha256": "FF1AE50EC39E66FD7A4A77E874DD4A0D1EC74583E3681CF122DDD36A1BB257B0"
+      }
+    }
+  ],
+  "limits": [
+    "Tests82/83 and AP84-85 evidence belongs to frozen preserved dirty tree; no clean HEAD plus selected294 replay asserted",
+    "AP84 prior VariantTree/Batch0Products not positive acceptance; fixture85 pending actual native results",
+    "VISUAL and global DEPENDENCY remain OPEN; no new complete Gem accepted",
+    "Prior SDK77 predates shader absorption; current combined owner SDK replay remains required",
+    "No additional mandatory consumer identified beyond recorded279+approved11+4; this task reused known graph facts, did not repeat discovery"
+  ],
+  "reading": {
+    "cpp": "53017F862C526DF6080210A1A00E6678C2CD5382B5D1A51026BF3B0BDE7F7ED2",
+    "game": "4578FACCE19AC99396E5FE904EAC173066FA517AF16AE0F49B03F9082A1057EC",
+    "fullCoverageReused": true
+  },
+  "operations": {
+    "sourceEdits": 0,
+    "gitMutations": 0,
+    "graphLoads": 0,
+    "nativeBuildAPTests": 0,
+    "gitReadonly": "cat-file --batch HEAD:path; previousrev-parse/diff",
+    "helpers": 0
+  }
+}

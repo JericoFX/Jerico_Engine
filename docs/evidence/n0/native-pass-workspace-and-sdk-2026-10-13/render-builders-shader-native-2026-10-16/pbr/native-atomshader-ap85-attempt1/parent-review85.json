@@ -1,0 +1,61 @@
+{
+  "approved": true,
+  "reviewer": "/root",
+  "utc": "2026-10-16T09:53:19.0659809Z",
+  "scope": "Focal positive Vulkan shader/list/tree/batch products only; precompiled builder and exact PreLoad edge reused separately from84",
+  "postflight": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-atomshader-ap85-attempt1\\postflight.json",
+    "bytes": 9536,
+    "sha256": "2EB1B07E76C5AC72E5A9D754FC9388E0A1EB9EE05CCCD97C2E2A203E32782083"
+  },
+  "proofs": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-atomshader-ap85-attempt1\\four-builders-review.json",
+    "bytes": 725045,
+    "sha256": "0C9C47BA05C0172D6734D606869D8E2B211077B13BE499DFB8D509949E5CC0E8"
+  },
+  "readonlyQueries": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-atomshader-ap85-attempt1\\before-database\\readonly-query.json",
+      "bytes": 389342,
+      "sha256": "3C95D0F28D7A802D4D89149EED8D5A0731BE5E2AAA007B08AEF01AA15049A16E"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-atomshader-ap85-attempt1\\after-database\\readonly-query.json",
+      "bytes": 419914,
+      "sha256": "A4947C4501E18C4CE1CBBD71F5FD9596540E7D539A868C2E7832423E72B7B39B"
+    }
+  ],
+  "nativeJobs": 4,
+  "builderUUIDs": 3,
+  "mandatorySemanticProducts": 7,
+  "allPhysicalProducts": 15,
+  "optionsExplicitBooleanFalse": true,
+  "productArchive": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-atomshader-ap85-attempt1\\parent-products85.json",
+    "bytes": 22509,
+    "sha256": "03C190D2DC405879FDF23D2CB5CB1BA638CBB935B3C41288C53168B3FF0E3C3F"
+  },
+  "allFrozenInputsRehashed": 14037,
+  "authoredPreserved": 40,
+  "ownerTexturesPreserved": 26,
+  "moduleCaptures": 3,
+  "rawGlobalExit": 1,
+  "globalNonCompletedBefore": 347,
+  "globalNonCompletedAfter": 347,
+  "globalIdentityStatusErrorsWarningsUnchanged": true,
+  "actualRetriedGlobalLogChanges": {
+    "LastLogFile": 347,
+    "JobRunKey": 347,
+    "LastFailLogFile": 347,
+    "LastFailLogTime": 347,
+    "LastLogTime": 347
+  },
+  "globalAPPass": false,
+  "wholeGemAccepted": false,
+  "GemIncrement": 0,
+  "limitations": [
+    "No AssetHandler Ready/runtime/GPU/UI/VR/Linux/Shipping acceptance",
+    "CPU native811 unchanged and SDK83 verified separately",
+    "Copy job84 has no guaranteed success log; proven policy plus GUID/SubID/type/dependency/physical bytes used"
+  ]
+}

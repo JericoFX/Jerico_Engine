@@ -1,0 +1,35 @@
+{
+  "phase": "test-retired-shader-inventory82",
+  "startedUtc": "2026-10-16T08:16:37.1060585Z",
+  "finishedUtc": "2026-10-16T08:16:37.2135315Z",
+  "elapsedSeconds": 0.107,
+  "pid": 8044,
+  "processCreationUtc": "2026-10-16T08:16:37.1428740Z",
+  "ramBefore": {
+    "capturedUtc": "2026-10-16T08:16:37.1060220Z",
+    "totalBytes": 34265743360,
+    "freeBytes": 19767635968,
+    "usedPercent": 42.31,
+    "thresholdPercent": 80
+  },
+  "peakRamUsedPercent": 42.31,
+  "ramWaitSamples": [],
+  "ramGuardTriggered": null,
+  "ramPollMilliseconds": 3000,
+  "processMemorySamples": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-shader-compiler-source82-attempt1\\test-retired-shader-inventory82.memory-process-samples.jsonl",
+  "executable": "C:\\Program Files\\CMake\\bin\\ctest.exe",
+  "argv": [
+    "--test-dir",
+    "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine",
+    "-C",
+    "profile",
+    "--show-only=json-v1",
+    "-R",
+    "^Gem::AtomShader[.]"
+  ],
+  "exitCode": 0,
+  "stdout": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-shader-compiler-source82-attempt1\\test-retired-shader-inventory82.stdout.log",
+  "stdoutSha256": "655B4EDF543A99640D87B7CEC2509F8071DB3E631F77A63BD8B28F1533BABFC4",
+  "stderr": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-shader-compiler-source82-attempt1\\test-retired-shader-inventory82.stderr.log",
+  "stderrSha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+}

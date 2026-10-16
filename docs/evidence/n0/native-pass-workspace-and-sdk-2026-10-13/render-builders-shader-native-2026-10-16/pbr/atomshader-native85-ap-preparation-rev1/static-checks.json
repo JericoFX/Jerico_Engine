@@ -1,0 +1,88 @@
+{
+  "parser": [
+    {
+      "file": "Observe-AssetModules84.ps1",
+      "errors": 0,
+      "bytes": 3345,
+      "sha256": "FAAA9DDB6025008B66D5ACE0C431C3A1A0F535B3CED2148C3A99552D56D7DFFD"
+    },
+    {
+      "file": "Query-ShaderSources85Snapshot.ps1",
+      "errors": 0,
+      "bytes": 13393,
+      "sha256": "0210B1E80DBB51C5F66EF493A1440ED899365CB125EB467D2D95B9024B1D5D8A"
+    },
+    {
+      "file": "Review-ShaderSources85.ps1",
+      "errors": 0,
+      "bytes": 10449,
+      "sha256": "8D8B952F084E5137656CFE20F7EB937DA094E5214EF93A6D7E96EC3152FAC44D"
+    },
+    {
+      "file": "RunFrozenShaderAP85.ps1",
+      "errors": 0,
+      "bytes": 27323,
+      "sha256": "24C91D9A5332592F920E868D4E581D02D3230057333319371C7D3BECCC901C58"
+    },
+    {
+      "file": "Snapshot-AssetDatabase78.ps1",
+      "errors": 0,
+      "bytes": 2204,
+      "sha256": "48A603E7384C3B43D24FC80387B9B43EE2CD0D55925319E1421073C35C05CCD4"
+    }
+  ],
+  "functions": [
+    {
+      "name": "Save-Json",
+      "byteExact": true
+    },
+    {
+      "name": "Get-InputMap",
+      "byteExact": true
+    },
+    {
+      "name": "Get-OfflineCacheState",
+      "byteExact": true
+    },
+    {
+      "name": "Get-RamSnapshot",
+      "byteExact": true
+    },
+    {
+      "name": "Save-PhaseProcessSnapshot",
+      "byteExact": true
+    },
+    {
+      "name": "Invoke-Phase",
+      "byteExact": true
+    },
+    {
+      "name": "Verify-FileEntries",
+      "byteExact": true
+    }
+  ],
+  "signedSubIDNormalization": [
+    {
+      "raw": -2147483647,
+      "expected": 2147483649
+    },
+    {
+      "raw": -2147483646,
+      "expected": 2147483650
+    },
+    {
+      "raw": -2147483645,
+      "expected": 2147483651
+    },
+    {
+      "raw": -2147483642,
+      "expected": 2147483654
+    }
+  ],
+  "guardFunctionsByteExact": 7,
+  "snapshotByteExact": true,
+  "observerByteExact": true,
+  "binaryPins82ByteExact": true,
+  "dryRun": "PREPARED_NOT_RUN, noExecute before IO/native",
+  "helpers": 0
+}

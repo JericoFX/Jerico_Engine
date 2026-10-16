@@ -1,0 +1,512 @@
+{
+  "positiveVariantOutputAcceptance": false,
+  "approved": false,
+  "registeredPhysicalProducts": [
+    {
+      "database": {
+        "SourceName": "Shaders/SimpleTextured.shadervariantlist",
+        "SourceGuidHex": "D960C678129F5244AC2A73A336308739",
+        "Platform": "common",
+        "JobKey": "HashedShaderVariantList",
+        "JobRunKey": 95076,
+        "ProductID": 403,
+        "JobPK": 207,
+        "ProductName": "common/shaders/simpletextured.hashedvariantlist",
+        "SubID": 0,
+        "AssetType": {
+          "kind": "blob",
+          "bytes": 16,
+          "hex": "D86DA375DD7745F981D52E50C24C8469"
+        },
+        "LegacyGuid": {
+          "kind": "blob",
+          "bytes": 16,
+          "hex": "7D6CEE4F92E15835A7561ABFB7E786C2"
+        },
+        "Hash": 1556046327760246764,
+        "Flags": 2
+      },
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Cache\\Intermediate Assets\\shaders\\simpletextured.hashedvariantlist",
+      "bytes": 964,
+      "sha256": "FADA90E2A74C320F788986ED41EBA656A7A01E7EADE99FDBFF3253F0BA90EE0D",
+      "archive": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-atomshader-ap84-attempt1\\selected-products\\common\\shaders\\simpletextured.hashedvariantlist"
+    },
+    {
+      "database": {
+        "SourceName": "Shaders/SimpleTextured.shadervariantlist",
+        "SourceGuidHex": "D960C678129F5244AC2A73A336308739",
+        "Platform": "common",
+        "JobKey": "HashedShaderVariantList",
+        "JobRunKey": 95076,
+        "ProductID": 404,
+        "JobPK": 207,
+        "ProductName": "common/shaders/simpletextured_0.hashedvariantbatch",
+        "SubID": 1,
+        "AssetType": {
+          "kind": "blob",
+          "bytes": 16,
+          "hex": "D86DA375DD7745F981D52E50C24C8469"
+        },
+        "LegacyGuid": {
+          "kind": "blob",
+          "bytes": 16,
+          "hex": "1F453547AAFF5888AFF995AA266227E9"
+        },
+        "Hash": 1556046327760246764,
+        "Flags": 2
+      },
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Cache\\Intermediate Assets\\shaders\\simpletextured_0.hashedvariantbatch",
+      "bytes": 964,
+      "sha256": "FADA90E2A74C320F788986ED41EBA656A7A01E7EADE99FDBFF3253F0BA90EE0D",
+      "archive": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-atomshader-ap84-attempt1\\selected-products\\common\\shaders\\simpletextured_0.hashedvariantbatch"
+    },
+    {
+      "database": {
+        "SourceName": "Shaders/SimpleTextured.shader",
+        "SourceGuidHex": "400C0F3610695F0E8E5587123BA075CD",
+        "Platform": "pc",
+        "JobKey": "Shader Asset",
+        "JobRunKey": 95068,
+        "ProductID": 4239,
+        "JobPK": 831,
+        "ProductName": "pc/shaders/simpletextured_vulkan.azslin",
+        "SubID": -2147483646,
+        "AssetType": {
+          "kind": "blob",
+          "bytes": 16,
+          "hex": "6977AEB117AD4992957B23BB2E85B18B"
+        },
+        "LegacyGuid": {
+          "kind": "blob",
+          "bytes": 16,
+          "hex": "36429B8DB1E359D5AF460DF010CFE2E7"
+        },
+        "Hash": -1868836972243762255,
+        "Flags": 1
+      },
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Cache\\pc\\shaders\\simpletextured_vulkan.azslin",
+      "bytes": 6319,
+      "sha256": "404E2C98139C6532B0DAE8B5AC8FDCBCC5362C5604A88702BF02222CA58CFBBB",
+      "archive": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-atomshader-ap84-attempt1\\selected-products\\pc\\shaders\\simpletextured_vulkan.azslin"
+    },
+    {
+      "database": {
+        "SourceName": "Shaders/SimpleTextured.shader",
+        "SourceGuidHex": "400C0F3610695F0E8E5587123BA075CD",
+        "Platform": "pc",
+        "JobKey": "Shader Asset",
+        "JobRunKey": 95068,
+        "ProductID": 4240,
+        "JobPK": 831,
+        "ProductName": "pc/shaders/simpletextured_vulkan.ia.json",
+        "SubID": -2147483645,
+        "AssetType": {
+          "kind": "blob",
+          "bytes": 16,
+          "hex": "6977AEB117AD4992957B23BB2E85B18B"
+        },
+        "LegacyGuid": {
+          "kind": "blob",
+          "bytes": 16,
+          "hex": "218EB8B3C7BA57BB932D4319C693C575"
+        },
+        "Hash": 6781166798035718950,
+        "Flags": 1
+      },
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Cache\\pc\\shaders\\simpletextured_vulkan.ia.json",
+      "bytes": 1873,
+      "sha256": "30502E84E8E40AAA2D500D1831F60FEB2C0C44D553E3D216F89B3F96202A8514",
+      "archive": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-atomshader-ap84-attempt1\\selected-products\\pc\\shaders\\simpletextured_vulkan.ia.json"
+    },
+    {
+      "database": {
+        "SourceName": "Shaders/SimpleTextured.shader",
+        "SourceGuidHex": "400C0F3610695F0E8E5587123BA075CD",
+        "Platform": "pc",
+        "JobKey": "Shader Asset",
+        "JobRunKey": 95068,
+        "ProductID": 4241,
+        "JobPK": 831,
+        "ProductName": "pc/shaders/simpletextured_vulkan.om.json",
+        "SubID": -2147483644,
+        "AssetType": {
+          "kind": "blob",
+          "bytes": 16,
+          "hex": "6977AEB117AD4992957B23BB2E85B18B"
+        },
+        "LegacyGuid": {
+          "kind": "blob",
+          "bytes": 16,
+          "hex": "9C258C82F084538C9D733D13BEBE450F"
+        },
+        "Hash": -1316304920128582133,
+        "Flags": 1
+      },
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Cache\\pc\\shaders\\simpletextured_vulkan.om.json",
+      "bytes": 539,
+      "sha256": "1A369C48B99D7B9B36286D0D692A26F28EA36F0B200E9A8E8AA02D7379C02522",
+      "archive": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-atomshader-ap84-attempt1\\selected-products\\pc\\shaders\\simpletextured_vulkan.om.json"
+    },
+    {
+      "database": {
+        "SourceName": "Shaders/SimpleTextured.shader",
+        "SourceGuidHex": "400C0F3610695F0E8E5587123BA075CD",
+        "Platform": "pc",
+        "JobKey": "Shader Asset",
+        "JobRunKey": 95068,
+        "ProductID": 4242,
+        "JobPK": 831,
+        "ProductName": "pc/shaders/simpletextured_vulkan.srg.json",
+        "SubID": -2147483643,
+        "AssetType": {
+          "kind": "blob",
+          "bytes": 16,
+          "hex": "6977AEB117AD4992957B23BB2E85B18B"
+        },
+        "LegacyGuid": {
+          "kind": "blob",
+          "bytes": 16,
+          "hex": "0AE7EB19790D5B438B646E012811C9EB"
+        },
+        "Hash": -8970906277035120478,
+        "Flags": 1
+      },
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Cache\\pc\\shaders\\simpletextured_vulkan.srg.json",
+      "bytes": 3411,
+      "sha256": "526BDE4DF1B0800C1D5D42154E4FDAB213AF10581E13B06750F17B293108D6C1",
+      "archive": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-atomshader-ap84-attempt1\\selected-products\\pc\\shaders\\simpletextured_vulkan.srg.json"
+    },
+    {
+      "database": {
+        "SourceName": "Shaders/SimpleTextured.shader",
+        "SourceGuidHex": "400C0F3610695F0E8E5587123BA075CD",
+        "Platform": "pc",
+        "JobKey": "Shader Asset",
+        "JobRunKey": 95068,
+        "ProductID": 4243,
+        "JobPK": 831,
+        "ProductName": "pc/shaders/simpletextured_vulkan.options.json",
+        "SubID": -2147483642,
+        "AssetType": {
+          "kind": "blob",
+          "bytes": 16,
+          "hex": "6977AEB117AD4992957B23BB2E85B18B"
+        },
+        "LegacyGuid": {
+          "kind": "blob",
+          "bytes": 16,
+          "hex": "778D99144BA0568F915616177E1B97A8"
+        },
+        "Hash": 2980520655086341692,
+        "Flags": 1
+      },
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Cache\\pc\\shaders\\simpletextured_vulkan.options.json",
+      "bytes": 717,
+      "sha256": "5B921F84AAA55A3E572E976113C21AA74E2DBE5FA9677FA31E0CFEE7A7BF3DAC",
+      "archive": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-atomshader-ap84-attempt1\\selected-products\\pc\\shaders\\simpletextured_vulkan.options.json"
+    },
+    {
+      "database": {
+        "SourceName": "Shaders/SimpleTextured.shader",
+        "SourceGuidHex": "400C0F3610695F0E8E5587123BA075CD",
+        "Platform": "pc",
+        "JobKey": "Shader Asset",
+        "JobRunKey": 95068,
+        "ProductID": 4244,
+        "JobPK": 831,
+        "ProductName": "pc/shaders/simpletextured_vulkan.bindingdep.json",
+        "SubID": -2147483641,
+        "AssetType": {
+          "kind": "blob",
+          "bytes": 16,
+          "hex": "6977AEB117AD4992957B23BB2E85B18B"
+        },
+        "LegacyGuid": {
+          "kind": "blob",
+          "bytes": 16,
+          "hex": "47150D5A2DDD5CF6BC84CFF3F1235073"
+        },
+        "Hash": -1442657802607643659,
+        "Flags": 1
+      },
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Cache\\pc\\shaders\\simpletextured_vulkan.bindingdep.json",
+      "bytes": 1139,
+      "sha256": "B33C87AA6109E3B5058DF729B8A48C365583FBAC84BD26BA120DF5F91404B81A",
+      "archive": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-atomshader-ap84-attempt1\\selected-products\\pc\\shaders\\simpletextured_vulkan.bindingdep.json"
+    },
+    {
+      "database": {
+        "SourceName": "Shaders/SimpleTextured.shader",
+        "SourceGuidHex": "400C0F3610695F0E8E5587123BA075CD",
+        "Platform": "pc",
+        "JobKey": "Shader Asset",
+        "JobRunKey": 95068,
+        "ProductID": 4245,
+        "JobPK": 831,
+        "ProductName": "pc/shaders/simpletextured_vulkan.hlsl",
+        "SubID": -2147483640,
+        "AssetType": {
+          "kind": "blob",
+          "bytes": 16,
+          "hex": "6977AEB117AD4992957B23BB2E85B18B"
+        },
+        "LegacyGuid": {
+          "kind": "blob",
+          "bytes": 16,
+          "hex": "3CD428E70870540AA6BAD3F31DF80C90"
+        },
+        "Hash": -3213825514210198970,
+        "Flags": 1
+      },
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Cache\\pc\\shaders\\simpletextured_vulkan.hlsl",
+      "bytes": 2529,
+      "sha256": "EE68FD63A37FB66FBD6D7120590B18152960434110C9D4C3E1F10CC70B7DD87E",
+      "archive": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-atomshader-ap84-attempt1\\selected-products\\pc\\shaders\\simpletextured_vulkan.hlsl"
+    },
+    {
+      "database": {
+        "SourceName": "Shaders/SimpleTextured.shader",
+        "SourceGuidHex": "400C0F3610695F0E8E5587123BA075CD",
+        "Platform": "pc",
+        "JobKey": "Shader Asset",
+        "JobRunKey": 95068,
+        "ProductID": 4246,
+        "JobPK": 831,
+        "ProductName": "pc/shaders/simpletextured_vulkan_0.azshadervariant",
+        "SubID": -2147483647,
+        "AssetType": {
+          "kind": "blob",
+          "bytes": 16,
+          "hex": "51BED81536D8410E90F01FA9FF765FBA"
+        },
+        "LegacyGuid": {
+          "kind": "blob",
+          "bytes": 16,
+          "hex": "3871A4FF2FB65219AA6BC8599F82B757"
+        },
+        "Hash": -8869393839587278333,
+        "Flags": 1
+      },
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Cache\\pc\\shaders\\simpletextured_vulkan_0.azshadervariant",
+      "bytes": 4002,
+      "sha256": "A4E362BFDB03198DBF63270C2EB4077B460CA244A2693F31EC5D0A1AB1511097",
+      "archive": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-atomshader-ap84-attempt1\\selected-products\\pc\\shaders\\simpletextured_vulkan_0.azshadervariant"
+    },
+    {
+      "database": {
+        "SourceName": "Shaders/SimpleTextured.shader",
+        "SourceGuidHex": "400C0F3610695F0E8E5587123BA075CD",
+        "Platform": "pc",
+        "JobKey": "Shader Asset",
+        "JobRunKey": 95068,
+        "ProductID": 4247,
+        "JobPK": 831,
+        "ProductName": "pc/shaders/simpletextured.azshader",
+        "SubID": 0,
+        "AssetType": {
+          "kind": "blob",
+          "bytes": 16,
+          "hex": "823395A3D57049F499A9D820CD1DEF98"
+        },
+        "LegacyGuid": {
+          "kind": "blob",
+          "bytes": 16,
+          "hex": "E7C764CBA36B578DAAE304AA4C7E5443"
+        },
+        "Hash": 5063564978862471101,
+        "Flags": 1
+      },
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Cache\\pc\\shaders\\simpletextured.azshader",
+      "bytes": 14918,
+      "sha256": "8E16D02A8DAF9AB8C3FD06F5348F1704E845A36588ECBECCF814D680A0C7DEC1",
+      "archive": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-atomshader-ap84-attempt1\\selected-products\\pc\\shaders\\simpletextured.azshader"
+    },
+    {
+      "database": {
+        "SourceName": "Assets/Tests/JENativeShader84/je_precompiled_vulkan_0.azshadervariant",
+        "SourceGuidHex": "402F55187D0D59CCB7F5F9B20F4239D0",
+        "Platform": "pc",
+        "JobKey": "azshadervariant",
+        "JobRunKey": 93956,
+        "ProductID": 10064,
+        "JobPK": 1717,
+        "ProductName": "pc/assets/tests/jenativeshader84/je_precompiled_vulkan_0.azshadervariant",
+        "SubID": 0,
+        "AssetType": {
+          "kind": "blob",
+          "bytes": 16,
+          "hex": "51BED81536D8410E90F01FA9FF765FBA"
+        },
+        "LegacyGuid": {
+          "kind": "blob",
+          "bytes": 16,
+          "hex": "402F55187D0D59CCB7F5F9B20F4239D0"
+        },
+        "Hash": -8869393839587278333,
+        "Flags": 1
+      },
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Cache\\pc\\assets\\tests\\jenativeshader84\\je_precompiled_vulkan_0.azshadervariant",
+      "bytes": 4002,
+      "sha256": "A4E362BFDB03198DBF63270C2EB4077B460CA244A2693F31EC5D0A1AB1511097",
+      "archive": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-atomshader-ap84-attempt1\\selected-products\\pc\\assets\\tests\\jenativeshader84\\je_precompiled_vulkan_0.azshadervariant"
+    },
+    {
+      "database": {
+        "SourceName": "Assets/Tests/JENativeShader84/JEPrecompiledVulkan81.precompiledshader",
+        "SourceGuidHex": "B17E0F40C296552CA1321F9934C11DF5",
+        "Platform": "pc",
+        "JobKey": "PrecompiledShader Asset Builder",
+        "JobRunKey": 95088,
+        "ProductID": 10065,
+        "JobPK": 1718,
+        "ProductName": "pc/assets/tests/jenativeshader84/jeprecompiledvulkan81.azshader",
+        "SubID": 0,
+        "AssetType": {
+          "kind": "blob",
+          "bytes": 16,
+          "hex": "823395A3D57049F499A9D820CD1DEF98"
+        },
+        "LegacyGuid": {
+          "kind": "blob",
+          "bytes": 16,
+          "hex": "3ABABF722EA05FDAB86D976567D9AAC9"
+        },
+        "Hash": 368764951309622563,
+        "Flags": 1
+      },
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Cache\\pc\\assets\\tests\\jenativeshader84\\jeprecompiledvulkan81.azshader",
+      "bytes": 14987,
+      "sha256": "727E059712C824EFE75848FE7BA3014092C3CC9F335EB10C1BAB4DD8BEBE259B",
+      "archive": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-atomshader-ap84-attempt1\\selected-products\\pc\\assets\\tests\\jenativeshader84\\jeprecompiledvulkan81.azshader"
+    }
+  ],
+  "limits": "No global AP, runtime Ready, visual, GPU, whole Gem or Shipping acceptance. Raw original rejection retained.",
+  "GemIncrement": 0,
+  "postflightPreserved": true,
+  "precompiledRootDependency": [
+    {
+      "SourceName": "Assets/Tests/JENativeShader84/JEPrecompiledVulkan81.precompiledshader",
+      "ProductDependencyID": 6285,
+      "ProductPK": 10065,
+      "DependencySourceGuid": {
+        "kind": "blob",
+        "bytes": 16,
+        "hex": "402F55187D0D59CCB7F5F9B20F4239D0"
+      },
+      "DependencySubID": 0,
+      "Platform": "pc",
+      "DependencyFlags": 0,
+      "UnresolvedPath": "",
+      "UnresolvedDependencyType": 0,
+      "FromAssetId": 1
+    }
+  ],
+  "reviewer": "/root",
+  "global347IdentitiesPreserved": true,
+  "elapsedSeconds": 516.603,
+  "preloadEncoding": "AssetCommon.cpp CreateFlags(PreLoad) encodes INTEGER0 in dependency flags; actual root GUID/subID/type and FromAssetId verified together.",
+  "freshJobs": [
+    {
+      "source": "Shaders/SimpleTextured.shadervariantlist",
+      "builder": "D7FB0C17131B43E8BCCC408C1763E538",
+      "key": "HashedShaderVariantList",
+      "platform": "common",
+      "status": 4,
+      "runKey": 95076,
+      "oldRunKey": 87994,
+      "errors": 0,
+      "warnings": 0,
+      "products": 2,
+      "observedBranch": "NONEMPTY_REGISTERED_PRODUCTS",
+      "jobLogState": "PRESENT",
+      "archivedLog": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-atomshader-ap84-attempt1\\all-six-focal-job-logs\\SimpleTextured.shadervariantlist-2416692515-95076.log",
+      "logSHA256": "68FF37CCCE77D111D828ADB112D40B00809964C81F46FB05F123622AFBC5F066"
+    },
+    {
+      "source": "Shaders/SimpleTextured.shader",
+      "builder": "C94DA15182BC447586FAE6C92A0BD6F8",
+      "key": "Shader Asset",
+      "platform": "pc",
+      "status": 4,
+      "runKey": 95068,
+      "oldRunKey": 87990,
+      "errors": 0,
+      "warnings": 1,
+      "products": 9,
+      "observedBranch": "NONEMPTY_REGISTERED_PRODUCTS",
+      "jobLogState": "PRESENT",
+      "archivedLog": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-atomshader-ap84-attempt1\\all-six-focal-job-logs\\SimpleTextured.shader-3527917682-95068.log",
+      "logSHA256": "6C6752162BF07BE77FAF624E49853194A891425399F637FAD833555B002C4047"
+    },
+    {
+      "source": "shaders/simpletextured.hashedvariantlist",
+      "builder": "C959AEC220834488AD88F61B1144535B",
+      "key": "Shader Variant Asset_varianttree",
+      "platform": "pc",
+      "status": 4,
+      "runKey": 95082,
+      "oldRunKey": 88004,
+      "errors": 0,
+      "warnings": 0,
+      "products": 0,
+      "observedBranch": "EXPECTED_NO_OUTPUT_BRANCH_ONLY_POSITIVE_GATE_PENDING",
+      "jobLogState": "PRESENT",
+      "archivedLog": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-atomshader-ap84-attempt1\\all-six-focal-job-logs\\simpletextured.hashedvariantlist-2692590997-95082.log",
+      "logSHA256": "408FFCED4DA27C6F83C9CC7E4AEACB9D9D1612476CC5016977DEF4F8D1537A38"
+    },
+    {
+      "source": "shaders/simpletextured_0.hashedvariantbatch",
+      "builder": "C959AEC220834488AD88F61B1144535B",
+      "key": "Shader Variant Asset_variantbatch",
+      "platform": "pc",
+      "status": 4,
+      "runKey": 95086,
+      "oldRunKey": 88002,
+      "errors": 0,
+      "warnings": 0,
+      "products": 0,
+      "observedBranch": "EXPECTED_NO_OUTPUT_BRANCH_ONLY_POSITIVE_GATE_PENDING",
+      "jobLogState": "PRESENT",
+      "archivedLog": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-atomshader-ap84-attempt1\\all-six-focal-job-logs\\simpletextured_0.hashedvariantbatch-4208155298-95086.log",
+      "logSHA256": "508054E5FE29559AC8D01E55E0AB1185F660180A5DC56B7881F0AF8FABDD1E77"
+    },
+    {
+      "source": "Assets/Tests/JENativeShader84/je_precompiled_vulkan_0.azshadervariant",
+      "builder": "31B74BFD704647ACA7DA7D5167E9B2F8",
+      "key": "azshadervariant",
+      "platform": "pc",
+      "status": 4,
+      "runKey": 93956,
+      "oldRunKey": null,
+      "errors": 0,
+      "warnings": 0,
+      "products": 1,
+      "observedBranch": "NONEMPTY_REGISTERED_PRODUCTS",
+      "jobLogState": "NOT_MATERIALIZED_COPY_JOB_LOG_POLICY_UNVERIFIED",
+      "archivedLog": null,
+      "logSHA256": null
+    },
+    {
+      "source": "Assets/Tests/JENativeShader84/JEPrecompiledVulkan81.precompiledshader",
+      "builder": "50D3185B489C4C8E84DCF99A75FDB72F",
+      "key": "PrecompiledShader Asset Builder",
+      "platform": "pc",
+      "status": 4,
+      "runKey": 95088,
+      "oldRunKey": null,
+      "errors": 0,
+      "warnings": 0,
+      "products": 1,
+      "observedBranch": "NONEMPTY_REGISTERED_PRODUCTS",
+      "jobLogState": "PRESENT",
+      "archivedLog": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-atomshader-ap84-attempt1\\all-six-focal-job-logs\\JEPrecompiledVulkan81.precompiledshader-3436064109-95088.log",
+      "logSHA256": "800066D995D6357EF783173ACD65A0BDAA547E08A47B65F7A107434102519D85"
+    }
+  ],
+  "next": "Separate private workload using existing per-shader setting to exercise the positive VariantTree/VariantBatch producers. No engine behavior change or weakened no-product oracle.",
+  "copyJobDetailedLogGate": "PENDING_POLICY_REVIEW: LastLogFile recorded but not materialized; preserved console Processing/Processed, database and byte-exact copy are observations, not a generic log waiver.",
+  "peakRamUsedPercent": 46.28,
+  "state": "FOUR_BUILDERS_EXECUTED_POSITIVE_VARIANT_OUTPUT_GATE_INCOMPLETE",
+  "originalElevenProductIdentitiesPreserved": true,
+  "rawNativeExit": 1
+}

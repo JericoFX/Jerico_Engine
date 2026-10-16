@@ -1,0 +1,8 @@
+~~1792143931110~~1~~0000000000004110~~Builder::RunJob~~Request started builder [46E5D9F3462F403B90BB8797503F8647 - 1] task (process) Assets/Tests/JENativeShader85/JEVariantPositive85.shadervariantlist 
+~~1792143931111~~1~~0000000000004110~~AssetBuilder~~AssetBuilder: AllocatorManager before: allocatedBytes = 56454853 capacityBytes = 55834574848
+~~1792143931111~~1~~0000000000004110~~AssetBuilder~~AssetBuilder: Running processJob task
+~~1792143931111~~1~~0000000000004110~~AssetBuilder~~AssetBuilder: Source = F:/JericoEngine/JericoEngine/Projects/JEEditorFixture/Assets/Tests/JENativeShader85/JEVariantPositive85.shadervariantlist
+~~1792143931112~~1~~0000000000004110~~AssetBuilder~~AssetBuilder: Platform = common
+~~1792143931112~~1~~0000000000004110~~AssetBuilder~~AssetBuilder: AllocatorManager after: allocatedBytes = 56455813 capacityBytes = 55834574848; allocated change = 960
+~~1792143931112~~1~~0000000000004110~~AssetBuilder~~S: 0 errors, 0 warnings
+~~1792143931112~~1~~0000000000004110~~Builder::RunJob~~Request stopped builder [46E5D9F3462F403B90BB8797503F8647 - 1] task (process) Assets/Tests/JENativeShader85/JEVariantPositive85.shadervariantlist 

@@ -1,0 +1,38 @@
+[
+  {
+    "original": "Engine/Render/Integration/Assets/Shaders/SimpleTextured.shader",
+    "originalBytes": 779,
+    "originalSha256": "A63BF98EC7229F4864917483869031D8B5A09C549671321F17BD102065A01DA4",
+    "candidate": "fixture/JEVariantPositive85/JEVariantPositive85.shader",
+    "candidateBytes": 844,
+    "candidateSha256": "BAB67ED59E9F1C4BE912F2C9DA63A9F0AA2136E7C71C0025FF95AB79092C727A",
+    "originalUnchanged": true,
+    "crlfPreserved": true,
+    "inverseByteExact": true,
+    "azslByteExact": true
+  },
+  {
+    "original": "Engine/Render/Integration/Assets/Shaders/SimpleTextured.azsl",
+    "originalBytes": 2554,
+    "originalSha256": "3574891834A0BA3893FBBBC17EDE70E6CDD6314EB82A80B1F26621C37FE8EE4B",
+    "candidate": "fixture/JEVariantPositive85/JEVariantPositive85.azsl",
+    "candidateBytes": 2554,
+    "candidateSha256": "3574891834A0BA3893FBBBC17EDE70E6CDD6314EB82A80B1F26621C37FE8EE4B",
+    "originalUnchanged": true,
+    "crlfPreserved": true,
+    "inverseByteExact": true,
+    "azslByteExact": true
+  },
+  {
+    "original": "Engine/Render/Integration/Assets/Shaders/SimpleTextured.shadervariantlist",
+    "originalBytes": 595,
+    "originalSha256": "BE757B46A200045DD9C34CBA27C493553DCA8DB3CFB4BADDE36123B8051F9384",
+    "candidate": "fixture/JEVariantPositive85/JEVariantPositive85.shadervariantlist",
+    "candidateBytes": 600,
+    "candidateSha256": "44A7E7A855FB967D684A2B3DFB68E15ECEAE38BAAA84D475E425236009B239A4",
+    "originalUnchanged": true,
+    "crlfPreserved": true,
+    "inverseByteExact": true,
+    "azslByteExact": true
+  }
+]

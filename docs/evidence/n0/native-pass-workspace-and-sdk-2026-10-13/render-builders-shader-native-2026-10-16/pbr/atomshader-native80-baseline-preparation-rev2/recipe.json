@@ -1,0 +1,45 @@
+{
+  "state": "PARENT_REVIEWED_NOT_RUN",
+  "executable": "C:\\Users\\Jerico\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+  "argv": [
+    "-NoProfile",
+    "-NonInteractive",
+    "-File",
+    "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native80-baseline-preparation-rev2\\RunFrozenBefore80.ps1",
+    "-Execute",
+    "-EvidenceDirectory",
+    "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-original17-before80-attempt2",
+    "-FreezePath",
+    "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native80-baseline-preparation-rev1\\freeze80-before-atomshader.json",
+    "-FreezeSHA256",
+    "6FF83F0EE9C35C99D05C8D49DE74521D5BDB442E3DC340E2D4C3F7A1495057D8",
+    "-InputCount",
+    "14058"
+  ],
+  "cwd": "F:\\JericoEngine\\JericoEngine",
+  "runnerSHA256": "9AB11D7E554D451458D22FC502D145B1EBBEB81D162C9967F75E4BEFBDC33853",
+  "reusedFunctionsByteExact": [
+    "Save-Json",
+    "Get-InputMap",
+    "Get-OfflineCacheState",
+    "Get-RamSnapshot",
+    "Save-PhaseProcessSnapshot",
+    "Invoke-Phase",
+    "Verify-FileEntries"
+  ],
+  "phaseRunnerSHA256": "AE2FA33005D79E2B07A08F4823E52ECC44D70B23997127BD03E07CC1CC2621CA",
+  "expectedNativeCases": 17,
+  "oneOwner": "/root/validation_luna",
+  "oneJob": true,
+  "admissionBelowPercent": 70,
+  "minimumFreeGiB": 10,
+  "ramGuardPercent": 80,
+  "noRetry": true,
+  "noUI": true,
+  "expectedBuildTargets": [
+    "AtomShader.Tests",
+    "AtomShader.Builders"
+  ],
+  "producerRationale": "The existing builder object is older than Static; build both original producer and tests before comparing any cook. No full engine build.",
+  "correction": "Only normalize the two executable literals to Windows separators. CIM reports C:\\Program Files\\...; string comparison with C:/... caused original identity rejection before stdout capture. Identity guard unchanged."
+}

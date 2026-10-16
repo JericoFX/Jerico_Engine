@@ -1,0 +1,294 @@
+{
+  "approved": true,
+  "reviewer": "/root",
+  "reviewedUtc": "2026-10-16T08:40:22.4925563Z",
+  "scope": "Native82 configure, eight CPU suites and all ten host builds only. AP84 and SDK83 remain pending; no whole Gem/GPU/GUI/Shipping acceptance.",
+  "nativePostflight": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-shader-compiler-source82-attempt1\\postflight.json",
+    "sha256": "B40F22EBF273679D0AEB6FF83D3096CC8C96C9747D81488D3B0B5B8290FC5581"
+  },
+  "sourceFreezeSHA256": "B65743A66E3837A917C49F479AD4F2F6DEEBBAF5719C49ECE30302A1DE05B0EC",
+  "phases": [
+    {
+      "phase": "configure-native-shader82",
+      "exitCode": 0,
+      "elapsedSeconds": 51.847,
+      "startedUtc": "2026-10-16T08:12:18.2137281Z",
+      "finishedUtc": "2026-10-16T08:13:10.0605635Z",
+      "peakRamUsedPercent": 42.44,
+      "stdoutSha256": "390CB9CD2519E12DBB1527C7F9E6617F802B363FB207DD0942724E771C5B29AC",
+      "stderrSha256": "E4AAD40ADB2F7C1F6FD6443D22D5B73B58448EA48F5654D451726CDB24C33803",
+      "argv": [
+        "-S",
+        "F:\\JericoEngine\\JericoEngine",
+        "-B",
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine"
+      ]
+    },
+    {
+      "phase": "build-shader-focal82",
+      "exitCode": 0,
+      "elapsedSeconds": 206.064,
+      "startedUtc": "2026-10-16T08:13:10.1335726Z",
+      "finishedUtc": "2026-10-16T08:16:36.197346Z",
+      "peakRamUsedPercent": 49.22,
+      "stdoutSha256": "B36BAB25F198E37FE6D4AF3CB0C0833972DD7B60CB834E1A975206F289E6DB4C",
+      "stderrSha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "argv": [
+        "--build",
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine",
+        "--config",
+        "profile",
+        "--target",
+        "ShaderCompiler.Tests",
+        "RenderAssetBuilders.Tests",
+        "ShaderManagementConsole.VariantGenerator.Tests",
+        "EditorMaterials.Tests",
+        "AtomToolsFramework.Tests",
+        "GraphModel.Editor.Tests",
+        "EditorLib.Tests",
+        "Atom_RPI.Tests",
+        "--parallel",
+        "1",
+        "--",
+        "/m:1",
+        "/p:UseMultiToolTask=true",
+        "/p:MultiProcCL=true",
+        "/p:MultiProcMaxCount=1",
+        "/p:EnableClServerMode=false",
+        "/p:EnforceProcessCountAcrossBuilds=true",
+        "/p:CL_MPCount=1",
+        "/nodeReuse:false"
+      ]
+    },
+    {
+      "phase": "test-shader-inventory82",
+      "exitCode": 0,
+      "elapsedSeconds": 0.816,
+      "startedUtc": "2026-10-16T08:16:36.2403966Z",
+      "finishedUtc": "2026-10-16T08:16:37.05623Z",
+      "peakRamUsedPercent": 42.32,
+      "stdoutSha256": "19C85612A3B7A3A2EBDE32DFB7CB7E741AA3FF7138F87D9EFEAFA364D9FD390B",
+      "stderrSha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "argv": [
+        "--test-dir",
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine",
+        "-C",
+        "profile",
+        "--show-only=json-v1",
+        "-R",
+        "^(JE::ShaderCompiler\\.Tests\\.main::TEST_RUN|JE::RenderAssetBuilders\\.Tests\\.main::TEST_RUN|Gem::ShaderManagementConsole\\.VariantGenerator\\.Tests\\.main::TEST_RUN|JE::EditorMaterials\\.Tests\\.main::TEST_RUN|Gem::AtomToolsFramework\\.Tests\\.main::TEST_RUN|Gem::GraphModel\\.Editor\\.Tests\\.main::TEST_RUN|Legacy::EditorLib\\.Tests\\.main::TEST_RUN|Gem::Atom_RPI\\.Tests\\.main::TEST_RUN)$"
+      ]
+    },
+    {
+      "phase": "test-retired-shader-inventory82",
+      "exitCode": 0,
+      "elapsedSeconds": 0.107,
+      "startedUtc": "2026-10-16T08:16:37.1060585Z",
+      "finishedUtc": "2026-10-16T08:16:37.2135315Z",
+      "peakRamUsedPercent": 42.31,
+      "stdoutSha256": "655B4EDF543A99640D87B7CEC2509F8071DB3E631F77A63BD8B28F1533BABFC4",
+      "stderrSha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "argv": [
+        "--test-dir",
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine",
+        "-C",
+        "profile",
+        "--show-only=json-v1",
+        "-R",
+        "^Gem::AtomShader[.]"
+      ]
+    },
+    {
+      "phase": "test-shader-focal82",
+      "exitCode": 0,
+      "elapsedSeconds": 35.378,
+      "startedUtc": "2026-10-16T08:16:37.2554026Z",
+      "finishedUtc": "2026-10-16T08:17:12.6332834Z",
+      "peakRamUsedPercent": 42.65,
+      "stdoutSha256": "E50428ED5FB4B5ABECEEC2220697E2E93570C6153F4711CC1A27C644569FEBD0",
+      "stderrSha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "argv": [
+        "--test-dir",
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine",
+        "-C",
+        "profile",
+        "--output-on-failure",
+        "--no-tests=error",
+        "--timeout",
+        "180",
+        "--output-junit",
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-shader-compiler-source82-attempt1\\ctest.junit.xml",
+        "--parallel",
+        "1",
+        "-R",
+        "^(JE::ShaderCompiler\\.Tests\\.main::TEST_RUN|JE::RenderAssetBuilders\\.Tests\\.main::TEST_RUN|Gem::ShaderManagementConsole\\.VariantGenerator\\.Tests\\.main::TEST_RUN|JE::EditorMaterials\\.Tests\\.main::TEST_RUN|Gem::AtomToolsFramework\\.Tests\\.main::TEST_RUN|Gem::GraphModel\\.Editor\\.Tests\\.main::TEST_RUN|Legacy::EditorLib\\.Tests\\.main::TEST_RUN|Gem::Atom_RPI\\.Tests\\.main::TEST_RUN)$"
+      ]
+    },
+    {
+      "phase": "build-shader-hosts82",
+      "exitCode": 0,
+      "elapsedSeconds": 252.855,
+      "startedUtc": "2026-10-16T08:17:12.8062421Z",
+      "finishedUtc": "2026-10-16T08:21:25.6614878Z",
+      "peakRamUsedPercent": 48.5,
+      "stdoutSha256": "D41295B9668A32E021EF2B6DD4992122AAFB9D812B0F4CC3C18455B14398F834",
+      "stderrSha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "argv": [
+        "--build",
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine",
+        "--config",
+        "profile",
+        "--target",
+        "Editor",
+        "AssetProcessor",
+        "AssetProcessorBatch",
+        "AssetBuilder",
+        "SerializeContextTools",
+        "MaterialEditor",
+        "MaterialCanvas",
+        "PassCanvas",
+        "ShaderManagementConsole",
+        "JEEditorFixture.GameLauncher",
+        "--parallel",
+        "1",
+        "--",
+        "/m:1",
+        "/p:UseMultiToolTask=true",
+        "/p:MultiProcCL=true",
+        "/p:MultiProcMaxCount=1",
+        "/p:EnableClServerMode=false",
+        "/p:EnforceProcessCountAcrossBuilds=true",
+        "/p:CL_MPCount=1",
+        "/nodeReuse:false"
+      ]
+    }
+  ],
+  "suites": [
+    {
+      "name": "JE::ShaderCompiler.Tests.main::TEST_RUN",
+      "cases": 17,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0,
+      "disabled": 0,
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-shader-compiler-source82-attempt1\\native-xml\\JE_ShaderCompiler.Tests.xml",
+      "sha256": "9F31FC8B779F7CF547D5F410B9839F4CB477BB4BECEFA1963EA1A948DAE936F6"
+    },
+    {
+      "name": "JE::RenderAssetBuilders.Tests.main::TEST_RUN",
+      "cases": 10,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0,
+      "disabled": 0,
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-shader-compiler-source82-attempt1\\native-xml\\JE_RenderAssetBuilders.Tests.xml",
+      "sha256": "DC38002B881AFE0C581D5C7621BC29E664A109510628FB20DD7D81989238A818"
+    },
+    {
+      "name": "Gem::ShaderManagementConsole.VariantGenerator.Tests.main::TEST_RUN",
+      "cases": 13,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0,
+      "disabled": 0,
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-shader-compiler-source82-attempt1\\native-xml\\Gem_ShaderManagementConsole.VariantGenerator.Tests.xml",
+      "sha256": "D17FD3A022B94FB9B6935EEF95BD24A4DB8D28AFDE9986D38900BD62839D21EF"
+    },
+    {
+      "name": "JE::EditorMaterials.Tests.main::TEST_RUN",
+      "cases": 89,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0,
+      "disabled": 0,
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-shader-compiler-source82-attempt1\\native-xml\\JE_EditorMaterials.Tests.xml",
+      "sha256": "77F1F7B3F69A8736AA36DC733BF2C3AFFB578B922B231CDB1E5A1B88F5AB5851"
+    },
+    {
+      "name": "Gem::AtomToolsFramework.Tests.main::TEST_RUN",
+      "cases": 15,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0,
+      "disabled": 0,
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-shader-compiler-source82-attempt1\\native-xml\\Gem_AtomToolsFramework.Tests.xml",
+      "sha256": "ACDA6D1FEB0F6DE28A8DCB9DF5CF426BFE4371F01BE1A2BD9E2A5B9B9B40594D"
+    },
+    {
+      "name": "Gem::GraphModel.Editor.Tests.main::TEST_RUN",
+      "cases": 13,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0,
+      "disabled": 0,
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-shader-compiler-source82-attempt1\\native-xml\\Gem_GraphModel.Editor.Tests.xml",
+      "sha256": "CB71808BA13AD6770F0B3235753C04C181597D522864B67676FAEE6C72AE153B"
+    },
+    {
+      "name": "Legacy::EditorLib.Tests.main::TEST_RUN",
+      "cases": 79,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0,
+      "disabled": 0,
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-shader-compiler-source82-attempt1\\native-xml\\Legacy_EditorLib.Tests.xml",
+      "sha256": "E6873C6C0CA50B9367FBA262EA74316244D1AB81D20DCAF14677E3FF22AA7893"
+    },
+    {
+      "name": "Gem::Atom_RPI.Tests.main::TEST_RUN",
+      "cases": 575,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0,
+      "disabled": 0,
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-shader-compiler-source82-attempt1\\native-xml\\Gem_Atom_RPI.Tests.xml",
+      "sha256": "F3B998D9DC8CB18FB833FA58373C3AC565C19C17F5FCEF8B8EA3A8777A77AF8E"
+    }
+  ],
+  "original17CaseIdentitiesPreserved": true,
+  "retiredGemTests": 0,
+  "authored": {
+    "label": "Authored",
+    "count": 40,
+    "matched": 40
+  },
+  "ownerTextures": {
+    "label": "OwnerTextures",
+    "count": 26,
+    "matched": 26
+  },
+  "binaryPins": [
+    {
+      "name": "AssetProcessor.exe",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AssetProcessor.exe",
+      "bytes": 6673408,
+      "sha256": "0EC006BD3F1D189795050D4A49D076780F5C0F07FA5A9DCA64ABF172A77EB582"
+    },
+    {
+      "name": "AssetProcessorBatch.exe",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AssetProcessorBatch.exe",
+      "bytes": 5899776,
+      "sha256": "FF71D1FBB892FE500FBB11425290AC03D4F0823AF6E6D15606507BD9308EFD38"
+    },
+    {
+      "name": "AssetBuilder.exe",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AssetBuilder.exe",
+      "bytes": 2790912,
+      "sha256": "33573ED1497A657E3E5A2E9174E505083D3BF805AFAAE4B361AC811F70A87A25"
+    },
+    {
+      "name": "RenderAssetBuilders.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\RenderAssetBuilders.dll",
+      "bytes": 2238464,
+      "sha256": "DDC2D553FC54F7F53388B3645E561AF30B21420CAABB52EC1DE0E272D2F97748"
+    },
+    {
+      "name": "Atom_RPI.Public.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_RPI.Public.dll",
+      "bytes": 7858688,
+      "sha256": "49B7579D2819B5081525B4BF7762AA470E2C02E2F63A3CAF2E7BEA08130421F0"
+    }
+  ],
+  "GemIncrement": 0
+}

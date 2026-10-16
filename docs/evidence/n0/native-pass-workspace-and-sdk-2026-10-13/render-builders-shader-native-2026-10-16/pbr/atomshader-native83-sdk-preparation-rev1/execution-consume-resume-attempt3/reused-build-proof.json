@@ -1,0 +1,38 @@
+{
+  "repeatedBuild": false,
+  "configureVerification": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native83-sdk-preparation-rev1\\execution-consume-resume-attempt2\\configure-verification.json",
+    "bytes": 1509,
+    "sha256": "A940A708F99308CD3F5FA7C96FFFFDCA9B5739B172ADAA3F563D9970B3028A86"
+  },
+  "exe": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-vk-consumer83\\bin\\profile\\JENativeSdkConsumer.exe",
+    "bytes": 73216,
+    "sha256": "9AD3D85B58B8CAC9365D008776B65F1B4561B531F80EA841F2D0C38C13E739D7"
+  },
+  "stdout": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native83-sdk-preparation-rev1\\execution-consume-resume-attempt2\\build-consumer.stdout.log",
+    "bytes": 25863,
+    "sha256": "7E4D233797CE8A4F55A70910F703CD3C6A9BFD7C677A4429BE787A5BC48C31A9"
+  },
+  "stderr": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native83-sdk-preparation-rev1\\execution-consume-resume-attempt2\\build-consumer.stderr.log",
+    "bytes": 0,
+    "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+  },
+  "buildResult": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native83-sdk-preparation-rev1\\execution-consume-resume-attempt2\\build-consumer.result.json",
+    "bytes": 2091,
+    "sha256": "1BE4D475762AE611EBFD5A0F34DC6900F086E5577FF54EFA97D4F5A8B80E1851"
+  },
+  "mcppProvenance": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native83-sdk-preparation-rev1\\mcpp-provenance-review83\\review-final.json",
+    "bytes": 7088,
+    "sha256": "90A6502E84907673A31BD278C697EA3F3C6F9611FF27D991DAB1396241C09390"
+  },
+  "buildStart": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native83-sdk-preparation-rev1\\execution-consume-resume-attempt2\\build-consumer.start.json",
+    "bytes": 653,
+    "sha256": "4A1995900EBB58C3A59718A52DC3938F505891DAF1B62AA14EBF0C0F3957FCD3"
+  }
+}

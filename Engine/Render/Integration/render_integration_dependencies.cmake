@@ -5,7 +5,6 @@
 set(JE_RENDER_INTEGRATION_RUNTIME_DEPENDENCIES
     Gem::Atom_RHI.Private
     Gem::Atom_RPI.Private
-    Gem::Atom_RHI_Null.Private
     Gem::Atom_Feature_Common
     Gem::Atom_Bootstrap
     JE::WorldCamera
@@ -16,14 +15,11 @@ set(JE_RENDER_INTEGRATION_RUNTIME_DEPENDENCIES
 )
 set(JE_RENDER_INTEGRATION_TOOL_DEPENDENCIES
     Gem::Atom_RHI.Private
-    Gem::Atom_RPI.Builders
+    JE::RenderAssetBuilders
     Gem::Atom_RPI.Editor
-    Gem::Atom_RHI_Null.Private
-    Gem::Atom_RHI_Null.Builders
     Gem::Atom_Feature_Common.Builders
     Gem::Atom_Feature_Common.Editor
     Gem::Atom_Bootstrap
-    Gem::AtomShader.Builders
     JE::WorldCamera
     Gem::AtomRenderOptions.Editor
     Gem::CommonFeaturesAtom.Editor
@@ -38,7 +34,7 @@ set(JE_RENDER_INTEGRATION_TOOL_DEPENDENCIES
 
 if(PAL_PLATFORM_NAME STREQUAL "Windows")
     list(APPEND JE_RENDER_INTEGRATION_RUNTIME_DEPENDENCIES
-        Gem::Atom_RHI_DX12.Private Gem::Atom_RHI_Vulkan.Private)
+        Gem::Atom_RHI_Vulkan.Private)
 elseif(PAL_PLATFORM_NAME STREQUAL "Linux")
     list(APPEND JE_RENDER_INTEGRATION_RUNTIME_DEPENDENCIES Gem::Atom_RHI_Vulkan.Private)
 endif()
@@ -47,7 +43,6 @@ endif()
 foreach(je_render_integration_tools_platform ${PAL_PLATFORM_NAME} ${LY_PAL_TOOLS_ENABLED})
     if(je_render_integration_tools_platform STREQUAL "Windows")
         list(APPEND JE_RENDER_INTEGRATION_TOOL_DEPENDENCIES
-            Gem::Atom_RHI_DX12.Private Gem::Atom_RHI_DX12.Builders
             Gem::Atom_RHI_Vulkan.Private Gem::Atom_RHI_Vulkan.Builders)
     elseif(je_render_integration_tools_platform STREQUAL "Linux")
         list(APPEND JE_RENDER_INTEGRATION_TOOL_DEPENDENCIES

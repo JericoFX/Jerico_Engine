@@ -1,0 +1,47 @@
+{
+  "configureResult": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native83-sdk-preparation-rev1\\execution-consume\\configure.result.json",
+    "bytes": 2735,
+    "sha256": "C8703FB1CC0295D110700A09BC2E7E0AD92F58304D11E460F51F92F789CD1297"
+  },
+  "originalFailure": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native83-sdk-preparation-rev1\\execution-consume\\sdk-configure-additions.json",
+    "bytes": 0,
+    "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+  },
+  "quarantineReview": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native83-sdk-preparation-rev1\\parent-quarantine-review83.json",
+    "bytes": 23982,
+    "sha256": "201FCAEE931ADDE4F1C4C55F0B9B60C723C4EE7708D54D0B788E7F73E824463F"
+  },
+  "priorOutput": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native83-sdk-preparation-rev1/execution-consume",
+  "actualConfigureAdditions": 0,
+  "sdkFiles": 11218,
+  "configureStart": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native83-sdk-preparation-rev1\\execution-consume\\configure.start.json",
+    "bytes": 4366,
+    "sha256": "DF7D91F5AE678D4F37460D53520B8D19CDD48633851DB93D90486C246EB5269E"
+  },
+  "installedInventory": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native83-sdk-preparation-rev1\\execution-consume\\installed-files.json",
+    "bytes": 2308831,
+    "sha256": "FE03F8306F295631518C26100C9B38A0F852BA238D5CC9A7D4D93F3BF870078F"
+  },
+  "configureCache": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-vk-consumer83\\CMakeCache.txt",
+    "bytes": 82864,
+    "sha256": "4025FEA208E55B2710AE6AF4CE166A41E1DEF3C085AEE6FB23694E4146D28E31"
+  },
+  "noInstallConfigureOrQuarantineRepeated": true,
+  "newEmptyArrayProbe": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native83-sdk-preparation-rev1\\execution-consume-resume-attempt3\\emptyarrayProbe.json",
+    "bytes": 2,
+    "sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945"
+  },
+  "installState": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native83-sdk-preparation-rev1\\execution-install\\install-state.json",
+    "bytes": 4431,
+    "sha256": "D9BB641D07877E7243C71152A50BBB6DC10CC8FDA3840ED6C431F3973861FA5A"
+  },
+  "mode": "RESUME_AFTER_SUCCESSFUL_CONFIGURE_AND_CONSUMER_BUILD_ONLY"
+}

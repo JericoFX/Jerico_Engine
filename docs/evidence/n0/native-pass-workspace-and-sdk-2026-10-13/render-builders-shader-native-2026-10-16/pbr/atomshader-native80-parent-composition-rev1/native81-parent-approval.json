@@ -1,0 +1,23 @@
+{
+  "state": "PARENT_APPROVED_FOR_ONE_NATIVE_EXECUTION_NOT_RUN",
+  "utc": "2026-10-16T08:01:50.0171826Z",
+  "recipeSHA256": "835D402639BF9FF92B48D3E5A77B28576BC4EACFB8F3F15A4C4A8B4246D3BE5A",
+  "runnerSHA256": "A056C7598BC517430C5B6A29D041647FBA59A9A784F94BEFE639DC44A4A00A68",
+  "freezeSHA256": "C1CF4930576FFB9DD5507F511225C5D97C97B59AF7C6183F5F242014DB675DE7",
+  "functionsByteExact": [
+    "Save-Json",
+    "Get-InputMap",
+    "Get-OfflineCacheState",
+    "Get-RamSnapshot",
+    "Save-PhaseProcessSnapshot",
+    "Invoke-Phase",
+    "Verify-FileEntries"
+  ],
+  "inputs": 14034,
+  "expectedSuites": 8,
+  "expectedUniqueNativeCases": 811,
+  "hosts": 10,
+  "serial": 1,
+  "sourceFrozen": true,
+  "scope": "Eight native CPU suites/811 unique cases, ten host builds; no AP cook, GPU/UI, SDK replay or Shipping acceptance"
+}

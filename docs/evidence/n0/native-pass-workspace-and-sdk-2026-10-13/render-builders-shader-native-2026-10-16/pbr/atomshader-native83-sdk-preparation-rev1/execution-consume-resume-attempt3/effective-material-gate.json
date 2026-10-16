@@ -1,0 +1,25 @@
+{
+  "review": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\parent-native77-closure-review-rev1\\effective-material-review.json",
+    "bytes": 2633,
+    "sha256": "02674917BC8E39D4A9A6E0BDC63AA61DB4171AD79DC28D70144D5D693480AB7E"
+  },
+  "exportReport": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\parent-native75-closure-review-rev1\\exports.stdout.log",
+    "bytes": 2602744,
+    "sha256": "8752A76780472E1EA3F9915490CD5425DF615A9C06C70F2F3C886BA7E642BA88",
+    "lastWriteUtc": "2026-10-16T03:32:33.8515509Z"
+  },
+  "dll": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_RPI.Public.dll",
+    "bytes": 7858688,
+    "sha256": "49B7579D2819B5081525B4BF7762AA470E2C02E2F63A3CAF2E7BEA08130421F0",
+    "lastWriteUtc": "2026-10-16T02:51:07.9976718Z"
+  },
+  "object": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\External\\RPI-86831dc8\\Code\\Atom_RPI.Public.dir\\profile\\unity_13_cxx.obj",
+    "bytes": 12011486,
+    "sha256": "273A9914DB2690D9E4AF0FE51A78A0517B337E8D434116B4ACA0F0B510A9F448",
+    "lastWriteUtc": "2026-10-16T02:49:46.9456105Z"
+  }
+}

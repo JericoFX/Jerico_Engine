@@ -1,0 +1,9 @@
+{
+  "state": "APPROVED_BY_PARENT_FOR_ONE_EXECUTION_NOT_RUN",
+  "reviewedUtc": "2026-10-16T07:42:59.5412202Z",
+  "runnerSHA256": "9AB11D7E554D451458D22FC502D145B1EBBEB81D162C9967F75E4BEFBDC33853",
+  "recipeSHA256": "512C824AC03FA1BC35B37B6C1C825BC8CF7FF32907FE1868615CDFDF96CA38FC",
+  "freezeSHA256": "6FF83F0EE9C35C99D05C8D49DE74521D5BDB442E3DC340E2D4C3F7A1495057D8",
+  "diff": "Two executable literal path separators only; all function bodies byte-identical. All original guards and expected17 unchanged.",
+  "previousAttempt": "Incomplete wrapper recorded; preserved, no native test verdict."
+}

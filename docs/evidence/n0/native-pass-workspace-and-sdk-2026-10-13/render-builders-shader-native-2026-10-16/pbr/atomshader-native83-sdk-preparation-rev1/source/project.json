@@ -1,0 +1,12 @@
+{
+  "version": "1.0.0",
+  "script_only": true,
+  "display_name": "JE Native SDK Consumer",
+  "project_id": "{5377D595-D133-4B0D-A817-8711ECA503AD}",
+  "project_name": "JENativeSdkConsumer",
+  "gem_names": [],
+  "license": "Apache-2.0 OR MIT",
+  "origin": "Private installed-SDK validation",
+  "engine": "o3de",
+  "summary": "Links three installed native authoring subsystems"
+}

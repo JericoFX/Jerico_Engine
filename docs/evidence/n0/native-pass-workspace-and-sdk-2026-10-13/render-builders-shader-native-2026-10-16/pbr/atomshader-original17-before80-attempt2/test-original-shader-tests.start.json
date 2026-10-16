@@ -1,0 +1,30 @@
+{
+  "phase": "test-original-shader-tests",
+  "startedUtc": "2026-10-16T07:43:56.6944250Z",
+  "pid": 11732,
+  "processCreationUtc": "2026-10-16T07:43:56.7313480Z",
+  "ramBefore": {
+    "capturedUtc": "2026-10-16T07:43:56.6943821Z",
+    "totalBytes": 34265743360,
+    "freeBytes": 15633895424,
+    "usedPercent": 54.37,
+    "thresholdPercent": 80
+  },
+  "executable": "C:\\Program Files\\CMake\\bin\\ctest.exe",
+  "argv": [
+    "--test-dir",
+    "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine",
+    "--build-config",
+    "profile",
+    "--output-on-failure",
+    "--output-junit",
+    "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-original17-before80-attempt2\\ctest.junit.xml",
+    "-j",
+    "1",
+    "-R",
+    "^Gem::AtomShader[.]Tests[.]main::TEST_RUN$"
+  ],
+  "workingDirectory": "F:\\JericoEngine\\JericoEngine",
+  "stdout": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-original17-before80-attempt2\\test-original-shader-tests.stdout.log",
+  "stderr": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-original17-before80-attempt2\\test-original-shader-tests.stderr.log"
+}

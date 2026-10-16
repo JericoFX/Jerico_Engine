@@ -182,7 +182,7 @@ if(PAL_TRAIT_BUILD_HOST_TOOLS)
         TARGETS
             Gem::${gem_name}.Editor
             Gem::Atom_Feature_Common.Builders
-            Gem::Atom_RPI.Builders
+            JE::RenderAssetBuilders
             Gem::GradientSignal.Builders
     )
     ly_create_alias(NAME ${gem_name}.Tools NAMESPACE Gem

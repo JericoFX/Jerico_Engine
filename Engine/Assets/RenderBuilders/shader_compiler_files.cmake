@@ -1,0 +1,29 @@
+# Copyright (c) Contributors to the Open 3D Engine Project.
+# SPDX-License-Identifier: Apache-2.0 OR MIT
+set(FILES
+    Source/Shader/CommonFiles/CommonTypes.h
+    Source/Shader/CommonFiles/CommonTypes.cpp
+    Source/Shader/CommonFiles/Preprocessor.h
+    Source/Shader/CommonFiles/Preprocessor.cpp
+    Source/Shader/AzslData.h
+    Source/Shader/AzslShaderBuilderSystemComponent.cpp
+    Source/Shader/AzslShaderBuilderSystemComponent.h
+    Source/Shader/ShaderAssetBuilder.cpp
+    Source/Shader/ShaderAssetBuilder.h
+    Source/Shader/ShaderBuilderUtility.cpp
+    Source/Shader/ShaderBuilderUtility.h
+    Source/Shader/ShaderPlatformInterfaceRequest.h
+    Source/Shader/AzslCompiler.cpp
+    Source/Shader/AzslCompiler.h
+    Source/Shader/ShaderVariantAssetBuilder.cpp
+    Source/Shader/ShaderVariantAssetBuilder.h
+    Source/Shader/PrecompiledShaderBuilder.cpp
+    Source/Shader/PrecompiledShaderBuilder.h
+    Source/Shader/SrgLayoutUtility.cpp
+    Source/Shader/SrgLayoutUtility.h
+    Source/Shader/ShaderBuildArgumentsManager.cpp
+    Source/Shader/ShaderBuildArgumentsManager.h
+    Source/Shader/ShaderVariantListBuilder.cpp
+    Source/Shader/ShaderVariantListBuilder.h
+    Include/JE/Assets/RenderBuilders/Shader/HashedVariantListSourceData.h
+)

@@ -39,6 +39,7 @@ ly_add_target(
             JE::ProfilerView
             JE::RenderDebug
             JE::EditorRenderIntegration
+            JE::RenderAssetBuilders
             Gem::Atom_Bootstrap.Headers
             JE::WorldCamera
             Gem::Atom_Feature_Common
@@ -71,7 +72,6 @@ ly_add_target(
         Gem::Atom_Bootstrap
         Gem::Atom_Feature_Common.Editor
         Gem::Atom_RHI.Private
-        Gem::Atom_RHI_Null.Private
         Gem::Atom_RPI.Editor
         Gem::GraphCanvas.Editor
         Gem::GraphCanvasWidgets

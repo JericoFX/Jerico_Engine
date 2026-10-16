@@ -1,0 +1,49 @@
+{
+  "approved": true,
+  "reviewer": "/root",
+  "utc": "2026-10-16T09:43:47.2170671Z",
+  "sdkParentReview": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native83-sdk-preparation-rev1\\parent-sdk-review83.json",
+    "bytes": 2067,
+    "sha256": "328E3961DC63511463AD640A2FE33688D6129D82774A2FAE0184B8F77452F346"
+  },
+  "unchanged82InputsRehashed": 14034,
+  "temporarySourceCount": 3,
+  "temporarySourceBytes": null,
+  "temporarySources": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Assets\\Tests\\JENativeShader85\\JEVariantPositive85.shader",
+      "bytes": 844,
+      "sha256": "BAB67ED59E9F1C4BE912F2C9DA63A9F0AA2136E7C71C0025FF95AB79092C727A"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Assets\\Tests\\JENativeShader85\\JEVariantPositive85.shadervariantlist",
+      "bytes": 600,
+      "sha256": "44A7E7A855FB967D684A2B3DFB68E15ECEAE38BAAA84D475E425236009B239A4"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Assets\\Tests\\JENativeShader85\\JEVariantPositive85.azsl",
+      "bytes": 2554,
+      "sha256": "3574891834A0BA3893FBBBC17EDE70E6CDD6314EB82A80B1F26621C37FE8EE4B"
+    }
+  ],
+  "source85Freeze": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native85-ap-preparation-rev1\\freeze85-positive-variants.json",
+    "bytes": 3508070,
+    "sha256": "7CAF1FA61BA989143A043F5CE7664D92DE94D375A764979CC330DF0CCC58C381"
+  },
+  "totalSourceInputs": 14037,
+  "driver": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native85-ap-preparation-rev1\\RunFrozenShaderAP85.ps1",
+    "bytes": 27323,
+    "sha256": "24C91D9A5332592F920E868D4E581D02D3230057333319371C7D3BECCC901C58"
+  },
+  "boundRecipe": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native85-ap-preparation-rev1\\parent-bound-recipe85.json",
+    "bytes": 5861,
+    "sha256": "AAFCC277B04F7DB28D591AFDA979C994503898ADCB47AE51603504FEC7AC0705"
+  },
+  "nativeRunStarted": false,
+  "noAuthoredSceneMutation": true,
+  "noGuessedSourceGuid": true
+}

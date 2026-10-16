@@ -1,0 +1,8 @@
+~~1792140643422~~1~~0000000000003C44~~Builder::RunJob~~Request started builder [19A912558DCB41C4B654706C1AD430D7 - 1] task (process) Shaders/SimpleTextured.shadervariantlist 
+~~1792140643435~~1~~0000000000003C44~~AssetBuilder~~AssetBuilder: AllocatorManager before: allocatedBytes = 59897933 capacityBytes = 57982058496
+~~1792140643435~~1~~0000000000003C44~~AssetBuilder~~AssetBuilder: Running processJob task
+~~1792140643435~~1~~0000000000003C44~~AssetBuilder~~AssetBuilder: Source = F:/JericoEngine/JericoEngine/Engine/Render/Integration/Assets/Shaders/SimpleTextured.shadervariantlist
+~~1792140643435~~1~~0000000000003C44~~AssetBuilder~~AssetBuilder: Platform = common
+~~1792140643436~~1~~0000000000003C44~~AssetBuilder~~AssetBuilder: AllocatorManager after: allocatedBytes = 59898861 capacityBytes = 57982058496; allocated change = 928
+~~1792140643436~~1~~0000000000003C44~~AssetBuilder~~S: 0 errors, 0 warnings
+~~1792140643436~~1~~0000000000003C44~~Builder::RunJob~~Request stopped builder [19A912558DCB41C4B654706C1AD430D7 - 1] task (process) Shaders/SimpleTextured.shadervariantlist 

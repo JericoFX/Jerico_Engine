@@ -1,0 +1,38 @@
+{
+  "freezeSHA256": "6FF83F0EE9C35C99D05C8D49DE74521D5BDB442E3DC340E2D4C3F7A1495057D8",
+  "ownerTextures": {
+    "label": "OwnerTextures",
+    "count": 26,
+    "matched": 26
+  },
+  "inputCount": 14058,
+  "freeze": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native80-baseline-preparation-rev1\\freeze80-before-atomshader.json",
+  "authored": {
+    "label": "Authored",
+    "count": 40,
+    "matched": 40
+  },
+  "cache": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\CMakeCache.txt",
+    "sha256": "4469ECECFF474E20A81B5C0AE6D87BCA931EBAF10C24560E507F6A1DCA2E7651",
+    "requiredLines": [
+      "CMAKE_GENERATOR:INTERNAL=Visual Studio 17 2022",
+      "CMAKE_GENERATOR_PLATFORM:INTERNAL=x64",
+      "FETCHCONTENT_FULLY_DISCONNECTED:BOOL=ON",
+      "LY_PACKAGE_SERVER_URLS:STRING=",
+      "O3DE_EXTERNAL_SUBDIRS:STRING=",
+      "LY_PROJECTS:STRING=F:/JericoEngine/JericoEngine/Projects/JEEditorFixture"
+    ],
+    "missingLines": [],
+    "valid": true
+  },
+  "ram": {
+    "capturedUtc": "2026-10-16T07:43:47.6049103Z",
+    "totalBytes": 34265743360,
+    "freeBytes": 15664955392,
+    "usedPercent": 54.28,
+    "thresholdPercent": 80
+  },
+  "GemIncrement": 0,
+  "scope": "Original17shader tests BEFORE ownership migration; no GPU/AP/UI acceptance"
+}

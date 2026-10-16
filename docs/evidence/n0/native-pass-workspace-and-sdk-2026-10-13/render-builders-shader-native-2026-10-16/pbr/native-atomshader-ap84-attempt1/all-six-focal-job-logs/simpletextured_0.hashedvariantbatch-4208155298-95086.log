@@ -1,0 +1,14 @@
+~~1792140643561~~1~~0000000000003C44~~Builder::RunJob~~Request started builder [19A912558DCB41C4B654706C1AD430D7 - 1] task (process) shaders/simpletextured_0.hashedvariantbatch 
+~~1792140643564~~1~~0000000000003C44~~AssetBuilder~~AssetBuilder: AllocatorManager before: allocatedBytes = 59899085 capacityBytes = 57982058496
+~~1792140643564~~1~~0000000000003C44~~AssetBuilder~~AssetBuilder: Running processJob task
+~~1792140643564~~1~~0000000000003C44~~AssetBuilder~~AssetBuilder: Source = F:/JericoEngine/JericoEngine/Projects/JEEditorFixture/Cache/Intermediate Assets/shaders/simpletextured_0.hashedvariantbatch
+~~1792140643564~~1~~0000000000003C44~~AssetBuilder~~AssetBuilder: Platform = pc
+~~1792140643564~~1~~0000000000003C44~~AssetBuilder~~C: [Platform API] = vulkan
+~~1792140643564~~1~~0000000000003C44~~AssetBuilder~~AZSL Compiler: Option {o_clamp} doesn't provide a default value, using {false} instead.
+~~1792140643564~~1~~0000000000003C44~~AssetBuilder~~C: [Platform API] = vulkan
+~~1792140643564~~1~~0000000000003C44~~AssetBuilder~~AZSL Compiler: Option {o_useColorChannels} doesn't provide a default value, using {false} instead.
+~~1792140643564~~1~~0000000000003C44~~AssetBuilder~~C: [Platform API] = vulkan
+~~1792140643564~~1~~0000000000003C44~~AssetBuilder~~ShaderVariantAssetBuilder: No azshaderVariant is produced on behalf of F:\JericoEngine\JericoEngine\Engine\Render\Integration\Assets\Shaders\SimpleTextured.shader, super variant , because it's using specialization constants for shader options.
+~~1792140643564~~1~~0000000000003C44~~AssetBuilder~~AssetBuilder: AllocatorManager after: allocatedBytes = 59899085 capacityBytes = 57982058496; allocated change = 0
+~~1792140643564~~1~~0000000000003C44~~AssetBuilder~~S: 0 errors, 0 warnings
+~~1792140643564~~1~~0000000000003C44~~Builder::RunJob~~Request stopped builder [19A912558DCB41C4B654706C1AD430D7 - 1] task (process) shaders/simpletextured_0.hashedvariantbatch 

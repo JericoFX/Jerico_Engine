@@ -1,0 +1,466 @@
+{
+  "backtraceGraph" : 
+  {
+    "commands" : 
+    [
+      "add_test",
+      "ly_add_test",
+      "ly_add_googletest"
+    ],
+    "files" : 
+    [
+      "F:/JericoEngine/JericoEngine/cmake/LYTestWrappers.cmake",
+      "F:/JericoEngine/JericoEngine/Code/Editor/CMakeLists.txt",
+      "F:/JericoEngine/JericoEngine/Gems/Atom/RPI/Code/CMakeLists.txt",
+      "F:/JericoEngine/JericoEngine/Gems/GraphModel/Code/CMakeLists.txt",
+      "F:/JericoEngine/JericoEngine/Gems/Atom/Tools/AtomToolsFramework/Code/CMakeLists.txt",
+      "F:/JericoEngine/JericoEngine/Gems/Atom/Tools/ShaderManagementConsole/Code/CMakeLists.txt",
+      "F:/JericoEngine/JericoEngine/Engine/Assets/RenderBuilders/CMakeLists.txt",
+      "F:/JericoEngine/JericoEngine/Editor/Materials/CMakeLists.txt"
+    ],
+    "nodes" : 
+    [
+      {
+        "file" : 1
+      },
+      {
+        "command" : 2,
+        "file" : 1,
+        "line" : 253,
+        "parent" : 0
+      },
+      {
+        "command" : 1,
+        "file" : 0,
+        "line" : 442,
+        "parent" : 1
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 148,
+        "parent" : 2
+      },
+      {
+        "file" : 2
+      },
+      {
+        "command" : 2,
+        "file" : 2,
+        "line" : 204,
+        "parent" : 4
+      },
+      {
+        "command" : 1,
+        "file" : 0,
+        "line" : 442,
+        "parent" : 5
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 148,
+        "parent" : 6
+      },
+      {
+        "file" : 3
+      },
+      {
+        "command" : 2,
+        "file" : 3,
+        "line" : 94,
+        "parent" : 8
+      },
+      {
+        "command" : 1,
+        "file" : 0,
+        "line" : 442,
+        "parent" : 9
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 148,
+        "parent" : 10
+      },
+      {
+        "file" : 4
+      },
+      {
+        "command" : 2,
+        "file" : 4,
+        "line" : 119,
+        "parent" : 12
+      },
+      {
+        "command" : 1,
+        "file" : 0,
+        "line" : 442,
+        "parent" : 13
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 148,
+        "parent" : 14
+      },
+      {
+        "file" : 5
+      },
+      {
+        "command" : 2,
+        "file" : 5,
+        "line" : 29,
+        "parent" : 16
+      },
+      {
+        "command" : 1,
+        "file" : 0,
+        "line" : 442,
+        "parent" : 17
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 148,
+        "parent" : 18
+      },
+      {
+        "file" : 6
+      },
+      {
+        "command" : 2,
+        "file" : 6,
+        "line" : 80,
+        "parent" : 20
+      },
+      {
+        "command" : 1,
+        "file" : 0,
+        "line" : 442,
+        "parent" : 21
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 148,
+        "parent" : 22
+      },
+      {
+        "file" : 6
+      },
+      {
+        "command" : 2,
+        "file" : 6,
+        "line" : 99,
+        "parent" : 24
+      },
+      {
+        "command" : 1,
+        "file" : 0,
+        "line" : 442,
+        "parent" : 25
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 148,
+        "parent" : 26
+      },
+      {
+        "file" : 7
+      },
+      {
+        "command" : 2,
+        "file" : 7,
+        "line" : 51,
+        "parent" : 28
+      },
+      {
+        "command" : 1,
+        "file" : 0,
+        "line" : 442,
+        "parent" : 29
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 148,
+        "parent" : 30
+      }
+    ]
+  },
+  "kind" : "ctestInfo",
+  "tests" : 
+  [
+    {
+      "backtrace" : 3,
+      "command" : 
+      [
+        "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/profile/AzTestRunner.exe",
+        "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/profile/EditorLib.Tests.dll",
+        "AzRunUnitTests",
+        "--gtest_output=xml:F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/Testing/Gtest/Legacy_EditorLib.Tests.xml",
+        "--gtest_filter=-*SUITE_smoke*:*SUITE_periodic*:*SUITE_benchmark*:*SUITE_sandbox*:*SUITE_awsi*"
+      ],
+      "config" : "profile",
+      "name" : "Legacy::EditorLib.Tests.main::TEST_RUN",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "FRAMEWORK_googletest",
+            "SUITE_main"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 1500.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/Code/Editor"
+        }
+      ]
+    },
+    {
+      "backtrace" : 7,
+      "command" : 
+      [
+        "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/profile/AzTestRunner.exe",
+        "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/profile/Atom_RPI.Tests.dll",
+        "AzRunUnitTests",
+        "--gtest_output=xml:F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/Testing/Gtest/Gem_Atom_RPI.Tests.xml",
+        "--gtest_filter=-*SUITE_smoke*:*SUITE_periodic*:*SUITE_benchmark*:*SUITE_sandbox*:*SUITE_awsi*"
+      ],
+      "config" : "profile",
+      "name" : "Gem::Atom_RPI.Tests.main::TEST_RUN",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "FRAMEWORK_googletest",
+            "SUITE_main"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 1500.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/External/RPI-86831dc8/Code"
+        }
+      ]
+    },
+    {
+      "backtrace" : 11,
+      "command" : 
+      [
+        "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/profile/AzTestRunner.exe",
+        "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/profile/GraphModel.Editor.Tests.dll",
+        "AzRunUnitTests",
+        "--gtest_output=xml:F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/Testing/Gtest/Gem_GraphModel.Editor.Tests.xml",
+        "--gtest_filter=-*SUITE_smoke*:*SUITE_periodic*:*SUITE_benchmark*:*SUITE_sandbox*:*SUITE_awsi*"
+      ],
+      "config" : "profile",
+      "name" : "Gem::GraphModel.Editor.Tests.main::TEST_RUN",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "FRAMEWORK_googletest",
+            "SUITE_main"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 1500.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/External/GraphModel-cfb2a15d/Code"
+        }
+      ]
+    },
+    {
+      "backtrace" : 15,
+      "command" : 
+      [
+        "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/profile/AzTestRunner.exe",
+        "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/profile/AtomToolsFramework.Tests.dll",
+        "AzRunUnitTests",
+        "--gtest_output=xml:F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/Testing/Gtest/Gem_AtomToolsFramework.Tests.xml",
+        "--gtest_filter=-*SUITE_smoke*:*SUITE_periodic*:*SUITE_benchmark*:*SUITE_sandbox*:*SUITE_awsi*"
+      ],
+      "config" : "profile",
+      "name" : "Gem::AtomToolsFramework.Tests.main::TEST_RUN",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "FRAMEWORK_googletest",
+            "SUITE_main"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 1500.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/External/AtomToolsFramework-281a8d13/Code"
+        }
+      ]
+    },
+    {
+      "backtrace" : 19,
+      "command" : 
+      [
+        "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/profile/AzTestRunner.exe",
+        "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/profile/ShaderManagementConsole.VariantGenerator.Tests.dll",
+        "AzRunUnitTests",
+        "--gtest_output=xml:F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/Testing/Gtest/Gem_ShaderManagementConsole.VariantGenerator.Tests.xml",
+        "--gtest_filter=-*SUITE_smoke*:*SUITE_periodic*:*SUITE_benchmark*:*SUITE_sandbox*:*SUITE_awsi*"
+      ],
+      "config" : "profile",
+      "name" : "Gem::ShaderManagementConsole.VariantGenerator.Tests.main::TEST_RUN",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "FRAMEWORK_googletest",
+            "SUITE_main"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 1500.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/External/ShaderManagementConsole-f38e85ad/Code"
+        }
+      ]
+    },
+    {
+      "backtrace" : 23,
+      "command" : 
+      [
+        "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/profile/AzTestRunner.exe",
+        "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/profile/RenderAssetBuilders.Tests.dll",
+        "AzRunUnitTests",
+        "--gtest_output=xml:F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/Testing/Gtest/JE_RenderAssetBuilders.Tests.xml",
+        "--gtest_filter=-*SUITE_smoke*:*SUITE_periodic*:*SUITE_benchmark*:*SUITE_sandbox*:*SUITE_awsi*"
+      ],
+      "config" : "profile",
+      "name" : "JE::RenderAssetBuilders.Tests.main::TEST_RUN",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "FRAMEWORK_googletest",
+            "SUITE_main"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 1500.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/Engine/Assets/RenderBuilders"
+        }
+      ]
+    },
+    {
+      "backtrace" : 27,
+      "command" : 
+      [
+        "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/profile/AzTestRunner.exe",
+        "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/profile/ShaderCompiler.Tests.dll",
+        "AzRunUnitTests",
+        "--gtest_output=xml:F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/Testing/Gtest/JE_ShaderCompiler.Tests.xml",
+        "--gtest_filter=-*SUITE_smoke*:*SUITE_periodic*:*SUITE_benchmark*:*SUITE_sandbox*:*SUITE_awsi*"
+      ],
+      "config" : "profile",
+      "name" : "JE::ShaderCompiler.Tests.main::TEST_RUN",
+      "properties" : 
+      [
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "FRAMEWORK_googletest",
+            "SUITE_main"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 1500.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/Engine/Assets/RenderBuilders"
+        }
+      ]
+    },
+    {
+      "backtrace" : 31,
+      "command" : 
+      [
+        "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/profile/AzTestRunner.exe",
+        "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/profile/EditorMaterials.Tests.dll",
+        "AzRunUnitTests",
+        "--gtest_output=xml:F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/Testing/Gtest/JE_EditorMaterials.Tests.xml",
+        "--gtest_filter=-*SUITE_smoke*:*SUITE_periodic*:*SUITE_benchmark*:*SUITE_sandbox*:*SUITE_awsi*"
+      ],
+      "config" : "profile",
+      "name" : "JE::EditorMaterials.Tests.main::TEST_RUN",
+      "properties" : 
+      [
+        {
+          "name" : "ENVIRONMENT",
+          "value" : 
+          [
+            "QT_QPA_PLATFORM=offscreen",
+            "QT_QPA_PLATFORM_PLUGIN_PATH=F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/qt-6.11.2-rev1-windows/qt/plugins/platforms"
+          ]
+        },
+        {
+          "name" : "LABELS",
+          "value" : 
+          [
+            "FRAMEWORK_googletest",
+            "SUITE_main"
+          ]
+        },
+        {
+          "name" : "TIMEOUT",
+          "value" : 1500.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/Engine/Editor/Materials"
+        }
+      ]
+    }
+  ],
+  "version" : 
+  {
+    "major" : 1,
+    "minor" : 0
+  }
+}

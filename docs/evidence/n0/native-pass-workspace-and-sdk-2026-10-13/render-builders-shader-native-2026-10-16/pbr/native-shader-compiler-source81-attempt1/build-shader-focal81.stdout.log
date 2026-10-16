@@ -1,0 +1,59 @@
+Versión de MSBuild 17.14.40+3e7442088 para .NET Framework
+
+  1>Checking Build System
+  cityhash.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\cityhash.lib
+  mimalloc.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\mimalloc.lib
+  AzCore.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AzCore.dll
+  AzNetworking.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\AzNetworking.lib
+  AzFramework.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AzFramework.dll
+  AzFramework.NativeUI.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AzFramework.NativeUI.dll
+  AzQtComponents.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AzQtComponents.dll
+  AzToolsFramework.Static.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\AzToolsFramework.Static.lib
+  sqlite.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\sqlite3.lib
+  AzToolsFramework.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AzToolsFramework.dll
+  xxhash.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\xxhash.lib
+  AssetBuilderSDK.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\AssetBuilderSDK.lib
+  Atom_RHI.Reflect.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_RHI.Reflect.dll
+  Atom_RHI.Public.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_RHI.Public.dll
+  Atom_RHI.Edit.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\Atom_RHI.Edit.lib
+  meshoptimizer.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\meshoptimizer.lib
+  Atom_RPI.Public.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_RPI.Public.dll
+  Atom_RPI.Edit.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_RPI.Edit.dll
+  Building Custom Rule F:/JericoEngine/JericoEngine/Engine/Assets/RenderBuilders/CMakeLists.txt
+  CommonTypes.cpp
+  Preprocessor.cpp
+  AzslShaderBuilderSystemComponent.cpp
+  ShaderAssetBuilder.cpp
+  ShaderBuilderUtility.cpp
+  AzslCompiler.cpp
+  ShaderVariantAssetBuilder.cpp
+  PrecompiledShaderBuilder.cpp
+  SrgLayoutUtility.cpp
+  ShaderBuildArgumentsManager.cpp
+  ShaderVariantListBuilder.cpp
+  ShaderCompiler.Private.Object.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\Engine\Assets\RenderBuilders\ShaderCompiler.Private.Object.dir\profile\ShaderCompiler.Private.Object.lib
+  benchmark.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\benchmark.lib
+  gmock.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\gmock.lib
+  gtest.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\gtest.lib
+  AzTest.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\AzTest.lib
+  AzTestRunner.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AzTestRunner.exe
+  CryCommon.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\CryCommon.lib
+  SceneCore.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\SceneCore.dll
+  SceneData.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\SceneData.dll
+  Building Custom Rule F:/JericoEngine/JericoEngine/Engine/Assets/RenderBuilders/CMakeLists.txt
+  RenderAssetBuilders.Private.Object.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\Engine\Assets\RenderBuilders\RenderAssetBuilders.Private.Object.dir\profile\RenderAssetBuilders.Private.Object.lib
+  antlr4.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\antlr4.lib
+  jsoncpp.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\jsoncpp.lib
+  ShaderCompiler.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\lib\profile\ShaderCompiler.lib
+  Azslc.vcxproj -> F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\azslc.exe
+  Copying RenderAssetBuilders runtime dependencies to output...
+  -- Copying "F:/JericoEngine/JericoEngine/Engine/Assets/RenderBuilders/ShaderHeaders/Platform/Windows/Vulkan/AzslcHeader.azsli" to "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/profile/Builders/ShaderHeaders/Platform/Windows/Vulkan"...
+  -- Copying "F:/JericoEngine/JericoEngine/Engine/Assets/RenderBuilders/ShaderHeaders/Platform/Windows/Vulkan/PlatformHeader.hlsli" to "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/profile/Builders/ShaderHeaders/Platform/Windows/Vulkan"...
+  -- Copying "F:/JericoEngine/JericoEngine/Engine/Assets/RenderBuilders/ShaderHeaders/Platform/Windows/Null/AzslcHeader.azsli" to "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/profile/Builders/ShaderHeaders/Platform/Windows/Null"...
+  Building Custom Rule F:/JericoEngine/JericoEngine/Engine/Assets/RenderBuilders/CMakeLists.txt
+  RenderAssetBuildersModule.cpp
+  ShaderCompilerToolsModule.cpp
+F:\JericoEngine\JericoEngine\Engine\Assets\RenderBuilders\Source\Shader\AzslData.h(19,1): error C1083: No se puede abrir el archivo incluir: 'CommonFiles/CommonTypes.h': No such file or directory [F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\Engine\Assets\RenderBuilders\RenderAssetBuilders.vcxproj]
+  #include <CommonFiles/CommonTypes.h>
+  ^ (compilando archivo de origen "../../../../../../Engine/Assets/RenderBuilders/Source/ShaderCompilerToolsModule.cpp")
+  

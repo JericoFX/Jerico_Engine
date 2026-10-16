@@ -1,0 +1,43 @@
+{
+  "phase": "build-shader-focal82",
+  "startedUtc": "2026-10-16T08:13:10.1335726Z",
+  "pid": 21220,
+  "processCreationUtc": "2026-10-16T08:13:10.1732250Z",
+  "ramBefore": {
+    "capturedUtc": "2026-10-16T08:13:10.1335362Z",
+    "totalBytes": 34265743360,
+    "freeBytes": 19951153152,
+    "usedPercent": 41.78,
+    "thresholdPercent": 80
+  },
+  "executable": "C:\\Program Files\\CMake\\bin\\cmake.exe",
+  "argv": [
+    "--build",
+    "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine",
+    "--config",
+    "profile",
+    "--target",
+    "ShaderCompiler.Tests",
+    "RenderAssetBuilders.Tests",
+    "ShaderManagementConsole.VariantGenerator.Tests",
+    "EditorMaterials.Tests",
+    "AtomToolsFramework.Tests",
+    "GraphModel.Editor.Tests",
+    "EditorLib.Tests",
+    "Atom_RPI.Tests",
+    "--parallel",
+    "1",
+    "--",
+    "/m:1",
+    "/p:UseMultiToolTask=true",
+    "/p:MultiProcCL=true",
+    "/p:MultiProcMaxCount=1",
+    "/p:EnableClServerMode=false",
+    "/p:EnforceProcessCountAcrossBuilds=true",
+    "/p:CL_MPCount=1",
+    "/nodeReuse:false"
+  ],
+  "workingDirectory": "F:\\JericoEngine\\JericoEngine",
+  "stdout": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-shader-compiler-source82-attempt1\\build-shader-focal82.stdout.log",
+  "stderr": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-shader-compiler-source82-attempt1\\build-shader-focal82.stderr.log"
+}

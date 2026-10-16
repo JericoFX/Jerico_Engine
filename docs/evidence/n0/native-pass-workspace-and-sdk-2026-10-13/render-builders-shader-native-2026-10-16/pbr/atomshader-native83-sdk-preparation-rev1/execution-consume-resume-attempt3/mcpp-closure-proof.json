@@ -1,0 +1,69 @@
+{
+  "addition": {
+    "source": {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-vk77\\bin\\Windows\\profile\\Default\\mcpp0.dll",
+      "bytes": 135168,
+      "sha256": "E28DB7EF935D6584D0F3EF38849F17D3475F3413251B205C59A5B15484DD66E9"
+    },
+    "copy": {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-vk-consumer83\\bin\\profile\\mcpp0.dll",
+      "bytes": 135168,
+      "sha256": "E28DB7EF935D6584D0F3EF38849F17D3475F3413251B205C59A5B15484DD66E9"
+    }
+  },
+  "scope": "New public shader factory/hash consumer exercises legacy shader tool dependency already imported by old AtomShader.Builders and new RenderAssetBuilders; no runtime product expansion.",
+  "parentReview": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native83-sdk-preparation-rev1\\parent-mcpp-closure-review83.json",
+    "bytes": 3453,
+    "sha256": "6901EF57082D3C2FF40E9C71F39AB4FD82EFAF836196C9AD4F0AE02A1EC06155"
+  },
+  "cmakeReview": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\sdk83-mcpp-dependency-readonly-rev1\\receipt.json",
+    "bytes": 12845,
+    "sha256": "18955CC057B9DE37F1B26B7C80791632625494672218DD3F11C1C1A417FE4DAA"
+  },
+  "expectedNames": [
+    "Atom_Feature_Common.Public.dll",
+    "Atom_RHI.Public.dll",
+    "Atom_RHI.Reflect.dll",
+    "Atom_RPI.Edit.dll",
+    "Atom_RPI.Public.dll",
+    "AzCore.dll",
+    "AzFramework.dll",
+    "AzFramework.NativeUI.dll",
+    "AzQtComponents.dll",
+    "AzToolsFramework.dll",
+    "DearImGui.dll",
+    "DebugImGui.dll",
+    "EditorCamera.dll",
+    "EditorMaterials.dll",
+    "EditorRenderIntegration.dll",
+    "mcpp0.dll",
+    "ProfilerCapture.dll",
+    "ProfilerView.dll",
+    "Qt6Core.dll",
+    "Qt6Gui.dll",
+    "Qt6Network.dll",
+    "Qt6Svg.dll",
+    "Qt6SvgWidgets.dll",
+    "Qt6Widgets.dll",
+    "Qt6Xml.dll",
+    "RenderAssetBuilders.dll",
+    "RenderDebug.dll",
+    "RenderIntegration.dll",
+    "RenderMaterials.dll",
+    "SceneCore.dll",
+    "SceneData.dll",
+    "WorldCamera.dll"
+  ],
+  "prior31": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\sdk-vulkan-source77-preparation-rev1\\execution-registry-replay-attempt2\\runtime-deploy-review.json",
+    "bytes": 15504,
+    "sha256": "459C87081A78705ED767C93646D12675E02629E33C9B0A2F9D099FDF9C242330"
+  },
+  "review": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native83-sdk-preparation-rev1\\mcpp-provenance-review83\\review-final.json",
+    "bytes": 7088,
+    "sha256": "90A6502E84907673A31BD278C697EA3F3C6F9611FF27D991DAB1396241C09390"
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "state": "SOURCE_VERIFIED_DB_OBSERVATION_PENDING_PARENT_AP84_REVIEW",
+  "enum": {
+    "NoLoad": 2,
+    "PreLoad": 0,
+    "lines": "217-221",
+    "file": "Code/Framework/AzCore/AzCore/Asset/AssetCommon.h",
+    "QueueLoad": 1
+  },
+  "representation": {
+    "type": "AZStd::bitset<64>",
+    "loadBehaviorHighBit": 1,
+    "lines": "1220-1238",
+    "file": "Code/Framework/AzCore/AzCore/Asset/AssetCommon.h",
+    "loadBehaviorLowBit": 0
+  },
+  "encoder": {
+    "PreLoadDatabaseInteger": 0,
+    "PreLoadFlagsHex": "0000000000000000",
+    "lines": "506-519",
+    "file": "Code/Framework/AzCore/AzCore/Asset/AssetCommon.cpp",
+    "operation": "Initialize bitset64 tozero, copy loadBehavior bits0-1 only"
+  },
+  "producer": {
+    "file": "Engine/Assets/RenderBuilders/Source/Shader/PrecompiledShaderBuilder.cpp",
+    "append": "jobProduct.m_dependencies.push_back(productDependency)",
+    "explicitAssignment": "productDependency.m_flags = AZ::Data::ProductDependencyInfo::CreateFlags(AZ::Data::AssetLoadBehavior::PreLoad)",
+    "outputLines": "255-260 ShaderAsset/subID0/dependenciesHandled=true",
+    "lines": "211-214",
+    "dependencyId": "assetOutcome.GetValue().GetId() of actual root ShaderVariantAsset"
+  },
+  "persistence": {
+    "binding": "entry.m_dependencyFlags.to_ullong() into ProductDependencies.DependencyFlags INTEGER NOT NULL",
+    "sqlFile": "Code/Tools/AssetProcessor/native/AssetDatabase/AssetDatabase.cpp",
+    "file": "Code/Tools/AssetProcessor/native/AssetManager/assetProcessorManager.cpp",
+    "updateLine": 3072,
+    "operation": "newProduct.m_productID + dependencyGuid/SubId + productDependency.m_flags -> dependencyContainer unchanged; FromAssetId=true",
+    "lines": "1741-1743",
+    "insertLine": 3030
+  },
+  "requiredDbCheck": "Actual .azshader ProductPK/currentSourceGuid/subID0 and dependency root SourceGuid+subID0/type51BED815 correct, flags EXACT INTEGER0; presence alone does not prove PreLoad, nor is flags>0 stronger. Do not infer global AP PASS.",
+  "sourcePins": [
+    {
+      "path": "Code/Framework/AzCore/AzCore/Asset/AssetCommon.h",
+      "bytes": 55755,
+      "sha256": "BCFA1C7D69488ACFA28ED24581E10106F2766EC7BB6CF827AE9750DD4585D72B"
+    },
+    {
+      "path": "Code/Framework/AzCore/AzCore/Asset/AssetCommon.cpp",
+      "bytes": 18923,
+      "sha256": "253B92746A2D33CFF72F8A60F30B0E6E1684C8968921A321954ADCCEFE746946"
+    },
+    {
+      "path": "Engine/Assets/RenderBuilders/Source/Shader/PrecompiledShaderBuilder.cpp",
+      "bytes": 14507,
+      "sha256": "BBEFF7123A0AC5A5D9231072A96486A8DB77B9684E37E0BA649A46899457783D"
+    },
+    {
+      "path": "Code/Tools/AssetProcessor/native/AssetManager/assetProcessorManager.cpp",
+      "bytes": 313027,
+      "sha256": "EFF7B7AAC0B464D44F5D52337670774AC735FE9203F6D0BD1B97F8EE74E8A97D"
+    },
+    {
+      "path": "Code/Tools/AssetProcessor/native/AssetDatabase/AssetDatabase.cpp",
+      "bytes": 166918,
+      "sha256": "D3D8ECA42EC37EE5539204E15143EF3271969160EEF77F95EEA46FDD41FFC114"
+    },
+    {
+      "path": "Code/Framework/AzToolsFramework/AzToolsFramework/AssetDatabase/AssetDatabaseConnection.h",
+      "bytes": 44552,
+      "sha256": "5D810C4D5756A457008024271AAD6552A1468875E9D9391EAA35C78959872F81"
+    }
+  ],
+  "graph": "Single focused CreateFlags query exit0 PID5768, shared authoritative index, no refresh/server; other AP/producer graph facts reused, bounded exact persistence details read",
+  "helpers": 0
+}

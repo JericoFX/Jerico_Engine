@@ -1,0 +1,254 @@
+{
+  "state": "PRIVATE_PREPARED_NOT_RUN_PARENT_REVIEW_REQUIRED",
+  "createdUtc": "2026-10-16T05:58:13.5770683-03:00",
+  "directory": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native83-sdk-preparation-rev1",
+  "skills": {
+    "cppSHA256": "53017F862C526DF6080210A1A00E6678C2CD5382B5D1A51026BF3B0BDE7F7ED2",
+    "gameSHA256": "4578FACCE19AC99396E5FE904EAC173066FA517AF16AE0F49B03F9082A1057EC",
+    "gameCompleteReused": true,
+    "QtRequired": false,
+    "cppCompleteReused": true
+  },
+  "sourceFiles": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native83-sdk-preparation-rev1\\source\\CMakeLists.txt",
+      "bytes": 2984,
+      "sha256": "23120ED6BBC038B99E184DEC3594D115F597550BD88DEF07FC1118A07696BF5B"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native83-sdk-preparation-rev1\\source\\consumer_files.cmake",
+      "bytes": 25,
+      "sha256": "2F0ACA6BAD0CF988A388EC9D4664ED2E2D507B4E03958E23730768D314E3006E"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native83-sdk-preparation-rev1\\source\\main.cpp",
+      "bytes": 12375,
+      "sha256": "FA7263CD8DF60CD991013BC16346D566B19B2084F9E2AACC7B1785B84932EAD4"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native83-sdk-preparation-rev1\\source\\project.json",
+      "bytes": 388,
+      "sha256": "3A7625CD2BE22DFD8B3C36C4C68932693611513A980111870371A291F12197C4"
+    }
+  ],
+  "patchChecks": [
+    {
+      "beforeSHA256": "B2B9A7C30878D8F024CA2B96B8B182C126559DC1ED6606DF3B675D75E287275C",
+      "originalEOFNewline": true,
+      "forwardAndInverseByteExact": true,
+      "candidateSHA256": "DB3CE9A55864A0E471952B2BB1AEF89FB9FA8379C277F72A6B1E7A098FE0D763",
+      "file": "run-sdk-current.ps1"
+    },
+    {
+      "beforeSHA256": "92BB3D793B3A6EA453238295907668289953CD4B4CDDF0225D6E5EA39FF584F5",
+      "originalEOFNewline": false,
+      "forwardAndInverseByteExact": true,
+      "candidateSHA256": "523192450686949AC787B97D7E065A54928CE46F8CB2A25728CD18BF2C383418",
+      "file": "recipe.json"
+    },
+    {
+      "beforeSHA256": "AFD2A59B861D8BA1027F3C8B12E28DEE71C1E461EDB9F4C0D808379445AE753D",
+      "originalEOFNewline": false,
+      "forwardAndInverseByteExact": true,
+      "candidateSHA256": "29B3CA98264D7035CE2B5B96848AD96AE237988FED9E806E88502F1B88193DE7",
+      "file": "preparation.json"
+    },
+    {
+      "beforeSHA256": "2B9E3029CE38B675E5A54D8BE5FE2B0BA6AADEF284AB7D95990A8ABC2710AF53",
+      "originalEOFNewline": true,
+      "forwardAndInverseByteExact": true,
+      "candidateSHA256": "23120ED6BBC038B99E184DEC3594D115F597550BD88DEF07FC1118A07696BF5B",
+      "file": "source\\CMakeLists.txt"
+    }
+  ],
+  "parserErrors": 0,
+  "dryRun": "Three no-Execute variants returned PREPARED_NOT_RUN before preflight/IO/native",
+  "dependencyPins": 25,
+  "functionDelta": [
+    {
+      "name": "Json",
+      "count": 1,
+      "byteExact": true
+    },
+    {
+      "name": "Save",
+      "count": 1,
+      "byteExact": true
+    },
+    {
+      "name": "Pin",
+      "count": 1,
+      "byteExact": true
+    },
+    {
+      "name": "Verify",
+      "count": 1,
+      "byteExact": true
+    },
+    {
+      "name": "NativeAdmission",
+      "count": 1,
+      "byteExact": true
+    },
+    {
+      "name": "VerifyFrozenCohort",
+      "count": 1,
+      "byteExact": false
+    },
+    {
+      "name": "VerifyProtected",
+      "count": 1,
+      "byteExact": true
+    },
+    {
+      "name": "VerifyEffectiveMaterialGate",
+      "count": 1,
+      "byteExact": false
+    },
+    {
+      "name": "AssertProductRegistry",
+      "count": 1,
+      "byteExact": true
+    },
+    {
+      "name": "Resources",
+      "count": 1,
+      "byteExact": true
+    },
+    {
+      "name": "Run",
+      "count": 1,
+      "byteExact": false
+    },
+    {
+      "name": "Inventory",
+      "count": 1,
+      "byteExact": true
+    }
+  ],
+  "baseline": "Accepted77 execution-registry-replay-attempt2/sdk-final-inventory.json; post-install-registry-fixed-tail.ps1 reused (2Profile/6total registries), original failed run remains preserved",
+  "quarantine": {
+    "ownerFiles": 33,
+    "proposal": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native83-sdk-preparation-rev1\\quarantine-proposal.json",
+    "physicalPinsMatchedAccepted77": true,
+    "staticLib": 1,
+    "files": 35,
+    "writerPerformed": false,
+    "absentBuildersLibPdbNotAdded": true,
+    "dll": 1
+  },
+  "phases": [
+    "Install source82 to existing SDK77; verify accepted baseline, actual include/destination closure, full frozen inputs, then stop before quarantine",
+    "Parent quarantines exactly35 recoverably and provides approved=true/reviewer=/root pinned receipt; no runner move/delete",
+    "Consume requires actual InstallStateSHA and exact postinstall SDK minus35, fresh consumer83, then configure/build/import/loader/postflight"
+  ],
+  "guards": {
+    "authored": 40,
+    "RunDiagnosticsProcessStartTimePreserved": true,
+    "msbuild": "/m:1/noReuse",
+    "sourceInputs": 14034,
+    "taskLocalCLTail": "/MP1",
+    "activeGuardPercent": 80,
+    "minimumFreeGiB": 10,
+    "admissionBelowPercent": 70,
+    "pollMilliseconds": 3000,
+    "owner": 26
+  },
+  "preservedGates": [
+    "Install closure/destinations/offline/generated config/frozen inputs; no component-restricted partial install",
+    "Closed parent-reviewed811 and HOSTS10 source82, cache583D5...727BC; no rerun and no AP84wholePASS prerequisite",
+    "Current effective Material77 object/DLL49B757...421F0/raw4exports revalidated; no demand for source77 cohort byteidentity",
+    "Compiler /MD C++20 standard/conformance; five SDK-only imported reports; only approved thirdparty+SDK+private consumer/build83 internal includes",
+    "Exact31 deployed DLL names from accepted77, each byte-exact current SDK; existing factory/3contextABI imports plus shaderfactory/exported hash imports",
+    "Three lifecycle success messages, exit0/noassert/allocator errors; SDK no drift afterconfigure; authored40/owner26 and source82/installinputs rechecked",
+    "Historical extras+44metadata additions permitted only exact names/bytes/hashes; exact35 retirement, no broad waiver"
+  ],
+  "limits": [
+    "Install/consume/build/loader/native NOT_RUN, no source/config/SDK writes or project staging",
+    "AP84 only needs closure and exact temporary3 source absence; its twoNoOutput specialization branches and partialcook status do not gate SDK CPU82 evidence",
+    "Parent must bind real successful install-state and quarantine review pins for Consume; recipe.consumeRunnerArgv remains empty/template",
+    "No dynamic noPython/noNull/Shipping, renderer/AP/cook/GPU/UI/Gem acceptance; no new dependencies",
+    "Initial diff generator refused historical JSON without final newline; corrected using explicit no-newline marker and byte-exact inverse, no candidate/live/native effect"
+  ],
+  "nativeRuns": 0,
+  "liveSourceWrites": 0,
+  "sdkWrites": 0,
+  "newGraphLoads": 0,
+  "helpers": 0,
+  "ramPreparationOnly": {
+    "usedPercent": 41.85,
+    "freeBytes": 19924316160
+  },
+  "pins": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native83-sdk-preparation-rev1\\consumer-cmake.inverse.patch",
+      "bytes": 6025,
+      "sha256": "D76F57BA4717059B1DE461CB24CEE8782BE5D3EC925C0BD69EACF7857BD39EEC"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native83-sdk-preparation-rev1\\consumer-cmake.patch",
+      "bytes": 6025,
+      "sha256": "5A32E10DBA0B791209BB28E3830A8297516E0B1F3002F85F853FAC355A8F4F9B"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native83-sdk-preparation-rev1\\function-delta.json",
+      "bytes": 957,
+      "sha256": "18EDE531358E79DEB8CB5EAF55C3A59DA196189DCA9043F9E37DE13A15C9706F"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native83-sdk-preparation-rev1\\patch-checks.json",
+      "bytes": 1202,
+      "sha256": "A8EA5409AEB1C8F6A79398B85AC04C969868D9B2AA6BF73F95894416CF7C42CA"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native83-sdk-preparation-rev1\\preparation.inverse.patch",
+      "bytes": 29278,
+      "sha256": "B6E475EFEB87E38B5F794439BB4705D0E5C8C48FE8A376B8E3D28C853E5472DF"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native83-sdk-preparation-rev1\\preparation.json",
+      "bytes": 14173,
+      "sha256": "29B3CA98264D7035CE2B5B96848AD96AE237988FED9E806E88502F1B88193DE7"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native83-sdk-preparation-rev1\\preparation.patch",
+      "bytes": 29278,
+      "sha256": "9A03DDFB2DE6206DC1637E4E33F8651AA3A7775DEE85DEFDC266528E8019E96B"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native83-sdk-preparation-rev1\\quarantine-proposal.json",
+      "bytes": 8574,
+      "sha256": "A714692A4B2882C31DC62F7B9C8C8A14BB361B227995D7134C0F23F41DE7AFA2"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native83-sdk-preparation-rev1\\recipe.inverse.patch",
+      "bytes": 20663,
+      "sha256": "ADC7C6E2EBEE85E3A4E579E974E572BE51AAD111F58C68B114856D60191388B0"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native83-sdk-preparation-rev1\\recipe.json",
+      "bytes": 11620,
+      "sha256": "523192450686949AC787B97D7E065A54928CE46F8CB2A25728CD18BF2C383418"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native83-sdk-preparation-rev1\\recipe.patch",
+      "bytes": 20663,
+      "sha256": "8A3EC0CE9DB344DD0AB26AFBE7FEDFB25926622159C7BB79923E812B3F7A7624"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native83-sdk-preparation-rev1\\run-sdk-current.ps1",
+      "bytes": 34190,
+      "sha256": "DB3CE9A55864A0E471952B2BB1AEF89FB9FA8379C277F72A6B1E7A098FE0D763"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native83-sdk-preparation-rev1\\runner.inverse.patch",
+      "bytes": 60854,
+      "sha256": "2CB810638DF652996E139DD6DEBEBB3FC92F17588C5A9313BEE137302336C578"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native83-sdk-preparation-rev1\\runner.patch",
+      "bytes": 60854,
+      "sha256": "2949D9134625576062A21632575C7E388734FDA983526998F67A0E21B880BFBD"
+    }
+  ]
+}

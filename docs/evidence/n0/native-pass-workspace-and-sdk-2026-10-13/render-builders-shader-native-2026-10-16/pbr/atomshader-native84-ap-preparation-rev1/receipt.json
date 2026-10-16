@@ -1,0 +1,178 @@
+{
+  "state": "PRIVATE_PREPARED_NOT_RUN_BIND_FREEZE84_AND_REVIEW82_BEFORE_EXECUTE",
+  "createdUtc": "2026-10-16T05:38:06.3726915-03:00",
+  "scope": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native84-ap-preparation-rev1",
+  "sourceOrConfigLiveWrites": 0,
+  "stagedFiles": 0,
+  "nativeRuns": 0,
+  "helpers": 0,
+  "newGraphLoads": 0,
+  "skills": {
+    "cppCompleteReused": true,
+    "QtRequired": false,
+    "gameSHA256": "4578FACCE19AC99396E5FE904EAC173066FA517AF16AE0F49B03F9082A1057EC",
+    "gameCompleteReused": true,
+    "cppSHA256": "53017F862C526DF6080210A1A00E6678C2CD5382B5D1A51026BF3B0BDE7F7ED2"
+  },
+  "checks": [
+    {
+      "beforeSHA256": "4819D6AE46398FEBACD95F14C98F131461F7B60124FED19D0C8421C5471E9EBA",
+      "name": "runner",
+      "inverseExact": true,
+      "candidateSHA256": "7E3BCF2AC6416DF431D1374A3A9ECBB6644D173F1213062AD9FCB5A24290A5CA",
+      "forwardExact": true
+    },
+    {
+      "beforeSHA256": "898E333155F1AA5534C05BBE04C7F7CB55509650C9BF445B8FE168D8953550C6",
+      "name": "observer",
+      "inverseExact": true,
+      "candidateSHA256": "FAAA9DDB6025008B66D5ACE0C431C3A1A0F535B3CED2148C3A99552D56D7DFFD",
+      "forwardExact": true
+    },
+    {
+      "beforeSHA256": "1C24F88F06D01B98DDB409B40C159A5270E47066B1799E66D0EEBDAEDFDD4AB9",
+      "name": "query",
+      "inverseExact": true,
+      "candidateSHA256": "003EB1F2E443C0AA1E30AB5E0DFF4491F6C5D229568CBE10E61946EDFAF9E6E4",
+      "forwardExact": true
+    }
+  ],
+  "parser": [
+    {
+      "file": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native84-ap-preparation-rev1\\Observe-AssetModules84.ps1",
+      "errors": 0,
+      "bytes": 3345,
+      "sha256": "FAAA9DDB6025008B66D5ACE0C431C3A1A0F535B3CED2148C3A99552D56D7DFFD"
+    },
+    {
+      "file": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native84-ap-preparation-rev1\\Query-ShaderSources84Snapshot.ps1",
+      "errors": 0,
+      "bytes": 13397,
+      "sha256": "003EB1F2E443C0AA1E30AB5E0DFF4491F6C5D229568CBE10E61946EDFAF9E6E4"
+    },
+    {
+      "file": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native84-ap-preparation-rev1\\Review-ShaderSources84.ps1",
+      "errors": 0,
+      "bytes": 8935,
+      "sha256": "9B52628366FF09A471C95037B4418BC9F092B92FA63E58B83C5E44899A2EBDAB"
+    },
+    {
+      "file": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native84-ap-preparation-rev1\\RunFrozenShaderAP84.ps1",
+      "errors": 0,
+      "bytes": 26680,
+      "sha256": "7E3BCF2AC6416DF431D1374A3A9ECBB6644D173F1213062AD9FCB5A24290A5CA"
+    },
+    {
+      "file": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native84-ap-preparation-rev1\\Snapshot-AssetDatabase78.ps1",
+      "errors": 0,
+      "bytes": 2204,
+      "sha256": "48A603E7384C3B43D24FC80387B9B43EE2CD0D55925319E1421073C35C05CCD4"
+    }
+  ],
+  "sevenGuardFunctions82ByteExact": true,
+  "snapshot78ByteExact": true,
+  "dryRun": "PREPARED_NOT_RUN before side effects; no child/DB query/source rehash/staging/launch",
+  "files": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native84-ap-preparation-rev1\\binary-pins82.json",
+      "bytes": 1377,
+      "sha256": "D0E424F96FFD9502809D7BE15E0835DE36478C575F032EDB09966D0E9A466520"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native84-ap-preparation-rev1\\Observe-AssetModules84.ps1",
+      "bytes": 3345,
+      "sha256": "FAAA9DDB6025008B66D5ACE0C431C3A1A0F535B3CED2148C3A99552D56D7DFFD"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native84-ap-preparation-rev1\\observer.inverse.patch",
+      "bytes": 2450,
+      "sha256": "687248C4B31DEB5168D5A7BC0EBA5BC20930DE334AF82644C14531A16727B38E"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native84-ap-preparation-rev1\\observer.patch",
+      "bytes": 2450,
+      "sha256": "41A81C7F0BC5173702C3C390B015A29CA906648FC52B34CD9ADC1A3137064E30"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native84-ap-preparation-rev1\\preparation-pins.json",
+      "bytes": 3519,
+      "sha256": "2C8F20378CDF73018870F4AAFDD3BC00761569A06D54C61D522D8D7FA0B029F0"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native84-ap-preparation-rev1\\Query-ShaderSources84Snapshot.ps1",
+      "bytes": 13397,
+      "sha256": "003EB1F2E443C0AA1E30AB5E0DFF4491F6C5D229568CBE10E61946EDFAF9E6E4"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native84-ap-preparation-rev1\\query.inverse.patch",
+      "bytes": 13752,
+      "sha256": "621EE8585084158DADC8805546D9C122FB1A6B7E1B80DE389AE5D0EC63993E1D"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native84-ap-preparation-rev1\\query.patch",
+      "bytes": 13752,
+      "sha256": "CAA649B2D86AF5982156B1A74A5CACA9CD2BF15B5132952F0B384EB8534D6FE8"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native84-ap-preparation-rev1\\recipe.json",
+      "bytes": 4010,
+      "sha256": "C511A2628AF2AD5D7B6E00AC7F585D31764927F0A0956358E8987116B9ACE227"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native84-ap-preparation-rev1\\reprocess-sources.txt",
+      "bytes": 569,
+      "sha256": "80DF3624D6916097C2E3AC0FFBD52775736FF01238D58AEC18C5B919FAB4D91F"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native84-ap-preparation-rev1\\Review-ShaderSources84.ps1",
+      "bytes": 8935,
+      "sha256": "9B52628366FF09A471C95037B4418BC9F092B92FA63E58B83C5E44899A2EBDAB"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native84-ap-preparation-rev1\\RunFrozenShaderAP84.ps1",
+      "bytes": 26680,
+      "sha256": "7E3BCF2AC6416DF431D1374A3A9ECBB6644D173F1213062AD9FCB5A24290A5CA"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native84-ap-preparation-rev1\\runner.inverse.patch",
+      "bytes": 26440,
+      "sha256": "F79F5B3ED5FC9E7870B2BF23AB73AF09305C478BBD916D4989A1A3BCC3FD5006"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native84-ap-preparation-rev1\\runner.patch",
+      "bytes": 26440,
+      "sha256": "A78970A2EE14B6A079B7430FAC708CA5A39E0D38D1ABC49EC6986FF7CF050FF6"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native84-ap-preparation-rev1\\Snapshot-AssetDatabase78.ps1",
+      "bytes": 2204,
+      "sha256": "48A603E7384C3B43D24FC80387B9B43EE2CD0D55925319E1421073C35C05CCD4"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native84-ap-preparation-rev1\\workload.json",
+      "bytes": 5076,
+      "sha256": "C21312EDB60909D50A0FDDC0BF1E5340BC39467259FCC2600CD021CB5A986D24"
+    }
+  ],
+  "ramPreparationOnly": {
+    "usedPercent": 42.01,
+    "freeBytes": 19870101504
+  },
+  "graphReuse": "Source80 intake registration packet and81 precompiled contract reused; exact named builder declarations/constants read only for omitted details. Private scripts/configs/assets read directly; no graph loads.",
+  "binaryPinProvenance": "AP/APBatch/AssetBuilder/RenderAssetBuilders compare actual closed82 product-binary-pins. Atom_RPI.Public separately physical runtime pin, not claimed newly rebuilt82.",
+  "temporaryStaging": "Parent only: stage3 exact files, seal84=14034 base82 unchanged+3=14037; keep until after snapshot/postflight, then parent exact cleanup before SDK83. Runner never stages/prunes.",
+  "preparationIssues": [
+    "Private diff generation initially failed on PowerShell return$out typo; corrected to return $out, no native/live effect",
+    "Private line-ending inspection command had a pipe syntax error; corrected, no candidate effect"
+  ],
+  "limits": [
+    "Actual freeze84 and approved parent review82 receipt path/SHA not yet supplied; recipe.argv empty and argvTemplate explicitly pending binding",
+    "AP84 first, SDK83 later; SDK is not AP prerequisite",
+    "Six fresh jobs/four builder IDs require Completed/error0, fresh current RunKeys/logs and nonempty registered outputs; cached or zero-job cannot pass",
+    "AfterDB source UUID/scanFolder/portable identity actual only; raw .azshader payload may not have its own Source row",
+    "Precompiled actual root SourceGuid/subID0 dependency is checked; typed Vulkan payload/PreLoad/Ready remain parent runtime review",
+    "Global347 source/job/status must be identical; raw exit preserved incl1; no global PASS or error waiver",
+    "Modules point-in-time native pin checks only; retired AtomShader.Builders and Atom_RPI.Builders rejected if seen; no lifetime absence/device claim",
+    "No GPU/UI/Gem acceptance; active guard80/admission70+10GiB and one-owner remain byteexact"
+  ]
+}

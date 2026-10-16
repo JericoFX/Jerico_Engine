@@ -17,6 +17,7 @@
 #include <JE/Geometry/GeometryModule.h>
 #include <JE/Editor/Camera/CameraModule.h>
 #include <JE/Assets/Prefab/PrefabBuilderModule.h>
+#include <JE/Assets/RenderBuilders/RenderAssetBuildersModule.h>
 #include <JE/Render/Materials/MaterialsRegistration.h>
 #include <JE/Editor/Materials/MaterialsRegistration.h>
 
@@ -119,6 +120,7 @@ namespace AZ::SerializeContextTools
         outModules.emplace_back(JE::Geometry::CreateAuthoringModule());
         outModules.emplace_back(JE::Editor::Camera::CreateAuthoringModule());
         outModules.emplace_back(JE::Assets::Prefab::CreateToolsModule());
+        outModules.emplace_back(JE::Assets::RenderBuilders::CreateToolsModule());
     }
 
     void Application::RegisterCoreComponents()

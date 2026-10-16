@@ -1,0 +1,53 @@
+{
+  "state": "PRIVATE_FIXTURE_READY_FOR_PARENT_REVIEW_NOT_STAGED_NOT_RUN",
+  "fixtureFiles": 3,
+  "schema": {
+    "member": "m_removeBuildArguments",
+    "field": "RemoveBuildArguments",
+    "exactValue": [
+      "--sc-options"
+    ],
+    "uuid": "{B7F00402-872B-4F82-A210-E1A79A366686}",
+    "fieldDefault": "Default-constructed ShaderBuildArguments, empty azslc vector, debug=false",
+    "reflection": "Gems/Atom/RPI/Code/Source/RPI.Edit/Shader/ShaderSourceData.cpp:24-35 + Gems/Atom/RHI/Code/Source/RHI.Edit/ShaderBuildArguments.cpp:29",
+    "type": "AZ::RHI::ShaderBuildArguments",
+    "reflectedVersion": 8,
+    "owner": "AZ::RPI::ShaderSourceData",
+    "nestedMember": "m_azslcArguments",
+    "nestedSerializedField": "azslc"
+  },
+  "mechanism": {
+    "effect": "AzslCompiler.cpp:938-941 reads specializationConstants false/defaultfalse from regenerated options; no newbool/engineflag/schema",
+    "subtraction": "RHI.Edit/ShaderBuildArguments.cpp:191-201 RemoveArguments on azslc vector",
+    "positiveBranches": "ShaderVariantAssetBuilder.cpp:529-550 tree requires !usesSpecialization or not fullyspecialized; batch:721-736 skips only if specialized ANDfullyspecialized",
+    "globalUnchanged": "Engine/Assets/RenderBuilders/Assets/Config/Shader/shader_build_options.settings:12 adds --sc-options",
+    "merge": "ShaderBuildArgumentsManager.cpp:107-120 current - remove, then + add",
+    "perSource": "ShaderAssetBuilder.cpp:414-415 applies source removal after platform scope; ShaderVariantAssetBuilder.cpp:666-670 same"
+  },
+  "changes": [
+    "Copy original SimpleTextured.azsl byte-exact to JEVariantPositive85.azsl",
+    "Shader Source renamed; add exactly RemoveBuildArguments.azslc=[--sc-options]",
+    "Variantlist Shader renamed; retain all3StableIds and both boolean option mappings unchanged"
+  ],
+  "includeDependency": {
+    "path": "Gems/Atom/Feature/Common/Assets/ShaderLib/Atom/Features/SrgSemantics.azsli",
+    "copyRequired": false,
+    "sha256": "C0FFD6E7F44E6D34897164041C652233413FE69CAD60ECDF0BECA765CAEA608E",
+    "include": "Atom/Features/SrgSemantics.azsli",
+    "reason": "Existing standard ShaderLib include already used by original Engine SimpleTextured. No relative/sibling include or additional fixture source; parent must pin existing include and configured shaderlib discovery.",
+    "nestedIncludes": 0,
+    "bytes": 1478
+  },
+  "oracles": [
+    "Fresh Shader Asset/HashedShaderVariantList/Shader Variant Asset_varianttree/Shader Variant Asset_variantbatch jobs for NEWfixture chain, allstatusCompleted/errors0; rawglobal347 retained",
+    "VariantTree must emit real nonempty typed azshadervarianttree; 0Products remains FAIL",
+    "VariantBatch must emit all3non-root typed azshadervariant products for StableIds1/2/3 and Vulkan; 0Products remains FAIL",
+    "Fresh options metadata must be interpreted by native specializationConstants contract as false, with logs no specialization-constants skip for this fixture",
+    "Capture generated intermediate sources/SourceGuid/RunKeys/type/subID/productdependency identities from actual AP; no guessed UUIDs or recook-from-cached claim",
+    "No original source/globalsettings/presets/authoring40/owner26 changed; noDX12/Metal/Null product API; no runtime/render/Gem acceptance"
+  ],
+  "parentNext": "Parent stages only3newsource files in an authorized fresh project source folder and freezes/pins it, then assigns one controlled AP console run. Writer did not execute AP or touch active scanfolder/cache.",
+  "reading": "CPP/Game complete coverage reused, hashes unchanged recorded in graft-result",
+  "graft": "2serial short queries, no refresh/MCP/server; PID12180+8488 terminal",
+  "helpers": 0
+}

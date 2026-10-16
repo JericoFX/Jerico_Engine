@@ -1,0 +1,85 @@
+-- Selecting Windows SDK version 10.0.26100.0 to target Windows 10.0.26300.
+-- The C compiler identification is MSVC 19.44.35228.0
+-- The CXX compiler identification is MSVC 19.44.35228.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/cl.exe - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/cl.exe - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Basic Configuration Information:
+   CMAKE_SYSTEM_NAME: Windows
+   CMAKE_VERSION: 4.3.4
+   CMAKE_COMMAND: C:/Program Files/CMake/bin/cmake.exe
+   CMAKE_GENERATOR: Visual Studio 17 2022
+   CMAKE_CXX_COMPILER_ID: MSVC
+   CMAKE_CXX_COMPILER_VERSION: 19.44.35228.0
+   O3DE_INSTALL_VERSION_STRING: 2.8.0
+   INSTALLED_ENGINE: TRUE
+-- Initializing O3DE CMake system...
+--   Using package F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/zlib-1.2.11-je-rev1-windows
+--   Found ZLIB: F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/zlib-1.2.11-je-rev1-windows/zlib/lib/zlibstatic.lib (found version "1.2.11")
+--   Using JE local ZLIB 1.2.11 from F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/zlib-1.2.11-je-rev1-windows
+--   Using package F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/freetype-2.11.1-je-rev1-windows
+--   Found Freetype: F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/freetype-2.11.1-je-rev1-windows/freetype/lib/freetype.lib (found version "2.11.1")
+--   Using package F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/qt-6.11.2-rev1-windows
+--   Performing Test CMAKE_HAVE_LIBC_PTHREAD
+--   Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+--   Looking for pthread_create in pthreads
+--   Looking for pthread_create in pthreads - not found
+--   Looking for pthread_create in pthread
+--   Looking for pthread_create in pthread - not found
+--   Found Threads: TRUE
+--   Performing Test HAVE_STDATOMIC
+--   Performing Test HAVE_STDATOMIC - Success
+--   Found WrapAtomic: TRUE
+--   Using package F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/Python-rev3/packages/python-3.10.13-je-rev3-windows
+--   Using Python venv at F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/Python-rev3/venv/a4901132
+-- Executing CMake scripts...
+--   Using package F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/Lua-5.4.4-je-rev1-windows
+--   Found Lua: F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/Lua-5.4.4-je-rev1-windows/Lua/lib/release/lualib.lib (found version "5.4.4")
+--   Using package F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/zstd-1.3.5-je-rev1-windows
+--   Found zstd: F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/zstd-1.3.5-je-rev1-windows/zstd/lib/release/zstd_static.lib (found version "1.3.5")
+--   Using package F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/lz4-1.9.4-je-rev1-windows
+--   Found lz4: F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/lz4-1.9.4-je-rev1-windows/lz4/lib/lz4.lib (found version "1.9.4")
+--   Using package F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/OpenSSL-1.1.1o-je-rev1-windows
+--   Found OpenSSL: TRUE (found version "1.1.1o")
+--   Using package F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/expat-2.4.2-je-rev1-windows
+--   Found expat: F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/expat-2.4.2-je-rev1-windows/expat/lib/libexpatMD.lib (found version "2.4.2")
+--   Using JE local Expat 2.4.2 from F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/expat-2.4.2-je-rev1-windows
+--   Using package F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/tiff-4.2.0.15-je-rev1-windows
+--   Found TIFF: F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/tiff-4.2.0.15-je-rev1-windows/tiff/lib/tiff.lib (found version "4.2.0.15")
+--   SDKWrapper Tool uses Assimp v6.0.4 (Custom BSD-3-Clause) from https://github.com/assimp/assimp.git
+--   Using package F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/vulkan-validationlayers-1.3.261-je-rev1-windows
+--   Found vulkan-validationlayers: F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/vulkan-validationlayers-1.3.261-je-rev1-windows (found version "1.3.261")
+--   Using package F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/astc-encoder-3.2-je-rev1-windows
+--   Found astc-encoder: F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/astc-encoder-3.2-je-rev1-windows/astc-encoder/include (found version "3.2.0")
+--   Using package F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/ISPCTexComp-36b80aa-je-rev1-windows
+--   Using package F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/OpenEXR-3.1.3-je-rev1-windows
+--   Found Imath: F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/OpenEXR-3.1.3-je-rev1-windows/OpenEXR/lib/cmake/Imath (found suitable exact version "3.1.3")
+--   Using JE local ZLIB 1.2.11 from F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/zlib-1.2.11-je-rev1-windows
+--   Found OpenEXR: F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/OpenEXR-3.1.3-je-rev1-windows/OpenEXR/lib/cmake/OpenEXR (found version "3.1.3")
+--   Using package F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/openimageio-opencolorio-2.3.17-je-rev1-windows
+--   Found OpenImageIO: F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/openimageio-opencolorio-2.3.17-je-rev1-windows/OpenImageIO/include (found version "2.3.17.0")
+--   Using package F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/png-1.6.37-je-rev1-windows
+--   Found PNG: F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/png-1.6.37-je-rev1-windows/png/lib/libpng16_static.lib (found suitable exact version "1.6.37")
+--   Found OpenColorIO: F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/openimageio-opencolorio-2.3.17-je-rev1-windows/OpenColorIO/include (found version "2.1.1")
+--   Found OpenGL: opengl32
+--   JE Geometry Authoring uses OpenMesh-11.0 (BSD-3-Clause) from https://github.com/o3de/openmesh.git
+--   - This is a mirror of https://gitlab.vci.rwth-aachen.de:9000/OpenMesh/OpenMesh.git
+--   JE Geometry Authoring uses Manifold (Apache-2.0) from https://github.com/elalish/manifold.git
+--   Using package F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/mcpp-2.7.2_az.2-je-rev1-windows
+--   Found mcpp: F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/mcpp-2.7.2_az.2-je-rev1-windows/mcpp/include (found version "2.7.2")
+--   Using package F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/DirectXShaderCompilerDxc-1.8.2505.1-o3de-je-rev1-windows
+--   Found DirectXShaderCompilerDxc: F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/DirectXShaderCompilerDxc-1.8.2505.1-o3de-je-rev1-windows/DirectXShaderCompilerDxc/bin (found version "1.8.2505.1")
+-- Finishing up configuration...
+--   Computing Runtime Dependencies (files to copy to the target's output directory)...
+-- CPack Package Version: 2.8.0
+-- Packaging is not supported for this platform/configuration
+-- Configuring done (25.0s)
+-- Generating done (0.7s)
+-- Build files have been written to: F:/JericoEngine/JericoEngine/build/sdk-vk-consumer83

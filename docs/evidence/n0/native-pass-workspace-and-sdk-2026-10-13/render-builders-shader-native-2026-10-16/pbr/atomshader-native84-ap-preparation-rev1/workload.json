@@ -1,0 +1,88 @@
+{
+  "state": "PRIVATE_STAGING_PLAN_NOT_STAGED",
+  "sources": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Integration\\Assets\\Shaders\\SimpleTextured.shader",
+      "bytes": 779,
+      "sha256": "A63BF98EC7229F4864917483869031D8B5A09C549671321F17BD102065A01DA4",
+      "provenance": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Integration\\Assets\\Shaders\\SimpleTextured.shader",
+      "alreadyPresent": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Integration\\Assets\\Shaders\\SimpleTextured.shadervariantlist",
+      "bytes": 595,
+      "sha256": "BE757B46A200045DD9C34CBA27C493553DCA8DB3CFB4BADDE36123B8051F9384",
+      "provenance": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Integration\\Assets\\Shaders\\SimpleTextured.shadervariantlist",
+      "alreadyPresent": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Cache\\Intermediate Assets\\shaders\\simpletextured.hashedvariantlist",
+      "bytes": 964,
+      "sha256": "FADA90E2A74C320F788986ED41EBA656A7A01E7EADE99FDBFF3253F0BA90EE0D",
+      "provenance": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Cache\\Intermediate Assets\\shaders\\simpletextured.hashedvariantlist",
+      "alreadyPresent": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Cache\\Intermediate Assets\\shaders\\simpletextured_0.hashedvariantbatch",
+      "bytes": 964,
+      "sha256": "FADA90E2A74C320F788986ED41EBA656A7A01E7EADE99FDBFF3253F0BA90EE0D",
+      "provenance": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Cache\\Intermediate Assets\\shaders\\simpletextured_0.hashedvariantbatch",
+      "alreadyPresent": true
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Assets\\Tests\\JENativeShader84\\je_precompiled_base.azshader",
+      "bytes": 14918,
+      "sha256": "CD35FEA42AA0F6FB4EC4884941E96669847AB3866018BBEB9027A2FA7EDFA79D",
+      "provenance": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native81-precompiled-intake\\fixture\\JEPrecompiledVulkan81\\je_precompiled_base.azshader",
+      "alreadyPresent": false
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Assets\\Tests\\JENativeShader84\\je_precompiled_vulkan_0.azshadervariant",
+      "bytes": 4002,
+      "sha256": "A4E362BFDB03198DBF63270C2EB4077B460CA244A2693F31EC5D0A1AB1511097",
+      "provenance": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native81-precompiled-intake\\fixture\\JEPrecompiledVulkan81\\je_precompiled_vulkan_0.azshadervariant",
+      "alreadyPresent": false
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Assets\\Tests\\JENativeShader84\\JEPrecompiledVulkan81.precompiledshader",
+      "bytes": 508,
+      "sha256": "8D8C5A4161FB0D4287819BD79CDBB319D79D9879C6D2CCA6DCB292EB918FA26C",
+      "provenance": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native81-precompiled-intake\\fixture\\JEPrecompiledVulkan81\\JEPrecompiledVulkan81.precompiledshader",
+      "alreadyPresent": false
+    }
+  ],
+  "reprocessSources": [
+    "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Integration\\Assets\\Shaders\\SimpleTextured.shader",
+    "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Integration\\Assets\\Shaders\\SimpleTextured.shadervariantlist",
+    "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Cache\\Intermediate Assets\\shaders\\simpletextured.hashedvariantlist",
+    "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Cache\\Intermediate Assets\\shaders\\simpletextured_0.hashedvariantbatch",
+    "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Assets\\Tests\\JENativeShader84\\JEPrecompiledVulkan81.precompiledshader"
+  ],
+  "stageDirectory": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Assets\\Tests\\JENativeShader84",
+  "stageOwner": "/root before SDK83; exact temporary staging and teardown owned by parent",
+  "expectedSourceCount": 7,
+  "expectedReprocessCount": 5,
+  "sourceUUIDs": "Extract from actual Sources/ScanFolders after AP; none invented",
+  "builders": [
+    {
+      "uuid": "C94DA151-82BC-4475-86FA-E6C92A0BD6F8",
+      "name": "Shader Asset Builder",
+      "version": 126
+    },
+    {
+      "uuid": "D7FB0C17-131B-43E8-BCCC-408C1763E538",
+      "name": "Shader Variant List Builder",
+      "version": 4
+    },
+    {
+      "uuid": "C959AEC2-2083-4488-AD88-F61B1144535B",
+      "name": "Shader Variant Asset Builder",
+      "version": 43
+    },
+    {
+      "uuid": "50D3185B-489C-4C8E-84DC-F99A75FDB72F",
+      "name": "Precompiled Shader Builder",
+      "version": 16
+    }
+  ]
+}

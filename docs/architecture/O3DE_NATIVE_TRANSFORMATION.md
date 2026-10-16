@@ -14,7 +14,7 @@ El usuario crea un proyecto y dispone de BSP/materiales/scripts/física sin inst
 |---|---|---|
 | Core/Platform/World | AzCore/AzFramework | Entities/reflection/jobs/IO y lifetimes migrados a JE; separar red/IPC |
 | Assets/Cook | Asset Processor, SceneProcessing, AssetBundler | Una Canonical IR/ID/revisión/dependency pipeline, formatos propios |
-| Render | Atom RPI/RHI/Feature/Common/shader pipeline | Un renderer JE con backend DX12 y Vulkan; no Diligent debajo |
+| Render | Atom RPI/RHI/Feature/Common/shader pipeline | Un renderer JE con Vulkan activo y VR/OpenXR sobre Vulkan; DX12/Metal inactivos, sin Diligent debajo |
 | Editor | Code/Editor, AzToolsFramework/AzQtComponents | Qt6 Widgets Jerico, viewport compartido y transacciones/gizmos |
 | Geometry/BSP | WhiteBox/CSG/OpenMesh/Manifold | Herramientas brush/caras y semántica/UV/material/collision, no nuevo editor aislado |
 | Geology | Matemáticas propias Jerico/Playground auditadas | Operation stack, SDF/mesher cuando corresponde, materiales derivados del mismo campo |
@@ -26,7 +26,7 @@ El usuario crea un proyecto y dispone de BSP/materiales/scripts/física sin inst
 
 ## Disposición de capacidades
 
-INTEGRAR: Atom sólo DX12/Vulkan, framework/world/assets/transactions necesarios; WhiteBox prioritario; GraphCanvas/GraphModel y MaterialEditor/Canvas; DebugDraw/profiler/dev textures; camera/prefab/scene processing. LmbrCentral contiene capacidades necesarias: extraerlas/migrarlas por función, no conservar un owner Lumberyard permanente ni borrar todas por nombre.
+INTEGRAR: Atom con Vulkan activo y VR/OpenXR sobre Vulkan, framework/world/assets/transactions necesarios; WhiteBox prioritario; GraphCanvas/GraphModel y MaterialEditor/Canvas; DebugDraw/profiler/dev textures; camera/prefab/scene processing. LmbrCentral contiene capacidades necesarias: extraerlas/migrarlas por función, no conservar un owner Lumberyard permanente ni borrar todas por nombre.
 
 AUDITAR/ADAPTAR: EMotionFX/Maestro, Luau bindings, MiniAudio, OPS (Preview), Recast, terrain/vegetation/surface/gradients/landscape, SkyAtmosphere/Stars, UI tools. Graph framework común no es evaluador común ni VM nueva. Manifest vacío no garantiza ausencia de deps: Recast CMake demuestra deps a framework/shapes/debug y tests PhysX.
 

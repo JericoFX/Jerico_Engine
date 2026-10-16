@@ -1,0 +1,38 @@
+{
+  "authored": {
+    "label": "Authored",
+    "count": 40,
+    "matched": 40
+  },
+  "ownerTextures": {
+    "label": "OwnerTextures",
+    "count": 26,
+    "matched": 26
+  },
+  "GemIncrement": 0,
+  "cache": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\CMakeCache.txt",
+    "sha256": "583D5EC400A54D4A036414F26F332B01CDD6CD3B91B011B6B12DD484B71827BC",
+    "requiredLines": [
+      "CMAKE_GENERATOR:INTERNAL=Visual Studio 17 2022",
+      "CMAKE_GENERATOR_PLATFORM:INTERNAL=x64",
+      "FETCHCONTENT_FULLY_DISCONNECTED:BOOL=ON",
+      "LY_PACKAGE_SERVER_URLS:STRING=",
+      "O3DE_EXTERNAL_SUBDIRS:STRING=",
+      "LY_PROJECTS:STRING=F:/JericoEngine/JericoEngine/Projects/JEEditorFixture"
+    ],
+    "missingLines": [],
+    "valid": true
+  },
+  "limits": "Native compile/CPU regression/host linkage only; no GUI/AP/GPU/VR/Shipping acceptance.",
+  "freeze": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native82-private-include-preparation-rev1\\freeze82-native-shader.json",
+  "inputCount": 14034,
+  "ram": {
+    "capturedUtc": "2026-10-16T08:12:18.1412458Z",
+    "totalBytes": 34265743360,
+    "freeBytes": 19946999808,
+    "usedPercent": 41.79,
+    "thresholdPercent": 80
+  },
+  "freezeSHA256": "B65743A66E3837A917C49F479AD4F2F6DEEBBAF5719C49ECE30302A1DE05B0EC"
+}

@@ -19,7 +19,6 @@
     "documentation_url": "https://o3de.org/docs/user-guide/gems/reference/rendering/atom/atom/",
     "external_subdirectories": [
         "Asset/ImageProcessingAtom",
-        "Asset/Shader",
         "Bootstrap",
         "Feature/Common",
         "RHI",
@@ -32,7 +31,6 @@
     ],
     "dependencies": [
         "Atom_Feature_Common",
-        "AtomShader",
         "Atom_Bootstrap",
         "Atom_RHI",
         "Atom_RPI",

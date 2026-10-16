@@ -1,0 +1,80 @@
+[
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\RenderAssetBuilders.dll",
+    "bytes": 2238464,
+    "lastWriteUtc": "2026-10-16T08:13:37.3955533Z",
+    "sha256": "DDC2D553FC54F7F53388B3645E561AF30B21420CAABB52EC1DE0E272D2F97748"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\ShaderCompiler.Tests.dll",
+    "bytes": 757248,
+    "lastWriteUtc": "2026-10-16T08:14:10.2904387Z",
+    "sha256": "492DAD1471560BB25CD018F6C42FC7147246790CF59E17B7E305EDDAA3E8DA4A"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\RenderAssetBuilders.Tests.dll",
+    "bytes": 1536000,
+    "lastWriteUtc": "2026-10-16T08:14:24.6650947Z",
+    "sha256": "85D22C07802487506AA56A1B043C02A7E9A5AA667365B4039514E27B0B1855C8"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Editor.exe",
+    "bytes": 171520,
+    "lastWriteUtc": "2026-10-15T13:54:10.0818776Z",
+    "sha256": "C9A6DB2876168435FCFA63BC1F09AFD8A15719930735938BD82749F91E8BC2B3"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AssetProcessor.exe",
+    "bytes": 6673408,
+    "lastWriteUtc": "2026-10-16T08:18:19.9303197Z",
+    "sha256": "0EC006BD3F1D189795050D4A49D076780F5C0F07FA5A9DCA64ABF172A77EB582"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AssetProcessorBatch.exe",
+    "bytes": 5899776,
+    "lastWriteUtc": "2026-10-16T08:19:48.1999606Z",
+    "sha256": "FF71D1FBB892FE500FBB11425290AC03D4F0823AF6E6D15606507BD9308EFD38"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AssetBuilder.exe",
+    "bytes": 2790912,
+    "lastWriteUtc": "2026-10-16T08:17:58.0203133Z",
+    "sha256": "33573ED1497A657E3E5A2E9174E505083D3BF805AFAAE4B361AC811F70A87A25"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\SerializeContextTools.exe",
+    "bytes": 442880,
+    "lastWriteUtc": "2026-10-16T08:20:28.5749884Z",
+    "sha256": "62C27B2C2B4A93CADCF696B0EA18574023BCC5862C6D734F19CB2348D92C2969"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\MaterialEditor.exe",
+    "bytes": 3650048,
+    "lastWriteUtc": "2026-10-16T08:20:41.3077096Z",
+    "sha256": "C6FE105E9B4334EB9EA014DB453A9AAA95F734C74E9C6E51357650AEBC0B4DBD"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\MaterialCanvas.exe",
+    "bytes": 4835840,
+    "lastWriteUtc": "2026-10-16T08:20:54.2308962Z",
+    "sha256": "9CB8D4E4069B9A4FE8AE9AF5E61288A8C830BDBAAE45E2F6B62D675523BF81EA"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\PassCanvas.exe",
+    "bytes": 5810176,
+    "lastWriteUtc": "2026-10-16T08:21:07.0745821Z",
+    "sha256": "51877E6C55DBB6573E395ED207501B1420BA02E36665382FEED4DF6E86822333"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\ShaderManagementConsole.exe",
+    "bytes": 4012032,
+    "lastWriteUtc": "2026-10-16T08:19:22.1699922Z",
+    "sha256": "D1A6A3191534D3517910F1BB0F8EEFB04F8B28FFF8607887DF6A6B456DBF7490"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\JEEditorFixture.GameLauncher.exe",
+    "bytes": 1485824,
+    "lastWriteUtc": "2026-10-16T05:19:54.9246635Z",
+    "sha256": "BFB8C430B4F19FCADBA6866715E3BE5147A038CD6129FC6AFBC0B51AA2C30686"
+  }
+]

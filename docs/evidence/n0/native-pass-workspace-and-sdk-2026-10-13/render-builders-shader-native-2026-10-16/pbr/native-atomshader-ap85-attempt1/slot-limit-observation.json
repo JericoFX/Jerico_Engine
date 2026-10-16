@@ -1,0 +1,7 @@
+{
+  "stdoutSHA256": "6FF09BA31D9F1591CCA7A2E0E0A0A9AD816E84962AA29CA21C7A6A7763F2802C",
+  "limits": "CreateJobs worker pool may be distinct; no single-PID-global claim.",
+  "nativeExit": 1,
+  "expected": "Process up to 1 jobs in parallel",
+  "verified": true
+}

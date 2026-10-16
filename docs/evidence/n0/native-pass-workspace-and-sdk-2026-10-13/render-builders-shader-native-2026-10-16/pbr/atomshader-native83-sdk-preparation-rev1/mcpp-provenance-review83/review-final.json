@@ -1,0 +1,129 @@
+{
+  "schema": "mcpp-pe-provenance-review83-v1",
+  "dumpbin": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\dumpbin.exe",
+  "commands": [
+    "/DEPENDENTS <target>",
+    "/IMPORTS <target>"
+  ],
+  "targets": [
+    {
+      "bytes": 2238464,
+      "sha256": "DDC2D553FC54F7F53388B3645E561AF30B21420CAABB52EC1DE0E272D2F97748",
+      "key": "producer-renderassetbuilders",
+      "logs": {
+        "dependents": {
+          "bytes": 954,
+          "sha256": "291A7E1D9D2FCF32946222402E7112E45E7DB41BA2048C97088E9F48617D751F",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native83-sdk-preparation-rev1\\mcpp-provenance-review83\\producer-renderassetbuilders.dumpbin-dependents.txt",
+          "exitCode": 0
+        },
+        "imports": {
+          "bytes": 136935,
+          "sha256": "586A713ED5DAD917C1D69239FA8B3004B2107A499FEEBBCFD2774091328D0D44",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native83-sdk-preparation-rev1\\mcpp-provenance-review83\\producer-renderassetbuilders.dumpbin-imports.txt",
+          "exitCode": 0
+        }
+      },
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\RenderAssetBuilders.dll"
+    },
+    {
+      "bytes": 1364992,
+      "sha256": "23786E5440EFCCFDC7A29DD0DEEBC380D9FA97783C3F46570F03CD94256CBFC9",
+      "key": "retained-old-atomshader-builders",
+      "logs": {
+        "dependents": {
+          "bytes": 916,
+          "sha256": "BB1262D95C4892E40966F815FC3F8065C95D16146391F9622C50B95542F09D5F",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native83-sdk-preparation-rev1\\mcpp-provenance-review83\\retained-old-atomshader-builders.dumpbin-dependents.txt",
+          "exitCode": 0
+        },
+        "imports": {
+          "bytes": 79522,
+          "sha256": "5F89E677C519670AFC70949392C63153C55760848D6E1EA7A4A578ED9360916A",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native83-sdk-preparation-rev1\\mcpp-provenance-review83\\retained-old-atomshader-builders.dumpbin-imports.txt",
+          "exitCode": 0
+        }
+      },
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AtomShader.Builders.dll"
+    },
+    {
+      "bytes": 73216,
+      "sha256": "9AD3D85B58B8CAC9365D008776B65F1B4561B531F80EA841F2D0C38C13E739D7",
+      "key": "consumer-exe",
+      "logs": {
+        "dependents": {
+          "bytes": 860,
+          "sha256": "CA30250B94967E3A72B23CD3F17486DDFA306945B5D62E52DC91BF7CD6F0EEB4",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native83-sdk-preparation-rev1\\mcpp-provenance-review83\\consumer-exe.dumpbin-dependents.txt",
+          "exitCode": 0
+        },
+        "imports": {
+          "bytes": 17577,
+          "sha256": "B24BA1427E60E49818DE52D453DEE792CA508B801686B619752151087A9014A8",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native83-sdk-preparation-rev1\\mcpp-provenance-review83\\consumer-exe.dumpbin-imports.txt",
+          "exitCode": 0
+        }
+      },
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-vk-consumer83\\bin\\profile\\JENativeSdkConsumer.exe"
+    },
+    {
+      "bytes": 135168,
+      "sha256": "E28DB7EF935D6584D0F3EF38849F17D3475F3413251B205C59A5B15484DD66E9",
+      "key": "consumer-mcpp",
+      "logs": {
+        "dependents": {
+          "bytes": 756,
+          "sha256": "E83D255B2D68C020800EFC16561ED905069D623E75774D2558124BA8AFCA767F",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native83-sdk-preparation-rev1\\mcpp-provenance-review83\\consumer-mcpp.dumpbin-dependents.txt",
+          "exitCode": 0
+        },
+        "imports": {
+          "bytes": 5619,
+          "sha256": "8233600BBA574588D216856EB34C59AAA38764A451938C4CF225009DCF0B8A2B",
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native83-sdk-preparation-rev1\\mcpp-provenance-review83\\consumer-mcpp.dumpbin-imports.txt",
+          "exitCode": 0
+        }
+      },
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-vk-consumer83\\bin\\profile\\mcpp0.dll"
+    }
+  ],
+  "mcppCopies": [
+    {
+      "bytes": 135168,
+      "sha256": "E28DB7EF935D6584D0F3EF38849F17D3475F3413251B205C59A5B15484DD66E9",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\mcpp0.dll"
+    },
+    {
+      "bytes": 135168,
+      "sha256": "E28DB7EF935D6584D0F3EF38849F17D3475F3413251B205C59A5B15484DD66E9",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-vk77\\bin\\Windows\\profile\\Default\\mcpp0.dll"
+    },
+    {
+      "bytes": 135168,
+      "sha256": "E28DB7EF935D6584D0F3EF38849F17D3475F3413251B205C59A5B15484DD66E9",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-vk-consumer83\\bin\\profile\\mcpp0.dll"
+    },
+    {
+      "bytes": 135168,
+      "sha256": "E28DB7EF935D6584D0F3EF38849F17D3475F3413251B205C59A5B15484DD66E9",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine-deps\\packages\\mcpp-2.7.2_az.2-je-rev1-windows\\mcpp\\lib\\mcpp0.dll"
+    }
+  ],
+  "findings": [
+    "RenderAssetBuilders.dll and retained AtomShader.Builders.dll both directly import mcpp0.dll.",
+    "Both import mcpp_set_report_include_callback, mcpp_set_out_func, and mcpp_lib_main.",
+    "JENativeSdkConsumer.exe imports RenderAssetBuilders.dll directly and does not import mcpp0.dll directly; its mcpp dependency is transitive through RenderAssetBuilders.dll.",
+    "The mcpp0.dll bytes are identical in producer, installed SDK, consumer, and the local original-engine-deps mcpp package lib path.",
+    "The quarantined SDK default path does not contain AtomShader.Builders.dll; the retained comparison binary is original-engine/bin/profile/AtomShader.Builders.dll."
+  ],
+  "limits": [
+    "PE import evidence only; no load/runtime/ABI validation was performed.",
+    "No build, install, configure, or source/config change was made."
+  ],
+  "resources": {
+    "freeGiB": 19.08,
+    "ownedHelpersAtClose": 0,
+    "usedPercent": 40.22
+  },
+  "observedUtc": "2026-10-16T09:32:02.5263514Z"
+}

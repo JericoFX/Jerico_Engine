@@ -1,0 +1,37 @@
+{
+  "phase": "after-snapshot-query",
+  "startedUtc": "2026-10-16T09:45:04.7640433Z",
+  "finishedUtc": "2026-10-16T09:45:06.5111757Z",
+  "elapsedSeconds": 1.747,
+  "pid": 21868,
+  "processCreationUtc": "2026-10-16T09:45:04.8009130Z",
+  "ramBefore": {
+    "capturedUtc": "2026-10-16T09:45:04.7640020Z",
+    "totalBytes": 34265743360,
+    "freeBytes": 20356321280,
+    "usedPercent": 40.59,
+    "thresholdPercent": 80
+  },
+  "peakRamUsedPercent": 40.59,
+  "ramWaitSamples": [],
+  "ramGuardTriggered": null,
+  "ramPollMilliseconds": 3000,
+  "processMemorySamples": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-atomshader-ap85-attempt1\\after-snapshot-query.memory-process-samples.jsonl",
+  "executable": "C:\\Users\\Jerico\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+  "argv": [
+    "-NoProfile",
+    "-NonInteractive",
+    "-File",
+    "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native85-ap-preparation-rev1\\Query-ShaderSources85Snapshot.ps1",
+    "-Execute",
+    "-DatabaseCopyPath",
+    "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-atomshader-ap85-attempt1\\after-database\\assetdb.sqlite",
+    "-ResultPath",
+    "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-atomshader-ap85-attempt1\\after-database\\readonly-query.json"
+  ],
+  "exitCode": 0,
+  "stdout": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-atomshader-ap85-attempt1\\after-snapshot-query.stdout.log",
+  "stdoutSha256": "8E2F5FDC7CBBF74CB2F3B887943EDB9A96F286A1D37E36182494F557916EEB20",
+  "stderr": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-atomshader-ap85-attempt1\\after-snapshot-query.stderr.log",
+  "stderrSha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+}

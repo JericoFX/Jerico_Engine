@@ -1,0 +1,13 @@
+# Keep original raw validation bytes so receipt hashes remain valid.
+* -text
+# Preserve formatting only in these exact archived captures; engine sources retain normal checks.
+/pbr/atomshader-native83-sdk-preparation-rev1/ResumeSdkConsumer83.ps1 -whitespace
+/pbr/atomshader-native83-sdk-preparation-rev1/ResumeSdkConsumer83AfterBuild.ps1 -whitespace
+/pbr/atomshader-native83-sdk-preparation-rev1/run-sdk-current.ps1 -whitespace
+/pbr/atomshader-native85-positive-variants-candidate/fixture-review.diff -whitespace
+/pbr/atomshader-native85-positive-variants-candidate/fixture/JEVariantPositive85/JEVariantPositive85.azsl -whitespace
+/pbr/atomshader-native85-positive-variants-candidate/fixture/JEVariantPositive85/JEVariantPositive85.shader -whitespace
+/pbr/native-atomshader-ap84-attempt1/selected-products/pc/shaders/simpletextured_vulkan.options.json -whitespace
+/pbr/native-atomshader-ap85-attempt1/selected-products/pc/assets/tests/jenativeshader85/jevariantpositive85_vulkan.options.json -whitespace
+/pbr/native-shader-compiler-source82-attempt1/CMakeCache.configured.txt -whitespace
+/source-proofs/original-AtomShader-CMakeLists.txt -whitespace

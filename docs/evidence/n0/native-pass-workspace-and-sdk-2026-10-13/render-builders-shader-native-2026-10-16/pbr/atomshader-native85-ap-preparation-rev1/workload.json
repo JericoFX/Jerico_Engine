@@ -1,0 +1,61 @@
+{
+  "state": "PRIVATE_NOT_STAGED_NOT_RUN",
+  "sources": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Assets\\Tests\\JENativeShader85\\JEVariantPositive85.shader",
+      "bytes": 844,
+      "sha256": "BAB67ED59E9F1C4BE912F2C9DA63A9F0AA2136E7C71C0025FF95AB79092C727A",
+      "provenance": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native85-positive-variants-candidate\\fixture\\JEVariantPositive85\\JEVariantPositive85.shader",
+      "alreadyPresent": false
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Assets\\Tests\\JENativeShader85\\JEVariantPositive85.shadervariantlist",
+      "bytes": 600,
+      "sha256": "44A7E7A855FB967D684A2B3DFB68E15ECEAE38BAAA84D475E425236009B239A4",
+      "provenance": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native85-positive-variants-candidate\\fixture\\JEVariantPositive85\\JEVariantPositive85.shadervariantlist",
+      "alreadyPresent": false
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Assets\\Tests\\JENativeShader85\\JEVariantPositive85.azsl",
+      "bytes": 2554,
+      "sha256": "3574891834A0BA3893FBBBC17EDE70E6CDD6314EB82A80B1F26621C37FE8EE4B",
+      "provenance": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native85-positive-variants-candidate\\fixture\\JEVariantPositive85\\JEVariantPositive85.azsl",
+      "alreadyPresent": false
+    }
+  ],
+  "generatedIntermediates": [
+    "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Cache\\Intermediate Assets\\assets\\tests\\jenativeshader85\\jevariantpositive85.hashedvariantlist",
+    "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Cache\\Intermediate Assets\\assets\\tests\\jenativeshader85\\jevariantpositive85_0.hashedvariantbatch"
+  ],
+  "queryPaths": [
+    "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Assets\\Tests\\JENativeShader85\\JEVariantPositive85.shader",
+    "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Assets\\Tests\\JENativeShader85\\JEVariantPositive85.shadervariantlist",
+    "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Assets\\Tests\\JENativeShader85\\JEVariantPositive85.azsl",
+    "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Cache\\Intermediate Assets\\assets\\tests\\jenativeshader85\\jevariantpositive85.hashedvariantlist",
+    "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Cache\\Intermediate Assets\\assets\\tests\\jenativeshader85\\jevariantpositive85_0.hashedvariantbatch"
+  ],
+  "reprocessSources": [
+    "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Assets\\Tests\\JENativeShader85\\JEVariantPositive85.shader",
+    "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Assets\\Tests\\JENativeShader85\\JEVariantPositive85.shadervariantlist"
+  ],
+  "stageDirectory": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Assets\\Tests\\JENativeShader85",
+  "stageOwner": "/root after SDK83 Consume; exact temporary staging and teardown owned by parent",
+  "includeDependency": {
+    "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\Feature\\Common\\Assets\\ShaderLib\\Atom\\Features\\SrgSemantics.azsli",
+    "bytes": 1478,
+    "sha256": "C0FFD6E7F44E6D34897164041C652233413FE69CAD60ECDF0BECA765CAEA608E"
+  },
+  "fixtureProposal": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native85-positive-variants-candidate\\proposal.json",
+    "sha256": "363AB7DBEFB1D0918CF77A24284A68C90A0C7BC4C540270DCA356DDBAAAA6E64"
+  },
+  "specialization": "Only source RemoveBuildArguments.azslc=[--sc-options]; actual options JSON and native default/type contract must confirm false; no skip-log inference",
+  "queryPathCount": 5,
+  "reprocessPathCount": 2,
+  "physicalSourceCount": 3,
+  "noGuessedSourceUUID": true,
+  "enumProof": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native85-positive-variants-candidate\\enum-proof.json",
+    "sha256": "895A51195E2179FF0B98D506BE19337AB655AF603A6628B646B5DDA67E1764B2"
+  }
+}

@@ -1,0 +1,57 @@
+[
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native84-ap-preparation-rev1\\Snapshot-AssetDatabase78.ps1",
+    "bytes": 2204,
+    "sha256": "48A603E7384C3B43D24FC80387B9B43EE2CD0D55925319E1421073C35C05CCD4"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native84-ap-preparation-rev1\\Observe-AssetModules84.ps1",
+    "bytes": 3345,
+    "sha256": "FAAA9DDB6025008B66D5ACE0C431C3A1A0F535B3CED2148C3A99552D56D7DFFD"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native84-ap-preparation-rev1\\Query-ShaderSources84Snapshot.ps1",
+    "bytes": 13397,
+    "sha256": "003EB1F2E443C0AA1E30AB5E0DFF4491F6C5D229568CBE10E61946EDFAF9E6E4"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native84-ap-preparation-rev1\\Review-ShaderSources84.ps1",
+    "bytes": 8935,
+    "sha256": "9B52628366FF09A471C95037B4418BC9F092B92FA63E58B83C5E44899A2EBDAB"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native84-ap-preparation-rev1\\workload.json",
+    "bytes": 5076,
+    "sha256": "C21312EDB60909D50A0FDDC0BF1E5340BC39467259FCC2600CD021CB5A986D24"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native84-ap-preparation-rev1\\reprocess-sources.txt",
+    "bytes": 569,
+    "sha256": "80DF3624D6916097C2E3AC0FFBD52775736FF01238D58AEC18C5B919FAB4D91F"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native84-ap-preparation-rev1\\binary-pins82.json",
+    "bytes": 1377,
+    "sha256": "D0E424F96FFD9502809D7BE15E0835DE36478C575F032EDB09966D0E9A466520"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-shader-compiler-source82-attempt1\\postflight.json",
+    "bytes": 244795,
+    "sha256": "B40F22EBF273679D0AEB6FF83D3096CC8C96C9747D81488D3B0B5B8290FC5581"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-shader-compiler-source82-attempt1\\product-binary-pins.json",
+    "bytes": 3800,
+    "sha256": "B7B81022A9C0942476D3E4716619F25AFFFED8CC113D7F8AB99312535CFBBF91"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-passgraph-workspace-rev1\\real-pass-editor-ap-attempt1\\protected-authored-preflight.json",
+    "bytes": 10241,
+    "sha256": "19561BEDF174BE53730285261282E1F2D7D71EEB3F6095F3BD9001668526829A"
+  },
+  {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\folder-drop-regression-rev1\\owner-folder-before-ui.json",
+    "bytes": 6906,
+    "sha256": "3C9B850492A56941C53DBF216F0C5CBAE2634852D19324FC4A7FEC36DF921784"
+  }
+]

@@ -1,0 +1,12 @@
+{
+  "walPreserved": true,
+  "immutable": false,
+  "scope": "Stable closed main/WAL/SHM family, no checkpoint or live database write. Query only this private copy using the existing readonly SQLite provider.",
+  "sourcePins": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Cache\\assetdb.sqlite",
+      "bytes": 12763136,
+      "sha256": "64095BC4932F889E6DE17C294676F1199CD90F6CBA01E6735C5D88B6281E4BC0"
+    }
+  ]
+}

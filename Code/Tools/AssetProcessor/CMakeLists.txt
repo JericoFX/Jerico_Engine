@@ -47,6 +47,7 @@ ly_add_target(
             JE::WorldCamera
             JE::EditorRenderIntegration
             JE::PrefabBuilder
+            JE::RenderAssetBuilders
             JE::DebugImGui
             JE::ProfilerCapture
             JE::EditorMaterials

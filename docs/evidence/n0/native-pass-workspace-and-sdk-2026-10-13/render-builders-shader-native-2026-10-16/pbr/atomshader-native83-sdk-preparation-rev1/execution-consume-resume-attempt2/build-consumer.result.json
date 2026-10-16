@@ -1,0 +1,56 @@
+{
+  "seconds": 15.925771,
+  "priorityError": null,
+  "stdout": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native83-sdk-preparation-rev1\\execution-consume-resume-attempt2\\build-consumer.stdout.log",
+    "bytes": 25863,
+    "sha256": "7E4D233797CE8A4F55A70910F703CD3C6A9BFD7C677A4429BE787A5BC48C31A9"
+  },
+  "ramGuardTriggered": false,
+  "stderr": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native83-sdk-preparation-rev1\\execution-consume-resume-attempt2\\build-consumer.stderr.log",
+    "bytes": 0,
+    "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+  },
+  "ramSamples": [
+    {
+      "utc": "2026-10-16T09:24:31.3969608Z",
+      "originalCreationUtc": "2026-10-16T09:24:28.3202322Z",
+      "freeBytes": 20126711808,
+      "originalPid": 7932,
+      "usedPercent": 41.26287704735789
+    },
+    {
+      "utc": "2026-10-16T09:24:34.4447496Z",
+      "originalCreationUtc": "2026-10-16T09:24:28.3202322Z",
+      "freeBytes": 19772354560,
+      "originalPid": 7932,
+      "usedPercent": 42.29702139460605
+    },
+    {
+      "utc": "2026-10-16T09:24:37.4896905Z",
+      "originalCreationUtc": "2026-10-16T09:24:28.3202322Z",
+      "freeBytes": 19592404992,
+      "originalPid": 7932,
+      "usedPercent": 42.82218019857369
+    },
+    {
+      "utc": "2026-10-16T09:24:40.5355845Z",
+      "originalCreationUtc": "2026-10-16T09:24:28.3202322Z",
+      "freeBytes": 19406409728,
+      "originalPid": 7932,
+      "usedPercent": 43.364982559654585
+    },
+    {
+      "utc": "2026-10-16T09:24:43.5796722Z",
+      "originalCreationUtc": "2026-10-16T09:24:28.3202322Z",
+      "freeBytes": 19890585600,
+      "originalPid": 7932,
+      "usedPercent": 41.95197987965086
+    }
+  ],
+  "priorityRequested": "BelowNormal",
+  "exitCode": 0,
+  "ramPollMilliseconds": 3000,
+  "timedOut": false
+}

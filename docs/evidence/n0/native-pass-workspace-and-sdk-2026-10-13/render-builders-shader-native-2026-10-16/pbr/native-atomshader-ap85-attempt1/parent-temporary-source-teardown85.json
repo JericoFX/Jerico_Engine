@@ -1,0 +1,36 @@
+{
+  "reviewer": "/root",
+  "utc": "2026-10-16T09:54:03.3385523Z",
+  "removedExactSources": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Assets\\Tests\\JENativeShader85\\JEVariantPositive85.shader",
+      "bytes": 844,
+      "sha256": "BAB67ED59E9F1C4BE912F2C9DA63A9F0AA2136E7C71C0025FF95AB79092C727A",
+      "provenance": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native85-positive-variants-candidate\\fixture\\JEVariantPositive85\\JEVariantPositive85.shader",
+      "alreadyPresent": false
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Assets\\Tests\\JENativeShader85\\JEVariantPositive85.shadervariantlist",
+      "bytes": 600,
+      "sha256": "44A7E7A855FB967D684A2B3DFB68E15ECEAE38BAAA84D475E425236009B239A4",
+      "provenance": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native85-positive-variants-candidate\\fixture\\JEVariantPositive85\\JEVariantPositive85.shadervariantlist",
+      "alreadyPresent": false
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Assets\\Tests\\JENativeShader85\\JEVariantPositive85.azsl",
+      "bytes": 2554,
+      "sha256": "3574891834A0BA3893FBBBC17EDE70E6CDD6314EB82A80B1F26621C37FE8EE4B",
+      "provenance": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native85-positive-variants-candidate\\fixture\\JEVariantPositive85\\JEVariantPositive85.azsl",
+      "alreadyPresent": false
+    }
+  ],
+  "removedCount": 3,
+  "directoryAbsent": true,
+  "productsArchivedBeforeRemoval": 15,
+  "productManifestSHA256": "03C190D2DC405879FDF23D2CB5CB1BA638CBB935B3C41288C53168B3FF0E3C3F",
+  "sourceInputsVerifiedImmediatelyBeforeRemoval": 14037,
+  "source82RestoredByExactThreeFileRemoval": 14034,
+  "authoredScenesUntouched": true,
+  "noRecursiveDelete": true,
+  "cleanup": "Each verified exact literal source path removed separately, then only its empty directory"
+}

@@ -1,0 +1,20 @@
+{
+  "exitCode": 0,
+  "priorityRequested": "BelowNormal",
+  "priorityError": null,
+  "timedOut": false,
+  "stdout": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native83-sdk-preparation-rev1\\execution-consume-resume-attempt3\\loader.stdout.log",
+    "bytes": 370,
+    "sha256": "DA6D50FE366BC4264A4EDB256EF72FCF1AEE661AE97D9E43EF48CBCB523D68C6"
+  },
+  "ramPollMilliseconds": 3000,
+  "ramSamples": [],
+  "stderr": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native83-sdk-preparation-rev1\\execution-consume-resume-attempt3\\loader.stderr.log",
+    "bytes": 0,
+    "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+  },
+  "ramGuardTriggered": false,
+  "seconds": 0.0871528
+}

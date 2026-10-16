@@ -1,0 +1,100 @@
+# Copyright (c) Contributors to the Open 3D Engine Project.
+# SPDX-License-Identifier: Apache-2.0 OR MIT
+
+if(NOT PAL_TRAIT_BUILD_HOST_TOOLS)
+    return()
+endif()
+
+# The permitted desktop hosts support asset processing; other PALs retain a no-op module.
+if(NOT PAL_PLATFORM_NAME STREQUAL "Windows" AND NOT PAL_PLATFORM_NAME STREQUAL "Linux")
+    ly_add_target(
+        NAME RenderAssetBuilders ${PAL_TRAIT_MONOLITHIC_DRIVEN_LIBRARY_TYPE}
+        NAMESPACE JE
+        FILES_CMAKE render_asset_builders_stub_files.cmake
+        INCLUDE_DIRECTORIES PUBLIC Include
+        COMPILE_DEFINITIONS PRIVATE JE_RENDER_ASSET_BUILDERS_EXPORTS
+        BUILD_DEPENDENCIES PUBLIC AZ::AzCore
+    )
+    set_target_properties(RenderAssetBuilders PROPERTIES UNITY_BUILD OFF)
+    return()
+endif()
+
+ly_add_target(
+    NAME RenderAssetBuilders.Private.Object OBJECT
+    NAMESPACE JE
+    FILES_CMAKE render_asset_builders_files.cmake
+    INCLUDE_DIRECTORIES PRIVATE Source PUBLIC Include
+    COMPILE_DEFINITIONS PRIVATE JE_RENDER_ASSET_BUILDERS_EXPORTS
+    BUILD_DEPENDENCIES PUBLIC
+        AZ::AzCore AZ::AzFramework AZ::SceneCore AZ::SceneData AZ::AssetBuilderSDK
+        Gem::Atom_RHI.Public Gem::Atom_RPI.Edit Gem::Atom_RPI.Public
+        3rdParty::meshoptimizer
+)
+set_target_properties(RenderAssetBuilders.Private.Object PROPERTIES UNITY_BUILD OFF)
+
+# Shader compilation belongs to the existing tools-only asset processor owner.
+ly_add_target(
+    NAME ShaderCompiler.Private.Object OBJECT
+    NAMESPACE JE
+    FILES_CMAKE shader_compiler_files.cmake shader_compiler_platform_files.cmake
+    INCLUDE_DIRECTORIES PRIVATE Source/Shader Source/Shader/Platform/${PAL_PLATFORM_NAME} PUBLIC Include
+    COMPILE_DEFINITIONS PRIVATE JE_RENDER_ASSET_BUILDERS_EXPORTS _SCL_SECURE_NO_WARNINGS
+    BUILD_DEPENDENCIES PUBLIC
+        3rdParty::mcpp
+        AZ::AssetBuilderSDK AZ::AzCore AZ::AzFramework AZ::AzToolsFramework
+        Gem::Atom_RHI.Edit Gem::Atom_RPI.Edit Gem::Atom_RPI.Public
+)
+set_target_properties(ShaderCompiler.Private.Object PROPERTIES UNITY_BUILD OFF)
+# Retain the original shader compiler exception mode without changing other targets.
+if(MSVC)
+    target_compile_options(ShaderCompiler.Private.Object PRIVATE /EHsc)
+else()
+    target_compile_options(ShaderCompiler.Private.Object PRIVATE -fexceptions)
+endif()
+
+ly_add_target(
+    NAME RenderAssetBuilders ${PAL_TRAIT_MONOLITHIC_DRIVEN_LIBRARY_TYPE}
+    NAMESPACE JE
+    FILES_CMAKE render_asset_builders_shared_files.cmake
+    INCLUDE_DIRECTORIES PRIVATE Source Source/Shader PUBLIC Include
+    COMPILE_DEFINITIONS PRIVATE JE_RENDER_ASSET_BUILDERS_EXPORTS
+    BUILD_DEPENDENCIES
+        PUBLIC AZ::AzCore AZ::SceneCore Gem::Atom_RPI.Public
+        PRIVATE JE::RenderAssetBuilders.Private.Object JE::ShaderCompiler.Private.Object
+    RUNTIME_DEPENDENCIES
+        3rdParty::DirectXShaderCompilerDxc AZ::Azslc
+)
+set_target_properties(RenderAssetBuilders PROPERTIES UNITY_BUILD OFF)
+
+if(PAL_TRAIT_BUILD_TESTS_SUPPORTED)
+    ly_add_target(
+        NAME RenderAssetBuilders.Tests ${PAL_TRAIT_TEST_TARGET_TYPE}
+        NAMESPACE JE
+        FILES_CMAKE render_asset_builders_tests_files.cmake
+        INCLUDE_DIRECTORIES PRIVATE Tests Source
+        BUILD_DEPENDENCIES PRIVATE
+            AZ::AzTest AZ::AzFramework
+            JE::RenderAssetBuilders.Private.Object JE::RenderAssetBuilders
+    )
+    set_target_properties(RenderAssetBuilders.Tests PROPERTIES UNITY_BUILD OFF)
+    ly_add_googletest(NAME JE::RenderAssetBuilders.Tests LABELS REQUIRES_tiaf)
+endif()
+
+include(${CMAKE_CURRENT_LIST_DIR}/shader_compiler_resources.cmake)
+# Source-free SDKs need the same native build-option configuration as the engine.
+ly_install_directory(DIRECTORIES Assets EXCLUDE_PATTERNS Android Emscripten iOS Mac dx12)
+
+if(PAL_TRAIT_BUILD_TESTS_SUPPORTED)
+    ly_add_target(
+        NAME ShaderCompiler.Tests ${PAL_TRAIT_TEST_TARGET_TYPE}
+        NAMESPACE JE
+        FILES_CMAKE shader_compiler_tests_files.cmake
+        INCLUDE_DIRECTORIES PRIVATE Tests/Shader Source/Shader Source/Shader/Platform/${PAL_PLATFORM_NAME}
+        BUILD_DEPENDENCIES PRIVATE
+            AZ::AzTest AZ::AzFramework AZ::AzToolsFramework Legacy::CryCommon
+            Gem::Atom_RPI.Public Gem::Atom_RHI.Public Gem::Atom_RPI.Edit
+            JE::ShaderCompiler.Private.Object JE::RenderAssetBuilders
+    )
+    set_target_properties(ShaderCompiler.Tests PROPERTIES UNITY_BUILD OFF)
+    ly_add_googletest(NAME JE::ShaderCompiler.Tests LABELS REQUIRES_tiaf)
+endif()

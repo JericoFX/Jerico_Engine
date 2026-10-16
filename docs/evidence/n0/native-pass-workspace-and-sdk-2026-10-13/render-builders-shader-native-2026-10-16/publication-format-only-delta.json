@@ -1,0 +1,58 @@
+{
+  "approved": true,
+  "reviewer": "/root",
+  "utc": "2026-10-16T10:13:17.9958303Z",
+  "scope": "Publication formatting only; zero behavior/API changes",
+  "sourcePath": "Engine/Assets/RenderBuilders/Source/Shader/AzslCompiler.cpp",
+  "testedSource82": {
+    "bytes": 68214,
+    "sha256": "CD12E35D29FD004016592FA6763E57203DD7651C190475ECAADFA39DE82AFEFE",
+    "freeze": "atomshader-native82-private-include-preparation-rev1/freeze82-native-shader.json",
+    "freezeSHA256": "B65743A66E3837A917C49F479AD4F2F6DEEBBAF5719C49ECE30302A1DE05B0EC"
+  },
+  "publicationSource": {
+    "bytes": 68212,
+    "sha256": "85F5EA16241AB8C7AA23F3334DD7CEE30877A39EBE6EE0C633C896D5B2BDFC5C"
+  },
+  "removedAsciiSpaces": 2,
+  "changedLineNumbers": [
+    917,
+    1054
+  ],
+  "parentIndependentlyReconstructedTestedSourceByteExact": true,
+  "otherBytesAndAllLineBreaksIdentical": true,
+  "reasonForReusingNativeEvidence": "Only trailing ASCII spaces after complete constructor argument separators were removed. They are outside string literals/macros/continuations. No identifiers, tokens, API, line breaks, runtime configuration or validated binary changed.",
+  "reranNativeBuildOrTests": false,
+  "nativeRenderBuildersDLLSHA256": "DDC2D553FC54F7F53388B3645E561AF30B21420CAABB52EC1DE0E272D2F97748",
+  "writerReceiptSHA256": "914CA3E5C8EE59F12F6E01A65EBEFE13C17377BB4C1EABDC17DE423FDE242D80",
+  "writerChecks": {
+    "removedBytes": 2,
+    "insertions": 0,
+    "otherBytesIdentical": true,
+    "inverseByteExact": true,
+    "allOtherLinesIdentical": true,
+    "strictUTF8Decode": true,
+    "UTF8BOMBefore": false,
+    "UTF8BOMAfter": false,
+    "CRBefore": 1269,
+    "CRAfter": 1269,
+    "LFBefore": 1269,
+    "LFAfter": 1269
+  },
+  "rawArchiveWhitespaceExceptions": [
+    "/pbr/atomshader-native83-sdk-preparation-rev1/ResumeSdkConsumer83.ps1 -whitespace",
+    "/pbr/atomshader-native83-sdk-preparation-rev1/ResumeSdkConsumer83AfterBuild.ps1 -whitespace",
+    "/pbr/atomshader-native83-sdk-preparation-rev1/run-sdk-current.ps1 -whitespace",
+    "/pbr/atomshader-native85-positive-variants-candidate/fixture-review.diff -whitespace",
+    "/pbr/atomshader-native85-positive-variants-candidate/fixture/JEVariantPositive85/JEVariantPositive85.azsl -whitespace",
+    "/pbr/atomshader-native85-positive-variants-candidate/fixture/JEVariantPositive85/JEVariantPositive85.shader -whitespace",
+    "/pbr/native-atomshader-ap84-attempt1/selected-products/pc/shaders/simpletextured_vulkan.options.json -whitespace",
+    "/pbr/native-atomshader-ap85-attempt1/selected-products/pc/assets/tests/jenativeshader85/jevariantpositive85_vulkan.options.json -whitespace",
+    "/pbr/native-shader-compiler-source82-attempt1/CMakeCache.configured.txt -whitespace",
+    "/source-proofs/original-AtomShader-CMakeLists.txt -whitespace"
+  ],
+  "engineWhitespacePolicyUnchanged": true,
+  "rawEvidenceCopiedBytesUnmodified": true,
+  "gitAttributeDocumentation": "https://git-scm.com/docs/gitattributes#_checking_whitespace_errors",
+  "noNewGemOrVisualAcceptance": true
+}

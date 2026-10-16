@@ -1,0 +1,33 @@
+{
+  "phase": "test-shader-focal82",
+  "startedUtc": "2026-10-16T08:16:37.2554026Z",
+  "pid": 23212,
+  "processCreationUtc": "2026-10-16T08:16:37.2926770Z",
+  "ramBefore": {
+    "capturedUtc": "2026-10-16T08:16:37.2553675Z",
+    "totalBytes": 34265743360,
+    "freeBytes": 19765637120,
+    "usedPercent": 42.32,
+    "thresholdPercent": 80
+  },
+  "executable": "C:\\Program Files\\CMake\\bin\\ctest.exe",
+  "argv": [
+    "--test-dir",
+    "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine",
+    "-C",
+    "profile",
+    "--output-on-failure",
+    "--no-tests=error",
+    "--timeout",
+    "180",
+    "--output-junit",
+    "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-shader-compiler-source82-attempt1\\ctest.junit.xml",
+    "--parallel",
+    "1",
+    "-R",
+    "^(JE::ShaderCompiler\\.Tests\\.main::TEST_RUN|JE::RenderAssetBuilders\\.Tests\\.main::TEST_RUN|Gem::ShaderManagementConsole\\.VariantGenerator\\.Tests\\.main::TEST_RUN|JE::EditorMaterials\\.Tests\\.main::TEST_RUN|Gem::AtomToolsFramework\\.Tests\\.main::TEST_RUN|Gem::GraphModel\\.Editor\\.Tests\\.main::TEST_RUN|Legacy::EditorLib\\.Tests\\.main::TEST_RUN|Gem::Atom_RPI\\.Tests\\.main::TEST_RUN)$"
+  ],
+  "workingDirectory": "F:\\JericoEngine\\JericoEngine",
+  "stdout": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-shader-compiler-source82-attempt1\\test-shader-focal82.stdout.log",
+  "stderr": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-shader-compiler-source82-attempt1\\test-shader-focal82.stderr.log"
+}

@@ -1,0 +1,11 @@
+~~1792143931125~~1~~0000000000004110~~Builder::RunJob~~Request started builder [46E5D9F3462F403B90BB8797503F8647 - 1] task (process) assets/tests/jenativeshader85/jevariantpositive85.hashedvariantlist 
+~~1792143931127~~1~~0000000000004110~~AssetBuilder~~AssetBuilder: AllocatorManager before: allocatedBytes = 56454981 capacityBytes = 55834574848
+~~1792143931127~~1~~0000000000004110~~AssetBuilder~~AssetBuilder: Running processJob task
+~~1792143931127~~1~~0000000000004110~~AssetBuilder~~AssetBuilder: Source = F:/JericoEngine/JericoEngine/Projects/JEEditorFixture/Cache/Intermediate Assets/assets/tests/jenativeshader85/jevariantpositive85.hashedvariantlist
+~~1792143931127~~1~~0000000000004110~~AssetBuilder~~AssetBuilder: Platform = pc
+~~1792143931127~~1~~0000000000004110~~AssetBuilder~~AZSL Compiler: Option {o_clamp} doesn't provide a default value, using {false} instead.
+~~1792143931127~~1~~0000000000004110~~AssetBuilder~~AZSL Compiler: Option {o_useColorChannels} doesn't provide a default value, using {false} instead.
+~~1792143931127~~1~~0000000000004110~~AssetBuilder~~ShaderVariantAssetBuilder: Shader Variant Tree Asset [F:\JericoEngine\JericoEngine\Projects\JEEditorFixture\user\AssetProcessorTemp\JobTemp-WaLncU\JEVariantPositive85.azshadervarianttree] compiled successfully.
+~~1792143931127~~1~~0000000000004110~~AssetBuilder~~AssetBuilder: AllocatorManager after: allocatedBytes = 56455461 capacityBytes = 55834574848; allocated change = 480
+~~1792143931127~~1~~0000000000004110~~AssetBuilder~~S: 0 errors, 0 warnings
+~~1792143931127~~1~~0000000000004110~~Builder::RunJob~~Request stopped builder [46E5D9F3462F403B90BB8797503F8647 - 1] task (process) assets/tests/jenativeshader85/jevariantpositive85.hashedvariantlist 

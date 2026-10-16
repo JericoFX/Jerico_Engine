@@ -1,0 +1,180 @@
+{
+  "state": "PRIVATE_PREPARED_NOT_RUN_SOURCE82_INSTALL_PARENT_QUARANTINE_CONSUME",
+  "owner": "/root/bsp_writer private preparation; /root assigns native execution",
+  "hostsResult": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-shader-compiler-source82-attempt1\\build-shader-hosts82.result.json",
+  "hostsPostflight": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-shader-compiler-source82-attempt1\\postflight.json",
+  "sourceFreeze": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native82-private-include-preparation-rev1\\freeze82-native-shader.json",
+  "nativeFreeze": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native82-private-include-preparation-rev1\\freeze82-native-shader.json",
+  "nativeFreezeSHA256": "B65743A66E3837A917C49F479AD4F2F6DEEBBAF5719C49ECE30302A1DE05B0EC",
+  "generatedChecker": "F:/JericoEngine/JericoEngine/build/n0-validation/native-passgraph-workspace-rev1/sdk-legacy-install-analysis-rev1/CheckGeneratedSdk.ps1",
+  "previousConfigureReview": "F:/JericoEngine/JericoEngine/build/n0-validation/native-render-builders-integration-rev1/sdk-rpi2-consumer-attempt1/configure-gate-review.json",
+  "previousConfigureDelta": "F:/JericoEngine/JericoEngine/build/n0-validation/native-render-builders-integration-rev1/sdk-rpi2-consumer-attempt1/sdk-delta-after-configure.json",
+  "previousInstallInventory": "F:/JericoEngine/JericoEngine/build/n0-validation/native-render-builders-integration-rev1/sdk-rpi2-install-attempt1/manifest-inventory.json",
+  "dumpbin": "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/dumpbin.exe",
+  "configureArguments": 43,
+  "countCorrection": "Prior report said52; actual accepted recipe.configureArgv and configure-run.argv both contain43 identical elements. No arguments added or dropped.",
+  "copiedSources": 4,
+  "helpersCreated": 0,
+  "pins": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-passgraph-workspace-rev1\\sdk-legacy-install-analysis-rev1\\CheckGeneratedSdk.ps1",
+      "bytes": 9334,
+      "sha256": "557E851A95232FAFB3B0C8DEF547F44FACCDF25E14C321D1F28BE117BA55B667"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\sdk-rpi2-consumer-attempt1\\configure-gate-review.json",
+      "bytes": 11719,
+      "sha256": "CD9194586D1EC9FFCE2AF1ACEF625996A9605E79D30DDBEABEDCDC5B35A64BCC"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\sdk-rpi2-consumer-attempt1\\sdk-delta-after-configure.json",
+      "bytes": 8508,
+      "sha256": "69B9B44EEAF443C941DB2439656DC2AA215130BF2611435F8CE993CF4E3690E1"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\sdk-rpi2-install-attempt1\\manifest-inventory.json",
+      "bytes": 191523,
+      "sha256": "AEC84CA3A7958D7859A3F5F73AF93F8F05E9AA7B8BE3740F58BF90D3AB09AA49"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Registry\\cmake_dependencies.editor.setreg",
+      "bytes": 6874,
+      "sha256": "A23C36CF13F9B150F25A0F6DCDC4885689704D5B81E6049F811EF8A593F1FCF8"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Registry\\cmake_dependencies.jeeditorfixture_gamelauncher.setreg",
+      "bytes": 4144,
+      "sha256": "4B210E9365E11C5E2189A72326928D070AEFABA081A8D15FA18F0CB6ADBAE33E"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-passgraph-workspace-rev1\\real-pass-editor-ap-attempt1\\protected-authored-preflight.json",
+      "bytes": 10241,
+      "sha256": "19561BEDF174BE53730285261282E1F2D7D71EEB3F6095F3BD9001668526829A"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\folder-drop-regression-rev1\\owner-folder-before-ui.json",
+      "bytes": 6906,
+      "sha256": "3C9B850492A56941C53DBF216F0C5CBAE2634852D19324FC4A7FEC36DF921784"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native82-private-include-preparation-rev1\\freeze82-native-shader.json",
+      "bytes": 3505834,
+      "sha256": "B65743A66E3837A917C49F479AD4F2F6DEEBBAF5719C49ECE30302A1DE05B0EC"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native83-sdk-preparation-rev1\\quarantine-proposal.json",
+      "bytes": 8574,
+      "sha256": "A714692A4B2882C31DC62F7B9C8C8A14BB361B227995D7134C0F23F41DE7AFA2"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native83-sdk-preparation-rev1\\recipe.json",
+      "bytes": 11620,
+      "sha256": "523192450686949AC787B97D7E065A54928CE46F8CB2A25728CD18BF2C383418"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native83-sdk-preparation-rev1\\run-sdk-current.ps1",
+      "bytes": 34190,
+      "sha256": "DB3CE9A55864A0E471952B2BB1AEF89FB9FA8379C277F72A6B1E7A098FE0D763"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native83-sdk-preparation-rev1\\source\\CMakeLists.txt",
+      "bytes": 2984,
+      "sha256": "23120ED6BBC038B99E184DEC3594D115F597550BD88DEF07FC1118A07696BF5B"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native83-sdk-preparation-rev1\\source\\consumer_files.cmake",
+      "bytes": 25,
+      "sha256": "2F0ACA6BAD0CF988A388EC9D4664ED2E2D507B4E03958E23730768D314E3006E"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native83-sdk-preparation-rev1\\source\\main.cpp",
+      "bytes": 12375,
+      "sha256": "FA7263CD8DF60CD991013BC16346D566B19B2084F9E2AACC7B1785B84932EAD4"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native83-sdk-preparation-rev1\\source\\project.json",
+      "bytes": 388,
+      "sha256": "3A7625CD2BE22DFD8B3C36C4C68932693611513A980111870371A291F12197C4"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-shader-compiler-source82-attempt1\\build-shader-hosts82.result.json",
+      "bytes": 19855,
+      "sha256": "52047ACF2D64EF7CD36409AF7A9E40F6DC68D43B44DF4D9B0BAA37E3FA14B6D9"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-shader-compiler-source82-attempt1\\build-shader-hosts82.start.json",
+      "bytes": 1613,
+      "sha256": "DFDCB5EAC7D55ECB56D3C855C0BE1EDB787E9233EC8C4D972B1F14E0F46DFDD6"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-shader-compiler-source82-attempt1\\parent-review82.json",
+      "bytes": 12692,
+      "sha256": "3357F0E78D5436471F4E53DB1C24E15FB849D68C49149B067E266A259C70C17E"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-shader-compiler-source82-attempt1\\postflight.json",
+      "bytes": 244795,
+      "sha256": "B40F22EBF273679D0AEB6FF83D3096CC8C96C9747D81488D3B0B5B8290FC5581"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\parent-native77-closure-review-rev1\\effective-material-review.json",
+      "bytes": 2633,
+      "sha256": "02674917BC8E39D4A9A6E0BDC63AA61DB4171AD79DC28D70144D5D693480AB7E"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\sdk-vulkan-source77-preparation-rev1\\execution-registry-replay-attempt2\\runtime-deploy-review.json",
+      "bytes": 15504,
+      "sha256": "459C87081A78705ED767C93646D12675E02629E33C9B0A2F9D099FDF9C242330"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\sdk-vulkan-source77-preparation-rev1\\execution-registry-replay-attempt2\\sdk-configure-additions.json",
+      "bytes": 8244,
+      "sha256": "09F39E6937920E86969B9DDD23717CC4C9B0F65E6AE8A71213757323A251CF0F"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\sdk-vulkan-source77-preparation-rev1\\execution-registry-replay-attempt2\\sdk-final-inventory.json",
+      "bytes": 2314105,
+      "sha256": "179911E66AF67D4ACC4D24FF95C2A1BEACEC201FA9D3D7EBC88BACECDE31E08B"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\CMakeCache.txt",
+      "bytes": 118643,
+      "sha256": "583D5EC400A54D4A036414F26F332B01CDD6CD3B91B011B6B12DD484B71827BC"
+    }
+  ],
+  "hostsStart": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-shader-compiler-source82-attempt1\\build-shader-hosts82.start.json",
+  "nativeSummary": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-shader-compiler-source82-attempt1\\postflight.json",
+  "freezePin": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native82-private-include-preparation-rev1\\freeze82-native-shader.json",
+    "bytes": 3505834,
+    "sha256": "B65743A66E3837A917C49F479AD4F2F6DEEBBAF5719C49ECE30302A1DE05B0EC"
+  },
+  "cachePin": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\CMakeCache.txt",
+    "bytes": 118643,
+    "sha256": "583D5EC400A54D4A036414F26F332B01CDD6CD3B91B011B6B12DD484B71827BC"
+  },
+  "protectedPin": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-passgraph-workspace-rev1\\real-pass-editor-ap-attempt1\\protected-authored-preflight.json",
+    "bytes": 10241,
+    "sha256": "19561BEDF174BE53730285261282E1F2D7D71EEB3F6095F3BD9001668526829A"
+  },
+  "ownerPin": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\folder-drop-regression-rev1\\owner-folder-before-ui.json",
+    "bytes": 6906,
+    "sha256": "3C9B850492A56941C53DBF216F0C5CBAE2634852D19324FC4A7FEC36DF921784"
+  },
+  "previousSdkPrefix": "F:/JericoEngine/JericoEngine/build/sdk-rpi2",
+  "productRegistries": [
+    "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/profile/Registry/cmake_dependencies.editor.setreg",
+    "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/profile/Registry/cmake_dependencies.jeeditorfixture_gamelauncher.setreg"
+  ],
+  "terminalPins": "Closed source82 parent-review82 fixed pin plus actual HOSTS10 and811 cases; EffectiveMaterial77 object/DLL/export identity is independently revalidated. Consume requires runtime InstallStateSHA256 and parent QuarantineReviewPath/SHA256.",
+  "parentReview82": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-shader-compiler-source82-attempt1\\parent-review82.json",
+  "parentReview82SHA256": "3357F0E78D5436471F4E53DB1C24E15FB849D68C49149B067E266A259C70C17E",
+  "baselineSdk77Inventory": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\sdk-vulkan-source77-preparation-rev1\\execution-registry-replay-attempt2\\sdk-final-inventory.json",
+  "priorSdk77ConfigureAdds": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\sdk-vulkan-source77-preparation-rev1\\execution-registry-replay-attempt2\\sdk-configure-additions.json",
+  "priorSdk77Deploy": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\sdk-vulkan-source77-preparation-rev1\\execution-registry-replay-attempt2\\runtime-deploy-review.json",
+  "quarantineProposal": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native83-sdk-preparation-rev1\\quarantine-proposal.json",
+  "effectiveMaterialReview": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\parent-native77-closure-review-rev1\\effective-material-review.json"
+}

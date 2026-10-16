@@ -1,0 +1,31 @@
+{
+  "reviewer": "/root",
+  "executable": "C:\\Users\\Jerico\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+  "approved": true,
+  "quarantineReviewSHA256": "201FCAEE931ADDE4F1C4C55F0B9B60C723C4EE7708D54D0B788E7F73E824463F",
+  "recipeSHA256": "523192450686949AC787B97D7E065A54928CE46F8CB2A25728CD18BF2C383418",
+  "runnerSHA256": "DB3CE9A55864A0E471952B2BB1AEF89FB9FA8379C277F72A6B1E7A098FE0D763",
+  "state": "ONE_CONSUME83_RUN_AUTHORIZED",
+  "checks": "Configure/build/imports/loader and exact31 current SDK DLLs, three messages, frozen14034+40+26; no activation/cook/GPU/GUI/wholeGem acceptance.",
+  "argv": [
+    "-NoProfile",
+    "-NonInteractive",
+    "-File",
+    "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native83-sdk-preparation-rev1\\run-sdk-current.ps1",
+    "-Execute",
+    "-Phase",
+    "Consume",
+    "-InstallStateSHA256",
+    "D9BB641D07877E7243C71152A50BBB6DC10CC8FDA3840ED6C431F3973861FA5A",
+    "-QuarantineReviewPath",
+    "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native83-sdk-preparation-rev1\\parent-quarantine-review83.json",
+    "-QuarantineReviewSHA256",
+    "201FCAEE931ADDE4F1C4C55F0B9B60C723C4EE7708D54D0B788E7F73E824463F",
+    "-EffectiveMaterialReviewPath",
+    "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\parent-native77-closure-review-rev1\\effective-material-review.json",
+    "-EffectiveMaterialReviewSHA256",
+    "02674917BC8E39D4A9A6E0BDC63AA61DB4171AD79DC28D70144D5D693480AB7E"
+  ],
+  "installStateSHA256": "D9BB641D07877E7243C71152A50BBB6DC10CC8FDA3840ED6C431F3973861FA5A",
+  "cwd": "F:\\JericoEngine\\JericoEngine"
+}

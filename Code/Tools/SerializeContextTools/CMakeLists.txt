@@ -24,6 +24,7 @@ ly_add_target(
             JE::EditorMaterials
             JE::EditorCamera
             JE::PrefabBuilder
+            JE::RenderAssetBuilders
         PRIVATE
             AZ::AzCore
             AZ::AzFramework

@@ -1,0 +1,120 @@
+{
+  "phase": "test-shader-focal82",
+  "startedUtc": "2026-10-16T08:16:37.2554026Z",
+  "finishedUtc": "2026-10-16T08:17:12.6332834Z",
+  "elapsedSeconds": 35.378,
+  "pid": 23212,
+  "processCreationUtc": "2026-10-16T08:16:37.2926770Z",
+  "ramBefore": {
+    "capturedUtc": "2026-10-16T08:16:37.2553675Z",
+    "totalBytes": 34265743360,
+    "freeBytes": 19765637120,
+    "usedPercent": 42.32,
+    "thresholdPercent": 80
+  },
+  "peakRamUsedPercent": 42.65,
+  "ramWaitSamples": [
+    {
+      "capturedUtc": "2026-10-16T08:16:40.3839325Z",
+      "ramUsedPercent": 42.57,
+      "pid": 23212,
+      "processCreationUtc": "2026-10-16T08:16:37.2926770Z",
+      "workingSetBytes": 16752640
+    },
+    {
+      "capturedUtc": "2026-10-16T08:16:43.4975113Z",
+      "ramUsedPercent": 42.39,
+      "pid": 23212,
+      "processCreationUtc": "2026-10-16T08:16:37.2926770Z",
+      "workingSetBytes": 16842752
+    },
+    {
+      "capturedUtc": "2026-10-16T08:16:46.6111631Z",
+      "ramUsedPercent": 42.37,
+      "pid": 23212,
+      "processCreationUtc": "2026-10-16T08:16:37.2926770Z",
+      "workingSetBytes": 16855040
+    },
+    {
+      "capturedUtc": "2026-10-16T08:16:49.7237848Z",
+      "ramUsedPercent": 42.47,
+      "pid": 23212,
+      "processCreationUtc": "2026-10-16T08:16:37.2926770Z",
+      "workingSetBytes": 16957440
+    },
+    {
+      "capturedUtc": "2026-10-16T08:16:52.8338759Z",
+      "ramUsedPercent": 42.29,
+      "pid": 23212,
+      "processCreationUtc": "2026-10-16T08:16:37.2926770Z",
+      "workingSetBytes": 17035264
+    },
+    {
+      "capturedUtc": "2026-10-16T08:16:55.9426897Z",
+      "ramUsedPercent": 42.28,
+      "pid": 23212,
+      "processCreationUtc": "2026-10-16T08:16:37.2926770Z",
+      "workingSetBytes": 17047552
+    },
+    {
+      "capturedUtc": "2026-10-16T08:16:59.0630395Z",
+      "ramUsedPercent": 42.25,
+      "pid": 23212,
+      "processCreationUtc": "2026-10-16T08:16:37.2926770Z",
+      "workingSetBytes": 17162240
+    },
+    {
+      "capturedUtc": "2026-10-16T08:17:02.1798750Z",
+      "ramUsedPercent": 42.12,
+      "pid": 23212,
+      "processCreationUtc": "2026-10-16T08:16:37.2926770Z",
+      "workingSetBytes": 16855040
+    },
+    {
+      "capturedUtc": "2026-10-16T08:17:05.3002523Z",
+      "ramUsedPercent": 42.42,
+      "pid": 23212,
+      "processCreationUtc": "2026-10-16T08:16:37.2926770Z",
+      "workingSetBytes": 16871424
+    },
+    {
+      "capturedUtc": "2026-10-16T08:17:08.4162128Z",
+      "ramUsedPercent": 42.65,
+      "pid": 23212,
+      "processCreationUtc": "2026-10-16T08:16:37.2926770Z",
+      "workingSetBytes": 16814080
+    },
+    {
+      "capturedUtc": "2026-10-16T08:17:11.5380194Z",
+      "ramUsedPercent": 42.59,
+      "pid": 23212,
+      "processCreationUtc": "2026-10-16T08:16:37.2926770Z",
+      "workingSetBytes": 16826368
+    }
+  ],
+  "ramGuardTriggered": null,
+  "ramPollMilliseconds": 3000,
+  "processMemorySamples": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-shader-compiler-source82-attempt1\\test-shader-focal82.memory-process-samples.jsonl",
+  "executable": "C:\\Program Files\\CMake\\bin\\ctest.exe",
+  "argv": [
+    "--test-dir",
+    "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine",
+    "-C",
+    "profile",
+    "--output-on-failure",
+    "--no-tests=error",
+    "--timeout",
+    "180",
+    "--output-junit",
+    "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-shader-compiler-source82-attempt1\\ctest.junit.xml",
+    "--parallel",
+    "1",
+    "-R",
+    "^(JE::ShaderCompiler\\.Tests\\.main::TEST_RUN|JE::RenderAssetBuilders\\.Tests\\.main::TEST_RUN|Gem::ShaderManagementConsole\\.VariantGenerator\\.Tests\\.main::TEST_RUN|JE::EditorMaterials\\.Tests\\.main::TEST_RUN|Gem::AtomToolsFramework\\.Tests\\.main::TEST_RUN|Gem::GraphModel\\.Editor\\.Tests\\.main::TEST_RUN|Legacy::EditorLib\\.Tests\\.main::TEST_RUN|Gem::Atom_RPI\\.Tests\\.main::TEST_RUN)$"
+  ],
+  "exitCode": 0,
+  "stdout": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-shader-compiler-source82-attempt1\\test-shader-focal82.stdout.log",
+  "stdoutSha256": "E50428ED5FB4B5ABECEEC2220697E2E93570C6153F4711CC1A27C644569FEBD0",
+  "stderr": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-shader-compiler-source82-attempt1\\test-shader-focal82.stderr.log",
+  "stderrSha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+}

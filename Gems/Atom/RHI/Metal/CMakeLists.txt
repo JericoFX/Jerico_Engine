@@ -6,6 +6,11 @@
 #
 #
 
+# Windows and Linux product hosts use Vulkan; keep this backend source for other platforms.
+if(PAL_PLATFORM_NAME STREQUAL "Windows" OR PAL_PLATFORM_NAME STREQUAL "Linux")
+    return()
+endif()
+
 o3de_gem_setup("Atom_RHI_Metal")
 
 add_subdirectory(Code)

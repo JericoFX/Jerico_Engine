@@ -1,0 +1,24 @@
+diff --git a/baseline/Engine/Render/Integration/Assets/Shaders/SimpleTextured.shader b/candidate/fixture/JEVariantPositive85/JEVariantPositive85.shader
+--- a/baseline/Engine/Render/Integration/Assets/Shaders/SimpleTextured.shader
++++ b/candidate/fixture/JEVariantPositive85/JEVariantPositive85.shader
+@@ -1,5 +1,6 @@
+ {
+-    "Source" : "SimpleTextured.azsl",
++    "Source" : "JEVariantPositive85.azsl",
++    "RemoveBuildArguments": { "azslc": ["--sc-options"] },
+ 
+     "DepthStencilState" : { 
+         "Depth" : { 
+diff --git a/baseline/Engine/Render/Integration/Assets/Shaders/SimpleTextured.azsl b/candidate/fixture/JEVariantPositive85/JEVariantPositive85.azsl
+--- a/baseline/Engine/Render/Integration/Assets/Shaders/SimpleTextured.azsl
++++ b/candidate/fixture/JEVariantPositive85/JEVariantPositive85.azsl
+diff --git a/baseline/Engine/Render/Integration/Assets/Shaders/SimpleTextured.shadervariantlist b/candidate/fixture/JEVariantPositive85/JEVariantPositive85.shadervariantlist
+--- a/baseline/Engine/Render/Integration/Assets/Shaders/SimpleTextured.shadervariantlist
++++ b/candidate/fixture/JEVariantPositive85/JEVariantPositive85.shadervariantlist
+@@ -1,5 +1,5 @@
+ {
+-    "Shader": "SimpleTextured.shader",
++    "Shader": "JEVariantPositive85.shader",
+     "Variants": [
+         {
+             "StableId": 1,

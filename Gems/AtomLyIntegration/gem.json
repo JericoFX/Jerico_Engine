@@ -31,7 +31,6 @@
         "Atom_RHI",
         "Atom_RHI_Null",
         "Atom_Feature_Common",
-        "AtomShader",
         "ImageProcessingAtom",
         "AtomToolsFramework",
         "PassCanvas",

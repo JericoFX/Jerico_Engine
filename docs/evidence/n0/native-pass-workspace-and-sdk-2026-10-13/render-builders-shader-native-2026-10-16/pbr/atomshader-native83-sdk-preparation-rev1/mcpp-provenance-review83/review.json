@@ -1,0 +1,66 @@
+{
+  "schema": "mcpp-provenance-review83-v1",
+  "targets": [
+    {
+      "key": "producer-renderassetbuilders",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\RenderAssetBuilders.dll",
+      "sha256": "DDC2D553FC54F7F53388B3645E561AF30B21420CAABB52EC1DE0E272D2F97748",
+      "bytes": 2238464,
+      "dumpbin": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\dumpbin.exe",
+      "argv": [
+        "/DEPENDENTS",
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\RenderAssetBuilders.dll"
+      ],
+      "exitCode": 0,
+      "logPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native83-sdk-preparation-rev1\\mcpp-provenance-review83\\producer-renderassetbuilders.dumpbin-dependents.txt",
+      "logSha256": "291A7E1D9D2FCF32946222402E7112E45E7DB41BA2048C97088E9F48617D751F",
+      "containsMcpp0": true
+    },
+    {
+      "key": "retained-old-atomshader-builders",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AtomShader.Builders.dll",
+      "sha256": "23786E5440EFCCFDC7A29DD0DEEBC380D9FA97783C3F46570F03CD94256CBFC9",
+      "bytes": 1364992,
+      "dumpbin": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\dumpbin.exe",
+      "argv": [
+        "/DEPENDENTS",
+        "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AtomShader.Builders.dll"
+      ],
+      "exitCode": 0,
+      "logPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native83-sdk-preparation-rev1\\mcpp-provenance-review83\\retained-old-atomshader-builders.dumpbin-dependents.txt",
+      "logSha256": "BB1262D95C4892E40966F815FC3F8065C95D16146391F9622C50B95542F09D5F",
+      "containsMcpp0": true
+    },
+    {
+      "key": "consumer-exe",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-vk-consumer83\\bin\\profile\\JENativeSdkConsumer.exe",
+      "sha256": "9AD3D85B58B8CAC9365D008776B65F1B4561B531F80EA841F2D0C38C13E739D7",
+      "bytes": 73216,
+      "dumpbin": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\dumpbin.exe",
+      "argv": [
+        "/DEPENDENTS",
+        "F:\\JericoEngine\\JericoEngine\\build\\sdk-vk-consumer83\\bin\\profile\\JENativeSdkConsumer.exe"
+      ],
+      "exitCode": 0,
+      "logPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native83-sdk-preparation-rev1\\mcpp-provenance-review83\\consumer-exe.dumpbin-dependents.txt",
+      "logSha256": "CA30250B94967E3A72B23CD3F17486DDFA306945B5D62E52DC91BF7CD6F0EEB4",
+      "containsMcpp0": false
+    },
+    {
+      "key": "consumer-mcpp",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-vk-consumer83\\bin\\profile\\mcpp0.dll",
+      "sha256": "E28DB7EF935D6584D0F3EF38849F17D3475F3413251B205C59A5B15484DD66E9",
+      "bytes": 135168,
+      "dumpbin": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\dumpbin.exe",
+      "argv": [
+        "/DEPENDENTS",
+        "F:\\JericoEngine\\JericoEngine\\build\\sdk-vk-consumer83\\bin\\profile\\mcpp0.dll"
+      ],
+      "exitCode": 0,
+      "logPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native83-sdk-preparation-rev1\\mcpp-provenance-review83\\consumer-mcpp.dumpbin-dependents.txt",
+      "logSha256": "E83D255B2D68C020800EFC16561ED905069D623E75774D2558124BA8AFCA767F",
+      "containsMcpp0": false
+    }
+  ],
+  "observedUtc": "2026-10-16T09:31:11.7204198Z"
+}

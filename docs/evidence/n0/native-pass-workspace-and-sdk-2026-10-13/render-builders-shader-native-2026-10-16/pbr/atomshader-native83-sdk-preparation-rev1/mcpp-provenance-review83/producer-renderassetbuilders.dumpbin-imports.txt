@@ -1,0 +1,1377 @@
+Microsoft (R) COFF/PE Dumper Version 14.44.35228.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+
+Dump of file F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\RenderAssetBuilders.dll
+
+File Type: DLL
+
+  Section contains the following imports:
+
+    AzCore.dll
+             180130078 Import Address Table
+             1801DEBB8 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                         1DE ??0CheckedOperationInfo@AZ@@QEAA@$$QEAU01@@Z
+                        2373 ?GetO3deTypeName@AZ@@YA?AV?$basic_fixed_string@D$0CAA@U?$char_traits@D@AZStd@@@AZStd@@UAdl@1@U?$type_identity@UOverloadArgumentGroupInfo@AZ@@@std@@@Z
+                        2336 ?GetO3deTypeId@AZ@@YA?AUUuid@1@UAdl@1@U?$type_identity@UOverloadArgumentGroupInfo@AZ@@@std@@@Z
+                         3E3 ??0OverloadArgumentGroupInfo@AZ@@QEAA@$$QEBV?$vector@V?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@Uallocator@2@@AZStd@@0@Z
+                         67E ??1OverloadArgumentGroupInfo@AZ@@QEAA@XZ
+                         3E4 ??0OverloadArgumentGroupInfo@AZ@@QEAA@AEBU01@@Z
+                         3E2 ??0OverloadArgumentGroupInfo@AZ@@QEAA@$$QEAU01@@Z
+                        2371 ?GetO3deTypeName@AZ@@YA?AV?$basic_fixed_string@D$0CAA@U?$char_traits@D@AZStd@@@AZStd@@UAdl@1@U?$type_identity@UExplicitOverloadInfo@AZ@@@std@@@Z
+                        2334 ?GetO3deTypeId@AZ@@YA?AUUuid@1@UAdl@1@U?$type_identity@UExplicitOverloadInfo@AZ@@@std@@@Z
+                         2A0 ??0ExplicitOverloadInfo@AZ@@QEAA@V?$basic_string_view@DU?$char_traits@D@AZStd@@@AZStd@@0@Z
+                         60E ??1ExplicitOverloadInfo@AZ@@QEAA@XZ
+                         29F ??0ExplicitOverloadInfo@AZ@@QEAA@AEBU01@@Z
+                         29E ??0ExplicitOverloadInfo@AZ@@QEAA@$$QEAU01@@Z
+                         1C3 ??0BehaviorProperty@AZ@@QEAA@PEAVBehaviorContext@1@@Z
+                         5C3 ??1BehaviorProperty@AZ@@UEAA@XZ
+                        326F ?SetGetterImpl@BehaviorProperty@AZ@@AEAA_N_NPEAVBehaviorClass@2@@Z
+                        3304 ?SetSetterImpl@BehaviorProperty@AZ@@AEAA_N_NPEAVBehaviorClass@2@@Z
+                        200A ?GetAssetClassId@AZ@@YAAEBUUuid@1@XZ
+                        2001 ?GetAsDomValue@Attribute@AZ@@UEAA?AVValue@Dom@2@UPointerObject@2@@Z
+                        2368 ?GetO3deTypeName@AZ@@YA?AV?$basic_fixed_string@D$0CAA@U?$char_traits@D@AZStd@@@AZStd@@UAdl@1@U?$type_identity@M@std@@@Z
+                        232B ?GetO3deTypeId@AZ@@YA?AUUuid@1@UAdl@1@U?$type_identity@M@std@@@Z
+                        37C5 ?ends_with@?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@QEBA_NPEBD@Z
+                        2144 ?GetEditContext@SerializeContext@AZ@@QEBAPEAVEditContext@2@XZ
+                        31A6 ?SaveObjectToFileByType@JsonSerializationUtils@AZ@@YA?AV?$Outcome@XV?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@@2@PEBXAEBUUuid@2@AEBV?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@0PEBUJsonSerializerSettings@2@@Z
+                        20DE ?GetCurrentProcessId@Platform@AZ@@YAIXZ
+                        1C0C ?Contains@StringFunc@AZ@@YA_NV?$basic_string_view@DU?$char_traits@D@AZStd@@@AZStd@@0_N@Z
+                        1ECF ?Find@StringFunc@AZ@@YA_KV?$basic_string_view@DU?$char_traits@D@AZStd@@@AZStd@@D_K_N2@Z
+                         273 ??0ElementData@Edit@AZ@@QEAA@XZ
+                         1E8 ??0ClassData@Edit@AZ@@QEAA@XZ
+                         1E2 ??0ClassBuilder@EditContext@AZ@@AEAA@PEAV12@PEAVClassData@Serialize@2@PEAU3Edit@2@@Z
+                        1B2A ?ClassElement@ClassBuilder@EditContext@AZ@@QEAAPEAV123@VCrc32@3@PEBD@Z
+                        1051 ??9IO@AZ@@YA_NAEBVPathView@01@0@Z
+                        2356 ?GetO3deTypeId@AZ@@YA?AUUuid@1@UAdl@1@U?$type_identity@_K@std@@@Z
+                        2393 ?GetO3deTypeName@AZ@@YA?AV?$basic_fixed_string@D$0CAA@U?$char_traits@D@AZStd@@@AZStd@@UAdl@1@U?$type_identity@_K@std@@@Z
+                        11A1 ??Y?$basic_fixed_string@D$0EAA@U?$char_traits@D@AZStd@@@AZStd@@QEAAAEAV01@PEBD@Z
+                        1EF9 ?FindFiles@SystemFile@IO@AZ@@SAXPEBDV?$function@$$A6A_NPEBD_N@Z@AZStd@@@Z
+                         13B ??0?$basic_fixed_string@D$0EAA@U?$char_traits@D@AZStd@@@AZStd@@QEAA@XZ
+                        28A7 ?LoadObjectFromStream@Utils@AZ@@YAPEAXAEAVGenericStream@IO@2@PEAVSerializeContext@2@PEBUUuid@2@AEBUFilterDescriptor@ObjectStream@2@@Z
+                        2008 ?GetAsset@AssetManager@Data@AZ@@QEAA?AV?$Asset@VAssetData@Data@AZ@@@23@AEBUAssetId@23@AEBUUuid@3@W4AssetLoadBehavior@AssetLoadBehaviorNamespace@23@AEBUAssetLoadParameters@23@@Z
+                        1BF5 ?ConstructFull@Path@StringFunc@AZ@@YA_NPEBD00AEAV?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@_N@Z
+                        19C8 ?AssetFilterNoAssetLoading@Data@AZ@@YA_NAEBUAssetFilterInfo@12@@Z
+                        19FB ?BlockUntilLoadComplete@AssetInternal@Data@AZ@@YA?AW4AssetStatus@AssetData@23@AEBV?$Asset@VAssetData@Data@AZ@@@23@@Z
+                         185 ??0AssetLoadParameters@Data@AZ@@QEAA@XZ
+                        36CE ?WriteAtOffset@GenericStream@IO@AZ@@UEAA_K_KPEBX_J@Z
+                        301D ?ReadAtOffset@GenericStream@IO@AZ@@UEAA_K_KPEAX_J@Z
+                        2293 ?GetModeFlags@GenericStream@IO@AZ@@UEBA?AW4OpenMode@23@XZ
+                        21C3 ?GetFilename@GenericStream@IO@AZ@@UEBAPEBDXZ
+                        26C9 ?IsCompressed@GenericStream@IO@AZ@@UEBA_NXZ
+                        21A9 ?GetExecutableDirectory@Utils@AZ@@YA?AV?$basic_fixed_string@D$0EAA@U?$char_traits@D@AZStd@@@AZStd@@XZ
+                        24EB ?GetTimeNowSecond@AZStd@@YA_JXZ
+                        2884 ?LoadAnyObjectFromStream@JsonSerializationUtils@AZ@@YA?AV?$Outcome@Vany@AZStd@@V?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@2@@2@AEAVGenericStream@IO@2@PEBUJsonDeserializerSettings@2@@Z
+                        31A8 ?SaveObjectToStreamByType@JsonSerializationUtils@AZ@@YA?AV?$Outcome@XV?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@@2@PEBXAEBUUuid@2@AEAVGenericStream@IO@2@0PEBUJsonSerializerSettings@2@@Z
+                        1ECE ?Find@StringFunc@AZ@@YA_KV?$basic_string_view@DU?$char_traits@D@AZStd@@@AZStd@@0_K_N2@Z
+                        2943 ?Native@PathView@IO@AZ@@QEAAAEAV?$basic_string_view@DU?$char_traits@D@AZStd@@@AZStd@@XZ
+                         667 ??1MemoryStream@IO@AZ@@UEAA@XZ
+                         3A2 ??0MemoryStream@IO@AZ@@QEAA@PEBX_K@Z
+                         2CB ??0GenericStream@IO@AZ@@QEAA@XZ
+                        1BB1 ?ComputeSeekPosition@GenericStream@IO@AZ@@IEAA_K_JW4SeekMode@123@@Z
+                         61B ??1GenericStream@IO@AZ@@UEAA@XZ
+                        3945 ?set_capacity@?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@QEAAX_K@Z
+                        3783 ?contains@?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@QEBA_NPEBD@Z
+                        38D2 ?reserve@?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@QEAAX_K@Z
+                        3757 ?capacity@?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@QEBA_KXZ
+                        3813 ?format@?$basic_fixed_string@D$0EAA@U?$char_traits@D@AZStd@@@AZStd@@SA@PEBDZZ
+                        37CA ?erase@?$basic_fixed_string@D$0EAA@U?$char_traits@D@AZStd@@@AZStd@@QEAAAEAV12@_K0@Z
+                         DB9 ??4?$basic_fixed_string@D$0EAA@U?$char_traits@D@AZStd@@@AZStd@@QEAAAEAV01@AEBV01@@Z
+                        360D ?Tokenize@StringFunc@AZ@@YAXV?$basic_string_view@DU?$char_traits@D@AZStd@@@AZStd@@AEAV?$vector@V?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@Uallocator@2@@4@0_N2@Z
+                        2357 ?GetO3deTypeId@AZ@@YA?AUUuid@1@UAdl@1@U?$type_identity@_N@std@@@Z
+                        232C ?GetO3deTypeId@AZ@@YA?AUUuid@1@UAdl@1@U?$type_identity@N@std@@@Z
+                        2327 ?GetO3deTypeId@AZ@@YA?AUUuid@1@UAdl@1@U?$type_identity@H@std@@@Z
+                        23F8 ?GetPlatformIdFromName@PlatformHelper@PlatformDefaults@AZ@@SA?AW4PlatformId@PlatformIdNamespace@23@V?$basic_string_view@DU?$char_traits@D@AZStd@@@AZStd@@@Z
+                        2A1C ?PlatformIdToPalFolder@PlatformDefaults@AZ@@YAPEBDW4PlatformId@PlatformIdNamespace@12@@Z
+                        21D8 ?GetFullPath@Path@StringFunc@AZ@@YA_NPEBDAEAV?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@@Z
+                        2245 ?GetLength@FileIOStream@IO@AZ@@UEBA_KXZ
+                        36BD ?Write@FileIOStream@IO@AZ@@UEAA_K_KPEBX@Z
+                        3010 ?Read@FileIOStream@IO@AZ@@UEAA_K_KPEAX@Z
+                        1B04 ?CanRead@FileIOStream@IO@AZ@@UEBA_NXZ
+                        2778 ?IsOpen@FileIOStream@IO@AZ@@UEBA_NXZ
+                        1B73 ?Close@FileIOStream@IO@AZ@@UEAAXXZ
+                         2B3 ??0FileIOStream@IO@AZ@@QEAA@PEBDW4OpenMode@12@_N@Z
+                        3865 ?isctype@?$RegexTraits@D@AZStd@@QEBA_NDF@Z
+                        396B ?translate_nocase@?$RegexTraits@D@AZStd@@QEBADD@Z
+                        3969 ?translate@?$RegexTraits@D@AZStd@@QEBADD@Z
+                        386E ?length@?$RegexTraits@D@AZStd@@SA_KPEBD@Z
+                        38DB ?resize_no_construct@?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@QEAAX_K@Z
+                         147 ??0?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@QEAA@_KDAEBUallocator@1@@Z
+                        24EF ?GetTimeUTCMilliSecond@AZStd@@YA_KXZ
+                        24EC ?GetTimeNowTicks@AZStd@@YA_JXZ
+                        24ED ?GetTimeTicksPerSecond@AZStd@@YA_JXZ
+                        21D3 ?GetFolderPath@Path@StringFunc@AZ@@YA_NPEBDAEAV?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@@Z
+                        3365 ?Split@Path@StringFunc@AZ@@YA_NPEBDPEAV?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@111@Z
+                         17B ??0AssetId@Data@AZ@@QEAA@AEBUUuid@2@I@Z
+                        3796 ?data@?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@QEBAPEBDXZ
+                        1CEE ?CreateName@Uuid@AZ@@SA?AU12@V?$basic_string_view@DU?$char_traits@D@AZStd@@@AZStd@@@Z
+                        1E30 ?ElementsUpdated@IDataContainer@Serialize@AZ@@UEAAXPEAX@Z
+                        2AE1 ?RTTI_AddressOf@IDataContainer@Serialize@AZ@@UEBAPEBXAEBUUuid@3@@Z
+                        2AE0 ?RTTI_AddressOf@IDataContainer@Serialize@AZ@@UEAAPEAXAEBUUuid@3@@Z
+                        2C58 ?RTTI_EnumTypes@IDataContainer@Serialize@AZ@@UEAAXP6AXAEBUUuid@3@PEAX@Z1@Z
+                        2E80 ?RTTI_IsTypeOf@IDataContainer@Serialize@AZ@@UEBA_NAEBUUuid@3@@Z
+                        2D6C ?RTTI_GetTypeName@IDataContainer@Serialize@AZ@@UEBAPEBDXZ
+                        2CE2 ?RTTI_GetType@IDataContainer@Serialize@AZ@@UEBA?AUUuid@3@XZ
+                        1F99 ?FreeReservedElement@IDataContainer@Serialize@AZ@@UEAAXPEAX0PEAVSerializeContext@3@@Z
+                        201D ?GetAssociativeContainerInterface@IDataContainer@Serialize@AZ@@UEBAPEBVIAssociativeDataContainer@123@XZ
+                        201C ?GetAssociativeContainerInterface@IDataContainer@Serialize@AZ@@UEAAPEAVIAssociativeDataContainer@123@XZ
+                        2157 ?GetElementNameCrC@IDataContainer@Serialize@AZ@@UEAA?AVCrc32@3@H@Z
+                        2156 ?GetElementName@IDataContainer@Serialize@AZ@@UEAAPEBDH@Z
+                        2A29 ?PostClone@IDataSerializer@Serialize@AZ@@UEAAXPEAX@Z
+                        2419 ?GetProjectPath@Utils@AZ@@YA?AV?$basic_fixed_string@D$0EAA@U?$char_traits@D@AZStd@@@AZStd@@PEAVSettingsRegistryInterface@2@@Z
+                        215D ?GetEnginePath@Utils@AZ@@YA?AV?$basic_fixed_string@D$0EAA@U?$char_traits@D@AZStd@@@AZStd@@PEAVSettingsRegistryInterface@2@@Z
+                        2660 ?Instance@ITrace@Debug@AZ@@SAAEAV123@XZ
+                        2797 ?IsRelative@Path@StringFunc@AZ@@YA_NPEBD@Z
+                        362C ?TrimWhiteSpace@StringFunc@AZ@@YAAEAV?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@AEAV34@_N1@Z
+                        2217 ?GetInstance@NullFactory@Internal@AZ@@SAPEAV123@XZ
+                        1936 ?AddGenericClassInfo@GlobalGenericClassInfo@SerializeContext@AZ@@QEAAXPEAVGenericClassInfo@3@@Z
+                         2D8 ??0IDataContainer@Serialize@AZ@@QEAA@XZ
+                        1DA4 ?DeletePointerData@IDataContainer@Serialize@AZ@@IEAAXPEAVSerializeContext@3@PEBUClassElement@23@PEBX@Z
+                        210E ?GetDefaultElementNameCrc@IDataContainer@Serialize@AZ@@SA?AVCrc32@3@XZ
+                        210D ?GetDefaultElementName@IDataContainer@Serialize@AZ@@SAPEBDXZ
+                         622 ??1IDataContainer@Serialize@AZ@@UEAA@XZ
+                         2DC ??0IDataSerializer@Serialize@AZ@@QEAA@XZ
+                         624 ??1IDataSerializer@Serialize@AZ@@UEAA@XZ
+                        1CE1 ?CreateImpl@ClassData@Serialize@AZ@@CA?AV123@PEBDAEBUUuid@3@PEAVIObjectFactory@23@PEAVIDataSerializer@23@PEAVIDataContainer@23@PEAVIRttiHelper@3@V?$function@$$A6A?AV?$function@$$A6AXW4Action@any@AZStd@@PEAV23@PEBV23@@Z@AZStd@@PEAVSerializeContext@AZ@@@Z@AZStd@@@Z
+                         E2A ??4ClassData@Serialize@AZ@@QEAAAEAV012@$$QEAV012@@Z
+                         5D4 ??1ClassData@Serialize@AZ@@QEAA@XZ
+                         1EA ??0ClassData@Serialize@AZ@@QEAA@XZ
+                         E2B ??4ClassElement@Serialize@AZ@@QEAAAEAU012@AEBU012@@Z
+                        21DF ?GetGlobalSerializeContextModule@AZ@@YAAEAVGlobalGenericClassInfo@SerializeContext@1@XZ
+                        1EB8 ?FieldImpl@ClassBuilder@SerializeContext@AZ@@AEAAPEAV123@V?$initializer_list@U?$pair@VCrc32@AZ@@PEAVAttribute@2@@std@@@std@@PEBDAEBUUuid@3@12_K3_N42PEAVIRttiHelper@3@PEAVGenericClassInfo@3@P6A?AVany@AZStd@@PEAV23@@Z@Z
+                        30C6 ?RegisterGenericClassInfo@SerializeContext@AZ@@QEAAXAEBUUuid@2@PEAVGenericClassInfo@2@AEBQ6A?AVany@AZStd@@PEAV12@@Z@Z
+                        1021 ??8IO@AZ@@YA_NAEBVPathView@01@0@Z
+                        29FF ?ParentPath@PathView@IO@AZ@@QEBA?AV123@XZ
+                         3FF ??0PathView@IO@AZ@@QEAA@V?$basic_string_view@DU?$char_traits@D@AZStd@@@AZStd@@@Z
+                        1EAA ?Exists@SystemFile@IO@AZ@@SA_NPEBD@Z
+                        3957 ?substr@?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@QEBA?AV12@_K0@Z
+                        37DB ?find@?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@QEBA_KD_K@Z
+                        38D7 ?resize@?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@QEAAX_K@Z
+                        1074 ??A?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@QEBAAEBD_K@Z
+                         504 ??0Uuid@AZ@@QEAA@XZ
+                         135 ??0?$basic_fixed_string@D$0EAA@U?$char_traits@D@AZStd@@@AZStd@@QEAA@AEBV01@@Z
+                        1E83 ?Equal@StringFunc@AZ@@YA_NPEBD0_N_K@Z
+                        33AD ?StartsWith@StringFunc@AZ@@YA_NV?$basic_string_view@DU?$char_traits@D@AZStd@@@AZStd@@0_N@Z
+                        2944 ?Native@PathView@IO@AZ@@QEBAAEBV?$basic_string_view@DU?$char_traits@D@AZStd@@@AZStd@@XZ
+                         400 ??0PathView@IO@AZ@@QEAA@V?$basic_string_view@DU?$char_traits@D@AZStd@@@AZStd@@D@Z
+                        28A9 ?LoadObjectFromStreamByType@JsonSerializationUtils@AZ@@YA?AV?$Outcome@XV?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@@2@PEAXAEBUUuid@2@AEAVGenericStream@IO@2@PEBUJsonDeserializerSettings@2@@Z
+                        29D4 ?Open@FileIOStream@IO@AZ@@QEAA_NPEBDW4OpenMode@23@@Z
+                         615 ??1FileIOStream@IO@AZ@@UEAA@XZ
+                         2B4 ??0FileIOStream@IO@AZ@@QEAA@XZ
+                         609 ??1EnumerateInstanceCallContext@Serialize@AZ@@QEAA@XZ
+                         1DF ??0CheckedOperationInfo@AZ@@QEAA@AEBU01@@Z
+                        1E7A ?EnumerateInstance@SerializeContext@AZ@@QEBA_NPEAUEnumerateInstanceCallContext@Serialize@2@PEAXUUuid@2@PEBVClassData@42@PEBUClassElement@42@@Z
+                         60A ??1ErrorHandler@SerializeContext@AZ@@QEAA@XZ
+                        3154 ?Reset@ErrorHandler@SerializeContext@AZ@@QEAAXXZ
+                         28D ??0ErrorHandler@SerializeContext@AZ@@QEAA@XZ
+                        3421 ?StripFullName@Path@StringFunc@AZ@@YAXAEAV?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@@Z
+                        2822 ?Join@Path@StringFunc@AZ@@YA_NPEBD0AEAV?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@_N2@Z
+                        294F ?Normalize@Path@StringFunc@AZ@@YA_NAEAV?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@@Z
+                        1E0B ?DispatchEvents@AssetManager@Data@AZ@@QEAAXXZ
+                        1F5E ?FindOrCreateAsset@AssetInternal@Data@AZ@@YA?AV?$Asset@VAssetData@Data@AZ@@@23@AEBUAssetId@23@AEBUUuid@3@W4AssetLoadBehavior@AssetLoadBehaviorNamespace@23@@Z
+                         5AA ??1AssetLoadParameters@Data@AZ@@QEAA@XZ
+                        1045 ??9AssetId@Data@AZ@@QEBA_NAEBU012@@Z
+                        278C ?IsReady@AssetData@Data@AZ@@QEBA_NXZ
+                        2230 ?GetInverseFull@Matrix3x4@AZ@@QEBA?AV12@XZ
+                        26DC ?IsEmpty@Name@AZ@@QEBA_NXZ
+                        24D1 ?GetStringView@Name@AZ@@QEBA?AV?$basic_string_view@DU?$char_traits@D@AZStd@@@AZStd@@XZ
+                         F3B ??4Name@AZ@@QEAAAEAV01@V?$basic_string_view@DU?$char_traits@D@AZStd@@@AZStd@@@Z
+                        3872 ?length@?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@QEBA_KXZ
+                         143 ??0?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@QEAA@PEBD_KAEBUallocator@1@@Z
+                        27F2 ?IsTraceLoggingEnabledForLevel@ITrace@Debug@AZ@@QEAA_NW4LogLevel@23@@Z
+                         207 ??0Component@AZ@@QEAA@AEBV01@@Z
+                        1C48 ?CreateAsset@AssetManager@Data@AZ@@QEAA?AV?$Asset@VAssetData@Data@AZ@@@23@AEBUAssetId@23@AEBUUuid@3@W4AssetLoadBehavior@AssetLoadBehaviorNamespace@23@@Z
+                        36D5 ?WriteFile@Utils@AZ@@YA?AV?$Outcome@XV?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@@2@V?$basic_string_view@DU?$char_traits@D@AZStd@@@AZStd@@0@Z
+                        302B ?ReadJsonFile@JsonSerializationUtils@AZ@@YA?AV?$Outcome@V?$GenericDocument@U?$UTF8@D@rapidjson_ly@@V?$MemoryPoolAllocator@VCrtAllocator@rapidjson_ly@@@2@VCrtAllocator@2@@rapidjson_ly@@V?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@@2@V?$basic_string_view@DU?$char_traits@D@AZStd@@@AZStd@@_K@Z
+                        36DC ?WriteJsonFile@JsonSerializationUtils@AZ@@YA?AV?$Outcome@XV?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@@2@AEBV?$GenericDocument@U?$UTF8@D@rapidjson_ly@@V?$MemoryPoolAllocator@VCrtAllocator@rapidjson_ly@@@2@VCrtAllocator@2@@rapidjson_ly@@V?$basic_string_view@DU?$char_traits@D@AZStd@@@AZStd@@UWriteJsonSettings@12@@Z
+                        312D ?ReplaceExtension@Path@StringFunc@AZ@@YAXAEAV?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@PEBD@Z
+                        1C21 ?ConvertToAlias@FileIOBase@IO@AZ@@QEBA?AV?$optional@V?$BasicPath@V?$basic_fixed_string@D$0EAA@U?$char_traits@D@AZStd@@@AZStd@@@IO@AZ@@@std@@AEBVPathView@23@@Z
+                        2216 ?GetInstance@FileIOBase@IO@AZ@@SAPEAV123@XZ
+                        38A7 ?release@InstanceData@Data@AZ@@AEAAXXZ
+                        1013 ??8AssetId@Data@AZ@@QEBA_NAEBU012@@Z
+                        33D4 ?Store@JsonSerialization@AZ@@SA?ATResultCode@JsonSerializationResult@2@AEAV?$GenericValue@U?$UTF8@D@rapidjson_ly@@V?$MemoryPoolAllocator@VCrtAllocator@rapidjson_ly@@@2@@rapidjson_ly@@AEAV?$MemoryPoolAllocator@VCrtAllocator@rapidjson_ly@@@6@PEBX2AEBUUuid@2@AEAUJsonSerializerSettings@2@@Z
+                        2868 ?Load@JsonSerialization@AZ@@SA?ATResultCode@JsonSerializationResult@2@PEAXAEBUUuid@2@AEBV?$GenericValue@U?$UTF8@D@rapidjson_ly@@V?$MemoryPoolAllocator@VCrtAllocator@rapidjson_ly@@@2@@rapidjson_ly@@AEAUJsonDeserializerSettings@2@@Z
+                        37A5 ?do_free@JSON@AZ@@YAXPEAX@Z
+                        37A6 ?do_malloc@JSON@AZ@@YAPEAX_K0HPEBD1HI@Z
+                        1168 ??MIO@AZ@@YA_NAEBVPathView@01@0@Z
+                        22E7 ?GetNormalPathParts@PathView@IO@AZ@@CA?AUPathIterable@123@AEBV123@@Z
+                        2583 ?HasFilename@PathView@IO@AZ@@QEBA_NXZ
+                        33B1 ?Stem@PathView@IO@AZ@@QEBA?AV123@XZ
+                        3417 ?StringAsPosix@PathView@IO@AZ@@QEBA?AV?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@XZ
+                         3B5 ??0Name@AZ@@QEAA@V?$basic_string_view@DU?$char_traits@D@AZStd@@@AZStd@@@Z
+                        395C ?swap@?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@QEAAXAEAV12@@Z
+                        388E ?push_back@?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@QEAAXD@Z
+                        373C ?back@?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@QEAAAEADXZ
+                        37CE ?erase@?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@QEAAPEADPEBD0@Z
+                        3720 ?assign@?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@QEAAAEAV12@PEBD_K@Z
+                        3709 ?append@?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@QEAAAEAV12@PEBD0@Z
+                        37B6 ?end@?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@QEBAPEBDXZ
+                        37B5 ?end@?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@QEAAPEADXZ
+                        3745 ?begin@?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@QEBAPEBDXZ
+                        3744 ?begin@?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@QEAAPEADXZ
+                        1D44 ?CreateString@Uuid@AZ@@SA?AU12@V?$basic_string_view@DU?$char_traits@D@AZStd@@@AZStd@@@Z
+                        388D ?push_back@?$basic_fixed_string@D$0EAA@U?$char_traits@D@AZStd@@@AZStd@@QEAAXD@Z
+                        373A ?back@?$basic_fixed_string@D$0EAA@U?$char_traits@D@AZStd@@@AZStd@@QEAAAEADXZ
+                        37CB ?erase@?$basic_fixed_string@D$0EAA@U?$char_traits@D@AZStd@@@AZStd@@QEAAPEADPEBD0@Z
+                        3719 ?assign@?$basic_fixed_string@D$0EAA@U?$char_traits@D@AZStd@@@AZStd@@QEAAAEAV12@PEBD_K@Z
+                        3704 ?append@?$basic_fixed_string@D$0EAA@U?$char_traits@D@AZStd@@@AZStd@@QEAAAEAV12@PEBD_K@Z
+                         134 ??0?$basic_fixed_string@D$0EAA@U?$char_traits@D@AZStd@@@AZStd@@QEAA@$$QEAV01@@Z
+                        1233 ??_7BehaviorMethodImpl@Internal@AZ@@6B@
+                        29FC ?OverrideParameterTraits@BehaviorMethodImpl@Internal@AZ@@UEAAX_KII@Z
+                        245F ?GetResult@BehaviorMethodImpl@Internal@AZ@@UEBAPEBUBehaviorParameter@3@XZ
+                        2114 ?GetDefaultValue@BehaviorMethodImpl@Internal@AZ@@UEBA?AV?$intrusive_ptr@VBehaviorDefaultValue@AZ@@@AZStd@@_K@Z
+                        3237 ?SetDefaultValue@BehaviorMethodImpl@Internal@AZ@@UEAAX_KV?$intrusive_ptr@VBehaviorDefaultValue@AZ@@@AZStd@@@Z
+                        31F6 ?SetArgumentToolTip@BehaviorMethodImpl@Internal@AZ@@UEAAX_KV?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@@Z
+                        1FFB ?GetArgumentToolTip@BehaviorMethodImpl@Internal@AZ@@UEBAPEBV?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@_K@Z
+                        31F4 ?SetArgumentName@BehaviorMethodImpl@Internal@AZ@@UEAAX_KV?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@@Z
+                        1FF9 ?GetArgumentName@BehaviorMethodImpl@Internal@AZ@@UEBAPEBV?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@_K@Z
+                        1FF7 ?GetArgument@BehaviorMethodImpl@Internal@AZ@@UEBAPEBUBehaviorParameter@3@_K@Z
+                        228D ?GetMinNumberOfArguments@BehaviorMethodImpl@Internal@AZ@@UEBA_KXZ
+                        22FB ?GetNumArguments@BehaviorMethodImpl@Internal@AZ@@UEBA_KXZ
+                        2052 ?GetBusIdArgument@BehaviorMethodImpl@Internal@AZ@@UEBAPEBUBehaviorParameter@3@XZ
+                        2579 ?HasBusId@BehaviorMethodImpl@Internal@AZ@@UEBA_NXZ
+                        2765 ?IsMember@BehaviorMethodImpl@Internal@AZ@@UEBA_NXZ
+                        2627 ?HasResult@BehaviorMethodImpl@Internal@AZ@@UEBA_NXZ
+                        26B2 ?IsCallable@BehaviorMethodImpl@Internal@AZ@@UEBA?AV?$Outcome@XV?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@@3@V?$span@UBehaviorArgument@AZ@@$0?0@std@@PEAUBehaviorArgument@3@@Z
+                        1AF3 ?Call@BehaviorMethodImpl@Internal@AZ@@UEBA_NV?$span@UBehaviorArgument@AZ@@$0?0@std@@PEAUBehaviorArgument@3@@Z
+                          35 ??$GetO3deClassTemplateId@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@YA?AUUuid@AZ@@UAdl@2@U?$type_identity@V?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@@std@@@Z
+                          3B ??$GetO3deTypeId@DU?$char_traits@D@AZStd@@@AZStd@@YA?AUUuid@AZ@@UAdl@2@U?$type_identity@V?$basic_string_view@DU?$char_traits@D@AZStd@@@AZStd@@@std@@@Z
+                          3C ??$GetO3deTypeId@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@YA?AUUuid@AZ@@UAdl@2@U?$type_identity@V?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@@std@@@Z
+                          43 ??$GetO3deTypeName@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@YA?AV?$basic_fixed_string@D$0CAA@U?$char_traits@D@AZStd@@@0@UAdl@AZ@@U?$type_identity@V?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@@std@@@Z
+                          45 ??$ReadFile@V?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@@Utils@AZ@@YA?AV?$Outcome@V?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@V12@@1@V?$basic_string_view@DU?$char_traits@D@AZStd@@@AZStd@@_K@Z
+                        2184 ?GetEntry@?$EBusCallstackStorage@U?$CallstackEntryBase@VScriptSystemRequests@AZ@@V12@@Internal@AZ@@$00@Internal@AZ@@AEBAAEAPEAU?$CallstackEntryBase@VScriptSystemRequests@AZ@@V12@@23@XZ
+                        209B ?GetContext@?$EBus@VScriptSystemRequests@AZ@@V12@@AZ@@SAPEAVContext@12@_N@Z
+                        22B0 ?GetName@?$EBus@VScriptSystemRequests@AZ@@V12@@AZ@@SAPEBDXZ
+                        1AF4 ?Call@ScriptContext@AZ@@QEAA_NPEBDAEAVScriptDataContext@2@@Z
+                        310C ?RemoveGlobal@ScriptContext@AZ@@QEAAXPEBD@Z
+                        1E9B ?Execute@ScriptContext@AZ@@QEAA_NPEBD0_K@Z
+                        338C ?StackRead@?$ScriptValue@_N@AZ@@SA_NPEAUlua_State@@H@Z
+                        28D1 ?LuaClassToStack@Internal@AZ@@YAXPEAUlua_State@@PEAXAEBUUuid@2@W4ObjectToLua@2@W4AcquisitionOnPush@2@@Z
+                        1AF8 ?CallExecute@ScriptDataContext@AZ@@QEAA_NXZ
+                        26AD ?IsBoolean@ScriptDataContext@AZ@@QEBA_NH@Z
+                        315B ?Reset@ScriptDataContext@AZ@@AEAAXXZ
+                        323D ?SetDeprecatedName@ClassBuilderBase@Internal@AZ@@AEAAXPEBD0@Z
+                         5D2 ??1ClassBuilderBase@Internal@AZ@@QEAA@XZ
+                         1E5 ??0ClassBuilderBase@Internal@AZ@@QEAA@PEAVBehaviorContext@2@PEAVBehaviorClass@2@@Z
+                        1B2B ?ClassImpl@BehaviorContext@AZ@@AEAAPEAVBehaviorClass@2@PEBDAEBUUuid@2@PEAVIRttiHelper@2@_K3@Z
+                        233A ?GetO3deTypeId@AZ@@YA?AUUuid@1@UAdl@1@U?$type_identity@VBehaviorContext@AZ@@@std@@@Z
+                         5C0 ??1BehaviorMethodImpl@Internal@AZ@@UEAA@XZ
+                        1C24 ?ConvertValueTo@Internal@AZ@@YA_NPEAXPEBVIRttiHelper@2@AEBUUuid@2@AEAPEAXAEAU?$static_buffer_allocator@$0CA@$0CA@@AZStd@@@Z
+                        1942 ?AddOverload@BehaviorMethod@AZ@@QEAA_NPEAV12@@Z
+                         1B8 ??0BehaviorMethod@AZ@@QEAA@PEAVBehaviorContext@1@@Z
+                        12FF ??_FBehaviorParameterOverrides@AZ@@QEAAXXZ
+                         5C2 ??1BehaviorParameterOverrides@AZ@@QEAA@XZ
+                         1C2 ??0BehaviorParameterOverrides@AZ@@QEAA@V?$basic_string_view@DU?$char_traits@D@AZStd@@@AZStd@@0V?$intrusive_ptr@VBehaviorDefaultValue@AZ@@@3@II@Z
+                         E10 ??4BehaviorParameterMetadata@AZ@@QEAAAEAU01@$$QEAU01@@Z
+                         E11 ??4BehaviorParameterMetadata@AZ@@QEAAAEAU01@AEBU01@@Z
+                         1BD ??0BehaviorParameterMetadata@AZ@@QEAA@$$QEAU01@@Z
+                         1BE ??0BehaviorParameterMetadata@AZ@@QEAA@AEBU01@@Z
+                         5C1 ??1BehaviorParameterMetadata@AZ@@QEAA@XZ
+                         1BF ??0BehaviorParameterMetadata@AZ@@QEAA@V?$basic_string_view@DU?$char_traits@D@AZStd@@@AZStd@@0V?$intrusive_ptr@VBehaviorDefaultValue@AZ@@@3@@Z
+                        2091 ?GetContext@?$EBus@VBehaviorObjectSignalsInterface@AZ@@V12@@AZ@@SAPEAVContext@12@_N@Z
+                        22A6 ?GetName@?$EBus@VBehaviorObjectSignalsInterface@AZ@@V12@@AZ@@SAPEBDXZ
+                        37AE ?empty@PathView@IO@AZ@@QEBA_NXZ
+                        1EB1 ?Extension@PathView@IO@AZ@@QEBA?AV123@XZ
+                        1EC1 ?Filename@PathView@IO@AZ@@QEBA?AV123@XZ
+                         3FD ??0PathView@IO@AZ@@QEAA@PEBD@Z
+                         F39 ??4Name@AZ@@QEAAAEAV01@$$QEAV01@@Z
+                         F3A ??4Name@AZ@@QEAAAEAV01@AEBV01@@Z
+                         3B1 ??0Name@AZ@@QEAA@$$QEAV01@@Z
+                         3B2 ??0Name@AZ@@QEAA@AEBV01@@Z
+                        3948 ?size@?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@QEBA_KXZ
+                        37CD ?erase@?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@QEAAAEAV12@_K0@Z
+                         DC1 ??4?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@QEAAAEAV01@V?$basic_string_view@DU?$char_traits@D@AZStd@@@1@@Z
+                         144 ??0?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@QEAA@V?$basic_string_view@DU?$char_traits@D@AZStd@@@1@AEBUallocator@1@@Z
+                        2354 ?GetO3deTypeId@AZ@@YA?AUUuid@1@UAdl@1@U?$type_identity@X@std@@@Z
+                        2391 ?GetO3deTypeName@AZ@@YA?AV?$basic_fixed_string@D$0CAA@U?$char_traits@D@AZStd@@@AZStd@@UAdl@1@U?$type_identity@X@std@@@Z
+                        2323 ?GetO3deTypeId@AZ@@YA?AUUuid@1@UAdl@1@U?$type_identity@D@std@@@Z
+                        2360 ?GetO3deTypeName@AZ@@YA?AV?$basic_fixed_string@D$0CAA@U?$char_traits@D@AZStd@@@AZStd@@UAdl@1@U?$type_identity@D@std@@@Z
+                        10B2 ??B?$basic_fixed_string@D$0CH@U?$char_traits@D@AZStd@@@AZStd@@QEBA?AV?$basic_string_view@DU?$char_traits@D@AZStd@@@1@XZ
+                        1069 ??9Uuid@AZ@@QEBA_NAEBU01@@Z
+                        2924 ?ModificationTime@SystemFile@IO@AZ@@SA_KPEBD@Z
+                        2053 ?GetCStr@Name@AZ@@QEBAPEBDXZ
+                        1C82 ?CreateFlags@ProductDependencyInfo@Data@AZ@@YA?AV?$bitset@$0EA@@AZStd@@W4AssetLoadBehavior@AssetLoadBehaviorNamespace@23@@Z
+                        3672 ?UpdateAssetInfo@AssetInternal@Data@AZ@@YAXAEAUAssetId@23@AEAV?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@@Z
+                        2523 ?GetType@AssetData@Data@AZ@@QEBA?AUUuid@3@XZ
+                        18FB ?Acquire@AssetData@Data@AZ@@QEAAXXZ
+                        35F7 ?ToFixedString@AssetId@Data@AZ@@QEBA?AV?$basic_fixed_string@D$0DA@U?$char_traits@D@AZStd@@@AZStd@@XZ
+                        27FF ?IsValid@AssetId@Data@AZ@@QEBA_NXZ
+                        3768 ?clear@?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@QEAAXXZ
+                        11A3 ??Y?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@QEAAAEAV01@AEBV01@@Z
+                        21BD ?GetFileName@Path@StringFunc@AZ@@YA_NPEBDAEAV?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@@Z
+                        1E84 ?Equal@StringFunc@AZ@@YA_NV?$basic_string_view@DU?$char_traits@D@AZStd@@@AZStd@@0_N@Z
+                        30D9 ?Release@AssetData@Data@AZ@@QEAAXXZ
+                        3819 ?format_arg@?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@SA?AV12@PEBDPEAD@Z
+                        11A5 ??Y?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@QEAAAEAV01@PEBD@Z
+                        1D0E ?CreateRandom@Uuid@AZ@@SA?AU12@XZ
+                        2883 ?LoadAnyObjectFromFile@JsonSerializationUtils@AZ@@YA?AV?$Outcome@Vany@AZStd@@V?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@2@@2@AEBV?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@PEBUJsonDeserializerSettings@2@@Z
+                        21D7 ?GetFullFileName@Path@StringFunc@AZ@@YA_NPEBDAEAV?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@@Z
+                        1BF6 ?ConstructFull@Path@StringFunc@AZ@@YA_NPEBD0AEAV?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@_N@Z
+                        31A5 ?SaveObjectToFile@Utils@AZ@@YA_NAEBV?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@W4StreamType@DataStream@2@PEBXAEBUUuid@2@PEAVSerializeContext@2@H@Z
+                        1E73 ?EnumerateBase@SerializeContext@AZ@@QEAAXAEBV?$function@$$A6A_NPEBVClassData@Serialize@AZ@@AEBUUuid@3@@Z@AZStd@@AEBUUuid@2@@Z
+                        3795 ?data@?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@QEAAPEADXZ
+                        3776 ?compare@?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@QEBAHPEBD@Z
+                        3707 ?append@?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@QEAAAEAV12@AEBV12@@Z
+                         235 ??0ContextBase@Internal@AZ@@QEAA@XZ
+                        11E0 ??_7?$IdHandler@VAssetTypeInfo@AZ@@V12@U?$EBusContainer@VAssetTypeInfo@AZ@@V12@$00$00@Internal@2@@Internal@AZ@@6B@
+                        264B ?InitAsset@AssetHandler@Data@AZ@@UEAAXAEBV?$Asset@VAssetData@Data@AZ@@@23@_N1@Z
+                        210A ?GetDefaultAssetLoadPriority@AssetHandler@Data@AZ@@UEBAXUUuid@3@AEAV?$duration@_JU?$ratio@$00$0PECEA@@std@@@chrono@std@@AEAE@Z
+                        2009 ?GetAssetBufferAllocator@AssetHandler@Data@AZ@@UEAAPEAVRequestMemoryAllocator@IStreamerTypes@IO@3@XZ
+                         28A ??0EnumerateInstanceCallContext@Serialize@AZ@@QEAA@AEBV?$function@$$A6A_NPEAXPEBVClassData@Serialize@AZ@@PEBUClassElement@23@@Z@AZStd@@AEBV?$function@$$A6A_NXZ@4@PEBVSerializeContext@2@IPEAVErrorHandler@62@@Z
+                         1E0 ??0CheckedOperationInfo@AZ@@QEAA@V?$basic_string_view@DU?$char_traits@D@AZStd@@@AZStd@@AEBUInputRestriction@1@00_N@Z
+                        2332 ?GetO3deTypeId@AZ@@YA?AUUuid@1@UAdl@1@U?$type_identity@UCheckedOperationInfo@AZ@@@std@@@Z
+                        236F ?GetO3deTypeName@AZ@@YA?AV?$basic_fixed_string@D$0CAA@U?$char_traits@D@AZStd@@@AZStd@@UAdl@1@U?$type_identity@UCheckedOperationInfo@AZ@@@std@@@Z
+                        20E0 ?GetCustomAssetStreamInfoForLoad@AssetHandler@Data@AZ@@UEAAXAEAVAssetStreamInfo@23@@Z
+                        256C ?HandleAutoReload@AssetData@Data@AZ@@MEAA_NXZ
+                        2792 ?IsRegisterReadonlyAndShareable@AssetData@Data@AZ@@MEAA_NXZ
+                        1E1A ?DomInvoke@Attribute@AZ@@UEAA?AVValue@Dom@2@AEBV342@@Z
+                        1AFE ?CanDomInvoke@Attribute@AZ@@UEBA_NAEBVValue@Dom@2@@Z
+                        2551 ?GetVoidInstanceAttributeInvocable@Attribute@AZ@@UEAA?AV?$unique_ptr@VAttribute@AZ@@UAttributeDeleter@Internal@2@@std@@XZ
+                        2408 ?GetPotentialClassTypeId@Attribute@AZ@@UEBA?AUUuid@2@XZ
+                        274F ?IsInvokable@Attribute@AZ@@UEBA_NXZ
+                        21B4 ?GetExtension@Path@StringFunc@AZ@@YA_NPEBDAEAV?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@_N@Z
+                        23B9 ?GetOrCreateContext@?$EBus@VAssetTypeInfo@AZ@@V12@@AZ@@SAAEAVContext@12@_N@Z
+                        1BDA ?ConnectInternal@?$EBus@VAssetTypeInfo@AZ@@V12@@AZ@@SAXAEAVContext@12@AEAV?$HandlerNode@VAssetTypeInfo@AZ@@V12@UHandlerHolder@?$EBusContainer@VAssetTypeInfo@AZ@@V12@$00$00@Internal@2@$00@Internal@2@AEAV?$unique_lock@Vrecursive_mutex@AZStd@@@AZStd@@AEBUUuid@2@@Z
+                        208F ?GetContext@?$EBus@VAssetTypeInfo@AZ@@V12@@AZ@@SAPEAVContext@12@_N@Z
+                        1DED ?DisconnectInternal@?$EBus@VAssetTypeInfo@AZ@@V12@@AZ@@SAXAEAVContext@12@AEAV?$HandlerNode@VAssetTypeInfo@AZ@@V12@UHandlerHolder@?$EBusContainer@VAssetTypeInfo@AZ@@V12@$00$00@Internal@2@$00@Internal@2@@Z
+                        31A7 ?SaveObjectToStream@Utils@AZ@@YA_NAEAVGenericStream@IO@2@W4StreamType@DataStream@2@PEBXAEBUUuid@2@PEAVSerializeContext@2@PEBVClassData@Serialize@2@@Z
+                        28AA ?LoadObjectFromStreamInPlace@Utils@AZ@@YA_NAEAVGenericStream@IO@2@PEAVSerializeContext@2@AEBUUuid@2@PEAXAEBUFilterDescriptor@ObjectStream@2@@Z
+                         5A8 ??1AssetHandler@Data@AZ@@UEAA@XZ
+                        3668 ?UnregisterHandler@AssetManager@Data@AZ@@QEAAXPEAVAssetHandler@23@@Z
+                        30C7 ?RegisterHandler@AssetManager@Data@AZ@@QEAAXPEAVAssetHandler@23@AEBUUuid@3@@Z
+                        265F ?Instance@AssetManager@Data@AZ@@SAAEAV123@XZ
+                        278D ?IsReady@AssetManager@Data@AZ@@SA_NXZ
+                        2729 ?IsInDispatchThisThread@?$EBus@VAssetCatalogRequests@Data@AZ@@V123@@AZ@@SA_NPEAVContext@12@@Z
+                        2173 ?GetEntry@?$EBusCallstackStorage@U?$CallstackEntryBase@VAssetCatalogRequests@Data@AZ@@V123@@Internal@AZ@@$00@Internal@AZ@@AEBAAEAPEAU?$CallstackEntryBase@VAssetCatalogRequests@Data@AZ@@V123@@23@XZ
+                        208A ?GetContext@?$EBus@VAssetCatalogRequests@Data@AZ@@V123@@AZ@@SAPEAVContext@12@_N@Z
+                        229F ?GetName@?$EBus@VAssetCatalogRequests@Data@AZ@@V123@@AZ@@SAPEBDXZ
+                        2A8C ?QueuedEventCount@?$EBusBroadcastQueue@V?$EBus@VAssetCatalogRequests@Data@AZ@@V123@@AZ@@U?$EBusImplTraits@VAssetCatalogRequests@Data@AZ@@V123@@BusInternal@2@@BusInternal@AZ@@SA_KXZ
+                        1E9F ?ExecuteQueuedEvents@?$EBusBroadcastQueue@V?$EBus@VAssetCatalogRequests@Data@AZ@@V123@@AZ@@U?$EBusImplTraits@VAssetCatalogRequests@Data@AZ@@V123@@BusInternal@2@@BusInternal@AZ@@SAXXZ
+                        217B ?GetEntry@?$EBusCallstackStorage@U?$CallstackEntryBase@VComponentApplicationRequests@AZ@@VComponentApplicationRequestsEBusTraits@2@@Internal@AZ@@$00@Internal@AZ@@AEBAAEAPEAU?$CallstackEntryBase@VComponentApplicationRequests@AZ@@VComponentApplicationRequestsEBusTraits@2@@23@XZ
+                        2092 ?GetContext@?$EBus@VComponentApplicationRequests@AZ@@VComponentApplicationRequestsEBusTraits@2@@AZ@@SAPEAVContext@12@_N@Z
+                        22A7 ?GetName@?$EBus@VComponentApplicationRequests@AZ@@VComponentApplicationRequestsEBusTraits@2@@AZ@@SAPEBDXZ
+                         17D ??0AssetId@Data@AZ@@QEAA@XZ
+                         627 ??1IObjectFactory@Serialize@AZ@@UEAA@XZ
+                         1EB ??0ClassElement@Serialize@AZ@@QEAA@AEBU012@@Z
+                         1EC ??0ClassElement@Serialize@AZ@@QEAA@XZ
+                         5D5 ??1ClassElement@Serialize@AZ@@QEAA@XZ
+                        3697 ?Version@ClassBuilder@SerializeContext@AZ@@QEAAPEAV123@IP6A_NAEAV23@AEAVDataElementNode@Serialize@3@@Z@Z
+                         5D1 ??1ClassBuilder@SerializeContext@AZ@@QEAA@XZ
+                        3660 ?UnreflectClassInternal@SerializeContext@AZ@@AEAA?AVClassBuilder@12@PEBDAEBUUuid@2@AEBQ6AXAEBV?$function@$$A6AXV?$basic_string_view@DU?$char_traits@D@AZStd@@@AZStd@@@Z@AZStd@@@Z@Z
+                        30A6 ?ReflectClassInternal@SerializeContext@AZ@@AEAA?AVClassBuilder@12@PEBDAEBUUuid@2@PEAVIObjectFactory@Serialize@2@AEBQ6AXAEBV?$function@$$A6AXV?$basic_string_view@DU?$char_traits@D@AZStd@@@AZStd@@@Z@AZStd@@@ZPEAVIRttiHelper@2@P6A?AVany@8@PEAV12@@ZV?$function@$$A6A?AV?$function@$$A6AXW4Action@any@AZStd@@PEAV23@PEBV23@@Z@AZStd@@PEAVSerializeContext@AZ@@@Z@8@@Z
+                        1EDE ?FindClassData@SerializeContext@AZ@@QEBAPEBVClassData@Serialize@2@AEBUUuid@2@PEBV342@I@Z
+                        1B6E ?CloneObjectInplace@SerializeContext@AZ@@QEAAXPEAXPEBXAEBUUuid@2@@Z
+                        2350 ?GetO3deTypeId@AZ@@YA?AUUuid@1@UAdl@1@U?$type_identity@VSerializeContext@AZ@@@std@@@Z
+                        233C ?GetO3deTypeId@AZ@@YA?AUUuid@1@UAdl@1@U?$type_identity@VComponent@AZ@@@std@@@Z
+                        2379 ?GetO3deTypeName@AZ@@YA?AV?$basic_fixed_string@D$0CAA@U?$char_traits@D@AZStd@@@AZStd@@UAdl@1@U?$type_identity@VComponent@AZ@@@std@@@Z
+                         5AF ??1Attribute@AZ@@UEAA@XZ
+                         191 ??0Attribute@AZ@@QEAA@XZ
+                        2BB2 ?RTTI_EnumHierarchy@Attribute@AZ@@SAXP6AXAEBUUuid@2@PEAX@Z1@Z
+                        2DDA ?RTTI_IsContainType@Attribute@AZ@@SA_NAEBUUuid@2@@Z
+                        2AA8 ?RTTI_AddressOf@Attribute@AZ@@UEAAPEAXAEBUUuid@2@@Z
+                        2AA9 ?RTTI_AddressOf@Attribute@AZ@@UEBAPEBXAEBUUuid@2@@Z
+                        279D ?IsRemovingReflection@ReflectContext@AZ@@QEBA_NXZ
+                        28F3 ?MarshalOpaqueValue@Utils@Dom@AZ@@YA?AVValue@23@PEBXAEBUMarshalTypeTraits@123@V?$function@$$A6AXW4Action@any@AZStd@@PEAV23@PEBV23@@Z@AZStd@@@Z
+                        3775 ?compare@?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@QEBAHAEBV12@@Z
+                        37AC ?empty@?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@QEBA_NXZ
+                        3754 ?c_str@?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@QEBAPEBDXZ
+                         DC0 ??4?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@QEAAAEAV01@PEBD@Z
+                         DBD ??4?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@QEAAAEAV01@$$QEAV01@@Z
+                         DBE ??4?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@QEAAAEAV01@AEBV01@@Z
+                         13D ??0?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@QEAA@$$QEAV01@@Z
+                         142 ??0?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@QEAA@PEBDAEBUallocator@1@@Z
+                         13E ??0?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@QEAA@AEBUallocator@1@@Z
+                         238 ??0Crc32@AZ@@QEAA@V?$basic_string_view@DU?$char_traits@D@AZStd@@@AZStd@@@Z
+                        233D ?GetO3deTypeId@AZ@@YA?AUUuid@1@UAdl@1@U?$type_identity@VCrc32@AZ@@@std@@@Z
+                        237A ?GetO3deTypeName@AZ@@YA?AV?$basic_fixed_string@D$0CAA@U?$char_traits@D@AZStd@@@AZStd@@UAdl@1@U?$type_identity@VCrc32@AZ@@@std@@@Z
+                        3799 ?deallocate@AZStdFunctorAllocator@AZ@@QEAAXPEAX_K1@Z
+                        36F1 ?allocate@AZStdFunctorAllocator@AZ@@QEAAPEAX_K0@Z
+                        2358 ?GetO3deTypeId@AZStd@@YA?AUUuid@AZ@@UAdl@3@U?$type_identity@Uallocator@AZStd@@@std@@@Z
+                        2395 ?GetO3deTypeName@AZStd@@YA?AV?$basic_fixed_string@D$0CAA@U?$char_traits@D@AZStd@@@1@UAdl@AZ@@U?$type_identity@Uallocator@AZStd@@@std@@@Z
+                        1CF3 ?CreateNull@Uuid@AZ@@SA?AU12@XZ
+                        11E3 ??_7?$IdHandler@VComponentDescriptor@AZ@@UComponentDescriptorBusTraits@2@U?$EBusContainer@VComponentDescriptor@AZ@@UComponentDescriptorBusTraits@2@$00$0A@@Internal@2@@Internal@AZ@@6B@
+                        2984 ?NumAllocatedBytes@SystemAllocator@AZ@@UEBA_KXZ
+                        1FAD ?GarbageCollect@SystemAllocator@AZ@@UEAAXXZ
+                        382A ?get_allocated_size@SystemAllocator@AZ@@UEBA_KPEAX_K@Z
+                        38A0 ?reallocate@SystemAllocator@AZ@@UEAA?AUAllocateAddress@@PEAX_K1@Z
+                        379E ?deallocate@SystemAllocator@AZ@@UEAA_KPEAX_K1@Z
+                        36F6 ?allocate@SystemAllocator@AZ@@UEAA?AUAllocateAddress@@_K0@Z
+                        2103 ?GetDebugConfig@SystemAllocator@AZ@@UEAA?AUAllocatorDebugConfig@2@XZ
+                        2B9B ?RTTI_AddressOf@SystemAllocator@AZ@@UEBAPEBXAEBUUuid@2@@Z
+                        2B9A ?RTTI_AddressOf@SystemAllocator@AZ@@UEAAPEAXAEBUUuid@2@@Z
+                        2CB5 ?RTTI_EnumTypes@SystemAllocator@AZ@@UEAAXP6AXAEBUUuid@2@PEAX@Z1@Z
+                        2EDD ?RTTI_IsTypeOf@SystemAllocator@AZ@@UEBA_NAEBUUuid@2@@Z
+                        2DC9 ?RTTI_GetTypeName@SystemAllocator@AZ@@UEBAPEBDXZ
+                        2D3F ?RTTI_GetType@SystemAllocator@AZ@@UEBA?AUUuid@2@XZ
+                        2788 ?IsProfilingActive@AllocatorBase@AZ@@UEBA_NXZ
+                        32C3 ?SetProfilingActive@AllocatorBase@AZ@@UEAAX_N@Z
+                        2789 ?IsReady@AllocatorBase@AZ@@UEBA_NXZ
+                        32C8 ?SetRecords@AllocatorBase@AZ@@UEAAXPEAVAllocationRecords@Debug@2@@Z
+                        2448 ?GetRecords@AllocatorBase@AZ@@UEBAPEBVAllocationRecords@Debug@2@XZ
+                        30E3 ?ReleaseDescriptor@ComponentDescriptor@AZ@@UEAAXXZ
+                        298C ?OnAfterEntitySet@Component@AZ@@MEAAXXZ
+                         1CD ??0BranchOnResultInfo@AZ@@QEAA@$$QEAU01@@Z
+                         1CE ??0BranchOnResultInfo@AZ@@QEAA@AEBU01@@Z
+                         5C9 ??1BranchOnResultInfo@AZ@@QEAA@XZ
+                         1CF ??0BranchOnResultInfo@AZ@@QEAA@XZ
+                        3254 ?SetEntity@Component@AZ@@MEAAXPEAVEntity@2@@Z
+                        36DF ?WriteOutConfig@Component@AZ@@MEBA_NPEAVComponentConfig@2@@Z
+                        302A ?ReadInConfig@Component@AZ@@MEAA_NPEBVComponentConfig@2@@Z
+                        2492 ?GetSerializedIdentifier@Component@AZ@@UEBA?AV?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@XZ
+                        3303 ?SetSerializedIdentifier@Component@AZ@@UEAAXV?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@@Z
+                        2125 ?GetDescriptor@ComponentDescriptor@AZ@@UEAAPEAV12@XZ
+                        2557 ?GetWarnings@ComponentDescriptor@AZ@@UEBAXAEAV?$vector@V?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@V?$AZStdAlloc@VComponentAllocator@AZ@@@AZ@@@AZStd@@PEBVComponent@2@@Z
+                        2208 ?GetIncompatibleServices@ComponentDescriptor@AZ@@UEBAXAEAV?$vector@VCrc32@AZ@@V?$AZStdAlloc@VComponentAllocator@AZ@@@2@@AZStd@@PEBVComponent@2@@Z
+                        245A ?GetRequiredServices@ComponentDescriptor@AZ@@UEBAXAEAV?$vector@VCrc32@AZ@@V?$AZStdAlloc@VComponentAllocator@AZ@@@2@@AZStd@@PEBVComponent@2@@Z
+                        211B ?GetDependentServices@ComponentDescriptor@AZ@@UEBAXAEAV?$vector@VCrc32@AZ@@V?$AZStdAlloc@VComponentAllocator@AZ@@@2@@AZStd@@PEBVComponent@2@@Z
+                        2424 ?GetProvidedServices@ComponentDescriptor@AZ@@UEBAXAEAV?$vector@VCrc32@AZ@@V?$AZStdAlloc@VComponentAllocator@AZ@@@2@@AZStd@@PEBVComponent@2@@Z
+                        2645 ?Init@Component@AZ@@MEAAXXZ
+                        368F ?ValidateComponentRequirements@Component@AZ@@UEBA?AV?$Outcome@XV?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@@2@AEBV?$vector@PEBVEntity@AZ@@Uallocator@AZStd@@@AZStd@@AEBV?$unordered_set@VCrc32@AZ@@U?$hash@VCrc32@AZ@@@AZStd@@U?$equal_to@VCrc32@AZ@@@4@Uallocator@4@@5@@Z
+                        2531 ?GetUnderlyingComponentType@Component@AZ@@UEBA?AUUuid@2@XZ
+                         66A ??1Module@AZ@@UEAA@XZ
+                         3A7 ??0Module@AZ@@QEAA@XZ
+                        2B48 ?RTTI_AddressOf@Module@AZ@@UEAAPEAXAEBUUuid@2@@Z
+                        2B49 ?RTTI_AddressOf@Module@AZ@@UEBAPEBXAEBUUuid@2@@Z
+                        2C02 ?RTTI_EnumHierarchy@Module@AZ@@SAXP6AXAEBUUuid@2@PEAX@Z1@Z
+                        2E2A ?RTTI_IsContainType@Module@AZ@@SA_NAEBUUuid@2@@Z
+                        23BD ?GetOrCreateContext@?$EBus@VComponentDescriptor@AZ@@UComponentDescriptorBusTraits@2@@AZ@@SAAEAVContext@12@_N@Z
+                        1BDE ?ConnectInternal@?$EBus@VComponentDescriptor@AZ@@UComponentDescriptorBusTraits@2@@AZ@@SAXAEAVContext@12@AEAV?$HandlerNode@VComponentDescriptor@AZ@@UComponentDescriptorBusTraits@2@UHandlerHolder@?$EBusContainer@VComponentDescriptor@AZ@@UComponentDescriptorBusTraits@2@$00$0A@@Internal@2@$00@Internal@2@AEAV?$unique_lock@Vrecursive_mutex@AZStd@@@AZStd@@AEBUUuid@2@@Z
+                        217C ?GetEntry@?$EBusCallstackStorage@U?$CallstackEntryBase@VComponentDescriptor@AZ@@UComponentDescriptorBusTraits@2@@Internal@AZ@@$00@Internal@AZ@@AEBAAEAPEAU?$CallstackEntryBase@VComponentDescriptor@AZ@@UComponentDescriptorBusTraits@2@@23@XZ
+                        2093 ?GetContext@?$EBus@VComponentDescriptor@AZ@@UComponentDescriptorBusTraits@2@@AZ@@SAPEAVContext@12@_N@Z
+                        22A8 ?GetName@?$EBus@VComponentDescriptor@AZ@@UComponentDescriptorBusTraits@2@@AZ@@SAPEBDXZ
+                        1DF1 ?DisconnectInternal@?$EBus@VComponentDescriptor@AZ@@UComponentDescriptorBusTraits@2@@AZ@@SAXAEAVContext@12@AEAV?$HandlerNode@VComponentDescriptor@AZ@@UComponentDescriptorBusTraits@2@UHandlerHolder@?$EBusContainer@VComponentDescriptor@AZ@@UComponentDescriptorBusTraits@2@$00$0A@@Internal@2@$00@Internal@2@@Z
+                         212 ??0ComponentDescriptor@AZ@@QEAA@XZ
+                         5DD ??1Component@AZ@@UEAA@XZ
+                         208 ??0Component@AZ@@QEAA@XZ
+                        2BBD ?RTTI_EnumHierarchy@Component@AZ@@SAXP6AXAEBUUuid@2@PEAX@Z1@Z
+                        2DE5 ?RTTI_IsContainType@Component@AZ@@SA_NAEBUUuid@2@@Z
+                        2ABE ?RTTI_AddressOf@Component@AZ@@UEAAPEAXAEBUUuid@2@@Z
+                        2ABF ?RTTI_AddressOf@Component@AZ@@UEBAPEBXAEBUUuid@2@@Z
+                         66F ??1Name@AZ@@QEAA@XZ
+                         3B8 ??0Name@AZ@@QEAA@XZ
+                        10B4 ??B?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@QEBA?AV?$basic_string_view@DU?$char_traits@D@AZStd@@@1@XZ
+                         597 ??1?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@QEAA@XZ
+                         13F ??0?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@QEAA@AEBV01@@Z
+                        2654 ?InsertContext@EBusEnvironment@AZ@@QEAA_NHPEAVContextBase@Internal@2@_N@Z
+                        1EE5 ?FindContext@EBusEnvironment@AZ@@QEAAPEAVContextBase@Internal@2@H@Z
+                         5ED ??1ContextBase@Internal@AZ@@UEAA@XZ
+                         234 ??0ContextBase@Internal@AZ@@QEAA@PEAVEBusEnvironment@2@@Z
+                        37A1 ?deallocate@stateless_allocator@AZStd@@QEAAXPEAX_K1@Z
+                        36F9 ?allocate@stateless_allocator@AZStd@@QEAAPEAX_K0@Z
+                         6D1 ??1SystemAllocator@AZ@@UEAA@XZ
+                         4D4 ??0SystemAllocator@AZ@@QEAA@XZ
+                        2351 ?GetO3deTypeId@AZ@@YA?AUUuid@1@UAdl@1@U?$type_identity@VSystemAllocator@AZ@@@std@@@Z
+                        238E ?GetO3deTypeName@AZ@@YA?AV?$basic_fixed_string@D$0CAA@U?$char_traits@D@AZStd@@@AZStd@@UAdl@1@U?$type_identity@VSystemAllocator@AZ@@@std@@@Z
+                        2A52 ?ProfileReallocation@AllocatorBase@AZ@@IEAAXPEAX0_K1@Z
+                        2A51 ?ProfileDeallocation@AllocatorBase@AZ@@IEAAXPEAX_K1PEAUAllocationInfo@Debug@2@@Z
+                        2A50 ?ProfileAllocation@AllocatorBase@AZ@@IEAAXPEAX_K1H@Z
+                        2A2E ?PreDestroy@AllocatorBase@AZ@@UEAAXXZ
+                        2A2A ?PostCreate@AllocatorBase@AZ@@UEAAXXZ
+                        2A9E ?RTTI_AddressOf@AllocatorBase@AZ@@UEAAPEAXAEBUUuid@2@@Z
+                        2A9F ?RTTI_AddressOf@AllocatorBase@AZ@@UEBAPEBXAEBUUuid@2@@Z
+                        2BAD ?RTTI_EnumHierarchy@AllocatorBase@AZ@@SAXP6AXAEBUUuid@2@PEAX@Z1@Z
+                        2DD5 ?RTTI_IsContainType@AllocatorBase@AZ@@SA_NAEBUUuid@2@@Z
+                         59E ??1AllocatorBase@AZ@@MEAA@XZ
+                         160 ??0AllocatorBase@AZ@@IEAA@XZ
+                        1E80 ?EnvironmentVariableNameToId@Internal@AZ@@YAIPEBD@Z
+                        1FE7 ?GetAllocator@Internal@AZ@@YAPEAVAllocatorInterface@Environment@2@XZ
+                        2544 ?GetVariable@Internal@AZ@@YA?AUEnvironmentVariableResult@12@I@Z
+                        191D ?AddAndAllocateVariable@Internal@AZ@@YA?AUEnvironmentVariableResult@12@I_K0PEAPEAVrecursive_mutex@AZStd@@@Z
+                        3662 ?UnregisterAndDestroy@EnvironmentVariableHolderBase@Internal@AZ@@IEAAXP6AXPEAV123@W4DestroyTarget@123@@Z_N@Z
+                        2215 ?GetInstance@Environment@AZ@@YAPEAVEnvironmentInterface@Internal@2@XZ
+                        37A0 ?deallocate@allocator@AZStd@@QEAAXPEAX_K1@Z
+                        36F8 ?allocate@allocator@AZStd@@QEAAPEAX_K0@Z
+                        247E ?GetSectionAsSizeT@Uuid@AZ@@AEBA_K_K@Z
+                        103B ??8Uuid@AZ@@QEBA_NAEBU01@@Z
+                        35F8 ?ToFixedString@Uuid@AZ@@QEBA?AV?$basic_fixed_string@D$0CH@U?$char_traits@D@AZStd@@@AZStd@@_N0@Z
+                        276E ?IsNull@Uuid@AZ@@QEBA_NXZ
+                        10B3 ??B?$basic_fixed_string@D$0EAA@U?$char_traits@D@AZStd@@@AZStd@@QEBA?AV?$basic_string_view@DU?$char_traits@D@AZStd@@@1@XZ
+                        3833 ?hash_next_bucket_size@AZStd@@YA_K_K@Z
+                         5CF ??1CheckedOperationInfo@AZ@@QEAA@XZ
+                        2331 ?GetO3deTypeId@AZ@@YA?AUUuid@1@UAdl@1@U?$type_identity@UBranchOnResultInfo@AZ@@@std@@@Z
+                        236E ?GetO3deTypeName@AZ@@YA?AV?$basic_fixed_string@D$0CAA@U?$char_traits@D@AZStd@@@AZStd@@UAdl@1@U?$type_identity@UBranchOnResultInfo@AZ@@@std@@@Z
+                         62A ??1InputRestriction@AZ@@QEAA@XZ
+                         2E9 ??0InputRestriction@AZ@@QEAA@XZ
+                        1E69 ?EndsWith@StringFunc@AZ@@YA_NV?$basic_string_view@DU?$char_traits@D@AZStd@@@AZStd@@0_N@Z
+                         626 ??1IEventHandler@Serialize@AZ@@UEAA@XZ
+                        1F4B ?FindGenericClassInfo@SerializeContext@AZ@@QEBAPEAVGenericClassInfo@2@AEBUUuid@2@@Z
+                        1E7E ?EnumerateInstanceConst@SerializeContext@AZ@@QEBA_NPEBXAEBUUuid@2@AEBV?$function@$$A6A_NPEAXPEBVClassData@Serialize@AZ@@PEBUClassElement@23@@Z@AZStd@@AEBV?$function@$$A6A_NXZ@5@IPEBVClassData@Serialize@2@PEBUClassElement@82@PEAVErrorHandler@12@@Z
+                        322F ?SetContextData@Attribute@AZ@@QEAAXPEAXP6AX0@Z@Z
+                        1947 ?AddReflectFunction@OnDemandReflectionOwner@AZ@@QEAAXUUuid@2@P6AXPEAVReflectContext@2@@Z@Z
+                        3636 ?TryMarshalValueToPointer@Utils@Dom@AZ@@YAPEAXAEBVValue@23@AEBUUuid@3@@Z
+                        28B9 ?LoadViaJsonSerialization@Utils@Dom@AZ@@YA?ATResultCode@JsonSerializationResult@3@PEAXAEBUUuid@3@AEBVValue@23@AEBUJsonDeserializerSettings@3@@Z
+                        1B01 ?CanLoadViaJsonSerialization@Utils@Dom@AZ@@YA_NAEBUUuid@3@AEBVValue@23@UJsonDeserializerSettings@3@@Z
+                        2412 ?GetProcessing@ResultCode@JsonSerializationResult@AZ@@QEBA?AW4Processing@23@XZ
+                        23A2 ?GetOpaqueValue@Value@Dom@AZ@@QEBAAEBVany@AZStd@@XZ
+                        1088 ??AValue@Dom@AZ@@QEBAAEBV012@_K@Z
+                        19BF ?ArraySize@Value@Dom@AZ@@QEBA_KXZ
+                        2775 ?IsOpaqueValue@Value@Dom@AZ@@QEBA_NXZ
+                        26A3 ?IsArray@Value@Dom@AZ@@QEBA_NXZ
+                         518 ??0Value@Dom@AZ@@QEAA@_N@Z
+                         517 ??0Value@Dom@AZ@@QEAA@_K@Z
+                         50C ??0Value@Dom@AZ@@QEAA@H@Z
+                         509 ??0Value@Dom@AZ@@QEAA@E@Z
+                         512 ??0Value@Dom@AZ@@QEAA@V?$basic_string_view@DU?$char_traits@D@AZStd@@@AZStd@@_N@Z
+                         515 ??0Value@Dom@AZ@@QEAA@XZ
+                        301A ?Read@SystemFile@IO@AZ@@SA_KPEBDPEAX_K2@Z
+                        2831 ?Length@SystemFile@IO@AZ@@SA_KPEBD@Z
+                        37F5 ?find_first_of@?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@QEBA_KPEBD_K@Z
+                        1073 ??A?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@QEAAAEAD_K@Z
+                        2394 ?GetO3deTypeName@AZ@@YA?AV?$basic_fixed_string@D$0CAA@U?$char_traits@D@AZStd@@@AZStd@@UAdl@1@U?$type_identity@_N@std@@@Z
+                        2365 ?GetO3deTypeName@AZ@@YA?AV?$basic_fixed_string@D$0CAA@U?$char_traits@D@AZStd@@@AZStd@@UAdl@1@U?$type_identity@I@std@@@Z
+                        2364 ?GetO3deTypeName@AZ@@YA?AV?$basic_fixed_string@D$0CAA@U?$char_traits@D@AZStd@@@AZStd@@UAdl@1@U?$type_identity@H@std@@@Z
+                        11AD ??YUuid@AZ@@QEAAAEAU01@AEBU01@@Z
+                         503 ??0Uuid@AZ@@QEAA@V?$basic_string_view@DU?$char_traits@D@AZStd@@@AZStd@@@Z
+                        29AB ?OnObjectCloned@IEventHandler@Serialize@AZ@@UEAAXPEAX@Z
+                        29A8 ?OnLoadedFromObjectStream@IEventHandler@Serialize@AZ@@UEAAXPEAX@Z
+                        29AF ?OnPatchEnd@IEventHandler@Serialize@AZ@@UEAAXPEAXAEBUDataPatchNodeInfo@3@@Z
+                        29AE ?OnPatchBegin@IEventHandler@Serialize@AZ@@UEAAXPEAXAEBUDataPatchNodeInfo@3@@Z
+                        29CC ?OnWriteBegin@IEventHandler@Serialize@AZ@@UEAAXPEAX@Z
+                        29B1 ?OnReadEnd@IEventHandler@Serialize@AZ@@UEAAXPEAX@Z
+
+    SceneCore.dll
+             1801313A8 Import Address Table
+             1801DFEE8 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                           7 ??0CoordinateSystemConverter@SceneAPI@AZ@@QEAA@AEBV012@@Z
+                          2F ??1CallProcessorBinder@Events@SceneAPI@AZ@@UEAA@XZ
+                          D4 ?GetSourceGuid@Scene@Containers@SceneAPI@AZ@@QEBAAEBUUuid@4@XZ
+                          A1 ?GetGraph@Scene@Containers@SceneAPI@AZ@@QEBAAEBVSceneGraph@234@XZ
+                         103 ?Process@CallProcessorBinder@Events@SceneAPI@AZ@@UEAA?AW4ProcessingResult@234@PEAVICallContext@234@@Z
+                          BF ?GetPriority@CallProcessor@Events@SceneAPI@AZ@@UEBAEXZ
+                          5A ?Activate@ExportingComponent@SceneCore@SceneAPI@AZ@@UEAAXXZ
+                          86 ?Deactivate@ExportingComponent@SceneCore@SceneAPI@AZ@@UEAAXXZ
+                          EB ?IsDebugEnabled@Utilities@SceneAPI@AZ@@YA_NXZ
+                          8F ?Find@SceneGraph@Containers@SceneAPI@AZ@@QEBA?AVNodeIndex@1234@PEBD@Z
+                          B0 ?GetNodeName@SceneGraph@Containers@SceneAPI@AZ@@QEBAAEBVName@1234@VNodeIndex@1234@@Z
+                          7C ?ConvertVector3@CoordinateSystemConverter@SceneAPI@AZ@@QEBA?AVVector3@3@AEBV43@@Z
+                          CA ?GetRuleCount@RuleContainer@Containers@SceneAPI@AZ@@QEBA_KXZ
+                          C9 ?GetRule@RuleContainer@Containers@SceneAPI@AZ@@QEBA?AV?$shared_ptr@VIRule@DataTypes@SceneAPI@AZ@@@AZStd@@_K@Z
+                          94 ?GenerateTargetNodes@SceneGraphSelector@Utilities@SceneAPI@AZ@@SA?AV?$vector@V?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@Uallocator@2@@AZStd@@AEBVSceneGraph@Containers@34@AEBVISceneNodeSelectionList@DataTypes@34@P6A_N0AEAVNodeIndex@7834@@ZP6A?AVNodeIndex@7834@0AEBVNodeIndex@7834@@Z@Z
+                          EE ?IsMesh@SceneGraphSelector@Utilities@SceneAPI@AZ@@SA_NAEBVSceneGraph@Containers@34@AEAVNodeIndex@5634@@Z
+                         11E ?RemapToOptimizedMesh@SceneGraphSelector@Utilities@SceneAPI@AZ@@SA?AVNodeIndex@SceneGraph@Containers@34@AEBV6734@AEBV56734@@Z
+                         11F ?RemapToOriginalUnoptimizedMesh@SceneGraphSelector@Utilities@SceneAPI@AZ@@SA?AVNodeIndex@SceneGraph@Containers@34@AEBV6734@AEBV56734@@Z
+                          8B ?DetermineWorldTransform@Utilities@SceneAPI@AZ@@YA?AVMatrix3x4@3@AEBVScene@Containers@23@VNodeIndex@SceneGraph@623@AEBVRuleContainer@623@@Z
+                          25 ??0ProcessingResultCombiner@Events@SceneAPI@AZ@@QEAA@XZ
+                          47 ??4ProcessingResultCombiner@Events@SceneAPI@AZ@@QEAAXW4ProcessingResult@123@@Z
+                          C8 ?GetResult@ProcessingResultCombiner@Events@SceneAPI@AZ@@QEBA?AW4ProcessingResult@234@XZ
+                         104 ?Process@Events@SceneAPI@AZ@@YA?AW4ProcessingResult@123@AEAVICallContext@123@@Z
+                          DC ?GetValueStorage@SceneManifest@Containers@SceneAPI@AZ@@QEBA?AV?$View@V?$ConvertIterator@PEBV?$shared_ptr@VIManifestObject@DataTypes@SceneAPI@AZ@@@AZStd@@V?$shared_ptr@$$CBVIManifestObject@DataTypes@SceneAPI@AZ@@@2@Urandom_access_iterator_tag@std@@@Views@Containers@SceneAPI@AZ@@@Views@234@XZ
+                          D3 ?GetSourceFilename@Scene@Containers@SceneAPI@AZ@@QEBAAEBV?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@XZ
+                          D2 ?GetSourceExtension@Scene@Containers@SceneAPI@AZ@@QEBA?AV?$basic_string_view@DU?$char_traits@D@AZStd@@@AZStd@@XZ
+                          A9 ?GetManifest@Scene@Containers@SceneAPI@AZ@@QEBAAEBVSceneManifest@234@XZ
+                          AF ?GetName@Scene@Containers@SceneAPI@AZ@@QEBAAEBV?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@XZ
+                          B6 ?GetOutputDirectory@ExportEventContext@Events@SceneAPI@AZ@@QEBAAEBV?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@XZ
+                          C0 ?GetProductList@ExportEventContext@Events@SceneAPI@AZ@@QEAAAEAVExportProductList@234@XZ
+                          CB ?GetScene@ExportEventContext@Events@SceneAPI@AZ@@QEBAAEBVScene@Containers@34@XZ
+                           C ??0ExportProduct@Events@SceneAPI@AZ@@QEAA@$$QEAV?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@UUuid@3@1V?$optional@E@std@@V?$optional@I@8@V?$bitset@$0EA@@5@@Z
+                           B ??0ExportProduct@Events@SceneAPI@AZ@@QEAA@$$QEAU0123@@Z
+                          67 ?AddProduct@ExportProductList@Events@SceneAPI@AZ@@QEAAAEAUExportProduct@234@AEBV?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@UUuid@4@1V?$optional@E@std@@V?$optional@I@std@@V?$bitset@$0EA@@7@@Z
+                          7F ?CreateOutputFileName@FileUtilities@Utilities@SceneAPI@AZ@@SA?AV?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@AEBV56@000@Z
+                           8 ??0CoordinateSystemConverter@SceneAPI@AZ@@QEAA@XZ
+                          3F ??4CoordinateSystemConverter@SceneAPI@AZ@@QEAAAEAV012@AEBV012@@Z
+                          72 ?BuildWorldTransform@Utilities@SceneAPI@AZ@@YA?AVMatrix3x4@3@AEBVSceneGraph@Containers@23@VNodeIndex@5623@@Z
+
+    Atom_RPI.Public.dll
+             18012F518 Import Address Table
+             1801DE058 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                         E6F ?CommonSubFolder@ShaderVariantTreeAsset@RPI@AZ@@2QBDB
+                         E68 ?Clone@ShaderAssetCreator@RPI@AZ@@QEAAXAEBUAssetId@Data@3@AEBVShaderAsset@23@AEBV?$vector@UShaderSupervariant@ShaderAssetCreator@RPI@AZ@@Uallocator@AZStd@@@AZStd@@AEBV?$vector@PEAVShaderPlatformInterface@RHI@AZ@@Uallocator@AZStd@@@8@@Z
+                         2CC ??1PrecompiledShaderAssetSourceData@RPI@AZ@@UEAA@XZ
+                         197 ??0PrecompiledShaderAssetSourceData@RPI@AZ@@QEAA@XZ
+                        1A8C ?ReportIssue@AssetUtilsInternal@AssetUtils@RPI@AZ@@YAXW4TraceLevel@234@PEBD@Z
+                         FD0 ?Extension@ShaderVariantTreeAsset@RPI@AZ@@2QEBDEB
+                         FCF ?Extension@ShaderVariantAsset@RPI@AZ@@2QEBDEB
+                        14C6 ?MakeAssetProductSubId@ShaderVariantAsset@RPI@AZ@@SAIIIU?$Handle@IUShaderVariantId@RPI@AZ@@@RHI@3@I@Z
+                         2EB ??1ShaderOptionGroup@RPI@AZ@@QEAA@XZ
+                        1DB2 ?ToString@ShaderOptionGroup@RPI@AZ@@QEBA?AV?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@XZ
+                        12ED ?GetShaderVariantId@ShaderOptionGroup@RPI@AZ@@QEBAAEBUShaderVariantId@23@XZ
+                        1458 ?IsFullySpecified@ShaderOptionGroup@RPI@AZ@@QEBA_NXZ
+                         1D8 ??0ShaderOptionGroup@RPI@AZ@@QEAA@AEBV?$intrusive_ptr@$$CBVShaderOptionGroupLayout@RPI@AZ@@@AZStd@@AEBUShaderVariantId@12@@Z
+                         1D7 ??0ShaderOptionGroup@RPI@AZ@@QEAA@AEBV?$intrusive_ptr@$$CBVShaderOptionGroupLayout@RPI@AZ@@@AZStd@@@Z
+                        1456 ?IsFullySpecialized@ShaderOptionGroupLayout@RPI@AZ@@QEBA_NXZ
+                        12D3 ?GetShaderOptionCount@ShaderOptionGroupLayout@RPI@AZ@@QEBA_KXZ
+                        1027 ?FindValue@ShaderOptionDescriptor@RPI@AZ@@QEBA?AU?$Handle@IVShaderOptionValueNamespace@RPI@AZ@@@RHI@3@AEBVName@3@@Z
+                        1AC7 ?Set@ShaderOptionDescriptor@RPI@AZ@@QEBA_NAEAVShaderOptionGroup@23@U?$Handle@IVShaderOptionValueNamespace@RPI@AZ@@@RHI@3@@Z
+                         D47 ?AddShaderOption@ShaderOptionGroupLayout@RPI@AZ@@QEAA_NAEBVShaderOptionDescriptor@23@@Z
+                         FD9 ?Finalize@ShaderOptionGroupLayout@RPI@AZ@@QEAAXXZ
+                         2EA ??1ShaderOptionDescriptor@RPI@AZ@@QEAA@XZ
+                        10A5 ?GetBitCount@ShaderOptionDescriptor@RPI@AZ@@QEBAIXZ
+                         1D4 ??0ShaderOptionDescriptor@RPI@AZ@@QEAA@AEBVName@2@AEBW4ShaderOptionType@12@IIAEBV?$vector@U?$pair@VName@AZ@@U?$Handle@IVShaderOptionValueNamespace@RPI@AZ@@@RHI@2@@std@@Uallocator@AZStd@@@AZStd@@0IH@Z
+                          B8 ??0ColorAttachmentInfo@ShaderOutputContract@RPI@AZ@@QEAA@XZ
+                        12D2 ?GetShaderOption@ShaderOptionGroupLayout@RPI@AZ@@QEBAAEBVShaderOptionDescriptor@23@U?$Handle@IVShaderOptionIndexNamespace@RPI@AZ@@@RHI@3@@Z
+                        101F ?FindShaderOptionIndex@ShaderOptionGroupLayout@RPI@AZ@@QEBA?AU?$Handle@IVShaderOptionIndexNamespace@RPI@AZ@@@RHI@3@AEBVName@3@@Z
+                        1347 ?GetType@ShaderOptionDescriptor@RPI@AZ@@QEBAAEBW4ShaderOptionType@23@XZ
+                        1112 ?GetDefaultValue@ShaderOptionDescriptor@RPI@AZ@@QEBAAEBVName@3@XZ
+                         FCE ?Extension@ShaderAsset@RPI@AZ@@2QBDB
+                         2E6 ??1ShaderAssetCreator@RPI@AZ@@UEAA@XZ
+                         1C8 ??0ShaderAssetCreator@RPI@AZ@@QEAA@XZ
+                         F98 ?End@ShaderAssetCreator@RPI@AZ@@QEAA_NAEAV?$Asset@VShaderAsset@RPI@AZ@@@Data@3@@Z
+                         F9C ?EndAPI@ShaderAssetCreator@RPI@AZ@@QEAA_NXZ
+                         FB5 ?EndSupervariant@ShaderAssetCreator@RPI@AZ@@QEAA_NXZ
+                        1C03 ?SetUseSpecializationConstants@ShaderAssetCreator@RPI@AZ@@QEAAX_N@Z
+                        1BC2 ?SetRootShaderVariantAsset@ShaderAssetCreator@RPI@AZ@@QEAAXV?$Asset@VShaderVariantAsset@RPI@AZ@@@Data@3@@Z
+                        1BD8 ?SetShaderStageAttributeMapList@ShaderAssetCreator@RPI@AZ@@QEAAXAEBV?$fixed_vector@V?$unordered_map@VName@AZ@@V?$vector@Vany@AZStd@@Uallocator@2@@AZStd@@U?$hash@VName@AZ@@@4@U?$equal_to@VName@AZ@@@4@Uallocator@4@@AZStd@@$04@AZStd@@@Z
+                        1BC1 ?SetRenderStates@ShaderAssetCreator@RPI@AZ@@QEAAXAEBURenderStates@RHI@3@@Z
+                        1B77 ?SetOutputContract@ShaderAssetCreator@RPI@AZ@@QEAAXAEBUShaderOutputContract@23@@Z
+                        1B47 ?SetInputContract@ShaderAssetCreator@RPI@AZ@@QEAAXAEBUShaderInputContract@23@@Z
+                        1B90 ?SetPipelineLayout@ShaderAssetCreator@RPI@AZ@@QEAAXV?$intrusive_ptr@VPipelineLayoutDescriptor@RHI@AZ@@@AZStd@@@Z
+                        1BE1 ?SetSrgLayoutList@ShaderAssetCreator@RPI@AZ@@QEAAXAEBV?$fixed_vector@V?$intrusive_ptr@VShaderResourceGroupLayout@RHI@AZ@@@AZStd@@$07@AZStd@@@Z
+                         DA9 ?BeginSupervariant@ShaderAssetCreator@RPI@AZ@@QEAAXAEBVName@3@@Z
+                         D8F ?BeginAPI@ShaderAssetCreator@RPI@AZ@@QEAAXVCrc32@3@@Z
+                        1BD2 ?SetShaderOptionDefaultValue@ShaderAssetCreator@RPI@AZ@@QEAAXAEBVName@3@0@Z
+                        1BD3 ?SetShaderOptionGroupLayout@ShaderAssetCreator@RPI@AZ@@QEAAXAEBV?$intrusive_ptr@VShaderOptionGroupLayout@RPI@AZ@@@AZStd@@@Z
+                        1B1A ?SetDrawListName@ShaderAssetCreator@RPI@AZ@@QEAAXAEBVName@3@@Z
+                        1B71 ?SetName@ShaderAssetCreator@RPI@AZ@@QEAAXAEBVName@3@@Z
+                         D8B ?Begin@ShaderAssetCreator@RPI@AZ@@QEAAXAEBUAssetId@Data@3@@Z
+                        1209 ?GetName@ShaderAsset@RPI@AZ@@QEBAAEBVName@3@XZ
+                        14C7 ?MakeProductAssetSubId@ShaderAsset@RPI@AZ@@SAIIII@Z
+                         2ED ??1ShaderOutputContract@RPI@AZ@@QEAA@XZ
+                         1DE ??0ShaderOutputContract@RPI@AZ@@QEAA@XZ
+                         2E9 ??1ShaderInputContract@RPI@AZ@@QEAA@XZ
+                         1CF ??0ShaderInputContract@RPI@AZ@@QEAA@XZ
+                        118A ?GetHash@ShaderOptionGroupLayout@RPI@AZ@@QEBA?AW4HashValue64@3@XZ
+                        10AA ?GetBitSize@ShaderOptionGroupLayout@RPI@AZ@@QEBAIXZ
+                         ED4 ?Create@ShaderOptionGroupLayout@RPI@AZ@@SA?AV?$intrusive_ptr@VShaderOptionGroupLayout@RPI@AZ@@@AZStd@@XZ
+                         306 ??1StreamingImagePoolAssetCreator@RPI@AZ@@UEAA@XZ
+                         F9B ?End@StreamingImagePoolAssetCreator@RPI@AZ@@QEAA_NAEAV?$Asset@VStreamingImagePoolAsset@RPI@AZ@@@Data@3@@Z
+                        1B9B ?SetPoolName@StreamingImagePoolAssetCreator@RPI@AZ@@QEAAXV?$basic_string_view@DU?$char_traits@D@AZStd@@@AZStd@@@Z
+                        1B99 ?SetPoolDescriptor@StreamingImagePoolAssetCreator@RPI@AZ@@QEAAX$$QEAV?$unique_ptr@VStreamingImagePoolDescriptor@RHI@AZ@@U?$default_delete@VStreamingImagePoolDescriptor@RHI@AZ@@@std@@@std@@@Z
+                         D8E ?Begin@StreamingImagePoolAssetCreator@RPI@AZ@@QEAAXAEBUAssetId@Data@3@@Z
+                         203 ??0StreamingImagePoolAssetCreator@RPI@AZ@@QEAA@XZ
+                         2DD ??1ResourcePoolAssetCreator@RPI@AZ@@UEAA@XZ
+                         F97 ?End@ResourcePoolAssetCreator@RPI@AZ@@QEAA_NAEAV?$Asset@VResourcePoolAsset@RPI@AZ@@@Data@3@@Z
+                        1B9A ?SetPoolName@ResourcePoolAssetCreator@RPI@AZ@@QEAAXV?$basic_string_view@DU?$char_traits@D@AZStd@@@AZStd@@@Z
+                        1B98 ?SetPoolDescriptor@ResourcePoolAssetCreator@RPI@AZ@@QEAAXV?$unique_ptr@VResourcePoolDescriptor@RHI@AZ@@U?$default_delete@VResourcePoolDescriptor@RHI@AZ@@@std@@@std@@@Z
+                         D8A ?Begin@ResourcePoolAssetCreator@RPI@AZ@@QEAAXAEBUAssetId@Data@3@@Z
+                         1B3 ??0ResourcePoolAssetCreator@RPI@AZ@@QEAA@XZ
+                        123A ?GetPassTemplate@PassAsset@RPI@AZ@@QEBAAEBV?$unique_ptr@VPassTemplate@RPI@AZ@@U?$default_delete@VPassTemplate@RPI@AZ@@@std@@@std@@XZ
+                        1942 ?RTTI_Type@PassAsset@RPI@AZ@@SA?AUUuid@3@XZ
+                        1545 ?PackMorphTargetDelta@RPI@AZ@@YA?AUPackedCompressedMorphTargetDelta@12@AEBUCompressedMorphTargetDelta@12@@Z
+                         D31 ?AddMorphTarget@MorphTargetMetaAssetCreator@RPI@AZ@@QEAAXAEBUMorphTarget@MorphTargetMetaAsset@23@@Z
+                         FC8 ?Extension@ModelAsset@RPI@AZ@@2QEBDEB
+                         FC3 ?Extension@BufferAsset@RPI@AZ@@2QEBDEB
+                        11B9 ?GetLodAssets@ModelAsset@RPI@AZ@@QEBA?AV?$span@$$CBV?$Asset@VModelLodAsset@RPI@AZ@@@Data@AZ@@$0?0@std@@XZ
+                        11ED ?GetMeshes@ModelLodAsset@RPI@AZ@@QEBA?AV?$span@$$CBVMesh@ModelLodAsset@RPI@AZ@@$0?0@std@@XZ
+                        1309 ?GetStreamBufferInfoList@Mesh@ModelLodAsset@RPI@AZ@@QEBA?AV?$span@$$CBUStreamBufferInfo@Mesh@ModelLodAsset@RPI@AZ@@$0?0@std@@XZ
+                        11A4 ?GetIndexBufferAssetView@Mesh@ModelLodAsset@RPI@AZ@@QEBAAEBVBufferAssetView@34@XZ
+                         F99 ?End@SkinMetaAssetCreator@RPI@AZ@@QEAA_NAEAV?$Asset@VSkinMetaAsset@RPI@AZ@@@Data@3@@Z
+                        1B4B ?SetJointNameToIndexMap@SkinMetaAssetCreator@RPI@AZ@@QEAAXAEBV?$unordered_map@V?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@GU?$hash@V?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@@2@U?$equal_to@V?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@@2@Uallocator@2@@AZStd@@@Z
+                         D8C ?Begin@SkinMetaAssetCreator@RPI@AZ@@QEAAXAEBUAssetId@Data@3@@Z
+                         2FA ??1SkinMetaAssetCreator@RPI@AZ@@UEAA@XZ
+                         1F6 ??0SkinMetaAssetCreator@RPI@AZ@@QEAA@XZ
+                         F95 ?End@ModelLodAssetCreator@RPI@AZ@@QEAA_NAEAV?$Asset@VModelLodAsset@RPI@AZ@@@Data@3@@Z
+                         FAE ?EndMesh@ModelLodAssetCreator@RPI@AZ@@QEAAXXZ
+                         D2E ?AddMeshStreamBuffer@ModelLodAssetCreator@RPI@AZ@@QEAA_NAEBVShaderSemantic@RHI@3@AEBVName@3@AEBVBufferAssetView@23@@Z
+                        1B64 ?SetMeshIndexBuffer@ModelLodAssetCreator@RPI@AZ@@QEAAXAEBVBufferAssetView@23@@Z
+                        1B66 ?SetMeshMaterialSlot@ModelLodAssetCreator@RPI@AZ@@QEAAXI@Z
+                        1B63 ?SetMeshAabb@ModelLodAssetCreator@RPI@AZ@@QEAAXAEBVAabb@3@@Z
+                        1B67 ?SetMeshName@ModelLodAssetCreator@RPI@AZ@@QEAAXAEBVName@3@@Z
+                         DA2 ?BeginMesh@ModelLodAssetCreator@RPI@AZ@@QEAAXXZ
+                         D28 ?AddLodStreamBuffer@ModelLodAssetCreator@RPI@AZ@@QEAAXAEBV?$Asset@VBufferAsset@RPI@AZ@@@Data@3@@Z
+                        1B4C ?SetLodIndexBuffer@ModelLodAssetCreator@RPI@AZ@@QEAAXAEBV?$Asset@VBufferAsset@RPI@AZ@@@Data@3@@Z
+                         D88 ?Begin@ModelLodAssetCreator@RPI@AZ@@QEAAXAEBUAssetId@Data@3@@Z
+                         2A9 ??1ModelLodAssetCreator@RPI@AZ@@UEAA@XZ
+                         148 ??0ModelLodAssetCreator@RPI@AZ@@QEAA@XZ
+                         D4A ?AddTag@ModelAssetCreator@RPI@AZ@@QEAAXVName@3@@Z
+                         F94 ?End@ModelAssetCreator@RPI@AZ@@QEAA_NAEAV?$Asset@VModelAsset@RPI@AZ@@@Data@3@@Z
+                         D26 ?AddLodAsset@ModelAssetCreator@RPI@AZ@@QEAAX$$QEAV?$Asset@VModelLodAsset@RPI@AZ@@@Data@3@@Z
+                         D2B ?AddMaterialSlot@ModelAssetCreator@RPI@AZ@@QEAAXAEBUModelMaterialSlot@23@@Z
+                        1B70 ?SetName@ModelAssetCreator@RPI@AZ@@QEAAXV?$basic_string_view@DU?$char_traits@D@AZStd@@@AZStd@@@Z
+                         D87 ?Begin@ModelAssetCreator@RPI@AZ@@QEAAXAEBUAssetId@Data@3@@Z
+                         2A3 ??1ModelAssetCreator@RPI@AZ@@UEAA@XZ
+                         140 ??0ModelAssetCreator@RPI@AZ@@QEAA@XZ
+                         F90 ?End@BufferAssetCreator@RPI@AZ@@QEAA_NAEAV?$Asset@VBufferAsset@RPI@AZ@@@Data@3@@Z
+                        1B96 ?SetPoolAsset@BufferAssetCreator@RPI@AZ@@QEAAXAEBV?$Asset@VResourcePoolAsset@RPI@AZ@@@Data@3@@Z
+                        1AF2 ?SetBufferViewDescriptor@BufferAssetCreator@RPI@AZ@@QEAAXAEBUBufferViewDescriptor@RHI@3@@Z
+                        1AE8 ?SetBuffer@BufferAssetCreator@RPI@AZ@@QEAAXPEBX_KAEBUBufferDescriptor@RHI@3@@Z
+                        1AFE ?SetCompressionFormat@BufferAssetCreator@RPI@AZ@@QEAAXW4CompressionFormat@BufferAsset@23@@Z
+                         D83 ?Begin@BufferAssetCreator@RPI@AZ@@QEAAXAEBUAssetId@Data@3@@Z
+                         258 ??1BufferAssetCreator@RPI@AZ@@UEAA@XZ
+                          AE ??0BufferAssetCreator@RPI@AZ@@QEAA@XZ
+                         EAF ?ConstructAssetId@SkinMetaAsset@RPI@AZ@@SA?AUAssetId@Data@3@AEBU453@AEBV?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@@Z
+                        1D56 ?TYPEINFO_Uuid@ModelAsset@RPI@AZ@@SA?AUUuid@3@XZ
+                        1D59 ?TYPEINFO_Uuid@ModelLodAsset@RPI@AZ@@SA?AUUuid@3@XZ
+                         2AA ??1ModelMaterialSlot@RPI@AZ@@QEAA@XZ
+                         14B ??0ModelMaterialSlot@RPI@AZ@@QEAA@XZ
+                         6D1 ??4BufferAssetView@RPI@AZ@@QEAAAEAV012@AEBV012@@Z
+                          B0 ??0BufferAssetView@RPI@AZ@@QEAA@AEBV012@@Z
+                        10B3 ?GetBufferAsset@BufferAssetView@RPI@AZ@@QEBAAEBV?$Asset@VBufferAsset@RPI@AZ@@@Data@3@XZ
+                         25A ??1BufferAssetView@RPI@AZ@@QEAA@XZ
+                          B1 ??0BufferAssetView@RPI@AZ@@QEAA@AEBV?$Asset@VBufferAsset@RPI@AZ@@@Data@2@AEBUBufferViewDescriptor@RHI@2@@Z
+                          B2 ??0BufferAssetView@RPI@AZ@@QEAA@XZ
+                        10BC ?GetBufferViewDescriptor@BufferAsset@RPI@AZ@@QEBAAEBUBufferViewDescriptor@RHI@3@XZ
+                        1D16 ?TYPEINFO_Uuid@BufferAsset@RPI@AZ@@SA?AUUuid@3@XZ
+                         F96 ?End@MorphTargetMetaAssetCreator@RPI@AZ@@QEAA_NAEAV?$Asset@VMorphTargetMetaAsset@RPI@AZ@@@Data@3@@Z
+                        1434 ?IsEmpty@MorphTargetMetaAssetCreator@RPI@AZ@@QEAA_NXZ
+                         D89 ?Begin@MorphTargetMetaAssetCreator@RPI@AZ@@QEAAXAEBUAssetId@Data@3@@Z
+                         2AD ??1MorphTargetMetaAssetCreator@RPI@AZ@@UEAA@XZ
+                         14E ??0MorphTargetMetaAssetCreator@RPI@AZ@@QEAA@XZ
+                         EAE ?ConstructAssetId@MorphTargetMetaAsset@RPI@AZ@@SA?AUAssetId@Data@3@AEBU453@AEBV?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@@Z
+                         FC7 ?Extension@MaterialTypeAsset@RPI@AZ@@2QEBDEB
+                         297 ??1MaterialShaderParameterLayout@RPI@AZ@@QEAA@XZ
+                        1E78 ?WriteMaterialParameterStructureAzsli@MaterialShaderParameterLayout@RPI@AZ@@QEBA_NAEBV?$BasicPath@V?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@@IO@3@@Z
+                         FB8 ?Error@LuaScriptUtilities@RPI@AZ@@SAXAEBV?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@@Z
+                        1268 ?GetPropertyValues@MaterialAsset@RPI@AZ@@QEBAAEBV?$vector@VMaterialPropertyValue@RPI@AZ@@Uallocator@AZStd@@@AZStd@@XZ
+                        11C9 ?GetMaterialPropertiesLayout@MaterialAsset@RPI@AZ@@QEBAPEBVMaterialPropertiesLayout@23@XZ
+                        110D ?GetDefaultPropertyValues@MaterialTypeAsset@RPI@AZ@@QEBAAEBV?$vector@VMaterialPropertyValue@RPI@AZ@@Uallocator@AZStd@@@AZStd@@XZ
+                        11CB ?GetMaterialPropertiesLayout@MaterialTypeAsset@RPI@AZ@@QEBAPEBVMaterialPropertiesLayout@23@XZ
+                        1262 ?GetPropertyDescriptor@MaterialPropertiesLayout@RPI@AZ@@QEBAPEBVMaterialPropertyDescriptor@23@U?$Handle@IUMaterialPropertyIndexType@RPI@AZ@@@RHI@3@@Z
+                        1261 ?GetPropertyCount@MaterialPropertiesLayout@RPI@AZ@@QEBA_KXZ
+                        1203 ?GetName@MaterialPropertyDescriptor@RPI@AZ@@QEBAAEBVName@3@XZ
+                        10FD ?GetDataType@MaterialPropertyDescriptor@RPI@AZ@@QEBA?AW4MaterialPropertyDataType@23@XZ
+                        1485 ?IsValid@MaterialPropertyValue@RPI@AZ@@QEBA_NXZ
+                         FC6 ?Extension@MaterialAsset@RPI@AZ@@2QEBDEB
+                        1907 ?RTTI_Type@AnyAsset@RPI@AZ@@SA?AUUuid@3@XZ
+                         FCB ?Extension@PassAsset@RPI@AZ@@2QEBDEB
+                        139E ?Group@PassAsset@RPI@AZ@@2QEBDEB
+                         F79 ?DisplayName@PassAsset@RPI@AZ@@2QEBDEB
+                        13A3 ?Group@SkinMetaAsset@RPI@AZ@@2QEBDEB
+                         FD1 ?Extension@SkinMetaAsset@RPI@AZ@@2QEBDEB
+                         F7E ?DisplayName@SkinMetaAsset@RPI@AZ@@2QEBDEB
+                        139D ?Group@MorphTargetMetaAsset@RPI@AZ@@2QEBDEB
+                         FCA ?Extension@MorphTargetMetaAsset@RPI@AZ@@2QEBDEB
+                         F78 ?DisplayName@MorphTargetMetaAsset@RPI@AZ@@2QEBDEB
+                         FC9 ?Extension@ModelLodAsset@RPI@AZ@@2QEBDEB
+                        139C ?Group@ModelLodAsset@RPI@AZ@@2QEBDEB
+                         F77 ?DisplayName@ModelLodAsset@RPI@AZ@@2QEBDEB
+                         FCD ?Extension@ResourcePoolAsset@RPI@AZ@@2QEBDEB
+                        139F ?Group@ResourcePoolAsset@RPI@AZ@@2QEBDEB
+                         F7A ?DisplayName@ResourcePoolAsset@RPI@AZ@@2QEBDEB
+                         FD3 ?Extension@StreamingImagePoolAsset@RPI@AZ@@2QEBDEB
+                        13A5 ?Group@StreamingImagePoolAsset@RPI@AZ@@2QEBDEB
+                         F80 ?DisplayName@StreamingImagePoolAsset@RPI@AZ@@2QEBDEB
+                        14A4 ?LoadAssetData@MaterialTypeAssetHandler@RPI@AZ@@UEAA?AW4LoadResult@AssetHandler@Data@3@AEBV?$Asset@VAssetData@Data@AZ@@@63@V?$shared_ptr@VAssetDataStream@Data@AZ@@@AZStd@@AEBV?$function@$$A6A_NAEBUAssetFilterInfo@Data@AZ@@@Z@9@@Z
+                        14A6 ?LoadAssetData@ShaderAssetHandler@RPI@AZ@@EEAA?AW4LoadResult@AssetHandler@Data@3@AEBV?$Asset@VAssetData@Data@AZ@@@63@V?$shared_ptr@VAssetDataStream@Data@AZ@@@AZStd@@AEBV?$function@$$A6A_NAEBUAssetFilterInfo@Data@AZ@@@Z@9@@Z
+                        14A3 ?LoadAssetData@MaterialAssetHandler@RPI@AZ@@UEAA?AW4LoadResult@AssetHandler@Data@3@AEBV?$Asset@VAssetData@Data@AZ@@@63@V?$shared_ptr@VAssetDataStream@Data@AZ@@@AZStd@@AEBV?$function@$$A6A_NAEBUAssetFilterInfo@Data@AZ@@@Z@9@@Z
+                        14A5 ?LoadAssetData@ModelAssetHandler@RPI@AZ@@UEAA?AW4LoadResult@AssetHandler@Data@3@AEBV?$Asset@VAssetData@Data@AZ@@@63@V?$shared_ptr@VAssetDataStream@Data@AZ@@@AZStd@@AEBV?$function@$$A6A_NAEBUAssetFilterInfo@Data@AZ@@@Z@9@@Z
+                         D6F ?AssetMissingInCatalog@ModelAssetHandler@RPI@AZ@@UEAA?AUAssetId@Data@3@AEBV?$Asset@VAssetData@Data@AZ@@@53@@Z
+                        14A7 ?LoadAssetData@ShaderVariantAssetHandler@RPI@AZ@@EEAA?AW4LoadResult@AssetHandler@Data@3@AEBV?$Asset@VAssetData@Data@AZ@@@63@V?$shared_ptr@VAssetDataStream@Data@AZ@@@AZStd@@AEBV?$function@$$A6A_NAEBUAssetFilterInfo@Data@AZ@@@Z@9@@Z
+                        14A0 ?LoadAssetData@BufferAssetHandler@RPI@AZ@@UEAA?AW4LoadResult@AssetHandler@Data@3@AEBV?$Asset@VAssetData@Data@AZ@@@63@V?$shared_ptr@VAssetDataStream@Data@AZ@@@AZStd@@AEBV?$function@$$A6A_NAEBUAssetFilterInfo@Data@AZ@@@Z@9@@Z
+                        14A8 ?LoadAssetData@ShaderVariantTreeAssetHandler@RPI@AZ@@EEAA?AW4LoadResult@AssetHandler@Data@3@AEBV?$Asset@VAssetData@Data@AZ@@@63@V?$shared_ptr@VAssetDataStream@Data@AZ@@@AZStd@@AEBV?$function@$$A6A_NAEBUAssetFilterInfo@Data@AZ@@@Z@9@@Z
+                        1748 ?RTTI_GetType@?$GenericAssetHandler@VShaderVariantAsset@RPI@AZ@@@AzFramework@@UEBA?AUUuid@AZ@@XZ
+                        17B7 ?RTTI_GetTypeName@?$GenericAssetHandler@VShaderVariantAsset@RPI@AZ@@@AzFramework@@UEBAPEBDXZ
+                        1895 ?RTTI_IsTypeOf@?$GenericAssetHandler@VShaderVariantAsset@RPI@AZ@@@AzFramework@@UEBA_NAEBUUuid@AZ@@@Z
+                        16D9 ?RTTI_EnumTypes@?$GenericAssetHandler@VShaderVariantAsset@RPI@AZ@@@AzFramework@@UEAAXP6AXAEBUUuid@AZ@@PEAX@Z1@Z
+                        1594 ?RTTI_AddressOf@?$GenericAssetHandler@VShaderVariantAsset@RPI@AZ@@@AzFramework@@UEBAPEBXAEBUUuid@AZ@@@Z
+                        1593 ?RTTI_AddressOf@?$GenericAssetHandler@VShaderVariantAsset@RPI@AZ@@@AzFramework@@UEAAPEAXAEBUUuid@AZ@@@Z
+                         D7F ?AutoBuildAssetToCache@?$GenericAssetHandler@VShaderVariantAsset@RPI@AZ@@@AzFramework@@UEAA_NXZ
+                         EE1 ?CreateAsset@?$GenericAssetHandler@VShaderVariantAsset@RPI@AZ@@@AzFramework@@UEAAPEAVAssetData@Data@AZ@@AEBUAssetId@45@AEBUUuid@5@@Z
+                        1ABB ?SaveAssetData@?$GenericAssetHandler@VShaderVariantAsset@RPI@AZ@@@AzFramework@@UEAA_NAEBV?$Asset@VAssetData@Data@AZ@@@Data@AZ@@PEAVGenericStream@IO@5@@Z
+                         F59 ?DestroyAsset@?$GenericAssetHandler@VShaderVariantAsset@RPI@AZ@@@AzFramework@@UEAAXPEAVAssetData@Data@AZ@@@Z
+                        1184 ?GetHandledAssetTypes@?$GenericAssetHandler@VShaderVariantAsset@RPI@AZ@@@AzFramework@@UEAAXAEAV?$vector@UUuid@AZ@@Uallocator@AZStd@@@AZStd@@@Z
+                         E1F ?CanHandleAsset@?$GenericAssetHandler@VShaderVariantAsset@RPI@AZ@@@AzFramework@@UEBA_NAEBUAssetId@Data@AZ@@@Z
+                        107D ?GetAssetType@?$GenericAssetHandler@VShaderVariantAsset@RPI@AZ@@@AzFramework@@UEBA?AUUuid@AZ@@XZ
+                        1087 ?GetAssetTypeDisplayName@?$GenericAssetHandler@VShaderVariantAsset@RPI@AZ@@@AzFramework@@UEBAPEBDXZ
+                        117A ?GetGroup@?$GenericAssetHandler@VShaderVariantAsset@RPI@AZ@@@AzFramework@@UEBAPEBDXZ
+                        10D3 ?GetComponentTypeId@?$GenericAssetHandler@VShaderVariantAsset@RPI@AZ@@@AzFramework@@UEBA?AUUuid@AZ@@XZ
+                        1091 ?GetAssetTypeExtensions@?$GenericAssetHandler@VShaderVariantAsset@RPI@AZ@@@AzFramework@@UEAAXAEAV?$vector@V?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@Uallocator@2@@AZStd@@@Z
+                        1749 ?RTTI_GetType@?$GenericAssetHandler@VShaderVariantTreeAsset@RPI@AZ@@@AzFramework@@UEBA?AUUuid@AZ@@XZ
+                        17B8 ?RTTI_GetTypeName@?$GenericAssetHandler@VShaderVariantTreeAsset@RPI@AZ@@@AzFramework@@UEBAPEBDXZ
+                        1896 ?RTTI_IsTypeOf@?$GenericAssetHandler@VShaderVariantTreeAsset@RPI@AZ@@@AzFramework@@UEBA_NAEBUUuid@AZ@@@Z
+                        16DA ?RTTI_EnumTypes@?$GenericAssetHandler@VShaderVariantTreeAsset@RPI@AZ@@@AzFramework@@UEAAXP6AXAEBUUuid@AZ@@PEAX@Z1@Z
+                        1596 ?RTTI_AddressOf@?$GenericAssetHandler@VShaderVariantTreeAsset@RPI@AZ@@@AzFramework@@UEBAPEBXAEBUUuid@AZ@@@Z
+                        1595 ?RTTI_AddressOf@?$GenericAssetHandler@VShaderVariantTreeAsset@RPI@AZ@@@AzFramework@@UEAAPEAXAEBUUuid@AZ@@@Z
+                         D80 ?AutoBuildAssetToCache@?$GenericAssetHandler@VShaderVariantTreeAsset@RPI@AZ@@@AzFramework@@UEAA_NXZ
+                         EE2 ?CreateAsset@?$GenericAssetHandler@VShaderVariantTreeAsset@RPI@AZ@@@AzFramework@@UEAAPEAVAssetData@Data@AZ@@AEBUAssetId@45@AEBUUuid@5@@Z
+                        1ABC ?SaveAssetData@?$GenericAssetHandler@VShaderVariantTreeAsset@RPI@AZ@@@AzFramework@@UEAA_NAEBV?$Asset@VAssetData@Data@AZ@@@Data@AZ@@PEAVGenericStream@IO@5@@Z
+                         F5A ?DestroyAsset@?$GenericAssetHandler@VShaderVariantTreeAsset@RPI@AZ@@@AzFramework@@UEAAXPEAVAssetData@Data@AZ@@@Z
+                        1185 ?GetHandledAssetTypes@?$GenericAssetHandler@VShaderVariantTreeAsset@RPI@AZ@@@AzFramework@@UEAAXAEAV?$vector@UUuid@AZ@@Uallocator@AZStd@@@AZStd@@@Z
+                         E20 ?CanHandleAsset@?$GenericAssetHandler@VShaderVariantTreeAsset@RPI@AZ@@@AzFramework@@UEBA_NAEBUAssetId@Data@AZ@@@Z
+                        107E ?GetAssetType@?$GenericAssetHandler@VShaderVariantTreeAsset@RPI@AZ@@@AzFramework@@UEBA?AUUuid@AZ@@XZ
+                        1088 ?GetAssetTypeDisplayName@?$GenericAssetHandler@VShaderVariantTreeAsset@RPI@AZ@@@AzFramework@@UEBAPEBDXZ
+                        117B ?GetGroup@?$GenericAssetHandler@VShaderVariantTreeAsset@RPI@AZ@@@AzFramework@@UEBAPEBDXZ
+                        10D4 ?GetComponentTypeId@?$GenericAssetHandler@VShaderVariantTreeAsset@RPI@AZ@@@AzFramework@@UEBA?AUUuid@AZ@@XZ
+                        1747 ?RTTI_GetType@?$GenericAssetHandler@VShaderAsset@RPI@AZ@@@AzFramework@@UEBA?AUUuid@AZ@@XZ
+                        17B6 ?RTTI_GetTypeName@?$GenericAssetHandler@VShaderAsset@RPI@AZ@@@AzFramework@@UEBAPEBDXZ
+                        1894 ?RTTI_IsTypeOf@?$GenericAssetHandler@VShaderAsset@RPI@AZ@@@AzFramework@@UEBA_NAEBUUuid@AZ@@@Z
+                        16D8 ?RTTI_EnumTypes@?$GenericAssetHandler@VShaderAsset@RPI@AZ@@@AzFramework@@UEAAXP6AXAEBUUuid@AZ@@PEAX@Z1@Z
+                        1592 ?RTTI_AddressOf@?$GenericAssetHandler@VShaderAsset@RPI@AZ@@@AzFramework@@UEBAPEBXAEBUUuid@AZ@@@Z
+                        1591 ?RTTI_AddressOf@?$GenericAssetHandler@VShaderAsset@RPI@AZ@@@AzFramework@@UEAAPEAXAEBUUuid@AZ@@@Z
+                         D7E ?AutoBuildAssetToCache@?$GenericAssetHandler@VShaderAsset@RPI@AZ@@@AzFramework@@UEAA_NXZ
+                         EE0 ?CreateAsset@?$GenericAssetHandler@VShaderAsset@RPI@AZ@@@AzFramework@@UEAAPEAVAssetData@Data@AZ@@AEBUAssetId@45@AEBUUuid@5@@Z
+                        1ABA ?SaveAssetData@?$GenericAssetHandler@VShaderAsset@RPI@AZ@@@AzFramework@@UEAA_NAEBV?$Asset@VAssetData@Data@AZ@@@Data@AZ@@PEAVGenericStream@IO@5@@Z
+                         F58 ?DestroyAsset@?$GenericAssetHandler@VShaderAsset@RPI@AZ@@@AzFramework@@UEAAXPEAVAssetData@Data@AZ@@@Z
+                        1183 ?GetHandledAssetTypes@?$GenericAssetHandler@VShaderAsset@RPI@AZ@@@AzFramework@@UEAAXAEAV?$vector@UUuid@AZ@@Uallocator@AZStd@@@AZStd@@@Z
+                         E1E ?CanHandleAsset@?$GenericAssetHandler@VShaderAsset@RPI@AZ@@@AzFramework@@UEBA_NAEBUAssetId@Data@AZ@@@Z
+                        107C ?GetAssetType@?$GenericAssetHandler@VShaderAsset@RPI@AZ@@@AzFramework@@UEBA?AUUuid@AZ@@XZ
+                        1086 ?GetAssetTypeDisplayName@?$GenericAssetHandler@VShaderAsset@RPI@AZ@@@AzFramework@@UEBAPEBDXZ
+                        1179 ?GetGroup@?$GenericAssetHandler@VShaderAsset@RPI@AZ@@@AzFramework@@UEBAPEBDXZ
+                        10D2 ?GetComponentTypeId@?$GenericAssetHandler@VShaderAsset@RPI@AZ@@@AzFramework@@UEBA?AUUuid@AZ@@XZ
+                        1090 ?GetAssetTypeExtensions@?$GenericAssetHandler@VShaderAsset@RPI@AZ@@@AzFramework@@UEAAXAEAV?$vector@V?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@Uallocator@2@@AZStd@@@Z
+                        1742 ?RTTI_GetType@?$GenericAssetHandler@VBufferAsset@RPI@AZ@@@AzFramework@@UEBA?AUUuid@AZ@@XZ
+                        17B1 ?RTTI_GetTypeName@?$GenericAssetHandler@VBufferAsset@RPI@AZ@@@AzFramework@@UEBAPEBDXZ
+                        188F ?RTTI_IsTypeOf@?$GenericAssetHandler@VBufferAsset@RPI@AZ@@@AzFramework@@UEBA_NAEBUUuid@AZ@@@Z
+                        16D3 ?RTTI_EnumTypes@?$GenericAssetHandler@VBufferAsset@RPI@AZ@@@AzFramework@@UEAAXP6AXAEBUUuid@AZ@@PEAX@Z1@Z
+                        1588 ?RTTI_AddressOf@?$GenericAssetHandler@VBufferAsset@RPI@AZ@@@AzFramework@@UEBAPEBXAEBUUuid@AZ@@@Z
+                        1587 ?RTTI_AddressOf@?$GenericAssetHandler@VBufferAsset@RPI@AZ@@@AzFramework@@UEAAPEAXAEBUUuid@AZ@@@Z
+                         D79 ?AutoBuildAssetToCache@?$GenericAssetHandler@VBufferAsset@RPI@AZ@@@AzFramework@@UEAA_NXZ
+                         EDB ?CreateAsset@?$GenericAssetHandler@VBufferAsset@RPI@AZ@@@AzFramework@@UEAAPEAVAssetData@Data@AZ@@AEBUAssetId@45@AEBUUuid@5@@Z
+                        1AB5 ?SaveAssetData@?$GenericAssetHandler@VBufferAsset@RPI@AZ@@@AzFramework@@UEAA_NAEBV?$Asset@VAssetData@Data@AZ@@@Data@AZ@@PEAVGenericStream@IO@5@@Z
+                         F53 ?DestroyAsset@?$GenericAssetHandler@VBufferAsset@RPI@AZ@@@AzFramework@@UEAAXPEAVAssetData@Data@AZ@@@Z
+                        117E ?GetHandledAssetTypes@?$GenericAssetHandler@VBufferAsset@RPI@AZ@@@AzFramework@@UEAAXAEAV?$vector@UUuid@AZ@@Uallocator@AZStd@@@AZStd@@@Z
+                         E19 ?CanHandleAsset@?$GenericAssetHandler@VBufferAsset@RPI@AZ@@@AzFramework@@UEBA_NAEBUAssetId@Data@AZ@@@Z
+                        1077 ?GetAssetType@?$GenericAssetHandler@VBufferAsset@RPI@AZ@@@AzFramework@@UEBA?AUUuid@AZ@@XZ
+                        1081 ?GetAssetTypeDisplayName@?$GenericAssetHandler@VBufferAsset@RPI@AZ@@@AzFramework@@UEBAPEBDXZ
+                        1174 ?GetGroup@?$GenericAssetHandler@VBufferAsset@RPI@AZ@@@AzFramework@@UEBAPEBDXZ
+                        10CD ?GetComponentTypeId@?$GenericAssetHandler@VBufferAsset@RPI@AZ@@@AzFramework@@UEBA?AUUuid@AZ@@XZ
+                        108B ?GetAssetTypeExtensions@?$GenericAssetHandler@VBufferAsset@RPI@AZ@@@AzFramework@@UEAAXAEAV?$vector@V?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@Uallocator@2@@AZStd@@@Z
+                         D7C ?AutoBuildAssetToCache@?$GenericAssetHandler@VMaterialTypeAsset@RPI@AZ@@@AzFramework@@UEAA_NXZ
+                         EDE ?CreateAsset@?$GenericAssetHandler@VMaterialTypeAsset@RPI@AZ@@@AzFramework@@UEAAPEAVAssetData@Data@AZ@@AEBUAssetId@45@AEBUUuid@5@@Z
+                        1AB8 ?SaveAssetData@?$GenericAssetHandler@VMaterialTypeAsset@RPI@AZ@@@AzFramework@@UEAA_NAEBV?$Asset@VAssetData@Data@AZ@@@Data@AZ@@PEAVGenericStream@IO@5@@Z
+                         F56 ?DestroyAsset@?$GenericAssetHandler@VMaterialTypeAsset@RPI@AZ@@@AzFramework@@UEAAXPEAVAssetData@Data@AZ@@@Z
+                        1181 ?GetHandledAssetTypes@?$GenericAssetHandler@VMaterialTypeAsset@RPI@AZ@@@AzFramework@@UEAAXAEAV?$vector@UUuid@AZ@@Uallocator@AZStd@@@AZStd@@@Z
+                         E1C ?CanHandleAsset@?$GenericAssetHandler@VMaterialTypeAsset@RPI@AZ@@@AzFramework@@UEBA_NAEBUAssetId@Data@AZ@@@Z
+                        107A ?GetAssetType@?$GenericAssetHandler@VMaterialTypeAsset@RPI@AZ@@@AzFramework@@UEBA?AUUuid@AZ@@XZ
+                        1084 ?GetAssetTypeDisplayName@?$GenericAssetHandler@VMaterialTypeAsset@RPI@AZ@@@AzFramework@@UEBAPEBDXZ
+                        1177 ?GetGroup@?$GenericAssetHandler@VMaterialTypeAsset@RPI@AZ@@@AzFramework@@UEBAPEBDXZ
+                        10D0 ?GetComponentTypeId@?$GenericAssetHandler@VMaterialTypeAsset@RPI@AZ@@@AzFramework@@UEBA?AUUuid@AZ@@XZ
+                        108E ?GetAssetTypeExtensions@?$GenericAssetHandler@VMaterialTypeAsset@RPI@AZ@@@AzFramework@@UEAAXAEAV?$vector@V?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@Uallocator@2@@AZStd@@@Z
+                         D7B ?AutoBuildAssetToCache@?$GenericAssetHandler@VMaterialAsset@RPI@AZ@@@AzFramework@@UEAA_NXZ
+                         EDD ?CreateAsset@?$GenericAssetHandler@VMaterialAsset@RPI@AZ@@@AzFramework@@UEAAPEAVAssetData@Data@AZ@@AEBUAssetId@45@AEBUUuid@5@@Z
+                        1AB7 ?SaveAssetData@?$GenericAssetHandler@VMaterialAsset@RPI@AZ@@@AzFramework@@UEAA_NAEBV?$Asset@VAssetData@Data@AZ@@@Data@AZ@@PEAVGenericStream@IO@5@@Z
+                         F55 ?DestroyAsset@?$GenericAssetHandler@VMaterialAsset@RPI@AZ@@@AzFramework@@UEAAXPEAVAssetData@Data@AZ@@@Z
+                        1180 ?GetHandledAssetTypes@?$GenericAssetHandler@VMaterialAsset@RPI@AZ@@@AzFramework@@UEAAXAEAV?$vector@UUuid@AZ@@Uallocator@AZStd@@@AZStd@@@Z
+                         E1B ?CanHandleAsset@?$GenericAssetHandler@VMaterialAsset@RPI@AZ@@@AzFramework@@UEBA_NAEBUAssetId@Data@AZ@@@Z
+                        1079 ?GetAssetType@?$GenericAssetHandler@VMaterialAsset@RPI@AZ@@@AzFramework@@UEBA?AUUuid@AZ@@XZ
+                        1083 ?GetAssetTypeDisplayName@?$GenericAssetHandler@VMaterialAsset@RPI@AZ@@@AzFramework@@UEBAPEBDXZ
+                        1176 ?GetGroup@?$GenericAssetHandler@VMaterialAsset@RPI@AZ@@@AzFramework@@UEBAPEBDXZ
+                        10CF ?GetComponentTypeId@?$GenericAssetHandler@VMaterialAsset@RPI@AZ@@@AzFramework@@UEBA?AUUuid@AZ@@XZ
+                        108D ?GetAssetTypeExtensions@?$GenericAssetHandler@VMaterialAsset@RPI@AZ@@@AzFramework@@UEAAXAEAV?$vector@V?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@Uallocator@2@@AZStd@@@Z
+                         D7D ?AutoBuildAssetToCache@?$GenericAssetHandler@VModelAsset@RPI@AZ@@@AzFramework@@UEAA_NXZ
+                         EDF ?CreateAsset@?$GenericAssetHandler@VModelAsset@RPI@AZ@@@AzFramework@@UEAAPEAVAssetData@Data@AZ@@AEBUAssetId@45@AEBUUuid@5@@Z
+                        1AB9 ?SaveAssetData@?$GenericAssetHandler@VModelAsset@RPI@AZ@@@AzFramework@@UEAA_NAEBV?$Asset@VAssetData@Data@AZ@@@Data@AZ@@PEAVGenericStream@IO@5@@Z
+                         F57 ?DestroyAsset@?$GenericAssetHandler@VModelAsset@RPI@AZ@@@AzFramework@@UEAAXPEAVAssetData@Data@AZ@@@Z
+                        1182 ?GetHandledAssetTypes@?$GenericAssetHandler@VModelAsset@RPI@AZ@@@AzFramework@@UEAAXAEAV?$vector@UUuid@AZ@@Uallocator@AZStd@@@AZStd@@@Z
+                         E1D ?CanHandleAsset@?$GenericAssetHandler@VModelAsset@RPI@AZ@@@AzFramework@@UEBA_NAEBUAssetId@Data@AZ@@@Z
+                        107B ?GetAssetType@?$GenericAssetHandler@VModelAsset@RPI@AZ@@@AzFramework@@UEBA?AUUuid@AZ@@XZ
+                        1085 ?GetAssetTypeDisplayName@?$GenericAssetHandler@VModelAsset@RPI@AZ@@@AzFramework@@UEBAPEBDXZ
+                        1178 ?GetGroup@?$GenericAssetHandler@VModelAsset@RPI@AZ@@@AzFramework@@UEBAPEBDXZ
+                        10D1 ?GetComponentTypeId@?$GenericAssetHandler@VModelAsset@RPI@AZ@@@AzFramework@@UEBA?AUUuid@AZ@@XZ
+                        108F ?GetAssetTypeExtensions@?$GenericAssetHandler@VModelAsset@RPI@AZ@@@AzFramework@@UEAAXAEAV?$vector@V?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@Uallocator@2@@AZStd@@@Z
+                        160F ?RTTI_AddressOf@PassAsset@RPI@AZ@@UEAAPEAXAEBUUuid@3@@Z
+                        1610 ?RTTI_AddressOf@PassAsset@RPI@AZ@@UEBAPEBXAEBUUuid@3@@Z
+                        1717 ?RTTI_EnumTypes@PassAsset@RPI@AZ@@UEAAXP6AXAEBUUuid@3@PEAX@Z1@Z
+                        18D3 ?RTTI_IsTypeOf@PassAsset@RPI@AZ@@UEBA_NAEBUUuid@3@@Z
+                        17F5 ?RTTI_GetTypeName@PassAsset@RPI@AZ@@UEBAPEBDXZ
+                        1786 ?RTTI_GetType@PassAsset@RPI@AZ@@UEBA?AUUuid@3@XZ
+                        1647 ?RTTI_AddressOf@SkinMetaAsset@RPI@AZ@@UEAAPEAXAEBUUuid@3@@Z
+                        1648 ?RTTI_AddressOf@SkinMetaAsset@RPI@AZ@@UEBAPEBXAEBUUuid@3@@Z
+                        1733 ?RTTI_EnumTypes@SkinMetaAsset@RPI@AZ@@UEAAXP6AXAEBUUuid@3@PEAX@Z1@Z
+                        18EF ?RTTI_IsTypeOf@SkinMetaAsset@RPI@AZ@@UEBA_NAEBUUuid@3@@Z
+                        1811 ?RTTI_GetTypeName@SkinMetaAsset@RPI@AZ@@UEBAPEBDXZ
+                        17A2 ?RTTI_GetType@SkinMetaAsset@RPI@AZ@@UEBA?AUUuid@3@XZ
+                        1609 ?RTTI_AddressOf@MorphTargetMetaAsset@RPI@AZ@@UEAAPEAXAEBUUuid@3@@Z
+                        160A ?RTTI_AddressOf@MorphTargetMetaAsset@RPI@AZ@@UEBAPEBXAEBUUuid@3@@Z
+                        1714 ?RTTI_EnumTypes@MorphTargetMetaAsset@RPI@AZ@@UEAAXP6AXAEBUUuid@3@PEAX@Z1@Z
+                        18D0 ?RTTI_IsTypeOf@MorphTargetMetaAsset@RPI@AZ@@UEBA_NAEBUUuid@3@@Z
+                        17F2 ?RTTI_GetTypeName@MorphTargetMetaAsset@RPI@AZ@@UEBAPEBDXZ
+                        1783 ?RTTI_GetType@MorphTargetMetaAsset@RPI@AZ@@UEBA?AUUuid@3@XZ
+                        1601 ?RTTI_AddressOf@ModelAssetHandler@RPI@AZ@@UEAAPEAXAEBUUuid@3@@Z
+                        1602 ?RTTI_AddressOf@ModelAssetHandler@RPI@AZ@@UEBAPEBXAEBUUuid@3@@Z
+                        1710 ?RTTI_EnumTypes@ModelAssetHandler@RPI@AZ@@UEAAXP6AXAEBUUuid@3@PEAX@Z1@Z
+                        18CC ?RTTI_IsTypeOf@ModelAssetHandler@RPI@AZ@@UEBA_NAEBUUuid@3@@Z
+                        17EE ?RTTI_GetTypeName@ModelAssetHandler@RPI@AZ@@UEBAPEBDXZ
+                        177F ?RTTI_GetType@ModelAssetHandler@RPI@AZ@@UEBA?AUUuid@3@XZ
+                        13A9 ?HandleAutoReload@ModelLodAsset@RPI@AZ@@EEAA_NXZ
+                        1605 ?RTTI_AddressOf@ModelLodAsset@RPI@AZ@@UEAAPEAXAEBUUuid@3@@Z
+                        1606 ?RTTI_AddressOf@ModelLodAsset@RPI@AZ@@UEBAPEBXAEBUUuid@3@@Z
+                        1712 ?RTTI_EnumTypes@ModelLodAsset@RPI@AZ@@UEAAXP6AXAEBUUuid@3@PEAX@Z1@Z
+                        18CE ?RTTI_IsTypeOf@ModelLodAsset@RPI@AZ@@UEBA_NAEBUUuid@3@@Z
+                        17F0 ?RTTI_GetTypeName@ModelLodAsset@RPI@AZ@@UEBAPEBDXZ
+                        1781 ?RTTI_GetType@ModelLodAsset@RPI@AZ@@UEBA?AUUuid@3@XZ
+                        15F5 ?RTTI_AddressOf@MaterialAssetHandler@RPI@AZ@@UEAAPEAXAEBUUuid@3@@Z
+                        15F6 ?RTTI_AddressOf@MaterialAssetHandler@RPI@AZ@@UEBAPEBXAEBUUuid@3@@Z
+                        170A ?RTTI_EnumTypes@MaterialAssetHandler@RPI@AZ@@UEAAXP6AXAEBUUuid@3@PEAX@Z1@Z
+                        18C6 ?RTTI_IsTypeOf@MaterialAssetHandler@RPI@AZ@@UEBA_NAEBUUuid@3@@Z
+                        17E8 ?RTTI_GetTypeName@MaterialAssetHandler@RPI@AZ@@UEBAPEBDXZ
+                        1779 ?RTTI_GetType@MaterialAssetHandler@RPI@AZ@@UEBA?AUUuid@3@XZ
+                        15FB ?RTTI_AddressOf@MaterialTypeAssetHandler@RPI@AZ@@UEAAPEAXAEBUUuid@3@@Z
+                        15FC ?RTTI_AddressOf@MaterialTypeAssetHandler@RPI@AZ@@UEBAPEBXAEBUUuid@3@@Z
+                        170D ?RTTI_EnumTypes@MaterialTypeAssetHandler@RPI@AZ@@UEAAXP6AXAEBUUuid@3@PEAX@Z1@Z
+                        18C9 ?RTTI_IsTypeOf@MaterialTypeAssetHandler@RPI@AZ@@UEBA_NAEBUUuid@3@@Z
+                        17EB ?RTTI_GetTypeName@MaterialTypeAssetHandler@RPI@AZ@@UEBAPEBDXZ
+                        177C ?RTTI_GetType@MaterialTypeAssetHandler@RPI@AZ@@UEBA?AUUuid@3@XZ
+                        162F ?RTTI_AddressOf@ResourcePoolAsset@RPI@AZ@@UEAAPEAXAEBUUuid@3@@Z
+                        1630 ?RTTI_AddressOf@ResourcePoolAsset@RPI@AZ@@UEBAPEBXAEBUUuid@3@@Z
+                        1727 ?RTTI_EnumTypes@ResourcePoolAsset@RPI@AZ@@UEAAXP6AXAEBUUuid@3@PEAX@Z1@Z
+                        18E3 ?RTTI_IsTypeOf@ResourcePoolAsset@RPI@AZ@@UEBA_NAEBUUuid@3@@Z
+                        1805 ?RTTI_GetTypeName@ResourcePoolAsset@RPI@AZ@@UEBAPEBDXZ
+                        1796 ?RTTI_GetType@ResourcePoolAsset@RPI@AZ@@UEBA?AUUuid@3@XZ
+                        1655 ?RTTI_AddressOf@StreamingImagePoolAsset@RPI@AZ@@UEAAPEAXAEBUUuid@3@@Z
+                        1656 ?RTTI_AddressOf@StreamingImagePoolAsset@RPI@AZ@@UEBAPEBXAEBUUuid@3@@Z
+                        173A ?RTTI_EnumTypes@StreamingImagePoolAsset@RPI@AZ@@UEAAXP6AXAEBUUuid@3@PEAX@Z1@Z
+                         202 ??0StreamingImagePoolAsset@RPI@AZ@@QEAA@XZ
+                         305 ??1StreamingImagePoolAsset@RPI@AZ@@UEAA@XZ
+                        1A57 ?Register@?$GenericAssetHandler@VShaderVariantAsset@RPI@AZ@@@AzFramework@@QEAAXXZ
+                         1E9 ??0ShaderVariantAssetHandler@RPI@AZ@@QEAA@XZ
+                         2F5 ??1ShaderVariantAssetHandler@RPI@AZ@@UEAA@XZ
+                        1A58 ?Register@?$GenericAssetHandler@VShaderVariantTreeAsset@RPI@AZ@@@AzFramework@@QEAAXXZ
+                         1F0 ??0ShaderVariantTreeAssetHandler@RPI@AZ@@QEAA@XZ
+                         2F8 ??1ShaderVariantTreeAssetHandler@RPI@AZ@@UEAA@XZ
+                        1A56 ?Register@?$GenericAssetHandler@VShaderAsset@RPI@AZ@@@AzFramework@@QEAAXXZ
+                         1C9 ??0ShaderAssetHandler@RPI@AZ@@QEAA@XZ
+                         2E7 ??1ShaderAssetHandler@RPI@AZ@@UEAA@XZ
+                         1B2 ??0ResourcePoolAsset@RPI@AZ@@QEAA@AEBUAssetId@Data@2@@Z
+                         2DC ??1ResourcePoolAsset@RPI@AZ@@UEAA@XZ
+                        1A51 ?Register@?$GenericAssetHandler@VBufferAsset@RPI@AZ@@@AzFramework@@QEAAXXZ
+                          AF ??0BufferAssetHandler@RPI@AZ@@QEAA@XZ
+                         259 ??1BufferAssetHandler@RPI@AZ@@UEAA@XZ
+                        1A54 ?Register@?$GenericAssetHandler@VMaterialTypeAsset@RPI@AZ@@@AzFramework@@QEAAXXZ
+                         130 ??0MaterialTypeAssetHandler@RPI@AZ@@QEAA@XZ
+                         29C ??1MaterialTypeAssetHandler@RPI@AZ@@UEAA@XZ
+                        1A53 ?Register@?$GenericAssetHandler@VMaterialAsset@RPI@AZ@@@AzFramework@@QEAAXXZ
+                          FF ??0MaterialAssetHandler@RPI@AZ@@QEAA@XZ
+                         28C ??1MaterialAssetHandler@RPI@AZ@@UEAA@XZ
+                         147 ??0ModelLodAsset@RPI@AZ@@QEAA@XZ
+                         2A8 ??1ModelLodAsset@RPI@AZ@@UEAA@XZ
+                        1A55 ?Register@?$GenericAssetHandler@VModelAsset@RPI@AZ@@@AzFramework@@QEAAXXZ
+                         141 ??0ModelAssetHandler@RPI@AZ@@QEAA@XZ
+                         2A4 ??1ModelAssetHandler@RPI@AZ@@UEAA@XZ
+                         14D ??0MorphTargetMetaAsset@RPI@AZ@@QEAA@XZ
+                         2AC ??1MorphTargetMetaAsset@RPI@AZ@@UEAA@XZ
+                         1F5 ??0SkinMetaAsset@RPI@AZ@@QEAA@XZ
+                         2F9 ??1SkinMetaAsset@RPI@AZ@@UEAA@XZ
+                         151 ??0PassAsset@RPI@AZ@@QEAA@XZ
+                         2B0 ??1PassAsset@RPI@AZ@@UEAA@XZ
+                        17A9 ?RTTI_GetType@StreamingImagePoolAsset@RPI@AZ@@UEBA?AUUuid@3@XZ
+                        1818 ?RTTI_GetTypeName@StreamingImagePoolAsset@RPI@AZ@@UEBAPEBDXZ
+                        18F6 ?RTTI_IsTypeOf@StreamingImagePoolAsset@RPI@AZ@@UEBA_NAEBUUuid@3@@Z
+                        1092 ?GetAssetTypeExtensions@?$GenericAssetHandler@VShaderVariantTreeAsset@RPI@AZ@@@AzFramework@@UEAAXAEAV?$vector@V?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@Uallocator@2@@AZStd@@@Z
+
+    SceneData.dll
+             1801314E0 Import Address Table
+             1801E0020 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                          4E ?GetAutoLodGenerationSettings@LodRule@SceneData@SceneAPI@AZ@@QEBAAEBUAutoLodGenerationSettings@1234@XZ
+                          E3 ?IsAutoLodGenerationEnabled@LodRule@SceneData@SceneAPI@AZ@@QEBA_NXZ
+
+    Atom_RPI.Edit.dll
+             18012F250 Import Address Table
+             1801DDD90 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                         2E8 ?Reflect@MaterialPropertySourceData@RPI@AZ@@SAXPEAVReflectContext@3@@Z
+                         350 ?ValidateStableIdsAreUnique@ShaderVariantTreeAssetCreator@RPI@AZ@@SA?AV?$Outcome@XV?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@@3@AEBV?$vector@UVariantInfo@ShaderVariantListSourceData@RPI@AZ@@Uallocator@AZStd@@@AZStd@@@Z
+                         127 ??4ShaderVariantListSourceData@RPI@AZ@@QEAAAEAU012@$$QEAU012@@Z
+                          7D ??1ShaderVariantListSourceData@RPI@AZ@@QEAA@XZ
+                          55 ??0ShaderVariantListSourceData@RPI@AZ@@QEAA@XZ
+                          7F ??1ShaderVariantTreeAssetCreator@RPI@AZ@@UEAA@XZ
+                          5A ??0ShaderVariantTreeAssetCreator@RPI@AZ@@QEAA@XZ
+                         20C ?End@ShaderVariantTreeAssetCreator@RPI@AZ@@QEAA_NAEAV?$Asset@VShaderVariantTreeAsset@RPI@AZ@@@Data@3@@Z
+                         303 ?SetVariantInfos@ShaderVariantTreeAssetCreator@RPI@AZ@@QEAAXAEBV?$vector@UVariantInfo@ShaderVariantListSourceData@RPI@AZ@@Uallocator@AZStd@@@AZStd@@@Z
+                         301 ?SetShaderOptionGroupLayout@ShaderVariantTreeAssetCreator@RPI@AZ@@QEAAXAEBVShaderOptionGroupLayout@23@@Z
+                         1F0 ?Begin@ShaderVariantTreeAssetCreator@RPI@AZ@@QEAAXAEBUAssetId@Data@3@@Z
+                          7C ??1ShaderVariantAssetCreator@RPI@AZ@@UEAA@XZ
+                          52 ??0ShaderVariantAssetCreator@RPI@AZ@@QEAA@XZ
+                         300 ?SetShaderFunction@ShaderVariantAssetCreator@RPI@AZ@@QEAAXW4ShaderStage@RHI@3@V?$intrusive_ptr@VShaderStageFunction@RHI@AZ@@@AZStd@@@Z
+                         20B ?End@ShaderVariantAssetCreator@RPI@AZ@@QEAA_NAEAV?$Asset@VShaderVariantAsset@RPI@AZ@@@Data@3@@Z
+                         1EF ?Begin@ShaderVariantAssetCreator@RPI@AZ@@QEAAXAEBUAssetId@Data@3@AEBUShaderVariantId@23@U?$Handle@IUShaderVariantId@RPI@AZ@@@RHI@3@_N@Z
+                         232 ?GetErrorMessage@JsonReportingHelper@RPI@AZ@@QEBA?AV?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@XZ
+                         351 ?WarningsReported@JsonReportingHelper@RPI@AZ@@QEBA_NXZ
+                          50 ??0ShaderSourceData@RPI@AZ@@QEAA@AEBU012@@Z
+                         25E ?IsRhiBackendDisabled@ShaderSourceData@RPI@AZ@@QEBA_NAEBVName@3@@Z
+                         20A ?DefaultTarget@ShaderVariantListSourceData@RPI@AZ@@2QEBDEB
+                          4F ??0ShaderSourceData@RPI@AZ@@QEAA@$$QEAU012@@Z
+                         21A ?Extension@ShaderVariantListSourceData@RPI@AZ@@2QEBDEB
+                         219 ?Extension@ShaderSourceData@RPI@AZ@@2QBDB
+                          79 ??1ResourcePoolSourceData@RPI@AZ@@QEAA@XZ
+                          4B ??0ResourcePoolSourceData@RPI@AZ@@QEAA@XZ
+                         26E ?MakeAssetId@AssetUtils@RPI@AZ@@YA?AV?$Outcome@UAssetId@Data@AZ@@Uunexpect_t@AZStd@@@3@AEBV?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@IW4TraceLevel@123@@Z
+                         11E ??4MaterialSourceData@RPI@AZ@@QEAAAEAV012@$$QEAV012@@Z
+                          40 ??0MaterialSourceData@RPI@AZ@@QEAA@$$QEAV012@@Z
+                          41 ??0MaterialSourceData@RPI@AZ@@QEAA@AEBV012@@Z
+                          42 ??0MaterialSourceData@RPI@AZ@@QEAA@XZ
+                         125 ??4ShaderSourceData@RPI@AZ@@QEAAAEAU012@$$QEAU012@@Z
+                          7B ??1ShaderSourceData@RPI@AZ@@QEAA@XZ
+                          51 ??0ShaderSourceData@RPI@AZ@@QEAA@XZ
+                         26C ?LooksLikeImageFileReference@MaterialUtils@RPI@AZ@@YA_NAEBVMaterialPropertyValue@23@@Z
+                         268 ?LoadMaterialPipelineSourceData@MaterialUtils@RPI@AZ@@YA?AV?$Outcome@UMaterialPipelineSourceData@RPI@AZ@@Uunexpect_t@AZStd@@@3@AEBV?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@PEAV?$GenericDocument@U?$UTF8@D@rapidjson_ly@@V?$MemoryPoolAllocator@VCrtAllocator@rapidjson_ly@@@2@VCrtAllocator@2@@rapidjson_ly@@PEAV?$unordered_set@V?$BasicPath@V?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@@IO@AZ@@U?$hash@V?$BasicPath@V?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@@IO@AZ@@@AZStd@@U?$equal_to@V?$BasicPath@V?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@@IO@AZ@@@5@Uallocator@5@@6@@Z
+                         1FB ?CreateAllPropertyDefaultsMaterial@MaterialSourceData@RPI@AZ@@SA?AV123@AEBV?$Asset@VMaterialTypeAsset@RPI@AZ@@@Data@3@AEBV?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@@Z
+                          43 ??0MaterialTypeSourceData@RPI@AZ@@QEAA@$$QEAV012@@Z
+                         252 ?GetShaderReferences@MaterialTypeSourceData@RPI@AZ@@QEBA?AV?$vector@UShaderVariantReferenceData@MaterialTypeSourceData@RPI@AZ@@Uallocator@AZStd@@@AZStd@@XZ
+                         206 ?CreateMaterialTypeAsset@MaterialTypeSourceData@RPI@AZ@@QEBA?AV?$Outcome@V?$Asset@VMaterialTypeAsset@RPI@AZ@@@Data@AZ@@Uunexpect_t@AZStd@@@3@UAssetId@Data@3@V?$basic_string_view@DU?$char_traits@D@AZStd@@@AZStd@@_N@Z
+                         205 ?CreateMaterialShaderParameterLayout@MaterialTypeSourceData@RPI@AZ@@QEBA?AVMaterialShaderParameterLayout@23@XZ
+                         211 ?EnumerateProperties@MaterialTypeSourceData@RPI@AZ@@QEBA_NAEBV?$function@$$A6A_NPEBUMaterialPropertySourceData@RPI@AZ@@AEBVMaterialNameContext@23@@Z@AZStd@@@Z
+                         213 ?EnumeratePropertyGroups@MaterialTypeSourceData@RPI@AZ@@QEBA_NAEBV?$function@$$A6A_NAEBV?$vector@PEBUPropertyGroup@MaterialTypeSourceData@RPI@AZ@@Uallocator@AZStd@@@AZStd@@@Z@AZStd@@@Z
+                          2E ??0MaterialPipelineState@MaterialTypeSourceData@RPI@AZ@@QEAA@$$QEAU0123@@Z
+                          71 ??1MaterialPipelineState@MaterialTypeSourceData@RPI@AZ@@QEAA@XZ
+                          30 ??0MaterialPipelineState@MaterialTypeSourceData@RPI@AZ@@QEAA@XZ
+                         129 ??4ShaderVariantReferenceData@MaterialTypeSourceData@RPI@AZ@@QEAAAEAU0123@$$QEAU0123@@Z
+                          56 ??0ShaderVariantReferenceData@MaterialTypeSourceData@RPI@AZ@@QEAA@$$QEAU0123@@Z
+                          7E ??1ShaderVariantReferenceData@MaterialTypeSourceData@RPI@AZ@@QEAA@XZ
+                          59 ??0ShaderVariantReferenceData@MaterialTypeSourceData@RPI@AZ@@QEAA@XZ
+                         236 ?GetFunctors@PropertyGroup@MaterialTypeSourceData@RPI@AZ@@QEBAAEBV?$vector@V?$intrusive_ptr@VMaterialFunctorSourceDataHolder@RPI@AZ@@@AZStd@@Uallocator@2@@AZStd@@XZ
+                         228 ?GetActualSourceData@MaterialFunctorSourceDataHolder@RPI@AZ@@QEBA?AV?$intrusive_ptr@VMaterialFunctorSourceData@RPI@AZ@@@AZStd@@XZ
+                          6B ??1JsonReportingHelper@RPI@AZ@@QEAA@XZ
+                          25 ??0JsonReportingHelper@RPI@AZ@@QEAA@XZ
+                         214 ?ErrorsReported@JsonReportingHelper@RPI@AZ@@QEBA_NXZ
+                         1ED ?Attach@JsonReportingHelper@RPI@AZ@@QEAAXAEAUJsonDeserializerSettings@3@@Z
+                         1EE ?Attach@JsonReportingHelper@RPI@AZ@@QEAAXAEAUJsonSerializerSettings@3@@Z
+                          2B ??0MaterialPipelineSourceData@RPI@AZ@@QEAA@$$QEAU012@@Z
+                          70 ??1MaterialPipelineSourceData@RPI@AZ@@QEAA@XZ
+                         11B ??4MaterialPropertySourceData@RPI@AZ@@QEAAAEAU012@AEBU012@@Z
+                          3A ??0MaterialPropertySourceData@RPI@AZ@@QEAA@AEBU012@@Z
+                          73 ??1MaterialPropertySourceData@RPI@AZ@@QEAA@XZ
+                         2F6 ?ResolvePathReference@AssetUtils@RPI@AZ@@YA?AV?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@AEBV45@0@Z
+                         272 ?PredictIntermediateMaterialTypeSourcePath@MaterialUtils@RPI@AZ@@YA?AV?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@AEBV45@@Z
+                         273 ?PredictOriginalMaterialTypeSourcePath@MaterialUtils@RPI@AZ@@YA?AV?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@AEBV45@@Z
+                         269 ?LoadMaterialSourceData@MaterialUtils@RPI@AZ@@YA?AV?$Outcome@VMaterialSourceData@RPI@AZ@@Uunexpect_t@AZStd@@@3@AEBV?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@PEBV?$GenericValue@U?$UTF8@D@rapidjson_ly@@V?$MemoryPoolAllocator@VCrtAllocator@rapidjson_ly@@@2@@rapidjson_ly@@_N@Z
+                         26A ?LoadMaterialTypeSourceData@MaterialUtils@RPI@AZ@@YA?AV?$Outcome@VMaterialTypeSourceData@RPI@AZ@@Uunexpect_t@AZStd@@@3@AEBV?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@PEAV?$GenericDocument@U?$UTF8@D@rapidjson_ly@@V?$MemoryPoolAllocator@VCrtAllocator@rapidjson_ly@@@2@VCrtAllocator@2@@rapidjson_ly@@PEAV?$unordered_set@V?$BasicPath@V?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@@IO@AZ@@U?$hash@V?$BasicPath@V?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@@IO@AZ@@@AZStd@@U?$equal_to@V?$BasicPath@V?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@@IO@AZ@@@5@Uallocator@5@@6@@Z
+                          75 ??1MaterialSourceData@RPI@AZ@@QEAA@XZ
+                         203 ?CreateMaterialAsset@MaterialSourceData@RPI@AZ@@QEBA?AV?$Outcome@V?$Asset@VMaterialAsset@RPI@AZ@@@Data@AZ@@Uunexpect_t@AZStd@@@3@UAssetId@Data@3@AEBV?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@_N@Z
+                          76 ??1MaterialTypeSourceData@RPI@AZ@@QEAA@XZ
+                         235 ?GetFormat@MaterialTypeSourceData@RPI@AZ@@QEBA?AW4Format@123@XZ
+                         32C ?TYPEINFO_Uuid@ConvertibleSource@RPI@AZ@@SA?AUUuid@3@XZ
+                         2EC ?Reflect@ResourcePoolSourceData@RPI@AZ@@SAXPEAVReflectContext@3@@Z
+                         304 ?Shutdown@MaterialFunctorSourceDataRegistration@RPI@AZ@@QEAAXXZ
+                         259 ?Init@MaterialFunctorSourceDataRegistration@RPI@AZ@@QEAAXXZ
+                          6F ??1MaterialFunctorSourceDataRegistration@RPI@AZ@@UEAA@XZ
+                          2A ??0MaterialFunctorSourceDataRegistration@RPI@AZ@@QEAA@XZ
+                         2E2 ?Reflect@AssetAliasesSourceData@RPI@AZ@@SAXPEAVReflectContext@3@@Z
+                         2E3 ?Reflect@ConvertibleSource@RPI@AZ@@SAXPEAVReflectContext@3@@Z
+                         2EE ?Reflect@ShaderVariantListSourceData@RPI@AZ@@SAXPEAVReflectContext@3@@Z
+                         2ED ?Reflect@ShaderSourceData@RPI@AZ@@SAXPEAVReflectContext@3@@Z
+                         2E4 ?Reflect@LuaMaterialFunctorSourceData@RPI@AZ@@SAXPEAVReflectContext@3@@Z
+                         2E9 ?Reflect@MaterialPropertyValueSourceData@RPI@AZ@@SAXPEAVReflectContext@3@@Z
+                         2E7 ?Reflect@MaterialPipelineSourceData@RPI@AZ@@SAXPEAVReflectContext@3@@Z
+                         2EA ?Reflect@MaterialSourceData@RPI@AZ@@SAXPEAVReflectContext@3@@Z
+                         2EB ?Reflect@MaterialTypeSourceData@RPI@AZ@@SAXPEAVReflectContext@3@@Z
+                         2E6 ?Reflect@MaterialFunctorSourceDataHolder@RPI@AZ@@SAXPEAVReflectContext@3@@Z
+                         2E5 ?Reflect@MaterialFunctorSourceData@RPI@AZ@@SAXPEAVReflectContext@3@@Z
+
+    mcpp0.dll
+             180131698 Import Address Table
+             1801E01D8 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                           4 mcpp_set_report_include_callback
+                           3 mcpp_set_out_func
+                           1 mcpp_lib_main
+
+    Atom_RHI.Public.dll
+             18012F000 Import Address Table
+             1801DDB40 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                         8A7 ?IsGraphicsDevModeEnabled@RHI@AZ@@YA_NXZ
+
+    Atom_RHI.Reflect.dll
+             18012F010 Import Address Table
+             1801DDB50 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                         344 ?AddShaderInput@ShaderResourceGroupLayout@RHI@AZ@@QEAAXAEBVShaderInputConstantDescriptor@23@@Z
+                         347 ?AddShaderInput@ShaderResourceGroupLayout@RHI@AZ@@QEAAXAEBVShaderInputSamplerDescriptor@23@@Z
+                         346 ?AddShaderInput@ShaderResourceGroupLayout@RHI@AZ@@QEAAXAEBVShaderInputImageUnboundedArrayDescriptor@23@@Z
+                         343 ?AddShaderInput@ShaderResourceGroupLayout@RHI@AZ@@QEAAXAEBVShaderInputBufferUnboundedArrayDescriptor@23@@Z
+                         345 ?AddShaderInput@ShaderResourceGroupLayout@RHI@AZ@@QEAAXAEBVShaderInputImageDescriptor@23@@Z
+                         342 ?AddShaderInput@ShaderResourceGroupLayout@RHI@AZ@@QEAAXAEBVShaderInputBufferDescriptor@23@@Z
+                         349 ?AddStaticSampler@ShaderResourceGroupLayout@RHI@AZ@@QEAAXAEBVShaderInputStaticSamplerDescriptor@23@@Z
+                         57E ?SetShaderVariantKeyFallback@ShaderResourceGroupLayout@RHI@AZ@@QEAAXAEBVName@3@I@Z
+                         582 ?SetUniqueId@ShaderResourceGroupLayout@RHI@AZ@@QEAAXAEBV?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@@Z
+                         369 ?Create@ShaderResourceGroupLayout@RHI@AZ@@SA?AV?$intrusive_ptr@VShaderResourceGroupLayout@RHI@AZ@@@AZStd@@XZ
+                         11B ??1ShaderInputStaticSamplerDescriptor@RHI@AZ@@QEAA@XZ
+                          B6 ??0ShaderInputStaticSamplerDescriptor@RHI@AZ@@QEAA@AEBVName@2@AEBVSamplerState@12@II@Z
+                         11A ??1ShaderInputSamplerDescriptor@RHI@AZ@@QEAA@XZ
+                          B2 ??0ShaderInputSamplerDescriptor@RHI@AZ@@QEAA@AEBVName@2@III@Z
+                         118 ??1ShaderInputImageUnboundedArrayDescriptor@RHI@AZ@@QEAA@XZ
+                          A9 ??0ShaderInputImageUnboundedArrayDescriptor@RHI@AZ@@QEAA@AEBVName@2@W4ShaderInputImageAccess@12@W4ShaderInputImageType@12@II@Z
+                         115 ??1ShaderInputBufferUnboundedArrayDescriptor@RHI@AZ@@QEAA@XZ
+                          9D ??0ShaderInputBufferUnboundedArrayDescriptor@RHI@AZ@@QEAA@AEBVName@2@W4ShaderInputBufferAccess@12@W4ShaderInputBufferType@12@III@Z
+                         117 ??1ShaderInputImageDescriptor@RHI@AZ@@QEAA@XZ
+                          A5 ??0ShaderInputImageDescriptor@RHI@AZ@@QEAA@AEBVName@2@W4ShaderInputImageAccess@12@W4ShaderInputImageType@12@III@Z
+                         114 ??1ShaderInputBufferDescriptor@RHI@AZ@@QEAA@XZ
+                          99 ??0ShaderInputBufferDescriptor@RHI@AZ@@QEAA@AEBVName@2@W4ShaderInputBufferAccess@12@W4ShaderInputBufferType@12@IIII@Z
+                         395 ?Finalize@ShaderResourceGroupLayout@RHI@AZ@@QEAA_NXZ
+                          76 ??0SamplerState@RHI@AZ@@QEAA@XZ
+                         57D ?SetRootConstantsLayout@PipelineLayoutDescriptor@RHI@AZ@@QEAAXAEBVConstantsLayout@23@@Z
+                         348 ?AddShaderResourceGroupLayoutInfo@PipelineLayoutDescriptor@RHI@AZ@@QEAAXAEBVShaderResourceGroupLayout@23@AEBUShaderResourceGroupBindingInfo@23@@Z
+                          B9 ??0ShaderResourceGroupBindingInfo@RHI@AZ@@QEAA@AEBU012@@Z
+                         11C ??1ShaderResourceGroupBindingInfo@RHI@AZ@@QEAA@XZ
+                          BA ??0ShaderResourceGroupBindingInfo@RHI@AZ@@QEAA@XZ
+                         3B1 ?GetDataSize@ConstantsLayout@RHI@AZ@@QEBAIXZ
+                         391 ?Finalize@ConstantsLayout@RHI@AZ@@QEAA_NXZ
+                         341 ?AddShaderInput@ConstantsLayout@RHI@AZ@@QEAAXAEBVShaderInputConstantDescriptor@23@@Z
+                         362 ?Create@ConstantsLayout@RHI@AZ@@SA?AV?$intrusive_ptr@VConstantsLayout@RHI@AZ@@@AZStd@@XZ
+                         116 ??1ShaderInputConstantDescriptor@RHI@AZ@@QEAA@XZ
+                         57A ?SetBindingSlot@ShaderResourceGroupLayout@RHI@AZ@@QEAAXI@Z
+                         11F ??1ShaderSemantic@RHI@AZ@@QEAA@XZ
+                          C0 ??0ShaderSemantic@RHI@AZ@@QEAA@AEBVName@2@_K@Z
+                         456 ?Parse@ShaderSemantic@RHI@AZ@@SA?AV123@V?$basic_string_view@DU?$char_traits@D@AZStd@@@AZStd@@@Z
+                          6A ??0RenderStates@RHI@AZ@@QEAA@XZ
+                         47A ?RTTI_AddressOf@StreamingImagePoolDescriptor@RHI@AZ@@UEAAPEAXAEBUUuid@3@@Z
+                         47B ?RTTI_AddressOf@StreamingImagePoolDescriptor@RHI@AZ@@UEBAPEBXAEBUUuid@3@@Z
+                         4A2 ?RTTI_EnumTypes@StreamingImagePoolDescriptor@RHI@AZ@@UEAAXP6AXAEBUUuid@3@PEAX@Z1@Z
+                         4EE ?RTTI_IsTypeOf@StreamingImagePoolDescriptor@RHI@AZ@@UEBA_NAEBUUuid@3@@Z
+                         4C8 ?RTTI_GetTypeName@StreamingImagePoolDescriptor@RHI@AZ@@UEBAPEBDXZ
+                         4B5 ?RTTI_GetType@StreamingImagePoolDescriptor@RHI@AZ@@UEBA?AUUuid@3@XZ
+                         45C ?RTTI_AddressOf@ImagePoolDescriptor@RHI@AZ@@UEAAPEAXAEBUUuid@3@@Z
+                         45D ?RTTI_AddressOf@ImagePoolDescriptor@RHI@AZ@@UEBAPEBXAEBUUuid@3@@Z
+                         493 ?RTTI_EnumTypes@ImagePoolDescriptor@RHI@AZ@@UEAAXP6AXAEBUUuid@3@PEAX@Z1@Z
+                         4DF ?RTTI_IsTypeOf@ImagePoolDescriptor@RHI@AZ@@UEBA_NAEBUUuid@3@@Z
+                         4B9 ?RTTI_GetTypeName@ImagePoolDescriptor@RHI@AZ@@UEBAPEBDXZ
+                         4A6 ?RTTI_GetType@ImagePoolDescriptor@RHI@AZ@@UEBA?AUUuid@3@XZ
+                         458 ?RTTI_AddressOf@BufferPoolDescriptor@RHI@AZ@@UEAAPEAXAEBUUuid@3@@Z
+                         459 ?RTTI_AddressOf@BufferPoolDescriptor@RHI@AZ@@UEBAPEBXAEBUUuid@3@@Z
+                         491 ?RTTI_EnumTypes@BufferPoolDescriptor@RHI@AZ@@UEAAXP6AXAEBUUuid@3@PEAX@Z1@Z
+                         4DD ?RTTI_IsTypeOf@BufferPoolDescriptor@RHI@AZ@@UEBA_NAEBUUuid@3@@Z
+                         4B7 ?RTTI_GetTypeName@BufferPoolDescriptor@RHI@AZ@@UEBAPEBDXZ
+                         4A4 ?RTTI_GetType@BufferPoolDescriptor@RHI@AZ@@UEBA?AUUuid@3@XZ
+                          D0 ??0StreamingImagePoolDescriptor@RHI@AZ@@QEAA@XZ
+                          26 ??0ImagePoolDescriptor@RHI@AZ@@QEAA@XZ
+                           A ??0BufferPoolDescriptor@RHI@AZ@@QEAA@XZ
+                         63D ?ToString@ShaderSemantic@RHI@AZ@@QEBA?AV?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@XZ
+                         26E ??8ShaderSemantic@RHI@AZ@@QEBA_NAEBV012@@Z
+                          C1 ??0ShaderSemantic@RHI@AZ@@QEAA@V?$basic_string_view@DU?$char_traits@D@AZStd@@@AZStd@@_K@Z
+                         37D ?CreateTyped@BufferViewDescriptor@RHI@AZ@@SA?AU123@IIW4Format@23@@Z
+                         378 ?CreateRaw@BufferViewDescriptor@RHI@AZ@@SA?AU123@II@Z
+                         37C ?CreateStructured@BufferViewDescriptor@RHI@AZ@@SA?AU123@III@Z
+                           F ??0BufferViewDescriptor@RHI@AZ@@QEAA@XZ
+                           5 ??0BufferDescriptor@RHI@AZ@@QEAA@XZ
+                         3B4 ?GetFormatComponentCount@RHI@AZ@@YAIW4Format@12@@Z
+                         3B6 ?GetFormatSize@RHI@AZ@@YAIW4Format@12@@Z
+                          A1 ??0ShaderInputConstantDescriptor@RHI@AZ@@QEAA@AEBVName@2@IIII@Z
+
+    AzToolsFramework.dll
+             180131118 Import Address Table
+             1801DFC58 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                        4C0C ?GetName@?$EBus@VAssetSystemRequest@AssetSystem@AzToolsFramework@@V123@@AZ@@SAPEBDXZ
+                        48FD ?GetEntry@?$EBusCallstackStorage@U?$CallstackEntryBase@VAssetSystemRequest@AssetSystem@AzToolsFramework@@V123@@Internal@AZ@@$00@Internal@AZ@@AEBAAEAPEAU?$CallstackEntryBase@VAssetSystemRequest@AssetSystem@AzToolsFramework@@V123@@23@XZ
+                        468C ?GetAssetRootForPlatform@PlatformAddressedAssetCatalog@AzToolsFramework@@SA?AV?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@W4PlatformId@PlatformIdNamespace@PlatformDefaults@AZ@@@Z
+                        4757 ?GetContext@?$EBus@VAssetSystemRequest@AssetSystem@AzToolsFramework@@V123@@AZ@@SAPEAVContext@12@_N@Z
+
+    AzFramework.dll
+             1801310A8 Import Address Table
+             1801DFBE8 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                         3A1 ??0GenericAssetHandlerBase@AzFramework@@QEAA@XZ
+                        4293 ?TerminateProcess@ProcessWatcher@AzFramework@@QEAAXI@Z
+                        22B7 ?AssetMissingInCatalog@GenericAssetHandlerBase@AzFramework@@UEAA?AUAssetId@Data@AZ@@AEBV?$Asset@VAssetData@Data@AZ@@@45@@Z
+                        3A90 ?RTTI_IsContainType@GenericAssetHandlerBase@AzFramework@@SA_NAEBUUuid@AZ@@@Z
+                        3768 ?RTTI_EnumHierarchy@GenericAssetHandlerBase@AzFramework@@SAXP6AXAEBUUuid@AZ@@PEAX@Z1@Z
+                        361D ?RTTI_AddressOf@GenericAssetHandlerBase@AzFramework@@UEBAPEBXAEBUUuid@AZ@@@Z
+                         49B ??0ProcessLaunchInfo@ProcessLauncher@AzFramework@@QEAA@XZ
+                        2AEA ?GetCommandLineParametersAsString@ProcessLaunchInfo@ProcessLauncher@AzFramework@@QEBA?AV?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@XZ
+                        361C ?RTTI_AddressOf@GenericAssetHandlerBase@AzFramework@@UEAAPEAXAEBUUuid@AZ@@@Z
+                        3307 ?IsProcessRunning@ProcessWatcher@AzFramework@@QEAA_NPEAI@Z
+                        2AEB ?GetCommunicator@ProcessWatcher@AzFramework@@QEAAPEAVProcessCommunicator@2@XZ
+                        3401 ?LaunchProcess@ProcessWatcher@AzFramework@@SAPEAV12@AEBUProcessLaunchInfo@ProcessLauncher@2@W4ProcessCommunicationType@2@@Z
+                         766 ??1ProcessLaunchInfo@ProcessLauncher@AzFramework@@QEAA@XZ
+
+    KERNEL32.dll
+             180131140 Import Address Table
+             1801DFC80 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                         5C8 Sleep
+                         3F0 LeaveCriticalSection
+                         246 GetCurrentThreadId
+                         142 DisableThreadLibraryCalls
+                         31A GetSystemTimeAsFileTime
+                         242 GetCurrentProcessId
+                         481 QueryPerformanceCounter
+                         5D8 TerminateProcess
+                         241 GetCurrentProcess
+                         3B8 IsProcessorFeaturePresent
+                         5B8 SetUnhandledExceptionFilter
+                         5FB UnhandledExceptionFilter
+                         3B0 IsDebuggerPresent
+                         518 RtlVirtualUnwind
+                         511 RtlLookupFunctionEntry
+                         509 RtlCaptureContext
+                         5CA SleepConditionVariableSRW
+                         62D WakeAllConditionVariable
+                           0 AcquireSRWLockExclusive
+                         4EA ReleaseSRWLockExclusive
+                         395 InitializeCriticalSection
+                         12F DeleteCriticalSection
+                         157 EnterCriticalSection
+                         39A InitializeSListHead
+
+    MSVCP140.dll
+             180131208 Import Address Table
+             1801DFD48 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                         27F ?_Unlock@?$basic_streambuf@DU?$char_traits@D@std@@@std@@UEAAXXZ
+                         4D5 ?showmanyc@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MEAA_JXZ
+                         51B ?uflow@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MEAAHXZ
+                         543 ?xsgetn@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MEAA_JPEAD_J@Z
+                         546 ?xsputn@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MEAA_JPEBD_J@Z
+                         4B5 ?setbuf@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MEAAPEAV12@PEAD_J@Z
+                         4FD ?sync@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MEAAHXZ
+                         3F6 ?imbue@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MEAAXAEBVlocale@2@@Z
+                         506 ?tellp@?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAA?AV?$fpos@U_Mbstatet@@@2@XZ
+                         368 ?flush@?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAAAEAV12@XZ
+                         244 ?_Osfx@?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAAXXZ
+                          86 ??1?$basic_ostream@DU?$char_traits@D@std@@@std@@UEAA@XZ
+                          25 ??0?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAA@PEAV?$basic_streambuf@DU?$char_traits@D@std@@@1@_N@Z
+                           C ??0?$basic_ios@DU?$char_traits@D@std@@@std@@IEAA@XZ
+                         361 ?fill@?$basic_ios@DU?$char_traits@D@std@@@std@@QEBADXZ
+                         487 ?rdbuf@?$basic_ios@DU?$char_traits@D@std@@@std@@QEBAPEAV?$basic_streambuf@DU?$char_traits@D@std@@@2@XZ
+                         50A ?tie@?$basic_ios@DU?$char_traits@D@std@@@std@@QEBAPEAV?$basic_ostream@DU?$char_traits@D@std@@@2@XZ
+                         4C5 ?setstate@?$basic_ios@DU?$char_traits@D@std@@@std@@QEAAXH_N@Z
+                          7D ??1?$basic_ios@DU?$char_traits@D@std@@@std@@UEAA@XZ
+                         24A ?_Pninc@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IEAAPEADXZ
+                         4BE ?setp@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IEAAXPEAD00@Z
+                         228 ?_Lock@?$basic_streambuf@DU?$char_traits@D@std@@@std@@UEAAXXZ
+                         28B ?_Xbad_alloc@std@@YAXXZ
+                          6D ??0_Lockit@std@@QEAA@H@Z
+                          A5 ??1_Lockit@std@@QEAA@XZ
+                         20F ?_Init@locale@std@@CAPEAV_Locimp@12@_N@Z
+                         1D5 ?_Getgloballocale@locale@std@@CAPEAV_Locimp@12@XZ
+                         50F ?tolower@?$ctype@D@std@@QEBADD@Z
+                         515 ?toupper@?$ctype@D@std@@QEBADD@Z
+                         1B6 ?_Getcat@?$ctype@D@std@@SA_KPEAPEBVfacet@locale@2@PEBV42@@Z
+                         1EE ?_Id_cnt@id@locale@std@@0HA
+                         3CF ?id@?$ctype@D@std@@2V0locale@2@A
+                         28E ?_Xlength_error@std@@YAXPEBD@Z
+                         25C ?_Raise_handler@std@@3P6AXAEBVexception@stdext@@@ZEA
+                         359 ?epptr@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IEBAPEADXZ
+                         4BA ?setg@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IEAAXPEAD00@Z
+                         36B ?gbump@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IEAAXH@Z
+                         350 ?egptr@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IEBAPEADXZ
+                         447 ?pptr@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IEBAPEADXZ
+                         43E ?pbase@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IEBAPEADXZ
+                         3C6 ?gptr@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IEBAPEADXZ
+                         34D ?eback@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IEBAPEADXZ
+                         4E1 ?sputn@?$basic_streambuf@DU?$char_traits@D@std@@@std@@QEAA_JPEBD_J@Z
+                         4DE ?sputc@?$basic_streambuf@DU?$char_traits@D@std@@@std@@QEAAHD@Z
+                          89 ??1?$basic_streambuf@DU?$char_traits@D@std@@@std@@UEAA@XZ
+                          2F ??0?$basic_streambuf@DU?$char_traits@D@std@@@std@@IEAA@XZ
+                         53D ?width@ios_base@std@@QEAA_J_J@Z
+                         53E ?width@ios_base@std@@QEBA_JXZ
+                         367 ?flags@ios_base@std@@QEBAHXZ
+                         3C5 ?good@ios_base@std@@QEBA_NXZ
+                         4BF ?setp@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IEAAXPEAD0@Z
+
+    VCRUNTIME140.dll
+             1801314F8 Import Address Table
+             1801E0038 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                          3C memcpy
+                          3B memcmp
+                          3A memchr
+                          36 _purecall
+                          23 __std_terminate
+                          25 __std_type_info_destroy_list
+                          3D memmove
+                          3E memset
+                          24 __std_type_info_compare
+                          40 strchr
+                           1 _CxxThrowException
+                          22 __std_exception_destroy
+                           8 __C_specific_handler
+                          21 __std_exception_copy
+
+    VCRUNTIME140_1.dll
+             180131570 Import Address Table
+             1801E00B0 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                           0 __CxxFrameHandler4
+
+    api-ms-win-crt-heap-l1-1-0.dll
+             180131590 Import Address Table
+             1801E00D0 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                          19 malloc
+                          18 free
+                           1 _aligned_malloc
+                           0 _aligned_free
+                           8 _callnewh
+
+    api-ms-win-crt-string-l1-1-0.dll
+             180131658 Import Address Table
+             1801E0198 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                          34 _strnicmp
+                          2A _stricmp
+                          65 isalpha
+                          68 isdigit
+                          8B strlen
+                          86 strcmp
+                          96 strxfrm
+
+    api-ms-win-crt-math-l1-1-0.dll
+             1801315C0 Import Address Table
+             1801E0100 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                          7D ceilf
+                         117 sqrtf
+
+    api-ms-win-crt-runtime-l1-1-0.dll
+             1801315D8 Import Address Table
+             1801E0118 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                          1E _crt_atexit
+                          16 _cexit
+                          22 _execute_onexit_table
+                          36 _initterm
+                          37 _initterm_e
+                          18 _configure_narrow_argv
+                          34 _initialize_onexit_table
+                          3F _seh_filter_dll
+                          54 abort
+                          3A _invoke_watson
+                          33 _initialize_narrow_environment
+                          3C _register_onexit_function
+
+    api-ms-win-crt-stdio-l1-1-0.dll
+             180131640 Import Address Table
+             1801E0180 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                           D __stdio_common_vsprintf
+                           B __stdio_common_vsnprintf_s
+
+    api-ms-win-crt-convert-l1-1-0.dll
+             180131580 Import Address Table
+             1801E00C0 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                          50 atoi
+
+  Summary
+
+       29000 .data
+        F000 .pdata
+       CA000 .rdata
+        4000 .reloc
+        1000 .rsrc
+      12E000 .text

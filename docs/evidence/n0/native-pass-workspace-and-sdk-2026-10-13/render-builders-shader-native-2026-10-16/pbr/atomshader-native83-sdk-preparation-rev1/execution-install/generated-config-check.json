@@ -1,0 +1,625 @@
+{
+  "status": "GENERATED_CONFIG_CHECK_PASSED_NOT_SDK_ACCEPTANCE",
+  "rootInstall": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\cmake_install.cmake",
+  "rootInstallSHA256": "20EA996EDD7B8569A830CD2A692A564D15EB4BA16F8CFE07AA60AD262D736F07",
+  "referencedExportCount": 92,
+  "legacyExeRules": [],
+  "legacyConfigExports": [],
+  "legacyRuntimeIncludes": [],
+  "forbiddenActiveExports": [],
+  "nativeOwners": [
+    {
+      "target": "JE::EditorMaterials",
+      "expectedPath": "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/install/Editor/Materials/Platform/Windows/Default/permutation.cmake",
+      "referencedDefinitions": 1,
+      "configs": [
+        "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/install/Editor/Materials/Platform/Windows/Default/EditorMaterials_debug.cmake",
+        "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/install/Editor/Materials/Platform/Windows/Default/EditorMaterials_profile.cmake",
+        "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/install/Editor/Materials/Platform/Windows/Default/EditorMaterials_release.cmake"
+      ]
+    },
+    {
+      "target": "JE::EditorCamera",
+      "expectedPath": "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/install/Editor/Camera/Platform/Windows/Default/permutation.cmake",
+      "referencedDefinitions": 1,
+      "configs": [
+        "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/install/Editor/Camera/Platform/Windows/Default/EditorCamera_debug.cmake",
+        "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/install/Editor/Camera/Platform/Windows/Default/EditorCamera_profile.cmake",
+        "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/install/Editor/Camera/Platform/Windows/Default/EditorCamera_release.cmake"
+      ]
+    },
+    {
+      "target": "JE::EditorRenderIntegration",
+      "expectedPath": "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/install/Editor/Render/Integration/Platform/Windows/Default/permutation.cmake",
+      "referencedDefinitions": 1,
+      "configs": [
+        "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/install/Editor/Render/Integration/Platform/Windows/Default/EditorRenderIntegration_debug.cmake",
+        "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/install/Editor/Render/Integration/Platform/Windows/Default/EditorRenderIntegration_profile.cmake",
+        "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/install/Editor/Render/Integration/Platform/Windows/Default/EditorRenderIntegration_release.cmake"
+      ]
+    }
+  ],
+  "loaderPaths": [
+    {
+      "path": "Editor/Materials",
+      "count": 1
+    },
+    {
+      "path": "Editor/Camera",
+      "count": 1
+    },
+    {
+      "path": "Editor/Render/Integration",
+      "count": 1
+    }
+  ],
+  "smcExecutableRules": 3,
+  "nativeAssetsScripts": [
+    "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/Engine/Editor/Materials/cmake_install.cmake"
+  ],
+  "explicitCompatibilityProjects": [
+    "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\External\\MaterialEditor-a211cd26\\Code\\MaterialEditor.vcxproj",
+    "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\External\\MaterialCanvas-21c43004\\Code\\MaterialCanvas.vcxproj",
+    "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\External\\PassCanvas-7b6a5d4b\\Code\\PassCanvas.vcxproj"
+  ],
+  "failures": [],
+  "inputs": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\cmake_install.cmake",
+      "bytes": 1298774,
+      "sha256": "20EA996EDD7B8569A830CD2A692A564D15EB4BA16F8CFE07AA60AD262D736F07"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\install\\Code\\Framework\\AtomCore\\Platform\\Windows\\Default\\permutation.cmake",
+      "bytes": 707,
+      "sha256": "7E5A44380D052B085976E7B6D7E0D1783AB89FF37A1DCE202D36453B2D2F71D8"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\install\\Code\\3rdParty\\mimalloc\\Platform\\Windows\\Default\\permutation.cmake",
+      "bytes": 713,
+      "sha256": "14EBA20F932E450DD733E38677FF11E76BBE49369AD58F12C89BADA41BC46734"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\install\\Code\\3rdParty\\rapidjson\\Platform\\Windows\\Default\\permutation.cmake",
+      "bytes": 818,
+      "sha256": "C29D8DA73BB47D749F88B59AD120426AEB64384987A0B5A2A715A607CF116E0E"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\install\\Code\\3rdParty\\rapidxml\\Platform\\Windows\\Default\\permutation.cmake",
+      "bytes": 813,
+      "sha256": "F6DD6BCFE123F625C5783C2C2E813367E5907A6A9D0514CD1DCEDAA412FFF511"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\install\\Code\\3rdParty\\cityhash\\Platform\\Windows\\Default\\permutation.cmake",
+      "bytes": 693,
+      "sha256": "6DBC42616A49103D54C6BC782E691D5ED76FAE750457807D31B977B328112340"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\install\\Code\\Framework\\AzCore\\Platform\\Windows\\Default\\permutation.cmake",
+      "bytes": 2562,
+      "sha256": "4B46339EFA85DC1A791AB401C512AF3498D54C87576B86B7F0A3A3C171BDB2BC"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\install\\Code\\Framework\\AzQtComponents\\Platform\\Windows\\Default\\permutation.cmake",
+      "bytes": 958,
+      "sha256": "8891BE9CDB9BC189D756C0A9D4F7383ECF4309D97E40BE5820E9506450140F2C"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\install\\Code\\Framework\\AzFramework\\Platform\\Windows\\Default\\permutation.cmake",
+      "bytes": 2011,
+      "sha256": "66DFA53C6BDC107AA01A407E7D7F180890179BDDAE95DD52EA4E2BDA242958CB"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\install\\Code\\Framework\\AzGameFramework\\AzGameFramework\\Platform\\Windows\\Default\\permutation.cmake",
+      "bytes": 1362,
+      "sha256": "259E4099D0B1F30C7514A553C4C7ADE9057C99E935AD3C67343E693940738DB3"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\install\\Code\\Framework\\AzTest\\Platform\\Windows\\Default\\permutation.cmake",
+      "bytes": 857,
+      "sha256": "971FAC4C7B7C2C06546B478FD364A2983A4F50E25B153E9677C4DA82BCBCE012"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\install\\Code\\Framework\\AzToolsFramework\\Platform\\Windows\\Default\\permutation.cmake",
+      "bytes": 2330,
+      "sha256": "7865B3A5F0A0EF2046E3ED128796E363885AC024AC66C27F9485567D87FF39A4"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\install\\Code\\3rdParty\\sqlite\\Platform\\Windows\\Default\\permutation.cmake",
+      "bytes": 844,
+      "sha256": "C3AA1510CE0CC3E2EE18CC508D1526DFEA142C6C14A0F80A35E313F30953998E"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\install\\Code\\Framework\\AzManipulatorTestFramework\\Platform\\Windows\\Default\\permutation.cmake",
+      "bytes": 920,
+      "sha256": "17C7B4EBCFDD683210F292E7BA6E6D0EA6D78E5D8A887503D0E518E59EE1E77D"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\install\\Code\\Framework\\AzNetworking\\Platform\\Windows\\Default\\permutation.cmake",
+      "bytes": 1024,
+      "sha256": "07EE2FAD6669C6E48C4DCD93D8F2096221C908347691403CADA3F86494396910"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\install\\Code\\LauncherUnified\\Platform\\Windows\\Default\\permutation.cmake",
+      "bytes": 3356,
+      "sha256": "8EE92C43661D1CBFC2DEF8BC255C8975BD2260A65411F3E7C8E80BBC13EEFCAB"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\install\\Code\\Legacy\\CryCommon\\Platform\\Windows\\Default\\permutation.cmake",
+      "bytes": 1267,
+      "sha256": "9E0D3AE405FE932ABBAF2BF7E21274D816AE6224ED65A4D5FCC5C2B64DD3A63A"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\install\\Code\\Legacy\\CrySystem\\XML\\Platform\\Windows\\Default\\permutation.cmake",
+      "bytes": 736,
+      "sha256": "9067EE56C2B9067F8DB0FD58AA75E353156392E3E70FF364A90D798D64F26B8C"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\install\\Code\\Legacy\\CrySystem\\Platform\\Windows\\Default\\permutation.cmake",
+      "bytes": 1802,
+      "sha256": "ED7349C092A3486C49FE8FCB36595220C1EAB1A25ECBDA554F57C9183A95DE96"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\install\\Code\\Editor\\Platform\\Windows\\Default\\permutation.cmake",
+      "bytes": 4271,
+      "sha256": "B99E26A9BECFD884F7DD1F69365B735F3A912F634E022355846D80740FF81B10"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\install\\Code\\3rdParty\\antlr4\\Platform\\Windows\\Default\\permutation.cmake",
+      "bytes": 717,
+      "sha256": "DFD359ACB66209DC27921D859C5F1211EFC9418F01ADEE21BE36804234DDEC24"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\install\\Code\\3rdParty\\jsoncpp\\Platform\\Windows\\Default\\permutation.cmake",
+      "bytes": 691,
+      "sha256": "DCF554B4D80191F2A9A66290CBACF099E85EFC50415499A537C4E04591A04FE5"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\install\\Code\\Tools\\ShaderCompiler\\Platform\\Windows\\Default\\permutation.cmake",
+      "bytes": 1402,
+      "sha256": "1F6411F9D0DA1D3CADEF549FD0E3D03D97FD6CBB5D5D11E46FC108C967C9F423"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\install\\Code\\3rdParty\\cli11\\Platform\\Windows\\Default\\permutation.cmake",
+      "bytes": 691,
+      "sha256": "21E95A86420F477E897B40913EFE993F5EDE7D0BED2527036CD4EDFD48AFEE2D"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\install\\Code\\Tools\\SceneAPI\\SceneBuilder\\Platform\\Windows\\Default\\permutation.cmake",
+      "bytes": 1441,
+      "sha256": "96C729B70585F3DFDE166ADA6B6882EE6DAF5ABD8FC7C0C528F62EDD3FA9180D"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\install\\Code\\Tools\\SceneAPI\\SceneCore\\Platform\\Windows\\Default\\permutation.cmake",
+      "bytes": 760,
+      "sha256": "4B2A67331D4AA97B34F572D61B3E2BD23E6E2F8920D1B764A8D89685BDC5D70D"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\install\\Code\\Tools\\SceneAPI\\SceneData\\Platform\\Windows\\Default\\permutation.cmake",
+      "bytes": 783,
+      "sha256": "9CD7A5510C509134EF4ABECCFBCA4B3C1E5CF0F74E02BF229D043CAC1B703089"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\install\\Code\\Tools\\SceneAPI\\SceneUI\\Platform\\Windows\\Default\\permutation.cmake",
+      "bytes": 898,
+      "sha256": "4A3A77D2C53E89ECE35E55C69390BF25879906DD7A853151FF897AC29BFD36EB"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\install\\Code\\Tools\\SceneAPI\\SDKWrapper\\Platform\\Windows\\Default\\permutation.cmake",
+      "bytes": 838,
+      "sha256": "C28AFDB478D14DDCA661568CC492DD5FC56A86F204E0FF671DBCC118EB9CFBD2"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\install\\Code\\3rdParty\\xxhash\\Platform\\Windows\\Default\\permutation.cmake",
+      "bytes": 689,
+      "sha256": "791A80E467438F3B8E4CFFD2F48D2AF50FC2D71F94CC15EE2E88EFA0F3EE0110"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\install\\Code\\Tools\\AssetProcessor\\AssetBuilderSDK\\Platform\\Windows\\Default\\permutation.cmake",
+      "bytes": 828,
+      "sha256": "AC27B23175FCFEEEE0E6718CD7F3EA44EB7E5FD3AF038BD9205EA556BE41462D"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\install\\Code\\Tools\\AssetProcessor\\AssetBuilder\\Platform\\Windows\\Default\\permutation.cmake",
+      "bytes": 2481,
+      "sha256": "C148C64F282A1C7D4D4AEF1332E0C6E509539F90276083A11299C3DF7B6B1365"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\install\\Code\\Tools\\AssetProcessor\\Platform\\Windows\\Default\\permutation.cmake",
+      "bytes": 4370,
+      "sha256": "D96BFF161F4CA4844DDD00941CBFCB41AA3A0A8C4FE96EC115000A73FE7BB478"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\install\\Code\\Tools\\AzTestRunner\\Platform\\Windows\\Default\\permutation.cmake",
+      "bytes": 718,
+      "sha256": "DD353CBD35B008B218732D4A6C3393044C278DC31499B3D901A3358FB8CC7726"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\install\\Code\\Tools\\RemoteConsole\\Platform\\Windows\\Default\\permutation.cmake",
+      "bytes": 888,
+      "sha256": "EED054DC9E0C1975FA4E7395B3D88C9BCF6235818C645EBCDF7D00E69C2860FA"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\install\\Code\\Tools\\DeltaCataloger\\Platform\\Windows\\Default\\permutation.cmake",
+      "bytes": 757,
+      "sha256": "06B1EFDC8F501F4BAD5638BC231608D24FDE8F4C90FCE77AE9E94780B6496112"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\install\\Code\\Tools\\SerializeContextTools\\Platform\\Windows\\Default\\permutation.cmake",
+      "bytes": 1583,
+      "sha256": "F7F6B2A5C3034FA619FF565F3DEF80B97D8375BC7C15CB019861F470F13C42F7"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\install\\Code\\Tools\\AssetBundler\\Platform\\Windows\\Default\\permutation.cmake",
+      "bytes": 3341,
+      "sha256": "A343056DF5FC8D3C00A245BC95638F6F60036536D88180AD958739ECC6AE1FBD"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\install\\Code\\Tools\\LuaIDE\\Platform\\Windows\\Default\\permutation.cmake",
+      "bytes": 884,
+      "sha256": "66665B70E57130B6E53F3C40229F096190B9CD085DEB281A839DE9317A1B80BE"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\install\\Gems\\Atom\\RHI\\Vulkan\\Code\\Platform\\Windows\\Default\\permutation.cmake",
+      "bytes": 5108,
+      "sha256": "9F8D836F905DDC0994F52A8711862F82A956497BEE8EED71924DB1A83B6615EC"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\install\\Gems\\Atom\\RHI\\Vulkan\\Platform\\Windows\\Default\\permutation.cmake",
+      "bytes": 360,
+      "sha256": "9060A5FD646842FCF79BEF6E2CA5154945BCDA90AC48DE62D6BA4F43DD3652E3"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\install\\Gems\\Atom\\RHI\\Null\\Code\\Platform\\Windows\\Default\\permutation.cmake",
+      "bytes": 3418,
+      "sha256": "5850A6578FB99AD59124EBDB50BAB49D6CAE49D86D40281AC166119F09A697B1"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\install\\Gems\\Atom\\RHI\\Code\\Platform\\Windows\\Default\\permutation.cmake",
+      "bytes": 3654,
+      "sha256": "914D8D27C24DF18DF6E3BED7D85C0E9CF97E4EC21176CF47FA22BEA70BD6513F"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\install\\Code\\3rdParty\\meshoptimizer\\Platform\\Windows\\Default\\permutation.cmake",
+      "bytes": 703,
+      "sha256": "6794926FDF7E9C18D4A97966D6A1E91A2FFA850D714ABC200438984574F1FBB9"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\install\\Gems\\Atom\\RPI\\Code\\Platform\\Windows\\Default\\permutation.cmake",
+      "bytes": 4074,
+      "sha256": "679597268FDCBAA9359AA527F27E5638D7AB17242489C24E7A23AD7DA2DD4465"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\install\\Gems\\Atom\\Bootstrap\\Code\\Platform\\Windows\\Default\\permutation.cmake",
+      "bytes": 1722,
+      "sha256": "C13BCBEA962996EA7420EB50AE98869FF0DE103716B7EC7A3EFDC070D5656624"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\install\\Gems\\AtomLyIntegration\\AtomViewportDisplayInfo\\Code\\Platform\\Windows\\Default\\permutation.cmake",
+      "bytes": 1492,
+      "sha256": "E15049D7D84AAD025115CAD24B441D41294DCB9B944475366E480FD6EF45B761"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\install\\Gems\\LmbrCentral\\Code\\Platform\\Windows\\Default\\permutation.cmake",
+      "bytes": 3900,
+      "sha256": "C566EA4991561B45B17CF699EB9BE4B4BE7C11A46C669B330FDEE2EC9ABBA0BA"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\install\\Gems\\LmbrCentral\\Code\\Tests\\Platform\\Windows\\Default\\permutation.cmake",
+      "bytes": 711,
+      "sha256": "B586E09F4D5A4296BC8C081D58EF2888E10B1AE33476556D59CECD7E5D2CB4CF"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\install\\Gems\\AudioSystem\\Code\\Platform\\Windows\\Default\\permutation.cmake",
+      "bytes": 5062,
+      "sha256": "12FADD15F24B52B5BC6CDD367B926B3F386AB997672895B0491EFBB0A23507E7"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\install\\Gems\\Atom\\Feature\\Common\\Code\\Platform\\Windows\\Default\\permutation.cmake",
+      "bytes": 4276,
+      "sha256": "523B79C1E6FC35E8E4F0E03092831DD328BD3AA8B0F4C0CA02D0EA3877D882AA"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\install\\Gems\\SurfaceData\\Code\\Platform\\Windows\\Default\\permutation.cmake",
+      "bytes": 2752,
+      "sha256": "050EB460513C47606F5776BCDB3F7F4B4038695868E0449613613C54F537A79D"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\install\\Gems\\Atom\\Asset\\ImageProcessingAtom\\Code\\Platform\\Windows\\Default\\permutation.cmake",
+      "bytes": 2399,
+      "sha256": "E31365C392FA45A7A24D3CCAC1B48649F7DD395DAB546C9739778A2C579CEF93"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\install\\Code\\3rdParty\\squish-ccr\\Platform\\Windows\\Default\\permutation.cmake",
+      "bytes": 867,
+      "sha256": "CFC1754C57CFD368FB812A24837015C3BEBB52A9088F271AD32182511331CF9D"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\install\\Code\\3rdParty\\sse2neon\\Platform\\Windows\\Default\\permutation.cmake",
+      "bytes": 697,
+      "sha256": "8075B13D5E3C5D845C0720419FFDA479F9B7A4AAB19E8E9F310298B6B243C0EE"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\install\\Gems\\GradientSignal\\Code\\Platform\\Windows\\Default\\permutation.cmake",
+      "bytes": 4615,
+      "sha256": "060B444FE6DB077B84666016386A108B6014048B75B1205C80A4B72B998AEFAF"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\install\\Gems\\GraphCanvas\\Code\\Platform\\Windows\\Default\\permutation.cmake",
+      "bytes": 2697,
+      "sha256": "A87E35AB6689F4BBA0A4220C2E3D9E09A61F3FAD9ABECFC5C956AD970684B34B"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\install\\Gems\\GraphModel\\Code\\Platform\\Windows\\Default\\permutation.cmake",
+      "bytes": 1863,
+      "sha256": "403D83D52098990912F983957F797DCF14647482A7FECEDA757232D5C43862E1"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\install\\Gems\\Atom\\Tools\\AtomToolsFramework\\Code\\Platform\\Windows\\Default\\permutation.cmake",
+      "bytes": 2540,
+      "sha256": "AE3CBD290D92CB81637BC0F6757919BC1E23F14823FA3491D52834E35D1DAE8C"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\install\\Gems\\AtomLyIntegration\\CommonFeatures\\Code\\Platform\\Windows\\Default\\permutation.cmake",
+      "bytes": 6380,
+      "sha256": "126EADC96372D0E8AB807E8AF0F02589B53BEC2CE49702139EDD5A298A4654E9"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\install\\Gems\\AtomLyIntegration\\EditorModeFeedback\\Code\\Platform\\Windows\\Default\\permutation.cmake",
+      "bytes": 1780,
+      "sha256": "088DD7D4B7CFC33E3AE2B9B828243638D00F30370932AD58BBD2A610ADA2F48C"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\install\\Gems\\Atom\\Tools\\ShaderManagementConsole\\Code\\Platform\\Windows\\Default\\permutation.cmake",
+      "bytes": 1507,
+      "sha256": "12E631CD081937FA09B12F9C508A9B066DB9AA30805FCF926F67C419ED80EA16"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\install\\Gems\\AtomLyIntegration\\AtomRenderOptions\\Code\\Platform\\Windows\\Default\\permutation.cmake",
+      "bytes": 783,
+      "sha256": "55998259566CFD0671B520B73C2359065E9A6E7B417A46FE385725B50D7F27C7"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\install\\Gems\\EMotionFX\\Code\\Platform\\Windows\\Default\\permutation.cmake",
+      "bytes": 4485,
+      "sha256": "09C726D80FED0A8CB7D369D7BDF476162C4D66C5035C4804F12B13795039FD21"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\install\\Gems\\AtomLyIntegration\\EMotionFXAtom\\Code\\Platform\\Windows\\Default\\permutation.cmake",
+      "bytes": 2691,
+      "sha256": "04EF637CE784B82DA645F175CAAA9DFAD4755D785DE96FEBB7655051BAD438AC"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\install\\Gems\\AtomLyIntegration\\AtomFont\\Code\\Platform\\Windows\\Default\\permutation.cmake",
+      "bytes": 886,
+      "sha256": "D3E10761507CB5D389237E31F074065FAEEE8BA4E5DE9F06B3C70539F21EEB19"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\install\\Gems\\AtomLyIntegration\\AtomViewportDisplayIcons\\Code\\Platform\\Windows\\Default\\permutation.cmake",
+      "bytes": 1010,
+      "sha256": "B4D85285BD63D27F496FA34E1A479A8FC8A1AA9ED36C513FEF39BC308B078BE3"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\install\\Gems\\Atom\\Utils\\Code\\Platform\\Windows\\Default\\permutation.cmake",
+      "bytes": 1671,
+      "sha256": "F021E8ED8C22D15BE86D82CD10050FB59405AB8E33E55C7D45A281724AAB60D4"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\install\\Gems\\Atom\\Platform\\Windows\\Default\\permutation.cmake",
+      "bytes": 1868,
+      "sha256": "258C317F75A43FEE1B9E4CC853CAF7393D821770238F56D0770DFE9587C50557"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\install\\Gems\\Maestro\\Code\\Platform\\Windows\\Default\\permutation.cmake",
+      "bytes": 3087,
+      "sha256": "EB1D720F3C4D9F14938C54FFD86F751E598EDBD7147C1CF96A05A5FB0AAC8354"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\install\\Gems\\SceneProcessing\\Code\\Platform\\Windows\\Default\\permutation.cmake",
+      "bytes": 2470,
+      "sha256": "B092EBE223FD6EF0EEBCD0EFD126D8A02B37A78BEC69FC45A3D9077C20E28495"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\install\\Code\\3rdParty\\mikktspace\\Platform\\Windows\\Default\\permutation.cmake",
+      "bytes": 697,
+      "sha256": "2769929165FBC615884E26070DDE4D1053425C5508BC16CE8F968055D64B3D4C"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\install\\Gems\\PhysX\\Common\\Code\\NumericalMethods\\Platform\\Windows\\Default\\permutation.cmake",
+      "bytes": 738,
+      "sha256": "C81F6F44D0131A783845708740A3ACE895B476FCF0117735134F70D6E2BC5AC7"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\install\\Gems\\PhysX\\Common\\Code\\Platform\\Windows\\Default\\permutation.cmake",
+      "bytes": 696,
+      "sha256": "4CAB4FCFA733EBE24D86DF2ED42707A5B72F8D492F98E5E37EFC12764A3A84B8"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\install\\Gems\\PhysX\\Common\\Platform\\Windows\\Default\\permutation.cmake",
+      "bytes": 338,
+      "sha256": "4F1AF92C68263685A564B441894CBEF75827A3C3D8964A5B2DB622BC0C7AC08D"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\install\\Gems\\PhysX\\Core\\PhysX5\\Platform\\Windows\\Default\\permutation.cmake",
+      "bytes": 5627,
+      "sha256": "9EDBD8A9D9FBBC63611C03D93A0B10FEEAE6B8F898C05FEF56D1A37C71AB8AE2"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\install\\Gems\\PhysX\\Core\\PhysX5\\3rdParty\\v-hacd\\Platform\\Windows\\Default\\permutation.cmake",
+      "bytes": 693,
+      "sha256": "8F036305CB19F6716D50AD21BF03EC53312456ED1482DEE672508184EFDCE8AD"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\install\\Gems\\Atom\\Tools\\MaterialCanvas\\Code\\Platform\\Windows\\Default\\permutation.cmake",
+      "bytes": 344,
+      "sha256": "8FE91659CA76EDD696256EFCB44D35D6E6506CEC7DE6F80F80AE79425563FC2C"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\install\\Gems\\Atom\\Tools\\MaterialEditor\\Code\\Platform\\Windows\\Default\\permutation.cmake",
+      "bytes": 344,
+      "sha256": "7DCA8851468D1E008EF99F48FC38D50728F5CEBA335E83DEAADD048812BD4BBB"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\install\\Gems\\Atom\\Tools\\PassCanvas\\Code\\Platform\\Windows\\Default\\permutation.cmake",
+      "bytes": 336,
+      "sha256": "C903E3AFEBA560908EC50D1765751D84CC991A2CCD97D509751A7098A6DC0ED6"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\install\\Gems\\AtomLyIntegration\\Platform\\Windows\\Default\\permutation.cmake",
+      "bytes": 1891,
+      "sha256": "574C26FE7FC45B02A2C1CFF0029FC324A670860A6D180C97D7A1DE7D77E7494A"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\install\\Engine\\Render\\Materials\\Platform\\Windows\\Default\\permutation.cmake",
+      "bytes": 831,
+      "sha256": "F60F809F8D63AEC028D1F6B56191AE872D4F9B9481D320D65A06A4A56D6AC956"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\install\\Engine\\Geometry\\Platform\\Windows\\Default\\permutation.cmake",
+      "bytes": 1593,
+      "sha256": "33FC1F49A85645A78D1D668B85D70D04D877C9EE88A675484F0EA13DA4DF680A"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\install\\Engine\\World\\Camera\\Platform\\Windows\\Default\\permutation.cmake",
+      "bytes": 778,
+      "sha256": "B73BFCF4785A83BA2579857D546F614143B3766D2B85FD184B9D184E0247D4AE"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\install\\Engine\\Debug\\ImGui\\Platform\\Windows\\Default\\permutation.cmake",
+      "bytes": 1381,
+      "sha256": "F3D21234216C48B9FB4B3BE3E58BAED3FA509C8B67614B53C897D643955FBAB2"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\install\\Engine\\Debug\\Profiler\\Platform\\Windows\\Default\\permutation.cmake",
+      "bytes": 1284,
+      "sha256": "A4ECF3AEBBE7825AB880B4204B222FA365AE007EFCF30A649F601291AFC259C1"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\install\\Engine\\Render\\Debug\\Platform\\Windows\\Default\\permutation.cmake",
+      "bytes": 1419,
+      "sha256": "C3D40875179C3A6790F4F9F67A63EEAEBA50D78BB610CAA287A9E8566D117438"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\install\\Engine\\Render\\Integration\\Platform\\Windows\\Default\\permutation.cmake",
+      "bytes": 1393,
+      "sha256": "7D4B79C6AE18893E20A3E5D09E65300893789D85B7B1B3DF579D69578736D08B"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\install\\Editor\\Render\\Integration\\Platform\\Windows\\Default\\permutation.cmake",
+      "bytes": 867,
+      "sha256": "4CD0336913EA77D69D0945E20050A2589B95BDCBF66E60D4777B21C6F2470B07"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\install\\Engine\\Assets\\PrefabBuilder\\Platform\\Windows\\Default\\permutation.cmake",
+      "bytes": 873,
+      "sha256": "0F360F23CCE7804278039C8F3004B0493EAE8B89356A2A82EE73E70B5533788C"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\install\\Engine\\Assets\\RenderBuilders\\Platform\\Windows\\Default\\permutation.cmake",
+      "bytes": 2487,
+      "sha256": "C78ED32C66D0855630A4C604DA61EF4A5C9B28A6FC00440A1F08B251C8D75889"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\install\\Editor\\Materials\\Platform\\Windows\\Default\\permutation.cmake",
+      "bytes": 1172,
+      "sha256": "339BF2AD00592F5BA9E2EACDDB6AF1E5C442BFC3475E1817E8EC694BC0311BE8"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\install\\Editor\\Camera\\Platform\\Windows\\Default\\permutation.cmake",
+      "bytes": 800,
+      "sha256": "4E33775D957786AD8D3ECCCE5B49309E527A2E08EDF17524A1DEDF0091ABEB30"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\install\\Editor\\Materials\\Platform\\Windows\\Default\\EditorMaterials_debug.cmake",
+      "bytes": 693,
+      "sha256": "B12BF7FC3994103C27604A6C1B5C3D4E4270DF4D5BD9BA42B6F97747E77D971C"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\install\\Editor\\Materials\\Platform\\Windows\\Default\\EditorMaterials_profile.cmake",
+      "bytes": 709,
+      "sha256": "C0E5ABE0A88D880E4261FBBBBD7ED47FD1E4B98DF29FF5F8F6747C1AFA566A8C"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\install\\Editor\\Materials\\Platform\\Windows\\Default\\EditorMaterials_release.cmake",
+      "bytes": 709,
+      "sha256": "CAB33889FA42BF3FE9952F4B6C260AB76C8254597F5B5E893E25A2A5399790E8"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\install\\Editor\\Camera\\Platform\\Windows\\Default\\EditorCamera_debug.cmake",
+      "bytes": 669,
+      "sha256": "7FEBF640A8921C27324669AF968066710F47500426C5BA0325F904CCE6D68F29"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\install\\Editor\\Camera\\Platform\\Windows\\Default\\EditorCamera_profile.cmake",
+      "bytes": 685,
+      "sha256": "6478A9E3AF8CF53A41E6560B5414B58A64DF24EB44C6592E2D6CA38DFFB84755"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\install\\Editor\\Camera\\Platform\\Windows\\Default\\EditorCamera_release.cmake",
+      "bytes": 685,
+      "sha256": "1F076AEE2C862055BA92388E68A6CB92A69F7D504858EE269928058901DADBE3"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\install\\Editor\\Render\\Integration\\Platform\\Windows\\Default\\EditorRenderIntegration_debug.cmake",
+      "bytes": 757,
+      "sha256": "2954FE623118FF7FBB6A4B61CD2A8BC67B68B22A42174413BDDD90F9FD50F4FD"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\install\\Editor\\Render\\Integration\\Platform\\Windows\\Default\\EditorRenderIntegration_profile.cmake",
+      "bytes": 773,
+      "sha256": "2F648DAA217B6950668412CF96F11C5E440A92A884909226D1F18740AA0BD0BD"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\install\\Editor\\Render\\Integration\\Platform\\Windows\\Default\\EditorRenderIntegration_release.cmake",
+      "bytes": 773,
+      "sha256": "288BE3127B03D86571455FFF24507D383F76D3AE3FBFE65F74E5F91969B0454E"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\cmake\\Platform\\Windows\\Default\\o3de_subdirectories_windows.cmake",
+      "bytes": 5638,
+      "sha256": "045D200FDDFBFA1E6FFEF75AD2D91DA241A6274ABE113D76FBCC439FD31E7C84"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\Engine\\cmake_install.cmake",
+      "bytes": 3999,
+      "sha256": "58D4684130C2AF506C7691221BBCD202718A23AE7E52E42901393447BC8437C9"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\Engine\\Editor\\Materials\\cmake_install.cmake",
+      "bytes": 2752,
+      "sha256": "66818673509132BFFC31D9CD3799EDD513F1B7989DACCCEB31272E1C7AFC1531"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\External\\MaterialEditor-a211cd26\\cmake_install.cmake",
+      "bytes": 1635,
+      "sha256": "83C63918425AF1245B5677DE33AF26778F518644A7DF9FB043A5D13EB51B1C2E"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\External\\MaterialEditor-a211cd26\\Code\\MaterialEditor.vcxproj",
+      "bytes": 191991,
+      "sha256": "20D3A69050C2628AA8E1AF3D94A0A29687D3B8F6AA7A4E078E17ECC13CE25571"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\External\\MaterialCanvas-21c43004\\cmake_install.cmake",
+      "bytes": 1635,
+      "sha256": "FA0930AEF0B2971DF367EED5DED5824A5A95A1FBBBBA5F9D4BFEFE77E8AEE23C"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\External\\MaterialCanvas-21c43004\\Code\\MaterialCanvas.vcxproj",
+      "bytes": 178976,
+      "sha256": "49EA8D4FAEB658EA06FA798A9FD3D11FBE092D1074203E015FDD318EF00E3E37"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\External\\PassCanvas-7b6a5d4b\\cmake_install.cmake",
+      "bytes": 1623,
+      "sha256": "EDAC88F07DE1E904A631BEF2A52812DB2FE9C9D19495A06122BC86AC88860E88"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\External\\PassCanvas-7b6a5d4b\\Code\\PassCanvas.vcxproj",
+      "bytes": 190953,
+      "sha256": "DC17C9E1D0D745CD32B6C6A2F243D341A611BC1CAD4BE7F4876A3E7DA6F87B34"
+    }
+  ],
+  "capturedUtc": "2026-10-16T09:05:08.2819538Z",
+  "limitation": "Reads generated configuration only. Does not install SDK, prove all binary payloads exist, configure a consumer, link or run any product."
+}

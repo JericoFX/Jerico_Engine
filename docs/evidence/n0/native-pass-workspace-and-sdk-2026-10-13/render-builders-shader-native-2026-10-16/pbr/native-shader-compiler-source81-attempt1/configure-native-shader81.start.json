@@ -1,0 +1,23 @@
+{
+  "phase": "configure-native-shader81",
+  "startedUtc": "2026-10-16T08:04:14.2292928Z",
+  "pid": 13352,
+  "processCreationUtc": "2026-10-16T08:04:14.2786110Z",
+  "ramBefore": {
+    "capturedUtc": "2026-10-16T08:04:14.2281915Z",
+    "totalBytes": 34265743360,
+    "freeBytes": 20222951424,
+    "usedPercent": 40.98,
+    "thresholdPercent": 80
+  },
+  "executable": "C:\\Program Files\\CMake\\bin\\cmake.exe",
+  "argv": [
+    "-S",
+    "F:\\JericoEngine\\JericoEngine",
+    "-B",
+    "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine"
+  ],
+  "workingDirectory": "F:\\JericoEngine\\JericoEngine",
+  "stdout": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-shader-compiler-source81-attempt1\\configure-native-shader81.stdout.log",
+  "stderr": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-shader-compiler-source81-attempt1\\configure-native-shader81.stderr.log"
+}

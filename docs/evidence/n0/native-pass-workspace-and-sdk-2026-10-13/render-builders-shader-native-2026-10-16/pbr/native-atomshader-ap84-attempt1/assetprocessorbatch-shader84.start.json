@@ -1,0 +1,27 @@
+{
+  "phase": "assetprocessorbatch-shader84",
+  "startedUtc": "2026-10-16T08:41:40.2305054Z",
+  "pid": 21600,
+  "processCreationUtc": "2026-10-16T08:41:40.2886960Z",
+  "ramBefore": {
+    "capturedUtc": "2026-10-16T08:41:40.2304404Z",
+    "totalBytes": 34265743360,
+    "freeBytes": 19757690880,
+    "usedPercent": 42.34,
+    "thresholdPercent": 80
+  },
+  "executable": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AssetProcessorBatch.exe",
+  "argv": [
+    "--engine-path=F:/JericoEngine/JericoEngine",
+    "--project-path=F:/JericoEngine/JericoEngine/Projects/JEEditorFixture",
+    "--platforms=pc",
+    "--logDir=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\ap84-logs",
+    "--zeroAnalysisMode",
+    "--reprocessFileList=F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native84-ap-preparation-rev1\\reprocess-sources.txt",
+    "--regset=/Amazon/AssetProcessor/Settings/Jobs/maxJobs=1",
+    "--regset=/Amazon/AssetProcessor/Settings/Jobs/AlwaysUseMaxJobs=false"
+  ],
+  "workingDirectory": "F:\\JericoEngine\\JericoEngine",
+  "stdout": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-atomshader-ap84-attempt1\\assetprocessorbatch-shader84.stdout.log",
+  "stderr": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-atomshader-ap84-attempt1\\assetprocessorbatch-shader84.stderr.log"
+}

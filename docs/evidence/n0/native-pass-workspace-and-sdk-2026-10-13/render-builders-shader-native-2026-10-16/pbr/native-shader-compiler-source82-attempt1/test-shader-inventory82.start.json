@@ -1,0 +1,26 @@
+{
+  "phase": "test-shader-inventory82",
+  "startedUtc": "2026-10-16T08:16:36.2403966Z",
+  "pid": 17372,
+  "processCreationUtc": "2026-10-16T08:16:36.2768100Z",
+  "ramBefore": {
+    "capturedUtc": "2026-10-16T08:16:36.2403607Z",
+    "totalBytes": 34265743360,
+    "freeBytes": 19764023296,
+    "usedPercent": 42.32,
+    "thresholdPercent": 80
+  },
+  "executable": "C:\\Program Files\\CMake\\bin\\ctest.exe",
+  "argv": [
+    "--test-dir",
+    "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine",
+    "-C",
+    "profile",
+    "--show-only=json-v1",
+    "-R",
+    "^(JE::ShaderCompiler\\.Tests\\.main::TEST_RUN|JE::RenderAssetBuilders\\.Tests\\.main::TEST_RUN|Gem::ShaderManagementConsole\\.VariantGenerator\\.Tests\\.main::TEST_RUN|JE::EditorMaterials\\.Tests\\.main::TEST_RUN|Gem::AtomToolsFramework\\.Tests\\.main::TEST_RUN|Gem::GraphModel\\.Editor\\.Tests\\.main::TEST_RUN|Legacy::EditorLib\\.Tests\\.main::TEST_RUN|Gem::Atom_RPI\\.Tests\\.main::TEST_RUN)$"
+  ],
+  "workingDirectory": "F:\\JericoEngine\\JericoEngine",
+  "stdout": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-shader-compiler-source82-attempt1\\test-shader-inventory82.stdout.log",
+  "stderr": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-shader-compiler-source82-attempt1\\test-shader-inventory82.stderr.log"
+}

@@ -1,0 +1,71 @@
+{
+  "inputCount": 14037,
+  "ownerTextures": {
+    "label": "OwnerTextures",
+    "count": 26,
+    "matched": 26
+  },
+  "freezeSHA256": "A4FB897D04A87A992D9043DF8910925FF40791CC710383749BC3DE21ECB6669B",
+  "physicalSources": {
+    "label": "Focal physical sources including staged fixture",
+    "count": 7,
+    "matched": 7
+  },
+  "noStagingByRunner": true,
+  "cache": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\CMakeCache.txt",
+    "sha256": "583D5EC400A54D4A036414F26F332B01CDD6CD3B91B011B6B12DD484B71827BC",
+    "requiredLines": [
+      "CMAKE_GENERATOR:INTERNAL=Visual Studio 17 2022",
+      "CMAKE_GENERATOR_PLATFORM:INTERNAL=x64",
+      "FETCHCONTENT_FULLY_DISCONNECTED:BOOL=ON",
+      "LY_PACKAGE_SERVER_URLS:STRING=",
+      "O3DE_EXTERNAL_SUBDIRS:STRING=",
+      "LY_PROJECTS:STRING=F:/JericoEngine/JericoEngine/Projects/JEEditorFixture"
+    ],
+    "missingLines": [],
+    "valid": true
+  },
+  "GemIncrement": 0,
+  "native82": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-shader-compiler-source82-attempt1\\postflight.json",
+  "acceptance": "Parent only; four shader builders need fresh jobs/products, no GPU acceptance.",
+  "noConfigureOrBuild": true,
+  "freeze": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native84-ap-preparation-rev1\\freeze84-native-shader.json",
+  "binaryPins": [
+    {
+      "name": "AssetProcessor.exe",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AssetProcessor.exe",
+      "bytes": 6673408,
+      "sha256": "0EC006BD3F1D189795050D4A49D076780F5C0F07FA5A9DCA64ABF172A77EB582"
+    },
+    {
+      "name": "AssetProcessorBatch.exe",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AssetProcessorBatch.exe",
+      "bytes": 5899776,
+      "sha256": "FF71D1FBB892FE500FBB11425290AC03D4F0823AF6E6D15606507BD9308EFD38"
+    },
+    {
+      "name": "AssetBuilder.exe",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AssetBuilder.exe",
+      "bytes": 2790912,
+      "sha256": "33573ED1497A657E3E5A2E9174E505083D3BF805AFAAE4B361AC811F70A87A25"
+    },
+    {
+      "name": "RenderAssetBuilders.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\RenderAssetBuilders.dll",
+      "bytes": 2238464,
+      "sha256": "DDC2D553FC54F7F53388B3645E561AF30B21420CAABB52EC1DE0E272D2F97748"
+    },
+    {
+      "name": "Atom_RPI.Public.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_RPI.Public.dll",
+      "bytes": 7858688,
+      "sha256": "49B7579D2819B5081525B4BF7762AA470E2C02E2F63A3CAF2E7BEA08130421F0"
+    }
+  ],
+  "authored": {
+    "label": "Authored",
+    "count": 40,
+    "matched": 40
+  }
+}

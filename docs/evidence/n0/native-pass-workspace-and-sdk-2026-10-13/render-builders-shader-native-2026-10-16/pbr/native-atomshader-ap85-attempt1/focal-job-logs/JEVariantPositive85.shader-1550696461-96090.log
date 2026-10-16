@@ -1,0 +1,58 @@
+~~1792143930945~~1~~0000000000004110~~Builder::RunJob~~Request started builder [46E5D9F3462F403B90BB8797503F8647 - 1] task (process) Assets/Tests/JENativeShader85/JEVariantPositive85.shader 
+~~1792143930955~~1~~0000000000004110~~AssetBuilder~~AssetBuilder: AllocatorManager before: allocatedBytes = 56454533 capacityBytes = 55834574848
+~~1792143930955~~1~~0000000000004110~~AssetBuilder~~AssetBuilder: Running processJob task
+~~1792143930955~~1~~0000000000004110~~AssetBuilder~~AssetBuilder: Source = F:/JericoEngine/JericoEngine/Projects/JEEditorFixture/Assets/Tests/JENativeShader85/JEVariantPositive85.shader
+~~1792143930955~~1~~0000000000004110~~AssetBuilder~~AssetBuilder: Platform = pc
+~~1792143930956~~1~~0000000000004110~~AssetBuilder~~ShaderAssetBuilder: Original AZSL File: F:\JericoEngine\JericoEngine\Projects\JEEditorFixture\Assets\Tests\JENativeShader85\JEVariantPositive85.azsl 
+~~1792143930956~~1~~0000000000004110~~AssetBuilder~~C: [Platform API] = vulkan
+~~1792143930956~~1~~0000000000004110~~AssetBuilder~~Preprocessor: builder F:\JericoEngine\JericoEngine\Projects\JEEditorFixture\user\AssetProcessorTemp\JobTemp-GJgeHE\JEVariantPositive85.azsl.vulkan.prepend -C -+ -IF:\JericoEngine\JericoEngine\Projects\JEEditorFixture\Assets\Tests\JENativeShader85 -IF:\JericoEngine\JericoEngine\Projects\JEEditorFixture -IF:\JericoEngine\JericoEngine\Projects\JEEditorFixture\ShaderLib -IF:\JericoEngine\JericoEngine\Gems\Atom\RHI\Assets\ShaderLib -IF:\JericoEngine\JericoEngine\Gems\Atom\Feature\Common\Assets\ShaderLib -IF:\JericoEngine\JericoEngine\Gems\Atom\RPI\Assets\ShaderLib -IF:\JericoEngine\JericoEngine\Gems
+~~1792143930956~~1~~0000000000004110~~AssetBuilder~~C: [Platform API] = vulkan
+~~1792143930956~~1~~0000000000004110~~AssetBuilder~~C: [Trace] = F:/JericoEngine/JericoEngine/Gems/Atom/RHI/Code/Source/RHI.Edit/Utils.cpp(402): 'bool __cdecl AZ::RHI::ReportMessages(class AZStd::basic_string_view<char,struct AZStd::char_traits<char> >,class AZStd::basic_string_view<char,struct AZStd::char_traits<char> >,bool)'
+~~1792143930956~~1~~0000000000004110~~AssetBuilder~~C: [Type] = Trace::Warning
+~~1792143930956~~1~~0000000000004110~~AssetBuilder~~W: ShaderAssetBuilder: F:/JericoEngine/JericoEngine/Projects/JEEditorFixture/user/AssetProcessorTemp/JobTemp-GJgeHE/JEVariantPositive85.azsl.vulkan.prepend:0: warning: Unknown encoding: C.UTF-8
+~~1792143930956~~1~~0000000000004110~~AssetBuilder~~C: [Platform API] = vulkan
+~~1792143930956~~1~~0000000000004110~~AssetBuilder~~C: [Trace] = F:/JericoEngine/JericoEngine/Gems/Atom/RHI/Code/Source/RHI.Edit/Utils.cpp(402): 'bool __cdecl AZ::RHI::ReportMessages(class AZStd::basic_string_view<char,struct AZStd::char_traits<char> >,class AZStd::basic_string_view<char,struct AZStd::char_traits<char> >,bool)'
+~~1792143930956~~1~~0000000000004110~~AssetBuilder~~C: [Type] = Trace::Warning
+~~1792143930956~~1~~0000000000004110~~AssetBuilder~~W:     
+~~1792143931075~~1~~0000000000004110~~AssetBuilder~~C: [Platform API] = vulkan
+~~1792143931075~~1~~0000000000004110~~AssetBuilder~~ShaderAssetBuilder: Preprocessed AZSL File: F:\JericoEngine\JericoEngine\Projects\JEEditorFixture\user\AssetProcessorTemp\JobTemp-GJgeHE\JEVariantPositive85.azsl.vulkan.prepend 
+~~1792143931075~~1~~0000000000004110~~AssetBuilder~~C: [Platform API] = vulkan
+~~1792143931075~~1~~0000000000004110~~AssetBuilder~~ShaderPlatformInterface: Executing '"F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\azslc.exe" "F:\JericoEngine\JericoEngine\Projects\JEEditorFixture\user\AssetProcessorTemp\JobTemp-GJgeHE\JEVariantPositive85_vulkan.azslin" --full --Zpr --W1 --strip-unused-srgs --root-const=128 --namespace=vk --unique-idx -o "F:\JericoEngine\JericoEngine\Projects\JEEditorFixture\user\AssetProcessorTemp\JobTemp-GJgeHE\JEVariantPositive85_vulkan.hlsl"' ...
+~~1792143931075~~1~~0000000000004110~~AssetBuilder~~C: [Platform API] = vulkan
+~~1792143931075~~1~~0000000000004110~~AssetBuilder~~ShaderPlatformInterface: AZ::RHI::ExecuteShaderCompiler elapsedTimeMillis: 43
+~~1792143931075~~1~~0000000000004110~~AssetBuilder~~C: [Platform API] = vulkan
+~~1792143931075~~1~~0000000000004110~~AssetBuilder~~AZSL Compiler: Option {o_clamp} doesn't provide a default value, using {false} instead.
+~~1792143931075~~1~~0000000000004110~~AssetBuilder~~C: [Platform API] = vulkan
+~~1792143931075~~1~~0000000000004110~~AssetBuilder~~AZSL Compiler: Option {o_useColorChannels} doesn't provide a default value, using {false} instead.
+~~1792143931075~~1~~0000000000004110~~AssetBuilder~~C: [Platform API] = vulkan
+~~1792143931075~~1~~0000000000004110~~AssetBuilder~~ShaderAssetBuilder: Note: This shader uses 2 of 128 available shader variant key bits. 
+~~1792143931075~~1~~0000000000004110~~AssetBuilder~~C: [Platform API] = vulkan
+~~1792143931075~~1~~0000000000004110~~AssetBuilder~~ShaderVariantAssetBuilder: Variant StableId: 0
+~~1792143931075~~1~~0000000000004110~~AssetBuilder~~C: [Platform API] = vulkan
+~~1792143931075~~1~~0000000000004110~~AssetBuilder~~ShaderVariantAssetBuilder: Variant Shader Options: o_clamp=?, o_useColorChannels=?
+~~1792143931075~~1~~0000000000004110~~AssetBuilder~~C: [Platform API] = vulkan
+~~1792143931075~~1~~0000000000004110~~AssetBuilder~~ShaderVariantAssetBuilder: Entry Point: MainVS
+~~1792143931075~~1~~0000000000004110~~AssetBuilder~~C: [Platform API] = vulkan
+~~1792143931075~~1~~0000000000004110~~AssetBuilder~~ShaderVariantAssetBuilder: Begin compiling shader function "MainVS"
+~~1792143931075~~1~~0000000000004110~~AssetBuilder~~C: [Platform API] = vulkan
+~~1792143931075~~1~~0000000000004110~~AssetBuilder~~ShaderPlatformInterface: Executing '"F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Builders\DirectXShaderCompiler\dxc.exe" -E MainVS -T vs_6_2 -Zpr -spirv -fvk-use-dx-layout -fvk-invert-y -Fo "F:\JericoEngine\JericoEngine\Projects\JEEditorFixture\user\AssetProcessorTemp\JobTemp-GJgeHE\JEVariantPositive85_vulkan.spirv.bin" -Fh "F:\JericoEngine\JericoEngine\Projects\JEEditorFixture\user\AssetProcessorTemp\JobTemp-GJgeHE\JEVariantPositive85_vulkan.spirv.txt" "F:\JericoEngine\JericoEngine\Projects\JEEditorFixture\user\AssetProcessorTemp\JobTemp-GJgeHE\JEVariantPositive85_vulkan.hlsl.prepend"' ...
+~~1792143931075~~1~~0000000000004110~~AssetBuilder~~C: [Platform API] = vulkan
+~~1792143931075~~1~~0000000000004110~~AssetBuilder~~ShaderPlatformInterface: AZ::RHI::ExecuteShaderCompiler elapsedTimeMillis: 21
+~~1792143931075~~1~~0000000000004110~~AssetBuilder~~C: [Platform API] = vulkan
+~~1792143931075~~1~~0000000000004110~~AssetBuilder~~ShaderVariantAssetBuilder: Finished compiling shader function. Number of dynamic branches: 0
+~~1792143931075~~1~~0000000000004110~~AssetBuilder~~C: [Platform API] = vulkan
+~~1792143931075~~1~~0000000000004110~~AssetBuilder~~ShaderVariantAssetBuilder: Entry Point: MainPS
+~~1792143931075~~1~~0000000000004110~~AssetBuilder~~C: [Platform API] = vulkan
+~~1792143931075~~1~~0000000000004110~~AssetBuilder~~ShaderVariantAssetBuilder: Begin compiling shader function "MainPS"
+~~1792143931075~~1~~0000000000004110~~AssetBuilder~~C: [Platform API] = vulkan
+~~1792143931075~~1~~0000000000004110~~AssetBuilder~~ShaderPlatformInterface: Executing '"F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Builders\DirectXShaderCompiler\dxc.exe" -E MainPS -T ps_6_2 -Zpr -spirv -fvk-use-dx-layout -fvk-use-dx-position-w -Fo "F:\JericoEngine\JericoEngine\Projects\JEEditorFixture\user\AssetProcessorTemp\JobTemp-GJgeHE\JEVariantPositive85_vulkan.spirv.bin" -Fh "F:\JericoEngine\JericoEngine\Projects\JEEditorFixture\user\AssetProcessorTemp\JobTemp-GJgeHE\JEVariantPositive85_vulkan.spirv.txt" "F:\JericoEngine\JericoEngine\Projects\JEEditorFixture\user\AssetProcessorTemp\JobTemp-GJgeHE\JEVariantPositive85_vulkan.hlsl.prepend"' ...
+~~1792143931075~~1~~0000000000004110~~AssetBuilder~~C: [Platform API] = vulkan
+~~1792143931075~~1~~0000000000004110~~AssetBuilder~~ShaderPlatformInterface: AZ::RHI::ExecuteShaderCompiler elapsedTimeMillis: 22
+~~1792143931075~~1~~0000000000004110~~AssetBuilder~~C: [Platform API] = vulkan
+~~1792143931075~~1~~0000000000004110~~AssetBuilder~~ShaderVariantAssetBuilder: Finished compiling shader function. Number of dynamic branches: 5
+~~1792143931075~~1~~0000000000004110~~AssetBuilder~~C: [Platform API] = vulkan
+~~1792143931075~~1~~0000000000004110~~AssetBuilder~~ShaderVariantAssetBuilder: Shader Variant Asset [F:\JericoEngine\JericoEngine\Projects\JEEditorFixture\user\AssetProcessorTemp\JobTemp-GJgeHE\JEVariantPositive85_vulkan_0.azshadervariant] compiled successfully.
+~~1792143931075~~1~~0000000000004110~~AssetBuilder~~ShaderAssetBuilder: Finished processing Assets/Tests/JENativeShader85/JEVariantPositive85.shader in 0.129 seconds
+~~1792143931075~~1~~0000000000004110~~AssetBuilder~~AssetBuilder: AllocatorManager after: allocatedBytes = 56458421 capacityBytes = 55834574848; allocated change = 3888
+~~1792143931075~~1~~0000000000004110~~AssetBuilder~~S: 0 errors, 1 warnings
+~~1792143931075~~1~~0000000000004110~~Builder::RunJob~~Request stopped builder [46E5D9F3462F403B90BB8797503F8647 - 1] task (process) Assets/Tests/JENativeShader85/JEVariantPositive85.shader 

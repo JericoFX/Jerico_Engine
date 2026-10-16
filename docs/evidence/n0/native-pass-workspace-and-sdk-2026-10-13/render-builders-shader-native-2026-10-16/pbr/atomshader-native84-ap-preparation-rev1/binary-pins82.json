@@ -1,0 +1,32 @@
+[
+  {
+    "name": "AssetProcessor.exe",
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AssetProcessor.exe",
+    "bytes": 6673408,
+    "sha256": "0EC006BD3F1D189795050D4A49D076780F5C0F07FA5A9DCA64ABF172A77EB582"
+  },
+  {
+    "name": "AssetProcessorBatch.exe",
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AssetProcessorBatch.exe",
+    "bytes": 5899776,
+    "sha256": "FF71D1FBB892FE500FBB11425290AC03D4F0823AF6E6D15606507BD9308EFD38"
+  },
+  {
+    "name": "AssetBuilder.exe",
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AssetBuilder.exe",
+    "bytes": 2790912,
+    "sha256": "33573ED1497A657E3E5A2E9174E505083D3BF805AFAAE4B361AC811F70A87A25"
+  },
+  {
+    "name": "RenderAssetBuilders.dll",
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\RenderAssetBuilders.dll",
+    "bytes": 2238464,
+    "sha256": "DDC2D553FC54F7F53388B3645E561AF30B21420CAABB52EC1DE0E272D2F97748"
+  },
+  {
+    "name": "Atom_RPI.Public.dll",
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_RPI.Public.dll",
+    "bytes": 7858688,
+    "sha256": "49B7579D2819B5081525B4BF7762AA470E2C02E2F63A3CAF2E7BEA08130421F0"
+  }
+]

@@ -1,0 +1,3 @@
+JE SDK: Materials, Camera and RenderIntegration exports resolved; empty PassPipelinePreview exercised.
+JE SDK: native RenderAssetBuilders factory/descriptors/recreation and three public contexts exercised without activation or cook.
+JE SDK: shader compiler factory/descriptors/services/recreation and exported shader option hash exercised without activation or cook.

@@ -1,0 +1,542 @@
+[
+  {
+    "uint32SubId": 2147483650,
+    "archive": {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-atomshader-ap85-attempt1\\selected-products\\pc\\assets\\tests\\jenativeshader85\\jevariantpositive85_vulkan.azslin",
+      "bytes": 6349,
+      "sha256": "2DE8007D1B5314D7D26B4C7DF97389D116D239B16A5F71379CCB3332C5116E22"
+    },
+    "database": {
+      "SourceName": "Assets/Tests/JENativeShader85/JEVariantPositive85.shader",
+      "SourceGuidHex": "B5C5AE95EC8D57869417BC6C0A464B32",
+      "Platform": "pc",
+      "JobKey": "Shader Asset",
+      "JobRunKey": 96090,
+      "ProductID": 10068,
+      "JobPK": 1720,
+      "ProductName": "pc/assets/tests/jenativeshader85/jevariantpositive85_vulkan.azslin",
+      "SubID": -2147483646,
+      "AssetType": {
+        "kind": "blob",
+        "bytes": 16,
+        "hex": "6977AEB117AD4992957B23BB2E85B18B"
+      },
+      "LegacyGuid": {
+        "kind": "blob",
+        "bytes": 16,
+        "hex": "5F8AE319106752149F9B44BAF1D9A4E1"
+      },
+      "Hash": -5574070197542564887,
+      "Flags": 1
+    },
+    "physical": {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Cache\\pc\\assets\\tests\\jenativeshader85\\jevariantpositive85_vulkan.azslin",
+      "bytes": 6349,
+      "sha256": "2DE8007D1B5314D7D26B4C7DF97389D116D239B16A5F71379CCB3332C5116E22"
+    }
+  },
+  {
+    "uint32SubId": 2147483651,
+    "archive": {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-atomshader-ap85-attempt1\\selected-products\\pc\\assets\\tests\\jenativeshader85\\jevariantpositive85_vulkan.ia.json",
+      "bytes": 1878,
+      "sha256": "B127A4EF663A134A61D12B30211FD9648B2C378B4B8DB3A46184985E48CCDE22"
+    },
+    "database": {
+      "SourceName": "Assets/Tests/JENativeShader85/JEVariantPositive85.shader",
+      "SourceGuidHex": "B5C5AE95EC8D57869417BC6C0A464B32",
+      "Platform": "pc",
+      "JobKey": "Shader Asset",
+      "JobRunKey": 96090,
+      "ProductID": 10069,
+      "JobPK": 1720,
+      "ProductName": "pc/assets/tests/jenativeshader85/jevariantpositive85_vulkan.ia.json",
+      "SubID": -2147483645,
+      "AssetType": {
+        "kind": "blob",
+        "bytes": 16,
+        "hex": "6977AEB117AD4992957B23BB2E85B18B"
+      },
+      "LegacyGuid": {
+        "kind": "blob",
+        "bytes": 16,
+        "hex": "92E9E5F150B85F19B1D9402E4F97E505"
+      },
+      "Hash": -1096872350465853755,
+      "Flags": 1
+    },
+    "physical": {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Cache\\pc\\assets\\tests\\jenativeshader85\\jevariantpositive85_vulkan.ia.json",
+      "bytes": 1878,
+      "sha256": "B127A4EF663A134A61D12B30211FD9648B2C378B4B8DB3A46184985E48CCDE22"
+    }
+  },
+  {
+    "uint32SubId": 2147483652,
+    "archive": {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-atomshader-ap85-attempt1\\selected-products\\pc\\assets\\tests\\jenativeshader85\\jevariantpositive85_vulkan.om.json",
+      "bytes": 544,
+      "sha256": "17E21B64131D75FBEB584BF848A1DCACA276073E31B2ED176E02A4FB1E0DD64C"
+    },
+    "database": {
+      "SourceName": "Assets/Tests/JENativeShader85/JEVariantPositive85.shader",
+      "SourceGuidHex": "B5C5AE95EC8D57869417BC6C0A464B32",
+      "Platform": "pc",
+      "JobKey": "Shader Asset",
+      "JobRunKey": 96090,
+      "ProductID": 10070,
+      "JobPK": 1720,
+      "ProductName": "pc/assets/tests/jenativeshader85/jevariantpositive85_vulkan.om.json",
+      "SubID": -2147483644,
+      "AssetType": {
+        "kind": "blob",
+        "bytes": 16,
+        "hex": "6977AEB117AD4992957B23BB2E85B18B"
+      },
+      "LegacyGuid": {
+        "kind": "blob",
+        "bytes": 16,
+        "hex": "4E643C4E35B75BE5B2870FFED51749DD"
+      },
+      "Hash": -3649829730632659982,
+      "Flags": 1
+    },
+    "physical": {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Cache\\pc\\assets\\tests\\jenativeshader85\\jevariantpositive85_vulkan.om.json",
+      "bytes": 544,
+      "sha256": "17E21B64131D75FBEB584BF848A1DCACA276073E31B2ED176E02A4FB1E0DD64C"
+    }
+  },
+  {
+    "uint32SubId": 2147483653,
+    "archive": {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-atomshader-ap85-attempt1\\selected-products\\pc\\assets\\tests\\jenativeshader85\\jevariantpositive85_vulkan.srg.json",
+      "bytes": 3421,
+      "sha256": "DE69CCB2B793F8E97B085AA3AD610F530BBFDA984AA880677BC1B22427D05C34"
+    },
+    "database": {
+      "SourceName": "Assets/Tests/JENativeShader85/JEVariantPositive85.shader",
+      "SourceGuidHex": "B5C5AE95EC8D57869417BC6C0A464B32",
+      "Platform": "pc",
+      "JobKey": "Shader Asset",
+      "JobRunKey": 96090,
+      "ProductID": 10071,
+      "JobPK": 1720,
+      "ProductName": "pc/assets/tests/jenativeshader85/jevariantpositive85_vulkan.srg.json",
+      "SubID": -2147483643,
+      "AssetType": {
+        "kind": "blob",
+        "bytes": 16,
+        "hex": "6977AEB117AD4992957B23BB2E85B18B"
+      },
+      "LegacyGuid": {
+        "kind": "blob",
+        "bytes": 16,
+        "hex": "74A0295C1349526FB88A4E52EEC54BB6"
+      },
+      "Hash": -3127528018053434692,
+      "Flags": 1
+    },
+    "physical": {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Cache\\pc\\assets\\tests\\jenativeshader85\\jevariantpositive85_vulkan.srg.json",
+      "bytes": 3421,
+      "sha256": "DE69CCB2B793F8E97B085AA3AD610F530BBFDA984AA880677BC1B22427D05C34"
+    }
+  },
+  {
+    "uint32SubId": 2147483654,
+    "archive": {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-atomshader-ap85-attempt1\\selected-products\\pc\\assets\\tests\\jenativeshader85\\jevariantpositive85_vulkan.options.json",
+      "bytes": 718,
+      "sha256": "03F21AE85FF2281FBEFEC82D5BD6185A375ABBDA3DE8229B69727302D73842AE"
+    },
+    "database": {
+      "SourceName": "Assets/Tests/JENativeShader85/JEVariantPositive85.shader",
+      "SourceGuidHex": "B5C5AE95EC8D57869417BC6C0A464B32",
+      "Platform": "pc",
+      "JobKey": "Shader Asset",
+      "JobRunKey": 96090,
+      "ProductID": 10072,
+      "JobPK": 1720,
+      "ProductName": "pc/assets/tests/jenativeshader85/jevariantpositive85_vulkan.options.json",
+      "SubID": -2147483642,
+      "AssetType": {
+        "kind": "blob",
+        "bytes": 16,
+        "hex": "6977AEB117AD4992957B23BB2E85B18B"
+      },
+      "LegacyGuid": {
+        "kind": "blob",
+        "bytes": 16,
+        "hex": "67989F9D23935A6B99A0348F178C411A"
+      },
+      "Hash": 2995406101752559875,
+      "Flags": 1
+    },
+    "physical": {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Cache\\pc\\assets\\tests\\jenativeshader85\\jevariantpositive85_vulkan.options.json",
+      "bytes": 718,
+      "sha256": "03F21AE85FF2281FBEFEC82D5BD6185A375ABBDA3DE8229B69727302D73842AE"
+    }
+  },
+  {
+    "uint32SubId": 2147483655,
+    "archive": {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-atomshader-ap85-attempt1\\selected-products\\pc\\assets\\tests\\jenativeshader85\\jevariantpositive85_vulkan.bindingdep.json",
+      "bytes": 1139,
+      "sha256": "B33C87AA6109E3B5058DF729B8A48C365583FBAC84BD26BA120DF5F91404B81A"
+    },
+    "database": {
+      "SourceName": "Assets/Tests/JENativeShader85/JEVariantPositive85.shader",
+      "SourceGuidHex": "B5C5AE95EC8D57869417BC6C0A464B32",
+      "Platform": "pc",
+      "JobKey": "Shader Asset",
+      "JobRunKey": 96090,
+      "ProductID": 10073,
+      "JobPK": 1720,
+      "ProductName": "pc/assets/tests/jenativeshader85/jevariantpositive85_vulkan.bindingdep.json",
+      "SubID": -2147483641,
+      "AssetType": {
+        "kind": "blob",
+        "bytes": 16,
+        "hex": "6977AEB117AD4992957B23BB2E85B18B"
+      },
+      "LegacyGuid": {
+        "kind": "blob",
+        "bytes": 16,
+        "hex": "73A32D0CBE6B56178FD36143849399C9"
+      },
+      "Hash": -1442657802607643659,
+      "Flags": 1
+    },
+    "physical": {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Cache\\pc\\assets\\tests\\jenativeshader85\\jevariantpositive85_vulkan.bindingdep.json",
+      "bytes": 1139,
+      "sha256": "B33C87AA6109E3B5058DF729B8A48C365583FBAC84BD26BA120DF5F91404B81A"
+    }
+  },
+  {
+    "uint32SubId": 2147483656,
+    "archive": {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-atomshader-ap85-attempt1\\selected-products\\pc\\assets\\tests\\jenativeshader85\\jevariantpositive85_vulkan.hlsl",
+      "bytes": 3273,
+      "sha256": "F554364E329D6FA374F5B34F4D267D863FB535D096AF8C6141783BD32AED2282"
+    },
+    "database": {
+      "SourceName": "Assets/Tests/JENativeShader85/JEVariantPositive85.shader",
+      "SourceGuidHex": "B5C5AE95EC8D57869417BC6C0A464B32",
+      "Platform": "pc",
+      "JobKey": "Shader Asset",
+      "JobRunKey": 96090,
+      "ProductID": 10074,
+      "JobPK": 1720,
+      "ProductName": "pc/assets/tests/jenativeshader85/jevariantpositive85_vulkan.hlsl",
+      "SubID": -2147483640,
+      "AssetType": {
+        "kind": "blob",
+        "bytes": 16,
+        "hex": "6977AEB117AD4992957B23BB2E85B18B"
+      },
+      "LegacyGuid": {
+        "kind": "blob",
+        "bytes": 16,
+        "hex": "83203B178A4C595481AA42E73446718E"
+      },
+      "Hash": 2562755125189159206,
+      "Flags": 1
+    },
+    "physical": {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Cache\\pc\\assets\\tests\\jenativeshader85\\jevariantpositive85_vulkan.hlsl",
+      "bytes": 3273,
+      "sha256": "F554364E329D6FA374F5B34F4D267D863FB535D096AF8C6141783BD32AED2282"
+    }
+  },
+  {
+    "uint32SubId": 2147483649,
+    "archive": {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-atomshader-ap85-attempt1\\selected-products\\pc\\assets\\tests\\jenativeshader85\\jevariantpositive85_vulkan_0.azshadervariant",
+      "bytes": 4582,
+      "sha256": "CE19181B633BB4B70EAE19CAAEE851758151920257AB1700373F210301FB534F"
+    },
+    "database": {
+      "SourceName": "Assets/Tests/JENativeShader85/JEVariantPositive85.shader",
+      "SourceGuidHex": "B5C5AE95EC8D57869417BC6C0A464B32",
+      "Platform": "pc",
+      "JobKey": "Shader Asset",
+      "JobRunKey": 96090,
+      "ProductID": 10075,
+      "JobPK": 1720,
+      "ProductName": "pc/assets/tests/jenativeshader85/jevariantpositive85_vulkan_0.azshadervariant",
+      "SubID": -2147483647,
+      "AssetType": {
+        "kind": "blob",
+        "bytes": 16,
+        "hex": "51BED81536D8410E90F01FA9FF765FBA"
+      },
+      "LegacyGuid": {
+        "kind": "blob",
+        "bytes": 16,
+        "hex": "2E3994BEE43358D294B53E14F1DDDC88"
+      },
+      "Hash": 7061242726820028953,
+      "Flags": 1
+    },
+    "physical": {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Cache\\pc\\assets\\tests\\jenativeshader85\\jevariantpositive85_vulkan_0.azshadervariant",
+      "bytes": 4582,
+      "sha256": "CE19181B633BB4B70EAE19CAAEE851758151920257AB1700373F210301FB534F"
+    }
+  },
+  {
+    "uint32SubId": 0,
+    "archive": {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-atomshader-ap85-attempt1\\selected-products\\pc\\assets\\tests\\jenativeshader85\\jevariantpositive85.azshader",
+      "bytes": 14933,
+      "sha256": "D57A1EB7C162EB6440292E0950E7E6C5BA22A4B42FB58F7EF8B4D074755EE233"
+    },
+    "database": {
+      "SourceName": "Assets/Tests/JENativeShader85/JEVariantPositive85.shader",
+      "SourceGuidHex": "B5C5AE95EC8D57869417BC6C0A464B32",
+      "Platform": "pc",
+      "JobKey": "Shader Asset",
+      "JobRunKey": 96090,
+      "ProductID": 10076,
+      "JobPK": 1720,
+      "ProductName": "pc/assets/tests/jenativeshader85/jevariantpositive85.azshader",
+      "SubID": 0,
+      "AssetType": {
+        "kind": "blob",
+        "bytes": 16,
+        "hex": "823395A3D57049F499A9D820CD1DEF98"
+      },
+      "LegacyGuid": {
+        "kind": "blob",
+        "bytes": 16,
+        "hex": "ACCABDFA43D25797BEFC27711FDD11CC"
+      },
+      "Hash": 4452863309780552317,
+      "Flags": 1
+    },
+    "physical": {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Cache\\pc\\assets\\tests\\jenativeshader85\\jevariantpositive85.azshader",
+      "bytes": 14933,
+      "sha256": "D57A1EB7C162EB6440292E0950E7E6C5BA22A4B42FB58F7EF8B4D074755EE233"
+    }
+  },
+  {
+    "uint32SubId": 0,
+    "archive": {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-atomshader-ap85-attempt1\\selected-products\\common\\assets\\tests\\jenativeshader85\\jevariantpositive85.hashedvariantlist",
+      "bytes": 983,
+      "sha256": "CF11C0977B4C82F6A64629C509DF319379FD341D5F091ABCDA4862E30BA5B529"
+    },
+    "database": {
+      "SourceName": "Assets/Tests/JENativeShader85/JEVariantPositive85.shadervariantlist",
+      "SourceGuidHex": "F8D98E987EC953D0A56512A90C2277CB",
+      "Platform": "common",
+      "JobKey": "HashedShaderVariantList",
+      "JobRunKey": 96098,
+      "ProductID": 10066,
+      "JobPK": 1719,
+      "ProductName": "common/assets/tests/jenativeshader85/jevariantpositive85.hashedvariantlist",
+      "SubID": 0,
+      "AssetType": {
+        "kind": "blob",
+        "bytes": 16,
+        "hex": "D86DA375DD7745F981D52E50C24C8469"
+      },
+      "LegacyGuid": {
+        "kind": "blob",
+        "bytes": 16,
+        "hex": "5F0DD24DBD825EB18DBC5F3DED6CDAE4"
+      },
+      "Hash": -723824861987527912,
+      "Flags": 2
+    },
+    "physical": {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Cache\\Intermediate Assets\\assets\\tests\\jenativeshader85\\jevariantpositive85.hashedvariantlist",
+      "bytes": 983,
+      "sha256": "CF11C0977B4C82F6A64629C509DF319379FD341D5F091ABCDA4862E30BA5B529"
+    }
+  },
+  {
+    "uint32SubId": 1,
+    "archive": {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-atomshader-ap85-attempt1\\selected-products\\common\\assets\\tests\\jenativeshader85\\jevariantpositive85_0.hashedvariantbatch",
+      "bytes": 983,
+      "sha256": "CF11C0977B4C82F6A64629C509DF319379FD341D5F091ABCDA4862E30BA5B529"
+    },
+    "database": {
+      "SourceName": "Assets/Tests/JENativeShader85/JEVariantPositive85.shadervariantlist",
+      "SourceGuidHex": "F8D98E987EC953D0A56512A90C2277CB",
+      "Platform": "common",
+      "JobKey": "HashedShaderVariantList",
+      "JobRunKey": 96098,
+      "ProductID": 10067,
+      "JobPK": 1719,
+      "ProductName": "common/assets/tests/jenativeshader85/jevariantpositive85_0.hashedvariantbatch",
+      "SubID": 1,
+      "AssetType": {
+        "kind": "blob",
+        "bytes": 16,
+        "hex": "D86DA375DD7745F981D52E50C24C8469"
+      },
+      "LegacyGuid": {
+        "kind": "blob",
+        "bytes": 16,
+        "hex": "7391379CF65F5A5BAFDDBE2C66FE9BA6"
+      },
+      "Hash": -723824861987527912,
+      "Flags": 2
+    },
+    "physical": {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Cache\\Intermediate Assets\\assets\\tests\\jenativeshader85\\jevariantpositive85_0.hashedvariantbatch",
+      "bytes": 983,
+      "sha256": "CF11C0977B4C82F6A64629C509DF319379FD341D5F091ABCDA4862E30BA5B529"
+    }
+  },
+  {
+    "uint32SubId": 0,
+    "archive": {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-atomshader-ap85-attempt1\\selected-products\\pc\\assets\\tests\\jenativeshader85\\jevariantpositive85.azshadervarianttree",
+      "bytes": 1071,
+      "sha256": "0839ED5194441B3B2A2AC8CC9C716B9D6B625EB64FE5C6D0D52D6FAFBEF7A8F8"
+    },
+    "database": {
+      "SourceName": "assets/tests/jenativeshader85/jevariantpositive85.hashedvariantlist",
+      "SourceGuidHex": "5F0DD24DBD825EB18DBC5F3DED6CDAE4",
+      "Platform": "pc",
+      "JobKey": "Shader Variant Asset_varianttree",
+      "JobRunKey": 96102,
+      "ProductID": 10077,
+      "JobPK": 1721,
+      "ProductName": "pc/assets/tests/jenativeshader85/jevariantpositive85.azshadervarianttree",
+      "SubID": 0,
+      "AssetType": {
+        "kind": "blob",
+        "bytes": 16,
+        "hex": "EBF48506F8BB4B378FACF132BF83E42D"
+      },
+      "LegacyGuid": {
+        "kind": "blob",
+        "bytes": 16,
+        "hex": "D3CE6EA5DCB25A4FB62A65A320249B2C"
+      },
+      "Hash": 7409648309386284841,
+      "Flags": 1
+    },
+    "physical": {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Cache\\pc\\assets\\tests\\jenativeshader85\\jevariantpositive85.azshadervarianttree",
+      "bytes": 1071,
+      "sha256": "0839ED5194441B3B2A2AC8CC9C716B9D6B625EB64FE5C6D0D52D6FAFBEF7A8F8"
+    }
+  },
+  {
+    "uint32SubId": 2147483649,
+    "archive": {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-atomshader-ap85-attempt1\\selected-products\\pc\\assets\\tests\\jenativeshader85\\jevariantpositive85_vulkan_1.azshadervariant",
+      "bytes": 3358,
+      "sha256": "70AF8E18D92F7F7016D6ED78C84C973246E6222670C24358680E6122261D74E4"
+    },
+    "database": {
+      "SourceName": "assets/tests/jenativeshader85/jevariantpositive85_0.hashedvariantbatch",
+      "SourceGuidHex": "7391379CF65F5A5BAFDDBE2C66FE9BA6",
+      "Platform": "pc",
+      "JobKey": "Shader Variant Asset_variantbatch",
+      "JobRunKey": 96100,
+      "ProductID": 10078,
+      "JobPK": 1722,
+      "ProductName": "pc/assets/tests/jenativeshader85/jevariantpositive85_vulkan_1.azshadervariant",
+      "SubID": -2147483647,
+      "AssetType": {
+        "kind": "blob",
+        "bytes": 16,
+        "hex": "51BED81536D8410E90F01FA9FF765FBA"
+      },
+      "LegacyGuid": {
+        "kind": "blob",
+        "bytes": 16,
+        "hex": "887BFDA412515F4DB336BA327480388B"
+      },
+      "Hash": 6470701233923129100,
+      "Flags": 1
+    },
+    "physical": {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Cache\\pc\\assets\\tests\\jenativeshader85\\jevariantpositive85_vulkan_1.azshadervariant",
+      "bytes": 3358,
+      "sha256": "70AF8E18D92F7F7016D6ED78C84C973246E6222670C24358680E6122261D74E4"
+    }
+  },
+  {
+    "uint32SubId": 2147483650,
+    "archive": {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-atomshader-ap85-attempt1\\selected-products\\pc\\assets\\tests\\jenativeshader85\\jevariantpositive85_vulkan_2.azshadervariant",
+      "bytes": 3410,
+      "sha256": "D17631313003E7F69C3C3EC03AE12C2E5333CC7D5502F8D343F196243826961F"
+    },
+    "database": {
+      "SourceName": "assets/tests/jenativeshader85/jevariantpositive85_0.hashedvariantbatch",
+      "SourceGuidHex": "7391379CF65F5A5BAFDDBE2C66FE9BA6",
+      "Platform": "pc",
+      "JobKey": "Shader Variant Asset_variantbatch",
+      "JobRunKey": 96100,
+      "ProductID": 10079,
+      "JobPK": 1722,
+      "ProductName": "pc/assets/tests/jenativeshader85/jevariantpositive85_vulkan_2.azshadervariant",
+      "SubID": -2147483646,
+      "AssetType": {
+        "kind": "blob",
+        "bytes": 16,
+        "hex": "51BED81536D8410E90F01FA9FF765FBA"
+      },
+      "LegacyGuid": {
+        "kind": "blob",
+        "bytes": 16,
+        "hex": "45099CD4E1F851288C696C8242ED7B70"
+      },
+      "Hash": 8155332812400032078,
+      "Flags": 1
+    },
+    "physical": {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Cache\\pc\\assets\\tests\\jenativeshader85\\jevariantpositive85_vulkan_2.azshadervariant",
+      "bytes": 3410,
+      "sha256": "D17631313003E7F69C3C3EC03AE12C2E5333CC7D5502F8D343F196243826961F"
+    }
+  },
+  {
+    "uint32SubId": 2147483651,
+    "archive": {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-atomshader-ap85-attempt1\\selected-products\\pc\\assets\\tests\\jenativeshader85\\jevariantpositive85_vulkan_3.azshadervariant",
+      "bytes": 3410,
+      "sha256": "DABEF571825AFAFED0C87E6FF23DB14EAEC2DA9BD0B595C1B5DF7FF47D5D8C4D"
+    },
+    "database": {
+      "SourceName": "assets/tests/jenativeshader85/jevariantpositive85_0.hashedvariantbatch",
+      "SourceGuidHex": "7391379CF65F5A5BAFDDBE2C66FE9BA6",
+      "Platform": "pc",
+      "JobKey": "Shader Variant Asset_variantbatch",
+      "JobRunKey": 96100,
+      "ProductID": 10080,
+      "JobPK": 1722,
+      "ProductName": "pc/assets/tests/jenativeshader85/jevariantpositive85_vulkan_3.azshadervariant",
+      "SubID": -2147483645,
+      "AssetType": {
+        "kind": "blob",
+        "bytes": 16,
+        "hex": "51BED81536D8410E90F01FA9FF765FBA"
+      },
+      "LegacyGuid": {
+        "kind": "blob",
+        "bytes": 16,
+        "hex": "6651AA4F85C952A4918485BF4761D361"
+      },
+      "Hash": -1401153179518892587,
+      "Flags": 1
+    },
+    "physical": {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Cache\\pc\\assets\\tests\\jenativeshader85\\jevariantpositive85_vulkan_3.azshadervariant",
+      "bytes": 3410,
+      "sha256": "DABEF571825AFAFED0C87E6FF23DB14EAEC2DA9BD0B595C1B5DF7FF47D5D8C4D"
+    }
+  }
+]

@@ -1,0 +1,7 @@
+{
+  "state": "INCOMPLETE_OR_FAILED",
+  "before": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-atomshader-ap84-attempt1\\before-database\\readonly-query.json",
+  "after": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-atomshader-ap84-attempt1\\after-database\\readonly-query.json",
+  "error": "Successful job with zero registered products is not evidence.",
+  "nativeExit": 1
+}

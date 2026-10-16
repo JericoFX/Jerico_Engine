@@ -1,0 +1,39 @@
+{
+  "approved": true,
+  "reviewer": "/root",
+  "utc": "2026-10-16T09:43:46.7618054Z",
+  "scope": "SDK Profile tool imports, ABI and factory descriptor/services/destruction/recreation only",
+  "result": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native83-sdk-preparation-rev1\\execution-consume-resume-attempt3\\result.json",
+    "bytes": 1734,
+    "sha256": "7E90A18451094D3AC3D869CCF706CBCB30824D1A6833DCAFC61CEB109C7ADFCD"
+  },
+  "phases": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native83-sdk-preparation-rev1\\execution-consume-resume-attempt3\\pe-imports.result.json",
+      "bytes": 959,
+      "sha256": "BB27AE81678758B8831716760283CDFCDBC3AD4F3E4F3A85636398CD536FEFC9"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native83-sdk-preparation-rev1\\execution-consume-resume-attempt3\\loader.result.json",
+      "bytes": 949,
+      "sha256": "90D6D3619F3DAE5228ADD1930FC380084F962D45F4334118E52A3E64B4537FF7"
+    }
+  ],
+  "sdkInventory": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native83-sdk-preparation-rev1\\execution-consume-resume-attempt3\\sdk-final-inventory.json",
+    "bytes": 2308831,
+    "sha256": "FE03F8306F295631518C26100C9B38A0F852BA238D5CC9A7D4D93F3BF870078F"
+  },
+  "sdkFiles": 11218,
+  "sourceInputsRehashedByParent": 14034,
+  "authoredInputs": 40,
+  "ownerInputs": 26,
+  "nativeCases82": 811,
+  "wholeGemAccepted": false,
+  "newWholeGems": 0,
+  "limits": [
+    "No activation/cook/GPU/Shipping/GUI proof from this consumer",
+    "Original failed helper attempts and exact inherited MCPP closure review retained"
+  ]
+}

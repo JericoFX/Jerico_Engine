@@ -17,6 +17,8 @@ add_subdirectory(Utils)
 include(${LY_ROOT_FOLDER}/Engine/Render/Integration/render_integration_dependencies.cmake)
 ly_create_alias(NAME Atom.Clients NAMESPACE Gem TARGETS JE::RenderIntegration ${JE_RENDER_INTEGRATION_RUNTIME_DEPENDENCIES})
 if(PAL_TRAIT_BUILD_HOST_TOOLS)
-    ly_create_alias(NAME Atom.Builders NAMESPACE Gem TARGETS JE::EditorRenderIntegration ${JE_RENDER_INTEGRATION_TOOL_DEPENDENCIES})
+    ly_create_alias(NAME Atom.Builders NAMESPACE Gem
+        TARGETS JE::EditorRenderIntegration ${JE_RENDER_INTEGRATION_TOOL_DEPENDENCIES}
+            Gem::Atom_RHI_Null.Private Gem::Atom_RHI_Null.Builders)
     ly_create_alias(NAME Atom.Tools    NAMESPACE Gem TARGETS JE::EditorRenderIntegration ${JE_RENDER_INTEGRATION_TOOL_DEPENDENCIES})
 endif()

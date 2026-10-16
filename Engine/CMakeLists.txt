@@ -12,6 +12,7 @@ add_subdirectory(Render/Integration)
 
 if(PAL_TRAIT_BUILD_HOST_TOOLS)
     add_subdirectory(Assets/PrefabBuilder)
+    add_subdirectory(Assets/RenderBuilders)
     add_subdirectory(${LY_ROOT_FOLDER}/Editor/Materials ${CMAKE_CURRENT_BINARY_DIR}/Editor/Materials)
     add_subdirectory(${LY_ROOT_FOLDER}/Editor/Camera ${CMAKE_CURRENT_BINARY_DIR}/Editor/Camera)
 endif()

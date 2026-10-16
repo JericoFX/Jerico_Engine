@@ -1,0 +1,145 @@
+{
+  "phase": "configure-native-shader82",
+  "startedUtc": "2026-10-16T08:12:18.2137281Z",
+  "finishedUtc": "2026-10-16T08:13:10.0605635Z",
+  "elapsedSeconds": 51.847,
+  "pid": 19192,
+  "processCreationUtc": "2026-10-16T08:12:18.2635350Z",
+  "ramBefore": {
+    "capturedUtc": "2026-10-16T08:12:18.2126354Z",
+    "totalBytes": 34265743360,
+    "freeBytes": 19946283008,
+    "usedPercent": 41.79,
+    "thresholdPercent": 80
+  },
+  "peakRamUsedPercent": 42.44,
+  "ramWaitSamples": [
+    {
+      "capturedUtc": "2026-10-16T08:12:21.3775538Z",
+      "ramUsedPercent": 41.94,
+      "pid": 19192,
+      "processCreationUtc": "2026-10-16T08:12:18.2635350Z",
+      "workingSetBytes": 26173440
+    },
+    {
+      "capturedUtc": "2026-10-16T08:12:24.5484444Z",
+      "ramUsedPercent": 41.86,
+      "pid": 19192,
+      "processCreationUtc": "2026-10-16T08:12:18.2635350Z",
+      "workingSetBytes": 26173440
+    },
+    {
+      "capturedUtc": "2026-10-16T08:12:27.6712410Z",
+      "ramUsedPercent": 41.94,
+      "pid": 19192,
+      "processCreationUtc": "2026-10-16T08:12:18.2635350Z",
+      "workingSetBytes": 32735232
+    },
+    {
+      "capturedUtc": "2026-10-16T08:12:30.7995469Z",
+      "ramUsedPercent": 42.03,
+      "pid": 19192,
+      "processCreationUtc": "2026-10-16T08:12:18.2635350Z",
+      "workingSetBytes": 75022336
+    },
+    {
+      "capturedUtc": "2026-10-16T08:12:33.9066952Z",
+      "ramUsedPercent": 42.02,
+      "pid": 19192,
+      "processCreationUtc": "2026-10-16T08:12:18.2635350Z",
+      "workingSetBytes": 75022336
+    },
+    {
+      "capturedUtc": "2026-10-16T08:12:37.0271216Z",
+      "ramUsedPercent": 42.09,
+      "pid": 19192,
+      "processCreationUtc": "2026-10-16T08:12:18.2635350Z",
+      "workingSetBytes": 90685440
+    },
+    {
+      "capturedUtc": "2026-10-16T08:12:40.1432510Z",
+      "ramUsedPercent": 42.13,
+      "pid": 19192,
+      "processCreationUtc": "2026-10-16T08:12:18.2635350Z",
+      "workingSetBytes": 100851712
+    },
+    {
+      "capturedUtc": "2026-10-16T08:12:43.2539428Z",
+      "ramUsedPercent": 42.19,
+      "pid": 19192,
+      "processCreationUtc": "2026-10-16T08:12:18.2635350Z",
+      "workingSetBytes": 117379072
+    },
+    {
+      "capturedUtc": "2026-10-16T08:12:46.3720006Z",
+      "ramUsedPercent": 42.19,
+      "pid": 19192,
+      "processCreationUtc": "2026-10-16T08:12:18.2635350Z",
+      "workingSetBytes": 138436608
+    },
+    {
+      "capturedUtc": "2026-10-16T08:12:49.4904063Z",
+      "ramUsedPercent": 42.23,
+      "pid": 19192,
+      "processCreationUtc": "2026-10-16T08:12:18.2635350Z",
+      "workingSetBytes": 173735936
+    },
+    {
+      "capturedUtc": "2026-10-16T08:12:52.5966050Z",
+      "ramUsedPercent": 42.26,
+      "pid": 19192,
+      "processCreationUtc": "2026-10-16T08:12:18.2635350Z",
+      "workingSetBytes": 187949056
+    },
+    {
+      "capturedUtc": "2026-10-16T08:12:55.7162235Z",
+      "ramUsedPercent": 42.28,
+      "pid": 19192,
+      "processCreationUtc": "2026-10-16T08:12:18.2635350Z",
+      "workingSetBytes": 188448768
+    },
+    {
+      "capturedUtc": "2026-10-16T08:12:58.8314536Z",
+      "ramUsedPercent": 42.4,
+      "pid": 19192,
+      "processCreationUtc": "2026-10-16T08:12:18.2635350Z",
+      "workingSetBytes": 206594048
+    },
+    {
+      "capturedUtc": "2026-10-16T08:13:01.9420273Z",
+      "ramUsedPercent": 42.34,
+      "pid": 19192,
+      "processCreationUtc": "2026-10-16T08:12:18.2635350Z",
+      "workingSetBytes": 212905984
+    },
+    {
+      "capturedUtc": "2026-10-16T08:13:05.0517739Z",
+      "ramUsedPercent": 42.38,
+      "pid": 19192,
+      "processCreationUtc": "2026-10-16T08:12:18.2635350Z",
+      "workingSetBytes": 220631040
+    },
+    {
+      "capturedUtc": "2026-10-16T08:13:08.1699884Z",
+      "ramUsedPercent": 42.44,
+      "pid": 19192,
+      "processCreationUtc": "2026-10-16T08:12:18.2635350Z",
+      "workingSetBytes": 229228544
+    }
+  ],
+  "ramGuardTriggered": null,
+  "ramPollMilliseconds": 3000,
+  "processMemorySamples": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-shader-compiler-source82-attempt1\\configure-native-shader82.memory-process-samples.jsonl",
+  "executable": "C:\\Program Files\\CMake\\bin\\cmake.exe",
+  "argv": [
+    "-S",
+    "F:\\JericoEngine\\JericoEngine",
+    "-B",
+    "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine"
+  ],
+  "exitCode": 0,
+  "stdout": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-shader-compiler-source82-attempt1\\configure-native-shader82.stdout.log",
+  "stdoutSha256": "390CB9CD2519E12DBB1527C7F9E6617F802B363FB207DD0942724E771C5B29AC",
+  "stderr": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-shader-compiler-source82-attempt1\\configure-native-shader82.stderr.log",
+  "stderrSha256": "E4AAD40ADB2F7C1F6FD6443D22D5B73B58448EA48F5654D451726CDB24C33803"
+}

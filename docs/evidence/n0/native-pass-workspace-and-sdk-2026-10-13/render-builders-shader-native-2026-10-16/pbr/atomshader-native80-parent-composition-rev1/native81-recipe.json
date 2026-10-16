@@ -1,0 +1,42 @@
+{
+  "state": "PARENT_REVIEWED_NOT_RUN",
+  "executable": "C:\\Users\\Jerico\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+  "argv": [
+    "-NoProfile",
+    "-NonInteractive",
+    "-File",
+    "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native80-parent-composition-rev1\\RunFrozenShader81.ps1",
+    "-Execute",
+    "-EvidenceDirectory",
+    "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-shader-compiler-source81-attempt1",
+    "-FreezePath",
+    "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native80-parent-composition-rev1\\freeze81-native-shader.json",
+    "-FreezeSHA256",
+    "C1CF4930576FFB9DD5507F511225C5D97C97B59AF7C6183F5F242014DB675DE7",
+    "-InputCount",
+    "14034"
+  ],
+  "cwd": "F:\\JericoEngine\\JericoEngine",
+  "runnerSHA256": "A056C7598BC517430C5B6A29D041647FBA59A9A784F94BEFE639DC44A4A00A68",
+  "freezeSHA256": "C1CF4930576FFB9DD5507F511225C5D97C97B59AF7C6183F5F242014DB675DE7",
+  "nativeCaseExpectations": [
+    17,
+    10,
+    13,
+    89,
+    15,
+    13,
+    79,
+    575
+  ],
+  "expectedUniqueCases": 811,
+  "expectedNativeSuites": 8,
+  "expectedHosts": 10,
+  "oneOwner": "/root/validation_luna",
+  "noRetry": true,
+  "noUI": true,
+  "admissionBelowPercent": 70,
+  "minimumFreeGiB": 10,
+  "ramGuardPercent": 80,
+  "scope": "Eight native CPU suites/811 unique cases, ten host builds; no AP cook, GPU/UI, SDK replay or Shipping acceptance"
+}

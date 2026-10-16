@@ -1,0 +1,45 @@
+{
+  "state": "READONLY_SOURCE_POLICY_VERIFIED_NO_ORACLE_EDIT_NO_NATIVE",
+  "reading": "CPP/Game complete reused with matching hashes53017F862C526DF6080210A1A00E6678C2CD5382B5D1A51026BF3B0BDE7F7ED2 /4578FACCE19AC99396E5FE904EAC173066FA517AF16AE0F49B03F9082A1057EC",
+  "graft": "One short serial grep JobLogTraceListener:29hits/309files,PID8000 exit0 guardfalse; no refresh/server",
+  "fallback": "Graft logger result covers RCJob/assetUtils, lacks copy handler detail; bounded filename lookup internalBuilders had no copy source, exact RCBuilder.cpp ProcessCopyJob then read following caller/helper spans",
+  "facts": [
+    "Registry AssetProcessorPlatformConfig.setreg487-490 assigns *.azshadervariant params=copy +type51BED815-36D8-410E-90F0-1FA9FF765FBA",
+    "RCBuilder.cpp604-606 dispatches Copy to ProcessCopyJob;629-652 returns one typed JobProduct+Success, cancels if requested, only activity atomics43-47; success body has no Trace/Error/Warning",
+    "rcjob.cpp537-539 binds thread-local RunKey +JobLogTraceListener; success call679/CopyCompiledAssets757; jobID reset0 at787",
+    "assetUtils.cpp1660-1671 listener constructor computes path/connects TraceBus and destructor only disconnects; no LogFile construction",
+    "assetUtils.cpp1721-1759 requires matching thread-local jobID for Printf;1770-1774/1790-1792 allocate/open LogFile lazily on first AppendLog",
+    "rcjob.cpp793-1040 successful copy/verify path contains only error/warning diagnostics on failure conditions, no unconditional successful-start/completion trace"
+  ],
+  "conclusion": "A successful silent built-in copy job is allowed to leave computed LastLogFile absent. Processing/Processed console elsewhere is not proof of an AppendLog under that job RunKey. Unlike shader builder logs, log existence is not unconditional policy for this copy path.",
+  "limits": "This source policy supports, but does not retrospectively measure, exact trace callbacks of AP84 rootcopy. No new AP/SQL run, no acceptance of absent logs generically; parent must combine exact built-in builder identity/RunKey/Completed/errors and current typed product/dependency provenance before changing only private copy-specific oracle. AP84 INCOMPLETE retained pending parent review; positive VariantTree/Batch NOT_RUN85.",
+  "pins": [
+    {
+      "path": "Code/Tools/AssetProcessor/native/resourcecompiler/RCBuilder.cpp",
+      "bytes": 33076,
+      "sha256": "1727B5DC9BEB8B72D9559060C6D7524B8C9F7C624046E5D1D09AE1219E09ADBD"
+    },
+    {
+      "path": "Code/Tools/AssetProcessor/native/resourcecompiler/rcjob.cpp",
+      "bytes": 58954,
+      "sha256": "33BBDA6598B14C1C18CA8EA0FB65A24C00EBDB2EE8016E95CA2C64A47DC655C5"
+    },
+    {
+      "path": "Code/Tools/AssetProcessor/native/utilities/assetUtils.cpp",
+      "bytes": 77138,
+      "sha256": "66310773BB590073224D50D7589AD24D9622D98E09E6291EF7DEF4F2A146B42A"
+    },
+    {
+      "path": "Code/Tools/AssetProcessor/native/utilities/assetUtils.h",
+      "bytes": 24306,
+      "sha256": "195829DE1556A33C847F3840F59B2711DD7C8784BAFDCF35625F110D8A9ED39C"
+    },
+    {
+      "path": "Registry/AssetProcessorPlatformConfig.setreg",
+      "bytes": 23641,
+      "sha256": "434AB84E0A414DAA379EEF7ADF92F9A7E7F415E908055E79BFFF20F6B5E9C875"
+    }
+  ],
+  "helpers": 0,
+  "ownedQueryPidAbsent": true
+}

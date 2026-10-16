@@ -1,0 +1,31 @@
+{
+  "phase": "build-original-shader-tests",
+  "startedUtc": "2026-10-16T07:43:47.6687036Z",
+  "pid": 23432,
+  "processCreationUtc": "2026-10-16T07:43:47.7206020Z",
+  "ramBefore": {
+    "capturedUtc": "2026-10-16T07:43:47.6675859Z",
+    "totalBytes": 34265743360,
+    "freeBytes": 15664549888,
+    "usedPercent": 54.29,
+    "thresholdPercent": 80
+  },
+  "executable": "C:\\Program Files\\CMake\\bin\\cmake.exe",
+  "argv": [
+    "--build",
+    "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine",
+    "--config",
+    "profile",
+    "--target",
+    "AtomShader.Tests",
+    "AtomShader.Builders",
+    "--parallel",
+    "1",
+    "--",
+    "/m:1",
+    "/nodeReuse:false"
+  ],
+  "workingDirectory": "F:\\JericoEngine\\JericoEngine",
+  "stdout": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-original17-before80-attempt2\\build-original-shader-tests.stdout.log",
+  "stderr": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-original17-before80-attempt2\\build-original-shader-tests.stderr.log"
+}

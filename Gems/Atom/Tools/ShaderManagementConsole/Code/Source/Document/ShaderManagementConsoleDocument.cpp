@@ -25,7 +25,7 @@
 #include <AzToolsFramework/API/ToolsApplicationAPI.h>
 #include <Data/ShaderVariantListGenerator.h>
 #include <Document/ShaderManagementConsoleDocument.h>
-#include <HashedVariantListSourceData.h>
+#include <JE/Assets/RenderBuilders/Shader/HashedVariantListSourceData.h>
 
 namespace ShaderManagementConsole
 {
@@ -215,7 +215,7 @@ namespace ShaderManagementConsole
         {
             VariantCompacterKey newKey;
             newKey.m_info = source;
-            newKey.m_hash = AZ::ShaderBuilder::HashedVariantInfoSourceData::HashCombineShaderOptionValues(0, source->m_options);
+            newKey.m_hash = JE::Assets::RenderBuilders::Shader::HashedVariantInfoSourceData::HashCombineShaderOptionValues(0, source->m_options);
             return newKey;
         }
     };

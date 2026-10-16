@@ -1,0 +1,25 @@
+{
+  "hosts": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-shader-compiler-source82-attempt1\\build-shader-hosts82.result.json",
+    "bytes": 19855,
+    "sha256": "52047ACF2D64EF7CD36409AF7A9E40F6DC68D43B44DF4D9B0BAA37E3FA14B6D9"
+  },
+  "authoredCount": 40,
+  "parentReview": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\native-shader-compiler-source82-attempt1\\parent-review82.json",
+    "bytes": 12692,
+    "sha256": "3357F0E78D5436471F4E53DB1C24E15FB849D68C49149B067E266A259C70C17E"
+  },
+  "sourceFreeze": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native82-private-include-preparation-rev1\\freeze82-native-shader.json",
+    "bytes": 3505834,
+    "sha256": "B65743A66E3837A917C49F479AD4F2F6DEEBBAF5719C49ECE30302A1DE05B0EC"
+  },
+  "ownerCount": 26,
+  "sourceCount": 14034,
+  "cache": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\CMakeCache.txt",
+    "bytes": 118643,
+    "sha256": "583D5EC400A54D4A036414F26F332B01CDD6CD3B91B011B6B12DD484B71827BC"
+  }
+}

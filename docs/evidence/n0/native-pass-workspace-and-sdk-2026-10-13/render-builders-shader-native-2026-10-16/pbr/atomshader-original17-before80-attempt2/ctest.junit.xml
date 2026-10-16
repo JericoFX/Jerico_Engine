@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Win32-MSBuild"
+	tests="1"
+	failures="0"
+	disabled="0"
+	skipped="0"
+	hostname="DESKTOP-288HHOD"
+	time="0"
+	timestamp="2026-10-16T04:43:56"
+	>
+	<testcase name="Gem::AtomShader.Tests.main::TEST_RUN" classname="Gem::AtomShader.Tests.main::TEST_RUN" time="0.0421605" status="run">
+		<properties>
+			<property name="cmake_labels" value="FRAMEWORK_googletest;SUITE_main"/>
+		</properties>
+		<system-out>cwd = F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\External\Shader-24f68bbb\Code
+LIB: F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/profile/AtomShader.Tests.dll
+Loading: F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/profile/AtomShader.Tests.dll
+OKAY Library loaded: F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/profile/AtomShader.Tests.dll
+OKAY Symbol found: AzRunUnitTests
+Note: Google Test filter = -*SUITE_smoke*:*SUITE_periodic*:*SUITE_benchmark*:*SUITE_sandbox*:*SUITE_awsi*
+[==========] Running 17 tests from 3 test suites.
+[----------] Global test environment set-up.
+[----------] 3 tests from McppBinderTests
+[ RUN      ] McppBinderTests.ShouldPrintLessBytesThanDefaultSize
+[       OK ] McppBinderTests.ShouldPrintLessBytesThanDefaultSize (0 ms)
+[ RUN      ] McppBinderTests.ShouldPrintSameBytesAsDefaultSize
+[       OK ] McppBinderTests.ShouldPrintSameBytesAsDefaultSize (0 ms)
+[ RUN      ] McppBinderTests.ShouldPrintMoreByt...
+[This part of the test output was removed since it exceeds the threshold of 1024 bytes.]
+</system-out>
+	</testcase>
+</testsuite>
