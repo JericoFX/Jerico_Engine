@@ -264,6 +264,10 @@ namespace ImageProcessingAtom
         {
             // Apply the AZ::DataPatch to obtain a platform-overridden version of the TextureSettings.
             AZStd::unique_ptr<TextureSettings> platformSpecificTextureSettings(platformOverride.Apply(&baseTextureSettings, serializeContext));
+            if (!platformSpecificTextureSettings || platformSpecificTextureSettings->m_mipAlphaAdjust.size() != s_MaxMipMaps)
+            {
+                return STRING_OUTCOME_ERROR("TextureSettings platform override could not be applied to valid texture settings.");
+            }
             AZ_Assert(platformSpecificTextureSettings->m_mipAlphaAdjust.size() == s_MaxMipMaps, "Unexpected m_mipAlphaAdjust size.");
 
             // Adjust overrides data to imply 'platformSpecificTextureSettings' *IS* the override.
@@ -274,6 +278,8 @@ namespace ImageProcessingAtom
         else
         {
             textureSettingsOut = baseTextureSettings;
+            textureSettingsOut.m_platfromOverrides.clear();
+            textureSettingsOut.m_overridingPlatform = platformName;
         }
 
         return STRING_OUTCOME_SUCCESS;

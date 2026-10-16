@@ -16,6 +16,8 @@
 
 #include <AzCore/Asset/AssetManager.h>
 #include <AzCore/Asset/AssetManagerComponent.h>
+#include <AzCore/Debug/TraceMessageBus.h>
+#include <AzCore/std/parallel/atomic.h>
 #include <AzCore/Jobs/JobContext.h>
 #include <AzCore/Jobs/JobManager.h>
 #include <AzCore/Memory/Memory.h>
@@ -75,6 +77,11 @@
 
 #include <AzCore/UnitTest/TestTypes.h>
 #include <ImageBuilderComponent.h>
+#include <ImageProcessingSystemComponent.h>
+#include <Atom/ImageProcessing/ImageProcessingEditorBus.h>
+#include <AzCore/Utils/Utils.h>
+#include <Tests/AssetSystemMocks.h>
+#include <QImage>
 
 using namespace ImageProcessingAtom;
 
@@ -1081,7 +1088,9 @@ namespace UnitTest
         QTemporaryDir temporaryDirectory;
         ASSERT_TRUE(temporaryDirectory.isValid());
         const QString imagePath = temporaryDirectory.filePath("arbitrary_diff.png");
-        ASSERT_TRUE(QFile::copy(m_imagFileNameMap[Image_32X32_checkerboard_png].c_str(), imagePath));
+        QImage sourceImage(32, 32, QImage::Format_RGBA8888);
+        sourceImage.fill(Qt::white);
+        ASSERT_TRUE(sourceImage.save(imagePath, "PNG"));
         QFile imageFile(imagePath);
         ASSERT_TRUE(imageFile.open(QIODevice::ReadOnly));
         const QByteArray originalImageBytes = imageFile.readAll();
@@ -1109,9 +1118,10 @@ namespace UnitTest
         ASSERT_EQ(editorSettings.m_settingsMap.size(), expected.size());
         for (const auto& [platform, settings] : expected)
         {
-            ASSERT_NE(editorSettings.m_settingsMap.find(platform), editorSettings.m_settingsMap.end());
-            EXPECT_TRUE(editorSettings.m_settingsMap.at(platform).Equals(settings, m_context.get()));
-            EXPECT_EQ(editorSettings.m_settingsMap.at(platform).m_enableMipmap, settings.m_enableMipmap);
+            const auto actual = editorSettings.m_settingsMap.find(platform);
+            ASSERT_NE(actual, editorSettings.m_settingsMap.end());
+            EXPECT_TRUE(actual->second.Equals(settings, m_context.get()));
+            EXPECT_EQ(actual->second.m_enableMipmap, settings.m_enableMipmap);
             AZ::u32 minReduce = 0;
             AZ::u32 maxReduce = 0;
             EXPECT_TRUE(editorSettings.GetResolutionInfo(platform, minReduce, maxReduce).empty());
@@ -1128,8 +1138,10 @@ namespace UnitTest
         ImageProcessingAtomEditor::EditorTextureSetting reopened(sourcePath);
         for (const auto& [platform, settings] : expected)
         {
-            EXPECT_TRUE(reopened.m_settingsMap.at(platform).Equals(settings, m_context.get()));
-            EXPECT_EQ(reopened.m_settingsMap.at(platform).m_enableMipmap, settings.m_enableMipmap);
+            const auto actual = reopened.m_settingsMap.find(platform);
+            ASSERT_NE(actual, reopened.m_settingsMap.end());
+            EXPECT_TRUE(actual->second.Equals(settings, m_context.get()));
+            EXPECT_EQ(actual->second.m_enableMipmap, settings.m_enableMipmap);
         }
 
         // Changing the preset explicitly remains available after preserving it.
@@ -1172,6 +1184,269 @@ namespace UnitTest
         AZ::IO::FileIOBase::GetInstance()->Remove(filepath.c_str());
     }
 
+    namespace
+    {
+        class TextureSetPresetRequests final : public ImageProcessingSystemComponent
+        {
+        public:
+            AZ_CLASS_ALLOCATOR(TextureSetPresetRequests, AZ::SystemAllocator);
+            TextureSetPresetRequests() { ImageProcessingAtomEditor::ImageProcessingEditorRequestBus::Handler::BusConnect(); }
+            ~TextureSetPresetRequests() override { ImageProcessingAtomEditor::ImageProcessingEditorRequestBus::Handler::BusDisconnect(); }
+        };
+
+        struct TextureSetProject final : testing::NiceMock<UnitTests::MockAssetSystemRequest>
+        {
+            explicit TextureSetProject(const QString& root) : m_root(root)
+            {
+                auto* fileIO = AZ::IO::FileIOBase::GetInstance();
+                const char* original = fileIO->GetAlias("@projectroot@");
+                m_hadAlias = original != nullptr;
+                m_original = original ? original : "";
+                fileIO->SetAlias("@projectroot@", root.toUtf8().constData());
+                ON_CALL(*this, GenerateRelativeSourcePath(testing::_, testing::_, testing::_)).WillByDefault(
+                    [this](const AZStd::string& path, AZStd::string& relative, AZStd::string& watch)
+                    {
+                        const QString local = QDir(m_root).relativeFilePath(QString::fromUtf8(path.c_str()));
+                        if (QDir::isAbsolutePath(local) || local == ".." || local.startsWith("../"))
+                        {
+                            return false;
+                        }
+                        relative = local.toUtf8().constData();
+                        watch = m_root.toUtf8().constData();
+                        return true;
+                    });
+                BusConnect(); // Only the AP scan-folder boundary is supplied. The component, preset data and XML are real.
+            }
+            ~TextureSetProject()
+            {
+                BusDisconnect();
+                auto* fileIO = AZ::IO::FileIOBase::GetInstance();
+                if (m_hadAlias)
+                {
+                    fileIO->SetAlias("@projectroot@", m_original.c_str());
+                }
+                else
+                {
+                    fileIO->ClearAlias("@projectroot@");
+                }
+            }
+            QString m_root;
+            AZStd::string m_original;
+            bool m_hadAlias = false;
+        };
+
+        class TextureSetExteriorTraceObserver final : public AZ::Debug::TraceMessageBus::Handler
+        {
+        public:
+            TextureSetExteriorTraceObserver() { BusConnect(); }
+            ~TextureSetExteriorTraceObserver() override { BusDisconnect(); }
+            bool OnError(const char*, const char*) override { ++m_errors; return false; }
+            bool OnWarning(const char*, const char*) override { ++m_warnings; return false; }
+            bool OnPreAssert(const char*, int, const char*, const char*) override { ++m_asserts; return false; }
+            AZStd::atomic<int> m_errors{0};
+            AZStd::atomic<int> m_warnings{0};
+            AZStd::atomic<int> m_asserts{0};
+        };
+
+        AZ::Outcome<bool, AZStd::string> EnsureTextureSetPreset(const AZStd::string& path, const AZStd::string& preset)
+        {
+            AZ::Outcome<bool, AZStd::string> result = AZ::Failure(AZStd::string("Missing Image Processing handler"));
+            ImageProcessingAtomEditor::ImageProcessingEditorRequestBus::BroadcastResult(result,
+                &ImageProcessingAtomEditor::ImageProcessingEditorRequests::EnsureTexturePresetIfUnset, path, preset);
+            return result;
+        }
+
+        AZStd::string WriteTextureSetImage(const QTemporaryDir& directory, const char* name)
+        {
+            QImage image(8, 8, QImage::Format_RGBA8888);
+            image.fill(qRgba(29, 101, 213, 255));
+            const QString path = directory.filePath(QString::fromUtf8(name));
+            EXPECT_TRUE(image.save(path, "PNG"));
+            return path.toUtf8().constData();
+        }
+    }
+
+    TEST_F(ImageProcessingTest, TextureSetPreset_UnmatchedNormalCreatesVerifiedSettingsAndPreservesSource)
+    {
+        ASSERT_TRUE(BuilderSettingManager::Instance()->LoadConfigFromFolder(m_defaultSettingFolder.Native()).IsSuccess());
+        QTemporaryDir directory;
+        ASSERT_TRUE(directory.isValid());
+        TextureSetProject project(directory.path());
+        TextureSetPresetRequests requests;
+        const auto path = WriteTextureSetImage(directory, "stone_nor_gl_4k.png");
+        const auto imageBytes = AZ::Utils::ReadFile<AZStd::string>(path);
+        ASSERT_TRUE(imageBytes.IsSuccess());
+        auto result = EnsureTextureSetPreset(path, "Normals");
+        ASSERT_TRUE(result.IsSuccess()) << result.GetError().c_str();
+        EXPECT_TRUE(result.GetValue());
+        TextureSettings loaded;
+        ASSERT_TRUE(TextureSettings::LoadTextureSetting(path + TextureSettings::ExtensionName, loaded, m_context.get()).IsSuccess());
+        EXPECT_EQ(loaded.m_preset, PresetName("Normals"));
+        EXPECT_EQ(loaded.m_sizeReduceLevel, 0);
+        EXPECT_TRUE(loaded.m_enableMipmap);
+        const auto originalSettings = AZ::Utils::ReadFile<AZStd::string>(path + TextureSettings::ExtensionName);
+        ASSERT_TRUE(originalSettings.IsSuccess());
+        result = EnsureTextureSetPreset(path, "Normals");
+        EXPECT_TRUE(result.IsSuccess()) << result.GetError().c_str();
+        if (result.IsSuccess())
+        {
+            EXPECT_FALSE(result.GetValue());
+        }
+        TextureSettings repeated;
+        ASSERT_TRUE(TextureSettings::LoadTextureSetting(path + TextureSettings::ExtensionName, repeated, m_context.get()).IsSuccess());
+        EXPECT_TRUE(repeated.Equals(loaded, m_context.get()));
+        const auto currentSettings = AZ::Utils::ReadFile<AZStd::string>(path + TextureSettings::ExtensionName);
+        ASSERT_TRUE(currentSettings.IsSuccess());
+        EXPECT_EQ(currentSettings.GetValue(), originalSettings.GetValue());
+        const auto currentImage = AZ::Utils::ReadFile<AZStd::string>(path);
+        ASSERT_TRUE(currentImage.IsSuccess());
+        EXPECT_EQ(currentImage.GetValue(), imageBytes.GetValue());
+        EXPECT_TRUE(QDir(directory.path()).entryList({"*.tmp"}, QDir::Files).empty());
+    }
+
+    TEST_F(ImageProcessingTest, TextureSetPreset_CompatibleFilenameInferenceDoesNotCreateSidecar)
+    {
+        ASSERT_TRUE(BuilderSettingManager::Instance()->LoadConfigFromFolder(m_defaultSettingFolder.Native()).IsSuccess());
+        QTemporaryDir directory;
+        ASSERT_TRUE(directory.isValid());
+        TextureSetProject project(directory.path());
+        TextureSetPresetRequests requests;
+        const auto path = WriteTextureSetImage(directory, "stone_4K_Normal.png");
+        auto result = EnsureTextureSetPreset(path, "Normals");
+        ASSERT_TRUE(result.IsSuccess()) << result.GetError().c_str();
+        EXPECT_FALSE(result.GetValue());
+        EXPECT_FALSE(QFileInfo::exists(QString::fromUtf8((path + TextureSettings::ExtensionName).c_str())));
+        const auto albedo = WriteTextureSetImage(directory, "stone_diff_4k.png");
+        result = EnsureTextureSetPreset(albedo, "Albedo");
+        ASSERT_TRUE(result.IsSuccess()) << result.GetError().c_str();
+        EXPECT_FALSE(result.GetValue()); // Both opaque/alpha defaults preserve the base-color RGB; no image decode is needed.
+        EXPECT_FALSE(QFileInfo::exists(QString::fromUtf8((albedo + TextureSettings::ExtensionName).c_str())));
+    }
+
+    TEST_F(ImageProcessingTest, TextureSetPreset_RealPackedAndScalarPresetsPreserveLinearData)
+    {
+        ASSERT_TRUE(BuilderSettingManager::Instance()->LoadConfigFromFolder(m_defaultSettingFolder.Native()).IsSuccess());
+        QTemporaryDir directory;
+        ASSERT_TRUE(directory.isValid());
+        TextureSetProject project(directory.path());
+        TextureSetPresetRequests requests;
+        struct Assignment { const char* file; const char* preset; };
+        const Assignment assignments[] = {
+            Assignment{"stone_arm_4k.png", "LayerMask"}, {"stone_orm_4k.png", "LayerMask"}, {"stone_ordp_4k.png", "LayerMask"},
+            {"stone_roughness_4k.png", "Reflectance"}, {"stone_metallic_4k.png", "Reflectance"},
+            {"stone_ao_4k.png", "AmbientOcclusion"}, {"stone_disp_4k.png", "Displacement"}};
+        for (const auto& assignment : assignments)
+        {
+            const auto path = WriteTextureSetImage(directory, assignment.file);
+            auto result = EnsureTextureSetPreset(path, assignment.preset);
+            ASSERT_TRUE(result.IsSuccess()) << result.GetError().c_str();
+            EXPECT_TRUE(result.GetValue());
+            TextureSettings loaded;
+            ASSERT_TRUE(TextureSettings::LoadTextureSetting(path + TextureSettings::ExtensionName, loaded, m_context.get()).IsSuccess());
+            EXPECT_EQ(loaded.m_preset, PresetName(assignment.preset));
+            EXPECT_EQ(loaded.m_sizeReduceLevel, 0);
+            for (const char* platform : {"pc", "linux"})
+            {
+                const auto* preset = BuilderSettingManager::Instance()->GetPreset(loaded.m_preset, platform);
+                ASSERT_NE(preset, nullptr);
+                EXPECT_EQ(preset->m_srcColorSpace, ColorSpace::linear);
+                EXPECT_EQ(preset->m_destColorSpace, ColorSpace::linear);
+                if (loaded.m_preset == PresetName("LayerMask"))
+                {
+                    EXPECT_EQ(preset->m_pixelFormat, ePixelFormat_R8G8B8X8);
+                    EXPECT_TRUE(preset->m_swizzle.empty());
+                    EXPECT_FALSE(preset->m_isMipRenormalize);
+                    EXPECT_FALSE(preset->m_isPowerOf2);
+                    EXPECT_EQ(preset->m_maxTextureSize, 0);
+                    EXPECT_EQ(preset->m_minTextureSize, 0);
+                    EXPECT_EQ(preset->m_sizeReduceLevel, 0);
+                    EXPECT_EQ(preset->m_glossFromNormals, 0);
+                    EXPECT_EQ(preset->m_mipmapSetting, nullptr);
+                    EXPECT_TRUE(loaded.m_enableMipmap);
+                    EXPECT_EQ(loaded.m_mipGenType, MipGenType::blackmanHarris);
+                    EXPECT_FALSE(loaded.m_maintainAlphaCoverage);
+                }
+                else
+                {
+                    EXPECT_EQ(preset->m_pixelFormat, ePixelFormat_BC4); // Scalar Red is representable; this format is never used for packed RGB.
+                }
+            }
+        }
+        EXPECT_TRUE(QDir(directory.path()).entryList({"*.tmp"}, QDir::Files).empty());
+    }
+
+    TEST_F(ImageProcessingTest, TextureSetPreset_IncompatibleNativeBaseAndPlatformOverrideRequireReview)
+    {
+        ASSERT_TRUE(BuilderSettingManager::Instance()->LoadConfigFromFolder(m_defaultSettingFolder.Native()).IsSuccess());
+        QTemporaryDir directory;
+        ASSERT_TRUE(directory.isValid());
+        TextureSetProject project(directory.path());
+        TextureSetPresetRequests requests;
+        for (const bool platformOverride : {false, true})
+        {
+            SCOPED_TRACE(platformOverride);
+            const auto path = WriteTextureSetImage(directory, platformOverride ? "override_nor_gl_4k.png" : "base_nor_gl_4k.png");
+            const auto sidecar = path + TextureSettings::ExtensionName;
+            TextureSettings authored;
+            authored.m_preset = PresetName(platformOverride ? "Normals" : "Albedo");
+            authored.m_sizeReduceLevel = 2;
+            if (platformOverride)
+            {
+                TextureSettings overridden = authored;
+                overridden.m_preset = PresetName("Albedo");
+                ASSERT_TRUE(authored.ApplySettings(overridden, "pc", m_context.get()).IsSuccess());
+            }
+            ASSERT_TRUE(TextureSettings::WriteTextureSetting(sidecar, authored, m_context.get()).IsSuccess());
+            const auto original = AZ::Utils::ReadFile<AZStd::string>(sidecar);
+            ASSERT_TRUE(original.IsSuccess());
+            EXPECT_FALSE(EnsureTextureSetPreset(path, "Normals").IsSuccess());
+            const auto current = AZ::Utils::ReadFile<AZStd::string>(sidecar);
+            ASSERT_TRUE(current.IsSuccess());
+            EXPECT_EQ(current.GetValue(), original.GetValue());
+            TextureSettings reopened;
+            ASSERT_TRUE(TextureSettings::LoadTextureSetting(sidecar, reopened, m_context.get()).IsSuccess());
+            EXPECT_TRUE(reopened.Equals(authored, m_context.get()));
+        }
+        EXPECT_TRUE(QDir(directory.path()).entryList({"*.tmp"}, QDir::Files).empty());
+    }
+
+    TEST_F(ImageProcessingTest, TextureSetPreset_ManualSettingsAndNonProjectSourcesAreNeverChanged)
+    {
+        ASSERT_TRUE(BuilderSettingManager::Instance()->LoadConfigFromFolder(m_defaultSettingFolder.Native()).IsSuccess());
+        QTemporaryDir directory;
+        QTemporaryDir outside;
+        ASSERT_TRUE(directory.isValid());
+        ASSERT_TRUE(outside.isValid());
+        TextureSetProject project(directory.path());
+        TextureSetPresetRequests requests;
+        const auto path = WriteTextureSetImage(directory, "stone_nor_dx_4k.png");
+        const auto sidecar = path + TextureSettings::ExtensionName;
+        for (const AZStd::string manual : {AZStd::string("manual sidecar, deliberately not XML"),
+                 AZStd::string("<ObjectStream version=\"3\"><Class")})
+        {
+            SCOPED_TRACE(manual.c_str());
+            ASSERT_TRUE(AZ::Utils::WriteFile(manual, sidecar).IsSuccess());
+            AZ::Outcome<bool, AZStd::string> result = AZ::Failure(AZStd::string("Not called"));
+            {
+                TextureSetExteriorTraceObserver trace;
+                result = EnsureTextureSetPreset(path, "Normals");
+                EXPECT_EQ(trace.m_errors.load(), 0);
+                EXPECT_EQ(trace.m_warnings.load(), 0);
+                EXPECT_EQ(trace.m_asserts.load(), 0);
+            }
+            EXPECT_FALSE(result.IsSuccess()); // Inline review, not a noisy deserialization attempt or a claim of incompatibility.
+            auto bytes = AZ::Utils::ReadFile<AZStd::string>(sidecar);
+            ASSERT_TRUE(bytes.IsSuccess());
+            EXPECT_EQ(bytes.GetValue(), manual);
+        }
+        const auto foreign = WriteTextureSetImage(outside, "foreign_4K_Normal.png");
+        EXPECT_FALSE(EnsureTextureSetPreset(foreign, "Normals").IsSuccess());
+        EXPECT_FALSE(QFileInfo::exists(QString::fromUtf8((foreign + TextureSettings::ExtensionName).c_str())));
+        const auto unconfigured = WriteTextureSetImage(directory, "stone_unknown_4k.png");
+        EXPECT_FALSE(EnsureTextureSetPreset(unconfigured, "UnknownPreset").IsSuccess());
+        EXPECT_FALSE(QFileInfo::exists(QString::fromUtf8((unconfigured + TextureSettings::ExtensionName).c_str())));
+        EXPECT_TRUE(QDir(directory.path()).entryList({"*.tmp"}, QDir::Files).empty());
+    }
 } // UnitTest
 
 AZ_UNIT_TEST_HOOK(DEFAULT_UNIT_TEST_ENV);

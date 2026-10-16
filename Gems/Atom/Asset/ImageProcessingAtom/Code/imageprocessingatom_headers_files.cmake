@@ -8,4 +8,5 @@
 
 set(FILES
     Include/Atom/ImageProcessing/ImageProcessingDefines.h
+    Include/Atom/ImageProcessing/ImageProcessingEditorBus.h
 )

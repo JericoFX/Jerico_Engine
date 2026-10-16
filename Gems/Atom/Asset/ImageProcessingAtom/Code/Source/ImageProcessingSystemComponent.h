@@ -41,6 +41,8 @@ namespace ImageProcessingAtom
         ////////////////////////////////////////////////////////////////////////
         // AtomImageProcessingEditorRequestBus interface implementation
         void OpenSourceTextureFile(const AZ::Uuid& textureSourceID) override;
+        AZ::Outcome<bool, AZStd::string> EnsureTexturePresetIfUnset(
+            const AZStd::string& sourcePath, const AZStd::string& presetName) override;
         ////////////////////////////////////////////////////////////////////////
         
         ////////////////////////////////////////////////////////////////////////

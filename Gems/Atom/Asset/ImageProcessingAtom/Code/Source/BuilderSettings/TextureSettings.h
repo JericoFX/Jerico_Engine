@@ -77,6 +77,12 @@ namespace ImageProcessingAtom
         */
         static StringOutcome GetPlatformSpecificTextureSetting(const PlatformName& platformName, const TextureSettings& baseTextureSettings, TextureSettings& textureSettingsOut, AZ::SerializeContext* serializeContext = nullptr);
 
+        //! Distinguishes an absent override from an override that failed to apply.
+        bool HasPlatformOverride(const PlatformName& platformName) const
+        {
+            return m_platfromOverrides.find(platformName) != m_platfromOverrides.end();
+        }
+
         static void Reflect(AZ::ReflectContext* context);
 
         /**
