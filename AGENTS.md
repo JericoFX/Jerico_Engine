@@ -11,7 +11,7 @@
 ## Reglas de producto que sustituyen las anteriores
 
 - JE es la nomenclatura propia: C++ `JE::` con subnamespaces, CMake `JE::`, macros `JE_`, rutas/targets/diagnósticos propios coherentes. Migrar también internals adaptados de O3DE; no dejar `AZ` para siempre detrás de alias/fachada. Preservar nombres genuinos de SDKs/bibliotecas privadas y avisos. Detalles en contrato JE.
-- Solo DX12 y Vulkan: Windows ambos, Linux Vulkan. No llamar DX12 diferido. Rendering RT, Metal/WebGPU/DX11/OpenGL/móvil siguen fuera. Null tests/headless no es renderer permitido de producto.
+- Orden posterior del propietario, 2026-10-15: sólo Vulkan activo por ahora, con Windows-Vulkan y Linux-Vulkan como gates separados. Conservar DX12 en fuente e historial, fuera del build/cook/distribución y pruebas activos hasta nueva orden. VR/OpenXR continúa sobre Vulkan. Rendering RT, Metal/WebGPU/DX11/OpenGL/móvil siguen fuera. Null tests/headless no es renderer permitido de producto.
 - AWS y multiplayer EXCLUIDOS, no opcionales ni deferred. No server/matchmaking/replication/cloud identity/telemetry/services. Auditar bootstrap/cook/deployment y no solo lista de Gems.
 - Geología REACTIVADA. No obedecer cancelación integral anterior. BSP→OpenVDB sigue cancelado; no confundir reactivar herramientas con reactivar backend descartado.
 - BSP/UI/materiales visibles son el primer camino. No postergar geometría hasta terminar audio/IA/packaging avanzado. Resto de capacidades existentes se conserva sin añadir plataforma online.
@@ -46,8 +46,14 @@ Al publicar mediante API Git, leer HEAD nuevo, crear commit con parent correcto 
 
 Antes de diagnóstico consultar ENGINE_DEBUGGING_BOOK y volver al primer output defectuoso con inputs reales. Captura original del viewport/render; UI mock no prueba producto. RED/GREEN discriminante, sin tolerancias relajadas para salvar fallo. No miles de checks triviales en lugar de pruebas de material, BSP, interacción y runtime.
 
-En cada checkpoint visible: escena/cámara/settings/build/backend, captura antes/después, tiempos CPU/GPU p50/p95/p99, memoria y alcance. Instrumentación apagada no añade readback por frame. Windows DX12, Windows Vulkan y Linux Vulkan son estados separados. Headless no acredita render y desktop stereo no acredita headset. No reclamar velocidad a partir de menos código o de un paper.
+En cada checkpoint visible: escena/cámara/settings/build/backend, captura antes/después, tiempos CPU/GPU p50/p95/p99, memoria y alcance. Instrumentación apagada no añade readback por frame. Windows Vulkan y Linux Vulkan son estados separados; las pruebas DX12 históricas se conservan sin exigir un gate DX12 activo. Headless no acredita render y desktop stereo no acredita headset. No reclamar velocidad a partir de menos código o de un paper.
 
 Después: actualizar HANDOFF/ACTIVE_SLICE y el requisito probado. Evidencia detallada por vertical, lecciones en error book; no diarios repetidos en todos los masters. Docs-only puede verificarse como documentación sin compilar el engine; jamás PRODUCT PASS. Bloqueo nombra fallo/permiso/paquete y próximos trabajos independientes.
 
 Buoyancy continúa DESIGN ONLY. Rendering RT/underwater y capacidades históricas diferidas no se activan por reordenar el roadmap. Multiplayer es excluido incluso si un master anterior decía deferred. No borrar evidencia anterior ni acreditar O3DE con PASS de Cry.
+
+## Consulta previa de upstream O3DE
+
+Antes de trabajar en un subsistema, consultar los [PRs relevantes de O3DE](https://github.com/o3de/o3de/pulls), abiertos y merged. Seguir la [guía research](C:/Users/Jerico/.agents/skills/research/SKILL.md) y contrastar las afirmaciones con fuentes primarias.
+Registrar en la evidencia existente del trabajo el PR, commit o revisión consultada y su aplicabilidad concreta al GOAL, incluidos límites y cambios locales relevantes; consultar upstream no implica adoptar automáticamente su solución.
+Toda reutilización debe adaptarse al owner y arquitectura nativos autorizados por el GOAL, sin introducir packaging Gem automáticamente ni cambiar foco, alcance o criterios de aceptación. Respetar licencias y atribuciones, revisar dependencias y preservar los tests y gates necesarios antes de integrar.
