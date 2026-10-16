@@ -1,0 +1,749 @@
+{
+  "schema": "je-native-runtime87-durable-evidence-v1",
+  "archive": {
+    "sha256": "2D8E943BF17F24504B3CCA3765B358368AB5C2BC299B7A4F40D12A456F3DF603",
+    "file": "runtime-vulkan87-evidence.zip",
+    "bytes": 2251457
+  },
+  "entriesVerified": 122,
+  "uncompressedBytes": 9792156.0,
+  "entries": [
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native86-runtime-preparation-rev1\\source\\CMakeLists.txt",
+      "entry": "consumer-source/CMakeLists.txt",
+      "bytes": 2918,
+      "sha256": "4D41E0CA1C5DB698E7585D45BA7A66457D96BE747E97D307576966491E68D20C"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native86-runtime-preparation-rev1\\source\\main.cpp",
+      "entry": "consumer-source/main.cpp",
+      "bytes": 31065,
+      "sha256": "9138B7F4FAAD9AFE3DA2093B8DB28DDD70AE9DCBD043B992B31405DA5551DE2C"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native86-runtime-preparation-rev1\\source\\project.json",
+      "entry": "consumer-source/project.json",
+      "bytes": 442,
+      "sha256": "A24BA9320A4D836E342E43D0F8FE4A91B8900C80AAECB2033BCA4699A388809E"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native86-runtime-preparation-rev1\\source\\runtime_files.cmake",
+      "entry": "consumer-source/runtime_files.cmake",
+      "bytes": 28,
+      "sha256": "136A1F7A7142EB7EB66AA27170A7DE2AEF7EEE9665B45A9A1F5F2963EA23C2D1"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native86-runtime-preparation-rev1\\source-revision5\\main.before.cpp",
+      "entry": "private-fix/source-revision5/main.before.cpp",
+      "bytes": 30550,
+      "sha256": "0950C56750CCAA16E754F5952CBF04629DAE5F967452319F58A3C631908F9758"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native86-runtime-preparation-rev1\\source-revision5\\receipt.json",
+      "entry": "private-fix/source-revision5/receipt.json",
+      "bytes": 5086,
+      "sha256": "2B17488E9A816BA1FD12AF982E2AC9A1087D83B99E8E393AA49BF7B8C4FB013E"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native86-runtime-preparation-rev1\\source-revision5\\source.inverse.patch",
+      "entry": "private-fix/source-revision5/source.inverse.patch",
+      "bytes": 956,
+      "sha256": "36BD46E88955CBF008BC2DBDA8876E984F81DE3C0E3BD310AE3171563B25F8EE"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native86-runtime-preparation-rev1\\source-revision5\\source.patch",
+      "entry": "private-fix/source-revision5/source.patch",
+      "bytes": 956,
+      "sha256": "3998D8532C6571892B1CA2BD4940B3981103D2C5A6506C894DA1EE5955B1B289"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native86-runtime-preparation-rev1\\vulkan-optional-bindless-shutdown-guard-rev1\\Device.before.cpp",
+      "entry": "private-fix/vulkan-optional-bindless-shutdown-guard-rev1/Device.before.cpp",
+      "bytes": 106935,
+      "sha256": "A6C6E2A75B1CFFD7E76492C793B4F8CB07334977D6F364AEDF41FD602D45F815"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native86-runtime-preparation-rev1\\vulkan-optional-bindless-shutdown-guard-rev1\\receipt.json",
+      "entry": "private-fix/vulkan-optional-bindless-shutdown-guard-rev1/receipt.json",
+      "bytes": 3621,
+      "sha256": "5F75B3A8008FF1504C4EBB3140F254375FDBBA44B6C6F6400FD2181FDC92194E"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native86-runtime-preparation-rev1\\vulkan-optional-bindless-shutdown-guard-rev1\\source.inverse.patch",
+      "entry": "private-fix/vulkan-optional-bindless-shutdown-guard-rev1/source.inverse.patch",
+      "bytes": 329,
+      "sha256": "D2B43BFD4A8E62D0F26F803410151904B7DDC77EA236F0C715E29DAA4635EAD3"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native86-runtime-preparation-rev1\\vulkan-optional-bindless-shutdown-guard-rev1\\source.patch",
+      "entry": "private-fix/vulkan-optional-bindless-shutdown-guard-rev1/source.patch",
+      "bytes": 329,
+      "sha256": "2869295E3C8D1284E984A21C1641DBA48A3DD5A3CA1B99E1B46F6DE307BA1215"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native86-runtime-preparation-rev1\\parent-freeze87-engine-inputs.json",
+      "entry": "inputs/engine-freeze87.json",
+      "bytes": 3481480,
+      "sha256": "FD8E84C028CE797944FEC81A1C8202416711532126628DCA5BA9E5282EDF56FA"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native86-runtime-preparation-rev1\\parent-scope86.json",
+      "entry": "inputs/preserved-working-tree-scope86.json",
+      "bytes": 21639,
+      "sha256": "9C00912654DEB892777C924DD276CEFA00959DF2FDA8C7EB90103ABEF6BBEC57"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native86-runtime-preparation-rev1\\parent-upstream86-bindless.json",
+      "entry": "upstream/bindless-prs-review.json",
+      "bytes": 7028,
+      "sha256": "C27D9D86B849F87901409BA9AD27884490F2019A45873A6A30B214B8CACA9320"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native86-runtime-preparation-rev1\\execution-runtime86-cdb-attempt1\\cdb.log",
+      "entry": "red86-cdb1/cdb.log",
+      "bytes": 27369,
+      "sha256": "048626F8DD5F80E06B7652FA97DDB11BE887552E5B083F52D7B5B0EDE8161F25"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native86-runtime-preparation-rev1\\cdb86-commands.txt",
+      "entry": "diagnostic/cdb-commands.txt",
+      "bytes": 344,
+      "sha256": "131EF723E6806C502A494916DC552D9522158352BBDB8271C1713A63C1A9EC30"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native86-runtime-preparation-rev1\\Run-ShaderRuntime86-attempt4.ps1",
+      "entry": "runner/Run-ShaderRuntime86-attempt4.ps1",
+      "bytes": 25045,
+      "sha256": "AFFA2E10FC8B852432ACBB989F1A6ED12069A63AE7E6907B2353F6FDEB265B0E"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native86-runtime-preparation-rev1\\snapshot86-attempt1\\runtime-manifest.json",
+      "entry": "inputs/runtime-manifest.json",
+      "bytes": 12858,
+      "sha256": "01EC31D14123965AEEFAA9756684024876DAD079732E37187FDD3C183A1EFD96"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native87-runtime-preparation-rev1\\execution-build-install87-attempt1\\build-vulkan.identities-cleanup.json",
+      "entry": "execution-build-install87-attempt1/build-vulkan.identities-cleanup.json",
+      "bytes": 4107,
+      "sha256": "E2177ADAC5A15A9B80744D28A0E4C2C4D8C46F698A8510705355D0F341A4936C"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native87-runtime-preparation-rev1\\execution-build-install87-attempt1\\build-vulkan.result.json",
+      "entry": "execution-build-install87-attempt1/build-vulkan.result.json",
+      "bytes": 2103,
+      "sha256": "A243A68CFFD85F570ECC40755AC22CBCA2A68309EA43617AA8FA619B1053B528"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native87-runtime-preparation-rev1\\execution-build-install87-attempt1\\build-vulkan.start.json",
+      "entry": "execution-build-install87-attempt1/build-vulkan.start.json",
+      "bytes": 646,
+      "sha256": "34F8A84992361E0B41A727EFAD6D4D77ABFD790084F4AE2347E643E3D2CC6B65"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native87-runtime-preparation-rev1\\execution-build-install87-attempt1\\build-vulkan.stderr.log",
+      "entry": "execution-build-install87-attempt1/build-vulkan.stderr.log",
+      "bytes": 0,
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native87-runtime-preparation-rev1\\execution-build-install87-attempt1\\build-vulkan.stdout.log",
+      "entry": "execution-build-install87-attempt1/build-vulkan.stdout.log",
+      "bytes": 1887,
+      "sha256": "E95A90A096136D36C344204458E58F9DA171C0C253485A6222E4BE86223062F7"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native87-runtime-preparation-rev1\\execution-build-install87-attempt1\\install.identities-cleanup.json",
+      "entry": "execution-build-install87-attempt1/install.identities-cleanup.json",
+      "bytes": 1053,
+      "sha256": "9E3A382057DF70F1864DA4BD26C3DEC9771E34B707E1CAA686F585C966275562"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native87-runtime-preparation-rev1\\execution-build-install87-attempt1\\install.result.json",
+      "entry": "execution-build-install87-attempt1/install.result.json",
+      "bytes": 1414,
+      "sha256": "1B1F621154F479406EA4EC1C5B39FFF37EA97D462FAC97A395875CEE725B9F81"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native87-runtime-preparation-rev1\\execution-build-install87-attempt1\\install.start.json",
+      "entry": "execution-build-install87-attempt1/install.start.json",
+      "bytes": 396,
+      "sha256": "631D2038D557E71AFC0E395C5400E809F5B43F446428F82700E601E7BC9447F7"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native87-runtime-preparation-rev1\\execution-build-install87-attempt1\\install.stderr.log",
+      "entry": "execution-build-install87-attempt1/install.stderr.log",
+      "bytes": 0,
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native87-runtime-preparation-rev1\\execution-build-install87-attempt1\\install.stdout.log",
+      "entry": "execution-build-install87-attempt1/install.stdout.log",
+      "bytes": 18223,
+      "sha256": "250A39D3B905CFE5E1DDFD44ED6C959674B3B95BC261DC9AA11558181C7A81AA"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native87-runtime-preparation-rev1\\execution-build-install87-attempt1\\postflight.json",
+      "entry": "execution-build-install87-attempt1/postflight.json",
+      "bytes": 722,
+      "sha256": "C849C23E4B479E98B4FCBA52A5572362E985BAC0098EFF93FBADF2339C26E1C9"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native87-runtime-preparation-rev1\\execution-build-install87-attempt1\\preflight.json",
+      "entry": "execution-build-install87-attempt1/preflight.json",
+      "bytes": 1328,
+      "sha256": "7C769F19D4C10DDA7C11582D74C3CF3E088F2AD83C9C07FEAD7F6BEEE14EC6E2"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native87-runtime-preparation-rev1\\execution-build-install87-attempt1\\rhi-tests-review.json",
+      "entry": "execution-build-install87-attempt1/rhi-tests-review.json",
+      "bytes": 1122,
+      "sha256": "1EF7FDE5CB76A3A316B0321DB4DC6D162D52C5971DE395978343C229FE4D61F0"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native87-runtime-preparation-rev1\\execution-build-install87-attempt1\\rhi-tests.identities-cleanup.json",
+      "entry": "execution-build-install87-attempt1/rhi-tests.identities-cleanup.json",
+      "bytes": 1056,
+      "sha256": "1BB1F7385C5732427397159A918DD741B417594E8A667EA5034B75ACE86D74A4"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native87-runtime-preparation-rev1\\execution-build-install87-attempt1\\rhi-tests.result.json",
+      "entry": "execution-build-install87-attempt1/rhi-tests.result.json",
+      "bytes": 965,
+      "sha256": "2BA9B81471C42172EE4A73B01F2D63B94954F878C6D86905DBC7A3AB716FDF89"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native87-runtime-preparation-rev1\\execution-build-install87-attempt1\\rhi-tests.start.json",
+      "entry": "execution-build-install87-attempt1/rhi-tests.start.json",
+      "bytes": 496,
+      "sha256": "B37A7AE4F69FC5F761CE5EA5F6836ADA086133007C6F5614169095CE4F9A139A"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native87-runtime-preparation-rev1\\execution-build-install87-attempt1\\rhi-tests.stderr.log",
+      "entry": "execution-build-install87-attempt1/rhi-tests.stderr.log",
+      "bytes": 0,
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native87-runtime-preparation-rev1\\execution-build-install87-attempt1\\rhi-tests.stdout.log",
+      "entry": "execution-build-install87-attempt1/rhi-tests.stdout.log",
+      "bytes": 405,
+      "sha256": "AEEFC6335BF0010EB341519F8FFC051CC0E76260828E0949654A42B8C89803C9"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native87-runtime-preparation-rev1\\execution-build-install87-attempt1\\rhi-tests.xml",
+      "entry": "execution-build-install87-attempt1/rhi-tests.xml",
+      "bytes": 87424,
+      "sha256": "0BA18AD38CDCA63C9B53FCAAA9480BFDC2170A549241A8228DF00CDACFC8331B"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native87-runtime-preparation-rev1\\execution-build-install87-attempt1\\sdk-delta87.json",
+      "entry": "execution-build-install87-attempt1/sdk-delta87.json",
+      "bytes": 784,
+      "sha256": "93AEB39687CC91B62FCD9FDDE023989FDC541CEDF547696F7892376D1F09FEDA"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native87-runtime-preparation-rev1\\execution-build-install87-attempt1\\sdk-inventory87.json",
+      "entry": "execution-build-install87-attempt1/sdk-inventory87.json",
+      "bytes": 2308831,
+      "sha256": "B051028660605A6F831BDBAF45FABC7790DC4239CC4A31BDD7F937794EF6C227"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native87-runtime-preparation-rev1\\execution-build-install87-attempt1\\stage-receipt.json",
+      "entry": "execution-build-install87-attempt1/stage-receipt.json",
+      "bytes": 2889,
+      "sha256": "FD03C6C0E582406242FFE261460F2F5987D0435067BD2FBD554115A6FF508114"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native87-runtime-preparation-rev1\\execution-runtime87-cdb-attempt1\\cdb-positive.identities-cleanup.json",
+      "entry": "execution-runtime87-cdb-attempt1/cdb-positive.identities-cleanup.json",
+      "bytes": 1172,
+      "sha256": "AA294C812E55D9AEB15D7CF6A4051C6C310B898AD3E965D4BD5B9352F2BC6E50"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native87-runtime-preparation-rev1\\execution-runtime87-cdb-attempt1\\cdb-positive.result.json",
+      "entry": "execution-runtime87-cdb-attempt1/cdb-positive.result.json",
+      "bytes": 971,
+      "sha256": "7B31B27BDAF61B27CEDF7CFCC479F339DF87F7E8AD5199DA33FDFFB941CB0B14"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native87-runtime-preparation-rev1\\execution-runtime87-cdb-attempt1\\cdb-positive.start.json",
+      "entry": "execution-runtime87-cdb-attempt1/cdb-positive.start.json",
+      "bytes": 2476,
+      "sha256": "553FD8D4549295CB72A533EE572F8FBD92F0F43BB026603CAA125965FE04473C"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native87-runtime-preparation-rev1\\execution-runtime87-cdb-attempt1\\cdb-positive.stderr.log",
+      "entry": "execution-runtime87-cdb-attempt1/cdb-positive.stderr.log",
+      "bytes": 723,
+      "sha256": "01B63431DEBFE9D3B9AF9DFC8FA276BC97290D94EAD4C2091DF6C7102B0B00AB"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native87-runtime-preparation-rev1\\execution-runtime87-cdb-attempt1\\cdb-positive.stdout.log",
+      "entry": "execution-runtime87-cdb-attempt1/cdb-positive.stdout.log",
+      "bytes": 33378,
+      "sha256": "4BE5B75950A5B9E0999C6D376C72F61497D10AB361AE581542A48CFFA2B38553"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native87-runtime-preparation-rev1\\execution-runtime87-cdb-attempt1\\cdb.log",
+      "entry": "execution-runtime87-cdb-attempt1/cdb.log",
+      "bytes": 31358,
+      "sha256": "B7EAF87F4830BE3705CF153D4144A66802FEC144B6B7F706D392CCB468DD4C23"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native87-runtime-preparation-rev1\\execution-runtime87-cdb-attempt1\\diagnostic-result.json",
+      "entry": "execution-runtime87-cdb-attempt1/diagnostic-result.json",
+      "bytes": 194,
+      "sha256": "5CACD7BB6903088230C36C3FA50F98E91FFF107F50DCCC48780DE6DBC06C72D2"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native87-runtime-preparation-rev1\\execution-runtime87-cdb-attempt1\\postflight.json",
+      "entry": "execution-runtime87-cdb-attempt1/postflight.json",
+      "bytes": 769,
+      "sha256": "9E935CD3D6FBF10AF5D87E4672DE0C904D5C582F728CEC5BC0A9FF045FE0157F"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native87-runtime-preparation-rev1\\execution-runtime87-cdb-attempt1\\preflight.json",
+      "entry": "execution-runtime87-cdb-attempt1/preflight.json",
+      "bytes": 1480,
+      "sha256": "22EE8FAE373B7E30D60646FF57288E21E05DDB7AA8D828C3041F6CA8A4A03FE6"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native87-runtime-preparation-rev1\\execution-runtime87-attempt5\\build-consumer.identities-cleanup.json",
+      "entry": "execution-runtime87-attempt5/build-consumer.identities-cleanup.json",
+      "bytes": 4108,
+      "sha256": "BF57E73044AD15C22A65BC93655660C3C51696B01A2CE6DD88558686B68064DD"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native87-runtime-preparation-rev1\\execution-runtime87-attempt5\\build-consumer.result.json",
+      "entry": "execution-runtime87-attempt5/build-consumer.result.json",
+      "bytes": 2096,
+      "sha256": "EFB38E08C0EFA6919F6D9C789528F1C80527A2232EA52DE991210A5B67D9CEFD"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native87-runtime-preparation-rev1\\execution-runtime87-attempt5\\build-consumer.start.json",
+      "entry": "execution-runtime87-attempt5/build-consumer.start.json",
+      "bytes": 790,
+      "sha256": "AFC37B8ED45F48601E5E3B1E09A48AEEBF9620802CB0E258AD617A574FC666BE"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native87-runtime-preparation-rev1\\execution-runtime87-attempt5\\build-consumer.stderr.log",
+      "entry": "execution-runtime87-attempt5/build-consumer.stderr.log",
+      "bytes": 0,
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native87-runtime-preparation-rev1\\execution-runtime87-attempt5\\build-consumer.stdout.log",
+      "entry": "execution-runtime87-attempt5/build-consumer.stdout.log",
+      "bytes": 1766,
+      "sha256": "2AD86897BFFE3057C6C861D5EBFBA77A059B0649D3CCC10686D0B6A2D92CAD61"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native87-runtime-preparation-rev1\\execution-runtime87-attempt5\\consumer-built-pins.json",
+      "entry": "execution-runtime87-attempt5/consumer-built-pins.json",
+      "bytes": 479,
+      "sha256": "5113B2324E5BC64367C33E8DBCD0746862EB62D13E8A26F40F00FF566ACD39F2"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native87-runtime-preparation-rev1\\execution-runtime87-attempt5\\negative-missing.identities-cleanup.json",
+      "entry": "execution-runtime87-attempt5/negative-missing.identities-cleanup.json",
+      "bytes": 1175,
+      "sha256": "9C401ED0D22ADCFC0795B4CA1C6169147925D3AE9AFB278B9B932609C0FA9203"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native87-runtime-preparation-rev1\\execution-runtime87-attempt5\\negative-missing.module-review.json",
+      "entry": "execution-runtime87-attempt5/negative-missing.module-review.json",
+      "bytes": 17210,
+      "sha256": "2CADDB041D07EC222E05319EFE0B7C9483AA1714A1B9334032A74BDFBD60BC7A"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native87-runtime-preparation-rev1\\execution-runtime87-attempt5\\negative-missing.result.json",
+      "entry": "execution-runtime87-attempt5/negative-missing.result.json",
+      "bytes": 971,
+      "sha256": "3740A99BE9AAA9467D70EA3C51B8F80989F0B20B57052EA6D7F9C32F5BB53DB1"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native87-runtime-preparation-rev1\\execution-runtime87-attempt5\\negative-missing.review.json",
+      "entry": "execution-runtime87-attempt5/negative-missing.review.json",
+      "bytes": 5921,
+      "sha256": "B6F97F35520B81B98B798B54AEA8061ECA78D83D9C05CC98F18F0E26330AC2E2"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native87-runtime-preparation-rev1\\execution-runtime87-attempt5\\negative-missing.start.json",
+      "entry": "execution-runtime87-attempt5/negative-missing.start.json",
+      "bytes": 1121,
+      "sha256": "EF0618A0678D36E73A1C0AEEA8E4C6E26B25EE4A72BB335CD20B8D064A562B46"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native87-runtime-preparation-rev1\\execution-runtime87-attempt5\\negative-missing.stderr.log",
+      "entry": "execution-runtime87-attempt5/negative-missing.stderr.log",
+      "bytes": 723,
+      "sha256": "01B63431DEBFE9D3B9AF9DFC8FA276BC97290D94EAD4C2091DF6C7102B0B00AB"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native87-runtime-preparation-rev1\\execution-runtime87-attempt5\\negative-missing.stdout.log",
+      "entry": "execution-runtime87-attempt5/negative-missing.stdout.log",
+      "bytes": 5495,
+      "sha256": "6ED3622E82373EACB7135245BBF09F52382222AD1977EB777200667D398FA721"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native87-runtime-preparation-rev1\\execution-runtime87-attempt5\\positive.identities-cleanup.json",
+      "entry": "execution-runtime87-attempt5/positive.identities-cleanup.json",
+      "bytes": 1180,
+      "sha256": "ABC6F513ABEA1AABB8C3274F0B3AE25FAA945967C49F63E4C4451F42F70FCC18"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native87-runtime-preparation-rev1\\execution-runtime87-attempt5\\positive.module-review.json",
+      "entry": "execution-runtime87-attempt5/positive.module-review.json",
+      "bytes": 17211,
+      "sha256": "99F15441C63660B719D1C76E3562C48557F4A82515C1F462BE63069747EB4ED7"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native87-runtime-preparation-rev1\\execution-runtime87-attempt5\\positive.result.json",
+      "entry": "execution-runtime87-attempt5/positive.result.json",
+      "bytes": 954,
+      "sha256": "2D9A75DC100F4CB6854F1047F2E2016D7F05668CF51A2AE8DCE4F7090257B508"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native87-runtime-preparation-rev1\\execution-runtime87-attempt5\\positive.review.json",
+      "entry": "execution-runtime87-attempt5/positive.review.json",
+      "bytes": 12263,
+      "sha256": "F74BE2273A34CD42B2940F581C85224B75D1B613604AB81D8DA86AB8150C4AAF"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native87-runtime-preparation-rev1\\execution-runtime87-attempt5\\positive.start.json",
+      "entry": "execution-runtime87-attempt5/positive.start.json",
+      "bytes": 1106,
+      "sha256": "61120B66816FBB244EC2E34C990D45CB2E60311D321D8C17A30248F8CFBFA76D"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native87-runtime-preparation-rev1\\execution-runtime87-attempt5\\positive.stderr.log",
+      "entry": "execution-runtime87-attempt5/positive.stderr.log",
+      "bytes": 723,
+      "sha256": "01B63431DEBFE9D3B9AF9DFC8FA276BC97290D94EAD4C2091DF6C7102B0B00AB"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native87-runtime-preparation-rev1\\execution-runtime87-attempt5\\positive.stdout.log",
+      "entry": "execution-runtime87-attempt5/positive.stdout.log",
+      "bytes": 9749,
+      "sha256": "8FE92B0C03060C6AC1E8663B16CA4B58F49CF18E4F7AD2B505BF6A3E303E728E"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native87-runtime-preparation-rev1\\execution-runtime87-attempt5\\postflight.json",
+      "entry": "execution-runtime87-attempt5/postflight.json",
+      "bytes": 3317,
+      "sha256": "E57966EF803836CFD70B28E55B25AC9D0B870EE023B716FB73AFE16C646CDD3D"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native87-runtime-preparation-rev1\\execution-runtime87-attempt5\\preflight.json",
+      "entry": "execution-runtime87-attempt5/preflight.json",
+      "bytes": 2883,
+      "sha256": "7C0FBE164C46F1F270B1E2DA85EEBC953E95C7489567E9510C4377A609905A0F"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native87-runtime-preparation-rev1\\parent-sdk-api87-review\\after-exports.log",
+      "entry": "parent-sdk-api87-review/after-exports.log",
+      "bytes": 2011,
+      "sha256": "D259E27351A56A9A4DD8B6B5EACE5AC34143D4848E6C285276544DEE754B60DF"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native87-runtime-preparation-rev1\\parent-sdk-api87-review\\after-exports.stderr.log",
+      "entry": "parent-sdk-api87-review/after-exports.stderr.log",
+      "bytes": 0,
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native87-runtime-preparation-rev1\\parent-sdk-api87-review\\after-imports.log",
+      "entry": "parent-sdk-api87-review/after-imports.log",
+      "bytes": 95605,
+      "sha256": "F61C547672776BDDE50C056E471E9F9AD890BC37FBD5BFB99F6775EF1AA57840"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native87-runtime-preparation-rev1\\parent-sdk-api87-review\\after-imports.stderr.log",
+      "entry": "parent-sdk-api87-review/after-imports.stderr.log",
+      "bytes": 0,
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native87-runtime-preparation-rev1\\parent-sdk-api87-review\\after-linkermember-2.log",
+      "entry": "parent-sdk-api87-review/after-linkermember-2.log",
+      "bytes": 930272,
+      "sha256": "C3C8E40BF7A7C171C65737CDAC4146653486C12CFC553062306279411A1C318C"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native87-runtime-preparation-rev1\\parent-sdk-api87-review\\after-linkermember-2.stderr.log",
+      "entry": "parent-sdk-api87-review/after-linkermember-2.stderr.log",
+      "bytes": 0,
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native87-runtime-preparation-rev1\\parent-sdk-api87-review\\api-review.json",
+      "entry": "parent-sdk-api87-review/api-review.json",
+      "bytes": 7850,
+      "sha256": "21775A565DEB653F7F0D1FA03119F88DCB806666612B37A0FF9FC851FE3DB73C"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native87-runtime-preparation-rev1\\parent-sdk-api87-review\\before-exports.log",
+      "entry": "parent-sdk-api87-review/before-exports.log",
+      "bytes": 896,
+      "sha256": "17CFAEBC07F8FE2E5E3EE2A3361ED3344666353D9C845DE819E9D47F7554CC92"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native87-runtime-preparation-rev1\\parent-sdk-api87-review\\before-exports.stderr.log",
+      "entry": "parent-sdk-api87-review/before-exports.stderr.log",
+      "bytes": 0,
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native87-runtime-preparation-rev1\\parent-sdk-api87-review\\before-imports.log",
+      "entry": "parent-sdk-api87-review/before-imports.log",
+      "bytes": 95747,
+      "sha256": "0D3769E1C6A1B1EF3A6A5781CE997AD3FDD66D7FF34A3EED241F7ACCE3D55266"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native87-runtime-preparation-rev1\\parent-sdk-api87-review\\before-imports.stderr.log",
+      "entry": "parent-sdk-api87-review/before-imports.stderr.log",
+      "bytes": 0,
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native87-runtime-preparation-rev1\\parent-sdk-api87-review\\before-linkermember-2.log",
+      "entry": "parent-sdk-api87-review/before-linkermember-2.log",
+      "bytes": 930414,
+      "sha256": "54C652D8FF9AD6654FF38A323261087CCA3DC231FDE6BD0060E44950232C76E5"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native87-runtime-preparation-rev1\\parent-sdk-api87-review\\before-linkermember-2.stderr.log",
+      "entry": "parent-sdk-api87-review/before-linkermember-2.stderr.log",
+      "bytes": 0,
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native87-runtime-preparation-rev1\\parent-sdk-api87-review\\native-exits.json",
+      "entry": "parent-sdk-api87-review/native-exits.json",
+      "bytes": 1687,
+      "sha256": "025C5DD6BEBAA98723633313DDC4BE0C0E5A98EC9020FA200453E47B9278CB6E"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native87-runtime-preparation-rev1\\Run-StagedVulkan87.ps1",
+      "entry": "preparation87/Run-StagedVulkan87.ps1",
+      "bytes": 13497,
+      "sha256": "9404C96724C072499F4B76D1E946238A2A6125DC733C9742319F0DF7FA6EC33C"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native87-runtime-preparation-rev1\\plan87.json",
+      "entry": "preparation87/plan87.json",
+      "bytes": 13960,
+      "sha256": "9C7DDC7E0D6A253B40C4D50B20167C3DE9E1CCF8BE7F5EF2648D2F50CCFB4C78"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native87-runtime-preparation-rev1\\preparation-receipt.json",
+      "entry": "preparation87/preparation-receipt.json",
+      "bytes": 4644,
+      "sha256": "D81DD9E914D19A8753382B44009193E25B0752B1B5656D07D7FFF2AF1D82F341"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native87-runtime-preparation-rev1\\parent-sdk87-review.json",
+      "entry": "preparation87/parent-sdk87-review.json",
+      "bytes": 1586,
+      "sha256": "E8339CCF3D0F2B326D1A11E0C6646922B5609571DFE4550353F9C6AE95E8D110"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native87-runtime-preparation-rev1\\parent-runtime87-acceptance.json",
+      "entry": "preparation87/parent-runtime87-acceptance.json",
+      "bytes": 4779,
+      "sha256": "8D97C4702B09164B9A591A2E72D25D469CBADB5E177F2E55170559BAAF1DF597"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native87-runtime-preparation-rev1\\parent-short-mount-review.json",
+      "entry": "preparation87/parent-short-mount-review.json",
+      "bytes": 4970,
+      "sha256": "4FC1C162FC03BE8144A0EA5E6DD73CBB407C096DF6E84A6F3D2D0C89352597EF"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native87-runtime-preparation-rev1\\parent-owner-48h-authorization.json",
+      "entry": "preparation87/parent-owner-48h-authorization.json",
+      "bytes": 737,
+      "sha256": "D6A7C973D5650BE990DD77B63905540C3D3EF1DB3DF2580CFDC69FCDB3A716D5"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native87-runtime-preparation-rev1\\Run-ShaderRuntime87Cdb.ps1",
+      "entry": "preparation87/Run-ShaderRuntime87Cdb.ps1",
+      "bytes": 4019,
+      "sha256": "66E2216E62DB9EE06A00A80B8029C5534EDC38EE42F95B72E17B1408BC99125F"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native87-runtime-preparation-rev1\\cdb87-plan.json",
+      "entry": "preparation87/cdb87-plan.json",
+      "bytes": 8101,
+      "sha256": "DA114E35B6C7CEA977E2211D10D7C1E39E278E7E41863A62EC2DD26C0934C216"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native87-runtime-preparation-rev1\\Run-ShaderRuntime87-attempt5.ps1",
+      "entry": "preparation87/Run-ShaderRuntime87-attempt5.ps1",
+      "bytes": 5942,
+      "sha256": "48BFD43CC54285CE6B9DA3619B103E799CE0928FE21A6B272376B31CD8440043"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native87-runtime-preparation-rev1\\recipe-attempt5.json",
+      "entry": "preparation87/recipe-attempt5.json",
+      "bytes": 8791,
+      "sha256": "793313D74563D0ED47F13D20C9EF16022AE053EED840355BD031652E15FC56D1"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native87-runtime-preparation-rev1\\invocation-attempt5.json",
+      "entry": "preparation87/invocation-attempt5.json",
+      "bytes": 723,
+      "sha256": "4A99EEF017AD9D2D3C8C20A929622E2B3DD842D7E426FB43C934922D3BBAA02C"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native87-runtime-preparation-rev1\\attempt5-preparation-receipt.json",
+      "entry": "preparation87/attempt5-preparation-receipt.json",
+      "bytes": 2660,
+      "sha256": "76DD6A3215193C0322B6BB68546992D60F2E7527A2F83F40A7457B3168842C14"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\atomshader-native87-runtime-preparation-rev1\\snapshot-short-rev5-receipt.json",
+      "entry": "preparation87/snapshot-short-rev5-receipt.json",
+      "bytes": 29686,
+      "sha256": "0BD898FF9E6E91801BC1E0D4B8887C43EB9AEEE35E966609760BA4A61A42CF0F"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\native-editor-material-texture-pbr-vulkan-source87-attempt1\\native-exit.txt",
+      "entry": "gui87/native-exit.txt",
+      "bytes": 1,
+      "sha256": "5FECEB66FFC86F38D952786C6D696C79C2DBC239DD4E91B46729D73A27FB57E9"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\native-editor-material-texture-pbr-vulkan-source87-attempt1\\native-result.json",
+      "entry": "gui87/native-result.json",
+      "bytes": 37461,
+      "sha256": "8FC8CCDF68D921D70FE19459EE9BD8C5704926AAD10EA66229B22747991682FB"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\native-editor-material-texture-pbr-vulkan-source87-attempt1\\native-start.json",
+      "entry": "gui87/native-start.json",
+      "bytes": 1309,
+      "sha256": "DBBE8011AD2A8452648FABD1B5D443DF9E6BFE8C0C95ADB2E60002EA68E4E903"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\native-editor-material-texture-pbr-vulkan-source87-attempt1\\native.stderr.log",
+      "entry": "gui87/native.stderr.log",
+      "bytes": 0,
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\native-editor-material-texture-pbr-vulkan-source87-attempt1\\native.stdout.log",
+      "entry": "gui87/native.stdout.log",
+      "bytes": 4147,
+      "sha256": "459DC038AEC69F724D1D409B35ADB887F8ABEC31395AAEBFC4257FD3D8C7AC69"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\native-editor-material-texture-pbr-vulkan-source87-attempt1\\parent-live-modules-ph.json",
+      "entry": "gui87/parent-live-modules-ph.json",
+      "bytes": 37682,
+      "sha256": "2EF66E0FBFB66983EBADD9F40F3F3B53B87A9D931017D477C527679BC6E0927A"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\native-editor-material-texture-pbr-vulkan-source87-attempt1\\parent-texture-fixture-inputs.json",
+      "entry": "gui87/parent-texture-fixture-inputs.json",
+      "bytes": 3856,
+      "sha256": "B8B0CE0FF8096C95CFBE532C07468460271E4ED2F4238C1A4D390F0E35464368"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\native-editor-material-texture-pbr-vulkan-source87-attempt1\\captures\\01-ph-existing-initial-shaderball.jpg",
+      "entry": "gui87/captures/01-ph-existing-initial-shaderball.jpg",
+      "bytes": 200311,
+      "sha256": "BB33C9A523C9852A4364D4E7CA5765D709A7A6E601A2D3A06CB623F11D13A32F"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\native-editor-material-texture-pbr-vulkan-source87-attempt1\\captures\\02-ph-reopened-shaderball.jpg",
+      "entry": "gui87/captures/02-ph-reopened-shaderball.jpg",
+      "bytes": 199677,
+      "sha256": "430AD32EC1627926C2A7D0F1B2EB471132C9C601F0164B58E8D4E07406AD80C2"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\native-editor-material-texture-pbr-vulkan-source87-attempt1\\captures\\03-texture-generate-material-menu.jpg",
+      "entry": "gui87/captures/03-texture-generate-material-menu.jpg",
+      "bytes": 182613,
+      "sha256": "60CEBA69DAA9B19AEF63DABEDC870FA24A939538966A5D4F7C1BCECCC9030E2D"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\native-editor-material-texture-pbr-vulkan-source87-attempt1\\captures\\04-existing-presets-generation-block.jpg",
+      "entry": "gui87/captures/04-existing-presets-generation-block.jpg",
+      "bytes": 217419,
+      "sha256": "5DB64CE102EF9ACFD19FE88F23ABA26A91FCF02E5676E05E0A80CE0543664776"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\ui87-preparation-rev1\\recipe.json",
+      "entry": "gui87-preparation/recipe.json",
+      "bytes": 7166,
+      "sha256": "1B007834061E444C8D4F8843A58D51DD9590E954ECE5D6223BB50D3466F0612B"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\ui87-preparation-rev1\\invocation.json",
+      "entry": "gui87-preparation/invocation.json",
+      "bytes": 1354,
+      "sha256": "187C256B138D6825297EF63C6BC226B325079312634BF5F1EB730EFAA7B5B2B2"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\ui87-preparation-rev1\\parent-visual-lease-preflight.json",
+      "entry": "gui87-preparation/parent-visual-lease-preflight.json",
+      "bytes": 643,
+      "sha256": "54B393EC5E21C9375E846207151454AA5A1ED62B60D225B8E8C866F4A81968ED"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\material-pbr-preview-integration-rev1\\ui87-preparation-rev1\\postflight-readonly-rev1\\gui87-postflight-review.json",
+      "entry": "gui87-postflight/gui87-postflight-review.json",
+      "bytes": 24520,
+      "sha256": "EFDBA911A77AE18E6CF8C7AAA9586B588C8122DE0424A1CB73FE6C288072923A"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Assets\\JETextureMaterialValidation_20261016_native87\\je_phnative87\\je_phnative87_diff_1k.png",
+      "entry": "gui87-fixture/je_phnative87_diff_1k.png",
+      "bytes": 5381,
+      "sha256": "6F1082E5DA91C2985A31A02B4D9DA9D8CD1CE452719FA953F42C078B2157AE47"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Assets\\JETextureMaterialValidation_20261016_native87\\je_phnative87\\je_phnative87_ao_1k.png",
+      "entry": "gui87-fixture/je_phnative87_ao_1k.png",
+      "bytes": 5401,
+      "sha256": "55C161C0B3C41194E66387DC640AE08F3D943D0A705EB541C4826B7ED775049B"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Assets\\JETextureMaterialValidation_20261016_native87\\je_phnative87\\je_phnative87_ao_1k.png.assetinfo",
+      "entry": "gui87-fixture/je_phnative87_ao_1k.png.assetinfo",
+      "bytes": 2536,
+      "sha256": "1CCDD2345CD6EF5A22A377878448B875B5763B3A4064430A692547F53DF929CE"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Assets\\JETextureMaterialValidation_20261016_native87\\je_phnative87\\je_phnative87_rough_1k.png",
+      "entry": "gui87-fixture/je_phnative87_rough_1k.png",
+      "bytes": 257533,
+      "sha256": "82B61F361A5B6A17A91E0A5F92CA95C0F60F0968C1120DC402E25E9AC31977B2"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Assets\\JETextureMaterialValidation_20261016_native87\\je_phnative87\\je_phnative87_rough_1k.png.assetinfo",
+      "entry": "gui87-fixture/je_phnative87_rough_1k.png.assetinfo",
+      "bytes": 2531,
+      "sha256": "7FFFF1B7860A5CFB3791E6FB878B9C86B58A4ADDC5186F4FE0ED231CAF279B8D"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Assets\\JETextureMaterialValidation_20261016_native87\\je_phnative87\\je_phnative87_nor_gl_1k.png",
+      "entry": "gui87-fixture/je_phnative87_nor_gl_1k.png",
+      "bytes": 70920,
+      "sha256": "A1B2C9C3A203C5960B683284D97E09FAEB7A9F8447F678A05CCB65EA92776BDC"
+    },
+    {
+      "source": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Assets\\JETextureMaterialValidation_20261016_native87\\je_phnative87\\je_phnative87_nor_gl_1k.png.assetinfo",
+      "entry": "gui87-fixture/je_phnative87_nor_gl_1k.png.assetinfo",
+      "bytes": 2527,
+      "sha256": "4CC1D7EFB4F989A27A44AA9D779B710FA9A6C34812B08C783BC37ECC3C9D7443"
+    }
+  ],
+  "limits": [
+    "No compiled binaries, PDB, dump, binary AssetCatalog, SDK payload or cooked product included",
+    "Sources and logs describe preserved integration tree; not clean HEAD replay or standalone source-free SDK replay",
+    "GUI texture generation with existing presets remains blocked; this archive preserves the real failing reproduction"
+  ]
+}

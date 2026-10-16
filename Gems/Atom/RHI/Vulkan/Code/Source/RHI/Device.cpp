@@ -912,7 +912,10 @@ namespace AZ
 
             m_nullDescriptorManager.reset();
 
-            m_bindlessDescriptorPool.Shutdown();
+            if (m_bindlessDescriptorPool.IsInitialized())
+            {
+                m_bindlessDescriptorPool.Shutdown();
+            }
             m_stagingBufferPool.reset();
             m_constantBufferPool.reset();
             m_renderPassCache.first.Clear();
