@@ -39,7 +39,7 @@ namespace UnitTest
 
     bool NvClothComponent::IsConnectedToMeshComponentNotificationBus(NvCloth::ClothComponent* clothComponent) const
     {
-        return static_cast<AZ::Render::MeshComponentNotificationBus::Handler*>(clothComponent)->BusIsConnectedId(clothComponent->GetEntityId());
+        return static_cast<JE::Render::Scene::MeshComponentNotificationBus::Handler*>(clothComponent)->BusIsConnectedId(clothComponent->GetEntityId());
     }
 
     TEST_F(NvClothComponent, ClothComponent_WithoutDependencies_ReturnsMissingRequiredService)

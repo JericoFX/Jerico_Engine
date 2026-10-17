@@ -484,14 +484,14 @@ namespace NvCloth
     {
         AzToolsFramework::Components::EditorComponentBase::Activate();
 
-        AZ::Render::MeshComponentNotificationBus::Handler::BusConnect(GetEntityId());
+        JE::Render::Scene::MeshComponentNotificationBus::Handler::BusConnect(GetEntityId());
 
         m_config.m_entityId = GetEntityId();
     }
 
     void EditorClothComponent::Deactivate()
     {
-        AZ::Render::MeshComponentNotificationBus::Handler::BusDisconnect();
+        JE::Render::Scene::MeshComponentNotificationBus::Handler::BusDisconnect();
 
         AzToolsFramework::Components::EditorComponentBase::Deactivate();
 

@@ -40,7 +40,7 @@ ly_add_target(
         PUBLIC
             AZ::AzCore
             AZ::AzFramework
-            Gem::CommonFeaturesAtom.Static
+            JE::RenderScene
             JE::RenderIntegration
             3rdParty::meshoptimizer
 )

@@ -1,0 +1,257 @@
+{
+  "schema": "je.scene100.lua-builder-regression.v1",
+  "scope": "Prerequisite of CommonFeaturesAtom absorption; not LmbrCentral absorption or Luau migration",
+  "reviewer": "/root",
+  "wholeGemAccepted": false,
+  "freezeSHA256": "C637E56407C7A416D5A5F05CC3F34D66A4292B366DC8118F618E5A311976C9C8",
+  "sourceInputs": 14509,
+  "expectedAbsences": 1059,
+  "sourceManifest": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-scene100\\lua-generic-path-green-followup\\manifest4.json",
+    "bytes": 1859,
+    "sha256": "BBC06EC7B2DBEB404CDA812939906DA89D1CB5A8321C6D649888A18DC6C106C9"
+  },
+  "upstream": {
+    "url": "https://github.com/o3de/o3de/issues/12611",
+    "decision": "Adapt local generic-candidate validation; no upstream patch imported",
+    "licenceChange": false,
+    "newDependencies": 0
+  },
+  "behavior": {
+    "reject": "Generic quoted candidates with a root or terminal slash/backslash",
+    "preserve": "Relative file dependencies and existing require/ReloadScript/exec/ConvertToAssets/ProcessJob",
+    "builderVersion": 12,
+    "pathLifetime": "PathView refers to local owning string during validation",
+    "testHelper": "ResolvePath output assigned explicitly; previous comment assertions preserved"
+  },
+  "phases": [
+    {
+      "phase": "red-attempt1",
+      "nativeExit": 1,
+      "buildExit": 0,
+      "buildSeconds": 104.842,
+      "testSeconds": 11.209,
+      "tests": 1,
+      "unique": 1,
+      "runCompleted": 1,
+      "failures": 1,
+      "errors": 0,
+      "disabled": 0,
+      "postflightDrift": 0,
+      "finalNativeProcesses": 0,
+      "xml": {
+        "path": "F:\\JericoEngine\\JericoEngine\\docs\\evidence\\n0\\native-scene-components-2026-10-17\\test-results\\lua-red\\LmbrCentral.Editor.Tests.xml",
+        "bytes": 6756,
+        "sha256": "84A0A415FC0EC4A88FEF67B8A9570BECC28C688003405A1DE1086B61288C815E"
+      },
+      "rawResult": {
+        "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-scene100\\lua-dependency-validation\\red-attempt1\\focused-tests.result.json",
+        "bytes": 2115,
+        "sha256": "DBA3F8A521A748C0EB229E51B3E0345B29A66B4ADF6A9877BDCE2CCDB76477C0"
+      },
+      "rawSummary": {
+        "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-scene100\\lua-dependency-validation\\red-attempt1\\summary.json",
+        "bytes": 129712,
+        "sha256": "56631B3CFF0FB5997D88AC3D3EA019687BBB07B9A2DB4B07C8615FED7DF1824B"
+      }
+    },
+    {
+      "phase": "green-attempt1",
+      "nativeExit": 1,
+      "buildExit": 0,
+      "buildSeconds": 39.357,
+      "testSeconds": 14.546,
+      "tests": 10,
+      "unique": 10,
+      "runCompleted": 10,
+      "failures": 4,
+      "errors": 0,
+      "disabled": 0,
+      "postflightDrift": 0,
+      "finalNativeProcesses": 0,
+      "xml": {
+        "path": "F:\\JericoEngine\\JericoEngine\\docs\\evidence\\n0\\native-scene-components-2026-10-17\\test-results\\lua-incomplete-green1\\LmbrCentral.Editor.Tests.xml",
+        "bytes": 6454,
+        "sha256": "37F16B8930A1966105F61377705848C678D4880DD964A4101F588C45C9604144"
+      },
+      "rawResult": {
+        "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-scene100\\lua-dependency-validation\\green-attempt1\\focused-tests.result.json",
+        "bytes": 3383,
+        "sha256": "DE8CB77FD93E8132F1C9AB9502DB6737EBB0945B83FCC42198ED1850718ECDFA"
+      },
+      "rawSummary": {
+        "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-scene100\\lua-dependency-validation\\green-attempt1\\summary.json",
+        "bytes": 28963,
+        "sha256": "0C8C1E362E4CE641FA49E0CBA85A47D0AE064B5125B46F99C27366E8FE0701D2"
+      }
+    },
+    {
+      "phase": "green-attempt2",
+      "nativeExit": 0,
+      "buildExit": 0,
+      "buildSeconds": 95.943,
+      "testSeconds": 11.833,
+      "tests": 10,
+      "unique": 10,
+      "runCompleted": 10,
+      "failures": 0,
+      "errors": 0,
+      "disabled": 0,
+      "postflightDrift": 0,
+      "finalNativeProcesses": 0,
+      "xml": {
+        "path": "F:\\JericoEngine\\JericoEngine\\docs\\evidence\\n0\\native-scene-components-2026-10-17\\test-results\\lua-green\\LmbrCentral.Editor.Tests.xml",
+        "bytes": 3378,
+        "sha256": "A4D019A7168AA85F36582FCA42C60AB9F11498B448424520F2677EC250B80F58"
+      },
+      "rawResult": {
+        "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-scene100\\lua-dependency-validation\\green-attempt2\\focused-tests.result.json",
+        "bytes": 2041,
+        "sha256": "0D0D1CECE36CDB822688749FDE42B088213C00F89113DA4220736F856F6E4B7D"
+      },
+      "rawSummary": {
+        "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-scene100\\lua-dependency-validation\\green-attempt2\\summary.json",
+        "bytes": 68246,
+        "sha256": "0DCF38A48050A7072FAA9C30F515E9516B775909E595549F81B492278659A011"
+      }
+    }
+  ],
+  "greenParentReview": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-scene100\\lua-dependency-validation\\green-attempt2\\parent-review.json",
+    "bytes": 1278,
+    "sha256": "2202E27EF1B7C4E7ACC7D604CB1246BB2C35894681C979F5BC82D448EC3BABAA"
+  },
+  "cook": {
+    "nativeExit": 1,
+    "seconds": 36.3683708,
+    "globalPass": false,
+    "globalFailedAssets": 319,
+    "stdout": {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-scene100\\ap100-profile-lua-attempt2\\assetprocessor.stdout.log",
+      "bytes": 256186,
+      "sha256": "0BBB49EDEE173F34EB214BDD1DE19FCC70651EFE8BE9BF14DE4F870C79007819"
+    },
+    "stderr": {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-scene100\\ap100-profile-lua-attempt2\\assetprocessor.stderr.log",
+      "bytes": 0,
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    "timedOut": false,
+    "guardTriggered": false,
+    "postflight": {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-scene100\\ap100-profile-lua-attempt2\\postflight.json",
+      "bytes": 316,
+      "sha256": "EDD8EACB6230E3E764D296B5B6E207AB60E6519A9CF83C8E972CEB79E640D65D"
+    },
+    "checked": {
+      "source": 14509,
+      "sourceAbsent": 1059,
+      "authored": 86,
+      "authoredAbsent": 73,
+      "hosts": 94,
+      "assets": 18
+    },
+    "sourceDrift": 0,
+    "remainingNativeProcesses": 0,
+    "queryReceipt": {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-scene100\\ap100-profile-lua-attempt2\\readonly-query-receipt-corrected.json",
+      "bytes": 2824,
+      "sha256": "24F24E8388ED6D00A49C352286E6350F05F27A3705C011D66ED9F3AF4F4D3635"
+    },
+    "receiptErratum": {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-scene100\\ap100-profile-lua-attempt2\\receipt-erratum.json",
+      "bytes": 1123,
+      "sha256": "A22020D443428639FD76800403E3E52D233A9F75113AD555654DBC06CAA534A4"
+    },
+    "queryExit": 0,
+    "database": {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Cache\\assetdb.sqlite",
+      "bytesBefore": 12619776,
+      "bytesAfter": 12619776,
+      "sha256Before": "46069BC6C569271A67A56F07144255535AD5247A78DEF91FCE8B64173E1C52BA",
+      "sha256After": "46069BC6C569271A67A56F07144255535AD5247A78DEF91FCE8B64173E1C52BA",
+      "unchanged": true,
+      "walBefore": "absent",
+      "walAfter": {
+        "bytes": 0,
+        "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+      },
+      "shmBefore": "absent",
+      "shmAfter": {
+        "bytes": 32768,
+        "sha256": "FD4C9FDA9CD3F9AE7C962B0DDF37232294D55580E1AA165AA06129B8549389EB"
+      }
+    },
+    "currentSources": 22,
+    "currentJobs": 23,
+    "currentProductRows": 125,
+    "currentJobErrors": 0,
+    "sourceIdentityDrift": 0,
+    "jobIdentityDrift": 0,
+    "historicalProductsPreserved": 6,
+    "freshLuaJob": {
+      "sourceGuidHex": "7003b5dc6eeb5b8a8d6ab7a374779c13",
+      "sourceName": "Scripts/Profiling/OutputProfileData.lua",
+      "sourceId": 592,
+      "scanFolderPk": 24,
+      "portableKey": "gemassets-{3FBFABC9-C4BC-582D-88E1-C7A710BE45B1}",
+      "jobId": 605,
+      "jobKey": "Lua Compile",
+      "platform": "pc",
+      "builderGuidHex": "166a7962a3e44451ac1aaad32e29c52c",
+      "status": 4,
+      "runKey": 113702,
+      "errorCount": 0,
+      "warningCount": 0,
+      "logPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\ap100-logs-lua-attempt2\\JobLogs\\Scripts\\Profiling\\OutputProfileData.lua-2149522899-113702.log",
+      "logSha256": "79E2B32920EE0A1AF47B5AA169912125EEB3B42C8CC0E7DB3E365A8CE836FE9D",
+      "logBytes": 1305,
+      "logTextHasZeroErrorsWarnings": true
+    },
+    "freshLuaLog": {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\ap100-logs-lua-attempt2\\JobLogs\\Scripts\\Profiling\\OutputProfileData.lua-2149522899-113702.log",
+      "bytes": 1305,
+      "sha256": "79E2B32920EE0A1AF47B5AA169912125EEB3B42C8CC0E7DB3E365A8CE836FE9D"
+    },
+    "productIdentity": {
+      "ProductID": "805",
+      "JobPK": "605",
+      "ProductName": "pc/scripts/profiling/outputprofiledata.luac",
+      "SubID": "1",
+      "AssetType": {
+        "hex": "825573264ae3416c95d6c70635ab7588"
+      },
+      "LegacyGuid": {
+        "hex": "f05361eeb71d5d65883688835ab743fa"
+      },
+      "Hash": "-4619969068701556878",
+      "Flags": "1",
+      "JobID": "605",
+      "JobKey": "Lua Compile",
+      "Status": "4",
+      "SourceName": "Scripts/Profiling/OutputProfileData.lua",
+      "SourceGuid": {
+        "hex": "7003b5dc6eeb5b8a8d6ab7a374779c13"
+      },
+      "ScanFolderPK": "24"
+    },
+    "physicalLuaProduct": {
+      "path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Cache\\pc\\scripts\\profiling\\outputprofiledata.luac",
+      "bytes": 95305,
+      "sha256": "4A6704321E00B01E13AB79C2B9FFDB14A3ACFA852D4267E607220676D472FEA8"
+    },
+    "deterministicProduct": "Unchanged bytecode hash with fresh RunKey/log is expected; no cache-staleness inference",
+    "comparisonReview": {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-scene100\\ap100-profile-lua-attempt2\\comparison-review.json",
+      "bytes": 3890,
+      "sha256": "536F513F3B3044167B253C7F8DF175B3E9C03B93216A2C2442819C28A0D58AED"
+    }
+  },
+  "limits": [
+    "R21 recovered17 previously failing jobs; this invocation was requested only for Lua. The23 current job states do not mean23 fresh executions.",
+    "Global AP exit1 and319 failed assets remain; current Scene-scoped ErrorCount0 is a focal gate only.",
+    "RED and incomplete GREEN1 are retained. GREEN1 four failures required a terminal-separator guard and correction of the pre-existing test helper.",
+    "RPI99/707 and Scene121 evidence is reused for unchanged inputs; it was not rerun.",
+    "Installed SDK100 and publication remain pending."
+  ]
+}

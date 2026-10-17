@@ -25,11 +25,11 @@
 
 #include <JE/Render/Materials/MaterialComponentConstants.h>
 #include <JE/Render/Materials/MaterialComponentBus.h>
-#include <AtomLyIntegration/CommonFeatures/Mesh/MeshComponentConstants.h>
-#include <AtomLyIntegration/CommonFeatures/Mesh/MeshComponentBus.h>
-#include <AtomLyIntegration/CommonFeatures/PostProcess/PostFxLayerComponentConstants.h>
-#include <AtomLyIntegration/CommonFeatures/PostProcess/ExposureControl/ExposureControlComponentConstants.h>
-#include <AtomLyIntegration/CommonFeatures/ImageBasedLights/ImageBasedLightComponentConstants.h>
+#include <JE/Render/Scene/Mesh/MeshComponentConstants.h>
+#include <JE/Render/Scene/Mesh/MeshComponentBus.h>
+#include <JE/Render/Scene/PostProcess/PostFxLayerComponentConstants.h>
+#include <JE/Render/Scene/PostProcess/ExposureControl/ExposureControlComponentConstants.h>
+#include <JE/Render/Scene/ImageBasedLights/ImageBasedLightComponentConstants.h>
 
 #include <EMStudio/AnimViewportRenderer.h>
 #include <EMotionFX/Source/EMotionFXManager.h>
@@ -108,8 +108,8 @@ namespace EMStudio
             m_postProcessEntity, entityContextId, &AzFramework::EntityContextRequestBus::Events::CreateEntity, "postProcessEntity");
         AZ_Assert(m_postProcessEntity != nullptr, "Failed to create post process entity.");
 
-        m_postProcessEntity->CreateComponent(AZ::Render::PostFxLayerComponentTypeId);
-        m_postProcessEntity->CreateComponent(AZ::Render::ExposureControlComponentTypeId);
+        m_postProcessEntity->CreateComponent(JE::Render::Scene::PostFxLayerComponentTypeId);
+        m_postProcessEntity->CreateComponent(JE::Render::Scene::ExposureControlComponentTypeId);
         m_postProcessEntity->CreateComponent(azrtti_typeid<AzFramework::TransformComponent>());
         m_postProcessEntity->Init();
         m_postProcessEntity->Activate();
@@ -130,7 +130,7 @@ namespace EMStudio
             m_iblEntity, entityContextId, &AzFramework::EntityContextRequestBus::Events::CreateEntity, "IblEntity");
         AZ_Assert(m_iblEntity != nullptr, "Failed to create ibl entity.");
 
-        m_iblEntity->CreateComponent(AZ::Render::ImageBasedLightComponentTypeId);
+        m_iblEntity->CreateComponent(JE::Render::Scene::ImageBasedLightComponentTypeId);
         m_iblEntity->CreateComponent(azrtti_typeid<AzFramework::TransformComponent>());
         m_iblEntity->Init();
         m_iblEntity->Activate();
@@ -146,7 +146,7 @@ namespace EMStudio
             m_groundEntity, entityContextId, &AzFramework::EntityContextRequestBus::Events::CreateEntity, "ViewportModel");
         AZ_Assert(m_groundEntity != nullptr, "Failed to create model entity.");
 
-        m_groundEntity->CreateComponent(AZ::Render::MeshComponentTypeId);
+        m_groundEntity->CreateComponent(JE::Render::Scene::MeshComponentTypeId);
         m_groundEntity->CreateComponent(JE::Render::MaterialComponentTypeId);
         m_groundEntity->CreateComponent(azrtti_typeid<AzFramework::TransformComponent>());
         m_groundEntity->Init();
@@ -282,8 +282,8 @@ namespace EMStudio
 
         auto modelAsset = JE::Render::RPI::AssetUtils::GetAssetByProductPath<JE::Render::RPI::ModelAsset>(
             "objects/groundplane/groundplane_512x512m.fbx.azmodel", JE::Render::RPI::AssetUtils::TraceLevel::Assert);
-        AZ::Render::MeshComponentRequestBus::Event(
-            m_groundEntity->GetId(), &AZ::Render::MeshComponentRequestBus::Events::SetModelAsset, modelAsset);
+        JE::Render::Scene::MeshComponentRequestBus::Event(
+            m_groundEntity->GetId(), &JE::Render::Scene::MeshComponentRequestBus::Events::SetModelAsset, modelAsset);
 
         // Reset actor position
         for (AZ::Entity* entity : m_actorEntities)

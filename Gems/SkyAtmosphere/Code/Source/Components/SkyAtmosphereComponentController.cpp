@@ -8,7 +8,7 @@
 
 #include <Atom/Feature/SkyBox/SkyboxConstants.h>
 #include <Components/SkyAtmosphereComponentController.h>
-#include <AtomLyIntegration/CommonFeatures/CoreLights/DirectionalLightBus.h>
+#include <JE/Render/Scene/CoreLights/DirectionalLightBus.h>
 
 #include <AzCore/RTTI/BehaviorContext.h>
 #include <AzCore/Serialization/SerializeContext.h>
@@ -158,7 +158,7 @@ namespace SkyAtmosphere
         AZ::Transform sunTransform = sunTransformInterface ? sunTransformInterface->GetWorldTM() : transform;
         params.m_sunDirection = -sunTransform.GetBasisY();
 
-        if (auto directionalLightInterface = AZ::Render::DirectionalLightRequestBus::FindFirstHandler(m_configuration.m_sun);
+        if (auto directionalLightInterface = JE::Render::Scene::DirectionalLightRequestBus::FindFirstHandler(m_configuration.m_sun);
             directionalLightInterface != nullptr)
         {
             params.m_sunShadowsFarClip = directionalLightInterface->GetShadowFarClipDistance();
@@ -166,7 +166,7 @@ namespace SkyAtmosphere
         else
         {
             // use the first directional light in the scene
-            AZ::Render::DirectionalLightRequestBus::BroadcastResult(params.m_sunShadowsFarClip, &AZ::Render::DirectionalLightRequests::GetShadowFarClipDistance);
+            JE::Render::Scene::DirectionalLightRequestBus::BroadcastResult(params.m_sunShadowsFarClip, &JE::Render::Scene::DirectionalLightRequests::GetShadowFarClipDistance);
         }
 
         if (m_transformInterface)

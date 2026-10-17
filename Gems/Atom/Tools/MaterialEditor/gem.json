@@ -19,6 +19,8 @@
         "Atom_RHI",
         "Atom_Feature_Common",
         "ImageProcessingAtom",
-        "CommonFeaturesAtom"
+        "LmbrCentral",
+        "GradientSignal",
+        "SurfaceData"
     ]
 }

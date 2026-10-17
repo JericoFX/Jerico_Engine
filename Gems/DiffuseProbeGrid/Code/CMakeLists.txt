@@ -26,7 +26,7 @@ ly_add_target(
             JE::RenderIntegration
             Gem::Atom_Utils.Static
             Gem::Atom_Feature_Common
-            Gem::CommonFeaturesAtom.Static
+            JE::RenderScene
             Gem::LmbrCentral
 )
 

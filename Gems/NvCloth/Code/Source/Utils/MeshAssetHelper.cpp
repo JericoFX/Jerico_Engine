@@ -6,7 +6,7 @@
  *
  */
 
-#include <AtomLyIntegration/CommonFeatures/Mesh/MeshComponentBus.h>
+#include <JE/Render/Scene/Mesh/MeshComponentBus.h>
 #include <JE/Render/RPI/Reflect/Model/ModelAsset.h>
 
 #include <NvCloth/ITangentSpaceHelper.h>
@@ -23,8 +23,8 @@ namespace NvCloth
     void MeshAssetHelper::GatherClothMeshNodes(MeshNodeList& meshNodes)
     {
         AZ::Data::Asset<JE::Render::RPI::ModelAsset> modelDataAsset;
-        AZ::Render::MeshComponentRequestBus::EventResult(
-            modelDataAsset, m_entityId, &AZ::Render::MeshComponentRequestBus::Events::GetModelAsset);
+        JE::Render::Scene::MeshComponentRequestBus::EventResult(
+            modelDataAsset, m_entityId, &JE::Render::Scene::MeshComponentRequestBus::Events::GetModelAsset);
         if (!modelDataAsset.IsReady())
         {
             return;
@@ -70,8 +70,8 @@ namespace NvCloth
         AZ_PROFILE_FUNCTION(Cloth);
 
         AZ::Data::Asset<JE::Render::RPI::ModelAsset> modelDataAsset;
-        AZ::Render::MeshComponentRequestBus::EventResult(
-            modelDataAsset, m_entityId, &AZ::Render::MeshComponentRequestBus::Events::GetModelAsset);
+        JE::Render::Scene::MeshComponentRequestBus::EventResult(
+            modelDataAsset, m_entityId, &JE::Render::Scene::MeshComponentRequestBus::Events::GetModelAsset);
         if (!modelDataAsset.IsReady())
         {
             return false;

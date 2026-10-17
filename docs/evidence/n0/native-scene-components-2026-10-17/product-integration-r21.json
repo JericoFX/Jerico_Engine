@@ -1,0 +1,153 @@
+{
+  "schema": "je.scene100.product-integration-r21.v1",
+  "reviewedBy": "/root",
+  "sourceFreeze": "047ACB6C9D16FE6613F0F0879C7B6F9B3906D4C7D04A3B9F8CB4C5EDED6B513A",
+  "executions": [
+    {
+      "kind": "runtime100-attempt2-rtti-green",
+      "pid": 33908,
+      "creationUtc": "2026-10-17T13:11:48.942195Z",
+      "nativeExit": 0,
+      "elapsedSeconds": 75.6058736,
+      "result": {
+        "path": "build/n0-validation/native-scene100/runtime100-attempt2-rtti-green/native-result.json",
+        "bytes": 3723,
+        "sha256": "3AB30D0B29FE52BA06CC62C37D99B97DB0DFECE482A7476335553797360A9470"
+      },
+      "stdout": {
+        "path": "build/n0-validation/native-scene100/runtime100-attempt2-rtti-green/native.stdout.log",
+        "bytes": 5616,
+        "sha256": "D3921ED506AE1FEDA5D1AED38C3594169D829B836F3F4D6439E1E04E23D02F10"
+      },
+      "postflight": {
+        "authoredInputsMatch": true,
+        "absentCount": 1059,
+        "authoredCount": 86,
+        "authoredDrift": [],
+        "protectedAbsentCount": 73,
+        "sourceCount": 14507,
+        "protectedAbsencesMatch": true,
+        "protectedReappeared": [],
+        "hostInputsMatch": true,
+        "sourceInputsMatch": true,
+        "sourceDrift": [],
+        "hostCount": 94,
+        "hostDrift": []
+      },
+      "originalImages": [
+        {
+          "path": "build/n0-validation/native-scene100/runtime100-attempt2-rtti-green/runtime-original.png",
+          "bytes": 85475,
+          "sha256": "BAD280A8089C5E250B7CE641A8585337D571BF13FF0C86636392DBD0244525AE"
+        }
+      ],
+      "imagesKeptPrivateToAvoidNewLfsOids": true
+    },
+    {
+      "kind": "editor100-attempt3-final-assets",
+      "pid": 31008,
+      "creationUtc": "2026-10-17T13:14:31.213542Z",
+      "nativeExit": 0,
+      "elapsedSeconds": 159.8415469,
+      "result": {
+        "path": "build/n0-validation/native-scene100/editor100-attempt3-final-assets/native-result.json",
+        "bytes": 8194,
+        "sha256": "A0D736409241D509062E867726908532AC9D877FFE3BB5FD77BDEC955B5B73AE"
+      },
+      "stdout": {
+        "path": "build/n0-validation/native-scene100/editor100-attempt3-final-assets/native.stdout.log",
+        "bytes": 4147,
+        "sha256": "2B583F25813EE014D7451BFD946A59B5E7237244147C68866EC051EDE0A39DAB"
+      },
+      "postflight": {
+        "protectedAbsencesMatch": true,
+        "protectedReappeared": [],
+        "hostDrift": [],
+        "sourceInputsMatch": true,
+        "absentCount": 1059,
+        "authoredInputsMatch": true,
+        "sourceDrift": [],
+        "authoredDrift": [],
+        "hostCount": 94,
+        "protectedAbsentCount": 73,
+        "authoredCount": 86,
+        "hostInputsMatch": true,
+        "sourceCount": 14507
+      },
+      "originalImages": [
+        {
+          "path": "build/n0-validation/native-scene100/editor100-attempt3-final-assets/material-original.png",
+          "bytes": 202851,
+          "sha256": "3ED88AEFC39ADE3EEAC62C2762EF45B4939B02CECF5E0BEB0636876B0B80DD3D"
+        },
+        {
+          "path": "build/n0-validation/native-scene100/editor100-attempt3-final-assets/room-inspector-original.png",
+          "bytes": 219575,
+          "sha256": "030C048193ADBEA8B0F42AE94353EA530C5A3C0879D2707D25E5BFC76F4B1A59"
+        }
+      ],
+      "imagesKeptPrivateToAvoidNewLfsOids": true
+    }
+  ],
+  "runtimeSerializeErrorCount": 0,
+  "recoveredCook": {
+    "comparison": {
+      "path": "build/n0-validation/native-scene100/validation-preparation/commonfeatures-assetdb-readonly/post-ap-comparison/comparison-review.json",
+      "bytes": 42195,
+      "sha256": "CA6E45C8EB2A6B9F3CDD69BA26F5D3A8BF694822164E5ADA35C12D32C710DA3D"
+    },
+    "previouslyFailedJobsRecovered": 17,
+    "sourceIdentities": 22,
+    "jobIdentities": 23,
+    "currentProducts": {
+      "assetDbProductCount": 125,
+      "note": "Existence only; no readiness or runtime-load claim.",
+      "missing": [],
+      "filesPresent": 125,
+      "status4Count": 125
+    },
+    "actualRun": {
+      "exit": 1,
+      "postflight": {
+        "checked": {
+          "source": 14507,
+          "sourceAbsent": 1059,
+          "authored": 86,
+          "authoredAbsent": 73,
+          "hosts": 94,
+          "assets": 18
+        },
+        "nativeProcesses": [],
+        "freeGiB": 14.990215301513672,
+        "ramUsedPercent": 53.02707736149927,
+        "utc": "2026-10-17T13:09:37.5453237Z",
+        "drift": []
+      },
+      "ramGuard": false,
+      "globalPassClaimed": false,
+      "stdoutSha256": "D193DCF63599CB084EE28478B71CE02D06FB12EF36512F8BFAD1F96C7BFA4ED0",
+      "timeout": false,
+      "stdoutSummary": [
+        "AssetProcessor: Number of Assets Failed to Process: 319.",
+        "AssetProcessor: Number of Errors Reported: 341."
+      ],
+      "elapsedSeconds": 243.2382709
+    },
+    "all23JobsFreshZeroErrors": false,
+    "luaHistoricalErrorCount": 10,
+    "luaFreshRedRunKey": 112520,
+    "globalPass": false
+  },
+  "observations": [
+    "Parent saw original-resolution BSP room/corridor/door and WhiteBox UV/material Inspector.",
+    "MaterialWorkspace and shaderball/maps ran inside the same Editor process.",
+    "Vulkan runtime rendered the BSP; no Scene legacy DLL or Python observed in sampled processes."
+  ],
+  "limits": [
+    "R21 observations, not a rerun on later LuaBuilder or packaging inputs.",
+    "Screenshots remain original private files, pinned here; no new LFS object published.",
+    "No Beauty, moving-scene pacing, VR/OpenXR, Linux, Shipping or whole-GOAL acceptance.",
+    "Known DynamicDrawContext/NoFloat16 shutdown warnings also exist in accepted RPI99 baseline.",
+    "17 recovered asset jobs are distinct from Lua false positives and 319 global AP failures."
+  ]
+}

@@ -34,7 +34,7 @@ ly_add_target(
             Legacy::CryCommon
         PUBLIC
             JE::RenderIntegration
-            Gem::CommonFeaturesAtom.Static
+            JE::RenderScene
             JE::RenderMaterials
             Gem::LmbrCentral
     COMPILE_DEFINITIONS

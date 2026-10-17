@@ -18,7 +18,7 @@
 #include <Rendering/WhiteBoxRenderMeshInterface.h>
 
 #include <Atom/Feature/Mesh/MeshFeatureProcessorInterface.h>
-#include <AtomLyIntegration/CommonFeatures/Mesh/MeshHandleStateBus.h>
+#include <JE/Render/Scene/Mesh/MeshHandleStateBus.h>
 #include <JE/Render/Materials/MaterialComponentBus.h>
 #include <AzCore/Component/TransformBus.h>
 #include <AzCore/Name/Name.h>
@@ -37,7 +37,7 @@ namespace JE::Geometry
     //! A concrete implementation of RenderMeshInterface to support Atom rendering for the White Box Tool.
     class JE_GEOMETRY_API AtomRenderMesh
         : public RenderMeshInterface
-        , private AZ::Render::MeshHandleStateRequestBus::Handler
+        , private JE::Render::Scene::MeshHandleStateRequestBus::Handler
         , private JE::Render::MaterialConsumerRequestBus::Handler
         , private JE::Render::MaterialComponentNotificationBus::Handler
         , private AZ::TickBus::Handler

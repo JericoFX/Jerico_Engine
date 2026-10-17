@@ -13,16 +13,16 @@ AZ_GFX_BOOL_PARAM(Enabled, m_enabled, false)
 AZ_GFX_ANY_PARAM_BOOL_OVERRIDE(bool, Enabled, m_enabled)
 
 // Intensity of effect
-AZ_GFX_FLOAT_PARAM(Intensity, m_intensity, FilmGrain::DefaultIntensity)
+AZ_GFX_FLOAT_PARAM(Intensity, m_intensity, AZ::Render::FilmGrain::DefaultIntensity)
 AZ_GFX_FLOAT_PARAM_FLOAT_OVERRIDE(float, Intensity, m_intensity)
 
 // Dampening
-AZ_GFX_FLOAT_PARAM(LuminanceDampening, m_luminanceDampening, FilmGrain::DefaultLuminanceDampening)
+AZ_GFX_FLOAT_PARAM(LuminanceDampening, m_luminanceDampening, AZ::Render::FilmGrain::DefaultLuminanceDampening)
 AZ_GFX_FLOAT_PARAM_FLOAT_OVERRIDE(float, LuminanceDampening, m_luminanceDampening)
 
 // Scaling
-AZ_GFX_FLOAT_PARAM(TilingScale, m_tilingScale, FilmGrain::DefaultTilingScale)
+AZ_GFX_FLOAT_PARAM(TilingScale, m_tilingScale, AZ::Render::FilmGrain::DefaultTilingScale)
 AZ_GFX_FLOAT_PARAM_FLOAT_OVERRIDE(float, TilingScale, m_tilingScale)
 
 // Grain Source
-AZ_GFX_TEXTURE2D_PARAM(GrainPath, m_grainPath, FilmGrain::DefaultGrainPath)
+AZ_GFX_TEXTURE2D_PARAM(GrainPath, m_grainPath, AZ::Render::FilmGrain::DefaultGrainPath)

@@ -18,9 +18,9 @@
 #include <LmbrCentral/Animation/SkeletalHierarchyRequestBus.h>
 
 #include <JE/Render/Materials/MaterialComponentBus.h>
-#include <AtomLyIntegration/CommonFeatures/Mesh/MeshHandleStateBus.h>
-#include <AtomLyIntegration/CommonFeatures/Mesh/MeshComponentBus.h>
-#include <AtomLyIntegration/CommonFeatures/SkinnedMesh/SkinnedMeshOverrideBus.h>
+#include <JE/Render/Scene/Mesh/MeshHandleStateBus.h>
+#include <JE/Render/Scene/Mesh/MeshComponentBus.h>
+#include <JE/Render/Scene/SkinnedMesh/SkinnedMeshOverrideBus.h>
 #include <Atom/Feature/SkinnedMesh/SkinnedMeshFeatureProcessorBus.h>
 #include <Atom/Feature/SkinnedMesh/SkinnedMeshFeatureProcessorInterface.h>
 #include <Atom/Feature/SkinnedMesh/SkinnedMeshInputBuffers.h>
@@ -65,13 +65,13 @@ namespace AZ
             , public JE::Render::MaterialConsumerRequestBus::Handler
             , public AzFramework::BoundsRequestBus::Handler
             , public JE::Render::MaterialComponentNotificationBus::Handler
-            , public AZ::Render::MeshComponentRequestBus::Handler
-            , public AZ::Render::SkinnedMeshOverrideRequestBus::Handler
+            , public JE::Render::Scene::MeshComponentRequestBus::Handler
+            , public JE::Render::Scene::SkinnedMeshOverrideRequestBus::Handler
             , private AZ::Render::SkinnedMeshFeatureProcessorNotificationBus::Handler
             , private AZ::Render::SkinnedMeshOutputStreamNotificationBus::Handler
             , private LmbrCentral::SkeletalHierarchyRequestBus::Handler
             , private Data::AssetBus::MultiHandler
-            , private MeshHandleStateRequestBus::Handler
+            , private JE::Render::Scene::MeshHandleStateRequestBus::Handler
         {
         public:
             AZ_CLASS_ALLOCATOR_DECL;

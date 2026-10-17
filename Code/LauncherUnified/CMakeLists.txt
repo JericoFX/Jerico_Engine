@@ -33,6 +33,7 @@ ly_add_target(
             JE::RenderDebug
             JE::RenderIntegration
             JE::RenderMaterials
+            JE::RenderScene
             Legacy::CryCommon
 )
 
@@ -58,6 +59,7 @@ ly_add_target(
             JE::DebugImGui
             JE::ProfilerCapture
             JE::RenderMaterials
+            JE::RenderScene
             Legacy::CryCommon
 )
 

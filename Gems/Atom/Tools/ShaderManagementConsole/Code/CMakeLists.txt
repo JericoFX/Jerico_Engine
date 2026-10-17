@@ -49,6 +49,7 @@ ly_add_target(
     BUILD_DEPENDENCIES
         PRIVATE
             JE::EditorCamera
+            JE::EditorRenderScene
             Gem::AtomToolsFramework.Static
             Gem::AtomToolsFramework.Editor
             JE::RenderAssetBuilders

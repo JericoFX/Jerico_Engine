@@ -17,6 +17,7 @@ namespace LuaBuilderComponentCpp
     {
         AddDependenciesToAsset = 9,
         UpdatedErrorMessage = 10,
+        IgnoreRootedAndDirectoryPathCandidates = 11,
 
         // add new, descriptive, entry above
         Current

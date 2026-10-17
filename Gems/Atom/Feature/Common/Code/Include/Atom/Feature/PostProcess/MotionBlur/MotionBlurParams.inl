@@ -13,9 +13,9 @@ AZ_GFX_BOOL_PARAM(Enabled, m_enabled, false)
 AZ_GFX_ANY_PARAM_BOOL_OVERRIDE(bool, Enabled, m_enabled)
 
 // Strength
-AZ_GFX_FLOAT_PARAM(Strength, m_strength, MotionBlur::DefaultStrength)
+AZ_GFX_FLOAT_PARAM(Strength, m_strength, AZ::Render::MotionBlur::DefaultStrength)
 AZ_GFX_FLOAT_PARAM_FLOAT_OVERRIDE(float, Strength, m_strength)
 
 // Sample quality
-AZ_GFX_COMMON_PARAM(MotionBlur::SampleQuality, SampleQuality, m_sampleQuality, MotionBlur::SampleQuality::High)
-AZ_GFX_ANY_PARAM_BOOL_OVERRIDE(MotionBlur::SampleQuality, SampleQuality, m_sampleQuality)
+AZ_GFX_COMMON_PARAM(AZ::Render::MotionBlur::SampleQuality, SampleQuality, m_sampleQuality, AZ::Render::MotionBlur::SampleQuality::High)
+AZ_GFX_ANY_PARAM_BOOL_OVERRIDE(AZ::Render::MotionBlur::SampleQuality, SampleQuality, m_sampleQuality)

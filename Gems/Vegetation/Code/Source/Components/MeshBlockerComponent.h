@@ -15,7 +15,7 @@
 #include <Vegetation/Ebuses/AreaRequestBus.h>
 #include <Vegetation/Ebuses/MeshBlockerRequestBus.h>
 #include <LmbrCentral/Dependency/DependencyNotificationBus.h>
-#include <AtomLyIntegration/CommonFeatures/Mesh/MeshComponentBus.h>
+#include <JE/Render/Scene/Mesh/MeshComponentBus.h>
 #include <SurfaceData/SurfaceDataSystemNotificationBus.h>
 #include <AzCore/Component/TransformBus.h>
 #include <AzCore/std/containers/unordered_map.h>
@@ -49,7 +49,7 @@ namespace Vegetation
 
     class MeshBlockerComponent
         : public AreaComponentBase
-        , private AZ::Render::MeshComponentNotificationBus::Handler
+        , private JE::Render::Scene::MeshComponentNotificationBus::Handler
         , private AZ::TickBus::Handler
         , private MeshBlockerRequestBus::Handler
         , private SurfaceData::SurfaceDataSystemNotificationBus::Handler

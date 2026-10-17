@@ -1,0 +1,36 @@
+/*
+ * Copyright (c) Contributors to the Open 3D Engine Project.
+ * For complete copyright and license terms please see the LICENSE at the root of this distribution.
+ *
+ * SPDX-License-Identifier: Apache-2.0 OR MIT
+ *
+ */
+#pragma once
+
+#include <AzToolsFramework/ToolsComponents/EditorComponentAdapter.h>
+#include <Scripting/EntityReferenceComponent.h>
+#include <AzCore/std/containers/vector.h>
+
+namespace JE::Editor::Render
+{
+    namespace Scene
+    {
+        class EditorEntityReferenceComponent final
+            : public AzToolsFramework::Components::EditorComponentAdapter<JE::Render::Scene::EntityReferenceComponentController, JE::Render::Scene::EntityReferenceComponent, JE::Render::Scene::EntityReferenceComponentConfig>
+        {
+        public:
+            using BaseClass = AzToolsFramework::Components::EditorComponentAdapter<JE::Render::Scene::EntityReferenceComponentController, JE::Render::Scene::EntityReferenceComponent, JE::Render::Scene::EntityReferenceComponentConfig>;
+            AZ_RTTI_WITH_NAME(JE::Editor::Render::Scene::EditorEntityReferenceComponent, "AZ::Render::EditorEntityReferenceComponent", JE::Render::Scene::EditorEntityReferenceComponentTypeId, BaseClass, AzToolsFramework::Components::EditorComponentBase)
+            AZ_EDITOR_COMPONENT_INTRUSIVE_DESCRIPTOR_TYPE(JE::Editor::Render::Scene::EditorEntityReferenceComponent)
+            AZ_COMPONENT_BASE(JE::Editor::Render::Scene::EditorEntityReferenceComponent)
+            AZ_CLASS_ALLOCATOR(JE::Editor::Render::Scene::EditorEntityReferenceComponent, AZ::ComponentAllocator);
+
+            static void Reflect(AZ::ReflectContext* context);
+
+            EditorEntityReferenceComponent() = default;
+            EditorEntityReferenceComponent(const JE::Render::Scene::EntityReferenceComponentConfig& config);
+
+            AZ::u32 OnConfigurationChanged() override;
+        };
+    }
+}

@@ -40,10 +40,11 @@ ly_add_target(
             Include
     BUILD_DEPENDENCIES
         PRIVATE
-            Gem::CommonFeaturesAtom.Static
+            JE::RenderScene
             JE::RenderMaterials
             JE::EditorMaterials
             JE::EditorCamera
+            JE::EditorRenderScene
             Gem::AtomToolsFramework.Static
     RUNTIME_DEPENDENCIES
         Gem::AtomToolsFramework.Editor

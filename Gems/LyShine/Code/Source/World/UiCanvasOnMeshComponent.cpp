@@ -22,7 +22,7 @@
 
 
 #include <AzFramework/Render/GeometryIntersectionStructures.h>
-#include <AtomLyIntegration/CommonFeatures/Mesh/MeshComponentBus.h>
+#include <JE/Render/Scene/Mesh/MeshComponentBus.h>
 #include <AzFramework/Translation/TranslationDef.h>
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -183,8 +183,8 @@ bool UiCanvasOnMeshComponent::CalculateUVFromRayIntersection(const AzFramework::
 
     // Make sure we can get the model asset
     AZ::Data::Asset<JE::Render::RPI::ModelAsset> modelAsset;
-    AZ::Render::MeshComponentRequestBus::EventResult(
-        modelAsset, GetEntityId(), &AZ::Render::MeshComponentRequestBus::Events::GetModelAsset);
+    JE::Render::Scene::MeshComponentRequestBus::EventResult(
+        modelAsset, GetEntityId(), &JE::Render::Scene::MeshComponentRequestBus::Events::GetModelAsset);
     JE::Render::RPI::ModelAsset* asset = modelAsset.Get();
     if (!asset)
     {

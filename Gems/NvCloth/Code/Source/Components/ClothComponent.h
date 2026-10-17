@@ -10,7 +10,7 @@
 
 #include <AzCore/Component/Component.h>
 
-#include <AtomLyIntegration/CommonFeatures/Mesh/MeshComponentBus.h>
+#include <JE/Render/Scene/Mesh/MeshComponentBus.h>
 
 #include <Components/ClothConfiguration.h>
 #include <Components/ClothComponentMesh/ClothComponentMesh.h>
@@ -20,7 +20,7 @@ namespace NvCloth
     //! Class for runtime Cloth Component.
     class ClothComponent
         : public AZ::Component
-        , public AZ::Render::MeshComponentNotificationBus::Handler
+        , public JE::Render::Scene::MeshComponentNotificationBus::Handler
     {
     public:
         AZ_COMPONENT(ClothComponent, "{AC9B8FA0-A6DA-4377-8219-25BA7E4A22E9}");

@@ -23,7 +23,7 @@ ly_add_target(
             Gem::Atom_Feature_Common.Public
             JE::RenderIntegration
             Gem::Atom_RHI.Reflect
-            Gem::CommonFeaturesAtom.Public
+            JE::RenderScene.Public
             JE::RenderMaterials
 )
 
@@ -75,7 +75,7 @@ if(PAL_TRAIT_BUILD_HOST_TOOLS)
                 Gem::AtomToolsFramework.Editor
                 JE::WorldCamera
                 Gem::Atom_Feature_Common.Public
-                Gem::CommonFeaturesAtom.Static
+                JE::RenderScene
         RUNTIME_DEPENDENCIES
             Gem::EMotionFX.Editor
         COMPILE_DEFINITIONS

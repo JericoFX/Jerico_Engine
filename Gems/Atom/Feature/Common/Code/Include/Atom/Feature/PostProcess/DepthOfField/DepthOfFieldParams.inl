@@ -9,13 +9,13 @@
 // Macros below are of the form:
 // PARAM(NAME, MEMBER_NAME, DEFAULT_VALUE, ...)
 
-AZ_GFX_COMMON_PARAM(EntityId, CameraEntityId, m_cameraEntityId, EntityId())
-AZ_GFX_ANY_PARAM_BOOL_OVERRIDE(EntityId, CameraEntityId, m_cameraEntityId)
+AZ_GFX_COMMON_PARAM(AZ::EntityId, CameraEntityId, m_cameraEntityId, AZ::EntityId())
+AZ_GFX_ANY_PARAM_BOOL_OVERRIDE(AZ::EntityId, CameraEntityId, m_cameraEntityId)
 
 AZ_GFX_BOOL_PARAM(Enabled, m_enabled, false)
 AZ_GFX_ANY_PARAM_BOOL_OVERRIDE(bool, Enabled, m_enabled)
 
-AZ_GFX_UINT32_PARAM(QualityLevel, m_qualityLevel, DepthOfField::QualityLevelMax - 1)
+AZ_GFX_UINT32_PARAM(QualityLevel, m_qualityLevel, AZ::Render::DepthOfField::QualityLevelMax - 1)
 AZ_GFX_ANY_PARAM_BOOL_OVERRIDE(uint32_t, QualityLevel, m_qualityLevel)
 
 AZ_GFX_FLOAT_PARAM(ApertureF, m_apertureF, 0.5f)
@@ -30,8 +30,8 @@ AZ_GFX_FLOAT_PARAM_FLOAT_OVERRIDE(float, FocusDistance, m_focusDistance)
 AZ_GFX_BOOL_PARAM(EnableAutoFocus, m_enableAutoFocus, true)
 AZ_GFX_ANY_PARAM_BOOL_OVERRIDE(bool, EnableAutoFocus, m_enableAutoFocus)
 
-AZ_GFX_COMMON_PARAM(EntityId, FocusedEntityId, m_focusedEntityId, EntityId())
-AZ_GFX_ANY_PARAM_BOOL_OVERRIDE(EntityId, FocusedEntityId, m_focusedEntityId)
+AZ_GFX_COMMON_PARAM(AZ::EntityId, FocusedEntityId, m_focusedEntityId, AZ::EntityId())
+AZ_GFX_ANY_PARAM_BOOL_OVERRIDE(AZ::EntityId, FocusedEntityId, m_focusedEntityId)
 
 AZ_GFX_VEC2_PARAM(AutoFocusScreenPosition, m_autoFocusScreenPosition, AZ::Vector2(0.5f, 0.5f))
 AZ_GFX_FLOAT_PARAM_FLOAT_OVERRIDE(AZ::Vector2, AutoFocusScreenPosition, m_autoFocusScreenPosition)
@@ -39,7 +39,7 @@ AZ_GFX_FLOAT_PARAM_FLOAT_OVERRIDE(AZ::Vector2, AutoFocusScreenPosition, m_autoFo
 AZ_GFX_FLOAT_PARAM(AutoFocusSensitivity, m_autoFocusSensitivity, 1.0f)
 AZ_GFX_FLOAT_PARAM_FLOAT_OVERRIDE(float, AutoFocusSensitivity, m_autoFocusSensitivity)
 
-AZ_GFX_FLOAT_PARAM(AutoFocusSpeed, m_autoFocusSpeed, DepthOfField::AutoFocusSpeedMax)
+AZ_GFX_FLOAT_PARAM(AutoFocusSpeed, m_autoFocusSpeed, AZ::Render::DepthOfField::AutoFocusSpeedMax)
 AZ_GFX_FLOAT_PARAM_FLOAT_OVERRIDE(float, AutoFocusSpeed, m_autoFocusSpeed)
 
 AZ_GFX_FLOAT_PARAM(AutoFocusDelay, m_autoFocusDelay, 0.0f)

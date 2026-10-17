@@ -352,7 +352,7 @@ namespace PhysX
         PhysX::MeshColliderComponentRequestsBus::Handler::BusConnect(entityId);
         AZ::TransformNotificationBus::Handler::BusConnect(entityId);
         ColliderShapeRequestBus::Handler::BusConnect(entityId);
-        AZ::Render::MeshComponentNotificationBus::Handler::BusConnect(entityId);
+        JE::Render::Scene::MeshComponentNotificationBus::Handler::BusConnect(entityId);
         EditorColliderComponentRequestBus::Handler::BusConnect(AZ::EntityComponentIdPair(entityId, componentId));
         EditorMeshColliderComponentRequestBus::Handler::BusConnect(AZ::EntityComponentIdPair(entityId, componentId));
         EditorMeshColliderValidationRequestBus::Handler::BusConnect(entityId);
@@ -398,7 +398,7 @@ namespace PhysX
         EditorMeshColliderValidationRequestBus::Handler::BusDisconnect();
         EditorMeshColliderComponentRequestBus::Handler::BusDisconnect();
         EditorColliderComponentRequestBus::Handler::BusDisconnect();
-        AZ::Render::MeshComponentNotificationBus::Handler::BusDisconnect();
+        JE::Render::Scene::MeshComponentNotificationBus::Handler::BusDisconnect();
         ColliderShapeRequestBus::Handler::BusDisconnect();
         AZ::TransformNotificationBus::Handler::BusDisconnect();
         PhysX::MeshColliderComponentRequestsBus::Handler::BusDisconnect();
@@ -1030,8 +1030,8 @@ namespace PhysX
     {
         // Try Atom MeshComponent
         AZ::Data::Asset<JE::Render::RPI::ModelAsset> atomMeshAsset;
-        AZ::Render::MeshComponentRequestBus::EventResult(atomMeshAsset, GetEntityId(),
-            &AZ::Render::MeshComponentRequestBus::Events::GetModelAsset);
+        JE::Render::Scene::MeshComponentRequestBus::EventResult(atomMeshAsset, GetEntityId(),
+            &JE::Render::Scene::MeshComponentRequestBus::Events::GetModelAsset);
 
         return atomMeshAsset;
     }

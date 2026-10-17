@@ -15,7 +15,7 @@
 #include <JE/Render/RPI/Reflect/Model/ModelAsset.h>
 #include <JE/Render/RPI/Reflect/System/AnyAsset.h>
 #include <JE/Render/Materials/MaterialAssignment.h>
-#include <AtomLyIntegration/CommonFeatures/Mesh/MeshHandleStateBus.h>
+#include <JE/Render/Scene/Mesh/MeshHandleStateBus.h>
 #include <AtomToolsFramework/PreviewRenderer/PreviewContent.h>
 
 namespace JE
@@ -23,7 +23,7 @@ namespace JE
     namespace Editor
     {
         //! Creates a simple scene used for most previews and thumbnails
-        class JE_EDITOR_MATERIALS_API SharedPreviewContent final : public AtomToolsFramework::PreviewContent, public AZ::Render::MeshHandleStateNotificationBus::Handler
+        class JE_EDITOR_MATERIALS_API SharedPreviewContent final : public AtomToolsFramework::PreviewContent, public JE::Render::Scene::MeshHandleStateNotificationBus::Handler
         {
         public:
             AZ_CLASS_ALLOCATOR(SharedPreviewContent, AZ::SystemAllocator);

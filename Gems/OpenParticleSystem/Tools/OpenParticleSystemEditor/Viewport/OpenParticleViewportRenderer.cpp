@@ -36,17 +36,17 @@
 #include <OpenParticleViewportRequestBus.h>
 #include <OpenParticleViewportSettings.h>
 
-#include <AtomLyIntegration/CommonFeatures/Grid/GridComponentConstants.h>
-#include <AtomLyIntegration/CommonFeatures/Grid/GridComponentConfig.h>
-#include <AtomLyIntegration/CommonFeatures/ImageBasedLights/ImageBasedLightComponentBus.h>
-#include <AtomLyIntegration/CommonFeatures/ImageBasedLights/ImageBasedLightComponentConstants.h>
+#include <JE/Render/Scene/Grid/GridComponentConstants.h>
+#include <JE/Render/Scene/Grid/GridComponentConfig.h>
+#include <JE/Render/Scene/ImageBasedLights/ImageBasedLightComponentBus.h>
+#include <JE/Render/Scene/ImageBasedLights/ImageBasedLightComponentConstants.h>
 #include <JE/Render/Materials/MaterialComponentConstants.h>
 #include <JE/Render/Materials/MaterialComponentBus.h>
-#include <AtomLyIntegration/CommonFeatures/Mesh/MeshComponentConstants.h>
-#include <AtomLyIntegration/CommonFeatures/Mesh/MeshComponentBus.h>
-#include <AtomLyIntegration/CommonFeatures/PostProcess/PostFxLayerComponentConstants.h>
-#include <AtomLyIntegration/CommonFeatures/PostProcess/ExposureControl/ExposureControlBus.h>
-#include <AtomLyIntegration/CommonFeatures/PostProcess/ExposureControl/ExposureControlComponentConstants.h>
+#include <JE/Render/Scene/Mesh/MeshComponentConstants.h>
+#include <JE/Render/Scene/Mesh/MeshComponentBus.h>
+#include <JE/Render/Scene/PostProcess/PostFxLayerComponentConstants.h>
+#include <JE/Render/Scene/PostProcess/ExposureControl/ExposureControlBus.h>
+#include <JE/Render/Scene/PostProcess/ExposureControl/ExposureControlComponentConstants.h>
 
 #include <Editor/EditorParticleRequestBus.h>
 #include <AzCore/Math/MatrixUtils.h>
@@ -289,8 +289,8 @@ namespace OpenParticleSystemEditor
             m_postProcessEntity, entityContextId, &AzFramework::EntityContextRequestBus::Events::CreateEntity, "postProcessEntity");
         AZ_Assert(m_postProcessEntity != nullptr, "Failed to create post process entity.");
 
-        m_postProcessEntity->CreateComponent(AZ::Render::PostFxLayerComponentTypeId);
-        m_postProcessEntity->CreateComponent(AZ::Render::ExposureControlComponentTypeId);
+        m_postProcessEntity->CreateComponent(JE::Render::Scene::PostFxLayerComponentTypeId);
+        m_postProcessEntity->CreateComponent(JE::Render::Scene::ExposureControlComponentTypeId);
         m_postProcessEntity->CreateComponent(azrtti_typeid<AzFramework::TransformComponent>());
         m_postProcessEntity->Init();
         m_postProcessEntity->Activate();
@@ -303,12 +303,12 @@ namespace OpenParticleSystemEditor
             m_gridEntity, entityContextId, &AzFramework::EntityContextRequestBus::Events::CreateEntity, "ViewportGrid");
         AZ_Assert(m_gridEntity != nullptr, "Failed to create grid entity.");
 
-        AZ::Render::GridComponentConfig gridConfig;
+        JE::Render::Scene::GridComponentConfig gridConfig;
         gridConfig.m_gridSize = 4.0f;
         gridConfig.m_axisColor = AZ::Color(0.1f, 0.1f, 0.1f, 1.0f);
         gridConfig.m_primaryColor = AZ::Color(0.1f, 0.1f, 0.1f, 1.0f);
         gridConfig.m_secondaryColor = AZ::Color(0.1f, 0.1f, 0.1f, 1.0f);
-        auto gridComponent = m_gridEntity->CreateComponent(AZ::Render::GridComponentTypeId);
+        auto gridComponent = m_gridEntity->CreateComponent(JE::Render::Scene::GridComponentTypeId);
         gridComponent->SetConfiguration(gridConfig);
 
         m_gridEntity->CreateComponent(azrtti_typeid<AzFramework::TransformComponent>());

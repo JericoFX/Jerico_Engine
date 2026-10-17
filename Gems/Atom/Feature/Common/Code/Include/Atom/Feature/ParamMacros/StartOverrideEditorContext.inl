@@ -12,19 +12,19 @@
 // Example: #define EDITOR_CLASS DofComponentConfig
 
 #define AZ_GFX_ANY_PARAM_BOOL_OVERRIDE(ValueType, Name, MemberName)                                                                         \
-        ->DataElement(Edit::UIHandlers::CheckBox, &EDITOR_CLASS::MemberName##Override, #Name " Override", "Override enable for " #Name)     \
-            ->Attribute(Edit::Attributes::ChangeNotify, Edit::PropertyRefreshLevels::ValuesOnly)                                            \
+        ->DataElement(AZ::Edit::UIHandlers::CheckBox, &EDITOR_CLASS::MemberName##Override, #Name " Override", "Override enable for " #Name)     \
+            ->Attribute(AZ::Edit::Attributes::ChangeNotify, AZ::Edit::PropertyRefreshLevels::ValuesOnly)                                            \
 
 #define AZ_GFX_INTEGER_PARAM_FLOAT_OVERRIDE(ValueType, Name, MemberName)                                                                    \
-        ->DataElement(Edit::UIHandlers::Slider, &EDITOR_CLASS::MemberName##Override, #Name " Override", "Override factor for " #Name)       \
-            ->Attribute(Edit::Attributes::ChangeNotify, Edit::PropertyRefreshLevels::ValuesOnly)                                            \
-            ->Attribute(Edit::Attributes::Min, 0.0f)                                                                                        \
-            ->Attribute(Edit::Attributes::Max, 1.0f)                                                                                        \
+        ->DataElement(AZ::Edit::UIHandlers::Slider, &EDITOR_CLASS::MemberName##Override, #Name " Override", "Override factor for " #Name)       \
+            ->Attribute(AZ::Edit::Attributes::ChangeNotify, AZ::Edit::PropertyRefreshLevels::ValuesOnly)                                            \
+            ->Attribute(AZ::Edit::Attributes::Min, 0.0f)                                                                                        \
+            ->Attribute(AZ::Edit::Attributes::Max, 1.0f)                                                                                        \
 
 #define AZ_GFX_FLOAT_PARAM_FLOAT_OVERRIDE(ValueType, Name, MemberName)                                                                      \
-        ->DataElement(Edit::UIHandlers::Slider, &EDITOR_CLASS::MemberName##Override, #Name " Override", "Override factor for " #Name)       \
-            ->Attribute(Edit::Attributes::ChangeNotify, Edit::PropertyRefreshLevels::ValuesOnly)                                            \
-            ->Attribute(Edit::Attributes::Min, 0.0f)                                                                                        \
-            ->Attribute(Edit::Attributes::Max, 1.0f)                                                                                        \
+        ->DataElement(AZ::Edit::UIHandlers::Slider, &EDITOR_CLASS::MemberName##Override, #Name " Override", "Override factor for " #Name)       \
+            ->Attribute(AZ::Edit::Attributes::ChangeNotify, AZ::Edit::PropertyRefreshLevels::ValuesOnly)                                            \
+            ->Attribute(AZ::Edit::Attributes::Min, 0.0f)                                                                                        \
+            ->Attribute(AZ::Edit::Attributes::Max, 1.0f)                                                                                        \
 
 #include <Atom/Feature/ParamMacros/MapParamEmpty.inl>

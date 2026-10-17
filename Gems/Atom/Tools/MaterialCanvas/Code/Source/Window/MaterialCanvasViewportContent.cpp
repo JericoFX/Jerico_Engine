@@ -10,21 +10,21 @@
 #include <Atom/Feature/Utils/ModelPreset.h>
 #include <JE/Editor/Render/RPI/Edit/Common/AssetUtils.h>
 #include <JE/Render/RPI/Reflect/Asset/AssetUtils.h>
-#include <AtomLyIntegration/CommonFeatures/Grid/GridComponentBus.h>
-#include <AtomLyIntegration/CommonFeatures/Grid/GridComponentConfig.h>
-#include <AtomLyIntegration/CommonFeatures/Grid/GridComponentConstants.h>
-#include <AtomLyIntegration/CommonFeatures/ImageBasedLights/ImageBasedLightComponentBus.h>
-#include <AtomLyIntegration/CommonFeatures/ImageBasedLights/ImageBasedLightComponentConstants.h>
+#include <JE/Render/Scene/Grid/GridComponentBus.h>
+#include <JE/Render/Scene/Grid/GridComponentConfig.h>
+#include <JE/Render/Scene/Grid/GridComponentConstants.h>
+#include <JE/Render/Scene/ImageBasedLights/ImageBasedLightComponentBus.h>
+#include <JE/Render/Scene/ImageBasedLights/ImageBasedLightComponentConstants.h>
 #include <JE/Render/Materials/MaterialComponentBus.h>
 #include <JE/Render/Materials/MaterialComponentConstants.h>
-#include <AtomLyIntegration/CommonFeatures/Mesh/MeshComponentBus.h>
-#include <AtomLyIntegration/CommonFeatures/Mesh/MeshComponentConstants.h>
-#include <AtomLyIntegration/CommonFeatures/PostProcess/DisplayMapper/DisplayMapperComponentBus.h>
-#include <AtomLyIntegration/CommonFeatures/PostProcess/DisplayMapper/DisplayMapperComponentConstants.h>
-#include <AtomLyIntegration/CommonFeatures/PostProcess/ExposureControl/ExposureControlBus.h>
-#include <AtomLyIntegration/CommonFeatures/PostProcess/ExposureControl/ExposureControlComponentConstants.h>
-#include <AtomLyIntegration/CommonFeatures/PostProcess/PostFxLayerComponentConstants.h>
-#include <AtomLyIntegration/CommonFeatures/SkyBox/HDRiSkyboxBus.h>
+#include <JE/Render/Scene/Mesh/MeshComponentBus.h>
+#include <JE/Render/Scene/Mesh/MeshComponentConstants.h>
+#include <JE/Render/Scene/PostProcess/DisplayMapper/DisplayMapperComponentBus.h>
+#include <JE/Render/Scene/PostProcess/DisplayMapper/DisplayMapperComponentConstants.h>
+#include <JE/Render/Scene/PostProcess/ExposureControl/ExposureControlBus.h>
+#include <JE/Render/Scene/PostProcess/ExposureControl/ExposureControlComponentConstants.h>
+#include <JE/Render/Scene/PostProcess/PostFxLayerComponentConstants.h>
+#include <JE/Render/Scene/SkyBox/HDRiSkyboxBus.h>
 #include <AtomToolsFramework/EntityPreviewViewport/EntityPreviewViewportSettingsRequestBus.h>
 #include <AtomToolsFramework/Graph/GraphDocumentRequestBus.h>
 #include <AtomToolsFramework/Util/Util.h>
@@ -43,24 +43,24 @@ namespace MaterialCanvas
         // Configure tone mapper
         m_postFxEntity = CreateEntity(
             "PostFxEntity",
-            { AZ::Render::PostFxLayerComponentTypeId, AZ::Render::DisplayMapperComponentTypeId, AZ::Render::ExposureControlComponentTypeId,
+            { JE::Render::Scene::PostFxLayerComponentTypeId, JE::Render::Scene::DisplayMapperComponentTypeId, JE::Render::Scene::ExposureControlComponentTypeId,
               azrtti_typeid<AzFramework::TransformComponent>() });
 
         // Create IBL
         m_environmentEntity = CreateEntity(
             "EnvironmentEntity",
-            { AZ::Render::HDRiSkyboxComponentTypeId, AZ::Render::ImageBasedLightComponentTypeId,
+            { AZ::Render::HDRiSkyboxComponentTypeId, JE::Render::Scene::ImageBasedLightComponentTypeId,
               azrtti_typeid<AzFramework::TransformComponent>() });
 
         // Create model
         m_objectEntity = CreateEntity(
             "ObjectEntity",
-            { AZ::Render::MeshComponentTypeId, JE::Render::MaterialComponentTypeId, azrtti_typeid<AzFramework::TransformComponent>() });
+            { JE::Render::Scene::MeshComponentTypeId, JE::Render::MaterialComponentTypeId, azrtti_typeid<AzFramework::TransformComponent>() });
 
         // Create shadow catcher
         m_shadowCatcherEntity = CreateEntity(
             "ShadowCatcherEntity",
-            { AZ::Render::MeshComponentTypeId, JE::Render::MaterialComponentTypeId, azrtti_typeid<AzFramework::TransformComponent>(),
+            { JE::Render::Scene::MeshComponentTypeId, JE::Render::MaterialComponentTypeId, azrtti_typeid<AzFramework::TransformComponent>(),
               azrtti_typeid<AzFramework::NonUniformScaleComponent>() });
 
         AZ::NonUniformScaleRequestBus::Event(
@@ -70,8 +70,8 @@ namespace MaterialCanvas
         AZ::TransformBus::Event(
             GetShadowCatcherEntityId(), &AZ::TransformInterface::SetWorldZ, -0.01f);
 
-        AZ::Render::MeshComponentRequestBus::Event(
-            GetShadowCatcherEntityId(), &AZ::Render::MeshComponentRequestBus::Events::SetModelAssetId,
+        JE::Render::Scene::MeshComponentRequestBus::Event(
+            GetShadowCatcherEntityId(), &JE::Render::Scene::MeshComponentRequestBus::Events::SetModelAssetId,
             JE::Render::RPI::AssetUtils::GetAssetIdForProductPath("materialeditor/viewportmodels/plane_1x1.fbx.azmodel"));
 
         JE::Render::MaterialComponentRequestBus::Event(
@@ -80,11 +80,11 @@ namespace MaterialCanvas
             JE::Render::RPI::AssetUtils::GetAssetIdForProductPath("materials/special/shadowcatcher.azmaterial"));
 
         // Create grid
-        m_gridEntity = CreateEntity("GridEntity", { AZ::Render::GridComponentTypeId, azrtti_typeid<AzFramework::TransformComponent>() });
+        m_gridEntity = CreateEntity("GridEntity", { JE::Render::Scene::GridComponentTypeId, azrtti_typeid<AzFramework::TransformComponent>() });
 
-        AZ::Render::GridComponentRequestBus::Event(
+        JE::Render::Scene::GridComponentRequestBus::Event(
             GetGridEntityId(),
-            [&](AZ::Render::GridComponentRequests* gridComponentRequests)
+            [&](JE::Render::Scene::GridComponentRequests* gridComponentRequests)
             {
                 gridComponentRequests->SetSize(4.0f);
                 gridComponentRequests->SetAxisColor(AZ::Color(0.1f, 0.1f, 0.1f, 1.0f));
@@ -177,9 +177,9 @@ namespace MaterialCanvas
                 const auto& modelPreset = viewportRequests->GetModelPreset();
                 const auto& lightingPreset = viewportRequests->GetLightingPreset();
 
-                AZ::Render::MeshComponentRequestBus::Event(
+                JE::Render::Scene::MeshComponentRequestBus::Event(
                     GetObjectEntityId(),
-                    [&](AZ::Render::MeshComponentRequests* meshComponentRequests)
+                    [&](JE::Render::Scene::MeshComponentRequests* meshComponentRequests)
                     {
                         if (meshComponentRequests->GetModelAsset() != modelPreset.m_modelAsset)
                         {
@@ -187,9 +187,9 @@ namespace MaterialCanvas
                         }
                     });
 
-                AZ::Render::HDRiSkyboxRequestBus::Event(
+                JE::Render::Scene::HDRiSkyboxRequestBus::Event(
                     GetEnvironmentEntityId(),
-                    [&](AZ::Render::HDRiSkyboxRequests* skyboxComponentRequests)
+                    [&](JE::Render::Scene::HDRiSkyboxRequests* skyboxComponentRequests)
                     {
                         skyboxComponentRequests->SetExposure(lightingPreset.m_skyboxExposure);
                         skyboxComponentRequests->SetCubemapAsset(
@@ -197,20 +197,20 @@ namespace MaterialCanvas
                                                                           : lightingPreset.m_skyboxImageAsset);
                     });
 
-                AZ::Render::MeshComponentRequestBus::Event(
-                    GetShadowCatcherEntityId(), &AZ::Render::MeshComponentRequestBus::Events::SetVisibility,
+                JE::Render::Scene::MeshComponentRequestBus::Event(
+                    GetShadowCatcherEntityId(), &JE::Render::Scene::MeshComponentRequestBus::Events::SetVisibility,
                     viewportRequests->GetShadowCatcherEnabled());
 
                 JE::Render::MaterialComponentRequestBus::Event(
                     GetShadowCatcherEntityId(), &JE::Render::MaterialComponentRequestBus::Events::SetPropertyValue,
                     JE::Render::DefaultMaterialAssignmentId, "settings.opacity", AZStd::any(lightingPreset.m_shadowCatcherOpacity));
 
-                AZ::Render::DisplayMapperComponentRequestBus::Event(
-                    GetPostFxEntityId(), &AZ::Render::DisplayMapperComponentRequestBus::Events::SetDisplayMapperOperationType,
+                JE::Render::Scene::DisplayMapperComponentRequestBus::Event(
+                    GetPostFxEntityId(), &JE::Render::Scene::DisplayMapperComponentRequestBus::Events::SetDisplayMapperOperationType,
                     viewportRequests->GetDisplayMapperOperationType());
 
-                AZ::Render::GridComponentRequestBus::Event(
-                    GetGridEntityId(), &AZ::Render::GridComponentRequestBus::Events::SetSize,
+                JE::Render::Scene::GridComponentRequestBus::Event(
+                    GetGridEntityId(), &JE::Render::Scene::GridComponentRequestBus::Events::SetSize,
                     viewportRequests->GetGridEnabled() ? 4.0f : 0.0f);
             });
     }

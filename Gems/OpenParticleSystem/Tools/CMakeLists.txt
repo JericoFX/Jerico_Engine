@@ -29,7 +29,8 @@ if(PAL_TRAIT_BUILD_HOST_TOOLS)
                 Gem::AtomToolsFramework.Static
                 Gem::AtomToolsFramework.Editor
                 Gem::Atom_Feature_Common.Public
-                Gem::AtomLyIntegration_CommonFeatures.Static
+                JE::RenderScene
+                JE::EditorRenderScene
                 JE::RenderMaterials
                 JE::WorldCamera
                 Gem::OpenParticleSystem.Editor.Static
@@ -39,6 +40,5 @@ if(PAL_TRAIT_BUILD_HOST_TOOLS)
             JE::RenderAssetBuilders
             Gem::Atom_Feature_Common.Editor
             Gem::AtomToolsFramework.Editor
-            Gem::AtomLyIntegration_CommonFeatures.Editor
     )
 endif()

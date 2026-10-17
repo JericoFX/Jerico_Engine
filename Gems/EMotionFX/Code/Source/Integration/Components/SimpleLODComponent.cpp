@@ -157,9 +157,9 @@ namespace EMotionFX
             AZ::TickBus::Handler::BusConnect();
 
             // Remember the lod type and level so that we can set it back to the previous one on deactivation of the component.
-            AZ::Render::MeshComponentRequestBus::EventResult(m_previousLodType,
+            JE::Render::Scene::MeshComponentRequestBus::EventResult(m_previousLodType,
                 GetEntityId(),
-                &AZ::Render::MeshComponentRequestBus::Events::GetLodType);
+                &JE::Render::Scene::MeshComponentRequestBus::Events::GetLodType);
 
             if (m_actorInstance)
             {
@@ -179,8 +179,8 @@ namespace EMotionFX
             AZ::TickBus::Handler::BusDisconnect();
             ActorComponentNotificationBus::Handler::BusDisconnect();
 
-            AZ::Render::MeshComponentRequestBus::Event(GetEntityId(),
-                &AZ::Render::MeshComponentRequestBus::Events::SetLodType,
+            JE::Render::Scene::MeshComponentRequestBus::Event(GetEntityId(),
+                &JE::Render::Scene::MeshComponentRequestBus::Events::SetLodType,
                 m_previousLodType);
 
             if (m_actorInstance)
@@ -261,8 +261,8 @@ namespace EMotionFX
 
                 // Disable the automatic mesh LOD level adjustment based on screen space in case a simple LOD component is present.
                 // The simple LOD component overrides the mesh LOD level and syncs the skeleton with the mesh LOD level.
-                AZ::Render::MeshComponentRequestBus::Event(entityId,
-                    &AZ::Render::MeshComponentRequestBus::Events::SetLodType,
+                JE::Render::Scene::MeshComponentRequestBus::Event(entityId,
+                    &JE::Render::Scene::MeshComponentRequestBus::Events::SetLodType,
                     JE::Render::RPI::Cullable::LodType::SpecificLod);
 
                 // When setting the actor instance LOD level, a change is just requested and with the next update it will get applied.
@@ -270,8 +270,8 @@ namespace EMotionFX
                 // current LOD level of the actor instance to avoid skinning artifacts. The requested LOD level will be present and applied
                 // the following frame.
                 const size_t currentLod = actorInstance->GetLODLevel();
-                AZ::Render::MeshComponentRequestBus::Event(entityId,
-                    &AZ::Render::MeshComponentRequestBus::Events::SetLodOverride,
+                JE::Render::Scene::MeshComponentRequestBus::Event(entityId,
+                    &JE::Render::Scene::MeshComponentRequestBus::Events::SetLodOverride,
                     static_cast<JE::Render::RPI::Cullable::LodOverride>(currentLod));
             }
         }

@@ -28,7 +28,7 @@ namespace JE::Geometry
     AtomRenderMesh::AtomRenderMesh(AZ::EntityId entityId)
         : m_entityId(entityId)
     {
-        AZ::Render::MeshHandleStateRequestBus::Handler::BusConnect(m_entityId);
+        JE::Render::Scene::MeshHandleStateRequestBus::Handler::BusConnect(m_entityId);
         JE::Render::MaterialConsumerRequestBus::Handler::BusConnect(m_entityId);
         JE::Render::MaterialComponentNotificationBus::Handler::BusConnect(m_entityId);
     }
@@ -39,13 +39,13 @@ namespace JE::Geometry
         if (m_meshHandle.IsValid() && m_meshFeatureProcessor)
         {
             m_meshFeatureProcessor->ReleaseMesh(m_meshHandle);
-            AZ::Render::MeshHandleStateNotificationBus::Event(
-                m_entityId, &AZ::Render::MeshHandleStateNotificationBus::Events::OnMeshHandleSet, &m_meshHandle);
+            JE::Render::Scene::MeshHandleStateNotificationBus::Event(
+                m_entityId, &JE::Render::Scene::MeshHandleStateNotificationBus::Events::OnMeshHandleSet, &m_meshHandle);
         }
         
         JE::Render::MaterialComponentNotificationBus::Handler::BusDisconnect();
         JE::Render::MaterialConsumerRequestBus::Handler::BusDisconnect();
-        AZ::Render::MeshHandleStateRequestBus::Handler::BusDisconnect();
+        JE::Render::Scene::MeshHandleStateRequestBus::Handler::BusDisconnect();
         AZ::TickBus::Handler::BusDisconnect();
     }
 
@@ -219,7 +219,7 @@ namespace JE::Geometry
         JE::Render::MaterialComponentRequestBus::EventResult(
             materials, m_entityId, &JE::Render::MaterialComponentRequests::GetMaterialMapCopy);
         ApplyNativeMaterials(materials);
-        AZ::Render::MeshHandleStateNotificationBus::Event(m_entityId, &AZ::Render::MeshHandleStateNotificationBus::Events::OnMeshHandleSet, &m_meshHandle);
+        JE::Render::Scene::MeshHandleStateNotificationBus::Event(m_entityId, &JE::Render::Scene::MeshHandleStateNotificationBus::Events::OnMeshHandleSet, &m_meshHandle);
 
         return true;
     }

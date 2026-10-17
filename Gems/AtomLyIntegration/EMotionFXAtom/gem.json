@@ -18,6 +18,9 @@
         "EMotionFX",
         "Atom_Feature_Common",
         "Atom_RHI",
-        "CommonFeaturesAtom"
+        "LmbrCentral",
+        "GradientSignal",
+        "SurfaceData",
+        "AtomToolsFramework"
     ]
 }

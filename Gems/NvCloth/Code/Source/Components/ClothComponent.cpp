@@ -61,12 +61,12 @@ namespace NvCloth
             }
         }
 
-        AZ::Render::MeshComponentNotificationBus::Handler::BusConnect(GetEntityId());
+        JE::Render::Scene::MeshComponentNotificationBus::Handler::BusConnect(GetEntityId());
     }
 
     void ClothComponent::Deactivate()
     {
-        AZ::Render::MeshComponentNotificationBus::Handler::BusDisconnect();
+        JE::Render::Scene::MeshComponentNotificationBus::Handler::BusDisconnect();
 
         m_clothComponentMesh.reset();
     }

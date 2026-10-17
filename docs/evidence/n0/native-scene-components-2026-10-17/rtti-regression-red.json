@@ -1,0 +1,70 @@
+{
+  "schema": "je-scene100-component-rtti-red-v1",
+  "state": "CAUSAL_RED_PRESERVED_CORRECTION_GREEN_PENDING",
+  "runtime": {
+    "rejectedSpawnables": [
+      "levels/jeeditorfixture/jeeditorfixture.spawnable",
+      "levels/jematerialcooknative5/jematerialcooknative5.spawnable"
+    ],
+    "originalScreenshot": {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-scene100\\runtime100-attempt1\\serialization-red-original.png",
+      "bytes": 218269,
+      "sha256": "5899D9B43CD56B8EA94A5CB20080961A2F45E81C189FC9AB6A63EA6ACCA5D6E4"
+    },
+    "pid": 6896,
+    "component": "DirectionalLightComponent",
+    "backend": "Vulkan",
+    "serializationRejectedUuid": "{13054592-2753-46C2-B19E-59670D4CE03D}",
+    "productAcceptance": false,
+    "assetProcessorAbsent": true,
+    "exit": 0,
+    "requiredBase": "{EDFCB2CF-F75D-43BE-B26B-F35821B29247}",
+    "stdout": {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-scene100\\runtime100-attempt1\\native.stdout.log",
+      "bytes": 7434,
+      "sha256": "A2F974D484A641F52C1643C1325F6FB9BB21650A24401562C5D7FD864ABF75D8"
+    }
+  },
+  "test": {
+    "oracle": "Same existing runtime/editor factory cases, two cycles each: IsTypeOf(AZ::Component)==false and AddressOf(AZ::Component)==NULL; no Init/Activate/GPU.",
+    "errors": 0,
+    "scenePassed": 30,
+    "skipped": 0,
+    "materialsPassed": 89,
+    "sceneFailed": 2,
+    "disabled": 0,
+    "buildExit": 0,
+    "redFreezeSHA256": "7DC508D526382D4826E8D32AB5286DC8BCE44237D12F138B2A45EBF1E67132A2",
+    "sceneCases": 32,
+    "testSourceSHA256": "634A3E4CA8EC804677E025229A7A5C5D622E06667E22A08B48A4F30EE4E0AE85",
+    "wrapperExit": 1,
+    "ctestExit": 8,
+    "xml": [
+      {
+        "path": "F:\\JericoEngine\\JericoEngine\\docs\\evidence\\n0\\native-scene-components-2026-10-17\\test-results\\rtti-red\\JE_EditorRenderScene.Tests.xml",
+        "bytes": 15226,
+        "sha256": "81476168B5FFFD2FC186A3EC9EAD8BB11989081C089511D359F6B08B8EF89083"
+      },
+      {
+        "path": "F:\\JericoEngine\\JericoEngine\\docs\\evidence\\n0\\native-scene-components-2026-10-17\\test-results\\rtti-red\\JE_EditorMaterials.Tests.xml",
+        "bytes": 29855,
+        "sha256": "383E75A9F59E6B33244B615E4C874E8C34775A91CD3414E0A17B6A04AC4C33A7"
+      }
+    ],
+    "failedAssertions": 8
+  },
+  "cause": {
+    "editorComponentExpansionsBasePreserved": 32,
+    "manualExpansionsReviewed": 119,
+    "scope": "Restore only the33 missing base arguments; original names, UUIDs, explicit bases and74 oracles unchanged.",
+    "componentExpansionsMissingImplicitBase": 33,
+    "plainRttiExpansionsExplicitBasesPreserved": 54,
+    "macro": "AZ_COMPONENT implicitly appends AZ::Component to AZ_RTTI",
+    "parentRepairReview": {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-scene100\\runtime100-serialization-readonly\\parent-repair-approval.json",
+      "bytes": 1225,
+      "sha256": "1A80F5607DD885C4B3AB0663A5D1B4D76024F93E8D58FCD294133D906D020F30"
+    }
+  },
+  "limits": "Runtime rendering and exit0 alone did not prove serialized-component restoration. RPI99 baseline already has the DynamicDrawContext warning and NoFloat16 NameDictionary assert at close; those are preserved debt, not newly introduced by Scene."
+}

@@ -11,7 +11,7 @@
 #include <Draw/EditorStateMeshDrawPacket.h>
 
 #include <JE/Render/RPI/Reflect/Model/ModelLodIndex.h>
-#include <AtomLyIntegration/CommonFeatures/Mesh/MeshHandleStateBus.h>
+#include <JE/Render/Scene/Mesh/MeshHandleStateBus.h>
 #include <AzCore/Instance/Instance.h>
 #include <AzCore/std/containers/vector.h>
 
@@ -20,7 +20,7 @@ namespace AZ::Render
     //! Representation of a focused entity's Atom mesh (if any).
     //! @note It is not an error for an entity to not have any Atom mesh.
     class DrawableMeshEntity
-        : private AZ::Render::MeshHandleStateNotificationBus::Handler
+        : private JE::Render::Scene::MeshHandleStateNotificationBus::Handler
     {
     public:
         DrawableMeshEntity(EntityId entityId, Data::Instance<JE::Render::RPI::Material> maskMaterial, Name drawList);

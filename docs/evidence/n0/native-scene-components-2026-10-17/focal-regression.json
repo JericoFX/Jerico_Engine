@@ -1,0 +1,126 @@
+{
+  "schema": "je-scene100-tests-review-v1",
+  "preparedUtc": "2026-10-17T09:56:07.04536-03:00",
+  "execution": "GREEN19 / native-tests-attempt19-rtti-green / freeze R20",
+  "exitCode": 0,
+  "suiteCount": 2,
+  "invalidSuites": 0,
+  "outputDrift": 0,
+  "configuredCTestDrift": 0,
+  "sourceDrift": 0,
+  "finalNativeProcesses": 0,
+  "fatal": null,
+  "xmlPins": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-scene100\\native-tests-attempt19-rtti-green\\JE_EditorRenderScene.Tests.xml",
+      "bytes": 10856,
+      "sha256": "813BF8253EA81930C0A1E6445CC2DDFEB9836A1A1E2841684E198A88BF676CC5",
+      "freshAtExecution": true,
+      "originalOutputPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\Testing\\Gtest\\JE_EditorRenderScene.Tests.xml"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-scene100\\native-tests-attempt19-rtti-green\\JE_EditorMaterials.Tests.xml",
+      "bytes": 29863,
+      "sha256": "6662E5D57777414D53A2E34BA3D38601095B33F729C705561F3C025584B3FDA5",
+      "freshAtExecution": true,
+      "originalOutputPath": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\Testing\\Gtest\\JE_EditorMaterials.Tests.xml"
+    }
+  ],
+  "suites": [
+    {
+      "name": "JE::EditorRenderScene.Tests",
+      "cases": 32,
+      "unique": 32,
+      "run": 32,
+      "completed": 32,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "disabled": 0
+    },
+    {
+      "name": "JE::EditorMaterials.Tests",
+      "cases": 89,
+      "unique": 89,
+      "run": 89,
+      "completed": 89,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "disabled": 0
+    }
+  ],
+  "caseCount": 121,
+  "references": {
+    "summary": {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-scene100\\native-tests-attempt19-rtti-green\\summary.json",
+      "bytes": 656253,
+      "sha256": "B3946793C327B27870038C3A69E45A578A7036C279F8860359C08958299B777D"
+    },
+    "postflight": {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-scene100\\native-tests-attempt19-rtti-green\\postflight.json",
+      "bytes": 5465947,
+      "sha256": "15A3478C72F4450D54F9F46CBFB14FBBAE606D2DAB206A2DE4271FFC4F7B2567"
+    },
+    "preflight": {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-scene100\\native-tests-attempt19-rtti-green\\preflight.json",
+      "bytes": 4811970,
+      "sha256": "1C76B0243B98AB42F92FCFFD59AD6C03C33ADCA7EBF0063652101C5E1FFC1894"
+    },
+    "ctestNativeResult": {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-scene100\\native-tests-attempt19-rtti-green\\factory-tests.result.json",
+      "bytes": 5908,
+      "sha256": "CA60E233E53E69404F27A027E8B186935ADCD62002203FAB985921701AECC6AB"
+    },
+    "xmlInventory": {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-scene100\\native-tests-attempt19-rtti-green\\factory-xml-inventory.json",
+      "bytes": 537,
+      "sha256": "23FB0DC9F5F67E096C8B6CB1820D23A3B2AC70C1F2E1260A2BBED6613BE4CEA1"
+    },
+    "outputsAfter": {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-scene100\\native-tests-attempt19-rtti-green\\outputs-after.json",
+      "bytes": 1544,
+      "sha256": "5C223D8F4F6A96CC5C53B0D7161622699DAAD925981D3A7DBB4DCB69C3460E9F"
+    },
+    "fullFreezeR20": {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-scene100\\freeze100-r20.json",
+      "bytes": 4053438,
+      "sha256": "F44876849E9AA0D9CFB5B462A1782F07F05E23CFD1BA4918128F4F56D9B14137"
+    }
+  },
+  "derivation": {
+    "outputDrift": "Four current output files match preserved GREEN19 postflight/outputs-after byte pins; no missing output. This is not comparison to pre-build outputs.",
+    "configuredCTestDrift": "Recorded CTest -R selects exactly the two expected labels, actual Start labels match, and both corresponding fresh XMLs complete. No configure/CTest rerun is claimed.",
+    "sourceDrift": "Preserved pre/post full R20 freeze inputs14507 and expected absences1059 match; all phase sourceFreezeInputsMatch are true.",
+    "xmlCounts": "Parsed actual preserved XML testcase nodes; unique=(classname,name), run=status run, completed=result completed.",
+    "globalTotals": "This review covers32+89=121cases only. It does not reinterpret or rerun prior707."
+  },
+  "provenance": {
+    "executedFreeze": "R20",
+    "sourceInputCount": 14507,
+    "expectedAbsentCount": 1059,
+    "r21ExecutionClaimed": false,
+    "r21PlannedDelta": "Parent-authorized hydration of18original assets only; C++ test inputs unchanged by that planned delta. This evidence remains execution underR20, notR21.",
+    "r21FreezeAvailableAtPreparation": false
+  },
+  "nativeJobsStartedByNormalizer": 0,
+  "ownedHelpers": 0,
+  "publicationDiffCheck": {
+    "rawExitCode": 2,
+    "warnings": 23,
+    "files": 8,
+    "exactInheritedWarnings": 23,
+    "introducedOrUnprovenWarnings": 0,
+    "sourceDrift": 0,
+    "auditSHA256": "8470B6B0D251118A3080377DDD24348FFC15F49B9BCEE4E9C8E1E2CFC7433C56",
+    "rawLogSHA256": "E4C1E193FCD8951958531AD35B8C49DD472FD15FA8D5ED76510D0DEEF9381624",
+    "provenance": "All suffixes match original move preimages byteexact, including CR. Original HEAD blobs match preimages after checkout CRLF normalization only. Relocation and namespace qualification expose inherited whitespace; raw diff-check remains exit2. No source reformat, tolerance change or engine rebuild."
+  },
+  "state": "FOCAL_GREEN19_RTTI_REGRESSION_PASSED_PRODUCT_GATES_SEPARATE",
+  "causalRed": "rtti-regression-red.json:32Scene cases,30passed/2failed,8RTTI assertions;89Materials passed. Exact33 missing implicit AZ::Component bases restored; same test pins on GREEN19.",
+  "limits": [
+    "Execution is R20. R21 changes only18original asset payloads; tests are reused, not rerun.",
+    "Installed consumer, final cook and launcher proof remain separate.",
+    "N0, global Gem certification, VR/OpenXR, Shipping, Beauty and global performance remain open."
+  ]
+}

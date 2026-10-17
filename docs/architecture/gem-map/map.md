@@ -1,3 +1,14 @@
+## Scene100 — actualización focal 2026-10-17
+
+CommonFeaturesAtom se absorbe en JE::Render::Scene/JE::Editor::Render::Scene, dos STATIC y Public HEADERONLY.36descriptores runtime/74editor (74identidades únicas),1/4componentes requeridos. Los74UUID, nombres RTTI/serialización y servicios se conservan; el macroinventario119 identificó33bases AZ::Component implícitas que ya se restauraron y probaron. Scene queda encima de Materials/RenderIntegration; CoreFeature/ATF/LmbrCentral/GradientSignal/SurfaceData continúan proveedores explícitos, sin otra Gem aceptada por dependencia.
+
+GREEN19 32Scene+89Materials, HOSTS2 ocho raíces/12artefactos y producto Vulkan Editor3/Runtime2 R21 verificados con sus límites. R21 recuperó18originales LFS/17jobs; LuaR24 pasó10casos y recook fresco113702/error0, preservando22sources/23jobs/125productos actuales. El AP general sigue exit1/319fallos: RHIService ausente y shaders ClosestHit con include RPI antiguo ya observados antes de Scene; deuda RPI/N0 explícita. SDK100 Profile cerró install/configure/build/PE/loader0, con cinco fases exitosas y dos intentos fallidos históricos. Tres imports Scene (Public HEADERONLY y dos STATIC), seis mensajes/74identidades/dos ciclos y34DLL de autoría exactas; inventario11149 idéntico al checkpoint y source14509/1059 finales sin drift. No activa módulos/renderer ni acredita source-free físico. [Prueba pública SDK](../../evidence/n0/native-scene-components-2026-10-17/sdk-consumer/sdk-profile-replay.json).
+
+Plan obligatorio [CommonFeaturesAtom](../../work/gems/CommonFeaturesAtom.md) y [método por Gem](../../work/gems/README.md): gate ANALIZADO antes de escribir la siguiente. [Cruce74identidades/oncefamilias](../../evidence/n0/native-scene-components-2026-10-17/capability-algorithm-crosswalk.json) identifica el proveedor real de cada algoritmo y fuentes primarias aplicables. LTC de Quad/Polygon y Hosek–Wilkie del cielo ya existían; ninguna mejora SIGGRAPH nueva medida. No atribuir Disk a LTC ni convertir un traslado de adaptadores en una nueva técnica.
+
+Estado previo a publicación: consumidor instalado y revisión técnica cerrados; aceptación de integración/Git por el padre. Este gate por sí solo no suma una Gem global terminada. Totales históricos11/110 no certifican pendientes. N0/GOAL, Linux, VR/OpenXR, Shipping, rendimiento y separación global siguen abiertos. Vulkan único activo; DX12/Metal preservados e inactivos. El cuerpo histórico ajeno del mapa se conserva byteexacto debajo.
+
+---
 # Mapa de composición de Gems y owners nativos
 
 Captura privada del checkout actual. Flechas de manifest indican dependencia declarada; no representan llamadas C++. `[configured]` significa presencia en un plan de módulos generado, no ejecución observada. Los grupos son una clasificación visual, no nuevos owners del motor.

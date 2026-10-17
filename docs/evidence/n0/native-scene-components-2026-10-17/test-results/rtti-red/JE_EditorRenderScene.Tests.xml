@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="32" failures="2" disabled="0" errors="0" time="0.3" timestamp="2026-10-17T09:22:16.285" name="AllTests">
+  <testsuite name="MaterialsCompatibilityTests" tests="3" failures="0" disabled="0" skipped="0" errors="0" time="0.005" timestamp="2026-10-17T09:22:16.489">
+    <testcase name="LegacyAssignmentAndIdXmlNamesAndUuidsDeserialize" file="F:\JericoEngine\JericoEngine\Editor\Materials\Tests\MaterialsCompatibilityTests.cpp" line="110" status="run" result="completed" time="0.002" timestamp="2026-10-17T09:22:16.489" classname="MaterialsCompatibilityTests" />
+    <testcase name="LegacyConfigXmlRetainsReferencesPropertiesUvsAndLabels" file="F:\JericoEngine\JericoEngine\Editor\Materials\Tests\MaterialsCompatibilityTests.cpp" line="141" status="run" result="completed" time="0.001" timestamp="2026-10-17T09:22:16.491" classname="MaterialsCompatibilityTests" />
+    <testcase name="BuildGameEntityPreservesConfigWithoutEditorMaterialSystem" file="F:\JericoEngine\JericoEngine\Editor\Materials\Tests\MaterialsCompatibilityTests.cpp" line="159" status="run" result="completed" time="0.001" timestamp="2026-10-17T09:22:16.493" classname="MaterialsCompatibilityTests" />
+  </testsuite>
+  <testsuite name="MeshComponentControllerFixture" tests="3" failures="0" disabled="0" skipped="0" errors="0" time="0.01" timestamp="2026-10-17T09:22:16.494">
+    <testcase name="InvalidModelAssetIdDoesNotDereferenceMissingAssetData" file="F:\JericoEngine\JericoEngine\Editor\Render\Scene\Tests\MeshComponentControllerTests.cpp" line="105" status="run" result="completed" time="0.005" timestamp="2026-10-17T09:22:16.494" classname="MeshComponentControllerFixture" />
+    <testcase name="UnavailableModelProductPreservesRequestedAssetIdWithoutDereferencingAssetData" file="F:\JericoEngine\JericoEngine\Editor\Render\Scene\Tests\MeshComponentControllerTests.cpp" line="132" status="run" result="completed" time="0.002" timestamp="2026-10-17T09:22:16.500" classname="MeshComponentControllerFixture" />
+    <testcase name="IntersectionNotificationBusIsNotifiedWhenMeshComponentControllerTransformIsModified" file="F:\JericoEngine\JericoEngine\Editor\Render\Scene\Tests\MeshComponentControllerTests.cpp" line="166" status="run" result="completed" time="0.002" timestamp="2026-10-17T09:22:16.503" classname="MeshComponentControllerFixture" />
+  </testsuite>
+  <testsuite name="JEEditorLutWriterTests" tests="10" failures="0" disabled="0" skipped="0" errors="0" time="0.02" timestamp="2026-10-17T09:22:16.505">
+    <testcase name="WritesScriptSchemaAndBlueFirstColorOrderingToBothFormats" file="F:\JericoEngine\JericoEngine\Editor\Render\Scene\Tests\JEEditorLutWriterTests.cpp" line="93" status="run" result="completed" time="0.007" timestamp="2026-10-17T09:22:16.505" classname="JEEditorLutWriterTests" />
+    <testcase name="FloorsIntervalsAndClampedFloatChannelsWithoutRounding" file="F:\JericoEngine\JericoEngine\Editor\Render\Scene\Tests\JEEditorLutWriterTests.cpp" line="131" status="run" result="completed" time="0.005" timestamp="2026-10-17T09:22:16.513" classname="JEEditorLutWriterTests" />
+    <testcase name="RejectsFailedReadbackAndWrongAttachmentOrFormat" file="F:\JericoEngine\JericoEngine\Editor\Render\Scene\Tests\JEEditorLutWriterTests.cpp" line="141" status="run" result="completed" time="0." timestamp="2026-10-17T09:22:16.518" classname="JEEditorLutWriterTests" />
+    <testcase name="RejectsDimensionsAndOverflowBeforeIndexing" file="F:\JericoEngine\JericoEngine\Editor\Render\Scene\Tests\JEEditorLutWriterTests.cpp" line="154" status="run" result="completed" time="0." timestamp="2026-10-17T09:22:16.519" classname="JEEditorLutWriterTests" />
+    <testcase name="RequiresExactTightBuffer" file="F:\JericoEngine\JericoEngine\Editor\Render\Scene\Tests\JEEditorLutWriterTests.cpp" line="167" status="run" result="completed" time="0." timestamp="2026-10-17T09:22:16.520" classname="JEEditorLutWriterTests" />
+    <testcase name="RejectsNonFiniteRgbAndAlphaWithoutCreatingOutputs" file="F:\JericoEngine\JericoEngine\Editor\Render\Scene\Tests\JEEditorLutWriterTests.cpp" line="178" status="run" result="completed" time="0.001" timestamp="2026-10-17T09:22:16.520" classname="JEEditorLutWriterTests" />
+    <testcase name="ExistingEitherOutputIsPreservedAndNoPartialSuccessRemains" file="F:\JericoEngine\JericoEngine\Editor\Render\Scene\Tests\JEEditorLutWriterTests.cpp" line="193" status="run" result="completed" time="0.002" timestamp="2026-10-17T09:22:16.522" classname="JEEditorLutWriterTests" />
+    <testcase name="DirectoryAtSecondOutputIsPreservedWithoutPartialOutputs" file="F:\JericoEngine\JericoEngine\Editor\Render\Scene\Tests\JEEditorLutWriterTests.cpp" line="211" status="run" result="completed" time="0." timestamp="2026-10-17T09:22:16.524" classname="JEEditorLutWriterTests" />
+    <testcase name="MissingParentAndRelativeBaseFailWithoutCreatingDirectories" file="F:\JericoEngine\JericoEngine\Editor\Render\Scene\Tests\JEEditorLutWriterTests.cpp" line="220" status="run" result="completed" time="0." timestamp="2026-10-17T09:22:16.525" classname="JEEditorLutWriterTests" />
+    <testcase name="ValidatesLoadedCardinalityIntervalsAndTwelveBitValues" file="F:\JericoEngine\JericoEngine\Editor\Render\Scene\Tests\JEEditorLutWriterTests.cpp" line="229" status="run" result="completed" time="0." timestamp="2026-10-17T09:22:16.525" classname="JEEditorLutWriterTests" />
+  </testsuite>
+  <testsuite name="EditorHDRColorGradingComponentTests" tests="3" failures="0" disabled="0" skipped="0" errors="0" time="0.008" timestamp="2026-10-17T09:22:16.526">
+    <testcase name="LegacyGeneratedPathRemainsButEncodingIsUnknown" file="F:\JericoEngine\JericoEngine\Editor\Render\Scene\Tests\EditorHDRColorGradingComponentTests.cpp" line="105" status="run" result="completed" time="0.003" timestamp="2026-10-17T09:22:16.526" classname="EditorHDRColorGradingComponentTests" />
+    <testcase name="GeneratedEncodingAndPathSurviveObjectStreamRoundtrip" file="F:\JericoEngine\JericoEngine\Editor\Render\Scene\Tests\EditorHDRColorGradingComponentTests.cpp" line="134" status="run" result="completed" time="0.002" timestamp="2026-10-17T09:22:16.529" classname="EditorHDRColorGradingComponentTests" />
+    <testcase name="LaterHdrConfigurationDoesNotChangeGeneratedEncoding" file="F:\JericoEngine\JericoEngine\Editor\Render\Scene\Tests\EditorHDRColorGradingComponentTests.cpp" line="150" status="run" result="completed" time="0.002" timestamp="2026-10-17T09:22:16.532" classname="EditorHDRColorGradingComponentTests" />
+  </testsuite>
+  <testsuite name="EditorAreaLightComponentFixture" tests="11" failures="0" disabled="0" skipped="0" errors="0" time="0.023" timestamp="2026-10-17T09:22:16.534">
+    <testcase name="CheckEditorAreaCapsuleLightBounds" file="F:\JericoEngine\JericoEngine\Editor\Render\Scene\Tests\EditorAreaLightComponentTests.cpp" line="147" status="run" result="completed" time="0.002" timestamp="2026-10-17T09:22:16.534" classname="EditorAreaLightComponentFixture" />
+    <testcase name="CheckEditorAreaCapsuleLightWithShapeTranslationOffsetBounds" file="F:\JericoEngine\JericoEngine\Editor\Render\Scene\Tests\EditorAreaLightComponentTests.cpp" line="201" status="run" result="completed" time="0.002" timestamp="2026-10-17T09:22:16.537" classname="EditorAreaLightComponentFixture" />
+    <testcase name="CheckEditorAreaCapsuleLightSurfaceArea" file="F:\JericoEngine\JericoEngine\Editor\Render\Scene\Tests\EditorAreaLightComponentTests.cpp" line="259" status="run" result="completed" time="0.001" timestamp="2026-10-17T09:22:16.539" classname="EditorAreaLightComponentFixture" />
+    <testcase name="CheckEditorAreaSpotDiskLightBounds" file="F:\JericoEngine\JericoEngine\Editor\Render\Scene\Tests\EditorAreaLightComponentTests.cpp" line="282" status="run" result="completed" time="0.004" timestamp="2026-10-17T09:22:16.541" classname="EditorAreaLightComponentFixture" />
+    <testcase name="CheckEditorAreaSimpleSpotLightBounds" file="F:\JericoEngine\JericoEngine\Editor\Render\Scene\Tests\EditorAreaLightComponentTests.cpp" line="351" status="run" result="completed" time="0.001" timestamp="2026-10-17T09:22:16.546" classname="EditorAreaLightComponentFixture" />
+    <testcase name="CheckEditorAreaQuadLightBounds" file="F:\JericoEngine\JericoEngine\Editor\Render\Scene\Tests\EditorAreaLightComponentTests.cpp" line="376" status="run" result="completed" time="0.001" timestamp="2026-10-17T09:22:16.548" classname="EditorAreaLightComponentFixture" />
+    <testcase name="CheckEditorAreaPolygonLightBounds" file="F:\JericoEngine\JericoEngine\Editor\Render\Scene\Tests\EditorAreaLightComponentTests.cpp" line="406" status="run" result="completed" time="0.001" timestamp="2026-10-17T09:22:16.549" classname="EditorAreaLightComponentFixture" />
+    <testcase name="CheckEditorAreaPointSphereLightBounds" file="F:\JericoEngine\JericoEngine\Editor\Render\Scene\Tests\EditorAreaLightComponentTests.cpp" line="437" status="run" result="completed" time="0.001" timestamp="2026-10-17T09:22:16.551" classname="EditorAreaLightComponentFixture" />
+    <testcase name="CheckEditorAreaPointSphereLightWithShapeTranslationOffsetBounds" file="F:\JericoEngine\JericoEngine\Editor\Render\Scene\Tests\EditorAreaLightComponentTests.cpp" line="467" status="run" result="completed" time="0.001" timestamp="2026-10-17T09:22:16.553" classname="EditorAreaLightComponentFixture" />
+    <testcase name="CheckEditorAreaPointSphereLightSurfaceArea" file="F:\JericoEngine\JericoEngine\Editor\Render\Scene\Tests\EditorAreaLightComponentTests.cpp" line="499" status="run" result="completed" time="0.001" timestamp="2026-10-17T09:22:16.555" classname="EditorAreaLightComponentFixture" />
+    <testcase name="CheckEditorAreaSimplePointLightBounds" file="F:\JericoEngine\JericoEngine\Editor\Render\Scene\Tests\EditorAreaLightComponentTests.cpp" line="521" status="run" result="completed" time="0.001" timestamp="2026-10-17T09:22:16.556" classname="EditorAreaLightComponentFixture" />
+  </testsuite>
+  <testsuite name="NativeSceneModuleContract" tests="2" failures="2" disabled="0" skipped="0" errors="0" time="0.002" timestamp="2026-10-17T09:22:16.558">
+    <testcase name="RuntimePreservesOriginalDescriptorsRequiredServicesAndRecreation" file="F:\JericoEngine\JericoEngine\Editor\Render\Scene\Tests\SceneModuleTests.cpp" line="160" status="run" result="completed" time="0.001" timestamp="2026-10-17T09:22:16.558" classname="NativeSceneModuleContract">
+      <failure message="F:\JericoEngine\JericoEngine\Editor\Render\Scene\Tests\SceneModuleTests.cpp:129&#x0A;Value of: component-&gt;RTTI_IsTypeOf(AZ::RttiTypeId&lt;AZ::Component&gt;())&#x0A;  Actual: false&#x0A;Expected: true&#x0A;" type=""><![CDATA[F:\JericoEngine\JericoEngine\Editor\Render\Scene\Tests\SceneModuleTests.cpp:129
+Value of: component->RTTI_IsTypeOf(AZ::RttiTypeId<AZ::Component>())
+  Actual: false
+Expected: true
+]]></failure>
+      <failure message="F:\JericoEngine\JericoEngine\Editor\Render\Scene\Tests\SceneModuleTests.cpp:130&#x0A;Expected equality of these values:&#x0A;  component-&gt;RTTI_AddressOf(AZ::RttiTypeId&lt;AZ::Component&gt;())&#x0A;    Which is: NULL&#x0A;  static_cast&lt;void*&gt;(component.get())&#x0A;    Which is: 0000039460278D80&#x0A;" type=""><![CDATA[F:\JericoEngine\JericoEngine\Editor\Render\Scene\Tests\SceneModuleTests.cpp:130
+Expected equality of these values:
+  component->RTTI_AddressOf(AZ::RttiTypeId<AZ::Component>())
+    Which is: NULL
+  static_cast<void*>(component.get())
+    Which is: 0000039460278D80
+]]></failure>
+      <failure message="F:\JericoEngine\JericoEngine\Editor\Render\Scene\Tests\SceneModuleTests.cpp:129&#x0A;Value of: component-&gt;RTTI_IsTypeOf(AZ::RttiTypeId&lt;AZ::Component&gt;())&#x0A;  Actual: false&#x0A;Expected: true&#x0A;" type=""><![CDATA[F:\JericoEngine\JericoEngine\Editor\Render\Scene\Tests\SceneModuleTests.cpp:129
+Value of: component->RTTI_IsTypeOf(AZ::RttiTypeId<AZ::Component>())
+  Actual: false
+Expected: true
+]]></failure>
+      <failure message="F:\JericoEngine\JericoEngine\Editor\Render\Scene\Tests\SceneModuleTests.cpp:130&#x0A;Expected equality of these values:&#x0A;  component-&gt;RTTI_AddressOf(AZ::RttiTypeId&lt;AZ::Component&gt;())&#x0A;    Which is: NULL&#x0A;  static_cast&lt;void*&gt;(component.get())&#x0A;    Which is: 0000039460278780&#x0A;" type=""><![CDATA[F:\JericoEngine\JericoEngine\Editor\Render\Scene\Tests\SceneModuleTests.cpp:130
+Expected equality of these values:
+  component->RTTI_AddressOf(AZ::RttiTypeId<AZ::Component>())
+    Which is: NULL
+  static_cast<void*>(component.get())
+    Which is: 0000039460278780
+]]></failure>
+    </testcase>
+    <testcase name="EditorPreservesOriginalDescriptorsRequiredServicesAndRecreation" file="F:\JericoEngine\JericoEngine\Editor\Render\Scene\Tests\SceneModuleTests.cpp" line="166" status="run" result="completed" time="0.001" timestamp="2026-10-17T09:22:16.559" classname="NativeSceneModuleContract">
+      <failure message="F:\JericoEngine\JericoEngine\Editor\Render\Scene\Tests\SceneModuleTests.cpp:129&#x0A;Value of: component-&gt;RTTI_IsTypeOf(AZ::RttiTypeId&lt;AZ::Component&gt;())&#x0A;  Actual: false&#x0A;Expected: true&#x0A;" type=""><![CDATA[F:\JericoEngine\JericoEngine\Editor\Render\Scene\Tests\SceneModuleTests.cpp:129
+Value of: component->RTTI_IsTypeOf(AZ::RttiTypeId<AZ::Component>())
+  Actual: false
+Expected: true
+]]></failure>
+      <failure message="F:\JericoEngine\JericoEngine\Editor\Render\Scene\Tests\SceneModuleTests.cpp:130&#x0A;Expected equality of these values:&#x0A;  component-&gt;RTTI_AddressOf(AZ::RttiTypeId&lt;AZ::Component&gt;())&#x0A;    Which is: NULL&#x0A;  static_cast&lt;void*&gt;(component.get())&#x0A;    Which is: 0000039460278A80&#x0A;" type=""><![CDATA[F:\JericoEngine\JericoEngine\Editor\Render\Scene\Tests\SceneModuleTests.cpp:130
+Expected equality of these values:
+  component->RTTI_AddressOf(AZ::RttiTypeId<AZ::Component>())
+    Which is: NULL
+  static_cast<void*>(component.get())
+    Which is: 0000039460278A80
+]]></failure>
+      <failure message="F:\JericoEngine\JericoEngine\Editor\Render\Scene\Tests\SceneModuleTests.cpp:129&#x0A;Value of: component-&gt;RTTI_IsTypeOf(AZ::RttiTypeId&lt;AZ::Component&gt;())&#x0A;  Actual: false&#x0A;Expected: true&#x0A;" type=""><![CDATA[F:\JericoEngine\JericoEngine\Editor\Render\Scene\Tests\SceneModuleTests.cpp:129
+Value of: component->RTTI_IsTypeOf(AZ::RttiTypeId<AZ::Component>())
+  Actual: false
+Expected: true
+]]></failure>
+      <failure message="F:\JericoEngine\JericoEngine\Editor\Render\Scene\Tests\SceneModuleTests.cpp:130&#x0A;Expected equality of these values:&#x0A;  component-&gt;RTTI_AddressOf(AZ::RttiTypeId&lt;AZ::Component&gt;())&#x0A;    Which is: NULL&#x0A;  static_cast&lt;void*&gt;(component.get())&#x0A;    Which is: 0000039460279080&#x0A;" type=""><![CDATA[F:\JericoEngine\JericoEngine\Editor\Render\Scene\Tests\SceneModuleTests.cpp:130
+Expected equality of these values:
+  component->RTTI_AddressOf(AZ::RttiTypeId<AZ::Component>())
+    Which is: NULL
+  static_cast<void*>(component.get())
+    Which is: 0000039460279080
+]]></failure>
+    </testcase>
+  </testsuite>
+</testsuites>

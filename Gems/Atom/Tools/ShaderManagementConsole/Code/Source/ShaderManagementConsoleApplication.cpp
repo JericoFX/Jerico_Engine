@@ -8,6 +8,7 @@
 
 #include <AssetDatabase/AssetDatabaseConnection.h>
 #include <JE/Editor/Camera/CameraModule.h>
+#include <JE/Editor/Render/Scene/SceneModule.h>
 #include <JE/Editor/Render/RPI/Edit/Common/AssetUtils.h>
 #include <JE/Editor/Render/RPI/Edit/Material/MaterialTypeSourceData.h>
 #include <JE/Render/RPI/Public/Material/Material.h>
@@ -73,6 +74,7 @@ namespace ShaderManagementConsole
     void ShaderManagementConsoleApplication::CreateStaticModules(AZStd::vector<AZ::Module*>& outModules)
     {
         Base::CreateStaticModules(outModules);
+        outModules.emplace_back(JE::Editor::Render::Scene::CreateModule());
         outModules.emplace_back(JE::Editor::Camera::CreateAuthoringModule());
     }
 

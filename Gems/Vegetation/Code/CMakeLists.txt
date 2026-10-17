@@ -26,7 +26,7 @@ ly_add_target(
             Gem::SurfaceData.Static
             Legacy::CryCommon
         PUBLIC
-            Gem::CommonFeaturesAtom.Static
+            JE::RenderScene
 )
 
 ly_add_target(

@@ -22,7 +22,8 @@
     "dependencies": [
         "LmbrCentral",
         "SurfaceData",
-        "CommonFeaturesAtom",
+        "Atom_Feature_Common",
+        "AtomToolsFramework",
         "GradientSignal"
     ]
 }

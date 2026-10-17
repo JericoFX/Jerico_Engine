@@ -87,7 +87,11 @@
     "gem_names": [
         "AtomViewportDisplayInfo",
         "AudioSystem",
-        "CommonFeaturesAtom",
+        "Atom_Feature_Common",
+        "LmbrCentral",
+        "GradientSignal",
+        "SurfaceData",
+        "AtomToolsFramework",
         "EditorModeFeedback",
         "Maestro",
         "SceneProcessing"

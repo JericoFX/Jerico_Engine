@@ -11,7 +11,7 @@
 #include <JE/Render/RPI/Public/Image/StreamingImage.h>
 #include <JE/Render/RPI/Reflect/Material/MaterialAsset.h>
 #include <JE/Render/RPI/Reflect/Material/MaterialTypeAsset.h>
-#include <AtomLyIntegration/CommonFeatures/Mesh/MeshComponentBus.h>
+#include <JE/Render/Scene/Mesh/MeshComponentBus.h>
 #include <AzCore/Asset/AssetManagerBus.h>
 #include <AzCore/RTTI/BehaviorContext.h>
 #include <AzFramework/Translation/TranslationDef.h>

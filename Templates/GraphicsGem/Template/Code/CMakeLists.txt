@@ -63,7 +63,7 @@ ly_add_target(
             JE::RenderIntegration
             Gem::Atom_Utils.Static
             Gem::Atom_Feature_Common
-            Gem::CommonFeaturesAtom.Static
+            JE::RenderScene
 )
 
 # Here add ${gem_name} target, it depends on the Private Object library and Public API interface
@@ -151,7 +151,7 @@ if(PAL_TRAIT_BUILD_HOST_TOOLS)
                 ${gem_name}.Private.Object
                 Gem::Atom_Utils.Static
                 Gem::Atom_Feature_Common.Public
-                Gem::CommonFeaturesAtom.Static
+                JE::RenderScene
     )
 
     ly_add_target(

@@ -22,7 +22,10 @@
     "dependencies": [
         "PhysXCommon",
         "LmbrCentral",
-        "CommonFeaturesAtom"
+        "Atom_Feature_Common",
+        "GradientSignal",
+        "SurfaceData",
+        "AtomToolsFramework"
     ],
     "provided_unique_service": "Physics"
 }

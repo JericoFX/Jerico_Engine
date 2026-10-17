@@ -12,7 +12,7 @@
 #include <ActorAsset.h>
 
 #include <Atom/Feature/SkinnedMesh/SkinnedMeshInputBuffers.h>
-#include <AtomLyIntegration/CommonFeatures/SkinnedMesh/SkinnedMeshOverrideBus.h>
+#include <JE/Render/Scene/SkinnedMesh/SkinnedMeshOverrideBus.h>
 #include <Integration/System/SystemCommon.h>
 #include <Integration/System/SystemComponent.h>
 #include <EMotionFX/Source/ActorInstance.h>
@@ -660,27 +660,27 @@ namespace AZ::Render
 
         TransformNotificationBus::Handler::BusConnect(m_entityId);
         JE::Render::MaterialComponentNotificationBus::Handler::BusConnect(m_entityId);
-        MeshComponentRequestBus::Handler::BusConnect(m_entityId);
-        SkinnedMeshOverrideRequestBus::Handler::BusConnect(m_entityId);
-        MeshHandleStateRequestBus::Handler::BusConnect(m_entityId);
+        JE::Render::Scene::MeshComponentRequestBus::Handler::BusConnect(m_entityId);
+        JE::Render::Scene::SkinnedMeshOverrideRequestBus::Handler::BusConnect(m_entityId);
+        JE::Render::Scene::MeshHandleStateRequestBus::Handler::BusConnect(m_entityId);
 
         m_meshFeatureProcessor->SetVisible(*m_meshHandle, IsVisible());
     }
 
     void AtomActorInstance::UnregisterActor()
     {
-        MeshComponentNotificationBus::Event(m_entityId, &MeshComponentNotificationBus::Events::OnModelPreDestroy);
+        JE::Render::Scene::MeshComponentNotificationBus::Event(m_entityId, &JE::Render::Scene::MeshComponentNotificationBus::Events::OnModelPreDestroy);
 
-        MeshHandleStateRequestBus::Handler::BusDisconnect();
-        SkinnedMeshOverrideRequestBus::Handler::BusDisconnect(m_entityId);
-        MeshComponentRequestBus::Handler::BusDisconnect();
+        JE::Render::Scene::MeshHandleStateRequestBus::Handler::BusDisconnect();
+        JE::Render::Scene::SkinnedMeshOverrideRequestBus::Handler::BusDisconnect(m_entityId);
+        JE::Render::Scene::MeshComponentRequestBus::Handler::BusDisconnect();
         JE::Render::MaterialComponentNotificationBus::Handler::BusDisconnect();
         TransformNotificationBus::Handler::BusDisconnect();
         m_skinnedMeshFeatureProcessor->ReleaseSkinnedMesh(m_skinnedMeshHandle);
         if (m_meshHandle)
         {
             m_meshFeatureProcessor->ReleaseMesh(*m_meshHandle);
-            MeshHandleStateNotificationBus::Event(m_entityId, &MeshHandleStateNotificationBus::Events::OnMeshHandleSet, &(*m_meshHandle));
+            JE::Render::Scene::MeshHandleStateNotificationBus::Event(m_entityId, &JE::Render::Scene::MeshHandleStateNotificationBus::Events::OnMeshHandleSet, &(*m_meshHandle));
             m_meshHandle = nullptr;
         }
     }
@@ -834,7 +834,7 @@ namespace AZ::Render
 
     void AtomActorInstance::HandleObjectSrgCreate(const Data::Instance<JE::Render::RPI::ShaderResourceGroup>& objectSrg)
     {
-        MeshComponentNotificationBus::Event(m_entityId, &MeshComponentNotificationBus::Events::OnObjectSrgCreated, objectSrg);
+        JE::Render::Scene::MeshComponentNotificationBus::Event(m_entityId, &JE::Render::Scene::MeshComponentNotificationBus::Events::OnObjectSrgCreated, objectSrg);
     }
 
     void AtomActorInstance::HandleModelChange(const Data::Instance<JE::Render::RPI::Model>& model)
@@ -842,10 +842,10 @@ namespace AZ::Render
         Data::Asset<JE::Render::RPI::ModelAsset> modelAsset = m_meshFeatureProcessor->GetModelAsset(*m_meshHandle);
         if (model && modelAsset.IsReady())
         {
-            MeshComponentNotificationBus::Event(m_entityId, &MeshComponentNotificationBus::Events::OnModelReady, modelAsset, model);
+            JE::Render::Scene::MeshComponentNotificationBus::Event(m_entityId, &JE::Render::Scene::MeshComponentNotificationBus::Events::OnModelReady, modelAsset, model);
             JE::Render::MaterialConsumerNotificationBus::Event(m_entityId, &JE::Render::MaterialConsumerNotificationBus::Events::OnMaterialAssignmentSlotsChanged);
             AZ::Interface<AzFramework::IEntityBoundsUnion>::Get()->RefreshEntityLocalBoundsUnion(m_entityId);
-            MeshHandleStateNotificationBus::Event(m_entityId, &MeshHandleStateNotificationBus::Events::OnMeshHandleSet, &(*m_meshHandle));
+            JE::Render::Scene::MeshHandleStateNotificationBus::Event(m_entityId, &JE::Render::Scene::MeshHandleStateNotificationBus::Events::OnMeshHandleSet, &(*m_meshHandle));
         }
     }
 

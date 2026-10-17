@@ -153,7 +153,7 @@ if(PAL_TRAIT_BUILD_HOST_TOOLS)
                 Gem::LmbrCentral.Editor
                 Gem::PhysX.NumericalMethods
                 Gem::${gem_name}.Static
-                Gem::CommonFeaturesAtom.Static
+                JE::RenderScene
         RUNTIME_DEPENDENCIES
             AZ::SceneCore
     )

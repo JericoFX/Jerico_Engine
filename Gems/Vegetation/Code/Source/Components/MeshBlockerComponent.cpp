@@ -150,7 +150,7 @@ namespace Vegetation
 
     void MeshBlockerComponent::Activate()
     {
-        AZ::Render::MeshComponentNotificationBus::Handler::BusConnect(GetEntityId());
+        JE::Render::Scene::MeshComponentNotificationBus::Handler::BusConnect(GetEntityId());
 
         AZ::NonUniformScaleRequestBus::Event(
             GetEntityId(), &AZ::NonUniformScaleRequests::RegisterScaleChangedEvent, m_nonUniformScaleChangedHandler);
@@ -174,7 +174,7 @@ namespace Vegetation
 
         m_refresh = false;
         AZ::TickBus::Handler::BusDisconnect();
-        AZ::Render::MeshComponentNotificationBus::Handler::BusDisconnect();
+        JE::Render::Scene::MeshComponentNotificationBus::Handler::BusDisconnect();
         MeshBlockerRequestBus::Handler::BusDisconnect();
     }
 
@@ -387,10 +387,10 @@ namespace Vegetation
         m_cachedRayHits.clear();
 
         m_meshAssetData = {};
-        AZ::Render::MeshComponentRequestBus::EventResult(m_meshAssetData, GetEntityId(), &AZ::Render::MeshComponentRequests::GetModelAsset);
+        JE::Render::Scene::MeshComponentRequestBus::EventResult(m_meshAssetData, GetEntityId(), &JE::Render::Scene::MeshComponentRequests::GetModelAsset);
 
         m_meshBounds = AZ::Aabb::CreateNull();
-        AZ::Render::MeshComponentRequestBus::EventResult(m_meshBounds, GetEntityId(), &AZ::Render::MeshComponentRequestBus::Events::GetWorldBounds);
+        JE::Render::Scene::MeshComponentRequestBus::EventResult(m_meshBounds, GetEntityId(), &JE::Render::Scene::MeshComponentRequestBus::Events::GetWorldBounds);
         m_meshBoundsForIntersection = m_meshBounds;
         if (m_meshBoundsForIntersection.IsValid())
         {
@@ -408,7 +408,7 @@ namespace Vegetation
         }
 
         m_meshVisible = false;
-        AZ::Render::MeshComponentRequestBus::EventResult(m_meshVisible, GetEntityId(), &AZ::Render::MeshComponentRequests::GetVisibility);
+        JE::Render::Scene::MeshComponentRequestBus::EventResult(m_meshVisible, GetEntityId(), &JE::Render::Scene::MeshComponentRequests::GetVisibility);
 
         m_meshWorldTM = AZ::Transform::CreateIdentity();
         AZ::TransformBus::EventResult(m_meshWorldTM, GetEntityId(), &AZ::TransformBus::Events::GetWorldTM);

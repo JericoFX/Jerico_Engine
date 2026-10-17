@@ -23,7 +23,9 @@
         "AtomRenderOptions",
         "AtomViewportDisplayIcons",
         "AtomViewportDisplayInfo",
-        "CommonFeaturesAtom",
+        "LmbrCentral",
+        "GradientSignal",
+        "SurfaceData",
         "EditorModeFeedback",
         "EMotionFX_Atom",
         "Atom_RHI",
@@ -39,7 +41,6 @@
         "AtomRenderOptions",
         "AtomViewportDisplayIcons",
         "AtomViewportDisplayInfo",
-        "CommonFeatures",
         "EditorModeFeedback",
         "EMotionFXAtom"
     ]

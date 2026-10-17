@@ -71,12 +71,12 @@ namespace AZ::Render
         , m_maskMaterial(maskMaterial)
         , m_drawList(drawList)
     {
-        AZ::Render::MeshHandleStateNotificationBus::Handler::BusConnect(m_entityId);
+        JE::Render::Scene::MeshHandleStateNotificationBus::Handler::BusConnect(m_entityId);
     }
 
     DrawableMeshEntity::~DrawableMeshEntity()
     {
-        AZ::Render::MeshHandleStateNotificationBus::Handler::BusDisconnect();
+        JE::Render::Scene::MeshHandleStateNotificationBus::Handler::BusDisconnect();
     }
 
     void DrawableMeshEntity::ClearDrawData()

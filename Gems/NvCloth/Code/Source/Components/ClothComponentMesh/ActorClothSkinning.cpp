@@ -6,7 +6,7 @@
  *
  */
 
-#include <AtomLyIntegration/CommonFeatures/Mesh/MeshComponentBus.h>
+#include <JE/Render/Scene/Mesh/MeshComponentBus.h>
 #include <Integration/ActorComponentBus.h>
 
 // Needed to access the Mesh information inside Actor.
@@ -30,8 +30,8 @@ namespace NvCloth
             AZStd::vector<AZ::u32>& numInfluencesPerSubmesh)
         {
             AZ::Data::Asset<JE::Render::RPI::ModelAsset> modelAsset;
-            AZ::Render::MeshComponentRequestBus::EventResult(
-                modelAsset, entityId, &AZ::Render::MeshComponentRequestBus::Events::GetModelAsset);
+            JE::Render::Scene::MeshComponentRequestBus::EventResult(
+                modelAsset, entityId, &JE::Render::Scene::MeshComponentRequestBus::Events::GetModelAsset);
             if (!modelAsset.IsReady())
             {
                 return false;

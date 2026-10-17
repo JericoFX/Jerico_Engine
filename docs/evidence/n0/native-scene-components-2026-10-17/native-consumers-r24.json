@@ -1,0 +1,158 @@
+{
+  "schema": "je.scene100.native-consumers-r24.v1",
+  "reviewer": "/root",
+  "scope": "Final incremental eight-root compatibility gate; no configure or factory-suite rerun",
+  "wholeGemAccepted": false,
+  "freezeSHA256": "C637E56407C7A416D5A5F05CC3F34D66A4292B366DC8118F618E5A311976C9C8",
+  "sourceInputs": 14509,
+  "expectedAbsences": 1059,
+  "start": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-scene100\\native-hosts-r24-compatibility-attempt1\\build-targets.start.json",
+    "bytes": 1379,
+    "sha256": "13AFB1EC6CCECB10AE474973EC6791D220AC60C0FF2C842850BF53D1F116508F"
+  },
+  "result": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-scene100\\native-hosts-r24-compatibility-attempt1\\build-targets.result.json",
+    "bytes": 37157,
+    "sha256": "675353C8CFBB4D80A5F4F91B20639018FBB792C756104EAE4F6420EF772CF19E"
+  },
+  "summary": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-scene100\\native-hosts-r24-compatibility-attempt1\\summary.json",
+    "bytes": 41694,
+    "sha256": "979149910F98ECBC3DAF4A9646BB42803F6AF032A0EF3D8B69A50F92E0D5FF91"
+  },
+  "postflight": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-scene100\\native-hosts-r24-compatibility-attempt1\\postflight.json",
+    "bytes": 4854388,
+    "sha256": "EFDECC4E2F1C542EB4591F16CFE41822A1EAE8F623229156124B2DC137A8E5A6"
+  },
+  "nativePID": 69668,
+  "creationUtc": "2026-10-17T14:45:07.7800213Z",
+  "nativeExit": 0,
+  "seconds": 105.174,
+  "argv": [
+    "--build",
+    "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine",
+    "--config",
+    "Profile",
+    "--target",
+    "Editor",
+    "JEEditorFixture.GameLauncher",
+    "AssetProcessorBatch",
+    "MaterialEditor",
+    "MaterialCanvas",
+    "PassCanvas",
+    "AssetBundler",
+    "AssetBundlerBatch",
+    "--parallel",
+    "1",
+    "--",
+    "/p:UseMultiToolTask=true",
+    "/p:MultiProcCL=true",
+    "/p:MultiProcMaxCount=2",
+    "/p:EnableClServerMode=false",
+    "/p:EnforceProcessCountAcrossBuilds=true",
+    "/p:CL_MPCount=2",
+    "/m:1",
+    "/nr:false"
+  ],
+  "peakSampledPhysicalRamPercent": 57.86,
+  "guard": null,
+  "postDrift": 0,
+  "remainingNativeProcesses": 0,
+  "runnerOutputCount": 10,
+  "runnerOutputs": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Editor.exe",
+      "name": "Editor.exe",
+      "present": true,
+      "state": "PRESENT",
+      "bytes": 171520,
+      "sha256": "C9A6DB2876168435FCFA63BC1F09AFD8A15719930735938BD82749F91E8BC2B3",
+      "lastWriteUtc": "2026-10-15T13:54:10.0818776Z"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\JEEditorFixture.GameLauncher.exe",
+      "name": "JEEditorFixture.GameLauncher.exe",
+      "present": true,
+      "state": "PRESENT",
+      "bytes": 8113152,
+      "sha256": "35C02FA471BCE001DFAD03DBF9C43293170FD472FE72A7EB4506185286758DBB",
+      "lastWriteUtc": "2026-10-17T12:40:00.0816899Z"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AssetProcessorBatch.exe",
+      "name": "AssetProcessorBatch.exe",
+      "present": true,
+      "state": "PRESENT",
+      "bytes": 18297856,
+      "sha256": "34B97395840EA5D2E570FC313E3F1BE977697E63F129F8D634783772595F32C0",
+      "lastWriteUtc": "2026-10-17T12:40:15.4036803Z"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\MaterialEditor.exe",
+      "name": "MaterialEditor.exe",
+      "present": true,
+      "state": "PRESENT",
+      "bytes": 14290432,
+      "sha256": "322C3352F0B06A671C30B3F23A5BAEC5E4E7D9BA93E28724BE501F6635938C79",
+      "lastWriteUtc": "2026-10-17T12:40:29.4055172Z"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\MaterialCanvas.exe",
+      "name": "MaterialCanvas.exe",
+      "present": true,
+      "state": "PRESENT",
+      "bytes": 15325696,
+      "sha256": "925BEBACEA91C135B0FE4371D5082836F0C7D865F856CC1B450768B7831AA936",
+      "lastWriteUtc": "2026-10-17T12:40:43.3629247Z"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\PassCanvas.exe",
+      "name": "PassCanvas.exe",
+      "present": true,
+      "state": "PRESENT",
+      "bytes": 16278016,
+      "sha256": "60FAE98BAD8C1BDE0C4ACF35A89C829C3F83447E660771E96AA8CD398461B89F",
+      "lastWriteUtc": "2026-10-17T12:40:57.3727183Z"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AssetBundler.exe",
+      "name": "AssetBundler.exe",
+      "present": true,
+      "state": "PRESENT",
+      "bytes": 1074176,
+      "sha256": "322C6C5208CB7FFDF3676CBA12D3626E7030AA7D388A0C39AC321CE00E838245",
+      "lastWriteUtc": "2026-10-16T17:48:32.1181289Z"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AssetBundlerBatch.exe",
+      "name": "AssetBundlerBatch.exe",
+      "present": true,
+      "state": "PRESENT",
+      "bytes": 470528,
+      "sha256": "5ED91FA63F7B2EA4C0352A03FD7E324DCB99CDD3E72FA0820ABE7A973B4572CB",
+      "lastWriteUtc": "2026-10-16T17:48:55.3467807Z"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\RenderIntegration.dll",
+      "name": "RenderIntegration.dll",
+      "present": true,
+      "state": "PRESENT",
+      "bytes": 9376768,
+      "sha256": "FF17FCC51873A5808BD0C37971E96566A8CD6D5063E9628EB21D366C823BD318",
+      "lastWriteUtc": "2026-10-17T07:21:41.840607Z"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\EditorRenderIntegration.dll",
+      "name": "EditorRenderIntegration.dll",
+      "present": true,
+      "state": "PRESENT",
+      "bytes": 3247616,
+      "sha256": "5F51D67DEE114E76D7A403C5ECBC594C90F42CE2DFD6889699EA2AE88620D920",
+      "lastWriteUtc": "2026-10-17T02:28:32.0050411Z"
+    }
+  ],
+  "beforeAfterBitChanges": 0,
+  "limits": "Eight requested roots and ten runner inventories are not twelve build requests. Supplemental twelve actual SDK host artifacts are reviewed separately; SDK100 still pending."
+}

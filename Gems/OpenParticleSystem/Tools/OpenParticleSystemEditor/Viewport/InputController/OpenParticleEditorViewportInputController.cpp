@@ -19,7 +19,7 @@
 #include <AzFramework/Viewport/ScreenGeometry.h>
 #include <AzToolsFramework/Viewport/ViewportMessages.h>
 
-#include <AtomLyIntegration/CommonFeatures/Mesh/MeshComponentBus.h>
+#include <JE/Render/Scene/Mesh/MeshComponentBus.h>
 #include <JE/Render/RPI/Public/RPISystemInterface.h>
 #include <JE/Render/RPI/Public/Scene.h>
 #include <JE/Render/RPI/Reflect/Model/ModelAsset.h>

@@ -1,0 +1,445 @@
+{
+  "schema": "je.scene100.ap-residual-errors.v1",
+  "reviewer": "/root",
+  "globalPass": false,
+  "wholeGemAccepted": false,
+  "analysis": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-scene100\\ap-r24-residual-error-readonly\\analysis.json",
+    "bytes": 22968,
+    "sha256": "A40F86791E9005AE1BAD34587FD530BDE4789FD1B26CE43B80CE42D4250EEFDC"
+  },
+  "observations": [
+    {
+      "run": "RPI99 pre-Scene archive",
+      "path": "build/n0-validation/native-rpi99/editor-vulkan-crash-attempt1/AP_GUI.log",
+      "observed": {
+        "missingRhiService": {
+          "count": 3,
+          "first": [
+            {
+              "line": 4289,
+              "text": "~~1792192446685~~1~~0000000000006118~~AssetBuilder~~E: Component 'RPISystemComponent' is missing another required service: 0x45d8e053"
+            },
+            {
+              "line": 7055,
+              "text": "~~1792193250764~~1~~0000000000003BAC~~AssetBuilder~~E: Component 'RPISystemComponent' is missing another required service: 0x45d8e053"
+            },
+            {
+              "line": 9116,
+              "text": "~~1792219239203~~1~~0000000000006350~~AssetBuilder~~E: Component 'RPISystemComponent' is missing another required service: 0x45d8e053"
+            }
+          ]
+        },
+        "shaderJobFailures": {
+          "count": 4,
+          "first": [
+            {
+              "line": 5663,
+              "text": "~~1792192476265~~1~~000000000000513C~~AssetProcessor~~Failed F:/JericoEngine/JericoEngine/Gems/Atom/Feature/Common/Assets/Shaders/Reflections/ReflectionScreenSpaceRayTracingClosestHit.shader, (pc)... "
+            },
+            {
+              "line": 5666,
+              "text": "~~1792192476279~~1~~000000000000513C~~AssetProcessor~~Failed F:/JericoEngine/JericoEngine/Gems/Atom/Feature/Common/Assets/Shaders/Reflections/ReflectionScreenSpaceRayTracingClosestHitProcedural.shader, (pc)... "
+            },
+            {
+              "line": 9702,
+              "text": "~~1792219280947~~1~~0000000000008524~~AssetProcessor~~Failed F:/JericoEngine/JericoEngine/Gems/Atom/Feature/Common/Assets/Shaders/Reflections/ReflectionScreenSpaceRayTracingClosestHit.shader, (pc)... "
+            },
+            {
+              "line": 9706,
+              "text": "~~1792219281022~~1~~0000000000008524~~AssetProcessor~~Failed F:/JericoEngine/JericoEngine/Gems/Atom/Feature/Common/Assets/Shaders/Reflections/ReflectionScreenSpaceRayTracingClosestHitProcedural.shader, (pc)... "
+            }
+          ]
+        },
+        "missingShaderInclude": {
+          "count": 0,
+          "first": []
+        },
+        "tangentScanFolderWarnings": {
+          "count": 169,
+          "first": [
+            {
+              "line": 4304,
+              "text": "~~1792192449985~~2~~000000000000513C~~AssetProcessor~~'F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\RPI\\TangentSpace.azsli' does not appear to be in any input folder.  Use relative paths instead."
+            },
+            {
+              "line": 4310,
+              "text": "~~1792192450144~~2~~000000000000513C~~AssetProcessor~~'F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\RPI\\TangentSpace.azsli' does not appear to be in any input folder.  Use relative paths instead."
+            },
+            {
+              "line": 4316,
+              "text": "~~1792192450255~~2~~000000000000513C~~AssetProcessor~~'F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\RPI\\TangentSpace.azsli' does not appear to be in any input folder.  Use relative paths instead."
+            },
+            {
+              "line": 4318,
+              "text": "~~1792192450319~~2~~000000000000513C~~AssetProcessor~~'F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\RPI\\TangentSpace.azsli' does not appear to be in any input folder.  Use relative paths instead."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "run": "Scene R21 original assets",
+      "path": "build/n0-validation/native-scene100/ap100-original-assets-attempt2/assetprocessor.stdout.log",
+      "observed": {
+        "missingRhiService": {
+          "count": 2,
+          "first": [
+            {
+              "line": 7,
+              "text": "Component 'RPISystemComponent' is missing another required service: 0x45d8e053"
+            },
+            {
+              "line": 66,
+              "text": "AssetBuilder: E: Component 'RPISystemComponent' is missing another required service: 0x45d8e053"
+            }
+          ]
+        },
+        "shaderJobFailures": {
+          "count": 2,
+          "first": [
+            {
+              "line": 100,
+              "text": "AssetProcessor: Failed F:/JericoEngine/JericoEngine/Gems/Atom/Feature/Common/Assets/Shaders/Reflections/ReflectionScreenSpaceRayTracingClosestHit.shader, (pc)... "
+            },
+            {
+              "line": 149,
+              "text": "AssetProcessor: Failed F:/JericoEngine/JericoEngine/Gems/Atom/Feature/Common/Assets/Shaders/Reflections/ReflectionScreenSpaceRayTracingClosestHitProcedural.shader, (pc)... "
+            }
+          ]
+        },
+        "missingShaderInclude": {
+          "count": 2,
+          "first": [
+            {
+              "line": 128,
+              "text": "AssetProcessor: JOB LOG: 17/10/2026 10:05 | ERROR | origin: AssetBuilder |     F:/JericoEngine/JericoEngine/Gems/Atom/Feature/Common/Assets/Shaders/Reflections/ReflectionScreenSpaceRayTracingClosestHit.azsli:19: error: Can't open include file \"Atom/RPI/Assets/ShaderLib/Atom/RPI/TangentSpace.azsli\""
+            },
+            {
+              "line": 165,
+              "text": "AssetProcessor: JOB LOG: 17/10/2026 10:05 | ERROR | origin: AssetBuilder |     F:/JericoEngine/JericoEngine/Gems/Atom/Feature/Common/Assets/Shaders/Reflections/ReflectionScreenSpaceRayTracingClosestHit.azsli:19: error: Can't open include file \"Atom/RPI/Assets/ShaderLib/Atom/RPI/TangentSpace.azsli\""
+            }
+          ]
+        },
+        "tangentScanFolderWarnings": {
+          "count": 2,
+          "first": [
+            {
+              "line": 83,
+              "text": "AssetProcessor: 'F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\RPI\\Assets\\ShaderLib\\Atom\\RPI\\TangentSpace.azsli' does not appear to be in any input folder.  Use relative paths instead."
+            },
+            {
+              "line": 95,
+              "text": "AssetProcessor: 'F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\RPI\\Assets\\ShaderLib\\Atom\\RPI\\TangentSpace.azsli' does not appear to be in any input folder.  Use relative paths instead."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "run": "Scene Lua RED",
+      "path": "build/n0-validation/native-scene100/ap100-profile-lua-attempt1/assetprocessor.stdout.log",
+      "observed": {
+        "missingRhiService": {
+          "count": 2,
+          "first": [
+            {
+              "line": 7,
+              "text": "Component 'RPISystemComponent' is missing another required service: 0x45d8e053"
+            },
+            {
+              "line": 66,
+              "text": "AssetBuilder: E: Component 'RPISystemComponent' is missing another required service: 0x45d8e053"
+            }
+          ]
+        },
+        "shaderJobFailures": {
+          "count": 2,
+          "first": [
+            {
+              "line": 100,
+              "text": "AssetProcessor: Failed F:/JericoEngine/JericoEngine/Gems/Atom/Feature/Common/Assets/Shaders/Reflections/ReflectionScreenSpaceRayTracingClosestHit.shader, (pc)... "
+            },
+            {
+              "line": 149,
+              "text": "AssetProcessor: Failed F:/JericoEngine/JericoEngine/Gems/Atom/Feature/Common/Assets/Shaders/Reflections/ReflectionScreenSpaceRayTracingClosestHitProcedural.shader, (pc)... "
+            }
+          ]
+        },
+        "missingShaderInclude": {
+          "count": 2,
+          "first": [
+            {
+              "line": 128,
+              "text": "AssetProcessor: JOB LOG: 17/10/2026 10:33 | ERROR | origin: AssetBuilder |     F:/JericoEngine/JericoEngine/Gems/Atom/Feature/Common/Assets/Shaders/Reflections/ReflectionScreenSpaceRayTracingClosestHit.azsli:19: error: Can't open include file \"Atom/RPI/Assets/ShaderLib/Atom/RPI/TangentSpace.azsli\""
+            },
+            {
+              "line": 165,
+              "text": "AssetProcessor: JOB LOG: 17/10/2026 10:33 | ERROR | origin: AssetBuilder |     F:/JericoEngine/JericoEngine/Gems/Atom/Feature/Common/Assets/Shaders/Reflections/ReflectionScreenSpaceRayTracingClosestHit.azsli:19: error: Can't open include file \"Atom/RPI/Assets/ShaderLib/Atom/RPI/TangentSpace.azsli\""
+            }
+          ]
+        },
+        "tangentScanFolderWarnings": {
+          "count": 2,
+          "first": [
+            {
+              "line": 83,
+              "text": "AssetProcessor: 'F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\RPI\\Assets\\ShaderLib\\Atom\\RPI\\TangentSpace.azsli' does not appear to be in any input folder.  Use relative paths instead."
+            },
+            {
+              "line": 95,
+              "text": "AssetProcessor: 'F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\RPI\\Assets\\ShaderLib\\Atom\\RPI\\TangentSpace.azsli' does not appear to be in any input folder.  Use relative paths instead."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "run": "Scene Lua GREEN R24",
+      "path": "build/n0-validation/native-scene100/ap100-profile-lua-attempt2/assetprocessor.stdout.log",
+      "observed": {
+        "missingRhiService": {
+          "count": 2,
+          "first": [
+            {
+              "line": 7,
+              "text": "Component 'RPISystemComponent' is missing another required service: 0x45d8e053"
+            },
+            {
+              "line": 66,
+              "text": "AssetBuilder: E: Component 'RPISystemComponent' is missing another required service: 0x45d8e053"
+            }
+          ]
+        },
+        "shaderJobFailures": {
+          "count": 2,
+          "first": [
+            {
+              "line": 336,
+              "text": "AssetProcessor: Failed F:/JericoEngine/JericoEngine/Gems/Atom/Feature/Common/Assets/Shaders/Reflections/ReflectionScreenSpaceRayTracingClosestHit.shader, (pc)... "
+            },
+            {
+              "line": 374,
+              "text": "AssetProcessor: Failed F:/JericoEngine/JericoEngine/Gems/Atom/Feature/Common/Assets/Shaders/Reflections/ReflectionScreenSpaceRayTracingClosestHitProcedural.shader, (pc)... "
+            }
+          ]
+        },
+        "missingShaderInclude": {
+          "count": 2,
+          "first": [
+            {
+              "line": 352,
+              "text": "AssetProcessor: JOB LOG: 17/10/2026 11:26 | ERROR | origin: AssetBuilder |     F:/JericoEngine/JericoEngine/Gems/Atom/Feature/Common/Assets/Shaders/Reflections/ReflectionScreenSpaceRayTracingClosestHit.azsli:19: error: Can't open include file \"Atom/RPI/Assets/ShaderLib/Atom/RPI/TangentSpace.azsli\""
+            },
+            {
+              "line": 390,
+              "text": "AssetProcessor: JOB LOG: 17/10/2026 11:26 | ERROR | origin: AssetBuilder |     F:/JericoEngine/JericoEngine/Gems/Atom/Feature/Common/Assets/Shaders/Reflections/ReflectionScreenSpaceRayTracingClosestHit.azsli:19: error: Can't open include file \"Atom/RPI/Assets/ShaderLib/Atom/RPI/TangentSpace.azsli\""
+            }
+          ]
+        },
+        "tangentScanFolderWarnings": {
+          "count": 2,
+          "first": [
+            {
+              "line": 84,
+              "text": "AssetProcessor: 'F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\RPI\\Assets\\ShaderLib\\Atom\\RPI\\TangentSpace.azsli' does not appear to be in any input folder.  Use relative paths instead."
+            },
+            {
+              "line": 96,
+              "text": "AssetProcessor: 'F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\RPI\\Assets\\ShaderLib\\Atom\\RPI\\TangentSpace.azsli' does not appear to be in any input folder.  Use relative paths instead."
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "sourceAndLogPins": [
+    {
+      "path": "build/n0-validation/native-rpi99/editor-vulkan-crash-attempt1/AP_GUI.log",
+      "bytes": 1823799,
+      "sha256": "761BDA772EF2302A94E140BE1D752569EBDCC67041DF2E3E0987EFC5D85EE50E",
+      "indexed": false,
+      "fresh": null
+    },
+    {
+      "path": "build/n0-validation/native-rpi99/w2-implementation-candidate/manifest.json",
+      "bytes": 107106,
+      "sha256": "67D461A6EB3031B6A34C03E605E1AFBB39D49A782556BB0C78722F0532FE2761",
+      "indexed": false,
+      "fresh": null
+    },
+    {
+      "path": "build/n0-validation/native-scene100/ap100-original-assets-attempt2/assetprocessor.stdout.log",
+      "bytes": 199136,
+      "sha256": "D193DCF63599CB084EE28478B71CE02D06FB12EF36512F8BFAD1F96C7BFA4ED0",
+      "indexed": false,
+      "fresh": null
+    },
+    {
+      "path": "build/n0-validation/native-scene100/ap100-profile-lua-attempt1/assetprocessor.stdout.log",
+      "bytes": 191542,
+      "sha256": "EFA957F864076806711294624C170978F4E57AC7950B3C67B1C72C8D83A1A6ED",
+      "indexed": false,
+      "fresh": null
+    },
+    {
+      "path": "build/n0-validation/native-scene100/ap100-profile-lua-attempt2/assetprocessor.stdout.log",
+      "bytes": 256186,
+      "sha256": "0BBB49EDEE173F34EB214BDD1DE19FCC70651EFE8BE9BF14DE4F870C79007819",
+      "indexed": false,
+      "fresh": null
+    },
+    {
+      "path": "Code/Framework/AzCore/AzCore/Module/ModuleManager.cpp",
+      "bytes": 35253,
+      "sha256": "E4A0C3C473F7BC569D106ECC43E18F2DFF4BFBB7B883052C24055FEDAA8FBC1E",
+      "indexed": true,
+      "fresh": true
+    },
+    {
+      "path": "docs/evidence/n0/native-rpi-bodies-2026-10-17/README.md",
+      "bytes": 3314,
+      "sha256": "E090F92A9A0F574B17285818C594FD58C128D7BE56322F74159716A909EE4888",
+      "indexed": false,
+      "fresh": null
+    },
+    {
+      "path": "Engine/Assets/RenderBuilders/Source/Shader/CommonFiles/Preprocessor.cpp",
+      "bytes": 20577,
+      "sha256": "CD18E111C71E64126FF3FFCFE8BA03A992E89A8B6569F8746BFD6C6CA8476CBC",
+      "indexed": true,
+      "fresh": true
+    },
+    {
+      "path": "Engine/Render/Integration/RPI/Assets/ShaderLib/Atom/RPI/TangentSpace.azsli",
+      "bytes": 14205,
+      "sha256": "3CCCA72FEF756C4115B01DE27B3F5295BB72D4BE49E2E4ED2150D821BA7155B6",
+      "indexed": false,
+      "fresh": null
+    },
+    {
+      "path": "Engine/Render/Integration/Source/RPI/RPISystemComponent.cpp",
+      "bytes": 12693,
+      "sha256": "42AA02ADD532EEA4527F5C233264209EB88DEFFF4131AD44607750D80D3FAFAA",
+      "indexed": true,
+      "fresh": true
+    },
+    {
+      "path": "Gems/Atom/Feature/Common/Assets/Shaders/Reflections/ReflectionScreenSpaceRayTracingClosestHit.azsl",
+      "bytes": 686,
+      "sha256": "9AD85B889FB980DD9CB687D91C47A3879C410BAB087AEF0B1F296E507D4E46C5",
+      "indexed": false,
+      "fresh": null
+    },
+    {
+      "path": "Gems/Atom/Feature/Common/Assets/Shaders/Reflections/ReflectionScreenSpaceRayTracingClosestHit.azsli",
+      "bytes": 7991,
+      "sha256": "C28D2C5911858EFA51D02333D40A3800667D7D8B1A0707AD1F637EC98F6DE0B9",
+      "indexed": false,
+      "fresh": null
+    },
+    {
+      "path": "Gems/Atom/Feature/Common/Assets/Shaders/Reflections/ReflectionScreenSpaceRayTracingClosestHit.shader",
+      "bytes": 899,
+      "sha256": "CE1BA0BEEEA812C5F136FAFD1A4FF9AE82FEB40FC3696A5616423C0E74DEC538",
+      "indexed": false,
+      "fresh": null
+    },
+    {
+      "path": "Gems/Atom/Feature/Common/Assets/Shaders/Reflections/ReflectionScreenSpaceRayTracingClosestHitProcedural.azsl",
+      "bytes": 970,
+      "sha256": "E7E019EE35B622CF32F1E8A177DA3D7CB46C97F58C971D819BED794F1C67DB47",
+      "indexed": false,
+      "fresh": null
+    },
+    {
+      "path": "Gems/Atom/Feature/Common/Assets/Shaders/Reflections/ReflectionScreenSpaceRayTracingClosestHitProcedural.shader",
+      "bytes": 1562,
+      "sha256": "BD67FA02A31D0AE994889047957479FFDDA7C5F0C4D0AAF0A455D1FCB5BF6FAE",
+      "indexed": false,
+      "fresh": null
+    },
+    {
+      "path": "Gems/Atom/RHI/Code/Source/RHI/Factory.cpp",
+      "bytes": 3126,
+      "sha256": "EE8BC395B6F9405EA6865A2FCE9FEABBC9FFA051D357C86B24AFD5C1A423B8C9",
+      "indexed": true,
+      "fresh": true
+    },
+    {
+      "path": "Registry/rpi_assetprocessor.setreg",
+      "bytes": 630,
+      "sha256": "E80F14003E4273A4BF60ED8465AA4800A641D213A06800636EBC9EE0E28E2A28",
+      "indexed": false,
+      "fresh": null
+    }
+  ],
+  "service": {
+    "consumer": "JE RPI Runtime/Editor RPISystemComponent (serialized name RPISystemComponent)",
+    "consumerPath": "Engine/Render/Integration/Source/RPI/RPISystemComponent.cpp",
+    "consumerLines": "70-72: required.push_back(AZ::RHI::Factory::GetComponentService())",
+    "serviceProvider": "Gems/Atom/RHI/Code/Source/RHI/Factory.cpp",
+    "providerLines": "29-31: return AZ_CRC_CE(\"RHIService\")",
+    "crc": "0x45d8e053",
+    "crcCheck": "Independent lowercase IEEE CRC32 gives45d8e053; exact required service is sole required entry in source.",
+    "sortReporter": "Code/Framework/AzCore/AzCore/Module/ModuleManager.cpp",
+    "reporterLines": "629-643: error includes Entity dependency-sort outcome; does not identify a Scene module as the source.",
+    "classification": "Same missing service explicitly present in pre-Scene RPI99 archive4289 and all three Scene AP runs7/66. Not introduced by Lua generic-path fix. Headless RPI service/composition followup; no speculative renderer activation patch."
+  },
+  "shader": {
+    "consumerOwner": "Atom_Feature_Common Assets/Shaders/Reflections",
+    "entrypoints": [
+      "ReflectionScreenSpaceRayTracingClosestHit.shader Source -> .azsl9 includes shared .azsli",
+      "ReflectionScreenSpaceRayTracingClosestHitProcedural.shader Source -> .azsl9 includes same shared .azsli"
+    ],
+    "sharedIncludePath": "Gems/Atom/Feature/Common/Assets/Shaders/Reflections/ReflectionScreenSpaceRayTracingClosestHit.azsli",
+    "line": 19,
+    "literal": "Atom/RPI/Assets/ShaderLib/Atom/RPI/TangentSpace.azsli",
+    "legacyPhysicalProvider": "Gems/Atom/RPI/Assets/ShaderLib/Atom/RPI/TangentSpace.azsli",
+    "legacyProviderAbsent": true,
+    "currentProvider": "Engine/Render/Integration/RPI/Assets/ShaderLib/Atom/RPI/TangentSpace.azsli",
+    "providerOwner": "JE RenderIntegration native RPI assets",
+    "providerSHA256": "3CCCA72FEF756C4115B01DE27B3F5295BB72D4BE49E2E4ED2150D821BA7155B6",
+    "rpi99MoveEvidence": [
+      {
+        "path": "Engine/Render/Integration/RPI/Assets/ShaderLib/Atom/RPI/TangentSpace.azsli",
+        "before": null,
+        "after": {
+          "sha256": "3CCCA72FEF756C4115B01DE27B3F5295BB72D4BE49E2E4ED2150D821BA7155B6",
+          "bytes": 14205
+        },
+        "parentReserved": false,
+        "reason": "Preserve RPI asset subroot without Bootstrap seed collision",
+        "source": "Gems/Atom/RPI/Assets/ShaderLib/Atom/RPI/TangentSpace.azsli"
+      },
+      {
+        "path": "Gems/Atom/RPI/Assets/ShaderLib/Atom/RPI/TangentSpace.azsli",
+        "before": {
+          "sha256": "3CCCA72FEF756C4115B01DE27B3F5295BB72D4BE49E2E4ED2150D821BA7155B6",
+          "bytes": 14205
+        },
+        "after": null,
+        "parentReserved": false,
+        "reason": "Preserve RPI asset subroot without Bootstrap seed collision",
+        "source": ""
+      }
+    ],
+    "scanFolder": "Registry/rpi_assetprocessor.setreg native RPI/Assets root",
+    "includeRootMechanism": "Preprocessor.cpp356-422;386-405 scan folders/ShaderLib,409-419 engine/Gems fallback. Legacy full physical Gem path resolves against old Gems fallback; native root preserves canonical ShaderLib names.",
+    "knownCanonicalConsumers": [
+      "FallbackPBRMaterial.azsli65",
+      "ParallaxMapping.azsli11",
+      "PBR/Decals.azsli20: <Atom/RPI/TangentSpace.azsli>"
+    ],
+    "classification": "Both source jobs already fail pre-Scene in AP_GUI5663/5666, with TangentSpace scanfolder warnings4304+. Exact current missing-include diagnostic is shown by R21/RED/GREEN logs. Baseline archive does not contain the same compiler-text line, so do not claim it was directly printed there."
+  },
+  "conclusions": [
+    "No demonstrated newly introduced error in either assigned family after Scene/Lua correction: both are observed before Scene or before Lua change.",
+    "Concrete current shader cause is stale physical RPI path in a Core Feature shader consumer, with native provider present byteexact to RPI99 relocation manifest. This is an RPI asset-consumer followup, not proof that ray tracing may be ignored.",
+    "Missing RHIService is an independent existing headless module-activation failure; source and logs do not support attributing it to Scene descriptor registration.",
+    "Public RPI99 evidence explicitly leaves336 global AP failures open; that is a boundary, not proof every current failed job has the same history.",
+    "Lua113702 Error0/product805 is parent/Luna-confirmed current gate; unchanged deterministic product bytes do not refute fresh cook. No DB requery or replay performed here.",
+    "Parent alone decides whether current Scene acceptance permits explicit RPI/N0 followups; this diagnosis does not mark Scene or global AP accepted."
+  ],
+  "decision": "Retain as explicit RPI/N0 followups. Scene scoped22sources/23jobs have current error0; no claim that every global failure has established baseline provenance or that ray tracing was verified."
+}

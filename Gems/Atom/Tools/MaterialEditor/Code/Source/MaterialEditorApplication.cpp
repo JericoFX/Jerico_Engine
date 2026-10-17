@@ -8,6 +8,7 @@
 
 #include <AtomToolsFramework/Document/AtomToolsDocumentSystemRequestBus.h>
 #include <JE/Editor/Camera/CameraModule.h>
+#include <JE/Editor/Render/Scene/SceneModule.h>
 #include <AzCore/Settings/SettingsRegistryMergeUtils.h>
 #include <MaterialEditorApplication.h>
 #include <JE/Render/Materials/MaterialsRegistration.h>
@@ -67,6 +68,7 @@ namespace MaterialEditor
     void MaterialEditorApplication::CreateStaticModules(AZStd::vector<AZ::Module*>& outModules)
     {
         Base::CreateStaticModules(outModules);
+        outModules.emplace_back(JE::Editor::Render::Scene::CreateModule());
         outModules.emplace_back(JE::Editor::Camera::CreateAuthoringModule());
     }
 

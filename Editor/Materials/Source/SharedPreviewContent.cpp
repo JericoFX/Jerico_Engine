@@ -14,8 +14,8 @@
 #include <JE/Render/RPI/Reflect/Asset/AssetUtils.h>
 #include <JE/Render/Materials/MaterialComponentBus.h>
 #include <JE/Render/Materials/MaterialComponentConstants.h>
-#include <AtomLyIntegration/CommonFeatures/Mesh/MeshComponentBus.h>
-#include <AtomLyIntegration/CommonFeatures/Mesh/MeshComponentConstants.h>
+#include <JE/Render/Scene/Mesh/MeshComponentBus.h>
+#include <JE/Render/Scene/Mesh/MeshComponentConstants.h>
 #include <AzCore/Asset/AssetCommon.h>
 #include <AzCore/Component/Entity.h>
 #include <AzCore/Component/TransformBus.h>
@@ -50,7 +50,7 @@ namespace JE
             // Create preview model
             AzFramework::EntityContextRequestBus::EventResult(
                 m_modelEntity, m_entityContextId, &AzFramework::EntityContextRequestBus::Events::CreateEntity, "SharedPreviewContentModel");
-            m_modelEntity->CreateComponent(AZ::Render::MeshComponentTypeId);
+            m_modelEntity->CreateComponent(JE::Render::Scene::MeshComponentTypeId);
             m_modelEntity->CreateComponent(JE::Render::MaterialComponentTypeId);
             m_modelEntity->CreateComponent(azrtti_typeid<AzFramework::TransformComponent>());
             m_modelEntity->Init();
@@ -73,7 +73,7 @@ namespace JE
         {
             if (m_modelEntity)
             {
-                AZ::Render::MeshHandleStateNotificationBus::Handler::BusDisconnect();
+                JE::Render::Scene::MeshHandleStateNotificationBus::Handler::BusDisconnect();
 
                 m_modelEntity->Deactivate();
                 AzFramework::EntityContextRequestBus::Event(
@@ -123,13 +123,13 @@ namespace JE
 
         void SharedPreviewContent::UpdateModel()
         {
-            AZ::Render::MeshComponentRequestBus::Event(
-                m_modelEntity->GetId(), &AZ::Render::MeshComponentRequestBus::Events::SetModelAsset, m_modelAsset);
+            JE::Render::Scene::MeshComponentRequestBus::Event(
+                m_modelEntity->GetId(), &JE::Render::Scene::MeshComponentRequestBus::Events::SetModelAsset, m_modelAsset);
             
             // This Ebus will give us the @m_meshHandle created by the mesh feature processor on behalf of
             // m_modelEntity->GetId(). With @m_meshHandle we can get accurate updates from the MeshFeatureProcessor
             // and know exactly when the MeshDrawPackets have been updated, which means we are ready to render the scene.
-            AZ::Render::MeshHandleStateNotificationBus::Handler::BusConnect(m_modelEntity->GetId());
+            JE::Render::Scene::MeshHandleStateNotificationBus::Handler::BusConnect(m_modelEntity->GetId());
 
             JE::Render::MaterialComponentRequestBus::Event(
                 m_modelEntity->GetId(), &JE::Render::MaterialComponentRequestBus::Events::SetMaterialAssetId,

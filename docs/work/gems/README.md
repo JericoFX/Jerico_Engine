@@ -1,0 +1,27 @@
+# Planes de integración por Gem
+
+Cada Gem elegida necesita un plan visible propio, además del [GOAL](../../../GOAL.md), el [roadmap](../../ROADMAP.md) y el corte autorizado en [ACTIVE_SLICE](../ACTIVE_SLICE.md). El plan se escribe y revisa **antes de modificar esa Gem**. Se conserva el contrato de [CODEX_START](../../../CODEX_START.md) y la continuidad de [HANDOFF](../HANDOFF.md). No se generan planes para todas las Gems por adelantado ni se elige aquí el siguiente corte.
+
+El [mapa de composición](../../architecture/gem-map/map.md) y sus [22 planes de módulos configurados](../../architecture/gem-map/configured-module-composition.json) describen dependencias y carga. **No son planes de implementación**, pruebas de ejecución ni aceptación de una Gem. El inventario histórico de 110 manifests tampoco es un denominador de capacidades requeridas ni permite calcular pendientes restando las once identidades nominales.
+
+## Método y gate previo
+
+El padre conserva decisiones, integración, revisión, aceptación y publicación. Los dos escritores trabajan en scopes disjuntos; W1 posee el único Graft compartido. Luna es el único dueño de compilación/validación cuando el padre le concede lease. Se mantiene el mismo checkout y método de ejecución; no se crean agentes, ramas o worktrees por escribir un plan.
+
+Antes de trabajo, reutilizar la lectura íntegra vigente de CPP/Game y leer lo que haya cambiado; Qt completo si hay UI. Reutilizar Graft fresco antes de explorar C++; configuración, datos y evidencia pueden leerse directamente en su scope. Conservar WIP y preimágenes, y revisar upstream primario pertinente antes de adaptar código. Evaluar también investigación SIGGRAPH y técnicas de otros motores cuando sean pertinentes a la capacidad o técnica que se cambia. Registrar fuente primaria y revisión, licencia y dependencias, decisión adoptar/adaptar/no aplica y su motivo; antes de cambiar una técnica, definir la mejora observable y la comparación que la demostrará (calidad, corrección o coste medido). Una absorción de ownership sin cambio de algoritmo debe declararlo y no atribuirse beneficios SIGGRAPH no medidos.
+
+Un plan tiene como máximo tres tareas con interfaces, archivos, responsables y comprobaciones autosuficientes:
+
+1. **Analizar.** Inventariar cuerpos, contratos, consumidores activos/inactivos, composición, assets/Registry/seeds y scripts; trazar proveedores reales, ciclos runtime/editor y semántica de macros. Comparar UUID/nombres serializados, bases RTTI implícitas, allocator, descriptor, servicios y lifecycle contra preimágenes. Definir una regresión discriminante y gates afectados. El padre registra **ANALIZADO** con evidencia antes del primer write; los huecos quedan concretos y bloquean sólo la intervención que depende de ellos.
+2. **Implementar la unidad aprobada.** Absorber cuerpos y contratos en owners reales, separar runtime/authoring, adaptar consumidores y discovery sin fachadas ni otro DLL/Gem. Cada reparación debe responder al primer diagnóstico real; inspeccionar su scope completo antes de otro build, sin encadenar compilaciones para descubrir errores de lookup previsibles. Conservar forward/inverse y ownership ajeno.
+3. **Verificar y cerrar.** Congelar inputs, ejecutar RED/GREEN y gates de producto/paquete afectados con un único dueño, y reutilizar evidencia vigente para inputs intactos. Comparar rutas Windows canonicalizadas, identidad de procesos, exit real y XML fresco; un script nuevo o una configuración correcta no acredita producto. Sólo el padre acepta y publica después de revisar evidencia y pendientes.
+
+Las casillas indican acciones concretas con estado **IMPLEMENTADO**, **VERIFICADO** o **BLOQUEADO/PENDIENTE**. Una casilla de implementación no sustituye aceptación. El cierre identifica evidencia durable, límites y deuda; actualizar el plan cuando el padre cierre un gate, sin inventar una ejecución nueva ni cambiar el criterio de conteo.
+
+## Índice
+
+| Identidad legacy elegida | Plan | Estado del corte |
+|---|---|---|
+| CommonFeaturesAtom, `AtomLyIntegration/CommonFeatures` | [Plan CommonFeaturesAtom](CommonFeaturesAtom.md) | Cuerpos/hosts y regresión verificados; packaging R22, GREEN2 Lua10/10 y recook focal status4/error0; APglobal exit1. Ocho raíces R24 build0, cohorte94=92conservados+2relinks aprobada. Replay SDK100 Profile completado: cinco fases exitosas, dos intentos fallidos históricos,34DLL y6mensajes verificados; aceptación/publicación del corte pendientes del padre, sin incremento de Gems |
+
+La próxima Gem tendrá su análisis y plan antes de intervenirla, cuando el padre la asigne. Este índice no declara N0, GUI global, SDK global ni el GOAL terminados.

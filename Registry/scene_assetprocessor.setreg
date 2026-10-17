@@ -1,0 +1,16 @@
+{
+    "Amazon": {
+        "AssetProcessor": {
+            "Settings": {
+                // Preserve the existing CommonFeatures asset identities and relative paths.
+                // Order 100 is the native Engine asset policy, not an observed former Gem order.
+                "ScanFolder gemassets-{3FBFABC9-C4BC-582D-88E1-C7A710BE45B1}": {
+                    "watch": "@ENGINEROOT@/Engine/Render/Scene/Assets",
+                    "display": "Engine/Render/Scene",
+                    "recursive": 1,
+                    "order": 100
+                }
+            }
+        }
+    }
+}

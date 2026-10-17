@@ -1018,7 +1018,7 @@ function(ly_setup_assets)
             "${gem_candidate_dir}/*"
         )
         # Exclude transient artifacts that shouldn't be copied to the install layout
-        list(FILTER external_subdir_files_tenative EXCLUDE REGEX "/([Bb]uild|[Cc]ache|[Uu]ser)$")
+        list(FILTER external_subdir_files_tenative EXCLUDE REGEX "/([Bb]uild|[Cc]ache|[Uu]ser)$|/Gems/AtomLyIntegration/CommonFeatures$")
 
         # Exclude folders that themselves are gem_candidate_dirs with their own gem.json
         foreach(check_file IN LISTS external_subdir_files_tenative)

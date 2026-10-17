@@ -1,0 +1,10 @@
+// Copyright (c) Contributors to the Open 3D Engine Project.
+// SPDX-License-Identifier: Apache-2.0 OR MIT
+#pragma once
+#include <AzCore/Module/Module.h>
+
+namespace JE::Render::Scene
+{
+    void AppendRuntimeComponentDescriptors(AZStd::list<AZ::ComponentDescriptor*>& descriptors);
+    AZ::ComponentTypeList GetRuntimeRequiredSystemComponents();
+}

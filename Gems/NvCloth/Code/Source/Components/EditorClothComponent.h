@@ -12,7 +12,7 @@
 
 #include <AzToolsFramework/ToolsComponents/EditorComponentBase.h>
 
-#include <AtomLyIntegration/CommonFeatures/Mesh/MeshComponentBus.h>
+#include <JE/Render/Scene/Mesh/MeshComponentBus.h>
 
 #include <Components/ClothConfiguration.h>
 
@@ -23,7 +23,7 @@ namespace NvCloth
     //! Class for in-editor Cloth Component.
     class EditorClothComponent
         : public AzToolsFramework::Components::EditorComponentBase
-        , public AZ::Render::MeshComponentNotificationBus::Handler
+        , public JE::Render::Scene::MeshComponentNotificationBus::Handler
     {
     public:
         AZ_EDITOR_COMPONENT(EditorClothComponent, "{2C99B4EF-8A5F-4585-89F9-86D50754DF7E}", AzToolsFramework::Components::EditorComponentBase);

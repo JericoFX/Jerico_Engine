@@ -1,0 +1,144 @@
+{
+  "schema": "je.scene100.dependent-relink-parent-review.v1",
+  "approved": true,
+  "reviewer": "/root",
+  "approvalScope": "Current94 binary cohort for initialSDK100 only; not wholeGem or SDK acceptance",
+  "wholeGemAccepted": false,
+  "sourceFreezeSHA256": "C637E56407C7A416D5A5F05CC3F34D66A4292B366DC8118F618E5A311976C9C8",
+  "analysis": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-scene100\\h24-dependent-relink-readonly\\analysis.json",
+    "bytes": 24900,
+    "sha256": "7CA5B478ECA4F63C41B1A79EC26E4AA6DCD329C3981AE78DF948B282CA6BE6C6"
+  },
+  "peProof": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-scene100\\h24-dependent-relink-readonly\\pe-pairs.json",
+    "bytes": 315430,
+    "sha256": "4BF7F362B404BF041C2C385CA8666DB6144B6DC0AF4DC157D9B763233E8E7055"
+  },
+  "oldHostCohort": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-scene100\\host-pins-r24.json",
+    "bytes": 22333,
+    "sha256": "AB8EA8ECC3221D2FFA1F8B769F262DE85C47B47D9327E263ABB3EB9EF2F87433"
+  },
+  "currentHostCohort": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-scene100\\host-pins-r24-post-hosts.json",
+    "bytes": 22333,
+    "sha256": "9CA506BAFB165A5892D9D10B0C8B5DB2C56103290EF334BB7B1D71B79AA41C16"
+  },
+  "reusedHostPins": 92,
+  "relinkedPins": 2,
+  "ownSourceConfigurationSame": 194,
+  "globalFrozenDeltas": 23,
+  "authorizedGlobalDeltas": "18originalassets+4LuaBuilderPrerequisite+1InstallFilter",
+  "configuration": [
+    {
+      "project": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\External\\GradientSignal-29b14d70\\Code\\GradientSignal.Editor.vcxproj",
+      "profileAdditionalDependencies": [
+        "..\\..\\..\\lib\\profile\\LmbrCentral.Editor.Static.lib"
+      ],
+      "projectReferences": [
+        "<ProjectReference Include=\"F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\External\\LmbrCentral-9e51eced\\Code\\LmbrCentral.Editor.vcxproj\" xmlns=\"http://schemas.microsoft.com/developer/msbuild/2003\"><Project>{DD0C675D-E451-3141-90E8-CAC80B1C98F1}</Project><Name>LmbrCentral.Editor</Name><ReferenceOutputAssembly>false</ReferenceOutputAssembly><CopyToOutputDirectory>Never</CopyToOutputDirectory></ProjectReference>",
+        "<ProjectReference Include=\"F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\External\\LmbrCentral-9e51eced\\Code\\LmbrCentral.Editor.Static.vcxproj\" xmlns=\"http://schemas.microsoft.com/developer/msbuild/2003\"><Project>{CA53BF28-FC01-3268-8822-0386AA18C8C1}</Project><Name>LmbrCentral.Editor.Static</Name></ProjectReference>"
+      ],
+      "linkReadEvidence": [
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\External\\GradientSignal-29b14d70\\Code\\GradientSignal.Editor.dir\\profile\\Gradient.21645722.tlog\\link.read.1.tlog",
+          "mtime": "2026-10-17T14:45:19.8827613Z",
+          "hits": [
+            {
+              "line": 20,
+              "text": "F:\\JERICOENGINE\\JERICOENGINE\\BUILD\\N0-VALIDATION\\ORIGINAL-ENGINE\\LIB\\PROFILE\\LMBRCENTRAL.EDITOR.STATIC.LIB"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "project": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\External\\SurfaceData-6c776e40\\Code\\SurfaceData.Editor.vcxproj",
+      "profileAdditionalDependencies": [
+        "..\\..\\..\\lib\\profile\\LmbrCentral.Editor.Static.lib"
+      ],
+      "projectReferences": [
+        "<ProjectReference Include=\"F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\External\\LmbrCentral-9e51eced\\Code\\LmbrCentral.Editor.vcxproj\" xmlns=\"http://schemas.microsoft.com/developer/msbuild/2003\"><Project>{DD0C675D-E451-3141-90E8-CAC80B1C98F1}</Project><Name>LmbrCentral.Editor</Name><ReferenceOutputAssembly>false</ReferenceOutputAssembly><CopyToOutputDirectory>Never</CopyToOutputDirectory></ProjectReference>",
+        "<ProjectReference Include=\"F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\External\\LmbrCentral-9e51eced\\Code\\LmbrCentral.Editor.Static.vcxproj\" xmlns=\"http://schemas.microsoft.com/developer/msbuild/2003\"><Project>{CA53BF28-FC01-3268-8822-0386AA18C8C1}</Project><Name>LmbrCentral.Editor.Static</Name></ProjectReference>"
+      ],
+      "linkReadEvidence": [
+        {
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\External\\SurfaceData-6c776e40\\Code\\SurfaceData.Editor.dir\\profile\\SurfaceD.4BC0351D.tlog\\link.read.1.tlog",
+          "mtime": "2026-10-17T14:45:21.9337694Z",
+          "hits": [
+            {
+              "line": 4,
+              "text": "F:\\JERICOENGINE\\JERICOENGINE\\BUILD\\N0-VALIDATION\\ORIGINAL-ENGINE\\LIB\\PROFILE\\LMBRCENTRAL.EDITOR.STATIC.LIB"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "staticLibrary": {
+    "oldSdk99Bytes": 54448642,
+    "oldSdk99SHA256": "A01356B1987A9AA0A948EAE7FE6FFC317CDBAA77B4BBCD2CB724A21AB5341566",
+    "currentBytes": 54449332,
+    "currentSHA256": "776F191E7A46309A073FCCB11228399A0C24EC54A8605A2A60E8F800E91417AF",
+    "conclusion": "Both actual H24 linker read logs name updated LmbrCentral.Editor.Static.lib. This is the supported prerequisite for dependent relinks after Lua GREEN2."
+  },
+  "refutedImportLibraryHypothesis": {
+    "bytes": 9898,
+    "sha256": "99206EF64A5964D185AC376138D9A931147A781D13BB9288C0B32E85338A118B",
+    "mtime": "2026-10-11T21:00:50.3420234Z",
+    "actualLinkReadInput": false,
+    "conclusion": "Importlib-changed hypothesis unsupported; primary tracked input is STATIC library. No prior importlib checksum available, timestamp alone does not establish byte equality."
+  },
+  "binaryPairs": [
+    {
+      "name": "GradientSignal.Editor.dll",
+      "before": {
+        "path": "build/sdk-vk99/bin/Windows/profile/Default/GradientSignal.Editor.dll",
+        "bytes": 5451264,
+        "sha256": "298D6336BE446DC1FA3368EF86358EF2D95F92EC13BB690E76721BF0DFF662F5"
+      },
+      "after": {
+        "path": "build/n0-validation/original-engine/bin/profile/GradientSignal.Editor.dll",
+        "bytes": 5451264,
+        "sha256": "E74114E7D49525308D427DE9734D43EE1EC1534B66D488D731B18B96404A8A4A"
+      },
+      "importsIncludingFunctionsEqual": true,
+      "exportsNamesOrdinalsEqual": true,
+      "machineEqual": true,
+      "sizeEqual": true,
+      "importedDllsBefore": 23,
+      "importedDllsAfter": 23,
+      "exportCount": 4,
+      "wholeBodyEqualityClaimed": false
+    },
+    {
+      "name": "SurfaceData.Editor.dll",
+      "before": {
+        "path": "build/sdk-vk99/bin/Windows/profile/Default/SurfaceData.Editor.dll",
+        "bytes": 1354240,
+        "sha256": "3CF6F7599CBB67309D98BB9D0A2F7D124C7BFF2E22D0036E8CA193F873FB4016"
+      },
+      "after": {
+        "path": "build/n0-validation/original-engine/bin/profile/SurfaceData.Editor.dll",
+        "bytes": 1354240,
+        "sha256": "195770520B29C8744853367A1174AA4B251AE6EBC88283893118F4193C2A6BE6"
+      },
+      "importsIncludingFunctionsEqual": true,
+      "exportsNamesOrdinalsEqual": true,
+      "machineEqual": true,
+      "sizeEqual": true,
+      "importedDllsBefore": 11,
+      "importedDllsAfter": 11,
+      "exportCount": 4,
+      "wholeBodyEqualityClaimed": false
+    }
+  ],
+  "limits": [
+    "No archived H2 link command bytes claimed; current tlogs and unchanged frozen source/config are distinct evidence.",
+    "No proof of bitwise linker determinism or all executable-body equivalence; export RVAs/debug records not declared equal.",
+    "No new algorithms or source changes in Gradient/Surface inferred from binary hash changes.",
+    "Parent alone accepts/rebinds the two dependent relinks."
+  ],
+  "nextGate": "InstalledSDK100 real consumer must validate current binaries; preserve exactR21 GUI as R21 evidence, no R24visual execution claimed"
+}

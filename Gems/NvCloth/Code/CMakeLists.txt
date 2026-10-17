@@ -29,7 +29,7 @@ ly_add_target(
             ciso646-include
             3rdParty::NvCloth
             AZ::AzFramework
-            Gem::CommonFeaturesAtom.Public
+            JE::RenderScene.Public
         PRIVATE
             Gem::EMotionFXStaticLib
 )

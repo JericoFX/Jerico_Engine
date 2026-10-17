@@ -1,0 +1,194 @@
+{
+  "schema": "je-scene100-original-asset-sources-v1",
+  "sourceRepository": "o3de/o3de",
+  "sourceRef": "241c78b8064898a709cf1c5dd3535c6406763ef3",
+  "count": 18,
+  "totalBytes": 460226872.0,
+  "automaticRedirects": false,
+  "redirectsFollowed": 0,
+  "newLfsOids": 0,
+  "scope": "Original inherited Scene assets, not new dependency or substituted content. Exact SHA256 must match the pre-existing LFS oid before hydration; fail any redirect or different destination.",
+  "licensing": "Existing repository licensing/third-party notices preserved. This receipt does not relicense upstream third-party content.",
+  "rows": [
+    {
+      "path": "Engine/Render/Scene/Assets/EnvHDRi/photo_studio_01_4k_iblskyboxcm.exr",
+      "originalPath": "Gems/AtomLyIntegration/CommonFeatures/Assets/EnvHDRi/photo_studio_01_4k_iblskyboxcm.exr",
+      "url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Gems/AtomLyIntegration/CommonFeatures/Assets/EnvHDRi/photo_studio_01_4k_iblskyboxcm.exr",
+      "bytes": 50364729,
+      "sha256": "3791948B506C80C89AB9524F30A96514FB20D855D2391740707F48E1515EFFCD",
+      "existingLfsOid": true,
+      "getStatus": 200,
+      "redirectFollowed": false
+    },
+    {
+      "path": "Engine/Render/Scene/Assets/Objects/Groundplane/groundplane_512x512m.fbx",
+      "originalPath": "Gems/AtomLyIntegration/CommonFeatures/Assets/Objects/Groundplane/groundplane_512x512m.fbx",
+      "url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Gems/AtomLyIntegration/CommonFeatures/Assets/Objects/Groundplane/groundplane_512x512m.fbx",
+      "bytes": 343152,
+      "sha256": "09BDAFB1C015239858EE37144CB983286770C69AA4318A90176BD38FADD66386",
+      "existingLfsOid": true,
+      "getStatus": 200,
+      "redirectFollowed": false
+    },
+    {
+      "path": "Engine/Render/Scene/Assets/Objects/Hermanubis/Hermanubis_ao.tif",
+      "originalPath": "Gems/AtomLyIntegration/CommonFeatures/Assets/Objects/Hermanubis/Hermanubis_ao.tif",
+      "url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Gems/AtomLyIntegration/CommonFeatures/Assets/Objects/Hermanubis/Hermanubis_ao.tif",
+      "bytes": 18394400,
+      "sha256": "73D77C42B909AC5E604E132B563D30F137C9F37EC3911EA6BC6620E7D7C2E0F9",
+      "existingLfsOid": true,
+      "getStatus": 200,
+      "redirectFollowed": false
+    },
+    {
+      "path": "Engine/Render/Scene/Assets/Objects/Hermanubis/Hermanubis_bronze_BaseColor.png",
+      "originalPath": "Gems/AtomLyIntegration/CommonFeatures/Assets/Objects/Hermanubis/Hermanubis_bronze_BaseColor.png",
+      "url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Gems/AtomLyIntegration/CommonFeatures/Assets/Objects/Hermanubis/Hermanubis_bronze_BaseColor.png",
+      "bytes": 36345892,
+      "sha256": "4999B4A1E5067D336E08C37E4E5033CCA6F1F18A7497AE5DC192572A543006C9",
+      "existingLfsOid": true,
+      "getStatus": 200,
+      "redirectFollowed": false
+    },
+    {
+      "path": "Engine/Render/Scene/Assets/Objects/Hermanubis/Hermanubis_bronze_Metallic.png",
+      "originalPath": "Gems/AtomLyIntegration/CommonFeatures/Assets/Objects/Hermanubis/Hermanubis_bronze_Metallic.png",
+      "url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Gems/AtomLyIntegration/CommonFeatures/Assets/Objects/Hermanubis/Hermanubis_bronze_Metallic.png",
+      "bytes": 8265775,
+      "sha256": "1205E13D63F9D9B23B145EAAC8D3EE7DCE661DAD200A6A1D49202F3794F0245A",
+      "existingLfsOid": true,
+      "getStatus": 200,
+      "redirectFollowed": false
+    },
+    {
+      "path": "Engine/Render/Scene/Assets/Objects/Hermanubis/Hermanubis_bronze_Roughness.png",
+      "originalPath": "Gems/AtomLyIntegration/CommonFeatures/Assets/Objects/Hermanubis/Hermanubis_bronze_Roughness.png",
+      "url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Gems/AtomLyIntegration/CommonFeatures/Assets/Objects/Hermanubis/Hermanubis_bronze_Roughness.png",
+      "bytes": 15127806,
+      "sha256": "334196335EA72EA1DED2F5BF0741707B528CC9A168FF0A5A3D9AFE14323A9F9B",
+      "existingLfsOid": true,
+      "getStatus": 200,
+      "redirectFollowed": false
+    },
+    {
+      "path": "Engine/Render/Scene/Assets/Objects/Hermanubis/Hermanubis_High.fbx",
+      "originalPath": "Gems/AtomLyIntegration/CommonFeatures/Assets/Objects/Hermanubis/Hermanubis_High.fbx",
+      "url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Gems/AtomLyIntegration/CommonFeatures/Assets/Objects/Hermanubis/Hermanubis_High.fbx",
+      "bytes": 159115308,
+      "sha256": "D72CEC207A7677BA027EAC72F41285907237E04A45EBACF64341DE86FC6F022D",
+      "existingLfsOid": true,
+      "getStatus": 200,
+      "redirectFollowed": false
+    },
+    {
+      "path": "Engine/Render/Scene/Assets/Objects/Hermanubis/Hermanubis_low.fbx",
+      "originalPath": "Gems/AtomLyIntegration/CommonFeatures/Assets/Objects/Hermanubis/Hermanubis_low.fbx",
+      "url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Gems/AtomLyIntegration/CommonFeatures/Assets/Objects/Hermanubis/Hermanubis_low.fbx",
+      "bytes": 12410812,
+      "sha256": "4C9D1030B9467B58D640FBEDF1BC58AB9A5F7D68811B2452DD8D60114287B731",
+      "existingLfsOid": true,
+      "getStatus": 200,
+      "redirectFollowed": false
+    },
+    {
+      "path": "Engine/Render/Scene/Assets/Objects/Hermanubis/Hermanubis_Normal.png",
+      "originalPath": "Gems/AtomLyIntegration/CommonFeatures/Assets/Objects/Hermanubis/Hermanubis_Normal.png",
+      "url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Gems/AtomLyIntegration/CommonFeatures/Assets/Objects/Hermanubis/Hermanubis_Normal.png",
+      "bytes": 50268306,
+      "sha256": "C3546CE54290269E76D0BADFBF950416267681E50F215A2E32304BC2F18A1BED",
+      "existingLfsOid": true,
+      "getStatus": 200,
+      "redirectFollowed": false
+    },
+    {
+      "path": "Engine/Render/Scene/Assets/Objects/Hermanubis/Hermanubis_Stone_BaseColor.png",
+      "originalPath": "Gems/AtomLyIntegration/CommonFeatures/Assets/Objects/Hermanubis/Hermanubis_Stone_BaseColor.png",
+      "url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Gems/AtomLyIntegration/CommonFeatures/Assets/Objects/Hermanubis/Hermanubis_Stone_BaseColor.png",
+      "bytes": 70201185,
+      "sha256": "4FB55F2AAFA1A9FE59A57F29D8B932903B23D3E3F5AEC85ED7E15E27C25372E1",
+      "existingLfsOid": true,
+      "getStatus": 200,
+      "redirectFollowed": false
+    },
+    {
+      "path": "Engine/Render/Scene/Assets/Objects/Hermanubis/Hermanubis_thickness.tif",
+      "originalPath": "Gems/AtomLyIntegration/CommonFeatures/Assets/Objects/Hermanubis/Hermanubis_thickness.tif",
+      "url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Gems/AtomLyIntegration/CommonFeatures/Assets/Objects/Hermanubis/Hermanubis_thickness.tif",
+      "bytes": 28629316,
+      "sha256": "5BA4C5E434D121D517605CDFF972BFBA024CF4B3065BC753BB46C7BE33DCD67F",
+      "existingLfsOid": true,
+      "getStatus": 200,
+      "redirectFollowed": false
+    },
+    {
+      "path": "Engine/Render/Scene/Assets/Objects/Shaderball/ground_plane_4x4m.fbx",
+      "originalPath": "Gems/AtomLyIntegration/CommonFeatures/Assets/Objects/Shaderball/ground_plane_4x4m.fbx",
+      "url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Gems/AtomLyIntegration/CommonFeatures/Assets/Objects/Shaderball/ground_plane_4x4m.fbx",
+      "bytes": 31264,
+      "sha256": "B96D93F587D8D4D97912E7B84F147F830BC3437FA2AE1FCB5455E0401245D347",
+      "existingLfsOid": true,
+      "getStatus": 200,
+      "redirectFollowed": false
+    },
+    {
+      "path": "Engine/Render/Scene/Assets/Objects/Shaderball/shaderball_default_1m.fbx",
+      "originalPath": "Gems/AtomLyIntegration/CommonFeatures/Assets/Objects/Shaderball/shaderball_default_1m.fbx",
+      "url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Gems/AtomLyIntegration/CommonFeatures/Assets/Objects/Shaderball/shaderball_default_1m.fbx",
+      "bytes": 2479648,
+      "sha256": "95B46BA4980344B6121603F0F24BBA91BAFAC99F6C907EAD78DC2B0AEB969E57",
+      "existingLfsOid": true,
+      "getStatus": 200,
+      "redirectFollowed": false
+    },
+    {
+      "path": "Engine/Render/Scene/Assets/Objects/Shaderball/shaderball_default.mb",
+      "originalPath": "Gems/AtomLyIntegration/CommonFeatures/Assets/Objects/Shaderball/shaderball_default.mb",
+      "url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Gems/AtomLyIntegration/CommonFeatures/Assets/Objects/Shaderball/shaderball_default.mb",
+      "bytes": 5794788,
+      "sha256": "6FEA35D103F199D8CF44F14BC08092DDCE76AD1882569B9D068309BC40F73A43",
+      "existingLfsOid": true,
+      "getStatus": 200,
+      "redirectFollowed": false
+    },
+    {
+      "path": "Engine/Render/Scene/Assets/Textures/_dev_Middle_Gray_Checker_basecolor.tif",
+      "originalPath": "Gems/AtomLyIntegration/CommonFeatures/Assets/Textures/_dev_Middle_Gray_Checker_basecolor.tif",
+      "url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Gems/AtomLyIntegration/CommonFeatures/Assets/Textures/_dev_Middle_Gray_Checker_basecolor.tif",
+      "bytes": 810620,
+      "sha256": "57D6744696768F9FB8A5FE5FEE9AA36FEE1EB87A9DBC1E60D4A35ED3C39D68E6",
+      "existingLfsOid": true,
+      "getStatus": 200,
+      "redirectFollowed": false
+    },
+    {
+      "path": "Engine/Render/Scene/Assets/Textures/_dev_Middle_Gray_Checker_normal.tif",
+      "originalPath": "Gems/AtomLyIntegration/CommonFeatures/Assets/Textures/_dev_Middle_Gray_Checker_normal.tif",
+      "url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Gems/AtomLyIntegration/CommonFeatures/Assets/Textures/_dev_Middle_Gray_Checker_normal.tif",
+      "bytes": 793918,
+      "sha256": "1B56097F0DF01DA7ED49311462002F5E1A61B8496306C7AB3B12E17C27AFB28A",
+      "existingLfsOid": true,
+      "getStatus": 200,
+      "redirectFollowed": false
+    },
+    {
+      "path": "Engine/Render/Scene/Assets/Textures/_dev_Middle_Gray_Checker_roughness.tif",
+      "originalPath": "Gems/AtomLyIntegration/CommonFeatures/Assets/Textures/_dev_Middle_Gray_Checker_roughness.tif",
+      "url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Gems/AtomLyIntegration/CommonFeatures/Assets/Textures/_dev_Middle_Gray_Checker_roughness.tif",
+      "bytes": 811264,
+      "sha256": "E38EED3497B344235D0EB645C4F738E9E1640C2258D85A46D6281E72ADAE234A",
+      "existingLfsOid": true,
+      "getStatus": 200,
+      "redirectFollowed": false
+    },
+    {
+      "path": "Engine/Render/Scene/Assets/Textures/_UV_default_Basecolor.png",
+      "originalPath": "Gems/AtomLyIntegration/CommonFeatures/Assets/Textures/_UV_default_Basecolor.png",
+      "url": "https://media.githubusercontent.com/media/o3de/o3de/241c78b8064898a709cf1c5dd3535c6406763ef3/Gems/AtomLyIntegration/CommonFeatures/Assets/Textures/_UV_default_Basecolor.png",
+      "bytes": 38689,
+      "sha256": "513F47F6FEA5105F603170A8881B7E3B1CD2C4258636D64A6399C725032B500D",
+      "existingLfsOid": true,
+      "getStatus": 200,
+      "redirectFollowed": false
+    }
+  ]
+}

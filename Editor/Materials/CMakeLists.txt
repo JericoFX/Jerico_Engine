@@ -21,7 +21,7 @@ ly_add_target(
             JE::EditorRenderIntegration
             Gem::AtomToolsFramework.Static
             Gem::AtomToolsFramework.Editor
-            Gem::CommonFeaturesAtom.Public
+            JE::RenderScene.Public
             Legacy::Editor.Headers
             Legacy::CryCommon
         PRIVATE

@@ -14,6 +14,7 @@
 #include <JE/Editor/Camera/CameraModule.h>
 #include <JE/World/Camera/Debug/DebugCameraModule.h>
 #include <JE/Editor/RenderIntegration/RenderIntegrationModule.h>
+#include <JE/Editor/Render/Scene/SceneModule.h>
 #include <JE/Render/Integration/RenderIntegrationModule.h>
 #include <JE/Assets/Prefab/PrefabBuilderModule.h>
 #include <JE/Assets/RenderBuilders/RenderAssetBuildersModule.h>
@@ -125,6 +126,7 @@ namespace EditorInternal
         outModules.emplace_back(JE::Editor::Camera::CreateAuthoringModule());
         outModules.emplace_back(JE::World::Camera::Debug::CreateDebugModule());
         outModules.emplace_back(JE::Editor::RenderIntegration::CreateRpiEditorModule());
+        outModules.emplace_back(JE::Editor::Render::Scene::CreateModule());
         outModules.emplace_back(JE::Render::Integration::CreateBootstrapModule());
         outModules.emplace_back(JE::Editor::RenderIntegration::CreateAuthoringModule());
         outModules.emplace_back(JE::Assets::Prefab::CreateToolsModule());

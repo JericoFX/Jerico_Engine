@@ -22,7 +22,7 @@ if(PAL_TRAIT_BUILD_HOST_TOOLS)
                 AZ::AzToolsFramework
                 JE::RenderIntegration
                 Gem::Atom_Feature_Common.Public
-                Gem::CommonFeaturesAtom.Static
+                JE::RenderScene
     )
 
     ly_add_target(

@@ -24,6 +24,7 @@ ly_add_target(
                 JE::EditorCamera
                 JE::WorldCamera
                 JE::EditorRenderIntegration
+                JE::EditorRenderScene
                 JE::PrefabBuilder
                 JE::RenderAssetBuilders
                 JE::DebugImGui

@@ -13,5 +13,5 @@ AZ_GFX_BOOL_PARAM(Enabled, m_enabled, false)
 AZ_GFX_ANY_PARAM_BOOL_OVERRIDE(bool, Enabled, m_enabled)
 
 // Intensity of effect
-AZ_GFX_FLOAT_PARAM(Depth, m_depth, PaniniProjection::DefaultDepth)
+AZ_GFX_FLOAT_PARAM(Depth, m_depth, AZ::Render::PaniniProjection::DefaultDepth)
 AZ_GFX_FLOAT_PARAM_FLOAT_OVERRIDE(float, Depth, m_depth)

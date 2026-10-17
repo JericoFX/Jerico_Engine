@@ -17,7 +17,7 @@
 
 #include <Integration/Assets/MotionAsset.h>
 #include <Integration/ActorComponentBus.h>
-#include <AtomLyIntegration/CommonFeatures/Mesh/MeshComponentBus.h>
+#include <JE/Render/Scene/Mesh/MeshComponentBus.h>
 
 namespace EMotionFX
 {

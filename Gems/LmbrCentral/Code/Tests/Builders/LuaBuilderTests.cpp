@@ -170,6 +170,24 @@ namespace UnitTest
         );
     }
 
+    TEST_F(LuaBuilderTests, ParseLuaScript_WithRegistryKeysAndOutputPaths_ShouldOnlyFindRelativeFileDependency)
+    {
+        LuaBuilderWorker worker;
+        AssetBuilderSDK::ProductPathDependencySet pathDependencies;
+
+        AZ::IO::FixedMaxPath resolvedPath;
+        AZ::IO::FileIOBase::GetInstance()->ResolvePath(
+            resolvedPath, "@gemroot:LmbrCentral@/Code/Tests/Lua/test9_registry_and_output_paths.lua");
+        ASSERT_TRUE(AZ::IO::FileIOBase::GetInstance()->Exists(resolvedPath.c_str()));
+
+        worker.ParseDependencies(resolvedPath.c_str(), pathDependencies);
+
+        ASSERT_THAT(pathDependencies,
+            testing::UnorderedElementsAre(
+                ProductPathDependency("some/file/in/some/folder.cfg", AssetBuilderSDK::ProductPathDependencyType::ProductFile))
+        );
+    }
+
     TEST_F(LuaBuilderTests, ParseLuaScript_WithConsoleCommand_ShouldFindDependencies)
     {
         LuaBuilderWorker worker;
@@ -195,7 +213,7 @@ namespace UnitTest
         AssetBuilderSDK::ProductPathDependencySet pathDependencies;
 
         AZ::IO::FixedMaxPath resolvedPath;
-        AZ::IO::FileIOBase::GetInstance()->ResolvePath(testFileUnresolvedPath.c_str());
+        AZ::IO::FileIOBase::GetInstance()->ResolvePath(resolvedPath, testFileUnresolvedPath.c_str());
 
         EXPECT_TRUE(AZ::IO::FileIOBase::GetInstance()->Exists(resolvedPath.c_str()));
 

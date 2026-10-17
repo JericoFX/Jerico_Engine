@@ -9,6 +9,7 @@ add_subdirectory(Debug/ImGui)
 add_subdirectory(Debug/Profiler)
 add_subdirectory(Render/Debug)
 add_subdirectory(Render/Integration)
+add_subdirectory(Render/Scene)
 
 if(PAL_TRAIT_BUILD_HOST_TOOLS)
     add_subdirectory(Assets/PrefabBuilder)

@@ -13,4 +13,4 @@
 AZ_GFX_BOOL_PARAM(Enabled, m_enabled, true)
 
 // Which property to display for the hit surface (InstanceIndex, PrimitiveIndex, barycentrics, ...)
-AZ_GFX_COMMON_PARAM(RayTracingDebugViewMode, DebugViewMode, m_debugViewMode, RayTracingDebugViewMode::InstanceIndex)
+AZ_GFX_COMMON_PARAM(AZ::Render::RayTracingDebugViewMode, DebugViewMode, m_debugViewMode, AZ::Render::RayTracingDebugViewMode::InstanceIndex)

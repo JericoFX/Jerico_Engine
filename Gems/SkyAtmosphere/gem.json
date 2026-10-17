@@ -19,6 +19,10 @@
     "requirements": "",
     "documentation_url": "",
     "dependencies": [
-        "CommonFeaturesAtom"
+        "Atom_Feature_Common",
+        "LmbrCentral",
+        "GradientSignal",
+        "SurfaceData",
+        "AtomToolsFramework"
     ]
 }

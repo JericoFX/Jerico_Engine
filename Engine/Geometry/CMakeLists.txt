@@ -22,7 +22,7 @@ ly_add_target(
         AZ::AzCore
         JE::RenderIntegration
         Gem::Atom_Feature_Common.Public
-        Gem::CommonFeaturesAtom.Public
+        JE::RenderScene.Public
         JE::RenderMaterials
         Legacy::CryCommon
 )

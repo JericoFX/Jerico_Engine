@@ -1,0 +1,663 @@
+{
+  "schema": "je-scene100-public-sdk-profile-replay-v1",
+  "capturedUtc": "2026-10-17T16:44:00.0519380Z",
+  "baseHEAD": "e180245ecc1afcf00ad8bf8d94510aac8ae670c8",
+  "state": "SDK_PROFILE_IMPORT_LIFECYCLE_REPLAY_PASSED_NOT_PRODUCT_ACCEPTANCE",
+  "gem": "CommonFeaturesAtom",
+  "runtimeOwner": "JE::Render::Scene",
+  "authoringOwner": "JE::Editor::Render::Scene",
+  "targets": [
+    "JE::RenderScene.Public HEADERONLY",
+    "JE::RenderScene STATIC",
+    "JE::EditorRenderScene STATIC"
+  ],
+  "newProductDlls": 0,
+  "finalResult": {
+    "path": "build/n0-validation/native-scene100/sdk-preparation/checkpoint-r1/consumer-build2-recovery-candidate/execution-sdk100-consumer-build2-attempt2/result.json",
+    "bytes": 1950,
+    "sha256": "A7684C3FE605C7224EF0A46F2FFB7FD104B4289BC4D29ED8ABAF80607A6644F6"
+  },
+  "phaseChain": {
+    "path": "build/n0-validation/native-scene100/sdk-preparation/checkpoint-r1/consumer-build2-recovery-candidate/execution-sdk100-consumer-build2-attempt2/phase-chain.json",
+    "bytes": 6123,
+    "sha256": "2797DCFCAEF67EC73316EF5B892D2DCF61D7BA0D0B6E06FF470C4715D73315F0"
+  },
+  "successfulNativePhases": [
+    {
+      "phase": "install",
+      "attempt": 1,
+      "exitCode": 0,
+      "seconds": 51.3215115,
+      "pid": 43176,
+      "creationUtc": "2026-10-17T15:05:00.7427238Z",
+      "result": {
+        "path": "build/n0-validation/native-scene100/sdk-preparation/checkpoint-r1/execution-sdk100-install-configure-attempt1/install.result.json",
+        "bytes": 775,
+        "sha256": "CFF9B4E5FA1B724FEF077374D8CB37B7028F9178CABFC7C10B5F0F4F2B8D4AF1"
+      },
+      "start": {
+        "path": "build/n0-validation/native-scene100/sdk-preparation/checkpoint-r1/execution-sdk100-install-configure-attempt1/install.start.json",
+        "bytes": 398,
+        "sha256": "F843CBD343F6A3C246A94F3F117E485ECDD8921D9C5DF821B53816B30B49E0A3"
+      },
+      "stdout": {
+        "path": "build/n0-validation/native-scene100/sdk-preparation/checkpoint-r1/execution-sdk100-install-configure-attempt1/install.stdout.log",
+        "bytes": 42719,
+        "sha256": "185184515E83EC398C6127F345133D52E3D3F2A7EFB94A44C57BCD039E87327D"
+      },
+      "stderr": {
+        "path": "build/n0-validation/native-scene100/sdk-preparation/checkpoint-r1/execution-sdk100-install-configure-attempt1/install.stderr.log",
+        "bytes": 0,
+        "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+      },
+      "ramGuardTriggered": false,
+      "timedOut": false
+    },
+    {
+      "phase": "configure",
+      "attempt": 2,
+      "exitCode": 0,
+      "seconds": 7.8502754,
+      "pid": 29564,
+      "creationUtc": "2026-10-17T15:38:58.4078108Z",
+      "result": {
+        "path": "build/n0-validation/native-scene100/sdk-preparation/checkpoint-r1/configure-recovery-r2-candidate/execution-sdk100-configure-recovery-attempt2/configure.result.json",
+        "bytes": 848,
+        "sha256": "59DB009232079A89646BC64A2DADD2894582CFD7FC1318EE050590CB34C85133"
+      },
+      "start": {
+        "path": "build/n0-validation/native-scene100/sdk-preparation/checkpoint-r1/configure-recovery-r2-candidate/execution-sdk100-configure-recovery-attempt2/configure.start.json",
+        "bytes": 4206,
+        "sha256": "FD7D7BBA7011FDD7B74033CA747146358F306E6A71E3A9067A07542DA6177F80"
+      },
+      "stdout": {
+        "path": "build/n0-validation/native-scene100/sdk-preparation/checkpoint-r1/configure-recovery-r2-candidate/execution-sdk100-configure-recovery-attempt2/configure.stdout.log",
+        "bytes": 4145,
+        "sha256": "687527D662DE7899853977CBC0BF1E9FDB3984072F0543D0E8AA0B4805916763"
+      },
+      "stderr": {
+        "path": "build/n0-validation/native-scene100/sdk-preparation/checkpoint-r1/configure-recovery-r2-candidate/execution-sdk100-configure-recovery-attempt2/configure.stderr.log",
+        "bytes": 1620,
+        "sha256": "C8BF64EB215C9641BB0728E8CC94EA2D4971E221D8E084FBBA0E4D3F7AD1AD3F"
+      },
+      "ramGuardTriggered": false,
+      "timedOut": false
+    },
+    {
+      "phase": "build-consumer",
+      "attempt": 2,
+      "exitCode": 0,
+      "seconds": 21.5306312,
+      "pid": 28888,
+      "creationUtc": "2026-10-17T16:35:11.2420721Z",
+      "result": {
+        "path": "build/n0-validation/native-scene100/sdk-preparation/checkpoint-r1/consumer-build2-recovery-candidate/execution-sdk100-consumer-build2-attempt2/build-consumer.result.json",
+        "bytes": 855,
+        "sha256": "DFF5FAC71CA7096D3EA7301ECA79E7AA858D317754352B9D31717CE2958AC787"
+      },
+      "start": {
+        "path": "build/n0-validation/native-scene100/sdk-preparation/checkpoint-r1/consumer-build2-recovery-candidate/execution-sdk100-consumer-build2-attempt2/build-consumer.start.json",
+        "bytes": 656,
+        "sha256": "C62E0E37D5848CAEF9B562F165D3B482A1BA940AD37B209EF98179354FAD1112"
+      },
+      "stdout": {
+        "path": "build/n0-validation/native-scene100/sdk-preparation/checkpoint-r1/consumer-build2-recovery-candidate/execution-sdk100-consumer-build2-attempt2/build-consumer.stdout.log",
+        "bytes": 198,
+        "sha256": "099C33BF06BD3B30F00D892C4A67DD6CEA8933C603C7D7FF7C4B34950424A341"
+      },
+      "stderr": {
+        "path": "build/n0-validation/native-scene100/sdk-preparation/checkpoint-r1/consumer-build2-recovery-candidate/execution-sdk100-consumer-build2-attempt2/build-consumer.stderr.log",
+        "bytes": 0,
+        "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+      },
+      "ramGuardTriggered": false,
+      "timedOut": false
+    },
+    {
+      "phase": "pe-imports",
+      "attempt": 1,
+      "exitCode": 0,
+      "seconds": 0.0710078,
+      "pid": 68508,
+      "creationUtc": "2026-10-17T16:35:34.7680337Z",
+      "result": {
+        "path": "build/n0-validation/native-scene100/sdk-preparation/checkpoint-r1/consumer-build2-recovery-candidate/execution-sdk100-consumer-build2-attempt2/pe-imports.result.json",
+        "bytes": 849,
+        "sha256": "44B54DDE0E0AE6CD2BDEA4E8D35C11F562546A2E02440BA760668CD1E1D14C09"
+      },
+      "start": {
+        "path": "build/n0-validation/native-scene100/sdk-preparation/checkpoint-r1/consumer-build2-recovery-candidate/execution-sdk100-consumer-build2-attempt2/pe-imports.start.json",
+        "bytes": 436,
+        "sha256": "FFD59F99A330004B104B283D5D3B77EB86D0C4958B1AA788215C2E171F343167"
+      },
+      "stdout": {
+        "path": "build/n0-validation/native-scene100/sdk-preparation/checkpoint-r1/consumer-build2-recovery-candidate/execution-sdk100-consumer-build2-attempt2/pe-imports.stdout.log",
+        "bytes": 216745,
+        "sha256": "E97A8F13B634EE77FDE1DA0D5B4D5C5E1400C7745268714F93C93EDC370EF20A"
+      },
+      "stderr": {
+        "path": "build/n0-validation/native-scene100/sdk-preparation/checkpoint-r1/consumer-build2-recovery-candidate/execution-sdk100-consumer-build2-attempt2/pe-imports.stderr.log",
+        "bytes": 0,
+        "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+      },
+      "ramGuardTriggered": false,
+      "timedOut": false
+    },
+    {
+      "phase": "loader",
+      "attempt": 1,
+      "exitCode": 0,
+      "seconds": 1.0717183,
+      "pid": 18956,
+      "creationUtc": "2026-10-17T16:35:35.8102214Z",
+      "result": {
+        "path": "build/n0-validation/native-scene100/sdk-preparation/checkpoint-r1/consumer-build2-recovery-candidate/execution-sdk100-consumer-build2-attempt2/loader.result.json",
+        "bytes": 838,
+        "sha256": "86FCFF094BA7B540C8457A63EB101C3372F21C6513ECA252D43CB6F893A6C0A6"
+      },
+      "start": {
+        "path": "build/n0-validation/native-scene100/sdk-preparation/checkpoint-r1/consumer-build2-recovery-candidate/execution-sdk100-consumer-build2-attempt2/loader.start.json",
+        "bytes": 392,
+        "sha256": "3F516636C2337E346571FB7318D194014B06DAEAB6B1BB42B859A0B7D30454C0"
+      },
+      "stdout": {
+        "path": "build/n0-validation/native-scene100/sdk-preparation/checkpoint-r1/consumer-build2-recovery-candidate/execution-sdk100-consumer-build2-attempt2/loader.stdout.log",
+        "bytes": 830,
+        "sha256": "627BA50AB233123D3E40D5505670DFF586BF00D8611BBEBD0EDD98CAAFFA3BF8"
+      },
+      "stderr": {
+        "path": "build/n0-validation/native-scene100/sdk-preparation/checkpoint-r1/consumer-build2-recovery-candidate/execution-sdk100-consumer-build2-attempt2/loader.stderr.log",
+        "bytes": 0,
+        "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+      },
+      "ramGuardTriggered": false,
+      "timedOut": false
+    }
+  ],
+  "successfulNativePhaseCount": 5,
+  "historicalFailedNativeAttempts": 2,
+  "totalNativeAttempts": 7,
+  "noSuccessfulPhaseRepeated": true,
+  "historicalFailures": [
+    {
+      "phase": "configure",
+      "attempt": 1,
+      "result": {
+        "path": "build/n0-validation/native-scene100/sdk-preparation/checkpoint-r1/execution-sdk100-install-configure-attempt1/configure.result.json",
+        "bytes": 781,
+        "sha256": "6FDB944576A821762754B4D95CDCF66E82BB2C8FD0A987DE0912E43AD58AE290"
+      },
+      "cause": "Private CMake fixture treated unevaluated transitive include generator expression as a concrete path."
+    },
+    {
+      "phase": "build-consumer",
+      "attempt": 1,
+      "result": {
+        "path": "build/n0-validation/native-scene100/sdk-preparation/checkpoint-r1/post-configure-r3-candidate/execution-sdk100-consume-attempt1/build-consumer.result.json",
+        "bytes": 827,
+        "sha256": "E8ADB9A79BDB2BA23EE852A3BF23C962AA2DFFCB56698FD542DBC0CBC48CF35A"
+      },
+      "cause": "Private fixture made ComponentDescriptor pointee const before invoking non-const CreateComponent."
+    }
+  ],
+  "configureVerifierRecovery": "R2 native configure0 reused; its later runner1 rejected three previously permitted external include roots. R3 corrected only the validator and produced the retained checkpoint, without another native configure.",
+  "mainRepair": {
+    "beforeSHA256": "43E69356148DC4CE37E26D680D7E115D292ACC5F6EBBAB41949668A0B1B7D142",
+    "testedAfterSHA256": "149B00D23993E2F7E0F693622C55F49902A7D60EEC1BACFCF968AEBAD04C6EEC",
+    "change": "Only const pointee to const local pointer at main.cpp134; no product API or oracle change.",
+    "rootReview": {
+      "path": "build/n0-validation/native-scene100/sdk-scene-descriptor-const-candidate/root-review-apply.json",
+      "bytes": 1733,
+      "sha256": "8878907A3EEABD86B9FCD8FB49E2001E18200917617A93770FE84F7154835E8A"
+    }
+  },
+  "privateConsumerSources": [
+    {
+      "path": "docs/evidence/n0/native-scene-components-2026-10-17/sdk-consumer/consumer-source/CMakeLists.txt",
+      "bytes": 9032,
+      "sha256": "EE861A0799EB7E15F620AEA919E8AEC32190A3AAEF1A6A62B1E33463C0B45D83"
+    },
+    {
+      "path": "docs/evidence/n0/native-scene-components-2026-10-17/sdk-consumer/consumer-source/main.cpp",
+      "bytes": 32577,
+      "sha256": "149B00D23993E2F7E0F693622C55F49902A7D60EEC1BACFCF968AEBAD04C6EEC"
+    },
+    {
+      "path": "docs/evidence/n0/native-scene-components-2026-10-17/sdk-consumer/consumer-source/consumer_files.cmake",
+      "bytes": 25,
+      "sha256": "2F0ACA6BAD0CF988A388EC9D4664ED2E2D507B4E03958E23730768D314E3006E"
+    },
+    {
+      "path": "docs/evidence/n0/native-scene-components-2026-10-17/sdk-consumer/consumer-source/project.json",
+      "bytes": 388,
+      "sha256": "3A7625CD2BE22DFD8B3C36C4C68932693611513A980111870371A291F12197C4"
+    }
+  ],
+  "publicBuildLog": {
+    "path": "docs/evidence/n0/native-scene-components-2026-10-17/sdk-consumer/build-consumer.stdout.log",
+    "bytes": 198,
+    "sha256": "099C33BF06BD3B30F00D892C4A67DD6CEA8933C603C7D7FF7C4B34950424A341"
+  },
+  "publicLoaderLog": {
+    "path": "docs/evidence/n0/native-scene-components-2026-10-17/sdk-consumer/loader.stdout.log",
+    "bytes": 830,
+    "sha256": "627BA50AB233123D3E40D5505670DFF586BF00D8611BBEBD0EDD98CAAFFA3BF8"
+  },
+  "loaderMessages": [
+    "JE SDK: Materials, Camera and RenderIntegration exports resolved; empty PassPipelinePreview exercised.",
+    "JE SDK: native RenderAssetBuilders factory/descriptors/recreation and three public contexts exercised without activation or cook.",
+    "JE SDK: shader compiler factory/descriptors/services/recreation and exported shader option hash exercised without activation or cook.",
+    "JE SDK: native Bootstrap true/false factory/descriptors/services/reflection/recreation and stable buses exercised without activation or window.",
+    "JE SDK: native runtime/editor RPI factory identities/four required descriptors/reflection and two construction cycles exercised without activation.",
+    "JE SDK: native runtime/editor Scene factories,36/74 descriptor identities,1/4 required components,services and two construction cycles exercised without activation."
+  ],
+  "descriptorCounts": [
+    36,
+    74
+  ],
+  "uniqueSceneIdentities": 74,
+  "requiredCounts": [
+    1,
+    4
+  ],
+  "constructionDestructionCycles": 2,
+  "importedSceneTargets": [
+    {
+      "target": "JE::EditorRenderScene",
+      "imported": "TRUE",
+      "type": "STATIC_LIBRARY",
+      "location": "F:/JericoEngine/JericoEngine/build/sdk-vk100/lib/Windows/profile/Default/EditorRenderScene.lib",
+      "report": {
+        "path": "build/sdk-vk-consumer100/scene-EditorRenderScene-profile.txt",
+        "bytes": 6200,
+        "sha256": "A2BE3B9C8501491DBB28045C6763CAA1D5E5C4699B9D61F2E42A3710C2EE6E95"
+      }
+    },
+    {
+      "target": "JE::RenderScene.Public",
+      "imported": "TRUE",
+      "type": "INTERFACE_LIBRARY",
+      "location": null,
+      "report": {
+        "path": "build/sdk-vk-consumer100/scene-public-profile.txt",
+        "bytes": 2808,
+        "sha256": "6EAA77D5E2E12749A1938F19197642BB5A1587058DA6823C1896741414A2977A"
+      }
+    },
+    {
+      "target": "JE::RenderScene",
+      "imported": "TRUE",
+      "type": "STATIC_LIBRARY",
+      "location": "F:/JericoEngine/JericoEngine/build/sdk-vk100/lib/Windows/profile/Default/RenderScene.lib",
+      "report": {
+        "path": "build/sdk-vk-consumer100/scene-RenderScene-profile.txt",
+        "bytes": 3819,
+        "sha256": "AFD1FEEC9719DAAF8C23C7E74B644D10F2E05D9085DA0C7561C48AE66C51A896"
+      }
+    }
+  ],
+  "allowedExternalIncludeRoots": [
+    "OpenSSL/include",
+    "qt/include",
+    "qt/mkspecs/win32-msvc"
+  ],
+  "externalRootPolicy": "Only exact canonical roots already authorized by the pinned sdk-rpi2 baseline; no wildcard, reparse, missing path, unresolved generator expression, or productive source-engine fallback.",
+  "requiredPeMatches": [
+    {
+      "required": "?CreateBootstrapModule@Integration@Render@JE@@YAPEAVModule@AZ@@_N@Z",
+      "lineNumber": 159,
+      "actualLine": "                         F9C ?CreateBootstrapModule@Integration@Render@JE@@YAPEAVModule@AZ@@_N@Z"
+    },
+    {
+      "required": "?CreateRpiRuntimeModule@Integration@Render@JE@@YAPEAVModule@AZ@@XZ",
+      "lineNumber": 160,
+      "actualLine": "                         FDA ?CreateRpiRuntimeModule@Integration@Render@JE@@YAPEAVModule@AZ@@XZ"
+    },
+    {
+      "required": "?CreateRpiEditorModule@RenderIntegration@Editor@JE@@YAPEAVModule@AZ@@XZ",
+      "lineNumber": 47,
+      "actualLine": "                         254 ?CreateRpiEditorModule@RenderIntegration@Editor@JE@@YAPEAVModule@AZ@@XZ"
+    },
+    {
+      "required": "EditorRenderIntegration.dll",
+      "lineNumber": 40,
+      "actualLine": "    EditorRenderIntegration.dll"
+    },
+    {
+      "required": "RenderIntegration.dll",
+      "lineNumber": 40,
+      "actualLine": "    EditorRenderIntegration.dll"
+    },
+    {
+      "required": "CreateToolsModule",
+      "lineNumber": 60,
+      "actualLine": "                          10 ?CreateToolsModule@RenderBuilders@Assets@JE@@YAPEAVModule@AZ@@XZ"
+    },
+    {
+      "required": "CreateShaderCompilerToolsModule",
+      "lineNumber": 61,
+      "actualLine": "                           F ?CreateShaderCompilerToolsModule@RenderBuilders@Assets@JE@@YAPEAVModule@AZ@@XZ"
+    },
+    {
+      "required": "HashCombineShaderOptionValues@HashedVariantInfoSourceData@Shader@RenderBuilders@Assets@JE@@",
+      "lineNumber": 81,
+      "actualLine": "                          12 ?HashCombineShaderOptionValues@HashedVariantInfoSourceData@Shader@RenderBuilders@Assets@JE@@SA_K_KAEBV?$unordered_map@VName@AZ@@V12@U?$hash@VName@AZ@@@AZStd@@U?$equal_to@VName@AZ@@@4@Uallocator@4@@AZStd@@@Z"
+    },
+    {
+      "required": "??0ModelAssetBuilderContext",
+      "lineNumber": 62,
+      "actualLine": "                           3 ??0ModelAssetBuilderContext@RenderBuilders@Assets@JE@@QEAA@AEBVScene@Containers@SceneAPI@AZ@@AEBVIMeshGroup@DataTypes@67@VCoordinateSystemConverter@67@AEBV?$unordered_map@_KUNamedMaterialAsset@RenderBuilders@Assets@JE@@U?$hash@_K@AZStd@@U?$equal_to@_K@6@Uallocator@6@@AZStd@@AEAV?$Asset@VModelAsset@RPI@Render@JE@@@Data@7@AEAV?$Asset@VSkinMetaAsset@RPI@Render@JE@@@Data@7@AEAV?$Asset@VMorphTargetMetaAsset@RPI@Render@JE@@@Data@7@@Z"
+    },
+    {
+      "required": "??0MaterialAssetBuilderContext",
+      "lineNumber": 79,
+      "actualLine": "                           1 ??0MaterialAssetBuilderContext@RenderBuilders@Assets@JE@@QEAA@AEBVScene@Containers@SceneAPI@AZ@@AEAV?$unordered_map@_KUNamedMaterialAsset@RenderBuilders@Assets@JE@@U?$hash@_K@AZStd@@U?$equal_to@_K@6@Uallocator@6@@AZStd@@@Z"
+    },
+    {
+      "required": "??0ModelAssetPostBuildContext",
+      "lineNumber": 64,
+      "actualLine": "                           5 ??0ModelAssetPostBuildContext@RenderBuilders@Assets@JE@@QEAA@AEBVScene@Containers@SceneAPI@AZ@@V?$basic_string@DU?$char_traits@D@AZStd@@Uallocator@2@@AZStd@@AEAVExportProductList@Events@67@AEBVIMeshGroup@DataTypes@67@AEBV?$Asset@VModelAsset@RPI@Render@JE@@@Data@7@@Z"
+    },
+    {
+      "required": "RTTI_IsTypeOf@ModelAssetBuilderContext",
+      "lineNumber": 85,
+      "actualLine": "                          30 ?RTTI_IsTypeOf@ModelAssetBuilderContext@RenderBuilders@Assets@JE@@UEBA_NAEBUUuid@AZ@@@Z"
+    },
+    {
+      "required": "RTTI_IsTypeOf@MaterialAssetBuilderContext",
+      "lineNumber": 67,
+      "actualLine": "                          2F ?RTTI_IsTypeOf@MaterialAssetBuilderContext@RenderBuilders@Assets@JE@@UEBA_NAEBUUuid@AZ@@@Z"
+    },
+    {
+      "required": "RTTI_IsTypeOf@ModelAssetPostBuildContext",
+      "lineNumber": 70,
+      "actualLine": "                          31 ?RTTI_IsTypeOf@ModelAssetPostBuildContext@RenderBuilders@Assets@JE@@UEBA_NAEBUUuid@AZ@@@Z"
+    },
+    {
+      "required": "RenderAssetBuilders.dll",
+      "lineNumber": 54,
+      "actualLine": "    RenderAssetBuilders.dll"
+    }
+  ],
+  "completePrivatePeLog": {
+    "path": "build/n0-validation/native-scene100/sdk-preparation/checkpoint-r1/consumer-build2-recovery-candidate/execution-sdk100-consumer-build2-attempt2/pe-imports.stdout.log",
+    "bytes": 216745,
+    "sha256": "E97A8F13B634EE77FDE1DA0D5B4D5C5E1400C7745268714F93C93EDC370EF20A"
+  },
+  "deployment": [
+    {
+      "name": "Atom_Feature_Common.Public.dll",
+      "bytes": 1424384,
+      "sha256": "12C762833080053D55E05A7CEED9508A5332FE13268AED53346CF99FB4EB247B",
+      "source": "build/sdk-vk100/bin/Windows/profile/Default/Atom_Feature_Common.Public.dll",
+      "copy": "build/sdk-vk-consumer100/bin/profile/Atom_Feature_Common.Public.dll"
+    },
+    {
+      "name": "Atom_RHI.Public.dll",
+      "bytes": 2096128,
+      "sha256": "85872600F4AB13F6C4DDF9D58B350A4D4A2ECDF64B6370500B7E642BD13E5D88",
+      "source": "build/sdk-vk100/bin/Windows/profile/Default/Atom_RHI.Public.dll",
+      "copy": "build/sdk-vk-consumer100/bin/profile/Atom_RHI.Public.dll"
+    },
+    {
+      "name": "Atom_RHI.Reflect.dll",
+      "bytes": 2979840,
+      "sha256": "FA762F84C1912EE9EA315067F65171F8EE86BFDADC19758804374FD519E149FA",
+      "source": "build/sdk-vk100/bin/Windows/profile/Default/Atom_RHI.Reflect.dll",
+      "copy": "build/sdk-vk-consumer100/bin/profile/Atom_RHI.Reflect.dll"
+    },
+    {
+      "name": "AzCore.dll",
+      "bytes": 15256576,
+      "sha256": "5699C61A11F2952239CB2885E227A7E1EF6DC0488F09119623853E0F2F5857D4",
+      "source": "build/sdk-vk100/bin/Windows/profile/Default/AzCore.dll",
+      "copy": "build/sdk-vk-consumer100/bin/profile/AzCore.dll"
+    },
+    {
+      "name": "AzFramework.dll",
+      "bytes": 21512192,
+      "sha256": "61FEFD874D58E614066053FCB8A30E002CA04A1AEC9BD95AAD3D1C8E0D716054",
+      "source": "build/sdk-vk100/bin/Windows/profile/Default/AzFramework.dll",
+      "copy": "build/sdk-vk-consumer100/bin/profile/AzFramework.dll"
+    },
+    {
+      "name": "AzFramework.NativeUI.dll",
+      "bytes": 1073152,
+      "sha256": "4CE9B354BE461C2F8F717BDC3E26A2DD5C308A63F799894B523607FC034B8940",
+      "source": "build/sdk-vk100/bin/Windows/profile/Default/AzFramework.NativeUI.dll",
+      "copy": "build/sdk-vk-consumer100/bin/profile/AzFramework.NativeUI.dll"
+    },
+    {
+      "name": "AzQtComponents.dll",
+      "bytes": 4408832,
+      "sha256": "8BBC726D22686B796A085BBACECB7210F73F95FB53927197995DB1243603C439",
+      "source": "build/sdk-vk100/bin/Windows/profile/Default/AzQtComponents.dll",
+      "copy": "build/sdk-vk-consumer100/bin/profile/AzQtComponents.dll"
+    },
+    {
+      "name": "AzToolsFramework.dll",
+      "bytes": 31171584,
+      "sha256": "AE1C10A8C67C7740BD9AAEB09205BA6F8A02B3EF1DC35EC79298358011F8D5AF",
+      "source": "build/sdk-vk100/bin/Windows/profile/Default/AzToolsFramework.dll",
+      "copy": "build/sdk-vk-consumer100/bin/profile/AzToolsFramework.dll"
+    },
+    {
+      "name": "DearImGui.dll",
+      "bytes": 737792,
+      "sha256": "9CA08DB915179B6B6E44A5AD746E4EC47979AA8C06559F070E2A19ABA5D9B067",
+      "source": "build/sdk-vk100/bin/Windows/profile/Default/DearImGui.dll",
+      "copy": "build/sdk-vk-consumer100/bin/profile/DearImGui.dll"
+    },
+    {
+      "name": "DebugImGui.dll",
+      "bytes": 952320,
+      "sha256": "5B1F40D89BF0E9CEACFDBC207AF23F7794147290A1F74438AC539556D0DE0493",
+      "source": "build/sdk-vk100/bin/Windows/profile/Default/DebugImGui.dll",
+      "copy": "build/sdk-vk-consumer100/bin/profile/DebugImGui.dll"
+    },
+    {
+      "name": "EditorCamera.dll",
+      "bytes": 590336,
+      "sha256": "8BECD1BE9CD5D2ED41FC14696E21B7E3A6F65DA80BB2EC4D1B43E119EDD86A1C",
+      "source": "build/sdk-vk100/bin/Windows/profile/Default/EditorCamera.dll",
+      "copy": "build/sdk-vk-consumer100/bin/profile/EditorCamera.dll"
+    },
+    {
+      "name": "EditorMaterials.dll",
+      "bytes": 7527424,
+      "sha256": "289A8BF08CD51146A5D695D8A6A814824D02CB3E6A714E79E3193F1E27DC0836",
+      "source": "build/sdk-vk100/bin/Windows/profile/Default/EditorMaterials.dll",
+      "copy": "build/sdk-vk-consumer100/bin/profile/EditorMaterials.dll"
+    },
+    {
+      "name": "EditorRenderIntegration.dll",
+      "bytes": 3247616,
+      "sha256": "5F51D67DEE114E76D7A403C5ECBC594C90F42CE2DFD6889699EA2AE88620D920",
+      "source": "build/sdk-vk100/bin/Windows/profile/Default/EditorRenderIntegration.dll",
+      "copy": "build/sdk-vk-consumer100/bin/profile/EditorRenderIntegration.dll"
+    },
+    {
+      "name": "LmbrCentral.dll",
+      "bytes": 4402176,
+      "sha256": "9A2773B39581F265DB981BB811A1C8E7014C495419D5102877039DD69D399B5C",
+      "source": "build/sdk-vk100/bin/Windows/profile/Default/LmbrCentral.dll",
+      "copy": "build/sdk-vk-consumer100/bin/profile/LmbrCentral.dll"
+    },
+    {
+      "name": "mcpp0.dll",
+      "bytes": 135168,
+      "sha256": "E28DB7EF935D6584D0F3EF38849F17D3475F3413251B205C59A5B15484DD66E9",
+      "source": "build/sdk-vk100/bin/Windows/profile/Default/mcpp0.dll",
+      "copy": "build/sdk-vk-consumer100/bin/profile/mcpp0.dll"
+    },
+    {
+      "name": "OpenColorIO_2_1.dll",
+      "bytes": 4127744,
+      "sha256": "AAAF352E47221FCE8BD5AFCD38ED3273A7BB887ADEA624B8F58349800021C598",
+      "source": "build/sdk-vk100/bin/Windows/profile/Default/OpenColorIO_2_1.dll",
+      "copy": "build/sdk-vk-consumer100/bin/profile/OpenColorIO_2_1.dll"
+    },
+    {
+      "name": "OpenImageIO_Util.dll",
+      "bytes": 998400,
+      "sha256": "9B88F3459E5C110B83E0978E7BCADD9C0BF0CE572CC657453401A851C28D8577",
+      "source": "build/sdk-vk100/bin/Windows/profile/Default/OpenImageIO_Util.dll",
+      "copy": "build/sdk-vk-consumer100/bin/profile/OpenImageIO_Util.dll"
+    },
+    {
+      "name": "OpenImageIO.dll",
+      "bytes": 20051456,
+      "sha256": "4CE776761016FE8D4F86F4AC17CBB06EAC14A21B210B809C93F736473D97E697",
+      "source": "build/sdk-vk100/bin/Windows/profile/Default/OpenImageIO.dll",
+      "copy": "build/sdk-vk-consumer100/bin/profile/OpenImageIO.dll"
+    },
+    {
+      "name": "ProfilerCapture.dll",
+      "bytes": 273920,
+      "sha256": "6024775F53C43E5BC8FFFE8D0009DB1AB35F1575614D18421142319C26042C97",
+      "source": "build/sdk-vk100/bin/Windows/profile/Default/ProfilerCapture.dll",
+      "copy": "build/sdk-vk-consumer100/bin/profile/ProfilerCapture.dll"
+    },
+    {
+      "name": "ProfilerView.dll",
+      "bytes": 311808,
+      "sha256": "7109F65E1AA915D34B0E9B6B2C4040E3A5F07EADA7A05924155B511FB8D4D1FF",
+      "source": "build/sdk-vk100/bin/Windows/profile/Default/ProfilerView.dll",
+      "copy": "build/sdk-vk-consumer100/bin/profile/ProfilerView.dll"
+    },
+    {
+      "name": "Qt6Core.dll",
+      "bytes": 9853440,
+      "sha256": "DC1BBB428ED61680ECB99FBD2C4D55ECF213BE48FFBA042C945EB90E961EBBEB",
+      "source": "build/sdk-vk100/bin/Windows/profile/Default/Qt6Core.dll",
+      "copy": "build/sdk-vk-consumer100/bin/profile/Qt6Core.dll"
+    },
+    {
+      "name": "Qt6Gui.dll",
+      "bytes": 8307200,
+      "sha256": "4033D497344488BB55A5562D45F08982BD5945A5F3E83E82EC00EC5276B05BD7",
+      "source": "build/sdk-vk100/bin/Windows/profile/Default/Qt6Gui.dll",
+      "copy": "build/sdk-vk-consumer100/bin/profile/Qt6Gui.dll"
+    },
+    {
+      "name": "Qt6Network.dll",
+      "bytes": 1590784,
+      "sha256": "BA9FB87A5661A6E3EAA8344608F899493A29BAE567634E99872258BBC8922B8C",
+      "source": "build/sdk-vk100/bin/Windows/profile/Default/Qt6Network.dll",
+      "copy": "build/sdk-vk-consumer100/bin/profile/Qt6Network.dll"
+    },
+    {
+      "name": "Qt6Svg.dll",
+      "bytes": 564224,
+      "sha256": "B475308F6F5FA272F37A6DAA01AC0764106491F9A5B014FD48F9F3F3522A8B5A",
+      "source": "build/sdk-vk100/bin/Windows/profile/Default/Qt6Svg.dll",
+      "copy": "build/sdk-vk-consumer100/bin/profile/Qt6Svg.dll"
+    },
+    {
+      "name": "Qt6SvgWidgets.dll",
+      "bytes": 46080,
+      "sha256": "AC286220D49A65F3230E38FAC3CBEFB4092D16CF97829891EADCAF09F7DA05EC",
+      "source": "build/sdk-vk100/bin/Windows/profile/Default/Qt6SvgWidgets.dll",
+      "copy": "build/sdk-vk-consumer100/bin/profile/Qt6SvgWidgets.dll"
+    },
+    {
+      "name": "Qt6Widgets.dll",
+      "bytes": 5945344,
+      "sha256": "48C813DFA4F22D1FE2CF6E0DB66D9319096EAA82D29A19AE5CA52657708A9542",
+      "source": "build/sdk-vk100/bin/Windows/profile/Default/Qt6Widgets.dll",
+      "copy": "build/sdk-vk-consumer100/bin/profile/Qt6Widgets.dll"
+    },
+    {
+      "name": "Qt6Xml.dll",
+      "bytes": 136704,
+      "sha256": "5FC854116DF23A81BCE1B217ABEBDAF6D5F93D1AD2D790DD5694B59960597381",
+      "source": "build/sdk-vk100/bin/Windows/profile/Default/Qt6Xml.dll",
+      "copy": "build/sdk-vk-consumer100/bin/profile/Qt6Xml.dll"
+    },
+    {
+      "name": "RenderAssetBuilders.dll",
+      "bytes": 2246144,
+      "sha256": "0A556DD0074F567271802F15F3F32630FBF03AD061924B251895F5B045482192",
+      "source": "build/sdk-vk100/bin/Windows/profile/Default/RenderAssetBuilders.dll",
+      "copy": "build/sdk-vk-consumer100/bin/profile/RenderAssetBuilders.dll"
+    },
+    {
+      "name": "RenderDebug.dll",
+      "bytes": 770048,
+      "sha256": "0F3C200CB6C0A080E36C66BC4B1E40035E10AF6B166D92E1D6197A383F231DA8",
+      "source": "build/sdk-vk100/bin/Windows/profile/Default/RenderDebug.dll",
+      "copy": "build/sdk-vk-consumer100/bin/profile/RenderDebug.dll"
+    },
+    {
+      "name": "RenderIntegration.dll",
+      "bytes": 9376768,
+      "sha256": "FF17FCC51873A5808BD0C37971E96566A8CD6D5063E9628EB21D366C823BD318",
+      "source": "build/sdk-vk100/bin/Windows/profile/Default/RenderIntegration.dll",
+      "copy": "build/sdk-vk-consumer100/bin/profile/RenderIntegration.dll"
+    },
+    {
+      "name": "RenderMaterials.dll",
+      "bytes": 2173440,
+      "sha256": "0EBA56C9B470625C7C5A79A3E583209F03D2E79A5F54736F288407E64F30CC90",
+      "source": "build/sdk-vk100/bin/Windows/profile/Default/RenderMaterials.dll",
+      "copy": "build/sdk-vk-consumer100/bin/profile/RenderMaterials.dll"
+    },
+    {
+      "name": "SceneCore.dll",
+      "bytes": 1544704,
+      "sha256": "E5E21D917FF07B35BAE698FBD19DDA8A46956EA5E135426869E4981FE24D4933",
+      "source": "build/sdk-vk100/bin/Windows/profile/Default/SceneCore.dll",
+      "copy": "build/sdk-vk-consumer100/bin/profile/SceneCore.dll"
+    },
+    {
+      "name": "SceneData.dll",
+      "bytes": 2212352,
+      "sha256": "B9FAC58EAF1605AB5EED21B1559708BD1C5097BA72CA201E2358151AD7A0CB3A",
+      "source": "build/sdk-vk100/bin/Windows/profile/Default/SceneData.dll",
+      "copy": "build/sdk-vk-consumer100/bin/profile/SceneData.dll"
+    },
+    {
+      "name": "WorldCamera.dll",
+      "bytes": 1366016,
+      "sha256": "6126878655299406C2922819CCD38F90A03A44813755F4E12F23B8A7EB74C212",
+      "source": "build/sdk-vk100/bin/Windows/profile/Default/WorldCamera.dll",
+      "copy": "build/sdk-vk-consumer100/bin/profile/WorldCamera.dll"
+    }
+  ],
+  "deployedRootDllCount": 34,
+  "deploymentScope": "Authoring SDK test consumer, not final game or Shipping DLL count.",
+  "sdkFiles": 11149,
+  "sdkInventory": {
+    "path": "build/n0-validation/native-scene100/sdk-preparation/checkpoint-r1/consumer-build2-recovery-candidate/execution-sdk100-consumer-build2-attempt2/sdk-final-inventory.json",
+    "bytes": 2294898,
+    "sha256": "755157101F0763AEADA0390CB153C9A51732611C9B71E9C7AF962A65A9282112"
+  },
+  "sdkInventoryByteExactToPostConfigureCheckpoint": true,
+  "integrity": {
+    "sourceInputs": 14509,
+    "expectedAbsences": 1059,
+    "authoredInputs": 40,
+    "expandedAuthoredInputs": 86,
+    "expandedAbsences": 73,
+    "ownerInputs": 26,
+    "hosts": 8,
+    "hostOutputArtifacts": 12,
+    "currentPins": 66,
+    "sourceFreezeSHA256": "C637E56407C7A416D5A5F05CC3F34D66A4292B366DC8118F618E5A311976C9C8",
+    "freshFinalSourceInstallInputSdkChecks": "Completed in the exit0 driver; all original final checks retained.",
+    "prebuildChecks": "Explicit historical reuse of closed failed-build postflight and successful SDK checkpoint, not a fresh full hash."
+  },
+  "testedExecutable": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\sdk-vk-consumer100\\bin\\profile\\JENativeSdkConsumer.exe",
+    "bytes": 12859392,
+    "sha256": "455248AB45F23D0518CEBC900398F0F063A3C40FADC673524866EDDAF47153A4"
+  },
+  "limits": [
+    "No module activation, AssetManager, JobManager, AP, renderer, import/cook, scene mutation, GPU or Shipping acceptance",
+    "Minimal ComponentApplication owns allocator/reflection lifecycle but no static/dynamic modules or catalog/settings load",
+    "PostBuild constructor is inline in real public header; virtual base dispatch/destruction plus actual PE imports must establish its vtable/ABI use",
+    "Checkout remains accessible: this repeats SDK96 installed-prefix resolution checks, not physical source hiding or global source-free packaging/Shipping proof."
+  ],
+  "dynamicNoPythonNoNullShipping": "NOT_TESTED_BY_THIS_CONSUMER",
+  "acceptance": "Installed Profile import/lifecycle gate only; parent integration review and Git publication remain separate. No global GOAL, N0, Linux, VR, Shipping, clean HEAD or physically source-hidden certification."
+}

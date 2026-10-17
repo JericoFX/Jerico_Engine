@@ -11,8 +11,8 @@
 #include <AzCore/Math/PackedVector3.h>
 #include <AzCore/Math/PackedVector4.h>
 
-#include <AtomLyIntegration/CommonFeatures/Mesh/MeshComponentBus.h>
-#include <AtomLyIntegration/CommonFeatures/SkinnedMesh/SkinnedMeshOverrideBus.h>
+#include <JE/Render/Scene/Mesh/MeshComponentBus.h>
+#include <JE/Render/Scene/SkinnedMesh/SkinnedMeshOverrideBus.h>
 #include <Atom/RHI/RHIUtils.h>
 
 #include <NvCloth/IClothSystem.h>
@@ -486,7 +486,7 @@ namespace NvCloth
         // get the asset from the model when we want to write to them, instead of getting the
         // ModelAsset directly from the bus (which returns the original asset shared by all entities).
         AZ::Data::Instance<JE::Render::RPI::Model> model;
-        AZ::Render::MeshComponentRequestBus::EventResult(model, m_entityId, &AZ::Render::MeshComponentRequestBus::Events::GetModel);
+        JE::Render::Scene::MeshComponentRequestBus::EventResult(model, m_entityId, &JE::Render::Scene::MeshComponentRequestBus::Events::GetModel);
         if (!model)
         {
             return;
@@ -821,9 +821,9 @@ namespace NvCloth
         {
             for (const auto& subMeshInfo : m_meshNodeInfo.m_subMeshes)
             {
-                AZ::Render::SkinnedMeshOverrideRequestBus::Event(
+                JE::Render::Scene::SkinnedMeshOverrideRequestBus::Event(
                     m_entityId,
-                    &AZ::Render::SkinnedMeshOverrideRequestBus::Events::EnableSkinning,
+                    &JE::Render::Scene::SkinnedMeshOverrideRequestBus::Events::EnableSkinning,
                         aznumeric_cast<uint32_t>(m_meshNodeInfo.m_lodLevel), aznumeric_cast<uint32_t>(subMeshInfo.m_primitiveIndex));
             }
         }
@@ -835,9 +835,9 @@ namespace NvCloth
         {
             for (const auto& subMeshInfo : m_meshNodeInfo.m_subMeshes)
             {
-                AZ::Render::SkinnedMeshOverrideRequestBus::Event(
+                JE::Render::Scene::SkinnedMeshOverrideRequestBus::Event(
                     m_entityId,
-                    &AZ::Render::SkinnedMeshOverrideRequestBus::Events::DisableSkinning,
+                    &JE::Render::Scene::SkinnedMeshOverrideRequestBus::Events::DisableSkinning,
                         aznumeric_cast<uint32_t>(m_meshNodeInfo.m_lodLevel), aznumeric_cast<uint32_t>(subMeshInfo.m_primitiveIndex));
             }
         }

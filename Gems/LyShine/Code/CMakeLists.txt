@@ -27,7 +27,7 @@ ly_add_target(
         PUBLIC
             JE::RenderIntegration
             Gem::Atom_Utils.Static
-            Gem::CommonFeaturesAtom.Static
+            JE::RenderScene
             JE::RenderIntegration.Public
             Gem::AtomFont
             Gem::TextureAtlas
@@ -106,7 +106,7 @@ if (PAL_TRAIT_BUILD_HOST_TOOLS)
             PUBLIC
                 JE::RenderIntegration
                 Gem::Atom_Utils.Static
-                Gem::CommonFeaturesAtom.Static
+                JE::RenderScene
                 JE::RenderIntegration.Public
     )
 
@@ -165,7 +165,7 @@ if (PAL_TRAIT_BUILD_HOST_TOOLS)
             PUBLIC
                 JE::RenderIntegration
                 Gem::Atom_Utils.Static
-                Gem::CommonFeaturesAtom.Static
+                JE::RenderScene
                 JE::RenderIntegration.Public
     )
 

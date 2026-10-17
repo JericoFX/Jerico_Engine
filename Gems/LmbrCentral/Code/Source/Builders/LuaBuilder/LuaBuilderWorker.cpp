@@ -337,9 +337,15 @@ namespace LuaBuilder
             }
             else if (AZStd::regex_search(lineCopy, match, pathRegex))
             {
-                AZ_TracePrintf("LuaBuilder", "Found potential dependency on file: %s\n", match[1].str().c_str());
+                const AZStd::string dependencyPath = match[1].str();
+                const AZ::IO::PathView dependencyPathView(dependencyPath.c_str());
+                if (!dependencyPathView.HasRootPath() && dependencyPathView.HasFilename()
+                    && dependencyPath.back() != '/' && dependencyPath.back() != '\\')
+                {
+                    AZ_TracePrintf("LuaBuilder", "Found potential dependency on file: %s\n", dependencyPath.c_str());
 
-                outDependencies.emplace(match[1].str().c_str(), AssetBuilderSDK::ProductPathDependencyType::ProductFile);
+                    outDependencies.emplace(dependencyPath.c_str(), AssetBuilderSDK::ProductPathDependencyType::ProductFile);
+                }
             }
 
             return true;

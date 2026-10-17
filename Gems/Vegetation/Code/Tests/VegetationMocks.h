@@ -17,7 +17,7 @@
 #include <Vegetation/Ebuses/ModifierRequestBus.h>
 #include <Vegetation/Ebuses/SystemConfigurationBus.h>
 #include <LmbrCentral/Shape/ShapeComponentBus.h>
-#include <AtomLyIntegration/CommonFeatures/Mesh/MeshComponentBus.h>
+#include <JE/Render/Scene/Mesh/MeshComponentBus.h>
 #include <AzCore/Math/Random.h>
 #include <GradientSignal/Ebuses/GradientRequestBus.h>
 #include <SurfaceData/SurfaceDataSystemRequestBus.h>
@@ -426,7 +426,7 @@ namespace UnitTest
     };
 
     struct MockMeshRequestBus
-        : public AZ::Render::MeshComponentRequestBus::Handler
+        : public JE::Render::Scene::MeshComponentRequestBus::Handler
     {
         AZ::Aabb m_GetWorldBoundsOutput;
         AZ::Aabb GetWorldBounds() const override
