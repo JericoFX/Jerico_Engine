@@ -1,0 +1,67 @@
+{
+  "schema": "je-scene100-native-integration-publication-v1",
+  "publishedUtc": "2026-10-17T17:11:15.3564218Z",
+  "repository": "https://github.com/JericoFX/Jerico_Engine",
+  "branch": "development",
+  "commit": "3d861c9522da790c1767532b1f7e890ada1227e7",
+  "parent": "e180245ecc1afcf00ad8bf8d94510aac8ae670c8",
+  "tree": "1514b810247ff92b24ddbe7ac2b4b730caf664c2",
+  "pushExit": 0,
+  "remoteVerifyExit": 0,
+  "remoteSHA": "3d861c9522da790c1767532b1f7e890ada1227e7",
+  "scope": "Native CommonFeaturesAtom absorption accepted for Windows/Profile/Vulkan; global Gem and GOAL acceptance remain separate",
+  "owners": [
+    "Engine/Render/Scene / JE::Render::Scene",
+    "Editor/Render/Scene / JE::Editor::Render::Scene"
+  ],
+  "composition": "Public HEADERONLY and two STATIC libraries; no new product DLL",
+  "retiredProductPaths": [
+    "Legacy CommonFeaturesAtom and CommonFeaturesAtom.Editor modules/targets and their active registration/discovery edges",
+    "Legacy CommonFeatures owner SDK deployment rules; historical excluded scripts preserved"
+  ],
+  "contracts": "36 runtime/74 editor descriptors,74 unique identities,1/4 required components; serialization,services and lifecycle retained",
+  "verification": [
+    "32 Scene plus89 Materials completed,0fail/error/skip/disabled",
+    "10 focused Lua path cases completed,0fail/error/skip/disabled; fresh cook Job605/RunKey113702 status4/error0/warning0",
+    "Editor3 and Runtime2 R21 Vulkan BSP/product evidence reused for unchanged inputs",
+    "Eight H24 native roots exit0; installed Profile SDK install/configure/build/PE/loader closed,34authoring DLL exact,6messages,11149inventory unchanged"
+  ],
+  "proofs": [
+    "focal-regression.json",
+    "lua-builder-path-regression.json",
+    "product-integration-r21.json",
+    "native-consumers-r24.json",
+    "dependent-relink-r24.json",
+    "sdk-consumer/sdk-profile-replay.json",
+    "capability-algorithm-crosswalk.json"
+  ],
+  "preservation": {
+    "selectivelyStagedPaths": 987,
+    "remainingForeignWIP": 217,
+    "foreignWorkingDocumentBodiesExcluded": true,
+    "noNewLfsOids": true,
+    "noLfsNetworkTransfer": true
+  },
+  "diffCheck": {
+    "rawExit": 2,
+    "warnings": 23,
+    "files": 8,
+    "exactInherited": 23,
+    "introducedOrUnproven": 0,
+    "auditSHA256": "8470B6B0D251118A3080377DDD24348FFC15F49B9BCEE4E9C8E1E2CFC7433C56"
+  },
+  "counts": {
+    "certifiedGemIncrement": 0,
+    "certifiedTotal": null,
+    "certifiedRemaining": null,
+    "reason": "Historical11nominal identities and110manifests are not a certified capability denominator"
+  },
+  "openLimits": [
+    "AP global exit1/319 assets failed",
+    "Linux-Vulkan,VR/OpenXR,Shipping,Beauty,pacing and global dependency/memory acceptance",
+    "Clean HEAD replay and physically source-hidden SDK validation"
+  ],
+  "wholeGemGlobalCertification": false,
+  "wholeGoalComplete": false,
+  "newEngineExecutionsForPublicationDocs": 0
+}

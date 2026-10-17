@@ -6,7 +6,7 @@ GREEN19 32Scene+89Materials, HOSTS2 ocho raíces/12artefactos y producto Vulkan 
 
 Plan obligatorio [CommonFeaturesAtom](../../work/gems/CommonFeaturesAtom.md) y [método por Gem](../../work/gems/README.md): gate ANALIZADO antes de escribir la siguiente. [Cruce74identidades/oncefamilias](../../evidence/n0/native-scene-components-2026-10-17/capability-algorithm-crosswalk.json) identifica el proveedor real de cada algoritmo y fuentes primarias aplicables. LTC de Quad/Polygon y Hosek–Wilkie del cielo ya existían; ninguna mejora SIGGRAPH nueva medida. No atribuir Disk a LTC ni convertir un traslado de adaptadores en una nueva técnica.
 
-Estado previo a publicación: consumidor instalado y revisión técnica cerrados; aceptación de integración/Git por el padre. Este gate por sí solo no suma una Gem global terminada. Totales históricos11/110 no certifican pendientes. N0/GOAL, Linux, VR/OpenXR, Shipping, rendimiento y separación global siguen abiertos. Vulkan único activo; DX12/Metal preservados e inactivos. El cuerpo histórico ajeno del mapa se conserva byteexacto debajo.
+Integración nativa Windows/Profile/Vulkan aceptada por el padre y [publicada en3d861c9](https://github.com/JericoFX/Jerico_Engine/commit/3d861c9522da790c1767532b1f7e890ada1227e7); SHA remoto confirmado17:11:15Z. [Recibo de publicación](../../evidence/n0/native-scene-components-2026-10-17/publication.json). Este gate por sí solo no suma una Gem global terminada. Totales históricos11/110 no certifican pendientes. N0/GOAL, Linux, VR/OpenXR, Shipping, rendimiento y separación global siguen abiertos. Vulkan único activo; DX12/Metal preservados e inactivos. El cuerpo histórico ajeno del mapa se conserva byteexacto debajo.
 
 ---
 # Mapa de composición de Gems y owners nativos

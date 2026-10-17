@@ -22,6 +22,6 @@ Las casillas indican acciones concretas con estado **IMPLEMENTADO**, **VERIFICAD
 
 | Identidad legacy elegida | Plan | Estado del corte |
 |---|---|---|
-| CommonFeaturesAtom, `AtomLyIntegration/CommonFeatures` | [Plan CommonFeaturesAtom](CommonFeaturesAtom.md) | Cuerpos/hosts y regresión verificados; packaging R22, GREEN2 Lua10/10 y recook focal status4/error0; APglobal exit1. Ocho raíces R24 build0, cohorte94=92conservados+2relinks aprobada. Replay SDK100 Profile completado: cinco fases exitosas, dos intentos fallidos históricos,34DLL y6mensajes verificados; aceptación/publicación del corte pendientes del padre, sin incremento de Gems |
+| CommonFeaturesAtom, `AtomLyIntegration/CommonFeatures` | [Plan CommonFeaturesAtom](CommonFeaturesAtom.md) | Cuerpos/hosts y regresión verificados; packaging R22, GREEN2 Lua10/10 y recook focal status4/error0; APglobal exit1. Ocho raíces R24 build0, cohorte94=92conservados+2relinks aprobada. Replay SDK100 Profile completado: cinco fases exitosas, dos intentos fallidos históricos,34DLL y6mensajes verificados; integración nativa Windows/Profile/Vulkan aceptada por el padre y publicada en development en [3d861c9522da790c1767532b1f7e890ada1227e7](https://github.com/JericoFX/Jerico_Engine/commit/3d861c9522da790c1767532b1f7e890ada1227e7), sin incremento certificado de Gems |
 
 La próxima Gem tendrá su análisis y plan antes de intervenirla, cuando el padre la asigne. Este índice no declara N0, GUI global, SDK global ni el GOAL terminados.
