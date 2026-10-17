@@ -16,10 +16,10 @@ Generated effect (idempotent)
 -----------------------------
   Header:  #include "${pass_name}.h"
   Activate():
-      AZ::RPI::PassSystemInterface::Get()->AddPassCreator(
+      JE::Render::RPI::PassSystemInterface::Get()->AddPassCreator(
           AZ::Name("${pass_name}"), &${pass_name}::Create);
   Deactivate():
-      AZ::RPI::PassSystemInterface::Get()->RemovePassCreator(
+      JE::Render::RPI::PassSystemInterface::Get()->RemovePassCreator(
           AZ::Name("${pass_name}"));
 
 Why this command exists
@@ -111,7 +111,7 @@ class AddPassCreatorCallCommand(WizardCommand):
             text,
             method=f"{sys_comp_name}::Activate",
             sentinel=f'AddPassCreator(AZ::Name("{self.pass_name}")',
-            line=(f'AZ::RPI::PassSystemInterface::Get()->AddPassCreator('
+            line=(f'JE::Render::RPI::PassSystemInterface::Get()->AddPassCreator('
                   f'AZ::Name("{self.pass_name}"), &{self.pass_name}::Create);'),
             ctx=ctx,
         )
@@ -119,7 +119,7 @@ class AddPassCreatorCallCommand(WizardCommand):
             text,
             method=f"{sys_comp_name}::Deactivate",
             sentinel=f'RemovePassCreator(AZ::Name("{self.pass_name}")',
-            line=(f'AZ::RPI::PassSystemInterface::Get()->RemovePassCreator('
+            line=(f'JE::Render::RPI::PassSystemInterface::Get()->RemovePassCreator('
                   f'AZ::Name("{self.pass_name}"));'),
             ctx=ctx,
         )
@@ -178,7 +178,7 @@ class AddPassCreatorCallCommand(WizardCommand):
     @staticmethod
     def _ensure_pass_system_include(text: str) -> str:
         """Add the angle-bracket Atom include needed by PassSystemInterface calls."""
-        line = "#include <Atom/RPI.Public/Pass/PassSystemInterface.h>"
+        line = "#include <JE/Render/RPI/Public/Pass/PassSystemInterface.h>"
         if line in text:
             return text
 

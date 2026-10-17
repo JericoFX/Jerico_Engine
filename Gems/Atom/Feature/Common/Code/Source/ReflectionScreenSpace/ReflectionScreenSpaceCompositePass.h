@@ -7,10 +7,10 @@
  */
 #pragma once
 
-#include <Atom/RPI.Public/Pass/Pass.h>
-#include <Atom/RPI.Public/Pass/FullscreenTrianglePass.h>
-#include <Atom/RPI.Public/Shader/ShaderResourceGroup.h>
-#include <Atom/RPI.Public/Shader/Shader.h>
+#include <JE/Render/RPI/Public/Pass/Pass.h>
+#include <JE/Render/RPI/Public/Pass/FullscreenTrianglePass.h>
+#include <JE/Render/RPI/Public/Shader/ShaderResourceGroup.h>
+#include <JE/Render/RPI/Public/Shader/Shader.h>
 
 namespace AZ
 {
@@ -18,7 +18,7 @@ namespace AZ
     {
         //! This pass composites the screenspace reflection trace onto the reflection buffer.
         class ReflectionScreenSpaceCompositePass
-            : public RPI::FullscreenTrianglePass
+            : public JE::Render::RPI::FullscreenTrianglePass
         {
             AZ_RPI_PASS(ReflectionScreenSpaceCompositePass);
 
@@ -27,10 +27,10 @@ namespace AZ
             AZ_CLASS_ALLOCATOR(Render::ReflectionScreenSpaceCompositePass, SystemAllocator);
 
             //! Creates a new pass without a PassTemplate
-            static RPI::Ptr<ReflectionScreenSpaceCompositePass> Create(const RPI::PassDescriptor& descriptor);
+            static JE::Render::RPI::Ptr<ReflectionScreenSpaceCompositePass> Create(const JE::Render::RPI::PassDescriptor& descriptor);
 
         private:
-            explicit ReflectionScreenSpaceCompositePass(const RPI::PassDescriptor& descriptor);
+            explicit ReflectionScreenSpaceCompositePass(const JE::Render::RPI::PassDescriptor& descriptor);
 
             // Pass Overrides...
             void CompileResources(const RHI::FrameGraphCompileContext& context) override;

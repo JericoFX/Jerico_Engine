@@ -11,9 +11,9 @@
 #include <Atom/RHI/FrameGraphInterface.h>
 #include <Atom/RHI/FrameGraphAttachmentInterface.h>
 #include <Atom/RHI/Device.h>
-#include <Atom/RPI.Public/Pass/PassUtils.h>
-#include <Atom/RPI.Public/RenderPipeline.h>
-#include <Atom/RPI.Public/RPIUtils.h>
+#include <JE/Render/RPI/Public/Pass/PassUtils.h>
+#include <JE/Render/RPI/Public/RenderPipeline.h>
+#include <JE/Render/RPI/Public/RPIUtils.h>
 #include <DiffuseProbeGrid_Traits_Platform.h>
 #include <Render/DiffuseProbeGridBlendDistancePass.h>
 
@@ -21,14 +21,14 @@ namespace AZ
 {
     namespace Render
     {
-        RPI::Ptr<DiffuseProbeGridBlendDistancePass> DiffuseProbeGridBlendDistancePass::Create(const RPI::PassDescriptor& descriptor)
+        JE::Render::RPI::Ptr<DiffuseProbeGridBlendDistancePass> DiffuseProbeGridBlendDistancePass::Create(const JE::Render::RPI::PassDescriptor& descriptor)
         {
-            RPI::Ptr<DiffuseProbeGridBlendDistancePass> pass = aznew DiffuseProbeGridBlendDistancePass(descriptor);
+            JE::Render::RPI::Ptr<DiffuseProbeGridBlendDistancePass> pass = aznew DiffuseProbeGridBlendDistancePass(descriptor);
             return pass;
         }
 
-        DiffuseProbeGridBlendDistancePass::DiffuseProbeGridBlendDistancePass(const RPI::PassDescriptor& descriptor)
-            : RPI::RenderPass(descriptor)
+        DiffuseProbeGridBlendDistancePass::DiffuseProbeGridBlendDistancePass(const JE::Render::RPI::PassDescriptor& descriptor)
+            : JE::Render::RPI::RenderPass(descriptor)
         {
             if (!AZ_TRAIT_DIFFUSE_GI_PASSES_SUPPORTED)
             {
@@ -49,23 +49,23 @@ namespace AZ
             for (uint32_t index = 0; index < DiffuseProbeGridNumRaysPerProbeArraySize; ++index)
             {
                 AZStd::string shaderFilePath = "Shaders/DiffuseGlobalIllumination/DiffuseProbeGridBlendDistance.azshader";
-                Data::Instance<RPI::Shader> shader = RPI::LoadCriticalShader(shaderFilePath, DiffuseProbeGridNumRaysPerProbeArray[index].m_supervariant);
+                Data::Instance<JE::Render::RPI::Shader> shader = JE::Render::RPI::LoadCriticalShader(shaderFilePath, DiffuseProbeGridNumRaysPerProbeArray[index].m_supervariant);
                 if (shader == nullptr)
                 {
                     return;
                 }
 
                 RHI::PipelineStateDescriptorForDispatch pipelineStateDescriptor;
-                const auto& shaderVariant = shader->GetVariant(RPI::ShaderAsset::RootShaderVariantStableId);
+                const auto& shaderVariant = shader->GetVariant(JE::Render::RPI::ShaderAsset::RootShaderVariantStableId);
                 shaderVariant.ConfigurePipelineState(pipelineStateDescriptor, shader->GetDefaultShaderOptions());
                 const RHI::PipelineState* pipelineState = shader->AcquirePipelineState(pipelineStateDescriptor);
                 AZ_Assert(pipelineState, "Failed to acquire pipeline state");
 
-                RHI::Ptr<RHI::ShaderResourceGroupLayout> srgLayout = shader->FindShaderResourceGroupLayout(RPI::SrgBindingSlot::Pass);
+                RHI::Ptr<RHI::ShaderResourceGroupLayout> srgLayout = shader->FindShaderResourceGroupLayout(JE::Render::RPI::SrgBindingSlot::Pass);
                 AZ_Assert(srgLayout.get(), "Failed to find Srg layout");
 
                 RHI::DispatchDirect dispatchArgs;
-                const auto outcome = RPI::GetComputeShaderNumThreads(shader->GetAsset(), dispatchArgs);
+                const auto outcome = JE::Render::RPI::GetComputeShaderNumThreads(shader->GetAsset(), dispatchArgs);
                 if (!outcome.IsSuccess())
                 {
                     AZ_Error("PassSystem", false, "[DiffuseProbeBlendIrradiancePass '%s']: Shader '%s' contains invalid numthreads arguments:\n%s", GetPathName().GetCStr(), shaderFilePath.c_str(), outcome.GetError().c_str());
@@ -82,7 +82,7 @@ namespace AZ
                 return false;
             }
 
-            RPI::Scene* scene = m_pipeline->GetScene();
+            JE::Render::RPI::Scene* scene = m_pipeline->GetScene();
             if (!scene)
             {
                 return false;
@@ -109,7 +109,7 @@ namespace AZ
         {
             RenderPass::SetupFrameGraphDependencies(frameGraph);
 
-            RPI::Scene* scene = m_pipeline->GetScene();
+            JE::Render::RPI::Scene* scene = m_pipeline->GetScene();
             DiffuseProbeGridFeatureProcessor* diffuseProbeGridFeatureProcessor = scene->GetFeatureProcessor<DiffuseProbeGridFeatureProcessor>();
 
             frameGraph.SetEstimatedItemCount(aznumeric_cast<uint32_t>(diffuseProbeGridFeatureProcessor->GetVisibleRealTimeProbeGrids().size()));
@@ -160,7 +160,7 @@ namespace AZ
 
         void DiffuseProbeGridBlendDistancePass::CompileResources([[maybe_unused]] const RHI::FrameGraphCompileContext& context)
         {
-            RPI::Scene* scene = m_pipeline->GetScene();
+            JE::Render::RPI::Scene* scene = m_pipeline->GetScene();
             DiffuseProbeGridFeatureProcessor* diffuseProbeGridFeatureProcessor = scene->GetFeatureProcessor<DiffuseProbeGridFeatureProcessor>();
 
             for (auto& diffuseProbeGrid : diffuseProbeGridFeatureProcessor->GetVisibleRealTimeProbeGrids())
@@ -179,7 +179,7 @@ namespace AZ
         void DiffuseProbeGridBlendDistancePass::BuildCommandListInternal(const RHI::FrameGraphExecuteContext& context)
         {
             RHI::CommandList* commandList = context.GetCommandList();
-            RPI::Scene* scene = m_pipeline->GetScene();
+            JE::Render::RPI::Scene* scene = m_pipeline->GetScene();
             DiffuseProbeGridFeatureProcessor* diffuseProbeGridFeatureProcessor = scene->GetFeatureProcessor<DiffuseProbeGridFeatureProcessor>();
 
             // submit the DispatchItems for each DiffuseProbeGrid in this range

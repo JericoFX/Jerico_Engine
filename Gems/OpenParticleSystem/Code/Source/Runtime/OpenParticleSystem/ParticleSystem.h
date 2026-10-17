@@ -13,7 +13,7 @@
 #include <Atom/Feature/CoreLights/SimplePointLightFeatureProcessorInterface.h>
 #include <Atom/Feature/TransformService/TransformServiceFeatureProcessorInterface.h>
 #include <Atom/RHI/BufferPool.h>
-#include <Atom/RPI.Public/FeatureProcessor.h>
+#include <JE/Render/RPI/Public/FeatureProcessor.h>
 
 #include <AzCore/Asset/AssetCommon.h>
 #include <AzCore/Asset/AssetManagerBus.h>
@@ -22,7 +22,7 @@
 #include <OpenParticleSystem/Asset/ParticleAsset.h>
 #include <EMotionFX/Source/ActorInstance.h>
 #include <OpenParticleSystem/ParticlePipelineState.h>
-#include <Atom/RPI.Reflect/Shader/ShaderOptionGroup.h>
+#include <JE/Render/RPI/Reflect/Shader/ShaderOptionGroup.h>
 #include <particle/core/ParticleSystem.h>
 
 namespace OpenParticle
@@ -51,7 +51,7 @@ namespace OpenParticle
 
         void SetFeatureProcessor(ParticleFeatureProcessor* fp);
 
-        void SetScene(AZ::RPI::Scene* scene);
+        void SetScene(JE::Render::RPI::Scene* scene);
 
         void SetEntityId(const AZ::EntityId& id);
 
@@ -65,7 +65,7 @@ namespace OpenParticle
 
         void Tick(float delta);
 
-        void Render(DriverWrap& driverWrap, const AZ::RPI::FeatureProcessor::RenderPacket& packet);
+        void Render(DriverWrap& driverWrap, const JE::Render::RPI::FeatureProcessor::RenderPacket& packet);
 
         void ClearAllLightEffects();
 
@@ -75,11 +75,11 @@ namespace OpenParticle
 
     private:
         struct DrawParam {
-            AZ::RPI::ShaderOptionGroup optionGroup;
-            AZ::Data::Instance<AZ::RPI::Shader> shader;
+            JE::Render::RPI::ShaderOptionGroup optionGroup;
+            AZ::Data::Instance<JE::Render::RPI::Shader> shader;
             EmitterDrawKey drawKey;
             AZ::Name materialPipelineName;
-            AZ::RPI::ShaderVariant variant;
+            JE::Render::RPI::ShaderVariant variant;
             SimuCore::ParticleCore::DrawItem item;
         };
 
@@ -94,7 +94,7 @@ namespace OpenParticle
         void SetParticleLight(SimuCore::ParticleCore::ParticleEmitter& emitter, const SimuCore::ParticleCore::DrawItem& item);
 
         void RenderParticle(const AZ::RHI::DrawListTag drawListTag, const DrawParam& drawParam,
-            EmitterInstance& instance, AZ::RPI::View& view, const EmitterDrawKey& drawKey,
+            EmitterInstance& instance, JE::Render::RPI::View& view, const EmitterDrawKey& drawKey,
             AZ::u32 emitterId, int meshIndex = -1);
 
         void ClearLightEffects(AZ::u32 emitterId);
@@ -102,7 +102,7 @@ namespace OpenParticle
         void Rebuild();
 
         ParticleFeatureProcessor* m_particleFp = nullptr;
-        AZ::RPI::Scene* m_scene = nullptr;
+        JE::Render::RPI::Scene* m_scene = nullptr;
         AZ::Data::Asset<ParticleAsset> m_asset;
         AZ::EntityId m_entityId;
         EMotionFX::ActorInstance* m_actorInstance = nullptr;
@@ -116,7 +116,7 @@ namespace OpenParticle
         AZStd::vector<AZ::RHI::ConstPtr<AZ::RHI::DrawPacket>> m_drawPacket;
 
         bool m_changedDiffuseMap;
-        AZStd::unordered_map<AZ::u32, AZ::RPI::MaterialPropertyValue> m_diffuseMapInstances;
+        AZStd::unordered_map<AZ::u32, JE::Render::RPI::MaterialPropertyValue> m_diffuseMapInstances;
         AZStd::unordered_map<AZ::u32, AZStd::vector<AZ::Vector3>> m_boneStreams;
         AZStd::unordered_map<AZ::u32, AZStd::vector<AZ::Vector3>> m_vertexStreams;
         AZStd::unordered_map<AZ::u32, AZStd::vector<AZ::Vector3>> m_vertexCoordSteams;

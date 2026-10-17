@@ -7,7 +7,7 @@
  */
 
 #include <AzCore/RTTI/BehaviorContext.h>
-#include <Atom/RPI.Public/Scene.h>
+#include <JE/Render/RPI/Public/Scene.h>
 #include <Debug/RenderDebugComponentController.h>
 
 namespace AZ::Render
@@ -62,7 +62,7 @@ namespace AZ::Render
     {
         m_entityId = entityId;
 
-        RenderDebugFeatureProcessorInterface* fp = RPI::Scene::GetFeatureProcessorForEntity<RenderDebugFeatureProcessorInterface>(m_entityId);
+        RenderDebugFeatureProcessorInterface* fp = JE::Render::RPI::Scene::GetFeatureProcessorForEntity<RenderDebugFeatureProcessorInterface>(m_entityId);
         if (fp)
         {
             m_renderDebugSettingsInterface = fp->GetSettingsInterface();
@@ -77,7 +77,7 @@ namespace AZ::Render
 
     void RenderDebugComponentController::Deactivate()
     {
-        RenderDebugFeatureProcessorInterface* fp = RPI::Scene::GetFeatureProcessorForEntity<RenderDebugFeatureProcessorInterface>(m_entityId);
+        RenderDebugFeatureProcessorInterface* fp = JE::Render::RPI::Scene::GetFeatureProcessorForEntity<RenderDebugFeatureProcessorInterface>(m_entityId);
         if (fp)
         {
             fp->OnRenderDebugComponentRemoved();

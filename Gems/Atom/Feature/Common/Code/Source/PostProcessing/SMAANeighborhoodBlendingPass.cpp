@@ -6,17 +6,17 @@
  *
  */
 
-#include <Atom/RPI.Public/Image/ImageSystemInterface.h>
-#include <Atom/RPI.Public/Pass/PassUtils.h>
-#include <Atom/RPI.Public/Pass/PassFactory.h>
-#include <Atom/RPI.Public/Pass/FullscreenTrianglePass.h>
-#include <Atom/RPI.Public/RenderPipeline.h>
-#include <Atom/RPI.Public/RPIUtils.h>
-#include <Atom/RPI.Public/View.h>
-#include <Atom/RPI.Public/Shader/ShaderVariant.h>
+#include <JE/Render/RPI/Public/Image/ImageSystemInterface.h>
+#include <JE/Render/RPI/Public/Pass/PassUtils.h>
+#include <JE/Render/RPI/Public/Pass/PassFactory.h>
+#include <JE/Render/RPI/Public/Pass/FullscreenTrianglePass.h>
+#include <JE/Render/RPI/Public/RenderPipeline.h>
+#include <JE/Render/RPI/Public/RPIUtils.h>
+#include <JE/Render/RPI/Public/View.h>
+#include <JE/Render/RPI/Public/Shader/ShaderVariant.h>
 
-#include <Atom/RPI.Reflect/Pass/PassTemplate.h>
-#include <Atom/RPI.Reflect/Shader/ShaderAsset.h>
+#include <JE/Render/RPI/Reflect/Pass/PassTemplate.h>
+#include <JE/Render/RPI/Reflect/Shader/ShaderAsset.h>
 
 #include <Atom/RHI/Factory.h>
 #include <Atom/RHI/FrameScheduler.h>
@@ -32,12 +32,12 @@ namespace AZ
 {
     namespace Render
     {
-        RPI::Ptr<SMAANeighborhoodBlendingPass> SMAANeighborhoodBlendingPass::Create(const RPI::PassDescriptor& descriptor)
+        JE::Render::RPI::Ptr<SMAANeighborhoodBlendingPass> SMAANeighborhoodBlendingPass::Create(const JE::Render::RPI::PassDescriptor& descriptor)
         {
             return aznew SMAANeighborhoodBlendingPass(descriptor);
         }
 
-        SMAANeighborhoodBlendingPass::SMAANeighborhoodBlendingPass(const RPI::PassDescriptor& descriptor)
+        SMAANeighborhoodBlendingPass::SMAANeighborhoodBlendingPass(const JE::Render::RPI::PassDescriptor& descriptor)
             : SMAABasePass(descriptor)
             , m_blendingOutputModeOptionName(BlendingOutputModeOptionName)
         {
@@ -54,7 +54,7 @@ namespace AZ
             m_shaderResourceGroup->SetConstant(m_renderTargetMetricsShaderInputIndex, m_renderTargetMetrics);
         }
 
-        void SMAANeighborhoodBlendingPass::GetCurrentShaderOption(AZ::RPI::ShaderOptionGroup& shaderOption) const
+        void SMAANeighborhoodBlendingPass::GetCurrentShaderOption(JE::Render::RPI::ShaderOptionGroup& shaderOption) const
         {
             switch (m_outputMode)
             {

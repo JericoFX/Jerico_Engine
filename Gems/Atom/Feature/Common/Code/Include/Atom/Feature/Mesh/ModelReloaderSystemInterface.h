@@ -8,7 +8,7 @@
 
 #pragma once
 
-#include <Atom/RPI.Reflect/Model/ModelAsset.h>
+#include <JE/Render/RPI/Reflect/Model/ModelAsset.h>
 #include <AzCore/EBus/Event.h>
 #include <AzCore/Interface/Interface.h>
 #include <AzCore/RTTI/RTTI.h>
@@ -23,7 +23,7 @@ namespace AZ
 
     namespace Render
     {
-        using ModelReloadedEvent = Event<const Data::Asset<RPI::ModelAsset>>;
+        using ModelReloadedEvent = Event<const Data::Asset<JE::Render::RPI::ModelAsset>>;
 
         //! A system that handles reloading the hierarchy of model assets in the correct order
         class ModelReloaderSystemInterface
@@ -48,7 +48,7 @@ namespace AZ
 
             //! Requests a model reload and passes in a callback event handler for when the reload is finished
             virtual void ReloadModel(
-                Data::Asset<RPI::ModelAsset> modelAsset, ModelReloadedEvent::Handler& onReloadedEventHandler) = 0;
+                Data::Asset<JE::Render::RPI::ModelAsset> modelAsset, ModelReloadedEvent::Handler& onReloadedEventHandler) = 0;
 
             //! Removes a pending reload of the asset corresponding to the asset id
             //! @param assetId The id of the asset.

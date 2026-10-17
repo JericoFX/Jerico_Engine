@@ -43,12 +43,17 @@ namespace AZ
         class DrawPacket;
     }
 
-    namespace RPI
-    {
+    }
+
+namespace JE::Render::RPI
+{
         class Model;
         class Scene;
         class Shader;
     }
+
+namespace AZ
+{
 
     namespace Render
     {
@@ -89,8 +94,8 @@ namespace AZ
                 //! Creates the GPU dynamic buffers of a single hair object
                 //! Equivalent to TressFXDynamicHairData::CreateGPUResources
                 bool CreateDynamicGPUResources(
-                    Data::Instance<RPI::Shader> computeShader,
-                    Data::Instance<RPI::Shader> rasterShader,
+                    Data::Instance<JE::Render::RPI::Shader> computeShader,
+                    Data::Instance<JE::Render::RPI::Shader> rasterShader,
                     uint32_t vertexCount, uint32_t strandsCount);
 
                 //! Data upload - copy the hair mesh asset data (positions and tangents) into the buffers.
@@ -111,12 +116,12 @@ namespace AZ
                     PrepareSrgDescriptors(m_dynamicBuffersDescriptors, vertexCount, strandsCount);
                 }
  
-                Data::Instance<RPI::ShaderResourceGroup> GetSimSrgForCompute()
+                Data::Instance<JE::Render::RPI::ShaderResourceGroup> GetSimSrgForCompute()
                 {
                     return m_initialized ? m_simSrgForCompute : nullptr;
                 }
 
-                Data::Instance<RPI::ShaderResourceGroup> GetSimSrgForRaster()
+                Data::Instance<JE::Render::RPI::ShaderResourceGroup> GetSimSrgForRaster()
                 {
                     return m_initialized ? m_simSrgForRaster : nullptr; }
 
@@ -154,8 +159,8 @@ namespace AZ
                 //! It is the TressFX equivalent of the set:
                 //!     - pSimPosTanLayout / m_pSimBindSets
                 //------------------------------------------------------------------
-                Data::Instance<RPI::ShaderResourceGroup> m_simSrgForCompute;    //! TressFX equivalent: pSimPosTanLayout / m_pSimBindSets
-                Data::Instance<RPI::ShaderResourceGroup> m_simSrgForRaster;     //! Targeting only the Fill pass / shader
+                Data::Instance<JE::Render::RPI::ShaderResourceGroup> m_simSrgForCompute;    //! TressFX equivalent: pSimPosTanLayout / m_pSimBindSets
+                Data::Instance<JE::Render::RPI::ShaderResourceGroup> m_simSrgForRaster;     //! Targeting only the Fill pass / shader
 
                 bool m_initialized = false;
             };
@@ -186,14 +191,14 @@ namespace AZ
                     AMD::TressFXSimulationSettings* simSettings, AMD::TressFXRenderingSettings* renderSettings
                 );
 
-                bool BuildDrawPacket(RPI::Shader* geometryShader, RHI::DrawPacketBuilder::DrawRequest& drawRequest);
+                bool BuildDrawPacket(JE::Render::RPI::Shader* geometryShader, RHI::DrawPacketBuilder::DrawRequest& drawRequest);
 
-                const RHI::DrawPacket* GetGeometrylDrawPacket(RPI::Shader* geometryShader);
+                const RHI::DrawPacket* GetGeometrylDrawPacket(JE::Render::RPI::Shader* geometryShader);
 
                 //! Creates and fill the dispatch item associated with the compute shader
-                bool BuildDispatchItem(RPI::Shader* computeShader, DispatchLevel dispatchLevel);
+                bool BuildDispatchItem(JE::Render::RPI::Shader* computeShader, DispatchLevel dispatchLevel);
 
-                const RHI::DispatchItem* GetDispatchItem(RPI::Shader* computeShader);
+                const RHI::DispatchItem* GetDispatchItem(JE::Render::RPI::Shader* computeShader);
 
                 void PrepareHairGenerationSrgDescriptors(uint32_t vertexCount, uint32_t numStrands);
 
@@ -204,7 +209,7 @@ namespace AZ
                 //! Does NOT update the bone matrices - they will be updated every frame.
                 bool UploadGPUData(const char* name, AMD::TressFXAsset* asset);
 
-                Data::Instance<RPI::ShaderResourceGroup> GetHairGenerationSrg()
+                Data::Instance<JE::Render::RPI::ShaderResourceGroup> GetHairGenerationSrg()
                 {
                     return m_hairGenerationSrg;
                 }
@@ -246,7 +251,7 @@ namespace AZ
                 //! Creation of the render Srg m_hairRenderSrg, followed by creation and binding of the
                 //! GPU render resources: vertex thickness, vertex UV, hair albedo maps and two constant buffers.
                 bool CreateRenderingGPUResources(
-                    Data::Instance<RPI::Shader> shader, AMD::TressFXAsset& asset, const char* assetName);
+                    Data::Instance<JE::Render::RPI::Shader> shader, AMD::TressFXAsset& asset, const char* assetName);
 
                 bool Update();
 
@@ -305,19 +310,19 @@ namespace AZ
                 HairFeatureProcessor* m_featureProcessor = nullptr;
 
                 //! Skinning compute shader used for creation of the compute Srgs and dispatch item
-                Data::Instance<RPI::Shader> m_skinningShader = nullptr;
+                Data::Instance<JE::Render::RPI::Shader> m_skinningShader = nullptr;
 
                 //! Compute dispatch items map per the existing passes
-                AZStd::unordered_map<RPI::Shader*, Data::Instance<HairDispatchItem>> m_dispatchItems;
+                AZStd::unordered_map<JE::Render::RPI::Shader*, Data::Instance<HairDispatchItem>> m_dispatchItems;
 
                 //! Geometry raster shader used for creation of the raster Srgs.
                 //! Since the Srgs for geometry raster are the same across the shaders we keep
                 //! only a single shader - if this to change in the future, several shaders and sets
                 //! of dynamic Srgs should be created. 
-                Data::Instance<RPI::Shader> m_geometryRasterShader = nullptr;
+                Data::Instance<JE::Render::RPI::Shader> m_geometryRasterShader = nullptr;
 
                 //! DrawPacket for the multi object geometry raster pass.
-                AZStd::unordered_map<RPI::Shader*, RHI::ConstPtr<RHI::DrawPacket>>  m_geometryDrawPackets;
+                AZStd::unordered_map<JE::Render::RPI::Shader*, RHI::ConstPtr<RHI::DrawPacket>>  m_geometryDrawPackets;
 
                 float m_frameDeltaTime = 0.02f;
 
@@ -353,11 +358,11 @@ namespace AZ
                 //! Static buffers & Srg: Initial position, bones transform skinning
                 //!  data, physical hair properties..
                 //!-----------------------------------------------------------------
-                AZStd::vector<Data::Instance<RPI::Buffer>> m_hairGenerationBuffers;
+                AZStd::vector<Data::Instance<JE::Render::RPI::Buffer>> m_hairGenerationBuffers;
                 AZStd::vector<SrgBufferDescriptor> m_hairGenerationDescriptors;
                 //! The simulation parameters constant buffer.
                 HairUniformBuffer<AMD::TressFXSimulationParams> m_simCB; 
-                Data::Instance<RPI::ShaderResourceGroup> m_hairGenerationSrg; 
+                Data::Instance<JE::Render::RPI::ShaderResourceGroup> m_hairGenerationSrg; 
 
                 //!-----------------------------------------------------------------
                 //!         TressFXRenderParams Srg buffers and declarations
@@ -366,19 +371,19 @@ namespace AZ
                 //!-----------------------------------------------------------------
                 //! Vertex and UV buffers.
                 //! Naming was not changed to preserve correlation to TressFXHairObject.h
-                Data::Instance<RPI::Buffer> m_hairVertexRenderParams;
-                Data::Instance<RPI::Buffer> m_hairTexCoords;
+                Data::Instance<JE::Render::RPI::Buffer> m_hairVertexRenderParams;
+                Data::Instance<JE::Render::RPI::Buffer> m_hairTexCoords;
                 
                 //! Base color of the hair root and per strand texture.
-                Data::Instance<RPI::Image> m_baseAlbedo;
-                Data::Instance<RPI::Image> m_strandAlbedo;
+                Data::Instance<JE::Render::RPI::Image> m_baseAlbedo;
+                Data::Instance<JE::Render::RPI::Image> m_strandAlbedo;
 
                 HairUniformBuffer<AMD::TressFXRenderParams> m_renderCB;
                 HairUniformBuffer<AMD::TressFXStrandParams> m_strandCB;
 
                 AZStd::vector<SrgBufferDescriptor> m_hairRenderDescriptors;
                 // Equivalent to m_pRenderLayoutBindSet in TressFX.
-                Data::Instance<RPI::ShaderResourceGroup> m_hairRenderSrg;   
+                Data::Instance<JE::Render::RPI::ShaderResourceGroup> m_hairRenderSrg;   
  
                 //! Index buffer for the render pass via draw calls - naming was kept
                 Data::Instance<RHI::Buffer> m_indexBuffer;

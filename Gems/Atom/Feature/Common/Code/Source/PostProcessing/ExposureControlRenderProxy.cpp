@@ -11,7 +11,7 @@
 #include <PostProcessing/EyeAdaptationPass.h>
 #include <Atom/Feature/DisplayMapper/DisplayMapperPass.h>
 
-#include <Atom/RPI.Public/View.h>
+#include <JE/Render/RPI/Public/View.h>
 
 #include <Atom/RHI/FrameScheduler.h>
 
@@ -26,7 +26,7 @@ namespace AZ
         {
         }
 
-        void ExposureControlRenderProxy::Init(const RPI::ViewPtr view, uint32_t idNumber)
+        void ExposureControlRenderProxy::Init(const JE::Render::RPI::ViewPtr view, uint32_t idNumber)
         {
             AZ_Assert(view != nullptr, "Invalid view pointer passed to the exposure control render proxy.");
 
@@ -55,18 +55,18 @@ namespace AZ
             AZStd::string bufferName = AZStd::string::format("%s_%d", ExposureControlBufferBaseName, idNumber);
             // Check to see if the buffer previously created already exists.
             // If the old buffer existed, this buffer will be reused to avoid initialization process.
-            m_buffer = RPI::BufferSystemInterface::Get()->FindCommonBuffer(bufferName);
+            m_buffer = JE::Render::RPI::BufferSystemInterface::Get()->FindCommonBuffer(bufferName);
 
             if (m_buffer == nullptr)
             {                
-                RPI::CommonBufferDescriptor desc;
-                desc.m_poolType = RPI::CommonBufferPoolType::Constant;
+                JE::Render::RPI::CommonBufferDescriptor desc;
+                desc.m_poolType = JE::Render::RPI::CommonBufferPoolType::Constant;
                 desc.m_bufferName = bufferName;
                 desc.m_byteCount = sizeof(ShaderParameters);
                 desc.m_elementSize = sizeof(ShaderParameters);
                 desc.m_isUniqueName = true;
 
-                m_buffer = RPI::BufferSystemInterface::Get()->CreateBufferFromCommonPool(desc);
+                m_buffer = JE::Render::RPI::BufferSystemInterface::Get()->CreateBufferFromCommonPool(desc);
             }
  
             if (!m_buffer)
@@ -83,7 +83,7 @@ namespace AZ
             m_buffer = nullptr;
         }
 
-        void ExposureControlRenderProxy::Simulate(const AZ::RPI::FeatureProcessor::SimulatePacket& packet)
+        void ExposureControlRenderProxy::Simulate(const JE::Render::RPI::FeatureProcessor::SimulatePacket& packet)
         {
             m_eyeAdaptationBuffer.Simulate(m_eyeAdaptationDelayTime);
 
@@ -129,12 +129,12 @@ namespace AZ
             }
         }
 
-        Data::Instance<RPI::ShaderResourceGroup> ExposureControlRenderProxy::GetViewSrg()
+        Data::Instance<JE::Render::RPI::ShaderResourceGroup> ExposureControlRenderProxy::GetViewSrg()
         {
             return m_viewSrg;
         }
 
-        AZ::Data::Instance<RPI::Buffer> ExposureControlRenderProxy::GetBuffer()
+        AZ::Data::Instance<JE::Render::RPI::Buffer> ExposureControlRenderProxy::GetBuffer()
         {
             return m_eyeAdaptationBuffer.GetBuffer();
         }

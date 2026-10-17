@@ -48,7 +48,7 @@ namespace AZ
                 m_readbackState = DiffuseProbeGridReadbackState::Irradiance;
             }
 
-            if (m_attachmentReadback.get() && m_attachmentReadback->GetReadbackState() > RPI::AttachmentReadback::ReadbackState::Idle)
+            if (m_attachmentReadback.get() && m_attachmentReadback->GetReadbackState() > JE::Render::RPI::AttachmentReadback::ReadbackState::Idle)
             {
                 // still processing previous request
                 return;
@@ -57,14 +57,14 @@ namespace AZ
             AZStd::string readbackName = AZStd::string::format("DiffuseProbeGridReadback_%s", passName.GetCStr());
             RHI::ImageDescriptor descriptor;
             RHI::AttachmentId attachmentId;
-            RPI::AttachmentReadback::CallbackFunction callbackFunction;
+            JE::Render::RPI::AttachmentReadback::CallbackFunction callbackFunction;
 
             switch (m_readbackState)
             {
             case DiffuseProbeGridReadbackState::Irradiance:
                 descriptor = m_diffuseProbeGrid->GetIrradianceImage()->GetDescriptor();
                 attachmentId = m_diffuseProbeGrid->GetIrradianceImageAttachmentId();
-                callbackFunction = [this](const AZ::RPI::AttachmentReadback::ReadbackResult& readbackResult)
+                callbackFunction = [this](const JE::Render::RPI::AttachmentReadback::ReadbackResult& readbackResult)
                 {
                     m_irradianceReadbackResult = readbackResult;
                     m_readbackState = DiffuseProbeGridReadbackState::Distance;
@@ -73,7 +73,7 @@ namespace AZ
             case DiffuseProbeGridReadbackState::Distance:
                 descriptor = m_diffuseProbeGrid->GetDistanceImage()->GetDescriptor();
                 attachmentId = m_diffuseProbeGrid->GetDistanceImageAttachmentId();
-                callbackFunction = [this](const AZ::RPI::AttachmentReadback::ReadbackResult& readbackResult)
+                callbackFunction = [this](const JE::Render::RPI::AttachmentReadback::ReadbackResult& readbackResult)
                 {
                     m_distanceReadbackResult = readbackResult;
                     m_readbackState = DiffuseProbeGridReadbackState::ProbeData;
@@ -82,7 +82,7 @@ namespace AZ
             case DiffuseProbeGridReadbackState::ProbeData:
                 descriptor = m_diffuseProbeGrid->GetProbeDataImage()->GetDescriptor();
                 attachmentId = m_diffuseProbeGrid->GetProbeDataImageAttachmentId();
-                callbackFunction = [this](const AZ::RPI::AttachmentReadback::ReadbackResult& readbackResult)
+                callbackFunction = [this](const JE::Render::RPI::AttachmentReadback::ReadbackResult& readbackResult)
                 {
                     m_probeDataReadbackResult = readbackResult;
                     m_readbackState = DiffuseProbeGridReadbackState::Complete;
@@ -92,10 +92,10 @@ namespace AZ
                 AZ_Assert(false, "Unknown readback state");
             }
 
-            m_attachmentReadback = AZStd::make_shared<AZ::RPI::AttachmentReadback>(AZ::RHI::ScopeId{ "DiffuseProbeGridTextureReadBack" });
+            m_attachmentReadback = AZStd::make_shared<JE::Render::RPI::AttachmentReadback>(AZ::RHI::ScopeId{ "DiffuseProbeGridTextureReadBack" });
             m_attachmentReadback->SetCallback(callbackFunction);
 
-            AZ::RPI::PassAttachment passAttachment;
+            JE::Render::RPI::PassAttachment passAttachment;
             passAttachment.m_descriptor = descriptor;
             passAttachment.m_path = attachmentId;
             passAttachment.m_name = readbackName;
@@ -104,7 +104,7 @@ namespace AZ
             m_attachmentReadback->ReadPassAttachment(&passAttachment, AZ::Name(readbackName));
         }
 
-        void DiffuseProbeGridTextureReadback::FrameBegin(AZ::RPI::Pass::FramePrepareParams& params)
+        void DiffuseProbeGridTextureReadback::FrameBegin(JE::Render::RPI::Pass::FramePrepareParams& params)
         {
             if (m_readbackState == DiffuseProbeGridReadbackState::Idle)
             {

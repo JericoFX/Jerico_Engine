@@ -7,9 +7,9 @@
  */
 
 #include "./SubsurfaceTransmissionParameterFunctor.h"
-#include <Atom/RPI.Public/Material/Material.h>
-#include <Atom/RPI.Public/Shader/ShaderResourceGroup.h>
-#include <Atom/RPI.Public/Pass/PassSystemInterface.h>
+#include <JE/Render/RPI/Public/Material/Material.h>
+#include <JE/Render/RPI/Public/Shader/ShaderResourceGroup.h>
+#include <JE/Render/RPI/Public/Pass/PassSystemInterface.h>
 
 namespace AZ
 {
@@ -19,7 +19,7 @@ namespace AZ
         {
             if (auto* serializeContext = azrtti_cast<SerializeContext*>(context))
             {
-                serializeContext->Class<SubsurfaceTransmissionParameterFunctor, RPI::MaterialFunctor>()
+                serializeContext->Class<SubsurfaceTransmissionParameterFunctor, JE::Render::RPI::MaterialFunctor>()
                     ->Version(2)
                     ->Field("m_mode", &SubsurfaceTransmissionParameterFunctor::m_mode)
                     ->Field("m_scale", &SubsurfaceTransmissionParameterFunctor::m_scale)
@@ -41,11 +41,11 @@ namespace AZ
             }
         }
 
-        void SubsurfaceTransmissionParameterFunctor::Process(RPI::MaterialFunctorAPI::RuntimeContext& context)
+        void SubsurfaceTransmissionParameterFunctor::Process(JE::Render::RPI::MaterialFunctorAPI::RuntimeContext& context)
         {
             // Build & preprocess all parameters used by subsurface scattering feature
 
-            using namespace RPI;
+            using namespace JE::Render::RPI;
             enum class TransmissionMode { None, ThickObject, ThinObject };
 
             auto mode = context.GetMaterialPropertyValue<uint32_t>(m_mode);
@@ -88,7 +88,7 @@ namespace AZ
             context.GetMaterialShaderParameter()->SetParameter(m_transmissionTintThickness, transmissionTintThickness);
         }
 
-        bool SubsurfaceTransmissionParameterFunctor::UpdateShaderParameterConnections(const RPI::MaterialShaderParameterLayout* layout)
+        bool SubsurfaceTransmissionParameterFunctor::UpdateShaderParameterConnections(const JE::Render::RPI::MaterialShaderParameterLayout* layout)
         {
             bool valid = true;
             if (m_scatterDistance.ValidateOrFindIndex(layout) == false)

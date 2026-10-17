@@ -13,9 +13,9 @@
 #include <AzCore/std/parallel/semaphore.h>
 
 #include <Atom/RHI/RHISystemInterface.h>
-#include <Atom/RPI.Public/Image/AttachmentImagePool.h>
-#include <Atom/RPI.Public/Image/ImageSystemInterface.h>
-#include <Atom/RPI.Public/Shader/ShaderSystemInterface.h>
+#include <JE/Render/RPI/Public/Image/AttachmentImagePool.h>
+#include <JE/Render/RPI/Public/Image/ImageSystemInterface.h>
+#include <JE/Render/RPI/Public/Shader/ShaderSystemInterface.h>
 
 #include <Atom/Utils/MaterialUtils.h>
 
@@ -86,7 +86,7 @@ namespace Terrain
         false,
         [](const bool& value)
         {
-            AZ::RPI::ShaderSystemInterface::Get()->SetGlobalShaderOption(AZ::Name{ "o_debugDetailMaterialIds" }, AZ::RPI::ShaderOptionValue{ value });
+            JE::Render::RPI::ShaderSystemInterface::Get()->SetGlobalShaderOption(AZ::Name{ "o_debugDetailMaterialIds" }, JE::Render::RPI::ShaderOptionValue{ value });
         },
         AZ::ConsoleFunctorFlags::Null,
         "Turns on debugging for detail material ids for terrain."
@@ -101,8 +101,8 @@ namespace Terrain
     );
 
     void TerrainDetailMaterialManager::Initialize(
-        const AZ::Data::Instance<AZ::RPI::ShaderResourceGroup>& terrainSrg,
-        const AZ::Data::Instance<AZ::RPI::Material>& terrainMaterial)
+        const AZ::Data::Instance<JE::Render::RPI::ShaderResourceGroup>& terrainSrg,
+        const AZ::Data::Instance<JE::Render::RPI::Material>& terrainMaterial)
     {
         AZ_Error(TerrainDetailMaterialManagerName, terrainSrg, "terrainSrg must not be null.");
         AZ_Error(TerrainDetailMaterialManagerName, !m_isInitialized, "Already initialized.");
@@ -169,7 +169,7 @@ namespace Terrain
         }
     }
     
-    bool TerrainDetailMaterialManager::UpdateSrgIndices(const AZ::Data::Instance<AZ::RPI::ShaderResourceGroup>& terrainSrg)
+    bool TerrainDetailMaterialManager::UpdateSrgIndices(const AZ::Data::Instance<JE::Render::RPI::ShaderResourceGroup>& terrainSrg)
     {
         const AZ::RHI::ShaderResourceGroupLayout* terrainSrgLayout = terrainSrg->GetLayout();
             
@@ -226,7 +226,7 @@ namespace Terrain
         m_isInitialized = false;
     }
 
-    void TerrainDetailMaterialManager::Update(const AZ::Vector3& cameraPosition, AZ::Data::Instance<AZ::RPI::ShaderResourceGroup>& terrainSrg)
+    void TerrainDetailMaterialManager::Update(const AZ::Vector3& cameraPosition, AZ::Data::Instance<JE::Render::RPI::ShaderResourceGroup>& terrainSrg)
     {
         if (m_terrainMaterial->NeedsCompile())
         {
@@ -285,9 +285,9 @@ namespace Terrain
     
     void TerrainDetailMaterialManager::UpdateTerrainMaterial()
     {
-        AZ::RPI::MaterialPropertyIndex detailTextureMultiplierIndex = m_terrainMaterial->FindPropertyIndex(AZ::Name("settings.detailTextureMultiplier"));
-        AZ::RPI::MaterialPropertyIndex detailTextureFadeDistanceIndex = m_terrainMaterial->FindPropertyIndex(AZ::Name("settings.detailFadeDistance"));
-        AZ::RPI::MaterialPropertyIndex detailTextureFadeLengthIndex = m_terrainMaterial->FindPropertyIndex(AZ::Name("settings.detailFadeLength"));
+        JE::Render::RPI::MaterialPropertyIndex detailTextureMultiplierIndex = m_terrainMaterial->FindPropertyIndex(AZ::Name("settings.detailTextureMultiplier"));
+        JE::Render::RPI::MaterialPropertyIndex detailTextureFadeDistanceIndex = m_terrainMaterial->FindPropertyIndex(AZ::Name("settings.detailFadeDistance"));
+        JE::Render::RPI::MaterialPropertyIndex detailTextureFadeLengthIndex = m_terrainMaterial->FindPropertyIndex(AZ::Name("settings.detailFadeLength"));
 
         AZ_Assert(detailTextureMultiplierIndex.IsValid(), "Terrain Feature Processor unable to find settings.detailTextureMultiplier in the terrain material.");
         AZ_Assert(detailTextureFadeDistanceIndex.IsValid(), "Terrain Feature Processor unable to find settings.detailFadeDistance in the terrain material.");
@@ -302,9 +302,9 @@ namespace Terrain
     {
         m_config = config;
         
-        AZ::RPI::ShaderSystemInterface::Get()->SetGlobalShaderOption(
+        JE::Render::RPI::ShaderSystemInterface::Get()->SetGlobalShaderOption(
             AZ::Name{ "o_terrainUseHeightBasedBlending" },
-            AZ::RPI::ShaderOptionValue{ m_config.m_useHeightBasedBlending }
+            JE::Render::RPI::ShaderOptionValue{ m_config.m_useHeightBasedBlending }
         );
 
         if (IsInitialized())
@@ -593,9 +593,9 @@ namespace Terrain
             DetailTextureFlags& flags = shaderData.m_flags;
             flags = DetailTextureFlags::None;
 
-            auto getIndex = [&](const char* const indexName) -> AZ::RPI::MaterialPropertyIndex
+            auto getIndex = [&](const char* const indexName) -> JE::Render::RPI::MaterialPropertyIndex
             {
-                const AZ::RPI::MaterialPropertyIndex index = material->FindPropertyIndex(AZ::Name(indexName));
+                const JE::Render::RPI::MaterialPropertyIndex index = material->FindPropertyIndex(AZ::Name(indexName));
                 AZ_Warning(TerrainDetailMaterialManagerName, index.IsValid(), "Failed to find shader input constant %s.", indexName);
                 return index;
             };
@@ -611,7 +611,7 @@ namespace Terrain
                 }
             };
 
-            auto applyImage = [&](const char* const indexName, AZ::Data::Instance<AZ::RPI::Image>& ref, const char* const usingFlagName, DetailTextureFlags flagToSet, uint32_t& imageIndex, int deviceIndex) -> void
+            auto applyImage = [&](const char* const indexName, AZ::Data::Instance<JE::Render::RPI::Image>& ref, const char* const usingFlagName, DetailTextureFlags flagToSet, uint32_t& imageIndex, int deviceIndex) -> void
             {
                 // Determine if an image exists and if its using flag allows it to be used.
                 const auto index = getIndex(indexName);
@@ -624,7 +624,7 @@ namespace Terrain
                 }
                 if (index.IsValid() && useTextureValue)
                 {
-                    ref = material->GetPropertyValue(index).GetValue<AZ::Data::Instance<AZ::RPI::Image>>();
+                    ref = material->GetPropertyValue(index).GetValue<AZ::Data::Instance<JE::Render::RPI::Image>>();
                 }
                 useTextureValue = useTextureValue && ref;
                 flags = DetailTextureFlags(useTextureValue ? (flags | flagToSet) : (flags & ~flagToSet));
@@ -790,12 +790,12 @@ namespace Terrain
         {
             // If the m_detailTextureImage doesn't exist, create it and populate the entire texture
 
-            const AZ::Data::Instance<AZ::RPI::AttachmentImagePool> imagePool = AZ::RPI::ImageSystemInterface::Get()->GetSystemAttachmentPool();
+            const AZ::Data::Instance<JE::Render::RPI::AttachmentImagePool> imagePool = JE::Render::RPI::ImageSystemInterface::Get()->GetSystemAttachmentPool();
             AZ::RHI::ImageDescriptor imageDescriptor = AZ::RHI::ImageDescriptor::Create2D(
                 AZ::RHI::ImageBindFlags::ShaderRead, m_detailTextureSize, m_detailTextureSize, AZ::RHI::Format::R8G8B8A8_UINT
             );
             const AZ::Name TerrainDetailName = AZ::Name(TerrainDetailChars);
-            m_detailTextureImage = AZ::RPI::AttachmentImage::Create(*imagePool.get(), imageDescriptor, TerrainDetailName, nullptr, nullptr);
+            m_detailTextureImage = JE::Render::RPI::AttachmentImage::Create(*imagePool.get(), imageDescriptor, TerrainDetailName, nullptr, nullptr);
             AZ_Error(TerrainDetailMaterialManagerName, m_detailTextureImage, "Failed to initialize the detail texture image.");
 
             ClipmapBoundsRegionList updateRegions = m_detailMaterialIdBounds.TransformRegion(m_detailMaterialIdBounds.GetWorldBounds());

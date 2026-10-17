@@ -27,10 +27,10 @@
 
 #include <Atom/RHI/RHIUtils.h>
 
-#include <Atom/RPI.Public/AuxGeom/AuxGeomDraw.h>
-#include <Atom/RPI.Public/AuxGeom/AuxGeomFeatureProcessorInterface.h>
-#include <Atom/RPI.Public/Scene.h>
-#include <Atom/RPI.Public/Image/StreamingImage.h>
+#include <JE/Render/RPI/Public/AuxGeom/AuxGeomDraw.h>
+#include <JE/Render/RPI/Public/AuxGeom/AuxGeomFeatureProcessorInterface.h>
+#include <JE/Render/RPI/Public/Scene.h>
+#include <JE/Render/RPI/Public/Image/StreamingImage.h>
 
 #include <AzCore/Casting/numeric_cast.h>
 #include <AzCore/Component/EntityId.h>
@@ -185,10 +185,10 @@ namespace AZ::Render
 
     void AtomActorInstance::Activate()
     {
-        m_skinnedMeshFeatureProcessor = RPI::Scene::GetFeatureProcessorForEntity<SkinnedMeshFeatureProcessorInterface>(m_entityId);
+        m_skinnedMeshFeatureProcessor = JE::Render::RPI::Scene::GetFeatureProcessorForEntity<SkinnedMeshFeatureProcessorInterface>(m_entityId);
         AZ_Assert(m_skinnedMeshFeatureProcessor, "AtomActorInstance was unable to find a SkinnedMeshFeatureProcessor on the EntityContext provided.");
 
-        m_meshFeatureProcessor = RPI::Scene::GetFeatureProcessorForEntity<MeshFeatureProcessorInterface>(m_entityId);
+        m_meshFeatureProcessor = JE::Render::RPI::Scene::GetFeatureProcessorForEntity<MeshFeatureProcessorInterface>(m_entityId);
         AZ_Assert(m_meshFeatureProcessor, "AtomActorInstance was unable to find a MeshFeatureProcessor on the EntityContext provided.");
 
         m_transformInterface = TransformBus::FindFirstHandler(m_entityId);
@@ -261,7 +261,7 @@ namespace AZ::Render
         }
     }
 
-    void AtomActorInstance::SetModelAsset([[maybe_unused]] Data::Asset<RPI::ModelAsset> modelAsset)
+    void AtomActorInstance::SetModelAsset([[maybe_unused]] Data::Asset<JE::Render::RPI::ModelAsset> modelAsset)
     {
         // Changing model asset is not supported by Atom Actor Instance.
         // The model asset is obtained from the Actor inside the ActorAsset,
@@ -270,7 +270,7 @@ namespace AZ::Render
         AZ_Assert(false, "AtomActorInstance::SetModelAsset not supported");
     }
 
-    Data::Asset<const RPI::ModelAsset> AtomActorInstance::GetModelAsset() const
+    Data::Asset<const JE::Render::RPI::ModelAsset> AtomActorInstance::GetModelAsset() const
     {
         AZ_Assert(GetActor(), "Expecting a Atom Actor Instance having a valid Actor.");
         return GetActor()->GetMeshAsset();
@@ -304,7 +304,7 @@ namespace AZ::Render
         return GetModelAsset().GetHint();
     }
 
-    AZ::Data::Instance<RPI::Model> AtomActorInstance::GetModel() const
+    AZ::Data::Instance<JE::Render::RPI::Model> AtomActorInstance::GetModel() const
     {
         return m_skinnedMeshInstance->m_model;
     }
@@ -319,33 +319,33 @@ namespace AZ::Render
         return m_meshFeatureProcessor->GetSortKey(*m_meshHandle);
     }
 
-    void AtomActorInstance::SetLodType(RPI::Cullable::LodType lodType)
+    void AtomActorInstance::SetLodType(JE::Render::RPI::Cullable::LodType lodType)
     {
-        RPI::Cullable::LodConfiguration config = m_meshFeatureProcessor->GetMeshLodConfiguration(*m_meshHandle);
+        JE::Render::RPI::Cullable::LodConfiguration config = m_meshFeatureProcessor->GetMeshLodConfiguration(*m_meshHandle);
         config.m_lodType = lodType;
         m_meshFeatureProcessor->SetMeshLodConfiguration(*m_meshHandle, config);
     }
 
-    RPI::Cullable::LodType AtomActorInstance::GetLodType() const
+    JE::Render::RPI::Cullable::LodType AtomActorInstance::GetLodType() const
     {
         return m_meshFeatureProcessor->GetMeshLodConfiguration(*m_meshHandle).m_lodType;
     }
 
-    void AtomActorInstance::SetLodOverride(RPI::Cullable::LodOverride lodOverride)
+    void AtomActorInstance::SetLodOverride(JE::Render::RPI::Cullable::LodOverride lodOverride)
     {
-        RPI::Cullable::LodConfiguration config = m_meshFeatureProcessor->GetMeshLodConfiguration(*m_meshHandle);
+        JE::Render::RPI::Cullable::LodConfiguration config = m_meshFeatureProcessor->GetMeshLodConfiguration(*m_meshHandle);
         config.m_lodOverride = lodOverride;
         m_meshFeatureProcessor->SetMeshLodConfiguration(*m_meshHandle, config);
     }
 
-    RPI::Cullable::LodOverride AtomActorInstance::GetLodOverride() const
+    JE::Render::RPI::Cullable::LodOverride AtomActorInstance::GetLodOverride() const
     {
         return m_meshFeatureProcessor->GetMeshLodConfiguration(*m_meshHandle).m_lodOverride;
     }
 
     void AtomActorInstance::SetMinimumScreenCoverage(float minimumScreenCoverage)
     {
-        RPI::Cullable::LodConfiguration config = m_meshFeatureProcessor->GetMeshLodConfiguration(*m_meshHandle);
+        JE::Render::RPI::Cullable::LodConfiguration config = m_meshFeatureProcessor->GetMeshLodConfiguration(*m_meshHandle);
         config.m_minimumScreenCoverage = minimumScreenCoverage;
         m_meshFeatureProcessor->SetMeshLodConfiguration(*m_meshHandle, config);
     }
@@ -357,7 +357,7 @@ namespace AZ::Render
 
     void AtomActorInstance::SetQualityDecayRate(float qualityDecayRate)
     {
-        RPI::Cullable::LodConfiguration config = m_meshFeatureProcessor->GetMeshLodConfiguration(*m_meshHandle);
+        JE::Render::RPI::Cullable::LodConfiguration config = m_meshFeatureProcessor->GetMeshLodConfiguration(*m_meshHandle);
         config.m_qualityDecayRate = qualityDecayRate;
         m_meshFeatureProcessor->SetMeshLodConfiguration(*m_meshHandle, config);
     }
@@ -486,10 +486,10 @@ namespace AZ::Render
             for (uint32_t lodIndex = 0; lodIndex < lodCount; ++lodIndex)
             {
                 const SkinnedMeshInputLod& inputLod = m_skinnedMeshInputBuffers->GetLod(lodIndex);
-                Data::Asset<RPI::ModelLodAsset> modelLodAsset = inputLod.GetModelLodAsset();
-                for (const RPI::ModelLodAsset::Mesh& submesh : modelLodAsset->GetMeshes())
+                Data::Asset<JE::Render::RPI::ModelLodAsset> modelLodAsset = inputLod.GetModelLodAsset();
+                for (const JE::Render::RPI::ModelLodAsset::Mesh& submesh : modelLodAsset->GetMeshes())
                 {
-                    Data::Asset<RPI::MaterialAsset> defaultSubmeshMaterial = m_skinnedMeshInputBuffers->GetModelAsset()->FindMaterialSlot(submesh.GetMaterialSlotId()).m_defaultMaterialAsset;
+                    Data::Asset<JE::Render::RPI::MaterialAsset> defaultSubmeshMaterial = m_skinnedMeshInputBuffers->GetModelAsset()->FindMaterialSlot(submesh.GetMaterialSlotId()).m_defaultMaterialAsset;
                     if (defaultSubmeshMaterial && !defaultSubmeshMaterial.IsReady())
                     {
                         // Start listening for the material's OnAssetReady event.
@@ -687,7 +687,7 @@ namespace AZ::Render
 
     void AtomActorInstance::CreateRenderProxy(const JE::Render::MaterialAssignmentMap& materials)
     {
-        auto meshFeatureProcessor = RPI::Scene::GetFeatureProcessorForEntity<MeshFeatureProcessorInterface>(m_entityId);
+        auto meshFeatureProcessor = JE::Render::RPI::Scene::GetFeatureProcessorForEntity<MeshFeatureProcessorInterface>(m_entityId);
         AZ_Error("ActorComponentController", meshFeatureProcessor, "Unable to find a MeshFeatureProcessorInterface on the entityId.");
         if (meshFeatureProcessor)
         {
@@ -771,19 +771,19 @@ namespace AZ::Render
             EMotionFX::MorphSetup* morphSetup = actor->GetMorphSetup(static_cast<uint32>(lodIndex));
             if (morphSetup)
             {
-                const AZStd::vector<AZ::RPI::MorphTargetMetaAsset::MorphTarget>& metaDatas = actor->GetMorphTargetMetaAsset()->GetMorphTargets();
+                const AZStd::vector<JE::Render::RPI::MorphTargetMetaAsset::MorphTarget>& metaDatas = actor->GetMorphTargetMetaAsset()->GetMorphTargets();
                 // Loop over all the EMotionFX morph targets
                 size_t numMorphTargets = morphSetup->GetNumMorphTargets();
                 for (size_t morphTargetIndex = 0; morphTargetIndex < numMorphTargets; ++morphTargetIndex)
                 {
                     EMotionFX::MorphTargetStandard* morphTarget = static_cast<EMotionFX::MorphTargetStandard*>(morphSetup->GetMorphTarget(morphTargetIndex));
-                    for (const RPI::MorphTargetMetaAsset::MorphTarget& metaData : metaDatas)
+                    for (const JE::Render::RPI::MorphTargetMetaAsset::MorphTarget& metaData : metaDatas)
                     {
                         // Find the metaData associated with this morph target
                         if (metaData.m_morphTargetName == morphTarget->GetNameString() && metaData.m_wrinkleMask && metaData.m_numVertices > 0)
                         {
                             // If the metaData has a wrinkle mask, add it to the map
-                            Data::Instance<RPI::StreamingImage> streamingImage = RPI::StreamingImage::FindOrCreate(metaData.m_wrinkleMask);
+                            Data::Instance<JE::Render::RPI::StreamingImage> streamingImage = JE::Render::RPI::StreamingImage::FindOrCreate(metaData.m_wrinkleMask);
                             if (streamingImage)
                             {
                                 m_morphTargetWrinkleMaskMapsByLod[lodIndex][morphTarget] = streamingImage;
@@ -799,7 +799,7 @@ namespace AZ::Render
     {
         if (m_meshHandle)
         {
-            const AZStd::vector<Data::Instance<RPI::ShaderResourceGroup>>& wrinkleMaskObjectSrgs = m_meshFeatureProcessor->GetObjectSrgs(*m_meshHandle);
+            const AZStd::vector<Data::Instance<JE::Render::RPI::ShaderResourceGroup>>& wrinkleMaskObjectSrgs = m_meshFeatureProcessor->GetObjectSrgs(*m_meshHandle);
 
             for (auto& wrinkleMaskObjectSrg : wrinkleMaskObjectSrgs)
             {
@@ -815,7 +815,7 @@ namespace AZ::Render
 
                     if (m_wrinkleMasks.size())
                     {
-                        wrinkleMaskObjectSrg->SetImageArray(wrinkleMasksIndex, AZStd::span<const Data::Instance<RPI::Image>>(m_wrinkleMasks.data(), m_wrinkleMasks.size()));
+                        wrinkleMaskObjectSrg->SetImageArray(wrinkleMasksIndex, AZStd::span<const Data::Instance<JE::Render::RPI::Image>>(m_wrinkleMasks.data(), m_wrinkleMasks.size()));
 
                         // Set the weights for any active masks
                         for (size_t i = 0; i < m_wrinkleMaskWeights.size(); ++i)
@@ -832,14 +832,14 @@ namespace AZ::Render
         }
     }
 
-    void AtomActorInstance::HandleObjectSrgCreate(const Data::Instance<RPI::ShaderResourceGroup>& objectSrg)
+    void AtomActorInstance::HandleObjectSrgCreate(const Data::Instance<JE::Render::RPI::ShaderResourceGroup>& objectSrg)
     {
         MeshComponentNotificationBus::Event(m_entityId, &MeshComponentNotificationBus::Events::OnObjectSrgCreated, objectSrg);
     }
 
-    void AtomActorInstance::HandleModelChange(const Data::Instance<RPI::Model>& model)
+    void AtomActorInstance::HandleModelChange(const Data::Instance<JE::Render::RPI::Model>& model)
     {
-        Data::Asset<RPI::ModelAsset> modelAsset = m_meshFeatureProcessor->GetModelAsset(*m_meshHandle);
+        Data::Asset<JE::Render::RPI::ModelAsset> modelAsset = m_meshFeatureProcessor->GetModelAsset(*m_meshHandle);
         if (model && modelAsset.IsReady())
         {
             MeshComponentNotificationBus::Event(m_entityId, &MeshComponentNotificationBus::Events::OnModelReady, modelAsset, model);
@@ -853,7 +853,7 @@ namespace AZ::Render
     {
         if (m_meshHandle)
         {
-            const AZStd::vector<Data::Instance<RPI::ShaderResourceGroup>>& objectSrgs =
+            const AZStd::vector<Data::Instance<JE::Render::RPI::ShaderResourceGroup>>& objectSrgs =
                 m_meshFeatureProcessor->GetObjectSrgs(*m_meshHandle);
             for (auto& objectSrg : objectSrgs)
             {

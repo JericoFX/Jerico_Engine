@@ -12,10 +12,10 @@
 #include <Atom/RHI/RHISystemInterface.h>
 #include <AzCore/Statistics/RunningStatistic.h>
 
-#include <Atom/RPI.Public/GpuQuery/GpuQueryTypes.h>
-#include <Atom/RPI.Public/Pass/ParentPass.h>
-#include <Atom/RPI.Public/Pass/Pass.h>
-#include <Atom/RPI.Public/Pass/PassFilter.h>
+#include <JE/Render/RPI/Public/GpuQuery/GpuQueryTypes.h>
+#include <JE/Render/RPI/Public/Pass/ParentPass.h>
+#include <JE/Render/RPI/Public/Pass/Pass.h>
+#include <JE/Render/RPI/Public/Pass/PassFilter.h>
 
 #include <AzCore/Serialization/Json/JsonUtils.h>
 
@@ -92,7 +92,7 @@ namespace AZ
             static void Reflect(AZ::ReflectContext* context);
 
             TimestampSerializer() = default;
-            TimestampSerializer(AZStd::vector<const RPI::Pass*>&& pass);
+            TimestampSerializer(AZStd::vector<const JE::Render::RPI::Pass*>&& pass);
 
             AZStd::vector<TimestampSerializerEntry> m_timestampEntries;
         };
@@ -121,14 +121,14 @@ namespace AZ
                 static void Reflect(AZ::ReflectContext* context);
 
                 Name m_passName;
-                RPI::PipelineStatisticsResult m_pipelineStatisticsResult;
+                JE::Render::RPI::PipelineStatisticsResult m_pipelineStatisticsResult;
             };
 
             AZ_TYPE_INFO(PipelineStatisticsSerializer, "{4972BAB6-98FB-4D3B-9EAC-50FF418E77C0}");
             static void Reflect(AZ::ReflectContext* context);
 
             PipelineStatisticsSerializer() = default;
-            PipelineStatisticsSerializer(AZStd::vector<const RPI::Pass*>&& passes);
+            PipelineStatisticsSerializer(AZStd::vector<const JE::Render::RPI::Pass*>&& passes);
 
             AZStd::vector<PipelineStatisticsSerializerEntry> m_pipelineStatisticsEntries;
         };
@@ -199,9 +199,9 @@ namespace AZ
 
         // --- TimestampSerializer ---
 
-        TimestampSerializer::TimestampSerializer(AZStd::vector<const RPI::Pass*>&& passes)
+        TimestampSerializer::TimestampSerializer(AZStd::vector<const JE::Render::RPI::Pass*>&& passes)
         {
-            for (const RPI::Pass* pass : passes)
+            for (const JE::Render::RPI::Pass* pass : passes)
             {
                 m_timestampEntries.push_back({pass->GetName(), pass->GetLatestTimestampResult().GetDurationInNanoseconds()});
             }
@@ -254,9 +254,9 @@ namespace AZ
 
         // --- PipelineStatisticsSerializer ---
 
-        PipelineStatisticsSerializer::PipelineStatisticsSerializer(AZStd::vector<const RPI::Pass*>&& passes)
+        PipelineStatisticsSerializer::PipelineStatisticsSerializer(AZStd::vector<const JE::Render::RPI::Pass*>&& passes)
         {
-            for (const RPI::Pass* pass : passes)
+            for (const JE::Render::RPI::Pass* pass : passes)
             {
                 m_pipelineStatisticsEntries.push_back({pass->GetName(), pass->GetLatestPipelineStatisticsResult()});
             }
@@ -377,7 +377,7 @@ namespace AZ
 
         bool ProfilingCaptureSystemComponent::CapturePassTimestamp(const AZStd::string& outputFilePath)
         {
-            RPI::Pass* root = AZ::RPI::PassSystemInterface::Get()->GetRootPass().get();
+            JE::Render::RPI::Pass* root = JE::Render::RPI::PassSystemInterface::Get()->GetRootPass().get();
 
             // Enable all the Timestamp queries in passes.
             root->SetTimestampQueryEnabled(true);
@@ -458,7 +458,7 @@ namespace AZ
 
         bool ProfilingCaptureSystemComponent::CapturePassPipelineStatistics(const AZStd::string& outputFilePath)
         {
-            RPI::Pass* root = AZ::RPI::PassSystemInterface::Get()->GetRootPass().get();
+            JE::Render::RPI::Pass* root = JE::Render::RPI::PassSystemInterface::Get()->GetRootPass().get();
 
             // Enable all the PipelineStatistics queries in passes.
             root->SetPipelineStatisticsQueryEnabled(true);
@@ -536,14 +536,14 @@ namespace AZ
             return captureStarted;
         }
 
-        AZStd::vector<const RPI::Pass*> ProfilingCaptureSystemComponent::CollectPassesRecursively(const RPI::Pass* root) const
+        AZStd::vector<const JE::Render::RPI::Pass*> ProfilingCaptureSystemComponent::CollectPassesRecursively(const JE::Render::RPI::Pass* root) const
         {
-            AZStd::vector<const RPI::Pass*> passes;
-            AZStd::function<void(const RPI::Pass*)> collectPass = [&](const RPI::Pass* pass)
+            AZStd::vector<const JE::Render::RPI::Pass*> passes;
+            AZStd::function<void(const JE::Render::RPI::Pass*)> collectPass = [&](const JE::Render::RPI::Pass* pass)
             {
                 passes.push_back(pass);
 
-                const RPI::ParentPass* asParent = pass->AsParent();
+                const JE::Render::RPI::ParentPass* asParent = pass->AsParent();
                 if (asParent)
                 {
                     for (const auto& child : asParent->GetChildren())

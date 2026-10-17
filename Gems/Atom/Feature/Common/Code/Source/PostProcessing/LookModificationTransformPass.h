@@ -14,11 +14,11 @@
 #include <Atom/RHI/DeviceDrawItem.h>
 #include <Atom/RHI/ScopeProducer.h>
 
-#include <Atom/RPI.Reflect/Shader/ShaderVariantKey.h>
-#include <Atom/RPI.Public/Pass/ParentPass.h>
-#include <Atom/RPI.Public/Pass/FullscreenTrianglePass.h>
-#include <Atom/RPI.Public/Shader/Shader.h>
-#include <Atom/RPI.Public/Shader/ShaderResourceGroup.h>
+#include <JE/Render/RPI/Reflect/Shader/ShaderVariantKey.h>
+#include <JE/Render/RPI/Public/Pass/ParentPass.h>
+#include <JE/Render/RPI/Public/Pass/FullscreenTrianglePass.h>
+#include <JE/Render/RPI/Public/Shader/Shader.h>
+#include <JE/Render/RPI/Public/Shader/ShaderResourceGroup.h>
 
 #include <Atom/Feature/ACES/AcesDisplayMapperFeatureProcessor.h>
 
@@ -32,18 +32,18 @@ namespace AZ
          *  The look modification transform pass.
          */
         class LookModificationPass
-            : public RPI::ParentPass
+            : public JE::Render::RPI::ParentPass
         {
         public:
-            AZ_RTTI(LookModificationPass, "{68C3A664-FB97-40ED-9638-21938D6692B3}", RPI::ParentPass);
+            AZ_RTTI(LookModificationPass, "{68C3A664-FB97-40ED-9638-21938D6692B3}", JE::Render::RPI::ParentPass);
             AZ_CLASS_ALLOCATOR(LookModificationPass, SystemAllocator);
             virtual ~LookModificationPass() = default;
 
             //! Creates a LookModificationPass
-            static RPI::Ptr<LookModificationPass> Create(const RPI::PassDescriptor& descriptor);
+            static JE::Render::RPI::Ptr<LookModificationPass> Create(const JE::Render::RPI::PassDescriptor& descriptor);
 
         protected:
-            LookModificationPass(const RPI::PassDescriptor& descriptor);
+            LookModificationPass(const JE::Render::RPI::PassDescriptor& descriptor);
 
             //! Pass overrides ...
             void FrameBeginInternal(FramePrepareParams params) override;
@@ -51,7 +51,7 @@ namespace AZ
             void BuildInternal() override;
 
         private:
-            const RPI::PassAttachmentBinding* m_pipelineOutput = nullptr;
+            const JE::Render::RPI::PassAttachmentBinding* m_pipelineOutput = nullptr;
             RHI::Format m_displayBufferFormat = RHI::Format::Unknown;
             OutputDeviceTransformType m_outputDeviceTransformType = OutputDeviceTransformType_48Nits;
             ShaperParams m_shaperParams;

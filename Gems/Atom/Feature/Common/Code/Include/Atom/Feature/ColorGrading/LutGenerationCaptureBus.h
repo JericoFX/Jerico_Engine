@@ -30,10 +30,10 @@ namespace JE::ColorGrading
         }
 
         bool MatchesReadback(AZ::Render::FrameCaptureId expectedId,
-            const AZ::RPI::AttachmentReadback::ReadbackResult& result) const
+            const JE::Render::RPI::AttachmentReadback::ReadbackResult& result) const
         {
             const auto resolution = static_cast<uint32_t>(m_resolution);
-            return result.m_state == AZ::RPI::AttachmentReadback::ReadbackState::Success &&
+            return result.m_state == JE::Render::RPI::AttachmentReadback::ReadbackState::Success &&
                 expectedId != AZ::Render::InvalidFrameCaptureId && m_captureId == expectedId &&
                 result.m_userIdentifier == expectedId && m_generateLut &&
                 (resolution == 16 || resolution == 32 || resolution == 64) &&

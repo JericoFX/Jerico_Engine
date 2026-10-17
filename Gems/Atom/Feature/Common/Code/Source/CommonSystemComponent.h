@@ -10,7 +10,7 @@
 #include <AzCore/Component/Component.h>
 #include <Atom_Feature_Traits_Platform.h>
 
-#include <Atom/RPI.Public/Pass/PassSystemInterface.h>
+#include <JE/Render/RPI/Public/Pass/PassSystemInterface.h>
 
 namespace AZ
 {
@@ -43,7 +43,7 @@ namespace AZ
             // Load pass template mappings for this gem
             void LoadPassTemplateMappings();
 
-            RPI::PassSystemInterface::OnReadyLoadTemplatesEvent::Handler m_loadTemplatesHandler;
+            JE::Render::RPI::PassSystemInterface::OnReadyLoadTemplatesEvent::Handler m_loadTemplatesHandler;
 
             AZStd::unique_ptr<ModelReloaderSystem> m_modelReloaderSystem;
         };

@@ -18,7 +18,7 @@
 #include "Widgets/HierarchyWidget/HierarchyItem.h"
 #include "Widgets/HierarchyWidget/TreeWidgetItemList.h"
 
-#include <Atom/RPI.Public/ViewportContextBus.h>
+#include <JE/Render/RPI/Public/ViewportContextBus.h>
 #include <AtomToolsFramework/Viewport/RenderViewportWidget.h>
 #include <AzCore/Component/EntityId.h>
 #include <AzCore/Math/Vector2.h>
@@ -39,7 +39,7 @@ class ViewportWidget
     , private AzToolsFramework::EditorPickModeNotificationBus::Handler
     , private FontNotificationBus::Handler
     , private LyShinePassDataRequestBus::Handler
-    , public AZ::RPI::ViewportContextNotificationBus::Handler
+    , public JE::Render::RPI::ViewportContextNotificationBus::Handler
 {
     Q_OBJECT
 

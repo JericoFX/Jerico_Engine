@@ -16,7 +16,6 @@
     "documentation_url": "",
     "dependencies": [
         "AtomToolsFramework",
-        "Atom_RPI",
         "Atom_RHI",
         "Atom_Feature_Common",
         "ImageProcessingAtom",

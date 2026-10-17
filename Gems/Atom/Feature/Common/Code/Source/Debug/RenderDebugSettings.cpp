@@ -8,10 +8,10 @@
 
 #include <AzCore/Serialization/SerializeContext.h>
 
-#include <Atom/RPI.Public/RPIUtils.h>
-#include <Atom/RPI.Public/Shader/ShaderResourceGroup.h>
-#include <Atom/RPI.Public/Scene.h>
-#include <Atom/RPI.Public/View.h>
+#include <JE/Render/RPI/Public/RPIUtils.h>
+#include <JE/Render/RPI/Public/Shader/ShaderResourceGroup.h>
+#include <JE/Render/RPI/Public/Scene.h>
+#include <JE/Render/RPI/Public/View.h>
 
 #include <Debug/RenderDebugSettings.h>
 #include <Debug/RenderDebugFeatureProcessor.h>

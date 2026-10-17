@@ -8,7 +8,7 @@
 
 #pragma once
 
-#include <Atom/RPI.Public/Pass/PassFilter.h>
+#include <JE/Render/RPI/Public/Pass/PassFilter.h>
 #include <imgui/imgui.h>
 #include <Atom/Feature/ImGui/SystemBus.h>
 

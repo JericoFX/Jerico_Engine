@@ -10,8 +10,8 @@
 
 #include <AssetBuilderSDK/AssetBuilderSDK.h>
 #include <AssetBuilderSDK/SerializationDependencies.h>
-#include <Atom/RPI.Edit/Common/AssetUtils.h>
-#include <Atom/RPI.Edit/Common/JsonUtils.h>
+#include <JE/Editor/Render/RPI/Edit/Common/AssetUtils.h>
+#include <JE/Editor/Render/RPI/Edit/Common/JsonUtils.h>
 #include <AzCore/Serialization/Json/JsonSerialization.h>
 
 #include <AzCore/Serialization/Json/JsonUtils.h>
@@ -43,7 +43,7 @@ namespace OpenParticle
 
         AZ::JsonDeserializerSettings jsonSettings;
 
-        AZ::RPI::JsonReportingHelper reportingHelper;
+        JE::Render::RPI::JsonReportingHelper reportingHelper;
         reportingHelper.Attach(jsonSettings);
 
         AZ::JsonSerialization::Load(objectData, document, jsonSettings);

@@ -10,7 +10,7 @@
 
 #include <QWidget>
 #include <QElapsedTimer>
-#include <Atom/RPI.Public/Base.h>
+#include <JE/Render/RPI/Public/Base.h>
 #include <AzToolsFramework/Viewport/ViewportMessages.h>
 #include <AzToolsFramework/Input/QtEventToAzInputMapper.h>
 #include <AzFramework/Input/Events/InputChannelEventListener.h>
@@ -20,7 +20,7 @@
 #include <AzFramework/Windowing/NativeWindow.h>
 #include <AzFramework/Windowing/WindowBus.h>
 #include <AzCore/Component/TickBus.h>
-#include <Atom/RPI.Public/AuxGeom/AuxGeomFeatureProcessorInterface.h>
+#include <JE/Render/RPI/Public/AuxGeom/AuxGeomFeatureProcessorInterface.h>
 #include <AtomToolsFramework/Viewport/ViewportInteractionImpl.h>
 
 namespace AtomToolsFramework
@@ -76,14 +76,14 @@ namespace AtomToolsFramework
         //! Allows this viewport to be freely resized.
         void UnlockRenderTargetSize();
         //! Gets the underlying ViewportContext associated with this RenderViewportWidget.
-        AZ::RPI::ViewportContextPtr GetViewportContext();
-        AZ::RPI::ConstViewportContextPtr GetViewportContext() const;
+        JE::Render::RPI::ViewportContextPtr GetViewportContext();
+        JE::Render::RPI::ConstViewportContextPtr GetViewportContext() const;
         //! Creates an AZ::RPI::ScenePtr for the given scene and assigns it to the current ViewportContext.
         //! If useDefaultRenderPipeline is specified, this will initialize the scene with a rendering pipeline.
         void SetScene(const AZStd::shared_ptr<AzFramework::Scene>& scene, bool useDefaultRenderPipeline = true);
         //! Gets the default camera that's been automatically registered to our ViewportContext.
-        AZ::RPI::ViewPtr GetDefaultCamera();
-        AZ::RPI::ConstViewPtr GetDefaultCamera() const;
+        JE::Render::RPI::ViewPtr GetDefaultCamera();
+        JE::Render::RPI::ConstViewPtr GetDefaultCamera() const;
         //! Sets whether or not input processing is enabled for this RenderViewportWidget.
         //! While input processing is enabled, synthetic input events may appear in OnInputChannelEventFiltered
         //! due to internal viewport input mapping via QtEventToAzInputMapper, so it may be desirable to disable
@@ -142,15 +142,15 @@ namespace AtomToolsFramework
         void SendWindowCloseEvent();
 
         // The underlying ViewportContext, our entry-point to the Atom RPI.
-        AZ::RPI::ViewportContextPtr m_viewportContext;
+        JE::Render::RPI::ViewportContextPtr m_viewportContext;
         // Rather than handling input and supplemental rendering within the viewport or a subclass,
         // we provide this controller list to allow handlers to listen for input and update events.
         AzFramework::ViewportControllerListPtr m_controllerList;
         // The default camera group for our viewport i.e. the one used when a camera entity hasn't been activated.
         // The group contains stereoscopic and non-stereoscopic views.
-        AZ::RPI::ViewGroupPtr m_defaultCameraGroup;
+        JE::Render::RPI::ViewGroupPtr m_defaultCameraGroup;
         // Our viewport-local aux geom pipeline for supplemental rendering.
-        AZ::RPI::AuxGeomDrawPtr m_auxGeom;
+        JE::Render::RPI::AuxGeomDrawPtr m_auxGeom;
         // Tracks whether the cursor is currently over our viewport, used for mouse input event book-keeping.
         AZStd::optional<AzFramework::ScreenPoint> m_mousePosition;
         // Captures the time between our render events to give controllers a time delta.

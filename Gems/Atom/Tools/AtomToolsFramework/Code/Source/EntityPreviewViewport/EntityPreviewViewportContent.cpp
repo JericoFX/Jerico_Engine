@@ -7,10 +7,10 @@
  */
 
 #include <JE/World/Camera/Debug/CameraComponent.h>
-#include <Atom/RPI.Public/RenderPipeline.h>
-#include <Atom/RPI.Public/Scene.h>
-#include <Atom/RPI.Public/ViewportContext.h>
-#include <Atom/RPI.Public/WindowContext.h>
+#include <JE/Render/RPI/Public/RenderPipeline.h>
+#include <JE/Render/RPI/Public/Scene.h>
+#include <JE/Render/RPI/Public/ViewportContext.h>
+#include <JE/Render/RPI/Public/WindowContext.h>
 #include <AtomToolsFramework/EntityPreviewViewport/EntityPreviewViewportContent.h>
 #include <AzCore/Component/Component.h>
 #include <AzCore/Component/Entity.h>
@@ -26,8 +26,8 @@ namespace AtomToolsFramework
         : m_toolId(toolId)
         , m_entityContext(entityContext)
     {
-        AZ::RPI::ViewportContextPtr viewportContext = widget->GetViewportContext();
-        AZ::RPI::WindowContextSharedPtr windowContext = viewportContext->GetWindowContext();
+        JE::Render::RPI::ViewportContextPtr viewportContext = widget->GetViewportContext();
+        JE::Render::RPI::WindowContextSharedPtr windowContext = viewportContext->GetWindowContext();
 
         // Configure camera
         m_cameraEntity =

@@ -8,7 +8,7 @@
 #pragma once
 
 #include <Atom/RHI/DevicePipelineState.h>
-#include <Atom/RPI.Public/Pass/ComputePass.h>
+#include <JE/Render/RPI/Public/Pass/ComputePass.h>
 #include <CoreLights/Shadow.h>
 
 namespace AZ
@@ -17,9 +17,9 @@ namespace AZ
     {
         //! DepthExponentiationPass output exponential of depth for ESM filering.
         class DepthExponentiationPass final
-            : public RPI::ComputePass
+            : public JE::Render::RPI::ComputePass
         {
-            using Base = RPI::ComputePass;
+            using Base = JE::Render::RPI::ComputePass;
             AZ_RPI_PASS(DepthExponentiationPass);
 
         public:
@@ -27,7 +27,7 @@ namespace AZ
             AZ_CLASS_ALLOCATOR(DepthExponentiationPass, SystemAllocator);
 
             ~DepthExponentiationPass() = default;
-            static RPI::Ptr<DepthExponentiationPass> Create(const RPI::PassDescriptor& descriptor);
+            static JE::Render::RPI::Ptr<DepthExponentiationPass> Create(const JE::Render::RPI::PassDescriptor& descriptor);
 
             //! This sets the kind of shadowmaps.
             void SetShadowmapType(Shadow::ShadowmapType type);
@@ -43,7 +43,7 @@ namespace AZ
             };
 
             DepthExponentiationPass() = delete;
-            explicit DepthExponentiationPass(const RPI::PassDescriptor& descriptor);
+            explicit DepthExponentiationPass(const JE::Render::RPI::PassDescriptor& descriptor);
 
             // RPI::Pass overrides...
             void BuildInternal() override;
@@ -62,7 +62,7 @@ namespace AZ
 
             Shadow::ShadowmapType m_shadowmapType = Shadow::ShadowmapType::Directional;
             AZStd::vector<ShaderVariantInfo> m_shaderVariant;
-            RPI::ShaderVariantKey m_currentShaderVarationKeyFallbackValue;
+            JE::Render::RPI::ShaderVariantKey m_currentShaderVarationKeyFallbackValue;
 
             bool m_shaderOptionInitialized = false;
             bool m_shaderVariantNeedsUpdate = false;

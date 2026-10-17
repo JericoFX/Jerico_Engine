@@ -6,15 +6,15 @@
  *
  */
 
-#include <Atom/RPI.Reflect/Shader/ShaderVariantKey.h>
+#include <JE/Render/RPI/Reflect/Shader/ShaderVariantKey.h>
 #include <DeferredMaterial/DeferredDrawPacketManager.h>
 
 namespace AZ::Render
 {
-    auto DeferredDrawPacketManager::CalculateDrawPacketId(const RPI::Material* material, const RPI::ShaderCollection::Item& shaderItem)
+    auto DeferredDrawPacketManager::CalculateDrawPacketId(const JE::Render::RPI::Material* material, const JE::Render::RPI::ShaderCollection::Item& shaderItem)
         -> DeferredDrawPacketId
     {
-        RPI::ShaderOptionGroup shaderOptions = *shaderItem.GetShaderOptions();
+        JE::Render::RPI::ShaderOptionGroup shaderOptions = *shaderItem.GetShaderOptions();
         shaderOptions.SetUnspecifiedToDefaultValues();
         auto requestedShaderVariantId = shaderOptions.GetShaderVariantId();
 
@@ -70,7 +70,7 @@ namespace AZ::Render
     }
 
     auto DeferredDrawPacketManager::GetOrCreateDeferredDrawPacket(
-        RPI::Scene* scene, RPI::Material* material, const Name materialPipelineName, const RPI::ShaderCollection::Item& shaderItem)
+        JE::Render::RPI::Scene* scene, JE::Render::RPI::Material* material, const Name materialPipelineName, const JE::Render::RPI::ShaderCollection::Item& shaderItem)
         -> Data::Instance<DeferredDrawPacket>
     {
         auto uniqueId = CalculateDrawPacketId(material, shaderItem);

@@ -8,7 +8,7 @@
 
 #include <AzCore/Serialization/SerializeContext.h>
 #include <AzCore/Console/Console.h>
-#include <Atom/RPI.Reflect/Model/ModelAsset.h>
+#include <JE/Render/RPI/Reflect/Model/ModelAsset.h>
 
 #include <Components/ClothComponent.h>
 
@@ -72,8 +72,8 @@ namespace NvCloth
     }
 
     void ClothComponent::OnModelReady(
-        const AZ::Data::Asset<AZ::RPI::ModelAsset>& asset,
-        [[maybe_unused]] const AZ::Data::Instance<AZ::RPI::Model>& model)
+        const AZ::Data::Asset<JE::Render::RPI::ModelAsset>& asset,
+        [[maybe_unused]] const AZ::Data::Instance<JE::Render::RPI::Model>& model)
     {
         if (!asset.IsReady())
         {

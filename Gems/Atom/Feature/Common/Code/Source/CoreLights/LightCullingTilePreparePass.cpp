@@ -10,25 +10,25 @@
 
 #include <Atom/RHI/Factory.h>
 #include <Atom/RHI/DevicePipelineState.h>
-#include <Atom/RPI.Public/Pass/PassUtils.h>
-#include <Atom/RPI.Public/RenderPipeline.h>
-#include <Atom/RPI.Public/RPIUtils.h>
+#include <JE/Render/RPI/Public/Pass/PassUtils.h>
+#include <JE/Render/RPI/Public/RenderPipeline.h>
+#include <JE/Render/RPI/Public/RPIUtils.h>
 #include <Atom/RHI/RHISystemInterface.h>
-#include <Atom/RPI.Reflect/Pass/PassTemplate.h>
-#include <Atom/RPI.Public/View.h>
+#include <JE/Render/RPI/Reflect/Pass/PassTemplate.h>
+#include <JE/Render/RPI/Public/View.h>
 
 namespace AZ
 {
     namespace Render
     {
-        RPI::Ptr<LightCullingTilePreparePass> LightCullingTilePreparePass::Create(const RPI::PassDescriptor& descriptor)
+        JE::Render::RPI::Ptr<LightCullingTilePreparePass> LightCullingTilePreparePass::Create(const JE::Render::RPI::PassDescriptor& descriptor)
         {
-            RPI::Ptr<LightCullingTilePreparePass> pass = aznew LightCullingTilePreparePass(descriptor);
+            JE::Render::RPI::Ptr<LightCullingTilePreparePass> pass = aznew LightCullingTilePreparePass(descriptor);
             return pass;
         }
 
-        LightCullingTilePreparePass::LightCullingTilePreparePass(const RPI::PassDescriptor& descriptor)
-            : RPI::ComputePass(descriptor)
+        LightCullingTilePreparePass::LightCullingTilePreparePass(const JE::Render::RPI::PassDescriptor& descriptor)
+            : JE::Render::RPI::ComputePass(descriptor)
             , m_msaaNoneName("MsaaMode::None")
             , m_msaaMode2xName("MsaaMode::Msaa2x")
             , m_msaaMode4xName("MsaaMode::Msaa4x")
@@ -64,7 +64,7 @@ namespace AZ
         {
             AZ_Assert(GetInputBinding(0).m_name == AZ::Name("Depth"), "LightCullingTilePrepare: Expecting slot 0 to be the depth buffer");
 
-            const RPI::PassAttachment* attachment = GetInputBinding(0).GetAttachment().get();
+            const JE::Render::RPI::PassAttachment* attachment = GetInputBinding(0).GetAttachment().get();
             return attachment->m_descriptor.m_image.m_size;
         }
 
@@ -114,20 +114,20 @@ namespace AZ
         {
             AZ_Assert(GetInputBinding(0).m_name == AZ::Name("Depth"), "LightCullingTilePrepare: Expecting slot 0 to be the depth buffer");
 
-            const RPI::PassAttachment* attachment = GetInputBinding(0).GetAttachment().get();
+            const JE::Render::RPI::PassAttachment* attachment = GetInputBinding(0).GetAttachment().get();
             return attachment->m_descriptor.m_image.m_multisampleState;
         }
 
-        AZ::RPI::ShaderOptionGroup LightCullingTilePreparePass::CreateShaderOptionGroup()
+        JE::Render::RPI::ShaderOptionGroup LightCullingTilePreparePass::CreateShaderOptionGroup()
         {
-            RPI::ShaderOptionGroup shaderOptionGroup = m_shader->CreateShaderOptionGroup();
+            JE::Render::RPI::ShaderOptionGroup shaderOptionGroup = m_shader->CreateShaderOptionGroup();
             shaderOptionGroup.SetValue(m_msaaOptionName, GetMultiSampleName());
             shaderOptionGroup.SetUnspecifiedToDefaultValues();
             return shaderOptionGroup;
         }
 
         void LightCullingTilePreparePass::CreatePipelineStateFromShaderVariant(
-            const RPI::ShaderVariant& shaderVariant, const RPI::ShaderOptionGroup& shaderOptions)
+            const JE::Render::RPI::ShaderVariant& shaderVariant, const JE::Render::RPI::ShaderOptionGroup& shaderOptions)
         {
             AZ::RHI::PipelineStateDescriptorForDispatch pipelineStateDescriptor;
             shaderVariant.ConfigurePipelineState(pipelineStateDescriptor, shaderOptions);
@@ -135,10 +135,10 @@ namespace AZ
             AZ_Error("LightCulling", m_msaaPipelineState, "Failed to acquire pipeline state for shader");
         }
 
-        AZStd::pair<const AZ::RPI::ShaderVariant&, RPI::ShaderOptionGroup> LightCullingTilePreparePass::CreateShaderVariant()
+        AZStd::pair<const JE::Render::RPI::ShaderVariant&, JE::Render::RPI::ShaderOptionGroup> LightCullingTilePreparePass::CreateShaderVariant()
         {
-            RPI::ShaderOptionGroup shaderOptionGroup = CreateShaderOptionGroup();
-            const RPI::ShaderVariant& shaderVariant = m_shader->GetVariant(shaderOptionGroup.GetShaderVariantId());
+            JE::Render::RPI::ShaderOptionGroup shaderOptionGroup = CreateShaderOptionGroup();
+            const JE::Render::RPI::ShaderVariant& shaderVariant = m_shader->GetVariant(shaderOptionGroup.GetShaderVariantId());
 
             //Set the fallbackkey
             if (shaderVariant.UseKeyFallback() && m_drawSrg)
@@ -174,24 +174,24 @@ namespace AZ
         void LightCullingTilePreparePass::OnShaderReloaded()
         {
             LoadShader();
-            AZ_Assert(GetPassState() != RPI::PassState::Rendering, "LightCullingTilePreparePass: Trying to reload shader during rendering");
-            if (GetPassState() == RPI::PassState::Idle)
+            AZ_Assert(GetPassState() != JE::Render::RPI::PassState::Rendering, "LightCullingTilePreparePass: Trying to reload shader during rendering");
+            if (GetPassState() == JE::Render::RPI::PassState::Idle)
             {
                 ChooseShaderVariant();
             }
         }
 
-        void LightCullingTilePreparePass::OnShaderReinitialized(const AZ::RPI::Shader&)
+        void LightCullingTilePreparePass::OnShaderReinitialized(const JE::Render::RPI::Shader&)
         {
             OnShaderReloaded();
         }
 
-        void LightCullingTilePreparePass::OnShaderAssetReinitialized(const Data::Asset<AZ::RPI::ShaderAsset>&)
+        void LightCullingTilePreparePass::OnShaderAssetReinitialized(const Data::Asset<JE::Render::RPI::ShaderAsset>&)
         {
             OnShaderReloaded();
         }
 
-        void LightCullingTilePreparePass::OnShaderVariantReinitialized(const AZ::RPI::ShaderVariant&)
+        void LightCullingTilePreparePass::OnShaderVariantReinitialized(const JE::Render::RPI::ShaderVariant&)
         {
             OnShaderReloaded();
         }

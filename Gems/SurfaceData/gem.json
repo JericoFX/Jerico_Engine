@@ -21,7 +21,6 @@
     "documentation_url": "https://www.o3de.org/docs/user-guide/gems/reference/environment/surface-data/",
     "dependencies": [
         "LmbrCentral",
-        "Atom_RPI",
         "Atom_Feature_Common"
     ]
 }

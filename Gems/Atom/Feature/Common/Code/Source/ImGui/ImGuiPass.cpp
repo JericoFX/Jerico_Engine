@@ -19,13 +19,13 @@
 
 #include <Atom/RHI.Reflect/InputStreamLayoutBuilder.h>
 
-#include <Atom/RPI.Public/DynamicDraw/DynamicDrawInterface.h>
-#include <Atom/RPI.Public/Image/ImageSystemInterface.h>
-#include <Atom/RPI.Public/Image/StreamingImagePool.h>
-#include <Atom/RPI.Public/Pass/PassUtils.h>
-#include <Atom/RPI.Public/RenderPipeline.h>
-#include <Atom/RPI.Public/RPIUtils.h>
-#include <Atom/RPI.Public/Scene.h>
+#include <JE/Render/RPI/Public/DynamicDraw/DynamicDrawInterface.h>
+#include <JE/Render/RPI/Public/Image/ImageSystemInterface.h>
+#include <JE/Render/RPI/Public/Image/StreamingImagePool.h>
+#include <JE/Render/RPI/Public/Pass/PassUtils.h>
+#include <JE/Render/RPI/Public/RenderPipeline.h>
+#include <JE/Render/RPI/Public/RPIUtils.h>
+#include <JE/Render/RPI/Public/Scene.h>
 
 #include <Atom_Feature_Traits_Platform.h>
 #include <Atom/Feature/ImGui/SystemBus.h>
@@ -58,19 +58,19 @@ namespace AZ
             ImGuiContext* m_savedContext = nullptr;
         };
 
-        RPI::Ptr<Render::ImGuiPass> ImGuiPass::Create(const RPI::PassDescriptor& descriptor)
+        JE::Render::RPI::Ptr<Render::ImGuiPass> ImGuiPass::Create(const JE::Render::RPI::PassDescriptor& descriptor)
         {
             return aznew ImGuiPass(descriptor);
         }
 
-        ImGuiPass::ImGuiPass(const RPI::PassDescriptor& descriptor)
+        ImGuiPass::ImGuiPass(const JE::Render::RPI::PassDescriptor& descriptor)
             : Base(descriptor)
             , AzFramework::InputChannelEventListener(AzFramework::InputChannelEventListener::GetPriorityDebugUI() - 1) // Give ImGui manager priority over the pass
             , AzFramework::InputTextEventListener(AzFramework::InputTextEventListener::GetPriorityDebugUI() - 1) // Give ImGui manager priority over the pass
             , m_tickHandlerFrameStart(*this)
             , m_tickHandlerFrameEnd(*this)
         {
-            const ImGuiPassData* imguiPassData = RPI::PassUtils::GetPassData<ImGuiPassData>(descriptor);
+            const ImGuiPassData* imguiPassData = JE::Render::RPI::PassUtils::GetPassData<ImGuiPassData>(descriptor);
             m_requestedAsDefaultImguiPass = imguiPassData != nullptr ? imguiPassData->m_isDefaultImGui : false;
         }
 
@@ -458,9 +458,9 @@ namespace AZ
             }
 
             {
-                m_shader = RPI::LoadCriticalShader(ImguiShaderFilePath);
+                m_shader = JE::Render::RPI::LoadCriticalShader(ImguiShaderFilePath);
 
-                m_pipelineState = aznew RPI::PipelineStateForDraw;
+                m_pipelineState = aznew JE::Render::RPI::PipelineStateForDraw;
                 m_pipelineState->Init(m_shader);
 
                 RHI::InputStreamLayoutBuilder layoutBuilder;
@@ -476,14 +476,14 @@ namespace AZ
 
             // Get shader resource group
             {
-                auto perPassSrgLayout = m_shader->FindShaderResourceGroupLayout(RPI::SrgBindingSlot::Pass);
+                auto perPassSrgLayout = m_shader->FindShaderResourceGroupLayout(JE::Render::RPI::SrgBindingSlot::Pass);
                 if (!perPassSrgLayout)
                 {
                     AZ_Error(PassName, false, "Failed to get shader resource group layout");
                     return;
                 }
 
-                m_resourceGroup = RPI::ShaderResourceGroup::Create(m_shader->GetAsset(), m_shader->GetSupervariantIndex(), perPassSrgLayout->GetName());
+                m_resourceGroup = JE::Render::RPI::ShaderResourceGroup::Create(m_shader->GetAsset(), m_shader->GetSupervariantIndex(), perPassSrgLayout->GetName());
                 if (!m_resourceGroup)
                 {
                     AZ_Error(PassName, false, "Failed to create shader resource group");
@@ -493,7 +493,7 @@ namespace AZ
 
             // Find or create font atlas
             const char* FontAtlasName = "ImGuiFontAtlas";
-            m_fontAtlas = Data::InstanceDatabase<RPI::StreamingImage>::Instance().Find(Data::InstanceId::CreateName(FontAtlasName));
+            m_fontAtlas = Data::InstanceDatabase<JE::Render::RPI::StreamingImage>::Instance().Find(Data::InstanceId::CreateName(FontAtlasName));
             if (!m_fontAtlas)
             {
                 uint8_t* pixels;
@@ -508,10 +508,10 @@ namespace AZ
                 imageSize.m_width = aznumeric_cast<uint32_t>(width);
                 imageSize.m_height = aznumeric_cast<uint32_t>(height);
 
-                Data::Instance<RPI::StreamingImagePool> streamingImagePool = RPI::ImageSystemInterface::Get()->GetSystemStreamingPool();
+                Data::Instance<JE::Render::RPI::StreamingImagePool> streamingImagePool = JE::Render::RPI::ImageSystemInterface::Get()->GetSystemStreamingPool();
 
                 // CreateFromCpuData will add the image to the instance database.
-                m_fontAtlas = RPI::StreamingImage::CreateFromCpuData(*streamingImagePool, RHI::ImageDimension::Image2D, imageSize, RHI::Format::R8G8B8A8_UNORM_SRGB, pixels, pixelDataSize, Uuid::CreateName(FontAtlasName));
+                m_fontAtlas = JE::Render::RPI::StreamingImage::CreateFromCpuData(*streamingImagePool, RHI::ImageDimension::Image2D, imageSize, RHI::Format::R8G8B8A8_UNORM_SRGB, pixels, pixelDataSize, Uuid::CreateName(FontAtlasName));
                 AZ_Error(PassName, m_fontAtlas, "Failed to initialize the ImGui font image!");
             }
             else
@@ -528,13 +528,13 @@ namespace AZ
 
             // ImGuiPass will support binding 16 textures at most per frame. 
             const uint32_t instanceData[16] = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 };
-            RPI::CommonBufferDescriptor desc;
-            desc.m_poolType = RPI::CommonBufferPoolType::StaticInputAssembly;
+            JE::Render::RPI::CommonBufferDescriptor desc;
+            desc.m_poolType = JE::Render::RPI::CommonBufferPoolType::StaticInputAssembly;
             desc.m_bufferName = "InstanceBuffer";
             desc.m_elementSize = 4;
             desc.m_byteCount = 64;
             desc.m_bufferData = instanceData;
-            m_instanceBuffer = RPI::BufferSystemInterface::Get()->CreateBufferFromCommonPool(desc);
+            m_instanceBuffer = JE::Render::RPI::BufferSystemInterface::Get()->CreateBufferFromCommonPool(desc);
             m_instanceBufferView = RHI::StreamBufferView(
                 *m_instanceBuffer->GetRHIBuffer(),
                 0,
@@ -627,7 +627,7 @@ namespace AZ
                         {
                             if (m_userTextures.size() < MaxUserTextures)
                             {
-                                Data::Instance<RPI::StreamingImage> img = reinterpret_cast<RPI::StreamingImage*>(drawCmd.TextureId);
+                                Data::Instance<JE::Render::RPI::StreamingImage> img = reinterpret_cast<JE::Render::RPI::StreamingImage*>(drawCmd.TextureId);
                                 // Texture index 0 is reserved for the font atlas, so we start from 1 to 15 for user textures.
                                 index = aznumeric_cast<uint32_t>(m_userTextures.size() + 1);
                                 m_userTextures[img.get()] = index;
@@ -724,8 +724,8 @@ namespace AZ
                 return 0; // Nothing to draw.
             }
 
-            auto vertexBuffer = RPI::DynamicDrawInterface::Get()->GetDynamicBuffer(totalVtxBufferSize, RHI::Alignment::InputAssembly);
-            auto indexBuffer = RPI::DynamicDrawInterface::Get()->GetDynamicBuffer(totalIdxBufferSize, RHI::Alignment::InputAssembly);
+            auto vertexBuffer = JE::Render::RPI::DynamicDrawInterface::Get()->GetDynamicBuffer(totalVtxBufferSize, RHI::Alignment::InputAssembly);
+            auto indexBuffer = JE::Render::RPI::DynamicDrawInterface::Get()->GetDynamicBuffer(totalIdxBufferSize, RHI::Alignment::InputAssembly);
 
             if (!vertexBuffer || !indexBuffer)
             {

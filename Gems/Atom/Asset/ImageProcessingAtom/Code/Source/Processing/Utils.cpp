@@ -7,8 +7,8 @@
  */
 
 
-#include <Atom/RPI.Reflect/Image/StreamingImageAsset.h>
-#include <Atom/RPI.Reflect/Image/StreamingImageAssetHandler.h>
+#include <JE/Render/RPI/Reflect/Image/StreamingImageAsset.h>
+#include <JE/Render/RPI/Reflect/Image/StreamingImageAssetHandler.h>
 #include <Atom/Utils/DdsFile.h>
 #include <AzFramework/StringFunc/StringFunc.h>
 
@@ -242,7 +242,7 @@ namespace ImageProcessingAtom
             }
         }
 
-        IImageObjectPtr LoadImageFromImageAsset(const AZ::Data::Asset<AZ::RPI::StreamingImageAsset>& imageAsset)
+        IImageObjectPtr LoadImageFromImageAsset(const AZ::Data::Asset<JE::Render::RPI::StreamingImageAsset>& imageAsset)
         {
             if (!imageAsset.IsReady())
             {
@@ -296,10 +296,10 @@ namespace ImageProcessingAtom
             return outputImage;
         }
 
-        AZ::Data::Asset<AZ::RPI::StreamingImageAsset> LoadImageAsset(const AZ::Data::AssetId& imageAssetId)
+        AZ::Data::Asset<JE::Render::RPI::StreamingImageAsset> LoadImageAsset(const AZ::Data::AssetId& imageAssetId)
         {
             // Blocking loading streaming image asset with its mipchain assets
-            AZ::Data::Asset<AZ::RPI::StreamingImageAsset> imageAsset = AZ::Data::AssetManager::Instance().GetAsset<AZ::RPI::StreamingImageAsset>(imageAssetId,
+            AZ::Data::Asset<JE::Render::RPI::StreamingImageAsset> imageAsset = AZ::Data::AssetManager::Instance().GetAsset<JE::Render::RPI::StreamingImageAsset>(imageAssetId,
                 AZ::Data::AssetLoadBehavior::PreLoad, AZ::Data::AssetLoadParameters(nullptr, AZ::Data::AssetDependencyLoadRules::LoadAll));
 
             imageAsset.BlockUntilLoadComplete();
@@ -404,7 +404,7 @@ namespace ImageProcessingAtom
 
         void AsyncImageAssetLoader::QueueAsset(const AZ::Data::AssetId& assetId, const Callback& callback)
         {
-             AZ::Data::Asset<AZ::RPI::StreamingImageAsset> asset;
+             AZ::Data::Asset<JE::Render::RPI::StreamingImageAsset> asset;
              asset.Create(assetId, AZ::Data::AssetLoadBehavior::PreLoad, true);
              m_assetCallbackMap.emplace(assetId, AssetCallbackPair{ asset, callback });
              AZ::Data::AssetBus::MultiHandler::BusConnect(assetId);

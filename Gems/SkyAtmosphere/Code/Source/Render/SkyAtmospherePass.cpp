@@ -8,30 +8,30 @@
 
 #include <Render/SkyAtmospherePass.h>
 #include <Render/SkyAtmosphereParentPass.h>
-#include <Atom/RPI.Public/Image/AttachmentImagePool.h>
-#include <Atom/RPI.Public/Image/ImageSystemInterface.h>
-#include <Atom/RPI.Reflect/Pass/PassName.h>
-#include <Atom/RPI.Reflect/Shader/ShaderAsset.h>
-#include <Atom/RPI.Public/RPIUtils.h>
-#include <Atom/RPI.Public/Pass/FullscreenTrianglePass.h>
-#include <Atom/RPI.Public/Pass/ComputePass.h>
+#include <JE/Render/RPI/Public/Image/AttachmentImagePool.h>
+#include <JE/Render/RPI/Public/Image/ImageSystemInterface.h>
+#include <JE/Render/RPI/Reflect/Pass/PassName.h>
+#include <JE/Render/RPI/Reflect/Shader/ShaderAsset.h>
+#include <JE/Render/RPI/Public/RPIUtils.h>
+#include <JE/Render/RPI/Public/Pass/FullscreenTrianglePass.h>
+#include <JE/Render/RPI/Public/Pass/ComputePass.h>
 
 namespace SkyAtmosphere
 {
-    SkyAtmospherePass::SkyAtmospherePass(const AZ::RPI::PassDescriptor& descriptor, SkyAtmosphereFeatureProcessorInterface::AtmosphereId id)
-        : AZ::RPI::ParentPass(descriptor)
+    SkyAtmospherePass::SkyAtmospherePass(const JE::Render::RPI::PassDescriptor& descriptor, SkyAtmosphereFeatureProcessorInterface::AtmosphereId id)
+        : JE::Render::RPI::ParentPass(descriptor)
         , m_atmosphereId(id)
     {
     }
 
-    AZ::RPI::Ptr<SkyAtmospherePass> SkyAtmospherePass::CreateWithPassRequest(SkyAtmosphereFeatureProcessorInterface::AtmosphereId id)
+    JE::Render::RPI::Ptr<SkyAtmospherePass> SkyAtmospherePass::CreateWithPassRequest(SkyAtmosphereFeatureProcessorInterface::AtmosphereId id)
     {
         // Create a pass request for the descriptor so we can connect it to the parent class input connections
-        AZ::RPI::PassRequest childRequest;
+        JE::Render::RPI::PassRequest childRequest;
         childRequest.m_templateName = AZ::Name{ "SkyAtmosphereTemplate" };
         childRequest.m_passName = AZ::Name( AZStd::string::format("SkyAtmospherePass.%hu", id.GetIndex()) );
 
-        AZ::RPI::PassConnection passConnection;
+        JE::Render::RPI::PassConnection passConnection;
         passConnection.m_localSlot = AZ::Name{ "SpecularInputOutput" };
         passConnection.m_attachmentRef.m_pass = AZ::Name{ "Parent" };
         passConnection.m_attachmentRef.m_attachment = AZ::Name{ "SpecularInputOutput" };
@@ -53,24 +53,24 @@ namespace SkyAtmosphere
         passConnection.m_attachmentRef.m_attachment = AZ::Name{ "DirectionalESM" };
         childRequest.m_connections.emplace_back(passConnection);
 
-        const AZStd::shared_ptr<const AZ::RPI::PassTemplate> childTemplate =
-            AZ::RPI::PassSystemInterface::Get()->GetPassTemplate(childRequest.m_templateName);
+        const AZStd::shared_ptr<const JE::Render::RPI::PassTemplate> childTemplate =
+            JE::Render::RPI::PassSystemInterface::Get()->GetPassTemplate(childRequest.m_templateName);
         AZ_Assert(
             childTemplate,
             "SkyAtmospherePass::CreateWithPassRequest - attempting to create a pass before the template has been created.");
 
-        AZ::RPI::PassDescriptor descriptor{ childRequest.m_passName, childTemplate, &childRequest };
+        JE::Render::RPI::PassDescriptor descriptor{ childRequest.m_passName, childTemplate, &childRequest };
         return aznew SkyAtmospherePass(descriptor, id);
     }
 
     void SkyAtmospherePass::CreateImage(const AZ::Name& slotName, const AZ::RHI::ImageDescriptor& desc, ImageInstance& image)
     {
         // we need a unique AZ::Name because there may be multiple sky parent passes
-        AZStd::string imageName = AZ::RPI::ConcatPassString(GetPathName(), slotName);
+        AZStd::string imageName = JE::Render::RPI::ConcatPassString(GetPathName(), slotName);
         AZ::RHI::ClearValue clearValue = AZ::RHI::ClearValue::CreateVector4Float(0, 0, 0, 0);
 
-        AZ::Data::Instance<AZ::RPI::AttachmentImagePool> pool = AZ::RPI::ImageSystemInterface::Get()->GetSystemAttachmentPool();
-        image = AZ::RPI::AttachmentImage::Create(*pool.get(), desc, AZ::Name(imageName), &clearValue, nullptr);
+        AZ::Data::Instance<JE::Render::RPI::AttachmentImagePool> pool = JE::Render::RPI::ImageSystemInterface::Get()->GetSystemAttachmentPool();
+        image = JE::Render::RPI::AttachmentImage::Create(*pool.get(), desc, AZ::Name(imageName), &clearValue, nullptr);
     }
 
     void SkyAtmospherePass::BindLUTs()
@@ -153,7 +153,7 @@ namespace SkyAtmosphere
 
         for (auto child : m_children)
         {
-            if (AZ::RPI::RenderPass* renderPass = azrtti_cast<AZ::RPI::RenderPass*>(child.get()))
+            if (JE::Render::RPI::RenderPass* renderPass = azrtti_cast<JE::Render::RPI::RenderPass*>(child.get()))
             {
                 auto srg = renderPass->GetShaderResourceGroup();
                 if (!srg)
@@ -167,12 +167,12 @@ namespace SkyAtmosphere
                     continue;
                 }
 
-                AZ::Data::Instance<AZ::RPI::Shader> shader;
-                if (auto fullscreenPass = azrtti_cast<AZ::RPI::FullscreenTrianglePass*>(renderPass); fullscreenPass != nullptr)
+                AZ::Data::Instance<JE::Render::RPI::Shader> shader;
+                if (auto fullscreenPass = azrtti_cast<JE::Render::RPI::FullscreenTrianglePass*>(renderPass); fullscreenPass != nullptr)
                 {
                     shader = fullscreenPass->GetShader();
                 }
-                else if (auto computePass = azrtti_cast<AZ::RPI::ComputePass*>(renderPass); computePass != nullptr)
+                else if (auto computePass = azrtti_cast<JE::Render::RPI::ComputePass*>(renderPass); computePass != nullptr)
                 {
                     shader = computePass->GetShader();
                 }
@@ -182,7 +182,7 @@ namespace SkyAtmosphere
                     continue;
                 }
 
-                AZ::RPI::ShaderOptionGroup shaderOptionGroup = shader->CreateShaderOptionGroup();
+                JE::Render::RPI::ShaderOptionGroup shaderOptionGroup = shader->CreateShaderOptionGroup();
                 m_atmospherePassData.push_back({ index, srg, AZStd::move(shaderOptionGroup) });
             }
         }
@@ -212,18 +212,18 @@ namespace SkyAtmosphere
         {
             passData.m_srg->SetConstant(passData.m_index, m_constants);
 
-            passData.m_shaderOptionGroup.SetValue(AZ::Name("o_enableShadows"), AZ::RPI::ShaderOptionValue{ m_enableShadows });
-            passData.m_shaderOptionGroup.SetValue(AZ::Name("o_enableFastSky"), AZ::RPI::ShaderOptionValue{ m_enableFastSky });
-            passData.m_shaderOptionGroup.SetValue(AZ::Name("o_enableSun"), AZ::RPI::ShaderOptionValue{ m_enableSun });
-            passData.m_shaderOptionGroup.SetValue(AZ::Name("o_enableFastAerialPerspective"), AZ::RPI::ShaderOptionValue{ m_fastAerialPerspectiveEnabled });
-            passData.m_shaderOptionGroup.SetValue(AZ::Name("o_enableAerialPerspective"), AZ::RPI::ShaderOptionValue{ m_aerialPerspectiveEnabled });
+            passData.m_shaderOptionGroup.SetValue(AZ::Name("o_enableShadows"), JE::Render::RPI::ShaderOptionValue{ m_enableShadows });
+            passData.m_shaderOptionGroup.SetValue(AZ::Name("o_enableFastSky"), JE::Render::RPI::ShaderOptionValue{ m_enableFastSky });
+            passData.m_shaderOptionGroup.SetValue(AZ::Name("o_enableSun"), JE::Render::RPI::ShaderOptionValue{ m_enableSun });
+            passData.m_shaderOptionGroup.SetValue(AZ::Name("o_enableFastAerialPerspective"), JE::Render::RPI::ShaderOptionValue{ m_fastAerialPerspectiveEnabled });
+            passData.m_shaderOptionGroup.SetValue(AZ::Name("o_enableAerialPerspective"), JE::Render::RPI::ShaderOptionValue{ m_aerialPerspectiveEnabled });
 
             const auto& pass = m_children[childIndex];
-            if (auto fullscreenPass = azrtti_cast<AZ::RPI::FullscreenTrianglePass*>(pass); fullscreenPass != nullptr)
+            if (auto fullscreenPass = azrtti_cast<JE::Render::RPI::FullscreenTrianglePass*>(pass); fullscreenPass != nullptr)
             {
                 fullscreenPass->UpdateShaderOptions(passData.m_shaderOptionGroup.GetShaderVariantId());
             }
-            else if (auto computePass = azrtti_cast<AZ::RPI::ComputePass*>(pass); computePass != nullptr)
+            else if (auto computePass = azrtti_cast<JE::Render::RPI::ComputePass*>(pass); computePass != nullptr)
             {
                 computePass->UpdateShaderOptions(passData.m_shaderOptionGroup.GetShaderVariantId());
             }
@@ -245,7 +245,7 @@ namespace SkyAtmosphere
         // SRG may change due to a shader reload
         for (int i = 0; i < m_atmospherePassData.size(); ++i)
         {
-            if (AZ::RPI::RenderPass* renderPass = azrtti_cast<AZ::RPI::RenderPass*>(m_children[i].get()))
+            if (JE::Render::RPI::RenderPass* renderPass = azrtti_cast<JE::Render::RPI::RenderPass*>(m_children[i].get()))
             {
                 auto srg = renderPass->GetShaderResourceGroup();
                 if (m_atmospherePassData[i].m_srg != srg)
@@ -258,7 +258,7 @@ namespace SkyAtmosphere
         return false;
     }
 
-    void SkyAtmospherePass::FrameBeginInternal(AZ::RPI::Pass::FramePrepareParams params)
+    void SkyAtmospherePass::FrameBeginInternal(JE::Render::RPI::Pass::FramePrepareParams params)
     {
         if (NeedsShaderDataRebuild())
         {

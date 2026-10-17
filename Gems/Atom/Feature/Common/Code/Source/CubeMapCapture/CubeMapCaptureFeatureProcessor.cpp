@@ -8,7 +8,7 @@
 
 #include <CubeMapCapture/CubeMapCaptureFeatureProcessor.h>
 #include <AzCore/Serialization/SerializeContext.h>
-#include <Atom/RPI.Public/Scene.h>
+#include <JE/Render/RPI/Public/Scene.h>
 
 namespace AZ
 {
@@ -123,10 +123,10 @@ namespace AZ
             cubeMapCapture->SetRelativePath(relativePath);
         }
 
-        void CubeMapCaptureFeatureProcessor::OnRenderPipelineChanged(RPI::RenderPipeline* renderPipeline,
-                RPI::SceneNotification::RenderPipelineChangeType changeType)
+        void CubeMapCaptureFeatureProcessor::OnRenderPipelineChanged(JE::Render::RPI::RenderPipeline* renderPipeline,
+                JE::Render::RPI::SceneNotification::RenderPipelineChangeType changeType)
         {
-            if (changeType == RPI::SceneNotification::RenderPipelineChangeType::PassChanged)
+            if (changeType == JE::Render::RPI::SceneNotification::RenderPipelineChangeType::PassChanged)
             {
                 for (auto& cubeMapCapture : m_cubeMapCaptures)
                 {

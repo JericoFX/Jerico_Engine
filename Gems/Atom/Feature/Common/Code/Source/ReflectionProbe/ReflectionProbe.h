@@ -12,13 +12,13 @@
 #include <Atom/Feature/RenderCommon.h>
 #include <Atom/Feature/Mesh/MeshFeatureProcessorInterface.h>
 #include <Atom/RHI/GeometryView.h>
-#include <Atom/RPI.Public/Base.h>
-#include <Atom/RPI.Public/Model/Model.h>
-#include <Atom/RPI.Public/MeshDrawPacket.h>
-#include <Atom/RPI.Public/Pass/Specific/EnvironmentCubeMapPass.h>
-#include <Atom/RPI.Public/PipelineState.h>
-#include <Atom/RPI.Public/Shader/ShaderResourceGroup.h>
-#include <Atom/RPI.Public/Scene.h>
+#include <JE/Render/RPI/Public/Base.h>
+#include <JE/Render/RPI/Public/Model/Model.h>
+#include <JE/Render/RPI/Public/MeshDrawPacket.h>
+#include <JE/Render/RPI/Public/Pass/Specific/EnvironmentCubeMapPass.h>
+#include <JE/Render/RPI/Public/PipelineState.h>
+#include <JE/Render/RPI/Public/Shader/ShaderResourceGroup.h>
+#include <JE/Render/RPI/Public/Scene.h>
 #include <CubeMapCapture/CubeMapRenderer.h>
 
 namespace AZ
@@ -30,21 +30,21 @@ namespace AZ
         {
             RHI::GeometryView m_geometryView{ RHI::MultiDevice::AllDevices };
 
-            RPI::Ptr<RPI::PipelineStateForDraw> m_stencilPipelineState;
-            RPI::Ptr<RPI::PipelineStateForDraw> m_blendWeightPipelineState;
-            RPI::Ptr<RPI::PipelineStateForDraw> m_renderOuterPipelineState;
-            RPI::Ptr<RPI::PipelineStateForDraw> m_renderInnerPipelineState;
+            JE::Render::RPI::Ptr<JE::Render::RPI::PipelineStateForDraw> m_stencilPipelineState;
+            JE::Render::RPI::Ptr<JE::Render::RPI::PipelineStateForDraw> m_blendWeightPipelineState;
+            JE::Render::RPI::Ptr<JE::Render::RPI::PipelineStateForDraw> m_renderOuterPipelineState;
+            JE::Render::RPI::Ptr<JE::Render::RPI::PipelineStateForDraw> m_renderInnerPipelineState;
 
-            Data::Instance<RPI::Shader> m_stencilShader;
+            Data::Instance<JE::Render::RPI::Shader> m_stencilShader;
             RHI::Ptr<RHI::ShaderResourceGroupLayout> m_stencilSrgLayout;
 
-            Data::Instance<RPI::Shader> m_blendWeightShader;
+            Data::Instance<JE::Render::RPI::Shader> m_blendWeightShader;
             RHI::Ptr<RHI::ShaderResourceGroupLayout> m_blendWeightSrgLayout;
 
-            Data::Instance<RPI::Shader> m_renderOuterShader;
+            Data::Instance<JE::Render::RPI::Shader> m_renderOuterShader;
             RHI::Ptr<RHI::ShaderResourceGroupLayout> m_renderOuterSrgLayout;
 
-            Data::Instance<RPI::Shader> m_renderInnerShader;
+            Data::Instance<JE::Render::RPI::Shader> m_renderInnerShader;
             RHI::Ptr<RHI::ShaderResourceGroupLayout> m_renderInnerSrgLayout;
 
             RHI::DrawListTag m_stencilDrawListTag;
@@ -71,7 +71,7 @@ namespace AZ
             ReflectionProbe() = default;
             ~ReflectionProbe();
 
-            void Init(RPI::Scene* scene, ReflectionRenderData* reflectionRenderData);
+            void Init(JE::Render::RPI::Scene* scene, ReflectionRenderData* reflectionRenderData);
             void Simulate(uint32_t probeIndex);
             void OnRenderEnd();
 
@@ -88,8 +88,8 @@ namespace AZ
             const Obb& GetOuterObbWs() const { return m_outerObbWs; }
             const Obb& GetInnerObbWs() const { return m_innerObbWs; }
 
-            const Data::Instance<RPI::Image>& GetCubeMapImage() const { return m_cubeMapImage; }
-            void SetCubeMapImage(const Data::Instance<RPI::Image>& cubeMapImage, const AZStd::string& relativePath);
+            const Data::Instance<JE::Render::RPI::Image>& GetCubeMapImage() const { return m_cubeMapImage; }
+            void SetCubeMapImage(const Data::Instance<JE::Render::RPI::Image>& cubeMapImage, const AZStd::string& relativePath);
 
             const AZStd::string& GetCubeMapRelativePath() const { return m_cubeMapRelativePath; }
 
@@ -102,7 +102,7 @@ namespace AZ
             void Bake(RenderCubeMapCallback callback);
 
             // called by the feature processor so the probe can set the default view for the pipeline
-            void OnRenderPipelinePassesChanged(RPI::RenderPipeline* renderPipeline);
+            void OnRenderPipelinePassesChanged(JE::Render::RPI::RenderPipeline* renderPipeline);
 
             // enables or disables rendering of the visualization sphere
             void ShowVisualization(bool showVisualization);
@@ -120,8 +120,8 @@ namespace AZ
             AZ_DISABLE_COPY_MOVE(ReflectionProbe);
 
             RHI::ConstPtr<RHI::DrawPacket> BuildDrawPacket(
-                const Data::Instance<RPI::ShaderResourceGroup>& srg,
-                const RPI::Ptr<RPI::PipelineStateForDraw>& pipelineState,
+                const Data::Instance<JE::Render::RPI::ShaderResourceGroup>& srg,
+                const JE::Render::RPI::Ptr<JE::Render::RPI::PipelineStateForDraw>& pipelineState,
                 const RHI::DrawListTag& drawListTag,
                 uint32_t stencilRef);
 
@@ -132,7 +132,7 @@ namespace AZ
             void OnAssetError(Data::Asset<Data::AssetData> asset) override;
 
             // scene
-            RPI::Scene* m_scene = nullptr;
+            JE::Render::RPI::Scene* m_scene = nullptr;
 
             // probe volume transform
             AZ::Transform m_transform = AZ::Transform::CreateIdentity();
@@ -146,22 +146,22 @@ namespace AZ
             Obb m_innerObbWs;
 
             // cubemap
-            Data::Instance<RPI::Image> m_cubeMapImage;
+            Data::Instance<JE::Render::RPI::Image> m_cubeMapImage;
             AZStd::string m_cubeMapRelativePath;
             bool m_useParallaxCorrection = false;
 
             // probe visualization
             AZ::Render::MeshFeatureProcessorInterface* m_meshFeatureProcessor = nullptr;
-            Data::Asset<RPI::ModelAsset> m_visualizationModelAsset;
-            Data::Asset<RPI::MaterialAsset> m_visualizationMaterialAsset;
+            Data::Asset<JE::Render::RPI::ModelAsset> m_visualizationModelAsset;
+            Data::Asset<JE::Render::RPI::MaterialAsset> m_visualizationMaterialAsset;
             AZ::Render::MeshFeatureProcessorInterface::MeshHandle m_visualizationMeshHandle;
 
             // reflection rendering
             ReflectionRenderData* m_reflectionRenderData = nullptr;
-            Data::Instance<RPI::ShaderResourceGroup> m_stencilSrg;
-            Data::Instance<RPI::ShaderResourceGroup> m_blendWeightSrg;
-            Data::Instance<RPI::ShaderResourceGroup> m_renderOuterSrg;
-            Data::Instance<RPI::ShaderResourceGroup> m_renderInnerSrg;
+            Data::Instance<JE::Render::RPI::ShaderResourceGroup> m_stencilSrg;
+            Data::Instance<JE::Render::RPI::ShaderResourceGroup> m_blendWeightSrg;
+            Data::Instance<JE::Render::RPI::ShaderResourceGroup> m_renderOuterSrg;
+            Data::Instance<JE::Render::RPI::ShaderResourceGroup> m_renderInnerSrg;
             RHI::ConstPtr<RHI::DrawPacket> m_stencilDrawPacket;
             RHI::ConstPtr<RHI::DrawPacket> m_blendWeightDrawPacket;
             RHI::ConstPtr<RHI::DrawPacket> m_renderOuterDrawPacket;
@@ -174,7 +174,7 @@ namespace AZ
             RHI::DrawItemSortKey m_sortKey = InvalidSortKey;
 
             // culling
-            RPI::Cullable m_cullable;
+            JE::Render::RPI::Cullable m_cullable;
             AZ::Uuid m_uuid = AZ::Uuid::Create();
         };
 

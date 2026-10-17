@@ -11,7 +11,7 @@
 #include <TerrainSystem/TerrainSystem.h>
 #include <Components/TerrainSurfaceGradientListComponent.h>
 
-#include <Atom/RPI.Public/Image/ImageSystem.h>
+#include <JE/Render/RPI/Public/Image/ImageSystem.h>
 #include <Common/RHI/Factory.h>
 #include <Common/RHI/Stubs.h>
 

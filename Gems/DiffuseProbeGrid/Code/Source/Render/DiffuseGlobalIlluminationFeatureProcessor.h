@@ -38,7 +38,7 @@ namespace AZ
             AZ_DISABLE_COPY_MOVE(DiffuseGlobalIlluminationFeatureProcessor);
 
             // RPI::SceneNotificationBus::Handler overrides
-            void OnRenderPipelineChanged(AZ::RPI::RenderPipeline* pipeline, AZ::RPI::SceneNotification::RenderPipelineChangeType changeType) override;
+            void OnRenderPipelineChanged(JE::Render::RPI::RenderPipeline* pipeline, JE::Render::RPI::SceneNotification::RenderPipelineChangeType changeType) override;
 
             void UpdatePasses();
 

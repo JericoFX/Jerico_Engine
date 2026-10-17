@@ -10,10 +10,10 @@
 
 #include <JE/Editor/Materials/Base.h>
 
-#include <Atom/RPI.Edit/Material/MaterialSourceData.h>
-#include <Atom/RPI.Edit/Material/MaterialTypeSourceData.h>
-#include <Atom/RPI.Reflect/Material/MaterialAsset.h>
-#include <Atom/RPI.Reflect/Material/MaterialTypeAsset.h>
+#include <JE/Editor/Render/RPI/Edit/Material/MaterialSourceData.h>
+#include <JE/Editor/Render/RPI/Edit/Material/MaterialTypeSourceData.h>
+#include <JE/Render/RPI/Reflect/Material/MaterialAsset.h>
+#include <JE/Render/RPI/Reflect/Material/MaterialTypeAsset.h>
 #include <JE/Render/Materials/MaterialAssignment.h>
 #include <AzCore/Asset/AssetCommon.h>
 #include <AzCore/std/string/string.h>
@@ -42,11 +42,11 @@ namespace JE
             struct JE_EDITOR_MATERIALS_API MaterialEditData
             {
                 AZ::Data::AssetId m_materialAssetId = {};
-                AZ::Data::Asset<AZ::RPI::MaterialAsset> m_materialAsset = {};
-                AZ::Data::Asset<AZ::RPI::MaterialTypeAsset> m_materialTypeAsset = {};
-                AZ::Data::Asset<AZ::RPI::MaterialAsset> m_materialParentAsset = {};
-                AZ::RPI::MaterialSourceData m_materialSourceData;
-                AZ::RPI::MaterialTypeSourceData m_materialTypeSourceData;
+                AZ::Data::Asset<JE::Render::RPI::MaterialAsset> m_materialAsset = {};
+                AZ::Data::Asset<JE::Render::RPI::MaterialTypeAsset> m_materialTypeAsset = {};
+                AZ::Data::Asset<JE::Render::RPI::MaterialAsset> m_materialParentAsset = {};
+                JE::Render::RPI::MaterialSourceData m_materialSourceData;
+                JE::Render::RPI::MaterialTypeSourceData m_materialTypeSourceData;
                 AZStd::string m_materialSourcePath;
                 AZStd::string m_materialTypeSourcePath;
                 AZStd::string m_originalMaterialTypeSourcePath;

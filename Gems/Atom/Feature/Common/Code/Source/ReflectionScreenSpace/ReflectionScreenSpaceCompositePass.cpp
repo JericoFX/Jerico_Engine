@@ -8,24 +8,24 @@
 
 #include "ReflectionScreenSpaceCompositePass.h"
 #include "ReflectionScreenSpaceBlurPass.h"
-#include <Atom/RPI.Public/Pass/PassSystemInterface.h>
-#include <Atom/RPI.Public/Pass/PassFilter.h>
-#include <Atom/RPI.Public/RenderPipeline.h>
-#include <Atom/RPI.Public/Scene.h>
+#include <JE/Render/RPI/Public/Pass/PassSystemInterface.h>
+#include <JE/Render/RPI/Public/Pass/PassFilter.h>
+#include <JE/Render/RPI/Public/RenderPipeline.h>
+#include <JE/Render/RPI/Public/Scene.h>
 #include <Atom/Feature/SpecularReflections/SpecularReflectionsFeatureProcessorInterface.h>
 
 namespace AZ
 {
     namespace Render
     {
-        RPI::Ptr<ReflectionScreenSpaceCompositePass> ReflectionScreenSpaceCompositePass::Create(const RPI::PassDescriptor& descriptor)
+        JE::Render::RPI::Ptr<ReflectionScreenSpaceCompositePass> ReflectionScreenSpaceCompositePass::Create(const JE::Render::RPI::PassDescriptor& descriptor)
         {
-            RPI::Ptr<ReflectionScreenSpaceCompositePass> pass = aznew ReflectionScreenSpaceCompositePass(descriptor);
+            JE::Render::RPI::Ptr<ReflectionScreenSpaceCompositePass> pass = aznew ReflectionScreenSpaceCompositePass(descriptor);
             return pass;
         }
 
-        ReflectionScreenSpaceCompositePass::ReflectionScreenSpaceCompositePass(const RPI::PassDescriptor& descriptor)
-            : RPI::FullscreenTrianglePass(descriptor)
+        ReflectionScreenSpaceCompositePass::ReflectionScreenSpaceCompositePass(const JE::Render::RPI::PassDescriptor& descriptor)
+            : JE::Render::RPI::FullscreenTrianglePass(descriptor)
         {
         }
 
@@ -36,11 +36,11 @@ namespace AZ
                 return;
             }
 
-            RPI::Scene* scene = m_pipeline->GetScene();
+            JE::Render::RPI::Scene* scene = m_pipeline->GetScene();
             SpecularReflectionsFeatureProcessorInterface* specularReflectionsFeatureProcessor = scene->GetFeatureProcessor<SpecularReflectionsFeatureProcessorInterface>();
             AZ_Assert(specularReflectionsFeatureProcessor, "ReflectionScreenSpaceCompositePass requires the SpecularReflectionsFeatureProcessor");
 
-            RPI::PassAttachment* outputAttachment = GetOutputBinding(0).GetAttachment().get();
+            JE::Render::RPI::PassAttachment* outputAttachment = GetOutputBinding(0).GetAttachment().get();
             AZ_Assert(outputAttachment, "ReflectionScreenSpaceCompositePass: Output binding has no attachment!");
             RHI::Size outputImageSize = outputAttachment->m_descriptor.m_image.m_size;
 

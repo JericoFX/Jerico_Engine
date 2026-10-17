@@ -9,9 +9,9 @@
 #pragma once
 
 #include <Atom/Feature/TransformService/TransformServiceFeatureProcessorInterface.h>
-#include <Atom/RPI.Public/FeatureProcessor.h>
-#include <Atom/RPI.Public/Scene.h>
-#include <Atom/RPI.Public/Shader/ShaderResourceGroup.h>
+#include <JE/Render/RPI/Public/FeatureProcessor.h>
+#include <JE/Render/RPI/Public/Scene.h>
+#include <JE/Render/RPI/Public/Shader/ShaderResourceGroup.h>
 
 namespace AZ
 {
@@ -67,9 +67,9 @@ namespace AZ
             // Create the buffers if they don't exist. Otherwise, resize them if they are not large enough for the matrices
             void PrepareBuffers();
 
-            void UpdateSceneSrg(RPI::ShaderResourceGroup *sceneSrg);
+            void UpdateSceneSrg(JE::Render::RPI::ShaderResourceGroup *sceneSrg);
 
-            RPI::Scene::PrepareSceneSrgEvent::Handler m_updateSceneSrgHandler;
+            JE::Render::RPI::Scene::PrepareSceneSrgEvent::Handler m_updateSceneSrgHandler;
             RHI::ShaderInputNameIndex m_objectToWorldBufferIndex = "m_objectToWorldBuffer";
             RHI::ShaderInputNameIndex m_objectToWorldInverseTransposeBufferIndex = "m_objectToWorldInverseTransposeBuffer";
             RHI::ShaderInputNameIndex m_objectToWorldHistoryBufferIndex = "m_objectToWorldHistoryBuffer";
@@ -85,9 +85,9 @@ namespace AZ
             static const size_t TransformValueSize = sizeof(decltype(m_objectToWorldTransforms)::value_type);
             static const size_t NormalValueSize = sizeof(decltype(m_objectToWorldInverseTransposeTransforms)::value_type);
 
-            Data::Instance<RPI::Buffer> m_objectToWorldBuffer;
-            Data::Instance<RPI::Buffer> m_objectToWorldInverseTransposeBuffer;
-            Data::Instance<RPI::Buffer> m_objectToWorldHistoryBuffer;
+            Data::Instance<JE::Render::RPI::Buffer> m_objectToWorldBuffer;
+            Data::Instance<JE::Render::RPI::Buffer> m_objectToWorldInverseTransposeBuffer;
+            Data::Instance<JE::Render::RPI::Buffer> m_objectToWorldHistoryBuffer;
 
             uint32_t m_firstAvailableTransformIndex = NoAvailableTransformIndices;
             bool m_deviceBufferNeedsUpdate = false;

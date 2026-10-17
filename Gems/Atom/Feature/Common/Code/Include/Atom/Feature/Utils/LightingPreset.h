@@ -18,9 +18,9 @@
 #include <AzCore/Math/Color.h>
 #include <Atom/Feature/Base.h>
 #include <Atom/Feature/CoreLights/ShadowConstants.h>
-#include <Atom/RPI.Reflect/Image/StreamingImageAsset.h>
+#include <JE/Render/RPI/Reflect/Image/StreamingImageAsset.h>
 #include <Atom/Feature/CoreLights/DirectionalLightFeatureProcessorInterface.h>
-#include <Atom/RPI.Public/Material/Material.h>
+#include <JE/Render/RPI/Public/Material/Material.h>
 
 namespace AZ
 {
@@ -77,10 +77,10 @@ namespace AZ
             static void Reflect(AZ::ReflectContext* context);
 
             static constexpr char const Extension[] = "lightingpreset.azasset";
-            AZ::Data::Asset<AZ::RPI::StreamingImageAsset> m_iblDiffuseImageAsset;
-            AZ::Data::Asset<AZ::RPI::StreamingImageAsset> m_iblSpecularImageAsset;
-            AZ::Data::Asset<AZ::RPI::StreamingImageAsset> m_skyboxImageAsset;
-            AZ::Data::Asset<AZ::RPI::StreamingImageAsset> m_alternateSkyboxImageAsset;
+            AZ::Data::Asset<JE::Render::RPI::StreamingImageAsset> m_iblDiffuseImageAsset;
+            AZ::Data::Asset<JE::Render::RPI::StreamingImageAsset> m_iblSpecularImageAsset;
+            AZ::Data::Asset<JE::Render::RPI::StreamingImageAsset> m_skyboxImageAsset;
+            AZ::Data::Asset<JE::Render::RPI::StreamingImageAsset> m_alternateSkyboxImageAsset;
             float m_iblExposure = 0.0f;
             float m_skyboxExposure = 0.0f;
             ExposureControlConfig m_exposure;

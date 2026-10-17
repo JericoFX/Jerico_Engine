@@ -28,14 +28,14 @@
 #include <Atom/RHI/DrawList.h>
 #include <Atom/RHI/Image.h>
 #include <Atom/RHI/DevicePipelineState.h>
-#include <Atom/RPI.Public/Buffer/Buffer.h>
-#include <Atom/RPI.Public/DynamicDraw/DynamicDrawInterface.h>
-#include <Atom/RPI.Public/Image/StreamingImage.h>
-#include <Atom/RPI.Public/Scene.h>
-#include <Atom/RPI.Public/Shader/Shader.h>
-#include <Atom/RPI.Public/Shader/ShaderResourceGroup.h>
-#include <Atom/RPI.Public/ViewportContextBus.h>
-#include <Atom/RPI.Public/WindowContext.h>
+#include <JE/Render/RPI/Public/Buffer/Buffer.h>
+#include <JE/Render/RPI/Public/DynamicDraw/DynamicDrawInterface.h>
+#include <JE/Render/RPI/Public/Image/StreamingImage.h>
+#include <JE/Render/RPI/Public/Scene.h>
+#include <JE/Render/RPI/Public/Shader/Shader.h>
+#include <JE/Render/RPI/Public/Shader/ShaderResourceGroup.h>
+#include <JE/Render/RPI/Public/ViewportContextBus.h>
+#include <JE/Render/RPI/Public/WindowContext.h>
 
 struct ISystem;
 
@@ -190,7 +190,7 @@ namespace AZ
         FontEffect* AddEffect(const char* effectName);
         FontEffect* GetDefaultEffect();
 
-        AZ::Data::Instance<AZ::RPI::Image> GetFontImage() { return m_fontAttachmentImage; }
+        AZ::Data::Instance<JE::Render::RPI::Image> GetFontImage() { return m_fontAttachmentImage; }
 
     private:
         virtual ~FFont();
@@ -200,7 +200,7 @@ namespace AZ
         void Prepare(const char* str, bool updateTexture, const AtomFont::GlyphSize& glyphSize = AtomFont::defaultGlyphSize);
         void DrawStringUInternal(
             const RHI::Viewport& viewport, 
-            RPI::ViewportContextPtr viewportContext, 
+            JE::Render::RPI::ViewportContextPtr viewportContext, 
             float x, 
             float y, 
             float z, 
@@ -244,15 +244,15 @@ namespace AZ
 
         void ScaleCoord(const RHI::Viewport& viewport, float& x, float& y) const;
 
-        RPI::WindowContextSharedPtr GetDefaultWindowContext() const;
-        RPI::ViewportContextPtr GetDefaultViewportContext() const;
+        JE::Render::RPI::WindowContextSharedPtr GetDefaultWindowContext() const;
+        JE::Render::RPI::ViewportContextPtr GetDefaultViewportContext() const;
 
         struct DrawParameters
         {
             TextDrawContext m_ctx;
             AZ::Vector2 m_position;
             AZ::Vector2 m_size;
-            AZ::RPI::ViewportContextPtr m_viewportContext;
+            JE::Render::RPI::ViewportContextPtr m_viewportContext;
             AZ::RHI::Viewport m_viewport;
         };
         DrawParameters ExtractDrawParameters(const AzFramework::TextDrawParameters& params, AZStd::string_view text, bool forceCalculateSize);
@@ -271,7 +271,7 @@ namespace AZ
         size_t m_fontBufferSize = 0;
         AZStd::unique_ptr<uint8_t[]> m_fontBuffer;
 
-        AZ::Data::Instance<AZ::RPI::AttachmentImage> m_fontAttachmentImage;
+        AZ::Data::Instance<JE::Render::RPI::AttachmentImage> m_fontAttachmentImage;
         AZ::RHI::Ptr<AZ::RHI::Image>     m_fontImage;
         uint32_t m_fontImageVersion = 0;
 

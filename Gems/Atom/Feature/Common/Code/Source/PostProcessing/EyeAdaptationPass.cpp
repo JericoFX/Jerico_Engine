@@ -13,15 +13,15 @@
 #include <Atom/RHI/FrameGraphInterface.h>
 #include <Atom/RHI/DevicePipelineState.h>
 
-#include <Atom/RPI.Public/Base.h>
-#include <Atom/RPI.Public/Pass/PassUtils.h>
-#include <Atom/RPI.Public/RenderPipeline.h>
+#include <JE/Render/RPI/Public/Base.h>
+#include <JE/Render/RPI/Public/Pass/PassUtils.h>
+#include <JE/Render/RPI/Public/RenderPipeline.h>
 #include <Atom/RHI/RHISystemInterface.h>
-#include <Atom/RPI.Public/RPIUtils.h>
-#include <Atom/RPI.Public/Scene.h>
-#include <Atom/RPI.Public/View.h>
-#include <Atom/RPI.Reflect/Pass/PassTemplate.h>
-#include <Atom/RPI.Reflect/Shader/ShaderAsset.h>
+#include <JE/Render/RPI/Public/RPIUtils.h>
+#include <JE/Render/RPI/Public/Scene.h>
+#include <JE/Render/RPI/Public/View.h>
+#include <JE/Render/RPI/Reflect/Pass/PassTemplate.h>
+#include <JE/Render/RPI/Reflect/Shader/ShaderAsset.h>
 
 #include <PostProcess/PostProcessFeatureProcessor.h>
 #include <PostProcess/ExposureControl/ExposureControlSettings.h>
@@ -32,28 +32,28 @@ namespace AZ
     {
         static const char* const EyeAdaptationBufferName = "EyeAdaptationBuffer";
 
-        RPI::Ptr<EyeAdaptationPass> EyeAdaptationPass::Create(const RPI::PassDescriptor& descriptor)
+        JE::Render::RPI::Ptr<EyeAdaptationPass> EyeAdaptationPass::Create(const JE::Render::RPI::PassDescriptor& descriptor)
         {
-            RPI::Ptr<EyeAdaptationPass> pass = aznew EyeAdaptationPass(descriptor);
+            JE::Render::RPI::Ptr<EyeAdaptationPass> pass = aznew EyeAdaptationPass(descriptor);
             return pass;
         }
 
-        EyeAdaptationPass::EyeAdaptationPass(const RPI::PassDescriptor& descriptor)
-            : RPI::ComputePass(descriptor)
+        EyeAdaptationPass::EyeAdaptationPass(const JE::Render::RPI::PassDescriptor& descriptor)
+            : JE::Render::RPI::ComputePass(descriptor)
         {
         }
         
         void EyeAdaptationPass::InitBuffer()
         {
             ExposureCalculationData defaultData;
-            RPI::CommonBufferDescriptor desc;
-            desc.m_poolType = RPI::CommonBufferPoolType::ReadWrite;
+            JE::Render::RPI::CommonBufferDescriptor desc;
+            desc.m_poolType = JE::Render::RPI::CommonBufferPoolType::ReadWrite;
             desc.m_bufferName = EyeAdaptationBufferName;
             desc.m_byteCount = sizeof(ExposureCalculationData);
             desc.m_elementSize = aznumeric_cast<uint32_t>(desc.m_byteCount);
             desc.m_bufferData = &defaultData;
 
-            m_buffer = RPI::BufferSystemInterface::Get()->CreateBufferFromCommonPool(desc);
+            m_buffer = JE::Render::RPI::BufferSystemInterface::Get()->CreateBufferFromCommonPool(desc);
         }
 
         void EyeAdaptationPass::BuildInternal()
@@ -73,13 +73,13 @@ namespace AZ
                 return false;
             }
 
-            AZ::RPI::Scene* scene = GetScene();
+            JE::Render::RPI::Scene* scene = GetScene();
             bool enabled = false;
 
             if (scene)
             {
                 PostProcessFeatureProcessor* fp = scene->GetFeatureProcessor<PostProcessFeatureProcessor>();
-                AZ::RPI::ViewPtr view = GetRenderPipeline()->GetFirstView(GetPipelineViewTag());
+                JE::Render::RPI::ViewPtr view = GetRenderPipeline()->GetFirstView(GetPipelineViewTag());
                 if (fp)
                 {
                     PostProcessSettings* postProcessSettings = fp->GetLevelSettingsFromView(view);
@@ -100,15 +100,15 @@ namespace AZ
 
         void EyeAdaptationPass::FrameBeginInternal(FramePrepareParams params)
         {
-            AZ::RPI::ComputePass::FrameBeginInternal(params);
+            JE::Render::RPI::ComputePass::FrameBeginInternal(params);
 
-            AZ::RPI::Scene* scene = GetScene();
+            JE::Render::RPI::Scene* scene = GetScene();
             if (scene)
             {
                 PostProcessFeatureProcessor* fp = scene->GetFeatureProcessor<PostProcessFeatureProcessor>();
                 if (fp)
                 {
-                    AZ::RPI::ViewPtr view = GetRenderPipeline()->GetFirstView(GetPipelineViewTag());
+                    JE::Render::RPI::ViewPtr view = GetRenderPipeline()->GetFirstView(GetPipelineViewTag());
                     PostProcessSettings* postProcessSettings = fp->GetLevelSettingsFromView(view);
                     if (postProcessSettings)
                     {

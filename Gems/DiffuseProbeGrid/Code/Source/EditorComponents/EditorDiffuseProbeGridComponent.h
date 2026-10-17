@@ -55,7 +55,7 @@ namespace AZ
             // helper functions
             AZStd::string ValidateOrCreateNewTexturePath(const AZStd::string& relativePath, const char* fileSuffix);
             void CheckoutSourceTextureFile(const AZStd::string& fullPath);
-            void CheckTextureAssetNotification(const AZStd::string& relativePath, Data::Asset<RPI::StreamingImageAsset>& configurationAsset);
+            void CheckTextureAssetNotification(const AZStd::string& relativePath, Data::Asset<JE::Render::RPI::StreamingImageAsset>& configurationAsset);
             AZStd::vector<Edit::EnumConstant<DiffuseProbeGridNumRaysPerProbe>> GetNumRaysPerProbeEnumList() const;
 
             // property change notifications

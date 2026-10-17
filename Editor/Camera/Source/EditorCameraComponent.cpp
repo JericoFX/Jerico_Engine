@@ -19,8 +19,8 @@
 #include <AzToolsFramework/Entity/EditorEntityContextBus.h>
 #include <AzFramework/Translation/TranslationDef.h>
 
-#include <Atom/RPI.Public/ViewportContext.h>
-#include <Atom/RPI.Public/View.h>
+#include <JE/Render/RPI/Public/ViewportContext.h>
+#include <JE/Render/RPI/Public/View.h>
 #include <AzToolsFramework/ToolsComponents/TransformComponent.h>
 
 namespace JE::Editor::Camera
@@ -159,8 +159,8 @@ namespace JE::Editor::Camera
     bool EditorCameraComponent::GetCameraState(AzFramework::CameraState& cameraState)
     {
         const JE::World::Camera::CameraComponentConfig& config = m_controller.GetConfiguration();
-        AZ::RPI::ViewportContextPtr viewportContext = m_controller.GetViewportContext();
-        AZ::RPI::ViewPtr view = m_controller.GetView();
+        JE::Render::RPI::ViewportContextPtr viewportContext = m_controller.GetViewportContext();
+        JE::Render::RPI::ViewPtr view = m_controller.GetView();
 
         if (viewportContext == nullptr || view == nullptr)
         {

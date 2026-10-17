@@ -9,14 +9,14 @@
 #include <Decals/DecalTextureArrayFeatureProcessor.h>
 #include <Atom/Feature/Mesh/MeshCommon.h>
 #include <Atom/RHI/Factory.h>
-#include <Atom/RPI.Public/Image/ImageSystemInterface.h>
-#include <Atom/RPI.Public/RPISystemInterface.h>
-#include <Atom/RPI.Public/Material/Material.h>
-#include <Atom/RPI.Public/RenderPipeline.h>
-#include <Atom/RPI.Public/Scene.h>
-#include <Atom/RPI.Public/View.h>
-#include <Atom/RPI.Reflect/Asset/AssetUtils.h>
-#include <Atom/RPI.Reflect/Image/StreamingImageAssetHandler.h>
+#include <JE/Render/RPI/Public/Image/ImageSystemInterface.h>
+#include <JE/Render/RPI/Public/RPISystemInterface.h>
+#include <JE/Render/RPI/Public/Material/Material.h>
+#include <JE/Render/RPI/Public/RenderPipeline.h>
+#include <JE/Render/RPI/Public/Scene.h>
+#include <JE/Render/RPI/Public/View.h>
+#include <JE/Render/RPI/Reflect/Asset/AssetUtils.h>
+#include <JE/Render/RPI/Reflect/Image/StreamingImageAssetHandler.h>
 #include <AzCore/Instance/InstanceDatabase.h>
 #include <AzCore/Math/Frustum.h>
 #include <AzCore/Math/Quaternion.h>
@@ -35,9 +35,9 @@ namespace AZ
     {
         namespace
         {
-            static AZ::Data::Asset<AZ::RPI::MaterialAsset> QueueMaterialAssetLoad(const AZ::Data::AssetId material)
+            static AZ::Data::Asset<JE::Render::RPI::MaterialAsset> QueueMaterialAssetLoad(const AZ::Data::AssetId material)
             {
-                auto asset = AZ::Data::AssetManager::Instance().GetAsset<AZ::RPI::MaterialAsset>(material, AZ::Data::AssetLoadBehavior::QueueLoad);
+                auto asset = AZ::Data::AssetManager::Instance().GetAsset<JE::Render::RPI::MaterialAsset>(material, AZ::Data::AssetLoadBehavior::QueueLoad);
                 return asset;
             }
         }
@@ -47,7 +47,7 @@ namespace AZ
             if (auto* serializeContext = azrtti_cast<SerializeContext*>(context))
             {
                 serializeContext
-                    ->Class<DecalTextureArrayFeatureProcessor, RPI::FeatureProcessor>()
+                    ->Class<DecalTextureArrayFeatureProcessor, JE::Render::RPI::FeatureProcessor>()
                     ->Version(0);
             }
         }
@@ -59,7 +59,7 @@ namespace AZ
             desc.m_bufferSrgName = "m_decals";
             desc.m_elementCountSrgName = "m_decalCount";
             desc.m_elementSize = sizeof(DecalData);
-            desc.m_srgLayout = RPI::RPISystemInterface::Get()->GetViewSrgLayout().get();
+            desc.m_srgLayout = JE::Render::RPI::RPISystemInterface::Get()->GetViewSrgLayout().get();
 
             m_decalBufferHandler = GpuBufferHandler(desc);
 
@@ -142,7 +142,7 @@ namespace AZ
             return decal;
         }
 
-        void DecalTextureArrayFeatureProcessor::Simulate(const RPI::FeatureProcessor::SimulatePacket& packet)
+        void DecalTextureArrayFeatureProcessor::Simulate(const JE::Render::RPI::FeatureProcessor::SimulatePacket& packet)
         {
             AZ_PROFILE_SCOPE(AzRender, "DecalTextureArrayFeatureProcessor: Simulate");
             AZ_UNUSED(packet);
@@ -167,12 +167,12 @@ namespace AZ
             }
         }
 
-        void DecalTextureArrayFeatureProcessor::Render(const RPI::FeatureProcessor::RenderPacket& packet)
+        void DecalTextureArrayFeatureProcessor::Render(const JE::Render::RPI::FeatureProcessor::RenderPacket& packet)
         {
             // Note that decals are rendered as part of the forward shading pipeline. We only need to bind the decal buffers/textures in here.
             AZ_PROFILE_SCOPE(AzRender, "DecalTextureArrayFeatureProcessor: Render");
             m_visibleDecalBufferUsedCount = 0;
-            for (const RPI::ViewPtr& view : packet.m_views)
+            for (const JE::Render::RPI::ViewPtr& view : packet.m_views)
             {
                 m_decalBufferHandler.UpdateSrg(view->GetShaderResourceGroup().get());
                 SetPackedTexturesToSrg(view);
@@ -193,7 +193,7 @@ namespace AZ
             }
         }
 
-        const Data::Instance<RPI::Buffer> DecalTextureArrayFeatureProcessor::GetDecalBuffer() const
+        const Data::Instance<JE::Render::RPI::Buffer> DecalTextureArrayFeatureProcessor::GetDecalBuffer() const
         {
             return m_decalBufferHandler.GetBuffer();
         }
@@ -410,7 +410,7 @@ namespace AZ
         }
 
         void DecalTextureArrayFeatureProcessor::OnRenderPipelinePersistentViewChanged(
-            RPI::RenderPipeline* renderPipeline, [[maybe_unused]] RPI::PipelineViewTag viewTag, RPI::ViewPtr newView, RPI::ViewPtr previousView)
+            JE::Render::RPI::RenderPipeline* renderPipeline, [[maybe_unused]] JE::Render::RPI::PipelineViewTag viewTag, JE::Render::RPI::ViewPtr newView, JE::Render::RPI::ViewPtr previousView)
         {
             Render::LightCommon::CacheCPUCulledPipelineInfo(renderPipeline, newView, previousView, m_cpuCulledPipelinesPerView);
         }
@@ -443,7 +443,7 @@ namespace AZ
             static constexpr AZStd::array<AZStd::string_view, DecalMapType_Num> ShaderNames = { "m_decalTextureArrayDiffuse",
                                                                                        "m_decalTextureArrayNormalMaps" };
 
-            const RHI::ShaderResourceGroupLayout* viewSrgLayout = RPI::RPISystemInterface::Get()->GetViewSrgLayout().get();
+            const RHI::ShaderResourceGroupLayout* viewSrgLayout = JE::Render::RPI::RPISystemInterface::Get()->GetViewSrgLayout().get();
             for (int mapType = 0; mapType < DecalMapType_Num; ++mapType)
             {
                 for (int texArrayIdx = 0; texArrayIdx < NumTextureArrays; ++texArrayIdx)
@@ -465,7 +465,7 @@ namespace AZ
             }
         }
 
-        AZStd::optional<AZ::Render::DecalTextureArrayFeatureProcessor::DecalLocation> DecalTextureArrayFeatureProcessor::AddMaterialToTextureArrays(AZ::RPI::MaterialAsset* materialAsset)
+        AZStd::optional<AZ::Render::DecalTextureArrayFeatureProcessor::DecalLocation> DecalTextureArrayFeatureProcessor::AddMaterialToTextureArrays(JE::Render::RPI::MaterialAsset* materialAsset)
         {
             const DecalTextureArray::PackingLayout layout = DecalTextureArray::GetPackingLayout(*materialAsset);
 
@@ -512,7 +512,7 @@ namespace AZ
             const Data::AssetId& assetId = asset->GetId();
             const auto decalsThatUseThisMaterial = m_materialLoadTracker.GetHandlesByAsset(assetId);
             m_materialLoadTracker.RemoveAllHandlesWithAsset(assetId);
-            SetMaterialToDecals(asset.GetAs<AZ::RPI::MaterialAsset>(), decalsThatUseThisMaterial);
+            SetMaterialToDecals(asset.GetAs<JE::Render::RPI::MaterialAsset>(), decalsThatUseThisMaterial);
             AZ::Data::AssetBus::MultiHandler::BusDisconnect(assetId);
         }
 
@@ -524,7 +524,7 @@ namespace AZ
             m_deviceBufferNeedsUpdate = true;
         }
 
-        void DecalTextureArrayFeatureProcessor::SetPackedTexturesToSrg(const RPI::ViewPtr& view)
+        void DecalTextureArrayFeatureProcessor::SetPackedTexturesToSrg(const JE::Render::RPI::ViewPtr& view)
         {
             for (int mapType = 0; mapType < DecalMapType_Num; ++mapType)
             {
@@ -601,9 +601,9 @@ namespace AZ
             }
         }
 
-        void DecalTextureArrayFeatureProcessor::CullDecals(const RPI::ViewPtr& view)
+        void DecalTextureArrayFeatureProcessor::CullDecals(const JE::Render::RPI::ViewPtr& view)
         {
-            if (!AZ::RHI::CheckBitsAll(view->GetUsageFlags(), RPI::View::UsageFlags::UsageCamera) ||
+            if (!AZ::RHI::CheckBitsAll(view->GetUsageFlags(), JE::Render::RPI::View::UsageFlags::UsageCamera) ||
                 !Render::LightCommon::NeedsCPUCulling(view, m_cpuCulledPipelinesPerView))
             {
                 return;
@@ -699,7 +699,7 @@ namespace AZ
             }
             else if (materialAsset.IsReady())
             {
-                SetMaterialToDecals(materialAsset.GetAs<AZ::RPI::MaterialAsset>(), { handle });
+                SetMaterialToDecals(materialAsset.GetAs<JE::Render::RPI::MaterialAsset>(), { handle });
             }
             else if (materialAsset.IsError())
             {
@@ -712,7 +712,7 @@ namespace AZ
         }
 
         void DecalTextureArrayFeatureProcessor::SetMaterialToDecals(
-            RPI::MaterialAsset* materialAsset, const AZStd::vector<DecalHandle>& decalsThatUseThisMaterial)
+            JE::Render::RPI::MaterialAsset* materialAsset, const AZStd::vector<DecalHandle>& decalsThatUseThisMaterial)
         {
             if (!materialAsset)
             {

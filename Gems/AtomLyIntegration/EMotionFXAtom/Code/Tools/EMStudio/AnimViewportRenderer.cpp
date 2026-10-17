@@ -11,10 +11,10 @@
 
 #include <Integration/ActorComponentBus.h>
 #include <Integration/Components/ActorComponent.h>
-#include <Atom/RPI.Public/Scene.h>
-#include <Atom/RPI.Public/RenderPipeline.h>
-#include <Atom/RPI.Public/RPIUtils.h>
-#include <Atom/RPI.Reflect/Asset/AssetUtils.h>
+#include <JE/Render/RPI/Public/Scene.h>
+#include <JE/Render/RPI/Public/RenderPipeline.h>
+#include <JE/Render/RPI/Public/RPIUtils.h>
+#include <JE/Render/RPI/Reflect/Asset/AssetUtils.h>
 #include <Atom/Feature/CoreLights/DirectionalLightFeatureProcessorInterface.h>
 #include <Atom/Feature/DisplayMapper/DisplayMapperFeatureProcessorInterface.h>
 #include <Atom/Feature/PostProcess/PostProcessFeatureProcessorInterface.h>
@@ -40,7 +40,7 @@
 
 namespace EMStudio
 {
-    AnimViewportRenderer::AnimViewportRenderer(AZ::RPI::ViewportContextPtr viewportContext, const RenderOptions* renderOptions)
+    AnimViewportRenderer::AnimViewportRenderer(JE::Render::RPI::ViewportContextPtr viewportContext, const RenderOptions* renderOptions)
         : m_windowContext(viewportContext->GetWindowContext())
         , m_renderOptions(renderOptions)
     {
@@ -57,12 +57,12 @@ namespace EMStudio
         m_frameworkScene->SetSubsystem<AzFramework::EntityContext::SceneStorageType>(m_entityContext.get());
 
         // Create and register a scene with feature processors defined in the viewport settings
-        AZ::RPI::SceneDescriptor sceneDesc;
+        JE::Render::RPI::SceneDescriptor sceneDesc;
         sceneDesc.m_nameId = AZ::Name("AnimViewport");
         auto settingsRegistry = AZ::SettingsRegistry::Get();
         const char* viewportSettingPath = "/O3DE/Editor/Viewport/Animation/Scene";
         bool sceneDescLoaded = settingsRegistry->GetObject(sceneDesc, viewportSettingPath);
-        m_scene = AZ::RPI::Scene::CreateScene(sceneDesc);
+        m_scene = JE::Render::RPI::Scene::CreateScene(sceneDesc);
 
         if (!sceneDescLoaded)
         {
@@ -75,29 +75,29 @@ namespace EMStudio
         m_frameworkScene->SetSubsystem(m_scene);
 
         AZStd::string pipelineAssetPath = "passes/MainRenderPipeline.azasset";
-        AZ::RPI::XRRenderingInterface* xrSystem = AZ::RPI::RPISystemInterface::Get()->GetXRSystem();
+        JE::Render::RPI::XRRenderingInterface* xrSystem = JE::Render::RPI::RPISystemInterface::Get()->GetXRSystem();
         if (xrSystem)
         {
             // OpenXr uses low end render pipeline
             pipelineAssetPath = "passes/LowEndRenderPipeline.azasset";
         }
 
-        AZStd::optional<AZ::RPI::RenderPipelineDescriptor> renderPipelineDesc =
-            AZ::RPI::GetRenderPipelineDescriptorFromAsset(pipelineAssetPath.c_str(), AZStd::string::format("_%i", viewportContext->GetId()));
+        AZStd::optional<JE::Render::RPI::RenderPipelineDescriptor> renderPipelineDesc =
+            JE::Render::RPI::GetRenderPipelineDescriptorFromAsset(pipelineAssetPath.c_str(), AZStd::string::format("_%i", viewportContext->GetId()));
         AZ_Assert(renderPipelineDesc.has_value(), "Invalid render pipeline descriptor from asset %s", pipelineAssetPath.c_str());
 
-        const AZ::RHI::MultisampleState multiSampleState = AZ::RPI::RPISystemInterface::Get()->GetApplicationMultisampleState();
+        const AZ::RHI::MultisampleState multiSampleState = JE::Render::RPI::RPISystemInterface::Get()->GetApplicationMultisampleState();
         renderPipelineDesc.value().m_renderSettings.m_multisampleState = multiSampleState;
         AZ_Printf("AnimViewportRenderer", "Animation viewport renderer starting with multi sample %d", multiSampleState.m_samples);
         
-        m_renderPipeline = AZ::RPI::RenderPipeline::CreateRenderPipelineForWindow(renderPipelineDesc.value(), *m_windowContext.get());
+        m_renderPipeline = JE::Render::RPI::RenderPipeline::CreateRenderPipelineForWindow(renderPipelineDesc.value(), *m_windowContext.get());
         m_scene->AddRenderPipeline(m_renderPipeline);
         m_renderPipeline->SetDefaultView(viewportContext->GetDefaultView());
 
         // Currently the scene has to be activated after render pipeline was added so some feature processors (i.e. imgui) can be
         // initialized properly with pipeline's pass information.
         m_scene->Activate();
-        AZ::RPI::RPISystemInterface::Get()->RegisterScene(m_scene);
+        JE::Render::RPI::RPISystemInterface::Get()->RegisterScene(m_scene);
         AzFramework::EntityContextId entityContextId = m_entityContext->GetContextId();
 
         // Get the FeatureProcessors
@@ -136,8 +136,8 @@ namespace EMStudio
         m_iblEntity->Activate();
 
         // Load light preset
-        AZ::Data::Asset<AZ::RPI::AnyAsset> lightingPresetAsset = AZ::RPI::AssetUtils::LoadAssetByProductPath<AZ::RPI::AnyAsset>(
-            "lightingpresets/default.lightingpreset.azasset", AZ::RPI::AssetUtils::TraceLevel::Warning);
+        AZ::Data::Asset<JE::Render::RPI::AnyAsset> lightingPresetAsset = JE::Render::RPI::AssetUtils::LoadAssetByProductPath<JE::Render::RPI::AnyAsset>(
+            "lightingpresets/default.lightingpreset.azasset", JE::Render::RPI::AssetUtils::TraceLevel::Warning);
         const AZ::Render::LightingPreset* preset = lightingPresetAsset->GetDataAs<AZ::Render::LightingPreset>();
         SetLightingPreset(preset);
 
@@ -184,7 +184,7 @@ namespace EMStudio
             AZ_Assert(false, "AtomViewportRenderer should be removed.");
         }
 
-        AZ::RPI::RPISystemInterface::Get()->UnregisterScene(m_scene);
+        JE::Render::RPI::RPISystemInterface::Get()->UnregisterScene(m_scene);
         m_scene = nullptr;
     }
 
@@ -280,8 +280,8 @@ namespace EMStudio
         AZ::Transform identityTransform = AZ::Transform::CreateIdentity();
         AZ::TransformBus::Event(m_groundEntity->GetId(), &AZ::TransformBus::Events::SetLocalTM, identityTransform);
 
-        auto modelAsset = AZ::RPI::AssetUtils::GetAssetByProductPath<AZ::RPI::ModelAsset>(
-            "objects/groundplane/groundplane_512x512m.fbx.azmodel", AZ::RPI::AssetUtils::TraceLevel::Assert);
+        auto modelAsset = JE::Render::RPI::AssetUtils::GetAssetByProductPath<JE::Render::RPI::ModelAsset>(
+            "objects/groundplane/groundplane_512x512m.fbx.azmodel", JE::Render::RPI::AssetUtils::TraceLevel::Assert);
         AZ::Render::MeshComponentRequestBus::Event(
             m_groundEntity->GetId(), &AZ::Render::MeshComponentRequestBus::Events::SetModelAsset, modelAsset);
 
@@ -397,7 +397,7 @@ namespace EMStudio
             cameraConfig, m_lightHandles, false);
     }
 
-    AZ::RPI::SceneId AnimViewportRenderer::GetRenderSceneId() const
+    JE::Render::RPI::SceneId AnimViewportRenderer::GetRenderSceneId() const
     {
         return m_scene->GetId();
     }

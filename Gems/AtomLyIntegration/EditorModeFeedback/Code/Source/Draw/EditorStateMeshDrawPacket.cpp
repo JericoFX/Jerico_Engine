@@ -8,11 +8,11 @@
 
 #include <Draw/EditorStateMeshDrawPacket.h>
 
-#include <Atom/RPI.Public/RPIUtils.h>
-#include <Atom/RPI.Public/Shader/ShaderResourceGroup.h>
-#include <Atom/RPI.Public/Shader/ShaderSystemInterface.h>
-#include <Atom/RPI.Public/Scene.h>
-#include <Atom/RPI.Reflect/Material/MaterialFunctor.h>
+#include <JE/Render/RPI/Public/RPIUtils.h>
+#include <JE/Render/RPI/Public/Shader/ShaderResourceGroup.h>
+#include <JE/Render/RPI/Public/Shader/ShaderSystemInterface.h>
+#include <JE/Render/RPI/Public/Scene.h>
+#include <JE/Render/RPI/Reflect/Material/MaterialFunctor.h>
 #include <Atom/RHI/DrawPacketBuilder.h>
 #include <Atom/RHI/RHISystemInterface.h>
 #include <AzCore/Console/Console.h>
@@ -20,12 +20,12 @@
 namespace AZ::Render
 {
     EditorStateMeshDrawPacket::EditorStateMeshDrawPacket(
-        RPI::ModelLod& modelLod,
+        JE::Render::RPI::ModelLod& modelLod,
         size_t modelLodMeshIndex,
-        Data::Instance<RPI::Material> materialOverride,
+        Data::Instance<JE::Render::RPI::Material> materialOverride,
         AZ::Name drawList,
-        Data::Instance<RPI::ShaderResourceGroup> objectSrg,
-        const RPI::MaterialModelUvOverrideMap& materialModelUvMap
+        Data::Instance<JE::Render::RPI::ShaderResourceGroup> objectSrg,
+        const JE::Render::RPI::MaterialModelUvOverrideMap& materialModelUvMap
     )
         : m_modelLod(&modelLod)
         , m_modelLodMeshIndex(modelLodMeshIndex)
@@ -36,7 +36,7 @@ namespace AZ::Render
         if (!m_material)
         {
             const auto meshes = m_modelLod->GetMeshes();
-            const RPI::ModelLod::Mesh& mesh = meshes[m_modelLodMeshIndex];
+            const JE::Render::RPI::ModelLod::Mesh& mesh = meshes[m_modelLodMeshIndex];
             m_material = mesh.m_material;
         }
 
@@ -45,12 +45,12 @@ namespace AZ::Render
         m_drawListTag = drawListTagRegistry->AcquireTag(drawList);
     }
 
-    Data::Instance<RPI::Material> EditorStateMeshDrawPacket::GetMaterial()
+    Data::Instance<JE::Render::RPI::Material> EditorStateMeshDrawPacket::GetMaterial()
     {
         return m_material;
     }
 
-    bool EditorStateMeshDrawPacket::SetShaderOption(const Name& shaderOptionName, RPI::ShaderOptionValue value)
+    bool EditorStateMeshDrawPacket::SetShaderOption(const Name& shaderOptionName, JE::Render::RPI::ShaderOptionValue value)
     {
         // check if the material owns this option in any of its shaders, if so it can't be set externally
         if (m_material->MaterialOwnsShaderOption(shaderOptionName))
@@ -59,10 +59,10 @@ namespace AZ::Render
         }
 
         m_material->ForAllShaderItems(
-            [&](const Name&, const RPI::ShaderCollection::Item& shaderItem)
+            [&](const Name&, const JE::Render::RPI::ShaderCollection::Item& shaderItem)
             {
-                const RPI::ShaderOptionGroupLayout* layout = shaderItem.GetShaderOptions()->GetShaderOptionLayout();
-                RPI::ShaderOptionIndex index = layout->FindShaderOptionIndex(shaderOptionName);
+                const JE::Render::RPI::ShaderOptionGroupLayout* layout = shaderItem.GetShaderOptions()->GetShaderOptionLayout();
+                JE::Render::RPI::ShaderOptionIndex index = layout->FindShaderOptionIndex(shaderOptionName);
                 if (index.IsValid())
                 {
                     // try to find an existing option entry in the list
@@ -87,7 +87,7 @@ namespace AZ::Render
         return true;
     }
 
-    bool EditorStateMeshDrawPacket::Update(const RPI::Scene& parentScene, bool forceUpdate /*= false*/)
+    bool EditorStateMeshDrawPacket::Update(const JE::Render::RPI::Scene& parentScene, bool forceUpdate /*= false*/)
     {
         // Why we need to check "!m_material->NeedsCompile()"...
         //    Frame A:
@@ -113,10 +113,10 @@ namespace AZ::Render
         return false;
     }
 
-    bool EditorStateMeshDrawPacket::DoUpdate(const RPI::Scene& parentScene)
+    bool EditorStateMeshDrawPacket::DoUpdate(const JE::Render::RPI::Scene& parentScene)
     {
         auto meshes = m_modelLod->GetMeshes();
-        RPI::ModelLod::Mesh& mesh = meshes[m_modelLodMeshIndex];
+        JE::Render::RPI::ModelLod::Mesh& mesh = meshes[m_modelLodMeshIndex];
 
         if (!m_material)
         {
@@ -139,11 +139,11 @@ namespace AZ::Render
         // We have to keep a list of these outside the loops that collect all the shaders because the DrawPacketBuilder
         // keeps pointers to StreamBufferViews until DrawPacketBuilder::End() is called. And we use a fixed_vector to guarantee
         // that the memory won't be relocated when new entries are added.
-        AZStd::fixed_vector<RPI::ModelLod::StreamBufferViewList, RHI::DrawPacketBuilder::DrawItemCountMax> streamBufferViewsPerShader;
+        AZStd::fixed_vector<JE::Render::RPI::ModelLod::StreamBufferViewList, RHI::DrawPacketBuilder::DrawItemCountMax> streamBufferViewsPerShader;
 
         m_perDrawSrgs.clear();
 
-        auto appendShader = [&](const RPI::ShaderCollection::Item& shaderItem, const Name& materialPipelineName)
+        auto appendShader = [&](const JE::Render::RPI::ShaderCollection::Item& shaderItem, const Name& materialPipelineName)
         {
             if (!parentScene.HasOutputForPipelineState(m_drawListTag))
             {
@@ -151,7 +151,7 @@ namespace AZ::Render
                 return false;
             }
 
-            Data::Instance<RPI::Shader> shader = RPI::Shader::FindOrCreate(shaderItem.GetShaderAsset());
+            Data::Instance<JE::Render::RPI::Shader> shader = JE::Render::RPI::Shader::FindOrCreate(shaderItem.GetShaderAsset());
             if (!shader)
             {
                 AZ_Error("EditorStateMeshDrawPacket", false, "Shader '%s'. Failed to find or create instance", shaderItem.GetShaderAsset()->GetName().GetCStr());
@@ -161,7 +161,7 @@ namespace AZ::Render
             // Set all unspecified shader options to default values, so that we get the most specialized variant possible.
             // (because FindVariantStableId treats unspecified options as a request specifically for a variant that doesn't specify those options)
             // [GFX TODO][ATOM-3883] We should consider updating the FindVariantStableId algorithm to handle default values for us, and remove this step here.
-            RPI::ShaderOptionGroup shaderOptions = *shaderItem.GetShaderOptions();
+            JE::Render::RPI::ShaderOptionGroup shaderOptions = *shaderItem.GetShaderOptions();
             shaderOptions.SetUnspecifiedToDefaultValues();
 
             // [GFX_TODO][ATOM-14476]: according to this usage, we should make the shader input contract uniform across all shader variants.
@@ -176,17 +176,17 @@ namespace AZ::Render
             for (auto& meshShaderOption : m_shaderOptions)
             {
                 Name& name = meshShaderOption.first;
-                RPI::ShaderOptionValue& value = meshShaderOption.second;
+                JE::Render::RPI::ShaderOptionValue& value = meshShaderOption.second;
 
-                RPI::ShaderOptionIndex index = shaderOptions.FindShaderOptionIndex(name);
+                JE::Render::RPI::ShaderOptionIndex index = shaderOptions.FindShaderOptionIndex(name);
                 if (index.IsValid())
                 {
                     shaderOptions.SetValue(name, value);
                 }
             }
 
-            const RPI::ShaderVariantId finalVariantId = shaderOptions.GetShaderVariantId();
-            const RPI::ShaderVariant& variant = shader->GetVariant(finalVariantId);
+            const JE::Render::RPI::ShaderVariantId finalVariantId = shaderOptions.GetShaderVariantId();
+            const JE::Render::RPI::ShaderVariant& variant = shader->GetVariant(finalVariantId);
 
             RHI::PipelineStateDescriptorForDraw pipelineStateDescriptor;
             variant.ConfigurePipelineState(pipelineStateDescriptor, shaderOptions);
@@ -197,7 +197,7 @@ namespace AZ::Render
             RHI::MergeStateInto(renderStatesOverlay, pipelineStateDescriptor.m_renderStates);
 
             streamBufferViewsPerShader.emplace_back();
-            RPI::UvStreamTangentBitmask uvStreamTangentBitmask;
+            JE::Render::RPI::UvStreamTangentBitmask uvStreamTangentBitmask;
             RHI::StreamBufferIndices streamIndices;
 
             if (!m_modelLod->GetStreamsForMesh(
@@ -213,11 +213,11 @@ namespace AZ::Render
             }
 
             auto drawSrgLayout = shader->GetAsset()->GetDrawSrgLayout(shader->GetSupervariantIndex());
-            Data::Instance<RPI::ShaderResourceGroup> drawSrg;
+            Data::Instance<JE::Render::RPI::ShaderResourceGroup> drawSrg;
             if (drawSrgLayout)
             {
                 // If the DrawSrg exists we must create and bind it, otherwise the CommandList will fail validation for SRG being null
-                drawSrg = RPI::ShaderResourceGroup::Create(shader->GetAsset(), shader->GetSupervariantIndex(), drawSrgLayout->GetName());
+                drawSrg = JE::Render::RPI::ShaderResourceGroup::Create(shader->GetAsset(), shader->GetSupervariantIndex(), drawSrgLayout->GetName());
 
                 if (variant.UseKeyFallback() && drawSrgLayout->HasShaderVariantKeyFallbackEntry())
                 {
@@ -226,7 +226,7 @@ namespace AZ::Render
 
                 // Pass UvStreamTangentBitmask to the shader if the draw SRG has it.
                 {
-                    AZ::Name shaderUvStreamTangentBitmask = AZ::Name(RPI::UvStreamTangentBitmask::SrgName);
+                    AZ::Name shaderUvStreamTangentBitmask = AZ::Name(JE::Render::RPI::UvStreamTangentBitmask::SrgName);
                     auto index = drawSrg->FindShaderInputConstantIndex(shaderUvStreamTangentBitmask);
 
                     if (index.IsValid())
@@ -259,7 +259,7 @@ namespace AZ::Render
                 m_perDrawSrgs.push_back(drawSrg);
             }
 
-            if (materialPipelineName != RPI::MaterialPipelineNone)
+            if (materialPipelineName != JE::Render::RPI::MaterialPipelineNone)
             {
                 RHI::DrawFilterTag pipelineTag = parentScene.GetDrawFilterTagRegistry()->AcquireTag(materialPipelineName);
                 AZ_Assert(pipelineTag.IsValid(), "Could not acquire pipeline filter tag '%s'.", materialPipelineName.GetCStr());
@@ -275,11 +275,11 @@ namespace AZ::Render
 
         // [GFX TODO][ATOM-5625] This really needs to be optimized to put the burden on setting global shader options, not applying global shader options.
         // For example, make the shader system collect a map of all shaders and ShaderVaraintIds, and look up the shader option names at set-time.
-        RPI::ShaderSystemInterface* shaderSystem = RPI::ShaderSystemInterface::Get();
+        JE::Render::RPI::ShaderSystemInterface* shaderSystem = JE::Render::RPI::ShaderSystemInterface::Get();
         for (auto iter : shaderSystem->GetGlobalShaderOptions())
         {
             const AZ::Name& shaderOptionName = iter.first;
-            RPI::ShaderOptionValue value = iter.second;
+            JE::Render::RPI::ShaderOptionValue value = iter.second;
             if (!m_material->SetSystemShaderOption(shaderOptionName, value).IsSuccess())
             {
                 AZ_Warning("EditorStateMeshDrawPacket", false, "Shader option '%s' is owned by this this material. Global value for this option was ignored.", shaderOptionName.GetCStr());
@@ -288,7 +288,7 @@ namespace AZ::Render
 
         // TODO(MaterialPipeline): We might want to detect duplicate ShaderItem objects here, and merge them to avoid redundant RHI DrawItems.
         m_material->ForAllShaderItems(
-            [&](const Name& materialPipelineName, const RPI::ShaderCollection::Item& shaderItem)
+            [&](const Name& materialPipelineName, const JE::Render::RPI::ShaderCollection::Item& shaderItem)
             {
                 if (shaderItem.IsEnabled())
                 {

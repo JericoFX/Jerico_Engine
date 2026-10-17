@@ -28,22 +28,22 @@
 
 #include <Atom/RHI/RHISystemInterface.h>
 
-#include <Atom/RPI.Reflect/Image/AttachmentImageAsset.h>
-#include <Atom/RPI.Reflect/Image/AttachmentImageAssetCreator.h>
-#include <Atom/RPI.Reflect/Asset/AssetUtils.h>
+#include <JE/Render/RPI/Reflect/Image/AttachmentImageAsset.h>
+#include <JE/Render/RPI/Reflect/Image/AttachmentImageAssetCreator.h>
+#include <JE/Render/RPI/Reflect/Asset/AssetUtils.h>
 
-#include <Atom/RPI.Public/Pass/Pass.h>
-#include <Atom/RPI.Public/Pass/PassSystemInterface.h>
-#include <Atom/RPI.Public/RenderPipeline.h>
-#include <Atom/RPI.Public/ViewportContextBus.h>
-#include <Atom/RPI.Public/RPISystemInterface.h>
-#include <Atom/RPI.Public/Shader/ShaderResourceGroup.h>
-#include <Atom/RPI.Public/Shader/ShaderSystem.h>
+#include <JE/Render/RPI/Public/Pass/Pass.h>
+#include <JE/Render/RPI/Public/Pass/PassSystemInterface.h>
+#include <JE/Render/RPI/Public/RenderPipeline.h>
+#include <JE/Render/RPI/Public/ViewportContextBus.h>
+#include <JE/Render/RPI/Public/RPISystemInterface.h>
+#include <JE/Render/RPI/Public/Shader/ShaderResourceGroup.h>
+#include <JE/Render/RPI/Public/Shader/ShaderSystem.h>
 
 #include <JE/Render/Bootstrap/DefaultWindowBus.h>
 #include <JE/Render/Bootstrap/BootstrapNotificationBus.h>
 
-#include <Atom/RPI.Reflect/System/AnyAsset.h>
+#include <JE/Render/RPI/Reflect/System/AnyAsset.h>
 #include <AzCore/Console/IConsole.h>
 #include <BootstrapSystemComponent_Traits_Platform.h>
 
@@ -51,7 +51,7 @@ namespace JE::Render::Bootstrap
 {
 void cvar_r_renderPipelinePath_Changed(const AZ::CVarFixedString& newPipelinePath)
 {
-    auto viewportContextManager = AZ::Interface<AZ::RPI::ViewportContextRequestsInterface>::Get();
+    auto viewportContextManager = AZ::Interface<JE::Render::RPI::ViewportContextRequestsInterface>::Get();
     if (!viewportContextManager)
     {
         return;
@@ -62,12 +62,12 @@ void cvar_r_renderPipelinePath_Changed(const AZ::CVarFixedString& newPipelinePat
         return;
     }
 
-    AZ::Data::Asset<AZ::RPI::AnyAsset> pipelineAsset =
-        AZ::RPI::AssetUtils::LoadAssetByProductPath<AZ::RPI::AnyAsset>(newPipelinePath.data(), AZ::RPI::AssetUtils::TraceLevel::Error);
+    AZ::Data::Asset<JE::Render::RPI::AnyAsset> pipelineAsset =
+        JE::Render::RPI::AssetUtils::LoadAssetByProductPath<JE::Render::RPI::AnyAsset>(newPipelinePath.data(), JE::Render::RPI::AssetUtils::TraceLevel::Error);
     if (pipelineAsset)
     {
-        AZ::RPI::RenderPipelineDescriptor renderPipelineDescriptor =
-            *AZ::RPI::GetDataFromAnyAsset<AZ::RPI::RenderPipelineDescriptor>(pipelineAsset); // Copy descriptor from asset
+        JE::Render::RPI::RenderPipelineDescriptor renderPipelineDescriptor =
+            *JE::Render::RPI::GetDataFromAnyAsset<JE::Render::RPI::RenderPipelineDescriptor>(pipelineAsset); // Copy descriptor from asset
 
         JE::Render::Bootstrap::RequestBus::Broadcast(&JE::Render::Bootstrap::RequestBus::Events::SwitchRenderPipeline, renderPipelineDescriptor, viewportContext);
     }
@@ -79,7 +79,7 @@ void cvar_r_renderPipelinePath_Changed(const AZ::CVarFixedString& newPipelinePat
 
 void cvar_r_antiAliasing_Changed(const AZ::CVarFixedString& newAntiAliasing)
 {
-    auto viewportContextManager = AZ::Interface<AZ::RPI::ViewportContextRequestsInterface>::Get();
+    auto viewportContextManager = AZ::Interface<JE::Render::RPI::ViewportContextRequestsInterface>::Get();
     if (!viewportContextManager)
     {
         return;
@@ -95,7 +95,7 @@ void cvar_r_antiAliasing_Changed(const AZ::CVarFixedString& newAntiAliasing)
 
 void cvar_r_multiSample_Changed(const uint16_t& newSampleCount)
 {
-    auto viewportContextManager = AZ::Interface<AZ::RPI::ViewportContextRequestsInterface>::Get();
+    auto viewportContextManager = AZ::Interface<JE::Render::RPI::ViewportContextRequestsInterface>::Get();
     if (!viewportContextManager)
     {
         return;
@@ -358,7 +358,7 @@ namespace JE
                     // If we are running without a native window, the application multisamplestate still needs to be set and
                     // initialized so that the shader's SuperVariant name is set and the scene's render pipelines are re-initialized
                     AZ::RHI::MultisampleState multisampleState;
-                    AZ::RPI::RPISystemInterface::Get()->SetApplicationMultisampleState(multisampleState);
+                    JE::Render::RPI::RPISystemInterface::Get()->SetApplicationMultisampleState(multisampleState);
                 }
                 else if (!appType.IsValid() || appType.IsGame())
                 {
@@ -443,7 +443,7 @@ namespace JE
 
                 m_isInitialized = true;
 
-                if (!AZ::RPI::RPISystemInterface::Get()->IsInitialized())
+                if (!JE::Render::RPI::RPISystemInterface::Get()->IsInitialized())
                 {
                     AZ::OSString msgBoxMessage;
                     msgBoxMessage.append("RPI System could not initialize correctly. Check log for detail.");
@@ -525,14 +525,14 @@ namespace JE
             void BootstrapSystemComponent::CreateViewportContext()
             {
                 AZ::RHI::Device* device = AZ::RHI::RHISystemInterface::Get()->GetDevice();
-                AZ::RPI::ViewportContextRequestsInterface::CreationParameters params;
+                JE::Render::RPI::ViewportContextRequestsInterface::CreationParameters params;
                 params.device = device;
                 params.windowHandle = m_windowHandle;
                 params.renderScene = m_defaultScene;
                 // Setting the default ViewportContextID to an arbitrary and otherwise invalid (negative) value to ensure its uniqueness
                 params.id = -10;
 
-                auto viewContextManager = AZ::Interface<AZ::RPI::ViewportContextRequestsInterface>::Get();
+                auto viewContextManager = AZ::Interface<JE::Render::RPI::ViewportContextRequestsInterface>::Get();
                 m_viewportContext = viewContextManager->CreateViewportContext(
                     viewContextManager->GetDefaultViewportContextName(), params);
 
@@ -565,7 +565,7 @@ namespace JE
                 }
             }
 
-            AZ::RPI::ScenePtr BootstrapSystemComponent::GetOrCreateAtomSceneFromAzScene(AzFramework::Scene* scene)
+            JE::Render::RPI::ScenePtr BootstrapSystemComponent::GetOrCreateAtomSceneFromAzScene(AzFramework::Scene* scene)
             {
                 // Get or create a weak pointer to our scene
                 // If it's valid, we're done, if not we need to create an Atom scene and update our scene map
@@ -576,14 +576,14 @@ namespace JE
                 }
 
                 // Create and register a scene with all available feature processors
-                AZ::RPI::SceneDescriptor sceneDesc;
+                JE::Render::RPI::SceneDescriptor sceneDesc;
                 sceneDesc.m_nameId = AZ::Name("Main");
-                AZ::RPI::ScenePtr atomScene = AZ::RPI::Scene::CreateScene(sceneDesc);
+                JE::Render::RPI::ScenePtr atomScene = JE::Render::RPI::Scene::CreateScene(sceneDesc);
                 atomScene->EnableAllFeatureProcessors();
                 atomScene->Activate();
 
                 // Register scene to RPI system so it will be processed/rendered per tick
-                AZ::RPI::RPISystemInterface::Get()->RegisterScene(atomScene);
+                JE::Render::RPI::RPISystemInterface::Get()->RegisterScene(atomScene);
                 scene->SetSubsystem(atomScene);
 
                 atomSceneHandle = atomScene;
@@ -609,9 +609,9 @@ namespace JE
                 m_defaultScene = GetOrCreateAtomSceneFromAzScene(m_defaultFrameworkScene.get());
             }
 
-            bool BootstrapSystemComponent::EnsureDefaultRenderPipelineInstalledForScene(AZ::RPI::ScenePtr scene, AZ::RPI::ViewportContextPtr viewportContext)
+            bool BootstrapSystemComponent::EnsureDefaultRenderPipelineInstalledForScene(JE::Render::RPI::ScenePtr scene, JE::Render::RPI::ViewportContextPtr viewportContext)
             {
-                AZ::RPI::XRRenderingInterface* xrSystem = AZ::RPI::RPISystemInterface::Get()->GetXRSystem();
+                JE::Render::RPI::XRRenderingInterface* xrSystem = JE::Render::RPI::RPISystemInterface::Get()->GetXRSystem();
                 const bool loadDefaultRenderPipeline = !xrSystem || xrSystem->GetRHIXRRenderingInterface()->IsDefaultRenderPipelineNeeded();
 
                 AZ::RHI::MultisampleState multisampleState;
@@ -632,7 +632,7 @@ namespace JE
                         }
                     }
 
-                    AZ::RPI::RenderPipelinePtr renderPipeline = LoadPipeline(scene, viewportContext, pipelineName, AZ::RPI::ViewType::Default, multisampleState);
+                    JE::Render::RPI::RenderPipelinePtr renderPipeline = LoadPipeline(scene, viewportContext, pipelineName, JE::Render::RPI::ViewType::Default, multisampleState);
                     if (!renderPipeline)
                     {
                         return false;
@@ -652,10 +652,10 @@ namespace JE
                 {
                     for (AZ::u32 i = 0; i < xrSystem->GetNumViews(); i++)
                     {
-                        const AZ::RPI::ViewType viewType = (i == 0)
-                            ? AZ::RPI::ViewType::XrLeft
-                            : AZ::RPI::ViewType::XrRight;
-                        const AZStd::string_view xrPipelineAssetName = (viewType == AZ::RPI::ViewType::XrLeft)
+                        const JE::Render::RPI::ViewType viewType = (i == 0)
+                            ? JE::Render::RPI::ViewType::XrLeft
+                            : JE::Render::RPI::ViewType::XrRight;
+                        const AZStd::string_view xrPipelineAssetName = (viewType == JE::Render::RPI::ViewType::XrLeft)
                             ? static_cast<AZ::CVarFixedString>(r_default_openxr_left_pipeline_name)
                             : static_cast<AZ::CVarFixedString>(r_default_openxr_right_pipeline_name);
 
@@ -676,7 +676,7 @@ namespace JE
                 {
                     multisampleState.m_samples = static_cast<uint16_t>(cvarMultiSample);
                 }
-                AZ::RPI::RPISystemInterface::Get()->SetApplicationMultisampleState(multisampleState);
+                JE::Render::RPI::RPISystemInterface::Get()->SetApplicationMultisampleState(multisampleState);
 
                 // Send notification when the scene and its pipeline are ready.
                 // Use the first created pipeline's scene as our default scene for now to allow
@@ -692,7 +692,7 @@ namespace JE
                 return true;
             }
 
-            void BootstrapSystemComponent::RunBRDFPipeline(AZ::RPI::ScenePtr scene, AZ::RPI::ViewportContextPtr viewportContext)
+            void BootstrapSystemComponent::RunBRDFPipeline(JE::Render::RPI::ScenePtr scene, JE::Render::RPI::ViewportContextPtr viewportContext)
             {
                 // As part of our initialization we need to create the BRDF texture generation pipeline
 
@@ -701,17 +701,17 @@ namespace JE
                 if (!m_brdfTexture)
                 {
 
-                    const AZStd::shared_ptr<const AZ::RPI::PassTemplate> brdfTextureTemplate =
-                        AZ::RPI::PassSystemInterface::Get()->GetPassTemplate(AZ::Name("BRDFTextureTemplate"));
-                    AZ::Data::Asset<AZ::RPI::AttachmentImageAsset> brdfImageAsset = AZ::RPI::AssetUtils::LoadAssetById<AZ::RPI::AttachmentImageAsset>(
-                        brdfTextureTemplate->m_imageAttachments[0].m_assetRef.m_assetId, AZ::RPI::AssetUtils::TraceLevel::Error);
+                    const AZStd::shared_ptr<const JE::Render::RPI::PassTemplate> brdfTextureTemplate =
+                        JE::Render::RPI::PassSystemInterface::Get()->GetPassTemplate(AZ::Name("BRDFTextureTemplate"));
+                    AZ::Data::Asset<JE::Render::RPI::AttachmentImageAsset> brdfImageAsset = JE::Render::RPI::AssetUtils::LoadAssetById<JE::Render::RPI::AttachmentImageAsset>(
+                        brdfTextureTemplate->m_imageAttachments[0].m_assetRef.m_assetId, JE::Render::RPI::AssetUtils::TraceLevel::Error);
                     if (brdfImageAsset.IsReady())
                     {
-                        m_brdfTexture = AZ::RPI::AttachmentImage::FindOrCreate(brdfImageAsset);
+                        m_brdfTexture = JE::Render::RPI::AttachmentImage::FindOrCreate(brdfImageAsset);
                     }
                 }
 
-                AZ::RPI::RenderPipelineDescriptor pipelineDesc;
+                JE::Render::RPI::RenderPipelineDescriptor pipelineDesc;
                 pipelineDesc.m_mainViewTagName = "MainCamera";
                 pipelineDesc.m_rootPassTemplate = "BRDFTexturePipeline";
                 pipelineDesc.m_executeOnce = true;
@@ -722,16 +722,16 @@ namespace JE
 
                     if (!scene->GetRenderPipeline(AZ::Name(pipelineDesc.m_name)))
                     {
-                        AZ::RPI::RenderPipelinePtr brdfTexturePipeline = AZ::RPI::RenderPipeline::CreateRenderPipeline(pipelineDesc);
+                        JE::Render::RPI::RenderPipelinePtr brdfTexturePipeline = JE::Render::RPI::RenderPipeline::CreateRenderPipeline(pipelineDesc);
                         brdfTexturePipeline->GetRootPass()->SetDeviceIndex(deviceIndex);
                         scene->AddRenderPipeline(brdfTexturePipeline);
                     }
                 }
             }
 
-            void BootstrapSystemComponent::SwitchRenderPipeline(const AZ::RPI::RenderPipelineDescriptor& newRenderPipelineDesc, AZ::RPI::ViewportContextPtr viewportContext)
+            void BootstrapSystemComponent::SwitchRenderPipeline(const JE::Render::RPI::RenderPipelineDescriptor& newRenderPipelineDesc, JE::Render::RPI::ViewportContextPtr viewportContext)
             {
-                AZ::RPI::RenderPipelineDescriptor pipelineDescriptor = newRenderPipelineDesc;
+                JE::Render::RPI::RenderPipelineDescriptor pipelineDescriptor = newRenderPipelineDesc;
                 pipelineDescriptor.m_name =
                     AZStd::string::format("%s_%i", pipelineDescriptor.m_name.c_str(), viewportContext->GetId());
 
@@ -750,8 +750,8 @@ namespace JE
 
                 // Create new render pipeline
                 auto oldRenderPipeline = viewportContext->GetRenderScene()->GetDefaultRenderPipeline();
-                AZ::RPI::RenderPipelinePtr newRenderPipeline = AZ::RPI::RenderPipeline::CreateRenderPipelineForWindow(
-                        pipelineDescriptor, *viewportContext->GetWindowContext().get(), AZ::RPI::ViewType::Default);
+                JE::Render::RPI::RenderPipelinePtr newRenderPipeline = JE::Render::RPI::RenderPipeline::CreateRenderPipelineForWindow(
+                        pipelineDescriptor, *viewportContext->GetWindowContext().get(), JE::Render::RPI::ViewType::Default);
 
                 // Switch render pipeline
                 viewportContext->GetRenderScene()->RemoveRenderPipeline(oldRenderPipeline->GetId());
@@ -760,20 +760,20 @@ namespace JE
                 viewportContext->GetRenderScene()->AddRenderPipeline(newRenderPipeline);
                 newRenderPipeline->SetDefaultView(view);
 
-                AZ::RPI::RPISystemInterface::Get()->SetApplicationMultisampleState(newRenderPipeline->GetRenderSettings().m_multisampleState);
+                JE::Render::RPI::RPISystemInterface::Get()->SetApplicationMultisampleState(newRenderPipeline->GetRenderSettings().m_multisampleState);
             }
 
-            void BootstrapSystemComponent::SwitchAntiAliasing(const AZStd::string& newAntiAliasing, AZ::RPI::ViewportContextPtr viewportContext)
+            void BootstrapSystemComponent::SwitchAntiAliasing(const AZStd::string& newAntiAliasing, JE::Render::RPI::ViewportContextPtr viewportContext)
             {
                 auto defaultRenderPipeline = viewportContext->GetRenderScene()->GetDefaultRenderPipeline();
                 defaultRenderPipeline->SetActiveAAMethod(newAntiAliasing);
             }
 
-            void BootstrapSystemComponent::SwitchMultiSample(const uint16_t newSampleCount, AZ::RPI::ViewportContextPtr viewportContext)
+            void BootstrapSystemComponent::SwitchMultiSample(const uint16_t newSampleCount, JE::Render::RPI::ViewportContextPtr viewportContext)
             {
                 auto multiSampleStete = viewportContext->GetRenderScene()->GetDefaultRenderPipeline()->GetRenderSettings().m_multisampleState;
                 multiSampleStete.m_samples = newSampleCount;
-                AZ::RPI::RPISystemInterface::Get()->SetApplicationMultisampleState(multiSampleStete);
+                JE::Render::RPI::RPISystemInterface::Get()->SetApplicationMultisampleState(multiSampleStete);
             }
 
             void BootstrapSystemComponent::RefreshWindowResolution()
@@ -781,17 +781,17 @@ namespace JE
                 SetWindowResolution();
             }
 
-            AZ::RPI::RenderPipelinePtr BootstrapSystemComponent::LoadPipeline( AZ::RPI::ScenePtr scene, AZ::RPI::ViewportContextPtr viewportContext,
-                                                    AZStd::string_view pipelineName, AZ::RPI::ViewType viewType, AZ::RHI::MultisampleState& multisampleState)
+            JE::Render::RPI::RenderPipelinePtr BootstrapSystemComponent::LoadPipeline( JE::Render::RPI::ScenePtr scene, JE::Render::RPI::ViewportContextPtr viewportContext,
+                                                    AZStd::string_view pipelineName, JE::Render::RPI::ViewType viewType, AZ::RHI::MultisampleState& multisampleState)
             {
                 // Create a render pipeline from the specified asset for the window context and add the pipeline to the scene.
                 // When running with an Asset Processor, this will attempt to compile the asset before loading it.
-                AZ::Data::Asset<AZ::RPI::AnyAsset> pipelineAsset =
-                    AZ::RPI::AssetUtils::LoadCriticalAsset<AZ::RPI::AnyAsset>(pipelineName.data(), AZ::RPI::AssetUtils::TraceLevel::Error);
+                AZ::Data::Asset<JE::Render::RPI::AnyAsset> pipelineAsset =
+                    JE::Render::RPI::AssetUtils::LoadCriticalAsset<JE::Render::RPI::AnyAsset>(pipelineName.data(), JE::Render::RPI::AssetUtils::TraceLevel::Error);
                 if (pipelineAsset)
                 {
-                    AZ::RPI::RenderPipelineDescriptor renderPipelineDescriptor =
-                        *AZ::RPI::GetDataFromAnyAsset<AZ::RPI::RenderPipelineDescriptor>(pipelineAsset); // Copy descriptor from asset
+                    JE::Render::RPI::RenderPipelineDescriptor renderPipelineDescriptor =
+                        *JE::Render::RPI::GetDataFromAnyAsset<JE::Render::RPI::RenderPipelineDescriptor>(pipelineAsset); // Copy descriptor from asset
                     pipelineAsset.Release();
 
                     renderPipelineDescriptor.m_name =
@@ -812,10 +812,10 @@ namespace JE
                     multisampleState = renderPipelineDescriptor.m_renderSettings.m_multisampleState;
 
                     // Create and add render pipeline to the scene (when not added already)
-                    AZ::RPI::RenderPipelinePtr renderPipeline = scene->GetRenderPipeline(AZ::Name(renderPipelineDescriptor.m_name));
+                    JE::Render::RPI::RenderPipelinePtr renderPipeline = scene->GetRenderPipeline(AZ::Name(renderPipelineDescriptor.m_name));
                     if (!renderPipeline)
                     {
-                        renderPipeline = AZ::RPI::RenderPipeline::CreateRenderPipelineForWindow(
+                        renderPipeline = JE::Render::RPI::RenderPipeline::CreateRenderPipelineForWindow(
                             renderPipelineDescriptor, *viewportContext->GetWindowContext().get(), viewType);
                         scene->AddRenderPipeline(renderPipeline);
                     }
@@ -843,7 +843,7 @@ namespace JE
             {
                 if (m_defaultScene)
                 {
-                    AZ::RPI::RPISystemInterface::Get()->UnregisterScene(m_defaultScene);
+                    JE::Render::RPI::RPISystemInterface::Get()->UnregisterScene(m_defaultScene);
 
                     // Unbind m_defaultScene to the GameEntityContext's AzFramework::Scene
                     if (m_defaultFrameworkScene)
@@ -908,7 +908,7 @@ namespace JE
                 return m_windowHandle;
             }
 
-            AZStd::shared_ptr<AZ::RPI::WindowContext>  BootstrapSystemComponent::GetDefaultWindowContext()
+            AZStd::shared_ptr<JE::Render::RPI::WindowContext>  BootstrapSystemComponent::GetDefaultWindowContext()
             {
                 return m_viewportContext ? m_viewportContext->GetWindowContext() : nullptr;
             }

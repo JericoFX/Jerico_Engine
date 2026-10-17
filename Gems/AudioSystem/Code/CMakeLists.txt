@@ -51,7 +51,7 @@ ly_add_target(
             AZ::AzCore
             AZ::AzFramework
             Gem::${gem_name}.API
-            Gem::Atom_RPI.Public
+            JE::RenderIntegration
             Legacy::CryCommon # Temporary, needs to be removed
 )
 
@@ -256,7 +256,7 @@ if (PAL_TRAIT_BUILD_HOST_TOOLS)
                 Gem::${gem_name}.Editor.API
             PRIVATE
                 3rdParty::Qt::Core
-                Gem::Atom_RPI.Public
+                JE::RenderIntegration
                 Gem::${gem_name}.Editor.Private.Object
     )
 
@@ -283,7 +283,7 @@ if (PAL_TRAIT_BUILD_HOST_TOOLS)
                 PRIVATE
                     AZ::AzTest
                     3rdParty::Qt::Core
-                    Gem::Atom_RPI.Public
+                    JE::RenderIntegration
                     Gem::${gem_name}.Editor.Private.Object
         )
 

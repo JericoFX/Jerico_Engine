@@ -18,9 +18,9 @@ namespace JE::Render::Debug
         m_materialDetailsSelectedEntityId = entityId;
     }
 
-    const AZ::RPI::MeshDrawPacketLods* MaterialShaderDetailsController::GetMeshDrawPackets() const
+    const JE::Render::RPI::MeshDrawPacketLods* MaterialShaderDetailsController::GetMeshDrawPackets() const
     {
-        const AZ::RPI::MeshDrawPacketLods* drawPackets = nullptr;
+        const JE::Render::RPI::MeshDrawPacketLods* drawPackets = nullptr;
         AtomImGuiMeshCallbackBus::EventResult(drawPackets, m_materialDetailsSelectedEntityId, &AtomImGuiMeshCallbacks::GetDrawPackets);
         return drawPackets;
     }

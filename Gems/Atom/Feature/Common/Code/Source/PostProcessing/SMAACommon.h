@@ -9,7 +9,7 @@
 #pragma once
 
 #include <AzCore/Math/Vector4.h>
-#include <Atom/RPI.Public/Pass/PassAttachment.h>
+#include <JE/Render/RPI/Public/Pass/PassAttachment.h>
 
 namespace AZ
 {

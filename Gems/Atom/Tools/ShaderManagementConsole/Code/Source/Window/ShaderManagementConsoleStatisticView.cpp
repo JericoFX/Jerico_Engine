@@ -6,7 +6,7 @@
  *
  */
 
-#include <Atom/RPI.Edit/Common/AssetUtils.h>
+#include <JE/Editor/Render/RPI/Edit/Common/AssetUtils.h>
 #include <AzToolsFramework/UI/UICore/WidgetHelpers.h>
 #include <Window/ShaderManagementConsoleStatisticView.h>
 #include <ShaderManagementConsoleRequestBus.h>
@@ -67,7 +67,7 @@ namespace ShaderManagementConsole
                 for (auto& shaderOptionDescriptor : info.m_shaderOptionGroup.GetShaderOptionDescriptors())
                 {
                     AZ::Name optionName = shaderOptionDescriptor.GetName();
-                    AZ::RPI::ShaderOptionValue optionValue = info.m_shaderOptionGroup.GetValue(optionName);
+                    JE::Render::RPI::ShaderOptionValue optionValue = info.m_shaderOptionGroup.GetValue(optionName);
 
                     if (!optionValue.IsValid())
                     {
@@ -130,7 +130,7 @@ namespace ShaderManagementConsole
         int materialCount = 0;
         for (int i = 0; i < materialAssetIdList.size(); ++i)
         {
-            AZStd::vector<AZ::RPI::ShaderCollection::Item> shaderItemList;
+            AZStd::vector<JE::Render::RPI::ShaderCollection::Item> shaderItemList;
             ShaderManagementConsoleRequestBus::BroadcastResult(
                 shaderItemList, &ShaderManagementConsoleRequestBus::Events::GetMaterialInstanceShaderItems, materialAssetIdList[i]);
 
@@ -142,7 +142,7 @@ namespace ShaderManagementConsole
                     if (descriptor.GetName() == optionName)
                     {
                         // the material is using this option
-                        AZ::IO::Path assetPath = AZ::IO::Path(AZ::RPI::AssetUtils::GetSourcePathByAssetId(materialAssetIdList[i]));
+                        AZ::IO::Path assetPath = AZ::IO::Path(JE::Render::RPI::AssetUtils::GetSourcePathByAssetId(materialAssetIdList[i]));
                         materialList += QString(assetPath.Stem().Native().data());
                         materialList += "\n";
                         materialCount++;

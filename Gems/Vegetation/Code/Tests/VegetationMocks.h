@@ -25,7 +25,7 @@
 #include <AzCore/Component/TransformBus.h>
 #include <AzCore/std/containers/set.h>
 #include <AzCore/std/smart_ptr/make_shared.h>
-#include <Atom/RPI.Reflect/Model/ModelAsset.h>
+#include <JE/Render/RPI/Reflect/Model/ModelAsset.h>
 #include <Source/AreaSystemComponent.h>
 #include <Source/InstanceSystemComponent.h>
 #include <ISerialize.h>
@@ -401,9 +401,9 @@ namespace UnitTest
     };
 
     struct MockMeshAsset
-        : public AZ::RPI::ModelAsset
+        : public JE::Render::RPI::ModelAsset
     {
-        AZ_RTTI(MockMeshAsset, "{C314B960-9B54-468D-B37C-065738E7487C}", AZ::RPI::ModelAsset);
+        AZ_RTTI(MockMeshAsset, "{C314B960-9B54-468D-B37C-065738E7487C}", JE::Render::RPI::ModelAsset);
         AZ_CLASS_ALLOCATOR(ModelAsset, AZ::SystemAllocator);
 
         MockMeshAsset()
@@ -440,12 +440,12 @@ namespace UnitTest
             return m_GetLocalBoundsOutput;
         }
 
-        void SetModelAsset([[maybe_unused]] AZ::Data::Asset<AZ::RPI::ModelAsset> modelAsset) override
+        void SetModelAsset([[maybe_unused]] AZ::Data::Asset<JE::Render::RPI::ModelAsset> modelAsset) override
         {
         }
 
-        AZ::Data::Asset<AZ::RPI::ModelAsset> m_GetMeshAssetOutput;
-        AZ::Data::Asset<const AZ::RPI::ModelAsset> GetModelAsset() const override
+        AZ::Data::Asset<JE::Render::RPI::ModelAsset> m_GetMeshAssetOutput;
+        AZ::Data::Asset<const JE::Render::RPI::ModelAsset> GetModelAsset() const override
         {
             return m_GetMeshAssetOutput;
         }
@@ -498,9 +498,9 @@ namespace UnitTest
             return m_modelAssetPathOutput;
         }
 
-        AZ::Data::Instance<AZ::RPI::Model> GetModel() const override
+        AZ::Data::Instance<JE::Render::RPI::Model> GetModel() const override
         {
-            return AZ::Data::Instance<AZ::RPI::Model>();
+            return AZ::Data::Instance<JE::Render::RPI::Model>();
         }
 
         AZ::RHI::DrawItemSortKey m_drawItemSortKeyOutput;
@@ -523,22 +523,22 @@ namespace UnitTest
             return m_isAlwaysDynamic;
         }
 
-        AZ::RPI::Cullable::LodType m_lodTypeOutput;
-        void SetLodType(AZ::RPI::Cullable::LodType lodType) override
+        JE::Render::RPI::Cullable::LodType m_lodTypeOutput;
+        void SetLodType(JE::Render::RPI::Cullable::LodType lodType) override
         {
             m_lodTypeOutput = lodType;
         }
-        AZ::RPI::Cullable::LodType GetLodType() const override
+        JE::Render::RPI::Cullable::LodType GetLodType() const override
         {
             return m_lodTypeOutput;
         }
 
-        AZ::RPI::Cullable::LodOverride m_lodOverrideOutput;
-        void SetLodOverride(AZ::RPI::Cullable::LodOverride lodOverride) override
+        JE::Render::RPI::Cullable::LodOverride m_lodOverrideOutput;
+        void SetLodOverride(JE::Render::RPI::Cullable::LodOverride lodOverride) override
         {
             m_lodOverrideOutput = lodOverride;
         }
-        AZ::RPI::Cullable::LodOverride GetLodOverride() const override
+        JE::Render::RPI::Cullable::LodOverride GetLodOverride() const override
         {
             return m_lodOverrideOutput;
         }

@@ -17,7 +17,7 @@
 
 #include <AzCore/Component/TransformBus.h>
 #include <AzCore/Asset/AssetCommon.h>
-#include <Atom/RPI.Reflect/Material/MaterialAsset.h>
+#include <JE/Render/RPI/Reflect/Material/MaterialAsset.h>
 #include <AzCore/Math/Aabb.h>
 #include <AzCore/std/containers/unordered_set.h>
 #include <AzCore/std/optional.h>
@@ -85,7 +85,7 @@ namespace JE::Geometry
         bool AssignPolygonMaterialSlots(const Api::PolygonHandles& polygons, uint32_t slot);
         //! Explicit assignment only: asynchronous picker loading never queues an edit.
         bool AssignPolygonMaterialAsset(const Api::PolygonHandles& polygons,
-            const AZ::Data::Asset<AZ::RPI::MaterialAsset>& material, AZStd::string& error);
+            const AZ::Data::Asset<JE::Render::RPI::MaterialAsset>& material, AZStd::string& error);
         bool ApplyPolygonUVTransform(const Api::PolygonHandles& polygons, const AZ::Vector2& scale,
             const AZ::Vector2& offset, float rotationDegrees);
 
@@ -239,7 +239,7 @@ namespace JE::Geometry
         JE::BSP::SurfaceMaterialBindings m_displayMaterialBindings; //!< Evaluated live result, never substituted for base IDs.
         bool m_manualUVs = false;
         uint32_t m_selectedMaterialSlot = 0; //!< Hidden legacy scene field; slots are allocated by the native picker.
-        AZ::Data::Asset<AZ::RPI::MaterialAsset> m_selectedFaceMaterial{AZ::Data::AssetLoadBehavior::NoLoad};
+        AZ::Data::Asset<JE::Render::RPI::MaterialAsset> m_selectedFaceMaterial{AZ::Data::AssetLoadBehavior::NoLoad};
         AZ::EntityId m_faceMaterialPickerEntity;
         AZ::Data::AssetId m_faceMaterialPickerAsset;
         bool m_faceMaterialLoadFailed = false;

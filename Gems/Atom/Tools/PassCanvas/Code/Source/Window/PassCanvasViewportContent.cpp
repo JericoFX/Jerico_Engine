@@ -8,8 +8,8 @@
 
 #include <Atom/Feature/SkyBox/SkyboxConstants.h>
 #include <Atom/Feature/Utils/ModelPreset.h>
-#include <Atom/RPI.Edit/Common/AssetUtils.h>
-#include <Atom/RPI.Reflect/Asset/AssetUtils.h>
+#include <JE/Editor/Render/RPI/Edit/Common/AssetUtils.h>
+#include <JE/Render/RPI/Reflect/Asset/AssetUtils.h>
 #include <AtomLyIntegration/CommonFeatures/Grid/GridComponentBus.h>
 #include <AtomLyIntegration/CommonFeatures/Grid/GridComponentConfig.h>
 #include <AtomLyIntegration/CommonFeatures/Grid/GridComponentConstants.h>
@@ -72,12 +72,12 @@ namespace PassCanvas
 
         AZ::Render::MeshComponentRequestBus::Event(
             GetShadowCatcherEntityId(), &AZ::Render::MeshComponentRequestBus::Events::SetModelAssetId,
-            AZ::RPI::AssetUtils::GetAssetIdForProductPath("materialeditor/viewportmodels/plane_1x1.fbx.azmodel"));
+            JE::Render::RPI::AssetUtils::GetAssetIdForProductPath("materialeditor/viewportmodels/plane_1x1.fbx.azmodel"));
 
         JE::Render::MaterialComponentRequestBus::Event(
             GetShadowCatcherEntityId(), &JE::Render::MaterialComponentRequestBus::Events::SetMaterialAssetId,
             JE::Render::DefaultMaterialAssignmentId,
-            AZ::RPI::AssetUtils::GetAssetIdForProductPath("materials/special/shadowcatcher.azmaterial"));
+            JE::Render::RPI::AssetUtils::GetAssetIdForProductPath("materials/special/shadowcatcher.azmaterial"));
 
         // Create grid
         m_gridEntity = CreateEntity("GridEntity", { AZ::Render::GridComponentTypeId, azrtti_typeid<AzFramework::TransformComponent>() });

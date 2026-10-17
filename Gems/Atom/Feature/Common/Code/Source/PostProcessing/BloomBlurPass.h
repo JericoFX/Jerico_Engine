@@ -7,15 +7,15 @@
  */
 #pragma once
 
-#include <Atom/RPI.Public/Pass/ComputePass.h>
+#include <JE/Render/RPI/Public/Pass/ComputePass.h>
 
-#include <Atom/RPI.Public/Pass/RenderPass.h>
-#include <Atom/RPI.Public/Pass/Pass.h>
-#include <Atom/RPI.Public/Pass/ParentPass.h>
-#include <Atom/RPI.Public/Shader/ShaderResourceGroup.h>
-#include <Atom/RPI.Public/Shader/Shader.h>
+#include <JE/Render/RPI/Public/Pass/RenderPass.h>
+#include <JE/Render/RPI/Public/Pass/Pass.h>
+#include <JE/Render/RPI/Public/Pass/ParentPass.h>
+#include <JE/Render/RPI/Public/Shader/ShaderResourceGroup.h>
+#include <JE/Render/RPI/Public/Shader/Shader.h>
 
-#include <Atom/RPI.Reflect/Pass/DownsampleMipChainPassData.h>
+#include <JE/Render/RPI/Reflect/Pass/DownsampleMipChainPassData.h>
 
 #include <Atom/RHI/ConstantsData.h>
 #include <Atom/Feature/PostProcess/Bloom/BloomConstants.h>
@@ -28,7 +28,7 @@ namespace AZ
 
         // Pass for blurring downsampled images
         class BloomBlurPass
-            : public RPI::ParentPass
+            : public JE::Render::RPI::ParentPass
         {
             AZ_RPI_PASS(BloomBlurPass);
 
@@ -38,9 +38,9 @@ namespace AZ
             virtual ~BloomBlurPass() = default;
 
             //! Creates a BloomBlurPass
-            static RPI::Ptr<BloomBlurPass> Create(const RPI::PassDescriptor& descriptor);
+            static JE::Render::RPI::Ptr<BloomBlurPass> Create(const JE::Render::RPI::PassDescriptor& descriptor);
         protected:
-            BloomBlurPass(const RPI::PassDescriptor& descriptor);
+            BloomBlurPass(const JE::Render::RPI::PassDescriptor& descriptor);
 
             // Pass behaviour overrides...
             void BuildInternal() override;
@@ -60,14 +60,14 @@ namespace AZ
 
             float Gaussian1D(float x, float sigma);
 
-            RPI::DownsampleMipChainPassData m_passData;
+            JE::Render::RPI::DownsampleMipChainPassData m_passData;
 
             AZStd::vector<AZStd::vector<float>> m_weightData;
             AZStd::vector<AZStd::vector<float>> m_offsetData;
             AZStd::vector<uint32_t> m_kernelRadiusData;
 
-            AZStd::vector<Data::Instance<RPI::Buffer>> m_weightBuffer;
-            AZStd::vector<Data::Instance<RPI::Buffer>> m_offsetBuffer;
+            AZStd::vector<Data::Instance<JE::Render::RPI::Buffer>> m_weightBuffer;
+            AZStd::vector<Data::Instance<JE::Render::RPI::Buffer>> m_offsetBuffer;
 
             AZStd::vector<float> m_kernelScreenPercents = {
                 AZ::Render::Bloom::DefaultScreenPercentStage0,
@@ -89,7 +89,7 @@ namespace AZ
 
         // Child pass spawned by parent blur pass, one child do gaussian blur on single downsampled level in one direction
         class BloomBlurChildPass
-            : public RPI::ComputePass
+            : public JE::Render::RPI::ComputePass
         {
             AZ_RPI_PASS(BloomBlurChildPass);
 
@@ -101,11 +101,11 @@ namespace AZ
             virtual ~BloomBlurChildPass() = default;
 
             //! Creates a BloomBlurChildPass
-            static RPI::Ptr<BloomBlurChildPass> Create(const RPI::PassDescriptor& descriptor);
+            static JE::Render::RPI::Ptr<BloomBlurChildPass> Create(const JE::Render::RPI::PassDescriptor& descriptor);
 
             void UpdateParameters(
-                Data::Instance<RPI::Buffer> offsetBuffer,
-                Data::Instance<RPI::Buffer> weightBuffer,
+                Data::Instance<JE::Render::RPI::Buffer> offsetBuffer,
+                Data::Instance<JE::Render::RPI::Buffer> weightBuffer,
                 uint32_t radius,
                 bool direction,
                 uint32_t mipLevel,
@@ -113,7 +113,7 @@ namespace AZ
                 uint32_t imageHeight);
 
         protected:
-            BloomBlurChildPass(const RPI::PassDescriptor& descriptor);
+            BloomBlurChildPass(const JE::Render::RPI::PassDescriptor& descriptor);
 
             // Pass Behaviour Overrides...
             void FrameBeginInternal(FramePrepareParams params) override;
@@ -128,8 +128,8 @@ namespace AZ
             RHI::ShaderInputNameIndex m_sourceImageTexelSizeInputIndex = "m_sourceImageTexelSize";
             RHI::ShaderInputNameIndex m_mipLevelInputIndex = "m_mipLevel";
 
-            Data::Instance<RPI::Buffer> m_offsetBuffer;
-            Data::Instance<RPI::Buffer> m_weightBuffer;
+            Data::Instance<JE::Render::RPI::Buffer> m_offsetBuffer;
+            Data::Instance<JE::Render::RPI::Buffer> m_weightBuffer;
 
             uint32_t m_sourceImageWidth;
             uint32_t m_sourceImageHeight;

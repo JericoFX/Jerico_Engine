@@ -7,13 +7,13 @@
  */
 
 #include <AzCore/Serialization/SerializeContext.h>
-#include <Atom/RPI.Edit/Common/AssetUtils.h>
-#include <Atom/RPI.Public/RenderPipeline.h>
-#include <Atom/RPI.Public/RPIUtils.h>
-#include <Atom/RPI.Public/Scene.h>
-#include <Atom/RPI.Public/Shader/Shader.h>
-#include <Atom/RPI.Public/View.h>
-#include <Atom/RPI.Public/Pass/PassFilter.h>
+#include <JE/Editor/Render/RPI/Edit/Common/AssetUtils.h>
+#include <JE/Render/RPI/Public/RenderPipeline.h>
+#include <JE/Render/RPI/Public/RPIUtils.h>
+#include <JE/Render/RPI/Public/Scene.h>
+#include <JE/Render/RPI/Public/Shader/Shader.h>
+#include <JE/Render/RPI/Public/View.h>
+#include <JE/Render/RPI/Public/Pass/PassFilter.h>
 #include <Render/DiffuseProbeGridFeatureProcessor.h>
 #include <DiffuseProbeGrid_Traits_Platform.h>
 #include <Atom/Feature/SpecularReflections/SpecularReflectionsFeatureProcessorInterface.h>
@@ -97,12 +97,12 @@ namespace AZ
 
             // load shader
             // Note: the shader may not be available on all platforms
-            Data::Instance<RPI::Shader> shader = RPI::LoadCriticalShader("Shaders/DiffuseGlobalIllumination/DiffuseProbeGridRender.azshader");
+            Data::Instance<JE::Render::RPI::Shader> shader = JE::Render::RPI::LoadCriticalShader("Shaders/DiffuseGlobalIllumination/DiffuseProbeGridRender.azshader");
             if (shader)
             {
                 m_probeGridRenderData.m_drawListTag = shader->GetDrawListTag();
 
-                m_probeGridRenderData.m_pipelineState = aznew RPI::PipelineStateForDraw;
+                m_probeGridRenderData.m_pipelineState = aznew JE::Render::RPI::PipelineStateForDraw;
                 m_probeGridRenderData.m_pipelineState->Init(shader); // uses default shader variant
                 m_probeGridRenderData.m_pipelineState->SetInputStreamLayout(m_boxStreamLayout);
                 m_probeGridRenderData.m_pipelineState->SetOutputFromScene(GetParentScene());
@@ -110,7 +110,7 @@ namespace AZ
 
                 // load object shader resource group
                 m_probeGridRenderData.m_shader = shader;
-                m_probeGridRenderData.m_srgLayout = shader->FindShaderResourceGroupLayout(RPI::SrgBindingSlot::Object);
+                m_probeGridRenderData.m_srgLayout = shader->FindShaderResourceGroupLayout(JE::Render::RPI::SrgBindingSlot::Object);
                 AZ_Error("DiffuseProbeGridFeatureProcessor", m_probeGridRenderData.m_srgLayout != nullptr, "Failed to find ObjectSrg layout");
                 
 
@@ -119,16 +119,16 @@ namespace AZ
             // Load the shader that contains the scene and view SRG layout that was used by the precompiled shaders.
             // Since View and Scene can be modified by projects, we may need to copy the content to the scene and view SRGs
             // that were used when creating the precompiled shaders (to avoid a layout mismatch).
-            m_sceneAndViewShader = RPI::LoadCriticalShader("Shaders/DiffuseGlobalIllumination/SceneAndViewSrgs.azshader");
+            m_sceneAndViewShader = JE::Render::RPI::LoadCriticalShader("Shaders/DiffuseGlobalIllumination/SceneAndViewSrgs.azshader");
             if (m_sceneAndViewShader)
             {
-                if (auto sceneSrgLayout = m_sceneAndViewShader->FindShaderResourceGroupLayout(RPI::SrgBindingSlot::Scene))
+                if (auto sceneSrgLayout = m_sceneAndViewShader->FindShaderResourceGroupLayout(JE::Render::RPI::SrgBindingSlot::Scene))
                 {
                     // No need to copy SRG if layout is the same
-                    const RHI::ShaderResourceGroupLayout* layout = RPI::RPISystemInterface::Get()->GetSceneSrgLayout().get();
+                    const RHI::ShaderResourceGroupLayout* layout = JE::Render::RPI::RPISystemInterface::Get()->GetSceneSrgLayout().get();
                     if (layout->GetHash() != sceneSrgLayout->GetHash())
                     {
-                        m_sceneShaderResourceGroup = RPI::ShaderResourceGroup::Create(
+                        m_sceneShaderResourceGroup = JE::Render::RPI::ShaderResourceGroup::Create(
                             m_sceneAndViewShader->GetAsset(), m_sceneAndViewShader->GetSupervariantIndex(), sceneSrgLayout->GetName());
                     }
                 }
@@ -155,7 +155,7 @@ namespace AZ
                 // Editor, handling the edge case might be overkill.
                 Data::AssetId modelAssetId = Data::AssetId(AZ::Uuid::CreateName("models/diffuseprobesphere.fbx"), 268692035);
                 m_visualizationModelAsset =
-                    Data::AssetManager::Instance().GetAsset<AZ::RPI::ModelAsset>(modelAssetId, Data::AssetLoadBehavior::PreLoad);
+                    Data::AssetManager::Instance().GetAsset<JE::Render::RPI::ModelAsset>(modelAssetId, Data::AssetLoadBehavior::PreLoad);
 
                 if (m_visualizationModelAsset.GetId().IsValid())
                 {
@@ -236,7 +236,7 @@ namespace AZ
                     assetId,
                     &AZ::Data::AssetCatalogRequests::GetAssetIdByPath,
                     notificationEntry.m_relativePath.c_str(),
-                    azrtti_typeid<AZ::RPI::StreamingImageAsset>(),
+                    azrtti_typeid<JE::Render::RPI::StreamingImageAsset>(),
                     false);
 
                 if (assetId.IsValid())
@@ -285,11 +285,11 @@ namespace AZ
                     m_ssrRayTracingEnabled = ssrOptions.IsRayTracingEnabled();
 
                     AZStd::vector<Name> passHierarchy = { Name("ReflectionScreenSpacePass"), Name("DiffuseProbeGridQueryFullscreenWithAlbedoPass") };
-                    RPI::PassFilter passFilter = RPI::PassFilter::CreateWithPassHierarchy(passHierarchy);
-                    RPI::PassSystemInterface::Get()->ForEachPass(passFilter, [this](RPI::Pass* pass) -> RPI::PassFilterExecutionFlow
+                    JE::Render::RPI::PassFilter passFilter = JE::Render::RPI::PassFilter::CreateWithPassHierarchy(passHierarchy);
+                    JE::Render::RPI::PassSystemInterface::Get()->ForEachPass(passFilter, [this](JE::Render::RPI::Pass* pass) -> JE::Render::RPI::PassFilterExecutionFlow
                         {
                             pass->SetEnabled(m_ssrRayTracingEnabled);
-                            return RPI::PassFilterExecutionFlow::StopVisitingPasses;
+                            return JE::Render::RPI::PassFilterExecutionFlow::StopVisitingPasses;
                         });
                 }
             }
@@ -324,11 +324,11 @@ namespace AZ
             // Copy the content from the view SRGs
             for (const auto& pipelineEntry : m_viewShaderResourceGroups)
             {
-                RPI::RenderPipeline* pipeline = pipelineEntry.first;
+                JE::Render::RPI::RenderPipeline* pipeline = pipelineEntry.first;
                 for (const auto& viewEntry : pipelineEntry.second)
                 {
-                    Data::Instance<RPI::ShaderResourceGroup> viewSRG = viewEntry.second;
-                    RPI::ViewPtr view = pipeline->GetFirstView(viewEntry.first);
+                    Data::Instance<JE::Render::RPI::ShaderResourceGroup> viewSRG = viewEntry.second;
+                    JE::Render::RPI::ViewPtr view = pipeline->GetFirstView(viewEntry.first);
                     if (view)
                     {
                         viewSRG->CopyShaderResourceGroupData(*view->GetShaderResourceGroup());
@@ -557,7 +557,7 @@ namespace AZ
                 assetId,
                 &AZ::Data::AssetCatalogRequests::GetAssetIdByPath,
                 assetPath.c_str(),
-                azrtti_typeid<AZ::RPI::StreamingImageAsset>(),
+                azrtti_typeid<JE::Render::RPI::StreamingImageAsset>(),
                 false);
 
             // We only track notifications for new texture assets, meaning assets that are created the first time a DiffuseProbeGrid is baked.
@@ -570,7 +570,7 @@ namespace AZ
 
         bool DiffuseProbeGridFeatureProcessor::CheckTextureAssetNotification(
             const AZStd::string& relativePath,
-            Data::Asset<RPI::StreamingImageAsset>& outTextureAsset,
+            Data::Asset<JE::Render::RPI::StreamingImageAsset>& outTextureAsset,
             DiffuseProbeGridTextureNotificationType& outNotificationType)
         {
             for (NotifyTextureAssetVector::iterator itNotification = m_notifyTextureAssets.begin(); itNotification != m_notifyTextureAssets.end(); ++itNotification)
@@ -684,13 +684,13 @@ namespace AZ
             m_irradianceQueries.clear();
         }
 
-        RPI::ShaderResourceGroup* DiffuseProbeGridFeatureProcessor::GetSceneSrg() const
+        JE::Render::RPI::ShaderResourceGroup* DiffuseProbeGridFeatureProcessor::GetSceneSrg() const
         {
             return m_sceneShaderResourceGroup.get();
         }
 
-        RPI::ShaderResourceGroup* DiffuseProbeGridFeatureProcessor::GetViewSrg(
-            RPI::RenderPipeline* pipeline, RPI::PipelineViewTag viewTag) const
+        JE::Render::RPI::ShaderResourceGroup* DiffuseProbeGridFeatureProcessor::GetViewSrg(
+            JE::Render::RPI::RenderPipeline* pipeline, JE::Render::RPI::PipelineViewTag viewTag) const
         {
             auto findPipelineIter = m_viewShaderResourceGroups.find(pipeline);
             if (findPipelineIter != m_viewShaderResourceGroups.end())
@@ -828,21 +828,21 @@ namespace AZ
             AZ::RHI::ValidateStreamBufferViews(m_boxStreamLayout, m_probeGridRenderData.m_geometryView.GetStreamBufferViews());
         }
 
-        void DiffuseProbeGridFeatureProcessor::OnRenderPipelineChanged(RPI::RenderPipeline* renderPipeline,
-                RPI::SceneNotification::RenderPipelineChangeType changeType)
+        void DiffuseProbeGridFeatureProcessor::OnRenderPipelineChanged(JE::Render::RPI::RenderPipeline* renderPipeline,
+                JE::Render::RPI::SceneNotification::RenderPipelineChangeType changeType)
         {
-            if (changeType == RPI::SceneNotification::RenderPipelineChangeType::PassChanged)
+            if (changeType == JE::Render::RPI::SceneNotification::RenderPipelineChangeType::PassChanged)
             {
                 // change the attachment on the AuxGeom pass to use the output of the visualization pass
-                RPI::PassFilter auxGeomPassFilter = RPI::PassFilter::CreateWithPassName(AZ::Name("AuxGeomPass"), renderPipeline);
-                RPI::Pass* auxGeomPass = RPI::PassSystemInterface::Get()->FindFirstPass(auxGeomPassFilter);
-                RPI::PassFilter visualizationPassFilter = RPI::PassFilter::CreateWithPassName(AZ::Name("DiffuseProbeGridVisualizationPass"), renderPipeline);
-                RPI::Pass* visualizationPass = RPI::PassSystemInterface::Get()->FindFirstPass(visualizationPassFilter);
+                JE::Render::RPI::PassFilter auxGeomPassFilter = JE::Render::RPI::PassFilter::CreateWithPassName(AZ::Name("AuxGeomPass"), renderPipeline);
+                JE::Render::RPI::Pass* auxGeomPass = JE::Render::RPI::PassSystemInterface::Get()->FindFirstPass(auxGeomPassFilter);
+                JE::Render::RPI::PassFilter visualizationPassFilter = JE::Render::RPI::PassFilter::CreateWithPassName(AZ::Name("DiffuseProbeGridVisualizationPass"), renderPipeline);
+                JE::Render::RPI::Pass* visualizationPass = JE::Render::RPI::PassSystemInterface::Get()->FindFirstPass(visualizationPassFilter);
 
                 if (auxGeomPass && visualizationPass && visualizationPass->GetInputOutputCount())
                 {
-                    RPI::PassAttachmentBinding& visualizationBinding = visualizationPass->GetInputOutputBinding(0);
-                    RPI::PassAttachmentBinding* auxGeomBinding = auxGeomPass->FindAttachmentBinding(AZ::Name("ColorInputOutput"));
+                    JE::Render::RPI::PassAttachmentBinding& visualizationBinding = visualizationPass->GetInputOutputBinding(0);
+                    JE::Render::RPI::PassAttachmentBinding* auxGeomBinding = auxGeomPass->FindAttachmentBinding(AZ::Name("ColorInputOutput"));
                     if (auxGeomBinding)
                     {
                         auxGeomBinding->SetAttachment(visualizationBinding.GetAttachment());
@@ -851,7 +851,7 @@ namespace AZ
 
                 UpdatePasses();
             }
-            else if (changeType == RPI::SceneNotification::RenderPipelineChangeType::Removed)
+            else if (changeType == JE::Render::RPI::SceneNotification::RenderPipelineChangeType::Removed)
             {
                 m_viewShaderResourceGroups.erase(renderPipeline);
             }
@@ -859,21 +859,21 @@ namespace AZ
         }
 
         void DiffuseProbeGridFeatureProcessor::OnRenderPipelinePersistentViewChanged(
-            RPI::RenderPipeline* renderPipeline, RPI::PipelineViewTag viewTag, RPI::ViewPtr newView, [[maybe_unused]] RPI::ViewPtr previousView)
+            JE::Render::RPI::RenderPipeline* renderPipeline, JE::Render::RPI::PipelineViewTag viewTag, JE::Render::RPI::ViewPtr newView, [[maybe_unused]] JE::Render::RPI::ViewPtr previousView)
         {
             if (m_sceneAndViewShader)
             {
-                if (auto viewSrgLayout = m_sceneAndViewShader->FindShaderResourceGroupLayout(RPI::SrgBindingSlot::View))
+                if (auto viewSrgLayout = m_sceneAndViewShader->FindShaderResourceGroupLayout(JE::Render::RPI::SrgBindingSlot::View))
                 {
                     // No need to copy view SRG data if the layout is the same
-                    const RHI::ShaderResourceGroupLayout* layout = RPI::RPISystemInterface::Get()->GetViewSrgLayout().get();
+                    const RHI::ShaderResourceGroupLayout* layout = JE::Render::RPI::RPISystemInterface::Get()->GetViewSrgLayout().get();
                     if (layout->GetHash() != viewSrgLayout->GetHash())
                     {
                         auto& viewSRGs = m_viewShaderResourceGroups[renderPipeline];
                         if (newView)
                         {
                             // Create a new SRG for the viewTag that is being added
-                            auto viewSRG = RPI::ShaderResourceGroup::Create(
+                            auto viewSRG = JE::Render::RPI::ShaderResourceGroup::Create(
                                 m_sceneAndViewShader->GetAsset(), m_sceneAndViewShader->GetSupervariantIndex(), viewSrgLayout->GetName());
                             viewSRGs[viewTag] = viewSRG;
                         }
@@ -887,19 +887,19 @@ namespace AZ
             }
         }
 
-        void DiffuseProbeGridFeatureProcessor::AddRenderPasses(AZ::RPI::RenderPipeline* renderPipeline)
+        void DiffuseProbeGridFeatureProcessor::AddRenderPasses(JE::Render::RPI::RenderPipeline* renderPipeline)
         {
             // only add to this pipeline if it contains the DiffuseGlobalFullscreen pass
-            RPI::PassFilter diffuseGlobalFullscreenPassFilter = RPI::PassFilter::CreateWithPassName(AZ::Name("DiffuseGlobalFullscreenPass"), renderPipeline);
-            RPI::Pass* diffuseGlobalFullscreenPass = RPI::PassSystemInterface::Get()->FindFirstPass(diffuseGlobalFullscreenPassFilter);
+            JE::Render::RPI::PassFilter diffuseGlobalFullscreenPassFilter = JE::Render::RPI::PassFilter::CreateWithPassName(AZ::Name("DiffuseGlobalFullscreenPass"), renderPipeline);
+            JE::Render::RPI::Pass* diffuseGlobalFullscreenPass = JE::Render::RPI::PassSystemInterface::Get()->FindFirstPass(diffuseGlobalFullscreenPassFilter);
             if (!diffuseGlobalFullscreenPass)
             {
                 return;
             }
 
             // check to see if the DiffuseProbeGrid passes were already added
-            RPI::PassFilter diffuseProbeGridUpdatePassFilter = RPI::PassFilter::CreateWithPassName(AZ::Name("DiffuseProbeGridUpdatePass"), renderPipeline);
-            RPI::Pass* diffuseProbeGridUpdatePass = RPI::PassSystemInterface::Get()->FindFirstPass(diffuseProbeGridUpdatePassFilter);
+            JE::Render::RPI::PassFilter diffuseProbeGridUpdatePassFilter = JE::Render::RPI::PassFilter::CreateWithPassName(AZ::Name("DiffuseProbeGridUpdatePass"), renderPipeline);
+            JE::Render::RPI::Pass* diffuseProbeGridUpdatePass = JE::Render::RPI::PassSystemInterface::Get()->FindFirstPass(diffuseProbeGridUpdatePassFilter);
 
             if (!diffuseProbeGridUpdatePass)
             {
@@ -911,8 +911,8 @@ namespace AZ
                 AddPassRequest(renderPipeline, "Passes/DiffuseProbeGridScreenSpaceReflectionsQueryPassRequest.azasset", "ReflectionScreenSpaceRayTracingPass");
 
                 // only add the visualization pass if there's an AuxGeom pass in the pipeline
-                RPI::PassFilter auxGeomPassFilter = RPI::PassFilter::CreateWithPassName(AZ::Name("AuxGeomPass"), renderPipeline);
-                RPI::Pass* auxGeomPass = RPI::PassSystemInterface::Get()->FindFirstPass(auxGeomPassFilter);
+                JE::Render::RPI::PassFilter auxGeomPassFilter = JE::Render::RPI::PassFilter::CreateWithPassName(AZ::Name("AuxGeomPass"), renderPipeline);
+                JE::Render::RPI::Pass* auxGeomPass = JE::Render::RPI::PassSystemInterface::Get()->FindFirstPass(auxGeomPassFilter);
                 if (auxGeomPass)
                 {
                     AddPassRequest(renderPipeline, "Passes/DiffuseProbeGridVisualizationPassRequest.azasset", "PostProcessPass");
@@ -926,15 +926,15 @@ namespace AZ
             m_needUpdatePipelineStates = true;
         }
 
-        void DiffuseProbeGridFeatureProcessor::AddPassRequest(RPI::RenderPipeline* renderPipeline, const char* passRequestAssetFilePath, const char* insertionPointPassName)
+        void DiffuseProbeGridFeatureProcessor::AddPassRequest(JE::Render::RPI::RenderPipeline* renderPipeline, const char* passRequestAssetFilePath, const char* insertionPointPassName)
         {
-            auto passRequestAsset = RPI::AssetUtils::LoadAssetByProductPath<RPI::AnyAsset>(passRequestAssetFilePath, RPI::AssetUtils::TraceLevel::Warning);
+            auto passRequestAsset = JE::Render::RPI::AssetUtils::LoadAssetByProductPath<JE::Render::RPI::AnyAsset>(passRequestAssetFilePath, JE::Render::RPI::AssetUtils::TraceLevel::Warning);
 
             // load pass request from the asset
-            const RPI::PassRequest* passRequest = nullptr;
+            const JE::Render::RPI::PassRequest* passRequest = nullptr;
             if (passRequestAsset->IsReady())
             {
-                passRequest = passRequestAsset->GetDataAs<RPI::PassRequest>();
+                passRequest = passRequestAsset->GetDataAs<JE::Render::RPI::PassRequest>();
             }
 
             if (!passRequest)
@@ -944,15 +944,15 @@ namespace AZ
             }
 
             // check to see if the pass already exists
-            RPI::PassFilter passFilter = RPI::PassFilter::CreateWithPassName(passRequest->m_passName, renderPipeline);
-            RPI::Pass* existingPass = RPI::PassSystemInterface::Get()->FindFirstPass(passFilter);
+            JE::Render::RPI::PassFilter passFilter = JE::Render::RPI::PassFilter::CreateWithPassName(passRequest->m_passName, renderPipeline);
+            JE::Render::RPI::Pass* existingPass = JE::Render::RPI::PassSystemInterface::Get()->FindFirstPass(passFilter);
             if (existingPass)
             {
                 return;
             }
 
             // create tha pass from the request
-            RPI::Ptr<RPI::Pass> newPass = RPI::PassSystemInterface::Get()->CreatePassFromRequest(passRequest);
+            JE::Render::RPI::Ptr<JE::Render::RPI::Pass> newPass = JE::Render::RPI::PassSystemInterface::Get()->CreatePassFromRequest(passRequest);
             if (!newPass)
             {
                 AZ_Error("DiffuseProbeGridFeatureProcessor", false, "Failed to create pass from pass request [%s]", passRequest->m_passName.GetCStr());
@@ -981,32 +981,32 @@ namespace AZ
             // disable the DiffuseProbeGridUpdatePass if the platform does not support raytracing
             if (RHI::RHISystemInterface::Get()->GetRayTracingSupport() == RHI::MultiDevice::NoDevices)
             {
-                RPI::PassFilter passFilter = RPI::PassFilter::CreateWithPassName(AZ::Name("DiffuseProbeGridUpdatePass"), GetParentScene());
-                RPI::PassSystemInterface::Get()->ForEachPass(passFilter, [](RPI::Pass* pass) -> RPI::PassFilterExecutionFlow
+                JE::Render::RPI::PassFilter passFilter = JE::Render::RPI::PassFilter::CreateWithPassName(AZ::Name("DiffuseProbeGridUpdatePass"), GetParentScene());
+                JE::Render::RPI::PassSystemInterface::Get()->ForEachPass(passFilter, [](JE::Render::RPI::Pass* pass) -> JE::Render::RPI::PassFilterExecutionFlow
                     {
                         pass->SetEnabled(false);
-                         return RPI::PassFilterExecutionFlow::ContinueVisitingPasses;
+                         return JE::Render::RPI::PassFilterExecutionFlow::ContinueVisitingPasses;
                     });
             }
         }
 
         void DiffuseProbeGridFeatureProcessor::OnVisualizationModelAssetReady(Data::Asset<Data::AssetData> asset)
         {
-            m_visualizationModel = RPI::Model::FindOrCreate(asset);
+            m_visualizationModel = JE::Render::RPI::Model::FindOrCreate(asset);
             AZ_Assert(m_visualizationModel.get(), "Failed to load DiffuseProbeGrid visualization model");
             if (!m_visualizationModel)
             {
                 return;
             }
 
-            const AZStd::span<const Data::Instance<RPI::ModelLod>>& modelLods = m_visualizationModel->GetLods();
+            const AZStd::span<const Data::Instance<JE::Render::RPI::ModelLod>>& modelLods = m_visualizationModel->GetLods();
             AZ_Assert(!modelLods.empty(), "Invalid DiffuseProbeGrid visualization model");
             if (modelLods.empty())
             {
                 return;
             }
 
-            const Data::Instance<RPI::ModelLod>& modelLod = modelLods[0];
+            const Data::Instance<JE::Render::RPI::ModelLod>& modelLod = modelLods[0];
             AZ_Assert(!modelLod->GetMeshes().empty(), "Invalid DiffuseProbeGrid visualization model asset");
             if (modelLod->GetMeshes().empty())
             {
@@ -1014,17 +1014,17 @@ namespace AZ
             }
 
             const auto meshes = modelLod->GetMeshes();
-            const RPI::ModelLod::Mesh& mesh = meshes[0];
+            const JE::Render::RPI::ModelLod::Mesh& mesh = meshes[0];
 
             // setup a stream layout and shader input contract for the position vertex stream
             static const char* PositionSemantic = "POSITION";
             static const RHI::Format PositionStreamFormat = RHI::Format::R32G32B32_FLOAT;
 
-            RPI::ShaderInputContract::StreamChannelInfo positionStreamChannelInfo;
+            JE::Render::RPI::ShaderInputContract::StreamChannelInfo positionStreamChannelInfo;
             positionStreamChannelInfo.m_semantic = RHI::ShaderSemantic(AZ::Name(PositionSemantic));
             positionStreamChannelInfo.m_componentCount = RHI::GetFormatComponentCount(PositionStreamFormat);
 
-            RPI::ShaderInputContract shaderInputContract;
+            JE::Render::RPI::ShaderInputContract shaderInputContract;
             shaderInputContract.m_streamChannels.emplace_back(positionStreamChannelInfo);
 
             // retrieve vertex/index buffers
@@ -1065,7 +1065,7 @@ namespace AZ
                 if (itNotification->m_assetId == asset.GetId())
                 {
                     // store the texture asset
-                    itNotification->m_asset = Data::static_pointer_cast<RPI::StreamingImageAsset>(asset);
+                    itNotification->m_asset = Data::static_pointer_cast<JE::Render::RPI::StreamingImageAsset>(asset);
                     itNotification->m_notificationType = notificationType;
 
                     // stop notifications on this asset

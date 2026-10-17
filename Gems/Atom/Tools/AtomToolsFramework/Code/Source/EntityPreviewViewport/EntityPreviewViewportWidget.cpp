@@ -12,9 +12,9 @@
 #include <Atom/Feature/PostProcessing/PostProcessingConstants.h>
 #include <Atom/Feature/SkyBox/SkyBoxFeatureProcessorInterface.h>
 #include <Atom/Feature/Utils/ModelPreset.h>
-#include <Atom/RPI.Public/RenderPipeline.h>
-#include <Atom/RPI.Public/Scene.h>
-#include <Atom/RPI.Edit/Common/AssetUtils.h>
+#include <JE/Render/RPI/Public/RenderPipeline.h>
+#include <JE/Render/RPI/Public/Scene.h>
+#include <JE/Editor/Render/RPI/Edit/Common/AssetUtils.h>
 #include <AtomToolsFramework/EntityPreviewViewport/EntityPreviewViewportSettingsRequestBus.h>
 #include <AtomToolsFramework/EntityPreviewViewport/EntityPreviewViewportWidget.h>
 #include <AzCore/Component/Entity.h>

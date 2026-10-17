@@ -195,18 +195,18 @@ namespace LyShine
 
 #if !defined(LYSHINE_BUILDER) && !defined(LYSHINE_TESTS)
         // Add LyShine pass
-        auto* passSystem = AZ::RPI::PassSystemInterface::Get();
+        auto* passSystem = JE::Render::RPI::PassSystemInterface::Get();
         AZ_Assert(passSystem, "Cannot get the pass system.");
         passSystem->AddPassCreator(AZ::Name("LyShinePass"), &LyShine::LyShinePass::Create);
         passSystem->AddPassCreator(AZ::Name("LyShineChildPass"), &LyShine::LyShineChildPass::Create);
         passSystem->AddPassCreator(AZ::Name("RttChildPass"), &LyShine::RttChildPass::Create);
 
         // Setup handler for load pass template mappings
-        m_loadTemplatesHandler = AZ::RPI::PassSystemInterface::OnReadyLoadTemplatesEvent::Handler([this]() { this->LoadPassTemplateMappings(); });
-        AZ::RPI::PassSystemInterface::Get()->ConnectEvent(m_loadTemplatesHandler);
+        m_loadTemplatesHandler = JE::Render::RPI::PassSystemInterface::OnReadyLoadTemplatesEvent::Handler([this]() { this->LoadPassTemplateMappings(); });
+        JE::Render::RPI::PassSystemInterface::Get()->ConnectEvent(m_loadTemplatesHandler);
         
         // Register feature processor
-        AZ::RPI::FeatureProcessorFactory::Get()->RegisterFeatureProcessor<LyShineFeatureProcessor>();
+        JE::Render::RPI::FeatureProcessorFactory::Get()->RegisterFeatureProcessor<LyShineFeatureProcessor>();
 #endif
     }
 
@@ -215,7 +215,7 @@ namespace LyShine
     {
 #if !defined(LYSHINE_BUILDER) && !defined(LYSHINE_TESTS)
         m_loadTemplatesHandler.Disconnect();        
-        AZ::RPI::FeatureProcessorFactory::Get()->UnregisterFeatureProcessor<LyShineFeatureProcessor>();
+        JE::Render::RPI::FeatureProcessorFactory::Get()->UnregisterFeatureProcessor<LyShineFeatureProcessor>();
 #endif
 
         UiSystemBus::Handler::BusDisconnect();
@@ -437,7 +437,7 @@ namespace LyShine
     void LyShineSystemComponent::LoadPassTemplateMappings()
     {
         const char* passTemplatesFile = "Passes/LyShinePassTemplates.azasset";
-        AZ::RPI::PassSystemInterface::Get()->LoadPassTemplateMappings(passTemplatesFile);
+        JE::Render::RPI::PassSystemInterface::Get()->LoadPassTemplateMappings(passTemplatesFile);
     }
 #endif
 }

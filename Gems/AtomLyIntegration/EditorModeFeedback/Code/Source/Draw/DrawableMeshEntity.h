@@ -10,7 +10,7 @@
 
 #include <Draw/EditorStateMeshDrawPacket.h>
 
-#include <Atom/RPI.Reflect/Model/ModelLodIndex.h>
+#include <JE/Render/RPI/Reflect/Model/ModelLodIndex.h>
 #include <AtomLyIntegration/CommonFeatures/Mesh/MeshHandleStateBus.h>
 #include <AzCore/Instance/Instance.h>
 #include <AzCore/std/containers/vector.h>
@@ -23,7 +23,7 @@ namespace AZ::Render
         : private AZ::Render::MeshHandleStateNotificationBus::Handler
     {
     public:
-        DrawableMeshEntity(EntityId entityId, Data::Instance<RPI::Material> maskMaterial, Name drawList);
+        DrawableMeshEntity(EntityId entityId, Data::Instance<JE::Render::RPI::Material> maskMaterial, Name drawList);
         ~DrawableMeshEntity();
 
         //! Returns true if this entity can be drawn, otherwise false.
@@ -35,7 +35,7 @@ namespace AZ::Render
     private:
 
         //! Retrieves the levol of detail index for this entity's Atom mesh.
-        RPI::ModelLodIndex GetModelLodIndex(const RPI::ViewPtr view, Data::Instance<RPI::Model> model) const;
+        JE::Render::RPI::ModelLodIndex GetModelLodIndex(const JE::Render::RPI::ViewPtr view, Data::Instance<JE::Render::RPI::Model> model) const;
 
         // MeshHandleStateNotificationBus overrides ...
         void OnMeshHandleSet(const MeshFeatureProcessorInterface::MeshHandle* meshHandle) override;
@@ -43,25 +43,25 @@ namespace AZ::Render
         //! Builds the entity's drawable mesh data from scratch, overwriting any existing data.
         void CreateOrUpdateMeshDrawPackets(
             const MeshFeatureProcessorInterface* featureProcessor,
-            const RPI::ModelLodIndex modelLodIndex,
-            Data::Instance<RPI::Model> model);
+            const JE::Render::RPI::ModelLodIndex modelLodIndex,
+            Data::Instance<JE::Render::RPI::Model> model);
 
         //! Clears the entity's mesh draw packets and other draw state.
         void ClearDrawData();
 
         // Builds the mesh draw packets for the Atom mesh.
         void BuildMeshDrawPackets(
-            const Data::Asset<RPI::ModelAsset> modelAsset, Data::Instance<RPI::ShaderResourceGroup> meshObjectSrg);
+            const Data::Asset<JE::Render::RPI::ModelAsset> modelAsset, Data::Instance<JE::Render::RPI::ShaderResourceGroup> meshObjectSrg);
 
         // Creates the mask shader resource group for the Atom mesh.
-        Data::Instance<RPI::ShaderResourceGroup> CreateMaskShaderResourceGroup(
+        Data::Instance<JE::Render::RPI::ShaderResourceGroup> CreateMaskShaderResourceGroup(
             const MeshFeatureProcessorInterface* featureProcessor) const;
 
         EntityId m_entityId;
         const MeshFeatureProcessorInterface::MeshHandle* m_meshHandle = nullptr;
-        Data::Instance<RPI::Material> m_maskMaterial = nullptr;
+        Data::Instance<JE::Render::RPI::Material> m_maskMaterial = nullptr;
         Name m_drawList;
-        RPI::ModelLodIndex m_modelLodIndex = RPI::ModelLodIndex::Null;
+        JE::Render::RPI::ModelLodIndex m_modelLodIndex = JE::Render::RPI::ModelLodIndex::Null;
         AZStd::vector<EditorStateMeshDrawPacket> m_meshDrawPackets;
     };
 } // namespace AZ::Render

@@ -14,12 +14,12 @@
 
 #include <Atom/RHI/Factory.h>
 
-#include <Atom/RPI.Public/Pass/PassFilter.h>
-#include <Atom/RPI.Public/Pass/PassSystemInterface.h>
-#include <Atom/RPI.Public/RPISystemInterface.h>
-#include <Atom/RPI.Public/Scene.h>
-#include <Atom/RPI.Public/View.h>
-#include <Atom/RPI.Reflect/Asset/AssetUtils.h>
+#include <JE/Render/RPI/Public/Pass/PassFilter.h>
+#include <JE/Render/RPI/Public/Pass/PassSystemInterface.h>
+#include <JE/Render/RPI/Public/RPISystemInterface.h>
+#include <JE/Render/RPI/Public/Scene.h>
+#include <JE/Render/RPI/Public/View.h>
+#include <JE/Render/RPI/Reflect/Asset/AssetUtils.h>
 
 namespace AZ
 {
@@ -48,8 +48,8 @@ namespace AZ
 
         void SMAAFeatureProcessor::Activate()
         {
-            Data::Asset<RPI::AnyAsset> smaaAsset = RPI::AssetUtils::LoadAssetByProductPath<RPI::AnyAsset>("passes/SMAAConfiguration.azasset", RPI::AssetUtils::TraceLevel::Error);
-            const SMAAConfigurationDescriptor* smaaConfigurationDescriptor = RPI::GetDataFromAnyAsset<SMAAConfigurationDescriptor>(smaaAsset);
+            Data::Asset<JE::Render::RPI::AnyAsset> smaaAsset = JE::Render::RPI::AssetUtils::LoadAssetByProductPath<JE::Render::RPI::AnyAsset>("passes/SMAAConfiguration.azasset", JE::Render::RPI::AssetUtils::TraceLevel::Error);
+            const SMAAConfigurationDescriptor* smaaConfigurationDescriptor = JE::Render::RPI::GetDataFromAnyAsset<SMAAConfigurationDescriptor>(smaaAsset);
             m_data.m_enable = smaaConfigurationDescriptor->m_enable != 0;
             SetQualityByPreset(static_cast<SMAAQualityPreset>(smaaConfigurationDescriptor->m_quality));
             m_data.m_edgeDetectionMode = static_cast<SMAAEdgeDetectionMode>(smaaConfigurationDescriptor->m_edgeDetectionMode);
@@ -70,18 +70,18 @@ namespace AZ
 
         void SMAAFeatureProcessor::UpdateConvertToPerceptualPass()
         {
-            RPI::PassFilter passFilter = RPI::PassFilter::CreateWithTemplateName(m_convertToPerceptualColorPassTemplateNameId, GetParentScene());
-            RPI::PassSystemInterface::Get()->ForEachPass(passFilter, [this](RPI::Pass* pass) -> RPI::PassFilterExecutionFlow
+            JE::Render::RPI::PassFilter passFilter = JE::Render::RPI::PassFilter::CreateWithTemplateName(m_convertToPerceptualColorPassTemplateNameId, GetParentScene());
+            JE::Render::RPI::PassSystemInterface::Get()->ForEachPass(passFilter, [this](JE::Render::RPI::Pass* pass) -> JE::Render::RPI::PassFilterExecutionFlow
                 {
                     pass->SetEnabled(m_data.m_enable);
-                    return RPI::PassFilterExecutionFlow::ContinueVisitingPasses;
+                    return JE::Render::RPI::PassFilterExecutionFlow::ContinueVisitingPasses;
                 });
         }
 
         void SMAAFeatureProcessor::UpdateEdgeDetectionPass()
         {            
-            RPI::PassFilter passFilter = RPI::PassFilter::CreateWithTemplateName(m_edgeDetectioPassTemplateNameId, GetParentScene());
-            RPI::PassSystemInterface::Get()->ForEachPass(passFilter, [this](RPI::Pass* pass) -> RPI::PassFilterExecutionFlow
+            JE::Render::RPI::PassFilter passFilter = JE::Render::RPI::PassFilter::CreateWithTemplateName(m_edgeDetectioPassTemplateNameId, GetParentScene());
+            JE::Render::RPI::PassSystemInterface::Get()->ForEachPass(passFilter, [this](JE::Render::RPI::Pass* pass) -> JE::Render::RPI::PassFilterExecutionFlow
                 {
                     auto* edgeDetectionPass = azrtti_cast<AZ::Render::SMAAEdgeDetectionPass*>(pass);
 
@@ -97,14 +97,14 @@ namespace AZ
                         edgeDetectionPass->SetPredicationScale(m_data.m_predicationScale);
                         edgeDetectionPass->SetPredicationStrength(m_data.m_predicationStrength);
                     }
-                    return RPI::PassFilterExecutionFlow::ContinueVisitingPasses;
+                    return JE::Render::RPI::PassFilterExecutionFlow::ContinueVisitingPasses;
                 });
         }
 
         void SMAAFeatureProcessor::UpdateBlendingWeightCalculationPass()
         {
-            RPI::PassFilter passFilter = RPI::PassFilter::CreateWithTemplateName(m_blendingWeightCalculationPassTemplateNameId, GetParentScene());
-            RPI::PassSystemInterface::Get()->ForEachPass(passFilter, [this](RPI::Pass* pass) -> RPI::PassFilterExecutionFlow
+            JE::Render::RPI::PassFilter passFilter = JE::Render::RPI::PassFilter::CreateWithTemplateName(m_blendingWeightCalculationPassTemplateNameId, GetParentScene());
+            JE::Render::RPI::PassSystemInterface::Get()->ForEachPass(passFilter, [this](JE::Render::RPI::Pass* pass) -> JE::Render::RPI::PassFilterExecutionFlow
                 {
                     auto* blendingWeightCalculationPass = azrtti_cast<AZ::Render::SMAABlendingWeightCalculationPass*>(pass);
 
@@ -117,14 +117,14 @@ namespace AZ
                         blendingWeightCalculationPass->SetDiagonalDetectionEnable(m_data.m_enableDiagonalDetection);
                         blendingWeightCalculationPass->SetCornerDetectionEnable(m_data.m_enableCornerDetection);
                     }
-                    return RPI::PassFilterExecutionFlow::ContinueVisitingPasses;
+                    return JE::Render::RPI::PassFilterExecutionFlow::ContinueVisitingPasses;
                 });
         }
 
         void SMAAFeatureProcessor::UpdateNeighborhoodBlendingPass()
         {
-            RPI::PassFilter passFilter = RPI::PassFilter::CreateWithTemplateName(m_neighborhoodBlendingPassTemplateNameId, GetParentScene());
-            RPI::PassSystemInterface::Get()->ForEachPass(passFilter, [this](RPI::Pass* pass) -> RPI::PassFilterExecutionFlow
+            JE::Render::RPI::PassFilter passFilter = JE::Render::RPI::PassFilter::CreateWithTemplateName(m_neighborhoodBlendingPassTemplateNameId, GetParentScene());
+            JE::Render::RPI::PassSystemInterface::Get()->ForEachPass(passFilter, [this](JE::Render::RPI::Pass* pass) -> JE::Render::RPI::PassFilterExecutionFlow
                 {
                     auto* neighborhoodBlendingPass = azrtti_cast<AZ::Render::SMAANeighborhoodBlendingPass*>(pass);
 
@@ -136,7 +136,7 @@ namespace AZ
                     {
                         neighborhoodBlendingPass->SetOutputMode(SMAAOutputMode::PassThrough);
                     }
-                    return RPI::PassFilterExecutionFlow::ContinueVisitingPasses;
+                    return JE::Render::RPI::PassFilterExecutionFlow::ContinueVisitingPasses;
                 });
         }
 

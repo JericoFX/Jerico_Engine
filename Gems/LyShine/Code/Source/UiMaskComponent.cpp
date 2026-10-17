@@ -23,7 +23,7 @@
 #include <LyShine/Bus/UiVisualBus.h>
 #include <LyShine/Bus/UiCanvasBus.h>
 
-#include <Atom/RPI.Public/Image/AttachmentImage.h>
+#include <JE/Render/RPI/Public/Image/AttachmentImage.h>
 #include <AzFramework/Translation/TranslationDef.h>
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -729,8 +729,8 @@ void UiMaskComponent::RenderUsingGradientMask(LyShine::IRenderGraph* renderGraph
     AZ::Color clearColor(0.0f, 0.0f, 0.0f, 0.0f);
 
     // Get the render targets
-    AZ::Data::Instance<AZ::RPI::AttachmentImage> contentAttachmentImage;
-    AZ::Data::Instance<AZ::RPI::AttachmentImage> maskAttachmentImage;
+    AZ::Data::Instance<JE::Render::RPI::AttachmentImage> contentAttachmentImage;
+    AZ::Data::Instance<JE::Render::RPI::AttachmentImage> maskAttachmentImage;
     AZ::EntityId canvasEntityId;
     UiElementBus::EventResult(canvasEntityId, GetEntityId(), &UiElementBus::Events::GetCanvasEntityId);
     LyShine::RenderToTextureRequestBus::EventResult(
@@ -796,8 +796,8 @@ void UiMaskComponent::RenderUsingGradientMask(LyShine::IRenderGraph* renderGraph
         // Add a primitive to do the alpha mask
         {
             // Set the texture and other render state required
-            AZ::Data::Instance<AZ::RPI::Image> contentImage = contentAttachmentImage;
-            AZ::Data::Instance<AZ::RPI::Image> maskImage = maskAttachmentImage;
+            AZ::Data::Instance<JE::Render::RPI::Image> contentImage = contentAttachmentImage;
+            AZ::Data::Instance<JE::Render::RPI::Image> maskImage = maskAttachmentImage;
             bool isClampTextureMode = true;
             bool isTextureSRGB = true;
             bool isTexturePremultipliedAlpha = false;

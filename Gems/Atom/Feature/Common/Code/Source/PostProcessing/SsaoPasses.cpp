@@ -12,9 +12,9 @@
 #include <PostProcessing/SsaoPasses.h>
 #include <AzCore/Math/MathUtils.h>
 #include <Atom/Feature/PostProcess/AmbientOcclusion/SsaoConstants.h>
-#include <Atom/RPI.Public/RenderPipeline.h>
-#include <Atom/RPI.Public/Scene.h>
-#include <Atom/RPI.Public/View.h>
+#include <JE/Render/RPI/Public/RenderPipeline.h>
+#include <JE/Render/RPI/Public/Scene.h>
+#include <JE/Render/RPI/Public/View.h>
 
 namespace AZ
 {
@@ -22,14 +22,14 @@ namespace AZ
     {
         // --- SSAO Parent Pass ---
 
-        RPI::Ptr<SsaoParentPass> SsaoParentPass::Create(const RPI::PassDescriptor& descriptor)
+        JE::Render::RPI::Ptr<SsaoParentPass> SsaoParentPass::Create(const JE::Render::RPI::PassDescriptor& descriptor)
         {
-            RPI::Ptr<SsaoParentPass> pass = aznew SsaoParentPass(descriptor);
+            JE::Render::RPI::Ptr<SsaoParentPass> pass = aznew SsaoParentPass(descriptor);
             return pass;
         }
 
-        SsaoParentPass::SsaoParentPass(const RPI::PassDescriptor& descriptor)
-            : RPI::ParentPass(descriptor)
+        SsaoParentPass::SsaoParentPass(const JE::Render::RPI::PassDescriptor& descriptor)
+            : JE::Render::RPI::ParentPass(descriptor)
         { }
 
         bool SsaoParentPass::IsEnabled() const
@@ -38,13 +38,13 @@ namespace AZ
             {
                 return false;
             }
-            const RPI::Scene* scene = GetScene();
+            const JE::Render::RPI::Scene* scene = GetScene();
             if (!scene)
             {
                 return false;
             }
             PostProcessFeatureProcessor* fp = scene->GetFeatureProcessor<PostProcessFeatureProcessor>();
-            const RPI::ViewPtr view = GetRenderPipeline()->GetFirstView(GetPipelineViewTag());
+            const JE::Render::RPI::ViewPtr view = GetRenderPipeline()->GetFirstView(GetPipelineViewTag());
             if (!fp)
             {
                 return true;
@@ -82,9 +82,9 @@ namespace AZ
 
         void SsaoParentPass::FrameBeginInternal(FramePrepareParams params)
         {
-            RPI::Scene* scene = GetScene();
+            JE::Render::RPI::Scene* scene = GetScene();
             PostProcessFeatureProcessor* fp = scene->GetFeatureProcessor<PostProcessFeatureProcessor>();
-            AZ::RPI::ViewPtr view = m_pipeline->GetFirstView(GetPipelineViewTag());
+            JE::Render::RPI::ViewPtr view = m_pipeline->GetFirstView(GetPipelineViewTag());
             if (fp)
             {
                 PostProcessSettings* postProcessSettings = fp->GetLevelSettingsFromView(view);
@@ -119,14 +119,14 @@ namespace AZ
 
         // --- SSAO Compute Pass ---
 
-        RPI::Ptr<SsaoComputePass> SsaoComputePass::Create(const RPI::PassDescriptor& descriptor)
+        JE::Render::RPI::Ptr<SsaoComputePass> SsaoComputePass::Create(const JE::Render::RPI::PassDescriptor& descriptor)
         {
-            RPI::Ptr<SsaoComputePass> pass = aznew SsaoComputePass(descriptor);
+            JE::Render::RPI::Ptr<SsaoComputePass> pass = aznew SsaoComputePass(descriptor);
             return pass;
         }
 
-        SsaoComputePass::SsaoComputePass(const RPI::PassDescriptor& descriptor)
-            : RPI::ComputePass(descriptor)
+        SsaoComputePass::SsaoComputePass(const JE::Render::RPI::PassDescriptor& descriptor)
+            : JE::Render::RPI::ComputePass(descriptor)
         { }
 
         void SsaoComputePass::FrameBeginInternal(FramePrepareParams params)
@@ -152,9 +152,9 @@ namespace AZ
 
             } ssaoConstants{};
 
-            RPI::Scene* scene = GetScene();
+            JE::Render::RPI::Scene* scene = GetScene();
             PostProcessFeatureProcessor* fp = scene->GetFeatureProcessor<PostProcessFeatureProcessor>();
-            AZ::RPI::ViewPtr view = m_pipeline->GetFirstView(GetPipelineViewTag());
+            JE::Render::RPI::ViewPtr view = m_pipeline->GetFirstView(GetPipelineViewTag());
             if (fp)
             {
                 PostProcessSettings* postProcessSettings = fp->GetLevelSettingsFromView(view);
@@ -177,7 +177,7 @@ namespace AZ
             }
 
             AZ_Assert(GetOutputCount() > 0, "SsaoComputePass: No output bindings!");
-            RPI::PassAttachment* outputAttachment = GetOutputBinding(0).GetAttachment().get();
+            JE::Render::RPI::PassAttachment* outputAttachment = GetOutputBinding(0).GetAttachment().get();
 
             AZ_Assert(outputAttachment != nullptr, "SsaoComputePass: Output binding has no attachment!");
             RHI::Size size = outputAttachment->m_descriptor.m_image.m_size;
@@ -193,7 +193,7 @@ namespace AZ
 
             m_shaderResourceGroup->SetConstant(m_constantsIndex, ssaoConstants);
 
-            RPI::ComputePass::FrameBeginInternal(params);
+            JE::Render::RPI::ComputePass::FrameBeginInternal(params);
         }
 
     }   // namespace Render

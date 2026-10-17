@@ -8,21 +8,21 @@
 
 #include <PostProcessing/MotionBlurPass.h>
 #include <PostProcess/PostProcessFeatureProcessor.h>
-#include <Atom/RPI.Public/RenderPipeline.h>
-#include <Atom/RPI.Public/Scene.h>
+#include <JE/Render/RPI/Public/RenderPipeline.h>
+#include <JE/Render/RPI/Public/Scene.h>
 
 namespace AZ
 {
     namespace Render
     {
-        RPI::Ptr<MotionBlurPass> MotionBlurPass::Create(const RPI::PassDescriptor& descriptor)
+        JE::Render::RPI::Ptr<MotionBlurPass> MotionBlurPass::Create(const JE::Render::RPI::PassDescriptor& descriptor)
         {
-            RPI::Ptr<MotionBlurPass> pass = aznew MotionBlurPass(descriptor);
+            JE::Render::RPI::Ptr<MotionBlurPass> pass = aznew MotionBlurPass(descriptor);
             return pass;
         }
 
-        MotionBlurPass::MotionBlurPass(const RPI::PassDescriptor& descriptor)
-            : RPI::ComputePass(descriptor)
+        MotionBlurPass::MotionBlurPass(const JE::Render::RPI::PassDescriptor& descriptor)
+            : JE::Render::RPI::ComputePass(descriptor)
         {
         }
 
@@ -37,12 +37,12 @@ namespace AZ
         {
             AZ_Assert(m_shader != nullptr, "MotionBlurPass %s has a null shader when calling InitializeShaderVariant.", GetPathName().GetCStr());
 
-            AZStd::vector<RPI::ShaderOptionValue> options =
+            AZStd::vector<JE::Render::RPI::ShaderOptionValue> options =
             {
-                RPI::ShaderOptionValue(MotionBlur::SampleQuality::Low),
-                RPI::ShaderOptionValue(MotionBlur::SampleQuality::Medium),
-                RPI::ShaderOptionValue(MotionBlur::SampleQuality::High),
-                RPI::ShaderOptionValue(MotionBlur::SampleQuality::Ultra),
+                JE::Render::RPI::ShaderOptionValue(MotionBlur::SampleQuality::Low),
+                JE::Render::RPI::ShaderOptionValue(MotionBlur::SampleQuality::Medium),
+                JE::Render::RPI::ShaderOptionValue(MotionBlur::SampleQuality::High),
+                JE::Render::RPI::ShaderOptionValue(MotionBlur::SampleQuality::Ultra),
             };
 
             // Caching all pipeline state for each shader variation for performance reason.
@@ -71,13 +71,13 @@ namespace AZ
             {
                 return false;
             }
-            const RPI::Scene* scene = GetScene();
+            const JE::Render::RPI::Scene* scene = GetScene();
             if (!scene)
             {
                 return false;
             }
             PostProcessFeatureProcessor* fp = scene->GetFeatureProcessor<PostProcessFeatureProcessor>();
-            const RPI::ViewPtr view = GetRenderPipeline()->GetDefaultView();
+            const JE::Render::RPI::ViewPtr view = GetRenderPipeline()->GetDefaultView();
             if (!fp)
             {
                 return false;
@@ -105,11 +105,11 @@ namespace AZ
                 AZStd::array<float, 1> m_pad;
             } constants{};
 
-            RPI::Scene* scene = GetScene();
+            JE::Render::RPI::Scene* scene = GetScene();
             PostProcessFeatureProcessor* fp = scene->GetFeatureProcessor<PostProcessFeatureProcessor>();
             if (fp)
             {
-                RPI::ViewPtr view = scene->GetDefaultRenderPipeline()->GetDefaultView();
+                JE::Render::RPI::ViewPtr view = scene->GetDefaultRenderPipeline()->GetDefaultView();
                 PostProcessSettings* postProcessSettings = fp->GetLevelSettingsFromView(view);
                 if (postProcessSettings)
                 {
@@ -123,7 +123,7 @@ namespace AZ
             }
 
             AZ_Assert(GetOutputCount() > 0, "MotionBlurPass: No output bindings!");
-            RPI::PassAttachment* outputAttachment = GetOutputBinding(0).GetAttachment().get();
+            JE::Render::RPI::PassAttachment* outputAttachment = GetOutputBinding(0).GetAttachment().get();
 
             AZ_Assert(outputAttachment != nullptr, "MotionBlurPass: Output binding has no attachment!");
             RHI::Size size = outputAttachment->m_descriptor.m_image.m_size;
@@ -155,7 +155,7 @@ namespace AZ
 
             auto shaderOption = m_shader->CreateShaderOptionGroup();
             // Decide which shader to use.
-            shaderOption.SetValue(m_sampleQualityShaderVariantOptionName, RPI::ShaderOptionValue(m_sampleQuality));
+            shaderOption.SetValue(m_sampleQualityShaderVariantOptionName, JE::Render::RPI::ShaderOptionValue(m_sampleQuality));
 
             UpdateShaderVariant(shaderOption);
 

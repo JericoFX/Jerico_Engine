@@ -13,9 +13,9 @@
 #include <Atom/RHI/DeviceDrawItem.h>
 #include <Atom/RHI/ScopeProducer.h>
 #include <Atom/RHI.Reflect/ShaderResourceGroupLayoutDescriptor.h>
-#include <Atom/RPI.Public/Pass/ComputePass.h>
-#include <Atom/RPI.Public/Shader/Shader.h>
-#include <Atom/RPI.Public/Shader/ShaderResourceGroup.h>
+#include <JE/Render/RPI/Public/Pass/ComputePass.h>
+#include <JE/Render/RPI/Public/Shader/Shader.h>
+#include <JE/Render/RPI/Public/Shader/ShaderResourceGroup.h>
 
 namespace AZ
 {
@@ -23,17 +23,17 @@ namespace AZ
     {
         //! Compute shader that performs light culling
         class LightCullingPass final
-            : public RPI::ComputePass
+            : public JE::Render::RPI::ComputePass
         {
             AZ_RPI_PASS(LightCullingPass);
 
         public:
-            AZ_RTTI(AZ::Render::LightCullingPass, "{F99EB06A-052E-4FAA-B2C4-4247BAD9BDC7}", RPI::ComputePass);
+            AZ_RTTI(AZ::Render::LightCullingPass, "{F99EB06A-052E-4FAA-B2C4-4247BAD9BDC7}", JE::Render::RPI::ComputePass);
             AZ_CLASS_ALLOCATOR(LightCullingPass, SystemAllocator);
             virtual ~LightCullingPass() = default;
 
             /// Creates a LightCullingPass
-            static RPI::Ptr<LightCullingPass> Create(const RPI::PassDescriptor& descriptor);
+            static JE::Render::RPI::Ptr<LightCullingPass> Create(const JE::Render::RPI::PassDescriptor& descriptor);
 
             static Name GetLightCullingPassTemplateName()
             {
@@ -42,7 +42,7 @@ namespace AZ
 
         private:
 
-            LightCullingPass(const RPI::PassDescriptor& descriptor);
+            LightCullingPass(const JE::Render::RPI::PassDescriptor& descriptor);
 
             // Pass behavior overrides...
             void ResetInternal()override;
@@ -70,7 +70,7 @@ namespace AZ
             AZ::RHI::Size GetTileDataBufferResolution();
             struct LightTypeData
             {
-                Data::Instance<RPI::Buffer>     m_lightBuffer;
+                Data::Instance<JE::Render::RPI::Buffer>     m_lightBuffer;
                 AZ::RHI::ShaderInputNameIndex   m_lightBufferIndex;
                 AZ::RHI::ShaderInputNameIndex   m_lightCountIndex;
                 int m_lightCount = 0;
@@ -92,7 +92,7 @@ namespace AZ
 
             AZ::RHI::ShaderInputNameIndex m_constantDataIndex = "m_constantData";
 
-            Data::Instance<RPI::Buffer> m_lightList;
+            Data::Instance<JE::Render::RPI::Buffer> m_lightList;
 
             uint32_t m_tileDataIndex = std::numeric_limits<uint32_t>::max();
         };

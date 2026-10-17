@@ -4,12 +4,12 @@
 ly_add_target(
     NAME EditorRenderIntegration ${PAL_TRAIT_MONOLITHIC_DRIVEN_LIBRARY_TYPE}
     NAMESPACE JE
-    FILES_CMAKE render_integration_files.cmake
+    FILES_CMAKE render_integration_files.cmake rpi_edit_files.cmake
     INCLUDE_DIRECTORIES PRIVATE Source ${LY_ROOT_FOLDER}/Engine/Render/Integration/Source PUBLIC Include
     COMPILE_DEFINITIONS PRIVATE JE_EDITOR_RENDER_INTEGRATION_EXPORTS EDITOR JE_RENDER_RPI_EDITOR
     BUILD_DEPENDENCIES
         PUBLIC JE::RenderIntegration
-        PRIVATE AZ::AzToolsFramework AZ::AssetBuilderSDK Gem::Atom_Utils.Static Gem::Atom_RPI.Edit
+        PRIVATE AZ::AzToolsFramework AZ::AssetBuilderSDK Gem::Atom_Utils.Static Gem::Atom_RHI.Edit
 )
 set_target_properties(EditorRenderIntegration PROPERTIES UNITY_BUILD OFF)
 

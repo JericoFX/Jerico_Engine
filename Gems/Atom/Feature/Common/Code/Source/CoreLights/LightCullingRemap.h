@@ -13,11 +13,11 @@
 #include <Atom/RHI/DeviceDrawItem.h>
 #include <Atom/RHI/ScopeProducer.h>
 #include <Atom/RHI.Reflect/ShaderResourceGroupLayoutDescriptor.h>
-#include <Atom/RPI.Public/Pass/ComputePass.h>
-#include <Atom/RPI.Public/Shader/Shader.h>
-#include <Atom/RPI.Public/Shader/ShaderResourceGroup.h>
-#include <Atom/RPI.Reflect/Pass/PassName.h>
-#include <Atom/RPI.Public/Image/AttachmentImage.h>
+#include <JE/Render/RPI/Public/Pass/ComputePass.h>
+#include <JE/Render/RPI/Public/Shader/Shader.h>
+#include <JE/Render/RPI/Public/Shader/ShaderResourceGroup.h>
+#include <JE/Render/RPI/Reflect/Pass/PassName.h>
+#include <JE/Render/RPI/Public/Image/AttachmentImage.h>
 
 namespace AZ
 {
@@ -28,17 +28,17 @@ namespace AZ
         //! then walk through them in linear order
         //! Also we are converting from R32 to R16 so it is more read efficient
         class LightCullingRemap final
-            : public RPI::ComputePass
+            : public JE::Render::RPI::ComputePass
         {
             AZ_RPI_PASS(LightCullingRemap);
 
         public:
-            AZ_RTTI(AZ::Render::LightCullingRemap, "{0ED3D558-F7B3-4D3F-B9E6-3A3B8EC30E91}", RPI::ComputePass);
+            AZ_RTTI(AZ::Render::LightCullingRemap, "{0ED3D558-F7B3-4D3F-B9E6-3A3B8EC30E91}", JE::Render::RPI::ComputePass);
             AZ_CLASS_ALLOCATOR(LightCullingRemap, SystemAllocator);
             virtual ~LightCullingRemap() = default;
 
             /// Creates a LightCullingRemap
-            static RPI::Ptr<LightCullingRemap> Create(const RPI::PassDescriptor& descriptor);
+            static JE::Render::RPI::Ptr<LightCullingRemap> Create(const JE::Render::RPI::PassDescriptor& descriptor);
 
             static Name GetLightCullingRemapTemplateName()
             {
@@ -47,7 +47,7 @@ namespace AZ
 
         private:
 
-            LightCullingRemap(const RPI::PassDescriptor& descriptor);
+            LightCullingRemap(const JE::Render::RPI::PassDescriptor& descriptor);
 
             // Pass behavior overrides...
             void ResetInternal()override;
@@ -64,7 +64,7 @@ namespace AZ
             uint32_t FindInputOutputBinding(const AZ::Name& name);
 
             AZ::RHI::ShaderInputConstantIndex m_tileWidthIndex;
-            Data::Instance<RPI::Buffer> m_lightListRemapped;
+            Data::Instance<JE::Render::RPI::Buffer> m_lightListRemapped;
             AZ::RHI::Size m_tileDim;
             int m_tileDataIndex = -1;
             bool m_initialized = false;

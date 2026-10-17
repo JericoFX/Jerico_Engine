@@ -8,7 +8,7 @@
 
 #pragma once
 
-#include <Atom/RPI.Public/Base.h>
+#include <JE/Render/RPI/Public/Base.h>
 #include <AzFramework/Entity/EntityDebugDisplayBus.h>
 #include <CrySystemBus.h>
 #include <JE/Render/Bootstrap/BootstrapNotificationBus.h>
@@ -41,14 +41,14 @@ namespace AZ
             void DisplayViewport2d(const AzFramework::ViewportInfo& viewportInfo, AzFramework::DebugDisplayRequests& debugDisplay) override;
 
             // Get the RPI::SceneId, which can be used to query scene stats
-            void OnBootstrapSceneReady(AZ::RPI::Scene* bootstrapScene) override;
+            void OnBootstrapSceneReady(JE::Render::RPI::Scene* bootstrapScene) override;
 
             void GetSceneId();
 
             // CVar for toggling the display of the scene stats
             int r_skinnedMeshDisplaySceneStats = 0;
             // SceneId to query for the stats
-            RPI::SceneId m_sceneId;
+            JE::Render::RPI::SceneId m_sceneId;
         };
     }// namespace Render
 }// namespace AZ

@@ -14,9 +14,9 @@
 #include <Atom/Feature/Utils/GpuBufferHandler.h>
 #include <Atom/RHI/FrameGraphAttachmentInterface.h>
 #include <Atom/RHI/FrameGraphInterface.h>
-#include <Atom/RPI.Public/Image/AttachmentImage.h>
-#include <Atom/RPI.Public/Scene.h>
-#include <Atom/RPI.Public/Shader/ShaderResourceGroup.h>
+#include <JE/Render/RPI/Public/Image/AttachmentImage.h>
+#include <JE/Render/RPI/Public/Scene.h>
+#include <JE/Render/RPI/Public/Shader/ShaderResourceGroup.h>
 #include <TerrainRenderer/ClipmapBounds.h>
 #include <TerrainRenderer/TerrainAreaMaterialRequestBus.h>
 #include <TerrainRenderer/TerrainMacroMaterialBus.h>
@@ -141,14 +141,14 @@ namespace Terrain
         void SetConfiguration(const ClipmapConfiguration& config);
         bool IsClipmapEnabled() const;
 
-        void Initialize(AZ::Data::Instance<AZ::RPI::ShaderResourceGroup>& terrainSrg);
+        void Initialize(AZ::Data::Instance<JE::Render::RPI::ShaderResourceGroup>& terrainSrg);
         bool IsInitialized() const;
         void Reset();
         //! Reset full refresh flag so that all the clipmap image will be repainted.
         void TriggerFullRefresh();
-        void UpdateSrgIndices(AZ::Data::Instance<AZ::RPI::ShaderResourceGroup>& srg);
+        void UpdateSrgIndices(AZ::Data::Instance<JE::Render::RPI::ShaderResourceGroup>& srg);
 
-        void Update(const AZ::Vector3& cameraPosition, const AZ::RPI::Scene* scene, AZ::Data::Instance<AZ::RPI::ShaderResourceGroup>& terrainSrg);
+        void Update(const AZ::Vector3& cameraPosition, const JE::Render::RPI::Scene* scene, AZ::Data::Instance<JE::Render::RPI::ShaderResourceGroup>& terrainSrg);
 
         //! Import the clipmap to the frame graph and set scope attachment access,
         //! so that the compute pass can build dependencies accordingly.
@@ -156,7 +156,7 @@ namespace Terrain
         void UseClipmap(ClipmapName clipmapName, AZ::RHI::ScopeAttachmentAccess access, AZ::RHI::FrameGraphInterface frameGraph) const;
 
         //! Get the clipmap images for passes using them.
-        AZ::Data::Instance<AZ::RPI::AttachmentImage> GetClipmapImage(ClipmapName clipmapName) const;
+        AZ::Data::Instance<JE::Render::RPI::AttachmentImage> GetClipmapImage(ClipmapName clipmapName) const;
 
         //! Get the dispatch thread num for the clipmap compute shader based on the current frame.
         void GetMacroDispatchThreadNum(uint32_t& outThreadX, uint32_t& outThreadY, uint32_t& outThreadZ) const;
@@ -172,8 +172,8 @@ namespace Terrain
         //! Update the C++ copy of the clipmap data. And will later be bound to the terrain SRG.
         void UpdateClipmapData(
             const AZ::Vector3& cameraPosition,
-            const AZ::RPI::Scene* scene,
-            AZ::Data::Instance<AZ::RPI::ShaderResourceGroup>& terrainSrg);
+            const JE::Render::RPI::Scene* scene,
+            AZ::Data::Instance<JE::Render::RPI::ShaderResourceGroup>& terrainSrg);
 
         //! Initialzation functions.
         void QueryMacroClipmapStackSize();
@@ -194,7 +194,7 @@ namespace Terrain
         void ClearDetailClipmapGpuBuffer();
 
         //! Cached terrain SRG for configuration update.
-        AZ::Data::Instance<AZ::RPI::ShaderResourceGroup> m_terrainSrg;
+        AZ::Data::Instance<JE::Render::RPI::ShaderResourceGroup> m_terrainSrg;
 
         using RawVector2f = AZStd::array<float, 2>;
         using RawVector4f = AZStd::array<float, 4>;
@@ -342,7 +342,7 @@ namespace Terrain
         AZ::RHI::ShaderInputNameIndex m_terrainSrgClipmapImageIndex[ClipmapName::Count];
 
         //! Clipmap images.
-        AZ::Data::Instance<AZ::RPI::AttachmentImage> m_clipmaps[ClipmapName::Count];
+        AZ::Data::Instance<JE::Render::RPI::AttachmentImage> m_clipmaps[ClipmapName::Count];
 
         //! The actual stack size calculated from the configuration.
         uint32_t m_macroClipmapStackSize;
@@ -378,12 +378,12 @@ namespace Terrain
         void OnTerrainMacroMaterialDestroyed(AZ::EntityId entityId) override;
 
         // TerrainAreaMaterialNotificationBus overrides...
-        void OnTerrainDefaultSurfaceMaterialCreated(AZ::EntityId entityId, AZ::Data::Instance<AZ::RPI::Material> material) override;
+        void OnTerrainDefaultSurfaceMaterialCreated(AZ::EntityId entityId, AZ::Data::Instance<JE::Render::RPI::Material> material) override;
         void OnTerrainDefaultSurfaceMaterialDestroyed(AZ::EntityId entityId) override;
-        void OnTerrainDefaultSurfaceMaterialChanged(AZ::EntityId entityId, AZ::Data::Instance<AZ::RPI::Material> newMaterial) override;
-        void OnTerrainSurfaceMaterialMappingCreated(AZ::EntityId entityId, SurfaceData::SurfaceTag surfaceTag, AZ::Data::Instance<AZ::RPI::Material> material) override;
+        void OnTerrainDefaultSurfaceMaterialChanged(AZ::EntityId entityId, AZ::Data::Instance<JE::Render::RPI::Material> newMaterial) override;
+        void OnTerrainSurfaceMaterialMappingCreated(AZ::EntityId entityId, SurfaceData::SurfaceTag surfaceTag, AZ::Data::Instance<JE::Render::RPI::Material> material) override;
         void OnTerrainSurfaceMaterialMappingDestroyed(AZ::EntityId entityId, SurfaceData::SurfaceTag surfaceTag) override;
-        void OnTerrainSurfaceMaterialMappingMaterialChanged(AZ::EntityId entityId, SurfaceData::SurfaceTag surfaceTag, AZ::Data::Instance<AZ::RPI::Material> material) override;
+        void OnTerrainSurfaceMaterialMappingMaterialChanged(AZ::EntityId entityId, SurfaceData::SurfaceTag surfaceTag, AZ::Data::Instance<JE::Render::RPI::Material> material) override;
         void OnTerrainSurfaceMaterialMappingTagChanged(AZ::EntityId entityId, SurfaceData::SurfaceTag oldSurfaceTag, SurfaceData::SurfaceTag newSurfaceTag) override;
         void OnTerrainSurfaceMaterialMappingRegionCreated(AZ::EntityId entityId, const AZ::Aabb& region) override;
         void OnTerrainSurfaceMaterialMappingRegionDestroyed(AZ::EntityId entityId, const AZ::Aabb& oldRegion) override;

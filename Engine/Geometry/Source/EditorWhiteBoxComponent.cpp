@@ -999,7 +999,7 @@ namespace JE::Geometry
     }
 
     bool EditorWhiteBoxComponent::AssignPolygonMaterialAsset(const Api::PolygonHandles& polygons,
-        const AZ::Data::Asset<AZ::RPI::MaterialAsset>& material, AZStd::string& error)
+        const AZ::Data::Asset<JE::Render::RPI::MaterialAsset>& material, AZStd::string& error)
     {
         auto* mesh = GetWhiteBoxMesh();
         if (!mesh) { error = "The White Box mesh is not available."; return false; }
@@ -1059,7 +1059,7 @@ namespace JE::Geometry
         if (m_faceMaterialPickerEntity != GetEntityId() || !m_faceMaterialPickerEntity.IsValid() ||
             !m_selectedFaceMaterial.GetId().IsValid()) { return; }
         m_faceMaterialPickerAsset = m_selectedFaceMaterial.GetId();
-        m_selectedFaceMaterial = AZ::Data::AssetManager::Instance().GetAsset<AZ::RPI::MaterialAsset>(
+        m_selectedFaceMaterial = AZ::Data::AssetManager::Instance().GetAsset<JE::Render::RPI::MaterialAsset>(
             m_faceMaterialPickerAsset, AZ::Data::AssetLoadBehavior::NoLoad);
         AZ::Data::AssetBus::Handler::BusConnect(m_faceMaterialPickerAsset);
         m_selectedFaceMaterial.QueueLoad();

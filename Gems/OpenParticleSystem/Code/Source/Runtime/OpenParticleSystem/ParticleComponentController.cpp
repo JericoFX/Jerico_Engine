@@ -8,7 +8,7 @@
 
 #include "ParticleComponentController.h"
 
-#include <Atom/RPI.Public/Scene.h>
+#include <JE/Render/RPI/Public/Scene.h>
 #include <AzCore/Serialization/SerializeContext.h>
 
 #include <OpenParticleSystem/ParticleFeatureProcessor.h>
@@ -112,7 +112,7 @@ namespace OpenParticle
         ParticleRequestBus::Handler::BusConnect(m_entityId);
 
         AzFramework::AssetCatalogEventBus::Handler::BusConnect();
-        m_featureProcessor = AZ::RPI::Scene::GetFeatureProcessorForEntity<ParticleFeatureProcessorInterface>(m_entityId);
+        m_featureProcessor = JE::Render::RPI::Scene::GetFeatureProcessorForEntity<ParticleFeatureProcessorInterface>(m_entityId);
         Register();
     }
 

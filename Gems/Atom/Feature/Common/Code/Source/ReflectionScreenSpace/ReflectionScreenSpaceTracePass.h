@@ -7,10 +7,10 @@
  */
 #pragma once
 
-#include <Atom/RPI.Public/Pass/Pass.h>
-#include <Atom/RPI.Public/Pass/FullscreenTrianglePass.h>
-#include <Atom/RPI.Public/Shader/ShaderResourceGroup.h>
-#include <Atom/RPI.Public/Shader/Shader.h>
+#include <JE/Render/RPI/Public/Pass/Pass.h>
+#include <JE/Render/RPI/Public/Pass/FullscreenTrianglePass.h>
+#include <JE/Render/RPI/Public/Shader/ShaderResourceGroup.h>
+#include <JE/Render/RPI/Public/Shader/Shader.h>
 
 namespace AZ
 {
@@ -18,7 +18,7 @@ namespace AZ
     {
         //! This pass traces screenspace reflections from the previous frame image.
         class ReflectionScreenSpaceTracePass
-            : public RPI::FullscreenTrianglePass
+            : public JE::Render::RPI::FullscreenTrianglePass
         {
             AZ_RPI_PASS(ReflectionScreenSpaceTracePass);
 
@@ -27,18 +27,18 @@ namespace AZ
             AZ_CLASS_ALLOCATOR(Render::ReflectionScreenSpaceTracePass, SystemAllocator);
 
             //! Creates a new pass without a PassTemplate
-            static RPI::Ptr<ReflectionScreenSpaceTracePass> Create(const RPI::PassDescriptor& descriptor);
+            static JE::Render::RPI::Ptr<ReflectionScreenSpaceTracePass> Create(const JE::Render::RPI::PassDescriptor& descriptor);
 
-            Data::Instance<RPI::AttachmentImage>& GetPreviousFrameImageAttachment() { return m_previousFrameImageAttachment; }
+            Data::Instance<JE::Render::RPI::AttachmentImage>& GetPreviousFrameImageAttachment() { return m_previousFrameImageAttachment; }
 
         private:
-            explicit ReflectionScreenSpaceTracePass(const RPI::PassDescriptor& descriptor);
+            explicit ReflectionScreenSpaceTracePass(const JE::Render::RPI::PassDescriptor& descriptor);
 
             // Pass behavior overrides...
             void BuildInternal() override;
             void CompileResources(const RHI::FrameGraphCompileContext& context) override;
 
-            Data::Instance<RPI::AttachmentImage> m_previousFrameImageAttachment;
+            Data::Instance<JE::Render::RPI::AttachmentImage> m_previousFrameImageAttachment;
 
             RHI::ShaderInputNameIndex m_invOutputScaleNameIndex = "m_invOutputScale";
             RHI::ShaderInputNameIndex m_outputWidthNameIndex = "m_outputWidth";

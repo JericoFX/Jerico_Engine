@@ -18,9 +18,9 @@
 #include <AzFramework/Visibility/EntityBoundsUnionBus.h>
 #include <AzFramework/Translation/TranslationDef.h>
 
-#include <Atom/RPI.Public/View.h>
-#include <Atom/RPI.Public/ViewportContext.h>
-#include <Atom/RPI.Public/ViewportContextBus.h>
+#include <JE/Render/RPI/Public/View.h>
+#include <JE/Render/RPI/Public/ViewportContext.h>
+#include <JE/Render/RPI/Public/ViewportContextBus.h>
 
 AZ_DECLARE_BUDGET(Terrain);
 
@@ -341,9 +341,9 @@ namespace Terrain
         AZ::Vector3 centerPos = m_configuration.m_debugQueries.m_centerPosition;
         if (m_configuration.m_debugQueries.m_useCameraPosition)
         {
-            if (auto viewportContextRequests = AZ::RPI::ViewportContextRequests::Get(); viewportContextRequests)
+            if (auto viewportContextRequests = JE::Render::RPI::ViewportContextRequests::Get(); viewportContextRequests)
             {
-                AZ::RPI::ViewportContextPtr viewportContext = viewportContextRequests->GetViewportContextById(viewportInfo.m_viewportId);
+                JE::Render::RPI::ViewportContextPtr viewportContext = viewportContextRequests->GetViewportContextById(viewportInfo.m_viewportId);
                 const AZ::Transform cameraTransform = viewportContext->GetCameraTransform();
 
                 // Get our camera's center point
@@ -463,9 +463,9 @@ namespace Terrain
 
         // Try to get the current camera position, or default to (0,0) if we can't.
         AZ::Vector3 cameraPos = AZ::Vector3::CreateZero();
-        if (auto viewportContextRequests = AZ::RPI::ViewportContextRequests::Get(); viewportContextRequests)
+        if (auto viewportContextRequests = JE::Render::RPI::ViewportContextRequests::Get(); viewportContextRequests)
         {
-            AZ::RPI::ViewportContextPtr viewportContext = viewportContextRequests->GetViewportContextById(viewportInfo.m_viewportId);
+            JE::Render::RPI::ViewportContextPtr viewportContext = viewportContextRequests->GetViewportContextById(viewportInfo.m_viewportId);
             cameraPos = viewportContext->GetCameraTransform().GetTranslation();
         }
 

@@ -1,0 +1,219 @@
+/*
+ * Copyright (c) Contributors to the Open 3D Engine Project.
+ * For complete copyright and license terms please see the LICENSE at the root of this distribution.
+ *
+ * SPDX-License-Identifier: Apache-2.0 OR MIT
+ *
+ */
+
+#include <JE/Render/RPI/Public/Model/Model.h>
+#include <JE/Render/RPI/Reflect/Model/ModelAsset.h>
+
+#include <Atom/RHI/Factory.h>
+
+#include <AzCore/Debug/Timer.h>
+#include <AzCore/Instance/InstanceDatabase.h>
+#include <AzCore/Jobs/JobFunction.h>
+#include <AzCore/Math/IntersectSegment.h>
+
+// Enable to show profile logs of how long it takes to raycast against models in the Editor
+//#define AZ_RPI_PROFILE_RAYCASTING_AGAINST_MODELS
+
+namespace JE::Render
+{
+    namespace RPI
+    {
+        AZ::Data::Instance<Model> Model::FindOrCreate(const AZ::Data::Asset<ModelAsset>& modelAsset)
+        {
+            return AZ::Data::InstanceDatabase<Model>::Instance().FindOrCreate(
+                AZ::Data::InstanceId::CreateFromAsset(modelAsset),
+                modelAsset);
+        }
+
+
+        void Model::TEMPOrphanFromDatabase(const AZ::Data::Asset<ModelAsset>& modelAsset)
+        {
+            for (auto& modelLodAsset : modelAsset->GetLodAssets())
+            {
+                for (auto& mesh : modelLodAsset->GetMeshes())
+                {
+                    for (auto& streamBufferInfo : mesh.GetStreamBufferInfoList())
+                    {
+                        AZ::Data::InstanceDatabase<Buffer>::Instance().TEMPOrphan(
+                            AZ::Data::InstanceId::CreateFromAsset(streamBufferInfo.m_bufferAssetView.GetBufferAsset()));
+                    }
+                    AZ::Data::InstanceDatabase<Buffer>::Instance().TEMPOrphan(
+                        AZ::Data::InstanceId::CreateFromAsset(mesh.GetIndexBufferAssetView().GetBufferAsset()));
+                }
+                AZ::Data::InstanceDatabase<ModelLod>::Instance().TEMPOrphan(AZ::Data::InstanceId::CreateFromAsset(modelLodAsset));
+            }
+
+            AZ::Data::InstanceDatabase<Model>::Instance().TEMPOrphan(AZ::Data::InstanceId::CreateFromAsset(modelAsset));
+        }
+
+        size_t Model::GetLodCount() const
+        {
+            return m_lods.size();
+        }
+
+        AZStd::span<const AZ::Data::Instance<ModelLod>> Model::GetLods() const
+        {
+            return m_lods;
+        }
+
+        AZ::Data::Instance<Model> Model::CreateInternal(const AZ::Data::Asset<ModelAsset>& modelAsset)
+        {
+            AZ_PROFILE_SCOPE(RPI, "Model: CreateInternal");
+            AZ::Data::Instance<Model> model = aznew Model();
+            const AZ::RHI::ResultCode resultCode = model->Init(modelAsset);
+
+            if (resultCode == AZ::RHI::ResultCode::Success)
+            {
+                return model;
+            }
+
+            return nullptr;
+        }
+
+        AZ::RHI::ResultCode Model::Init(const AZ::Data::Asset<ModelAsset>& modelAsset)
+        {
+            AZ_PROFILE_SCOPE(RPI, "Model: Init");
+
+            m_lods.resize(modelAsset->GetLodAssets().size());
+
+            for (size_t lodIndex = 0; lodIndex < m_lods.size(); ++lodIndex)
+            {
+                const auto lodAssets = modelAsset->GetLodAssets();
+                const AZ::Data::Asset<ModelLodAsset> lodAsset = lodAssets[lodIndex];
+
+                if (!lodAsset)
+                {
+                    AZ_Error("Model", false, "Invalid Operation: Last ModelLod is not loaded.");
+                    return AZ::RHI::ResultCode::Fail;
+                }
+
+                AZ::Data::Instance<ModelLod> lodInstance = ModelLod::FindOrCreate(lodAsset, modelAsset);
+                if (lodInstance == nullptr)
+                {
+                    return AZ::RHI::ResultCode::Fail;
+                }
+
+                for (const JE::Render::RPI::ModelLod::Mesh& mesh : lodInstance->GetMeshes())
+                {
+                    for (const JE::Render::RPI::ModelLod::StreamBufferInfo& stream : mesh.m_streamInfo)
+                    {
+                        if (stream.m_semantic.m_name.GetStringView().starts_with(AZ::RHI::ShaderSemantic::UvStreamSemantic))
+                        {
+                            // For unnamed UVs, use the semantic instead.
+                            if (stream.m_customName.IsEmpty())
+                            {
+                                m_uvNames.insert(AZ::Name(stream.m_semantic.ToString()));
+                            }
+                            else
+                            {
+                                m_uvNames.insert(stream.m_customName);
+                            }
+                        }
+                    }
+                }
+
+                m_lods[lodIndex] = AZStd::move(lodInstance);
+            }
+
+            m_modelAsset = modelAsset;
+            m_isUploadPending = true;
+            return AZ::RHI::ResultCode::Success;
+        }
+
+        void Model::WaitForUpload()
+        {
+            if (m_isUploadPending)
+            {
+                AZ_PROFILE_SCOPE(RPI, "Model::WaitForUpload - %s", GetDatabaseName());
+                for (const AZ::Data::Instance<ModelLod>& lod : m_lods)
+                {
+                    lod->WaitForUpload();
+                }
+                m_isUploadPending = false;
+            }
+        }
+
+        bool Model::IsUploadPending() const
+        {
+            return m_isUploadPending;
+        }
+
+        const AZ::Data::Asset<ModelAsset>& Model::GetModelAsset() const
+        {
+            return m_modelAsset;
+        }
+
+        bool Model::LocalRayIntersection(const AZ::Vector3& rayStart, const AZ::Vector3& rayDir, float& distanceNormalized, AZ::Vector3& normal) const
+        {
+            AZ_PROFILE_SCOPE(RPI, "Model: LocalRayIntersection");
+
+            if (!GetModelAsset())
+            {
+                AZ_Assert(false, "Invalid Model - not created from a ModelAsset?");
+                return false;
+            }
+
+            float start;
+            float end;
+            const int result = AZ::Intersect::IntersectRayAABB2(rayStart, rayDir.GetReciprocal(), GetModelAsset()->GetAabb(), start, end);
+            if (AZ::Intersect::ISECT_RAY_AABB_NONE != result)
+            {
+                ModelAsset* modelAssetPtr = m_modelAsset.Get();
+                if (modelAssetPtr && modelAssetPtr->SupportLocalRayIntersection())
+                {
+#if defined(AZ_RPI_PROFILE_RAYCASTING_AGAINST_MODELS)
+                    AZ::Debug::Timer timer;
+                    timer.Stamp();
+#endif
+                    constexpr bool AllowBruteForce = false;
+                    const bool hit = modelAssetPtr->LocalRayIntersectionAgainstModel(
+                        rayStart, rayDir, AllowBruteForce, distanceNormalized, normal);
+#if defined(AZ_RPI_PROFILE_RAYCASTING_AGAINST_MODELS)
+                    if (hit)
+                    {
+                        AZ_Printf("Model", "Model::LocalRayIntersection took %.2f ms", timer.StampAndGetDeltaTimeInSeconds() * 1000.f);
+                    }
+#endif
+                    return hit;
+                }
+            }
+
+            return false;
+        }
+
+        bool Model::RayIntersection(
+            const AZ::Transform& modelTransform,
+            const AZ::Vector3& nonUniformScale,
+            const AZ::Vector3& rayStart,
+            const AZ::Vector3& rayDir,
+            float& distanceNormalized,
+            AZ::Vector3& normal) const
+        {
+            AZ_PROFILE_SCOPE(RPI, "Model: RayIntersection");
+            const AZ::Vector3 clampedScale = nonUniformScale.GetMax(AZ::Vector3(AZ::MinTransformScale));
+
+            const AZ::Transform inverseTM = modelTransform.GetInverse();
+            const AZ::Vector3 raySrcLocal = inverseTM.TransformPoint(rayStart) / clampedScale;
+
+            // Instead of just rotating 'rayDir' we need it to be scaled too, so that 'distanceNormalized' will be in the target units rather
+            // than object local units.
+            const AZ::Vector3 rayDest = rayStart + rayDir;
+            const AZ::Vector3 rayDestLocal = inverseTM.TransformPoint(rayDest) / clampedScale;
+            const AZ::Vector3 rayDirLocal = rayDestLocal - raySrcLocal;
+
+            const bool result = LocalRayIntersection(raySrcLocal, rayDirLocal, distanceNormalized, normal);
+            normal = (normal * clampedScale).GetNormalized();
+            return result;
+        }
+
+        const AZStd::unordered_set<AZ::Name>& Model::GetUvNames() const
+        {
+            return m_uvNames;
+        }
+    } // namespace RPI
+} // namespace AZ

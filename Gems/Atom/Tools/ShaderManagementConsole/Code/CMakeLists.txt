@@ -24,7 +24,7 @@ if(PAL_TRAIT_BUILD_TESTS_SUPPORTED AND PAL_TRAIT_BUILD_HOST_TOOLS)
         NAMESPACE Gem
         FILES_CMAKE Tests/shadervariantgenerator_tests_files.cmake
         INCLUDE_DIRECTORIES PRIVATE Source
-        BUILD_DEPENDENCIES PRIVATE AZ::AzTest AZ::AzTestShared Gem::Atom_RPI.Edit Gem::Atom_RPI.Public
+        BUILD_DEPENDENCIES PRIVATE AZ::AzTest AZ::AzTestShared JE::EditorRenderIntegration JE::RenderIntegration
     )
     ly_add_googletest(NAME Gem::ShaderManagementConsole.VariantGenerator.Tests LABELS REQUIRES_tiaf)
 endif()

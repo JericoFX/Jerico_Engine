@@ -14,7 +14,7 @@
 #include <AzCore/Math/Color.h>
 
 #include <Atom/RHI/GeometryView.h>
-#include <Atom/RPI.Public/AuxGeom/AuxGeomDraw.h>
+#include <JE/Render/RPI/Public/AuxGeom/AuxGeomDraw.h>
 
 namespace AZ
 {
@@ -241,48 +241,48 @@ namespace AZ
         //! Utility functions to convert api enums to internal enums.
         //! We prefer scoped enums in public interfaces but internally we use the unscoped enum for array sizes,
         //! indices and loop counters.
-        inline AuxGeomDrawStyle ConvertRPIDrawStyle(RPI::AuxGeomDraw::DrawStyle rpiDrawStyle)
+        inline AuxGeomDrawStyle ConvertRPIDrawStyle(JE::Render::RPI::AuxGeomDraw::DrawStyle rpiDrawStyle)
         {
             switch (rpiDrawStyle)
             {
-            case RPI::AuxGeomDraw::DrawStyle::Point: return DrawStyle_Point;
-            case RPI::AuxGeomDraw::DrawStyle::Line: return DrawStyle_Line;
-            case RPI::AuxGeomDraw::DrawStyle::Solid: return DrawStyle_Solid;
-            case RPI::AuxGeomDraw::DrawStyle::Shaded: return DrawStyle_Shaded;
+            case JE::Render::RPI::AuxGeomDraw::DrawStyle::Point: return DrawStyle_Point;
+            case JE::Render::RPI::AuxGeomDraw::DrawStyle::Line: return DrawStyle_Line;
+            case JE::Render::RPI::AuxGeomDraw::DrawStyle::Solid: return DrawStyle_Solid;
+            case JE::Render::RPI::AuxGeomDraw::DrawStyle::Shaded: return DrawStyle_Shaded;
             }
             AZ_Assert(false, "Invalid RPI::DrawStyle value passed to AuxGeom");
             return DrawStyle_Count;
         }
 
-        inline AuxGeomDepthReadType ConvertRPIDepthTestFlag(RPI::AuxGeomDraw::DepthTest rpiDepthTest)
+        inline AuxGeomDepthReadType ConvertRPIDepthTestFlag(JE::Render::RPI::AuxGeomDraw::DepthTest rpiDepthTest)
         {
             switch (rpiDepthTest)
             {
-            case RPI::AuxGeomDraw::DepthTest::On:  return DepthRead_On;
-            case RPI::AuxGeomDraw::DepthTest::Off: return DepthRead_Off;
+            case JE::Render::RPI::AuxGeomDraw::DepthTest::On:  return DepthRead_On;
+            case JE::Render::RPI::AuxGeomDraw::DepthTest::Off: return DepthRead_Off;
             }
             AZ_Assert(false, "Invalid RPI::DepthTest value passed to AuxGeom");
             return DepthRead_Count;
         }
 
-        inline AuxGeomDepthWriteType ConvertRPIDepthWriteFlag(RPI::AuxGeomDraw::DepthWrite rpiDepthWrite)
+        inline AuxGeomDepthWriteType ConvertRPIDepthWriteFlag(JE::Render::RPI::AuxGeomDraw::DepthWrite rpiDepthWrite)
         {
             switch (rpiDepthWrite)
             {
-            case RPI::AuxGeomDraw::DepthWrite::On:  return DepthWrite_On;
-            case RPI::AuxGeomDraw::DepthWrite::Off: return DepthWrite_Off;
+            case JE::Render::RPI::AuxGeomDraw::DepthWrite::On:  return DepthWrite_On;
+            case JE::Render::RPI::AuxGeomDraw::DepthWrite::Off: return DepthWrite_Off;
             }
             AZ_Assert(false, "Invalid RPI::DepthWrite value passed to AuxGeom");
             return DepthWrite_Count;
         }
 
-        inline AuxGeomFaceCullMode ConvertRPIFaceCullFlag(RPI::AuxGeomDraw::FaceCullMode rpiFaceCull)
+        inline AuxGeomFaceCullMode ConvertRPIFaceCullFlag(JE::Render::RPI::AuxGeomDraw::FaceCullMode rpiFaceCull)
         {
             switch(rpiFaceCull)
             {
-                case RPI::AuxGeomDraw::FaceCullMode::None:      return FaceCull_None;
-                case RPI::AuxGeomDraw::FaceCullMode::Front:     return FaceCull_Front;
-                case RPI::AuxGeomDraw::FaceCullMode::Back:      return FaceCull_Back;
+                case JE::Render::RPI::AuxGeomDraw::FaceCullMode::None:      return FaceCull_None;
+                case JE::Render::RPI::AuxGeomDraw::FaceCullMode::Front:     return FaceCull_Front;
+                case JE::Render::RPI::AuxGeomDraw::FaceCullMode::Back:      return FaceCull_Back;
             }
             AZ_Assert(false, "Invalid RPI::FaceCullMode value passed to AuxGeom");
             return FaceCull_Count;

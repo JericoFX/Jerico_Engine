@@ -7,9 +7,9 @@
  */
 #pragma once
 
-#include <Atom/RPI.Public/Pass/RenderPass.h>
-#include <Atom/RPI.Public/Shader/Shader.h>
-#include <Atom/RPI.Public/Shader/ShaderResourceGroup.h>
+#include <JE/Render/RPI/Public/Pass/RenderPass.h>
+#include <JE/Render/RPI/Public/Shader/Shader.h>
+#include <JE/Render/RPI/Public/Shader/ShaderResourceGroup.h>
 #include <Render/DiffuseProbeGrid.h>
 #include <Render/DiffuseProbeGridFeatureProcessor.h>
 
@@ -19,19 +19,19 @@ namespace AZ
     {
         //! Compute pass that queries the diffuse irradiance from the DiffuseProbeGrids
         class DiffuseProbeGridQueryFullscreenPass final
-            : public RPI::RenderPass
+            : public JE::Render::RPI::RenderPass
         {
         public:
             AZ_RPI_PASS(DiffuseProbeGridQueryFullscreenPass);
 
-            AZ_RTTI(AZ::Render::DiffuseProbeGridQueryFullscreenPass, "{DDA729A6-DBC0-4CA0-A0FF-00BC30D1229B}", RPI::RenderPass);
+            AZ_RTTI(AZ::Render::DiffuseProbeGridQueryFullscreenPass, "{DDA729A6-DBC0-4CA0-A0FF-00BC30D1229B}", JE::Render::RPI::RenderPass);
             AZ_CLASS_ALLOCATOR(DiffuseProbeGridQueryFullscreenPass, SystemAllocator, 0);
             virtual ~DiffuseProbeGridQueryFullscreenPass() = default;
 
-            static RPI::Ptr<DiffuseProbeGridQueryFullscreenPass> Create(const RPI::PassDescriptor& descriptor);
+            static JE::Render::RPI::Ptr<DiffuseProbeGridQueryFullscreenPass> Create(const JE::Render::RPI::PassDescriptor& descriptor);
 
         private:
-            DiffuseProbeGridQueryFullscreenPass(const RPI::PassDescriptor& descriptor);
+            DiffuseProbeGridQueryFullscreenPass(const JE::Render::RPI::PassDescriptor& descriptor);
 
             void LoadShader();
 
@@ -42,10 +42,10 @@ namespace AZ
             void BuildCommandListInternal(const RHI::FrameGraphExecuteContext& context) override;
 
             // pass descriptor
-            RPI::PassDescriptor m_passDescriptor;
+            JE::Render::RPI::PassDescriptor m_passDescriptor;
 
             // shader
-            Data::Instance<RPI::Shader> m_shader;
+            Data::Instance<JE::Render::RPI::Shader> m_shader;
             const RHI::PipelineState* m_pipelineState = nullptr;
             RHI::Ptr<RHI::ShaderResourceGroupLayout> m_objectSrgLayout;
             RHI::DispatchDirect m_dispatchArgs;
@@ -54,7 +54,7 @@ namespace AZ
             RHI::AttachmentId m_outputBufferAttachmentId;
             RHI::BufferDescriptor m_outputBufferDesc;
             RHI::BufferViewDescriptor m_outputBufferViewDesc;
-            RPI::Ptr<RPI::PassAttachment> m_outputAttachment;
+            JE::Render::RPI::Ptr<JE::Render::RPI::PassAttachment> m_outputAttachment;
         };
     }   // namespace Render
 }   // namespace AZ

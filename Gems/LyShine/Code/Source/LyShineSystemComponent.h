@@ -21,7 +21,7 @@
 #include "LyShine.h"
 
 #if !defined(LYSHINE_BUILDER) && !defined(LYSHINE_TESTS)
-#include <Atom/RPI.Public/Pass/PassSystemInterface.h>
+#include <JE/Render/RPI/Public/Pass/PassSystemInterface.h>
 #endif
 
 namespace LyShine
@@ -113,7 +113,7 @@ namespace LyShine
         static const AZStd::list<AZ::ComponentDescriptor*>* m_componentDescriptors;
 
 #if !defined(LYSHINE_BUILDER) && !defined(LYSHINE_TESTS)
-        AZ::RPI::PassSystemInterface::OnReadyLoadTemplatesEvent::Handler m_loadTemplatesHandler;
+        JE::Render::RPI::PassSystemInterface::OnReadyLoadTemplatesEvent::Handler m_loadTemplatesHandler;
 #endif
     };
 }

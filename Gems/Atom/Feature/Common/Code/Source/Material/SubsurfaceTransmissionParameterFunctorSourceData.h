@@ -9,7 +9,7 @@
 #pragma once
 
 #include "./SubsurfaceTransmissionParameterFunctor.h"
-#include <Atom/RPI.Edit/Material/MaterialFunctorSourceData.h>
+#include <JE/Editor/Render/RPI/Edit/Material/MaterialFunctorSourceData.h>
 
 namespace AZ
 {
@@ -18,15 +18,15 @@ namespace AZ
         //! Builds a SubsurfaceTransmissionParameterFunctor
         //! This functor is used to pack and precalculate parameters required by subsurface scattering and transmission calculation
         class SubsurfaceTransmissionParameterFunctorSourceData final
-            : public AZ::RPI::MaterialFunctorSourceData
+            : public JE::Render::RPI::MaterialFunctorSourceData
         {
         public:
             AZ_CLASS_ALLOCATOR(SubsurfaceTransmissionParameterFunctorSourceData, AZ::SystemAllocator)
-            AZ_RTTI(SubsurfaceTransmissionParameterFunctorSourceData, "{FEDECF94-0351-4775-8AE4-2005171B5634}", RPI::MaterialFunctorSourceData);
+            AZ_RTTI(SubsurfaceTransmissionParameterFunctorSourceData, "{FEDECF94-0351-4775-8AE4-2005171B5634}", JE::Render::RPI::MaterialFunctorSourceData);
 
             static void Reflect(AZ::ReflectContext* context);
 
-            using AZ::RPI::MaterialFunctorSourceData::CreateFunctor;
+            using JE::Render::RPI::MaterialFunctorSourceData::CreateFunctor;
             FunctorResult CreateFunctor(const RuntimeContext& context) const override;
 
         private:

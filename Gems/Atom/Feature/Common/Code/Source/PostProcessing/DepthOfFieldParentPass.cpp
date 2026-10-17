@@ -6,9 +6,9 @@
  *
  */
 
-#include <Atom/RPI.Public/RenderPipeline.h>
-#include <Atom/RPI.Public/Scene.h>
-#include <Atom/RPI.Public/View.h>
+#include <JE/Render/RPI/Public/RenderPipeline.h>
+#include <JE/Render/RPI/Public/Scene.h>
+#include <JE/Render/RPI/Public/View.h>
 
 #include <PostProcess/PostProcessFeatureProcessor.h>
 #include <PostProcess/DepthOfField/DepthOfFieldSettings.h>
@@ -18,14 +18,14 @@ namespace AZ
 {
     namespace Render
     {
-        RPI::Ptr<DepthOfFieldParentPass> DepthOfFieldParentPass::Create(const RPI::PassDescriptor& descriptor)
+        JE::Render::RPI::Ptr<DepthOfFieldParentPass> DepthOfFieldParentPass::Create(const JE::Render::RPI::PassDescriptor& descriptor)
         {
-            RPI::Ptr<DepthOfFieldParentPass> pass = aznew DepthOfFieldParentPass(descriptor);
+            JE::Render::RPI::Ptr<DepthOfFieldParentPass> pass = aznew DepthOfFieldParentPass(descriptor);
             return pass;
         }
 
-        DepthOfFieldParentPass::DepthOfFieldParentPass(const RPI::PassDescriptor& descriptor)
-            : RPI::ParentPass(descriptor)
+        DepthOfFieldParentPass::DepthOfFieldParentPass(const JE::Render::RPI::PassDescriptor& descriptor)
+            : JE::Render::RPI::ParentPass(descriptor)
         { }
 
         bool DepthOfFieldParentPass::IsEnabled() const
@@ -34,13 +34,13 @@ namespace AZ
             {
                 return false;
             }
-            RPI::Scene* scene = GetScene();
+            JE::Render::RPI::Scene* scene = GetScene();
             if (!scene)
             {
                 return false;
             }
             PostProcessFeatureProcessor* fp = scene->GetFeatureProcessor<PostProcessFeatureProcessor>();
-            AZ::RPI::ViewPtr view = GetRenderPipeline()->GetFirstView(GetPipelineViewTag());
+            JE::Render::RPI::ViewPtr view = GetRenderPipeline()->GetFirstView(GetPipelineViewTag());
             if (!fp)
             {
                 return false;

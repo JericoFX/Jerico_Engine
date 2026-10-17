@@ -8,12 +8,12 @@
 
 #include <AssetDatabase/AssetDatabaseConnection.h>
 #include <JE/Editor/Camera/CameraModule.h>
-#include <Atom/RPI.Edit/Common/AssetUtils.h>
-#include <Atom/RPI.Edit/Material/MaterialTypeSourceData.h>
-#include <Atom/RPI.Public/Material/Material.h>
-#include <Atom/RPI.Reflect/Material/MaterialAsset.h>
-#include <Atom/RPI.Reflect/Image/AttachmentImageAsset.h>
-#include <Atom/RPI.Reflect/Image/StreamingImageAsset.h>
+#include <JE/Editor/Render/RPI/Edit/Common/AssetUtils.h>
+#include <JE/Editor/Render/RPI/Edit/Material/MaterialTypeSourceData.h>
+#include <JE/Render/RPI/Public/Material/Material.h>
+#include <JE/Render/RPI/Reflect/Material/MaterialAsset.h>
+#include <JE/Render/RPI/Reflect/Image/AttachmentImageAsset.h>
+#include <JE/Render/RPI/Reflect/Image/StreamingImageAsset.h>
 #include <AtomToolsFramework/Document/AtomToolsDocumentSystemRequestBus.h>
 #include <AzToolsFramework/AssetBrowser/AssetBrowserEntry.h>
 #include <AzCore/Settings/SettingsRegistryMergeUtils.h>
@@ -169,7 +169,7 @@ namespace ShaderManagementConsole
             materialTypeSourcePaths,
             [](const AZStd::string& path)
             {
-                return !path.ends_with(AZ::RPI::MaterialTypeSourceData::Extension);
+                return !path.ends_with(JE::Render::RPI::MaterialTypeSourceData::Extension);
             });
 
         AzToolsFramework::AssetDatabase::AssetDatabaseConnection assetDatabaseConnection;
@@ -191,7 +191,7 @@ namespace ShaderManagementConsole
                     materialTypeSourceAssetInfo.m_assetId.m_guid, materialTypeSourceAssetInfo.m_assetId.m_subId,
                     [&](AzToolsFramework::AssetDatabase::ProductDatabaseEntry& entry)
                     {
-                        if (AzFramework::StringFunc::Path::IsExtension(entry.m_productName.c_str(), AZ::RPI::MaterialAsset::Extension))
+                        if (AzFramework::StringFunc::Path::IsExtension(entry.m_productName.c_str(), JE::Render::RPI::MaterialAsset::Extension))
                         {
                             productDependencies.push_back(entry);
                         }
@@ -217,21 +217,21 @@ namespace ShaderManagementConsole
         return results;
     }
 
-    AZStd::vector<AZ::RPI::ShaderCollection::Item> ShaderManagementConsoleApplication::GetMaterialInstanceShaderItems(
+    AZStd::vector<JE::Render::RPI::ShaderCollection::Item> ShaderManagementConsoleApplication::GetMaterialInstanceShaderItems(
         const AZ::Data::AssetId& materialAssetId)
     {
         const AZ::Data::AssetLoadParameters dontLoadImageAssets{
             [](const AZ::Data::AssetFilterInfo& filterInfo)
             {
                 return
-                    filterInfo.m_assetType != AZ::AzTypeInfo<AZ::RPI::StreamingImageAsset>::Uuid() &&
-                    filterInfo.m_assetType != AZ::AzTypeInfo<AZ::RPI::AttachmentImageAsset>::Uuid() &&
-                    filterInfo.m_assetType != AZ::AzTypeInfo<AZ::RPI::ImageAsset>::Uuid();
+                    filterInfo.m_assetType != AZ::AzTypeInfo<JE::Render::RPI::StreamingImageAsset>::Uuid() &&
+                    filterInfo.m_assetType != AZ::AzTypeInfo<JE::Render::RPI::AttachmentImageAsset>::Uuid() &&
+                    filterInfo.m_assetType != AZ::AzTypeInfo<JE::Render::RPI::ImageAsset>::Uuid();
             }
         };
 
-        const auto materialAssetOutcome = AZ::RPI::AssetUtils::LoadAsset<AZ::RPI::MaterialAsset>(
-            materialAssetId, AZ::RPI::AssetUtils::TraceLevel::Error, dontLoadImageAssets);
+        const auto materialAssetOutcome = JE::Render::RPI::AssetUtils::LoadAsset<JE::Render::RPI::MaterialAsset>(
+            materialAssetId, JE::Render::RPI::AssetUtils::TraceLevel::Error, dontLoadImageAssets);
         if (!materialAssetOutcome)
         {
             AZ_Error(
@@ -241,7 +241,7 @@ namespace ShaderManagementConsole
         }
 
         const auto materialAsset = materialAssetOutcome.GetValue();
-        const auto materialInstance = AZ::RPI::Material::FindOrCreate(materialAsset);
+        const auto materialInstance = JE::Render::RPI::Material::FindOrCreate(materialAsset);
         if (!materialInstance)
         {
             AZ_Error(
@@ -250,10 +250,10 @@ namespace ShaderManagementConsole
             return {};
         }
 
-        AZStd::vector<AZ::RPI::ShaderCollection::Item> shaderItems;
+        AZStd::vector<JE::Render::RPI::ShaderCollection::Item> shaderItems;
 
         materialInstance->ForAllShaderItems(
-            [&](const AZ::Name&, const AZ::RPI::ShaderCollection::Item& shaderItem)
+            [&](const AZ::Name&, const JE::Render::RPI::ShaderCollection::Item& shaderItem)
             {
                 shaderItems.push_back(shaderItem);
                 return true;
@@ -269,7 +269,7 @@ namespace ShaderManagementConsole
         AZ::Data::AssetCatalogRequests::AssetEnumerationCB collectAssetsCb =
             [&]([[maybe_unused]] const AZ::Data::AssetId id, const AZ::Data::AssetInfo& info)
         {
-            if (info.m_assetType == AZ::RPI::MaterialAsset::RTTI_Type())
+            if (info.m_assetType == JE::Render::RPI::MaterialAsset::RTTI_Type())
             {
                 assetIds.push_back(id);
             }
@@ -303,8 +303,8 @@ namespace ShaderManagementConsole
         }
     }
 
-    AZ::RPI::ShaderOptionValue ShaderManagementConsoleApplication::MakeShaderOptionValueFromInt(int value)
+    JE::Render::RPI::ShaderOptionValue ShaderManagementConsoleApplication::MakeShaderOptionValueFromInt(int value)
     {
-        return AZ::RPI::ShaderOptionValue(value);
+        return JE::Render::RPI::ShaderOptionValue(value);
     }
 } // namespace ShaderManagementConsole

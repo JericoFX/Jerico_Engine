@@ -13,7 +13,7 @@
 #include <AzCore/Component/TransformBus.h>
 #include <AzFramework/Visibility/BoundsBus.h>
 #include <Atom/Feature/ReflectionProbe/ReflectionProbeFeatureProcessorInterface.h>
-#include <Atom/RPI.Public/Model/Model.h>
+#include <JE/Render/RPI/Public/Model/Model.h>
 #include <LmbrCentral/Shape/BoxShapeComponentBus.h>
 #include <ReflectionProbe/ReflectionProbeComponentConstants.h>
 #include <CubeMapCapture/EditorCubeMapRenderer.h>
@@ -43,8 +43,8 @@ namespace AZ
 
             CubeMapSpecularQualityLevel m_bakedCubeMapQualityLevel = CubeMapSpecularQualityLevel::Medium;
             AZStd::string m_bakedCubeMapRelativePath;
-            Data::Asset<RPI::StreamingImageAsset> m_bakedCubeMapAsset;
-            Data::Asset<RPI::StreamingImageAsset> m_authoredCubeMapAsset;
+            Data::Asset<JE::Render::RPI::StreamingImageAsset> m_bakedCubeMapAsset;
+            Data::Asset<JE::Render::RPI::StreamingImageAsset> m_authoredCubeMapAsset;
             AZ::u64 m_entityId{ EntityId::InvalidEntityId };
 
             float m_renderExposure = 0.0f;

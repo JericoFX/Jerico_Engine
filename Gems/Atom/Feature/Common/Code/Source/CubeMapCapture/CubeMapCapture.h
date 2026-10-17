@@ -8,7 +8,7 @@
 
 #pragma once
 
-#include <Atom/RPI.Public/Scene.h>
+#include <JE/Render/RPI/Public/Scene.h>
 #include <CubeMapCapture/CubeMapRenderer.h>
 
 namespace AZ
@@ -23,7 +23,7 @@ namespace AZ
             CubeMapCapture() = default;
             ~CubeMapCapture() = default;
 
-            void Init(RPI::Scene* scene);
+            void Init(JE::Render::RPI::Scene* scene);
             void Simulate();
             void OnRenderEnd();
 
@@ -31,7 +31,7 @@ namespace AZ
             void RenderCubeMap(RenderCubeMapCallback callback, const AZStd::string& relativePath);
 
             // called by the feature processor, sets the default view if it's for the cubeMap capture pipeline
-            void OnRenderPipelinePassesChanged(RPI::RenderPipeline* renderPipeline);
+            void OnRenderPipelinePassesChanged(JE::Render::RPI::RenderPipeline* renderPipeline);
 
             void SetRelativePath(const AZStd::string& relativePath) { m_relativePath = relativePath; }
             const AZStd::string& GetRelativePath() const { return m_relativePath; }
@@ -42,7 +42,7 @@ namespace AZ
         private:
             AZ_DISABLE_COPY_MOVE(CubeMapCapture);
 
-            RPI::Scene* m_scene = nullptr;
+            JE::Render::RPI::Scene* m_scene = nullptr;
             AZ::Transform m_transform = AZ::Transform::CreateIdentity();
             AZStd::string m_relativePath;
             float m_exposure = 0.0f;

@@ -8,9 +8,9 @@
 
 #include <SkinnedMesh/SkinnedMeshVertexStreamProperties.h>
 
-#include <Atom/RPI.Reflect/ResourcePoolAssetCreator.h>
-#include <Atom/RPI.Public/Shader/ShaderResourceGroup.h>
-#include <Atom/RPI.Public/Model/Model.h>
+#include <JE/Render/RPI/Reflect/ResourcePoolAssetCreator.h>
+#include <JE/Render/RPI/Public/Shader/ShaderResourceGroup.h>
+#include <JE/Render/RPI/Public/Model/Model.h>
 #include <Atom/RHI/Factory.h>
 
 #include <AzCore/Math/PackedVector3.h>
@@ -135,7 +135,7 @@ namespace AZ
                     RHI::BufferBindFlags::CopyRead | RHI::BufferBindFlags::CopyWrite;
                 bufferPoolDesc->m_heapMemoryLevel = RHI::HeapMemoryLevel::Device;
 
-                RPI::ResourcePoolAssetCreator creator;
+                JE::Render::RPI::ResourcePoolAssetCreator creator;
                 creator.Begin(Uuid::CreateRandom());
                 creator.SetPoolDescriptor(AZStd::move(bufferPoolDesc));
                 creator.SetPoolName("SkinnedMeshOutputStreamPool");
@@ -146,7 +146,7 @@ namespace AZ
             // in a ShaderInputContract for retrieving the streams from the model
             for (const SkinnedMeshVertexStreamInfo& inputStreamInfo : m_inputStreamInfo)
             {
-                RPI::ShaderInputContract::StreamChannelInfo channelInfo;
+                JE::Render::RPI::ShaderInputContract::StreamChannelInfo channelInfo;
                 channelInfo.m_semantic = inputStreamInfo.m_semantic;
                 channelInfo.m_isOptional = inputStreamInfo.m_isOptional;
                 channelInfo.m_componentCount = RHI::GetFormatComponentCount(inputStreamInfo.m_elementFormat);
@@ -206,7 +206,7 @@ namespace AZ
             return m_outputStreamInfo[static_cast<uint8_t>(stream)];
         }
 
-        Data::Asset<RPI::ResourcePoolAsset> SkinnedMeshVertexStreamProperties::GetOutputStreamResourcePool() const
+        Data::Asset<JE::Render::RPI::ResourcePoolAsset> SkinnedMeshVertexStreamProperties::GetOutputStreamResourcePool() const
         {
             return m_outputStreamResourcePool;
         }
@@ -216,7 +216,7 @@ namespace AZ
             return aznumeric_cast<uint32_t>(std::numeric_limits<uint16_t>::max()) * aznumeric_cast<uint32_t>(std::numeric_limits<uint16_t>::max());
         }
 
-        const RPI::ShaderInputContract& SkinnedMeshVertexStreamProperties::GetComputeShaderInputContract() const
+        const JE::Render::RPI::ShaderInputContract& SkinnedMeshVertexStreamProperties::GetComputeShaderInputContract() const
         {
             return m_computeShaderInputContract;
         }

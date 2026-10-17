@@ -7,7 +7,7 @@
  */
 #pragma once
 
-#include <Atom/RPI.Public/Image/StreamingImage.h>
+#include <JE/Render/RPI/Public/Image/StreamingImage.h>
 
 #include <PostProcessing/SMAABasePass.h>
 
@@ -29,7 +29,7 @@ namespace AZ
             virtual ~SMAABlendingWeightCalculationPass() = default;
 
             //! Creates a SMAABlendingWeightCalculationPass
-            static RPI::Ptr<SMAABlendingWeightCalculationPass> Create(const RPI::PassDescriptor& descriptor);
+            static JE::Render::RPI::Ptr<SMAABlendingWeightCalculationPass> Create(const JE::Render::RPI::PassDescriptor& descriptor);
 
             void SetMaxSearchSteps(int steps);
             void SetMaxSearchStepsDiagonal(int steps);
@@ -38,17 +38,17 @@ namespace AZ
             void SetCornerDetectionEnable(bool enable);
 
         private:
-            SMAABlendingWeightCalculationPass(const RPI::PassDescriptor& descriptor);
+            SMAABlendingWeightCalculationPass(const JE::Render::RPI::PassDescriptor& descriptor);
 
             // Pass behavior overrides...
             void InitializeInternal() override;
 
             // SMAABasePass functions...
             void UpdateSRG() override;
-            void GetCurrentShaderOption(AZ::RPI::ShaderOptionGroup& shaderOption) const override;
+            void GetCurrentShaderOption(JE::Render::RPI::ShaderOptionGroup& shaderOption) const override;
 
-            AZ::Data::Instance<AZ::RPI::StreamingImage> m_areaTexture;
-            AZ::Data::Instance<AZ::RPI::StreamingImage> m_searchTexture;
+            AZ::Data::Instance<JE::Render::RPI::StreamingImage> m_areaTexture;
+            AZ::Data::Instance<JE::Render::RPI::StreamingImage> m_searchTexture;
 
             RHI::ShaderInputNameIndex m_areaTextureShaderInputIndex = "m_areaTexture";
             RHI::ShaderInputNameIndex m_searchTextureShaderInputIndex = "m_searchTexture";

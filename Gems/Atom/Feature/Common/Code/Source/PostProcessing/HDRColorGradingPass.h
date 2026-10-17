@@ -7,10 +7,10 @@
  */
 #pragma once
 
-#include <Atom/RPI.Reflect/Shader/ShaderVariantKey.h>
-#include <Atom/RPI.Public/Pass/FullscreenTrianglePass.h>
-#include <Atom/RPI.Public/Shader/Shader.h>
-#include <Atom/RPI.Public/Shader/ShaderResourceGroup.h>
+#include <JE/Render/RPI/Reflect/Shader/ShaderVariantKey.h>
+#include <JE/Render/RPI/Public/Pass/FullscreenTrianglePass.h>
+#include <JE/Render/RPI/Public/Shader/Shader.h>
+#include <JE/Render/RPI/Public/Shader/ShaderResourceGroup.h>
 #include <PostProcess/ColorGrading/HDRColorGradingSettings.h>
 
 namespace AZ
@@ -21,20 +21,20 @@ namespace AZ
          *  The color grading pass.
          */
         class HDRColorGradingPass
-            : public AZ::RPI::FullscreenTrianglePass
+            : public JE::Render::RPI::FullscreenTrianglePass
             //TODO: , public PostProcessingShaderOptionBase
         {
         public:
-            AZ_RTTI(HDRColorGradingPass, "{E68E31A1-DB24-4AFF-A029-456A8B74C03C}", AZ::RPI::FullscreenTrianglePass);
+            AZ_RTTI(HDRColorGradingPass, "{E68E31A1-DB24-4AFF-A029-456A8B74C03C}", JE::Render::RPI::FullscreenTrianglePass);
             AZ_CLASS_ALLOCATOR(HDRColorGradingPass, SystemAllocator);
 
             virtual ~HDRColorGradingPass() = default;
 
             //! Creates a ColorGradingPass
-            static RPI::Ptr<HDRColorGradingPass> Create(const RPI::PassDescriptor& descriptor);
+            static JE::Render::RPI::Ptr<HDRColorGradingPass> Create(const JE::Render::RPI::PassDescriptor& descriptor);
 
         protected:
-            HDRColorGradingPass(const RPI::PassDescriptor& descriptor);
+            HDRColorGradingPass(const JE::Render::RPI::PassDescriptor& descriptor);
             
             //! Pass behavior overrides
             void InitializeInternal() override;

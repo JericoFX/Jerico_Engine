@@ -8,21 +8,21 @@
 
 #include <PostProcessing/ChromaticAberrationPass.h>
 #include <PostProcess/PostProcessFeatureProcessor.h>
-#include <Atom/RPI.Public/RenderPipeline.h>
-#include <Atom/RPI.Public/Scene.h>
+#include <JE/Render/RPI/Public/RenderPipeline.h>
+#include <JE/Render/RPI/Public/Scene.h>
 
 namespace AZ
 {
     namespace Render
     {
-        RPI::Ptr<ChromaticAberrationPass> ChromaticAberrationPass::Create(const RPI::PassDescriptor& descriptor)
+        JE::Render::RPI::Ptr<ChromaticAberrationPass> ChromaticAberrationPass::Create(const JE::Render::RPI::PassDescriptor& descriptor)
         {
-            RPI::Ptr<ChromaticAberrationPass> pass = aznew ChromaticAberrationPass(descriptor);
+            JE::Render::RPI::Ptr<ChromaticAberrationPass> pass = aznew ChromaticAberrationPass(descriptor);
             return pass;
         }
 
-        ChromaticAberrationPass::ChromaticAberrationPass(const RPI::PassDescriptor& descriptor)
-            : RPI::ComputePass(descriptor)
+        ChromaticAberrationPass::ChromaticAberrationPass(const JE::Render::RPI::PassDescriptor& descriptor)
+            : JE::Render::RPI::ComputePass(descriptor)
         {
         }
 
@@ -32,7 +32,7 @@ namespace AZ
             {
                 return false;
             }
-            const RPI::Scene* scene = GetScene();
+            const JE::Render::RPI::Scene* scene = GetScene();
             if (!scene)
             {
                 return false;
@@ -42,7 +42,7 @@ namespace AZ
             {
                 return false;
             }
-            const RPI::ViewPtr view = GetRenderPipeline()->GetFirstView(GetPipelineViewTag());
+            const JE::Render::RPI::ViewPtr view = GetRenderPipeline()->GetFirstView(GetPipelineViewTag());
             PostProcessSettings* postProcessSettings = fp->GetLevelSettingsFromView(view);
             if (!postProcessSettings)
             {
@@ -67,11 +67,11 @@ namespace AZ
                 float m_blend = ChromaticAberration::DefaultBlend;
             } constants{};
 
-            RPI::Scene* scene = GetScene();
+            JE::Render::RPI::Scene* scene = GetScene();
             PostProcessFeatureProcessor* fp = scene->GetFeatureProcessor<PostProcessFeatureProcessor>();
             if (fp)
             {
-                RPI::ViewPtr view = m_pipeline->GetFirstView(GetPipelineViewTag());
+                JE::Render::RPI::ViewPtr view = m_pipeline->GetFirstView(GetPipelineViewTag());
                 PostProcessSettings* postProcessSettings = fp->GetLevelSettingsFromView(view);
                 if (postProcessSettings)
                 {
@@ -85,7 +85,7 @@ namespace AZ
             }
 
             AZ_Assert(GetOutputCount() > 0, "ChromaticAberrationPass: No output bindings!");
-            RPI::PassAttachment* outputAttachment = GetOutputBinding(0).GetAttachment().get();
+            JE::Render::RPI::PassAttachment* outputAttachment = GetOutputBinding(0).GetAttachment().get();
 
             AZ_Assert(outputAttachment != nullptr, "ChromaticAberrationPass: Output binding has no attachment!");
             RHI::Size size = outputAttachment->m_descriptor.m_image.m_size;
@@ -97,7 +97,7 @@ namespace AZ
 
             m_shaderResourceGroup->SetConstant(m_constantsIndex, constants);
 
-            RPI::ComputePass::FrameBeginInternal(params);
+            JE::Render::RPI::ComputePass::FrameBeginInternal(params);
         }
     } // namespace Render
 } // namespace AZ

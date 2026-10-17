@@ -6,13 +6,13 @@
 #include "Workspace/MaterialWorkspaceSession.h"
 #include "Workspace/MaterialGraphWorkspaceWidget.h"
 #include <AtomToolsFramework/Inspector/InspectorWidget.h>
-#include <Atom/RPI.Edit/Material/LuaMaterialFunctorSourceData.h>
-#include <Atom/RPI.Edit/Material/MaterialFunctorSourceDataHolder.h>
-#include <Atom/RPI.Edit/Material/MaterialFunctorSourceDataRegistration.h>
-#include <Atom/RPI.Edit/Material/MaterialPropertySourceData.h>
-#include <Atom/RPI.Edit/Material/MaterialTypeSourceData.h>
-#include <Atom/RPI.Reflect/Material/MaterialFunctor.h>
-#include <Atom/RPI.Reflect/Material/MaterialPropertyValue.h>
+#include <JE/Editor/Render/RPI/Edit/Material/LuaMaterialFunctorSourceData.h>
+#include <JE/Editor/Render/RPI/Edit/Material/MaterialFunctorSourceDataHolder.h>
+#include <JE/Editor/Render/RPI/Edit/Material/MaterialFunctorSourceDataRegistration.h>
+#include <JE/Editor/Render/RPI/Edit/Material/MaterialPropertySourceData.h>
+#include <JE/Editor/Render/RPI/Edit/Material/MaterialTypeSourceData.h>
+#include <JE/Render/RPI/Reflect/Material/MaterialFunctor.h>
+#include <JE/Render/RPI/Reflect/Material/MaterialPropertyValue.h>
 #include <AtomToolsFramework/Graph/AssetStatusReporterSystemRequestBus.h>
 #include <AtomToolsFramework/Graph/DynamicNode/DynamicNode.h>
 #include <AtomToolsFramework/Graph/DynamicNode/DynamicNodeManager.h>
@@ -438,13 +438,13 @@ namespace UnitTest
         static void ReflectGenerationTypes(AZ::ReflectContext* context)
         {
             AtomToolsFramework::DynamicNode::Reflect(context);
-            AZ::RPI::MaterialFunctor::Reflect(context);
-            AZ::RPI::MaterialPropertyValue::Reflect(context);
-            AZ::RPI::MaterialPropertySourceData::Reflect(context);
-            AZ::RPI::MaterialTypeSourceData::Reflect(context);
-            AZ::RPI::MaterialFunctorSourceData::Reflect(context);
-            AZ::RPI::MaterialFunctorSourceDataHolder::Reflect(context);
-            AZ::RPI::LuaMaterialFunctorSourceData::Reflect(context);
+            JE::Render::RPI::MaterialFunctor::Reflect(context);
+            JE::Render::RPI::MaterialPropertyValue::Reflect(context);
+            JE::Render::RPI::MaterialPropertySourceData::Reflect(context);
+            JE::Render::RPI::MaterialTypeSourceData::Reflect(context);
+            JE::Render::RPI::MaterialFunctorSourceData::Reflect(context);
+            JE::Render::RPI::MaterialFunctorSourceDataHolder::Reflect(context);
+            JE::Render::RPI::LuaMaterialFunctorSourceData::Reflect(context);
         }
 
         void SetUp() override
@@ -454,10 +454,10 @@ namespace UnitTest
             ReflectGenerationTypes(m_application->GetSerializeContext());
             ReflectGenerationTypes(m_application->GetJsonRegistrationContext());
             m_generationReflected = true;
-            ASSERT_EQ(AZ::RPI::MaterialFunctorSourceDataRegistration::Get(), nullptr);
-            m_functorRegistration = AZStd::make_unique<AZ::RPI::MaterialFunctorSourceDataRegistration>();
+            ASSERT_EQ(JE::Render::RPI::MaterialFunctorSourceDataRegistration::Get(), nullptr);
+            m_functorRegistration = AZStd::make_unique<JE::Render::RPI::MaterialFunctorSourceDataRegistration>();
             m_functorRegistration->Init();
-            m_functorRegistration->RegisterMaterialFunctor("Lua", azrtti_typeid<AZ::RPI::LuaMaterialFunctorSourceData>());
+            m_functorRegistration->RegisterMaterialFunctor("Lua", azrtti_typeid<JE::Render::RPI::LuaMaterialFunctorSourceData>());
             m_fileIO->SetAlias("@engroot@", AZ::Test::GetEngineRootPath().c_str());
             m_nodeManager = AZStd::make_unique<AtomToolsFramework::DynamicNodeManager>(CanvasHistoryToolId);
             m_nodeManager->RegisterDataTypes({
@@ -554,7 +554,7 @@ namespace UnitTest
         }
 
         bool m_generationReflected = false;
-        AZStd::unique_ptr<AZ::RPI::MaterialFunctorSourceDataRegistration> m_functorRegistration;
+        AZStd::unique_ptr<JE::Render::RPI::MaterialFunctorSourceDataRegistration> m_functorRegistration;
         AZStd::unique_ptr<AtomToolsFramework::DynamicNodeManager> m_nodeManager;
         AZStd::unique_ptr<AtomToolsFramework::GraphTemplateFileDataCache> m_templates;
         AtomToolsFramework::DynamicNodeConfig m_constantConfig, m_outputConfig;

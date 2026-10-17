@@ -12,7 +12,7 @@
 
 #include <Atom/RHI.Edit/ShaderPlatformInterfaceBus.h>
 
-#include <Atom/RPI.Reflect/Shader/ShaderAsset.h>
+#include <JE/Render/RPI/Reflect/Shader/ShaderAsset.h>
 
 #include "ShaderAssetBuilder.h"
 #include "ShaderVariantAssetBuilder.h"

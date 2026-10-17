@@ -13,7 +13,7 @@
 #include <AzCore/Debug/PerformanceCollector.h>
 #include <JE/Render/Integration/RenderIntegrationExports.h>
 
-namespace AZ::RPI
+namespace JE::Render::RPI
 {
     class GpuPassProfiler;
 }
@@ -46,7 +46,7 @@ namespace JE::Render
         protected:
             friend class PerformanceCvarManager;
             virtual AZ::Debug::PerformanceCollector* GetPerformanceCollector() { return nullptr; }
-            virtual AZ::RPI::GpuPassProfiler* GetGpuPassProfiler() { return nullptr;  }
+            virtual JE::Render::RPI::GpuPassProfiler* GetGpuPassProfiler() { return nullptr;  }
         };
         using PerformanceCollectorOwner = AZ::Interface<IPerformanceCollectorOwner>;
 

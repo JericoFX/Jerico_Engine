@@ -115,12 +115,12 @@ namespace JE::Editor::Camera
         undoBatch.MarkEntityDirty(newEntityId);
     }
 
-    void CameraEditorSystemComponent::SetViewForEntity(const AZ::EntityId& id, AZ::RPI::ViewPtr view)
+    void CameraEditorSystemComponent::SetViewForEntity(const AZ::EntityId& id, JE::Render::RPI::ViewPtr view)
     {
         m_entityViewMap[id] = view;
     }
 
-    AZ::RPI::ViewPtr CameraEditorSystemComponent::GetViewForEntity(const AZ::EntityId& id)
+    JE::Render::RPI::ViewPtr CameraEditorSystemComponent::GetViewForEntity(const AZ::EntityId& id)
     {
         if (auto viewIndex = m_entityViewMap.find(id); viewIndex != m_entityViewMap.end())
         {

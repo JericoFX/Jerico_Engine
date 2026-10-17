@@ -51,9 +51,9 @@ namespace UnitTest
         JE::Render::MaterialAssignment MakeAssignment() const
         {
             JE::Render::MaterialAssignment assignment;
-            assignment.m_materialAsset = AZ::Data::Asset<AZ::RPI::MaterialAsset>(
+            assignment.m_materialAsset = AZ::Data::Asset<JE::Render::RPI::MaterialAsset>(
                 AZ::Data::AssetId(AZ::Uuid::CreateString("{12121212-3434-5656-7878-909090909090}"), 19),
-                azrtti_typeid<AZ::RPI::MaterialAsset>());
+                azrtti_typeid<JE::Render::RPI::MaterialAsset>());
             assignment.m_materialAsset.SetAutoLoadBehavior(AZ::Data::AssetLoadBehavior::NoLoad);
             assignment.m_propertyOverrides[AZ::Name("baseColor.color")] = AZ::Color(0.25f, 0.5f, 0.75f, 1.0f);
             assignment.m_propertyOverrides[AZ::Name("roughness.factor")] = 0.375f;

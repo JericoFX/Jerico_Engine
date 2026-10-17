@@ -7,9 +7,9 @@
  */
 
 #include "./UseTextureFunctorSourceData.h"
-#include <Atom/RPI.Reflect/Shader/ShaderOptionGroupLayout.h>
+#include <JE/Render/RPI/Reflect/Shader/ShaderOptionGroupLayout.h>
 #include <AzCore/Serialization/SerializeContext.h>
-#include <Atom/RPI.Reflect/Material/MaterialNameContext.h>
+#include <JE/Render/RPI/Reflect/Material/MaterialNameContext.h>
 
 namespace AZ
 {
@@ -19,7 +19,7 @@ namespace AZ
         {
             if (auto* serializeContext = azrtti_cast<SerializeContext*>(context))
             {
-                serializeContext->Class<UseTextureFunctorSourceData, RPI::MaterialFunctorSourceData>()
+                serializeContext->Class<UseTextureFunctorSourceData, JE::Render::RPI::MaterialFunctorSourceData>()
                     ->Version(7) // added base class
                     ->Field("textureProperty", &UseTextureFunctorSourceData::m_texturePropertyName)
                     ->Field("useTextureProperty", &UseTextureFunctorSourceData::m_useTexturePropertyName)
@@ -35,11 +35,11 @@ namespace AZ
             return options;
         }
 
-        RPI::MaterialFunctorSourceData::FunctorResult UseTextureFunctorSourceData::CreateFunctor(const RuntimeContext& context) const
+        JE::Render::RPI::MaterialFunctorSourceData::FunctorResult UseTextureFunctorSourceData::CreateFunctor(const RuntimeContext& context) const
         {
-            using namespace RPI;
+            using namespace JE::Render::RPI;
 
-            RPI::Ptr<UseTextureFunctor> functor = aznew UseTextureFunctor;
+            JE::Render::RPI::Ptr<UseTextureFunctor> functor = aznew UseTextureFunctor;
 
             functor->m_texturePropertyIndex = context.FindMaterialPropertyIndex(m_texturePropertyName);
             if (functor->m_texturePropertyIndex.IsNull())
@@ -73,11 +73,11 @@ namespace AZ
             return Success(Ptr<MaterialFunctor>(functor));
         }
 
-        RPI::MaterialFunctorSourceData::FunctorResult UseTextureFunctorSourceData::CreateFunctor(const EditorContext& context) const
+        JE::Render::RPI::MaterialFunctorSourceData::FunctorResult UseTextureFunctorSourceData::CreateFunctor(const EditorContext& context) const
         {
-            using namespace RPI;
+            using namespace JE::Render::RPI;
 
-            RPI::Ptr<UseTextureFunctor> functor = aznew UseTextureFunctor;
+            JE::Render::RPI::Ptr<UseTextureFunctor> functor = aznew UseTextureFunctor;
 
             functor->m_texturePropertyIndex = context.FindMaterialPropertyIndex(m_texturePropertyName);
             if (functor->m_texturePropertyIndex.IsNull())

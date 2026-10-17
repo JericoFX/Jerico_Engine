@@ -7,8 +7,8 @@
  */
 
 #include <OpenParticleSystem/ParticleGraphicsViewRequestsBus.h>
-#include <Atom/RPI.Edit/Common/AssetUtils.h>
-#include <Atom/RPI.Edit/Common/JsonUtils.h>
+#include <JE/Editor/Render/RPI/Edit/Common/AssetUtils.h>
+#include <JE/Editor/Render/RPI/Edit/Common/JsonUtils.h>
 #include <AzCore/Asset/AssetCommon.h>
 #include <AzFramework/StringFunc/StringFunc.h>
 #include <AzToolsFramework/SourceControl/SourceControlAPI.h>
@@ -32,7 +32,7 @@ namespace OpenParticleSystemEditor
         rapidjson::Document& document = loadOutcome.GetValue();
 
         AZ::JsonDeserializerSettings jsonSettings;
-        AZ::RPI::JsonReportingHelper reportingHelper;
+        JE::Render::RPI::JsonReportingHelper reportingHelper;
         reportingHelper.Attach(jsonSettings);
 
         AZ::JsonSerialization::Load(objectData, document, jsonSettings);
@@ -53,7 +53,7 @@ namespace OpenParticleSystemEditor
 
         AZ::JsonSerializerSettings settings;
         settings.m_keepDefaults = true;
-        AZ::RPI::JsonReportingHelper reportingHelper;
+        JE::Render::RPI::JsonReportingHelper reportingHelper;
         reportingHelper.Attach(settings);
 
         AZ::JsonSerialization::Store(document, document.GetAllocator(), objectData, settings);

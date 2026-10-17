@@ -7,7 +7,7 @@
  */
 #pragma once
 
-#include <Atom/RPI.Public/Pass/FullscreenTrianglePass.h>
+#include <JE/Render/RPI/Public/Pass/FullscreenTrianglePass.h>
 
 namespace AZ
 {
@@ -15,17 +15,17 @@ namespace AZ
     {
         //! Pass used to prevent the foreground color to smear into the background blur.
         class DepthOfFieldMaskPass final
-            : public RPI::FullscreenTrianglePass
+            : public JE::Render::RPI::FullscreenTrianglePass
         {
             AZ_RPI_PASS(DepthOfFieldMaskPass);
 
         public:
-            AZ_RTTI(AZ::Render::DepthOfFieldMaskPass, "{37025565-2187-4841-8F17-FE90600BA884}", AZ::RPI::FullscreenTrianglePass);
+            AZ_RTTI(AZ::Render::DepthOfFieldMaskPass, "{37025565-2187-4841-8F17-FE90600BA884}", JE::Render::RPI::FullscreenTrianglePass);
             AZ_CLASS_ALLOCATOR(DepthOfFieldMaskPass, SystemAllocator);
             virtual ~DepthOfFieldMaskPass() = default;
 
             //! Creates a DepthOfFieldMaskPass
-            static RPI::Ptr<DepthOfFieldMaskPass> Create(const RPI::PassDescriptor& descriptor);
+            static JE::Render::RPI::Ptr<DepthOfFieldMaskPass> Create(const JE::Render::RPI::PassDescriptor& descriptor);
 
             // Set pass parameter interfaces...
             void SetBlendFactor(const AZStd::array<float, 2>& blendFactor);
@@ -37,7 +37,7 @@ namespace AZ
             void FrameBeginInternal(FramePrepareParams params) override;
 
         private:
-            DepthOfFieldMaskPass(const RPI::PassDescriptor& descriptor);
+            DepthOfFieldMaskPass(const JE::Render::RPI::PassDescriptor& descriptor);
 
             // SRG binding indices...
             RHI::ShaderInputNameIndex m_blendFactorIndex = "m_blendFactor";

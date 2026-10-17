@@ -8,7 +8,7 @@
 
 #pragma once
 
-#include <Atom/RPI.Edit/Material/MaterialPipelineSourceData.h>
+#include <JE/Editor/Render/RPI/Edit/Material/MaterialPipelineSourceData.h>
 #include <AzCore/IO/Path/Path.h>
 
 namespace AZ
@@ -16,7 +16,7 @@ namespace AZ
     class ReflectContext;
 }
 
-namespace AZ::RPI
+namespace JE::Render::RPI
 {
     class MaterialTypeSourceData;
 }
@@ -27,13 +27,13 @@ namespace JE::Assets::RenderBuilders
     class MaterialPipelineScriptRunner
     {
     public:
-        using ShaderTemplatesList = AZStd::vector<AZ::RPI::MaterialPipelineSourceData::ShaderTemplate>;
+        using ShaderTemplatesList = AZStd::vector<JE::Render::RPI::MaterialPipelineSourceData::ShaderTemplate>;
 
         MaterialPipelineScriptRunner();
 
         static void Reflect(AZ::ReflectContext* context);
 
-        bool RunScript(const AZ::IO::Path& materialPipelineFile, const AZ::RPI::MaterialPipelineSourceData& materialPipeline, const AZ::RPI::MaterialTypeSourceData& materialType);
+        bool RunScript(const AZ::IO::Path& materialPipelineFile, const JE::Render::RPI::MaterialPipelineSourceData& materialPipeline, const JE::Render::RPI::MaterialTypeSourceData& materialType);
         void Reset();
 
         const ShaderTemplatesList& GetRelevantShaderTemplates() const;
@@ -47,7 +47,7 @@ namespace JE::Assets::RenderBuilders
 
             static void Reflect(AZ::ReflectContext* context);
 
-            ScriptExecutionContext(const AZ::RPI::MaterialTypeSourceData& materialType, const ShaderTemplatesList& availableShaderTemplates);
+            ScriptExecutionContext(const JE::Render::RPI::MaterialTypeSourceData& materialType, const ShaderTemplatesList& availableShaderTemplates);
 
             AZStd::string GetLightingModelName() const;
             void IncludeAllShaders();
@@ -61,7 +61,7 @@ namespace JE::Assets::RenderBuilders
 
             struct ShaderTemplateInfo
             {
-                AZ::RPI::MaterialPipelineSourceData::ShaderTemplate m_template;
+                JE::Render::RPI::MaterialPipelineSourceData::ShaderTemplate m_template;
                 bool m_isIncluded;
             };
 
@@ -69,7 +69,7 @@ namespace JE::Assets::RenderBuilders
             ShaderTemplateStatusMap::iterator GetShaderStatusIterator(const AZStd::string& shaderTemplateName);
             void SetIncludeShader(const AZStd::string& shaderTemplateName, bool include);
 
-            const AZ::RPI::MaterialTypeSourceData& m_materialType;
+            const JE::Render::RPI::MaterialTypeSourceData& m_materialType;
 
             ShaderTemplateStatusMap m_shaderTemplateStatusMap;
         };

@@ -12,8 +12,8 @@
 namespace AZ::Render::LightCommon
 {
     bool NeedsCPUCulling(
-        const RPI::ViewPtr& view,
-        const AZStd::unordered_map<const RPI::View*, AZStd::vector<const RPI::RenderPipeline*>>& cpuCulledPipelinesPerView)
+        const JE::Render::RPI::ViewPtr& view,
+        const AZStd::unordered_map<const JE::Render::RPI::View*, AZStd::vector<const JE::Render::RPI::RenderPipeline*>>& cpuCulledPipelinesPerView)
     {
         auto viewPipelines = cpuCulledPipelinesPerView.find(view.get());
         if (viewPipelines == cpuCulledPipelinesPerView.end())
@@ -24,10 +24,10 @@ namespace AZ::Render::LightCommon
     }
 
     void CacheCPUCulledPipelineInfo(
-        RPI::RenderPipeline* renderPipeline,
-        RPI::ViewPtr newView,
-        RPI::ViewPtr previousView,
-        AZStd::unordered_map<const RPI::View*, AZStd::vector<const RPI::RenderPipeline*>>& cpuCulledPipelinesPerView)
+        JE::Render::RPI::RenderPipeline* renderPipeline,
+        JE::Render::RPI::ViewPtr newView,
+        JE::Render::RPI::ViewPtr previousView,
+        AZStd::unordered_map<const JE::Render::RPI::View*, AZStd::vector<const JE::Render::RPI::RenderPipeline*>>& cpuCulledPipelinesPerView)
     {
         // Check if render pipeline is using GPU culling
         if (renderPipeline->FindFirstPass(AZ::Name("LightCullingPass")))
@@ -60,7 +60,7 @@ namespace AZ::Render::LightCommon
             desc.m_bufferSrgName = inputBufferSrgName;
             desc.m_elementCountSrgName = inputElementCountSrgName;
             desc.m_elementFormat = AZ::RHI::Format::R32_UINT;
-            desc.m_srgLayout = RPI::RPISystemInterface::Get()->GetViewSrgLayout().get();
+            desc.m_srgLayout = JE::Render::RPI::RPISystemInterface::Get()->GetViewSrgLayout().get();
 
             outputVisibleBufferHandlers.emplace_back(GpuBufferHandler(desc));
         }

@@ -5,14 +5,14 @@
  *
  */
 
-#include <Atom/RPI.Edit/Common/AssetUtils.h>
+#include <JE/Editor/Render/RPI/Edit/Common/AssetUtils.h>
 #include <JE/Debug/Profiler/ProfilerModule.h>
 #include <JE/Render/Debug/RenderDebugModule.h>
 #include <JE/World/Camera/Debug/DebugCameraModule.h>
 #include <JE/Editor/RenderIntegration/RenderIntegrationModule.h>
 #include <JE/Render/Integration/RenderIntegrationModule.h>
 #include <JE/Assets/RenderBuilders/RenderAssetBuildersModule.h>
-#include <Atom/RPI.Public/RPISystemInterface.h>
+#include <JE/Render/RPI/Public/RPISystemInterface.h>
 #include <AtomToolsFramework/Application/AtomToolsApplication.h>
 #include <AtomToolsFramework/Util/Util.h>
 #include <AtomToolsFramework/Window/AtomToolsMainWindowRequestBus.h>
@@ -207,10 +207,10 @@ namespace AtomToolsFramework
         AzToolsFramework::SourceControlConnectionRequestBus::Broadcast(
             &AzToolsFramework::SourceControlConnectionRequests::EnableSourceControl, enableSourceControl);
 
-        auto rpiInterface = AZ::RPI::RPISystemInterface::Get();
+        auto rpiInterface = JE::Render::RPI::RPISystemInterface::Get();
         if (rpiInterface && !rpiInterface->IsInitialized())
         {
-            AZ::RPI::RPISystemInterface::Get()->InitializeSystemAssets();
+            JE::Render::RPI::RPISystemInterface::Get()->InitializeSystemAssets();
         }
 
         LoadSettings();

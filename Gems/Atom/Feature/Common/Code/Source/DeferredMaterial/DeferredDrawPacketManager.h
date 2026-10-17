@@ -18,7 +18,7 @@ namespace AZ::Render
     public:
         using DeferredDrawPacketId = uint32_t;
 
-        static auto CalculateDrawPacketId(const RPI::Material* material, const RPI::ShaderCollection::Item& shaderItem)
+        static auto CalculateDrawPacketId(const JE::Render::RPI::Material* material, const JE::Render::RPI::ShaderCollection::Item& shaderItem)
             -> DeferredDrawPacketId;
 
         auto GetDeferredDrawPacket(DeferredDrawPacketId id) const -> Data::Instance<DeferredDrawPacket>;
@@ -26,7 +26,7 @@ namespace AZ::Render
         bool HasDeferredDrawPacket(DeferredDrawPacketId id) const;
 
         auto GetOrCreateDeferredDrawPacket(
-            RPI::Scene* scene, RPI::Material* material, const Name materialPipelineName, const RPI::ShaderCollection::Item& shaderItem)
+            JE::Render::RPI::Scene* scene, JE::Render::RPI::Material* material, const Name materialPipelineName, const JE::Render::RPI::ShaderCollection::Item& shaderItem)
             -> Data::Instance<DeferredDrawPacket>;
 
         bool HasDrawPacketForDrawList(const RHI::DrawListTag tag) const;
@@ -46,7 +46,7 @@ namespace AZ::Render
 
         void PruneUnusedDrawPackets();
 
-        Data::Instance<RPI::ShaderResourceGroup> CreatePassSrg(RHI::DrawListTag drawListTag);
+        Data::Instance<JE::Render::RPI::ShaderResourceGroup> CreatePassSrg(RHI::DrawListTag drawListTag);
 
     private:
         AZStd::unordered_map<DeferredDrawPacketId, Data::Instance<DeferredDrawPacket>> m_deferredDrawPackets;

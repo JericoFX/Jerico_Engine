@@ -16,7 +16,7 @@
 #include <AzToolsFramework/API/EditorWindowRequestBus.h>
 #include <AzToolsFramework/API/ToolsApplicationAPI.h>
 
-#include <Atom/RPI.Edit/Common/AssetUtils.h>
+#include <JE/Editor/Render/RPI/Edit/Common/AssetUtils.h>
 
 AZ_PUSH_DISABLE_WARNING(4251 4800, "-Wunknown-warning-option") // disable warnings spawned by QT
 #include <QApplication>
@@ -44,7 +44,7 @@ namespace JE
                     // Exported materials will be created in the same folder, using the same base name, as the originating source asset for
                     // the material being converted. We need to get the source asset path from the asset ID and then remove the extension and
                     // any invalid characters.
-                    AZ::IO::FixedMaxPath path{ AZ::RPI::AssetUtils::GetSourcePathByAssetId(assetId) };
+                    AZ::IO::FixedMaxPath path{ JE::Render::RPI::AssetUtils::GetSourcePathByAssetId(assetId) };
                     AZStd::string filename = path.Stem().Native();
 
                     // The material slot name is appended to the base file name. Material slot names should be guaranteed to be unique. This
@@ -56,12 +56,12 @@ namespace JE
                     // dots and file names when determining extensions. The sanitized function does not currently remove dots from file
                     // names.
                     AZ::StringFunc::Replace(filename, ".", "_");
-                    filename = AZ::RPI::AssetUtils::SanitizeFileName(filename);
+                    filename = JE::Render::RPI::AssetUtils::SanitizeFileName(filename);
 
                     //  The originating source file could have been an fbx or other model format. Therefore, the extension must be replaced
                     //  with the material source data extension.
                     filename += ".";
-                    filename += AZ::RPI::MaterialSourceData::Extension;
+                    filename += JE::Render::RPI::MaterialSourceData::Extension;
                     path.ReplaceFilename(AZ::IO::PathView{ filename });
                     return path.LexicallyNormal().String();
                 }
@@ -289,7 +289,7 @@ namespace JE
                     }
 
                     // Attempt to resolve the asset info from the anticipated asset id.
-                    if (const auto& assetIdOutcome = AZ::RPI::AssetUtils::MakeAssetId(exportItem.GetExportPath(), 0); assetIdOutcome)
+                    if (const auto& assetIdOutcome = JE::Render::RPI::AssetUtils::MakeAssetId(exportItem.GetExportPath(), 0); assetIdOutcome)
                     {
                         if (const auto& assetId = assetIdOutcome.GetValue(); assetId.IsValid())
                         {

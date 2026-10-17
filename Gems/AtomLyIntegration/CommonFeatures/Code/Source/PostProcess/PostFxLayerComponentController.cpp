@@ -12,9 +12,9 @@
 #include <LmbrCentral/Scripting/EditorTagComponentBus.h>
 #include <AzCore/Component/TransformBus.h>
 #include <AzCore/RTTI/BehaviorContext.h>
-#include <Atom/RPI.Public/Scene.h>
-#include <Atom/RPI.Public/ViewProviderBus.h>
-#include <Atom/RPI.Public/ViewportContextBus.h>
+#include <JE/Render/RPI/Public/Scene.h>
+#include <JE/Render/RPI/Public/ViewProviderBus.h>
+#include <JE/Render/RPI/Public/ViewportContextBus.h>
 
 namespace AZ
 {
@@ -55,17 +55,17 @@ namespace AZ
             const AZStd::unordered_set<AZ::EntityId>& cameraEntityList = GetCameraEntityList();
 
             // Get views of each camera
-            AZStd::unordered_set<AZ::RPI::View*> allSceneViews;
+            AZStd::unordered_set<JE::Render::RPI::View*> allSceneViews;
             for (const AZ::EntityId& cameraEntityId : cameraEntityList)
             {
 
-                for (uint32_t i = 0; i < AZ::RPI::MaxViewTypes; i++)
+                for (uint32_t i = 0; i < JE::Render::RPI::MaxViewTypes; i++)
                 {
-                    if (i == AZ::RPI::DefaultViewType)
+                    if (i == JE::Render::RPI::DefaultViewType)
                     {
                         // Get the view pointer associated to each camera entity
-                        AZ::RPI::ViewPtr view = nullptr;
-                        AZ::RPI::ViewProviderBus::EventResult(view, cameraEntityId, &AZ::RPI::ViewProvider::GetView);
+                        JE::Render::RPI::ViewPtr view = nullptr;
+                        JE::Render::RPI::ViewProviderBus::EventResult(view, cameraEntityId, &JE::Render::RPI::ViewProvider::GetView);
 
                         if (view != nullptr)
                         {
@@ -74,9 +74,9 @@ namespace AZ
                     }
                     else
                     {
-                        AZ::RPI::ViewPtr stereoscopicView = nullptr;
-                        AZ::RPI::ViewProviderBus::EventResult(
-                            stereoscopicView, cameraEntityId, &AZ::RPI::ViewProvider::GetStereoscopicView, static_cast<AZ::RPI::ViewType>(i));
+                        JE::Render::RPI::ViewPtr stereoscopicView = nullptr;
+                        JE::Render::RPI::ViewProviderBus::EventResult(
+                            stereoscopicView, cameraEntityId, &JE::Render::RPI::ViewProvider::GetStereoscopicView, static_cast<JE::Render::RPI::ViewType>(i));
 
                         if (stereoscopicView != nullptr)
                         {
@@ -87,7 +87,7 @@ namespace AZ
             }
 
             // Add the current view which can potentially be the editor view
-            auto atomViewportRequests = AZ::Interface<AZ::RPI::ViewportContextRequestsInterface>::Get();
+            auto atomViewportRequests = AZ::Interface<JE::Render::RPI::ViewportContextRequestsInterface>::Get();
             const AZ::Name contextName = atomViewportRequests->GetDefaultViewportContextName();
             auto currentView = atomViewportRequests->GetCurrentViewGroup(contextName)->GetView();
             if (IsEditorView(currentView))
@@ -164,8 +164,8 @@ namespace AZ
                 m_cameraEntities.insert(cameraId);
             }
 
-            AZ::RPI::ViewPtr view = nullptr;
-            AZ::RPI::ViewProviderBus::EventResult(view, cameraId, &AZ::RPI::ViewProvider::GetView);
+            JE::Render::RPI::ViewPtr view = nullptr;
+            JE::Render::RPI::ViewProviderBus::EventResult(view, cameraId, &JE::Render::RPI::ViewProvider::GetView);
             if (view != nullptr)
             {
                 m_allCameraViews.insert(view.get());
@@ -200,7 +200,7 @@ namespace AZ
             }
         }
 
-        bool PostFxLayerComponentController::IsEditorView(const AZ::RPI::ViewPtr view)
+        bool PostFxLayerComponentController::IsEditorView(const JE::Render::RPI::ViewPtr view)
         {
             return m_allCameraViews.find(view.get()) == m_allCameraViews.end() ? true : false;
         }
@@ -245,7 +245,7 @@ namespace AZ
         {
             m_entityId = entityId;
 
-            m_featureProcessorInterface = RPI::Scene::GetFeatureProcessorForEntity<PostProcessFeatureProcessorInterface>(m_entityId);
+            m_featureProcessorInterface = JE::Render::RPI::Scene::GetFeatureProcessorForEntity<PostProcessFeatureProcessorInterface>(m_entityId);
             if (m_featureProcessorInterface)
             {
                 m_postProcessInterface = m_featureProcessorInterface->GetOrCreateSettingsInterface(m_entityId);

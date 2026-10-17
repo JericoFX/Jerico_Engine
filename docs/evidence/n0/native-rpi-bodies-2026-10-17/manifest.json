@@ -1,0 +1,370 @@
+{
+  "schema": "je-rpi99-public-evidence-candidate-r32-v1",
+  "state": "WINDOWS_PROFILE_VULKAN_NATIVE_RPI99_VERIFIED_GLOBAL_OPEN",
+  "preparedBy": "/root/dependency_writer",
+  "approved": true,
+  "payload": [
+    {
+      "copyByteExact": true,
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi99\\pass-reset-red-attempt1\\pass-reset-focal.xml",
+      "destination": "xml/red/pass-reset-focal.xml",
+      "bytes": 1148,
+      "sha256": "D28BA5441B10C8AA29FA94D77A839958B44C7A29BF1A565160F973A0099B0E10"
+    },
+    {
+      "copyByteExact": true,
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi99\\pass-reset-green-attempt1\\pass-reset-focal.xml",
+      "destination": "xml/green/pass-reset-focal.xml",
+      "bytes": 625,
+      "sha256": "D3564A954617E42A10E9DDADACBA98768EEF66FDA76888D2D13D11554376DF1C"
+    },
+    {
+      "copyByteExact": true,
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi99\\pass-reset-green-attempt1\\accepted-ctest-xml\\JE_RenderIntegration.Tests.xml",
+      "destination": "xml/green/six-suites/JE_RenderIntegration.Tests.xml",
+      "bytes": 3122,
+      "sha256": "3573CB01D5C9B73999C6C3954FC62E0F5906B94CD576A4742D74B49CD567F94B"
+    },
+    {
+      "copyByteExact": true,
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi99\\pass-reset-green-attempt1\\accepted-ctest-xml\\JE_RenderRpi.Tests.xml",
+      "destination": "xml/green/six-suites/JE_RenderRpi.Tests.xml",
+      "bytes": 200988,
+      "sha256": "A4BABDCB4AE1CAD44938DC667523420227DC32EEF17E37EA8AE32DAE97D47018"
+    },
+    {
+      "copyByteExact": true,
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi99\\pass-reset-green-attempt1\\accepted-ctest-xml\\JE_EditorRenderIntegration.Tests.xml",
+      "destination": "xml/green/six-suites/JE_EditorRenderIntegration.Tests.xml",
+      "bytes": 1914,
+      "sha256": "865B276479C335EE130F906B2198DB00F057D173402950CD76CB21BC6457D992"
+    },
+    {
+      "copyByteExact": true,
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi99\\pass-reset-green-attempt1\\accepted-ctest-xml\\JE_EditorMaterials.Tests.xml",
+      "destination": "xml/green/six-suites/JE_EditorMaterials.Tests.xml",
+      "bytes": 29865,
+      "sha256": "4516A50ED219098175DCD4BFD35D8E309C07BE0BF4D80D86C9BDD2F53966A9C7"
+    },
+    {
+      "copyByteExact": true,
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi99\\pass-reset-green-attempt1\\accepted-ctest-xml\\JE_RenderAssetBuilders.Tests.xml",
+      "destination": "xml/green/six-suites/JE_RenderAssetBuilders.Tests.xml",
+      "bytes": 3664,
+      "sha256": "0BA958FA005613858E07D3BA6DDE1CC235570E5413AB8ECDDFF533CD25426302"
+    },
+    {
+      "copyByteExact": true,
+      "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi99\\pass-reset-green-attempt1\\accepted-ctest-xml\\JE_ShaderCompiler.Tests.xml",
+      "destination": "xml/green/six-suites/JE_ShaderCompiler.Tests.xml",
+      "bytes": 5970,
+      "sha256": "FCA2EFC0C22CEE531CACA1CEF821DF2E230BF0C193C331E336F53EC4B64374D0"
+    },
+    {
+      "source": "Private factual README authored for this candidate",
+      "destination": "README.md",
+      "bytes": 3314,
+      "sha256": "E090F92A9A0F574B17285818C594FD58C128D7BE56322F74159716A909EE4888",
+      "copyByteExact": false
+    }
+  ],
+  "copiedXmlCount": 8,
+  "sdk": {
+    "status": "PASSED_PREFIX_IMPORT_LIFECYCLE",
+    "result": {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi99\\sdk-final-execution-preparation-r29\\execution-sdk99-attempt1\\result.json",
+      "bytes": 1844,
+      "sha256": "030E931E1142610DFEBE94FF09EDB30E206E877FD69DD6A55CB9FFB9838ACF54"
+    },
+    "phases": [
+      {
+        "phase": "install",
+        "exitCode": 0,
+        "seconds": 48.7724639,
+        "result": {
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi99\\sdk-final-execution-preparation-r29\\execution-sdk99-attempt1\\install.result.json",
+          "bytes": 741,
+          "sha256": "09F36EE1F3325122D5A538E880D67FF7A88E51AA0A6928EB3D3E146BB6AD0E45"
+        }
+      },
+      {
+        "phase": "configure",
+        "exitCode": 0,
+        "seconds": 80.8325188,
+        "result": {
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi99\\sdk-final-execution-preparation-r29\\execution-sdk99-attempt1\\configure.result.json",
+          "bytes": 748,
+          "sha256": "87D5EC36C1AE4C767C0B0D0F1F1463772FE6FD8B3B94815F9A3F497D48B56CD0"
+        }
+      },
+      {
+        "phase": "build-consumer",
+        "exitCode": 0,
+        "seconds": 19.5965103,
+        "result": {
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi99\\sdk-final-execution-preparation-r29\\execution-sdk99-attempt1\\build-consumer.result.json",
+          "bytes": 755,
+          "sha256": "F8D4F80061A6B6B5AB10DCD1369DB60A3D04D67FF3D5D932DC74878B1DB87B71"
+        }
+      },
+      {
+        "phase": "pe-imports",
+        "exitCode": 0,
+        "seconds": 0.0455431,
+        "result": {
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi99\\sdk-final-execution-preparation-r29\\execution-sdk99-attempt1\\pe-imports.result.json",
+          "bytes": 746,
+          "sha256": "6F1E6B8609A99B33C8CD85DE552DCBCEF7D6B41773D9CDDAD0F8FEFC10D353E8"
+        }
+      },
+      {
+        "phase": "loader",
+        "exitCode": 0,
+        "seconds": 0.1223113,
+        "result": {
+          "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi99\\sdk-final-execution-preparation-r29\\execution-sdk99-attempt1\\loader.result.json",
+          "bytes": 736,
+          "sha256": "C5B36AA85319C6824A71595D356FED8F160CF47B6629E2B6B1ECB866CD09685B"
+        }
+      }
+    ],
+    "nativeImportedTargets": 6,
+    "deployDLLs": 30,
+    "inventory": {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi99\\sdk-final-execution-preparation-r29\\execution-sdk99-attempt1\\sdk-final-inventory.json",
+      "bytes": 2300635,
+      "sha256": "6307F3AFD2F5EA90B1795F32E4F3DF83025A1CC7E653F18C8BBF2DBA56C8C21A"
+    },
+    "loaderMessages": "JE SDK: Materials, Camera and RenderIntegration exports resolved; empty PassPipelinePreview exercised.\r\nJE SDK: native RenderAssetBuilders factory/descriptors/recreation and three public contexts exercised without activation or cook.\r\nJE SDK: shader compiler factory/descriptors/services/recreation and exported shader option hash exercised without activation or cook.\r\nJE SDK: native Bootstrap true/false factory/descriptors/services/reflection/recreation and stable buses exercised without activation or window.\r\nJE SDK: native runtime/editor RPI factory identities/four required descriptors/reflection and two construction cycles exercised without activation.",
+    "checkoutPhysicallyAccessible": true,
+    "sourceFreeGlobal": false,
+    "missingDeclaredInstallSource": "Gems/Atom/Tools/ShaderManagementConsole/Code/Include/"
+  },
+  "baseHEAD": "0e6b0bf1e1b71d2263e312ca0513412f23a94d0f",
+  "freezeSHA256": "6DA2C1092DC5EF385E4A95C06F85AE5FAD6B3F32323911141B7D1CB5570C326D",
+  "facts": {
+    "owners": {
+      "newProductDLL": 0,
+      "Edit": "Editor/Render/Integration",
+      "namespace": "JE::Render::RPI",
+      "PublicAndReflect": "Engine/Render/Integration"
+    },
+    "operations": {
+      "count": 2302,
+      "receipt": {
+        "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi99\\publication-preparation-r32\\receipt.json",
+        "sha256": "F44B5BF20B127CD0623173A3E22E4515163B93920B098A7A075FF278F8476B0E",
+        "bytes": 3496
+      },
+      "meaning": "Ownership publication operations, not Gem acceptance"
+    },
+    "hosts": {
+      "acceptance": {
+        "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi99\\native-hosts-and-authoring-build-attempt5\\parent-acceptance.json",
+        "sha256": "486DE6FEF8EB9DDFB7E9220F077D85529B66AB720D104F924F45A6FB0A6D79B5",
+        "bytes": 3210
+      },
+      "nativeExit": 0,
+      "reused": true,
+      "newR32FourteenTargetBuild": false,
+      "targets": 14
+    },
+    "passReset": {
+      "focalAlreadyIncludedIn707": true,
+      "sixSuiteGreen": {
+        "uniqueCases": 707,
+        "failures": 0,
+        "suites": 6,
+        "skips": 0,
+        "errors": 0,
+        "disabled": 0
+      },
+      "red": {
+        "failures": 1,
+        "actualAttachments": 0,
+        "expectedAttachments": 1,
+        "cases": 1
+      },
+      "greenFocal": {
+        "failures": 0,
+        "cases": 1
+      },
+      "fixApplication": {
+        "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi99\\pass-reset-fix-preparation-rev1\\application-receipt.json",
+        "sha256": "7DE1B7F027EBE15231FF40D8E6D90E7A3015312CD4591A3782A9307854B9965B",
+        "bytes": 1286
+      },
+      "acceptance": {
+        "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi99\\pass-reset-green-attempt1\\parent-acceptance.json",
+        "sha256": "3EEA3513C748F1A833B7B96778F455C747673E2DE6150C5D06E69EA6E6C1EF94",
+        "bytes": 3785
+      }
+    },
+    "pe": {
+      "composition": {
+        "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi99\\sdk-final-rebind-r32-preparation\\deployment99-r32.draft.json",
+        "sha256": "5AA9C2088A67B2788E3CF7976C10D4DE2EE6F742FBDC7C0832F11F4F5DD67EAF",
+        "bytes": 6680
+      },
+      "currentTestDirectDependencies": 21,
+      "currentExportLines": {
+        "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi99\\r32-current-cohort-verification-attempt1\\export-line-verification.json",
+        "sha256": "8AB2281D21DEAE8E1C7370F485370BCAD1E9C45D1B596AC516101764EEDF84C0",
+        "bytes": 2379
+      },
+      "priorEdgesPin": {
+        "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi99\\deploy-closure-preparation-r29\\execution-attempt1\\edges.json",
+        "sha256": "022E307FE06DD86520FEA9C55A0D91A1E37DABF1DCD8FB819CD629D32EDB506E",
+        "bytes": 409289
+      },
+      "changed": 2,
+      "priorEdges": 1616,
+      "currentReview": {
+        "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi99\\r32-current-cohort-verification-attempt1\\focused-review.json",
+        "sha256": "788CF303E40298E97E3615EAFD1BDDD0EA29946EBDD1F028414B01E0C45F4DB6",
+        "bytes": 2146
+      },
+      "currentRiDirectDependencies": 13,
+      "reusedIdentical": 91,
+      "priorNodes": 93,
+      "no93NewDumpbins": true,
+      "measuredSdkClosureNames": 30,
+      "priorGraph": {
+        "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi99\\deploy-closure-preparation-r29\\execution-attempt1\\result.json",
+        "sha256": "BCE2E4ED7AB56029149814DA180982893EBE81986E229F1984EC379FE44D2B34",
+        "bytes": 404
+      }
+    },
+    "cook": {
+      "priorAddedProducts": 8,
+      "receipt": {
+        "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-rpi99\\sdk-final-rebind-r32-preparation\\cook-current-r32.json",
+        "sha256": "50629EE30C8068EC65F38D6222A68CF15711A54B2D1B25EE655FA14131ABA126",
+        "bytes": 103256
+      },
+      "freshDatabaseQueries": 0,
+      "currentPhysicalProducts": 46,
+      "newJobRunKeysInferred": false,
+      "currentNativeInventoryPaths": 44,
+      "priorPreservedProductIdentityCount": 38,
+      "passByteHashMatches": 3,
+      "passControls": 3,
+      "priorDatabaseSourceGuidCount": 17
+    },
+    "visual": {
+      "originalCapturePathCount": 7,
+      "editorPostflight": {
+        "sha256": "DACBD859C72E4609735379FDCDA6AF10B1973942443A072627C09C22943405C1",
+        "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\native-rpi99-editor-vulkan-green-r32-attempt1\\postflight.json",
+        "bytes": 349
+      },
+      "imagePayloadsCopied": 0,
+      "runtimeNativeExit": 0,
+      "editorResult": {
+        "sha256": "FBB3E123B65A0E7E8978BE76B49A2C9AD90FF5251E54058263DA1B71C5102FDA",
+        "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\native-rpi99-editor-vulkan-green-r32-attempt1\\native-result.json",
+        "bytes": 24336
+      },
+      "scope": "BSP/UV, existing Material/maps/shaderball/zoom in same Editor; room/runtime and normal exits. No Beauty/benchmark/window-opening proof.",
+      "editorPid": 31748,
+      "runtimePostflight": {
+        "sha256": "A4857FD33E63E767E5A4FF7004BD742B4D2CEB09769F1BCBBE3F59DFC555CF8D",
+        "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\native-rpi99-runtime-vulkan-r32-attempt1\\postflight.json",
+        "bytes": 349
+      },
+      "editorNativeExit": 0,
+      "runtimePid": 8616,
+      "runtimeResult": {
+        "sha256": "5067AE39D46DC8029D9C138CA12B51A8E8B5FBA02D55198B7056D56340D5A68C",
+        "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\native-rpi99-runtime-vulkan-r32-attempt1\\native-result.json",
+        "bytes": 10118
+      },
+      "uniqueCaptureSHA256": 6,
+      "capturesMetadataOnly": [
+        {
+          "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\native-rpi99-editor-vulkan-green-r32-attempt1\\bsp-camera-uv2x2\\screen-0.jpg",
+          "copied": false,
+          "bytes": 219988,
+          "sha256": "4EB468B19A99598029FA35D1AE907794D2D75B761422C7792DBB8D4F0935DBA7",
+          "observation": {
+            "sha256": "E22AE875CA9B41912426802886C2D956325ECFC94F0F61DC0C5E532995F39523",
+            "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\native-rpi99-editor-vulkan-green-r32-attempt1\\bsp-camera-uv2x2\\observation.json",
+            "bytes": 1015
+          }
+        },
+        {
+          "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\native-rpi99-editor-vulkan-green-r32-attempt1\\bsp-camera-uv2x2\\screen-1.jpg",
+          "copied": false,
+          "bytes": 48534,
+          "sha256": "6C48CD722183EB4F7481B9FD6AF336080E165E56594C694BD05815EEB0476F36",
+          "observation": {
+            "sha256": "E22AE875CA9B41912426802886C2D956325ECFC94F0F61DC0C5E532995F39523",
+            "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\native-rpi99-editor-vulkan-green-r32-attempt1\\bsp-camera-uv2x2\\observation.json",
+            "bytes": 1015
+          }
+        },
+        {
+          "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\native-rpi99-editor-vulkan-green-r32-attempt1\\material-workspace\\screen-0.jpg",
+          "copied": false,
+          "bytes": 202640,
+          "sha256": "9F5F37C82FACC246583B5B8C9F3270B5E2BDEEA57716515C8252999C245A4D56",
+          "observation": {
+            "sha256": "2AB4636CFDBD64EEF9503E4D7D910639A9F5504838F216BA5DB2999F99DF2EDB",
+            "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\native-rpi99-editor-vulkan-green-r32-attempt1\\material-workspace\\observation.json",
+            "bytes": 1404
+          }
+        },
+        {
+          "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\native-rpi99-editor-vulkan-green-r32-attempt1\\material-workspace\\screen-1.jpg",
+          "copied": false,
+          "bytes": 70717,
+          "sha256": "67F5071929724DBD0D3D5A20BB4EBD3797BD7E0792CFB2B4D21F5074CE9E175C",
+          "observation": {
+            "sha256": "2AB4636CFDBD64EEF9503E4D7D910639A9F5504838F216BA5DB2999F99DF2EDB",
+            "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\native-rpi99-editor-vulkan-green-r32-attempt1\\material-workspace\\observation.json",
+            "bytes": 1404
+          }
+        },
+        {
+          "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\native-rpi99-editor-vulkan-green-r32-attempt1\\material-workspace\\screen-2.jpg",
+          "copied": false,
+          "bytes": 202640,
+          "sha256": "9F5F37C82FACC246583B5B8C9F3270B5E2BDEEA57716515C8252999C245A4D56",
+          "observation": {
+            "sha256": "2AB4636CFDBD64EEF9503E4D7D910639A9F5504838F216BA5DB2999F99DF2EDB",
+            "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\native-rpi99-editor-vulkan-green-r32-attempt1\\material-workspace\\observation.json",
+            "bytes": 1404
+          }
+        },
+        {
+          "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\native-rpi99-runtime-vulkan-r32-attempt1\\visual\\screen-0.jpg",
+          "copied": false,
+          "bytes": 85448,
+          "sha256": "72728A7439EA3237BB0C90EF4726F8B33AF77CF44F1D2F99F5FB7F683607561C",
+          "observation": {
+            "sha256": "ABC4FAB19F841BF3D575A4C538B07DBD6DF2727F5564DE77DD9505FB13A97952",
+            "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\native-rpi99-runtime-vulkan-r32-attempt1\\visual\\observation.json",
+            "bytes": 641
+          }
+        },
+        {
+          "source": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-render-builders-integration-rev1\\native-rpi99-editor-vulkan-green-r32-attempt1\\material-workspace\\zoom-after.jpg",
+          "copied": false,
+          "bytes": 208912,
+          "sha256": "2C41DC5D488A64A14F764939ADA7AC4D30157EDAE0D1D194B9D75B59DE69193B",
+          "observation": "Original parent-requested zoom screenshot, metadata only; no image conversion/review"
+        }
+      ]
+    }
+  },
+  "limits": [
+    "Preserved WIP integration, no clean HEAD replay",
+    "Global AP336 remains open",
+    "Beauty/window-opening/VR/Linux/Shipping/global Goal open",
+    "No whole Gem acceptance/count increment",
+    "No JPEG,dump,binary,SDK or massive log payload copied",
+    "Image originals referenced by absolute path and hash, not portable inside this package"
+  ],
+  "reviewer": "/root",
+  "preparationCountersScope": "Original writer prepared evidence only; actual parent SDK execution is recorded under sdk.phases. Acceptance covers Windows/Profile/Vulkan integration only."
+}

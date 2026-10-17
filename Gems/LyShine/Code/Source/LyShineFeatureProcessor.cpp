@@ -8,12 +8,12 @@
 
 #include <./LyShineFeatureProcessor.h>
 
-#include <Atom/RPI.Reflect/Asset/AssetUtils.h>
-#include <Atom/RPI.Public/Scene.h>
-#include <Atom/RPI.Public/Pass/PassFilter.h>
-#include <Atom/RPI.Public/Pass/PassSystemInterface.h>
-#include <Atom/RPI.Public/Pass/ParentPass.h>
-#include <Atom/RPI.Public/RenderPipeline.h>
+#include <JE/Render/RPI/Reflect/Asset/AssetUtils.h>
+#include <JE/Render/RPI/Public/Scene.h>
+#include <JE/Render/RPI/Public/Pass/PassFilter.h>
+#include <JE/Render/RPI/Public/Pass/PassSystemInterface.h>
+#include <JE/Render/RPI/Public/Pass/ParentPass.h>
+#include <JE/Render/RPI/Public/RenderPipeline.h>
 
 namespace LyShine
 {
@@ -21,13 +21,13 @@ namespace LyShine
     {
         if (AZ::SerializeContext* serialize = azrtti_cast<AZ::SerializeContext*>(context))
         {
-            serialize->Class<LyShineFeatureProcessor, AZ::RPI::FeatureProcessor>()
+            serialize->Class<LyShineFeatureProcessor, JE::Render::RPI::FeatureProcessor>()
                 ->Version(0)
                 ;
         }
     }
 
-    void LyShineFeatureProcessor::AddRenderPasses(AZ::RPI::RenderPipeline* renderPipeline)
+    void LyShineFeatureProcessor::AddRenderPasses(JE::Render::RPI::RenderPipeline* renderPipeline)
     {
         // Only add LyShineParentPass if UIPass exists
         if (!renderPipeline->FindFirstPass(AZ::Name("UIPass")))
@@ -39,15 +39,15 @@ namespace LyShine
         if (!m_passRequestAsset)
         {
             const char* passRequestAssetFilePath = "Passes/LyShinePassRequest.azasset";
-            m_passRequestAsset = AZ::RPI::AssetUtils::LoadAssetByProductPath<AZ::RPI::AnyAsset>(
-                passRequestAssetFilePath, AZ::RPI::AssetUtils::TraceLevel::Warning);
+            m_passRequestAsset = JE::Render::RPI::AssetUtils::LoadAssetByProductPath<JE::Render::RPI::AnyAsset>(
+                passRequestAssetFilePath, JE::Render::RPI::AssetUtils::TraceLevel::Warning);
             
         }
 
-        const AZ::RPI::PassRequest *passRequest = nullptr;
+        const JE::Render::RPI::PassRequest *passRequest = nullptr;
         if (m_passRequestAsset->IsReady())
         {
-            passRequest = m_passRequestAsset->GetDataAs<AZ::RPI::PassRequest>();
+            passRequest = m_passRequestAsset->GetDataAs<JE::Render::RPI::PassRequest>();
         }
 
         if (!passRequest)
@@ -57,15 +57,15 @@ namespace LyShine
         }
 
         // Return if the pass to be created already exists
-        AZ::RPI::PassFilter passFilter = AZ::RPI::PassFilter::CreateWithPassName(passRequest->m_passName, renderPipeline);
-        AZ::RPI::Pass* pass = AZ::RPI::PassSystemInterface::Get()->FindFirstPass(passFilter);
+        JE::Render::RPI::PassFilter passFilter = JE::Render::RPI::PassFilter::CreateWithPassName(passRequest->m_passName, renderPipeline);
+        JE::Render::RPI::Pass* pass = JE::Render::RPI::PassSystemInterface::Get()->FindFirstPass(passFilter);
         if (pass)
         {
             return;
         }
 
         // Create the pass
-        AZ::RPI::Ptr<AZ::RPI::Pass> lyShineParentPass  = AZ::RPI::PassSystemInterface::Get()->CreatePassFromRequest(passRequest);
+        JE::Render::RPI::Ptr<JE::Render::RPI::Pass> lyShineParentPass  = JE::Render::RPI::PassSystemInterface::Get()->CreatePassFromRequest(passRequest);
         if (!lyShineParentPass)
         {
             AZ_Error("LyShine", false, "Create LyShine parent pass from pass request failed");

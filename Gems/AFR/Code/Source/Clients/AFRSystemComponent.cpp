@@ -9,7 +9,7 @@
 
 #include <AFR/AFRTypeIds.h>
 
-#include <Atom/RPI.Public/FeatureProcessorFactory.h>
+#include <JE/Render/RPI/Public/FeatureProcessorFactory.h>
 #include <AzCore/Serialization/SerializeContext.h>
 
 #include <AFR/AFRFeatureProcessor.h>
@@ -77,12 +77,12 @@ namespace AFR
         AFRRequestBus::Handler::BusConnect();
         AZ::TickBus::Handler::BusConnect();
 
-        AZ::RPI::FeatureProcessorFactory::Get()->RegisterFeatureProcessor<AFRFeatureProcessor>();
+        JE::Render::RPI::FeatureProcessorFactory::Get()->RegisterFeatureProcessor<AFRFeatureProcessor>();
     }
 
     void AFRSystemComponent::Deactivate()
     {
-        AZ::RPI::FeatureProcessorFactory::Get()->UnregisterFeatureProcessor<AFRFeatureProcessor>();
+        JE::Render::RPI::FeatureProcessorFactory::Get()->UnregisterFeatureProcessor<AFRFeatureProcessor>();
 
         AZ::TickBus::Handler::BusDisconnect();
         AFRRequestBus::Handler::BusDisconnect();

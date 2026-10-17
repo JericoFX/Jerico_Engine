@@ -8,7 +8,7 @@
 
 #include <EditorModularViewportCameraComposer.h>
 
-#include <Atom/RPI.Public/ViewportContextBus.h>
+#include <JE/Render/RPI/Public/ViewportContextBus.h>
 #include <AtomToolsFramework/Viewport/ModularViewportCameraControllerRequestBus.h>
 #include <AzCore/Component/TransformBus.h>
 #include <AzCore/std/smart_ptr/make_shared.h>

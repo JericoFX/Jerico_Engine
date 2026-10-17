@@ -9,8 +9,8 @@
 #pragma once
 
 #include <Atom/Feature/CoreLights/PhotometricValue.h>
-#include <Atom/RPI.Public/Buffer/Buffer.h>
-#include <Atom/RPI.Public/FeatureProcessor.h>
+#include <JE/Render/RPI/Public/Buffer/Buffer.h>
+#include <JE/Render/RPI/Public/FeatureProcessor.h>
 #include <AzCore/Math/Quaternion.h>
 #include <AzCore/std/containers/vector.h>
 
@@ -66,10 +66,10 @@ namespace AZ
         //! PolygonLightFeatureProcessorInterface provides an interface to acquire, release, and update a Polygon light. This is necessary for code outside of
         //! the Atom features gem to communicate with the PolygonLightFeatureProcessor.
         class PolygonLightFeatureProcessorInterface
-            : public RPI::FeatureProcessor
+            : public JE::Render::RPI::FeatureProcessor
         {
         public:
-            AZ_RTTI(AZ::Render::PolygonLightFeatureProcessorInterface, "{FB21684B-5752-4943-9D44-C81EB0C0991B}", AZ::RPI::FeatureProcessor);
+            AZ_RTTI(AZ::Render::PolygonLightFeatureProcessorInterface, "{FB21684B-5752-4943-9D44-C81EB0C0991B}", JE::Render::RPI::FeatureProcessor);
 
             using LightHandle = RHI::Handle<uint16_t, class PolygonLight>;
             static constexpr PhotometricUnit PhotometricUnitType = PhotometricUnit::Nit;
@@ -95,9 +95,9 @@ namespace AZ
             virtual void SetLightingChannelMask(LightHandle handle, uint32_t lightingChannelMask) = 0;
 
             //! Returns the buffer containing the light data for all polygon lights
-            virtual const Data::Instance<RPI::Buffer> GetLightBuffer() const = 0;
+            virtual const Data::Instance<JE::Render::RPI::Buffer> GetLightBuffer() const = 0;
             //! Returns the buffer containing the points of all polygon lights
-            virtual const Data::Instance<RPI::Buffer> GetLightPointBuffer() const = 0;
+            virtual const Data::Instance<JE::Render::RPI::Buffer> GetLightPointBuffer() const = 0;
             //! Returns the number of directional lights
             virtual uint32_t GetLightCount() const = 0;
         };

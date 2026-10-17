@@ -11,8 +11,8 @@
 #include <AzCore/Instance/InstanceDatabase.h>
 #include <AzCore/Jobs/Algorithms.h>
 #include <AzCore/Jobs/JobCompletion.h>
-#include <Atom/RPI.Public/Scene.h>
-#include <Atom/RPI.Public/View.h>
+#include <JE/Render/RPI/Public/Scene.h>
+#include <JE/Render/RPI/Public/View.h>
 #include <Atom/RHI/Factory.h>
 #include <Atom/RHI/RHISystemInterface.h>
 #include <Atom/RHI/RHIUtils.h>
@@ -159,7 +159,7 @@ namespace OpenParticle
         }
     }
 
-    void ParticleDataInstance::Render(const AZ::RPI::FeatureProcessor::RenderPacket& packet)
+    void ParticleDataInstance::Render(const JE::Render::RPI::FeatureProcessor::RenderPacket& packet)
     {
         if (m_particleInstance)
         {
@@ -256,7 +256,7 @@ namespace OpenParticle
         AZ::TickBus::Handler::BusDisconnect();
     }
 
-    void ParticleFeatureProcessor::Simulate([[maybe_unused]] const AZ::RPI::FeatureProcessor::SimulatePacket& packet)
+    void ParticleFeatureProcessor::Simulate([[maybe_unused]] const JE::Render::RPI::FeatureProcessor::SimulatePacket& packet)
     {
         if (m_timeToSim <= 0)
         {
@@ -311,7 +311,7 @@ namespace OpenParticle
         }
     }
 
-    void ParticleFeatureProcessor::Render(const AZ::RPI::FeatureProcessor::RenderPacket& packet)
+    void ParticleFeatureProcessor::Render(const JE::Render::RPI::FeatureProcessor::RenderPacket& packet)
     {
         const auto iteratorRanges = m_particleInstances.GetParallelRanges();
         for (const auto& iteratorRange : iteratorRanges)
@@ -342,11 +342,11 @@ namespace OpenParticle
         }
     }
 
-    void ParticleFeatureProcessor::OnRenderPipelineAdded([[maybe_unused]] AZ::RPI::RenderPipelinePtr pipeline)
+    void ParticleFeatureProcessor::OnRenderPipelineAdded([[maybe_unused]] JE::Render::RPI::RenderPipelinePtr pipeline)
     {
     }
 
-    void ParticleFeatureProcessor::OnRenderPipelineRemoved([[maybe_unused]] AZ::RPI::RenderPipeline* pipeline)
+    void ParticleFeatureProcessor::OnRenderPipelineRemoved([[maybe_unused]] JE::Render::RPI::RenderPipeline* pipeline)
     {
     }
 

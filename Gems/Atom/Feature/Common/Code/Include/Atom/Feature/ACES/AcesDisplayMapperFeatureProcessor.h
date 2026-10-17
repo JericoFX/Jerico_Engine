@@ -8,7 +8,7 @@
 
 #pragma once
 
-#include <Atom/RPI.Public/FeatureProcessor.h>
+#include <JE/Render/RPI/Public/FeatureProcessor.h>
 
 #include <Atom/Feature/Base.h>
 #include <Atom/Feature/DisplayMapper/DisplayMapperFeatureProcessorInterface.h>
@@ -18,8 +18,8 @@
 #include <Atom/RHI/DeviceImageView.h>
 #include <Atom/RHI/ImagePool.h>
 
-#include <Atom/RPI.Reflect/System/AnyAsset.h>
-#include <Atom/RPI.Public/Image/StreamingImage.h>
+#include <JE/Render/RPI/Reflect/System/AnyAsset.h>
+#include <JE/Render/RPI/Public/Image/StreamingImage.h>
 
 namespace AZ
 {

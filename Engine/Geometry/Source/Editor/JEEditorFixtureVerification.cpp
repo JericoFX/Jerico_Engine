@@ -36,9 +36,9 @@
 #include <AzToolsFramework/Prefab/PrefabSystemComponentInterface.h>
 #include <Atom/Feature/Utils/FrameCaptureBus.h>
 #include <Atom/RHI/Factory.h>
-#include <Atom/RPI.Public/Material/Material.h>
-#include <Atom/RPI.Public/ViewportContext.h>
-#include <Atom/RPI.Public/ViewportContextBus.h>
+#include <JE/Render/RPI/Public/Material/Material.h>
+#include <JE/Render/RPI/Public/ViewportContext.h>
+#include <JE/Render/RPI/Public/ViewportContextBus.h>
 #include <EditorToolsApplicationAPI.h>
 #include <QDateTime>
 #include <QDir>
@@ -283,7 +283,7 @@ namespace JE::BSP::Editor
 
     class FixtureVerification::Implementation final
         : public AZ::TickBus::Handler
-        , public AZ::RPI::ViewportContextNotificationBus::Handler
+        , public JE::Render::RPI::ViewportContextNotificationBus::Handler
         , public AZ::Render::FrameCaptureNotificationBus::Handler
     {
     public:
@@ -635,7 +635,7 @@ namespace JE::BSP::Editor
 
         bool RenderReady(bool runtime)
         {
-            auto* requests = AZ::RPI::ViewportContextRequests::Get();
+            auto* requests = JE::Render::RPI::ViewportContextRequests::Get();
             const auto viewport = requests ? requests->GetDefaultViewportContext() : nullptr;
             if (!viewport || !viewport->GetWindowHandle() || !viewport->GetRenderScene() || !viewport->GetCurrentPipeline() ||
                 !viewport->GetDefaultView() || !AZ::RHI::Factory::IsReady()) { return NotReady("viewport window/scene/pipeline/view/RHI unavailable"); }
@@ -673,9 +673,9 @@ namespace JE::BSP::Editor
                     room != m_room) { return NotReady("Editor fixture mesh or original selected/active camera unavailable"); }
                 if (!MaterialsReady(room, false)) { return false; }
             }
-            if (!AZ::RPI::ViewportContextNotificationBus::Handler::BusIsConnected())
+            if (!JE::Render::RPI::ViewportContextNotificationBus::Handler::BusIsConnected())
             {
-                AZ::RPI::ViewportContextNotificationBus::Handler::BusConnect(viewport->GetName());
+                JE::Render::RPI::ViewportContextNotificationBus::Handler::BusConnect(viewport->GetName());
             }
             m_backend = AZ::RHI::Factory::Get().GetName().GetCStr();
             m_width = size.m_width;
@@ -689,7 +689,7 @@ namespace JE::BSP::Editor
             m_capturePath = m_output + (runtime ? "/runtime.png" : "/editor.png");
             const QFileInfo destination(m_capturePath);
             if (!UnlinkedExistingPath(m_output) || destination.exists() || destination.isSymLink()) { return false; }
-            const auto viewport = AZ::RPI::ViewportContextRequests::Get()->GetDefaultViewportContext();
+            const auto viewport = JE::Render::RPI::ViewportContextRequests::Get()->GetDefaultViewportContext();
             AZ::Render::FrameCaptureOutcome result;
             AZ::Render::FrameCaptureRequestBus::BroadcastResult(result,
                 &AZ::Render::FrameCaptureRequests::CaptureScreenshotForWindow,
@@ -822,7 +822,7 @@ namespace JE::BSP::Editor
         void Finish(bool completed, const char* reason)
         {
             AZ::TickBus::Handler::BusDisconnect();
-            AZ::RPI::ViewportContextNotificationBus::Handler::BusDisconnect();
+            JE::Render::RPI::ViewportContextNotificationBus::Handler::BusDisconnect();
             AZ::Render::FrameCaptureNotificationBus::Handler::BusDisconnect();
             if (m_runtimeIdentity)
             {

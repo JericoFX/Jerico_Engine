@@ -13,19 +13,19 @@
 
 namespace ${GemName}
 {
-    AZ::RPI::Ptr<${SanitizedCppName}Pass> ${SanitizedCppName}Pass::Create(const AZ::RPI::PassDescriptor& descriptor)
+    JE::Render::RPI::Ptr<${SanitizedCppName}Pass> ${SanitizedCppName}Pass::Create(const JE::Render::RPI::PassDescriptor& descriptor)
     {
         return aznew ${SanitizedCppName}Pass(descriptor);
     }
 
-    ${SanitizedCppName}Pass::${SanitizedCppName}Pass(const AZ::RPI::PassDescriptor& descriptor)
-        : AZ::RPI::FullscreenTrianglePass(descriptor)
+    ${SanitizedCppName}Pass::${SanitizedCppName}Pass(const JE::Render::RPI::PassDescriptor& descriptor)
+        : JE::Render::RPI::FullscreenTrianglePass(descriptor)
     {
     }
 
     void ${SanitizedCppName}Pass::InitializeInternal()
     {
-        AZ::RPI::FullscreenTrianglePass::InitializeInternal();
+        JE::Render::RPI::FullscreenTrianglePass::InitializeInternal();
 
         // Cache SRG indices once the base class has loaded the shader. Example
         // -- uncomment together with the matching members in ${Name}Pass.h
@@ -71,7 +71,7 @@ namespace ${GemName}
             (void)effectiveIntensity; // silence unused-var until you uncomment the SetConstant block
         }
 
-        AZ::RPI::FullscreenTrianglePass::FrameBeginInternal(params);
+        JE::Render::RPI::FullscreenTrianglePass::FrameBeginInternal(params);
     }
 
 } // namespace ${GemName}

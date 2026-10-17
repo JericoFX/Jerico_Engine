@@ -11,8 +11,8 @@
 #include <Atom/Feature/Base.h>
 #include <Atom/Feature/SkinnedMesh/SkinnedMeshVertexStreams.h>
 #include <Atom/Feature/SkinnedMesh/SkinnedMeshInstance.h>
-#include <Atom/RPI.Reflect/Model/ModelLodAsset.h>
-#include <Atom/RPI.Reflect/Material/MaterialAsset.h>
+#include <JE/Render/RPI/Reflect/Model/ModelLodAsset.h>
+#include <JE/Render/RPI/Reflect/Material/MaterialAsset.h>
 #include <Atom/RHI.Reflect/Base.h>
 
 #include <AzCore/Asset/AssetCommon.h>
@@ -27,11 +27,16 @@ namespace AZ
         class IndexBufferView;
     }
     
-    namespace RPI
-    {
+    }
+
+namespace JE::Render::RPI
+{
         class Model;
         class ShaderResourceGroup;
     }
+
+namespace AZ
+{
     
     namespace Render
     {
@@ -44,13 +49,13 @@ namespace AZ
         {
         public:
             AZ_CLASS_ALLOCATOR(MorphTargetInputBuffers, AZ::SystemAllocator);
-            MorphTargetInputBuffers(const RPI::BufferAssetView& bufferAssetView, const AZStd::string& bufferNamePrefix);
+            MorphTargetInputBuffers(const JE::Render::RPI::BufferAssetView& bufferAssetView, const AZStd::string& bufferNamePrefix);
 
             //! Set the buffer views and vertex count on the given SRG
-            void SetBufferViewsOnShaderResourceGroup(const Data::Instance<RPI::ShaderResourceGroup>& perInstanceSRG);
+            void SetBufferViewsOnShaderResourceGroup(const Data::Instance<JE::Render::RPI::ShaderResourceGroup>& perInstanceSRG);
         private:
             RHI::Ptr<RHI::BufferView> m_vertexDeltaBufferView;
-            Data::Instance<RPI::Buffer> m_vertexDeltaBuffer;
+            Data::Instance<JE::Render::RPI::Buffer> m_vertexDeltaBuffer;
         };
 
         struct MorphTargetComputeMetaData

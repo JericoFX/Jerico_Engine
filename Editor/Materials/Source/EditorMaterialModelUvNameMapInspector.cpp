@@ -6,15 +6,15 @@
  *
  */
 
-#include <Atom/RPI.Edit/Common/AssetUtils.h>
-#include <Atom/RPI.Edit/Common/JsonUtils.h>
-#include <Atom/RPI.Edit/Material/MaterialPropertyId.h>
-#include <Atom/RPI.Edit/Material/MaterialSourceData.h>
-#include <Atom/RPI.Edit/Material/MaterialTypeSourceData.h>
-#include <Atom/RPI.Edit/Material/MaterialUtils.h>
-#include <Atom/RPI.Reflect/Material/MaterialAsset.h>
-#include <Atom/RPI.Reflect/Material/MaterialPropertiesLayout.h>
-#include <Atom/RPI.Reflect/Material/MaterialTypeAsset.h>
+#include <JE/Editor/Render/RPI/Edit/Common/AssetUtils.h>
+#include <JE/Editor/Render/RPI/Edit/Common/JsonUtils.h>
+#include <JE/Editor/Render/RPI/Edit/Material/MaterialPropertyId.h>
+#include <JE/Editor/Render/RPI/Edit/Material/MaterialSourceData.h>
+#include <JE/Editor/Render/RPI/Edit/Material/MaterialTypeSourceData.h>
+#include <JE/Editor/Render/RPI/Edit/Material/MaterialUtils.h>
+#include <JE/Render/RPI/Reflect/Material/MaterialAsset.h>
+#include <JE/Render/RPI/Reflect/Material/MaterialPropertiesLayout.h>
+#include <JE/Render/RPI/Reflect/Material/MaterialTypeAsset.h>
 #include <AtomToolsFramework/Inspector/InspectorPropertyGroupWidget.h>
 #include <AtomToolsFramework/Util/Util.h>
 #include <AzFramework/API/ApplicationAPI.h>
@@ -42,7 +42,7 @@ namespace JE
         {
             MaterialModelUvNameMapInspector::MaterialModelUvNameMapInspector(
                 const AZ::Data::AssetId& assetId,
-                const AZ::RPI::MaterialModelUvOverrideMap& matModUvOverrides,
+                const JE::Render::RPI::MaterialModelUvOverrideMap& matModUvOverrides,
                 const AZStd::unordered_set<AZ::Name>& modelUvNames,
                 MaterialModelUvOverrideMapChangedCallBack matModUvOverrideMapChangedCallBack,
                 QWidget* parent)
@@ -51,7 +51,7 @@ namespace JE
                 , m_matModUvOverrides(matModUvOverrides)
             {
                 // Load the originating product asset from which the new source has set will be generated
-                auto materialAssetOutcome = AZ::RPI::AssetUtils::LoadAsset<AZ::RPI::MaterialAsset>(assetId);
+                auto materialAssetOutcome = JE::Render::RPI::AssetUtils::LoadAsset<JE::Render::RPI::MaterialAsset>(assetId);
                 AZ_Error(
                     "AZ::Render::EditorMaterialComponentInspector", materialAssetOutcome, "Failed to load material asset: %s",
                     assetId.ToString<AZStd::string>().c_str());
@@ -95,7 +95,7 @@ namespace JE
                     const AZStd::string shaderInput = m_materialUvNames[i].m_shaderInput.ToString();
                     const AZStd::string materialUvName = m_materialUvNames[i].m_uvName.GetStringView();
 
-                    propertyConfig.m_id = AZ::RPI::MaterialPropertyId(groupName, shaderInput);
+                    propertyConfig.m_id = JE::Render::RPI::MaterialPropertyId(groupName, shaderInput);
                     propertyConfig.m_name = shaderInput;
                     propertyConfig.m_displayName = materialUvName;
                     propertyConfig.m_description = shaderInput;
@@ -231,7 +231,7 @@ namespace JE
 
             }
 
-            void MaterialModelUvNameMapInspector::SetUvNameMap(const AZ::RPI::MaterialModelUvOverrideMap& matModUvOverrides)
+            void MaterialModelUvNameMapInspector::SetUvNameMap(const JE::Render::RPI::MaterialModelUvOverrideMap& matModUvOverrides)
             {
                 m_matModUvOverrides = matModUvOverrides;
 
@@ -246,7 +246,7 @@ namespace JE
                     const AZStd::string shaderInput = m_materialUvNames[i].m_shaderInput.ToString();
                     const AZStd::string materialUvName = m_materialUvNames[i].m_uvName.GetStringView();
 
-                    propertyConfig.m_id = AZ::RPI::MaterialPropertyId(groupName, shaderInput);
+                    propertyConfig.m_id = JE::Render::RPI::MaterialPropertyId(groupName, shaderInput);
                     propertyConfig.m_name = shaderInput;
                     propertyConfig.m_displayName = materialUvName;
                     propertyConfig.m_description = shaderInput;
@@ -269,7 +269,7 @@ namespace JE
 
             bool OpenInspectorDialog(
                 const AZ::Data::AssetId& assetId,
-                const AZ::RPI::MaterialModelUvOverrideMap& matModUvOverrides,
+                const JE::Render::RPI::MaterialModelUvOverrideMap& matModUvOverrides,
                 const AZStd::unordered_set<AZ::Name>& modelUvNames,
                 MaterialModelUvOverrideMapChangedCallBack matModUvOverrideMapChangedCallBack)
             {
@@ -295,7 +295,7 @@ namespace JE
                         menu.addAction(
                             "Clear", [&]
                             {
-                                inspector->SetUvNameMap(AZ::RPI::MaterialModelUvOverrideMap());
+                                inspector->SetUvNameMap(JE::Render::RPI::MaterialModelUvOverrideMap());
                             });
                         menu.addAction(
                             "Revert", [&]

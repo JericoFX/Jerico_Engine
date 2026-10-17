@@ -9,26 +9,26 @@
 #include <Pass/State/EditorStateBufferCopyPass.h>
 #include <Pass/State/EditorStateBufferCopyPassData.h>
 
-#include <Atom/RPI.Public/Pass/PassUtils.h>
+#include <JE/Render/RPI/Public/Pass/PassUtils.h>
 
 namespace AZ::Render
 {
-    RPI::Ptr<EditorStateBufferCopyPass> EditorStateBufferCopyPass::Create(const RPI::PassDescriptor& descriptor)
+    JE::Render::RPI::Ptr<EditorStateBufferCopyPass> EditorStateBufferCopyPass::Create(const JE::Render::RPI::PassDescriptor& descriptor)
     {
-        RPI::Ptr<EditorStateBufferCopyPass> pass = aznew EditorStateBufferCopyPass(descriptor);
+        JE::Render::RPI::Ptr<EditorStateBufferCopyPass> pass = aznew EditorStateBufferCopyPass(descriptor);
         return pass;
     }
 
-    EditorStateBufferCopyPass::EditorStateBufferCopyPass(const RPI::PassDescriptor& descriptor)
-        : AZ::RPI::FullscreenTrianglePass(descriptor)
+    EditorStateBufferCopyPass::EditorStateBufferCopyPass(const JE::Render::RPI::PassDescriptor& descriptor)
+        : JE::Render::RPI::FullscreenTrianglePass(descriptor)
         , m_passDescriptor(descriptor)
     {
     }
 
     bool EditorStateBufferCopyPass::IsEnabled() const
     {
-        const RPI::EditorStateBufferCopyPassData* passData =
-            RPI::PassUtils::GetPassData<RPI::EditorStateBufferCopyPassData>(m_passDescriptor);
+        const JE::Render::RPI::EditorStateBufferCopyPassData* passData =
+            JE::Render::RPI::PassUtils::GetPassData<JE::Render::RPI::EditorStateBufferCopyPassData>(m_passDescriptor);
 
         if (passData == nullptr)
         {

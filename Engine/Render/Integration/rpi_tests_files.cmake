@@ -1,0 +1,55 @@
+#
+# Copyright (c) Contributors to the Open 3D Engine Project.
+# For complete copyright and license terms please see the LICENSE at the root of this distribution.
+#
+# SPDX-License-Identifier: Apache-2.0 OR MIT
+#
+#
+
+set(FILES
+    Tests/RPI/Buffer/BufferTests.cpp
+    Tests/RPI/Common/AssetManagerTestFixture.cpp
+    Tests/RPI/Common/AssetManagerTestFixture.h
+    Tests/RPI/Common/ErrorMessageFinder.cpp
+    Tests/RPI/Common/ErrorMessageFinder.h
+    Tests/RPI/Common/ErrorMessageFinderTests.cpp
+    Tests/RPI/Common/JsonTestUtils.cpp
+    Tests/RPI/Common/JsonTestUtils.h
+    Tests/RPI/Common/RPITestFixture.cpp
+    Tests/RPI/Common/RPITestFixture.h
+    Tests/RPI/Common/SerializeTester.h
+    Tests/RPI/Common/ShaderAssetTestUtils.cpp
+    Tests/RPI/Common/ShaderAssetTestUtils.h
+    Tests/RPI/Common/TestUtils.h
+    Tests/RPI/Common/TestFeatureProcessors.h
+    Tests/RPI/Image/StreamingImageTests.cpp
+    Tests/RPI/Material/LuaMaterialFunctorTests.cpp
+    Tests/RPI/Material/MaterialVersionUpdateTests.cpp
+    Tests/RPI/Material/MaterialTypeAssetTests.cpp
+    Tests/RPI/Material/MaterialTypeSourceDataTests.cpp
+    Tests/RPI/Material/MaterialAssetTestUtils.cpp
+    Tests/RPI/Material/MaterialAssetTestUtils.h
+    Tests/RPI/Material/MaterialPropertySerializerTests.cpp
+    Tests/RPI/Material/MaterialAssetTests.cpp
+    Tests/RPI/Material/MaterialSourceDataTests.cpp
+    Tests/RPI/Material/MaterialFunctorTests.cpp
+    Tests/RPI/Material/MaterialFunctorSourceDataSerializerTests.cpp
+    Tests/RPI/Material/MaterialPropertyIdTests.cpp
+    Tests/RPI/Material/MaterialPropertyValueSourceDataTests.cpp
+    Tests/RPI/Material/MaterialTests.cpp
+    Tests/RPI/Model/ModelTests.cpp
+    Tests/RPI/Model/SkinJointIdPaddingTests.cpp
+    Tests/RPI/Pass/PassTests.cpp
+    Tests/RPI/Shader/ShaderTests.cpp
+    Tests/RPI/ShaderResourceGroup/ShaderResourceGroupBufferTests.cpp
+    Tests/RPI/ShaderResourceGroup/ShaderResourceGroupConstantBufferTests.cpp
+    Tests/RPI/ShaderResourceGroup/ShaderResourceGroupImageTests.cpp
+    Tests/RPI/ShaderResourceGroup/ShaderResourceGroupGeneralTests.cpp
+    Tests/RPI/System/CullingTests.cpp
+    Tests/RPI/System/FeatureProcessorFactoryTests.cpp
+    Tests/RPI/System/GpuQueryTests.cpp
+    Tests/RPI/System/RenderPipelineTests.cpp
+    Tests/RPI/System/SceneTests.cpp
+    Tests/RPI/System/ViewTests.cpp
+    Tests/RPI/Utils/AssetUtilsTests.cpp
+)

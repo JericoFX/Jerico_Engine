@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="1" failures="0" disabled="0" errors="0" time="0.05" timestamp="2026-10-17T04:22:39.090" name="AllTests">
+  <testsuite name="PassTests" tests="1" failures="0" disabled="0" skipped="0" errors="0" time="0.05" timestamp="2026-10-17T04:22:39.090">
+    <testcase name="ChildBindingsSurviveInitializationQueuedBetweenResetAndBuild" file="F:/JericoEngine/JericoEngine/Engine/Render/Integration/Tests/RPI/Pass/PassTests.cpp" line="775" status="run" result="completed" time="0.05" timestamp="2026-10-17T04:22:39.090" classname="PassTests" />
+  </testsuite>
+</testsuites>

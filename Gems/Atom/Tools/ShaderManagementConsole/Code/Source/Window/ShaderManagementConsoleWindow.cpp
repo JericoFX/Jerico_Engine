@@ -6,11 +6,11 @@
  *
  */
 
-#include <Atom/RPI.Edit/Shader/ShaderSourceData.h>
-#include <Atom/RPI.Edit/Shader/ShaderVariantListSourceData.h>
-#include <Atom/RPI.Edit/Common/AssetUtils.h>
-#include <Atom/RPI.Edit/Common/JsonUtils.h>
-#include <Atom/RPI.Reflect/Shader/ShaderAsset.h>
+#include <JE/Editor/Render/RPI/Edit/Shader/ShaderSourceData.h>
+#include <JE/Editor/Render/RPI/Edit/Shader/ShaderVariantListSourceData.h>
+#include <JE/Editor/Render/RPI/Edit/Common/AssetUtils.h>
+#include <JE/Editor/Render/RPI/Edit/Common/JsonUtils.h>
+#include <JE/Render/RPI/Reflect/Shader/ShaderAsset.h>
 #include <AtomToolsFramework/Debug/TraceRecorder.h>
 #include <AtomToolsFramework/Document/AtomToolsDocumentRequestBus.h>
 #include <AtomToolsFramework/Document/AtomToolsDocumentSystemRequestBus.h>
@@ -83,12 +83,12 @@ namespace ShaderManagementConsole
     {
         // Get shader file path
         AZ::IO::Path shaderFullPath;
-        AZ::RPI::ShaderVariantListSourceData shaderVariantList{};
+        JE::Render::RPI::ShaderVariantListSourceData shaderVariantList{};
         ShaderManagementConsoleDocumentRequestBus::EventResult(
             shaderVariantList,
             documentId,
             &ShaderManagementConsoleDocumentRequestBus::Events::GetShaderVariantListSourceData);
-        shaderFullPath = AZ::RPI::AssetUtils::ResolvePathReference(initialPath, shaderVariantList.m_shaderFilePath);
+        shaderFullPath = JE::Render::RPI::AssetUtils::ResolvePathReference(initialPath, shaderVariantList.m_shaderFilePath);
         
         QMessageBox msgBox;
         msgBox.setText(tr("Where do you want to save the list?"));
@@ -215,7 +215,7 @@ namespace ShaderManagementConsole
             return;
         }
         const QFileInfo selectedFile(selectedPath);
-        if (!selectedFile.isFile() || selectedFile.suffix() != AZ::RPI::ShaderSourceData::Extension)
+        if (!selectedFile.isFile() || selectedFile.suffix() != JE::Render::RPI::ShaderSourceData::Extension)
         {
             QMessageBox::critical(this, tr("Generation failed"), tr("Select an existing .shader file."));
             return;
@@ -239,7 +239,7 @@ namespace ShaderManagementConsole
         AZ::Data::AssetInfo sourceInfo;
         ShaderManagementConsoleRequestBus::BroadcastResult(
             sourceInfo, &ShaderManagementConsoleRequestBus::Events::GetSourceAssetInfo, shaderPath);
-        const auto shader = AZ::RPI::AssetUtils::LoadAsset<AZ::RPI::ShaderAsset>(shaderPath);
+        const auto shader = JE::Render::RPI::AssetUtils::LoadAsset<JE::Render::RPI::ShaderAsset>(shaderPath);
         if (!sourceInfo.m_assetId.IsValid() || sourceInfo.m_relativePath.empty() || !shader.IsSuccess() ||
             assetTrace.GetErrorCount(true) != 0)
         {
@@ -253,11 +253,11 @@ namespace ShaderManagementConsole
             return;
         }
 
-        AZ::RPI::ShaderOptionValuesSourceData systemOptions;
+        JE::Render::RPI::ShaderOptionValuesSourceData systemOptions;
         AZ::IO::Path systemPath(shaderPath);
         systemPath.ReplaceExtension("systemoptions");
         if (QFileInfo(QString::fromUtf8(systemPath.c_str())).exists() &&
-            !AZ::RPI::JsonUtils::LoadObjectFromFile(systemPath.Native(), systemOptions))
+            !JE::Render::RPI::JsonUtils::LoadObjectFromFile(systemPath.Native(), systemOptions))
         {
             fail("The shader's .systemoptions file could not be read.");
             return;
@@ -310,7 +310,7 @@ namespace ShaderManagementConsole
                 return;
             }
             AtomToolsFramework::TraceRecorder materialTrace;
-            AZStd::vector<AZ::RPI::ShaderCollection::Item> items;
+            AZStd::vector<JE::Render::RPI::ShaderCollection::Item> items;
             ShaderManagementConsoleRequestBus::BroadcastResult(
                 items, &ShaderManagementConsoleRequestBus::Events::GetMaterialInstanceShaderItems, materialIds[index]);
             if (materialTrace.GetErrorCount(true) != 0)
@@ -359,7 +359,7 @@ namespace ShaderManagementConsole
         }
         progress.hide();
 
-        const auto matchesData = [](const AZ::RPI::ShaderVariantListSourceData& actual, const AZ::RPI::ShaderVariantListSourceData& expected)
+        const auto matchesData = [](const JE::Render::RPI::ShaderVariantListSourceData& actual, const JE::Render::RPI::ShaderVariantListSourceData& expected)
         {
             if (actual.m_shaderFilePath != expected.m_shaderFilePath || actual.m_materialOptionsHint != expected.m_materialOptionsHint ||
                 actual.m_shaderVariants.size() != expected.m_shaderVariants.size())
@@ -393,7 +393,7 @@ namespace ShaderManagementConsole
                     m_toolId, &AtomToolsFramework::AtomToolsDocumentSystemRequestBus::Events::DestroyDocument, documentId);
             }
         };
-        AZ::RPI::ShaderVariantListSourceData openedBaseline;
+        JE::Render::RPI::ShaderVariantListSourceData openedBaseline;
         if (!documentId.IsNull())
         {
             ShaderManagementConsoleDocumentRequestBus::EventResult(
@@ -419,7 +419,7 @@ namespace ShaderManagementConsole
         }
         ShaderManagementConsoleDocumentRequestBus::Event(
             documentId, &ShaderManagementConsoleDocumentRequestBus::Events::SetShaderVariantListSourceData, generated.GetValue());
-        AZ::RPI::ShaderVariantListSourceData applied;
+        JE::Render::RPI::ShaderVariantListSourceData applied;
         ShaderManagementConsoleDocumentRequestBus::EventResult(
             applied, documentId, &ShaderManagementConsoleDocumentRequestBus::Events::GetShaderVariantListSourceData);
         bool ended = false;
@@ -452,13 +452,13 @@ namespace ShaderManagementConsole
         ShaderVariantStatisticData statisticData;
         for (int i = 0; i < materialAssetIdList.size(); ++i)
         {
-            AZStd::vector<AZ::RPI::ShaderCollection::Item> shaderItemList;
+            AZStd::vector<JE::Render::RPI::ShaderCollection::Item> shaderItemList;
             ShaderManagementConsoleRequestBus::BroadcastResult(
                 shaderItemList, &ShaderManagementConsoleRequestBus::Events::GetMaterialInstanceShaderItems, materialAssetIdList[i]);
 
             for (auto& shaderItem : shaderItemList)
             {
-                AZ::RPI::ShaderVariantId shaderVariantId = shaderItem.GetShaderVariantId();
+                JE::Render::RPI::ShaderVariantId shaderVariantId = shaderItem.GetShaderVariantId();
 
                 if (!shaderVariantId.IsEmpty())
                 {
@@ -472,13 +472,13 @@ namespace ShaderManagementConsole
                         statisticData.m_shaderVariantUsage[shaderVariantId].m_count += 1;
                     }
 
-                    AZ::RPI::ShaderOptionGroup shaderOptionGroup = shaderItem.GetShaderOptionGroup();
+                    JE::Render::RPI::ShaderOptionGroup shaderOptionGroup = shaderItem.GetShaderOptionGroup();
                     statisticData.m_shaderVariantUsage[shaderVariantId].m_shaderOptionGroup = shaderOptionGroup;
 
                     for (auto& shaderOptionDescriptor : shaderOptionGroup.GetShaderOptionDescriptors())
                     {
                         AZ::Name optionName = shaderOptionDescriptor.GetName();
-                        AZ::RPI::ShaderOptionValue optionValue = shaderOptionGroup.GetValue(optionName);
+                        JE::Render::RPI::ShaderOptionValue optionValue = shaderOptionGroup.GetValue(optionName);
 
                         if (!optionValue.IsValid())
                         {

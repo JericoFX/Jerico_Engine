@@ -13,14 +13,14 @@ namespace AZ
 {
     namespace Render
     {
-        RPI::Ptr<DepthOfFieldWriteFocusDepthFromGpuPass> DepthOfFieldWriteFocusDepthFromGpuPass::Create(const RPI::PassDescriptor& descriptor)
+        JE::Render::RPI::Ptr<DepthOfFieldWriteFocusDepthFromGpuPass> DepthOfFieldWriteFocusDepthFromGpuPass::Create(const JE::Render::RPI::PassDescriptor& descriptor)
         {
-            RPI::Ptr<DepthOfFieldWriteFocusDepthFromGpuPass> pass = aznew DepthOfFieldWriteFocusDepthFromGpuPass(descriptor);
+            JE::Render::RPI::Ptr<DepthOfFieldWriteFocusDepthFromGpuPass> pass = aznew DepthOfFieldWriteFocusDepthFromGpuPass(descriptor);
             return pass;
         }
 
-        DepthOfFieldWriteFocusDepthFromGpuPass::DepthOfFieldWriteFocusDepthFromGpuPass(const RPI::PassDescriptor& descriptor)
-            : RPI::ComputePass(descriptor)
+        DepthOfFieldWriteFocusDepthFromGpuPass::DepthOfFieldWriteFocusDepthFromGpuPass(const JE::Render::RPI::PassDescriptor& descriptor)
+            : JE::Render::RPI::ComputePass(descriptor)
         {
         }
 
@@ -41,7 +41,7 @@ namespace AZ
             m_autoFocusScreenPosition = screenPosition;
         }
 
-        void DepthOfFieldWriteFocusDepthFromGpuPass::SetBufferRef(RPI::Ptr<RPI::Buffer> bufferRef)
+        void DepthOfFieldWriteFocusDepthFromGpuPass::SetBufferRef(JE::Render::RPI::Ptr<JE::Render::RPI::Buffer> bufferRef)
         {
             m_bufferRef = bufferRef;
         }

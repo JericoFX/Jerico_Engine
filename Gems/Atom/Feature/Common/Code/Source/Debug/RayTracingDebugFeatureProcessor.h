@@ -9,7 +9,7 @@
 #pragma once
 
 #include <Atom/Feature/Debug/RayTracingDebugFeatureProcessorInterface.h>
-#include <Atom/RPI.Public/Shader/ShaderResourceGroup.h>
+#include <JE/Render/RPI/Public/Shader/ShaderResourceGroup.h>
 #include <Debug/RayTracingDebugSettings.h>
 
 namespace AZ::Render
@@ -32,7 +32,7 @@ namespace AZ::Render
         // FeatureProcessor overrides
         void Activate() override;
         void Deactivate() override;
-        void AddRenderPasses(RPI::RenderPipeline* pipeline) override;
+        void AddRenderPasses(JE::Render::RPI::RenderPipeline* pipeline) override;
         void Render(const RenderPacket& packet) override;
 
     private:
@@ -42,8 +42,8 @@ namespace AZ::Render
         void MarkPipelineNeedsRebuild();
 
         AZStd::unique_ptr<RayTracingDebugSettings> m_settings;
-        Data::Instance<RPI::ShaderResourceGroup> m_sceneSrg; // The ray tracing scene SRG (RayTracingSceneSrg)
-        RPI::RenderPipeline* m_pipeline{ nullptr };
+        Data::Instance<JE::Render::RPI::ShaderResourceGroup> m_sceneSrg; // The ray tracing scene SRG (RayTracingSceneSrg)
+        JE::Render::RPI::RenderPipeline* m_pipeline{ nullptr };
         bool m_isEnabled{ false };
         int m_debugComponentCount{ 0 };
         RHI::ShaderInputNameIndex m_debugOptionsIndex{ "m_debugViewMode" };

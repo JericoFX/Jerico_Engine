@@ -11,7 +11,7 @@
 #include <AzToolsFramework/UI/PropertyEditor/PropertyEditorAPI.h>
 #include <AzCore/Asset/AssetManager.h>
 #include <AzCore/RTTI/BehaviorContext.h>
-#include <Atom/RPI.Reflect/Asset/AssetUtils.h>
+#include <JE/Render/RPI/Reflect/Asset/AssetUtils.h>
 
 AZ_PUSH_DISABLE_WARNING(4251 4800, "-Wunknown-warning-option") // disable warnings spawned by QT
 #include <QApplication>
@@ -129,10 +129,10 @@ namespace AZ
         }
 
         bool EditorImageBasedLightComponent::UpdateImageAsset(
-            Data::Asset<RPI::StreamingImageAsset>& asset1,
+            Data::Asset<JE::Render::RPI::StreamingImageAsset>& asset1,
             const char* asset1Suffix,
             const char* asset1Name,
-            Data::Asset<RPI::StreamingImageAsset>& asset2,
+            Data::Asset<JE::Render::RPI::StreamingImageAsset>& asset2,
             const char* asset2Suffix,
             const char* asset2Name)
         {
@@ -153,7 +153,7 @@ namespace AZ
                 // try to load the matching image asset by replacing the asset1 suffix with the asset2 suffix in the file path
                 AZ::StringFunc::Replace(assetPath, asset1Suffix, asset2Suffix);
 
-                assetId = AZ::RPI::AssetUtils::GetAssetIdForProductPath(assetPath.c_str(), AZ::RPI::AssetUtils::TraceLevel::None);
+                assetId = JE::Render::RPI::AssetUtils::GetAssetIdForProductPath(assetPath.c_str(), JE::Render::RPI::AssetUtils::TraceLevel::None);
                 if (!assetId.IsValid())
                 {
                     // unable to locate the matching image asset

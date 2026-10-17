@@ -9,8 +9,8 @@
 #include <OcclusionCullingPlane/OcclusionCullingPlaneFeatureProcessor.h>
 #include <AzCore/std/smart_ptr/make_shared.h>
 #include <AzCore/std/smart_ptr/intrusive_ptr.h>
-#include <Atom/RPI.Public/Scene.h>
-#include <Atom/RPI.Public/Culling.h>
+#include <JE/Render/RPI/Public/Scene.h>
+#include <JE/Render/RPI/Public/Culling.h>
 
 namespace AZ
 {
@@ -58,7 +58,7 @@ namespace AZ
                         continue;
                     }
 
-                    RPI::CullingScene::OcclusionPlane rpiOcclusionPlane;
+                    JE::Render::RPI::CullingScene::OcclusionPlane rpiOcclusionPlane;
 
                     static const Vector3 BL = Vector3(-0.5f, 0.0f, -0.5f);
                     static const Vector3 TL = Vector3(-0.5f, 0.0f,  0.5f);

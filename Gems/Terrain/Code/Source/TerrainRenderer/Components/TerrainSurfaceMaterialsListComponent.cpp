@@ -367,7 +367,7 @@ namespace Terrain
             if (mapping.m_materialAsset.GetId() == asset.GetId())
             {
                 mapping.m_materialAsset = asset;
-                mapping.m_materialInstance = AZ::RPI::Material::FindOrCreate(mapping.m_materialAsset);
+                mapping.m_materialInstance = JE::Render::RPI::Material::FindOrCreate(mapping.m_materialAsset);
 
                 if (&mapping == &m_configuration.m_defaultSurfaceMaterial)
                 {
@@ -413,7 +413,7 @@ namespace Terrain
             if (mapping.m_materialAsset.GetId() == asset.GetId())
             {
                 mapping.m_materialAsset = asset;
-                mapping.m_materialInstance = AZ::RPI::Material::FindOrCreate(mapping.m_materialAsset);
+                mapping.m_materialInstance = JE::Render::RPI::Material::FindOrCreate(mapping.m_materialAsset);
 
                 if (&mapping == &m_configuration.m_defaultSurfaceMaterial)
                 {

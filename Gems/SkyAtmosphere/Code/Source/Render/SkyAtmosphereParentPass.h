@@ -8,8 +8,8 @@
 #pragma once
 
 #include <AzCore/Memory/SystemAllocator.h>
-#include <Atom/RPI.Public/Pass/ParentPass.h>
-#include <Atom/RPI.Public/Pass/RenderPass.h>
+#include <JE/Render/RPI/Public/Pass/ParentPass.h>
+#include <JE/Render/RPI/Public/Pass/RenderPass.h>
 #include <Render/SkyAtmospherePass.h>
 #include <AzCore/Math/Vector3.h>
 #include <AzCore/std/containers/unordered_set.h>
@@ -19,9 +19,9 @@ namespace SkyAtmosphere
     static const char* const SkyAtmosphereParentPassTemplateName = "SkyAtmosphereParentPassTemplate";
 
     class SkyAtmosphereParentPass final
-        : public AZ::RPI::ParentPass
+        : public JE::Render::RPI::ParentPass
     {
-        using Base = AZ::RPI::ParentPass;
+        using Base = JE::Render::RPI::ParentPass;
         AZ_RPI_PASS(SkyAtmosphereParentPass);
 
     public:
@@ -30,7 +30,7 @@ namespace SkyAtmosphere
 
         virtual ~SkyAtmosphereParentPass() = default;
 
-        static AZ::RPI::Ptr<SkyAtmosphereParentPass> Create(const AZ::RPI::PassDescriptor& descriptor);
+        static JE::Render::RPI::Ptr<SkyAtmosphereParentPass> Create(const JE::Render::RPI::PassDescriptor& descriptor);
 
         void CreateAtmospherePass(SkyAtmosphereFeatureProcessorInterface::AtmosphereId id);
         void ReleaseAtmospherePass(SkyAtmosphereFeatureProcessorInterface::AtmosphereId id);
@@ -38,11 +38,11 @@ namespace SkyAtmosphere
 
     private:
         SkyAtmosphereParentPass() = delete;
-        explicit SkyAtmosphereParentPass(const AZ::RPI::PassDescriptor& descriptor);
+        explicit SkyAtmosphereParentPass(const JE::Render::RPI::PassDescriptor& descriptor);
 
         void CreateChildPassesInternal() override;
 
-        AZ::RPI::Ptr<SkyAtmospherePass> GetPass(SkyAtmosphereFeatureProcessorInterface::AtmosphereId id) const;
+        JE::Render::RPI::Ptr<SkyAtmospherePass> GetPass(SkyAtmosphereFeatureProcessorInterface::AtmosphereId id) const;
 
         AZStd::unordered_set<SkyAtmosphereFeatureProcessorInterface::AtmosphereId> m_atmosphereIds;
     };

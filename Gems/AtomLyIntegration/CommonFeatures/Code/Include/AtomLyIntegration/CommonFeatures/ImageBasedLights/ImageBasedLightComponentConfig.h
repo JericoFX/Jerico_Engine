@@ -9,7 +9,7 @@
 #pragma once
 
 #include <AzCore/Component/Component.h>
-#include <Atom/RPI.Reflect/Image/StreamingImageAsset.h>
+#include <JE/Render/RPI/Reflect/Image/StreamingImageAsset.h>
 
 namespace AZ
 {
@@ -25,8 +25,8 @@ namespace AZ
 
             static void Reflect(ReflectContext* context);
 
-            Data::Asset<RPI::StreamingImageAsset> m_specularImageAsset;
-            Data::Asset<RPI::StreamingImageAsset> m_diffuseImageAsset;
+            Data::Asset<JE::Render::RPI::StreamingImageAsset> m_specularImageAsset;
+            Data::Asset<JE::Render::RPI::StreamingImageAsset> m_diffuseImageAsset;
             float m_exposure = 0.0f;
         };
     } // namespace Render

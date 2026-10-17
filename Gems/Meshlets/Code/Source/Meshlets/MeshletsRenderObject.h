@@ -16,8 +16,8 @@
 #include <AzCore/std/containers/array.h>
 #include <AzCore/std/containers/map.h>
 
-#include <Atom/RPI.Public/Model/Model.h>
-#include <Atom/RPI.Reflect/Model/ModelAsset.h>
+#include <JE/Render/RPI/Public/Model/Model.h>
+#include <JE/Render/RPI/Reflect/Model/ModelAsset.h>
 #include <Atom/RHI/DrawPacketBuilder.h>
 
 #include <Atom/Feature/TransformService/TransformServiceFeatureProcessorInterface.h>
@@ -30,10 +30,15 @@
 
 namespace AZ
 {
-    namespace RPI
-    {
+    }
+
+namespace JE::Render::RPI
+{
         class MeshDrawPacket;
     }
+
+namespace AZ
+{
 
     namespace Meshlets
     {
@@ -59,19 +64,19 @@ namespace AZ
             uint32_t IndexCount = 0;  
 
              //! Compute render data
-            Data::Instance<RPI::ShaderResourceGroup> ComputeSrg;          // Per object Compute data - can be shared across instances
+            Data::Instance<JE::Render::RPI::ShaderResourceGroup> ComputeSrg;          // Per object Compute data - can be shared across instances
             AZStd::vector<SrgBufferDescriptor> ComputeBuffersDescriptors;
             AZStd::vector<Data::Instance<RHI::BufferView>> ComputeBuffersViews;
             AZStd::vector<Data::Instance<Meshlets::SharedBufferAllocation>> ComputeBuffersAllocators;
-            AZStd::vector <Data::Instance<RPI::Buffer>> ComputeBuffers;   // stand alone non shared buffers
+            AZStd::vector <Data::Instance<JE::Render::RPI::Buffer>> ComputeBuffers;   // stand alone non shared buffers
             MeshletsDispatchItem MeshDispatchItem;
 
             //! Render pass data
-            Data::Instance<RPI::ShaderResourceGroup> RenderObjectSrg;     // Per object render data - includes instanceId and vertex buffers
+            Data::Instance<JE::Render::RPI::ShaderResourceGroup> RenderObjectSrg;     // Per object render data - includes instanceId and vertex buffers
             AZStd::vector<SrgBufferDescriptor> RenderBuffersDescriptors;
             RHI::IndexBufferView IndexBufferView;
             AZStd::vector<Data::Instance<RHI::BufferView>> RenderBuffersViews;
-            AZStd::vector <Data::Instance<RPI::Buffer>> RenderBuffers;    // stand alone non shared buffers
+            AZStd::vector <Data::Instance<JE::Render::RPI::Buffer>> RenderBuffers;    // stand alone non shared buffers
 
             const RHI::DrawPacket* MeshDrawPacket = nullptr;    // Should be moved to the instance data structure
         };
@@ -94,11 +99,11 @@ namespace AZ
             Name s_textureCoordinatesName;
             Name s_indicesName;
 
-            MeshletsRenderObject(Data::Asset<RPI::ModelAsset> sourceModelAsset, MeshletsFeatureProcessor* meshletsFeatureProcessor);
+            MeshletsRenderObject(Data::Asset<JE::Render::RPI::ModelAsset> sourceModelAsset, MeshletsFeatureProcessor* meshletsFeatureProcessor);
             ~MeshletsRenderObject();
 
-            static  Data::Instance<RPI::ShaderResourceGroup> CreateShaderResourceGroup(
-                Data::Instance<RPI::Shader> shader,
+            static  Data::Instance<JE::Render::RPI::ShaderResourceGroup> CreateShaderResourceGroup(
+                Data::Instance<JE::Render::RPI::Shader> shader,
                 const char* shaderResourceGroupId,
                 [[maybe_unused]] const char* moduleName
             );
@@ -114,7 +119,7 @@ namespace AZ
 
             // This method is binding the buffers to the Srg and is separated from
             // the creation method to allow frame sync when the data is compiled
-            static bool CreateAndBindComputeSrgAndDispatch(Data::Instance<RPI::Shader> computeShader, MeshRenderData& meshRenderData);
+            static bool CreateAndBindComputeSrgAndDispatch(Data::Instance<JE::Render::RPI::Shader> computeShader, MeshRenderData& meshRenderData);
 
             uint32_t GetMeshletsCount() { return m_meshletsCount; }
 
@@ -125,14 +130,14 @@ namespace AZ
             bool ProcessBuffersData(float* position, uint32_t vtxNum);
 
             uint8_t* RetrieveBufferData(
-                const RPI::BufferAssetView* bufferView,
+                const JE::Render::RPI::BufferAssetView* bufferView,
                 RHI::Format& format,
                 uint32_t expectedAmount, uint32_t& existingAmount,
                 RHI::BufferViewDescriptor& bufferDesc
             );
 
             bool RetrieveSourceMeshData(
-                const RPI::ModelLodAsset::Mesh& meshAsset,
+                const JE::Render::RPI::ModelLodAsset::Mesh& meshAsset,
                 MeshRenderData& meshRenderData,
                 uint32_t vertexCount, uint32_t indexCount);
 
@@ -143,9 +148,9 @@ namespace AZ
                 uint16_t* indices, uint32_t idxNum, RHI::Format IndexStreamFormat
             );
 
-            uint32_t CreateMeshletsFromModelAsset(Data::Asset<RPI::ModelAsset> sourceModelAsset);
+            uint32_t CreateMeshletsFromModelAsset(Data::Asset<JE::Render::RPI::ModelAsset> sourceModelAsset);
 
-            uint32_t CreateMeshletsRenderObject(const RPI::ModelLodAsset::Mesh& meshAsset, MeshRenderData &meshRenderData);
+            uint32_t CreateMeshletsRenderObject(const JE::Render::RPI::ModelLodAsset::Mesh& meshAsset, MeshRenderData &meshRenderData);
 
 
             bool BuildDrawPacket( RHI::DrawPacketBuilder::DrawRequest& drawRequest, MeshRenderData& meshRenderData);
@@ -179,8 +184,8 @@ namespace AZ
             // become offsets passed as part of each mesh dispatch, or bindless resources.
             // Having the first approach does not require bindless mechanism in place.  
             //------------------------------------------------------------------
-            Data::Instance<RPI::Shader> m_renderShader;
-            Data::Instance<RPI::Shader> m_computeShader;
+            Data::Instance<JE::Render::RPI::Shader> m_renderShader;
+            Data::Instance<JE::Render::RPI::Shader> m_computeShader;
 
             AZStd::vector<ModelLodDataArray> m_modelRenderData;         // Render data array of Lods.
         };

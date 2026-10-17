@@ -5,8 +5,8 @@
 #include <JE/Editor/Materials/Graph/PassGraphCompiler.h>
 #include <JE/Editor/Materials/Graph/MaterialCanvasDocumentHistory.h>
 #include <Atom/RHI.Reflect/SamplerState.h>
-#include <Atom/RPI.Edit/Shader/ShaderSourceData.h>
-#include <Atom/RPI.Reflect/Image/StreamingImageAsset.h>
+#include <JE/Editor/Render/RPI/Edit/Shader/ShaderSourceData.h>
+#include <JE/Render/RPI/Reflect/Image/StreamingImageAsset.h>
 #include <AtomToolsFramework/Document/AtomToolsAnyDocument.h>
 #include <AtomToolsFramework/Graph/GraphDocument.h>
 #include <AtomToolsFramework/Graph/AssetStatusReporterSystem.h>
@@ -193,7 +193,7 @@ namespace JE::Editor
             AZStd::make_shared<GraphModel::DataType>(AZ_CRC_CE("float4x4"), AZStd::array<AZ::Vector4, 4>{ AZ::Vector4(1.0f, 0.0f, 0.0f, 0.0f), AZ::Vector4(0.0f, 1.0f, 0.0f, 0.0f), AZ::Vector4(0.0f, 0.0f, 1.0f, 0.0f), AZ::Vector4(0.0f, 0.0f, 0.0f, 1.0f) }, "float4x4"),
             AZStd::make_shared<GraphModel::DataType>(AZ_CRC_CE("color"), AZ::Color::CreateOne(), "color"),
             AZStd::make_shared<GraphModel::DataType>(AZ_CRC_CE("string"), AZStd::string{}, "string"),
-            AZStd::make_shared<GraphModel::DataType>(AZ_CRC_CE("image"), AZ::Data::Asset<AZ::RPI::StreamingImageAsset>{ AZ::Data::AssetLoadBehavior::NoLoad }, "image"),
+            AZStd::make_shared<GraphModel::DataType>(AZ_CRC_CE("image"), AZ::Data::Asset<JE::Render::RPI::StreamingImageAsset>{ AZ::Data::AssetLoadBehavior::NoLoad }, "image"),
             AZStd::make_shared<GraphModel::DataType>(AZ_CRC_CE("sampler"), defaultSamplerState, "sampler"),
         });
 
@@ -304,7 +304,7 @@ namespace JE::Editor
             "Material Graph Node Config", {"materialgraphnode"}, {"materialgraphnodetemplate"},
             AZStd::any(AtomToolsFramework::DynamicNodeConfig()), AZ::Uuid::CreateNull()));
         types.push_back(AtomToolsFramework::AtomToolsAnyDocument::BuildDocumentTypeInfo(
-            "Shader Source Data", {"shader"}, {}, AZStd::any(AZ::RPI::ShaderSourceData()), AZ::RPI::ShaderSourceData::TYPEINFO_Uuid()));
+            "Shader Source Data", {"shader"}, {}, AZStd::any(JE::Render::RPI::ShaderSourceData()), JE::Render::RPI::ShaderSourceData::TYPEINFO_Uuid()));
         auto passType = AtomToolsFramework::GraphDocument::BuildDocumentTypeInfo(
             PassGraphTypeName, {"passgraph"}, {"passgraphtemplate"}, GetDefaultPassGraphTemplatePath(), m_passGraphContext);
         passType.m_documentFactoryCallback = [context = m_passGraphContext](

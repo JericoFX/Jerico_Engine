@@ -21,7 +21,7 @@
 #include <AzCore/std/containers/vector.h>
 #include <MCore/Source/Ray.h>
 
-namespace AZ::RPI
+namespace JE::Render::RPI
 {
     class ModelLodAsset;
 }
@@ -98,7 +98,7 @@ namespace EMotionFX
          */
         static Mesh* Create(uint32 numVerts, uint32 numIndices, uint32 numPolygons, uint32 numOrgVerts, bool isCollisionMesh);
 
-        static Mesh* CreateFromModelLod(const AZ::Data::Asset<AZ::RPI::ModelLodAsset>& sourceModelLod, const AZStd::unordered_map<AZ::u16, AZ::u16>& skinToSkeletonIndexMap);
+        static Mesh* CreateFromModelLod(const AZ::Data::Asset<JE::Render::RPI::ModelLodAsset>& sourceModelLod, const AZStd::unordered_map<AZ::u16, AZ::u16>& skinToSkeletonIndexMap);
 
         /**
          * Recalculates the vertex normals.

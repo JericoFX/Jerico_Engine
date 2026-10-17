@@ -8,8 +8,8 @@
 
 #pragma once
 
-#include <Atom/RPI.Public/FeatureProcessor.h>
-#include <Atom/RPI.Reflect/Image/Image.h>
+#include <JE/Render/RPI/Public/FeatureProcessor.h>
+#include <JE/Render/RPI/Reflect/Image/Image.h>
 #include <Atom/Feature/CoreLights/PhotometricValue.h>
 #include <Atom/Feature/SkyBox/SkyBoxFogSettings.h>
 #include <AzCore/Math/Matrix4x4.h>
@@ -40,10 +40,10 @@ namespace AZ
         };
 
         class SkyBoxFeatureProcessorInterface
-            : public RPI::FeatureProcessor
+            : public JE::Render::RPI::FeatureProcessor
         {
             public:
-            AZ_RTTI(AZ::Render::SkyBoxFeatureProcessorInterface, "{71061869-1190-4451-A337-E9CFF16441B4}", AZ::RPI::FeatureProcessor); 
+            AZ_RTTI(AZ::Render::SkyBoxFeatureProcessorInterface, "{71061869-1190-4451-A337-E9CFF16441B4}", JE::Render::RPI::FeatureProcessor); 
 
             virtual void Enable(bool enable) = 0;
             virtual bool IsEnabled() = 0;
@@ -51,7 +51,7 @@ namespace AZ
             virtual void SetFogSettings(const SkyBoxFogSettings& fogSettings) = 0;
 
             // HDRiSkyBox
-            virtual void SetCubemap(Data::Instance<RPI::Image> cubemap) = 0;
+            virtual void SetCubemap(Data::Instance<JE::Render::RPI::Image> cubemap) = 0;
             virtual void SetCubemapExposure(float exposure) = 0;
             virtual void SetCubemapRotationMatrix(AZ::Matrix4x4 matrix) = 0;
 

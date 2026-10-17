@@ -8,9 +8,9 @@
 
 #pragma once
 
-#include <Atom/RPI.Public/FeatureProcessor.h>
-#include <Atom/RPI.Public/Shader/ShaderResourceGroup.h>
-#include <Atom/RPI.Reflect/Image/StreamingImageAsset.h>
+#include <JE/Render/RPI/Public/FeatureProcessor.h>
+#include <JE/Render/RPI/Public/Shader/ShaderResourceGroup.h>
+#include <JE/Render/RPI/Reflect/Image/StreamingImageAsset.h>
 
 namespace AZ
 {
@@ -18,23 +18,23 @@ namespace AZ
     {
         //! This feature processor handles image based lights.
         class ImageBasedLightFeatureProcessorInterface
-            : public RPI::FeatureProcessor
+            : public JE::Render::RPI::FeatureProcessor
         {
         public:
-            AZ_RTTI(AZ::Render::ImageBasedLightFeatureProcessorInterface, "{EE7441A3-B406-4717-8F35-E3DAC60E3BDB}", AZ::RPI::FeatureProcessor);
+            AZ_RTTI(AZ::Render::ImageBasedLightFeatureProcessorInterface, "{EE7441A3-B406-4717-8F35-E3DAC60E3BDB}", JE::Render::RPI::FeatureProcessor);
 
             //! Sets the global specular IBL image for this scene
-            virtual void SetSpecularImage(const Data::Asset<RPI::StreamingImageAsset>& imageAsset) = 0;
+            virtual void SetSpecularImage(const Data::Asset<JE::Render::RPI::StreamingImageAsset>& imageAsset) = 0;
             //! Sets the global diffuse IBL image for this scene
-            virtual void SetDiffuseImage(const Data::Asset<RPI::StreamingImageAsset>& imageAsset) = 0;
+            virtual void SetDiffuseImage(const Data::Asset<JE::Render::RPI::StreamingImageAsset>& imageAsset) = 0;
             //! Sets the exposure value in stops for the global IBL. 0 = no change. Final intensity = intensity * 2^exposure.
             virtual void SetExposure(float exposure) = 0;
             //! Sets the orientation of the global IBL.
             virtual void SetOrientation(const Quaternion& orientation) = 0;
             //! Returns the global specular IBL image for this scene
-            virtual const Data::Instance<RPI::Image>& GetSpecularImage() const = 0;
+            virtual const Data::Instance<JE::Render::RPI::Image>& GetSpecularImage() const = 0;
             //! Returns the global diffuse IBL image for this scene
-            virtual const Data::Instance<RPI::Image>& GetDiffuseImage() const = 0;
+            virtual const Data::Instance<JE::Render::RPI::Image>& GetDiffuseImage() const = 0;
             //! Returns the exposure value in stops for the global IBL
             virtual float GetExposure() const = 0;
             //! Returns the orientation of the global IBL.

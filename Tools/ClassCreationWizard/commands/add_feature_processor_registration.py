@@ -16,10 +16,10 @@ Generated effect (idempotent)
 -----------------------------
   Header:  #include "${feature_processor_name}.h"
   Activate():
-      AZ::RPI::FeatureProcessorFactory::Get()
+      JE::Render::RPI::FeatureProcessorFactory::Get()
           ->RegisterFeatureProcessor<${feature_processor_name}>();
   Deactivate():
-      AZ::RPI::FeatureProcessorFactory::Get()
+      JE::Render::RPI::FeatureProcessorFactory::Get()
           ->UnregisterFeatureProcessor<${feature_processor_name}>();
 
 Why this command exists
@@ -99,7 +99,7 @@ class AddFeatureProcessorRegistrationCommand(WizardCommand):
             text,
             method=f"{sys_comp_name}::Activate",
             sentinel=f'RegisterFeatureProcessor<{self.feature_processor_name}>',
-            line=(f'AZ::RPI::FeatureProcessorFactory::Get()'
+            line=(f'JE::Render::RPI::FeatureProcessorFactory::Get()'
                   f'->RegisterFeatureProcessor<{self.feature_processor_name}>();'),
             ctx=ctx,
         )
@@ -107,7 +107,7 @@ class AddFeatureProcessorRegistrationCommand(WizardCommand):
             text,
             method=f"{sys_comp_name}::Deactivate",
             sentinel=f'UnregisterFeatureProcessor<{self.feature_processor_name}>',
-            line=(f'AZ::RPI::FeatureProcessorFactory::Get()'
+            line=(f'JE::Render::RPI::FeatureProcessorFactory::Get()'
                   f'->UnregisterFeatureProcessor<{self.feature_processor_name}>();'),
             ctx=ctx,
         )
@@ -162,7 +162,7 @@ class AddFeatureProcessorRegistrationCommand(WizardCommand):
 
     @staticmethod
     def _ensure_factory_include(text: str) -> str:
-        line = "#include <Atom/RPI.Public/FeatureProcessorFactory.h>"
+        line = "#include <JE/Render/RPI/Public/FeatureProcessorFactory.h>"
         if line in text:
             return text
 

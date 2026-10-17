@@ -14,7 +14,7 @@
 
 #include <Atom/RHI/RHISystemInterface.h>
 
-#include <Atom/RPI.Public/View.h>
+#include <JE/Render/RPI/Public/View.h>
 
 namespace AZ
 {
@@ -34,9 +34,9 @@ namespace AZ
 
         void AuxGeomFeatureProcessor::Activate()
         {
-            AZ::RPI::Scene* scene = GetParentScene();
+            JE::Render::RPI::Scene* scene = GetParentScene();
             // create an AuxGeomDrawQueue object for this scene and register it with the AuxGeomSystemComponent
-            m_sceneDrawQueue = RPI::AuxGeomDrawPtr(aznew AuxGeomDrawQueue);
+            m_sceneDrawQueue = JE::Render::RPI::AuxGeomDrawPtr(aznew AuxGeomDrawQueue);
 
             // initialize the dynamic primitive processor
             m_dynamicPrimitiveProcessor = AZStd::make_unique<DynamicPrimitiveProcessor>();
@@ -118,7 +118,7 @@ namespace AZ
             m_fixedShapeProcessor->FrameEnd();
         }
 
-        RPI::AuxGeomDrawPtr AuxGeomFeatureProcessor::GetDrawQueueForView(const RPI::View* view)
+        JE::Render::RPI::AuxGeomDrawPtr AuxGeomFeatureProcessor::GetDrawQueueForView(const JE::Render::RPI::View* view)
         {
             if (view)
             {
@@ -129,20 +129,20 @@ namespace AZ
                 }
             }
             AZ_Warning("AuxGeomFeatureProcessor", false, "Draw Queue requested for unknown view");
-            return RPI::AuxGeomDrawPtr(nullptr);
+            return JE::Render::RPI::AuxGeomDrawPtr(nullptr);
         }
 
-        RPI::AuxGeomDrawPtr AuxGeomFeatureProcessor::GetOrCreateDrawQueueForView(const RPI::View* view)
+        JE::Render::RPI::AuxGeomDrawPtr AuxGeomFeatureProcessor::GetOrCreateDrawQueueForView(const JE::Render::RPI::View* view)
         {
             if (!view)
             {
-                return RPI::AuxGeomDrawPtr(nullptr);
+                return JE::Render::RPI::AuxGeomDrawPtr(nullptr);
             }
             auto drawQueueIterator = m_viewDrawDataMap.find(view);
 
             if (drawQueueIterator == m_viewDrawDataMap.end())
             {
-                RPI::AuxGeomDrawPtr drawQueue = RPI::AuxGeomDrawPtr(aznew AuxGeomDrawQueue());
+                JE::Render::RPI::AuxGeomDrawPtr drawQueue = JE::Render::RPI::AuxGeomDrawPtr(aznew AuxGeomDrawQueue());
                 m_viewDrawDataMap.emplace(view, AZStd::move(drawQueue));
                 return m_viewDrawDataMap[view];
             }
@@ -150,7 +150,7 @@ namespace AZ
             return drawQueueIterator->second;
         }
 
-        void AuxGeomFeatureProcessor::ReleaseDrawQueueForView(const RPI::View* view)
+        void AuxGeomFeatureProcessor::ReleaseDrawQueueForView(const JE::Render::RPI::View* view)
         {
             m_viewDrawDataMap.erase(view);
         }
@@ -161,8 +161,8 @@ namespace AZ
             m_fixedShapeProcessor->SetUpdatePipelineStates();
         }
 
-        void AuxGeomFeatureProcessor::OnRenderPipelineChanged([[maybe_unused]] RPI::RenderPipeline* pipeline,
-            [[maybe_unused]] RPI::SceneNotification::RenderPipelineChangeType changeType)
+        void AuxGeomFeatureProcessor::OnRenderPipelineChanged([[maybe_unused]] JE::Render::RPI::RenderPipeline* pipeline,
+            [[maybe_unused]] JE::Render::RPI::SceneNotification::RenderPipelineChangeType changeType)
         {
             OnSceneRenderPipelinesChanged();
         }

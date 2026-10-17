@@ -16,7 +16,7 @@
 #include <AzCore/Component/TickBus.h>
 #include <AzCore/Instance/Instance.h>
 
-#include <Atom/RPI.Public/FeatureProcessor.h>
+#include <JE/Render/RPI/Public/FeatureProcessor.h>
 
 #include <Atom/Feature/TransformService/TransformServiceFeatureProcessorInterface.h>
 
@@ -26,10 +26,15 @@
 
 namespace AZ
 {
-    namespace RPI
-    {
+    }
+
+namespace JE::Render::RPI
+{
         class RenderPipeline;
     }
+
+namespace AZ
+{
 
     namespace Meshlets
     {
@@ -44,26 +49,26 @@ namespace AZ
         };
 
         class MeshletsFeatureProcessor final
-            : public RPI::FeatureProcessor
+            : public JE::Render::RPI::FeatureProcessor
             , private AZ::TickBus::Handler
         {
             Name MeshletsComputePassName;
             Name MeshletsRenderPassName;
 
         public:
-            AZ_RTTI(MeshletsFeatureProcessor, "{1D93DE27-2DC4-4E9B-90B3-DCDCB941C920}", RPI::FeatureProcessor);
+            AZ_RTTI(MeshletsFeatureProcessor, "{1D93DE27-2DC4-4E9B-90B3-DCDCB941C920}", JE::Render::RPI::FeatureProcessor);
 
             static void Reflect(AZ::ReflectContext* context);
 
             MeshletsFeatureProcessor();
             virtual ~MeshletsFeatureProcessor();
 
-            void Init(RPI::RenderPipeline* pipeline);
+            void Init(JE::Render::RPI::RenderPipeline* pipeline);
 
             // FeatureProcessor overrides ...
             void Activate() override;
             void Deactivate() override;
-            void AddRenderPasses(RPI::RenderPipeline* renderPipeline) override;
+            void AddRenderPasses(JE::Render::RPI::RenderPipeline* renderPipeline) override;
             void Simulate(const FeatureProcessor::SimulatePacket& packet) override;
             void Render(const FeatureProcessor::RenderPacket& packet) override;
 
@@ -81,19 +86,19 @@ namespace AZ
                 MeshletsRenderObject* meshletsRenderObject);
             void RemoveMeshletsRenderObject(MeshletsRenderObject* meshletsRenderObject);
 
-            Data::Instance<RPI::Shader> GetComputeShader() { return m_computeShader; }
-            Data::Instance<RPI::Shader> GetRenderShader() { return m_renderShader; }
+            Data::Instance<JE::Render::RPI::Shader> GetComputeShader() { return m_computeShader; }
+            Data::Instance<JE::Render::RPI::Shader> GetRenderShader() { return m_renderShader; }
 
         protected:
             // RPI::SceneNotificationBus overrides ...
-            void OnRenderPipelineChanged(RPI::RenderPipeline* pipeline, RPI::SceneNotification::RenderPipelineChangeType changeType) override;
+            void OnRenderPipelineChanged(JE::Render::RPI::RenderPipeline* pipeline, JE::Render::RPI::SceneNotification::RenderPipelineChangeType changeType) override;
 
             bool BuildDrawPacket(
                 ModelLodDataArray& lodRenderDataArray,
                 Render::TransformServiceFeatureProcessorInterface::ObjectId objectId);
 
-            bool HasMeshletPasses(RPI::RenderPipeline* renderPipeline);
-            bool AddMeshletsPassesToPipeline(RPI::RenderPipeline* renderPipeline);
+            bool HasMeshletPasses(JE::Render::RPI::RenderPipeline* renderPipeline);
+            bool AddMeshletsPassesToPipeline(JE::Render::RPI::RenderPipeline* renderPipeline);
 
             void CreateResources();
             void CleanResources();
@@ -107,7 +112,7 @@ namespace AZ
             AZStd::unique_ptr<Meshlets::SharedBuffer> m_sharedBuffer;  // used for all meshlets geometry buffers.
 
             // Cache the pass request data for creating a parent pass and associating it in the pipeline
-            AZ::Data::Asset<AZ::RPI::AnyAsset> m_passRequestAsset;
+            AZ::Data::Asset<JE::Render::RPI::AnyAsset> m_passRequestAsset;
 
             Data::Instance<MultiDispatchComputePass> m_computePass;
             Data::Instance<MeshletsRenderPass> m_renderPass;
@@ -121,14 +126,14 @@ namespace AZ
             //! but on the FP side, it will only associate to the latest pass hence such a case
             //! might still be a problem.  If needed, it can be resolved using a map for each
             //! pass name per pipeline.
-            RPI::RenderPipeline* m_renderPipeline = nullptr;
+            JE::Render::RPI::RenderPipeline* m_renderPipeline = nullptr;
 
             Render::TransformServiceFeatureProcessorInterface* m_transformServiceFeatureProcessor = nullptr;
 
             AZStd::list<MeshletsRenderObject*> m_renderObjectsMarkedForDeletion;
 
-            Data::Instance<RPI::Shader> m_renderShader;
-            Data::Instance<RPI::Shader> m_computeShader;
+            Data::Instance<JE::Render::RPI::Shader> m_renderShader;
+            Data::Instance<JE::Render::RPI::Shader> m_computeShader;
             RHI::GeometryView m_geometryView { RHI::MultiDevice::AllDevices };
         };
     } // namespace Meshlets

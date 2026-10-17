@@ -59,7 +59,7 @@ namespace OpenParticleSystemEditor
 
         m_detail = detail;
 
-        m_materialAssetWidget = new AssetWidget(MATERIAL_DESCRIPTION.toUtf8().data(), azrtti_typeid<AZ::RPI::MaterialAsset>(), this);
+        m_materialAssetWidget = new AssetWidget(MATERIAL_DESCRIPTION.toUtf8().data(), azrtti_typeid<JE::Render::RPI::MaterialAsset>(), this);
         m_materialPropertiesButton = new QPushButton(tr("Edit Material Properties..."), this);
         m_materialPropertiesButton->setToolTip(
             tr("Override material property values for this emitter only. Other emitters using the same "
@@ -68,8 +68,8 @@ namespace OpenParticleSystemEditor
         m_clearOverridesButton = new QPushButton(tr("Clear Overrides"), this);
         m_clearOverridesButton->setToolTip(tr("Clear all material property overrides for this emitter."));
         connect(m_clearOverridesButton, &QPushButton::clicked, this, &ComboBoxWidget::ClearMaterialOverrides);
-        m_modelAssetWidget = new AssetWidget(MESH_DESCRIPTION.toUtf8().data(), azrtti_typeid<AZ::RPI::ModelAsset>(), this);
-        m_skeletonModelAssetWidget = new AssetWidget(MESH_DESCRIPTION.toUtf8().data(), azrtti_typeid<AZ::RPI::ModelAsset>(), this);
+        m_modelAssetWidget = new AssetWidget(MESH_DESCRIPTION.toUtf8().data(), azrtti_typeid<JE::Render::RPI::ModelAsset>(), this);
+        m_skeletonModelAssetWidget = new AssetWidget(MESH_DESCRIPTION.toUtf8().data(), azrtti_typeid<JE::Render::RPI::ModelAsset>(), this);
         
         SetAssetWidget(&detail->m_material, &detail->m_model, &detail->m_skeletonModel);
         SetAssetWidgetVisible();
@@ -218,9 +218,9 @@ namespace OpenParticleSystemEditor
     }
 
     void ComboBoxWidget::SetAssetWidget(
-        AZ::Data::Asset<AZ::RPI::MaterialAsset>* materialAsset,
-        AZ::Data::Asset<AZ::RPI::ModelAsset>* modelAsset,
-        AZ::Data::Asset<AZ::RPI::ModelAsset>* skeletonModelAsset)
+        AZ::Data::Asset<JE::Render::RPI::MaterialAsset>* materialAsset,
+        AZ::Data::Asset<JE::Render::RPI::ModelAsset>* modelAsset,
+        AZ::Data::Asset<JE::Render::RPI::ModelAsset>* skeletonModelAsset)
     {
         EffectorInspector* inspector = dynamic_cast<EffectorInspector*>(m_parent);
         AZStd::string busWidgetName = "";
@@ -237,7 +237,7 @@ namespace OpenParticleSystemEditor
         m_materialAssetWidget->SetOnAssetSelectionChangedCallback(
             [this, busWidgetName, materialAsset](AZ::Data::AssetId newId)
             {
-                *materialAsset = AZ::Data::AssetManager::Instance().GetAsset<AZ::RPI::MaterialAsset>(newId, AZ::Data::AssetLoadBehavior::PreLoad);
+                *materialAsset = AZ::Data::AssetManager::Instance().GetAsset<JE::Render::RPI::MaterialAsset>(newId, AZ::Data::AssetLoadBehavior::PreLoad);
                 // OnMaterialChanged syncs the detail onto the emitter and prunes overrides that the new
                 // material does not have, so the panel is rebuilt after that rather than before.
                 Q_EMIT(OnMaterialChanged());
@@ -249,7 +249,7 @@ namespace OpenParticleSystemEditor
             [this, busWidgetName, modelAsset](AZ::Data::AssetId newId)
             {
                 *modelAsset =
-                    AZ::Data::AssetManager::Instance().GetAsset<AZ::RPI::ModelAsset>(newId, AZ::Data::AssetLoadBehavior::PreLoad);
+                    AZ::Data::AssetManager::Instance().GetAsset<JE::Render::RPI::ModelAsset>(newId, AZ::Data::AssetLoadBehavior::PreLoad);
                 Q_EMIT(OnModelChanged());
                 EBUS_EVENT_ID(busWidgetName, OpenParticleSystemEditor::ParticleDocumentRequestBus, NotifyParticleSourceDataModified);
             });
@@ -258,7 +258,7 @@ namespace OpenParticleSystemEditor
              [this, busWidgetName, skeletonModelAsset](AZ::Data::AssetId newId)
             {
                  *skeletonModelAsset =
-                     AZ::Data::AssetManager::Instance().GetAsset<AZ::RPI::ModelAsset>(newId, AZ::Data::AssetLoadBehavior::PreLoad);
+                     AZ::Data::AssetManager::Instance().GetAsset<JE::Render::RPI::ModelAsset>(newId, AZ::Data::AssetLoadBehavior::PreLoad);
                  Q_EMIT(OnSkeletonModelChanged());
                  EBUS_EVENT_ID(busWidgetName, OpenParticleSystemEditor::ParticleDocumentRequestBus, NotifyParticleSourceDataModified);
             });

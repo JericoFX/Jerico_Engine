@@ -12,7 +12,7 @@
 #include <AzCore/std/string/string.h>
 #include <AzCore/std/containers/unordered_map.h>
 #include <AzCore/Memory/SystemAllocator.h>
-#include <Atom/RPI.Edit/Shader/ShaderVariantListSourceData.h>
+#include <JE/Editor/Render/RPI/Edit/Shader/ShaderVariantListSourceData.h>
 
 namespace AZ
 {
@@ -47,15 +47,15 @@ namespace JE::Assets::RenderBuilders
 
             static constexpr const char* Extension = "hashedvariantbatch";
 
-            AZ::RPI::ShaderVariantListSourceData::VariantInfo m_variantInfo;
+            JE::Render::RPI::ShaderVariantListSourceData::VariantInfo m_variantInfo;
             size_t m_hash = 0; // Hash of all the data in @m_variantInfo
 
             //! Hash combines all the data in @optionValues.
-            static JE_RENDER_ASSET_BUILDERS_API size_t HashCombineShaderOptionValues(size_t startingHash, const AZ::RPI::ShaderOptionValuesSourceData& optionValues);
+            static JE_RENDER_ASSET_BUILDERS_API size_t HashCombineShaderOptionValues(size_t startingHash, const JE::Render::RPI::ShaderOptionValuesSourceData& optionValues);
 
             //! Hash combines the result of a previous call to HashCombineShaderOptionValues, which is passed to this function
             //! in @optionValuesHash argument, with the rest of the data in @variantInfo.
-            static size_t CalculateHash(size_t optionValuesHash, const AZ::RPI::ShaderVariantListSourceData::VariantInfo& variantInfo);
+            static size_t CalculateHash(size_t optionValuesHash, const JE::Render::RPI::ShaderVariantListSourceData::VariantInfo& variantInfo);
 
             //! Same as above, but uses this.m_variantInfo and stores the result in this.m_hash.
             void CalculateHash(size_t optionValuesHash);

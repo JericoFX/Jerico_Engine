@@ -16,19 +16,19 @@
 #include <Atom/RHI.Reflect/InputStreamLayoutBuilder.h>
 #include <Atom/RHI/RHISystemInterface.h>
 #include <Atom/RHI/RHIUtils.h>
-#include <Atom/RPI.Public/AssetQuality.h>
-#include <Atom/RPI.Public/Culling.h>
-#include <Atom/RPI.Public/Model/ModelLodUtils.h>
-#include <Atom/RPI.Public/Model/ModelTagSystemComponent.h>
-#include <Atom/RPI.Public/RPIUtils.h>
-#include <Atom/RPI.Public/Scene.h>
+#include <JE/Render/RPI/Public/AssetQuality.h>
+#include <JE/Render/RPI/Public/Culling.h>
+#include <JE/Render/RPI/Public/Model/ModelLodUtils.h>
+#include <JE/Render/RPI/Public/Model/ModelTagSystemComponent.h>
+#include <JE/Render/RPI/Public/RPIUtils.h>
+#include <JE/Render/RPI/Public/Scene.h>
 #include <Mesh/MeshFeatureProcessor.h>
 #include <Mesh/StreamBufferViewsBuilder.h>
 
 #include <Atom/Utils/StableDynamicArray.h>
 #include <ReflectionProbe/ReflectionProbeFeatureProcessor.h>
 
-#include <Atom/RPI.Reflect/Model/ModelAssetCreator.h>
+#include <JE/Render/RPI/Reflect/Model/ModelAssetCreator.h>
 
 #include <AzFramework/Asset/AssetSystemBus.h>
 
@@ -97,11 +97,11 @@ namespace AZ
             m_rayTracingFeatureProcessor = GetParentScene()->GetFeatureProcessor<RayTracingFeatureProcessor>();
             m_deferredMaterialFeatureProcessor = GetParentScene()->GetFeatureProcessor<DeferredMaterialFeatureProcessorInterface>();
             m_reflectionProbeFeatureProcessor = GetParentScene()->GetFeatureProcessor<ReflectionProbeFeatureProcessor>();
-            m_handleGlobalShaderOptionUpdate = RPI::ShaderSystemInterface::GlobalShaderOptionUpdatedEvent::Handler
+            m_handleGlobalShaderOptionUpdate = JE::Render::RPI::ShaderSystemInterface::GlobalShaderOptionUpdatedEvent::Handler
             {
-                [this](const AZ::Name&, RPI::ShaderOptionValue) { m_forceRebuildDrawPackets = true; }
+                [this](const AZ::Name&, JE::Render::RPI::ShaderOptionValue) { m_forceRebuildDrawPackets = true; }
             };
-            RPI::ShaderSystemInterface::Get()->Connect(m_handleGlobalShaderOptionUpdate);
+            JE::Render::RPI::ShaderSystemInterface::Get()->Connect(m_handleGlobalShaderOptionUpdate);
             EnableSceneNotification();
 
             m_meshInfoManager.Activate(GetParentScene());
@@ -241,7 +241,7 @@ namespace AZ
             const auto instanceManagerRanges = m_meshInstanceManager.GetParallelRanges();
             AZStd::vector<Job*> perInstanceGroupJobQueue;
             perInstanceGroupJobQueue.reserve(instanceManagerRanges.size());
-            RPI::Scene* scene = GetParentScene();
+            JE::Render::RPI::Scene* scene = GetParentScene();
             for (const auto& iteratorRange : instanceManagerRanges)
             {
                 const auto perInstanceGroupJobLambda = [this, scene, iteratorRange]() -> void
@@ -311,9 +311,9 @@ namespace AZ
                             // Unset per mesh shader options
                             if (removePerMeshShaderOptionFlags)
                             {
-                                for (RPI::MeshDrawPacketList& drawPacketList : modelDataIter->m_meshDrawPacketListsByLod)
+                                for (JE::Render::RPI::MeshDrawPacketList& drawPacketList : modelDataIter->m_meshDrawPacketListsByLod)
                                 {
-                                    for (RPI::MeshDrawPacket& drawPacket : drawPacketList)
+                                    for (JE::Render::RPI::MeshDrawPacket& drawPacket : drawPacketList)
                                     {
                                         m_flagRegistry->VisitTags(
                                             [&](AZ::Name shaderOption, [[maybe_unused]] FlagRegistry::TagType tag)
@@ -526,7 +526,7 @@ namespace AZ
                 desc.m_bufferName = "MeshInstanceDataBuffer";
                 desc.m_bufferSrgName = "m_instanceData";
                 desc.m_elementSize = sizeof(uint32_t);
-                desc.m_srgLayout = RPI::RPISystemInterface::Get()->GetViewSrgLayout().get();
+                desc.m_srgLayout = JE::Render::RPI::RPISystemInterface::Get()->GetViewSrgLayout().get();
 
                 m_perViewInstanceDataBufferHandlers.reserve(viewCount);
                 while (m_perViewInstanceDataBufferHandlers.size() < viewCount)
@@ -622,7 +622,7 @@ namespace AZ
 
 
         void MeshFeatureProcessor::AddVisibleObjectsToBuckets(
-            TaskGraph& addVisibleObjectsToBucketsTG, size_t viewIndex, const RPI::ViewPtr& view)
+            TaskGraph& addVisibleObjectsToBucketsTG, size_t viewIndex, const JE::Render::RPI::ViewPtr& view)
         {
             AZ_PROFILE_SCOPE(RPI, "MeshFeatureProcessor: AddVisibleObjectsToBuckets");
             size_t visibleObjectCount = view->GetVisibleObjectList().size();
@@ -650,11 +650,11 @@ namespace AZ
                         // Don't capture the shared_ptr because that causes incorrect ref counting when copying/moving the lambda
                         [this, viewPtr = view.get(), viewIndex, batchStart, currentBatchCount]()
                         {
-                            RPI::VisibleObjectListView visibilityList = viewPtr->GetVisibleObjectList();
+                            JE::Render::RPI::VisibleObjectListView visibilityList = viewPtr->GetVisibleObjectList();
                             AZStd::vector<InstanceGroupBucket>& currentViewInstanceGroupBuckets = m_perViewInstanceGroupBuckets[viewIndex];
                             for (size_t i = batchStart; i < batchStart + currentBatchCount; ++i)
                             {
-                                const RPI::VisibleObjectProperties& visibleObject = visibilityList[i];
+                                const JE::Render::RPI::VisibleObjectProperties& visibleObject = visibilityList[i];
                                 const ModelDataInstance::PostCullingInstanceDataList* postCullingInstanceDataList =
                                     static_cast<const ModelDataInstance::PostCullingInstanceDataList*>(visibleObject.m_userData);
 
@@ -717,7 +717,7 @@ namespace AZ
         }
 
         static void AddInstancedDrawPacketToView(
-            const RPI::ViewPtr& view,
+            const JE::Render::RPI::ViewPtr& view,
             size_t viewIndex,
             ModelDataInstance::InstanceGroupHandle instanceGroupHandle,
             float accumulatedDepth,
@@ -771,7 +771,7 @@ namespace AZ
         }
 
         void MeshFeatureProcessor::BuildInstanceBufferAndDrawCalls(
-            TaskGraph& buildInstanceBufferTG, size_t viewIndex, const RPI::ViewPtr& view)
+            TaskGraph& buildInstanceBufferTG, size_t viewIndex, const JE::Render::RPI::ViewPtr& view)
         {
             AZStd::vector<TransformServiceFeatureProcessorInterface::ObjectId>& perViewInstanceData = m_perViewInstanceData[viewIndex];
             AZStd::vector<InstanceGroupBucket>& currentViewInstanceGroupBuckets = m_perViewInstanceGroupBuckets[viewIndex];
@@ -832,7 +832,7 @@ namespace AZ
             perViewInstanceData.resize_no_construct(currentBatchStart);
         }
 
-        void MeshFeatureProcessor::UpdateGPUInstanceBufferForView(size_t viewIndex, const RPI::ViewPtr& view)
+        void MeshFeatureProcessor::UpdateGPUInstanceBufferForView(size_t viewIndex, const JE::Render::RPI::ViewPtr& view)
         {
             AZ_PROFILE_SCOPE(RPI, "MeshFeatureProcessor: UpdateGPUInstanceBufferForView");
             // Use the correct srg for the view
@@ -872,15 +872,15 @@ namespace AZ
 
                         if (!r_meshInstancingEnabled)
                         {
-                            for (RPI::MeshDrawPacketList& drawPacketList : modelHandle.m_meshDrawPacketListsByLod)
+                            for (JE::Render::RPI::MeshDrawPacketList& drawPacketList : modelHandle.m_meshDrawPacketListsByLod)
                             {
-                                for (RPI::MeshDrawPacket& drawPacket : drawPacketList)
+                                for (JE::Render::RPI::MeshDrawPacket& drawPacket : drawPacketList)
                                 {
                                     m_flagRegistry->VisitTags(
                                         [&](AZ::Name shaderOption, FlagRegistry::TagType tag)
                                         {
                                             bool shaderOptionValue = (modelHandle.m_cullable.m_shaderOptionFlags & tag.GetIndex()) > 0;
-                                            drawPacket.SetShaderOption(shaderOption, AZ::RPI::ShaderOptionValue(shaderOptionValue));
+                                            drawPacket.SetShaderOption(shaderOption, JE::Render::RPI::ShaderOptionValue(shaderOptionValue));
                                         });
                                     drawPacket.Update(*GetParentScene(), true);
                                 }
@@ -933,7 +933,7 @@ namespace AZ
                                     {
                                         bool shaderOptionValue = (instanceGroupDataIter->m_shaderOptionFlags & tag.GetIndex()) > 0;
                                         instanceGroupDataIter->m_drawPacket.SetShaderOption(
-                                            shaderOption, AZ::RPI::ShaderOptionValue(shaderOptionValue));
+                                            shaderOption, JE::Render::RPI::ShaderOptionValue(shaderOptionValue));
                                     }
                                     else
                                     {
@@ -993,7 +993,7 @@ namespace AZ
 
             if (descriptor.m_excludeFromReflectionCubeMaps)
             {
-                meshDataHandle->m_cullable.m_cullData.m_hideFlags |= RPI::View::UsageReflectiveCubeMap;
+                meshDataHandle->m_cullable.m_cullData.m_hideFlags |= JE::Render::RPI::View::UsageReflectiveCubeMap;
             }
 
             return meshDataHandle;
@@ -1018,13 +1018,13 @@ namespace AZ
 
         void MeshFeatureProcessor::SetDrawItemEnabled(const MeshHandle& meshHandle, RHI::DrawListTag drawListTag, bool enabled)
         {
-            AZ::RPI::MeshDrawPacketLods& drawPacketListByLod = meshHandle.IsValid() && !r_meshInstancingEnabled
+            JE::Render::RPI::MeshDrawPacketLods& drawPacketListByLod = meshHandle.IsValid() && !r_meshInstancingEnabled
                 ? ToModelDataInstance(meshHandle).m_meshDrawPacketListsByLod
                 : m_emptyDrawPacketLods;
 
-            for (AZ::RPI::MeshDrawPacketList& drawPacketList : drawPacketListByLod)
+            for (JE::Render::RPI::MeshDrawPacketList& drawPacketList : drawPacketListByLod)
             {
-                for (AZ::RPI::MeshDrawPacket& meshDrawPacket : drawPacketList)
+                for (JE::Render::RPI::MeshDrawPacket& meshDrawPacket : drawPacketList)
                 {
                     RHI::DrawPacket* drawPacket = meshDrawPacket.GetRHIDrawPacket();
 
@@ -1049,16 +1049,16 @@ namespace AZ
         {
             AZStd::string stringOutput = "\n------- MESH INFO -------\n";
 
-            AZ::RPI::MeshDrawPacketLods& drawPacketListByLod = meshHandle.IsValid() && !r_meshInstancingEnabled
+            JE::Render::RPI::MeshDrawPacketLods& drawPacketListByLod = meshHandle.IsValid() && !r_meshInstancingEnabled
                 ? ToModelDataInstance(meshHandle).m_meshDrawPacketListsByLod
                 : m_emptyDrawPacketLods;
 
             u32 lodCounter = 0;
-            for (AZ::RPI::MeshDrawPacketList& drawPacketList : drawPacketListByLod)
+            for (JE::Render::RPI::MeshDrawPacketList& drawPacketList : drawPacketListByLod)
             {
                 stringOutput += AZStd::string::format("--- Mesh Lod %u ---\n", lodCounter++);
                 u32 drawPacketCounter = 0;
-                for (AZ::RPI::MeshDrawPacket& meshDrawPacket : drawPacketList)
+                for (JE::Render::RPI::MeshDrawPacket& meshDrawPacket : drawPacketList)
                 {
                     RHI::DrawPacket* drawPacket = meshDrawPacket.GetRHIDrawPacket();
                     if (drawPacket)
@@ -1091,12 +1091,12 @@ namespace AZ
             return MeshFeatureProcessor::MeshHandle();
         }
 
-        Data::Instance<RPI::Model> MeshFeatureProcessor::GetModel(const MeshHandle& meshHandle) const
+        Data::Instance<JE::Render::RPI::Model> MeshFeatureProcessor::GetModel(const MeshHandle& meshHandle) const
         {
             return meshHandle.IsValid() ? ToModelDataInstance(meshHandle).m_model : nullptr;
         }
 
-        Data::Asset<RPI::ModelAsset> MeshFeatureProcessor::GetModelAsset(const MeshHandle& meshHandle) const
+        Data::Asset<JE::Render::RPI::ModelAsset> MeshFeatureProcessor::GetModelAsset(const MeshHandle& meshHandle) const
         {
             if (meshHandle.IsValid())
             {
@@ -1106,7 +1106,7 @@ namespace AZ
             return {};
         }
 
-        const RPI::MeshDrawPacketLods& MeshFeatureProcessor::GetDrawPackets(const MeshHandle& meshHandle) const
+        const JE::Render::RPI::MeshDrawPacketLods& MeshFeatureProcessor::GetDrawPackets(const MeshHandle& meshHandle) const
         {
             // This function is being deprecated. It's currently used to get draw packets so that we can print some
             // debug information about the draw packets in an imgui menu. But the ownership model for draw packets is changing.
@@ -1116,9 +1116,9 @@ namespace AZ
                                                                     : m_emptyDrawPacketLods;
         }
 
-        const AZStd::vector<Data::Instance<RPI::ShaderResourceGroup>>& MeshFeatureProcessor::GetObjectSrgs(const MeshHandle& meshHandle) const
+        const AZStd::vector<Data::Instance<JE::Render::RPI::ShaderResourceGroup>>& MeshFeatureProcessor::GetObjectSrgs(const MeshHandle& meshHandle) const
         {
-            static AZStd::vector<Data::Instance<RPI::ShaderResourceGroup>> staticEmptyList;
+            static AZStd::vector<Data::Instance<JE::Render::RPI::ShaderResourceGroup>> staticEmptyList;
             return meshHandle.IsValid() ? ToModelDataInstance(meshHandle).m_objectSrgList : staticEmptyList;
         }
 
@@ -1130,7 +1130,7 @@ namespace AZ
             }
         }
 
-        void MeshFeatureProcessor::SetCustomMaterials(const MeshHandle& meshHandle, const Data::Instance<RPI::Material>& material)
+        void MeshFeatureProcessor::SetCustomMaterials(const MeshHandle& meshHandle, const Data::Instance<JE::Render::RPI::Material>& material)
         {
             Render::CustomMaterialMap materials;
             materials[AZ::Render::DefaultCustomMaterialId] = { material };
@@ -1173,7 +1173,7 @@ namespace AZ
         {
             DispatchDrawItemList retList;
 
-            const AZ::RPI::MeshDrawPacketLods& drawPacketListByLod = GetDrawPackets(meshHandle);
+            const JE::Render::RPI::MeshDrawPacketLods& drawPacketListByLod = GetDrawPackets(meshHandle);
             const uint32_t lodCount = aznumeric_caster(drawPacketListByLod.size());
             if (lodIndex >= lodCount)
             {
@@ -1181,7 +1181,7 @@ namespace AZ
                 // a mesh is fully loaded from assets.
                 return retList;
             }
-            const AZ::RPI::MeshDrawPacketList& drawPacketList = drawPacketListByLod[lodIndex];
+            const JE::Render::RPI::MeshDrawPacketList& drawPacketList = drawPacketListByLod[lodIndex];
             const uint32_t meshCount = aznumeric_caster(drawPacketList.size());
             if (meshIndex >= meshCount)
             {
@@ -1190,7 +1190,7 @@ namespace AZ
                     lodIndex, meshIndex, meshCount);
                 return retList;
             }
-            const AZ::RPI::MeshDrawPacket& meshDrawPacket = drawPacketList[meshIndex];
+            const JE::Render::RPI::MeshDrawPacket& meshDrawPacket = drawPacketList[meshIndex];
             const RHI::DrawPacket* drawPacket = meshDrawPacket.GetRHIDrawPacket();
             const auto& shadersList = meshDrawPacket.GetActiveShaderList();
             if (drawPacket)
@@ -1216,7 +1216,7 @@ namespace AZ
                         auto& dispatchDrawItem = retList.back();
                         const auto& shaderAsset = shadersList[drawItemIdx].m_shader->GetAsset();
                         RHI::DispatchDirect dispatchDirect;
-                        RPI::GetComputeShaderNumThreads(shaderAsset, dispatchDirect);
+                        JE::Render::RPI::GetComputeShaderNumThreads(shaderAsset, dispatchDirect);
                         dispatchArgumentsSetupCB(lodIndex, meshIndex, drawItemIdx, drawItem, dispatchDirect);
                         InitializeDispatchItemFromDrawItem(dispatchDrawItem.m_distpatchItem, drawItem, dispatchDirect);
                     }
@@ -1383,7 +1383,7 @@ namespace AZ
 
             for (size_t modelLodIndex = 0; modelLodIndex < m_model->GetLodCount(); modelLodIndex++)
             {
-                RPI::ModelLod& modelLod = *m_model->GetLods()[modelLodIndex];
+                JE::Render::RPI::ModelLod& modelLod = *m_model->GetLods()[modelLodIndex];
                 const size_t meshCount = modelLod.GetMeshes().size();
                 MeshInfoManager& meshInfoManager = meshFeatureProcessor->GetMeshInfoManager();
                 auto& meshInfoIndices = m_meshInfoIndicesByLod[modelLodIndex];
@@ -1410,7 +1410,7 @@ namespace AZ
             }
         }
 
-        void MeshFeatureProcessor::SetMeshLodConfiguration(const MeshHandle& meshHandle, const RPI::Cullable::LodConfiguration& meshLodConfig)
+        void MeshFeatureProcessor::SetMeshLodConfiguration(const MeshHandle& meshHandle, const JE::Render::RPI::Cullable::LodConfiguration& meshLodConfig)
         {
             if (meshHandle.IsValid())
             {
@@ -1418,7 +1418,7 @@ namespace AZ
             }
         }
 
-        RPI::Cullable::LodConfiguration MeshFeatureProcessor::GetMeshLodConfiguration(const MeshHandle& meshHandle) const
+        JE::Render::RPI::Cullable::LodConfiguration MeshFeatureProcessor::GetMeshLodConfiguration(const MeshHandle& meshHandle) const
         {
             if (meshHandle.IsValid())
             {
@@ -1427,7 +1427,7 @@ namespace AZ
             else
             {
                 AZ_Assert(false, "Invalid mesh handle");
-                return { RPI::Cullable::LodType::Default, 0, 0.0f, 0.0f };
+                return { JE::Render::RPI::Cullable::LodType::Default, 0, 0.0f, 0.0f };
             }
         }
 
@@ -1457,11 +1457,11 @@ namespace AZ
                 modelData.m_descriptor.m_excludeFromReflectionCubeMaps = excludeFromReflectionCubeMaps;
                 if (excludeFromReflectionCubeMaps)
                 {
-                    modelData.m_cullable.m_cullData.m_hideFlags |= RPI::View::UsageReflectiveCubeMap;
+                    modelData.m_cullable.m_cullData.m_hideFlags |= JE::Render::RPI::View::UsageReflectiveCubeMap;
                 }
                 else
                 {
-                    modelData.m_cullable.m_cullData.m_hideFlags &= ~RPI::View::UsageReflectiveCubeMap;
+                    modelData.m_cullable.m_cullData.m_hideFlags &= ~JE::Render::RPI::View::UsageReflectiveCubeMap;
                 }
             }
         }
@@ -1584,8 +1584,8 @@ namespace AZ
             m_forceRebuildDrawPackets = true;
         }
 
-        void MeshFeatureProcessor::OnRenderPipelineChanged([[maybe_unused]] RPI::RenderPipeline* pipeline,
-            [[maybe_unused]] RPI::SceneNotification::RenderPipelineChangeType changeType)
+        void MeshFeatureProcessor::OnRenderPipelineChanged([[maybe_unused]] JE::Render::RPI::RenderPipeline* pipeline,
+            [[maybe_unused]] JE::Render::RPI::SceneNotification::RenderPipelineChangeType changeType)
         {
             m_forceRebuildDrawPackets = true;
         }
@@ -1633,7 +1633,7 @@ namespace AZ
             return m_fallbackMaterialManager;
         }
 
-        const Data::Instance<RPI::Buffer>& MeshFeatureProcessor::GetFallbackPBRMaterialBuffer() const
+        const Data::Instance<JE::Render::RPI::Buffer>& MeshFeatureProcessor::GetFallbackPBRMaterialBuffer() const
         {
             return m_fallbackMaterialManager.GetFallbackPBRMaterialBuffer();
         }
@@ -1712,13 +1712,13 @@ namespace AZ
             }
         }
 
-        const Data::Instance<RPI::ShaderResourceGroup>& MeshFeatureProcessor::GetDrawSrg(const MeshHandle& meshHandle,
+        const Data::Instance<JE::Render::RPI::ShaderResourceGroup>& MeshFeatureProcessor::GetDrawSrg(const MeshHandle& meshHandle,
             uint32_t lodIndex, uint32_t subMeshIndex,
             RHI::DrawListTag drawListTag, RHI::DrawFilterMask materialPipelineMask) const
         {
             if (!meshHandle.IsValid())
             {
-                return RPI::MeshDrawPacket::InvalidSrg;
+                return JE::Render::RPI::MeshDrawPacket::InvalidSrg;
             }
             // We need to get the DrawPacket, from the DrawPacket we can query the index of the DrawItem
             // that matches drawListTag & materialPipelineMask. We can use that index to fetch the DrawSrg
@@ -1727,19 +1727,19 @@ namespace AZ
             if (lodIndex >= aznumeric_cast<uint32_t>(meshDrawPacketsByLod.size()))
             {
                 AZ_Error("MeshFeatureProcessor", false, "%s lodIndex=%u is invalid.\n", __FUNCTION__, lodIndex);
-                return RPI::MeshDrawPacket::InvalidSrg;
+                return JE::Render::RPI::MeshDrawPacket::InvalidSrg;
             }
             auto& meshDrawPackets = meshDrawPacketsByLod[lodIndex];
             if (subMeshIndex >= meshDrawPackets.size())
             {
                 AZ_Error("MeshFeatureProcessor", false, "%s subMeshIndex=%u is invalid.\n", __FUNCTION__, subMeshIndex);
-                return RPI::MeshDrawPacket::InvalidSrg;
+                return JE::Render::RPI::MeshDrawPacket::InvalidSrg;
             }
             auto& meshDrawPacket = meshDrawPackets[subMeshIndex];
             auto drawItemIndex = meshDrawPacket.GetRHIDrawPacket()->GetDrawListIndex(drawListTag, materialPipelineMask);
             if (drawItemIndex < 0)
             {
-                return RPI::MeshDrawPacket::InvalidSrg;
+                return JE::Render::RPI::MeshDrawPacket::InvalidSrg;
             }
             return meshDrawPacket.GetDrawSrg(drawItemIndex);
         }
@@ -1764,7 +1764,7 @@ namespace AZ
             m_meshInfoManager.UpdateMeshInfoEntry(handle, updateFunction);
         }
 
-        const Data::Instance<RPI::Buffer>& MeshFeatureProcessor::GetMeshInfoBuffer() const
+        const Data::Instance<JE::Render::RPI::Buffer>& MeshFeatureProcessor::GetMeshInfoBuffer() const
         {
             return m_meshInfoManager.GetMeshInfoBuffer();
         }
@@ -1781,7 +1781,7 @@ namespace AZ
         }
 
         // ModelDataInstance::MeshLoader...
-        ModelDataInstance::MeshLoader::MeshLoader(const Data::Asset<RPI::ModelAsset>& modelAsset, ModelDataInstance* parent)
+        ModelDataInstance::MeshLoader::MeshLoader(const Data::Asset<JE::Render::RPI::ModelAsset>& modelAsset, ModelDataInstance* parent)
             : m_modelAsset(modelAsset)
             , m_parent(parent)
         {
@@ -1812,11 +1812,11 @@ namespace AZ
 
             if (const auto& modelTags = m_modelAsset->GetTags(); !modelTags.empty())
             {
-                RPI::AssetQuality highestLodBias = RPI::AssetQualityLowest;
+                JE::Render::RPI::AssetQuality highestLodBias = JE::Render::RPI::AssetQualityLowest;
                 for (const AZ::Name& tag : modelTags)
                 {
-                    RPI::AssetQuality tagQuality = RPI::AssetQualityHighest;
-                    RPI::ModelTagBus::BroadcastResult(tagQuality, &RPI::ModelTagBus::Events::GetQuality, tag);
+                    JE::Render::RPI::AssetQuality tagQuality = JE::Render::RPI::AssetQualityHighest;
+                    JE::Render::RPI::ModelTagBus::BroadcastResult(tagQuality, &JE::Render::RPI::ModelTagBus::Events::GetQuality, tag);
 
                     highestLodBias = AZStd::min(highestLodBias, tagQuality);
                 }
@@ -1830,7 +1830,7 @@ namespace AZ
 
                 for (const AZ::Name& tag : modelTags)
                 {
-                    RPI::ModelTagBus::Broadcast(&RPI::ModelTagBus::Events::RegisterAsset, tag, m_modelAsset->GetId());
+                    JE::Render::RPI::ModelTagBus::Broadcast(&JE::Render::RPI::ModelTagBus::Events::RegisterAsset, tag, m_modelAsset->GetId());
                 }
             }
             else
@@ -1838,29 +1838,29 @@ namespace AZ
                 m_parent->m_lodBias = 0;
             }
 
-            Data::Instance<RPI::Model> model;
+            Data::Instance<JE::Render::RPI::Model> model;
             // Check if a requires cloning callback got set and if so check if cloning the model asset is requested.
             if (m_parent->m_descriptor.m_requiresCloneCallback && m_parent->m_descriptor.m_requiresCloneCallback(m_modelAsset))
             {
                 // Clone the model asset to force create another model instance.
                 AZ::Data::AssetId newId(AZ::Uuid::CreateRandom(), /*subId=*/0);
-                Data::Asset<RPI::ModelAsset> clonedAsset;
+                Data::Asset<JE::Render::RPI::ModelAsset> clonedAsset;
                 // Assume cloned models will involve some kind of geometry deformation
                 m_parent->m_flags.m_isAlwaysDynamic = true;
-                if (AZ::RPI::ModelAssetCreator::Clone(m_modelAsset, clonedAsset, newId))
+                if (JE::Render::RPI::ModelAssetCreator::Clone(m_modelAsset, clonedAsset, newId))
                 {
-                    model = RPI::Model::FindOrCreate(clonedAsset);
+                    model = JE::Render::RPI::Model::FindOrCreate(clonedAsset);
                 }
                 else
                 {
                     AZ_Error("ModelDataInstance", false, "Cannot clone model for '%s'. Cloth simulation results won't be individual per entity.", m_modelAsset->GetName().GetCStr());
-                    model = RPI::Model::FindOrCreate(m_modelAsset);
+                    model = JE::Render::RPI::Model::FindOrCreate(m_modelAsset);
                 }
             }
             else
             {
                 // Static mesh, no cloth buffer present.
-                model = RPI::Model::FindOrCreate(m_modelAsset);
+                model = JE::Render::RPI::Model::FindOrCreate(m_modelAsset);
             }
 
             if (model)
@@ -1933,7 +1933,7 @@ namespace AZ
         {
             if (assetId == m_modelAsset.GetId())
             {
-                Data::Asset<RPI::ModelAsset> modelAssetReference = m_modelAsset;
+                Data::Asset<JE::Render::RPI::ModelAsset> modelAssetReference = m_modelAsset;
 
                 // If the asset was modified, reload it. This will also cause a model to change back to the default missing
                 // asset if it was removed, and it will replace the default missing asset with the real asset if it was added.
@@ -2013,14 +2013,14 @@ namespace AZ
         void ModelDataInstance::ReInit(MeshFeatureProcessor* meshFeatureProcessor)
         {
             CustomMaterialMap customMaterials = m_descriptor.m_customMaterials;
-            const Data::Instance<RPI::Model> model = m_model;
+            const Data::Instance<JE::Render::RPI::Model> model = m_model;
             DeInit(meshFeatureProcessor);
             m_descriptor.m_customMaterials = customMaterials;
             m_model = model;
             QueueInit(m_model);
         }
 
-        void ModelDataInstance::QueueInit(const Data::Instance<RPI::Model>& model)
+        void ModelDataInstance::QueueInit(const Data::Instance<JE::Render::RPI::Model>& model)
         {
             m_model = model;
             m_flags.m_needsInit = true;
@@ -2074,7 +2074,7 @@ namespace AZ
         };
 
         static MeshInstancingSupport CanSupportInstancing(
-            Data::Instance<RPI::Material> material, bool useForwardPassIbleSpecular, const RHI::DrawListTag& transparentDrawListTag)
+            Data::Instance<JE::Render::RPI::Material> material, bool useForwardPassIbleSpecular, const RHI::DrawListTag& transparentDrawListTag)
         {
             MeshInstancingSupport result;
             if (useForwardPassIbleSpecular)
@@ -2094,13 +2094,13 @@ namespace AZ
             bool shadersSupportInstancing = true;
             bool isTransparent = false;
             material->ForAllShaderItems(
-                [&](const Name&, const RPI::ShaderCollection::Item& shaderItem)
+                [&](const Name&, const JE::Render::RPI::ShaderCollection::Item& shaderItem)
                 {
                     if (shaderItem.IsEnabled())
                     {
                         // Check to see if the shaderItem has the o_meshInstancingEnabled option. All shader items in the draw packet must
                         // support this option
-                        RPI::ShaderOptionIndex index = shaderItem.GetShaderOptionGroup().GetShaderOptionLayout()->FindShaderOptionIndex(
+                        JE::Render::RPI::ShaderOptionIndex index = shaderItem.GetShaderOptionGroup().GetShaderOptionLayout()->FindShaderOptionIndex(
                             s_o_meshInstancingIsEnabled_Name);
                         if (!index.IsValid())
                         {
@@ -2152,7 +2152,7 @@ namespace AZ
 
         void ModelDataInstance::UpdateMeshInfo(MeshFeatureProcessor* meshFeatureProcessor, size_t modelLodIndex)
         {
-            RPI::ModelLod& modelLod = *m_model->GetLods()[modelLodIndex];
+            JE::Render::RPI::ModelLod& modelLod = *m_model->GetLods()[modelLodIndex];
             const size_t meshCount = modelLod.GetMeshes().size();
             MeshInfoManager& meshInfoManager = meshFeatureProcessor->GetMeshInfoManager();
             if (m_meshInfoIndicesByLod.size() <= modelLodIndex)
@@ -2164,7 +2164,7 @@ namespace AZ
             {
                 meshInfoIndices.resize(meshCount);
                 const auto meshes = modelLod.GetMeshes();
-                const RPI::ModelLod::Mesh& mesh = meshes[meshIndex];
+                const JE::Render::RPI::ModelLod::Mesh& mesh = meshes[meshIndex];
                 if (meshInfoIndices[meshIndex].IsValid() == false)
                 {
                     meshInfoIndices[meshIndex] = meshInfoManager.AcquireMeshInfoEntry();
@@ -2237,7 +2237,7 @@ namespace AZ
                     }
                 }
                 // Remove meshInfo - entries in case the model has fewer meshes now
-                RPI::ModelLod& modelLod = *m_model->GetLods()[modelLodIndex];
+                JE::Render::RPI::ModelLod& modelLod = *m_model->GetLods()[modelLodIndex];
                 const auto meshCount = modelLod.GetMeshes().size();
                 if (meshInfoIndices.size() > meshCount)
                 {
@@ -2248,13 +2248,13 @@ namespace AZ
 
         void ModelDataInstance::BuildDrawPacketList(MeshFeatureProcessor* meshFeatureProcessor, size_t modelLodIndex)
         {
-            RPI::ModelLod& modelLod = *m_model->GetLods()[modelLodIndex];
+            JE::Render::RPI::ModelLod& modelLod = *m_model->GetLods()[modelLodIndex];
             const size_t meshCount = modelLod.GetMeshes().size();
             MeshInstanceManager& meshInstanceManager = meshFeatureProcessor->GetMeshInstanceManager();
 
             if (!r_meshInstancingEnabled)
             {
-                RPI::MeshDrawPacketList& drawPacketListOut = m_meshDrawPacketListsByLod[modelLodIndex];
+                JE::Render::RPI::MeshDrawPacketList& drawPacketListOut = m_meshDrawPacketListsByLod[modelLodIndex];
                 drawPacketListOut.clear();
                 drawPacketListOut.reserve(meshCount);
             }
@@ -2266,7 +2266,7 @@ namespace AZ
             for (size_t meshIndex = 0; meshIndex < meshCount; ++meshIndex)
             {
                 const auto meshes = modelLod.GetMeshes();
-                const RPI::ModelLod::Mesh& mesh = meshes[meshIndex];
+                const JE::Render::RPI::ModelLod::Mesh& mesh = meshes[meshIndex];
 
                 // Determine if there is a custom material specified for this submission
                 const CustomMaterialId customMaterialId(aznumeric_cast<AZ::u64>(modelLodIndex), mesh.m_materialSlotStableId);
@@ -2287,7 +2287,7 @@ namespace AZ
                     continue;
                 }
 
-                Data::Instance<RPI::ShaderResourceGroup> meshObjectSrg;
+                Data::Instance<JE::Render::RPI::ShaderResourceGroup> meshObjectSrg;
 
                 // Note: If the material uses the SceneMaterialSrg, the ObjectSRG holds the
                 // materialType and Instance-ID, and needs to be unique for each submesh.
@@ -2309,8 +2309,8 @@ namespace AZ
                 if (!meshObjectSrg)
                 {
                     auto& shaderAsset = material->GetAsset()->GetMaterialTypeAsset()->GetShaderAssetForObjectSrg(
-                        RPI::ShaderCollection::Item::DrawItemType::Raster);
-                    meshObjectSrg = RPI::ShaderResourceGroup::Create(shaderAsset, objectSrgLayout->GetName());
+                        JE::Render::RPI::ShaderCollection::Item::DrawItemType::Raster);
+                    meshObjectSrg = JE::Render::RPI::ShaderResourceGroup::Create(shaderAsset, objectSrgLayout->GetName());
                     if (!meshObjectSrg)
                     {
                         AZ_Warning("MeshFeatureProcessor", false, "Failed to create a new shader resource group, skipping.");
@@ -2398,18 +2398,18 @@ namespace AZ
                 if (!r_meshInstancingEnabled || instanceGroupInsertResult.m_instanceCount == 1)
                 {
                     // setup the mesh draw packet
-                    RPI::MeshDrawPacket drawPacket(
+                    JE::Render::RPI::MeshDrawPacket drawPacket(
                         modelLod, meshIndex, meshInfoIndex.GetIndex(), material, meshObjectSrg, customMaterialInfo.m_uvMapping);
 
                     // set the shader option to select forward pass IBL specular if necessary
-                    if (!drawPacket.SetShaderOption(s_o_meshUseForwardPassIBLSpecular_Name, AZ::RPI::ShaderOptionValue{ m_descriptor.m_useForwardPassIblSpecular }))
+                    if (!drawPacket.SetShaderOption(s_o_meshUseForwardPassIBLSpecular_Name, JE::Render::RPI::ShaderOptionValue{ m_descriptor.m_useForwardPassIblSpecular }))
                     {
                         AZ_Warning("MeshDrawPacket", false, "Failed to set o_meshUseForwardPassIBLSpecular on mesh draw packet");
                     }
 
                     if (instancingSupport.m_canSupportInstancing)
                     {
-                        drawPacket.SetShaderOption(s_o_meshInstancingIsEnabled_Name, AZ::RPI::ShaderOptionValue{ true });
+                        drawPacket.SetShaderOption(s_o_meshInstancingIsEnabled_Name, JE::Render::RPI::ShaderOptionValue{ true });
                     }
 
                     bool blockSilhouettes = false;
@@ -2466,7 +2466,7 @@ namespace AZ
             {
                 return;
             }
-            const AZStd::span<const Data::Instance<RPI::ModelLod>>& modelLods = m_model->GetLods();
+            const AZStd::span<const Data::Instance<JE::Render::RPI::ModelLod>>& modelLods = m_model->GetLods();
             if (modelLods.empty())
             {
                 return;
@@ -2499,7 +2499,7 @@ namespace AZ
                 return;
             }
 
-            const AZStd::span<const Data::Instance<RPI::ModelLod>>& modelLods = m_model->GetLods();
+            const AZStd::span<const Data::Instance<JE::Render::RPI::ModelLod>>& modelLods = m_model->GetLods();
             if (modelLods.empty())
             {
                 return;
@@ -2507,7 +2507,7 @@ namespace AZ
 
             // use the lowest LOD for raytracing
             uint32_t rayTracingLod = aznumeric_cast<uint32_t>(modelLods.size() - 1);
-            const Data::Instance<RPI::ModelLod>& modelLod = modelLods[rayTracingLod];
+            const Data::Instance<JE::Render::RPI::ModelLod>& modelLod = modelLods[rayTracingLod];
             const MeshInfoHandleList& lodMeshInfoIndices = m_meshInfoIndicesByLod[rayTracingLod];
 
             // setup the raytracing data for each sub-mesh
@@ -2516,7 +2516,7 @@ namespace AZ
             for (uint32_t meshIndex = 0; meshIndex < meshCount; ++meshIndex)
             {
                 const auto meshes = modelLod->GetMeshes();
-                const RPI::ModelLod::Mesh& mesh = meshes[meshIndex];
+                const JE::Render::RPI::ModelLod::Mesh& mesh = meshes[meshIndex];
 
                 // retrieve the material
                 const CustomMaterialId customMaterialId(rayTracingLod, mesh.m_materialSlotStableId);
@@ -2611,12 +2611,12 @@ namespace AZ
             return m_sortKey;
         }
 
-        void ModelDataInstance::SetMeshLodConfiguration(RPI::Cullable::LodConfiguration meshLodConfig)
+        void ModelDataInstance::SetMeshLodConfiguration(JE::Render::RPI::Cullable::LodConfiguration meshLodConfig)
         {
             m_cullable.m_lodData.m_lodConfiguration = meshLodConfig;
         }
 
-        RPI::Cullable::LodConfiguration ModelDataInstance::GetMeshLodConfiguration() const
+        JE::Render::RPI::Cullable::LodConfiguration ModelDataInstance::GetMeshLodConfiguration() const
         {
             return m_cullable.m_lodData.m_lodConfiguration;
         }
@@ -2658,8 +2658,8 @@ namespace AZ
             AZ_Assert(m_flags.m_cullableNeedsRebuild, "This function only needs to be called if the cullable to be rebuilt");
             AZ_Assert(m_model, "The model has not finished loading yet");
 
-            RPI::Cullable::CullData& cullData = m_cullable.m_cullData;
-            RPI::Cullable::LodData& lodData = m_cullable.m_lodData;
+            JE::Render::RPI::Cullable::CullData& cullData = m_cullable.m_cullData;
+            JE::Render::RPI::Cullable::LodData& lodData = m_cullable.m_lodData;
 
             const Aabb& localAabb = m_aabb;
             lodData.m_lodSelectionRadius = 0.5f * localAabb.GetExtents().GetMaxElement();
@@ -2677,7 +2677,7 @@ namespace AZ
             for (size_t lodIndex = 0; lodIndex < lodCount; ++lodIndex)
             {
                 //initialize the lod
-                RPI::Cullable::LodData::Lod& lod = lodData.m_lods[lodIndex];
+                JE::Render::RPI::Cullable::LodData::Lod& lod = lodData.m_lods[lodIndex];
                 // non-used lod (except if forced)
                 if (lodIndex < m_lodBias)
                 {
@@ -2713,8 +2713,8 @@ namespace AZ
                 lod.m_drawPackets.clear();
                 if (!r_meshInstancingEnabled)
                 {
-                    const RPI::MeshDrawPacketList& drawPacketList = m_meshDrawPacketListsByLod[lodIndex + m_lodBias];
-                    for (const RPI::MeshDrawPacket& drawPacket : drawPacketList)
+                    const JE::Render::RPI::MeshDrawPacketList& drawPacketList = m_meshDrawPacketListsByLod[lodIndex + m_lodBias];
+                    for (const JE::Render::RPI::MeshDrawPacket& drawPacket : drawPacketList)
                     {
                         // If mesh instancing is disabled, get the draw packets directly from this ModelDataInstance
                         const RHI::DrawPacket* rhiDrawPacket = drawPacket.GetRHIDrawPacket();
@@ -2748,10 +2748,10 @@ namespace AZ
                 }
             }
 
-            cullData.m_hideFlags = RPI::View::UsageNone;
+            cullData.m_hideFlags = JE::Render::RPI::View::UsageNone;
             if (m_descriptor.m_excludeFromReflectionCubeMaps)
             {
-                cullData.m_hideFlags |= RPI::View::UsageReflectiveCubeMap;
+                cullData.m_hideFlags |= JE::Render::RPI::View::UsageReflectiveCubeMap;
             }
 
 #ifdef AZ_CULL_DEBUG_ENABLED
@@ -2875,7 +2875,7 @@ namespace AZ
             m_flags.m_objectSrgNeedsUpdate = m_flags.m_objectSrgNeedsUpdate && (m_objectSrgList.size() == 0);
         }
 
-        bool ModelDataInstance::MaterialRequiresForwardPassIblSpecular(Data::Instance<RPI::Material> material) const
+        bool ModelDataInstance::MaterialRequiresForwardPassIblSpecular(Data::Instance<JE::Render::RPI::Material> material) const
         {
             bool requiresForwardPassIbl = false;
 
@@ -2884,14 +2884,14 @@ namespace AZ
             // property and look for that instead of the shader option.
             // [GFX TODO][ATOM-5040] Address Property Metadata Feedback Loop
             material->ForAllShaderItems(
-                [&](const Name&, const RPI::ShaderCollection::Item& shaderItem)
+                [&](const Name&, const JE::Render::RPI::ShaderCollection::Item& shaderItem)
                 {
                     if (shaderItem.IsEnabled())
                     {
-                        RPI::ShaderOptionIndex index = shaderItem.GetShaderOptionGroup().GetShaderOptionLayout()->FindShaderOptionIndex(Name{"o_materialUseForwardPassIBLSpecular"});
+                        JE::Render::RPI::ShaderOptionIndex index = shaderItem.GetShaderOptionGroup().GetShaderOptionLayout()->FindShaderOptionIndex(Name{"o_materialUseForwardPassIBLSpecular"});
                         if (index.IsValid())
                         {
-                            RPI::ShaderOptionValue value = shaderItem.GetShaderOptionGroup().GetValue(Name{"o_materialUseForwardPassIBLSpecular"});
+                            JE::Render::RPI::ShaderOptionValue value = shaderItem.GetShaderOptionGroup().GetValue(Name{"o_materialUseForwardPassIBLSpecular"});
                             if (value.GetIndex() == 1)
                             {
                                 requiresForwardPassIbl = true;
@@ -2925,7 +2925,7 @@ namespace AZ
             return CustomMaterialInfo{};
         }
 
-        void ModelDataInstance::HandleDrawPacketUpdate(uint32_t lodIndex, uint32_t meshIndex, RPI::MeshDrawPacket& meshDrawPacket)
+        void ModelDataInstance::HandleDrawPacketUpdate(uint32_t lodIndex, uint32_t meshIndex, JE::Render::RPI::MeshDrawPacket& meshDrawPacket)
         {
             // When the drawpacket is updated, the cullable must be rebuilt to use the latest draw packet
             m_flags.m_cullableNeedsRebuild = true;

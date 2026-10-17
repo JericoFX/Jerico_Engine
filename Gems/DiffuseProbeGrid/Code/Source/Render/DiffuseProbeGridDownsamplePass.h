@@ -7,8 +7,8 @@
  */
 #pragma once
 
-#include <Atom/RPI.Public/Pass/Pass.h>
-#include <Atom/RPI.Public/Pass/FullscreenTrianglePass.h>
+#include <JE/Render/RPI/Public/Pass/Pass.h>
+#include <JE/Render/RPI/Public/Pass/FullscreenTrianglePass.h>
 
 namespace AZ
 {
@@ -16,9 +16,9 @@ namespace AZ
     {
         //! This pass downsamples the scene for use by the DiffuseProbeGridRenderPass.
         class DiffuseProbeGridDownsamplePass
-            : public RPI::FullscreenTrianglePass
+            : public JE::Render::RPI::FullscreenTrianglePass
         {
-            using Base = RPI::FullscreenTrianglePass;
+            using Base = JE::Render::RPI::FullscreenTrianglePass;
             AZ_RPI_PASS(DiffuseProbeGridDownsamplePass);
 
         public:
@@ -26,10 +26,10 @@ namespace AZ
             AZ_CLASS_ALLOCATOR(Render::DiffuseProbeGridDownsamplePass, SystemAllocator);
 
             //! Creates a new pass without a PassTemplate
-            static RPI::Ptr<DiffuseProbeGridDownsamplePass> Create(const RPI::PassDescriptor& descriptor);
+            static JE::Render::RPI::Ptr<DiffuseProbeGridDownsamplePass> Create(const JE::Render::RPI::PassDescriptor& descriptor);
 
         private:
-            explicit DiffuseProbeGridDownsamplePass(const RPI::PassDescriptor& descriptor);
+            explicit DiffuseProbeGridDownsamplePass(const JE::Render::RPI::PassDescriptor& descriptor);
 
             // Pass behavior overrides...
             bool IsEnabled() const override;

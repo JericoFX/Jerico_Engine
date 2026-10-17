@@ -22,7 +22,7 @@
 #include "Transform.h"
 #include "AnimGraphPosePool.h"
 
-#include <Atom/RPI.Reflect/Model/ModelAsset.h>
+#include <JE/Render/RPI/Reflect/Model/ModelAsset.h>
 
 
 namespace Physics

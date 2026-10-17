@@ -11,9 +11,9 @@
 #include <Atom/Feature/SkinnedMesh/SkinnedMeshVertexStreams.h>
 #include <Atom/Feature/SkinnedMesh/SkinnedMeshInstance.h>
 #include <Atom/Feature/MorphTargets/MorphTargetInputBuffers.h>
-#include <Atom/RPI.Reflect/Model/ModelLodAsset.h>
-#include <Atom/RPI.Reflect/Model/MorphTargetMetaAsset.h>
-#include <Atom/RPI.Reflect/Material/MaterialAsset.h>
+#include <JE/Render/RPI/Reflect/Model/ModelLodAsset.h>
+#include <JE/Render/RPI/Reflect/Model/MorphTargetMetaAsset.h>
+#include <JE/Render/RPI/Reflect/Material/MaterialAsset.h>
 #include <Atom/RHI.Reflect/Base.h>
 
 #include <AzCore/Asset/AssetCommon.h>
@@ -28,12 +28,17 @@ namespace AZ
         class IndexBufferView;
     }
 
-    namespace RPI
-    {
+    }
+
+namespace JE::Render::RPI
+{
         class Model;
         class ShaderResourceGroup;
 
     }
+
+namespace AZ
+{
 
     namespace Render
     {
@@ -50,7 +55,7 @@ namespace AZ
             AZStd::vector<SrgNameViewPair> m_inputBufferViews;
 
             //! Inputs that are not used or modified during skinning, but are used for rendering during the static mesh pipeline
-            AZStd::vector<RPI::ModelLodAsset::Mesh::StreamBufferInfo> m_staticBufferInfo;
+            AZStd::vector<JE::Render::RPI::ModelLodAsset::Mesh::StreamBufferInfo> m_staticBufferInfo;
 
             //! Offset from the start of the stream in bytes for each output stream
             SkinnedMeshOutputVertexOffsets m_vertexOffsetsFromStreamStartInBytes;
@@ -72,12 +77,12 @@ namespace AZ
         public:
             //! Set all the input data for the skinned mesh lod from a model lod
             void CreateFromModelLod(
-                const Data::Asset<RPI::ModelAsset>& modelAsset,
-                const Data::Instance<RPI::Model>& model,
+                const Data::Asset<JE::Render::RPI::ModelAsset>& modelAsset,
+                const Data::Instance<JE::Render::RPI::Model>& model,
                 uint32_t lodIndex);
 
             //! Get the ModelLodAsset that was used to create this lod
-            Data::Asset<RPI::ModelLodAsset> GetModelLodAsset() const;
+            Data::Asset<JE::Render::RPI::ModelLodAsset> GetModelLodAsset() const;
 
             //! Get the number of vertices for the lod
             uint32_t GetVertexCount() const;
@@ -90,8 +95,8 @@ namespace AZ
             //! @param minWeight The minimum weight that might be applied to this morph target. It's possible for the weight of a morph target to be outside the 0-1 range. Defaults to 0
             //! @param maxWeight The maximum weight that might be applied to this morph target. It's possible for the weight of a morph target to be outside the 0-1 range. 
             void AddMorphTarget(
-                const RPI::MorphTargetMetaAsset::MorphTarget& morphTarget,
-                const RPI::BufferAssetView* morphBufferAssetView,
+                const JE::Render::RPI::MorphTargetMetaAsset::MorphTarget& morphTarget,
+                const JE::Render::RPI::BufferAssetView* morphBufferAssetView,
                 const AZStd::string& bufferNamePrefix,
                 float minWeight,
                 float maxWeight);
@@ -114,7 +119,7 @@ namespace AZ
                 uint32_t lodIndex,
                 uint32_t meshIndex,
                 const RHI::InputStreamLayout& inputLayout,
-                RPI::ModelLod::Mesh& mesh,
+                JE::Render::RPI::ModelLod::Mesh& mesh,
                 const RHI::StreamBufferIndices& streamIndices,
                 const char* modelName);
 
@@ -129,14 +134,14 @@ namespace AZ
             void CalculateMorphTargetIntegerEncodings();
 
             //! The lod asset from the underlying mesh
-            Data::Asset<RPI::ModelLodAsset> m_modelLodAsset;
-            Data::Instance<RPI::ModelLod> m_modelLod;
+            Data::Asset<JE::Render::RPI::ModelLodAsset> m_modelLodAsset;
+            Data::Instance<JE::Render::RPI::ModelLod> m_modelLod;
             
             //! Per-mesh data for the lod
             AZStd::vector<SkinnedSubMeshProperties> m_meshes;
 
             //! One BufferAsset for each static vertex stream. Not needed as input to the skinning shader, but used to create per-instance models as targets for skinning.
-            AZStd::vector<Data::Asset<RPI::BufferAsset>> m_staticBufferAssets;
+            AZStd::vector<Data::Asset<JE::Render::RPI::BufferAsset>> m_staticBufferAssets;
 
             //! Container with one MorphTargetMetaData per morph target that can potentially be applied to an instance of this lod
             AZStd::vector<MorphTargetComputeMetaData> m_morphTargetComputeMetaDatas;
@@ -158,13 +163,13 @@ namespace AZ
             ~SkinnedMeshInputBuffers();
 
             //! Create SkinnedMeshInputBuffers from a model
-            void CreateFromModelAsset(const Data::Asset<RPI::ModelAsset>& modelAsset);
+            void CreateFromModelAsset(const Data::Asset<JE::Render::RPI::ModelAsset>& modelAsset);
 
             //! Get the ModelAsset used to create the SkinnedMeshInputBuffers
-            Data::Asset<RPI::ModelAsset> GetModelAsset() const;
+            Data::Asset<JE::Render::RPI::ModelAsset> GetModelAsset() const;
 
             //! Get the Model used to as input to the skinning compute shader
-            Data::Instance<RPI::Model> GetModel() const;
+            Data::Instance<JE::Render::RPI::Model> GetModel() const;
 
             //! Get the number of meshes for the lod.
             uint32_t GetMeshCount(uint32_t lodIndex) const;
@@ -179,7 +184,7 @@ namespace AZ
             uint32_t GetVertexCount(uint32_t lodIndex, uint32_t meshIndex) const;
 
             //! Set the buffer views and vertex count on the given SRG
-            void SetBufferViewsOnShaderResourceGroup(uint32_t lodIndex, uint32_t meshIndex, const Data::Instance<RPI::ShaderResourceGroup>& perInstanceSRG);
+            void SetBufferViewsOnShaderResourceGroup(uint32_t lodIndex, uint32_t meshIndex, const Data::Instance<JE::Render::RPI::ShaderResourceGroup>& perInstanceSRG);
 
             //! Create a model and resource views into the SkinnedMeshOutputBuffer that can be used as a target for the skinned vertices
             AZStd::intrusive_ptr<SkinnedMeshInstance> CreateSkinnedMeshInstance() const;
@@ -208,8 +213,8 @@ namespace AZ
             //! @param maxWeight The maximum weight that might be applied to this morph target. It's possible for the weight of a morph target to be outside the 0-1 range.
             void AddMorphTarget(
                 uint32_t lodIndex,
-                const RPI::MorphTargetMetaAsset::MorphTarget& morphTarget,
-                const RPI::BufferAssetView* morphBufferAssetView,
+                const JE::Render::RPI::MorphTargetMetaAsset::MorphTarget& morphTarget,
+                const JE::Render::RPI::BufferAssetView* morphBufferAssetView,
                 const AZStd::string& bufferNamePrefix,
                 float minWeight,
                 float maxWeight);
@@ -218,9 +223,9 @@ namespace AZ
             //! and after all morph targets have been added
             void Finalize();
         private:
-            AZStd::fixed_vector<SkinnedMeshInputLod, RPI::ModelLodAsset::LodCountMax> m_lods;
-            Data::Asset<RPI::ModelAsset> m_modelAsset;
-            Data::Instance<RPI::Model> m_model;
+            AZStd::fixed_vector<SkinnedMeshInputLod, JE::Render::RPI::ModelLodAsset::LodCountMax> m_lods;
+            Data::Asset<JE::Render::RPI::ModelAsset> m_modelAsset;
+            Data::Instance<JE::Render::RPI::Model> m_model;
         };
     }// Render
 }// AZ

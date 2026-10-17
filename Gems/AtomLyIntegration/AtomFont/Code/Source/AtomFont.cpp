@@ -27,9 +27,9 @@
 #include <AzCore/Interface/Interface.h>
 #include <AzFramework/Archive/IArchive.h>
 
-#include <Atom/RPI.Public/RPIUtils.h>
-#include <Atom/RPI.Public/DynamicDraw/DynamicDrawInterface.h>
-#include <Atom/RPI.Reflect/Asset/AssetUtils.h>
+#include <JE/Render/RPI/Public/RPIUtils.h>
+#include <JE/Render/RPI/Public/DynamicDraw/DynamicDrawInterface.h>
+#include <JE/Render/RPI/Reflect/Asset/AssetUtils.h>
 
 // Static member definitions
 const AZ::AtomFont::GlyphSize AZ::AtomFont::defaultGlyphSize = AZ::AtomFont::GlyphSize(ICryFont::defaultGlyphSizeX, ICryFont::defaultGlyphSizeY);
@@ -348,7 +348,7 @@ AZ::AtomFont::AtomFont([[maybe_unused]] ISystem* system)
 
     // Queue a load for the font per viewport dynamic draw context shader, and wait for it to load
     static const char* shaderFilepath = "Shaders/SimpleTextured.azshader";
-    Data::Asset<RPI::ShaderAsset> shaderAsset = RPI::AssetUtils::LoadCriticalAsset<RPI::ShaderAsset>(shaderFilepath, RPI::AssetUtils::TraceLevel::Assert);
+    Data::Asset<JE::Render::RPI::ShaderAsset> shaderAsset = JE::Render::RPI::AssetUtils::LoadCriticalAsset<JE::Render::RPI::ShaderAsset>(shaderFilepath, JE::Render::RPI::AssetUtils::TraceLevel::Assert);
     shaderAsset.QueueLoad();
     Data::AssetBus::Handler::BusConnect(shaderAsset.GetId());
 
@@ -826,7 +826,7 @@ XmlNodeRef AZ::AtomFont::LoadFontFamilyXml(const char* fontFamilyName, AZStd::st
     // Fonts will fail engine load if not fully compiled, so ensure that its present if possible.
     // This should never actually go wrong unless the AP cannot be run at all or all assets are missing.
     // This is essentally a no-op in release builds.
-    AZ::RPI::AssetUtils::TryToCompileAsset(outputFullPath.c_str(), AZ::RPI::AssetUtils::TraceLevel::None);
+    JE::Render::RPI::AssetUtils::TryToCompileAsset(outputFullPath.c_str(), JE::Render::RPI::AssetUtils::TraceLevel::None);
     XmlNodeRef root = SafeLoadXmlFromFile(outputFullPath);
 
     // When parsing a <font> tag in markup, only the font name is given and 
@@ -844,7 +844,7 @@ XmlNodeRef AZ::AtomFont::LoadFontFamilyXml(const char* fontFamilyName, AZStd::st
         // Try: "fonts/fontName.fontfamily"
         outputDirectory = AZStd::string("fonts/");
         outputFullPath = outputDirectory + fileNoExtension + fileExtension;
-        AZ::RPI::AssetUtils::TryToCompileAsset(outputFullPath.c_str(), AZ::RPI::AssetUtils::TraceLevel::None);
+        JE::Render::RPI::AssetUtils::TryToCompileAsset(outputFullPath.c_str(), JE::Render::RPI::AssetUtils::TraceLevel::None);
         root = SafeLoadXmlFromFile(outputFullPath);
 
         // Finally, try: "fonts/fontName/fontName.fontfamily"
@@ -852,7 +852,7 @@ XmlNodeRef AZ::AtomFont::LoadFontFamilyXml(const char* fontFamilyName, AZStd::st
         {
             outputDirectory = AZStd::string("fonts/") + fileNoExtension + "/";
             outputFullPath = outputDirectory + fileNoExtension + fileExtension;
-            AZ::RPI::AssetUtils::TryToCompileAsset(outputFullPath.c_str(), AZ::RPI::AssetUtils::TraceLevel::None);
+            JE::Render::RPI::AssetUtils::TryToCompileAsset(outputFullPath.c_str(), JE::Render::RPI::AssetUtils::TraceLevel::None);
             root = SafeLoadXmlFromFile(outputFullPath);
         }
     }
@@ -862,21 +862,21 @@ XmlNodeRef AZ::AtomFont::LoadFontFamilyXml(const char* fontFamilyName, AZStd::st
 
 void AZ::AtomFont::OnAssetReady(Data::Asset<Data::AssetData> asset)
 {
-    Data::Asset<RPI::ShaderAsset> shaderAsset = asset;
+    Data::Asset<JE::Render::RPI::ShaderAsset> shaderAsset = asset;
 
     JE::Render::Integration::PerViewportDynamicDraw::Get()->RegisterDynamicDrawContext(
         AZ::Name(AZ::AtomFontDynamicDrawContextName),
-        [shaderAsset](RPI::Ptr<RPI::DynamicDrawContext> drawContext)
+        [shaderAsset](JE::Render::RPI::Ptr<JE::Render::RPI::DynamicDrawContext> drawContext)
         {
             AZ_Assert(shaderAsset->IsReady(), "Attempting to register the AtomFont"
                 " dynamic draw context before the shader asset is loaded. The shader should be loaded first"
                 " to avoid a blocking asset load and potential deadlock, since the DynamicDrawContext lambda"
                 " will be executed during scene processing and there may be multiple scenes executing in parallel.");
 
-            Data::Instance<RPI::Shader> shader = RPI::Shader::FindOrCreate(shaderAsset);
-            AZ::RPI::ShaderOptionList shaderOptions;
-            shaderOptions.push_back(AZ::RPI::ShaderOption(AZ::Name("o_useColorChannels"), AZ::Name("false")));
-            shaderOptions.push_back(AZ::RPI::ShaderOption(AZ::Name("o_clamp"), AZ::Name("true")));
+            Data::Instance<JE::Render::RPI::Shader> shader = JE::Render::RPI::Shader::FindOrCreate(shaderAsset);
+            JE::Render::RPI::ShaderOptionList shaderOptions;
+            shaderOptions.push_back(JE::Render::RPI::ShaderOption(AZ::Name("o_useColorChannels"), AZ::Name("false")));
+            shaderOptions.push_back(JE::Render::RPI::ShaderOption(AZ::Name("o_clamp"), AZ::Name("true")));
             drawContext->InitShaderWithVariant(shader, &shaderOptions);
             drawContext->InitVertexFormat(
                 {

@@ -1029,7 +1029,7 @@ namespace PhysX
     AZ::Data::Asset<AZ::Data::AssetData> EditorMeshColliderComponent::GetRenderMeshAsset() const
     {
         // Try Atom MeshComponent
-        AZ::Data::Asset<AZ::RPI::ModelAsset> atomMeshAsset;
+        AZ::Data::Asset<JE::Render::RPI::ModelAsset> atomMeshAsset;
         AZ::Render::MeshComponentRequestBus::EventResult(atomMeshAsset, GetEntityId(),
             &AZ::Render::MeshComponentRequestBus::Events::GetModelAsset);
 
@@ -1110,8 +1110,8 @@ namespace PhysX
     }
 
     void EditorMeshColliderComponent::OnModelReady(
-        [[maybe_unused]] const AZ::Data::Asset<AZ::RPI::ModelAsset>& modelAsset,
-        [[maybe_unused]] const AZ::Data::Instance<AZ::RPI::Model>& model)
+        [[maybe_unused]] const AZ::Data::Asset<JE::Render::RPI::ModelAsset>& modelAsset,
+        [[maybe_unused]] const AZ::Data::Instance<JE::Render::RPI::Model>& model)
     {
         if (ShouldUpdateCollisionMeshFromRender())
         {

@@ -11,7 +11,7 @@
 #include <AzCore/Serialization/SerializeContext.h>
 #include <AzFramework/Windowing/WindowBus.h>
 #include <Atom/Feature/ImGui/SystemBus.h>
-#include <Atom/RPI.Public/ViewportContext.h>
+#include <JE/Render/RPI/Public/ViewportContext.h>
 
 #if defined(IMGUI_ENABLED)
 #include <JE/Debug/ImGui/ImGuiBus.h>
@@ -46,10 +46,10 @@ namespace JE::Render::Debug
 
         void ImguiAtomSystemComponent::Activate()
         {
-            auto atomViewportRequests = AZ::RPI::ViewportContextRequests::Get();
+            auto atomViewportRequests = JE::Render::RPI::ViewportContextRequests::Get();
             AZ_Assert(atomViewportRequests, "AtomViewportContextRequests interface not found!");
             const AZ::Name contextName = atomViewportRequests->GetDefaultViewportContextName();
-            AZ::RPI::ViewportContextNotificationBus::Handler::BusConnect(contextName);
+            JE::Render::RPI::ViewportContextNotificationBus::Handler::BusConnect(contextName);
 
             m_initialized = false;
             InitializeViewportSizeIfNeeded();
@@ -57,7 +57,7 @@ namespace JE::Render::Debug
 
         void ImguiAtomSystemComponent::Deactivate()
         {
-            AZ::RPI::ViewportContextNotificationBus::Handler::BusDisconnect();
+            JE::Render::RPI::ViewportContextNotificationBus::Handler::BusDisconnect();
         }
 
         void ImguiAtomSystemComponent::InitializeViewportSizeIfNeeded()
@@ -67,7 +67,7 @@ namespace JE::Render::Debug
             {
                 return;
             }
-            auto atomViewportRequests = AZ::Interface<AZ::RPI::ViewportContextRequestsInterface>::Get();
+            auto atomViewportRequests = AZ::Interface<JE::Render::RPI::ViewportContextRequestsInterface>::Get();
             auto defaultViewportContext = atomViewportRequests->GetDefaultViewportContext();
             if (defaultViewportContext)
             {
@@ -104,7 +104,7 @@ namespace JE::Render::Debug
                 // Let our ImguiAtomSystemComponent know once we successfully connect and update the viewport size.
                 if (!m_initialized)
                 {
-                    auto atomViewportRequests = AZ::RPI::ViewportContextRequests::Get();
+                    auto atomViewportRequests = JE::Render::RPI::ViewportContextRequests::Get();
                     auto defaultViewportContext = atomViewportRequests->GetDefaultViewportContext();
                     OnViewportDpiScalingChanged(defaultViewportContext->GetDpiScalingFactor());
                     m_initialized = true;

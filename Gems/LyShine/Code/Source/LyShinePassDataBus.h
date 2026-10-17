@@ -10,9 +10,9 @@
 #include <AzCore/Instance/Instance.h>
 #include <AzCore/Memory/SystemAllocator.h>
 #include <AzCore/std/containers/vector.h>
-#include <Atom/RPI.Public/Base.h>
+#include <JE/Render/RPI/Public/Base.h>
 
-namespace AZ
+namespace JE::Render
 {
     namespace RPI
     {
@@ -23,8 +23,8 @@ namespace AZ
 
 namespace LyShine
 {
-    using AttachmentImages = AZStd::vector<AZ::Data::Instance<AZ::RPI::AttachmentImage>>;
-    using AttachmentImageAndDependentsPair = AZStd::pair<AZ::Data::Instance<AZ::RPI::AttachmentImage>, AttachmentImages>;
+    using AttachmentImages = AZStd::vector<AZ::Data::Instance<JE::Render::RPI::AttachmentImage>>;
+    using AttachmentImageAndDependentsPair = AZStd::pair<AZ::Data::Instance<JE::Render::RPI::AttachmentImage>, AttachmentImages>;
     using AttachmentImagesAndDependencies = AZStd::vector<AttachmentImageAndDependentsPair>;
 }
 
@@ -34,16 +34,16 @@ class LyShinePassRequests
 public:
     static const AZ::EBusHandlerPolicy HandlerPolicy = AZ::EBusHandlerPolicy::Single;
     static const AZ::EBusAddressPolicy AddressPolicy = AZ::EBusAddressPolicy::ById;
-    using BusIdType = AZ::RPI::SceneId;
+    using BusIdType = JE::Render::RPI::SceneId;
 
     //! Called when the number of render targets has changed and the LyShine pass needs to rebuild
     virtual void RebuildRttChildren() = 0;
 
     //! Returns a render to texture pass based on render target name
-    virtual AZ::RPI::RasterPass* GetRttPass(const AZStd::string& name) = 0;
+    virtual JE::Render::RPI::RasterPass* GetRttPass(const AZStd::string& name) = 0;
 
     //! Returns the final pass that renders the UI canvas contents
-    virtual AZ::RPI::RasterPass* GetUiCanvasPass() = 0;
+    virtual JE::Render::RPI::RasterPass* GetUiCanvasPass() = 0;
 };
 using LyShinePassRequestBus = AZ::EBus<LyShinePassRequests>;
 
@@ -53,7 +53,7 @@ class LyShinePassDataRequests
 public:
     static const AZ::EBusHandlerPolicy HandlerPolicy = AZ::EBusHandlerPolicy::Single;
     static const AZ::EBusAddressPolicy AddressPolicy = AZ::EBusAddressPolicy::ById;
-    using BusIdType = AZ::RPI::SceneId;
+    using BusIdType = JE::Render::RPI::SceneId;
 
     //! Get a list of render targets that require a render to texture pass, and any
     //! other render targets that are drawn on them

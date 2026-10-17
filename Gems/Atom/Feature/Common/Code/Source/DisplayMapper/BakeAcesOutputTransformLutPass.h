@@ -14,10 +14,10 @@
 #include <Atom/RHI/ScopeProducer.h>
 
 #include <Atom/RHI/ImagePool.h>
-#include <Atom/RPI.Public/Pass/ComputePass.h>
-#include <Atom/RPI.Public/Pass/FullscreenTrianglePass.h>
-#include <Atom/RPI.Public/Shader/Shader.h>
-#include <Atom/RPI.Public/Shader/ShaderResourceGroup.h>
+#include <JE/Render/RPI/Public/Pass/ComputePass.h>
+#include <JE/Render/RPI/Public/Pass/FullscreenTrianglePass.h>
+#include <JE/Render/RPI/Public/Shader/Shader.h>
+#include <JE/Render/RPI/Public/Shader/ShaderResourceGroup.h>
 
 #include <Atom/Feature/ACES/AcesDisplayMapperFeatureProcessor.h>
 
@@ -33,24 +33,24 @@ namespace AZ
          *  This pass the RRT and ODT components of the ACES pipeline into a LUT.
          */
         class BakeAcesOutputTransformLutPass final
-            : public RPI::ComputePass
+            : public JE::Render::RPI::ComputePass
         {
             AZ_RPI_PASS(BakeAcesOutputTransformLutPass);
 
         public:
-            AZ_RTTI(BakeAcesOutputTransformLutPass, "{383C28CD-D744-4B48-A30D-086EF66E7BFB}", RPI::ComputePass);
+            AZ_RTTI(BakeAcesOutputTransformLutPass, "{383C28CD-D744-4B48-A30D-086EF66E7BFB}", JE::Render::RPI::ComputePass);
             AZ_CLASS_ALLOCATOR(BakeAcesOutputTransformLutPass, SystemAllocator);
             virtual ~BakeAcesOutputTransformLutPass();
 
             /// Creates a DisplayMapperPass
-            static RPI::Ptr<BakeAcesOutputTransformLutPass> Create(const RPI::PassDescriptor& descriptor);
+            static JE::Render::RPI::Ptr<BakeAcesOutputTransformLutPass> Create(const JE::Render::RPI::PassDescriptor& descriptor);
 
             void SetDisplayBufferFormat(RHI::Format format);
 
             const ShaperParams& GetShaperParams() const;
 
         private:
-            explicit BakeAcesOutputTransformLutPass(const RPI::PassDescriptor& descriptor);
+            explicit BakeAcesOutputTransformLutPass(const JE::Render::RPI::PassDescriptor& descriptor);
 
             // Pass behavior overrides...
             void InitializeInternal() override;

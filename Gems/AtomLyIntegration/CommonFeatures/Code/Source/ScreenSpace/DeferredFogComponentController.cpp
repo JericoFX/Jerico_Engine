@@ -8,7 +8,7 @@
 
 #include <AzCore/RTTI/BehaviorContext.h>
 
-#include <Atom/RPI.Public/Scene.h>
+#include <JE/Render/RPI/Public/Scene.h>
 
 #include <ScreenSpace/DeferredFogComponentController.h>
 
@@ -73,7 +73,7 @@ namespace AZ
         {
             m_entityId = entityId;
 
-            PostProcessFeatureProcessorInterface* featureProcessor = RPI::Scene::GetFeatureProcessorForEntity<PostProcessFeatureProcessorInterface>(m_entityId);
+            PostProcessFeatureProcessorInterface* featureProcessor = JE::Render::RPI::Scene::GetFeatureProcessorForEntity<PostProcessFeatureProcessorInterface>(m_entityId);
             if (featureProcessor)
             {
                 m_postProcessInterface = featureProcessor->GetOrCreateSettingsInterface(m_entityId);

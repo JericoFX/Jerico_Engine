@@ -8,15 +8,15 @@
 #pragma once
 
 #include <AzCore/Memory/SystemAllocator.h>
-#include <Atom/RPI.Public/FeatureProcessor.h>
+#include <JE/Render/RPI/Public/FeatureProcessor.h>
 
 namespace AZ::Render
 {
     class SplashScreenFeatureProcessor
-        : public RPI::FeatureProcessor
+        : public JE::Render::RPI::FeatureProcessor
     {
     public:
-        AZ_RTTI(AZ::Render::SplashScreenFeatureProcessor, "{B89EDE58-2C59-4E17-A691-019F80227F8A}", AZ::RPI::FeatureProcessor);
+        AZ_RTTI(AZ::Render::SplashScreenFeatureProcessor, "{B89EDE58-2C59-4E17-A691-019F80227F8A}", JE::Render::RPI::FeatureProcessor);
         AZ_CLASS_ALLOCATOR(AZ::Render::SplashScreenFeatureProcessor, AZ::SystemAllocator, 0);
 
         static void Reflect(AZ::ReflectContext* context);
@@ -26,6 +26,6 @@ namespace AZ::Render
 
     private:
         // FeatureProcessor overrides
-        void AddRenderPasses(RPI::RenderPipeline* renderPipeline) override;
+        void AddRenderPasses(JE::Render::RPI::RenderPipeline* renderPipeline) override;
     };
 }

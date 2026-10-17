@@ -9,8 +9,8 @@
 #pragma once
 
 #include <Atom/Feature/CoreLights/PhotometricValue.h>
-#include <Atom/RPI.Public/Buffer/Buffer.h>
-#include <Atom/RPI.Public/FeatureProcessor.h>
+#include <JE/Render/RPI/Public/Buffer/Buffer.h>
+#include <JE/Render/RPI/Public/FeatureProcessor.h>
 
 namespace AZ
 {
@@ -20,10 +20,10 @@ namespace AZ
     {
         //! SimplePointLightFeatureProcessorInterface provides an interface to acquire, release, and update a point light.
         class SimplePointLightFeatureProcessorInterface
-            : public RPI::FeatureProcessor
+            : public JE::Render::RPI::FeatureProcessor
         {
         public:
-            AZ_RTTI(AZ::Render::SimplePointLightFeatureProcessorInterface, "{B6FABD69-ED5B-4D6C-8695-27CB95D13CE4}", AZ::RPI::FeatureProcessor);
+            AZ_RTTI(AZ::Render::SimplePointLightFeatureProcessorInterface, "{B6FABD69-ED5B-4D6C-8695-27CB95D13CE4}", JE::Render::RPI::FeatureProcessor);
 
             using LightHandle = RHI::Handle<uint16_t, class PointLight>;
             static constexpr PhotometricUnit PhotometricUnitType = PhotometricUnit::Candela;
@@ -48,7 +48,7 @@ namespace AZ
             //! Sets the lighting channel mask
             virtual void SetLightingChannelMask(LightHandle handle, uint32_t lightingChannelMask) = 0;
             //! Returns the buffer containing the light data for all simple point lights
-            virtual const Data::Instance<RPI::Buffer> GetLightBuffer() const = 0;
+            virtual const Data::Instance<JE::Render::RPI::Buffer> GetLightBuffer() const = 0;
             //! Returns the number of simple point lights
             virtual uint32_t GetLightCount() const = 0;
         };

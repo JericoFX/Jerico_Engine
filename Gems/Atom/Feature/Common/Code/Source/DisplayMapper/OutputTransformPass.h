@@ -8,7 +8,7 @@
 #pragma once
 
 #include <AzCore/Memory/SystemAllocator.h>
-#include <Atom/RPI.Public/Pass/FullscreenTrianglePass.h>
+#include <JE/Render/RPI/Public/Pass/FullscreenTrianglePass.h>
 #include <ACES/Aces.h>
 #include <Atom/Feature/ACES/AcesDisplayMapperFeatureProcessor.h>
 #include <DisplayMapper/ApplyShaperLookupTablePass.h>
@@ -37,7 +37,7 @@ namespace AZ
             virtual ~OutputTransformPass();
 
             /// Creates a OutputTransformPass
-            static RPI::Ptr<OutputTransformPass> Create(const RPI::PassDescriptor& descriptor);
+            static JE::Render::RPI::Ptr<OutputTransformPass> Create(const JE::Render::RPI::PassDescriptor& descriptor);
 
             void SetDisplayBufferFormat(RHI::Format format);
 
@@ -45,7 +45,7 @@ namespace AZ
             void SetTransferFunctionType(const TransferFunctionType& transferFunctionType);
 
         protected:
-            explicit OutputTransformPass(const RPI::PassDescriptor& descriptor);
+            explicit OutputTransformPass(const JE::Render::RPI::PassDescriptor& descriptor);
 
             // Pass behavior overrides
             void InitializeInternal() override;

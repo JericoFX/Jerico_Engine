@@ -7,9 +7,9 @@
  */
 
 #include <AtomToolsFramework/Viewport/RenderViewportWidget.h>
-#include <Atom/RPI.Public/ViewportContext.h>
-#include <Atom/RPI.Public/ViewportContextBus.h>
-#include <Atom/RPI.Public/View.h>
+#include <JE/Render/RPI/Public/ViewportContext.h>
+#include <JE/Render/RPI/Public/ViewportContextBus.h>
+#include <JE/Render/RPI/Public/View.h>
 #include <AzFramework/Input/Devices/Mouse/InputDeviceMouse.h>
 #include <AzFramework/Viewport/ViewportControllerList.h>
 #include <AzFramework/Viewport/ViewportScreen.h>
@@ -51,7 +51,7 @@ namespace AtomToolsFramework
             return true;
         }
 
-        auto viewportContextManager = AZ::Interface<AZ::RPI::ViewportContextRequestsInterface>::Get();
+        auto viewportContextManager = AZ::Interface<JE::Render::RPI::ViewportContextRequestsInterface>::Get();
         AZ_Assert(viewportContextManager, "Attempted to initialize RenderViewportWidget without ViewportContextManager");
 
         if (viewportContextManager == nullptr)
@@ -60,7 +60,7 @@ namespace AtomToolsFramework
         }
 
         // Before we do anything else, we must create a ViewportContext which will give us a ViewportId if we didn't manually specify one.
-        AZ::RPI::ViewportContextRequestsInterface::CreationParameters params;
+        JE::Render::RPI::ViewportContextRequestsInterface::CreationParameters params;
         params.device = AZ::RHI::RHISystemInterface::Get()->GetDevice();
         params.windowHandle = reinterpret_cast<AzFramework::NativeWindowHandle>(winId());
         params.id = id;
@@ -76,11 +76,11 @@ namespace AtomToolsFramework
         SetControllerList(AZStd::make_shared<AzFramework::ViewportControllerList>());
 
         AZ::Name cameraName = AZ::Name(AZStd::string::format("Viewport %i Default Camera", m_viewportContext->GetId()));
-        m_defaultCameraGroup = AZStd::make_shared<AZ::RPI::ViewGroup>();
-        m_defaultCameraGroup->Init(AZ::RPI::ViewGroup::Descriptor{ nullptr, nullptr });
+        m_defaultCameraGroup = AZStd::make_shared<JE::Render::RPI::ViewGroup>();
+        m_defaultCameraGroup->Init(JE::Render::RPI::ViewGroup::Descriptor{ nullptr, nullptr });
         m_defaultCameraGroup->CreateMainView(cameraName);
         m_defaultCameraGroup->CreateStereoscopicViews(cameraName);
-        AZ::Interface<AZ::RPI::ViewportContextRequestsInterface>::Get()->PushViewGroup(m_viewportContext->GetName(), m_defaultCameraGroup);
+        AZ::Interface<JE::Render::RPI::ViewportContextRequestsInterface>::Get()->PushViewGroup(m_viewportContext->GetName(), m_defaultCameraGroup);
 
         m_viewportInteractionImpl = AZStd::make_unique<ViewportInteractionImpl>(GetDefaultCamera());
         m_viewportInteractionImpl->m_deviceScalingFactorFn = [this] { return aznumeric_cast<float>(devicePixelRatioF()); };
@@ -134,12 +134,12 @@ namespace AtomToolsFramework
         setSizePolicy(QSizePolicy::Policy::Preferred, QSizePolicy::Policy::Preferred);
     }
 
-    AZ::RPI::ViewportContextPtr RenderViewportWidget::GetViewportContext()
+    JE::Render::RPI::ViewportContextPtr RenderViewportWidget::GetViewportContext()
     {
         return m_viewportContext;
     }
 
-    AZ::RPI::ConstViewportContextPtr RenderViewportWidget::GetViewportContext() const
+    JE::Render::RPI::ConstViewportContextPtr RenderViewportWidget::GetViewportContext() const
     {
         return m_viewportContext;
     }
@@ -153,7 +153,7 @@ namespace AtomToolsFramework
         }
 
         // Check if the scene already has an atom scene attached. In this case we don't need to create a new atom scene.
-        if (auto existingScene = scene->FindSubsystem<AZ::RPI::ScenePtr>())
+        if (auto existingScene = scene->FindSubsystem<JE::Render::RPI::ScenePtr>())
         {
             m_viewportContext->SetRenderScene(*existingScene);
 
@@ -161,7 +161,7 @@ namespace AtomToolsFramework
             // Otherwise, fall through and ensure a render pipeline is installed for this scene.
             if (m_viewportContext->GetCurrentPipeline())
             {
-                if (auto auxGeomFP = existingScene->get()->GetFeatureProcessor<AZ::RPI::AuxGeomFeatureProcessorInterface>())
+                if (auto auxGeomFP = existingScene->get()->GetFeatureProcessor<JE::Render::RPI::AuxGeomFeatureProcessorInterface>())
                 {
                     m_auxGeom = auxGeomFP->GetOrCreateDrawQueueForView(GetDefaultCamera().get());
                 }
@@ -169,7 +169,7 @@ namespace AtomToolsFramework
             }
         }
 
-        AZ::RPI::ScenePtr atomScene;
+        JE::Render::RPI::ScenePtr atomScene;
         auto initializeScene = [&](JE::Render::Bootstrap::Request* bootstrapRequests)
         {
             atomScene = bootstrapRequests->GetOrCreateAtomSceneFromAzScene(scene.get());
@@ -182,18 +182,18 @@ namespace AtomToolsFramework
         };
         JE::Render::Bootstrap::RequestBus::Broadcast(initializeScene);
         m_viewportContext->SetRenderScene(atomScene);
-        if (auto auxGeomFP = atomScene->GetFeatureProcessor<AZ::RPI::AuxGeomFeatureProcessorInterface>())
+        if (auto auxGeomFP = atomScene->GetFeatureProcessor<JE::Render::RPI::AuxGeomFeatureProcessorInterface>())
         {
             m_auxGeom = auxGeomFP->GetOrCreateDrawQueueForView(GetDefaultCamera().get());
         }
     }
 
-    AZ::RPI::ViewPtr RenderViewportWidget::GetDefaultCamera()
+    JE::Render::RPI::ViewPtr RenderViewportWidget::GetDefaultCamera()
     {
         return m_defaultCameraGroup->GetView();
     }
 
-    AZ::RPI::ConstViewPtr RenderViewportWidget::GetDefaultCamera() const
+    JE::Render::RPI::ConstViewPtr RenderViewportWidget::GetDefaultCamera() const
     {
         return m_defaultCameraGroup->GetView();
     }
@@ -311,7 +311,7 @@ namespace AtomToolsFramework
 
     void RenderViewportWidget::SetCurrentContextName(const AZ::Name& contextName)
     {
-        auto viewportContextManager = AZ::Interface<AZ::RPI::ViewportContextRequestsInterface>::Get();
+        auto viewportContextManager = AZ::Interface<JE::Render::RPI::ViewportContextRequestsInterface>::Get();
         viewportContextManager->RenameViewportContext(m_viewportContext, contextName);
     }
 

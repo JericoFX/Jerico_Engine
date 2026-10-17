@@ -10,7 +10,7 @@
 
 #include <AzCore/RTTI/BehaviorContext.h>
 
-#include <Atom/RPI.Public/Scene.h>
+#include <JE/Render/RPI/Public/Scene.h>
 
 #include <PostProcess/DisplayMapper/DisplayMapperComponentController.h>
 #include <Atom/Feature/ACES/AcesDisplayMapperFeatureProcessor.h>
@@ -126,7 +126,7 @@ namespace AZ
         void DisplayMapperComponentController::Deactivate()
         {
             DisplayMapperFeatureProcessorInterface* fp =
-                AZ::RPI::Scene::GetFeatureProcessorForEntity<DisplayMapperFeatureProcessorInterface>(m_entityId);
+                JE::Render::RPI::Scene::GetFeatureProcessorForEntity<DisplayMapperFeatureProcessorInterface>(m_entityId);
             if (fp)
             {
                 fp->UnregisterDisplayMapperConfiguration();
@@ -364,7 +364,7 @@ namespace AZ
         void DisplayMapperComponentController::OnConfigChanged()
         {
             // Register the configuration with the  AcesDisplayMapperFeatureProcessor for this scene.
-            DisplayMapperFeatureProcessorInterface* fp = AZ::RPI::Scene::GetFeatureProcessorForEntity<DisplayMapperFeatureProcessorInterface>(m_entityId);
+            DisplayMapperFeatureProcessorInterface* fp = JE::Render::RPI::Scene::GetFeatureProcessorForEntity<DisplayMapperFeatureProcessorInterface>(m_entityId);
             DisplayMapperConfigurationDescriptor desc;
             desc.m_operationType = m_configuration.m_displayMapperOperation;
             desc.m_ldrGradingLutEnabled = m_configuration.m_ldrColorGradingLutEnabled;

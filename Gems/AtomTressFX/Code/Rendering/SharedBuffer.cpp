@@ -10,8 +10,8 @@
 #include <Atom/RHI/RHIUtils.h>
 #include <Atom/RHI/Factory.h>
 
-#include <Atom/RPI.Reflect/Buffer/BufferAssetCreator.h>
-#include <Atom/RPI.Reflect/ResourcePoolAssetCreator.h>
+#include <JE/Render/RPI/Reflect/Buffer/BufferAssetCreator.h>
+#include <JE/Render/RPI/Reflect/ResourcePoolAssetCreator.h>
 
 #include <Rendering/SharedBuffer.h>
 #include <Rendering/HairCommon.h>
@@ -66,7 +66,7 @@ namespace AZ::Render
     void SharedBuffer::CreateBuffer()
     {
         SrgBufferDescriptor  descriptor = SrgBufferDescriptor(
-            RPI::CommonBufferPoolType::ReadWrite, RHI::Format::Unknown,
+            JE::Render::RPI::CommonBufferPoolType::ReadWrite, RHI::Format::Unknown,
             sizeof(float), uint32_t(m_sizeInBytes / sizeof(float)),
             Name{ "HairSharedDynamicBuffer" }, Name{ "m_skinnedHairSharedBuffer" }, 0, 0
         );
@@ -83,7 +83,7 @@ namespace AZ::Render
             bufferPoolDesc->m_heapMemoryLevel = RHI::HeapMemoryLevel::Device;
             bufferPoolDesc->m_hostMemoryAccess = RHI::HostMemoryAccess::Write;
 
-            RPI::ResourcePoolAssetCreator creator;
+            JE::Render::RPI::ResourcePoolAssetCreator creator;
             creator.Begin(Uuid::CreateRandom());
             creator.SetPoolDescriptor(AZStd::move(bufferPoolDesc));
             creator.SetPoolName("SharedBufferPool");
@@ -92,7 +92,7 @@ namespace AZ::Render
 
         // Create the shared buffer
         {
-            RPI::BufferAssetCreator creator;
+            JE::Render::RPI::BufferAssetCreator creator;
             Uuid uuid = Uuid::CreateRandom();
             creator.Begin(uuid);
             creator.SetBufferName(m_bufferName);
@@ -183,16 +183,16 @@ namespace AZ::Render
         }
     }
 
-    Data::Asset<RPI::BufferAsset> SharedBuffer::GetBufferAsset() const
+    Data::Asset<JE::Render::RPI::BufferAsset> SharedBuffer::GetBufferAsset() const
     {
         return m_bufferAsset;
     }
 
-    Data::Instance<RPI::Buffer> SharedBuffer::GetBuffer()
+    Data::Instance<JE::Render::RPI::Buffer> SharedBuffer::GetBuffer()
     {
         if (!m_buffer)
         {
-            m_buffer = RPI::Buffer::FindOrCreate(m_bufferAsset);
+            m_buffer = JE::Render::RPI::Buffer::FindOrCreate(m_bufferAsset);
         }
         return m_buffer;
     }

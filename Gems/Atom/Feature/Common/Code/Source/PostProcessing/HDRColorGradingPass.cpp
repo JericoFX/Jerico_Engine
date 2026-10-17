@@ -9,22 +9,22 @@
 #include <PostProcessing/HDRColorGradingPass.h>
 #include <PostProcess/PostProcessFeatureProcessor.h>
 
-#include <Atom/RPI.Public/RenderPipeline.h>
-#include <Atom/RPI.Public/Scene.h>
-#include <Atom/RPI.Public/View.h>
+#include <JE/Render/RPI/Public/RenderPipeline.h>
+#include <JE/Render/RPI/Public/Scene.h>
+#include <JE/Render/RPI/Public/View.h>
 
  namespace AZ
 {
     namespace Render
     {
-        RPI::Ptr<HDRColorGradingPass> HDRColorGradingPass::Create(const RPI::PassDescriptor& descriptor)
+        JE::Render::RPI::Ptr<HDRColorGradingPass> HDRColorGradingPass::Create(const JE::Render::RPI::PassDescriptor& descriptor)
         {
-            RPI::Ptr<HDRColorGradingPass> pass = aznew HDRColorGradingPass(descriptor);
+            JE::Render::RPI::Ptr<HDRColorGradingPass> pass = aznew HDRColorGradingPass(descriptor);
             return pass;
         }
 
-        HDRColorGradingPass::HDRColorGradingPass(const RPI::PassDescriptor& descriptor)
-            : AZ::RPI::FullscreenTrianglePass(descriptor)
+        HDRColorGradingPass::HDRColorGradingPass(const JE::Render::RPI::PassDescriptor& descriptor)
+            : JE::Render::RPI::FullscreenTrianglePass(descriptor)
         {
         }
 
@@ -124,11 +124,11 @@
 
         const AZ::Render::HDRColorGradingSettings* HDRColorGradingPass::GetHDRColorGradingSettings() const
         {
-            RPI::Scene* scene = GetScene();
+            JE::Render::RPI::Scene* scene = GetScene();
             if (scene)
             {
                 PostProcessFeatureProcessor* fp = scene->GetFeatureProcessor<PostProcessFeatureProcessor>();
-                AZ::RPI::ViewPtr view = m_pipeline->GetFirstView(GetPipelineViewTag());
+                JE::Render::RPI::ViewPtr view = m_pipeline->GetFirstView(GetPipelineViewTag());
                 if (fp)
                 {
                     PostProcessSettings* postProcessSettings = fp->GetLevelSettingsFromView(view);

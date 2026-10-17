@@ -8,20 +8,20 @@
 
 #include "ReflectionScreenSpaceDownsampleDepthLinearPass.h"
 #include "ReflectionScreenSpaceDownsampleDepthLinearChildPass.h"
-#include <Atom/RPI.Public/RPIUtils.h>
+#include <JE/Render/RPI/Public/RPIUtils.h>
 
 namespace AZ
 {
     namespace Render
     {
-        RPI::Ptr<ReflectionScreenSpaceDownsampleDepthLinearPass> ReflectionScreenSpaceDownsampleDepthLinearPass::Create(const RPI::PassDescriptor& descriptor)
+        JE::Render::RPI::Ptr<ReflectionScreenSpaceDownsampleDepthLinearPass> ReflectionScreenSpaceDownsampleDepthLinearPass::Create(const JE::Render::RPI::PassDescriptor& descriptor)
         {
-            RPI::Ptr<ReflectionScreenSpaceDownsampleDepthLinearPass> pass = aznew ReflectionScreenSpaceDownsampleDepthLinearPass(descriptor);
+            JE::Render::RPI::Ptr<ReflectionScreenSpaceDownsampleDepthLinearPass> pass = aznew ReflectionScreenSpaceDownsampleDepthLinearPass(descriptor);
             return pass;
         }
 
-        ReflectionScreenSpaceDownsampleDepthLinearPass::ReflectionScreenSpaceDownsampleDepthLinearPass(const RPI::PassDescriptor& descriptor)
-            : RPI::ParentPass(descriptor)
+        ReflectionScreenSpaceDownsampleDepthLinearPass::ReflectionScreenSpaceDownsampleDepthLinearPass(const JE::Render::RPI::PassDescriptor& descriptor)
+            : JE::Render::RPI::ParentPass(descriptor)
         {
         }
 
@@ -32,11 +32,11 @@ namespace AZ
 
         void ReflectionScreenSpaceDownsampleDepthLinearPass::CreateChildPassesInternal()
         {
-            RPI::PassSystemInterface* passSystem = RPI::PassSystemInterface::Get();
+            JE::Render::RPI::PassSystemInterface* passSystem = JE::Render::RPI::PassSystemInterface::Get();
 
             // load shader
             constexpr const char* shaderFilePath = "Shaders/Reflections/ReflectionScreenSpaceDownsampleDepthLinear.azshader";
-            Data::Instance<AZ::RPI::Shader> shader = RPI::LoadCriticalShader(shaderFilePath);
+            Data::Instance<JE::Render::RPI::Shader> shader = JE::Render::RPI::LoadCriticalShader(shaderFilePath);
             if (shader == nullptr)
             {
                 AZ_Error("PassSystem", false, "[ReflectionScreenSpaceDownsampleDepthLinearPass '%s']: Failed to load shader '%s'!", GetPathName().GetCStr(), shaderFilePath);
@@ -44,8 +44,8 @@ namespace AZ
             }
 
             // create pass descriptor
-            RPI::PassDescriptor childPassDescriptor;
-            childPassDescriptor.m_passTemplate = RPI::PassSystemInterface::Get()->GetPassTemplate(Name("ReflectionScreenSpaceDownsampleDepthLinearChildPassTemplate"));;
+            JE::Render::RPI::PassDescriptor childPassDescriptor;
+            childPassDescriptor.m_passTemplate = JE::Render::RPI::PassSystemInterface::Get()->GetPassTemplate(Name("ReflectionScreenSpaceDownsampleDepthLinearChildPassTemplate"));;
 
             // add child passes to perform the downsample for each mip level
             for (uint32_t mip = 0; mip < m_mipLevels; ++mip)
@@ -53,7 +53,7 @@ namespace AZ
                 AZStd::string childPassName = AZStd::string::format("ReflectionScreenSpace_DownsampleDepthLinear%d", mip);
                 childPassDescriptor.m_passName = Name(childPassName);
 
-                RPI::Ptr<Render::ReflectionScreenSpaceDownsampleDepthLinearChildPass> childPass = passSystem->CreatePass<Render::ReflectionScreenSpaceDownsampleDepthLinearChildPass>(childPassDescriptor);
+                JE::Render::RPI::Ptr<Render::ReflectionScreenSpaceDownsampleDepthLinearChildPass> childPass = passSystem->CreatePass<Render::ReflectionScreenSpaceDownsampleDepthLinearChildPass>(childPassDescriptor);
                 childPass->SetMipLevel(mip);
 
                 AddChild(childPass);
@@ -66,10 +66,10 @@ namespace AZ
             m_flags.m_createChildren = true;
 
             // retrieve DepthLinear attachment
-            RPI::PassAttachment* depthLinearImageAttachment = GetInputBinding(0).GetAttachment().get();
+            JE::Render::RPI::PassAttachment* depthLinearImageAttachment = GetInputBinding(0).GetAttachment().get();
 
             // retrieve DownsampledDepthLinear attachment
-            RPI::PassAttachment* downsampledDepthLinearImageAttachment = GetInputOutputBinding(0).GetAttachment().get();
+            JE::Render::RPI::PassAttachment* downsampledDepthLinearImageAttachment = GetInputOutputBinding(0).GetAttachment().get();
             m_imageSize = downsampledDepthLinearImageAttachment->m_descriptor.m_image.m_size;
             m_mipLevels = aznumeric_cast<uint32_t>(downsampledDepthLinearImageAttachment->m_descriptor.m_image.m_mipLevels);
 
@@ -86,8 +86,8 @@ namespace AZ
                 uint32_t currentMipLevel = attachmentIndex;
                 uint32_t previousMipLevel = AZStd::max(0, aznumeric_cast<int32_t>(currentMipLevel) - 1);
 
-                RPI::PassAttachmentBinding& inputAttachmentBinding = childPass->GetInputBinding(0);
-                RPI::PassAttachment* inputAttachment = nullptr;
+                JE::Render::RPI::PassAttachmentBinding& inputAttachmentBinding = childPass->GetInputBinding(0);
+                JE::Render::RPI::PassAttachment* inputAttachment = nullptr;
 
                 RHI::ImageViewDescriptor inputViewDesc;
 
@@ -107,7 +107,7 @@ namespace AZ
 
                 // downsampled linear depth output (writing to current mip)
                 RHI::ImageViewDescriptor outputViewDesc;
-                RPI::PassAttachmentBinding& downsampledDepthOutputAttachmentBinding = childPass->GetOutputBinding(0);
+                JE::Render::RPI::PassAttachmentBinding& downsampledDepthOutputAttachmentBinding = childPass->GetOutputBinding(0);
                 outputViewDesc.m_mipSliceMin = static_cast<int16_t>(currentMipLevel);
                 outputViewDesc.m_mipSliceMax = static_cast<int16_t>(currentMipLevel);
                 downsampledDepthOutputAttachmentBinding.m_unifiedScopeDesc.SetAsImage(outputViewDesc);

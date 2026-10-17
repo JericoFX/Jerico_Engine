@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="10" failures="0" disabled="0" errors="0" time="0.24" timestamp="2026-10-17T04:24:01.567" name="AllTests">
+  <testsuite name="AnyAssetBuilderTests" tests="4" failures="0" disabled="0" skipped="0" errors="0" time="0.111" timestamp="2026-10-17T04:24:01.567">
+    <testcase name="ProcessJobBasic" file="F:\JericoEngine\JericoEngine\Engine\Assets\RenderBuilders\Tests\AnyAssetBuilderTest.cpp" line="261" status="run" result="completed" time="0.033" timestamp="2026-10-17T04:24:01.567" classname="AnyAssetBuilderTests" />
+    <testcase name="ProcessJobConvert" file="F:\JericoEngine\JericoEngine\Engine\Assets\RenderBuilders\Tests\AnyAssetBuilderTest.cpp" line="295" status="run" result="completed" time="0.025" timestamp="2026-10-17T04:24:01.600" classname="AnyAssetBuilderTests" />
+    <testcase name="ProcessJobDependencyDirect" file="F:\JericoEngine\JericoEngine\Engine\Assets\RenderBuilders\Tests\AnyAssetBuilderTest.cpp" line="323" status="run" result="completed" time="0.025" timestamp="2026-10-17T04:24:01.626" classname="AnyAssetBuilderTests" />
+    <testcase name="ProcessJobDependencyIndirect" file="F:\JericoEngine\JericoEngine\Engine\Assets\RenderBuilders\Tests\AnyAssetBuilderTest.cpp" line="352" status="run" result="completed" time="0.026" timestamp="2026-10-17T04:24:01.651" classname="AnyAssetBuilderTests" />
+  </testsuite>
+  <testsuite name="PassBuilderTests" tests="1" failures="0" disabled="0" skipped="0" errors="0" time="0.025" timestamp="2026-10-17T04:24:01.678">
+    <testcase name="ProcessJob" file="F:\JericoEngine\JericoEngine\Engine\Assets\RenderBuilders\Tests\PassBuilderTest.cpp" line="96" status="run" result="completed" time="0.025" timestamp="2026-10-17T04:24:01.678" classname="PassBuilderTests" />
+  </testsuite>
+  <testsuite name="ResourcePoolBuilderTests" tests="3" failures="0" disabled="0" skipped="0" errors="0" time="0.076" timestamp="2026-10-17T04:24:01.703">
+    <testcase name="ProcessJob_OutputBufferPool" file="F:\JericoEngine\JericoEngine\Engine\Assets\RenderBuilders\Tests\ResourcePoolBuilderTest.cpp" line="61" status="run" result="completed" time="0.025" timestamp="2026-10-17T04:24:01.703" classname="ResourcePoolBuilderTests" />
+    <testcase name="ProcessJob_OutputImagePool" file="F:\JericoEngine\JericoEngine\Engine\Assets\RenderBuilders\Tests\ResourcePoolBuilderTest.cpp" line="108" status="run" result="completed" time="0.026" timestamp="2026-10-17T04:24:01.728" classname="ResourcePoolBuilderTests" />
+    <testcase name="ProcessJob_OutputStreamingImagePool" file="F:\JericoEngine\JericoEngine\Engine\Assets\RenderBuilders\Tests\ResourcePoolBuilderTest.cpp" line="151" status="run" result="completed" time="0.024" timestamp="2026-10-17T04:24:01.755" classname="ResourcePoolBuilderTests" />
+  </testsuite>
+  <testsuite name="BuilderTestFixture" tests="2" failures="0" disabled="0" skipped="0" errors="0" time="0.027" timestamp="2026-10-17T04:24:01.779">
+    <testcase name="NativeRenderBuildersFactoryPreservesDescriptorsTagAndModuleLifetime" file="F:\JericoEngine\JericoEngine\Engine\Assets\RenderBuilders\Tests\RenderAssetBuildersModuleTests.cpp" line="21" status="run" result="completed" time="0.013" timestamp="2026-10-17T04:24:01.779" classname="BuilderTestFixture" />
+    <testcase name="NativeShaderCompilerToolsFactoryPreservesDescriptorServicesAndModuleLifetime" file="F:\JericoEngine\JericoEngine\Engine\Assets\RenderBuilders\Tests\RenderAssetBuildersModuleTests.cpp" line="69" status="run" result="completed" time="0.013" timestamp="2026-10-17T04:24:01.793" classname="BuilderTestFixture" />
+  </testsuite>
+</testsuites>

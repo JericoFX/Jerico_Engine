@@ -12,10 +12,10 @@
 
 #include <Atom/RHI/ImagePool.h>
 
-#include <Atom/RPI.Public/Shader/ShaderResourceGroup.h>
-#include <Atom/RPI.Public/Image/StreamingImage.h>
-#include <Atom/RPI.Public/Image/AttachmentImage.h>
-#include <Atom/RPI.Public/Shader/Shader.h>
+#include <JE/Render/RPI/Public/Shader/ShaderResourceGroup.h>
+#include <JE/Render/RPI/Public/Image/StreamingImage.h>
+#include <JE/Render/RPI/Public/Image/AttachmentImage.h>
+#include <JE/Render/RPI/Public/Shader/Shader.h>
 
 // Hair specific
 #include <Rendering/SharedBuffer.h>
@@ -27,10 +27,15 @@ namespace AZ
         class BufferAssetView;
     }
 
-    namespace RPI
-    {
+    }
+
+namespace JE::Render::RPI
+{
         class Buffer;
     }
+
+namespace AZ
+{
     
     namespace Data
     {
@@ -52,29 +57,29 @@ namespace AZ
             public:
                 UtilityClass() = default;
 
-                static Data::Instance<RPI::ShaderResourceGroup> CreateShaderResourceGroup(
-                    Data::Instance<RPI::Shader> shader,
+                static Data::Instance<JE::Render::RPI::ShaderResourceGroup> CreateShaderResourceGroup(
+                    Data::Instance<JE::Render::RPI::Shader> shader,
                     const char* shaderResourceGroupId,
                     const char* moduleName
                 );
 
-                static Data::Instance<RPI::Buffer> CreateBuffer(
+                static Data::Instance<JE::Render::RPI::Buffer> CreateBuffer(
                     const char* warningHeader,
                     SrgBufferDescriptor& bufferDesc,
-                    Data::Instance<RPI::ShaderResourceGroup> srg
+                    Data::Instance<JE::Render::RPI::ShaderResourceGroup> srg
                 );
 
-                static Data::Instance<RPI::Buffer> CreateBufferAndBindToSrg(
+                static Data::Instance<JE::Render::RPI::Buffer> CreateBufferAndBindToSrg(
                     const char* warningHeader,
                     SrgBufferDescriptor& bufferDesc,
-                    Data::Instance<RPI::ShaderResourceGroup> srg
+                    Data::Instance<JE::Render::RPI::ShaderResourceGroup> srg
                 );
 
                 static bool BindBufferToSrg(
                     const char* warningHeader,
-                    Data::Instance<RPI::Buffer> buffer,
+                    Data::Instance<JE::Render::RPI::Buffer> buffer,
                     SrgBufferDescriptor& bufferDesc,
-                    Data::Instance<RPI::ShaderResourceGroup> srg=nullptr
+                    Data::Instance<JE::Render::RPI::ShaderResourceGroup> srg=nullptr
                 );
 
                 static Data::Instance<RHI::ImagePool> CreateImagePool(
@@ -105,7 +110,7 @@ namespace AZ
                 //! Use this method only if the buffer will be attached to a single Srg.
                 //! If this is not the case use InitForUndefinedSrg
                 bool InitForUniqueSrg(
-                    Data::Instance<RPI::ShaderResourceGroup> srg,
+                    Data::Instance<JE::Render::RPI::ShaderResourceGroup> srg,
                     Render::SrgBufferDescriptor& srgDesc)
                 {
                     m_srg = srg;
@@ -157,7 +162,7 @@ namespace AZ
                 //! Updates Binds the data to the Srg and copies it to the GPU side.
                 //! Assumes that the buffer can be associated with various srgs.
                 bool UpdateGPUData(
-                    Data::Instance<RPI::ShaderResourceGroup> srg,
+                    Data::Instance<JE::Render::RPI::ShaderResourceGroup> srg,
                     Render::SrgBufferDescriptor& srgDesc)
                 {
                     if (!srg)
@@ -190,10 +195,10 @@ namespace AZ
 
                 //! When this srg is set as nullptr, we assume that the buffer can be shared
                 //!  between several passes (as done for PerView and PerScene).
-                Data::Instance<RPI::ShaderResourceGroup> m_srg = nullptr;
+                Data::Instance<JE::Render::RPI::ShaderResourceGroup> m_srg = nullptr;
 
                 Render::SrgBufferDescriptor  m_bufferDesc = Render::SrgBufferDescriptor(
-                    RPI::CommonBufferPoolType::Constant,
+                    JE::Render::RPI::CommonBufferPoolType::Constant,
                     RHI::Format::Unknown, sizeof(TYPE), 1,
                     Name{"BufferNameUndefined"}, Name{"BufferNameUndefined"}, 0, 0
                 );

@@ -11,11 +11,11 @@
 #include <Atom/RHI/RHISystemInterface.h>
 #include <Atom/RHI/RHIMemoryStatisticsInterface.h>
 #include <Atom/RHI.Reflect/MemoryStatistics.h>
-#include <Atom/RPI.Public/Pass/ParentPass.h>
-#include <Atom/RPI.Public/Pass/RenderPass.h>
-#include <Atom/RPI.Public/RenderPipeline.h>
-#include <Atom/RPI.Public/RPISystemInterface.h>
-#include <Atom/RPI.Public/Scene.h>
+#include <JE/Render/RPI/Public/Pass/ParentPass.h>
+#include <JE/Render/RPI/Public/Pass/RenderPass.h>
+#include <JE/Render/RPI/Public/RenderPipeline.h>
+#include <JE/Render/RPI/Public/RPISystemInterface.h>
+#include <JE/Render/RPI/Public/Scene.h>
 
 #include <JE/Debug/Profiler/ImGuiTreemap.h>
 #include <imgui/imgui_internal.h>
@@ -142,7 +142,7 @@ namespace AZ
 
         // --- PassEntry ---
 
-        PassEntry::PassEntry(const RPI::Pass* pass, PassEntry* parent)
+        PassEntry::PassEntry(const JE::Render::RPI::Pass* pass, PassEntry* parent)
         {
             m_name = pass->GetName();
             m_path = pass->GetPathName();
@@ -157,7 +157,7 @@ namespace AZ
             // Get the query results from the passes.
             m_timestampResult = pass->GetLatestTimestampResult();
 
-            const RPI::PipelineStatisticsResult rps = pass->GetLatestPipelineStatisticsResult();
+            const JE::Render::RPI::PipelineStatisticsResult rps = pass->GetLatestPipelineStatisticsResult();
             m_pipelineStatistics = { rps.m_vertexCount, rps.m_primitiveCount, rps.m_vertexShaderInvocationCount,
                 rps.m_rasterizedPrimitiveCount, rps.m_renderedPrimitiveCount, rps.m_pixelShaderInvocationCount, rps.m_computeShaderInvocationCount };
 
@@ -214,7 +214,7 @@ namespace AZ
 
         void ImGuiPipelineStatisticsView::DrawPipelineStatisticsWindow(bool& draw,
             const PassEntry* rootPassEntry, AZStd::unordered_map<Name, PassEntry>& passEntryDatabase,
-            AZ::RHI::Ptr<RPI::ParentPass> rootPass)
+            AZ::RHI::Ptr<JE::Render::RPI::ParentPass> rootPass)
         {
             // Early out if nothing is supposed to be drawn
             if (!draw)
@@ -580,7 +580,7 @@ namespace AZ
 
         void ImGuiTimestampView::DrawTimestampWindow(
             bool& draw, const PassEntry* rootPassEntry, AZStd::unordered_map<Name, PassEntry>& timestampEntryDatabase,
-            AZ::RHI::Ptr<RPI::ParentPass> rootPass)
+            AZ::RHI::Ptr<JE::Render::RPI::ParentPass> rootPass)
         {
             // Early out if nothing is supposed to be drawn
             if (!draw)
@@ -598,7 +598,7 @@ namespace AZ
                 // pass entry grid based on its timestamp
                 AZStd::vector<PassEntry*> sortedPassEntries;
                 AZStd::vector<AZStd::vector<PassEntry*>> sortedPassGrid;
-                RPI::TimestampResult gpuTimestamp;
+                JE::Render::RPI::TimestampResult gpuTimestamp;
                 int64_t deviceReferenceDuration{};
                 int64_t hostReferenceDuration{};
             };
@@ -2152,7 +2152,7 @@ namespace AZ
 
         // --- ImGuiGpuProfiler ---
 
-        void ImGuiGpuProfiler::Draw(bool& draw, RHI::Ptr<RPI::ParentPass> rootPass)
+        void ImGuiGpuProfiler::Draw(bool& draw, RHI::Ptr<JE::Render::RPI::ParentPass> rootPass)
         {
             // Update the PassEntry database.
             const PassEntry* rootPassEntryRef = CreatePassEntries(rootPass);
@@ -2207,10 +2207,10 @@ namespace AZ
             }
         }
 
-        PassEntry* ImGuiGpuProfiler::CreatePassEntries(RHI::Ptr<RPI::ParentPass> rootPass)
+        PassEntry* ImGuiGpuProfiler::CreatePassEntries(RHI::Ptr<JE::Render::RPI::ParentPass> rootPass)
         {
             AZStd::unordered_map<Name, PassEntry> passEntryDatabase;
-            const auto addPassEntry = [&passEntryDatabase](const RPI::Pass* pass, PassEntry* parent) -> PassEntry*
+            const auto addPassEntry = [&passEntryDatabase](const JE::Render::RPI::Pass* pass, PassEntry* parent) -> PassEntry*
             {
                 // If parent a nullptr, it's assumed to be the rootpass.
                 if (parent == nullptr)
@@ -2232,9 +2232,9 @@ namespace AZ
             };
 
             // NOTE: Write it all out, can't have recursive functions for lambdas.
-            const AZStd::function<void(const RPI::Pass*, PassEntry*)> getPassEntryRecursive = [&addPassEntry, &getPassEntryRecursive](const RPI::Pass* pass, PassEntry* parent) -> void
+            const AZStd::function<void(const JE::Render::RPI::Pass*, PassEntry*)> getPassEntryRecursive = [&addPassEntry, &getPassEntryRecursive](const JE::Render::RPI::Pass* pass, PassEntry* parent) -> void
             {
-                if (pass->GetRenderPipeline() && pass->GetRenderPipeline()->GetRenderMode() == RPI::RenderPipeline::RenderMode::NoRender)
+                if (pass->GetRenderPipeline() && pass->GetRenderPipeline()->GetRenderMode() == JE::Render::RPI::RenderPipeline::RenderMode::NoRender)
                 {
                     // Ignore passes from render pipelines that are currently not rendering
                     // E.g. the Preview pipeline
@@ -2243,7 +2243,7 @@ namespace AZ
                 // Add new entry to the timestamp map.
                 if (pass->IsEnabled())
                 {
-                    const RPI::ParentPass* passAsParent = pass->AsParent();
+                    const JE::Render::RPI::ParentPass* passAsParent = pass->AsParent();
                     PassEntry* entry = addPassEntry(pass, parent);
 
                     // Recur if it's a parent.
@@ -2258,12 +2258,12 @@ namespace AZ
             };
 
             // Set up the root entry.
-            PassEntry rootEntry(static_cast<RPI::Pass*>(rootPass.get()), nullptr);
+            PassEntry rootEntry(static_cast<JE::Render::RPI::Pass*>(rootPass.get()), nullptr);
             PassEntry& rootEntryRef = passEntryDatabase[rootPass->GetPathName()] = rootEntry;
 
             // Create an intermediate structure from the passes.
             // Recursively create the timestamp entries tree.
-            getPassEntryRecursive(static_cast<RPI::Pass*>(rootPass.get()), nullptr);
+            getPassEntryRecursive(static_cast<JE::Render::RPI::Pass*>(rootPass.get()), nullptr);
 
             // Interpolate the old values.
             const float lerpWeight = 0.2f;

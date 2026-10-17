@@ -10,11 +10,11 @@
 
 namespace OpenParticle
 {
-    void ParticleModel::SetupModel(AZ::Data::Asset<AZ::RPI::ModelAsset>& model, size_t lodIndex)
+    void ParticleModel::SetupModel(AZ::Data::Asset<JE::Render::RPI::ModelAsset>& model, size_t lodIndex)
     {
         m_lastContractHash = AZ::HashValue64{ 0 };
         m_modelLod = nullptr;
-        m_modelInstance = AZ::RPI::Model::FindOrCreate(model);
+        m_modelInstance = JE::Render::RPI::Model::FindOrCreate(model);
         if (!m_modelInstance)
         {
             AZ_Error(
@@ -41,12 +41,12 @@ namespace OpenParticle
         return m_modelLod ? m_modelLod->GetMeshes().size() : 0;
     }
 
-    AZ::Data::Instance<AZ::RPI::ModelLod> ParticleModel::GetModelLod() const
+    AZ::Data::Instance<JE::Render::RPI::ModelLod> ParticleModel::GetModelLod() const
     {
         return m_modelLod;
     }
 
-    bool ParticleModel::BuildInputStreamLayouts(const AZ::RPI::ShaderInputContract& contract)
+    bool ParticleModel::BuildInputStreamLayouts(const JE::Render::RPI::ShaderInputContract& contract)
     {
         if (!m_modelLod)
         {
@@ -72,10 +72,10 @@ namespace OpenParticle
         for (size_t it = 0; it < meshSize; ++it)
         {
             AZ::RHI::InputStreamLayoutBuilder layoutBuilder;
-            AZ::RPI::UvStreamTangentBitmask uvStreamTangentBitmaskOut;
+            JE::Render::RPI::UvStreamTangentBitmask uvStreamTangentBitmaskOut;
             layoutBuilder.Begin();
 
-            AZ::RPI::MaterialUvNameMap uvNameMap;
+            JE::Render::RPI::MaterialUvNameMap uvNameMap;
             const auto& meshMaterial = m_modelLod->GetMeshes()[it].m_material;
             if (meshMaterial)
             {
@@ -120,17 +120,17 @@ namespace OpenParticle
         return m_inputStreamLayouts[meshIndex];
     }
 
-    const AZ::RPI::UvStreamTangentBitmask& ParticleModel::GetUvStreamTangentBitmask(size_t meshIndex) const
+    const JE::Render::RPI::UvStreamTangentBitmask& ParticleModel::GetUvStreamTangentBitmask(size_t meshIndex) const
     {
         AZ_Assert(meshIndex < m_uvStreamTangentBitmasks.size(), "meshIndex is invalid.");
         return m_uvStreamTangentBitmasks[meshIndex];
     }
 
-    const AZ::RPI::ModelLod::StreamBufferViewList& ParticleModel::GetStreamBufferViewList(size_t meshIndex) const
+    const JE::Render::RPI::ModelLod::StreamBufferViewList& ParticleModel::GetStreamBufferViewList(size_t meshIndex) const
     {
         if (meshIndex >= m_streamBufferViews.size())
         {
-            static AZ::RPI::ModelLod::StreamBufferViewList s_emptyList;
+            static JE::Render::RPI::ModelLod::StreamBufferViewList s_emptyList;
             AZ_Error("ParticleModel", false, "meshIndex %zu is invalid for m_streamBufferViews (size: %zu).", meshIndex, m_streamBufferViews.size());
             return s_emptyList;
         }
@@ -139,11 +139,11 @@ namespace OpenParticle
 
     bool ParticleModel::GetStreamsForMesh(
         AZ::RHI::InputStreamLayoutBuilder& layoutBuilder,
-        AZ::RPI::UvStreamTangentBitmask* uvStreamTangentBitmaskOut,
-        const AZ::RPI::ShaderInputContract& contract,
+        JE::Render::RPI::UvStreamTangentBitmask* uvStreamTangentBitmaskOut,
+        const JE::Render::RPI::ShaderInputContract& contract,
         size_t meshIndex,
-        const AZ::RPI::MaterialModelUvOverrideMap& materialModelUvMap,
-        const AZ::RPI::MaterialUvNameMap& materialUvNameMap)
+        const JE::Render::RPI::MaterialModelUvOverrideMap& materialModelUvMap,
+        const JE::Render::RPI::MaterialUvNameMap& materialUvNameMap)
     {
         const auto& mesh = m_modelLod->GetMeshes()[meshIndex];
         m_streamBufferViews[meshIndex].clear();
@@ -207,20 +207,20 @@ namespace OpenParticle
     }
 
 
-    AZ::RPI::ModelLod::StreamInfoList::const_iterator ParticleModel::FindMatchingStream(
+    JE::Render::RPI::ModelLod::StreamInfoList::const_iterator ParticleModel::FindMatchingStream(
         size_t meshIndex,
-        const AZ::RPI::MaterialModelUvOverrideMap& materialModelUvMap,
-        const AZ::RPI::MaterialUvNameMap& materialUvNameMap,
-        const AZ::RPI::ShaderInputContract::StreamChannelInfo& contractStreamChannel,
-        AZ::RPI::ModelLod::StreamInfoList::const_iterator defaultUv,
-        AZ::RPI::ModelLod::StreamInfoList::const_iterator firstUv,
-        AZ::RPI::UvStreamTangentBitmask* uvStreamTangentBitmaskOut)
+        const JE::Render::RPI::MaterialModelUvOverrideMap& materialModelUvMap,
+        const JE::Render::RPI::MaterialUvNameMap& materialUvNameMap,
+        const JE::Render::RPI::ShaderInputContract::StreamChannelInfo& contractStreamChannel,
+        JE::Render::RPI::ModelLod::StreamInfoList::const_iterator defaultUv,
+        JE::Render::RPI::ModelLod::StreamInfoList::const_iterator firstUv,
+        JE::Render::RPI::UvStreamTangentBitmask* uvStreamTangentBitmaskOut)
     {
         const auto& mesh = m_modelLod->GetMeshes()[meshIndex];
         auto iter = mesh.m_streamInfo.end();
         auto materialUvIter = AZStd::find_if(
             materialUvNameMap.begin(), materialUvNameMap.end(),
-            [&contractStreamChannel](const AZ::RPI::UvNamePair& uvNamePair)
+            [&contractStreamChannel](const JE::Render::RPI::UvNamePair& uvNamePair)
             {
                 return uvNamePair.m_shaderInput == contractStreamChannel.m_semantic;
             });
@@ -236,7 +236,7 @@ namespace OpenParticle
                 {
                     iter = AZStd::find_if(
                         mesh.m_streamInfo.begin(), mesh.m_streamInfo.end(),
-                        [&modelUvName](const AZ::RPI::ModelLod::StreamBufferInfo& info)
+                        [&modelUvName](const JE::Render::RPI::ModelLod::StreamBufferInfo& info)
                         {
                             return info.m_customName == modelUvName ||
                                 info.m_semantic.ToString() == modelUvName.GetStringView(); // For unnamed UVs, use the semantic instead.
@@ -250,7 +250,7 @@ namespace OpenParticle
                 {
                     iter = AZStd::find_if(
                         mesh.m_streamInfo.begin(), mesh.m_streamInfo.end(),
-                        [&materialUvName](const AZ::RPI::ModelLod::StreamBufferInfo& info)
+                        [&materialUvName](const JE::Render::RPI::ModelLod::StreamBufferInfo& info)
                         {
                             return info.m_customName == materialUvName;
                         });
@@ -262,7 +262,7 @@ namespace OpenParticle
         {
             iter = AZStd::find_if(
                 mesh.m_streamInfo.begin(), mesh.m_streamInfo.end(),
-                [&contractStreamChannel](const AZ::RPI::ModelLod::StreamBufferInfo& info)
+                [&contractStreamChannel](const JE::Render::RPI::ModelLod::StreamBufferInfo& info)
                 {
                     return info.m_semantic == contractStreamChannel.m_semantic;
                 });
@@ -275,19 +275,19 @@ namespace OpenParticle
 
         if (isUv && uvStreamTangentBitmaskOut)
         {
-            uvStreamTangentBitmaskOut->ApplyTangent(iter == firstUv ? 0 : AZ::RPI::UvStreamTangentBitmask::UnassignedTangent);
+            uvStreamTangentBitmaskOut->ApplyTangent(iter == firstUv ? 0 : JE::Render::RPI::UvStreamTangentBitmask::UnassignedTangent);
         }
 
         return iter;
     }
 
-    AZ::RPI::ModelLod::StreamInfoList::const_iterator ParticleModel::FindFirstUvStreamFromMesh(size_t meshIndex)
+    JE::Render::RPI::ModelLod::StreamInfoList::const_iterator ParticleModel::FindFirstUvStreamFromMesh(size_t meshIndex)
     {
         const auto& mesh = m_modelLod->GetMeshes()[meshIndex];
 
         auto firstUv = AZStd::find_if(
             mesh.m_streamInfo.begin(), mesh.m_streamInfo.end(),
-            [](const AZ::RPI::ModelLod::StreamBufferInfo& info)
+            [](const JE::Render::RPI::ModelLod::StreamBufferInfo& info)
             {
                 return info.m_semantic.m_name.GetStringView().starts_with(AZ::RHI::ShaderSemantic::UvStreamSemantic);
             });
@@ -295,8 +295,8 @@ namespace OpenParticle
         return firstUv;
     }
 
-    AZ::RPI::ModelLod::StreamInfoList::const_iterator ParticleModel::FindDefaultUvStream(
-        size_t meshIndex, const AZ::RPI::MaterialUvNameMap& materialUvNameMap)
+    JE::Render::RPI::ModelLod::StreamInfoList::const_iterator ParticleModel::FindDefaultUvStream(
+        size_t meshIndex, const JE::Render::RPI::MaterialUvNameMap& materialUvNameMap)
     {
         const auto& mesh = m_modelLod->GetMeshes()[meshIndex];
         auto defaultUv = mesh.m_streamInfo.end();
@@ -308,7 +308,7 @@ namespace OpenParticle
             {
                 defaultUv = AZStd::find_if(
                     mesh.m_streamInfo.begin(), mesh.m_streamInfo.end(),
-                    [&uvCustomName](const AZ::RPI::ModelLod::StreamBufferInfo& info)
+                    [&uvCustomName](const JE::Render::RPI::ModelLod::StreamBufferInfo& info)
                     {
                         return info.m_customName == uvCustomName;
                     });
@@ -318,7 +318,7 @@ namespace OpenParticle
             {
                 defaultUv = AZStd::find_if(
                     mesh.m_streamInfo.begin(), mesh.m_streamInfo.end(),
-                    [&shaderInput](const AZ::RPI::ModelLod::StreamBufferInfo& info)
+                    [&shaderInput](const JE::Render::RPI::ModelLod::StreamBufferInfo& info)
                     {
                         return info.m_semantic == shaderInput;
                     });

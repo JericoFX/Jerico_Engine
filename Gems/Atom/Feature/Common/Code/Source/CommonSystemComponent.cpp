@@ -90,7 +90,7 @@
 #include <SplashScreen/SplashScreenFeatureProcessor.h>
 #include <SplashScreen/SplashScreenPass.h>
 
-#include <Atom/RPI.Public/Pass/PassSystemInterface.h>
+#include <JE/Render/RPI/Public/Pass/PassSystemInterface.h>
 
 #include <Checkerboard/CheckerboardPass.h>
 #include <Checkerboard/CheckerboardColorResolvePass.h>
@@ -206,31 +206,31 @@ namespace AZ
             ComponentApplicationBus::Broadcast(&AZ::ComponentApplicationBus::Events::QueryApplicationType, appType);
             if (!appType.IsHeadless())
             {
-                AZ::RPI::FeatureProcessorFactory::Get()->RegisterFeatureProcessorWithInterface<SkyBoxFeatureProcessor, SkyBoxFeatureProcessorInterface>();
-                AZ::RPI::FeatureProcessorFactory::Get()->RegisterFeatureProcessorWithInterface<ImageBasedLightFeatureProcessor, ImageBasedLightFeatureProcessorInterface>();
-                AZ::RPI::FeatureProcessorFactory::Get()->RegisterFeatureProcessorWithInterface<DecalTextureArrayFeatureProcessor, DecalFeatureProcessorInterface>();
-                AZ::RPI::FeatureProcessorFactory::Get()->RegisterFeatureProcessorWithInterface<PostProcessFeatureProcessor, PostProcessFeatureProcessorInterface>();
-                AZ::RPI::FeatureProcessorFactory::Get()->RegisterFeatureProcessorWithInterface<AcesDisplayMapperFeatureProcessor, DisplayMapperFeatureProcessorInterface>();
-                AZ::RPI::FeatureProcessorFactory::Get()->RegisterFeatureProcessorWithInterface<ProjectedShadowFeatureProcessor, ProjectedShadowFeatureProcessorInterface>();
-                AZ::RPI::FeatureProcessorFactory::Get()->RegisterFeatureProcessorWithInterface<RayTracingDebugFeatureProcessor, RayTracingDebugFeatureProcessorInterface>();
-                AZ::RPI::FeatureProcessorFactory::Get()->RegisterFeatureProcessorWithInterface<RenderDebugFeatureProcessor, RenderDebugFeatureProcessorInterface>();
-                AZ::RPI::FeatureProcessorFactory::Get()->RegisterFeatureProcessorWithInterface<ReflectionProbeFeatureProcessor, ReflectionProbeFeatureProcessorInterface>();
-                AZ::RPI::FeatureProcessorFactory::Get()->RegisterFeatureProcessorWithInterface<SpecularReflectionsFeatureProcessor, SpecularReflectionsFeatureProcessorInterface>();
-                AZ::RPI::FeatureProcessorFactory::Get()->RegisterFeatureProcessorWithInterface<CubeMapCaptureFeatureProcessor, CubeMapCaptureFeatureProcessorInterface>();
-                AZ::RPI::FeatureProcessorFactory::Get()->RegisterFeatureProcessor<SMAAFeatureProcessor>();
-                AZ::RPI::FeatureProcessorFactory::Get()->RegisterFeatureProcessorWithInterface<RayTracingFeatureProcessor, RayTracingFeatureProcessorInterface>();
-                AZ::RPI::FeatureProcessorFactory::Get()
+                JE::Render::RPI::FeatureProcessorFactory::Get()->RegisterFeatureProcessorWithInterface<SkyBoxFeatureProcessor, SkyBoxFeatureProcessorInterface>();
+                JE::Render::RPI::FeatureProcessorFactory::Get()->RegisterFeatureProcessorWithInterface<ImageBasedLightFeatureProcessor, ImageBasedLightFeatureProcessorInterface>();
+                JE::Render::RPI::FeatureProcessorFactory::Get()->RegisterFeatureProcessorWithInterface<DecalTextureArrayFeatureProcessor, DecalFeatureProcessorInterface>();
+                JE::Render::RPI::FeatureProcessorFactory::Get()->RegisterFeatureProcessorWithInterface<PostProcessFeatureProcessor, PostProcessFeatureProcessorInterface>();
+                JE::Render::RPI::FeatureProcessorFactory::Get()->RegisterFeatureProcessorWithInterface<AcesDisplayMapperFeatureProcessor, DisplayMapperFeatureProcessorInterface>();
+                JE::Render::RPI::FeatureProcessorFactory::Get()->RegisterFeatureProcessorWithInterface<ProjectedShadowFeatureProcessor, ProjectedShadowFeatureProcessorInterface>();
+                JE::Render::RPI::FeatureProcessorFactory::Get()->RegisterFeatureProcessorWithInterface<RayTracingDebugFeatureProcessor, RayTracingDebugFeatureProcessorInterface>();
+                JE::Render::RPI::FeatureProcessorFactory::Get()->RegisterFeatureProcessorWithInterface<RenderDebugFeatureProcessor, RenderDebugFeatureProcessorInterface>();
+                JE::Render::RPI::FeatureProcessorFactory::Get()->RegisterFeatureProcessorWithInterface<ReflectionProbeFeatureProcessor, ReflectionProbeFeatureProcessorInterface>();
+                JE::Render::RPI::FeatureProcessorFactory::Get()->RegisterFeatureProcessorWithInterface<SpecularReflectionsFeatureProcessor, SpecularReflectionsFeatureProcessorInterface>();
+                JE::Render::RPI::FeatureProcessorFactory::Get()->RegisterFeatureProcessorWithInterface<CubeMapCaptureFeatureProcessor, CubeMapCaptureFeatureProcessorInterface>();
+                JE::Render::RPI::FeatureProcessorFactory::Get()->RegisterFeatureProcessor<SMAAFeatureProcessor>();
+                JE::Render::RPI::FeatureProcessorFactory::Get()->RegisterFeatureProcessorWithInterface<RayTracingFeatureProcessor, RayTracingFeatureProcessorInterface>();
+                JE::Render::RPI::FeatureProcessorFactory::Get()
                     ->RegisterFeatureProcessorWithInterface<DeferredMaterialFeatureProcessor, DeferredMaterialFeatureProcessorInterface>();
-                AZ::RPI::FeatureProcessorFactory::Get()->RegisterFeatureProcessorWithInterface<OcclusionCullingPlaneFeatureProcessor, OcclusionCullingPlaneFeatureProcessorInterface>();
-                AZ::RPI::FeatureProcessorFactory::Get()->RegisterFeatureProcessor<SplashScreenFeatureProcessor>();
-                AZ::RPI::FeatureProcessorFactory::Get()->RegisterFeatureProcessor<SilhouetteFeatureProcessor>();
+                JE::Render::RPI::FeatureProcessorFactory::Get()->RegisterFeatureProcessorWithInterface<OcclusionCullingPlaneFeatureProcessor, OcclusionCullingPlaneFeatureProcessorInterface>();
+                JE::Render::RPI::FeatureProcessorFactory::Get()->RegisterFeatureProcessor<SplashScreenFeatureProcessor>();
+                JE::Render::RPI::FeatureProcessorFactory::Get()->RegisterFeatureProcessor<SilhouetteFeatureProcessor>();
             }
 
-            AZ::RPI::FeatureProcessorFactory::Get()->RegisterFeatureProcessorWithInterface<AuxGeomFeatureProcessor, RPI::AuxGeomFeatureProcessorInterface>();
-            AZ::RPI::FeatureProcessorFactory::Get()->RegisterFeatureProcessorWithInterface<TransformServiceFeatureProcessor, TransformServiceFeatureProcessorInterface>();
-            AZ::RPI::FeatureProcessorFactory::Get()->RegisterFeatureProcessorWithInterface<MeshFeatureProcessor, MeshFeatureProcessorInterface>();
+            JE::Render::RPI::FeatureProcessorFactory::Get()->RegisterFeatureProcessorWithInterface<AuxGeomFeatureProcessor, JE::Render::RPI::AuxGeomFeatureProcessorInterface>();
+            JE::Render::RPI::FeatureProcessorFactory::Get()->RegisterFeatureProcessorWithInterface<TransformServiceFeatureProcessor, TransformServiceFeatureProcessorInterface>();
+            JE::Render::RPI::FeatureProcessorFactory::Get()->RegisterFeatureProcessorWithInterface<MeshFeatureProcessor, MeshFeatureProcessorInterface>();
 
-            auto* passSystem = RPI::PassSystemInterface::Get();
+            auto* passSystem = JE::Render::RPI::PassSystemInterface::Get();
             AZ_Assert(passSystem, "Cannot get the pass system.");
 
             // Add DisplayMapper pass
@@ -290,7 +290,7 @@ namespace AZ
             passSystem->AddPassCreator(Name("GtaoComputePass"), &GtaoComputePass::Create);
 
             // Add Subsurface Scattering pass
-            passSystem->AddPassCreator(Name("SubsurfaceScatteringPass"), &RPI::SubsurfaceScatteringPass::Create);
+            passSystem->AddPassCreator(Name("SubsurfaceScatteringPass"), &JE::Render::RPI::SubsurfaceScatteringPass::Create);
 
             // Add checkerboard rendering passes
             passSystem->AddPassCreator(Name("CheckerboardPass"), &Render::CheckerboardPass::Create);
@@ -348,8 +348,8 @@ namespace AZ
             passSystem->AddPassCreator(Name("SplashScreenPass"), &Render::SplashScreenPass::Create);
 
             // setup handler for load pass template mappings
-            m_loadTemplatesHandler = RPI::PassSystemInterface::OnReadyLoadTemplatesEvent::Handler([this]() { this->LoadPassTemplateMappings(); });
-            RPI::PassSystemInterface::Get()->ConnectEvent(m_loadTemplatesHandler);
+            m_loadTemplatesHandler = JE::Render::RPI::PassSystemInterface::OnReadyLoadTemplatesEvent::Handler([this]() { this->LoadPassTemplateMappings(); });
+            JE::Render::RPI::PassSystemInterface::Get()->ConnectEvent(m_loadTemplatesHandler);
             
             m_modelReloaderSystem = AZStd::make_unique<ModelReloaderSystem>();
         }
@@ -363,34 +363,34 @@ namespace AZ
             ComponentApplicationBus::Broadcast(&AZ::ComponentApplicationBus::Events::QueryApplicationType, appType);
             if (!appType.IsHeadless())
             {
-                AZ::RPI::FeatureProcessorFactory::Get()->UnregisterFeatureProcessor<RayTracingFeatureProcessor>();
-                AZ::RPI::FeatureProcessorFactory::Get()->UnregisterFeatureProcessor<DeferredMaterialFeatureProcessor>();
-                AZ::RPI::FeatureProcessorFactory::Get()->UnregisterFeatureProcessor<SMAAFeatureProcessor>();
-                AZ::RPI::FeatureProcessorFactory::Get()->UnregisterFeatureProcessor<ReflectionProbeFeatureProcessor>();
-                AZ::RPI::FeatureProcessorFactory::Get()->UnregisterFeatureProcessor<SpecularReflectionsFeatureProcessor>();
-                AZ::RPI::FeatureProcessorFactory::Get()->UnregisterFeatureProcessor<CubeMapCaptureFeatureProcessor>();
-                AZ::RPI::FeatureProcessorFactory::Get()->UnregisterFeatureProcessor<ProjectedShadowFeatureProcessor>();
-                AZ::RPI::FeatureProcessorFactory::Get()->UnregisterFeatureProcessor<AcesDisplayMapperFeatureProcessor>();
-                AZ::RPI::FeatureProcessorFactory::Get()->UnregisterFeatureProcessor<PostProcessFeatureProcessor>();
-                AZ::RPI::FeatureProcessorFactory::Get()->UnregisterFeatureProcessor<DecalTextureArrayFeatureProcessor>();
-                AZ::RPI::FeatureProcessorFactory::Get()->UnregisterFeatureProcessor<ImageBasedLightFeatureProcessor>();
-                AZ::RPI::FeatureProcessorFactory::Get()->UnregisterFeatureProcessor<SkyBoxFeatureProcessor>();
-                AZ::RPI::FeatureProcessorFactory::Get()->UnregisterFeatureProcessor<OcclusionCullingPlaneFeatureProcessor>();
-                AZ::RPI::FeatureProcessorFactory::Get()->UnregisterFeatureProcessor<RayTracingDebugFeatureProcessor>();
-                AZ::RPI::FeatureProcessorFactory::Get()->UnregisterFeatureProcessor<RenderDebugFeatureProcessor>();
-                AZ::RPI::FeatureProcessorFactory::Get()->UnregisterFeatureProcessor<SplashScreenFeatureProcessor>();
-                AZ::RPI::FeatureProcessorFactory::Get()->UnregisterFeatureProcessor<SilhouetteFeatureProcessor>();
+                JE::Render::RPI::FeatureProcessorFactory::Get()->UnregisterFeatureProcessor<RayTracingFeatureProcessor>();
+                JE::Render::RPI::FeatureProcessorFactory::Get()->UnregisterFeatureProcessor<DeferredMaterialFeatureProcessor>();
+                JE::Render::RPI::FeatureProcessorFactory::Get()->UnregisterFeatureProcessor<SMAAFeatureProcessor>();
+                JE::Render::RPI::FeatureProcessorFactory::Get()->UnregisterFeatureProcessor<ReflectionProbeFeatureProcessor>();
+                JE::Render::RPI::FeatureProcessorFactory::Get()->UnregisterFeatureProcessor<SpecularReflectionsFeatureProcessor>();
+                JE::Render::RPI::FeatureProcessorFactory::Get()->UnregisterFeatureProcessor<CubeMapCaptureFeatureProcessor>();
+                JE::Render::RPI::FeatureProcessorFactory::Get()->UnregisterFeatureProcessor<ProjectedShadowFeatureProcessor>();
+                JE::Render::RPI::FeatureProcessorFactory::Get()->UnregisterFeatureProcessor<AcesDisplayMapperFeatureProcessor>();
+                JE::Render::RPI::FeatureProcessorFactory::Get()->UnregisterFeatureProcessor<PostProcessFeatureProcessor>();
+                JE::Render::RPI::FeatureProcessorFactory::Get()->UnregisterFeatureProcessor<DecalTextureArrayFeatureProcessor>();
+                JE::Render::RPI::FeatureProcessorFactory::Get()->UnregisterFeatureProcessor<ImageBasedLightFeatureProcessor>();
+                JE::Render::RPI::FeatureProcessorFactory::Get()->UnregisterFeatureProcessor<SkyBoxFeatureProcessor>();
+                JE::Render::RPI::FeatureProcessorFactory::Get()->UnregisterFeatureProcessor<OcclusionCullingPlaneFeatureProcessor>();
+                JE::Render::RPI::FeatureProcessorFactory::Get()->UnregisterFeatureProcessor<RayTracingDebugFeatureProcessor>();
+                JE::Render::RPI::FeatureProcessorFactory::Get()->UnregisterFeatureProcessor<RenderDebugFeatureProcessor>();
+                JE::Render::RPI::FeatureProcessorFactory::Get()->UnregisterFeatureProcessor<SplashScreenFeatureProcessor>();
+                JE::Render::RPI::FeatureProcessorFactory::Get()->UnregisterFeatureProcessor<SilhouetteFeatureProcessor>();
             }
 
-            AZ::RPI::FeatureProcessorFactory::Get()->UnregisterFeatureProcessor<MeshFeatureProcessor>();
-            AZ::RPI::FeatureProcessorFactory::Get()->UnregisterFeatureProcessor<TransformServiceFeatureProcessor>();
-            AZ::RPI::FeatureProcessorFactory::Get()->UnregisterFeatureProcessor<AuxGeomFeatureProcessor>();
+            JE::Render::RPI::FeatureProcessorFactory::Get()->UnregisterFeatureProcessor<MeshFeatureProcessor>();
+            JE::Render::RPI::FeatureProcessorFactory::Get()->UnregisterFeatureProcessor<TransformServiceFeatureProcessor>();
+            JE::Render::RPI::FeatureProcessorFactory::Get()->UnregisterFeatureProcessor<AuxGeomFeatureProcessor>();
         }
 
         void CommonSystemComponent::LoadPassTemplateMappings()
         {
             const char* passTemplatesFile = "Passes/PassTemplates.azasset";
-            RPI::PassSystemInterface::Get()->LoadPassTemplateMappings(passTemplatesFile);
+            JE::Render::RPI::PassSystemInterface::Get()->LoadPassTemplateMappings(passTemplatesFile);
         }
 
     } // namespace Render

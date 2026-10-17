@@ -12,7 +12,7 @@
 #include <AzCore/Math/Color.h>
 #include <AzCore/std/string/string.h>
 #include <Atom/RHI.Reflect/RenderStates.h>
-#include <Atom/RPI.Reflect/Image/Image.h>
+#include <JE/Render/RPI/Reflect/Image/Image.h>
 #include <LyShine/Bus/UiTransformBus.h>
 #include <LyShine/ILyShine.h>
 
@@ -139,7 +139,7 @@ public: // member functions
     //! \param minMaxTexCoords  An optional two component array. The first component is the UV coord for the top left
     //!                         point of the quad and the second is the UV coord of the bottom right point of the quad
     //! \param imageOptions     Optional struct specifying options that tend to be the same from call to call
-    virtual void DrawImage(AZ::Data::Instance<AZ::RPI::Image> image, AZ::Vector2 position, AZ::Vector2 size, float opacity = 1.0f,
+    virtual void DrawImage(AZ::Data::Instance<JE::Render::RPI::Image> image, AZ::Vector2 position, AZ::Vector2 size, float opacity = 1.0f,
         float rotation = 0.0f, const AZ::Vector2* pivotPoint = nullptr, const AZ::Vector2* minMaxTexCoords = nullptr,
         ImageOptions* imageOptions = nullptr) = 0;
 
@@ -157,7 +157,7 @@ public: // member functions
     //! \param minMaxTexCoords  An optional two component array. The first component is the UV coord for the top left
     //!                         point of the quad and the second is the UV coord of the bottom right point of the quad
     //! \param imageOptions     Optional struct specifying options that tend to be the same from call to call
-    virtual void DrawImageAligned(AZ::Data::Instance<AZ::RPI::Image> image, AZ::Vector2 position, AZ::Vector2 size,
+    virtual void DrawImageAligned(AZ::Data::Instance<JE::Render::RPI::Image> image, AZ::Vector2 position, AZ::Vector2 size,
         HAlign horizontalAlignment, VAlign verticalAlignment,
         float opacity = 1.0f, float rotation = 0.0f, const AZ::Vector2* minMaxTexCoords = nullptr,
         ImageOptions* imageOptions = nullptr) = 0;
@@ -168,7 +168,7 @@ public: // member functions
     //! \param verts        An array of 4 vertices, in clockwise order (e.g. top left, top right, bottom right, bottom left)
     //! \param pixelRounding Whether and how to round pixel coordinates
     //! \param renderState  Blend mode and depth state
-    virtual void DrawQuad(AZ::Data::Instance<AZ::RPI::Image> image,
+    virtual void DrawQuad(AZ::Data::Instance<JE::Render::RPI::Image> image,
         VertexPosColUV* verts,
         Rounding pixelRounding = Rounding::Nearest,
         bool clamp = false,
@@ -191,7 +191,7 @@ public: // member functions
     //! \param verts        An array of 2 vertices for the start and end points of the line
     //! \param pixelRounding Whether and how to round pixel coordinates
     //! \param renderState  Blend mode and depth state
-    virtual void DrawLineTextured(AZ::Data::Instance<AZ::RPI::Image> image,
+    virtual void DrawLineTextured(AZ::Data::Instance<JE::Render::RPI::Image> image,
         VertexPosColUV* verts,
         IDraw2d::Rounding pixelRounding = IDraw2d::Rounding::Nearest,
         const RenderState& renderState = RenderState{}) = 0;
@@ -214,7 +214,7 @@ public: // member functions
     //! \param downVec          Down vector. Specified because the rect's width/height could be 0
     //! \param color            The color of the outline
     //! \param lineThickness    The thickness in pixels of the outline. If 0, it will be based on image height
-    virtual void DrawRectOutlineTextured(AZ::Data::Instance<AZ::RPI::Image> image,
+    virtual void DrawRectOutlineTextured(AZ::Data::Instance<JE::Render::RPI::Image> image,
         UiTransformInterface::RectPoints points,
         AZ::Vector2 rightVec,
         AZ::Vector2 downVec,
@@ -311,7 +311,7 @@ public: // member functions
     //! Draw a textured quad, optional rotation is counter-clockwise in degrees.
     //
     //! See IDraw2d:DrawImage for parameter descriptions
-    void DrawImage(AZ::Data::Instance<AZ::RPI::Image> image, AZ::Vector2 position, AZ::Vector2 size, float opacity = 1.0f,
+    void DrawImage(AZ::Data::Instance<JE::Render::RPI::Image> image, AZ::Vector2 position, AZ::Vector2 size, float opacity = 1.0f,
         float rotation = 0.0f, const AZ::Vector2* pivotPoint = nullptr, const AZ::Vector2* minMaxTexCoords = nullptr)
     {
         if (m_draw2d)
@@ -323,7 +323,7 @@ public: // member functions
     //! Draw a textured quad where the position specifies the point specified by the alignment.
     //
     //! See IDraw2d:DrawImageAligned for parameter descriptions
-    void DrawImageAligned(AZ::Data::Instance<AZ::RPI::Image> image, AZ::Vector2 position, AZ::Vector2 size,
+    void DrawImageAligned(AZ::Data::Instance<JE::Render::RPI::Image> image, AZ::Vector2 position, AZ::Vector2 size,
         IDraw2d::HAlign horizontalAlignment, IDraw2d::VAlign verticalAlignment,
         float opacity = 1.0f, float rotation = 0.0f, const AZ::Vector2* minMaxTexCoords = nullptr)
     {
@@ -337,7 +337,7 @@ public: // member functions
     //! Draw a textured quad where the position, color and uv of each point is specified explicitly
     //
     //! See IDraw2d:DrawQuad for parameter descriptions
-    void DrawQuad(AZ::Data::Instance<AZ::RPI::Image> image, IDraw2d::VertexPosColUV* verts,
+    void DrawQuad(AZ::Data::Instance<JE::Render::RPI::Image> image, IDraw2d::VertexPosColUV* verts,
         IDraw2d::Rounding pixelRounding = IDraw2d::Rounding::Nearest,
         bool clamp = false,
         const IDraw2d::RenderState& renderState = IDraw2d::RenderState{})
@@ -364,7 +364,7 @@ public: // member functions
     //! Draw a line with a texture so it can be dotted or dashed
     //
     //! See IDraw2d:DrawLineTextured for parameter descriptions
-    void DrawLineTextured(AZ::Data::Instance<AZ::RPI::Image> image, IDraw2d::VertexPosColUV* verts,
+    void DrawLineTextured(AZ::Data::Instance<JE::Render::RPI::Image> image, IDraw2d::VertexPosColUV* verts,
         IDraw2d::Rounding pixelRounding = IDraw2d::Rounding::Nearest,
         const IDraw2d::RenderState& renderState = IDraw2d::RenderState{})
     {
@@ -377,7 +377,7 @@ public: // member functions
     //! Draw a rect outline with a texture
     //
     //! See IDraw2d:DrawRectOutlineTextured for parameter descriptions
-    void DrawRectOutlineTextured(AZ::Data::Instance<AZ::RPI::Image> image,
+    void DrawRectOutlineTextured(AZ::Data::Instance<JE::Render::RPI::Image> image,
         UiTransformInterface::RectPoints points,
         AZ::Vector2 rightVec,
         AZ::Vector2 downVec,
@@ -483,7 +483,7 @@ public: // static member functions
     }
 
     //! Helper to load a texture
-    static AZ::Data::Instance<AZ::RPI::Image> LoadTexture(const AZStd::string& pathName)
+    static AZ::Data::Instance<JE::Render::RPI::Image> LoadTexture(const AZStd::string& pathName)
     {
         if (AZ::Interface<ILyShine>::Get())
         {

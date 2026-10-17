@@ -48,7 +48,7 @@ namespace NvCloth
         void Deactivate() override;
 
         // AZ::Render::MeshComponentNotificationBus::Handler overrides ...
-        void OnModelReady(const AZ::Data::Asset<AZ::RPI::ModelAsset>& modelAsset, const AZ::Data::Instance<AZ::RPI::Model>& model) override;
+        void OnModelReady(const AZ::Data::Asset<JE::Render::RPI::ModelAsset>& modelAsset, const AZ::Data::Instance<JE::Render::RPI::Model>& model) override;
         void OnModelPreDestroy() override;
 
     private:

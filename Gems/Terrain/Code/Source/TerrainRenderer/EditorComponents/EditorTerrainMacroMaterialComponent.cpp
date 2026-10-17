@@ -6,7 +6,7 @@
  *
  */
 
-#include <Atom/RPI.Edit/Common/AssetUtils.h>
+#include <JE/Editor/Render/RPI/Edit/Common/AssetUtils.h>
 #include <AzCore/Preprocessor/EnumReflectUtils.h>
 #include <AzCore/Serialization/EditContext.h>
 #include <AzCore/Serialization/SerializeContext.h>

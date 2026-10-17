@@ -7,7 +7,7 @@
  */
 #pragma once
 
-#include <Atom/RPI.Public/Pass/FullscreenTrianglePass.h>
+#include <JE/Render/RPI/Public/Pass/FullscreenTrianglePass.h>
 
 namespace AZ
 {
@@ -15,7 +15,7 @@ namespace AZ
     {
         //! Child pass for downsampling DepthLinear mips
         class ReflectionScreenSpaceDownsampleDepthLinearChildPass
-            : public RPI::FullscreenTrianglePass
+            : public JE::Render::RPI::FullscreenTrianglePass
         {
             AZ_RPI_PASS(ReflectionScreenSpaceDownsampleDepthLinearChildPass);
 
@@ -24,12 +24,12 @@ namespace AZ
             AZ_CLASS_ALLOCATOR(Render::ReflectionScreenSpaceDownsampleDepthLinearChildPass, SystemAllocator);
 
             //! Creates a new pass without a PassTemplate
-            static RPI::Ptr<ReflectionScreenSpaceDownsampleDepthLinearChildPass> Create(const RPI::PassDescriptor& descriptor);
+            static JE::Render::RPI::Ptr<ReflectionScreenSpaceDownsampleDepthLinearChildPass> Create(const JE::Render::RPI::PassDescriptor& descriptor);
 
             void SetMipLevel(uint32_t mipLevel) { m_mipLevel = mipLevel; }
 
         private:
-            explicit ReflectionScreenSpaceDownsampleDepthLinearChildPass(const RPI::PassDescriptor& descriptor);
+            explicit ReflectionScreenSpaceDownsampleDepthLinearChildPass(const JE::Render::RPI::PassDescriptor& descriptor);
 
             // Pass Overrides...
             void FrameBeginInternal(FramePrepareParams params) override;

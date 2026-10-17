@@ -13,9 +13,9 @@
 
 #include <Atom/RHI/RHISystemInterface.h>
 #include <Atom/RHI/RHIUtils.h>
-#include <Atom/RPI.Public/Model/Model.h>
-#include <Atom/RPI.Public/Scene.h>
-#include <Atom/RPI.Reflect/Asset/AssetUtils.h>
+#include <JE/Render/RPI/Public/Model/Model.h>
+#include <JE/Render/RPI/Public/Scene.h>
+#include <JE/Render/RPI/Reflect/Asset/AssetUtils.h>
 
 #include <AzCore/Asset/AssetManager.h>
 #include <AzCore/Asset/AssetManagerBus.h>
@@ -46,8 +46,8 @@ namespace AZ
                     MeshComponentNotificationBusHandler, "{8B8F4977-817F-4C7C-9141-0E5FF899E1BC}", AZ::SystemAllocator, OnModelReady);
 
                 void OnModelReady(
-                    [[maybe_unused]] const Data::Asset<RPI::ModelAsset>& modelAsset,
-                    [[maybe_unused]] const Data::Instance<RPI::Model>& model) override
+                    [[maybe_unused]] const Data::Asset<JE::Render::RPI::ModelAsset>& modelAsset,
+                    [[maybe_unused]] const Data::Instance<JE::Render::RPI::Model>& model) override
                 {
                     Call(FN_OnModelReady);
                 }
@@ -60,11 +60,11 @@ namespace AZ
             {
                 if (classElement.GetVersion() < 2)
                 {
-                    RPI::Cullable::LodOverride lodOverride = aznumeric_cast<RPI::Cullable::LodOverride>(classElement.FindElement(AZ_CRC_CE("LodOverride")));
-                    static constexpr uint8_t old_NoLodOverride = AZStd::numeric_limits <RPI::Cullable::LodOverride>::max();
+                    JE::Render::RPI::Cullable::LodOverride lodOverride = aznumeric_cast<JE::Render::RPI::Cullable::LodOverride>(classElement.FindElement(AZ_CRC_CE("LodOverride")));
+                    static constexpr uint8_t old_NoLodOverride = AZStd::numeric_limits <JE::Render::RPI::Cullable::LodOverride>::max();
                     if (lodOverride == old_NoLodOverride)
                     {
-                        classElement.AddElementWithData(context, "LodType", RPI::Cullable::LodType::SpecificLod);
+                        classElement.AddElementWithData(context, "LodType", JE::Render::RPI::Cullable::LodType::SpecificLod);
                     }
                 }
                 return true;
@@ -99,12 +99,12 @@ namespace AZ
 
         bool MeshComponentConfig::LodTypeIsScreenCoverage()
         {
-            return m_lodType == RPI::Cullable::LodType::ScreenCoverage;
+            return m_lodType == JE::Render::RPI::Cullable::LodType::ScreenCoverage;
         }
 
         bool MeshComponentConfig::LodTypeIsSpecificLOD()
         {
-            return m_lodType == RPI::Cullable::LodType::SpecificLod;
+            return m_lodType == JE::Render::RPI::Cullable::LodType::SpecificLod;
         }
 
         bool MeshComponentConfig::ShowLodConfig()
@@ -112,9 +112,9 @@ namespace AZ
             return LodTypeIsScreenCoverage() || LodTypeIsSpecificLOD();
         }
 
-        AZStd::vector<AZStd::pair<RPI::Cullable::LodOverride, AZStd::string>> MeshComponentConfig::GetLodOverrideValues()
+        AZStd::vector<AZStd::pair<JE::Render::RPI::Cullable::LodOverride, AZStd::string>> MeshComponentConfig::GetLodOverrideValues()
         {
-            AZStd::vector<AZStd::pair<RPI::Cullable::LodOverride, AZStd::string>> values;
+            AZStd::vector<AZStd::pair<JE::Render::RPI::Cullable::LodOverride, AZStd::string>> values;
             uint32_t lodCount = 0;
             if (IsAssetSet())
             {
@@ -125,8 +125,8 @@ namespace AZ
                 else
                 {
                     // If the asset isn't loaded, it's still possible it exists in the instance database.
-                    Data::Instance<RPI::Model> model =
-                        Data::InstanceDatabase<RPI::Model>::Instance().Find(Data::InstanceId::CreateFromAsset(m_modelAsset));
+                    Data::Instance<JE::Render::RPI::Model> model =
+                        Data::InstanceDatabase<JE::Render::RPI::Model>::Instance().Find(Data::InstanceId::CreateFromAsset(m_modelAsset));
                     if (model)
                     {
                         lodCount = static_cast<uint32_t>(model->GetLodCount());
@@ -135,12 +135,12 @@ namespace AZ
             }
 
             values.reserve(lodCount + 1);
-            values.push_back({ aznumeric_cast<RPI::Cullable::LodOverride>(0), "Default LOD 0 (Highest Detail)" });
+            values.push_back({ aznumeric_cast<JE::Render::RPI::Cullable::LodOverride>(0), "Default LOD 0 (Highest Detail)" });
 
             for (uint32_t i = 1; i < lodCount; ++i)
             {
                 AZStd::string enumDescription = AZStd::string::format("LOD %i", i);
-                values.push_back({ aznumeric_cast<RPI::Cullable::LodOverride>(i), enumDescription.c_str() });
+                values.push_back({ aznumeric_cast<JE::Render::RPI::Cullable::LodOverride>(i), enumDescription.c_str() });
             }
 
             return values;
@@ -170,7 +170,7 @@ namespace AZ
                     ->Attribute(AZ::Script::Attributes::Category, "render")
                     ->Attribute(AZ::Script::Attributes::Module, "render");
 
-                behaviorContext->ConstantProperty("DefaultLodType", BehaviorConstant(RPI::Cullable::LodType::Default))
+                behaviorContext->ConstantProperty("DefaultLodType", BehaviorConstant(JE::Render::RPI::Cullable::LodType::Default))
                     ->Attribute(AZ::Script::Attributes::Scope, AZ::Script::Attributes::ScopeFlags::Common)
                     ->Attribute(AZ::Script::Attributes::Category, "render")
                     ->Attribute(AZ::Script::Attributes::Module, "render");
@@ -260,7 +260,7 @@ namespace AZ
                 "MeshComponentController", m_transformInterface,
                 "Unable to attach to a TransformBus handler. This mesh will always be rendered at the origin.");
 
-            m_meshFeatureProcessor = RPI::Scene::GetFeatureProcessorForEntity<MeshFeatureProcessorInterface>(entityId);
+            m_meshFeatureProcessor = JE::Render::RPI::Scene::GetFeatureProcessorForEntity<MeshFeatureProcessorInterface>(entityId);
             AZ_Error("MeshComponentController", m_meshFeatureProcessor, "Unable to find a MeshFeatureProcessorInterface on the entityId.");
 
             m_cachedNonUniformScale = AZ::Vector3::CreateOne();
@@ -367,7 +367,7 @@ namespace AZ
 
         AZStd::unordered_set<AZ::Name> MeshComponentController::GetModelUvNames() const
         {
-            const Data::Instance<RPI::Model> model = GetModel();
+            const Data::Instance<JE::Render::RPI::Model> model = GetModel();
             return model ? model->GetUvNames() : AZStd::unordered_set<AZ::Name>();
         }
 
@@ -387,14 +387,14 @@ namespace AZ
             }
         }
 
-        bool MeshComponentController::RequiresCloning(const Data::Asset<RPI::ModelAsset>& modelAsset)
+        bool MeshComponentController::RequiresCloning(const Data::Asset<JE::Render::RPI::ModelAsset>& modelAsset)
         {
             // Is the model asset containing a cloth buffer? If yes, we need to clone the model asset for instancing.
-            const AZStd::span<const AZ::Data::Asset<AZ::RPI::ModelLodAsset>> lodAssets = modelAsset->GetLodAssets();
-            for (const AZ::Data::Asset<AZ::RPI::ModelLodAsset>& lodAsset : lodAssets)
+            const AZStd::span<const AZ::Data::Asset<JE::Render::RPI::ModelLodAsset>> lodAssets = modelAsset->GetLodAssets();
+            for (const AZ::Data::Asset<JE::Render::RPI::ModelLodAsset>& lodAsset : lodAssets)
             {
-                const AZStd::span<const AZ::RPI::ModelLodAsset::Mesh> meshes = lodAsset->GetMeshes();
-                for (const AZ::RPI::ModelLodAsset::Mesh& mesh : meshes)
+                const AZStd::span<const JE::Render::RPI::ModelLodAsset::Mesh> meshes = lodAsset->GetMeshes();
+                for (const JE::Render::RPI::ModelLodAsset::Mesh& mesh : meshes)
                 {
                     if (mesh.GetSemanticBufferAssetView(s_CLOTH_DATA_Name) != nullptr)
                     {
@@ -406,9 +406,9 @@ namespace AZ
             return false;
         }
 
-        void MeshComponentController::HandleModelChange(const AZ::Data::Instance<AZ::RPI::Model>& model)
+        void MeshComponentController::HandleModelChange(const AZ::Data::Instance<JE::Render::RPI::Model>& model)
         {
-            Data::Asset<RPI::ModelAsset> modelAsset = m_meshFeatureProcessor->GetModelAsset(m_meshHandle);
+            Data::Asset<JE::Render::RPI::ModelAsset> modelAsset = m_meshFeatureProcessor->GetModelAsset(m_meshHandle);
             if (model && modelAsset.IsReady())
             {
                 const AZ::EntityId entityId = m_entityComponentIdPair.GetEntityId();
@@ -424,7 +424,7 @@ namespace AZ
             }
         }
 
-        void MeshComponentController::HandleObjectSrgCreate(const Data::Instance<RPI::ShaderResourceGroup>& objectSrg)
+        void MeshComponentController::HandleObjectSrgCreate(const Data::Instance<JE::Render::RPI::ShaderResourceGroup>& objectSrg)
         {
             MeshComponentNotificationBus::Event(m_entityComponentIdPair.GetEntityId(), &MeshComponentNotificationBus::Events::OnObjectSrgCreated, objectSrg);
         }
@@ -506,8 +506,8 @@ namespace AZ
 
         void MeshComponentController::SetModelAssetId(Data::AssetId modelAssetId)
         {
-            AZ::Data::Asset<AZ::RPI::ModelAsset> meshAsset =
-            AZ::RPI::AssetUtils::LoadAssetById<AZ::RPI::ModelAsset>(modelAssetId, AZ::RPI::AssetUtils::TraceLevel::Error);
+            AZ::Data::Asset<JE::Render::RPI::ModelAsset> meshAsset =
+            JE::Render::RPI::AssetUtils::LoadAssetById<JE::Render::RPI::ModelAsset>(modelAssetId, JE::Render::RPI::AssetUtils::TraceLevel::Error);
             meshAsset.BlockUntilLoadComplete();
             if(meshAsset.IsReady())
             {
@@ -515,11 +515,11 @@ namespace AZ
             }
             else 
             {
-                SetModelAsset(Data::Asset<RPI::ModelAsset>(modelAssetId, azrtti_typeid<RPI::ModelAsset>()));
+                SetModelAsset(Data::Asset<JE::Render::RPI::ModelAsset>(modelAssetId, azrtti_typeid<JE::Render::RPI::ModelAsset>()));
             }
         }
 
-        void MeshComponentController::SetModelAsset(Data::Asset<RPI::ModelAsset> modelAsset)
+        void MeshComponentController::SetModelAsset(Data::Asset<JE::Render::RPI::ModelAsset> modelAsset)
         {
             if (m_configuration.m_modelAsset != modelAsset)
             {
@@ -529,7 +529,7 @@ namespace AZ
             }
         }
 
-        Data::Asset<const RPI::ModelAsset> MeshComponentController::GetModelAsset() const
+        Data::Asset<const JE::Render::RPI::ModelAsset> MeshComponentController::GetModelAsset() const
         {
             return m_configuration.m_modelAsset;
         }
@@ -542,7 +542,7 @@ namespace AZ
         void MeshComponentController::SetModelAssetPath(const AZStd::string& modelAssetPath)
         {
             AZ::Data::AssetId assetId;
-            AZ::Data::AssetCatalogRequestBus::BroadcastResult(assetId, &AZ::Data::AssetCatalogRequestBus::Events::GetAssetIdByPath, modelAssetPath.c_str(), AZ::RPI::ModelAsset::RTTI_Type(), false);
+            AZ::Data::AssetCatalogRequestBus::BroadcastResult(assetId, &AZ::Data::AssetCatalogRequestBus::Events::GetAssetIdByPath, modelAssetPath.c_str(), JE::Render::RPI::ModelAsset::RTTI_Type(), false);
             SetModelAssetId(assetId);
         }
 
@@ -553,12 +553,12 @@ namespace AZ
             return assetPathString;
         }
 
-        Data::Instance<RPI::Model> MeshComponentController::GetModel() const
+        Data::Instance<JE::Render::RPI::Model> MeshComponentController::GetModel() const
         {
-            return m_meshFeatureProcessor ? m_meshFeatureProcessor->GetModel(m_meshHandle) : Data::Instance<RPI::Model>();
+            return m_meshFeatureProcessor ? m_meshFeatureProcessor->GetModel(m_meshHandle) : Data::Instance<JE::Render::RPI::Model>();
         }
         
-        const RPI::MeshDrawPacketLods* MeshComponentController::GetDrawPackets() const
+        const JE::Render::RPI::MeshDrawPacketLods* MeshComponentController::GetDrawPackets() const
         {
             return m_meshFeatureProcessor ? &m_meshFeatureProcessor->GetDrawPackets(m_meshHandle) : nullptr;
         }
@@ -585,7 +585,7 @@ namespace AZ
             return m_meshFeatureProcessor->GetIsAlwaysDynamic(m_meshHandle);
         }
 
-        RPI::Cullable::LodConfiguration MeshComponentController::GetMeshLodConfiguration() const
+        JE::Render::RPI::Cullable::LodConfiguration MeshComponentController::GetMeshLodConfiguration() const
         {
             return {
                 m_configuration.m_lodType,
@@ -595,55 +595,55 @@ namespace AZ
             };
         }
         // -----------------------
-        void MeshComponentController::SetLodType(RPI::Cullable::LodType lodType)
+        void MeshComponentController::SetLodType(JE::Render::RPI::Cullable::LodType lodType)
         {
-            RPI::Cullable::LodConfiguration lodConfig = GetMeshLodConfiguration();
+            JE::Render::RPI::Cullable::LodConfiguration lodConfig = GetMeshLodConfiguration();
             lodConfig.m_lodType = lodType;
             m_meshFeatureProcessor->SetMeshLodConfiguration(m_meshHandle, lodConfig);
         }
 
-        RPI::Cullable::LodType MeshComponentController::GetLodType() const
+        JE::Render::RPI::Cullable::LodType MeshComponentController::GetLodType() const
         {
-            RPI::Cullable::LodConfiguration lodConfig = m_meshFeatureProcessor->GetMeshLodConfiguration(m_meshHandle);
+            JE::Render::RPI::Cullable::LodConfiguration lodConfig = m_meshFeatureProcessor->GetMeshLodConfiguration(m_meshHandle);
             return lodConfig.m_lodType;
         }
 
-        void MeshComponentController::SetLodOverride(RPI::Cullable::LodOverride lodOverride)
+        void MeshComponentController::SetLodOverride(JE::Render::RPI::Cullable::LodOverride lodOverride)
         {
-            RPI::Cullable::LodConfiguration lodConfig = GetMeshLodConfiguration();
+            JE::Render::RPI::Cullable::LodConfiguration lodConfig = GetMeshLodConfiguration();
             lodConfig.m_lodOverride = lodOverride;
             m_meshFeatureProcessor->SetMeshLodConfiguration(m_meshHandle, lodConfig);
         }
 
-        RPI::Cullable::LodOverride MeshComponentController::GetLodOverride() const
+        JE::Render::RPI::Cullable::LodOverride MeshComponentController::GetLodOverride() const
         {
-            RPI::Cullable::LodConfiguration lodConfig = m_meshFeatureProcessor->GetMeshLodConfiguration(m_meshHandle);
+            JE::Render::RPI::Cullable::LodConfiguration lodConfig = m_meshFeatureProcessor->GetMeshLodConfiguration(m_meshHandle);
             return lodConfig.m_lodOverride;
         }
 
         void MeshComponentController::SetMinimumScreenCoverage(float minimumScreenCoverage)
         {
-            RPI::Cullable::LodConfiguration lodConfig = GetMeshLodConfiguration();
+            JE::Render::RPI::Cullable::LodConfiguration lodConfig = GetMeshLodConfiguration();
             lodConfig.m_minimumScreenCoverage = minimumScreenCoverage;
             m_meshFeatureProcessor->SetMeshLodConfiguration(m_meshHandle, lodConfig);
         }
 
         float MeshComponentController::GetMinimumScreenCoverage() const
         {
-            RPI::Cullable::LodConfiguration lodConfig = m_meshFeatureProcessor->GetMeshLodConfiguration(m_meshHandle);
+            JE::Render::RPI::Cullable::LodConfiguration lodConfig = m_meshFeatureProcessor->GetMeshLodConfiguration(m_meshHandle);
             return lodConfig.m_minimumScreenCoverage;
         }
 
         void MeshComponentController::SetQualityDecayRate(float qualityDecayRate)
         {
-            RPI::Cullable::LodConfiguration lodConfig = GetMeshLodConfiguration();
+            JE::Render::RPI::Cullable::LodConfiguration lodConfig = GetMeshLodConfiguration();
             lodConfig.m_qualityDecayRate = qualityDecayRate;
             m_meshFeatureProcessor->SetMeshLodConfiguration(m_meshHandle, lodConfig);
         }
 
         float MeshComponentController::GetQualityDecayRate() const
         {
-            RPI::Cullable::LodConfiguration lodConfig = m_meshFeatureProcessor->GetMeshLodConfiguration(m_meshHandle);
+            JE::Render::RPI::Cullable::LodConfiguration lodConfig = m_meshFeatureProcessor->GetMeshLodConfiguration(m_meshHandle);
             return lodConfig.m_qualityDecayRate;
         }
 
@@ -771,9 +771,9 @@ namespace AZ
             {
                 // Get the index buffer data, confirming that the asset is valid and indices are 32 bit integers. Other formats are
                 // currently not supported.
-                const AZ::RPI::BufferAssetView& indexBufferView = mesh.GetIndexBufferAssetView();
+                const JE::Render::RPI::BufferAssetView& indexBufferView = mesh.GetIndexBufferAssetView();
                 const AZ::RHI::BufferViewDescriptor& indexBufferViewDesc = indexBufferView.GetBufferViewDescriptor();
-                const AZ::Data::Asset<AZ::RPI::BufferAsset> indexBufferAsset = indexBufferView.GetBufferAsset();
+                const AZ::Data::Asset<JE::Render::RPI::BufferAsset> indexBufferAsset = indexBufferView.GetBufferAsset();
                 if (!indexBufferAsset.IsReady() || indexBufferViewDesc.m_elementSize != sizeof(uint32_t))
                 {
                     AZ_Warning("MeshComponentController", false, "Unable to get geometry for mesh because index buffer asset is not ready or is an incompatible format.");
@@ -781,7 +781,7 @@ namespace AZ
                 }
 
                 // Get the position buffer data, if it exists with the expected name.
-                const AZ::RPI::BufferAssetView* positionBufferView = mesh.GetSemanticBufferAssetView(positionName);
+                const JE::Render::RPI::BufferAssetView* positionBufferView = mesh.GetSemanticBufferAssetView(positionName);
                 if (!positionBufferView)
                 {
                     AZ_Warning("MeshComponentController", false, "Unable to get geometry for mesh because position buffer data was not found.");
@@ -792,7 +792,7 @@ namespace AZ
                 // supported.
                 constexpr uint32_t ElementsPerVertex = 3;
                 const AZ::RHI::BufferViewDescriptor& positionBufferViewDesc = positionBufferView->GetBufferViewDescriptor();
-                const AZ::Data::Asset<AZ::RPI::BufferAsset> positionBufferAsset = positionBufferView->GetBufferAsset();
+                const AZ::Data::Asset<JE::Render::RPI::BufferAsset> positionBufferAsset = positionBufferView->GetBufferAsset();
                 if (!positionBufferAsset.IsReady() || positionBufferViewDesc.m_elementSize != sizeof(float) * ElementsPerVertex)
                 {
                     AZ_Warning("MeshComponentController", false, "Unable to get geometry for mesh because position buffer asset is not ready or is an incompatible format.");
@@ -837,7 +837,7 @@ namespace AZ
                 const auto& materialSlot = modelAsset->FindMaterialSlot(materialSlotId);
 
                 // The material asset assigned by the model will be used by default.
-                AZ::Data::Instance<AZ::RPI::Material> material = AZ::RPI::Material::FindOrCreate(materialSlot.m_defaultMaterialAsset);
+                AZ::Data::Instance<JE::Render::RPI::Material> material = JE::Render::RPI::Material::FindOrCreate(materialSlot.m_defaultMaterialAsset);
 
                 // Materials provided by the material component take priority over materials provided by the model asset.
                 const JE::Render::MaterialAssignmentId id(lodIndex, materialSlotId);
@@ -862,14 +862,14 @@ namespace AZ
         }
 
         bool MeshComponentController::DoesMaterialUseDrawListTag(
-            const AZ::Data::Instance<AZ::RPI::Material> material, const AZ::RHI::DrawListTag searchDrawListTag) const
+            const AZ::Data::Instance<JE::Render::RPI::Material> material, const AZ::RHI::DrawListTag searchDrawListTag) const
         {
             bool foundTag = false;
 
             if (material)
             {
                 material->ForAllShaderItems(
-                    [&](const AZ::Name&, const AZ::RPI::ShaderCollection::Item& shaderItem)
+                    [&](const AZ::Name&, const JE::Render::RPI::ShaderCollection::Item& shaderItem)
                     {
                         if (shaderItem.IsEnabled())
                         {
@@ -902,7 +902,7 @@ namespace AZ
             const AzFramework::RenderGeometry::RayRequest& ray) const
         {
             AzFramework::RenderGeometry::RayResult result;
-            if (const Data::Instance<RPI::Model> model = GetModel())
+            if (const Data::Instance<JE::Render::RPI::Model> model = GetModel())
             {
                 float t;
                 AZ::Vector3 normal;

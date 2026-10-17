@@ -21,8 +21,8 @@
 
 #include <AzCore/Serialization/Json/JsonUtils.h>
 
-#include <Atom/RPI.Edit/Common/ConvertibleSource.h>
-#include <Atom/RPI.Reflect/System/AnyAsset.h>
+#include <JE/Editor/Render/RPI/Edit/Common/ConvertibleSource.h>
+#include <JE/Render/RPI/Reflect/System/AnyAsset.h>
 
 namespace JE::Assets::RenderBuilders
 {
@@ -130,7 +130,7 @@ namespace JE::Assets::RenderBuilders
         context->EnumerateBase(
             [&isConvertible](const AZ::SerializeContext::ClassData* classData, AZ::Uuid)
             {
-                if (classData && classData->m_typeId == AZ::RPI::ConvertibleSource::TYPEINFO_Uuid())
+                if (classData && classData->m_typeId == JE::Render::RPI::ConvertibleSource::TYPEINFO_Uuid())
                 {
                     isConvertible = true;
                 }
@@ -144,7 +144,7 @@ namespace JE::Assets::RenderBuilders
 
         if (isConvertible)
         {
-            const AZ::RPI::ConvertibleSource* convertible = reinterpret_cast<const AZ::RPI::ConvertibleSource*>(loadedInstance);
+            const JE::Render::RPI::ConvertibleSource* convertible = reinterpret_cast<const JE::Render::RPI::ConvertibleSource*>(loadedInstance);
 
             // convert and save the converted data to outputData and its type id to outputTypeId
             bool converted = convertible->Convert(outputTypeId, convertedData);
@@ -181,7 +181,7 @@ namespace JE::Assets::RenderBuilders
         // Note that we use the classId we found in the source file, unless it's a standard .azasset
         AZStd::string sourceFileExtension;
         AzFramework::StringFunc::Path::GetExtension(request.m_fullPath.c_str(), sourceFileExtension, false);
-        auto destClassId = (sourceFileExtension == AnyAssetBuilderDefaultExtension) ? AZ::RPI::AnyAsset::RTTI_Type() : loadedClassId;
+        auto destClassId = (sourceFileExtension == AnyAssetBuilderDefaultExtension) ? JE::Render::RPI::AnyAsset::RTTI_Type() : loadedClassId;
         AssetBuilderSDK::JobProduct jobProduct(destPath, destClassId, 0);
 
 

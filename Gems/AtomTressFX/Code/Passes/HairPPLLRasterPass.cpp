@@ -10,17 +10,17 @@
 #include <Atom/RHI/RHISystemInterface.h>
 #include <Atom/RHI/DevicePipelineState.h>
 
-#include <Atom/RPI.Public/View.h>
-#include <Atom/RPI.Public/RPIUtils.h>
-#include <Atom/RPI.Public/RenderPipeline.h>
-#include <Atom/RPI.Public/RPISystemInterface.h>
-#include <Atom/RPI.Public/Pass/PassUtils.h>
-#include <Atom/RPI.Public/Scene.h>
+#include <JE/Render/RPI/Public/View.h>
+#include <JE/Render/RPI/Public/RPIUtils.h>
+#include <JE/Render/RPI/Public/RenderPipeline.h>
+#include <JE/Render/RPI/Public/RPISystemInterface.h>
+#include <JE/Render/RPI/Public/Pass/PassUtils.h>
+#include <JE/Render/RPI/Public/Scene.h>
 
-#include <Atom/RPI.Reflect/Asset/AssetUtils.h>
-#include <Atom/RPI.Reflect/Pass/RasterPassData.h>
-#include <Atom/RPI.Reflect/Pass/PassTemplate.h>
-#include <Atom/RPI.Reflect/Shader/ShaderAsset.h>
+#include <JE/Render/RPI/Reflect/Asset/AssetUtils.h>
+#include <JE/Render/RPI/Reflect/Pass/RasterPassData.h>
+#include <JE/Render/RPI/Reflect/Pass/PassTemplate.h>
+#include <JE/Render/RPI/Reflect/Shader/ShaderAsset.h>
 
 #include <Passes/HairPPLLRasterPass.h>
 #include <Rendering/HairRenderObject.h>
@@ -33,15 +33,15 @@ namespace AZ
         namespace Hair
         {
 
-            HairPPLLRasterPass::HairPPLLRasterPass(const RPI::PassDescriptor& descriptor)
+            HairPPLLRasterPass::HairPPLLRasterPass(const JE::Render::RPI::PassDescriptor& descriptor)
                 : HairGeometryRasterPass(descriptor)
             {
                 SetShaderPath("Shaders/hairrenderingfillppll.azshader");  
             }
 
-            RPI::Ptr<HairPPLLRasterPass> HairPPLLRasterPass::Create(const RPI::PassDescriptor& descriptor)
+            JE::Render::RPI::Ptr<HairPPLLRasterPass> HairPPLLRasterPass::Create(const JE::Render::RPI::PassDescriptor& descriptor)
             {
-                RPI::Ptr<HairPPLLRasterPass> pass = aznew HairPPLLRasterPass(descriptor);
+                JE::Render::RPI::Ptr<HairPPLLRasterPass> pass = aznew HairPPLLRasterPass(descriptor);
                 return pass;
             }
 

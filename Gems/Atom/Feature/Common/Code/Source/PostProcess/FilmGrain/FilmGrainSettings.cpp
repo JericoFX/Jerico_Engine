@@ -13,13 +13,13 @@
 
 #include <AzCore/Serialization/SerializeContext.h>
 
-#include <Atom/RPI.Public/Image/ImageSystemInterface.h>
-#include <Atom/RPI.Public/Pass/ParentPass.h>
-#include <Atom/RPI.Public/Pass/PassSystemInterface.h>
-#include <Atom/RPI.Public/RPIUtils.h>
-#include <Atom/RPI.Public/Scene.h>
-#include <Atom/RPI.Public/Shader/ShaderResourceGroup.h>
-#include <Atom/RPI.Public/View.h>
+#include <JE/Render/RPI/Public/Image/ImageSystemInterface.h>
+#include <JE/Render/RPI/Public/Pass/ParentPass.h>
+#include <JE/Render/RPI/Public/Pass/PassSystemInterface.h>
+#include <JE/Render/RPI/Public/RPIUtils.h>
+#include <JE/Render/RPI/Public/Scene.h>
+#include <JE/Render/RPI/Public/Shader/ShaderResourceGroup.h>
+#include <JE/Render/RPI/Public/View.h>
 
 namespace AZ
 {
@@ -35,7 +35,7 @@ namespace AZ
             m_parentSettings->OnConfigChanged();
         }
 
-        AZ::Data::Instance<AZ::RPI::StreamingImage> FilmGrainSettings::LoadStreamingImage(
+        AZ::Data::Instance<JE::Render::RPI::StreamingImage> FilmGrainSettings::LoadStreamingImage(
             const char* textureFilePath, [[maybe_unused]] const char* sampleName)
         {
             using namespace AZ;
@@ -43,14 +43,14 @@ namespace AZ
             Data::AssetId streamingImageAssetId;
             Data::AssetCatalogRequestBus::BroadcastResult(
                 streamingImageAssetId, &Data::AssetCatalogRequestBus::Events::GetAssetIdByPath, textureFilePath,
-                azrtti_typeid<RPI::StreamingImageAsset>(), false);
+                azrtti_typeid<JE::Render::RPI::StreamingImageAsset>(), false);
             if (!streamingImageAssetId.IsValid())
             {
                 AZ_Error(sampleName, false, "Failed to get streaming image asset id with path %s", textureFilePath);
                 return nullptr;
             }
 
-            auto streamingImageAsset = Data::AssetManager::Instance().GetAsset<RPI::StreamingImageAsset>(
+            auto streamingImageAsset = Data::AssetManager::Instance().GetAsset<JE::Render::RPI::StreamingImageAsset>(
                 streamingImageAssetId, AZ::Data::AssetLoadBehavior::PreLoad);
             streamingImageAsset.BlockUntilLoadComplete();
 
@@ -60,7 +60,7 @@ namespace AZ
                 return nullptr;
             }
 
-            auto image = RPI::StreamingImage::FindOrCreate(streamingImageAsset);
+            auto image = JE::Render::RPI::StreamingImage::FindOrCreate(streamingImageAsset);
             if (!image)
             {
                 AZ_Error(sampleName, false, "Failed to find or create an image instance from image asset '%s'", textureFilePath);

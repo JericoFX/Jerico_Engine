@@ -13,15 +13,15 @@
 #include <Atom/RHI/FrameGraphInterface.h>
 #include <Atom/RHI/PipelineState.h>
 
-#include <Atom/RPI.Public/Base.h>
-#include <Atom/RPI.Public/Pass/PassUtils.h>
-#include <Atom/RPI.Public/RenderPipeline.h>
+#include <JE/Render/RPI/Public/Base.h>
+#include <JE/Render/RPI/Public/Pass/PassUtils.h>
+#include <JE/Render/RPI/Public/RenderPipeline.h>
 #include <Atom/RHI/RHISystemInterface.h>
-#include <Atom/RPI.Public/RPIUtils.h>
-#include <Atom/RPI.Public/Scene.h>
-#include <Atom/RPI.Public/View.h>
-#include <Atom/RPI.Reflect/Pass/PassTemplate.h>
-#include <Atom/RPI.Reflect/Shader/ShaderAsset.h>
+#include <JE/Render/RPI/Public/RPIUtils.h>
+#include <JE/Render/RPI/Public/Scene.h>
+#include <JE/Render/RPI/Public/View.h>
+#include <JE/Render/RPI/Reflect/Pass/PassTemplate.h>
+#include <JE/Render/RPI/Reflect/Shader/ShaderAsset.h>
 
 #include <MultiDispatchComputePass.h>
 
@@ -29,19 +29,19 @@ namespace AZ
 {
     namespace Meshlets
     {
-        Data::Instance<RPI::Shader> MultiDispatchComputePass::GetShader()
+        Data::Instance<JE::Render::RPI::Shader> MultiDispatchComputePass::GetShader()
         {
             return m_shader;
         }
 
-        RPI::Ptr<MultiDispatchComputePass> MultiDispatchComputePass::Create(const RPI::PassDescriptor& descriptor)
+        JE::Render::RPI::Ptr<MultiDispatchComputePass> MultiDispatchComputePass::Create(const JE::Render::RPI::PassDescriptor& descriptor)
         {
-            RPI::Ptr<MultiDispatchComputePass> pass = aznew MultiDispatchComputePass(descriptor);
+            JE::Render::RPI::Ptr<MultiDispatchComputePass> pass = aznew MultiDispatchComputePass(descriptor);
             return pass;
         }
 
-        MultiDispatchComputePass::MultiDispatchComputePass(const RPI::PassDescriptor& descriptor)
-            : RPI::ComputePass(descriptor)
+        MultiDispatchComputePass::MultiDispatchComputePass(const JE::Render::RPI::PassDescriptor& descriptor)
+            : JE::Render::RPI::ComputePass(descriptor)
         {
         }
 
@@ -53,7 +53,7 @@ namespace AZ
             // This is the buffer that is shared between all objects and dispatches and contains
             // the dynamic data that can be changed between passes.
             Name bufferName = Name{ "MeshletsSharedBuffer" };
-            RPI::PassAttachmentBinding* localBinding = FindAttachmentBinding(bufferName);
+            JE::Render::RPI::PassAttachmentBinding* localBinding = FindAttachmentBinding(bufferName);
             if (localBinding && !localBinding->GetAttachment() && Meshlets::SharedBufferInterface::Get())
             {
                 AttachBufferToSlot(bufferName, Meshlets::SharedBufferInterface::Get()->GetBuffer());
@@ -139,17 +139,17 @@ namespace AZ
         // be a case where dispatch resources are destructed and will most certainly cause a GPU crash.
         // If we flag the need for rebuild, the build will be made at the start of the next frame - at
         // this stage the dispatch items should have been cleared - now we can load the shader and data.
-        void MultiDispatchComputePass::OnShaderReinitialized([[maybe_unused]] const AZ::RPI::Shader& shader)
+        void MultiDispatchComputePass::OnShaderReinitialized([[maybe_unused]] const JE::Render::RPI::Shader& shader)
         {
             BuildShaderAndRenderData();
         }
 
-        void MultiDispatchComputePass::OnShaderAssetReinitialized([[maybe_unused]] const Data::Asset<AZ::RPI::ShaderAsset>& shaderAsset)
+        void MultiDispatchComputePass::OnShaderAssetReinitialized([[maybe_unused]] const Data::Asset<JE::Render::RPI::ShaderAsset>& shaderAsset)
         {
             BuildShaderAndRenderData();
         }
 
-        void MultiDispatchComputePass::OnShaderVariantReinitialized([[maybe_unused]] const AZ::RPI::ShaderVariant& shaderVariant)
+        void MultiDispatchComputePass::OnShaderVariantReinitialized([[maybe_unused]] const JE::Render::RPI::ShaderVariant& shaderVariant)
         {
             BuildShaderAndRenderData();
         }

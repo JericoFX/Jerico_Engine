@@ -26,10 +26,10 @@ namespace TrackView
 
         //! Create a new pipeline associated with a given scene.
         //! @note "MainCamera" is the view that is captured.
-        void CreatePipeline(AZ::RPI::Scene& scene, const AZStd::string& pipelineName, uint32_t width, uint32_t height);
+        void CreatePipeline(JE::Render::RPI::Scene& scene, const AZStd::string& pipelineName, uint32_t width, uint32_t height);
         //! Removes the pipeline from the scene provided and then destroys it.
         //! @note scene must be the same scene used to create the pipeline.
-        void DestroyPipeline(AZ::RPI::Scene& scene);
+        void DestroyPipeline(JE::Render::RPI::Scene& scene);
 
         bool IsCreated() const { return m_pipelineCreated; }
 
@@ -37,16 +37,16 @@ namespace TrackView
         //! @param attachmentReadbackCallback Handles the returned attachment (image data returned by the renderer).
         //! @param captureFinishedCallback Logic to run once the capture has completed fully.
         bool BeginCapture(
-            const AZ::RPI::AttachmentReadback::CallbackFunction& attachmentReadbackCallback,
+            const JE::Render::RPI::AttachmentReadback::CallbackFunction& attachmentReadbackCallback,
             CaptureFinishedCallback captureFinishedCallback);
 
         //! Update the internal view that is associated with the created pipeline.
-        void UpdateView(const AZ::Matrix3x4& cameraTransform, const AZ::Matrix4x4& cameraProjection, const AZ::RPI::ViewPtr targetView = nullptr);
+        void UpdateView(const AZ::Matrix3x4& cameraTransform, const AZ::Matrix4x4& cameraProjection, const JE::Render::RPI::ViewPtr targetView = nullptr);
 
     private:
-        AZ::RPI::RenderPipelinePtr m_renderPipeline; //!< The internal render pipeline.
-        AZ::RPI::ViewPtr m_view; //!< The view associated with the render pipeline.
-        AZ::RPI::ViewPtr m_targetView; //!< The view that this render pipeline will mimic.
+        JE::Render::RPI::RenderPipelinePtr m_renderPipeline; //!< The internal render pipeline.
+        JE::Render::RPI::ViewPtr m_view; //!< The view associated with the render pipeline.
+        JE::Render::RPI::ViewPtr m_targetView; //!< The view that this render pipeline will mimic.
         AZStd::vector<AZStd::string> m_passHierarchy; //!< Pass hierarchy (includes pipelineName and CopyToSwapChain).
         CaptureFinishedCallback m_captureFinishedCallback; //!< Stored callback called from OnCaptureFinished.
 
@@ -71,5 +71,5 @@ namespace TrackView
     AZ::Matrix4x4 ProjectionFromCameraEntityId(AZ::EntityId entityId, float outputWidth, float outputHeight);
 
     //! Helper to return the GameEntityContext scene.
-    AZ::RPI::Scene* SceneFromGameEntityContext();
+    JE::Render::RPI::Scene* SceneFromGameEntityContext();
 } // namespace TrackView

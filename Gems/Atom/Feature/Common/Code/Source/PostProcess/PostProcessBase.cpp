@@ -7,9 +7,9 @@
  */
 
 
-#include <Atom/RPI.Public/RenderPipeline.h>
-#include <Atom/RPI.Public/Scene.h>
-#include <Atom/RPI.Public/View.h>
+#include <JE/Render/RPI/Public/RenderPipeline.h>
+#include <JE/Render/RPI/Public/Scene.h>
+#include <JE/Render/RPI/Public/View.h>
 
 #include <PostProcess/PostProcessBase.h>
 #include <PostProcess/PostProcessFeatureProcessor.h>
@@ -22,7 +22,7 @@ namespace AZ
             : m_featureProcessor(featureProcessor)
         { }
 
-        RPI::Scene* PostProcessBase::GetParentScene() const
+        JE::Render::RPI::Scene* PostProcessBase::GetParentScene() const
         {
             if (m_featureProcessor)
             {
@@ -31,7 +31,7 @@ namespace AZ
             return nullptr;
         }
 
-        RPI::ShaderResourceGroup* PostProcessBase::GetSceneSrg() const
+        JE::Render::RPI::ShaderResourceGroup* PostProcessBase::GetSceneSrg() const
         {
             if (GetParentScene())
             {
@@ -40,7 +40,7 @@ namespace AZ
             return nullptr;
         }
 
-        AZ::Data::Instance<AZ::RPI::ShaderResourceGroup> PostProcessBase::GetDefaultViewSrg() const
+        AZ::Data::Instance<JE::Render::RPI::ShaderResourceGroup> PostProcessBase::GetDefaultViewSrg() const
         {
             if (GetParentScene() &&
                 GetParentScene()->GetDefaultRenderPipeline() &&

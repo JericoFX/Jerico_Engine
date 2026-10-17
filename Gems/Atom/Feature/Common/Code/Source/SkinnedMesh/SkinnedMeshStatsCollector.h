@@ -32,12 +32,12 @@ namespace AZ
         private:
             void ResetAllStats();
             void AddDispatchItemToSceneStats(const AZStd::unique_ptr<SkinnedMeshDispatchItem>& dispatchItem);
-            void AddBonesToSceneStats(const Data::Instance<RPI::Buffer>& boneTransformBuffer);
+            void AddBonesToSceneStats(const Data::Instance<JE::Render::RPI::Buffer>& boneTransformBuffer);
             void AddVerticesToSceneStats(size_t vertexCount);
 
             SkinnedMeshSceneStats m_sceneStats;
             // Use sets to ensure we're not double-counting any resources that are shared
-            AZStd::unordered_set<RPI::Buffer*> m_sceneBoneTransforms;
+            AZStd::unordered_set<JE::Render::RPI::Buffer*> m_sceneBoneTransforms;
             SkinnedMeshFeatureProcessor* m_featureProcessor;
         };
     } // namespace Render

@@ -10,12 +10,12 @@
 
 namespace SkyAtmosphere
 {
-    SkyAtmosphereParentPass::SkyAtmosphereParentPass(const AZ::RPI::PassDescriptor& descriptor)
+    SkyAtmosphereParentPass::SkyAtmosphereParentPass(const JE::Render::RPI::PassDescriptor& descriptor)
         : Base(descriptor)
     {
     }
 
-    AZ::RPI::Ptr<SkyAtmosphereParentPass> SkyAtmosphereParentPass::Create(const AZ::RPI::PassDescriptor& descriptor)
+    JE::Render::RPI::Ptr<SkyAtmosphereParentPass> SkyAtmosphereParentPass::Create(const JE::Render::RPI::PassDescriptor& descriptor)
     {
         return aznew SkyAtmosphereParentPass(descriptor);
     }
@@ -58,9 +58,9 @@ namespace SkyAtmosphere
         }
     }
 
-    AZ::RPI::Ptr<SkyAtmospherePass> SkyAtmosphereParentPass::GetPass(SkyAtmosphereFeatureProcessorInterface::AtmosphereId id) const
+    JE::Render::RPI::Ptr<SkyAtmospherePass> SkyAtmosphereParentPass::GetPass(SkyAtmosphereFeatureProcessorInterface::AtmosphereId id) const
     {
-        for (const AZ::RPI::Ptr<Pass>& child : m_children)
+        for (const JE::Render::RPI::Ptr<Pass>& child : m_children)
         {
             SkyAtmospherePass* pass = azrtti_cast<SkyAtmospherePass*>(child.get());
             if (pass && pass->GetAtmosphereId() == id)

@@ -9,7 +9,7 @@
 #pragma once
 
 #include <Atom/Feature/Automation/AtomAutomationBus.h>
-#include <Atom/RPI.Edit/Material/MaterialConverterBus.h>
+#include <JE/Editor/Render/RPI/Edit/Material/MaterialConverterBus.h>
 #include <AzCore/Component/Component.h>
 #include <SceneAPI/SceneCore/Components/ExportingComponent.h>
 #include <SceneAPI/SceneCore/DataTypes/GraphData/IMaterialData.h>
@@ -31,7 +31,7 @@ namespace AZ
         //! Atom's implementation of converting SceneAPI data into Atom's default material: StandardPBR
         class MaterialConverterSystemComponent final
             : public AZ::Component
-            , public RPI::MaterialConverterBus::Handler
+            , public JE::Render::RPI::MaterialConverterBus::Handler
         {
         public:
             AZ_COMPONENT(MaterialConverterSystemComponent, "{C2338D45-6456-4521-B469-B000A13F2493}");
@@ -46,7 +46,7 @@ namespace AZ
             // MaterialConverterBus overrides ...
             bool IsEnabled() const override;
             AZStd::string GetFingerprintInfo() const override;
-            bool ConvertMaterial(const AZ::SceneAPI::DataTypes::IMaterialData& materialData, RPI::MaterialSourceData& out) override;
+            bool ConvertMaterial(const AZ::SceneAPI::DataTypes::IMaterialData& materialData, JE::Render::RPI::MaterialSourceData& out) override;
             AZStd::string GetMaterialTypePath() const override;
             AZStd::string GetDefaultMaterialPath() const override;
 

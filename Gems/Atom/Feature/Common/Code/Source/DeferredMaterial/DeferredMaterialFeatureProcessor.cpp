@@ -9,7 +9,7 @@
 #include "DeferredMaterialFeatureProcessor.h"
 #include <Atom/Feature/RenderCommon.h>
 #include <Atom/RHI/RHIUtils.h>
-#include <Atom/RPI.Public/Scene.h>
+#include <JE/Render/RPI/Public/Scene.h>
 #include <Mesh/MeshFeatureProcessor.h>
 
 namespace AZ::Render
@@ -30,27 +30,27 @@ namespace AZ::Render
     {
     public:
         static void ForEachLodMesh(
-            const Data::Instance<RPI::Model>& model,
-            AZStd::function<bool(const uint32_t, const uint32_t, const RPI::ModelLodAsset::Mesh&, const RPI::ModelLod::Mesh&)> callback)
+            const Data::Instance<JE::Render::RPI::Model>& model,
+            AZStd::function<bool(const uint32_t, const uint32_t, const JE::Render::RPI::ModelLodAsset::Mesh&, const JE::Render::RPI::ModelLod::Mesh&)> callback)
         {
             const auto& modelAsset = model->GetModelAsset();
-            const AZStd::span<const Data::Asset<RPI::ModelLodAsset>>& modelLodAssets = modelAsset->GetLodAssets();
-            const AZStd::span<const Data::Instance<RPI::ModelLod>>& modelLods = model->GetLods();
+            const AZStd::span<const Data::Asset<JE::Render::RPI::ModelLodAsset>>& modelLodAssets = modelAsset->GetLodAssets();
+            const AZStd::span<const Data::Instance<JE::Render::RPI::ModelLod>>& modelLods = model->GetLods();
             const auto lodCount = static_cast<uint32_t>(model->GetLodCount());
 
             for (auto lod = 0u; lod < lodCount; lod++)
             {
-                const Data::Instance<RPI::ModelLod>& modelLod = modelLods[lod];
-                const Data::Asset<RPI::ModelLodAsset>& modelLodAsset = modelLodAssets[lod];
+                const Data::Instance<JE::Render::RPI::ModelLod>& modelLod = modelLods[lod];
+                const Data::Asset<JE::Render::RPI::ModelLodAsset>& modelLodAsset = modelLodAssets[lod];
                 const auto meshCount = static_cast<uint32_t>(modelLodAsset->GetMeshes().size());
 
                 for (uint32_t meshIndex = 0; meshIndex < meshCount; ++meshIndex)
                 {
                     const auto assetMeshes = modelLodAsset->GetMeshes();
-                    const RPI::ModelLodAsset::Mesh& assetMesh = assetMeshes[meshIndex];
+                    const JE::Render::RPI::ModelLodAsset::Mesh& assetMesh = assetMeshes[meshIndex];
 
                     const auto meshes = modelLod->GetMeshes();
-                    const RPI::ModelLod::Mesh& mesh = meshes[meshIndex];
+                    const JE::Render::RPI::ModelLod::Mesh& mesh = meshes[meshIndex];
 
                     if (!callback(lod, meshIndex, assetMesh, mesh))
                     {
@@ -92,7 +92,7 @@ namespace AZ::Render
     }
 
     template<typename T>
-    void CreateOrResizeBuffer(Data::Instance<RPI::Buffer>& buffer, const AZStd::string& name, const size_t minNumEntries)
+    void CreateOrResizeBuffer(Data::Instance<JE::Render::RPI::Buffer>& buffer, const AZStd::string& name, const size_t minNumEntries)
     {
         // we need one entry per meshinfo-entry, so we can use the same Min number of entries
         const auto numEntries = AlignUpToPowerOfTwo(AZStd::max(minNumEntries, MeshInfoMinEntries));
@@ -102,17 +102,17 @@ namespace AZ::Render
         if (buffer == nullptr)
         {
             // Create an empty RPI buffer, it will be updated with data later
-            AZ::RPI::CommonBufferDescriptor desc;
+            JE::Render::RPI::CommonBufferDescriptor desc;
             //! Note: If this buffer is bound to a StructuredBuffer, the format has to be unknown.
             //! or we get the error message Buffer Input 'm_meshInfoBuffer[0]': Does not match expected type 'Structured'
             desc.m_elementFormat = AZ::RHI::Format::Unknown;
             //! needs to be ReadWrite, or it can't be bound to RPI Slots for some reason
-            desc.m_poolType = AZ::RPI::CommonBufferPoolType::ReadWrite;
+            desc.m_poolType = JE::Render::RPI::CommonBufferPoolType::ReadWrite;
             desc.m_elementSize = static_cast<uint32_t>(elementSize);
             desc.m_bufferName = name;
             // allocate size for a few objects
             desc.m_byteCount = bufferSize;
-            buffer = AZ::RPI::BufferSystemInterface::Get()->CreateBufferFromCommonPool(desc);
+            buffer = JE::Render::RPI::BufferSystemInterface::Get()->CreateBufferFromCommonPool(desc);
         }
         else if (buffer->GetBufferSize() < bufferSize)
         {
@@ -120,7 +120,7 @@ namespace AZ::Render
         }
     }
 
-    RPI::RingBuffer& DeferredMaterialFeatureProcessor::GetOrCreateDrawPacketIdRingBuffer(const RHI::DrawListTag& drawListTag)
+    JE::Render::RPI::RingBuffer& DeferredMaterialFeatureProcessor::GetOrCreateDrawPacketIdRingBuffer(const RHI::DrawListTag& drawListTag)
     {
         auto ringBufferIt = m_drawPacketIdBuffers.find(drawListTag);
         if (ringBufferIt == m_drawPacketIdBuffers.end())
@@ -128,7 +128,7 @@ namespace AZ::Render
             auto tagRegistry = RHI::GetDrawListTagRegistry();
             auto name = AZStd::string::format("drawPacketIdBuffer_%s", tagRegistry->GetName(drawListTag).GetCStr());
             auto [newIt, inserted] = m_drawPacketIdBuffers.emplace(
-                AZStd::make_pair(drawListTag, RPI::RingBuffer{ name, RPI::CommonBufferPoolType::ReadOnly, RHI::Format::R32_UINT }));
+                AZStd::make_pair(drawListTag, JE::Render::RPI::RingBuffer{ name, JE::Render::RPI::CommonBufferPoolType::ReadOnly, RHI::Format::R32_UINT }));
             return newIt->second;
         }
         return ringBufferIt->second;
@@ -185,7 +185,7 @@ namespace AZ::Render
     }
 
     void DeferredMaterialFeatureProcessor::AddModel(
-        const ModelId& modelId, ModelDataInstanceInterface* meshHandle, const Data::Instance<RPI::Model>& model)
+        const ModelId& modelId, ModelDataInstanceInterface* meshHandle, const Data::Instance<JE::Render::RPI::Model>& model)
     {
         if (!m_enabled)
         {
@@ -211,8 +211,8 @@ namespace AZ::Render
             model,
             [&](const uint32_t lod,
                 const uint32_t meshIndex,
-                [[maybe_unused]] const RPI::ModelLodAsset::Mesh& assetMesh,
-                const RPI::ModelLod::Mesh& mesh)
+                [[maybe_unused]] const JE::Render::RPI::ModelLodAsset::Mesh& assetMesh,
+                const JE::Render::RPI::ModelLod::Mesh& mesh)
             {
                 auto& modelLodData = modelData.m_lodData[lod];
 
@@ -248,7 +248,7 @@ namespace AZ::Render
         m_needsUpdate = true;
     }
 
-    AZ::Data::Instance<AZ::RPI::Buffer> DeferredMaterialFeatureProcessor::GetDrawPacketIdBuffer(const RHI::DrawListTag& drawListTag)
+    AZ::Data::Instance<JE::Render::RPI::Buffer> DeferredMaterialFeatureProcessor::GetDrawPacketIdBuffer(const RHI::DrawListTag& drawListTag)
     {
         auto bufferIt = m_drawPacketIdBuffers.find(drawListTag);
         if (bufferIt != m_drawPacketIdBuffers.end() && bufferIt->second.IsCurrentBufferValid())
@@ -316,9 +316,9 @@ namespace AZ::Render
 #endif /* DEFERRED_DRAWPACKET_DEBUG_PRINT */
         }
 
-        for (const AZ::RPI::ViewPtr& view : renderPacket.m_views)
+        for (const JE::Render::RPI::ViewPtr& view : renderPacket.m_views)
         {
-            if (view->GetUsageFlags() & AZ::RPI::View::UsageCamera)
+            if (view->GetUsageFlags() & JE::Render::RPI::View::UsageCamera)
             {
                 for (auto& [_, drawPacket] : m_drawPacketManager.GetDrawPackets())
                 {
@@ -333,7 +333,7 @@ namespace AZ::Render
     }
 
     void DeferredMaterialFeatureProcessor::OnRenderPipelineChanged(
-        [[maybe_unused]] RPI::RenderPipeline* renderPipeline, [[maybe_unused]] RPI::SceneNotification::RenderPipelineChangeType changeType)
+        [[maybe_unused]] JE::Render::RPI::RenderPipeline* renderPipeline, [[maybe_unused]] JE::Render::RPI::SceneNotification::RenderPipelineChangeType changeType)
     {
         // force a rebuild of the draw packets and update the buffers
         m_forceRebuild = true;
@@ -357,11 +357,11 @@ namespace AZ::Render
         if (m_enabled)
         {
             m_handleGlobalShaderOptionUpdate =
-                RPI::ShaderSystemInterface::GlobalShaderOptionUpdatedEvent::Handler{ [this](const AZ::Name&, RPI::ShaderOptionValue)
+                JE::Render::RPI::ShaderSystemInterface::GlobalShaderOptionUpdatedEvent::Handler{ [this](const AZ::Name&, JE::Render::RPI::ShaderOptionValue)
                                                                                      {
                                                                                          m_forceRebuild = true;
                                                                                      } };
-            RPI::ShaderSystemInterface::Get()->Connect(m_handleGlobalShaderOptionUpdate);
+            JE::Render::RPI::ShaderSystemInterface::Get()->Connect(m_handleGlobalShaderOptionUpdate);
 
             EnableSceneNotification();
         }

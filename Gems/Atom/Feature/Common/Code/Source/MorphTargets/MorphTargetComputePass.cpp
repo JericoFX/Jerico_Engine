@@ -7,11 +7,11 @@
  */
 
 #include <Atom/Feature/SkinnedMesh/SkinnedMeshOutputStreamManagerInterface.h>
-#include <Atom/RPI.Public/Scene.h>
+#include <JE/Render/RPI/Public/Scene.h>
 #include <MorphTargets/MorphTargetComputePass.h>
 #include <SkinnedMesh/SkinnedMeshFeatureProcessor.h>
 
-#include <Atom/RPI.Public/Shader/Shader.h>
+#include <JE/Render/RPI/Public/Shader/Shader.h>
 
 #include <Atom/RHI/CommandList.h>
 
@@ -19,18 +19,18 @@ namespace AZ
 {
     namespace Render
     {
-        MorphTargetComputePass::MorphTargetComputePass(const RPI::PassDescriptor& descriptor)
-            : RPI::ComputePass(descriptor)
+        MorphTargetComputePass::MorphTargetComputePass(const JE::Render::RPI::PassDescriptor& descriptor)
+            : JE::Render::RPI::ComputePass(descriptor)
         {
         }
 
-        RPI::Ptr<MorphTargetComputePass> MorphTargetComputePass::Create(const RPI::PassDescriptor& descriptor)
+        JE::Render::RPI::Ptr<MorphTargetComputePass> MorphTargetComputePass::Create(const JE::Render::RPI::PassDescriptor& descriptor)
         {
-            RPI::Ptr<MorphTargetComputePass> pass = aznew MorphTargetComputePass(descriptor);
+            JE::Render::RPI::Ptr<MorphTargetComputePass> pass = aznew MorphTargetComputePass(descriptor);
             return pass;
         }
 
-        Data::Instance<RPI::Shader> MorphTargetComputePass::GetShader() const
+        Data::Instance<JE::Render::RPI::Shader> MorphTargetComputePass::GetShader() const
         {
             return m_shader;
         }
@@ -65,7 +65,7 @@ namespace AZ
 
         SkinnedMeshFeatureProcessor* MorphTargetComputePass::GetSkinnedMeshFeatureProcessor()
         {
-            AZ::RPI::Scene* scene{ GetScene() };
+            JE::Render::RPI::Scene* scene{ GetScene() };
             if (!scene)
             {
                 return nullptr;

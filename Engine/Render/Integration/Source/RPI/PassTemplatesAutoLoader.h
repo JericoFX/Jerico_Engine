@@ -15,7 +15,7 @@
 
 #include <AzCore/Component/Component.h>
 
-#include <Atom/RPI.Public/Pass/PassSystemInterface.h>
+#include <JE/Render/RPI/Public/Pass/PassSystemInterface.h>
 
 namespace JE::Render
 {
@@ -75,7 +75,7 @@ namespace JE::Render
             //! We use this event handler to register with RPI::PassSystem to be notified
             //! of the right time to load PassTemplates.
             //! The callback will invoke this->LoadPassTemplates()
-            AZ::RPI::PassSystemInterface::OnReadyLoadTemplatesEvent::Handler m_loadTemplatesHandler;
+            JE::Render::RPI::PassSystemInterface::OnReadyLoadTemplatesEvent::Handler m_loadTemplatesHandler;
         };
     } // namespace RPI
 } // namespace JE::Render

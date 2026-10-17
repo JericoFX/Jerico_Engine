@@ -30,7 +30,7 @@
 #include <cinttypes>
 
 #include <JE/Assets/RenderBuilders/Model/ModelExporterContexts.h>
-#include <Atom/RPI.Reflect/Material/MaterialAsset.h>
+#include <JE/Render/RPI/Reflect/Material/MaterialAsset.h>
 #include <AzCore/Settings/SettingsRegistry.h>
 
 namespace JE::Assets::RenderBuilders
@@ -76,7 +76,7 @@ namespace JE::Assets::RenderBuilders
         //Export MaterialAssets
         for (auto& materialPair : materialsByUid)
         {
-            const AZ::Data::Asset<AZ::RPI::MaterialAsset>& asset = materialPair.second.m_asset;
+            const AZ::Data::Asset<JE::Render::RPI::MaterialAsset>& asset = materialPair.second.m_asset;
 
             // MaterialAssetBuilderContext could attach an independent material asset rather than
             // generate one using the scene data, so we must skip the export step in that case.
@@ -103,7 +103,7 @@ namespace JE::Assets::RenderBuilders
             AssetExportContext materialExportContext =
             {
                 relativeMaterialFileName,
-                AZ::RPI::MaterialAsset::Extension,
+                JE::Render::RPI::MaterialAsset::Extension,
                 sourceSceneUuid,
                 AZ::DataStream::ST_BINARY
             };
@@ -140,9 +140,9 @@ namespace JE::Assets::RenderBuilders
                 coordSysConverter = coordinateSystemRule->GetCoordinateSystemConverter();
             }
 
-            AZ::Data::Asset<AZ::RPI::ModelAsset> modelAsset;
-            AZ::Data::Asset<AZ::RPI::SkinMetaAsset> skinMetaAsset;
-            AZ::Data::Asset<AZ::RPI::MorphTargetMetaAsset> morphTargetMetaAsset;
+            AZ::Data::Asset<JE::Render::RPI::ModelAsset> modelAsset;
+            AZ::Data::Asset<JE::Render::RPI::SkinMetaAsset> skinMetaAsset;
+            AZ::Data::Asset<JE::Render::RPI::MorphTargetMetaAsset> morphTargetMetaAsset;
             ModelAssetBuilderContext modelContext(exportEventContext.GetScene(), meshGroup, coordSysConverter, materialsByUid, modelAsset, skinMetaAsset, morphTargetMetaAsset);
             combinerResult = AZ::SceneAPI::Events::Process<ModelAssetBuilderContext>(modelContext);
             if (combinerResult.GetResult() != AZ::SceneAPI::Events::ProcessingResult::Success)
@@ -169,23 +169,23 @@ namespace JE::Assets::RenderBuilders
 
             AZ_Assert(assetInfoResult, "Failed to retrieve source asset info. Can't reason about product asset paths");
 
-            for (const AZ::Data::Asset<AZ::RPI::ModelLodAsset>& lodAsset : modelAsset->GetLodAssets())
+            for (const AZ::Data::Asset<JE::Render::RPI::ModelLodAsset>& lodAsset : modelAsset->GetLodAssets())
             {
                 AZStd::set<uint32_t> exportedSubAssets;
 
-                for (const AZ::RPI::ModelLodAsset::Mesh& mesh : lodAsset->GetMeshes())
+                for (const JE::Render::RPI::ModelLodAsset::Mesh& mesh : lodAsset->GetMeshes())
                 {
                     //Export all BufferAssets for this Lod
 
                     //Export Index Buffer
                     {
-                        const AZ::Data::Asset<AZ::RPI::BufferAsset>& indexBufferAsset = mesh.GetIndexBufferAssetView().GetBufferAsset();
+                        const AZ::Data::Asset<JE::Render::RPI::BufferAsset>& indexBufferAsset = mesh.GetIndexBufferAssetView().GetBufferAsset();
                         if (exportedSubAssets.find(indexBufferAsset.GetId().m_subId) == exportedSubAssets.end())
                         {
                             AssetExportContext bufferExportContext =
                             {
                                 indexBufferAsset.GetHint(),
-                                AZ::RPI::BufferAsset::Extension,
+                                JE::Render::RPI::BufferAsset::Extension,
                                 sourceSceneUuid,
                                 AZ::DataStream::ST_BINARY
                             };
@@ -200,15 +200,15 @@ namespace JE::Assets::RenderBuilders
                     }
 
                     //Export Stream Buffers
-                    for (const AZ::RPI::ModelLodAsset::Mesh::StreamBufferInfo& streamBufferInfo : mesh.GetStreamBufferInfoList())
+                    for (const JE::Render::RPI::ModelLodAsset::Mesh::StreamBufferInfo& streamBufferInfo : mesh.GetStreamBufferInfoList())
                     {
-                        const AZ::Data::Asset<AZ::RPI::BufferAsset>& bufferAsset = streamBufferInfo.m_bufferAssetView.GetBufferAsset();
+                        const AZ::Data::Asset<JE::Render::RPI::BufferAsset>& bufferAsset = streamBufferInfo.m_bufferAssetView.GetBufferAsset();
                         if (exportedSubAssets.find(bufferAsset.GetId().m_subId) == exportedSubAssets.end())
                         {
                             AssetExportContext bufferExportContext =
                             {
                                 bufferAsset.GetHint(),
-                                AZ::RPI::BufferAsset::Extension,
+                                JE::Render::RPI::BufferAsset::Extension,
                                 sourceSceneUuid,
                                 AZ::DataStream::ST_BINARY
                             };
@@ -227,7 +227,7 @@ namespace JE::Assets::RenderBuilders
                 AssetExportContext lodExportContext =
                 {
                     lodAsset.GetHint(),
-                    AZ::RPI::ModelLodAsset::Extension,
+                    JE::Render::RPI::ModelLodAsset::Extension,
                     sourceSceneUuid,
                     AZ::DataStream::ST_BINARY
                 };
@@ -243,7 +243,7 @@ namespace JE::Assets::RenderBuilders
             AssetExportContext modelExportContext =
             {
                 modelAsset.GetHint(),
-                AZ::RPI::ModelAsset::Extension,
+                JE::Render::RPI::ModelAsset::Extension,
                 sourceSceneUuid,
                 AZ::DataStream::ST_BINARY
             };
@@ -259,7 +259,7 @@ namespace JE::Assets::RenderBuilders
                 AssetExportContext skinMetaExportContext =
                 {
                     /*relativeFilename=*/meshGroupName,
-                    AZ::RPI::SkinMetaAsset::Extension,
+                    JE::Render::RPI::SkinMetaAsset::Extension,
                     sourceSceneUuid,
                     AZ::DataStream::ST_JSON
                 };
@@ -276,7 +276,7 @@ namespace JE::Assets::RenderBuilders
                 AssetExportContext morphTargetMetaExportContext =
                 {
                     /*relativeFilename=*/meshGroupName,
-                    AZ::RPI::MorphTargetMetaAsset::Extension,
+                    JE::Render::RPI::MorphTargetMetaAsset::Extension,
                     sourceSceneUuid,
                     AZ::DataStream::ST_JSON
                 };

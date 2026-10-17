@@ -8,8 +8,8 @@
 
 #include "MultiplayerDebugAuditTrail.h"
 
-#include <Atom/RPI.Public/ViewportContext.h>
-#include <Atom/RPI.Public/ViewportContextBus.h>
+#include <JE/Render/RPI/Public/ViewportContext.h>
+#include <JE/Render/RPI/Public/ViewportContextBus.h>
 #include <AzFramework/Entity/EntityDebugDisplayBus.h>
 #include <AzFramework/Visibility/IVisibilitySystem.h>
 #include <Multiplayer/Components/NetBindComponent.h>

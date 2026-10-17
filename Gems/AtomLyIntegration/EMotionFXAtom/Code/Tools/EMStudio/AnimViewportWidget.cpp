@@ -6,8 +6,8 @@
  *
  */
 
-#include <Atom/RPI.Public/View.h>
-#include <Atom/RPI.Public/ViewportContext.h>
+#include <JE/Render/RPI/Public/View.h>
+#include <JE/Render/RPI/Public/ViewportContext.h>
 #include <AtomToolsFramework/Viewport/ModularViewportCameraController.h>
 #include <AzCore/Math/MatrixUtils.h>
 #include <AzFramework/Viewport/CameraInput.h>
@@ -64,13 +64,13 @@ namespace EMStudio
         m_viewportUiManager.InitializeViewportUi(this, &m_renderOverlay);
         m_viewportUiManager.ConnectViewportUiBus(GetViewportId());
 
-        AZ::RPI::SceneNotificationBus::Handler::BusConnect(m_renderer->GetRenderSceneId());
+        JE::Render::RPI::SceneNotificationBus::Handler::BusConnect(m_renderer->GetRenderSceneId());
     }
 
     AnimViewportWidget::~AnimViewportWidget()
     {
         m_debugDisplay = nullptr;
-        AZ::RPI::SceneNotificationBus::Handler::BusDisconnect();
+        JE::Render::RPI::SceneNotificationBus::Handler::BusDisconnect();
         m_viewportUiManager.DisconnectViewportUiBus();
         ViewportPluginRequestBus::Handler::BusDisconnect();
         AnimViewportRequestBus::Handler::BusDisconnect();

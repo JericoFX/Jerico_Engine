@@ -7,14 +7,14 @@
  */
 #pragma once
 
-#include <Atom/RPI.Public/Pass/ComputePass.h>
-#include <Atom/RPI.Reflect/Pass/ComputePassData.h>
+#include <JE/Render/RPI/Public/Pass/ComputePass.h>
+#include <JE/Render/RPI/Reflect/Pass/ComputePassData.h>
 
 namespace AZ::Render
 {
     //! Custom data for the Taa Pass.
     struct TaaPassData
-        : public RPI::ComputePassData
+        : public JE::Render::RPI::ComputePassData
     {
         AZ_RTTI(TaaPassData, "{BCDF5C7D-7A78-4C69-A460-FA6899C3B960}", ComputePassData);
         AZ_CLASS_ALLOCATOR(TaaPassData, SystemAllocator);
@@ -26,7 +26,7 @@ namespace AZ::Render
         {
             if (auto* serializeContext = azrtti_cast<SerializeContext*>(context))
             {
-                serializeContext->Class<TaaPassData, RPI::ComputePassData>()
+                serializeContext->Class<TaaPassData, JE::Render::RPI::ComputePassData>()
                     ->Version(1)
                     ->Field("NumJitterPositions", &TaaPassData::m_numJitterPositions)
                     ;
@@ -36,9 +36,9 @@ namespace AZ::Render
         uint32_t m_numJitterPositions = 8;
     };
 
-    class TaaPass : public RPI::ComputePass
+    class TaaPass : public JE::Render::RPI::ComputePass
     {
-        using Base = RPI::ComputePass;
+        using Base = JE::Render::RPI::ComputePass;
         AZ_RPI_PASS(TaaPass);
         
     public:
@@ -47,7 +47,7 @@ namespace AZ::Render
         virtual ~TaaPass() = default;
         
         /// Creates a TaaPass
-        static RPI::Ptr<TaaPass> Create(const RPI::PassDescriptor& descriptor);
+        static JE::Render::RPI::Ptr<TaaPass> Create(const JE::Render::RPI::PassDescriptor& descriptor);
         
     private:
 
@@ -57,7 +57,7 @@ namespace AZ::Render
         // as read only, we can remove this bool and related code to avoid needing to do the copy.
         static constexpr bool ShouldCopyHistoryBuffer = true;
 
-        TaaPass(const RPI::PassDescriptor& descriptor);
+        TaaPass(const JE::Render::RPI::PassDescriptor& descriptor);
         
         // Scope producer functions...
         void CompileResources(const RHI::FrameGraphCompileContext& context) override;
@@ -76,11 +76,11 @@ namespace AZ::Render
         RHI::ShaderInputNameIndex m_lastFrameAccumulationIndex = "m_lastFrameAccumulation";
         RHI::ShaderInputNameIndex m_constantDataIndex = "m_constantData";
 
-        AZStd::array<Data::Instance<RPI::PassAttachment>, 2> m_accumulationAttachments;
+        AZStd::array<Data::Instance<JE::Render::RPI::PassAttachment>, 2> m_accumulationAttachments;
 
-        RPI::PassAttachmentBinding* m_inputColorBinding = nullptr;
-        RPI::PassAttachmentBinding* m_lastFrameAccumulationBinding = nullptr;
-        RPI::PassAttachmentBinding* m_outputColorBinding = nullptr;
+        JE::Render::RPI::PassAttachmentBinding* m_inputColorBinding = nullptr;
+        JE::Render::RPI::PassAttachmentBinding* m_lastFrameAccumulationBinding = nullptr;
+        JE::Render::RPI::PassAttachmentBinding* m_outputColorBinding = nullptr;
 
         struct Offset
         {

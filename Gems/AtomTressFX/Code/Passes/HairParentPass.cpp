@@ -8,13 +8,13 @@
 
 #include <Atom/RHI/DrawListTagRegistry.h>
 #include <Atom/RHI/RHISystemInterface.h>
-#include <Atom/RPI.Public/RenderPipeline.h>
+#include <JE/Render/RPI/Public/RenderPipeline.h>
 
 namespace AZ
 {
     namespace Render
     {
-        HairParentPass::HairParentPass(const RPI::PassDescriptor& descriptor)
+        HairParentPass::HairParentPass(const JE::Render::RPI::PassDescriptor& descriptor)
             : Base(descriptor)
         {
         }
@@ -23,7 +23,7 @@ namespace AZ
         {
         }
 
-        RPI::Ptr<HairParentPass> HairParentPass::Create(const RPI::PassDescriptor& descriptor)
+        JE::Render::RPI::Ptr<HairParentPass> HairParentPass::Create(const JE::Render::RPI::PassDescriptor& descriptor)
         {
             return aznew HairParentPass(descriptor);
         }

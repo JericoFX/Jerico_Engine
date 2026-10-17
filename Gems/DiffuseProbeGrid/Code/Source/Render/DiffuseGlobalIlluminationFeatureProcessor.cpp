@@ -7,11 +7,11 @@
  */
 
 #include <AzCore/Serialization/SerializeContext.h>
-#include <Atom/RPI.Public/RPIUtils.h>
-#include <Atom/RPI.Public/Scene.h>
-#include <Atom/RPI.Public/Pass/ParentPass.h>
-#include <Atom/RPI.Public/Pass/PassFilter.h>
-#include <Atom/RPI.Public/Pass/FullscreenTrianglePass.h>
+#include <JE/Render/RPI/Public/RPIUtils.h>
+#include <JE/Render/RPI/Public/Scene.h>
+#include <JE/Render/RPI/Public/Pass/ParentPass.h>
+#include <JE/Render/RPI/Public/Pass/PassFilter.h>
+#include <JE/Render/RPI/Public/Pass/FullscreenTrianglePass.h>
 #include <Render/DiffuseGlobalIlluminationFeatureProcessor.h>
 
 namespace AZ
@@ -51,11 +51,11 @@ namespace AZ
             UpdatePasses();
         }
 
-        void DiffuseGlobalIlluminationFeatureProcessor::OnRenderPipelineChanged([[maybe_unused]] RPI::RenderPipeline* renderPipeline,
-                RPI::SceneNotification::RenderPipelineChangeType changeType)
+        void DiffuseGlobalIlluminationFeatureProcessor::OnRenderPipelineChanged([[maybe_unused]] JE::Render::RPI::RenderPipeline* renderPipeline,
+                JE::Render::RPI::SceneNotification::RenderPipelineChangeType changeType)
         {
-            if (changeType == RPI::SceneNotification::RenderPipelineChangeType::Added
-                || changeType == RPI::SceneNotification::RenderPipelineChangeType::PassChanged)
+            if (changeType == JE::Render::RPI::SceneNotification::RenderPipelineChangeType::Added
+                || changeType == JE::Render::RPI::SceneNotification::RenderPipelineChangeType::PassChanged)
             {
                 UpdatePasses();
             }
@@ -86,18 +86,18 @@ namespace AZ
             // For example, the ASV MultiScene sample may have TDR.
             {
                 AZStd::vector<Name> downsamplePassHierarchy = { Name("DiffuseGlobalIlluminationPass"), Name("DiffuseProbeGridDownsamplePass") };
-                RPI::PassFilter downsamplePassFilter = RPI::PassFilter::CreateWithPassHierarchy(downsamplePassHierarchy);
-                RPI::PassSystemInterface::Get()->ForEachPass(
+                JE::Render::RPI::PassFilter downsamplePassFilter = JE::Render::RPI::PassFilter::CreateWithPassHierarchy(downsamplePassHierarchy);
+                JE::Render::RPI::PassSystemInterface::Get()->ForEachPass(
                     downsamplePassFilter,
-                    [sizeMultiplier](RPI::Pass* pass) -> RPI::PassFilterExecutionFlow
+                    [sizeMultiplier](JE::Render::RPI::Pass* pass) -> JE::Render::RPI::PassFilterExecutionFlow
                     {
                         // update the downsample pass size multipliers
                         for (uint32_t attachmentIndex = 0; attachmentIndex < pass->GetOutputCount(); ++attachmentIndex)
                         {
-                            RPI::Ptr<RPI::PassAttachment> attachment = pass->GetOutputBinding(attachmentIndex).GetAttachment();
+                            JE::Render::RPI::Ptr<JE::Render::RPI::PassAttachment> attachment = pass->GetOutputBinding(attachmentIndex).GetAttachment();
                             if (attachment)
                             {
-                                RPI::PassAttachmentSizeMultipliers& sizeMultipliers = attachment->m_sizeMultipliers;
+                                JE::Render::RPI::PassAttachmentSizeMultipliers& sizeMultipliers = attachment->m_sizeMultipliers;
 
                                 sizeMultipliers.m_widthMultiplier = sizeMultiplier;
                                 sizeMultipliers.m_heightMultiplier = sizeMultiplier;
@@ -105,17 +105,17 @@ namespace AZ
                         }
 
                         // set the output scale on the PassSrg
-                        RPI::FullscreenTrianglePass* downsamplePass = static_cast<RPI::FullscreenTrianglePass*>(pass);
+                        JE::Render::RPI::FullscreenTrianglePass* downsamplePass = static_cast<JE::Render::RPI::FullscreenTrianglePass*>(pass);
                         RHI::ShaderInputNameIndex outputImageScaleShaderInput = "m_outputImageScale";
                         downsamplePass->GetShaderResourceGroup()->SetConstant(
                             outputImageScaleShaderInput, aznumeric_cast<uint32_t>(1.0f / sizeMultiplier));
 
                         // update the parent pass IrradianceImage size multiplier
-                        RPI::ParentPass* parentPass = pass->GetParent();
-                        RPI::Ptr<RPI::PassAttachment> irradianceImageAttachment;
+                        JE::Render::RPI::ParentPass* parentPass = pass->GetParent();
+                        JE::Render::RPI::Ptr<JE::Render::RPI::PassAttachment> irradianceImageAttachment;
                         for (uint32_t attachmentIndex = 0; attachmentIndex < parentPass->GetInputOutputCount(); ++attachmentIndex)
                         {
-                            RPI::Ptr<RPI::PassAttachment> attachment = parentPass->GetInputOutputBinding(attachmentIndex).GetAttachment();
+                            JE::Render::RPI::Ptr<JE::Render::RPI::PassAttachment> attachment = parentPass->GetInputOutputBinding(attachmentIndex).GetAttachment();
                             if (attachment && attachment->m_name == Name("IrradianceImage"))
                             {
                                 irradianceImageAttachment = attachment;
@@ -125,27 +125,27 @@ namespace AZ
 
                         if (irradianceImageAttachment)
                         {
-                            RPI::PassAttachmentSizeMultipliers& sizeMultipliers = irradianceImageAttachment->m_sizeMultipliers;
+                            JE::Render::RPI::PassAttachmentSizeMultipliers& sizeMultipliers = irradianceImageAttachment->m_sizeMultipliers;
                             sizeMultipliers.m_widthMultiplier = sizeMultiplier;
                             sizeMultipliers.m_heightMultiplier = sizeMultiplier;
                         }
 
                         // handle all downsample passes
-                        return RPI::PassFilterExecutionFlow::ContinueVisitingPasses;
+                        return JE::Render::RPI::PassFilterExecutionFlow::ContinueVisitingPasses;
                     });
             }
 
             // update the image scale on the DiffuseComposite pass
             {
                 AZStd::vector<Name> compositePassHierarchy = { Name("DiffuseGlobalIlluminationPass"), Name("DiffuseCompositePass") };
-                RPI::PassFilter compositePassFilter = RPI::PassFilter::CreateWithPassHierarchy(compositePassHierarchy);
-                RPI::PassSystemInterface::Get()->ForEachPass(compositePassFilter, [sizeMultiplier](RPI::Pass* pass) -> RPI::PassFilterExecutionFlow
+                JE::Render::RPI::PassFilter compositePassFilter = JE::Render::RPI::PassFilter::CreateWithPassHierarchy(compositePassHierarchy);
+                JE::Render::RPI::PassSystemInterface::Get()->ForEachPass(compositePassFilter, [sizeMultiplier](JE::Render::RPI::Pass* pass) -> JE::Render::RPI::PassFilterExecutionFlow
                     {
-                        RPI::FullscreenTrianglePass* compositePass = static_cast<RPI::FullscreenTrianglePass*>(pass);
+                        JE::Render::RPI::FullscreenTrianglePass* compositePass = static_cast<JE::Render::RPI::FullscreenTrianglePass*>(pass);
                         RHI::ShaderInputNameIndex imageScaleShaderInput = "m_imageScale";
                         compositePass->GetShaderResourceGroup()->SetConstant(imageScaleShaderInput, aznumeric_cast<uint32_t>(1.0f / sizeMultiplier));
 
-                        return RPI::PassFilterExecutionFlow::ContinueVisitingPasses;
+                        return JE::Render::RPI::PassFilterExecutionFlow::ContinueVisitingPasses;
                     });
             }
         }

@@ -23,7 +23,7 @@ ly_add_target(
             AzFramework
         PUBLIC
             Gem::Atom_RHI.Reflect
-            Gem::Atom_RPI.Public
+            JE::RenderIntegration
             JE::DearImGui
             3rdParty::PNG
             JE::ProfilerView

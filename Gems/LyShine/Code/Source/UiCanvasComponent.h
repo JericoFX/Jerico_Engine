@@ -128,8 +128,8 @@ public: // member functions
 
     bool GetIsRenderToTexture() override;
     void SetIsRenderToTexture(bool isRenderToTexture) override;
-    const AZ::Data::Asset<AZ::RPI::AttachmentImageAsset>& GetAttachmentImageAsset() override;
-    void SetAttachmentImageAsset(const AZ::Data::Asset<AZ::RPI::AttachmentImageAsset>& attachmentImageAsset) override;
+    const AZ::Data::Asset<JE::Render::RPI::AttachmentImageAsset>& GetAttachmentImageAsset() override;
+    void SetAttachmentImageAsset(const AZ::Data::Asset<JE::Render::RPI::AttachmentImageAsset>& attachmentImageAsset) override;
 
     bool GetIsPositionalInputSupported() override;
     void SetIsPositionalInputSupported(bool isSupported) override;
@@ -233,9 +233,9 @@ public: // member functions
 
     // LyShine::RenderToTextureRequestBus overrides ...
     AZ::RHI::AttachmentId UseRenderTarget(const AZ::Name& renderTargetName, AZ::RHI::Size size) override;
-    AZ::RHI::AttachmentId UseRenderTargetAsset(const AZ::Data::Asset<AZ::RPI::AttachmentImageAsset>& attachmentImageAsset) override;
+    AZ::RHI::AttachmentId UseRenderTargetAsset(const AZ::Data::Asset<JE::Render::RPI::AttachmentImageAsset>& attachmentImageAsset) override;
     void ReleaseRenderTarget(const AZ::RHI::AttachmentId& attachmentId) override;
-    AZ::Data::Instance<AZ::RPI::AttachmentImage> GetRenderTarget(const AZ::RHI::AttachmentId& attachmentId) override;
+    AZ::Data::Instance<JE::Render::RPI::AttachmentImage> GetRenderTarget(const AZ::RHI::AttachmentId& attachmentId) override;
 
     void UpdateCanvas(float deltaTime, bool isInGame);
     void RenderCanvas(bool isInGame, AZ::Vector2 viewportSize, UiRenderer* uiRenderer = nullptr);
@@ -561,7 +561,7 @@ private: // data
     bool m_renderToTexture;
 
     //! The user-specified asset for the attachment image that we render to if m_renderToTexture is true
-    AZ::Data::Asset<AZ::RPI::AttachmentImageAsset> m_attachmentImageAsset;
+    AZ::Data::Asset<JE::Render::RPI::AttachmentImageAsset> m_attachmentImageAsset;
 
     //! When rendering to a texture this is the attachment image for the render target
     AZ::RHI::AttachmentId m_attachmentImageId;
@@ -608,5 +608,5 @@ private: // static data
     bool m_renderInEditor = false; //!< indicates whether this canvas will render in the Editor viewport or the Game viewport
 
     //! Map of attachments used by this canvas's elements
-    AZStd::unordered_map<AZ::RHI::AttachmentId, AZ::Data::Instance<AZ::RPI::AttachmentImage>> m_attachmentImageMap;
+    AZStd::unordered_map<AZ::RHI::AttachmentId, AZ::Data::Instance<JE::Render::RPI::AttachmentImage>> m_attachmentImageMap;
 };

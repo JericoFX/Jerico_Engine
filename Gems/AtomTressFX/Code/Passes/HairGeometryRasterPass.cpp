@@ -11,17 +11,17 @@
 #include <Atom/RHI/DeviceDrawPacketBuilder.h>
 #include <Atom/RHI/DevicePipelineState.h>
 
-#include <Atom/RPI.Public/View.h>
-#include <Atom/RPI.Public/RPIUtils.h>
-#include <Atom/RPI.Public/RenderPipeline.h>
-#include <Atom/RPI.Public/RPISystemInterface.h>
-#include <Atom/RPI.Public/Pass/PassUtils.h>
-#include <Atom/RPI.Public/Scene.h>
+#include <JE/Render/RPI/Public/View.h>
+#include <JE/Render/RPI/Public/RPIUtils.h>
+#include <JE/Render/RPI/Public/RenderPipeline.h>
+#include <JE/Render/RPI/Public/RPISystemInterface.h>
+#include <JE/Render/RPI/Public/Pass/PassUtils.h>
+#include <JE/Render/RPI/Public/Scene.h>
 
-#include <Atom/RPI.Reflect/Asset/AssetUtils.h>
-#include <Atom/RPI.Reflect/Pass/RasterPassData.h>
-#include <Atom/RPI.Reflect/Pass/PassTemplate.h>
-#include <Atom/RPI.Reflect/Shader/ShaderAsset.h>
+#include <JE/Render/RPI/Reflect/Asset/AssetUtils.h>
+#include <JE/Render/RPI/Reflect/Pass/RasterPassData.h>
+#include <JE/Render/RPI/Reflect/Pass/PassTemplate.h>
+#include <JE/Render/RPI/Reflect/Shader/ShaderAsset.h>
 
 #include <Passes/HairGeometryRasterPass.h>
 #include <Rendering/HairRenderObject.h>
@@ -35,13 +35,13 @@ namespace AZ
         {
 
             // --- Creation & Initialization ---
-            RPI::Ptr<HairGeometryRasterPass> HairGeometryRasterPass::Create(const RPI::PassDescriptor& descriptor)
+            JE::Render::RPI::Ptr<HairGeometryRasterPass> HairGeometryRasterPass::Create(const JE::Render::RPI::PassDescriptor& descriptor)
             {
-                RPI::Ptr<HairGeometryRasterPass> pass = aznew HairGeometryRasterPass(descriptor);
+                JE::Render::RPI::Ptr<HairGeometryRasterPass> pass = aznew HairGeometryRasterPass(descriptor);
                 return pass;
             }
 
-            HairGeometryRasterPass::HairGeometryRasterPass(const RPI::PassDescriptor& descriptor)
+            HairGeometryRasterPass::HairGeometryRasterPass(const JE::Render::RPI::PassDescriptor& descriptor)
                 : RasterPass(descriptor),
                 m_passDescriptor(descriptor)
             {
@@ -57,7 +57,7 @@ namespace AZ
                     return true;
                 }
 
-                RPI::Scene* scene = GetScene();
+                JE::Render::RPI::Scene* scene = GetScene();
                 if (scene)
                 {
                     m_featureProcessor = scene->GetFeatureProcessor<HairFeatureProcessor>();
@@ -87,17 +87,17 @@ namespace AZ
 
             bool HairGeometryRasterPass::IsEnabled() const
             {
-                return (RPI::RasterPass::IsEnabled() && m_initialized) ? true : false;
+                return (JE::Render::RPI::RasterPass::IsEnabled() && m_initialized) ? true : false;
             }
 
-            bool HairGeometryRasterPass::UpdateShaderOptions(const RPI::ShaderVariantId& variantId)
+            bool HairGeometryRasterPass::UpdateShaderOptions(const JE::Render::RPI::ShaderVariantId& variantId)
             {
                 m_currentShaderVariantId = variantId;
-                const RPI::ShaderVariant& shaderVariant = m_shader->GetVariant(m_currentShaderVariantId);
+                const JE::Render::RPI::ShaderVariant& shaderVariant = m_shader->GetVariant(m_currentShaderVariantId);
                 RHI::PipelineStateDescriptorForDraw pipelineStateDescriptor;
                 shaderVariant.ConfigurePipelineState(pipelineStateDescriptor, m_currentShaderVariantId);
 
-                RPI::Scene* scene = GetScene();
+                JE::Render::RPI::Scene* scene = GetScene();
                 if (!scene)
                 {
                     AZ_Error("Hair Gem", false, "Scene could not be acquired");
@@ -126,9 +126,9 @@ namespace AZ
 
             bool HairGeometryRasterPass::LoadShaderAndPipelineState()
             {
-                RPI::ShaderReloadNotificationBus::Handler::BusDisconnect();
+                JE::Render::RPI::ShaderReloadNotificationBus::Handler::BusDisconnect();
 
-                const RPI::RasterPassData* passData = RPI::PassUtils::GetPassData<RPI::RasterPassData>(m_passDescriptor);
+                const JE::Render::RPI::RasterPassData* passData = JE::Render::RPI::PassUtils::GetPassData<JE::Render::RPI::RasterPassData>(m_passDescriptor);
 
                 // If we successfully retrieved our custom data, use it to set the DrawListTag
                 if (!passData)
@@ -139,8 +139,8 @@ namespace AZ
 
                 // Load Shader
                 const char* shaderFilePath = m_shaderPath.c_str();
-                Data::Asset<RPI::ShaderAsset> shaderAsset =
-                    RPI::AssetUtils::LoadAssetByProductPath<RPI::ShaderAsset>(shaderFilePath, RPI::AssetUtils::TraceLevel::Error);
+                Data::Asset<JE::Render::RPI::ShaderAsset> shaderAsset =
+                    JE::Render::RPI::AssetUtils::LoadAssetByProductPath<JE::Render::RPI::ShaderAsset>(shaderFilePath, JE::Render::RPI::AssetUtils::TraceLevel::Error);
 
                 if (!shaderAsset.IsReady())
                 {
@@ -148,7 +148,7 @@ namespace AZ
                     return false;
                 }
 
-                m_shader = RPI::Shader::FindOrCreate(shaderAsset);
+                m_shader = JE::Render::RPI::Shader::FindOrCreate(shaderAsset);
                 if (m_shader == nullptr)
                 {
                     AZ_Error("Hair Gem", false, "Pass failed to create shader instance from asset '%s'!", shaderFilePath);
@@ -175,13 +175,13 @@ namespace AZ
                     return false;
                 }
 
-                RPI::ShaderReloadNotificationBus::Handler::BusConnect(shaderAsset.GetId());
+                JE::Render::RPI::ShaderReloadNotificationBus::Handler::BusConnect(shaderAsset.GetId());
 
                 m_initialized = true;
                 return true;
             }
 
-            Data::Instance<RPI::Shader> HairGeometryRasterPass::GetShader()
+            Data::Instance<JE::Render::RPI::Shader> HairGeometryRasterPass::GetShader()
             {
                 if (!m_initialized || !m_shader)
                 {
@@ -280,7 +280,7 @@ namespace AZ
                     return;
                 }
 
-                RPI::RasterPass::FrameBeginInternal(params);
+                JE::Render::RPI::RasterPass::FrameBeginInternal(params);
             }
 
             void HairGeometryRasterPass::CompileResources(const RHI::FrameGraphCompileContext& context)
@@ -293,7 +293,7 @@ namespace AZ
                 }
 
                 // Compilation of remaining srgs will be done by the parent class 
-                RPI::RasterPass::CompileResources(context);
+                JE::Render::RPI::RasterPass::CompileResources(context);
             }
 
             void HairGeometryRasterPass::BuildShaderAndRenderData()
@@ -307,17 +307,17 @@ namespace AZ
                 }
             }
 
-            void HairGeometryRasterPass::OnShaderReinitialized([[maybe_unused]] const RPI::Shader & shader)
+            void HairGeometryRasterPass::OnShaderReinitialized([[maybe_unused]] const JE::Render::RPI::Shader & shader)
             {
                 BuildShaderAndRenderData();
             }
 
-            void HairGeometryRasterPass::OnShaderAssetReinitialized([[maybe_unused]] const Data::Asset<RPI::ShaderAsset>& shaderAsset)
+            void HairGeometryRasterPass::OnShaderAssetReinitialized([[maybe_unused]] const Data::Asset<JE::Render::RPI::ShaderAsset>& shaderAsset)
             {
                 BuildShaderAndRenderData();
             }
 
-            void HairGeometryRasterPass::OnShaderVariantReinitialized([[maybe_unused]] const AZ::RPI::ShaderVariant& shaderVariant)
+            void HairGeometryRasterPass::OnShaderVariantReinitialized([[maybe_unused]] const JE::Render::RPI::ShaderVariant& shaderVariant)
             {
                 BuildShaderAndRenderData();
             }

@@ -6,10 +6,10 @@
  *
  */
 
-#include <Atom/RPI.Public/RenderPipeline.h>
-#include <Atom/RPI.Public/Scene.h>
-#include <Atom/RPI.Public/View.h>
-#include <Atom/RPI.Public/Pass/PassSystemInterface.h>
+#include <JE/Render/RPI/Public/RenderPipeline.h>
+#include <JE/Render/RPI/Public/Scene.h>
+#include <JE/Render/RPI/Public/View.h>
+#include <JE/Render/RPI/Public/Pass/PassSystemInterface.h>
 
 #include <PostProcess/PostProcessFeatureProcessor.h>
 #include <PostProcess/DepthOfField/DepthOfFieldSettings.h>
@@ -21,24 +21,24 @@ namespace AZ
     {
         uint32_t DepthOfFieldReadBackFocusDepthPass::s_bufferInstance = 0;
 
-        RPI::Ptr<DepthOfFieldReadBackFocusDepthPass> DepthOfFieldReadBackFocusDepthPass::Create(const RPI::PassDescriptor& descriptor)
+        JE::Render::RPI::Ptr<DepthOfFieldReadBackFocusDepthPass> DepthOfFieldReadBackFocusDepthPass::Create(const JE::Render::RPI::PassDescriptor& descriptor)
         {
-            RPI::Ptr<DepthOfFieldReadBackFocusDepthPass> pass = aznew DepthOfFieldReadBackFocusDepthPass(descriptor);
+            JE::Render::RPI::Ptr<DepthOfFieldReadBackFocusDepthPass> pass = aznew DepthOfFieldReadBackFocusDepthPass(descriptor);
             return pass;
         }
 
-        DepthOfFieldReadBackFocusDepthPass::DepthOfFieldReadBackFocusDepthPass(const RPI::PassDescriptor& descriptor)
+        DepthOfFieldReadBackFocusDepthPass::DepthOfFieldReadBackFocusDepthPass(const JE::Render::RPI::PassDescriptor& descriptor)
             : ParentPass(descriptor)
         {
             // Create buffer for read back focus depth. We append static counter to avoid name conflicts.
-            RPI::CommonBufferDescriptor desc;
+            JE::Render::RPI::CommonBufferDescriptor desc;
             desc.m_bufferName = "DepthOfFieldReadBackAutoFocusDepthBuffer";
-            desc.m_poolType = RPI::CommonBufferPoolType::ReadWrite;
+            desc.m_poolType = JE::Render::RPI::CommonBufferPoolType::ReadWrite;
             desc.m_byteCount = sizeof(float);
             desc.m_elementSize = aznumeric_cast<uint32_t>(desc.m_byteCount);
             desc.m_bufferData = nullptr;
             desc.m_elementFormat = RHI::Format::R32_FLOAT;
-            m_buffer = RPI::BufferSystemInterface::Get()->CreateBufferFromCommonPool(desc);
+            m_buffer = JE::Render::RPI::BufferSystemInterface::Get()->CreateBufferFromCommonPool(desc);
         }
 
         DepthOfFieldReadBackFocusDepthPass::~DepthOfFieldReadBackFocusDepthPass()
@@ -68,7 +68,7 @@ namespace AZ
 
         void DepthOfFieldReadBackFocusDepthPass::CreateChildPassesInternal()
         {
-            RPI::PassSystemInterface* passSystem = RPI::PassSystemInterface::Get();
+            JE::Render::RPI::PassSystemInterface* passSystem = JE::Render::RPI::PassSystemInterface::Get();
 
             // Create read back pass
             m_readbackPass = passSystem->CreatePass<DepthOfFieldCopyFocusDepthToCpuPass>(AZ::Name("DepthOfFieldReadBackPass"));
@@ -86,9 +86,9 @@ namespace AZ
 
         void DepthOfFieldReadBackFocusDepthPass::FrameBeginInternal(FramePrepareParams params)
         {
-            RPI::Scene* scene = GetScene();
+            JE::Render::RPI::Scene* scene = GetScene();
             PostProcessFeatureProcessor* fp = scene->GetFeatureProcessor<PostProcessFeatureProcessor>();
-            AZ::RPI::ViewPtr view = GetRenderPipeline()->GetFirstView(GetPipelineViewTag());
+            JE::Render::RPI::ViewPtr view = GetRenderPipeline()->GetFirstView(GetPipelineViewTag());
             if (fp)
             {
                 PostProcessSettings* postProcessSettings = fp->GetLevelSettingsFromView(view);
@@ -102,7 +102,7 @@ namespace AZ
                     }
                 }
             }
-            RPI::ParentPass::FrameBeginInternal(params);
+            JE::Render::RPI::ParentPass::FrameBeginInternal(params);
         }
 
         void DepthOfFieldReadBackFocusDepthPass::UpdateAutoFocus(DepthOfFieldSettings& dofSettings)

@@ -8,8 +8,8 @@
 
 #pragma once
 
-#include <Atom/RPI.Reflect/Material/MaterialFunctor.h>
-#include <Atom/RPI.Reflect/Material/MaterialPropertyDescriptor.h>
+#include <JE/Render/RPI/Reflect/Material/MaterialFunctor.h>
+#include <JE/Render/RPI/Reflect/Material/MaterialPropertyDescriptor.h>
 #include <Atom/Feature/Base.h>
 #include <Atom/Feature/CoreLights/PhotometricValue.h>
 
@@ -20,27 +20,27 @@ namespace AZ
         //! The functor can be used to convert between different emissive light unit
         //! Only support Ev100 and Lux
         class ATOM_FEATURE_COMMON_API ConvertEmissiveUnitFunctor final
-            : public AZ::RPI::MaterialFunctor
+            : public JE::Render::RPI::MaterialFunctor
         {
             friend class ConvertEmissiveUnitFunctorSourceData;
         public:
             AZ_CLASS_ALLOCATOR(ConvertEmissiveUnitFunctor, SystemAllocator)
-            AZ_RTTI(ConvertEmissiveUnitFunctor, "{F272CFAB-FD71-4E78-AA47-D0D2E88CE30C}", AZ::RPI::MaterialFunctor);
+            AZ_RTTI(ConvertEmissiveUnitFunctor, "{F272CFAB-FD71-4E78-AA47-D0D2E88CE30C}", JE::Render::RPI::MaterialFunctor);
 
             static void Reflect(AZ::ReflectContext* context);
 
-            using RPI::MaterialFunctor::Process;
-            void Process(RPI::MaterialFunctorAPI::RuntimeContext& context) override;
-            void Process(RPI::MaterialFunctorAPI::EditorContext& context) override;
+            using JE::Render::RPI::MaterialFunctor::Process;
+            void Process(JE::Render::RPI::MaterialFunctorAPI::RuntimeContext& context) override;
+            void Process(JE::Render::RPI::MaterialFunctorAPI::EditorContext& context) override;
             float GetProcessedValue(float originalEmissiveIntensity, uint32_t lightUnitIndex) const;
 
-            bool UpdateShaderParameterConnections(const RPI::MaterialShaderParameterLayout* layout) override;
+            bool UpdateShaderParameterConnections(const JE::Render::RPI::MaterialShaderParameterLayout* layout) override;
 
         private:
 
-            AZ::RPI::MaterialPropertyIndex m_intensityPropertyIndex;
-            AZ::RPI::MaterialPropertyIndex m_lightUnitPropertyIndex;
-            AZ::RPI::MaterialShaderParameterNameIndex m_shaderParameter;
+            JE::Render::RPI::MaterialPropertyIndex m_intensityPropertyIndex;
+            JE::Render::RPI::MaterialPropertyIndex m_lightUnitPropertyIndex;
+            JE::Render::RPI::MaterialShaderParameterNameIndex m_shaderParameter;
 
             uint32_t m_ev100Index;
             uint32_t m_nitIndex;

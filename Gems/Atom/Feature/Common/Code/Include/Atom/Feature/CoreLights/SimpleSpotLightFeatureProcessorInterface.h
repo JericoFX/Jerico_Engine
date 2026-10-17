@@ -10,9 +10,9 @@
 
 #include <Atom/Feature/CoreLights/PhotometricValue.h>
 #include <Atom/Feature/CoreLights/ShadowConstants.h>
-#include <Atom/RPI.Public/Buffer/Buffer.h>
-#include <Atom/RPI.Public/FeatureProcessor.h>
-#include <Atom/RPI.Reflect/Image/Image.h>
+#include <JE/Render/RPI/Public/Buffer/Buffer.h>
+#include <JE/Render/RPI/Public/FeatureProcessor.h>
+#include <JE/Render/RPI/Reflect/Image/Image.h>
 
 namespace AZ
 {
@@ -22,10 +22,10 @@ namespace AZ
     {
         //! SimpleSpotLightFeatureProcessorInterface provides an interface to acquire, release, and update a simple spot light.
         class SimpleSpotLightFeatureProcessorInterface
-            : public RPI::FeatureProcessor
+            : public JE::Render::RPI::FeatureProcessor
         {
         public:
-            AZ_RTTI(AZ::Render::SimpleSpotLightFeatureProcessorInterface, "{1DE04BF2-DD8F-437C-9B6D-4BDAC4BE2BAC}", AZ::RPI::FeatureProcessor);
+            AZ_RTTI(AZ::Render::SimpleSpotLightFeatureProcessorInterface, "{1DE04BF2-DD8F-437C-9B6D-4BDAC4BE2BAC}", JE::Render::RPI::FeatureProcessor);
             
             using LightHandle = RHI::Handle<uint16_t, class SimpleSpotLight>;
             static constexpr PhotometricUnit PhotometricUnitType = PhotometricUnit::Candela;
@@ -52,7 +52,7 @@ namespace AZ
             //! Sets the lighting channel mask
             virtual void SetLightingChannelMask(LightHandle handle, uint32_t lightingChannelMask) = 0;
            //! Set a gobo texture to the light
-            virtual void SetGoboTexture(LightHandle handle, AZ::Data::Instance<AZ::RPI::Image> goboTexture) = 0;
+            virtual void SetGoboTexture(LightHandle handle, AZ::Data::Instance<JE::Render::RPI::Image> goboTexture) = 0;
 
             // Shadow Settings
 
@@ -74,7 +74,7 @@ namespace AZ
             virtual void SetUseCachedShadows(LightHandle handle, bool useCachedShadows) = 0;
 
             //! Returns the buffer containing the light data for all simple spot lights
-            virtual const Data::Instance<RPI::Buffer> GetLightBuffer() const = 0;
+            virtual const Data::Instance<JE::Render::RPI::Buffer> GetLightBuffer() const = 0;
             //! Returns the number of simple spot lights
             virtual uint32_t GetLightCount() const = 0;
         };

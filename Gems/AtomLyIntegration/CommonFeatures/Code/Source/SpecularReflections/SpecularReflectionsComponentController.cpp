@@ -7,7 +7,7 @@
  */
 
 #include <AzCore/RTTI/BehaviorContext.h>
-#include <Atom/RPI.Public/Scene.h>
+#include <JE/Render/RPI/Public/Scene.h>
 #include <SpecularReflections/SpecularReflectionsComponentController.h>
 
 namespace AZ
@@ -55,7 +55,7 @@ namespace AZ
                 return;
             }
 
-            m_featureProcessor = AZ::RPI::Scene::GetFeatureProcessorForEntity<SpecularReflectionsFeatureProcessorInterface>(entityId);
+            m_featureProcessor = JE::Render::RPI::Scene::GetFeatureProcessorForEntity<SpecularReflectionsFeatureProcessorInterface>(entityId);
             OnConfigChanged();
         }
 

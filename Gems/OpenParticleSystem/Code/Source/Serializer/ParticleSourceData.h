@@ -59,12 +59,12 @@ namespace OpenParticle
             AZStd::string m_name;
             AZStd::any m_config;
             AZStd::any m_renderConfig;
-            AZ::Data::Asset<AZ::RPI::MaterialAsset> m_material;
+            AZ::Data::Asset<JE::Render::RPI::MaterialAsset> m_material;
             //! Material property values authored for this emitter alone. Empty means "use the material as-is",
             //! which lets two emitters share one .material asset and still render differently.
             JE::Render::MaterialPropertyOverrideMap m_materialOverrides;
-            AZ::Data::Asset<AZ::RPI::ModelAsset> m_model;
-            AZ::Data::Asset<AZ::RPI::ModelAsset> m_skeletonModel;
+            AZ::Data::Asset<JE::Render::RPI::ModelAsset> m_model;
+            AZ::Data::Asset<JE::Render::RPI::ModelAsset> m_skeletonModel;
             AZStd::list<AZStd::any> m_emitModules;
             AZStd::list<AZStd::any> m_spawnModules;
             AZStd::list<AZStd::any> m_updateModules;
@@ -231,12 +231,12 @@ namespace OpenParticle
             bool m_isUse = true;
             bool m_solo = false;
             AZStd::string m_name;
-            AZ::Data::Asset<AZ::RPI::MaterialAsset> m_material;
+            AZ::Data::Asset<JE::Render::RPI::MaterialAsset> m_material;
             //! Editor-side mirror of EmitterInfo::m_materialOverrides. The inspector edits this copy and
             //! UpdateEmitterAsset(ASSET_MATERIAL) syncs it back onto the emitter.
             JE::Render::MaterialPropertyOverrideMap m_materialOverrides;
-            AZ::Data::Asset<AZ::RPI::ModelAsset> m_model;
-            AZ::Data::Asset<AZ::RPI::ModelAsset> m_skeletonModel;
+            AZ::Data::Asset<JE::Render::RPI::ModelAsset> m_model;
+            AZ::Data::Asset<JE::Render::RPI::ModelAsset> m_skeletonModel;
             AZStd::unordered_map<AZStd::string, ModuleType> m_modules;
 
         private:

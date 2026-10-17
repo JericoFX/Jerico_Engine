@@ -9,7 +9,7 @@
 #include <AzCore/Serialization/SerializeContext.h>
 #include <AzCore/Utils/TypeHash.h>
 
-#include <Atom/RPI.Public/Pass/PassSystemInterface.h>
+#include <JE/Render/RPI/Public/Pass/PassSystemInterface.h>
 #include <ACES/Aces.h>
 
 #include <PostProcess/LookModification/LookModificationSettings.h>

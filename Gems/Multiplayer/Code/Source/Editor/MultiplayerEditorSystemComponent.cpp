@@ -42,7 +42,7 @@
 #include <AzToolsFramework/Viewport/ViewportMessages.h>
 #include <AzToolsFramework/ViewportSelection/EditorHelpers.h>
 #include <AzToolsFramework/ViewportSelection/EditorSelectionUtil.h>
-#include <Atom/RPI.Public/RPISystemInterface.h>
+#include <JE/Render/RPI/Public/RPISystemInterface.h>
 #include <AzCore/Settings/SettingsRegistryMergeUtils.h>
 
 #include <QMenu>
@@ -315,7 +315,7 @@ namespace Multiplayer
         AzFramework::ProcessLauncher::ProcessLaunchInfo processLaunchInfo;
 
         // Open the server launcher using the same rhi as the editor (or launch with the override rhi)
-        AZ::Name server_rhi = AZ::RPI::RPISystemInterface::Get()->GetRenderApiName();
+        AZ::Name server_rhi = JE::Render::RPI::RPISystemInterface::Get()->GetRenderApiName();
         if (!static_cast<AZ::CVarFixedString>(editorsv_rhi_override).empty())
         {
             server_rhi = static_cast<AZ::CVarFixedString>(editorsv_rhi_override);

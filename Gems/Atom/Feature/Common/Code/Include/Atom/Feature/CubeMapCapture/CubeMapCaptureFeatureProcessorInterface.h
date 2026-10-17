@@ -11,9 +11,9 @@
 #include <AzCore/base.h>
 #include <AzCore/Math/Aabb.h>
 #include <Atom/Utils/StableDynamicArray.h>
-#include <Atom/RPI.Public/FeatureProcessor.h>
-#include <Atom/RPI.Reflect/Image/StreamingImageAsset.h>
-#include <Atom/RPI.Reflect/Image/Image.h>
+#include <JE/Render/RPI/Public/FeatureProcessor.h>
+#include <JE/Render/RPI/Reflect/Image/StreamingImageAsset.h>
+#include <JE/Render/RPI/Reflect/Image/Image.h>
 
 namespace AZ
 {
@@ -26,10 +26,10 @@ namespace AZ
         
         // CubeMapCaptureFeatureProcessorInterface provides an interface to the feature processor for code outside of Atom
         class CubeMapCaptureFeatureProcessorInterface
-            : public RPI::FeatureProcessor
+            : public JE::Render::RPI::FeatureProcessor
         {
         public:
-            AZ_RTTI(AZ::Render::CubeMapCaptureFeatureProcessorInterface, "{77C6838D-6693-4CF4-9FFC-8110C4551761}", AZ::RPI::FeatureProcessor);
+            AZ_RTTI(AZ::Render::CubeMapCaptureFeatureProcessorInterface, "{77C6838D-6693-4CF4-9FFC-8110C4551761}", JE::Render::RPI::FeatureProcessor);
 
             virtual CubeMapCaptureHandle AddCubeMapCapture(const AZ::Transform& transform) = 0;
             virtual void RemoveCubeMapCapture(CubeMapCaptureHandle& cubeMapCapture) = 0;

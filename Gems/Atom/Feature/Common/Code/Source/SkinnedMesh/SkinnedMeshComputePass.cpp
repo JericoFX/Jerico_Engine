@@ -7,11 +7,11 @@
  */
 
 #include <Atom/Feature/SkinnedMesh/SkinnedMeshOutputStreamManagerInterface.h>
-#include <Atom/RPI.Public/Scene.h>
+#include <JE/Render/RPI/Public/Scene.h>
 #include <SkinnedMesh/SkinnedMeshComputePass.h>
 #include <SkinnedMesh/SkinnedMeshFeatureProcessor.h>
 
-#include <Atom/RPI.Public/Shader/Shader.h>
+#include <JE/Render/RPI/Public/Shader/Shader.h>
 
 #include <Atom/RHI/CommandList.h>
 
@@ -19,18 +19,18 @@ namespace AZ
 {
     namespace Render
     {
-        SkinnedMeshComputePass::SkinnedMeshComputePass(const RPI::PassDescriptor& descriptor)
-            : RPI::ComputePass(descriptor)
+        SkinnedMeshComputePass::SkinnedMeshComputePass(const JE::Render::RPI::PassDescriptor& descriptor)
+            : JE::Render::RPI::ComputePass(descriptor)
         {
         }
 
-        RPI::Ptr<SkinnedMeshComputePass> SkinnedMeshComputePass::Create(const RPI::PassDescriptor& descriptor)
+        JE::Render::RPI::Ptr<SkinnedMeshComputePass> SkinnedMeshComputePass::Create(const JE::Render::RPI::PassDescriptor& descriptor)
         {
-            RPI::Ptr<SkinnedMeshComputePass> pass = aznew SkinnedMeshComputePass(descriptor);
+            JE::Render::RPI::Ptr<SkinnedMeshComputePass> pass = aznew SkinnedMeshComputePass(descriptor);
             return pass;
         }
 
-        Data::Instance<RPI::Shader> SkinnedMeshComputePass::GetShader() const
+        Data::Instance<JE::Render::RPI::Shader> SkinnedMeshComputePass::GetShader() const
         {
             return m_shader;
         }
@@ -56,7 +56,7 @@ namespace AZ
             }
         }
 
-        void SkinnedMeshComputePass::OnShaderReinitialized(const RPI::Shader& shader)
+        void SkinnedMeshComputePass::OnShaderReinitialized(const JE::Render::RPI::Shader& shader)
         {
             ComputePass::OnShaderReinitialized(shader);
             if (auto featureProcessor = GetSkinnedMeshFeatureProcessor())
@@ -65,7 +65,7 @@ namespace AZ
             }
         }
 
-        void SkinnedMeshComputePass::OnShaderVariantReinitialized(const RPI::ShaderVariant& shaderVariant)
+        void SkinnedMeshComputePass::OnShaderVariantReinitialized(const JE::Render::RPI::ShaderVariant& shaderVariant)
         {
             ComputePass::OnShaderVariantReinitialized(shaderVariant);
             if (auto featureProcessor = GetSkinnedMeshFeatureProcessor())
@@ -76,7 +76,7 @@ namespace AZ
 
         SkinnedMeshFeatureProcessor* SkinnedMeshComputePass::GetSkinnedMeshFeatureProcessor()
         {
-            AZ::RPI::Scene* scene{ GetScene() };
+            JE::Render::RPI::Scene* scene{ GetScene() };
             if (!scene)
             {
                 return nullptr;

@@ -10,7 +10,7 @@
 #include <AtomLyIntegration/CommonFeatures/ImageBasedLights/ImageBasedLightComponentConstants.h>
 #include <AzCore/RTTI/BehaviorContext.h>
 #include <AzCore/Serialization/SerializeContext.h>
-#include <Atom/RPI.Public/Scene.h>
+#include <JE/Render/RPI/Public/Scene.h>
 #include <Atom/Utils/Utils.h>
 
 namespace AZ
@@ -69,7 +69,7 @@ namespace AZ
         {
             m_entityId = entityId;
 
-            m_featureProcessor = RPI::Scene::GetFeatureProcessorForEntity<ImageBasedLightFeatureProcessorInterface>(m_entityId);
+            m_featureProcessor = JE::Render::RPI::Scene::GetFeatureProcessorForEntity<ImageBasedLightFeatureProcessorInterface>(m_entityId);
             AZ_Error("ImageBasedLightComponentController", m_featureProcessor, "Unable to find a ImageBasedLightFeatureProcessorInterface on this entity's scene.");
 
             if (m_featureProcessor)
@@ -172,7 +172,7 @@ namespace AZ
             AZ::TickBus::QueueFunction(AZStd::move(postTickLambda));
         }
 
-        bool ImageBasedLightComponentController::HandleAssetUpdate(Data::Asset<Data::AssetData> updatedAsset, Data::Asset<RPI::StreamingImageAsset>& configAsset)
+        bool ImageBasedLightComponentController::HandleAssetUpdate(Data::Asset<Data::AssetData> updatedAsset, Data::Asset<JE::Render::RPI::StreamingImageAsset>& configAsset)
         {
             configAsset = updatedAsset;
 
@@ -189,7 +189,7 @@ namespace AZ
             return false;
         }
 
-        void ImageBasedLightComponentController::SetSpecularImageAsset(const Data::Asset<RPI::StreamingImageAsset>& imageAsset)
+        void ImageBasedLightComponentController::SetSpecularImageAsset(const Data::Asset<JE::Render::RPI::StreamingImageAsset>& imageAsset)
         {
             Data::AssetBus::MultiHandler::BusDisconnect(m_configuration.m_specularImageAsset.GetId());
             m_configuration.m_specularImageAsset = imageAsset;
@@ -204,7 +204,7 @@ namespace AZ
             }
         }
 
-        void ImageBasedLightComponentController::SetDiffuseImageAsset(const Data::Asset<RPI::StreamingImageAsset>& imageAsset)
+        void ImageBasedLightComponentController::SetDiffuseImageAsset(const Data::Asset<JE::Render::RPI::StreamingImageAsset>& imageAsset)
         {
             Data::AssetBus::MultiHandler::BusDisconnect(m_configuration.m_diffuseImageAsset.GetId());
             m_configuration.m_diffuseImageAsset = imageAsset;
@@ -219,34 +219,34 @@ namespace AZ
             }
         }
 
-        Data::Asset<RPI::StreamingImageAsset> ImageBasedLightComponentController::GetSpecularImageAsset() const
+        Data::Asset<JE::Render::RPI::StreamingImageAsset> ImageBasedLightComponentController::GetSpecularImageAsset() const
         {
             return m_configuration.m_specularImageAsset;
         }
 
-        Data::Asset<RPI::StreamingImageAsset> ImageBasedLightComponentController::GetDiffuseImageAsset() const
+        Data::Asset<JE::Render::RPI::StreamingImageAsset> ImageBasedLightComponentController::GetDiffuseImageAsset() const
         {
             return m_configuration.m_diffuseImageAsset;
         }
 
         void ImageBasedLightComponentController::SetSpecularImageAssetId(const Data::AssetId imageAssetId)
         {
-            SetSpecularImageAsset(GetAssetFromId<RPI::StreamingImageAsset>(imageAssetId, m_configuration.m_specularImageAsset.GetAutoLoadBehavior()));
+            SetSpecularImageAsset(GetAssetFromId<JE::Render::RPI::StreamingImageAsset>(imageAssetId, m_configuration.m_specularImageAsset.GetAutoLoadBehavior()));
         }
 
         void ImageBasedLightComponentController::SetDiffuseImageAssetId(const Data::AssetId imageAssetId)
         {
-            SetDiffuseImageAsset(GetAssetFromId<RPI::StreamingImageAsset>(imageAssetId, m_configuration.m_diffuseImageAsset.GetAutoLoadBehavior()));
+            SetDiffuseImageAsset(GetAssetFromId<JE::Render::RPI::StreamingImageAsset>(imageAssetId, m_configuration.m_diffuseImageAsset.GetAutoLoadBehavior()));
         }
 
         void ImageBasedLightComponentController::SetSpecularImageAssetPath(const AZStd::string path)
         {
-            SetSpecularImageAsset(GetAssetFromPath<RPI::StreamingImageAsset>(path, m_configuration.m_specularImageAsset.GetAutoLoadBehavior()));
+            SetSpecularImageAsset(GetAssetFromPath<JE::Render::RPI::StreamingImageAsset>(path, m_configuration.m_specularImageAsset.GetAutoLoadBehavior()));
         }
 
         void ImageBasedLightComponentController::SetDiffuseImageAssetPath(const AZStd::string path)
         {
-            SetDiffuseImageAsset(GetAssetFromPath<RPI::StreamingImageAsset>(path, m_configuration.m_diffuseImageAsset.GetAutoLoadBehavior()));
+            SetDiffuseImageAsset(GetAssetFromPath<JE::Render::RPI::StreamingImageAsset>(path, m_configuration.m_diffuseImageAsset.GetAutoLoadBehavior()));
         }
 
         AZStd::string ImageBasedLightComponentController::GetSpecularImageAssetPath() const
@@ -296,7 +296,7 @@ namespace AZ
             }
         }
 
-        void ImageBasedLightComponentController::LoadImage(Data::Asset<RPI::StreamingImageAsset>& imageAsset)
+        void ImageBasedLightComponentController::LoadImage(Data::Asset<JE::Render::RPI::StreamingImageAsset>& imageAsset)
         {
             Data::AssetBus::MultiHandler::BusDisconnect(imageAsset.GetId());
 

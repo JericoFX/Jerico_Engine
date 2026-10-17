@@ -7,9 +7,9 @@
  */
 
 #include "./UseTextureFunctor.h"
-#include <Atom/RPI.Public/Material/Material.h>
-#include <Atom/RPI.Reflect/Image/Image.h>
-#include <Atom/RPI.Reflect/Shader/ShaderOptionGroup.h>
+#include <JE/Render/RPI/Public/Material/Material.h>
+#include <JE/Render/RPI/Reflect/Image/Image.h>
+#include <JE/Render/RPI/Reflect/Shader/ShaderOptionGroup.h>
 
 namespace AZ
 {
@@ -19,7 +19,7 @@ namespace AZ
         {
             if (auto* serializeContext = azrtti_cast<SerializeContext*>(context))
             {
-                serializeContext->Class<UseTextureFunctor, RPI::MaterialFunctor>()
+                serializeContext->Class<UseTextureFunctor, JE::Render::RPI::MaterialFunctor>()
                     ->Version(5)
                     ->Field("texturePropertyIndex", &UseTextureFunctor::m_texturePropertyIndex)
                     ->Field("useTexturePropertyIndex", &UseTextureFunctor::m_useTexturePropertyIndex)
@@ -29,9 +29,9 @@ namespace AZ
             }
         }
 
-        void UseTextureFunctor::Process(RPI::MaterialFunctorAPI::RuntimeContext& context)
+        void UseTextureFunctor::Process(JE::Render::RPI::MaterialFunctorAPI::RuntimeContext& context)
         {
-            using namespace RPI;
+            using namespace JE::Render::RPI;
 
             auto texture = context.GetMaterialPropertyValue<Data::Instance<Image>>(m_texturePropertyIndex);
             bool useTextureFlag = context.GetMaterialPropertyValue<bool>(m_useTexturePropertyIndex);
@@ -41,28 +41,28 @@ namespace AZ
             context.SetShaderOptionValue(m_useTextureOptionName, useTexture);
         }
 
-        void UseTextureFunctor::Process(RPI::MaterialFunctorAPI::EditorContext& context)
+        void UseTextureFunctor::Process(JE::Render::RPI::MaterialFunctorAPI::EditorContext& context)
         {
             const bool useTextureFlag = context.GetMaterialPropertyValue<bool>(m_useTexturePropertyIndex);
-            Data::Instance<RPI::Image> image = context.GetMaterialPropertyValue<Data::Instance<RPI::Image>>(m_texturePropertyIndex);
+            Data::Instance<JE::Render::RPI::Image> image = context.GetMaterialPropertyValue<Data::Instance<JE::Render::RPI::Image>>(m_texturePropertyIndex);
 
             context.SetMaterialPropertyVisibility(
                 m_useTexturePropertyIndex,
-                nullptr != image ? RPI::MaterialPropertyVisibility::Enabled : RPI::MaterialPropertyVisibility::Hidden
+                nullptr != image ? JE::Render::RPI::MaterialPropertyVisibility::Enabled : JE::Render::RPI::MaterialPropertyVisibility::Hidden
             );
 
-            RPI::MaterialPropertyVisibility dependentVisibility = RPI::MaterialPropertyVisibility::Enabled;
+            JE::Render::RPI::MaterialPropertyVisibility dependentVisibility = JE::Render::RPI::MaterialPropertyVisibility::Enabled;
             if (nullptr == image)
             {
-                dependentVisibility = RPI::MaterialPropertyVisibility::Hidden;
+                dependentVisibility = JE::Render::RPI::MaterialPropertyVisibility::Hidden;
             }
             else if (!useTextureFlag)
             {
-                dependentVisibility = RPI::MaterialPropertyVisibility::Disabled;
+                dependentVisibility = JE::Render::RPI::MaterialPropertyVisibility::Disabled;
             }
 
             // These properties are enabled only when the texture is actually going to be sampled by the shader.
-            for (RPI::MaterialPropertyIndex index : m_dependentPropertyIndexes)
+            for (JE::Render::RPI::MaterialPropertyIndex index : m_dependentPropertyIndexes)
             {
 
                 context.SetMaterialPropertyVisibility(index, dependentVisibility);

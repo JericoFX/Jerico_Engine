@@ -7,8 +7,8 @@
  */
 #pragma once
 
-#include <Atom/RPI.Public/Pass/RenderPass.h>
-#include <Atom/RPI.Public/Shader/Shader.h>
+#include <JE/Render/RPI/Public/Pass/RenderPass.h>
+#include <JE/Render/RPI/Public/Shader/Shader.h>
 
 namespace AZ
 {
@@ -16,7 +16,7 @@ namespace AZ
     {
         //! This pass updates the DiffuseProbeGrid visualization TLAS instances buffer
         class DiffuseProbeGridVisualizationPreparePass final
-            : public RPI::RenderPass
+            : public JE::Render::RPI::RenderPass
         {
         public:
             AZ_RPI_PASS(DiffuseProbeGridVisualizationPreparePass);
@@ -25,12 +25,12 @@ namespace AZ
             AZ_CLASS_ALLOCATOR(DiffuseProbeGridVisualizationPreparePass, SystemAllocator);
 
             //! Creates a DiffuseProbeGridVisualizationPreparePass
-            static RPI::Ptr<DiffuseProbeGridVisualizationPreparePass> Create(const RPI::PassDescriptor& descriptor);
+            static JE::Render::RPI::Ptr<DiffuseProbeGridVisualizationPreparePass> Create(const JE::Render::RPI::PassDescriptor& descriptor);
 
             ~DiffuseProbeGridVisualizationPreparePass() = default;
 
         private:
-            explicit DiffuseProbeGridVisualizationPreparePass(const RPI::PassDescriptor& descriptor);
+            explicit DiffuseProbeGridVisualizationPreparePass(const JE::Render::RPI::PassDescriptor& descriptor);
 
             void LoadShader();
             bool ShouldUpdate(const AZStd::shared_ptr<DiffuseProbeGrid>& diffuseProbeGrid) const;
@@ -43,7 +43,7 @@ namespace AZ
             void BuildCommandListInternal(const RHI::FrameGraphExecuteContext& context) override;
 
             // shader
-            Data::Instance<RPI::Shader> m_shader;
+            Data::Instance<JE::Render::RPI::Shader> m_shader;
             const RHI::PipelineState* m_pipelineState = nullptr;
             RHI::Ptr<RHI::ShaderResourceGroupLayout> m_srgLayout;
             RHI::DispatchDirect m_dispatchArgs;

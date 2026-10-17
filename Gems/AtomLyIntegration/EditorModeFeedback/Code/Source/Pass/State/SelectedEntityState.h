@@ -20,7 +20,7 @@ namespace AZ::Render
         SelectedEntityState();
 
         // EditorModeStateParentPass overrides ...
-        void UpdatePassData(RPI::ParentPass* parentPass) override;
+        void UpdatePassData(JE::Render::RPI::ParentPass* parentPass) override;
 
         // EditorStateBase overrides ...
         AzToolsFramework::EntityIdList GetMaskedEntities() const override;

@@ -6,7 +6,7 @@
  *
  */
 
-#include <Atom/RPI.Public/Pass/Specific/SwapChainPass.h>
+#include <JE/Render/RPI/Public/Pass/Specific/SwapChainPass.h>
 
 #include <PostProcessing/LookModificationTransformPass.h>
 #include <PostProcess/PostProcessFeatureProcessor.h>
@@ -17,14 +17,14 @@ namespace AZ
 {
     namespace Render
     {
-        RPI::Ptr<LookModificationPass> LookModificationPass::Create(const RPI::PassDescriptor& descriptor)
+        JE::Render::RPI::Ptr<LookModificationPass> LookModificationPass::Create(const JE::Render::RPI::PassDescriptor& descriptor)
         {
-            RPI::Ptr<LookModificationPass> pass = aznew LookModificationPass(descriptor);
+            JE::Render::RPI::Ptr<LookModificationPass> pass = aznew LookModificationPass(descriptor);
             return pass;
         }
 
-        LookModificationPass::LookModificationPass(const RPI::PassDescriptor& descriptor)
-            : RPI::ParentPass(descriptor)
+        LookModificationPass::LookModificationPass(const JE::Render::RPI::PassDescriptor& descriptor)
+            : JE::Render::RPI::ParentPass(descriptor)
         {
             AzFramework::NativeWindowHandle windowHandle = nullptr;
             AzFramework::WindowSystemRequestBus::BroadcastResult(
@@ -48,7 +48,7 @@ namespace AZ
             }
 
             // Update the children passes
-            RPI::Ptr<BlendColorGradingLutsPass> blendPass = FindChildPass<BlendColorGradingLutsPass>();
+            JE::Render::RPI::Ptr<BlendColorGradingLutsPass> blendPass = FindChildPass<BlendColorGradingLutsPass>();
             if (blendPass)
             {
                 auto commonShaperParams = blendPass->GetCommonShaperParams();
@@ -66,7 +66,7 @@ namespace AZ
 
                 blendPass->SetShaperParameters(m_shaperParams);
                     
-                RPI::Ptr<LookModificationCompositePass> compositePass = FindChildPass<LookModificationCompositePass>();
+                JE::Render::RPI::Ptr<LookModificationCompositePass> compositePass = FindChildPass<LookModificationCompositePass>();
                 if (compositePass)
                 {
                     compositePass->SetShaperParameters(m_shaperParams);

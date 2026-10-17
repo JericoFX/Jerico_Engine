@@ -12,7 +12,7 @@
 #include <AzCore/Component/Component.h>
 #include <AzCore/Component/TransformBus.h>
 #include <DiffuseProbeGrid/DiffuseProbeGridFeatureProcessorInterface.h>
-#include <Atom/RPI.Public/Model/Model.h>
+#include <JE/Render/RPI/Public/Model/Model.h>
 #include <LmbrCentral/Shape/BoxShapeComponentBus.h>
 #include <Components/DiffuseProbeGridComponentConstants.h>
 
@@ -49,9 +49,9 @@ namespace AZ
             AZStd::string m_bakedDistanceTextureRelativePath;
             AZStd::string m_bakedProbeDataTextureRelativePath;
 
-            Data::Asset<RPI::StreamingImageAsset> m_bakedIrradianceTextureAsset;
-            Data::Asset<RPI::StreamingImageAsset> m_bakedDistanceTextureAsset;
-            Data::Asset<RPI::StreamingImageAsset> m_bakedProbeDataTextureAsset;
+            Data::Asset<JE::Render::RPI::StreamingImageAsset> m_bakedIrradianceTextureAsset;
+            Data::Asset<JE::Render::RPI::StreamingImageAsset> m_bakedDistanceTextureAsset;
+            Data::Asset<JE::Render::RPI::StreamingImageAsset> m_bakedProbeDataTextureAsset;
 
             bool m_visualizationEnabled = false;
             bool m_visualizationShowInactiveProbes = false;

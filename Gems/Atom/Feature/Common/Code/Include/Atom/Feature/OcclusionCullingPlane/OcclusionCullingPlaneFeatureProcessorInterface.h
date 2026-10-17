@@ -10,7 +10,7 @@
 
 #include <AzCore/base.h>
 #include <AzCore/Math/Transform.h>
-#include <Atom/RPI.Public/FeatureProcessor.h>
+#include <JE/Render/RPI/Public/FeatureProcessor.h>
 
 namespace AZ
 {
@@ -22,10 +22,10 @@ namespace AZ
 
         // OcclusionCullingPlaneFeatureProcessorInterface provides an interface to the feature processor for code outside of Atom
         class OcclusionCullingPlaneFeatureProcessorInterface
-            : public RPI::FeatureProcessor
+            : public JE::Render::RPI::FeatureProcessor
         {
         public:
-            AZ_RTTI(AZ::Render::OcclusionCullingPlaneFeatureProcessorInterface, "{50F6B45E-A622-44EC-B962-DE25FBD44095}", AZ::RPI::FeatureProcessor);
+            AZ_RTTI(AZ::Render::OcclusionCullingPlaneFeatureProcessorInterface, "{50F6B45E-A622-44EC-B962-DE25FBD44095}", JE::Render::RPI::FeatureProcessor);
 
             virtual OcclusionCullingPlaneHandle AddOcclusionCullingPlane(const AZ::Transform& transform) = 0;
             virtual void RemoveOcclusionCullingPlane(OcclusionCullingPlaneHandle& handle) = 0;

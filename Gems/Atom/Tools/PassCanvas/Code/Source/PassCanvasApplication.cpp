@@ -6,7 +6,7 @@
  *
  */
 
-#include <Atom/RPI.Reflect/Image/StreamingImageAsset.h>
+#include <JE/Render/RPI/Reflect/Image/StreamingImageAsset.h>
 #include <JE/Editor/Camera/CameraModule.h>
 #include <AtomToolsFramework/Document/AtomToolsAnyDocument.h>
 #include <AtomToolsFramework/Document/AtomToolsDocumentSystemRequestBus.h>

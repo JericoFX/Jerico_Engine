@@ -146,7 +146,7 @@ namespace ImageProcessingAtom
     }
 
     // From image info string from StreamingImageAsset
-    void GetImageInfoString(const AZ::Data::Asset<AZ::RPI::StreamingImageAsset>& imageAsset, AZStd::string& output)
+    void GetImageInfoString(const AZ::Data::Asset<JE::Render::RPI::StreamingImageAsset>& imageAsset, AZStd::string& output)
     {
         if (!imageAsset.IsReady())
         {
@@ -219,7 +219,7 @@ namespace ImageProcessingAtom
 
         m_imageAssetLoader->QueueAsset(
             product->GetAssetId(),
-            [this](const AZ::Data::Asset<AZ::RPI::StreamingImageAsset>& asset)
+            [this](const AZ::Data::Asset<JE::Render::RPI::StreamingImageAsset>& asset)
             {
                 CreateAndDisplayTextureItemAsync(
                     [asset]() -> CreateDisplayTextureResult

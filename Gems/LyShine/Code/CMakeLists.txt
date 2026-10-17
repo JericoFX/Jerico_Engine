@@ -25,7 +25,7 @@ ly_add_target(
             Legacy::CryCommon
             Gem::LmbrCentral
         PUBLIC
-            Gem::Atom_RPI.Public
+            JE::RenderIntegration
             Gem::Atom_Utils.Static
             Gem::CommonFeaturesAtom.Static
             JE::RenderIntegration.Public
@@ -50,7 +50,7 @@ ly_add_target(
             Gem::LmbrCentral.API
         PUBLIC
             Gem::Atom_RHI.Reflect
-            Gem::Atom_RPI.Public
+            JE::RenderIntegration
     RUNTIME_DEPENDENCIES
         Gem::LmbrCentral
         Gem::TextureAtlas
@@ -104,7 +104,7 @@ if (PAL_TRAIT_BUILD_HOST_TOOLS)
                 Gem::AtomToolsFramework.Static
                 ${additional_dependencies}
             PUBLIC
-                Gem::Atom_RPI.Public
+                JE::RenderIntegration
                 Gem::Atom_Utils.Static
                 Gem::CommonFeaturesAtom.Static
                 JE::RenderIntegration.Public
@@ -163,7 +163,7 @@ if (PAL_TRAIT_BUILD_HOST_TOOLS)
                 Gem::AtomToolsFramework.Editor
                 ${additional_dependencies}
             PUBLIC
-                Gem::Atom_RPI.Public
+                JE::RenderIntegration
                 Gem::Atom_Utils.Static
                 Gem::CommonFeaturesAtom.Static
                 JE::RenderIntegration.Public

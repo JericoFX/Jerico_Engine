@@ -9,9 +9,9 @@
 #include <JE/World/Camera/CameraComponentConverters.h>
 #include <AzCore/Component/TransformBus.h>
 #include <AzFramework/Entity/EntityDebugDisplayBus.h>
-#include <Atom/RPI.Public/View.h>
-#include <Atom/RPI.Public/ViewportContextManager.h>
-#include <Atom/RPI.Public/ViewportContext.h>
+#include <JE/Render/RPI/Public/View.h>
+#include <JE/Render/RPI/Public/ViewportContextManager.h>
+#include <JE/Render/RPI/Public/ViewportContext.h>
 
 #include <JE/World/Camera/CameraComponent.h>
 

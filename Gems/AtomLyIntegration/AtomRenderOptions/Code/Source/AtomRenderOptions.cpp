@@ -14,25 +14,25 @@
 #include <AzCore/std/containers/unordered_set.h>
 #include <AzCore/std/containers/span.h>
 
-#include <Atom/RPI.Public/Pass/ParentPass.h>
-#include <Atom/RPI.Public/Pass/Pass.h>
-#include <Atom/RPI.Public/Pass/PassFilter.h>
-#include <Atom/RPI.Public/RPISystemInterface.h>
-#include <Atom/RPI.Public/RenderPipeline.h>
-#include <Atom/RPI.Public/ViewportContext.h>
-#include <Atom/RPI.Public/ViewportContextBus.h>
+#include <JE/Render/RPI/Public/Pass/ParentPass.h>
+#include <JE/Render/RPI/Public/Pass/Pass.h>
+#include <JE/Render/RPI/Public/Pass/PassFilter.h>
+#include <JE/Render/RPI/Public/RPISystemInterface.h>
+#include <JE/Render/RPI/Public/RenderPipeline.h>
+#include <JE/Render/RPI/Public/ViewportContext.h>
+#include <JE/Render/RPI/Public/ViewportContextBus.h>
 
 namespace AZ::Render
 {
-    RPI::RenderPipelinePtr GetDefaultViewportPipelinePtr()
+    JE::Render::RPI::RenderPipelinePtr GetDefaultViewportPipelinePtr()
     {
-        RPI::RPISystemInterface* rpiSystem = RPI::RPISystemInterface::Get();
+        JE::Render::RPI::RPISystemInterface* rpiSystem = JE::Render::RPI::RPISystemInterface::Get();
         if (!rpiSystem)
         {
             return nullptr;
         }
 
-        AzFramework::NativeWindowHandle windowHandle = RPI::ViewportContextRequests::Get()->GetDefaultViewportContext()->GetWindowHandle();
+        AzFramework::NativeWindowHandle windowHandle = JE::Render::RPI::ViewportContextRequests::Get()->GetDefaultViewportContext()->GetWindowHandle();
         if (!windowHandle)
         {
             return nullptr;
@@ -41,23 +41,23 @@ namespace AZ::Render
         return rpiSystem->GetRenderPipelineForWindow(windowHandle);
     }
 
-    bool IsPassEnabled(const RPI::RenderPipeline& pipeline, const Name& name)
+    bool IsPassEnabled(const JE::Render::RPI::RenderPipeline& pipeline, const Name& name)
     {
-        const RPI::Pass* pass = RPI::PassSystemInterface::Get()->FindFirstPass(RPI::PassFilter::CreateWithPassName(name, &pipeline));
+        const JE::Render::RPI::Pass* pass = JE::Render::RPI::PassSystemInterface::Get()->FindFirstPass(JE::Render::RPI::PassFilter::CreateWithPassName(name, &pipeline));
         return pass ? pass->IsEnabled() : false;
     }
 
-    bool EnablePass(const RPI::RenderPipeline& pipeline, const Name& passName, bool enable)
+    bool EnablePass(const JE::Render::RPI::RenderPipeline& pipeline, const Name& passName, bool enable)
     {
         bool found = false;
-        RPI::PassFilter passFilter = RPI::PassFilter::CreateWithPassName(passName, &pipeline);
-        RPI::PassSystemInterface::Get()->ForEachPass(
+        JE::Render::RPI::PassFilter passFilter = JE::Render::RPI::PassFilter::CreateWithPassName(passName, &pipeline);
+        JE::Render::RPI::PassSystemInterface::Get()->ForEachPass(
             passFilter,
-            [enable, &found](RPI::Pass* pass) -> RPI::PassFilterExecutionFlow
+            [enable, &found](JE::Render::RPI::Pass* pass) -> JE::Render::RPI::PassFilterExecutionFlow
             {
                 found = true;
                 pass->SetEnabled(enable);
-                return RPI::PassFilterExecutionFlow::ContinueVisitingPasses;
+                return JE::Render::RPI::PassFilterExecutionFlow::ContinueVisitingPasses;
             });
 
         return found;
@@ -73,7 +73,7 @@ namespace AZ::Render
         }
     }
 
-    void GetViewportOptionsPasses(const RPI::RenderPipeline& pipeline, AZStd::vector<AZ::Name>& passNamesOut)
+    void GetViewportOptionsPasses(const JE::Render::RPI::RenderPipeline& pipeline, AZStd::vector<AZ::Name>& passNamesOut)
     {
         const auto& rootPass = pipeline.GetRootPass();
         if (!rootPass)
@@ -84,7 +84,7 @@ namespace AZ::Render
         AZStd::unordered_set<Name> allowedPassNames;
         GetAllowedPassNamesInViewportOptionsMenu(allowedPassNames);
 
-        AZStd::queue<const RPI::Pass*> passes;
+        AZStd::queue<const JE::Render::RPI::Pass*> passes;
         passes.push(rootPass.get());
 
         while (!passes.empty())

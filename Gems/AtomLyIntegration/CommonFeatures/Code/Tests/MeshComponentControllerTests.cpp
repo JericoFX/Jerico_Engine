@@ -8,7 +8,7 @@
 
 #include <AzTest/AzTest.h>
 #include <AzCore/Asset/AssetManager.h>
-#include <Atom/RPI.Reflect/Asset/AssetHandler.h>
+#include <JE/Render/RPI/Reflect/Asset/AssetHandler.h>
 #include <AzToolsFramework/ActionManager/Action/ActionManagerInternalInterface.h>
 #include <AzToolsFramework/ActionManager/HotKey/HotKeyManagerInternalInterface.h>
 #include <AzToolsFramework/ActionManager/Menu/MenuManagerInternalInterface.h>
@@ -116,7 +116,7 @@ namespace UnitTest
             m_entity->GetId(), &AZ::Render::MeshComponentRequestBus::Events::SetModelAssetId, AZ::Data::AssetId{});
 
         AZ::Data::AssetId actualAssetId;
-        AZ::Data::Asset<const AZ::RPI::ModelAsset> actualAsset;
+        AZ::Data::Asset<const JE::Render::RPI::ModelAsset> actualAsset;
         AZ::Render::MeshComponentRequestBus::EventResult(
             actualAssetId, m_entity->GetId(), &AZ::Render::MeshComponentRequestBus::Events::GetModelAssetId);
         AZ::Render::MeshComponentRequestBus::EventResult(
@@ -132,9 +132,9 @@ namespace UnitTest
     TEST_F(MeshComponentControllerFixture, UnavailableModelProductPreservesRequestedAssetIdWithoutDereferencingAssetData)
     {
         const AZ::Data::AssetId modelAssetId(AZ::Uuid::CreateRandom(), 0);
-        ASSERT_EQ(AZ::Data::AssetManager::Instance().GetHandler(azrtti_typeid<AZ::RPI::ModelAsset>()), nullptr);
+        ASSERT_EQ(AZ::Data::AssetManager::Instance().GetHandler(azrtti_typeid<JE::Render::RPI::ModelAsset>()), nullptr);
         // Use the native generic handler and AssetManager, with no catalog entry or fallback preview model.
-        auto modelHandler = AZ::RPI::MakeAssetHandler<AZ::RPI::AssetHandler<AZ::RPI::ModelAsset>>();
+        auto modelHandler = JE::Render::RPI::MakeAssetHandler<JE::Render::RPI::AssetHandler<JE::Render::RPI::ModelAsset>>();
         UnitTest::ErrorHandler missingProduct("GetAsset called for asset which does not exist in asset catalog");
         UnitTest::ErrorHandler loadFailure("Could not load");
         UnitTest::ErrorHandler notQueued("BlockUntilLoadComplete must be called after an asset has been queued for load");
@@ -148,7 +148,7 @@ namespace UnitTest
                 m_entity->GetId(), &AZ::Render::MeshComponentRequestBus::Events::SetModelAssetId, modelAssetId);
 
             AZ::Data::AssetId actualAssetId;
-            AZ::Data::Asset<const AZ::RPI::ModelAsset> actualAsset;
+            AZ::Data::Asset<const JE::Render::RPI::ModelAsset> actualAsset;
             AZ::Render::MeshComponentRequestBus::EventResult(
                 actualAssetId, m_entity->GetId(), &AZ::Render::MeshComponentRequestBus::Events::GetModelAssetId);
             AZ::Render::MeshComponentRequestBus::EventResult(

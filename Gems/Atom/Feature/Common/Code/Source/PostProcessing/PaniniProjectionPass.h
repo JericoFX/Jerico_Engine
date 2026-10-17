@@ -7,23 +7,23 @@
  */
 #pragma once
 
-#include <Atom/RPI.Public/Pass/ComputePass.h>
+#include <JE/Render/RPI/Public/Pass/ComputePass.h>
 
 namespace AZ
 {
     namespace Render
     {
         // Class for controlling Panini Projection effect
-        class PaniniProjectionPass final : public RPI::ComputePass
+        class PaniniProjectionPass final : public JE::Render::RPI::ComputePass
         {
             AZ_RPI_PASS(PaniniProjectionPass);
 
         public:
-            AZ_RTTI(PaniniProjectionPass, "{DBFE786B-16DE-4F44-8188-E4E753270485}", AZ::RPI::ComputePass);
+            AZ_RTTI(PaniniProjectionPass, "{DBFE786B-16DE-4F44-8188-E4E753270485}", JE::Render::RPI::ComputePass);
             AZ_CLASS_ALLOCATOR(PaniniProjectionPass, SystemAllocator, 0);
 
             ~PaniniProjectionPass() = default;
-            static RPI::Ptr<PaniniProjectionPass> Create(const RPI::PassDescriptor& descriptor);
+            static JE::Render::RPI::Ptr<PaniniProjectionPass> Create(const JE::Render::RPI::PassDescriptor& descriptor);
 
             bool IsEnabled() const override;
 
@@ -32,7 +32,7 @@ namespace AZ
             void FrameBeginInternal(FramePrepareParams params) override;
 
         private:
-            PaniniProjectionPass(const RPI::PassDescriptor& descriptor);
+            PaniniProjectionPass(const JE::Render::RPI::PassDescriptor& descriptor);
 
             AZ::RHI::ShaderInputNameIndex m_constantsIndex = "m_constants";
         };

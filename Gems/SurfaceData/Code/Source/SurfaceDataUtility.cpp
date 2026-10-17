@@ -8,12 +8,12 @@
 
 #include <SurfaceDataProfiler.h>
 #include <SurfaceData/Utility/SurfaceDataUtility.h>
-#include <Atom/RPI.Reflect/Model/ModelAssetCreator.h>
+#include <JE/Render/RPI/Reflect/Model/ModelAssetCreator.h>
 
 namespace SurfaceData
 {
     bool GetMeshRayIntersection(
-        const AZ::RPI::ModelAsset& meshAsset, const AZ::Transform& meshTransform,
+        const JE::Render::RPI::ModelAsset& meshAsset, const AZ::Transform& meshTransform,
         const AZ::Transform& meshTransformInverse, const AZ::Vector3& nonUniformScale,
         const AZ::Vector3& rayStart, const AZ::Vector3& rayEnd, 
         AZ::Vector3& outPosition, AZ::Vector3& outNormal)

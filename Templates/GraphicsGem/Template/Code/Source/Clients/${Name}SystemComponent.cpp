@@ -12,7 +12,7 @@
 
 #include <AzCore/Serialization/SerializeContext.h>
 
-#include <Atom/RPI.Public/FeatureProcessorFactory.h>
+#include <JE/Render/RPI/Public/FeatureProcessorFactory.h>
 
 #include <Render/${Name}FeatureProcessor.h>
 
@@ -76,12 +76,12 @@ namespace ${Name}
     {
         ${Name}RequestBus::Handler::BusConnect();
 
-        AZ::RPI::FeatureProcessorFactory::Get()->RegisterFeatureProcessor<${Name}FeatureProcessor>();
+        JE::Render::RPI::FeatureProcessorFactory::Get()->RegisterFeatureProcessor<${Name}FeatureProcessor>();
     }
 
     void ${Name}SystemComponent::Deactivate()
     {
-        AZ::RPI::FeatureProcessorFactory::Get()->UnregisterFeatureProcessor<${Name}FeatureProcessor>();
+        JE::Render::RPI::FeatureProcessorFactory::Get()->UnregisterFeatureProcessor<${Name}FeatureProcessor>();
 
         ${Name}RequestBus::Handler::BusDisconnect();
     }

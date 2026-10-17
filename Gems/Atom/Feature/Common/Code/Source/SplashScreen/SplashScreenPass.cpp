@@ -6,23 +6,23 @@
  *
  */
 
-#include <Atom/RPI.Public/Image/StreamingImage.h>
-#include <Atom/RPI.Public/RPIUtils.h>
-#include <Atom/RPI.Reflect/Asset/AssetUtils.h>
+#include <JE/Render/RPI/Public/Image/StreamingImage.h>
+#include <JE/Render/RPI/Public/RPIUtils.h>
+#include <JE/Render/RPI/Reflect/Asset/AssetUtils.h>
 #include <AzCore/Settings/SettingsRegistryImpl.h>
 #include <AzCore/Time/TimeSystem.h>
 #include <SplashScreen/SplashScreenPass.h>
 
 namespace AZ::Render
 {
-    AZ::RPI::Ptr<SplashScreenPass> SplashScreenPass::Create(const AZ::RPI::PassDescriptor& descriptor)
+    JE::Render::RPI::Ptr<SplashScreenPass> SplashScreenPass::Create(const JE::Render::RPI::PassDescriptor& descriptor)
     {
-        AZ::RPI::Ptr<SplashScreenPass> pass = aznew SplashScreenPass(descriptor);
+        JE::Render::RPI::Ptr<SplashScreenPass> pass = aznew SplashScreenPass(descriptor);
         return pass;
     }
 
-    SplashScreenPass::SplashScreenPass(const AZ::RPI::PassDescriptor& descriptor)
-        : AZ::RPI::FullscreenTrianglePass(descriptor)
+    SplashScreenPass::SplashScreenPass(const JE::Render::RPI::PassDescriptor& descriptor)
+        : JE::Render::RPI::FullscreenTrianglePass(descriptor)
     {
     }
 
@@ -33,7 +33,7 @@ namespace AZ::Render
 
     void SplashScreenPass::InitializeInternal()
     {
-        AZ::RPI::FullscreenTrianglePass::InitializeInternal();
+        JE::Render::RPI::FullscreenTrianglePass::InitializeInternal();
 
         auto settingsRegistry = AZ::SettingsRegistry::Get();
         static const AZStd::string setregPath = "/O3DE/Atom/Feature/SplashScreen";
@@ -43,7 +43,7 @@ namespace AZ::Render
             return;
         }
 
-        m_splashScreenImage = AZ::RPI::LoadStreamingTexture(m_settings.m_imagePath);
+        m_splashScreenImage = JE::Render::RPI::LoadStreamingTexture(m_settings.m_imagePath);
         m_durationSeconds = m_settings.m_durationSeconds;
 
         if (!m_splashScreenImage)
@@ -94,7 +94,7 @@ namespace AZ::Render
         m_shaderResourceGroup->SetImage(m_splashScreenImageIndex, m_splashScreenImage);
         m_shaderResourceGroup->SetConstant(m_splashScreenParamsIndex, m_splashScreenParams);
 
-        AZ::RPI::FullscreenTrianglePass::CompileResources(context);
+        JE::Render::RPI::FullscreenTrianglePass::CompileResources(context);
     }
 
     void SplashScreenPass::OnTick([[maybe_unused]] float deltaTime, [[maybe_unused]] AZ::ScriptTimePoint time)

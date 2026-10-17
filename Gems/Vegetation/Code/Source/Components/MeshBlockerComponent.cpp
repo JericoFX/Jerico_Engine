@@ -19,7 +19,7 @@
 #include <Vegetation/Ebuses/AreaSystemRequestBus.h>
 #include <Vegetation/Ebuses/FilterRequestBus.h>
 #include <Vegetation/InstanceData.h>
-#include <Atom/RPI.Reflect/Model/ModelAsset.h>
+#include <JE/Render/RPI/Reflect/Model/ModelAsset.h>
 
 #include <VegetationProfiler.h>
 
@@ -211,7 +211,7 @@ namespace Vegetation
             return false;
         }
 
-        AZ::RPI::ModelAsset* mesh = m_meshAssetData.GetAs<AZ::RPI::ModelAsset>();
+        JE::Render::RPI::ModelAsset* mesh = m_meshAssetData.GetAs<JE::Render::RPI::ModelAsset>();
         if (!mesh)
         {
             return false;
@@ -242,7 +242,7 @@ namespace Vegetation
         }
 
 
-        AZ::RPI::ModelAsset* mesh = m_meshAssetData.GetAs<AZ::RPI::ModelAsset>();
+        JE::Render::RPI::ModelAsset* mesh = m_meshAssetData.GetAs<JE::Render::RPI::ModelAsset>();
         if (!mesh)
         {
             return false;
@@ -363,7 +363,7 @@ namespace Vegetation
         OnCompositionChanged();
     }
 
-    void MeshBlockerComponent::OnModelReady([[maybe_unused]] const AZ::Data::Asset<AZ::RPI::ModelAsset>& modelAsset, [[maybe_unused]]const AZ::Data::Instance<AZ::RPI::Model>& model)
+    void MeshBlockerComponent::OnModelReady([[maybe_unused]] const AZ::Data::Asset<JE::Render::RPI::ModelAsset>& modelAsset, [[maybe_unused]]const AZ::Data::Instance<JE::Render::RPI::Model>& model)
     {
         LmbrCentral::DependencyNotificationBus::Event(GetEntityId(), &LmbrCentral::DependencyNotificationBus::Events::OnCompositionChanged);
     }

@@ -17,7 +17,7 @@
 #include "Viewport/WhiteBoxViewportConstants.h"
 #include "WhiteBoxShapeBuilders.h"
 
-#include <Atom/RPI.Public/ViewportContext.h>
+#include <JE/Render/RPI/Public/ViewportContext.h>
 #include <AzCore/Casting/numeric_cast.h>
 #include <AzCore/Component/ComponentApplicationBus.h>
 #include <AzCore/Component/TransformBus.h>

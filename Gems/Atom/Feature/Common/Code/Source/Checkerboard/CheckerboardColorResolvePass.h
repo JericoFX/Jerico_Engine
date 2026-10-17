@@ -7,7 +7,7 @@
  */
 #pragma once
 
-#include <Atom/RPI.Public/Pass/ComputePass.h>
+#include <JE/Render/RPI/Public/Pass/ComputePass.h>
 
 namespace AZ
 {
@@ -16,9 +16,9 @@ namespace AZ
         //! CheckerboardColorResolvePass is to resolve checkerboard color render targets
         //! by using frame n and frame n-1 2xMS color render targets and corresponding depth buffers
         class CheckerboardColorResolvePass final
-            : public RPI::ComputePass
+            : public JE::Render::RPI::ComputePass
         {
-            using Base = RPI::ComputePass;
+            using Base = JE::Render::RPI::ComputePass;
             AZ_RPI_PASS(CheckerboardColorResolvePass);
       
         public:
@@ -26,7 +26,7 @@ namespace AZ
             AZ_CLASS_ALLOCATOR(CheckerboardColorResolvePass, SystemAllocator);
 
             ~CheckerboardColorResolvePass() = default;
-            static RPI::Ptr<CheckerboardColorResolvePass> Create(const RPI::PassDescriptor& descriptor);
+            static JE::Render::RPI::Ptr<CheckerboardColorResolvePass> Create(const JE::Render::RPI::PassDescriptor& descriptor);
 
             enum class DebugRenderType : uint32_t
             {
@@ -56,7 +56,7 @@ namespace AZ
 
         private:
             CheckerboardColorResolvePass() = delete;
-            explicit CheckerboardColorResolvePass(const RPI::PassDescriptor& descriptor);
+            explicit CheckerboardColorResolvePass(const JE::Render::RPI::PassDescriptor& descriptor);
 
             RHI::ShaderInputNameIndex m_constantsIndex = "m_constants";
                         

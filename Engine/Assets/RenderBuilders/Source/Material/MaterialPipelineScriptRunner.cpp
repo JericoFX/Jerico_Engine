@@ -7,9 +7,9 @@
  */
 
 #include "MaterialPipelineScriptRunner.h"
-#include <Atom/RPI.Edit/Material/MaterialTypeSourceData.h>
-#include <Atom/RPI.Edit/Common/AssetUtils.h>
-#include <Atom/RPI.Reflect/Material/LuaScriptUtilities.h>
+#include <JE/Editor/Render/RPI/Edit/Material/MaterialTypeSourceData.h>
+#include <JE/Editor/Render/RPI/Edit/Common/AssetUtils.h>
+#include <JE/Render/RPI/Reflect/Material/LuaScriptUtilities.h>
 #include <AzCore/Script/ScriptAsset.h>
 #include <AzCore/Script/ScriptSystemBus.h>
 #include <AzCore/Utils/Utils.h>
@@ -30,7 +30,7 @@ namespace JE::Assets::RenderBuilders
         }
     }
 
-    MaterialPipelineScriptRunner::ScriptExecutionContext::ScriptExecutionContext(const AZ::RPI::MaterialTypeSourceData& materialType, const ShaderTemplatesList& availableShaderTemplates)
+    MaterialPipelineScriptRunner::ScriptExecutionContext::ScriptExecutionContext(const JE::Render::RPI::MaterialTypeSourceData& materialType, const ShaderTemplatesList& availableShaderTemplates)
         : m_materialType(materialType)
     {
         for (auto shaderTemplate : availableShaderTemplates)
@@ -64,7 +64,7 @@ namespace JE::Assets::RenderBuilders
             AZStd::string availableShaderTemplateListString;
             AzFramework::StringFunc::Join(availableShaderTemplateListString, availableShaderTemplateList.begin(), availableShaderTemplateList.end(), ",");
 
-            AZ::RPI::LuaScriptUtilities::Error(AZStd::string::format("Shader template named '%s' does not exist. The available shader templates are [%s]",
+            JE::Render::RPI::LuaScriptUtilities::Error(AZStd::string::format("Shader template named '%s' does not exist. The available shader templates are [%s]",
                 shaderTemplateName.c_str(), availableShaderTemplateListString.c_str()));
         }
 
@@ -143,8 +143,8 @@ namespace JE::Assets::RenderBuilders
 
     bool MaterialPipelineScriptRunner::RunScript(
         const AZ::IO::Path& materialPipelineFile,
-        const AZ::RPI::MaterialPipelineSourceData& materialPipeline,
-        const AZ::RPI::MaterialTypeSourceData& materialType)
+        const JE::Render::RPI::MaterialPipelineSourceData& materialPipeline,
+        const JE::Render::RPI::MaterialTypeSourceData& materialType)
     {
         Reset();
 
@@ -154,7 +154,7 @@ namespace JE::Assets::RenderBuilders
             return true;
         }
 
-        const AZStd::string scriptPath = AZ::RPI::AssetUtils::ResolvePathReference(materialPipelineFile.c_str(), materialPipeline.m_pipelineScript);
+        const AZStd::string scriptPath = JE::Render::RPI::AssetUtils::ResolvePathReference(materialPipelineFile.c_str(), materialPipeline.m_pipelineScript);
 
         auto reportError = [&]([[maybe_unused]] const AZStd::string& message)
         {

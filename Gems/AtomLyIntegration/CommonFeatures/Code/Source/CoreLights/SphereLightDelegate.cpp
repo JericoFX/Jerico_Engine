@@ -7,7 +7,7 @@
  */
 
 #include <CoreLights/SphereLightDelegate.h>
-#include <Atom/RPI.Public/Scene.h>
+#include <JE/Render/RPI/Public/Scene.h>
 #include <Atom/Feature/CoreLights/PointLightFeatureProcessorInterface.h>
 #include <AtomLyIntegration/CommonFeatures/CoreLights/AreaLightComponentConfig.h>
 

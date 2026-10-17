@@ -6,13 +6,13 @@
  *
  */
 
-#include <Atom/RPI.Public/Pass/Pass.h>
-#include <Atom/RPI.Public/Pass/PassFilter.h>
-#include <Atom/RPI.Public/Pass/RasterPass.h>
-#include <Atom/RPI.Public/View.h>
-#include <Atom/RPI.Public/Scene.h>
-#include <Atom/RPI.Public/RenderPipeline.h>
-#include <Atom/RPI.Public/DynamicDraw/DynamicDrawInterface.h>
+#include <JE/Render/RPI/Public/Pass/Pass.h>
+#include <JE/Render/RPI/Public/Pass/PassFilter.h>
+#include <JE/Render/RPI/Public/Pass/RasterPass.h>
+#include <JE/Render/RPI/Public/View.h>
+#include <JE/Render/RPI/Public/Scene.h>
+#include <JE/Render/RPI/Public/RenderPipeline.h>
+#include <JE/Render/RPI/Public/DynamicDraw/DynamicDrawInterface.h>
 #include <AzCore/Console/IConsole.h>
 #include <AzFramework/Entity/GameEntityContextBus.h>
 #include <AzFramework/Scene/Scene.h>
@@ -67,10 +67,10 @@ namespace AZ::Render
         SetPassesEnabled(r_silhouette);
     }
 
-    void SilhouetteFeatureProcessor::AddRenderPasses(RPI::RenderPipeline* renderPipeline)
+    void SilhouetteFeatureProcessor::AddRenderPasses(JE::Render::RPI::RenderPipeline* renderPipeline)
     {
         // Early return if pass is already found in render pipeline or if the pipeline is not the default one.
-        if (renderPipeline->GetViewType() != RPI::ViewType::Default)
+        if (renderPipeline->GetViewType() != JE::Render::RPI::ViewType::Default)
         {
             return;
         }
@@ -112,29 +112,29 @@ namespace AZ::Render
 
         // Add the gather pass which draws all the silhouette objects into a render target
         // using depth and stencil to determine where to draw
-        RPI::PassRequest gatherPassRequest;
+        JE::Render::RPI::PassRequest gatherPassRequest;
         gatherPassRequest.m_passName = Name("SilhouetteGatherPass");
         gatherPassRequest.m_templateName = gatherTemplateName;
         gatherPassRequest.m_passEnabled = r_silhouette;
-        gatherPassRequest.AddInputConnection(RPI::PassConnection{
-            Name("DepthStencilInputOutput"), RPI::PassAttachmentRef{ forwardProcessPassName, Name("DepthStencilInputOutput") } });
+        gatherPassRequest.AddInputConnection(JE::Render::RPI::PassConnection{
+            Name("DepthStencilInputOutput"), JE::Render::RPI::PassAttachmentRef{ forwardProcessPassName, Name("DepthStencilInputOutput") } });
 
-        if (auto pass = RPI::PassSystemInterface::Get()->CreatePassFromRequest(&gatherPassRequest); pass != nullptr)
+        if (auto pass = JE::Render::RPI::PassSystemInterface::Get()->CreatePassFromRequest(&gatherPassRequest); pass != nullptr)
         {
-            m_rasterPass = static_cast<AZ::RPI::RasterPass*>(pass.get());
+            m_rasterPass = static_cast<JE::Render::RPI::RasterPass*>(pass.get());
             renderPipeline->AddPassAfter(pass, forwardProcessPassName);
         }
 
         // Add the full screen silhouette pass which merges the silhouettes render target with
         // the framebuffer diffuse, and adds outlines to the silhouette shapes
-        RPI::PassRequest compositePassRequest;
+        JE::Render::RPI::PassRequest compositePassRequest;
         compositePassRequest.m_passName = Name("SilhouettePass");
         compositePassRequest.m_templateName = mergeTemplateName;
         compositePassRequest.m_passEnabled = r_silhouette;
         compositePassRequest.AddInputConnection(
-            RPI::PassConnection{ Name("InputOutput"), RPI::PassAttachmentRef{ postProcessPassName, Name("Output") } });
+            JE::Render::RPI::PassConnection{ Name("InputOutput"), JE::Render::RPI::PassAttachmentRef{ postProcessPassName, Name("Output") } });
 
-        if (auto pass = RPI::PassSystemInterface::Get()->CreatePassFromRequest(&compositePassRequest); pass != nullptr)
+        if (auto pass = JE::Render::RPI::PassSystemInterface::Get()->CreatePassFromRequest(&compositePassRequest); pass != nullptr)
         {
             m_compositePass = pass.get();
             renderPipeline->AddPassAfter(pass, postProcessPassName);
@@ -144,12 +144,12 @@ namespace AZ::Render
         m_renderPipeline = renderPipeline;
     }
 
-    void SilhouetteFeatureProcessor::OnRenderPipelineChanged(AZ::RPI::RenderPipeline* pipeline, AZ::RPI::SceneNotification::RenderPipelineChangeType changeType)
+    void SilhouetteFeatureProcessor::OnRenderPipelineChanged(JE::Render::RPI::RenderPipeline* pipeline, JE::Render::RPI::SceneNotification::RenderPipelineChangeType changeType)
     {
         // Only need to recache silhouette passes if the pipeline had them
         if (pipeline == m_renderPipeline)
         {
-            if (changeType == AZ::RPI::SceneNotification::RenderPipelineChangeType::Removed)
+            if (changeType == JE::Render::RPI::SceneNotification::RenderPipelineChangeType::Removed)
             {
                 UpdatePasses(nullptr);
             }
@@ -167,13 +167,13 @@ namespace AZ::Render
             if (m_rasterPass && m_rasterPass->GetRenderPipeline())
             {
                 // Get DrawList from the dynamic draw interface and view
-                AZStd::vector<RHI::DrawListView> drawLists = AZ::RPI::DynamicDrawInterface::Get()->GetDrawListsForPass(m_rasterPass);
-                const AZStd::vector<AZ::RPI::ViewPtr>& views =
+                AZStd::vector<RHI::DrawListView> drawLists = JE::Render::RPI::DynamicDrawInterface::Get()->GetDrawListsForPass(m_rasterPass);
+                const AZStd::vector<JE::Render::RPI::ViewPtr>& views =
                     m_rasterPass->GetRenderPipeline()->GetViews(m_rasterPass->GetPipelineViewTag());
                 RHI::DrawListView viewDrawList;
                 if (!views.empty())
                 {
-                    const AZ::RPI::ViewPtr& view = views.front();
+                    const JE::Render::RPI::ViewPtr& view = views.front();
                     viewDrawList = view->GetDrawList(m_rasterPass->GetDrawListTag());
                 }
 
@@ -183,7 +183,7 @@ namespace AZ::Render
         return false;
     }
 
-    void SilhouetteFeatureProcessor::UpdatePasses(AZ::RPI::RenderPipeline* renderPipeline)
+    void SilhouetteFeatureProcessor::UpdatePasses(JE::Render::RPI::RenderPipeline* renderPipeline)
     {
         m_compositePass = nullptr;
         m_rasterPass = nullptr;
@@ -195,17 +195,17 @@ namespace AZ::Render
         }
 
         const auto mergeTemplateName = Name("SilhouettePassTemplate");
-        auto compositePassFilter = AZ::RPI::PassFilter::CreateWithTemplateName(mergeTemplateName, renderPipeline);
-        if (auto foundPass = AZ::RPI::PassSystemInterface::Get()->FindFirstPass(compositePassFilter); foundPass)
+        auto compositePassFilter = JE::Render::RPI::PassFilter::CreateWithTemplateName(mergeTemplateName, renderPipeline);
+        if (auto foundPass = JE::Render::RPI::PassSystemInterface::Get()->FindFirstPass(compositePassFilter); foundPass)
         {
             m_compositePass = foundPass;
         }
 
         const auto gatherTemplateName = Name("SilhouetteGatherPassTemplate");
-        auto gatherPassFilter = AZ::RPI::PassFilter::CreateWithTemplateName(gatherTemplateName, renderPipeline);
-        if (auto foundPass = AZ::RPI::PassSystemInterface::Get()->FindFirstPass(gatherPassFilter); foundPass)
+        auto gatherPassFilter = JE::Render::RPI::PassFilter::CreateWithTemplateName(gatherTemplateName, renderPipeline);
+        if (auto foundPass = JE::Render::RPI::PassSystemInterface::Get()->FindFirstPass(gatherPassFilter); foundPass)
         {
-            m_rasterPass = static_cast<AZ::RPI::RasterPass*>(foundPass);
+            m_rasterPass = static_cast<JE::Render::RPI::RasterPass*>(foundPass);
         }
 
         // remember which render pipeline we found our passes on

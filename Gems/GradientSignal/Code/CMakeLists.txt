@@ -20,7 +20,7 @@ ly_add_target(
         PUBLIC
             AZ::AzCore
             AZ::AzFramework
-            Gem::Atom_RPI.Public
+            JE::RenderIntegration
             Gem::SurfaceData
             Gem::ImageProcessingAtom.Headers
             Gem::LmbrCentral
@@ -83,7 +83,7 @@ if(PAL_TRAIT_BUILD_HOST_TOOLS)
             PRIVATE
                 3rdParty::OpenImageIO
                 Gem::LmbrCentral.Editor
-                Gem::Atom_RPI.Edit
+                JE::EditorRenderIntegration
             PUBLIC
                 3rdParty::Qt::Widgets
                 AZ::AzCore
@@ -159,7 +159,7 @@ if(PAL_TRAIT_BUILD_TESTS_SUPPORTED)
             PRIVATE
                 AZ::AzTest
                 AZ::AzTestShared
-                Gem::Atom_RPI.TestUtils
+                JE::RenderRpi.TestUtils
                 Gem::${gem_name}.Static
                 Gem::LmbrCentral
                 Gem::LmbrCentral.Mocks

@@ -8,8 +8,8 @@
  
 #pragma once
 
-#include <Atom/RPI.Public/FeatureProcessor.h>
-#include <Atom/RPI.Reflect/Image/Image.h>
+#include <JE/Render/RPI/Public/FeatureProcessor.h>
+#include <JE/Render/RPI/Reflect/Image/Image.h>
 #include <Atom/Utils/StableDynamicArray.h>
 #include <AzCore/Math/Transform.h>
 #include <AzCore/Math/Vector4.h>
@@ -22,11 +22,11 @@ namespace OpenParticle
     class ParticleComponentConfig;
 
     class ParticleFeatureProcessorInterface
-        : public AZ::RPI::FeatureProcessor
+        : public JE::Render::RPI::FeatureProcessor
     {
     public:
         AZ_RTTI(OpenParticle::ParticleFeatureProcessorInterface, "{4ec72e75-10be-469e-8210-3a949c7a183a}",
-            AZ::RPI::FeatureProcessor);
+            JE::Render::RPI::FeatureProcessor);
 
         using ParticleHandle = AZ::StableDynamicArrayHandle<ParticleDataInstance>;
 

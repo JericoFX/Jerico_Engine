@@ -8,7 +8,7 @@
 
 #include <TerrainRenderer/TerrainMacroMaterialManager.h>
 #include <Atom/RHI/RHISystemInterface.h>
-#include <Atom/RPI.Public/View.h>
+#include <JE/Render/RPI/Public/View.h>
 
 namespace Terrain
 {
@@ -29,7 +29,7 @@ namespace Terrain
             AZ::Vector2::CreateFromFloat2(m_boundsMax.data()).IsGreaterThan(min);
     }
 
-    void TerrainMacroMaterialManager::Initialize(AZ::Data::Instance<AZ::RPI::ShaderResourceGroup>& terrainSrg)
+    void TerrainMacroMaterialManager::Initialize(AZ::Data::Instance<JE::Render::RPI::ShaderResourceGroup>& terrainSrg)
     {
         AZ_Error(TerrainMacroMaterialManagerName, terrainSrg, "terrainSrg must not be null.");
         AZ_Error(TerrainMacroMaterialManagerName, !m_isInitialized, "Already initialized.");
@@ -84,7 +84,7 @@ namespace Terrain
         return m_isInitialized;
     }
     
-    bool TerrainMacroMaterialManager::UpdateSrgIndices(AZ::Data::Instance<AZ::RPI::ShaderResourceGroup>& terrainSrg)
+    bool TerrainMacroMaterialManager::UpdateSrgIndices(AZ::Data::Instance<JE::Render::RPI::ShaderResourceGroup>& terrainSrg)
     {
         const AZ::RHI::ShaderResourceGroupLayout* terrainSrgLayout = terrainSrg->GetLayout();
         
@@ -238,7 +238,7 @@ namespace Terrain
     
     void TerrainMacroMaterialManager::UpdateMacroMaterialShaderEntry(MaterialHandle materialHandle, const MacroMaterialData& macroMaterialData)
     {
-        auto UpdateImageIndex = [&](uint32_t& indexRef, const AZ::Data::Instance<AZ::RPI::Image>& imageView, int deviceIndex)
+        auto UpdateImageIndex = [&](uint32_t& indexRef, const AZ::Data::Instance<JE::Render::RPI::Image>& imageView, int deviceIndex)
         {
             indexRef = imageView ? imageView->GetImageView()->GetDeviceImageView(deviceIndex)->GetBindlessReadIndex() : InvalidImageIndex;
         };
@@ -409,7 +409,7 @@ namespace Terrain
         }
     }
 
-    void TerrainMacroMaterialManager::Update(const AZ::RPI::ViewPtr mainView, AZ::Data::Instance<AZ::RPI::ShaderResourceGroup>& terrainSrg)
+    void TerrainMacroMaterialManager::Update(const JE::Render::RPI::ViewPtr mainView, AZ::Data::Instance<JE::Render::RPI::ShaderResourceGroup>& terrainSrg)
     {
         AZ::Vector3 mainCameraPosition = mainView->GetCameraTransform().GetTranslation();
 

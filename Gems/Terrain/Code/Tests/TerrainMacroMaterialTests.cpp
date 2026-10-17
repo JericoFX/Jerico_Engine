@@ -10,8 +10,8 @@
 #include <AzCore/Component/TransformBus.h>
 #include <AzFramework/PaintBrush/PaintBrush.h>
 
-#include <Atom/RPI.Reflect/Image/ImageMipChainAssetCreator.h>
-#include <Atom/RPI.Reflect/Image/StreamingImageAssetCreator.h>
+#include <JE/Render/RPI/Reflect/Image/ImageMipChainAssetCreator.h>
+#include <JE/Render/RPI/Reflect/Image/StreamingImageAssetCreator.h>
 
 #include <AzFramework/Terrain/TerrainDataRequestBus.h>
 
@@ -34,7 +34,7 @@ namespace UnitTest
     class TerrainMacroMaterialComponentTest : public UnitTest::TerrainSystemTestFixture
     {
     public:
-        AZ::Data::Asset<AZ::RPI::StreamingImageAsset> CreateMacroColorAsset(
+        AZ::Data::Asset<JE::Render::RPI::StreamingImageAsset> CreateMacroColorAsset(
             AZ::u32 width, AZ::u32 height, AZStd::span<const uint32_t> data)
         {
             AZStd::span<const uint8_t> rawPixels(reinterpret_cast<const uint8_t*>(data.data()), data.size() * sizeof(uint32_t));
@@ -42,7 +42,7 @@ namespace UnitTest
         }
 
         AZStd::unique_ptr<AZ::Entity> CreateTestMacroMaterialEntity(
-            float bounds, AZ::Data::Asset<AZ::RPI::StreamingImageAsset> macroColorAsset)
+            float bounds, AZ::Data::Asset<JE::Render::RPI::StreamingImageAsset> macroColorAsset)
         {
             auto entity = CreateTestBoxEntity(bounds / 2.0f);
 

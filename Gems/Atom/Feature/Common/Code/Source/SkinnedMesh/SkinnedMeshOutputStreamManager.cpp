@@ -14,7 +14,7 @@
 #include <Atom/Feature/SkinnedMesh/SkinnedMeshFeatureProcessorBus.h>
 
 #include <Atom/RHI/RHISystemInterface.h>
-#include <Atom/RPI.Reflect/Buffer/BufferAssetCreator.h>
+#include <JE/Render/RPI/Reflect/Buffer/BufferAssetCreator.h>
 #include <Atom_Feature_Traits_Platform.h>
 #include <numeric>
 
@@ -53,7 +53,7 @@ namespace AZ
             m_freeListAllocator.Init(allocatorDescriptor);
 
             // Create the actual buffer
-            RPI::BufferAssetCreator creator;
+            JE::Render::RPI::BufferAssetCreator creator;
             Uuid uuid = Uuid::CreateRandom();
             creator.Begin(uuid);
             creator.SetBufferName("SkinnedMeshOutputStream");
@@ -168,18 +168,18 @@ namespace AZ
             }
         }
 
-        Data::Asset<RPI::BufferAsset> SkinnedMeshOutputStreamManager::GetBufferAsset()
+        Data::Asset<JE::Render::RPI::BufferAsset> SkinnedMeshOutputStreamManager::GetBufferAsset()
         {
             EnsureInit();
             return m_bufferAsset;
         }
 
-        Data::Instance<RPI::Buffer> SkinnedMeshOutputStreamManager::GetBuffer()
+        Data::Instance<JE::Render::RPI::Buffer> SkinnedMeshOutputStreamManager::GetBuffer()
         {
             EnsureInit();
             if (!m_buffer)
             {
-                m_buffer = RPI::Buffer::FindOrCreate(m_bufferAsset);
+                m_buffer = JE::Render::RPI::Buffer::FindOrCreate(m_bufferAsset);
             }
             return m_buffer;
         }

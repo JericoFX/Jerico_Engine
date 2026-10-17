@@ -11,8 +11,8 @@
 #include <Atom/RHI/CommandList.h>
 #include <Atom/RHI/DispatchItem.h>
 #include <Atom/RHI/ScopeProducer.h>
-#include <Atom/RPI.Public/Pass/RenderPass.h>
-#include <Atom/RPI.Public/Shader/Shader.h>
+#include <JE/Render/RPI/Public/Pass/RenderPass.h>
+#include <JE/Render/RPI/Public/Shader/Shader.h>
 
 namespace AZ
 {
@@ -20,22 +20,22 @@ namespace AZ
     {
         //! Compute shader that updates probe distance and irradiance borders.
         class DiffuseProbeGridBorderUpdatePass final
-            : public RPI::RenderPass
+            : public JE::Render::RPI::RenderPass
         {
         public:
             AZ_RPI_PASS(DiffuseProbeGridBorderUpdatePass);
 
-            AZ_RTTI(AZ::Render::DiffuseProbeGridBorderUpdatePass, "{31A5CCD0-CE97-4138-88DA-7BDBD38C9DC8}", RPI::RenderPass);
+            AZ_RTTI(AZ::Render::DiffuseProbeGridBorderUpdatePass, "{31A5CCD0-CE97-4138-88DA-7BDBD38C9DC8}", JE::Render::RPI::RenderPass);
             AZ_CLASS_ALLOCATOR(DiffuseProbeGridBorderUpdatePass, SystemAllocator);
             virtual ~DiffuseProbeGridBorderUpdatePass() = default;
 
-            static RPI::Ptr<DiffuseProbeGridBorderUpdatePass> Create(const RPI::PassDescriptor& descriptor);
+            static JE::Render::RPI::Ptr<DiffuseProbeGridBorderUpdatePass> Create(const JE::Render::RPI::PassDescriptor& descriptor);
 
         private:
-            DiffuseProbeGridBorderUpdatePass(const RPI::PassDescriptor& descriptor);
+            DiffuseProbeGridBorderUpdatePass(const JE::Render::RPI::PassDescriptor& descriptor);
 
             void LoadShader(AZStd::string shaderFilePath,
-                            Data::Instance<RPI::Shader>& shader,
+                            Data::Instance<JE::Render::RPI::Shader>& shader,
                             const RHI::PipelineState*& pipelineState,
                             RHI::Ptr<RHI::ShaderResourceGroupLayout>& srgLayout,
                             RHI::DispatchDirect& dispatchArgs);
@@ -57,8 +57,8 @@ namespace AZ
             AZStd::vector<SubmitItem> m_submitItems;
 
             // shader
-            Data::Instance<RPI::Shader> m_rowShader;
-            Data::Instance<RPI::Shader> m_columnShader;
+            Data::Instance<JE::Render::RPI::Shader> m_rowShader;
+            Data::Instance<JE::Render::RPI::Shader> m_columnShader;
             const RHI::PipelineState* m_rowPipelineState = nullptr;
             const RHI::PipelineState* m_columnPipelineState = nullptr;
             RHI::Ptr<RHI::ShaderResourceGroupLayout> m_rowSrgLayout;

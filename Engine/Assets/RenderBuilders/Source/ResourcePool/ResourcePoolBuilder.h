@@ -11,7 +11,7 @@
 #include <AssetBuilderSDK/AssetBuilderBusses.h>
 #include <AssetBuilderSDK/AssetBuilderSDK.h>
 
-#include <Atom/RPI.Edit/ResourcePool/ResourcePoolSourceData.h>
+#include <JE/Editor/Render/RPI/Edit/ResourcePool/ResourcePoolSourceData.h>
 
 namespace JE::Assets::RenderBuilders
 {
@@ -35,10 +35,10 @@ namespace JE::Assets::RenderBuilders
         void RegisterBuilder();
 
         /// Convert pool source data to runtime image pool asset or buffer pool asset
-        static AZ::Data::Asset<AZ::Data::AssetData> CreatePoolAssetFromSource(const AZ::RPI::ResourcePoolSourceData& sourceData);
+        static AZ::Data::Asset<AZ::Data::AssetData> CreatePoolAssetFromSource(const JE::Render::RPI::ResourcePoolSourceData& sourceData);
 
         /// Convert resource pool source data to runtime streaming image pool asset
-        static AZ::Data::Asset<AZ::Data::AssetData> CreateStreamingPoolAssetFromSource(const AZ::RPI::ResourcePoolSourceData& sourceData);
+        static AZ::Data::Asset<AZ::Data::AssetData> CreateStreamingPoolAssetFromSource(const JE::Render::RPI::ResourcePoolSourceData& sourceData);
 
         bool m_isShuttingDown = false;
     };

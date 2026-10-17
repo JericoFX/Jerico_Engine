@@ -30,8 +30,8 @@
 #include <LyShine/Bus/World/UiCanvasOnMeshBus.h>
 #include <LyShine/Bus/World/UiCanvasRefBus.h>
 
-#include <Atom/RPI.Public/Image/ImageSystemInterface.h>
-#include <Atom/RPI.Public/View.h>
+#include <JE/Render/RPI/Public/Image/ImageSystemInterface.h>
+#include <JE/Render/RPI/Public/View.h>
 
 #ifndef _RELEASE
 #include <AzFramework/IO/LocalFileIO.h>
@@ -1015,7 +1015,7 @@ void UiCanvasManager::DebugDisplayCanvasData(int setting) const
 
     const int elementNameFieldLength = 20;
 
-    auto blackTexture = AZ::RPI::ImageSystemInterface::Get()->GetSystemImage(AZ::RPI::SystemImage::Black);
+    auto blackTexture = JE::Render::RPI::ImageSystemInterface::Get()->GetSystemImage(JE::Render::RPI::SystemImage::Black);
     float textOpacity = 1.0f;
     float backgroundRectOpacity = 0.0f; // 0.75f; // [GHI #6515] Reenable background rect
 
@@ -1168,7 +1168,7 @@ void UiCanvasManager::DebugDisplayDrawCallData() const
     float xOffset = 20.0f * dpiScale;
     float yOffset = 20.0f * dpiScale;
 
-    auto blackTexture = AZ::RPI::ImageSystemInterface::Get()->GetSystemImage(AZ::RPI::SystemImage::Black);
+    auto blackTexture = JE::Render::RPI::ImageSystemInterface::Get()->GetSystemImage(JE::Render::RPI::SystemImage::Black);
     float textOpacity = 1.0f;
     float backgroundRectOpacity = 0.0f; // 0.75f; // [GHI #6515] Reenable background rect
 

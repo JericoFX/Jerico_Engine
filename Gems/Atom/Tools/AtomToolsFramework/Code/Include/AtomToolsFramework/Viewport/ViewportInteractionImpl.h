@@ -8,9 +8,9 @@
 
 #pragma once
 
-#include <Atom/RPI.Public/Base.h>
-#include <Atom/RPI.Public/View.h>
-#include <Atom/RPI.Public/ViewportContextBus.h>
+#include <JE/Render/RPI/Public/Base.h>
+#include <JE/Render/RPI/Public/View.h>
+#include <JE/Render/RPI/Public/ViewportContextBus.h>
 #include <AzFramework/Viewport/CameraState.h>
 #include <AzToolsFramework/Viewport/ViewportMessages.h>
 
@@ -20,10 +20,10 @@ namespace AtomToolsFramework
     //! Primarily concerned with picking (screen to world and world to screen transformations).
     class ViewportInteractionImpl
         : public AzToolsFramework::ViewportInteraction::ViewportInteractionRequestBus::Handler
-        , private AZ::RPI::ViewportContextIdNotificationBus::Handler
+        , private JE::Render::RPI::ViewportContextIdNotificationBus::Handler
     {
     public:
-        explicit ViewportInteractionImpl(AZ::RPI::ViewPtr viewPtr);
+        explicit ViewportInteractionImpl(JE::Render::RPI::ViewPtr viewPtr);
 
         void Connect(AzFramework::ViewportId viewportId);
         void Disconnect();
@@ -41,8 +41,8 @@ namespace AtomToolsFramework
 
     private:
         // ViewportContextIdNotificationBus overrides ...
-        void OnViewportDefaultViewChanged(AZ::RPI::ViewPtr view) override;
+        void OnViewportDefaultViewChanged(JE::Render::RPI::ViewPtr view) override;
 
-        AZ::RPI::ViewPtr m_viewPtr;
+        JE::Render::RPI::ViewPtr m_viewPtr;
     };
 } // namespace AtomToolsFramework

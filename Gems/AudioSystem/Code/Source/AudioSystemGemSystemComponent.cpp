@@ -26,8 +26,8 @@
     #include <AudioControlsEditorPlugin.h>
     struct IEditor;
 
-    #include <Atom/RPI.Public/View.h>
-    #include <Atom/RPI.Public/ViewportContext.h>
+    #include <JE/Render/RPI/Public/View.h>
+    #include <JE/Render/RPI/Public/ViewportContext.h>
 #endif // AUDIO_SYSTEM_EDITOR
 
 
@@ -103,10 +103,10 @@ namespace AudioSystemGem
     void AudioSystemGemSystemComponent::Init()
     {
     #if defined(AUDIO_SYSTEM_EDITOR)
-        m_cameraTransformHandler = AZ::RPI::MatrixChangedEvent::Handler(
+        m_cameraTransformHandler = JE::Render::RPI::MatrixChangedEvent::Handler(
             []([[maybe_unused]] const AZ::Matrix4x4& matrix)
             {
-                auto atomViewportRequests = AZ::Interface<AZ::RPI::ViewportContextRequestsInterface>::Get();
+                auto atomViewportRequests = AZ::Interface<JE::Render::RPI::ViewportContextRequestsInterface>::Get();
                 auto viewportContext = atomViewportRequests->GetDefaultViewportContext();
 
                 if (auto audioSystem = AZ::Interface<Audio::IAudioSystem>::Get();
@@ -129,9 +129,9 @@ namespace AudioSystemGem
     #if defined(AUDIO_SYSTEM_EDITOR)
         AzToolsFramework::EditorEvents::Bus::Handler::BusConnect();
 
-        auto atomViewportRequests = AZ::Interface<AZ::RPI::ViewportContextRequestsInterface>::Get();
+        auto atomViewportRequests = AZ::Interface<JE::Render::RPI::ViewportContextRequestsInterface>::Get();
         auto defaultContextName = atomViewportRequests->GetDefaultViewportContextName();
-        AZ::RPI::ViewportContextNotificationBus::Handler::BusConnect(defaultContextName);
+        JE::Render::RPI::ViewportContextNotificationBus::Handler::BusConnect(defaultContextName);
     #endif // AUDIO_SYSTEM_EDITOR
     }
 
@@ -144,7 +144,7 @@ namespace AudioSystemGem
     #if defined(AUDIO_SYSTEM_EDITOR)
         AzToolsFramework::EditorEvents::Bus::Handler::BusDisconnect();
 
-        AZ::RPI::ViewportContextNotificationBus::Handler::BusDisconnect();
+        JE::Render::RPI::ViewportContextNotificationBus::Handler::BusDisconnect();
         m_cameraTransformHandler.Disconnect();
     #endif // AUDIO_SYSTEM_EDITOR
     }
@@ -234,9 +234,9 @@ namespace AudioSystemGem
         }
     }
 
-    void AudioSystemGemSystemComponent::OnViewportDefaultViewChanged([[maybe_unused]] AZ::RPI::ViewPtr view)
+    void AudioSystemGemSystemComponent::OnViewportDefaultViewChanged([[maybe_unused]] JE::Render::RPI::ViewPtr view)
     {
-        auto atomViewportRequests = AZ::Interface<AZ::RPI::ViewportContextRequestsInterface>::Get();
+        auto atomViewportRequests = AZ::Interface<JE::Render::RPI::ViewportContextRequestsInterface>::Get();
         auto viewportContext = atomViewportRequests->GetDefaultViewportContext();
 
         if (viewportContext != nullptr)

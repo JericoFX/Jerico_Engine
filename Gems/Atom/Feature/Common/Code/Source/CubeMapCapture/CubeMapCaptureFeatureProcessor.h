@@ -46,7 +46,7 @@ namespace AZ
             AZ_DISABLE_COPY_MOVE(CubeMapCaptureFeatureProcessor);
 
             // RPI::SceneNotificationBus::Handler overrides
-            void OnRenderPipelineChanged(RPI::RenderPipeline* renderPipeline, RPI::SceneNotification::RenderPipelineChangeType changeType) override;
+            void OnRenderPipelineChanged(JE::Render::RPI::RenderPipeline* renderPipeline, JE::Render::RPI::SceneNotification::RenderPipelineChangeType changeType) override;
 
             // list of CubeMapCaptures
             using CubeMapCaptureVector = AZStd::vector<AZStd::shared_ptr<CubeMapCapture>>;

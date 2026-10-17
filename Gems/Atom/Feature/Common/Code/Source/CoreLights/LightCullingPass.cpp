@@ -17,16 +17,16 @@
 #include <Atom/Feature/Decals/DecalFeatureProcessorInterface.h>
 #include <Atom/RHI/ImagePool.h>
 #include <Atom/RHI/RHISystemInterface.h>
-#include <Atom/RPI.Public/Image/AttachmentImage.h>
-#include <Atom/RPI.Public/Image/AttachmentImagePool.h>
-#include <Atom/RPI.Public/Image/ImageSystemInterface.h>
-#include <Atom/RPI.Public/Pass/PassUtils.h>
-#include <Atom/RPI.Public/RPIUtils.h>
-#include <Atom/RPI.Public/RenderPipeline.h>
-#include <Atom/RPI.Public/Scene.h>
-#include <Atom/RPI.Public/View.h>
-#include <Atom/RPI.Reflect/Pass/PassTemplate.h>
-#include <Atom/RPI.Reflect/Shader/ShaderAsset.h>
+#include <JE/Render/RPI/Public/Image/AttachmentImage.h>
+#include <JE/Render/RPI/Public/Image/AttachmentImagePool.h>
+#include <JE/Render/RPI/Public/Image/ImageSystemInterface.h>
+#include <JE/Render/RPI/Public/Pass/PassUtils.h>
+#include <JE/Render/RPI/Public/RPIUtils.h>
+#include <JE/Render/RPI/Public/RenderPipeline.h>
+#include <JE/Render/RPI/Public/Scene.h>
+#include <JE/Render/RPI/Public/View.h>
+#include <JE/Render/RPI/Reflect/Pass/PassTemplate.h>
+#include <JE/Render/RPI/Reflect/Shader/ShaderAsset.h>
 #include <AzCore/Math/MatrixUtils.h>
 #include <AzCore/Math/Plane.h>
 #include <AzCore/std/algorithm.h>
@@ -43,14 +43,14 @@ namespace AZ
 {
     namespace Render
     {
-        RPI::Ptr<LightCullingPass> LightCullingPass::Create(const RPI::PassDescriptor& descriptor)
+        JE::Render::RPI::Ptr<LightCullingPass> LightCullingPass::Create(const JE::Render::RPI::PassDescriptor& descriptor)
         {
-            RPI::Ptr<LightCullingPass> pass = aznew LightCullingPass(descriptor);
+            JE::Render::RPI::Ptr<LightCullingPass> pass = aznew LightCullingPass(descriptor);
             return pass;
         }
 
-        LightCullingPass::LightCullingPass(const RPI::PassDescriptor& descriptor)
-            : RPI::ComputePass(descriptor)
+        LightCullingPass::LightCullingPass(const JE::Render::RPI::PassDescriptor& descriptor)
+            : JE::Render::RPI::ComputePass(descriptor)
         {
             m_lightdata[eLightTypes_SimplePoint].m_lightCountIndex  = Name("m_simplePointLightCount");
             m_lightdata[eLightTypes_SimplePoint].m_lightBufferIndex = Name("m_simplePointLights");
@@ -78,7 +78,7 @@ namespace AZ
             SetConstantdataToSRG();
 
             BindPassSrg(context, m_shaderResourceGroup);
-            if (RPI::ViewPtr view = GetView())
+            if (JE::Render::RPI::ViewPtr view = GetView())
             {
                 BindSrg(view->GetRHIShaderResourceGroup());
             }
@@ -138,11 +138,11 @@ namespace AZ
 
         AZ::RHI::Size LightCullingPass::GetDepthBufferResolution()
         {
-            const RPI::PassAttachment* tileBuffer = GetInputBinding(m_tileDataIndex).GetAttachment().get();
+            const JE::Render::RPI::PassAttachment* tileBuffer = GetInputBinding(m_tileDataIndex).GetAttachment().get();
             // TileData is a texture that is built from taking the depth buffer and dividing it into tiles
             // We will use this attachment to work our way backwards and grab the original depth buffer so we can read the resolution off of it
             // The sizeSource contains the original depth buffer
-            const RPI::PassAttachmentBinding* sizeSource = tileBuffer->m_sizeSource;
+            const JE::Render::RPI::PassAttachmentBinding* sizeSource = tileBuffer->m_sizeSource;
             const RHI::UnifiedAttachmentDescriptor& depthBufferDescriptor = sizeSource->GetAttachment()->m_descriptor;
             return depthBufferDescriptor.m_image.m_size;
         }
@@ -247,12 +247,12 @@ namespace AZ
         {
             auto tileBufferResolution = GetTileDataBufferResolution();
 
-            RPI::CommonBufferDescriptor desc;
-            desc.m_poolType = RPI::CommonBufferPoolType::ReadWrite;
+            JE::Render::RPI::CommonBufferDescriptor desc;
+            desc.m_poolType = JE::Render::RPI::CommonBufferPoolType::ReadWrite;
             desc.m_bufferName = "LightList";
             desc.m_elementSize = sizeof(uint32_t);
             desc.m_byteCount = tileBufferResolution.m_width * tileBufferResolution.m_height * 256 * sizeof(uint32_t);
-            m_lightList = RPI::BufferSystemInterface::Get()->CreateBufferFromCommonPool(desc);
+            m_lightList = JE::Render::RPI::BufferSystemInterface::Get()->CreateBufferFromCommonPool(desc);
             AZ_Assert(m_lightList != nullptr, "Unable to allocate buffer for culling light list");
             if (m_lightList != nullptr)
             {

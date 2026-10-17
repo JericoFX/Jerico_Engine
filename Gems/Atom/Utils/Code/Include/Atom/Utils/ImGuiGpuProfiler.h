@@ -10,8 +10,8 @@
 
 #include <imgui/imgui.h>
 #include <Atom/RHI.Reflect/MemoryStatistics.h>
-#include <Atom/RPI.Public/GpuQuery/GpuQueryTypes.h>
-#include <Atom/RPI.Public/Pass/Pass.h>
+#include <JE/Render/RPI/Public/GpuQuery/GpuQueryTypes.h>
+#include <JE/Render/RPI/Public/Pass/Pass.h>
 
 #include <AzCore/Name/Name.h>
 #include <AzCore/std/containers/array.h>
@@ -35,7 +35,7 @@ namespace AZ
             using PipelineStatisticsArray = AZStd::array<uint64_t, PipelineStatisticsAttributeCount>;
 
             PassEntry() = default;
-            PassEntry(const class AZ::RPI::Pass* pass, PassEntry* parent);
+            PassEntry(const class JE::Render::RPI::Pass* pass, PassEntry* parent);
 
             ~PassEntry() = default;
 
@@ -57,7 +57,7 @@ namespace AZ
             //! Cache the path name of the Pass as a unique identifier.
             Name m_path;
 
-            RPI::TimestampResult m_timestampResult;
+            JE::Render::RPI::TimestampResult m_timestampResult;
             uint64_t m_interpolatedTimestampInNanoseconds = 0u;
 
             //! Convert the PipelineStatistics result to an array for easier access.
@@ -103,7 +103,7 @@ namespace AZ
             //! Draw the PipelineStatistics window.
             void DrawPipelineStatisticsWindow(bool& draw, const PassEntry* rootPassEntry,
                 AZStd::unordered_map<AZ::Name, PassEntry>& m_timestampEntryDatabase,
-                AZ::RHI::Ptr<AZ::RPI::ParentPass> rootPass);
+                AZ::RHI::Ptr<JE::Render::RPI::ParentPass> rootPass);
 
             //! Total number of columns (Attribute columns + PassName column).
             static const uint32_t HeaderAttributeCount = PassEntry::PipelineStatisticsAttributeCount + 1u;
@@ -205,7 +205,7 @@ namespace AZ
             //! Draw the Timestamp window.
             void DrawTimestampWindow(bool& draw, const PassEntry* rootPassEntry,
                 AZStd::unordered_map<Name, PassEntry>& m_timestampEntryDatabase,
-                AZ::RHI::Ptr<AZ::RPI::ParentPass> rootPass);
+                AZ::RHI::Ptr<JE::Render::RPI::ParentPass> rootPass);
 
         private:
             // Draw option for the hierarchical view of the passes.
@@ -355,14 +355,14 @@ namespace AZ
             ImGuiGpuProfiler& operator=(const ImGuiGpuProfiler& other) = delete;
 
             //! Draws the ImGuiProfiler window.
-            void Draw(bool& draw, RHI::Ptr<RPI::ParentPass> rootPass);
+            void Draw(bool& draw, RHI::Ptr<JE::Render::RPI::ParentPass> rootPass);
 
         private:
             // Interpolates the values of the PassEntries from the previous frame.
             void InterpolatePassEntries(AZStd::unordered_map<Name, PassEntry>& passEntryDatabase, float weight) const;
 
             // Create the PassEntries, and returns the root entry.
-            PassEntry* CreatePassEntries(RHI::Ptr<RPI::ParentPass> rootPass);
+            PassEntry* CreatePassEntries(RHI::Ptr<JE::Render::RPI::ParentPass> rootPass);
 
             // Holds a PathName -> PassEntry reference for the PassEntries. 
             AZStd::unordered_map<Name, PassEntry> m_passEntryDatabase;

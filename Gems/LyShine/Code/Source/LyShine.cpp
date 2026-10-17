@@ -161,8 +161,8 @@ CLyShine::CLyShine()
     AzFramework::InputTextEventListener::Connect();
     UiCursorBus::Handler::BusConnect();
     AZ::TickBus::Handler::BusConnect();
-    AZ::RPI::ViewportContextNotificationBus::Handler::BusConnect(
-        AZ::RPI::ViewportContextRequests::Get()->GetDefaultViewportContextName());
+    JE::Render::RPI::ViewportContextNotificationBus::Handler::BusConnect(
+        JE::Render::RPI::ViewportContextRequests::Get()->GetDefaultViewportContextName());
     JE::Render::Bootstrap::NotificationBus::Handler::BusConnect();
 
     // These are internal Amazon components, so register them so that we can send back their names to our metrics collection
@@ -241,7 +241,7 @@ CLyShine::~CLyShine()
 {
     UiCursorBus::Handler::BusDisconnect();
     AZ::TickBus::Handler::BusDisconnect();
-    AZ::RPI::ViewportContextNotificationBus::Handler::BusDisconnect();
+    JE::Render::RPI::ViewportContextNotificationBus::Handler::BusDisconnect();
     AzFramework::InputTextEventListener::Disconnect();
     AzFramework::InputChannelEventListener::Disconnect();
     JE::Render::Bootstrap::NotificationBus::Handler::BusDisconnect();
@@ -344,7 +344,7 @@ ISprite* CLyShine::LoadSprite(const AZStd::string& pathname)
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-ISprite* CLyShine::CreateSprite(const AZ::Data::Asset<AZ::RPI::AttachmentImageAsset>& attachmentImageAsset)
+ISprite* CLyShine::CreateSprite(const AZ::Data::Asset<JE::Render::RPI::AttachmentImageAsset>& attachmentImageAsset)
 {
     return CSprite::CreateSprite(attachmentImageAsset);
 }
@@ -356,7 +356,7 @@ bool CLyShine::DoesSpriteTextureAssetExist(const AZStd::string& pathname)
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-AZ::Data::Instance<AZ::RPI::Image> CLyShine::LoadTexture(const AZStd::string& pathname)
+AZ::Data::Instance<JE::Render::RPI::Image> CLyShine::LoadTexture(const AZStd::string& pathname)
 {
     return CDraw2d::LoadTexture(pathname);
 }
@@ -658,7 +658,7 @@ void CLyShine::OnRenderTick()
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-void CLyShine::OnBootstrapSceneReady(AZ::RPI::Scene* bootstrapScene)
+void CLyShine::OnBootstrapSceneReady(JE::Render::RPI::Scene* bootstrapScene)
 {
     // Load cursor if its path was set before RPI was initialized
     LoadUiCursor();

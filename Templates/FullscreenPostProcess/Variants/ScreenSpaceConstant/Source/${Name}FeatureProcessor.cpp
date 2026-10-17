@@ -8,10 +8,10 @@
 
 #include "${Name}FeatureProcessor.h"
 
-#include <Atom/RPI.Public/Pass/PassFilter.h>
-#include <Atom/RPI.Public/Pass/PassSystemInterface.h>
-#include <Atom/RPI.Public/RenderPipeline.h>
-#include <Atom/RPI.Reflect/Pass/PassRequest.h>
+#include <JE/Render/RPI/Public/Pass/PassFilter.h>
+#include <JE/Render/RPI/Public/Pass/PassSystemInterface.h>
+#include <JE/Render/RPI/Public/RenderPipeline.h>
+#include <JE/Render/RPI/Reflect/Pass/PassRequest.h>
 
 #include <AzCore/Console/IConsole.h>
 #include <AzCore/Serialization/SerializeContext.h>
@@ -46,7 +46,7 @@ namespace ${GemName}
     {
         if (auto* serialize = azrtti_cast<AZ::SerializeContext*>(context))
         {
-            serialize->Class<${SanitizedCppName}FeatureProcessor, AZ::RPI::FeatureProcessor>()
+            serialize->Class<${SanitizedCppName}FeatureProcessor, JE::Render::RPI::FeatureProcessor>()
                 ->Version(0);
         }
     }
@@ -63,11 +63,11 @@ namespace ${GemName}
         m_renderPipeline = nullptr;
     }
 
-    void ${SanitizedCppName}FeatureProcessor::AddRenderPasses(AZ::RPI::RenderPipeline* renderPipeline)
+    void ${SanitizedCppName}FeatureProcessor::AddRenderPasses(JE::Render::RPI::RenderPipeline* renderPipeline)
     {
         // Only inject into the default view pipeline. Skip MRT capture pipelines
         // and other auxiliary pipelines so the effect doesn't poison thumbnails.
-        if (renderPipeline->GetViewType() != AZ::RPI::ViewType::Default)
+        if (renderPipeline->GetViewType() != JE::Render::RPI::ViewType::Default)
         {
             return;
         }
@@ -80,8 +80,8 @@ namespace ${GemName}
 
         // Already present in this pipeline -- recache the handle and exit.
         const AZ::Name templateName(k_passTemplateName);
-        auto filter = AZ::RPI::PassFilter::CreateWithTemplateName(templateName, renderPipeline);
-        if (auto existing = AZ::RPI::PassSystemInterface::Get()->FindFirstPass(filter); existing)
+        auto filter = JE::Render::RPI::PassFilter::CreateWithTemplateName(templateName, renderPipeline);
+        if (auto existing = JE::Render::RPI::PassSystemInterface::Get()->FindFirstPass(filter); existing)
         {
             m_pass = existing;
             m_renderPipeline = renderPipeline;
@@ -100,7 +100,7 @@ namespace ${GemName}
         }
 
         // Build the PassRequest that will splice ${Name} into the graph.
-        AZ::RPI::PassRequest request;
+        JE::Render::RPI::PassRequest request;
         request.m_passName = AZ::Name(k_passInstanceName);
         request.m_templateName = templateName;
         request.m_passEnabled = r_${SanitizedCppName}Enabled;
@@ -108,12 +108,12 @@ namespace ${GemName}
         // Wire the pass's InputColor slot to the anchor's Output. The anchor's
         // attachment name varies by anchor pass; "Output" is correct for
         // PostProcessPass. If you change k_anchorPassName, update this too.
-        request.AddInputConnection(AZ::RPI::PassConnection{
+        request.AddInputConnection(JE::Render::RPI::PassConnection{
             AZ::Name("InputColor"),
-            AZ::RPI::PassAttachmentRef{ anchorName, AZ::Name("Output") }
+            JE::Render::RPI::PassAttachmentRef{ anchorName, AZ::Name("Output") }
         });
 
-        if (auto pass = AZ::RPI::PassSystemInterface::Get()->CreatePassFromRequest(&request); pass != nullptr)
+        if (auto pass = JE::Render::RPI::PassSystemInterface::Get()->CreatePassFromRequest(&request); pass != nullptr)
         {
             renderPipeline->AddPassAfter(pass, anchorName);
             m_pass = pass.get();

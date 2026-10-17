@@ -6,12 +6,12 @@
  *
  */
 
-#include <Atom/RPI.Public/RenderPipeline.h>
-#include <Atom/RPI.Public/View.h>
-#include <Atom/RPI.Public/Scene.h>
-#include <Atom/RPI.Public/Pass/PassFilter.h>
-#include <Atom/RPI.Public/Pass/PassSystem.h>
-#include <Atom/RPI.Public/Shader/ShaderVariant.h>
+#include <JE/Render/RPI/Public/RenderPipeline.h>
+#include <JE/Render/RPI/Public/View.h>
+#include <JE/Render/RPI/Public/Scene.h>
+#include <JE/Render/RPI/Public/Pass/PassFilter.h>
+#include <JE/Render/RPI/Public/Pass/PassSystem.h>
+#include <JE/Render/RPI/Public/Shader/ShaderVariant.h>
 
 #include <Atom/RHI/FrameScheduler.h>
 #include <Atom/RHI/DevicePipelineState.h>
@@ -31,27 +31,27 @@ namespace AZ
             0,
             [](const uint8_t& value)
             {
-                RPI::PassFilter passFilter = RPI::PassFilter::CreateWithPassClass<LookModificationCompositePass>();
-                RPI::PassSystemInterface::Get()->ForEachPass(passFilter, [value](RPI::Pass* pass) -> RPI::PassFilterExecutionFlow
+                JE::Render::RPI::PassFilter passFilter = JE::Render::RPI::PassFilter::CreateWithPassClass<LookModificationCompositePass>();
+                JE::Render::RPI::PassSystemInterface::Get()->ForEachPass(passFilter, [value](JE::Render::RPI::Pass* pass) -> JE::Render::RPI::PassFilterExecutionFlow
                     {
                         LookModificationCompositePass* lookModPass = azrtti_cast<LookModificationCompositePass*>(pass);
                         lookModPass->SetSampleQuality(LookModificationCompositePass::SampleQuality(value));
 
-                        return RPI::PassFilterExecutionFlow::ContinueVisitingPasses;
+                        return JE::Render::RPI::PassFilterExecutionFlow::ContinueVisitingPasses;
                     });
             },
             ConsoleFunctorFlags::Null,
             "This can be increased to deal with particularly tricky luts. Range (0-2). 0 (default) - Standard linear sampling. 1 - 7 tap b-spline sampling. 2 - 19 tap b-spline sampling."
         );
 
-        RPI::Ptr<LookModificationCompositePass> LookModificationCompositePass::Create(const RPI::PassDescriptor& descriptor)
+        JE::Render::RPI::Ptr<LookModificationCompositePass> LookModificationCompositePass::Create(const JE::Render::RPI::PassDescriptor& descriptor)
         {
-            RPI::Ptr<LookModificationCompositePass> pass = aznew LookModificationCompositePass(descriptor);
+            JE::Render::RPI::Ptr<LookModificationCompositePass> pass = aznew LookModificationCompositePass(descriptor);
             return pass;
         }
 
-        LookModificationCompositePass::LookModificationCompositePass(const RPI::PassDescriptor& descriptor)
-            : AZ::RPI::FullscreenTrianglePass(descriptor)
+        LookModificationCompositePass::LookModificationCompositePass(const JE::Render::RPI::PassDescriptor& descriptor)
+            : JE::Render::RPI::FullscreenTrianglePass(descriptor)
         {
         }
 
@@ -84,12 +84,12 @@ namespace AZ
             {
                 AZ::Name m_enableExposureControl;
                 AZ::Name m_enableColorGrading;
-                RPI::ShaderOptionValue m_lutSampleQuality;
+                JE::Render::RPI::ShaderOptionValue m_lutSampleQuality;
 
                 OptionSettings(const char* enableExposureControl, const char* enableColorGrading, SampleQuality sampleQuality)
                     : m_enableExposureControl(Name(enableExposureControl))
                     , m_enableColorGrading(Name(enableColorGrading))
-                    , m_lutSampleQuality(RPI::ShaderOptionValue(sampleQuality))
+                    , m_lutSampleQuality(JE::Render::RPI::ShaderOptionValue(sampleQuality))
                 {}
             };
 
@@ -128,11 +128,11 @@ namespace AZ
         void LookModificationCompositePass::UpdateExposureFeatureState()
         {
             bool exposureControlEnabled = false;
-            AZ::RPI::Scene* scene = GetScene();
+            JE::Render::RPI::Scene* scene = GetScene();
             if (scene)
             {
                 PostProcessFeatureProcessor* fp = scene->GetFeatureProcessor<PostProcessFeatureProcessor>();
-                AZ::RPI::ViewPtr view = m_pipeline->GetFirstView(GetPipelineViewTag());
+                JE::Render::RPI::ViewPtr view = m_pipeline->GetFirstView(GetPipelineViewTag());
                 if (fp)
                 {
                     PostProcessSettings* postProcessSettings = fp->GetLevelSettingsFromView(view);
@@ -153,11 +153,11 @@ namespace AZ
         void LookModificationCompositePass::UpdateLookModificationFeatureState()
         {
             bool colorGradingLutEnabled = false;
-            AZ::RPI::Scene* scene = GetScene();
+            JE::Render::RPI::Scene* scene = GetScene();
             if (scene)
             {
                 PostProcessFeatureProcessor* fp = scene->GetFeatureProcessor<PostProcessFeatureProcessor>();
-                AZ::RPI::ViewPtr view = m_pipeline->GetFirstView(GetPipelineViewTag());
+                JE::Render::RPI::ViewPtr view = m_pipeline->GetFirstView(GetPipelineViewTag());
                 if (fp)
                 {
                     PostProcessSettings* postProcessSettings = fp->GetLevelSettingsFromView(view);
@@ -231,7 +231,7 @@ namespace AZ
             // Decide which shader to use.
             shaderOption.SetValue(m_exposureShaderVariantOptionName, m_exposureControlEnabled ? AZ::Name("true") : AZ::Name("false"));
             shaderOption.SetValue(m_colorGradingShaderVariantOptionName, m_colorGradingLutEnabled ? AZ::Name("true") : AZ::Name("false"));
-            shaderOption.SetValue(m_lutSampleQualityShaderVariantOptionName, RPI::ShaderOptionValue(m_sampleQuality));
+            shaderOption.SetValue(m_lutSampleQualityShaderVariantOptionName, JE::Render::RPI::ShaderOptionValue(m_sampleQuality));
 
             UpdateShaderVariant(shaderOption);
 

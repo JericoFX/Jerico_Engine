@@ -35,10 +35,10 @@ namespace AZ
                 AZ_RTTI(HairShortCutGeometryDepthAlphaPass, "{F09A0411-B1FF-4085-98E7-6B8B0E1B2C3D}", HairGeometryRasterPass);
                 AZ_CLASS_ALLOCATOR(HairShortCutGeometryDepthAlphaPass, SystemAllocator);
 
-                static RPI::Ptr<HairShortCutGeometryDepthAlphaPass> Create(const RPI::PassDescriptor& descriptor);
+                static JE::Render::RPI::Ptr<HairShortCutGeometryDepthAlphaPass> Create(const JE::Render::RPI::PassDescriptor& descriptor);
 
             protected:
-                explicit HairShortCutGeometryDepthAlphaPass(const RPI::PassDescriptor& descriptor);
+                explicit HairShortCutGeometryDepthAlphaPass(const JE::Render::RPI::PassDescriptor& descriptor);
 
                 // Pass behavior overrides
                 void BuildInternal() override;

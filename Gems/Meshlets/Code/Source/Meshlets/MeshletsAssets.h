@@ -18,10 +18,10 @@
 
 #include <Atom/RHI/ImagePool.h>
 
-#include <Atom/RPI.Public/Image/StreamingImage.h>
-#include <Atom/RPI.Public/Material/Material.h>
-#include <Atom/RPI.Public/Model/Model.h>
-#include <Atom/RPI.Reflect/Model/ModelAsset.h>
+#include <JE/Render/RPI/Public/Image/StreamingImage.h>
+#include <JE/Render/RPI/Public/Material/Material.h>
+#include <JE/Render/RPI/Public/Model/Model.h>
+#include <JE/Render/RPI/Reflect/Model/ModelAsset.h>
 
 #include <meshoptimizer.h>
 
@@ -30,10 +30,15 @@
 
 namespace AZ
 {
-    namespace RPI
-    {
+    }
+
+namespace JE::Render::RPI
+{
         class MeshDrawPacket;
     }
+
+namespace AZ
+{
 
     namespace Meshlets
     {
@@ -72,16 +77,16 @@ namespace AZ
             Name MeshletsTrianglesName;
             Name MeshletsIndicesLookupName;
 
-            MeshletsModel(Data::Asset<RPI::ModelAsset> sourceModelAsset);
+            MeshletsModel(Data::Asset<JE::Render::RPI::ModelAsset> sourceModelAsset);
             ~MeshletsModel();
 
-            static  Data::Instance<RPI::ShaderResourceGroup> CreateShaderResourceGroup(
-                Data::Instance<RPI::Shader> shader,
+            static  Data::Instance<JE::Render::RPI::ShaderResourceGroup> CreateShaderResourceGroup(
+                Data::Instance<JE::Render::RPI::Shader> shader,
                 const char* shaderResourceGroupId,
                 [[maybe_unused]] const char* moduleName
             );
 
-            Data::Instance<RPI::Model> GetMeshletsModel() { return m_meshletsModel; }
+            Data::Instance<JE::Render::RPI::Model> GetMeshletsModel() { return m_meshletsModel; }
 
             AZStd::string& GetName() { return m_name;  }
 
@@ -92,13 +97,13 @@ namespace AZ
             uint32_t CreateMeshlets(GeneratorMesh& mesh);
 
             uint8_t* RetrieveBufferData(
-                const RPI::BufferAssetView* bufferView,
+                const JE::Render::RPI::BufferAssetView* bufferView,
                 RHI::Format& format,
                 uint32_t expectedAmount, uint32_t& existingAmount,
                 RHI::BufferViewDescriptor& bufferDesc
             );
 
-            Data::Asset<RPI::BufferAsset> CreateBufferAsset(
+            Data::Asset<JE::Render::RPI::BufferAsset> CreateBufferAsset(
                 const AZStd::string& bufferName,
                 const RHI::BufferViewDescriptor& bufferViewDescriptor,
                 RHI::BufferBindFlags bufferBindFlags,
@@ -108,23 +113,23 @@ namespace AZ
                 float* positions, float* normals, float* texCoords, uint32_t vtxNum,
                 uint16_t* indices, uint32_t idxNum, RHI::Format IndexStreamFormat
             );
-            uint32_t CreateMeshletsFromModelAsset(Data::Asset<RPI::ModelAsset> sourceModelAsset);
+            uint32_t CreateMeshletsFromModelAsset(Data::Asset<JE::Render::RPI::ModelAsset> sourceModelAsset);
 
-            uint32_t CreateMeshletsModel(const RPI::ModelLod& modelLod);
-            uint32_t CreateMeshletsModel(const RPI::ModelLodAsset::Mesh& meshAsset);
+            uint32_t CreateMeshletsModel(const JE::Render::RPI::ModelLod& modelLod);
+            uint32_t CreateMeshletsModel(const JE::Render::RPI::ModelLodAsset::Mesh& meshAsset);
 
             uint32_t GetMehsletsAmount() { return m_meshletsAmount;  }
 
         private:
             AZStd::string m_name;
 
-            Data::Instance<RPI::Shader> m_meshletsDataPrepComputeShader;
+            Data::Instance<JE::Render::RPI::Shader> m_meshletsDataPrepComputeShader;
 
             Aabb m_aabb;    // Should be per Lod per mesh and not global
 
-            Data::Asset<RPI::ModelAsset> m_sourceModelAsset;
+            Data::Asset<JE::Render::RPI::ModelAsset> m_sourceModelAsset;
 
-            Data::Instance<RPI::Model> m_meshletsModel;
+            Data::Instance<JE::Render::RPI::Model> m_meshletsModel;
 
             // Meshlets data should be a vector of meshlets data per lod per mesh
             MeshletsData m_meshletsData;    // the actual mesh meshlets' data

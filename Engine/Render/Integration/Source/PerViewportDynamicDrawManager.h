@@ -28,15 +28,15 @@ namespace JE::Render::Integration
         // PerViewportDynamicDrawInterface overrides...
         void RegisterDynamicDrawContext(AZ::Name name, DrawContextFactory contextInitializer) override;
         void UnregisterDynamicDrawContext(AZ::Name name) override;
-        AZ::RHI::Ptr<AZ::RPI::DynamicDrawContext> GetDynamicDrawContextForViewport(AZ::Name name, AzFramework::ViewportId viewportId) override;
+        AZ::RHI::Ptr<JE::Render::RPI::DynamicDrawContext> GetDynamicDrawContextForViewport(AZ::Name name, AzFramework::ViewportId viewportId) override;
 
     private:
         struct ViewportData
         {
-            AZStd::unordered_map<AZ::Name, AZ::RHI::Ptr<AZ::RPI::DynamicDrawContext>> m_dynamicDrawContexts;
+            AZStd::unordered_map<AZ::Name, AZ::RHI::Ptr<JE::Render::RPI::DynamicDrawContext>> m_dynamicDrawContexts;
 
             // Event handlers
-            AZ::Event<AZ::RPI::RenderPipelinePtr>::Handler m_pipelineChangedHandler;
+            AZ::Event<JE::Render::RPI::RenderPipelinePtr>::Handler m_pipelineChangedHandler;
             AZ::Event<AzFramework::ViewportId>::Handler m_viewportDestroyedHandler;
 
             // Cached state

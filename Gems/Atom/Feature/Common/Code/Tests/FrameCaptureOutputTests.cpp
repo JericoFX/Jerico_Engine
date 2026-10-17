@@ -20,7 +20,7 @@ namespace AZ::Render
 {
     // The existing 8-bit writer remains in the private object library linked by this test target.
     FrameCaptureOutputResult PngFrameCaptureOutput(
-        const AZStd::string& outputFilePath, const RPI::AttachmentReadback::ReadbackResult& readbackResult);
+        const AZStd::string& outputFilePath, const JE::Render::RPI::AttachmentReadback::ReadbackResult& readbackResult);
 }
 
 namespace UnitTest
@@ -52,10 +52,10 @@ namespace UnitTest
             return m_temp->Resolve(name).Native();
         }
 
-        AZ::RPI::AttachmentReadback::ReadbackResult Readback(
+        JE::Render::RPI::AttachmentReadback::ReadbackResult Readback(
             const AZStd::vector<uint8_t>& bytes, AZ::RHI::Size size = { 1, 1, 1 }) const
         {
-            AZ::RPI::AttachmentReadback::ReadbackResult result;
+            JE::Render::RPI::AttachmentReadback::ReadbackResult result;
             result.m_imageDescriptor.m_size = size;
             result.m_imageDescriptor.m_format = AZ::RHI::Format::R10G10B10A2_UNORM;
             result.m_dataBuffer = AZStd::make_shared<AZStd::vector<uint8_t>>(bytes);
@@ -128,7 +128,7 @@ namespace UnitTest
 
     TEST_F(FrameCaptureOutputTests, TenBitInvalidBuffersDoNotWriteEitherOutput)
     {
-        auto check = [this](const char* name, const AZ::RPI::AttachmentReadback::ReadbackResult& readback)
+        auto check = [this](const char* name, const JE::Render::RPI::AttachmentReadback::ReadbackResult& readback)
         {
             const auto path = Path(name);
             const auto output = AZ::Render::R10G10B10A2PngFrameCaptureOutput(path, readback);

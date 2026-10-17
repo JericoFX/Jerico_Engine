@@ -7,7 +7,7 @@
  */
 #pragma once
 
-#include <Atom/RPI.Public/Pass/FullscreenTrianglePass.h>
+#include <JE/Render/RPI/Public/Pass/FullscreenTrianglePass.h>
 #include <PostProcessing/PostProcessingShaderOptionBase.h>
 
 namespace AZ
@@ -16,18 +16,18 @@ namespace AZ
     {
         //! Pass used to enabled/disabled debug colors by shader option.
         class DepthOfFieldCompositePass final
-            : public RPI::FullscreenTrianglePass
+            : public JE::Render::RPI::FullscreenTrianglePass
             , public PostProcessingShaderOptionBase
         {
             AZ_RPI_PASS(DepthOfFieldCompositePass);
 
         public:
-            AZ_RTTI(AZ::Render::DepthOfFieldCompositePass, "{7595A972-7ED5-46FE-BBE0-3262846E2964}", AZ::RPI::FullscreenTrianglePass);
+            AZ_RTTI(AZ::Render::DepthOfFieldCompositePass, "{7595A972-7ED5-46FE-BBE0-3262846E2964}", JE::Render::RPI::FullscreenTrianglePass);
             AZ_CLASS_ALLOCATOR(DepthOfFieldCompositePass, SystemAllocator);
             virtual ~DepthOfFieldCompositePass() = default;
 
             //! Creates a DepthOfFieldCompositePass
-            static RPI::Ptr<DepthOfFieldCompositePass> Create(const RPI::PassDescriptor& descriptor);
+            static JE::Render::RPI::Ptr<DepthOfFieldCompositePass> Create(const JE::Render::RPI::PassDescriptor& descriptor);
 
             void SetEnabledDebugColoring(bool enabled);
 
@@ -37,7 +37,7 @@ namespace AZ
             void FrameBeginInternal(FramePrepareParams params) override;
 
         private:
-            DepthOfFieldCompositePass(const RPI::PassDescriptor& descriptor);
+            DepthOfFieldCompositePass(const JE::Render::RPI::PassDescriptor& descriptor);
             void InitializeShaderVariant();
             void UpdateCurrentShaderVariant();
 

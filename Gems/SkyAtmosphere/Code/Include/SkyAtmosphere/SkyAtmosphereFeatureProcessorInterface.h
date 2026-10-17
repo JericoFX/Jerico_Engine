@@ -8,7 +8,7 @@
 
 #pragma once
 
-#include <Atom/RPI.Public/FeatureProcessor.h>
+#include <JE/Render/RPI/Public/FeatureProcessor.h>
 #include <AzCore/Math/Color.h>
 
 namespace SkyAtmosphere
@@ -48,7 +48,7 @@ namespace SkyAtmosphere
     };
 
     class SkyAtmosphereFeatureProcessorInterface
-        : public AZ::RPI::FeatureProcessor
+        : public JE::Render::RPI::FeatureProcessor
     {
         public:
         AZ_RTTI(SkyAtmosphereFeatureProcessorInterface, "{00C9FD3D-2A1B-49EA-97E3-952EF6C1C451}"); 

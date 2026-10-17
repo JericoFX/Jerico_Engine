@@ -18,9 +18,9 @@ namespace JE::Assets::RenderBuilders
         const AZ::SceneAPI::DataTypes::IMeshGroup& group,
         const AZ::SceneAPI::CoordinateSystemConverter coordSysConverter,
         const MaterialAssetsByUid& materialsByUid,
-        AZ::Data::Asset<AZ::RPI::ModelAsset>& outputModelAsset,
-        AZ::Data::Asset<AZ::RPI::SkinMetaAsset>& outputSkinMetaAsset,
-        AZ::Data::Asset<AZ::RPI::MorphTargetMetaAsset>& outputMorphTargetMetaAsset)
+        AZ::Data::Asset<JE::Render::RPI::ModelAsset>& outputModelAsset,
+        AZ::Data::Asset<JE::Render::RPI::SkinMetaAsset>& outputSkinMetaAsset,
+        AZ::Data::Asset<JE::Render::RPI::MorphTargetMetaAsset>& outputMorphTargetMetaAsset)
         : m_scene(scene)
         , m_group(group)
         , m_coordSysConverter(coordSysConverter)

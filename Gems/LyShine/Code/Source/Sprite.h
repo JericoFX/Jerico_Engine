@@ -16,10 +16,10 @@
 #include "TextureAtlas/TextureAtlasBus.h"
 #include "TextureAtlas/TextureAtlasNotificationBus.h"
 
-#include <Atom/RPI.Reflect/Image/Image.h>
+#include <JE/Render/RPI/Reflect/Image/Image.h>
 #include <AzCore/Instance/Instance.h>
 
-namespace AZ::RPI
+namespace JE::Render::RPI
 {
     class AttachmentImageAsset;
 }
@@ -62,7 +62,7 @@ public: // member functions
     void SetCellAlias(int cellIndex, const AZStd::string& cellAlias) override;
     int GetCellIndexFromAlias(const AZStd::string& cellAlias) const override;
     bool IsSpriteSheet() const override;
-    AZ::Data::Instance<AZ::RPI::Image> GetImage() override;
+    AZ::Data::Instance<JE::Render::RPI::Image> GetImage() override;
     // ~ISprite
 
     // TextureAtlasNotifications
@@ -77,7 +77,7 @@ public: // static member functions
     static void Initialize();
     static void Shutdown();
     static CSprite* LoadSprite(const AZStd::string& pathname);
-    static CSprite* CreateSprite(const AZ::Data::Asset<AZ::RPI::AttachmentImageAsset>& attachmentImageAsset);
+    static CSprite* CreateSprite(const AZ::Data::Asset<JE::Render::RPI::AttachmentImageAsset>& attachmentImageAsset);
     static bool DoesSpriteTextureAssetExist(const AZStd::string& pathname);
 
     //! Replaces baseSprite with newSprite with proper ref-count handling and null-checks.
@@ -92,8 +92,8 @@ public: // static member functions
     static AZStd::string GetImageSourcePathFromProductPath(const AZStd::string& productPathname);
 
 private:
-    static bool LoadImage(const AZStd::string& nameTex, AZ::Data::Instance<AZ::RPI::Image>& image);
-    static void ReleaseImage(AZ::Data::Instance<AZ::RPI::Image>& image);
+    static bool LoadImage(const AZStd::string& nameTex, AZ::Data::Instance<JE::Render::RPI::Image>& image);
+    static void ReleaseImage(AZ::Data::Instance<JE::Render::RPI::Image>& image);
 
 protected: // member functions
 
@@ -116,7 +116,7 @@ private: // data
     AZStd::string m_pathname;
     AZStd::string m_texturePathname;
     Borders m_borders;
-    AZ::Data::Instance<AZ::RPI::Image> m_image;
+    AZ::Data::Instance<JE::Render::RPI::Image> m_image;
     int m_numSpriteSheetCellTags;                       //!< Number of Cell child-tags in sprite XML; unfortunately needed to help with serialization.
 
     //! Texture atlas data

@@ -300,10 +300,10 @@ namespace AZ
         void ShaderStreamBufferViewsBuilder::FinalizeShaderInputContract()
         {
             AZ_Assert(!m_shaderInputContract, "ShaderInputContract was already finalized.");
-            m_shaderInputContract = AZStd::make_unique<AZ::RPI::ShaderInputContract>();
+            m_shaderInputContract = AZStd::make_unique<JE::Render::RPI::ShaderInputContract>();
             for (const auto& streamInfo : m_streamsList)
             {
-                AZ::RPI::ShaderInputContract::StreamChannelInfo streamChannelInfo;
+                JE::Render::RPI::ShaderInputContract::StreamChannelInfo streamChannelInfo;
                 streamChannelInfo.m_semantic = AZ::RHI::ShaderSemantic::Parse(streamInfo.m_semanticName);
                 streamChannelInfo.m_componentCount = AZ::RHI::GetFormatComponentCount(streamInfo.m_streamFormat);
                 streamChannelInfo.m_isOptional = streamInfo.m_isOptional;
@@ -312,7 +312,7 @@ namespace AZ
         }
 
         AZ::RHI::Ptr<AZ::RHI::BufferView> ShaderStreamBufferViewsBuilder::BuildShaderIndexBufferView(
-            const AZ::RPI::ModelLod::Mesh& modelLodMesh, AZ::RHI::IndexBufferView& indexBufferViewOut) const
+            const JE::Render::RPI::ModelLod::Mesh& modelLodMesh, AZ::RHI::IndexBufferView& indexBufferViewOut) const
         {
             AZ_Assert(modelLodMesh.GetDrawArguments().m_type == AZ::RHI::DrawType::Indexed, "We only support indexed geometry!");
             const AZ::RHI::IndexBufferView& indexBufferView = modelLodMesh.GetIndexBufferView();

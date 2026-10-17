@@ -10,7 +10,7 @@
 
 #include <AzCore/EBus/EBus.h>
 
-#include <Atom/RPI.Public/Base.h>
+#include <JE/Render/RPI/Public/Base.h>
 #include <AzCore/Component/EntityId.h>
 
 namespace JE::World::Camera
@@ -22,8 +22,8 @@ namespace JE::World::Camera
         static const AZ::EBusAddressPolicy AddressPolicy = AZ::EBusAddressPolicy::Single;
         static const AZ::EBusHandlerPolicy HandlerPolicy = AZ::EBusHandlerPolicy::Single;
 
-        virtual void SetViewForEntity([[maybe_unused]] const AZ::EntityId& id, [[maybe_unused]] AZ::RPI::ViewPtr view) {}
-        virtual AZ::RPI::ViewPtr GetViewForEntity([[maybe_unused]]const AZ::EntityId& id) { return {}; }
+        virtual void SetViewForEntity([[maybe_unused]] const AZ::EntityId& id, [[maybe_unused]] JE::Render::RPI::ViewPtr view) {}
+        virtual JE::Render::RPI::ViewPtr GetViewForEntity([[maybe_unused]]const AZ::EntityId& id) { return {}; }
     };
 
     using CameraViewRegistrationRequestsBus = AZ::EBus<CameraViewRegistrationRequests>;

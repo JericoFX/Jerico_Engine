@@ -14,12 +14,12 @@
 #include <Atom/Feature/RenderCommon.h>
 #include <Atom/RHI.Reflect/BufferViewDescriptor.h>
 #include <Atom/RHI/DrawPacketBuilder.h>
-#include <Atom/RPI.Public/Model/UvStreamTangentBitmask.h>
-#include <Atom/RPI.Public/Scene.h>
-#include <Atom/RPI.Public/View.h>
-#include <Atom/RPI.Public/Image/StreamingImage.h>
-#include <Atom/RPI.Reflect/Image/StreamingImageAsset.h>
-#include <Atom/RPI.Reflect/Image/ImageAsset.h>
+#include <JE/Render/RPI/Public/Model/UvStreamTangentBitmask.h>
+#include <JE/Render/RPI/Public/Scene.h>
+#include <JE/Render/RPI/Public/View.h>
+#include <JE/Render/RPI/Public/Image/StreamingImage.h>
+#include <JE/Render/RPI/Reflect/Image/StreamingImageAsset.h>
+#include <JE/Render/RPI/Reflect/Image/ImageAsset.h>
 
 #include <AzCore/Asset/AssetManager.h>
 #include <AzCore/Instance/InstanceDatabase.h>
@@ -27,7 +27,7 @@
 
 #include <particle/core/ParticleHelper.h>
 
-#include <Atom/RPI.Reflect/Model/ModelLodAsset.h>
+#include <JE/Render/RPI/Reflect/Model/ModelLodAsset.h>
 #include <AzFramework/Components/CameraBus.h>
 #include <EMotionFX/Source/ActorManager.h>
 #include <EMotionFX/Source/Node.h>
@@ -58,7 +58,7 @@ namespace
         return 0.5 * e1.Cross(e2).GetLength();
     }
 
-    void ResetMeshBuffers(const AZStd::span<const AZ::RPI::ModelLodAsset::Mesh>& subMeshes, AZStd::vector<AZ::u32>& allMeshIndices,
+    void ResetMeshBuffers(const AZStd::span<const JE::Render::RPI::ModelLodAsset::Mesh>& subMeshes, AZStd::vector<AZ::u32>& allMeshIndices,
         AZStd::vector<AZ::Vector3>& allMeshVertexes, AZStd::vector<double>& allFaceAreas)
     {
         size_t totalIndiceCnt{0};
@@ -106,7 +106,7 @@ namespace OpenParticle
         m_particleFp = fp;
     }
 
-    void ParticleSystem::SetScene(AZ::RPI::Scene* scene)
+    void ParticleSystem::SetScene(JE::Render::RPI::Scene* scene)
     {
         m_scene = scene;
     }
@@ -208,7 +208,7 @@ namespace OpenParticle
                 auto& instance = m_emitterInstances[emitterIt->second];
                 if (instance.m_material->CanCompile())
                 {
-                    AZ::RPI::MaterialPropertyIndex materialPropertyIndex =
+                    JE::Render::RPI::MaterialPropertyIndex materialPropertyIndex =
                         instance.m_material->FindPropertyIndex(AZ::Name("baseColor.textureMap"));
                     if (instance.m_material->SetPropertyValue(materialPropertyIndex, iter->second))
                     {
@@ -256,7 +256,7 @@ namespace OpenParticle
         }
     }
 
-    static void SetOption(AZ::RPI::ShaderOptionGroup& shaderOptions, const SimuCore::ParticleCore::DrawItem& item)
+    static void SetOption(JE::Render::RPI::ShaderOptionGroup& shaderOptions, const SimuCore::ParticleCore::DrawItem& item)
     {
         switch (item.type)
         {
@@ -269,17 +269,17 @@ namespace OpenParticle
         }
     }
 
-    static bool MaterialRequiresForwardPassIblSpecular(AZ::Data::Instance<AZ::RPI::Material> material)
+    static bool MaterialRequiresForwardPassIblSpecular(AZ::Data::Instance<JE::Render::RPI::Material> material)
     {
         for (auto& shaderItem : material->GetGeneralShaderCollection())
         {
             if (shaderItem.IsEnabled())
             {
-                AZ::RPI::ShaderOptionIndex index = shaderItem.GetShaderOptionGroup().GetShaderOptionLayout()->
+                JE::Render::RPI::ShaderOptionIndex index = shaderItem.GetShaderOptionGroup().GetShaderOptionLayout()->
                     FindShaderOptionIndex(AZ::Name{ "o_materialUseForwardPassIBLSpecular" });
                 if (index.IsValid())
                 {
-                    AZ::RPI::ShaderOptionValue value =
+                    JE::Render::RPI::ShaderOptionValue value =
                         shaderItem.GetShaderOptionGroup().GetValue(AZ::Name{ "o_materialUseForwardPassIBLSpecular" });
                     if (value.GetIndex() == 1)
                     {
@@ -291,7 +291,7 @@ namespace OpenParticle
         return false;
     }
 
-    void ParticleSystem::Render(DriverWrap& driverWrap, const AZ::RPI::FeatureProcessor::RenderPacket& packet)
+    void ParticleSystem::Render(DriverWrap& driverWrap, const JE::Render::RPI::FeatureProcessor::RenderPacket& packet)
     {
         if (!m_particleSystem)
         {
@@ -365,7 +365,7 @@ namespace OpenParticle
 
                     {
                         AZ_PROFILE_SCOPE(AzCore, "ParticleSystem::shader compile");
-                        AZ::RPI::ShaderOptionGroup& shaderOptions = efd.optionGroup;
+                        JE::Render::RPI::ShaderOptionGroup& shaderOptions = efd.optionGroup;
                         SetOption(shaderOptions, item);
                         auto variant = shader.m_shader->GetVariant(shaderOptions.GetShaderVariantId());
 
@@ -428,10 +428,10 @@ namespace OpenParticle
         AZStd::string path = mapPath + ".streamingimage";
         AZ::Data::AssetId mapAssetId;
         AZ::Data::AssetCatalogRequestBus::BroadcastResult(mapAssetId, &AZ::Data::AssetCatalogRequestBus::
-            Events::GetAssetIdByPath, path.c_str(), AZ::RPI::StreamingImageAsset::RTTI_Type(), false);
+            Events::GetAssetIdByPath, path.c_str(), JE::Render::RPI::StreamingImageAsset::RTTI_Type(), false);
         if (mapAssetId.IsValid())
         {
-            auto streamingAsset = AZ::Data::AssetManager::Instance().GetAsset<AZ::RPI::StreamingImageAsset>(
+            auto streamingAsset = AZ::Data::AssetManager::Instance().GetAsset<JE::Render::RPI::StreamingImageAsset>(
                 mapAssetId, AZ::Data::AssetLoadBehavior::PreLoad);
             streamingAsset.BlockUntilLoadComplete();
             if (!streamingAsset.IsReady())
@@ -440,7 +440,7 @@ namespace OpenParticle
                 return;
             }
 
-            AZ::Data::Instance<AZ::RPI::Image> image = AZ::RPI::StreamingImage::FindOrCreate(streamingAsset);
+            AZ::Data::Instance<JE::Render::RPI::Image> image = JE::Render::RPI::StreamingImage::FindOrCreate(streamingAsset);
             if (!image)
             {
                 AZ_Error("ParticleSystem", false, "Failed to create Image instance from StreamingImageAsset: %s", path.c_str());
@@ -448,7 +448,7 @@ namespace OpenParticle
             }
 
             AZStd::any any(image);
-            AZ::RPI::MaterialPropertyValue value = AZ::RPI::MaterialPropertyValue::FromAny(any);
+            JE::Render::RPI::MaterialPropertyValue value = JE::Render::RPI::MaterialPropertyValue::FromAny(any);
             m_diffuseMapInstances.emplace(emitterIndex, value);
             m_changedDiffuseMap = true;
         }
@@ -477,7 +477,7 @@ namespace OpenParticle
                 auto it = m_emitterInstances.find(emitter.second);
                 if (it != m_emitterInstances.end())
                 {
-                    AZ::Data::Asset<AZ::RPI::ModelAsset> typedAsset(asset);
+                    AZ::Data::Asset<JE::Render::RPI::ModelAsset> typedAsset(asset);
                     it->second.m_model.SetupModel(typedAsset, 0);
                     if (typedAsset->IsReady())
                     {
@@ -493,7 +493,7 @@ namespace OpenParticle
                 auto it = m_emitterInstances.find(emitter.second);
                 if (it != m_emitterInstances.end())
                 {
-                    AZ::Data::Asset<AZ::RPI::MaterialAsset> typedAsset(asset);
+                    AZ::Data::Asset<JE::Render::RPI::MaterialAsset> typedAsset(asset);
                     it->second.Setup(typedAsset, archive.m_emitterInfos[emitter.first].m_materialOverrides);
 
                     AZ::RHI::ShaderInputNameIndex objectIdIndex = "m_objectId";
@@ -584,8 +584,8 @@ namespace OpenParticle
 
     void ParticleSystem::GetMeshVertexBuffer(const AZ::u32 emitterId, const EMotionFX::Actor& actor, const EMotionFX::TransformData& transData)
     {
-        AZ::Data::Instance<AZ::RPI::Model> m_modelInstance =
-            AZ::RPI::Model::FindOrCreate(m_asset->GetParticleArchive().m_emitterInfos[emitterId].m_skeletonModel);
+        AZ::Data::Instance<JE::Render::RPI::Model> m_modelInstance =
+            JE::Render::RPI::Model::FindOrCreate(m_asset->GetParticleArchive().m_emitterInfos[emitterId].m_skeletonModel);
         if (!m_modelInstance)
         {
             return;
@@ -766,7 +766,7 @@ namespace OpenParticle
     }
 
     void ParticleSystem::RenderParticle(const AZ::RHI::DrawListTag drawListTag, const DrawParam& drawParam,
-        EmitterInstance& instance, AZ::RPI::View& view, const EmitterDrawKey& drawKey,
+        EmitterInstance& instance, JE::Render::RPI::View& view, const EmitterDrawKey& drawKey,
         [[maybe_unused]] AZ::u32 emitterId, int meshIndex)
     {
         AZ_PROFILE_SCOPE(AzCore, "ParticleSystem::RenderParticle");
@@ -1078,8 +1078,8 @@ namespace OpenParticle
                 continue;
             }
             emitter.SetMeshSampleType(archive.m_emitterInfos[emitterId].m_meshSampleType);
-            AZ::Data::Instance<AZ::RPI::Model> m_modelInstance =
-                    AZ::RPI::Model::FindOrCreate(archive.m_emitterInfos[emitterId].m_skeletonModel);
+            AZ::Data::Instance<JE::Render::RPI::Model> m_modelInstance =
+                    JE::Render::RPI::Model::FindOrCreate(archive.m_emitterInfos[emitterId].m_skeletonModel);
             if (!m_modelInstance)
             {
                 continue;

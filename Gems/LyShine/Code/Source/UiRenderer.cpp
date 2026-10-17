@@ -8,15 +8,15 @@
 #include "UiRenderer.h"
 #include "LyShinePassDataBus.h"
 
-#include <Atom/RPI.Public/Image/ImageSystemInterface.h>
-#include <Atom/RPI.Public/DynamicDraw/DynamicDrawInterface.h>
-#include <Atom/RPI.Public/RPISystemInterface.h>
-#include <Atom/RPI.Public/RPIUtils.h>
-#include <Atom/RPI.Reflect/Asset/AssetUtils.h>
+#include <JE/Render/RPI/Public/Image/ImageSystemInterface.h>
+#include <JE/Render/RPI/Public/DynamicDraw/DynamicDrawInterface.h>
+#include <JE/Render/RPI/Public/RPISystemInterface.h>
+#include <JE/Render/RPI/Public/RPIUtils.h>
+#include <JE/Render/RPI/Reflect/Asset/AssetUtils.h>
 #include <JE/Render/Bootstrap/DefaultWindowBus.h>
-#include <Atom/RPI.Public/ViewportContextBus.h>
-#include <Atom/RPI.Public/RenderPipeline.h>
-#include <Atom/RPI.Public/Pass/RasterPass.h>
+#include <JE/Render/RPI/Public/ViewportContextBus.h>
+#include <JE/Render/RPI/Public/RenderPipeline.h>
+#include <JE/Render/RPI/Public/Pass/RasterPass.h>
 
 #include <AzCore/Debug/Trace.h>
 #include <AzCore/Math/MatrixUtils.h>
@@ -29,7 +29,7 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-UiRenderer::UiRenderer(AZ::RPI::ViewportContextPtr viewportContext)
+UiRenderer::UiRenderer(JE::Render::RPI::ViewportContextPtr viewportContext)
     : m_viewportContext(viewportContext)
 {
     // Use bootstrap scene event to indicate when the RPI has fully
@@ -44,7 +44,7 @@ UiRenderer::~UiRenderer()
 
     if (m_viewportContext)
     {
-        AZ::RPI::RPISystemInterface::Get()->UnregisterScene(m_viewportContext->GetRenderScene());
+        JE::Render::RPI::RPISystemInterface::Get()->UnregisterScene(m_viewportContext->GetRenderScene());
     }
     m_dynamicDraw = nullptr;
 }
@@ -54,13 +54,13 @@ bool UiRenderer::IsReady()
     return m_isRPIReady;
 }
 
-void UiRenderer::OnBootstrapSceneReady(AZ::RPI::Scene* bootstrapScene)
+void UiRenderer::OnBootstrapSceneReady(JE::Render::RPI::Scene* bootstrapScene)
 {
     // At this point the RPI is ready for use
 
     // Load the UI shader
     const char* uiShaderFilepath = "LyShine/Shaders/LyShineUI.azshader";
-    AZ::Data::Instance<AZ::RPI::Shader> uiShader = AZ::RPI::LoadCriticalShader(uiShaderFilepath);
+    AZ::Data::Instance<JE::Render::RPI::Shader> uiShader = JE::Render::RPI::LoadCriticalShader(uiShaderFilepath);
 
     // Create scene to be used by the dynamic draw context
     if (m_viewportContext)
@@ -92,15 +92,15 @@ void UiRenderer::OnBootstrapSceneReady(AZ::RPI::Scene* bootstrapScene)
     }
 }
 
-AZ::RPI::ScenePtr UiRenderer::CreateScene(AZStd::shared_ptr<AZ::RPI::ViewportContext> viewportContext)
+JE::Render::RPI::ScenePtr UiRenderer::CreateScene(AZStd::shared_ptr<JE::Render::RPI::ViewportContext> viewportContext)
 {
     // Create and register a scene with feature processors defined in the viewport settings
-    AZ::RPI::SceneDescriptor sceneDesc;
+    JE::Render::RPI::SceneDescriptor sceneDesc;
     sceneDesc.m_nameId = AZ::Name("UiRenderer");
     auto settingsRegistry = AZ::SettingsRegistry::Get();
     const char* viewportSettingPath = "/O3DE/Editor/Viewport/UI/Scene";
     bool sceneDescLoaded = settingsRegistry->GetObject(sceneDesc, viewportSettingPath);
-    AZ::RPI::ScenePtr atomScene = AZ::RPI::Scene::CreateScene(sceneDesc);
+    JE::Render::RPI::ScenePtr atomScene = JE::Render::RPI::Scene::CreateScene(sceneDesc);
 
     if (!sceneDescLoaded)
     {
@@ -113,29 +113,29 @@ AZ::RPI::ScenePtr UiRenderer::CreateScene(AZStd::shared_ptr<AZ::RPI::ViewportCon
     viewportContext->SetRenderScene(atomScene);
 
     const char* pipelineAssetPath = "passes/MainRenderPipeline.azasset"; // [LYSHINE_ATOM_TODO][GHI #6272] Use a custom UI pipeline
-    AZStd::optional<AZ::RPI::RenderPipelineDescriptor> renderPipelineDesc =
-        AZ::RPI::GetRenderPipelineDescriptorFromAsset(pipelineAssetPath, AZStd::string::format("_%i", viewportContext->GetId()));
+    AZStd::optional<JE::Render::RPI::RenderPipelineDescriptor> renderPipelineDesc =
+        JE::Render::RPI::GetRenderPipelineDescriptorFromAsset(pipelineAssetPath, AZStd::string::format("_%i", viewportContext->GetId()));
     AZ_Assert(renderPipelineDesc.has_value(), "Invalid render pipeline descriptor from asset %s", pipelineAssetPath);
 
-    const AZ::RHI::MultisampleState multiSampleState = AZ::RPI::RPISystemInterface::Get()->GetApplicationMultisampleState();
+    const AZ::RHI::MultisampleState multiSampleState = JE::Render::RPI::RPISystemInterface::Get()->GetApplicationMultisampleState();
     renderPipelineDesc.value().m_renderSettings.m_multisampleState = multiSampleState;
     AZ_Printf("UiRenderer", "UI renderer starting with multi sample %d", multiSampleState.m_samples);
 
-    auto renderPipeline = AZ::RPI::RenderPipeline::CreateRenderPipelineForWindow(renderPipelineDesc.value(), *viewportContext->GetWindowContext().get());
+    auto renderPipeline = JE::Render::RPI::RenderPipeline::CreateRenderPipelineForWindow(renderPipelineDesc.value(), *viewportContext->GetWindowContext().get());
     atomScene->AddRenderPipeline(renderPipeline);
 
     atomScene->Activate();
 
     // Register the scene
-    AZ::RPI::RPISystemInterface::Get()->RegisterScene(atomScene);
+    JE::Render::RPI::RPISystemInterface::Get()->RegisterScene(atomScene);
 
     return atomScene;
 }
 
-AZ::RHI::Ptr<AZ::RPI::DynamicDrawContext> UiRenderer::CreateDynamicDrawContext(
-    AZ::Data::Instance<AZ::RPI::Shader> uiShader)
+AZ::RHI::Ptr<JE::Render::RPI::DynamicDrawContext> UiRenderer::CreateDynamicDrawContext(
+    AZ::Data::Instance<JE::Render::RPI::Shader> uiShader)
 {
-    AZ::RHI::Ptr<AZ::RPI::DynamicDrawContext> dynamicDraw = AZ::RPI::DynamicDrawInterface::Get()->CreateDynamicDrawContext();
+    AZ::RHI::Ptr<JE::Render::RPI::DynamicDrawContext> dynamicDraw = JE::Render::RPI::DynamicDrawInterface::Get()->CreateDynamicDrawContext();
 
     // Initialize the dynamic draw context
     dynamicDraw->InitShader(uiShader);
@@ -145,8 +145,8 @@ AZ::RHI::Ptr<AZ::RPI::DynamicDrawContext> UiRenderer::CreateDynamicDrawContext(
         { "TEXCOORD", AZ::RHI::Format::R32G32_FLOAT },
         { "BLENDINDICES", AZ::RHI::Format::R16G16_UINT } }
     );
-    dynamicDraw->AddDrawStateOptions(AZ::RPI::DynamicDrawContext::DrawStateOptions::StencilState | AZ::RPI::DynamicDrawContext::DrawStateOptions::BlendMode |
-        AZ::RPI::DynamicDrawContext::DrawStateOptions::ShaderVariant);
+    dynamicDraw->AddDrawStateOptions(JE::Render::RPI::DynamicDrawContext::DrawStateOptions::StencilState | JE::Render::RPI::DynamicDrawContext::DrawStateOptions::BlendMode |
+        JE::Render::RPI::DynamicDrawContext::DrawStateOptions::ShaderVariant);
 
     dynamicDraw->SetOutputScope(m_scene);
     dynamicDraw->EndInit();
@@ -154,12 +154,12 @@ AZ::RHI::Ptr<AZ::RPI::DynamicDrawContext> UiRenderer::CreateDynamicDrawContext(
     return dynamicDraw;
 }
 
-AZStd::shared_ptr<AZ::RPI::ViewportContext> UiRenderer::GetViewportContext()
+AZStd::shared_ptr<JE::Render::RPI::ViewportContext> UiRenderer::GetViewportContext()
 {
     if (!m_viewportContext)
     {
         // Return the default viewport context
-        auto viewContextManager = AZ::Interface<AZ::RPI::ViewportContextRequestsInterface>::Get();
+        auto viewContextManager = AZ::Interface<JE::Render::RPI::ViewportContextRequestsInterface>::Get();
         auto defaultViewportContext = viewContextManager->GetViewportContextByName(viewContextManager->GetDefaultViewportContextName());
         return defaultViewportContext;
     }
@@ -168,13 +168,13 @@ AZStd::shared_ptr<AZ::RPI::ViewportContext> UiRenderer::GetViewportContext()
     return m_viewportContext;
 }
 
-void UiRenderer::CacheShaderData(const AZ::RHI::Ptr<AZ::RPI::DynamicDrawContext>& dynamicDraw)
+void UiRenderer::CacheShaderData(const AZ::RHI::Ptr<JE::Render::RPI::DynamicDrawContext>& dynamicDraw)
 {
     // Cache draw srg input indices
     static const char textureIndexName[] = "m_texture";
     static const char worldToProjIndexName[] = "m_worldToProj";
     static const char isClampIndexName[] = "m_isClamp";
-    AZ::Data::Instance<AZ::RPI::ShaderResourceGroup> drawSrg = dynamicDraw->NewDrawSrg();
+    AZ::Data::Instance<JE::Render::RPI::ShaderResourceGroup> drawSrg = dynamicDraw->NewDrawSrg();
     const AZ::RHI::ShaderResourceGroupLayout* layout = drawSrg->GetLayout();
     m_uiShaderData.m_imageInputIndex = layout->FindShaderInputImageIndex(AZ::Name(textureIndexName));
     AZ_Error(LogName, m_uiShaderData.m_imageInputIndex.IsValid(), "Failed to find shader input constant %s.",
@@ -187,25 +187,25 @@ void UiRenderer::CacheShaderData(const AZ::RHI::Ptr<AZ::RPI::DynamicDrawContext>
         isClampIndexName);
 
     // Cache shader variants that will be used
-    AZ::RPI::ShaderOptionList shaderOptionsTextureLinear;
-    shaderOptionsTextureLinear.push_back(AZ::RPI::ShaderOption(AZ::Name("o_alphaTest"), AZ::Name("false")));
-    shaderOptionsTextureLinear.push_back(AZ::RPI::ShaderOption(AZ::Name("o_srgbWrite"), AZ::Name("true")));
-    shaderOptionsTextureLinear.push_back(AZ::RPI::ShaderOption(AZ::Name("o_modulate"), AZ::Name("Modulate::None")));
+    JE::Render::RPI::ShaderOptionList shaderOptionsTextureLinear;
+    shaderOptionsTextureLinear.push_back(JE::Render::RPI::ShaderOption(AZ::Name("o_alphaTest"), AZ::Name("false")));
+    shaderOptionsTextureLinear.push_back(JE::Render::RPI::ShaderOption(AZ::Name("o_srgbWrite"), AZ::Name("true")));
+    shaderOptionsTextureLinear.push_back(JE::Render::RPI::ShaderOption(AZ::Name("o_modulate"), AZ::Name("Modulate::None")));
     m_uiShaderData.m_shaderVariantTextureLinear = dynamicDraw->UseShaderVariant(shaderOptionsTextureLinear);
-    AZ::RPI::ShaderOptionList shaderOptionsTextureSrgb;
-    shaderOptionsTextureSrgb.push_back(AZ::RPI::ShaderOption(AZ::Name("o_alphaTest"), AZ::Name("false")));
-    shaderOptionsTextureSrgb.push_back(AZ::RPI::ShaderOption(AZ::Name("o_srgbWrite"), AZ::Name("false")));
-    shaderOptionsTextureSrgb.push_back(AZ::RPI::ShaderOption(AZ::Name("o_modulate"), AZ::Name("Modulate::None")));
+    JE::Render::RPI::ShaderOptionList shaderOptionsTextureSrgb;
+    shaderOptionsTextureSrgb.push_back(JE::Render::RPI::ShaderOption(AZ::Name("o_alphaTest"), AZ::Name("false")));
+    shaderOptionsTextureSrgb.push_back(JE::Render::RPI::ShaderOption(AZ::Name("o_srgbWrite"), AZ::Name("false")));
+    shaderOptionsTextureSrgb.push_back(JE::Render::RPI::ShaderOption(AZ::Name("o_modulate"), AZ::Name("Modulate::None")));
     m_uiShaderData.m_shaderVariantTextureSrgb = dynamicDraw->UseShaderVariant(shaderOptionsTextureSrgb);
-    AZ::RPI::ShaderOptionList shaderVariantAlphaTestMask;
-    shaderVariantAlphaTestMask.push_back(AZ::RPI::ShaderOption(AZ::Name("o_alphaTest"), AZ::Name("true")));
-    shaderVariantAlphaTestMask.push_back(AZ::RPI::ShaderOption(AZ::Name("o_srgbWrite"), AZ::Name("false")));
-    shaderVariantAlphaTestMask.push_back(AZ::RPI::ShaderOption(AZ::Name("o_modulate"), AZ::Name("Modulate::None")));
+    JE::Render::RPI::ShaderOptionList shaderVariantAlphaTestMask;
+    shaderVariantAlphaTestMask.push_back(JE::Render::RPI::ShaderOption(AZ::Name("o_alphaTest"), AZ::Name("true")));
+    shaderVariantAlphaTestMask.push_back(JE::Render::RPI::ShaderOption(AZ::Name("o_srgbWrite"), AZ::Name("false")));
+    shaderVariantAlphaTestMask.push_back(JE::Render::RPI::ShaderOption(AZ::Name("o_modulate"), AZ::Name("Modulate::None")));
     m_uiShaderData.m_shaderVariantAlphaTestMask = dynamicDraw->UseShaderVariant(shaderVariantAlphaTestMask);
-    AZ::RPI::ShaderOptionList shaderVariantGradientMask;
-    shaderVariantGradientMask.push_back(AZ::RPI::ShaderOption(AZ::Name("o_alphaTest"), AZ::Name("false")));
-    shaderVariantGradientMask.push_back(AZ::RPI::ShaderOption(AZ::Name("o_srgbWrite"), AZ::Name("false")));
-    shaderVariantGradientMask.push_back(AZ::RPI::ShaderOption(AZ::Name("o_modulate"), AZ::Name("Modulate::Alpha")));
+    JE::Render::RPI::ShaderOptionList shaderVariantGradientMask;
+    shaderVariantGradientMask.push_back(JE::Render::RPI::ShaderOption(AZ::Name("o_alphaTest"), AZ::Name("false")));
+    shaderVariantGradientMask.push_back(JE::Render::RPI::ShaderOption(AZ::Name("o_srgbWrite"), AZ::Name("false")));
+    shaderVariantGradientMask.push_back(JE::Render::RPI::ShaderOption(AZ::Name("o_modulate"), AZ::Name("Modulate::Alpha")));
     m_uiShaderData.m_shaderVariantGradientMask = dynamicDraw->UseShaderVariant(shaderVariantGradientMask);
 }
 
@@ -240,24 +240,24 @@ void UiRenderer::EndCanvasRender()
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-AZ::RHI::Ptr<AZ::RPI::DynamicDrawContext> UiRenderer::GetDynamicDrawContext()
+AZ::RHI::Ptr<JE::Render::RPI::DynamicDrawContext> UiRenderer::GetDynamicDrawContext()
 {
     return m_dynamicDraw;
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-AZ::RHI::Ptr<AZ::RPI::DynamicDrawContext> UiRenderer::CreateDynamicDrawContextForRTT(const AZStd::string& rttName)
+AZ::RHI::Ptr<JE::Render::RPI::DynamicDrawContext> UiRenderer::CreateDynamicDrawContextForRTT(const AZStd::string& rttName)
 {
     // find the rtt pass with the specified name
-    AZ::RPI::RasterPass* rttPass = nullptr;    
-    AZ::RPI::SceneId sceneId = m_scene->GetId();
+    JE::Render::RPI::RasterPass* rttPass = nullptr;    
+    JE::Render::RPI::SceneId sceneId = m_scene->GetId();
     LyShinePassRequestBus::EventResult(rttPass, sceneId, &LyShinePassRequestBus::Events::GetRttPass, rttName);
     if (!rttPass)
     {
         return nullptr;
     }
 
-    AZ::RHI::Ptr<AZ::RPI::DynamicDrawContext> dynamicDraw = AZ::RPI::DynamicDrawInterface::Get()->CreateDynamicDrawContext();
+    AZ::RHI::Ptr<JE::Render::RPI::DynamicDrawContext> dynamicDraw = JE::Render::RPI::DynamicDrawInterface::Get()->CreateDynamicDrawContext();
 
     // Initialize the dynamic draw context
     dynamicDraw->InitShader(m_dynamicDraw->GetShader());
@@ -267,8 +267,8 @@ AZ::RHI::Ptr<AZ::RPI::DynamicDrawContext> UiRenderer::CreateDynamicDrawContextFo
         { "TEXCOORD", AZ::RHI::Format::R32G32_FLOAT },
         { "BLENDINDICES", AZ::RHI::Format::R16G16_UINT } }
     );
-    dynamicDraw->AddDrawStateOptions(AZ::RPI::DynamicDrawContext::DrawStateOptions::StencilState | AZ::RPI::DynamicDrawContext::DrawStateOptions::BlendMode |
-        AZ::RPI::DynamicDrawContext::DrawStateOptions::ShaderVariant);
+    dynamicDraw->AddDrawStateOptions(JE::Render::RPI::DynamicDrawContext::DrawStateOptions::StencilState | JE::Render::RPI::DynamicDrawContext::DrawStateOptions::BlendMode |
+        JE::Render::RPI::DynamicDrawContext::DrawStateOptions::ShaderVariant);
 
     dynamicDraw->SetOutputScope(rttPass);
     dynamicDraw->InitDrawListTag(rttPass->GetDrawListTag());
@@ -333,9 +333,9 @@ void UiRenderer::SetBaseState(BaseState state)
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-AZ::RPI::ShaderVariantId UiRenderer::GetCurrentShaderVariant()
+JE::Render::RPI::ShaderVariantId UiRenderer::GetCurrentShaderVariant()
 {
-    AZ::RPI::ShaderVariantId variantId = m_uiShaderData.m_shaderVariantTextureLinear;
+    JE::Render::RPI::ShaderVariantId variantId = m_uiShaderData.m_shaderVariantTextureLinear;
 
     if (m_baseState.m_useAlphaTest)
     {
@@ -399,10 +399,10 @@ void UiRenderer::DebugDisplayTextureData(int recordingOption)
     if (recordingOption > 0)
     {
         // compute the total area of all the textures, also create a vector that we can sort by area
-        AZStd::vector<AZStd::pair<AZ::Data::Instance<AZ::RPI::Image>, uint32_t>> textures;
+        AZStd::vector<AZStd::pair<AZ::Data::Instance<JE::Render::RPI::Image>, uint32_t>> textures;
         int totalArea = 0;
         int totalDataSize = 0;
-        for (AZ::Data::Instance<AZ::RPI::Image> image : m_texturesUsedInFrame)
+        for (AZ::Data::Instance<JE::Render::RPI::Image> image : m_texturesUsedInFrame)
         {
             const AZ::RHI::ImageDescriptor& imageDescriptor = image->GetRHIImage()->GetDescriptor();
             AZ::RHI::Size size = imageDescriptor.m_size;
@@ -412,11 +412,11 @@ void UiRenderer::DebugDisplayTextureData(int recordingOption)
             totalArea += area;
             totalDataSize += dataSize;
 
-            textures.push_back(AZStd::pair<AZ::Data::Instance<AZ::RPI::Image>, uint32_t>(image, dataSize));
+            textures.push_back(AZStd::pair<AZ::Data::Instance<JE::Render::RPI::Image>, uint32_t>(image, dataSize));
         }
 
         // sort the vector by data size
-        std::sort( textures.begin( ), textures.end( ), [ ]( const AZStd::pair<AZ::Data::Instance<AZ::RPI::Image>, uint32_t> lhs, const AZStd::pair<AZ::Data::Instance<AZ::RPI::Image>, uint32_t> rhs )
+        std::sort( textures.begin( ), textures.end( ), [ ]( const AZStd::pair<AZ::Data::Instance<JE::Render::RPI::Image>, uint32_t> lhs, const AZStd::pair<AZ::Data::Instance<JE::Render::RPI::Image>, uint32_t> rhs )
         {
             return lhs.second > rhs.second;
         });
@@ -429,7 +429,7 @@ void UiRenderer::DebugDisplayTextureData(int recordingOption)
         float xOffset = 20.0f * dpiScale;
         float yOffset = 20.0f * dpiScale;
 
-        auto blackTexture = AZ::RPI::ImageSystemInterface::Get()->GetSystemImage(AZ::RPI::SystemImage::Black);
+        auto blackTexture = JE::Render::RPI::ImageSystemInterface::Get()->GetSystemImage(JE::Render::RPI::SystemImage::Black);
         float textOpacity = 1.0f;
         float backgroundRectOpacity = 0.0f; // 0.75f; // [GHI #6515] Reenable background rect
         const float fontSize = 8.0f;
@@ -476,7 +476,7 @@ void UiRenderer::DebugDisplayTextureData(int recordingOption)
 
         for (auto texture : textures)
         {
-            AZ::Data::Instance<AZ::RPI::Image> image = texture.first;
+            AZ::Data::Instance<JE::Render::RPI::Image> image = texture.first;
             const AZ::RHI::ImageDescriptor& imageDescriptor = image->GetRHIImage()->GetDescriptor();
             uint32_t width = imageDescriptor.m_size.m_width;
             uint32_t height = imageDescriptor.m_size.m_height;
@@ -508,7 +508,7 @@ void UiRenderer::DebugDisplayTextureData(int recordingOption)
     }
 }
 
-void UiRenderer::DebugUseTexture(AZ::Data::Instance<AZ::RPI::Image> image)
+void UiRenderer::DebugUseTexture(AZ::Data::Instance<JE::Render::RPI::Image> image)
 {
     if (m_debugTextureDataRecordLevel > 0)
     {

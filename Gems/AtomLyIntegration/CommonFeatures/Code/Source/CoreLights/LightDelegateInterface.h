@@ -24,10 +24,15 @@ namespace AZ
     class Transform;
     class Aabb;
 
-    namespace RPI
-    {
+    }
+
+namespace JE::Render::RPI
+{
         class Image;
     }
+
+namespace AZ
+{
 
     namespace Render
     {
@@ -67,7 +72,7 @@ namespace AZ
             virtual void SetVisibility(bool visibility) = 0;
 
             // gobo
-            virtual void SetGoboTexture(AZ::Data::Instance<AZ::RPI::Image> goboTexture) = 0;
+            virtual void SetGoboTexture(AZ::Data::Instance<JE::Render::RPI::Image> goboTexture) = 0;
 
             // Shutters
 

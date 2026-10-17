@@ -39,7 +39,7 @@ if(PAL_TRAIT_BUILD_HOST_TOOLS)
                 AZ::AzToolsFramework
                 Gem::LmbrCentral
                 Gem::Atom_RHI.Public
-                Gem::Atom_RPI.Public
+                JE::RenderIntegration
                 Gem::Atom_Feature_Common.Public
                 Gem::CommonFeaturesAtom.Static
                 Gem::EMotionFXStaticLib
@@ -82,7 +82,7 @@ else()
                 AZ::AzCore
                 Gem::LmbrCentral
                 Gem::Atom_RHI.Public
-                Gem::Atom_RPI.Public
+                JE::RenderIntegration
                 Gem::Atom_Feature_Common.Public
                 Gem::CommonFeaturesAtom.Static
                 Gem::EMotionFXStaticLib

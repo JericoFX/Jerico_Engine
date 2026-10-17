@@ -54,8 +54,8 @@
 
 #include <Editor/EditorCommon.h>
 
-#include <Atom/RPI.Reflect/Asset/AssetHandler.h>
-#include <Atom/RPI.Reflect/Image/StreamingImageAssetHandler.h>
+#include <JE/Render/RPI/Reflect/Asset/AssetHandler.h>
+#include <JE/Render/RPI/Reflect/Image/StreamingImageAssetHandler.h>
 #include <Atom/RHI.Reflect/ReflectSystemComponent.h>
 
 #include <QFileInfo>
@@ -152,9 +152,9 @@ namespace UnitTest
 
             AZ::NameDictionary::Create();
 
-            m_assetHandlers.emplace_back(AZ::RPI::MakeAssetHandler<AZ::RPI::ImageMipChainAssetHandler>());
-            m_assetHandlers.emplace_back(AZ::RPI::MakeAssetHandler<AZ::RPI::StreamingImageAssetHandler>());
-            m_assetHandlers.emplace_back(AZ::RPI::MakeAssetHandler<AZ::RPI::StreamingImagePoolAssetHandler>());
+            m_assetHandlers.emplace_back(JE::Render::RPI::MakeAssetHandler<JE::Render::RPI::ImageMipChainAssetHandler>());
+            m_assetHandlers.emplace_back(JE::Render::RPI::MakeAssetHandler<JE::Render::RPI::StreamingImageAssetHandler>());
+            m_assetHandlers.emplace_back(JE::Render::RPI::MakeAssetHandler<JE::Render::RPI::StreamingImagePoolAssetHandler>());
 
             BuilderSettingManager::CreateInstance();
 
@@ -164,9 +164,9 @@ namespace UnitTest
             BuilderPluginComponent::Reflect(m_context.get());
             AZ::DataPatch::Reflect(m_context.get());
             AZ::RHI::ReflectSystemComponent::Reflect(m_context.get());
-            AZ::RPI::ImageMipChainAsset::Reflect(m_context.get());
-            AZ::RPI::ImageAsset::Reflect(m_context.get());
-            AZ::RPI::StreamingImageAsset::Reflect(m_context.get());
+            JE::Render::RPI::ImageMipChainAsset::Reflect(m_context.get());
+            JE::Render::RPI::ImageAsset::Reflect(m_context.get());
+            JE::Render::RPI::StreamingImageAsset::Reflect(m_context.get());
             MyAssetManagerComponent::Reflect(m_context.get());
 
             m_jsonRegistrationContext = AZStd::make_unique<AZ::JsonRegistrationContext>();

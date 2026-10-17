@@ -122,8 +122,8 @@ namespace JE
                 void UpdateMaterialInstanceProperty(const AtomToolsFramework::DynamicProperty& property);
 
                 bool AddEditorMaterialFunctors(
-                    const AZStd::vector<AZ::RPI::Ptr<AZ::RPI::MaterialFunctorSourceDataHolder>>& functorSourceDataHolders,
-                    const AZ::RPI::MaterialNameContext& nameContext);
+                    const AZStd::vector<JE::Render::RPI::Ptr<JE::Render::RPI::MaterialFunctorSourceDataHolder>>& functorSourceDataHolders,
+                    const JE::Render::RPI::MaterialNameContext& nameContext);
 
                 AZ::Crc32 GetGroupSaveStateKey(const AZStd::string& groupName) const;
                 bool IsInstanceNodePropertyModifed(const AzToolsFramework::InstanceDataNode* node) const;
@@ -133,9 +133,9 @@ namespace JE
                 AzToolsFramework::EntityIdSet m_entityIdsToEdit;
                 JE::Render::MaterialAssignmentId m_materialAssignmentId;
                 EditorMaterialComponentUtil::MaterialEditData m_editData;
-                AZ::Data::Instance<AZ::RPI::Material> m_materialInstance = {};
-                AZStd::vector<AZ::RPI::Ptr<AZ::RPI::MaterialFunctor>> m_editorFunctors = {};
-                AZ::RPI::MaterialPropertyFlags m_dirtyPropertyFlags = {};
+                AZ::Data::Instance<JE::Render::RPI::Material> m_materialInstance = {};
+                AZStd::vector<JE::Render::RPI::Ptr<JE::Render::RPI::MaterialFunctor>> m_editorFunctors = {};
+                JE::Render::RPI::MaterialPropertyFlags m_dirtyPropertyFlags = {};
                 AZStd::unordered_map<AZStd::string, AtomToolsFramework::DynamicPropertyGroup> m_groups = {};
                 bool m_internalEditNotification = {};
                 bool m_updateUI = {};

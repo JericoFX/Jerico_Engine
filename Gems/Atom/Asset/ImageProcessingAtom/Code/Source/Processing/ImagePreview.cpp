@@ -17,7 +17,7 @@
 
 #include <AzFramework/StringFunc/StringFunc.h>
 
-#include <Atom/RPI.Reflect/Image/StreamingImageAsset.h>
+#include <JE/Render/RPI/Reflect/Image/StreamingImageAsset.h>
 
 #include <QImage>
 

@@ -8,7 +8,7 @@
 
 #pragma once
 
-#include <Atom/RPI.Public/Base.h>
+#include <JE/Render/RPI/Public/Base.h>
 #include <AzCore/EBus/EBus.h>
 
 namespace AZ
@@ -30,7 +30,7 @@ namespace AZ
         public :
             static const AZ::EBusHandlerPolicy HandlerPolicy = AZ::EBusHandlerPolicy::Single;
             static const AZ::EBusAddressPolicy AddressPolicy = AZ::EBusAddressPolicy::ById;
-            using BusIdType = RPI::SceneId;
+            using BusIdType = JE::Render::RPI::SceneId;
 
             virtual SkinnedMeshSceneStats GetSceneStats() = 0;
         };

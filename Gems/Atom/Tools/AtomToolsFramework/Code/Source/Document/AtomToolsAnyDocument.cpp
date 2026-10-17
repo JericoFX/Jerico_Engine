@@ -6,9 +6,9 @@
  *
  */
 
-#include <Atom/RPI.Edit/Common/AssetUtils.h>
-#include <Atom/RPI.Edit/Common/JsonUtils.h>
-#include <Atom/RPI.Reflect/System/AnyAsset.h>
+#include <JE/Editor/Render/RPI/Edit/Common/AssetUtils.h>
+#include <JE/Editor/Render/RPI/Edit/Common/JsonUtils.h>
+#include <JE/Render/RPI/Reflect/System/AnyAsset.h>
 #include <AtomToolsFramework/Document/AtomToolsAnyDocument.h>
 #include <AtomToolsFramework/Document/AtomToolsDocumentNotificationBus.h>
 #include <AtomToolsFramework/Util/Util.h>
@@ -348,7 +348,7 @@ namespace AtomToolsFramework
 
             // Read the rapid JSON document data into the object we just created.
             AZ::JsonDeserializerSettings jsonSettings;
-            AZ::RPI::JsonReportingHelper reportingHelper;
+            JE::Render::RPI::JsonReportingHelper reportingHelper;
             reportingHelper.Attach(jsonSettings);
 
             rapidjson::Document& document = loadOutcome.GetValue();
@@ -403,7 +403,7 @@ namespace AtomToolsFramework
 
             // Create a rapid JSON document and object to serialize the document data into.
             AZ::JsonSerializerSettings settings;
-            AZ::RPI::JsonReportingHelper reportingHelper;
+            JE::Render::RPI::JsonReportingHelper reportingHelper;
             reportingHelper.Attach(settings);
 
             rapidjson::Document document;

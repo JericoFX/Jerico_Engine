@@ -8,10 +8,10 @@
 
 #pragma once
 
-#include <Atom/RPI.Public/MeshDrawPacket.h>
+#include <JE/Render/RPI/Public/MeshDrawPacket.h>
 #include <AzCore/Instance/Instance.h>
 
-namespace AZ
+namespace JE::Render
 {
     namespace RPI
     {
@@ -30,7 +30,7 @@ namespace AZ
         public:
             //! Sets which draw packet should be selected for viewing. This draw packet must appear in the 
             //! list provided to the Tick() function, or this selection will be ignored.
-            void SetSelectedDrawPacket(const RPI::MeshDrawPacket* drawPacket);
+            void SetSelectedDrawPacket(const JE::Render::RPI::MeshDrawPacket* drawPacket);
 
             void OpenDialog();
             void CloseDialog();
@@ -39,14 +39,14 @@ namespace AZ
             //! @param drawPackets is the tree of draw packets that should be listed for user selection. The selected draw packet
             //!                    will have its shader list displayed with debug information.
             //! @param selectionName is an optional name to be displayed at the top, indicating what entity or what list of draw packets is displayed.
-            bool Tick(const AZ::RPI::MeshDrawPacketLods* drawPackets, const char* selectionName = nullptr);
+            bool Tick(const JE::Render::RPI::MeshDrawPacketLods* drawPackets, const char* selectionName = nullptr);
 
         private:
 
             bool m_dialogIsOpen = false;
 
             // There are multiple ways that draw packet selection can be recalled
-            const RPI::MeshDrawPacket* m_selectedDrawPacket = nullptr;
+            const JE::Render::RPI::MeshDrawPacket* m_selectedDrawPacket = nullptr;
             size_t m_selectedLod = 0;
             size_t m_selectedDrawPacketIndex = 0;
 

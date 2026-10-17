@@ -9,8 +9,8 @@
 #include <EditorModeFeedbackSystemComponent.h>
 #include <EditorModeFeedbackFeatureProcessor.h>
 
-#include <Atom/RPI.Public/FeatureProcessorFactory.h>
-#include <Atom/RPI.Public/Scene.h>
+#include <JE/Render/RPI/Public/FeatureProcessorFactory.h>
+#include <JE/Render/RPI/Public/Scene.h>
 #include <AzCore/Component/ComponentBus.h>
 #include <AzCore/Serialization/SerializeContext.h>
 #include <AzCore/Serialization/EditContext.h>
@@ -60,7 +60,7 @@ namespace AZ
 
             AzToolsFramework::Components::EditorComponentBase::Activate();
             AZ::Interface<EditorModeFeedbackInterface>::Register(this);
-            AZ::RPI::FeatureProcessorFactory::Get()->RegisterFeatureProcessor<EditorModeFeatureProcessor>();
+            JE::Render::RPI::FeatureProcessorFactory::Get()->RegisterFeatureProcessor<EditorModeFeatureProcessor>();
             AzToolsFramework::EditorEntityContextNotificationBus::Handler::BusConnect();
         }
 
@@ -73,7 +73,7 @@ namespace AZ
             
             AzToolsFramework::EditorEntityContextNotificationBus::Handler::BusDisconnect();
             AzToolsFramework::Components::EditorComponentBase::Deactivate();
-            AZ::RPI::FeatureProcessorFactory::Get()->UnregisterFeatureProcessor<EditorModeFeatureProcessor>();
+            JE::Render::RPI::FeatureProcessorFactory::Get()->UnregisterFeatureProcessor<EditorModeFeatureProcessor>();
             AZ::Interface<EditorModeFeedbackInterface>::Unregister(this);
         }
 
@@ -106,7 +106,7 @@ namespace AZ
                 return;
             }
 
-            AZ::RPI::ScenePtr* rpiScene = mainScene->FindSubsystem<AZ::RPI::ScenePtr>();
+            JE::Render::RPI::ScenePtr* rpiScene = mainScene->FindSubsystem<JE::Render::RPI::ScenePtr>();
             if (!rpiScene)
             {
                 return;

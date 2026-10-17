@@ -9,7 +9,7 @@
 #include <AzToolsFramework/AssetBrowser/AssetBrowserBus.h>
 
 #include <AtomLyIntegration/CommonFeatures/Mesh/MeshComponentBus.h>
-#include <Atom/RPI.Reflect/Model/ModelAsset.h>
+#include <JE/Render/RPI/Reflect/Model/ModelAsset.h>
 
 #include <Editor/PropertyTypes.h>
 #include <Editor/MeshNodeHandler.h>
@@ -116,7 +116,7 @@ namespace NvCloth
 
         AZ::Data::Asset<AZ::Data::AssetData> MeshNodeHandler::GetMeshAsset(const AZ::EntityId entityId) const
         {
-            AZ::Data::Asset<AZ::RPI::ModelAsset> modelAsset;
+            AZ::Data::Asset<JE::Render::RPI::ModelAsset> modelAsset;
             AZ::Render::MeshComponentRequestBus::EventResult(
                 modelAsset, entityId, &AZ::Render::MeshComponentRequestBus::Events::GetModelAsset);
             return modelAsset;

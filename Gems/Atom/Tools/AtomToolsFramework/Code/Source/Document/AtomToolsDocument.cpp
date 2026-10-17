@@ -6,7 +6,7 @@
  *
  */
 
-#include <Atom/RPI.Edit/Common/AssetUtils.h>
+#include <JE/Editor/Render/RPI/Edit/Common/AssetUtils.h>
 #include <AtomToolsFramework/Document/AtomToolsDocument.h>
 #include <AtomToolsFramework/Document/AtomToolsDocumentNotificationBus.h>
 #include <AtomToolsFramework/Util/Util.h>
@@ -403,7 +403,7 @@ namespace AtomToolsFramework
 
     void AtomToolsDocument::SourceFileChanged(AZStd::string relativePath, AZStd::string scanFolder, [[maybe_unused]] AZ::Uuid sourceUUID)
     {
-        const auto sourcePath = AZ::RPI::AssetUtils::ResolvePathReference(scanFolder, relativePath);
+        const auto sourcePath = JE::Render::RPI::AssetUtils::ResolvePathReference(scanFolder, relativePath);
 
         if (m_absolutePath == sourcePath)
         {

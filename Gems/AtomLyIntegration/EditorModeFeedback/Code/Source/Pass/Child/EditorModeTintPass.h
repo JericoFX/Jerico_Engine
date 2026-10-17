@@ -24,7 +24,7 @@ namespace AZ
             virtual ~EditorModeTintPass() = default;
 
             //! Creates a EditorModeTintPass
-            static RPI::Ptr<EditorModeTintPass> Create(const RPI::PassDescriptor& descriptor);
+            static JE::Render::RPI::Ptr<EditorModeTintPass> Create(const JE::Render::RPI::PassDescriptor& descriptor);
 
             //! Sets the amount of tint to apply.
             void SetTintAmount(float amount);
@@ -33,7 +33,7 @@ namespace AZ
             void SetTintColor(AZ::Color color);
 
         protected:
-            EditorModeTintPass(const RPI::PassDescriptor& descriptor);
+            EditorModeTintPass(const JE::Render::RPI::PassDescriptor& descriptor);
             
             //! Pass behavior overrides
             void InitializeInternal() override;

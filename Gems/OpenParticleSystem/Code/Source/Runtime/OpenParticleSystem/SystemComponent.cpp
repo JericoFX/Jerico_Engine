@@ -8,7 +8,7 @@
 
 #include <OpenParticleSystem/Asset/ParticleAsset.h>
 #include <OpenParticleSystem/Asset/ParticleAssetHandler.h>
-#include <Atom/RPI.Public/FeatureProcessorFactory.h>
+#include <JE/Render/RPI/Public/FeatureProcessorFactory.h>
 #include <AzCore/Instance/InstanceDatabase.h>
 #include <OpenParticleSystem/ParticleComponent.h>
 #include <OpenParticleSystem/ParticleFeatureProcessor.h>
@@ -19,14 +19,14 @@ namespace OpenParticle
     void SystemComponent::Activate()
     {
         Initialize();
-        AZ::RPI::FeatureProcessorFactory::Get()
+        JE::Render::RPI::FeatureProcessorFactory::Get()
             ->RegisterFeatureProcessorWithInterface<ParticleFeatureProcessor, ParticleFeatureProcessorInterface>();
         AZ::TickBus::Handler::BusConnect();
     }
 
     void SystemComponent::Deactivate()
     {
-        AZ::RPI::FeatureProcessorFactory::Get()->UnregisterFeatureProcessor<ParticleFeatureProcessor>();
+        JE::Render::RPI::FeatureProcessorFactory::Get()->UnregisterFeatureProcessor<ParticleFeatureProcessor>();
         AZ::TickBus::Handler::BusDisconnect();
         ShutDown();
     }

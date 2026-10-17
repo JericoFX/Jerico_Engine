@@ -23,11 +23,11 @@
 
 #include <AzCore/Serialization/Json/JsonUtils.h>
 
-#include <Atom/RPI.Edit/Common/JsonReportingHelper.h>
-#include <Atom/RPI.Edit/Common/AssetUtils.h>
-#include <Atom/RPI.Edit/Common/JsonUtils.h>
-#include <Atom/RPI.Reflect/Shader/ShaderAsset.h>
-#include <Atom/RPI.Reflect/Shader/ShaderOptionGroup.h>
+#include <JE/Editor/Render/RPI/Edit/Common/JsonReportingHelper.h>
+#include <JE/Editor/Render/RPI/Edit/Common/AssetUtils.h>
+#include <JE/Editor/Render/RPI/Edit/Common/JsonUtils.h>
+#include <JE/Render/RPI/Reflect/Shader/ShaderAsset.h>
+#include <JE/Render/RPI/Reflect/Shader/ShaderOptionGroup.h>
 
 #include <Atom/RHI.Edit/Utils.h>
 #include <Atom/RHI.Edit/ShaderPlatformInterface.h>
@@ -48,12 +48,12 @@ namespace JE::Assets::RenderBuilders
         {
             [[maybe_unused]] static constexpr char ShaderBuilderUtilityName[] = "ShaderBuilderUtility";
 
-            AZ::Outcome<AZ::RPI::ShaderSourceData, AZStd::string> LoadShaderDataJson(const AZStd::string& fullPathToJsonFile, bool warningsAsErrors)
+            AZ::Outcome<JE::Render::RPI::ShaderSourceData, AZStd::string> LoadShaderDataJson(const AZStd::string& fullPathToJsonFile, bool warningsAsErrors)
             {
-                AZ::RPI::ShaderSourceData shaderSourceData;
+                JE::Render::RPI::ShaderSourceData shaderSourceData;
 
                 AZ::Outcome<rapidjson::Document, AZStd::string> loadOutcome =
-                    AZ::JsonSerializationUtils::ReadJsonFile(fullPathToJsonFile, AZ::RPI::JsonUtils::DefaultMaxFileSize);
+                    AZ::JsonSerializationUtils::ReadJsonFile(fullPathToJsonFile, JE::Render::RPI::JsonUtils::DefaultMaxFileSize);
 
                 if (!loadOutcome.IsSuccess())
                 {
@@ -63,7 +63,7 @@ namespace JE::Assets::RenderBuilders
                 rapidjson::Document document = loadOutcome.TakeValue();
 
                 AZ::JsonDeserializerSettings settings;
-                AZ::RPI::JsonReportingHelper reportingHelper;
+                JE::Render::RPI::JsonReportingHelper reportingHelper;
                 reportingHelper.Attach(settings);
 
                 AZ::JsonSerialization::Load(shaderSourceData, document, settings);
@@ -112,7 +112,7 @@ namespace JE::Assets::RenderBuilders
             AZStd::shared_ptr<ShaderFiles> PrepareSourceInput(
                 [[maybe_unused]] const char* builderName,
                 const AZStd::string& shaderSourceFileFullPath,
-                AZ::RPI::ShaderSourceData& sourceAsset)
+                JE::Render::RPI::ShaderSourceData& sourceAsset)
             {
                 auto shaderAssetSourceFileParseOutput = ShaderBuilderUtility::LoadShaderDataJson(shaderSourceFileFullPath);
                 if (!shaderAssetSourceFileParseOutput.IsSuccess())
@@ -135,8 +135,8 @@ namespace JE::Assets::RenderBuilders
                 const char* builderName,
                 const AzslSubProducts::Paths& pathOfJsonFiles,
                 AzslData& azslData,
-                AZ::RPI::ShaderResourceGroupLayoutList& srgLayoutList,
-                AZ::RPI::Ptr<AZ::RPI::ShaderOptionGroupLayout> shaderOptionGroupLayout,
+                JE::Render::RPI::ShaderResourceGroupLayoutList& srgLayoutList,
+                JE::Render::RPI::Ptr<JE::Render::RPI::ShaderOptionGroupLayout> shaderOptionGroupLayout,
                 BindingDependencies& bindingDependencies,
                 RootConstantData& rootConstantData,
                 const AZStd::string& tempFolder,
@@ -154,7 +154,7 @@ namespace JE::Assets::RenderBuilders
                 AZStd::unordered_map<int, AZ::Outcome<rapidjson::Document, AZStd::string>> outcomes;
                 for (int i : indicesOfInterest)
                 {
-                    outcomes[i] = AZ::JsonSerializationUtils::ReadJsonFile(pathOfJsonFiles[i], AZ::RPI::JsonUtils::DefaultMaxFileSize);
+                    outcomes[i] = AZ::JsonSerializationUtils::ReadJsonFile(pathOfJsonFiles[i], JE::Render::RPI::JsonUtils::DefaultMaxFileSize);
                     if (!outcomes[i].IsSuccess())
                     {
                         AZ_Error(builderName, false, "%s", outcomes[i].GetError().c_str());
@@ -217,19 +217,19 @@ namespace JE::Assets::RenderBuilders
                 return AssetBuilderSDK::ProcessJobResult_Success;
             }
    
-            AZ::RHI::ShaderHardwareStage ToAssetBuilderShaderType(AZ::RPI::ShaderStageType stageType)
+            AZ::RHI::ShaderHardwareStage ToAssetBuilderShaderType(JE::Render::RPI::ShaderStageType stageType)
             {
                 switch (stageType)
                 {
-                case AZ::RPI::ShaderStageType::Compute:
+                case JE::Render::RPI::ShaderStageType::Compute:
                     return AZ::RHI::ShaderHardwareStage::Compute;
-                case AZ::RPI::ShaderStageType::Fragment:
+                case JE::Render::RPI::ShaderStageType::Fragment:
                     return AZ::RHI::ShaderHardwareStage::Fragment;
-                case AZ::RPI::ShaderStageType::Geometry:
+                case JE::Render::RPI::ShaderStageType::Geometry:
                     return AZ::RHI::ShaderHardwareStage::Geometry;
-                case AZ::RPI::ShaderStageType::Vertex:
+                case JE::Render::RPI::ShaderStageType::Vertex:
                     return AZ::RHI::ShaderHardwareStage::Vertex;
-                case AZ::RPI::ShaderStageType::RayTracing:
+                case JE::Render::RPI::ShaderStageType::RayTracing:
                     return AZ::RHI::ShaderHardwareStage::RayTracing;
                 }
                 AZ_Assert(false, "Unable to find Shader stage given RPI ShaderStage %d", stageType);
@@ -329,7 +329,7 @@ namespace JE::Assets::RenderBuilders
             }
 
 
-            AZStd::vector<AZ::RHI::ShaderPlatformInterface*> DiscoverEnabledShaderPlatformInterfaces(const AssetBuilderSDK::PlatformInfo& info, const AZ::RPI::ShaderSourceData& shaderSourceData)
+            AZStd::vector<AZ::RHI::ShaderPlatformInterface*> DiscoverEnabledShaderPlatformInterfaces(const AssetBuilderSDK::PlatformInfo& info, const JE::Render::RPI::ShaderSourceData& shaderSourceData)
             {
                 // Request the list of valid shader platform interfaces for the target platform.
                 AZStd::vector<AZ::RHI::ShaderPlatformInterface*> platformInterfaces;
@@ -357,10 +357,10 @@ namespace JE::Assets::RenderBuilders
                 );
             }
 
-            AZStd::vector<AZ::RPI::ShaderSourceData::SupervariantInfo> GetSupervariantListFromShaderSourceData(
-                const AZ::RPI::ShaderSourceData& shaderSourceData)
+            AZStd::vector<JE::Render::RPI::ShaderSourceData::SupervariantInfo> GetSupervariantListFromShaderSourceData(
+                const JE::Render::RPI::ShaderSourceData& shaderSourceData)
             {
-                AZStd::vector<AZ::RPI::ShaderSourceData::SupervariantInfo> supervariants;
+                AZStd::vector<JE::Render::RPI::ShaderSourceData::SupervariantInfo> supervariants;
                 supervariants.reserve(shaderSourceData.m_supervariants.size() + 1);
 
                 // Add the supervariants, always making sure that:
@@ -476,7 +476,7 @@ namespace JE::Assets::RenderBuilders
 
             AZ::Outcome<AZStd::string, AZStd::string> ObtainBuildArtifactPathFromShaderAssetBuilder(
                 const uint32_t rhiUniqueIndex, const AZStd::string& platformIdentifier, const AZStd::string& shaderJsonPath,
-                const uint32_t supervariantIndex, AZ::RPI::ShaderAssetSubId shaderAssetSubId)
+                const uint32_t supervariantIndex, JE::Render::RPI::ShaderAssetSubId shaderAssetSubId)
             {
                 // Define a fallback platform ID based on the current host platform
                 AzFramework::PlatformId platformId = JE_TRAIT_SHADER_COMPILER_FALLBACK_ASSET_HOST_PLATFORM;
@@ -514,8 +514,8 @@ namespace JE::Assets::RenderBuilders
                     platformId = AzFramework::PlatformId::SERVER;
                 }
 
-                uint32_t assetSubId = AZ::RPI::ShaderAsset::MakeProductAssetSubId(rhiUniqueIndex, supervariantIndex, aznumeric_cast<uint32_t>(shaderAssetSubId));
-                auto assetIdOutcome = AZ::RPI::AssetUtils::MakeAssetId(shaderJsonPath, assetSubId);
+                uint32_t assetSubId = JE::Render::RPI::ShaderAsset::MakeProductAssetSubId(rhiUniqueIndex, supervariantIndex, aznumeric_cast<uint32_t>(shaderAssetSubId));
+                auto assetIdOutcome = JE::Render::RPI::AssetUtils::MakeAssetId(shaderJsonPath, assetSubId);
                 if (!assetIdOutcome.IsSuccess())
                 {
                     return AZ::Failure(AZStd::string::format(
@@ -544,7 +544,7 @@ namespace JE::Assets::RenderBuilders
             }
 
             AZ::RHI::Ptr<AZ::RHI::PipelineLayoutDescriptor> BuildPipelineLayoutDescriptorForApi(
-                [[maybe_unused]] const char* builderName, const AZ::RPI::ShaderResourceGroupLayoutList& srgLayoutList, const MapOfStringToStageType& shaderEntryPoints,
+                [[maybe_unused]] const char* builderName, const JE::Render::RPI::ShaderResourceGroupLayoutList& srgLayoutList, const MapOfStringToStageType& shaderEntryPoints,
                 const AZ::RHI::ShaderBuildArguments& shaderBuildArguments, const RootConstantData& rootConstantData,
                 AZ::RHI::ShaderPlatformInterface* shaderPlatformInterface, BindingDependencies& bindingDependencies /*inout*/)
             {
@@ -656,15 +656,15 @@ namespace JE::Assets::RenderBuilders
             static bool CreateShaderInputContract(
                 const AzslData& azslData,
                 const AZStd::string& vertexShaderName,
-                const AZ::RPI::ShaderOptionGroupLayout& shaderOptionGroupLayout,
+                const JE::Render::RPI::ShaderOptionGroupLayout& shaderOptionGroupLayout,
                 const AZStd::string& pathToIaJson,
-                AZ::RPI::ShaderInputContract& contract,
+                JE::Render::RPI::ShaderInputContract& contract,
                 const AZStd::string& tempFolder)
             {
                 StructData inputStruct;
                 inputStruct.m_id = "";
 
-                auto jsonOutcome = AZ::JsonSerializationUtils::ReadJsonFile(pathToIaJson, AZ::RPI::JsonUtils::DefaultMaxFileSize);
+                auto jsonOutcome = AZ::JsonSerializationUtils::ReadJsonFile(pathToIaJson, JE::Render::RPI::JsonUtils::DefaultMaxFileSize);
                 if (!jsonOutcome.IsSuccess())
                 {
                     AZ_Error(ShaderBuilderUtilityName, false, "%s", jsonOutcome.GetError().c_str());
@@ -715,7 +715,7 @@ namespace JE::Assets::RenderBuilders
                         AZStd::string expectedOptionName = AZStd::string::format(
                             "o_%s_isBound", member.m_variable.m_name.substr(strlen(OptionalInputStreamPrefix)).c_str());
 
-                        AZ::RPI::ShaderOptionIndex shaderOptionIndex = shaderOptionGroupLayout.FindShaderOptionIndex(AZ::Name{expectedOptionName});
+                        JE::Render::RPI::ShaderOptionIndex shaderOptionIndex = shaderOptionGroupLayout.FindShaderOptionIndex(AZ::Name{expectedOptionName});
                         if (!shaderOptionIndex.IsValid())
                         {
                             AZ_Error(
@@ -724,8 +724,8 @@ namespace JE::Assets::RenderBuilders
                             return false;
                         }
 
-                        const AZ::RPI::ShaderOptionDescriptor& option = shaderOptionGroupLayout.GetShaderOption(shaderOptionIndex);
-                        if (option.GetType() != AZ::RPI::ShaderOptionType::Boolean)
+                        const JE::Render::RPI::ShaderOptionDescriptor& option = shaderOptionGroupLayout.GetShaderOption(shaderOptionIndex);
+                        if (option.GetType() != JE::Render::RPI::ShaderOptionType::Boolean)
                         {
                             AZ_Error(ShaderBuilderUtilityName, false, "Shader option '%s' must be a bool.", expectedOptionName.c_str());
                             return false;
@@ -751,13 +751,13 @@ namespace JE::Assets::RenderBuilders
                 const AzslData& azslData,
                 const AZStd::string& fragmentShaderName,
                 const AZStd::string& pathToOmJson,
-                AZ::RPI::ShaderOutputContract& contract,
+                JE::Render::RPI::ShaderOutputContract& contract,
                 const AZStd::string& tempFolder)
             {
                 StructData outputStruct;
                 outputStruct.m_id = "";
 
-                auto jsonOutcome = AZ::JsonSerializationUtils::ReadJsonFile(pathToOmJson, AZ::RPI::JsonUtils::DefaultMaxFileSize);
+                auto jsonOutcome = AZ::JsonSerializationUtils::ReadJsonFile(pathToOmJson, JE::Render::RPI::JsonUtils::DefaultMaxFileSize);
                 if (!jsonOutcome.IsSuccess())
                 {
                     AZ_Error(ShaderBuilderUtilityName, false, "%s", jsonOutcome.GetError().c_str());
@@ -809,11 +809,11 @@ namespace JE::Assets::RenderBuilders
             bool CreateShaderInputAndOutputContracts(
                 const AzslData& azslData,
                 const MapOfStringToStageType& shaderEntryPoints,
-                const AZ::RPI::ShaderOptionGroupLayout& shaderOptionGroupLayout,
+                const JE::Render::RPI::ShaderOptionGroupLayout& shaderOptionGroupLayout,
                 const AZStd::string& pathToOmJson,
                 const AZStd::string& pathToIaJson,
-                AZ::RPI::ShaderInputContract& shaderInputContract,
-                AZ::RPI::ShaderOutputContract& shaderOutputContract,
+                JE::Render::RPI::ShaderInputContract& shaderInputContract,
+                JE::Render::RPI::ShaderOutputContract& shaderOutputContract,
                 size_t& colorAttachmentCount,
                 const AZStd::string& tempFolder)
             {
@@ -823,7 +823,7 @@ namespace JE::Assets::RenderBuilders
                     auto shaderEntryName = shaderEntryPoint.first;
                     auto shaderStageType = shaderEntryPoint.second;
 
-                    if (shaderStageType == AZ::RPI::ShaderStageType::Vertex)
+                    if (shaderStageType == JE::Render::RPI::ShaderStageType::Vertex)
                     {
                         const bool layoutCreated = CreateShaderInputContract(azslData, shaderEntryName, shaderOptionGroupLayout, pathToIaJson, shaderInputContract, tempFolder);
                         if (!layoutCreated)
@@ -836,7 +836,7 @@ namespace JE::Assets::RenderBuilders
                         }
                     }
 
-                    if (shaderStageType == AZ::RPI::ShaderStageType::Fragment)
+                    if (shaderStageType == JE::Render::RPI::ShaderStageType::Fragment)
                     {
                         const bool layoutCreated =
                             CreateShaderOutputContract(azslData, shaderEntryName, pathToOmJson, shaderOutputContract, tempFolder);

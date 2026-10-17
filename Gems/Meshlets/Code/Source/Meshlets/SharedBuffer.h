@@ -14,16 +14,21 @@
 #include <Atom/RHI/FreeListAllocator.h>
 #include <Atom/RHI.Reflect/Format.h>
 
-#include <Atom/RPI.Public/Shader/ShaderResourceGroup.h>
+#include <JE/Render/RPI/Public/Shader/ShaderResourceGroup.h>
 
 #include <SharedBufferInterface.h>
 
 namespace AZ
 {
-    namespace RPI
-    {
+    }
+
+namespace JE::Render::RPI
+{
         class Buffer;
     }
+
+namespace AZ
+{
 
     namespace Meshlets
     {
@@ -37,7 +42,7 @@ namespace AZ
         {
             //! Pool type to determine how a resource pool should be generated.
             //! This is used for buffers that are not part of the shared buffer.
-            RPI::CommonBufferPoolType m_poolType = RPI::CommonBufferPoolType::ReadOnly;
+            JE::Render::RPI::CommonBufferPoolType m_poolType = JE::Render::RPI::CommonBufferPoolType::ReadOnly;
             //! The format used for the buffer
             //! Should be Unknown for structured buffers, or R32 for raw buffers.
             RHI::Format m_elementFormat;
@@ -61,7 +66,7 @@ namespace AZ
 
             SrgBufferDescriptor() = default;
             SrgBufferDescriptor(
-                RPI::CommonBufferPoolType poolType,
+                JE::Render::RPI::CommonBufferPoolType poolType,
                 RHI::Format elementFormat,
                 RHI::BufferBindFlags m_bindFlags,
                 uint32_t elementSize,
@@ -111,7 +116,7 @@ namespace AZ
             void DeAllocate(RHI::VirtualAddress allocation) override;
             void DeAllocateNoSignal(RHI::VirtualAddress allocation) override;
 
-            Data::Instance<RPI::Buffer> GetBuffer() override;
+            Data::Instance<JE::Render::RPI::Buffer> GetBuffer() override;
 
             //! Update the content of an area within the shared buffer
             bool UpdateData(const void* sourceData, uint64_t sourceDataSizeInBytes, uint64_t bufferByteOffset = 0) override;
@@ -126,7 +131,7 @@ namespace AZ
             void CreateSharedBuffer(SrgBufferDescriptor& bufferDesc);
 
             AZStd::string m_bufferName = "MeshletsSharedBuffer";
-            Data::Instance<RPI::Buffer> m_buffer = nullptr;
+            Data::Instance<JE::Render::RPI::Buffer> m_buffer = nullptr;
 
             RHI::FreeListAllocator m_freeListAllocator;
             AZStd::mutex m_allocatorMutex;

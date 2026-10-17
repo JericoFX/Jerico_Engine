@@ -7,7 +7,7 @@
  */
 #pragma once
 
-#include <Atom/RPI.Public/Pass/ParentPass.h>
+#include <JE/Render/RPI/Public/Pass/ParentPass.h>
 #include <AzCore/std/containers/span.h>
 #include <AzCore/std/containers/fixed_vector.h>
 
@@ -20,9 +20,9 @@ namespace AZ
         //! class somewhat redundant, but moving forward, such class can be required to control
         //! passes activation and usage based on user activation options.
         class HairParentPass final
-            : public RPI::ParentPass
+            : public JE::Render::RPI::ParentPass
         {
-            using Base = RPI::ParentPass;
+            using Base = JE::Render::RPI::ParentPass;
             AZ_RPI_PASS(HairParentPass);
 
         public:
@@ -30,11 +30,11 @@ namespace AZ
             AZ_CLASS_ALLOCATOR(HairParentPass, SystemAllocator);
 
             virtual ~HairParentPass();
-            static RPI::Ptr<HairParentPass> Create(const RPI::PassDescriptor& descriptor);
+            static JE::Render::RPI::Ptr<HairParentPass> Create(const JE::Render::RPI::PassDescriptor& descriptor);
 
         private:
             HairParentPass() = delete;
-            explicit HairParentPass(const RPI::PassDescriptor& descriptor);
+            explicit HairParentPass(const JE::Render::RPI::PassDescriptor& descriptor);
 
             // RPI::Pass overrides...
             void BuildAttachmentsInternal() override;

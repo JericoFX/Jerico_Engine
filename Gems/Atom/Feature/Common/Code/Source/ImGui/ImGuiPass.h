@@ -15,12 +15,12 @@
 #include <Atom/RHI/DevicePipelineState.h>
 #include <Atom/RHI/StreamBufferView.h>
 
-#include <Atom/RPI.Public/Image/StreamingImage.h>
-#include <Atom/RPI.Public/Pass/RenderPass.h>
-#include <Atom/RPI.Public/PipelineState.h>
-#include <Atom/RPI.Public/Shader/ShaderResourceGroup.h>
-#include <Atom/RPI.Public/Shader/Shader.h>
-#include <Atom/RPI.Reflect/Pass/RasterPassData.h>
+#include <JE/Render/RPI/Public/Image/StreamingImage.h>
+#include <JE/Render/RPI/Public/Pass/RenderPass.h>
+#include <JE/Render/RPI/Public/PipelineState.h>
+#include <JE/Render/RPI/Public/Shader/ShaderResourceGroup.h>
+#include <JE/Render/RPI/Public/Shader/Shader.h>
+#include <JE/Render/RPI/Reflect/Pass/RasterPassData.h>
 
 #include <Atom/Feature/Base.h>
 
@@ -32,9 +32,9 @@ namespace AZ
     {
         //! Custom data for the ImGuiPassData.
         struct ImGuiPassData
-            : public RPI::RasterPassData
+            : public JE::Render::RPI::RasterPassData
         {
-            AZ_RTTI(ImGuiPassData, "{3E96AF5F-DE1E-4B3B-9833-7164AEAB7C28}", RPI::RasterPassData);
+            AZ_RTTI(ImGuiPassData, "{3E96AF5F-DE1E-4B3B-9833-7164AEAB7C28}", JE::Render::RPI::RasterPassData);
             AZ_CLASS_ALLOCATOR(ImGuiPassData, SystemAllocator);
 
             ImGuiPassData() = default;
@@ -44,7 +44,7 @@ namespace AZ
             {
                 if (auto* serializeContext = azrtti_cast<SerializeContext*>(context))
                 {
-                    serializeContext->Class<ImGuiPassData, RPI::RasterPassData>()
+                    serializeContext->Class<ImGuiPassData, JE::Render::RPI::RasterPassData>()
                         ->Version(1)
                         ->Field("isDefaultImGui", &ImGuiPassData::m_isDefaultImGui)
                         ;
@@ -56,11 +56,11 @@ namespace AZ
 
         //! This pass owns and manages activation of an Imgui context.
         class ImGuiPass
-            : public RPI::RenderPass
+            : public JE::Render::RPI::RenderPass
             , private AzFramework::InputChannelEventListener
             , private AzFramework::InputTextEventListener
         {
-            using Base = RPI::RenderPass;
+            using Base = JE::Render::RPI::RenderPass;
             AZ_RPI_PASS(ImGuiPass);
 
         public:
@@ -68,7 +68,7 @@ namespace AZ
             AZ_CLASS_ALLOCATOR(ImGuiPass, SystemAllocator);
 
             //! Creates a new ImGuiPass
-            static RPI::Ptr<ImGuiPass> Create(const RPI::PassDescriptor& descriptor);
+            static JE::Render::RPI::Ptr<ImGuiPass> Create(const JE::Render::RPI::PassDescriptor& descriptor);
 
             ~ImGuiPass();
 
@@ -85,7 +85,7 @@ namespace AZ
             bool OnInputChannelEventFiltered(const AzFramework::InputChannel& inputChannel) override;
 
         protected:
-            explicit ImGuiPass(const RPI::PassDescriptor& descriptor);
+            explicit ImGuiPass(const JE::Render::RPI::PassDescriptor& descriptor);
 
             // Pass Behaviour Overrides...
             void InitializeInternal() override;
@@ -160,10 +160,10 @@ namespace AZ
             TickHandlerFrameStart m_tickHandlerFrameStart;
             TickHandlerFrameEnd m_tickHandlerFrameEnd;
 
-            RHI::Ptr<RPI::PipelineStateForDraw> m_pipelineState;
-            Data::Instance<RPI::Shader> m_shader;
+            RHI::Ptr<JE::Render::RPI::PipelineStateForDraw> m_pipelineState;
+            Data::Instance<JE::Render::RPI::Shader> m_shader;
 
-            Data::Instance<RPI::ShaderResourceGroup> m_resourceGroup;
+            Data::Instance<JE::Render::RPI::ShaderResourceGroup> m_resourceGroup;
             RHI::ShaderInputNameIndex m_texturesIndex = "m_textures";
             RHI::ShaderInputNameIndex m_projectionMatrixIndex = "m_projectionMatrix";
             RHI::Viewport m_viewportState;
@@ -173,7 +173,7 @@ namespace AZ
 
             // List of DrawInfos that can be double or triple buffered
             BufferedDrawInfos m_drawInfos;
-            Data::Instance<RPI::StreamingImage> m_fontAtlas;
+            Data::Instance<JE::Render::RPI::StreamingImage> m_fontAtlas;
 
             AZStd::vector<ImDrawData> m_drawData;
             bool m_isDefaultImGuiPass = false;
@@ -188,8 +188,8 @@ namespace AZ
             uint32_t m_viewportWidth = 0;
             uint32_t m_viewportHeight = 0;
 
-            AZStd::unordered_map<Data::Instance<RPI::StreamingImage>, uint32_t> m_userTextures;
-            Data::Instance<RPI::Buffer> m_instanceBuffer;
+            AZStd::unordered_map<Data::Instance<JE::Render::RPI::StreamingImage>, uint32_t> m_userTextures;
+            Data::Instance<JE::Render::RPI::Buffer> m_instanceBuffer;
             RHI::StreamBufferView m_instanceBufferView;
 
             // cache the font text id

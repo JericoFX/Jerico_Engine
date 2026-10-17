@@ -7,14 +7,14 @@
  */
 
 #include <Atom/Feature/Utils/FrameCaptureBus.h>
-#include <Atom/RPI.Public/Pass/Specific/RenderToTexturePass.h>
-#include <Atom/RPI.Public/RPISystemInterface.h>
-#include <Atom/RPI.Public/RenderPipeline.h>
-#include <Atom/RPI.Public/Scene.h>
-#include <Atom/RPI.Public/Shader/ShaderResourceGroup.h>
-#include <Atom/RPI.Public/View.h>
-#include <Atom/RPI.Reflect/System/RenderPipelineDescriptor.h>
-#include <Atom/RPI.Reflect/System/SceneDescriptor.h>
+#include <JE/Render/RPI/Public/Pass/Specific/RenderToTexturePass.h>
+#include <JE/Render/RPI/Public/RPISystemInterface.h>
+#include <JE/Render/RPI/Public/RenderPipeline.h>
+#include <JE/Render/RPI/Public/Scene.h>
+#include <JE/Render/RPI/Public/Shader/ShaderResourceGroup.h>
+#include <JE/Render/RPI/Public/View.h>
+#include <JE/Render/RPI/Reflect/System/RenderPipelineDescriptor.h>
+#include <JE/Render/RPI/Reflect/System/SceneDescriptor.h>
 #include <AzCore/Interface/Interface.h>
 #include <AzCore/Math/MatrixUtils.h>
 #include <AzCore/Math/Transform.h>
@@ -43,10 +43,10 @@ namespace AtomToolsFramework
         PreviewerFeatureProcessorProviderBus::Broadcast(
             &PreviewerFeatureProcessorProviderBus::Handler::GetRequiredFeatureProcessors, featureProcessors);
 
-        AZ::RPI::SceneDescriptor sceneDesc;
+        JE::Render::RPI::SceneDescriptor sceneDesc;
         sceneDesc.m_nameId = AZ::Name("PreviewRenderer");
         sceneDesc.m_featureProcessorNames.assign(featureProcessors.begin(), featureProcessors.end());
-        m_scene = AZ::RPI::Scene::CreateScene(sceneDesc);
+        m_scene = JE::Render::RPI::Scene::CreateScene(sceneDesc);
 
         // Bind m_frameworkScene to the entity context's AzFramework::Scene
         auto sceneSystem = AzFramework::SceneSystemInterface::Get();
@@ -60,34 +60,34 @@ namespace AtomToolsFramework
         m_frameworkScene->SetSubsystem(m_entityContext.get());
 
         // Create a render pipeline from the specified asset for the window context and add the pipeline to the scene
-        AZ::RPI::RenderPipelineDescriptor pipelineDesc;
+        JE::Render::RPI::RenderPipelineDescriptor pipelineDesc;
         pipelineDesc.m_mainViewTagName = "MainCamera";
         pipelineDesc.m_name = pipelineName;
         pipelineDesc.m_rootPassTemplate = "ToolsPipelineRenderToTexture";
         
-        uint32_t numRegisteredScenes = AZ::RPI::RPISystemInterface::Get()->GetNumScenes();
+        uint32_t numRegisteredScenes = JE::Render::RPI::RPISystemInterface::Get()->GetNumScenes();
         //If there are existing registered scenes use the msaa settings set by them
         //otherwise broadcast default settings.
         if (numRegisteredScenes > 0)
         {
-            pipelineDesc.m_renderSettings.m_multisampleState = AZ::RPI::RPISystemInterface::Get()->GetApplicationMultisampleState();
+            pipelineDesc.m_renderSettings.m_multisampleState = JE::Render::RPI::RPISystemInterface::Get()->GetApplicationMultisampleState();
         }
         else
         {
-            AZ::RPI::RPISystemInterface::Get()->SetApplicationMultisampleState(pipelineDesc.m_renderSettings.m_multisampleState);
+            JE::Render::RPI::RPISystemInterface::Get()->SetApplicationMultisampleState(pipelineDesc.m_renderSettings.m_multisampleState);
         }
         
-        m_renderPipeline = AZ::RPI::RenderPipeline::CreateRenderPipeline(pipelineDesc);
+        m_renderPipeline = JE::Render::RPI::RenderPipeline::CreateRenderPipeline(pipelineDesc);
         m_scene->AddRenderPipeline(m_renderPipeline);
         m_scene->Activate();
-        AZ::RPI::RPISystemInterface::Get()->RegisterScene(m_scene);
+        JE::Render::RPI::RPISystemInterface::Get()->RegisterScene(m_scene);
         m_passHierarchy.push_back(pipelineName);
         m_passHierarchy.push_back("CopyToSwapChain");
 
         // Connect camera to pipeline's default view after camera entity activated
         AZ::Matrix4x4 viewToClipMatrix;
         AZ::MakePerspectiveFovMatrixRH(viewToClipMatrix, FieldOfView, AspectRatio, NearDist, FarDist, true);
-        m_view = AZ::RPI::View::CreateView(AZ::Name("MainCamera"), AZ::RPI::View::UsageCamera);
+        m_view = JE::Render::RPI::View::CreateView(AZ::Name("MainCamera"), JE::Render::RPI::View::UsageCamera);
         m_view->SetViewToClipMatrix(viewToClipMatrix);
         m_renderPipeline->SetDefaultView(m_view);
 
@@ -108,7 +108,7 @@ namespace AtomToolsFramework
 
         m_scene->Deactivate();
         m_scene->RemoveRenderPipeline(m_renderPipeline->GetId());
-        AZ::RPI::RPISystemInterface::Get()->UnregisterScene(m_scene);
+        JE::Render::RPI::RPISystemInterface::Get()->UnregisterScene(m_scene);
         m_frameworkScene->UnsetSubsystem(m_scene);
         m_frameworkScene->UnsetSubsystem(m_entityContext.get());
 
@@ -120,12 +120,12 @@ namespace AtomToolsFramework
         m_captureRequestQueue.push(captureRequest);
     }
 
-    AZ::RPI::ScenePtr PreviewRenderer::GetScene() const
+    JE::Render::RPI::ScenePtr PreviewRenderer::GetScene() const
     {
         return m_scene;
     }
 
-    AZ::RPI::ViewPtr PreviewRenderer::GetView() const
+    JE::Render::RPI::ViewPtr PreviewRenderer::GetView() const
     {
         return m_view;
     }
@@ -219,7 +219,7 @@ namespace AtomToolsFramework
         auto captureCompleteCallback = m_currentCaptureRequest.m_captureCompleteCallback;
         auto captureFailedCallback = m_currentCaptureRequest.m_captureFailedCallback;
         auto captureCallback =
-            [captureCompleteCallback, captureFailedCallback](const AZ::RPI::AttachmentReadback::ReadbackResult& result)
+            [captureCompleteCallback, captureFailedCallback](const JE::Render::RPI::AttachmentReadback::ReadbackResult& result)
         {
             if (result.m_dataBuffer)
             {
@@ -241,7 +241,7 @@ namespace AtomToolsFramework
             }
         };
 
-        if (auto renderToTexturePass = azrtti_cast<AZ::RPI::RenderToTexturePass*>(m_renderPipeline->GetRootPass().get()))
+        if (auto renderToTexturePass = azrtti_cast<JE::Render::RPI::RenderToTexturePass*>(m_renderPipeline->GetRootPass().get()))
         {
             renderToTexturePass->ResizeOutput(m_currentCaptureRequest.m_size, m_currentCaptureRequest.m_size);
         }
@@ -254,7 +254,7 @@ namespace AtomToolsFramework
             &AZ::Render::FrameCaptureRequestBus::Events::CapturePassAttachmentWithCallback,
             captureCallback,
             m_passHierarchy,
-            AZStd::string("Output"), AZ::RPI::PassAttachmentReadbackOption::Output);
+            AZStd::string("Output"), JE::Render::RPI::PassAttachmentReadbackOption::Output);
 
         AZ_Error("PreviewRenderer", captureOutcome.IsSuccess(),
             "Frame capture initialization failed. %s", captureOutcome.GetError().m_errorMessage.c_str());

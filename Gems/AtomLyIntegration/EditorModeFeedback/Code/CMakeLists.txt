@@ -20,7 +20,7 @@ if(PAL_TRAIT_BUILD_HOST_TOOLS)
             PUBLIC
                 AZ::AzCore
                 AZ::AzToolsFramework
-                Gem::Atom_RPI.Public
+                JE::RenderIntegration
                 Gem::Atom_Feature_Common.Public
                 Gem::CommonFeaturesAtom.Static
     )

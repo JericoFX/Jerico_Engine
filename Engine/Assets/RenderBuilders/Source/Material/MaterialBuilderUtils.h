@@ -10,7 +10,7 @@
 
 #include <AssetBuilderSDK/AssetBuilderSDK.h>
 
-namespace AZ::RPI
+namespace JE::Render::RPI
 {
     class MaterialAsset;
     class MaterialTypeAsset;
@@ -42,10 +42,10 @@ namespace JE::Assets::RenderBuilders
         //! add any image dependencies as pre-load dependencies, to the job being emitted.
         //! This will cause them to auto preload as part of loading the material, as well as make sure
         //! they are included in any pak files shipped with the product.
-        void AddImageAssetDependenciesToProduct(const AZ::RPI::MaterialAsset* materialAsset, AssetBuilderSDK::JobProduct& product);
+        void AddImageAssetDependenciesToProduct(const JE::Render::RPI::MaterialAsset* materialAsset, AssetBuilderSDK::JobProduct& product);
 
         //! Same as the above overload, but for material TYPE assets.
-        void AddImageAssetDependenciesToProduct(const AZ::RPI::MaterialTypeAsset* materialTypeAsset, AssetBuilderSDK::JobProduct& product);
+        void AddImageAssetDependenciesToProduct(const JE::Render::RPI::MaterialTypeAsset* materialTypeAsset, AssetBuilderSDK::JobProduct& product);
 
         //! Append a fingerprint value to the job descriptor using the file modification time of the specified file path
         void AddFingerprintForDependency(const AZStd::string& path, AssetBuilderSDK::JobDescriptor& jobDescriptor);

@@ -19,11 +19,16 @@
 
 namespace AZ
 {
-    namespace RPI
-    {
+    }
+
+namespace JE::Render::RPI
+{
         class BufferAsset;
         class Buffer;
     }
+
+namespace AZ
+{
 
     namespace Render
     {
@@ -51,10 +56,10 @@ namespace AZ
             }
 
             //! Returns the buffer asset that is used for all skinned mesh outputs
-            virtual Data::Asset<RPI::BufferAsset> GetBufferAsset() = 0;
+            virtual Data::Asset<JE::Render::RPI::BufferAsset> GetBufferAsset() = 0;
 
             //! Returns the buffer that is used for all skinned mesh outputs
-            virtual Data::Instance<RPI::Buffer> GetBuffer() = 0;
+            virtual Data::Instance<JE::Render::RPI::Buffer> GetBuffer() = 0;
 
             //! If the allocation succeeds, returns a ref-counted pointer to a VirtualAddress which will be automatically freed if the ref-count drops to zero
             //! If the allocation fails, returns nullptr

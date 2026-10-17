@@ -8,8 +8,8 @@
 
 #include <SkyAtmosphere/SkyAtmosphereTypeIds.h>
 #include <AzCore/Serialization/SerializeContext.h>
-#include <Atom/RPI.Public/FeatureProcessorFactory.h>
-#include <Atom/RPI.Public/Pass/PassSystemInterface.h>
+#include <JE/Render/RPI/Public/FeatureProcessorFactory.h>
+#include <JE/Render/RPI/Public/Pass/PassSystemInterface.h>
 #include <Render/SkyAtmosphereFeatureProcessor.h>
 #include <Render/SkyAtmosphereParentPass.h>
 #include <Clients/SkyAtmosphereSystemComponent.h>
@@ -68,18 +68,18 @@ namespace SkyAtmosphere
         AZ::ComponentApplicationBus::Broadcast(&AZ::ComponentApplicationBus::Events::QueryApplicationType, appType);
         if (!appType.IsHeadless())
         {
-            AZ::RPI::FeatureProcessorFactory::Get()
+            JE::Render::RPI::FeatureProcessorFactory::Get()
                 ->RegisterFeatureProcessorWithInterface<SkyAtmosphereFeatureProcessor, SkyAtmosphereFeatureProcessorInterface>();
         }
 
-        auto* passSystem = AZ::RPI::PassSystemInterface::Get();
+        auto* passSystem = JE::Render::RPI::PassSystemInterface::Get();
         AZ_Assert(passSystem, "Cannot get the pass system.");
 
-        m_loadTemplatesHandler = AZ::RPI::PassSystemInterface::OnReadyLoadTemplatesEvent::Handler(
+        m_loadTemplatesHandler = JE::Render::RPI::PassSystemInterface::OnReadyLoadTemplatesEvent::Handler(
             []()
             {
                 const char* passTemplatesFile = "Passes/SkyAtmospherePassTemplates.azasset";
-                AZ::RPI::PassSystemInterface::Get()->LoadPassTemplateMappings(passTemplatesFile);
+                JE::Render::RPI::PassSystemInterface::Get()->LoadPassTemplateMappings(passTemplatesFile);
             });
         passSystem->ConnectEvent(m_loadTemplatesHandler);
 
@@ -94,7 +94,7 @@ namespace SkyAtmosphere
         AZ::ComponentApplicationBus::Broadcast(&AZ::ComponentApplicationBus::Events::QueryApplicationType, appType);
         if (!appType.IsHeadless())
         {
-            AZ::RPI::FeatureProcessorFactory::Get()->UnregisterFeatureProcessor<SkyAtmosphereFeatureProcessor>();
+            JE::Render::RPI::FeatureProcessorFactory::Get()->UnregisterFeatureProcessor<SkyAtmosphereFeatureProcessor>();
         }
         m_loadTemplatesHandler.Disconnect();
     }

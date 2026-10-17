@@ -11,7 +11,7 @@
 #include <AzCore/Interface/Interface.h>
 #include <AzCore/Name/Name.h>
 #include <AzCore/std/function/function_template.h>
-#include <Atom/RPI.Public/DynamicDraw/DynamicDrawInterface.h>
+#include <JE/Render/RPI/Public/DynamicDraw/DynamicDrawInterface.h>
 #include <AzFramework/Viewport/ViewportId.h>
 
 namespace JE::Render::Integration
@@ -23,7 +23,7 @@ namespace JE::Render::Integration
     public:
         AZ_RTTI(PerViewportDynamicDrawInterface, "{1FF054F5-55FF-4ADB-A86D-640B15FA0395}");
 
-        using DrawContextFactory = AZStd::function<void(AZ::RHI::Ptr<AZ::RPI::DynamicDrawContext>)>;
+        using DrawContextFactory = AZStd::function<void(AZ::RHI::Ptr<JE::Render::RPI::DynamicDrawContext>)>;
         //! Register a named dynamic draw context that can be retrieved on a per-viewport basis.
         //! GetNamedDynamicDraw context can be called on a registered context name to retrieve a
         //! valid DynamicDrawContext for a given viewport.
@@ -35,7 +35,7 @@ namespace JE::Render::Integration
 
         //! Get a dynamic draw context associated with the specified viewport based on a factory registered with
         //! RegisterNamedDynamicDrawContext. This dynamic draw context will be created if it does not already exist.
-        virtual AZ::RHI::Ptr<AZ::RPI::DynamicDrawContext> GetDynamicDrawContextForViewport(AZ::Name name, AzFramework::ViewportId viewportId) = 0;
+        virtual AZ::RHI::Ptr<JE::Render::RPI::DynamicDrawContext> GetDynamicDrawContextForViewport(AZ::Name name, AzFramework::ViewportId viewportId) = 0;
     };
 
     using PerViewportDynamicDraw = AZ::Interface<PerViewportDynamicDrawInterface>;

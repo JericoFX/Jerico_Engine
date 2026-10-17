@@ -19,7 +19,7 @@ ly_add_target(
         PUBLIC
             AZ::AzCore
             AZ::AzFramework
-            Gem::Atom_RPI.Public
+            JE::RenderIntegration
             Gem::Atom_Utils.Static
             Gem::Atom_Feature_Common.Public
             Gem::CommonFeaturesAtom.Static
@@ -80,7 +80,7 @@ if(PAL_TRAIT_BUILD_HOST_TOOLS)
                 Include
         BUILD_DEPENDENCIES
             PRIVATE
-                Gem::Atom_RPI.Edit
+                JE::EditorRenderIntegration
                 Gem::GradientSignal.Editor.Static
             PUBLIC
                 AZ::AzToolsFramework
@@ -132,7 +132,7 @@ if(PAL_TRAIT_BUILD_TESTS_SUPPORTED)
                 AZ::AzFrameworkTestShared
                 AZ::AzTestShared
                 AZ::AzFramework
-                Gem::Atom_RPI.TestUtils
+                JE::RenderRpi.TestUtils
                 Gem::GradientSignal.Tests.Static
                 Gem::LmbrCentral.Mocks
                 Gem::GradientSignal.Mocks

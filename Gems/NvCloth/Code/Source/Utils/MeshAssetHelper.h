@@ -8,7 +8,7 @@
 
 #pragma once
 
-#include <Atom/RPI.Reflect/Model/ModelLodAsset.h>
+#include <JE/Render/RPI/Reflect/Model/ModelLodAsset.h>
 
 #include <Utils/AssetHelper.h>
 
@@ -32,7 +32,7 @@ namespace NvCloth
 
     private:
         bool CopyDataFromMeshes(
-            const AZStd::vector<const AZ::RPI::ModelLodAsset::Mesh*>& meshes,
+            const AZStd::vector<const JE::Render::RPI::ModelLodAsset::Mesh*>& meshes,
             MeshClothInfo& meshClothInfo);
     };
 } // namespace NvCloth

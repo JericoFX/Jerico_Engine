@@ -13,12 +13,12 @@
 #include <Util/WhiteBoxMathUtil.h>
 #include <Viewport/WhiteBoxViewportConstants.h>
 
-#include <Atom/RPI.Public/Model/Model.h>
-#include <Atom/RPI.Public/Scene.h>
-#include <Atom/RPI.Reflect/Asset/AssetUtils.h>
-#include <Atom/RPI.Reflect/Model/ModelAssetCreator.h>
-#include <Atom/RPI.Reflect/Model/ModelLodAssetCreator.h>
-#include <Atom/RPI.Reflect/ResourcePoolAssetCreator.h>
+#include <JE/Render/RPI/Public/Model/Model.h>
+#include <JE/Render/RPI/Public/Scene.h>
+#include <JE/Render/RPI/Reflect/Asset/AssetUtils.h>
+#include <JE/Render/RPI/Reflect/Model/ModelAssetCreator.h>
+#include <JE/Render/RPI/Reflect/Model/ModelLodAssetCreator.h>
+#include <JE/Render/RPI/Reflect/ResourcePoolAssetCreator.h>
 #include <JE/Render/Materials/MaterialComponentBus.h>
 #include <AzCore/Math/PackedVector3.h>
 #include <AzCore/std/limits.h>
@@ -95,7 +95,7 @@ namespace JE::Geometry
         return AreAttributesValid();
     }
 
-    void AtomRenderMesh::AddLodBuffers(AZ::RPI::ModelLodAssetCreator& modelLodCreator)
+    void AtomRenderMesh::AddLodBuffers(JE::Render::RPI::ModelLodAssetCreator& modelLodCreator)
     {
         modelLodCreator.SetLodIndexBuffer(m_indexBuffer->GetBuffer());
 
@@ -110,11 +110,11 @@ namespace JE::Geometry
         }
     }
 
-    void AtomRenderMesh::AddMeshBuffers(AZ::RPI::ModelLodAssetCreator& modelLodCreator, const JE::BSP::MaterialIndexRange& range)
+    void AtomRenderMesh::AddMeshBuffers(JE::Render::RPI::ModelLodAssetCreator& modelLodCreator, const JE::BSP::MaterialIndexRange& range)
     {
         const auto indexView = AZ::RHI::BufferViewDescriptor::CreateTyped(
             range.m_firstIndex, range.m_indexCount, AZ::RHI::Format::R32_UINT);
-        modelLodCreator.SetMeshIndexBuffer(AZ::RPI::BufferAssetView{m_indexBuffer->GetBuffer(), indexView});
+        modelLodCreator.SetMeshIndexBuffer(JE::Render::RPI::BufferAssetView{m_indexBuffer->GetBuffer(), indexView});
 
         for (auto& attribute : m_attributes)
         {
@@ -134,7 +134,7 @@ namespace JE::Geometry
             return false;
         }
 
-        AZ::RPI::ModelLodAssetCreator modelLodCreator;
+        JE::Render::RPI::ModelLodAssetCreator modelLodCreator;
         modelLodCreator.Begin(AZ::Data::AssetId(AZ::Uuid::CreateRandom()));
         AddLodBuffers(modelLodCreator);
         for (const auto& range : m_materialRanges)
@@ -170,18 +170,18 @@ namespace JE::Geometry
 
     void AtomRenderMesh::CreateModelAsset()
     {
-        AZ::RPI::ModelAssetCreator modelCreator;
+        JE::Render::RPI::ModelAssetCreator modelCreator;
         modelCreator.Begin(AZ::Data::AssetId(AZ::Uuid::CreateRandom()));
         modelCreator.SetName(ModelName);
         modelCreator.AddLodAsset(AZStd::move(m_lodAsset));
         
-        if (auto materialAsset = AZ::RPI::AssetUtils::LoadAssetByProductPath<AZ::RPI::MaterialAsset>(TexturedMaterialPath.data()))
+        if (auto materialAsset = JE::Render::RPI::AssetUtils::LoadAssetByProductPath<JE::Render::RPI::MaterialAsset>(TexturedMaterialPath.data()))
         {
             // The fallback instance is private to this entity; native MaterialComponent owns overrides.
-            m_materialInstance = AZ::RPI::Material::Create(materialAsset);
+            m_materialInstance = JE::Render::RPI::Material::Create(materialAsset);
             for (const auto& range : m_materialRanges)
             {
-                AZ::RPI::ModelMaterialSlot materialSlot;
+                JE::Render::RPI::ModelMaterialSlot materialSlot;
                 materialSlot.m_stableId = range.m_materialSlot;
                 materialSlot.m_displayName = AZ::Name(AZStd::string::format("Surface slot %u", range.m_materialSlot));
                 materialSlot.m_defaultMaterialAsset = materialAsset;
@@ -199,9 +199,9 @@ namespace JE::Geometry
 
     bool AtomRenderMesh::CreateModel()
     {
-        m_model = AZ::RPI::Model::FindOrCreate(m_modelAsset);
+        m_model = JE::Render::RPI::Model::FindOrCreate(m_modelAsset);
         m_meshFeatureProcessor =
-            AZ::RPI::Scene::GetFeatureProcessorForEntity<AZ::Render::MeshFeatureProcessorInterface>(m_entityId);
+            JE::Render::RPI::Scene::GetFeatureProcessorForEntity<AZ::Render::MeshFeatureProcessorInterface>(m_entityId);
 
         if (!m_meshFeatureProcessor)
         {

@@ -10,9 +10,9 @@
 #include <CoreLights/DepthExponentiationPass.h>
 
 #include <Atom/Feature/CoreLights/EsmShadowmapsPassData.h>
-#include <Atom/RPI.Public/Image/ImageSystemInterface.h>
-#include <Atom/RPI.Public/Pass/ComputePass.h>
-#include <Atom/RPI.Public/Pass/PassUtils.h>
+#include <JE/Render/RPI/Public/Image/ImageSystemInterface.h>
+#include <JE/Render/RPI/Public/Pass/ComputePass.h>
+#include <JE/Render/RPI/Public/Pass/PassUtils.h>
 #include <Math/MathFilterDescriptor.h>
 #include <Math/MathFilter.h>
 
@@ -22,15 +22,15 @@ namespace AZ
     {
         // --- Pass Creation ---
 
-        RPI::Ptr<EsmShadowmapsPass> EsmShadowmapsPass::Create(const RPI::PassDescriptor& descriptor)
+        JE::Render::RPI::Ptr<EsmShadowmapsPass> EsmShadowmapsPass::Create(const JE::Render::RPI::PassDescriptor& descriptor)
         {
             return aznew EsmShadowmapsPass(descriptor);
         }
 
-        EsmShadowmapsPass::EsmShadowmapsPass(const RPI::PassDescriptor& descriptor)
+        EsmShadowmapsPass::EsmShadowmapsPass(const JE::Render::RPI::PassDescriptor& descriptor)
             : Base(descriptor)
         {
-            const EsmShadowmapsPassData* esmData = RPI::PassUtils::GetPassData<EsmShadowmapsPassData>(descriptor);
+            const EsmShadowmapsPassData* esmData = JE::Render::RPI::PassUtils::GetPassData<EsmShadowmapsPassData>(descriptor);
 
             if (!esmData)
             {
@@ -61,12 +61,12 @@ namespace AZ
             return m_lightType == EsmLightType::Projected;
         }
 
-        void EsmShadowmapsPass::SetShadowmapIndexTableBuffer(const Data::Instance<RPI::Buffer>& tableBuffer)
+        void EsmShadowmapsPass::SetShadowmapIndexTableBuffer(const Data::Instance<JE::Render::RPI::Buffer>& tableBuffer)
         {
             m_shadowmapIndexTableBuffer = tableBuffer;
         }
 
-        void EsmShadowmapsPass::SetFilterParameterBuffer(const Data::Instance<RPI::Buffer>& dataBuffer)
+        void EsmShadowmapsPass::SetFilterParameterBuffer(const Data::Instance<JE::Render::RPI::Buffer>& dataBuffer)
         {
             m_filterParameterBuffer = dataBuffer;
         }
@@ -76,7 +76,7 @@ namespace AZ
             m_esmExponent = exponent;
         }
 
-        void EsmShadowmapsPass::SetBlurParameters(Data::Instance<RPI::ShaderResourceGroup> srg, const uint32_t childPassIndex)
+        void EsmShadowmapsPass::SetBlurParameters(Data::Instance<JE::Render::RPI::ShaderResourceGroup> srg, const uint32_t childPassIndex)
         {
             if (m_shadowmapIndexTableBufferIndices[childPassIndex].IsNull())
             {
@@ -93,7 +93,7 @@ namespace AZ
             srg->SetConstant(srg->FindShaderInputConstantIndex(Name("m_esmExponent")), m_esmExponent);
         }
 
-        void EsmShadowmapsPass::SetKawaseBlurSpecificParameters(Data::Instance<RPI::ShaderResourceGroup> srg, uint32_t kawaseBlurIndex)
+        void EsmShadowmapsPass::SetKawaseBlurSpecificParameters(Data::Instance<JE::Render::RPI::ShaderResourceGroup> srg, uint32_t kawaseBlurIndex)
         {
             if (m_kawaseBlurConstantIndices[kawaseBlurIndex].IsNull())
             {
@@ -128,7 +128,7 @@ namespace AZ
                     {
                         // Make sure at least a dummy image is attached if lacking any other attachments.
                         // This may be necessary for a few frames during initialization.
-                        auto tempAttachmentImage = RPI::ImageSystemInterface::Get()->GetSystemAttachmentImage(RHI::Format::R16_FLOAT);
+                        auto tempAttachmentImage = JE::Render::RPI::ImageSystemInterface::Get()->GetSystemAttachmentImage(RHI::Format::R16_FLOAT);
                         AttachImageToSlot(Name("EsmShadowmaps"), tempAttachmentImage);
                     }
                 }
@@ -148,7 +148,7 @@ namespace AZ
                 return;
             }
 
-            for (const RPI::Ptr<RPI::Pass>& child : GetChildren())
+            for (const JE::Render::RPI::Ptr<JE::Render::RPI::Pass>& child : GetChildren())
             {
                 child->SetEnabled(enabled);
             }
@@ -174,7 +174,7 @@ namespace AZ
             m_computationEnabled = enabled;
         }
 
-        void EsmShadowmapsPass::SetAtlasAttachmentImage(Data::Instance<RPI::AttachmentImage> atlasAttachmentIamge)
+        void EsmShadowmapsPass::SetAtlasAttachmentImage(Data::Instance<JE::Render::RPI::AttachmentImage> atlasAttachmentIamge)
         {
             if (m_atlasAttachmentImage != atlasAttachmentIamge)
             {
@@ -185,7 +185,7 @@ namespace AZ
 
         void EsmShadowmapsPass::UpdateChildren()
         {
-            const RPI::PassAttachmentBinding& inputBinding = GetInputBinding(0);
+            const JE::Render::RPI::PassAttachmentBinding& inputBinding = GetInputBinding(0);
 
             if (!inputBinding.GetAttachment())
             {
@@ -197,15 +197,15 @@ namespace AZ
             m_shadowmapImageSize = inputBinding.GetAttachment()->m_descriptor.m_image.m_size;
             m_shadowmapArraySize = inputBinding.GetAttachment()->m_descriptor.m_image.m_arraySize;
 
-            const AZStd::span<const RPI::Ptr<RPI::Pass>>& children = GetChildren();
+            const AZStd::span<const JE::Render::RPI::Ptr<JE::Render::RPI::Pass>>& children = GetChildren();
             AZ_Assert(children.size() == EsmChildPassKindCount, "[EsmShadowmapsPass '%s'] The count of children is wrong.", GetPathName().GetCStr());
 
             for (uint32_t childPassIndex = 0; childPassIndex < EsmChildPassKindCount; ++childPassIndex)
             {
-                RPI::ComputePass* child = azrtti_cast<RPI::ComputePass*>(children[childPassIndex].get());
+                JE::Render::RPI::ComputePass* child = azrtti_cast<JE::Render::RPI::ComputePass*>(children[childPassIndex].get());
                 AZ_Assert(child, "[EsmShadowmapsPass '%s'] A child does not compute.", GetPathName().GetCStr());
 
-                Data::Instance<RPI::ShaderResourceGroup> srg = child->GetShaderResourceGroup();
+                Data::Instance<JE::Render::RPI::ShaderResourceGroup> srg = child->GetShaderResourceGroup();
 
                 SetBlurParameters(srg, childPassIndex);
                 if (childPassIndex >= aznumeric_cast<uint32_t>(EsmChildPassKind::KawaseBlur0))

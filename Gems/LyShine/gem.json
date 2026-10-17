@@ -21,7 +21,6 @@
     "documentation_url": "https://www.o3de.org/docs/user-guide/gems/reference/ui/lyshine/",
     "dependencies": [
         "LmbrCentral",
-        "Atom_RPI",
         "Atom",
         "AtomFont",
         "TextureAtlas",

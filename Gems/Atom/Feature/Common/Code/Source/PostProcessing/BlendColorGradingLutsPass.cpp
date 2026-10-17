@@ -10,9 +10,9 @@
 #include <Atom/Feature/ACES/AcesDisplayMapperFeatureProcessor.h>
 
 #include <Atom/RHI/FrameGraphAttachmentInterface.h>
-#include <Atom/RPI.Public/RenderPipeline.h>
-#include <Atom/RPI.Public/Scene.h>
-#include <Atom/RPI.Reflect/Shader/ShaderOptionGroup.h>
+#include <JE/Render/RPI/Public/RenderPipeline.h>
+#include <JE/Render/RPI/Public/Scene.h>
+#include <JE/Render/RPI/Reflect/Shader/ShaderOptionGroup.h>
 
 #include <PostProcess/PostProcessFeatureProcessor.h>
 
@@ -22,14 +22,14 @@ namespace AZ
     {
         static const char* const NumSourceLutsShaderVariantOptionName{ "o_numSourceLuts" };
 
-        RPI::Ptr<BlendColorGradingLutsPass> BlendColorGradingLutsPass::Create(const RPI::PassDescriptor& descriptor)
+        JE::Render::RPI::Ptr<BlendColorGradingLutsPass> BlendColorGradingLutsPass::Create(const JE::Render::RPI::PassDescriptor& descriptor)
         {
-            RPI::Ptr<BlendColorGradingLutsPass> pass = aznew BlendColorGradingLutsPass(descriptor);
+            JE::Render::RPI::Ptr<BlendColorGradingLutsPass> pass = aznew BlendColorGradingLutsPass(descriptor);
             return pass;
         }
 
-        BlendColorGradingLutsPass::BlendColorGradingLutsPass(const RPI::PassDescriptor& descriptor)
-            : RPI::ComputePass(descriptor)
+        BlendColorGradingLutsPass::BlendColorGradingLutsPass(const JE::Render::RPI::PassDescriptor& descriptor)
+            : JE::Render::RPI::ComputePass(descriptor)
             , m_numSourceLutsShaderVariantOptionName(NumSourceLutsShaderVariantOptionName)
         {
         }
@@ -60,9 +60,9 @@ namespace AZ
             for (uint32_t shaderVariantIndex = 0; shaderVariantIndex < totalVariantCount; ++shaderVariantIndex)
             {
                 auto shaderOption = m_shader->CreateShaderOptionGroup();
-                shaderOption.SetValue(m_numSourceLutsShaderVariantOptionName, RPI::ShaderOptionValue{ shaderVariantIndex });
+                shaderOption.SetValue(m_numSourceLutsShaderVariantOptionName, JE::Render::RPI::ShaderOptionValue{ shaderVariantIndex });
 
-                RPI::ShaderVariant shaderVariant = m_shader->GetVariant(shaderOption.GetShaderVariantId());
+                JE::Render::RPI::ShaderVariant shaderVariant = m_shader->GetVariant(shaderOption.GetShaderVariantId());
 
                 RHI::PipelineStateDescriptorForDispatch pipelineStateDescriptor;
                 shaderVariant.ConfigurePipelineState(pipelineStateDescriptor, shaderOption);
@@ -94,7 +94,7 @@ namespace AZ
             if (!m_shaderVariant[m_currentShaderVariantIndex].m_isFullyBaked)
             {
                 auto shaderOption = m_shader->CreateShaderOptionGroup();
-                shaderOption.SetValue(m_numSourceLutsShaderVariantOptionName, RPI::ShaderOptionValue{ m_numSourceLuts });
+                shaderOption.SetValue(m_numSourceLutsShaderVariantOptionName, JE::Render::RPI::ShaderOptionValue{ m_numSourceLuts });
                 m_currentShaderVariantKeyFallbackValue = shaderOption.GetShaderVariantKeyFallbackValue();
             }
             m_needToUpdateShaderVariant = false;
@@ -412,11 +412,11 @@ namespace AZ
 
         LookModificationSettings* BlendColorGradingLutsPass::GetLookModificationSettings() const
         {
-            AZ::RPI::Scene* scene = GetScene();
+            JE::Render::RPI::Scene* scene = GetScene();
             if (scene)
             {
                 PostProcessFeatureProcessor* fp = scene->GetFeatureProcessor<PostProcessFeatureProcessor>();
-                AZ::RPI::ViewPtr view = m_pipeline->GetFirstView(GetPipelineViewTag());
+                JE::Render::RPI::ViewPtr view = m_pipeline->GetFirstView(GetPipelineViewTag());
                 if (fp)
                 {
                     PostProcessSettings* postProcessSettings = fp->GetLevelSettingsFromView(view);

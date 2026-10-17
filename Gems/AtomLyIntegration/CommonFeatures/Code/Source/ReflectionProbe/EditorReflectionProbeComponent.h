@@ -75,7 +75,7 @@ namespace AZ
             bool m_useBakedCubemap = true;
             CubeMapSpecularQualityLevel m_bakedCubeMapQualityLevel = CubeMapSpecularQualityLevel::Medium;
             AZStd::string m_bakedCubeMapRelativePath;
-            Data::Asset<RPI::StreamingImageAsset> m_authoredCubeMapAsset;
+            Data::Asset<JE::Render::RPI::StreamingImageAsset> m_authoredCubeMapAsset;
             float m_bakeExposure = 0.0f;
 
             // handler for the inner extents being updated

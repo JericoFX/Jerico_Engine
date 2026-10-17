@@ -6,7 +6,7 @@
  *
  */
 
-#include <Atom/RPI.Edit/Common/AssetUtils.h>
+#include <JE/Editor/Render/RPI/Edit/Common/AssetUtils.h>
 #include <AtomToolsFramework/AssetBrowser/AtomToolsAssetBrowserInteractions.h>
 #include <AtomToolsFramework/Document/AtomToolsDocumentSystemRequestBus.h>
 #include <AtomToolsFramework/Util/Util.h>

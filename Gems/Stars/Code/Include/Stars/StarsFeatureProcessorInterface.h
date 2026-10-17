@@ -8,7 +8,7 @@
 
 #pragma once
 
-#include <Atom/RPI.Public/FeatureProcessor.h>
+#include <JE/Render/RPI/Public/FeatureProcessor.h>
 
 namespace AZ::Render
 {
@@ -17,10 +17,10 @@ namespace AZ::Render
     static const float StarsDefaultRadiusFactor = 7.0f;
 
     class StarsFeatureProcessorInterface
-        : public RPI::FeatureProcessor
+        : public JE::Render::RPI::FeatureProcessor
     {
     public:
-        AZ_RTTI(AZ::Render::StarsFeatureProcessorInterface, "{7ECE8A5E-366B-4942-B6F9-370DC6017927}", AZ::RPI::FeatureProcessor);
+        AZ_RTTI(AZ::Render::StarsFeatureProcessorInterface, "{7ECE8A5E-366B-4942-B6F9-370DC6017927}", JE::Render::RPI::FeatureProcessor);
 
         struct StarVertex 
         {

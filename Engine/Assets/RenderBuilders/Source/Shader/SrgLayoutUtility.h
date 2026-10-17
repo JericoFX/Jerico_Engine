@@ -11,7 +11,7 @@
 #include <AzCore/base.h>
 
 #include "CommonFiles/CommonTypes.h"
-#include <Atom/RPI.Reflect/Shader/ShaderAsset.h>
+#include <JE/Render/RPI/Reflect/Shader/ShaderAsset.h>
 #include "ShaderBuilderUtility.h" 
 
 namespace JE::Assets::RenderBuilders
@@ -24,7 +24,7 @@ namespace JE::Assets::RenderBuilders
             bool LoadShaderResourceGroupLayouts(
                 [[maybe_unused]] const char* builderName,
                 const SrgDataContainer& resourceGroups,
-                AZ::RPI::ShaderResourceGroupLayoutList& srgLayoutList);
+                JE::Render::RPI::ShaderResourceGroupLayoutList& srgLayoutList);
 
         }  // SrgLayoutUtility namespace
     } // ShaderBuilder namespace

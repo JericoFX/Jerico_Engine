@@ -39,11 +39,11 @@ namespace AZ
 
         private:
 
-            bool UpdateImageAsset(Data::Asset<RPI::StreamingImageAsset>& asset1, const char* asset1Suffix, const char* asset1Name,
-                                  Data::Asset<RPI::StreamingImageAsset>& asset2, const char* asset2Suffix, const char* asset2Name);
+            bool UpdateImageAsset(Data::Asset<JE::Render::RPI::StreamingImageAsset>& asset1, const char* asset1Suffix, const char* asset1Name,
+                                  Data::Asset<JE::Render::RPI::StreamingImageAsset>& asset2, const char* asset2Suffix, const char* asset2Name);
 
-            Data::Asset<RPI::StreamingImageAsset> m_specularImageAsset;
-            Data::Asset<RPI::StreamingImageAsset> m_diffuseImageAsset;
+            Data::Asset<JE::Render::RPI::StreamingImageAsset> m_specularImageAsset;
+            Data::Asset<JE::Render::RPI::StreamingImageAsset> m_diffuseImageAsset;
             float m_exposure = 0.0f;
         };
     } // namespace Render

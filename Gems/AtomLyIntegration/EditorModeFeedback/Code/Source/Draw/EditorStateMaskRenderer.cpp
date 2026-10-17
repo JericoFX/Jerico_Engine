@@ -16,7 +16,7 @@ namespace AZ::Render
     }
 
     void EditorStateMaskRenderer::RenderMaskEntities(
-        Data::Instance<RPI::Material> maskMaterial, const AzToolsFramework::EntityIdSet& entityIds)
+        Data::Instance<JE::Render::RPI::Material> maskMaterial, const AzToolsFramework::EntityIdSet& entityIds)
     {
         if (entityIds.empty())
         {

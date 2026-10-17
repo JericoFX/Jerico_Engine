@@ -16,10 +16,10 @@
 #include <Atom/RHI/DeviceDrawItem.h>
 #include <Atom/RHI/ScopeProducer.h>
 
-#include <Atom/RPI.Reflect/Shader/ShaderVariantKey.h>
-#include <Atom/RPI.Public/Pass/FullscreenTrianglePass.h>
-#include <Atom/RPI.Public/Shader/Shader.h>
-#include <Atom/RPI.Public/Shader/ShaderResourceGroup.h>
+#include <JE/Render/RPI/Reflect/Shader/ShaderVariantKey.h>
+#include <JE/Render/RPI/Public/Pass/FullscreenTrianglePass.h>
+#include <JE/Render/RPI/Public/Shader/Shader.h>
+#include <JE/Render/RPI/Public/Shader/ShaderResourceGroup.h>
 
 #include <Atom/Feature/ACES/AcesDisplayMapperFeatureProcessor.h>
 
@@ -35,11 +35,11 @@ namespace AZ
          *  The look modification composite pass. If color grading LUTs are enabled, this pass will apply the blended LUT.
          */
         class LookModificationCompositePass
-            : public AZ::RPI::FullscreenTrianglePass
+            : public JE::Render::RPI::FullscreenTrianglePass
             , public PostProcessingShaderOptionBase
         {
         public:
-            AZ_RTTI(LookModificationCompositePass, "{D7DF3E8A-B642-4D51-ABC2-ADB2B60FCE1D}", AZ::RPI::FullscreenTrianglePass);
+            AZ_RTTI(LookModificationCompositePass, "{D7DF3E8A-B642-4D51-ABC2-ADB2B60FCE1D}", JE::Render::RPI::FullscreenTrianglePass);
             AZ_CLASS_ALLOCATOR(LookModificationCompositePass, SystemAllocator);
 
             enum class SampleQuality : uint8_t
@@ -52,7 +52,7 @@ namespace AZ
             virtual ~LookModificationCompositePass() = default;
 
             //! Creates a LookModificationPass
-            static RPI::Ptr<LookModificationCompositePass> Create(const RPI::PassDescriptor& descriptor);
+            static JE::Render::RPI::Ptr<LookModificationCompositePass> Create(const JE::Render::RPI::PassDescriptor& descriptor);
 
             //! Set whether exposure control is enabled
             void SetExposureControlEnabled(bool enabled);
@@ -63,7 +63,7 @@ namespace AZ
             void SetSampleQuality(SampleQuality sampleQuality);
 
         protected:
-            LookModificationCompositePass(const RPI::PassDescriptor& descriptor);
+            LookModificationCompositePass(const JE::Render::RPI::PassDescriptor& descriptor);
             
             //! Pass behavior overrides
             void InitializeInternal() override;

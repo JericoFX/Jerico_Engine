@@ -10,14 +10,14 @@
 
 #include <Atom/Utils/ImGuiShaderUtils.h>
 #include <imgui/imgui.h>
-#include <Atom/RPI.Public/Material/Material.h>
-#include <Atom/RPI.Public/MeshDrawPacket.h>
+#include <JE/Render/RPI/Public/Material/Material.h>
+#include <JE/Render/RPI/Public/MeshDrawPacket.h>
 
 #include <AzCore/Casting/numeric_cast.h>
 
 namespace AZ::Render
 {
-    inline void ImGuiMaterialDetails::SetSelectedDrawPacket(const RPI::MeshDrawPacket* drawPacket)
+    inline void ImGuiMaterialDetails::SetSelectedDrawPacket(const JE::Render::RPI::MeshDrawPacket* drawPacket)
     {
         m_selectedDrawPacket = drawPacket;
 
@@ -40,7 +40,7 @@ namespace AZ::Render
         m_dialogIsOpen = false;
     }
 
-    inline bool ImGuiMaterialDetails::Tick(const AZ::RPI::MeshDrawPacketLods* drawPackets, const char* selectionName)
+    inline bool ImGuiMaterialDetails::Tick(const JE::Render::RPI::MeshDrawPacketLods* drawPackets, const char* selectionName)
     {
         if (m_dialogIsOpen)
         {
@@ -57,18 +57,18 @@ namespace AZ::Render
                 if (drawPackets)
                 {
                     // First determine which draw packet is currently selected, if any
-                    const RPI::MeshDrawPacket* currentSelectedDrawPacket = nullptr;
+                    const JE::Render::RPI::MeshDrawPacket* currentSelectedDrawPacket = nullptr;
                     {
-                        const RPI::MeshDrawPacket* explicitSelectedDrawPacket = nullptr;
-                        const RPI::MeshDrawPacket* indexSelectedDrawPacket = nullptr;
+                        const JE::Render::RPI::MeshDrawPacket* explicitSelectedDrawPacket = nullptr;
+                        const JE::Render::RPI::MeshDrawPacket* indexSelectedDrawPacket = nullptr;
 
                         // The first priority for draw packet selection is to use the explicitly set m_selectedDrawPacket
                         for (size_t lod = 0; lod < drawPackets->size(); ++lod)
                         {
-                            const AZ::RPI::MeshDrawPacketList& drawPacketsOneLod = (*drawPackets)[lod];
+                            const JE::Render::RPI::MeshDrawPacketList& drawPacketsOneLod = (*drawPackets)[lod];
                             for (size_t drawPacketIndex = 0; drawPacketIndex < drawPacketsOneLod.size(); ++drawPacketIndex)
                             {
-                                const AZ::RPI::MeshDrawPacket& drawPacket = drawPacketsOneLod[drawPacketIndex];
+                                const JE::Render::RPI::MeshDrawPacket& drawPacket = drawPacketsOneLod[drawPacketIndex];
                                 if (m_selectedDrawPacket == &drawPacket)
                                 {
                                     explicitSelectedDrawPacket = &drawPacket;
@@ -88,14 +88,14 @@ namespace AZ::Render
                     {
                         for (size_t lod = 0; lod < drawPackets->size(); ++lod)
                         {
-                            const AZ::RPI::MeshDrawPacketList& drawPacketsOneLod = (*drawPackets)[lod];
+                            const JE::Render::RPI::MeshDrawPacketList& drawPacketsOneLod = (*drawPackets)[lod];
 
                             ImGuiTreeNodeFlags lodNodeFlags = ImGuiTreeNodeFlags_DefaultOpen;
                             if (ImGui::TreeNodeEx(AZStd::string::format("LOD %zu", lod).c_str(), lodNodeFlags))
                             {
                                 for (size_t drawPacketIndex = 0; drawPacketIndex < drawPacketsOneLod.size(); ++drawPacketIndex)
                                 {
-                                    const AZ::RPI::MeshDrawPacket& drawPacket = drawPacketsOneLod[drawPacketIndex];
+                                    const JE::Render::RPI::MeshDrawPacket& drawPacket = drawPacketsOneLod[drawPacketIndex];
 
                                     AZStd::string drawPacketNodeId = AZStd::string::format("DrawPacket[%zu][%zu]", lod, drawPacketIndex);
 
@@ -135,7 +135,7 @@ namespace AZ::Render
 
                             for (size_t shaderIndex = 0; shaderIndex < currentSelectedDrawPacket->GetActiveShaderList().size(); ++shaderIndex)
                             {
-                                const AZ::RPI::MeshDrawPacket::ShaderData& shaderData = currentSelectedDrawPacket->GetActiveShaderList()[shaderIndex];
+                                const JE::Render::RPI::MeshDrawPacket::ShaderData& shaderData = currentSelectedDrawPacket->GetActiveShaderList()[shaderIndex];
 
                                 const ImGuiTreeNodeFlags shaderNodeFlags = ImGuiTreeNodeFlags_DefaultOpen;
 

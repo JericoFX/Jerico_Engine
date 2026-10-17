@@ -6,8 +6,8 @@
  *
  */
 
-#include <Atom/RPI.Public/ViewportContext.h>
-#include <Atom/RPI.Public/ViewportContextBus.h>
+#include <JE/Render/RPI/Public/ViewportContext.h>
+#include <JE/Render/RPI/Public/ViewportContextBus.h>
 #include <AtomToolsFramework/Viewport/ModularViewportCameraController.h>
 #include <AzCore/Console/IConsole.h>
 #include <AzCore/Interface/Interface.h>
@@ -47,9 +47,9 @@ namespace AtomToolsFramework
     }
 
     // convenience function to access the ViewportContext for the given ViewportId.
-    static AZ::RPI::ViewportContextPtr RetrieveViewportContext(const AzFramework::ViewportId viewportId)
+    static JE::Render::RPI::ViewportContextPtr RetrieveViewportContext(const AzFramework::ViewportId viewportId)
     {
-        auto viewportContextManager = AZ::Interface<AZ::RPI::ViewportContextRequestsInterface>::Get();
+        auto viewportContextManager = AZ::Interface<JE::Render::RPI::ViewportContextRequestsInterface>::Get();
         if (!viewportContextManager)
         {
             return nullptr;
@@ -87,7 +87,7 @@ namespace AtomToolsFramework
         }
     }
 
-    void ModularCameraViewportContextImpl::ConnectViewMatrixChangedHandler(AZ::RPI::MatrixChangedEvent::Handler& handler)
+    void ModularCameraViewportContextImpl::ConnectViewMatrixChangedHandler(JE::Render::RPI::MatrixChangedEvent::Handler& handler)
     {
         if (auto viewportContext = RetrieveViewportContext(m_viewportId))
         {
@@ -187,7 +187,7 @@ namespace AtomToolsFramework
             }
         };
 
-        m_cameraViewMatrixChangeHandler = AZ::RPI::MatrixChangedEvent::Handler(handleCameraChangeFn);
+        m_cameraViewMatrixChangeHandler = JE::Render::RPI::MatrixChangedEvent::Handler(handleCameraChangeFn);
         m_modularCameraViewportContext->ConnectViewMatrixChangedHandler(m_cameraViewMatrixChangeHandler);
 
         ModularViewportCameraControllerRequestBus::Handler::BusConnect(viewportId);
@@ -440,7 +440,7 @@ namespace AtomToolsFramework
             AZ::Matrix4x4::CreateFromMatrix3x4(AzFramework::CameraViewFromCameraTransform(AZ::Matrix3x4::CreateFromTransform(transform))));
     }
 
-    void PlaceholderModularCameraViewportContextImpl::ConnectViewMatrixChangedHandler(AZ::RPI::MatrixChangedEvent::Handler& handler)
+    void PlaceholderModularCameraViewportContextImpl::ConnectViewMatrixChangedHandler(JE::Render::RPI::MatrixChangedEvent::Handler& handler)
     {
         handler.Connect(m_viewMatrixChangedEvent);
     }

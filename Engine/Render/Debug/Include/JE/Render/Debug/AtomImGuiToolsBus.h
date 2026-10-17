@@ -11,9 +11,9 @@
 #include <AzCore/EBus/EBus.h>
 #include <AzCore/Component/ComponentBus.h>
 #include <AzCore/Component/EntityId.h>
-#include <Atom/RPI.Public/MeshDrawPacket.h>
+#include <JE/Render/RPI/Public/MeshDrawPacket.h>
 
-namespace AZ
+namespace JE::Render
 {
     namespace RPI
     {
@@ -38,7 +38,7 @@ namespace JE::Render::Debug
     class JE_RENDER_DEBUG_API AtomImGuiMeshCallbacks : public AZ::ComponentBus
     {
     public:
-        virtual const AZ::RPI::MeshDrawPacketLods* GetDrawPackets() const = 0;
+        virtual const JE::Render::RPI::MeshDrawPacketLods* GetDrawPackets() const = 0;
     };
     using AtomImGuiMeshCallbackBus = AZ::EBus<AtomImGuiMeshCallbacks>;
 

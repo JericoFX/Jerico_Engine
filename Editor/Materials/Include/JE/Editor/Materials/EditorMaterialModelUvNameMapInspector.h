@@ -10,9 +10,9 @@
 
 #include <JE/Editor/Materials/Base.h>
 
-#include <Atom/RPI.Edit/Material/MaterialSourceData.h>
-#include <Atom/RPI.Edit/Material/MaterialTypeSourceData.h>
-#include <Atom/RPI.Reflect/Material/MaterialAsset.h>
+#include <JE/Editor/Render/RPI/Edit/Material/MaterialSourceData.h>
+#include <JE/Editor/Render/RPI/Edit/Material/MaterialTypeSourceData.h>
+#include <JE/Render/RPI/Reflect/Material/MaterialAsset.h>
 #include <JE/Render/Materials/MaterialAssignment.h>
 #include <AzCore/Asset/AssetCommon.h>
 #include <AzCore/std/containers/vector.h>
@@ -30,7 +30,7 @@ namespace JE
     {
         namespace EditorMaterialComponentInspector
         {
-            using MaterialModelUvOverrideMapChangedCallBack = AZStd::function<void(const AZ::RPI::MaterialModelUvOverrideMap&)>;
+            using MaterialModelUvOverrideMapChangedCallBack = AZStd::function<void(const JE::Render::RPI::MaterialModelUvOverrideMap&)>;
 
             class JE_EDITOR_MATERIALS_API MaterialModelUvNameMapInspector
                 : public AtomToolsFramework::InspectorWidget
@@ -42,7 +42,7 @@ namespace JE
 
                 explicit MaterialModelUvNameMapInspector(
                     const AZ::Data::AssetId& assetId,
-                    const AZ::RPI::MaterialModelUvOverrideMap& matModUvOverrides,
+                    const JE::Render::RPI::MaterialModelUvOverrideMap& matModUvOverrides,
                     const AZStd::unordered_set<AZ::Name>& modelUvNames,
                     MaterialModelUvOverrideMapChangedCallBack matModUvOverrideMapChangedCallBack,
                     QWidget* parent = nullptr
@@ -54,7 +54,7 @@ namespace JE
 
                 void Populate();
 
-                void SetUvNameMap(const AZ::RPI::MaterialModelUvOverrideMap& matModUvPairs);
+                void SetUvNameMap(const JE::Render::RPI::MaterialModelUvOverrideMap& matModUvPairs);
 
             private:
 
@@ -70,9 +70,9 @@ namespace JE
                 void ResetModelUvNameIndices();
                 void SetModelUvNames(const AZStd::unordered_set<AZ::Name>& modelUvNames);
 
-                AZ::RPI::MaterialModelUvOverrideMap m_matModUvOverrides;
+                JE::Render::RPI::MaterialModelUvOverrideMap m_matModUvOverrides;
                 AZStd::vector<uint32_t> m_modelUvNameIndices;  //! Used to index enum values and translate to UV pairs.
-                AZ::RPI::MaterialUvNameMap m_materialUvNames;
+                JE::Render::RPI::MaterialUvNameMap m_materialUvNames;
                 AZStd::vector<AZStd::string> m_modelUvNames; //! Used as enum values.
                 MaterialModelUvOverrideMapChangedCallBack m_matModUvOverrideMapChangedCallBack;
 
@@ -82,7 +82,7 @@ namespace JE
 
             bool OpenInspectorDialog(
                 const AZ::Data::AssetId& assetId,
-                const AZ::RPI::MaterialModelUvOverrideMap& matModUvOverrides,
+                const JE::Render::RPI::MaterialModelUvOverrideMap& matModUvOverrides,
                 const AZStd::unordered_set<AZ::Name>& modelUvNames,
                 MaterialModelUvOverrideMapChangedCallBack matModUvOverrideMapChangedCallBack);
         } // namespace EditorMaterialComponentInspector

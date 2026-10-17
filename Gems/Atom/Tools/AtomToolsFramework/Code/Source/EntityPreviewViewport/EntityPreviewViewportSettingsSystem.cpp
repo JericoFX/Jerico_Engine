@@ -6,10 +6,10 @@
  *
  */
 
-#include <Atom/RPI.Edit/Common/AssetUtils.h>
-#include <Atom/RPI.Edit/Common/JsonUtils.h>
-#include <Atom/RPI.Reflect/Asset/AssetUtils.h>
-#include <Atom/RPI.Reflect/System/AnyAsset.h>
+#include <JE/Editor/Render/RPI/Edit/Common/AssetUtils.h>
+#include <JE/Editor/Render/RPI/Edit/Common/JsonUtils.h>
+#include <JE/Render/RPI/Reflect/Asset/AssetUtils.h>
+#include <JE/Render/RPI/Reflect/System/AnyAsset.h>
 #include <AtomToolsFramework/EntityPreviewViewport/EntityPreviewViewportSettings.h>
 #include <AtomToolsFramework/EntityPreviewViewport/EntityPreviewViewportSettingsNotificationBus.h>
 #include <AtomToolsFramework/EntityPreviewViewport/EntityPreviewViewportSettingsRequestBus.h>
@@ -240,7 +240,7 @@ namespace AtomToolsFramework
 
     bool EntityPreviewViewportSettingsSystem::LoadLightingPresetByAssetId(const AZ::Data::AssetId& assetId)
     {
-        return LoadLightingPreset(AZ::RPI::AssetUtils::GetSourcePathByAssetId(assetId));
+        return LoadLightingPreset(JE::Render::RPI::AssetUtils::GetSourcePathByAssetId(assetId));
     }
 
     AZStd::string EntityPreviewViewportSettingsSystem::GetLastLightingPresetPath() const
@@ -257,7 +257,7 @@ namespace AtomToolsFramework
 
     AZ::Data::AssetId EntityPreviewViewportSettingsSystem::GetLastLightingPresetAssetId() const
     {
-        const auto& result = AZ::RPI::AssetUtils::MakeAssetId(GetLastLightingPresetPath(), 0);
+        const auto& result = JE::Render::RPI::AssetUtils::MakeAssetId(GetLastLightingPresetPath(), 0);
         return result.IsSuccess() ? result.GetValue() : AZ::Data::AssetId();
     }
 
@@ -345,7 +345,7 @@ namespace AtomToolsFramework
 
     bool EntityPreviewViewportSettingsSystem::LoadModelPresetByAssetId(const AZ::Data::AssetId& assetId)
     {
-        return LoadModelPreset(AZ::RPI::AssetUtils::GetSourcePathByAssetId(assetId));
+        return LoadModelPreset(JE::Render::RPI::AssetUtils::GetSourcePathByAssetId(assetId));
     }
 
     AZStd::string EntityPreviewViewportSettingsSystem::GetLastModelPresetPath() const
@@ -362,7 +362,7 @@ namespace AtomToolsFramework
 
     AZ::Data::AssetId EntityPreviewViewportSettingsSystem::GetLastModelPresetAssetId() const
     {
-        const auto& result = AZ::RPI::AssetUtils::MakeAssetId(GetLastModelPresetPath(), 0);
+        const auto& result = JE::Render::RPI::AssetUtils::MakeAssetId(GetLastModelPresetPath(), 0);
         return result.IsSuccess() ? result.GetValue() : AZ::Data::AssetId();
     }
 
@@ -426,10 +426,10 @@ namespace AtomToolsFramework
         if (!pathWithoutAlias.empty())
         {
             auto loadResult = AZ::JsonSerializationUtils::LoadAnyObjectFromFile(pathWithoutAlias);
-            if (loadResult && loadResult.GetValue().is<AZ::RPI::RenderPipelineDescriptor>())
+            if (loadResult && loadResult.GetValue().is<JE::Render::RPI::RenderPipelineDescriptor>())
             {
                 SetSettingsValue("/O3DE/AtomToolsFramework/EntityPreviewViewportSettings/RenderPipelinePath", pathWithAlias);
-                m_renderPipelineDescriptor = AZStd::any_cast<AZ::RPI::RenderPipelineDescriptor>(loadResult.GetValue());
+                m_renderPipelineDescriptor = AZStd::any_cast<JE::Render::RPI::RenderPipelineDescriptor>(loadResult.GetValue());
                 RegisterRenderPipeline(pathWithAlias, m_renderPipelineDescriptor);
                 return true;
             }
@@ -439,7 +439,7 @@ namespace AtomToolsFramework
 
     bool EntityPreviewViewportSettingsSystem::LoadRenderPipelineByAssetId(const AZ::Data::AssetId& assetId)
     {
-        return LoadRenderPipeline(AZ::RPI::AssetUtils::GetSourcePathByAssetId(assetId));
+        return LoadRenderPipeline(JE::Render::RPI::AssetUtils::GetSourcePathByAssetId(assetId));
     }
 
     AZStd::string EntityPreviewViewportSettingsSystem::GetLastRenderPipelinePath() const
@@ -456,13 +456,13 @@ namespace AtomToolsFramework
 
     AZ::Data::AssetId EntityPreviewViewportSettingsSystem::GetLastRenderPipelineAssetId() const
     {
-        const auto& result = AZ::RPI::AssetUtils::MakeAssetId(GetLastRenderPipelinePath(), 0);
+        const auto& result = JE::Render::RPI::AssetUtils::MakeAssetId(GetLastRenderPipelinePath(), 0);
         return result.IsSuccess() ? result.GetValue() : AZ::Data::AssetId();
     }
 
     void EntityPreviewViewportSettingsSystem::RegisterRenderPipelinePath(const AZStd::string& path)
     {
-        if (path.ends_with(AZ::RPI::RenderPipelineDescriptor::Extension))
+        if (path.ends_with(JE::Render::RPI::RenderPipelineDescriptor::Extension))
         {
             auto paths = GetRegisteredRenderPipelinePaths();
             paths.insert(JE::Editor::CanonicalPreviewAlias(path));
@@ -473,7 +473,7 @@ namespace AtomToolsFramework
 
     void EntityPreviewViewportSettingsSystem::UnregisterRenderPipelinePath(const AZStd::string& path)
     {
-        if (path.ends_with(AZ::RPI::RenderPipelineDescriptor::Extension))
+        if (path.ends_with(JE::Render::RPI::RenderPipelineDescriptor::Extension))
         {
             auto paths = GetRegisteredRenderPipelinePaths();
             paths.erase(JE::Editor::CanonicalPreviewAlias(path));
@@ -552,9 +552,9 @@ namespace AtomToolsFramework
     {
         AZ::Data::AssetInfo assetInfo;
         AZ::Data::AssetCatalogRequestBus::BroadcastResult(assetInfo, &AZ::Data::AssetCatalogRequestBus::Events::GetAssetInfoById, assetId);
-        if (assetInfo.m_assetType == AZ::RPI::AnyAsset::RTTI_Type())
+        if (assetInfo.m_assetType == JE::Render::RPI::AnyAsset::RTTI_Type())
         {
-            PreloadPreset(AZ::RPI::AssetUtils::GetSourcePathByAssetId(assetInfo.m_assetId));
+            PreloadPreset(JE::Render::RPI::AssetUtils::GetSourcePathByAssetId(assetInfo.m_assetId));
         }
     }
 
@@ -586,12 +586,12 @@ namespace AtomToolsFramework
             return;
         }
 
-        if (path.ends_with(AZ::RPI::RenderPipelineDescriptor::Extension))
+        if (path.ends_with(JE::Render::RPI::RenderPipelineDescriptor::Extension))
         {
             auto loadResult = AZ::JsonSerializationUtils::LoadAnyObjectFromFile(pathWithoutAlias);
-            if (loadResult && loadResult.GetValue().is<AZ::RPI::RenderPipelineDescriptor>())
+            if (loadResult && loadResult.GetValue().is<JE::Render::RPI::RenderPipelineDescriptor>())
             {
-                RegisterRenderPipeline(path, AZStd::any_cast<AZ::RPI::RenderPipelineDescriptor>(loadResult.GetValue()));
+                RegisterRenderPipeline(path, AZStd::any_cast<JE::Render::RPI::RenderPipelineDescriptor>(loadResult.GetValue()));
             }
             return;
         }
@@ -617,7 +617,7 @@ namespace AtomToolsFramework
             m_toolId, &EntityPreviewViewportSettingsNotificationBus::Events::OnModelPresetAdded, pathWithAlias);
     }
 
-    void EntityPreviewViewportSettingsSystem::RegisterRenderPipeline(const AZStd::string& path, const AZ::RPI::RenderPipelineDescriptor& preset)
+    void EntityPreviewViewportSettingsSystem::RegisterRenderPipeline(const AZStd::string& path, const JE::Render::RPI::RenderPipelineDescriptor& preset)
     {
         const auto& pathWithAlias = JE::Editor::CanonicalPreviewAlias(path);
         m_renderPipelineDescriptorCache[pathWithAlias] = preset;
@@ -646,7 +646,7 @@ namespace AtomToolsFramework
                     return
                         path.ends_with(AZ::Render::LightingPreset::Extension) ||
                         path.ends_with(AZ::Render::ModelPreset::Extension) ||
-                        path.ends_with(AZ::RPI::RenderPipelineDescriptor::Extension);
+                        path.ends_with(JE::Render::RPI::RenderPipelineDescriptor::Extension);
                 };
 
                 const auto& paths = GetPathsInSourceFoldersMatchingFilter(filterFn);

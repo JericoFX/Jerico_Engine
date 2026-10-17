@@ -20,8 +20,8 @@
 #include <Atom/RHI.Reflect/InputStreamLayout.h>
 #include <Atom/RHI.Reflect/Limits.h>
 
-#include <Atom/RPI.Public/FeatureProcessor.h>
-#include <Atom/RPI.Public/PipelineState.h>
+#include <JE/Render/RPI/Public/FeatureProcessor.h>
+#include <JE/Render/RPI/Public/PipelineState.h>
 #include <AzCore/std/containers/fixed_vector.h>
 
 #include "AuxGeomBase.h"
@@ -33,14 +33,19 @@ namespace AZ
         class DrawPacketBuilder;
     }
 
-    namespace RPI
-    {
+    }
+
+namespace JE::Render::RPI
+{
         class Scene;
         class Shader;
         class ShaderVariant;
         class ShaderOptionGroup;
         class ShaderResourceGroup;
     }
+
+namespace AZ
+{
 
     namespace Render
     {
@@ -60,13 +65,13 @@ namespace AZ
             ~DynamicPrimitiveProcessor() = default;
 
             //! Initialize the DynamicPrimitiveProcessor and all its buffers, shaders, stream layouts etc
-            bool Initialize(const AZ::RPI::Scene* scene);
+            bool Initialize(const JE::Render::RPI::Scene* scene);
 
             //! Releases the DynamicPrimitiveProcessor and all primitive geometry buffers
             void Release();
 
             //! Process the list of primitives in the buffer data and add them to the views in the feature processor packet
-            void ProcessDynamicPrimitives(AuxGeomBufferData* bufferData, const RPI::FeatureProcessor::RenderPacket& fpPacket);
+            void ProcessDynamicPrimitives(AuxGeomBufferData* bufferData, const JE::Render::RPI::FeatureProcessor::RenderPacket& fpPacket);
 
             //! Prepare frame.
             void PrepareFrame();
@@ -86,7 +91,7 @@ namespace AZ
             struct ShaderData
             {
                 RHI::Ptr<RHI::ShaderResourceGroupLayout> m_perDrawSrgLayout;
-                Data::Instance<RPI::ShaderResourceGroup> m_defaultSRG; // default SRG for draws not overriding the view projection matrix
+                Data::Instance<JE::Render::RPI::ShaderResourceGroup> m_defaultSRG; // default SRG for draws not overriding the view projection matrix
                 AZ::RHI::DrawListTag m_drawListTag; // The draw list tag from our shader variant (determines which views primitives are in and which pass)
 
                 AZ::RHI::ShaderInputNameIndex m_viewProjectionOverrideIndex = "m_viewProjectionOverride";
@@ -108,8 +113,8 @@ namespace AZ
             //!Uses the given drawPacketBuilder to build a draw packet with given data and returns it
             RHI::ConstPtr<RHI::DrawPacket> BuildDrawPacketForDynamicPrimitive(
                 RHI::GeometryView& geometryView,
-                const RPI::Ptr<RPI::PipelineStateForDraw>& pipelineState,
-                Data::Instance<RPI::ShaderResourceGroup> srg,
+                const JE::Render::RPI::Ptr<JE::Render::RPI::PipelineStateForDraw>& pipelineState,
+                Data::Instance<JE::Render::RPI::ShaderResourceGroup> srg,
                 RHI::DrawPacketBuilder& drawPacketBuilder,
                 RHI::DrawItemSortKey sortKey = 0);
 
@@ -130,7 +135,7 @@ namespace AZ
 
             void InitPipelineState(const PipelineStateOptions& pipelineStateOptions);
 
-            RPI::Ptr<RPI::PipelineStateForDraw>& GetPipelineState(const PipelineStateOptions& pipelineStateOptions);
+            JE::Render::RPI::Ptr<JE::Render::RPI::PipelineStateForDraw>& GetPipelineState(const PipelineStateOptions& pipelineStateOptions);
 
         private: // data
 
@@ -138,8 +143,8 @@ namespace AZ
             RHI::InputStreamLayout m_inputStreamLayout[PrimitiveType_Count];
 
             // The pipeline state for processing opaque dynamic primitives
-            RPI::Ptr<RPI::PipelineStateForDraw> m_pipelineStates[PerspectiveType_Count][BlendMode_Count][PrimitiveType_Count][DepthRead_Count][DepthWrite_Count][FaceCull_Count];
-            AZStd::list<RPI::Ptr<RPI::PipelineStateForDraw>*> m_createdPipelineStates;
+            JE::Render::RPI::Ptr<JE::Render::RPI::PipelineStateForDraw> m_pipelineStates[PerspectiveType_Count][BlendMode_Count][PrimitiveType_Count][DepthRead_Count][DepthWrite_Count][FaceCull_Count];
+            AZStd::list<JE::Render::RPI::Ptr<JE::Render::RPI::PipelineStateForDraw>*> m_createdPipelineStates;
 
             ShaderData m_shaderData;
 
@@ -153,11 +158,11 @@ namespace AZ
             DrawPackets m_drawPackets;
 
             // We keep all the srg's around until the next time process is called
-            AZStd::vector<AZ::Data::Instance<AZ::RPI::ShaderResourceGroup>> m_processSrgs;
+            AZStd::vector<AZ::Data::Instance<JE::Render::RPI::ShaderResourceGroup>> m_processSrgs;
 
-            Data::Instance<AZ::RPI::Shader> m_shader;
+            Data::Instance<JE::Render::RPI::Shader> m_shader;
 
-            const AZ::RPI::Scene* m_scene = nullptr;
+            const JE::Render::RPI::Scene* m_scene = nullptr;
 
             bool m_needUpdatePipelineStates = false;
 

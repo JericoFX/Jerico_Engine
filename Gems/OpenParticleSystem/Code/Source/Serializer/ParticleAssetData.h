@@ -42,11 +42,11 @@ namespace OpenParticle
             AZStd::string m_name;
             AZStd::any m_config;
             AZStd::any m_renderConfig;
-            AZ::Data::Asset<AZ::RPI::MaterialAsset> m_material;
+            AZ::Data::Asset<JE::Render::RPI::MaterialAsset> m_material;
             //! Per-emitter material property overrides, copied verbatim into the built ParticleArchive.
             JE::Render::MaterialPropertyOverrideMap m_materialOverrides;
-            AZ::Data::Asset<AZ::RPI::ModelAsset> m_model;
-            AZ::Data::Asset<AZ::RPI::ModelAsset> m_skeletonModel;
+            AZ::Data::Asset<JE::Render::RPI::ModelAsset> m_model;
+            AZ::Data::Asset<JE::Render::RPI::ModelAsset> m_skeletonModel;
             AZStd::list<AZStd::any> m_emitModules;
             AZStd::list<AZStd::any> m_spawnModules;
             AZStd::list<AZStd::any> m_updateModules;

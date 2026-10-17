@@ -13,9 +13,9 @@
 #include <PostProcess/DepthOfField/DepthOfFieldSettings.h>
 #include <PostProcessing/NewDepthOfFieldPasses.h>
 
-#include <Atom/RPI.Public/RenderPipeline.h>
-#include <Atom/RPI.Public/Scene.h>
-#include <Atom/RPI.Public/View.h>
+#include <JE/Render/RPI/Public/RenderPipeline.h>
+#include <JE/Render/RPI/Public/Scene.h>
+#include <JE/Render/RPI/Public/View.h>
 
 namespace AZ
 {
@@ -36,14 +36,14 @@ namespace AZ
 
         // --- Depth of Field Parent Pass ---
 
-        RPI::Ptr<NewDepthOfFieldParentPass> NewDepthOfFieldParentPass::Create(const RPI::PassDescriptor& descriptor)
+        JE::Render::RPI::Ptr<NewDepthOfFieldParentPass> NewDepthOfFieldParentPass::Create(const JE::Render::RPI::PassDescriptor& descriptor)
         {
-            RPI::Ptr<NewDepthOfFieldParentPass> pass = aznew NewDepthOfFieldParentPass(descriptor);
+            JE::Render::RPI::Ptr<NewDepthOfFieldParentPass> pass = aznew NewDepthOfFieldParentPass(descriptor);
             return pass;
         }
 
-        NewDepthOfFieldParentPass::NewDepthOfFieldParentPass(const RPI::PassDescriptor& descriptor)
-            : RPI::ParentPass(descriptor)
+        NewDepthOfFieldParentPass::NewDepthOfFieldParentPass(const JE::Render::RPI::PassDescriptor& descriptor)
+            : JE::Render::RPI::ParentPass(descriptor)
         { }
 
         bool NewDepthOfFieldParentPass::IsEnabled() const
@@ -56,13 +56,13 @@ namespace AZ
             {
                 return false;
             }
-            RPI::Scene* scene = GetScene();
+            JE::Render::RPI::Scene* scene = GetScene();
             if (!scene)
             {
                 return false;
             }
             PostProcessFeatureProcessor* fp = scene->GetFeatureProcessor<PostProcessFeatureProcessor>();
-            AZ::RPI::ViewPtr view = GetRenderPipeline()->GetFirstView(GetPipelineViewTag());
+            JE::Render::RPI::ViewPtr view = GetRenderPipeline()->GetFirstView(GetPipelineViewTag());
             if (!fp)
             {
                 return false;
@@ -78,9 +78,9 @@ namespace AZ
 
         void NewDepthOfFieldParentPass::FrameBeginInternal(FramePrepareParams params)
         {
-            RPI::Scene* scene = GetScene();
+            JE::Render::RPI::Scene* scene = GetScene();
             PostProcessFeatureProcessor* fp = scene->GetFeatureProcessor<PostProcessFeatureProcessor>();
-            AZ::RPI::ViewPtr view = GetRenderPipeline()->GetFirstView(GetPipelineViewTag());
+            JE::Render::RPI::ViewPtr view = GetRenderPipeline()->GetFirstView(GetPipelineViewTag());
             if (fp)
             {
                 PostProcessSettings* postProcessSettings = fp->GetLevelSettingsFromView(view);
@@ -99,14 +99,14 @@ namespace AZ
 
         // --- Tile Reduce Pass ---
 
-        RPI::Ptr<NewDepthOfFieldTileReducePass> NewDepthOfFieldTileReducePass::Create(const RPI::PassDescriptor& descriptor)
+        JE::Render::RPI::Ptr<NewDepthOfFieldTileReducePass> NewDepthOfFieldTileReducePass::Create(const JE::Render::RPI::PassDescriptor& descriptor)
         {
-            RPI::Ptr<NewDepthOfFieldTileReducePass> pass = aznew NewDepthOfFieldTileReducePass(descriptor);
+            JE::Render::RPI::Ptr<NewDepthOfFieldTileReducePass> pass = aznew NewDepthOfFieldTileReducePass(descriptor);
             return pass;
         }
 
-        NewDepthOfFieldTileReducePass::NewDepthOfFieldTileReducePass(const RPI::PassDescriptor& descriptor)
-            : RPI::ComputePass(descriptor)
+        NewDepthOfFieldTileReducePass::NewDepthOfFieldTileReducePass(const JE::Render::RPI::PassDescriptor& descriptor)
+            : JE::Render::RPI::ComputePass(descriptor)
         {
             // Though this is a fullscreen pass, the shader computes 16x16 tiles with groups of 8x8 threads,
             // each thread outputting to a single pixel in the tiled min/max texture
@@ -116,7 +116,7 @@ namespace AZ
         void NewDepthOfFieldTileReducePass::FrameBeginInternal(FramePrepareParams params)
         {
             AZ_Assert(GetOutputCount() > 0, "NewDepthOfFieldTileReducePass: No output bindings!");
-            RPI::PassAttachment* outputAttachment = GetOutputBinding(0).GetAttachment().get();
+            JE::Render::RPI::PassAttachment* outputAttachment = GetOutputBinding(0).GetAttachment().get();
 
             AZ_Assert(outputAttachment != nullptr, "NewDepthOfFieldTileReducePass: Output binding has no attachment!");
             RHI::Size outputSize = outputAttachment->m_descriptor.m_image.m_size;
@@ -126,19 +126,19 @@ namespace AZ
             u32 targetThreadCountY = outputSize.m_height * 8;
             SetTargetThreadCounts(targetThreadCountX, targetThreadCountY, 1);
 
-            RPI::ComputePass::FrameBeginInternal(params);
+            JE::Render::RPI::ComputePass::FrameBeginInternal(params);
         }
 
         // --- Filter Pass ---
 
-        RPI::Ptr<NewDepthOfFieldFilterPass> NewDepthOfFieldFilterPass::Create(const RPI::PassDescriptor& descriptor)
+        JE::Render::RPI::Ptr<NewDepthOfFieldFilterPass> NewDepthOfFieldFilterPass::Create(const JE::Render::RPI::PassDescriptor& descriptor)
         {
-            RPI::Ptr<NewDepthOfFieldFilterPass> pass = aznew NewDepthOfFieldFilterPass(descriptor);
+            JE::Render::RPI::Ptr<NewDepthOfFieldFilterPass> pass = aznew NewDepthOfFieldFilterPass(descriptor);
             return pass;
         }
 
-        NewDepthOfFieldFilterPass::NewDepthOfFieldFilterPass(const RPI::PassDescriptor& descriptor)
-            : RPI::FullscreenTrianglePass(descriptor)
+        NewDepthOfFieldFilterPass::NewDepthOfFieldFilterPass(const JE::Render::RPI::PassDescriptor& descriptor)
+            : JE::Render::RPI::FullscreenTrianglePass(descriptor)
         { }
 
         void NewDepthOfFieldFilterPass::FrameBeginInternal(FramePrepareParams params)
@@ -175,7 +175,7 @@ namespace AZ
 
             m_shaderResourceGroup->SetConstant(m_constantsIndex, dofConstants);
 
-            RPI::FullscreenTrianglePass::FrameBeginInternal(params);
+            JE::Render::RPI::FullscreenTrianglePass::FrameBeginInternal(params);
         }
 
     }   // namespace Render

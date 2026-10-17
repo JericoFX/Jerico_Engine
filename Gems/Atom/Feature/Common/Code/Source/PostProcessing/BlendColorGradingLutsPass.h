@@ -14,10 +14,10 @@
 #include <Atom/RHI/ScopeProducer.h>
 
 #include <Atom/RHI/ImagePool.h>
-#include <Atom/RPI.Public/Pass/ComputePass.h>
-#include <Atom/RPI.Public/Pass/FullscreenTrianglePass.h>
-#include <Atom/RPI.Public/Shader/Shader.h>
-#include <Atom/RPI.Public/Shader/ShaderResourceGroup.h>
+#include <JE/Render/RPI/Public/Pass/ComputePass.h>
+#include <JE/Render/RPI/Public/Pass/FullscreenTrianglePass.h>
+#include <JE/Render/RPI/Public/Shader/Shader.h>
+#include <JE/Render/RPI/Public/Shader/ShaderResourceGroup.h>
 
 #include <Atom/Feature/ACES/AcesDisplayMapperFeatureProcessor.h>
 
@@ -34,23 +34,23 @@ namespace AZ
         //! override strengths.
         //! If there is only one LUT, blending will happen with the LUT and the reference non color graded values based on that LUT's intensity value.
         class BlendColorGradingLutsPass final
-            : public RPI::ComputePass
+            : public JE::Render::RPI::ComputePass
         {
             AZ_RPI_PASS(BlendColorGradingLutsPass);
 
         public:
-            AZ_RTTI(BlendColorGradingLutsPass, "{F1E7ED65-27B1-4AF3-AF8D-C29C2BF31EE7}", RPI::ComputePass);
+            AZ_RTTI(BlendColorGradingLutsPass, "{F1E7ED65-27B1-4AF3-AF8D-C29C2BF31EE7}", JE::Render::RPI::ComputePass);
             AZ_CLASS_ALLOCATOR(BlendColorGradingLutsPass, SystemAllocator);
             virtual ~BlendColorGradingLutsPass();
 
             /// Creates a DisplayMapperPass
-            static RPI::Ptr<BlendColorGradingLutsPass> Create(const RPI::PassDescriptor& descriptor);
+            static JE::Render::RPI::Ptr<BlendColorGradingLutsPass> Create(const JE::Render::RPI::PassDescriptor& descriptor);
 
             void SetShaperParameters(const ShaperParams& shaperParams);
             AZStd::optional<ShaperParams> GetCommonShaperParams() const;
 
         private:
-            explicit BlendColorGradingLutsPass(const RPI::PassDescriptor& descriptor);
+            explicit BlendColorGradingLutsPass(const JE::Render::RPI::PassDescriptor& descriptor);
 
             // Pass behavior overrides...
             void InitializeInternal() override;
@@ -127,7 +127,7 @@ namespace AZ
             };
 
             AZStd::vector<ShaderVariantInfo> m_shaderVariant;
-            RPI::ShaderVariantKey m_currentShaderVariantKeyFallbackValue;
+            JE::Render::RPI::ShaderVariantKey m_currentShaderVariantKeyFallbackValue;
             uint32_t m_currentShaderVariantIndex = 0;
         };
     }   // namespace Render

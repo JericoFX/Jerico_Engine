@@ -6,12 +6,12 @@
  *
  */
 
-#include <Atom/RPI.Edit/Common/AssetUtils.h>
-#include <Atom/RPI.Edit/Common/JsonUtils.h>
-#include <Atom/RPI.Edit/Material/MaterialSourceData.h>
-#include <Atom/RPI.Edit/Material/MaterialTypeSourceData.h>
-#include <Atom/RPI.Edit/Material/MaterialUtils.h>
-#include <Atom/RPI.Reflect/System/AnyAsset.h>
+#include <JE/Editor/Render/RPI/Edit/Common/AssetUtils.h>
+#include <JE/Editor/Render/RPI/Edit/Common/JsonUtils.h>
+#include <JE/Editor/Render/RPI/Edit/Material/MaterialSourceData.h>
+#include <JE/Editor/Render/RPI/Edit/Material/MaterialTypeSourceData.h>
+#include <JE/Editor/Render/RPI/Edit/Material/MaterialUtils.h>
+#include <JE/Render/RPI/Reflect/System/AnyAsset.h>
 #include <JE/Editor/Materials/EditorMaterialSystemComponentRequestBus.h>
 #include <AtomToolsFramework/Document/CreateDocumentDialog.h>
 #include <AtomToolsFramework/Util/Util.h>
@@ -190,12 +190,12 @@ namespace JE
             {
                 return AZ::Failure(AZStd::string("The material destination already exists."));
             }
-            auto materialType = AZ::RPI::MaterialUtils::LoadMaterialTypeSourceData(sourcePath);
+            auto materialType = JE::Render::RPI::MaterialUtils::LoadMaterialTypeSourceData(sourcePath);
             if (!materialType.IsSuccess())
             {
                 return AZ::Failure(AZStd::string("Failed to load the selected material type."));
             }
-            AZ::RPI::MaterialSourceData materialData;
+            JE::Render::RPI::MaterialSourceData materialData;
             materialData.m_materialTypeVersion = materialType.GetValue().m_version;
             materialData.m_materialType = AtomToolsFramework::GetPathToExteralReference(materialPath, sourcePath);
             materialData.m_parentMaterial.clear();
@@ -204,7 +204,7 @@ namespace JE
             rapidjson::Document document;
             document.SetObject();
             AZ::JsonSerializerSettings settings;
-            AZ::RPI::JsonReportingHelper reporting;
+            JE::Render::RPI::JsonReportingHelper reporting;
             reporting.Attach(settings);
             AZ::JsonSerialization::Store(document, document.GetAllocator(), materialData, settings);
             if (reporting.ErrorsReported())

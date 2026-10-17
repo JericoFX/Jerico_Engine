@@ -13,10 +13,10 @@
 
 #include <Atom/RHI/ImagePool.h>
 
-#include <Atom/RPI.Public/Shader/ShaderResourceGroup.h>
-#include <Atom/RPI.Public/Image/StreamingImage.h>
-#include <Atom/RPI.Public/Image/AttachmentImage.h>
-#include <Atom/RPI.Public/Shader/Shader.h>
+#include <JE/Render/RPI/Public/Shader/ShaderResourceGroup.h>
+#include <JE/Render/RPI/Public/Image/StreamingImage.h>
+#include <JE/Render/RPI/Public/Image/AttachmentImage.h>
+#include <JE/Render/RPI/Public/Shader/Shader.h>
 
 #include <SharedBuffer.h>
 
@@ -27,10 +27,15 @@ namespace AZ
         class BufferAssetView;
     }
 
-    namespace RPI
-    {
+    }
+
+namespace JE::Render::RPI
+{
         class Buffer;
     }
+
+namespace AZ
+{
 
     namespace Meshlets
     {
@@ -39,29 +44,29 @@ namespace AZ
         public:
             UtilityClass() = default;
 
-            static Data::Instance<RPI::ShaderResourceGroup> CreateShaderResourceGroup(
-                Data::Instance<RPI::Shader> shader,
+            static Data::Instance<JE::Render::RPI::ShaderResourceGroup> CreateShaderResourceGroup(
+                Data::Instance<JE::Render::RPI::Shader> shader,
                 const char* shaderResourceGroupId,
                 const char* moduleName
             );
 
-            static Data::Instance<RPI::Buffer> CreateBuffer(
+            static Data::Instance<JE::Render::RPI::Buffer> CreateBuffer(
                 const char* warningHeader,
                 SrgBufferDescriptor& bufferDesc,
-                Data::Instance<RPI::ShaderResourceGroup> srg = nullptr
+                Data::Instance<JE::Render::RPI::ShaderResourceGroup> srg = nullptr
             );
 
-            static Data::Instance<RPI::Buffer> CreateBufferAndBindToSrg(
+            static Data::Instance<JE::Render::RPI::Buffer> CreateBufferAndBindToSrg(
                 const char* warningHeader,
                 SrgBufferDescriptor& bufferDesc,
-                Data::Instance<RPI::ShaderResourceGroup> srg
+                Data::Instance<JE::Render::RPI::ShaderResourceGroup> srg
             );
 
             static bool BindBufferToSrg(
                 const char* warningHeader,
-                Data::Instance<RPI::Buffer> buffer,
+                Data::Instance<JE::Render::RPI::Buffer> buffer,
                 SrgBufferDescriptor& bufferDesc,
-                Data::Instance<RPI::ShaderResourceGroup> srg = nullptr
+                Data::Instance<JE::Render::RPI::ShaderResourceGroup> srg = nullptr
             );
 
             static Data::Instance<RHI::BufferView> CreateSharedBufferView(
@@ -74,14 +79,14 @@ namespace AZ
                 [[maybe_unused]] const char* warningHeader,
                 Data::Instance<RHI::BufferView> bufferView,
                 SrgBufferDescriptor& bufferDesc,
-                Data::Instance<RPI::ShaderResourceGroup> srg
+                Data::Instance<JE::Render::RPI::ShaderResourceGroup> srg
             );
 
             static Data::Instance<RHI::BufferView> CreateSharedBufferViewAndBindToSrg(
                 const char* warningHeader,
                 SrgBufferDescriptor& bufferDesc,
                 Data::Instance<Meshlets::SharedBufferAllocation>& outputBufferAllocator,
-                Data::Instance<RPI::ShaderResourceGroup> srg
+                Data::Instance<JE::Render::RPI::ShaderResourceGroup> srg
             );
 
             //! Utility function to create a resource view into the shared buffer memory area. This

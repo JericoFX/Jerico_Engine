@@ -12,7 +12,7 @@
 #include <Atom/Feature/Utils/LightingPreset.h>
 #include <AzCore/Serialization/SerializeContext.h>
 #include <AzCore/RTTI/BehaviorContext.h>
-#include <Atom/RPI.Edit/Common/ColorUtils.h>
+#include <JE/Editor/Render/RPI/Edit/Common/ColorUtils.h>
 #include <AzFramework/Translation/TranslationDef.h>
 
 namespace AZ
@@ -73,7 +73,7 @@ namespace AZ
                             ->Attribute(AZ::Edit::Attributes::AutoExpand, true)
                         ->DataElement(AZ::Edit::UIHandlers::Default, &LightConfig::m_direction, QT_TRANSLATE_NOOP("Atom::Feature", "Direction"), "")
                         ->DataElement(Edit::UIHandlers::Color, &LightConfig::m_color, QT_TRANSLATE_NOOP("Atom::Feature", "Color"), QT_TRANSLATE_NOOP("Atom::Feature", "Color of the light"))
-                            ->Attribute("ColorEditorConfiguration", AZ::RPI::ColorUtils::GetLinearRgbEditorConfig())
+                            ->Attribute("ColorEditorConfiguration", JE::Render::RPI::ColorUtils::GetLinearRgbEditorConfig())
                         ->DataElement(Edit::UIHandlers::Default, &LightConfig::m_intensity, QT_TRANSLATE_NOOP("Atom::Feature", "Intensity"), QT_TRANSLATE_NOOP("Atom::Feature", "Intensity of the light in the set photometric unit."))
 
                         ->ClassElement(AZ::Edit::ClassElements::Group, QT_TRANSLATE_NOOP("Atom::Feature", "Shadow"))

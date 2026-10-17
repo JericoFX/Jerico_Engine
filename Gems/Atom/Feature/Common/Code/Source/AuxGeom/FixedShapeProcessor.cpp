@@ -16,14 +16,14 @@
 #include <Atom/RHI/DrawPacketBuilder.h>
 
 #include <Atom/RHI.Reflect/InputStreamLayoutBuilder.h>
-#include <Atom/RPI.Reflect/Shader/ShaderOptionGroup.h>
-#include <Atom/RPI.Reflect/Shader/ShaderAsset.h>
+#include <JE/Render/RPI/Reflect/Shader/ShaderOptionGroup.h>
+#include <JE/Render/RPI/Reflect/Shader/ShaderAsset.h>
 
-#include <Atom/RPI.Public/RPIUtils.h>
-#include <Atom/RPI.Public/Scene.h>
-#include <Atom/RPI.Public/Shader/Shader.h>
-#include <Atom/RPI.Public/Shader/ShaderVariant.h>
-#include <Atom/RPI.Public/View.h>
+#include <JE/Render/RPI/Public/RPIUtils.h>
+#include <JE/Render/RPI/Public/Scene.h>
+#include <JE/Render/RPI/Public/Shader/Shader.h>
+#include <JE/Render/RPI/Public/Shader/ShaderVariant.h>
+#include <JE/Render/RPI/Public/View.h>
 
 namespace AZ
 {
@@ -51,7 +51,7 @@ namespace AZ
             }
         }
 
-        bool FixedShapeProcessor::Initialize(RHI::MultiDevice::DeviceMask deviceMask, const AZ::RPI::Scene* scene)
+        bool FixedShapeProcessor::Initialize(RHI::MultiDevice::DeviceMask deviceMask, const JE::Render::RPI::Scene* scene)
         {
             RHI::BufferPoolDescriptor desc;
             desc.m_heapMemoryLevel = RHI::HeapMemoryLevel::Device;
@@ -104,7 +104,7 @@ namespace AZ
             m_unlitShader = nullptr;
             m_scene = nullptr;
 
-            for (RPI::Ptr<RPI::PipelineStateForDraw>* pipelineState : m_createdPipelineStates)
+            for (JE::Render::RPI::Ptr<JE::Render::RPI::PipelineStateForDraw>* pipelineState : m_createdPipelineStates)
             {
                 pipelineState->reset();
             }
@@ -117,7 +117,7 @@ namespace AZ
             if (m_needUpdatePipelineStates)
             {
                 // for created pipeline state, re-set their data from scene
-                for (RPI::Ptr<RPI::PipelineStateForDraw>* pipelineState : m_createdPipelineStates)
+                for (JE::Render::RPI::Ptr<JE::Render::RPI::PipelineStateForDraw>* pipelineState : m_createdPipelineStates)
                 {
                     (*pipelineState)->SetOutputFromScene(m_scene);
                     (*pipelineState)->Finalize();
@@ -132,7 +132,7 @@ namespace AZ
             m_drawPackets.clear();
         }
 
-        void FixedShapeProcessor::ProcessObjects(const AuxGeomBufferData* bufferData, const RPI::FeatureProcessor::RenderPacket& fpPacket)
+        void FixedShapeProcessor::ProcessObjects(const AuxGeomBufferData* bufferData, const JE::Render::RPI::FeatureProcessor::RenderPacket& fpPacket)
         {
             AZ_PROFILE_SCOPE(AzRender, "FixedShapeProcessor: ProcessObjects");
 
@@ -164,7 +164,7 @@ namespace AZ
                     pipelineStateOptions.m_depthWriteType = shape.m_depthWrite;
                     pipelineStateOptions.m_faceCullMode = shape.m_faceCullMode;
 
-                    RPI::Ptr<RPI::PipelineStateForDraw> pipelineState = GetPipelineState(pipelineStateOptions);
+                    JE::Render::RPI::Ptr<JE::Render::RPI::PipelineStateForDraw> pipelineState = GetPipelineState(pipelineStateOptions);
 
                     const AZ::Vector3 position = shape.m_position;
                     const AZ::Vector3 scale = shape.m_scale;
@@ -197,7 +197,7 @@ namespace AZ
                     pipelineStateOptions.m_depthWriteType = box.m_depthWrite;
                     pipelineStateOptions.m_faceCullMode = box.m_faceCullMode;
 
-                    RPI::Ptr<RPI::PipelineStateForDraw> pipelineState = GetPipelineState(pipelineStateOptions);
+                    JE::Render::RPI::Ptr<JE::Render::RPI::PipelineStateForDraw> pipelineState = GetPipelineState(pipelineStateOptions);
 
                     auto drawPacket =
                         BuildDrawPacketForBox(drawPacketBuilder, box, drawStyle, bufferData->m_viewProjOverrides, pipelineState);
@@ -243,7 +243,7 @@ namespace AZ
                     pipelineStateOptions.m_depthWriteType = shape.m_depthWrite;
                     pipelineStateOptions.m_faceCullMode = shape.m_faceCullMode;
 
-                    RPI::Ptr<RPI::PipelineStateForDraw> pipelineState = GetPipelineState(pipelineStateOptions);
+                    JE::Render::RPI::Ptr<JE::Render::RPI::PipelineStateForDraw> pipelineState = GetPipelineState(pipelineStateOptions);
 
                     const AZ::Vector3 position = shape.m_position;
                     const AZ::Vector3 scale = shape.m_scale;
@@ -278,7 +278,7 @@ namespace AZ
                     pipelineStateOptions.m_depthWriteType = box.m_depthWrite;
                     pipelineStateOptions.m_faceCullMode = box.m_faceCullMode;
 
-                    RPI::Ptr<RPI::PipelineStateForDraw> pipelineState = GetPipelineState(pipelineStateOptions);
+                    JE::Render::RPI::Ptr<JE::Render::RPI::PipelineStateForDraw> pipelineState = GetPipelineState(pipelineStateOptions);
 
                     const AZ::Vector3 position = box.m_position;
                     for (auto& view : fpPacket.m_views)
@@ -1379,7 +1379,7 @@ namespace AZ
             return true;
         }
 
-        FixedShapeProcessor::LodIndex FixedShapeProcessor::GetLodIndexForShape(AuxGeomShapeType shapeType, const AZ::RPI::View* view, const AZ::Vector3& worldPosition, const AZ::Vector3& scale)
+        FixedShapeProcessor::LodIndex FixedShapeProcessor::GetLodIndexForShape(AuxGeomShapeType shapeType, const JE::Render::RPI::View* view, const AZ::Vector3& worldPosition, const AZ::Vector3& scale)
         {
             const Shape& shape = m_shapes[shapeType];
             if (shape.m_numLods <= 1)
@@ -1425,7 +1425,7 @@ namespace AZ
             inputStreamLayout = layoutBuilder.End();
         }
 
-        void FixedShapeProcessor::FillShaderData(Data::Instance<RPI::Shader>& shader, ShaderData& shaderData)
+        void FixedShapeProcessor::FillShaderData(Data::Instance<JE::Render::RPI::Shader>& shader, ShaderData& shaderData)
         {
             // Get the per-object SRG and store the indices of the data we need to set per object
             shaderData.m_shaderAsset = shader->GetAsset();
@@ -1447,9 +1447,9 @@ namespace AZ
             constexpr const char* litObjectShaderFilePath = "Shaders/auxgeom/auxgeomobjectlit.azshader";
 
             // constant color shader
-            m_unlitShader = RPI::LoadCriticalShader(unlitObjectShaderFilePath);
+            m_unlitShader = JE::Render::RPI::LoadCriticalShader(unlitObjectShaderFilePath);
             // direction light shader
-            m_litShader = RPI::LoadCriticalShader(litObjectShaderFilePath);
+            m_litShader = JE::Render::RPI::LoadCriticalShader(litObjectShaderFilePath);
 
             if (m_unlitShader == nullptr || m_litShader == nullptr)
             {
@@ -1494,7 +1494,7 @@ namespace AZ
             }
         }
 
-        RPI::Ptr<RPI::PipelineStateForDraw>& FixedShapeProcessor::GetPipelineState(const PipelineStateOptions& pipelineStateOptions)
+        JE::Render::RPI::Ptr<JE::Render::RPI::PipelineStateForDraw>& FixedShapeProcessor::GetPipelineState(const PipelineStateOptions& pipelineStateOptions)
         {
             // The declaration: m_pipelineStates[PerspectiveType_Count][BlendMode_Count][DrawStyle_Count][DepthRead_Count][DepthWrite_Count][FaceCull_Count];
             return m_pipelineStates[pipelineStateOptions.m_perpectiveType][pipelineStateOptions.m_blendMode][pipelineStateOptions.m_drawStyle]
@@ -1512,18 +1512,18 @@ namespace AZ
             PipelineStateOptions defaultOptions;
             defaultOptions.m_perpectiveType = pipelineStateOptions.m_perpectiveType;
             defaultOptions.m_drawStyle = pipelineStateOptions.m_drawStyle;
-            RPI::Ptr<RPI::PipelineStateForDraw>& basePipelineState = GetPipelineState(defaultOptions);
+            JE::Render::RPI::Ptr<JE::Render::RPI::PipelineStateForDraw>& basePipelineState = GetPipelineState(defaultOptions);
             if (basePipelineState.get() == nullptr)
             {
                 // Only DrawStyle_Shaded uses the lit shader. Others use unlit shader
                 auto& shader = (pipelineStateOptions.m_drawStyle == DrawStyle_Shaded) ? m_litShader : m_unlitShader;
 
-                basePipelineState = aznew RPI::PipelineStateForDraw;
+                basePipelineState = aznew JE::Render::RPI::PipelineStateForDraw;
 
                 // shader option data for shader variant
                 Name optionViewProjectionModeName = Name("o_viewProjMode");
-                RPI::ShaderOptionList shaderOptionAndValues;
-                shaderOptionAndValues.push_back(RPI::ShaderOption(optionViewProjectionModeName, GetAuxGeomPerspectiveTypeName(pipelineStateOptions.m_perpectiveType)));
+                JE::Render::RPI::ShaderOptionList shaderOptionAndValues;
+                shaderOptionAndValues.push_back(JE::Render::RPI::ShaderOption(optionViewProjectionModeName, GetAuxGeomPerspectiveTypeName(pipelineStateOptions.m_perpectiveType)));
 
                 // initialize pipeline state with shader and shader options
                 basePipelineState->Init(shader, &shaderOptionAndValues);
@@ -1531,12 +1531,12 @@ namespace AZ
                 m_createdPipelineStates.push_back(&basePipelineState);
             }
 
-            RPI::Ptr<RPI::PipelineStateForDraw>& destPipelineState = GetPipelineState(pipelineStateOptions);
+            JE::Render::RPI::Ptr<JE::Render::RPI::PipelineStateForDraw>& destPipelineState = GetPipelineState(pipelineStateOptions);
 
             // Copy from base pipeline state. Skip if it's the base pipeline state 
             if (destPipelineState.get() == nullptr)
             {
-                destPipelineState = aznew RPI::PipelineStateForDraw(*basePipelineState.get());
+                destPipelineState = aznew JE::Render::RPI::PipelineStateForDraw(*basePipelineState.get());
                 m_createdPipelineStates.push_back(&destPipelineState);
             }
 
@@ -1597,7 +1597,7 @@ namespace AZ
             const ShapeBufferEntry& shape,
             int drawStyle,
             const AZStd::vector<AZ::Matrix4x4>& viewProjOverrides,
-            const RPI::Ptr<RPI::PipelineStateForDraw>& pipelineState,
+            const JE::Render::RPI::Ptr<JE::Render::RPI::PipelineStateForDraw>& pipelineState,
             LodIndex lodIndex,
             RHI::DrawItemSortKey sortKey)
         {
@@ -1605,7 +1605,7 @@ namespace AZ
 
             // Create a SRG for the shape to specify its transform and color
             // [GFX TODO] [ATOM-2333] Try to avoid doing SRG create/compile per draw. Possibly using instancing.
-            auto srg = RPI::ShaderResourceGroup::Create(shaderData.m_shaderAsset, shaderData.m_supervariantIndex, shaderData.m_perObjectSrgLayout->GetName());
+            auto srg = JE::Render::RPI::ShaderResourceGroup::Create(shaderData.m_shaderAsset, shaderData.m_supervariantIndex, shaderData.m_perObjectSrgLayout->GetName());
             if (!srg)
             {
                 AZ_Warning("AuxGeom", false, "Failed to create a shader resource group for an AuxGeom draw, Ignoring the draw");
@@ -1661,12 +1661,12 @@ namespace AZ
             const BoxBufferEntry& box,
             int drawStyle,
             const AZStd::vector<AZ::Matrix4x4>& viewProjOverrides,
-            const RPI::Ptr<RPI::PipelineStateForDraw>& pipelineState,
+            const JE::Render::RPI::Ptr<JE::Render::RPI::PipelineStateForDraw>& pipelineState,
             RHI::DrawItemSortKey sortKey)
         {
             ShaderData& shaderData = m_perObjectShaderData[drawStyle==DrawStyle_Shaded?1:0];
             // Create a SRG for the box to specify its transform and color
-            auto srg = RPI::ShaderResourceGroup::Create(shaderData.m_shaderAsset, shaderData.m_supervariantIndex, shaderData.m_perObjectSrgLayout->GetName());
+            auto srg = JE::Render::RPI::ShaderResourceGroup::Create(shaderData.m_shaderAsset, shaderData.m_supervariantIndex, shaderData.m_perObjectSrgLayout->GetName());
             if (!srg)
             {
                 AZ_Warning("AuxGeom", false, "Failed to create a shader resource group for an AuxGeom draw, Ignoring the draw");
@@ -1707,7 +1707,7 @@ namespace AZ
 
         RHI::ConstPtr<RHI::DrawPacket> FixedShapeProcessor::BuildDrawPacket(
             RHI::DrawPacketBuilder& drawPacketBuilder,
-            AZ::Data::Instance<RPI::ShaderResourceGroup>& srg,
+            AZ::Data::Instance<JE::Render::RPI::ShaderResourceGroup>& srg,
             RHI::GeometryView* geometryView,
             RHI::DrawListTag drawListTag,
             const RHI::PipelineState* pipelineState,

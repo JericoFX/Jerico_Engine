@@ -12,7 +12,7 @@
 #include <AzCore/Component/Component.h>
 #include <AzCore/Instance/Instance.h>
 
-#include <Atom/RPI.Reflect/Image/Image.h>
+#include <JE/Render/RPI/Reflect/Image/Image.h>
 
 namespace AZ
 {
@@ -78,9 +78,9 @@ namespace TextureAtlasNamespace
         //! Retrieve a coordinate set from the Atlas by its handle
         virtual AtlasCoordinates GetAtlasCoordinates(const AZStd::string& handle) const = 0;
         //! Links this atlas to an image pointer
-        virtual void SetTexture(AZ::Data::Instance<AZ::RPI::Image> image) = 0;
+        virtual void SetTexture(AZ::Data::Instance<JE::Render::RPI::Image> image) = 0;
         //! Returns the image linked to this atlas
-        virtual AZ::Data::Instance<AZ::RPI::Image> GetTexture() const = 0;
+        virtual AZ::Data::Instance<JE::Render::RPI::Image> GetTexture() const = 0;
         //! Returns the width of the atlas
         virtual int GetWidth() const = 0;
         //! Returns the height of the atlas

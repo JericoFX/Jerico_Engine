@@ -11,12 +11,12 @@
 #include <Material/MaterialBuilderUtils.h>
 
 #include <AssetBuilderSDK/SerializationDependencies.h>
-#include <Atom/RPI.Edit/Common/AssetUtils.h>
-#include <Atom/RPI.Edit/Common/JsonUtils.h>
-#include <Atom/RPI.Edit/Material/MaterialSourceData.h>
-#include <Atom/RPI.Edit/Material/MaterialTypeSourceData.h>
-#include <Atom/RPI.Edit/Material/MaterialUtils.h>
-#include <Atom/RPI.Edit/Shader/ShaderSourceData.h>
+#include <JE/Editor/Render/RPI/Edit/Common/AssetUtils.h>
+#include <JE/Editor/Render/RPI/Edit/Common/JsonUtils.h>
+#include <JE/Editor/Render/RPI/Edit/Material/MaterialSourceData.h>
+#include <JE/Editor/Render/RPI/Edit/Material/MaterialTypeSourceData.h>
+#include <JE/Editor/Render/RPI/Edit/Material/MaterialUtils.h>
+#include <JE/Editor/Render/RPI/Edit/Shader/ShaderSourceData.h>
 #include <AzCore/Script/ScriptAsset.h>
 #include <AzCore/Serialization/Json/JsonUtils.h>
 #include <AzCore/Serialization/SerializeContext.h>
@@ -106,10 +106,10 @@ namespace JE::Assets::RenderBuilders
 
         // List of JSON file paths imported as part of the material type source data. These will be added as source dependencies as well
         // as used to update the fingerprint for the job.
-        AZ::RPI::MaterialUtils::ImportedJsonFiles importedJsonFiles;
+        JE::Render::RPI::MaterialUtils::ImportedJsonFiles importedJsonFiles;
 
         auto materialTypeSourceDataOutcome =
-            AZ::RPI::MaterialUtils::LoadMaterialTypeSourceData(materialTypeSourcePath, nullptr, &importedJsonFiles);
+            JE::Render::RPI::MaterialUtils::LoadMaterialTypeSourceData(materialTypeSourcePath, nullptr, &importedJsonFiles);
         if (!materialTypeSourceDataOutcome)
         {
             AZ_Error(MaterialTypeBuilderName, false, "Failed to load material type source data: %s", materialTypeSourcePath.c_str());
@@ -119,10 +119,10 @@ namespace JE::Assets::RenderBuilders
         auto materialTypeSourceData = materialTypeSourceDataOutcome.TakeValue();
         switch (materialTypeSourceData.GetFormat())
         {
-        case AZ::RPI::MaterialTypeSourceData::Format::Abstract:
+        case JE::Render::RPI::MaterialTypeSourceData::Format::Abstract:
             m_pipelineStage.CreateJobsHelper(request, response, materialTypeSourcePath, materialTypeSourceData);
             break;
-        case AZ::RPI::MaterialTypeSourceData::Format::Direct:
+        case JE::Render::RPI::MaterialTypeSourceData::Format::Direct:
             m_finalStage.CreateJobsHelper(request, response, materialTypeSourcePath, materialTypeSourceData);
             break;
         default:
@@ -153,7 +153,7 @@ namespace JE::Assets::RenderBuilders
         [[maybe_unused]] const AssetBuilderSDK::CreateJobsRequest& request,
         AssetBuilderSDK::CreateJobsResponse& response,
         const AZStd::string& materialTypeSourcePath,
-        const AZ::RPI::MaterialTypeSourceData& materialTypeSourceData) const
+        const JE::Render::RPI::MaterialTypeSourceData& materialTypeSourceData) const
     {
         AssetBuilderSDK::JobDescriptor outputJobDescriptor;
         outputJobDescriptor.m_jobKey = PipelineStageJobKey;
@@ -170,7 +170,7 @@ namespace JE::Assets::RenderBuilders
         {
             auto& sourceDependency = response.m_sourceFileDependencyList.emplace_back();
             sourceDependency.m_sourceFileDependencyPath =
-                AZ::RPI::AssetUtils::ResolvePathReference(originatingSourceFilePath, referencedSourceFilePath);
+                JE::Render::RPI::AssetUtils::ResolvePathReference(originatingSourceFilePath, referencedSourceFilePath);
             MaterialBuilderUtils::AddFingerprintForDependency(sourceDependency.m_sourceFileDependencyPath, outputJobDescriptor);
         };
 
@@ -196,7 +196,7 @@ namespace JE::Assets::RenderBuilders
         // the .materialpipeline data.
         for (const auto& [materialPipelineFilePath, materialPipeline] : LoadMaterialPipelines())
         {
-            for (const AZ::RPI::MaterialPipelineSourceData::ShaderTemplate& shaderTemplate : materialPipeline.m_shaderTemplates)
+            for (const JE::Render::RPI::MaterialPipelineSourceData::ShaderTemplate& shaderTemplate : materialPipeline.m_shaderTemplates)
             {
                 addPossibleDependencies(materialPipelineFilePath.Native(), shaderTemplate.m_shader);
 
@@ -221,7 +221,7 @@ namespace JE::Assets::RenderBuilders
         const AssetBuilderSDK::CreateJobsRequest& request,
         AssetBuilderSDK::CreateJobsResponse& response,
         const AZStd::string& materialTypeSourcePath,
-        const AZ::RPI::MaterialTypeSourceData& materialTypeSourceData) const
+        const JE::Render::RPI::MaterialTypeSourceData& materialTypeSourceData) const
     {
         // We'll build up this one JobDescriptor and reuse it to register each of the platforms
         AssetBuilderSDK::JobDescriptor outputJobDescriptor;
@@ -233,20 +233,20 @@ namespace JE::Assets::RenderBuilders
         for (const auto& shader : materialTypeSourceData.GetShaderReferences())
         {
             MaterialBuilderUtils::AddJobDependency(
-                outputJobDescriptor, AZ::RPI::AssetUtils::ResolvePathReference(materialTypeSourcePath, shader.m_shaderFilePath), "Shader Asset");
+                outputJobDescriptor, JE::Render::RPI::AssetUtils::ResolvePathReference(materialTypeSourcePath, shader.m_shaderFilePath), "Shader Asset");
         }
 
         auto addFunctorDependencies =
-            [&outputJobDescriptor, &materialTypeSourcePath](const AZStd::vector<AZ::RPI::Ptr<AZ::RPI::MaterialFunctorSourceDataHolder>>& functors)
+            [&outputJobDescriptor, &materialTypeSourcePath](const AZStd::vector<JE::Render::RPI::Ptr<JE::Render::RPI::MaterialFunctorSourceDataHolder>>& functors)
         {
             for (const auto& functor : functors)
             {
-                for (const AZ::RPI::MaterialFunctorSourceData::AssetDependency& dependency :
+                for (const JE::Render::RPI::MaterialFunctorSourceData::AssetDependency& dependency :
                      functor->GetActualSourceData()->GetAssetDependencies())
                 {
                     MaterialBuilderUtils::AddJobDependency(
                         outputJobDescriptor,
-                        AZ::RPI::AssetUtils::ResolvePathReference(materialTypeSourcePath, dependency.m_sourceFilePath),
+                        JE::Render::RPI::AssetUtils::ResolvePathReference(materialTypeSourcePath, dependency.m_sourceFilePath),
                         dependency.m_jobKey);
                 }
             }
@@ -255,7 +255,7 @@ namespace JE::Assets::RenderBuilders
         addFunctorDependencies(materialTypeSourceData.m_materialFunctorSourceData);
 
         materialTypeSourceData.EnumeratePropertyGroups(
-            [addFunctorDependencies](const AZ::RPI::MaterialTypeSourceData::PropertyGroupStack& propertyGroupStack)
+            [addFunctorDependencies](const JE::Render::RPI::MaterialTypeSourceData::PropertyGroupStack& propertyGroupStack)
             {
                 addFunctorDependencies(propertyGroupStack.back()->GetFunctors());
                 return true;
@@ -311,7 +311,7 @@ namespace JE::Assets::RenderBuilders
         AzFramework::StringFunc::Path::ConstructFull(
             request.m_watchFolder.c_str(), request.m_sourceFile.c_str(), materialTypeSourcePath, true);
 
-        auto materialTypeSourceDataOutcome = AZ::RPI::MaterialUtils::LoadMaterialTypeSourceData(materialTypeSourcePath, nullptr, nullptr);
+        auto materialTypeSourceDataOutcome = JE::Render::RPI::MaterialUtils::LoadMaterialTypeSourceData(materialTypeSourcePath, nullptr, nullptr);
         if (!materialTypeSourceDataOutcome)
         {
             AZ_Error(MaterialTypeBuilderName, false, "Failed to load material type source data: %s", materialTypeSourcePath.c_str());
@@ -322,10 +322,10 @@ namespace JE::Assets::RenderBuilders
         auto materialTypeSourceData = materialTypeSourceDataOutcome.TakeValue();
         switch (materialTypeSourceData.GetFormat())
         {
-        case AZ::RPI::MaterialTypeSourceData::Format::Abstract:
+        case JE::Render::RPI::MaterialTypeSourceData::Format::Abstract:
             m_pipelineStage.ProcessJobHelper(request, response, materialTypeSourcePath, materialTypeSourceData);
             break;
-        case AZ::RPI::MaterialTypeSourceData::Format::Direct:
+        case JE::Render::RPI::MaterialTypeSourceData::Format::Direct:
             m_finalStage.ProcessJobHelper(request, response, materialTypeSourcePath, materialTypeSourceData);
             break;
         default:
@@ -367,13 +367,13 @@ namespace JE::Assets::RenderBuilders
         return combinedMaterialPipelines;
     }
 
-    AZStd::map<AZ::IO::Path, AZ::RPI::MaterialPipelineSourceData> MaterialTypeBuilder::PipelineStage::LoadMaterialPipelines() const
+    AZStd::map<AZ::IO::Path, JE::Render::RPI::MaterialPipelineSourceData> MaterialTypeBuilder::PipelineStage::LoadMaterialPipelines() const
     {
-        AZStd::map<AZ::IO::Path, AZ::RPI::MaterialPipelineSourceData> materialPipelines;
+        AZStd::map<AZ::IO::Path, JE::Render::RPI::MaterialPipelineSourceData> materialPipelines;
 
         for (const AZStd::string& file : GetMaterialPipelinePaths())
         {
-            auto loadResult = AZ::RPI::MaterialUtils::LoadMaterialPipelineSourceData(file.c_str());
+            auto loadResult = JE::Render::RPI::MaterialUtils::LoadMaterialPipelineSourceData(file.c_str());
             if (!loadResult.IsSuccess())
             {
                 AZ_Error(MaterialTypeBuilderName, false, "Failed to load '%s'.", file.c_str());
@@ -433,13 +433,13 @@ namespace JE::Assets::RenderBuilders
         const AssetBuilderSDK::ProcessJobRequest& request,
         AssetBuilderSDK::ProcessJobResponse& response,
         const AZStd::string& materialTypeSourcePath,
-        AZ::RPI::MaterialTypeSourceData& materialTypeSourceData) const
+        JE::Render::RPI::MaterialTypeSourceData& materialTypeSourceData) const
     {
-        AZ::u32 nextProductSubID = AZ::RPI::MaterialTypeSourceData::IntermediateMaterialTypeSubId + 1;
+        AZ::u32 nextProductSubID = JE::Render::RPI::MaterialTypeSourceData::IntermediateMaterialTypeSubId + 1;
 
         const AZStd::string materialTypeName = AZ::IO::Path{ materialTypeSourcePath }.Stem().Native();
 
-        const AZStd::map<AZ::IO::Path, AZ::RPI::MaterialPipelineSourceData> materialPipelines = LoadMaterialPipelines();
+        const AZStd::map<AZ::IO::Path, JE::Render::RPI::MaterialPipelineSourceData> materialPipelines = LoadMaterialPipelines();
 
         // A list of pointers to lists
         // Each leaf element is a line that will be included in the object SRG of every shader
@@ -464,7 +464,7 @@ namespace JE::Assets::RenderBuilders
         uint32_t drawSrgRedundancyCount = 0;
 
         // Some shader templates may be reused by multiple pipelines, so first collect a full picture of all the dependencies
-        AZStd::map<AZ::RPI::MaterialPipelineSourceData::ShaderTemplate, AZStd::vector<AZ::Name /*materialPipielineName*/>> shaderTemplateReferences;
+        AZStd::map<JE::Render::RPI::MaterialPipelineSourceData::ShaderTemplate, AZStd::vector<AZ::Name /*materialPipielineName*/>> shaderTemplateReferences;
         {
             bool foundProblems = false;
 
@@ -485,20 +485,20 @@ namespace JE::Assets::RenderBuilders
 
                 const MaterialPipelineScriptRunner::ShaderTemplatesList& shaderTemplateList = scriptRunner.GetRelevantShaderTemplates();
 
-                for (const AZ::RPI::MaterialPipelineSourceData::ShaderTemplate& shaderTemplate : shaderTemplateList)
+                for (const JE::Render::RPI::MaterialPipelineSourceData::ShaderTemplate& shaderTemplate : shaderTemplateList)
                 {
                     AZ_TraceContext("Shader Template", shaderTemplate.m_shader.c_str());
 
                     // We need to normalize the content of the ShaderTemplate structure since it will be used as the key in the map.
                     // We also check for missing files now, where the original relative path is available for use in the error message.
 
-                    AZ::RPI::MaterialPipelineSourceData::ShaderTemplate normalizedShaderTemplate = shaderTemplate;
+                    JE::Render::RPI::MaterialPipelineSourceData::ShaderTemplate normalizedShaderTemplate = shaderTemplate;
 
                     auto resolveTemplateFilePathReference =
                         [&foundProblems](const AZ::IO::Path& materialPipelineFilePath, AZStd::string& templateFilePath)
                     {
                         const AZStd::string resolvedFilePath =
-                            AZ::RPI::AssetUtils::ResolvePathReference(materialPipelineFilePath.Native(), templateFilePath);
+                            JE::Render::RPI::AssetUtils::ResolvePathReference(materialPipelineFilePath.Native(), templateFilePath);
 
                         if (!AZ::IO::LocalFileIO::GetInstance()->Exists(resolvedFilePath.c_str()))
                         {
@@ -581,7 +581,7 @@ namespace JE::Assets::RenderBuilders
             product.m_outputFlags = AssetBuilderSDK::ProductOutputFlags::IntermediateAsset;
             product.m_dependenciesHandled = true;
             product.m_productFileName = outputMaterialParameterAzsliFilePath.String();
-            product.m_productAssetType = azrtti_typeid<AZ::RPI::MaterialTypeSourceData>();
+            product.m_productAssetType = azrtti_typeid<JE::Render::RPI::MaterialTypeSourceData>();
             product.m_productSubID = nextProductSubID++;
             response.m_outputProducts.emplace_back(AZStd::move(product));
         }
@@ -598,7 +598,7 @@ namespace JE::Assets::RenderBuilders
         // The new material type will no longer be abstract, we remove the reference to the partial
         // material shader code and will replace it below with a concrete shader asset list.
         const AZ::IO::FixedMaxPath materialAzsliFilePath(
-            AZ::RPI::AssetUtils::ResolvePathReference(materialTypeSourcePath, materialTypeSourceData.m_materialShaderCode));
+            JE::Render::RPI::AssetUtils::ResolvePathReference(materialTypeSourcePath, materialTypeSourceData.m_materialShaderCode));
         if (!AZ::IO::LocalFileIO::GetInstance()->Exists(materialAzsliFilePath.c_str()))
         {
             AZ_Error(MaterialTypeBuilderName, false, "File is missing: '%s'", materialTypeSourceData.m_materialShaderCode.c_str());
@@ -608,7 +608,7 @@ namespace JE::Assets::RenderBuilders
         // material shader defines work simila as m_materialShaderCode: its partial material shader code, and exists only in the
         // abstract material type, but it can be empty from the start
         const AZ::IO::FixedMaxPath materialDefinesAzsliFilePath(
-            AZ::RPI::AssetUtils::ResolvePathReference(materialTypeSourcePath, materialTypeSourceData.m_materialShaderDefines));
+            JE::Render::RPI::AssetUtils::ResolvePathReference(materialTypeSourcePath, materialTypeSourceData.m_materialShaderDefines));
         if (materialDefinesAzsliFilePath.HasFilename() &&
             !AZ::IO::LocalFileIO::GetInstance()->Exists(materialDefinesAzsliFilePath.c_str()))
         {
@@ -652,8 +652,8 @@ namespace JE::Assets::RenderBuilders
                 return;
             }
 
-            AZ::RPI::ShaderSourceData shaderSourceData;
-            if (!AZ::RPI::JsonUtils::LoadObjectFromFile(shaderTemplate.m_shader, shaderSourceData))
+            JE::Render::RPI::ShaderSourceData shaderSourceData;
+            if (!JE::Render::RPI::JsonUtils::LoadObjectFromFile(shaderTemplate.m_shader, shaderSourceData))
             {
                 AZ_Error(MaterialTypeBuilderName, false, "Failed to load shader template file '%s'.", shaderTemplate.m_shader.c_str());
                 return;
@@ -748,7 +748,7 @@ namespace JE::Assets::RenderBuilders
             outputShaderFilePath /= AZStd::string::format(
                 "%s_%s_%s.shader", materialTypeName.c_str(), materialPipelineIndicator.c_str(), shaderName.c_str());
 
-            if (AZ::RPI::JsonUtils::SaveObjectToFile(outputShaderFilePath.c_str(), shaderSourceData))
+            if (JE::Render::RPI::JsonUtils::SaveObjectToFile(outputShaderFilePath.c_str(), shaderSourceData))
             {
                 AssetBuilderSDK::JobProduct product;
                 product.m_outputFlags = AssetBuilderSDK::ProductOutputFlags::IntermediateAsset;
@@ -768,10 +768,10 @@ namespace JE::Assets::RenderBuilders
 
             for (const AZ::Name& materialPipelineName : materialPipelineList)
             {
-                AZ::RPI::MaterialTypeSourceData::MaterialPipelineState& pipelineData =
+                JE::Render::RPI::MaterialTypeSourceData::MaterialPipelineState& pipelineData =
                     materialTypeSourceData.m_pipelineData[materialPipelineName];
 
-                AZ::RPI::MaterialTypeSourceData::ShaderVariantReferenceData shaderVariantReferenceData;
+                JE::Render::RPI::MaterialTypeSourceData::ShaderVariantReferenceData shaderVariantReferenceData;
                 shaderVariantReferenceData.m_shaderFilePath = AZ::IO::Path{ outputShaderFilePath.Filename() }.c_str();
                 shaderVariantReferenceData.m_shaderTag = shaderTemplate.m_shaderTag;
                 shaderVariantReferenceData.m_drawItemType = shaderTemplate.m_drawItemType;
@@ -793,8 +793,8 @@ namespace JE::Assets::RenderBuilders
             AZStd::sort(
                 pipelineDataPair.second.m_shaderCollection.begin(),
                 pipelineDataPair.second.m_shaderCollection.end(),
-                [](const AZ::RPI::MaterialTypeSourceData::ShaderVariantReferenceData& a,
-                   const AZ::RPI::MaterialTypeSourceData::ShaderVariantReferenceData& b)
+                [](const JE::Render::RPI::MaterialTypeSourceData::ShaderVariantReferenceData& a,
+                   const JE::Render::RPI::MaterialTypeSourceData::ShaderVariantReferenceData& b)
                 {
                     return a.m_shaderFilePath < b.m_shaderFilePath;
                 });
@@ -804,7 +804,7 @@ namespace JE::Assets::RenderBuilders
         for (const auto& [materialPipelineFilePath, materialPipeline] : materialPipelines)
         {
             const AZ::Name materialPipelineName = GetMaterialPipelineName(materialPipelineFilePath);
-            AZ::RPI::MaterialTypeSourceData::MaterialPipelineState& pipelineData = materialTypeSourceData.m_pipelineData[materialPipelineName];
+            JE::Render::RPI::MaterialTypeSourceData::MaterialPipelineState& pipelineData = materialTypeSourceData.m_pipelineData[materialPipelineName];
             pipelineData.m_materialFunctorSourceData = materialPipeline.m_runtimeControls.m_materialFunctorSourceData;
             pipelineData.m_pipelinePropertyLayout = materialPipeline.m_runtimeControls.m_materialTypeInternalProperties;
         }
@@ -813,19 +813,19 @@ namespace JE::Assets::RenderBuilders
         // these paths remain relative to the original material type then they cannot be resolved and will not load with the final
         // material type. That will fail the build.
         materialTypeSourceData.EnumerateProperties(
-            [&materialTypeSourcePath](const AZ::RPI::MaterialPropertySourceData* property, const AZ::RPI::MaterialNameContext&)
+            [&materialTypeSourcePath](const JE::Render::RPI::MaterialPropertySourceData* property, const JE::Render::RPI::MaterialNameContext&)
             {
-                if (property->m_dataType == AZ::RPI::MaterialPropertyDataType::Image &&
-                    AZ::RPI::MaterialUtils::LooksLikeImageFileReference(property->m_value))
+                if (property->m_dataType == JE::Render::RPI::MaterialPropertyDataType::Image &&
+                    JE::Render::RPI::MaterialUtils::LooksLikeImageFileReference(property->m_value))
                 {
                     if (auto fileIOBase = AZ::IO::FileIOBase::GetInstance())
                     {
                         const AZStd::string originalPath = property->m_value.GetValue<AZStd::string>();
-                        const AZStd::string absolutePath = AZ::RPI::AssetUtils::ResolvePathReference(materialTypeSourcePath, originalPath);
+                        const AZStd::string absolutePath = JE::Render::RPI::AssetUtils::ResolvePathReference(materialTypeSourcePath, originalPath);
                         if (const auto aliasedPathResult = fileIOBase->ConvertToAlias(AZ::IO::PathView{ absolutePath }))
                         {
                             // Using const_cast because EnumerateProperties is currently only implemented as const.
-                            const_cast<AZ::RPI::MaterialPropertySourceData*>(property)->m_value = aliasedPathResult->LexicallyNormal().String();
+                            const_cast<JE::Render::RPI::MaterialPropertySourceData*>(property)->m_value = aliasedPathResult->LexicallyNormal().String();
                         }
                     }
                 }
@@ -838,19 +838,19 @@ namespace JE::Assets::RenderBuilders
         outputMaterialTypeFilePath /= AZStd::string::format("%s_generated.materialtype", materialTypeName.c_str());
 
         AZ_Assert(
-            materialTypeSourceData.GetFormat() != AZ::RPI::MaterialTypeSourceData::Format::Abstract,
+            materialTypeSourceData.GetFormat() != JE::Render::RPI::MaterialTypeSourceData::Format::Abstract,
             "The output material type must not use the abstract format, this will likely cause the '%s' job to run in an infinite "
             "loop.",
             PipelineStageJobKey);
 
-        if (AZ::RPI::JsonUtils::SaveObjectToFile(outputMaterialTypeFilePath.String(), materialTypeSourceData))
+        if (JE::Render::RPI::JsonUtils::SaveObjectToFile(outputMaterialTypeFilePath.String(), materialTypeSourceData))
         {
             AssetBuilderSDK::JobProduct product;
             product.m_outputFlags = AssetBuilderSDK::ProductOutputFlags::IntermediateAsset;
             product.m_dependenciesHandled = true;
             product.m_productFileName = outputMaterialTypeFilePath.String();
-            product.m_productAssetType = azrtti_typeid<AZ::RPI::MaterialTypeSourceData>();
-            product.m_productSubID = AZ::RPI::MaterialTypeSourceData::IntermediateMaterialTypeSubId;
+            product.m_productAssetType = azrtti_typeid<JE::Render::RPI::MaterialTypeSourceData>();
+            product.m_productSubID = JE::Render::RPI::MaterialTypeSourceData::IntermediateMaterialTypeSubId;
             response.m_outputProducts.emplace_back(AZStd::move(product));
         }
         else
@@ -870,15 +870,15 @@ namespace JE::Assets::RenderBuilders
         const AssetBuilderSDK::ProcessJobRequest& request,
         AssetBuilderSDK::ProcessJobResponse& response,
         const AZStd::string& materialTypeSourcePath,
-        const AZ::RPI::MaterialTypeSourceData& materialTypeSourceData) const
+        const JE::Render::RPI::MaterialTypeSourceData& materialTypeSourceData) const
     {
         AZStd::string materialProductPath;
         AZStd::string fileName;
         AzFramework::StringFunc::Path::GetFileName(materialTypeSourcePath.c_str(), fileName);
-        AzFramework::StringFunc::Path::ReplaceExtension(fileName, AZ::RPI::MaterialTypeAsset::Extension);
+        AzFramework::StringFunc::Path::ReplaceExtension(fileName, JE::Render::RPI::MaterialTypeAsset::Extension);
         AzFramework::StringFunc::Path::ConstructFull(request.m_tempDirPath.c_str(), fileName.c_str(), materialProductPath, true);
 
-        AZ::Data::Asset<AZ::RPI::MaterialTypeAsset> materialTypeAsset;
+        AZ::Data::Asset<JE::Render::RPI::MaterialTypeAsset> materialTypeAsset;
 
         {
             AZ_TraceContext("Product", fileName);
@@ -910,7 +910,7 @@ namespace JE::Assets::RenderBuilders
             if (!AssetBuilderSDK::OutputObject(
                     materialTypeAsset.Get(),
                     materialProductPath,
-                    azrtti_typeid<AZ::RPI::MaterialTypeAsset>(),
+                    azrtti_typeid<JE::Render::RPI::MaterialTypeAsset>(),
                     (AZ::u32)MaterialTypeProductSubId::MaterialTypeAsset,
                     jobProduct))
             {
@@ -936,10 +936,10 @@ namespace JE::Assets::RenderBuilders
             AZ_TraceContext("Product", defaultMaterialFileName);
             AZ_TracePrintf(MaterialTypeBuilderName, AZStd::string::format("Producing %s...", defaultMaterialFileName.c_str()).c_str());
 
-            AZ::RPI::MaterialSourceData allPropertyDefaultsMaterial =
-                AZ::RPI::MaterialSourceData::CreateAllPropertyDefaultsMaterial(materialTypeAsset, materialTypeSourcePath);
+            JE::Render::RPI::MaterialSourceData allPropertyDefaultsMaterial =
+                JE::Render::RPI::MaterialSourceData::CreateAllPropertyDefaultsMaterial(materialTypeAsset, materialTypeSourcePath);
 
-            if (!AZ::RPI::JsonUtils::SaveObjectToFile(defaultMaterialFilePath, allPropertyDefaultsMaterial))
+            if (!JE::Render::RPI::JsonUtils::SaveObjectToFile(defaultMaterialFilePath, allPropertyDefaultsMaterial))
             {
                 AZ_Warning(
                     MaterialTypeBuilderName, false, "Failed to save material reference file '%s'!", defaultMaterialFilePath.c_str());

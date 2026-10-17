@@ -152,7 +152,7 @@
               }
             },
 
-            { "command": "add_gem_dependency", "args": { "dependency": "Gem::Atom_RPI.Public" } },
+            { "command": "add_gem_dependency", "args": { "dependency": "JE::RenderIntegration" } },
             { "command": "add_gem_dependency", "args": { "dependency": "Gem::Atom_Feature_Common.Public" } },
 
             { "scope": "${integration_mode}",

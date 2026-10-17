@@ -6,8 +6,8 @@
  *
  */
 
-#include <Atom/RPI.Edit/Common/AssetUtils.h>
-#include <Atom/RPI.Reflect/Image/StreamingImageAsset.h>
+#include <JE/Editor/Render/RPI/Edit/Common/AssetUtils.h>
+#include <JE/Render/RPI/Reflect/Image/StreamingImageAsset.h>
 #include <AzCore/Asset/AssetCommon.h>
 #include <AzCore/IO/Path/Path.h>
 #include <AzCore/Preprocessor/EnumReflectUtils.h>
@@ -570,8 +570,8 @@ namespace GradientSignal::ImageCreatorUtils
         // If we're overwriting an existing source asset, this will already exist, but if we're creating a new file,
         // the product asset won't exist yet.
         auto createdAsset = AZ::Data::AssetManager::Instance().FindOrCreateAsset(
-            AZ::Data::AssetId(sourceInfo.m_assetId.m_guid, AZ::RPI::StreamingImageAsset::GetImageAssetSubId()),
-            azrtti_typeid<AZ::RPI::StreamingImageAsset>(),
+            AZ::Data::AssetId(sourceInfo.m_assetId.m_guid, JE::Render::RPI::StreamingImageAsset::GetImageAssetSubId()),
+            azrtti_typeid<JE::Render::RPI::StreamingImageAsset>(),
             AZ::Data::AssetLoadBehavior::PreLoad);
 
         // Set the asset hint to the source path so that we can display something reasonably correct in the component while waiting

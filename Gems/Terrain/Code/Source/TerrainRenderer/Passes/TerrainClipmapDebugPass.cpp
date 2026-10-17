@@ -8,10 +8,10 @@
 
 #include <TerrainRenderer/Passes/TerrainClipmapDebugPass.h>
 #include <TerrainRenderer/TerrainFeatureProcessor.h>
-#include <Atom/RPI.Public/RenderPipeline.h>
-#include <Atom/RPI.Public/Scene.h>
-#include <Atom/RPI.Public/ViewportContext.h>
-#include <Atom/RPI.Public/ViewportContextBus.h>
+#include <JE/Render/RPI/Public/RenderPipeline.h>
+#include <JE/Render/RPI/Public/Scene.h>
+#include <JE/Render/RPI/Public/ViewportContext.h>
+#include <JE/Render/RPI/Public/ViewportContextBus.h>
 #include <AzCore/Console/Console.h>
 
 namespace Terrain
@@ -24,25 +24,25 @@ namespace Terrain
         AZ::ConsoleFunctorFlags::Null,
         "Turn on clipmap debug rendering on the screen.");
 
-    AZ::RPI::Ptr<TerrainClipmapDebugPass> TerrainClipmapDebugPass::Create(const AZ::RPI::PassDescriptor& descriptor)
+    JE::Render::RPI::Ptr<TerrainClipmapDebugPass> TerrainClipmapDebugPass::Create(const JE::Render::RPI::PassDescriptor& descriptor)
     {
-        AZ::RPI::Ptr<TerrainClipmapDebugPass> pass = aznew TerrainClipmapDebugPass(descriptor);
+        JE::Render::RPI::Ptr<TerrainClipmapDebugPass> pass = aznew TerrainClipmapDebugPass(descriptor);
         return pass;
     }
 
-    TerrainClipmapDebugPass::TerrainClipmapDebugPass(const AZ::RPI::PassDescriptor& descriptor)
-        : AZ::RPI::FullscreenTrianglePass(descriptor)
+    TerrainClipmapDebugPass::TerrainClipmapDebugPass(const JE::Render::RPI::PassDescriptor& descriptor)
+        : JE::Render::RPI::FullscreenTrianglePass(descriptor)
     {
     }
 
     void TerrainClipmapDebugPass::SetupFrameGraphDependencies(AZ::RHI::FrameGraphInterface frameGraph)
     {
-        AZ::RPI::RenderPass::SetupFrameGraphDependencies(frameGraph);
+        JE::Render::RPI::RenderPass::SetupFrameGraphDependencies(frameGraph);
     }
 
     void TerrainClipmapDebugPass::CompileResources(const AZ::RHI::FrameGraphCompileContext& context)
     {
-        AZ::RPI::Scene* scene = m_pipeline->GetScene();
+        JE::Render::RPI::Scene* scene = m_pipeline->GetScene();
         TerrainFeatureProcessor* terrainFeatureProcessor = scene->GetFeatureProcessor<TerrainFeatureProcessor>();
         if (terrainFeatureProcessor)
         {
@@ -53,17 +53,17 @@ namespace Terrain
             }
         }
 
-        AZ::RPI::FullscreenTrianglePass::CompileResources(context);
+        JE::Render::RPI::FullscreenTrianglePass::CompileResources(context);
     }
 
     bool TerrainClipmapDebugPass::IsEnabled() const
     {
-        if (!AZ::RPI::Pass::IsEnabled())
+        if (!JE::Render::RPI::Pass::IsEnabled())
         {
             return false;
         }
 
-        AZ::RPI::Scene* scene = m_pipeline->GetScene();
+        JE::Render::RPI::Scene* scene = m_pipeline->GetScene();
         TerrainFeatureProcessor* terrainFeatureProcessor = scene->GetFeatureProcessor<TerrainFeatureProcessor>();
         if (!terrainFeatureProcessor)
         {

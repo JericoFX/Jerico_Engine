@@ -9,13 +9,13 @@
 
 #include <AzCore/Memory/SystemAllocator.h>
 #include <AzCore/Math/Vector3.h>
-#include <Atom/RPI.Public/Pass/ParentPass.h>
+#include <JE/Render/RPI/Public/Pass/ParentPass.h>
 #include <SkyAtmosphere/SkyAtmosphereFeatureProcessorInterface.h>
 
 #include <Atom/RHI.Reflect/ImageDescriptor.h>
-#include <Atom/RPI.Public/Shader/Shader.h>
-#include <Atom/RPI.Public/Shader/ShaderResourceGroup.h>
-#include <Atom/RPI.Public/Shader/ShaderReloadNotificationBus.h>
+#include <JE/Render/RPI/Public/Shader/Shader.h>
+#include <JE/Render/RPI/Public/Shader/ShaderResourceGroup.h>
+#include <JE/Render/RPI/Public/Shader/ShaderReloadNotificationBus.h>
 
 namespace SkyAtmosphere
 {
@@ -24,10 +24,10 @@ namespace SkyAtmosphere
     //! This pass really consists of multiple child passes that do the actual work
     //! of rendering the atmosphere resources and atmosphere
     class SkyAtmospherePass final
-        : public AZ::RPI::ParentPass
-        , public AZ::RPI::ShaderReloadNotificationBus::MultiHandler
+        : public JE::Render::RPI::ParentPass
+        , public JE::Render::RPI::ShaderReloadNotificationBus::MultiHandler
     {
-        using Base = AZ::RPI::ParentPass;
+        using Base = JE::Render::RPI::ParentPass;
         AZ_RPI_PASS(SkyAtmospherePass);
 
     public:
@@ -35,16 +35,16 @@ namespace SkyAtmosphere
         AZ_CLASS_ALLOCATOR(SkyAtmospherePass, AZ::SystemAllocator);
         ~SkyAtmospherePass() = default;
 
-        static AZ::RPI::Ptr<SkyAtmospherePass> CreateWithPassRequest(SkyAtmosphereFeatureProcessorInterface::AtmosphereId id);
+        static JE::Render::RPI::Ptr<SkyAtmospherePass> CreateWithPassRequest(SkyAtmosphereFeatureProcessorInterface::AtmosphereId id);
 
         SkyAtmosphereFeatureProcessorInterface::AtmosphereId GetAtmosphereId() const;
 
         void UpdateRenderPassSRG(const SkyAtmosphereParams& params);
 
     protected:
-        explicit SkyAtmospherePass(const AZ::RPI::PassDescriptor& descriptor, SkyAtmosphereFeatureProcessorInterface::AtmosphereId id);
+        explicit SkyAtmospherePass(const JE::Render::RPI::PassDescriptor& descriptor, SkyAtmosphereFeatureProcessorInterface::AtmosphereId id);
 
-        void FrameBeginInternal(AZ::RPI::Pass::FramePrepareParams params) override;
+        void FrameBeginInternal(JE::Render::RPI::Pass::FramePrepareParams params) override;
         void BuildInternal() override;
         void ResetInternal() override;
 
@@ -57,7 +57,7 @@ namespace SkyAtmosphere
         bool LutParamsEqual(const SkyAtmosphereParams& lhs, const SkyAtmosphereParams& rhs) const;
         void UpdatePassData();
 
-        using ImageInstance = AZ::Data::Instance<AZ::RPI::AttachmentImage>;
+        using ImageInstance = AZ::Data::Instance<JE::Render::RPI::AttachmentImage>;
         void CreateImage(const AZ::Name& slotName, const AZ::RHI::ImageDescriptor& desc, ImageInstance& image);
 
         struct AtmosphereGPUParams 
@@ -117,14 +117,14 @@ namespace SkyAtmosphere
         struct AtmospherePassData
         {
             AZ::RHI::ShaderInputConstantIndex m_index;
-            AZ::Data::Instance<AZ::RPI::ShaderResourceGroup> m_srg;
-            AZ::RPI::ShaderOptionGroup m_shaderOptionGroup;
+            AZ::Data::Instance<JE::Render::RPI::ShaderResourceGroup> m_srg;
+            JE::Render::RPI::ShaderOptionGroup m_shaderOptionGroup;
         };
         AZStd::vector<AtmospherePassData> m_atmospherePassData;
 
-        AZ::RPI::Ptr<AZ::RPI::Pass> m_skyTransmittanceLUTPass = nullptr;
-        AZ::RPI::Ptr<AZ::RPI::Pass> m_skyViewLUTPass = nullptr;
-        AZ::RPI::Ptr<AZ::RPI::Pass> m_skyVolumeLUTPass = nullptr;
+        JE::Render::RPI::Ptr<JE::Render::RPI::Pass> m_skyTransmittanceLUTPass = nullptr;
+        JE::Render::RPI::Ptr<JE::Render::RPI::Pass> m_skyViewLUTPass = nullptr;
+        JE::Render::RPI::Ptr<JE::Render::RPI::Pass> m_skyVolumeLUTPass = nullptr;
 
         AtmosphereGPUParams m_constants;
         SkyAtmosphereParams m_atmosphereParams;

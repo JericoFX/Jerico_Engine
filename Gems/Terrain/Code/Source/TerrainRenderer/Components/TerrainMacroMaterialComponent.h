@@ -16,7 +16,7 @@
 #include <LmbrCentral/Shape/ShapeComponentBus.h>
 #include <TerrainRenderer/Components/MacroMaterialImageModification.h>
 #include <TerrainRenderer/TerrainMacroMaterialBus.h>
-#include <Atom/RPI.Reflect/Image/StreamingImageAsset.h>
+#include <JE/Render/RPI/Reflect/Image/StreamingImageAsset.h>
 
 namespace LmbrCentral
 {
@@ -38,8 +38,8 @@ namespace Terrain
         AZStd::string GetMacroColorAssetPropertyName() const;
         void SetMacroColorAssetPropertyName(const AZStd::string& macroColorAssetPropertyName);
 
-        AZ::Data::Asset<AZ::RPI::StreamingImageAsset> m_macroColorAsset = { AZ::Data::AssetLoadBehavior::QueueLoad };
-        AZ::Data::Asset<AZ::RPI::StreamingImageAsset> m_macroNormalAsset = { AZ::Data::AssetLoadBehavior::QueueLoad };
+        AZ::Data::Asset<JE::Render::RPI::StreamingImageAsset> m_macroColorAsset = { AZ::Data::AssetLoadBehavior::QueueLoad };
+        AZ::Data::Asset<JE::Render::RPI::StreamingImageAsset> m_macroNormalAsset = { AZ::Data::AssetLoadBehavior::QueueLoad };
         bool m_normalFlipX = false;
         bool m_normalFlipY = false;
         float m_normalFactor = 1.0f;
@@ -98,8 +98,8 @@ namespace Terrain
     protected:
         void NotifyTerrainSystemOfColorChange(const AZ::Aabb& bounds);
 
-        AZ::Data::Asset<AZ::RPI::StreamingImageAsset> GetMacroColorAsset() const;
-        void SetMacroColorAsset(const AZ::Data::Asset<AZ::RPI::StreamingImageAsset>& asset);
+        AZ::Data::Asset<JE::Render::RPI::StreamingImageAsset> GetMacroColorAsset() const;
+        void SetMacroColorAsset(const AZ::Data::Asset<JE::Render::RPI::StreamingImageAsset>& asset);
 
         //! Get the macro color modification buffer.
         //! This is *only* exposed so that the editor component has the ability to save the buffer as an asset.
@@ -136,8 +136,8 @@ namespace Terrain
         TerrainMacroMaterialConfig m_configuration;
         AZ::Aabb m_cachedShapeBounds;
         bool m_macroMaterialActive{ false };
-        AZ::Data::Instance<AZ::RPI::Image> m_colorImage;
-        AZ::Data::Instance<AZ::RPI::Image> m_normalImage;
+        AZ::Data::Instance<JE::Render::RPI::Image> m_colorImage;
+        AZ::Data::Instance<JE::Render::RPI::Image> m_normalImage;
 
         //! Temporary buffer for runtime modifications of the macro color image data.
         AZStd::vector<uint32_t> m_modifiedMacroColorImageData;

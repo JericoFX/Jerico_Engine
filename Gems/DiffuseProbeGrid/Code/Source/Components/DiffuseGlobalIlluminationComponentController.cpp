@@ -7,7 +7,7 @@
  */
 
 #include <AzCore/RTTI/BehaviorContext.h>
-#include <Atom/RPI.Public/Scene.h>
+#include <JE/Render/RPI/Public/Scene.h>
 #include <Components/DiffuseGlobalIlluminationComponentController.h>
 
 namespace AZ
@@ -48,7 +48,7 @@ namespace AZ
 
         void DiffuseGlobalIlluminationComponentController::Activate(EntityId entityId)
         {
-            m_featureProcessor = AZ::RPI::Scene::GetFeatureProcessorForEntity<DiffuseGlobalIlluminationFeatureProcessorInterface>(entityId);
+            m_featureProcessor = JE::Render::RPI::Scene::GetFeatureProcessorForEntity<DiffuseGlobalIlluminationFeatureProcessorInterface>(entityId);
             OnConfigChanged();
         }
 

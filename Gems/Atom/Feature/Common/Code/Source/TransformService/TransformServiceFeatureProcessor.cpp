@@ -11,7 +11,7 @@
 #include <Atom/RHI/Factory.h>
 
 #include <Atom/RHI/RHISystemInterface.h>
-#include <Atom/RPI.Public/Scene.h>
+#include <JE/Render/RPI/Public/Scene.h>
 #include <Atom/Utils/Utils.h>
 
 #include <cinttypes>
@@ -34,7 +34,7 @@ namespace AZ
 
         void TransformServiceFeatureProcessor::Activate()
         {
-            m_updateSceneSrgHandler = RPI::Scene::PrepareSceneSrgEvent::Handler([this](RPI::ShaderResourceGroup *sceneSrg) { this->UpdateSceneSrg(sceneSrg); });
+            m_updateSceneSrgHandler = JE::Render::RPI::Scene::PrepareSceneSrgEvent::Handler([this](JE::Render::RPI::ShaderResourceGroup *sceneSrg) { this->UpdateSceneSrg(sceneSrg); });
             GetParentScene()->ConnectEvent(m_updateSceneSrgHandler);
 
             m_deviceBufferNeedsUpdate = true;
@@ -43,7 +43,7 @@ namespace AZ
 
             m_isWriteable = true;
 
-            RPI::SceneNotificationBus::Handler::BusConnect(GetParentScene()->GetId());
+            JE::Render::RPI::SceneNotificationBus::Handler::BusConnect(GetParentScene()->GetId());
         }
 
         void TransformServiceFeatureProcessor::Deactivate()
@@ -63,7 +63,7 @@ namespace AZ
 
             m_isWriteable = false;
 
-            RPI::SceneNotificationBus::Handler::BusDisconnect();
+            JE::Render::RPI::SceneNotificationBus::Handler::BusDisconnect();
             m_updateSceneSrgHandler.Disconnect();
         }
         
@@ -83,16 +83,16 @@ namespace AZ
                 if (!m_objectToWorldBuffer)
                 {
                     // Create the transform buffer, grow by powers of two
-                    RPI::CommonBufferDescriptor desc2;
-                    desc2.m_poolType = RPI::CommonBufferPoolType::ReadOnly;
+                    JE::Render::RPI::CommonBufferDescriptor desc2;
+                    desc2.m_poolType = JE::Render::RPI::CommonBufferPoolType::ReadOnly;
                     desc2.m_bufferName =  "m_objectToWorldBuffer";
                     desc2.m_byteCount = byteCount;
                     desc2.m_elementSize = elementSize;
 
-                    m_objectToWorldBuffer = RPI::BufferSystemInterface::Get()->CreateBufferFromCommonPool(desc2);
+                    m_objectToWorldBuffer = JE::Render::RPI::BufferSystemInterface::Get()->CreateBufferFromCommonPool(desc2);
 
                     desc2.m_bufferName = "m_objectToWorldHistoryBuffer";
-                    m_objectToWorldHistoryBuffer = RPI::BufferSystemInterface::Get()->CreateBufferFromCommonPool(desc2);
+                    m_objectToWorldHistoryBuffer = JE::Render::RPI::BufferSystemInterface::Get()->CreateBufferFromCommonPool(desc2);
                 }
                 else
                 {
@@ -113,13 +113,13 @@ namespace AZ
                 if (!m_objectToWorldInverseTransposeBuffer)
                 {
                     // Create the normal buffer, grow by powers of two
-                    RPI::CommonBufferDescriptor desc2;
-                    desc2.m_poolType = RPI::CommonBufferPoolType::ReadOnly;
+                    JE::Render::RPI::CommonBufferDescriptor desc2;
+                    desc2.m_poolType = JE::Render::RPI::CommonBufferPoolType::ReadOnly;
                     desc2.m_bufferName = "m_objectToWorldInverseTransposeBuffer";
                     desc2.m_byteCount = byteCount;
                     desc2.m_elementSize = elementSize;
 
-                    m_objectToWorldInverseTransposeBuffer = RPI::BufferSystemInterface::Get()->CreateBufferFromCommonPool(desc2);
+                    m_objectToWorldInverseTransposeBuffer = JE::Render::RPI::BufferSystemInterface::Get()->CreateBufferFromCommonPool(desc2);
                 }
                 else
                 {
@@ -131,7 +131,7 @@ namespace AZ
             }
         }
 
-        void TransformServiceFeatureProcessor::UpdateSceneSrg(RPI::ShaderResourceGroup *sceneSrg)
+        void TransformServiceFeatureProcessor::UpdateSceneSrg(JE::Render::RPI::ShaderResourceGroup *sceneSrg)
         {
             sceneSrg->SetBufferView(
                 m_objectToWorldBufferIndex,

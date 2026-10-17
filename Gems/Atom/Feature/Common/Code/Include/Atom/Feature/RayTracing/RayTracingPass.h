@@ -12,9 +12,9 @@
 #include <Atom/RHI/DispatchRaysItem.h>
 #include <Atom/RHI/RayTracingPipelineState.h>
 #include <Atom/RHI/RayTracingShaderTable.h>
-#include <Atom/RPI.Public/Pass/RenderPass.h>
-#include <Atom/RPI.Public/Shader/Shader.h>
-#include <Atom/RPI.Public/Shader/ShaderReloadNotificationBus.h>
+#include <JE/Render/RPI/Public/Pass/RenderPass.h>
+#include <JE/Render/RPI/Public/Shader/Shader.h>
+#include <JE/Render/RPI/Public/Shader/ShaderReloadNotificationBus.h>
 #include <AzCore/Memory/SystemAllocator.h>
 
 namespace AZ
@@ -25,23 +25,23 @@ namespace AZ
 
         //! This pass executes a raytracing shader as specified in the PassData.
         class ATOM_FEATURE_COMMON_API RayTracingPass
-            : public RPI::RenderPass
-            , private RPI::ShaderReloadNotificationBus::MultiHandler
+            : public JE::Render::RPI::RenderPass
+            , private JE::Render::RPI::ShaderReloadNotificationBus::MultiHandler
         {
             AZ_RPI_PASS(RayTracingPass);
 
         public:
-            AZ_RTTI(RayTracingPass, "{7A68A36E-956A-4258-93FE-38686042C4D9}", RPI::RenderPass);
+            AZ_RTTI(RayTracingPass, "{7A68A36E-956A-4258-93FE-38686042C4D9}", JE::Render::RPI::RenderPass);
             AZ_CLASS_ALLOCATOR(RayTracingPass, SystemAllocator);
             virtual ~RayTracingPass();
 
             //! Creates a RayTracingPass
-            static RPI::Ptr<RayTracingPass> Create(const RPI::PassDescriptor& descriptor);
+            static JE::Render::RPI::Ptr<RayTracingPass> Create(const JE::Render::RPI::PassDescriptor& descriptor);
 
             void SetMaxRayLength(float maxRayLength) { m_maxRayLength = maxRayLength; }
 
         protected:
-            RayTracingPass(const RPI::PassDescriptor& descriptor);
+            RayTracingPass(const JE::Render::RPI::PassDescriptor& descriptor);
 
             // Pass overrides
             bool IsEnabled() const override;
@@ -55,24 +55,24 @@ namespace AZ
             void BuildCommandListInternal(const RHI::FrameGraphExecuteContext& context) override;
 
             // ShaderReloadNotificationBus::Handler overrides
-            void OnShaderReinitialized(const RPI::Shader& shader) override;
-            void OnShaderAssetReinitialized(const Data::Asset<RPI::ShaderAsset>& shaderAsset) override;
-            void OnShaderVariantReinitialized(const RPI::ShaderVariant& shaderVariant) override;
+            void OnShaderReinitialized(const JE::Render::RPI::Shader& shader) override;
+            void OnShaderAssetReinitialized(const Data::Asset<JE::Render::RPI::ShaderAsset>& shaderAsset) override;
+            void OnShaderVariantReinitialized(const JE::Render::RPI::ShaderVariant& shaderVariant) override;
 
             // load the raytracing shaders and setup pipeline states
             void CreatePipelineState();
 
             // pass data
-            RPI::PassDescriptor m_passDescriptor;
+            JE::Render::RPI::PassDescriptor m_passDescriptor;
             const RayTracingPassData* m_passData = nullptr;
 
             Name m_fullscreenSizeSourceSlotName;
             bool m_fullscreenDispatch = false;
-            RPI::PassAttachmentBinding* m_fullscreenSizeSourceBinding = nullptr;
+            JE::Render::RPI::PassAttachmentBinding* m_fullscreenSizeSourceBinding = nullptr;
 
             bool m_indirectDispatch = false;
             Name m_indirectDispatchBufferSlotName;
-            RPI::PassAttachmentBinding* m_indirectDispatchRaysBufferBinding = nullptr;
+            JE::Render::RPI::PassAttachmentBinding* m_indirectDispatchRaysBufferBinding = nullptr;
             RHI::Ptr<RHI::IndirectBufferSignature> m_indirectDispatchRaysBufferSignature;
             RHI::IndirectBufferView m_indirectDispatchRaysBufferView;
             RHI::Ptr<RHI::DispatchRaysIndirectBuffer> m_dispatchRaysIndirectBuffer;
@@ -83,11 +83,11 @@ namespace AZ
             uint32_t m_proceduralGeometryTypeRevision = 0;
 
             // raytracing shaders, pipeline states, and shader table
-            Data::Instance<RPI::Shader> m_rayGenerationShader;
-            Data::Instance<RPI::Shader> m_missShader;
-            Data::Instance<RPI::Shader> m_closestHitShader;
-            Data::Instance<RPI::Shader> m_closestHitProceduralShader;
-            Data::Instance<RPI::Shader> m_intersectionShader;
+            Data::Instance<JE::Render::RPI::Shader> m_rayGenerationShader;
+            Data::Instance<JE::Render::RPI::Shader> m_missShader;
+            Data::Instance<JE::Render::RPI::Shader> m_closestHitShader;
+            Data::Instance<JE::Render::RPI::Shader> m_closestHitProceduralShader;
+            Data::Instance<JE::Render::RPI::Shader> m_intersectionShader;
             RHI::Ptr<RHI::RayTracingPipelineState> m_rayTracingPipelineState;
             RHI::ConstPtr<RHI::PipelineState> m_globalPipelineState;
             RHI::Ptr<RHI::RayTracingShaderTable> m_rayTracingShaderTable;

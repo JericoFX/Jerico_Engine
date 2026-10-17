@@ -6,7 +6,7 @@
  *
  */
 
-#include <Atom/RPI.Edit/Common/AssetUtils.h>
+#include <JE/Editor/Render/RPI/Edit/Common/AssetUtils.h>
 #include <AtomToolsFramework/Graph/DynamicNode/DynamicNodeConfig.h>
 #include <AzCore/IO/FileIO.h>
 #include <AzCore/IO/Path/Path.h>
@@ -17,7 +17,7 @@ namespace MaterialCanvas
 {
     AZStd::string GetTestDataPathForNodeConfig(const AtomToolsFramework::DynamicNodeConfig& nodeConfig)
     {
-        AZStd::string baseName = AZ::RPI::AssetUtils::SanitizeFileName(nodeConfig.m_title);
+        AZStd::string baseName = JE::Render::RPI::AssetUtils::SanitizeFileName(nodeConfig.m_title);
         AZStd::to_lower(baseName.begin(), baseName.end());
         return AZStd::string::format(
             "@engroot@/Editor/Materials/Assets/MaterialCanvas/GraphData/Nodes/Functions/%s.materialgraphnode", baseName.c_str());

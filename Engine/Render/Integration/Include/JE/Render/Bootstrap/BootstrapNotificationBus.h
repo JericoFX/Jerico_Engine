@@ -10,7 +10,7 @@
 #include <AzCore/EBus/EBus.h>
 
 #include <AzFramework/Scene/SceneSystemInterface.h>
-#include <Atom/RPI.Public/Scene.h>
+#include <JE/Render/RPI/Public/Scene.h>
 namespace JE
 {
     namespace Render
@@ -44,7 +44,7 @@ namespace JE
                         AZStd::shared_ptr<AzFramework::Scene> mainScene = sceneSystem->GetScene(AzFramework::Scene::MainSceneName);
                         AZ_Assert(mainScene, "AzFramework didn't set up any scenes.");
 
-                        AZ::RPI::ScenePtr* defaultScene = mainScene->FindSubsystem<AZ::RPI::ScenePtr>();
+                        JE::Render::RPI::ScenePtr* defaultScene = mainScene->FindSubsystem<JE::Render::RPI::ScenePtr>();
                         if (defaultScene && *defaultScene && (*defaultScene)->GetDefaultRenderPipeline())
                         {
                             handler->OnBootstrapSceneReady(defaultScene->get());
@@ -56,7 +56,7 @@ namespace JE
 
                 //////////////////////////////////////////////////////////////////////////
 
-                virtual void OnBootstrapSceneReady(AZ::RPI::Scene* bootstrapScene) = 0;
+                virtual void OnBootstrapSceneReady(JE::Render::RPI::Scene* bootstrapScene) = 0;
             };
             using NotificationBus = AZ::EBus<Notification>;
         } // namespace Bootstrap

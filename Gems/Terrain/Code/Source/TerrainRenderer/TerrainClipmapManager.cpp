@@ -8,11 +8,11 @@
 
 #include <TerrainRenderer/TerrainClipmapManager.h>
 #include <AzFramework/Terrain/TerrainDataRequestBus.h>
-#include <Atom/RPI.Public/Image/AttachmentImagePool.h>
-#include <Atom/RPI.Public/Image/ImageSystemInterface.h>
-#include <Atom/RPI.Public/Shader/ShaderSystemInterface.h>
-#include <Atom/RPI.Public/ViewportContext.h>
-#include <Atom/RPI.Public/ViewportContextBus.h>
+#include <JE/Render/RPI/Public/Image/AttachmentImagePool.h>
+#include <JE/Render/RPI/Public/Image/ImageSystemInterface.h>
+#include <JE/Render/RPI/Public/Shader/ShaderSystemInterface.h>
+#include <JE/Render/RPI/Public/ViewportContext.h>
+#include <JE/Render/RPI/Public/ViewportContextBus.h>
 #include <AzCore/Console/Console.h>
 
 namespace Terrain
@@ -127,7 +127,7 @@ namespace Terrain
 
     void TerrainClipmapManager::SetConfiguration(const ClipmapConfiguration& config)
     {
-        AZ::RPI::ShaderSystemInterface::Get()->SetGlobalShaderOption(AZ::Name{ "o_useClipmap" }, AZ::RPI::ShaderOptionValue{ config.m_clipmapEnabled });
+        JE::Render::RPI::ShaderSystemInterface::Get()->SetGlobalShaderOption(AZ::Name{ "o_useClipmap" }, JE::Render::RPI::ShaderOptionValue{ config.m_clipmapEnabled });
 
         if (!m_isInitialized)
         {
@@ -240,7 +240,7 @@ namespace Terrain
         return m_config.m_clipmapEnabled;
     }
 
-    void TerrainClipmapManager::Initialize(AZ::Data::Instance<AZ::RPI::ShaderResourceGroup>& terrainSrg)
+    void TerrainClipmapManager::Initialize(AZ::Data::Instance<JE::Render::RPI::ShaderResourceGroup>& terrainSrg)
     {
         AZ_Error(TerrainClipmapManagerName, terrainSrg, "terrainSrg must not be null.");
         AZ_Error(TerrainClipmapManagerName, !m_isInitialized, "Already initialized.");
@@ -271,7 +271,7 @@ namespace Terrain
         m_isInitialized = true;
     }
     
-    void TerrainClipmapManager::UpdateSrgIndices(AZ::Data::Instance<AZ::RPI::ShaderResourceGroup>& terrainSrg)
+    void TerrainClipmapManager::UpdateSrgIndices(AZ::Data::Instance<JE::Render::RPI::ShaderResourceGroup>& terrainSrg)
     {
         for (uint32_t i = 0; i < ClipmapName::Count; ++i)
         {
@@ -307,7 +307,7 @@ namespace Terrain
         m_fullRefreshClipmaps = true;
     }
 
-    void TerrainClipmapManager::Update(const AZ::Vector3& cameraPosition, const AZ::RPI::Scene* scene, AZ::Data::Instance<AZ::RPI::ShaderResourceGroup>& terrainSrg)
+    void TerrainClipmapManager::Update(const AZ::Vector3& cameraPosition, const JE::Render::RPI::Scene* scene, AZ::Data::Instance<JE::Render::RPI::ShaderResourceGroup>& terrainSrg)
     {
         UpdateClipmapData(cameraPosition, scene, terrainSrg);
         terrainSrg->SetConstant(m_terrainSrgClipmapDataIndex, m_clipmapData);
@@ -464,7 +464,7 @@ namespace Terrain
 
     void TerrainClipmapManager::InitializeMacroClipmapImages()
     {
-        AZ::Data::Instance<AZ::RPI::AttachmentImagePool> pool = AZ::RPI::ImageSystemInterface::Get()->GetSystemAttachmentPool();
+        AZ::Data::Instance<JE::Render::RPI::AttachmentImagePool> pool = JE::Render::RPI::ImageSystemInterface::Get()->GetSystemAttachmentPool();
 
         AZ::RHI::ImageDescriptor imageDesc;
         imageDesc.m_bindFlags = AZ::RHI::ImageBindFlags::ShaderReadWrite;
@@ -475,19 +475,19 @@ namespace Terrain
 
         AZ::Name macroColorClipmapName = AZ::Name("MacroColorClipmaps");
         m_clipmaps[ClipmapName::MacroColor] =
-            AZ::RPI::AttachmentImage::Create(*pool.get(), imageDesc, macroColorClipmapName, nullptr, nullptr);
+            JE::Render::RPI::AttachmentImage::Create(*pool.get(), imageDesc, macroColorClipmapName, nullptr, nullptr);
 
         imageDesc.m_format = AZ::RHI::Format::R16G16_SNORM;
         imageDesc.m_arraySize = aznumeric_cast<uint16_t>(m_macroClipmapStackSize);
 
         AZ::Name macroNormalClipmapName = AZ::Name("MacroNormalClipmaps");
         m_clipmaps[ClipmapName::MacroNormal] =
-            AZ::RPI::AttachmentImage::Create(*pool.get(), imageDesc, macroNormalClipmapName, nullptr, nullptr);
+            JE::Render::RPI::AttachmentImage::Create(*pool.get(), imageDesc, macroNormalClipmapName, nullptr, nullptr);
     }
 
     void TerrainClipmapManager::InitializeDetailClipmapImages()
     {
-        AZ::Data::Instance<AZ::RPI::AttachmentImagePool> pool = AZ::RPI::ImageSystemInterface::Get()->GetSystemAttachmentPool();
+        AZ::Data::Instance<JE::Render::RPI::AttachmentImagePool> pool = JE::Render::RPI::ImageSystemInterface::Get()->GetSystemAttachmentPool();
 
         AZ::RHI::ImageDescriptor imageDesc;
         imageDesc.m_bindFlags = AZ::RHI::ImageBindFlags::ShaderReadWrite;
@@ -498,40 +498,40 @@ namespace Terrain
 
         AZ::Name detailColorClipmapName = AZ::Name("DetailColorClipmaps");
         m_clipmaps[ClipmapName::DetailColor] =
-            AZ::RPI::AttachmentImage::Create(*pool.get(), imageDesc, detailColorClipmapName, nullptr, nullptr);
+            JE::Render::RPI::AttachmentImage::Create(*pool.get(), imageDesc, detailColorClipmapName, nullptr, nullptr);
 
         imageDesc.m_format = AZ::RHI::Format::R16G16_SNORM;
         imageDesc.m_arraySize = aznumeric_cast<uint16_t>(m_detailClipmapStackSize);
 
         AZ::Name detailNormalClipmapName = AZ::Name("DetailNormalClipmaps");
         m_clipmaps[ClipmapName::DetailNormal] =
-            AZ::RPI::AttachmentImage::Create(*pool.get(), imageDesc, detailNormalClipmapName, nullptr, nullptr);
+            JE::Render::RPI::AttachmentImage::Create(*pool.get(), imageDesc, detailNormalClipmapName, nullptr, nullptr);
 
         imageDesc.m_format = AZ::RHI::Format::R16_FLOAT;
 
         AZ::Name detailHeightClipmapName = AZ::Name("DetailHeightClipmaps");
         m_clipmaps[ClipmapName::DetailHeight] =
-            AZ::RPI::AttachmentImage::Create(*pool.get(), imageDesc, detailHeightClipmapName, nullptr, nullptr);
+            JE::Render::RPI::AttachmentImage::Create(*pool.get(), imageDesc, detailHeightClipmapName, nullptr, nullptr);
 
         imageDesc.m_format = AZ::RHI::Format::R8_UNORM;
 
         AZ::Name detailRoughnessClipmapName = AZ::Name("DetailRoughnessClipmaps");
         m_clipmaps[ClipmapName::DetailRoughness] =
-            AZ::RPI::AttachmentImage::Create(*pool.get(), imageDesc, detailRoughnessClipmapName, nullptr, nullptr);
+            JE::Render::RPI::AttachmentImage::Create(*pool.get(), imageDesc, detailRoughnessClipmapName, nullptr, nullptr);
 
         AZ::Name detailSpecularF0ClipmapName = AZ::Name("DetailSpecularF0Clipmaps");
         m_clipmaps[ClipmapName::DetailSpecularF0] =
-            AZ::RPI::AttachmentImage::Create(*pool.get(), imageDesc, detailSpecularF0ClipmapName, nullptr, nullptr);
+            JE::Render::RPI::AttachmentImage::Create(*pool.get(), imageDesc, detailSpecularF0ClipmapName, nullptr, nullptr);
 
         AZ::Name detailMetalnessClipmapName = AZ::Name("DetailMetalnessClipmaps");
         m_clipmaps[ClipmapName::DetailMetalness] =
-            AZ::RPI::AttachmentImage::Create(*pool.get(), imageDesc, detailMetalnessClipmapName, nullptr, nullptr);
+            JE::Render::RPI::AttachmentImage::Create(*pool.get(), imageDesc, detailMetalnessClipmapName, nullptr, nullptr);
 
         imageDesc.m_format = AZ::RHI::Format::R16_FLOAT;
 
         AZ::Name detailOcclusionClipmapName = AZ::Name("DetailOcclusionClipmaps");
         m_clipmaps[ClipmapName::DetailOcclusion] =
-            AZ::RPI::AttachmentImage::Create(*pool.get(), imageDesc, detailOcclusionClipmapName, nullptr, nullptr);
+            JE::Render::RPI::AttachmentImage::Create(*pool.get(), imageDesc, detailOcclusionClipmapName, nullptr, nullptr);
     }
 
     void TerrainClipmapManager::ClearMacroClipmapImages()
@@ -551,13 +551,13 @@ namespace Terrain
         m_clipmaps[ClipmapName::DetailOcclusion] = nullptr;
     }
 
-    void TerrainClipmapManager::UpdateClipmapData(const AZ::Vector3& cameraPosition, const AZ::RPI::Scene* scene, AZ::Data::Instance<AZ::RPI::ShaderResourceGroup>& terrainSrg)
+    void TerrainClipmapManager::UpdateClipmapData(const AZ::Vector3& cameraPosition, const JE::Render::RPI::Scene* scene, AZ::Data::Instance<JE::Render::RPI::ShaderResourceGroup>& terrainSrg)
     {
         // set new view position
         AZ::Vector2 currentViewPosition = AZ::Vector2(cameraPosition.GetX(), cameraPosition.GetY());
 
         // Update debug data
-        auto viewportContextInterface = AZ::Interface<AZ::RPI::ViewportContextRequestsInterface>::Get();
+        auto viewportContextInterface = AZ::Interface<JE::Render::RPI::ViewportContextRequestsInterface>::Get();
         auto viewportContext = viewportContextInterface->GetViewportContextByScene(scene);
         auto viewportWindowSize = viewportContext->GetViewportSize();
         m_clipmapData.m_viewportSize[0] = aznumeric_cast<float>(viewportWindowSize.m_width);
@@ -736,7 +736,7 @@ namespace Terrain
         }
     }
 
-    AZ::Data::Instance<AZ::RPI::AttachmentImage> TerrainClipmapManager::GetClipmapImage(ClipmapName clipmapName) const
+    AZ::Data::Instance<JE::Render::RPI::AttachmentImage> TerrainClipmapManager::GetClipmapImage(ClipmapName clipmapName) const
     {
         AZ_Assert(clipmapName < ClipmapName::Count, "Must be a valid ClipmapName enum.");
 
@@ -805,7 +805,7 @@ namespace Terrain
 
     // TerrainAreaMaterialNotificationBus overrides...
     void TerrainClipmapManager::OnTerrainDefaultSurfaceMaterialCreated(
-        [[maybe_unused]] AZ::EntityId entityId, [[maybe_unused]] AZ::Data::Instance<AZ::RPI::Material> material)
+        [[maybe_unused]] AZ::EntityId entityId, [[maybe_unused]] AZ::Data::Instance<JE::Render::RPI::Material> material)
     {
         TriggerFullRefresh();
     }
@@ -816,7 +816,7 @@ namespace Terrain
     }
 
     void TerrainClipmapManager::OnTerrainDefaultSurfaceMaterialChanged(
-        [[maybe_unused]] AZ::EntityId entityId, [[maybe_unused]] AZ::Data::Instance<AZ::RPI::Material> newMaterial)
+        [[maybe_unused]] AZ::EntityId entityId, [[maybe_unused]] AZ::Data::Instance<JE::Render::RPI::Material> newMaterial)
     {
         TriggerFullRefresh();
     }
@@ -824,7 +824,7 @@ namespace Terrain
     void TerrainClipmapManager::OnTerrainSurfaceMaterialMappingCreated(
         [[maybe_unused]] AZ::EntityId entityId,
         [[maybe_unused]] SurfaceData::SurfaceTag surfaceTag,
-        [[maybe_unused]] AZ::Data::Instance<AZ::RPI::Material> material)
+        [[maybe_unused]] AZ::Data::Instance<JE::Render::RPI::Material> material)
     {
         TriggerFullRefresh();
     }
@@ -838,7 +838,7 @@ namespace Terrain
     void TerrainClipmapManager::OnTerrainSurfaceMaterialMappingMaterialChanged(
         [[maybe_unused]] AZ::EntityId entityId,
         [[maybe_unused]] SurfaceData::SurfaceTag surfaceTag,
-        [[maybe_unused]] AZ::Data::Instance<AZ::RPI::Material> material)
+        [[maybe_unused]] AZ::Data::Instance<JE::Render::RPI::Material> material)
     {
         TriggerFullRefresh();
     }

@@ -11,8 +11,8 @@
 
 #include <Atom/RHI/Factory.h>
 #include <Atom/RHI/FrameGraphAttachmentInterface.h>
-#include <Atom/RPI.Public/RenderPipeline.h>
-#include <Atom/RPI.Public/Scene.h>
+#include <JE/Render/RPI/Public/RenderPipeline.h>
+#include <JE/Render/RPI/Public/Scene.h>
 
 #include <PostProcess/PostProcessFeatureProcessor.h>
 #include <PostProcess/ExposureControl/ExposureControlSettings.h>
@@ -21,13 +21,13 @@ namespace AZ
 {
     namespace Render
     {
-        RPI::Ptr<OutputTransformPass> OutputTransformPass::Create(const RPI::PassDescriptor& descriptor)
+        JE::Render::RPI::Ptr<OutputTransformPass> OutputTransformPass::Create(const JE::Render::RPI::PassDescriptor& descriptor)
         {
-            RPI::Ptr<OutputTransformPass> pass = aznew OutputTransformPass(descriptor);
+            JE::Render::RPI::Ptr<OutputTransformPass> pass = aznew OutputTransformPass(descriptor);
             return pass;
         }
 
-        OutputTransformPass::OutputTransformPass(const RPI::PassDescriptor& descriptor)
+        OutputTransformPass::OutputTransformPass(const JE::Render::RPI::PassDescriptor& descriptor)
             : ApplyShaperLookupTablePass(descriptor)
             , m_toneMapperShaderVariantOptionName(ToneMapperShaderVariantOptionName)
             , m_transferFunctionShaderVariantOptionName(TransferFunctionShaderVariantOptionName)
@@ -106,13 +106,13 @@ namespace AZ
         void OutputTransformPass::FrameBeginInternal(FramePrepareParams params)
         {
             ApplyShaperLookupTablePass::FrameBeginInternal(params);
-            AZ::RPI::Scene* scene = GetScene();
+            JE::Render::RPI::Scene* scene = GetScene();
             if (scene)
             {
                 PostProcessFeatureProcessor* fp = scene->GetFeatureProcessor<PostProcessFeatureProcessor>();
                 if (fp)
                 {
-                    AZ::RPI::ViewPtr view = GetRenderPipeline()->GetFirstView(GetPipelineViewTag());
+                    JE::Render::RPI::ViewPtr view = GetRenderPipeline()->GetFirstView(GetPipelineViewTag());
                     PostProcessSettings* postProcessSettings = fp->GetLevelSettingsFromView(view);
                     if (postProcessSettings)
                     {

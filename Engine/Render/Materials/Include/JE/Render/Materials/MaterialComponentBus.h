@@ -173,12 +173,12 @@ namespace JE
             //! @param materialAssignmentId ID of material slot.
             //! @param modelUvOverrides Map of remapped UV channels.
             virtual void SetModelUvOverrides(
-                const MaterialAssignmentId& materialAssignmentId, const AZ::RPI::MaterialModelUvOverrideMap& modelUvOverrides) = 0;
+                const MaterialAssignmentId& materialAssignmentId, const JE::Render::RPI::MaterialModelUvOverrideMap& modelUvOverrides) = 0;
 
             //! Get Model UV overrides for a specific material assignment
             //! @param materialAssignmentId ID of material slot.
             //! @returns Map of remapped UV channels.
-            virtual AZ::RPI::MaterialModelUvOverrideMap GetModelUvOverrides(const MaterialAssignmentId& materialAssignmentId) const = 0;
+            virtual JE::Render::RPI::MaterialModelUvOverrideMap GetModelUvOverrides(const MaterialAssignmentId& materialAssignmentId) const = 0;
 
             //! Set material property override value with a specific type
             template<typename T>

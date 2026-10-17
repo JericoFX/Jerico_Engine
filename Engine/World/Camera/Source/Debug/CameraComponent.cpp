@@ -16,10 +16,10 @@
 
 #include <Atom/RHI/RHISystemInterface.h>
 
-#include <Atom/RPI.Public/RPISystemInterface.h>
-#include <Atom/RPI.Public/AuxGeom/AuxGeomFeatureProcessorInterface.h>
-#include <Atom/RPI.Public/Scene.h>
-#include <Atom/RPI.Public/WindowContext.h>
+#include <JE/Render/RPI/Public/RPISystemInterface.h>
+#include <JE/Render/RPI/Public/AuxGeom/AuxGeomFeatureProcessorInterface.h>
+#include <JE/Render/RPI/Public/Scene.h>
+#include <JE/Render/RPI/Public/WindowContext.h>
 
 namespace JE::World::Camera::Debug
 {
@@ -68,8 +68,8 @@ namespace JE::World::Camera::Debug
 
     CameraComponent::CameraComponent()
     {
-        m_cameraView = AZStd::make_shared<AZ::RPI::ViewGroup>();
-        m_cameraView->Init(AZ::RPI::ViewGroup::Descriptor{ nullptr, nullptr });
+        m_cameraView = AZStd::make_shared<JE::Render::RPI::ViewGroup>();
+        m_cameraView->Init(JE::Render::RPI::ViewGroup::Descriptor{ nullptr, nullptr });
     }
 
     void CameraComponent::Activate()
@@ -81,13 +81,13 @@ namespace JE::World::Camera::Debug
         m_cameraView->CreateMainView(viewName);
         m_cameraView->CreateStereoscopicViews(viewName);
 
-        m_xrSystem = AZ::RPI::RPISystemInterface::Get()->GetXRSystem();
+        m_xrSystem = JE::Render::RPI::RPISystemInterface::Get()->GetXRSystem();
         if (m_xrSystem)
         {
             m_numXrViews = m_xrSystem->GetNumViews();
         }
 
-        for (uint16_t i = 0; i < AZ::RPI::XRMaxNumViews; i++)
+        for (uint16_t i = 0; i < JE::Render::RPI::XRMaxNumViews; i++)
         {
             if (i < m_stereoscopicViewQuats.size())
             {
@@ -99,10 +99,10 @@ namespace JE::World::Camera::Debug
             }
         }
 
-        m_auxGeomFeatureProcessor = AZ::RPI::Scene::GetFeatureProcessorForEntity<AZ::RPI::AuxGeomFeatureProcessorInterface>(GetEntityId());
+        m_auxGeomFeatureProcessor = JE::Render::RPI::Scene::GetFeatureProcessorForEntity<JE::Render::RPI::AuxGeomFeatureProcessorInterface>(GetEntityId());
         if (m_auxGeomFeatureProcessor)
         {
-            m_auxGeomFeatureProcessor->GetOrCreateDrawQueueForView(m_cameraView->GetView(AZ::RPI::ViewType::Default).get());
+            m_auxGeomFeatureProcessor->GetOrCreateDrawQueueForView(m_cameraView->GetView(JE::Render::RPI::ViewType::Default).get());
         }
 
         //Get transform at start
@@ -112,7 +112,7 @@ namespace JE::World::Camera::Debug
         OnTransformChanged(transform, transform);
 
         AZ::TransformNotificationBus::Handler::BusConnect(GetEntityId());
-        AZ::RPI::ViewProviderBus::Handler::BusConnect(GetEntityId());
+        JE::Render::RPI::ViewProviderBus::Handler::BusConnect(GetEntityId());
         ::Camera::CameraRequestBus::Handler::BusConnect(GetEntityId());
         ::Camera::CameraNotificationBus::Broadcast(&::Camera::CameraNotificationBus::Events::OnCameraAdded, GetEntityId());
     }
@@ -121,27 +121,27 @@ namespace JE::World::Camera::Debug
     {
         ::Camera::CameraNotificationBus::Broadcast(&::Camera::CameraNotificationBus::Events::OnCameraRemoved, GetEntityId());
         ::Camera::CameraRequestBus::Handler::BusDisconnect();
-        AZ::RPI::ViewProviderBus::Handler::BusDisconnect();
+        JE::Render::RPI::ViewProviderBus::Handler::BusDisconnect();
         AZ::TransformNotificationBus::Handler::BusDisconnect();
-        AZ::RPI::WindowContextNotificationBus::Handler::BusDisconnect();
+        JE::Render::RPI::WindowContextNotificationBus::Handler::BusDisconnect();
 
         if (m_auxGeomFeatureProcessor)
         {
-            m_auxGeomFeatureProcessor->ReleaseDrawQueueForView(m_cameraView->GetView(AZ::RPI::ViewType::Default).get());
+            m_auxGeomFeatureProcessor->ReleaseDrawQueueForView(m_cameraView->GetView(JE::Render::RPI::ViewType::Default).get());
         }
 
         m_auxGeomFeatureProcessor = nullptr;
         m_stereoscopicViewQuats.clear();
     }
 
-    AZ::RPI::ViewPtr CameraComponent::GetView() const
+    JE::Render::RPI::ViewPtr CameraComponent::GetView() const
     {
-        return m_cameraView->GetView(AZ::RPI::ViewType::Default);
+        return m_cameraView->GetView(JE::Render::RPI::ViewType::Default);
     }
 
-    AZ::RPI::ViewPtr CameraComponent::GetStereoscopicView(AZ::RPI::ViewType viewType) const
+    JE::Render::RPI::ViewPtr CameraComponent::GetStereoscopicView(JE::Render::RPI::ViewType viewType) const
     {
-        AZ_Assert(viewType == AZ::RPI::ViewType::XrLeft || viewType == AZ::RPI::ViewType::XrRight, "View type %i not stereoscopic", viewType);
+        AZ_Assert(viewType == JE::Render::RPI::ViewType::XrLeft || viewType == JE::Render::RPI::ViewType::XrRight, "View type %i not stereoscopic", viewType);
         return m_cameraView->GetView(viewType);
     }
 
@@ -155,7 +155,7 @@ namespace JE::World::Camera::Debug
 
             if (config->m_target != nullptr)
             {
-                AZ::RPI::WindowContextNotificationBus::Handler::BusConnect(m_componentConfig.m_target->GetWindowHandle());
+                JE::Render::RPI::WindowContextNotificationBus::Handler::BusConnect(m_componentConfig.m_target->GetWindowHandle());
             }
 
             UpdateAspectRatio();
@@ -182,7 +182,7 @@ namespace JE::World::Camera::Debug
         //Apply transform to stereoscopic views
         for (AZ::u32 i = 0; i < m_numXrViews; i++)
         {
-            AZ::RPI::ViewType xrViewType = i == 0 ? AZ::RPI::ViewType::XrLeft : AZ::RPI::ViewType::XrRight;
+            JE::Render::RPI::ViewType xrViewType = i == 0 ? JE::Render::RPI::ViewType::XrLeft : JE::Render::RPI::ViewType::XrRight;
 
             if (m_stereoscopicViewUpdate)
             {
@@ -203,7 +203,7 @@ namespace JE::World::Camera::Debug
         {
             //Handle the case when we have a PC window showing the view of the left eye
             AZ::Matrix3x4 worldTransform = AZ::Matrix3x4::CreateFromQuaternionAndTranslation(
-                m_stereoscopicViewQuats[static_cast<uint32_t>(AZ::RPI::ViewType::XrLeft)], world.GetTranslation());
+                m_stereoscopicViewQuats[static_cast<uint32_t>(JE::Render::RPI::ViewType::XrLeft)], world.GetTranslation());
             m_cameraView->SetCameraTransform(worldTransform);
         }
         else
@@ -257,7 +257,7 @@ namespace JE::World::Camera::Debug
 
     void CameraComponent::SetXRViewQuaternion(const AZ::Quaternion& viewQuat, uint32_t xrViewIndex)
     {
-        AZ_Assert(xrViewIndex < AZ::RPI::XRMaxNumViews, "Xr view index is out of range.");
+        AZ_Assert(xrViewIndex < JE::Render::RPI::XRMaxNumViews, "Xr view index is out of range.");
         m_stereoscopicViewQuats[xrViewIndex] = viewQuat;
         m_stereoscopicViewUpdate = true;
     }
@@ -391,8 +391,8 @@ namespace JE::World::Camera::Debug
             AZ::Matrix4x4 projection = AZ::Matrix4x4::CreateIdentity();
             for (AZ::u32 i = 0; i < m_numXrViews; i++)
             {
-                AZ::RPI::ViewType xrViewType = i == 0 ? AZ::RPI::ViewType::XrLeft : AZ::RPI::ViewType::XrRight;
-                AZ::RPI::FovData fovData;
+                JE::Render::RPI::ViewType xrViewType = i == 0 ? JE::Render::RPI::ViewType::XrLeft : JE::Render::RPI::ViewType::XrRight;
+                JE::Render::RPI::FovData fovData;
                 [[maybe_unused]] AZ::RHI::ResultCode resultCode = m_xrSystem->GetViewFov(i, fovData);
                 projection = m_xrSystem->CreateStereoscopicProjection(
                     fovData.m_angleLeft,

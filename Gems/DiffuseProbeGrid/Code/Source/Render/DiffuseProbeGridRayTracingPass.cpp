@@ -12,13 +12,13 @@
 #include <Atom/RHI/FrameScheduler.h>
 #include <Atom/RHI/RHISystemInterface.h>
 #include <Atom/RHI/ScopeProducerFunction.h>
-#include <Atom/RPI.Public/Buffer/BufferSystemInterface.h>
-#include <Atom/RPI.Public/Buffer/Buffer.h>
-#include <Atom/RPI.Public/RenderPipeline.h>
-#include <Atom/RPI.Public/Scene.h>
-#include <Atom/RPI.Public/Pass/PassUtils.h>
-#include <Atom/RPI.Public/RPIUtils.h>
-#include <Atom/RPI.Public/View.h>
+#include <JE/Render/RPI/Public/Buffer/BufferSystemInterface.h>
+#include <JE/Render/RPI/Public/Buffer/Buffer.h>
+#include <JE/Render/RPI/Public/RenderPipeline.h>
+#include <JE/Render/RPI/Public/Scene.h>
+#include <JE/Render/RPI/Public/Pass/PassUtils.h>
+#include <JE/Render/RPI/Public/RPIUtils.h>
+#include <JE/Render/RPI/Public/View.h>
 #include <DiffuseProbeGrid_Traits_Platform.h>
 #include <Atom/Feature/RayTracing/RayTracingFeatureProcessorInterface.h>
 #include <Atom/Feature/TransformService/TransformServiceFeatureProcessorInterface.h>
@@ -29,14 +29,14 @@ namespace AZ
 {
     namespace Render
     {
-        RPI::Ptr<DiffuseProbeGridRayTracingPass> DiffuseProbeGridRayTracingPass::Create(const RPI::PassDescriptor& descriptor)
+        JE::Render::RPI::Ptr<DiffuseProbeGridRayTracingPass> DiffuseProbeGridRayTracingPass::Create(const JE::Render::RPI::PassDescriptor& descriptor)
         {
-            RPI::Ptr<DiffuseProbeGridRayTracingPass> pass = aznew DiffuseProbeGridRayTracingPass(descriptor);
+            JE::Render::RPI::Ptr<DiffuseProbeGridRayTracingPass> pass = aznew DiffuseProbeGridRayTracingPass(descriptor);
             return pass;
         }
 
-        DiffuseProbeGridRayTracingPass::DiffuseProbeGridRayTracingPass(const RPI::PassDescriptor& descriptor)
-            : RPI::RenderPass(descriptor)
+        DiffuseProbeGridRayTracingPass::DiffuseProbeGridRayTracingPass(const JE::Render::RPI::PassDescriptor& descriptor)
+            : JE::Render::RPI::RenderPass(descriptor)
         {
             if (RHI::RHISystemInterface::Get()->GetRayTracingSupport() == RHI::MultiDevice::NoDevices || !AZ_TRAIT_DIFFUSE_GI_PASSES_SUPPORTED)
             {
@@ -50,29 +50,29 @@ namespace AZ
             // load the ray tracing shader
             // Note: the shader may not be available on all platforms
             AZStd::string shaderFilePath = "Shaders/DiffuseGlobalIllumination/DiffuseProbeGridRayTracing.azshader";
-            m_rayTracingShader = RPI::LoadCriticalShader(shaderFilePath);
+            m_rayTracingShader = JE::Render::RPI::LoadCriticalShader(shaderFilePath);
             if (m_rayTracingShader == nullptr)
             {
                 return;
             }
 
-            auto shaderVariant = m_rayTracingShader->GetVariant(RPI::ShaderAsset::RootShaderVariantStableId);
+            auto shaderVariant = m_rayTracingShader->GetVariant(JE::Render::RPI::ShaderAsset::RootShaderVariantStableId);
             RHI::PipelineStateDescriptorForRayTracing rayGenerationShaderDescriptor;
             shaderVariant.ConfigurePipelineState(rayGenerationShaderDescriptor, m_rayTracingShader->GetDefaultShaderOptions());
 
             // closest hit shader
             AZStd::string closestHitShaderFilePath = "Shaders/DiffuseGlobalIllumination/DiffuseProbeGridRayTracingClosestHit.azshader";
-            m_closestHitShader = RPI::LoadCriticalShader(closestHitShaderFilePath);
+            m_closestHitShader = JE::Render::RPI::LoadCriticalShader(closestHitShaderFilePath);
 
-            auto closestHitShaderVariant = m_closestHitShader->GetVariant(RPI::ShaderAsset::RootShaderVariantStableId);
+            auto closestHitShaderVariant = m_closestHitShader->GetVariant(JE::Render::RPI::ShaderAsset::RootShaderVariantStableId);
             RHI::PipelineStateDescriptorForRayTracing closestHitShaderDescriptor;
             closestHitShaderVariant.ConfigurePipelineState(closestHitShaderDescriptor, m_closestHitShader->GetDefaultShaderOptions());
 
             // miss shader
             AZStd::string missShaderFilePath = "Shaders/DiffuseGlobalIllumination/DiffuseProbeGridRayTracingMiss.azshader";
-            m_missShader = RPI::LoadCriticalShader(missShaderFilePath);
+            m_missShader = JE::Render::RPI::LoadCriticalShader(missShaderFilePath);
 
-            auto missShaderVariant = m_missShader->GetVariant(RPI::ShaderAsset::RootShaderVariantStableId);
+            auto missShaderVariant = m_missShader->GetVariant(JE::Render::RPI::ShaderAsset::RootShaderVariantStableId);
             RHI::PipelineStateDescriptorForRayTracing missShaderDescriptor;
             missShaderVariant.ConfigurePipelineState(missShaderDescriptor, m_missShader->GetDefaultShaderOptions());
 
@@ -111,7 +111,7 @@ namespace AZ
                 return false;
             }
 
-            RPI::Scene* scene = m_pipeline->GetScene();
+            JE::Render::RPI::Scene* scene = m_pipeline->GetScene();
             if (!scene)
             {
                 return false;
@@ -143,7 +143,7 @@ namespace AZ
 
         void DiffuseProbeGridRayTracingPass::FrameBeginInternal(FramePrepareParams params)
         {
-            RPI::Scene* scene = m_pipeline->GetScene();
+            JE::Render::RPI::Scene* scene = m_pipeline->GetScene();
             auto* rayTracingFeatureProcessor = scene->GetFeatureProcessor<RayTracingFeatureProcessorInterface>();
 
             if (!m_rayTracingShaderTable)
@@ -161,7 +161,7 @@ namespace AZ
         {
             RenderPass::SetupFrameGraphDependencies(frameGraph);
 
-            RPI::Scene* scene = m_pipeline->GetScene();
+            JE::Render::RPI::Scene* scene = m_pipeline->GetScene();
             DiffuseProbeGridFeatureProcessor* diffuseProbeGridFeatureProcessor = scene->GetFeatureProcessor<DiffuseProbeGridFeatureProcessor>();
             auto* rayTracingFeatureProcessor = scene->GetFeatureProcessor<RayTracingFeatureProcessorInterface>();
 
@@ -263,7 +263,7 @@ namespace AZ
 
         void DiffuseProbeGridRayTracingPass::CompileResources([[maybe_unused]] const RHI::FrameGraphCompileContext& context)
         {
-            RPI::Scene* scene = m_pipeline->GetScene();
+            JE::Render::RPI::Scene* scene = m_pipeline->GetScene();
             DiffuseProbeGridFeatureProcessor* diffuseProbeGridFeatureProcessor = scene->GetFeatureProcessor<DiffuseProbeGridFeatureProcessor>();
             auto* rayTracingFeatureProcessor = scene->GetFeatureProcessor<RayTracingFeatureProcessorInterface>();
 
@@ -307,7 +307,7 @@ namespace AZ
 
         void DiffuseProbeGridRayTracingPass::BuildCommandListInternal([[maybe_unused]] const RHI::FrameGraphExecuteContext& context)
         {
-            RPI::Scene* scene = m_pipeline->GetScene();
+            JE::Render::RPI::Scene* scene = m_pipeline->GetScene();
             DiffuseProbeGridFeatureProcessor* diffuseProbeGridFeatureProcessor = scene->GetFeatureProcessor<DiffuseProbeGridFeatureProcessor>();
             auto* rayTracingFeatureProcessor = scene->GetFeatureProcessor<RayTracingFeatureProcessorInterface>();
             AZ_Assert(rayTracingFeatureProcessor, "DiffuseProbeGridRayTracingPass requires the RayTracingFeatureProcessor");

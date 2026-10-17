@@ -155,7 +155,7 @@ void UiImageSequenceComponent::Render(LyShine::IRenderGraph* renderGraph)
             }
         }
 
-        AZ::Data::Instance<AZ::RPI::Image> image;
+        AZ::Data::Instance<JE::Render::RPI::Image> image;
         if (sprite)
         {
             image = sprite->GetImage();

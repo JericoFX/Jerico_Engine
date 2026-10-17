@@ -10,16 +10,21 @@
 
 #include <Atom/Feature/SkinnedMesh/SkinnedMeshShaderOptions.h>
 
-#include <Atom/RPI.Reflect/Shader/ShaderOptionGroup.h>
+#include <JE/Render/RPI/Reflect/Shader/ShaderOptionGroup.h>
 #include <AzCore/EBus/Event.h>
 #include <AzCore/Instance/Instance.h>
 
 namespace AZ
 {
-    namespace RPI
-    {
+    }
+
+namespace JE::Render::RPI
+{
         class Shader;
     }
+
+namespace AZ
+{
 
     namespace Render
     {
@@ -43,19 +48,19 @@ namespace AZ
         class CachedSkinnedMeshShaderOptions
         {
         public:
-            void SetShader(Data::Instance<RPI::Shader> shader);
+            void SetShader(Data::Instance<JE::Render::RPI::Shader> shader);
             void ConnectToShaderReinitializedEvent(SkinnedMeshShaderOptionNotificationBus::Handler& shaderReinitializedEventHandler);
-            RPI::ShaderOptionGroup CreateShaderOptionGroup(const SkinnedMeshShaderOptions& shaderOptions) const;
+            JE::Render::RPI::ShaderOptionGroup CreateShaderOptionGroup(const SkinnedMeshShaderOptions& shaderOptions) const;
         private:
-            Data::Instance<RPI::Shader> m_shader;
-            RPI::ShaderOptionIndex m_skinningMethodOptionIndex;
-            RPI::ShaderOptionValue m_skinningMethodLinearSkinningValue;
-            RPI::ShaderOptionValue m_skinningMethodDualQuaternionValue;
-            RPI::ShaderOptionValue m_skinningMethodNoSkinningValue;
+            Data::Instance<JE::Render::RPI::Shader> m_shader;
+            JE::Render::RPI::ShaderOptionIndex m_skinningMethodOptionIndex;
+            JE::Render::RPI::ShaderOptionValue m_skinningMethodLinearSkinningValue;
+            JE::Render::RPI::ShaderOptionValue m_skinningMethodDualQuaternionValue;
+            JE::Render::RPI::ShaderOptionValue m_skinningMethodNoSkinningValue;
 
-            RPI::ShaderOptionIndex m_applyMorphTargetOptionIndex;
-            RPI::ShaderOptionValue m_applyMorphTargetFalseValue;
-            RPI::ShaderOptionValue m_applyMorphTargetTrueValue;
+            JE::Render::RPI::ShaderOptionIndex m_applyMorphTargetOptionIndex;
+            JE::Render::RPI::ShaderOptionValue m_applyMorphTargetFalseValue;
+            JE::Render::RPI::ShaderOptionValue m_applyMorphTargetTrueValue;
         };
     } // namespace Render
 } // namespace AZ

@@ -13,7 +13,7 @@
 #include <SkinnedMesh/SkinnedMeshShaderOptionsCache.h>
 
 #include <Atom/RHI/DispatchItem.h>
-#include <Atom/RPI.Reflect/Shader/ShaderOptionGroup.h>
+#include <JE/Render/RPI/Reflect/Shader/ShaderOptionGroup.h>
 #include <AzCore/Instance/Instance.h>
 
 namespace AZ
@@ -24,13 +24,18 @@ namespace AZ
         class PipelineState;
     }
 
-    namespace RPI
-    {
+    }
+
+namespace JE::Render::RPI
+{
         class Buffer;
         class ModelLod;
         class Shader;
         class ShaderResourceGroup;
     }
+
+namespace AZ
+{
 
     namespace Render
     {
@@ -51,7 +56,7 @@ namespace AZ
                 uint32_t positionHistoryOutputBufferOffsetInBytes,
                 uint32_t lodIndex,
                 uint32_t meshIndex,
-                Data::Instance<RPI::Buffer> skinningMatrices,
+                Data::Instance<JE::Render::RPI::Buffer> skinningMatrices,
                 const SkinnedMeshShaderOptions& shaderOptions,
                 SkinnedMeshFeatureProcessor* skinnedMeshFeatureProcessor,
                 MorphTargetInstanceMetaData morphTargetInstanceMetaData,
@@ -66,7 +71,7 @@ namespace AZ
 
             const RHI::DispatchItem& GetRHIDispatchItem() const;
 
-            Data::Instance<RPI::Buffer> GetBoneTransforms() const;
+            Data::Instance<JE::Render::RPI::Buffer> GetBoneTransforms() const;
             uint32_t GetVertexCount() const;
             void Enable();
             void Disable();
@@ -78,7 +83,7 @@ namespace AZ
             RHI::DispatchItem m_dispatchItem;
 
             // The skinning shader used for this instance
-            Data::Instance<RPI::Shader> m_skinningShader;
+            Data::Instance<JE::Render::RPI::Shader> m_skinningShader;
 
             // Offsets into the SkinnedMeshOutputVertexStream where the lod streams start for this mesh
             SkinnedMeshOutputVertexOffsets m_outputBufferOffsetsInBytes;
@@ -96,14 +101,14 @@ namespace AZ
             uint32_t m_meshIndex;
 
             // The per-object shader resource group
-            Data::Instance<RPI::ShaderResourceGroup> m_instanceSrg;
+            Data::Instance<JE::Render::RPI::ShaderResourceGroup> m_instanceSrg;
 
             // Buffer with the bone transforms
-            Data::Instance<RPI::Buffer> m_boneTransforms;
+            Data::Instance<JE::Render::RPI::Buffer> m_boneTransforms;
 
             // Options for the skinning shader
             SkinnedMeshShaderOptions m_shaderOptions;
-            RPI::ShaderOptionGroup m_shaderOptionGroup;
+            JE::Render::RPI::ShaderOptionGroup m_shaderOptionGroup;
 
             // MetaData for the morph target that is specific to this instance
             MorphTargetInstanceMetaData m_morphTargetInstanceMetaData;

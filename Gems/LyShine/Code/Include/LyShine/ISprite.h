@@ -14,7 +14,7 @@
 #include <AzCore/Instance/Instance.h>
 #include <AzCore/Math/Vector2.h>
 
-namespace AZ
+namespace JE::Render
 {
     namespace RPI
     {
@@ -146,5 +146,5 @@ public: // member functions
     //! Returns true if this sprite is configured as a sprite-sheet, false otherwise
     virtual bool IsSpriteSheet() const = 0;
 
-    virtual AZ::Data::Instance<AZ::RPI::Image> GetImage() = 0;
+    virtual AZ::Data::Instance<JE::Render::RPI::Image> GetImage() = 0;
 };

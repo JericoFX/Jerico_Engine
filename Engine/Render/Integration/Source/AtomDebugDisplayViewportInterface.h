@@ -18,11 +18,11 @@
 
 #include <AzFramework/Entity/EntityDebugDisplayBus.h>
 
-#include <Atom/RPI.Public/AuxGeom/AuxGeomFeatureProcessorInterface.h>
-#include <Atom/RPI.Public/RPISystemInterface.h>
-#include <Atom/RPI.Public/AuxGeom/AuxGeomDraw.h>
-#include <Atom/RPI.Public/ViewportContext.h>
-#include <Atom/RPI.Public/ViewportContextBus.h>
+#include <JE/Render/RPI/Public/AuxGeom/AuxGeomFeatureProcessorInterface.h>
+#include <JE/Render/RPI/Public/RPISystemInterface.h>
+#include <JE/Render/RPI/Public/AuxGeom/AuxGeomDraw.h>
+#include <JE/Render/RPI/Public/ViewportContext.h>
+#include <JE/Render/RPI/Public/ViewportContextBus.h>
 
 namespace JE::Render::Integration
 {
@@ -35,10 +35,10 @@ namespace JE::Render::Integration
         enum { TransformStackSize = 32 };
         AZ::Matrix3x4 m_transformStack[TransformStackSize];
 
-        AZ::RPI::AuxGeomDraw::OpacityType m_opacityType = AZ::RPI::AuxGeomDraw::OpacityType::Opaque;
-        AZ::RPI::AuxGeomDraw::DepthTest m_depthTest = AZ::RPI::AuxGeomDraw::DepthTest::On;
-        AZ::RPI::AuxGeomDraw::DepthWrite m_depthWrite = AZ::RPI::AuxGeomDraw::DepthWrite::On;
-        AZ::RPI::AuxGeomDraw::FaceCullMode m_faceCullMode = AZ::RPI::AuxGeomDraw::FaceCullMode::Back;
+        JE::Render::RPI::AuxGeomDraw::OpacityType m_opacityType = JE::Render::RPI::AuxGeomDraw::OpacityType::Opaque;
+        JE::Render::RPI::AuxGeomDraw::DepthTest m_depthTest = JE::Render::RPI::AuxGeomDraw::DepthTest::On;
+        JE::Render::RPI::AuxGeomDraw::DepthWrite m_depthWrite = JE::Render::RPI::AuxGeomDraw::DepthWrite::On;
+        JE::Render::RPI::AuxGeomDraw::FaceCullMode m_faceCullMode = JE::Render::RPI::AuxGeomDraw::FaceCullMode::Back;
         int32_t m_viewProjOverrideIndex = -1; // will be used to implement SetDrawInFrontMode & 2D mode
 
         // separate tracking for Cry only state
@@ -61,11 +61,11 @@ namespace JE::Render::Integration
             return false;
         }
 
-        void Draw(AZ::RPI::AuxGeomDrawPtr auxGeomDrawPtr, const RenderState& rendState) const
+        void Draw(JE::Render::RPI::AuxGeomDrawPtr auxGeomDrawPtr, const RenderState& rendState) const
         {
             if (auxGeomDrawPtr && !m_points.empty())
             {
-                AZ::RPI::AuxGeomDraw::AuxGeomDynamicDrawArguments drawArgs;
+                JE::Render::RPI::AuxGeomDraw::AuxGeomDynamicDrawArguments drawArgs;
                 drawArgs.m_verts = m_points.data();
                 drawArgs.m_vertCount = aznumeric_cast<uint32_t>(m_points.size());
                 drawArgs.m_colors = &rendState.m_color;
@@ -79,11 +79,11 @@ namespace JE::Render::Integration
             }
         }
 
-        void Draw2d(AZ::RPI::AuxGeomDrawPtr auxGeomDrawPtr, const RenderState& rendState) const
+        void Draw2d(JE::Render::RPI::AuxGeomDrawPtr auxGeomDrawPtr, const RenderState& rendState) const
         {
             if (auxGeomDrawPtr && !m_points.empty())
             {
-                AZ::RPI::AuxGeomDraw::AuxGeomDynamicDrawArguments drawArgs;
+                JE::Render::RPI::AuxGeomDraw::AuxGeomDynamicDrawArguments drawArgs;
                 drawArgs.m_verts = m_points.data();
                 drawArgs.m_vertCount = aznumeric_cast<uint32_t>(m_points.size());
                 drawArgs.m_colors = &rendState.m_color;
@@ -110,8 +110,8 @@ namespace JE::Render::Integration
     {
         SingleColorDynamicSizeLineHelper(int estimatedNumLineSegments);
         void AddLineSegment(const AZ::Vector3& lineStart, const AZ::Vector3& lineEnd);
-        void Draw(AZ::RPI::AuxGeomDrawPtr auxGeomDrawPtr, const RenderState& rendState) const;
-        void Draw2d(AZ::RPI::AuxGeomDrawPtr auxGeomDrawPtr, const RenderState& rendState) const;
+        void Draw(JE::Render::RPI::AuxGeomDrawPtr auxGeomDrawPtr, const RenderState& rendState) const;
+        void Draw2d(JE::Render::RPI::AuxGeomDrawPtr auxGeomDrawPtr, const RenderState& rendState) const;
         void Reset();
 
         AZStd::vector<AZ::Vector3> m_points;
@@ -119,13 +119,13 @@ namespace JE::Render::Integration
 
     class AtomDebugDisplayViewportInterface final
         : public AzFramework::DebugDisplayRequestBus::Handler
-        , public AZ::RPI::ViewportContextIdNotificationBus::Handler
+        , public JE::Render::RPI::ViewportContextIdNotificationBus::Handler
     {
     public:
         AZ_RTTI(AtomDebugDisplayViewportInterface, "{09AF6A46-0100-4FBF-8F94-E6B221322D14}", AzFramework::DebugDisplayRequestBus::Handler);
 
-        explicit AtomDebugDisplayViewportInterface(AZ::RPI::ViewportContextPtr viewportContextPtr);
-        explicit AtomDebugDisplayViewportInterface(uint32_t defaultInstanceAddress, AZ::RPI::Scene* scene);
+        explicit AtomDebugDisplayViewportInterface(JE::Render::RPI::ViewportContextPtr viewportContextPtr);
+        explicit AtomDebugDisplayViewportInterface(uint32_t defaultInstanceAddress, JE::Render::RPI::Scene* scene);
         ~AtomDebugDisplayViewportInterface();
 
         void ResetRenderState();
@@ -203,7 +203,7 @@ namespace JE::Render::Integration
     private:
 
         // ViewportContextIdNotificationBus handlers
-        void OnViewportDefaultViewChanged(AZ::RPI::ViewPtr view) override;
+        void OnViewportDefaultViewChanged(JE::Render::RPI::ViewPtr view) override;
 
 
         // internal helper functions
@@ -260,22 +260,22 @@ namespace JE::Render::Integration
 
         const AZ::Matrix3x4& GetCurrentTransform() const;
 
-        void UpdateAuxGeom(AZ::RPI::Scene* scene, AZ::RPI::View* view);
-        void InitInternal(AZ::RPI::Scene* scene, AZ::RPI::ViewportContextPtr viewportContextPtr);
+        void UpdateAuxGeom(JE::Render::RPI::Scene* scene, JE::Render::RPI::View* view);
+        void InitInternal(JE::Render::RPI::Scene* scene, JE::Render::RPI::ViewportContextPtr viewportContextPtr);
 
-        AZ::RPI::ViewportContextPtr GetViewportContext() const;
+        JE::Render::RPI::ViewportContextPtr GetViewportContext() const;
 
         uint32_t ConvertRenderStateToCry() const;
 
         RenderState m_rendState;
 
-        AZ::RPI::AuxGeomDrawPtr m_auxGeomPtr;
+        JE::Render::RPI::AuxGeomDrawPtr m_auxGeomPtr;
 
         // m_defaultInstance is true for the instance that multicasts the debug draws to all viewports
         // (with an AuxGeom render pass) in the default scene.
         bool                    m_defaultInstance = false;
         AzFramework::ViewportId m_viewportId = AzFramework::InvalidViewportId; // Address this instance answers on.
-        AZ::RPI::ViewportContext::SceneChangedEvent::Handler m_sceneChangeHandler;
+        JE::Render::RPI::ViewportContext::SceneChangedEvent::Handler m_sceneChangeHandler;
     };
 
     // this is duplicated from Cry_Math.h, GetBasisVectors.

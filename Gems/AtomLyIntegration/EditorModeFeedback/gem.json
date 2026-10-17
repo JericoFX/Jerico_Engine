@@ -16,7 +16,6 @@
     "documentation_url": "",
     "dependencies": [
         "Atom_Feature_Common",
-        "Atom_RPI",
         "Atom_RHI",
         "CommonFeaturesAtom"
     ]

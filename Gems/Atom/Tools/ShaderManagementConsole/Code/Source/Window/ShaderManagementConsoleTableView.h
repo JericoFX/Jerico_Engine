@@ -60,8 +60,8 @@ namespace ShaderManagementConsole
 
         const AZ::Crc32 m_toolId = {};
         const AZ::Uuid m_documentId = AZ::Uuid::CreateNull();
-        AZ::RPI::ShaderVariantListSourceData m_shaderVariantListSourceData;
-        AZStd::vector<AZ::RPI::ShaderOptionDescriptor> m_shaderOptionDescriptors;
+        JE::Render::RPI::ShaderVariantListSourceData m_shaderVariantListSourceData;
+        AZStd::vector<JE::Render::RPI::ShaderOptionDescriptor> m_shaderOptionDescriptors;
         size_t m_shaderVariantCount = {};
         size_t m_shaderOptionCount = {};
         ColumnSortMode m_columnSortMode = Cost;

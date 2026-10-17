@@ -817,7 +817,7 @@ namespace ImageProcessingAtom
 #endif
 
         // cubemaps can have a specific subId, standard images use the subId specified in StreamingImageAsset
-        uint32_t subId = IsConvertToCubemap() ? m_input->m_presetSetting.m_cubemapSetting->m_subId : RPI::StreamingImageAsset::GetImageAssetSubId();
+        uint32_t subId = IsConvertToCubemap() ? m_input->m_presetSetting.m_cubemapSetting->m_subId : JE::Render::RPI::StreamingImageAsset::GetImageAssetSubId();
 
         // Save the image to atom image assets
         ImageAssetProducer assetProducer(

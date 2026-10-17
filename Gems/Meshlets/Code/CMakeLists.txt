@@ -41,7 +41,7 @@ ly_add_target(
             AZ::AzCore
             AZ::AzFramework
             Gem::CommonFeaturesAtom.Static
-            Gem::Atom_RPI.Public
+            JE::RenderIntegration
             3rdParty::meshoptimizer
 )
 

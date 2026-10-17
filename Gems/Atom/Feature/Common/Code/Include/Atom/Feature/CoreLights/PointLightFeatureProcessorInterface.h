@@ -10,8 +10,8 @@
 
 #include <Atom/Feature/CoreLights/PhotometricValue.h>
 #include <Atom/Feature/CoreLights/ShadowConstants.h>
-#include <Atom/RPI.Public/Buffer/Buffer.h>
-#include <Atom/RPI.Public/FeatureProcessor.h>
+#include <JE/Render/RPI/Public/Buffer/Buffer.h>
+#include <JE/Render/RPI/Public/FeatureProcessor.h>
 
 namespace AZ
 {
@@ -43,10 +43,10 @@ namespace AZ
         };
 
         //! PointLightFeatureProcessorInterface provides an interface to acquire, release, and update a point light.
-        class PointLightFeatureProcessorInterface : public RPI::FeatureProcessor
+        class PointLightFeatureProcessorInterface : public JE::Render::RPI::FeatureProcessor
         {
         public:
-            AZ_RTTI(AZ::Render::PointLightFeatureProcessorInterface, "{D3E0B016-F3C6-4C7A-A29E-0B3A4FA87806}", AZ::RPI::FeatureProcessor);
+            AZ_RTTI(AZ::Render::PointLightFeatureProcessorInterface, "{D3E0B016-F3C6-4C7A-A29E-0B3A4FA87806}", JE::Render::RPI::FeatureProcessor);
             AZ_FEATURE_PROCESSOR(PointLightFeatureProcessorInterface);
 
             using LightHandle = RHI::Handle<uint16_t, class PointLight>;
@@ -93,7 +93,7 @@ namespace AZ
             //! Sets all of the the point data for the provided LightHandle.
             virtual void SetPointData(LightHandle handle, const PointLightData& data) = 0;
             //! Returns the buffer containing the light data for all point lights
-            virtual const Data::Instance<RPI::Buffer> GetLightBuffer() const = 0;
+            virtual const Data::Instance<JE::Render::RPI::Buffer> GetLightBuffer() const = 0;
             //! Returns the number of point lights
             virtual uint32_t GetLightCount() const = 0;
         };

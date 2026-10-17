@@ -67,7 +67,7 @@ namespace ImageProcessingAtom
         void ImageThumbnailSystemComponent::Activate()
         {
             AzFramework::ApplicationLifecycleEvents::Bus::Handler::BusConnect();
-            AzToolsFramework::Thumbnailer::ThumbnailerRendererRequestBus::Handler::BusConnect(AZ::RPI::StreamingImageAsset::RTTI_Type());
+            AzToolsFramework::Thumbnailer::ThumbnailerRendererRequestBus::Handler::BusConnect(JE::Render::RPI::StreamingImageAsset::RTTI_Type());
             SetupThumbnails();
         }
 
@@ -132,7 +132,7 @@ namespace ImageProcessingAtom
             {
                 m_imageAssetLoader->QueueAsset(
                     productKey->GetAssetId(),
-                    [this, thumbnailKey, thumbnailSize](const AZ::Data::Asset<AZ::RPI::StreamingImageAsset>& asset) {
+                    [this, thumbnailKey, thumbnailSize](const AZ::Data::Asset<JE::Render::RPI::StreamingImageAsset>& asset) {
                         RenderThumbnailFromImage(thumbnailKey, thumbnailSize, [asset]() {
                             return Utils::LoadImageFromImageAsset(asset);
                         });

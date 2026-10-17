@@ -9,13 +9,13 @@
 #include <ReflectionProbe/ReflectionProbe.h>
 #include <ReflectionProbe/ReflectionProbeFeatureProcessor.h>
 #include <Atom/RHI/RHISystemInterface.h>
-#include <Atom/RPI.Public/Pass/Pass.h>
-#include <Atom/RPI.Public/Pass/PassSystemInterface.h>
-#include <Atom/RPI.Public/RenderPipeline.h>
-#include <Atom/RPI.Public/View.h>
-#include <Atom/RPI.Reflect/Asset/AssetUtils.h>
-#include <Atom/RPI.Reflect/Material/MaterialAsset.h>
-#include <Atom/RPI.Reflect/Pass/EnvironmentCubeMapPassData.h>
+#include <JE/Render/RPI/Public/Pass/Pass.h>
+#include <JE/Render/RPI/Public/Pass/PassSystemInterface.h>
+#include <JE/Render/RPI/Public/RenderPipeline.h>
+#include <JE/Render/RPI/Public/View.h>
+#include <JE/Render/RPI/Reflect/Asset/AssetUtils.h>
+#include <JE/Render/RPI/Reflect/Material/MaterialAsset.h>
+#include <JE/Render/RPI/Reflect/Pass/EnvironmentCubeMapPassData.h>
 
 namespace AZ
 {
@@ -35,7 +35,7 @@ namespace AZ
                 m_visualizationMaterialAsset = asset;
                 Data::AssetBus::Handler::BusDisconnect();
 
-                m_meshFeatureProcessor->SetCustomMaterials(m_visualizationMeshHandle, AZ::RPI::Material::FindOrCreate(m_visualizationMaterialAsset));
+                m_meshFeatureProcessor->SetCustomMaterials(m_visualizationMeshHandle, JE::Render::RPI::Material::FindOrCreate(m_visualizationMaterialAsset));
             }
         }
 
@@ -45,7 +45,7 @@ namespace AZ
             Data::AssetBus::Handler::BusDisconnect();
         }
 
-        void ReflectionProbe::Init(RPI::Scene* scene, ReflectionRenderData* reflectionRenderData)
+        void ReflectionProbe::Init(JE::Render::RPI::Scene* scene, ReflectionRenderData* reflectionRenderData)
         {
             AZ_Assert(scene, "ReflectionProbe::Init called with a null Scene pointer");
 
@@ -58,9 +58,9 @@ namespace AZ
             m_meshFeatureProcessor = m_scene->GetFeatureProcessor<Render::MeshFeatureProcessorInterface>();
 
             // We don't have to pre-load this asset before passing it to MeshFeatureProcessor, because the MeshFeatureProcessor will handle the async-load for us.
-            m_visualizationModelAsset = AZ::RPI::AssetUtils::GetAssetByProductPath<AZ::RPI::ModelAsset>(
+            m_visualizationModelAsset = JE::Render::RPI::AssetUtils::GetAssetByProductPath<JE::Render::RPI::ModelAsset>(
                 "Models/ReflectionProbeSphere.fbx.azmodel",
-                AZ::RPI::AssetUtils::TraceLevel::Assert);
+                JE::Render::RPI::AssetUtils::TraceLevel::Assert);
 
             MeshHandleDescriptor visualizationMeshDescriptor;
             visualizationMeshDescriptor.m_modelAsset = m_visualizationModelAsset;
@@ -73,32 +73,32 @@ namespace AZ
             // We have to pre-load this asset before creating a material instance because the InstanceDatabase will attempt a blocking load which could deadlock,
             // particularly when slices are involved.
             // Note that m_visualizationMeshHandle had to be set up first, because AssetBus BusConnect() might call ReflectionProbe::OnAssetReady() immediately on this callstack.
-            m_visualizationMaterialAsset = AZ::RPI::AssetUtils::GetAssetByProductPath<AZ::RPI::MaterialAsset>(
+            m_visualizationMaterialAsset = JE::Render::RPI::AssetUtils::GetAssetByProductPath<JE::Render::RPI::MaterialAsset>(
                 "materials/reflectionprobe/reflectionprobevisualization.azmaterial",
-                AZ::RPI::AssetUtils::TraceLevel::Assert);
+                JE::Render::RPI::AssetUtils::TraceLevel::Assert);
             m_visualizationMaterialAsset.QueueLoad();
             Data::AssetBus::Handler::BusConnect(m_visualizationMaterialAsset.GetId());
 
             // reflection render Srgs
-            m_stencilSrg = RPI::ShaderResourceGroup::Create(
+            m_stencilSrg = JE::Render::RPI::ShaderResourceGroup::Create(
                 m_reflectionRenderData->m_stencilShader->GetAsset(),
                 m_reflectionRenderData->m_stencilShader->GetSupervariantIndex(),
                 m_reflectionRenderData->m_stencilSrgLayout->GetName());
             AZ_Error("ReflectionProbeFeatureProcessor", m_stencilSrg.get(), "Failed to create stencil shader resource group");
 
-            m_blendWeightSrg = RPI::ShaderResourceGroup::Create(
+            m_blendWeightSrg = JE::Render::RPI::ShaderResourceGroup::Create(
                 m_reflectionRenderData->m_blendWeightShader->GetAsset(),
                 m_reflectionRenderData->m_blendWeightShader->GetSupervariantIndex(),
                 m_reflectionRenderData->m_blendWeightSrgLayout->GetName());
             AZ_Error("ReflectionProbeFeatureProcessor", m_blendWeightSrg.get(), "Failed to create blend weight shader resource group");
 
-            m_renderOuterSrg = RPI::ShaderResourceGroup::Create(
+            m_renderOuterSrg = JE::Render::RPI::ShaderResourceGroup::Create(
                 m_reflectionRenderData->m_renderOuterShader->GetAsset(),
                 m_reflectionRenderData->m_renderOuterShader->GetSupervariantIndex(),
                 m_reflectionRenderData->m_renderOuterSrgLayout->GetName());
             AZ_Error("ReflectionProbeFeatureProcessor", m_renderOuterSrg.get(), "Failed to create render outer reflection shader resource group");
 
-            m_renderInnerSrg = RPI::ShaderResourceGroup::Create(
+            m_renderInnerSrg = JE::Render::RPI::ShaderResourceGroup::Create(
                 m_reflectionRenderData->m_renderInnerShader->GetAsset(),
                 m_reflectionRenderData->m_renderInnerShader->GetSupervariantIndex(),
                 m_reflectionRenderData->m_renderInnerSrgLayout->GetName());
@@ -245,7 +245,7 @@ namespace AZ
             m_updateSrg = true;
         }
 
-        void ReflectionProbe::SetCubeMapImage(const Data::Instance<RPI::Image>& cubeMapImage, const AZStd::string& relativePath)
+        void ReflectionProbe::SetCubeMapImage(const Data::Instance<JE::Render::RPI::Image>& cubeMapImage, const AZStd::string& relativePath)
         {
             m_cubeMapImage = cubeMapImage;
             m_cubeMapRelativePath = relativePath;
@@ -257,7 +257,7 @@ namespace AZ
             CubeMapRenderer::StartRender(callback, m_transform, m_bakeExposure);
         }
 
-        void ReflectionProbe::OnRenderPipelinePassesChanged(RPI::RenderPipeline* renderPipeline)
+        void ReflectionProbe::OnRenderPipelinePassesChanged(JE::Render::RPI::RenderPipeline* renderPipeline)
         {
             CubeMapRenderer::SetDefaultView(renderPipeline);
         }
@@ -279,8 +279,8 @@ namespace AZ
         }
 
         RHI::ConstPtr<RHI::DrawPacket> ReflectionProbe::BuildDrawPacket(
-            const Data::Instance<RPI::ShaderResourceGroup>& srg,
-            const RPI::Ptr<RPI::PipelineStateForDraw>& pipelineState,
+            const Data::Instance<JE::Render::RPI::ShaderResourceGroup>& srg,
+            const JE::Render::RPI::Ptr<JE::Render::RPI::PipelineStateForDraw>& pipelineState,
             const RHI::DrawListTag& drawListTag,
             uint32_t stencilRef)
         {
@@ -336,7 +336,7 @@ namespace AZ
             // setup the Lod entry, using one entry for all four draw packets
             m_cullable.m_lodData.m_lods.clear();
             m_cullable.m_lodData.m_lods.resize(1);
-            RPI::Cullable::LodData::Lod& lod = m_cullable.m_lodData.m_lods.back();
+            JE::Render::RPI::Cullable::LodData::Lod& lod = m_cullable.m_lodData.m_lods.back();
 
             // add draw packets
             lod.m_drawPackets.push_back(m_stencilDrawPacket.get());

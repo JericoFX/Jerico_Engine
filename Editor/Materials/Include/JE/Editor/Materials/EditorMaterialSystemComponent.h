@@ -10,9 +10,9 @@
 
 #include <JE/Editor/Materials/Base.h>
 
-#include <Atom/RPI.Reflect/Material/MaterialAsset.h>
-#include <Atom/RPI.Reflect/Model/ModelAsset.h>
-#include <Atom/RPI.Reflect/System/AnyAsset.h>
+#include <JE/Render/RPI/Reflect/Material/MaterialAsset.h>
+#include <JE/Render/RPI/Reflect/Model/ModelAsset.h>
+#include <JE/Render/RPI/Reflect/System/AnyAsset.h>
 #include <JE/Editor/Materials/EditorMaterialSystemComponentNotificationBus.h>
 #include <JE/Editor/Materials/EditorMaterialSystemComponentRequestBus.h>
 #include <JE/Render/Materials/MaterialComponentBus.h>
@@ -113,8 +113,8 @@ namespace JE
             AZStd::unique_ptr<MaterialBrowserInteractions> m_materialBrowserInteractions;
             AZStd::unordered_set<AZStd::pair<AZ::EntityId, JE::Render::MaterialAssignmentId>> m_materialPreviewRequests;
             AZStd::unordered_map<AZ::EntityId, AZStd::unordered_map<JE::Render::MaterialAssignmentId, QPixmap>> m_materialPreviews;
-            AZ::Data::Asset<AZ::RPI::ModelAsset> m_materialPreviewModelAsset;
-            AZ::Data::Asset<AZ::RPI::AnyAsset> m_materialPreviewLightingPresetAsset;
+            AZ::Data::Asset<JE::Render::RPI::ModelAsset> m_materialPreviewModelAsset;
+            AZ::Data::Asset<JE::Render::RPI::AnyAsset> m_materialPreviewLightingPresetAsset;
             static constexpr const size_t MaterialPreviewLimit = 100;
             static constexpr const int MaterialPreviewResolution = 128;
         };

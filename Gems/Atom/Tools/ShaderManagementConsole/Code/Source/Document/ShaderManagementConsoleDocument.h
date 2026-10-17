@@ -8,9 +8,9 @@
 
 #pragma once
 
-#include <Atom/RPI.Edit/Shader/ShaderVariantListSourceData.h>
-#include <Atom/RPI.Reflect/Material/ShaderCollection.h>
-#include <Atom/RPI.Reflect/Shader/ShaderAsset.h>
+#include <JE/Editor/Render/RPI/Edit/Shader/ShaderVariantListSourceData.h>
+#include <JE/Render/RPI/Reflect/Material/ShaderCollection.h>
+#include <JE/Render/RPI/Reflect/Shader/ShaderAsset.h>
 #include <AtomToolsFramework/Document/AtomToolsDocument.h>
 #include <AzCore/Asset/AssetCommon.h>
 #include <AzCore/RTTI/RTTI.h>
@@ -56,10 +56,10 @@ namespace ShaderManagementConsole
             AZStd::vector<AZ::Name> optionHeaders,
             AZStd::vector<AZ::Name> matrixOfValues) override;
         void DefragmentVariantList() override;
-        void SetShaderVariantListSourceData(const AZ::RPI::ShaderVariantListSourceData& shaderVariantListSourceData) override;
-        const AZ::RPI::ShaderVariantListSourceData& GetShaderVariantListSourceData() const override;
+        void SetShaderVariantListSourceData(const JE::Render::RPI::ShaderVariantListSourceData& shaderVariantListSourceData) override;
+        const JE::Render::RPI::ShaderVariantListSourceData& GetShaderVariantListSourceData() const override;
         size_t GetShaderOptionDescriptorCount() const override;
-        const AZ::RPI::ShaderOptionDescriptor& GetShaderOptionDescriptor(size_t index) const override;
+        const JE::Render::RPI::ShaderOptionDescriptor& GetShaderOptionDescriptor(size_t index) const override;
         DocumentVerificationResult Verify() const override;
 
     private:
@@ -76,15 +76,15 @@ namespace ShaderManagementConsole
         bool LoadShaderVariantListSourceData();
 
         // Source data for shader variant list
-        AZ::RPI::ShaderVariantListSourceData m_shaderVariantListSourceData;
+        JE::Render::RPI::ShaderVariantListSourceData m_shaderVariantListSourceData;
 
         // Backup copy of the shader variant list source data that will be saved for restoration during undo.
-        AZ::RPI::ShaderVariantListSourceData m_shaderVariantListSourceDataBeforeEdit;
+        JE::Render::RPI::ShaderVariantListSourceData m_shaderVariantListSourceDataBeforeEdit;
 
         // Shader asset for the corresponding shader variant list
-        AZ::Data::Asset<AZ::RPI::ShaderAsset> m_shaderAsset;
+        AZ::Data::Asset<JE::Render::RPI::ShaderAsset> m_shaderAsset;
 
-        AZ::RPI::ShaderOptionDescriptor m_invalidDescriptor;
+        JE::Render::RPI::ShaderOptionDescriptor m_invalidDescriptor;
 
         // Flag tracking the modified state of the document.
         // Will be set to true anytime data is changed and cleared anytime the document is saved.

@@ -25,7 +25,7 @@
 #include <AzFramework/Font/FontInterface.h>
 #include <AzFramework/Scene/SceneSystemInterface.h>
 
-#include <Atom/RPI.Public/DynamicDraw/DynamicDrawContext.h>
+#include <JE/Render/RPI/Public/DynamicDraw/DynamicDrawContext.h>
 #include <JE/Render/Integration/PerViewportDynamicDrawInterface.h>
 
 namespace AZ

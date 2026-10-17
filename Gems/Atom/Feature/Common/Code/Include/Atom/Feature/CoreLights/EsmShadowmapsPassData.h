@@ -7,7 +7,7 @@
  */
 #pragma once
 
-#include <Atom/RPI.Reflect/Pass/PassData.h>
+#include <JE/Render/RPI/Reflect/Pass/PassData.h>
 
 namespace AZ
 {
@@ -15,9 +15,9 @@ namespace AZ
     {
         //! Custom data for EsmShadowmapsPass.  Should be specified in the PassRequest.
         struct EsmShadowmapsPassData
-            : public RPI::PassData
+            : public JE::Render::RPI::PassData
         {
-            using Base = RPI::PassData;
+            using Base = JE::Render::RPI::PassData;
             AZ_RTTI(EsmShadowmapsPassData, "9B2265DF-2234-4DA9-A79F-7D34F6474160", Base);
             AZ_CLASS_ALLOCATOR(EsmShadowmapsPassData, SystemAllocator);
 

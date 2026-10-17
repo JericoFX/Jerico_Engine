@@ -6,9 +6,9 @@
  *
  */
 
-#include <Atom/RPI.Reflect/Pass/RasterPassData.h>
-#include <Atom/RPI.Reflect/Pass/PassTemplate.h>
-#include <Atom/RPI.Reflect/Shader/ShaderAsset.h>
+#include <JE/Render/RPI/Reflect/Pass/RasterPassData.h>
+#include <JE/Render/RPI/Reflect/Pass/PassTemplate.h>
+#include <JE/Render/RPI/Reflect/Shader/ShaderAsset.h>
 
 #include <Passes/HairShortCutGeometryShadingPass.h>
 #include <Rendering/HairRenderObject.h>
@@ -21,7 +21,7 @@ namespace AZ
         namespace Hair
         {
 
-            HairShortCutGeometryShadingPass::HairShortCutGeometryShadingPass(const RPI::PassDescriptor& descriptor)
+            HairShortCutGeometryShadingPass::HairShortCutGeometryShadingPass(const JE::Render::RPI::PassDescriptor& descriptor)
                 : HairGeometryRasterPass(descriptor)
             {
                 o_enableShadows = AZ::Name("o_enableShadows");
@@ -39,29 +39,29 @@ namespace AZ
                 SetShaderPath("Shaders/hairshortcutgeometryshading.azshader");
             }
 
-            RPI::Ptr<HairShortCutGeometryShadingPass> HairShortCutGeometryShadingPass::Create(const RPI::PassDescriptor& descriptor)
+            JE::Render::RPI::Ptr<HairShortCutGeometryShadingPass> HairShortCutGeometryShadingPass::Create(const JE::Render::RPI::PassDescriptor& descriptor)
             {
-                RPI::Ptr<HairShortCutGeometryShadingPass> pass = aznew HairShortCutGeometryShadingPass(descriptor);
+                JE::Render::RPI::Ptr<HairShortCutGeometryShadingPass> pass = aznew HairShortCutGeometryShadingPass(descriptor);
                 return pass;
             }
 
             void HairShortCutGeometryShadingPass::UpdateGlobalShaderOptions()
             {
-                RPI::ShaderOptionGroup shaderOption = m_shader->CreateShaderOptionGroup();
+                JE::Render::RPI::ShaderOptionGroup shaderOption = m_shader->CreateShaderOptionGroup();
 
                 m_featureProcessor->GetHairGlobalSettings(m_hairGlobalSettings);
 
-                shaderOption.SetValue(o_enableShadows, AZ::RPI::ShaderOptionValue{ m_hairGlobalSettings.m_enableShadows });
-                shaderOption.SetValue(o_enableDirectionalLights, AZ::RPI::ShaderOptionValue{ m_hairGlobalSettings.m_enableDirectionalLights });
-                shaderOption.SetValue(o_enablePunctualLights, AZ::RPI::ShaderOptionValue{ m_hairGlobalSettings.m_enablePunctualLights });
-                shaderOption.SetValue(o_enableAreaLights, AZ::RPI::ShaderOptionValue{ m_hairGlobalSettings.m_enableAreaLights });
-                shaderOption.SetValue(o_enableIBL, AZ::RPI::ShaderOptionValue{ m_hairGlobalSettings.m_enableIBL });
+                shaderOption.SetValue(o_enableShadows, JE::Render::RPI::ShaderOptionValue{ m_hairGlobalSettings.m_enableShadows });
+                shaderOption.SetValue(o_enableDirectionalLights, JE::Render::RPI::ShaderOptionValue{ m_hairGlobalSettings.m_enableDirectionalLights });
+                shaderOption.SetValue(o_enablePunctualLights, JE::Render::RPI::ShaderOptionValue{ m_hairGlobalSettings.m_enablePunctualLights });
+                shaderOption.SetValue(o_enableAreaLights, JE::Render::RPI::ShaderOptionValue{ m_hairGlobalSettings.m_enableAreaLights });
+                shaderOption.SetValue(o_enableIBL, JE::Render::RPI::ShaderOptionValue{ m_hairGlobalSettings.m_enableIBL });
                 shaderOption.SetValue(o_hairLightingModel, AZ::Name{ "HairLightingModel::" + AZStd::string(HairLightingModelNamespace::ToString(m_hairGlobalSettings.m_hairLightingModel)) });
-                shaderOption.SetValue(o_enableMarschner_R, AZ::RPI::ShaderOptionValue{ m_hairGlobalSettings.m_enableMarschner_R });
-                shaderOption.SetValue(o_enableMarschner_TRT, AZ::RPI::ShaderOptionValue{ m_hairGlobalSettings.m_enableMarschner_TRT });
-                shaderOption.SetValue(o_enableMarschner_TT, AZ::RPI::ShaderOptionValue{ m_hairGlobalSettings.m_enableMarschner_TT });
-                shaderOption.SetValue(o_enableLongtitudeCoeff, AZ::RPI::ShaderOptionValue{ m_hairGlobalSettings.m_enableLongtitudeCoeff });
-                shaderOption.SetValue(o_enableAzimuthCoeff, AZ::RPI::ShaderOptionValue{ m_hairGlobalSettings.m_enableAzimuthCoeff });
+                shaderOption.SetValue(o_enableMarschner_R, JE::Render::RPI::ShaderOptionValue{ m_hairGlobalSettings.m_enableMarschner_R });
+                shaderOption.SetValue(o_enableMarschner_TRT, JE::Render::RPI::ShaderOptionValue{ m_hairGlobalSettings.m_enableMarschner_TRT });
+                shaderOption.SetValue(o_enableMarschner_TT, JE::Render::RPI::ShaderOptionValue{ m_hairGlobalSettings.m_enableMarschner_TT });
+                shaderOption.SetValue(o_enableLongtitudeCoeff, JE::Render::RPI::ShaderOptionValue{ m_hairGlobalSettings.m_enableLongtitudeCoeff });
+                shaderOption.SetValue(o_enableAzimuthCoeff, JE::Render::RPI::ShaderOptionValue{ m_hairGlobalSettings.m_enableAzimuthCoeff });
                 shaderOption.SetUnspecifiedToDefaultValues();
                 if (shaderOption.GetShaderVariantId() != m_currentShaderVariantId)
                 {
@@ -82,7 +82,7 @@ namespace AZ
 
                 // Update the material array constant buffer within the per pass srg
                 SrgBufferDescriptor descriptor = SrgBufferDescriptor(
-                    RPI::CommonBufferPoolType::Constant, RHI::Format::Unknown,
+                    JE::Render::RPI::CommonBufferPoolType::Constant, RHI::Format::Unknown,
                     sizeof(AMD::TressFXShadeParams), 1,
                     Name{ "HairMaterialsArray" }, Name{ "m_hairParams" }, 0, 0
                 );

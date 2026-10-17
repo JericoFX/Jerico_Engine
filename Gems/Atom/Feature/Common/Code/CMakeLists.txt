@@ -32,7 +32,7 @@ ly_add_target(
         PUBLIC
             AZ::AzCore
             AZ::AzFramework
-            Gem::Atom_RPI.Public
+            JE::RenderIntegration
             Gem::Atom_Utils.Static
             JE::DearImGui
             3rdParty::TIFF
@@ -62,7 +62,7 @@ ly_add_target(
             AZ::AzFramework
             ${gem_name}.Private.Object
         PUBLIC
-            Gem::Atom_RPI.Public
+            JE::RenderIntegration
             Gem::Atom_Utils.Static
 )
 
@@ -153,8 +153,8 @@ if(PAL_TRAIT_BUILD_HOST_TOOLS)
                 AZ::AzToolsFramework
                 AZ::AssetBuilderSDK
                 AZ::SceneCore
-                Gem::Atom_RPI.Edit
-                Gem::Atom_RPI.Public
+                JE::EditorRenderIntegration
+                JE::RenderIntegration
                 Gem::Atom_Utils.Static
                 Gem::${gem_name}.Private.Object
                 Gem::${gem_name}.Public

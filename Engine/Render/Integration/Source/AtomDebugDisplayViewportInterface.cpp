@@ -16,8 +16,8 @@
 #include <AzCore/Math/Aabb.h>
 #include <AzCore/Math/Frustum.h>
 #include <AtomDebugDisplayViewportInterface.h>
-#include <Atom/RPI.Public/View.h>
-#include <Atom/RPI.Public/ViewportContextBus.h>
+#include <JE/Render/RPI/Public/View.h>
+#include <JE/Render/RPI/Public/ViewportContextBus.h>
 #include <AzCore/Interface/Interface.h>
 
 #include <AzFramework/Font/FontInterface.h>
@@ -43,13 +43,13 @@ namespace JE::Render::Integration
     }
 
     void SingleColorDynamicSizeLineHelper::Draw(
-        AZ::RPI::AuxGeomDrawPtr auxGeomDrawPtr,
+        JE::Render::RPI::AuxGeomDrawPtr auxGeomDrawPtr,
         const RenderState& rendState
         ) const
     {
         if (auxGeomDrawPtr && !m_points.empty())
         {
-            AZ::RPI::AuxGeomDraw::AuxGeomDynamicDrawArguments drawArgs;
+            JE::Render::RPI::AuxGeomDraw::AuxGeomDynamicDrawArguments drawArgs;
             drawArgs.m_verts = m_points.data();
             drawArgs.m_vertCount = aznumeric_cast<uint32_t>(m_points.size());
             drawArgs.m_colors = &rendState.m_color;
@@ -64,13 +64,13 @@ namespace JE::Render::Integration
     }
 
     void SingleColorDynamicSizeLineHelper::Draw2d(
-        AZ::RPI::AuxGeomDrawPtr auxGeomDrawPtr,
+        JE::Render::RPI::AuxGeomDrawPtr auxGeomDrawPtr,
         const RenderState& rendState
         ) const
     {
         if (auxGeomDrawPtr && !m_points.empty())
         {
-            AZ::RPI::AuxGeomDraw::AuxGeomDynamicDrawArguments drawArgs;
+            JE::Render::RPI::AuxGeomDraw::AuxGeomDynamicDrawArguments drawArgs;
             drawArgs.m_verts = m_points.data();
             drawArgs.m_vertCount = aznumeric_cast<uint32_t>(m_points.size());
             drawArgs.m_colors = &rendState.m_color;
@@ -90,23 +90,23 @@ namespace JE::Render::Integration
     }
     ////////////////////////////////////////////////////////////////////////
 
-    AtomDebugDisplayViewportInterface::AtomDebugDisplayViewportInterface(AZ::RPI::ViewportContextPtr viewportContextPtr)
+    AtomDebugDisplayViewportInterface::AtomDebugDisplayViewportInterface(JE::Render::RPI::ViewportContextPtr viewportContextPtr)
     {
         ResetRenderState();
         m_viewportId = viewportContextPtr->GetId();
         m_defaultInstance = false;
-        auto setupScene = [this](AZ::RPI::ScenePtr scene)
+        auto setupScene = [this](JE::Render::RPI::ScenePtr scene)
         {
-            auto viewportContextManager = AZ::Interface<AZ::RPI::ViewportContextRequestsInterface>::Get();
-            AZ::RPI::ViewportContextPtr viewportContextPtr = viewportContextManager->GetViewportContextById(m_viewportId);
+            auto viewportContextManager = AZ::Interface<JE::Render::RPI::ViewportContextRequestsInterface>::Get();
+            JE::Render::RPI::ViewportContextPtr viewportContextPtr = viewportContextManager->GetViewportContextById(m_viewportId);
             InitInternal(scene.get(), viewportContextPtr);
         };
         setupScene(viewportContextPtr->GetRenderScene());
-        m_sceneChangeHandler = AZ::RPI::ViewportContext::SceneChangedEvent::Handler(setupScene);
+        m_sceneChangeHandler = JE::Render::RPI::ViewportContext::SceneChangedEvent::Handler(setupScene);
         viewportContextPtr->ConnectSceneChangedHandler(m_sceneChangeHandler);
     }
 
-    AtomDebugDisplayViewportInterface::AtomDebugDisplayViewportInterface(uint32_t defaultInstanceAddress, AZ::RPI::Scene* scene)
+    AtomDebugDisplayViewportInterface::AtomDebugDisplayViewportInterface(uint32_t defaultInstanceAddress, JE::Render::RPI::Scene* scene)
     {
         ResetRenderState();
         m_viewportId = defaultInstanceAddress;
@@ -114,14 +114,14 @@ namespace JE::Render::Integration
         InitInternal(scene, nullptr);
     }
 
-    void AtomDebugDisplayViewportInterface::UpdateAuxGeom(AZ::RPI::Scene* scene, AZ::RPI::View* view)
+    void AtomDebugDisplayViewportInterface::UpdateAuxGeom(JE::Render::RPI::Scene* scene, JE::Render::RPI::View* view)
     {
         if (!scene)
         {
             m_auxGeomPtr = nullptr;
             return;
         }
-        auto auxGeomFP = scene->GetFeatureProcessor<AZ::RPI::AuxGeomFeatureProcessorInterface>();
+        auto auxGeomFP = scene->GetFeatureProcessor<JE::Render::RPI::AuxGeomFeatureProcessorInterface>();
         if (!auxGeomFP)
         {
             m_auxGeomPtr = nullptr;
@@ -139,26 +139,26 @@ namespace JE::Render::Integration
         }
     }
 
-    void AtomDebugDisplayViewportInterface::InitInternal(AZ::RPI::Scene* scene, AZ::RPI::ViewportContextPtr viewportContextPtr)
+    void AtomDebugDisplayViewportInterface::InitInternal(JE::Render::RPI::Scene* scene, JE::Render::RPI::ViewportContextPtr viewportContextPtr)
     {
         AzFramework::DebugDisplayRequestBus::Handler::BusDisconnect(m_viewportId);
         UpdateAuxGeom(scene, viewportContextPtr ? viewportContextPtr->GetDefaultView().get() : nullptr);
         AzFramework::DebugDisplayRequestBus::Handler::BusConnect(m_viewportId);
         if (!m_defaultInstance) // only the per viewport instances need to listen for viewport changes
         {
-            AZ::RPI::ViewportContextIdNotificationBus::Handler::BusConnect(viewportContextPtr->GetId());
+            JE::Render::RPI::ViewportContextIdNotificationBus::Handler::BusConnect(viewportContextPtr->GetId());
         }
     }
 
 
-    void AtomDebugDisplayViewportInterface::OnViewportDefaultViewChanged([[maybe_unused]] AZ::RPI::ViewPtr view)
+    void AtomDebugDisplayViewportInterface::OnViewportDefaultViewChanged([[maybe_unused]] JE::Render::RPI::ViewPtr view)
     {
         ResetRenderState();
         if (!m_defaultInstance)
         {
             // handle viewport update (view change, scene change, etc
-            auto viewportContextManager = AZ::Interface<AZ::RPI::ViewportContextRequestsInterface>::Get();
-            AZ::RPI::ViewportContextPtr viewportContextPtr = viewportContextManager->GetViewportContextById(m_viewportId);
+            auto viewportContextManager = AZ::Interface<JE::Render::RPI::ViewportContextRequestsInterface>::Get();
+            JE::Render::RPI::ViewportContextPtr viewportContextPtr = viewportContextManager->GetViewportContextById(m_viewportId);
             UpdateAuxGeom(viewportContextPtr->GetRenderScene().get(), viewportContextPtr->GetDefaultView().get());
         }
     }
@@ -166,7 +166,7 @@ namespace JE::Render::Integration
     AtomDebugDisplayViewportInterface::~AtomDebugDisplayViewportInterface()
     {
         AzFramework::DebugDisplayRequestBus::Handler::BusDisconnect(m_viewportId);
-        AZ::RPI::ViewportContextIdNotificationBus::Handler::BusDisconnect();
+        JE::Render::RPI::ViewportContextIdNotificationBus::Handler::BusDisconnect();
         m_viewportId = AzFramework::InvalidViewportId;
         m_auxGeomPtr = nullptr;
     }
@@ -188,7 +188,7 @@ namespace JE::Render::Integration
     void AtomDebugDisplayViewportInterface::SetAlpha(float a)
     {
         m_rendState.m_color.SetA(a);
-        m_rendState.m_opacityType = a < 1.0f ? AZ::RPI::AuxGeomDraw::OpacityType::Translucent : AZ::RPI::AuxGeomDraw::OpacityType::Opaque;
+        m_rendState.m_opacityType = a < 1.0f ? JE::Render::RPI::AuxGeomDraw::OpacityType::Translucent : JE::Render::RPI::AuxGeomDraw::OpacityType::Opaque;
     }
 
     void AtomDebugDisplayViewportInterface::DrawQuad(
@@ -207,7 +207,7 @@ namespace JE::Render::Integration
             triangles[3] = wsPoints[2];
             triangles[4] = wsPoints[3];
             triangles[5] = wsPoints[0];
-            AZ::RPI::AuxGeomDraw::AuxGeomDynamicDrawArguments drawArgs;
+            JE::Render::RPI::AuxGeomDraw::AuxGeomDynamicDrawArguments drawArgs;
             drawArgs.m_verts = triangles;
             drawArgs.m_vertCount = 6;
             drawArgs.m_colors = &m_rendState.m_color;
@@ -232,7 +232,7 @@ namespace JE::Render::Integration
             height,
             GetCurrentTransform(),
             m_rendState.m_color,
-            drawShaded ? AZ::RPI::AuxGeomDraw::DrawStyle::Shaded : AZ::RPI::AuxGeomDraw::DrawStyle::Solid,
+            drawShaded ? JE::Render::RPI::AuxGeomDraw::DrawStyle::Shaded : JE::Render::RPI::AuxGeomDraw::DrawStyle::Solid,
             m_rendState.m_depthTest,
             m_rendState.m_depthWrite,
             m_rendState.m_faceCullMode,
@@ -248,7 +248,7 @@ namespace JE::Render::Integration
         if (m_auxGeomPtr)
         {
             AZ::Vector3 wsPoints[4] = { ToWorldSpacePosition(p1), ToWorldSpacePosition(p2), ToWorldSpacePosition(p3), ToWorldSpacePosition(p4) };
-            AZ::RPI::AuxGeomDraw::AuxGeomDynamicDrawArguments drawArgs;
+            JE::Render::RPI::AuxGeomDraw::AuxGeomDynamicDrawArguments drawArgs;
             drawArgs.m_verts = wsPoints;
             drawArgs.m_vertCount = 4;
             drawArgs.m_colors = &m_rendState.m_color;
@@ -257,7 +257,7 @@ namespace JE::Render::Integration
             drawArgs.m_depthTest = m_rendState.m_depthTest;
             drawArgs.m_depthWrite = m_rendState.m_depthWrite;
             drawArgs.m_viewProjectionOverrideIndex = m_rendState.m_viewProjOverrideIndex;
-            m_auxGeomPtr->DrawPolylines(drawArgs, AZ::RPI::AuxGeomDraw::PolylineEnd::Closed);
+            m_auxGeomPtr->DrawPolylines(drawArgs, JE::Render::RPI::AuxGeomDraw::PolylineEnd::Closed);
         }
     }
 
@@ -273,7 +273,7 @@ namespace JE::Render::Integration
             height,
             GetCurrentTransform(),
             m_rendState.m_color,
-            AZ::RPI::AuxGeomDraw::DrawStyle::Line,
+            JE::Render::RPI::AuxGeomDraw::DrawStyle::Line,
             m_rendState.m_depthTest,
             m_rendState.m_depthWrite,
             m_rendState.m_faceCullMode,
@@ -299,7 +299,7 @@ namespace JE::Render::Integration
             triangles[3] = wsPoints[2];         colors[3]    = secondColor;
             triangles[4] = wsPoints[3];         colors[4]    = secondColor;
             triangles[5] = wsPoints[0];         colors[5]    = firstColor;
-            AZ::RPI::AuxGeomDraw::AuxGeomDynamicDrawArguments drawArgs;
+            JE::Render::RPI::AuxGeomDraw::AuxGeomDynamicDrawArguments drawArgs;
             drawArgs.m_verts = triangles;
             drawArgs.m_vertCount = 6;
             drawArgs.m_colors = colors;
@@ -338,13 +338,13 @@ namespace JE::Render::Integration
             triangles[4] = points[3];       colors[4] = secondColor;
             triangles[5] = points[0];       colors[5] = firstColor;
 
-            AZ::RPI::AuxGeomDraw::AuxGeomDynamicDrawArguments drawArgs;
+            JE::Render::RPI::AuxGeomDraw::AuxGeomDynamicDrawArguments drawArgs;
             drawArgs.m_verts = triangles;
             drawArgs.m_vertCount = 6;
             drawArgs.m_colors = colors;
             drawArgs.m_colorCount = 6;
             const bool alphaBlend = firstColor.GetA() < 1.0f || secondColor.GetA() < 1.0f;
-            drawArgs.m_opacityType = alphaBlend ? AZ::RPI::AuxGeomDraw::OpacityType::Translucent : AZ::RPI::AuxGeomDraw::OpacityType::Opaque;
+            drawArgs.m_opacityType = alphaBlend ? JE::Render::RPI::AuxGeomDraw::OpacityType::Translucent : JE::Render::RPI::AuxGeomDraw::OpacityType::Opaque;
             drawArgs.m_depthTest = m_rendState.m_depthTest;
             drawArgs.m_depthWrite = m_rendState.m_depthWrite;
             drawArgs.m_viewProjectionOverrideIndex = m_auxGeomPtr->GetOrAdd2DViewProjOverride();
@@ -357,7 +357,7 @@ namespace JE::Render::Integration
         if (m_auxGeomPtr)
         {
             AZ::Vector3 verts[3] = {ToWorldSpacePosition(p1), ToWorldSpacePosition(p2), ToWorldSpacePosition(p3)};
-            AZ::RPI::AuxGeomDraw::AuxGeomDynamicDrawArguments drawArgs;
+            JE::Render::RPI::AuxGeomDraw::AuxGeomDynamicDrawArguments drawArgs;
             drawArgs.m_verts = verts;
             drawArgs.m_vertCount = 3;
             drawArgs.m_colors = &m_rendState.m_color;
@@ -375,7 +375,7 @@ namespace JE::Render::Integration
         if (m_auxGeomPtr)
         {
             AZStd::vector<AZ::Vector3> transformedVertices = ToWorldSpacePosition(vertices);
-            AZ::RPI::AuxGeomDraw::AuxGeomDynamicDrawArguments drawArgs;
+            JE::Render::RPI::AuxGeomDraw::AuxGeomDynamicDrawArguments drawArgs;
             drawArgs.m_verts = transformedVertices.data();
             drawArgs.m_vertCount = aznumeric_cast<uint32_t>(transformedVertices.size());
             drawArgs.m_colors = &color;
@@ -396,7 +396,7 @@ namespace JE::Render::Integration
         if (m_auxGeomPtr)
         {
             AZStd::vector<AZ::Vector3> transformedVertices = ToWorldSpacePosition(vertices);
-            AZ::RPI::AuxGeomDraw::AuxGeomDynamicIndexedDrawArguments drawArgs;
+            JE::Render::RPI::AuxGeomDraw::AuxGeomDynamicIndexedDrawArguments drawArgs;
             drawArgs.m_verts = transformedVertices.data();
             drawArgs.m_vertCount = aznumeric_cast<uint32_t>(transformedVertices.size());
             drawArgs.m_indices = indices.data();
@@ -419,7 +419,7 @@ namespace JE::Render::Integration
                 AZ::Aabb::CreateFromMinMax(min, max),
                 GetCurrentTransform(),
                 m_rendState.m_color,
-                AZ::RPI::AuxGeomDraw::DrawStyle::Line,
+                JE::Render::RPI::AuxGeomDraw::DrawStyle::Line,
                 m_rendState.m_depthTest,
                 m_rendState.m_depthWrite,
                 m_rendState.m_faceCullMode,
@@ -436,7 +436,7 @@ namespace JE::Render::Integration
                 AZ::Aabb::CreateFromMinMax(min, max),
                 GetCurrentTransform(),
                 m_rendState.m_color,
-                AZ::RPI::AuxGeomDraw::DrawStyle::Solid,
+                JE::Render::RPI::AuxGeomDraw::DrawStyle::Solid,
                 m_rendState.m_depthTest,
                 m_rendState.m_depthWrite,
                 m_rendState.m_faceCullMode,
@@ -459,7 +459,7 @@ namespace JE::Render::Integration
                 obb,
                 AZ::Vector3::CreateZero(),
                 m_rendState.m_color,
-                AZ::RPI::AuxGeomDraw::DrawStyle::Line,
+                JE::Render::RPI::AuxGeomDraw::DrawStyle::Line,
                 m_rendState.m_depthTest,
                 m_rendState.m_depthWrite,
                 m_rendState.m_faceCullMode,
@@ -482,7 +482,7 @@ namespace JE::Render::Integration
                 obb,
                 AZ::Vector3::CreateZero(),
                 m_rendState.m_color,
-                AZ::RPI::AuxGeomDraw::DrawStyle::Solid,
+                JE::Render::RPI::AuxGeomDraw::DrawStyle::Solid,
                 m_rendState.m_depthTest,
                 m_rendState.m_depthWrite,
                 m_rendState.m_faceCullMode,
@@ -495,7 +495,7 @@ namespace JE::Render::Integration
         if (m_auxGeomPtr)
         {
             AZ::Vector3 wsPoint = ToWorldSpacePosition(p);
-            AZ::RPI::AuxGeomDraw::AuxGeomDynamicDrawArguments drawArgs;
+            JE::Render::RPI::AuxGeomDraw::AuxGeomDynamicDrawArguments drawArgs;
             drawArgs.m_verts = &wsPoint;
             drawArgs.m_vertCount = 1;
             drawArgs.m_colors = &m_rendState.m_color;
@@ -514,7 +514,7 @@ namespace JE::Render::Integration
         if (m_auxGeomPtr)
         {
             AZ::Vector3 verts[2] = {ToWorldSpacePosition(p1), ToWorldSpacePosition(p2)};
-            AZ::RPI::AuxGeomDraw::AuxGeomDynamicDrawArguments drawArgs;
+            JE::Render::RPI::AuxGeomDraw::AuxGeomDynamicDrawArguments drawArgs;
             drawArgs.m_verts = verts;
             drawArgs.m_vertCount = 2;
             drawArgs.m_colors = &m_rendState.m_color;
@@ -534,7 +534,7 @@ namespace JE::Render::Integration
         {
             AZ::Vector3 verts[2] = {ToWorldSpacePosition(p1), ToWorldSpacePosition(p2)};
             AZ::Color colors[2] = {col1, col2};
-            AZ::RPI::AuxGeomDraw::AuxGeomDynamicDrawArguments drawArgs;
+            JE::Render::RPI::AuxGeomDraw::AuxGeomDynamicDrawArguments drawArgs;
             drawArgs.m_verts = verts;
             drawArgs.m_vertCount = 2;
             drawArgs.m_colors = colors;
@@ -553,7 +553,7 @@ namespace JE::Render::Integration
         if (m_auxGeomPtr)
         {
             AZStd::vector<AZ::Vector3> transformedLines = ToWorldSpacePosition(lines);
-            AZ::RPI::AuxGeomDraw::AuxGeomDynamicDrawArguments drawArgs;
+            JE::Render::RPI::AuxGeomDraw::AuxGeomDynamicDrawArguments drawArgs;
             drawArgs.m_verts = transformedLines.data();
             drawArgs.m_vertCount = aznumeric_cast<uint32_t>(transformedLines.size());
             drawArgs.m_colors = &color;
@@ -576,8 +576,8 @@ namespace JE::Render::Integration
             AZStd::transform(points.begin(), points.end(), wsPoints.begin(), [&](auto& pnt) {
                 return ToWorldSpacePosition(pnt);
             });
-            AZ::RPI::AuxGeomDraw::PolylineEnd polylineEnd = cycled ? AZ::RPI::AuxGeomDraw::PolylineEnd::Closed : AZ::RPI::AuxGeomDraw::PolylineEnd::Open;
-            AZ::RPI::AuxGeomDraw::AuxGeomDynamicDrawArguments drawArgs;
+            JE::Render::RPI::AuxGeomDraw::PolylineEnd polylineEnd = cycled ? JE::Render::RPI::AuxGeomDraw::PolylineEnd::Closed : JE::Render::RPI::AuxGeomDraw::PolylineEnd::Open;
+            JE::Render::RPI::AuxGeomDraw::AuxGeomDynamicDrawArguments drawArgs;
             drawArgs.m_verts = wsPoints.data();
             drawArgs.m_vertCount = aznumeric_cast <uint32_t>(wsPoints.size());
             drawArgs.m_colors = &m_rendState.m_color;
@@ -606,7 +606,7 @@ namespace JE::Render::Integration
             points[2] = AZ::Vector3(p2.GetX(), p2.GetY(), z);
             points[3] = AZ::Vector3(p1.GetX(), p2.GetY(), z);
 
-            AZ::RPI::AuxGeomDraw::AuxGeomDynamicDrawArguments drawArgs;
+            JE::Render::RPI::AuxGeomDraw::AuxGeomDynamicDrawArguments drawArgs;
             drawArgs.m_verts = points;
             drawArgs.m_vertCount = 4;
             drawArgs.m_colors = &m_rendState.m_color;
@@ -616,7 +616,7 @@ namespace JE::Render::Integration
             drawArgs.m_depthTest = m_rendState.m_depthTest;
             drawArgs.m_depthWrite = m_rendState.m_depthWrite;
             drawArgs.m_viewProjectionOverrideIndex = m_auxGeomPtr->GetOrAdd2DViewProjOverride();
-            m_auxGeomPtr->DrawPolylines(drawArgs, AZ::RPI::AuxGeomDraw::PolylineEnd::Closed);
+            m_auxGeomPtr->DrawPolylines(drawArgs, JE::Render::RPI::AuxGeomDraw::PolylineEnd::Closed);
         }
     }
 
@@ -628,7 +628,7 @@ namespace JE::Render::Integration
             points[0] = AZ::Vector3(p1.GetX(), p1.GetY(), z);
             points[1] = AZ::Vector3(p2.GetX(), p2.GetY(), z);
 
-            AZ::RPI::AuxGeomDraw::AuxGeomDynamicDrawArguments drawArgs;
+            JE::Render::RPI::AuxGeomDraw::AuxGeomDynamicDrawArguments drawArgs;
             drawArgs.m_verts = points;
             drawArgs.m_vertCount = 2;
             drawArgs.m_colors = &m_rendState.m_color;
@@ -651,7 +651,7 @@ namespace JE::Render::Integration
             points[1] = AZ::Vector3(p2.GetX(), p2.GetY(), z);
             AZ::Color colors[2] = {firstColor, secondColor};
 
-            AZ::RPI::AuxGeomDraw::AuxGeomDynamicDrawArguments drawArgs;
+            JE::Render::RPI::AuxGeomDraw::AuxGeomDynamicDrawArguments drawArgs;
             drawArgs.m_verts = points;
             drawArgs.m_vertCount = 2;
             drawArgs.m_colors = colors;
@@ -815,7 +815,7 @@ namespace JE::Render::Integration
                 radius,
                 height,
                 m_rendState.m_color,
-                AZ::RPI::AuxGeomDraw::DrawStyle::Line,
+                JE::Render::RPI::AuxGeomDraw::DrawStyle::Line,
                 m_rendState.m_depthTest,
                 m_rendState.m_depthWrite,
                 m_rendState.m_faceCullMode,
@@ -836,7 +836,7 @@ namespace JE::Render::Integration
                 radius,
                 height,
                 m_rendState.m_color,
-                drawShaded ? AZ::RPI::AuxGeomDraw::DrawStyle::Shaded : AZ::RPI::AuxGeomDraw::DrawStyle::Solid,
+                drawShaded ? JE::Render::RPI::AuxGeomDraw::DrawStyle::Shaded : JE::Render::RPI::AuxGeomDraw::DrawStyle::Solid,
                 m_rendState.m_depthTest,
                 m_rendState.m_depthWrite,
                 m_rendState.m_faceCullMode,
@@ -858,7 +858,7 @@ namespace JE::Render::Integration
                 scale * radius,
                 scale * height,
                 m_rendState.m_color,
-                AZ::RPI::AuxGeomDraw::DrawStyle::Line,
+                JE::Render::RPI::AuxGeomDraw::DrawStyle::Line,
                 m_rendState.m_depthTest,
                 m_rendState.m_depthWrite,
                 m_rendState.m_faceCullMode,
@@ -885,7 +885,7 @@ namespace JE::Render::Integration
                 scale * radius,
                 scale * height,
                 m_rendState.m_color,
-                drawShaded ? AZ::RPI::AuxGeomDraw::DrawStyle::Shaded : AZ::RPI::AuxGeomDraw::DrawStyle::Solid,
+                drawShaded ? JE::Render::RPI::AuxGeomDraw::DrawStyle::Shaded : JE::Render::RPI::AuxGeomDraw::DrawStyle::Solid,
                 m_rendState.m_depthTest,
                 m_rendState.m_depthWrite,
                 m_rendState.m_faceCullMode,
@@ -907,7 +907,7 @@ namespace JE::Render::Integration
                 scale * radius,
                 scale * height,
                 m_rendState.m_color,
-                AZ::RPI::AuxGeomDraw::DrawStyle::Line,
+                JE::Render::RPI::AuxGeomDraw::DrawStyle::Line,
                 m_rendState.m_depthTest,
                 m_rendState.m_depthWrite,
                 m_rendState.m_faceCullMode,
@@ -934,7 +934,7 @@ namespace JE::Render::Integration
                 scale * radius,
                 scale * height,
                 m_rendState.m_color,
-                drawShaded ? AZ::RPI::AuxGeomDraw::DrawStyle::Shaded : AZ::RPI::AuxGeomDraw::DrawStyle::Solid,
+                drawShaded ? JE::Render::RPI::AuxGeomDraw::DrawStyle::Shaded : JE::Render::RPI::AuxGeomDraw::DrawStyle::Solid,
                 m_rendState.m_depthTest,
                 m_rendState.m_depthWrite,
                 m_rendState.m_faceCullMode,
@@ -981,7 +981,7 @@ namespace JE::Render::Integration
                 ToWorldSpacePosition(pos),
                 scale * radius,
                 m_rendState.m_color,
-                AZ::RPI::AuxGeomDraw::DrawStyle::Line,
+                JE::Render::RPI::AuxGeomDraw::DrawStyle::Line,
                 m_rendState.m_depthTest,
                 m_rendState.m_depthWrite,
                 m_rendState.m_faceCullMode,
@@ -1025,7 +1025,7 @@ namespace JE::Render::Integration
                 axis,
                 scale * radius,
                 m_rendState.m_color,
-                AZ::RPI::AuxGeomDraw::DrawStyle::Line,
+                JE::Render::RPI::AuxGeomDraw::DrawStyle::Line,
                 m_rendState.m_depthTest,
                 m_rendState.m_depthWrite,
                 m_rendState.m_faceCullMode,
@@ -1071,7 +1071,7 @@ namespace JE::Render::Integration
             const float maxTransformedRadius =
                 AZ::GetMax(transformedRadiusX, AZ::GetMax(transformedRadiusY, transformedRadiusZ));
 
-            AZ::RPI::AuxGeomDraw::DrawStyle drawStyle = drawShaded ? AZ::RPI::AuxGeomDraw::DrawStyle::Shaded : AZ::RPI::AuxGeomDraw::DrawStyle::Solid;
+            JE::Render::RPI::AuxGeomDraw::DrawStyle drawStyle = drawShaded ? JE::Render::RPI::AuxGeomDraw::DrawStyle::Shaded : JE::Render::RPI::AuxGeomDraw::DrawStyle::Solid;
             m_auxGeomPtr->DrawSphere(
                 ToWorldSpacePosition(pos),
                 maxTransformedRadius,
@@ -1097,7 +1097,7 @@ namespace JE::Render::Integration
                 worldDir,
                 scale * radius,
                 m_rendState.m_color,
-                drawShaded ? AZ::RPI::AuxGeomDraw::DrawStyle::Shaded : AZ::RPI::AuxGeomDraw::DrawStyle::Solid,
+                drawShaded ? JE::Render::RPI::AuxGeomDraw::DrawStyle::Shaded : JE::Render::RPI::AuxGeomDraw::DrawStyle::Solid,
                 m_rendState.m_depthTest,
                 m_rendState.m_depthWrite,
                 m_rendState.m_faceCullMode,
@@ -1120,7 +1120,7 @@ namespace JE::Render::Integration
             AZ::Vector3 dir = trg - src;
             dir = ToWorldSpaceVector(dir.GetNormalized());
             AZ::Vector3 verts[2] = {ToWorldSpacePosition(src), ToWorldSpacePosition(trg)};
-            AZ::RPI::AuxGeomDraw::AuxGeomDynamicDrawArguments drawArgs;
+            JE::Render::RPI::AuxGeomDraw::AuxGeomDynamicDrawArguments drawArgs;
             drawArgs.m_verts = verts;
             drawArgs.m_vertCount = 2;
             drawArgs.m_colors = &m_rendState.m_color;
@@ -1140,7 +1140,7 @@ namespace JE::Render::Integration
                     arrowRadius * f2dScale,
                     arrowLen * f2dScale,
                     m_rendState.m_color,
-                    AZ::RPI::AuxGeomDraw::DrawStyle::Shaded,
+                    JE::Render::RPI::AuxGeomDraw::DrawStyle::Shaded,
                     m_rendState.m_depthTest,
                     m_rendState.m_depthWrite,
                     m_rendState.m_faceCullMode,
@@ -1158,7 +1158,7 @@ namespace JE::Render::Integration
                     arrowRadius * f2dScale,
                     arrowLen * f2dScale,
                     m_rendState.m_color,
-                    AZ::RPI::AuxGeomDraw::DrawStyle::Shaded,
+                    JE::Render::RPI::AuxGeomDraw::DrawStyle::Shaded,
                     m_rendState.m_depthTest,
                     m_rendState.m_depthWrite,
                     m_rendState.m_faceCullMode,
@@ -1170,7 +1170,7 @@ namespace JE::Render::Integration
                     arrowRadius * f2dScale,
                     arrowLen * f2dScale,
                     m_rendState.m_color,
-                    AZ::RPI::AuxGeomDraw::DrawStyle::Shaded,
+                    JE::Render::RPI::AuxGeomDraw::DrawStyle::Shaded,
                     m_rendState.m_depthTest,
                     m_rendState.m_depthWrite,
                     m_rendState.m_faceCullMode,
@@ -1202,7 +1202,7 @@ namespace JE::Render::Integration
         }
         // if 2d draw need to project pos to screen first
         AzFramework::TextDrawParameters params;
-        AZ::RPI::ViewportContextPtr viewportContext = GetViewportContext();
+        JE::Render::RPI::ViewportContextPtr viewportContext = GetViewportContext();
         params.m_drawViewportId = viewportContext->GetId(); // get the viewport ID so default viewport works
         params.m_position = pos;
         params.m_color = m_rendState.m_color;
@@ -1238,7 +1238,7 @@ namespace JE::Render::Integration
         }
         // if 2d draw need to project pos to screen first
         AzFramework::TextDrawParameters params;
-        AZ::RPI::ViewportContextPtr viewportContext = GetViewportContext();
+        JE::Render::RPI::ViewportContextPtr viewportContext = GetViewportContext();
         const auto dpiScaleFactor = viewportContext->GetDpiScalingFactor();
         params.m_drawViewportId = viewportContext->GetId(); // get the viewport ID so default viewport works
         params.m_position = AZ::Vector3(x * dpiScaleFactor, y * dpiScaleFactor, 1.0f);
@@ -1272,7 +1272,7 @@ namespace JE::Render::Integration
 
     bool AtomDebugDisplayViewportInterface::IsVisible(const AZ::Aabb& bounds)
     {
-        AZ::RPI::ViewportContextPtr viewportContext = GetViewportContext();
+        JE::Render::RPI::ViewportContextPtr viewportContext = GetViewportContext();
         const AZ::Matrix4x4& worldToClip = viewportContext->GetDefaultView()->GetWorldToClipMatrix();
         AZ::Frustum frustum = AZ::Frustum::CreateFromMatrixColumnMajor(worldToClip, AZ::Frustum::ReverseDepth::True);
         return frustum.IntersectAabb(bounds) != AZ::IntersectResult::Exterior;
@@ -1285,39 +1285,39 @@ namespace JE::Render::Integration
 
     float AtomDebugDisplayViewportInterface::GetAspectRatio()
     {
-        AZ::RPI::ViewportContextPtr viewportContext = GetViewportContext();
+        JE::Render::RPI::ViewportContextPtr viewportContext = GetViewportContext();
         auto windowSize = viewportContext->GetViewportSize();
         return aznumeric_cast<float>(windowSize.m_width)/aznumeric_cast<float>(windowSize.m_height);
     }
 
     void AtomDebugDisplayViewportInterface::DepthTestOff()
     {
-        m_rendState.m_depthTest = AZ::RPI::AuxGeomDraw::DepthTest::Off;
+        m_rendState.m_depthTest = JE::Render::RPI::AuxGeomDraw::DepthTest::Off;
     }
 
     void AtomDebugDisplayViewportInterface::DepthTestOn()
     {
-        m_rendState.m_depthTest = AZ::RPI::AuxGeomDraw::DepthTest::On;
+        m_rendState.m_depthTest = JE::Render::RPI::AuxGeomDraw::DepthTest::On;
     }
 
     void AtomDebugDisplayViewportInterface::DepthWriteOff()
     {
-        m_rendState.m_depthWrite = AZ::RPI::AuxGeomDraw::DepthWrite::Off;
+        m_rendState.m_depthWrite = JE::Render::RPI::AuxGeomDraw::DepthWrite::Off;
     }
 
     void AtomDebugDisplayViewportInterface::DepthWriteOn()
     {
-        m_rendState.m_depthWrite = AZ::RPI::AuxGeomDraw::DepthWrite::On;
+        m_rendState.m_depthWrite = JE::Render::RPI::AuxGeomDraw::DepthWrite::On;
     }
 
     void AtomDebugDisplayViewportInterface::CullOff()
     {
-        m_rendState.m_faceCullMode = AZ::RPI::AuxGeomDraw::FaceCullMode::None;
+        m_rendState.m_faceCullMode = JE::Render::RPI::AuxGeomDraw::FaceCullMode::None;
     }
 
     void AtomDebugDisplayViewportInterface::CullOn()
     {
-        m_rendState.m_faceCullMode = AZ::RPI::AuxGeomDraw::FaceCullMode::Back;
+        m_rendState.m_faceCullMode = JE::Render::RPI::AuxGeomDraw::FaceCullMode::Back;
     }
 
     bool AtomDebugDisplayViewportInterface::SetDrawInFrontMode(bool on)
@@ -1357,12 +1357,12 @@ namespace JE::Render::Integration
             switch (state&AzFramework::e_AlphaBlendingMask)
             {
                 case AzFramework::e_AlphaNone:
-                    m_rendState.m_opacityType = AZ::RPI::AuxGeomDraw::OpacityType::Opaque;
+                    m_rendState.m_opacityType = JE::Render::RPI::AuxGeomDraw::OpacityType::Opaque;
                     break;
                 case AzFramework::e_AlphaAdditive:
                     [[fallthrough]]; // Additive not currently supported in Atom AuxGeom implementation
                 case AzFramework::e_AlphaBlended:
-                    m_rendState.m_opacityType = AZ::RPI::AuxGeomDraw::OpacityType::Translucent;
+                    m_rendState.m_opacityType = JE::Render::RPI::AuxGeomDraw::OpacityType::Translucent;
                     break;
             }
         }
@@ -1385,7 +1385,7 @@ namespace JE::Render::Integration
                     break;
                 case AzFramework::e_CullModeFront:
                     // Currently no other way to set front face culling in DebugDisplayRequestBus
-                    m_rendState.m_faceCullMode = AZ::RPI::AuxGeomDraw::FaceCullMode::Front;
+                    m_rendState.m_faceCullMode = JE::Render::RPI::AuxGeomDraw::FaceCullMode::Front;
                     break;
                 case AzFramework::e_CullModeBack:
                     CullOn();
@@ -1484,9 +1484,9 @@ namespace JE::Render::Integration
         return transformedVectors;
     }
 
-    AZ::RPI::ViewportContextPtr AtomDebugDisplayViewportInterface::GetViewportContext() const
+    JE::Render::RPI::ViewportContextPtr AtomDebugDisplayViewportInterface::GetViewportContext() const
     {
-        auto viewContextManager = AZ::Interface<AZ::RPI::ViewportContextRequestsInterface>::Get();
+        auto viewContextManager = AZ::Interface<JE::Render::RPI::ViewportContextRequestsInterface>::Get();
         if (m_defaultInstance)
         {
             return viewContextManager->GetViewportContextByName(viewContextManager->GetDefaultViewportContextName());
@@ -1502,19 +1502,19 @@ namespace JE::Render::Integration
         uint32_t result = 0;
 
         result |= m_rendState.m_2dMode ? AzFramework::e_Mode2D : AzFramework::e_Mode3D;
-        result |= m_rendState.m_opacityType == AZ::RPI::AuxGeomDraw::OpacityType::Opaque ? AzFramework::e_AlphaNone : AzFramework::e_AlphaBlended;
+        result |= m_rendState.m_opacityType == JE::Render::RPI::AuxGeomDraw::OpacityType::Opaque ? AzFramework::e_AlphaNone : AzFramework::e_AlphaBlended;
         result |= m_rendState.m_drawInFront ? AzFramework::e_DrawInFrontOn : AzFramework::e_DrawInFrontOff;
-        result |= m_rendState.m_depthTest == AZ::RPI::AuxGeomDraw::DepthTest::On ? AzFramework::e_DepthTestOn : AzFramework::e_DepthTestOff;
-        result |= m_rendState.m_depthWrite == AZ::RPI::AuxGeomDraw::DepthWrite::On ? AzFramework::e_DepthWriteOn : AzFramework::e_DepthWriteOff;
+        result |= m_rendState.m_depthTest == JE::Render::RPI::AuxGeomDraw::DepthTest::On ? AzFramework::e_DepthTestOn : AzFramework::e_DepthTestOff;
+        result |= m_rendState.m_depthWrite == JE::Render::RPI::AuxGeomDraw::DepthWrite::On ? AzFramework::e_DepthWriteOn : AzFramework::e_DepthWriteOff;
         switch (m_rendState.m_faceCullMode)
         {
-            case AZ::RPI::AuxGeomDraw::FaceCullMode::None:
+            case JE::Render::RPI::AuxGeomDraw::FaceCullMode::None:
                 result |= AzFramework::e_CullModeNone;
                 break;
-            case AZ::RPI::AuxGeomDraw::FaceCullMode::Front:
+            case JE::Render::RPI::AuxGeomDraw::FaceCullMode::Front:
                 result |= AzFramework::e_CullModeFront;
                 break;
-            case AZ::RPI::AuxGeomDraw::FaceCullMode::Back:
+            case JE::Render::RPI::AuxGeomDraw::FaceCullMode::Back:
                 result |= AzFramework::e_CullModeBack;
                 break;
             default:

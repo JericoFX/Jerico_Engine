@@ -8,7 +8,7 @@
 #pragma once
 
 #include <Atom/RHI.Reflect/Size.h>
-#include <Atom/RPI.Public/Pass/RasterPass.h>
+#include <JE/Render/RPI/Public/Pass/RasterPass.h>
 
 namespace AZ
 {
@@ -19,9 +19,9 @@ namespace AZ
         //! This pass renders the diffuse global illumination in the area covered by
         //! each DiffuseProbeGrid.
         class DiffuseProbeGridRenderPass final
-            : public RPI::RasterPass
+            : public JE::Render::RPI::RasterPass
         {
-            using Base = RPI::RasterPass;
+            using Base = JE::Render::RPI::RasterPass;
             AZ_RPI_PASS(DiffuseProbeGridRenderPass);
       
         public:
@@ -29,11 +29,11 @@ namespace AZ
             AZ_CLASS_ALLOCATOR(DiffuseProbeGridRenderPass, SystemAllocator);
 
             ~DiffuseProbeGridRenderPass() = default;
-            static RPI::Ptr<DiffuseProbeGridRenderPass> Create(const RPI::PassDescriptor& descriptor);
+            static JE::Render::RPI::Ptr<DiffuseProbeGridRenderPass> Create(const JE::Render::RPI::PassDescriptor& descriptor);
         
         private:
             DiffuseProbeGridRenderPass() = delete;
-            explicit DiffuseProbeGridRenderPass(const RPI::PassDescriptor& descriptor);
+            explicit DiffuseProbeGridRenderPass(const JE::Render::RPI::PassDescriptor& descriptor);
 
             // Pass behavior overrides...
             bool IsEnabled() const override;
@@ -46,7 +46,7 @@ namespace AZ
             // helper function to determine if a DiffuseProbeGrid should be rendered based on its state
             bool ShouldRender(const AZStd::shared_ptr<DiffuseProbeGrid>& diffuseProbeGrid);
 
-            Data::Instance<RPI::Shader> m_shader;
+            Data::Instance<JE::Render::RPI::Shader> m_shader;
             RHI::Ptr<RHI::ShaderResourceGroupLayout> m_srgLayout;
         };
     } // namespace Render

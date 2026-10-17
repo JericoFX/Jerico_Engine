@@ -12,9 +12,9 @@
 #include <Atom/RHI.Reflect/Size.h>
 #include <Atom/RHI/DispatchItem.h>
 
-#include <Atom/RPI.Public/Pass/ComputePass.h>
-#include <Atom/RPI.Public/Shader/Shader.h>
-#include <Atom/RPI.Public/Shader/ShaderResourceGroup.h>
+#include <JE/Render/RPI/Public/Pass/ComputePass.h>
+#include <JE/Render/RPI/Public/Shader/Shader.h>
+#include <JE/Render/RPI/Public/Shader/ShaderResourceGroup.h>
 
 namespace AZ
 {
@@ -38,17 +38,17 @@ namespace AZ
             //!  - HairGenerationSrg: dictates how to construct the hair vertices and skinning
             //!  - HairSimSrg: defines vertices and tangent data shared between all passes 
             class HairSkinningComputePass final
-                : public RPI::ComputePass
+                : public JE::Render::RPI::ComputePass
             {
                 AZ_RPI_PASS(HairSkinningComputePass);
 
             public:
-                AZ_RTTI(HairSkinningComputePass, "{DC8D323E-41FF-4FED-89C6-A254FD6809FC}", RPI::ComputePass);
+                AZ_RTTI(HairSkinningComputePass, "{DC8D323E-41FF-4FED-89C6-A254FD6809FC}", JE::Render::RPI::ComputePass);
                 AZ_CLASS_ALLOCATOR(HairSkinningComputePass, SystemAllocator);
                 ~HairSkinningComputePass() = default;
 
                 // Creates a HairSkinningComputePass
-                static RPI::Ptr<HairSkinningComputePass> Create(const RPI::PassDescriptor& descriptor);
+                static JE::Render::RPI::Ptr<HairSkinningComputePass> Create(const JE::Render::RPI::PassDescriptor& descriptor);
 
                 bool BuildDispatchItem(HairRenderObject* hairObject, DispatchLevel dispatchLevel );
 
@@ -61,7 +61,7 @@ namespace AZ
                 virtual bool IsEnabled() const override;
 
                 //! Returns the shader held by the ComputePass
-                Data::Instance<RPI::Shader> GetShader();
+                Data::Instance<JE::Render::RPI::Shader> GetShader();
 
                 void SetFeatureProcessor(HairFeatureProcessor* featureProcessor)
                 {
@@ -73,7 +73,7 @@ namespace AZ
                 }
 
             protected:
-                HairSkinningComputePass(const RPI::PassDescriptor& descriptor);
+                HairSkinningComputePass(const JE::Render::RPI::PassDescriptor& descriptor);
 
                 void SetupFrameGraphDependencies(RHI::FrameGraphInterface frameGraph) override;
                 void BuildCommandListInternal(const RHI::FrameGraphExecuteContext& context) override;
@@ -84,9 +84,9 @@ namespace AZ
                 void FrameBeginInternal(FramePrepareParams params) override;
 
                 // ShaderReloadNotificationBus::Handler overrides...
-                void OnShaderReinitialized(const AZ::RPI::Shader& shader) override;
-                void OnShaderAssetReinitialized(const Data::Asset<AZ::RPI::ShaderAsset>& shaderAsset) override;
-                void OnShaderVariantReinitialized(const AZ::RPI::ShaderVariant& shaderVariant) override;
+                void OnShaderReinitialized(const JE::Render::RPI::Shader& shader) override;
+                void OnShaderAssetReinitialized(const Data::Asset<JE::Render::RPI::ShaderAsset>& shaderAsset) override;
+                void OnShaderVariantReinitialized(const JE::Render::RPI::ShaderVariant& shaderVariant) override;
 
                 bool AcquireFeatureProcessor();
                 void BuildShaderAndRenderData();

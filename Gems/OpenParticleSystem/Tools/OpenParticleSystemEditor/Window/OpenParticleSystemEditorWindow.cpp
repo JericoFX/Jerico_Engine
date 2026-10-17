@@ -23,7 +23,7 @@
 #include <AtomToolsFramework/Window/AtomToolsMainWindowNotificationBus.h>
 #include <AzToolsFramework/AssetBrowser/AssetSelectionModel.h>
 #include <AzToolsFramework/AssetBrowser/AssetBrowserEntry.h>
-#include <Atom/RPI.Edit/Common/AssetUtils.h>
+#include <JE/Editor/Render/RPI/Edit/Common/AssetUtils.h>
 
 
 #include <QMessageBox>

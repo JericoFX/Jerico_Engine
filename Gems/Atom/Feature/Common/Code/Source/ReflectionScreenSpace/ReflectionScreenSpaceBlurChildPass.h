@@ -7,7 +7,7 @@
  */
 #pragma once
 
-#include <Atom/RPI.Public/Pass/FullscreenTrianglePass.h>
+#include <JE/Render/RPI/Public/Pass/FullscreenTrianglePass.h>
 
 namespace AZ
 {
@@ -17,7 +17,7 @@ namespace AZ
         //! to the lower mip levels of that image.  The blurred mips are used as roughness levels
         //! when applying reflection data to a surface material.
         class ReflectionScreenSpaceBlurChildPass
-            : public RPI::FullscreenTrianglePass
+            : public JE::Render::RPI::FullscreenTrianglePass
         {
             AZ_RPI_PASS(ReflectionScreenSpaceBlurChildPass);
 
@@ -26,7 +26,7 @@ namespace AZ
             AZ_CLASS_ALLOCATOR(Render::ReflectionScreenSpaceBlurChildPass, SystemAllocator);
 
             //! Creates a new pass without a PassTemplate
-            static RPI::Ptr<ReflectionScreenSpaceBlurChildPass> Create(const RPI::PassDescriptor& descriptor);
+            static JE::Render::RPI::Ptr<ReflectionScreenSpaceBlurChildPass> Create(const JE::Render::RPI::PassDescriptor& descriptor);
 
             enum PassType
             {
@@ -38,7 +38,7 @@ namespace AZ
             void SetMipLevel(uint32_t mipLevel) { m_mipLevel = mipLevel; }
 
         private:
-            explicit ReflectionScreenSpaceBlurChildPass(const RPI::PassDescriptor& descriptor);
+            explicit ReflectionScreenSpaceBlurChildPass(const JE::Render::RPI::PassDescriptor& descriptor);
 
             // Pass Overrides...
             void FrameBeginInternal(FramePrepareParams params) override;

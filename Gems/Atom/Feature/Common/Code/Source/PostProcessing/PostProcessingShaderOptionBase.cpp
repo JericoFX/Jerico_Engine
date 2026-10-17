@@ -7,16 +7,16 @@
  */
 
 #include <PostProcessing/PostProcessingShaderOptionBase.h>
-#include <Atom/RPI.Public/RenderPipeline.h>
-#include <Atom/RPI.Public/View.h>
+#include <JE/Render/RPI/Public/RenderPipeline.h>
+#include <JE/Render/RPI/Public/View.h>
 
 namespace AZ
 {
     namespace Render
     {
         void PostProcessingShaderOptionBase::PreloadShaderVariantForDraw(
-            const Data::Instance<AZ::RPI::Shader>& shader,
-            const RPI::ShaderOptionGroup& shaderOption,
+            const Data::Instance<JE::Render::RPI::Shader>& shader,
+            const JE::Render::RPI::ShaderOptionGroup& shaderOption,
             const RHI::RenderAttachmentConfiguration& renderAttachmentConfiguration,
             const RHI::MultisampleState& multisampleState)
         {
@@ -41,8 +41,8 @@ namespace AZ
         }
 
         void PostProcessingShaderOptionBase::PreloadShaderVariantForDispatch(
-            const Data::Instance<AZ::RPI::Shader>& shader,
-            const RPI::ShaderOptionGroup& shaderOption)
+            const Data::Instance<JE::Render::RPI::Shader>& shader,
+            const JE::Render::RPI::ShaderOptionGroup& shaderOption)
         {
             RHI::PipelineStateDescriptorForDispatch pipelineStateDescriptor;
             AZ::u64 variationKey = shaderOption.GetShaderVariantId().m_key.to_ullong();
@@ -54,7 +54,7 @@ namespace AZ
             m_shaderVariantTable[variationKey].m_isFullyBaked = !shaderVariant.UseKeyFallback();
         }
 
-        void PostProcessingShaderOptionBase::UpdateShaderVariant(const AZ::RPI::ShaderOptionGroup& shaderOption)
+        void PostProcessingShaderOptionBase::UpdateShaderVariant(const JE::Render::RPI::ShaderOptionGroup& shaderOption)
         {
             m_currentShaderVariantKeyValue = shaderOption.GetShaderVariantId().m_key.to_ullong();
             auto shaderVariant = GetShaderVariant(m_currentShaderVariantKeyValue);
@@ -66,7 +66,7 @@ namespace AZ
             }
         }
 
-        void PostProcessingShaderOptionBase::CompileShaderVariant(Data::Instance<AZ::RPI::ShaderResourceGroup>& shaderResourceGroup)
+        void PostProcessingShaderOptionBase::CompileShaderVariant(Data::Instance<JE::Render::RPI::ShaderResourceGroup>& shaderResourceGroup)
         {
             // Set the shader variant key falback value to the shader resource group if needed.
             auto shaderVariant = GetShaderVariant(m_currentShaderVariantKeyValue);

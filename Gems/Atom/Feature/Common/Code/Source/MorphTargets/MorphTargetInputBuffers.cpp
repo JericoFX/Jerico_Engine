@@ -9,12 +9,12 @@
 #include <Atom/Feature/SkinnedMesh/SkinnedMeshInputBuffers.h>
 #include <SkinnedMesh/SkinnedMeshOutputStreamManager.h>
 
-#include <Atom/RPI.Reflect/ResourcePoolAssetCreator.h>
-#include <Atom/RPI.Reflect/Buffer/BufferAssetCreator.h>
-#include <Atom/RPI.Reflect/Model/ModelAssetCreator.h>
-#include <Atom/RPI.Reflect/Model/ModelLodAssetCreator.h>
-#include <Atom/RPI.Public/Shader/ShaderResourceGroup.h>
-#include <Atom/RPI.Public/Model/Model.h>
+#include <JE/Render/RPI/Reflect/ResourcePoolAssetCreator.h>
+#include <JE/Render/RPI/Reflect/Buffer/BufferAssetCreator.h>
+#include <JE/Render/RPI/Reflect/Model/ModelAssetCreator.h>
+#include <JE/Render/RPI/Reflect/Model/ModelLodAssetCreator.h>
+#include <JE/Render/RPI/Public/Shader/ShaderResourceGroup.h>
+#include <JE/Render/RPI/Public/Model/Model.h>
 #include <Atom/RHI/Factory.h>
 
 #include <AzCore/std/algorithm.h>
@@ -24,9 +24,9 @@ namespace AZ
 {
     namespace Render
     {
-        MorphTargetInputBuffers::MorphTargetInputBuffers(const RPI::BufferAssetView& bufferAssetView, const AZStd::string& bufferNamePrefix)
+        MorphTargetInputBuffers::MorphTargetInputBuffers(const JE::Render::RPI::BufferAssetView& bufferAssetView, const AZStd::string& bufferNamePrefix)
         {            
-            m_vertexDeltaBuffer = RPI::Buffer::FindOrCreate(bufferAssetView.GetBufferAsset());
+            m_vertexDeltaBuffer = JE::Render::RPI::Buffer::FindOrCreate(bufferAssetView.GetBufferAsset());
             if (m_vertexDeltaBuffer)
             {
                 m_vertexDeltaBufferView = m_vertexDeltaBuffer->GetRHIBuffer()->GetBufferView(bufferAssetView.GetBufferViewDescriptor());
@@ -34,7 +34,7 @@ namespace AZ
             }
         }
 
-        void MorphTargetInputBuffers::SetBufferViewsOnShaderResourceGroup(const Data::Instance<RPI::ShaderResourceGroup>& perInstanceSRG)
+        void MorphTargetInputBuffers::SetBufferViewsOnShaderResourceGroup(const Data::Instance<JE::Render::RPI::ShaderResourceGroup>& perInstanceSRG)
         {
             // Set the delta buffer
             RHI::ShaderInputBufferIndex srgIndex = perInstanceSRG->FindShaderInputBufferIndex(Name{ "m_vertexDeltas" });

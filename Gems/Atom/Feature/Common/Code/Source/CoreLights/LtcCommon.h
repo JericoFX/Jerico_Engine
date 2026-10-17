@@ -9,8 +9,8 @@
 #pragma once
 
 #include <AzCore/Interface/Interface.h>
-#include <Atom/RPI.Public/Scene.h>
-#include <Atom/RPI.Reflect/Asset/AssetUtils.h>
+#include <JE/Render/RPI/Public/Scene.h>
+#include <JE/Render/RPI/Reflect/Asset/AssetUtils.h>
 
 namespace AZ::Render
 {
@@ -18,7 +18,7 @@ namespace AZ::Render
     {
     public:
         AZ_RTTI(ILtcCommon, "{62AB02D4-A26A-4290-9302-96859E9F46CE}");
-        virtual void LoadMatricesForSrg(Data::Instance<RPI::ShaderResourceGroup> srg) = 0;
+        virtual void LoadMatricesForSrg(Data::Instance<JE::Render::RPI::ShaderResourceGroup> srg) = 0;
 
         virtual ~ILtcCommon() = default;
     };
@@ -33,9 +33,9 @@ namespace AZ::Render
         ~LtcCommon();
 
         // ILtcCommon overides...
-        void LoadMatricesForSrg(Data::Instance<RPI::ShaderResourceGroup> srg) override;
+        void LoadMatricesForSrg(Data::Instance<JE::Render::RPI::ShaderResourceGroup> srg) override;
 
     private:
-        AZStd::unordered_map<AZ::Uuid, AZStd::vector<AZStd::shared_ptr<RPI::AssetUtils::AsyncAssetLoader>>> m_assetLoaders;
+        AZStd::unordered_map<AZ::Uuid, AZStd::vector<AZStd::shared_ptr<JE::Render::RPI::AssetUtils::AsyncAssetLoader>>> m_assetLoaders;
     };
 } // namespace AZ::Render

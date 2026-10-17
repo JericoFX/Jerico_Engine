@@ -13,16 +13,16 @@
 #include <Atom/RHI/FrameGraphInterface.h>
 #include <Atom/RHI/DevicePipelineState.h>
 
-#include <Atom/RPI.Public/Base.h>
-#include <Atom/RPI.Public/Pass/PassUtils.h>
-#include <Atom/RPI.Public/RenderPipeline.h>
+#include <JE/Render/RPI/Public/Base.h>
+#include <JE/Render/RPI/Public/Pass/PassUtils.h>
+#include <JE/Render/RPI/Public/RenderPipeline.h>
 #include <Atom/RHI/RHISystemInterface.h>
-#include <Atom/RPI.Public/RPIUtils.h>
+#include <JE/Render/RPI/Public/RPIUtils.h>
 #include <PostProcess/PostProcessFeatureProcessor.h>
-#include <Atom/RPI.Public/Scene.h>
-#include <Atom/RPI.Public/View.h>
-#include <Atom/RPI.Reflect/Pass/PassTemplate.h>
-#include <Atom/RPI.Reflect/Shader/ShaderAsset.h>
+#include <JE/Render/RPI/Public/Scene.h>
+#include <JE/Render/RPI/Public/View.h>
+#include <JE/Render/RPI/Reflect/Pass/PassTemplate.h>
+#include <JE/Render/RPI/Reflect/Shader/ShaderAsset.h>
 
 namespace AZ
 {
@@ -34,15 +34,15 @@ namespace AZ
         AZ_CVAR(bool, r_fogLayerSupport, true, nullptr, AZ::ConsoleFunctorFlags::Null, "Enable fog layer support");
         AZ_CVAR(bool, r_fogTurbulenceSupport, true, nullptr, AZ::ConsoleFunctorFlags::Null, "Enable fog turbulence support");
 
-        DeferredFogPass::DeferredFogPass(const RPI::PassDescriptor& descriptor)
-            : RPI::FullscreenTrianglePass(descriptor)
+        DeferredFogPass::DeferredFogPass(const JE::Render::RPI::PassDescriptor& descriptor)
+            : JE::Render::RPI::FullscreenTrianglePass(descriptor)
             , m_fogModeOptionName(FogModeOptionName)
         {
         }
 
-        RPI::Ptr<DeferredFogPass> DeferredFogPass::Create(const RPI::PassDescriptor& descriptor)
+        JE::Render::RPI::Ptr<DeferredFogPass> DeferredFogPass::Create(const JE::Render::RPI::PassDescriptor& descriptor)
         {
-            RPI::Ptr<DeferredFogPass> pass = aznew DeferredFogPass(descriptor);
+            JE::Render::RPI::Ptr<DeferredFogPass> pass = aznew DeferredFogPass(descriptor);
             pass->SetSrgBindIndices();
 
             // The following will ensure that in the case of data driven pass, the settings will get
@@ -67,14 +67,14 @@ namespace AZ
 
         DeferredFogSettings* DeferredFogPass::GetPassFogSettings()
         {
-            RPI::Scene* scene = GetScene();
+            JE::Render::RPI::Scene* scene = GetScene();
             if (!scene)
             {
                 return &m_fallbackSettings;
             }
 
             PostProcessFeatureProcessor* fp = scene->GetFeatureProcessor<PostProcessFeatureProcessor>();
-            AZ::RPI::ViewPtr view = m_pipeline->GetFirstView(GetPipelineViewTag());
+            JE::Render::RPI::ViewPtr view = m_pipeline->GetFirstView(GetPipelineViewTag());
             if (fp)
             {
                 PostProcessSettings* postProcessSettings = fp->GetLevelSettingsFromView(view);
@@ -97,7 +97,7 @@ namespace AZ
         void DeferredFogPass::SetSrgBindIndices()
         {
             DeferredFogSettings* fogSettings = GetPassFogSettings();
-            Data::Instance<RPI::ShaderResourceGroup> srg = m_shaderResourceGroup.get();
+            Data::Instance<JE::Render::RPI::ShaderResourceGroup> srg = m_shaderResourceGroup.get();
 
             // match and set all SRG constants' indices
 #define AZ_GFX_COMMON_PARAM(ValueType, FunctionName, MemberName, DefaultValue)                          \
@@ -122,7 +122,7 @@ namespace AZ
         void DeferredFogPass::SetSrgConstants()
         {
             DeferredFogSettings* fogSettings = GetPassFogSettings();
-            Data::Instance<RPI::ShaderResourceGroup> srg = m_shaderResourceGroup.get();
+            Data::Instance<JE::Render::RPI::ShaderResourceGroup> srg = m_shaderResourceGroup.get();
 
             if (!fogSettings->IsInitialized())
             {   // Should be initialize before, but if not - this is a fail safe that will apply it once
@@ -227,7 +227,7 @@ namespace AZ
 
         void DeferredFogPass::UpdateShaderOptions()
         {
-            RPI::ShaderOptionGroup shaderOptions = m_shader->CreateShaderOptionGroup();
+            JE::Render::RPI::ShaderOptionGroup shaderOptions = m_shader->CreateShaderOptionGroup();
             DeferredFogSettings* fogSettings = GetPassFogSettings();
 
             // [TODO][ATOM-13659] - AZ::Name all over our code base should use init with string and

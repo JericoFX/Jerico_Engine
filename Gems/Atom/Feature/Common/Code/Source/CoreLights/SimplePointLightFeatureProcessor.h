@@ -65,20 +65,20 @@ namespace AZ
             void SetAffectsGIFactor(LightHandle handle, float affectsGIFactor) override;
             void SetLightingChannelMask(LightHandle handle, uint32_t lightingChannelMask) override;
 
-            const Data::Instance<RPI::Buffer> GetLightBuffer() const override;
+            const Data::Instance<JE::Render::RPI::Buffer> GetLightBuffer() const override;
             uint32_t GetLightCount() const override;
 
             // SceneNotificationBus::Handler overrides...
             void OnRenderPipelinePersistentViewChanged(
-                RPI::RenderPipeline* renderPipeline,
-                RPI::PipelineViewTag viewTag,
-                RPI::ViewPtr newView,
-                RPI::ViewPtr previousView) override;
+                JE::Render::RPI::RenderPipeline* renderPipeline,
+                JE::Render::RPI::PipelineViewTag viewTag,
+                JE::Render::RPI::ViewPtr newView,
+                JE::Render::RPI::ViewPtr previousView) override;
 
         private:
             SimplePointLightFeatureProcessor(const SimplePointLightFeatureProcessor&) = delete;
             // Cull the lights for a view using the CPU.
-            void CullLights(const RPI::ViewPtr& view);
+            void CullLights(const JE::Render::RPI::ViewPtr& view);
 
             static constexpr const char* FeatureProcessorName = "SimplePointLightFeatureProcessor";
 
@@ -92,7 +92,7 @@ namespace AZ
             // Number of buffers being used for visibility in the current frame.
             uint32_t m_visiblePointLightsBufferUsedCount = 0;
             // Map of views -> pipelines in that view that need CPU culling (i.e. no GPU culling pass)
-            AZStd::unordered_map<const RPI::View*, AZStd::vector<const RPI::RenderPipeline*>> m_cpuCulledPipelinesPerView;
+            AZStd::unordered_map<const JE::Render::RPI::View*, AZStd::vector<const JE::Render::RPI::RenderPipeline*>> m_cpuCulledPipelinesPerView;
         };
     } // namespace Render
 } // namespace AZ

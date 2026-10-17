@@ -13,7 +13,7 @@
 #include <DebugConsole.h>
 #include <JE/Render/Debug/RenderDebugExports.h>
 
-#include <Atom/RPI.Public/ViewportContextBus.h>
+#include <JE/Render/RPI/Public/ViewportContextBus.h>
 
 namespace JE::Render::Debug
 {
@@ -23,7 +23,7 @@ namespace JE::Render::Debug
         //! The manager uses the Atom pass marked as the default; it does not create another render context.
         class JE_RENDER_DEBUG_API ImguiAtomSystemComponent final
             : public AZ::Component
-            , public AZ::RPI::ViewportContextNotificationBus::Handler
+            , public JE::Render::RPI::ViewportContextNotificationBus::Handler
         {
         public:
             AZ_COMPONENT(ImguiAtomSystemComponent, "{D423E075-D971-435A-A9C1-57C3B0623A9B}");

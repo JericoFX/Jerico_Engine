@@ -10,8 +10,8 @@
 #include <AzCore/EBus/EBus.h>
 
 #include <AzFramework/Scene/SceneSystemInterface.h>
-#include <Atom/RPI.Public/Scene.h>
-#include <Atom/RPI.Reflect/System/RenderPipelineDescriptor.h>
+#include <JE/Render/RPI/Public/Scene.h>
+#include <JE/Render/RPI/Reflect/System/RenderPipelineDescriptor.h>
 
 namespace JE::Render::Bootstrap
 {
@@ -22,11 +22,11 @@ namespace JE::Render::Bootstrap
         static const AZ::EBusHandlerPolicy HandlerPolicy = AZ::EBusHandlerPolicy::Single;
         static const AZ::EBusAddressPolicy AddressPolicy = AZ::EBusAddressPolicy::Single;
 
-        virtual AZ::RPI::ScenePtr GetOrCreateAtomSceneFromAzScene(AzFramework::Scene* scene) = 0;
-        virtual bool EnsureDefaultRenderPipelineInstalledForScene(AZ::RPI::ScenePtr scene, AZ::RPI::ViewportContextPtr viewportContext) = 0;
-        virtual void SwitchRenderPipeline(const AZ::RPI::RenderPipelineDescriptor& newRenderPipelineDesc, AZ::RPI::ViewportContextPtr viewportContext) = 0;
-        virtual void SwitchAntiAliasing(const AZStd::string& newAntiAliasing, AZ::RPI::ViewportContextPtr viewportContext) = 0;
-        virtual void SwitchMultiSample(const uint16_t newSampleCount, AZ::RPI::ViewportContextPtr viewportContext) = 0;
+        virtual JE::Render::RPI::ScenePtr GetOrCreateAtomSceneFromAzScene(AzFramework::Scene* scene) = 0;
+        virtual bool EnsureDefaultRenderPipelineInstalledForScene(JE::Render::RPI::ScenePtr scene, JE::Render::RPI::ViewportContextPtr viewportContext) = 0;
+        virtual void SwitchRenderPipeline(const JE::Render::RPI::RenderPipelineDescriptor& newRenderPipelineDesc, JE::Render::RPI::ViewportContextPtr viewportContext) = 0;
+        virtual void SwitchAntiAliasing(const AZStd::string& newAntiAliasing, JE::Render::RPI::ViewportContextPtr viewportContext) = 0;
+        virtual void SwitchMultiSample(const uint16_t newSampleCount, JE::Render::RPI::ViewportContextPtr viewportContext) = 0;
         virtual void RefreshWindowResolution() = 0;
 
     protected:

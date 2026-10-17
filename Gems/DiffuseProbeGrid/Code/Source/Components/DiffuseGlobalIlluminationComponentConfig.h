@@ -9,7 +9,7 @@
 #pragma once
 
 #include <AzCore/Component/Component.h>
-#include <Atom/RPI.Reflect/System/AnyAsset.h>
+#include <JE/Render/RPI/Reflect/System/AnyAsset.h>
 #include <DiffuseProbeGrid/DiffuseGlobalIlluminationFeatureProcessorInterface.h>
 
 namespace AZ

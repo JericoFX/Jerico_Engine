@@ -8,21 +8,21 @@
 
 #include <PostProcessing/PaniniProjectionPass.h>
 #include <PostProcess/PostProcessFeatureProcessor.h>
-#include <Atom/RPI.Public/RenderPipeline.h>
-#include <Atom/RPI.Public/Scene.h>
+#include <JE/Render/RPI/Public/RenderPipeline.h>
+#include <JE/Render/RPI/Public/Scene.h>
 
 namespace AZ
 {
     namespace Render
     {
-        RPI::Ptr<PaniniProjectionPass> PaniniProjectionPass::Create(const RPI::PassDescriptor& descriptor)
+        JE::Render::RPI::Ptr<PaniniProjectionPass> PaniniProjectionPass::Create(const JE::Render::RPI::PassDescriptor& descriptor)
         {
-            RPI::Ptr<PaniniProjectionPass> pass = aznew PaniniProjectionPass(descriptor);
+            JE::Render::RPI::Ptr<PaniniProjectionPass> pass = aznew PaniniProjectionPass(descriptor);
             return pass;
         }
 
-        PaniniProjectionPass::PaniniProjectionPass(const RPI::PassDescriptor& descriptor)
-            : RPI::ComputePass(descriptor)
+        PaniniProjectionPass::PaniniProjectionPass(const JE::Render::RPI::PassDescriptor& descriptor)
+            : JE::Render::RPI::ComputePass(descriptor)
         {
         }
 
@@ -32,13 +32,13 @@ namespace AZ
             {
                 return false;
             }
-            const RPI::Scene* scene = GetScene();
+            const JE::Render::RPI::Scene* scene = GetScene();
             if (!scene)
             {
                 return false;
             }
             PostProcessFeatureProcessor* fp = scene->GetFeatureProcessor<PostProcessFeatureProcessor>();
-            const RPI::ViewPtr view = GetRenderPipeline()->GetDefaultView();
+            const JE::Render::RPI::ViewPtr view = GetRenderPipeline()->GetDefaultView();
             if (!fp)
             {
                 return false;
@@ -67,11 +67,11 @@ namespace AZ
                 AZStd::array<float, 3> m_pad;
             } constants{};
 
-            RPI::Scene* scene = GetScene();
+            JE::Render::RPI::Scene* scene = GetScene();
             PostProcessFeatureProcessor* fp = scene->GetFeatureProcessor<PostProcessFeatureProcessor>();
             if (fp)
             {
-                RPI::ViewPtr view = scene->GetDefaultRenderPipeline()->GetDefaultView();
+                JE::Render::RPI::ViewPtr view = scene->GetDefaultRenderPipeline()->GetDefaultView();
                 PostProcessSettings* postProcessSettings = fp->GetLevelSettingsFromView(view);
                 if (postProcessSettings)
                 {
@@ -84,7 +84,7 @@ namespace AZ
             }
 
             AZ_Assert(GetOutputCount() > 0, "PaniniProjectionPass: No output bindings!");
-            RPI::PassAttachment* outputAttachment = GetOutputBinding(0).GetAttachment().get();
+            JE::Render::RPI::PassAttachment* outputAttachment = GetOutputBinding(0).GetAttachment().get();
 
             AZ_Assert(outputAttachment != nullptr, "PaniniProjectionPass: Output binding has no attachment!");
             RHI::Size size = outputAttachment->m_descriptor.m_image.m_size;
@@ -96,7 +96,7 @@ namespace AZ
 
             m_shaderResourceGroup->SetConstant(m_constantsIndex, constants);
 
-            RPI::ComputePass::FrameBeginInternal(params);
+            JE::Render::RPI::ComputePass::FrameBeginInternal(params);
         }
     } // namespace Render
 } // namespace AZ

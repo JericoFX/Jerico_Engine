@@ -15,7 +15,7 @@
 #include <AzFramework/Translation/TranslationDef.h>
 
 #include <TerrainSystem/TerrainSystem.h>
-#include <Atom/RPI.Public/Pass/PassSystemInterface.h>
+#include <JE/Render/RPI/Public/Pass/PassSystemInterface.h>
 #include <TerrainRenderer/Passes/TerrainClipmapComputePass.h>
 #include <TerrainRenderer/Passes/TerrainClipmapDebugPass.h>
 
@@ -70,11 +70,11 @@ namespace Terrain
         // the level component.
         m_terrainSystem = new TerrainSystem();
 
-        auto* passSystem = AZ::RPI::PassSystemInterface::Get();
+        auto* passSystem = JE::Render::RPI::PassSystemInterface::Get();
         AZ_Assert(passSystem, "Cannot get the pass system.");
 
         // Setup handler for load pass templates mappings
-        m_loadTemplatesHandler = AZ::RPI::PassSystemInterface::OnReadyLoadTemplatesEvent::Handler([this]() { this->LoadPassTemplateMappings(); });
+        m_loadTemplatesHandler = JE::Render::RPI::PassSystemInterface::OnReadyLoadTemplatesEvent::Handler([this]() { this->LoadPassTemplateMappings(); });
         passSystem->ConnectEvent(m_loadTemplatesHandler);
 
         // Register terrain system related passes
@@ -93,7 +93,7 @@ namespace Terrain
 
     void TerrainSystemComponent::LoadPassTemplateMappings()
     {
-        auto* passSystem = AZ::RPI::PassSystemInterface::Get();
+        auto* passSystem = JE::Render::RPI::PassSystemInterface::Get();
         AZ_Assert(passSystem, "Cannot get the pass system.");
 
         const char* passTemplatesFile = "Passes/TerrainPassTemplates.azasset";

@@ -11,7 +11,7 @@
 #include "WhiteBoxBuffer.h"
 
 #include <Atom/RHI.Reflect/ShaderSemantic.h>
-#include <Atom/RPI.Reflect/Model/ModelLodAssetCreator.h>
+#include <JE/Render/RPI/Reflect/Model/ModelLodAssetCreator.h>
 
 namespace JE::Geometry
 {
@@ -95,22 +95,22 @@ namespace JE::Geometry
         AttributeBuffer(const AZStd::vector<VertexStreamDataType>& data);
 
         //! Retrieves the buffer asset.
-        const AZ::Data::Asset<AZ::RPI::BufferAsset>& GetBuffer() const;
+        const AZ::Data::Asset<JE::Render::RPI::BufferAsset>& GetBuffer() const;
 
         //! Retrieves the buffer view descriptor.
         const AZ::RHI::BufferViewDescriptor& GetBufferViewDescriptor() const;
 
         //! Retrieves the buffer asset view.
-        const AZ::RPI::BufferAssetView& GetBufferAssetView() const;
+        const JE::Render::RPI::BufferAssetView& GetBufferAssetView() const;
 
         //! Retrieves the attribute's shader semantic.
         const AZ::RHI::ShaderSemantic& GetShaderSemantic() const;
 
         //! Adds this attribute buffer to the Lod.
-        void AddLodStreamBuffer(AZ::RPI::ModelLodAssetCreator& modelLodCreator) const;
+        void AddLodStreamBuffer(JE::Render::RPI::ModelLodAssetCreator& modelLodCreator) const;
 
         //! Adds this attribute buffer to the mesh.
-        void AddMeshStreamBuffer(AZ::RPI::ModelLodAssetCreator& modelLodCreator) const;
+        void AddMeshStreamBuffer(JE::Render::RPI::ModelLodAssetCreator& modelLodCreator) const;
 
         //! Returns true of the attribute buffer is valid, otherwise false.
         bool IsValid() const;
@@ -139,7 +139,7 @@ namespace JE::Geometry
     }
 
     template<AttributeType AttributeTypeT>
-    const AZ::Data::Asset<AZ::RPI::BufferAsset>& AttributeBuffer<AttributeTypeT>::GetBuffer() const
+    const AZ::Data::Asset<JE::Render::RPI::BufferAsset>& AttributeBuffer<AttributeTypeT>::GetBuffer() const
     {
         return m_buffer.GetBuffer();
     }
@@ -151,7 +151,7 @@ namespace JE::Geometry
     }
 
     template<AttributeType AttributeTypeT>
-    const AZ::RPI::BufferAssetView& AttributeBuffer<AttributeTypeT>::GetBufferAssetView() const
+    const JE::Render::RPI::BufferAssetView& AttributeBuffer<AttributeTypeT>::GetBufferAssetView() const
     {
         return m_buffer.GetBufferAssetView();
     }
@@ -163,13 +163,13 @@ namespace JE::Geometry
     }
 
     template<AttributeType AttributeTypeT>
-    void AttributeBuffer<AttributeTypeT>::AddLodStreamBuffer(AZ::RPI::ModelLodAssetCreator& modelLodCreator) const
+    void AttributeBuffer<AttributeTypeT>::AddLodStreamBuffer(JE::Render::RPI::ModelLodAssetCreator& modelLodCreator) const
     {
         modelLodCreator.AddLodStreamBuffer(GetBuffer());
     }
 
     template<AttributeType AttributeTypeT>
-    void AttributeBuffer<AttributeTypeT>::AddMeshStreamBuffer(AZ::RPI::ModelLodAssetCreator& modelLodCreator) const
+    void AttributeBuffer<AttributeTypeT>::AddMeshStreamBuffer(JE::Render::RPI::ModelLodAssetCreator& modelLodCreator) const
     {
         modelLodCreator.AddMeshStreamBuffer(GetShaderSemantic(), AZ::Name(), GetBufferAssetView());
     }

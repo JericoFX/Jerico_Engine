@@ -11,9 +11,9 @@
 #include <AzCore/std/containers/vector.h>
 #include <AzCore/EBus/EBus.h>
 #include <AzCore/Asset/AssetCommon.h>
-#include <Atom/RPI.Edit/Shader/ShaderVariantListSourceData.h>
-#include <Atom/RPI.Reflect/Material/ShaderCollection.h>
-#include <Atom/RPI.Reflect/Shader/ShaderOptionTypes.h>
+#include <JE/Editor/Render/RPI/Edit/Shader/ShaderVariantListSourceData.h>
+#include <JE/Render/RPI/Reflect/Material/ShaderCollection.h>
+#include <JE/Render/RPI/Reflect/Shader/ShaderOptionTypes.h>
 
 namespace ShaderManagementConsole
 {
@@ -32,7 +32,7 @@ namespace ShaderManagementConsole
         virtual AZStd::vector<AZ::Data::AssetId> FindMaterialAssetsUsingShader (const AZStd::string& shaderFilePath) = 0;
 
         //! Returns a list of shader items contained within an instantiated material source's shader collection.
-        virtual AZStd::vector<AZ::RPI::ShaderCollection::Item> GetMaterialInstanceShaderItems(const AZ::Data::AssetId& assetId) = 0;
+        virtual AZStd::vector<JE::Render::RPI::ShaderCollection::Item> GetMaterialInstanceShaderItems(const AZ::Data::AssetId& assetId) = 0;
 
         //! Return the id of all built material assets
         virtual AZStd::vector<AZ::Data::AssetId> GetAllMaterialAssetIds() = 0;
@@ -41,7 +41,7 @@ namespace ShaderManagementConsole
         virtual AZStd::string GenerateRelativeSourcePath(const AZStd::string& fullShaderPath) = 0;
 
         //! A convenience function to generate proper ShaderOptionValue instances from scripts
-        virtual AZ::RPI::ShaderOptionValue MakeShaderOptionValueFromInt(int value) = 0;
+        virtual JE::Render::RPI::ShaderOptionValue MakeShaderOptionValueFromInt(int value) = 0;
 
     };
     using ShaderManagementConsoleRequestBus = AZ::EBus<ShaderManagementConsoleRequests>;

@@ -10,13 +10,13 @@
 
 #include <Atom/RHI.Reflect/MultisampleState.h>
 
-#include <Atom/RPI.Public/Pass/ParentPass.h>
-#include <Atom/RPI.Public/Pass/RasterPass.h>
-#include <Atom/RPI.Public/Pass/RenderPass.h>
-#include <Atom/RPI.Public/Pass/Specific/ImageAttachmentPreviewPass.h>
-#include <Atom/RPI.Public/RenderPipeline.h>
-#include <Atom/RPI.Public/RPISystemInterface.h>
-#include <Atom/RPI.Public/Scene.h>
+#include <JE/Render/RPI/Public/Pass/ParentPass.h>
+#include <JE/Render/RPI/Public/Pass/RasterPass.h>
+#include <JE/Render/RPI/Public/Pass/RenderPass.h>
+#include <JE/Render/RPI/Public/Pass/Specific/ImageAttachmentPreviewPass.h>
+#include <JE/Render/RPI/Public/RenderPipeline.h>
+#include <JE/Render/RPI/Public/RPISystemInterface.h>
+#include <JE/Render/RPI/Public/Scene.h>
 
 #include <Atom/Utils/DdsFile.h>
 
@@ -32,7 +32,7 @@
 
 namespace AZ::Render
 {
-    inline AZ::RPI::PassAttachment* FindPassAttachment(AZ::RPI::Pass* pass, AZ::RHI::AttachmentId attachmentId)
+    inline JE::Render::RPI::PassAttachment* FindPassAttachment(JE::Render::RPI::Pass* pass, AZ::RHI::AttachmentId attachmentId)
     {
         for (auto& binding : pass->GetAttachmentBindings())
         {
@@ -44,7 +44,7 @@ namespace AZ::Render
         return nullptr;
     }
 
-    inline AZStd::string ImGuiPassTree::GetPassDisplayName(AZ::RPI::Pass* pass) const
+    inline AZStd::string ImGuiPassTree::GetPassDisplayName(JE::Render::RPI::Pass* pass) const
     {
         if (pass->HasDrawListTag())
         {
@@ -54,7 +54,7 @@ namespace AZ::Render
         return AZStd::string::format("%s", pass->GetName().GetCStr());
     }
 
-    inline void ImGuiPassTree::Draw(bool& draw, AZ::RPI::Pass* rootPass)
+    inline void ImGuiPassTree::Draw(bool& draw, JE::Render::RPI::Pass* rootPass)
     {
         using namespace AZ;
 
@@ -72,8 +72,8 @@ namespace AZ::Render
                 m_selectedChanged = true;
                 if (!m_previewPass)
                 {
-                    RPI::PassDescriptor descriptor(Name("ImageAttachmentsPreviewPass"));
-                    m_previewPass = RPI::ImageAttachmentPreviewPass::Create(descriptor);
+                    JE::Render::RPI::PassDescriptor descriptor(Name("ImageAttachmentsPreviewPass"));
+                    m_previewPass = JE::Render::RPI::ImageAttachmentPreviewPass::Create(descriptor);
                 }
 
                 if (!m_shouldPreviewAttachment)
@@ -156,9 +156,9 @@ namespace AZ::Render
             {
                 if (!m_previewPass->GetParent())
                 {
-                    RPI::PassSystemInterface::Get()->AddPassWithoutPipeline(m_previewPass);
+                    JE::Render::RPI::PassSystemInterface::Get()->AddPassWithoutPipeline(m_previewPass);
                 }
-                AZ::RPI::PassAttachment* attachment = FindPassAttachment(m_selectedPass, m_attachmentId);
+                JE::Render::RPI::PassAttachment* attachment = FindPassAttachment(m_selectedPass, m_attachmentId);
                 if (attachment)
                 {
                     // Reset output attachment to empty so the preview will use pass's owner render pipeline's output
@@ -186,7 +186,7 @@ namespace AZ::Render
             m_attachmentReadbackInfo = "";
             if (!m_readback)
             {
-                m_readback = AZStd::make_shared<AZ::RPI::AttachmentReadback>(AZ::RHI::ScopeId{ "AttachmentReadback" });
+                m_readback = AZStd::make_shared<JE::Render::RPI::AttachmentReadback>(AZ::RHI::ScopeId{ "AttachmentReadback" });
                 m_readback->SetCallback(AZStd::bind(&ImGuiPassTree::ReadbackCallback, this, AZStd::placeholders::_1));
             }
 
@@ -201,12 +201,12 @@ namespace AZ::Render
         }
     }
         
-    inline void ImGuiPassTree::DrawPassAttachments(AZ::RPI::Pass* pass)
+    inline void ImGuiPassTree::DrawPassAttachments(JE::Render::RPI::Pass* pass)
     {
         for (const auto& binding : pass->GetAttachmentBindings())
         {
             // Binding info: [slot type] [slot name]
-            AZStd::string label = AZStd::string::format("[%s] [%s]", AZ::RPI::ToString(binding.m_slotType),
+            AZStd::string label = AZStd::string::format("[%s] [%s]", JE::Render::RPI::ToString(binding.m_slotType),
                 binding.m_name.GetCStr());
 
             // Append attachment info if the attachment exists
@@ -225,7 +225,7 @@ namespace AZ::Render
                     AZ::RHI::ImageDescriptor descriptor;
                     if (binding.GetAttachment()->m_importedResource)
                     {
-                        AZ::RPI::Image* image = static_cast<AZ::RPI::Image*>(binding.GetAttachment()->m_importedResource.get());
+                        JE::Render::RPI::Image* image = static_cast<JE::Render::RPI::Image*>(binding.GetAttachment()->m_importedResource.get());
                         descriptor = image->GetRHIImage()->GetDescriptor();
                     }
                     else
@@ -273,14 +273,14 @@ namespace AZ::Render
 
     }
 
-    inline void ImGuiPassTree::DrawTreeView(AZ::RPI::Pass* pass, const AZStd::unordered_set<Name>& filteredPassNames)
+    inline void ImGuiPassTree::DrawTreeView(JE::Render::RPI::Pass* pass, const AZStd::unordered_set<Name>& filteredPassNames)
     {
         if (!filteredPassNames.contains(pass->GetPathName()))
         {
             return;
         }
 
-        AZ::RPI::ParentPass* asParent = pass->AsParent();
+        JE::Render::RPI::ParentPass* asParent = pass->AsParent();
 
         AZStd::string passLabel = GetPassDisplayName(pass);
         bool enabled = pass->IsEnabled();
@@ -317,13 +317,13 @@ namespace AZ::Render
                 bool nodeOpen = Scriptable_ImGui::TreeNodeEx(passLabel.c_str(), flags);
 
 
-                AZ::RPI::RasterPass* asRasterPass = azrtti_cast<AZ::RPI::RasterPass*>(pass);
+                JE::Render::RPI::RasterPass* asRasterPass = azrtti_cast<JE::Render::RPI::RasterPass*>(pass);
                 if (asRasterPass)
                 {
                     ImGui::Text("Raster pass with %d draw items", asRasterPass->GetDrawItemCount());
                 }
 
-                AZ::RPI::RenderPass* asRenderPass = azrtti_cast<AZ::RPI::RenderPass*>(pass);
+                JE::Render::RPI::RenderPass* asRenderPass = azrtti_cast<JE::Render::RPI::RenderPass*>(pass);
                 if (AZ::RHI::RHISystemInterface::Get()->GetDeviceCount() > 1 && asRenderPass && asRenderPass->IsEnabled())
                 {
                     ImGui::Text("Pass runs on device %d", AZStd::max(asRenderPass->ScopeProducer::GetDeviceIndex(), 0));
@@ -388,11 +388,11 @@ namespace AZ::Render
         }
     }
 
-    inline bool ImGuiPassTree::GetFilteredPassNames(AZ::RPI::Pass* pass, AZStd::unordered_set<Name>& filteredPassNames) const
+    inline bool ImGuiPassTree::GetFilteredPassNames(JE::Render::RPI::Pass* pass, AZStd::unordered_set<Name>& filteredPassNames) const
     {
         bool anyChildMatch = m_passFilter.PassFilter(GetPassDisplayName(pass).c_str());
 
-        if (RPI::ParentPass* asParent = pass->AsParent())
+        if (JE::Render::RPI::ParentPass* asParent = pass->AsParent())
         {
             for (const auto& child : asParent->GetChildren())
             {
@@ -408,9 +408,9 @@ namespace AZ::Render
         return anyChildMatch;
     }
 
-    inline void ImGuiPassTree::ReadbackCallback(const AZ::RPI::AttachmentReadback::ReadbackResult& readbackResult)
+    inline void ImGuiPassTree::ReadbackCallback(const JE::Render::RPI::AttachmentReadback::ReadbackResult& readbackResult)
     {
-        if (readbackResult.m_state == AZ::RPI::AttachmentReadback::ReadbackState::Failed)
+        if (readbackResult.m_state == JE::Render::RPI::AttachmentReadback::ReadbackState::Failed)
         {
             m_attachmentReadbackInfo = AZStd::string::format("Failed to readback attachment [%s]", readbackResult.m_name.GetCStr());
             return;

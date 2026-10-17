@@ -9,10 +9,10 @@
 #include <AzFramework/Entity/EntityDebugDisplayBus.h>
 
 #include <AtomActorDebugDraw.h>
-#include <Atom/RPI.Public/Scene.h>
-#include <Atom/RPI.Public/AuxGeom/AuxGeomDraw.h>
-#include <Atom/RPI.Public/AuxGeom/AuxGeomFeatureProcessorInterface.h>
-#include <Atom/RPI.Public/ViewportContextBus.h>
+#include <JE/Render/RPI/Public/Scene.h>
+#include <JE/Render/RPI/Public/AuxGeom/AuxGeomDraw.h>
+#include <JE/Render/RPI/Public/AuxGeom/AuxGeomFeatureProcessorInterface.h>
+#include <JE/Render/RPI/Public/ViewportContextBus.h>
 #include <Integration/Rendering/RenderActorInstance.h>
 #include <Integration/Rendering/RenderActorSettings.h>
 
@@ -31,7 +31,7 @@ namespace AZ::Render
     AtomActorDebugDraw::AtomActorDebugDraw(AZ::EntityId entityId)
         : m_entityId(entityId)
     {
-        m_auxGeomFeatureProcessor = RPI::Scene::GetFeatureProcessorForEntity<RPI::AuxGeomFeatureProcessorInterface>(entityId);
+        m_auxGeomFeatureProcessor = JE::Render::RPI::Scene::GetFeatureProcessorForEntity<JE::Render::RPI::AuxGeomFeatureProcessorInterface>(entityId);
         AZ_Assert(m_auxGeomFeatureProcessor, "AuxGeomFeatureProcessor doesn't exist. Check if it is missing from AnimViewport.setreg file.");
     }
 
@@ -119,7 +119,7 @@ namespace AZ::Render
             return;
         }
 
-        RPI::AuxGeomDrawPtr auxGeom = m_auxGeomFeatureProcessor->GetDrawQueue();
+        JE::Render::RPI::AuxGeomDrawPtr auxGeom = m_auxGeomFeatureProcessor->GetDrawQueue();
         if (!auxGeom)
         {
             return;
@@ -135,8 +135,8 @@ namespace AZ::Render
             instance->UpdateMeshDeformers(0.0f, true);
         }
 
-        const RPI::Scene* scene = RPI::Scene::GetSceneForEntityId(m_entityId);
-        const RPI::ViewportContextPtr viewport = AZ::Interface<AZ::RPI::ViewportContextRequestsInterface>::Get()->GetViewportContextByScene(scene);
+        const JE::Render::RPI::Scene* scene = JE::Render::RPI::Scene::GetSceneForEntityId(m_entityId);
+        const JE::Render::RPI::ViewportContextPtr viewport = AZ::Interface<JE::Render::RPI::ViewportContextRequestsInterface>::Get()->GetViewportContextByScene(scene);
         AzFramework::DebugDisplayRequests* debugDisplay = GetDebugDisplay(viewport->GetId());
         const AZ::Render::RenderActorSettings& renderActorSettings = EMotionFX::GetRenderActorSettings();
         const float scaleMultiplier = CalculateScaleMultiplier(instance);
@@ -406,7 +406,7 @@ namespace AZ::Render
             bool enableStaticAabb,
             const AZ::Color& staticAabbColor)
     {
-        RPI::AuxGeomDrawPtr auxGeom = m_auxGeomFeatureProcessor->GetDrawQueue();
+        JE::Render::RPI::AuxGeomDrawPtr auxGeom = m_auxGeomFeatureProcessor->GetDrawQueue();
 
         if (enableNodeAabb)
         {
@@ -415,7 +415,7 @@ namespace AZ::Render
             EMotionFX::ActorInstance::ExpandBounds(aabb, instance->GetExpandBoundsBy());
             if (aabb.IsValid())
             {
-                auxGeom->DrawAabb(aabb, nodeAabbColor, RPI::AuxGeomDraw::DrawStyle::Line);
+                auxGeom->DrawAabb(aabb, nodeAabbColor, JE::Render::RPI::AuxGeomDraw::DrawStyle::Line);
             }
         }
 
@@ -427,7 +427,7 @@ namespace AZ::Render
             EMotionFX::ActorInstance::ExpandBounds(aabb, instance->GetExpandBoundsBy());
             if (aabb.IsValid())
             {
-                auxGeom->DrawAabb(aabb, meshAabbColor, RPI::AuxGeomDraw::DrawStyle::Line);
+                auxGeom->DrawAabb(aabb, meshAabbColor, JE::Render::RPI::AuxGeomDraw::DrawStyle::Line);
             }
         }
 
@@ -436,7 +436,7 @@ namespace AZ::Render
             auto& aabb = instance->GetAabb();
             if (aabb.IsValid())
             {
-                auxGeom->DrawAabb(aabb, staticAabbColor, RPI::AuxGeomDraw::DrawStyle::Line);
+                auxGeom->DrawAabb(aabb, staticAabbColor, JE::Render::RPI::AuxGeomDraw::DrawStyle::Line);
             }
         }
     }
@@ -563,7 +563,7 @@ namespace AZ::Render
 
     void AtomActorDebugDraw::RenderEMFXDebugDraw(EMotionFX::ActorInstance* instance)
     {
-        RPI::AuxGeomDrawPtr auxGeom = m_auxGeomFeatureProcessor->GetDrawQueue();
+        JE::Render::RPI::AuxGeomDrawPtr auxGeom = m_auxGeomFeatureProcessor->GetDrawQueue();
 
         EMotionFX::DebugDraw& debugDraw = EMotionFX::GetDebugDraw();
         debugDraw.Lock();
@@ -594,12 +594,12 @@ namespace AZ::Render
         actorInstanceData->Unlock();
         debugDraw.Unlock();
 
-        RPI::AuxGeomDraw::AuxGeomDynamicDrawArguments lineArgs;
+        JE::Render::RPI::AuxGeomDraw::AuxGeomDynamicDrawArguments lineArgs;
         lineArgs.m_verts = m_auxVertices.data();
         lineArgs.m_vertCount = aznumeric_cast<uint32_t>(m_auxVertices.size());
         lineArgs.m_colors = m_auxColors.data();
         lineArgs.m_colorCount = aznumeric_cast<uint32_t>(m_auxColors.size());
-        lineArgs.m_depthTest = RPI::AuxGeomDraw::DepthTest::Off;
+        lineArgs.m_depthTest = JE::Render::RPI::AuxGeomDraw::DepthTest::Off;
         auxGeom->DrawLines(lineArgs);
     }
 
@@ -624,7 +624,7 @@ namespace AZ::Render
             return;
         }
 
-        RPI::AuxGeomDrawPtr auxGeom = m_auxGeomFeatureProcessor->GetDrawQueue();
+        JE::Render::RPI::AuxGeomDrawPtr auxGeom = m_auxGeomFeatureProcessor->GetDrawQueue();
         if (!auxGeom)
         {
             return;
@@ -668,12 +668,12 @@ namespace AZ::Render
                     m_auxVertices.emplace_back(normalPos + (normalDir * faceNormalsScale * scaleMultiplier));
                 }
 
-                RPI::AuxGeomDraw::AuxGeomDynamicDrawArguments lineArgs;
+                JE::Render::RPI::AuxGeomDraw::AuxGeomDynamicDrawArguments lineArgs;
                 lineArgs.m_verts = m_auxVertices.data();
                 lineArgs.m_vertCount = aznumeric_cast<uint32_t>(m_auxVertices.size());
                 lineArgs.m_colors = &faceNormalsColor;
                 lineArgs.m_colorCount = 1;
-                lineArgs.m_depthTest = RPI::AuxGeomDraw::DepthTest::On;
+                lineArgs.m_depthTest = JE::Render::RPI::AuxGeomDraw::DepthTest::On;
                 auxGeom->DrawLines(lineArgs);
             }
         }
@@ -702,12 +702,12 @@ namespace AZ::Render
                     m_auxVertices.emplace_back(position + normal);
                 }
 
-                RPI::AuxGeomDraw::AuxGeomDynamicDrawArguments lineArgs;
+                JE::Render::RPI::AuxGeomDraw::AuxGeomDynamicDrawArguments lineArgs;
                 lineArgs.m_verts = m_auxVertices.data();
                 lineArgs.m_vertCount = aznumeric_cast<uint32_t>(m_auxVertices.size());
                 lineArgs.m_colors = &vertexNormalsColor;
                 lineArgs.m_colorCount = 1;
-                lineArgs.m_depthTest = RPI::AuxGeomDraw::DepthTest::On;
+                lineArgs.m_depthTest = JE::Render::RPI::AuxGeomDraw::DepthTest::On;
                 auxGeom->DrawLines(lineArgs);
             }
         }
@@ -727,7 +727,7 @@ namespace AZ::Render
             return;
         }
 
-        RPI::AuxGeomDrawPtr auxGeom = m_auxGeomFeatureProcessor->GetDrawQueue();
+        JE::Render::RPI::AuxGeomDrawPtr auxGeom = m_auxGeomFeatureProcessor->GetDrawQueue();
         if (!auxGeom)
         {
             return;
@@ -790,12 +790,12 @@ namespace AZ::Render
             }
         }
 
-        RPI::AuxGeomDraw::AuxGeomDynamicDrawArguments lineArgs;
+        JE::Render::RPI::AuxGeomDraw::AuxGeomDynamicDrawArguments lineArgs;
         lineArgs.m_verts = m_auxVertices.data();
         lineArgs.m_vertCount = aznumeric_cast<uint32_t>(m_auxVertices.size());
         lineArgs.m_colors = m_auxColors.data();
         lineArgs.m_colorCount = aznumeric_cast<uint32_t>(m_auxColors.size());
-        lineArgs.m_depthTest = RPI::AuxGeomDraw::DepthTest::On;
+        lineArgs.m_depthTest = JE::Render::RPI::AuxGeomDraw::DepthTest::On;
         auxGeom->DrawLines(lineArgs);
     }
 
@@ -808,7 +808,7 @@ namespace AZ::Render
             return;
         }
 
-        RPI::AuxGeomDrawPtr auxGeom = m_auxGeomFeatureProcessor->GetDrawQueue();
+        JE::Render::RPI::AuxGeomDrawPtr auxGeom = m_auxGeomFeatureProcessor->GetDrawQueue();
         if (!auxGeom)
         {
             return;
@@ -849,18 +849,18 @@ namespace AZ::Render
                 m_auxVertices.emplace_back(posA);
             }
 
-            RPI::AuxGeomDraw::AuxGeomDynamicDrawArguments lineArgs;
+            JE::Render::RPI::AuxGeomDraw::AuxGeomDynamicDrawArguments lineArgs;
             lineArgs.m_verts = m_auxVertices.data();
             lineArgs.m_vertCount = aznumeric_cast<uint32_t>(m_auxVertices.size());
             lineArgs.m_colors = &color;
             lineArgs.m_colorCount = 1;
-            lineArgs.m_depthTest = RPI::AuxGeomDraw::DepthTest::On;
+            lineArgs.m_depthTest = JE::Render::RPI::AuxGeomDraw::DepthTest::On;
             auxGeom->DrawLines(lineArgs);
         }
     }
 
     void AtomActorDebugDraw::RenderJointNames(EMotionFX::ActorInstance* actorInstance,
-        RPI::ViewportContextPtr viewportContext, const AZ::Color& jointNameColor)
+        JE::Render::RPI::ViewportContextPtr viewportContext, const AZ::Color& jointNameColor)
     {
         if (!m_fontDrawInterface)
         {

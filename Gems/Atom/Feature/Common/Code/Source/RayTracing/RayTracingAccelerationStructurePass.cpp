@@ -12,11 +12,11 @@
 #include <Atom/RHI/FrameScheduler.h>
 #include <Atom/RHI/RHISystemInterface.h>
 #include <Atom/RHI/ScopeProducerFunction.h>
-#include <Atom/RPI.Public/Buffer/Buffer.h>
-#include <Atom/RPI.Public/Buffer/BufferSystemInterface.h>
-#include <Atom/RPI.Public/GpuQuery/QueryPool.h>
-#include <Atom/RPI.Public/RenderPipeline.h>
-#include <Atom/RPI.Public/Scene.h>
+#include <JE/Render/RPI/Public/Buffer/Buffer.h>
+#include <JE/Render/RPI/Public/Buffer/BufferSystemInterface.h>
+#include <JE/Render/RPI/Public/GpuQuery/QueryPool.h>
+#include <JE/Render/RPI/Public/RenderPipeline.h>
+#include <JE/Render/RPI/Public/Scene.h>
 #include <Mesh/MeshFeatureProcessor.h>
 #include <RayTracing/RayTracingAccelerationStructurePass.h>
 #include <RayTracing/RayTracingFeatureProcessor.h>
@@ -25,14 +25,14 @@ namespace AZ
 {
     namespace Render
     {
-        RPI::Ptr<RayTracingAccelerationStructurePass> RayTracingAccelerationStructurePass::Create(const RPI::PassDescriptor& descriptor)
+        JE::Render::RPI::Ptr<RayTracingAccelerationStructurePass> RayTracingAccelerationStructurePass::Create(const JE::Render::RPI::PassDescriptor& descriptor)
         {
-            RPI::Ptr<RayTracingAccelerationStructurePass> rayTracingAccelerationStructurePass =
+            JE::Render::RPI::Ptr<RayTracingAccelerationStructurePass> rayTracingAccelerationStructurePass =
                 aznew RayTracingAccelerationStructurePass(descriptor);
             return rayTracingAccelerationStructurePass;
         }
 
-        RayTracingAccelerationStructurePass::RayTracingAccelerationStructurePass(const RPI::PassDescriptor& descriptor)
+        RayTracingAccelerationStructurePass::RayTracingAccelerationStructurePass(const JE::Render::RPI::PassDescriptor& descriptor)
             : Pass(descriptor)
         {
             // disable this pass if we're on a platform that doesn't support raytracing
@@ -56,7 +56,7 @@ namespace AZ
         {
             if (IsTimestampQueryEnabled())
             {
-                m_timestampResult = AZ::RPI::TimestampResult();
+                m_timestampResult = JE::Render::RPI::TimestampResult();
             }
 
             if (GetScopeId().IsEmpty() || (ScopeProducer::GetDeviceIndex() != Pass::GetDeviceIndex()))
@@ -66,7 +66,7 @@ namespace AZ
 
             params.m_frameGraphBuilder->ImportScopeProducer(*this);
 
-            RPI::Scene* scene = m_pipeline->GetScene();
+            JE::Render::RPI::Scene* scene = m_pipeline->GetScene();
             RayTracingFeatureProcessor* rayTracingFeatureProcessor = scene->GetFeatureProcessor<RayTracingFeatureProcessor>();
 
             if (rayTracingFeatureProcessor)
@@ -89,20 +89,20 @@ namespace AZ
             return false;
         }
 
-        RHI::Ptr<RPI::Query> RayTracingAccelerationStructurePass::GetQuery(RPI::ScopeQueryType queryType)
+        RHI::Ptr<JE::Render::RPI::Query> RayTracingAccelerationStructurePass::GetQuery(JE::Render::RPI::ScopeQueryType queryType)
         {
             auto typeIndex{ static_cast<uint32_t>(queryType) };
             if (!m_scopeQueries[typeIndex])
             {
-                RHI::Ptr<RPI::Query> query;
+                RHI::Ptr<JE::Render::RPI::Query> query;
                 switch (queryType)
                 {
-                case RPI::ScopeQueryType::Timestamp:
-                    query = RPI::GpuQuerySystemInterface::Get()->CreateQuery(
+                case JE::Render::RPI::ScopeQueryType::Timestamp:
+                    query = JE::Render::RPI::GpuQuerySystemInterface::Get()->CreateQuery(
                         RHI::QueryType::Timestamp, RHI::QueryPoolScopeAttachmentType::Global, RHI::ScopeAttachmentAccess::Write);
                     break;
-                case RPI::ScopeQueryType::PipelineStatistics:
-                    query = RPI::GpuQuerySystemInterface::Get()->CreateQuery(
+                case JE::Render::RPI::ScopeQueryType::PipelineStatistics:
+                    query = JE::Render::RPI::GpuQuerySystemInterface::Get()->CreateQuery(
                         RHI::QueryType::PipelineStatistics, RHI::QueryPoolScopeAttachmentType::Global, RHI::ScopeAttachmentAccess::Write);
                     break;
                 }
@@ -118,7 +118,7 @@ namespace AZ
         {
             if (IsTimestampQueryEnabled())
             {
-                auto query{ GetQuery(RPI::ScopeQueryType::Timestamp) };
+                auto query{ GetQuery(JE::Render::RPI::ScopeQueryType::Timestamp) };
                 if (query)
                 {
                     func(query);
@@ -131,7 +131,7 @@ namespace AZ
         {
             if (IsPipelineStatisticsQueryEnabled())
             {
-                auto query{ GetQuery(RPI::ScopeQueryType::PipelineStatistics) };
+                auto query{ GetQuery(JE::Render::RPI::ScopeQueryType::PipelineStatistics) };
                 if (query)
                 {
                     func(query);
@@ -139,19 +139,19 @@ namespace AZ
             }
         }
 
-        RPI::TimestampResult RayTracingAccelerationStructurePass::GetTimestampResultInternal() const
+        JE::Render::RPI::TimestampResult RayTracingAccelerationStructurePass::GetTimestampResultInternal() const
         {
             return m_timestampResult;
         }
 
-        RPI::PipelineStatisticsResult RayTracingAccelerationStructurePass::GetPipelineStatisticsResultInternal() const
+        JE::Render::RPI::PipelineStatisticsResult RayTracingAccelerationStructurePass::GetPipelineStatisticsResultInternal() const
         {
             return m_statisticsResult;
         }
 
         void RayTracingAccelerationStructurePass::SetupFrameGraphDependencies(RHI::FrameGraphInterface frameGraph)
         {
-            RPI::Scene* scene = m_pipeline->GetScene();
+            JE::Render::RPI::Scene* scene = m_pipeline->GetScene();
             RayTracingFeatureProcessor* rayTracingFeatureProcessor = scene->GetFeatureProcessor<RayTracingFeatureProcessor>();
 
             if (rayTracingFeatureProcessor)
@@ -191,7 +191,7 @@ namespace AZ
                 // the skinning pass has finished. We assume that the pipeline has a skinning pass with this output available.
                 if (rayTracingFeatureProcessor->GetSkinnedMeshCount() > 0)
                 {
-                    RHI::Ptr<RPI::Pass> skinningPassPtr;
+                    RHI::Ptr<JE::Render::RPI::Pass> skinningPassPtr;
                     for (const auto& sibling : m_parent->GetChildren())
                     {
                         if (sibling->GetPassTemplate() && sibling->GetPassTemplate()->m_name == AZ::Name{ "SkinningPassTemplate" } &&
@@ -217,7 +217,7 @@ namespace AZ
 
         void RayTracingAccelerationStructurePass::BuildCommandList(const RHI::FrameGraphExecuteContext& context)
         {
-            RPI::Scene* scene = m_pipeline->GetScene();
+            JE::Render::RPI::Scene* scene = m_pipeline->GetScene();
             RayTracingFeatureProcessor* rayTracingFeatureProcessor = scene->GetFeatureProcessor<RayTracingFeatureProcessor>();
 
             if (!rayTracingFeatureProcessor)
@@ -396,7 +396,7 @@ namespace AZ
 
         void RayTracingAccelerationStructurePass::AddScopeQueryToFrameGraph(RHI::FrameGraphInterface frameGraph)
         {
-            const auto addToFrameGraph = [&frameGraph](RHI::Ptr<RPI::Query> query)
+            const auto addToFrameGraph = [&frameGraph](RHI::Ptr<JE::Render::RPI::Query> query)
             {
                 query->AddToFrameGraph(frameGraph);
             };
@@ -407,9 +407,9 @@ namespace AZ
 
         void RayTracingAccelerationStructurePass::BeginScopeQuery(const RHI::FrameGraphExecuteContext& context)
         {
-            const auto beginQuery = [&context, this](RHI::Ptr<RPI::Query> query)
+            const auto beginQuery = [&context, this](RHI::Ptr<JE::Render::RPI::Query> query)
             {
-                if (query->BeginQuery(context) == RPI::QueryResultCode::Fail)
+                if (query->BeginQuery(context) == JE::Render::RPI::QueryResultCode::Fail)
                 {
                     AZ_UNUSED(this); // Prevent unused warning in release builds
                     AZ_WarningOnce(
@@ -427,7 +427,7 @@ namespace AZ
 
         void RayTracingAccelerationStructurePass::EndScopeQuery(const RHI::FrameGraphExecuteContext& context)
         {
-            const auto endQuery = [&context](const RHI::Ptr<RPI::Query>& query)
+            const auto endQuery = [&context](const RHI::Ptr<JE::Render::RPI::Query>& query)
             {
                 query->EndQuery(context);
             };
@@ -443,18 +443,18 @@ namespace AZ
         void RayTracingAccelerationStructurePass::ReadbackScopeQueryResults()
         {
             ExecuteOnTimestampQuery(
-                [this](const RHI::Ptr<RPI::Query>& query)
+                [this](const RHI::Ptr<JE::Render::RPI::Query>& query)
                 {
                     const uint32_t TimestampResultQueryCount{ 2u };
                     uint64_t timestampResult[TimestampResultQueryCount] = { 0 };
                     query->GetLatestResult(&timestampResult, sizeof(uint64_t) * TimestampResultQueryCount, m_lastDeviceIndex);
-                    m_timestampResult = RPI::TimestampResult(timestampResult[0], timestampResult[1], RHI::HardwareQueueClass::Graphics);
+                    m_timestampResult = JE::Render::RPI::TimestampResult(timestampResult[0], timestampResult[1], RHI::HardwareQueueClass::Graphics);
                 });
 
             ExecuteOnPipelineStatisticsQuery(
-                [this](const RHI::Ptr<RPI::Query>& query)
+                [this](const RHI::Ptr<JE::Render::RPI::Query>& query)
                 {
-                    query->GetLatestResult(&m_statisticsResult, sizeof(RPI::PipelineStatisticsResult), m_lastDeviceIndex);
+                    query->GetLatestResult(&m_statisticsResult, sizeof(JE::Render::RPI::PipelineStatisticsResult), m_lastDeviceIndex);
                 });
         }
     } // namespace Render

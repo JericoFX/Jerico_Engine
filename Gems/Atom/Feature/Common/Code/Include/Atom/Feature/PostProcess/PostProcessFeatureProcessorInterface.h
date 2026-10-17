@@ -8,7 +8,7 @@
 
 #pragma once
 
-#include <Atom/RPI.Public/FeatureProcessor.h>
+#include <JE/Render/RPI/Public/FeatureProcessor.h>
 #include <Atom/Feature/PostProcess/PostProcessSettingsInterface.h>
 
 namespace AZ
@@ -17,10 +17,10 @@ namespace AZ
     {
         //! Abstract interface for PostProcessFeatureProcessor so it can be access outside of Atom (for example in AtomLyIntegration)
         class PostProcessFeatureProcessorInterface
-            : public RPI::FeatureProcessor
+            : public JE::Render::RPI::FeatureProcessor
         {
         public:
-            AZ_RTTI(AZ::Render::PostProcessFeatureProcessorInterface, "{720EE4B9-78C1-4151-AFEF-13DB5CC500D1}", AZ::RPI::FeatureProcessor);
+            AZ_RTTI(AZ::Render::PostProcessFeatureProcessorInterface, "{720EE4B9-78C1-4151-AFEF-13DB5CC500D1}", JE::Render::RPI::FeatureProcessor);
 
             //! Retrieves existing post process settings for corresponding entity ID. If none found, returns nullptr.
             virtual PostProcessSettingsInterface* GetSettingsInterface(EntityId entityId) = 0;
@@ -35,10 +35,10 @@ namespace AZ
             virtual void OnPostProcessSettingsChanged() = 0;
 
             //! Set an alias for the given sourceView
-            virtual void SetViewAlias(const AZ::RPI::ViewPtr sourceView, const AZ::RPI::ViewPtr targetView) = 0;
+            virtual void SetViewAlias(const JE::Render::RPI::ViewPtr sourceView, const JE::Render::RPI::ViewPtr targetView) = 0;
 
             //! Removes the alias for sourceView
-            virtual void RemoveViewAlias(const AZ::RPI::ViewPtr sourceView) = 0;
+            virtual void RemoveViewAlias(const JE::Render::RPI::ViewPtr sourceView) = 0;
         };
     }
 }

@@ -10,24 +10,24 @@
 
 #include <Atom/RHI/Factory.h>
 #include <Atom/RHI/DevicePipelineState.h>
-#include <Atom/RPI.Public/Pass/PassUtils.h>
-#include <Atom/RPI.Public/RenderPipeline.h>
-#include <Atom/RPI.Public/RPIUtils.h>
+#include <JE/Render/RPI/Public/Pass/PassUtils.h>
+#include <JE/Render/RPI/Public/RenderPipeline.h>
+#include <JE/Render/RPI/Public/RPIUtils.h>
 #include <Atom/RHI/RHISystemInterface.h>
-#include <Atom/RPI.Reflect/Pass/PassTemplate.h>
-#include <Atom/RPI.Public/View.h>
+#include <JE/Render/RPI/Reflect/Pass/PassTemplate.h>
+#include <JE/Render/RPI/Public/View.h>
 
 namespace AZ
 {
     namespace Render
     {
-        RPI::Ptr<FullscreenShadowPass> FullscreenShadowPass::Create(const RPI::PassDescriptor& descriptor)
+        JE::Render::RPI::Ptr<FullscreenShadowPass> FullscreenShadowPass::Create(const JE::Render::RPI::PassDescriptor& descriptor)
         {
-            RPI::Ptr<FullscreenShadowPass> pass = aznew FullscreenShadowPass(descriptor);
+            JE::Render::RPI::Ptr<FullscreenShadowPass> pass = aznew FullscreenShadowPass(descriptor);
             return pass;
         }
 
-        FullscreenShadowPass::FullscreenShadowPass(const RPI::PassDescriptor& descriptor)
+        FullscreenShadowPass::FullscreenShadowPass(const JE::Render::RPI::PassDescriptor& descriptor)
             : Base(descriptor)
             , m_outputName("Output")
             , m_depthInputName("Depth")
@@ -58,7 +58,7 @@ namespace AZ
 
         RHI::Size FullscreenShadowPass::GetDepthBufferDimensions()
         {
-            RPI::PassAttachmentBinding* outputBinding = RPI::Pass::FindAttachmentBinding(m_outputName);
+            JE::Render::RPI::PassAttachmentBinding* outputBinding = JE::Render::RPI::Pass::FindAttachmentBinding(m_outputName);
             auto outputDim = outputBinding->GetAttachment()->m_descriptor.m_image.m_size;
             AZ_Assert(outputDim.m_width > 0 && outputDim.m_height > 0, "Height and width are not valid\n");
             return outputDim;
@@ -66,7 +66,7 @@ namespace AZ
 
         uint16_t FullscreenShadowPass::GetDepthBufferMSAACount()
         {
-            RPI::PassAttachmentBinding* inputBinding = RPI::Pass::FindAttachmentBinding(m_depthInputName);
+            JE::Render::RPI::PassAttachmentBinding* inputBinding = JE::Render::RPI::Pass::FindAttachmentBinding(m_depthInputName);
             return inputBinding->GetAttachment()->m_descriptor.m_image.m_multisampleState.m_samples;
         }       
 

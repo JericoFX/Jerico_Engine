@@ -13,9 +13,9 @@
 #include <AssetBuilderSDK/AssetBuilderSDK.h>
 
 #include <Atom/RHI.Reflect/Base.h>
-#include <Atom/RPI.Reflect/Shader/ShaderAsset.h>
-#include <Atom/RPI.Edit/Shader/ShaderSourceData.h>
-#include <Atom/RPI.Edit/Shader/ShaderVariantListSourceData.h>
+#include <JE/Render/RPI/Reflect/Shader/ShaderAsset.h>
+#include <JE/Editor/Render/RPI/Edit/Shader/ShaderSourceData.h>
+#include <JE/Editor/Render/RPI/Edit/Shader/ShaderVariantListSourceData.h>
 
 #include "ShaderBuilderUtility.h"
 
@@ -36,8 +36,8 @@ namespace JE::Assets::RenderBuilders
             const AZ::RHI::ShaderBuildArguments& m_shaderBuildArguments;
             //! Used to write temporary files during shader compilation, like *.hlsl, or *.air, or *.metallib, etc.
             const AZStd::string& m_tempDirPath;
-            const AZ::RPI::ShaderSourceData& m_shaderSourceDataDescriptor;
-            const AZ::RPI::ShaderOptionGroupLayout& m_shaderOptionGroupLayout;
+            const JE::Render::RPI::ShaderSourceData& m_shaderSourceDataDescriptor;
+            const JE::Render::RPI::ShaderOptionGroupLayout& m_shaderOptionGroupLayout;
             const MapOfStringToStageType& m_shaderEntryPoints;
             const AZ::Data::AssetId m_shaderVariantAssetId;
             const AZStd::string& m_shaderStemNamePrefix; //<shaderName>-<supervariantName>
@@ -75,13 +75,13 @@ namespace JE::Assets::RenderBuilders
             //! The ShaderVariantAsset returned by this function won't be written to the filesystem.
             //! You should call SerializeOutShaderVariantAsset to write it to the temp folder assigned
             //! by the asset processor.
-            static AZ::Outcome<AZ::Data::Asset<AZ::RPI::ShaderVariantAsset>, AZStd::string> CreateShaderVariantAsset(
-                const AZ::RPI::ShaderVariantListSourceData::VariantInfo& shaderVariantInfo,
+            static AZ::Outcome<AZ::Data::Asset<JE::Render::RPI::ShaderVariantAsset>, AZStd::string> CreateShaderVariantAsset(
+                const JE::Render::RPI::ShaderVariantListSourceData::VariantInfo& shaderVariantInfo,
                 ShaderVariantCreationContext& creationContext,
                 AZStd::optional<AZ::RHI::ShaderPlatformInterface::ByProducts>& outputByproducts);
 
             static bool SerializeOutShaderVariantAsset(
-                const AZ::Data::Asset<AZ::RPI::ShaderVariantAsset> shaderVariantAsset,
+                const AZ::Data::Asset<JE::Render::RPI::ShaderVariantAsset> shaderVariantAsset,
                 const AZStd::string& shaderStemNamePrefix, const AZStd::string& tempDirPath,
                 const AZ::RHI::ShaderPlatformInterface& shaderPlatformInterface, const uint32_t productSubID, AssetBuilderSDK::JobProduct& assetProduct);
 

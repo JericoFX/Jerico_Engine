@@ -6,7 +6,7 @@
  *
  */
 
-#include <Atom/RPI.Public/Scene.h>
+#include <JE/Render/RPI/Public/Scene.h>
 #include <AtomLyIntegration/CommonFeatures/CoreLights/AreaLightComponentConfig.h>
 #include <CoreLights/PolygonLightDelegate.h>
 

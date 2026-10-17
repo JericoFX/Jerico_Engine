@@ -25,7 +25,7 @@
 #include <AzCore/Serialization/SerializeContext.h>
 #include <AzCore/Math/Vector3.h>
 
-#include <Atom/RPI.Public/Image/AttachmentImage.h>
+#include <JE/Render/RPI/Public/Image/AttachmentImage.h>
 
 #include <LmbrCentral/Rendering/TextureAsset.h>
 
@@ -73,8 +73,8 @@ public: // member functions
     AZStd::string GetSpritePathname() override;
     void SetSpritePathname(AZStd::string spritePath) override;
     bool SetSpritePathnameIfExists(AZStd::string spritePath) override;
-    AZ::Data::Asset<AZ::RPI::AttachmentImageAsset> GetAttachmentImageAsset() override;
-    void SetAttachmentImageAsset(const AZ::Data::Asset<AZ::RPI::AttachmentImageAsset>& attachmentImageAsset) override;
+    AZ::Data::Asset<JE::Render::RPI::AttachmentImageAsset> GetAttachmentImageAsset() override;
+    void SetAttachmentImageAsset(const AZ::Data::Asset<JE::Render::RPI::AttachmentImageAsset>& attachmentImageAsset) override;
     bool GetIsRenderTargetSRGB() override;
     void SetIsRenderTargetSRGB(bool isSRGB) override;
     SpriteType GetSpriteType() override;
@@ -264,7 +264,7 @@ private: // static member functions
 private: // data
 
     AzFramework::SimpleAssetReference<LmbrCentral::TextureAsset> m_spritePathname;
-    AZ::Data::Asset<AZ::RPI::AttachmentImageAsset> m_attachmentImageAsset;
+    AZ::Data::Asset<JE::Render::RPI::AttachmentImageAsset> m_attachmentImageAsset;
     bool m_isRenderTargetSRGB           = false;
     SpriteType m_spriteType             = SpriteType::SpriteAsset;
     AZ::Color m_color                   = AZ::Color(1.0f, 1.0f, 1.0f, 1.0f);

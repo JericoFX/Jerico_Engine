@@ -13,7 +13,7 @@
 #include <AzCore/Asset/AssetManagerBus.h>
 #include <AzCore/Component/ComponentApplicationBus.h>
 #include <AzFramework/Asset/AssetSystemBus.h>
-#include <Atom/RPI.Reflect/Material/MaterialAsset.h>
+#include <JE/Render/RPI/Reflect/Material/MaterialAsset.h>
 #include <JE/Render/Materials/MaterialComponentBus.h>
 #include <JE/Render/Materials/MaterialComponentConstants.h>
 #include <AzCore/Debug/Trace.h>
@@ -164,13 +164,13 @@ namespace JE::BSP::Editor
             const auto* path = slot == FixtureGridSlot ? FixtureGridMaterial : FixtureMetalMaterial;
             AZ::Data::AssetId id;
             AZ::Data::AssetCatalogRequestBus::BroadcastResult(id, &AZ::Data::AssetCatalogRequests::GetAssetIdByPath,
-                path, azrtti_typeid<AZ::RPI::MaterialAsset>(), false);
+                path, azrtti_typeid<JE::Render::RPI::MaterialAsset>(), false);
             AZ::Data::AssetInfo info;
             AZ::Data::AssetCatalogRequestBus::BroadcastResult(info, &AZ::Data::AssetCatalogRequests::GetAssetInfoById, id);
             AzFramework::AssetSystem::AssetStatus status = AzFramework::AssetSystem::AssetStatus_Unknown;
             AzFramework::AssetSystemRequestBus::BroadcastResult(status,
                 &AzFramework::AssetSystem::AssetSystemRequests::GetAssetStatus, AZStd::string(path));
-            if (!id.IsValid() || info.m_assetType != azrtti_typeid<AZ::RPI::MaterialAsset>() ||
+            if (!id.IsValid() || info.m_assetType != azrtti_typeid<JE::Render::RPI::MaterialAsset>() ||
                 status != AzFramework::AssetSystem::AssetStatus_Compiled)
             {
                 return AZ::Failure(AZStd::string::format("Asset Processor has not produced the required material %s; no fixture entity was created.", path));

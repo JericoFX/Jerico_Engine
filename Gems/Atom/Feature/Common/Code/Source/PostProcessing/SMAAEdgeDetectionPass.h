@@ -28,7 +28,7 @@ namespace AZ
             virtual ~SMAAEdgeDetectionPass() = default;
 
             //! Creates a SMAAEdgeDetectionPass
-            static RPI::Ptr<SMAAEdgeDetectionPass> Create(const RPI::PassDescriptor& descriptor);
+            static JE::Render::RPI::Ptr<SMAAEdgeDetectionPass> Create(const JE::Render::RPI::PassDescriptor& descriptor);
 
             void SetEdgeDetectionMode(SMAAEdgeDetectionMode mode);
             void SetChromaThreshold(float threshold);
@@ -40,14 +40,14 @@ namespace AZ
             void SetPredicationStrength(float strength);
 
         private:
-            SMAAEdgeDetectionPass(const RPI::PassDescriptor& descriptor);
+            SMAAEdgeDetectionPass(const JE::Render::RPI::PassDescriptor& descriptor);
 
             // Pass behavior overrides
             void InitializeInternal() override;
 
             // SMAABasePass functions...
             void UpdateSRG() override;
-            void GetCurrentShaderOption(AZ::RPI::ShaderOptionGroup& shaderOption) const override;
+            void GetCurrentShaderOption(JE::Render::RPI::ShaderOptionGroup& shaderOption) const override;
 
             RHI::ShaderInputNameIndex m_renderTargetMetricsShaderInputIndex = "m_renderTargetMetrics";
             RHI::ShaderInputNameIndex m_chromaThresholdShaderInputIndex = "m_chromaThreshold";

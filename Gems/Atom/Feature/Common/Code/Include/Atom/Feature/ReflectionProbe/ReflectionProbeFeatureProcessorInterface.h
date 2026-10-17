@@ -11,9 +11,9 @@
 #include <AzCore/base.h>
 #include <AzCore/Math/Aabb.h>
 #include <Atom/Utils/StableDynamicArray.h>
-#include <Atom/RPI.Public/FeatureProcessor.h>
-#include <Atom/RPI.Reflect/Image/StreamingImageAsset.h>
-#include <Atom/RPI.Reflect/Image/Image.h>
+#include <JE/Render/RPI/Public/FeatureProcessor.h>
+#include <JE/Render/RPI/Reflect/Image/StreamingImageAsset.h>
+#include <JE/Render/RPI/Reflect/Image/Image.h>
 
 namespace AZ
 {
@@ -35,10 +35,10 @@ namespace AZ
 
         //! The ReflectionProbeFeatureProcessorInterface provides an interface to the feature processor for code outside of Atom.
         class ReflectionProbeFeatureProcessorInterface
-            : public RPI::FeatureProcessor
+            : public JE::Render::RPI::FeatureProcessor
         {
         public:
-            AZ_RTTI(AZ::Render::ReflectionProbeFeatureProcessorInterface, "{805FA0F8-765A-4072-A8B1-41C4708B6E36}", AZ::RPI::FeatureProcessor);
+            AZ_RTTI(AZ::Render::ReflectionProbeFeatureProcessorInterface, "{805FA0F8-765A-4072-A8B1-41C4708B6E36}", JE::Render::RPI::FeatureProcessor);
 
             //! Add a new reflection probe, returns the handle of the new probe
             virtual ReflectionProbeHandle AddReflectionProbe(const AZ::Transform& transform, bool useParallaxCorrection) = 0;
@@ -68,8 +68,8 @@ namespace AZ
             virtual AZ::Transform GetTransform(const ReflectionProbeHandle& handle) const = 0;
 
             //! Set or retrieve cubemap
-            virtual void SetCubeMap(const ReflectionProbeHandle& handle, Data::Instance<RPI::Image>& cubeMapImage, const AZStd::string& relativePath) = 0;
-            virtual Data::Instance<RPI::Image> GetCubeMap(const ReflectionProbeHandle& handle) const = 0;
+            virtual void SetCubeMap(const ReflectionProbeHandle& handle, Data::Instance<JE::Render::RPI::Image>& cubeMapImage, const AZStd::string& relativePath) = 0;
+            virtual Data::Instance<JE::Render::RPI::Image> GetCubeMap(const ReflectionProbeHandle& handle) const = 0;
 
             //! Set or retrieve render exposure
             virtual void SetRenderExposure(const ReflectionProbeHandle& handle, float renderExposure) = 0;
@@ -90,7 +90,7 @@ namespace AZ
 
             //! Check the status of a cubemap bake
             //! Note: For new cubemap bakes only, re-bakes of an existing cubemap are automatically hot-reloaded by the RPI
-            virtual bool CheckCubeMapAssetNotification(const AZStd::string& relativePath, Data::Asset<RPI::StreamingImageAsset>& outCubeMapAsset, CubeMapAssetNotificationType& outNotificationType) = 0;
+            virtual bool CheckCubeMapAssetNotification(const AZStd::string& relativePath, Data::Asset<JE::Render::RPI::StreamingImageAsset>& outCubeMapAsset, CubeMapAssetNotificationType& outNotificationType) = 0;
 
             //! Check to see if a cubemap is referenced by any reflection probes
             virtual bool IsCubeMapReferenced(const AZStd::string& relativePath) = 0;

@@ -18,7 +18,7 @@ namespace AZ
         {
             if (auto* serializeContext = azrtti_cast<SerializeContext*>(context))
             {
-                serializeContext->Class<SubsurfaceTransmissionParameterFunctorSourceData, RPI::MaterialFunctorSourceData>()
+                serializeContext->Class<SubsurfaceTransmissionParameterFunctorSourceData, JE::Render::RPI::MaterialFunctorSourceData>()
                     ->Version(2) // added shrinkFactor, transmissionNdLBias and distanceAttenuation
                     ->Field("mode", &SubsurfaceTransmissionParameterFunctorSourceData::m_mode)
                     ->Field("scale", &SubsurfaceTransmissionParameterFunctorSourceData::m_scale)
@@ -40,11 +40,11 @@ namespace AZ
             }
         }
 
-        RPI::MaterialFunctorSourceData::FunctorResult SubsurfaceTransmissionParameterFunctorSourceData::CreateFunctor(const RuntimeContext& context) const
+        JE::Render::RPI::MaterialFunctorSourceData::FunctorResult SubsurfaceTransmissionParameterFunctorSourceData::CreateFunctor(const RuntimeContext& context) const
         {
-            using namespace RPI;
+            using namespace JE::Render::RPI;
 
-            RPI::Ptr<SubsurfaceTransmissionParameterFunctor> functor = aznew SubsurfaceTransmissionParameterFunctor;
+            JE::Render::RPI::Ptr<SubsurfaceTransmissionParameterFunctor> functor = aznew SubsurfaceTransmissionParameterFunctor;
 
             functor->m_mode                     = context.FindMaterialPropertyIndex(Name{ m_mode });
             functor->m_scale                    = context.FindMaterialPropertyIndex(Name{ m_scale });
@@ -82,13 +82,13 @@ namespace AZ
             AddMaterialPropertyDependency(functor, functor->m_scatterDistanceColor);
             AddMaterialPropertyDependency(functor, functor->m_scatterDistanceIntensity);
 
-            functor->m_scatterDistance = RPI::MaterialShaderParameterNameIndex{ m_scatterDistance, context.GetNameContext() };
-            functor->m_transmissionParams = RPI::MaterialShaderParameterNameIndex{ m_transmissionParams, context.GetNameContext() };
+            functor->m_scatterDistance = JE::Render::RPI::MaterialShaderParameterNameIndex{ m_scatterDistance, context.GetNameContext() };
+            functor->m_transmissionParams = JE::Render::RPI::MaterialShaderParameterNameIndex{ m_transmissionParams, context.GetNameContext() };
             functor->m_transmissionTintThickness =
-                RPI::MaterialShaderParameterNameIndex{ m_transmissionTintThickness, context.GetNameContext() };
+                JE::Render::RPI::MaterialShaderParameterNameIndex{ m_transmissionTintThickness, context.GetNameContext() };
             SetFunctorShaderParameter(functor, GetMaterialShaderParameters(context.GetNameContext()));
 
-            return Success(RPI::Ptr<MaterialFunctor>(functor));
+            return Success(JE::Render::RPI::Ptr<MaterialFunctor>(functor));
         }
     }
 }

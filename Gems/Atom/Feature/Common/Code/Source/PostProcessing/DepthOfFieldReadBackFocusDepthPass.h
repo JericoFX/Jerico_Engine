@@ -8,8 +8,8 @@
 #pragma once
 
 #include <AzCore/Memory/SystemAllocator.h>
-#include <Atom/RPI.Public/Pass/ParentPass.h>
-#include <Atom/RPI.Public/Buffer/Buffer.h>
+#include <JE/Render/RPI/Public/Pass/ParentPass.h>
+#include <JE/Render/RPI/Public/Buffer/Buffer.h>
 #include <PostProcessing/DepthOfFieldWriteFocusDepthFromGpuPass.h>
 #include <PostProcessing/DepthOfFieldCopyFocusDepthToCpuPass.h>
 
@@ -21,15 +21,15 @@ namespace AZ
 
         //! This pass is used to get the depth value for the specified screen coordinates.
         class DepthOfFieldReadBackFocusDepthPass final
-            : public RPI::ParentPass
+            : public JE::Render::RPI::ParentPass
         {
         public:
-            AZ_RTTI(AZ::Render::DepthOfFieldReadBackFocusDepthPass, "{8738691C-1D8C-4F96-8B4F-2152A4550470}", AZ::RPI::ParentPass);
+            AZ_RTTI(AZ::Render::DepthOfFieldReadBackFocusDepthPass, "{8738691C-1D8C-4F96-8B4F-2152A4550470}", JE::Render::RPI::ParentPass);
             AZ_CLASS_ALLOCATOR(DepthOfFieldReadBackFocusDepthPass, SystemAllocator);
 
-            static RPI::Ptr<DepthOfFieldReadBackFocusDepthPass> Create(const RPI::PassDescriptor& descriptor);
+            static JE::Render::RPI::Ptr<DepthOfFieldReadBackFocusDepthPass> Create(const JE::Render::RPI::PassDescriptor& descriptor);
 
-            DepthOfFieldReadBackFocusDepthPass(const RPI::PassDescriptor& descriptor);
+            DepthOfFieldReadBackFocusDepthPass(const JE::Render::RPI::PassDescriptor& descriptor);
             ~DepthOfFieldReadBackFocusDepthPass();
 
             // Set pass parameter interfaces...
@@ -47,10 +47,10 @@ namespace AZ
 
             // Used to avoid buffer name conflicts when creating multiple DepthOfFieldReadBackFocusDepthPass
             static uint32_t s_bufferInstance;
-            AZ::Data::Instance<RPI::Buffer> m_buffer;
+            AZ::Data::Instance<JE::Render::RPI::Buffer> m_buffer;
 
-            RPI::Ptr<DepthOfFieldWriteFocusDepthFromGpuPass> m_getDepthPass;
-            RPI::Ptr<DepthOfFieldCopyFocusDepthToCpuPass> m_readbackPass;
+            JE::Render::RPI::Ptr<DepthOfFieldWriteFocusDepthFromGpuPass> m_getDepthPass;
+            JE::Render::RPI::Ptr<DepthOfFieldCopyFocusDepthToCpuPass> m_readbackPass;
 
             float m_normalizedFocusDistanceForAutoFocus = 0.0f;
             float m_delayTimer = 0.0f;

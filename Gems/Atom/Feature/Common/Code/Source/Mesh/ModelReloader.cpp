@@ -7,15 +7,15 @@
  */
 
 #include <Mesh/ModelReloader.h>
-#include <Atom/RPI.Reflect/Model/ModelAsset.h>
-#include <Atom/RPI.Public/Model/Model.h>
+#include <JE/Render/RPI/Reflect/Model/ModelAsset.h>
+#include <JE/Render/RPI/Public/Model/Model.h>
 
 namespace AZ
 {
     namespace Render
     {
         ModelReloader::ModelReloader(
-            Data::Asset<RPI::ModelAsset> modelAsset)
+            Data::Asset<JE::Render::RPI::ModelAsset> modelAsset)
         {
             m_modelAsset.push_back(modelAsset);
             m_pendingDependencyListStatus.reset();
@@ -144,7 +144,7 @@ namespace AZ
                     Data::AssetBus::MultiHandler::BusDisconnect();
                     // Since the model asset is finished reloading, orphan model from the instance database
                     // so that all of the buffer instances are re-created with the latest data
-                    RPI::Model::TEMPOrphanFromDatabase(m_modelAsset.front());
+                    JE::Render::RPI::Model::TEMPOrphanFromDatabase(m_modelAsset.front());
                     // Signal that the model is ready
                     m_onModelReloaded.Signal(m_modelAsset.front());
                     // Remove this reloader from the ModelReloaderSystem

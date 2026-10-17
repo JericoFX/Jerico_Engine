@@ -9,8 +9,8 @@
 #include <BarrierInputClient.h>
 #include <BarrierInput/RawInputNotificationBus_Barrier.h>
 
-#include <Atom/RPI.Public/ViewportContext.h>
-#include <Atom/RPI.Public/ViewportContextBus.h>
+#include <JE/Render/RPI/Public/ViewportContext.h>
+#include <JE/Render/RPI/Public/ViewportContextBus.h>
 
 #include <AzCore/Console/ILogger.h>
 #include <AzCore/Socket/AzSocket.h>
@@ -131,8 +131,8 @@ namespace BarrierInput
         stream.InsertU16(0);
         stream.InsertU16(0);
 
-        auto atomViewportRequests = AZ::Interface<AZ::RPI::ViewportContextRequestsInterface>::Get();
-        AZ::RPI::ViewportContextPtr viewportContext = atomViewportRequests->GetDefaultViewportContext();
+        auto atomViewportRequests = AZ::Interface<JE::Render::RPI::ViewportContextRequestsInterface>::Get();
+        JE::Render::RPI::ViewportContextPtr viewportContext = atomViewportRequests->GetDefaultViewportContext();
         if (viewportContext)
         {
             const AzFramework::WindowSize windowSize = viewportContext->GetViewportSize();

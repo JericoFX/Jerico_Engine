@@ -9,26 +9,26 @@
 #include <Pass/State/EditorStateParentPass.h>
 #include <Pass/State/EditorStateParentPassData.h>
 
-#include <Atom/RPI.Public/Pass/PassUtils.h>
+#include <JE/Render/RPI/Public/Pass/PassUtils.h>
 
 namespace AZ::Render
 {
-    RPI::Ptr<EditorStateParentPass> EditorStateParentPass::Create(const RPI::PassDescriptor& descriptor)
+    JE::Render::RPI::Ptr<EditorStateParentPass> EditorStateParentPass::Create(const JE::Render::RPI::PassDescriptor& descriptor)
     {
-        RPI::Ptr<EditorStateParentPass> pass = aznew EditorStateParentPass(descriptor);
+        JE::Render::RPI::Ptr<EditorStateParentPass> pass = aznew EditorStateParentPass(descriptor);
         return pass;
     }
 
-    EditorStateParentPass::EditorStateParentPass(const RPI::PassDescriptor& descriptor)
-        : AZ::RPI::ParentPass(descriptor)
+    EditorStateParentPass::EditorStateParentPass(const JE::Render::RPI::PassDescriptor& descriptor)
+        : JE::Render::RPI::ParentPass(descriptor)
         , m_passDescriptor(descriptor)
     {
     }
 
     bool EditorStateParentPass::IsEnabled() const
     {
-        const RPI::EditorStateParentPassData* passData =
-            RPI::PassUtils::GetPassData<RPI::EditorStateParentPassData>(m_passDescriptor);
+        const JE::Render::RPI::EditorStateParentPassData* passData =
+            JE::Render::RPI::PassUtils::GetPassData<JE::Render::RPI::EditorStateParentPassData>(m_passDescriptor);
         if (passData == nullptr)
         {
                 AZ_Error(

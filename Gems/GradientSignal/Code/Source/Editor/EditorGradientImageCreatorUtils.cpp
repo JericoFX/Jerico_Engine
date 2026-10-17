@@ -7,7 +7,7 @@
  */
 
 #include <GradientSignal/Editor/EditorGradientImageCreatorUtils.h>
-#include <Atom/RPI.Edit/Common/AssetUtils.h>
+#include <JE/Editor/Render/RPI/Edit/Common/AssetUtils.h>
 #include <AzCore/Asset/AssetCommon.h>
 #include <AzCore/Settings/SettingsRegistryMergeUtils.h>
 #include <AzFramework/IO/FileOperations.h>
@@ -301,7 +301,7 @@ namespace GradientSignal::ImageCreatorUtils
             settingsRegistry->Get(defaultPath.Native(), AZ::SettingsRegistryMergeUtils::FilePathKey_ProjectPath);
         }
 
-        defaultPath /= AZ::IO::FixedMaxPathString(AZ::RPI::AssetUtils::SanitizeFileName(defaultFileName));
+        defaultPath /= AZ::IO::FixedMaxPathString(JE::Render::RPI::AssetUtils::SanitizeFileName(defaultFileName));
 
         return defaultPath.Native();
     }

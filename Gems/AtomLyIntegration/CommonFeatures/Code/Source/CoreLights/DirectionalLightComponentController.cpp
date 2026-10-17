@@ -8,16 +8,16 @@
 
 #include <CoreLights/DirectionalLightComponentController.h>
 
-#include <Atom/RPI.Public/Scene.h>
+#include <JE/Render/RPI/Public/Scene.h>
 #include <Atom/Feature/CoreLights/ShadowConstants.h>
 
 #include <AzCore/RTTI/BehaviorContext.h>
 #include <AzCore/Component/TransformBus.h>
 #include <AzCore/Serialization/SerializeContext.h>
 #include <AzCore/std/containers/vector.h>
-#include <Atom/RPI.Public/ViewportContext.h>
-#include <Atom/RPI.Public/ViewportContextBus.h>
-#include <Atom/RPI.Public/ViewProviderBus.h>
+#include <JE/Render/RPI/Public/ViewportContext.h>
+#include <JE/Render/RPI/Public/ViewportContextBus.h>
+#include <JE/Render/RPI/Public/ViewProviderBus.h>
 
 namespace AZ
 {
@@ -148,7 +148,7 @@ namespace AZ
         void DirectionalLightComponentController::Activate(EntityId entityId)
         {
             m_entityId = entityId;
-            m_featureProcessor = RPI::Scene::GetFeatureProcessorForEntity<DirectionalLightFeatureProcessorInterface>(entityId);
+            m_featureProcessor = JE::Render::RPI::Scene::GetFeatureProcessorForEntity<DirectionalLightFeatureProcessorInterface>(entityId);
             AZ_Error("DirectionalLightComponentController", m_featureProcessor, "Could not find a DirectionalLightFeatureProcessorInterface on the scene.");
 
             if (m_featureProcessor)
@@ -691,7 +691,7 @@ namespace AZ
             }
             else
             {
-                if (const auto& viewportContext = AZ::Interface<AZ::RPI::ViewportContextRequestsInterface>::Get()->GetDefaultViewportContext())
+                if (const auto& viewportContext = AZ::Interface<JE::Render::RPI::ViewportContextRequestsInterface>::Get()->GetDefaultViewportContext())
                 {
                     cameraTransform = viewportContext->GetCameraTransform();
                 }

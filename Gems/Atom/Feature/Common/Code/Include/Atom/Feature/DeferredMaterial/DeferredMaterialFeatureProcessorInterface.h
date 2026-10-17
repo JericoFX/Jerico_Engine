@@ -9,9 +9,9 @@
 #pragma once
 
 #include <Atom/RHI.Reflect/FrameCountMaxRingBuffer.h>
-#include <Atom/RPI.Public/PipelineState.h>
-#include <Atom/RPI.Public/Scene.h>
-#include <Atom/RPI.Reflect/Shader/ShaderVariantKey.h>
+#include <JE/Render/RPI/Public/PipelineState.h>
+#include <JE/Render/RPI/Public/Scene.h>
+#include <JE/Render/RPI/Reflect/Shader/ShaderVariantKey.h>
 
 #include <Atom/Feature/Mesh/MeshFeatureProcessorInterface.h>
 
@@ -21,14 +21,14 @@ namespace AZ::Render
     class ModelDataInstanceInterface;
 
     //! This feature processor manages Deferred DrawPackages for a Scene
-    class DeferredMaterialFeatureProcessorInterface : public RPI::FeatureProcessor
+    class DeferredMaterialFeatureProcessorInterface : public JE::Render::RPI::FeatureProcessor
     {
     public:
-        AZ_RTTI(AZ::Render::DeferredMaterialFeatureProcessorInterface, "{27B1C9E5-99D9-4DEC-AE66-5F0131B20BE3}", RPI::FeatureProcessor);
+        AZ_RTTI(AZ::Render::DeferredMaterialFeatureProcessorInterface, "{27B1C9E5-99D9-4DEC-AE66-5F0131B20BE3}", JE::Render::RPI::FeatureProcessor);
 
         using ModelId = AZ::Uuid;
         //! Create a deferred draw-item for the referenced material types, if they don't exist yet
-        virtual void AddModel(const ModelId& uuid, ModelDataInstanceInterface* meshHandle, const Data::Instance<RPI::Model>& model) = 0;
+        virtual void AddModel(const ModelId& uuid, ModelDataInstanceInterface* meshHandle, const Data::Instance<JE::Render::RPI::Model>& model) = 0;
 
         //! Removes a mesh and potentially the draw-item for the material type.
         virtual void RemoveModel(const ModelId& uuid) = 0;
@@ -36,7 +36,7 @@ namespace AZ::Render
         //! A buffer with the DrawPacketId for the given deferred DrawListTag.
         //! This buffer contains one entry for every mesh in the scene, with the id of the deferred fullscreen-DrawItem that is
         //! responsible for that mesh. The buffer is kept in sync with the MeshInfoBuffer, and can be indexed using the meshInfoIndex.
-        virtual AZ::Data::Instance<AZ::RPI::Buffer> GetDrawPacketIdBuffer(const RHI::DrawListTag& drawListTag) = 0;
+        virtual AZ::Data::Instance<JE::Render::RPI::Buffer> GetDrawPacketIdBuffer(const RHI::DrawListTag& drawListTag) = 0;
 
         virtual bool IsEnabled() = 0;
     };

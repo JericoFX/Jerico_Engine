@@ -11,7 +11,7 @@
 
 namespace AtomToolsFramework
 {
-    ViewportInteractionImpl::ViewportInteractionImpl(AZ::RPI::ViewPtr viewPtr)
+    ViewportInteractionImpl::ViewportInteractionImpl(JE::Render::RPI::ViewPtr viewPtr)
         : m_viewPtr(AZStd::move(viewPtr))
     {
     }
@@ -19,12 +19,12 @@ namespace AtomToolsFramework
     void ViewportInteractionImpl::Connect(const AzFramework::ViewportId viewportId)
     {
         AzToolsFramework::ViewportInteraction::ViewportInteractionRequestBus::Handler::BusConnect(viewportId);
-        AZ::RPI::ViewportContextIdNotificationBus::Handler::BusConnect(viewportId);
+        JE::Render::RPI::ViewportContextIdNotificationBus::Handler::BusConnect(viewportId);
     }
 
     void ViewportInteractionImpl::Disconnect()
     {
-        AZ::RPI::ViewportContextIdNotificationBus::Handler::BusDisconnect();
+        JE::Render::RPI::ViewportContextIdNotificationBus::Handler::BusDisconnect();
         AzToolsFramework::ViewportInteraction::ViewportInteractionRequestBus::Handler::BusDisconnect();
     }
 
@@ -58,7 +58,7 @@ namespace AtomToolsFramework
         return m_deviceScalingFactorFn();
     }
 
-    void ViewportInteractionImpl::OnViewportDefaultViewChanged(AZ::RPI::ViewPtr view)
+    void ViewportInteractionImpl::OnViewportDefaultViewChanged(JE::Render::RPI::ViewPtr view)
     {
         m_viewPtr = AZStd::move(view);
     }

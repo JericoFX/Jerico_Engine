@@ -11,8 +11,8 @@
 #include <Atom/Feature/Mesh/MeshFeatureProcessorInterface.h>
 #include <Atom/Feature/Mesh/MeshInfo.h>
 #include <Atom/RHI.Reflect/Handle.h>
-#include <Atom/RPI.Public/Base.h>
-#include <Atom/RPI.Public/Configuration.h>
+#include <JE/Render/RPI/Public/Base.h>
+#include <JE/Render/RPI/Public/Configuration.h>
 #include <AzCore/EBus/EBus.h>
 #include <AzCore/std/parallel/mutex.h>
 
@@ -26,7 +26,7 @@ namespace AZ::Render
         // EBus Configuration
         static const AZ::EBusHandlerPolicy HandlerPolicy = AZ::EBusHandlerPolicy::Multiple;
         static const AZ::EBusAddressPolicy AddressPolicy = AZ::EBusAddressPolicy::ById;
-        using BusIdType = RPI::SceneId;
+        using BusIdType = JE::Render::RPI::SceneId;
         using MutexType = AZStd::mutex;
 
         //////////////////////////////////////////////////////////////////////////

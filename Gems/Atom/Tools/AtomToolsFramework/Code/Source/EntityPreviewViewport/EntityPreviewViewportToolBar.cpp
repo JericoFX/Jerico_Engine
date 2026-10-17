@@ -6,9 +6,9 @@
  *
  */
 
-#include <Atom/RPI.Edit/Common/AssetUtils.h>
-#include <Atom/RPI.Reflect/System/AnyAsset.h>
-#include <Atom/RPI.Reflect/System/RenderPipelineDescriptor.h>
+#include <JE/Editor/Render/RPI/Edit/Common/AssetUtils.h>
+#include <JE/Render/RPI/Reflect/System/AnyAsset.h>
+#include <JE/Render/RPI/Reflect/System/RenderPipelineDescriptor.h>
 #include <AtomToolsFramework/EntityPreviewViewport/EntityPreviewViewportSettingsRequestBus.h>
 #include <AtomToolsFramework/EntityPreviewViewport/EntityPreviewViewportToolBar.h>
 #include <AtomToolsFramework/Util/Util.h>
@@ -97,7 +97,7 @@ namespace AtomToolsFramework
 
         // Add render pipeline combo box
         m_renderPipelineComboBox = new AssetSelectionComboBox([](const AZStd::string& path) {
-            return path.ends_with(AZ::RPI::RenderPipelineDescriptor::Extension);
+            return path.ends_with(JE::Render::RPI::RenderPipelineDescriptor::Extension);
         }, this);
         m_renderPipelineComboBox->view()->setMinimumWidth(minComboBoxDropdownWidth);
         addWidget(m_renderPipelineComboBox);

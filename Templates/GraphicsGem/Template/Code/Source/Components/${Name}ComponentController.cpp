@@ -20,7 +20,7 @@
 
 #include <AzCore/RTTI/BehaviorContext.h>
 
-#include <Atom/RPI.Public/Scene.h>
+#include <JE/Render/RPI/Public/Scene.h>
 
 namespace ${Name}
 {
@@ -87,7 +87,7 @@ namespace ${Name}
 
         AZ::TransformNotificationBus::Handler::BusConnect(m_entityId);
 
-        m_featureProcessor = AZ::RPI::Scene::GetFeatureProcessorForEntity<${Name}FeatureProcessorInterface>(entityId);
+        m_featureProcessor = JE::Render::RPI::Scene::GetFeatureProcessorForEntity<${Name}FeatureProcessorInterface>(entityId);
         AZ_Assert(m_featureProcessor, "${Name}ComponentController was unable to find a ${Name}FeatureProcessor on the EntityContext provided.");
 
     }

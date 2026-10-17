@@ -13,11 +13,11 @@
 #include <Atom/Feature/Mesh/MeshInfoBus.h>
 #include <Atom/Feature/ReflectionProbe/ReflectionProbeFeatureProcessorInterface.h>
 #include <Atom/Feature/TransformService/TransformServiceFeatureProcessorInterface.h>
-#include <Atom/RPI.Public/Buffer/BufferSystemInterface.h>
-#include <Atom/RPI.Public/Buffer/RingBuffer.h>
-#include <Atom/RPI.Public/Material/Material.h>
-#include <Atom/RPI.Public/Model/Model.h>
-#include <Atom/RPI.Public/Scene.h>
+#include <JE/Render/RPI/Public/Buffer/BufferSystemInterface.h>
+#include <JE/Render/RPI/Public/Buffer/RingBuffer.h>
+#include <JE/Render/RPI/Public/Material/Material.h>
+#include <JE/Render/RPI/Public/Model/Model.h>
+#include <JE/Render/RPI/Public/Scene.h>
 #include <AzCore/std/parallel/mutex.h>
 
 
@@ -29,14 +29,14 @@ namespace AZ::Render
         {
         public:
             MaterialManager();
-            void Activate(RPI::Scene* scene);
+            void Activate(JE::Render::RPI::Scene* scene);
             void Deactivate();
             void Update();
 
             // integration with the MeshFeatureProcessor
             const RHI::Ptr<MaterialEntry> GetFallbackPBRMaterialEntry(const MeshInfoHandle handle);
             void UpdateFallbackPBRMaterialEntry(const MeshInfoHandle handle, AZStd::function<bool(MaterialEntry*)> updateFunction);
-            const Data::Instance<RPI::Buffer>& GetFallbackPBRMaterialBuffer() const;
+            const Data::Instance<JE::Render::RPI::Buffer>& GetFallbackPBRMaterialBuffer() const;
 
             void UpdateReflectionProbes(const TransformServiceFeatureProcessorInterface::ObjectId& objectId, const Aabb& aabbWS);
 
@@ -68,19 +68,19 @@ namespace AZ::Render
                 bool m_useParallaxCorrection = false;
                 float m_exposure = 0.0f;
 
-                Data::Instance<RPI::Image> m_reflectionProbeCubeMap;
+                Data::Instance<JE::Render::RPI::Image> m_reflectionProbeCubeMap;
             };
             AZStd::unordered_map<TransformServiceFeatureProcessorInterface::ObjectId, ReflectionProbe> m_reflectionProbeData;
 
             AZStd::mutex m_mutex;
             AZStd::vector<RHI::Ptr<MaterialEntry>> m_materialData;
-            RPI::RingBuffer m_materialDataBuffer;
+            JE::Render::RPI::RingBuffer m_materialDataBuffer;
             bool m_bufferNeedsUpdate;
 
             RHI::ShaderInputNameIndex m_fallbackPBRMaterialIndex = "m_fallbackPBRMaterial";
             RHI::ShaderInputNameIndex m_nullCubeMapIndex = "m_nullCubeMapIndex";
-            Data::Instance<RPI::Image> m_nullCubeMapTexture;
-            RPI::Scene::PrepareSceneSrgEvent::Handler m_updateSceneSrgHandler;
+            Data::Instance<JE::Render::RPI::Image> m_nullCubeMapTexture;
+            JE::Render::RPI::Scene::PrepareSceneSrgEvent::Handler m_updateSceneSrgHandler;
             ReflectionProbeFeatureProcessorInterface* m_rpfp = nullptr;
         };
     } // namespace FallbackPBR

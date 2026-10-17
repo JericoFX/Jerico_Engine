@@ -8,15 +8,15 @@
 
 #pragma once
 
-#include <Atom/RPI.Public/Shader/Shader.h>
-#include <Atom/RPI.Public/Material/Material.h>
-#include <Atom/RPI.Public/Model/ModelLod.h>
+#include <JE/Render/RPI/Public/Shader/Shader.h>
+#include <JE/Render/RPI/Public/Material/Material.h>
+#include <JE/Render/RPI/Public/Model/ModelLod.h>
 #include <Atom/RHI/DrawPacket.h>
 #include <Atom/RHI/DrawPacketBuilder.h>
 
 #include <AzCore/Math/Obb.h>
 
-namespace AZ::RPI
+namespace JE::Render::RPI
 {
     class Scene;
 }
@@ -29,34 +29,34 @@ namespace AZ::Render
     class EditorStateMeshDrawPacket
     {
     public:
-        using ShaderList = AZStd::vector<Data::Instance<RPI::Shader>>;
+        using ShaderList = AZStd::vector<Data::Instance<JE::Render::RPI::Shader>>;
 
         EditorStateMeshDrawPacket() = default;
         EditorStateMeshDrawPacket(
-            RPI::ModelLod& modelLod,
+            JE::Render::RPI::ModelLod& modelLod,
             size_t modelLodMeshIndex,
-            Data::Instance<RPI::Material> materialOverride,
+            Data::Instance<JE::Render::RPI::Material> materialOverride,
             AZ::Name drawList,
-            Data::Instance<RPI::ShaderResourceGroup> objectSrg,
-            const RPI::MaterialModelUvOverrideMap& materialModelUvMap = {});
+            Data::Instance<JE::Render::RPI::ShaderResourceGroup> objectSrg,
+            const JE::Render::RPI::MaterialModelUvOverrideMap& materialModelUvMap = {});
 
         AZ_DEFAULT_COPY(EditorStateMeshDrawPacket);
         AZ_DEFAULT_MOVE(EditorStateMeshDrawPacket);
 
-        bool Update(const RPI::Scene& parentScene, bool forceUpdate = false);
+        bool Update(const JE::Render::RPI::Scene& parentScene, bool forceUpdate = false);
 
         const RHI::DrawPacket* GetRHIDrawPacket() const;
 
         void SetStencilRef(uint8_t stencilRef) { m_stencilRef = stencilRef; }
         void SetSortKey(RHI::DrawItemSortKey sortKey) { m_sortKey = sortKey; };
-        bool SetShaderOption(const Name& shaderOptionName, RPI::ShaderOptionValue value);
+        bool SetShaderOption(const Name& shaderOptionName, JE::Render::RPI::ShaderOptionValue value);
 
-        Data::Instance<RPI::Material> GetMaterial();
+        Data::Instance<JE::Render::RPI::Material> GetMaterial();
 
     private:
-        bool DoUpdate(const RPI::Scene& parentScene);
+        bool DoUpdate(const JE::Render::RPI::Scene& parentScene);
 
-        RPI::ConstPtr<RHI::DrawPacket> m_drawPacket;
+        JE::Render::RPI::ConstPtr<RHI::DrawPacket> m_drawPacket;
 
         // Note, many of the following items are held locally in the EditorStateMeshDrawPacket solely to keep them resident in memory as long as they are needed
         // for the m_drawPacket. RHI::DrawPacket uses raw pointers only, but we use smart pointers here to hold on to the data.
@@ -65,25 +65,25 @@ namespace AZ::Render
         ShaderList m_activeShaders;
 
         // The model that contains the mesh being represented by the DrawPacket
-        Data::Instance<RPI::ModelLod> m_modelLod;
+        Data::Instance<JE::Render::RPI::ModelLod> m_modelLod;
 
         // The index of the mesh within m_modelLod that is represented by the DrawPacket
         size_t m_modelLodMeshIndex;
 
         // The per-object shader resource group
-        Data::Instance<RPI::ShaderResourceGroup> m_objectSrg;
+        Data::Instance<JE::Render::RPI::ShaderResourceGroup> m_objectSrg;
 
         // We hold ConstPtr<RHI::ShaderResourceGroup> instead of Instance<RPI::ShaderResourceGroup> because the Material class
         // does not allow public access to its Instance<RPI::ShaderResourceGroup>.
-        RPI::ConstPtr<RHI::ShaderResourceGroup> m_materialSrg;
+        JE::Render::RPI::ConstPtr<RHI::ShaderResourceGroup> m_materialSrg;
 
-        AZStd::fixed_vector<Data::Instance<RPI::ShaderResourceGroup>, RHI::DrawPacketBuilder::DrawItemCountMax> m_perDrawSrgs;
+        AZStd::fixed_vector<Data::Instance<JE::Render::RPI::ShaderResourceGroup>, RHI::DrawPacketBuilder::DrawItemCountMax> m_perDrawSrgs;
 
         // A reference to the material, used to rebuild the DrawPacket if needed
-        Data::Instance<RPI::Material> m_material;
+        Data::Instance<JE::Render::RPI::Material> m_material;
 
         // Tracks whether the Material has change since the DrawPacket was last built
-        RPI::Material::ChangeId m_materialChangeId = RPI::Material::DEFAULT_CHANGE_ID;
+        JE::Render::RPI::Material::ChangeId m_materialChangeId = JE::Render::RPI::Material::DEFAULT_CHANGE_ID;
 
         // Set the sort key for the draw packet
         RHI::DrawItemSortKey m_sortKey = 0;
@@ -92,10 +92,10 @@ namespace AZ::Render
         uint8_t m_stencilRef = 0;
 
         //! A map matches the index of UV names of this material to the custom names from the model.
-        RPI::MaterialModelUvOverrideMap m_materialModelUvMap;
+        JE::Render::RPI::MaterialModelUvOverrideMap m_materialModelUvMap;
 
         //! List of shader options set for this specific draw packet
-        typedef AZStd::pair<Name, RPI::ShaderOptionValue> ShaderOptionPair;
+        typedef AZStd::pair<Name, JE::Render::RPI::ShaderOptionValue> ShaderOptionPair;
         typedef AZStd::vector<ShaderOptionPair> ShaderOptionVector;
         ShaderOptionVector m_shaderOptions;
         RHI::DrawListTag m_drawListTag;

@@ -12,7 +12,7 @@
 #include <AzCore/RTTI/BehaviorContext.h>
 #include <AzCore/Serialization/SerializeContext.h>
 
-#include <Atom/RPI.Public/Scene.h>
+#include <JE/Render/RPI/Public/Scene.h>
 #include <Atom/Utils/Utils.h>
 
 namespace AZ
@@ -38,7 +38,7 @@ namespace AZ
                     ->VirtualProperty("Exposure", "GetExposure", "SetExposure")
                     ->Event("GetCubemapAssetId", &HDRiSkyboxRequestBus::Events::GetCubemapAssetId)
                     ->Event("SetCubemapAssetId", &HDRiSkyboxRequestBus::Events::SetCubemapAssetId)
-                        ->Attribute(AZ::Script::Attributes::AssetType, azrtti_typeid<AZ::RPI::StreamingImageAsset>())
+                        ->Attribute(AZ::Script::Attributes::AssetType, azrtti_typeid<JE::Render::RPI::StreamingImageAsset>())
                     ->Event("SetCubemapAssetPath", &HDRiSkyboxRequestBus::Events::SetCubemapAssetPath)
                         ->Attribute(AZ::Script::Attributes::ExcludeFrom, AZ::Script::Attributes::ExcludeFlags::List)
                     ->Event("GetCubemapAssetPath", &HDRiSkyboxRequestBus::Events::GetCubemapAssetPath)
@@ -69,7 +69,7 @@ namespace AZ
 
         void HDRiSkyboxComponentController::Activate(EntityId entityId)
         {
-            m_featureProcessorInterface = RPI::Scene::GetFeatureProcessorForEntity<SkyBoxFeatureProcessorInterface>(entityId);
+            m_featureProcessorInterface = JE::Render::RPI::Scene::GetFeatureProcessorForEntity<SkyBoxFeatureProcessorInterface>(entityId);
 
             // only activate if there is no other skybox activate
             if (m_featureProcessorInterface && !m_featureProcessorInterface->IsEnabled())
@@ -151,12 +151,12 @@ namespace AZ
         }
 
 
-        Data::Asset<RPI::StreamingImageAsset> HDRiSkyboxComponentController::GetCubemapAsset() const
+        Data::Asset<JE::Render::RPI::StreamingImageAsset> HDRiSkyboxComponentController::GetCubemapAsset() const
         {
             return m_configuration.m_cubemapAsset;
         }
 
-        void HDRiSkyboxComponentController::SetCubemapAsset(const Data::Asset<RPI::StreamingImageAsset>& cubemapAsset)
+        void HDRiSkyboxComponentController::SetCubemapAsset(const Data::Asset<JE::Render::RPI::StreamingImageAsset>& cubemapAsset)
         {
             Data::AssetBus::MultiHandler::BusDisconnect(m_configuration.m_cubemapAsset.GetId());
             m_configuration.m_cubemapAsset = cubemapAsset;
@@ -172,7 +172,7 @@ namespace AZ
 
         void HDRiSkyboxComponentController::SetCubemapAssetPath(const AZStd::string& path)
         {
-            SetCubemapAsset(GetAssetFromPath<RPI::StreamingImageAsset>(path, m_configuration.m_cubemapAsset.GetAutoLoadBehavior()));
+            SetCubemapAsset(GetAssetFromPath<JE::Render::RPI::StreamingImageAsset>(path, m_configuration.m_cubemapAsset.GetAutoLoadBehavior()));
         }
 
         AZStd::string HDRiSkyboxComponentController::GetCubemapAssetPath() const
@@ -198,7 +198,7 @@ namespace AZ
             return m_configuration.m_exposure;
         }
 
-        void HDRiSkyboxComponentController::LoadImage(Data::Asset<RPI::StreamingImageAsset>& imageAsset)
+        void HDRiSkyboxComponentController::LoadImage(Data::Asset<JE::Render::RPI::StreamingImageAsset>& imageAsset)
         {
             Data::AssetBus::MultiHandler::BusDisconnect(imageAsset.GetId());
 
@@ -223,7 +223,7 @@ namespace AZ
 
                 if (IsAssetValid(m_configuration.m_cubemapAsset))
                 {
-                    m_featureProcessorInterface->SetCubemap(RPI::StreamingImage::FindOrCreate(m_configuration.m_cubemapAsset));
+                    m_featureProcessorInterface->SetCubemap(JE::Render::RPI::StreamingImage::FindOrCreate(m_configuration.m_cubemapAsset));
                 }
                 else
                 {
@@ -232,7 +232,7 @@ namespace AZ
             }
         }
 
-        bool HDRiSkyboxComponentController::IsAssetValid(Data::Asset<RPI::StreamingImageAsset>& asset)
+        bool HDRiSkyboxComponentController::IsAssetValid(Data::Asset<JE::Render::RPI::StreamingImageAsset>& asset)
         {
             if (asset.GetId().IsValid() && asset->IsReady())
             {

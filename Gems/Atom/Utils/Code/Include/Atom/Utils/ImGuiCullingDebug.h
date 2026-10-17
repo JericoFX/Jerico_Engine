@@ -10,14 +10,19 @@
 
 namespace AZ
 {
-    namespace RPI
-    {
+    }
+
+namespace JE::Render::RPI
+{
         class Scene;
     }
 
+namespace AZ
+{
+
     namespace Render
     {
-        void ImGuiDrawCullingDebug(bool& draw, AZ::RPI::Scene* scene);
+        void ImGuiDrawCullingDebug(bool& draw, JE::Render::RPI::Scene* scene);
     }
 }
 

@@ -1,9 +1,0 @@
-{
-    "O3DE": {
-        "Gems": {
-            // Residual RPI asset metadata preserves Assets, Registry and alias discovery.
-            // Native RenderIntegration owns initialization; no module targets are registered here.
-            "Atom_RPI": {}
-        }
-    }
-}

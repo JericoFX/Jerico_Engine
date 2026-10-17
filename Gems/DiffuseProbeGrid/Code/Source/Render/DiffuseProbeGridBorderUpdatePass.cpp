@@ -11,9 +11,9 @@
 #include <Atom/RHI/FrameGraphInterface.h>
 #include <Atom/RHI/FrameGraphAttachmentInterface.h>
 #include <Atom/RHI/Device.h>
-#include <Atom/RPI.Public/Pass/PassUtils.h>
-#include <Atom/RPI.Public/RenderPipeline.h>
-#include <Atom/RPI.Public/RPIUtils.h>
+#include <JE/Render/RPI/Public/Pass/PassUtils.h>
+#include <JE/Render/RPI/Public/RenderPipeline.h>
+#include <JE/Render/RPI/Public/RPIUtils.h>
 #include <DiffuseProbeGrid_Traits_Platform.h>
 #include <Render/DiffuseProbeGridFeatureProcessor.h>
 #include <Render/DiffuseProbeGridBorderUpdatePass.h>
@@ -22,14 +22,14 @@ namespace AZ
 {
     namespace Render
     {
-        RPI::Ptr<DiffuseProbeGridBorderUpdatePass> DiffuseProbeGridBorderUpdatePass::Create(const RPI::PassDescriptor& descriptor)
+        JE::Render::RPI::Ptr<DiffuseProbeGridBorderUpdatePass> DiffuseProbeGridBorderUpdatePass::Create(const JE::Render::RPI::PassDescriptor& descriptor)
         {
-            RPI::Ptr<DiffuseProbeGridBorderUpdatePass> pass = aznew DiffuseProbeGridBorderUpdatePass(descriptor);
+            JE::Render::RPI::Ptr<DiffuseProbeGridBorderUpdatePass> pass = aznew DiffuseProbeGridBorderUpdatePass(descriptor);
             return pass;
         }
 
-        DiffuseProbeGridBorderUpdatePass::DiffuseProbeGridBorderUpdatePass(const RPI::PassDescriptor& descriptor)
-            : RPI::RenderPass(descriptor)
+        DiffuseProbeGridBorderUpdatePass::DiffuseProbeGridBorderUpdatePass(const JE::Render::RPI::PassDescriptor& descriptor)
+            : JE::Render::RPI::RenderPass(descriptor)
         {
             if (!AZ_TRAIT_DIFFUSE_GI_PASSES_SUPPORTED)
             {
@@ -53,14 +53,14 @@ namespace AZ
         }
 
         void DiffuseProbeGridBorderUpdatePass::LoadShader(AZStd::string shaderFilePath,
-                                                          Data::Instance<RPI::Shader>& shader,
+                                                          Data::Instance<JE::Render::RPI::Shader>& shader,
                                                           const RHI::PipelineState*& pipelineState,
                                                           RHI::Ptr<RHI::ShaderResourceGroupLayout>& srgLayout,
                                                           RHI::DispatchDirect& dispatchArgs)
         {
             // load shader
             // Note: the shader may not be available on all platforms
-            shader = RPI::LoadCriticalShader(shaderFilePath);
+            shader = JE::Render::RPI::LoadCriticalShader(shaderFilePath);
             if (shader == nullptr)
             {
                 return;
@@ -68,15 +68,15 @@ namespace AZ
 
             // load pipeline state
             RHI::PipelineStateDescriptorForDispatch pipelineStateDescriptor;
-            const auto& shaderVariant = shader->GetVariant(RPI::ShaderAsset::RootShaderVariantStableId);
+            const auto& shaderVariant = shader->GetVariant(JE::Render::RPI::ShaderAsset::RootShaderVariantStableId);
             shaderVariant.ConfigurePipelineState(pipelineStateDescriptor);
             pipelineState = shader->AcquirePipelineState(pipelineStateDescriptor);
 
             // load Pass Srg asset
-            srgLayout = shader->FindShaderResourceGroupLayout(RPI::SrgBindingSlot::Pass);
+            srgLayout = shader->FindShaderResourceGroupLayout(JE::Render::RPI::SrgBindingSlot::Pass);
 
             // retrieve the number of threads per thread group from the shader
-            const auto outcome = RPI::GetComputeShaderNumThreads(shader->GetAsset(), dispatchArgs);
+            const auto outcome = JE::Render::RPI::GetComputeShaderNumThreads(shader->GetAsset(), dispatchArgs);
             if (!outcome.IsSuccess())
             {
                 AZ_Error("PassSystem", false, "[DiffuseProbeGridBorderUpdatePass '%s']: Shader '%s' contains invalid numthreads arguments:\n%s", GetPathName().GetCStr(), shaderFilePath.c_str(), outcome.GetError().c_str());
@@ -90,7 +90,7 @@ namespace AZ
                 return false;
             }
 
-            RPI::Scene* scene = m_pipeline->GetScene();
+            JE::Render::RPI::Scene* scene = m_pipeline->GetScene();
             if (!scene)
             {
                 return false;
@@ -117,7 +117,7 @@ namespace AZ
         {
             RenderPass::SetupFrameGraphDependencies(frameGraph);
 
-            RPI::Scene* scene = m_pipeline->GetScene();
+            JE::Render::RPI::Scene* scene = m_pipeline->GetScene();
             DiffuseProbeGridFeatureProcessor* diffuseProbeGridFeatureProcessor = scene->GetFeatureProcessor<DiffuseProbeGridFeatureProcessor>();
 
             // there are 4 submits per grid
@@ -151,7 +151,7 @@ namespace AZ
 
         void DiffuseProbeGridBorderUpdatePass::CompileResources([[maybe_unused]] const RHI::FrameGraphCompileContext& context)
         {
-            RPI::Scene* scene = m_pipeline->GetScene();
+            JE::Render::RPI::Scene* scene = m_pipeline->GetScene();
             DiffuseProbeGridFeatureProcessor* diffuseProbeGridFeatureProcessor = scene->GetFeatureProcessor<DiffuseProbeGridFeatureProcessor>();
 
             for (auto& diffuseProbeGrid : diffuseProbeGridFeatureProcessor->GetVisibleRealTimeProbeGrids())

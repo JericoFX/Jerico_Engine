@@ -15,8 +15,8 @@
 #include <Atom/RHI/FrameGraphInterface.h>
 #include <Atom/RHI/FrameGraphExecuteContext.h>
 
-#include <Atom/RPI.Public/Culling.h>
-#include <Atom/RPI.Public/FeatureProcessor.h>
+#include <JE/Render/RPI/Public/Culling.h>
+#include <JE/Render/RPI/Public/FeatureProcessor.h>
 #include <Atom/Utils/StableDynamicArray.h>
 
 #include <AzCore/base.h>
@@ -52,7 +52,7 @@ namespace AZ
             void OnRenderEnd() override;
 
             // RPI::SceneNotificationBus overrides ...
-            void OnRenderPipelineChanged(RPI::RenderPipeline* renderPipeline, RPI::SceneNotification::RenderPipelineChangeType changeType) override;
+            void OnRenderPipelineChanged(JE::Render::RPI::RenderPipeline* renderPipeline, JE::Render::RPI::SceneNotification::RenderPipelineChangeType changeType) override;
             void OnBeginPrepareRender() override;
 
             // SkinnedMeshFeatureProcessorInterface overrides ...
@@ -63,27 +63,27 @@ namespace AZ
             void EnableSkinning(const SkinnedMeshHandle& handle, uint32_t lodIndex, uint32_t meshIndex) override;
             void DisableSkinning(const SkinnedMeshHandle& handle, uint32_t lodIndex, uint32_t meshIndex) override;
 
-            Data::Instance<RPI::Shader> GetSkinningShader() const;
-            RPI::ShaderOptionGroup CreateSkinningShaderOptionGroup(const SkinnedMeshShaderOptions shaderOptions, SkinnedMeshShaderOptionNotificationBus::Handler& shaderReinitializedHandler);
-            void OnSkinningShaderReinitialized(const Data::Instance<RPI::Shader> skinningShader);
+            Data::Instance<JE::Render::RPI::Shader> GetSkinningShader() const;
+            JE::Render::RPI::ShaderOptionGroup CreateSkinningShaderOptionGroup(const SkinnedMeshShaderOptions shaderOptions, SkinnedMeshShaderOptionNotificationBus::Handler& shaderReinitializedHandler);
+            void OnSkinningShaderReinitialized(const Data::Instance<JE::Render::RPI::Shader> skinningShader);
             void SubmitSkinningDispatchItems(const RHI::FrameGraphExecuteContext& context, uint32_t startIndex, uint32_t endIndex);
             void SetupSkinningScope(RHI::FrameGraphInterface frameGraph, int deviceIndex);
 
-            Data::Instance<RPI::Shader> GetMorphTargetShader() const;
+            Data::Instance<JE::Render::RPI::Shader> GetMorphTargetShader() const;
             void SubmitMorphTargetDispatchItems(const RHI::FrameGraphExecuteContext& context, uint32_t startIndex, uint32_t endIndex);
             void SetupMorphTargetScope(RHI::FrameGraphInterface frameGraph, int deviceIndex);
 
         private:
             AZ_DISABLE_COPY_MOVE(SkinnedMeshFeatureProcessor);
 
-            void InitSkinningAndMorphPass(RPI::RenderPipeline* renderPipeline);
+            void InitSkinningAndMorphPass(JE::Render::RPI::RenderPipeline* renderPipeline);
 
             static const char* s_featureProcessorName;
 
-            Data::Instance<RPI::Shader> m_skinningShader;
+            Data::Instance<JE::Render::RPI::Shader> m_skinningShader;
             CachedSkinnedMeshShaderOptions m_cachedSkinningShaderOptions;
 
-            Data::Instance<RPI::Shader> m_morphTargetShader;
+            Data::Instance<JE::Render::RPI::Shader> m_morphTargetShader;
 
             AZStd::concurrency_checker m_renderProxiesChecker;
             StableDynamicArray<SkinnedMeshRenderProxy> m_renderProxies;

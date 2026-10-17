@@ -6,7 +6,7 @@
  *
  */
 
-#include <Atom/RPI.Edit/Common/AssetUtils.h>
+#include <JE/Editor/Render/RPI/Edit/Common/AssetUtils.h>
 #include <AtomToolsFramework/AssetSelection/AssetSelectionComboBox.h>
 #include <AtomToolsFramework/Util/Util.h>
 #include <AzToolsFramework/API/EditorAssetSystemAPI.h>
@@ -161,13 +161,13 @@ namespace AtomToolsFramework
 
     void AssetSelectionComboBox::OnCatalogAssetAdded(const AZ::Data::AssetId& assetId)
     {
-        AddPath(AZ::RPI::AssetUtils::GetSourcePathByAssetId(assetId));
+        AddPath(JE::Render::RPI::AssetUtils::GetSourcePathByAssetId(assetId));
     }
 
     void AssetSelectionComboBox::OnCatalogAssetRemoved(
         const AZ::Data::AssetId& assetId, [[maybe_unused]] const AZ::Data::AssetInfo& assetInfo)
     {
-        RemovePath(AZ::RPI::AssetUtils::GetSourcePathByAssetId(assetId));
+        RemovePath(JE::Render::RPI::AssetUtils::GetSourcePathByAssetId(assetId));
     }
 
     void AssetSelectionComboBox::RegisterThumbnail(const AZStd::string& path)

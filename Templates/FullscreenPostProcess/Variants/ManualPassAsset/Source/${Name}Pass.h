@@ -39,7 +39,7 @@
 
 #include <AzCore/Memory/SystemAllocator.h>
 #include <Atom/RHI/ShaderResourceGroup.h>
-#include <Atom/RPI.Public/Pass/FullscreenTrianglePass.h>
+#include <JE/Render/RPI/Public/Pass/FullscreenTrianglePass.h>
 
 namespace ${GemName}
 {
@@ -51,21 +51,21 @@ namespace ${GemName}
     //! shader as-is, which is enough for color grading, edge detect, vignette,
     //! and similar pure-pixel-shader effects.
     class ${Name}Pass
-        : public AZ::RPI::FullscreenTrianglePass
+        : public JE::Render::RPI::FullscreenTrianglePass
     {
     public:
-        AZ_RTTI(${GemName}::${SanitizedCppName}Pass, "{${Random_Uuid}}", AZ::RPI::FullscreenTrianglePass);
+        AZ_RTTI(${GemName}::${SanitizedCppName}Pass, "{${Random_Uuid}}", JE::Render::RPI::FullscreenTrianglePass);
         AZ_CLASS_ALLOCATOR(${SanitizedCppName}Pass, AZ::SystemAllocator);
 
         //! Factory entry point. Atom's PassSystem invokes this through the
         //! creator function pointer that ${GemName}RenderingSystemComponent
         //! registers via AddPassCreator.
-        static AZ::RPI::Ptr<${Name}Pass> Create(const AZ::RPI::PassDescriptor& descriptor);
+        static JE::Render::RPI::Ptr<${Name}Pass> Create(const JE::Render::RPI::PassDescriptor& descriptor);
 
         ~${Name}Pass() override = default;
 
     protected:
-        explicit ${Name}Pass(const AZ::RPI::PassDescriptor& descriptor);
+        explicit ${Name}Pass(const JE::Render::RPI::PassDescriptor& descriptor);
 
         // ---------------------------------------------------------------------
         // RPI::Pass overrides

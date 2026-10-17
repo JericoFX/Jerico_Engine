@@ -17,8 +17,8 @@ namespace JE::ShaderVariants
         void SetUp() override
         {
             AZ::NameDictionary::Create();
-            m_layout = AZ::RPI::ShaderOptionGroupLayout::Create();
-            using namespace AZ::RPI;
+            m_layout = JE::Render::RPI::ShaderOptionGroupLayout::Create();
+            using namespace JE::Render::RPI;
             ASSERT_TRUE(m_layout->AddShaderOption({AZ::Name("A"), ShaderOptionType::Boolean, 0, 0,
                 CreateBoolShaderOptionValues(), AZ::Name("False")}));
             ASSERT_TRUE(m_layout->AddShaderOption({AZ::Name("B"), ShaderOptionType::Boolean, 1, 1,
@@ -37,7 +37,7 @@ namespace JE::ShaderVariants
 
         MaterialVariant Material(AZStd::initializer_list<AZStd::pair<const char*, const char*>> values)
         {
-            MaterialVariant result{AZ::RPI::ShaderOptionGroup(m_layout), {}};
+            MaterialVariant result{JE::Render::RPI::ShaderOptionGroup(m_layout), {}};
             for (const auto& [name, value] : values)
             {
                 EXPECT_TRUE(result.m_options.SetValue(AZ::Name(name), AZ::Name(value)));
@@ -46,7 +46,7 @@ namespace JE::ShaderVariants
             return result;
         }
 
-        AZ::RPI::Ptr<AZ::RPI::ShaderOptionGroupLayout> m_layout;
+        JE::Render::RPI::Ptr<JE::Render::RPI::ShaderOptionGroupLayout> m_layout;
     };
 
     TEST_F(ShaderVariantListGeneratorTests, NoVariantsReturnsEmptyListAndHints)
@@ -156,13 +156,13 @@ namespace JE::ShaderVariants
 
     TEST_F(ShaderVariantListGeneratorTests, InvalidLayoutPathAndOwnershipAreRejected)
     {
-        auto unfinished = AZ::RPI::ShaderOptionGroupLayout::Create();
+        auto unfinished = JE::Render::RPI::ShaderOptionGroupLayout::Create();
         EXPECT_FALSE(Generate("fixture.shader", *unfinished, {}, {}).IsSuccess());
         EXPECT_FALSE(Generate("", *m_layout, {}, {}).IsSuccess());
         auto material = Material({{"A", "True"}});
         material.m_materialOwnedOptions.insert(AZ::Name("Absent"));
         EXPECT_FALSE(Generate("fixture.shader", *m_layout, {material}, {}).IsSuccess());
-        material.m_options = AZ::RPI::ShaderOptionGroup();
+        material.m_options = JE::Render::RPI::ShaderOptionGroup();
         EXPECT_FALSE(Generate("fixture.shader", *m_layout, {material}, {}).IsSuccess());
     }
 
@@ -183,22 +183,22 @@ namespace JE::ShaderVariants
         auto material = Material({{"System", "High"}});
         auto id = material.m_options.GetShaderVariantId();
         id.m_key.set(2).set(3); // value 3 is not part of the three-value System enum.
-        material.m_options = AZ::RPI::ShaderOptionGroup(m_layout, id);
+        material.m_options = JE::Render::RPI::ShaderOptionGroup(m_layout, id);
         EXPECT_FALSE(Generate("fixture.shader", *m_layout, {material}, {}).IsSuccess());
         id.m_key.reset();
         id.m_mask.reset(3); // only one bit of the two-bit descriptor is present.
-        material.m_options = AZ::RPI::ShaderOptionGroup(m_layout, id);
+        material.m_options = JE::Render::RPI::ShaderOptionGroup(m_layout, id);
         EXPECT_FALSE(Generate("fixture.shader", *m_layout, {material}, {}).IsSuccess());
         id.m_mask.set(10);
-        material.m_options = AZ::RPI::ShaderOptionGroup(m_layout, id);
+        material.m_options = JE::Render::RPI::ShaderOptionGroup(m_layout, id);
         EXPECT_FALSE(Generate("fixture.shader", *m_layout, {material}, {}).IsSuccess());
     }
 
     TEST_F(ShaderVariantListGeneratorTests, ProductSubIdOverflowIsRejectedBeforeExpansion)
     {
-        auto layout = AZ::RPI::ShaderOptionGroupLayout::Create();
-        ASSERT_TRUE(layout->AddShaderOption({AZ::Name("Range"), AZ::RPI::ShaderOptionType::IntegerRange, 0, 0,
-            AZ::RPI::CreateIntRangeShaderOptionValues(0, 131071), AZ::Name("0")}));
+        auto layout = JE::Render::RPI::ShaderOptionGroupLayout::Create();
+        ASSERT_TRUE(layout->AddShaderOption({AZ::Name("Range"), JE::Render::RPI::ShaderOptionType::IntegerRange, 0, 0,
+            JE::Render::RPI::CreateIntRangeShaderOptionValues(0, 131071), AZ::Name("0")}));
         layout->Finalize();
         auto result = Generate("fixture.shader", *layout, {}, {{AZ::Name("Range"), AZ::Name()}});
         ASSERT_FALSE(result.IsSuccess());
@@ -207,11 +207,11 @@ namespace JE::ShaderVariants
 
     TEST_F(ShaderVariantListGeneratorTests, CartesianProductOverflowIsRejectedWithIndividuallyValidRanges)
     {
-        auto layout = AZ::RPI::ShaderOptionGroupLayout::Create();
-        ASSERT_TRUE(layout->AddShaderOption({AZ::Name("X"), AZ::RPI::ShaderOptionType::IntegerRange, 0, 0,
-            AZ::RPI::CreateIntRangeShaderOptionValues(0, 511), AZ::Name("0")}));
-        ASSERT_TRUE(layout->AddShaderOption({AZ::Name("Y"), AZ::RPI::ShaderOptionType::IntegerRange, 9, 1,
-            AZ::RPI::CreateIntRangeShaderOptionValues(0, 511), AZ::Name("0")}));
+        auto layout = JE::Render::RPI::ShaderOptionGroupLayout::Create();
+        ASSERT_TRUE(layout->AddShaderOption({AZ::Name("X"), JE::Render::RPI::ShaderOptionType::IntegerRange, 0, 0,
+            JE::Render::RPI::CreateIntRangeShaderOptionValues(0, 511), AZ::Name("0")}));
+        ASSERT_TRUE(layout->AddShaderOption({AZ::Name("Y"), JE::Render::RPI::ShaderOptionType::IntegerRange, 9, 1,
+            JE::Render::RPI::CreateIntRangeShaderOptionValues(0, 511), AZ::Name("0")}));
         layout->Finalize();
         auto result = Generate("fixture.shader", *layout, {}, {{AZ::Name("X"), AZ::Name()}, {AZ::Name("Y"), AZ::Name()}});
         ASSERT_FALSE(result.IsSuccess());

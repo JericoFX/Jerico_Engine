@@ -10,7 +10,7 @@
 #include <LyShine/UiBase.h>
 #include <LyShine/UiRenderFormats.h>
 
-#include <Atom/RPI.Public/Image/AttachmentImage.h>
+#include <JE/Render/RPI/Public/Image/AttachmentImage.h>
 
 namespace AZ
 {
@@ -44,7 +44,7 @@ namespace LyShine
         virtual void EndMask() = 0;
 
         //! Begin rendering to a texture
-        virtual void BeginRenderToTexture(AZ::Data::Instance<AZ::RPI::AttachmentImage> attachmentImage,
+        virtual void BeginRenderToTexture(AZ::Data::Instance<JE::Render::RPI::AttachmentImage> attachmentImage,
             const AZ::Vector2& viewportTopLeft,
             const AZ::Vector2& viewportSize,
             const AZ::Color& clearColor) = 0;
@@ -53,13 +53,13 @@ namespace LyShine
         virtual void EndRenderToTexture() = 0;
 
         //! Add an indexed triangle list primitive to the render graph with given render state
-        virtual void AddPrimitive(LyShine::UiPrimitive* primitive, const AZ::Data::Instance<AZ::RPI::Image>& texture,
+        virtual void AddPrimitive(LyShine::UiPrimitive* primitive, const AZ::Data::Instance<JE::Render::RPI::Image>& texture,
             bool isClampTextureMode, bool isTextureSRGB, bool isTexturePremultipliedAlpha, BlendMode blendMode) = 0;
 
         //! Add an indexed triangle list primitive to the render graph which will use maskTexture as an alpha (gradient) mask
         virtual void AddAlphaMaskPrimitive(LyShine::UiPrimitive* primitive,
-            AZ::Data::Instance<AZ::RPI::AttachmentImage> contentAttachmentImage,
-            AZ::Data::Instance<AZ::RPI::AttachmentImage> maskAttachmentImage,
+            AZ::Data::Instance<JE::Render::RPI::AttachmentImage> contentAttachmentImage,
+            AZ::Data::Instance<JE::Render::RPI::AttachmentImage> maskAttachmentImage,
             bool isClampTextureMode,
             bool isTextureSRGB,
             bool isTexturePremultipliedAlpha,

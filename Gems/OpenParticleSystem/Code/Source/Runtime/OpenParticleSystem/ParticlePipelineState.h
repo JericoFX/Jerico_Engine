@@ -13,11 +13,11 @@
 
 #include <Atom/RHI/PipelineState.h>
 
-#include <Atom/RPI.Public/Buffer/Buffer.h>
-#include <Atom/RPI.Public/Material/Material.h>
-#include <Atom/RPI.Public/PipelineState.h>
-#include <Atom/RPI.Public/Shader/Shader.h>
-#include <Atom/RPI.Public/Shader/ShaderResourceGroup.h>
+#include <JE/Render/RPI/Public/Buffer/Buffer.h>
+#include <JE/Render/RPI/Public/Material/Material.h>
+#include <JE/Render/RPI/Public/PipelineState.h>
+#include <JE/Render/RPI/Public/Shader/Shader.h>
+#include <JE/Render/RPI/Public/Shader/ShaderResourceGroup.h>
 
 #include <OpenParticleSystem/MaterialPropertyOverride.h>
 #include <OpenParticleSystem/ParticleModel.h>
@@ -35,16 +35,16 @@ namespace OpenParticle
 
     struct EmitterForDraw
     {
-        AZ::RPI::ShaderResourceGroup* m_drawSrg = nullptr;
+        JE::Render::RPI::ShaderResourceGroup* m_drawSrg = nullptr;
         SimuCore::ParticleCore::VariantKey m_variantKey{ UINT64_MAX };
         AZ::RHI::RenderStates states;
-        AZ::RPI::ShaderOptionGroup optionGroup;
+        JE::Render::RPI::ShaderOptionGroup optionGroup;
         AZ::RHI::GeometryView m_geometryView{ AZ::RHI::MultiDevice::AllDevices };
     };
 
     struct EmitterDrawKey
     {
-        AZ::RPI::Shader* m_shader = nullptr;
+        JE::Render::RPI::Shader* m_shader = nullptr;
         AZ::RHI::DrawListTag m_drawListTag;
         AZ::Name m_materialPipelineName;
         size_t m_shaderOptionHash = 0;
@@ -62,7 +62,7 @@ namespace OpenParticle
     {
         size_t operator()(const EmitterDrawKey& key) const
         {
-            size_t hash = AZStd::hash<AZ::RPI::Shader*>{}(key.m_shader);
+            size_t hash = AZStd::hash<JE::Render::RPI::Shader*>{}(key.m_shader);
             hash ^= AZStd::hash<AZ::u16>{}(key.m_drawListTag.GetIndex()) + 0x9e3779b9 + (hash << 6) + (hash >> 2);
             hash ^= AZStd::hash<AZ::Name>{}(key.m_materialPipelineName) + 0x9e3779b9 + (hash << 6) + (hash >> 2);
             hash ^= key.m_shaderOptionHash + 0x9e3779b9 + (hash << 6) + (hash >> 2);
@@ -74,29 +74,29 @@ namespace OpenParticle
     {
         AZ::RHI::DrawListTag m_drawListTag;
         AZ::Name m_materialPipelineName;
-        AZ::Data::Instance<AZ::RPI::Shader> m_shader;
+        AZ::Data::Instance<JE::Render::RPI::Shader> m_shader;
         EmitterDrawKey m_drawKey;
     };
 
     struct EmitterInstance
     {
-        AZStd::vector<AZ::Data::Instance<AZ::RPI::ShaderResourceGroup>> m_perDrawSrgs;
+        AZStd::vector<AZ::Data::Instance<JE::Render::RPI::ShaderResourceGroup>> m_perDrawSrgs;
         AZStd::vector<ShaderDrawRecord> m_shaders;
         AZStd::unordered_map<EmitterDrawKey, EmitterForDraw, EmitterDrawKeyHasher> m_emitterForDrawPair;
-        AZ::Data::Instance<AZ::RPI::Material> m_material;
-        AZ::Data::Instance<AZ::RPI::ShaderResourceGroup> m_objSrg;
-        AZ::Data::Instance<AZ::RPI::ShaderResourceGroup> m_matSrg;
-        AZ::Data::Asset<AZ::RPI::MaterialAsset> m_materialAsset;
+        AZ::Data::Instance<JE::Render::RPI::Material> m_material;
+        AZ::Data::Instance<JE::Render::RPI::ShaderResourceGroup> m_objSrg;
+        AZ::Data::Instance<JE::Render::RPI::ShaderResourceGroup> m_matSrg;
+        AZ::Data::Asset<JE::Render::RPI::MaterialAsset> m_materialAsset;
         //! Values this emitter overrides on its private copy of the material.
         JE::Render::MaterialPropertyOverrideMap m_materialOverrides;
         ParticleModel m_model;
-        AZ::RPI::Material::ChangeId m_materialChangeId = AZ::RPI::Material::DEFAULT_CHANGE_ID;
-        AZ::RPI::Scene* m_scene = nullptr;
+        JE::Render::RPI::Material::ChangeId m_materialChangeId = JE::Render::RPI::Material::DEFAULT_CHANGE_ID;
+        JE::Render::RPI::Scene* m_scene = nullptr;
         AZ::u32 m_sortId = 0;
         bool m_needsPipelineRebuild = false;
         //! Set when ApplyMaterialOverrides could not compile the material this frame, so it is retried.
         bool m_needsMaterialOverrideApply = false;
-        void Setup(AZ::Data::Asset<AZ::RPI::MaterialAsset>& mat, const JE::Render::MaterialPropertyOverrideMap& overrides);
+        void Setup(AZ::Data::Asset<JE::Render::RPI::MaterialAsset>& mat, const JE::Render::MaterialPropertyOverrideMap& overrides);
         //! Pushes m_materialOverrides onto m_material and compiles. Returns false if the compile has to be retried.
         bool ApplyMaterialOverrides();
         void ReBuildPipeline();

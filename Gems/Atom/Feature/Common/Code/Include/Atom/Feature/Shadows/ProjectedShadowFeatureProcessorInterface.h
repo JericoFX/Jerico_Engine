@@ -8,7 +8,7 @@
 
 #pragma once
 
-#include <Atom/RPI.Public/FeatureProcessor.h>
+#include <JE/Render/RPI/Public/FeatureProcessor.h>
 #include <AzCore/Math/Vector3.h>
 #include <AzCore/Math/Transform.h>
 #include <Atom/Feature/CoreLights/ShadowConstants.h>
@@ -17,11 +17,11 @@ namespace AZ::Render
 {
     //! This feature processor handles projected shadows for various lights.
     class ProjectedShadowFeatureProcessorInterface
-        : public RPI::FeatureProcessor
+        : public JE::Render::RPI::FeatureProcessor
     {
     public:
 
-        AZ_RTTI(AZ::Render::ProjectedShadowFeatureProcessorInterface, "{C5651D73-3448-4D76-91C0-0E636A197F63}", AZ::RPI::FeatureProcessor);
+        AZ_RTTI(AZ::Render::ProjectedShadowFeatureProcessorInterface, "{C5651D73-3448-4D76-91C0-0E636A197F63}", JE::Render::RPI::FeatureProcessor);
 
         using ShadowId = RHI::Handle<uint16_t, ProjectedShadowFeatureProcessorInterface>;
         static constexpr float MaxProjectedShadowRadians = AZ::DegToRad(150.0f);

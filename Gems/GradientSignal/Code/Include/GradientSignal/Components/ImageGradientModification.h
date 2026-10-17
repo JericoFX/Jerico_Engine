@@ -8,7 +8,7 @@
 
 #pragma once
 
-#include <Atom/RPI.Reflect/Image/StreamingImageAsset.h>
+#include <JE/Render/RPI/Reflect/Image/StreamingImageAsset.h>
 #include <AzCore/Asset/AssetCommon.h>
 #include <AzCore/Component/Component.h>
 #include <AzCore/Math/Vector2.h>

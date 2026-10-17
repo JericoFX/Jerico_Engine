@@ -9,7 +9,7 @@
 #include <AzCore/Name/NameDictionary.h>
 #include <AzCore/UnitTest/TestTypes.h>
 #include <AzCore/std/smart_ptr/unique_ptr.h>
-#include <Atom/RPI.Public/View.h>
+#include <JE/Render/RPI/Public/View.h>
 #include <PostProcess/PostProcessFeatureProcessor.h>
 
 namespace UnitTest
@@ -27,7 +27,7 @@ namespace UnitTest
             }
             m_processor = AZStd::make_unique<AZ::Render::PostProcessFeatureProcessor>();
             m_processor->Activate();
-            m_view = AZ::RPI::View::CreateView(AZ::Name("HDR generation regression"), AZ::RPI::View::UsageCamera);
+            m_view = JE::Render::RPI::View::CreateView(AZ::Name("HDR generation regression"), JE::Render::RPI::View::UsageCamera);
             m_source = m_processor->GetOrCreateSettingsInterface(AZ::EntityId(1));
             m_source->CopyViewToBlendWeightSettings({{m_view.get(), 1.0f}});
             m_source->SetOverrideFactor(1.0f);
@@ -83,7 +83,7 @@ namespace UnitTest
 
         bool m_ownsNameDictionary = false;
         AZStd::unique_ptr<AZ::Render::PostProcessFeatureProcessor> m_processor;
-        AZ::RPI::ViewPtr m_view;
+        JE::Render::RPI::ViewPtr m_view;
         AZ::Render::PostProcessSettingsInterface* m_source = nullptr;
         AZ::Render::HDRColorGradingSettingsInterface* m_hdr = nullptr;
     };

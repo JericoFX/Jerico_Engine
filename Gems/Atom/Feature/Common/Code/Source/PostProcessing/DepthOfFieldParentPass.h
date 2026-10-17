@@ -7,7 +7,7 @@
  */
 #pragma once
 
-#include <Atom/RPI.Public/Pass/ParentPass.h>
+#include <JE/Render/RPI/Public/Pass/ParentPass.h>
 
 namespace AZ
 {
@@ -17,22 +17,22 @@ namespace AZ
         //! The only difference between this and ParentPass is that this will check for available depth of field settings
         //! and disable itself if no settings are found. See the IsEnabled override.
         class DepthOfFieldParentPass final
-            : public RPI::ParentPass
+            : public JE::Render::RPI::ParentPass
         {
             AZ_RPI_PASS(DepthOfFieldParentPass);
 
         public:
-            AZ_RTTI(AZ::Render::DepthOfFieldParentPass, "{6033066A-CA95-422E-9BF2-8C203171C1A8}", AZ::RPI::ParentPass);
+            AZ_RTTI(AZ::Render::DepthOfFieldParentPass, "{6033066A-CA95-422E-9BF2-8C203171C1A8}", JE::Render::RPI::ParentPass);
             AZ_CLASS_ALLOCATOR(DepthOfFieldParentPass, SystemAllocator);
             virtual ~DepthOfFieldParentPass() = default;
 
             //! Creates a DepthOfFieldParentPass
-            static RPI::Ptr<DepthOfFieldParentPass> Create(const RPI::PassDescriptor& descriptor);
+            static JE::Render::RPI::Ptr<DepthOfFieldParentPass> Create(const JE::Render::RPI::PassDescriptor& descriptor);
 
             bool IsEnabled() const override;
 
         private:
-            DepthOfFieldParentPass(const RPI::PassDescriptor& descriptor);
+            DepthOfFieldParentPass(const JE::Render::RPI::PassDescriptor& descriptor);
         };
     }   // namespace Render
 }   // namespace AZ

@@ -25,13 +25,13 @@ namespace AZ
             virtual ~EditorModeBlurPass() = default;
 
             //! Creates a EditorModeBlurPass
-            static RPI::Ptr<EditorModeBlurPass> Create(const RPI::PassDescriptor& descriptor);
+            static JE::Render::RPI::Ptr<EditorModeBlurPass> Create(const JE::Render::RPI::PassDescriptor& descriptor);
 
             //! Sets the half width of kernel to apply box blur effect.
             void SetKernelHalfWidth(float width);
 
         protected:
-            EditorModeBlurPass(const RPI::PassDescriptor& descriptor);
+            EditorModeBlurPass(const JE::Render::RPI::PassDescriptor& descriptor);
             
             //! Pass behavior overrides
             void InitializeInternal() override;

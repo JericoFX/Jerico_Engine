@@ -16,7 +16,7 @@
 #include <BuilderSettings/PresetSettings.h>
 #include <AzQtComponents/Components/Widgets/CheckBox.h>
 
-#include <Atom/RPI.Public/AssetTagBus.h>
+#include <JE/Render/RPI/Public/AssetTagBus.h>
 
 namespace ImageProcessingAtomEditor
 {
@@ -99,7 +99,7 @@ namespace ImageProcessingAtomEditor
         m_ui->maxResLabel->setToolTip(QString("Use the maximum texture resolution regardless of the target platform specification. Use this setting for textures that feature text or other details that should be legible."));
 
         AZStd::vector<AZ::Name> textureTags;
-        AZ::RPI::ImageTagBus::BroadcastResult(textureTags, &AZ::RPI::ImageTagBus::Events::GetTags);
+        JE::Render::RPI::ImageTagBus::BroadcastResult(textureTags, &JE::Render::RPI::ImageTagBus::Events::GetTags);
 
         for (const AZ::Name& tag : textureTags)
         {

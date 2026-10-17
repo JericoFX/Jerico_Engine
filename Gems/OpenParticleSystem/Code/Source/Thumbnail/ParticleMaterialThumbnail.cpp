@@ -12,7 +12,7 @@
 #include <AssetBrowser/Thumbnails/SourceThumbnail.h>
 #include <AzToolsFramework/API/EditorAssetSystemAPI.h>
 #include <QtConcurrent/QtConcurrent>
-#include <Atom/RPI.Edit/Common/AssetUtils.h>
+#include <JE/Editor/Render/RPI/Edit/Common/AssetUtils.h>
 
 namespace OpenParticleSystem
 {
@@ -74,7 +74,7 @@ namespace OpenParticleSystem
             return ProviderName;
         }
 
-        bool ParticleMaterialThumbnailCache::IsSupportedMaterial(const AZ::Data::Asset<AZ::RPI::MaterialAsset>& materialAsset) const
+        bool ParticleMaterialThumbnailCache::IsSupportedMaterial(const AZ::Data::Asset<JE::Render::RPI::MaterialAsset>& materialAsset) const
         {
             AZStd::string materialTypeAssetHint = materialAsset->GetMaterialTypeAsset().GetHint();
             AZStd::to_lower(materialTypeAssetHint.begin(),materialTypeAssetHint.end());
@@ -93,11 +93,11 @@ namespace OpenParticleSystem
 
                 for (const auto& assetInfo : productAssetInfos)
                 {
-                    if (assetInfo.m_assetType != AZ::RPI::MaterialAsset::RTTI_Type())
+                    if (assetInfo.m_assetType != JE::Render::RPI::MaterialAsset::RTTI_Type())
                     {
                         continue;
                     }
-                    if (auto materialAsset = AZ::RPI::AssetUtils::LoadAsset<AZ::RPI::MaterialAsset>(assetInfo.m_assetId))
+                    if (auto materialAsset = JE::Render::RPI::AssetUtils::LoadAsset<JE::Render::RPI::MaterialAsset>(assetInfo.m_assetId))
                     {
                         return IsSupportedMaterial(materialAsset.GetValue());
                     }
@@ -106,12 +106,12 @@ namespace OpenParticleSystem
 
             if (auto productKey = azrtti_cast<const AzToolsFramework::AssetBrowser::ProductThumbnailKey*>(key.get()))
             {
-                if (productKey->GetAssetType() != AZ::RPI::MaterialAsset::RTTI_Type())
+                if (productKey->GetAssetType() != JE::Render::RPI::MaterialAsset::RTTI_Type())
                 {
                     return false;
                 }
                 auto assetId = productKey->GetAssetId();
-                if (auto materialAsset = AZ::RPI::AssetUtils::LoadAsset<AZ::RPI::MaterialAsset>(assetId))
+                if (auto materialAsset = JE::Render::RPI::AssetUtils::LoadAsset<JE::Render::RPI::MaterialAsset>(assetId))
                 {
                     return IsSupportedMaterial(materialAsset.GetValue());
                 }

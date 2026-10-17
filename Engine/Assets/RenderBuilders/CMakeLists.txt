@@ -27,7 +27,7 @@ ly_add_target(
     COMPILE_DEFINITIONS PRIVATE JE_RENDER_ASSET_BUILDERS_EXPORTS
     BUILD_DEPENDENCIES PUBLIC
         AZ::AzCore AZ::AzFramework AZ::SceneCore AZ::SceneData AZ::AssetBuilderSDK
-        Gem::Atom_RHI.Public Gem::Atom_RPI.Edit Gem::Atom_RPI.Public
+        Gem::Atom_RHI.Public JE::EditorRenderIntegration JE::RenderIntegration
         3rdParty::meshoptimizer
 )
 set_target_properties(RenderAssetBuilders.Private.Object PROPERTIES UNITY_BUILD OFF)
@@ -42,7 +42,7 @@ ly_add_target(
     BUILD_DEPENDENCIES PUBLIC
         3rdParty::mcpp
         AZ::AssetBuilderSDK AZ::AzCore AZ::AzFramework AZ::AzToolsFramework
-        Gem::Atom_RHI.Edit Gem::Atom_RPI.Edit Gem::Atom_RPI.Public
+        Gem::Atom_RHI.Edit JE::EditorRenderIntegration JE::RenderIntegration
 )
 set_target_properties(ShaderCompiler.Private.Object PROPERTIES UNITY_BUILD OFF)
 # Retain the original shader compiler exception mode without changing other targets.
@@ -59,7 +59,7 @@ ly_add_target(
     INCLUDE_DIRECTORIES PRIVATE Source Source/Shader PUBLIC Include
     COMPILE_DEFINITIONS PRIVATE JE_RENDER_ASSET_BUILDERS_EXPORTS
     BUILD_DEPENDENCIES
-        PUBLIC AZ::AzCore AZ::SceneCore Gem::Atom_RPI.Public
+        PUBLIC AZ::AzCore AZ::SceneCore JE::RenderIntegration
         PRIVATE JE::RenderAssetBuilders.Private.Object JE::ShaderCompiler.Private.Object
     RUNTIME_DEPENDENCIES
         3rdParty::DirectXShaderCompilerDxc AZ::Azslc
@@ -92,7 +92,7 @@ if(PAL_TRAIT_BUILD_TESTS_SUPPORTED)
         INCLUDE_DIRECTORIES PRIVATE Tests/Shader Source/Shader Source/Shader/Platform/${PAL_PLATFORM_NAME}
         BUILD_DEPENDENCIES PRIVATE
             AZ::AzTest AZ::AzFramework AZ::AzToolsFramework Legacy::CryCommon
-            Gem::Atom_RPI.Public Gem::Atom_RHI.Public Gem::Atom_RPI.Edit
+            JE::RenderIntegration Gem::Atom_RHI.Public JE::EditorRenderIntegration
             JE::ShaderCompiler.Private.Object JE::RenderAssetBuilders
     )
     set_target_properties(ShaderCompiler.Tests PROPERTIES UNITY_BUILD OFF)

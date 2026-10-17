@@ -14,7 +14,7 @@
 #include <Atom/Feature/Utils/GpuBufferHandler.h>
 #include <Atom/Feature/Utils/IndexedDataVector.h>
 #include <Atom/Feature/Utils/MultiSparseVector.h>
-#include <Atom/RPI.Public/Shader/Shader.h>
+#include <JE/Render/RPI/Public/Shader/Shader.h>
 #include <CoreLights/EsmShadowmapsPass.h>
 #include <CoreLights/ProjectedShadowmapsPass.h>
 #include <CoreLights/ShadowmapPass.h>
@@ -42,7 +42,7 @@ namespace AZ::Render
         void Deactivate() override;
         void Simulate(const SimulatePacket& packet) override;
         void PrepareViews(
-            const PrepareViewsPacket& prepareViewsPacket, AZStd::vector<AZStd::pair<RPI::PipelineViewTag, RPI::ViewPtr>>&) override;
+            const PrepareViewsPacket& prepareViewsPacket, AZStd::vector<AZStd::pair<JE::Render::RPI::PipelineViewTag, JE::Render::RPI::ViewPtr>>&) override;
         void Render(const RenderPacket& packet) override;
 
         // ProjectedShadowFeatureProcessorInterface overrides ...
@@ -84,8 +84,8 @@ namespace AZ::Render
         struct ShadowProperty
         {
             ProjectedShadowDescriptor m_desc;
-            RPI::ViewPtr m_shadowmapView;
-            RPI::Ptr<ShadowmapPass> m_shadowmapPass;
+            JE::Render::RPI::ViewPtr m_shadowmapView;
+            JE::Render::RPI::Ptr<ShadowmapPass> m_shadowmapPass;
             float m_bias = 0.1f;
             ShadowId m_shadowId;
             bool m_useCachedShadows = false;
@@ -95,16 +95,16 @@ namespace AZ::Render
         static constexpr float MinimumFieldOfView = 0.001f;
 
         // RPI::SceneNotificationBus::Handler overrides...
-        void OnRenderPipelineChanged(RPI::RenderPipeline* pipeline, RPI::SceneNotification::RenderPipelineChangeType changeType) override;
+        void OnRenderPipelineChanged(JE::Render::RPI::RenderPipeline* pipeline, JE::Render::RPI::SceneNotification::RenderPipelineChangeType changeType) override;
         
         // Shadow specific functions
         void UpdateShadowView(ShadowProperty& shadowProperty);
         void InitializeShadow(ShadowId shadowId);
             
         // Functions for caching the ProjectedShadowmapsPass and EsmShadowmapsPass.
-        void CheckRemovePrimaryPasses(RPI::RenderPipeline* renderPipeline);
-        void RemoveCachedPasses(RPI::RenderPipeline* renderPipeline);
-        void CachePasses(RPI::RenderPipeline* renderPipeline);
+        void CheckRemovePrimaryPasses(JE::Render::RPI::RenderPipeline* renderPipeline);
+        void RemoveCachedPasses(JE::Render::RPI::RenderPipeline* renderPipeline);
+        void CachePasses(JE::Render::RPI::RenderPipeline* renderPipeline);
         void UpdatePrimaryPasses();
             
         //! Functions to update the parameter of Gaussian filter used in ESM.
@@ -114,7 +114,7 @@ namespace AZ::Render
         bool FilterMethodIsEsm(const ShadowData& shadowData) const;
 
         ShadowProperty& GetShadowPropertyFromShadowId(ShadowId id);
-        RPI::Ptr<ShadowmapPass> CreateShadowmapPass(size_t childIndex);
+        JE::Render::RPI::Ptr<ShadowmapPass> CreateShadowmapPass(size_t childIndex);
 
         void CreateClearShadowDrawPacket();
 
@@ -141,16 +141,16 @@ namespace AZ::Render
         MultiSparseVector<ShadowData, FilterParameter, uint16_t> m_shadowData;
 
         ShadowmapAtlas m_atlas;
-        Data::Instance<RPI::AttachmentImage> m_atlasImage;
-        Data::Instance<RPI::AttachmentImage> m_esmAtlasImage;
+        Data::Instance<JE::Render::RPI::AttachmentImage> m_atlasImage;
+        Data::Instance<JE::Render::RPI::AttachmentImage> m_esmAtlasImage;
 
-        AZStd::unordered_map<RPI::RenderPipeline*, ProjectedShadowmapsPass*> m_projectedShadowmapsPasses;
-        AZStd::unordered_map<RPI::RenderPipeline*, EsmShadowmapsPass*> m_esmShadowmapsPasses;
+        AZStd::unordered_map<JE::Render::RPI::RenderPipeline*, ProjectedShadowmapsPass*> m_projectedShadowmapsPasses;
+        AZStd::unordered_map<JE::Render::RPI::RenderPipeline*, EsmShadowmapsPass*> m_esmShadowmapsPasses;
         ProjectedShadowmapsPass* m_primaryProjectedShadowmapsPass = nullptr;
         EsmShadowmapsPass* m_primaryEsmShadowmapsPass = nullptr;
-        RPI::RenderPipeline* m_primaryShadowPipeline = nullptr;
+        JE::Render::RPI::RenderPipeline* m_primaryShadowPipeline = nullptr;
 
-        Data::Instance<RPI::Shader> m_clearShadowShader;
+        Data::Instance<JE::Render::RPI::Shader> m_clearShadowShader;
         RHI::ConstPtr<RHI::DrawPacket> m_clearShadowDrawPacket;
 
         RHI::ShaderInputNameIndex m_shadowmapAtlasSizeIndex{ "m_shadowmapAtlasSize" };

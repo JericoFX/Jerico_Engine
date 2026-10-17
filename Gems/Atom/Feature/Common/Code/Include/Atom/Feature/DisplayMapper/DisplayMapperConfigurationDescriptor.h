@@ -13,9 +13,9 @@
 #include <ACES/Aces.h>
 
 #include <Atom/Feature/Base.h>
-#include <Atom/RPI.Reflect/Pass/PassAsset.h>
-#include <Atom/RPI.Reflect/Pass/PassData.h>
-#include <Atom/RPI.Reflect/System/AnyAsset.h>
+#include <JE/Render/RPI/Reflect/Pass/PassAsset.h>
+#include <JE/Render/RPI/Reflect/Pass/PassData.h>
+#include <JE/Render/RPI/Reflect/System/AnyAsset.h>
 
 namespace AZ
 {
@@ -78,16 +78,16 @@ namespace AZ
             DisplayMapperOperationType m_operationType = DisplayMapperOperationType::Aces;
 
             bool m_ldrGradingLutEnabled = false;
-            Data::Asset<RPI::AnyAsset> m_ldrColorGradingLut;
+            Data::Asset<JE::Render::RPI::AnyAsset> m_ldrColorGradingLut;
 
             AcesParameterOverrides m_acesParameterOverrides;
         };
 
         //! Custom pass data for DisplayMapperPass.
         struct ATOM_FEATURE_COMMON_API DisplayMapperPassData
-            : public RPI::PassData
+            : public JE::Render::RPI::PassData
         {
-            using Base = RPI::PassData;
+            using Base = JE::Render::RPI::PassData;
             AZ_RTTI(DisplayMapperPassData, "{2F7576F1-41C1-408A-96BF-F4B8ED280CBC}", Base);
             AZ_CLASS_ALLOCATOR(DisplayMapperPassData, SystemAllocator);
 
@@ -98,7 +98,7 @@ namespace AZ
 
             DisplayMapperConfigurationDescriptor m_config;
             bool m_mergeLdrGradingLut = false;
-            RPI::AssetReference m_outputTransformOverride;
+            JE::Render::RPI::AssetReference m_outputTransformOverride;
         };
     } // namespace Render
 } // namespace AZ

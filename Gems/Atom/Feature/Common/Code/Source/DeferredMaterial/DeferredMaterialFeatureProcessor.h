@@ -10,15 +10,15 @@
 
 #include <Atom/Feature/DeferredMaterial/DeferredMaterialFeatureProcessorInterface.h>
 
-#include <Atom/RPI.Public/Shader/ShaderSystemInterface.h>
+#include <JE/Render/RPI/Public/Shader/ShaderSystemInterface.h>
 #include <DeferredMaterial/DeferredDrawPacketManager.h>
 #include <DeferredMaterial/DeferredMeshDrawPacket.h>
 
 #include <Atom/RHI.Reflect/FrameCountMaxRingBuffer.h>
-#include <Atom/RPI.Public/Material/PersistentIndexAllocator.h>
-#include <Atom/RPI.Public/PipelineState.h>
-#include <Atom/RPI.Public/Scene.h>
-#include <Atom/RPI.Reflect/Shader/ShaderVariantKey.h>
+#include <JE/Render/RPI/Public/Material/PersistentIndexAllocator.h>
+#include <JE/Render/RPI/Public/PipelineState.h>
+#include <JE/Render/RPI/Public/Scene.h>
+#include <JE/Render/RPI/Reflect/Shader/ShaderVariantKey.h>
 
 namespace AZ::Render
 {
@@ -33,7 +33,7 @@ namespace AZ::Render
         AZ_CLASS_ALLOCATOR(DeferredMaterialFeatureProcessor, AZ::SystemAllocator)
 
         using ModelId = DeferredMaterialFeatureProcessorInterface::ModelId;
-        using MaterialTypeShaderId = AZStd::pair<int32_t, RPI::ShaderVariantId>;
+        using MaterialTypeShaderId = AZStd::pair<int32_t, JE::Render::RPI::ShaderVariantId>;
 
         AZ_RTTI(
             AZ::Render::DeferredMaterialFeatureProcessor,
@@ -46,7 +46,7 @@ namespace AZ::Render
         virtual ~DeferredMaterialFeatureProcessor() = default;
 
         //! Create a deferred draw-item for the referenced material types, if they don't exist yet
-        void AddModel(const ModelId& uuid, ModelDataInstanceInterface* meshHandle, const Data::Instance<RPI::Model>& model) override;
+        void AddModel(const ModelId& uuid, ModelDataInstanceInterface* meshHandle, const Data::Instance<JE::Render::RPI::Model>& model) override;
 
         //! Removes a mesh and potentially the draw-item for the material type.
         void RemoveModel(const ModelId& uuid) override;
@@ -54,7 +54,7 @@ namespace AZ::Render
         //! A buffer with the DrawPacketId for the given deferred DrawListTag.
         //! This buffer contains one entry for every mesh in the scene, with the id of the deferred fullscreen-DrawItem that is
         //! responsible for that mesh. The buffer is kept in sync with the MeshInfoBuffer, and can be indexed using the meshInfoIndex.
-        AZ::Data::Instance<AZ::RPI::Buffer> GetDrawPacketIdBuffer(const RHI::DrawListTag& drawListTag) override;
+        AZ::Data::Instance<JE::Render::RPI::Buffer> GetDrawPacketIdBuffer(const RHI::DrawListTag& drawListTag) override;
 
         //! Wheter Deferred rendering was enabled at startup, controlled by CVAR r_deferredRenderingEnabled
         bool IsEnabled() override
@@ -67,7 +67,7 @@ namespace AZ::Render
         void Deactivate() override;
         void Render(const RenderPacket&) override;
         void OnRenderPipelineChanged(
-            RPI::RenderPipeline* renderPipeline, RPI::SceneNotification::RenderPipelineChangeType changeType) override;
+            JE::Render::RPI::RenderPipeline* renderPipeline, JE::Render::RPI::SceneNotification::RenderPipelineChangeType changeType) override;
 
     private:
         AZ_DISABLE_COPY_MOVE(DeferredMaterialFeatureProcessor);
@@ -90,16 +90,16 @@ namespace AZ::Render
             AZStd::vector<ModelLodData> m_lodData;
         };
 
-        RPI::RingBuffer& GetOrCreateDrawPacketIdRingBuffer(const RHI::DrawListTag& drawListTag);
+        JE::Render::RPI::RingBuffer& GetOrCreateDrawPacketIdRingBuffer(const RHI::DrawListTag& drawListTag);
         void UpdateMeshDrawPackets(bool forceRebuild);
         void UpdateDrawPacketIdBuffers();
         void UpdateDrawSrgs();
 
         AZStd::unordered_map<ModelId, ModelData> m_modelData;
 
-        AZStd::unordered_map<RHI::DrawListTag, RPI::RingBuffer> m_drawPacketIdBuffers;
+        AZStd::unordered_map<RHI::DrawListTag, JE::Render::RPI::RingBuffer> m_drawPacketIdBuffers;
 
-        AZ::RPI::ShaderSystemInterface::GlobalShaderOptionUpdatedEvent::Handler m_handleGlobalShaderOptionUpdate;
+        JE::Render::RPI::ShaderSystemInterface::GlobalShaderOptionUpdatedEvent::Handler m_handleGlobalShaderOptionUpdate;
 
         bool m_needsUpdate = false;
         bool m_forceRebuild = false;

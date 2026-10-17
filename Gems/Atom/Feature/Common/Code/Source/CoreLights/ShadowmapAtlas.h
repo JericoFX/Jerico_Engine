@@ -9,7 +9,7 @@
 #pragma once
 
 #include <Atom/Feature/CoreLights/CoreLightsConstants.h>
-#include <Atom/RPI.Public/Buffer/BufferSystemInterface.h>
+#include <JE/Render/RPI/Public/Buffer/BufferSystemInterface.h>
 #include <AzCore/Instance/Instance.h>
 #include <AzCore/std/containers/array.h>
 #include <AzCore/std/containers/list.h>
@@ -124,7 +124,7 @@ namespace AZ
             //!                the Location of the shadowmap is [1, 1].
             //! table[4], table[5] : not used.
             //! For the way to extract shadowmap specific parameter, refer ShadowmapAtlasLib.azsli.
-            Data::Instance<RPI::Buffer> CreateShadowmapIndexTableBuffer(const AZStd::string& bufferName) const;
+            Data::Instance<JE::Render::RPI::Buffer> CreateShadowmapIndexTableBuffer(const AZStd::string& bufferName) const;
 
             const AZStd::vector<ShadowmapIndexNode>& GetShadowmapIndexTable() const;
 

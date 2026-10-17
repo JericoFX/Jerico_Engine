@@ -9,12 +9,12 @@
 #pragma once
 
 #include <JE/Assets/RenderBuilders/RenderAssetBuildersExports.h>
-#include <Atom/RPI.Reflect/Buffer/BufferAsset.h>
-#include <Atom/RPI.Reflect/Material/MaterialAsset.h>
-#include <Atom/RPI.Reflect/Model/ModelAsset.h>
-#include <Atom/RPI.Reflect/Model/ModelLodAsset.h>
-#include <Atom/RPI.Reflect/Model/MorphTargetMetaAsset.h>
-#include <Atom/RPI.Reflect/Model/SkinMetaAsset.h>
+#include <JE/Render/RPI/Reflect/Buffer/BufferAsset.h>
+#include <JE/Render/RPI/Reflect/Material/MaterialAsset.h>
+#include <JE/Render/RPI/Reflect/Model/ModelAsset.h>
+#include <JE/Render/RPI/Reflect/Model/ModelLodAsset.h>
+#include <JE/Render/RPI/Reflect/Model/MorphTargetMetaAsset.h>
+#include <JE/Render/RPI/Reflect/Model/SkinMetaAsset.h>
 
 #include <AzCore/Asset/AssetCommon.h>
 
@@ -31,7 +31,7 @@ namespace JE::Assets::RenderBuilders
 {
     struct NamedMaterialAsset
     {
-        AZ::Data::Asset<AZ::RPI::MaterialAsset> m_asset;
+        AZ::Data::Asset<JE::Render::RPI::MaterialAsset> m_asset;
         AZStd::string m_name;
     };
     using MaterialAssetsByUid = AZStd::unordered_map<uint64_t, NamedMaterialAsset>;
@@ -45,9 +45,9 @@ namespace JE::Assets::RenderBuilders
             const AZ::SceneAPI::DataTypes::IMeshGroup& group,
             const AZ::SceneAPI::CoordinateSystemConverter coordSysConverter,
             const MaterialAssetsByUid& materialsByUid,
-            AZ::Data::Asset<AZ::RPI::ModelAsset>& outputModelAsset,
-            AZ::Data::Asset<AZ::RPI::SkinMetaAsset>& outputSkinMetaAsset,
-            AZ::Data::Asset<AZ::RPI::MorphTargetMetaAsset>& outputMorphTargetMetaAsset);
+            AZ::Data::Asset<JE::Render::RPI::ModelAsset>& outputModelAsset,
+            AZ::Data::Asset<JE::Render::RPI::SkinMetaAsset>& outputSkinMetaAsset,
+            AZ::Data::Asset<JE::Render::RPI::MorphTargetMetaAsset>& outputMorphTargetMetaAsset);
         ~ModelAssetBuilderContext() override = default;
 
         ModelAssetBuilderContext& operator=(const ModelAssetBuilderContext& other) = delete;
@@ -56,9 +56,9 @@ namespace JE::Assets::RenderBuilders
         const AZ::SceneAPI::DataTypes::IMeshGroup& m_group;
         const MaterialAssetsByUid& m_materialsByUid;
         AZ::SceneAPI::CoordinateSystemConverter m_coordSysConverter;
-        AZ::Data::Asset<AZ::RPI::ModelAsset>& m_outputModelAsset;
-        AZ::Data::Asset<AZ::RPI::SkinMetaAsset>& m_outputSkinMetaAsset;
-        AZ::Data::Asset<AZ::RPI::MorphTargetMetaAsset>& m_outputMorphTargetMetaAsset;
+        AZ::Data::Asset<JE::Render::RPI::ModelAsset>& m_outputModelAsset;
+        AZ::Data::Asset<JE::Render::RPI::SkinMetaAsset>& m_outputSkinMetaAsset;
+        AZ::Data::Asset<JE::Render::RPI::MorphTargetMetaAsset>& m_outputMorphTargetMetaAsset;
     };
 
     struct JE_RENDER_ASSET_BUILDERS_API ModelAssetPostBuildContext : public AZ::SceneAPI::Events::ICallContext
@@ -70,7 +70,7 @@ namespace JE::Assets::RenderBuilders
             AZStd::string outputDirectory,
             AZ::SceneAPI::Events::ExportProductList& productList,
             const AZ::SceneAPI::DataTypes::IMeshGroup& group,
-            const AZ::Data::Asset<AZ::RPI::ModelAsset>& modelAsset)
+            const AZ::Data::Asset<JE::Render::RPI::ModelAsset>& modelAsset)
             : m_scene(scene)
             , m_outputDirectory(outputDirectory)
             , m_productList(productList)
@@ -86,7 +86,7 @@ namespace JE::Assets::RenderBuilders
         AZStd::string m_outputDirectory;
         AZ::SceneAPI::Events::ExportProductList& m_productList;
         const AZ::SceneAPI::DataTypes::IMeshGroup& m_group;
-        const AZ::Data::Asset<AZ::RPI::ModelAsset>& m_modelAsset;
+        const AZ::Data::Asset<JE::Render::RPI::ModelAsset>& m_modelAsset;
     };
 
     struct JE_RENDER_ASSET_BUILDERS_API MaterialAssetBuilderContext : public AZ::SceneAPI::Events::ICallContext

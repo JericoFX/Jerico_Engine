@@ -29,8 +29,8 @@
 #include "EditorViewportCamera.h"
 
 // Atom
-#include <Atom/RPI.Public/ViewportContextBus.h>
-#include <Atom/RPI.Public/ViewportContext.h>
+#include <JE/Render/RPI/Public/ViewportContextBus.h>
+#include <JE/Render/RPI/Public/ViewportContext.h>
 
 //////////////////////////////////////////////////////////////////////////
 namespace
@@ -198,9 +198,9 @@ namespace
 
     AZ::Vector3 PyGetCurrentViewPosition()
     {
-        if (const auto viewportContextRequests = AZ::RPI::ViewportContextRequests::Get())
+        if (const auto viewportContextRequests = JE::Render::RPI::ViewportContextRequests::Get())
         {
-            AZ::RPI::ConstViewportContextPtr viewportContext = viewportContextRequests->GetDefaultViewportContext();
+            JE::Render::RPI::ConstViewportContextPtr viewportContext = viewportContextRequests->GetDefaultViewportContext();
             return viewportContext->GetCameraTransform().GetTranslation();
         }
 
@@ -209,9 +209,9 @@ namespace
 
     AZ::Vector3 PyGetCurrentViewRotation()
     {
-        if (const auto viewportContextRequests = AZ::RPI::ViewportContextRequests::Get())
+        if (const auto viewportContextRequests = JE::Render::RPI::ViewportContextRequests::Get())
         {
-            AZ::RPI::ConstViewportContextPtr viewportContext = viewportContextRequests->GetDefaultViewportContext();
+            JE::Render::RPI::ConstViewportContextPtr viewportContext = viewportContextRequests->GetDefaultViewportContext();
             return viewportContext->GetCameraTransform().GetRotation().GetEulerDegrees();
         }
 
@@ -220,10 +220,10 @@ namespace
 
     void PySetCurrentViewPosition(float x, float y, float z)
     {
-        auto viewportContextRequests = AZ::RPI::ViewportContextRequests::Get();
+        auto viewportContextRequests = JE::Render::RPI::ViewportContextRequests::Get();
         if (viewportContextRequests)
         {
-            AZ::RPI::ViewportContextPtr viewportContext = viewportContextRequests->GetDefaultViewportContext();
+            JE::Render::RPI::ViewportContextPtr viewportContext = viewportContextRequests->GetDefaultViewportContext();
             AZ::Transform transform = viewportContext->GetCameraTransform();
             transform.SetTranslation(x, y, z);
             viewportContextRequests->GetDefaultViewportContext()->SetCameraTransform(transform);
@@ -232,10 +232,10 @@ namespace
 
     void PySetCurrentViewRotation(float x, [[maybe_unused]] float y, float z)
     {
-        auto viewportContextRequests = AZ::RPI::ViewportContextRequests::Get();
+        auto viewportContextRequests = JE::Render::RPI::ViewportContextRequests::Get();
         if (viewportContextRequests)
         {
-            AZ::RPI::ViewportContextPtr viewportContext = viewportContextRequests->GetDefaultViewportContext();
+            JE::Render::RPI::ViewportContextPtr viewportContext = viewportContextRequests->GetDefaultViewportContext();
             AZ::Transform transform = viewportContext->GetCameraTransform();
             transform.SetRotation(AZ::Quaternion::CreateFromEulerAnglesDegrees(AZ::Vector3(x, y, z)));
             viewportContextRequests->GetDefaultViewportContext()->SetCameraTransform(transform);

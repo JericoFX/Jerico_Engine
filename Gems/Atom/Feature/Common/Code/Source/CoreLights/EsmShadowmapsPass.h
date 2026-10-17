@@ -12,8 +12,8 @@
 
 #include <Atom/RHI.Reflect/Size.h>
 #include <Atom/RHI.Reflect/Handle.h>
-#include <Atom/RPI.Public/Pass/ParentPass.h>
-#include <Atom/RPI.Public/Buffer/Buffer.h>
+#include <JE/Render/RPI/Public/Pass/ParentPass.h>
+#include <JE/Render/RPI/Public/Buffer/Buffer.h>
 #include <Atom/RHI.Reflect/ShaderResourceGroupLayoutDescriptor.h>
 #include <AzCore/Instance/Instance.h>
 #include <AzCore/std/containers/span.h>
@@ -22,10 +22,15 @@
 
 namespace AZ
 {
-    namespace RPI
-    {
+    }
+
+namespace JE::Render::RPI
+{
         class ShaderResourceGroup;
     }
+
+namespace AZ
+{
 
     namespace Render
     {
@@ -37,14 +42,14 @@ namespace AZ
         //! This pass outputs filtered shadowmap images used in ESM.
         //! ESM is an abbreviation of Exponential Shadow Maps.
         class EsmShadowmapsPass final
-            : public RPI::ParentPass
+            : public JE::Render::RPI::ParentPass
         {
             AZ_RPI_PASS(EsmShadowmapsPass);
-            using Base = RPI::ParentPass;
+            using Base = JE::Render::RPI::ParentPass;
 
         public:
             AZ_CLASS_ALLOCATOR(EsmShadowmapsPass, SystemAllocator);
-            AZ_RTTI(EsmShadowmapsPass, "453E9AF0-C38F-4EBC-9871-8471C3D5369A", RPI::ParentPass);
+            AZ_RTTI(EsmShadowmapsPass, "453E9AF0-C38F-4EBC-9871-8471C3D5369A", JE::Render::RPI::ParentPass);
 
             struct FilterParameter
             {
@@ -59,7 +64,7 @@ namespace AZ
             };
 
             virtual ~EsmShadowmapsPass() = default;
-            static RPI::Ptr<EsmShadowmapsPass> Create(const RPI::PassDescriptor& descriptor);
+            static JE::Render::RPI::Ptr<EsmShadowmapsPass> Create(const JE::Render::RPI::PassDescriptor& descriptor);
 
             const Name& GetLightTypeName() const;
             bool GetIsProjected() const;
@@ -68,22 +73,22 @@ namespace AZ
             //! from the coordinate in the atlas.
             //! Note that shadowmap index is shader light index for a spot light
             //! and it is cascade index for a directional light.
-            void SetShadowmapIndexTableBuffer(const Data::Instance<RPI::Buffer>& tableBuffer);
+            void SetShadowmapIndexTableBuffer(const Data::Instance<JE::Render::RPI::Buffer>& tableBuffer);
 
             //! This sets filter parameter buffer.
-            void SetFilterParameterBuffer(const Data::Instance<RPI::Buffer>& dataBuffer);
+            void SetFilterParameterBuffer(const Data::Instance<JE::Render::RPI::Buffer>& dataBuffer);
 
             //! This enable/disable children's computations.
             void SetEnabledComputation(bool enabled);
 
             //! Sets the image to use as the output for all esm passes. This is needed so multiple pipelines in a scene can share the same resource.
-            void SetAtlasAttachmentImage(Data::Instance<RPI::AttachmentImage> atlasAttachmentIamge);
+            void SetAtlasAttachmentImage(Data::Instance<JE::Render::RPI::AttachmentImage> atlasAttachmentIamge);
 
             void SetEsmExponent(float esmExponent);
 
         private:
             EsmShadowmapsPass() = delete;
-            explicit EsmShadowmapsPass(const RPI::PassDescriptor& descriptor);
+            explicit EsmShadowmapsPass(const JE::Render::RPI::PassDescriptor& descriptor);
 
             // Pass Behavior overrides...
             void FrameBeginInternal(FramePrepareParams params) override;
@@ -91,8 +96,8 @@ namespace AZ
 
             void UpdateChildren();
             // Parameters for both the depth exponentiation pass along with the Kawase blur passes
-            void SetBlurParameters(Data::Instance<RPI::ShaderResourceGroup> srg, const uint32_t childPassIndex);
-            void SetKawaseBlurSpecificParameters(Data::Instance<RPI::ShaderResourceGroup> srg, const uint32_t kawaseBlurIndex);
+            void SetBlurParameters(Data::Instance<JE::Render::RPI::ShaderResourceGroup> srg, const uint32_t childPassIndex);
+            void SetKawaseBlurSpecificParameters(Data::Instance<JE::Render::RPI::ShaderResourceGroup> srg, const uint32_t kawaseBlurIndex);
 
             bool m_computationEnabled = false;
 
@@ -109,16 +114,16 @@ namespace AZ
             uint16_t m_shadowmapArraySize;
             float m_esmExponent = 5.0;
 
-            Data::Instance<RPI::AttachmentImage> m_atlasAttachmentImage;
+            Data::Instance<JE::Render::RPI::AttachmentImage> m_atlasAttachmentImage;
 
-            Data::Instance<RPI::Buffer> m_filterTableBuffer;
+            Data::Instance<JE::Render::RPI::Buffer> m_filterTableBuffer;
             AZStd::array<RHI::ShaderInputBufferIndex, EsmChildPassKindCount> m_filterTableBufferIndices;
             AZStd::vector<uint32_t> m_filterCounts;
 
             AZStd::array<RHI::ShaderInputBufferIndex, EsmChildPassKindCount> m_shadowmapIndexTableBufferIndices;
-            Data::Instance<RPI::Buffer> m_shadowmapIndexTableBuffer;
+            Data::Instance<JE::Render::RPI::Buffer> m_shadowmapIndexTableBuffer;
             AZStd::array<RHI::ShaderInputBufferIndex, EsmChildPassKindCount> m_filterParameterBufferIndices;
-            Data::Instance<RPI::Buffer> m_filterParameterBuffer;
+            Data::Instance<JE::Render::RPI::Buffer> m_filterParameterBuffer;
 
             AZStd::array<RHI::ShaderInputConstantIndex, 2> m_kawaseBlurConstantIndices;
         };

@@ -9,11 +9,11 @@
 #include <MorphTargets/MorphTargetDispatchItem.h>
 #include <SkinnedMesh/SkinnedMeshFeatureProcessor.h>
 
-#include <Atom/RPI.Public/Shader/ShaderResourceGroup.h>
-#include <Atom/RPI.Public/Shader/Shader.h>
-#include <Atom/RPI.Public/Model/ModelLod.h>
-#include <Atom/RPI.Public/Buffer/Buffer.h>
-#include <Atom/RPI.Public/RPIUtils.h>
+#include <JE/Render/RPI/Public/Shader/ShaderResourceGroup.h>
+#include <JE/Render/RPI/Public/Shader/Shader.h>
+#include <JE/Render/RPI/Public/Model/ModelLod.h>
+#include <JE/Render/RPI/Public/Buffer/Buffer.h>
+#include <JE/Render/RPI/Public/RPIUtils.h>
 
 #include <Atom/RHI/Factory.h>
 #include <Atom/RHI/DeviceBufferView.h>
@@ -37,12 +37,12 @@ namespace AZ
             , m_accumulatedDeltaIntegerEncoding(morphDeltaIntegerEncoding)
         {
             m_morphTargetShader = skinnedMeshFeatureProcessor->GetMorphTargetShader();
-            RPI::ShaderReloadNotificationBus::Handler::BusConnect(m_morphTargetShader->GetAssetId());
+            JE::Render::RPI::ShaderReloadNotificationBus::Handler::BusConnect(m_morphTargetShader->GetAssetId());
         }
 
         MorphTargetDispatchItem::~MorphTargetDispatchItem()
         {
-            RPI::ShaderReloadNotificationBus::Handler::BusDisconnect();
+            JE::Render::RPI::ShaderReloadNotificationBus::Handler::BusDisconnect();
         }
 
         bool MorphTargetDispatchItem::Init()
@@ -53,13 +53,13 @@ namespace AZ
                 return false;
             }
 
-            AZ::RPI::ShaderOptionGroup shaderOptionGroup = m_morphTargetShader->CreateShaderOptionGroup();
+            JE::Render::RPI::ShaderOptionGroup shaderOptionGroup = m_morphTargetShader->CreateShaderOptionGroup();
             // In case there are several options you don't care about, it's good practice to initialize them with default values.
             shaderOptionGroup.SetUnspecifiedToDefaultValues();
 
             // Get the shader variant and instance SRG
-            RPI::ShaderReloadNotificationBus::Handler::BusConnect(m_morphTargetShader->GetAssetId());
-            const RPI::ShaderVariant& shaderVariant = m_morphTargetShader->GetVariant(shaderOptionGroup.GetShaderVariantId());
+            JE::Render::RPI::ShaderReloadNotificationBus::Handler::BusConnect(m_morphTargetShader->GetAssetId());
+            const JE::Render::RPI::ShaderVariant& shaderVariant = m_morphTargetShader->GetVariant(shaderOptionGroup.GetShaderVariantId());
 
             if (!InitPerInstanceSRG())
             {
@@ -81,7 +81,7 @@ namespace AZ
 
             // Get the threads-per-group values from the compute shader [numthreads(x,y,z)]
             RHI::DispatchDirect arguments;
-            const auto outcome = RPI::GetComputeShaderNumThreads(m_morphTargetShader->GetAsset(), arguments);
+            const auto outcome = JE::Render::RPI::GetComputeShaderNumThreads(m_morphTargetShader->GetAsset(), arguments);
             if (!outcome.IsSuccess())
             {
                 AZ_Error("MorphTargetDispatchItem", false, outcome.GetError().c_str());
@@ -105,7 +105,7 @@ namespace AZ
                 return false;
             }
 
-            m_instanceSrg = RPI::ShaderResourceGroup::Create(m_morphTargetShader->GetAsset(), m_morphTargetShader->GetSupervariantIndex(), perInstanceSrgLayout->GetName());
+            m_instanceSrg = JE::Render::RPI::ShaderResourceGroup::Create(m_morphTargetShader->GetAsset(), m_morphTargetShader->GetSupervariantIndex(), perInstanceSrgLayout->GetName());
             if (!m_instanceSrg)
             {
                 AZ_Error("MorphTargetDispatchItem", false, "Failed to create shader resource group for morph target");
@@ -174,7 +174,7 @@ namespace AZ
             return m_dispatchItem;
         }
 
-        void MorphTargetDispatchItem::OnShaderReinitialized([[maybe_unused]] const RPI::Shader& shader)
+        void MorphTargetDispatchItem::OnShaderReinitialized([[maybe_unused]] const JE::Render::RPI::Shader& shader)
         {
             if (!Init())
             {
@@ -182,7 +182,7 @@ namespace AZ
             }
         }
 
-        void MorphTargetDispatchItem::OnShaderAssetReinitialized([[maybe_unused]] const Data::Asset<RPI::ShaderAsset>& shaderAsset)
+        void MorphTargetDispatchItem::OnShaderAssetReinitialized([[maybe_unused]] const Data::Asset<JE::Render::RPI::ShaderAsset>& shaderAsset)
         {
             if (!Init())
             {
@@ -190,7 +190,7 @@ namespace AZ
             }
         }
 
-        void MorphTargetDispatchItem::OnShaderVariantReinitialized(const RPI::ShaderVariant&)
+        void MorphTargetDispatchItem::OnShaderVariantReinitialized(const JE::Render::RPI::ShaderVariant&)
         {
             if (!Init())
             {

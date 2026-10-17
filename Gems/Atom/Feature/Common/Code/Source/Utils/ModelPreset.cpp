@@ -12,8 +12,8 @@
 #include <AzCore/Asset/AssetSerializer.h>
 #include <AzCore/Serialization/SerializeContext.h>
 #include <AzCore/RTTI/BehaviorContext.h>
-#include <Atom/RPI.Reflect/Model/ModelAsset.h>
-#include <Atom/RPI.Reflect/Image/StreamingImageAsset.h>
+#include <JE/Render/RPI/Reflect/Model/ModelAsset.h>
+#include <JE/Render/RPI/Reflect/Image/StreamingImageAsset.h>
 
 namespace AZ
 {

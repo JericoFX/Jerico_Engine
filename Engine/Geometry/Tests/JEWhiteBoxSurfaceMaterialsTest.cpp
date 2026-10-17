@@ -9,8 +9,8 @@
 #include <AzCore/Asset/AssetManager.h>
 #include <AzCore/Debug/TraceMessageBus.h>
 #include <Atom/RHI.Reflect/ShaderSemantic.h>
-#include <Atom/RPI.Reflect/Material/MaterialAssetCreator.h>
-#include <Atom/RPI.Reflect/Material/MaterialTypeAssetCreator.h>
+#include <JE/Render/RPI/Reflect/Material/MaterialAssetCreator.h>
+#include <JE/Render/RPI/Reflect/Material/MaterialTypeAssetCreator.h>
 #include "Editor/JEWhiteBoxSurfaceMaterials.h"
 #include "Rendering/Atom/WhiteBoxMeshAtomData.h"
 #include <AzCore/IO/ByteContainerStream.h>
@@ -474,19 +474,19 @@ namespace UnitTest
 
     class NativeFaceMaterialPickerTestFixture : public EditorWhiteBoxComponentTestFixture
     {
-        AZStd::unique_ptr<AZ::RPI::MaterialAssetHandler> m_materialHandler;
-        AZStd::unique_ptr<AZ::RPI::MaterialTypeAssetHandler> m_typeHandler;
+        AZStd::unique_ptr<JE::Render::RPI::MaterialAssetHandler> m_materialHandler;
+        AZStd::unique_ptr<JE::Render::RPI::MaterialTypeAssetHandler> m_typeHandler;
         void SetUpEditorFixtureImpl() override
         {
             EditorWhiteBoxComponentTestFixture::SetUpEditorFixtureImpl();
             auto& manager = AZ::Data::AssetManager::Instance();
-            if (!manager.GetHandler(azrtti_typeid<AZ::RPI::MaterialAsset>()))
+            if (!manager.GetHandler(azrtti_typeid<JE::Render::RPI::MaterialAsset>()))
             {
-                m_materialHandler = AZ::RPI::MakeAssetHandler<AZ::RPI::MaterialAssetHandler>();
+                m_materialHandler = JE::Render::RPI::MakeAssetHandler<JE::Render::RPI::MaterialAssetHandler>();
             }
-            if (!manager.GetHandler(azrtti_typeid<AZ::RPI::MaterialTypeAsset>()))
+            if (!manager.GetHandler(azrtti_typeid<JE::Render::RPI::MaterialTypeAsset>()))
             {
-                m_typeHandler = AZ::RPI::MakeAssetHandler<AZ::RPI::MaterialTypeAssetHandler>();
+                m_typeHandler = JE::Render::RPI::MakeAssetHandler<JE::Render::RPI::MaterialTypeAssetHandler>();
             }
         }
         void TearDownEditorFixtureImpl() override
@@ -499,25 +499,25 @@ namespace UnitTest
 
     namespace
     {
-        AZ::Data::Asset<AZ::RPI::MaterialAsset> CreatePickerMaterial(bool reversedEnum = false)
+        AZ::Data::Asset<JE::Render::RPI::MaterialAsset> CreatePickerMaterial(bool reversedEnum = false)
         {
-            AZ::RPI::MaterialTypeAssetCreator typeCreator;
+            JE::Render::RPI::MaterialTypeAssetCreator typeCreator;
             typeCreator.Begin(AZ::Data::AssetId(AZ::Uuid::CreateRandom(), 0));
             typeCreator.SetVersion(1);
-            typeCreator.BeginMaterialProperty(AZ::Name("roughness.factor"), AZ::RPI::MaterialPropertyDataType::Float);
+            typeCreator.BeginMaterialProperty(AZ::Name("roughness.factor"), JE::Render::RPI::MaterialPropertyDataType::Float);
             typeCreator.EndMaterialProperty();
             typeCreator.SetPropertyValue(AZ::Name("roughness.factor"), 0.5f);
-            typeCreator.BeginMaterialProperty(AZ::Name("surface.mode"), AZ::RPI::MaterialPropertyDataType::Enum);
+            typeCreator.BeginMaterialProperty(AZ::Name("surface.mode"), JE::Render::RPI::MaterialPropertyDataType::Enum);
             typeCreator.SetMaterialPropertyEnumNames(reversedEnum ? AZStd::vector<AZStd::string>{"masked", "opaque"} : AZStd::vector<AZStd::string>{"opaque", "masked"});
             typeCreator.EndMaterialProperty();
             typeCreator.SetPropertyValue(AZ::Name("surface.mode"), uint32_t{0});
             typeCreator.AddUvName(AZ::RHI::ShaderSemantic("UV", 0), AZ::Name("uv"));
-            AZ::Data::Asset<AZ::RPI::MaterialTypeAsset> type;
+            AZ::Data::Asset<JE::Render::RPI::MaterialTypeAsset> type;
             EXPECT_TRUE(typeCreator.End(type));
             if (!type.IsReady()) { return {}; }
-            AZ::RPI::MaterialAssetCreator creator;
+            JE::Render::RPI::MaterialAssetCreator creator;
             creator.Begin(AZ::Data::AssetId(AZ::Uuid::CreateRandom(), 0), type);
-            AZ::Data::Asset<AZ::RPI::MaterialAsset> result;
+            AZ::Data::Asset<JE::Render::RPI::MaterialAsset> result;
             EXPECT_TRUE(creator.End(result));
             return result;
         }
@@ -699,7 +699,7 @@ namespace UnitTest
         uint32_t slot = 0;
         ASSERT_TRUE(current.GetSubElement(current.FindElement(AZ_CRC_CE("SelectedMaterialSlot"))).GetData(slot));
         EXPECT_EQ(slot, 37);
-        AZ::Data::Asset<AZ::RPI::MaterialAsset> picker;
+        AZ::Data::Asset<JE::Render::RPI::MaterialAsset> picker;
         ASSERT_TRUE(current.GetSubElement(current.FindElement(AZ_CRC_CE("SelectedFaceMaterial"))).GetData(picker));
         EXPECT_FALSE(picker.GetId().IsValid());
     }

@@ -12,9 +12,9 @@
 #include <Mesh/MeshFeatureProcessor.h>
 #include <MorphTargets/MorphTargetComputePass.h>
 
-#include <Atom/RPI.Public/Model/Model.h>
-#include <Atom/RPI.Public/Scene.h>
-#include <Atom/RPI.Public/Shader/Shader.h>
+#include <JE/Render/RPI/Public/Model/Model.h>
+#include <JE/Render/RPI/Public/Scene.h>
+#include <JE/Render/RPI/Public/Shader/Shader.h>
 
 #include <Atom/Utils/Utils.h>
 namespace AZ
@@ -30,7 +30,7 @@ namespace AZ
         {
         }
 
-        bool SkinnedMeshRenderProxy::Init(const RPI::Scene& scene, SkinnedMeshFeatureProcessor* featureProcessor)
+        bool SkinnedMeshRenderProxy::Init(const JE::Render::RPI::Scene& scene, SkinnedMeshFeatureProcessor* featureProcessor)
         {
             AZ_PROFILE_FUNCTION(AzRender);
             if(!m_instance->m_model)
@@ -51,9 +51,9 @@ namespace AZ
             return true;
         }
 
-        bool SkinnedMeshRenderProxy::BuildDispatchItem([[maybe_unused]] const RPI::Scene& scene, uint32_t modelLodIndex, [[maybe_unused]] const SkinnedMeshShaderOptions& shaderOptions)
+        bool SkinnedMeshRenderProxy::BuildDispatchItem([[maybe_unused]] const JE::Render::RPI::Scene& scene, uint32_t modelLodIndex, [[maybe_unused]] const SkinnedMeshShaderOptions& shaderOptions)
         {
-            Data::Instance<RPI::Shader> skinningShader = m_featureProcessor->GetSkinningShader();
+            Data::Instance<JE::Render::RPI::Shader> skinningShader = m_featureProcessor->GetSkinningShader();
             if (!skinningShader)
             {
                 AZ_Error("Skinned Mesh Feature Processor", false, "Failed to get skinning shader from skinning pass");
@@ -61,7 +61,7 @@ namespace AZ
             }
 
             // Get the data needed to create a morph target dispatch item
-            Data::Instance<RPI::Shader> morphTargetShader = m_featureProcessor->GetMorphTargetShader();
+            Data::Instance<JE::Render::RPI::Shader> morphTargetShader = m_featureProcessor->GetMorphTargetShader();
             if (!morphTargetShader)
             {
                 AZ_Error("Skinned Mesh Feature Processor", false, "Failed to get morph target shader from morph target pass");

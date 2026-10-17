@@ -12,21 +12,21 @@ namespace AZ
 {
     namespace Render
     {
-        RPI::Ptr<ReflectionScreenSpaceBlurChildPass> ReflectionScreenSpaceBlurChildPass::Create(const RPI::PassDescriptor& descriptor)
+        JE::Render::RPI::Ptr<ReflectionScreenSpaceBlurChildPass> ReflectionScreenSpaceBlurChildPass::Create(const JE::Render::RPI::PassDescriptor& descriptor)
         {
-            RPI::Ptr<ReflectionScreenSpaceBlurChildPass> pass = aznew ReflectionScreenSpaceBlurChildPass(descriptor);
+            JE::Render::RPI::Ptr<ReflectionScreenSpaceBlurChildPass> pass = aznew ReflectionScreenSpaceBlurChildPass(descriptor);
             return pass;
         }
 
-        ReflectionScreenSpaceBlurChildPass::ReflectionScreenSpaceBlurChildPass(const RPI::PassDescriptor& descriptor)
-            : RPI::FullscreenTrianglePass(descriptor)
+        ReflectionScreenSpaceBlurChildPass::ReflectionScreenSpaceBlurChildPass(const JE::Render::RPI::PassDescriptor& descriptor)
+            : JE::Render::RPI::FullscreenTrianglePass(descriptor)
         {
         }
 
         void ReflectionScreenSpaceBlurChildPass::FrameBeginInternal(FramePrepareParams params)
         {
             // get attachment size
-            RPI::PassAttachment* inputAttachment = GetInputBinding(0).GetAttachment().get();
+            JE::Render::RPI::PassAttachment* inputAttachment = GetInputBinding(0).GetAttachment().get();
             AZ_Assert(inputAttachment, "ReflectionScreenSpaceBlurChildPass: Input binding has no attachment!");
 
             RHI::Size size = inputAttachment->m_descriptor.m_image.m_size;

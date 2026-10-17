@@ -107,7 +107,7 @@ if(PAL_TRAIT_BUILD_HOST_TOOLS)
                 Gem::${gem_name}.Static
                 Legacy::EditorCore
             PRIVATE
-                Gem::Atom_RPI.Edit
+                JE::EditorRenderIntegration
                 Gem::AtomToolsFramework.Static
     )
 
@@ -148,8 +148,8 @@ if(PAL_TRAIT_BUILD_HOST_TOOLS)
             PRIVATE
                 AZ::SceneCore
                 AZ::AssetBuilderSDK
-                Gem::Atom_RPI.Edit
-                Gem::Atom_RPI.Public
+                JE::EditorRenderIntegration
+                JE::RenderIntegration
                 Gem::Atom_RHI.Public
     )
 

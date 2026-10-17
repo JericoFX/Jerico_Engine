@@ -10,7 +10,7 @@
 
 #include <AzCore/Math/Transform.h>
 #include <AzCore/Math/Vector3.h>
-#include <Atom/RPI.Public/FeatureProcessor.h>
+#include <JE/Render/RPI/Public/FeatureProcessor.h>
 
 namespace AZ
 {
@@ -18,11 +18,11 @@ namespace AZ
     {
         //! This feature processor handles static and dynamic non-skinned meshes.
         class TransformServiceFeatureProcessorInterface
-            : public RPI::FeatureProcessor
+            : public JE::Render::RPI::FeatureProcessor
         {
         public:
 
-            AZ_RTTI(AZ::Render::TransformServiceFeatureProcessorInterface, "{A9099337-AA0F-4F47-8E47-6E7FBA8998D0}", AZ::RPI::FeatureProcessor);
+            AZ_RTTI(AZ::Render::TransformServiceFeatureProcessorInterface, "{A9099337-AA0F-4F47-8E47-6E7FBA8998D0}", JE::Render::RPI::FeatureProcessor);
 
             using ObjectId = RHI::Handle<uint32_t, TransformServiceFeatureProcessorInterface>;
 

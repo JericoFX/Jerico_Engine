@@ -10,7 +10,7 @@
 
 #include <Atom/RHI.Reflect/Handle.h>
 #include <Atom/RHI.Reflect/ShaderResourceGroupLayoutDescriptor.h>
-#include <Atom/RPI.Reflect/Shader/ShaderAsset.h>
+#include <JE/Render/RPI/Reflect/Shader/ShaderAsset.h>
 
 #include <AzCore/std/containers/map.h>
 #include <AzCore/std/containers/vector.h>

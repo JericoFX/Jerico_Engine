@@ -14,7 +14,7 @@
 #include <AzFramework/Physics/DebugDraw/CharacterPhysicsDebugDraw.h>
 #include <Integration/Rendering/RenderFlag.h>
 #include <Integration/Rendering/RenderActorInstance.h>
-#include <Atom/RPI.Public/ViewportContext.h>
+#include <JE/Render/RPI/Public/ViewportContext.h>
 
 namespace AzFramework
 {
@@ -27,7 +27,7 @@ namespace EMotionFX
     class ActorInstance;
 }
 
-namespace AZ::RPI
+namespace JE::Render::RPI
 {
     class AuxGeomDraw;
     class AuxGeomFeatureProcessorInterface;
@@ -94,7 +94,7 @@ namespace AZ::Render
             const AZ::Color& tangentsColor, const AZ::Color& mirroredBitangentsColor, const AZ::Color& bitangentsColor);
         void RenderWireframe(EMotionFX::Mesh* mesh, const AZ::Transform& worldTM,
             float scale, const AZ::Color& color);
-        void RenderJointNames(EMotionFX::ActorInstance* actorInstance, RPI::ViewportContextPtr viewportContext, const AZ::Color& jointNameColor);
+        void RenderJointNames(EMotionFX::ActorInstance* actorInstance, JE::Render::RPI::ViewportContextPtr viewportContext, const AZ::Color& jointNameColor);
         void RenderNodeOrientations(EMotionFX::ActorInstance* actorInstance, AzFramework::DebugDisplayRequests* debugDisplay, float scale = 1.0f);
         void RenderLineAxis(
             AzFramework::DebugDisplayRequests* debugDisplay,
@@ -130,7 +130,7 @@ namespace AZ::Render
         const AZ::Color SelectedColor = AZ::Color{ 1.0f, 0.67f, 0.0f, 1.0f };
         const AZ::Color HoveredColor = AZ::Color{ 0.78f, 1.0f, 0.67f, 1.0f };
 
-        RPI::AuxGeomFeatureProcessorInterface* m_auxGeomFeatureProcessor = nullptr;
+        JE::Render::RPI::AuxGeomFeatureProcessorInterface* m_auxGeomFeatureProcessor = nullptr;
         AZStd::vector<AZ::Vector3> m_auxVertices;
         AZStd::vector<AZ::Color> m_auxColors;
         EntityId m_entityId;

@@ -9,19 +9,19 @@
 
 #include <AzCore/Math/Aabb.h>
 
-#include <Atom/RPI.Public/Image/StreamingImage.h>
-#include <Atom/RPI.Public/Image/ImageSystemInterface.h>
+#include <JE/Render/RPI/Public/Image/StreamingImage.h>
+#include <JE/Render/RPI/Public/Image/ImageSystemInterface.h>
 
-#include <Atom/RPI.Public/Shader/ShaderResourceGroup.h>
-#include <Atom/RPI.Public/MeshDrawPacket.h>
+#include <JE/Render/RPI/Public/Shader/ShaderResourceGroup.h>
+#include <JE/Render/RPI/Public/MeshDrawPacket.h>
 
-#include <Atom/RPI.Reflect/Asset/AssetUtils.h>
-#include <Atom/RPI.Reflect/Material/MaterialAsset.h>
-#include <Atom/RPI.Reflect/Buffer/BufferAssetCreator.h>
-#include <Atom/RPI.Reflect/ResourcePoolAssetCreator.h>
-#include <Atom/RPI.Reflect/Model/ModelAsset.h>
-#include <Atom/RPI.Reflect/Model/ModelAssetCreator.h>
-#include <Atom/RPI.Reflect/Model/ModelLodAssetCreator.h>
+#include <JE/Render/RPI/Reflect/Asset/AssetUtils.h>
+#include <JE/Render/RPI/Reflect/Material/MaterialAsset.h>
+#include <JE/Render/RPI/Reflect/Buffer/BufferAssetCreator.h>
+#include <JE/Render/RPI/Reflect/ResourcePoolAssetCreator.h>
+#include <JE/Render/RPI/Reflect/Model/ModelAsset.h>
+#include <JE/Render/RPI/Reflect/Model/ModelAssetCreator.h>
+#include <JE/Render/RPI/Reflect/Model/ModelLodAssetCreator.h>
 
 #include <vector>
 
@@ -80,12 +80,12 @@ namespace AZ
             }
         }
 
-        Data::Instance<RPI::ShaderResourceGroup> MeshletsModel::CreateShaderResourceGroup(
-            Data::Instance<RPI::Shader> shader,
+        Data::Instance<JE::Render::RPI::ShaderResourceGroup> MeshletsModel::CreateShaderResourceGroup(
+            Data::Instance<JE::Render::RPI::Shader> shader,
             const char* shaderResourceGroupId,
             [[maybe_unused]] const char* moduleName)
         {
-            Data::Instance<RPI::ShaderResourceGroup> srg = RPI::ShaderResourceGroup::Create(shader->GetAsset(), AZ::Name{ shaderResourceGroupId });
+            Data::Instance<JE::Render::RPI::ShaderResourceGroup> srg = JE::Render::RPI::ShaderResourceGroup::Create(shader->GetAsset(), AZ::Name{ shaderResourceGroupId });
             if (!srg)
             {
                 AZ_Error(moduleName, false, "Failed to create shader resource group");
@@ -161,14 +161,14 @@ namespace AZ
         //----------------------------------------------------------------------
         // Enhanced (Meshlet) Model Creation
         //----------------------------------------------------------------------
-        Data::Asset<RPI::BufferAsset> MeshletsModel::CreateBufferAsset(
+        Data::Asset<JE::Render::RPI::BufferAsset> MeshletsModel::CreateBufferAsset(
             [[maybe_unused]] const AZStd::string& bufferName,
             const RHI::BufferViewDescriptor& bufferViewDescriptor,
             RHI::BufferBindFlags bufferBindFlags,
             const void* data
         )
         {
-            RPI::BufferAssetCreator creator;
+            JE::Render::RPI::BufferAssetCreator creator;
             creator.Begin(Uuid::CreateRandom());
 
             RHI::BufferDescriptor bufferDescriptor;
@@ -181,9 +181,9 @@ namespace AZ
             }
 
             creator.SetBufferViewDescriptor(bufferViewDescriptor);
-            creator.SetUseCommonPool(RPI::CommonBufferPoolType::StaticInputAssembly);
+            creator.SetUseCommonPool(JE::Render::RPI::CommonBufferPoolType::StaticInputAssembly);
 
-            Data::Asset<RPI::BufferAsset> bufferAsset;
+            Data::Asset<JE::Render::RPI::BufferAsset> bufferAsset;
 
             // The next line is the actual buffer asset creation
             [[maybe_unused]] bool creationSuccessful = creator.End(bufferAsset);
@@ -220,11 +220,11 @@ namespace AZ
         // Moving the creator outside calling method and have the new model contain several
         // Lods did not work as it needs to be local to the block!
         uint32_t MeshletsModel::CreateMeshletsModel(
-            const RPI::ModelLodAsset::Mesh& meshAsset )
+            const JE::Render::RPI::ModelLodAsset::Mesh& meshAsset )
         {
             //-------------------------------------------
             // Start model creation
-            RPI::ModelAssetCreator modelAssetCreator;
+            JE::Render::RPI::ModelAssetCreator modelAssetCreator;
             modelAssetCreator.Begin(Uuid::CreateRandom());
             modelAssetCreator.SetName(m_name);
             //-------------------------------------------
@@ -240,7 +240,7 @@ namespace AZ
 
             // Index buffer
             uint32_t indexCount = 0;
-            const RPI::BufferAssetView* bufferAssetView = &meshAsset.GetIndexBufferAssetView();
+            const JE::Render::RPI::BufferAssetView* bufferAssetView = &meshAsset.GetIndexBufferAssetView();
             uint8_t* indices = RetrieveBufferData(bufferAssetView, IndexStreamFormat, 0, indexCount, bufferDescriptors[0]);
 
             // With this flag specified we get an error at buffer pool level in ValidateInitRequest
@@ -303,7 +303,7 @@ namespace AZ
             // Model LOD Creation
             {
                 //--------------------------------------------
-                RPI::ModelLodAssetCreator modelLodAssetCreator;
+                JE::Render::RPI::ModelLodAssetCreator modelLodAssetCreator;
                 modelLodAssetCreator.Begin(Uuid::CreateRandom());
 
                 modelLodAssetCreator.BeginMesh();
@@ -316,15 +316,15 @@ namespace AZ
                         modelLodAssetCreator.SetMeshIndexBuffer({ indicesAsset, bufferDescriptors[0] });
 
                         modelLodAssetCreator.AddMeshStreamBuffer(RHI::ShaderSemantic{ "POSITION" }, PositionSemanticName,
-                            RPI::BufferAssetView{ positionsAsset, bufferDescriptors[1] });
+                            JE::Render::RPI::BufferAssetView{ positionsAsset, bufferDescriptors[1] });
                         modelLodAssetCreator.AddMeshStreamBuffer(RHI::ShaderSemantic{ "NORMAL" }, NormalSemanticName,
-                            RPI::BufferAssetView{ normalsAsset, bufferDescriptors[2] });
+                            JE::Render::RPI::BufferAssetView{ normalsAsset, bufferDescriptors[2] });
                         modelLodAssetCreator.AddMeshStreamBuffer(RHI::ShaderSemantic{ "UV" }, UVSemanticName,
-                            RPI::BufferAssetView{ texCoordsAsset, bufferDescriptors[3] });
+                            JE::Render::RPI::BufferAssetView{ texCoordsAsset, bufferDescriptors[3] });
                         modelLodAssetCreator.AddMeshStreamBuffer(RHI::ShaderSemantic{ "TANGENT" }, TangentSemanticName,
-                            RPI::BufferAssetView{ tangentsAsset, bufferDescriptors[4] });
+                            JE::Render::RPI::BufferAssetView{ tangentsAsset, bufferDescriptors[4] });
                         modelLodAssetCreator.AddMeshStreamBuffer(RHI::ShaderSemantic{ "BITANGENT" }, BiTangentSemanticName,
-                            RPI::BufferAssetView{ bitangentsAsset, bufferDescriptors[5] });
+                            JE::Render::RPI::BufferAssetView{ bitangentsAsset, bufferDescriptors[5] });
                     }
 
                     // Meshlets data creation
@@ -336,7 +336,7 @@ namespace AZ
                         const auto meshletsAsset = CreateBufferAsset(MeshletsDescriptorsName.GetCStr(), meshletsDesc,
                             defaultBindFlags, (void*)m_meshletsData.Descriptors.data());
                         modelLodAssetCreator.AddMeshStreamBuffer(RHI::ShaderSemantic{ MeshletsDescriptorsName }, MeshletsDescriptorsName,
-                            RPI::BufferAssetView{ meshletsAsset, meshletsDesc });
+                            JE::Render::RPI::BufferAssetView{ meshletsAsset, meshletsDesc });
 
                         // Meshlets triangles - sending it as uint32 to simplify calculations
                         // The triangles data is encoded - each uint32_t is 3 indices of 8 bits.
@@ -345,7 +345,7 @@ namespace AZ
                         const auto meshletsTrisAsset = CreateBufferAsset(MeshletsTrianglesName.GetCStr(), meshletsTrisDesc,
                             defaultBindFlags, (void*)m_meshletsData.EncodedTriangles.data());
                         modelLodAssetCreator.AddMeshStreamBuffer(RHI::ShaderSemantic{ MeshletsTrianglesName }, MeshletsTrianglesName,
-                            RPI::BufferAssetView{ meshletsTrisAsset, meshletsTrisDesc });
+                            JE::Render::RPI::BufferAssetView{ meshletsTrisAsset, meshletsTrisDesc });
 
                         // Meshlets indirect indices buffer
                         const auto meshletsIndicesDesc = RHI::BufferViewDescriptor::CreateTyped(
@@ -353,13 +353,13 @@ namespace AZ
                         const auto meshletsIndicesAsset = CreateBufferAsset(MeshletsIndicesLookupName.GetCStr(), meshletsIndicesDesc,
                             defaultBindFlags, (void*)m_meshletsData.IndicesIndirection.data());
                         modelLodAssetCreator.AddMeshStreamBuffer(RHI::ShaderSemantic{ MeshletsIndicesLookupName }, MeshletsIndicesLookupName,
-                            RPI::BufferAssetView{ meshletsIndicesAsset, meshletsIndicesDesc });
+                            JE::Render::RPI::BufferAssetView{ meshletsIndicesAsset, meshletsIndicesDesc });
                     }
                 }
                 modelLodAssetCreator.EndMesh();
 
                 // Create the model LOD based on the model LOD asset we created
-                Data::Asset<RPI::ModelLodAsset> modelLodAsset;
+                Data::Asset<JE::Render::RPI::ModelLodAsset> modelLodAsset;
                 if (!modelLodAssetCreator.End(modelLodAsset))
                 {
                     AZ_Error("Meshlets", false, "Error -- creating model [%s] - ModelLoadAssetCreator.End() failed",
@@ -372,7 +372,7 @@ namespace AZ
 
                 //-------------------------------------------
                 // Final stage - create the model based on the created assets
-                Data::Asset<RPI::ModelAsset> modelAsset;
+                Data::Asset<JE::Render::RPI::ModelAsset> modelAsset;
 
                 if (!modelAssetCreator.End(modelAsset))
                 {
@@ -380,7 +380,7 @@ namespace AZ
                     return 0;
                 }
 
-                m_meshletsModel = RPI::Model::FindOrCreate(modelAsset);
+                m_meshletsModel = JE::Render::RPI::Model::FindOrCreate(modelAsset);
                 if (!m_meshletsModel)
                 {
                     AZ_Error("Meshlets", false, "Error -- creating model [%s] - model could not be found or created", m_name.c_str());
@@ -397,13 +397,13 @@ namespace AZ
         // Model Traversal and Data Copy for Creation
         //----------------------------------------------------------------------
         uint8_t* MeshletsModel::RetrieveBufferData(
-            const RPI::BufferAssetView* bufferView,
+            const JE::Render::RPI::BufferAssetView* bufferView,
             RHI::Format& format,
             uint32_t expectedAmount, uint32_t &existingAmount,
             RHI::BufferViewDescriptor& bufferDesc
         )
         {
-            const Data::Asset<RPI::BufferAsset>& bufferAsset = bufferView->GetBufferAsset();
+            const Data::Asset<JE::Render::RPI::BufferAsset>& bufferAsset = bufferView->GetBufferAsset();
 //            const RHI::BufferViewDescriptor& bufferDesc = bufferView->GetBufferViewDescriptor();
             bufferDesc = bufferView->GetBufferViewDescriptor();
             existingAmount = bufferDesc.m_elementCount;
@@ -477,14 +477,14 @@ namespace AZ
             return meshletsAmount;
         }
 
-        uint32_t MeshletsModel::CreateMeshletsFromModelAsset(Data::Asset<RPI::ModelAsset> sourceModelAsset)
+        uint32_t MeshletsModel::CreateMeshletsFromModelAsset(Data::Asset<JE::Render::RPI::ModelAsset> sourceModelAsset)
         {
             uint32_t meshletsAmount = 0;
             m_sourceModelAsset = sourceModelAsset;
 
-            for (const Data::Asset<RPI::ModelLodAsset>& lodAsset : sourceModelAsset->GetLodAssets())
+            for (const Data::Asset<JE::Render::RPI::ModelLodAsset>& lodAsset : sourceModelAsset->GetLodAssets())
             {
-                for (const RPI::ModelLodAsset::Mesh& meshAsset : lodAsset->GetMeshes())
+                for (const JE::Render::RPI::ModelLodAsset::Mesh& meshAsset : lodAsset->GetMeshes())
                 {
                     meshletsAmount += CreateMeshletsModel(meshAsset);
                 }
@@ -495,7 +495,7 @@ namespace AZ
             return meshletsAmount;
         }
 
-        MeshletsModel::MeshletsModel(Data::Asset<RPI::ModelAsset> sourceModelAsset)
+        MeshletsModel::MeshletsModel(Data::Asset<JE::Render::RPI::ModelAsset> sourceModelAsset)
         {
             IndicesSemanticName = Name{ "INDICES" };
             PositionSemanticName = Name{ "POSITION" };

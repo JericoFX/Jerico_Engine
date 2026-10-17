@@ -9,7 +9,7 @@
 #include "RenderGraph.h"
 #include "UiRenderer.h"
 
-#include <Atom/RPI.Public/Image/ImageSystemInterface.h>
+#include <JE/Render/RPI/Public/Image/ImageSystemInterface.h>
 #include <Atom/RHI/RHISystemInterface.h>
 
 #include <AzCore/Math/MatrixUtils.h>
@@ -38,7 +38,7 @@ namespace LyShine
     };
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////
-    PrimitiveListRenderNode::PrimitiveListRenderNode(const AZ::Data::Instance<AZ::RPI::Image>& texture,
+    PrimitiveListRenderNode::PrimitiveListRenderNode(const AZ::Data::Instance<JE::Render::RPI::Image>& texture,
         bool isClampTextureMode, bool isTextureSRGB, bool preMultiplyAlpha, const AZ::RHI::TargetBlendState& blendModeState)
         : RenderNode(RenderNodeType::PrimitiveList)
         , m_numTextures(1)
@@ -57,8 +57,8 @@ namespace LyShine
     }
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////
-    PrimitiveListRenderNode::PrimitiveListRenderNode(const AZ::Data::Instance<AZ::RPI::Image>& texture,
-        const AZ::Data::Instance<AZ::RPI::Image>& maskTexture, bool isClampTextureMode, bool isTextureSRGB,
+    PrimitiveListRenderNode::PrimitiveListRenderNode(const AZ::Data::Instance<JE::Render::RPI::Image>& texture,
+        const AZ::Data::Instance<JE::Render::RPI::Image>& maskTexture, bool isClampTextureMode, bool isTextureSRGB,
         bool preMultiplyAlpha, AlphaMaskType alphaMaskType, const AZ::RHI::TargetBlendState& blendModeState)
         : RenderNode(RenderNodeType::PrimitiveList)
         , m_numTextures(2)
@@ -90,7 +90,7 @@ namespace LyShine
     ////////////////////////////////////////////////////////////////////////////////////////////////////
     void PrimitiveListRenderNode::Render(UiRenderer* uiRenderer
         , const AZ::Matrix4x4& modelViewProjMat
-        , AZ::RHI::Ptr<AZ::RPI::DynamicDrawContext> dynamicDraw)
+        , AZ::RHI::Ptr<JE::Render::RPI::DynamicDrawContext> dynamicDraw)
     {
         if (!uiRenderer->IsReady())
         {
@@ -126,15 +126,15 @@ namespace LyShine
         dynamicDraw->SetShaderVariant(uiRenderer->GetCurrentShaderVariant());
 
         // Set up per draw SRG
-        AZ::Data::Instance<AZ::RPI::ShaderResourceGroup> drawSrg = dynamicDraw->NewDrawSrg();
+        AZ::Data::Instance<JE::Render::RPI::ShaderResourceGroup> drawSrg = dynamicDraw->NewDrawSrg();
 
         // Set textures
         uint32_t isClampTextureMode = 0;
         for (int i = 0; i < m_numTextures; ++i)
         {
             // Default to white texture
-            const AZ::Data::Instance<AZ::RPI::Image>& image = m_textures[i].m_texture ? m_textures[i].m_texture
-                : AZ::RPI::ImageSystemInterface::Get()->GetSystemImage(AZ::RPI::SystemImage::White);
+            const AZ::Data::Instance<JE::Render::RPI::Image>& image = m_textures[i].m_texture ? m_textures[i].m_texture
+                : JE::Render::RPI::ImageSystemInterface::Get()->GetSystemImage(JE::Render::RPI::SystemImage::White);
             const auto imageView = image->GetImageView();
 
             if (imageView)
@@ -197,7 +197,7 @@ namespace LyShine
     }
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////
-    int PrimitiveListRenderNode::GetOrAddTexture(const AZ::Data::Instance<AZ::RPI::Image>& texture, bool isClampTextureMode)
+    int PrimitiveListRenderNode::GetOrAddTexture(const AZ::Data::Instance<JE::Render::RPI::Image>& texture, bool isClampTextureMode)
     {
         // Check if node is already using this texture
         int texUnit = FindTexture(texture, isClampTextureMode);
@@ -221,7 +221,7 @@ namespace LyShine
     }
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////
-    int PrimitiveListRenderNode::FindTexture(const AZ::Data::Instance<AZ::RPI::Image>& texture, bool isClampTextureMode) const
+    int PrimitiveListRenderNode::FindTexture(const AZ::Data::Instance<JE::Render::RPI::Image>& texture, bool isClampTextureMode) const
     {
         for (int i = 0; i < m_numTextures; ++i)
         {
@@ -302,7 +302,7 @@ namespace LyShine
     ////////////////////////////////////////////////////////////////////////////////////////////////////
     void MaskRenderNode::Render(UiRenderer* uiRenderer
         , const AZ::Matrix4x4& modelViewProjMat
-        , AZ::RHI::Ptr<AZ::RPI::DynamicDrawContext> dynamicDraw)
+        , AZ::RHI::Ptr<JE::Render::RPI::DynamicDrawContext> dynamicDraw)
     {
         UiRenderer::BaseState priorBaseState = uiRenderer->GetBaseState();
 
@@ -367,7 +367,7 @@ namespace LyShine
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////
     void MaskRenderNode::SetupBeforeRenderingMask(UiRenderer* uiRenderer,
-        AZ::RHI::Ptr<AZ::RPI::DynamicDrawContext> dynamicDraw,
+        AZ::RHI::Ptr<JE::Render::RPI::DynamicDrawContext> dynamicDraw,
         bool firstPass, UiRenderer::BaseState priorBaseState)
     {
         UiRenderer::BaseState curBaseState = priorBaseState;
@@ -422,7 +422,7 @@ namespace LyShine
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////
     void MaskRenderNode::SetupAfterRenderingMask(UiRenderer* uiRenderer,
-        AZ::RHI::Ptr<AZ::RPI::DynamicDrawContext> dynamicDraw,
+        AZ::RHI::Ptr<JE::Render::RPI::DynamicDrawContext> dynamicDraw,
         bool firstPass, UiRenderer::BaseState priorBaseState)
     {
         if (m_isMaskingEnabled)
@@ -475,7 +475,7 @@ namespace LyShine
     ////////////////////////////////////////////////////////////////////////////////////////////////////
     RenderTargetRenderNode::RenderTargetRenderNode(
         RenderTargetRenderNode* parentRenderTarget,
-        AZ::Data::Instance<AZ::RPI::AttachmentImage> attachmentImage,
+        AZ::Data::Instance<JE::Render::RPI::AttachmentImage> attachmentImage,
         const AZ::Vector2& viewportTopLeft,
         const AZ::Vector2& viewportSize,
         const AZ::Color& clearColor,
@@ -513,7 +513,7 @@ namespace LyShine
     ////////////////////////////////////////////////////////////////////////////////////////////////////
     void RenderTargetRenderNode::Render(UiRenderer* uiRenderer
         , [[maybe_unused]] const AZ::Matrix4x4& modelViewProjMat
-        , [[maybe_unused]] AZ::RHI::Ptr<AZ::RPI::DynamicDrawContext> dynamicDraw)
+        , [[maybe_unused]] AZ::RHI::Ptr<JE::Render::RPI::DynamicDrawContext> dynamicDraw)
     {
         if (!m_attachmentImage)
         {
@@ -561,7 +561,7 @@ namespace LyShine
     }
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////
-    const AZ::Data::Instance<AZ::RPI::AttachmentImage> RenderTargetRenderNode::GetRenderTarget() const
+    const AZ::Data::Instance<JE::Render::RPI::AttachmentImage> RenderTargetRenderNode::GetRenderTarget() const
     {
         return m_attachmentImage;
     }
@@ -687,7 +687,7 @@ namespace LyShine
     }
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////
-    void RenderGraph::BeginRenderToTexture(AZ::Data::Instance<AZ::RPI::AttachmentImage> attachmentImage,
+    void RenderGraph::BeginRenderToTexture(AZ::Data::Instance<JE::Render::RPI::AttachmentImage> attachmentImage,
         const AZ::Vector2& viewportTopLeft, const AZ::Vector2& viewportSize, const AZ::Color& clearColor)
     {
         // this uses pool allocator
@@ -719,7 +719,7 @@ namespace LyShine
     }
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////
-    void RenderGraph::AddPrimitive(LyShine::UiPrimitive* primitive, const AZ::Data::Instance<AZ::RPI::Image>& texture,
+    void RenderGraph::AddPrimitive(LyShine::UiPrimitive* primitive, const AZ::Data::Instance<JE::Render::RPI::Image>& texture,
         bool isClampTextureMode, bool isTextureSRGB, bool isTexturePremultipliedAlpha, BlendMode blendMode)
     {
         AZStd::vector<RenderNode*>* renderNodeList = m_renderNodeListStack.top();
@@ -793,8 +793,8 @@ namespace LyShine
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////
     void RenderGraph::AddAlphaMaskPrimitive(LyShine::UiPrimitive* primitive,
-        AZ::Data::Instance<AZ::RPI::AttachmentImage> contentAttachmentImage,
-        AZ::Data::Instance<AZ::RPI::AttachmentImage> maskAttachmentImage,
+        AZ::Data::Instance<JE::Render::RPI::AttachmentImage> contentAttachmentImage,
+        AZ::Data::Instance<JE::Render::RPI::AttachmentImage> maskAttachmentImage,
         bool isClampTextureMode,
         bool isTextureSRGB,
         bool isTexturePremultipliedAlpha,
@@ -957,7 +957,7 @@ namespace LyShine
     ////////////////////////////////////////////////////////////////////////////////////////////////////
     void RenderGraph::Render(UiRenderer* uiRenderer, [[maybe_unused]] const AZ::Vector2& viewportSize)
     {
-        AZ::RHI::Ptr<AZ::RPI::DynamicDrawContext> dynamicDraw = uiRenderer->GetDynamicDrawContext();
+        AZ::RHI::Ptr<JE::Render::RPI::DynamicDrawContext> dynamicDraw = uiRenderer->GetDynamicDrawContext();
 
         // Reset stencil and blend mode to defaults (disable stencil and enable blend/color write)
         dynamicDraw->SetStencilState(uiRenderer->GetBaseState().m_stencilState);
@@ -1086,7 +1086,7 @@ namespace LyShine
 
         m_wasBuiltThisFrame = false;
 
-        AZStd::set<AZ::Data::Instance<AZ::RPI::Image>> uniqueTextures;
+        AZStd::set<AZ::Data::Instance<JE::Render::RPI::Image>> uniqueTextures;
 
         // If we are rendering to the render targets this frame then record the stats for doing that
         if (m_renderToRenderTargetCount < 2)
@@ -1118,7 +1118,7 @@ namespace LyShine
     void RenderGraph::GetDebugInfoRenderNodeList(
         const AZStd::vector<RenderNode*>& renderNodeList,
         LyShineDebug::DebugInfoRenderGraph& info,
-        AZStd::set<AZ::Data::Instance<AZ::RPI::Image>>& uniqueTextures) const
+        AZStd::set<AZ::Data::Instance<JE::Render::RPI::Image>>& uniqueTextures) const
     {
         const PrimitiveListRenderNode* prevPrimListNode = nullptr;
         bool isFirstNode = true;
@@ -1316,10 +1316,10 @@ namespace LyShine
                     {
                         for (int i = 0; i < prevPrimListNode->GetNumTextures(); ++i)
                         {
-                            AZ::Data::Instance<AZ::RPI::Image> texture = prevPrimListNode->GetTexture(i);
+                            AZ::Data::Instance<JE::Render::RPI::Image> texture = prevPrimListNode->GetTexture(i);
                             if (!texture)
                             {
-                                texture = AZ::RPI::ImageSystemInterface::Get()->GetSystemImage(AZ::RPI::SystemImage::White);
+                                texture = JE::Render::RPI::ImageSystemInterface::Get()->GetSystemImage(JE::Render::RPI::SystemImage::White);
                             }
                             bool isClampTextureUsage = prevPrimListNode->GetTextureIsClampMode(i);
 
@@ -1367,10 +1367,10 @@ namespace LyShine
 
                 for (int i = 0; i < primListRenderNode->GetNumTextures(); ++i)
                 {
-                    AZ::Data::Instance<AZ::RPI::Image> texture = primListRenderNode->GetTexture(i);
+                    AZ::Data::Instance<JE::Render::RPI::Image> texture = primListRenderNode->GetTexture(i);
                     if (!texture)
                     {
-                        texture = AZ::RPI::ImageSystemInterface::Get()->GetSystemImage(AZ::RPI::SystemImage::White);
+                        texture = JE::Render::RPI::ImageSystemInterface::Get()->GetSystemImage(JE::Render::RPI::SystemImage::White);
                     }
                     bool isClampTextureUsage = primListRenderNode->GetTextureIsClampMode(i);
 
@@ -1503,11 +1503,11 @@ namespace LyShine
     void RenderGraph::SetRttPassesEnabled(UiRenderer* uiRenderer, bool enabled)
     {
         // Enable or disable the rtt render passes
-        AZ::RPI::SceneId sceneId = uiRenderer->GetViewportContext()->GetRenderScene()->GetId();
+        JE::Render::RPI::SceneId sceneId = uiRenderer->GetViewportContext()->GetRenderScene()->GetId();
         for (RenderTargetRenderNode* renderTargetRenderNode : m_renderTargetRenderNodes)
         {
             // Find the rtt pass to disable
-            AZ::RPI::RasterPass* rttPass = nullptr;
+            JE::Render::RPI::RasterPass* rttPass = nullptr;
             LyShinePassRequestBus::EventResult(rttPass, sceneId, &LyShinePassRequestBus::Events::GetRttPass, renderTargetRenderNode->GetRenderTargetName());
             if (rttPass)
             {

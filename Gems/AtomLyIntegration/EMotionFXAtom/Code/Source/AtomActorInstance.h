@@ -37,7 +37,7 @@ namespace EMotionFX
     class Actor;
     class ActorInstance;
 }
-namespace AZ::RPI
+namespace JE::Render::RPI
 {
     class AuxGeomDraw;
     class AuxGeomFeatureProcessorInterface;
@@ -137,21 +137,21 @@ namespace AZ
 
             /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
             // MeshComponentRequestBus::Handler overrides...
-            void SetModelAsset(Data::Asset<RPI::ModelAsset> modelAsset) override;
-            Data::Asset<const RPI::ModelAsset> GetModelAsset() const override;
+            void SetModelAsset(Data::Asset<JE::Render::RPI::ModelAsset> modelAsset) override;
+            Data::Asset<const JE::Render::RPI::ModelAsset> GetModelAsset() const override;
             void SetModelAssetId(Data::AssetId modelAssetId) override;
             Data::AssetId GetModelAssetId() const override;
             void SetModelAssetPath(const AZStd::string& modelAssetPath) override;
             AZStd::string GetModelAssetPath() const override;
-            AZ::Data::Instance<RPI::Model> GetModel() const override;
+            AZ::Data::Instance<JE::Render::RPI::Model> GetModel() const override;
             void SetSortKey(RHI::DrawItemSortKey sortKey) override;
             RHI::DrawItemSortKey GetSortKey() const override;
             void SetIsAlwaysDynamic([[maybe_unused]] bool isAlwaysDynamic) override {}
             bool GetIsAlwaysDynamic() const { return true; }
-            void SetLodType(RPI::Cullable::LodType lodType) override;
-            RPI::Cullable::LodType GetLodType() const override;
-            void SetLodOverride(RPI::Cullable::LodOverride lodOverride) override;
-            RPI::Cullable::LodOverride GetLodOverride() const override;
+            void SetLodType(JE::Render::RPI::Cullable::LodType lodType) override;
+            JE::Render::RPI::Cullable::LodType GetLodType() const override;
+            void SetLodOverride(JE::Render::RPI::Cullable::LodOverride lodOverride) override;
+            JE::Render::RPI::Cullable::LodOverride GetLodOverride() const override;
             void SetMinimumScreenCoverage(float minimumScreenCoverage) override;
             float GetMinimumScreenCoverage() const override;
             void SetQualityDecayRate(float qualityDecayRate) override;
@@ -203,8 +203,8 @@ namespace AZ
             void InitWrinkleMasks();
             void UpdateWrinkleMasks();
 
-            void HandleObjectSrgCreate(const Data::Instance<RPI::ShaderResourceGroup>& objectSrg);
-            void HandleModelChange(const Data::Instance<RPI::Model>& model);
+            void HandleObjectSrgCreate(const Data::Instance<JE::Render::RPI::ShaderResourceGroup>& objectSrg);
+            void HandleModelChange(const Data::Instance<JE::Render::RPI::Model>& model);
 
             void UpdateLightingChannelMask();
 
@@ -213,7 +213,7 @@ namespace AZ
 
             AZStd::intrusive_ptr<AZ::Render::SkinnedMeshInputBuffers> m_skinnedMeshInputBuffers = nullptr;
             AZStd::intrusive_ptr<SkinnedMeshInstance> m_skinnedMeshInstance;
-            AZ::Data::Instance<AZ::RPI::Buffer> m_boneTransforms = nullptr;
+            AZ::Data::Instance<JE::Render::RPI::Buffer> m_boneTransforms = nullptr;
             AZ::Render::SkinnedMeshFeatureProcessorInterface::SkinnedMeshHandle m_skinnedMeshHandle;
             AZ::Render::SkinnedMeshFeatureProcessorInterface* m_skinnedMeshFeatureProcessor = nullptr;
             AZ::Render::MeshFeatureProcessorInterface* m_meshFeatureProcessor = nullptr;
@@ -223,20 +223,20 @@ namespace AZ
             AZStd::set<Data::AssetId> m_waitForMaterialLoadIds;
             AZStd::vector<float> m_morphTargetWeights;
 
-            typedef AZStd::unordered_map<EMotionFX::MorphTargetStandard*, Data::Instance<RPI::Image>> MorphTargetWrinkleMaskMap;
+            typedef AZStd::unordered_map<EMotionFX::MorphTargetStandard*, Data::Instance<JE::Render::RPI::Image>> MorphTargetWrinkleMaskMap;
             AZStd::vector<MorphTargetWrinkleMaskMap> m_morphTargetWrinkleMaskMapsByLod;
 
-            AZStd::vector<Data::Instance<RPI::Image>> m_wrinkleMasks;
+            AZStd::vector<Data::Instance<JE::Render::RPI::Image>> m_wrinkleMasks;
             AZStd::vector<float> m_wrinkleMaskWeights;
 
             MeshHandleDescriptor::ModelChangedEvent::Handler m_modelChangedEventHandler
             {
-                 [&](const Data::Instance<RPI::Model>& model) { HandleModelChange(model); } 
+                 [&](const Data::Instance<JE::Render::RPI::Model>& model) { HandleModelChange(model); } 
             };
 
             MeshHandleDescriptor::ObjectSrgCreatedEvent::Handler m_objectSrgCreatedHandler
             {
-                [&](const Data::Instance<RPI::ShaderResourceGroup>& objectSrg) { HandleObjectSrgCreate(objectSrg); }
+                [&](const Data::Instance<JE::Render::RPI::ShaderResourceGroup>& objectSrg) { HandleObjectSrgCreate(objectSrg); }
             };
 
             bool m_rayTracingEnabled = true;

@@ -14,10 +14,10 @@
 #include <AzFramework/Components/CameraBus.h>
 #include <JE/World/Camera/CameraComponentController.h>
 
-#include <Atom/RPI.Public/Base.h>
-#include <Atom/RPI.Public/ViewportContextBus.h>
-#include <Atom/RPI.Public/ViewProviderBus.h>
-#include <Atom/RPI.Public/AuxGeom/AuxGeomFeatureProcessorInterface.h>
+#include <JE/Render/RPI/Public/Base.h>
+#include <JE/Render/RPI/Public/ViewportContextBus.h>
+#include <JE/Render/RPI/Public/ViewProviderBus.h>
+#include <JE/Render/RPI/Public/AuxGeom/AuxGeomFeatureProcessorInterface.h>
 
 namespace JE::World::Camera
 {

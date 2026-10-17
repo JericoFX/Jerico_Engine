@@ -16,11 +16,16 @@
 
 namespace AZ
 {
-    namespace RPI
-    {
+    }
+
+namespace JE::Render::RPI
+{
         class BufferAsset;
         class Buffer;
     }
+
+namespace AZ
+{
 
     namespace Render
     {
@@ -39,8 +44,8 @@ namespace AZ
             AZStd::intrusive_ptr<SkinnedMeshOutputStreamAllocation> Allocate(size_t byteCount) override;
             void DeAllocate(RHI::VirtualAddress allocation) override;
             void DeAllocateNoSignal(RHI::VirtualAddress allocation) override;
-            Data::Asset<RPI::BufferAsset> GetBufferAsset() override;
-            Data::Instance<RPI::Buffer> GetBuffer() override;
+            Data::Asset<JE::Render::RPI::BufferAsset> GetBufferAsset() override;
+            Data::Instance<JE::Render::RPI::Buffer> GetBuffer() override;
 
         private:
             // SystemTickBus
@@ -51,8 +56,8 @@ namespace AZ
             void CalculateAlignment();
             void CreateBufferAsset();
 
-            Data::Asset<RPI::BufferAsset> m_bufferAsset;
-            Data::Instance<RPI::Buffer> m_buffer;
+            Data::Asset<JE::Render::RPI::BufferAsset> m_bufferAsset;
+            Data::Instance<JE::Render::RPI::Buffer> m_buffer;
             RHI::FreeListAllocator m_freeListAllocator;
             AZStd::mutex m_allocatorMutex;
             uint64_t m_alignment = 1;

@@ -15,10 +15,10 @@
 #include <Atom/RHI.Edit/Utils.h>
 #include <Atom/RHI.Edit/ShaderBuildOptions.h>
 
-#include <Atom/RPI.Reflect/Asset/AssetHandler.h>
-#include <Atom/RPI.Reflect/Shader/ShaderAsset.h>
-#include <Atom/RPI.Edit/Shader/ShaderSourceData.h>
-#include <Atom/RPI.Edit/Shader/ShaderVariantListSourceData.h>
+#include <JE/Render/RPI/Reflect/Asset/AssetHandler.h>
+#include <JE/Render/RPI/Reflect/Shader/ShaderAsset.h>
+#include <JE/Editor/Render/RPI/Edit/Shader/ShaderSourceData.h>
+#include <JE/Editor/Render/RPI/Edit/Shader/ShaderVariantListSourceData.h>
 
 #include <AzToolsFramework/ToolsComponents/ToolsAssetCatalogBus.h>
 
@@ -84,7 +84,7 @@ namespace JE::Assets::RenderBuilders
             AssetBuilderSDK::AssetBuilderDesc shaderAssetBuilderDescriptor;
             shaderAssetBuilderDescriptor.m_name = "Shader Asset Builder";
             shaderAssetBuilderDescriptor.m_version = 126; // ShaderStageFunction allocator
-            shaderAssetBuilderDescriptor.m_patterns.push_back(AssetBuilderSDK::AssetBuilderPattern( AZStd::string::format("*.%s", AZ::RPI::ShaderSourceData::Extension), AssetBuilderSDK::AssetBuilderPattern::PatternType::Wildcard));
+            shaderAssetBuilderDescriptor.m_patterns.push_back(AssetBuilderSDK::AssetBuilderPattern( AZStd::string::format("*.%s", JE::Render::RPI::ShaderSourceData::Extension), AssetBuilderSDK::AssetBuilderPattern::PatternType::Wildcard));
             shaderAssetBuilderDescriptor.m_busId = azrtti_typeid<ShaderAssetBuilder>();
             shaderAssetBuilderDescriptor.m_createJobFunction = AZStd::bind(&ShaderAssetBuilder::CreateJobs, &m_shaderAssetBuilder, AZStd::placeholders::_1, AZStd::placeholders::_2);
             shaderAssetBuilderDescriptor.m_processJobFunction = AZStd::bind(&ShaderAssetBuilder::ProcessJob, &m_shaderAssetBuilder, AZStd::placeholders::_1, AZStd::placeholders::_2);
@@ -122,7 +122,7 @@ namespace JE::Assets::RenderBuilders
                 AssetBuilderSDK::AssetBuilderDesc shaderVariantListBuilderDescriptor;
                 shaderVariantListBuilderDescriptor.m_name = "Shader Variant List Builder";
                 shaderVariantListBuilderDescriptor.m_version = 4; // ShaderStageFunction allocator
-                shaderVariantListBuilderDescriptor.m_patterns.push_back(AssetBuilderSDK::AssetBuilderPattern(AZStd::string::format("*.%s", AZ::RPI::ShaderVariantListSourceData::Extension), AssetBuilderSDK::AssetBuilderPattern::PatternType::Wildcard));
+                shaderVariantListBuilderDescriptor.m_patterns.push_back(AssetBuilderSDK::AssetBuilderPattern(AZStd::string::format("*.%s", JE::Render::RPI::ShaderVariantListSourceData::Extension), AssetBuilderSDK::AssetBuilderPattern::PatternType::Wildcard));
                 shaderVariantListBuilderDescriptor.m_busId = azrtti_typeid<ShaderVariantListBuilder>();
                 shaderVariantListBuilderDescriptor.m_createJobFunction = AZStd::bind(&ShaderVariantListBuilder::CreateJobs, &m_shaderVariantListBuilder, AZStd::placeholders::_1, AZStd::placeholders::_2);
                 shaderVariantListBuilderDescriptor.m_processJobFunction = AZStd::bind(&ShaderVariantListBuilder::ProcessJob, &m_shaderVariantListBuilder, AZStd::placeholders::_1, AZStd::placeholders::_2);

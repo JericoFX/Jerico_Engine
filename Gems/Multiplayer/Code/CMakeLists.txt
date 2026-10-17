@@ -315,7 +315,7 @@ if (PAL_TRAIT_BUILD_HOST_TOOLS)
                 AZ::AzFramework
                 AZ::AzNetworking
                 AZ::AzToolsFramework
-                Gem::Atom_RPI.Public
+                JE::RenderIntegration
                 Gem::Atom_RHI.Reflect
                 Gem::${gem_name}.Unified.Static
                 Gem::${gem_name}.Tools.Static

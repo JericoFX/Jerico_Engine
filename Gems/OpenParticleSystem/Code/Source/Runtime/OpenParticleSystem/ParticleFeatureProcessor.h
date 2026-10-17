@@ -10,10 +10,10 @@
 
 #include <Atom/RHI/PipelineState.h>
 
-#include <Atom/RPI.Public/Buffer/Buffer.h>
-#include <Atom/RPI.Public/PipelineState.h>
-#include <Atom/RPI.Public/Shader/Shader.h>
-#include <Atom/RPI.Public/Shader/ShaderResourceGroup.h>
+#include <JE/Render/RPI/Public/Buffer/Buffer.h>
+#include <JE/Render/RPI/Public/PipelineState.h>
+#include <JE/Render/RPI/Public/Shader/Shader.h>
+#include <JE/Render/RPI/Public/Shader/ShaderResourceGroup.h>
 
 #include <Atom/Feature/TransformService/TransformServiceFeatureProcessorInterface.h>
 #include <Atom/Feature/Utils/GpuBufferHandler.h>
@@ -49,7 +49,7 @@ namespace OpenParticle
         void OnAssetError(AZ::Data::Asset<AZ::Data::AssetData> asset) override;
 
         void Simulate(float delta);
-        void Render(const AZ::RPI::FeatureProcessor::RenderPacket& packet);
+        void Render(const JE::Render::RPI::FeatureProcessor::RenderPacket& packet);
 
         void Init();
 
@@ -59,7 +59,7 @@ namespace OpenParticle
         void SetRuntimeConfig(ParticleComponentConfig config) { m_rtConfig = config; };
 
         ParticleFeatureProcessor* m_particleFp = nullptr;
-        AZ::RPI::Scene* m_scene = nullptr;
+        JE::Render::RPI::Scene* m_scene = nullptr;
         AZ::Data::Asset<ParticleAsset> m_particleAsset;
         AZ::Data::Instance<ParticleSystem> m_particleInstance;
         AZ::EntityId m_entityId;
@@ -87,12 +87,12 @@ namespace OpenParticle
 
         void Activate() override;
         void Deactivate() override;
-        void Simulate(const AZ::RPI::FeatureProcessor::SimulatePacket& packet) override;
-        void Render(const AZ::RPI::FeatureProcessor::RenderPacket& packet) override;
+        void Simulate(const JE::Render::RPI::FeatureProcessor::SimulatePacket& packet) override;
+        void Render(const JE::Render::RPI::FeatureProcessor::RenderPacket& packet) override;
 
-        void OnRenderPipelineAdded(AZ::RPI::RenderPipelinePtr pipeline) override;
+        void OnRenderPipelineAdded(JE::Render::RPI::RenderPipelinePtr pipeline) override;
 
-        void OnRenderPipelineRemoved(AZ::RPI::RenderPipeline* pipeline) override;
+        void OnRenderPipelineRemoved(JE::Render::RPI::RenderPipeline* pipeline) override;
 
         ParticleHandle AcquireParticle(const AZ::EntityId& id, const ParticleComponentConfig& rtConfig, const AZ::Transform& transform) override;
 

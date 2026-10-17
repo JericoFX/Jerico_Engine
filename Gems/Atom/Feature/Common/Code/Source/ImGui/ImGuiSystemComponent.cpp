@@ -9,10 +9,10 @@
 #include <ImGui/ImGuiSystemComponent.h>
 #include <ImGui/ImGuiPass.h>
 #include <AzCore/Serialization/SerializeContext.h>
-#include <Atom/RPI.Public/Pass/PassSystemInterface.h>
-#include <Atom/RPI.Public/Pass/PassFilter.h>
-#include <Atom/RPI.Public/ViewportContext.h>
-#include <Atom/RPI.Public/ViewportContextBus.h>
+#include <JE/Render/RPI/Public/Pass/PassSystemInterface.h>
+#include <JE/Render/RPI/Public/Pass/PassFilter.h>
+#include <JE/Render/RPI/Public/ViewportContext.h>
+#include <JE/Render/RPI/Public/ViewportContextBus.h>
 
 namespace AZ
 {
@@ -109,13 +109,13 @@ namespace AZ
         {
             ImGuiContext* contextToRestore = ImGui::GetCurrentContext();
             
-            RPI::PassFilter passFilter = RPI::PassFilter::CreateWithPassClass<ImGuiPass>();
-            RPI::PassSystemInterface::Get()->ForEachPass(passFilter, [func](RPI::Pass* pass) -> RPI::PassFilterExecutionFlow
+            JE::Render::RPI::PassFilter passFilter = JE::Render::RPI::PassFilter::CreateWithPassClass<ImGuiPass>();
+            JE::Render::RPI::PassSystemInterface::Get()->ForEachPass(passFilter, [func](JE::Render::RPI::Pass* pass) -> JE::Render::RPI::PassFilterExecutionFlow
                 {
                     ImGuiPass* imguiPass = azrtti_cast<ImGuiPass*>(pass);
                     ImGui::SetCurrentContext(imguiPass->GetContext());
                     func(imguiPass);
-                    return RPI::PassFilterExecutionFlow::ContinueVisitingPasses;
+                    return JE::Render::RPI::PassFilterExecutionFlow::ContinueVisitingPasses;
                 });
 
             ImGui::SetCurrentContext(contextToRestore);
@@ -188,8 +188,8 @@ namespace AZ
 
             AZStd::vector<ImGuiPass*> foundImGuiPasses;
 
-            RPI::PassFilter passFilter = RPI::PassFilter::CreateWithPassHierarchy(passHierarchyFilter);
-            RPI::PassSystemInterface::Get()->ForEachPass(passFilter, [&foundImGuiPasses](RPI::Pass* pass) -> RPI::PassFilterExecutionFlow
+            JE::Render::RPI::PassFilter passFilter = JE::Render::RPI::PassFilter::CreateWithPassHierarchy(passHierarchyFilter);
+            JE::Render::RPI::PassSystemInterface::Get()->ForEachPass(passFilter, [&foundImGuiPasses](JE::Render::RPI::Pass* pass) -> JE::Render::RPI::PassFilterExecutionFlow
                 {
                     ImGuiPass* imGuiPass = azrtti_cast<ImGuiPass*>(pass);
                     if (imGuiPass)
@@ -197,7 +197,7 @@ namespace AZ
                         foundImGuiPasses.push_back(imGuiPass);
                     }
 
-                     return RPI::PassFilterExecutionFlow::ContinueVisitingPasses;
+                     return JE::Render::RPI::PassFilterExecutionFlow::ContinueVisitingPasses;
                 });
 
             if (foundImGuiPasses.size() == 0)
@@ -242,9 +242,9 @@ namespace AZ
 
         bool ImGuiSystemComponent::RenderImGuiBuffersToCurrentViewport(const ImDrawData& drawData)
         {
-            auto atomViewportRequests = AZ::Interface<AZ::RPI::ViewportContextRequestsInterface>::Get();
+            auto atomViewportRequests = AZ::Interface<JE::Render::RPI::ViewportContextRequestsInterface>::Get();
 
-            RPI::ViewportContextPtr viewportContext = atomViewportRequests->GetDefaultViewportContext();
+            JE::Render::RPI::ViewportContextPtr viewportContext = atomViewportRequests->GetDefaultViewportContext();
             if (viewportContext == nullptr)
             {
                 return false;

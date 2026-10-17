@@ -8,9 +8,9 @@
 
 #pragma once
 
-#include <Atom/RPI.Edit/Material/MaterialTypeSourceData.h>
-#include <Atom/RPI.Reflect/Material/MaterialAsset.h>
-#include <Atom/RPI.Reflect/Material/MaterialTypeAsset.h>
+#include <JE/Editor/Render/RPI/Edit/Material/MaterialTypeSourceData.h>
+#include <JE/Render/RPI/Reflect/Material/MaterialAsset.h>
+#include <JE/Render/RPI/Reflect/Material/MaterialTypeAsset.h>
 
 #include <AtomToolsFramework/DynamicProperty/DynamicPropertyGroup.h>
 #include <AtomToolsFramework/Inspector/InspectorWidget.h>
@@ -104,9 +104,9 @@ namespace OpenParticleSystemEditor
         OpenParticle::ParticleSourceData::DetailInfo* m_detail = nullptr;
 
         AZ::Data::AssetId m_materialAssetId;
-        AZ::Data::Asset<AZ::RPI::MaterialAsset> m_materialAsset;
-        AZ::Data::Asset<AZ::RPI::MaterialTypeAsset> m_materialTypeAsset;
-        AZ::RPI::MaterialTypeSourceData m_materialTypeSourceData;
+        AZ::Data::Asset<JE::Render::RPI::MaterialAsset> m_materialAsset;
+        AZ::Data::Asset<JE::Render::RPI::MaterialTypeAsset> m_materialTypeAsset;
+        JE::Render::RPI::MaterialTypeSourceData m_materialTypeSourceData;
 
         //! Ordered so the groups always appear in the same sequence between rebuilds.
         AZStd::map<AZStd::string, AtomToolsFramework::DynamicPropertyGroup> m_groups;

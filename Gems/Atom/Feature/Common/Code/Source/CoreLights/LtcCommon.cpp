@@ -6,8 +6,8 @@
  *
  */
 
-#include <Atom/RPI.Public/Image/StreamingImage.h>
-#include <Atom/RPI.Public/Shader/ShaderResourceGroup.h>
+#include <JE/Render/RPI/Public/Image/StreamingImage.h>
+#include <JE/Render/RPI/Public/Shader/ShaderResourceGroup.h>
 #include <CoreLights/LtcCommon.h>
 
 namespace AZ::Render
@@ -26,7 +26,7 @@ namespace AZ::Render
         Interface<ILtcCommon>::Unregister(this);
     }
 
-    void LtcCommon::LoadMatricesForSrg(Data::Instance<RPI::ShaderResourceGroup> srg)
+    void LtcCommon::LoadMatricesForSrg(Data::Instance<JE::Render::RPI::ShaderResourceGroup> srg)
     {
         if (!srg)
         {
@@ -41,7 +41,7 @@ namespace AZ::Render
             {
                 if (const RHI::ShaderInputImageIndex index = srg->FindShaderInputImageIndex(Name(srgName)); index.IsValid())
                 {
-                    auto streamingImageInstance = RPI::StreamingImage::FindOrCreate(asset);
+                    auto streamingImageInstance = JE::Render::RPI::StreamingImage::FindOrCreate(asset);
                     srg->SetImage(index, streamingImageInstance);
                 }
             }
@@ -53,9 +53,9 @@ namespace AZ::Render
         {
             auto& assetLoaders = m_assetLoaders[srgGuid];
             assetLoaders.reserve(2);
-            assetLoaders.emplace_back(RPI::AssetUtils::AsyncAssetLoader::Create<RPI::StreamingImageAsset>(
+            assetLoaders.emplace_back(JE::Render::RPI::AssetUtils::AsyncAssetLoader::Create<JE::Render::RPI::StreamingImageAsset>(
                 s_LtcGgxAmplificationPath, 0, AZStd::bind(callback, AZStd::placeholders::_1, "m_ltcAmplification")));
-            assetLoaders.emplace_back(RPI::AssetUtils::AsyncAssetLoader::Create<RPI::StreamingImageAsset>(
+            assetLoaders.emplace_back(JE::Render::RPI::AssetUtils::AsyncAssetLoader::Create<JE::Render::RPI::StreamingImageAsset>(
                 s_LtcGgxMatrixPath, 0, AZStd::bind(callback, AZStd::placeholders::_1, "m_ltcMatrix")));
         }
     }

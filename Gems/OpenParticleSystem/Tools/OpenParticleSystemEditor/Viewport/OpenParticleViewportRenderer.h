@@ -11,9 +11,9 @@
 #include <OpenParticleSystem/ParticleEditorRequestBus.h>
 #include <Atom/Feature/CoreLights/DirectionalLightFeatureProcessorInterface.h>
 #include <Atom/Feature/SkyBox/SkyBoxFeatureProcessorInterface.h>
-#include <Atom/RPI.Public/AuxGeom/AuxGeomDraw.h>
-#include <Atom/RPI.Public/AuxGeom/AuxGeomFeatureProcessorInterface.h>
-#include <Atom/RPI.Public/Base.h>
+#include <JE/Render/RPI/Public/AuxGeom/AuxGeomDraw.h>
+#include <JE/Render/RPI/Public/AuxGeom/AuxGeomFeatureProcessorInterface.h>
+#include <JE/Render/RPI/Public/Base.h>
 #include <AzCore/Component/TickBus.h>
 #include <AzCore/Component/TransformBus.h>
 #include <AzCore/Instance/Instance.h>
@@ -33,11 +33,16 @@ namespace AZ
     class Entity;
     class Component;
 
-    namespace RPI
-    {
+    }
+
+namespace JE::Render::RPI
+{
         class SwapChainPass;
         class WindowContext;
     }
+
+namespace AZ
+{
 }
 
 namespace OpenParticleSystemEditor
@@ -54,11 +59,11 @@ namespace OpenParticleSystemEditor
     public:
         AZ_CLASS_ALLOCATOR(OpenParticleViewportRenderer, AZ::SystemAllocator, 0);
 
-        explicit OpenParticleViewportRenderer(AZStd::shared_ptr<AZ::RPI::WindowContext> windowContext);
+        explicit OpenParticleViewportRenderer(AZStd::shared_ptr<JE::Render::RPI::WindowContext> windowContext);
         ~OpenParticleViewportRenderer();
 
         AZStd::shared_ptr<OpenParticleEditorViewportInputController> GetController();
-        AZ::RPI::ScenePtr GetScene()
+        JE::Render::RPI::ScenePtr GetScene()
         {
             return m_scene;
         }
@@ -100,12 +105,12 @@ namespace OpenParticleSystemEditor
 
         void DrawPerformanceMonitorInfo();
 
-        void DrawLine2d(AZ::RPI::AuxGeomDrawPtr auxGeomPtr, const AZ::Vector2& p1, const AZ::Vector2& p2, const AZ::Color& color, float z) const;
+        void DrawLine2d(JE::Render::RPI::AuxGeomDrawPtr auxGeomPtr, const AZ::Vector2& p1, const AZ::Vector2& p2, const AZ::Color& color, float z) const;
         void Draw2dTextLabel(float x, float y, float size, const char* text, bool center, const AZ::Color& color) const;
 
-        AZStd::shared_ptr<AZ::RPI::WindowContext> m_windowContext;
-        AZ::RPI::RenderPipelinePtr m_renderPipeline;
-        AZ::RPI::ScenePtr m_scene;
+        AZStd::shared_ptr<JE::Render::RPI::WindowContext> m_windowContext;
+        JE::Render::RPI::RenderPipelinePtr m_renderPipeline;
+        JE::Render::RPI::ScenePtr m_scene;
         AZ::Render::DirectionalLightFeatureProcessorInterface* m_directionalLightFeatureProcessor = nullptr;
 
         AZStd::unique_ptr<AzFramework::EntityContext> m_entityContext;

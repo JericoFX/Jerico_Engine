@@ -28,9 +28,9 @@
 #include <AzToolsFramework/Entity/EditorEntityContextBus.h>
 #endif // DEBUGDRAW_GEM_EDITOR
 
-#include <Atom/RPI.Public/SceneBus.h>
-#include <Atom/RPI.Public/Shader/Shader.h>
-#include <Atom/RPI.Public/Shader/ShaderResourceGroup.h>
+#include <JE/Render/RPI/Public/SceneBus.h>
+#include <JE/Render/RPI/Public/Shader/Shader.h>
+#include <JE/Render/RPI/Public/Shader/ShaderResourceGroup.h>
 #include <JE/Render/Bootstrap/BootstrapNotificationBus.h>
 #include <Atom/Feature/RayTracing/RayTracingFeatureProcessorInterface.h>
 
@@ -66,7 +66,7 @@ namespace DebugDraw
         , public AZ::EntityBus::MultiHandler
         , protected DebugDrawRequestBus::Handler
         , protected DebugDrawInternalRequestBus::Handler
-        , public AZ::RPI::SceneNotificationBus::Handler
+        , public JE::Render::RPI::SceneNotificationBus::Handler
         , public JE::Render::Bootstrap::NotificationBus::Handler
 
 #ifdef DEBUGDRAW_GEM_EDITOR
@@ -122,7 +122,7 @@ namespace DebugDraw
         void OnBeginPrepareRender() override;
 
         // JE::Render::Bootstrap::NotificationBus
-        void OnBootstrapSceneReady(AZ::RPI::Scene* scene) override;
+        void OnBootstrapSceneReady(JE::Render::RPI::Scene* scene) override;
 
         // EntityBus
         void OnEntityDeactivated(const AZ::EntityId& entityId) override;
@@ -191,7 +191,7 @@ namespace DebugDraw
 
         AZ::Render::RayTracingFeatureProcessorInterface* m_rayTracingFeatureProcessor = nullptr;
         AZ::Render::MeshFeatureProcessorInterface* m_meshFeatureProcessor = nullptr;
-        AZ::RPI::Ptr<AZ::RPI::Buffer> m_spheresRayTracingIndicesBuffer;
+        JE::Render::RPI::Ptr<JE::Render::RPI::Buffer> m_spheresRayTracingIndicesBuffer;
         AZ::Render::RayTracingFeatureProcessorInterface::ProceduralGeometryTypeHandle m_sphereRayTracingTypeHandle;
         AZ::Render::RayTracingIndexList<1> m_spheresRayTracingIndices;
         AZ::Render::RayTracingFeatureProcessorInterface::ProceduralGeometryTypeHandle m_obbRayTracingTypeHandle;

@@ -12,7 +12,7 @@
 #include <AzCore/RTTI/BehaviorContext.h>
 #include <AzCore/Serialization/EditContext.h>
 #include <AzCore/Serialization/SerializeContext.h>
-#include <Atom/RPI.Public/Scene.h>
+#include <JE/Render/RPI/Public/Scene.h>
 
 namespace AZ
 {
@@ -102,7 +102,7 @@ namespace AZ
         void DecalComponentController::Activate(EntityId entityId)
         {
             m_entityId = entityId;
-            m_featureProcessor = RPI::Scene::GetFeatureProcessorForEntity<DecalFeatureProcessorInterface>(entityId);
+            m_featureProcessor = JE::Render::RPI::Scene::GetFeatureProcessorForEntity<DecalFeatureProcessorInterface>(entityId);
             AZ_Assert(m_featureProcessor, "DecalRenderProxy was unable to find a decal FeatureProcessor on the entityId provided.");
             if (m_featureProcessor)
             {
@@ -319,7 +319,7 @@ namespace AZ
 
         void DecalComponentController::SetMaterialAssetId(Data::AssetId id)
         {
-            Data::Asset<RPI::MaterialAsset> materialAsset;
+            Data::Asset<JE::Render::RPI::MaterialAsset> materialAsset;
             materialAsset.Create(id);
 
             m_configuration.m_materialAsset = materialAsset;

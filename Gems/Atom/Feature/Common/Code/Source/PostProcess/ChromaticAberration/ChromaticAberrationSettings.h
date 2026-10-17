@@ -13,10 +13,10 @@
 #include <Atom/RHI.Reflect/ShaderResourceGroupLayoutDescriptor.h>
 
 #include <Atom/Feature/PostProcess/ChromaticAberration/ChromaticAberrationSettingsInterface.h>
-#include <Atom/RPI.Public/Image/StreamingImage.h>
+#include <JE/Render/RPI/Public/Image/StreamingImage.h>
 #include <PostProcess/PostProcessBase.h>
 
-#include <Atom/RPI.Public/View.h>
+#include <JE/Render/RPI/Public/View.h>
 
 namespace AZ
 {

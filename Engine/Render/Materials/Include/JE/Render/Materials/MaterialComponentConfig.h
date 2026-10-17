@@ -10,7 +10,7 @@
 
 #include <JE/Render/Materials/Base.h>
 
-#include <Atom/RPI.Public/Material/Material.h>
+#include <JE/Render/RPI/Public/Material/Material.h>
 #include <JE/Render/Materials/MaterialAssignment.h>
 #include <AzCore/Component/Component.h>
 

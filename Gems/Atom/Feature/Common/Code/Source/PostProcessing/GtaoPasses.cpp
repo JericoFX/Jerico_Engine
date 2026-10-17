@@ -12,9 +12,9 @@
 #include <PostProcessing/GtaoPasses.h>
 #include <AzCore/Math/MathUtils.h>
 #include <Atom/Feature/PostProcess/AmbientOcclusion/GtaoConstants.h>
-#include <Atom/RPI.Public/RenderPipeline.h>
-#include <Atom/RPI.Public/Scene.h>
-#include <Atom/RPI.Public/View.h>
+#include <JE/Render/RPI/Public/RenderPipeline.h>
+#include <JE/Render/RPI/Public/Scene.h>
+#include <JE/Render/RPI/Public/View.h>
 
 namespace AZ
 {
@@ -22,13 +22,13 @@ namespace AZ
     {
         // --- GTAO Parent Pass ---
 
-        RPI::Ptr<GtaoParentPass> GtaoParentPass::Create(const RPI::PassDescriptor& descriptor)
+        JE::Render::RPI::Ptr<GtaoParentPass> GtaoParentPass::Create(const JE::Render::RPI::PassDescriptor& descriptor)
         {
             return aznew GtaoParentPass(descriptor);
         }
 
-        GtaoParentPass::GtaoParentPass(const RPI::PassDescriptor& descriptor)
-            : RPI::ParentPass(descriptor)
+        GtaoParentPass::GtaoParentPass(const JE::Render::RPI::PassDescriptor& descriptor)
+            : JE::Render::RPI::ParentPass(descriptor)
         { }
 
         bool GtaoParentPass::IsEnabled() const
@@ -37,13 +37,13 @@ namespace AZ
             {
                 return false;
             }
-            const RPI::Scene* scene = GetScene();
+            const JE::Render::RPI::Scene* scene = GetScene();
             if (!scene)
             {
                 return false;
             }
             PostProcessFeatureProcessor* fp = scene->GetFeatureProcessor<PostProcessFeatureProcessor>();
-            const RPI::ViewPtr view = GetRenderPipeline()->GetFirstView(GetPipelineViewTag());
+            const JE::Render::RPI::ViewPtr view = GetRenderPipeline()->GetFirstView(GetPipelineViewTag());
             if (!fp)
             {
                 return true;
@@ -81,9 +81,9 @@ namespace AZ
 
         void GtaoParentPass::FrameBeginInternal(FramePrepareParams params)
         {
-            RPI::Scene* scene = GetScene();
+            JE::Render::RPI::Scene* scene = GetScene();
             PostProcessFeatureProcessor* fp = scene->GetFeatureProcessor<PostProcessFeatureProcessor>();
-            AZ::RPI::ViewPtr view = m_pipeline->GetFirstView(GetPipelineViewTag());
+            JE::Render::RPI::ViewPtr view = m_pipeline->GetFirstView(GetPipelineViewTag());
             if (fp)
             {
                 PostProcessSettings* postProcessSettings = fp->GetLevelSettingsFromView(view);
@@ -118,13 +118,13 @@ namespace AZ
 
         // --- GTAO Compute Pass ---
 
-        RPI::Ptr<GtaoComputePass> GtaoComputePass::Create(const RPI::PassDescriptor& descriptor)
+        JE::Render::RPI::Ptr<GtaoComputePass> GtaoComputePass::Create(const JE::Render::RPI::PassDescriptor& descriptor)
         {
             return aznew GtaoComputePass(descriptor);
         }
 
-        GtaoComputePass::GtaoComputePass(const RPI::PassDescriptor& descriptor)
-            : RPI::ComputePass(descriptor)
+        GtaoComputePass::GtaoComputePass(const JE::Render::RPI::PassDescriptor& descriptor)
+            : JE::Render::RPI::ComputePass(descriptor)
         { }
 
         void GtaoComputePass::InitializeInternal()
@@ -138,13 +138,13 @@ namespace AZ
         {
             AZ_Assert(m_shader != nullptr, "GtaoComputePass %s has a null shader when calling InitializeShaderVariant.", GetPathName().GetCStr());
 
-            AZStd::vector<RPI::ShaderOptionValue> options =
+            AZStd::vector<JE::Render::RPI::ShaderOptionValue> options =
             {
-                RPI::ShaderOptionValue(Ao::GtaoQualityLevel::SuperLow),
-                RPI::ShaderOptionValue(Ao::GtaoQualityLevel::Low),
-                RPI::ShaderOptionValue(Ao::GtaoQualityLevel::Medium),
-                RPI::ShaderOptionValue(Ao::GtaoQualityLevel::High),
-                RPI::ShaderOptionValue(Ao::GtaoQualityLevel::SuperHigh),
+                JE::Render::RPI::ShaderOptionValue(Ao::GtaoQualityLevel::SuperLow),
+                JE::Render::RPI::ShaderOptionValue(Ao::GtaoQualityLevel::Low),
+                JE::Render::RPI::ShaderOptionValue(Ao::GtaoQualityLevel::Medium),
+                JE::Render::RPI::ShaderOptionValue(Ao::GtaoQualityLevel::High),
+                JE::Render::RPI::ShaderOptionValue(Ao::GtaoQualityLevel::SuperHigh),
             };
 
             // Caching all pipeline state for each shader variation for performance reason.
@@ -202,9 +202,9 @@ namespace AZ
 
             } gtaoConstants{};
 
-            RPI::Scene* scene = GetScene();
+            JE::Render::RPI::Scene* scene = GetScene();
             PostProcessFeatureProcessor* fp = scene->GetFeatureProcessor<PostProcessFeatureProcessor>();
-            AZ::RPI::ViewPtr view = m_pipeline->GetFirstView(GetPipelineViewTag());
+            JE::Render::RPI::ViewPtr view = m_pipeline->GetFirstView(GetPipelineViewTag());
             if (fp)
             {
                 PostProcessSettings* postProcessSettings = fp->GetLevelSettingsFromView(view);
@@ -232,7 +232,7 @@ namespace AZ
             }
 
             AZ_Assert(GetOutputCount() > 0, "GtaoComputePass: No output bindings!");
-            RPI::PassAttachment* outputAttachment = GetOutputBinding(0).GetAttachment().get();
+            JE::Render::RPI::PassAttachment* outputAttachment = GetOutputBinding(0).GetAttachment().get();
 
             AZ_Assert(outputAttachment != nullptr, "GtaoComputePass: Output binding has no attachment!");
             RHI::Size size = outputAttachment->m_descriptor.m_image.m_size;
@@ -252,7 +252,7 @@ namespace AZ
 
             m_shaderResourceGroup->SetConstant(m_constantsIndex, gtaoConstants);
 
-            RPI::ComputePass::FrameBeginInternal(params);
+            JE::Render::RPI::ComputePass::FrameBeginInternal(params);
         }
 
         void GtaoComputePass::CompileResources(const RHI::FrameGraphCompileContext& context)
@@ -274,7 +274,7 @@ namespace AZ
 
             auto shaderOption = m_shader->CreateShaderOptionGroup();
             // Decide which shader to use.
-            shaderOption.SetValue(m_qualityLevelShaderVariantOptionName, RPI::ShaderOptionValue(m_qualityLevel));
+            shaderOption.SetValue(m_qualityLevelShaderVariantOptionName, JE::Render::RPI::ShaderOptionValue(m_qualityLevel));
 
             UpdateShaderVariant(shaderOption);
 

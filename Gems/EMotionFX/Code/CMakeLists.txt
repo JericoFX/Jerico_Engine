@@ -33,7 +33,7 @@ ly_add_target(
             AZ::AzFramework
             Legacy::CryCommon
         PUBLIC
-            Gem::Atom_RPI.Public
+            JE::RenderIntegration
             Gem::CommonFeaturesAtom.Static
             JE::RenderMaterials
             Gem::LmbrCentral

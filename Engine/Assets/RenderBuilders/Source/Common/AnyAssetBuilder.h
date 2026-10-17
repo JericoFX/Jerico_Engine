@@ -11,7 +11,7 @@
 #include <AssetBuilderSDK/AssetBuilderBusses.h>
 #include <AssetBuilderSDK/AssetBuilderSDK.h>
 
-namespace AZ::RPI
+namespace JE::Render::RPI
 {
     class AnyAsset;
 }

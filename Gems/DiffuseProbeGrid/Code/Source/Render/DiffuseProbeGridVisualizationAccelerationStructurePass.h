@@ -8,8 +8,8 @@
 #pragma once
 
 #include <Atom/RHI/ScopeProducer.h>
-#include <Atom/RPI.Public/Pass/Pass.h>
-#include <Atom/RPI.Public/Buffer/Buffer.h>
+#include <JE/Render/RPI/Public/Pass/Pass.h>
+#include <JE/Render/RPI/Public/Buffer/Buffer.h>
 #include <Atom/RHI/RayTracingBufferPools.h>
 
 namespace AZ
@@ -20,7 +20,7 @@ namespace AZ
 
         //! This pass builds the DiffuseProbeGrid visualization acceleration structure
         class DiffuseProbeGridVisualizationAccelerationStructurePass final
-            : public RPI::Pass
+            : public JE::Render::RPI::Pass
             , public RHI::ScopeProducer
         {
         public:
@@ -30,12 +30,12 @@ namespace AZ
             AZ_CLASS_ALLOCATOR(DiffuseProbeGridVisualizationAccelerationStructurePass, SystemAllocator);
 
             //! Creates a DiffuseProbeGridVisualizationAccelerationStructurePass
-            static RPI::Ptr<DiffuseProbeGridVisualizationAccelerationStructurePass> Create(const RPI::PassDescriptor& descriptor);
+            static JE::Render::RPI::Ptr<DiffuseProbeGridVisualizationAccelerationStructurePass> Create(const JE::Render::RPI::PassDescriptor& descriptor);
 
             ~DiffuseProbeGridVisualizationAccelerationStructurePass() = default;
 
         private:
-            explicit DiffuseProbeGridVisualizationAccelerationStructurePass(const RPI::PassDescriptor& descriptor);
+            explicit DiffuseProbeGridVisualizationAccelerationStructurePass(const JE::Render::RPI::PassDescriptor& descriptor);
 
             bool ShouldUpdate(const AZStd::shared_ptr<DiffuseProbeGrid>& diffuseProbeGrid) const;
 

@@ -23,23 +23,23 @@
 
 #include <AzCore/Memory/SystemAllocator.h>
 #include <Atom/RHI/ShaderResourceGroup.h>
-#include <Atom/RPI.Public/Pass/FullscreenTrianglePass.h>
+#include <JE/Render/RPI/Public/Pass/FullscreenTrianglePass.h>
 
 namespace ${GemName}
 {
     class ${Name}Pass
-        : public AZ::RPI::FullscreenTrianglePass
+        : public JE::Render::RPI::FullscreenTrianglePass
     {
     public:
-        AZ_RTTI(${GemName}::${SanitizedCppName}Pass, "{${Random_Uuid}}", AZ::RPI::FullscreenTrianglePass);
+        AZ_RTTI(${GemName}::${SanitizedCppName}Pass, "{${Random_Uuid}}", JE::Render::RPI::FullscreenTrianglePass);
         AZ_CLASS_ALLOCATOR(${SanitizedCppName}Pass, AZ::SystemAllocator);
 
-        static AZ::RPI::Ptr<${SanitizedCppName}Pass> Create(const AZ::RPI::PassDescriptor& descriptor);
+        static JE::Render::RPI::Ptr<${SanitizedCppName}Pass> Create(const JE::Render::RPI::PassDescriptor& descriptor);
 
         ~${SanitizedCppName}Pass() override = default;
 
     protected:
-        explicit ${SanitizedCppName}Pass(const AZ::RPI::PassDescriptor& descriptor);
+        explicit ${SanitizedCppName}Pass(const JE::Render::RPI::PassDescriptor& descriptor);
 
         void InitializeInternal() override;
         void FrameBeginInternal(FramePrepareParams params) override;

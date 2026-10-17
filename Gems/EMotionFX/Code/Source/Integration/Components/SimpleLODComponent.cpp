@@ -22,8 +22,8 @@
 
 #include <MathConversion.h>
 
-#include <Atom/RPI.Public/ViewportContext.h>
-#include <Atom/RPI.Public/ViewportContextBus.h>
+#include <JE/Render/RPI/Public/ViewportContext.h>
+#include <JE/Render/RPI/Public/ViewportContextBus.h>
 
 namespace EMotionFX
 {
@@ -231,13 +231,13 @@ namespace EMotionFX
                 AZ::TransformBus::EventResult(worldTransform, entityId, &AZ::TransformBus::Events::GetWorldTM);
                 const AZ::Vector3& worldPos = worldTransform.GetTranslation();
 
-                auto viewportContextManager = AZ::Interface<AZ::RPI::ViewportContextRequestsInterface>::Get();
+                auto viewportContextManager = AZ::Interface<JE::Render::RPI::ViewportContextRequestsInterface>::Get();
                 if (!viewportContextManager)
                 {
                     return;
                 }
 
-                AZ::RPI::ViewportContextPtr defaultViewportContext =
+                JE::Render::RPI::ViewportContextPtr defaultViewportContext =
                     viewportContextManager->GetViewportContextByName(viewportContextManager->GetDefaultViewportContextName());
                 if (!defaultViewportContext)
                 {
@@ -263,7 +263,7 @@ namespace EMotionFX
                 // The simple LOD component overrides the mesh LOD level and syncs the skeleton with the mesh LOD level.
                 AZ::Render::MeshComponentRequestBus::Event(entityId,
                     &AZ::Render::MeshComponentRequestBus::Events::SetLodType,
-                    AZ::RPI::Cullable::LodType::SpecificLod);
+                    JE::Render::RPI::Cullable::LodType::SpecificLod);
 
                 // When setting the actor instance LOD level, a change is just requested and with the next update it will get applied.
                 // This means that the current LOD level might differ from the requested one. We need to sync the Atom LOD level with the
@@ -272,7 +272,7 @@ namespace EMotionFX
                 const size_t currentLod = actorInstance->GetLODLevel();
                 AZ::Render::MeshComponentRequestBus::Event(entityId,
                     &AZ::Render::MeshComponentRequestBus::Events::SetLodOverride,
-                    static_cast<AZ::RPI::Cullable::LodOverride>(currentLod));
+                    static_cast<JE::Render::RPI::Cullable::LodOverride>(currentLod));
             }
         }
     } // namespace integration

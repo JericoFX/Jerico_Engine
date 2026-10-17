@@ -7,9 +7,9 @@
  */
 #pragma once
 
-#include <Atom/RPI.Public/Pass/ComputePass.h>
-#include <Atom/RPI.Public/Pass/FullscreenTrianglePass.h>
-#include <Atom/RPI.Public/Pass/ParentPass.h>
+#include <JE/Render/RPI/Public/Pass/ComputePass.h>
+#include <JE/Render/RPI/Public/Pass/FullscreenTrianglePass.h>
+#include <JE/Render/RPI/Public/Pass/ParentPass.h>
 
 #include <PostProcessing/PostProcessingShaderOptionBase.h>
 
@@ -44,16 +44,16 @@ namespace AZ
         //! Main updates the view srg via the depth of field settings
         //! And enables/disables all depth of field passes based on component activation
         class NewDepthOfFieldParentPass final
-            : public RPI::ParentPass
+            : public JE::Render::RPI::ParentPass
         {
             AZ_RPI_PASS(NewDepthOfFieldParentPass);
 
         public:
-            AZ_RTTI(AZ::Render::NewDepthOfFieldParentPass, "{71F4998B-447C-4BAC-A5BE-2D2850FABB57}", AZ::RPI::ParentPass);
+            AZ_RTTI(AZ::Render::NewDepthOfFieldParentPass, "{71F4998B-447C-4BAC-A5BE-2D2850FABB57}", JE::Render::RPI::ParentPass);
             AZ_CLASS_ALLOCATOR(NewDepthOfFieldParentPass, SystemAllocator);
             virtual ~NewDepthOfFieldParentPass() = default;
 
-            static RPI::Ptr<NewDepthOfFieldParentPass> Create(const RPI::PassDescriptor& descriptor);
+            static JE::Render::RPI::Ptr<NewDepthOfFieldParentPass> Create(const JE::Render::RPI::PassDescriptor& descriptor);
 
             bool IsEnabled() const override;
 
@@ -62,29 +62,29 @@ namespace AZ
             void FrameBeginInternal(FramePrepareParams params) override;
 
         private:
-            NewDepthOfFieldParentPass(const RPI::PassDescriptor& descriptor);
+            NewDepthOfFieldParentPass(const JE::Render::RPI::PassDescriptor& descriptor);
         };
 
 
         //! Need a class for the tile reduce pass because it dispatches a non-trivial number of threads
         class NewDepthOfFieldTileReducePass final
-            : public RPI::ComputePass
+            : public JE::Render::RPI::ComputePass
         {
             AZ_RPI_PASS(NewDepthOfFieldTileReducePass);
 
         public:
-            AZ_RTTI(AZ::Render::NewDepthOfFieldTileReducePass, "{2E072695-0847-43A6-9BE4-D6D85CFFBA41}", AZ::RPI::ComputePass);
+            AZ_RTTI(AZ::Render::NewDepthOfFieldTileReducePass, "{2E072695-0847-43A6-9BE4-D6D85CFFBA41}", JE::Render::RPI::ComputePass);
             AZ_CLASS_ALLOCATOR(NewDepthOfFieldTileReducePass, SystemAllocator);
             virtual ~NewDepthOfFieldTileReducePass() = default;
 
-            static RPI::Ptr<NewDepthOfFieldTileReducePass> Create(const RPI::PassDescriptor& descriptor);
+            static JE::Render::RPI::Ptr<NewDepthOfFieldTileReducePass> Create(const JE::Render::RPI::PassDescriptor& descriptor);
 
         protected:
             // Behavior functions override...
             void FrameBeginInternal(FramePrepareParams params) override;
 
         private:
-            NewDepthOfFieldTileReducePass(const RPI::PassDescriptor& descriptor);
+            NewDepthOfFieldTileReducePass(const JE::Render::RPI::PassDescriptor& descriptor);
         };
 
 
@@ -92,23 +92,23 @@ namespace AZ
         //! This class is used for both the large filter and the small filter
         //! It's main purpose is calculating the sample positions and setting srg constants
         class NewDepthOfFieldFilterPass final
-            : public RPI::FullscreenTrianglePass
+            : public JE::Render::RPI::FullscreenTrianglePass
         {
             AZ_RPI_PASS(NewDepthOfFieldFilterPass);
 
         public:
-            AZ_RTTI(AZ::Render::NewDepthOfFieldFilterPass, "{F8A98E53-1A50-4178-A6EB-2BD0148C038B}", AZ::RPI::FullscreenTrianglePass);
+            AZ_RTTI(AZ::Render::NewDepthOfFieldFilterPass, "{F8A98E53-1A50-4178-A6EB-2BD0148C038B}", JE::Render::RPI::FullscreenTrianglePass);
             AZ_CLASS_ALLOCATOR(NewDepthOfFieldFilterPass, SystemAllocator);
             virtual ~NewDepthOfFieldFilterPass() = default;
 
-            static RPI::Ptr<NewDepthOfFieldFilterPass> Create(const RPI::PassDescriptor& descriptor);
+            static JE::Render::RPI::Ptr<NewDepthOfFieldFilterPass> Create(const JE::Render::RPI::PassDescriptor& descriptor);
 
         protected:
             // Behavior functions override...
             void FrameBeginInternal(FramePrepareParams params) override;
 
         private:
-            NewDepthOfFieldFilterPass(const RPI::PassDescriptor& descriptor);
+            NewDepthOfFieldFilterPass(const JE::Render::RPI::PassDescriptor& descriptor);
 
             // SRG binding indices...
             AZ::RHI::ShaderInputNameIndex m_constantsIndex = "m_dofConstants";

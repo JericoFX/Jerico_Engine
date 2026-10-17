@@ -7,23 +7,23 @@
  */
 #pragma once
 
-#include <Atom/RPI.Public/Pass/ComputePass.h>
+#include <JE/Render/RPI/Public/Pass/ComputePass.h>
 
 namespace AZ
 {
     namespace Render
     {
         // Class for controlling Vignette effect
-        class VignettePass final : public RPI::ComputePass
+        class VignettePass final : public JE::Render::RPI::ComputePass
         {
             AZ_RPI_PASS(VignettePass);
 
         public:
-            AZ_RTTI(VignettePass, "{69228453-67F9-473D-ACD6-FA712A23FD23}", AZ::RPI::ComputePass);
+            AZ_RTTI(VignettePass, "{69228453-67F9-473D-ACD6-FA712A23FD23}", JE::Render::RPI::ComputePass);
             AZ_CLASS_ALLOCATOR(VignettePass, SystemAllocator, 0);
 
             ~VignettePass() = default;
-            static RPI::Ptr<VignettePass> Create(const RPI::PassDescriptor& descriptor);
+            static JE::Render::RPI::Ptr<VignettePass> Create(const JE::Render::RPI::PassDescriptor& descriptor);
 
             bool IsEnabled() const override;
 
@@ -32,7 +32,7 @@ namespace AZ
             void FrameBeginInternal(FramePrepareParams params) override;
 
         private:
-            VignettePass(const RPI::PassDescriptor& descriptor);
+            VignettePass(const JE::Render::RPI::PassDescriptor& descriptor);
 
             AZ::RHI::ShaderInputNameIndex m_constantsIndex = "m_constants";
         };

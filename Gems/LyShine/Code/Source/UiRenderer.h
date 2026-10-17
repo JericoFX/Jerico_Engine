@@ -7,9 +7,9 @@
  */
 #pragma once
 
-#include <Atom/RPI.Public/DynamicDraw/DynamicDrawContext.h>
-#include <Atom/RPI.Public/WindowContext.h>
-#include <Atom/RPI.Public/ViewportContext.h>
+#include <JE/Render/RPI/Public/DynamicDraw/DynamicDrawContext.h>
+#include <JE/Render/RPI/Public/WindowContext.h>
+#include <JE/Render/RPI/Public/ViewportContext.h>
 #include <Atom/RHI.Reflect/RenderStates.h>
 #include <JE/Render/Bootstrap/BootstrapNotificationBus.h>
 
@@ -32,10 +32,10 @@ public: // types
         AZ::RHI::ShaderInputConstantIndex m_viewProjInputIndex;
         AZ::RHI::ShaderInputConstantIndex m_isClampInputIndex;
 
-        AZ::RPI::ShaderVariantId m_shaderVariantTextureLinear;
-        AZ::RPI::ShaderVariantId m_shaderVariantTextureSrgb;
-        AZ::RPI::ShaderVariantId m_shaderVariantAlphaTestMask;
-        AZ::RPI::ShaderVariantId m_shaderVariantGradientMask;
+        JE::Render::RPI::ShaderVariantId m_shaderVariantTextureLinear;
+        JE::Render::RPI::ShaderVariantId m_shaderVariantTextureSrgb;
+        JE::Render::RPI::ShaderVariantId m_shaderVariantAlphaTestMask;
+        JE::Render::RPI::ShaderVariantId m_shaderVariantGradientMask;
     };
 
     // Base state
@@ -71,7 +71,7 @@ public: // types
 public: // member functions
 
     //! Constructor, constructed by the LyShine class
-    UiRenderer(AZ::RPI::ViewportContextPtr viewportContext = nullptr);
+    UiRenderer(JE::Render::RPI::ViewportContextPtr viewportContext = nullptr);
     ~UiRenderer();
 
     //! Returns whether RPI has loaded all its assets and is ready to render
@@ -90,9 +90,9 @@ public: // member functions
     void EndCanvasRender();
 
     //! Return the dynamic draw context associated with this UI renderer
-    AZ::RHI::Ptr<AZ::RPI::DynamicDrawContext> GetDynamicDrawContext();
+    AZ::RHI::Ptr<JE::Render::RPI::DynamicDrawContext> GetDynamicDrawContext();
 
-    AZ::RHI::Ptr<AZ::RPI::DynamicDrawContext> CreateDynamicDrawContextForRTT(const AZStd::string& rttName);
+    AZ::RHI::Ptr<JE::Render::RPI::DynamicDrawContext> CreateDynamicDrawContextForRTT(const AZStd::string& rttName);
 
     //! Return the shader data for the ui shader
     const UiShaderData& GetUiShaderData();
@@ -110,7 +110,7 @@ public: // member functions
     void SetBaseState(BaseState state);
 
     //! Get the shader variant based on current render properties
-    AZ::RPI::ShaderVariantId GetCurrentShaderVariant();
+    JE::Render::RPI::ShaderVariantId GetCurrentShaderVariant();
 
     //! Get the current stencil test reference value
     uint32_t GetStencilRef();
@@ -125,7 +125,7 @@ public: // member functions
     void DecrementStencilRef();
 
     //! Return the viewport context set by the user, or the default if not set
-    AZStd::shared_ptr<AZ::RPI::ViewportContext> GetViewportContext();
+    AZStd::shared_ptr<JE::Render::RPI::ViewportContext> GetViewportContext();
 
 #ifndef _RELEASE
     //! Setup to record debug texture data before rendering
@@ -135,7 +135,7 @@ public: // member functions
     void DebugDisplayTextureData(int recordingOption);
 
     //! Track textures being used in the current frame
-    void DebugUseTexture(AZ::Data::Instance<AZ::RPI::Image> image);
+    void DebugUseTexture(AZ::Data::Instance<JE::Render::RPI::Image> image);
 #endif
 
 private: // member functions
@@ -143,21 +143,21 @@ private: // member functions
     AZ_DISABLE_COPY_MOVE(UiRenderer);
 
     // JE::Render::Bootstrap::Notification
-    void OnBootstrapSceneReady(AZ::RPI::Scene* bootstrapScene) override;
+    void OnBootstrapSceneReady(JE::Render::RPI::Scene* bootstrapScene) override;
     // ~JE::Render::Bootstrap::Notification
 
     //! Create a scene for the user defined viewportContext
-    AZ::RPI::ScenePtr CreateScene(AZStd::shared_ptr<AZ::RPI::ViewportContext> viewportContext);
+    JE::Render::RPI::ScenePtr CreateScene(AZStd::shared_ptr<JE::Render::RPI::ViewportContext> viewportContext);
 
     //! Create a dynamic draw context for this renderer
-    AZ::RHI::Ptr<AZ::RPI::DynamicDrawContext> CreateDynamicDrawContext(
-        AZ::Data::Instance<AZ::RPI::Shader> uiShader);
+    AZ::RHI::Ptr<JE::Render::RPI::DynamicDrawContext> CreateDynamicDrawContext(
+        AZ::Data::Instance<JE::Render::RPI::Shader> uiShader);
 
     //! Bind the global white texture for all the texture units we use
     void BindNullTexture();
 
     //! Store shader data for later use
-    void CacheShaderData(const AZ::RHI::Ptr<AZ::RPI::DynamicDrawContext>& dynamicDraw);
+    void CacheShaderData(const AZ::RHI::Ptr<JE::Render::RPI::DynamicDrawContext>& dynamicDraw);
 
 protected: // attributes
 
@@ -167,17 +167,17 @@ protected: // attributes
     uint32_t m_stencilRef = 0;
 
     UiShaderData m_uiShaderData;
-    AZ::RHI::Ptr<AZ::RPI::DynamicDrawContext> m_dynamicDraw;
+    AZ::RHI::Ptr<JE::Render::RPI::DynamicDrawContext> m_dynamicDraw;
     bool m_isRPIReady = false;
 
     // Set by user when viewport context is not the main/default viewport
-    AZStd::shared_ptr<AZ::RPI::ViewportContext> m_viewportContext;
+    AZStd::shared_ptr<JE::Render::RPI::ViewportContext> m_viewportContext;
 
-    AZ::RPI::ScenePtr m_ownedScene;
-    AZ::RPI::Scene* m_scene = nullptr;
+    JE::Render::RPI::ScenePtr m_ownedScene;
+    JE::Render::RPI::Scene* m_scene = nullptr;
 
 #ifndef _RELEASE
     int m_debugTextureDataRecordLevel = 0;
-    AZStd::unordered_set<AZ::Data::Instance<AZ::RPI::Image>> m_texturesUsedInFrame;
+    AZStd::unordered_set<AZ::Data::Instance<JE::Render::RPI::Image>> m_texturesUsedInFrame;
 #endif
 };

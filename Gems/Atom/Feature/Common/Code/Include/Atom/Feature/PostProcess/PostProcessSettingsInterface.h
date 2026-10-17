@@ -22,7 +22,7 @@
 #include <Atom/Feature/PostProcess/LookModification/LookModificationSettingsInterface.h>
 #include <Atom/Feature/PostProcess/ColorGrading/HDRColorGradingSettingsInterface.h>
 #include <Atom/Feature/ScreenSpace/DeferredFogSettingsInterface.h>
-#include <Atom/RPI.Public/View.h>
+#include <JE/Render/RPI/Public/View.h>
 
 namespace AZ
 {
@@ -34,7 +34,7 @@ namespace AZ
         public:
             AZ_RTTI(AZ::Render::PostProcessSettingsInterface, "{22949C39-B56B-4920-94FA-6FDFA8273A2C}");
 
-            using ViewBlendWeightMap = AZStd::unordered_map<AZ::RPI::View*, float>;
+            using ViewBlendWeightMap = AZStd::unordered_map<JE::Render::RPI::View*, float>;
 
             static constexpr float defaultBlendWeight = 1.0f;
 

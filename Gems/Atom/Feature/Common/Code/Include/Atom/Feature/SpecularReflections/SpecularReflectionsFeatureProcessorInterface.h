@@ -9,7 +9,7 @@
 #pragma once
 
 #include <AzCore/base.h>
-#include <Atom/RPI.Public/FeatureProcessor.h>
+#include <JE/Render/RPI/Public/FeatureProcessor.h>
 
 namespace AZ
 {
@@ -75,10 +75,10 @@ namespace AZ
 
         //! The SpecularReflectionsFeatureProcessorInterface provides an interface to the feature processor for code outside of Atom.
         class SpecularReflectionsFeatureProcessorInterface
-            : public RPI::FeatureProcessor
+            : public JE::Render::RPI::FeatureProcessor
         {
         public:
-            AZ_RTTI(AZ::Render::SpecularReflectionsFeatureProcessorInterface, "{DF5BFC4B-B29B-4A47-A2A2-D566617B4153}", AZ::RPI::FeatureProcessor);
+            AZ_RTTI(AZ::Render::SpecularReflectionsFeatureProcessorInterface, "{DF5BFC4B-B29B-4A47-A2A2-D566617B4153}", JE::Render::RPI::FeatureProcessor);
 
             virtual void SetSSROptions(const SSROptions& ssrOptions) = 0;
             virtual const SSROptions& GetSSROptions() const = 0;

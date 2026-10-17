@@ -12,9 +12,9 @@
 
 #include <Atom/RHI/Factory.h>
 #include <Atom/RHI/RHISystemInterface.h>
-#include <Atom/RPI.Public/Image/ImageSystemInterface.h>
-#include <Atom/RPI.Public/Image/StreamingImagePool.h>
-#include <Atom/RPI.Reflect/Asset/AssetUtils.h>
+#include <JE/Render/RPI/Public/Image/ImageSystemInterface.h>
+#include <JE/Render/RPI/Public/Image/StreamingImagePool.h>
+#include <JE/Render/RPI/Reflect/Asset/AssetUtils.h>
 
 #include <AzCore/Debug/Trace.h>
 
@@ -237,7 +237,7 @@ namespace AZ::Render
 
     void AcesDisplayMapperFeatureProcessor::GetLutFromAssetLocation(DisplayMapperAssetLut& displayMapperAssetLut, const AZStd::string& assetPath)
     {
-        Data::AssetId assetId = RPI::AssetUtils::GetAssetIdForProductPath(assetPath.c_str(), RPI::AssetUtils::TraceLevel::Error);
+        Data::AssetId assetId = JE::Render::RPI::AssetUtils::GetAssetIdForProductPath(assetPath.c_str(), JE::Render::RPI::AssetUtils::TraceLevel::Error);
         GetLutFromAssetId(displayMapperAssetLut, assetId);
     }
 
@@ -257,8 +257,8 @@ namespace AZ::Render
         }
 
         // Read the lut which is a .3dl file embedded within an azasset file.
-        Data::Asset<RPI::AnyAsset> asset = RPI::AssetUtils::LoadAssetById<RPI::AnyAsset>(assetId, RPI::AssetUtils::TraceLevel::Error);
-        const LookupTableAsset* lutAsset = RPI::GetDataFromAnyAsset<LookupTableAsset>(asset);
+        Data::Asset<JE::Render::RPI::AnyAsset> asset = JE::Render::RPI::AssetUtils::LoadAssetById<JE::Render::RPI::AnyAsset>(assetId, JE::Render::RPI::AssetUtils::TraceLevel::Error);
+        const LookupTableAsset* lutAsset = JE::Render::RPI::GetDataFromAnyAsset<LookupTableAsset>(asset);
 
         if (lutAsset == nullptr)
         {
@@ -322,7 +322,7 @@ namespace AZ::Render
 
         asset.Release();
 
-        Data::Instance<RPI::StreamingImagePool> streamingImagePool = RPI::ImageSystemInterface::Get()->GetSystemStreamingPool();
+        Data::Instance<JE::Render::RPI::StreamingImagePool> streamingImagePool = JE::Render::RPI::ImageSystemInterface::Get()->GetSystemStreamingPool();
 
         RHI::Size imageSize;
         imageSize.m_width = static_cast<uint32_t>(lutSize);
@@ -330,7 +330,7 @@ namespace AZ::Render
         imageSize.m_depth = static_cast<uint32_t>(lutSize);
         size_t imageDataSize = bytesPerSlice * lutSize;
 
-        Data::Instance<RPI::StreamingImage> lutStreamingImage = RPI::StreamingImage::CreateFromCpuData(
+        Data::Instance<JE::Render::RPI::StreamingImage> lutStreamingImage = JE::Render::RPI::StreamingImage::CreateFromCpuData(
             *streamingImagePool, RHI::ImageDimension::Image3D, imageSize, LutFormat, u16Buffer.data(), imageDataSize);
 
         AZ_Error("AcesDisplayMapperFeatureProcessor", lutStreamingImage, "Failed to initialize the lut assetId %s.", assetId.ToString<AZStd::string>().c_str());

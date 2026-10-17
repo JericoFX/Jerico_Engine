@@ -182,10 +182,10 @@ bool UiCanvasOnMeshComponent::CalculateUVFromRayIntersection(const AzFramework::
     outUv = AZ::Vector2(0.0f);
 
     // Make sure we can get the model asset
-    AZ::Data::Asset<AZ::RPI::ModelAsset> modelAsset;
+    AZ::Data::Asset<JE::Render::RPI::ModelAsset> modelAsset;
     AZ::Render::MeshComponentRequestBus::EventResult(
         modelAsset, GetEntityId(), &AZ::Render::MeshComponentRequestBus::Events::GetModelAsset);
-    AZ::RPI::ModelAsset* asset = modelAsset.Get();
+    JE::Render::RPI::ModelAsset* asset = modelAsset.Get();
     if (!asset)
     {
         return false;
@@ -216,16 +216,16 @@ bool UiCanvasOnMeshComponent::CalculateUVFromRayIntersection(const AzFramework::
     }
 
     auto meshes = lods[0]->GetMeshes();
-    for (const AZ::RPI::ModelLodAsset::Mesh& mesh : meshes)
+    for (const JE::Render::RPI::ModelLodAsset::Mesh& mesh : meshes)
     {
         // Find position and UV semantics
         static const AZ::Name positionName = AZ::Name::FromStringLiteral("POSITION", AZ::Interface<AZ::NameDictionary>::Get());
         static const AZ::Name uvName = AZ::Name::FromStringLiteral("UV", AZ::Interface<AZ::NameDictionary>::Get());
         auto streamBufferList = mesh.GetStreamBufferInfoList();
-        const AZ::RPI::ModelLodAsset::Mesh::StreamBufferInfo* positionBuffer = nullptr;
-        const AZ::RPI::ModelLodAsset::Mesh::StreamBufferInfo* uvBuffer = nullptr;
+        const JE::Render::RPI::ModelLodAsset::Mesh::StreamBufferInfo* positionBuffer = nullptr;
+        const JE::Render::RPI::ModelLodAsset::Mesh::StreamBufferInfo* uvBuffer = nullptr;
 
-        for (const AZ::RPI::ModelLodAsset::Mesh::StreamBufferInfo& bufferInfo : streamBufferList)
+        for (const JE::Render::RPI::ModelLodAsset::Mesh::StreamBufferInfo& bufferInfo : streamBufferList)
         {
             if (bufferInfo.m_semantic.m_name == positionName)
             {

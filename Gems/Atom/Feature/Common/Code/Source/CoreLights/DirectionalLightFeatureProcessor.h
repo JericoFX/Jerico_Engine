@@ -14,18 +14,23 @@
 #include <Atom/Feature/Utils/IndexedDataVector.h>
 #include <Atom/Feature/CoreLights/DirectionalLightFeatureProcessorInterface.h>
 #include <Atom/Feature/CoreLights/DirectionalLightShadowNotificationBus.h>
-#include <Atom/RPI.Public/AuxGeom/AuxGeomFeatureProcessorInterface.h>
-#include <Atom/RPI.Public/Buffer/Buffer.h>
+#include <JE/Render/RPI/Public/AuxGeom/AuxGeomFeatureProcessorInterface.h>
+#include <JE/Render/RPI/Public/Buffer/Buffer.h>
 #include <AzCore/Math/Aabb.h>
 #include <AzCore/std/containers/vector.h>
 #include <AzCore/std/containers/unordered_map.h>
 
 namespace AZ
 {
-    namespace RPI
-    {
+    }
+
+namespace JE::Render::RPI
+{
         class ParentPass;
     }
+
+namespace AZ
+{
 
     namespace Render
     {
@@ -126,10 +131,10 @@ namespace AZ
             struct CascadeSegment
             {
                 // Pipeline view tag of the segment of view frustum
-                RPI::PipelineViewTag m_pipelineViewTag;
+                JE::Render::RPI::PipelineViewTag m_pipelineViewTag;
 
                 // Transient view of the segment of view frustum
-                RPI::ViewPtr m_view;
+                JE::Render::RPI::ViewPtr m_view;
 
                 // AABB of the segment of view frustum
                 Aabb m_aabb;
@@ -142,13 +147,13 @@ namespace AZ
             {
                 // Cascade segment specific properties.
                 // Key of the map is the default view (camera view) of the render pipeline.
-                AZStd::unordered_map<const RPI::View*, AZStd::fixed_vector<CascadeSegment, Shadow::MaxNumberOfCascades>> m_segments;
+                AZStd::unordered_map<const JE::Render::RPI::View*, AZStd::fixed_vector<CascadeSegment, Shadow::MaxNumberOfCascades>> m_segments;
 
                 // Default far depth of each cascade.
                 AZStd::array<float, Shadow::MaxNumberOfCascades> m_defaultFarDepths;
 
                 // Configuration offers shape of the camera view frustum for each camera view.
-                AZStd::unordered_map<const RPI::View*, CascadeShadowCameraConfiguration> m_cameraConfigurations;
+                AZStd::unordered_map<const JE::Render::RPI::View*, CascadeShadowCameraConfiguration> m_cameraConfigurations;
 
                 // Shadow specific depth far.
                 float m_shadowDepthFar = FLT_MAX;
@@ -212,7 +217,7 @@ namespace AZ
             void Activate() override;
             void Deactivate() override;
             void Simulate(const SimulatePacket& packet) override;
-            void PrepareViews(const PrepareViewsPacket&, AZStd::vector<AZStd::pair<RPI::PipelineViewTag, RPI::ViewPtr>>&) override;
+            void PrepareViews(const PrepareViewsPacket&, AZStd::vector<AZStd::pair<JE::Render::RPI::PipelineViewTag, JE::Render::RPI::ViewPtr>>&) override;
             void Render(const RenderPacket& packet) override;
 
             // DirectionalLightFeatureProcessorInterface overrides...
@@ -230,12 +235,12 @@ namespace AZ
             void SetCameraConfiguration(
                 LightHandle handle,
                 const Camera::Configuration& cameraConfiguration,
-                const RPI::RenderPipelineId& renderPipelineId = RPI::RenderPipelineId()) override;
+                const JE::Render::RPI::RenderPipelineId& renderPipelineId = JE::Render::RPI::RenderPipelineId()) override;
             void SetShadowFarClipDistance(LightHandle handle, float farDist) override;
             void SetCameraTransform(
                 LightHandle handle,
                 const Transform& cameraTransform,
-                const RPI::RenderPipelineId& renderPipelineId = RPI::RenderPipelineId()) override;
+                const JE::Render::RPI::RenderPipelineId& renderPipelineId = JE::Render::RPI::RenderPipelineId()) override;
             void SetGroundHeight(LightHandle handle, float groundHeight) override;
             void SetViewFrustumCorrectionEnabled(LightHandle handle, bool enabled) override;
             void SetDebugFlags(LightHandle handle, DebugDrawFlags flags) override;
@@ -252,7 +257,7 @@ namespace AZ
             void SetAffectsGIFactor(LightHandle handle, float affectsGIFactor) override;
             void SetLightingChannelMask(LightHandle handle, uint32_t lightingChannelMask) override;
 
-            const Data::Instance<RPI::Buffer> GetLightBuffer() const override { return m_lightBufferHandler.GetBuffer(); }
+            const Data::Instance<JE::Render::RPI::Buffer> GetLightBuffer() const override { return m_lightBufferHandler.GetBuffer(); }
             uint32_t GetLightCount() const override { return m_lightBufferHandler.GetElementCount(); }
             ShadowProperty& GetShadowProperty(LightHandle handle) { return m_shadowProperties.GetData(handle.GetIndex()); }
 
@@ -263,8 +268,8 @@ namespace AZ
             static constexpr const float CascadeBlendArea = 0.015f;
 
             // RPI::SceneNotificationBus::Handler overrides...
-            void OnRenderPipelineChanged(AZ::RPI::RenderPipeline* pipeline, RPI::SceneNotification::RenderPipelineChangeType changeType) override;
-            void OnRenderPipelinePersistentViewChanged(RPI::RenderPipeline* renderPipeline, RPI::PipelineViewTag viewTag, RPI::ViewPtr newView, RPI::ViewPtr previousView) override;
+            void OnRenderPipelineChanged(JE::Render::RPI::RenderPipeline* pipeline, JE::Render::RPI::SceneNotification::RenderPipelineChangeType changeType) override;
+            void OnRenderPipelinePersistentViewChanged(JE::Render::RPI::RenderPipeline* renderPipeline, JE::Render::RPI::PipelineViewTag viewTag, JE::Render::RPI::ViewPtr newView, JE::Render::RPI::ViewPtr previousView) override;
 
             //! This prepare for change of render pipelines and camera views.
             void PrepareForChangingRenderPipelineAndCameraView();
@@ -293,7 +298,7 @@ namespace AZ
             //! This returns the camera configuration.
             //! If it has not been registered for the given camera view.
             //! it returns one of the fallback render pipeline ID.
-            const CascadeShadowCameraConfiguration& GetCameraConfiguration(LightHandle handle, const RPI::View* cameraView) const;
+            const CascadeShadowCameraConfiguration& GetCameraConfiguration(LightHandle handle, const JE::Render::RPI::View* cameraView) const;
 
             //! This update view frustum of camera.
             void UpdateFrustums(LightHandle handle);
@@ -311,11 +316,11 @@ namespace AZ
             //! This updates the parameter of Gaussian filter used in ESM.
             void UpdateFilterParameters(LightHandle handle);
             //! This updates if the filter is enabled.
-            void UpdateFilterEnabled(LightHandle handle, const RPI::View* cameraView);
+            void UpdateFilterEnabled(LightHandle handle, const JE::Render::RPI::View* cameraView);
             //! This updates shadowmap position(origin and size) in the atlas for each cascade.
-            void UpdateShadowmapPositionInAtlas(LightHandle handle, const RPI::View* cameraView);
+            void UpdateShadowmapPositionInAtlas(LightHandle handle, const JE::Render::RPI::View* cameraView);
             //! This set filter parameters to passes which execute filtering.
-            void SetFilterParameterToPass(LightHandle handle, const RPI::View* cameraView);
+            void SetFilterParameterToPass(LightHandle handle, const JE::Render::RPI::View* cameraView);
 
             //! This update the boundary of each segment.
             void UpdateBorderDepthsForSegments(LightHandle handle);
@@ -329,32 +334,32 @@ namespace AZ
             //! This calculate shadow view AABB.
             Aabb CalculateShadowViewAabb(
                 LightHandle handle,
-                const RPI::View* cameraView,
+                const JE::Render::RPI::View* cameraView,
                 uint16_t cascadeIndex,
                 const Matrix3x4& lightTransform);
 
             //! This writes outDepthNear and outDepthFar for the segment of the camera view frustum of cascadeIndex.
             void GetDepthNearFar(
                 LightHandle handle,
-                const RPI::View* cameraView,
+                const JE::Render::RPI::View* cameraView,
                 uint16_t cascadeIndex,
                 float& outDepthNear,
                 float& outDepthFar) const;
 
             //! This writes outDepthNear and outDepthFar for full range of the shadowmap
-            void GetDepthNearFar(LightHandle handle, const RPI::View* cameraView, float& outDepthNear, float& outDepthFar) const;
+            void GetDepthNearFar(LightHandle handle, const JE::Render::RPI::View* cameraView, float& outDepthNear, float& outDepthFar) const;
 
             //! This returns the world center position of a segment of view frustum.
             Vector3 GetWorldCenterPosition(
                 LightHandle handle,
-                const RPI::View* cameraView,
+                const JE::Render::RPI::View* cameraView,
                 float depthNear,
                 float depthFar) const;
 
             //! This returns the radius of a segment of view frustum.
             float GetRadius(
                 LightHandle handle,
-                const RPI::View* cameraView,
+                const JE::Render::RPI::View* cameraView,
                 float depthNear,
                 float depthFar) const;
 
@@ -363,7 +368,7 @@ namespace AZ
             //! boundary sphere is calculated from light direction and frustum segment.
             Vector3 CalculateCorrectedWorldCenterPosition(
                 LightHandle handle,
-                const RPI::View* cameraView,
+                const JE::Render::RPI::View* cameraView,
                 float depthNear,
                 float depthFar) const;
 
@@ -373,7 +378,7 @@ namespace AZ
             //! This draws bounding boxes of cascades.
             void DrawCascadeBoundingBoxes(LightHandle handle);
 
-            float GetShadowmapSizeFromCameraView(const LightHandle handle, const RPI::View* cameraView) const;
+            float GetShadowmapSizeFromCameraView(const LightHandle handle, const JE::Render::RPI::View* cameraView) const;
             void SnapAabbToPixelIncrements(const float invShadowmapSize, Vector3& orthoMin, Vector3& orthoMax);
 
             IndexedDataVector<ShadowProperty> m_shadowProperties;
@@ -383,24 +388,24 @@ namespace AZ
             GpuBufferHandler m_lightBufferHandler;
             IndexedDataVector<DirectionalLightData> m_lightData;
 
-            AZStd::unordered_map<const RPI::View*, GpuBufferHandler> m_esmParameterBufferHandlers;
-            AZStd::unordered_map<const RPI::View*, IndexedDataVector<EsmShadowmapsPass::FilterParameter>> m_esmParameterData;
+            AZStd::unordered_map<const JE::Render::RPI::View*, GpuBufferHandler> m_esmParameterBufferHandlers;
+            AZStd::unordered_map<const JE::Render::RPI::View*, IndexedDataVector<EsmShadowmapsPass::FilterParameter>> m_esmParameterData;
 
-            AZStd::unordered_map<const RPI::View*, GpuBufferHandler> m_shadowBufferHandlers;
-            AZStd::unordered_map<const RPI::View*, IndexedDataVector<DirectionalLightShadowData>> m_shadowData;
+            AZStd::unordered_map<const JE::Render::RPI::View*, GpuBufferHandler> m_shadowBufferHandlers;
+            AZStd::unordered_map<const JE::Render::RPI::View*, IndexedDataVector<DirectionalLightShadowData>> m_shadowData;
 
             RHI::ShaderInputNameIndex m_shadowIndexDirectionalLightIndex = "m_shadowIndexDirectionalLight";
 
-            AZStd::unordered_map<const RPI::View*, AZStd::vector<RPI::RenderPipelineId>> m_renderPipelineIdsForPersistentView;
-            AZStd::unordered_map<const RPI::View*, AZStd::string> m_cameraViewNames;
-            AZStd::unordered_map<RPI::RenderPipelineId, AZStd::vector<CascadedShadowmapsPass*>> m_cascadedShadowmapsPasses;
-            AZStd::unordered_map<RPI::RenderPipelineId, AZStd::vector<EsmShadowmapsPass*>> m_esmShadowmapsPasses;
+            AZStd::unordered_map<const JE::Render::RPI::View*, AZStd::vector<JE::Render::RPI::RenderPipelineId>> m_renderPipelineIdsForPersistentView;
+            AZStd::unordered_map<const JE::Render::RPI::View*, AZStd::string> m_cameraViewNames;
+            AZStd::unordered_map<JE::Render::RPI::RenderPipelineId, AZStd::vector<CascadedShadowmapsPass*>> m_cascadedShadowmapsPasses;
+            AZStd::unordered_map<JE::Render::RPI::RenderPipelineId, AZStd::vector<EsmShadowmapsPass*>> m_esmShadowmapsPasses;
 
-            RPI::AuxGeomFeatureProcessorInterface* m_auxGeomFeatureProcessor = nullptr;
-            AZStd::vector<const RPI::View*> m_viewsRetainingAuxGeomDraw;
+            JE::Render::RPI::AuxGeomFeatureProcessorInterface* m_auxGeomFeatureProcessor = nullptr;
+            AZStd::vector<const JE::Render::RPI::View*> m_viewsRetainingAuxGeomDraw;
             FullscreenShadowPass* m_fullscreenShadowPass = nullptr;
 
-            RPI::ParentPass* m_fullscreenShadowBlurPass = nullptr;
+            JE::Render::RPI::ParentPass* m_fullscreenShadowBlurPass = nullptr;
 
             bool m_lightBufferNeedsUpdate = false;
             bool m_shadowBufferNeedsUpdate = false;

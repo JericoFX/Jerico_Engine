@@ -11,14 +11,14 @@
 #include <Atom/RHI/DrawPacketBuilder.h>
 #include <Atom/RHI.Reflect/InputStreamLayoutBuilder.h>
 
-#include <Atom/RPI.Public/RenderPipeline.h>
-#include <Atom/RPI.Public/RPIUtils.h>
-#include <Atom/RPI.Public/Pass/PassFilter.h>
-#include <Atom/RPI.Public/Shader/Shader.h>
-#include <Atom/RPI.Public/Scene.h>
-#include <Atom/RPI.Public/View.h>
-#include <Atom/RPI.Public/ViewportContext.h>
-#include <Atom/RPI.Public/ViewportContextBus.h>
+#include <JE/Render/RPI/Public/RenderPipeline.h>
+#include <JE/Render/RPI/Public/RPIUtils.h>
+#include <JE/Render/RPI/Public/Pass/PassFilter.h>
+#include <JE/Render/RPI/Public/Shader/Shader.h>
+#include <JE/Render/RPI/Public/Scene.h>
+#include <JE/Render/RPI/Public/View.h>
+#include <JE/Render/RPI/Public/ViewportContext.h>
+#include <JE/Render/RPI/Public/ViewportContextBus.h>
 
 #include <AzCore/Name/NameDictionary.h>
 
@@ -40,7 +40,7 @@ namespace AZ::Render
     void StarsFeatureProcessor::Activate()
     {
         const char* shaderFilePath = "Shaders/stars/stars.azshader";
-        m_shader = RPI::LoadCriticalShader(shaderFilePath);
+        m_shader = JE::Render::RPI::LoadCriticalShader(shaderFilePath);
         if (!m_shader)
         {
             AZ_Error("StarsFeatureProcessor", false, "Failed to load required stars shader.");
@@ -53,7 +53,7 @@ namespace AZ::Render
 
         if (drawSrgLayout)
         {
-            m_drawSrg = RPI::ShaderResourceGroup::Create(m_shader->GetAsset(), m_shader->GetSupervariantIndex(), drawSrgLayout->GetName());
+            m_drawSrg = JE::Render::RPI::ShaderResourceGroup::Create(m_shader->GetAsset(), m_shader->GetSupervariantIndex(), drawSrgLayout->GetName());
         }
 
         m_drawListTag = m_shader->GetDrawListTag();
@@ -61,12 +61,12 @@ namespace AZ::Render
         m_starParamsIndex.Reset();
         m_rotationIndex.Reset();
 
-        auto viewportContextInterface = AZ::Interface<AZ::RPI::ViewportContextRequestsInterface>::Get();
+        auto viewportContextInterface = AZ::Interface<JE::Render::RPI::ViewportContextRequestsInterface>::Get();
         auto viewportContext = viewportContextInterface->GetViewportContextByScene(GetParentScene());
         if (viewportContext)
         {
             m_viewportSize = viewportContext->GetViewportSize();
-            RPI::ViewportContextIdNotificationBus::Handler::BusConnect(viewportContext->GetId());
+            JE::Render::RPI::ViewportContextIdNotificationBus::Handler::BusConnect(viewportContext->GetId());
         }
         else
         {
@@ -80,7 +80,7 @@ namespace AZ::Render
     {
         Data::AssetBus::Handler::BusDisconnect(m_shader->GetAssetId());
 
-        RPI::ViewportContextIdNotificationBus::Handler::BusDisconnect();
+        JE::Render::RPI::ViewportContextIdNotificationBus::Handler::BusDisconnect();
 
         DisableSceneNotification();
 
@@ -161,13 +161,13 @@ namespace AZ::Render
 
         if (!m_starsVertexBuffer)
         {
-            RPI::CommonBufferDescriptor desc;
-            desc.m_poolType = RPI::CommonBufferPoolType::StaticInputAssembly;
+            JE::Render::RPI::CommonBufferDescriptor desc;
+            desc.m_poolType = JE::Render::RPI::CommonBufferPoolType::StaticInputAssembly;
             desc.m_bufferName = "StarsMeshBuffer";
             desc.m_byteCount = bufferSize;
             desc.m_elementSize = elementSize;
             desc.m_bufferData = m_starsMeshData.data();
-            m_starsVertexBuffer = RPI::BufferSystemInterface::Get()->CreateBufferFromCommonPool(desc);
+            m_starsVertexBuffer = JE::Render::RPI::BufferSystemInterface::Get()->CreateBufferFromCommonPool(desc);
         }
         else
         {
@@ -209,14 +209,14 @@ namespace AZ::Render
         m_updateShaderConstants = true;
     }
 
-    void StarsFeatureProcessor::OnRenderPipelineChanged([[maybe_unused]] AZ::RPI::RenderPipeline* renderPipeline,
-        AZ::RPI::SceneNotification::RenderPipelineChangeType changeType)
+    void StarsFeatureProcessor::OnRenderPipelineChanged([[maybe_unused]] JE::Render::RPI::RenderPipeline* renderPipeline,
+        JE::Render::RPI::SceneNotification::RenderPipelineChangeType changeType)
     {
-        if (changeType == AZ::RPI::SceneNotification::RenderPipelineChangeType::Added)
+        if (changeType == JE::Render::RPI::SceneNotification::RenderPipelineChangeType::Added)
         {
             if(!m_meshPipelineState)
             {
-                m_meshPipelineState = aznew RPI::PipelineStateForDraw;
+                m_meshPipelineState = aznew JE::Render::RPI::PipelineStateForDraw;
                 m_meshPipelineState->Init(m_shader);
 
 
@@ -235,7 +235,7 @@ namespace AZ::Render
                 UpdateBackgroundClearColor();
             }
         }
-        else if (changeType == AZ::RPI::SceneNotification::RenderPipelineChangeType::PassChanged)
+        else if (changeType == JE::Render::RPI::SceneNotification::RenderPipelineChangeType::PassChanged)
         {
             if(m_meshPipelineState)
             {
@@ -266,28 +266,28 @@ namespace AZ::Render
         // is unlikely to find.  Unfortunately, the viewport will revert to the
         // grey color when resizing momentarily.
         const RHI::ClearValue blackClearValue = RHI::ClearValue::CreateVector4Float(0.f, 0.f, 0.f, 0.f);
-        RPI::PassFilter passFilter;
+        JE::Render::RPI::PassFilter passFilter;
         AZStd::string slot;
 
-        auto setClearValue = [&](RPI::Pass* pass)-> RPI::PassFilterExecutionFlow
+        auto setClearValue = [&](JE::Render::RPI::Pass* pass)-> JE::Render::RPI::PassFilterExecutionFlow
         {
             Name slotName = Name::FromStringLiteral(slot, AZ::Interface<AZ::NameDictionary>::Get());
             if (auto binding = pass->FindAttachmentBinding(slotName))
             {
                 binding->m_unifiedScopeDesc.m_loadStoreAction.m_clearValue = blackClearValue;
             }
-            return RPI::PassFilterExecutionFlow::ContinueVisitingPasses;
+            return JE::Render::RPI::PassFilterExecutionFlow::ContinueVisitingPasses;
         };
 
         slot = "SpecularOutput";
-        passFilter= RPI::PassFilter::CreateWithTemplateName(Name("ForwardPassTemplate"), GetParentScene());
-        RPI::PassSystemInterface::Get()->ForEachPass(passFilter, setClearValue);
-        passFilter = RPI::PassFilter::CreateWithTemplateName(Name("ForwardMSAAPassTemplate"), GetParentScene());
-        RPI::PassSystemInterface::Get()->ForEachPass(passFilter, setClearValue);
+        passFilter= JE::Render::RPI::PassFilter::CreateWithTemplateName(Name("ForwardPassTemplate"), GetParentScene());
+        JE::Render::RPI::PassSystemInterface::Get()->ForEachPass(passFilter, setClearValue);
+        passFilter = JE::Render::RPI::PassFilter::CreateWithTemplateName(Name("ForwardMSAAPassTemplate"), GetParentScene());
+        JE::Render::RPI::PassSystemInterface::Get()->ForEachPass(passFilter, setClearValue);
 
         slot = "ReflectionOutput";
-        passFilter = RPI::PassFilter::CreateWithTemplateName(Name("ReflectionGlobalFullscreenPassTemplate"), GetParentScene());
-        RPI::PassSystemInterface::Get()->ForEachPass(passFilter, setClearValue);
+        passFilter = JE::Render::RPI::PassFilter::CreateWithTemplateName(Name("ReflectionGlobalFullscreenPassTemplate"), GetParentScene());
+        JE::Render::RPI::PassSystemInterface::Get()->ForEachPass(passFilter, setClearValue);
     }
 
     RHI::ConstPtr<RHI::DrawPacket> StarsFeatureProcessor::BuildDrawPacket()

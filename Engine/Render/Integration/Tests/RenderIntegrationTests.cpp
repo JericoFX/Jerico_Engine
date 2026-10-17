@@ -8,14 +8,16 @@
 #include <FlyCameraInputComponent.h>
 #include <PerViewportDynamicDrawManager.h>
 #include <Atom/RHI/Factory.h>
-#include <Atom/RPI.Reflect/RPISystemDescriptor.h>
+#include <JE/Render/RPI/Public/RPISystem.h>
+#include <AzCore/PlatformIncl.h>
+#include <JE/Render/RPI/Reflect/RPISystemDescriptor.h>
 #include <AzCore/Serialization/Json/RegistrationContext.h>
 #include <AzCore/Serialization/Json/JsonSystemComponent.h>
 #include <AzCore/Settings/SettingsRegistryImpl.h>
 #include <AzCore/Component/Entity.h>
-#include <Atom/RPI.Edit/Material/MaterialFunctorSourceDataRegistration.h>
-#include <Atom/RPI.Public/Image/ImageTagSystemComponent.h>
-#include <Atom/RPI.Public/Model/ModelTagSystemComponent.h>
+#include <JE/Editor/Render/RPI/Edit/Material/MaterialFunctorSourceDataRegistration.h>
+#include <JE/Render/RPI/Public/Image/ImageTagSystemComponent.h>
+#include <JE/Render/RPI/Public/Model/ModelTagSystemComponent.h>
 #include <AzCore/Interface/Interface.h>
 #include <AzCore/Module/DynamicModuleHandle.h>
 #include <AzCore/IO/ByteContainerStream.h>
@@ -250,7 +252,7 @@ namespace JE::Render::Integration
                 const AZ::Name name("native.test.dynamic.draw");
                 unsigned int factoryCalls = 0;
                 auto* shared = PerViewportDynamicDraw::Get();
-                shared->RegisterDynamicDrawContext(name, [&factoryCalls](AZ::RHI::Ptr<AZ::RPI::DynamicDrawContext>)
+                shared->RegisterDynamicDrawContext(name, [&factoryCalls](AZ::RHI::Ptr<JE::Render::RPI::DynamicDrawContext>)
                 {
                     ++factoryCalls;
                 });
@@ -263,6 +265,16 @@ namespace JE::Render::Integration
         }
     }
 #if defined(AZ_PLATFORM_WINDOWS)
+    TEST_F(RenderIntegrationTests, RpiRuntimeBodyResolvesFromNativeRenderIntegration)
+    {
+        HMODULE provider = nullptr;
+        ASSERT_TRUE(::GetModuleHandleExW(
+            GET_MODULE_HANDLE_EX_FLAG_FROM_ADDRESS | GET_MODULE_HANDLE_EX_FLAG_UNCHANGED_REFCOUNT,
+            reinterpret_cast<LPCWSTR>(&JE::Render::RPI::RPISystem::Reflect), &provider));
+        const HMODULE expected = ::GetModuleHandleW(L"RenderIntegration.dll");
+        ASSERT_NE(expected, nullptr);
+        EXPECT_EQ(provider, expected) << "The real RPI implementation still lives in its legacy DLL";
+    }
     TEST_F(RenderIntegrationTests, NativeRpiRuntimeFactoryPreservesRegistrationAndLifecycle)
     {
         // Probe the native Windows C++ export without linking an as-yet absent factory.
@@ -272,12 +284,12 @@ namespace JE::Render::Integration
         using Factory = AZ::Module* (*)();
         const auto factory = library->GetFunction<Factory>("?CreateRpiRuntimeModule@Integration@Render@JE@@YAPEAVModule@AZ@@XZ");
         ASSERT_NE(factory, nullptr) << "Native RPI factory is missing from RenderIntegration";
-        using FunctorRegistration = AZ::Interface<AZ::RPI::MaterialFunctorSourceDataRegistration>;
+        using FunctorRegistration = AZ::Interface<JE::Render::RPI::MaterialFunctorSourceDataRegistration>;
         ASSERT_EQ(FunctorRegistration::Get(), nullptr);
         const AZ::Uuid componentId("{83E301F3-7A0C-4099-B530-9342B91B1BC0}");
         const AZ::ComponentTypeList required{
-            componentId, azrtti_typeid<AZ::RPI::ImageTagSystemComponent>(),
-            azrtti_typeid<AZ::RPI::ModelTagSystemComponent>(), AZ::Uuid("{75FEC6CC-ACA7-419C-8A63-4286998CBC0B}") };
+            componentId, azrtti_typeid<JE::Render::RPI::ImageTagSystemComponent>(),
+            azrtti_typeid<JE::Render::RPI::ModelTagSystemComponent>(), AZ::Uuid("{75FEC6CC-ACA7-419C-8A63-4286998CBC0B}") };
         for (int cycle = 0; cycle < 2; ++cycle)
         {
             AZStd::unique_ptr<AZ::Module> module(factory());
@@ -343,7 +355,7 @@ namespace JE::Render::Integration
             if (field.m_nameCrc == AZ_CRC_CE("RpiDescriptor"))
             {
                 hasDescriptorField = true;
-                EXPECT_EQ(field.m_typeId, azrtti_typeid<AZ::RPI::RPISystemDescriptor>());
+                EXPECT_EQ(field.m_typeId, azrtti_typeid<JE::Render::RPI::RPISystemDescriptor>());
             }
         }
         ASSERT_TRUE(hasDescriptorField);
@@ -362,20 +374,20 @@ namespace JE::Render::Integration
         EXPECT_EQ(reopened->RTTI_GetType(), componentId);
 
         // Read the real reflected member, rather than reproducing its constructor defaults in the test.
-        AZ::RPI::RPISystemDescriptor nativeDescriptor;
+        JE::Render::RPI::RPISystemDescriptor nativeDescriptor;
         unsigned int descriptorCount = 0;
         AZ::SerializeContext::EnumerateInstanceCallContext enumeration(
             [&nativeDescriptor, &descriptorCount](void* data, const AZ::SerializeContext::ClassData* classData,
                 const AZ::SerializeContext::ClassElement* field)
             {
-                if (classData->m_typeId == azrtti_typeid<AZ::RPI::RPISystemDescriptor>())
+                if (classData->m_typeId == azrtti_typeid<JE::Render::RPI::RPISystemDescriptor>())
                 {
                     EXPECT_NE(field, nullptr);
                     if (field)
                     {
                         EXPECT_EQ(field->m_nameCrc, AZ_CRC_CE("RpiDescriptor"));
                     }
-                    nativeDescriptor = *static_cast<const AZ::RPI::RPISystemDescriptor*>(data);
+                    nativeDescriptor = *static_cast<const JE::Render::RPI::RPISystemDescriptor*>(data);
                     ++descriptorCount;
                     return false;
                 }
@@ -420,7 +432,7 @@ namespace JE::Render::Integration
                 ASSERT_TRUE(registry.MergeSettings(patches[scenario], AZ::SettingsRegistryInterface::Format::JsonMergePatch, key));
             }
             auto effective = nativeDescriptor;
-            EXPECT_EQ(registry.GetObject(&effective, azrtti_typeid<AZ::RPI::RPISystemDescriptor>(), key), scenario != 0);
+            EXPECT_EQ(registry.GetObject(&effective, azrtti_typeid<JE::Render::RPI::RPISystemDescriptor>(), key), scenario != 0);
             EXPECT_EQ(effective.m_imageSystemDescriptor.m_systemAttachmentImagePoolSize, scenario == 3 ? 1048576 : 0);
             EXPECT_EQ(effective.m_imageSystemDescriptor.m_systemStreamingImagePoolMipBias, scenario == 2 ? 2 : 0);
             EXPECT_EQ(effective.m_imageSystemDescriptor.m_systemStreamingImagePoolSize, 0);

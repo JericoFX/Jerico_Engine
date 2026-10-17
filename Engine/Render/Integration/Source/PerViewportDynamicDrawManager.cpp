@@ -8,8 +8,8 @@
 
 #include "PerViewportDynamicDrawManager.h"
 
-#include <Atom/RPI.Public/ViewportContextBus.h>
-#include <Atom/RPI.Public/ViewportContext.h>
+#include <JE/Render/RPI/Public/ViewportContextBus.h>
+#include <JE/Render/RPI/Public/ViewportContext.h>
 
 namespace JE::Render::Integration
 {
@@ -55,7 +55,7 @@ namespace JE::Render::Integration
         }
     }
 
-    AZ::RHI::Ptr<AZ::RPI::DynamicDrawContext> PerViewportDynamicDrawManager::GetDynamicDrawContextForViewport(
+    AZ::RHI::Ptr<JE::Render::RPI::DynamicDrawContext> PerViewportDynamicDrawManager::GetDynamicDrawContextForViewport(
         AZ::Name name, AzFramework::ViewportId viewportId)
     {
         AZStd::lock_guard lock(m_mutexDrawContexts);
@@ -66,8 +66,8 @@ namespace JE::Render::Integration
             return nullptr;
         }
 
-        auto viewportContextManager = AZ::RPI::ViewportContextRequests::Get();
-        AZ::RPI::ViewportContextPtr viewportContext = viewportContextManager->GetViewportContextById(viewportId);
+        auto viewportContextManager = JE::Render::RPI::ViewportContextRequests::Get();
+        JE::Render::RPI::ViewportContextPtr viewportContext = viewportContextManager->GetViewportContextById(viewportId);
         if (viewportContext == nullptr)
         {
             return nullptr;
@@ -77,7 +77,7 @@ namespace JE::Render::Integration
         ViewportData& viewportData = m_viewportData[viewportId];
         if (!viewportData.m_initialized)
         {
-            viewportData.m_pipelineChangedHandler = AZ::Event<AZ::RPI::RenderPipelinePtr>::Handler([this, viewportId](AZ::RPI::RenderPipelinePtr pipeline)
+            viewportData.m_pipelineChangedHandler = AZ::Event<JE::Render::RPI::RenderPipelinePtr>::Handler([this, viewportId](JE::Render::RPI::RenderPipelinePtr pipeline)
             {
                 AZStd::lock_guard lock(m_mutexDrawContexts);
                 ViewportData& viewportData = m_viewportData[viewportId];
@@ -98,7 +98,7 @@ namespace JE::Render::Integration
             viewportData.m_initialized = true;
         }
 
-        AZ::RHI::Ptr<AZ::RPI::DynamicDrawContext>& context = viewportData.m_dynamicDrawContexts[name];
+        AZ::RHI::Ptr<JE::Render::RPI::DynamicDrawContext>& context = viewportData.m_dynamicDrawContexts[name];
         if (context == nullptr)
         {
             auto pipeline = viewportContext->GetCurrentPipeline().get();
@@ -106,7 +106,7 @@ namespace JE::Render::Integration
             {
                 return nullptr;
             }
-            context = AZ::RPI::DynamicDrawInterface::Get()->CreateDynamicDrawContext();
+            context = JE::Render::RPI::DynamicDrawInterface::Get()->CreateDynamicDrawContext();
             context->SetOutputScope(pipeline);
             contextFactoryIt->second(context);
         }

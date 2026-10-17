@@ -7,13 +7,13 @@
  */
 
 #include <AssetDatabase/AssetDatabaseConnection.h>
-#include <Atom/RPI.Edit/Common/AssetUtils.h>
-#include <Atom/RPI.Edit/Common/JsonUtils.h>
-#include <Atom/RPI.Edit/Material/MaterialTypeSourceData.h>
-#include <Atom/RPI.Edit/Shader/ShaderOptionValuesSourceData.h>
-#include <Atom/RPI.Public/Material/Material.h>
-#include <Atom/RPI.Reflect/Asset/AssetUtils.h>
-#include <Atom/RPI.Reflect/Material/MaterialAsset.h>
+#include <JE/Editor/Render/RPI/Edit/Common/AssetUtils.h>
+#include <JE/Editor/Render/RPI/Edit/Common/JsonUtils.h>
+#include <JE/Editor/Render/RPI/Edit/Material/MaterialTypeSourceData.h>
+#include <JE/Editor/Render/RPI/Edit/Shader/ShaderOptionValuesSourceData.h>
+#include <JE/Render/RPI/Public/Material/Material.h>
+#include <JE/Render/RPI/Reflect/Asset/AssetUtils.h>
+#include <JE/Render/RPI/Reflect/Material/MaterialAsset.h>
 #include <AtomToolsFramework/Document/AtomToolsDocumentNotificationBus.h>
 #include <AzCore/IO/SystemFile.h>
 #include <AzCore/RTTI/BehaviorContext.h>
@@ -69,7 +69,7 @@ namespace ShaderManagementConsole
 
     void ShaderManagementConsoleDocument::AddOneVariantRow()
     {
-        AZ::RPI::ShaderVariantListSourceData::VariantInfo variantInfo;
+        JE::Render::RPI::ShaderVariantListSourceData::VariantInfo variantInfo;
         // stable ID start at 1, since 0 is reserved as explained in ShaderVariantTreeAssetCreator
         // by invariant (no row shuffles), last stableId is highest in vector
         variantInfo.m_stableId = m_shaderVariantListSourceData.m_shaderVariants.empty()
@@ -108,13 +108,13 @@ namespace ShaderManagementConsole
         // Make a lookup table to "reverse" the vector given to us in argument
         AZStd::unordered_map<AZ::Name, int> nameToHeaderIndex = MakeReverseLookupTableFromNameVector(optionHeaders);
         // Prepare a whole new source data
-        AZ::RPI::ShaderVariantListSourceData newSourceData{ m_shaderVariantListSourceData };
+        JE::Render::RPI::ShaderVariantListSourceData newSourceData{ m_shaderVariantListSourceData };
         AZ::u32 stableId = newSourceData.m_shaderVariants.empty() ? 1 : newSourceData.m_shaderVariants.back().m_stableId + 1;
         // add "line by line"
         int numLines = aznumeric_cast<int>(matrixOfValues.size() / optionHeaders.size());
         for (int line = 0; line < numLines; ++line)
         {
-            AZ::RPI::ShaderOptionValuesSourceData mapOfOptionNameToValues;
+            JE::Render::RPI::ShaderOptionValuesSourceData mapOfOptionNameToValues;
             size_t count = GetShaderOptionDescriptorCount();
             for (int column = 0; column < count; ++column)
             {
@@ -127,7 +127,7 @@ namespace ShaderManagementConsole
                     mapOfOptionNameToValues[optionName] = matrixOfValues[index];
                 }
             }
-            AZ::RPI::ShaderVariantListSourceData::VariantInfo newLine{ stableId++, mapOfOptionNameToValues };
+            JE::Render::RPI::ShaderVariantListSourceData::VariantInfo newLine{ stableId++, mapOfOptionNameToValues };
             newSourceData.m_shaderVariants.emplace_back(std::move(newLine));
         }
         SetShaderVariantListSourceData(newSourceData);
@@ -146,7 +146,7 @@ namespace ShaderManagementConsole
         // Make a lookup table to "reverse" the vector given to us in argument
         AZStd::unordered_map<AZ::Name, int> nameToHeaderIndex = MakeReverseLookupTableFromNameVector(optionHeaders);
         // Prepare a new source data
-        AZ::RPI::ShaderVariantListSourceData newSourceData;
+        JE::Render::RPI::ShaderVariantListSourceData newSourceData;
         // partial copy
         newSourceData.m_materialOptionsHint = m_shaderVariantListSourceData.m_materialOptionsHint;
         newSourceData.m_shaderFilePath = m_shaderVariantListSourceData.m_shaderFilePath;
@@ -163,9 +163,9 @@ namespace ShaderManagementConsole
         int numLines = aznumeric_cast<int>(matrixOfValues.size() / optionHeaders.size());
         for (int line = 0; line < numLines; ++line)
         {
-            for (const AZ::RPI::ShaderVariantListSourceData::VariantInfo& oldVariant : m_shaderVariantListSourceData.m_shaderVariants)
+            for (const JE::Render::RPI::ShaderVariantListSourceData::VariantInfo& oldVariant : m_shaderVariantListSourceData.m_shaderVariants)
             {
-                AZ::RPI::ShaderOptionValuesSourceData mapOfOptionNameToValues;
+                JE::Render::RPI::ShaderOptionValuesSourceData mapOfOptionNameToValues;
                 size_t count = GetShaderOptionDescriptorCount();
                 for (int column = 0; column < count; ++column)
                 {
@@ -188,7 +188,7 @@ namespace ShaderManagementConsole
                         }
                     }
                 }
-                AZ::RPI::ShaderVariantListSourceData::VariantInfo newLine{ stableId++, mapOfOptionNameToValues };
+                JE::Render::RPI::ShaderVariantListSourceData::VariantInfo newLine{ stableId++, mapOfOptionNameToValues };
                 newSourceData.m_shaderVariants.emplace_back(std::move(newLine));
             }
         }
@@ -200,7 +200,7 @@ namespace ShaderManagementConsole
     template<InfoConstness Constness> // configure whether the m_info field is const or not
     struct VariantCompacterKey
     {
-        using VariantInfo = AZ::RPI::ShaderVariantListSourceData::VariantInfo;
+        using VariantInfo = JE::Render::RPI::ShaderVariantListSourceData::VariantInfo;
         using VariantInfo_MaybeConst = AZStd::conditional_t<Constness == ConstInfo, AZStd::add_const_t<VariantInfo>, VariantInfo>;
 
         VariantInfo_MaybeConst* m_info{};
@@ -246,7 +246,7 @@ namespace ShaderManagementConsole
     {
         auto compactVariants = CompactVariants<MutableInfo>(m_shaderVariantListSourceData.m_shaderVariants);
         // Prepare a whole new source data
-        AZ::RPI::ShaderVariantListSourceData newSourceData;
+        JE::Render::RPI::ShaderVariantListSourceData newSourceData;
         // partial copy
         newSourceData.m_materialOptionsHint = m_shaderVariantListSourceData.m_materialOptionsHint;
         newSourceData.m_shaderFilePath = m_shaderVariantListSourceData.m_shaderFilePath;
@@ -262,8 +262,8 @@ namespace ShaderManagementConsole
         // sort by old stable id
         AZStd::sort(newSourceData.m_shaderVariants.begin(),
                     newSourceData.m_shaderVariants.end(),
-                    [&](const AZ::RPI::ShaderVariantListSourceData::VariantInfo& a,
-                        const AZ::RPI::ShaderVariantListSourceData::VariantInfo& b)
+                    [&](const JE::Render::RPI::ShaderVariantListSourceData::VariantInfo& a,
+                        const JE::Render::RPI::ShaderVariantListSourceData::VariantInfo& b)
                     {
                         return a.m_stableId < b.m_stableId;
                     });
@@ -277,10 +277,10 @@ namespace ShaderManagementConsole
     }
 
     void ShaderManagementConsoleDocument::SetShaderVariantListSourceData(
-        const AZ::RPI::ShaderVariantListSourceData& shaderVariantListSourceData)
+        const JE::Render::RPI::ShaderVariantListSourceData& shaderVariantListSourceData)
     {
         const auto& shaderPath = shaderVariantListSourceData.m_shaderFilePath;
-        auto shaderAssetResult = AZ::RPI::AssetUtils::LoadAsset<AZ::RPI::ShaderAsset>(m_absolutePath, shaderPath);
+        auto shaderAssetResult = JE::Render::RPI::AssetUtils::LoadAsset<JE::Render::RPI::ShaderAsset>(m_absolutePath, shaderPath);
         if (!shaderAssetResult)
         {
             AZ_Error("ShaderManagementConsoleDocument", false, "Could not load shader asset: %s.", shaderPath.c_str());
@@ -303,7 +303,7 @@ namespace ShaderManagementConsole
         m_modified = true;
     }
 
-    const AZ::RPI::ShaderVariantListSourceData& ShaderManagementConsoleDocument::GetShaderVariantListSourceData() const
+    const JE::Render::RPI::ShaderVariantListSourceData& ShaderManagementConsoleDocument::GetShaderVariantListSourceData() const
     {
         return m_shaderVariantListSourceData;
     }
@@ -319,7 +319,7 @@ namespace ShaderManagementConsole
         return 0;
     }
 
-    const AZ::RPI::ShaderOptionDescriptor& ShaderManagementConsoleDocument::GetShaderOptionDescriptor(size_t index) const
+    const JE::Render::RPI::ShaderOptionDescriptor& ShaderManagementConsoleDocument::GetShaderOptionDescriptor(size_t index) const
     {
         if (m_shaderAsset.IsReady())
         {
@@ -363,9 +363,9 @@ namespace ShaderManagementConsole
         documentType.m_documentTypeName = "Shader Variant List";
         documentType.m_documentFactoryCallback = [](const AZ::Crc32& toolId, const AtomToolsFramework::DocumentTypeInfo& documentTypeInfo) {
             return aznew ShaderManagementConsoleDocument(toolId, documentTypeInfo); };
-        documentType.m_supportedExtensionsToOpen.push_back({ "Shader Variant List", AZ::RPI::ShaderVariantListSourceData::Extension });
-        documentType.m_supportedExtensionsToCreate.push_back({ "Shader Asset", AZ::RPI::ShaderSourceData::Extension });
-        documentType.m_supportedExtensionsToSave.push_back({ "Shader Variant List", AZ::RPI::ShaderVariantListSourceData::Extension });
+        documentType.m_supportedExtensionsToOpen.push_back({ "Shader Variant List", JE::Render::RPI::ShaderVariantListSourceData::Extension });
+        documentType.m_supportedExtensionsToCreate.push_back({ "Shader Asset", JE::Render::RPI::ShaderSourceData::Extension });
+        documentType.m_supportedExtensionsToSave.push_back({ "Shader Variant List", JE::Render::RPI::ShaderVariantListSourceData::Extension });
         return documentType;
     }
 
@@ -378,8 +378,8 @@ namespace ShaderManagementConsole
         objectInfo.m_name = "Shader Variant List";
         objectInfo.m_displayName = "Shader Variant List";
         objectInfo.m_description = "Shader Variant List";
-        objectInfo.m_objectType = azrtti_typeid<AZ::RPI::ShaderVariantListSourceData>();
-        objectInfo.m_objectPtr = const_cast<AZ::RPI::ShaderVariantListSourceData*>(&m_shaderVariantListSourceData);
+        objectInfo.m_objectType = azrtti_typeid<JE::Render::RPI::ShaderVariantListSourceData>();
+        objectInfo.m_objectPtr = const_cast<JE::Render::RPI::ShaderVariantListSourceData*>(&m_shaderVariantListSourceData);
         objects.push_back(AZStd::move(objectInfo));
 
         return objects;
@@ -394,12 +394,12 @@ namespace ShaderManagementConsole
             return false;
         }
 
-        if (AzFramework::StringFunc::Path::IsExtension(m_absolutePath.c_str(), AZ::RPI::ShaderSourceData::Extension))
+        if (AzFramework::StringFunc::Path::IsExtension(m_absolutePath.c_str(), JE::Render::RPI::ShaderSourceData::Extension))
         {
             return LoadShaderSourceData();
         }
 
-        if (AzFramework::StringFunc::Path::IsExtension(m_absolutePath.c_str(), AZ::RPI::ShaderVariantListSourceData::Extension))
+        if (AzFramework::StringFunc::Path::IsExtension(m_absolutePath.c_str(), JE::Render::RPI::ShaderVariantListSourceData::Extension))
         {
             return LoadShaderVariantListSourceData();
         }
@@ -521,7 +521,7 @@ namespace ShaderManagementConsole
             return SaveFailed();
         }
 
-        if (!AZ::RPI::JsonUtils::SaveObjectToFile(m_savePathNormalized, m_shaderVariantListSourceData))
+        if (!JE::Render::RPI::JsonUtils::SaveObjectToFile(m_savePathNormalized, m_shaderVariantListSourceData))
         {
             AZ_Error("ShaderManagementConsoleDocument", false, "Document could not be saved: '%s'.", m_savePathNormalized.c_str());
             return SaveFailed();
@@ -534,7 +534,7 @@ namespace ShaderManagementConsole
 
     bool ShaderManagementConsoleDocument::LoadShaderSourceData()
     {
-        const auto shader = AZ::RPI::AssetUtils::LoadAsset<AZ::RPI::ShaderAsset>(m_absolutePath);
+        const auto shader = JE::Render::RPI::AssetUtils::LoadAsset<JE::Render::RPI::ShaderAsset>(m_absolutePath);
         if (!shader.IsSuccess())
         {
             AZ_Error("ShaderManagementConsoleDocument", false, "Could not load shader asset: %s.", m_absolutePath.c_str());
@@ -548,9 +548,9 @@ namespace ShaderManagementConsole
         }
         AZ::IO::Path systemPath(m_absolutePath);
         systemPath.ReplaceExtension("systemoptions");
-        AZ::RPI::ShaderOptionValuesSourceData systemOptions;
+        JE::Render::RPI::ShaderOptionValuesSourceData systemOptions;
         if (AZ::IO::SystemFile::Exists(systemPath.c_str()) &&
-            !AZ::RPI::JsonUtils::LoadObjectFromFile(systemPath.Native(), systemOptions))
+            !JE::Render::RPI::JsonUtils::LoadObjectFromFile(systemPath.Native(), systemOptions))
         {
             AZ_Error("ShaderManagementConsoleDocument", false, "Invalid system option file: %s.", systemPath.c_str());
             return OpenFailed();
@@ -573,8 +573,8 @@ namespace ShaderManagementConsole
     bool ShaderManagementConsoleDocument::LoadShaderVariantListSourceData()
     {
         // Load previously generated shader variant list source data
-        AZ::RPI::ShaderVariantListSourceData shaderVariantListSourceData;
-        if (!AZ::RPI::JsonUtils::LoadObjectFromFile(m_absolutePath, shaderVariantListSourceData))
+        JE::Render::RPI::ShaderVariantListSourceData shaderVariantListSourceData;
+        if (!JE::Render::RPI::JsonUtils::LoadObjectFromFile(m_absolutePath, shaderVariantListSourceData))
         {
             AZ_Error("ShaderManagementConsoleDocument", false, "Failed loading shader variant list data: '%s.'", m_absolutePath.c_str());
             return OpenFailed();

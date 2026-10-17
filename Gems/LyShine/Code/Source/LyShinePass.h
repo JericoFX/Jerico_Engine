@@ -6,8 +6,8 @@
  */
 #pragma once
 
-#include <Atom/RPI.Public/Pass/ParentPass.h>
-#include <Atom/RPI.Public/Pass/RasterPass.h>
+#include <JE/Render/RPI/Public/Pass/ParentPass.h>
+#include <JE/Render/RPI/Public/Pass/RasterPass.h>
 #include <AzCore/std/containers/span.h>
 #include <AzCore/Memory/SystemAllocator.h>
 #include <AzCore/std/containers/vector.h>
@@ -19,51 +19,51 @@ namespace LyShine
 
     //! Manages child passes at runtime that render to render targets
     class LyShinePass final
-        : public AZ::RPI::ParentPass
+        : public JE::Render::RPI::ParentPass
         , protected LyShinePassRequestBus::Handler
     {
         AZ_RPI_PASS(LyShinePass);
-        using Base = AZ::RPI::ParentPass;
+        using Base = JE::Render::RPI::ParentPass;
 
     public:
         AZ_CLASS_ALLOCATOR(LyShinePass, AZ::SystemAllocator);
         AZ_RTTI(LyShinePass, "C3B812ED-3771-42F4-A96F-EBD94B4D54CA", Base);
 
         virtual ~LyShinePass();
-        static AZ::RPI::Ptr<LyShinePass> Create(const AZ::RPI::PassDescriptor& descriptor);
+        static JE::Render::RPI::Ptr<LyShinePass> Create(const JE::Render::RPI::PassDescriptor& descriptor);
 
     protected:
         // Pass behavior overrides
         void ResetInternal() override;
         void BuildInternal() override;
         void CreateChildPassesInternal() override;
-        void SetRenderPipeline(AZ::RPI::RenderPipeline* pipeline) override;
+        void SetRenderPipeline(JE::Render::RPI::RenderPipeline* pipeline) override;
 
         // LyShinePassRequestBus overrides
         void RebuildRttChildren() override;
-        AZ::RPI::RasterPass* GetRttPass(const AZStd::string& name) override;
-        AZ::RPI::RasterPass* GetUiCanvasPass() override;
+        JE::Render::RPI::RasterPass* GetRttPass(const AZStd::string& name) override;
+        JE::Render::RPI::RasterPass* GetUiCanvasPass() override;
 
     private:
         LyShinePass() = delete;
-        explicit LyShinePass(const AZ::RPI::PassDescriptor& descriptor);
+        explicit LyShinePass(const JE::Render::RPI::PassDescriptor& descriptor);
 
         // Build the render to texture child passes
         void AddRttChildPasses(LyShine::AttachmentImagesAndDependencies AttachmentImagesAndDependencies);
 
         // Add a render to texture child pass
-        void AddRttChildPass(AZ::Data::Instance<AZ::RPI::AttachmentImage> attachmentImage, AttachmentImages dependentAttachmentImages);
+        void AddRttChildPass(AZ::Data::Instance<JE::Render::RPI::AttachmentImage> attachmentImage, AttachmentImages dependentAttachmentImages);
 
         // Append the final pass to render UI Canvas elements to the screen
         void AddUiCanvasChildPass(LyShine::AttachmentImagesAndDependencies AttachmentImagesAndDependencies);
 
         // Pass that renders the UI Canvas elements to the screen
-        AZ::RPI::Ptr<LyShineChildPass> m_uiCanvasChildPass;
+        JE::Render::RPI::Ptr<LyShineChildPass> m_uiCanvasChildPass;
     };
 
     // Child pass with potential attachment dependencies
     class LyShineChildPass
-        : public AZ::RPI::RasterPass
+        : public JE::Render::RPI::RasterPass
     {
         AZ_RPI_PASS(LyShineChildPass);
 
@@ -74,10 +74,10 @@ namespace LyShine
         virtual ~LyShineChildPass();
 
         //! Creates a LyShineChildPass
-        static AZ::RPI::Ptr<LyShineChildPass> Create(const AZ::RPI::PassDescriptor& descriptor);
+        static JE::Render::RPI::Ptr<LyShineChildPass> Create(const JE::Render::RPI::PassDescriptor& descriptor);
 
     protected:
-        LyShineChildPass(const AZ::RPI::PassDescriptor& descriptor);
+        LyShineChildPass(const JE::Render::RPI::PassDescriptor& descriptor);
 
         // Scope producer Overrides...
         void SetupFrameGraphDependencies(AZ::RHI::FrameGraphInterface frameGraph) override;
@@ -99,14 +99,14 @@ namespace LyShine
         virtual ~RttChildPass();
 
         //! Creates a RttChildPass
-        static AZ::RPI::Ptr<RttChildPass> Create(const AZ::RPI::PassDescriptor& descriptor);
+        static JE::Render::RPI::Ptr<RttChildPass> Create(const JE::Render::RPI::PassDescriptor& descriptor);
 
     protected:
-        RttChildPass(const AZ::RPI::PassDescriptor& descriptor);
+        RttChildPass(const JE::Render::RPI::PassDescriptor& descriptor);
 
         // Pass behavior overrides
         void BuildInternal() override;
 
-        AZ::Data::Instance<AZ::RPI::AttachmentImage> m_attachmentImage;
+        AZ::Data::Instance<JE::Render::RPI::AttachmentImage> m_attachmentImage;
     };
 } // namespace LyShine

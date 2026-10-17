@@ -14,9 +14,9 @@
 #include <Atom/RHI/ScopeProducer.h>
 #include <Atom/RHI.Reflect/ShaderResourceGroupLayoutDescriptor.h>
 
-#include <Atom/RPI.Public/Pass/ComputePass.h>
-#include <Atom/RPI.Public/Shader/Shader.h>
-#include <Atom/RPI.Public/Shader/ShaderResourceGroup.h>
+#include <JE/Render/RPI/Public/Pass/ComputePass.h>
+#include <JE/Render/RPI/Public/Shader/Shader.h>
+#include <JE/Render/RPI/Public/Shader/ShaderResourceGroup.h>
 
 namespace AZ
 {
@@ -25,16 +25,16 @@ namespace AZ
         //! LightCullingTilePrepare
         //! This pass analyzes the depth buffer and builds min/max depth bounds per each tile.
         class LightCullingTilePreparePass final
-            : public RPI::ComputePass
+            : public JE::Render::RPI::ComputePass
         {
             AZ_RPI_PASS(LightCullingTilePreparePass);
 
         public:
-            AZ_RTTI(AZ::Render::LightCullingTilePreparePass, "{3D8AEEF2-F679-4C0C-ADF0-2F7E347D8BF1}", RPI::ComputePass);
+            AZ_RTTI(AZ::Render::LightCullingTilePreparePass, "{3D8AEEF2-F679-4C0C-ADF0-2F7E347D8BF1}", JE::Render::RPI::ComputePass);
             AZ_CLASS_ALLOCATOR(LightCullingTilePreparePass, SystemAllocator);
             virtual ~LightCullingTilePreparePass() = default;
 
-            static RPI::Ptr<LightCullingTilePreparePass> Create(const RPI::PassDescriptor& descriptor);
+            static JE::Render::RPI::Ptr<LightCullingTilePreparePass> Create(const JE::Render::RPI::PassDescriptor& descriptor);
 
             static Name GetLightCullingTilePreparePassTemplateName()
             {
@@ -43,16 +43,16 @@ namespace AZ
 
         private:
 
-            LightCullingTilePreparePass(const RPI::PassDescriptor& descriptor);
+            LightCullingTilePreparePass(const JE::Render::RPI::PassDescriptor& descriptor);
 
             // Pass behavior overrides...
             void BuildInternal() override;
 
             ///////////////////////////////////////////////////////////////////
             // ShaderReloadNotificationBus overrides...
-            void OnShaderReinitialized(const AZ::RPI::Shader& shader) override;
-            void OnShaderAssetReinitialized(const Data::Asset<AZ::RPI::ShaderAsset>& shaderAsset) override;
-            void OnShaderVariantReinitialized(const AZ::RPI::ShaderVariant& shaderVariant) override;
+            void OnShaderReinitialized(const JE::Render::RPI::Shader& shader) override;
+            void OnShaderAssetReinitialized(const Data::Asset<JE::Render::RPI::ShaderAsset>& shaderAsset) override;
+            void OnShaderVariantReinitialized(const JE::Render::RPI::ShaderVariant& shaderVariant) override;
 
             // Scope producer functions...
             void CompileResources(const RHI::FrameGraphCompileContext& context) override;
@@ -61,13 +61,13 @@ namespace AZ
             RHI::MultisampleState GetMultiSampleState();
             AZ::Name GetMultiSampleName();
 
-            AZ::RPI::ShaderOptionGroup CreateShaderOptionGroup();
+            JE::Render::RPI::ShaderOptionGroup CreateShaderOptionGroup();
 
             AZStd::array<float, 2> ComputeUnprojectConstants() const;
             AZ::RHI::Size GetDepthBufferDimensions();
             void ChooseShaderVariant();
-            AZStd::pair<const AZ::RPI::ShaderVariant&, RPI::ShaderOptionGroup> CreateShaderVariant();
-            void CreatePipelineStateFromShaderVariant(const RPI::ShaderVariant& shaderVariant, const RPI::ShaderOptionGroup& options);
+            AZStd::pair<const JE::Render::RPI::ShaderVariant&, JE::Render::RPI::ShaderOptionGroup> CreateShaderVariant();
+            void CreatePipelineStateFromShaderVariant(const JE::Render::RPI::ShaderVariant& shaderVariant, const JE::Render::RPI::ShaderOptionGroup& options);
             void SetConstantData();
             void OnShaderReloaded();
 

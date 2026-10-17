@@ -31,7 +31,7 @@ namespace AZ
             virtual ~EditorModeOutlinePass() = default;
 
             //! Creates a EditorModeOutlinePass
-            static RPI::Ptr<EditorModeOutlinePass> Create(const RPI::PassDescriptor& descriptor);
+            static JE::Render::RPI::Ptr<EditorModeOutlinePass> Create(const JE::Render::RPI::PassDescriptor& descriptor);
 
             //! Sets the outline line thickness.
             void SetLineThickness(float thickness);
@@ -43,7 +43,7 @@ namespace AZ
             void SetOutlineStyle(OutlineStyle mode);
 
         protected:
-            EditorModeOutlinePass(const RPI::PassDescriptor& descriptor);
+            EditorModeOutlinePass(const JE::Render::RPI::PassDescriptor& descriptor);
             
             //! Pass behavior overrides
             void InitializeInternal() override;

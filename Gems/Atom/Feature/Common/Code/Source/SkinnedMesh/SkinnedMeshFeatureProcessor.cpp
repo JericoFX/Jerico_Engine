@@ -16,12 +16,12 @@
 #include <MorphTargets/MorphTargetComputePass.h>
 #include <MorphTargets/MorphTargetDispatchItem.h>
 
-#include <Atom/RPI.Public/Model/ModelLodUtils.h>
-#include <Atom/RPI.Public/Pass/PassFilter.h>
-#include <Atom/RPI.Public/Pass/PassSystemInterface.h>
-#include <Atom/RPI.Public/RPIUtils.h>
-#include <Atom/RPI.Public/Shader/Shader.h>
-#include <Atom/RPI.Public/RenderPipeline.h>
+#include <JE/Render/RPI/Public/Model/ModelLodUtils.h>
+#include <JE/Render/RPI/Public/Pass/PassFilter.h>
+#include <JE/Render/RPI/Public/Pass/PassSystemInterface.h>
+#include <JE/Render/RPI/Public/RPIUtils.h>
+#include <JE/Render/RPI/Public/Shader/Shader.h>
+#include <JE/Render/RPI/Public/RenderPipeline.h>
 
 #include <Atom/RHI/CommandList.h>
 
@@ -107,18 +107,18 @@ namespace AZ
 
             if (m_workgroup.m_cullPackets.size() > 0)
             {
-                RPI::CullingSystem* cullingSystem = packet.m_cullingSystem;
+                JE::Render::RPI::CullingSystem* cullingSystem = packet.m_cullingSystem;
                 Job* currentJob = JobContext::GetGlobalContext()->GetJobManager().GetCurrentJob();
 
                 //Dispatch the workgroup to each view
-                for (const RPI::ViewPtr& viewPtr : packet.m_views)
+                for (const JE::Render::RPI::ViewPtr& viewPtr : packet.m_views)
                 {
                     Job* processWorkgroupJob = AZ::CreateJobFunction(
                         [this, cullingSystem, viewPtr](AZ::Job& thisJob)
                         {
                             AZ_PROFILE_SCOPE(AzRender, "skinningMeshFP processWorkgroupJob - View: %s", viewPtr->GetName().GetCStr());
 
-                            auto dispatchSkinningComputeProgramsCallback = [this](AZStd::shared_ptr<RPI::CullingBatchResults> results) -> void
+                            auto dispatchSkinningComputeProgramsCallback = [this](AZStd::shared_ptr<JE::Render::RPI::CullingBatchResults> results) -> void
                             {
                                 AZ_PROFILE_SCOPE(AzRender, "dispatchSkinningComputePrograms");
 
@@ -132,16 +132,16 @@ namespace AZ
                                 {
                                     uint8_t relativeIndex = results->m_visibleItems[v];
                                     uint32_t itemIndex = results->m_rangeFirst + relativeIndex;
-                                    const RPI::LodPacket* lodPacket = m_lodPackets[itemIndex];
+                                    const JE::Render::RPI::LodPacket* lodPacket = m_lodPackets[itemIndex];
                                     Vector3 pos = m_workgroup.m_cullPackets[itemIndex]->m_boundingSphere.GetCenter();
                                     SkinnedMeshRenderProxy* renderProxy = m_potentiallyVisibleProxies[itemIndex];
 
-                                    const float approxScreenPercentage = RPI::ModelLodUtils::ApproxScreenPercentage(
+                                    const float approxScreenPercentage = JE::Render::RPI::ModelLodUtils::ApproxScreenPercentage(
                                         pos, lodPacket->m_lodSelectionRadius, cameraPos, yScale, isPerspective);
 
                                     for (size_t lodIndex = 0, numLods = lodPacket->m_lods.size(); lodIndex < numLods; ++lodIndex)
                                     {
-                                        const RPI::LodPacket::Lod& lod = lodPacket->m_lods[lodIndex];
+                                        const JE::Render::RPI::LodPacket::Lod& lod = lodPacket->m_lods[lodIndex];
 
                                         //Note that this supports overlapping lod ranges (to support cross-fading lods, for example)
                                         float minScreenPercentage(lod.m_range.m_min);
@@ -192,11 +192,11 @@ namespace AZ
                     renderProxy.m_instance->m_model->WaitForUpload();
                 }
 
-                const RPI::Cullable& cullable = (*renderProxy.m_meshHandle)->GetCullable();
+                const JE::Render::RPI::Cullable& cullable = (*renderProxy.m_meshHandle)->GetCullable();
 
-                for (const RPI::ViewPtr& viewPtr : packet.m_views)
+                for (const JE::Render::RPI::ViewPtr& viewPtr : packet.m_views)
                 {
-                    RPI::View* view = viewPtr.get();
+                    JE::Render::RPI::View* view = viewPtr.get();
                     const Matrix4x4& viewToClip = view->GetViewToClipMatrix();
 
                     //[GFX_TODO][ATOM-13564]:
@@ -211,7 +211,7 @@ namespace AZ
 
                     switch (cullable.m_lodData.m_lodConfiguration.m_lodType)
                     {
-                    case RPI::Cullable::LodType::SpecificLod:
+                    case JE::Render::RPI::Cullable::LodType::SpecificLod:
                     {
                         AZStd::lock_guard lock(m_dispatchItemMutex);
                         auto lodIndex = cullable.m_lodData.m_lodConfiguration.m_lodOverride;
@@ -235,7 +235,7 @@ namespace AZ
                         }
                     }
                     break;
-                    case RPI::Cullable::LodType::ScreenCoverage:
+                    case JE::Render::RPI::Cullable::LodType::ScreenCoverage:
                     default:
                         //the [1][1] element of a perspective projection matrix stores cot(FovY/2) (equal to 2*nearPlaneDistance/nearPlaneHeight),
                         //which is used to determine the (vertical) projected size in screen space
@@ -245,12 +245,12 @@ namespace AZ
 
                         const Vector3 pos = cullable.m_cullData.m_boundingSphere.GetCenter();
 
-                        const float approxScreenPercentage = RPI::ModelLodUtils::ApproxScreenPercentage(
+                        const float approxScreenPercentage = JE::Render::RPI::ModelLodUtils::ApproxScreenPercentage(
                             pos, cullable.m_lodData.m_lodSelectionRadius, cameraPos, yScale, isPerspective);
 
                         for (size_t lodIndex = 0; lodIndex < cullable.m_lodData.m_lods.size(); ++lodIndex)
                         {
-                            const RPI::Cullable::LodData::Lod& lod = cullable.m_lodData.m_lods[lodIndex];
+                            const JE::Render::RPI::Cullable::LodData::Lod& lod = cullable.m_lodData.m_lods[lodIndex];
 
                             //Note that this supports overlapping lod ranges (to support cross-fading lods, for example)
                             if (approxScreenPercentage >= lod.m_screenCoverageMin && approxScreenPercentage <= lod.m_screenCoverageMax)
@@ -282,11 +282,11 @@ namespace AZ
 #endif
         }
 
-        void SkinnedMeshFeatureProcessor::OnRenderPipelineChanged(RPI::RenderPipeline* renderPipeline,
-            RPI::SceneNotification::RenderPipelineChangeType changeType)
+        void SkinnedMeshFeatureProcessor::OnRenderPipelineChanged(JE::Render::RPI::RenderPipeline* renderPipeline,
+            JE::Render::RPI::SceneNotification::RenderPipelineChangeType changeType)
         {
-            if (changeType == RPI::SceneNotification::RenderPipelineChangeType::Added
-                || changeType == RPI::SceneNotification::RenderPipelineChangeType::PassChanged)
+            if (changeType == JE::Render::RPI::SceneNotification::RenderPipelineChangeType::Added
+                || changeType == JE::Render::RPI::SceneNotification::RenderPipelineChangeType::PassChanged)
             {
                 InitSkinningAndMorphPass(renderPipeline);
             }
@@ -368,10 +368,10 @@ namespace AZ
             }
         }
 
-        void SkinnedMeshFeatureProcessor::InitSkinningAndMorphPass(RPI::RenderPipeline* renderPipeline)
+        void SkinnedMeshFeatureProcessor::InitSkinningAndMorphPass(JE::Render::RPI::RenderPipeline* renderPipeline)
         {
-            RPI::PassFilter skinPassFilter = RPI::PassFilter::CreateWithTemplateName(AZ::Name{ "SkinningPassTemplate" }, renderPipeline);
-            RPI::Ptr<RPI::Pass> skinningPass = RPI::PassSystemInterface::Get()->FindFirstPass(skinPassFilter);
+            JE::Render::RPI::PassFilter skinPassFilter = JE::Render::RPI::PassFilter::CreateWithTemplateName(AZ::Name{ "SkinningPassTemplate" }, renderPipeline);
+            JE::Render::RPI::Ptr<JE::Render::RPI::Pass> skinningPass = JE::Render::RPI::PassSystemInterface::Get()->FindFirstPass(skinPassFilter);
             if (skinningPass)
             {
                 SkinnedMeshComputePass* skinnedMeshComputePass = azdynamic_cast<SkinnedMeshComputePass*>(skinningPass.get());
@@ -389,9 +389,9 @@ namespace AZ
                 }
             }
 
-            RPI::PassFilter morphPassFilter =
-                RPI::PassFilter::CreateWithTemplateName(AZ::Name{ "MorphTargetPassTemplate" }, renderPipeline);
-            RPI::Ptr<RPI::Pass> morphTargetPass = RPI::PassSystemInterface::Get()->FindFirstPass(morphPassFilter);
+            JE::Render::RPI::PassFilter morphPassFilter =
+                JE::Render::RPI::PassFilter::CreateWithTemplateName(AZ::Name{ "MorphTargetPassTemplate" }, renderPipeline);
+            JE::Render::RPI::Ptr<JE::Render::RPI::Pass> morphTargetPass = JE::Render::RPI::PassSystemInterface::Get()->FindFirstPass(morphPassFilter);
             if (morphTargetPass)
             {
                 MorphTargetComputePass* morphTargetComputePass = azdynamic_cast<MorphTargetComputePass*>(morphTargetPass.get());
@@ -406,13 +406,13 @@ namespace AZ
             }
         }
 
-        RPI::ShaderOptionGroup SkinnedMeshFeatureProcessor::CreateSkinningShaderOptionGroup(const SkinnedMeshShaderOptions shaderOptions, SkinnedMeshShaderOptionNotificationBus::Handler& shaderReinitializedHandler)
+        JE::Render::RPI::ShaderOptionGroup SkinnedMeshFeatureProcessor::CreateSkinningShaderOptionGroup(const SkinnedMeshShaderOptions shaderOptions, SkinnedMeshShaderOptionNotificationBus::Handler& shaderReinitializedHandler)
         {
             m_cachedSkinningShaderOptions.ConnectToShaderReinitializedEvent(shaderReinitializedHandler);
             return m_cachedSkinningShaderOptions.CreateShaderOptionGroup(shaderOptions);
         }
 
-        void SkinnedMeshFeatureProcessor::OnSkinningShaderReinitialized(const Data::Instance<RPI::Shader> skinningShader)
+        void SkinnedMeshFeatureProcessor::OnSkinningShaderReinitialized(const Data::Instance<JE::Render::RPI::Shader> skinningShader)
         {
             m_skinningShader = skinningShader;
             m_cachedSkinningShaderOptions.SetShader(m_skinningShader);
@@ -471,12 +471,12 @@ namespace AZ
             }
         }
 
-        Data::Instance<RPI::Shader> SkinnedMeshFeatureProcessor::GetSkinningShader() const
+        Data::Instance<JE::Render::RPI::Shader> SkinnedMeshFeatureProcessor::GetSkinningShader() const
         {
             return m_skinningShader;
         }
 
-        Data::Instance<RPI::Shader> SkinnedMeshFeatureProcessor::GetMorphTargetShader() const
+        Data::Instance<JE::Render::RPI::Shader> SkinnedMeshFeatureProcessor::GetMorphTargetShader() const
         {
             return m_morphTargetShader;
         }

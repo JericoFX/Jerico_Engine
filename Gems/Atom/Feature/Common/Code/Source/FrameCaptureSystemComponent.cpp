@@ -10,11 +10,11 @@
 
 #include <Atom/RHI/RHIUtils.h>
 
-#include <Atom/RPI.Public/Pass/PassSystemInterface.h>
-#include <Atom/RPI.Public/Pass/PassFilter.h>
-#include <Atom/RPI.Public/Pass/Specific/ImageAttachmentPreviewPass.h>
-#include <Atom/RPI.Public/Pass/Specific/SwapChainPass.h>
-#include <Atom/RPI.Public/ViewportContextManager.h>
+#include <JE/Render/RPI/Public/Pass/PassSystemInterface.h>
+#include <JE/Render/RPI/Public/Pass/PassFilter.h>
+#include <JE/Render/RPI/Public/Pass/Specific/ImageAttachmentPreviewPass.h>
+#include <JE/Render/RPI/Public/Pass/Specific/SwapChainPass.h>
+#include <JE/Render/RPI/Public/ViewportContextManager.h>
 
 #include <Atom/Utils/DdsFile.h>
 #include <Atom/Utils/PpmFile.h>
@@ -72,7 +72,7 @@ namespace AZ
 
 
         FrameCaptureOutputResult PngFrameCaptureOutput(
-            const AZStd::string& outputFilePath, const AZ::RPI::AttachmentReadback::ReadbackResult& readbackResult)
+            const AZStd::string& outputFilePath, const JE::Render::RPI::AttachmentReadback::ReadbackResult& readbackResult)
         {
             AZStd::shared_ptr<AZStd::vector<uint8_t>> buffer = readbackResult.m_dataBuffer;
 
@@ -172,7 +172,7 @@ namespace AZ
         }
 
         FrameCaptureOutputResult TiffFrameCaptureOutput(
-            const AZStd::string& outputFilePath, const AZ::RPI::AttachmentReadback::ReadbackResult& readbackResult)
+            const AZStd::string& outputFilePath, const JE::Render::RPI::AttachmentReadback::ReadbackResult& readbackResult)
         {
             AZStd::shared_ptr<AZStd::vector<uint8_t>> buffer = readbackResult.m_dataBuffer;
             const uint32_t width = readbackResult.m_imageDescriptor.m_size.m_width;
@@ -366,7 +366,7 @@ namespace AZ
 
         AZ::Outcome<FrameCaptureSystemComponent::CaptureHandle, FrameCaptureError> FrameCaptureSystemComponent::ScreenshotPreparation(
             const AZStd::string& imagePath,
-            AZ::RPI::AttachmentReadback::CallbackFunction callbackFunction)
+            JE::Render::RPI::AttachmentReadback::CallbackFunction callbackFunction)
         {
             FrameCaptureError error;
 
@@ -436,7 +436,7 @@ namespace AZ
         {
             FrameCaptureError error;
 
-            AzFramework::NativeWindowHandle windowHandle = AZ::RPI::ViewportContextRequests::Get()->GetDefaultViewportContext()->GetWindowHandle();
+            AzFramework::NativeWindowHandle windowHandle = JE::Render::RPI::ViewportContextRequests::Get()->GetDefaultViewportContext()->GetWindowHandle();
 
             return InternalCaptureScreenshot(filePath, windowHandle);
         }
@@ -445,18 +445,18 @@ namespace AZ
         {
             FrameCaptureError error;
 
-            RPI::PassFilter passFilter = RPI::PassFilter::CreateWithPassClass<RPI::ImageAttachmentPreviewPass>();
-            AZ::RPI::ImageAttachmentPreviewPass* previewPass = nullptr;
-            AZ::RPI::PassSystemInterface::Get()->ForEachPass(
+            JE::Render::RPI::PassFilter passFilter = JE::Render::RPI::PassFilter::CreateWithPassClass<JE::Render::RPI::ImageAttachmentPreviewPass>();
+            JE::Render::RPI::ImageAttachmentPreviewPass* previewPass = nullptr;
+            JE::Render::RPI::PassSystemInterface::Get()->ForEachPass(
                 passFilter,
-                [&previewPass](AZ::RPI::Pass* pass) -> AZ::RPI::PassFilterExecutionFlow
+                [&previewPass](JE::Render::RPI::Pass* pass) -> JE::Render::RPI::PassFilterExecutionFlow
                 {
                     if (pass->GetParent() != nullptr && pass->IsEnabled())
                     {
-                        previewPass = azrtti_cast<AZ::RPI::ImageAttachmentPreviewPass*>(pass);
-                        return AZ::RPI::PassFilterExecutionFlow::StopVisitingPasses;
+                        previewPass = azrtti_cast<JE::Render::RPI::ImageAttachmentPreviewPass*>(pass);
+                        return JE::Render::RPI::PassFilterExecutionFlow::StopVisitingPasses;
                     }
-                    return AZ::RPI::PassFilterExecutionFlow::ContinueVisitingPasses;
+                    return JE::Render::RPI::PassFilterExecutionFlow::ContinueVisitingPasses;
                 });
 
             if (!previewPass)
@@ -499,7 +499,7 @@ namespace AZ
             }
 
             // Find SwapChainPass for the window handle
-            RPI::SwapChainPass* pass = AZ::RPI::PassSystemInterface::Get()->FindSwapChainPass(windowHandle);
+            JE::Render::RPI::SwapChainPass* pass = JE::Render::RPI::PassSystemInterface::Get()->FindSwapChainPass(windowHandle);
             if (!pass)
             {
                 error.m_errorMessage = "Failed to find SwapChainPass for the window.";
@@ -527,10 +527,10 @@ namespace AZ
 
         FrameCaptureOutcome FrameCaptureSystemComponent::InternalCapturePassAttachment(
             const AZStd::string& outputFilePath,
-            AZ::RPI::AttachmentReadback::CallbackFunction callbackFunction,
+            JE::Render::RPI::AttachmentReadback::CallbackFunction callbackFunction,
             const AZStd::vector<AZStd::string>& passHierarchy,
             const AZStd::string& slot,
-            RPI::PassAttachmentReadbackOption option)
+            JE::Render::RPI::PassAttachmentReadbackOption option)
         {
             FrameCaptureError error;
 
@@ -540,8 +540,8 @@ namespace AZ
                 return AZ::Failure(error);
             }
 
-            RPI::PassFilter passFilter = RPI::PassFilter::CreateWithPassHierarchy(passHierarchy);
-            RPI::Pass* pass = RPI::PassSystemInterface::Get()->FindFirstPass(passFilter);
+            JE::Render::RPI::PassFilter passFilter = JE::Render::RPI::PassFilter::CreateWithPassHierarchy(passHierarchy);
+            JE::Render::RPI::Pass* pass = JE::Render::RPI::PassSystemInterface::Get()->FindFirstPass(passFilter);
 
             if (!pass)
             {
@@ -579,7 +579,7 @@ namespace AZ
             const AZStd::string& imagePath,
             const AZStd::vector<AZStd::string>& passHierarchy,
             const AZStd::string& slot,
-            RPI::PassAttachmentReadbackOption option)
+            JE::Render::RPI::PassAttachmentReadbackOption option)
         {
             return InternalCapturePassAttachment(
                 imagePath,
@@ -590,12 +590,12 @@ namespace AZ
         }
 
         FrameCaptureOutcome FrameCaptureSystemComponent::CapturePassAttachmentWithCallback(
-            RPI::AttachmentReadback::CallbackFunction callback,
+            JE::Render::RPI::AttachmentReadback::CallbackFunction callback,
             const AZStd::vector<AZStd::string>& passHierarchy,
             const AZStd::string& slotName,
-            RPI::PassAttachmentReadbackOption option)
+            JE::Render::RPI::PassAttachmentReadbackOption option)
         {
-            auto captureCallback = [this, callback](const AZ::RPI::AttachmentReadback::ReadbackResult& readbackResult)
+            auto captureCallback = [this, callback](const JE::Render::RPI::AttachmentReadback::ReadbackResult& readbackResult)
             {
                 CaptureHandle captureHandle(this, readbackResult.m_userIdentifier);
 
@@ -681,7 +681,7 @@ namespace AZ
             }
         }
 
-        void FrameCaptureSystemComponent::CaptureAttachmentCallback(const AZ::RPI::AttachmentReadback::ReadbackResult& readbackResult)
+        void FrameCaptureSystemComponent::CaptureAttachmentCallback(const JE::Render::RPI::AttachmentReadback::ReadbackResult& readbackResult)
         {
             CaptureHandle captureHandle(this, readbackResult.m_userIdentifier);
             AZStd::scoped_lock<CaptureHandle> scope_lock(captureHandle);
@@ -689,7 +689,7 @@ namespace AZ
             AZ_Assert(capture && capture->m_result == FrameCaptureResult::None, "Unexpected value for m_result");
 
             capture->m_latestCaptureInfo = capture->m_outputFilePath;
-            if (readbackResult.m_state == AZ::RPI::AttachmentReadback::ReadbackState::Success)
+            if (readbackResult.m_state == JE::Render::RPI::AttachmentReadback::ReadbackState::Success)
             {
                 if (readbackResult.m_attachmentType == AZ::RHI::AttachmentType::Buffer)
                 {
@@ -851,7 +851,7 @@ namespace AZ
         FrameCaptureSystemComponent::CaptureState::CaptureState(uint32_t captureIndex)
         {
             AZStd::fixed_string<128> scope_name = AZStd::fixed_string<128>::format("FrameCapture_%d", captureIndex);
-            m_readback = AZStd::make_shared<AZ::RPI::AttachmentReadback>(AZ::RHI::ScopeId{ scope_name });
+            m_readback = AZStd::make_shared<JE::Render::RPI::AttachmentReadback>(AZ::RHI::ScopeId{ scope_name });
             AZ_Assert(m_readback, "Failed to allocate an AttachmentReadback for the capture state");
         }
 

@@ -8,7 +8,7 @@
 
 #include "core/math/Constants.h"
 #include <OpenParticleSystem/Asset/ParticleAsset.h>
-#include <Atom/RPI.Edit/Common/AssetUtils.h>
+#include <JE/Editor/Render/RPI/Edit/Common/AssetUtils.h>
 #include <AzCore/Serialization/EditContext.h>
 #include <AzFramework/Translation/TranslationDef.h>
 #include <OpenParticleSystem/ParticleEditDataConfig.h>

@@ -6,9 +6,9 @@
  *
  */
 
-#include <Atom/RPI.Edit/Shader/ShaderOptionValuesSourceData.h>
+#include <JE/Editor/Render/RPI/Edit/Shader/ShaderOptionValuesSourceData.h>
 
-namespace AZ
+namespace JE::Render
 {
     namespace RPI
     {

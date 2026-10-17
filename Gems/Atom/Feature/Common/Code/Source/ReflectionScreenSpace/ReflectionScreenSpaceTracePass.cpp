@@ -7,36 +7,36 @@
  */
 
 #include "ReflectionScreenSpaceTracePass.h"
-#include <Atom/RPI.Public/Pass/PassSystemInterface.h>
-#include <Atom/RPI.Public/Pass/PassFilter.h>
-#include <Atom/RPI.Public/RenderPipeline.h>
-#include <Atom/RPI.Public/Scene.h>
-#include <Atom/RPI.Public/Image/ImageSystemInterface.h>
-#include <Atom/RPI.Public/Image/AttachmentImagePool.h>
+#include <JE/Render/RPI/Public/Pass/PassSystemInterface.h>
+#include <JE/Render/RPI/Public/Pass/PassFilter.h>
+#include <JE/Render/RPI/Public/RenderPipeline.h>
+#include <JE/Render/RPI/Public/Scene.h>
+#include <JE/Render/RPI/Public/Image/ImageSystemInterface.h>
+#include <JE/Render/RPI/Public/Image/AttachmentImagePool.h>
 #include <SpecularReflections/SpecularReflectionsFeatureProcessor.h>
 
 namespace AZ
 {
     namespace Render
     {
-        RPI::Ptr<ReflectionScreenSpaceTracePass> ReflectionScreenSpaceTracePass::Create(const RPI::PassDescriptor& descriptor)
+        JE::Render::RPI::Ptr<ReflectionScreenSpaceTracePass> ReflectionScreenSpaceTracePass::Create(const JE::Render::RPI::PassDescriptor& descriptor)
         {
-            RPI::Ptr<ReflectionScreenSpaceTracePass> pass = aznew ReflectionScreenSpaceTracePass(descriptor);
+            JE::Render::RPI::Ptr<ReflectionScreenSpaceTracePass> pass = aznew ReflectionScreenSpaceTracePass(descriptor);
             return pass;
         }
 
-        ReflectionScreenSpaceTracePass::ReflectionScreenSpaceTracePass(const RPI::PassDescriptor& descriptor)
-            : RPI::FullscreenTrianglePass(descriptor)
+        ReflectionScreenSpaceTracePass::ReflectionScreenSpaceTracePass(const JE::Render::RPI::PassDescriptor& descriptor)
+            : JE::Render::RPI::FullscreenTrianglePass(descriptor)
         {
         }
 
         void ReflectionScreenSpaceTracePass::BuildInternal()
         {
-            Data::Instance<RPI::AttachmentImagePool> pool = RPI::ImageSystemInterface::Get()->GetSystemAttachmentPool();
+            Data::Instance<JE::Render::RPI::AttachmentImagePool> pool = JE::Render::RPI::ImageSystemInterface::Get()->GetSystemAttachmentPool();
 
             // retrieve the previous frame image attachment from the pass
             AZ_Assert(m_ownedAttachments.size() == 3, "ReflectionScreenSpaceTracePass must have the following attachment images defined: ReflectionImage, TraceCoordsImage, and PreviousFrameImage");
-            RPI::Ptr<RPI::PassAttachment> previousFrameImageAttachment = m_ownedAttachments[2];
+            JE::Render::RPI::Ptr<JE::Render::RPI::PassAttachment> previousFrameImageAttachment = m_ownedAttachments[2];
 
             // update the image attachment descriptor to sync up size and format
             previousFrameImageAttachment->Update();
@@ -50,7 +50,7 @@ namespace AZ
 
             // create the image attachment
             RHI::ClearValue clearValue = RHI::ClearValue::CreateVector4Float(0, 0, 0, 0);
-            m_previousFrameImageAttachment = RPI::AttachmentImage::Create(*pool.get(), imageDesc, Name(previousFrameImageAttachment->m_path.GetCStr()), &clearValue, nullptr);
+            m_previousFrameImageAttachment = JE::Render::RPI::AttachmentImage::Create(*pool.get(), imageDesc, Name(previousFrameImageAttachment->m_path.GetCStr()), &clearValue, nullptr);
 
             previousFrameImageAttachment->m_path = m_previousFrameImageAttachment->GetAttachmentId();
             previousFrameImageAttachment->m_importedResource = m_previousFrameImageAttachment;
@@ -63,11 +63,11 @@ namespace AZ
                 return;
             }
 
-            RPI::Scene* scene = m_pipeline->GetScene();
+            JE::Render::RPI::Scene* scene = m_pipeline->GetScene();
             SpecularReflectionsFeatureProcessor* specularReflectionsFeatureProcessor = scene->GetFeatureProcessor<SpecularReflectionsFeatureProcessor>();
             AZ_Assert(specularReflectionsFeatureProcessor, "ReflectionScreenSpaceTracePass requires the SpecularReflectionsFeatureProcessor");
 
-            RPI::PassAttachment* outputAttachment = GetOutputBinding(0).GetAttachment().get();
+            JE::Render::RPI::PassAttachment* outputAttachment = GetOutputBinding(0).GetAttachment().get();
             AZ_Assert(outputAttachment, "ReflectionScreenSpaceTracePass: Output binding has no attachment!");
             RHI::Size outputImageSize = outputAttachment->m_descriptor.m_image.m_size;
 

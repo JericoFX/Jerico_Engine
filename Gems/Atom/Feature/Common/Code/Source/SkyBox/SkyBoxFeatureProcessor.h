@@ -8,10 +8,10 @@
 
 #pragma once
 
-#include <Atom/RPI.Public/Buffer/Buffer.h>
-#include <Atom/RPI.Public/FeatureProcessor.h>
-#include <Atom/RPI.Reflect/Image/Image.h>
-#include <Atom/RPI.Public/Shader/ShaderResourceGroup.h>
+#include <JE/Render/RPI/Public/Buffer/Buffer.h>
+#include <JE/Render/RPI/Public/FeatureProcessor.h>
+#include <JE/Render/RPI/Reflect/Image/Image.h>
+#include <JE/Render/RPI/Public/Shader/ShaderResourceGroup.h>
 #include <Atom/Feature/SkyBox/SkyBoxFeatureProcessorInterface.h>
 #include <Atom/Feature/SkyBox/SkyboxConstants.h>
 
@@ -71,7 +71,7 @@ namespace AZ
             void SetFogBottomHeight(float bottomHeight) override;
 
             void SetCubemapRotationMatrix(AZ::Matrix4x4 matrix) override;
-            void SetCubemap(Data::Instance<RPI::Image> cubemap) override;
+            void SetCubemap(Data::Instance<JE::Render::RPI::Image> cubemap) override;
             void SetCubemapExposure(float exposure) override;
 
             void SetSunPosition(SunPosition sunPosition) override;
@@ -136,7 +136,7 @@ namespace AZ
             AZ::Vector3 Vector3Pow(AZ::Vector3 a, AZ::Vector3 b);
             AZ::Vector3 Vector3Exp(AZ::Vector3 a);
 
-            Data::Instance<RPI::Buffer> m_buffer;
+            Data::Instance<JE::Render::RPI::Buffer> m_buffer;
             PhysicalSkyData m_physicalSkyData;
 
             RHI::ShaderInputNameIndex m_skyboxEnableIndex = "m_enable";
@@ -157,9 +157,9 @@ namespace AZ
             bool m_enable = false;
             SkyBoxMode m_skyboxMode = SkyBoxMode::None;
             SkyBoxFogSettings m_fogSettings;
-            Data::Instance<RPI::ShaderResourceGroup> m_sceneSrg = nullptr;
+            Data::Instance<JE::Render::RPI::ShaderResourceGroup> m_sceneSrg = nullptr;
 
-            Data::Instance<RPI::Image> m_cubemapTexture = nullptr;
+            Data::Instance<JE::Render::RPI::Image> m_cubemapTexture = nullptr;
             float m_cubemapExposure = 0;
             AZ::Matrix4x4 m_cubemapRotationMatrix = AZ::Matrix4x4::CreateIdentity();
 
@@ -170,7 +170,7 @@ namespace AZ
             PhotometricValue m_sunIntensity;
             PhotometricValue m_skyIntensity;
 
-            Data::Instance<RPI::Image> m_defaultCubemapTexture;
+            Data::Instance<JE::Render::RPI::Image> m_defaultCubemapTexture;
         };
     } // namespace Render
 } // namespace AZ

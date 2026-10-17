@@ -94,7 +94,7 @@ namespace EMotionFX
             Configuration                               m_configuration;        // Component configuration.
             EMotionFX::ActorInstance*                   m_actorInstance;        // Associated actor instance (retrieved from Actor Component).
 
-            AZ::RPI::Cullable::LodType m_previousLodType = AZ::RPI::Cullable::LodType::Default;
+            JE::Render::RPI::Cullable::LodType m_previousLodType = JE::Render::RPI::Cullable::LodType::Default;
             size_t m_previousLodLevel = 0;
         };
 

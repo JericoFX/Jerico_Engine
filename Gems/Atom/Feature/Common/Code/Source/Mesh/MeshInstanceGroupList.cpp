@@ -9,11 +9,11 @@
 #include <Mesh/MeshFeatureProcessor.h>
 #include <Mesh/MeshInstanceGroupList.h>
 #include <AzCore/std/numeric.h>
-#include <Atom/RPI.Public/Shader/ShaderResourceGroup.h>
+#include <JE/Render/RPI/Public/Shader/ShaderResourceGroup.h>
 
 namespace AZ::Render
 {
-    bool MeshInstanceGroupData::UpdateDrawPacket(const RPI::Scene& parentScene, bool forceUpdate)
+    bool MeshInstanceGroupData::UpdateDrawPacket(const JE::Render::RPI::Scene& parentScene, bool forceUpdate)
     {
         if (m_drawPacket.Update(parentScene, forceUpdate))
         {

@@ -8,9 +8,9 @@
 
 #include <PostProcessing/FastDepthAwareBlurPasses.h>
 #include <AzCore/Math/MathUtils.h>
-#include <Atom/RPI.Public/RenderPipeline.h>
-#include <Atom/RPI.Public/Scene.h>
-#include <Atom/RPI.Public/View.h>
+#include <JE/Render/RPI/Public/RenderPipeline.h>
+#include <JE/Render/RPI/Public/Scene.h>
+#include <JE/Render/RPI/Public/View.h>
 
 namespace AZ
 {
@@ -39,14 +39,14 @@ namespace AZ
 
         // --- HORIZONTAL BLUR ---
 
-        RPI::Ptr<FastDepthAwareBlurHorPass> FastDepthAwareBlurHorPass::Create(const RPI::PassDescriptor& descriptor)
+        JE::Render::RPI::Ptr<FastDepthAwareBlurHorPass> FastDepthAwareBlurHorPass::Create(const JE::Render::RPI::PassDescriptor& descriptor)
         {
-            RPI::Ptr<FastDepthAwareBlurHorPass> pass = aznew FastDepthAwareBlurHorPass(descriptor);
+            JE::Render::RPI::Ptr<FastDepthAwareBlurHorPass> pass = aznew FastDepthAwareBlurHorPass(descriptor);
             return pass;
         }
 
-        FastDepthAwareBlurHorPass::FastDepthAwareBlurHorPass(const RPI::PassDescriptor& descriptor)
-            : RPI::ComputePass(descriptor)
+        FastDepthAwareBlurHorPass::FastDepthAwareBlurHorPass(const JE::Render::RPI::PassDescriptor& descriptor)
+            : JE::Render::RPI::ComputePass(descriptor)
         {
             // Though this is a fullscreen pass, the algorithm used makes each thread output 3 blurred pixels, so
             // it's not a 1-to-1 ratio and requires custom calculation of target thread counts
@@ -63,7 +63,7 @@ namespace AZ
         void FastDepthAwareBlurHorPass::FrameBeginInternal(FramePrepareParams params)
         {
             AZ_Assert(GetOutputCount() > 0, "FastDepthAwareBlurHorPass: No output bindings!");
-            RPI::PassAttachment* outputAttachment = GetOutputBinding(0).GetAttachment().get();
+            JE::Render::RPI::PassAttachment* outputAttachment = GetOutputBinding(0).GetAttachment().get();
 
             AZ_Assert(outputAttachment != nullptr, "FastDepthAwareBlurHorPass: Output binding has no attachment!");
             RHI::Size size = outputAttachment->m_descriptor.m_image.m_size;
@@ -76,19 +76,19 @@ namespace AZ
             u32 targetThreadCountX = (size.m_width + 2) / 3;
             SetTargetThreadCounts(targetThreadCountX, size.m_height, 1);
 
-            RPI::ComputePass::FrameBeginInternal(params);
+            JE::Render::RPI::ComputePass::FrameBeginInternal(params);
         }
 
         // --- VERTICAL BLUR ---
 
-        RPI::Ptr<FastDepthAwareBlurVerPass> FastDepthAwareBlurVerPass::Create(const RPI::PassDescriptor& descriptor)
+        JE::Render::RPI::Ptr<FastDepthAwareBlurVerPass> FastDepthAwareBlurVerPass::Create(const JE::Render::RPI::PassDescriptor& descriptor)
         {
-            RPI::Ptr<FastDepthAwareBlurVerPass> pass = aznew FastDepthAwareBlurVerPass(descriptor);
+            JE::Render::RPI::Ptr<FastDepthAwareBlurVerPass> pass = aznew FastDepthAwareBlurVerPass(descriptor);
             return pass;
         }
 
-        FastDepthAwareBlurVerPass::FastDepthAwareBlurVerPass(const RPI::PassDescriptor& descriptor)
-            : RPI::ComputePass(descriptor)
+        FastDepthAwareBlurVerPass::FastDepthAwareBlurVerPass(const JE::Render::RPI::PassDescriptor& descriptor)
+            : JE::Render::RPI::ComputePass(descriptor)
         {
             // Though this is a fullscreen pass, the algorithm used makes each thread output 3 blurred pixels, so
             // it's not a 1-to-1 ratio and requires custom calculation of target thread counts
@@ -105,7 +105,7 @@ namespace AZ
         void FastDepthAwareBlurVerPass::FrameBeginInternal(FramePrepareParams params)
         {
             AZ_Assert(GetOutputCount() > 0, "FastDepthAwareBlurVerPass: No output bindings!");
-            RPI::PassAttachment* outputAttachment = GetOutputBinding(0).GetAttachment().get();
+            JE::Render::RPI::PassAttachment* outputAttachment = GetOutputBinding(0).GetAttachment().get();
 
             AZ_Assert(outputAttachment != nullptr, "FastDepthAwareBlurVerPass: Output binding has no attachment!");
             RHI::Size size = outputAttachment->m_descriptor.m_image.m_size;
@@ -118,7 +118,7 @@ namespace AZ
             u32 targetThreadCountY = (size.m_height + 2) / 3;
             SetTargetThreadCounts(size.m_width, targetThreadCountY, 1);
 
-            RPI::ComputePass::FrameBeginInternal(params);
+            JE::Render::RPI::ComputePass::FrameBeginInternal(params);
         }
 
     }   // namespace Render

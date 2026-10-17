@@ -6,7 +6,7 @@
  *
  */
 
-#include <Atom/RPI.Public/RenderPipeline.h>
+#include <JE/Render/RPI/Public/RenderPipeline.h>
 #include <DiffuseProbeGrid_Traits_Platform.h>
 #include <Render/DiffuseProbeGridVisualizationCompositePass.h>
 #include <Render/DiffuseProbeGridFeatureProcessor.h>
@@ -15,14 +15,14 @@ namespace AZ
 {
     namespace Render
     {
-        RPI::Ptr<DiffuseProbeGridVisualizationCompositePass> DiffuseProbeGridVisualizationCompositePass::Create(const RPI::PassDescriptor& descriptor)
+        JE::Render::RPI::Ptr<DiffuseProbeGridVisualizationCompositePass> DiffuseProbeGridVisualizationCompositePass::Create(const JE::Render::RPI::PassDescriptor& descriptor)
         {
-            RPI::Ptr<DiffuseProbeGridVisualizationCompositePass> pass = aznew DiffuseProbeGridVisualizationCompositePass(descriptor);
+            JE::Render::RPI::Ptr<DiffuseProbeGridVisualizationCompositePass> pass = aznew DiffuseProbeGridVisualizationCompositePass(descriptor);
             return pass;
         }
 
-        DiffuseProbeGridVisualizationCompositePass::DiffuseProbeGridVisualizationCompositePass(const RPI::PassDescriptor& descriptor)
-            : RPI::FullscreenTrianglePass(descriptor)
+        DiffuseProbeGridVisualizationCompositePass::DiffuseProbeGridVisualizationCompositePass(const JE::Render::RPI::PassDescriptor& descriptor)
+            : JE::Render::RPI::FullscreenTrianglePass(descriptor)
         {
             if (!AZ_TRAIT_DIFFUSE_GI_PASSES_SUPPORTED)
             {
@@ -37,7 +37,7 @@ namespace AZ
                 return false;
             }
 
-            RPI::Scene* scene = m_pipeline->GetScene();
+            JE::Render::RPI::Scene* scene = m_pipeline->GetScene();
             if (!scene)
             {
                 return false;

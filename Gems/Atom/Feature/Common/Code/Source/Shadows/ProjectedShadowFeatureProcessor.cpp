@@ -14,15 +14,15 @@
 #include <Atom/RHI/DrawPacketBuilder.h>
 #include <Atom/RHI/RHISystemInterface.h>
 #include <Atom/RHI.Reflect/InputStreamLayoutBuilder.h>
-#include <Atom/RPI.Public/RenderPipeline.h>
-#include <Atom/RPI.Public/RPISystemInterface.h>
-#include <Atom/RPI.Public/Scene.h>
-#include <Atom/RPI.Public/View.h>
-#include <Atom/RPI.Public/Image/ImageSystemInterface.h>
-#include <Atom/RPI.Public/Pass/PassSystem.h>
-#include <Atom/RPI.Public/Pass/PassFilter.h>
-#include <Atom/RPI.Public/Shader/Shader.h>
-#include <Atom/RPI.Reflect/Asset/AssetUtils.h>
+#include <JE/Render/RPI/Public/RenderPipeline.h>
+#include <JE/Render/RPI/Public/RPISystemInterface.h>
+#include <JE/Render/RPI/Public/Scene.h>
+#include <JE/Render/RPI/Public/View.h>
+#include <JE/Render/RPI/Public/Image/ImageSystemInterface.h>
+#include <JE/Render/RPI/Public/Pass/PassSystem.h>
+#include <JE/Render/RPI/Public/Pass/PassFilter.h>
+#include <JE/Render/RPI/Public/Shader/Shader.h>
+#include <JE/Render/RPI/Reflect/Asset/AssetUtils.h>
 #include <Atom/Feature/Mesh/MeshCommon.h>
 #include <CoreLights/Shadow.h>
 
@@ -73,7 +73,7 @@ namespace AZ::Render
     
     void ProjectedShadowFeatureProcessor::Activate()
     {
-        const RHI::ShaderResourceGroupLayout* viewSrgLayout = RPI::RPISystemInterface::Get()->GetViewSrgLayout().get();
+        const RHI::ShaderResourceGroupLayout* viewSrgLayout = JE::Render::RPI::RPISystemInterface::Get()->GetViewSrgLayout().get();
 
         GpuBufferHandler::Descriptor desc;
 
@@ -297,7 +297,7 @@ namespace AZ::Render
             nearDist,
             farDist);
 
-        RPI::ViewPtr view = shadowProperty.m_shadowmapView;
+        JE::Render::RPI::ViewPtr view = shadowProperty.m_shadowmapView;
         view->SetViewToClipMatrix(viewToClipMatrix);
         view->SetCameraTransform(Matrix3x4::CreateFromTransform(desc.m_transform));
 
@@ -345,7 +345,7 @@ namespace AZ::Render
         shadowProperty.m_shadowId = shadowId;
 
         Name viewName(AZStd::string::format("ProjectedShadowView (shadowId:%d)", shadowId.GetIndex()));
-        shadowProperty.m_shadowmapView = RPI::View::CreateView(viewName, RPI::View::UsageShadow);
+        shadowProperty.m_shadowmapView = JE::Render::RPI::View::CreateView(viewName, JE::Render::RPI::View::UsageShadow);
 
         UpdateShadowView(shadowProperty);
 
@@ -356,20 +356,20 @@ namespace AZ::Render
         }
     }
         
-    void ProjectedShadowFeatureProcessor::OnRenderPipelineChanged([[maybe_unused]] RPI::RenderPipeline* renderPipeline,
-            [[maybe_unused]] RPI::SceneNotification::RenderPipelineChangeType changeType)
+    void ProjectedShadowFeatureProcessor::OnRenderPipelineChanged([[maybe_unused]] JE::Render::RPI::RenderPipeline* renderPipeline,
+            [[maybe_unused]] JE::Render::RPI::SceneNotification::RenderPipelineChangeType changeType)
     {
-        if (changeType == RPI::SceneNotification::RenderPipelineChangeType::Removed)
+        if (changeType == JE::Render::RPI::SceneNotification::RenderPipelineChangeType::Removed)
         {
             // Check for cases where the pipeline containing the primary render passes has been removed, which means the pointers
             // to those passes are no longer valid.
             CheckRemovePrimaryPasses(renderPipeline);
         }
-        if (changeType == RPI::SceneNotification::RenderPipelineChangeType::Removed || changeType == RPI::SceneNotification::RenderPipelineChangeType::PassChanged)
+        if (changeType == JE::Render::RPI::SceneNotification::RenderPipelineChangeType::Removed || changeType == JE::Render::RPI::SceneNotification::RenderPipelineChangeType::PassChanged)
         {
             RemoveCachedPasses(renderPipeline);
         }
-        if (changeType == RPI::SceneNotification::RenderPipelineChangeType::Added || changeType == RPI::SceneNotification::RenderPipelineChangeType::PassChanged)
+        if (changeType == JE::Render::RPI::SceneNotification::RenderPipelineChangeType::Added || changeType == JE::Render::RPI::SceneNotification::RenderPipelineChangeType::PassChanged)
         {
             CachePasses(renderPipeline);
         }
@@ -380,7 +380,7 @@ namespace AZ::Render
         UpdatePrimaryPasses();
     }
 
-    void ProjectedShadowFeatureProcessor::CheckRemovePrimaryPasses(RPI::RenderPipeline* renderPipeline)
+    void ProjectedShadowFeatureProcessor::CheckRemovePrimaryPasses(JE::Render::RPI::RenderPipeline* renderPipeline)
     {
         auto projItr = m_projectedShadowmapsPasses.find(renderPipeline);
         if (projItr != m_projectedShadowmapsPasses.end() && projItr->second == m_primaryProjectedShadowmapsPass)
@@ -394,7 +394,7 @@ namespace AZ::Render
         }
     }
 
-    void ProjectedShadowFeatureProcessor::RemoveCachedPasses(RPI::RenderPipeline* renderPipeline)
+    void ProjectedShadowFeatureProcessor::RemoveCachedPasses(JE::Render::RPI::RenderPipeline* renderPipeline)
     {
         m_projectedShadowmapsPasses.erase(renderPipeline);
         m_esmShadowmapsPasses.erase(renderPipeline);
@@ -403,13 +403,13 @@ namespace AZ::Render
         // projected shadow pass was altered or removed as part of that change.
         if (renderPipeline == m_primaryShadowPipeline && m_primaryProjectedShadowmapsPass != nullptr)
         {
-            RPI::PassFilter projectedPassFilter = RPI::PassFilter::CreateWithTemplateName(AZ_NAME_LITERAL("ProjectedShadowmapsTemplate"), renderPipeline);
+            JE::Render::RPI::PassFilter projectedPassFilter = JE::Render::RPI::PassFilter::CreateWithTemplateName(AZ_NAME_LITERAL("ProjectedShadowmapsTemplate"), renderPipeline);
             bool primaryPassChanged = true;
-            RPI::PassSystemInterface::Get()->ForEachPass(projectedPassFilter,
-                [&](RPI::Pass* pass) -> RPI::PassFilterExecutionFlow
+            JE::Render::RPI::PassSystemInterface::Get()->ForEachPass(projectedPassFilter,
+                [&](JE::Render::RPI::Pass* pass) -> JE::Render::RPI::PassFilterExecutionFlow
                 {
                     primaryPassChanged = m_primaryProjectedShadowmapsPass != pass;
-                    return RPI::PassFilterExecutionFlow::StopVisitingPasses;
+                    return JE::Render::RPI::PassFilterExecutionFlow::StopVisitingPasses;
                 }
             );
             if (primaryPassChanged)
@@ -417,15 +417,15 @@ namespace AZ::Render
                 m_primaryProjectedShadowmapsPass = nullptr;
 
                 // Check to see if the esm pass still exists on this pipeline. If so, turn it off before setting the pointer to null.
-                RPI::PassFilter esmPassFilter = RPI::PassFilter::CreateWithTemplateName(AZ_NAME_LITERAL("EsmShadowmapsTemplate"), renderPipeline);
-                RPI::PassSystemInterface::Get()->ForEachPass(esmPassFilter,
-                    [&](RPI::Pass* pass) -> RPI::PassFilterExecutionFlow
+                JE::Render::RPI::PassFilter esmPassFilter = JE::Render::RPI::PassFilter::CreateWithTemplateName(AZ_NAME_LITERAL("EsmShadowmapsTemplate"), renderPipeline);
+                JE::Render::RPI::PassSystemInterface::Get()->ForEachPass(esmPassFilter,
+                    [&](JE::Render::RPI::Pass* pass) -> JE::Render::RPI::PassFilterExecutionFlow
                     {
                         if (pass == m_primaryEsmShadowmapsPass)
                         {
                             m_primaryEsmShadowmapsPass->SetEnabledComputation(false);
                         }
-                        return RPI::PassFilterExecutionFlow::StopVisitingPasses;
+                        return JE::Render::RPI::PassFilterExecutionFlow::StopVisitingPasses;
                     }
                 );
                 m_primaryEsmShadowmapsPass = nullptr;
@@ -433,30 +433,30 @@ namespace AZ::Render
         }
     }
 
-    void ProjectedShadowFeatureProcessor::CachePasses(RPI::RenderPipeline* renderPipeline)
+    void ProjectedShadowFeatureProcessor::CachePasses(JE::Render::RPI::RenderPipeline* renderPipeline)
     {
         // Find the Projected Shadow pass in a given render pipeline and update it.
-        RPI::PassFilter projectedPassFilter = RPI::PassFilter::CreateWithTemplateName(AZ_NAME_LITERAL("ProjectedShadowmapsTemplate"), renderPipeline);
-        RPI::PassSystemInterface::Get()->ForEachPass(projectedPassFilter,
-            [&](RPI::Pass* pass) -> RPI::PassFilterExecutionFlow
+        JE::Render::RPI::PassFilter projectedPassFilter = JE::Render::RPI::PassFilter::CreateWithTemplateName(AZ_NAME_LITERAL("ProjectedShadowmapsTemplate"), renderPipeline);
+        JE::Render::RPI::PassSystemInterface::Get()->ForEachPass(projectedPassFilter,
+            [&](JE::Render::RPI::Pass* pass) -> JE::Render::RPI::PassFilterExecutionFlow
             {
                 if (m_projectedShadowmapsPasses.contains(renderPipeline))
                 {
                     AZ_Error("ProjectedShadowFeatureProcessor", false, "Found multiple projected shadowmap passes in pipeline.");
-                    return RPI::PassFilterExecutionFlow::StopVisitingPasses;
+                    return JE::Render::RPI::PassFilterExecutionFlow::StopVisitingPasses;
                 }
                 ProjectedShadowmapsPass* shadowmapPass = static_cast<ProjectedShadowmapsPass*>(pass);
                 shadowmapPass->SetAtlasAttachmentImage(m_atlasImage);
                 m_projectedShadowmapsPasses[renderPipeline] = shadowmapPass;
 
-                return RPI::PassFilterExecutionFlow::ContinueVisitingPasses; // continue to check for multiple (error case)
+                return JE::Render::RPI::PassFilterExecutionFlow::ContinueVisitingPasses; // continue to check for multiple (error case)
             }
         );
 
         // Find the ESM shadow pass in a given render pipeline and update it.
-        RPI::PassFilter esmPassFilter = RPI::PassFilter::CreateWithTemplateName(AZ_NAME_LITERAL("EsmShadowmapsTemplate"), renderPipeline);
-        RPI::PassSystemInterface::Get()->ForEachPass(esmPassFilter,
-            [&](RPI::Pass* pass) -> RPI::PassFilterExecutionFlow
+        JE::Render::RPI::PassFilter esmPassFilter = JE::Render::RPI::PassFilter::CreateWithTemplateName(AZ_NAME_LITERAL("EsmShadowmapsTemplate"), renderPipeline);
+        JE::Render::RPI::PassSystemInterface::Get()->ForEachPass(esmPassFilter,
+            [&](JE::Render::RPI::Pass* pass) -> JE::Render::RPI::PassFilterExecutionFlow
             {
                 EsmShadowmapsPass* esmShadowmapsPass = static_cast<EsmShadowmapsPass*>(pass);
                 if (esmShadowmapsPass->GetLightTypeName() == Name("projected"))
@@ -464,7 +464,7 @@ namespace AZ::Render
                     if (m_esmShadowmapsPasses.contains(renderPipeline))
                     {
                         AZ_Error("ProjectedShadowFeatureProcessor", false, "Found multiple esm shadowmap passes for projected shadows in pipeline.");
-                        return RPI::PassFilterExecutionFlow::StopVisitingPasses;
+                        return JE::Render::RPI::PassFilterExecutionFlow::StopVisitingPasses;
                     }
                     m_esmShadowmapsPasses[renderPipeline] = esmShadowmapsPass;
                     if (esmShadowmapsPass != m_primaryEsmShadowmapsPass)
@@ -473,7 +473,7 @@ namespace AZ::Render
                     }
                     esmShadowmapsPass->SetAtlasAttachmentImage(m_esmAtlasImage);
                 }
-                return RPI::PassFilterExecutionFlow::ContinueVisitingPasses; // continue to check for multiple (error case)
+                return JE::Render::RPI::PassFilterExecutionFlow::ContinueVisitingPasses; // continue to check for multiple (error case)
             }
         );
     }
@@ -483,7 +483,7 @@ namespace AZ::Render
         // Find a new m_primaryProjectedShadowmapsPass. This needs to be the first ProjectedShadowmapsPass
         // in the list of pipelines to ensure it calculates the shadows before any other pipelines need it.
         bool found = false;
-        for (RPI::RenderPipelinePtr pipeline : GetParentScene()->GetRenderPipelines())
+        for (JE::Render::RPI::RenderPipelinePtr pipeline : GetParentScene()->GetRenderPipelines())
         {
             auto itr = m_projectedShadowmapsPasses.find(pipeline.get());
             if (itr != m_projectedShadowmapsPasses.end())
@@ -493,7 +493,7 @@ namespace AZ::Render
                 {
                     if (m_primaryProjectedShadowmapsPass != nullptr)
                     {
-                        for (RPI::Ptr<RPI::Pass> child : m_primaryProjectedShadowmapsPass->GetChildren())
+                        for (JE::Render::RPI::Ptr<JE::Render::RPI::Pass> child : m_primaryProjectedShadowmapsPass->GetChildren())
                         {
                             child->QueueForRemoval();
                         }
@@ -538,15 +538,15 @@ namespace AZ::Render
         {
             // Either there's no primary projected shadowmaps pass, or there is but there's no esm pass on the same pipeline, so disable
             // the primary esm pass if necessary.
-            RPI::PassFilter esmPassFilter = RPI::PassFilter::CreateWithTemplateName(AZ_NAME_LITERAL("EsmShadowmapsTemplate"), m_primaryShadowPipeline);
-            RPI::PassSystemInterface::Get()->ForEachPass(esmPassFilter,
-                [&](RPI::Pass* pass) -> RPI::PassFilterExecutionFlow
+            JE::Render::RPI::PassFilter esmPassFilter = JE::Render::RPI::PassFilter::CreateWithTemplateName(AZ_NAME_LITERAL("EsmShadowmapsTemplate"), m_primaryShadowPipeline);
+            JE::Render::RPI::PassSystemInterface::Get()->ForEachPass(esmPassFilter,
+                [&](JE::Render::RPI::Pass* pass) -> JE::Render::RPI::PassFilterExecutionFlow
                 {
                     if (pass == m_primaryEsmShadowmapsPass)
                     {
                         m_primaryEsmShadowmapsPass->SetEnabledComputation(false);
                     }
-                    return RPI::PassFilterExecutionFlow::StopVisitingPasses;
+                    return JE::Render::RPI::PassFilterExecutionFlow::StopVisitingPasses;
                 }
             );
             m_primaryEsmShadowmapsPass = nullptr;
@@ -607,7 +607,7 @@ namespace AZ::Render
         // Create index table buffer.
         // [GFX TODO ATOM-14851] Should not be creating a new buffer here, just map the data or orphan with new data.
         const AZStd::string indexTableBufferName = AZStd::string::format("IndexTableBuffer(Projected) %d", nameIndex++);
-        const Data::Instance<RPI::Buffer> indexTableBuffer = m_atlas.CreateShadowmapIndexTableBuffer(indexTableBufferName);
+        const Data::Instance<JE::Render::RPI::Buffer> indexTableBuffer = m_atlas.CreateShadowmapIndexTableBuffer(indexTableBufferName);
 
         m_filterParamBufferHandler.UpdateBuffer(m_shadowData.GetRawData<FilterParamIndex>(), static_cast<uint32_t>(m_shadowData.GetSize()));
 
@@ -673,11 +673,11 @@ namespace AZ::Render
     }
 
     void ProjectedShadowFeatureProcessor::PrepareViews(
-        const PrepareViewsPacket& prepareViewsPacket, AZStd::vector<AZStd::pair<RPI::PipelineViewTag, RPI::ViewPtr>>& outViews)
+        const PrepareViewsPacket& prepareViewsPacket, AZStd::vector<AZStd::pair<JE::Render::RPI::PipelineViewTag, JE::Render::RPI::ViewPtr>>& outViews)
     {
         if (m_primaryProjectedShadowmapsPass != nullptr)
         {
-            RPI::RenderPipeline* renderPipeline = m_primaryProjectedShadowmapsPass->GetRenderPipeline();
+            JE::Render::RPI::RenderPipeline* renderPipeline = m_primaryProjectedShadowmapsPass->GetRenderPipeline();
             if (renderPipeline)
             {
                 AZStd::vector<AZ::Frustum> mainViewFrustums;
@@ -704,7 +704,7 @@ namespace AZ::Render
                         continue;
                     }
 
-                    const RPI::PipelineViewTag& viewTag = shadowProperty.m_shadowmapPass->GetPipelineViewTag();
+                    const JE::Render::RPI::PipelineViewTag& viewTag = shadowProperty.m_shadowmapPass->GetPipelineViewTag();
                     const RHI::DrawListMask drawListMask = renderPipeline->GetDrawListMask(viewTag);
                     if (shadowProperty.m_shadowmapView->GetDrawListMask() != drawListMask)
                     {
@@ -724,11 +724,11 @@ namespace AZ::Render
 
         if (m_primaryProjectedShadowmapsPass != nullptr)
         {
-            for (const RPI::ViewPtr& view : packet.m_views)
+            for (const JE::Render::RPI::ViewPtr& view : packet.m_views)
             {
-                if (view->GetUsageFlags() & RPI::View::UsageFlags::UsageCamera)
+                if (view->GetUsageFlags() & JE::Render::RPI::View::UsageFlags::UsageCamera)
                 {
-                    RPI::ShaderResourceGroup* srg = view->GetShaderResourceGroup().get();
+                    JE::Render::RPI::ShaderResourceGroup* srg = view->GetShaderResourceGroup().get();
 
                     float shadowMapAtlasSize = static_cast<float>(m_atlas.GetBaseShadowmapSize());
 
@@ -761,11 +761,11 @@ namespace AZ::Render
     {
         // Force load of shader to clear shadow maps.
         const AZStd::string clearShadowShaderFilePath = "Shaders/Shadow/ClearShadow.azshader";
-        Data::Asset<RPI::ShaderAsset> shaderAsset = RPI::AssetUtils::LoadCriticalAsset<RPI::ShaderAsset>
-            (clearShadowShaderFilePath, RPI::AssetUtils::TraceLevel::Assert);
+        Data::Asset<JE::Render::RPI::ShaderAsset> shaderAsset = JE::Render::RPI::AssetUtils::LoadCriticalAsset<JE::Render::RPI::ShaderAsset>
+            (clearShadowShaderFilePath, JE::Render::RPI::AssetUtils::TraceLevel::Assert);
 
-        m_clearShadowShader = RPI::Shader::FindOrCreate(shaderAsset);
-        const RPI::ShaderVariant& variant = m_clearShadowShader->GetRootVariant();
+        m_clearShadowShader = JE::Render::RPI::Shader::FindOrCreate(shaderAsset);
+        const JE::Render::RPI::ShaderVariant& variant = m_clearShadowShader->GetRootVariant();
 
         RHI::PipelineStateDescriptorForDraw pipelineStateDescriptor;
         variant.ConfigurePipelineState(pipelineStateDescriptor);
@@ -816,7 +816,7 @@ namespace AZ::Render
         m_atlas.Finalize();
 
         auto createAtlas = [&](RHI::Format format, RHI::ImageBindFlags bindFlags, RHI::ImageAspectFlags aspectFlags, AZStd::string name)
-            ->Data::Instance<RPI::AttachmentImage>
+            ->Data::Instance<JE::Render::RPI::AttachmentImage>
         {
             RHI::ImageDescriptor imageDescriptor;
             const uint32_t shadowmapSize = static_cast<uint32_t>(m_atlas.GetBaseShadowmapSize());
@@ -830,12 +830,12 @@ namespace AZ::Render
             RHI::ImageViewDescriptor viewDesc = RHI::ImageViewDescriptor::Create(imageDescriptor.m_format, 0, 0);
             viewDesc.m_aspectFlags = aspectFlags;
 
-            RPI::CreateAttachmentImageRequest createImageRequest;
-            createImageRequest.m_imagePool = RPI::ImageSystemInterface::Get()->GetSystemAttachmentPool().get();
+            JE::Render::RPI::CreateAttachmentImageRequest createImageRequest;
+            createImageRequest.m_imagePool = JE::Render::RPI::ImageSystemInterface::Get()->GetSystemAttachmentPool().get();
             createImageRequest.m_imageDescriptor = imageDescriptor;
             createImageRequest.m_imageName = AZStd::string::format("%s.%s", name.c_str(), GetParentScene()->GetName().GetCStr());
             createImageRequest.m_imageViewDescriptor = &viewDesc;
-            return RPI::AttachmentImage::Create(createImageRequest);
+            return JE::Render::RPI::AttachmentImage::Create(createImageRequest);
         };
 
         m_atlasImage = createAtlas(RHI::Format::D32_FLOAT, RHI::ImageBindFlags::Depth, RHI::ImageAspectFlags::Depth, "ProjectedShadowAtlas");
@@ -862,12 +862,12 @@ namespace AZ::Render
         }
     }
 
-    RPI::Ptr<ShadowmapPass> ProjectedShadowFeatureProcessor::CreateShadowmapPass(size_t childIndex)
+    JE::Render::RPI::Ptr<ShadowmapPass> ProjectedShadowFeatureProcessor::CreateShadowmapPass(size_t childIndex)
     {
         const Name passName{ AZStd::string::format("ProjectedShadowmapPass.%zu", childIndex) };
 
         RHI::RHISystemInterface* rhiSystem = RHI::RHISystemInterface::Get();
-        auto passData = AZStd::make_shared<RPI::RasterPassData>();
+        auto passData = AZStd::make_shared<JE::Render::RPI::RasterPassData>();
         passData->m_drawListTag = rhiSystem->GetDrawListTagRegistry()->GetName(m_primaryProjectedShadowmapsPass->GetDrawListTag());
         passData->m_pipelineViewTag = AZStd::string::format("%s.%zu", m_primaryProjectedShadowmapsPass->GetPipelineViewTag().GetCStr(), childIndex);
 

@@ -11,8 +11,8 @@
 #include <AzCore/std/string/string.h>
 #include <Atom/Feature/Base.h>
 #include <Atom/RHI/DeviceBufferView.h>
-#include <Atom/RPI.Public/Buffer/Buffer.h>
-#include <Atom/RPI.Public/Shader/ShaderResourceGroup.h>
+#include <JE/Render/RPI/Public/Buffer/Buffer.h>
+#include <JE/Render/RPI/Public/Shader/ShaderResourceGroup.h>
 
 namespace AZ
 {
@@ -43,19 +43,19 @@ namespace AZ
             bool UpdateBuffer(const AZStd::vector<T>& data);
             bool UpdateBuffer(const AZStd::unordered_map<int, const void*>& data, uint32_t elementCount);
 
-            void UpdateSrg(RPI::ShaderResourceGroup* srg) const;
+            void UpdateSrg(JE::Render::RPI::ShaderResourceGroup* srg) const;
 
             bool IsValid() const;
             void Release();
 
             uint32_t GetElementCount()const { return m_elementCount; }
-            const Data::Instance<RPI::Buffer> GetBuffer()const { return m_buffer; }
+            const Data::Instance<JE::Render::RPI::Buffer> GetBuffer()const { return m_buffer; }
 
         private:
 
             bool UpdateBuffer(uint32_t elementCount, const void* data);
 
-            Data::Instance<RPI::Buffer> m_buffer;
+            Data::Instance<JE::Render::RPI::Buffer> m_buffer;
             RHI::ShaderInputBufferIndex m_bufferIndex;
             RHI::ShaderInputConstantIndex m_elementCountIndex;
             uint32_t m_elementCount = 0;

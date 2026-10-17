@@ -12,7 +12,7 @@
 #include <AzCore/Asset/AssetSerializer.h>
 #include <AzCore/Serialization/SerializeContext.h>
 #include <AzCore/RTTI/BehaviorContext.h>
-#include <Atom/RPI.Public/Image/StreamingImage.h>
+#include <JE/Render/RPI/Public/Image/StreamingImage.h>
 #include <Atom/Feature/SkyBox/SkyBoxFeatureProcessorInterface.h>
 #include <Atom/Feature/PostProcess/PostProcessFeatureProcessorInterface.h>
 #include <Atom/Feature/ImageBasedLights/ImageBasedLightFeatureProcessorInterface.h>
@@ -155,7 +155,7 @@ namespace AZ
             if (skyboxFeatureProcessor)
             {
                 auto skyboxAsset = (enableAlternateSkybox && m_alternateSkyboxImageAsset.GetId().IsValid()) ? m_alternateSkyboxImageAsset : m_skyboxImageAsset;
-                skyboxFeatureProcessor->SetCubemap(RPI::StreamingImage::FindOrCreate(skyboxAsset));
+                skyboxFeatureProcessor->SetCubemap(JE::Render::RPI::StreamingImage::FindOrCreate(skyboxAsset));
                 skyboxFeatureProcessor->SetCubemapExposure(m_skyboxExposure);
             }
 

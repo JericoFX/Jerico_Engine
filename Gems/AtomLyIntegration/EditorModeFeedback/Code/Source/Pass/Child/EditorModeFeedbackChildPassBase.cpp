@@ -12,14 +12,14 @@ namespace AZ
 {
     namespace Render
     {
-        RPI::Ptr<EditorModeFeedbackChildPassBase> EditorModeFeedbackChildPassBase::Create(const RPI::PassDescriptor& descriptor)
+        JE::Render::RPI::Ptr<EditorModeFeedbackChildPassBase> EditorModeFeedbackChildPassBase::Create(const JE::Render::RPI::PassDescriptor& descriptor)
         {
-            RPI::Ptr<EditorModeFeedbackChildPassBase> pass = aznew EditorModeFeedbackChildPassBase(descriptor);
+            JE::Render::RPI::Ptr<EditorModeFeedbackChildPassBase> pass = aznew EditorModeFeedbackChildPassBase(descriptor);
             return pass;
         }
 
         EditorModeFeedbackChildPassBase::EditorModeFeedbackChildPassBase(
-            const RPI::PassDescriptor& descriptor,
+            const JE::Render::RPI::PassDescriptor& descriptor,
             const DepthTransition& depthTransition,
             float finalBlendAmount)
             : FullscreenTrianglePass(descriptor)

@@ -24,13 +24,13 @@
 
 #include <Atom/RHI/Factory.h>
 
-#include <Atom/RPI.Public/RPISystemInterface.h>
-#include <Atom/RPI.Public/View.h>
-#include <Atom/RPI.Public/Scene.h>
-#include <Atom/RPI.Public/RenderPipeline.h>
-#include <Atom/RPI.Public/ViewportContextBus.h>
-#include <Atom/RPI.Public/Shader/ShaderResourceGroup.h>
-#include <Atom/RPI.Public/AuxGeom/AuxGeomFeatureProcessorInterface.h>
+#include <JE/Render/RPI/Public/RPISystemInterface.h>
+#include <JE/Render/RPI/Public/View.h>
+#include <JE/Render/RPI/Public/Scene.h>
+#include <JE/Render/RPI/Public/RenderPipeline.h>
+#include <JE/Render/RPI/Public/ViewportContextBus.h>
+#include <JE/Render/RPI/Public/Shader/ShaderResourceGroup.h>
+#include <JE/Render/RPI/Public/AuxGeom/AuxGeomFeatureProcessorInterface.h>
 
 #include <JE/Render/Bootstrap/DefaultWindowBus.h>
 
@@ -89,7 +89,7 @@ namespace JE::Render::Integration
 
         void AtomBridgeSystemComponent::Init()
         {
-            AZ::RPI::ViewportContextManagerNotificationsBus::Handler::BusConnect();
+            JE::Render::RPI::ViewportContextManagerNotificationsBus::Handler::BusConnect();
         }
 
         void AtomBridgeSystemComponent::Activate()
@@ -106,12 +106,12 @@ namespace JE::Render::Integration
         void AtomBridgeSystemComponent::Deactivate()
         {
             m_dynamicDrawManager.reset();
-            AZ::RPI::ViewportContextManagerNotificationsBus::Handler::BusDisconnect();
-            AZ::RPI::Scene* scene = AZ::RPI::Scene::GetSceneForEntityContextId(m_entityContextId);
+            JE::Render::RPI::ViewportContextManagerNotificationsBus::Handler::BusDisconnect();
+            JE::Render::RPI::Scene* scene = JE::Render::RPI::Scene::GetSceneForEntityContextId(m_entityContextId);
             // Check if scene is emptry since scene might be released already when running AtomSampleViewer
             if (scene)
             {
-                auto auxGeomFP = scene->GetFeatureProcessor<AZ::RPI::AuxGeomFeatureProcessorInterface>();
+                auto auxGeomFP = scene->GetFeatureProcessor<JE::Render::RPI::AuxGeomFeatureProcessorInterface>();
                 if (auxGeomFP)
                 {
                     auxGeomFP->ReleaseDrawQueueForView(m_view.get());
@@ -157,7 +157,7 @@ namespace JE::Render::Integration
             }
         }
 
-        void AtomBridgeSystemComponent::OnBootstrapSceneReady(AZ::RPI::Scene* bootstrapScene)
+        void AtomBridgeSystemComponent::OnBootstrapSceneReady(JE::Render::RPI::Scene* bootstrapScene)
         {
             // If the pointer is not reset before being assigned, the destructor of the old instance of AtomDebugDisplayViewportInterface
             // would disconnect from DebugDisplayRequestBus immediately after the new instance was connected, since they both use the same
@@ -173,7 +173,7 @@ namespace JE::Render::Integration
             m_activeViewportsList[AzFramework::g_defaultSceneEntityDebugDisplayId] = mainEntityDebugDisplay;
         }
 
-        void AtomBridgeSystemComponent::OnViewportContextAdded(AZ::RPI::ViewportContextPtr viewportContext)
+        void AtomBridgeSystemComponent::OnViewportContextAdded(JE::Render::RPI::ViewportContextPtr viewportContext)
         {
                 AZStd::shared_ptr<AtomDebugDisplayViewportInterface> viewportDebugDisplay = AZStd::make_shared<AtomDebugDisplayViewportInterface>(viewportContext);
                 m_activeViewportsList[viewportContext->GetId()] = viewportDebugDisplay;

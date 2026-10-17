@@ -11,10 +11,10 @@
 
 #include <Atom/RHI.Reflect/Size.h>
 
-#include <Atom/RPI.Public/Pass/RasterPass.h>
-#include <Atom/RPI.Public/Shader/Shader.h>
-#include <Atom/RPI.Public/Shader/ShaderResourceGroup.h>
-#include <Atom/RPI.Public/Shader/ShaderReloadNotificationBus.h>
+#include <JE/Render/RPI/Public/Pass/RasterPass.h>
+#include <JE/Render/RPI/Public/Shader/Shader.h>
+#include <JE/Render/RPI/Public/Shader/ShaderResourceGroup.h>
+#include <JE/Render/RPI/Public/Shader/ShaderReloadNotificationBus.h>
 
 namespace AZ
 {
@@ -34,8 +34,8 @@ namespace AZ
             //!  class that can be inherited - for example by the HiarPPLLRasterPass and have only the specific
             //!  class data handling added on top.
             class HairGeometryRasterPass
-                : public RPI::RasterPass
-                , private RPI::ShaderReloadNotificationBus::Handler
+                : public JE::Render::RPI::RasterPass
+                , private JE::Render::RPI::ShaderReloadNotificationBus::Handler
             {
                 AZ_RPI_PASS(HairGeometryRasterPass);
 
@@ -44,14 +44,14 @@ namespace AZ
                 AZ_CLASS_ALLOCATOR(HairGeometryRasterPass, SystemAllocator);
 
                 //! Creates a HairGeometryRasterPass
-                static RPI::Ptr<HairGeometryRasterPass> Create(const RPI::PassDescriptor& descriptor);
+                static JE::Render::RPI::Ptr<HairGeometryRasterPass> Create(const JE::Render::RPI::PassDescriptor& descriptor);
 
                 bool AddDrawPackets(AZStd::list<Data::Instance<HairRenderObject>>& hairObjects);
 
                 //! The following will be called when an object was added or shader has been compiled
                 void SchedulePacketBuild(HairRenderObject* hairObject);
 
-                Data::Instance<RPI::Shader> GetShader();
+                Data::Instance<JE::Render::RPI::Shader> GetShader();
 
                 void SetFeatureProcessor(HairFeatureProcessor* featureProcessor)
                 {
@@ -61,12 +61,12 @@ namespace AZ
                 virtual bool IsEnabled() const override;
 
             protected:
-                explicit HairGeometryRasterPass(const RPI::PassDescriptor& descriptor);
+                explicit HairGeometryRasterPass(const JE::Render::RPI::PassDescriptor& descriptor);
 
                 // ShaderReloadNotificationBus::Handler overrides...
-                void OnShaderReinitialized(const RPI::Shader& shader) override;
-                void OnShaderAssetReinitialized(const Data::Asset<RPI::ShaderAsset>& shaderAsset) override;
-                void OnShaderVariantReinitialized(const AZ::RPI::ShaderVariant& shaderVariant) override;
+                void OnShaderReinitialized(const JE::Render::RPI::Shader& shader) override;
+                void OnShaderAssetReinitialized(const Data::Asset<JE::Render::RPI::ShaderAsset>& shaderAsset) override;
+                void OnShaderVariantReinitialized(const JE::Render::RPI::ShaderVariant& shaderVariant) override;
 
                 void SetShaderPath(const char* shaderPath) { m_shaderPath = shaderPath; }
                 bool LoadShaderAndPipelineState();
@@ -82,22 +82,22 @@ namespace AZ
                 void CompileResources(const RHI::FrameGraphCompileContext& context) override;
 
                 //! Updates the shader variant being used by the pass
-                bool UpdateShaderOptions(const RPI::ShaderVariantId& variantId);
+                bool UpdateShaderOptions(const JE::Render::RPI::ShaderVariantId& variantId);
 
             protected:
                 HairFeatureProcessor* m_featureProcessor = nullptr;
 
                 // The  shader that will be used by the pass
-                Data::Instance<RPI::Shader> m_shader = nullptr;
+                Data::Instance<JE::Render::RPI::Shader> m_shader = nullptr;
 
                 // Override the following in the inherited class
                 AZStd::string m_shaderPath = "dummyShaderPath";
 
                 // To help create the pipeline state 
-                RPI::PassDescriptor m_passDescriptor;
+                JE::Render::RPI::PassDescriptor m_passDescriptor;
 
                 const RHI::PipelineState* m_pipelineState = nullptr;
-                RPI::ViewPtr m_currentView = nullptr;
+                JE::Render::RPI::ViewPtr m_currentView = nullptr;
 
                 AZStd::mutex m_mutex;
 
@@ -107,7 +107,7 @@ namespace AZ
                 AZStd::unordered_set<HairRenderObject*> m_newRenderObjects;
 
                 bool m_initialized = false;
-                RPI::ShaderVariantId m_currentShaderVariantId;
+                JE::Render::RPI::ShaderVariantId m_currentShaderVariantId;
             };
 
         } // namespace Hair

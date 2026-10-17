@@ -6,13 +6,13 @@
  *
  */
 
-#include <Atom/RPI.Public/Image/AttachmentImagePool.h>
-#include <Atom/RPI.Public/Pass/PassUtils.h>
-#include <Atom/RPI.Public/RenderPipeline.h>
-#include <Atom/RPI.Public/RPIUtils.h>
-#include <Atom/RPI.Public/Scene.h>
-#include <Atom/RPI.Public/View.h>
-#include <Atom/RPI.Reflect/Shader/ShaderAsset.h>
+#include <JE/Render/RPI/Public/Image/AttachmentImagePool.h>
+#include <JE/Render/RPI/Public/Pass/PassUtils.h>
+#include <JE/Render/RPI/Public/RenderPipeline.h>
+#include <JE/Render/RPI/Public/RPIUtils.h>
+#include <JE/Render/RPI/Public/Scene.h>
+#include <JE/Render/RPI/Public/View.h>
+#include <JE/Render/RPI/Reflect/Shader/ShaderAsset.h>
 #include <TerrainRenderer/Passes/TerrainClipmapComputePass.h>
 #include <TerrainRenderer/TerrainFeatureProcessor.h>
 #include <TerrainRenderer/TerrainClipmapManager.h>
@@ -22,20 +22,20 @@
 
 namespace Terrain
 {
-    AZ::RPI::Ptr<TerrainMacroClipmapGenerationPass> TerrainMacroClipmapGenerationPass::Create(const AZ::RPI::PassDescriptor& descriptor)
+    JE::Render::RPI::Ptr<TerrainMacroClipmapGenerationPass> TerrainMacroClipmapGenerationPass::Create(const JE::Render::RPI::PassDescriptor& descriptor)
     {
-        AZ::RPI::Ptr<TerrainMacroClipmapGenerationPass> pass = aznew TerrainMacroClipmapGenerationPass(descriptor);
+        JE::Render::RPI::Ptr<TerrainMacroClipmapGenerationPass> pass = aznew TerrainMacroClipmapGenerationPass(descriptor);
         return pass;
     }
 
-    TerrainMacroClipmapGenerationPass::TerrainMacroClipmapGenerationPass(const AZ::RPI::PassDescriptor& descriptor)
-        : AZ::RPI::ComputePass(descriptor)
+    TerrainMacroClipmapGenerationPass::TerrainMacroClipmapGenerationPass(const JE::Render::RPI::PassDescriptor& descriptor)
+        : JE::Render::RPI::ComputePass(descriptor)
     {
     }
 
     void TerrainMacroClipmapGenerationPass::SetupFrameGraphDependencies(AZ::RHI::FrameGraphInterface frameGraph)
     {
-        AZ::RPI::Scene* scene = m_pipeline->GetScene();
+        JE::Render::RPI::Scene* scene = m_pipeline->GetScene();
         TerrainFeatureProcessor* terrainFeatureProcessor = scene->GetFeatureProcessor<TerrainFeatureProcessor>();
         if (terrainFeatureProcessor)
         {
@@ -52,7 +52,7 @@ namespace Terrain
 
     void TerrainMacroClipmapGenerationPass::CompileResources(const AZ::RHI::FrameGraphCompileContext& context)
     {
-        AZ::RPI::Scene* scene = m_pipeline->GetScene();
+        JE::Render::RPI::Scene* scene = m_pipeline->GetScene();
         TerrainFeatureProcessor* terrainFeatureProcessor = scene->GetFeatureProcessor<TerrainFeatureProcessor>();
         if (terrainFeatureProcessor)
         {
@@ -93,17 +93,17 @@ namespace Terrain
             }
         }
 
-        AZ::RPI::ComputePass::CompileResources(context);
+        JE::Render::RPI::ComputePass::CompileResources(context);
     }
 
     bool TerrainMacroClipmapGenerationPass::IsEnabled() const
     {
-        if (!AZ::RPI::Pass::IsEnabled())
+        if (!JE::Render::RPI::Pass::IsEnabled())
         {
             return false;
         }
 
-        AZ::RPI::Scene* scene = m_pipeline->GetScene();
+        JE::Render::RPI::Scene* scene = m_pipeline->GetScene();
         TerrainFeatureProcessor* terrainFeatureProcessor = scene->GetFeatureProcessor<TerrainFeatureProcessor>();
         if (!terrainFeatureProcessor)
         {
@@ -115,14 +115,14 @@ namespace Terrain
         return clipmapManager.HasMacroClipmapUpdate();
     }
 
-    AZ::RPI::Ptr<TerrainDetailClipmapGenerationPass> TerrainDetailClipmapGenerationPass::Create(const AZ::RPI::PassDescriptor& descriptor)
+    JE::Render::RPI::Ptr<TerrainDetailClipmapGenerationPass> TerrainDetailClipmapGenerationPass::Create(const JE::Render::RPI::PassDescriptor& descriptor)
     {
-        AZ::RPI::Ptr<TerrainDetailClipmapGenerationPass> pass = aznew TerrainDetailClipmapGenerationPass(descriptor);
+        JE::Render::RPI::Ptr<TerrainDetailClipmapGenerationPass> pass = aznew TerrainDetailClipmapGenerationPass(descriptor);
         return pass;
     }
 
-    TerrainDetailClipmapGenerationPass::TerrainDetailClipmapGenerationPass(const AZ::RPI::PassDescriptor& descriptor)
-        : AZ::RPI::ComputePass(descriptor)
+    TerrainDetailClipmapGenerationPass::TerrainDetailClipmapGenerationPass(const JE::Render::RPI::PassDescriptor& descriptor)
+        : JE::Render::RPI::ComputePass(descriptor)
         , m_clipmapImageIndex{
             AZ::RHI::ShaderInputNameIndex(TerrainClipmapManager::ClipmapImageShaderInput[TerrainClipmapManager::ClipmapName::MacroColor]),
             AZ::RHI::ShaderInputNameIndex(TerrainClipmapManager::ClipmapImageShaderInput[TerrainClipmapManager::ClipmapName::MacroNormal]),
@@ -139,7 +139,7 @@ namespace Terrain
 
     void TerrainDetailClipmapGenerationPass::SetupFrameGraphDependencies(AZ::RHI::FrameGraphInterface frameGraph)
     {
-        AZ::RPI::Scene* scene = m_pipeline->GetScene();
+        JE::Render::RPI::Scene* scene = m_pipeline->GetScene();
         TerrainFeatureProcessor* terrainFeatureProcessor = scene->GetFeatureProcessor<TerrainFeatureProcessor>();
         if (terrainFeatureProcessor)
         {
@@ -173,12 +173,12 @@ namespace Terrain
             clipmapManager.UseClipmap(TerrainClipmapManager::ClipmapName::DetailOcclusion, AZ::RHI::ScopeAttachmentAccess::ReadWrite, frameGraph);
         }
 
-        AZ::RPI::ComputePass::SetupFrameGraphDependencies(frameGraph);
+        JE::Render::RPI::ComputePass::SetupFrameGraphDependencies(frameGraph);
     }
 
     void TerrainDetailClipmapGenerationPass::CompileResources(const AZ::RHI::FrameGraphCompileContext& context)
     {
-        AZ::RPI::Scene* scene = m_pipeline->GetScene();
+        JE::Render::RPI::Scene* scene = m_pipeline->GetScene();
         TerrainFeatureProcessor* terrainFeatureProcessor = scene->GetFeatureProcessor<TerrainFeatureProcessor>();
         if (terrainFeatureProcessor)
         {
@@ -217,17 +217,17 @@ namespace Terrain
             }
         }
 
-        AZ::RPI::ComputePass::CompileResources(context);
+        JE::Render::RPI::ComputePass::CompileResources(context);
     }
 
     bool TerrainDetailClipmapGenerationPass::IsEnabled() const
     {
-        if (!AZ::RPI::Pass::IsEnabled())
+        if (!JE::Render::RPI::Pass::IsEnabled())
         {
             return false;
         }
 
-        AZ::RPI::Scene* scene = m_pipeline->GetScene();
+        JE::Render::RPI::Scene* scene = m_pipeline->GetScene();
         TerrainFeatureProcessor* terrainFeatureProcessor = scene->GetFeatureProcessor<TerrainFeatureProcessor>();
         if (!terrainFeatureProcessor)
         {
@@ -246,6 +246,6 @@ namespace Terrain
 
     bool TerrainDetailClipmapGenerationPass::ClipmapFeatureIsEnabled() const
     {
-        return AZ::RPI::Pass::IsEnabled();
+        return JE::Render::RPI::Pass::IsEnabled();
     }
 } // namespace Terrain

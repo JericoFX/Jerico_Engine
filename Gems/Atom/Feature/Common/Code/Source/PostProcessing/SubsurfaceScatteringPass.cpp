@@ -12,17 +12,17 @@
 #include <Atom/RHI/Factory.h>
 #include <Atom/RHI/FrameScheduler.h>
 
-#include <Atom/RPI.Reflect/Pass/PassTemplate.h>
+#include <JE/Render/RPI/Reflect/Pass/PassTemplate.h>
 
-#include <Atom/RPI.Public/Pass/PassUtils.h>
-#include <Atom/RPI.Public/Pass/PassAttachment.h>
-#include <Atom/RPI.Public/RPIUtils.h>
-#include <Atom/RPI.Public/RenderPipeline.h>
-#include <Atom/RPI.Public/View.h>
-#include <Atom/RPI.Public/RPISystemInterface.h>
-#include <Atom/RPI.Public/Shader/ShaderResourceGroup.h>
+#include <JE/Render/RPI/Public/Pass/PassUtils.h>
+#include <JE/Render/RPI/Public/Pass/PassAttachment.h>
+#include <JE/Render/RPI/Public/RPIUtils.h>
+#include <JE/Render/RPI/Public/RenderPipeline.h>
+#include <JE/Render/RPI/Public/View.h>
+#include <JE/Render/RPI/Public/RPISystemInterface.h>
+#include <JE/Render/RPI/Public/Shader/ShaderResourceGroup.h>
 
-namespace AZ
+namespace JE::Render
 {
     namespace RPI
     {
@@ -36,9 +36,9 @@ namespace AZ
             : ComputePass(descriptor)
         { }
 
-        void SubsurfaceScatteringPass::CompileResources(const RHI::FrameGraphCompileContext& context)
+        void SubsurfaceScatteringPass::CompileResources(const AZ::RHI::FrameGraphCompileContext& context)
         {
-            RHI::Size targetImageSize;
+            AZ::RHI::Size targetImageSize;
             if (m_fullscreenDispatch)
             {
                 auto attachment = m_fullscreenSizeSourceBinding->GetAttachment();

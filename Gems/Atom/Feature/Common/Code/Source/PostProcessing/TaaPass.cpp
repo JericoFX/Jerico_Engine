@@ -10,28 +10,28 @@
 #include <PostProcessing/TaaPass.h>
 
 #include <AzCore/Math/Random.h>
-#include <Atom/RPI.Public/Image/AttachmentImagePool.h>
-#include <Atom/RPI.Public/Image/ImageSystemInterface.h>
-#include <Atom/RPI.Public/Pass/PassUtils.h>
-#include <Atom/RPI.Public/RenderPipeline.h>
-#include <Atom/RPI.Public/View.h>
-#include <Atom/RPI.Reflect/Pass/PassName.h>
+#include <JE/Render/RPI/Public/Image/AttachmentImagePool.h>
+#include <JE/Render/RPI/Public/Image/ImageSystemInterface.h>
+#include <JE/Render/RPI/Public/Pass/PassUtils.h>
+#include <JE/Render/RPI/Public/RenderPipeline.h>
+#include <JE/Render/RPI/Public/View.h>
+#include <JE/Render/RPI/Reflect/Pass/PassName.h>
 
 namespace AZ::Render
 {
     
-    RPI::Ptr<TaaPass> TaaPass::Create(const RPI::PassDescriptor& descriptor)
+    JE::Render::RPI::Ptr<TaaPass> TaaPass::Create(const JE::Render::RPI::PassDescriptor& descriptor)
     {
-        RPI::Ptr<TaaPass> pass = aznew TaaPass(descriptor);
+        JE::Render::RPI::Ptr<TaaPass> pass = aznew TaaPass(descriptor);
         return pass;
     }
     
-    TaaPass::TaaPass(const RPI::PassDescriptor& descriptor)
+    TaaPass::TaaPass(const JE::Render::RPI::PassDescriptor& descriptor)
         : Base(descriptor)
     {
         uint32_t numJitterPositions = 8;
 
-        const TaaPassData* taaPassData = RPI::PassUtils::GetPassData<TaaPassData>(descriptor);
+        const TaaPassData* taaPassData = JE::Render::RPI::PassUtils::GetPassData<TaaPassData>(descriptor);
         if (taaPassData)
         {
             numJitterPositions = taaPassData->m_numJitterPositions;
@@ -77,7 +77,7 @@ namespace AZ::Render
     {
         RHI::Size inputSize = m_inputColorBinding->GetAttachment()->m_descriptor.m_image.m_size;
         Vector2 rcpInputSize = Vector2(1.0f / inputSize.m_width, 1.0f / inputSize.m_height);
-        RPI::ViewPtr view = GetRenderPipeline()->GetFirstView(GetPipelineViewTag());
+        JE::Render::RPI::ViewPtr view = GetRenderPipeline()->GetFirstView(GetPipelineViewTag());
         if (view)
         {
             m_offsetIndex = (m_offsetIndex + 1) % m_subPixelOffsets.size();
@@ -159,7 +159,7 @@ namespace AZ::Render
 
     bool TaaPass::UpdateAttachmentImage(uint32_t attachmentIndex)
     {
-        RPI::Ptr<RPI::PassAttachment>& attachment = m_accumulationAttachments[attachmentIndex];
+        JE::Render::RPI::Ptr<JE::Render::RPI::PassAttachment>& attachment = m_accumulationAttachments[attachmentIndex];
         return UpdateImportedAttachmentImage(attachment);
     }
 

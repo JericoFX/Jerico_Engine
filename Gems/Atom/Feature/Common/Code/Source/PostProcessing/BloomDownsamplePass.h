@@ -7,7 +7,7 @@
  */
 #pragma once
 
-#include <Atom/RPI.Public/Pass/ComputePass.h>
+#include <JE/Render/RPI/Public/Pass/ComputePass.h>
 #include <Atom/Feature/PostProcess/Bloom/BloomConstants.h>
 
 namespace AZ
@@ -17,7 +17,7 @@ namespace AZ
         class ShaderResourceGroup;
 
         class BloomDownsamplePass
-            : public RPI::ComputePass
+            : public JE::Render::RPI::ComputePass
         {
             AZ_RPI_PASS(BloomDownsamplePass);
 
@@ -27,10 +27,10 @@ namespace AZ
             virtual ~BloomDownsamplePass() = default;
 
             //! Creates a BloomDownsamplePass
-            static RPI::Ptr<BloomDownsamplePass> Create(const RPI::PassDescriptor& descriptor);
+            static JE::Render::RPI::Ptr<BloomDownsamplePass> Create(const JE::Render::RPI::PassDescriptor& descriptor);
 
         protected:
-            BloomDownsamplePass(const RPI::PassDescriptor& descriptor);
+            BloomDownsamplePass(const JE::Render::RPI::PassDescriptor& descriptor);
 
             // Pass Behaviour Overrides...
             void BuildInternal() override;

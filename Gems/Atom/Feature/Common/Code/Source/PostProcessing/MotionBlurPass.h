@@ -7,7 +7,7 @@
  */
 #pragma once
 
-#include <Atom/RPI.Public/Pass/ComputePass.h>
+#include <JE/Render/RPI/Public/Pass/ComputePass.h>
 #include <PostProcessing/PostProcessingShaderOptionBase.h>
 #include <Atom/Feature/PostProcess/MotionBlur/MotionBlurSettingsInterface.h>
 
@@ -16,17 +16,17 @@ namespace AZ
     namespace Render
     {
         // Class for controlling MotionBlur effect
-        class MotionBlurPass final : public RPI::ComputePass,
+        class MotionBlurPass final : public JE::Render::RPI::ComputePass,
                                      public PostProcessingShaderOptionBase
         {
             AZ_RPI_PASS(MotionBlurPass);
 
         public:
-            AZ_RTTI(MotionBlurPass, "{EA58C10C-F2D9-431B-A4A6-EB63A3118690}", AZ::RPI::ComputePass);
+            AZ_RTTI(MotionBlurPass, "{EA58C10C-F2D9-431B-A4A6-EB63A3118690}", JE::Render::RPI::ComputePass);
             AZ_CLASS_ALLOCATOR(MotionBlurPass, SystemAllocator, 0);
 
             ~MotionBlurPass() = default;
-            static RPI::Ptr<MotionBlurPass> Create(const RPI::PassDescriptor& descriptor);
+            static JE::Render::RPI::Ptr<MotionBlurPass> Create(const JE::Render::RPI::PassDescriptor& descriptor);
 
             bool IsEnabled() const override;
 
@@ -38,7 +38,7 @@ namespace AZ
             void FrameBeginInternal(FramePrepareParams params) override;
 
         private:
-            MotionBlurPass(const RPI::PassDescriptor& descriptor);
+            MotionBlurPass(const JE::Render::RPI::PassDescriptor& descriptor);
             void InitializeShaderVariant();
             void UpdateCurrentShaderVariant();
 

@@ -8,8 +8,8 @@
 
 #include <AzCore/Serialization/SerializeContext.h>
 
-#include <Atom/RPI.Public/Pass/PassSystemInterface.h>
-#include <Atom/RPI.Public/FeatureProcessorFactory.h>
+#include <JE/Render/RPI/Public/Pass/PassSystemInterface.h>
+#include <JE/Render/RPI/Public/FeatureProcessorFactory.h>
 
 #include <Components/HairSystemComponent.h>
 #include <Components/HairComponentController.h>
@@ -55,7 +55,7 @@ namespace AZ
 
             void HairSystemComponent::LoadPassTemplateMappings()
             {
-                auto* passSystem = RPI::PassSystemInterface::Get();
+                auto* passSystem = JE::Render::RPI::PassSystemInterface::Get();
                 AZ_Assert(passSystem, "Cannot get the pass system.");
 
                 const char* passTemplatesFile = "Passes/AtomTressFX_PassTemplates.azasset";
@@ -69,13 +69,13 @@ namespace AZ
             void HairSystemComponent::Activate()
             {
                 // Feature processor
-                AZ::RPI::FeatureProcessorFactory::Get()->RegisterFeatureProcessor<Hair::HairFeatureProcessor>();
+                JE::Render::RPI::FeatureProcessorFactory::Get()->RegisterFeatureProcessor<Hair::HairFeatureProcessor>();
 
-                auto* passSystem = RPI::PassSystemInterface::Get();
+                auto* passSystem = JE::Render::RPI::PassSystemInterface::Get();
                 AZ_Assert(passSystem, "Cannot get the pass system.");
 
                 // Setup handler for load pass templates mappings
-                m_loadTemplatesHandler = RPI::PassSystemInterface::OnReadyLoadTemplatesEvent::Handler([this]() { this->LoadPassTemplateMappings(); });
+                m_loadTemplatesHandler = JE::Render::RPI::PassSystemInterface::OnReadyLoadTemplatesEvent::Handler([this]() { this->LoadPassTemplateMappings(); });
                 passSystem->ConnectEvent(m_loadTemplatesHandler);
 
                 // Load the AtomTressFX pass classes
@@ -92,7 +92,7 @@ namespace AZ
 
             void HairSystemComponent::Deactivate()
             {
-                AZ::RPI::FeatureProcessorFactory::Get()->UnregisterFeatureProcessor<Hair::HairFeatureProcessor>();
+                JE::Render::RPI::FeatureProcessorFactory::Get()->UnregisterFeatureProcessor<Hair::HairFeatureProcessor>();
                 m_loadTemplatesHandler.Disconnect();
             }
         } // namespace Hair

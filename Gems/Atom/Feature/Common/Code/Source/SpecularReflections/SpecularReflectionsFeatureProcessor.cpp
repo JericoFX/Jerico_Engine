@@ -9,8 +9,8 @@
 #include <SpecularReflections/SpecularReflectionsFeatureProcessor.h>
 #include <Atom/Feature/RayTracing/RayTracingPass.h>
 #include <Atom/RHI/RHISystemInterface.h>
-#include <Atom/RPI.Public/RPISystemInterface.h>
-#include <Atom/RPI.Public/Pass/PassFilter.h>
+#include <JE/Render/RPI/Public/RPISystemInterface.h>
+#include <JE/Render/RPI/Public/Pass/PassFilter.h>
 #include <ReflectionScreenSpace/ReflectionScreenSpacePass.h>
 
 namespace AZ
@@ -44,11 +44,11 @@ namespace AZ
             UpdatePasses();
         }
 
-        void SpecularReflectionsFeatureProcessor::OnRenderPipelineChanged([[maybe_unused]] RPI::RenderPipeline* renderPipeline,
-            RPI::SceneNotification::RenderPipelineChangeType changeType)
+        void SpecularReflectionsFeatureProcessor::OnRenderPipelineChanged([[maybe_unused]] JE::Render::RPI::RenderPipeline* renderPipeline,
+            JE::Render::RPI::SceneNotification::RenderPipelineChangeType changeType)
         {
-            if (changeType == RPI::SceneNotification::RenderPipelineChangeType::Added
-                || changeType == RPI::SceneNotification::RenderPipelineChangeType::PassChanged)
+            if (changeType == JE::Render::RPI::SceneNotification::RenderPipelineChangeType::Added
+                || changeType == JE::Render::RPI::SceneNotification::RenderPipelineChangeType::PassChanged)
             {
                 UpdatePasses();
             }
@@ -67,8 +67,8 @@ namespace AZ
 
             // parent SSR pass
             {
-                AZ::RPI::PassFilter passFilter = AZ::RPI::PassFilter::CreateWithPassName(AZ::Name("ReflectionScreenSpacePass"), (AZ::RPI::Scene*) nullptr);
-                AZ::RPI::PassSystemInterface::Get()->ForEachPass(passFilter, [this, sizeMultiplier](AZ::RPI::Pass* pass) -> AZ::RPI::PassFilterExecutionFlow
+                JE::Render::RPI::PassFilter passFilter = JE::Render::RPI::PassFilter::CreateWithPassName(AZ::Name("ReflectionScreenSpacePass"), (JE::Render::RPI::Scene*) nullptr);
+                JE::Render::RPI::PassSystemInterface::Get()->ForEachPass(passFilter, [this, sizeMultiplier](JE::Render::RPI::Pass* pass) -> JE::Render::RPI::PassFilterExecutionFlow
                     {
                         // enable/disable
                         pass->SetEnabled(m_ssrOptions.m_enable);
@@ -84,14 +84,14 @@ namespace AZ
                         static AZStd::vector<AZ::Name> attachmentNames = { AZ::Name("RayTracingCoordsOutput"), AZ::Name("FallbackColor") };
                         for (const auto& attachmentName : attachmentNames)
                         {
-                            RPI::PassAttachmentBinding* attachmentBinding = pass->FindAttachmentBinding(attachmentName);
+                            JE::Render::RPI::PassAttachmentBinding* attachmentBinding = pass->FindAttachmentBinding(attachmentName);
 
                             if (attachmentBinding)
                             {
-                                RPI::Ptr<RPI::PassAttachment> attachment = attachmentBinding->GetAttachment();
+                                JE::Render::RPI::Ptr<JE::Render::RPI::PassAttachment> attachment = attachmentBinding->GetAttachment();
                                 if (attachment.get())
                                 {
-                                    RPI::PassAttachmentSizeMultipliers& sizeMultipliers = attachment->m_sizeMultipliers;
+                                    JE::Render::RPI::PassAttachmentSizeMultipliers& sizeMultipliers = attachment->m_sizeMultipliers;
 
                                     sizeMultipliers.m_widthMultiplier = sizeMultiplier;
                                     sizeMultipliers.m_heightMultiplier = sizeMultiplier;
@@ -99,25 +99,25 @@ namespace AZ
                             }
                         }
 
-                        return AZ::RPI::PassFilterExecutionFlow::ContinueVisitingPasses;
+                        return JE::Render::RPI::PassFilterExecutionFlow::ContinueVisitingPasses;
                     });
             }
 
             // copy framebuffer pass
             {
-                AZ::RPI::PassFilter passFilter = AZ::RPI::PassFilter::CreateWithPassName(AZ::Name("ReflectionCopyFrameBufferPass"), (AZ::RPI::Scene*) nullptr);
-                AZ::RPI::PassSystemInterface::Get()->ForEachPass(passFilter, [this](AZ::RPI::Pass* pass) -> AZ::RPI::PassFilterExecutionFlow
+                JE::Render::RPI::PassFilter passFilter = JE::Render::RPI::PassFilter::CreateWithPassName(AZ::Name("ReflectionCopyFrameBufferPass"), (JE::Render::RPI::Scene*) nullptr);
+                JE::Render::RPI::PassSystemInterface::Get()->ForEachPass(passFilter, [this](JE::Render::RPI::Pass* pass) -> JE::Render::RPI::PassFilterExecutionFlow
                     {
                         // enable/disable
                         pass->SetEnabled(m_ssrOptions.m_enable);
-                        return AZ::RPI::PassFilterExecutionFlow::ContinueVisitingPasses;
+                        return JE::Render::RPI::PassFilterExecutionFlow::ContinueVisitingPasses;
                     });
             }
 
             // raytracing pass
             {
-                AZ::RPI::PassFilter passFilter = AZ::RPI::PassFilter::CreateWithPassName(AZ::Name("ReflectionScreenSpaceRayTracingPass"), (AZ::RPI::Scene*) nullptr);
-                AZ::RPI::PassSystemInterface::Get()->ForEachPass(passFilter, [this, sizeMultiplier](AZ::RPI::Pass* pass) -> AZ::RPI::PassFilterExecutionFlow
+                JE::Render::RPI::PassFilter passFilter = JE::Render::RPI::PassFilter::CreateWithPassName(AZ::Name("ReflectionScreenSpaceRayTracingPass"), (JE::Render::RPI::Scene*) nullptr);
+                JE::Render::RPI::PassSystemInterface::Get()->ForEachPass(passFilter, [this, sizeMultiplier](JE::Render::RPI::Pass* pass) -> JE::Render::RPI::PassFilterExecutionFlow
                     {
                         // enable/disable
                         pass->SetEnabled(m_ssrOptions.IsRayTracingEnabled());
@@ -128,7 +128,7 @@ namespace AZ
                             RayTracingPass* rayTracingPass = azrtti_cast<RayTracingPass*>(pass);
                             rayTracingPass->SetMaxRayLength(m_ssrOptions.m_maxRayDistance);
 
-                            Data::Instance<RPI::ShaderResourceGroup> rayTracingPassSrg = rayTracingPass->GetShaderResourceGroup();
+                            Data::Instance<JE::Render::RPI::ShaderResourceGroup> rayTracingPassSrg = rayTracingPass->GetShaderResourceGroup();
 
                             rayTracingPassSrg->SetConstant(m_invOutputScaleNameIndex, 1.0f / m_ssrOptions.GetOutputScale());
                             rayTracingPassSrg->SetConstant(m_maxRoughnessNameIndex, m_ssrOptions.m_maxRoughness);
@@ -139,14 +139,14 @@ namespace AZ
                             static AZStd::vector<AZ::Name> attachmentNames = { AZ::Name("FallbackAlbedo"), AZ::Name("FallbackPosition"), AZ::Name("FallbackNormal") };
                             for (const auto& attachmentName : attachmentNames)
                             {
-                                RPI::PassAttachmentBinding* attachmentBinding = pass->FindAttachmentBinding(attachmentName);
+                                JE::Render::RPI::PassAttachmentBinding* attachmentBinding = pass->FindAttachmentBinding(attachmentName);
 
                                 if (attachmentBinding)
                                 {
-                                    RPI::Ptr<RPI::PassAttachment> attachment = attachmentBinding->GetAttachment();
+                                    JE::Render::RPI::Ptr<JE::Render::RPI::PassAttachment> attachment = attachmentBinding->GetAttachment();
                                     if (attachment.get())
                                     {
-                                        RPI::PassAttachmentSizeMultipliers& sizeMultipliers = attachment->m_sizeMultipliers;
+                                        JE::Render::RPI::PassAttachmentSizeMultipliers& sizeMultipliers = attachment->m_sizeMultipliers;
 
                                         sizeMultipliers.m_widthMultiplier = sizeMultiplier;
                                         sizeMultipliers.m_heightMultiplier = sizeMultiplier;
@@ -155,27 +155,27 @@ namespace AZ
                             }
                         }
 
-                        return AZ::RPI::PassFilterExecutionFlow::ContinueVisitingPasses;
+                        return JE::Render::RPI::PassFilterExecutionFlow::ContinueVisitingPasses;
                     });
             }
 
             // trace pass
             {
-                AZ::RPI::PassFilter passFilter = AZ::RPI::PassFilter::CreateWithPassName(AZ::Name("ReflectionScreenSpaceTracePass"), (AZ::RPI::Scene*) nullptr);
-                AZ::RPI::PassSystemInterface::Get()->ForEachPass(passFilter, [sizeMultiplier](AZ::RPI::Pass* pass) -> AZ::RPI::PassFilterExecutionFlow
+                JE::Render::RPI::PassFilter passFilter = JE::Render::RPI::PassFilter::CreateWithPassName(AZ::Name("ReflectionScreenSpaceTracePass"), (JE::Render::RPI::Scene*) nullptr);
+                JE::Render::RPI::PassSystemInterface::Get()->ForEachPass(passFilter, [sizeMultiplier](JE::Render::RPI::Pass* pass) -> JE::Render::RPI::PassFilterExecutionFlow
                     {
                         // size multiplier
                         static AZStd::vector<AZ::Name> attachmentNames = { AZ::Name("ScreenSpaceReflectionOutput"), AZ::Name("TraceCoordsOutput") };
                         for (const auto& attachmentName : attachmentNames)
                         {
-                            RPI::PassAttachmentBinding* attachmentBinding = pass->FindAttachmentBinding(attachmentName);
+                            JE::Render::RPI::PassAttachmentBinding* attachmentBinding = pass->FindAttachmentBinding(attachmentName);
 
                             if (attachmentBinding)
                             {
-                                RPI::Ptr<RPI::PassAttachment> attachment = attachmentBinding->GetAttachment();
+                                JE::Render::RPI::Ptr<JE::Render::RPI::PassAttachment> attachment = attachmentBinding->GetAttachment();
                                 if (attachment.get())
                                 {
-                                    RPI::PassAttachmentSizeMultipliers& sizeMultipliers = attachment->m_sizeMultipliers;
+                                    JE::Render::RPI::PassAttachmentSizeMultipliers& sizeMultipliers = attachment->m_sizeMultipliers;
 
                                     sizeMultipliers.m_widthMultiplier = sizeMultiplier;
                                     sizeMultipliers.m_heightMultiplier = sizeMultiplier;
@@ -183,51 +183,51 @@ namespace AZ
                             }
                         }
 
-                        return AZ::RPI::PassFilterExecutionFlow::ContinueVisitingPasses;
+                        return JE::Render::RPI::PassFilterExecutionFlow::ContinueVisitingPasses;
                     });
             }
 
             // downsample depth linear pass
             {
-                AZ::RPI::PassFilter passFilter = AZ::RPI::PassFilter::CreateWithPassName(AZ::Name("ReflectionScreenSpaceDownsampleDepthLinearPass"), (AZ::RPI::Scene*) nullptr);
-                AZ::RPI::PassSystemInterface::Get()->ForEachPass(passFilter, [sizeMultiplier](AZ::RPI::Pass* pass) -> AZ::RPI::PassFilterExecutionFlow
+                JE::Render::RPI::PassFilter passFilter = JE::Render::RPI::PassFilter::CreateWithPassName(AZ::Name("ReflectionScreenSpaceDownsampleDepthLinearPass"), (JE::Render::RPI::Scene*) nullptr);
+                JE::Render::RPI::PassSystemInterface::Get()->ForEachPass(passFilter, [sizeMultiplier](JE::Render::RPI::Pass* pass) -> JE::Render::RPI::PassFilterExecutionFlow
                     {
                         // size multiplier
-                        RPI::PassAttachmentBinding* attachmentBinding = pass->FindAttachmentBinding(AZ::Name("DownsampledDepthLinearInputOutput"));
+                        JE::Render::RPI::PassAttachmentBinding* attachmentBinding = pass->FindAttachmentBinding(AZ::Name("DownsampledDepthLinearInputOutput"));
 
                         if (attachmentBinding)
                         {
-                            RPI::Ptr<RPI::PassAttachment> attachment = attachmentBinding->GetAttachment();
+                            JE::Render::RPI::Ptr<JE::Render::RPI::PassAttachment> attachment = attachmentBinding->GetAttachment();
                             if (attachment.get())
                             {
-                                RPI::PassAttachmentSizeMultipliers& sizeMultipliers = attachment->m_sizeMultipliers;
+                                JE::Render::RPI::PassAttachmentSizeMultipliers& sizeMultipliers = attachment->m_sizeMultipliers;
             
                                 sizeMultipliers.m_widthMultiplier = sizeMultiplier;
                                 sizeMultipliers.m_heightMultiplier = sizeMultiplier;
                             }
                         }
             
-                        return AZ::RPI::PassFilterExecutionFlow::ContinueVisitingPasses;
+                        return JE::Render::RPI::PassFilterExecutionFlow::ContinueVisitingPasses;
                     });
             }
 
             // filter pass
             {
-                AZ::RPI::PassFilter passFilter = AZ::RPI::PassFilter::CreateWithPassName(AZ::Name("ReflectionScreenSpaceFilterPass"), (AZ::RPI::Scene*) nullptr);
-                AZ::RPI::PassSystemInterface::Get()->ForEachPass(passFilter, [sizeMultiplier](AZ::RPI::Pass* pass) -> AZ::RPI::PassFilterExecutionFlow
+                JE::Render::RPI::PassFilter passFilter = JE::Render::RPI::PassFilter::CreateWithPassName(AZ::Name("ReflectionScreenSpaceFilterPass"), (JE::Render::RPI::Scene*) nullptr);
+                JE::Render::RPI::PassSystemInterface::Get()->ForEachPass(passFilter, [sizeMultiplier](JE::Render::RPI::Pass* pass) -> JE::Render::RPI::PassFilterExecutionFlow
                     {
                         // size multiplier
                         static AZStd::vector<AZ::Name> attachmentNames = { AZ::Name("Output") };
                         for (const auto& attachmentName : attachmentNames)
                         {
-                            RPI::PassAttachmentBinding* attachmentBinding = pass->FindAttachmentBinding(attachmentName);
+                            JE::Render::RPI::PassAttachmentBinding* attachmentBinding = pass->FindAttachmentBinding(attachmentName);
 
                             if (attachmentBinding)
                             {
-                                RPI::Ptr<RPI::PassAttachment> attachment = attachmentBinding->GetAttachment();
+                                JE::Render::RPI::Ptr<JE::Render::RPI::PassAttachment> attachment = attachmentBinding->GetAttachment();
                                 if (attachment.get())
                                 {
-                                    RPI::PassAttachmentSizeMultipliers& sizeMultipliers = attachment->m_sizeMultipliers;
+                                    JE::Render::RPI::PassAttachmentSizeMultipliers& sizeMultipliers = attachment->m_sizeMultipliers;
 
                                     sizeMultipliers.m_widthMultiplier = sizeMultiplier;
                                     sizeMultipliers.m_heightMultiplier = sizeMultiplier;
@@ -235,18 +235,18 @@ namespace AZ
                             }
                         }
 
-                        return AZ::RPI::PassFilterExecutionFlow::ContinueVisitingPasses;
+                        return JE::Render::RPI::PassFilterExecutionFlow::ContinueVisitingPasses;
                     });
             }
 
             // copy history pass
             {
-                AZ::RPI::PassFilter passFilter = AZ::RPI::PassFilter::CreateWithPassName(AZ::Name("ReflectionScreenSpaceCopyHistoryPass"), (AZ::RPI::Scene*) nullptr);
-                AZ::RPI::PassSystemInterface::Get()->ForEachPass(passFilter, [this](AZ::RPI::Pass* pass) -> AZ::RPI::PassFilterExecutionFlow
+                JE::Render::RPI::PassFilter passFilter = JE::Render::RPI::PassFilter::CreateWithPassName(AZ::Name("ReflectionScreenSpaceCopyHistoryPass"), (JE::Render::RPI::Scene*) nullptr);
+                JE::Render::RPI::PassSystemInterface::Get()->ForEachPass(passFilter, [this](JE::Render::RPI::Pass* pass) -> JE::Render::RPI::PassFilterExecutionFlow
                     {
                         // enable/disable
                         pass->SetEnabled(m_ssrOptions.m_temporalFiltering);
-                        return AZ::RPI::PassFilterExecutionFlow::ContinueVisitingPasses;
+                        return JE::Render::RPI::PassFilterExecutionFlow::ContinueVisitingPasses;
                     });
             }
         }

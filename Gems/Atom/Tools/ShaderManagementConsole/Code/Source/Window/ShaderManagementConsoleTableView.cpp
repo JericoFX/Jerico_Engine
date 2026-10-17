@@ -164,7 +164,7 @@ namespace ShaderManagementConsole
         m_shaderOptionDescriptors.reserve(GetColumnsCount(CountQuery::Options));
         for (int column = 0; column < GetColumnsCount(CountQuery::Options); ++column)
         {
-            AZ::RPI::ShaderOptionDescriptor shaderOptionDescriptor;
+            JE::Render::RPI::ShaderOptionDescriptor shaderOptionDescriptor;
             ShaderManagementConsoleDocumentRequestBus::EventResult(
                 shaderOptionDescriptor,
                 m_documentId,
@@ -290,14 +290,14 @@ namespace ShaderManagementConsole
         const auto optionIt = shaderVariant.m_options.find(shaderOptionDescriptor.GetName());
 
         const AZ::Name valueName = optionIt != shaderVariant.m_options.end() ? AZ::Name(optionIt->second) : AZ::Name();
-        const AZ::RPI::ShaderOptionValue value = shaderOptionDescriptor.FindValue(valueName);
-        const AZ::RPI::ShaderOptionValue valueMin = shaderOptionDescriptor.GetMinValue();
-        const AZ::RPI::ShaderOptionValue valueMax = shaderOptionDescriptor.GetMaxValue();
+        const JE::Render::RPI::ShaderOptionValue value = shaderOptionDescriptor.FindValue(valueName);
+        const JE::Render::RPI::ShaderOptionValue valueMin = shaderOptionDescriptor.GetMinValue();
+        const JE::Render::RPI::ShaderOptionValue valueMax = shaderOptionDescriptor.GetMaxValue();
 
         switch (shaderOptionDescriptor.GetType())
         {
-        case AZ::RPI::ShaderOptionType::Boolean:
-        case AZ::RPI::ShaderOptionType::Enumeration:
+        case JE::Render::RPI::ShaderOptionType::Boolean:
+        case JE::Render::RPI::ShaderOptionType::Enumeration:
             {
                 auto* comboBox = new FocusOutConfigurable<QComboBox>(this);
                 static auto italicFont = QFont(comboBox->fontInfo().family(), comboBox->fontInfo().pointSize(), comboBox->fontInfo().weight(), true);
@@ -306,7 +306,7 @@ namespace ShaderManagementConsole
                 comboBox->setItemIcon(0, m_emptyOptionIcon);
                 for (uint32_t valueIndex = valueMin.GetIndex(); valueIndex <= valueMax.GetIndex(); ++valueIndex)
                 {
-                    comboBox->addItem(shaderOptionDescriptor.GetValueName(AZ::RPI::ShaderOptionValue{ valueIndex }).GetCStr());
+                    comboBox->addItem(shaderOptionDescriptor.GetValueName(JE::Render::RPI::ShaderOptionValue{ valueIndex }).GetCStr());
                 }
                 comboBox->setCurrentText(valueName.GetCStr());
                 setCellWidget(row, column, comboBox);
@@ -316,7 +316,7 @@ namespace ShaderManagementConsole
                 comboBox->m_onExit = [this, row, column]() { removeCellWidget(row, column); };
                 break;
             }
-        case AZ::RPI::ShaderOptionType::IntegerRange:
+        case JE::Render::RPI::ShaderOptionType::IntegerRange:
             {
                 auto* spinBox = new AzQtComponents::StyledSpinBox(this);
                 spinBox->setRange(valueMin.GetIndex(), valueMax.GetIndex());

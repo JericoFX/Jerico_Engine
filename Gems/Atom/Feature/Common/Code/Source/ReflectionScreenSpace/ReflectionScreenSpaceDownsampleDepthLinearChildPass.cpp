@@ -7,33 +7,33 @@
  */
 
 #include "ReflectionScreenSpaceDownsampleDepthLinearChildPass.h"
-#include <Atom/RPI.Public/Scene.h>
-#include <Atom/RPI.Public/RenderPipeline.h>
+#include <JE/Render/RPI/Public/Scene.h>
+#include <JE/Render/RPI/Public/RenderPipeline.h>
 #include <SpecularReflections/SpecularReflectionsFeatureProcessor.h>
 
 namespace AZ
 {
     namespace Render
     {
-        RPI::Ptr<ReflectionScreenSpaceDownsampleDepthLinearChildPass> ReflectionScreenSpaceDownsampleDepthLinearChildPass::Create(const RPI::PassDescriptor& descriptor)
+        JE::Render::RPI::Ptr<ReflectionScreenSpaceDownsampleDepthLinearChildPass> ReflectionScreenSpaceDownsampleDepthLinearChildPass::Create(const JE::Render::RPI::PassDescriptor& descriptor)
         {
-            RPI::Ptr<ReflectionScreenSpaceDownsampleDepthLinearChildPass> pass = aznew ReflectionScreenSpaceDownsampleDepthLinearChildPass(descriptor);
+            JE::Render::RPI::Ptr<ReflectionScreenSpaceDownsampleDepthLinearChildPass> pass = aznew ReflectionScreenSpaceDownsampleDepthLinearChildPass(descriptor);
             return pass;
         }
 
-        ReflectionScreenSpaceDownsampleDepthLinearChildPass::ReflectionScreenSpaceDownsampleDepthLinearChildPass(const RPI::PassDescriptor& descriptor)
-            : RPI::FullscreenTrianglePass(descriptor)
+        ReflectionScreenSpaceDownsampleDepthLinearChildPass::ReflectionScreenSpaceDownsampleDepthLinearChildPass(const JE::Render::RPI::PassDescriptor& descriptor)
+            : JE::Render::RPI::FullscreenTrianglePass(descriptor)
         {
         }
 
         void ReflectionScreenSpaceDownsampleDepthLinearChildPass::FrameBeginInternal(FramePrepareParams params)
         {
-            RPI::Scene* scene = m_pipeline->GetScene();
+            JE::Render::RPI::Scene* scene = m_pipeline->GetScene();
             SpecularReflectionsFeatureProcessorInterface* specularReflectionsFeatureProcessor = scene->GetFeatureProcessor<SpecularReflectionsFeatureProcessorInterface>();
             AZ_Assert(specularReflectionsFeatureProcessor, "ReflectionScreenSpaceDownsampleDepthLinearChildPass requires the SpecularReflectionsFeatureProcessor");
 
             // get attachment size
-            RPI::PassAttachment* inputAttachment = GetInputBinding(0).GetAttachment().get();
+            JE::Render::RPI::PassAttachment* inputAttachment = GetInputBinding(0).GetAttachment().get();
             AZ_Assert(inputAttachment, "ReflectionScreenSpaceDownsampleDepthLinearChildPass: Input binding has no attachment!");
 
             RHI::Size size = inputAttachment->m_descriptor.m_image.m_size;

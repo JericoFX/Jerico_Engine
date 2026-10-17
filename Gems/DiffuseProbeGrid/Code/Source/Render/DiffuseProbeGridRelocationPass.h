@@ -12,11 +12,11 @@
 #include <Atom/RHI/DeviceDrawItem.h>
 #include <Atom/RHI/ScopeProducer.h>
 #include <Atom/RHI.Reflect/ShaderResourceGroupLayoutDescriptor.h>
-#include <Atom/RPI.Public/Pass/ComputePass.h>
-#include <Atom/RPI.Public/Shader/Shader.h>
-#include <Atom/RPI.Public/Shader/ShaderResourceGroup.h>
-#include <Atom/RPI.Reflect/Pass/PassName.h>
-#include <Atom/RPI.Public/Image/AttachmentImage.h>
+#include <JE/Render/RPI/Public/Pass/ComputePass.h>
+#include <JE/Render/RPI/Public/Shader/Shader.h>
+#include <JE/Render/RPI/Public/Shader/ShaderResourceGroup.h>
+#include <JE/Render/RPI/Reflect/Pass/PassName.h>
+#include <JE/Render/RPI/Public/Image/AttachmentImage.h>
 #include <Render/DiffuseProbeGrid.h>
 
 namespace AZ
@@ -25,19 +25,19 @@ namespace AZ
     {
         //! Compute shader that relocates probes in the diffuse probe grid.
         class DiffuseProbeGridRelocationPass final
-            : public RPI::RenderPass
+            : public JE::Render::RPI::RenderPass
         {
         public:
             AZ_RPI_PASS(DiffuseProbeGridRelocationPass);
 
-            AZ_RTTI(AZ::Render::DiffuseProbeGridRelocationPass, "{E6FCBE1A-0404-49B3-AA78-C2B0DEE94FB1}", RPI::RenderPass);
+            AZ_RTTI(AZ::Render::DiffuseProbeGridRelocationPass, "{E6FCBE1A-0404-49B3-AA78-C2B0DEE94FB1}", JE::Render::RPI::RenderPass);
             AZ_CLASS_ALLOCATOR(DiffuseProbeGridRelocationPass, SystemAllocator);
             virtual ~DiffuseProbeGridRelocationPass() = default;
 
-            static RPI::Ptr<DiffuseProbeGridRelocationPass> Create(const RPI::PassDescriptor& descriptor);
+            static JE::Render::RPI::Ptr<DiffuseProbeGridRelocationPass> Create(const JE::Render::RPI::PassDescriptor& descriptor);
 
         private:
-            DiffuseProbeGridRelocationPass(const RPI::PassDescriptor& descriptor);
+            DiffuseProbeGridRelocationPass(const JE::Render::RPI::PassDescriptor& descriptor);
 
             void LoadShader();
 
@@ -50,7 +50,7 @@ namespace AZ
             void FrameEndInternal() override;
 
             // shader
-            Data::Instance<RPI::Shader> m_shader;
+            Data::Instance<JE::Render::RPI::Shader> m_shader;
             const RHI::PipelineState* m_pipelineState = nullptr;
             RHI::Ptr<RHI::ShaderResourceGroupLayout> m_srgLayout;
             RHI::DispatchDirect m_dispatchArgs;

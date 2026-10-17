@@ -9,9 +9,9 @@
 #include <Components/DiffuseProbeGridComponentController.h>
 #include <Components/DiffuseProbeGridComponentConstants.h>
 
-#include <Atom/RPI.Public/Model/Model.h>
-#include <Atom/RPI.Public/Image/StreamingImage.h>
-#include <Atom/RPI.Public/Scene.h>
+#include <JE/Render/RPI/Public/Model/Model.h>
+#include <JE/Render/RPI/Public/Image/StreamingImage.h>
+#include <JE/Render/RPI/Public/Scene.h>
 
 #include <AzCore/Asset/AssetManager.h>
 #include <AzCore/Asset/AssetManagerBus.h>
@@ -112,7 +112,7 @@ namespace AZ
 
             TransformNotificationBus::Handler::BusConnect(m_entityId);
 
-            m_featureProcessor = RPI::Scene::GetFeatureProcessorForEntity<DiffuseProbeGridFeatureProcessorInterface>(entityId);
+            m_featureProcessor = JE::Render::RPI::Scene::GetFeatureProcessorForEntity<DiffuseProbeGridFeatureProcessorInterface>(entityId);
             AZ_Assert(m_featureProcessor, "DiffuseProbeGridComponentController was unable to find a DiffuseProbeGridFeatureProcessor on the EntityContext provided.");
 
             m_transformInterface = TransformBus::FindFirstHandler(entityId);
@@ -510,11 +510,11 @@ namespace AZ
            }
            
            DiffuseProbeGridBakedTextures bakedTextures;
-           bakedTextures.m_irradianceImage = RPI::StreamingImage::FindOrCreate(m_configuration.m_bakedIrradianceTextureAsset);
+           bakedTextures.m_irradianceImage = JE::Render::RPI::StreamingImage::FindOrCreate(m_configuration.m_bakedIrradianceTextureAsset);
            bakedTextures.m_irradianceImageRelativePath = m_configuration.m_bakedIrradianceTextureRelativePath;
-           bakedTextures.m_distanceImage = RPI::StreamingImage::FindOrCreate(m_configuration.m_bakedDistanceTextureAsset);
+           bakedTextures.m_distanceImage = JE::Render::RPI::StreamingImage::FindOrCreate(m_configuration.m_bakedDistanceTextureAsset);
            bakedTextures.m_distanceImageRelativePath = m_configuration.m_bakedDistanceTextureRelativePath;
-           bakedTextures.m_probeDataImage = RPI::StreamingImage::FindOrCreate(m_configuration.m_bakedProbeDataTextureAsset);
+           bakedTextures.m_probeDataImage = JE::Render::RPI::StreamingImage::FindOrCreate(m_configuration.m_bakedProbeDataTextureAsset);
            bakedTextures.m_probeDataImageRelativePath = m_configuration.m_bakedProbeDataTextureRelativePath;
 
            m_featureProcessor->SetBakedTextures(m_handle, bakedTextures);

@@ -24,10 +24,10 @@
     #include <AzFramework/Entity/EntityDebugDisplayBus.h>
     #include <AzFramework/Viewport/ViewportBus.h>
     #include <AzFramework/Viewport/ViewportScreen.h>
-    #include <Atom/RPI.Public/View.h>
-    #include <Atom/RPI.Public/ViewportContext.h>
-    #include <Atom/RPI.Public/ViewportContextBus.h>
-    #include <Atom/RPI.Public/WindowContext.h>
+    #include <JE/Render/RPI/Public/View.h>
+    #include <JE/Render/RPI/Public/ViewportContext.h>
+    #include <JE/Render/RPI/Public/ViewportContextBus.h>
+    #include <JE/Render/RPI/Public/WindowContext.h>
 #endif // !AUDIO_RELEASE
 
 
@@ -692,17 +692,17 @@ namespace Audio
     ///////////////////////////////////////////////////////////////////////////////////////////////////
     bool ConvertOjbectWorldPosToScreenCoords(AZ::Vector3& position)
     {
-        auto viewportContextMgr = AZ::Interface<AZ::RPI::ViewportContextRequestsInterface>::Get();
+        auto viewportContextMgr = AZ::Interface<JE::Render::RPI::ViewportContextRequestsInterface>::Get();
         if (!viewportContextMgr)
         {
             return false;
         }
-        AZ::RPI::ViewportContextPtr viewportContext = viewportContextMgr->GetDefaultViewportContext();
+        JE::Render::RPI::ViewportContextPtr viewportContext = viewportContextMgr->GetDefaultViewportContext();
         if (!viewportContext)
         {
             return false;
         }
-        AZ::RPI::ViewPtr view = viewportContext->GetDefaultView();
+        JE::Render::RPI::ViewPtr view = viewportContext->GetDefaultView();
         if (!view)
         {
             return false;

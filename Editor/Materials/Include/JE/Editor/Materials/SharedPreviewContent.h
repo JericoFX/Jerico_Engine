@@ -10,10 +10,10 @@
 
 #include <JE/Editor/Materials/Base.h>
 
-#include <Atom/RPI.Public/Base.h>
-#include <Atom/RPI.Reflect/Material/MaterialAsset.h>
-#include <Atom/RPI.Reflect/Model/ModelAsset.h>
-#include <Atom/RPI.Reflect/System/AnyAsset.h>
+#include <JE/Render/RPI/Public/Base.h>
+#include <JE/Render/RPI/Reflect/Material/MaterialAsset.h>
+#include <JE/Render/RPI/Reflect/Model/ModelAsset.h>
+#include <JE/Render/RPI/Reflect/System/AnyAsset.h>
 #include <JE/Render/Materials/MaterialAssignment.h>
 #include <AtomLyIntegration/CommonFeatures/Mesh/MeshHandleStateBus.h>
 #include <AtomToolsFramework/PreviewRenderer/PreviewContent.h>
@@ -29,12 +29,12 @@ namespace JE
             AZ_CLASS_ALLOCATOR(SharedPreviewContent, AZ::SystemAllocator);
 
             SharedPreviewContent(
-                AZ::RPI::ScenePtr scene,
-                AZ::RPI::ViewPtr view,
+                JE::Render::RPI::ScenePtr scene,
+                JE::Render::RPI::ViewPtr view,
                 AZ::Uuid entityContextId,
-                const AZ::Data::Asset<AZ::RPI::ModelAsset>& modelAsset,
-                const AZ::Data::Asset<AZ::RPI::MaterialAsset>& materialAsset,
-                const AZ::Data::Asset<AZ::RPI::AnyAsset>& lightingPresetAsset,
+                const AZ::Data::Asset<JE::Render::RPI::ModelAsset>& modelAsset,
+                const AZ::Data::Asset<JE::Render::RPI::MaterialAsset>& materialAsset,
+                const AZ::Data::Asset<JE::Render::RPI::AnyAsset>& lightingPresetAsset,
                 const JE::Render::MaterialPropertyOverrideMap& materialPropertyOverrides);
 
             ~SharedPreviewContent() override;
@@ -59,7 +59,7 @@ namespace JE
             // Called by @m_meshUpdatedHandler
             void OnMeshDrawPacketUpdated(
                 const AZ::Render::ModelDataInstanceInterface& meshHandleIface,
-                uint32_t lodIndex, uint32_t meshIndex, const AZ::RPI::MeshDrawPacket& meshDrawPacket);
+                uint32_t lodIndex, uint32_t meshIndex, const JE::Render::RPI::MeshDrawPacket& meshDrawPacket);
 
             static constexpr float AspectRatio = 1.0f;
             static constexpr float NearDist = 0.001f;
@@ -67,14 +67,14 @@ namespace JE
             static constexpr float FieldOfView = AZ::Constants::HalfPi;
             static constexpr float CameraRotationAngle = AZ::Constants::QuarterPi / 3.0f;
 
-            AZ::RPI::ScenePtr m_scene;
-            AZ::RPI::ViewPtr m_view;
+            JE::Render::RPI::ScenePtr m_scene;
+            JE::Render::RPI::ViewPtr m_view;
             AZ::Uuid m_entityContextId;
             AZ::Entity* m_modelEntity = {};
 
-            AZ::Data::Asset<AZ::RPI::ModelAsset> m_modelAsset;
-            AZ::Data::Asset<AZ::RPI::MaterialAsset> m_materialAsset;
-            AZ::Data::Asset<AZ::RPI::AnyAsset> m_lightingPresetAsset;
+            AZ::Data::Asset<JE::Render::RPI::ModelAsset> m_modelAsset;
+            AZ::Data::Asset<JE::Render::RPI::MaterialAsset> m_materialAsset;
+            AZ::Data::Asset<JE::Render::RPI::AnyAsset> m_lightingPresetAsset;
             JE::Render::MaterialPropertyOverrideMap m_materialPropertyOverrides;
 
             // We need @m_meshHandle to be able to register for MeshDrawPacketUpdatedEvent(s).

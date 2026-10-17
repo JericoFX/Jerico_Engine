@@ -28,11 +28,11 @@
 #include <AzFramework/CommandLine/CommandLine.h>
 #include <AzFramework/Components/ConsoleBus.h>
 
-#include <Atom/RPI.Public/PerformanceCollectionNotificationBus.h>
+#include <JE/Render/RPI/Public/PerformanceCollectionNotificationBus.h>
 #include <AzFramework/Translation/TranslationDef.h>
 
 #ifdef JE_RENDER_RPI_EDITOR
-#include <Atom/RPI.Edit/Material/MaterialFunctorSourceDataRegistration.h>
+#include <JE/Editor/Render/RPI/Edit/Material/MaterialFunctorSourceDataRegistration.h>
 #endif
 
 namespace JE::Render::RPI
@@ -64,7 +64,7 @@ namespace JE::Render::RPI
                 }
             }
 
-            AZ::RPI::RPISystem::Reflect(context);
+            JE::Render::RPI::RPISystem::Reflect(context);
         }
 
         void RPISystemComponent::GetRequiredServices(AZ::ComponentDescriptor::DependencyArrayType& required)
@@ -90,7 +90,7 @@ namespace JE::Render::RPI
         #ifdef JE_RENDER_RPI_EDITOR
             AZ_Assert(m_materialFunctorRegistration == nullptr, "Material functor registration should be initialized with nullptr. "
                 "And allocated depending on the component is in editors or not.");
-            m_materialFunctorRegistration = aznew AZ::RPI::MaterialFunctorSourceDataRegistration;
+            m_materialFunctorRegistration = aznew JE::Render::RPI::MaterialFunctorSourceDataRegistration;
             m_materialFunctorRegistration->Init();
         #endif
         }
@@ -174,7 +174,7 @@ namespace JE::Render::RPI
             {
                 if (m_gpuPassProfiler && !m_performanceCollector->IsWaitingBeforeCapture() && m_gpuPassProfiler->IsGpuTimeMeasurementEnabled())
                 {
-                    uint64_t durationNanoseconds = m_gpuPassProfiler->MeasureGpuTimeInNanoseconds(AZ::RPI::PassSystemInterface::Get()->GetRootPass());
+                    uint64_t durationNanoseconds = m_gpuPassProfiler->MeasureGpuTimeInNanoseconds(JE::Render::RPI::PassSystemInterface::Get()->GetRootPass());
                     // The first three frames, it is expected to be zero. So only record non-zero samples.
                     if (durationNanoseconds > 0)
                     {
@@ -224,7 +224,7 @@ namespace JE::Render::RPI
             AZ::Debug::Trace::Instance().Crash();
         }
 
-        void RPISystemComponent::RegisterXRInterface(AZ::RPI::XRRenderingInterface* xrSystemInterface)
+        void RPISystemComponent::RegisterXRInterface(JE::Render::RPI::XRRenderingInterface* xrSystemInterface)
         {
             m_rpiSystem.RegisterXRSystem(xrSystemInterface);
         }
@@ -252,8 +252,8 @@ namespace JE::Render::RPI
                 {
                     m_gpuPassProfiler->SetGpuTimeMeasurementEnabled(false);
                     // Force disabling timestamp collection in the root pass.
-                    AZ::RPI::PassSystemInterface::Get()->GetRootPass()->SetTimestampQueryEnabled(false);
-                    AZ::RPI::PerformaceCollectionNotificationBus::Broadcast(&AZ::RPI::PerformaceCollectionNotification::OnPerformanceCollectionJobFinished, m_performanceCollector->GetOutputFilePath().String());
+                    JE::Render::RPI::PassSystemInterface::Get()->GetRootPass()->SetTimestampQueryEnabled(false);
+                    JE::Render::RPI::PerformaceCollectionNotificationBus::Broadcast(&JE::Render::RPI::PerformaceCollectionNotification::OnPerformanceCollectionJobFinished, m_performanceCollector->GetOutputFilePath().String());
                 }
                 if (r_metricsQuitUponCompletion && (pendingBatches == 0))
                 {
@@ -271,7 +271,7 @@ namespace JE::Render::RPI
             AZStd::string logCategory = GetLogCategory();
             m_performanceCollector = AZStd::make_unique<AZ::Debug::PerformanceCollector>(
                 logCategory, performanceMetrics, onBatchCompleteCallback);
-            m_gpuPassProfiler = AZStd::make_unique<AZ::RPI::GpuPassProfiler>();
+            m_gpuPassProfiler = AZStd::make_unique<JE::Render::RPI::GpuPassProfiler>();
 
             //Feed the CVAR values.
             m_gpuPassProfiler->SetGpuTimeMeasurementEnabled(r_metricsMeasureGpuTime);

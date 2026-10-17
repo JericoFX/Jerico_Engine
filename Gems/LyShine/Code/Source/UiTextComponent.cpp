@@ -37,7 +37,7 @@
 #include "RenderGraph.h"
 
 #include <AtomLyIntegration/AtomFont/FFont.h>
-#include <Atom/RPI.Public/Image/ImageSystemInterface.h>
+#include <JE/Render/RPI/Public/Image/ImageSystemInterface.h>
 
 #include <AzFramework/Translation/TranslationDef.h>
 
@@ -1838,7 +1838,7 @@ void UiTextComponent::Render(LyShine::IRenderGraph* renderGraph)
         UiTransformInterface::RectPointsArray rectPoints;
         GetTextBoundingBoxPrivate(GetDrawBatchLines(), m_selectionStart, m_selectionEnd, rectPoints);
 
-        auto systemImage = AZ::RPI::ImageSystemInterface::Get()->GetSystemImage(AZ::RPI::SystemImage::White);
+        auto systemImage = JE::Render::RPI::ImageSystemInterface::Get()->GetSystemImage(JE::Render::RPI::SystemImage::White);
         bool isClampTextureMode = true;
 
         uint32 packedColor = (m_textSelectionColor.GetA8() << 24) | (m_textSelectionColor.GetR8() << 16) | (m_textSelectionColor.GetG8() << 8) | m_textSelectionColor.GetB8();
@@ -1857,7 +1857,7 @@ void UiTextComponent::Render(LyShine::IRenderGraph* renderGraph)
     {
         for (auto batch : m_renderCache.m_imageBatches)
         {
-            AZ::Data::Instance<AZ::RPI::Image> texture = batch->m_texture;
+            AZ::Data::Instance<JE::Render::RPI::Image> texture = batch->m_texture;
 
             // If the fade value has changed we need to update the alpha values in the vertex colors but we do
             // not want to touch or recompute the RGB values
@@ -1880,7 +1880,7 @@ void UiTextComponent::Render(LyShine::IRenderGraph* renderGraph)
     for (RenderCacheBatch* batch : m_renderCache.m_batches)
     {
         AZ::FFont* font = static_cast<AZ::FFont*>(batch->m_font); // LYSHINE_ATOM_TODO - move IFont.h out of CryCommon/engine code
-        AZ::Data::Instance<AZ::RPI::Image> fontImage = font->GetFontImage();
+        AZ::Data::Instance<JE::Render::RPI::Image> fontImage = font->GetFontImage();
         if (fontImage)
         {
             // update alpha values in the verts if alpha has changed (due to fader or SetAlpha).

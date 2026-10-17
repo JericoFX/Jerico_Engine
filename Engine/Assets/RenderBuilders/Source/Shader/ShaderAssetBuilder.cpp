@@ -10,16 +10,16 @@
 
 #include <CommonFiles/Preprocessor.h>
 
-#include <Atom/RPI.Reflect/Shader/ShaderAsset.h>
-#include <Atom/RPI.Reflect/Shader/ShaderAssetCreator.h>
-#include <Atom/RPI.Reflect/Shader/ShaderOptionGroup.h>
-#include <Atom/RPI.Reflect/Shader/ShaderVariantKey.h>
+#include <JE/Render/RPI/Reflect/Shader/ShaderAsset.h>
+#include <JE/Render/RPI/Reflect/Shader/ShaderAssetCreator.h>
+#include <JE/Render/RPI/Reflect/Shader/ShaderOptionGroup.h>
+#include <JE/Render/RPI/Reflect/Shader/ShaderVariantKey.h>
 
 #include <Atom/RHI.Edit/Utils.h>
 #include <Atom/RHI.Edit/ShaderPlatformInterface.h>
-#include <Atom/RPI.Edit/Common/JsonReportingHelper.h>
-#include <Atom/RPI.Edit/Common/AssetUtils.h>
-#include <Atom/RPI.Edit/Common/JsonUtils.h>
+#include <JE/Editor/Render/RPI/Edit/Common/JsonReportingHelper.h>
+#include <JE/Editor/Render/RPI/Edit/Common/AssetUtils.h>
+#include <JE/Editor/Render/RPI/Edit/Common/JsonUtils.h>
 #include <Atom/RHI.Reflect/ConstantsLayout.h>
 #include <Atom/RHI.Reflect/PipelineLayoutDescriptor.h>
 #include <Atom/RHI.Reflect/ShaderStageFunction.h>
@@ -170,7 +170,7 @@ namespace JE::Assets::RenderBuilders
                 return;
             }
 
-            AZ::RPI::ShaderSourceData shaderSourceData = descriptorParseOutcome.TakeValue();
+            JE::Render::RPI::ShaderSourceData shaderSourceData = descriptorParseOutcome.TakeValue();
 
             AZStd::string azslFullPath;
             ShaderBuilderUtility::GetAbsolutePathToAzslFile(shaderAssetSourceFileFullPath, shaderSourceData.m_source, azslFullPath);
@@ -237,11 +237,11 @@ namespace JE::Assets::RenderBuilders
             response.m_result = AssetBuilderSDK::CreateJobsResultCode::Success;
         }
 
-        static bool SerializeOutShaderAsset(AZ::Data::Asset<AZ::RPI::ShaderAsset> shaderAsset,
+        static bool SerializeOutShaderAsset(AZ::Data::Asset<JE::Render::RPI::ShaderAsset> shaderAsset,
             const AZStd::string& tempDirPath,
             AssetBuilderSDK::ProcessJobResponse& response)
         {
-            AZStd::string shaderAssetFileName = AZStd::string::format("%s.%s", shaderAsset->GetName().GetCStr(), AZ::RPI::ShaderAsset::Extension);
+            AZStd::string shaderAssetFileName = AZStd::string::format("%s.%s", shaderAsset->GetName().GetCStr(), JE::Render::RPI::ShaderAsset::Extension);
             AZStd::string shaderAssetOutputPath;
             AzFramework::StringFunc::Path::ConstructFull(tempDirPath.data(), shaderAssetFileName.data(), shaderAssetOutputPath, true);
 
@@ -255,8 +255,8 @@ namespace JE::Assets::RenderBuilders
             // This will guarantee that when the ShaderAsset is loaded at runtime, the ShaderAsset will report OnAssetReady only after the root ShaderVariantAssets
             // are already fully loaded and ready.
             AssetBuilderSDK::JobProduct shaderJobProduct;
-            if (!AssetBuilderSDK::OutputObject(shaderAsset.Get(), shaderAssetOutputPath, azrtti_typeid<AZ::RPI::ShaderAsset>(),
-                aznumeric_cast<uint32_t>(AZ::RPI::ShaderAssetSubId::ShaderAsset), shaderJobProduct))
+            if (!AssetBuilderSDK::OutputObject(shaderAsset.Get(), shaderAssetOutputPath, azrtti_typeid<JE::Render::RPI::ShaderAsset>(),
+                aznumeric_cast<uint32_t>(JE::Render::RPI::ShaderAssetSubId::ShaderAsset), shaderJobProduct))
             {
                 AZ_Error(ShaderAssetBuilderName, false, "Failed to output product dependencies.");
                 return false;
@@ -344,7 +344,7 @@ namespace JE::Assets::RenderBuilders
                 return;
             }
 
-            AZ::RPI::ShaderSourceData shaderSourceData = descriptorParseOutcome.TakeValue();
+            JE::Render::RPI::ShaderSourceData shaderSourceData = descriptorParseOutcome.TakeValue();
             AZStd::string azslFullPath;
             ShaderBuilderUtility::GetAbsolutePathToAzslFile(shaderFullPath, shaderSourceData.m_source, azslFullPath);
             AZ_TracePrintf(ShaderAssetBuilderName, "Original AZSL File: %s \n", azslFullPath.c_str());
@@ -377,7 +377,7 @@ namespace JE::Assets::RenderBuilders
 
             auto supervariantList = ShaderBuilderUtility::GetSupervariantListFromShaderSourceData(shaderSourceData);
 
-            AZ::RPI::ShaderAssetCreator shaderAssetCreator;
+            JE::Render::RPI::ShaderAssetCreator shaderAssetCreator;
             shaderAssetCreator.Begin(AZ::Uuid::CreateRandom());
 
             shaderAssetCreator.SetName(AZ::Name{shaderFileName});
@@ -389,7 +389,7 @@ namespace JE::Assets::RenderBuilders
             // compiled for the default, nameless, supervariant.
             // For all other supervariants we just make sure the hashes are the same
             // as this one.
-            AZ::RPI::Ptr<AZ::RPI::ShaderOptionGroupLayout> finalShaderOptionGroupLayout = nullptr;
+            JE::Render::RPI::Ptr<JE::Render::RPI::ShaderOptionGroupLayout> finalShaderOptionGroupLayout = nullptr;
 
 
             // Time to describe the big picture.
@@ -494,7 +494,7 @@ namespace JE::Assets::RenderBuilders
                         jobProduct.m_productFileName = subProductsPaths[i];
                         jobProduct.m_productAssetType = AzslOutcomeType;
                         // uint32_t rhiApiUniqueIndex, uint32_t supervariantIndex, uint32_t subProductType
-                        jobProduct.m_productSubID = AZ::RPI::ShaderAsset::MakeProductAssetSubId(
+                        jobProduct.m_productSubID = JE::Render::RPI::ShaderAsset::MakeProductAssetSubId(
                                                                 shaderPlatformInterface->GetAPIUniqueIndex(), supervariantIndex,
                                                                 aznumeric_cast<uint32_t>(ShaderBuilderUtility::AzslSubProducts::SubList[i]));
                         jobProduct.m_dependenciesHandled = true;
@@ -507,8 +507,8 @@ namespace JE::Assets::RenderBuilders
                     AZStd::shared_ptr<ShaderFiles> files(new ShaderFiles);
                     AzslData azslData(files);
                     azslData.m_preprocessedFullPath = azslinFullPath;
-                    AZ::RPI::ShaderResourceGroupLayoutList srgLayoutList;
-                    AZ::RPI::Ptr<AZ::RPI::ShaderOptionGroupLayout> shaderOptionGroupLayout = AZ::RPI::ShaderOptionGroupLayout::Create();
+                    JE::Render::RPI::ShaderResourceGroupLayoutList srgLayoutList;
+                    JE::Render::RPI::Ptr<JE::Render::RPI::ShaderOptionGroupLayout> shaderOptionGroupLayout = JE::Render::RPI::ShaderOptionGroupLayout::Create();
                     BindingDependencies bindingDependencies;
                     RootConstantData rootConstantData;
                     bool usesSpecializationConstants = false;
@@ -535,7 +535,7 @@ namespace JE::Assets::RenderBuilders
                         [[maybe_unused]] const uint32_t usedShaderOptionBits = shaderOptionGroupLayout->GetBitSize();
                         AZ_TracePrintf(
                             ShaderAssetBuilderName, "Note: This shader uses %u of %u available shader variant key bits. \n",
-                            usedShaderOptionBits, AZ::RPI::ShaderVariantKeyBitCount);
+                            usedShaderOptionBits, JE::Render::RPI::ShaderVariantKeyBitCount);
                     }
                     else
                     {
@@ -598,8 +598,8 @@ namespace JE::Assets::RenderBuilders
                     shaderAssetCreator.SetPipelineLayout(pipelineLayoutDescriptor);
 
 
-                    AZ::RPI::ShaderInputContract shaderInputContract;
-                    AZ::RPI::ShaderOutputContract shaderOutputContract;
+                    JE::Render::RPI::ShaderInputContract shaderInputContract;
+                    JE::Render::RPI::ShaderOutputContract shaderOutputContract;
                     size_t colorAttachmentCount = 0;
                     ShaderBuilderUtility::CreateShaderInputAndOutputContracts(
                         azslData, shaderEntryPoints, *shaderOptionGroupLayout.get(),
@@ -653,7 +653,7 @@ namespace JE::Assets::RenderBuilders
                         shaderAssetCreator.SetRenderStates(renderStates);
                     }
 
-                    AZ::Outcome<AZStd::string, AZStd::string> hlslSourceCodeOutcome = AZ::Utils::ReadFile(hlslFullPath, AZ::RPI::JsonUtils::DefaultMaxFileSize);
+                    AZ::Outcome<AZStd::string, AZStd::string> hlslSourceCodeOutcome = AZ::Utils::ReadFile(hlslFullPath, JE::Render::RPI::JsonUtils::DefaultMaxFileSize);
                     if (!hlslSourceCodeOutcome.IsSuccess())
                     {
                         AZ_Error(
@@ -667,14 +667,14 @@ namespace JE::Assets::RenderBuilders
                     // The root ShaderVariantAsset needs to be created with the known uuid of the source .shader asset because
                     // the ShaderAsset owns a Data::Asset<> reference that gets serialized. It must have the correct uuid
                     // so the root ShaderVariantAsset is found when the ShaderAsset is deserialized.
-                    uint32_t rootVariantProductSubId = AZ::RPI::ShaderAsset::MakeProductAssetSubId(
+                    uint32_t rootVariantProductSubId = JE::Render::RPI::ShaderAsset::MakeProductAssetSubId(
                         shaderPlatformInterface->GetAPIUniqueIndex(), supervariantIndex,
-                        aznumeric_cast<uint32_t>(AZ::RPI::ShaderAssetSubId::RootShaderVariantAsset));
-                    auto assetIdOutcome = AZ::RPI::AssetUtils::MakeAssetId(shaderFullPath, rootVariantProductSubId);
+                        aznumeric_cast<uint32_t>(JE::Render::RPI::ShaderAssetSubId::RootShaderVariantAsset));
+                    auto assetIdOutcome = JE::Render::RPI::AssetUtils::MakeAssetId(shaderFullPath, rootVariantProductSubId);
                     AZ_Assert(assetIdOutcome.IsSuccess(), "Failed to get AssetId from shader %s", shaderFullPath.c_str());
                     const AZ::Data::AssetId variantAssetId = assetIdOutcome.TakeValue();
 
-                    AZ::RPI::ShaderVariantListSourceData::VariantInfo rootVariantInfo;
+                    JE::Render::RPI::ShaderVariantListSourceData::VariantInfo rootVariantInfo;
                     ShaderVariantCreationContext shaderVariantCreationContext = {
                         *shaderPlatformInterface,
                         request.m_platformInfo,
@@ -702,7 +702,7 @@ namespace JE::Assets::RenderBuilders
                         response.m_resultCode = AssetBuilderSDK::ProcessJobResult_Failed;
                         return;
                     }
-                    AZ::Data::Asset<AZ::RPI::ShaderVariantAsset> rootShaderVariantAsset = rootShaderVariantAssetOutcome.TakeValue();
+                    AZ::Data::Asset<JE::Render::RPI::ShaderVariantAsset> rootShaderVariantAsset = rootShaderVariantAssetOutcome.TakeValue();
 
                     shaderAssetCreator.SetRootShaderVariantAsset(rootShaderVariantAsset);
 
@@ -729,13 +729,13 @@ namespace JE::Assets::RenderBuilders
                     if (outputByproducts)
                     {
                         // add byproducts as job output products:
-                        uint32_t subProductType = aznumeric_cast<uint32_t>(AZ::RPI::ShaderAssetSubId::FirstByProduct);
+                        uint32_t subProductType = aznumeric_cast<uint32_t>(JE::Render::RPI::ShaderAssetSubId::FirstByProduct);
                         for (const AZStd::string& byproduct : outputByproducts.value().m_intermediatePaths)
                         {
                             AssetBuilderSDK::JobProduct jobProduct;
                             jobProduct.m_productFileName = byproduct;
                             jobProduct.m_productAssetType = AZ::Uuid::CreateName("DebugInfoByProduct-PdbOrDxilTxt");
-                            jobProduct.m_productSubID = AZ::RPI::ShaderAsset::MakeProductAssetSubId(
+                            jobProduct.m_productSubID = JE::Render::RPI::ShaderAsset::MakeProductAssetSubId(
                                 shaderPlatformInterface->GetAPIUniqueIndex(), supervariantIndex,
                                 subProductType++);
                             response.m_outputProducts.push_back(AZStd::move(jobProduct));
@@ -758,7 +758,7 @@ namespace JE::Assets::RenderBuilders
 
             } // end for all ShaderPlatformInterfaces
 
-            AZ::Data::Asset<AZ::RPI::ShaderAsset> shaderAsset;
+            AZ::Data::Asset<JE::Render::RPI::ShaderAsset> shaderAsset;
             if (!shaderAssetCreator.End(shaderAsset))
             {
                 response.m_resultCode = AssetBuilderSDK::ProcessJobResult_Failed;

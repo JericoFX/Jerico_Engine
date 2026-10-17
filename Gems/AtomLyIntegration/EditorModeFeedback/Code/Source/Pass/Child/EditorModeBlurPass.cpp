@@ -8,9 +8,9 @@
 
 #include <Pass/Child/EditorModeBlurPass.h>
 
-#include <Atom/RPI.Public/RenderPipeline.h>
-#include <Atom/RPI.Public/Scene.h>
-#include <Atom/RPI.Public/View.h>
+#include <JE/Render/RPI/Public/RenderPipeline.h>
+#include <JE/Render/RPI/Public/Scene.h>
+#include <JE/Render/RPI/Public/View.h>
 
 // Temporary measure for setting the blur pass shader parameters at runtime until GHI 3455 is implemented
 AZ_EDITOR_MODE_PASS_TRANSITION_CVARS(cl_editorModeBlurPass, 0.0f, 0.0f, 20.0f, 1.0f);
@@ -20,13 +20,13 @@ namespace AZ
 {
     namespace Render
     {
-        RPI::Ptr<EditorModeBlurPass> EditorModeBlurPass::Create(const RPI::PassDescriptor& descriptor)
+        JE::Render::RPI::Ptr<EditorModeBlurPass> EditorModeBlurPass::Create(const JE::Render::RPI::PassDescriptor& descriptor)
         {
-            RPI::Ptr<EditorModeBlurPass> pass = aznew EditorModeBlurPass(descriptor);
+            JE::Render::RPI::Ptr<EditorModeBlurPass> pass = aznew EditorModeBlurPass(descriptor);
             return pass;
         }
 
-        EditorModeBlurPass::EditorModeBlurPass(const RPI::PassDescriptor& descriptor)
+        EditorModeBlurPass::EditorModeBlurPass(const JE::Render::RPI::PassDescriptor& descriptor)
             : EditorModeFeedbackChildPassBase(descriptor, { 0.0f, 0.0f, 20.0f }, 1.0f)
         {
         }

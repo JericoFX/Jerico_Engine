@@ -10,19 +10,19 @@
 
 namespace ${GemName}
 {
-    AZ::RPI::Ptr<${SanitizedCppName}Pass> ${SanitizedCppName}Pass::Create(const AZ::RPI::PassDescriptor& descriptor)
+    JE::Render::RPI::Ptr<${SanitizedCppName}Pass> ${SanitizedCppName}Pass::Create(const JE::Render::RPI::PassDescriptor& descriptor)
     {
         return aznew ${SanitizedCppName}Pass(descriptor);
     }
 
-    ${SanitizedCppName}Pass::${SanitizedCppName}Pass(const AZ::RPI::PassDescriptor& descriptor)
-        : AZ::RPI::FullscreenTrianglePass(descriptor)
+    ${SanitizedCppName}Pass::${SanitizedCppName}Pass(const JE::Render::RPI::PassDescriptor& descriptor)
+        : JE::Render::RPI::FullscreenTrianglePass(descriptor)
     {
     }
 
     void ${SanitizedCppName}Pass::InitializeInternal()
     {
-        AZ::RPI::FullscreenTrianglePass::InitializeInternal();
+        JE::Render::RPI::FullscreenTrianglePass::InitializeInternal();
 
         // Cache SRG indices here. Example -- uncomment together with the
         // matching m_tintIndex member in ${Name}Pass.h AND a 'float4 m_tint'
@@ -48,7 +48,7 @@ namespace ${GemName}
         //       m_shaderResourceGroup->SetConstant(m_tintIndex, AZ::Vector4(1, 0, 0, 1));
         //   }
 
-        AZ::RPI::FullscreenTrianglePass::FrameBeginInternal(params);
+        JE::Render::RPI::FullscreenTrianglePass::FrameBeginInternal(params);
     }
 
 } // namespace ${GemName}

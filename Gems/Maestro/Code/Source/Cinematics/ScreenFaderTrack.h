@@ -10,7 +10,7 @@
 
 #include <IMovieSystem.h>
 
-#include <Atom/RPI.Reflect/Image/Image.h>
+#include <JE/Render/RPI/Reflect/Image/Image.h>
 #include <AzCore/Instance/InstanceData.h>
 #include <AzCore/std/containers/vector.h>
 
@@ -37,7 +37,7 @@ namespace Maestro
 
         void PreloadTextures();
 
-        AZ::Data::Instance<AZ::RPI::Image> GetActiveTexture() const;
+        AZ::Data::Instance<JE::Render::RPI::Image> GetActiveTexture() const;
         bool SetActiveTexture(int keyIndex);
 
         void SetScreenFaderTrackDefaults();
@@ -51,7 +51,7 @@ namespace Maestro
         static void Reflect(AZ::ReflectContext* context);
 
     private:
-        AZStd::vector<AZ::Data::Instance<AZ::RPI::Image>> m_preloadedTextures;
+        AZStd::vector<AZ::Data::Instance<JE::Render::RPI::Image>> m_preloadedTextures;
         bool m_bTextureVisible;
         AZ::Vector4 m_drawColor;
         int m_activeTextureNumber;

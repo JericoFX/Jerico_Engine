@@ -5,10 +5,10 @@
  * SPDX-License-Identifier: Apache-2.0 OR MIT
  */
 #include "JEWhiteBoxSurfaceMaterials.h"
-#include <Atom/RPI.Reflect/Material/MaterialPropertyValue.h>
-#include <Atom/RPI.Reflect/Material/MaterialPropertiesLayout.h>
-#include <Atom/RPI.Reflect/Material/MaterialPropertyDescriptor.h>
-#include <Atom/RPI.Reflect/Material/MaterialTypeAsset.h>
+#include <JE/Render/RPI/Reflect/Material/MaterialPropertyValue.h>
+#include <JE/Render/RPI/Reflect/Material/MaterialPropertiesLayout.h>
+#include <JE/Render/RPI/Reflect/Material/MaterialPropertyDescriptor.h>
+#include <JE/Render/RPI/Reflect/Material/MaterialTypeAsset.h>
 #include <AzCore/std/algorithm.h>
 #include <AzCore/std/containers/map.h>
 #include <AzCore/std/containers/unordered_map.h>
@@ -80,8 +80,8 @@ namespace JE::BSP
                     if (AZStd::any_cast<AZ::Name>(value) != AZStd::any_cast<AZ::Name>(it->second)) { return false; }
                     continue;
                 }
-                const auto a = AZ::RPI::MaterialPropertyValue::FromAny(value);
-                const auto b = AZ::RPI::MaterialPropertyValue::FromAny(it->second);
+                const auto a = JE::Render::RPI::MaterialPropertyValue::FromAny(value);
+                const auto b = JE::Render::RPI::MaterialPropertyValue::FromAny(it->second);
                 // Unsupported values are conflicts, never silently treated as equal.
                 if (!a.IsValid() || !b.IsValid() || a != b) { return false; }
             }
@@ -249,7 +249,7 @@ namespace JE::BSP
 
     bool PreparePolygonMaterialAssignment(const JE::Geometry::WhiteBoxMesh& mesh,
         const Api::PolygonHandles& polygons, const SurfaceMaterialBindings& bindings,
-        const JE::Render::MaterialAssignmentMap& materials, const AZ::Data::Asset<AZ::RPI::MaterialAsset>& material,
+        const JE::Render::MaterialAssignmentMap& materials, const AZ::Data::Asset<JE::Render::RPI::MaterialAsset>& material,
         const AZStd::unordered_set<AZ::Name>& modelUvNames, bool hasMaterialOwner,
         SurfaceMaterialMerge& output, AZStd::string& error)
     {
@@ -317,8 +317,8 @@ namespace JE::BSP
                     return false;
                 }
                 const auto* descriptor = layout->GetPropertyDescriptor(index);
-                AZ::RPI::MaterialPropertyValue property;
-                if (descriptor->GetDataType() == AZ::RPI::MaterialPropertyDataType::Enum)
+                JE::Render::RPI::MaterialPropertyValue property;
+                if (descriptor->GetDataType() == JE::Render::RPI::MaterialPropertyDataType::Enum)
                 {
                     // Native MaterialComponent accepts enum names as well as UInt values. Do not
                     // coerce arbitrary numeric types (or accept an out-of-range enum index).
@@ -328,13 +328,13 @@ namespace JE::BSP
                     }
                     else if (value.is<uint32_t>())
                     {
-                        property = AZ::RPI::MaterialPropertyValue::FromAny(value);
+                        property = JE::Render::RPI::MaterialPropertyValue::FromAny(value);
                         const auto oldMaterial = assignment.m_materialAsset.GetId().IsValid() ?
                             assignment.m_materialAsset : assignment.m_defaultMaterialAsset;
                         const auto* oldLayout = oldMaterial.IsReady() ? oldMaterial->GetMaterialPropertiesLayout() : nullptr;
-                        const auto oldIndex = oldLayout ? oldLayout->FindPropertyIndex(name) : AZ::RPI::MaterialPropertyIndex{};
+                        const auto oldIndex = oldLayout ? oldLayout->FindPropertyIndex(name) : JE::Render::RPI::MaterialPropertyIndex{};
                         const auto* oldDescriptor = oldLayout && !oldIndex.IsNull() ? oldLayout->GetPropertyDescriptor(oldIndex) : nullptr;
-                        if (!oldDescriptor || oldDescriptor->GetDataType() != AZ::RPI::MaterialPropertyDataType::Enum ||
+                        if (!oldDescriptor || oldDescriptor->GetDataType() != JE::Render::RPI::MaterialPropertyDataType::Enum ||
                             oldDescriptor->GetEnumName(property.GetValue<uint32_t>()) != descriptor->GetEnumName(property.GetValue<uint32_t>()))
                         {
                             error = AZStd::string::format("Numeric enum override '%s' cannot retain its meaning in the selected material.", name.GetCStr());
@@ -356,9 +356,9 @@ namespace JE::BSP
                         error = AZStd::string::format("Override '%s' has an incompatible native value type.", name.GetCStr());
                         return false;
                     }
-                    property = AZ::RPI::MaterialPropertyValue::FromAny(value);
+                    property = JE::Render::RPI::MaterialPropertyValue::FromAny(value);
                 }
-                if (!property.IsValid() || !AZ::RPI::ValidateMaterialPropertyDataType(property.GetTypeId(), descriptor,
+                if (!property.IsValid() || !JE::Render::RPI::ValidateMaterialPropertyDataType(property.GetTypeId(), descriptor,
                     [&](const char* message) { error = message; }))
                 {
                     if (error.empty()) { error = AZStd::string::format("Unsupported override '%s' cannot be preserved.", name.GetCStr()); }

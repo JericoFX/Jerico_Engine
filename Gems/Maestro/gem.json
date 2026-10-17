@@ -22,7 +22,6 @@
     "dependencies": [
         "LmbrCentral",
         "Atom",
-        "Atom_RHI",
-        "Atom_RPI"
+        "Atom_RHI"
     ]
 }

@@ -8,7 +8,7 @@
 #pragma once
 
 #include <AzCore/Component/ComponentBus.h>
-#include <Atom/RPI.Reflect/Image/StreamingImageAsset.h>
+#include <JE/Render/RPI/Reflect/Image/StreamingImageAsset.h>
 
 namespace AZ
 {
@@ -19,10 +19,10 @@ namespace AZ
             : public ComponentBus
         {
         public:
-            virtual void SetSpecularImageAsset(const Data::Asset<RPI::StreamingImageAsset>& imageAsset) = 0;
-            virtual void SetDiffuseImageAsset(const Data::Asset<RPI::StreamingImageAsset>& imageAsset) = 0;
-            virtual Data::Asset<RPI::StreamingImageAsset> GetSpecularImageAsset() const = 0;
-            virtual Data::Asset<RPI::StreamingImageAsset> GetDiffuseImageAsset() const = 0;
+            virtual void SetSpecularImageAsset(const Data::Asset<JE::Render::RPI::StreamingImageAsset>& imageAsset) = 0;
+            virtual void SetDiffuseImageAsset(const Data::Asset<JE::Render::RPI::StreamingImageAsset>& imageAsset) = 0;
+            virtual Data::Asset<JE::Render::RPI::StreamingImageAsset> GetSpecularImageAsset() const = 0;
+            virtual Data::Asset<JE::Render::RPI::StreamingImageAsset> GetDiffuseImageAsset() const = 0;
             virtual void SetSpecularImageAssetId(const Data::AssetId imageAssetId) = 0;
             virtual void SetDiffuseImageAssetId(const Data::AssetId imageAssetId) = 0;
             virtual Data::AssetId GetSpecularImageAssetId() const = 0;

@@ -11,7 +11,7 @@
 #include <ACES/Aces.h>
 #include <Atom/Feature/Utils/LightingPreset.h>
 #include <Atom/Feature/Utils/ModelPreset.h>
-#include <Atom/RPI.Reflect/System/RenderPipelineDescriptor.h>
+#include <JE/Render/RPI/Reflect/System/RenderPipelineDescriptor.h>
 #include <AtomToolsFramework/EntityPreviewViewport/EntityPreviewViewportSettingsRequestBus.h>
 #include <AzCore/Asset/AssetCommon.h>
 #include <AzCore/Component/TickBus.h>
@@ -95,18 +95,18 @@ namespace AtomToolsFramework
 
         void RegisterLightingPreset(const AZStd::string& path, const AZ::Render::LightingPreset& preset);
         void RegisterModelPreset(const AZStd::string& path, const AZ::Render::ModelPreset& preset);
-        void RegisterRenderPipeline(const AZStd::string& path, const AZ::RPI::RenderPipelineDescriptor& preset);
+        void RegisterRenderPipeline(const AZStd::string& path, const JE::Render::RPI::RenderPipelineDescriptor& preset);
         void PreloadPresets();
 
         const AZ::Crc32 m_toolId = {};
 
         AZ::Render::LightingPreset m_lightingPreset;
         AZ::Render::ModelPreset m_modelPreset;
-        AZ::RPI::RenderPipelineDescriptor m_renderPipelineDescriptor;
+        JE::Render::RPI::RenderPipelineDescriptor m_renderPipelineDescriptor;
 
         mutable AZStd::unordered_map<AZStd::string, AZ::Render::LightingPreset> m_lightingPresetCache;
         mutable AZStd::unordered_map<AZStd::string, AZ::Render::ModelPreset> m_modelPresetCache;
-        mutable AZStd::unordered_map<AZStd::string, AZ::RPI::RenderPipelineDescriptor> m_renderPipelineDescriptorCache;
+        mutable AZStd::unordered_map<AZStd::string, JE::Render::RPI::RenderPipelineDescriptor> m_renderPipelineDescriptorCache;
         mutable bool m_settingsNotificationPending = {};
     };
 } // namespace AtomToolsFramework

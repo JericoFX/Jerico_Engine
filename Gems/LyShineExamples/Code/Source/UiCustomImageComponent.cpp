@@ -108,7 +108,7 @@ namespace LyShineExamples
         }
 
         ISprite* sprite = (m_overrideSprite) ? m_overrideSprite : m_sprite;
-        AZ::Data::Instance<AZ::RPI::Image> image;
+        AZ::Data::Instance<JE::Render::RPI::Image> image;
 
         if (sprite != nullptr)
         {

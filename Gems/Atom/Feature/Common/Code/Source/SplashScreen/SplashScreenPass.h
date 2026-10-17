@@ -10,24 +10,24 @@
 #include <AzCore/Memory/SystemAllocator.h>
 
 #include <AzCore/Component/TickBus.h>
-#include <Atom/RPI.Public/Pass/FullscreenTrianglePass.h>
-#include <Atom/RPI.Reflect/Pass/PassDescriptor.h>
+#include <JE/Render/RPI/Public/Pass/FullscreenTrianglePass.h>
+#include <JE/Render/RPI/Reflect/Pass/PassDescriptor.h>
 #include <Atom/Feature/SplashScreen/SplashScreenSettings.h>
 
 namespace AZ::Render
 {
     class SplashScreenPass
-        : public AZ::RPI::FullscreenTrianglePass
+        : public JE::Render::RPI::FullscreenTrianglePass
         , public AZ::TickBus::Handler
     {
         AZ_RPI_PASS(SplashScreenPass);
 
     public:
-        AZ_RTTI(AZ::Render::SplashScreenPass, "{B12F4E30-94ED-4F69-A17D-85C65853ACD9}", AZ::RPI::FullscreenTrianglePass);
+        AZ_RTTI(AZ::Render::SplashScreenPass, "{B12F4E30-94ED-4F69-A17D-85C65853ACD9}", JE::Render::RPI::FullscreenTrianglePass);
         AZ_CLASS_ALLOCATOR(AZ::Render::SplashScreenPass, AZ::SystemAllocator, 0);
         virtual ~SplashScreenPass();
 
-        static AZ::RPI::Ptr<SplashScreenPass> Create(const AZ::RPI::PassDescriptor& descriptor);
+        static JE::Render::RPI::Ptr<SplashScreenPass> Create(const JE::Render::RPI::PassDescriptor& descriptor);
 
         //! TickBus overrides...
         //! Update tick for animation in the splash screen pass.
@@ -39,7 +39,7 @@ namespace AZ::Render
         void CompileResources(const AZ::RHI::FrameGraphCompileContext& context) override;
 
     private:
-        SplashScreenPass(const AZ::RPI::PassDescriptor& descriptor);
+        SplashScreenPass(const JE::Render::RPI::PassDescriptor& descriptor);
         void Clear();
 
         // Pass behavior overrides...
@@ -61,7 +61,7 @@ namespace AZ::Render
         };
 
         //! Shader connections
-        AZ::Data::Instance<AZ::RPI::StreamingImage> m_splashScreenImage;
+        AZ::Data::Instance<JE::Render::RPI::StreamingImage> m_splashScreenImage;
         AZ::RHI::ShaderInputNameIndex m_splashScreenImageIndex = "m_splashScreenImage";
 
         SplashScreenParams m_splashScreenParams;

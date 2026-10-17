@@ -10,9 +10,9 @@
 
 #include <AzCore/Math/Internal/MathTypes.h>
 #include <Atom/Feature/Utils/GpuBufferHandler.h>
-#include <Atom/RPI.Public/Base.h>
-#include <Atom/RPI.Public/RenderPipeline.h>
-#include <Atom/RPI.Public/Scene.h>
+#include <JE/Render/RPI/Public/Base.h>
+#include <JE/Render/RPI/Public/RenderPipeline.h>
+#include <JE/Render/RPI/Public/Scene.h>
 
 namespace AZ::Render::LightCommon
 {
@@ -25,8 +25,8 @@ namespace AZ::Render::LightCommon
     // @param view - The view we are checking against
     // @param cpuCulledPipelinesPerView - Map of views -> pipelines in that view that need CPU culling (i.e. no GPU culling pass)
     bool NeedsCPUCulling(
-        const RPI::ViewPtr& view,
-        const AZStd::unordered_map<const RPI::View*, AZStd::vector<const RPI::RenderPipeline*>>& cpuCulledPipelinesPerView);
+        const JE::Render::RPI::ViewPtr& view,
+        const AZStd::unordered_map<const JE::Render::RPI::View*, AZStd::vector<const JE::Render::RPI::RenderPipeline*>>& cpuCulledPipelinesPerView);
 
     //! Cache pipelines that need CPU culling (i.e. no GPU culling pass) with their respective view, store in cpuCulledPipelinesPerView
     //! @param renderPipeline - Cache data associated with the passed RenderPipeline
@@ -34,10 +34,10 @@ namespace AZ::Render::LightCommon
     //! @param previousView The previous view triggered from view changes via OnRenderPipelinePersistentViewChanged
     // @param cpuCulledPipelinesPerView - Map of views -> pipelines in that view that need CPU culling (i.e. no GPU culling pass)
     void CacheCPUCulledPipelineInfo(
-        RPI::RenderPipeline* renderPipeline,
-        RPI::ViewPtr newView,
-        RPI::ViewPtr previousView,
-        AZStd::unordered_map<const RPI::View*, AZStd::vector<const RPI::RenderPipeline*>>& cpuCulledPipelinesPerView);
+        JE::Render::RPI::RenderPipeline* renderPipeline,
+        JE::Render::RPI::ViewPtr newView,
+        JE::Render::RPI::ViewPtr previousView,
+        AZStd::unordered_map<const JE::Render::RPI::View*, AZStd::vector<const JE::Render::RPI::RenderPipeline*>>& cpuCulledPipelinesPerView);
 
     //! Populate and cache multiple buffer handlers (one per view) that will be used to hold visibility data from cpu culling
     //! @param inputBufferName - Gpu Buffer name

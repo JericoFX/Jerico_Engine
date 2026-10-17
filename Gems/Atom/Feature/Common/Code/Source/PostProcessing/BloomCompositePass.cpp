@@ -14,34 +14,34 @@
 #include <Atom/RHI/Factory.h>
 #include <Atom/RHI/FrameScheduler.h>
 
-#include <Atom/RPI.Reflect/Pass/PassTemplate.h>
+#include <JE/Render/RPI/Reflect/Pass/PassTemplate.h>
 
-#include <Atom/RPI.Public/Pass/PassUtils.h>
-#include <Atom/RPI.Public/Pass/PassAttachment.h>
-#include <Atom/RPI.Public/RPIUtils.h>
-#include <Atom/RPI.Public/Scene.h>
-#include <Atom/RPI.Public/RenderPipeline.h>
-#include <Atom/RPI.Public/View.h>
-#include <Atom/RPI.Public/RPISystemInterface.h>
-#include <Atom/RPI.Public/Shader/ShaderResourceGroup.h>
+#include <JE/Render/RPI/Public/Pass/PassUtils.h>
+#include <JE/Render/RPI/Public/Pass/PassAttachment.h>
+#include <JE/Render/RPI/Public/RPIUtils.h>
+#include <JE/Render/RPI/Public/Scene.h>
+#include <JE/Render/RPI/Public/RenderPipeline.h>
+#include <JE/Render/RPI/Public/View.h>
+#include <JE/Render/RPI/Public/RPISystemInterface.h>
+#include <JE/Render/RPI/Public/Shader/ShaderResourceGroup.h>
 
-#include <Atom/RPI.Reflect/Pass/ComputePassData.h>
+#include <JE/Render/RPI/Reflect/Pass/ComputePassData.h>
 
 namespace AZ
 {
     namespace Render
     {
-        RPI::Ptr<BloomCompositePass> BloomCompositePass::Create(const RPI::PassDescriptor& descriptor)
+        JE::Render::RPI::Ptr<BloomCompositePass> BloomCompositePass::Create(const JE::Render::RPI::PassDescriptor& descriptor)
         {
-            RPI::Ptr<BloomCompositePass> pass = aznew BloomCompositePass(descriptor);
+            JE::Render::RPI::Ptr<BloomCompositePass> pass = aznew BloomCompositePass(descriptor);
             return pass;
         }
 
-        BloomCompositePass::BloomCompositePass(const RPI::PassDescriptor& descriptor)
+        BloomCompositePass::BloomCompositePass(const JE::Render::RPI::PassDescriptor& descriptor)
             : ParentPass(descriptor)
         {
             // Load DownsampleMipChainPassData (shader asset)
-            const RPI::DownsampleMipChainPassData* passData = RPI::PassUtils::GetPassData<RPI::DownsampleMipChainPassData>(descriptor);
+            const JE::Render::RPI::DownsampleMipChainPassData* passData = JE::Render::RPI::PassUtils::GetPassData<JE::Render::RPI::DownsampleMipChainPassData>(descriptor);
             if (passData == nullptr)
             {
                 AZ_Error("PassSystem", false, "[BloomCompositePass '%s']: Trying to construct without valid DownsampleMipChainPassData!",
@@ -76,8 +76,8 @@ namespace AZ
             // in the pass file, which could result in errors during following passes' initialization
             AZ_Assert(GetInputOutputCount() > 0, "[BloomCompositePass '%s']: must have an output", GetPathName().GetCStr());
 
-            RPI::PassAttachment* inAttachment = GetInputBinding(0).GetAttachment().get();
-            RPI::PassAttachment* outAttachment = GetInputOutputBinding(0).GetAttachment().get();
+            JE::Render::RPI::PassAttachment* inAttachment = GetInputBinding(0).GetAttachment().get();
+            JE::Render::RPI::PassAttachment* outAttachment = GetInputOutputBinding(0).GetAttachment().get();
 
             if (inAttachment != nullptr && outAttachment != nullptr)
             {
@@ -92,9 +92,9 @@ namespace AZ
         void BloomCompositePass::UpdateParameters()
         {
 
-            RPI::Scene* scene = GetScene();
+            JE::Render::RPI::Scene* scene = GetScene();
             PostProcessFeatureProcessor* fp = scene->GetFeatureProcessor<PostProcessFeatureProcessor>();
-            RPI::ViewPtr view = m_pipeline->GetFirstView(GetPipelineViewTag());
+            JE::Render::RPI::ViewPtr view = m_pipeline->GetFirstView(GetPipelineViewTag());
             if (fp)
             {
                 PostProcessSettings* postProcessSettings = fp->GetLevelSettingsFromView(view);
@@ -117,8 +117,8 @@ namespace AZ
 
         void BloomCompositePass::CreateBinding(BloomCompositeChildPass* pass, uint32_t mipLevel)
         {
-            RPI::PassAttachmentBinding& parentInBinding = GetInputBinding(0);
-            const RPI::Ptr<RPI::PassAttachment>& parentInAttachment = parentInBinding.GetAttachment();
+            JE::Render::RPI::PassAttachmentBinding& parentInBinding = GetInputBinding(0);
+            const JE::Render::RPI::Ptr<JE::Render::RPI::PassAttachment>& parentInAttachment = parentInBinding.GetAttachment();
             if (!parentInAttachment)
             {
                 AZ_Error(
@@ -130,8 +130,8 @@ namespace AZ
                 return;
             }
 
-            RPI::PassAttachmentBinding& parentInOutBinding = GetInputOutputBinding(0);
-            const RPI::Ptr<RPI::PassAttachment>& parentInOutAttachment = parentInOutBinding.GetAttachment();
+            JE::Render::RPI::PassAttachmentBinding& parentInOutBinding = GetInputOutputBinding(0);
+            const JE::Render::RPI::Ptr<JE::Render::RPI::PassAttachment>& parentInOutAttachment = parentInOutBinding.GetAttachment();
 
             if (!parentInOutAttachment)
             {
@@ -145,10 +145,10 @@ namespace AZ
             }
 
             // Create input binding, from downsampling pass
-            RPI::PassAttachmentBinding inBinding;
+            JE::Render::RPI::PassAttachmentBinding inBinding;
             inBinding.m_name = "Input";
             inBinding.m_shaderInputName = "m_inputTexture";
-            inBinding.m_slotType = RPI::PassSlotType::Input;
+            inBinding.m_slotType = JE::Render::RPI::PassSlotType::Input;
             inBinding.m_scopeAttachmentUsage = RHI::ScopeAttachmentUsage::Shader;
             inBinding.m_connectedBinding = &parentInBinding;
 
@@ -162,10 +162,10 @@ namespace AZ
             pass->AddAttachmentBinding(inBinding);
 
             // Create output binding, owned by current pass
-            RPI::PassAttachmentBinding outBinding;
+            JE::Render::RPI::PassAttachmentBinding outBinding;
             outBinding.m_name = "Output";
             outBinding.m_shaderInputName = "m_outputTexture";
-            outBinding.m_slotType = RPI::PassSlotType::Output;
+            outBinding.m_slotType = JE::Render::RPI::PassSlotType::Output;
             outBinding.m_scopeAttachmentUsage = RHI::ScopeAttachmentUsage::Shader;
 
             if (mipLevel == 0)
@@ -204,20 +204,20 @@ namespace AZ
             else
             {
                 // Create children
-                RPI::PassSystemInterface* passSystem = RPI::PassSystemInterface::Get();
+                JE::Render::RPI::PassSystemInterface* passSystem = JE::Render::RPI::PassSystemInterface::Get();
 
                 for (size_t childIndex = 0, mipLevel = Render::Bloom::MaxStageCount - 1;
                      childIndex < Render::Bloom::MaxStageCount;
                      ++childIndex, --mipLevel)
                 {
-                    RPI::PassDescriptor childDesc;
-                    childDesc.m_passData = AZStd::make_shared<RPI::ComputePassData>();
-                    RPI::ComputePassData* passData = static_cast<RPI::ComputePassData*>(childDesc.m_passData.get());
+                    JE::Render::RPI::PassDescriptor childDesc;
+                    childDesc.m_passData = AZStd::make_shared<JE::Render::RPI::ComputePassData>();
+                    JE::Render::RPI::ComputePassData* passData = static_cast<JE::Render::RPI::ComputePassData*>(childDesc.m_passData.get());
                     passData->m_shaderReference = m_passData.m_shaderReference;
 
                     childDesc.m_passName = Name{ AZStd::string::format("BloomComposite%d", static_cast<uint32_t>(childIndex)) };
 
-                    RPI::Ptr<BloomCompositeChildPass> childPass = passSystem->CreatePass<BloomCompositeChildPass>(childDesc);
+                    JE::Render::RPI::Ptr<BloomCompositeChildPass> childPass = passSystem->CreatePass<BloomCompositeChildPass>(childDesc);
 
                     CreateBinding(childPass.get(), static_cast<uint32_t>(mipLevel));
                     AddChild(childPass);
@@ -253,13 +253,13 @@ namespace AZ
             }
         }
 
-        RPI::Ptr<BloomCompositeChildPass> BloomCompositeChildPass::Create(const RPI::PassDescriptor& descriptor)
+        JE::Render::RPI::Ptr<BloomCompositeChildPass> BloomCompositeChildPass::Create(const JE::Render::RPI::PassDescriptor& descriptor)
         {
-            RPI::Ptr<BloomCompositeChildPass> pass = aznew BloomCompositeChildPass(descriptor);
+            JE::Render::RPI::Ptr<BloomCompositeChildPass> pass = aznew BloomCompositeChildPass(descriptor);
             return pass;
         }
 
-        BloomCompositeChildPass::BloomCompositeChildPass(const RPI::PassDescriptor& descriptor)
+        BloomCompositeChildPass::BloomCompositeChildPass(const JE::Render::RPI::PassDescriptor& descriptor)
             : ComputePass(descriptor)
         { }
 

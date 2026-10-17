@@ -20,9 +20,9 @@
 #include <TerrainRenderer/TerrainAreaMaterialRequestBus.h>
 #include <TerrainRenderer/Vector2i.h>
 
-#include <Atom/RPI.Public/Material/Material.h>
-#include <Atom/RPI.Public/Image/AttachmentImage.h>
-#include <Atom/RPI.Reflect/Image/Image.h>
+#include <JE/Render/RPI/Public/Material/Material.h>
+#include <JE/Render/RPI/Public/Image/AttachmentImage.h>
+#include <JE/Render/RPI/Reflect/Image/Image.h>
 #include <Atom/Feature/Utils/IndexedDataVector.h>
 #include <Atom/Feature/Utils/SparseVector.h>
 #include <Atom/Feature/Utils/GpuBufferHandler.h>
@@ -56,19 +56,19 @@ namespace Terrain
         ~TerrainDetailMaterialManager() = default;
         
         void Initialize(
-            const AZ::Data::Instance<AZ::RPI::ShaderResourceGroup>& terrainSrg,
-            const AZ::Data::Instance<AZ::RPI::Material>& materialInstance);
+            const AZ::Data::Instance<JE::Render::RPI::ShaderResourceGroup>& terrainSrg,
+            const AZ::Data::Instance<JE::Render::RPI::Material>& materialInstance);
         bool IsInitialized() const;
         void Reset();
-        bool UpdateSrgIndices(const AZ::Data::Instance<AZ::RPI::ShaderResourceGroup>& srg);
+        bool UpdateSrgIndices(const AZ::Data::Instance<JE::Render::RPI::ShaderResourceGroup>& srg);
 
-        void Update(const AZ::Vector3& cameraPosition, AZ::Data::Instance<AZ::RPI::ShaderResourceGroup>& terrainSrg);
+        void Update(const AZ::Vector3& cameraPosition, AZ::Data::Instance<JE::Render::RPI::ShaderResourceGroup>& terrainSrg);
 
         void SetDetailMaterialConfiguration(const DetailMaterialConfiguration& params);
 
     private:
         
-        using MaterialInstance = AZ::Data::Instance<AZ::RPI::Material>;
+        using MaterialInstance = AZ::Data::Instance<JE::Render::RPI::Material>;
         static constexpr auto InvalidImageIndex = AZStd::numeric_limits<uint32_t>::max();
 
         enum DetailTextureFlags : uint32_t
@@ -146,13 +146,13 @@ namespace Terrain
             uint32_t m_refCount = 0;
             uint16_t m_detailMaterialBufferIndex{ 0xFFFF };
 
-            AZ::Data::Instance<AZ::RPI::Image> m_colorImage;
-            AZ::Data::Instance<AZ::RPI::Image> m_normalImage;
-            AZ::Data::Instance<AZ::RPI::Image> m_roughnessImage;
-            AZ::Data::Instance<AZ::RPI::Image> m_metalnessImage;
-            AZ::Data::Instance<AZ::RPI::Image> m_specularF0Image;
-            AZ::Data::Instance<AZ::RPI::Image> m_occlusionImage;
-            AZ::Data::Instance<AZ::RPI::Image> m_heightImage;
+            AZ::Data::Instance<JE::Render::RPI::Image> m_colorImage;
+            AZ::Data::Instance<JE::Render::RPI::Image> m_normalImage;
+            AZ::Data::Instance<JE::Render::RPI::Image> m_roughnessImage;
+            AZ::Data::Instance<JE::Render::RPI::Image> m_metalnessImage;
+            AZ::Data::Instance<JE::Render::RPI::Image> m_specularF0Image;
+            AZ::Data::Instance<JE::Render::RPI::Image> m_occlusionImage;
+            AZ::Data::Instance<JE::Render::RPI::Image> m_heightImage;
         };
 
         struct DetailMaterialSurface
@@ -185,9 +185,9 @@ namespace Terrain
         void OnTerrainDataChanged(const AZ::Aabb& dirtyRegion, TerrainDataChangedMask dataChangedMask) override;
         
         // TerrainAreaMaterialNotificationBus overrides...
-        void OnTerrainDefaultSurfaceMaterialCreated(AZ::EntityId entityId, AZ::Data::Instance<AZ::RPI::Material> material) override;
+        void OnTerrainDefaultSurfaceMaterialCreated(AZ::EntityId entityId, AZ::Data::Instance<JE::Render::RPI::Material> material) override;
         void OnTerrainDefaultSurfaceMaterialDestroyed(AZ::EntityId entityId) override;
-        void OnTerrainDefaultSurfaceMaterialChanged(AZ::EntityId entityId, AZ::Data::Instance<AZ::RPI::Material> newMaterial) override;
+        void OnTerrainDefaultSurfaceMaterialChanged(AZ::EntityId entityId, AZ::Data::Instance<JE::Render::RPI::Material> newMaterial) override;
         void OnTerrainSurfaceMaterialMappingCreated(AZ::EntityId entityId, SurfaceData::SurfaceTag surfaceTag, MaterialInstance material) override;
         void OnTerrainSurfaceMaterialMappingDestroyed(AZ::EntityId entityId, SurfaceData::SurfaceTag surfaceTag) override;
         void OnTerrainSurfaceMaterialMappingMaterialChanged(AZ::EntityId entityId, SurfaceData::SurfaceTag surfaceTag, MaterialInstance material) override;
@@ -237,8 +237,8 @@ namespace Terrain
 
         DetailMaterialConfiguration m_config;
 
-        AZ::Data::Instance<AZ::RPI::AttachmentImage> m_detailTextureImage;
-        AZ::Data::Instance<AZ::RPI::Material> m_terrainMaterial;
+        AZ::Data::Instance<JE::Render::RPI::AttachmentImage> m_detailTextureImage;
+        AZ::Data::Instance<JE::Render::RPI::Material> m_terrainMaterial;
 
         DetailMaterialContainer m_detailMaterials;
         AZ::Render::IndexedDataVector<DetailMaterialListRegion> m_detailMaterialRegions;

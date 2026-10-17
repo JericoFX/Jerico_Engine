@@ -33,7 +33,7 @@
 #include <EMotionFX/Source/TransformData.h>
 #include <EMotionFX/Source/AttachmentNode.h>
 
-#include <Atom/RPI.Reflect/Model/ModelAsset.h>
+#include <JE/Render/RPI/Reflect/Model/ModelAsset.h>
 
 namespace EMotionFX
 {

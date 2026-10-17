@@ -11,8 +11,8 @@
 #include <JE/Render/Materials/Base.h>
 
 #include <Atom/Feature/Mesh/MeshFeatureProcessorInterface.h>
-#include <Atom/RPI.Public/Material/Material.h>
-#include <Atom/RPI.Public/Model/Model.h>
+#include <JE/Render/RPI/Public/Material/Material.h>
+#include <JE/Render/RPI/Public/Model/Model.h>
 #include <JE/Render/Materials/MaterialAssignmentId.h>
 #include <AzCore/Asset/AssetManagerBus.h>
 #include <AzCore/std/containers/unordered_map.h>
@@ -33,9 +33,9 @@ namespace JE
 
             MaterialAssignment(const AZ::Data::AssetId& materialAssetId);
 
-            MaterialAssignment(const AZ::Data::Asset<AZ::RPI::MaterialAsset>& asset);
+            MaterialAssignment(const AZ::Data::Asset<JE::Render::RPI::MaterialAsset>& asset);
 
-            MaterialAssignment(const AZ::Data::Asset<AZ::RPI::MaterialAsset>& asset, const AZ::Data::Instance<AZ::RPI::Material>& instance);
+            MaterialAssignment(const AZ::Data::Asset<JE::Render::RPI::MaterialAsset>& asset, const AZ::Data::Instance<JE::Render::RPI::Material>& instance);
 
             //! Recreates the material instance from the asset if it has been loaded.
             //! If amy property overrides have been specified then a unique instance will be created.
@@ -54,11 +54,11 @@ namespace JE
             //! Returns a string composed of the asset path.
             AZStd::string ToString() const;
 
-            AZ::Data::Asset<AZ::RPI::MaterialAsset> m_materialAsset;
-            AZ::Data::Asset<AZ::RPI::MaterialAsset> m_defaultMaterialAsset;
-            AZ::Data::Instance<AZ::RPI::Material> m_materialInstance;
+            AZ::Data::Asset<JE::Render::RPI::MaterialAsset> m_materialAsset;
+            AZ::Data::Asset<JE::Render::RPI::MaterialAsset> m_defaultMaterialAsset;
+            AZ::Data::Instance<JE::Render::RPI::Material> m_materialInstance;
             MaterialPropertyOverrideMap m_propertyOverrides;
-            AZ::RPI::MaterialModelUvOverrideMap m_matModUvOverrides;
+            JE::Render::RPI::MaterialModelUvOverrideMap m_matModUvOverrides;
             bool m_materialInstancePreCreated = false;
             bool m_materialInstanceMustBeUnique = false;
         };
@@ -78,20 +78,20 @@ namespace JE
             const MaterialAssignmentMap& materials, const MaterialAssignmentId& id);
 
         //! Utility function for generating a set of available material assignments in a model
-        JE_RENDER_MATERIALS_API MaterialAssignmentMap GetDefaultMaterialMapFromModelAsset(const AZ::Data::Asset<AZ::RPI::ModelAsset> modelAsset);
+        JE_RENDER_MATERIALS_API MaterialAssignmentMap GetDefaultMaterialMapFromModelAsset(const AZ::Data::Asset<JE::Render::RPI::ModelAsset> modelAsset);
 
         //! Get material slot labels from a model
-        JE_RENDER_MATERIALS_API MaterialAssignmentLabelMap GetMaterialSlotLabelsFromModelAsset(const AZ::Data::Asset<AZ::RPI::ModelAsset> modelAsset);
+        JE_RENDER_MATERIALS_API MaterialAssignmentLabelMap GetMaterialSlotLabelsFromModelAsset(const AZ::Data::Asset<JE::Render::RPI::ModelAsset> modelAsset);
 
         //! Find an assignment id corresponding to the lod and label substring filters
         JE_RENDER_MATERIALS_API MaterialAssignmentId GetMaterialSlotIdFromModelAsset(
-            const AZ::Data::Asset<AZ::RPI::ModelAsset> modelAsset,
+            const AZ::Data::Asset<JE::Render::RPI::ModelAsset> modelAsset,
             const MaterialAssignmentLodIndex lodFilter,
             const AZStd::string& labelFilter);
 
         //! Special case handling to convert script values to supported types
-        JE_RENDER_MATERIALS_API AZ::RPI::MaterialPropertyValue ConvertMaterialPropertyValueFromScript(
-            const AZ::RPI::MaterialPropertyDescriptor* propertyDescriptor, const AZStd::any& value);
+        JE_RENDER_MATERIALS_API JE::Render::RPI::MaterialPropertyValue ConvertMaterialPropertyValueFromScript(
+            const JE::Render::RPI::MaterialPropertyDescriptor* propertyDescriptor, const AZStd::any& value);
 
         //! Converting material assignment map to a mesh feature processor custom material map
         JE_RENDER_MATERIALS_API AZ::Render::CustomMaterialMap ConvertToCustomMaterialMap(const JE::Render::MaterialAssignmentMap& materials);

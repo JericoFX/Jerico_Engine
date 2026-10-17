@@ -14,39 +14,39 @@
 #include <Atom/RHI/Factory.h>
 #include <Atom/RHI/FrameScheduler.h>
 
-#include <Atom/RPI.Reflect/Pass/PassTemplate.h>
+#include <JE/Render/RPI/Reflect/Pass/PassTemplate.h>
 
-#include <Atom/RPI.Public/Pass/PassUtils.h>
-#include <Atom/RPI.Public/Pass/PassAttachment.h>
-#include <Atom/RPI.Public/RPIUtils.h>
-#include <Atom/RPI.Public/RenderPipeline.h>
-#include <Atom/RPI.Public/View.h>
-#include <Atom/RPI.Public/RPISystemInterface.h>
-#include <Atom/RPI.Public/Shader/ShaderResourceGroup.h>
-#include <Atom/RPI.Public/Scene.h>
+#include <JE/Render/RPI/Public/Pass/PassUtils.h>
+#include <JE/Render/RPI/Public/Pass/PassAttachment.h>
+#include <JE/Render/RPI/Public/RPIUtils.h>
+#include <JE/Render/RPI/Public/RenderPipeline.h>
+#include <JE/Render/RPI/Public/View.h>
+#include <JE/Render/RPI/Public/RPISystemInterface.h>
+#include <JE/Render/RPI/Public/Shader/ShaderResourceGroup.h>
+#include <JE/Render/RPI/Public/Scene.h>
 
-#include <Atom/RPI.Public/Image/AttachmentImagePool.h>
-#include <Atom/RPI.Public/Image/ImageSystemInterface.h>
+#include <JE/Render/RPI/Public/Image/AttachmentImagePool.h>
+#include <JE/Render/RPI/Public/Image/ImageSystemInterface.h>
 
 
 namespace AZ
 {
     namespace Render
     {
-        RPI::Ptr<BloomDownsamplePass> BloomDownsamplePass::Create(const RPI::PassDescriptor& descriptor)
+        JE::Render::RPI::Ptr<BloomDownsamplePass> BloomDownsamplePass::Create(const JE::Render::RPI::PassDescriptor& descriptor)
         {
-            RPI::Ptr<BloomDownsamplePass> pass = aznew BloomDownsamplePass(descriptor);
+            JE::Render::RPI::Ptr<BloomDownsamplePass> pass = aznew BloomDownsamplePass(descriptor);
             return pass;
         }
 
-        BloomDownsamplePass::BloomDownsamplePass(const RPI::PassDescriptor& descriptor)
+        BloomDownsamplePass::BloomDownsamplePass(const JE::Render::RPI::PassDescriptor& descriptor)
             : ComputePass(descriptor)
         { }
 
         void BloomDownsamplePass::BuildOutAttachmentBinding()
         {
-            RPI::Ptr<RPI::PassAttachment> outAttachment = m_ownedAttachments[0];
-            RPI::PassAttachmentBinding* outAttachmentBinding = FindAttachmentBinding(AZ::Name("Output"));
+            JE::Render::RPI::Ptr<JE::Render::RPI::PassAttachment> outAttachment = m_ownedAttachments[0];
+            JE::Render::RPI::PassAttachmentBinding* outAttachmentBinding = FindAttachmentBinding(AZ::Name("Output"));
             if (outAttachmentBinding)
             {
                 // We use the owned attachment as mip level 0, because we can't have overlapping attachments
@@ -64,10 +64,10 @@ namespace AZ
                 // Create bindings
 
                 // Set pass slot
-                RPI::PassAttachmentBinding outBinding;
+                JE::Render::RPI::PassAttachmentBinding outBinding;
                 outBinding.m_name = Name{ AZStd::string::format("Downsampled%d", i) };
                 outBinding.m_shaderInputName = Name{ AZStd::string::format("m_targetMipLevel%d", i) };
-                outBinding.m_slotType = RPI::PassSlotType::Output;
+                outBinding.m_slotType = JE::Render::RPI::PassSlotType::Output;
                 outBinding.m_scopeAttachmentUsage = RHI::ScopeAttachmentUsage::Shader;
 
                 // Set image view descriptor
@@ -102,9 +102,9 @@ namespace AZ
 
         void BloomDownsamplePass::FrameBeginInternal(FramePrepareParams params)
         {
-            RPI::Scene* scene = GetScene();
+            JE::Render::RPI::Scene* scene = GetScene();
             PostProcessFeatureProcessor* fp = scene->GetFeatureProcessor<PostProcessFeatureProcessor>();
-            RPI::ViewPtr view = m_pipeline->GetFirstView(GetPipelineViewTag());
+            JE::Render::RPI::ViewPtr view = m_pipeline->GetFirstView(GetPipelineViewTag());
             if (fp)
             {
                 PostProcessSettings* postProcessSettings = fp->GetLevelSettingsFromView(view);
@@ -121,7 +121,7 @@ namespace AZ
             }
 
             RHI::Size sourceImageSize;
-            RPI::PassAttachment* inputAttachment = GetInputBinding(0).GetAttachment().get();
+            JE::Render::RPI::PassAttachment* inputAttachment = GetInputBinding(0).GetAttachment().get();
             sourceImageSize = inputAttachment->m_descriptor.m_image.m_size;
 
             // Update shader constant

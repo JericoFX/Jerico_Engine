@@ -13,7 +13,7 @@
 #include <AzFramework/Asset/AssetCatalogBus.h>
 #include <AzToolsFramework/Thumbnails/Thumbnail.h>
 #include <AzToolsFramework/Thumbnails/ThumbnailerBus.h>
-#include <Atom/RPI.Reflect/Material/MaterialAsset.h>
+#include <JE/Render/RPI/Reflect/Material/MaterialAsset.h>
 
 namespace OpenParticleSystem
 {
@@ -56,7 +56,7 @@ namespace OpenParticleSystem
             bool IsSupportedThumbnail(AzToolsFramework::Thumbnailer::SharedThumbnailKey key) const override;
 
         private:
-            bool IsSupportedMaterial(const AZ::Data::Asset<AZ::RPI::MaterialAsset>& materialAsset) const;
+            bool IsSupportedMaterial(const AZ::Data::Asset<JE::Render::RPI::MaterialAsset>& materialAsset) const;
         };
     } // namespace Thumbnails
 } // namespace OpenParticleSystem

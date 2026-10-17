@@ -8,7 +8,7 @@
 
 #pragma once
 
-#include <Atom/RPI.Reflect/Image/Image.h>
+#include <JE/Render/RPI/Reflect/Image/Image.h>
 #include <AzCore/Instance/Instance.h>
 #include <AzCore/Math/Color.h>
 #include <AzCore/Math/Vector2.h>
@@ -103,7 +103,7 @@ public:
     }
 
 private:
-    AZ::Data::Instance<AZ::RPI::Image> m_image;
+    AZ::Data::Instance<JE::Render::RPI::Image> m_image;
     bool m_applyDpiScaleFactorToSize = true;
 
     static float m_dpiScaleFactor;

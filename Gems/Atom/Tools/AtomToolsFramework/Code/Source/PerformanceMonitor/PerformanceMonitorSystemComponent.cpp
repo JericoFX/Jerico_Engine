@@ -7,8 +7,8 @@
  */
 
 #include <Atom/RHI/RHISystemInterface.h>
-#include <Atom/RPI.Public/Pass/ParentPass.h>
-#include <Atom/RPI.Public/Pass/PassSystemInterface.h>
+#include <JE/Render/RPI/Public/Pass/ParentPass.h>
+#include <JE/Render/RPI/Public/Pass/PassSystemInterface.h>
 #include <AzCore/Serialization/SerializeContext.h>
 #include <PerformanceMonitor/PerformanceMonitorSystemComponent.h>
 
@@ -64,10 +64,10 @@ namespace AtomToolsFramework
             m_cpuFrameTimeMs.PushSample(frameTime);
         }
 
-        AZ::RHI::Ptr<AZ::RPI::ParentPass> rootPass = AZ::RPI::PassSystemInterface::Get()->GetRootPass();
+        AZ::RHI::Ptr<JE::Render::RPI::ParentPass> rootPass = JE::Render::RPI::PassSystemInterface::Get()->GetRootPass();
         if (rootPass)
         {
-            AZ::RPI::TimestampResult timestampResult = rootPass->GetLatestTimestampResult();
+            JE::Render::RPI::TimestampResult timestampResult = rootPass->GetLatestTimestampResult();
             double gpuFrameTimeMs = aznumeric_cast<double>(timestampResult.GetDurationInNanoseconds()) / 1000000;
             m_gpuFrameTimeMs.PushSample(gpuFrameTimeMs);
         }
@@ -80,7 +80,7 @@ namespace AtomToolsFramework
             return;
         }
 
-        AZ::RHI::Ptr<AZ::RPI::ParentPass> rootPass = AZ::RPI::PassSystemInterface::Get()->GetRootPass();
+        AZ::RHI::Ptr<JE::Render::RPI::ParentPass> rootPass = JE::Render::RPI::PassSystemInterface::Get()->GetRootPass();
         if (rootPass)
         {
             rootPass->SetTimestampQueryEnabled(enabled);

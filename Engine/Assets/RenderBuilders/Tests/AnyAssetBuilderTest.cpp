@@ -16,8 +16,8 @@
 
 #include <AzCore/Serialization/Json/JsonUtils.h>
 
-#include <Atom/RPI.Edit/Common/ConvertibleSource.h>
-#include <Atom/RPI.Reflect/System/AnyAsset.h>
+#include <JE/Editor/Render/RPI/Edit/Common/ConvertibleSource.h>
+#include <JE/Render/RPI/Reflect/System/AnyAsset.h>
 
 #include <Common/AnyAssetBuilder.h>
 
@@ -52,7 +52,7 @@ namespace UnitTest
 
     // Test class with convertible source
     class Test2Source :
-        public AZ::RPI::ConvertibleSource
+        public JE::Render::RPI::ConvertibleSource
     {
     public:
         AZ_TYPE_INFO(Test2Source, "{D472B405-F688-4EAF-A361-D8D1C63E303D}");
@@ -62,7 +62,7 @@ namespace UnitTest
         {
             if (auto* serializeContext = azrtti_cast<AZ::SerializeContext*>(context))
             {
-                serializeContext->Class<Test2Source, AZ::RPI::ConvertibleSource>()
+                serializeContext->Class<Test2Source, JE::Render::RPI::ConvertibleSource>()
                     ->Version(1)
                     ;
             }
@@ -198,7 +198,7 @@ namespace UnitTest
     {
     protected:
 
-        AZ::RPI::AnyAssetHandler* m_assetHandler;
+        JE::Render::RPI::AnyAssetHandler* m_assetHandler;
 
         void SetUp() override
         {
@@ -209,7 +209,7 @@ namespace UnitTest
             TestAssetIdReference::Reflect(m_context.get());
             DerivedTestAssetIdReference::Reflect(m_context.get());
             TestIndirectAssetIdReference::Reflect(m_context.get());
-            m_assetHandler = new AZ::RPI::AnyAssetHandler();
+            m_assetHandler = new JE::Render::RPI::AnyAssetHandler();
             m_assetHandler->m_serializeContext = m_context.get();
             m_assetHandler->Register();
         }
@@ -288,7 +288,7 @@ namespace UnitTest
 
         // verify input and output data are same
         auto outAsset = LoadAssetFromFile(response.m_outputProducts[0].m_productFileName.c_str());
-        auto outTest1 = static_cast<AZ::RPI::AnyAsset*>(outAsset.GetData())->GetDataAs<Test1>();
+        auto outTest1 = static_cast<JE::Render::RPI::AnyAsset*>(outAsset.GetData())->GetDataAs<Test1>();
         EXPECT_TRUE(test1.m_data == outTest1->m_data);
     }
 
@@ -315,7 +315,7 @@ namespace UnitTest
         EXPECT_TRUE(response.m_resultCode == AssetBuilderSDK::ProcessJobResult_Success);
 
         auto outAsset = LoadAssetFromFile(response.m_outputProducts[0].m_productFileName.c_str());
-        auto outTest2 = static_cast<AZ::RPI::AnyAsset*>(outAsset.GetData())->GetDataAs<Test1>();
+        auto outTest2 = static_cast<JE::Render::RPI::AnyAsset*>(outAsset.GetData())->GetDataAs<Test1>();
         EXPECT_TRUE(outTest2 != nullptr);
         EXPECT_TRUE(outTest2->m_isConverted);
     }
@@ -344,7 +344,7 @@ namespace UnitTest
         EXPECT_TRUE(response.m_resultCode == AssetBuilderSDK::ProcessJobResult_Success);
 
         auto outAsset = LoadAssetFromFile(response.m_outputProducts[0].m_productFileName.c_str());
-        auto outTest3 = static_cast<AZ::RPI::AnyAsset*>(outAsset.GetData())->GetDataAs<TestAssetIdReference>();
+        auto outTest3 = static_cast<JE::Render::RPI::AnyAsset*>(outAsset.GetData())->GetDataAs<TestAssetIdReference>();
         EXPECT_TRUE(outTest3 != nullptr);
         EXPECT_TRUE(response.m_outputProducts[0].m_dependencies.size() == objectHasAssetIds.s_uniqueAssetIdCount);
     }
@@ -373,7 +373,7 @@ namespace UnitTest
         EXPECT_TRUE(response.m_resultCode == AssetBuilderSDK::ProcessJobResult_Success);
 
         auto outAsset = LoadAssetFromFile(response.m_outputProducts[0].m_productFileName.c_str());
-        auto outTest4 = static_cast<AZ::RPI::AnyAsset*>(outAsset.GetData())->GetDataAs<TestIndirectAssetIdReference>();
+        auto outTest4 = static_cast<JE::Render::RPI::AnyAsset*>(outAsset.GetData())->GetDataAs<TestIndirectAssetIdReference>();
         EXPECT_TRUE(outTest4 != nullptr);
         EXPECT_TRUE(response.m_outputProducts[0].m_dependencies.size() == test4.s_uniqueAssetIdCount);
     }

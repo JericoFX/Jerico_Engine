@@ -14,18 +14,23 @@
 #include <Atom/RHI/FreeListAllocator.h>
 #include <Atom/RHI.Reflect/Format.h>
 
-#include <Atom/RPI.Public/Shader/ShaderResourceGroup.h>
+#include <JE/Render/RPI/Public/Shader/ShaderResourceGroup.h>
 
 // Hair specific
 #include <Rendering/HairSharedBufferInterface.h>
 
 namespace AZ
 {
-    namespace RPI
-    {
+    }
+
+namespace JE::Render::RPI
+{
         class BufferAsset;
         class Buffer;
     }
+
+namespace AZ
+{
 
     namespace Render
     {
@@ -36,7 +41,7 @@ namespace AZ
         struct SrgBufferDescriptor
         {
             //! Pool type to determine how a resource pool should be generated.
-            RPI::CommonBufferPoolType m_poolType;
+            JE::Render::RPI::CommonBufferPoolType m_poolType;
             //! The format used for the buffer
             //! Should be Unknown for structured buffers, or R32 for raw buffers.
             RHI::Format m_elementFormat;
@@ -56,7 +61,7 @@ namespace AZ
 
             SrgBufferDescriptor() = default;
             SrgBufferDescriptor(
-                RPI::CommonBufferPoolType poolType,
+                JE::Render::RPI::CommonBufferPoolType poolType,
                 RHI::Format elementFormat,
                 uint32_t elementSize,
                 uint32_t elementCount,
@@ -97,9 +102,9 @@ namespace AZ
             AZStd::intrusive_ptr<HairSharedBufferAllocation> Allocate(size_t byteCount) override;
             void DeAllocate(RHI::VirtualAddress allocation) override;
             void DeAllocateNoSignal(RHI::VirtualAddress allocation) override;
-            Data::Asset<RPI::BufferAsset> GetBufferAsset() const override;
+            Data::Asset<JE::Render::RPI::BufferAsset> GetBufferAsset() const override;
 
-            Data::Instance<RPI::Buffer> GetBuffer() override;
+            Data::Instance<JE::Render::RPI::Buffer> GetBuffer() override;
 
             //! Update buffer's content with sourceData at an offset of bufferByteOffset
             bool UpdateData(const void* sourceData, uint64_t sourceDataSizeInBytes, uint64_t bufferByteOffset = 0) override;
@@ -123,9 +128,9 @@ namespace AZ
 
 
             AZStd::string m_bufferName = "GenericSharedBuffer";
-            Data::Asset<AZ::RPI::ResourcePoolAsset> m_bufferPoolAsset;
-            Data::Instance<RPI::Buffer> m_buffer = nullptr;
-            Data::Asset<RPI::BufferAsset> m_bufferAsset = {};
+            Data::Asset<JE::Render::RPI::ResourcePoolAsset> m_bufferPoolAsset;
+            Data::Instance<JE::Render::RPI::Buffer> m_buffer = nullptr;
+            Data::Asset<JE::Render::RPI::BufferAsset> m_bufferAsset = {};
 
             RHI::FreeListAllocator m_freeListAllocator;
             AZStd::mutex m_allocatorMutex;

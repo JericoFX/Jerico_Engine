@@ -9,7 +9,7 @@
 #include <CryCommon/IConsole.h>
 #include <SkinnedMesh/SkinnedMeshDebugDisplay.h>
 #include <Atom/Feature/SkinnedMesh/SkinnedMeshStatsBus.h>
-#include <Atom/RPI.Public/Scene.h>
+#include <JE/Render/RPI/Public/Scene.h>
 #include <AzFramework/Scene/SceneSystemInterface.h>
 
 #include <AzToolsFramework/Entity/EditorEntityContextBus.h>
@@ -95,7 +95,7 @@ namespace AZ
             }
         }
 
-        void SkinnedMeshDebugDisplay::OnBootstrapSceneReady(AZ::RPI::Scene* bootstrapScene)
+        void SkinnedMeshDebugDisplay::OnBootstrapSceneReady(JE::Render::RPI::Scene* bootstrapScene)
         {
             m_sceneId = bootstrapScene->GetId();
         }

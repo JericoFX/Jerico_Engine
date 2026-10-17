@@ -10,11 +10,11 @@
 #include <SkinnedMesh/SkinnedMeshOutputStreamManager.h>
 #include <SkinnedMesh/SkinnedMeshFeatureProcessor.h>
 
-#include <Atom/RPI.Public/Shader/ShaderResourceGroup.h>
-#include <Atom/RPI.Public/Shader/Shader.h>
-#include <Atom/RPI.Public/Model/ModelLod.h>
-#include <Atom/RPI.Public/Buffer/Buffer.h>
-#include <Atom/RPI.Public/RPIUtils.h>
+#include <JE/Render/RPI/Public/Shader/ShaderResourceGroup.h>
+#include <JE/Render/RPI/Public/Shader/Shader.h>
+#include <JE/Render/RPI/Public/Model/ModelLod.h>
+#include <JE/Render/RPI/Public/Buffer/Buffer.h>
+#include <JE/Render/RPI/Public/RPIUtils.h>
 
 #include <Atom/RHI/Factory.h>
 #include <Atom/RHI/DeviceBufferView.h>
@@ -31,7 +31,7 @@ namespace AZ
             uint32_t positionHistoryOutputBufferOffsetInBytes,
             uint32_t lodIndex,
             uint32_t meshIndex,
-            Data::Instance<RPI::Buffer> boneTransforms,
+            Data::Instance<JE::Render::RPI::Buffer> boneTransforms,
             const SkinnedMeshShaderOptions& shaderOptions,
             SkinnedMeshFeatureProcessor* skinnedMeshFeatureProcessor,
             MorphTargetInstanceMetaData morphTargetInstanceMetaData,
@@ -74,7 +74,7 @@ namespace AZ
 
             // Get the shader variant and instance SRG
             m_shaderOptionGroup.SetUnspecifiedToDefaultValues();
-            const RPI::ShaderVariant& shaderVariant = m_skinningShader->GetVariant(m_shaderOptionGroup.GetShaderVariantId());
+            const JE::Render::RPI::ShaderVariant& shaderVariant = m_skinningShader->GetVariant(m_shaderOptionGroup.GetShaderVariantId());
 
             RHI::PipelineStateDescriptorForDispatch pipelineStateDescriptor;
             shaderVariant.ConfigurePipelineState(pipelineStateDescriptor, m_shaderOptionGroup);
@@ -86,7 +86,7 @@ namespace AZ
                 return false;
             }
 
-            m_instanceSrg = RPI::ShaderResourceGroup::Create(m_skinningShader->GetAsset(), m_skinningShader->GetSupervariantIndex(), perInstanceSrgLayout->GetName());
+            m_instanceSrg = JE::Render::RPI::ShaderResourceGroup::Create(m_skinningShader->GetAsset(), m_skinningShader->GetSupervariantIndex(), perInstanceSrgLayout->GetName());
             if (!m_instanceSrg)
             {
                 AZ_Error("SkinnedMeshDispatchItem", false, "Failed to create shader resource group for skinned mesh");
@@ -208,7 +208,7 @@ namespace AZ
             m_dispatchItem.SetPipelineState(m_skinningShader->AcquirePipelineState(pipelineStateDescriptor));
 
             RHI::DispatchDirect arguments;
-            const auto outcome = RPI::GetComputeShaderNumThreads(m_skinningShader->GetAsset(), arguments);
+            const auto outcome = JE::Render::RPI::GetComputeShaderNumThreads(m_skinningShader->GetAsset(), arguments);
             if (!outcome.IsSuccess())
             {
                 AZ_Error("SkinnedMeshInputBuffers", false, outcome.GetError().c_str());
@@ -228,7 +228,7 @@ namespace AZ
             return m_dispatchItem;
         }
 
-        Data::Instance<RPI::Buffer> SkinnedMeshDispatchItem::GetBoneTransforms() const
+        Data::Instance<JE::Render::RPI::Buffer> SkinnedMeshDispatchItem::GetBoneTransforms() const
         {
             return m_boneTransforms;
         }

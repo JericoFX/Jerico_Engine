@@ -8,9 +8,9 @@
 
 #include <Atom/Feature/Material/FallbackPBRMaterial.h>
 #include <Atom/RHI.Reflect/Format.h>
-#include <Atom/RPI.Public/Image/ImageSystem.h>
-#include <Atom/RPI.Public/Image/StreamingImage.h>
-#include <Atom/RPI.Reflect/Asset/AssetUtils.h>
+#include <JE/Render/RPI/Public/Image/ImageSystem.h>
+#include <JE/Render/RPI/Public/Image/StreamingImage.h>
+#include <JE/Render/RPI/Reflect/Asset/AssetUtils.h>
 #include <AzCore/Name/NameDictionary.h>
 #include <AzCore/std/containers/array.h>
 #include <AzCore/std/parallel/scoped_lock.h>
@@ -80,12 +80,12 @@ namespace AZ::Render
 
         MaterialManager::MaterialManager()
             : m_materialDataBuffer{ "FallbackPBR::MaterialInfo",
-                                    RPI::CommonBufferPoolType::ReadOnly,
+                                    JE::Render::RPI::CommonBufferPoolType::ReadOnly,
                                     static_cast<uint32_t>(sizeof(GPU::MaterialInfo)) }
         {
         }
 
-        const Data::Instance<RPI::Buffer>& MaterialManager::GetFallbackPBRMaterialBuffer() const
+        const Data::Instance<JE::Render::RPI::Buffer>& MaterialManager::GetFallbackPBRMaterialBuffer() const
         {
             return m_materialDataBuffer.GetCurrentBuffer();
         }
@@ -110,7 +110,7 @@ namespace AZ::Render
 
         void MaterialManager::InitNullCubeMap()
         {
-            auto imageSystem = AZ::RPI::ImageSystemInterface::Get();
+            auto imageSystem = JE::Render::RPI::ImageSystemInterface::Get();
             AZ_Assert(imageSystem, "Can't access RPI::ImageSystem.");
             if (imageSystem)
             {
@@ -121,12 +121,12 @@ namespace AZ::Render
                 auto nullImageDesc = RHI::ImageDescriptor::CreateCubemap(bindFlags, 8, RHI::Format::R8G8B8A8_UNORM);
                 auto imageViewDesc = RHI::ImageViewDescriptor::CreateCubemap();
                 RHI::ClearValue nullImageClearValue = RHI::ClearValue::CreateVector4Uint(0, 0, 0, 1);
-                m_nullCubeMapTexture = AZ::RPI::AttachmentImage::Create(
+                m_nullCubeMapTexture = JE::Render::RPI::AttachmentImage::Create(
                     *pool.get(), nullImageDesc, AZ_NAME_LITERAL("ReflectionCubeMapNullTexture"), &nullImageClearValue, &imageViewDesc);
             }
         }
 
-        void MaterialManager::Activate(RPI::Scene* scene)
+        void MaterialManager::Activate(JE::Render::RPI::Scene* scene)
         {
             if (auto* console = AZ::Interface<AZ::IConsole>::Get(); console != nullptr)
             {
@@ -138,8 +138,8 @@ namespace AZ::Render
             UpdateFallbackPBRMaterialBuffer();
 
             // We need to register the buffer in the SceneSrg even if we are disabled
-            m_updateSceneSrgHandler = RPI::Scene::PrepareSceneSrgEvent::Handler(
-                [this](RPI::ShaderResourceGroup* sceneSrg)
+            m_updateSceneSrgHandler = JE::Render::RPI::Scene::PrepareSceneSrgEvent::Handler(
+                [this](JE::Render::RPI::ShaderResourceGroup* sceneSrg)
                 {
                     sceneSrg->SetBufferView(m_fallbackPBRMaterialIndex, GetFallbackPBRMaterialBuffer()->GetBufferView());
                     sceneSrg->SetConstant(m_nullCubeMapIndex, m_nullCubeMapTexture->GetImageView()->GetBindlessReadIndex());
@@ -206,7 +206,7 @@ namespace AZ::Render
 
             entry->m_objectId = modelData->GetObjectId();
             entry->m_material = material;
-            entry->m_materialChangeId = RPI::Material::DEFAULT_CHANGE_ID;
+            entry->m_materialChangeId = JE::Render::RPI::Material::DEFAULT_CHANGE_ID;
         }
 
         void MaterialManager::OnReleaseMeshInfoEntry(const MeshInfoHandle meshInfoHandle)

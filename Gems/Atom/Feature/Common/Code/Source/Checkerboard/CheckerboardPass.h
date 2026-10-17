@@ -8,7 +8,7 @@
 #pragma once
 
 #include <Atom/RHI.Reflect/Size.h>
-#include <Atom/RPI.Public/Pass/RasterPass.h>
+#include <JE/Render/RPI/Public/Pass/RasterPass.h>
 
 namespace AZ
 {
@@ -19,9 +19,9 @@ namespace AZ
         //! In this customized pass, it creates two imported attachment images to save last frame's color and depth buffer
         //! And it also shifts the viewport for the checkerboard pattern
         class CheckerboardPass final
-            : public RPI::RasterPass
+            : public JE::Render::RPI::RasterPass
         {
-            using Base = RPI::RasterPass;
+            using Base = JE::Render::RPI::RasterPass;
             AZ_RPI_PASS(CheckerboardPass);
       
         public:
@@ -29,9 +29,9 @@ namespace AZ
             AZ_CLASS_ALLOCATOR(CheckerboardPass, SystemAllocator);
 
             ~CheckerboardPass() = default;
-            static RPI::Ptr<CheckerboardPass> Create(const RPI::PassDescriptor& descriptor);
+            static JE::Render::RPI::Ptr<CheckerboardPass> Create(const JE::Render::RPI::PassDescriptor& descriptor);
 
-            Data::Instance<RPI::AttachmentImage> GetAttachmentImage(Name attachmentName, uint8_t frameOffset);
+            Data::Instance<JE::Render::RPI::AttachmentImage> GetAttachmentImage(Name attachmentName, uint8_t frameOffset);
 
         protected:
             // Pass overrides...
@@ -41,12 +41,12 @@ namespace AZ
 
         private:
             CheckerboardPass() = delete;
-            explicit CheckerboardPass(const RPI::PassDescriptor& descriptor);
+            explicit CheckerboardPass(const JE::Render::RPI::PassDescriptor& descriptor);
 
             // PassAttachment name to AttachmentImages mapping
             // Each pass output image attachment has two AttachmentImage.
             // One for last frame and one for current frame. They will be used in checkerboard resolve
-            AZStd::unordered_map<Name, AZStd::array<Data::Instance<RPI::AttachmentImage>, 2>> m_imageAttachments;
+            AZStd::unordered_map<Name, AZStd::array<Data::Instance<JE::Render::RPI::AttachmentImage>, 2>> m_imageAttachments;
             uint8_t m_frameOffset = 0;
         };
     } // namespace Render

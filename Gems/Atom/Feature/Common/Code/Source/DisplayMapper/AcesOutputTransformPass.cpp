@@ -9,14 +9,14 @@
 #include <DisplayMapper/AcesOutputTransformPass.h>
 #include <ACES/Aces.h>
 #include <Atom/Feature/ACES/AcesDisplayMapperFeatureProcessor.h>
-#include <Atom/RPI.Public/Pass/PassUtils.h>
-#include <Atom/RPI.Public/Pass/PassFactory.h>
-#include <Atom/RPI.Public/RenderPipeline.h>
-#include <Atom/RPI.Public/RPIUtils.h>
-#include <Atom/RPI.Public/View.h>
+#include <JE/Render/RPI/Public/Pass/PassUtils.h>
+#include <JE/Render/RPI/Public/Pass/PassFactory.h>
+#include <JE/Render/RPI/Public/RenderPipeline.h>
+#include <JE/Render/RPI/Public/RPIUtils.h>
+#include <JE/Render/RPI/Public/View.h>
 
-#include <Atom/RPI.Reflect/Pass/PassTemplate.h>
-#include <Atom/RPI.Reflect/Shader/ShaderAsset.h>
+#include <JE/Render/RPI/Reflect/Pass/PassTemplate.h>
+#include <JE/Render/RPI/Reflect/Shader/ShaderAsset.h>
 
 #include <Atom/RHI/Factory.h>
 #include <Atom/RHI/FrameScheduler.h>
@@ -29,13 +29,13 @@ namespace AZ
 {
     namespace Render
     {
-        RPI::Ptr<AcesOutputTransformPass> AcesOutputTransformPass::Create(const RPI::PassDescriptor& descriptor)
+        JE::Render::RPI::Ptr<AcesOutputTransformPass> AcesOutputTransformPass::Create(const JE::Render::RPI::PassDescriptor& descriptor)
         {
-            RPI::Ptr<AcesOutputTransformPass> pass = aznew AcesOutputTransformPass(descriptor);
+            JE::Render::RPI::Ptr<AcesOutputTransformPass> pass = aznew AcesOutputTransformPass(descriptor);
             return pass;
         }
 
-        AcesOutputTransformPass::AcesOutputTransformPass(const RPI::PassDescriptor& descriptor)
+        AcesOutputTransformPass::AcesOutputTransformPass(const JE::Render::RPI::PassDescriptor& descriptor)
             : DisplayMapperFullScreenPass(descriptor)
         {
         }

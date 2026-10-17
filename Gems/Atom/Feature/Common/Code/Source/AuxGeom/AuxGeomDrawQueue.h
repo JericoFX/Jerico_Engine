@@ -8,22 +8,27 @@
 
 #pragma once
 
-#include <Atom/RPI.Public/AuxGeom/AuxGeomDraw.h>
+#include <JE/Render/RPI/Public/AuxGeom/AuxGeomDraw.h>
 #include <AzCore/std/containers/vector.h>
 #include <AzCore/Memory/SystemAllocator.h>
 #include <AzCore/Math/Transform.h>
 
-#include <Atom/RPI.Public/Base.h>
+#include <JE/Render/RPI/Public/Base.h>
 
 #include "AuxGeomBase.h"
 
 namespace AZ
 {
-    namespace RPI
-    {
+    }
+
+namespace JE::Render::RPI
+{
         class Scene;
         class View;
     }
+
+namespace AZ
+{
 
     namespace Render
     {
@@ -33,7 +38,7 @@ namespace AZ
          * This acts somewhat like a render proxy in that it stores data that is consumed by the feature processor.
          */
         class AuxGeomDrawQueue final
-            : public RPI::AuxGeomDraw
+            : public JE::Render::RPI::AuxGeomDraw
         {
         public: // functions
 

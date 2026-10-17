@@ -9,26 +9,26 @@
 #include <CoreLights/ProjectedShadowmapsPass.h>
 #include <Atom/RHI/DrawListTagRegistry.h>
 #include <Atom/RHI/RHISystemInterface.h>
-#include <Atom/RPI.Public/Image/ImageSystemInterface.h>
-#include <Atom/RPI.Public/Pass/PassUtils.h>
-#include <Atom/RPI.Reflect/Pass/RasterPassData.h>
+#include <JE/Render/RPI/Public/Image/ImageSystemInterface.h>
+#include <JE/Render/RPI/Public/Pass/PassUtils.h>
+#include <JE/Render/RPI/Reflect/Pass/RasterPassData.h>
 
 namespace AZ
 {
     namespace Render
     {
-        RPI::Ptr<ProjectedShadowmapsPass> ProjectedShadowmapsPass::Create(const RPI::PassDescriptor& descriptor)
+        JE::Render::RPI::Ptr<ProjectedShadowmapsPass> ProjectedShadowmapsPass::Create(const JE::Render::RPI::PassDescriptor& descriptor)
         {
             return aznew ProjectedShadowmapsPass(descriptor);
         }
 
-        ProjectedShadowmapsPass::ProjectedShadowmapsPass(const RPI::PassDescriptor& descriptor)
+        ProjectedShadowmapsPass::ProjectedShadowmapsPass(const JE::Render::RPI::PassDescriptor& descriptor)
             : Base(descriptor)
         {
             // Pass has it's own logic for managing children, forgo ParentPass logic
             m_flags.m_createChildren = false;
 
-            const RPI::RasterPassData* passData = RPI::PassUtils::GetPassData<RPI::RasterPassData>(descriptor);
+            const JE::Render::RPI::RasterPassData* passData = JE::Render::RPI::PassUtils::GetPassData<JE::Render::RPI::RasterPassData>(descriptor);
             if (passData)
             {
                 auto* rhiSystem = RHI::RHISystemInterface::Get();
@@ -51,12 +51,12 @@ namespace AZ
             return m_drawListTag;
         }
 
-        const RPI::PipelineViewTag& ProjectedShadowmapsPass::GetPipelineViewTag() const
+        const JE::Render::RPI::PipelineViewTag& ProjectedShadowmapsPass::GetPipelineViewTag() const
         {
             return m_pipelineViewTag;
         }
 
-        void ProjectedShadowmapsPass::SetAtlasAttachmentImage(Data::Instance<RPI::AttachmentImage> atlasAttachmentIamge)
+        void ProjectedShadowmapsPass::SetAtlasAttachmentImage(Data::Instance<JE::Render::RPI::AttachmentImage> atlasAttachmentIamge)
         {
             if (m_atlasAttachmentImage != atlasAttachmentIamge)
             {
@@ -82,7 +82,7 @@ namespace AZ
 
             if (!m_atlasAttachmentImage)
             {
-                auto depthAttachmentImage = RPI::ImageSystemInterface::Get()->GetSystemAttachmentImage(RHI::Format::D32_FLOAT);
+                auto depthAttachmentImage = JE::Render::RPI::ImageSystemInterface::Get()->GetSystemAttachmentImage(RHI::Format::D32_FLOAT);
                 AttachImageToSlot(Name("Shadowmap"), depthAttachmentImage);
                 SetEnabled(false);
                 return;
@@ -93,13 +93,13 @@ namespace AZ
             Base::BuildInternal();
         }
 
-        void ProjectedShadowmapsPass::QueueAddChild(RPI::Ptr<Pass> pass)
+        void ProjectedShadowmapsPass::QueueAddChild(JE::Render::RPI::Ptr<Pass> pass)
         {
             m_passesToAddOrRemove.push_back({ pass, false });
             QueueForBuildAndInitialization(); // passes in `m_passesToAddOrRemove` are resolved in `BuildInternal()`
         }
 
-        void ProjectedShadowmapsPass::QueueRemoveChild(RPI::Ptr<Pass> pass)
+        void ProjectedShadowmapsPass::QueueRemoveChild(JE::Render::RPI::Ptr<Pass> pass)
         {
             m_passesToAddOrRemove.push_back({ pass, true });
             QueueForBuildAndInitialization(); // passes in `m_passesToAddOrRemove` are resolved in `BuildInternal()`

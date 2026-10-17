@@ -13,10 +13,10 @@
 #include <AzCore/Date/DateFormat.h>
 #include <AzCore/Utils/Utils.h>
 
-#include <Atom/RPI.Edit/Shader/ShaderVariantTreeAssetCreator.h>
-#include <Atom/RPI.Edit/Shader/ShaderVariantListSourceData.h>
-#include <Atom/RPI.Edit/Common/JsonUtils.h>
-#include <Atom/RPI.Edit/Common/AssetUtils.h>
+#include <JE/Editor/Render/RPI/Edit/Shader/ShaderVariantTreeAssetCreator.h>
+#include <JE/Editor/Render/RPI/Edit/Shader/ShaderVariantListSourceData.h>
+#include <JE/Editor/Render/RPI/Edit/Common/JsonUtils.h>
+#include <JE/Editor/Render/RPI/Edit/Common/AssetUtils.h>
 
 #include <JE/Assets/RenderBuilders/Shader/HashedVariantListSourceData.h>
 #include "ShaderVariantListBuilder.h"
@@ -50,7 +50,7 @@ namespace JE::Assets::RenderBuilders
             }
         }
 
-        size_t HashedVariantInfoSourceData::HashCombineShaderOptionValues(size_t startingHash, const AZ::RPI::ShaderOptionValuesSourceData& optionValues)
+        size_t HashedVariantInfoSourceData::HashCombineShaderOptionValues(size_t startingHash, const JE::Render::RPI::ShaderOptionValuesSourceData& optionValues)
         {
             size_t hash = startingHash;
             AZStd::for_each(optionValues.begin(), optionValues.end(),
@@ -61,7 +61,7 @@ namespace JE::Assets::RenderBuilders
             return hash;
         }
 
-        size_t HashedVariantInfoSourceData::CalculateHash(size_t optionValuesHash, const AZ::RPI::ShaderVariantListSourceData::VariantInfo& variantInfo)
+        size_t HashedVariantInfoSourceData::CalculateHash(size_t optionValuesHash, const JE::Render::RPI::ShaderVariantListSourceData::VariantInfo& variantInfo)
         {
             size_t hash = !optionValuesHash ? HashCombineShaderOptionValues(0, variantInfo.m_options) : optionValuesHash;
 
@@ -91,7 +91,7 @@ namespace JE::Assets::RenderBuilders
             AZStd::vector<AssetBuilderSDK::SourceFileDependency>& sourceFileDependencies)
         {
             auto& sourceDependency = sourceFileDependencies.emplace_back();
-            sourceDependency.m_sourceFileDependencyPath = AZ::RPI::AssetUtils::ResolvePathReference(variantListFullpath, originalShaderPath);
+            sourceDependency.m_sourceFileDependencyPath = JE::Render::RPI::AssetUtils::ResolvePathReference(variantListFullpath, originalShaderPath);
 
             AZ::Data::AssetInfo sourceInfo;
             AZStd::string watchFolder;
@@ -150,8 +150,8 @@ namespace JE::Assets::RenderBuilders
             AZ::IO::FixedMaxPath gameProjectPath = AZ::Utils::GetProjectPath();
 
             auto expectedHigherPrecedenceFileFullPath = (gameProjectPath
-                / AZ::RPI::ShaderVariantTreeAsset::CommonSubFolder / shaderProductFileRelativePath).LexicallyNormal();
-            expectedHigherPrecedenceFileFullPath.ReplaceExtension(AZ::RPI::ShaderVariantListSourceData::Extension);
+                / JE::Render::RPI::ShaderVariantTreeAsset::CommonSubFolder / shaderProductFileRelativePath).LexicallyNormal();
+            expectedHigherPrecedenceFileFullPath.ReplaceExtension(JE::Render::RPI::ShaderVariantListSourceData::Extension);
 
             auto normalizedShaderVariantListFileFullPath = AZ::IO::FixedMaxPath(shaderVariantListAbsolutePath).LexicallyNormal();
 
@@ -189,7 +189,7 @@ namespace JE::Assets::RenderBuilders
             {
                 AZ_Error(ShaderVariantListBuilderName, false, "For shader file at path [%s], the shader variant list [%s] is expected to be located at [%s.%s] or [%s]"
                     , normalizedShaderFileFullPath.c_str(), normalizedShaderVariantListFileFullPath.c_str(),
-                    normalizedShaderFileFullPathWithoutExtension.c_str(), AZ::RPI::ShaderVariantListSourceData::Extension,
+                    normalizedShaderFileFullPathWithoutExtension.c_str(), JE::Render::RPI::ShaderVariantListSourceData::Extension,
                     expectedHigherPrecedenceFileFullPath.c_str());
                 return false;
             }
@@ -201,7 +201,7 @@ namespace JE::Assets::RenderBuilders
         // Returns true if @filePath is the main shadervariantlist file.
         // The main shadervariantlist file has the same name of the .shader it refers to,
         // except for the fact that it has a different extension.
-        static bool IsMainShaderVariantList(const AZStd::string& filePath, const AZ::RPI::ShaderVariantListSourceData& shaderVariantList)
+        static bool IsMainShaderVariantList(const AZStd::string& filePath, const JE::Render::RPI::ShaderVariantListSourceData& shaderVariantList)
         {
             AZ::IO::FixedMaxPath shaderVariantListPath(filePath);
             AZ::IO::FixedMaxPath shaderPath(shaderVariantList.m_shaderFilePath);
@@ -225,8 +225,8 @@ namespace JE::Assets::RenderBuilders
             AZ::StringFunc::Path::ConstructFull(request.m_watchFolder.data(), request.m_sourceFile.data(), variantListFullPath, true);
             AZ_Trace(ShaderVariantListBuilderName, "CreateJobs for Shader Variant List \"%s\"\n", variantListFullPath.c_str());
 
-            AZ::RPI::ShaderVariantListSourceData shaderVariantList;
-            if (!AZ::RPI::JsonUtils::LoadObjectFromFile(variantListFullPath, shaderVariantList, AZStd::numeric_limits<size_t>::max()))
+            JE::Render::RPI::ShaderVariantListSourceData shaderVariantList;
+            if (!JE::Render::RPI::JsonUtils::LoadObjectFromFile(variantListFullPath, shaderVariantList, AZStd::numeric_limits<size_t>::max()))
             {
                 AZ_Error(ShaderVariantListBuilderName, false, "Failed to parse Shader Variant List Descriptor JSON from [%s]", variantListFullPath.c_str());
                 response.m_result = AssetBuilderSDK::CreateJobsResultCode::Failed;
@@ -351,7 +351,7 @@ namespace JE::Assets::RenderBuilders
                 return outputFilePathStr;
             }
 
-            if (!AZ::RPI::JsonUtils::SaveObjectToFile(outputFilePathStr, hashedVariantList))
+            if (!JE::Render::RPI::JsonUtils::SaveObjectToFile(outputFilePathStr, hashedVariantList))
             {
                 AZ_Error(ShaderVariantListBuilderName, false, "Failed to create %s.\n", outputFilePathStr.c_str());
                 return "";
@@ -388,7 +388,7 @@ namespace JE::Assets::RenderBuilders
                 return outputFilePathStr;
             }
 
-            if (!AZ::RPI::JsonUtils::SaveObjectToFile(outputFilePathStr, hashedVariantBatch))
+            if (!JE::Render::RPI::JsonUtils::SaveObjectToFile(outputFilePathStr, hashedVariantBatch))
             {
                 AZ_Error(ShaderVariantListBuilderName, false, "Failed to create %s.\n", outputFilePathStr.c_str());
                 return "";
@@ -445,15 +445,15 @@ namespace JE::Assets::RenderBuilders
                 return;
             }
 
-            AZ::RPI::ShaderVariantListSourceData shaderVariantList;
-            if (!AZ::RPI::JsonUtils::LoadObjectFromFile(variantListFullPath, shaderVariantList, AZStd::numeric_limits<size_t>::max()))
+            JE::Render::RPI::ShaderVariantListSourceData shaderVariantList;
+            if (!JE::Render::RPI::JsonUtils::LoadObjectFromFile(variantListFullPath, shaderVariantList, AZStd::numeric_limits<size_t>::max()))
             {
                 AZ_Error(ShaderVariantListBuilderName, false, "Failed to parse Shader Variant List Descriptor JSON from [%s]", variantListFullPath.c_str());
                 response.m_resultCode = AssetBuilderSDK::ProcessJobResult_Failed;
                 return;
             }
 
-            auto uniqueStableIdOutcome = AZ::RPI::ShaderVariantTreeAssetCreator::ValidateStableIdsAreUnique(shaderVariantList.m_shaderVariants);
+            auto uniqueStableIdOutcome = JE::Render::RPI::ShaderVariantTreeAssetCreator::ValidateStableIdsAreUnique(shaderVariantList.m_shaderVariants);
             if (!uniqueStableIdOutcome.IsSuccess())
             {
                 AZ_Error(ShaderVariantListBuilderName, false, "Variant info validation error: %s", uniqueStableIdOutcome.GetError().c_str());

@@ -8,9 +8,9 @@
 
 #include <AzCore/Console/IConsole.h>
 
-#include <Atom/RPI.Public/RenderPipeline.h>
-#include <Atom/RPI.Public/Scene.h>
-#include <Atom/RPI.Public/View.h>
+#include <JE/Render/RPI/Public/RenderPipeline.h>
+#include <JE/Render/RPI/Public/Scene.h>
+#include <JE/Render/RPI/Public/View.h>
 
 #include <PostProcess/PostProcessFeatureProcessor.h>
 #include <PostProcess/Bloom/BloomSettings.h>
@@ -23,14 +23,14 @@ namespace AZ
 
         AZ_CVAR(bool, r_enableBloom, true, nullptr, AZ::ConsoleFunctorFlags::Null, "Enable bloom effect support");
 
-        RPI::Ptr<BloomParentPass> BloomParentPass::Create(const RPI::PassDescriptor& descriptor)
+        JE::Render::RPI::Ptr<BloomParentPass> BloomParentPass::Create(const JE::Render::RPI::PassDescriptor& descriptor)
         {
-            RPI::Ptr<BloomParentPass> pass = aznew BloomParentPass(descriptor);
+            JE::Render::RPI::Ptr<BloomParentPass> pass = aznew BloomParentPass(descriptor);
             return pass;
         }
 
-        BloomParentPass::BloomParentPass(const RPI::PassDescriptor& descriptor)
-            : RPI::ParentPass(descriptor)
+        BloomParentPass::BloomParentPass(const JE::Render::RPI::PassDescriptor& descriptor)
+            : JE::Render::RPI::ParentPass(descriptor)
         { }
 
         bool BloomParentPass::IsEnabled() const
@@ -44,13 +44,13 @@ namespace AZ
             {
                 return false;
             }
-            const RPI::Scene* scene = GetScene();
+            const JE::Render::RPI::Scene* scene = GetScene();
             if (!scene)
             {
                 return false;
             }
             PostProcessFeatureProcessor* fp = scene->GetFeatureProcessor<PostProcessFeatureProcessor>();
-            const RPI::ViewPtr view = GetRenderPipeline()->GetFirstView(GetPipelineViewTag());
+            const JE::Render::RPI::ViewPtr view = GetRenderPipeline()->GetFirstView(GetPipelineViewTag());
             if (!fp)
             {
                 return false;

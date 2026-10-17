@@ -17,11 +17,11 @@
 #include <AzFramework/StringFunc/StringFunc.h>
 #include <AzFramework/Translation/TranslationDef.h>
 
-#include <Atom/RPI.Public/Image/StreamingImage.h>
+#include <JE/Render/RPI/Public/Image/StreamingImage.h>
 
 namespace
 {
-    AZ::Data::Instance<AZ::RPI::Image> LoadAtlasImage(const AZStd::string& imagePath)
+    AZ::Data::Instance<JE::Render::RPI::Image> LoadAtlasImage(const AZStd::string& imagePath)
     {
         // The file may not be in the AssetCatalog at this point if it is still processing or doesn't exist on disk.
         // Use GenerateAssetIdTEMP instead of GetAssetIdByPath so that it will return a valid AssetId anyways
@@ -30,9 +30,9 @@ namespace
             streamingImageAssetId, &AZ::Data::AssetCatalogRequestBus::Events::GenerateAssetIdTEMP,
             imagePath.c_str());
 
-        streamingImageAssetId.m_subId = AZ::RPI::StreamingImageAsset::GetImageAssetSubId();
-        auto streamingImageAsset = AZ::Data::AssetManager::Instance().FindOrCreateAsset<AZ::RPI::StreamingImageAsset>(streamingImageAssetId, AZ::Data::AssetLoadBehavior::PreLoad);
-        AZ::Data::Instance<AZ::RPI::Image> image = AZ::RPI::StreamingImage::FindOrCreate(streamingImageAsset);
+        streamingImageAssetId.m_subId = JE::Render::RPI::StreamingImageAsset::GetImageAssetSubId();
+        auto streamingImageAsset = AZ::Data::AssetManager::Instance().FindOrCreateAsset<JE::Render::RPI::StreamingImageAsset>(streamingImageAssetId, AZ::Data::AssetLoadBehavior::PreLoad);
+        AZ::Data::Instance<JE::Render::RPI::Image> image = JE::Render::RPI::StreamingImage::FindOrCreate(streamingImageAsset);
         return image;
     }
 }
@@ -111,7 +111,7 @@ namespace TextureAtlasNamespace
                     iterator->second.m_atlas->GetTexture().reset();
                 }
                 AZStd::string imagePath = iterator->second.m_path;
-                AZ::Data::Instance<AZ::RPI::Image> texture = LoadAtlasImage(imagePath);
+                AZ::Data::Instance<JE::Render::RPI::Image> texture = LoadAtlasImage(imagePath);
                 if (!texture)
                 {
                     AZ_Error("TextureAtlasSystemComponent",
@@ -191,7 +191,7 @@ namespace TextureAtlasNamespace
             // Convert to image path based on the atlas path
             AZStd::string imagePath = path;
             AzFramework::StringFunc::Path::ReplaceExtension(imagePath, "texatlas");
-            AZ::Data::Instance<AZ::RPI::Image> texture = LoadAtlasImage(imagePath);
+            AZ::Data::Instance<JE::Render::RPI::Image> texture = LoadAtlasImage(imagePath);
             if (!texture)
             {
                 AZ_Error("TextureAtlasSystemComponent",

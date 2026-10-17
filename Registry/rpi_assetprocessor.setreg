@@ -1,0 +1,16 @@
+{
+    "Amazon": {
+        "AssetProcessor": {
+            "Settings": {
+                // Preserve the existing RPI source identities and relative ShaderLib/product paths.
+                // Order 100 is the native Engine asset policy, not an observed old Gem order.
+                "ScanFolder gemassets-{BF137FDF-FB46-5DF8-98BA-090E79ECA388}": {
+                    "watch": "@ENGINEROOT@/Engine/Render/Integration/RPI/Assets",
+                    "display": "Engine/Render/Integration/RPI",
+                    "recursive": 1,
+                    "order": 100
+                }
+            }
+        }
+    }
+}

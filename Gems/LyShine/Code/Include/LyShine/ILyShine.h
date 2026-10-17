@@ -19,7 +19,7 @@ class ISprite;
 struct IUiAnimationSystem;
 class UiEntityContext;
 
-namespace AZ::RPI
+namespace JE::Render::RPI
 {
     class Image;
     class AttachmentImageAsset;
@@ -90,13 +90,13 @@ public:
     virtual ISprite* LoadSprite(const AZStd::string& pathname) = 0;
 
     //! Create a sprite that references the specified render target asset
-    virtual ISprite* CreateSprite(const AZ::Data::Asset<AZ::RPI::AttachmentImageAsset>& attachmentImageAsset) = 0;
+    virtual ISprite* CreateSprite(const AZ::Data::Asset<JE::Render::RPI::AttachmentImageAsset>& attachmentImageAsset) = 0;
 
     //! Check if a sprite's texture asset exists. The .sprite sidecar file is optional and is not checked
     virtual bool DoesSpriteTextureAssetExist(const AZStd::string& pathname) = 0;
 
     //! Load an image asset by texture pathname
-    virtual AZ::Data::Instance<AZ::RPI::Image> LoadTexture(const AZStd::string& pathName) = 0;
+    virtual AZ::Data::Instance<JE::Render::RPI::Image> LoadTexture(const AZStd::string& pathName) = 0;
 
     //! Perform post-initialization (script system will be available)
     virtual void PostInit() = 0;

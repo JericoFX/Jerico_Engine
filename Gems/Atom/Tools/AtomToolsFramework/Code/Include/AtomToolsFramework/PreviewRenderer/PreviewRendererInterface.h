@@ -8,7 +8,7 @@
 
 #pragma once
 
-#include <Atom/RPI.Public/Base.h>
+#include <JE/Render/RPI/Public/Base.h>
 
 namespace AtomToolsFramework
 {
@@ -22,8 +22,8 @@ namespace AtomToolsFramework
 
         virtual ~PreviewRendererInterface() = default;
         virtual void AddCaptureRequest(const PreviewRendererCaptureRequest& captureRequest) = 0;
-        virtual AZ::RPI::ScenePtr GetScene() const = 0;
-        virtual AZ::RPI::ViewPtr GetView() const = 0;
+        virtual JE::Render::RPI::ScenePtr GetScene() const = 0;
+        virtual JE::Render::RPI::ViewPtr GetView() const = 0;
         virtual AZ::Uuid GetEntityContextId() const = 0;
     };
 } // namespace AtomToolsFramework

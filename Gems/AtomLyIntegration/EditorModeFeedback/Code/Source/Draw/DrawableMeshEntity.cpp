@@ -8,24 +8,24 @@
 
 #include <Draw/DrawableMeshEntity.h>
 
-#include <Atom/RPI.Public/Model/Model.h>
-#include <Atom/RPI.Public/Model/ModelLodUtils.h>
-#include <Atom/RPI.Public/DynamicDraw/DynamicDrawInterface.h>
-#include <Atom/RPI.Public/Scene.h>
-#include <Atom/RPI.Public/Shader/ShaderResourceGroup.h>
-#include <Atom/RPI.Public/ViewportContext.h>
-#include <Atom/RPI.Public/ViewportContextBus.h>
+#include <JE/Render/RPI/Public/Model/Model.h>
+#include <JE/Render/RPI/Public/Model/ModelLodUtils.h>
+#include <JE/Render/RPI/Public/DynamicDraw/DynamicDrawInterface.h>
+#include <JE/Render/RPI/Public/Scene.h>
+#include <JE/Render/RPI/Public/Shader/ShaderResourceGroup.h>
+#include <JE/Render/RPI/Public/ViewportContext.h>
+#include <JE/Render/RPI/Public/ViewportContextBus.h>
 #include <AzCore/Component/TransformBus.h>
 #include <AzToolsFramework/Entity/EditorEntityHelpers.h>
 
 namespace AZ::Render
 {
     // Gets the view for the specified scene
-    static const RPI::ViewPtr GetViewFromScene(const RPI::Scene* scene)
+    static const JE::Render::RPI::ViewPtr GetViewFromScene(const JE::Render::RPI::Scene* scene)
     {
-        const auto viewportContextRequests = RPI::ViewportContextRequests::Get();
+        const auto viewportContextRequests = JE::Render::RPI::ViewportContextRequests::Get();
         const auto viewportContext = viewportContextRequests->GetViewportContextByScene(scene);
-        const RPI::ViewPtr viewPtr = viewportContext->GetDefaultView();
+        const JE::Render::RPI::ViewPtr viewPtr = viewportContext->GetDefaultView();
         return viewPtr;
     }
 
@@ -34,29 +34,29 @@ namespace AZ::Render
     {
     public:
         DrawableMetaData(EntityId entityId);
-        RPI::Scene* GetScene() const;
-        const RPI::ViewPtr GetView() const;
+        JE::Render::RPI::Scene* GetScene() const;
+        const JE::Render::RPI::ViewPtr GetView() const;
         const MeshFeatureProcessorInterface* GetFeatureProcessor() const;
 
     private:
-        RPI::Scene* m_scene = nullptr;
-        RPI::ViewPtr m_view = nullptr;
+        JE::Render::RPI::Scene* m_scene = nullptr;
+        JE::Render::RPI::ViewPtr m_view = nullptr;
         MeshFeatureProcessorInterface* m_featureProcessor = nullptr;
     };
 
     DrawableMetaData::DrawableMetaData(EntityId entityId)
     {
-        m_scene = RPI::Scene::GetSceneForEntityId(entityId);
+        m_scene = JE::Render::RPI::Scene::GetSceneForEntityId(entityId);
         m_view = GetViewFromScene(m_scene);
         m_featureProcessor = m_scene->GetFeatureProcessor<MeshFeatureProcessorInterface>();
     }
 
-    RPI::Scene* DrawableMetaData::GetScene() const
+    JE::Render::RPI::Scene* DrawableMetaData::GetScene() const
     {
         return m_scene;
     }
 
-    const RPI::ViewPtr DrawableMetaData::GetView() const
+    const JE::Render::RPI::ViewPtr DrawableMetaData::GetView() const
     {
         return m_view;
     }
@@ -66,7 +66,7 @@ namespace AZ::Render
         return m_featureProcessor;
     }
 
-    DrawableMeshEntity::DrawableMeshEntity(EntityId entityId, Data::Instance<RPI::Material> maskMaterial, Name drawList)
+    DrawableMeshEntity::DrawableMeshEntity(EntityId entityId, Data::Instance<JE::Render::RPI::Material> maskMaterial, Name drawList)
         : m_entityId(entityId)
         , m_maskMaterial(maskMaterial)
         , m_drawList(drawList)
@@ -81,7 +81,7 @@ namespace AZ::Render
 
     void DrawableMeshEntity::ClearDrawData()
     {
-        m_modelLodIndex = RPI::ModelLodIndex::Null;
+        m_modelLodIndex = JE::Render::RPI::ModelLodIndex::Null;
         m_meshDrawPackets.clear();
     }
 
@@ -124,7 +124,7 @@ namespace AZ::Render
             CreateOrUpdateMeshDrawPackets(drawabaleMetaData.GetFeatureProcessor(), modelLodIndex, model);
         }
 
-        AZ::RPI::DynamicDrawInterface* dynamicDraw = AZ::RPI::GetDynamicDraw();
+        JE::Render::RPI::DynamicDrawInterface* dynamicDraw = JE::Render::RPI::GetDynamicDraw();
         for (auto& drawPacket : m_meshDrawPackets)
         {
             drawPacket.Update(*drawabaleMetaData.GetScene());
@@ -136,10 +136,10 @@ namespace AZ::Render
         }
     }
 
-    RPI::ModelLodIndex DrawableMeshEntity::GetModelLodIndex(const RPI::ViewPtr view, Data::Instance<RPI::Model> model) const
+    JE::Render::RPI::ModelLodIndex DrawableMeshEntity::GetModelLodIndex(const JE::Render::RPI::ViewPtr view, Data::Instance<JE::Render::RPI::Model> model) const
     {
         const auto worldTM = AzToolsFramework::GetWorldTransform(m_entityId);
-        return RPI::ModelLodUtils::SelectLod(view.get(), worldTM, *model);
+        return JE::Render::RPI::ModelLodUtils::SelectLod(view.get(), worldTM, *model);
     }
 
     void DrawableMeshEntity::OnMeshHandleSet(const MeshFeatureProcessorInterface::MeshHandle* meshHandle)
@@ -160,7 +160,7 @@ namespace AZ::Render
     }
 
     void DrawableMeshEntity::CreateOrUpdateMeshDrawPackets(
-        const MeshFeatureProcessorInterface* featureProcessor, const RPI::ModelLodIndex modelLodIndex, Data::Instance<RPI::Model> model)
+        const MeshFeatureProcessorInterface* featureProcessor, const JE::Render::RPI::ModelLodIndex modelLodIndex, Data::Instance<JE::Render::RPI::Model> model)
     {
         ClearDrawData();
 
@@ -178,11 +178,11 @@ namespace AZ::Render
     }
 
     void DrawableMeshEntity::BuildMeshDrawPackets(
-        const Data::Asset<RPI::ModelAsset> modelAsset, Data::Instance<RPI::ShaderResourceGroup> meshObjectSrg)
+        const Data::Asset<JE::Render::RPI::ModelAsset> modelAsset, Data::Instance<JE::Render::RPI::ShaderResourceGroup> meshObjectSrg)
     {
         const auto modelLodAssets = modelAsset->GetLodAssets();
-        const Data::Asset<RPI::ModelLodAsset>& modelLodAsset = modelLodAssets[m_modelLodIndex.m_index];
-        Data::Instance<RPI::ModelLod> modelLod = RPI::ModelLod::FindOrCreate(modelLodAsset, modelAsset).get();
+        const Data::Asset<JE::Render::RPI::ModelLodAsset>& modelLodAsset = modelLodAssets[m_modelLodIndex.m_index];
+        Data::Instance<JE::Render::RPI::ModelLod> modelLod = JE::Render::RPI::ModelLod::FindOrCreate(modelLodAsset, modelAsset).get();
 
         for (size_t i = 0; i < modelLod->GetMeshes().size(); i++)
         {
@@ -191,12 +191,12 @@ namespace AZ::Render
         }
     }
 
-    Data::Instance<RPI::ShaderResourceGroup> DrawableMeshEntity::CreateMaskShaderResourceGroup(
+    Data::Instance<JE::Render::RPI::ShaderResourceGroup> DrawableMeshEntity::CreateMaskShaderResourceGroup(
         const MeshFeatureProcessorInterface* featureProcessor) const
     {
         const auto& shaderAsset = m_maskMaterial->GetAsset()->GetMaterialTypeAsset()->GetShaderAssetForObjectSrg();
         const auto& objectSrgLayout = m_maskMaterial->GetAsset()->GetObjectSrgLayout();
-        const auto maskMeshObjectSrg = RPI::ShaderResourceGroup::Create(shaderAsset, objectSrgLayout->GetName());
+        const auto maskMeshObjectSrg = JE::Render::RPI::ShaderResourceGroup::Create(shaderAsset, objectSrgLayout->GetName());
 
         // Set the object id so the correct MVP matrices can be selected in the shader
         const auto objectId = featureProcessor->GetObjectId(*m_meshHandle).GetIndex();

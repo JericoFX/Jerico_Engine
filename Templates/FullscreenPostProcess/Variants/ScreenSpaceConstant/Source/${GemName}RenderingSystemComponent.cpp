@@ -11,8 +11,8 @@
 #include "${Name}Pass.h"
 #include "${Name}FeatureProcessor.h"
 
-#include <Atom/RPI.Public/Pass/PassSystemInterface.h>
-#include <Atom/RPI.Public/FeatureProcessorFactory.h>
+#include <JE/Render/RPI/Public/Pass/PassSystemInterface.h>
+#include <JE/Render/RPI/Public/FeatureProcessorFactory.h>
 
 #include <AzCore/RTTI/BehaviorContext.h>
 #include <AzCore/Serialization/SerializeContext.h>

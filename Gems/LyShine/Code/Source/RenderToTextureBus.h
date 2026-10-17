@@ -6,7 +6,7 @@
  */
 #pragma once
 
-#include <Atom/RPI.Reflect/Image/AttachmentImageAsset.h>
+#include <JE/Render/RPI/Reflect/Image/AttachmentImageAsset.h>
 
 namespace LyShine
 {
@@ -21,13 +21,13 @@ namespace LyShine
 
         //! Get an attachment image from an attachment image asset to render to texture only
         //! and then read it outside of LyShine (ex. render UI canvas to a render target and use in a material)
-        virtual AZ::RHI::AttachmentId UseRenderTargetAsset(const AZ::Data::Asset<AZ::RPI::AttachmentImageAsset>& attachmentImageAsset) = 0;
+        virtual AZ::RHI::AttachmentId UseRenderTargetAsset(const AZ::Data::Asset<JE::Render::RPI::AttachmentImageAsset>& attachmentImageAsset) = 0;
 
         //! Call when a render target is no longer needed by a UI canvas
         virtual void ReleaseRenderTarget(const AZ::RHI::AttachmentId& attachmentId) = 0;
 
         //! Get an attachment image used by a UI canvas from an attachment image Id
-        virtual AZ::Data::Instance<AZ::RPI::AttachmentImage> GetRenderTarget(const AZ::RHI::AttachmentId& attachmentId) = 0;
+        virtual AZ::Data::Instance<JE::Render::RPI::AttachmentImage> GetRenderTarget(const AZ::RHI::AttachmentId& attachmentId) = 0;
     };
 
     using RenderToTextureRequestBus = AZ::EBus<RenderToTextureRequests>;

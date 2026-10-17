@@ -8,18 +8,18 @@
 
 #include <Silhouette/SilhouetteCompositePass.h>
 #include <Silhouette/SilhouetteFeatureProcessor.h>
-#include <Atom/RPI.Public/Scene.h>
+#include <JE/Render/RPI/Public/Scene.h>
 
 namespace AZ::Render
 {
-    SilhouetteCompositePass::SilhouetteCompositePass(const RPI::PassDescriptor& descriptor)
-        : RPI::FullscreenTrianglePass(descriptor)
+    SilhouetteCompositePass::SilhouetteCompositePass(const JE::Render::RPI::PassDescriptor& descriptor)
+        : JE::Render::RPI::FullscreenTrianglePass(descriptor)
     {
     }
 
     void SilhouetteCompositePass::InitializeInternal()
     {
-        RPI::FullscreenTrianglePass::InitializeInternal();
+        JE::Render::RPI::FullscreenTrianglePass::InitializeInternal();
         auto* scene = GetScene();
         if (!scene)
         {
@@ -29,15 +29,15 @@ namespace AZ::Render
         m_featureProcessor = scene->GetFeatureProcessor<SilhouetteFeatureProcessor>();
     }
 
-    RPI::Ptr<SilhouetteCompositePass> SilhouetteCompositePass::Create(const RPI::PassDescriptor& descriptor)
+    JE::Render::RPI::Ptr<SilhouetteCompositePass> SilhouetteCompositePass::Create(const JE::Render::RPI::PassDescriptor& descriptor)
     {
-        RPI::Ptr<SilhouetteCompositePass> pass = aznew SilhouetteCompositePass(descriptor);
+        JE::Render::RPI::Ptr<SilhouetteCompositePass> pass = aznew SilhouetteCompositePass(descriptor);
         return pass;
     }
 
     void SilhouetteCompositePass::SetupFrameGraphDependencies(RHI::FrameGraphInterface frameGraph)
     {
-        RPI::FullscreenTrianglePass::SetupFrameGraphDependencies(frameGraph);
+        JE::Render::RPI::FullscreenTrianglePass::SetupFrameGraphDependencies(frameGraph);
         if (m_featureProcessor)
         {
             // We check if we need to do the composite pass
@@ -51,7 +51,7 @@ namespace AZ::Render
         const auto* scope = static_cast<const SilhouetteCompositePass*>(this)->GetScope();
         if (scope->GetEstimatedItemCount())
         {
-            RPI::FullscreenTrianglePass::BuildCommandListInternal(context);
+            JE::Render::RPI::FullscreenTrianglePass::BuildCommandListInternal(context);
         }
     }
 

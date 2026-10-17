@@ -11,11 +11,11 @@
 #include <Mesh/MeshFeatureProcessor.h>
 #include <Atom/Feature/CoreLights/CoreLightsConstants.h>
 #include <Atom/RHI/Factory.h>
-#include <Atom/RPI.Public/ColorManagement/TransformColor.h>
-#include <Atom/RPI.Public/RenderPipeline.h>
-#include <Atom/RPI.Public/RPISystemInterface.h>
-#include <Atom/RPI.Public/Scene.h>
-#include <Atom/RPI.Public/View.h>
+#include <JE/Render/RPI/Public/ColorManagement/TransformColor.h>
+#include <JE/Render/RPI/Public/RenderPipeline.h>
+#include <JE/Render/RPI/Public/RPISystemInterface.h>
+#include <JE/Render/RPI/Public/Scene.h>
+#include <JE/Render/RPI/Public/View.h>
 #include <AzCore/Math/Color.h>
 #include <AzCore/Math/MatrixUtils.h>
 #include <AzCore/Math/Vector3.h>
@@ -50,7 +50,7 @@ namespace AZ
             desc.m_bufferSrgName = "m_simpleSpotLights";
             desc.m_elementCountSrgName = "m_simpleSpotLightCount";
             desc.m_elementSize = sizeof(SimpleSpotLightData);
-            desc.m_srgLayout = RPI::RPISystemInterface::Get()->GetViewSrgLayout().get();
+            desc.m_srgLayout = JE::Render::RPI::RPISystemInterface::Get()->GetViewSrgLayout().get();
 
             m_lightBufferHandler = GpuBufferHandler(desc);
             m_shadowFeatureProcessor = GetParentScene()->GetFeatureProcessor<ProjectedShadowFeatureProcessor>();
@@ -147,7 +147,7 @@ namespace AZ
                 if (m_goboArrayChanged)
                 {
                     // collect all gobo textures and assign index for each spot light
-                    AZStd::unordered_map<AZ::Data::Instance<AZ::RPI::Image>, uint32_t> gobosTextures;
+                    AZStd::unordered_map<AZ::Data::Instance<JE::Render::RPI::Image>, uint32_t> gobosTextures;
                     m_goboTextures.clear();
 
                     m_lightData.ForEach([&](uint16_t idx) -> bool
@@ -220,7 +220,7 @@ namespace AZ
                 count = MaxGoboTextureCount;
             }
 
-            for (const RPI::ViewPtr& view : packet.m_views)
+            for (const JE::Render::RPI::ViewPtr& view : packet.m_views)
             {
                 m_lightBufferHandler.UpdateSrg(view->GetShaderResourceGroup().get());
                 if (count > 0)
@@ -236,7 +236,7 @@ namespace AZ
         {
             AZ_Assert(handle.IsValid(), "Invalid LightHandle passed to SimpleSpotLightFeatureProcessor::SetRgbIntensity().");
 
-            auto transformedColor = AZ::RPI::TransformColor(lightRgbIntensity, AZ::RPI::ColorSpaceId::LinearSRGB, AZ::RPI::ColorSpaceId::ACEScg);
+            auto transformedColor = JE::Render::RPI::TransformColor(lightRgbIntensity, JE::Render::RPI::ColorSpaceId::LinearSRGB, JE::Render::RPI::ColorSpaceId::ACEScg);
 
             AZStd::array<float, 3>& rgbIntensity = m_lightData.GetData<0>(handle.GetIndex()).m_rgbIntensity;
             rgbIntensity[0] = transformedColor.GetR();
@@ -316,7 +316,7 @@ namespace AZ
             m_deviceBufferNeedsUpdate = true;
         }
 
-        void SimpleSpotLightFeatureProcessor::SetGoboTexture(LightHandle handle, AZ::Data::Instance<AZ::RPI::Image> goboTexture)
+        void SimpleSpotLightFeatureProcessor::SetGoboTexture(LightHandle handle, AZ::Data::Instance<JE::Render::RPI::Image> goboTexture)
         {
             m_lightData.GetData<1>(handle.GetIndex()).m_goboTexture = goboTexture;
             m_deviceBufferNeedsUpdate = true;
@@ -357,7 +357,7 @@ namespace AZ
             m_deviceBufferNeedsUpdate = true;
         }
 
-        const Data::Instance<RPI::Buffer> SimpleSpotLightFeatureProcessor::GetLightBuffer() const
+        const Data::Instance<JE::Render::RPI::Buffer> SimpleSpotLightFeatureProcessor::GetLightBuffer() const
         {
             return m_lightBufferHandler.GetBuffer();
         }
@@ -457,19 +457,19 @@ namespace AZ
         }
 
         void SimpleSpotLightFeatureProcessor::OnRenderPipelinePersistentViewChanged(
-            RPI::RenderPipeline* renderPipeline,
-            [[maybe_unused]] RPI::PipelineViewTag viewTag,
-            RPI::ViewPtr newView,
-            RPI::ViewPtr previousView)
+            JE::Render::RPI::RenderPipeline* renderPipeline,
+            [[maybe_unused]] JE::Render::RPI::PipelineViewTag viewTag,
+            JE::Render::RPI::ViewPtr newView,
+            JE::Render::RPI::ViewPtr previousView)
         {
             Render::LightCommon::CacheCPUCulledPipelineInfo(
                 renderPipeline,
                 newView, previousView, m_cpuCulledPipelinesPerView);
         }
 
-        void SimpleSpotLightFeatureProcessor::CullLights(const RPI::ViewPtr& view)
+        void SimpleSpotLightFeatureProcessor::CullLights(const JE::Render::RPI::ViewPtr& view)
         {
-            if (!AZ::RHI::CheckBitsAll(view->GetUsageFlags(), RPI::View::UsageFlags::UsageCamera) ||
+            if (!AZ::RHI::CheckBitsAll(view->GetUsageFlags(), JE::Render::RPI::View::UsageFlags::UsageCamera) ||
                 !Render::LightCommon::NeedsCPUCulling(view, m_cpuCulledPipelinesPerView))
             {
                 return;

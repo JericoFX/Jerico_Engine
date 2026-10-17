@@ -8,8 +8,8 @@
 
 
 #include <Tests/GradientSignalTestHelpers.h>
-#include <Atom/RPI.Reflect/Image/ImageMipChainAssetCreator.h>
-#include <Atom/RPI.Reflect/Image/StreamingImageAssetCreator.h>
+#include <JE/Render/RPI/Reflect/Image/ImageMipChainAssetCreator.h>
+#include <JE/Render/RPI/Reflect/Image/StreamingImageAssetCreator.h>
 #include <AzCore/Math/Aabb.h>
 #include <GradientSignal/GradientSampler.h>
 
@@ -49,12 +49,12 @@ namespace UnitTest
         return image;
     }
 
-    AZ::Data::Asset<AZ::RPI::ImageMipChainAsset> BuildBasicMipChainAsset(
+    AZ::Data::Asset<JE::Render::RPI::ImageMipChainAsset> BuildBasicMipChainAsset(
         AZ::u16 mipLevels, AZ::u32 width, AZ::u32 height, AZ::u32 pixelSize, AZStd::span<const uint8_t> data)
     {
         using namespace AZ;
 
-        RPI::ImageMipChainAssetCreator assetCreator;
+        JE::Render::RPI::ImageMipChainAssetCreator assetCreator;
 
         const uint16_t arraySize = 1;
         assetCreator.Begin(Data::AssetId(AZ::Uuid::CreateRandom()), mipLevels, arraySize);
@@ -65,7 +65,7 @@ namespace UnitTest
         assetCreator.AddSubImage(data.data(), data.size());
         assetCreator.EndMip();
 
-        Data::Asset<RPI::ImageMipChainAsset> asset;
+        Data::Asset<JE::Render::RPI::ImageMipChainAsset> asset;
         EXPECT_TRUE(assetCreator.End(asset));
         EXPECT_TRUE(asset.IsReady());
         EXPECT_NE(asset.Get(), nullptr);
@@ -105,19 +105,19 @@ namespace UnitTest
         return image;
     }
 
-    AZ::Data::Asset<AZ::RPI::StreamingImageAsset> CreateImageAssetFromPixelData(
+    AZ::Data::Asset<JE::Render::RPI::StreamingImageAsset> CreateImageAssetFromPixelData(
         AZ::u32 width, AZ::u32 height, AZ::RHI::Format format, AZStd::span<const uint8_t> data)
     {
         auto randomAssetId = AZ::Data::AssetId(AZ::Uuid::CreateRandom());
-        auto imageAsset = AZ::Data::AssetManager::Instance().CreateAsset<AZ::RPI::StreamingImageAsset>(
+        auto imageAsset = AZ::Data::AssetManager::Instance().CreateAsset<JE::Render::RPI::StreamingImageAsset>(
             randomAssetId, AZ::Data::AssetLoadBehavior::Default);
 
         const AZ::u32 mipCountTotal = 1;
         const AZ::u32 pixelSize = AZ::RHI::GetFormatComponentCount(format);
 
-        AZ::Data::Asset<AZ::RPI::ImageMipChainAsset> mipChain = BuildBasicMipChainAsset(mipCountTotal, width, height, pixelSize, data);
+        AZ::Data::Asset<JE::Render::RPI::ImageMipChainAsset> mipChain = BuildBasicMipChainAsset(mipCountTotal, width, height, pixelSize, data);
 
-        AZ::RPI::StreamingImageAssetCreator assetCreator;
+        JE::Render::RPI::StreamingImageAssetCreator assetCreator;
         assetCreator.Begin(randomAssetId);
 
         AZ::RHI::ImageDescriptor imageDesc = AZ::RHI::ImageDescriptor::Create2D(AZ::RHI::ImageBindFlags::ShaderRead, width, height, format);
@@ -132,7 +132,7 @@ namespace UnitTest
         return imageAsset;
     }
 
-    AZ::Data::Asset<AZ::RPI::StreamingImageAsset> CreateImageAsset(AZ::u32 width, AZ::u32 height, AZ::s32 seed)
+    AZ::Data::Asset<JE::Render::RPI::StreamingImageAsset> CreateImageAsset(AZ::u32 width, AZ::u32 height, AZ::s32 seed)
     {
         const auto format = AZ::RHI::Format::R8_UNORM;
         const AZ::u32 pixelSize = AZ::RHI::GetFormatComponentCount(format);
@@ -141,7 +141,7 @@ namespace UnitTest
         return CreateImageAssetFromPixelData(width, height, format, data);
     }
 
-    AZ::Data::Asset<AZ::RPI::StreamingImageAsset> CreateSpecificPixelImageAsset(
+    AZ::Data::Asset<JE::Render::RPI::StreamingImageAsset> CreateSpecificPixelImageAsset(
         AZ::u32 width, AZ::u32 height, AZ::u32 pixelX, AZ::u32 pixelY, AZStd::span<const AZ::u8> setPixelValues)
     {
         const auto format = AZ::RHI::Format::R8G8B8A8_UNORM;

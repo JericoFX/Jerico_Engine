@@ -6,9 +6,9 @@
  *
  */
 
-#include <Atom/RPI.Public/AuxGeom/AuxGeomDraw.h>
-#include <Atom/RPI.Public/AuxGeom/AuxGeomFeatureProcessorInterface.h>
-#include <Atom/RPI.Public/Scene.h>
+#include <JE/Render/RPI/Public/AuxGeom/AuxGeomDraw.h>
+#include <JE/Render/RPI/Public/AuxGeom/AuxGeomFeatureProcessorInterface.h>
+#include <JE/Render/RPI/Public/Scene.h>
 #include <Atom/Utils/Utils.h>
 #include <AtomLyIntegration/CommonFeatures/Grid/GridComponentConstants.h>
 #include <AzCore/Component/TransformBus.h>
@@ -77,10 +77,10 @@ namespace AZ
             m_entityId = entityId;
             m_dirty = true;
 
-            RPI::Scene* scene = RPI::Scene::GetSceneForEntityId(m_entityId);
+            JE::Render::RPI::Scene* scene = JE::Render::RPI::Scene::GetSceneForEntityId(m_entityId);
             if (scene)
             {
-                AZ::RPI::SceneNotificationBus::Handler::BusConnect(scene->GetId());
+                JE::Render::RPI::SceneNotificationBus::Handler::BusConnect(scene->GetId());
             }
 
             GridComponentRequestBus::Handler::BusConnect(m_entityId);
@@ -91,7 +91,7 @@ namespace AZ
         {
             AZ::TransformNotificationBus::Handler::BusDisconnect();
             GridComponentRequestBus::Handler::BusDisconnect();
-            AZ::RPI::SceneNotificationBus::Handler::BusDisconnect();
+            JE::Render::RPI::SceneNotificationBus::Handler::BusDisconnect();
 
             m_entityId = EntityId(EntityId::InvalidEntityId);
         }
@@ -177,7 +177,7 @@ namespace AZ
                 return;
             }
 
-            auto* auxGeomFP = AZ::RPI::Scene::GetFeatureProcessorForEntity<AZ::RPI::AuxGeomFeatureProcessorInterface>(m_entityId);
+            auto* auxGeomFP = JE::Render::RPI::Scene::GetFeatureProcessorForEntity<JE::Render::RPI::AuxGeomFeatureProcessorInterface>(m_entityId);
             if (!auxGeomFP)
             {
                 return;
@@ -187,7 +187,7 @@ namespace AZ
             {
                 BuildGrid();
 
-                AZ::RPI::AuxGeomDraw::AuxGeomDynamicDrawArguments drawArgs;
+                JE::Render::RPI::AuxGeomDraw::AuxGeomDynamicDrawArguments drawArgs;
                 drawArgs.m_verts = m_secondaryGridPoints.data();
                 drawArgs.m_vertCount = aznumeric_cast<uint32_t>(m_secondaryGridPoints.size());
                 drawArgs.m_colors = &m_configuration.m_secondaryColor;

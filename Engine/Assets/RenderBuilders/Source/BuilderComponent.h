@@ -13,7 +13,7 @@
 #include <AzCore/Asset/AssetManager.h>
 
 #include <AssetBuilderSDK/AssetBuilderBusses.h>
-#include <Atom/RPI.Edit/Material/MaterialFunctorSourceDataRegistration.h>
+#include <JE/Editor/Render/RPI/Edit/Material/MaterialFunctorSourceDataRegistration.h>
 
 namespace JE::Assets::RenderBuilders
 {
@@ -59,6 +59,6 @@ namespace JE::Assets::RenderBuilders
 
         AZStd::vector< AZStd::unique_ptr<AZ::Data::AssetHandler> > m_assetHandlers;
 
-        AZ::RPI::MaterialFunctorSourceDataRegistration m_materialFunctorRegistration;
+        JE::Render::RPI::MaterialFunctorSourceDataRegistration m_materialFunctorRegistration;
     };
 } // namespace JE::Assets::RenderBuilders

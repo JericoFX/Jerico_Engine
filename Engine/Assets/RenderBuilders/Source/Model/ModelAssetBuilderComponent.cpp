@@ -9,7 +9,7 @@
 #include <Model/ModelAssetBuilderComponent.h>
 #include <Model/MaterialAssetBuilderComponent.h>
 #include <Model/MorphTargetExporter.h>
-#include <Atom/RPI.Edit/Common/AssetUtils.h>
+#include <JE/Editor/Render/RPI/Edit/Common/AssetUtils.h>
 
 #include <AzCore/Component/ComponentApplicationBus.h>
 #include <AzCore/Math/Aabb.h>
@@ -18,14 +18,14 @@
 #include <AzCore/Serialization/Utils.h>
 #include <AzCore/std/smart_ptr/make_shared.h>
 
-#include <Atom/RPI.Reflect/Buffer/BufferAssetCreator.h>
-#include <Atom/RPI.Reflect/Material/MaterialAsset.h>
-#include <Atom/RPI.Reflect/Model/ModelAssetCreator.h>
-#include <Atom/RPI.Reflect/Model/ModelLodAssetCreator.h>
-#include <Atom/RPI.Reflect/Model/MorphTargetDelta.h>
-#include <Atom/RPI.Reflect/Model/SkinJointIdPadding.h>
-#include <Atom/RPI.Reflect/Model/SkinMetaAssetCreator.h>
-#include <Atom/RPI.Reflect/Model/ModelAssetHelpers.h>
+#include <JE/Render/RPI/Reflect/Buffer/BufferAssetCreator.h>
+#include <JE/Render/RPI/Reflect/Material/MaterialAsset.h>
+#include <JE/Render/RPI/Reflect/Model/ModelAssetCreator.h>
+#include <JE/Render/RPI/Reflect/Model/ModelLodAssetCreator.h>
+#include <JE/Render/RPI/Reflect/Model/MorphTargetDelta.h>
+#include <JE/Render/RPI/Reflect/Model/SkinJointIdPadding.h>
+#include <JE/Render/RPI/Reflect/Model/SkinMetaAssetCreator.h>
+#include <JE/Render/RPI/Reflect/Model/ModelAssetHelpers.h>
 
 #include <SceneAPI/SceneCore/Containers/Scene.h>
 #include <SceneAPI/SceneCore/Containers/Views/PairIterator.h>
@@ -176,11 +176,11 @@ namespace JE::Assets::RenderBuilders
             size_t newIndicesSize;
             if (settings.m_preserveTopology)
             {
-                newIndicesSize = meshopt_simplify(newIndices.data(), mesh.m_indices.data(), mesh.m_indices.size(), mesh.m_positions.data(), mesh.m_vertexCount, sizeof(float) * AZ::RPI::PositionFloatsPerVert, targetIndexSize, targetError, simplifyOption, &resultError);
+                newIndicesSize = meshopt_simplify(newIndices.data(), mesh.m_indices.data(), mesh.m_indices.size(), mesh.m_positions.data(), mesh.m_vertexCount, sizeof(float) * JE::Render::RPI::PositionFloatsPerVert, targetIndexSize, targetError, simplifyOption, &resultError);
             }
             else
             {
-                newIndicesSize = meshopt_simplifySloppy(newIndices.data(), mesh.m_indices.data(), mesh.m_indices.size(), mesh.m_positions.data(), mesh.m_vertexCount, sizeof(float) * AZ::RPI::PositionFloatsPerVert, targetIndexSize, targetError, &resultError);
+                newIndicesSize = meshopt_simplifySloppy(newIndices.data(), mesh.m_indices.data(), mesh.m_indices.size(), mesh.m_positions.data(), mesh.m_vertexCount, sizeof(float) * JE::Render::RPI::PositionFloatsPerVert, targetIndexSize, targetError, &resultError);
             }
 
             newIndices.resize(newIndicesSize);
@@ -192,7 +192,7 @@ namespace JE::Assets::RenderBuilders
             mesh.m_indices = AZStd::move(newIndices);
             // TODO: maybe this optimization can be applied for existing lods as well.
             meshopt_optimizeVertexCache(mesh.m_indices.data(), mesh.m_indices.data(), newIndicesSize, mesh.m_vertexCount);
-            meshopt_optimizeOverdraw(mesh.m_indices.data(), mesh.m_indices.data(), newIndicesSize, mesh.m_positions.data(), mesh.m_vertexCount, sizeof(float) * AZ::RPI::PositionFloatsPerVert, 1.0f);
+            meshopt_optimizeOverdraw(mesh.m_indices.data(), mesh.m_indices.data(), newIndicesSize, mesh.m_positions.data(), mesh.m_vertexCount, sizeof(float) * JE::Render::RPI::PositionFloatsPerVert, 1.0f);
         }
     }
 
@@ -206,7 +206,7 @@ namespace JE::Assets::RenderBuilders
                 settingsRegistry->Get(m_modelCompressionEnabled, ModelCompressionIsEnabledKey);
             }
 
-            auto assetIdOutcome = AZ::RPI::AssetUtils::MakeAssetId(s_defaultVertexBufferPoolSourcePath, 0);
+            auto assetIdOutcome = JE::Render::RPI::AssetUtils::MakeAssetId(s_defaultVertexBufferPoolSourcePath, 0);
             if (!assetIdOutcome.IsSuccess())
             {
                 return AZ::SceneAPI::Events::ProcessingResult::Failure;
@@ -415,7 +415,7 @@ namespace JE::Assets::RenderBuilders
 
         // Then in each Lod we need to group all faces by material id.
         // All sub meshes with the same material id get merged
-        AZStd::vector<AZ::Data::Asset<AZ::RPI::ModelLodAsset>> lodAssets;
+        AZStd::vector<AZ::Data::Asset<JE::Render::RPI::ModelLodAsset>> lodAssets;
         if (autoLodGenerationEnabled)
         {
             lodAssets.resize(AZ::SceneAPI::SceneData::LodRule::m_maxLods);
@@ -451,13 +451,13 @@ namespace JE::Assets::RenderBuilders
         // Joint name to joint index map used for the skinning influences.
         AZStd::unordered_map<AZStd::string, uint16_t> jointNameToIndexMap;
 
-        AZStd::string modelAssetName = GetAssetFullName(AZ::RPI::ModelAsset::TYPEINFO_Uuid());
+        AZStd::string modelAssetName = GetAssetFullName(JE::Render::RPI::ModelAsset::TYPEINFO_Uuid());
         const AZ::Data::AssetId modelAssetId = CreateAssetId(modelAssetName);
 
-        AZ::RPI::MorphTargetMetaAssetCreator morphTargetMetaCreator;
-        morphTargetMetaCreator.Begin(AZ::RPI::MorphTargetMetaAsset::ConstructAssetId(modelAssetId, modelAssetName));
+        JE::Render::RPI::MorphTargetMetaAssetCreator morphTargetMetaCreator;
+        morphTargetMetaCreator.Begin(JE::Render::RPI::MorphTargetMetaAsset::ConstructAssetId(modelAssetId, modelAssetName));
 
-        AZ::RPI::ModelAssetCreator modelAssetCreator;
+        JE::Render::RPI::ModelAssetCreator modelAssetCreator;
         modelAssetCreator.Begin(modelAssetId);
         modelAssetCreator.SetName(modelAssetName);
         AZStd::shared_ptr<const AZ::SceneAPI::DataTypes::ITagRule> tagRule = context.m_group.GetRuleContainerConst().FindFirstByType<AZ::SceneAPI::DataTypes::ITagRule>();
@@ -483,9 +483,9 @@ namespace JE::Assets::RenderBuilders
             // By default, we merge meshes that share the same material
             bool canMergeMeshes = true;
 
-            AZ::RPI::ModelLodAssetCreator lodAssetCreator;
+            JE::Render::RPI::ModelLodAssetCreator lodAssetCreator;
             m_lodName = AZStd::string::format("lod%d", lodIndex);
-            AZStd::string lodAssetName = GetAssetFullName(AZ::RPI::ModelLodAsset::TYPEINFO_Uuid());
+            AZStd::string lodAssetName = GetAssetFullName(JE::Render::RPI::ModelLodAsset::TYPEINFO_Uuid());
             lodAssetCreator.Begin(CreateAssetId(lodAssetName));
 
             if (AZ::SceneAPI::Utilities::IsDebugEnabled())
@@ -615,8 +615,8 @@ namespace JE::Assets::RenderBuilders
                 }
 #endif
 
-                AZ::RPI::BufferAssetView indexBuffer;
-                AZStd::vector<AZ::RPI::ModelLodAsset::Mesh::StreamBufferInfo> streamBuffers;
+                JE::Render::RPI::BufferAssetView indexBuffer;
+                AZStd::vector<JE::Render::RPI::ModelLodAsset::Mesh::StreamBufferInfo> streamBuffers;
                 AZ::Aabb subMeshAabb = AZ::Aabb::CreateNull();
 
                 if (!CreateModelLodBuffers(mergedMesh, indexBuffer, streamBuffers, lodAssetCreator, subMeshAabb))
@@ -637,8 +637,8 @@ namespace JE::Assets::RenderBuilders
                 {
                     const ProductMeshView meshView = CreateViewToEntireMesh(mesh);
 
-                    AZ::RPI::BufferAssetView indexBuffer;
-                    AZStd::vector<AZ::RPI::ModelLodAsset::Mesh::StreamBufferInfo> streamBuffers;
+                    JE::Render::RPI::BufferAssetView indexBuffer;
+                    AZStd::vector<JE::Render::RPI::ModelLodAsset::Mesh::StreamBufferInfo> streamBuffers;
                     AZ::Aabb subMeshAabb = AZ::Aabb::CreateNull();
 
                     // Mesh name in ProductMeshContent could be duplicated so generate unique mesh name using index
@@ -690,8 +690,8 @@ namespace JE::Assets::RenderBuilders
                 }
 #endif
             }
-            AZ::RPI::SkinMetaAssetCreator skinCreator;
-            skinCreator.Begin(AZ::RPI::SkinMetaAsset::ConstructAssetId(modelAssetId, modelAssetName));
+            JE::Render::RPI::SkinMetaAssetCreator skinCreator;
+            skinCreator.Begin(JE::Render::RPI::SkinMetaAsset::ConstructAssetId(modelAssetId, modelAssetName));
 
             skinCreator.SetJointNameToIndexMap(jointNameToIndexMap);
 
@@ -776,7 +776,7 @@ namespace JE::Assets::RenderBuilders
         const ModelAssetBuilderContext& context,
         const SourceMeshContentList& sourceMeshList,
         AZStd::unordered_map<AZStd::string, uint16_t>& jointNameToIndexMap,
-        AZ::RPI::MorphTargetMetaAssetCreator& morphTargetMetaCreator)
+        JE::Render::RPI::MorphTargetMetaAssetCreator& morphTargetMetaCreator)
     {
         ProductMeshContentList productMeshList;
 
@@ -946,8 +946,8 @@ namespace JE::Assets::RenderBuilders
                 const size_t vertexCount = oldToNewIndices.size();
                 productMesh.m_vertexCount = vertexCount;
 
-                positions.reserve(vertexCount * AZ::RPI::PositionFloatsPerVert);
-                normals.reserve(vertexCount * AZ::RPI::NormalFloatsPerVert);
+                positions.reserve(vertexCount * JE::Render::RPI::PositionFloatsPerVert);
+                normals.reserve(vertexCount * JE::Render::RPI::NormalFloatsPerVert);
 
                 if (sourceMesh.m_meshTangents)
                 {
@@ -956,7 +956,7 @@ namespace JE::Assets::RenderBuilders
                         AZ_Assert(false, "Out of bounds access of mesh tangents.");
                         return AZ::Failure();
                     }
-                    tangents.reserve(vertexCount * AZ::RPI::TangentFloatsPerVert);
+                    tangents.reserve(vertexCount * JE::Render::RPI::TangentFloatsPerVert);
 
                     if (sourceMesh.m_meshBitangents)
                     {
@@ -965,7 +965,7 @@ namespace JE::Assets::RenderBuilders
                             AZ_Assert(false, "Out of bounds access of mesh bitangents.");
                             return AZ::Failure();
                         }
-                        bitangents.reserve(vertexCount * AZ::RPI::BitangentFloatsPerVert);
+                        bitangents.reserve(vertexCount * JE::Render::RPI::BitangentFloatsPerVert);
                     }
                 }
 
@@ -983,7 +983,7 @@ namespace JE::Assets::RenderBuilders
                 uvSets.resize(uvSetCount);
                 for (auto& uvSet : uvSets)
                 {
-                    uvSet.reserve(vertexCount * AZ::RPI::UVFloatsPerVert);
+                    uvSet.reserve(vertexCount * JE::Render::RPI::UVFloatsPerVert);
                 }
 
                 colorNames.reserve(colorSetCount);
@@ -1000,7 +1000,7 @@ namespace JE::Assets::RenderBuilders
                 colorSets.resize(colorSetCount);
                 for (auto& colorSet : colorSets)
                 {
-                    colorSet.reserve(vertexCount * AZ::RPI::ColorFloatsPerVert);
+                    colorSet.reserve(vertexCount * JE::Render::RPI::ColorFloatsPerVert);
                 }
 
                 const bool hasClothData = !sourceMesh.m_meshClothData.empty();
@@ -1011,7 +1011,7 @@ namespace JE::Assets::RenderBuilders
                         AZ_Assert(false, "Vertex Count %d does not match mesh cloth data size %d", vertexCount, sourceMesh.m_meshClothData.size());
                         return AZ::Failure();
                     }
-                    clothData.reserve(vertexCount * AZ::RPI::ClothDataFloatsPerVert);
+                    clothData.reserve(vertexCount * JE::Render::RPI::ClothDataFloatsPerVert);
                 }
 
                 bool hasSkinData = !sourceMesh.m_skinData.empty();
@@ -1021,12 +1021,12 @@ namespace JE::Assets::RenderBuilders
                     // of total elements. Pad buffers with missing data to make them align with positions and normals
                     if (!sourceMesh.m_meshTangents)
                     {
-                        tangents.resize(vertexCount * AZ::RPI::TangentFloatsPerVert, 1.0f);
+                        tangents.resize(vertexCount * JE::Render::RPI::TangentFloatsPerVert, 1.0f);
                         AZ_Warning(s_builderName, false, "Mesh '%s' is missing tangents and no defaults were generated. Skinned meshes require tangents. Dummy tangents will be inserted, which may result in rendering artifacts.", sourceMesh.m_name.GetCStr());
                     }
                     if (!sourceMesh.m_meshBitangents)
                     {
-                        bitangents.resize(vertexCount * AZ::RPI::BitangentFloatsPerVert, 1.0f);
+                        bitangents.resize(vertexCount * JE::Render::RPI::BitangentFloatsPerVert, 1.0f);
                         AZ_Warning(s_builderName, false, "Mesh '%s' is missing bitangents and no defaults were generated. Skinned meshes require bitangents. Dummy bitangents will be inserted, which may result in rendering artifacts.", sourceMesh.m_name.GetCStr());
                     }
 
@@ -1184,18 +1184,18 @@ namespace JE::Assets::RenderBuilders
                         AZ_Info(s_builderName, "               %zu skinWeights\n", skinWeights.size());
                     }
 
-                    AZ::RPI::ModelAssetHelpers::AlignStreamBuffer(positions, vertexCount, AZ::RPI::PositionFormat, AZ::RPI::SkinnedMeshBufferAlignment);
-                    AZ::RPI::ModelAssetHelpers::AlignStreamBuffer(normals, vertexCount, AZ::RPI::NormalFormat, AZ::RPI::SkinnedMeshBufferAlignment);
-                    AZ::RPI::ModelAssetHelpers::AlignStreamBuffer(tangents, vertexCount, AZ::RPI::TangentFormat, AZ::RPI::SkinnedMeshBufferAlignment);
-                    AZ::RPI::ModelAssetHelpers::AlignStreamBuffer(bitangents, vertexCount, AZ::RPI::BitangentFormat, AZ::RPI::SkinnedMeshBufferAlignment);
+                    JE::Render::RPI::ModelAssetHelpers::AlignStreamBuffer(positions, vertexCount, JE::Render::RPI::PositionFormat, JE::Render::RPI::SkinnedMeshBufferAlignment);
+                    JE::Render::RPI::ModelAssetHelpers::AlignStreamBuffer(normals, vertexCount, JE::Render::RPI::NormalFormat, JE::Render::RPI::SkinnedMeshBufferAlignment);
+                    JE::Render::RPI::ModelAssetHelpers::AlignStreamBuffer(tangents, vertexCount, JE::Render::RPI::TangentFormat, JE::Render::RPI::SkinnedMeshBufferAlignment);
+                    JE::Render::RPI::ModelAssetHelpers::AlignStreamBuffer(bitangents, vertexCount, JE::Render::RPI::BitangentFormat, JE::Render::RPI::SkinnedMeshBufferAlignment);
 
                     if (hasSkinData)
                     {
                         const size_t totalVertexInfluences = productMesh.m_influencesPerVertex * vertexCount;
-                        AZ::RPI::ModelAssetHelpers::AlignStreamBuffer(
-                            skinJointIndices, totalVertexInfluences, AZ::RPI::SkinIndicesFormat, AZ::RPI::SkinnedMeshBufferAlignment);
-                        AZ::RPI::ModelAssetHelpers::AlignStreamBuffer(
-                            skinWeights, totalVertexInfluences, AZ::RPI::SkinWeightFormat, AZ::RPI::SkinnedMeshBufferAlignment);
+                        JE::Render::RPI::ModelAssetHelpers::AlignStreamBuffer(
+                            skinJointIndices, totalVertexInfluences, JE::Render::RPI::SkinIndicesFormat, JE::Render::RPI::SkinnedMeshBufferAlignment);
+                        JE::Render::RPI::ModelAssetHelpers::AlignStreamBuffer(
+                            skinWeights, totalVertexInfluences, JE::Render::RPI::SkinWeightFormat, JE::Render::RPI::SkinnedMeshBufferAlignment);
 
                         if (AZ::SceneAPI::Utilities::IsDebugEnabled())
                         {
@@ -1242,21 +1242,21 @@ namespace JE::Assets::RenderBuilders
         {
             for (ProductMeshContent& productMesh : productMeshList)
             {
-                size_t vertexCount = productMesh.m_positions.size() / AZ::RPI::PositionFloatsPerVert;
+                size_t vertexCount = productMesh.m_positions.size() / JE::Render::RPI::PositionFloatsPerVert;
 
                 // Skinned meshes require that positions, normals, tangents, bitangents, all exist and have the same number
                 // of total elements. Pad buffers with missing data to make them align with positions and normals
                 if (productMesh.m_tangents.empty())
                 {
                     size_t alignedVertexCount =
-                        AZ::RPI::ModelAssetHelpers::GetAlignedCount<float>(vertexCount, AZ::RPI::TangentFormat, AZ::RPI::SkinnedMeshBufferAlignment);
+                        JE::Render::RPI::ModelAssetHelpers::GetAlignedCount<float>(vertexCount, JE::Render::RPI::TangentFormat, JE::Render::RPI::SkinnedMeshBufferAlignment);
                     productMesh.m_tangents.resize(alignedVertexCount, 1.0f);
                     AZ_Warning(s_builderName, false, "Mesh '%s' is missing tangents and no defaults were generated. Skinned meshes require tangents. Dummy tangents will be inserted, which may result in rendering artifacts.", productMesh.m_name.GetCStr());
                 }
                 if (productMesh.m_bitangents.empty())
                 {
                     size_t alignedVertexCount =
-                        AZ::RPI::ModelAssetHelpers::GetAlignedCount<float>(vertexCount, AZ::RPI::BitangentFormat, AZ::RPI::SkinnedMeshBufferAlignment);
+                        JE::Render::RPI::ModelAssetHelpers::GetAlignedCount<float>(vertexCount, JE::Render::RPI::BitangentFormat, JE::Render::RPI::SkinnedMeshBufferAlignment);
                     productMesh.m_bitangents.resize(alignedVertexCount, 1.0f);
                     AZ_Warning(s_builderName, false, "Mesh '%s' is missing bitangents and no defaults were generated. Skinned meshes require bitangents. Dummy bitangents will be inserted, which may result in rendering artifacts.", productMesh.m_name.GetCStr());
                 }
@@ -1587,7 +1587,7 @@ namespace JE::Assets::RenderBuilders
         if (isAligned)
         {
             size_t expectedPaddedVertexCountInT =
-                AZ::RPI::ModelAssetHelpers::GetAlignedCount<T>(expectedVertexCount, format, AZ::RPI::SkinnedMeshBufferAlignment);
+                JE::Render::RPI::ModelAssetHelpers::GetAlignedCount<T>(expectedVertexCount, format, JE::Render::RPI::SkinnedMeshBufferAlignment);
             size_t expectedPaddedVertexCount = expectedPaddedVertexCountInT / AZ::RHI::GetFormatComponentCount(format);
             vertexCountMatchesExpected = expectedPaddedVertexCount == actualVertexCount;
         }
@@ -1608,33 +1608,33 @@ namespace JE::Assets::RenderBuilders
         const bool hasSkinData = !mesh.m_skinJointIndices.empty() && !mesh.m_skinWeights.empty();
         if (!mesh.m_positions.empty())
         {
-            success &= ValidateStreamSize(mesh.m_vertexCount, mesh.m_positions, AZ::RPI::PositionFormat, "POSITION", hasSkinData);
+            success &= ValidateStreamSize(mesh.m_vertexCount, mesh.m_positions, JE::Render::RPI::PositionFormat, "POSITION", hasSkinData);
         }
         if (!mesh.m_normals.empty())
         {
-            success &= ValidateStreamSize(mesh.m_vertexCount, mesh.m_normals, AZ::RPI::NormalFormat, "NORMAL", hasSkinData);
+            success &= ValidateStreamSize(mesh.m_vertexCount, mesh.m_normals, JE::Render::RPI::NormalFormat, "NORMAL", hasSkinData);
         }
         if (!mesh.m_tangents.empty())
         {
-            success &= ValidateStreamSize(mesh.m_vertexCount, mesh.m_tangents, AZ::RPI::TangentFormat, "TANGENT", hasSkinData);
+            success &= ValidateStreamSize(mesh.m_vertexCount, mesh.m_tangents, JE::Render::RPI::TangentFormat, "TANGENT", hasSkinData);
         }
         if (!mesh.m_bitangents.empty())
         {
-            success &= ValidateStreamSize(mesh.m_vertexCount, mesh.m_bitangents, AZ::RPI::BitangentFormat, "BITANGENT", hasSkinData);
+            success &= ValidateStreamSize(mesh.m_vertexCount, mesh.m_bitangents, JE::Render::RPI::BitangentFormat, "BITANGENT", hasSkinData);
         }
 
         for (size_t i = 0; i < mesh.m_uvSets.size(); ++i)
         {
-            success &= ValidateStreamSize(mesh.m_vertexCount, mesh.m_uvSets[i], AZ::RPI::UVFormat, mesh.m_uvCustomNames[i].GetCStr());
+            success &= ValidateStreamSize(mesh.m_vertexCount, mesh.m_uvSets[i], JE::Render::RPI::UVFormat, mesh.m_uvCustomNames[i].GetCStr());
         }
         for (size_t i = 0; i < mesh.m_colorSets.size(); ++i)
         {
             success &=
-                ValidateStreamSize(mesh.m_vertexCount, mesh.m_colorSets[i], AZ::RPI::ColorFormat, mesh.m_colorCustomNames[i].GetCStr());
+                ValidateStreamSize(mesh.m_vertexCount, mesh.m_colorSets[i], JE::Render::RPI::ColorFormat, mesh.m_colorCustomNames[i].GetCStr());
         }
         if (!mesh.m_clothData.empty())
         {
-            success &= ValidateStreamSize(mesh.m_vertexCount, mesh.m_clothData, AZ::RPI::ClothDataFormat, AZ::RPI::ShaderSemanticName_ClothData);
+            success &= ValidateStreamSize(mesh.m_vertexCount, mesh.m_clothData, JE::Render::RPI::ClothDataFormat, JE::Render::RPI::ShaderSemanticName_ClothData);
         }
         if (!mesh.m_skinJointIndices.empty())
         {
@@ -1642,7 +1642,7 @@ namespace JE::Assets::RenderBuilders
                 mesh.m_vertexCount * mesh.m_influencesPerVertex,
                 mesh.m_skinJointIndices,
                 AZ::RHI::Format::R16_UINT,
-                AZ::RPI::ShaderSemanticName_SkinJointIndices,
+                JE::Render::RPI::ShaderSemanticName_SkinJointIndices,
                 hasSkinData);
         }
         if (!mesh.m_skinWeights.empty())
@@ -1650,8 +1650,8 @@ namespace JE::Assets::RenderBuilders
             success &= ValidateStreamSize(
                 mesh.m_vertexCount * mesh.m_influencesPerVertex,
                 mesh.m_skinWeights,
-                AZ::RPI::SkinWeightFormat,
-                AZ::RPI::ShaderSemanticName_SkinWeights,
+                JE::Render::RPI::SkinWeightFormat,
+                JE::Render::RPI::ShaderSemanticName_SkinWeights,
                 hasSkinData);
         }
 
@@ -1667,8 +1667,8 @@ namespace JE::Assets::RenderBuilders
         auto meshPositionsFloatCount = static_cast<uint32_t>(mesh.m_positions.size());
         auto meshNormalsFloatCount = static_cast<uint32_t>(mesh.m_normals.size());
 
-        auto meshPositionCount = meshPositionsFloatCount / AZ::RPI::PositionFloatsPerVert;
-        auto meshNormalsCount = meshNormalsFloatCount / AZ::RPI::NormalFloatsPerVert;
+        auto meshPositionCount = meshPositionsFloatCount / JE::Render::RPI::PositionFloatsPerVert;
+        auto meshNormalsCount = meshNormalsFloatCount / JE::Render::RPI::NormalFloatsPerVert;
         const bool hasSkinData = !mesh.m_skinJointIndices.empty() && !mesh.m_skinWeights.empty();
         if (hasSkinData)
         {
@@ -1677,11 +1677,11 @@ namespace JE::Assets::RenderBuilders
             meshNormalsCount = aznumeric_cast<uint32_t>(mesh.m_vertexCount);
         }
 
-        meshView.m_indexView = AZ::RHI::BufferViewDescriptor::CreateTyped(0, meshIndexCount, AZ::RPI::IndicesFormat);
-        meshView.m_positionView = AZ::RHI::BufferViewDescriptor::CreateTyped(0, meshPositionCount, AZ::RPI::PositionFormat);
+        meshView.m_indexView = AZ::RHI::BufferViewDescriptor::CreateTyped(0, meshIndexCount, JE::Render::RPI::IndicesFormat);
+        meshView.m_positionView = AZ::RHI::BufferViewDescriptor::CreateTyped(0, meshPositionCount, JE::Render::RPI::PositionFormat);
         if (meshNormalsCount > 0)
         {
-            meshView.m_normalView = AZ::RHI::BufferViewDescriptor::CreateTyped(0, meshNormalsCount, AZ::RPI::NormalFormat);
+            meshView.m_normalView = AZ::RHI::BufferViewDescriptor::CreateTyped(0, meshNormalsCount, JE::Render::RPI::NormalFormat);
         }
 
         const size_t uvSetCount = mesh.m_uvSets.size();
@@ -1693,9 +1693,9 @@ namespace JE::Assets::RenderBuilders
         {
             const auto& uvSet = mesh.m_uvSets[uvSetIndex];
             auto uvFloatCount = static_cast<uint32_t>(uvSet.size());
-            auto uvCount = uvFloatCount / AZ::RPI::UVFloatsPerVert;
+            auto uvCount = uvFloatCount / JE::Render::RPI::UVFloatsPerVert;
 
-            meshView.m_uvSetViews.push_back(AZ::RHI::BufferViewDescriptor::CreateTyped(0, uvCount, AZ::RPI::UVFormat));
+            meshView.m_uvSetViews.push_back(AZ::RHI::BufferViewDescriptor::CreateTyped(0, uvCount, JE::Render::RPI::UVFormat));
             meshView.m_uvCustomNames.push_back(mesh.m_uvCustomNames[uvSetIndex]);
         }
 
@@ -1705,20 +1705,20 @@ namespace JE::Assets::RenderBuilders
         {
             const auto& colorSet = mesh.m_colorSets[colorSetIndex];
             auto colorFloatCount = static_cast<uint32_t>(colorSet.size());
-            auto colorCount = colorFloatCount / AZ::RPI::ColorFloatsPerVert;
+            auto colorCount = colorFloatCount / JE::Render::RPI::ColorFloatsPerVert;
 
-            meshView.m_colorSetViews.push_back(AZ::RHI::BufferViewDescriptor::CreateTyped(0, colorCount, AZ::RPI::ColorFormat));
+            meshView.m_colorSetViews.push_back(AZ::RHI::BufferViewDescriptor::CreateTyped(0, colorCount, JE::Render::RPI::ColorFormat));
             meshView.m_colorCustomNames.push_back(mesh.m_colorCustomNames[colorSetIndex]);
         }
 
         if (!mesh.m_tangents.empty())
         {
-            meshView.m_tangentView = AZ::RHI::BufferViewDescriptor::CreateTyped(0, meshNormalsCount, AZ::RPI::TangentFormat);
+            meshView.m_tangentView = AZ::RHI::BufferViewDescriptor::CreateTyped(0, meshNormalsCount, JE::Render::RPI::TangentFormat);
         }
 
         if (!mesh.m_bitangents.empty())
         {
-            meshView.m_bitangentView = AZ::RHI::BufferViewDescriptor::CreateTyped(0, meshNormalsCount, AZ::RPI::BitangentFormat);
+            meshView.m_bitangentView = AZ::RHI::BufferViewDescriptor::CreateTyped(0, meshNormalsCount, JE::Render::RPI::BitangentFormat);
         }
 
         if (!mesh.m_skinJointIndices.empty() && !mesh.m_skinWeights.empty())
@@ -1726,26 +1726,26 @@ namespace JE::Assets::RenderBuilders
             const size_t numSkinInfluences = meshPositionCount * mesh.m_influencesPerVertex;
             const uint32_t jointIndicesSizeInBytes = static_cast<uint32_t>(numSkinInfluences * sizeof(uint16_t));
             meshView.m_skinJointIndicesView = AZ::RHI::BufferViewDescriptor::CreateRaw(0, jointIndicesSizeInBytes);
-            meshView.m_skinWeightsView = AZ::RHI::BufferViewDescriptor::CreateTyped(0, aznumeric_cast<uint32_t>(numSkinInfluences),AZ::RPI::SkinWeightFormat);
+            meshView.m_skinWeightsView = AZ::RHI::BufferViewDescriptor::CreateTyped(0, aznumeric_cast<uint32_t>(numSkinInfluences),JE::Render::RPI::SkinWeightFormat);
         }
 
         if (!mesh.m_morphTargetVertexData.empty())
         {
             const size_t numTotalVertices = mesh.m_morphTargetVertexData.size();
-            meshView.m_morphTargetVertexDataView = AZ::RHI::BufferViewDescriptor::CreateStructured(0, static_cast<uint32_t>(numTotalVertices), sizeof(AZ::RPI::PackedCompressedMorphTargetDelta));
+            meshView.m_morphTargetVertexDataView = AZ::RHI::BufferViewDescriptor::CreateStructured(0, static_cast<uint32_t>(numTotalVertices), sizeof(JE::Render::RPI::PackedCompressedMorphTargetDelta));
         }
 
         if (!mesh.m_clothData.empty())
         {
             auto meshClothDataFloatCount = static_cast<uint32_t>(mesh.m_clothData.size());
-            AZ_Assert((meshClothDataFloatCount % AZ::RPI::ClothDataFloatsPerVert) == 0,
-                "Unexpected number of cloth data elements (%d), it should contain a multiple of %d elements.", meshClothDataFloatCount, AZ::RPI::ClothDataFloatsPerVert);
+            AZ_Assert((meshClothDataFloatCount % JE::Render::RPI::ClothDataFloatsPerVert) == 0,
+                "Unexpected number of cloth data elements (%d), it should contain a multiple of %d elements.", meshClothDataFloatCount, JE::Render::RPI::ClothDataFloatsPerVert);
 
-            auto meshClothDataCount = meshClothDataFloatCount / AZ::RPI::ClothDataFloatsPerVert;
+            auto meshClothDataCount = meshClothDataFloatCount / JE::Render::RPI::ClothDataFloatsPerVert;
             AZ_Assert(meshClothDataCount == meshPositionCount,
                 "Number of cloth data elements (%d) does not match the number of positions (%d) in the mesh", meshClothDataCount, meshPositionCount);
 
-            meshView.m_clothDataView = AZ::RHI::BufferViewDescriptor::CreateTyped(0, meshClothDataCount, AZ::RPI::ClothDataFormat);
+            meshView.m_clothDataView = AZ::RHI::BufferViewDescriptor::CreateTyped(0, meshClothDataCount, JE::Render::RPI::ClothDataFormat);
         }
 
         meshView.m_materialUid = mesh.m_materialUid;
@@ -1795,11 +1795,11 @@ namespace JE::Assets::RenderBuilders
 
             ProductMeshView meshView;
             meshView.m_name = mesh.m_name;
-            meshView.m_indexView = AZ::RHI::BufferViewDescriptor::CreateTyped(static_cast<uint32_t>(lodBufferInfo.m_indexCount), meshIndexCount, AZ::RPI::IndicesFormat);
+            meshView.m_indexView = AZ::RHI::BufferViewDescriptor::CreateTyped(static_cast<uint32_t>(lodBufferInfo.m_indexCount), meshIndexCount, JE::Render::RPI::IndicesFormat);
             lodBufferInfo.m_indexCount += meshIndexCount;
 
             const bool hasSkinData = !mesh.m_skinJointIndices.empty() && !mesh.m_skinWeights.empty();
-            uint32_t meshVertexCount = meshPositionsFloatCount / AZ::RPI::PositionFloatsPerVert;
+            uint32_t meshVertexCount = meshPositionsFloatCount / JE::Render::RPI::PositionFloatsPerVert;
             if (hasSkinData)
             {
                 // Skinned buffers are padded so true vertex count is cached as part of the mesh and used here.
@@ -1808,29 +1808,29 @@ namespace JE::Assets::RenderBuilders
 
             if (!mesh.m_positions.empty())
             {
-                const uint32_t elementOffset = static_cast<uint32_t>(lodBufferInfo.m_positionsFloatCount) / AZ::RPI::PositionFloatsPerVert;
-                meshView.m_positionView = AZ::RHI::BufferViewDescriptor::CreateTyped(elementOffset, meshVertexCount, AZ::RPI::PositionFormat);
+                const uint32_t elementOffset = static_cast<uint32_t>(lodBufferInfo.m_positionsFloatCount) / JE::Render::RPI::PositionFloatsPerVert;
+                meshView.m_positionView = AZ::RHI::BufferViewDescriptor::CreateTyped(elementOffset, meshVertexCount, JE::Render::RPI::PositionFormat);
                 lodBufferInfo.m_positionsFloatCount += meshPositionsFloatCount;
             }
 
             if (!mesh.m_normals.empty())
             {
-                const uint32_t elementOffset = static_cast<uint32_t>(lodBufferInfo.m_normalsFloatCount) / AZ::RPI::NormalFloatsPerVert;
-                meshView.m_normalView = AZ::RHI::BufferViewDescriptor::CreateTyped(elementOffset, meshVertexCount, AZ::RPI::NormalFormat);
+                const uint32_t elementOffset = static_cast<uint32_t>(lodBufferInfo.m_normalsFloatCount) / JE::Render::RPI::NormalFloatsPerVert;
+                meshView.m_normalView = AZ::RHI::BufferViewDescriptor::CreateTyped(elementOffset, meshVertexCount, JE::Render::RPI::NormalFormat);
                 lodBufferInfo.m_normalsFloatCount += meshNormalsFloatCount;
             }
 
             if (!mesh.m_tangents.empty())
             {
-                const uint32_t elementOffset = static_cast<uint32_t>(lodBufferInfo.m_tangentsFloatCount) / AZ::RPI::TangentFloatsPerVert;
-                meshView.m_tangentView = AZ::RHI::BufferViewDescriptor::CreateTyped(elementOffset, meshVertexCount, AZ::RPI::TangentFormat);
+                const uint32_t elementOffset = static_cast<uint32_t>(lodBufferInfo.m_tangentsFloatCount) / JE::Render::RPI::TangentFloatsPerVert;
+                meshView.m_tangentView = AZ::RHI::BufferViewDescriptor::CreateTyped(elementOffset, meshVertexCount, JE::Render::RPI::TangentFormat);
                 lodBufferInfo.m_tangentsFloatCount += meshTangentsFloatCount;
             }
 
             if (!mesh.m_bitangents.empty())
             {
-                const uint32_t elementOffset = static_cast<uint32_t>(lodBufferInfo.m_bitangentsFloatCount) / AZ::RPI::BitangentFloatsPerVert;
-                meshView.m_bitangentView = AZ::RHI::BufferViewDescriptor::CreateTyped(elementOffset, meshVertexCount, AZ::RPI::BitangentFormat);
+                const uint32_t elementOffset = static_cast<uint32_t>(lodBufferInfo.m_bitangentsFloatCount) / JE::Render::RPI::BitangentFloatsPerVert;
+                meshView.m_bitangentView = AZ::RHI::BufferViewDescriptor::CreateTyped(elementOffset, meshVertexCount, JE::Render::RPI::BitangentFormat);
                 lodBufferInfo.m_bitangentsFloatCount += meshBitangentsFloatCount;
             }
 
@@ -1845,8 +1845,8 @@ namespace JE::Assets::RenderBuilders
 
                     auto& uvSetView = meshView.m_uvSetViews[i];
 
-                    const uint32_t elementOffset = static_cast<uint32_t>(lodBufferInfo.m_uvSetFloatCounts[i]) / AZ::RPI::UVFloatsPerVert;
-                    uvSetView = AZ::RHI::BufferViewDescriptor::CreateTyped(elementOffset, meshVertexCount, AZ::RPI::UVFormat);
+                    const uint32_t elementOffset = static_cast<uint32_t>(lodBufferInfo.m_uvSetFloatCounts[i]) / JE::Render::RPI::UVFloatsPerVert;
+                    uvSetView = AZ::RHI::BufferViewDescriptor::CreateTyped(elementOffset, meshVertexCount, JE::Render::RPI::UVFormat);
 
                     const auto uvCount = static_cast<uint32_t>(mesh.m_uvSets[i].size());
                     lodBufferInfo.m_uvSetFloatCounts[i] += uvCount;
@@ -1864,8 +1864,8 @@ namespace JE::Assets::RenderBuilders
 
                     auto& colorSetView = meshView.m_colorSetViews[i];
 
-                    const uint32_t elementOffset = static_cast<uint32_t>(lodBufferInfo.m_colorSetFloatCounts[i]) / AZ::RPI::ColorFloatsPerVert;
-                    colorSetView = AZ::RHI::BufferViewDescriptor::CreateTyped(elementOffset, meshVertexCount, AZ::RPI::ColorFormat);
+                    const uint32_t elementOffset = static_cast<uint32_t>(lodBufferInfo.m_colorSetFloatCounts[i]) / JE::Render::RPI::ColorFloatsPerVert;
+                    colorSetView = AZ::RHI::BufferViewDescriptor::CreateTyped(elementOffset, meshVertexCount, JE::Render::RPI::ColorFormat);
 
                     const auto colorCount = static_cast<uint32_t>(mesh.m_colorSets[i].size());
                     lodBufferInfo.m_colorSetFloatCounts[i] += colorCount;
@@ -1874,8 +1874,8 @@ namespace JE::Assets::RenderBuilders
 
             if (!mesh.m_clothData.empty())
             {
-                const uint32_t elementOffset = static_cast<uint32_t>(lodBufferInfo.m_clothDataFloatCount) / AZ::RPI::ClothDataFloatsPerVert;
-                meshView.m_clothDataView = AZ::RHI::BufferViewDescriptor::CreateTyped(elementOffset, meshVertexCount, AZ::RPI::ClothDataFormat);
+                const uint32_t elementOffset = static_cast<uint32_t>(lodBufferInfo.m_clothDataFloatCount) / JE::Render::RPI::ClothDataFloatsPerVert;
+                meshView.m_clothDataView = AZ::RHI::BufferViewDescriptor::CreateTyped(elementOffset, meshVertexCount, JE::Render::RPI::ClothDataFormat);
                 lodBufferInfo.m_clothDataFloatCount += meshClothDataFloatCount;
             }
 
@@ -1918,7 +1918,7 @@ namespace JE::Assets::RenderBuilders
                 // Weights are more straightforward, just add any new weights
                 const uint32_t prevJointWeightCount = aznumeric_cast<uint32_t>(lodBufferInfo.m_jointWeightsCount);
                 const uint32_t newJointWeightCount = aznumeric_cast<uint32_t>(mesh.m_vertexCount * mesh.m_influencesPerVertex);
-                meshView.m_skinWeightsView = AZ::RHI::BufferViewDescriptor::CreateTyped(prevJointWeightCount, newJointWeightCount, AZ::RPI::SkinWeightFormat);
+                meshView.m_skinWeightsView = AZ::RHI::BufferViewDescriptor::CreateTyped(prevJointWeightCount, newJointWeightCount, JE::Render::RPI::SkinWeightFormat);
                 lodBufferInfo.m_jointWeightsCount += aznumeric_cast<uint32_t>(mesh.m_skinWeights.size());
             }
             else if (lodBufferInfo.m_jointIdsCount > 0)
@@ -1932,7 +1932,7 @@ namespace JE::Assets::RenderBuilders
                 const size_t numPrevVertexDeltas = lodBufferInfo.m_morphTargetVertexDeltaCount;
                 const size_t numNewVertexDeltas = mesh.m_morphTargetVertexData.size();
 
-                meshView.m_morphTargetVertexDataView = AZ::RHI::BufferViewDescriptor::CreateStructured(/*elementOffset=*/ static_cast<uint32_t>(numPrevVertexDeltas), static_cast<uint32_t>(numNewVertexDeltas), sizeof(AZ::RPI::PackedCompressedMorphTargetDelta));
+                meshView.m_morphTargetVertexDataView = AZ::RHI::BufferViewDescriptor::CreateStructured(/*elementOffset=*/ static_cast<uint32_t>(numPrevVertexDeltas), static_cast<uint32_t>(numNewVertexDeltas), sizeof(JE::Render::RPI::PackedCompressedMorphTargetDelta));
 
                 lodBufferInfo.m_morphTargetVertexDeltaCount += numNewVertexDeltas;
             }
@@ -2146,7 +2146,7 @@ namespace JE::Assets::RenderBuilders
 
     template<typename T>
     bool ModelAssetBuilderComponent::BuildStructuredStreamBuffer(
-        AZStd::vector<AZ::RPI::ModelLodAsset::Mesh::StreamBufferInfo>& outStreamBuffers,
+        AZStd::vector<JE::Render::RPI::ModelLodAsset::Mesh::StreamBufferInfo>& outStreamBuffers,
         const AZStd::vector<T>& bufferData,
         const AZ::RHI::ShaderSemantic& semantic,
         const AZ::Name& customStreamName)
@@ -2154,7 +2154,7 @@ namespace JE::Assets::RenderBuilders
         AZStd::string bufferName = semantic.ToString();
         size_t elementCount = bufferData.size();
         size_t elementSize = sizeof(T);
-        AZ::Outcome<AZ::Data::Asset<AZ::RPI::BufferAsset>> bufferOutcome = CreateStructuredBufferAsset(bufferData.data(), elementCount, elementSize, bufferName);
+        AZ::Outcome<AZ::Data::Asset<JE::Render::RPI::BufferAsset>> bufferOutcome = CreateStructuredBufferAsset(bufferData.data(), elementCount, elementSize, bufferName);
 
         if (!bufferOutcome.IsSuccess())
         {
@@ -2168,14 +2168,14 @@ namespace JE::Assets::RenderBuilders
 
     template<typename T>
     bool ModelAssetBuilderComponent::BuildRawStreamBuffer(
-        AZStd::vector<AZ::RPI::ModelLodAsset::Mesh::StreamBufferInfo>& outStreamBuffers,
+        AZStd::vector<JE::Render::RPI::ModelLodAsset::Mesh::StreamBufferInfo>& outStreamBuffers,
         const AZStd::vector<T>& bufferData,
         const AZ::RHI::ShaderSemantic& semantic,
         const AZ::Name& customStreamName)
     {
         AZStd::string bufferName = semantic.ToString();
         size_t sizeInBytes = bufferData.size() * sizeof(T);
-        AZ::Outcome<AZ::Data::Asset<AZ::RPI::BufferAsset>> bufferOutcome = CreateRawBufferAsset(bufferData.data(), sizeInBytes, bufferName);
+        AZ::Outcome<AZ::Data::Asset<JE::Render::RPI::BufferAsset>> bufferOutcome = CreateRawBufferAsset(bufferData.data(), sizeInBytes, bufferName);
 
         if (!bufferOutcome.IsSuccess())
         {
@@ -2189,7 +2189,7 @@ namespace JE::Assets::RenderBuilders
 
     template<typename T>
     bool ModelAssetBuilderComponent::BuildTypedStreamBuffer(
-        AZStd::vector<AZ::RPI::ModelLodAsset::Mesh::StreamBufferInfo>& outStreamBuffers,
+        AZStd::vector<JE::Render::RPI::ModelLodAsset::Mesh::StreamBufferInfo>& outStreamBuffers,
         const AZStd::vector<T>& bufferData,
         AZ::RHI::Format format,
         const AZ::RHI::ShaderSemantic& semantic,
@@ -2197,7 +2197,7 @@ namespace JE::Assets::RenderBuilders
     {
         AZStd::string bufferName = semantic.ToString();
         size_t floatsPerElement = AZ::RHI::GetFormatSize(format) / sizeof(T);
-        AZ::Outcome<AZ::Data::Asset<AZ::RPI::BufferAsset>> bufferOutcome;
+        AZ::Outcome<AZ::Data::Asset<JE::Render::RPI::BufferAsset>> bufferOutcome;
         size_t originalSize = bufferData.size() * sizeof(T);
         if (m_modelCompressionEnabled)
         {
@@ -2206,7 +2206,7 @@ namespace JE::Assets::RenderBuilders
             AZ_Info(s_builderName, "Vertex buffer %s: original %zu, compressed %zu", bufferName.c_str(), originalSize, compressedBuffer.size());
 
             bufferOutcome = compressedBuffer.size() < originalSize ?
-                CreateTypedBufferAsset(compressedBuffer.data(), compressedBuffer.size(), bufferData.size() / floatsPerElement, format, bufferName, AZ::RPI::BufferAsset::CompressionFormat::Vertex) :
+                CreateTypedBufferAsset(compressedBuffer.data(), compressedBuffer.size(), bufferData.size() / floatsPerElement, format, bufferName, JE::Render::RPI::BufferAsset::CompressionFormat::Vertex) :
                 CreateTypedBufferAsset(bufferData.data(), originalSize, bufferData.size() / floatsPerElement, format, bufferName);
         }
         else
@@ -2226,7 +2226,7 @@ namespace JE::Assets::RenderBuilders
 
     template<typename T>
     bool ModelAssetBuilderComponent::BuildStreamBuffer(size_t vertexCount,
-        AZStd::vector<AZ::RPI::ModelLodAsset::Mesh::StreamBufferInfo>& outStreamBuffers,
+        AZStd::vector<JE::Render::RPI::ModelLodAsset::Mesh::StreamBufferInfo>& outStreamBuffers,
         const AZStd::vector<T>& bufferData,
         AZ::RHI::Format format,
         const AZ::RHI::ShaderSemantic& semantic,
@@ -2240,7 +2240,7 @@ namespace JE::Assets::RenderBuilders
         }
 
         AZStd::string bufferName = semantic.ToString();
-        AZ::Outcome<AZ::Data::Asset<AZ::RPI::BufferAsset>> bufferOutcome = CreateTypedBufferAsset(bufferData.data(), bufferData.size() * sizeof(T), vertexCount, format, bufferName);
+        AZ::Outcome<AZ::Data::Asset<JE::Render::RPI::BufferAsset>> bufferOutcome = CreateTypedBufferAsset(bufferData.data(), bufferData.size() * sizeof(T), vertexCount, format, bufferName);
         if (!bufferOutcome.IsSuccess())
         {
             AZ_Error(s_builderName, false, "Failed to build %s stream", semantic.ToString().data());
@@ -2253,9 +2253,9 @@ namespace JE::Assets::RenderBuilders
 
     bool ModelAssetBuilderComponent::CreateModelLodBuffers(
         const ProductMeshContent& lodBufferContent,
-        AZ::RPI::BufferAssetView& outIndexBuffer,
-        AZStd::vector<AZ::RPI::ModelLodAsset::Mesh::StreamBufferInfo>& outStreamBuffers,
-        AZ::RPI::ModelLodAssetCreator& lodAssetCreator,
+        JE::Render::RPI::BufferAssetView& outIndexBuffer,
+        AZStd::vector<JE::Render::RPI::ModelLodAsset::Mesh::StreamBufferInfo>& outStreamBuffers,
+        JE::Render::RPI::ModelLodAssetCreator& lodAssetCreator,
         AZ::Aabb& subMeshAabb)
     {
         const AZStd::vector<uint32_t>& indices = lodBufferContent.m_indices;
@@ -2271,20 +2271,20 @@ namespace JE::Assets::RenderBuilders
 
         // Build Index Buffer ...
         {
-            AZ::Outcome<AZ::Data::Asset<AZ::RPI::BufferAsset>> indexBufferOutcome;
+            AZ::Outcome<AZ::Data::Asset<JE::Render::RPI::BufferAsset>> indexBufferOutcome;
             size_t originalSize = indices.size() * sizeof(uint32_t);
             if (m_modelCompressionEnabled)
             {
-                AZStd::vector<AZ::u8> compressedIndices(meshopt_encodeIndexBufferBound(indices.size(), positions.size() / AZ::RHI::GetFormatComponentCount(AZ::RPI::PositionFormat)));
+                AZStd::vector<AZ::u8> compressedIndices(meshopt_encodeIndexBufferBound(indices.size(), positions.size() / AZ::RHI::GetFormatComponentCount(JE::Render::RPI::PositionFormat)));
                 compressedIndices.resize_no_construct(meshopt_encodeIndexBuffer(compressedIndices.data(), compressedIndices.size(), indices.data(), indices.size()));
                 AZ_Info(s_builderName, "Index buffer: original %zu, compressed %zu", originalSize, compressedIndices.size());
                 indexBufferOutcome = compressedIndices.size() < originalSize ?
-                    CreateTypedBufferAsset(compressedIndices.data(), compressedIndices.size(), indices.size(), AZ::RPI::IndicesFormat, "index", AZ::RPI::BufferAsset::CompressionFormat::Index) :
-                    CreateTypedBufferAsset(indices.data(), originalSize, indices.size(), AZ::RPI::IndicesFormat, "index");
+                    CreateTypedBufferAsset(compressedIndices.data(), compressedIndices.size(), indices.size(), JE::Render::RPI::IndicesFormat, "index", JE::Render::RPI::BufferAsset::CompressionFormat::Index) :
+                    CreateTypedBufferAsset(indices.data(), originalSize, indices.size(), JE::Render::RPI::IndicesFormat, "index");
             }
             else
             {
-                indexBufferOutcome = CreateTypedBufferAsset(indices.data(), originalSize, indices.size(), AZ::RPI::IndicesFormat, "index");
+                indexBufferOutcome = CreateTypedBufferAsset(indices.data(), originalSize, indices.size(), JE::Render::RPI::IndicesFormat, "index");
             }
             if (!indexBufferOutcome.IsSuccess())
             {
@@ -2296,19 +2296,19 @@ namespace JE::Assets::RenderBuilders
         }
 
         // Build various stream buffers ...
-        if (!BuildTypedStreamBuffer<float>(outStreamBuffers, positions, AZ::RPI::PositionFormat, AZ::RHI::ShaderSemantic{"POSITION"}))
+        if (!BuildTypedStreamBuffer<float>(outStreamBuffers, positions, JE::Render::RPI::PositionFormat, AZ::RHI::ShaderSemantic{"POSITION"}))
         {
             return false;
         }
 
-        if (!BuildTypedStreamBuffer<float>(outStreamBuffers, normals, AZ::RPI::NormalFormat, AZ::RHI::ShaderSemantic{"NORMAL"}))
+        if (!BuildTypedStreamBuffer<float>(outStreamBuffers, normals, JE::Render::RPI::NormalFormat, AZ::RHI::ShaderSemantic{"NORMAL"}))
         {
             return false;
         }
 
         if (!tangents.empty())
         {
-            if (!BuildTypedStreamBuffer<float>(outStreamBuffers, tangents, AZ::RPI::TangentFormat, AZ::RHI::ShaderSemantic{"TANGENT"}))
+            if (!BuildTypedStreamBuffer<float>(outStreamBuffers, tangents, JE::Render::RPI::TangentFormat, AZ::RHI::ShaderSemantic{"TANGENT"}))
             {
                 return false;
             }
@@ -2316,7 +2316,7 @@ namespace JE::Assets::RenderBuilders
 
         if (!bitangents.empty())
         {
-            if (!BuildTypedStreamBuffer<float>(outStreamBuffers, bitangents, AZ::RPI::BitangentFormat, AZ::RHI::ShaderSemantic{"BITANGENT"}))
+            if (!BuildTypedStreamBuffer<float>(outStreamBuffers, bitangents, JE::Render::RPI::BitangentFormat, AZ::RHI::ShaderSemantic{"BITANGENT"}))
             {
                 return false;
             }
@@ -2324,7 +2324,7 @@ namespace JE::Assets::RenderBuilders
 
         for (size_t i = 0; i < uvSets.size(); ++i)
         {
-            if (!BuildTypedStreamBuffer<float>(outStreamBuffers, uvSets[i], AZ::RPI::UVFormat, AZ::RHI::ShaderSemantic{"UV", i}, uvCustomNames[i]))
+            if (!BuildTypedStreamBuffer<float>(outStreamBuffers, uvSets[i], JE::Render::RPI::UVFormat, AZ::RHI::ShaderSemantic{"UV", i}, uvCustomNames[i]))
             {
                 return false;
             }
@@ -2332,7 +2332,7 @@ namespace JE::Assets::RenderBuilders
 
         for (size_t i = 0; i < colorSets.size(); ++i)
         {
-            if (!BuildTypedStreamBuffer<float>(outStreamBuffers, colorSets[i], AZ::RPI::ColorFormat, AZ::RHI::ShaderSemantic{"COLOR", i}, colorCustomNames[i]))
+            if (!BuildTypedStreamBuffer<float>(outStreamBuffers, colorSets[i], JE::Render::RPI::ColorFormat, AZ::RHI::ShaderSemantic{"COLOR", i}, colorCustomNames[i]))
             {
                 return false;
             }
@@ -2343,23 +2343,23 @@ namespace JE::Assets::RenderBuilders
         const AZStd::vector<float>& skinWeights = lodBufferContent.m_skinWeights;
         if (!skinJointIndices.empty() && !skinWeights.empty())
         {
-            if (!BuildRawStreamBuffer<uint16_t>(outStreamBuffers, skinJointIndices, AZ::RHI::ShaderSemantic{AZ::RPI::ShaderSemanticName_SkinJointIndices}))
+            if (!BuildRawStreamBuffer<uint16_t>(outStreamBuffers, skinJointIndices, AZ::RHI::ShaderSemantic{JE::Render::RPI::ShaderSemanticName_SkinJointIndices}))
             {
                 return false;
             }
 
-            if (!BuildStreamBuffer<float>(skinWeights.size(), outStreamBuffers, skinWeights, AZ::RPI::SkinWeightFormat, AZ::RHI::ShaderSemantic{AZ::RPI::ShaderSemanticName_SkinWeights}))
+            if (!BuildStreamBuffer<float>(skinWeights.size(), outStreamBuffers, skinWeights, JE::Render::RPI::SkinWeightFormat, AZ::RHI::ShaderSemantic{JE::Render::RPI::ShaderSemanticName_SkinWeights}))
             {
                 return false;
             }
         }
 
         // Morph target buffers
-        const AZStd::vector<AZ::RPI::PackedCompressedMorphTargetDelta>& morphTargetVertexDeltas = lodBufferContent.m_morphTargetVertexData;
+        const AZStd::vector<JE::Render::RPI::PackedCompressedMorphTargetDelta>& morphTargetVertexDeltas = lodBufferContent.m_morphTargetVertexData;
         if (!morphTargetVertexDeltas.empty())
         {
-            if (!BuildStructuredStreamBuffer<AZ::RPI::PackedCompressedMorphTargetDelta>(outStreamBuffers, morphTargetVertexDeltas,
-                AZ::RHI::ShaderSemantic{ AZ::RPI::ShaderSemanticName_MorphTargetDeltas }))
+            if (!BuildStructuredStreamBuffer<JE::Render::RPI::PackedCompressedMorphTargetDelta>(outStreamBuffers, morphTargetVertexDeltas,
+                AZ::RHI::ShaderSemantic{ JE::Render::RPI::ShaderSemanticName_MorphTargetDeltas }))
             {
                 return false;
             }
@@ -2367,7 +2367,7 @@ namespace JE::Assets::RenderBuilders
 
         if (!clothData.empty())
         {
-            if (!BuildTypedStreamBuffer<float>(outStreamBuffers, clothData, AZ::RPI::ClothDataFormat, AZ::RHI::ShaderSemantic{ AZ::RPI::ShaderSemanticName_ClothData }))
+            if (!BuildTypedStreamBuffer<float>(outStreamBuffers, clothData, JE::Render::RPI::ClothDataFormat, AZ::RHI::ShaderSemantic{ JE::Render::RPI::ShaderSemanticName_ClothData }))
             {
                 return false;
             }
@@ -2391,10 +2391,10 @@ namespace JE::Assets::RenderBuilders
 
     bool ModelAssetBuilderComponent::CreateMesh(
         const ProductMeshView& meshView,
-        const AZ::RPI::BufferAssetView& lodIndexBuffer,
-        const AZStd::vector<AZ::RPI::ModelLodAsset::Mesh::StreamBufferInfo>& lodStreamBuffers,
-        AZ::RPI::ModelAssetCreator& modelAssetCreator,
-        AZ::RPI::ModelLodAssetCreator& lodAssetCreator,
+        const JE::Render::RPI::BufferAssetView& lodIndexBuffer,
+        const AZStd::vector<JE::Render::RPI::ModelLodAsset::Mesh::StreamBufferInfo>& lodStreamBuffers,
+        JE::Render::RPI::ModelAssetCreator& modelAssetCreator,
+        JE::Render::RPI::ModelLodAssetCreator& lodAssetCreator,
         const MaterialAssetsByUid& materialAssetsByUid,
         const AZ::Aabb& subMeshAabb)
     {
@@ -2405,8 +2405,8 @@ namespace JE::Assets::RenderBuilders
             auto iter = materialAssetsByUid.find(meshView.m_materialUid);
             if (iter != materialAssetsByUid.end())
             {
-                AZ::RPI::ModelMaterialSlot materialSlot;
-                materialSlot.m_stableId = static_cast<AZ::RPI::ModelMaterialSlot::StableId>(meshView.m_materialUid);
+                JE::Render::RPI::ModelMaterialSlot materialSlot;
+                materialSlot.m_stableId = static_cast<JE::Render::RPI::ModelMaterialSlot::StableId>(meshView.m_materialUid);
                 materialSlot.m_displayName = iter->second.m_name;
                 materialSlot.m_defaultMaterialAsset = iter->second.m_asset;
 
@@ -2418,13 +2418,13 @@ namespace JE::Assets::RenderBuilders
         lodAssetCreator.SetMeshName(meshView.m_name);
 
         // Set the index stream
-        AZ::RPI::BufferAssetView indexBufferAssetView(lodIndexBuffer.GetBufferAsset(), meshView.m_indexView);
+        JE::Render::RPI::BufferAssetView indexBufferAssetView(lodIndexBuffer.GetBufferAsset(), meshView.m_indexView);
 
         lodAssetCreator.SetMeshIndexBuffer(AZStd::move(indexBufferAssetView));
 
         {
             // Build the mesh's Aabb
-            AZ::RPI::ModelLodAsset::Mesh::StreamBufferInfo positionStreamBufferInfo;
+            JE::Render::RPI::ModelLodAsset::Mesh::StreamBufferInfo positionStreamBufferInfo;
             const AZ::RHI::ShaderSemantic& positionSemantic = AZ::RHI::ShaderSemantic{"POSITION"};
             if (!FindStreamBufferById(lodStreamBuffers, positionSemantic, positionStreamBufferInfo))
             {
@@ -2434,7 +2434,7 @@ namespace JE::Assets::RenderBuilders
             lodAssetCreator.SetMeshAabb(subMeshAabb);
 
             // Set position buffer
-            AZ::RPI::BufferAssetView meshPositionBufferAssetView(
+            JE::Render::RPI::BufferAssetView meshPositionBufferAssetView(
                 positionStreamBufferInfo.m_bufferAssetView.GetBufferAsset(),
                 meshView.m_positionView);
 
@@ -2487,12 +2487,12 @@ namespace JE::Assets::RenderBuilders
         // Set skin buffers
         if (meshView.m_skinJointIndicesView.m_elementCount > 0 && meshView.m_skinWeightsView.m_elementCount > 0)
         {
-            if (!SetMeshStreamBufferById(AZ::RHI::ShaderSemantic{AZ::RPI::ShaderSemanticName_SkinJointIndices}, AZ::Name(), meshView.m_skinJointIndicesView, lodStreamBuffers, lodAssetCreator))
+            if (!SetMeshStreamBufferById(AZ::RHI::ShaderSemantic{JE::Render::RPI::ShaderSemanticName_SkinJointIndices}, AZ::Name(), meshView.m_skinJointIndicesView, lodStreamBuffers, lodAssetCreator))
             {
                 return false;
             }
 
-            if (!SetMeshStreamBufferById(AZ::RHI::ShaderSemantic{AZ::RPI::ShaderSemanticName_SkinWeights}, AZ::Name(), meshView.m_skinWeightsView, lodStreamBuffers, lodAssetCreator))
+            if (!SetMeshStreamBufferById(AZ::RHI::ShaderSemantic{JE::Render::RPI::ShaderSemanticName_SkinWeights}, AZ::Name(), meshView.m_skinWeightsView, lodStreamBuffers, lodAssetCreator))
             {
                 return false;
             }
@@ -2501,7 +2501,7 @@ namespace JE::Assets::RenderBuilders
         // Set morph target buffers
         if (meshView.m_morphTargetVertexDataView.m_elementCount > 0)
         {
-            if (!SetMeshStreamBufferById(AZ::RHI::ShaderSemantic{AZ::RPI::ShaderSemanticName_MorphTargetDeltas}, AZ::Name(),
+            if (!SetMeshStreamBufferById(AZ::RHI::ShaderSemantic{JE::Render::RPI::ShaderSemanticName_MorphTargetDeltas}, AZ::Name(),
                 meshView.m_morphTargetVertexDataView, lodStreamBuffers, lodAssetCreator))
             {
                 return false;
@@ -2511,7 +2511,7 @@ namespace JE::Assets::RenderBuilders
         // Set cloth data buffer
         if (meshView.m_clothDataView.m_elementCount > 0)
         {
-            if (!SetMeshStreamBufferById(AZ::RHI::ShaderSemantic{ AZ::RPI::ShaderSemanticName_ClothData }, AZ::Name(), meshView.m_clothDataView, lodStreamBuffers, lodAssetCreator))
+            if (!SetMeshStreamBufferById(AZ::RHI::ShaderSemantic{ JE::Render::RPI::ShaderSemanticName_ClothData }, AZ::Name(), meshView.m_clothDataView, lodStreamBuffers, lodAssetCreator))
             {
                 return false;
             }
@@ -2522,8 +2522,8 @@ namespace JE::Assets::RenderBuilders
         return true;
     }
 
-    AZ::Outcome<AZ::Data::Asset<AZ::RPI::BufferAsset>> ModelAssetBuilderComponent::CreateTypedBufferAsset(
-        const void* data, const size_t size, const size_t elementCount, AZ::RHI::Format format, const AZStd::string& bufferName, const AZ::RPI::BufferAsset::CompressionFormat compressionFormat)
+    AZ::Outcome<AZ::Data::Asset<JE::Render::RPI::BufferAsset>> ModelAssetBuilderComponent::CreateTypedBufferAsset(
+        const void* data, const size_t size, const size_t elementCount, AZ::RHI::Format format, const AZStd::string& bufferName, const JE::Render::RPI::BufferAsset::CompressionFormat compressionFormat)
     {
         AZ::RHI::BufferViewDescriptor bufferViewDescriptor =
             AZ::RHI::BufferViewDescriptor::CreateTyped(0, static_cast<uint32_t>(elementCount), format);
@@ -2531,7 +2531,7 @@ namespace JE::Assets::RenderBuilders
         return CreateBufferAsset(data, size, bufferViewDescriptor, bufferName, compressionFormat);
     }
 
-    AZ::Outcome<AZ::Data::Asset<AZ::RPI::BufferAsset>> ModelAssetBuilderComponent::CreateStructuredBufferAsset(
+    AZ::Outcome<AZ::Data::Asset<JE::Render::RPI::BufferAsset>> ModelAssetBuilderComponent::CreateStructuredBufferAsset(
         const void* data, const size_t elementCount, const size_t elementSize, const AZStd::string& bufferName)
     {
         AZ::RHI::BufferViewDescriptor bufferViewDescriptor =
@@ -2540,7 +2540,7 @@ namespace JE::Assets::RenderBuilders
         return CreateBufferAsset(data, elementCount * elementSize, bufferViewDescriptor, bufferName);
     }
 
-    AZ::Outcome<AZ::Data::Asset<AZ::RPI::BufferAsset>> ModelAssetBuilderComponent::CreateRawBufferAsset(
+    AZ::Outcome<AZ::Data::Asset<JE::Render::RPI::BufferAsset>> ModelAssetBuilderComponent::CreateRawBufferAsset(
         const void* data, const size_t totalSizeInBytes, const AZStd::string& bufferName)
     {
         AZ::RHI::BufferViewDescriptor bufferViewDescriptor =
@@ -2549,12 +2549,12 @@ namespace JE::Assets::RenderBuilders
         return CreateBufferAsset(data, totalSizeInBytes, bufferViewDescriptor, bufferName);
     }
 
-    AZ::Outcome<AZ::Data::Asset<AZ::RPI::BufferAsset>> ModelAssetBuilderComponent::CreateBufferAsset(
+    AZ::Outcome<AZ::Data::Asset<JE::Render::RPI::BufferAsset>> ModelAssetBuilderComponent::CreateBufferAsset(
         const void* data, const size_t size, const AZ::RHI::BufferViewDescriptor& bufferViewDescriptor, const AZStd::string& bufferName,
-        const AZ::RPI::BufferAsset::CompressionFormat compressionFormat)
+        const JE::Render::RPI::BufferAsset::CompressionFormat compressionFormat)
     {
-        AZ::RPI::BufferAssetCreator creator;
-        AZStd::string bufferAssetName = GetAssetFullName(AZ::RPI::BufferAsset::TYPEINFO_Uuid(), bufferName);
+        JE::Render::RPI::BufferAssetCreator creator;
+        AZStd::string bufferAssetName = GetAssetFullName(JE::Render::RPI::BufferAsset::TYPEINFO_Uuid(), bufferName);
         creator.Begin(CreateAssetId(bufferAssetName));
 
         AZ::RHI::BufferDescriptor bufferDescriptor;
@@ -2568,9 +2568,9 @@ namespace JE::Assets::RenderBuilders
 
         creator.SetBufferViewDescriptor(bufferViewDescriptor);
 
-        creator.SetPoolAsset({ m_systemInputAssemblyBufferPoolId, azrtti_typeid<AZ::RPI::ResourcePoolAsset>() });
+        creator.SetPoolAsset({ m_systemInputAssemblyBufferPoolId, azrtti_typeid<JE::Render::RPI::ResourcePoolAsset>() });
 
-        AZ::Data::Asset<AZ::RPI::BufferAsset> bufferAsset;
+        AZ::Data::Asset<JE::Render::RPI::BufferAsset> bufferAsset;
         if (creator.End(bufferAsset))
         {
             bufferAsset.SetHint(bufferAssetName);
@@ -2584,14 +2584,14 @@ namespace JE::Assets::RenderBuilders
         const AZ::RHI::ShaderSemantic& semantic,
         const AZ::Name& customName,
         const AZ::RHI::BufferViewDescriptor& bufferViewDescriptor,
-        const AZStd::vector<AZ::RPI::ModelLodAsset::Mesh::StreamBufferInfo>& lodStreamBuffers,
-        AZ::RPI::ModelLodAssetCreator& lodAssetCreator)
+        const AZStd::vector<JE::Render::RPI::ModelLodAsset::Mesh::StreamBufferInfo>& lodStreamBuffers,
+        JE::Render::RPI::ModelLodAssetCreator& lodAssetCreator)
     {
-        AZ::RPI::ModelLodAsset::Mesh::StreamBufferInfo streamBufferInfo;
+        JE::Render::RPI::ModelLodAsset::Mesh::StreamBufferInfo streamBufferInfo;
 
         if (FindStreamBufferById(lodStreamBuffers, semantic, streamBufferInfo))
         {
-            AZ::Data::Asset<AZ::RPI::BufferAsset> bufferAsset = streamBufferInfo.m_bufferAssetView.GetBufferAsset();
+            AZ::Data::Asset<JE::Render::RPI::BufferAsset> bufferAsset = streamBufferInfo.m_bufferAssetView.GetBufferAsset();
 
             lodAssetCreator.AddMeshStreamBuffer(semantic, customName, { bufferAsset, bufferViewDescriptor });
 
@@ -2606,11 +2606,11 @@ namespace JE::Assets::RenderBuilders
     {
         AZStd::string fullName;
 
-        if (assetType == AZ::RPI::ModelAsset::TYPEINFO_Uuid())
+        if (assetType == JE::Render::RPI::ModelAsset::TYPEINFO_Uuid())
         {
             fullName = m_modelName;
         }
-        else if (assetType == AZ::RPI::ModelLodAsset::TYPEINFO_Uuid())
+        else if (assetType == JE::Render::RPI::ModelLodAsset::TYPEINFO_Uuid())
         {
             fullName = AZStd::string::format("%s_%s", m_modelName.c_str(), m_lodName.c_str());
         }
@@ -2688,9 +2688,9 @@ namespace JE::Assets::RenderBuilders
     }
 
     bool ModelAssetBuilderComponent::FindStreamBufferById(
-        const AZStd::vector<AZ::RPI::ModelLodAsset::Mesh::StreamBufferInfo>& streamBufferInfoList,
+        const AZStd::vector<JE::Render::RPI::ModelLodAsset::Mesh::StreamBufferInfo>& streamBufferInfoList,
         const AZ::RHI::ShaderSemantic& streamSemantic,
-        AZ::RPI::ModelLodAsset::Mesh::StreamBufferInfo& outStreamBufferInfo)
+        JE::Render::RPI::ModelLodAsset::Mesh::StreamBufferInfo& outStreamBufferInfo)
     {
         for (const auto& streamBufferInfo : streamBufferInfoList)
         {

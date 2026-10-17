@@ -13,7 +13,7 @@
 #include <AzFramework/Windowing/WindowBus.h>
 
 #include <Atom/Feature/Base.h>
-#include <Atom/RPI.Public/Pass/AttachmentReadback.h>
+#include <JE/Render/RPI/Public/Pass/AttachmentReadback.h>
 #include <Atom/Utils/ImageComparison.h>
 
 namespace AZ
@@ -75,7 +75,7 @@ namespace AZ
                 const AZStd::string& imagePath,
                 const AZStd::vector<AZStd::string>& passHierarchy,
                 const AZStd::string& slotName,
-                RPI::PassAttachmentReadbackOption option) = 0;
+                JE::Render::RPI::PassAttachmentReadbackOption option) = 0;
 
             //! Similar to CapturePassAttachment. But instead of saving the read back result to a file, it will call the callback function provide
             //! in the input when callback is finished
@@ -86,10 +86,10 @@ namespace AZ
             //!               and use PassAttachmentReadbackOption::Output to capture the output state
             //! @return value is the frame capture Id, on failure it will return InvalidFrameCaptureId
             virtual FrameCaptureOutcome CapturePassAttachmentWithCallback(
-                RPI::AttachmentReadback::CallbackFunction callback,
+                JE::Render::RPI::AttachmentReadback::CallbackFunction callback,
                 const AZStd::vector<AZStd::string>& passHierarchy,
                 const AZStd::string& slotName,
-                RPI::PassAttachmentReadbackOption option) = 0;
+                JE::Render::RPI::PassAttachmentReadbackOption option) = 0;
             //! Cancels only a pass attachment capture whose readback is still reserved by its pass.
             //! Call on the main thread. A successful cancellation emits no callback or completion notification.
             //! Returns false for an invalid/inactive id or an already submitted capture; its GPU work is left untouched.
@@ -134,17 +134,17 @@ namespace AZ
 
         //! Writes out content of ReadbackResult in the Dds image format.
         ATOM_FEATURE_COMMON_API FrameCaptureOutputResult DdsFrameCaptureOutput(
-            const AZStd::string& outputFilePath, const AZ::RPI::AttachmentReadback::ReadbackResult& readbackResult);
+            const AZStd::string& outputFilePath, const JE::Render::RPI::AttachmentReadback::ReadbackResult& readbackResult);
 
         //! Writes an RGBA8 PNG preview of R10G10B10A2_UNORM, rounding normalized channels without gamma or tone mapping.
         //! Also preserves the exact same packed readback in <outputFilePath>.dds; this sidecar is produced only for 10-bit PNG.
         //! Both outputs must be new. Success requires both writes; a failed PNG write may leave the original DDS for diagnosis.
         ATOM_FEATURE_COMMON_API FrameCaptureOutputResult R10G10B10A2PngFrameCaptureOutput(
-            const AZStd::string& outputFilePath, const AZ::RPI::AttachmentReadback::ReadbackResult& readbackResult);
+            const AZStd::string& outputFilePath, const JE::Render::RPI::AttachmentReadback::ReadbackResult& readbackResult);
 
         //! Writes out content of ReadbackResult in the Ppm image format.
         ATOM_FEATURE_COMMON_API FrameCaptureOutputResult PpmFrameCaptureOutput(
-            const AZStd::string& outputFilePath, const AZ::RPI::AttachmentReadback::ReadbackResult& readbackResult);
+            const AZStd::string& outputFilePath, const JE::Render::RPI::AttachmentReadback::ReadbackResult& readbackResult);
 
     } // namespace Render
 

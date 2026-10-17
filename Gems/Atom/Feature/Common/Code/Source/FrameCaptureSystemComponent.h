@@ -18,7 +18,7 @@
 #include <Atom/Feature/Utils/FrameCaptureBus.h>
 #include <Atom/Feature/Utils/FrameCaptureTestBus.h>
 
-#include <Atom/RPI.Public/Pass/AttachmentReadback.h>
+#include <JE/Render/RPI/Public/Pass/AttachmentReadback.h>
 
 namespace AZ
 {
@@ -48,13 +48,13 @@ namespace AZ
                 const AZStd::string& imagePath,
                 const AZStd::vector<AZStd::string>& passHierarchy,
                 const AZStd::string& slotName,
-                RPI::PassAttachmentReadbackOption option) override;
+                JE::Render::RPI::PassAttachmentReadbackOption option) override;
 
             FrameCaptureOutcome CapturePassAttachmentWithCallback(
-                RPI::AttachmentReadback::CallbackFunction callback,
+                JE::Render::RPI::AttachmentReadback::CallbackFunction callback,
                 const AZStd::vector<AZStd::string>& passHierarchy,
                 const AZStd::string& slotName,
-                RPI::PassAttachmentReadbackOption option) override;
+                JE::Render::RPI::PassAttachmentReadbackOption option) override;
 
             bool CancelPendingCapture(FrameCaptureId captureId) override;
 
@@ -84,8 +84,8 @@ namespace AZ
                 CaptureState(uint32_t captureId);
                 CaptureState(CaptureState&& rhs);
                 void Reset();
-                AZStd::shared_ptr<AZ::RPI::AttachmentReadback> m_readback;
-                RPI::Ptr<RPI::Pass> m_pendingReadbackPass;
+                AZStd::shared_ptr<JE::Render::RPI::AttachmentReadback> m_readback;
+                JE::Render::RPI::Ptr<JE::Render::RPI::Pass> m_pendingReadbackPass;
                 AZStd::string m_outputFilePath;
 
                 AZStd::atomic<FrameCaptureResult> m_result = FrameCaptureResult::None; // use atomic as this is written and read on different threads.
@@ -120,7 +120,7 @@ namespace AZ
 
             AZ::Outcome<CaptureHandle, FrameCaptureError> ScreenshotPreparation(
                 const AZStd::string& imagePath,
-                AZ::RPI::AttachmentReadback::CallbackFunction callbackFunction);
+                JE::Render::RPI::AttachmentReadback::CallbackFunction callbackFunction);
 
             FrameCaptureOutcome InternalCaptureScreenshot(
                 const AZStd::string& imagePath,
@@ -128,12 +128,12 @@ namespace AZ
 
             FrameCaptureOutcome InternalCapturePassAttachment(
                     const AZStd::string& outputFilePath,
-                    AZ::RPI::AttachmentReadback::CallbackFunction callbackFunction,
+                    JE::Render::RPI::AttachmentReadback::CallbackFunction callbackFunction,
                     const AZStd::vector<AZStd::string>& passHierarchy,
                     const AZStd::string& slotName,
-                    RPI::PassAttachmentReadbackOption option);
+                    JE::Render::RPI::PassAttachmentReadbackOption option);
 
-            void CaptureAttachmentCallback(const AZ::RPI::AttachmentReadback::ReadbackResult& readbackResult);
+            void CaptureAttachmentCallback(const JE::Render::RPI::AttachmentReadback::ReadbackResult& readbackResult);
 
             CaptureHandle InitCapture();
 

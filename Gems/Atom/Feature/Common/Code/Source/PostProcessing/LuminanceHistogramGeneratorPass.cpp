@@ -13,15 +13,15 @@
 #include <Atom/RHI/FrameGraphInterface.h>
 #include <Atom/RHI/DevicePipelineState.h>
 
-#include <Atom/RPI.Public/Base.h>
-#include <Atom/RPI.Public/Pass/PassUtils.h>
-#include <Atom/RPI.Public/RenderPipeline.h>
+#include <JE/Render/RPI/Public/Base.h>
+#include <JE/Render/RPI/Public/Pass/PassUtils.h>
+#include <JE/Render/RPI/Public/RenderPipeline.h>
 #include <Atom/RHI/RHISystemInterface.h>
-#include <Atom/RPI.Public/RPIUtils.h>
-#include <Atom/RPI.Public/Scene.h>
-#include <Atom/RPI.Public/View.h>
-#include <Atom/RPI.Reflect/Pass/PassTemplate.h>
-#include <Atom/RPI.Reflect/Shader/ShaderAsset.h>
+#include <JE/Render/RPI/Public/RPIUtils.h>
+#include <JE/Render/RPI/Public/Scene.h>
+#include <JE/Render/RPI/Public/View.h>
+#include <JE/Render/RPI/Reflect/Pass/PassTemplate.h>
+#include <JE/Render/RPI/Reflect/Shader/ShaderAsset.h>
 
 #include <PostProcess/PostProcessFeatureProcessor.h>
 #include <PostProcess/ExposureControl/ExposureControlSettings.h>
@@ -33,14 +33,14 @@ namespace AZ
         // This must match the value in LuminanceHistogramCommon.azsli
         static const size_t NumHistogramBins = 128;
 
-        RPI::Ptr<LuminanceHistogramGeneratorPass> LuminanceHistogramGeneratorPass::Create(const RPI::PassDescriptor& descriptor)
+        JE::Render::RPI::Ptr<LuminanceHistogramGeneratorPass> LuminanceHistogramGeneratorPass::Create(const JE::Render::RPI::PassDescriptor& descriptor)
         {
-            RPI::Ptr<LuminanceHistogramGeneratorPass> pass = aznew LuminanceHistogramGeneratorPass(descriptor);
+            JE::Render::RPI::Ptr<LuminanceHistogramGeneratorPass> pass = aznew LuminanceHistogramGeneratorPass(descriptor);
             return pass;
         }
 
-        LuminanceHistogramGeneratorPass::LuminanceHistogramGeneratorPass(const RPI::PassDescriptor& descriptor)
-            : RPI::ComputePass(descriptor)
+        LuminanceHistogramGeneratorPass::LuminanceHistogramGeneratorPass(const JE::Render::RPI::PassDescriptor& descriptor)
+            : JE::Render::RPI::ComputePass(descriptor)
         {
         }
 
@@ -58,13 +58,13 @@ namespace AZ
 
         void LuminanceHistogramGeneratorPass::CreateHistogramBuffer()
         {
-            RPI::CommonBufferDescriptor desc;
-            desc.m_poolType = RPI::CommonBufferPoolType::ReadWrite;
+            JE::Render::RPI::CommonBufferDescriptor desc;
+            desc.m_poolType = JE::Render::RPI::CommonBufferPoolType::ReadWrite;
             desc.m_bufferName = "LuminanceHistogramBuffer";
             desc.m_elementSize = sizeof(uint32_t);
             desc.m_byteCount = NumHistogramBins * sizeof(uint32_t);
             desc.m_elementFormat = RHI::Format::Unknown;
-            m_histogram = RPI::BufferSystemInterface::Get()->CreateBufferFromCommonPool(desc);
+            m_histogram = JE::Render::RPI::BufferSystemInterface::Get()->CreateBufferFromCommonPool(desc);
             AZ_Assert(m_histogram != nullptr, "Unable to allocate buffer");
         }
 
@@ -73,7 +73,7 @@ namespace AZ
         {
             const auto& binding = GetInputBinding(0);
             AZ_Assert(binding.m_name == AZ::Name("ColorInput"), "ColorInput was expected to be the first input");
-            const RPI::PassAttachment* colorBuffer = binding.GetAttachment().get();
+            const JE::Render::RPI::PassAttachment* colorBuffer = binding.GetAttachment().get();
             return colorBuffer->m_descriptor.m_image.m_size;
         }
 

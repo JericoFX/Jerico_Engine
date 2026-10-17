@@ -39,7 +39,7 @@ namespace JE::BSP
     //! Preserve compatible overrides; reuse effective associations or allocate isolated local slots.
     JE_GEOMETRY_AUTHORING_API bool PreparePolygonMaterialAssignment(const JE::Geometry::WhiteBoxMesh& mesh,
         const JE::Geometry::Api::PolygonHandles& polygons, const SurfaceMaterialBindings& bindings,
-        const JE::Render::MaterialAssignmentMap& materials, const AZ::Data::Asset<AZ::RPI::MaterialAsset>& material,
+        const JE::Render::MaterialAssignmentMap& materials, const AZ::Data::Asset<JE::Render::RPI::MaterialAsset>& material,
         const AZStd::unordered_set<AZ::Name>& modelUvNames, bool hasMaterialOwner,
         SurfaceMaterialMerge& output, AZStd::string& error);
 

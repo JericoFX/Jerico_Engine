@@ -10,8 +10,8 @@
 
 #include <AzFramework/Terrain/TerrainDataRequestBus.h>
 
-#include <Atom/RPI.Public/Shader/ShaderResourceGroup.h>
-#include <Atom/RPI.Public/Base.h>
+#include <JE/Render/RPI/Public/Shader/ShaderResourceGroup.h>
+#include <JE/Render/RPI/Public/Base.h>
 
 #include <Atom/Feature/Utils/GpuBufferHandler.h>
 #include <Atom/Feature/Utils/SparseVector.h>
@@ -30,13 +30,13 @@ namespace Terrain
         TerrainMacroMaterialManager() = default;
         ~TerrainMacroMaterialManager() = default;
 
-        void Initialize(AZ::Data::Instance<AZ::RPI::ShaderResourceGroup>& terrainSrg);
+        void Initialize(AZ::Data::Instance<JE::Render::RPI::ShaderResourceGroup>& terrainSrg);
         void Reset();
         bool IsInitialized();
-        bool UpdateSrgIndices(AZ::Data::Instance<AZ::RPI::ShaderResourceGroup>& terrainSrg);
+        bool UpdateSrgIndices(AZ::Data::Instance<JE::Render::RPI::ShaderResourceGroup>& terrainSrg);
         void SetRenderDistance(float distance);
 
-        void Update(const AZ::RPI::ViewPtr mainView, AZ::Data::Instance<AZ::RPI::ShaderResourceGroup>& terrainSrg);
+        void Update(const JE::Render::RPI::ViewPtr mainView, AZ::Data::Instance<JE::Render::RPI::ShaderResourceGroup>& terrainSrg);
 
     private:
 

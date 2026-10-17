@@ -594,10 +594,10 @@ namespace EMotionFX
                 auto dependencyAsset =
                     AZ::Data::AssetManager::Instance().FindAsset(dependency.m_assetId, AZ::Data::AssetLoadBehavior::Default);
 
-                if (dependencyAsset && dependencyAsset.GetType() == azrtti_typeid<AZ::RPI::ModelAsset>())
+                if (dependencyAsset && dependencyAsset.GetType() == azrtti_typeid<JE::Render::RPI::ModelAsset>())
                 {
                      m_modelReloadedEventHandler = AZ::Render::ModelReloadedEvent::Handler(
-                        [this]([[maybe_unused]] AZ::Data::Asset<AZ::RPI::ModelAsset> modelAsset)
+                        [this]([[maybe_unused]] AZ::Data::Asset<JE::Render::RPI::ModelAsset> modelAsset)
                         {
                             m_actorAsset.QueueLoad();
                         });

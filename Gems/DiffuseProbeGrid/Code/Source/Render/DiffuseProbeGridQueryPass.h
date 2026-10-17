@@ -7,9 +7,9 @@
  */
 #pragma once
 
-#include <Atom/RPI.Public/Pass/RenderPass.h>
-#include <Atom/RPI.Public/Shader/Shader.h>
-#include <Atom/RPI.Public/Shader/ShaderResourceGroup.h>
+#include <JE/Render/RPI/Public/Pass/RenderPass.h>
+#include <JE/Render/RPI/Public/Shader/Shader.h>
+#include <JE/Render/RPI/Public/Shader/ShaderResourceGroup.h>
 #include <Render/DiffuseProbeGrid.h>
 #include <Render/DiffuseProbeGridFeatureProcessor.h>
 
@@ -19,19 +19,19 @@ namespace AZ
     {
         //! Compute pass that queries the diffuse irradiance from the DiffuseProbeGrids
         class DiffuseProbeGridQueryPass final
-            : public RPI::RenderPass
+            : public JE::Render::RPI::RenderPass
         {
         public:
             AZ_RPI_PASS(DiffuseProbeGridQueryPass);
 
-            AZ_RTTI(AZ::Render::DiffuseProbeGridQueryPass, "{EE52C193-98E2-4F93-8A19-B4E710F12592}", RPI::RenderPass);
+            AZ_RTTI(AZ::Render::DiffuseProbeGridQueryPass, "{EE52C193-98E2-4F93-8A19-B4E710F12592}", JE::Render::RPI::RenderPass);
             AZ_CLASS_ALLOCATOR(DiffuseProbeGridQueryPass, SystemAllocator);
             virtual ~DiffuseProbeGridQueryPass() = default;
 
-            static RPI::Ptr<DiffuseProbeGridQueryPass> Create(const RPI::PassDescriptor& descriptor);
+            static JE::Render::RPI::Ptr<DiffuseProbeGridQueryPass> Create(const JE::Render::RPI::PassDescriptor& descriptor);
 
         private:
-            DiffuseProbeGridQueryPass(const RPI::PassDescriptor& descriptor);
+            DiffuseProbeGridQueryPass(const JE::Render::RPI::PassDescriptor& descriptor);
 
             void LoadShader();
 
@@ -45,7 +45,7 @@ namespace AZ
             void FrameEndInternal() override;
 
             // shader
-            Data::Instance<RPI::Shader> m_shader;
+            Data::Instance<JE::Render::RPI::Shader> m_shader;
             const RHI::PipelineState* m_pipelineState = nullptr;
             RHI::Ptr<RHI::ShaderResourceGroupLayout> m_srgLayout;
             RHI::DispatchDirect m_dispatchArgs;
@@ -54,7 +54,7 @@ namespace AZ
             RHI::AttachmentId m_outputBufferAttachmentId;
             RHI::BufferDescriptor m_outputBufferDesc;
             RHI::BufferViewDescriptor m_outputBufferViewDesc;
-            RPI::Ptr<RPI::PassAttachment> m_outputAttachment;
+            JE::Render::RPI::Ptr<JE::Render::RPI::PassAttachment> m_outputAttachment;
         };
     }   // namespace Render
 }   // namespace AZ

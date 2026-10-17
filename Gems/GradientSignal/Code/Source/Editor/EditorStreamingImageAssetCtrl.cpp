@@ -6,7 +6,7 @@
  *
  */
 
-#include <Atom/RPI.Public/RPIUtils.h>
+#include <JE/Render/RPI/Public/RPIUtils.h>
 
 #include <AzToolsFramework/AssetBrowser/AssetBrowserEntry.h>
 #include <AzToolsFramework/UI/PropertyEditor/Model/AssetCompleterModel.h>
@@ -20,13 +20,13 @@ namespace GradientSignal
     {
         bool IsImageDataPixelAPISupportedForAsset(const AZ::Data::AssetId& assetId)
         {
-            auto streamingImageAsset = AZ::Data::AssetManager::Instance().GetAsset<AZ::RPI::StreamingImageAsset>(assetId, AZ::Data::AssetLoadBehavior::PreLoad);
+            auto streamingImageAsset = AZ::Data::AssetManager::Instance().GetAsset<JE::Render::RPI::StreamingImageAsset>(assetId, AZ::Data::AssetLoadBehavior::PreLoad);
             streamingImageAsset.BlockUntilLoadComplete();
 
             // Verify if the streaming image asset has a pixel format that is supported
             // for the image data pixel retrieval API
             AZ::RHI::Format format = streamingImageAsset->GetImageDescriptor().m_format;
-            return AZ::RPI::IsImageDataPixelAPISupported(format);
+            return JE::Render::RPI::IsImageDataPixelAPISupported(format);
         }
     }
 
@@ -66,7 +66,7 @@ namespace GradientSignal
             {
                 if (const auto productEntry = azrtti_cast<const ProductAssetBrowserEntry*>(currentEntry))
                 {
-                    if (productEntry->GetAssetType() == AZ::AzTypeInfo<AZ::RPI::StreamingImageAsset>::Uuid())
+                    if (productEntry->GetAssetType() == AZ::AzTypeInfo<JE::Render::RPI::StreamingImageAsset>::Uuid())
                     {
                         if (Internal::IsImageDataPixelAPISupportedForAsset(productEntry->GetAssetId()))
                         {
@@ -105,7 +105,7 @@ namespace GradientSignal
 
         // If the asset is a streaming image asset, we need to verify that its pixel format
         // is supported by the image data retrieval API
-        if (assetType == AZ::AzTypeInfo<AZ::RPI::StreamingImageAsset>::Uuid())
+        if (assetType == AZ::AzTypeInfo<JE::Render::RPI::StreamingImageAsset>::Uuid())
         {
             return Internal::IsImageDataPixelAPISupportedForAsset(assetId);
         }

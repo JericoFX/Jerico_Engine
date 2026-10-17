@@ -316,7 +316,7 @@ namespace OpenParticle
         return *this;
     }
 
-    ParticleArchive& ParticleArchive::Material(const AZ::Data::Asset<AZ::RPI::MaterialAsset>& asset)
+    ParticleArchive& ParticleArchive::Material(const AZ::Data::Asset<JE::Render::RPI::MaterialAsset>& asset)
     {
         auto& emitter = m_emitterInfos.back();
         emitter.m_material = asset;
@@ -330,14 +330,14 @@ namespace OpenParticle
         return *this;
     }
 
-    ParticleArchive& ParticleArchive::Model(const AZ::Data::Asset<AZ::RPI::ModelAsset>& asset)
+    ParticleArchive& ParticleArchive::Model(const AZ::Data::Asset<JE::Render::RPI::ModelAsset>& asset)
     {
         auto& emitter = m_emitterInfos.back();
         emitter.m_model = asset;
         return *this;
     }
 
-    ParticleArchive& ParticleArchive::SkeletonModel(const AZ::Data::Asset<AZ::RPI::ModelAsset>& asset)
+    ParticleArchive& ParticleArchive::SkeletonModel(const AZ::Data::Asset<JE::Render::RPI::ModelAsset>& asset)
     {
         auto& emitter = m_emitterInfos.back();
         emitter.m_skeletonModel = asset;

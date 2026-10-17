@@ -8,8 +8,8 @@
 #pragma once
 
 #include <Atom/RHI/ScopeProducer.h>
-#include <Atom/RPI.Public/Pass/AttachmentReadback.h>
-#include <Atom/RPI.Public/Pass/Pass.h>
+#include <JE/Render/RPI/Public/Pass/AttachmentReadback.h>
+#include <JE/Render/RPI/Public/Pass/Pass.h>
 #include <DiffuseProbeGrid/DiffuseProbeGridFeatureProcessorInterface.h>
 
 namespace AZ
@@ -38,7 +38,7 @@ namespace AZ
 
             void BeginTextureReadback(DiffuseProbeGridBakeTexturesCallback callback);
             void Update(const AZ::Name& passName);
-            void FrameBegin(AZ::RPI::Pass::FramePrepareParams& params);
+            void FrameBegin(JE::Render::RPI::Pass::FramePrepareParams& params);
 
             bool IsIdle() const { return m_readbackState == DiffuseProbeGridReadbackState::Idle; }
 
@@ -46,12 +46,12 @@ namespace AZ
 
             DiffuseProbeGrid* m_diffuseProbeGrid = nullptr;
             DiffuseProbeGridReadbackState m_readbackState = DiffuseProbeGridReadbackState::Idle;
-            AZStd::shared_ptr<AZ::RPI::AttachmentReadback> m_attachmentReadback;
+            AZStd::shared_ptr<JE::Render::RPI::AttachmentReadback> m_attachmentReadback;
             DiffuseProbeGridBakeTexturesCallback m_callback;
 
-            AZ::RPI::AttachmentReadback::ReadbackResult m_irradianceReadbackResult;
-            AZ::RPI::AttachmentReadback::ReadbackResult m_distanceReadbackResult;
-            AZ::RPI::AttachmentReadback::ReadbackResult m_probeDataReadbackResult;
+            JE::Render::RPI::AttachmentReadback::ReadbackResult m_irradianceReadbackResult;
+            JE::Render::RPI::AttachmentReadback::ReadbackResult m_distanceReadbackResult;
+            JE::Render::RPI::AttachmentReadback::ReadbackResult m_probeDataReadbackResult;
 
             // number of frames to delay before starting the texture readbacks, this allows the textures to settle
             static constexpr int32_t DefaultNumInitializationFrames = 50;

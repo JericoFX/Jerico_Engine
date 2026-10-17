@@ -11,8 +11,8 @@
 #include <Draw/EditorStateMaskRenderer.h>
 #include <Pass/EditorStatePassSystem.h>
 
-#include <Atom/RPI.Public/FeatureProcessor.h>
-#include <Atom/RPI.Reflect/System/AnyAsset.h>
+#include <JE/Render/RPI/Public/FeatureProcessor.h>
+#include <JE/Render/RPI/Reflect/System/AnyAsset.h>
 #include <AzCore/Component/TickBus.h>
 #include <AzCore/std/smart_ptr/unique_ptr.h>
 
@@ -22,24 +22,24 @@ namespace AZ
     {
         //! Feature processor for Editor Mode Feedback visual effect system.
         class EditorModeFeatureProcessor
-            : public RPI::FeatureProcessor
+            : public JE::Render::RPI::FeatureProcessor
             , private AZ::TickBus::Handler
         {
         public:
             AZ_CLASS_ALLOCATOR(EditorModeFeatureProcessor, SystemAllocator)
-            AZ_RTTI(AZ::Render::EditorModeFeatureProcessor, "{78D40D57-F564-4ECD-B9F5-D8C9784B15D0}", AZ::RPI::FeatureProcessor);
+            AZ_RTTI(AZ::Render::EditorModeFeatureProcessor, "{78D40D57-F564-4ECD-B9F5-D8C9784B15D0}", JE::Render::RPI::FeatureProcessor);
 
             static void Reflect(AZ::ReflectContext* context);
 
             // FeatureProcessor overrides ...
             void Activate() override;
             void Deactivate() override;
-            void AddRenderPasses(RPI::RenderPipeline* renderPipeline) override;
+            void AddRenderPasses(JE::Render::RPI::RenderPipeline* renderPipeline) override;
             void Render(const RenderPacket& packet) override;
             void Simulate(const SimulatePacket& packet) override;
 
             // RPI::SceneNotificationBus overrides ...
-            void OnRenderPipelineChanged(AZ::RPI::RenderPipeline* pipeline, AZ::RPI::SceneNotification::RenderPipelineChangeType changeType) override;
+            void OnRenderPipelineChanged(JE::Render::RPI::RenderPipeline* pipeline, JE::Render::RPI::SceneNotification::RenderPipelineChangeType changeType) override;
 
             // AZ::TickBus overrides ...
             void OnTick(float deltaTime, AZ::ScriptTimePoint time) override;
@@ -55,7 +55,7 @@ namespace AZ
             AZStd::unordered_map<Name, EditorStateMaskRenderer> m_maskRenderers;
 
             //! Material for sending draw packets to the entity mask pass.
-            Data::Instance<RPI::Material> m_maskMaterial = nullptr;
+            Data::Instance<JE::Render::RPI::Material> m_maskMaterial = nullptr;
         };
     } // namespace Render
 } // namespace AZ

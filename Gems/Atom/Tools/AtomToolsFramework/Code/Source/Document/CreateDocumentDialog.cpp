@@ -6,8 +6,8 @@
  *
  */
 
-#include <Atom/RPI.Edit/Common/AssetUtils.h>
-#include <Atom/RPI.Reflect/Asset/AssetUtils.h>
+#include <JE/Editor/Render/RPI/Edit/Common/AssetUtils.h>
+#include <JE/Render/RPI/Reflect/Asset/AssetUtils.h>
 #include <AtomToolsFramework/Document/CreateDocumentDialog.h>
 #include <AtomToolsFramework/Util/Util.h>
 #include <AzCore/Utils/Utils.h>

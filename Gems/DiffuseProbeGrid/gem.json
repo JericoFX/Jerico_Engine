@@ -19,7 +19,6 @@
     ],
     "documentation_url": "https://www.o3de.org/docs/user-guide/components/reference/atom/diffuse-probe-grid/",
     "dependencies": [
-        "Atom_RPI",
         "Atom",
         "LmbrCentral"
     ]

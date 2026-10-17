@@ -57,7 +57,7 @@ namespace AZ::Render
     }
 
     FrameCaptureOutputResult DdsFrameCaptureOutput(
-        const AZStd::string& outputFilePath, const AZ::RPI::AttachmentReadback::ReadbackResult& readbackResult)
+        const AZStd::string& outputFilePath, const JE::Render::RPI::AttachmentReadback::ReadbackResult& readbackResult)
     {
         // write the read back result of the image attachment to a dds file
         const auto outcome = AZ::DdsFile::WriteFile(
@@ -69,7 +69,7 @@ namespace AZ::Render
     }
 
     FrameCaptureOutputResult R10G10B10A2PngFrameCaptureOutput(
-        const AZStd::string& outputFilePath, const AZ::RPI::AttachmentReadback::ReadbackResult& readbackResult)
+        const AZStd::string& outputFilePath, const JE::Render::RPI::AttachmentReadback::ReadbackResult& readbackResult)
     {
         if (readbackResult.m_imageDescriptor.m_format != RHI::Format::R10G10B10A2_UNORM)
         {
@@ -135,7 +135,7 @@ namespace AZ::Render
     }
 
     FrameCaptureOutputResult PpmFrameCaptureOutput(
-        const AZStd::string& outputFilePath, const AZ::RPI::AttachmentReadback::ReadbackResult& readbackResult)
+        const AZStd::string& outputFilePath, const JE::Render::RPI::AttachmentReadback::ReadbackResult& readbackResult)
     {
         // write the read back result of the image attachment to a buffer
         const AZStd::vector<uint8_t> outBuffer = Utils::PpmFile::CreatePpmFromImageBuffer(

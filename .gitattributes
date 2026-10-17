@@ -192,3 +192,9 @@ Gems/AtomLyIntegration/CommonFeatures/Assets/Objects/Lucy/.wip/stone/stone_bake.
 /docs/evidence/n0/native-materialcanvas-workspace-2026-10-12/**/*.png -filter -diff -merge -text
 /docs/evidence/n0/native-pass-workspace-and-sdk-2026-10-13/**/*.jpg -filter -diff -merge -text
 /docs/evidence/n0/native-pass-workspace-and-sdk-2026-10-13/**/*.zip -filter -diff -merge -text
+
+# Native RPI built-in images are stored as exact small Git blobs.
+Engine/Render/Integration/RPI/Assets/Textures/Defaults/DefaultFallback.png -filter -diff -merge -text
+Engine/Render/Integration/RPI/Assets/Textures/Defaults/Missing.png -filter -diff -merge -text
+Engine/Render/Integration/RPI/Assets/Textures/Defaults/Processing.png -filter -diff -merge -text
+Engine/Render/Integration/RPI/Assets/Textures/Defaults/ProcessingFailed.png -filter -diff -merge -text

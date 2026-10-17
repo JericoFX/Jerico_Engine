@@ -8,8 +8,8 @@
 
 #include <OpenParticleSystem/MaterialPropertyOverride.h>
 
-#include <Atom/RPI.Reflect/Material/MaterialPropertiesLayout.h>
-#include <Atom/RPI.Reflect/Material/MaterialTypeAsset.h>
+#include <JE/Render/RPI/Reflect/Material/MaterialPropertiesLayout.h>
+#include <JE/Render/RPI/Reflect/Material/MaterialTypeAsset.h>
 
 #include <AzCore/Serialization/SerializeContext.h>
 
@@ -21,7 +21,7 @@ namespace OpenParticle
         //! The editor stores doubles for float properties, and script can hand back int for uint, so a plain
         //! any_cast is not enough.
         template<typename TargetType>
-        AZ::RPI::MaterialPropertyValue ConvertNumericType(const AZStd::any& value)
+        JE::Render::RPI::MaterialPropertyValue ConvertNumericType(const AZStd::any& value)
         {
             if (value.is<bool>())
             {
@@ -68,7 +68,7 @@ namespace OpenParticle
                 return aznumeric_cast<TargetType>(AZStd::any_cast<double>(value));
             }
 
-            return AZ::RPI::MaterialPropertyValue::FromAny(value);
+            return JE::Render::RPI::MaterialPropertyValue::FromAny(value);
         }
     } // namespace
 
@@ -80,17 +80,17 @@ namespace OpenParticle
         }
     }
 
-    AZ::RPI::MaterialPropertyValue ConvertMaterialPropertyValue(
-        const AZ::RPI::MaterialPropertyDescriptor* propertyDescriptor, const AZStd::any& value)
+    JE::Render::RPI::MaterialPropertyValue ConvertMaterialPropertyValue(
+        const JE::Render::RPI::MaterialPropertyDescriptor* propertyDescriptor, const AZStd::any& value)
     {
         if (propertyDescriptor == nullptr)
         {
-            return AZ::RPI::MaterialPropertyValue::FromAny(value);
+            return JE::Render::RPI::MaterialPropertyValue::FromAny(value);
         }
 
         switch (propertyDescriptor->GetDataType())
         {
-        case AZ::RPI::MaterialPropertyDataType::Enum:
+        case JE::Render::RPI::MaterialPropertyDataType::Enum:
             // Enums round trip through the editor as either the symbolic name or the raw index.
             if (value.is<AZ::Name>())
             {
@@ -101,13 +101,13 @@ namespace OpenParticle
                 return propertyDescriptor->GetEnumValue(AZ::Name(AZStd::any_cast<AZStd::string>(value)));
             }
             return ConvertNumericType<uint32_t>(value);
-        case AZ::RPI::MaterialPropertyDataType::Int:
+        case JE::Render::RPI::MaterialPropertyDataType::Int:
             return ConvertNumericType<int32_t>(value);
-        case AZ::RPI::MaterialPropertyDataType::UInt:
+        case JE::Render::RPI::MaterialPropertyDataType::UInt:
             return ConvertNumericType<uint32_t>(value);
-        case AZ::RPI::MaterialPropertyDataType::Float:
+        case JE::Render::RPI::MaterialPropertyDataType::Float:
             return ConvertNumericType<float>(value);
-        case AZ::RPI::MaterialPropertyDataType::Bool:
+        case JE::Render::RPI::MaterialPropertyDataType::Bool:
             return ConvertNumericType<bool>(value);
         default:
             break;
@@ -115,11 +115,11 @@ namespace OpenParticle
 
         // Vector/Color/Image/SamplerState are all handled by FromAny, including resolving an asset id or an
         // image asset reference into something Material::SetPropertyValue can consume.
-        return AZ::RPI::MaterialPropertyValue::FromAny(value);
+        return JE::Render::RPI::MaterialPropertyValue::FromAny(value);
     }
 
     bool ApplyMaterialPropertyOverrides(
-        const AZ::Data::Instance<AZ::RPI::Material>& material, const JE::Render::MaterialPropertyOverrideMap& overrides)
+        const AZ::Data::Instance<JE::Render::RPI::Material>& material, const JE::Render::MaterialPropertyOverrideMap& overrides)
     {
         if (!material || overrides.empty())
         {
@@ -135,7 +135,7 @@ namespace OpenParticle
 
             bool wasRenamed = false;
             AZ::Name newName;
-            AZ::RPI::MaterialPropertyIndex propertyIndex = material->FindPropertyIndex(propertyId, &wasRenamed, &newName);
+            JE::Render::RPI::MaterialPropertyIndex propertyIndex = material->FindPropertyIndex(propertyId, &wasRenamed, &newName);
 
             // If the material type renamed this property and we also carry an override under the new name,
             // the new name wins and the stale entry is ignored rather than silently clobbering it.
@@ -167,7 +167,7 @@ namespace OpenParticle
     }
 
     void PruneMaterialPropertyOverrides(
-        const AZ::Data::Asset<AZ::RPI::MaterialAsset>& materialAsset, JE::Render::MaterialPropertyOverrideMap& overrides)
+        const AZ::Data::Asset<JE::Render::RPI::MaterialAsset>& materialAsset, JE::Render::MaterialPropertyOverrideMap& overrides)
     {
         if (overrides.empty())
         {

@@ -10,7 +10,7 @@
 
 #include <Atom/Feature/TransformService/TransformServiceFeatureProcessorInterface.h>
 #include <Atom/RHI/ImageView.h>
-#include <Atom/RPI.Public/Material/Material.h>
+#include <JE/Render/RPI/Public/Material/Material.h>
 #include <AzCore/Math/Color.h>
 
 namespace AZ::Render
@@ -71,13 +71,13 @@ namespace AZ::Render
             // used only for the reflection probe data: can be empty.
             TransformServiceFeatureProcessorInterface::ObjectId m_objectId;
             // can be empty; if provided, the change-id is checked every frame and the MaterialParameters are updated
-            Data::Instance<RPI::Material> m_material;
-            RPI::Material::ChangeId m_materialChangeId;
+            Data::Instance<JE::Render::RPI::Material> m_material;
+            JE::Render::RPI::Material::ChangeId m_materialChangeId;
             // This will be converted to the MaterialInfo struct and uploaded to the GPU
             MaterialParameters m_materialParameters;
         };
 
-        void ConvertMaterial(RPI::Material* material, MaterialParameters& convertedMaterial);
+        void ConvertMaterial(JE::Render::RPI::Material* material, MaterialParameters& convertedMaterial);
 
     } // namespace FallbackPBR
 

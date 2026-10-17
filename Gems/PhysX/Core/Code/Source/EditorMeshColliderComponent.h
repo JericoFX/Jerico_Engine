@@ -170,8 +170,8 @@ namespace PhysX
         void OnNonUniformScaleChanged(const AZ::Vector3& nonUniformScale);
 
         // AZ::Render::MeshComponentNotificationBus overrides ...
-        void OnModelReady(const AZ::Data::Asset<AZ::RPI::ModelAsset>& modelAsset,
-            const AZ::Data::Instance<AZ::RPI::Model>& model) override;
+        void OnModelReady(const AZ::Data::Asset<JE::Render::RPI::ModelAsset>& modelAsset,
+            const AZ::Data::Instance<JE::Render::RPI::Model>& model) override;
 
         // PhysX::ColliderShapeBus overrides ...
         AZ::Aabb GetColliderShapeAabb() override;

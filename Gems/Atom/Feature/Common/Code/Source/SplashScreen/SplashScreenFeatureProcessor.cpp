@@ -7,7 +7,7 @@
  */
 
 #include <SplashScreen/SplashScreenFeatureProcessor.h>
-#include <Atom/RPI.Public/RPIUtils.h>
+#include <JE/Render/RPI/Public/RPIUtils.h>
 #include <AzCore/Settings/SettingsRegistryImpl.h>
 
 namespace AZ::Render
@@ -22,7 +22,7 @@ namespace AZ::Render
         }
     }
 
-    void SplashScreenFeatureProcessor::AddRenderPasses(RPI::RenderPipeline* renderPipeline)
+    void SplashScreenFeatureProcessor::AddRenderPasses(JE::Render::RPI::RenderPipeline* renderPipeline)
     {
         AZ::ApplicationTypeQuery appType;
         AZ::ComponentApplicationBus::Broadcast(&AZ::ComponentApplicationBus::Events::QueryApplicationType, appType);

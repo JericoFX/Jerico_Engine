@@ -17,7 +17,7 @@
 #include <Components/EditorClothComponent.h>
 #include <Components/ClothComponent.h>
 #include <Components/ClothComponentMesh/ClothComponentMesh.h>
-#include <Atom/RPI.Reflect/Model/ModelAsset.h>
+#include <JE/Render/RPI/Reflect/Model/ModelAsset.h>
 
 #include <Utils/AssetHelper.h>
 
@@ -499,8 +499,8 @@ namespace NvCloth
     }
 
     void EditorClothComponent::OnModelReady(
-        const AZ::Data::Asset<AZ::RPI::ModelAsset>& asset,
-        [[maybe_unused]] const AZ::Data::Instance<AZ::RPI::Model>& model)
+        const AZ::Data::Asset<JE::Render::RPI::ModelAsset>& asset,
+        [[maybe_unused]] const AZ::Data::Instance<JE::Render::RPI::Model>& model)
     {
         if (!asset.IsReady())
         {

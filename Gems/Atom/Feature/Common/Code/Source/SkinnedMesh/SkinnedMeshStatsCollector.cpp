@@ -9,7 +9,7 @@
 #include <SkinnedMesh/SkinnedMeshFeatureProcessor.h>
 #include <SkinnedMesh/SkinnedMeshStatsCollector.h>
 
-#include <Atom/RPI.Public/Scene.h>
+#include <JE/Render/RPI/Public/Scene.h>
 
 namespace AZ
 {
@@ -60,7 +60,7 @@ namespace AZ
             AddVerticesToSceneStats(aznumeric_cast<size_t>(dispatchItem->GetVertexCount()));
         }
 
-        void SkinnedMeshStatsCollector::AddBonesToSceneStats(const Data::Instance<RPI::Buffer>& boneTransformBuffer)
+        void SkinnedMeshStatsCollector::AddBonesToSceneStats(const Data::Instance<JE::Render::RPI::Buffer>& boneTransformBuffer)
         {
             // Oftentimes, different lods and sub-meshes of the same model share the same bone transforms. Use a set to ensure we're not duplicating bone count
             const auto& iter = m_sceneBoneTransforms.find(boneTransformBuffer.get());

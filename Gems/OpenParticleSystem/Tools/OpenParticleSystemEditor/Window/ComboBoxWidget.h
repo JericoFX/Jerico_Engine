@@ -64,9 +64,9 @@ namespace OpenParticleSystemEditor
         // Note that these asset pointers are in the "detail" object that was passed in the constructor,
         // and the actual asset<T> lives on the particle source data object.
         void SetAssetWidget(
-            AZ::Data::Asset<AZ::RPI::MaterialAsset>* materialAsset,
-            AZ::Data::Asset<AZ::RPI::ModelAsset>* modelAsset,
-            AZ::Data::Asset<AZ::RPI::ModelAsset>* skeletonModelAsset);
+            AZ::Data::Asset<JE::Render::RPI::MaterialAsset>* materialAsset,
+            AZ::Data::Asset<JE::Render::RPI::ModelAsset>* modelAsset,
+            AZ::Data::Asset<JE::Render::RPI::ModelAsset>* skeletonModelAsset);
 
         bool IsMeshRenderer() const;
 

@@ -78,10 +78,10 @@
 #include "ViewportManipulatorController.h"
 
 // Atom
-#include <Atom/RPI.Public/RenderPipeline.h>
-#include <Atom/RPI.Public/View.h>
-#include <Atom/RPI.Public/ViewProviderBus.h>
-#include <Atom/RPI.Public/ViewportContextManager.h>
+#include <JE/Render/RPI/Public/RenderPipeline.h>
+#include <JE/Render/RPI/Public/View.h>
+#include <JE/Render/RPI/Public/ViewProviderBus.h>
+#include <JE/Render/RPI/Public/ViewportContextManager.h>
 
 #include <AzCore/Console/IConsole.h>
 #include <AzCore/Math/MatrixUtils.h>
@@ -162,13 +162,13 @@ static void MarkCameraEntityDirty(const AZ::EntityId entityId)
 
 static void PopViewGroupForDefaultContext()
 {
-    auto* atomViewportRequests = AZ::Interface<AZ::RPI::ViewportContextRequestsInterface>::Get();
+    auto* atomViewportRequests = AZ::Interface<JE::Render::RPI::ViewportContextRequestsInterface>::Get();
     if (!atomViewportRequests)
     {
         return;
     }
 
-    auto viewSystem = AZ::RPI::ViewportContextRequests::Get();
+    auto viewSystem = JE::Render::RPI::ViewportContextRequests::Get();
     if (!viewSystem)
     {
         return;
@@ -183,13 +183,13 @@ static void PopViewGroupForDefaultContext()
 
 static void PushViewGroupForDefaultContext()
 {
-    auto* atomViewportRequests = AZ::Interface<AZ::RPI::ViewportContextRequestsInterface>::Get();
+    auto* atomViewportRequests = AZ::Interface<JE::Render::RPI::ViewportContextRequestsInterface>::Get();
     if (!atomViewportRequests)
     {
         return;
     }
 
-    auto viewSystem = AZ::RPI::ViewportContextRequests::Get();
+    auto viewSystem = JE::Render::RPI::ViewportContextRequests::Get();
     if (!viewSystem)
     {
         return;
@@ -1206,8 +1206,8 @@ AZ::EntityId EditorViewportWidget::GetCurrentViewEntityId()
     if (m_viewEntityId.IsValid())
     {
         // Check that the current view is the same view as the view entity view
-        AZ::RPI::ViewPtr viewEntityView;
-        AZ::RPI::ViewProviderBus::EventResult(viewEntityView, m_viewEntityId, &AZ::RPI::ViewProviderBus::Events::GetView);
+        JE::Render::RPI::ViewPtr viewEntityView;
+        JE::Render::RPI::ViewProviderBus::EventResult(viewEntityView, m_viewEntityId, &JE::Render::RPI::ViewProviderBus::Events::GetView);
 
         [[maybe_unused]] const bool isViewEntityCorrect = viewEntityView == GetCurrentAtomView();
         AZ_Error(
@@ -1428,7 +1428,7 @@ void EditorViewportWidget::SetFOV(const float fov)
     }
     else
     {
-        auto viewSystem = AZ::RPI::ViewportContextRequests::Get();
+        auto viewSystem = JE::Render::RPI::ViewportContextRequests::Get();
         if (!viewSystem)
         {
             return;
@@ -1454,7 +1454,7 @@ float EditorViewportWidget::GetFOV() const
     }
     else
     {
-        auto viewSystem = AZ::RPI::ViewportContextRequests::Get();
+        auto viewSystem = JE::Render::RPI::ViewportContextRequests::Get();
         if (!viewSystem)
         {
             return AZ::Constants::HalfPi; // 90 degrees (default)
@@ -1535,7 +1535,7 @@ void EditorViewportWidget::SetDefaultCamera()
 
 void EditorViewportWidget::SetDefaultCameraNearFar()
 {
-    auto viewSystem = AZ::RPI::ViewportContextRequests::Get();
+    auto viewSystem = JE::Render::RPI::ViewportContextRequests::Get();
     if (!viewSystem)
     {
         return;
@@ -1558,7 +1558,7 @@ void EditorViewportWidget::OnDefaultCameraNearFarChanged()
 }
 
 //////////////////////////////////////////////////////////////////////////
-AZ::RPI::ViewPtr EditorViewportWidget::GetCurrentAtomView() const
+JE::Render::RPI::ViewPtr EditorViewportWidget::GetCurrentAtomView() const
 {
     if (m_renderViewport && m_renderViewport->GetViewportContext())
     {
@@ -1974,10 +1974,10 @@ void EditorViewportWidget::UpdateScene()
         AZStd::shared_ptr<AzFramework::Scene> mainScene = sceneSystem->GetScene(AzFramework::Scene::MainSceneName);
         if (mainScene)
         {
-            AZ::RPI::SceneNotificationBus::Handler::BusDisconnect();
+            JE::Render::RPI::SceneNotificationBus::Handler::BusDisconnect();
             m_renderViewport->SetScene(mainScene);
             auto viewportContext = m_renderViewport->GetViewportContext();
-            AZ::RPI::SceneNotificationBus::Handler::BusConnect(viewportContext->GetRenderScene()->GetId());
+            JE::Render::RPI::SceneNotificationBus::Handler::BusConnect(viewportContext->GetRenderScene()->GetId());
 
             // Don't enable the render pipeline until a level has been loaded
             // Also show/hide the RenderViewportWidget accordingly so that we get the
@@ -2002,7 +2002,7 @@ void EditorViewportWidget::UpdateScene()
 
 void EditorViewportWidget::SetAsActiveViewport()
 {
-    auto viewportContextManager = AZ::Interface<AZ::RPI::ViewportContextRequestsInterface>::Get();
+    auto viewportContextManager = AZ::Interface<JE::Render::RPI::ViewportContextRequestsInterface>::Get();
 
     const AZ::Name defaultContextName = viewportContextManager->GetDefaultViewportContextName();
 

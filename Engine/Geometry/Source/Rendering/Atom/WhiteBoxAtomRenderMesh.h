@@ -23,7 +23,7 @@
 #include <AzCore/Component/TransformBus.h>
 #include <AzCore/Name/Name.h>
 
-namespace AZ::RPI
+namespace JE::Render::RPI
 {
     class ModelLodAsset;
     class ModelAsset;
@@ -97,18 +97,18 @@ namespace JE::Geometry
         bool CreateLodAsset(const WhiteBoxMeshAtomData& meshData);
         void CreateModelAsset();
         bool CreateModel();
-        void AddLodBuffers(AZ::RPI::ModelLodAssetCreator& modelLodCreator);
-        void AddMeshBuffers(AZ::RPI::ModelLodAssetCreator& modelLodCreator, const JE::BSP::MaterialIndexRange& range);
+        void AddLodBuffers(JE::Render::RPI::ModelLodAssetCreator& modelLodCreator);
+        void AddMeshBuffers(JE::Render::RPI::ModelLodAssetCreator& modelLodCreator, const JE::BSP::MaterialIndexRange& range);
         bool AreAttributesValid() const;
         bool DoesMeshRequireFullRebuild(const WhiteBoxMeshAtomData& meshData) const;
 
         AZ::EntityId m_entityId;
-        AZ::Data::Asset<AZ::RPI::ModelLodAsset> m_lodAsset;
-        AZ::Data::Asset<AZ::RPI::ModelAsset> m_modelAsset;
-        AZ::Data::Instance<AZ::RPI::Model> m_model;
+        AZ::Data::Asset<JE::Render::RPI::ModelLodAsset> m_lodAsset;
+        AZ::Data::Asset<JE::Render::RPI::ModelAsset> m_modelAsset;
+        AZ::Data::Instance<JE::Render::RPI::Model> m_model;
         AZ::Render::MeshFeatureProcessorInterface* m_meshFeatureProcessor = nullptr;
         AZ::Render::MeshFeatureProcessorInterface::MeshHandle m_meshHandle;
-        AZ::Data::Instance<AZ::RPI::Material> m_materialInstance;
+        AZ::Data::Instance<JE::Render::RPI::Material> m_materialInstance;
         uint32_t m_vertexCount = 0;
         AZStd::vector<JE::BSP::MaterialIndexRange> m_materialRanges;
         AZStd::unique_ptr<IndexBuffer> m_indexBuffer;

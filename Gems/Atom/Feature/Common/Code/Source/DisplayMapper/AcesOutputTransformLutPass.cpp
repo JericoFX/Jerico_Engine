@@ -12,23 +12,23 @@
 #include <Atom/RHI/FrameGraphInterface.h>
 #include <Atom/RHI/FrameGraphAttachmentInterface.h>
 
-#include <Atom/RPI.Public/RenderPipeline.h>
-#include <Atom/RPI.Public/Scene.h>
-#include <Atom/RPI.Public/RPIUtils.h>
-#include <Atom/RPI.Reflect/Pass/PassTemplate.h>
-#include <Atom/RPI.Reflect/Shader/ShaderAsset.h>
+#include <JE/Render/RPI/Public/RenderPipeline.h>
+#include <JE/Render/RPI/Public/Scene.h>
+#include <JE/Render/RPI/Public/RPIUtils.h>
+#include <JE/Render/RPI/Reflect/Pass/PassTemplate.h>
+#include <JE/Render/RPI/Reflect/Shader/ShaderAsset.h>
 
 namespace AZ
 {
     namespace Render
     {
-        RPI::Ptr<AcesOutputTransformLutPass> AcesOutputTransformLutPass::Create(const RPI::PassDescriptor& descriptor)
+        JE::Render::RPI::Ptr<AcesOutputTransformLutPass> AcesOutputTransformLutPass::Create(const JE::Render::RPI::PassDescriptor& descriptor)
         {
-            RPI::Ptr<AcesOutputTransformLutPass> pass = aznew AcesOutputTransformLutPass(descriptor);
+            JE::Render::RPI::Ptr<AcesOutputTransformLutPass> pass = aznew AcesOutputTransformLutPass(descriptor);
             return pass;
         }
 
-        AcesOutputTransformLutPass::AcesOutputTransformLutPass(const RPI::PassDescriptor& descriptor)
+        AcesOutputTransformLutPass::AcesOutputTransformLutPass(const JE::Render::RPI::PassDescriptor& descriptor)
             : DisplayMapperFullScreenPass(descriptor)
         {
         }

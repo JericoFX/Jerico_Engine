@@ -13,10 +13,10 @@
 #include <AzFramework/Asset/AssetSystemBus.h>
 #include <LyShine/Bus/Sprite/UiSpriteBus.h>
 
-#include <Atom/RPI.Public/Image/StreamingImage.h>
-#include <Atom/RPI.Public/Image/AttachmentImage.h>
-#include <Atom/RPI.Reflect/Image/StreamingImageAsset.h>
-#include <Atom/RPI.Reflect/Asset/AssetUtils.h>
+#include <JE/Render/RPI/Public/Image/StreamingImage.h>
+#include <JE/Render/RPI/Public/Image/AttachmentImage.h>
+#include <JE/Render/RPI/Reflect/Image/StreamingImageAsset.h>
+#include <JE/Render/RPI/Reflect/Asset/AssetUtils.h>
 
 namespace
 {
@@ -247,7 +247,7 @@ void CSprite::SetCellBorders(int cellIndex, Borders borders)
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-AZ::Data::Instance<AZ::RPI::Image> CSprite::GetImage()
+AZ::Data::Instance<JE::Render::RPI::Image> CSprite::GetImage()
 {
     // Prioritize usage of an atlas
     if (m_atlas)
@@ -363,7 +363,7 @@ bool CSprite::AreCellBordersZeroWidth(int cellIndex) const
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 AZ::Vector2 CSprite::GetSize()
 {
-    AZ::Data::Instance<AZ::RPI::Image> image = GetImage();
+    AZ::Data::Instance<JE::Render::RPI::Image> image = GetImage();
     if (image)
     {
         if (m_atlas)
@@ -654,7 +654,7 @@ CSprite* CSprite::LoadSprite(const AZStd::string& pathname)
     TextureAtlasNamespace::TextureAtlas* atlas = nullptr;
     TextureAtlasNamespace::AtlasCoordinates atlasCoordinates;
     TextureAtlasNamespace::TextureAtlasRequestBus::BroadcastResult(atlas, &TextureAtlasNamespace::TextureAtlasRequests::FindAtlasContainingImage, texturePath.c_str());
-    AZ::Data::Instance<AZ::RPI::Image> image;
+    AZ::Data::Instance<JE::Render::RPI::Image> image;
     if (atlas)
     {
         atlasCoordinates = atlas->GetAtlasCoordinates(texturePath.c_str());
@@ -691,9 +691,9 @@ CSprite* CSprite::LoadSprite(const AZStd::string& pathname)
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-CSprite* CSprite::CreateSprite(const AZ::Data::Asset<AZ::RPI::AttachmentImageAsset>& attachmentImageAsset)
+CSprite* CSprite::CreateSprite(const AZ::Data::Asset<JE::Render::RPI::AttachmentImageAsset>& attachmentImageAsset)
 {
-    auto attachmentImage = AZ::RPI::AttachmentImage::FindOrCreate(attachmentImageAsset);
+    auto attachmentImage = JE::Render::RPI::AttachmentImage::FindOrCreate(attachmentImageAsset);
     if (!attachmentImage)
     {
         AZ_Warning("UI", false, "Failed to find or create render target");
@@ -819,7 +819,7 @@ AZStd::string CSprite::GetImageSourcePathFromProductPath(const AZStd::string& pr
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-bool CSprite::LoadImage(const AZStd::string& nameTex, AZ::Data::Instance<AZ::RPI::Image>& image)
+bool CSprite::LoadImage(const AZStd::string& nameTex, AZ::Data::Instance<JE::Render::RPI::Image>& image)
 {
     AZStd::string sourceRelativePath(nameTex);
     AZStd::string cacheRelativePath = AZStd::string::format("%s.%s", sourceRelativePath.c_str(), streamingImageExtension);
@@ -853,10 +853,10 @@ bool CSprite::LoadImage(const AZStd::string& nameTex, AZ::Data::Instance<AZ::RPI
     AZ::Data::AssetCatalogRequestBus::BroadcastResult(
         streamingImageAssetId, &AZ::Data::AssetCatalogRequestBus::Events::GenerateAssetIdTEMP,
         sourceRelativePath.c_str());
-    streamingImageAssetId.m_subId = AZ::RPI::StreamingImageAsset::GetImageAssetSubId();
+    streamingImageAssetId.m_subId = JE::Render::RPI::StreamingImageAsset::GetImageAssetSubId();
 
-    auto streamingImageAsset = AZ::Data::AssetManager::Instance().FindOrCreateAsset<AZ::RPI::StreamingImageAsset>(streamingImageAssetId, AZ::Data::AssetLoadBehavior::PreLoad);
-    image = AZ::RPI::StreamingImage::FindOrCreate(streamingImageAsset);
+    auto streamingImageAsset = AZ::Data::AssetManager::Instance().FindOrCreateAsset<JE::Render::RPI::StreamingImageAsset>(streamingImageAssetId, AZ::Data::AssetLoadBehavior::PreLoad);
+    image = JE::Render::RPI::StreamingImage::FindOrCreate(streamingImageAsset);
     if (!image)
     {
         AZ_Error("CSprite", false, "Failed to find or create an image instance from image asset '%s', ID %s",
@@ -868,7 +868,7 @@ bool CSprite::LoadImage(const AZStd::string& nameTex, AZ::Data::Instance<AZ::RPI
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-void CSprite::ReleaseImage(AZ::Data::Instance<AZ::RPI::Image>& image)
+void CSprite::ReleaseImage(AZ::Data::Instance<JE::Render::RPI::Image>& image)
 {
     image.reset();
 }

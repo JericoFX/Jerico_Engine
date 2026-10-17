@@ -14,8 +14,8 @@
 #include <SurfaceData/Utility/SurfaceDataUtility.h>
 #include <LmbrCentral/Shape/ShapeComponentBus.h>
 
-#include <Atom/RPI.Public/Scene.h>
-#include <Atom/RPI.Public/FeatureProcessorFactory.h>
+#include <JE/Render/RPI/Public/Scene.h>
+#include <JE/Render/RPI/Public/FeatureProcessorFactory.h>
 #include <TerrainRenderer/TerrainFeatureProcessor.h>
 
 #include <Terrain/Ebuses/TerrainAreaSurfaceRequestBus.h>

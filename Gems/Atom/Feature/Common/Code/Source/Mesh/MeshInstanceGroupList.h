@@ -10,7 +10,7 @@
 
 #include <Mesh/MeshInstanceGroupKey.h>
 
-#include <Atom/RPI.Public/MeshDrawPacket.h>
+#include <JE/Render/RPI/Public/MeshDrawPacket.h>
 #include <Atom/Utils/StableDynamicArray.h>
 #include <AzCore/std/containers/unordered_map.h>
 #include <AzCore/std/containers/vector.h>
@@ -25,7 +25,7 @@ namespace AZ::Render
     struct MeshInstanceGroupData
     {
         // The original draw packet, shared by every instance
-        RPI::MeshDrawPacket m_drawPacket;
+        JE::Render::RPI::MeshDrawPacket m_drawPacket;
 
         // We modify the original draw packet each frame with a new instance count and a new root constant offset
         // The instance count and offset varies per view, so we keep one modifiable copy of the draw packet for each view
@@ -67,7 +67,7 @@ namespace AZ::Render
 
         // Update mesh draw packet
         // Return true if DrawPacket was rebuilt
-        bool UpdateDrawPacket(const RPI::Scene& parentScene, bool forceUpdate);
+        bool UpdateDrawPacket(const JE::Render::RPI::Scene& parentScene, bool forceUpdate);
 
         // Update shader option flags for the instance group
         // It goes through the cullable's m_shaderOptionFlags of each associated ModelDataInstance and get combined m_shaderOptionFlags and m_shaderOptionFlagMask

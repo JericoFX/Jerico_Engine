@@ -8,13 +8,13 @@
 
 #include <AzTest/AzTest.h>
 
-#include <Atom/RPI.Reflect/Buffer/BufferAssetCreator.h>
-#include <Atom/RPI.Reflect/Model/ModelAssetCreator.h>
-#include <Atom/RPI.Reflect/Model/ModelLodAssetCreator.h>
-#include <Atom/RPI.Reflect/Model/ModelAsset.h>
-#include <Atom/RPI.Reflect/Model/ModelKdTree.h>
-#include <Atom/RPI.Reflect/Model/ModelLodAsset.h>
-#include <Atom/RPI.Reflect/ResourcePoolAssetCreator.h>
+#include <JE/Render/RPI/Reflect/Buffer/BufferAssetCreator.h>
+#include <JE/Render/RPI/Reflect/Model/ModelAssetCreator.h>
+#include <JE/Render/RPI/Reflect/Model/ModelLodAssetCreator.h>
+#include <JE/Render/RPI/Reflect/Model/ModelAsset.h>
+#include <JE/Render/RPI/Reflect/Model/ModelKdTree.h>
+#include <JE/Render/RPI/Reflect/Model/ModelLodAsset.h>
+#include <JE/Render/RPI/Reflect/ResourcePoolAssetCreator.h>
 
 #include <AzCore/Component/Entity.h>
 #include <AzCore/Math/Random.h>
@@ -270,16 +270,16 @@ public:
 
     // Build a buffer asset that contains the given data. This buffer asset is used in construction of an in-memory
     // test Atom model asset that can be used for testing SurfaceData raycasts.
-    AZ::Data::Asset<AZ::RPI::BufferAsset> BuildTestBuffer(const void* data, const uint32_t elementCount, const uint32_t elementSize)
+    AZ::Data::Asset<JE::Render::RPI::BufferAsset> BuildTestBuffer(const void* data, const uint32_t elementCount, const uint32_t elementSize)
     {
         // Create a buffer pool asset for use with the buffer asset
-        AZ::Data::Asset<AZ::RPI::ResourcePoolAsset> bufferPoolAsset;
+        AZ::Data::Asset<JE::Render::RPI::ResourcePoolAsset> bufferPoolAsset;
         {
             auto bufferPoolDesc = AZStd::make_unique<AZ::RHI::BufferPoolDescriptor>();
             bufferPoolDesc->m_bindFlags = AZ::RHI::BufferBindFlags::InputAssembly;
             bufferPoolDesc->m_heapMemoryLevel = AZ::RHI::HeapMemoryLevel::Host;
 
-            AZ::RPI::ResourcePoolAssetCreator creator;
+            JE::Render::RPI::ResourcePoolAssetCreator creator;
             creator.Begin(AZ::Uuid::CreateRandom());
             creator.SetPoolDescriptor(AZStd::move(bufferPoolDesc));
             creator.SetPoolName("TestPool");
@@ -287,13 +287,13 @@ public:
         }
 
         // Create a buffer asset that contains a copy of the input data.
-        AZ::Data::Asset<AZ::RPI::BufferAsset> asset;
+        AZ::Data::Asset<JE::Render::RPI::BufferAsset> asset;
         {
             AZ::RHI::BufferDescriptor bufferDescriptor;
             bufferDescriptor.m_bindFlags = AZ::RHI::BufferBindFlags::InputAssembly;
             bufferDescriptor.m_byteCount = elementCount * elementSize;
 
-            AZ::RPI::BufferAssetCreator creator;
+            JE::Render::RPI::BufferAssetCreator creator;
             creator.Begin(AZ::Uuid::CreateRandom());
             creator.SetPoolAsset(bufferPoolAsset);
             creator.SetBuffer(data, bufferDescriptor.m_byteCount, bufferDescriptor);
@@ -305,12 +305,12 @@ public:
     }
 
     // Build an in-memory test Atom model asset out of the given positions and indices.
-    AZ::Data::Asset<AZ::RPI::ModelAsset> BuildTestModel(const AZStd::vector<float>& positions, const AZStd::vector<uint32_t>& indices)
+    AZ::Data::Asset<JE::Render::RPI::ModelAsset> BuildTestModel(const AZStd::vector<float>& positions, const AZStd::vector<uint32_t>& indices)
     {
         // First build a model LOD asset that contains a mesh for the given positions and indices.
-        AZ::Data::Asset<AZ::RPI::ModelLodAsset> lodAsset;
+        AZ::Data::Asset<JE::Render::RPI::ModelLodAsset> lodAsset;
         {
-            AZ::RPI::ModelLodAssetCreator creator;
+            JE::Render::RPI::ModelLodAssetCreator creator;
             creator.Begin(AZ::Data::AssetId(AZ::Uuid::CreateRandom()));
 
             const uint32_t positionElementCount = aznumeric_cast<uint32_t>(positions.size() / 3);
@@ -341,9 +341,9 @@ public:
         }
 
         // Create a model asset that contains the single LOD built above.
-        AZ::Data::Asset<AZ::RPI::ModelAsset> asset;
+        AZ::Data::Asset<JE::Render::RPI::ModelAsset> asset;
         {
-            AZ::RPI::ModelAssetCreator creator;
+            JE::Render::RPI::ModelAssetCreator creator;
 
             creator.Begin(AZ::Data::AssetId(AZ::Uuid::CreateRandom()));
             creator.SetName("TestModel");
@@ -630,10 +630,10 @@ TEST_F(SurfaceDataTestApp, SurfaceData_TestGetMeshRayIntersection)
     };
 
     // Register all the asset handlers necessary for constructing the test model.
-    auto resourcePoolAssetHandler = AZ::RPI::MakeAssetHandler<AZ::RPI::ResourcePoolAssetHandler>();
-    auto bufferAssetHandler = AZ::RPI::MakeAssetHandler<AZ::RPI::BufferAssetHandler>();
-    auto modelLodAssetHandler = AZ::RPI::MakeAssetHandler<AZ::RPI::ModelLodAssetHandler>();
-    auto modelAssetHandler = AZ::RPI::MakeAssetHandler<AZ::RPI::ModelAssetHandler>();
+    auto resourcePoolAssetHandler = JE::Render::RPI::MakeAssetHandler<JE::Render::RPI::ResourcePoolAssetHandler>();
+    auto bufferAssetHandler = JE::Render::RPI::MakeAssetHandler<JE::Render::RPI::BufferAssetHandler>();
+    auto modelLodAssetHandler = JE::Render::RPI::MakeAssetHandler<JE::Render::RPI::ModelLodAssetHandler>();
+    auto modelAssetHandler = JE::Render::RPI::MakeAssetHandler<JE::Render::RPI::ModelAssetHandler>();
 
     // Build a mesh containing a test quad. The test quad goes from 0-5 in the XY plane, at a height of 5 on the Z axis.
     const AZStd::vector<uint32_t> indices = { 0, 1, 2, 1, 3, 2 };

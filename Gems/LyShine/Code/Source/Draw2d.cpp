@@ -14,14 +14,14 @@
 #include <AzCore/Math/MatrixUtils.h>
 #include <AzFramework/Font/FontInterface.h>
 
-#include <Atom/RPI.Public/Image/ImageSystemInterface.h>
-#include <Atom/RPI.Public/RPISystemInterface.h>
+#include <JE/Render/RPI/Public/Image/ImageSystemInterface.h>
+#include <JE/Render/RPI/Public/RPISystemInterface.h>
 #include <Atom/RHI/RHISystemInterface.h>
-#include <Atom/RPI.Public/Pass/RasterPass.h>
-#include <Atom/RPI.Public/Shader/Shader.h>
-#include <Atom/RPI.Public/Image/StreamingImage.h>
-#include <Atom/RPI.Public/RPIUtils.h>
-#include <Atom/RPI.Public/ViewportContextBus.h>
+#include <JE/Render/RPI/Public/Pass/RasterPass.h>
+#include <JE/Render/RPI/Public/Shader/Shader.h>
+#include <JE/Render/RPI/Public/Image/StreamingImage.h>
+#include <JE/Render/RPI/Public/RPIUtils.h>
+#include <JE/Render/RPI/Public/ViewportContextBus.h>
 
 namespace
 {
@@ -47,7 +47,7 @@ namespace
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-CDraw2d::CDraw2d(AZ::RPI::ViewportContextPtr viewportContext)
+CDraw2d::CDraw2d(JE::Render::RPI::ViewportContextPtr viewportContext)
     : m_deferCalls(false)
     , m_viewportContext(viewportContext)
 {
@@ -74,16 +74,16 @@ CDraw2d::~CDraw2d()
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-void CDraw2d::OnBootstrapSceneReady(AZ::RPI::Scene* bootstrapScene)
+void CDraw2d::OnBootstrapSceneReady(JE::Render::RPI::Scene* bootstrapScene)
 {
     // At this point the RPI is ready for use
 
     // Load the shader to be used for 2d drawing
     const char* shaderFilepath = "Shaders/SimpleTextured.azshader";
-    AZ::Data::Instance<AZ::RPI::Shader> shader = AZ::RPI::LoadCriticalShader(shaderFilepath);
+    AZ::Data::Instance<JE::Render::RPI::Shader> shader = JE::Render::RPI::LoadCriticalShader(shaderFilepath);
 
     // Set scene to be associated with the dynamic draw context
-    AZ::RPI::Scene* scene = nullptr;
+    JE::Render::RPI::Scene* scene = nullptr;
     if (m_viewportContext)
     {
         // Use scene associated with the specified viewport context
@@ -99,8 +99,8 @@ void CDraw2d::OnBootstrapSceneReady(AZ::RPI::Scene* bootstrapScene)
     // Create and initialize a DynamicDrawContext for 2d drawing
 
     // Get the pass for the dynamic draw context to render to
-    AZ::RPI::RasterPass* uiCanvasPass = nullptr;
-    AZ::RPI::SceneId sceneId = scene->GetId();
+    JE::Render::RPI::RasterPass* uiCanvasPass = nullptr;
+    JE::Render::RPI::SceneId sceneId = scene->GetId();
     LyShinePassRequestBus::EventResult(uiCanvasPass, sceneId, &LyShinePassRequestBus::Events::GetUiCanvasPass);
 
     if (!uiCanvasPass)
@@ -109,16 +109,16 @@ void CDraw2d::OnBootstrapSceneReady(AZ::RPI::Scene* bootstrapScene)
         return;
     }
 
-    m_dynamicDraw = AZ::RPI::DynamicDrawInterface::Get()->CreateDynamicDrawContext();
+    m_dynamicDraw = JE::Render::RPI::DynamicDrawInterface::Get()->CreateDynamicDrawContext();
     m_dynamicDraw->InitShader(shader);
     m_dynamicDraw->InitVertexFormat(
         { {"POSITION", AZ::RHI::Format::R32G32B32_FLOAT},
         {"COLOR", AZ::RHI::Format::B8G8R8A8_UNORM},
         {"TEXCOORD0", AZ::RHI::Format::R32G32_FLOAT} });
-    m_dynamicDraw->AddDrawStateOptions(AZ::RPI::DynamicDrawContext::DrawStateOptions::PrimitiveType
-        | AZ::RPI::DynamicDrawContext::DrawStateOptions::BlendMode
-        | AZ::RPI::DynamicDrawContext::DrawStateOptions::DepthState
-        | AZ::RPI::DynamicDrawContext::DrawStateOptions::ShaderVariant);
+    m_dynamicDraw->AddDrawStateOptions(JE::Render::RPI::DynamicDrawContext::DrawStateOptions::PrimitiveType
+        | JE::Render::RPI::DynamicDrawContext::DrawStateOptions::BlendMode
+        | JE::Render::RPI::DynamicDrawContext::DrawStateOptions::DepthState
+        | JE::Render::RPI::DynamicDrawContext::DrawStateOptions::ShaderVariant);
     // Use scene as output scope (will render to the UiCanvas child pass of the LyShine pass)
     m_dynamicDraw->SetOutputScope(scene);
     m_dynamicDraw->InitDrawListTag(uiCanvasPass->GetDrawListTag());
@@ -130,7 +130,7 @@ void CDraw2d::OnBootstrapSceneReady(AZ::RPI::Scene* bootstrapScene)
         // Cache draw srg input indices for later use
         static const char textureIndexName[] = "m_texture";
         static const char worldToProjIndexName[] = "m_worldToProj";
-        AZ::Data::Instance<AZ::RPI::ShaderResourceGroup> drawSrg = m_dynamicDraw->NewDrawSrg();
+        AZ::Data::Instance<JE::Render::RPI::ShaderResourceGroup> drawSrg = m_dynamicDraw->NewDrawSrg();
         if (drawSrg)
         {
             const AZ::RHI::ShaderResourceGroupLayout* layout = drawSrg->GetLayout();
@@ -143,20 +143,20 @@ void CDraw2d::OnBootstrapSceneReady(AZ::RPI::Scene* bootstrapScene)
         }
 
         // Cache shader variants that will be used
-        AZ::RPI::ShaderOptionList shaderOptionsClamp;
-        shaderOptionsClamp.push_back(AZ::RPI::ShaderOption(AZ::Name("o_clamp"), AZ::Name("true")));
-        shaderOptionsClamp.push_back(AZ::RPI::ShaderOption(AZ::Name("o_useColorChannels"), AZ::Name("true")));
+        JE::Render::RPI::ShaderOptionList shaderOptionsClamp;
+        shaderOptionsClamp.push_back(JE::Render::RPI::ShaderOption(AZ::Name("o_clamp"), AZ::Name("true")));
+        shaderOptionsClamp.push_back(JE::Render::RPI::ShaderOption(AZ::Name("o_useColorChannels"), AZ::Name("true")));
         m_shaderData.m_shaderOptionsClamp = m_dynamicDraw->UseShaderVariant(shaderOptionsClamp);
-        AZ::RPI::ShaderOptionList shaderOptionsWrap;
-        shaderOptionsWrap.push_back(AZ::RPI::ShaderOption(AZ::Name("o_clamp"), AZ::Name("false")));
-        shaderOptionsWrap.push_back(AZ::RPI::ShaderOption(AZ::Name("o_useColorChannels"), AZ::Name("true")));
+        JE::Render::RPI::ShaderOptionList shaderOptionsWrap;
+        shaderOptionsWrap.push_back(JE::Render::RPI::ShaderOption(AZ::Name("o_clamp"), AZ::Name("false")));
+        shaderOptionsWrap.push_back(JE::Render::RPI::ShaderOption(AZ::Name("o_useColorChannels"), AZ::Name("true")));
         m_shaderData.m_shaderOptionsWrap = m_dynamicDraw->UseShaderVariant(shaderOptionsWrap);
     }
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 // Draw a textured quad with the top left corner at the given position.
-void CDraw2d::DrawImage(AZ::Data::Instance<AZ::RPI::Image> image, AZ::Vector2 position, AZ::Vector2 size, float opacity,
+void CDraw2d::DrawImage(AZ::Data::Instance<JE::Render::RPI::Image> image, AZ::Vector2 position, AZ::Vector2 size, float opacity,
     float rotation, const AZ::Vector2* pivotPoint, const AZ::Vector2* minMaxTexCoords,
     ImageOptions* imageOptions)
 {
@@ -213,7 +213,7 @@ void CDraw2d::DrawImage(AZ::Data::Instance<AZ::RPI::Image> image, AZ::Vector2 po
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-void CDraw2d::DrawImageAligned(AZ::Data::Instance<AZ::RPI::Image> image, AZ::Vector2 position, AZ::Vector2 size,
+void CDraw2d::DrawImageAligned(AZ::Data::Instance<JE::Render::RPI::Image> image, AZ::Vector2 position, AZ::Vector2 size,
     HAlign horizontalAlignment, VAlign verticalAlignment,
     float opacity, float rotation, const AZ::Vector2* minMaxTexCoords, ImageOptions* imageOptions)
 {
@@ -223,7 +223,7 @@ void CDraw2d::DrawImageAligned(AZ::Data::Instance<AZ::RPI::Image> image, AZ::Vec
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-void CDraw2d::DrawQuad(AZ::Data::Instance<AZ::RPI::Image> image, VertexPosColUV* verts, Rounding pixelRounding,
+void CDraw2d::DrawQuad(AZ::Data::Instance<JE::Render::RPI::Image> image, VertexPosColUV* verts, Rounding pixelRounding,
     bool clamp, const CDraw2d::RenderState& renderState)
 {
     // define quad
@@ -247,7 +247,7 @@ void CDraw2d::DrawQuad(AZ::Data::Instance<AZ::RPI::Image> image, VertexPosColUV*
 void CDraw2d::DrawLine(AZ::Vector2 start, AZ::Vector2 end, AZ::Color color, Rounding pixelRounding,
     const CDraw2d::RenderState& renderState)
 {
-    auto image = AZ::RPI::ImageSystemInterface::Get()->GetSystemImage(AZ::RPI::SystemImage::White);
+    auto image = JE::Render::RPI::ImageSystemInterface::Get()->GetSystemImage(JE::Render::RPI::SystemImage::White);
 
     // define line
     uint32 packedColor = PackARGB8888(color);
@@ -272,7 +272,7 @@ void CDraw2d::DrawLine(AZ::Vector2 start, AZ::Vector2 end, AZ::Color color, Roun
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-void CDraw2d::DrawLineTextured(AZ::Data::Instance<AZ::RPI::Image> image, VertexPosColUV* verts, Rounding pixelRounding,
+void CDraw2d::DrawLineTextured(AZ::Data::Instance<JE::Render::RPI::Image> image, VertexPosColUV* verts, Rounding pixelRounding,
     const CDraw2d::RenderState& renderState)
 {
     // define line
@@ -329,7 +329,7 @@ void CDraw2d::DrawText(const char* textString, AZ::Vector2 position, float point
         actualTextOptions->depthTestEnabled);
 }
 
-void CDraw2d::DrawRectOutlineTextured(AZ::Data::Instance<AZ::RPI::Image> image,
+void CDraw2d::DrawRectOutlineTextured(AZ::Data::Instance<JE::Render::RPI::Image> image,
     UiTransformInterface::RectPoints points,
     AZ::Vector2 rightVec,
     AZ::Vector2 downVec,
@@ -493,7 +493,7 @@ const CDraw2d::TextOptions& CDraw2d::GetDefaultTextOptions() const
 void CDraw2d::RenderDeferredPrimitives()
 {
     // Draw and delete the deferred primitives
-    AZ::RPI::ViewportContextPtr viewportContext = GetViewportContext();
+    JE::Render::RPI::ViewportContextPtr viewportContext = GetViewportContext();
     for (auto primIter : m_deferredPrimitives)
     {
         primIter->Draw(m_dynamicDraw, m_shaderData, viewportContext);
@@ -527,7 +527,7 @@ void CDraw2d::SetSortKey(int64_t key)
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-AZ::Data::Instance<AZ::RPI::Image> CDraw2d::LoadTexture(const AZStd::string& pathName)
+AZ::Data::Instance<JE::Render::RPI::Image> CDraw2d::LoadTexture(const AZStd::string& pathName)
 {
     // The file may not be in the AssetCatalog at this point if it is still processing or doesn't exist on disk.
     // Use GenerateAssetIdTEMP instead of GetAssetIdByPath so that it will return a valid AssetId anyways
@@ -535,10 +535,10 @@ AZ::Data::Instance<AZ::RPI::Image> CDraw2d::LoadTexture(const AZStd::string& pat
     AZ::Data::AssetCatalogRequestBus::BroadcastResult(
         streamingImageAssetId, &AZ::Data::AssetCatalogRequestBus::Events::GenerateAssetIdTEMP,
         pathName.c_str());
-    streamingImageAssetId.m_subId = AZ::RPI::StreamingImageAsset::GetImageAssetSubId();
+    streamingImageAssetId.m_subId = JE::Render::RPI::StreamingImageAsset::GetImageAssetSubId();
 
-    auto streamingImageAsset = AZ::Data::AssetManager::Instance().FindOrCreateAsset<AZ::RPI::StreamingImageAsset>(streamingImageAssetId, AZ::Data::AssetLoadBehavior::PreLoad);
-    AZ::Data::Instance<AZ::RPI::Image> image = AZ::RPI::StreamingImage::FindOrCreate(streamingImageAsset);
+    auto streamingImageAsset = AZ::Data::AssetManager::Instance().FindOrCreateAsset<JE::Render::RPI::StreamingImageAsset>(streamingImageAssetId, AZ::Data::AssetLoadBehavior::PreLoad);
+    AZ::Data::Instance<JE::Render::RPI::Image> image = JE::Render::RPI::StreamingImage::FindOrCreate(streamingImageAsset);
     if (!image)
     {
         AZ_Error("Draw2d", false, "Failed to find or create an image instance from image asset '%s'", pathName.c_str());
@@ -712,12 +712,12 @@ void CDraw2d::DrawOrDeferRectOutline(const DeferredRectOutline* rectOutline)
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-AZ::RPI::ViewportContextPtr CDraw2d::GetViewportContext() const
+JE::Render::RPI::ViewportContextPtr CDraw2d::GetViewportContext() const
 {
     if (!m_viewportContext)
     {
         // Return the default viewport context
-        auto viewContextManager = AZ::Interface<AZ::RPI::ViewportContextRequestsInterface>::Get();
+        auto viewContextManager = AZ::Interface<JE::Render::RPI::ViewportContextRequestsInterface>::Get();
         return viewContextManager->GetDefaultViewportContext();
     }
 
@@ -730,9 +730,9 @@ AZ::RPI::ViewportContextPtr CDraw2d::GetViewportContext() const
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-void CDraw2d::DeferredQuad::Draw(AZ::RHI::Ptr<AZ::RPI::DynamicDrawContext> dynamicDraw,
+void CDraw2d::DeferredQuad::Draw(AZ::RHI::Ptr<JE::Render::RPI::DynamicDrawContext> dynamicDraw,
     const Draw2dShaderData& shaderData,
-    AZ::RPI::ViewportContextPtr viewportContext) const
+    JE::Render::RPI::ViewportContextPtr viewportContext) const
 {
     const int32 NUM_VERTS = 6;
 
@@ -754,14 +754,14 @@ void CDraw2d::DeferredQuad::Draw(AZ::RHI::Ptr<AZ::RPI::DynamicDrawContext> dynam
     dynamicDraw->SetShaderVariant(m_clamp ? shaderData.m_shaderOptionsClamp : shaderData.m_shaderOptionsWrap);
 
     // Set up per draw SRG
-    AZ::Data::Instance<AZ::RPI::ShaderResourceGroup> drawSrg = dynamicDraw->NewDrawSrg();
+    AZ::Data::Instance<JE::Render::RPI::ShaderResourceGroup> drawSrg = dynamicDraw->NewDrawSrg();
 
     // Set texture
     const auto* imageView = m_image ? m_image->GetImageView() : nullptr;
     if (!imageView)
     {
         // Default to white texture
-        auto image = AZ::RPI::ImageSystemInterface::Get()->GetSystemImage(AZ::RPI::SystemImage::White);
+        auto image = JE::Render::RPI::ImageSystemInterface::Get()->GetSystemImage(JE::Render::RPI::SystemImage::White);
         imageView = image->GetImageView();
     }
 
@@ -797,9 +797,9 @@ void CDraw2d::DeferredQuad::Draw(AZ::RHI::Ptr<AZ::RPI::DynamicDrawContext> dynam
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-void CDraw2d::DeferredLine::Draw(AZ::RHI::Ptr<AZ::RPI::DynamicDrawContext> dynamicDraw,
+void CDraw2d::DeferredLine::Draw(AZ::RHI::Ptr<JE::Render::RPI::DynamicDrawContext> dynamicDraw,
     const Draw2dShaderData& shaderData,
-    AZ::RPI::ViewportContextPtr viewportContext) const
+    JE::Render::RPI::ViewportContextPtr viewportContext) const
 {
     const float z = 1.0f;   // depth test disabled, if writing Z this will write at far plane
 
@@ -815,14 +815,14 @@ void CDraw2d::DeferredLine::Draw(AZ::RHI::Ptr<AZ::RPI::DynamicDrawContext> dynam
     }
 
     // Set up per draw SRG
-    AZ::Data::Instance<AZ::RPI::ShaderResourceGroup> drawSrg = dynamicDraw->NewDrawSrg();
+    AZ::Data::Instance<JE::Render::RPI::ShaderResourceGroup> drawSrg = dynamicDraw->NewDrawSrg();
 
     // Set texture
     const auto* imageView = m_image ? m_image->GetImageView() : nullptr;
     if (!imageView)
     {
         // Default to white texture
-        auto image = AZ::RPI::ImageSystemInterface::Get()->GetSystemImage(AZ::RPI::SystemImage::White);
+        auto image = JE::Render::RPI::ImageSystemInterface::Get()->GetSystemImage(JE::Render::RPI::SystemImage::White);
         imageView = image->GetImageView();
     }
 
@@ -853,9 +853,9 @@ void CDraw2d::DeferredLine::Draw(AZ::RHI::Ptr<AZ::RPI::DynamicDrawContext> dynam
     dynamicDraw->DrawLinear(vertices, NUM_VERTS, drawSrg);
 }
 
-void CDraw2d::DeferredRectOutline::Draw(AZ::RHI::Ptr<AZ::RPI::DynamicDrawContext> dynamicDraw,
+void CDraw2d::DeferredRectOutline::Draw(AZ::RHI::Ptr<JE::Render::RPI::DynamicDrawContext> dynamicDraw,
     const Draw2dShaderData& shaderData,
-    AZ::RPI::ViewportContextPtr viewportContext) const
+    JE::Render::RPI::ViewportContextPtr viewportContext) const
 {
     // Create the 8 verts in the right vertex format for the dynamic draw context
     Draw2dVertex vertices[NUM_VERTS];
@@ -891,14 +891,14 @@ void CDraw2d::DeferredRectOutline::Draw(AZ::RHI::Ptr<AZ::RPI::DynamicDrawContext
     };
 
     // Set up per draw SRG
-    AZ::Data::Instance<AZ::RPI::ShaderResourceGroup> drawSrg = dynamicDraw->NewDrawSrg();
+    AZ::Data::Instance<JE::Render::RPI::ShaderResourceGroup> drawSrg = dynamicDraw->NewDrawSrg();
 
     // Set texture
     const auto* imageView = m_image ? m_image->GetImageView() : nullptr;
     if (!imageView)
     {
         // Default to white texture
-        auto image = AZ::RPI::ImageSystemInterface::Get()->GetSystemImage(AZ::RPI::SystemImage::White);
+        auto image = JE::Render::RPI::ImageSystemInterface::Get()->GetSystemImage(JE::Render::RPI::SystemImage::White);
         imageView = image->GetImageView();
     }
 
@@ -932,9 +932,9 @@ void CDraw2d::DeferredRectOutline::Draw(AZ::RHI::Ptr<AZ::RPI::DynamicDrawContext
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-void CDraw2d::DeferredText::Draw([[maybe_unused]] AZ::RHI::Ptr<AZ::RPI::DynamicDrawContext> dynamicDraw,
+void CDraw2d::DeferredText::Draw([[maybe_unused]] AZ::RHI::Ptr<JE::Render::RPI::DynamicDrawContext> dynamicDraw,
     [[maybe_unused]] const Draw2dShaderData& shaderData,
-    [[maybe_unused]] AZ::RPI::ViewportContextPtr viewportContext) const
+    [[maybe_unused]] JE::Render::RPI::ViewportContextPtr viewportContext) const
 {
     AzFramework::FontDrawInterface* fontDrawInterface = nullptr;
     AzFramework::FontQueryInterface* fontQueryInterface = AZ::Interface<AzFramework::FontQueryInterface>::Get();

@@ -9,9 +9,9 @@
 #include <Atom/RHI/Factory.h>
 #include <Atom/RHI/RHIUtils.h>
 
-#include <Atom/RPI.Public/Shader/Shader.h>
-#include <Atom/RPI.Public/Image/StreamingImage.h>
-#include <Atom/RPI.Reflect/Buffer/BufferAssetView.h>
+#include <JE/Render/RPI/Public/Shader/Shader.h>
+#include <JE/Render/RPI/Public/Image/StreamingImage.h>
+#include <JE/Render/RPI/Reflect/Buffer/BufferAssetView.h>
 
 #include <MeshletsUtilities.h>
 
@@ -33,12 +33,12 @@ namespace AZ
         //! create the Srg by associating it with a single shader and since the GPU signature and the data
         //! are referring to the same shared description (preferable set in an [SrgDeclaration].aszli file)
         //! The association with all shaders will work properly.
-        Data::Instance<RPI::ShaderResourceGroup> UtilityClass::CreateShaderResourceGroup(
-            Data::Instance<RPI::Shader> shader,
+        Data::Instance<JE::Render::RPI::ShaderResourceGroup> UtilityClass::CreateShaderResourceGroup(
+            Data::Instance<JE::Render::RPI::Shader> shader,
             const char* shaderResourceGroupId,
             [[maybe_unused]] const char* moduleName)
         {
-            Data::Instance<RPI::ShaderResourceGroup> srg = RPI::ShaderResourceGroup::Create(shader->GetAsset(), AZ::Name{ shaderResourceGroupId });
+            Data::Instance<JE::Render::RPI::ShaderResourceGroup> srg = JE::Render::RPI::ShaderResourceGroup::Create(shader->GetAsset(), AZ::Name{ shaderResourceGroupId });
             if (!srg)
             {
                 AZ_Error(moduleName, false, "Failed to create shader resource group [%s]", shaderResourceGroupId);
@@ -70,10 +70,10 @@ namespace AZ
 
         //! If srg is nullptr the index handle will NOT be set.
         //! This can be useful when creating a constant buffer or an image.
-        Data::Instance<RPI::Buffer> UtilityClass::CreateBuffer(
+        Data::Instance<JE::Render::RPI::Buffer> UtilityClass::CreateBuffer(
             [[maybe_unused]] const char* warningHeader,
             SrgBufferDescriptor& bufferDesc,
-            Data::Instance<RPI::ShaderResourceGroup> srg)
+            Data::Instance<JE::Render::RPI::ShaderResourceGroup> srg)
         {
             // If srg is provided, match the shader Srg bind index (returned via the descriptor)
             if (srg)
@@ -88,7 +88,7 @@ namespace AZ
             }
 
             // Descriptor setting
-            RPI::CommonBufferDescriptor desc;
+            JE::Render::RPI::CommonBufferDescriptor desc;
             desc.m_elementFormat = bufferDesc.m_elementFormat;
             desc.m_poolType = bufferDesc.m_poolType;
             desc.m_elementSize = bufferDesc.m_elementSize;
@@ -97,14 +97,14 @@ namespace AZ
             desc.m_bufferData = nullptr;    // set during asset load - use Update
 
             // Buffer creation
-            return RPI::BufferSystemInterface::Get()->CreateBufferFromCommonPool(desc);
+            return JE::Render::RPI::BufferSystemInterface::Get()->CreateBufferFromCommonPool(desc);
         }
 
         bool UtilityClass::BindBufferToSrg(
             [[maybe_unused]] const char* warningHeader,
-            Data::Instance<RPI::Buffer> buffer,
+            Data::Instance<JE::Render::RPI::Buffer> buffer,
             SrgBufferDescriptor& bufferDesc,
-            Data::Instance<RPI::ShaderResourceGroup> srg)
+            Data::Instance<JE::Render::RPI::ShaderResourceGroup> srg)
         {
             if (!buffer)
             {
@@ -128,13 +128,13 @@ namespace AZ
             return true;
         }
 
-        Data::Instance<RPI::Buffer> UtilityClass::CreateBufferAndBindToSrg(
+        Data::Instance<JE::Render::RPI::Buffer> UtilityClass::CreateBufferAndBindToSrg(
             const char* warningHeader,
             SrgBufferDescriptor& bufferDesc,
-            Data::Instance<RPI::ShaderResourceGroup> srg)
+            Data::Instance<JE::Render::RPI::ShaderResourceGroup> srg)
         {
             // Buffer creation
-            Data::Instance<RPI::Buffer> buffer = CreateBuffer(warningHeader, bufferDesc, srg);
+            Data::Instance<JE::Render::RPI::Buffer> buffer = CreateBuffer(warningHeader, bufferDesc, srg);
 
             if (!BindBufferToSrg(warningHeader, buffer, bufferDesc, srg))
             {
@@ -180,7 +180,7 @@ namespace AZ
             [[maybe_unused]] const char* warningHeader,
             Data::Instance<RHI::BufferView> bufferView,
             SrgBufferDescriptor& bufferDesc,
-            Data::Instance<RPI::ShaderResourceGroup> srg)
+            Data::Instance<JE::Render::RPI::ShaderResourceGroup> srg)
         {
             if (!bufferView || !srg)
             {
@@ -208,7 +208,7 @@ namespace AZ
             const char* warningHeader,
             SrgBufferDescriptor& bufferDesc,
             Data::Instance<Meshlets::SharedBufferAllocation>& outputBufferAllocator,
-            Data::Instance<RPI::ShaderResourceGroup> srg)
+            Data::Instance<JE::Render::RPI::ShaderResourceGroup> srg)
         {
             // BufferView creation
             Data::Instance<RHI::BufferView> bufferView = CreateSharedBufferView(warningHeader, bufferDesc, outputBufferAllocator);

@@ -9,7 +9,7 @@
 #pragma once
 
 #include <AzCore/std/optional.h>
-#include <Atom/RPI.Reflect/Model/MorphTargetMetaAssetCreator.h>
+#include <JE/Render/RPI/Reflect/Model/MorphTargetMetaAssetCreator.h>
 #include <Model/ModelAssetBuilderComponent.h>
 #include <SceneAPI/SceneCore/DataTypes/GraphData/IBlendShapeData.h>
 #include <SceneAPI/SceneCore/Utilities/CoordinateSystemConverter.h>
@@ -29,7 +29,7 @@ namespace JE::Assets::RenderBuilders
             const AZ::SceneAPI::Containers::Scene& scene,
             const ModelAssetBuilderComponent::SourceMeshContent& sourceMesh,
             ModelAssetBuilderComponent::ProductMeshContent& productMesh,
-            AZ::RPI::MorphTargetMetaAssetCreator& metaAssetCreator,
+            JE::Render::RPI::MorphTargetMetaAssetCreator& metaAssetCreator,
             const AZ::SceneAPI::CoordinateSystemConverter& coordSysConverter);
 
     private:
@@ -57,7 +57,7 @@ namespace JE::Assets::RenderBuilders
             const AZStd::map<uint32_t, uint32_t>& oldToNewIndicesMap,
             const ModelAssetBuilderComponent::SourceMeshContent& sourceMesh,
             ModelAssetBuilderComponent::ProductMeshContent& productMesh,
-            AZ::RPI::MorphTargetMetaAssetCreator& metaAssetCreator,
+            JE::Render::RPI::MorphTargetMetaAssetCreator& metaAssetCreator,
             const AZStd::string& blendShapeName,
             const AZStd::shared_ptr<const AZ::SceneAPI::DataTypes::IBlendShapeData>& blendShapeData,
             const AZ::SceneAPI::DataTypes::MatrixType& globalTransform,
@@ -65,6 +65,6 @@ namespace JE::Assets::RenderBuilders
             const AZStd::string& sourceSceneFilename);
 
         // Find a wrinkle mask for this morph target, if it exists
-        AZ::Data::Asset<AZ::RPI::StreamingImageAsset> GetWrinkleMask(const AZStd::string& sourceSceneFullFilePath, const AZStd::string& blendShapeName) const;
+        AZ::Data::Asset<JE::Render::RPI::StreamingImageAsset> GetWrinkleMask(const AZStd::string& sourceSceneFullFilePath, const AZStd::string& blendShapeName) const;
     };
 } // namespace JE::Assets::RenderBuilders

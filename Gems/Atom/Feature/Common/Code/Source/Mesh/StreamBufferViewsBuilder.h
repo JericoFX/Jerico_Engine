@@ -40,7 +40,7 @@ namespace AZ
         private:
             void FinalizeShaderInputContract();
             AZ::RHI::Ptr<AZ::RHI::BufferView> BuildShaderIndexBufferView(
-                const AZ::RPI::ModelLod::Mesh& modelLodMesh, AZ::RHI::IndexBufferView& indexBufferViewOut) const;
+                const JE::Render::RPI::ModelLod::Mesh& modelLodMesh, AZ::RHI::IndexBufferView& indexBufferViewOut) const;
 
             static constexpr char LogWindow[] = "ShaderStreamBufferViewsBuilder";
 
@@ -61,7 +61,7 @@ namespace AZ
             };
             AZStd::vector<StreamInfo> m_streamsList;
             //! Instantiated the first time BuildShaderStreamBufferViews() is called.
-            AZStd::unique_ptr<AZ::RPI::ShaderInputContract> m_shaderInputContract;
+            AZStd::unique_ptr<JE::Render::RPI::ShaderInputContract> m_shaderInputContract;
         };
 
     } // namespace Render

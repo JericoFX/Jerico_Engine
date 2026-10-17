@@ -10,8 +10,8 @@
 
 #include <Atom/Feature/CoreLights/PhotometricValue.h>
 #include <Atom/Feature/CoreLights/ShadowConstants.h>
-#include <Atom/RPI.Public/Buffer/Buffer.h>
-#include <Atom/RPI.Public/FeatureProcessor.h>
+#include <JE/Render/RPI/Public/Buffer/Buffer.h>
+#include <JE/Render/RPI/Public/FeatureProcessor.h>
 
 namespace AZ
 {
@@ -50,10 +50,10 @@ namespace AZ
         //! DiskLightFeatureProcessorInterface provides an interface to acquire, release, and update a disk light. This is necessary for code outside of
         //! the Atom features gem to communicate with the DiskLightFeatureProcessor.
         class DiskLightFeatureProcessorInterface
-            : public RPI::FeatureProcessor
+            : public JE::Render::RPI::FeatureProcessor
         {
         public:
-            AZ_RTTI(AZ::Render::DiskLightFeatureProcessorInterface, "{A78A8FBD-1494-4EF9-9C05-AF153FDB1F17}", AZ::RPI::FeatureProcessor);
+            AZ_RTTI(AZ::Render::DiskLightFeatureProcessorInterface, "{A78A8FBD-1494-4EF9-9C05-AF153FDB1F17}", JE::Render::RPI::FeatureProcessor);
 
             using LightHandle = RHI::Handle<uint16_t, class DiskLight>;
             static constexpr PhotometricUnit PhotometricUnitType = PhotometricUnit::Candela;
@@ -121,7 +121,7 @@ namespace AZ
             virtual const DiskLightData& GetDiskData(LightHandle handle) const = 0;
 
             //! Returns the buffer containing the light data for all disk lights
-            virtual const Data::Instance<RPI::Buffer> GetLightBuffer() const = 0;
+            virtual const Data::Instance<JE::Render::RPI::Buffer> GetLightBuffer() const = 0;
             //! Returns the number of disk lights
             virtual uint32_t GetLightCount() const = 0;
         };

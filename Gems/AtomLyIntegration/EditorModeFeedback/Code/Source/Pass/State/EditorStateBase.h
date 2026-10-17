@@ -10,8 +10,8 @@
 
 #include <EditorModeFeedback/EditorStateRequestsBus.h>
 
-#include <Atom/RPI.Public/Pass/ParentPass.h>
-#include <Atom/RPI.Public/Pass/Pass.h>
+#include <JE/Render/RPI/Public/Pass/ParentPass.h>
+#include <JE/Render/RPI/Public/Pass/Pass.h>
 #include <AzCore/Name/Name.h>
 #include <AzCore/std/containers/vector.h>
 #include <AzCore/std/string/string.h>
@@ -77,7 +77,7 @@ namespace AZ::Render
         Name GetPassName() const;
 
         //! Adds the pass class pointer for this pass for the specified pipeline.
-        void AddParentPassForPipeline(const Name& pipelineName, RPI::Ptr<RPI::Pass> parentPass);
+        void AddParentPassForPipeline(const Name& pipelineName, JE::Render::RPI::Ptr<JE::Render::RPI::Pass> parentPass);
 
         //! Removes the pass class pointer for this pass for the specified pipeline.
         void RemoveParentPassForPipeline(const Name& pipelineName);
@@ -94,7 +94,7 @@ namespace AZ::Render
     protected:
         //! Helper function for finding the specified child effect pass for this editor state effect pass.
         template<class ChildPass>
-        ChildPass* FindChildPass(RPI::ParentPass* parentPass, size_t index) const
+        ChildPass* FindChildPass(JE::Render::RPI::ParentPass* parentPass, size_t index) const
         {
             if (index >= m_childPassNameList.size())
             {
@@ -114,7 +114,7 @@ namespace AZ::Render
         }
 
         //! Opportunity for the editor mode state to initialize any child pass object state.
-        virtual void UpdatePassData(RPI::ParentPass*) {}
+        virtual void UpdatePassData(JE::Render::RPI::ParentPass*) {}
         
     private:
         EditorState m_state; //!< The editor state enumeration this editor state effect pass is associated with.
@@ -124,6 +124,6 @@ namespace AZ::Render
         Name m_entityMaskDrawList; //!< The draw list of the mask this pass uses.
 
         //! The parent pass class instances for this editor state effect pass for each pipeline this pass is added to.
-        AZStd::unordered_map<Name, RPI::Ptr<RPI::Pass>> m_parentPasses;
+        AZStd::unordered_map<Name, JE::Render::RPI::Ptr<JE::Render::RPI::Pass>> m_parentPasses;
     };
 } // namespace AZ::Render

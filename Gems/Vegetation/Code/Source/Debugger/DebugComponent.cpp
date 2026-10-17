@@ -11,8 +11,8 @@
 #include "AreaSystemComponent.h"
 #include "InstanceSystemComponent.h"
 
-#include <Atom/RPI.Public/ViewportContext.h>
-#include <Atom/RPI.Public/ViewportContextBus.h>
+#include <JE/Render/RPI/Public/ViewportContext.h>
+#include <JE/Render/RPI/Public/ViewportContextBus.h>
 #include <AzCore/Component/ComponentApplicationBus.h>
 #include <AzCore/Console/IConsole.h>
 #include <AzCore/Serialization/EditContext.h>
@@ -238,9 +238,9 @@ void DebugComponent::DrawSectorTimingData(const AzFramework::ViewportInfo& viewp
     const int maxDisplayCount = m_configuration.m_maxDatapointDisplayCount;
 
     AZ::Vector3 cameraPos(0.0f);
-    if (auto viewportContextRequests = AZ::RPI::ViewportContextRequests::Get(); viewportContextRequests)
+    if (auto viewportContextRequests = JE::Render::RPI::ViewportContextRequests::Get(); viewportContextRequests)
     {
-        AZ::RPI::ViewportContextPtr viewportContext = viewportContextRequests->GetViewportContextById(viewportInfo.m_viewportId);
+        JE::Render::RPI::ViewportContextPtr viewportContext = viewportContextRequests->GetViewportContextById(viewportInfo.m_viewportId);
         cameraPos = viewportContext->GetCameraTransform().GetTranslation();
     }
     AZ::Vector2 cameraPos2d(cameraPos.GetX(), cameraPos.GetY());

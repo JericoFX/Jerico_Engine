@@ -14,13 +14,13 @@
 
 #include <AzCore/Console/IConsole.h>
 #include <AzCore/Interface/Interface.h>
-#include <Atom/RPI.Public/Image/ImageSystemInterface.h>
-#include <Atom/RPI.Public/Image/StreamingImagePool.h>
-#include <Atom/RPI.Public/Pass/ParentPass.h>
-#include <Atom/RPI.Public/RenderPipeline.h>
-#include <Atom/RPI.Public/ViewportContextBus.h>
-#include <Atom/RPI.Public/ViewportContext.h>
-#include <Atom/RPI.Public/View.h>
+#include <JE/Render/RPI/Public/Image/ImageSystemInterface.h>
+#include <JE/Render/RPI/Public/Image/StreamingImagePool.h>
+#include <JE/Render/RPI/Public/Pass/ParentPass.h>
+#include <JE/Render/RPI/Public/RenderPipeline.h>
+#include <JE/Render/RPI/Public/ViewportContextBus.h>
+#include <JE/Render/RPI/Public/ViewportContext.h>
+#include <JE/Render/RPI/Public/View.h>
 #include <Atom/RHI/Factory.h>
 #include <Atom/RHI/RHISystemInterface.h>
 #include <Atom/RHI/RHIMemoryStatisticsInterface.h>
@@ -98,20 +98,20 @@ namespace AZ::Render
             m_rendererDescription = AZStd::string::format("Atom using %s RHI", apiName.GetCStr());
         }
 
-        AZ::RPI::ViewportContextNotificationBus::Handler::BusConnect(
-            AZ::RPI::ViewportContextRequests::Get()->GetDefaultViewportContextName());
+        JE::Render::RPI::ViewportContextNotificationBus::Handler::BusConnect(
+            JE::Render::RPI::ViewportContextRequests::Get()->GetDefaultViewportContextName());
         AZ::AtomBridge::AtomViewportInfoDisplayRequestBus::Handler::BusConnect();
     }
 
     void AtomViewportDisplayInfoSystemComponent::Deactivate()
     {
         AZ::AtomBridge::AtomViewportInfoDisplayRequestBus::Handler::BusDisconnect();
-        AZ::RPI::ViewportContextNotificationBus::Handler::BusDisconnect();
+        JE::Render::RPI::ViewportContextNotificationBus::Handler::BusDisconnect();
     }
 
-    AZ::RPI::ViewportContextPtr AtomViewportDisplayInfoSystemComponent::GetViewportContext() const
+    JE::Render::RPI::ViewportContextPtr AtomViewportDisplayInfoSystemComponent::GetViewportContext() const
     {
-        return AZ::RPI::ViewportContextRequests::Get()->GetDefaultViewportContext();
+        return JE::Render::RPI::ViewportContextRequests::Get()->GetDefaultViewportContext();
     }
 
     void AtomViewportDisplayInfoSystemComponent::DrawLine(AZStd::string_view line, AZ::Color color)
@@ -134,7 +134,7 @@ namespace AZ::Render
             m_fontDrawInterface =
                 fontQueryInterface->GetDefaultFontDrawInterface();
         }
-        AZ::RPI::ViewportContextPtr viewportContext = GetViewportContext();
+        JE::Render::RPI::ViewportContextPtr viewportContext = GetViewportContext();
 
         if (!m_fontDrawInterface || !viewportContext || !viewportContext->GetRenderScene() ||
             !AZ::Interface<AzFramework::FontQueryInterface>::Get())
@@ -216,20 +216,20 @@ namespace AZ::Render
         DrawLine(m_rendererDescription, AZ::Colors::Yellow);
 
         // resolution and MSAA state
-        AZ::RPI::ViewportContextPtr viewportContext = GetViewportContext();
-        const RHI::MultisampleState& multisampleState = RPI::RPISystemInterface::Get()->GetApplicationMultisampleState();
+        JE::Render::RPI::ViewportContextPtr viewportContext = GetViewportContext();
+        const RHI::MultisampleState& multisampleState = JE::Render::RPI::RPISystemInterface::Get()->GetApplicationMultisampleState();
 
-        AZ::RPI::ScenePtr pScene = viewportContext->GetRenderScene();
+        JE::Render::RPI::ScenePtr pScene = viewportContext->GetRenderScene();
        
         AZStd::string defaultAA = "MSAA";
         bool hasAAMethod = false;
         if (pScene != nullptr)
         {
-            AZ::RPI::RenderPipelinePtr pPipeline = pScene->GetDefaultRenderPipeline();
+            JE::Render::RPI::RenderPipelinePtr pPipeline = pScene->GetDefaultRenderPipeline();
  
-            AZ::RPI::AntiAliasingMode defaultAAMethod = pPipeline->GetActiveAAMethod();
-            defaultAA = AZ::RPI::RenderPipeline::GetAAMethodNameByIndex(defaultAAMethod);
-            hasAAMethod = (defaultAAMethod != AZ::RPI::AntiAliasingMode::MSAA && defaultAAMethod != AZ::RPI::AntiAliasingMode::Default);
+            JE::Render::RPI::AntiAliasingMode defaultAAMethod = pPipeline->GetActiveAAMethod();
+            defaultAA = JE::Render::RPI::RenderPipeline::GetAAMethodNameByIndex(defaultAAMethod);
+            hasAAMethod = (defaultAAMethod != JE::Render::RPI::AntiAliasingMode::MSAA && defaultAAMethod != JE::Render::RPI::AntiAliasingMode::Default);
         }
         auto resolutionStr =
             AZStd::string::format(
@@ -261,8 +261,8 @@ namespace AZ::Render
 
     void AtomViewportDisplayInfoSystemComponent::DrawCameraInfo()
     {
-        AZ::RPI::ViewportContextPtr viewportContext = GetViewportContext();
-        AZ::RPI::ViewPtr currentView = viewportContext->GetDefaultView();
+        JE::Render::RPI::ViewportContextPtr viewportContext = GetViewportContext();
+        JE::Render::RPI::ViewPtr currentView = viewportContext->GetDefaultView();
         if (currentView == nullptr)
         {
             return;
@@ -283,14 +283,14 @@ namespace AZ::Render
 
     void AtomViewportDisplayInfoSystemComponent::DrawPassInfo()
     {
-        AZ::RPI::ViewportContextPtr viewportContext = GetViewportContext();
+        JE::Render::RPI::ViewportContextPtr viewportContext = GetViewportContext();
         if (!viewportContext->GetCurrentPipeline())
         {
             return;
         }
         auto rootPass = viewportContext->GetCurrentPipeline()->GetRootPass();
 
-        RPI::PassSystemFrameStatistics passSystemFrameStatistics = AZ::RPI::PassSystemInterface::Get()->GetFrameStatistics();
+        JE::Render::RPI::PassSystemFrameStatistics passSystemFrameStatistics = JE::Render::RPI::PassSystemInterface::Get()->GetFrameStatistics();
 
         DrawLine(AZStd::string::format(
             "RenderPasses: %d",
@@ -391,7 +391,7 @@ namespace AZ::Render
             deviceMemoryColor);
 
         // RPI default StreamingImagePool usage
-        Data::Instance<RPI::StreamingImagePool> streamingImagePool = RPI::ImageSystemInterface::Get()->GetSystemStreamingPool();
+        Data::Instance<JE::Render::RPI::StreamingImagePool> streamingImagePool = JE::Render::RPI::ImageSystemInterface::Get()->GetSystemStreamingPool();
         const RHI::HeapMemoryUsage& imagePoolMemoryUsage = streamingImagePool->GetRHIPool()->GetHeapMemoryUsage(RHI::HeapMemoryLevel::Device);
 
         float imagePoolUsedAllocatedMB = static_cast<float>(imagePoolMemoryUsage.m_usedResidentInBytes) / MB;

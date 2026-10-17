@@ -12,7 +12,7 @@
 #include <AzCore/Component/Component.h>
 #include <AzCore/Component/TransformBus.h>
 #include <Atom/Feature/OcclusionCullingPlane/OcclusionCullingPlaneFeatureProcessorInterface.h>
-#include <Atom/RPI.Public/Model/Model.h>
+#include <JE/Render/RPI/Public/Model/Model.h>
 #include <LmbrCentral/Shape/BoxShapeComponentBus.h>
 #include <OcclusionCullingPlane/OcclusionCullingPlaneComponentConstants.h>
 

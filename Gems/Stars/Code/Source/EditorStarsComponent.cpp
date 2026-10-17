@@ -9,7 +9,7 @@
 #include "EditorStarsComponent.h"
 #include <AzCore/Serialization/EditContext.h>
 #include <AzFramework/Translation/TranslationDef.h>
-#include <Atom/RPI.Public/Scene.h>
+#include <JE/Render/RPI/Public/Scene.h>
 #include <StarsFeatureProcessor.h>
 
 namespace AZ::Render

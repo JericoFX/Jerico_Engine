@@ -18,15 +18,15 @@
 
 #include <Atom/RHI.Reflect/ShaderInputNameIndex.h>
 
-#include <Atom/RPI.Public/Shader/ShaderSystemInterface.h>
-#include <Atom/RPI.Public/FeatureProcessor.h>
-#include <Atom/RPI.Public/MeshDrawPacket.h>
+#include <JE/Render/RPI/Public/Shader/ShaderSystemInterface.h>
+#include <JE/Render/RPI/Public/FeatureProcessor.h>
+#include <JE/Render/RPI/Public/MeshDrawPacket.h>
 
 #include <Atom/Feature/RayTracing/RayTracingFeatureProcessorInterface.h>
 
 #include <TerrainRenderer/Vector2i.h>
 
-namespace AZ::RPI
+namespace JE::Render::RPI
 {
     class Scene;
 }
@@ -91,7 +91,7 @@ namespace Terrain
     {
     private:
 
-        using MaterialInstance = AZ::Data::Instance<AZ::RPI::Material>;
+        using MaterialInstance = AZ::Data::Instance<JE::Render::RPI::Material>;
 
     public:
 
@@ -101,15 +101,15 @@ namespace Terrain
         TerrainMeshManager();
         ~TerrainMeshManager();
 
-        void Initialize(AZ::RPI::Scene& parentScene);
+        void Initialize(JE::Render::RPI::Scene& parentScene);
         void SetConfiguration(const MeshConfiguration& config);
         bool IsInitialized() const;
         void Reset();
         void SetMaterial(MaterialInstance materialInstance);
 
-        void Update(const AZ::RPI::ViewPtr mainView, AZ::Data::Instance<AZ::RPI::ShaderResourceGroup>& terrainSrg);
+        void Update(const JE::Render::RPI::ViewPtr mainView, AZ::Data::Instance<JE::Render::RPI::ShaderResourceGroup>& terrainSrg);
 
-        void DrawMeshes(const AZ::RPI::FeatureProcessor::RenderPacket& process, const AZ::RPI::ViewPtr mainView);
+        void DrawMeshes(const JE::Render::RPI::FeatureProcessor::RenderPacket& process, const JE::Render::RPI::ViewPtr mainView);
 
         void SetRebuildDrawPackets();
 
@@ -140,8 +140,8 @@ namespace Terrain
         {
             // Ray tracing structures - Currently no data is shared due to ray tracing's format requirements, in the future this could
             // be de-duplicated with custom ray tracing shaders.
-            AZ::Data::Instance<AZ::RPI::Buffer> m_positionsBuffer;
-            AZ::Data::Instance<AZ::RPI::Buffer> m_normalsBuffer;
+            AZ::Data::Instance<JE::Render::RPI::Buffer> m_positionsBuffer;
+            AZ::Data::Instance<JE::Render::RPI::Buffer> m_normalsBuffer;
 
             struct MeshGroup
             {
@@ -161,7 +161,7 @@ namespace Terrain
             static constexpr auto AllDevices = AZ::RHI::MultiDevice::AllDevices;
 
             GeometryView m_geometryView{ AllDevices };
-            AZ::Data::Instance<AZ::RPI::ShaderResourceGroup> m_srg;
+            AZ::Data::Instance<JE::Render::RPI::ShaderResourceGroup> m_srg;
             AZ::Aabb m_aabb = AZ::Aabb::CreateNull();
             AZStd::array<AZ::Aabb, 4> m_quadrantAabbs;
             Vector2i m_worldCoord = AZStd::numeric_limits<int32_t>::max();
@@ -173,11 +173,11 @@ namespace Terrain
                 GeometryView{ AllDevices }, GeometryView{ AllDevices }, GeometryView{ AllDevices }, GeometryView{ AllDevices }
             };
 
-            AZ::Data::Instance<AZ::RPI::Buffer> m_heightsNormalsBuffer;
-            AZ::Data::Instance<AZ::RPI::Buffer> m_lodHeightsNormalsBuffer;
+            AZ::Data::Instance<JE::Render::RPI::Buffer> m_heightsNormalsBuffer;
+            AZ::Data::Instance<JE::Render::RPI::Buffer> m_lodHeightsNormalsBuffer;
 
             // Hold reference to the draw srgs so they don't get released.
-            AZStd::fixed_vector<AZ::Data::Instance<AZ::RPI::ShaderResourceGroup>, AZ::RHI::DrawPacketBuilder::DrawItemCountMax> m_perDrawSrgs;
+            AZStd::fixed_vector<AZ::Data::Instance<JE::Render::RPI::ShaderResourceGroup>, AZ::RHI::DrawPacketBuilder::DrawItemCountMax> m_perDrawSrgs;
 
             AZStd::unique_ptr<RtSector> m_rtData;
 
@@ -223,12 +223,12 @@ namespace Terrain
 
         struct CachedDrawData
         {
-            AZ::Data::Instance<AZ::RPI::Shader> m_shader;
-            AZ::RPI::ShaderOptionGroup m_shaderOptions;
+            AZ::Data::Instance<JE::Render::RPI::Shader> m_shader;
+            JE::Render::RPI::ShaderOptionGroup m_shaderOptions;
             const AZ::RHI::PipelineState* m_pipelineState;
             AZ::RHI::DrawListTag m_drawListTag;
             AZ::RHI::Ptr<AZ::RHI::ShaderResourceGroupLayout> m_drawSrgLayout;
-            AZ::RPI::ShaderVariant m_shaderVariant;
+            JE::Render::RPI::ShaderVariant m_shaderVariant;
             AZ::Name m_materialPipelineName;
         };
 
@@ -269,7 +269,7 @@ namespace Terrain
         void RebuildSectors();
         void RebuildDrawPackets();
         void RemoveRayTracedMeshes();
-        AZ::RHI::StreamBufferView CreateStreamBufferView(AZ::Data::Instance<AZ::RPI::Buffer>& buffer, uint32_t offset = 0);
+        AZ::RHI::StreamBufferView CreateStreamBufferView(AZ::Data::Instance<JE::Render::RPI::Buffer>& buffer, uint32_t offset = 0);
 
         void CreateCommonBuffers();
         void UpdateSectorBuffers(Sector& sector, const AZStd::span<const HeightNormalVertex> heightsNormals);
@@ -281,13 +281,13 @@ namespace Terrain
         void CheckLodGridsForUpdate(AZ::Vector3 newPosition);
         void ProcessSectorUpdates(AZStd::vector<AZStd::vector<Sector*>>& sectorUpdates);
 
-        AZ::Data::Instance<AZ::RPI::Buffer> CreateMeshBufferInstance(
+        AZ::Data::Instance<JE::Render::RPI::Buffer> CreateMeshBufferInstance(
             uint32_t elementSize,
             uint32_t elementCount,
             const void* initialData = nullptr,
             const char* name = nullptr);
 
-        AZ::Data::Instance<AZ::RPI::Buffer> CreateRayTracingMeshBufferInstance(
+        AZ::Data::Instance<JE::Render::RPI::Buffer> CreateRayTracingMeshBufferInstance(
             AZ::RHI::Format elementFormat,
             uint32_t elementCount,
             const void* initialData = nullptr,
@@ -300,21 +300,21 @@ namespace Terrain
         void ForOverlappingSectors(const AZ::Aabb& bounds, Callback callback);
 
         MeshConfiguration m_config;
-        AZ::RPI::Scene* m_parentScene;
+        JE::Render::RPI::Scene* m_parentScene;
         AZ::Render::RayTracingFeatureProcessorInterface* m_rayTracingFeatureProcessor;
 
         MaterialInstance m_materialInstance;
         AZStd::vector<CachedDrawData> m_cachedDrawData; // Holds common parts of draw packets
 
-        AZ::RPI::ShaderSystemInterface::GlobalShaderOptionUpdatedEvent::Handler m_handleGlobalShaderOptionUpdate;
+        JE::Render::RPI::ShaderSystemInterface::GlobalShaderOptionUpdatedEvent::Handler m_handleGlobalShaderOptionUpdate;
 
         AZ::RHI::ShaderInputNameIndex m_srgMeshDataIndex = "m_meshData";
         AZ::RHI::ShaderInputNameIndex m_patchDataIndex = "m_patchData";
 
-        AZ::Data::Instance<AZ::RPI::Buffer> m_xyPositionsBuffer;
-        AZ::Data::Instance<AZ::RPI::Buffer> m_indexBuffer;
-        AZ::Data::Instance<AZ::RPI::Buffer> m_rtIndexBuffer;
-        AZ::Data::Instance<AZ::RPI::Buffer> m_dummyLodHeightsNormalsBuffer;
+        AZ::Data::Instance<JE::Render::RPI::Buffer> m_xyPositionsBuffer;
+        AZ::Data::Instance<JE::Render::RPI::Buffer> m_indexBuffer;
+        AZ::Data::Instance<JE::Render::RPI::Buffer> m_rtIndexBuffer;
+        AZ::Data::Instance<JE::Render::RPI::Buffer> m_dummyLodHeightsNormalsBuffer;
         AZ::RHI::IndexBufferView m_indexBufferView;
 
         AZStd::vector<SectorLodGrid> m_sectorLods;
@@ -331,7 +331,7 @@ namespace Terrain
 
         AzFramework::Terrain::FloatRange m_worldHeightBounds;
         float m_sampleSpacing = 1.0f;
-        AZ::RPI::Material::ChangeId m_lastMaterialChangeId;
+        JE::Render::RPI::Material::ChangeId m_lastMaterialChangeId;
 
         AZStd::vector<uint16_t> m_vertexOrder; // Maps from regular linear order to actual vertex order positions
 

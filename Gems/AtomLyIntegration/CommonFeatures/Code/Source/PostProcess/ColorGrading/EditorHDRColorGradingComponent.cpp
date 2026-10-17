@@ -10,7 +10,7 @@
 #include <PostProcess/ColorGrading/JEEditorLutWriter.h>
 #include <PostProcess/LookModification/EditorLookModificationComponent.h>
 #include <Atom/Feature/LookupTable/LookupTableAsset.h>
-#include <Atom/RPI.Reflect/System/AnyAsset.h>
+#include <JE/Render/RPI/Reflect/System/AnyAsset.h>
 #include <AtomLyIntegration/CommonFeatures/PostProcess/LookModification/LookModificationBus.h>
 #include <AzCore/Asset/AssetManager.h>
 #include <AzCore/Asset/AssetManagerBus.h>
@@ -24,9 +24,9 @@
 #include <AzToolsFramework/Entity/EditorEntityContextBus.h>
 #include <AzToolsFramework/Entity/EditorEntityHelpers.h>
 #include <AzToolsFramework/UI/PropertyEditor/PropertyEditorAPI.h>
-#include <Atom/RPI.Public/ViewportContextManager.h>
-#include <Atom/RPI.Public/RenderPipeline.h>
-#include <Atom/RPI.Public/Base.h>
+#include <JE/Render/RPI/Public/ViewportContextManager.h>
+#include <JE/Render/RPI/Public/RenderPipeline.h>
+#include <JE/Render/RPI/Public/Base.h>
 #include <AzFramework/Translation/TranslationDef.h>
 #include <cmath>
 
@@ -133,7 +133,7 @@ namespace AZ
             // Composition can deactivate this HDR component. The transaction owns local snapshots,
             // never a callback or operation belonging to the component being disabled.
             AZ::Outcome<void, AZStd::string> ActivateLutOnEntity(
-                AZ::EntityId entityId, AZ::ComponentId hdrId, const AZ::Data::Asset<AZ::RPI::AnyAsset>& asset,
+                AZ::EntityId entityId, AZ::ComponentId hdrId, const AZ::Data::Asset<JE::Render::RPI::AnyAsset>& asset,
                 ShaperPresetType shaper, float minimumExposure, float maximumExposure)
             {
                 if (!CanEditLutEntity(entityId) || !AzToolsFramework::EditorComponentAPIBus::HasHandlers() ||
@@ -338,7 +338,7 @@ namespace AZ
             AZStd::mutex m_mutex;
             bool m_cancelled = false;
             bool m_received = false;
-            RPI::AttachmentReadback::ReadbackResult m_readback{};
+            JE::Render::RPI::AttachmentReadback::ReadbackResult m_readback{};
             bool m_metadataReceived = false;
             JE::ColorGrading::LutGenerationCaptureMetadata m_frameEncoding;
             FrameCaptureId m_submittedCaptureId = InvalidFrameCaptureId;
@@ -356,7 +356,7 @@ namespace AZ
             AZStd::string m_outputBase;
             AZStd::string m_sourcePath;
             AZStd::string m_productPath;
-            AZ::Data::Asset<RPI::AnyAsset> m_asset;
+            AZ::Data::Asset<JE::Render::RPI::AnyAsset> m_asset;
             AZStd::chrono::steady_clock::time_point m_deadline = AZStd::chrono::steady_clock::now() + LutTimeout;
         };
 
@@ -657,7 +657,7 @@ namespace AZ
                         AZStd::scoped_lock lock(operation->m_mutex);
                         received = operation->m_received;
                     }
-                    auto* contexts = AZ::Interface<RPI::ViewportContextRequestsInterface>::Get();
+                    auto* contexts = AZ::Interface<JE::Render::RPI::ViewportContextRequestsInterface>::Get();
                     const auto viewport = contexts ? contexts->GetDefaultViewportContext() : nullptr;
                     const auto pipeline = viewport ? viewport->GetCurrentPipeline() : nullptr;
                     FailOperation(AZStd::string::format(
@@ -677,7 +677,7 @@ namespace AZ
                     operation->m_waitOneFrame = false;
                     return;
                 }
-                auto* contexts = AZ::Interface<RPI::ViewportContextRequestsInterface>::Get();
+                auto* contexts = AZ::Interface<JE::Render::RPI::ViewportContextRequestsInterface>::Get();
                 const auto viewport = contexts ? contexts->GetDefaultViewportContext() : nullptr;
                 const auto pipeline = viewport ? viewport->GetCurrentPipeline() : nullptr;
                 if (!pipeline)
@@ -687,7 +687,7 @@ namespace AZ
                 FrameCaptureOutcome outcome;
                 FrameCaptureRequestBus::BroadcastResult(
                     outcome, &FrameCaptureRequests::CapturePassAttachmentWithCallback,
-                    [operation](const RPI::AttachmentReadback::ReadbackResult& result)
+                    [operation](const JE::Render::RPI::AttachmentReadback::ReadbackResult& result)
                     {
                         AZStd::scoped_lock lock(operation->m_mutex);
                         if (operation->m_cancelled || operation->m_received)
@@ -713,7 +713,7 @@ namespace AZ
                         operation->m_received = true;
                     },
                     AZStd::vector<AZStd::string>{ pipeline->GetId().GetCStr(), "LutGenerationPass" },
-                    AZStd::string("LutOutput"), RPI::PassAttachmentReadbackOption::Output);
+                    AZStd::string("LutOutput"), JE::Render::RPI::PassAttachmentReadbackOption::Output);
                 if (!outcome.IsSuccess())
                 {
                     FailOperation(AZStd::string::format("LUT readback initialization failed: %s", outcome.GetError().m_errorMessage.c_str()));
@@ -738,7 +738,7 @@ namespace AZ
                     FailOperation(AZStd::string::format("LUT readback failed: %s", operation->m_captureInfo.c_str()));
                     return;
                 }
-                RPI::AttachmentReadback::ReadbackResult readback{};
+                JE::Render::RPI::AttachmentReadback::ReadbackResult readback{};
                 JE::ColorGrading::LutGenerationCaptureMetadata encoding;
                 bool metadataReceived = false;
                 {
@@ -781,12 +781,12 @@ namespace AZ
                 AZ::Data::AssetId assetId;
                 AZ::Data::AssetCatalogRequestBus::BroadcastResult(
                     assetId, &AZ::Data::AssetCatalogRequests::GetAssetIdByPath,
-                    operation->m_productPath.c_str(), azrtti_typeid<RPI::AnyAsset>(), false);
+                    operation->m_productPath.c_str(), azrtti_typeid<JE::Render::RPI::AnyAsset>(), false);
                 if (!assetId.IsValid())
                 {
                     return; // New source: catalogue discovery is asynchronous and bounded by the deadline.
                 }
-                operation->m_asset = AZ::Data::AssetManager::Instance().GetAsset<RPI::AnyAsset>(assetId, AZ::Data::AssetLoadBehavior::QueueLoad);
+                operation->m_asset = AZ::Data::AssetManager::Instance().GetAsset<JE::Render::RPI::AnyAsset>(assetId, AZ::Data::AssetLoadBehavior::QueueLoad);
             }
             if (operation->m_asset.IsError())
             {

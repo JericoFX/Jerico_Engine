@@ -10,8 +10,8 @@
 #include <AzCore/Memory/SystemAllocator.h>
 #include <Atom/RHI/CommandList.h>
 #include <Atom/RHI/ScopeProducer.h>
-#include <Atom/RPI.Public/Pass/RenderPass.h>
-#include <Atom/RPI.Public/Shader/Shader.h>
+#include <JE/Render/RPI/Public/Pass/RenderPass.h>
+#include <JE/Render/RPI/Public/Shader/Shader.h>
 #include <Render/DiffuseProbeGridFeatureProcessor.h>
 
 namespace AZ
@@ -25,19 +25,19 @@ namespace AZ
     {
         //! Compute shader that generates the irradiance texture from the diffuse probe raytrace.
         class DiffuseProbeGridBlendIrradiancePass final
-            : public RPI::RenderPass
+            : public JE::Render::RPI::RenderPass
         {
         public:
             AZ_RPI_PASS(DiffuseProbeGridBlendIrradiancePass);
 
-            AZ_RTTI(AZ::Render::DiffuseProbeGridBlendIrradiancePass, "{521E53EE-2D12-454F-8830-C61EA08CEF35}", RPI::RenderPass);
+            AZ_RTTI(AZ::Render::DiffuseProbeGridBlendIrradiancePass, "{521E53EE-2D12-454F-8830-C61EA08CEF35}", JE::Render::RPI::RenderPass);
             AZ_CLASS_ALLOCATOR(DiffuseProbeGridBlendIrradiancePass, SystemAllocator);
             virtual ~DiffuseProbeGridBlendIrradiancePass() = default;
 
-            static RPI::Ptr<DiffuseProbeGridBlendIrradiancePass> Create(const RPI::PassDescriptor& descriptor);
+            static JE::Render::RPI::Ptr<DiffuseProbeGridBlendIrradiancePass> Create(const JE::Render::RPI::PassDescriptor& descriptor);
 
         private:
-            DiffuseProbeGridBlendIrradiancePass(const RPI::PassDescriptor& descriptor);
+            DiffuseProbeGridBlendIrradiancePass(const JE::Render::RPI::PassDescriptor& descriptor);
 
             void LoadShader();
 
@@ -50,7 +50,7 @@ namespace AZ
             // shaders
             struct DiffuseProbeGridShader
             {
-                Data::Instance<RPI::Shader> m_shader;
+                Data::Instance<JE::Render::RPI::Shader> m_shader;
                 const RHI::PipelineState* m_pipelineState = nullptr;
                 RHI::Ptr<RHI::ShaderResourceGroupLayout> m_srgLayout;
                 RHI::DispatchDirect m_dispatchArgs;

@@ -11,7 +11,7 @@
 #include <Atom/Feature/Base.h>
 #include <Atom/Feature/SkinnedMesh/SkinnedMeshOutputStreamManagerInterface.h>
 #include <Atom/Feature/MorphTargets/MorphTargetInputBuffers.h>
-#include <Atom/RPI.Public/Model/Model.h>
+#include <JE/Render/RPI/Public/Model/Model.h>
 #include <AzCore/Instance/InstanceData.h>
 
 namespace AZ
@@ -32,7 +32,7 @@ namespace AZ
             AZ_CLASS_ALLOCATOR(SkinnedMeshInstance, AZ::SystemAllocator);
 
             //! The target model, which is used by the MeshFeatureProcessor to render the mesh
-            Data::Instance<RPI::Model> m_model;
+            Data::Instance<JE::Render::RPI::Model> m_model;
 
             //! Offsets into the skinned vertex data which are used by SkinnedMeshDispatchItem to target the correct location to store the skinning results
             AZStd::vector<AZStd::vector<SkinnedMeshOutputVertexOffsets>> m_outputStreamOffsetsInBytes;

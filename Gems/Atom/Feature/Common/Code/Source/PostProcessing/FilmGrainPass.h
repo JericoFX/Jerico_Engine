@@ -7,23 +7,23 @@
  */
 #pragma once
 
-#include <Atom/RPI.Public/Pass/ComputePass.h>
+#include <JE/Render/RPI/Public/Pass/ComputePass.h>
 
 namespace AZ
 {
     namespace Render
     {
         // Class for controlling Film Grain effect
-        class FilmGrainPass final : public RPI::ComputePass
+        class FilmGrainPass final : public JE::Render::RPI::ComputePass
         {
             AZ_RPI_PASS(FilmGrainPass);
 
         public:
-            AZ_RTTI(FilmGrainPass, "{786F1310-1AA1-42EB-90BF-14DF4A60BA9C}", AZ::RPI::ComputePass);
+            AZ_RTTI(FilmGrainPass, "{786F1310-1AA1-42EB-90BF-14DF4A60BA9C}", JE::Render::RPI::ComputePass);
             AZ_CLASS_ALLOCATOR(FilmGrainPass, SystemAllocator, 0);
 
             ~FilmGrainPass() = default;
-            static RPI::Ptr<FilmGrainPass> Create(const RPI::PassDescriptor& descriptor);
+            static JE::Render::RPI::Ptr<FilmGrainPass> Create(const JE::Render::RPI::PassDescriptor& descriptor);
 
             bool IsEnabled() const override;
 
@@ -32,9 +32,9 @@ namespace AZ
             void FrameBeginInternal(FramePrepareParams params) override;
 
         private:
-            FilmGrainPass(const RPI::PassDescriptor& descriptor);
+            FilmGrainPass(const JE::Render::RPI::PassDescriptor& descriptor);
 
-            Data::Instance<RPI::Image> m_grainImage;
+            Data::Instance<JE::Render::RPI::Image> m_grainImage;
 
             AZStd::string m_currentGrainPath = "";
 

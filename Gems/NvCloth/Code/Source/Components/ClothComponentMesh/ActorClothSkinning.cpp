@@ -29,7 +29,7 @@ namespace NvCloth
             AZStd::vector<SkinningInfluence>& skinningInfluences,
             AZStd::vector<AZ::u32>& numInfluencesPerSubmesh)
         {
-            AZ::Data::Asset<AZ::RPI::ModelAsset> modelAsset;
+            AZ::Data::Asset<JE::Render::RPI::ModelAsset> modelAsset;
             AZ::Render::MeshComponentRequestBus::EventResult(
                 modelAsset, entityId, &AZ::Render::MeshComponentRequestBus::Events::GetModelAsset);
             if (!modelAsset.IsReady())
@@ -43,7 +43,7 @@ namespace NvCloth
             }
 
             const auto modelLodAssets = modelAsset->GetLodAssets();
-            const AZ::Data::Asset<AZ::RPI::ModelLodAsset> modelLodAsset = modelLodAssets[meshNodeInfo.m_lodLevel];
+            const AZ::Data::Asset<JE::Render::RPI::ModelLodAsset> modelLodAsset = modelLodAssets[meshNodeInfo.m_lodLevel];
             if (!modelLodAsset.GetId().IsValid())
             {
                 return false;
@@ -81,7 +81,7 @@ namespace NvCloth
                 }
 
                 const auto subMeshes = modelLodAsset->GetMeshes();
-                const AZ::RPI::ModelLodAsset::Mesh& subMesh = subMeshes[subMeshInfo.m_primitiveIndex];
+                const JE::Render::RPI::ModelLodAsset::Mesh& subMesh = subMeshes[subMeshInfo.m_primitiveIndex];
 
                 const auto sourcePositions = subMesh.GetSemanticBufferTyped<AZ::PackedVector3f>(AZ::Name("POSITION"));
                 if (sourcePositions.size() != subMeshInfo.m_numVertices)
@@ -122,7 +122,7 @@ namespace NvCloth
             {
                 const auto& subMeshInfo = meshNodeInfo.m_subMeshes[meshIndex];
                 const auto subMeshes = modelLodAsset->GetMeshes();
-                const AZ::RPI::ModelLodAsset::Mesh& subMesh = subMeshes[subMeshInfo.m_primitiveIndex];
+                const JE::Render::RPI::ModelLodAsset::Mesh& subMesh = subMeshes[subMeshInfo.m_primitiveIndex];
                 const auto sourceSkinJointIndices = subMesh.GetSemanticBufferTyped<uint16_t>(AZ::Name("SKIN_JOINTINDICES"));
                 const auto sourceSkinWeights = subMesh.GetSemanticBufferTyped<float>(AZ::Name("SKIN_WEIGHTS"));
 

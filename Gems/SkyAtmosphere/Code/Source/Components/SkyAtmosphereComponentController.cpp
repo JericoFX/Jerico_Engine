@@ -13,7 +13,7 @@
 #include <AzCore/RTTI/BehaviorContext.h>
 #include <AzCore/Serialization/SerializeContext.h>
 
-#include <Atom/RPI.Public/Scene.h>
+#include <JE/Render/RPI/Public/Scene.h>
 
 namespace SkyAtmosphere
 {
@@ -194,7 +194,7 @@ namespace SkyAtmosphere
     void SkyAtmosphereComponentController::Activate(AZ::EntityId entityId)
     {
         SkyAtmosphereRequestBus::Handler::BusConnect(entityId);
-        m_featureProcessorInterface = AZ::RPI::Scene::GetFeatureProcessorForEntity<SkyAtmosphereFeatureProcessorInterface>(entityId);
+        m_featureProcessorInterface = JE::Render::RPI::Scene::GetFeatureProcessorForEntity<SkyAtmosphereFeatureProcessorInterface>(entityId);
 
         if (m_featureProcessorInterface)
         {

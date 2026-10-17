@@ -10,8 +10,8 @@
 
 #include <PostProcess/PostProcessSettings.h>
 #include <Atom/Feature/PostProcess/PostProcessFeatureProcessorInterface.h>
-#include <Atom/RPI.Public/Shader/ShaderResourceGroup.h>
-#include <Atom/RPI.Public/Base.h>
+#include <JE/Render/RPI/Public/Shader/ShaderResourceGroup.h>
+#include <JE/Render/RPI/Public/Base.h>
 #include <AzCore/std/chrono/chrono.h>
 #include <AzCore/std/containers/vector_set.h>
 
@@ -41,9 +41,9 @@ namespace AZ
             PostProcessSettingsInterface* GetOrCreateSettingsInterface(EntityId entityId) override;
             void RemoveSettingsInterface(EntityId entityId) override;
             void OnPostProcessSettingsChanged() override;
-            PostProcessSettings* GetLevelSettingsFromView(AZ::RPI::ViewPtr view);
-            void SetViewAlias(const AZ::RPI::ViewPtr sourceView, const AZ::RPI::ViewPtr targetView) override;
-            void RemoveViewAlias(const AZ::RPI::ViewPtr sourceView) override;
+            PostProcessSettings* GetLevelSettingsFromView(JE::Render::RPI::ViewPtr view);
+            void SetViewAlias(const JE::Render::RPI::ViewPtr sourceView, const JE::Render::RPI::ViewPtr targetView) override;
+            void RemoveViewAlias(const JE::Render::RPI::ViewPtr sourceView) override;
 
         private:
             PostProcessFeatureProcessor(const PostProcessFeatureProcessor&) = delete;
@@ -55,7 +55,7 @@ namespace AZ
 
             // Aggregates all level settings into a single level setting based their priorities and override settings
             void AggregateLevelSettings();
-            void RemoveOutdatedViewSettings(const AZStd::vector_set<const RPI::View*>& activeViews);
+            void RemoveOutdatedViewSettings(const AZStd::vector_set<const JE::Render::RPI::View*>& activeViews);
 
             // Members...
 
@@ -84,9 +84,9 @@ namespace AZ
             float m_deltaTime;
 
             // Each camera/view will have its own PostProcessSettings
-            AZStd::unordered_map<AZ::RPI::View*, PostProcessSettings> m_blendedPerViewSettings;
+            AZStd::unordered_map<JE::Render::RPI::View*, PostProcessSettings> m_blendedPerViewSettings;
             // This is used for mimicking a postfx setting of a different view
-            AZStd::unordered_map<AZ::RPI::View*, AZ::RPI::View*> m_viewAliasMap;
+            AZStd::unordered_map<JE::Render::RPI::View*, JE::Render::RPI::View*> m_viewAliasMap;
         };
     } // namespace Render
 } // namespace AZ

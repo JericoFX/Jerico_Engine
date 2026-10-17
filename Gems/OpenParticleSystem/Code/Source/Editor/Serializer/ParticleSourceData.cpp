@@ -7,8 +7,8 @@
  */
 
 #include <OpenParticleSystem/ParticleConfig.h>
-#include <Atom/RPI.Edit/Common/AssetUtils.h>
-#include <Atom/RPI.Reflect/Asset/AssetUtils.h>
+#include <JE/Editor/Render/RPI/Edit/Common/AssetUtils.h>
+#include <JE/Render/RPI/Reflect/Asset/AssetUtils.h>
 #include <AzCore/RTTI/AttributeReader.h>
 #include <AzCore/Serialization/Json/JsonSerialization.h>
 #include <AzCore/Serialization/Json/RegistrationContext.h>
@@ -1248,7 +1248,7 @@ namespace OpenParticle
             // carries the other, which is what produces "expected to load, but the Asset Catalog has no
             // dependency recorded" warnings.
             detailInfo->m_material =
-                AZ::Data::AssetManager::Instance().GetAsset<AZ::RPI::MaterialAsset>(defaultSpriteEmitMaterialId, AZ::Data::AssetLoadBehavior::PreLoad);
+                AZ::Data::AssetManager::Instance().GetAsset<JE::Render::RPI::MaterialAsset>(defaultSpriteEmitMaterialId, AZ::Data::AssetLoadBehavior::PreLoad);
 
             // The emitter needs it too. Only the detail used to be assigned here, so a freshly added emitter
             // carried an invalid material until the user happened to touch the material picker, and

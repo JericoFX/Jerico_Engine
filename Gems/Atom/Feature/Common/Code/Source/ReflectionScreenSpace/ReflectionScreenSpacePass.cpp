@@ -7,22 +7,22 @@
  */
 
 #include "ReflectionScreenSpacePass.h"
-#include <Atom/RPI.Public/RenderPipeline.h>
-#include <Atom/RPI.Public/Scene.h>
+#include <JE/Render/RPI/Public/RenderPipeline.h>
+#include <JE/Render/RPI/Public/Scene.h>
 #include <SpecularReflections/SpecularReflectionsFeatureProcessor.h>
 
 namespace AZ
 {
     namespace Render
     {
-        RPI::Ptr<ReflectionScreenSpacePass> ReflectionScreenSpacePass::Create(const RPI::PassDescriptor& descriptor)
+        JE::Render::RPI::Ptr<ReflectionScreenSpacePass> ReflectionScreenSpacePass::Create(const JE::Render::RPI::PassDescriptor& descriptor)
         {
-            RPI::Ptr<ReflectionScreenSpacePass> pass = aznew ReflectionScreenSpacePass(descriptor);
+            JE::Render::RPI::Ptr<ReflectionScreenSpacePass> pass = aznew ReflectionScreenSpacePass(descriptor);
             return pass;
         }
 
-        ReflectionScreenSpacePass::ReflectionScreenSpacePass(const RPI::PassDescriptor& descriptor)
-            : RPI::ParentPass(descriptor)
+        ReflectionScreenSpacePass::ReflectionScreenSpacePass(const JE::Render::RPI::PassDescriptor& descriptor)
+            : JE::Render::RPI::ParentPass(descriptor)
         {
         }
 
@@ -33,7 +33,7 @@ namespace AZ
                 return false;
             }
 
-            RPI::Scene* scene = m_pipeline->GetScene();
+            JE::Render::RPI::Scene* scene = m_pipeline->GetScene();
             if (!scene)
             {
                 return false;

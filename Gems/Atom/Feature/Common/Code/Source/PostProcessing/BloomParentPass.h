@@ -7,7 +7,7 @@
  */
 #pragma once
 
-#include <Atom/RPI.Public/Pass/ParentPass.h>
+#include <JE/Render/RPI/Public/Pass/ParentPass.h>
 
 namespace AZ
 {
@@ -17,23 +17,23 @@ namespace AZ
         //! The only difference between this and ParentPass is that this will check for available bloom settings
         //! and disable itself if no settings are found. See the IsEnabled override.
         class BloomParentPass final
-            : public RPI::ParentPass
+            : public JE::Render::RPI::ParentPass
         {
             AZ_RPI_PASS(BloomParentPass);
 
         public:
-            AZ_RTTI(AZ::Render::BloomParentPass, "{072861A3-A87A-439D-BD8B-D2BDD8D31799}", AZ::RPI::ParentPass);
+            AZ_RTTI(AZ::Render::BloomParentPass, "{072861A3-A87A-439D-BD8B-D2BDD8D31799}", JE::Render::RPI::ParentPass);
             AZ_CLASS_ALLOCATOR(BloomParentPass, SystemAllocator);
             virtual ~BloomParentPass() = default;
 
             //! Creates a BloomParentPass
-            static RPI::Ptr<BloomParentPass> Create(const RPI::PassDescriptor& descriptor);
+            static JE::Render::RPI::Ptr<BloomParentPass> Create(const JE::Render::RPI::PassDescriptor& descriptor);
 
             //! Does a check for available BloomSettings, disable itself when the BloomSetting isn't available.
             bool IsEnabled() const override;
 
         private:
-            BloomParentPass(const RPI::PassDescriptor& descriptor);
+            BloomParentPass(const JE::Render::RPI::PassDescriptor& descriptor);
         };
     }   // namespace Render
 }   // namespace AZ

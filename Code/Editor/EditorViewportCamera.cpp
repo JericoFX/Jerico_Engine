@@ -8,8 +8,8 @@
 
 #include <EditorViewportCamera.h>
 
-#include <Atom/RPI.Public/ViewportContext.h>
-#include <Atom/RPI.Public/ViewportContextBus.h>
+#include <JE/Render/RPI/Public/ViewportContext.h>
+#include <JE/Render/RPI/Public/ViewportContextBus.h>
 #include <AtomToolsFramework/Viewport/ModularViewportCameraControllerRequestBus.h>
 
 #include <EditorViewportSettings.h>
@@ -25,7 +25,7 @@ namespace SandboxEditor
 
     void SetDefaultViewportCameraPosition(const AZ::Vector3& position)
     {
-        auto viewportContextManager = AZ::Interface<AZ::RPI::ViewportContextRequestsInterface>::Get();
+        auto viewportContextManager = AZ::Interface<JE::Render::RPI::ViewportContextRequestsInterface>::Get();
         if (auto viewportContext = viewportContextManager->GetDefaultViewportContext())
         {
             SetViewportCameraPosition(viewportContext->GetId(), position);
@@ -40,7 +40,7 @@ namespace SandboxEditor
 
     void SetDefaultViewportCameraRotation(const float pitch, const float yaw)
     {
-        auto viewportContextManager = AZ::Interface<AZ::RPI::ViewportContextRequestsInterface>::Get();
+        auto viewportContextManager = AZ::Interface<JE::Render::RPI::ViewportContextRequestsInterface>::Get();
         if (auto viewportContext = viewportContextManager->GetDefaultViewportContext())
         {
             SetViewportCameraRotation(viewportContext->GetId(), pitch, yaw);
@@ -60,7 +60,7 @@ namespace SandboxEditor
 
     void SetDefaultViewportCameraTransform(const AZ::Transform& transform)
     {
-        auto viewportContextManager = AZ::Interface<AZ::RPI::ViewportContextRequestsInterface>::Get();
+        auto viewportContextManager = AZ::Interface<JE::Render::RPI::ViewportContextRequestsInterface>::Get();
         if (auto viewportContext = viewportContextManager->GetDefaultViewportContext())
         {
             SetViewportCameraTransform(viewportContext->GetId(), transform);
@@ -95,7 +95,7 @@ namespace SandboxEditor
 
     void InterpolateDefaultViewportCameraToTransform(const AZ::Transform& transform, const float duration)
     {
-        auto viewportContextManager = AZ::Interface<AZ::RPI::ViewportContextRequestsInterface>::Get();
+        auto viewportContextManager = AZ::Interface<JE::Render::RPI::ViewportContextRequestsInterface>::Get();
         if (auto viewportContext = viewportContextManager->GetDefaultViewportContext())
         {
             InterpolateViewportCameraToTransform(viewportContext->GetId(), transform, duration);
@@ -129,7 +129,7 @@ namespace SandboxEditor
 
     void HandleDefaultViewportCameraTransitionFromSetting(const AZ::Transform& transform)
     {
-        auto viewportContextManager = AZ::Interface<AZ::RPI::ViewportContextRequestsInterface>::Get();
+        auto viewportContextManager = AZ::Interface<JE::Render::RPI::ViewportContextRequestsInterface>::Get();
         if (auto viewportContext = viewportContextManager->GetDefaultViewportContext())
         {
             HandleViewportCameraTransitionFromSetting(viewportContext->GetId(), transform);
@@ -183,7 +183,7 @@ namespace SandboxEditor
 
     AZ::Transform GetDefaultViewportCameraTransform()
     {
-        auto viewportContextManager = AZ::Interface<AZ::RPI::ViewportContextRequestsInterface>::Get();
+        auto viewportContextManager = AZ::Interface<JE::Render::RPI::ViewportContextRequestsInterface>::Get();
         if (auto viewportContext = viewportContextManager->GetDefaultViewportContext())
         {
             return GetViewportCameraTransform(viewportContext->GetId());

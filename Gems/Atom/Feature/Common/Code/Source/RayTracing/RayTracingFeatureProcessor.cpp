@@ -13,10 +13,10 @@
 #include <Atom/RHI/RHISystemInterface.h>
 #include <Atom/RHI/RayTracingAccelerationStructure.h>
 #include <Atom/RHI/RayTracingCompactionQueryPool.h>
-#include <Atom/RPI.Public/Pass/PassFilter.h>
-#include <Atom/RPI.Public/Scene.h>
-#include <Atom/RPI.Public/Shader/ShaderResourceGroup.h>
-#include <Atom/RPI.Reflect/Asset/AssetUtils.h>
+#include <JE/Render/RPI/Public/Pass/PassFilter.h>
+#include <JE/Render/RPI/Public/Scene.h>
+#include <JE/Render/RPI/Public/Shader/ShaderResourceGroup.h>
+#include <JE/Render/RPI/Reflect/Asset/AssetUtils.h>
 #include <CoreLights/CapsuleLightFeatureProcessor.h>
 #include <CoreLights/DirectionalLightFeatureProcessor.h>
 #include <CoreLights/DiskLightFeatureProcessor.h>
@@ -69,7 +69,7 @@ namespace AZ
             m_tlas = aznew RHI::RayTracingTlas;
 
             // load the RayTracingSrg asset asset
-            m_rayTracingSrgAsset = RPI::AssetUtils::LoadCriticalAsset<RPI::ShaderAsset>("shaderlib/atom/features/rayTracing/raytracingsrgs.azshader");
+            m_rayTracingSrgAsset = JE::Render::RPI::AssetUtils::LoadCriticalAsset<JE::Render::RPI::ShaderAsset>("shaderlib/atom/features/rayTracing/raytracingsrgs.azshader");
             if (!m_rayTracingSrgAsset.IsReady())
             {
                 AZ_Assert(false, "Failed to load RayTracingSrg asset");
@@ -77,17 +77,17 @@ namespace AZ
             }
 
             // create the RayTracingSceneSrg
-            m_rayTracingSceneSrg = RPI::ShaderResourceGroup::Create(m_rayTracingSrgAsset, Name("RayTracingSceneSrg"));
+            m_rayTracingSceneSrg = JE::Render::RPI::ShaderResourceGroup::Create(m_rayTracingSrgAsset, Name("RayTracingSceneSrg"));
             AZ_Assert(m_rayTracingSceneSrg, "Failed to create RayTracingSceneSrg");
 
             // Setup RayTracingCompactionQueryPool
             {
-                auto rpiDesc = RPI::RPISystemInterface::Get()->GetDescriptor();
+                auto rpiDesc = JE::Render::RPI::RPISystemInterface::Get()->GetDescriptor();
                 RHI::RayTracingCompactionQueryPoolDescriptor desc;
                 desc.m_deviceMask = RHI::RHISystemInterface::Get()->GetRayTracingSupport();
                 desc.m_budget = rpiDesc.m_rayTracingSystemDescriptor.m_rayTracingCompactionQueryPoolSize;
-                desc.m_readbackBufferPool = AZ::RPI::BufferSystemInterface::Get()->GetCommonBufferPool(RPI::CommonBufferPoolType::ReadBack);
-                desc.m_copyBufferPool = AZ::RPI::BufferSystemInterface::Get()->GetCommonBufferPool(RPI::CommonBufferPoolType::ReadWrite);
+                desc.m_readbackBufferPool = JE::Render::RPI::BufferSystemInterface::Get()->GetCommonBufferPool(JE::Render::RPI::CommonBufferPoolType::ReadBack);
+                desc.m_copyBufferPool = JE::Render::RPI::BufferSystemInterface::Get()->GetCommonBufferPool(JE::Render::RPI::CommonBufferPoolType::ReadWrite);
                 m_compactionQueryPool = aznew RHI::RayTracingCompactionQueryPool;
                 m_compactionQueryPool->Init(desc);
             }
@@ -102,7 +102,7 @@ namespace AZ
 
         RayTracingFeatureProcessor::ProceduralGeometryTypeHandle RayTracingFeatureProcessor::RegisterProceduralGeometryType(
             const AZStd::string& name,
-            const Data::Instance<RPI::Shader>& intersectionShader,
+            const Data::Instance<JE::Render::RPI::Shader>& intersectionShader,
             const AZStd::string& intersectionShaderName,
             const AZStd::unordered_map<int, uint32_t>& bindlessBufferIndices)
         {
@@ -325,7 +325,7 @@ namespace AZ
                 RHI::RayTracingAccelerationStructureBuildFlags buildFlags =
                     CreateRayTracingAccelerationStructureBuildFlags(mesh.m_isSkinnedMesh);
 
-                auto rpiDesc = RPI::RPISystemInterface::Get()->GetDescriptor();
+                auto rpiDesc = JE::Render::RPI::RPISystemInterface::Get()->GetDescriptor();
                 if (mesh.m_subMeshIndices.size() > rpiDesc.m_rayTracingSystemDescriptor.m_rayTracingCompactionQueryPoolSize)
                 {
                     AZ_Warning(
@@ -737,7 +737,7 @@ namespace AZ
         void RayTracingFeatureProcessor::UpdateBlasInstances()
         {
             bool changed = false;
-            auto rpiDesc = RPI::RPISystemInterface::Get()->GetDescriptor();
+            auto rpiDesc = JE::Render::RPI::RPISystemInterface::Get()->GetDescriptor();
             {
                 uint32_t numModelBlasCreated = 0;
                 uint32_t numCompactionQueriesEnqueued = 0;
@@ -1153,7 +1153,7 @@ namespace AZ
             {
                 buildFlags = AZ::RHI::RayTracingAccelerationStructureBuildFlags::FAST_TRACE;
 
-                auto rpiDesc = RPI::RPISystemInterface::Get()->GetDescriptor();
+                auto rpiDesc = JE::Render::RPI::RPISystemInterface::Get()->GetDescriptor();
                 if (rpiDesc.m_rayTracingSystemDescriptor.m_enableBlasCompaction)
                 {
                     buildFlags = buildFlags | RHI::RayTracingAccelerationStructureBuildFlags::ENABLE_COMPACTION;

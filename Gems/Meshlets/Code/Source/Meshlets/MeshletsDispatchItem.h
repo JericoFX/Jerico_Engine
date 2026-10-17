@@ -19,11 +19,16 @@ namespace AZ
         class PipelineState;
     }
 
-    namespace RPI
-    {
+    }
+
+namespace JE::Render::RPI
+{
         class Shader;
         class ShaderResourceGroup;
     }
+
+namespace AZ
+{
 
     namespace Meshlets
     {
@@ -38,20 +43,20 @@ namespace AZ
             ~MeshletsDispatchItem();
 
             void InitDispatch(
-                RPI::Shader* shader,
-                Data::Instance<RPI::ShaderResourceGroup> meshletsDataSrg,
+                JE::Render::RPI::Shader* shader,
+                Data::Instance<JE::Render::RPI::ShaderResourceGroup> meshletsDataSrg,
                 uint32_t meshletsAmount // Amount of meshlets
             );
 
-            void SetPipelineState(RPI::Shader* shader);
+            void SetPipelineState(JE::Render::RPI::Shader* shader);
 
             RHI::DispatchItem* GetDispatchItem() { return m_shader ? &m_dispatchItem : nullptr; }
-            Data::Instance<RPI::ShaderResourceGroup> GetMeshletDataSrg() { return m_meshletsDataSrg;  }
+            Data::Instance<JE::Render::RPI::ShaderResourceGroup> GetMeshletDataSrg() { return m_meshletsDataSrg;  }
 
         private:
             RHI::DispatchItem m_dispatchItem{RHI::MultiDevice::AllDevices};
-            Data::Instance<RPI::ShaderResourceGroup> m_meshletsDataSrg;
-            RPI::Shader* m_shader;
+            Data::Instance<JE::Render::RPI::ShaderResourceGroup> m_meshletsDataSrg;
+            JE::Render::RPI::Shader* m_shader;
         };
     } // namespace Meshlets
 } // namespace AZ

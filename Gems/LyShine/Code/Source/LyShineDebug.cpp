@@ -9,7 +9,7 @@
 #include "IConsole.h"
 #include <LyShine/IDraw2d.h>
 
-#include <Atom/RPI.Public/Image/ImageSystemInterface.h>
+#include <JE/Render/RPI/Public/Image/ImageSystemInterface.h>
 
 #include <AzCore/Math/Crc.h>
 #include <AzCore/Serialization/SerializeContext.h>
@@ -111,7 +111,7 @@ static int Create2DTexture(int width, int height, byte* data, ETEX_Format format
 #endif
 
 #if !defined(_RELEASE)
-static AZ::Vector2 GetTextureSize(AZ::Data::Instance<AZ::RPI::Image> image)
+static AZ::Vector2 GetTextureSize(AZ::Data::Instance<JE::Render::RPI::Image> image)
 {
     AZ::RHI::Size size = image->GetDescriptor().m_size;
     return AZ::Vector2(static_cast<float>(size.m_width), static_cast<float>(size.m_height));
@@ -150,7 +150,7 @@ static void FillTextureRectWithCheckerboard(uint32* data, int textureWidth, int 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 #if !defined(_RELEASE)
-static AZ::Data::Instance<AZ::RPI::Image> CreateMonoTestTexture()
+static AZ::Data::Instance<JE::Render::RPI::Image> CreateMonoTestTexture()
 {
 #ifdef LYSHINE_ATOM_TODO // [GHI #6270] Support RTT using Atom
     const int width = 32;
@@ -182,7 +182,7 @@ static AZ::Data::Instance<AZ::RPI::Image> CreateMonoTestTexture()
 
     return gEnv->pRenderer->EF_GetTextureByID(textureId);
 #else
-    auto whiteTexture = AZ::RPI::ImageSystemInterface::Get()->GetSystemImage(AZ::RPI::SystemImage::White);
+    auto whiteTexture = JE::Render::RPI::ImageSystemInterface::Get()->GetSystemImage(JE::Render::RPI::SystemImage::White);
     return whiteTexture;
 #endif
 }
@@ -190,7 +190,7 @@ static AZ::Data::Instance<AZ::RPI::Image> CreateMonoTestTexture()
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 #if !defined(_RELEASE)
-static AZ::Data::Instance<AZ::RPI::Image> CreateColorTestTexture()
+static AZ::Data::Instance<JE::Render::RPI::Image> CreateColorTestTexture()
 {
 #ifdef LYSHINE_ATOM_TODO // [GHI #6270] Support RTT using Atom
     const int width = 32;
@@ -222,7 +222,7 @@ static AZ::Data::Instance<AZ::RPI::Image> CreateColorTestTexture()
 
     return gEnv->pRenderer->EF_GetTextureByID(textureId);
 #else
-    auto whiteTexture = AZ::RPI::ImageSystemInterface::Get()->GetSystemImage(AZ::RPI::SystemImage::White);
+    auto whiteTexture = JE::Render::RPI::ImageSystemInterface::Get()->GetSystemImage(JE::Render::RPI::SystemImage::White);
     return whiteTexture;
 #endif
 }
@@ -230,7 +230,7 @@ static AZ::Data::Instance<AZ::RPI::Image> CreateColorTestTexture()
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 #if !defined(_RELEASE)
-static AZ::Data::Instance<AZ::RPI::Image> CreateMonoAlphaTestTexture()
+static AZ::Data::Instance<JE::Render::RPI::Image> CreateMonoAlphaTestTexture()
 {
 #ifdef LYSHINE_ATOM_TODO // [GHI #6270] Support RTT using Atom
     const int width = 32;
@@ -262,7 +262,7 @@ static AZ::Data::Instance<AZ::RPI::Image> CreateMonoAlphaTestTexture()
 
     return gEnv->pRenderer->EF_GetTextureByID(textureId);
 #else
-    auto whiteTexture = AZ::RPI::ImageSystemInterface::Get()->GetSystemImage(AZ::RPI::SystemImage::White);
+    auto whiteTexture = JE::Render::RPI::ImageSystemInterface::Get()->GetSystemImage(JE::Render::RPI::SystemImage::White);
     return whiteTexture;
 #endif
 }
@@ -270,7 +270,7 @@ static AZ::Data::Instance<AZ::RPI::Image> CreateMonoAlphaTestTexture()
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 #if !defined(_RELEASE)
-static AZ::Data::Instance<AZ::RPI::Image> CreateColorAlphaTestTexture()
+static AZ::Data::Instance<JE::Render::RPI::Image> CreateColorAlphaTestTexture()
 {
 #ifdef LYSHINE_ATOM_TODO // [GHI #6270] Support RTT using Atom
     const int width = 32;
@@ -302,7 +302,7 @@ static AZ::Data::Instance<AZ::RPI::Image> CreateColorAlphaTestTexture()
 
     return gEnv->pRenderer->EF_GetTextureByID(textureId);
 #else
-    auto whiteTexture = AZ::RPI::ImageSystemInterface::Get()->GetSystemImage(AZ::RPI::SystemImage::White);
+    auto whiteTexture = JE::Render::RPI::ImageSystemInterface::Get()->GetSystemImage(JE::Render::RPI::SystemImage::White);
     return whiteTexture;
 #endif
 }
@@ -310,9 +310,9 @@ static AZ::Data::Instance<AZ::RPI::Image> CreateColorAlphaTestTexture()
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 #if !defined(_RELEASE)
-static AZ::Data::Instance<AZ::RPI::Image> GetMonoTestTexture()
+static AZ::Data::Instance<JE::Render::RPI::Image> GetMonoTestTexture()
 {
-    static AZ::Data::Instance<AZ::RPI::Image> testImageMono = nullptr;
+    static AZ::Data::Instance<JE::Render::RPI::Image> testImageMono = nullptr;
 
     if (!testImageMono)
     {
@@ -325,9 +325,9 @@ static AZ::Data::Instance<AZ::RPI::Image> GetMonoTestTexture()
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 #if !defined(_RELEASE)
-static AZ::Data::Instance<AZ::RPI::Image> GetColorTestTexture()
+static AZ::Data::Instance<JE::Render::RPI::Image> GetColorTestTexture()
 {
-    static AZ::Data::Instance<AZ::RPI::Image> testImageColor = nullptr;
+    static AZ::Data::Instance<JE::Render::RPI::Image> testImageColor = nullptr;
 
     if (!testImageColor)
     {
@@ -340,9 +340,9 @@ static AZ::Data::Instance<AZ::RPI::Image> GetColorTestTexture()
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 #if !defined(_RELEASE)
-static AZ::Data::Instance<AZ::RPI::Image> GetMonoAlphaTestTexture()
+static AZ::Data::Instance<JE::Render::RPI::Image> GetMonoAlphaTestTexture()
 {
-    static AZ::Data::Instance<AZ::RPI::Image> testImageMonoAlpha = nullptr;
+    static AZ::Data::Instance<JE::Render::RPI::Image> testImageMonoAlpha = nullptr;
 
     if (!testImageMonoAlpha)
     {
@@ -355,9 +355,9 @@ static AZ::Data::Instance<AZ::RPI::Image> GetMonoAlphaTestTexture()
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 #if !defined(_RELEASE)
-static AZ::Data::Instance<AZ::RPI::Image> GetColorAlphaTestTexture()
+static AZ::Data::Instance<JE::Render::RPI::Image> GetColorAlphaTestTexture()
 {
-    static AZ::Data::Instance<AZ::RPI::Image> testImageColorAlpha = nullptr;
+    static AZ::Data::Instance<JE::Render::RPI::Image> testImageColorAlpha = nullptr;
 
     if (!testImageColorAlpha)
     {
@@ -379,7 +379,7 @@ static void DebugDrawColoredBox(AZ::Vector2 pos, AZ::Vector2 size, AZ::Color col
 
     IDraw2d::ImageOptions imageOptions = draw2d->GetDefaultImageOptions();
     imageOptions.color = color.GetAsVector3();
-    auto whiteTexture = AZ::RPI::ImageSystemInterface::Get()->GetSystemImage(AZ::RPI::SystemImage::White);
+    auto whiteTexture = JE::Render::RPI::ImageSystemInterface::Get()->GetSystemImage(JE::Render::RPI::SystemImage::White);
     draw2d->DrawImageAligned(whiteTexture, pos, size, horizontalAlignment, verticalAlignment,
         color.GetA(), 0.0f, nullptr, &imageOptions);
 }
@@ -688,7 +688,7 @@ static void DebugDraw2dImageRotations()
 {
     IDraw2d* draw2d = Draw2dHelper::GetDefaultDraw2d();
 
-    AZ::Data::Instance<AZ::RPI::Image> texture = GetMonoTestTexture();
+    AZ::Data::Instance<JE::Render::RPI::Image> texture = GetMonoTestTexture();
 
     AZ::Vector2 size = GetTextureSize(texture);
 
@@ -740,7 +740,7 @@ static void DebugDraw2dImageColor()
 {
     IDraw2d* draw2d = Draw2dHelper::GetDefaultDraw2d();
 
-    AZ::Data::Instance<AZ::RPI::Image> texture = GetMonoAlphaTestTexture();
+    AZ::Data::Instance<JE::Render::RPI::Image> texture = GetMonoAlphaTestTexture();
 
     IDraw2d::ImageOptions imageOptions = draw2d->GetDefaultImageOptions();
 
@@ -776,9 +776,9 @@ static void DebugDraw2dImageBlendMode()
 {
     IDraw2d* draw2d = Draw2dHelper::GetDefaultDraw2d();
 
-    auto whiteTexture = AZ::RPI::ImageSystemInterface::Get()->GetSystemImage(AZ::RPI::SystemImage::White);
+    auto whiteTexture = JE::Render::RPI::ImageSystemInterface::Get()->GetSystemImage(JE::Render::RPI::SystemImage::White);
 
-    AZ::Data::Instance<AZ::RPI::Image> texture = GetColorAlphaTestTexture();
+    AZ::Data::Instance<JE::Render::RPI::Image> texture = GetColorAlphaTestTexture();
 
     IDraw2d::ImageOptions imageOptions = draw2d->GetDefaultImageOptions();
 
@@ -843,7 +843,7 @@ static void DebugDraw2dImageUVs()
 {
     IDraw2d* draw2d = Draw2dHelper::GetDefaultDraw2d();
 
-    AZ::Data::Instance<AZ::RPI::Image> texture = GetColorTestTexture();
+    AZ::Data::Instance<JE::Render::RPI::Image> texture = GetColorTestTexture();
 
     draw2d->DrawText(
         "Testing DrawImage with minMaxTexCoords. Full image, top left quadrant, middle section, full flipped",
@@ -890,7 +890,7 @@ static void DebugDraw2dImagePixelRounding()
 {
     IDraw2d* draw2d = Draw2dHelper::GetDefaultDraw2d();
 
-    AZ::Data::Instance<AZ::RPI::Image> texture = GetColorTestTexture();
+    AZ::Data::Instance<JE::Render::RPI::Image> texture = GetColorTestTexture();
 
     IDraw2d::ImageOptions imageOptions = draw2d->GetDefaultImageOptions();
 

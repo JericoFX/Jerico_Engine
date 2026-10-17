@@ -7,23 +7,23 @@
  */
 #pragma once
 
-#include <Atom/RPI.Public/Pass/ComputePass.h>
+#include <JE/Render/RPI/Public/Pass/ComputePass.h>
 
 namespace AZ
 {
     namespace Render
     {
         // Class for controlling White Balance effect
-        class WhiteBalancePass final : public RPI::ComputePass
+        class WhiteBalancePass final : public JE::Render::RPI::ComputePass
         {
             AZ_RPI_PASS(WhiteBalancePass);
 
         public:
-            AZ_RTTI(WhiteBalancePass, "{15AAF070-3258-4376-9911-CF4E9C7FAF4A}", AZ::RPI::ComputePass);
+            AZ_RTTI(WhiteBalancePass, "{15AAF070-3258-4376-9911-CF4E9C7FAF4A}", JE::Render::RPI::ComputePass);
             AZ_CLASS_ALLOCATOR(WhiteBalancePass, SystemAllocator, 0);
 
             ~WhiteBalancePass() = default;
-            static RPI::Ptr<WhiteBalancePass> Create(const RPI::PassDescriptor& descriptor);
+            static JE::Render::RPI::Ptr<WhiteBalancePass> Create(const JE::Render::RPI::PassDescriptor& descriptor);
 
             bool IsEnabled() const override;
 
@@ -32,7 +32,7 @@ namespace AZ
             void FrameBeginInternal(FramePrepareParams params) override;
 
         private:
-            WhiteBalancePass(const RPI::PassDescriptor& descriptor);
+            WhiteBalancePass(const JE::Render::RPI::PassDescriptor& descriptor);
 
             AZ::RHI::ShaderInputNameIndex m_constantsIndex = "m_constants";
         };

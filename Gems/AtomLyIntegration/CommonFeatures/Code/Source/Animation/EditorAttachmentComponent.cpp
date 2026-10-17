@@ -12,7 +12,7 @@
 #include <AzCore/Math/Quaternion.h>
 #include <AzCore/Math/Transform.h>
 #include <LmbrCentral/Animation/SkeletalHierarchyRequestBus.h>
-#include <Atom/RPI.Reflect/Model/ModelAsset.h>
+#include <JE/Render/RPI/Reflect/Model/ModelAsset.h>
 #include <AzFramework/Translation/TranslationDef.h>
 
 namespace AZ

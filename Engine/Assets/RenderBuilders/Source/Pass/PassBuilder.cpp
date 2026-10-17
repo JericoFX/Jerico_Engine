@@ -6,17 +6,17 @@
  *
  */
 
-#include <Atom/RPI.Edit/Common/AssetUtils.h>
-#include <Atom/RPI.Reflect/Pass/PassTemplate.h>
-#include <Atom/RPI.Reflect/Pass/RenderPassData.h>
+#include <JE/Editor/Render/RPI/Edit/Common/AssetUtils.h>
+#include <JE/Render/RPI/Reflect/Pass/PassTemplate.h>
+#include <JE/Render/RPI/Reflect/Pass/RenderPassData.h>
 #include <Pass/PassBuilder.h>
 
 #include <AzCore/Asset/AssetManagerBus.h>
 #include <AzCore/Serialization/Json/JsonUtils.h>
 #include <AzCore/StringFunc/StringFunc.h>
 
-#include <Atom/RPI.Reflect/Asset/AssetReference.h>
-#include <Atom/RPI.Reflect/Pass/PassAsset.h>
+#include <JE/Render/RPI/Reflect/Asset/AssetReference.h>
+#include <JE/Render/RPI/Reflect/Pass/PassAsset.h>
 
 #include <AzFramework/IO/LocalFileIO.h>
 #include <AzFramework/StringFunc/StringFunc.h>
@@ -140,9 +140,9 @@ namespace JE::Assets::RenderBuilders
         auto beginCallback = [&](void* ptr, const AZ::SerializeContext::ClassData* classData, [[maybe_unused]] const AZ::SerializeContext::ClassElement* classElement)
         {
             // If the enumerated element is an asset reference
-            if (classData->m_typeId == azrtti_typeid<AZ::RPI::AssetReference>())
+            if (classData->m_typeId == azrtti_typeid<JE::Render::RPI::AssetReference>())
             {
-                AZ::RPI::AssetReference* assetReference = reinterpret_cast<AZ::RPI::AssetReference*>(ptr);
+                JE::Render::RPI::AssetReference* assetReference = reinterpret_cast<JE::Render::RPI::AssetReference*>(ptr);
 
                 // If the asset id isn't already provided, get it using the source file path
                 if (!assetReference->m_assetId.IsValid() && !assetReference->m_filePath.empty())
@@ -158,7 +158,7 @@ namespace JE::Assets::RenderBuilders
                     }
                     else // Process Job Phase
                     {
-                        auto assetIdOutcome = AZ::RPI::AssetUtils::MakeAssetId(path, subId);
+                        auto assetIdOutcome = JE::Render::RPI::AssetUtils::MakeAssetId(path, subId);
 
                         if (assetIdOutcome)
                         {
@@ -226,7 +226,7 @@ namespace JE::Assets::RenderBuilders
         AZStd::string fullPath;
         AzFramework::StringFunc::Path::ConstructFull(request.m_watchFolder.c_str(), request.m_sourceFile.c_str(), fullPath, true);
 
-        AZ::RPI::PassAsset passAsset;
+        JE::Render::RPI::PassAsset passAsset;
         AZ::Outcome<void, AZStd::string> loadResult = AZ::JsonSerializationUtils::LoadObjectFromFile(passAsset, fullPath);
 
         if (!loadResult.IsSuccess())
@@ -243,7 +243,7 @@ namespace JE::Assets::RenderBuilders
         // --- Find all dependencies ---
 
         AZStd::unordered_set<AZ::Data::AssetId> dependentList;
-        AZ::Uuid passAssetUuid = AZ::AzTypeInfo<AZ::RPI::PassAsset>::Uuid();
+        AZ::Uuid passAssetUuid = AZ::AzTypeInfo<JE::Render::RPI::PassAsset>::Uuid();
 
         FindPassReferenceAssetParams params;
         params.passAssetObject = &passAsset;
@@ -295,7 +295,7 @@ namespace JE::Assets::RenderBuilders
 
         // --- Load PassAsset ---
 
-        AZ::RPI::PassAsset passAsset;
+        JE::Render::RPI::PassAsset passAsset;
         AZ::Outcome<void, AZStd::string> loadResult = AZ::JsonSerializationUtils::LoadObjectFromFile(passAsset, request.m_fullPath);
 
         if (!loadResult.IsSuccess())
@@ -307,7 +307,7 @@ namespace JE::Assets::RenderBuilders
 
         // --- Find all dependencies ---
 
-        AZ::Uuid passAssetUuid = AZ::AzTypeInfo<AZ::RPI::PassAsset>::Uuid();
+        AZ::Uuid passAssetUuid = AZ::AzTypeInfo<JE::Render::RPI::PassAsset>::Uuid();
 
         FindPassReferenceAssetParams params;
         params.passAssetObject = &passAsset;
@@ -333,7 +333,7 @@ namespace JE::Assets::RenderBuilders
         auto& passTemplate{ passAsset.GetPassTemplate() };
         if (passTemplate && passTemplate->m_passData)
         {
-            auto* passData = azrtti_cast<AZ::RPI::RenderPassData*>(passTemplate->m_passData.get());
+            auto* passData = azrtti_cast<JE::Render::RPI::RenderPassData*>(passTemplate->m_passData.get());
             if (passData && !passData->m_pipelineViewTag.IsEmpty())
             {
                 // "PipelineViewTag": "MainCamera" is deprecated, discard the view-tag and set BindViewSrg to true
@@ -371,7 +371,7 @@ namespace JE::Assets::RenderBuilders
 
         // --- Save output product(s) to response ---
 
-        AssetBuilderSDK::JobProduct jobProduct(destPath, AZ::RPI::PassAsset::RTTI_Type(), 0);
+        AssetBuilderSDK::JobProduct jobProduct(destPath, JE::Render::RPI::PassAsset::RTTI_Type(), 0);
         jobProduct.m_dependencies = productDependencies;
         jobProduct.m_dependenciesHandled = true;
         response.m_outputProducts.push_back(jobProduct);

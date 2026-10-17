@@ -18,7 +18,7 @@ ly_add_target(
         PUBLIC
             JE::RenderMaterials
             AZ::AzToolsFramework
-            Gem::Atom_RPI.Edit
+            JE::EditorRenderIntegration
             Gem::AtomToolsFramework.Static
             Gem::AtomToolsFramework.Editor
             Gem::CommonFeaturesAtom.Public

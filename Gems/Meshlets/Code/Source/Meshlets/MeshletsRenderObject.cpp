@@ -10,19 +10,19 @@
 
 #include <Atom/RHI/Factory.h>
 
-#include <Atom/RPI.Public/Image/StreamingImage.h>
-#include <Atom/RPI.Public/Image/ImageSystemInterface.h>
+#include <JE/Render/RPI/Public/Image/StreamingImage.h>
+#include <JE/Render/RPI/Public/Image/ImageSystemInterface.h>
 
-#include <Atom/RPI.Public/Shader/ShaderResourceGroup.h>
-#include <Atom/RPI.Public/MeshDrawPacket.h>
+#include <JE/Render/RPI/Public/Shader/ShaderResourceGroup.h>
+#include <JE/Render/RPI/Public/MeshDrawPacket.h>
 
-#include <Atom/RPI.Reflect/Asset/AssetUtils.h>
-#include <Atom/RPI.Reflect/Material/MaterialAsset.h>
-#include <Atom/RPI.Reflect/Buffer/BufferAssetCreator.h>
-#include <Atom/RPI.Reflect/ResourcePoolAssetCreator.h>
-#include <Atom/RPI.Reflect/Model/ModelAsset.h>
-#include <Atom/RPI.Reflect/Model/ModelAssetCreator.h>
-#include <Atom/RPI.Reflect/Model/ModelLodAssetCreator.h>
+#include <JE/Render/RPI/Reflect/Asset/AssetUtils.h>
+#include <JE/Render/RPI/Reflect/Material/MaterialAsset.h>
+#include <JE/Render/RPI/Reflect/Buffer/BufferAssetCreator.h>
+#include <JE/Render/RPI/Reflect/ResourcePoolAssetCreator.h>
+#include <JE/Render/RPI/Reflect/Model/ModelAsset.h>
+#include <JE/Render/RPI/Reflect/Model/ModelAssetCreator.h>
+#include <JE/Render/RPI/Reflect/Model/ModelLodAssetCreator.h>
 
 #include <vector>
 
@@ -208,7 +208,7 @@ namespace AZ
             // Allocated using regular buffers
             meshRenderData.ComputeBuffersDescriptors[uint8_t(ComputeStreamsSemantics::MeshletsData)] =
                 SrgBufferDescriptor(
-                    RPI::CommonBufferPoolType::ReadOnly,
+                    JE::Render::RPI::CommonBufferPoolType::ReadOnly,
                     RHI::Format::Unknown,   // Mark is as Unknown since it represents StructuredBuffer
 //                    RHI::BufferBindFlags::Indirect |  [To Do] - add this when moving to GPU driven render pipeline
                     RHI::BufferBindFlags::ShaderRead,
@@ -219,7 +219,7 @@ namespace AZ
 
             meshRenderData.ComputeBuffersDescriptors[uint8_t(ComputeStreamsSemantics::MehsletsTriangles)] =
                 SrgBufferDescriptor(
-                    RPI::CommonBufferPoolType::ReadOnly,
+                    JE::Render::RPI::CommonBufferPoolType::ReadOnly,
                     RHI::Format::R32_UINT,
 //                    RHI::BufferBindFlags::Indirect |  [To Do] - add this when moving to GPU driven render pipeline
                     RHI::BufferBindFlags::ShaderRead,
@@ -230,7 +230,7 @@ namespace AZ
 
             meshRenderData.ComputeBuffersDescriptors[uint8_t(ComputeStreamsSemantics::MeshletsIndicesIndirection)] =
                 SrgBufferDescriptor(
-                    RPI::CommonBufferPoolType::ReadOnly,
+                    JE::Render::RPI::CommonBufferPoolType::ReadOnly,
                     RHI::Format::R32_UINT,
 //                    RHI::BufferBindFlags::Indirect |  [To Do] - add this when moving to GPU driven render pipeline
                     RHI::BufferBindFlags::ShaderRead,
@@ -245,7 +245,7 @@ namespace AZ
             // properly correlated!
             meshRenderData.ComputeBuffersDescriptors[uint8_t(ComputeStreamsSemantics::UVs)] =
                 SrgBufferDescriptor(
-                    RPI::CommonBufferPoolType::ReadWrite,
+                    JE::Render::RPI::CommonBufferPoolType::ReadWrite,
                     RHI::Format::R32G32_FLOAT,
 //                    RHI::BufferBindFlags::Indirect |  [To Do] - add this when moving to GPU driven render pipeline
                     RHI::BufferBindFlags::ShaderReadWrite, // | RHI::BufferBindFlags::InputAssembly,
@@ -255,7 +255,7 @@ namespace AZ
 
             meshRenderData.ComputeBuffersDescriptors[uint8_t(ComputeStreamsSemantics::Indices)] =
                 SrgBufferDescriptor(
-                    RPI::CommonBufferPoolType::ReadWrite,
+                    JE::Render::RPI::CommonBufferPoolType::ReadWrite,
                     RHI::Format::R32_UINT,
 //                    RHI::BufferBindFlags::Indirect |  [To Do] - add this when moving to GPU driven render pipeline
                     RHI::BufferBindFlags::ShaderReadWrite, // | RHI::BufferBindFlags::InputAssembly,
@@ -277,7 +277,7 @@ namespace AZ
             meshRenderData.RenderBuffersDescriptors[uint8_t(RenderStreamsSemantics::Positions)] =
                 SrgBufferDescriptor(
 //                    RPI::CommonBufferPoolType::StaticInputAssembly,
-                    RPI::CommonBufferPoolType::ReadOnly,
+                    JE::Render::RPI::CommonBufferPoolType::ReadOnly,
                     RHI::Format::R32_FLOAT,
 //                    RHI::Format::R32G32B32_FLOAT,
 //                    RHI::BufferBindFlags::Indirect |  [To Do] - add this when moving to GPU driven render pipeline
@@ -294,7 +294,7 @@ namespace AZ
             meshRenderData.RenderBuffersDescriptors[uint8_t(RenderStreamsSemantics::Normals)] =
                 SrgBufferDescriptor(
 //                    RPI::CommonBufferPoolType::StaticInputAssembly,
-                    RPI::CommonBufferPoolType::ReadOnly,
+                    JE::Render::RPI::CommonBufferPoolType::ReadOnly,
                     RHI::Format::R32_FLOAT,
 //                    RHI::Format::R32G32B32_FLOAT,
 //                    RHI::BufferBindFlags::Indirect |  [To Do] - add this when moving to GPU driven render pipeline
@@ -308,7 +308,7 @@ namespace AZ
             meshRenderData.RenderBuffersDescriptors[uint8_t(RenderStreamsSemantics::Tangents)] =
                 SrgBufferDescriptor(
 //                    RPI::CommonBufferPoolType::StaticInputAssembly,
-                    RPI::CommonBufferPoolType::ReadOnly,
+                    JE::Render::RPI::CommonBufferPoolType::ReadOnly,
                     RHI::Format::R32G32B32A32_FLOAT,
 //                    RHI::BufferBindFlags::Indirect |  [To Do] - add this when moving to GPU driven render pipeline
 //                    RHI::BufferBindFlags::InputAssembly, 
@@ -319,7 +319,7 @@ namespace AZ
 
             meshRenderData.RenderBuffersDescriptors[uint8_t(RenderStreamsSemantics::BiTangents)] =
                 SrgBufferDescriptor(
-                    RPI::CommonBufferPoolType::ReadOnly,
+                    JE::Render::RPI::CommonBufferPoolType::ReadOnly,
                     RHI::Format::R32_FLOAT,
 //                    RHI::Format::R32G32B32_FLOAT,
 //                    RHI::BufferBindFlags::Indirect |  [To Do] - add this when moving to GPU driven render pipeline
@@ -333,7 +333,7 @@ namespace AZ
             // For now created as ReadWrite shared buffer - should be ReadOnly in the final product
             meshRenderData.RenderBuffersDescriptors[uint8_t(RenderStreamsSemantics::UVs)] =
                 SrgBufferDescriptor(
-                    RPI::CommonBufferPoolType::ReadOnly,
+                    JE::Render::RPI::CommonBufferPoolType::ReadOnly,
                     RHI::Format::R32G32_FLOAT,
 //                    RHI::BufferBindFlags::Indirect |  [To Do] - add this when moving to GPU driven render pipeline
                     RHI::BufferBindFlags::ShaderReadWrite | RHI::BufferBindFlags::InputAssembly,
@@ -345,7 +345,7 @@ namespace AZ
             // doesn't really matter since it won't be used.
             meshRenderData.RenderBuffersDescriptors[uint8_t(RenderStreamsSemantics::Indices)] =
                 SrgBufferDescriptor(
-                    RPI::CommonBufferPoolType::StaticInputAssembly,  // Not used (by the pool), created using shared buffer
+                    JE::Render::RPI::CommonBufferPoolType::StaticInputAssembly,  // Not used (by the pool), created using shared buffer
                     RHI::Format::R32_UINT,
 //                    RHI::BufferBindFlags::Indirect |  [To Do] - add this when moving to GPU driven render pipeline
                     RHI::BufferBindFlags::ShaderReadWrite | RHI::BufferBindFlags::InputAssembly,
@@ -361,7 +361,7 @@ namespace AZ
             // Create the Srg first - required for the buffers generation
             if (m_renderShader)
             {
-                meshRenderData.RenderObjectSrg = RPI::ShaderResourceGroup::Create(
+                meshRenderData.RenderObjectSrg = JE::Render::RPI::ShaderResourceGroup::Create(
                         m_renderShader->GetAsset(), AZ::Name{ "MeshletsObjectRenderSrg" });
             }
             if (!meshRenderData.RenderObjectSrg)
@@ -436,7 +436,7 @@ namespace AZ
 //                        continue;
                     }
 
-                    Data::Instance<RPI::Buffer> buffer = meshRenderData.RenderBuffers[stream] ?
+                    Data::Instance<JE::Render::RPI::Buffer> buffer = meshRenderData.RenderBuffers[stream] ?
                         meshRenderData.RenderBuffers[stream] : 
                         Meshlets::SharedBufferInterface::Get()->GetBuffer();
 
@@ -460,7 +460,7 @@ namespace AZ
         // might fail if the creation is not times correctly, hence they is a split
         // between the creation and the binding to the Srg.
         bool MeshletsRenderObject::CreateAndBindComputeSrgAndDispatch(
-            Data::Instance<RPI::Shader> computeShader, MeshRenderData& meshRenderData)
+            Data::Instance<JE::Render::RPI::Shader> computeShader, MeshRenderData& meshRenderData)
         {
             // Start with the Srg creation - it will be required for the buffers generation
             if (meshRenderData.ComputeSrg)
@@ -469,7 +469,7 @@ namespace AZ
             }
 
             meshRenderData.ComputeSrg =
-                RPI::ShaderResourceGroup::Create(computeShader->GetAsset(), AZ::Name{ "MeshletsDataSrg" });
+                JE::Render::RPI::ShaderResourceGroup::Create(computeShader->GetAsset(), AZ::Name{ "MeshletsDataSrg" });
             if (!meshRenderData.ComputeSrg)
             {
                 AZ_Error("Meshlets", false, "Failed to create the Compute Srg");
@@ -589,7 +589,7 @@ namespace AZ
         }
 
         bool MeshletsRenderObject::RetrieveSourceMeshData(
-            const RPI::ModelLodAsset::Mesh& meshAsset,
+            const JE::Render::RPI::ModelLodAsset::Mesh& meshAsset,
             MeshRenderData& meshRenderData, 
             uint32_t vertexCount, uint32_t indexCount)
         {
@@ -598,7 +598,7 @@ namespace AZ
 
             // Take care of the indices since it's stored differently than the rest of the streams
             SrgBufferDescriptor* descriptor = &meshRenderData.RenderBuffersDescriptors[uint8_t(RenderStreamsSemantics::Indices)];
-            const RPI::BufferAssetView* bufferAssetView = &meshAsset.GetIndexBufferAssetView();
+            const JE::Render::RPI::BufferAssetView* bufferAssetView = &meshAsset.GetIndexBufferAssetView();
             descriptor->m_bufferData = RetrieveBufferData(bufferAssetView, streamFormat, 0, indexCount, bufferDescriptor);
 
             bool success = (streamFormat == descriptor->m_elementFormat);
@@ -648,7 +648,7 @@ namespace AZ
         // Moving the creator outside calling method and have the new model contain several
         // Lods did not work as it needs to be local to the block!
         uint32_t MeshletsRenderObject::CreateMeshletsRenderObject(
-            const RPI::ModelLodAsset::Mesh& meshAsset,
+            const JE::Render::RPI::ModelLodAsset::Mesh& meshAsset,
             MeshRenderData &meshRenderData)
         {
             uint32_t indexCount = meshAsset.GetIndexCount();
@@ -705,13 +705,13 @@ namespace AZ
         // Model Traversal and Data Copy for Creation 
         //----------------------------------------------------------------------
         uint8_t* MeshletsRenderObject::RetrieveBufferData(
-            const RPI::BufferAssetView* bufferView,
+            const JE::Render::RPI::BufferAssetView* bufferView,
             RHI::Format& format,
             uint32_t expectedAmount, uint32_t &existingAmount,
             RHI::BufferViewDescriptor& bufferDesc
         )  
         {
-            const Data::Asset<RPI::BufferAsset>& bufferAsset = bufferView->GetBufferAsset();
+            const Data::Asset<JE::Render::RPI::BufferAsset>& bufferAsset = bufferView->GetBufferAsset();
 //            const RHI::BufferViewDescriptor& bufferDesc = bufferView->GetBufferViewDescriptor();
             bufferDesc = bufferView->GetBufferViewDescriptor();
             existingAmount = bufferDesc.m_elementCount;
@@ -733,7 +733,7 @@ namespace AZ
         // Enhancing this by doing a double pass, gathering all data and creating meshlets groups
         // by Lod level should not be a problem but a design of meshlet model structure should be
         // put in place before doing that.
-        uint32_t MeshletsRenderObject::CreateMeshletsFromModelAsset(Data::Asset<RPI::ModelAsset> sourceModelAsset)
+        uint32_t MeshletsRenderObject::CreateMeshletsFromModelAsset(Data::Asset<JE::Render::RPI::ModelAsset> sourceModelAsset)
         {
             uint32_t meshletsCount = 0;
 
@@ -742,7 +742,7 @@ namespace AZ
             uint32_t lodAssetsAmount = uint32_t(sourceModelAsset->GetLodAssets().size());
 
 //            for (const Data::Asset<RPI::ModelLodAsset>& lodAsset : sourceModelAsset->GetLodAssets())
-            for (const Data::Asset<RPI::ModelLodAsset>& lodAsset = sourceModelAsset->GetLodAssets()[curLod] ;
+            for (const Data::Asset<JE::Render::RPI::ModelLodAsset>& lodAsset = sourceModelAsset->GetLodAssets()[curLod] ;
                 curLod < lodAssetsAmount ; ++curLod )
             {
                 ModelLodDataArray* lodRenderData = &m_modelRenderData[curLod];
@@ -766,7 +766,7 @@ namespace AZ
             return meshletsCount;
         }
 
-        MeshletsRenderObject::MeshletsRenderObject(Data::Asset<RPI::ModelAsset> sourceModelAsset,
+        MeshletsRenderObject::MeshletsRenderObject(Data::Asset<JE::Render::RPI::ModelAsset> sourceModelAsset,
             MeshletsFeatureProcessor* meshletsFeatureProcessor)
         {
             MeshletsRenderObject::s_textureCoordinatesName = Name("m_texCoordsOffset");

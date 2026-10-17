@@ -9,9 +9,9 @@
 #pragma once
 
 #include <AssetBuilderSDK/AssetBuilderBusses.h>
-#include <Atom/RPI.Reflect/Material/MaterialAsset.h>
-#include <Atom/RPI.Reflect/Material/MaterialTypeAsset.h>
-#include <Atom/RPI.Edit/Material/MaterialSourceData.h>
+#include <JE/Render/RPI/Reflect/Material/MaterialAsset.h>
+#include <JE/Render/RPI/Reflect/Material/MaterialTypeAsset.h>
+#include <JE/Editor/Render/RPI/Edit/Material/MaterialSourceData.h>
 #include <AzCore/JSON/document.h>
 
 namespace JE::Assets::RenderBuilders

@@ -9,10 +9,10 @@
 
 #include <AzCore/Memory/SystemAllocator.h>
 
-#include <Atom/RPI.Public/Pass/FullscreenTrianglePass.h>
-#include <Atom/RPI.Public/Shader/Shader.h>
-#include <Atom/RPI.Public/Shader/ShaderResourceGroup.h>
-#include <Atom/RPI.Public/Shader/ShaderReloadNotificationBus.h>
+#include <JE/Render/RPI/Public/Pass/FullscreenTrianglePass.h>
+#include <JE/Render/RPI/Public/Shader/Shader.h>
+#include <JE/Render/RPI/Public/Shader/ShaderResourceGroup.h>
+#include <JE/Render/RPI/Public/Shader/ShaderReloadNotificationBus.h>
 
 #include <TressFX/TressFXConstantBuffers.h>
 #include <Rendering/HairCommon.h>
@@ -35,16 +35,16 @@ namespace AZ
             //!  - PerPassSrg: hair vertex data data, PPLL buffers and material array
             //!     shared by all passes.
             class HairPPLLResolvePass final
-                : public RPI::FullscreenTrianglePass
+                : public JE::Render::RPI::FullscreenTrianglePass
             {
                 AZ_RPI_PASS(HairPPLLResolvePass);
 
             public:
-                AZ_RTTI(HairPPLLResolvePass, "{240940C1-4A47-480D-8B16-176FF3359B01}", RPI::FullscreenTrianglePass);
+                AZ_RTTI(HairPPLLResolvePass, "{240940C1-4A47-480D-8B16-176FF3359B01}", JE::Render::RPI::FullscreenTrianglePass);
                 AZ_CLASS_ALLOCATOR(HairPPLLResolvePass, SystemAllocator);
                 ~HairPPLLResolvePass() = default;
 
-                static RPI::Ptr<HairPPLLResolvePass> Create(const RPI::PassDescriptor& descriptor);
+                static JE::Render::RPI::Ptr<HairPPLLResolvePass> Create(const JE::Render::RPI::PassDescriptor& descriptor);
 
                 bool AcquireFeatureProcessor();
 
@@ -70,7 +70,7 @@ namespace AZ
                 AZ::Name o_enableLongtitudeCoeff;
                 AZ::Name o_enableAzimuthCoeff;
 
-                HairPPLLResolvePass(const RPI::PassDescriptor& descriptor);
+                HairPPLLResolvePass(const JE::Render::RPI::PassDescriptor& descriptor);
 
                 void UpdateGlobalShaderOptions();
 

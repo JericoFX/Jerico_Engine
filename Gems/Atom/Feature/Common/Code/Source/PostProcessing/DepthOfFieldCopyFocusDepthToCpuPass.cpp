@@ -8,8 +8,8 @@
 
 #include <Atom/RHI/FrameScheduler.h>
 #include <Atom/RHI/CommandList.h>
-#include <Atom/RPI.Public/Buffer/BufferSystemInterface.h>
-#include <Atom/RPI.Public/Buffer/Buffer.h>
+#include <JE/Render/RPI/Public/Buffer/BufferSystemInterface.h>
+#include <JE/Render/RPI/Public/Buffer/Buffer.h>
 #include <PostProcessing/DepthOfFieldCopyFocusDepthToCpuPass.h>
 
 namespace AZ
@@ -17,13 +17,13 @@ namespace AZ
     namespace Render
     {
 
-        RPI::Ptr<DepthOfFieldCopyFocusDepthToCpuPass> DepthOfFieldCopyFocusDepthToCpuPass::Create(const RPI::PassDescriptor& descriptor)
+        JE::Render::RPI::Ptr<DepthOfFieldCopyFocusDepthToCpuPass> DepthOfFieldCopyFocusDepthToCpuPass::Create(const JE::Render::RPI::PassDescriptor& descriptor)
         {
-            RPI::Ptr<DepthOfFieldCopyFocusDepthToCpuPass> depthOfFieldCopyFocusDepthToCpuPass = aznew DepthOfFieldCopyFocusDepthToCpuPass(descriptor);
+            JE::Render::RPI::Ptr<DepthOfFieldCopyFocusDepthToCpuPass> depthOfFieldCopyFocusDepthToCpuPass = aznew DepthOfFieldCopyFocusDepthToCpuPass(descriptor);
             return depthOfFieldCopyFocusDepthToCpuPass;
         }
 
-        DepthOfFieldCopyFocusDepthToCpuPass::DepthOfFieldCopyFocusDepthToCpuPass(const RPI::PassDescriptor& descriptor)
+        DepthOfFieldCopyFocusDepthToCpuPass::DepthOfFieldCopyFocusDepthToCpuPass(const JE::Render::RPI::PassDescriptor& descriptor)
             : Pass(descriptor)
         {
             m_fence = aznew RHI::Fence;
@@ -32,7 +32,7 @@ namespace AZ
             AZ_Assert(result == RHI::ResultCode::Success, "DepthOfFieldCopyFocusDepthToCpuPass failed to init fence");
         }
 
-        void DepthOfFieldCopyFocusDepthToCpuPass::SetBufferRef(RPI::Ptr<RPI::Buffer> bufferRef)
+        void DepthOfFieldCopyFocusDepthToCpuPass::SetBufferRef(JE::Render::RPI::Ptr<JE::Render::RPI::Buffer> bufferRef)
         {
             m_bufferRef = bufferRef;
         }
@@ -53,13 +53,13 @@ namespace AZ
 
             if (m_needsInitialize)
             {
-                RPI::CommonBufferDescriptor desc;
+                JE::Render::RPI::CommonBufferDescriptor desc;
                 desc.m_bufferName = GetPathName().GetStringView();
-                desc.m_poolType = RPI::CommonBufferPoolType::ReadBack;
+                desc.m_poolType = JE::Render::RPI::CommonBufferPoolType::ReadBack;
                 desc.m_byteCount = sizeof(float);
                 desc.m_elementSize = aznumeric_cast<uint32_t>(desc.m_byteCount);
                 desc.m_bufferData = nullptr;
-                m_readbackBuffer = RPI::BufferSystemInterface::Get()->CreateBufferFromCommonPool(desc);
+                m_readbackBuffer = JE::Render::RPI::BufferSystemInterface::Get()->CreateBufferFromCommonPool(desc);
 
                 m_copyDescriptor.m_sourceBuffer = m_bufferRef->GetRHIBuffer();
                 m_copyDescriptor.m_sourceOffset = 0;

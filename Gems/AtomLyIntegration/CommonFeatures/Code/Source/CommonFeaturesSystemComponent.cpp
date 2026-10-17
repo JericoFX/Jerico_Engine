@@ -6,7 +6,7 @@
  *
  */
 
-#include <Atom/RPI.Reflect/Model/ModelAsset.h>
+#include <JE/Render/RPI/Reflect/Model/ModelAsset.h>
 #include <AtomLyIntegration/CommonFeatures/CoreLights/CoreLightsConstants.h>
 #include <AtomLyIntegration/CommonFeatures/Mesh/MeshComponentConstants.h>
 #include <AzCore/Serialization/EditContext.h>
@@ -64,7 +64,7 @@ namespace AZ
 
         void AtomLyIntegrationCommonFeaturesSystemComponent::Activate()
         {
-            auto modelAssetHandler = azrtti_cast<RPI::ModelAssetHandler*>(Data::AssetManager::Instance().GetHandler(azrtti_typeid<RPI::ModelAsset>()));
+            auto modelAssetHandler = azrtti_cast<JE::Render::RPI::ModelAssetHandler*>(Data::AssetManager::Instance().GetHandler(azrtti_typeid<JE::Render::RPI::ModelAsset>()));
             modelAssetHandler->m_componentTypeId = EditorMeshComponentTypeId;
         }
 

@@ -20,9 +20,9 @@
 #include <AzToolsFramework/Viewport/ViewportMessages.h>
 
 #include <AtomLyIntegration/CommonFeatures/Mesh/MeshComponentBus.h>
-#include <Atom/RPI.Public/RPISystemInterface.h>
-#include <Atom/RPI.Public/Scene.h>
-#include <Atom/RPI.Reflect/Model/ModelAsset.h>
+#include <JE/Render/RPI/Public/RPISystemInterface.h>
+#include <JE/Render/RPI/Public/Scene.h>
+#include <JE/Render/RPI/Reflect/Model/ModelAsset.h>
 #include <Atom/Feature/SkyBox/SkyBoxFeatureProcessorInterface.h>
 
 #include <InputController/OpenParticleEditorViewportInputController.h>

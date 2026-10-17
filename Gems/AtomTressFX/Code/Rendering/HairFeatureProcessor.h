@@ -14,9 +14,9 @@
 #include <AzCore/std/containers/list.h>
 #include <AzCore/std/containers/map.h>
 
-#include <Atom/RPI.Public/FeatureProcessor.h>
-#include <Atom/RPI.Public/Image/AttachmentImage.h>
-#include <Atom/RPI.Public/Pass/FullscreenTrianglePass.h>
+#include <JE/Render/RPI/Public/FeatureProcessor.h>
+#include <JE/Render/RPI/Public/Image/AttachmentImage.h>
+#include <JE/Render/RPI/Public/Pass/FullscreenTrianglePass.h>
 
 // Hair specific
 #include <TressFX/TressFXConstantBuffers.h>
@@ -71,7 +71,7 @@ namespace AZ
             //! The last part can be switched to support the smaller foot print pass version that instead
             //!  of fragments list (PPLL) will use fill screen buffers to approximate OIT layer resolve.
             class HairFeatureProcessor final
-                : public RPI::FeatureProcessor
+                : public JE::Render::RPI::FeatureProcessor
                 , public HairGlobalSettingsRequestBus::Handler
                 , private AZ::TickBus::Handler
             {
@@ -97,7 +97,7 @@ namespace AZ
 
             public:
                 AZ_CLASS_ALLOCATOR(HairFeatureProcessor, AZ::SystemAllocator)
-                AZ_RTTI(AZ::Render::Hair::HairFeatureProcessor, "{5F9DDA81-B43F-4E30-9E56-C7C3DC517A4C}", AZ::RPI::FeatureProcessor);
+                AZ_RTTI(AZ::Render::Hair::HairFeatureProcessor, "{5F9DDA81-B43F-4E30-9E56-C7C3DC517A4C}", JE::Render::RPI::FeatureProcessor);
 
                 static void Reflect(AZ::ReflectContext* context);
 
@@ -107,13 +107,13 @@ namespace AZ
 
                 void UpdateHairSkinning();
 
-                bool Init(RPI::RenderPipeline* pipeline);
+                bool Init(JE::Render::RPI::RenderPipeline* pipeline);
                 bool IsInitialized() { return m_initialized; }
 
                 // FeatureProcessor overrides ...
                 void Activate() override;
                 void Deactivate() override;
-                void AddRenderPasses(RPI::RenderPipeline* renderPipeline) override;
+                void AddRenderPasses(JE::Render::RPI::RenderPipeline* renderPipeline) override;
                 void Simulate(const FeatureProcessor::SimulatePacket& packet) override;
                 void Render(const FeatureProcessor::RenderPacket& packet) override;
 
@@ -125,16 +125,16 @@ namespace AZ
                 bool RemoveHairRenderObject(Data::Instance<HairRenderObject> renderObject);
 
                 // RPI::SceneNotificationBus overrides ...
-                void OnRenderPipelineChanged(AZ::RPI::RenderPipeline* pipeline, AZ::RPI::SceneNotification::RenderPipelineChangeType changeType) override;
+                void OnRenderPipelineChanged(JE::Render::RPI::RenderPipeline* pipeline, JE::Render::RPI::SceneNotification::RenderPipelineChangeType changeType) override;
 
                 Data::Instance<HairSkinningComputePass> GetHairSkinningComputegPass();
                 Data::Instance<HairPPLLRasterPass> GetHairPPLLRasterPass();
-                Data::Instance<RPI::Shader> GetGeometryRasterShader();
+                Data::Instance<JE::Render::RPI::Shader> GetGeometryRasterShader();
 
                 //! Update the hair objects materials array.
                 void FillHairMaterialsArray(std::vector<const AMD::TressFXRenderParams*>& renderSettings);
 
-                Data::Instance<RPI::Buffer> GetPerPixelListBuffer() { return m_linkedListNodesBuffer; }
+                Data::Instance<JE::Render::RPI::Buffer> GetPerPixelListBuffer() { return m_linkedListNodesBuffer; }
                 HairUniformBuffer<AMD::TressFXShadeParams>& GetMaterialsArray() { return m_hairObjectsMaterialsCB;  }
 
                 void ForceRebuildRenderData() { m_forceRebuildRenderData = true; }
@@ -164,9 +164,9 @@ namespace AZ
 
                 void EnablePasses(bool enable);
 
-                bool HasHairParentPass(RPI::RenderPipeline* renderPipeline);
+                bool HasHairParentPass(JE::Render::RPI::RenderPipeline* renderPipeline);
 
-                bool AddHairParentPass(RPI::RenderPipeline* renderPipeline);
+                bool AddHairParentPass(JE::Render::RPI::RenderPipeline* renderPipeline);
 
                 //! The following will serve to register the FP in the Thumbnail system
                 AZStd::vector<AZStd::string> m_hairFeatureProcessorRegistryName;
@@ -178,7 +178,7 @@ namespace AZ
                 //! but on the FP side, it will only associate to the latest pass hence such a case
                 //! might still be a problem.  If needed, it can be resolved using a map for each
                 //! pass name per pipeline.
-                RPI::RenderPipeline* m_renderPipeline = nullptr;
+                JE::Render::RPI::RenderPipeline* m_renderPipeline = nullptr;
 
                 //! The Hair Objects in the scene (one per hair component)
                 AZStd::list<Data::Instance<HairRenderObject>> m_hairRenderObjects;
@@ -195,7 +195,7 @@ namespace AZ
                 Data::Instance<HairShortCutGeometryShadingPass> m_hairShortCutGeometryShadingPass = nullptr;
 
                 // Cache the pass request data for creating a hair parent pass
-                AZ::Data::Asset<AZ::RPI::AnyAsset> m_hairPassRequestAsset;
+                AZ::Data::Asset<JE::Render::RPI::AnyAsset> m_hairPassRequestAsset;
 
                 //--------------------------------------------------------------
                 //                      Per Pass Resources 
@@ -208,7 +208,7 @@ namespace AZ
                 HairUniformBuffer<AMD::TressFXShadeParams> m_hairObjectsMaterialsCB;
 
                 //! PPLL single buffer containing all the PPLL elements
-                Data::Instance<RPI::Buffer> m_linkedListNodesBuffer = nullptr;
+                Data::Instance<JE::Render::RPI::Buffer> m_linkedListNodesBuffer = nullptr;
                 //--------------------------------------------------------------
 
                 //! Per frame delta time for the physics simulation - updated every frame

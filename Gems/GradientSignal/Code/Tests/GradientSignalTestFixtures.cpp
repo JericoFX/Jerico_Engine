@@ -10,14 +10,14 @@
 #include <Tests/GradientSignalTestFixtures.h>
 #include <Tests/GradientSignalTestHelpers.h>
 
-#include <Atom/RPI.Public/Image/ImageSystem.h>
-#include <Atom/RPI.Public/Material/MaterialSystem.h>
-#include <Atom/RPI.Public/RPISystem.h>
+#include <JE/Render/RPI/Public/Image/ImageSystem.h>
+#include <JE/Render/RPI/Public/Material/MaterialSystem.h>
+#include <JE/Render/RPI/Public/RPISystem.h>
 #include <Common/RHI/Factory.h>
 #include <Common/RHI/Stubs.h>
 
-#include <Atom/RPI.Reflect/Image/ImageMipChainAsset.h>
-#include <Atom/RPI.Reflect/Image/StreamingImageAssetHandler.h>
+#include <JE/Render/RPI/Reflect/Image/ImageMipChainAsset.h>
+#include <JE/Render/RPI/Reflect/Image/StreamingImageAssetHandler.h>
 #include <AzFramework/Components/TransformComponent.h>
 #include <GradientSignal/Components/GradientSurfaceDataComponent.h>
 #include <GradientSignal/Components/GradientTransformComponent.h>
@@ -117,15 +117,15 @@ namespace UnitTest
         m_rhiFactory.reset(aznew UnitTest::StubRHI::Factory());
 
         // Create the Atom RPISystem
-        AZ::RPI::RPISystemDescriptor rpiSystemDescriptor;
-        m_rpiSystem = AZStd::make_unique<AZ::RPI::RPISystem>();
+        JE::Render::RPI::RPISystemDescriptor rpiSystemDescriptor;
+        m_rpiSystem = AZStd::make_unique<JE::Render::RPI::RPISystem>();
         m_rpiSystem->Initialize(rpiSystemDescriptor);
 
-        AZ::RPI::ImageSystemDescriptor imageSystemDescriptor;
-        m_imageSystem = AZStd::make_unique<AZ::RPI::ImageSystem>();
+        JE::Render::RPI::ImageSystemDescriptor imageSystemDescriptor;
+        m_imageSystem = AZStd::make_unique<JE::Render::RPI::ImageSystem>();
         m_imageSystem->Init(imageSystemDescriptor);
 
-        m_materialSystem = AZStd::make_unique<AZ::RPI::MaterialSystem>();
+        m_materialSystem = AZStd::make_unique<JE::Render::RPI::MaterialSystem>();
         m_materialSystem->Init();
     }
 

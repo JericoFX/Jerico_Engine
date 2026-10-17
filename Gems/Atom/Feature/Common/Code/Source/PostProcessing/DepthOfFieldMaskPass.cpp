@@ -6,9 +6,9 @@
  *
  */
 
-#include <Atom/RPI.Public/RenderPipeline.h>
-#include <Atom/RPI.Public/Scene.h>
-#include <Atom/RPI.Public/View.h>
+#include <JE/Render/RPI/Public/RenderPipeline.h>
+#include <JE/Render/RPI/Public/Scene.h>
+#include <JE/Render/RPI/Public/View.h>
 
 #include <PostProcess/PostProcessFeatureProcessor.h>
 #include <PostProcess/DepthOfField/DepthOfFieldSettings.h>
@@ -18,14 +18,14 @@ namespace AZ
 {
     namespace Render
     {
-        RPI::Ptr<DepthOfFieldMaskPass> DepthOfFieldMaskPass::Create(const RPI::PassDescriptor& descriptor)
+        JE::Render::RPI::Ptr<DepthOfFieldMaskPass> DepthOfFieldMaskPass::Create(const JE::Render::RPI::PassDescriptor& descriptor)
         {
-            RPI::Ptr<DepthOfFieldMaskPass> pass = aznew DepthOfFieldMaskPass(descriptor);
+            JE::Render::RPI::Ptr<DepthOfFieldMaskPass> pass = aznew DepthOfFieldMaskPass(descriptor);
             return pass;
         }
 
-        DepthOfFieldMaskPass::DepthOfFieldMaskPass(const RPI::PassDescriptor& descriptor)
-            : RPI::FullscreenTrianglePass(descriptor)
+        DepthOfFieldMaskPass::DepthOfFieldMaskPass(const JE::Render::RPI::PassDescriptor& descriptor)
+            : JE::Render::RPI::FullscreenTrianglePass(descriptor)
         {
         }
 
@@ -41,9 +41,9 @@ namespace AZ
 
         void DepthOfFieldMaskPass::FrameBeginInternal(FramePrepareParams params)
         {
-            RPI::Scene* scene = GetScene();
+            JE::Render::RPI::Scene* scene = GetScene();
             PostProcessFeatureProcessor* fp = scene->GetFeatureProcessor<PostProcessFeatureProcessor>();
-            AZ::RPI::ViewPtr view = GetRenderPipeline()->GetFirstView(GetPipelineViewTag());
+            JE::Render::RPI::ViewPtr view = GetRenderPipeline()->GetFirstView(GetPipelineViewTag());
             if (fp)
             {
                 PostProcessSettings* postProcessSettings = fp->GetLevelSettingsFromView(view);
@@ -78,14 +78,14 @@ namespace AZ
                     }
                 }
             }
-            RPI::FullscreenTrianglePass::FrameBeginInternal(params);
+            JE::Render::RPI::FullscreenTrianglePass::FrameBeginInternal(params);
         }
 
         void DepthOfFieldMaskPass::CompileResources(const RHI::FrameGraphCompileContext& context)
         {
             // Update resolution size
             const auto attachmentBindings = GetAttachmentBindings();
-            const RPI::PassAttachmentBinding& attachmentBinding = attachmentBindings[0];
+            const JE::Render::RPI::PassAttachmentBinding& attachmentBinding = attachmentBindings[0];
             if (attachmentBinding.GetAttachment())
             {
                 RHI::Size size = attachmentBinding.GetAttachment()->m_descriptor.m_image.m_size;

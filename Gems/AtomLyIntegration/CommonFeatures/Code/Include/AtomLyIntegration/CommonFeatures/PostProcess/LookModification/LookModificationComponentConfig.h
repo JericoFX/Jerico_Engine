@@ -11,7 +11,7 @@
 #include <AzCore/Component/Component.h>
 #include <ACES/Aces.h>
 #include <Atom/Feature/PostProcess/LookModification/LookModificationSettingsInterface.h>
-#include <Atom/RPI.Reflect/Image/StreamingImageAsset.h>
+#include <JE/Render/RPI/Reflect/Image/StreamingImageAsset.h>
 
 namespace AZ
 {

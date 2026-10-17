@@ -14,9 +14,9 @@
 #include <PostProcessing/AoParentPass.h>
 #include <AzCore/Math/MathUtils.h>
 #include <Atom/Feature/PostProcess/AmbientOcclusion/GtaoConstants.h>
-#include <Atom/RPI.Public/RenderPipeline.h>
-#include <Atom/RPI.Public/Scene.h>
-#include <Atom/RPI.Public/View.h>
+#include <JE/Render/RPI/Public/RenderPipeline.h>
+#include <JE/Render/RPI/Public/Scene.h>
+#include <JE/Render/RPI/Public/View.h>
 
 namespace AZ
 {
@@ -24,13 +24,13 @@ namespace AZ
     {
         // --- AO Parent Pass ---
 
-        RPI::Ptr<AoParentPass> AoParentPass::Create(const RPI::PassDescriptor& descriptor)
+        JE::Render::RPI::Ptr<AoParentPass> AoParentPass::Create(const JE::Render::RPI::PassDescriptor& descriptor)
         {
             return aznew AoParentPass(descriptor);
         }
 
-        AoParentPass::AoParentPass(const RPI::PassDescriptor& descriptor)
-            : RPI::ParentPass(descriptor)
+        AoParentPass::AoParentPass(const JE::Render::RPI::PassDescriptor& descriptor)
+            : JE::Render::RPI::ParentPass(descriptor)
         { }
 
         bool AoParentPass::IsEnabled() const
@@ -39,13 +39,13 @@ namespace AZ
             {
                 return false;
             }
-            const RPI::Scene* scene = GetScene();
+            const JE::Render::RPI::Scene* scene = GetScene();
             if (!scene)
             {
                 return false;
             }
             PostProcessFeatureProcessor* fp = scene->GetFeatureProcessor<PostProcessFeatureProcessor>();
-            const RPI::ViewPtr view = GetRenderPipeline()->GetFirstView(GetPipelineViewTag());
+            const JE::Render::RPI::ViewPtr view = GetRenderPipeline()->GetFirstView(GetPipelineViewTag());
             if (!fp)
             {
                 return true;
@@ -76,9 +76,9 @@ namespace AZ
 
         void AoParentPass::FrameBeginInternal(FramePrepareParams params)
         {
-            RPI::Scene* scene = GetScene();
+            JE::Render::RPI::Scene* scene = GetScene();
             PostProcessFeatureProcessor* fp = scene->GetFeatureProcessor<PostProcessFeatureProcessor>();
-            AZ::RPI::ViewPtr view = m_pipeline->GetFirstView(GetPipelineViewTag());
+            JE::Render::RPI::ViewPtr view = m_pipeline->GetFirstView(GetPipelineViewTag());
             if (fp)
             {
                 PostProcessSettings* postProcessSettings = fp->GetLevelSettingsFromView(view);

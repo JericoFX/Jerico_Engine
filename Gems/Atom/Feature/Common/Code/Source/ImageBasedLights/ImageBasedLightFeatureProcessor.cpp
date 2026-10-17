@@ -8,9 +8,9 @@
 
 #include <ImageBasedLights/ImageBasedLightFeatureProcessor.h>
 
-#include <Atom/RPI.Public/Scene.h>
-#include <Atom/RPI.Public/RPIUtils.h>
-#include <Atom/RPI.Public/Image/StreamingImage.h>
+#include <JE/Render/RPI/Public/Scene.h>
+#include <JE/Render/RPI/Public/RPIUtils.h>
+#include <JE/Render/RPI/Public/Image/StreamingImage.h>
 
 namespace AZ
 {
@@ -56,12 +56,12 @@ namespace AZ
             m_sceneSrg->SetConstant(m_iblOrientationConstantIndex, m_orientation);
         }
 
-        void ImageBasedLightFeatureProcessor::SetSpecularImage(const Data::Asset<RPI::StreamingImageAsset>& imageAsset)
+        void ImageBasedLightFeatureProcessor::SetSpecularImage(const Data::Asset<JE::Render::RPI::StreamingImageAsset>& imageAsset)
         {
             m_specular = GetInstanceForImage(imageAsset, m_defaultSpecularImage);
         }
 
-        void ImageBasedLightFeatureProcessor::SetDiffuseImage(const Data::Asset<RPI::StreamingImageAsset>& imageAsset)
+        void ImageBasedLightFeatureProcessor::SetDiffuseImage(const Data::Asset<JE::Render::RPI::StreamingImageAsset>& imageAsset)
         {
             m_diffuse = GetInstanceForImage(imageAsset, m_defaultDiffuseImage);
         }
@@ -88,19 +88,19 @@ namespace AZ
             const constexpr char* DefaultSpecularCubeMapPath = "textures/default/default_iblglobalcm_iblspecular.dds.streamingimage";
             const constexpr char* DefaultDiffuseCubeMapPath = "textures/default/default_iblglobalcm_ibldiffuse.dds.streamingimage";
 
-            m_defaultSpecularImage = RPI::LoadStreamingTexture(DefaultSpecularCubeMapPath);
+            m_defaultSpecularImage = JE::Render::RPI::LoadStreamingTexture(DefaultSpecularCubeMapPath);
             AZ_Assert(m_defaultSpecularImage, "Failed to load default specular cubemap");
 
-            m_defaultDiffuseImage = RPI::LoadStreamingTexture(DefaultDiffuseCubeMapPath);
+            m_defaultDiffuseImage = JE::Render::RPI::LoadStreamingTexture(DefaultDiffuseCubeMapPath);
             AZ_Assert(m_defaultDiffuseImage, "Failed to load default diffuse cubemap");
         }
 
-        Data::Instance<RPI::Image> ImageBasedLightFeatureProcessor::GetInstanceForImage(const Data::Asset<RPI::StreamingImageAsset>& imageAsset, const Data::Instance<RPI::Image>& defaultImage)
+        Data::Instance<JE::Render::RPI::Image> ImageBasedLightFeatureProcessor::GetInstanceForImage(const Data::Asset<JE::Render::RPI::StreamingImageAsset>& imageAsset, const Data::Instance<JE::Render::RPI::Image>& defaultImage)
         {
-            Data::Instance<RPI::Image> image;
+            Data::Instance<JE::Render::RPI::Image> image;
             if (imageAsset.GetId().IsValid())
             {
-                image = RPI::StreamingImage::FindOrCreate(imageAsset);
+                image = JE::Render::RPI::StreamingImage::FindOrCreate(imageAsset);
                 if (image && !ValidateIsCubemap(image))
                 {
                     image = defaultImage;
@@ -109,7 +109,7 @@ namespace AZ
             return image;
         }
 
-        bool ImageBasedLightFeatureProcessor::ValidateIsCubemap(Data::Instance<RPI::Image> image)
+        bool ImageBasedLightFeatureProcessor::ValidateIsCubemap(Data::Instance<JE::Render::RPI::Image> image)
         {
             const RHI::ImageDescriptor& desc = image->GetRHIImage()->GetDescriptor();
             return (desc.m_isCubemap || desc.m_arraySize == 6);

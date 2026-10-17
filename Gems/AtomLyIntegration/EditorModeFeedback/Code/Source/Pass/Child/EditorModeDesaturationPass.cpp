@@ -8,9 +8,9 @@
 
 #include <Pass/Child/EditorModeDesaturationPass.h>
 
-#include <Atom/RPI.Public/RenderPipeline.h>
-#include <Atom/RPI.Public/Scene.h>
-#include <Atom/RPI.Public/View.h>
+#include <JE/Render/RPI/Public/RenderPipeline.h>
+#include <JE/Render/RPI/Public/Scene.h>
+#include <JE/Render/RPI/Public/View.h>
 
 // Temporary measure for setting the desaturation pass shader parameters at runtime until GHI 3455 is implemented
 AZ_EDITOR_MODE_PASS_TRANSITION_CVARS(cl_editorModeDesaturationPass, 0.75f, 0.0f, 20.0f, 1.0f);
@@ -20,13 +20,13 @@ namespace AZ
 {
     namespace Render
     {
-        RPI::Ptr<EditorModeDesaturationPass> EditorModeDesaturationPass::Create(const RPI::PassDescriptor& descriptor)
+        JE::Render::RPI::Ptr<EditorModeDesaturationPass> EditorModeDesaturationPass::Create(const JE::Render::RPI::PassDescriptor& descriptor)
         {
-            RPI::Ptr<EditorModeDesaturationPass> pass = aznew EditorModeDesaturationPass(descriptor);
+            JE::Render::RPI::Ptr<EditorModeDesaturationPass> pass = aznew EditorModeDesaturationPass(descriptor);
             return pass;
         }
 
-        EditorModeDesaturationPass::EditorModeDesaturationPass(const RPI::PassDescriptor& descriptor)
+        EditorModeDesaturationPass::EditorModeDesaturationPass(const JE::Render::RPI::PassDescriptor& descriptor)
             : EditorModeFeedbackChildPassBase(descriptor, { 0.75f, 0.0f, 20.0f }, 1.0f)
         {
         }

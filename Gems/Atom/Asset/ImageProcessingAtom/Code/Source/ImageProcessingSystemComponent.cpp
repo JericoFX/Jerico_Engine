@@ -7,7 +7,7 @@
  */
 
 
-#include <Atom/RPI.Reflect/Image/StreamingImageAsset.h>
+#include <JE/Render/RPI/Reflect/Image/StreamingImageAsset.h>
 
 #include <AzCore/Component/ComponentApplicationBus.h>
 #include <AzCore/Component/Entity.h>
@@ -452,7 +452,7 @@ namespace ImageProcessingAtom
         {
             // For product which is streaming image asset, add menu item to save it to a dds file
             const ProductAssetBrowserEntry* product = azrtti_cast<const ProductAssetBrowserEntry*>(*entryIt);
-            if (product->GetAssetType() == azrtti_typeid<AZ::RPI::StreamingImageAsset>())
+            if (product->GetAssetType() == azrtti_typeid<JE::Render::RPI::StreamingImageAsset>())
             {
                 AZ::Data::AssetId assetId = product->GetAssetId();
                 menu->addAction("Save as DDS...", [assetId, this]()

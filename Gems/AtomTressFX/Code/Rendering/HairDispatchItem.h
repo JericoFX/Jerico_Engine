@@ -19,13 +19,18 @@ namespace AZ
         class PipelineState;
     }
 
-    namespace RPI
-    {
+    }
+
+namespace JE::Render::RPI
+{
         class Buffer;
         class ModelLod;
         class Shader;
         class ShaderResourceGroup;
     }
+
+namespace AZ
+{
 
     namespace Render
     {
@@ -56,9 +61,9 @@ namespace AZ
                 ~HairDispatchItem();
 
                 void InitSkinningDispatch(
-                    RPI::Shader* shader,
-                    RPI::ShaderResourceGroup* hairGenerationSrg,
-                    RPI::ShaderResourceGroup* hairSimSrg,
+                    JE::Render::RPI::Shader* shader,
+                    JE::Render::RPI::ShaderResourceGroup* hairGenerationSrg,
+                    JE::Render::RPI::ShaderResourceGroup* hairSimSrg,
                     uint32_t elementsAmount
                 );
 
@@ -66,7 +71,7 @@ namespace AZ
 
             private:
                 RHI::DispatchItem m_dispatchItem{RHI::MultiDevice::AllDevices};
-                RPI::Shader* m_shader;
+                JE::Render::RPI::Shader* m_shader;
             };
 
         } // namespace Hair

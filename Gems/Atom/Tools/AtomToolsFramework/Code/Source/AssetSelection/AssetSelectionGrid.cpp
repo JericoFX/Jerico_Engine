@@ -7,7 +7,7 @@
  */
 
 #include <AssetSelection/ui_AssetSelectionGrid.h>
-#include <Atom/RPI.Edit/Common/AssetUtils.h>
+#include <JE/Editor/Render/RPI/Edit/Common/AssetUtils.h>
 #include <AtomToolsFramework/AssetSelection/AssetSelectionGrid.h>
 #include <AtomToolsFramework/Util/Util.h>
 #include <AzQtComponents/Components/Widgets/ElidingLabel.h>
@@ -215,12 +215,12 @@ namespace AtomToolsFramework
 
     void AssetSelectionGrid::OnCatalogAssetAdded(const AZ::Data::AssetId& assetId)
     {
-        AddPath(AZ::RPI::AssetUtils::GetSourcePathByAssetId(assetId));
+        AddPath(JE::Render::RPI::AssetUtils::GetSourcePathByAssetId(assetId));
     }
 
     void AssetSelectionGrid::OnCatalogAssetRemoved(const AZ::Data::AssetId& assetId, [[maybe_unused]] const AZ::Data::AssetInfo& assetInfo)
     {
-        RemovePath(AZ::RPI::AssetUtils::GetSourcePathByAssetId(assetId));
+        RemovePath(JE::Render::RPI::AssetUtils::GetSourcePathByAssetId(assetId));
     }
 
     void AssetSelectionGrid::SetupAssetList()

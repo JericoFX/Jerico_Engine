@@ -1,0 +1,475 @@
+/*
+ * Copyright (c) Contributors to the Open 3D Engine Project.
+ * For complete copyright and license terms please see the LICENSE at the root of this distribution.
+ *
+ * SPDX-License-Identifier: Apache-2.0 OR MIT
+ *
+ */
+
+#include <JE/Render/RPI/Public/Image/AttachmentImage.h>
+#include <JE/Render/RPI/Public/Image/AttachmentImagePool.h>
+#include <JE/Render/RPI/Public/Image/ImageSystem.h>
+#include <JE/Render/RPI/Public/Image/StreamingImage.h>
+#include <JE/Render/RPI/Public/Image/StreamingImagePool.h>
+
+#include <JE/Render/RPI/Reflect/Asset/AssetHandler.h>
+#include <Atom/RHI.Reflect/ImagePoolDescriptor.h>
+#include <JE/Render/RPI/Reflect/Image/AttachmentImageAssetCreator.h>
+#include <JE/Render/RPI/Reflect/Image/ImageMipChainAsset.h>
+#include <JE/Render/RPI/Reflect/Image/StreamingImageAssetHandler.h>
+#include <JE/Render/RPI/Reflect/Image/StreamingImagePoolAssetCreator.h>
+#include <JE/Render/RPI/Reflect/ResourcePoolAssetCreator.h>
+
+#include <Atom/RHI/ImagePool.h>
+#include <Atom/RHI/RHISystemInterface.h>
+
+#include <AzCore/Asset/AssetManager.h>
+#include <AzCore/Console/IConsole.h>
+#include <AzCore/Instance/InstanceDatabase.h>
+#include <AzCore/Interface/Interface.h>
+#include <AzCore/Math/Color.h>
+#include <AzCore/Settings/SettingsRegistry.h>
+
+JE_RENDER_INTEGRATION_API AZ_DECLARE_BUDGET(RPI);
+
+namespace AZ
+{
+
+    namespace
+    {
+        const char* MemoryBudgetSettingPath = "/O3DE/Atom/RPI/Initialization/ImageSystemDescriptor/SystemStreamingImagePoolSize";
+        const char* MipBiasSettingPath = "/O3DE/Atom/RPI/Initialization/ImageSystemDescriptor/SystemStreamingImagePoolMipBias";
+        
+        size_t cvar_r_streamingImagePoolBudgetMb_Init()
+        {
+            u64 value = 0;
+            auto settingsRegistry = AZ::SettingsRegistry::Get();
+            if (settingsRegistry)
+            {
+                settingsRegistry->Get(value, MemoryBudgetSettingPath);
+            }
+            return aznumeric_cast<size_t>(value);
+        }
+
+        int16_t cvar_r_streamingImageMipBias_Init()
+        {
+            s64 value = 0;
+            auto settingsRegistry = AZ::SettingsRegistry::Get();
+            if (settingsRegistry)
+            {
+                settingsRegistry->Get(value, MipBiasSettingPath);
+            }
+            return aznumeric_cast<int16_t>(value);
+        }
+
+        void cvar_r_streamingImagePoolBudgetMb_Changed(const size_t& value)
+        {
+            if (auto* imageSystem = JE::Render::RPI::ImageSystemInterface::Get())
+            {
+                Data::Instance<JE::Render::RPI::StreamingImagePool> pool = imageSystem->GetSystemStreamingPool();
+                size_t newBudget = value * 1024 * 1024;
+                [[maybe_unused]] bool success = pool->SetMemoryBudget(newBudget);
+                AZ_Warning("StreamingImagePool", success, "Can't update StreamingImagePool's memory budget to %uM", value);
+            }
+            else
+            {
+                // Update setting registry value which is used for image system initialization
+                if (auto settingsRegistry = AZ::SettingsRegistry::Get())
+                {
+                    settingsRegistry->Set(MemoryBudgetSettingPath, aznumeric_cast<u64>(value));
+                }
+            }
+        }
+
+        void cvar_r_streamingImageMipBias_Changed(const int16_t& value)
+        {
+            if (auto* imageSystem = JE::Render::RPI::ImageSystemInterface::Get())
+            {
+                Data::Instance<JE::Render::RPI::StreamingImagePool> pool = imageSystem->GetSystemStreamingPool();
+                pool->SetMipBias(value);
+            }
+            else
+            {
+                // Update setting registry value which is used for image system initialization
+                if (auto settingsRegistry = AZ::SettingsRegistry::Get())
+                {
+                    settingsRegistry->Set(MipBiasSettingPath, aznumeric_cast<s64>(value));
+                }
+            }
+        }
+    }
+
+    // cvars for changing streaming image pool budget and setup mip bias of streaming controller
+    AZ_CVAR(size_t, r_streamingImagePoolBudgetMb, cvar_r_streamingImagePoolBudgetMb_Init(), cvar_r_streamingImagePoolBudgetMb_Changed, ConsoleFunctorFlags::DontReplicate, "Change gpu memory budget for the RPI system streaming image pool");
+    AZ_CVAR(int16_t, r_streamingImageMipBias, cvar_r_streamingImageMipBias_Init(), cvar_r_streamingImageMipBias_Changed, ConsoleFunctorFlags::DontReplicate, "Set a mipmap bias for all streamable images created from the system streaming image pool");
+
+    }
+
+namespace JE::Render::RPI
+{
+        ImageSystemInterface* ImageSystemInterface::Get()
+        {
+            return AZ::Interface<ImageSystemInterface>::Get();
+        }
+
+        void ImageSystem::Reflect(AZ::ReflectContext* context)
+        {
+            ImageAsset::Reflect(context);
+            ImageMipChainAsset::Reflect(context);
+            ImageSystemDescriptor::Reflect(context);
+            StreamingImageAsset::Reflect(context);
+            StreamingImagePoolAsset::Reflect(context);
+            StreamingImageControllerAsset::Reflect(context);
+            AttachmentImageAsset::Reflect(context);
+        }
+
+        void ImageSystem::GetAssetHandlers(AssetHandlerPtrList& assetHandlers)
+        {
+            assetHandlers.emplace_back(MakeAssetHandler<ImageAssetHandler>());
+            assetHandlers.emplace_back(MakeAssetHandler<AttachmentImageAssetHandler>());
+            assetHandlers.emplace_back(MakeAssetHandler<ImageMipChainAssetHandler>());
+            assetHandlers.emplace_back(MakeAssetHandler<StreamingImageAssetHandler>());
+            assetHandlers.emplace_back(MakeAssetHandler<StreamingImagePoolAssetHandler>());
+        }
+
+        void ImageSystem::Init(const ImageSystemDescriptor& desc)
+        {
+            // Register attachment image instance database.
+            {
+                AZ::Data::InstanceHandler<AttachmentImage> handler;
+                handler.m_createFunction = [](AZ::Data::AssetData* imageAsset)
+                {
+                    return AttachmentImage::CreateInternal(*(azrtti_cast<AttachmentImageAsset*>(imageAsset)));
+                };
+                AZ::Data::InstanceDatabase<AttachmentImage>::Create(azrtti_typeid<AttachmentImageAsset>(), handler);
+            }
+
+            {
+                AZ::Data::InstanceHandler<AttachmentImagePool> handler;
+                handler.m_createFunction = [](AZ::Data::AssetData* poolAsset)
+                {
+                    return AttachmentImagePool::CreateInternal(*(azrtti_cast<ResourcePoolAsset*>(poolAsset)));
+                };
+                AZ::Data::InstanceDatabase<AttachmentImagePool>::Create(azrtti_typeid<ResourcePoolAsset>(), handler);
+            }
+
+            // Register streaming image instance database.
+
+            {
+                AZ::Data::InstanceHandler<StreamingImage> handler;
+                handler.m_createFunction = [](AZ::Data::AssetData* imageAsset)
+                {
+                    return StreamingImage::CreateInternal(*(azrtti_cast<StreamingImageAsset*>(imageAsset)));
+                };
+                AZ::Data::InstanceDatabase<StreamingImage>::Create(azrtti_typeid<StreamingImageAsset>(), handler);
+            }
+
+            {
+                AZ::Data::InstanceHandler<StreamingImagePool> handler;
+                handler.m_createFunction = [this](AZ::Data::AssetData* poolAsset)
+                {
+                    AZ::Data::Instance<StreamingImagePool> instance =
+                        StreamingImagePool::CreateInternal(*(azrtti_cast<StreamingImagePoolAsset*>(poolAsset)));
+                    if (instance)
+                    {
+                        m_activeStreamingPoolMutex.lock();
+                        m_activeStreamingPools.emplace_back(instance.get());
+                        m_activeStreamingPoolMutex.unlock();
+                    }
+                    return instance;
+                };
+                handler.m_deleteFunction = [this](StreamingImagePool* pool)
+                {
+                    m_activeStreamingPoolMutex.lock();
+                    auto findIt = AZStd::find(m_activeStreamingPools.begin(), m_activeStreamingPools.end(), pool);
+                    AZ_Assert(findIt != m_activeStreamingPools.end(), "Pool must exist in the container.");
+                    m_activeStreamingPools.erase(findIt);
+                    m_activeStreamingPoolMutex.unlock();
+
+                    delete pool;
+                };
+                AZ::Data::InstanceDatabase<StreamingImagePool>::Create(azrtti_typeid<StreamingImagePoolAsset>(), handler);
+            }
+
+            CreateDefaultResources(desc);
+
+            AZ::Interface<ImageSystemInterface>::Register(this);
+
+            m_initialized = true;
+        }
+
+        void ImageSystem::Shutdown()
+        {
+            if (!m_initialized)
+            {
+                return;
+            }
+            AZ::Interface<ImageSystemInterface>::Unregister(this);
+
+            m_systemImages.clear();
+            m_systemAttachmentImages.clear();
+            m_systemStreamingPool = nullptr;
+            m_systemAttachmentPool = nullptr;
+
+            AZ::Data::InstanceDatabase<AttachmentImage>::Destroy();
+            AZ::Data::InstanceDatabase<AttachmentImagePool>::Destroy();
+            AZ::Data::InstanceDatabase<StreamingImage>::Destroy();
+            AZ::Data::InstanceDatabase<StreamingImagePool>::Destroy();
+
+            m_activeStreamingPools.clear();
+            m_initialized = false;
+        }
+
+        void ImageSystem::Update()
+        {
+            AZ_PROFILE_SCOPE(RPI, "ImageSystem: Update");
+
+            AZStd::lock_guard<AZStd::mutex> lock(m_activeStreamingPoolMutex);
+            for (StreamingImagePool* imagePool : m_activeStreamingPools)
+            {
+                imagePool->Update();
+            }
+        }
+
+        const AZ::Data::Instance<StreamingImagePool>& ImageSystem::GetSystemStreamingPool() const
+        {
+            return m_systemStreamingPool;
+        }
+        
+        const AZ::Data::Instance<StreamingImagePool>& ImageSystem::GetStreamingPool() const
+        {
+            return GetSystemStreamingPool();
+        }
+
+        const AZ::Data::Instance<AttachmentImagePool>& ImageSystem::GetSystemAttachmentPool() const
+        {
+            return m_systemAttachmentPool;
+        }
+
+        const AZ::Data::Instance<Image>& ImageSystem::GetSystemImage(SystemImage simpleImage) const
+        {
+            return m_systemImages[static_cast<size_t>(simpleImage)];
+        }
+
+        const AZ::Data::Instance<AttachmentImage>& ImageSystem::GetSystemAttachmentImage(AZ::RHI::Format format)
+        {
+            {
+                AZStd::shared_lock<AZStd::shared_mutex> lock(m_systemAttachmentImagesUpdateMutex);
+
+                auto it = m_systemAttachmentImages.find(format);
+                if (it != m_systemAttachmentImages.end())
+                {
+                    return it->second;
+                }
+            }
+
+            // Take a full lock while the map is updated.
+            AZStd::lock_guard<AZStd::shared_mutex> lock(m_systemAttachmentImagesUpdateMutex);
+
+            // Double check map in case another thread created an attachment image for this format while this
+            // thread waited on the lock.
+            auto it = m_systemAttachmentImages.find(format);
+            if (it != m_systemAttachmentImages.end())
+            {
+                return it->second;
+            }
+            
+            AZ::RHI::ImageBindFlags formatBindFlag = AZ::RHI::ImageBindFlags::Color | AZ::RHI::ImageBindFlags::ShaderReadWrite;
+
+            switch (format)
+            {
+            case AZ::RHI::Format::D16_UNORM:
+            case AZ::RHI::Format::D32_FLOAT:
+                formatBindFlag = AZ::RHI::ImageBindFlags::Depth | AZ::RHI::ImageBindFlags::ShaderRead;
+                break;
+            case AZ::RHI::Format::D16_UNORM_S8_UINT:
+            case AZ::RHI::Format::D24_UNORM_S8_UINT:
+            case AZ::RHI::Format::D32_FLOAT_S8X24_UINT:
+                formatBindFlag = AZ::RHI::ImageBindFlags::DepthStencil | AZ::RHI::ImageBindFlags::ShaderRead;
+                break;
+            }
+
+            AZ::RHI::ImageDescriptor imageDescriptor;
+            imageDescriptor.m_size = AZ::RHI::Size(1, 1, 1);
+            imageDescriptor.m_format = format;
+            imageDescriptor.m_arraySize = 1;
+            imageDescriptor.m_bindFlags = formatBindFlag;
+            imageDescriptor.m_sharedQueueMask = AZ::RHI::HardwareQueueClassMask::All;
+
+            JE::Render::RPI::CreateAttachmentImageRequest createImageRequest;
+            createImageRequest.m_imagePool = m_systemAttachmentPool.get();
+            createImageRequest.m_imageDescriptor = imageDescriptor;
+            createImageRequest.m_imageName = "SystemAttachmentImage";
+            createImageRequest.m_isUniqueName = false;
+
+            auto systemAttachmentImage = JE::Render::RPI::AttachmentImage::Create(createImageRequest);
+            m_systemAttachmentImages[format] = systemAttachmentImage;
+            return m_systemAttachmentImages[format];
+        }
+
+        bool ImageSystem::RegisterAttachmentImage(AttachmentImage* attachmentImage)
+        {
+            if (!attachmentImage)
+            {
+                return false;
+            }
+
+            auto itr = m_registeredAttachmentImages.find(attachmentImage->GetAttachmentId());
+            if (itr != m_registeredAttachmentImages.end())
+            {
+                AZ_Assert(false, "AttachmangeImage with name '%s' was already registered", attachmentImage->GetAttachmentId().GetCStr());
+                return false;
+            }
+
+            m_registeredAttachmentImages[attachmentImage->GetAttachmentId()] = attachmentImage;
+
+            return true;
+        }
+
+        void ImageSystem::UnregisterAttachmentImage(AttachmentImage* attachmentImage)
+        {
+            if (!attachmentImage)
+            {
+                return;
+            }
+            auto itr = m_registeredAttachmentImages.find(attachmentImage->GetAttachmentId());
+            if (itr != m_registeredAttachmentImages.end())
+            {
+                m_registeredAttachmentImages.erase(itr);
+            }
+        }
+
+        AZ::Data::Instance<AttachmentImage> ImageSystem::FindRegisteredAttachmentImage(const AZ::Name& uniqueName) const
+        {
+            auto itr = m_registeredAttachmentImages.find(uniqueName);
+
+            if (itr != m_registeredAttachmentImages.end())
+            {
+                return itr->second;
+            }
+            return nullptr;
+        }
+
+        void ImageSystem::CreateDefaultResources(const ImageSystemDescriptor& desc)
+        {
+            struct SystemImageDescriptor
+            {
+                SystemImageDescriptor(const AZ::Color color, const char* name)
+                    : m_color{color}
+                    , m_name{name}
+                    , m_assetId{AZ::Uuid::CreateName(name)}
+                {}
+
+                AZ::Color m_color;
+                const char* m_name;
+                AZ::Data::AssetId m_assetId;
+            };
+
+            const SystemImageDescriptor systemImageDescriptors[static_cast<uint32_t>(SystemImage::Count)] =
+            {
+                { AZ::Color(1.0f, 1.0f, 1.0f, 1.0f),  "Image_White" },
+                { AZ::Color(0.0f, 0.0f, 0.0f, 1.0f),  "Image_Black" },
+                { AZ::Color(0.5f, 0.5f, 0.5f, 1.0f),  "Image_Grey" },
+                { AZ::Color(1.0f, 0.0f, 1.0f, 1.0f),  "Image_Magenta" }
+            };
+
+            static_assert(AZ_ARRAY_SIZE(systemImageDescriptors) == static_cast<size_t>(SystemImage::Count), "System image arrays do not match.");
+
+            struct SystemImagePoolDescriptor
+            {
+                SystemImagePoolDescriptor(size_t budgetInBytes, const char* name)
+                    : m_budgetInBytes{budgetInBytes}
+                    , m_name{name}
+                    , m_assetId{AZ::Uuid::CreateName(name)}
+                {}
+
+                size_t m_budgetInBytes;
+                const char* m_name;
+                AZ::Data::AssetId m_assetId;
+            };
+
+            // Sync values from ImageSystemDescriptor back to the cvars
+            // Note 1: we need the sync here because one instance of the cvars might be initialized early than setting registry,
+            // so it can't be initialized properly. See cvar_r_streamingImagePoolBudgetMb_Init and cvar_r_streamingImageMipBias_Init
+            // Note 2: we need to use PerformCommand instead of assign value directly because of this issue https://github.com/o3de/o3de/issues/5537            
+            AZ::IConsole* console = AZ::Interface<AZ::IConsole>::Get();
+            if (console)
+            {
+                AZ::CVarFixedString commandString = AZ::CVarFixedString::format("r_streamingImagePoolBudgetMb %" PRIu64, desc.m_systemStreamingImagePoolSize);
+                console->PerformCommand(commandString.c_str());
+                commandString = AZ::CVarFixedString::format("r_streamingImageMipBias %" PRId16, desc.m_systemStreamingImagePoolMipBias);
+                console->PerformCommand(commandString.c_str());
+            }
+
+            const SystemImagePoolDescriptor systemStreamingPoolDescriptor{ desc.m_systemStreamingImagePoolSize, "ImageSystem::SystemStreamingImagePool" };
+            const SystemImagePoolDescriptor systemAttachmentPoolDescriptor{desc.m_systemAttachmentImagePoolSize, "ImageSystem::AttachmentImagePool" };
+
+            // Create the system streaming pool
+            {
+                AZStd::unique_ptr<AZ::RHI::StreamingImagePoolDescriptor> imagePoolDescriptor = AZStd::make_unique<AZ::RHI::StreamingImagePoolDescriptor>();
+                imagePoolDescriptor->m_budgetInBytes = systemStreamingPoolDescriptor.m_budgetInBytes;
+
+                AZ::Data::Asset<StreamingImagePoolAsset> poolAsset;
+
+                StreamingImagePoolAssetCreator poolAssetCreator;
+                poolAssetCreator.Begin(systemStreamingPoolDescriptor.m_assetId);
+                poolAssetCreator.SetPoolDescriptor(AZStd::move(imagePoolDescriptor));
+                poolAssetCreator.SetPoolName(systemStreamingPoolDescriptor.m_name);
+                [[maybe_unused]] const bool created = poolAssetCreator.End(poolAsset);
+                AZ_Assert(created, "Failed to build streaming image pool");
+
+                m_systemStreamingPool = StreamingImagePool::FindOrCreate(poolAsset);
+                m_systemStreamingPool->SetMipBias(desc.m_systemStreamingImagePoolMipBias);
+            }
+
+            // Create the system attachment pool.
+            {
+                AZStd::unique_ptr<AZ::RHI::ImagePoolDescriptor> imagePoolDescriptor = AZStd::make_unique<AZ::RHI::ImagePoolDescriptor>();
+                imagePoolDescriptor->m_budgetInBytes = systemAttachmentPoolDescriptor.m_budgetInBytes;
+                imagePoolDescriptor->m_bindFlags =
+                    AZ::RHI::ImageBindFlags::ShaderRead | AZ::RHI::ImageBindFlags::ShaderWrite |
+                    AZ::RHI::ImageBindFlags::Color | AZ::RHI::ImageBindFlags::DepthStencil |
+                    AZ::RHI::ImageBindFlags::CopyRead | AZ::RHI::ImageBindFlags::CopyWrite;
+
+                AZ::RHI::Ptr<AZ::RHI::Device> device = AZ::RHI::RHISystemInterface::Get()->GetDevice();
+                if (AZ::RHI::CheckBitsAll(device->GetFeatures().m_shadingRateTypeMask, AZ::RHI::ShadingRateTypeFlags::PerRegion))
+                {
+                    imagePoolDescriptor->m_bindFlags |= AZ::RHI::ImageBindFlags::ShadingRate;
+                }
+
+                AZ::Data::Asset<ResourcePoolAsset> poolAsset;
+
+                ResourcePoolAssetCreator poolAssetCreator;
+                poolAssetCreator.Begin(systemAttachmentPoolDescriptor.m_assetId);
+                poolAssetCreator.SetPoolDescriptor(AZStd::move(imagePoolDescriptor));
+                poolAssetCreator.SetPoolName(systemAttachmentPoolDescriptor.m_name);
+                [[maybe_unused]] const bool created = poolAssetCreator.End(poolAsset);
+                AZ_Assert(created, "Failed to build attachment image pool");
+
+                m_systemAttachmentPool = AttachmentImagePool::FindOrCreate(poolAsset);
+            }
+
+            // Create the set of system images.
+            {
+                const size_t systemImageCount = static_cast<size_t>(SystemImage::Count);
+                m_systemImages.resize(systemImageCount);
+
+                for (size_t imageIndex = 0; imageIndex < systemImageCount; imageIndex++)
+                {
+                    const uint32_t colorU32 = systemImageDescriptors[imageIndex].m_color.ToU32();
+
+                    m_systemImages[imageIndex] = StreamingImage::CreateFromCpuData(
+                        *m_systemStreamingPool,
+                        AZ::RHI::ImageDimension::Image2D,
+                        AZ::RHI::Size{ 1, 1, 1 },
+                        AZ::RHI::Format::R8G8B8A8_UNORM_SRGB,
+                        &colorU32,
+                        sizeof(uint32_t));
+                }
+            }
+        }
+    }
+
+namespace AZ
+{ // namespace RPI
+}// namespace AZ

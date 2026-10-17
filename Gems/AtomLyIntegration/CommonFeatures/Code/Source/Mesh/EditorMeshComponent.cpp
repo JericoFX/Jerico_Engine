@@ -51,7 +51,7 @@ namespace AZ
                             ->Attribute(AZ::Edit::Attributes::AppearsInAddComponentMenu, AZ_CRC_CE("Game"))
                             ->Attribute(AZ::Edit::Attributes::AutoExpand, true)
                             ->Attribute(AZ::Edit::Attributes::HelpPageURL, "https://www.o3de.org/docs/user-guide/components/reference/atom/mesh/")
-                            ->Attribute(AZ::Edit::Attributes::PrimaryAssetType, AZ::AzTypeInfo<RPI::ModelAsset>::Uuid())
+                            ->Attribute(AZ::Edit::Attributes::PrimaryAssetType, AZ::AzTypeInfo<JE::Render::RPI::ModelAsset>::Uuid())
                         ->UIElement(AZ::Edit::UIHandlers::Button,
                             QT_TRANSLATE_NOOP("AtomLyIntegration", "Add Material Component"),
                             QT_TRANSLATE_NOOP("AtomLyIntegration", "Add Material Component"))
@@ -113,11 +113,11 @@ namespace AZ
                                 QT_TRANSLATE_NOOP("AtomLyIntegration", "Determines how level of detail (LOD) will be selected during rendering."))
                                 ->Attribute(AZ::Edit::Attributes::NameLabelOverride,
                                     QT_TRANSLATE_NOOP("AtomLyIntegration", "LOD Type"))
-                                ->EnumAttribute(RPI::Cullable::LodType::Default,
+                                ->EnumAttribute(JE::Render::RPI::Cullable::LodType::Default,
                                     QT_TRANSLATE_NOOP("AtomLyIntegration", "Default"))
-                                ->EnumAttribute(RPI::Cullable::LodType::ScreenCoverage,
+                                ->EnumAttribute(JE::Render::RPI::Cullable::LodType::ScreenCoverage,
                                     QT_TRANSLATE_NOOP("AtomLyIntegration", "Screen Coverage"))
-                                ->EnumAttribute(RPI::Cullable::LodType::SpecificLod,
+                                ->EnumAttribute(JE::Render::RPI::Cullable::LodType::SpecificLod,
                                     QT_TRANSLATE_NOOP("AtomLyIntegration", "Specific LOD"))
                                 ->Attribute(AZ::Edit::Attributes::ChangeNotify, Edit::PropertyRefreshLevels::EntireTree)
                             ->DataElement(AZ::Edit::UIHandlers::Default, &MeshComponentConfig::m_lightingChannelConfig,
@@ -280,7 +280,7 @@ namespace AZ
             return HasEditorMaterialComponent() ? AZ::Edit::PropertyVisibility::Hide : AZ::Edit::PropertyVisibility::Show;
         }
 
-        void EditorMeshComponent::OnModelReady(const Data::Asset<RPI::ModelAsset>& /*modelAsset*/, const Data::Instance<RPI::Model>& /*model*/)
+        void EditorMeshComponent::OnModelReady(const Data::Asset<JE::Render::RPI::ModelAsset>& /*modelAsset*/, const Data::Instance<JE::Render::RPI::Model>& /*model*/)
         {
             const auto& lodAssets = m_controller.GetConfiguration().m_modelAsset->GetLodAssets();
             m_stats.m_meshStatsForLod.clear();

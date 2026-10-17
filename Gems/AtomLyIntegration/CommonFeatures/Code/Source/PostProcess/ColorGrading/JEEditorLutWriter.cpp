@@ -151,14 +151,14 @@ namespace JE::ColorGrading
     }
 
     AZ::Outcome<AZStd::string, AZStd::string> WriteLutSource(
-        const AZ::RPI::AttachmentReadback::ReadbackResult& readback, const AZStd::string& absoluteOutputBase)
+        const JE::Render::RPI::AttachmentReadback::ReadbackResult& readback, const AZStd::string& absoluteOutputBase)
     {
         if (absoluteOutputBase.find('\0') != AZStd::string::npos ||
             !AZ::IO::PathView(absoluteOutputBase).IsAbsolute() || AZ::IO::PathView(absoluteOutputBase).Filename().empty())
         {
             return AZ::Failure(AZStd::string("LUT output base must be an absolute file path."));
         }
-        if (readback.m_state != AZ::RPI::AttachmentReadback::ReadbackState::Success ||
+        if (readback.m_state != JE::Render::RPI::AttachmentReadback::ReadbackState::Success ||
             readback.m_attachmentType != AZ::RHI::AttachmentType::Image ||
             readback.m_imageDescriptor.m_format != AZ::RHI::Format::R32G32B32A32_FLOAT)
         {

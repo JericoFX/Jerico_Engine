@@ -13,8 +13,8 @@
 #include <AssetBuilderSDK/AssetBuilderBusses.h>
 #include <AssetBuilderSDK/AssetBuilderSDK.h>
 
-#include <Atom/RPI.Edit/Shader/ShaderSourceData.h>
-#include <Atom/RPI.Reflect/Shader/ShaderAsset.h>
+#include <JE/Editor/Render/RPI/Edit/Shader/ShaderSourceData.h>
+#include <JE/Render/RPI/Reflect/Shader/ShaderAsset.h>
 
 #include "AzslData.h"
 
@@ -27,11 +27,11 @@ namespace JE::Assets::RenderBuilders
         struct BindingDependencies;
         struct RootConstantData;
 
-        using MapOfStringToStageType = AZStd::unordered_map<AZStd::string, AZ::RPI::ShaderStageType>;
+        using MapOfStringToStageType = AZStd::unordered_map<AZStd::string, JE::Render::RPI::ShaderStageType>;
 
         namespace ShaderBuilderUtility
         {
-            AZ::Outcome<AZ::RPI::ShaderSourceData, AZStd::string> LoadShaderDataJson(const AZStd::string& fullPathToJsonFile, bool warningsAsErrors = true);
+            AZ::Outcome<JE::Render::RPI::ShaderSourceData, AZStd::string> LoadShaderDataJson(const AZStd::string& fullPathToJsonFile, bool warningsAsErrors = true);
 
             void GetAbsolutePathToAzslFile(const AZStd::string& shaderSourceFileFullPath, AZStd::string specifiedShaderPathAndName, AZStd::string& absoluteShaderPath);
 
@@ -39,13 +39,13 @@ namespace JE::Assets::RenderBuilders
             AZStd::shared_ptr<ShaderFiles> PrepareSourceInput(
                 const char* builderName,
                 const AZStd::string& shaderSourceFileFullPath,
-                AZ::RPI::ShaderSourceData& sourceAsset);
+                JE::Render::RPI::ShaderSourceData& sourceAsset);
 
             namespace AzslSubProducts
             {
                 AZ_ENUM(SuffixList, azslin, ia, om, srg, options, bindingdep, hlsl);
 
-                using SubId = AZ::RPI::ShaderAssetSubId;
+                using SubId = JE::Render::RPI::ShaderAssetSubId;
                 // product sub id enumerators:
                 static constexpr SubId SubList[] = {SubId::FlatAzsl,
                                                     SubId::IaJson,
@@ -67,15 +67,15 @@ namespace JE::Assets::RenderBuilders
                 const char* builderName,
                 const AzslSubProducts::Paths& pathOfJsonFiles,
                 AzslData& azslData,
-                AZ::RPI::ShaderResourceGroupLayoutList& srgLayoutList,
-                AZ::RPI::Ptr<AZ::RPI::ShaderOptionGroupLayout> shaderOptionGroupLayout,
+                JE::Render::RPI::ShaderResourceGroupLayoutList& srgLayoutList,
+                JE::Render::RPI::Ptr<JE::Render::RPI::ShaderOptionGroupLayout> shaderOptionGroupLayout,
                 BindingDependencies& bindingDependencies,
                 RootConstantData& rootConstantData,
                 const AZStd::string& tempFolder,
                 bool& useSpecializationConstants);
 
 
-            AZ::RHI::ShaderHardwareStage ToAssetBuilderShaderType(AZ::RPI::ShaderStageType stageType);
+            AZ::RHI::ShaderHardwareStage ToAssetBuilderShaderType(JE::Render::RPI::ShaderStageType stageType);
 
             //! Must be called before shaderPlatformInterface->CompilePlatformInternal()
             //! This function will prune non entry functions from BindingDependencies and use the
@@ -84,7 +84,7 @@ namespace JE::Assets::RenderBuilders
             //! object, which is why it is important to call this method before calling shaderPlatformInterface->CompilePlatformInternal().
             AZ::RHI::Ptr<AZ::RHI::PipelineLayoutDescriptor> BuildPipelineLayoutDescriptorForApi(
                 const char* builderName,
-                const AZ::RPI::ShaderResourceGroupLayoutList& srgLayoutList,
+                const JE::Render::RPI::ShaderResourceGroupLayoutList& srgLayoutList,
                 const MapOfStringToStageType& shaderEntryPoints,
                 const AZ::RHI::ShaderBuildArguments& shaderBuildArguments,
                 const RootConstantData& rootConstantData,
@@ -94,9 +94,9 @@ namespace JE::Assets::RenderBuilders
 
             bool CreateShaderInputAndOutputContracts(
                 const AzslData& azslData, const MapOfStringToStageType& shaderEntryPoints,
-                const AZ::RPI::ShaderOptionGroupLayout& shaderOptionGroupLayout, const AZStd::string& pathToOmJson,
-                const AZStd::string& pathToIaJson, AZ::RPI::ShaderInputContract& shaderInputContract,
-                AZ::RPI::ShaderOutputContract& shaderOutputContract, size_t& colorAttachmentCount,
+                const JE::Render::RPI::ShaderOptionGroupLayout& shaderOptionGroupLayout, const AZStd::string& pathToOmJson,
+                const AZStd::string& pathToIaJson, JE::Render::RPI::ShaderInputContract& shaderInputContract,
+                JE::Render::RPI::ShaderOutputContract& shaderOutputContract, size_t& colorAttachmentCount,
                 const AZStd::string& tempFolder);
 
 
@@ -131,21 +131,21 @@ namespace JE::Assets::RenderBuilders
 
             AZStd::vector<AZ::RHI::ShaderPlatformInterface*> DiscoverValidShaderPlatformInterfaces(const AssetBuilderSDK::PlatformInfo& info);
             AZStd::vector<AZ::RHI::ShaderPlatformInterface*> DiscoverEnabledShaderPlatformInterfaces(
-                const AssetBuilderSDK::PlatformInfo& info, const AZ::RPI::ShaderSourceData& shaderSourceData);
+                const AssetBuilderSDK::PlatformInfo& info, const JE::Render::RPI::ShaderSourceData& shaderSourceData);
 
             // The idea is that the "Supervariants" json property is optional in .shader files,
             // For cases when it is not specified, this function will return a vector with one item, the default, nameless, supervariant.
             // If "Supervariants" is not empty, then this function will make sure the first supervariant in the list
             // is the default, nameless, supervariant.
-            AZStd::vector<AZ::RPI::ShaderSourceData::SupervariantInfo> GetSupervariantListFromShaderSourceData(
-                const AZ::RPI::ShaderSourceData& shaderSourceData);
+            AZStd::vector<JE::Render::RPI::ShaderSourceData::SupervariantInfo> GetSupervariantListFromShaderSourceData(
+                const JE::Render::RPI::ShaderSourceData& shaderSourceData);
 
             void LogProfilingData(const char* builderName, AZStd::string_view shaderPath);
 
             //! Returns the asset path of a product artifact produced by ShaderAssetBuilder.
             AZ::Outcome<AZStd::string, AZStd::string> ObtainBuildArtifactPathFromShaderAssetBuilder(
                 const uint32_t rhiUniqueIndex, const AZStd::string& platformIdentifier, const AZStd::string& shaderJsonPath,
-                const uint32_t supervariantIndex, AZ::RPI::ShaderAssetSubId shaderAssetSubId);
+                const uint32_t supervariantIndex, JE::Render::RPI::ShaderAssetSubId shaderAssetSubId);
 
             AZStd::string GetPlatformNameFromPlatformInfo(const AssetBuilderSDK::PlatformInfo& platformInfo);
 

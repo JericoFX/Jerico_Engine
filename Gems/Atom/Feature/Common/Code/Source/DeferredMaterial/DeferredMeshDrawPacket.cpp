@@ -6,13 +6,13 @@
  *
  */
 
-#include <Atom/RPI.Public/Material/Material.h>
+#include <JE/Render/RPI/Public/Material/Material.h>
 #include <DeferredMaterial/DeferredMeshDrawPacket.h>
 
 namespace AZ::Render
 {
     DeferredMeshDrawPacket::DeferredMeshDrawPacket(
-        Data::Instance<RPI::ModelLod> modelLod, size_t modelLodMeshIndex, Data::Instance<RPI::Material> materialOverride)
+        Data::Instance<JE::Render::RPI::ModelLod> modelLod, size_t modelLodMeshIndex, Data::Instance<JE::Render::RPI::Material> materialOverride)
     {
         m_modelLod = modelLod;
         m_modelLodMeshIndex = modelLodMeshIndex;
@@ -23,7 +23,7 @@ namespace AZ::Render
         }
         else
         {
-            const RPI::ModelLod::Mesh& mesh = m_modelLod->GetMeshes()[modelLodMeshIndex];
+            const JE::Render::RPI::ModelLod::Mesh& mesh = m_modelLod->GetMeshes()[modelLodMeshIndex];
             m_material = mesh.m_material;
         }
     }
@@ -46,7 +46,7 @@ namespace AZ::Render
         return {};
     }
 
-    void DeferredMeshDrawPacket::Update(RPI::Scene* scene, DeferredDrawPacketManager* manager, bool forceRebuild)
+    void DeferredMeshDrawPacket::Update(JE::Render::RPI::Scene* scene, DeferredDrawPacketManager* manager, bool forceRebuild)
     {
         if (m_materialChangeId == m_material->GetCurrentChangeId() && forceRebuild == false)
         {
@@ -64,9 +64,9 @@ namespace AZ::Render
         m_material->ApplyGlobalShaderOptions();
 
         m_material->ForAllShaderItems(
-            [&](const Name& materialPipelineName, const RPI::ShaderCollection::Item& shaderItem)
+            [&](const Name& materialPipelineName, const JE::Render::RPI::ShaderCollection::Item& shaderItem)
             {
-                if (shaderItem.IsEnabled() && shaderItem.GetDrawItemType() == RPI::ShaderCollection::Item::DrawItemType::Deferred)
+                if (shaderItem.IsEnabled() && shaderItem.GetDrawItemType() == JE::Render::RPI::ShaderCollection::Item::DrawItemType::Deferred)
                 {
                     auto deferredDrawPacket =
                         manager->GetOrCreateDeferredDrawPacket(scene, m_material.get(), materialPipelineName, shaderItem);

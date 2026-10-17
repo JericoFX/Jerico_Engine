@@ -6,8 +6,8 @@
  *
  */
 
-#include <Atom/RPI.Public/Image/StreamingImage.h>
-#include <Atom/RPI.Reflect/Image/StreamingImageAsset.h>
+#include <JE/Render/RPI/Public/Image/StreamingImage.h>
+#include <JE/Render/RPI/Reflect/Image/StreamingImageAsset.h>
 
 #include <AzCore/Serialization/SerializeContext.h>
 
@@ -139,12 +139,12 @@ namespace Maestro
                 AZ::Data::AssetId streamingImageAssetId;
                 AZ::Data::AssetCatalogRequestBus::BroadcastResult(
                     streamingImageAssetId, &AZ::Data::AssetCatalogRequestBus::Events::GenerateAssetIdTEMP, texturePath.c_str());
-                streamingImageAssetId.m_subId = AZ::RPI::StreamingImageAsset::GetImageAssetSubId();
+                streamingImageAssetId.m_subId = JE::Render::RPI::StreamingImageAsset::GetImageAssetSubId();
 
-                auto streamingImageAsset = AZ::Data::AssetManager::Instance().FindOrCreateAsset<AZ::RPI::StreamingImageAsset>(
+                auto streamingImageAsset = AZ::Data::AssetManager::Instance().FindOrCreateAsset<JE::Render::RPI::StreamingImageAsset>(
                     streamingImageAssetId, AZ::Data::AssetLoadBehavior::PreLoad);
 
-                AZ::Data::Instance<AZ::RPI::Image> image = AZ::RPI::StreamingImage::FindOrCreate(streamingImageAsset);
+                AZ::Data::Instance<JE::Render::RPI::Image> image = JE::Render::RPI::StreamingImage::FindOrCreate(streamingImageAsset);
 
                 AZ_Error("ScreenFaderTrack", image, "PreloadTextures(): Failed to find or create an image instance from image asset '%s'", texturePath.c_str());
 
@@ -153,7 +153,7 @@ namespace Maestro
         }
     }
 
-    AZ::Data::Instance<AZ::RPI::Image> CScreenFaderTrack::GetActiveTexture() const
+    AZ::Data::Instance<JE::Render::RPI::Image> CScreenFaderTrack::GetActiveTexture() const
     {
         return (m_activeTextureNumber >= 0 && m_activeTextureNumber < static_cast<int>(m_preloadedTextures.size()))
             ? m_preloadedTextures[m_activeTextureNumber]

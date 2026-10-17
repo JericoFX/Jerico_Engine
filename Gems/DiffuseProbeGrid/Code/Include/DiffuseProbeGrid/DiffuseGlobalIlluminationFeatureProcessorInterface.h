@@ -9,7 +9,7 @@
 #pragma once
 
 #include <AzCore/base.h>
-#include <Atom/RPI.Public/FeatureProcessor.h>
+#include <JE/Render/RPI/Public/FeatureProcessor.h>
 
 namespace AZ
 {
@@ -27,10 +27,10 @@ namespace AZ
         //! This class provides general features and configuration for the diffuse global illumination environment,
         //! which consists of DiffuseProbeGrids and the diffuse Global IBL cubemap.
         class DiffuseGlobalIlluminationFeatureProcessorInterface
-            : public RPI::FeatureProcessor
+            : public JE::Render::RPI::FeatureProcessor
         {
         public:
-            AZ_RTTI(AZ::Render::DiffuseGlobalIlluminationFeatureProcessorInterface, "{BD8CA35A-47C3-4FD8-932B-18495EF07527}", AZ::RPI::FeatureProcessor);
+            AZ_RTTI(AZ::Render::DiffuseGlobalIlluminationFeatureProcessorInterface, "{BD8CA35A-47C3-4FD8-932B-18495EF07527}", JE::Render::RPI::FeatureProcessor);
 
             virtual void SetQualityLevel(DiffuseGlobalIlluminationQualityLevel qualityLevel) = 0;
         };

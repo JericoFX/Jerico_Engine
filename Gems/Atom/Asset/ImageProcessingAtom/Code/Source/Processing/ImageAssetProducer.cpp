@@ -16,9 +16,9 @@
 #include <Atom/RHI.Reflect/Format.h>
 #include <Atom/RHI.Reflect/ImageSubresource.h>
 
-#include <Atom/RPI.Reflect/Image/StreamingImageAssetCreator.h>
-#include <Atom/RPI.Reflect/Image/ImageMipChainAssetCreator.h>
-#include <Atom/RPI.Reflect/Image/ImageAsset.h>
+#include <JE/Render/RPI/Reflect/Image/StreamingImageAssetCreator.h>
+#include <JE/Render/RPI/Reflect/Image/ImageMipChainAssetCreator.h>
+#include <JE/Render/RPI/Reflect/Image/ImageAsset.h>
 
 #include <AzCore/Asset/AssetManager.h>
 #include <AzCore/Serialization/Json/JsonUtils.h>
@@ -65,11 +65,11 @@ namespace ImageProcessingAtom
         AZStd::string fileName;
         if (assetType == ImageAssetType::MipChain)
         {
-            fileName = AZStd::string::format("%s.%d.%s", m_fileName.c_str(), assetSubId, RPI::ImageMipChainAsset::Extension);
+            fileName = AZStd::string::format("%s.%d.%s", m_fileName.c_str(), assetSubId, JE::Render::RPI::ImageMipChainAsset::Extension);
         }
         else if (assetType == ImageAssetType::Image)
         {
-            fileName = AZStd::string::format("%s.%s", m_fileName.c_str(), RPI::StreamingImageAsset::Extension);
+            fileName = AZStd::string::format("%s.%s", m_fileName.c_str(), JE::Render::RPI::StreamingImageAsset::Extension);
         }
         else
         {
@@ -90,7 +90,7 @@ namespace ImageProcessingAtom
         Data::AssetId imageAssetId(m_sourceAssetId.m_guid, m_subId);
 
         AssetBuilderSDK::JobProduct product;
-        RPI::StreamingImageAssetCreator builder;
+        JE::Render::RPI::StreamingImageAssetCreator builder;
         builder.Begin(imageAssetId);
 
         uint32_t imageDepth = m_imageObject->GetDepth(0);
@@ -129,7 +129,7 @@ namespace ImageProcessingAtom
         // Start from smallest mips so the mip chain asset for the lowest resolutions may contain more high level mips
         uint32_t lastMip = imageDesc.m_mipLevels;
         uint32_t totalSize = 0;
-        AZStd::vector<Data::Asset<RPI::ImageMipChainAsset>> mipChains;
+        AZStd::vector<Data::Asset<JE::Render::RPI::ImageMipChainAsset>> mipChains;
         uint32_t subid = m_subId + 1;
         bool saveProduct = false; // used to skip exporting the tail mip chain to job product
 
@@ -140,7 +140,7 @@ namespace ImageProcessingAtom
             const uint32_t residentStartMip = lastMip - boundedResidentMipCount;
 
             // Build the StreamingImageAsset's tail mip chain
-            Data::Asset<RPI::ImageMipChainAsset> chainAsset;
+            Data::Asset<JE::Render::RPI::ImageMipChainAsset> chainAsset;
             const bool isSuccess = BuildMipChainAsset(Data::AssetId(m_sourceAssetId.m_guid, subid), residentStartMip, boundedResidentMipCount, chainAsset, saveProduct);
             if (!isSuccess)
             {
@@ -165,7 +165,7 @@ namespace ImageProcessingAtom
             if (mip == 0 || totalSize + m_imageObject->GetMipBufSize(mip - 1) > s_mininumMipBlockSize)
             {
                 // Build a chain
-                Data::Asset<RPI::ImageMipChainAsset> chainAsset;
+                Data::Asset<JE::Render::RPI::ImageMipChainAsset> chainAsset;
                 bool isSuccess = BuildMipChainAsset(Data::AssetId(m_sourceAssetId.m_guid, subid), mip, lastMip - mip, chainAsset, saveProduct);
                 saveProduct = true;
                 if (!isSuccess)
@@ -186,13 +186,13 @@ namespace ImageProcessingAtom
         // StreamingImage's tail mip chain
         if (mipChains.size() == 1)
         {
-            builder.SetFlags(AZ::RPI::StreamingImageFlags::NotStreamable);
+            builder.SetFlags(JE::Render::RPI::StreamingImageFlags::NotStreamable);
         }
 
         // Add mip chains to the builder from mip level 0 to highest
         for (auto it = mipChains.rbegin(); it != mipChains.rend(); it++)
         {
-            builder.AddMipChainAsset(*it->GetAs<RPI::ImageMipChainAsset>());
+            builder.AddMipChainAsset(*it->GetAs<JE::Render::RPI::ImageMipChainAsset>());
 
             // Add all the mip chain assets as dependencies except the tail mip chain since its embedded in the StreamingImageAsset
             if (it->Get() != mipChains.begin()->Get())
@@ -215,7 +215,7 @@ namespace ImageProcessingAtom
 
         bool result = false;
 
-        Data::Asset<RPI::StreamingImageAsset> imageAsset;
+        Data::Asset<JE::Render::RPI::StreamingImageAsset> imageAsset;
         if (builder.End(imageAsset))
         {
             AZStd::string destPath = GenerateAssetFullPath(ImageAssetType::Image, imageAsset.GetId().m_subId);
@@ -264,9 +264,9 @@ namespace ImageProcessingAtom
     }
 
     bool ImageAssetProducer::BuildMipChainAsset(const Data::AssetId& chainAssetId, uint32_t startMip, uint32_t mipLevels,
-        Data::Asset<RPI::ImageMipChainAsset>& outAsset, bool saveAsProduct)
+        Data::Asset<JE::Render::RPI::ImageMipChainAsset>& outAsset, bool saveAsProduct)
     {
-        RPI::ImageMipChainAssetCreator builder;
+        JE::Render::RPI::ImageMipChainAssetCreator builder;
         uint32_t arraySize = m_imageObject->HasImageFlags(EIF_Cubemap) ? 6 : 1;
         builder.Begin(chainAssetId, static_cast<uint16_t>(mipLevels), static_cast<uint16_t>(arraySize));
 

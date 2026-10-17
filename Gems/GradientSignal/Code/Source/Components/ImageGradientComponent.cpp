@@ -8,7 +8,7 @@
 
 #include <GradientSignal/Components/ImageGradientComponent.h>
 #include <Atom/ImageProcessing/ImageProcessingDefines.h>
-#include <Atom/RPI.Public/RPIUtils.h>
+#include <JE/Render/RPI/Public/RPIUtils.h>
 #include <AzCore/Asset/AssetManager.h>
 #include <AzCore/Asset/AssetSerializer.h>
 #include <AzCore/Debug/Profiler.h>
@@ -94,7 +94,7 @@ namespace GradientSignal
                     potentialStreamingImagePath += imageExtension + ".streamingimage";
 
                     // Check if there is a valid streaming image asset for this path
-                    AZ::Data::AssetCatalogRequestBus::BroadcastResult(fixedAssetId, &AZ::Data::AssetCatalogRequestBus::Events::GetAssetIdByPath, potentialStreamingImagePath.c_str(), azrtti_typeid<AZ::Data::Asset<AZ::RPI::StreamingImageAsset>>(), false);
+                    AZ::Data::AssetCatalogRequestBus::BroadcastResult(fixedAssetId, &AZ::Data::AssetCatalogRequestBus::Events::GetAssetIdByPath, potentialStreamingImagePath.c_str(), azrtti_typeid<AZ::Data::Asset<JE::Render::RPI::StreamingImageAsset>>(), false);
                     if (fixedAssetId.IsValid())
                     {
                         break;
@@ -123,7 +123,7 @@ namespace GradientSignal
         // Replace the old gradimage with new AssetId for streaming image asset
         if (fixedAssetId.IsValid())
         {
-            configInstance->m_imageAsset = AZ::Data::AssetManager::Instance().GetAsset<AZ::RPI::StreamingImageAsset>(fixedAssetId, AZ::Data::AssetLoadBehavior::QueueLoad);
+            configInstance->m_imageAsset = AZ::Data::AssetManager::Instance().GetAsset<JE::Render::RPI::StreamingImageAsset>(fixedAssetId, AZ::Data::AssetLoadBehavior::QueueLoad);
         }
 
         return context.Report(result,
@@ -283,7 +283,7 @@ namespace GradientSignal
         // don't try to access the image data because there will be spam of asserts,
         // so just log an error message and bail out
         AZ::RHI::Format format = m_configuration.m_imageAsset->GetImageDescriptor().m_format;
-        bool isFormatSupported = AZ::RPI::IsImageDataPixelAPISupported(format);
+        bool isFormatSupported = JE::Render::RPI::IsImageDataPixelAPISupported(format);
         if (!isFormatSupported)
         {
             AZ_Error("GradientSignal", false, "Image asset (%s) has an unsupported pixel format: %s",
@@ -422,7 +422,7 @@ namespace GradientSignal
         // For terrarium, there is a separate algorithm for retrieving the value
         float value = (m_currentChannel == ChannelToUse::Terrarium)
             ? GetTerrariumPixelValue(x, y)
-            : AZ::RPI::GetImageDataPixelValue<float>(
+            : JE::Render::RPI::GetImageDataPixelValue<float>(
                 m_imageData, m_imageDescriptor, x, y, aznumeric_cast<AZ::u8>(m_currentChannel));
 
         return value;
@@ -430,9 +430,9 @@ namespace GradientSignal
 
     float ImageGradientComponent::GetTerrariumPixelValue(AZ::u32 x, AZ::u32 y) const
     {
-        float r = AZ::RPI::GetImageDataPixelValue<float>(m_imageData, m_imageDescriptor, x, y, aznumeric_cast<AZ::u8>(ChannelToUse::Red));
-        float g = AZ::RPI::GetImageDataPixelValue<float>(m_imageData, m_imageDescriptor, x, y, aznumeric_cast<AZ::u8>(ChannelToUse::Green));
-        float b = AZ::RPI::GetImageDataPixelValue<float>(m_imageData, m_imageDescriptor, x, y, aznumeric_cast<AZ::u8>(ChannelToUse::Blue));
+        float r = JE::Render::RPI::GetImageDataPixelValue<float>(m_imageData, m_imageDescriptor, x, y, aznumeric_cast<AZ::u8>(ChannelToUse::Red));
+        float g = JE::Render::RPI::GetImageDataPixelValue<float>(m_imageData, m_imageDescriptor, x, y, aznumeric_cast<AZ::u8>(ChannelToUse::Green));
+        float b = JE::Render::RPI::GetImageDataPixelValue<float>(m_imageData, m_imageDescriptor, x, y, aznumeric_cast<AZ::u8>(ChannelToUse::Blue));
 
         /*
             "Terrarium" is an image-based terrain file format as defined here:  https://www.mapzen.com/blog/terrain-tile-service/
@@ -821,7 +821,7 @@ namespace GradientSignal
             {
                 for (uint32_t x = 0; x < width; x++)
                 {
-                    float pixel = AZ::RPI::GetImageDataPixelValue<float>(
+                    float pixel = JE::Render::RPI::GetImageDataPixelValue<float>(
                         m_imageData, m_imageDescriptor, x, y, aznumeric_cast<AZ::u8>(m_currentChannel));
                     m_modifiedImageData.emplace_back(pixel);
                 }
@@ -952,19 +952,19 @@ namespace GradientSignal
             AZ::Data::AssetInfo assetInfo;
             AZ::Data::AssetCatalogRequestBus::BroadcastResult(assetInfo, &AZ::Data::AssetCatalogRequests::GetAssetInfoById, assetId);
 
-            if (assetInfo.m_assetType != azrtti_typeid<AZ::RPI::StreamingImageAsset>())
+            if (assetInfo.m_assetType != azrtti_typeid<JE::Render::RPI::StreamingImageAsset>())
             {
                 AZ_Warning("GradientSignal", false, "Asset type for %s is not AZ::RPI::StreamingImageAsset, will be ignored", assetPath.c_str());
                 return;
             }
         }
 
-        AZ::Data::Asset<AZ::RPI::StreamingImageAsset> imageAsset;
+        AZ::Data::Asset<JE::Render::RPI::StreamingImageAsset> imageAsset;
 
         if (assetId.IsValid())
         {
             imageAsset = AZ::Data::AssetManager::Instance().FindOrCreateAsset(
-                assetId, azrtti_typeid<AZ::RPI::StreamingImageAsset>(), m_configuration.m_imageAsset.GetAutoLoadBehavior());
+                assetId, azrtti_typeid<JE::Render::RPI::StreamingImageAsset>(), m_configuration.m_imageAsset.GetAutoLoadBehavior());
         }
 
         SetImageAsset(imageAsset);
@@ -980,12 +980,12 @@ namespace GradientSignal
         SetImageAssetPath(productAssetPath);
     }
 
-    AZ::Data::Asset<AZ::RPI::StreamingImageAsset> ImageGradientComponent::GetImageAsset() const
+    AZ::Data::Asset<JE::Render::RPI::StreamingImageAsset> ImageGradientComponent::GetImageAsset() const
     {
         return m_configuration.m_imageAsset;
     }
 
-    void ImageGradientComponent::SetImageAsset(const AZ::Data::Asset<AZ::RPI::StreamingImageAsset>& asset)
+    void ImageGradientComponent::SetImageAsset(const AZ::Data::Asset<JE::Render::RPI::StreamingImageAsset>& asset)
     {
         // If we're setting the component to the same asset we're already using, then early-out.
         if (asset.GetId() == m_configuration.m_imageAsset.GetId())

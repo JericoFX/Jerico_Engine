@@ -17,8 +17,8 @@
 #include <Atom/RHI.Edit/ShaderPlatformInterface.h>
 #include <Atom/RHI.Edit/Utils.h>
 
-#include <Atom/RPI.Edit/Common/JsonUtils.h>
-#include <Atom/RPI.Reflect/Shader/ShaderOptionGroupLayout.h>
+#include <JE/Editor/Render/RPI/Edit/Common/JsonUtils.h>
+#include <JE/Render/RPI/Reflect/Shader/ShaderOptionGroupLayout.h>
 
 #include <AzCore/Serialization/Json/JsonUtils.h>
 
@@ -901,7 +901,7 @@ namespace JE::Assets::RenderBuilders
 
         bool AzslCompiler::ParseOptionsPopulateOptionGroupLayout(
             const rapidjson::Document& input,
-            AZ::RPI::Ptr<AZ::RPI::ShaderOptionGroupLayout>& shaderOptionGroupLayout,
+            JE::Render::RPI::Ptr<JE::Render::RPI::ShaderOptionGroupLayout>& shaderOptionGroupLayout,
             bool& outUseSpecializationConstants) const
         {
             auto totalBitOffset = (uint32_t) 0u;
@@ -910,12 +910,12 @@ namespace JE::Assets::RenderBuilders
                 {
                     if (totalBitOffset == 0)
                     {
-                        AZStd::vector<AZ::RPI::ShaderOptionValuePair> idIndexList;
-                        idIndexList.push_back( { AZ::Name("false"),    AZ::RPI::ShaderOptionValue(0) } );
-                        idIndexList.push_back( { AZ::Name("true"),     AZ::RPI::ShaderOptionValue(1) } );
+                        AZStd::vector<JE::Render::RPI::ShaderOptionValuePair> idIndexList;
+                        idIndexList.push_back( { AZ::Name("false"),    JE::Render::RPI::ShaderOptionValue(0) } );
+                        idIndexList.push_back( { AZ::Name("true"),     JE::Render::RPI::ShaderOptionValue(1) } );
 
-                        AZ::RPI::ShaderOptionDescriptor shaderOption(AZ::Name("DefaultOption"),
-                                                                 AZ::RPI::ShaderOptionType::Boolean,
+                        JE::Render::RPI::ShaderOptionDescriptor shaderOption(AZ::Name("DefaultOption"),
+                                                                 JE::Render::RPI::ShaderOptionType::Boolean,
                                                                  totalBitOffset,
                                                                  0,
                                                                  idIndexList,
@@ -956,40 +956,40 @@ namespace JE::Assets::RenderBuilders
                 [[maybe_unused]] const bool valuesAreRange = optionEntry.HasMember("range")        ? optionEntry["range"].GetBool()                  : false;
                 const bool isPredefinedType                = optionEntry.HasMember("kind")         ? AzFramework::StringFunc::Equal(optionEntry["kind"].GetString(), "predefined") : false;
 
-                auto optionType = AZ::RPI::ShaderOptionType::Unknown;
+                auto optionType = JE::Render::RPI::ShaderOptionType::Unknown;
                 if (isPredefinedType && optionEntry.HasMember("type"))
                 {   // Bool or int
                     const auto typeName = AZStd::string_view(optionEntry["type"].GetString());
                     if (typeName.find("bool") != AZStd::string::npos)
                     {
-                        optionType = AZ::RPI::ShaderOptionType::Boolean;
+                        optionType = JE::Render::RPI::ShaderOptionType::Boolean;
                     }
                     else if (typeName.find("int") != AZStd::string::npos)
                     {
                         AZ_Assert(valuesAreRange, "Integer options must have a range!");
-                        optionType = AZ::RPI::ShaderOptionType::IntegerRange;
+                        optionType = JE::Render::RPI::ShaderOptionType::IntegerRange;
                     }
                 }
                 else
                 {   // We don't support complex structures for options yet, so the only user-defined type is an enumeration.
-                    optionType = AZ::RPI::ShaderOptionType::Enumeration;
+                    optionType = JE::Render::RPI::ShaderOptionType::Enumeration;
                 }
 
-                AZStd::vector<AZ::RPI::ShaderOptionValuePair> idIndexList;
+                AZStd::vector<JE::Render::RPI::ShaderOptionValuePair> idIndexList;
                 if (optionEntry.HasMember("values"))
                 {
                     uint32_t optIndex = 0;
                     for (rapidjson::Value::ConstValueIterator valItr = optionEntry["values"].Begin(); valItr != optionEntry["values"].End(); ++valItr)
                     {
 
-                        if (optionType == AZ::RPI::ShaderOptionType::IntegerRange)
+                        if (optionType == JE::Render::RPI::ShaderOptionType::IntegerRange)
                         {
                             auto intValue = atoi(valItr->GetString());
-                            idIndexList.push_back( { AZ::Name(valItr->GetString()), AZ::RPI::ShaderOptionValue(intValue)   } );
+                            idIndexList.push_back( { AZ::Name(valItr->GetString()), JE::Render::RPI::ShaderOptionValue(intValue)   } );
                         }
                         else
                         {
-                            idIndexList.push_back( { AZ::Name(valItr->GetString()), AZ::RPI::ShaderOptionValue(optIndex++) } );
+                            idIndexList.push_back( { AZ::Name(valItr->GetString()), JE::Render::RPI::ShaderOptionValue(optIndex++) } );
                         }
                     }
                 }
@@ -1006,7 +1006,7 @@ namespace JE::Assets::RenderBuilders
                     return onFail();
                 }
 
-                if (optionType == AZ::RPI::ShaderOptionType::IntegerRange && idIndexList.size() != 2)
+                if (optionType == JE::Render::RPI::ShaderOptionType::IntegerRange && idIndexList.size() != 2)
                 {
                     AZ_Error(ShaderCompilerName, false, "Option '%s' is marked as integer range and must provide exactly two values [min, max]!", optionName.c_str());
                     return onFail();
@@ -1051,7 +1051,7 @@ namespace JE::Assets::RenderBuilders
                         specializationId = optionEntry["specializationId"].GetInt();
                     }
 
-                    AZ::RPI::ShaderOptionDescriptor shaderOption(AZ::Name(optionName),
+                    JE::Render::RPI::ShaderOptionDescriptor shaderOption(AZ::Name(optionName),
                                                              optionType,
                                                              keyOffset,
                                                              order,
@@ -1207,7 +1207,7 @@ namespace JE::Assets::RenderBuilders
                 return BuildResult::CompilationFailed;
             }
 
-            auto readJsonResult = AZ::JsonSerializationUtils::ReadJsonFile(outputFile, AZ::RPI::JsonUtils::DefaultMaxFileSize);
+            auto readJsonResult = AZ::JsonSerializationUtils::ReadJsonFile(outputFile, JE::Render::RPI::JsonUtils::DefaultMaxFileSize);
 
             if (readJsonResult.IsSuccess())
             {
@@ -1228,7 +1228,7 @@ namespace JE::Assets::RenderBuilders
             AZStd::string outputFile = m_inputFilePath;
             AzFramework::StringFunc::Path::ReplaceExtension(outputFile, outputExtension);
 
-            auto readJsonResult = AZ::JsonSerializationUtils::ReadJsonFile(outputFile, AZ::RPI::JsonUtils::DefaultMaxFileSize);
+            auto readJsonResult = AZ::JsonSerializationUtils::ReadJsonFile(outputFile, JE::Render::RPI::JsonUtils::DefaultMaxFileSize);
 
             if (readJsonResult.IsSuccess())
             {

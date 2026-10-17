@@ -7,22 +7,22 @@
  */
 #pragma once
 
-#include <Atom/RPI.Public/Pass/ComputePass.h>
+#include <JE/Render/RPI/Public/Pass/ComputePass.h>
 
 namespace AZ
 {
     namespace Render
     {
-        class ChromaticAberrationPass final : public RPI::ComputePass
+        class ChromaticAberrationPass final : public JE::Render::RPI::ComputePass
         {
             AZ_RPI_PASS(ChromaticAberrationPass);
 
         public:
-            AZ_RTTI(ChromaticAberrationPass, "{557EF771-7D60-4EF1-BD61-E2446237B85B}", AZ::RPI::ComputePass);
+            AZ_RTTI(ChromaticAberrationPass, "{557EF771-7D60-4EF1-BD61-E2446237B85B}", JE::Render::RPI::ComputePass);
             AZ_CLASS_ALLOCATOR(ChromaticAberrationPass, SystemAllocator);
 
             ~ChromaticAberrationPass() = default;
-            static RPI::Ptr<ChromaticAberrationPass> Create(const RPI::PassDescriptor& descriptor);
+            static JE::Render::RPI::Ptr<ChromaticAberrationPass> Create(const JE::Render::RPI::PassDescriptor& descriptor);
 
             bool IsEnabled() const override;
 
@@ -31,7 +31,7 @@ namespace AZ
             void FrameBeginInternal(FramePrepareParams params) override;
 
         private:
-            ChromaticAberrationPass(const RPI::PassDescriptor& descriptor);
+            ChromaticAberrationPass(const JE::Render::RPI::PassDescriptor& descriptor);
 
             AZ::RHI::ShaderInputNameIndex m_constantsIndex = "m_constants";
         };

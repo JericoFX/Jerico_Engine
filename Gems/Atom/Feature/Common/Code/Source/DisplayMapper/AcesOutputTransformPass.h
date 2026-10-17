@@ -13,9 +13,9 @@
 #include <Atom/RHI/DeviceDrawItem.h>
 #include <Atom/RHI/ScopeProducer.h>
 
-#include <Atom/RPI.Public/Pass/FullscreenTrianglePass.h>
-#include <Atom/RPI.Public/Shader/Shader.h>
-#include <Atom/RPI.Public/Shader/ShaderResourceGroup.h>
+#include <JE/Render/RPI/Public/Pass/FullscreenTrianglePass.h>
+#include <JE/Render/RPI/Public/Shader/Shader.h>
+#include <JE/Render/RPI/Public/Shader/ShaderResourceGroup.h>
 
 #include <Atom/Feature/ACES/AcesDisplayMapperFeatureProcessor.h>
 #include <DisplayMapper/DisplayMapperFullScreenPass.h>
@@ -39,13 +39,13 @@ namespace AZ
             AZ_CLASS_ALLOCATOR(AcesOutputTransformPass, SystemAllocator);
 
             //! Creates a DisplayMapperPass
-            static RPI::Ptr<AcesOutputTransformPass> Create(const RPI::PassDescriptor& descriptor);
+            static JE::Render::RPI::Ptr<AcesOutputTransformPass> Create(const JE::Render::RPI::PassDescriptor& descriptor);
 
             void SetDisplayBufferFormat(RHI::Format format);
             void SetAcesParameterOverrides(const AcesParameterOverrides& acesParameterOverrides);
 
         private:
-            explicit AcesOutputTransformPass(const RPI::PassDescriptor& descriptor);
+            explicit AcesOutputTransformPass(const JE::Render::RPI::PassDescriptor& descriptor);
 
             // Pass behavior overrides
             void InitializeInternal() override;

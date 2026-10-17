@@ -9,13 +9,13 @@
 #include <CoreLights/DepthExponentiationPass.h>
 
 #include <Atom/RHI/PipelineStateDescriptor.h>
-#include <Atom/RPI.Reflect/Shader/ShaderOptionGroup.h>
+#include <JE/Render/RPI/Reflect/Shader/ShaderOptionGroup.h>
 
 namespace AZ
 {
     namespace Render
     {
-        DepthExponentiationPass::DepthExponentiationPass(const RPI::PassDescriptor& descriptor)
+        DepthExponentiationPass::DepthExponentiationPass(const JE::Render::RPI::PassDescriptor& descriptor)
             : Base(descriptor)
             , m_optionName("o_shadowmapLightType")
             , m_optionValues
@@ -26,7 +26,7 @@ namespace AZ
         {
         }
 
-        RPI::Ptr<DepthExponentiationPass> DepthExponentiationPass::Create(const RPI::PassDescriptor& descriptor)
+        JE::Render::RPI::Ptr<DepthExponentiationPass> DepthExponentiationPass::Create(const JE::Render::RPI::PassDescriptor& descriptor)
         {
             return aznew DepthExponentiationPass(descriptor);
         }
@@ -45,7 +45,7 @@ namespace AZ
         void DepthExponentiationPass::SetShaderVariantKeyFallbackValue()
         {
             const uint32_t typeIndex = aznumeric_cast<uint32_t>(m_shadowmapType);
-            RPI::ShaderOptionGroup shaderOption = m_shader->CreateShaderOptionGroup();
+            JE::Render::RPI::ShaderOptionGroup shaderOption = m_shader->CreateShaderOptionGroup();
             shaderOption.SetValue(m_optionName, m_optionValues[typeIndex]);
 
             if (!m_shaderVariant[typeIndex].m_isFullyBaked && m_shaderResourceGroup)
@@ -102,10 +102,10 @@ namespace AZ
             m_shaderVariant.clear();
             for (const Name& valueName : m_optionValues)
             {
-                RPI::ShaderOptionGroup shaderOption = m_shader->CreateShaderOptionGroup();
+                JE::Render::RPI::ShaderOptionGroup shaderOption = m_shader->CreateShaderOptionGroup();
                 shaderOption.SetValue(m_optionName, valueName);
 
-                RPI::ShaderVariant shaderVariant = m_shader->GetVariant(shaderOption.GetShaderVariantId());
+                JE::Render::RPI::ShaderVariant shaderVariant = m_shader->GetVariant(shaderOption.GetShaderVariantId());
 
                 RHI::PipelineStateDescriptorForDispatch pipelineStateDescriptor;
                 shaderVariant.ConfigurePipelineState(pipelineStateDescriptor, shaderOption);

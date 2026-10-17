@@ -9,7 +9,7 @@
 #pragma once
 
 #include <Atom/Feature/Debug/RenderDebugFeatureProcessorInterface.h>
-#include <Atom/RPI.Public/Shader/ShaderResourceGroup.h>
+#include <JE/Render/RPI/Public/Shader/ShaderResourceGroup.h>
 #include <AzCore/Instance/Instance.h>
 #include <Debug/RenderDebugSettings.h>
 
@@ -35,8 +35,8 @@ namespace AZ::Render
         // FeatureProcessor overrides ...
         void Activate() override;
         void Deactivate() override;
-        void Simulate(const RPI::FeatureProcessor::SimulatePacket& packet) override;
-        void Render(const RPI::FeatureProcessor::RenderPacket& packet) override;
+        void Simulate(const JE::Render::RPI::FeatureProcessor::SimulatePacket& packet) override;
+        void Render(const JE::Render::RPI::FeatureProcessor::RenderPacket& packet) override;
 
     private:
         static constexpr const char* FeatureProcessorName = "RenderDebugFeatureProcessor";
@@ -45,8 +45,8 @@ namespace AZ::Render
         AZStd::unique_ptr<RenderDebugSettings> m_settings = nullptr;
 
         // Scene and View SRG
-        Data::Instance<RPI::ShaderResourceGroup> m_sceneSrg = nullptr;
-        Data::Instance<RPI::ShaderResourceGroup> m_viewSrg = nullptr;
+        Data::Instance<JE::Render::RPI::ShaderResourceGroup> m_sceneSrg = nullptr;
+        Data::Instance<JE::Render::RPI::ShaderResourceGroup> m_viewSrg = nullptr;
 
         // View SRG members
         RHI::ShaderInputNameIndex m_renderDebugOptionsIndex = "m_renderDebugOptions";

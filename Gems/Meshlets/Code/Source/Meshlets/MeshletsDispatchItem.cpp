@@ -8,8 +8,8 @@
 
 #include <MeshletsDispatchItem.h>
 
-#include <Atom/RPI.Public/Shader/ShaderResourceGroup.h>
-#include <Atom/RPI.Public/Shader/Shader.h>
+#include <JE/Render/RPI/Public/Shader/ShaderResourceGroup.h>
+#include <JE/Render/RPI/Public/Shader/Shader.h>
 
 #include <limits>
 
@@ -26,8 +26,8 @@ namespace AZ
         }
 
         void MeshletsDispatchItem::InitDispatch(
-            RPI::Shader* shader,
-            Data::Instance<RPI::ShaderResourceGroup> meshletsDataSrg,
+            JE::Render::RPI::Shader* shader,
+            Data::Instance<JE::Render::RPI::ShaderResourceGroup> meshletsDataSrg,
             uint32_t meshletsAmount )
         {
             RHI::DispatchDirect dispatchArgs(
@@ -44,18 +44,18 @@ namespace AZ
             if (shader)
             {
                 RHI::PipelineStateDescriptorForDispatch pipelineDesc;
-                m_shader->GetVariant(RPI::ShaderAsset::RootShaderVariantStableId).ConfigurePipelineState(pipelineDesc);
+                m_shader->GetVariant(JE::Render::RPI::ShaderAsset::RootShaderVariantStableId).ConfigurePipelineState(pipelineDesc);
                 m_dispatchItem.SetPipelineState(m_shader->AcquirePipelineState(pipelineDesc));
             }
         }
 
-        void MeshletsDispatchItem::SetPipelineState(RPI::Shader* shader)
+        void MeshletsDispatchItem::SetPipelineState(JE::Render::RPI::Shader* shader)
         {
             m_shader = shader;
             if (shader)
             {
                 RHI::PipelineStateDescriptorForDispatch pipelineDesc;
-                m_shader->GetVariant(RPI::ShaderAsset::RootShaderVariantStableId).ConfigurePipelineState(pipelineDesc);
+                m_shader->GetVariant(JE::Render::RPI::ShaderAsset::RootShaderVariantStableId).ConfigurePipelineState(pipelineDesc);
                 m_dispatchItem.SetPipelineState(m_shader->AcquirePipelineState(pipelineDesc));
             }
         }

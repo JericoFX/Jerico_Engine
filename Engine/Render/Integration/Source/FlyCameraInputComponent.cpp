@@ -24,8 +24,8 @@
 #include <AzFramework/Input/Devices/Mouse/InputDeviceMouse.h>
 #include <AzFramework/Input/Devices/Touch/InputDeviceTouch.h>
 
-#include <Atom/RPI.Public/ViewProviderBus.h>
-#include <Atom/RPI.Public/View.h>
+#include <JE/Render/RPI/Public/ViewProviderBus.h>
+#include <JE/Render/RPI/Public/View.h>
 #include <AzFramework/Components/CameraBus.h>
 
 #include <AzFramework/Translation/TranslationDef.h>

@@ -9,7 +9,7 @@
 #include <AzCore/RTTI/BehaviorContext.h>
 #include <AzCore/Asset/AssetSerializer.h>
 
-#include <Atom/RPI.Public/Scene.h>
+#include <JE/Render/RPI/Public/Scene.h>
 
 #include <ACES/Aces.h>
 
@@ -71,7 +71,7 @@ namespace AZ
         {
             m_entityId = entityId;
 
-            PostProcessFeatureProcessorInterface* fp = RPI::Scene::GetFeatureProcessorForEntity<PostProcessFeatureProcessorInterface>(m_entityId);
+            PostProcessFeatureProcessorInterface* fp = JE::Render::RPI::Scene::GetFeatureProcessorForEntity<PostProcessFeatureProcessorInterface>(m_entityId);
             if (fp)
             {
                 m_postProcessInterface = fp->GetOrCreateSettingsInterface(m_entityId);

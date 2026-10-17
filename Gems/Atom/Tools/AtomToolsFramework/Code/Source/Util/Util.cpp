@@ -8,8 +8,8 @@
 
 #include <Atom/ImageProcessing/ImageObject.h>
 #include <Atom/ImageProcessing/ImageProcessingBus.h>
-#include <Atom/RPI.Edit/Common/AssetUtils.h>
-#include <Atom/RPI.Reflect/Asset/AssetUtils.h>
+#include <JE/Editor/Render/RPI/Edit/Common/AssetUtils.h>
+#include <JE/Render/RPI/Reflect/Asset/AssetUtils.h>
 #include <AtomToolsFramework/AtomToolsFrameworkSystemRequestBus.h>
 #include <AtomToolsFramework/Util/Util.h>
 #include <AzCore/IO/ByteContainerStream.h>
@@ -609,7 +609,7 @@ namespace AtomToolsFramework
             {
                 for (const auto& asset : container.m_assets)
                 {
-                    AZStd::string path = AZ::RPI::AssetUtils::GetSourcePathByAssetId(asset.m_assetId);
+                    AZStd::string path = JE::Render::RPI::AssetUtils::GetSourcePathByAssetId(asset.m_assetId);
                     if (ValidateDocumentPath(path))
                     {
                         paths.insert(path);

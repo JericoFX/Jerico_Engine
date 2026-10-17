@@ -7,7 +7,7 @@
  */
 #pragma once
 
-#include <Atom/RPI.Public/Pass/ParentPass.h>
+#include <JE/Render/RPI/Public/Pass/ParentPass.h>
 
 namespace AZ
 {
@@ -16,7 +16,7 @@ namespace AZ
         //! Parent pass for screenspace reflections, implements a frame delay to allow time
         //! for the previous frame texture to be populated
         class ReflectionScreenSpacePass
-            : public RPI::ParentPass
+            : public JE::Render::RPI::ParentPass
         {
             AZ_RPI_PASS(ReflectionScreenSpacePass);
 
@@ -25,12 +25,12 @@ namespace AZ
             AZ_CLASS_ALLOCATOR(Render::ReflectionScreenSpacePass, SystemAllocator, 0);
           
             //! Creates a new pass without a PassTemplate
-            static RPI::Ptr<ReflectionScreenSpacePass> Create(const RPI::PassDescriptor& descriptor);
+            static JE::Render::RPI::Ptr<ReflectionScreenSpacePass> Create(const JE::Render::RPI::PassDescriptor& descriptor);
 
             void ResetFrameDelay() { m_frameDelayCount = 0; }
 
         private:
-            explicit ReflectionScreenSpacePass(const RPI::PassDescriptor& descriptor);
+            explicit ReflectionScreenSpacePass(const JE::Render::RPI::PassDescriptor& descriptor);
 
             // Pass Overrides...
             bool IsEnabled() const override;

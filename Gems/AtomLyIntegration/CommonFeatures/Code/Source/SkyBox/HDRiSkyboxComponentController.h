@@ -52,8 +52,8 @@ namespace AZ
             void OnTransformChanged(const AZ::Transform& local, const AZ::Transform& world) override;
 
             // HDRiSkyboxRequestBus::Handler overrides ...
-            Data::Asset<RPI::StreamingImageAsset> GetCubemapAsset() const override;
-            void SetCubemapAsset(const Data::Asset<RPI::StreamingImageAsset>& cubemapAsset) override;
+            Data::Asset<JE::Render::RPI::StreamingImageAsset> GetCubemapAsset() const override;
+            void SetCubemapAsset(const Data::Asset<JE::Render::RPI::StreamingImageAsset>& cubemapAsset) override;
             void SetCubemapAssetPath(const AZStd::string& path) override;
             void SetCubemapAssetId(AZ::Data::AssetId) override;
             AZ::Data::AssetId GetCubemapAssetId() const override;
@@ -62,13 +62,13 @@ namespace AZ
             float GetExposure() const override;
 
             //! Queues a load of an image Asset
-            void LoadImage(Data::Asset<RPI::StreamingImageAsset>& imageAsset);
+            void LoadImage(Data::Asset<JE::Render::RPI::StreamingImageAsset>& imageAsset);
 
             //! Handles all Data::AssetBus calls in a unified way
             void UpdateWithAsset(Data::Asset<Data::AssetData> updatedAsset);
 
             //! Validates individual asset updates, returns true for valid ready assets.
-            bool IsAssetValid(Data::Asset<RPI::StreamingImageAsset>& asset);
+            bool IsAssetValid(Data::Asset<JE::Render::RPI::StreamingImageAsset>& asset);
 
             //! Get the inverse matrix from entity transfom, without scale and translate
             AZ::Matrix4x4 GetInverseTransform(const AZ::Transform& world);

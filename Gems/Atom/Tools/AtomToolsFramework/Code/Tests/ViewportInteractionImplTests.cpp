@@ -6,8 +6,8 @@
  *
  */
 
-#include <Atom/RPI.Public/View.h>
-#include <Atom/RPI.Public/ViewportContextBus.h>
+#include <JE/Render/RPI/Public/View.h>
+#include <JE/Render/RPI/Public/ViewportContextBus.h>
 #include <AtomToolsFramework/Viewport/RenderViewportWidget.h>
 #include <AzCore/Math/IntersectSegment.h>
 #include <AzCore/Math/MatrixUtils.h>
@@ -37,7 +37,7 @@ namespace UnitTest
         {
             AZ::NameDictionary::Create();
 
-            m_view = AZ::RPI::View::CreateView(AZ::Name("TestView"), AZ::RPI::View::UsageCamera);
+            m_view = JE::Render::RPI::View::CreateView(AZ::Name("TestView"), JE::Render::RPI::View::UsageCamera);
 
             const auto aspectRatio = aznumeric_cast<float>(ScreenDimensions.m_width) / aznumeric_cast<float>(ScreenDimensions.m_height);
 
@@ -69,7 +69,7 @@ namespace UnitTest
             AZ::NameDictionary::Destroy();
         }
 
-        AZ::RPI::ViewPtr m_view;
+        JE::Render::RPI::ViewPtr m_view;
         AZStd::unique_ptr<AtomToolsFramework::ViewportInteractionImpl> m_viewportInteractionImpl;
     };
 
@@ -186,7 +186,7 @@ namespace UnitTest
 
         m_view->SetCameraTransform(primaryViewTransform);
 
-        AZ::RPI::ViewPtr secondaryView = AZ::RPI::View::CreateView(AZ::Name("SecondaryView"), AZ::RPI::View::UsageCamera);
+        JE::Render::RPI::ViewPtr secondaryView = JE::Render::RPI::View::CreateView(AZ::Name("SecondaryView"), JE::Render::RPI::View::UsageCamera);
 
         const auto secondaryViewTransform = AZ::Matrix3x4::CreateFromMatrix3x3AndTranslation(
             AZ::Matrix3x3::CreateRotationZ(AZ::DegToRad(-90.0f)) * AZ::Matrix3x3::CreateRotationX(AZ::DegToRad(30.0f)),
@@ -195,8 +195,8 @@ namespace UnitTest
         secondaryView->SetCameraTransform(secondaryViewTransform);
 
         // When
-        AZ::RPI::ViewportContextIdNotificationBus::Event(
-            TestViewportId, &AZ::RPI::ViewportContextIdNotificationBus::Events::OnViewportDefaultViewChanged, secondaryView);
+        JE::Render::RPI::ViewportContextIdNotificationBus::Event(
+            TestViewportId, &JE::Render::RPI::ViewportContextIdNotificationBus::Events::OnViewportDefaultViewChanged, secondaryView);
 
         // retrieve updated camera transform
         AzFramework::CameraState cameraState;

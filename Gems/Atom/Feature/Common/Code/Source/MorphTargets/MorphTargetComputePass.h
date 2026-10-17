@@ -7,7 +7,7 @@
  */
 #pragma once
 
-#include <Atom/RPI.Public/Pass/ComputePass.h>
+#include <JE/Render/RPI/Public/Pass/ComputePass.h>
 #include <Atom/RHI.Reflect/Base.h>
 
 namespace AZ
@@ -18,18 +18,18 @@ namespace AZ
 
         //! The morph target compute pass submits dispatch items for morph targets. The dispatch items are cleared every frame, so it needs to be re-populated.
         class MorphTargetComputePass
-            : public RPI::ComputePass
+            : public JE::Render::RPI::ComputePass
         {
             AZ_RPI_PASS(MorphTargetComputePass);
         public:
-            AZ_RTTI(AZ::Render::MorphTargetComputePass, "{14EEACDF-C1BB-4BFC-BB27-6821FDE276B0}", RPI::ComputePass);
+            AZ_RTTI(AZ::Render::MorphTargetComputePass, "{14EEACDF-C1BB-4BFC-BB27-6821FDE276B0}", JE::Render::RPI::ComputePass);
             AZ_CLASS_ALLOCATOR(MorphTargetComputePass, SystemAllocator);
 
-            MorphTargetComputePass(const RPI::PassDescriptor& descriptor);
+            MorphTargetComputePass(const JE::Render::RPI::PassDescriptor& descriptor);
 
-            static RPI::Ptr<MorphTargetComputePass> Create(const RPI::PassDescriptor& descriptor);
+            static JE::Render::RPI::Ptr<MorphTargetComputePass> Create(const JE::Render::RPI::PassDescriptor& descriptor);
 
-            Data::Instance<RPI::Shader> GetShader() const;
+            Data::Instance<JE::Render::RPI::Shader> GetShader() const;
 
         private:
             void BuildInternal() override;

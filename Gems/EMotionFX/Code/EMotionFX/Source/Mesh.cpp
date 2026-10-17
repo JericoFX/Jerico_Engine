@@ -20,7 +20,7 @@
 #include <EMotionFX/Source/Allocators.h>
 #include <MCore/Source/LogManager.h>
 
-#include <Atom/RPI.Reflect/Model/ModelAsset.h>
+#include <JE/Render/RPI/Reflect/Model/ModelAsset.h>
 
 namespace EMotionFX
 {
@@ -115,7 +115,7 @@ namespace EMotionFX
         // @param[in] keepOriginals True in case the vertex elements change when deforming the mesh, false if not.
         // @param[in] defaultPaddingValue The value used for the sub-meshes in the EMFX that do not contain a given vertex feature in Atom for the given mesh.
         template<typename TargetType, typename SourceType>
-        void CreateAndAddVertexAttributeLayer(const AZ::Data::Asset<AZ::RPI::ModelLodAsset>& sourceModelLod, AZ::u32 modelVertexCount,
+        void CreateAndAddVertexAttributeLayer(const AZ::Data::Asset<JE::Render::RPI::ModelLodAsset>& sourceModelLod, AZ::u32 modelVertexCount,
             const AZ::Name& sourceBufferName, const void* inputBufferData,
             Mesh* targetMesh, AZ::u32 vertexAttributeLayerTypeId, bool keepOriginals,
             const TargetType& defaultPaddingValue)
@@ -125,10 +125,10 @@ namespace EMotionFX
 
             // Fill the vertex attribute layer by iterating through the Atom meshes and copying over the vertex data for each.
             [[maybe_unused]] size_t addedElements = 0;
-            for (const AZ::RPI::ModelLodAsset::Mesh& atomMesh : sourceModelLod->GetMeshes())
+            for (const JE::Render::RPI::ModelLodAsset::Mesh& atomMesh : sourceModelLod->GetMeshes())
             {
                 const uint32_t atomMeshVertexCount = atomMesh.GetVertexCount();
-                const AZ::RPI::BufferAssetView* bufferAssetView = atomMesh.GetSemanticBufferAssetView(sourceBufferName);
+                const JE::Render::RPI::BufferAssetView* bufferAssetView = atomMesh.GetSemanticBufferAssetView(sourceBufferName);
                 if (bufferAssetView)
                 {
                     const AZ::RHI::BufferViewDescriptor& bufferAssetViewDescriptor = bufferAssetView->GetBufferViewDescriptor();
@@ -168,7 +168,7 @@ namespace EMotionFX
         }
     };
 
-    Mesh* Mesh::CreateFromModelLod(const AZ::Data::Asset<AZ::RPI::ModelLodAsset>& sourceModelLod, const AZStd::unordered_map<AZ::u16, AZ::u16>& skinToSkeletonIndexMap)
+    Mesh* Mesh::CreateFromModelLod(const AZ::Data::Asset<JE::Render::RPI::ModelLodAsset>& sourceModelLod, const AZStd::unordered_map<AZ::u16, AZ::u16>& skinToSkeletonIndexMap)
     {
         AZ::u32 modelVertexCount = 0;
         AZ::u32 modelIndexCount = 0;
@@ -176,11 +176,11 @@ namespace EMotionFX
         // Find the maximum skin influences across all meshes to use when pre-allocating memory
         bool hasSkinInfluence = false;
         AZ::u32 maxSkinInfluences = 0;
-        for (const AZ::RPI::ModelLodAsset::Mesh& mesh : sourceModelLod->GetMeshes())
+        for (const JE::Render::RPI::ModelLodAsset::Mesh& mesh : sourceModelLod->GetMeshes())
         {
             modelVertexCount += mesh.GetVertexCount();
             modelIndexCount += mesh.GetIndexCount();
-            const AZ::RPI::BufferAssetView* weightView = mesh.GetSemanticBufferAssetView(AZ::Name{"SKIN_WEIGHTS"});
+            const JE::Render::RPI::BufferAssetView* weightView = mesh.GetSemanticBufferAssetView(AZ::Name{"SKIN_WEIGHTS"});
             if(weightView)
             {
                 const AZ::u32 meshInfluenceCount = weightView->GetBufferViewDescriptor().m_elementCount / mesh.GetVertexCount();
@@ -203,7 +203,7 @@ namespace EMotionFX
         // These buffers can be accessed through the first submesh in their entirety
         // by using the BufferViewDescriptor from the Buffer instead of the one from the sub-mesh's BufferAssetView
         const auto sourceLodMeshes = sourceModelLod->GetMeshes();
-        const AZ::RPI::ModelLodAsset::Mesh& sourceMesh0 = sourceLodMeshes[0];
+        const JE::Render::RPI::ModelLodAsset::Mesh& sourceMesh0 = sourceLodMeshes[0];
 
         // Copy the index buffer for the entire lod
         AZStd::span<const uint8_t> indexBuffer = sourceMesh0.GetIndexBufferAssetView().GetBufferAsset()->GetBuffer();
@@ -224,7 +224,7 @@ namespace EMotionFX
         const float* skinWeights = nullptr;
 
         // Copy the vertex buffers
-        for (const AZ::RPI::ModelLodAsset::Mesh::StreamBufferInfo& streamBufferInfo : sourceMesh0.GetStreamBufferInfoList())
+        for (const JE::Render::RPI::ModelLodAsset::Mesh::StreamBufferInfo& streamBufferInfo : sourceMesh0.GetStreamBufferInfoList())
         {
             const AZ::RHI::BufferViewDescriptor& bufferAssetViewDescriptor = streamBufferInfo.m_bufferAssetView.GetBufferAsset()->GetBufferViewDescriptor();
             const void* bufferData = streamBufferInfo.m_bufferAssetView.GetBufferAsset()->GetBuffer().data();
@@ -303,11 +303,11 @@ namespace EMotionFX
             AZStd::bitset<AZStd::numeric_limits<uint16>::max()> usedJoints;
             uint16 highestJointIndex = 0;
             AZ::u32 currentVertex = 0;
-            for (const AZ::RPI::ModelLodAsset::Mesh& sourceMesh : sourceModelLod->GetMeshes())
+            for (const JE::Render::RPI::ModelLodAsset::Mesh& sourceMesh : sourceModelLod->GetMeshes())
             {
                 AZ::u32 meshVertexCount = sourceMesh.GetVertexCount();
-                const AZ::RPI::BufferAssetView* weightView = sourceMesh.GetSemanticBufferAssetView(AZ::Name{"SKIN_WEIGHTS"});
-                const AZ::RPI::BufferAssetView* jointIdView = sourceMesh.GetSemanticBufferAssetView(AZ::Name{"SKIN_JOINTINDICES"});
+                const JE::Render::RPI::BufferAssetView* weightView = sourceMesh.GetSemanticBufferAssetView(AZ::Name{"SKIN_WEIGHTS"});
+                const JE::Render::RPI::BufferAssetView* jointIdView = sourceMesh.GetSemanticBufferAssetView(AZ::Name{"SKIN_JOINTINDICES"});
                 if (weightView && jointIdView)
                 {
                     const AZ::u32 meshInfluenceCount = weightView->GetBufferViewDescriptor().m_elementCount / meshVertexCount;
@@ -353,7 +353,7 @@ namespace EMotionFX
         AZ::u32 subMeshIndex = 0;
 
         // One ModelLodAsset::Mesh corresponds to one EMotionFX::SubMesh
-        for (const AZ::RPI::ModelLodAsset::Mesh& sourceSubMesh : sourceModelLod->GetMeshes())
+        for (const JE::Render::RPI::ModelLodAsset::Mesh& sourceSubMesh : sourceModelLod->GetMeshes())
         {
             AZ::u32 subMeshVertexCount = sourceSubMesh.GetVertexCount();
             AZ::u32 subMeshIndexCount = sourceSubMesh.GetIndexCount();

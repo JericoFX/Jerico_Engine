@@ -14,7 +14,7 @@
 #include <StarsComponentConfig.h>
 #include <Stars/StarsComponentBus.h>
 
-namespace AZ::RPI
+namespace JE::Render::RPI
 {
     class Scene;
 }
@@ -82,6 +82,6 @@ namespace AZ::Render
             uint8_t magnitude;
         };
 
-        RPI::Scene* m_scene;
+        JE::Render::RPI::Scene* m_scene;
     };
 } // AZ::Render

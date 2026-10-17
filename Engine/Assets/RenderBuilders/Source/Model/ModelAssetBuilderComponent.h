@@ -8,8 +8,8 @@
 
 #pragma once
 
-#include <Atom/RPI.Reflect/Base.h>
-#include <Atom/RPI.Reflect/Model/MorphTargetMetaAssetCreator.h>
+#include <JE/Render/RPI/Reflect/Base.h>
+#include <JE/Render/RPI/Reflect/Model/MorphTargetMetaAssetCreator.h>
 
 #include <SceneAPI/SceneCore/Components/ExportingComponent.h>
 
@@ -29,7 +29,7 @@
 
 #include <AzCore/std/containers/map.h>
 
-namespace AZ::RPI
+namespace JE::Render::RPI
 {
     class ModelAssetCreator;
     class ModelLodAssetCreator;
@@ -121,7 +121,7 @@ namespace JE::Assets::RenderBuilders
             AZStd::vector<float> m_skinWeights;
 
             // Morph targets
-            AZStd::vector<AZ::RPI::PackedCompressedMorphTargetDelta> m_morphTargetVertexData;
+            AZStd::vector<JE::Render::RPI::PackedCompressedMorphTargetDelta> m_morphTargetVertexData;
 
             MaterialUid m_materialUid;
             uint32_t m_influencesPerVertex = 0;
@@ -207,7 +207,7 @@ namespace JE::Assets::RenderBuilders
             const ModelAssetBuilderContext& context,
             const SourceMeshContentList& sourceMeshContentList,
             AZStd::unordered_map<AZStd::string, uint16_t>& jointNameToIndexMap,
-            AZ::RPI::MorphTargetMetaAssetCreator& morphTargetMetaCreator);
+            JE::Render::RPI::MorphTargetMetaAssetCreator& morphTargetMetaCreator);
 
         //! Checks if this is a skinned mesh and if soe,
         //! adds some extra padding to make vertex streams align for skinning
@@ -250,7 +250,7 @@ namespace JE::Assets::RenderBuilders
         //! Create stream buffer asset with a structured view descriptor from the given data and add it to the out stream buffers
         template<typename T>
         bool BuildStructuredStreamBuffer(
-            AZStd::vector<AZ::RPI::ModelLodAsset::Mesh::StreamBufferInfo>& outStreamBuffers,
+            AZStd::vector<JE::Render::RPI::ModelLodAsset::Mesh::StreamBufferInfo>& outStreamBuffers,
             const AZStd::vector<T>& bufferData,
             const AZ::RHI::ShaderSemantic& semantic,
             const AZ::Name& uvCustomName = AZ::Name());
@@ -258,7 +258,7 @@ namespace JE::Assets::RenderBuilders
         //! Create stream buffer asset with a raw view descriptor from the given data and add it to the out stream buffers.
         template<typename T>
         bool BuildRawStreamBuffer(
-            AZStd::vector<AZ::RPI::ModelLodAsset::Mesh::StreamBufferInfo>& outStreamBuffers,
+            AZStd::vector<JE::Render::RPI::ModelLodAsset::Mesh::StreamBufferInfo>& outStreamBuffers,
             const AZStd::vector<T>& bufferData,
             const AZ::RHI::ShaderSemantic& semantic,
             const AZ::Name& uvCustomName = AZ::Name());
@@ -266,7 +266,7 @@ namespace JE::Assets::RenderBuilders
         //! Create stream buffer asset with a typed view descriptor from the given data and add it to the out stream buffers.
         template<typename T>
         bool BuildTypedStreamBuffer(
-            AZStd::vector<AZ::RPI::ModelLodAsset::Mesh::StreamBufferInfo>& outStreamBuffers,
+            AZStd::vector<JE::Render::RPI::ModelLodAsset::Mesh::StreamBufferInfo>& outStreamBuffers,
             const AZStd::vector<T>& bufferData,
             AZ::RHI::Format format,
             const AZ::RHI::ShaderSemantic& semantic,
@@ -276,7 +276,7 @@ namespace JE::Assets::RenderBuilders
         template<typename T>
         bool BuildStreamBuffer(
             size_t vertexCount,
-            AZStd::vector<AZ::RPI::ModelLodAsset::Mesh::StreamBufferInfo>& outStreamBuffers,
+            AZStd::vector<JE::Render::RPI::ModelLodAsset::Mesh::StreamBufferInfo>& outStreamBuffers,
             const AZStd::vector<T>& bufferData,
             AZ::RHI::Format format,
             const AZ::RHI::ShaderSemantic& semantic,
@@ -305,9 +305,9 @@ namespace JE::Assets::RenderBuilders
         //! Returns false if an error occurs
         bool CreateModelLodBuffers(
             const ProductMeshContent& lodBufferContent,
-            AZ::RPI::BufferAssetView& outIndexBuffer,
-            AZStd::vector<AZ::RPI::ModelLodAsset::Mesh::StreamBufferInfo>& outStreamBuffers,
-            AZ::RPI::ModelLodAssetCreator& lodAssetCreator,
+            JE::Render::RPI::BufferAssetView& outIndexBuffer,
+            AZStd::vector<JE::Render::RPI::ModelLodAsset::Mesh::StreamBufferInfo>& outStreamBuffers,
+            JE::Render::RPI::ModelLodAssetCreator& lodAssetCreator,
             AZ::Aabb& subMeshAabb);
 
         //! Takes a ProductMeshView and the buffers that it is supposed to be a view
@@ -316,30 +316,30 @@ namespace JE::Assets::RenderBuilders
         //! Returns false if an error occurs
         bool CreateMesh(
             const ProductMeshView& meshView,
-            const AZ::RPI::BufferAssetView& lodIndexBuffer,
-            const AZStd::vector<AZ::RPI::ModelLodAsset::Mesh::StreamBufferInfo>& lodStreamBuffers,
-            AZ::RPI::ModelAssetCreator& modelAssetCreator,
-            AZ::RPI::ModelLodAssetCreator& lodAssetCreator,
+            const JE::Render::RPI::BufferAssetView& lodIndexBuffer,
+            const AZStd::vector<JE::Render::RPI::ModelLodAsset::Mesh::StreamBufferInfo>& lodStreamBuffers,
+            JE::Render::RPI::ModelAssetCreator& modelAssetCreator,
+            JE::Render::RPI::ModelLodAssetCreator& lodAssetCreator,
             const MaterialAssetsByUid& materialAssetsByUid,
             const AZ::Aabb& subMeshAabb);
 
         //! Takes in a pointer to data with a given element count and format and creates a BufferAsset.
-        AZ::Outcome<AZ::Data::Asset<AZ::RPI::BufferAsset>> CreateTypedBufferAsset(
+        AZ::Outcome<AZ::Data::Asset<JE::Render::RPI::BufferAsset>> CreateTypedBufferAsset(
             const void* data, const size_t size, const size_t elementCount, AZ::RHI::Format format, const AZStd::string& bufferName,
-            const AZ::RPI::BufferAsset::CompressionFormat compressionFormat = AZ::RPI::BufferAsset::CompressionFormat::Uncompressed);
+            const JE::Render::RPI::BufferAsset::CompressionFormat compressionFormat = JE::Render::RPI::BufferAsset::CompressionFormat::Uncompressed);
 
         //! Takes in a pointer to data and a size in bytes and creates a BufferAsset.
-        AZ::Outcome<AZ::Data::Asset<AZ::RPI::BufferAsset>> CreateStructuredBufferAsset(
+        AZ::Outcome<AZ::Data::Asset<JE::Render::RPI::BufferAsset>> CreateStructuredBufferAsset(
             const void* data, const size_t elementCount, const size_t elementSize, const AZStd::string& bufferName);
 
         //! Takes in a pointer to data and a size in bytes and creates a BufferAsset.
-        AZ::Outcome<AZ::Data::Asset<AZ::RPI::BufferAsset>> CreateRawBufferAsset(
+        AZ::Outcome<AZ::Data::Asset<JE::Render::RPI::BufferAsset>> CreateRawBufferAsset(
             const void* data, const size_t totalSizeInBytes, const AZStd::string& bufferName);
 
         //! Takes in a pointer to data with a view descriptor count and format and creates a BufferAsset.
-        AZ::Outcome<AZ::Data::Asset<AZ::RPI::BufferAsset>> CreateBufferAsset(
+        AZ::Outcome<AZ::Data::Asset<JE::Render::RPI::BufferAsset>> CreateBufferAsset(
             const void* data, const size_t size, const AZ::RHI::BufferViewDescriptor& bufferViewDescriptor, const AZStd::string& bufferName,
-            const AZ::RPI::BufferAsset::CompressionFormat compressionFormat = AZ::RPI::BufferAsset::CompressionFormat::Uncompressed);
+            const JE::Render::RPI::BufferAsset::CompressionFormat compressionFormat = JE::Render::RPI::BufferAsset::CompressionFormat::Uncompressed);
 
 
         //! Helper method for CreateMesh.
@@ -350,8 +350,8 @@ namespace JE::Assets::RenderBuilders
             const AZ::RHI::ShaderSemantic& semantic,
             const AZ::Name& customName,
             const AZ::RHI::BufferViewDescriptor& bufferViewDescriptor,
-            const AZStd::vector<AZ::RPI::ModelLodAsset::Mesh::StreamBufferInfo>& lodStreamBuffers,
-            AZ::RPI::ModelLodAssetCreator& lodAssetCreator);
+            const AZStd::vector<JE::Render::RPI::ModelLodAsset::Mesh::StreamBufferInfo>& lodStreamBuffers,
+            JE::Render::RPI::ModelLodAssetCreator& lodAssetCreator);
 
         // Create stable asset id from an unique name
         AZ::Data::AssetId CreateAssetId(const AZStd::string& assetName);
@@ -373,9 +373,9 @@ namespace JE::Assets::RenderBuilders
         //! and returns it as part of outStreamBufferInfo.
         //! Returns false if no StreamBufferInfo is found.
         bool FindStreamBufferById(
-            const AZStd::vector<AZ::RPI::ModelLodAsset::Mesh::StreamBufferInfo>& streamBufferInfoList,
+            const AZStd::vector<JE::Render::RPI::ModelLodAsset::Mesh::StreamBufferInfo>& streamBufferInfoList,
             const AZ::RHI::ShaderSemantic& streamSemantic,
-            AZ::RPI::ModelLodAsset::Mesh::StreamBufferInfo& outStreamBufferInfo);
+            JE::Render::RPI::ModelLodAsset::Mesh::StreamBufferInfo& outStreamBufferInfo);
 
         // Check if a given node contains any morph target data.
         bool GetIsMorphed(const AZ::SceneAPI::Containers::SceneGraph& graph, const AZ::SceneAPI::Containers::SceneGraph::NodeIndex& nodeIndex) const;

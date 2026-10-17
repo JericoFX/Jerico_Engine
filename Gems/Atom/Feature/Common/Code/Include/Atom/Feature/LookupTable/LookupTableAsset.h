@@ -9,7 +9,7 @@
 #pragma once
 
 #include <Atom/Feature/Base.h>
-#include <Atom/RPI.Reflect/Pass/PassAsset.h>
+#include <JE/Render/RPI/Reflect/Pass/PassAsset.h>
 #include <AzCore/Asset/AssetCommon.h>
 
 namespace AZ

@@ -11,20 +11,20 @@
 
 #include <Atom/RHI/Factory.h>
 #include <Atom/RHI/FrameGraphAttachmentInterface.h>
-#include <Atom/RPI.Public/RenderPipeline.h>
-#include <Atom/RPI.Public/Scene.h>
+#include <JE/Render/RPI/Public/RenderPipeline.h>
+#include <JE/Render/RPI/Public/Scene.h>
 
 namespace AZ
 {
     namespace Render
     {
-        RPI::Ptr<ApplyShaperLookupTablePass> ApplyShaperLookupTablePass::Create(const RPI::PassDescriptor& descriptor)
+        JE::Render::RPI::Ptr<ApplyShaperLookupTablePass> ApplyShaperLookupTablePass::Create(const JE::Render::RPI::PassDescriptor& descriptor)
         {
-            RPI::Ptr<ApplyShaperLookupTablePass> pass = aznew ApplyShaperLookupTablePass(descriptor);
+            JE::Render::RPI::Ptr<ApplyShaperLookupTablePass> pass = aznew ApplyShaperLookupTablePass(descriptor);
             return pass;
         }
 
-        ApplyShaperLookupTablePass::ApplyShaperLookupTablePass(const RPI::PassDescriptor& descriptor)
+        ApplyShaperLookupTablePass::ApplyShaperLookupTablePass(const JE::Render::RPI::PassDescriptor& descriptor)
             : DisplayMapperFullScreenPass(descriptor)
         {
         }

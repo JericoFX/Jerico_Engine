@@ -6,8 +6,8 @@
  *
  */
 
-#include <Atom/RPI.Edit/Common/AssetUtils.h>
-#include <Atom/RPI.Edit/Material/MaterialSourceData.h>
+#include <JE/Editor/Render/RPI/Edit/Common/AssetUtils.h>
+#include <JE/Editor/Render/RPI/Edit/Material/MaterialSourceData.h>
 #include <JE/Editor/Materials/EditorMaterialSystemComponentRequestBus.h>
 #include <AzCore/Asset/AssetSerializer.h>
 #include <AzCore/RTTI/BehaviorContext.h>
@@ -153,7 +153,7 @@ namespace JE
                 AZ::Data::AssetBus::Handler::BusConnect(assetId);
                 if (isOverridden)
                 {
-                    m_materialAsset = AZ::Data::Asset<AZ::RPI::MaterialAsset>(assetId, AZ::AzTypeInfo<AZ::RPI::MaterialAsset>::Uuid());
+                    m_materialAsset = AZ::Data::Asset<JE::Render::RPI::MaterialAsset>(assetId, AZ::AzTypeInfo<JE::Render::RPI::MaterialAsset>::Uuid());
                 }
             }
 
@@ -227,11 +227,11 @@ namespace JE
         bool EditorMaterialComponentSlot::HasSourceData() const
         {
             // The slot only has valid source data if the source path is valid and the file has the correct extension
-            const AZStd::string& sourcePath = AZ::RPI::AssetUtils::GetSourcePathByAssetId(GetActiveAssetId());
-            return !sourcePath.empty() && AZ::StringFunc::Path::IsExtension(sourcePath.c_str(), AZ::RPI::MaterialSourceData::Extension);
+            const AZStd::string& sourcePath = JE::Render::RPI::AssetUtils::GetSourcePathByAssetId(GetActiveAssetId());
+            return !sourcePath.empty() && AZ::StringFunc::Path::IsExtension(sourcePath.c_str(), JE::Render::RPI::MaterialSourceData::Extension);
         }
 
-        void EditorMaterialComponentSlot::SetAsset(const AZ::Data::Asset<AZ::RPI::MaterialAsset>& asset)
+        void EditorMaterialComponentSlot::SetAsset(const AZ::Data::Asset<JE::Render::RPI::MaterialAsset>& asset)
         {
             m_materialAsset = asset;
             OnDataChanged({ m_entityId }, true);
@@ -239,7 +239,7 @@ namespace JE
 
         void EditorMaterialComponentSlot::SetAssetId(const AZ::Data::AssetId& assetId)
         {
-            SetAsset(AZ::Data::Asset<AZ::RPI::MaterialAsset>(assetId, AZ::AzTypeInfo<AZ::RPI::MaterialAsset>::Uuid()));
+            SetAsset(AZ::Data::Asset<JE::Render::RPI::MaterialAsset>(assetId, AZ::AzTypeInfo<JE::Render::RPI::MaterialAsset>::Uuid()));
         }
 
         void EditorMaterialComponentSlot::Clear()
@@ -247,7 +247,7 @@ namespace JE
             JE::Render::MaterialComponentRequestBus::Event(
                 m_entityId, &JE::Render::MaterialComponentRequestBus::Events::SetPropertyValues, m_id, JE::Render::MaterialPropertyOverrideMap());
             JE::Render::MaterialComponentRequestBus::Event(
-                m_entityId, &JE::Render::MaterialComponentRequestBus::Events::SetModelUvOverrides, m_id, AZ::RPI::MaterialModelUvOverrideMap());
+                m_entityId, &JE::Render::MaterialComponentRequestBus::Events::SetModelUvOverrides, m_id, JE::Render::RPI::MaterialModelUvOverrideMap());
             SetAsset({});
         }
 
@@ -261,7 +261,7 @@ namespace JE
             JE::Render::MaterialComponentRequestBus::Event(
                 m_entityId, &JE::Render::MaterialComponentRequestBus::Events::SetPropertyValues, m_id, JE::Render::MaterialPropertyOverrideMap());
             JE::Render::MaterialComponentRequestBus::Event(
-                m_entityId, &JE::Render::MaterialComponentRequestBus::Events::SetModelUvOverrides, m_id, AZ::RPI::MaterialModelUvOverrideMap());
+                m_entityId, &JE::Render::MaterialComponentRequestBus::Events::SetModelUvOverrides, m_id, JE::Render::RPI::MaterialModelUvOverrideMap());
             OnDataChanged({ m_entityId }, false);
         }
 
@@ -277,10 +277,10 @@ namespace JE
                 const auto& exportItem = exportItems.front();
                 if (EditorMaterialComponentExporter::ExportMaterialSourceData(exportItem))
                 {
-                    if (const auto& assetIdOutcome = AZ::RPI::AssetUtils::MakeAssetId(exportItem.GetExportPath(), 0))
+                    if (const auto& assetIdOutcome = JE::Render::RPI::AssetUtils::MakeAssetId(exportItem.GetExportPath(), 0))
                     {
-                        m_materialAsset = AZ::Data::Asset<AZ::RPI::MaterialAsset>(
-                            assetIdOutcome.GetValue(), AZ::AzTypeInfo<AZ::RPI::MaterialAsset>::Uuid());
+                        m_materialAsset = AZ::Data::Asset<JE::Render::RPI::MaterialAsset>(
+                            assetIdOutcome.GetValue(), AZ::AzTypeInfo<JE::Render::RPI::MaterialAsset>::Uuid());
                         OnDataChanged(entityIdsToEdit, true);
                     }
                 }
@@ -314,7 +314,7 @@ namespace JE
         {
             EditorMaterialSystemComponentRequestBus::Broadcast(
                 &EditorMaterialSystemComponentRequestBus::Events::OpenMaterialEditor,
-                AZ::RPI::AssetUtils::GetSourcePathByAssetId(GetActiveAssetId()));
+                JE::Render::RPI::AssetUtils::GetSourcePathByAssetId(GetActiveAssetId()));
         }
 
         void EditorMaterialComponentSlot::OpenMaterialInspector(const AzToolsFramework::EntityIdSet& entityIdsToEdit)
@@ -330,11 +330,11 @@ namespace JE
                 AZStd::unordered_set<AZ::Name> modelUvNames;
                 JE::Render::MaterialConsumerRequestBus::EventResult(modelUvNames, m_entityId, &JE::Render::MaterialConsumerRequestBus::Events::GetModelUvNames);
 
-                AZ::RPI::MaterialModelUvOverrideMap matModUvOverrides;
+                JE::Render::RPI::MaterialModelUvOverrideMap matModUvOverrides;
                 JE::Render::MaterialComponentRequestBus::EventResult(
                     matModUvOverrides, m_entityId, &JE::Render::MaterialComponentRequestBus::Events::GetModelUvOverrides, m_id);
 
-                auto applyMatModUvOverrideChangedCallback = [&](const AZ::RPI::MaterialModelUvOverrideMap& matModUvOverrides)
+                auto applyMatModUvOverrideChangedCallback = [&](const JE::Render::RPI::MaterialModelUvOverrideMap& matModUvOverrides)
                 {
                     for (const AZ::EntityId& entityId : entityIdsToEdit)
                     {
@@ -384,7 +384,7 @@ namespace JE
                         entityId, &JE::Render::MaterialComponentRequestBus::Events::SetPropertyValues, m_id, JE::Render::MaterialPropertyOverrideMap());
                     JE::Render::MaterialComponentRequestBus::Event(
                         entityId, &JE::Render::MaterialComponentRequestBus::Events::SetModelUvOverrides, m_id,
-                        AZ::RPI::MaterialModelUvOverrideMap());
+                        JE::Render::RPI::MaterialModelUvOverrideMap());
                 }
                 OnDataChanged(entityIdsToEdit, false);
             });
@@ -397,7 +397,7 @@ namespace JE
                         entityId, &JE::Render::MaterialComponentRequestBus::Events::SetPropertyValues, m_id, JE::Render::MaterialPropertyOverrideMap());
                     JE::Render::MaterialComponentRequestBus::Event(
                         entityId, &JE::Render::MaterialComponentRequestBus::Events::SetModelUvOverrides, m_id,
-                        AZ::RPI::MaterialModelUvOverrideMap());
+                        JE::Render::RPI::MaterialModelUvOverrideMap());
                 }
                 OnDataChanged(entityIdsToEdit, true);
             });

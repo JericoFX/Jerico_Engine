@@ -9,7 +9,7 @@
 
 #include <Tests/GradientSignalTestMocks.h>
 #include <LmbrCentral/Shape/MockShapes.h>
-#include <Atom/RPI.Reflect/Asset/AssetHandler.h>
+#include <JE/Render/RPI/Reflect/Asset/AssetHandler.h>
 #include <AzTest/GemTestEnvironment.h>
 
 namespace UnitTest::StubRHI
@@ -17,7 +17,7 @@ namespace UnitTest::StubRHI
     class Factory;
 }// namespace UnitTest::StubRHI
 
-namespace AZ::RPI
+namespace JE::Render::RPI
 {
     class RPISystem;
     class ImageSystem;
@@ -108,9 +108,9 @@ namespace UnitTest
 
     protected:
         AZStd::unique_ptr<UnitTest::StubRHI::Factory> m_rhiFactory;
-        AZStd::unique_ptr<AZ::RPI::RPISystem> m_rpiSystem;
-        AZStd::unique_ptr<AZ::RPI::ImageSystem> m_imageSystem;
-        AZStd::unique_ptr<AZ::RPI::MaterialSystem> m_materialSystem;
+        AZStd::unique_ptr<JE::Render::RPI::RPISystem> m_rpiSystem;
+        AZStd::unique_ptr<JE::Render::RPI::ImageSystem> m_imageSystem;
+        AZStd::unique_ptr<JE::Render::RPI::MaterialSystem> m_materialSystem;
     };
 
     struct GradientSignalTest

@@ -9,8 +9,8 @@
 
 #include <TerrainTestFixtures.h>
 
-#include <Atom/RPI.Reflect/Image/ImageMipChainAsset.h>
-#include <Atom/RPI.Reflect/Image/StreamingImageAssetHandler.h>
+#include <JE/Render/RPI/Reflect/Image/ImageMipChainAsset.h>
+#include <JE/Render/RPI/Reflect/Image/StreamingImageAssetHandler.h>
 #include <AzFramework/Components/TransformComponent.h>
 #include <AzFramework/Scene/SceneSystemComponent.h>
 #include <GradientSignal/Components/GradientSurfaceDataComponent.h>
@@ -87,7 +87,7 @@ namespace UnitTest
         auto serializeContext = AZ::ReflectionEnvironment::GetReflectionManager()
             ? AZ::ReflectionEnvironment::GetReflectionManager()->GetReflectContext<AZ::SerializeContext>()
             : nullptr;
-        AZ::RPI::RPISystem::Reflect(serializeContext);
+        JE::Render::RPI::RPISystem::Reflect(serializeContext);
     }
 
     void TerrainBaseFixture::SetupCoreSystems()

@@ -115,14 +115,14 @@ namespace TextureAtlasNamespace
     }
 
     // Links this atlas to an image pointer
-    void TextureAtlasImpl::SetTexture(AZ::Data::Instance<AZ::RPI::Image> image)
+    void TextureAtlasImpl::SetTexture(AZ::Data::Instance<JE::Render::RPI::Image> image)
     {
         // We don't need to delete the old value because the pointer is handled elsewhere
         m_image = image;
     }
     
     // Returns the image linked to this atlas
-    AZ::Data::Instance<AZ::RPI::Image> TextureAtlasImpl::GetTexture() const
+    AZ::Data::Instance<JE::Render::RPI::Image> TextureAtlasImpl::GetTexture() const
     {
         return m_image;
     }

@@ -13,8 +13,8 @@
 #include <AzFramework/Scene/Scene.h>
 
 #include <Integration/Assets/ActorAsset.h>
-#include <Atom/RPI.Public/Base.h>
-#include <Atom/RPI.Public/ViewportContext.h>
+#include <JE/Render/RPI/Public/Base.h>
+#include <JE/Render/RPI/Public/ViewportContext.h>
 #include <Atom/Feature/SkyBox/SkyBoxFeatureProcessorInterface.h>
 #include <Atom/Feature/CoreLights/DirectionalLightFeatureProcessorInterface.h>
 #include <Atom/Feature/Utils/LightingPreset.h>
@@ -31,10 +31,15 @@ namespace AZ
         class MeshFeatureProcessorInterface;
     }
 
-    namespace RPI
-    {
+    }
+
+namespace JE::Render::RPI
+{
         class WindowContext;
     }
+
+namespace AZ
+{
 }
 
 namespace EMStudio
@@ -46,7 +51,7 @@ namespace EMStudio
     public:
         AZ_CLASS_ALLOCATOR(AnimViewportRenderer, AZ::SystemAllocator);
 
-        AnimViewportRenderer(AZ::RPI::ViewportContextPtr viewportContext, const RenderOptions* renderOptions);
+        AnimViewportRenderer(JE::Render::RPI::ViewportContextPtr viewportContext, const RenderOptions* renderOptions);
         ~AnimViewportRenderer();
 
         void Reinit();
@@ -66,7 +71,7 @@ namespace EMStudio
         void MoveActorEntitiesToOrigin();
 
         //! Get the ID for the render scene.
-        AZ::RPI::SceneId GetRenderSceneId() const;
+        JE::Render::RPI::SceneId GetRenderSceneId() const;
 
         //! Get a list of actor entities in the animation viewport.
         const AZStd::vector<AZ::Entity*>& GetActorEntities() const;
@@ -85,11 +90,11 @@ namespace EMStudio
         AZ::Entity* FindActorEntity(AZ::Data::Asset<EMotionFX::Integration::ActorAsset> actorAsset) const;
         void SetLightingPreset(const AZ::Render::LightingPreset* preset);
 
-        AZStd::shared_ptr<AZ::RPI::WindowContext> m_windowContext;
+        AZStd::shared_ptr<JE::Render::RPI::WindowContext> m_windowContext;
         AZStd::unique_ptr<AzFramework::EntityContext> m_entityContext;
         AZStd::shared_ptr<AzFramework::Scene> m_frameworkScene;
-        AZ::RPI::ScenePtr m_scene;
-        AZ::RPI::RenderPipelinePtr m_renderPipeline;
+        JE::Render::RPI::ScenePtr m_scene;
+        JE::Render::RPI::RenderPipelinePtr m_renderPipeline;
         AZ::Render::DirectionalLightFeatureProcessorInterface* m_directionalLightFeatureProcessor = nullptr;
         AZ::Render::DisplayMapperFeatureProcessorInterface* m_displayMapperFeatureProcessor = nullptr;
         AZ::Render::SkyBoxFeatureProcessorInterface* m_skyboxFeatureProcessor = nullptr;

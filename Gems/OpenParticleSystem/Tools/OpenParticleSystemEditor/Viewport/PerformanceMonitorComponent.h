@@ -11,7 +11,7 @@
 #include <AzCore/Component/Component.h>
 #include <AzCore/Statistics/RunningStatistic.h>
 
-#include <Atom/RPI.Public/Pass/Pass.h>
+#include <JE/Render/RPI/Public/Pass/Pass.h>
 #include <PerformanceMonitorRequestBus.h>
 
 namespace OpenParticleSystemEditor

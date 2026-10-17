@@ -17,7 +17,7 @@
 
 AZ_DECLARE_BUDGET(SurfaceData);
 
-namespace AZ
+namespace JE::Render
 {
     namespace RPI
     {
@@ -84,7 +84,7 @@ namespace SurfaceData
     }
 
     bool GetMeshRayIntersection(
-        const AZ::RPI::ModelAsset& meshAsset, const AZ::Transform& meshTransform,
+        const JE::Render::RPI::ModelAsset& meshAsset, const AZ::Transform& meshTransform,
         const AZ::Transform& meshTransformInverse, const AZ::Vector3& nonUniformScale,
         const AZ::Vector3& rayStart, const AZ::Vector3& rayEnd,
         AZ::Vector3& outPosition, AZ::Vector3& outNormal);

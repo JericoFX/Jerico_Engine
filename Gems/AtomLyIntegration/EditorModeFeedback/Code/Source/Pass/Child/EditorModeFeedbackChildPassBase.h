@@ -10,8 +10,8 @@
 
 #include <AzCore/Console/IConsole.h>
 
-#include <Atom/RPI.Public/Shader/ShaderResourceGroup.h>
-#include <Atom/RPI.Public/Pass/FullscreenTrianglePass.h>
+#include <JE/Render/RPI/Public/Shader/ShaderResourceGroup.h>
+#include <JE/Render/RPI/Public/Pass/FullscreenTrianglePass.h>
 
 // Temporary measure for configuring editor mode feedback effects at runtime until GHI 3455 is implemented
 #define AZ_EDITOR_MODE_PASS_CVAR(TYPE, NAMESPACE, NAME, INITIAL_VALUE)                              \
@@ -31,14 +31,14 @@ namespace AZ
         //! Base class to provide depth transitioning and final blend control to all visual effect passes of the editor mode
         //! feedback system.
         class EditorModeFeedbackChildPassBase
-            : public AZ::RPI::FullscreenTrianglePass
+            : public JE::Render::RPI::FullscreenTrianglePass
         {
         public:
-            AZ_RTTI(EditorModeFeedbackChildPassBase, "{F1F345E3-1396-47F7-9CA4-9AC87A2E9829}", AZ::RPI::FullscreenTrianglePass);
+            AZ_RTTI(EditorModeFeedbackChildPassBase, "{F1F345E3-1396-47F7-9CA4-9AC87A2E9829}", JE::Render::RPI::FullscreenTrianglePass);
             AZ_CLASS_ALLOCATOR(EditorModeFeedbackChildPassBase, SystemAllocator);
 
             //! Creates a EditorModeFeedbackPassBase
-            static RPI::Ptr<EditorModeFeedbackChildPassBase> Create(const RPI::PassDescriptor& descriptor);
+            static JE::Render::RPI::Ptr<EditorModeFeedbackChildPassBase> Create(const JE::Render::RPI::PassDescriptor& descriptor);
 
             //! Sets the minimum blend amount that will be calculated through depth transitioning. 
             void SetMinDepthTransitionValue(float minValue);
@@ -53,7 +53,7 @@ namespace AZ
             void SetFinalBlendAmount(float amount);
 
         protected:
-            using AZ::RPI::FullscreenTrianglePass::FullscreenTrianglePass;
+            using JE::Render::RPI::FullscreenTrianglePass::FullscreenTrianglePass;
 
             struct DepthTransition
             {
@@ -64,7 +64,7 @@ namespace AZ
             };
 
             EditorModeFeedbackChildPassBase(
-                const RPI::PassDescriptor& descriptor, const DepthTransition& depthTransition, float finalBlendAmount);
+                const JE::Render::RPI::PassDescriptor& descriptor, const DepthTransition& depthTransition, float finalBlendAmount);
 
             //! Pass behavior overrides
             void InitializeInternal() override;

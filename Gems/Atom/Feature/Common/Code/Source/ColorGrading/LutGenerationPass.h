@@ -10,9 +10,9 @@
 
 #include <PostProcessing/HDRColorGradingPass.h>
 #include <Atom/Feature/ColorGrading/LutGenerationCaptureBus.h>
-#include <Atom/RPI.Public/Shader/Shader.h>
-#include <Atom/RPI.Public/Shader/ShaderResourceGroup.h>
-#include <Atom/RPI.Reflect/Shader/ShaderVariantKey.h>
+#include <JE/Render/RPI/Public/Shader/Shader.h>
+#include <JE/Render/RPI/Public/Shader/ShaderResourceGroup.h>
+#include <JE/Render/RPI/Reflect/Shader/ShaderVariantKey.h>
 
 #include <PostProcess/ColorGrading/HDRColorGradingSettings.h>
 #include <Atom/Feature/DisplayMapper/DisplayMapperFeatureProcessorInterface.h>
@@ -26,16 +26,16 @@ namespace AZ
             : public AZ::Render::HDRColorGradingPass
         {
         public:
-            AZ_RTTI(LutGenerationPass, "{C21DABA8-B538-4C80-BA18-5B97CC9259E5}", AZ::RPI::FullscreenTrianglePass);
+            AZ_RTTI(LutGenerationPass, "{C21DABA8-B538-4C80-BA18-5B97CC9259E5}", JE::Render::RPI::FullscreenTrianglePass);
             AZ_CLASS_ALLOCATOR(LutGenerationPass, SystemAllocator);
 
             virtual ~LutGenerationPass() = default;
 
             //! Creates a ColorGradingPass
-            static RPI::Ptr<LutGenerationPass> Create(const RPI::PassDescriptor& descriptor);
+            static JE::Render::RPI::Ptr<LutGenerationPass> Create(const JE::Render::RPI::PassDescriptor& descriptor);
 
         protected:
-            LutGenerationPass(const RPI::PassDescriptor& descriptor);
+            LutGenerationPass(const JE::Render::RPI::PassDescriptor& descriptor);
 
             void InitializeInternal() override;
             void FrameBeginInternal(FramePrepareParams params) override;

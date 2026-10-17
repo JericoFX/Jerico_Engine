@@ -10,32 +10,32 @@
 #include <Pass/State/EditorStateParentPass.h>
 #include <Pass/State/EditorStateParentPassData.h>
 
-#include <Atom/RPI.Public/Pass/FullscreenTrianglePass.h>
-#include <Atom/RPI.Public/Pass/ParentPass.h>
-#include <Atom/RPI.Public/Pass/PassUtils.h>
+#include <JE/Render/RPI/Public/Pass/FullscreenTrianglePass.h>
+#include <JE/Render/RPI/Public/Pass/ParentPass.h>
+#include <JE/Render/RPI/Public/Pass/PassUtils.h>
 
 namespace AZ::Render
 {
     //! Pass class for the EditorStateBufferCopy pass to copy over buffer contents.
     class EditorStateBufferCopyPass
-        : public AZ::RPI::FullscreenTrianglePass
+        : public JE::Render::RPI::FullscreenTrianglePass
     {
     public:
-        AZ_RTTI(EditorStateBufferCopyPass, "{03EE6F22-7A28-4D01-9D22-0CC04A66B54D}", AZ::RPI::FullscreenTrianglePass);
+        AZ_RTTI(EditorStateBufferCopyPass, "{03EE6F22-7A28-4D01-9D22-0CC04A66B54D}", JE::Render::RPI::FullscreenTrianglePass);
         AZ_CLASS_ALLOCATOR(EditorStateBufferCopyPass, SystemAllocator);
 
         virtual ~EditorStateBufferCopyPass() = default;
 
         //! Creates a EditorStateBufferCopyPass.
-        static RPI::Ptr<EditorStateBufferCopyPass> Create(const RPI::PassDescriptor& descriptor);
+        static JE::Render::RPI::Ptr<EditorStateBufferCopyPass> Create(const JE::Render::RPI::PassDescriptor& descriptor);
 
     protected:
-        EditorStateBufferCopyPass(const RPI::PassDescriptor& descriptor);
+        EditorStateBufferCopyPass(const JE::Render::RPI::PassDescriptor& descriptor);
 
         //! Enables/disables this copy buffer pass.
         bool IsEnabled() const override;
 
     private:
-        RPI::PassDescriptor m_passDescriptor;
+        JE::Render::RPI::PassDescriptor m_passDescriptor;
     };
 } // namespace AZ::Render

@@ -6,9 +6,9 @@
  *
  */
 
-#include <Atom/RPI.Public/RenderPipeline.h>
-#include <Atom/RPI.Public/Scene.h>
-#include <Atom/RPI.Public/Pass/PassFilter.h>
+#include <JE/Render/RPI/Public/RenderPipeline.h>
+#include <JE/Render/RPI/Public/Scene.h>
+#include <JE/Render/RPI/Public/Pass/PassFilter.h>
 #include <Debug/RayTracingDebugFeatureProcessor.h>
 #include <RayTracing/RayTracingFeatureProcessor.h>
 
@@ -19,7 +19,7 @@ namespace AZ::Render
         if (auto* serializeContext{ azrtti_cast<SerializeContext*>(context) })
         {
             // clang-format off
-            serializeContext->Class<RayTracingDebugFeatureProcessor, RPI::FeatureProcessor>()
+            serializeContext->Class<RayTracingDebugFeatureProcessor, JE::Render::RPI::FeatureProcessor>()
                 ->Version(0)
             ;
             // clang-format on
@@ -68,12 +68,12 @@ namespace AZ::Render
         m_settings.reset();
     }
 
-    void RayTracingDebugFeatureProcessor::AddRenderPasses(RPI::RenderPipeline* pipeline)
+    void RayTracingDebugFeatureProcessor::AddRenderPasses(JE::Render::RPI::RenderPipeline* pipeline)
     {
         m_pipeline = pipeline;
         if (m_debugComponentCount > 0)
         {
-            auto pass = RPI::PassSystemInterface::Get()->CreatePassFromTemplate(Name{ "DebugRayTracingPassTemplate" }, Name{ "DebugRayTracingPass" });
+            auto pass = JE::Render::RPI::PassSystemInterface::Get()->CreatePassFromTemplate(Name{ "DebugRayTracingPassTemplate" }, Name{ "DebugRayTracingPass" });
             if (!pass)
             {
                 AZ_Assert(false, "Failed to create DebugRayTracingPass");
@@ -86,7 +86,7 @@ namespace AZ::Render
         FeatureProcessor::AddRenderPasses(pipeline);
     }
 
-    void RayTracingDebugFeatureProcessor::Render(const RPI::FeatureProcessor::RenderPacket& packet)
+    void RayTracingDebugFeatureProcessor::Render(const JE::Render::RPI::FeatureProcessor::RenderPacket& packet)
     {
         if (m_debugComponentCount == 0)
         {
@@ -95,13 +95,13 @@ namespace AZ::Render
         if (m_settings->GetEnabled() != m_isEnabled)
         {
             m_isEnabled = m_settings->GetEnabled();
-            auto filter = AZ::RPI::PassFilter::CreateWithTemplateName(Name{ "DebugRayTracingPassTemplate" }, m_pipeline);
-            AZ::RPI::PassSystemInterface::Get()->ForEachPass(
+            auto filter = JE::Render::RPI::PassFilter::CreateWithTemplateName(Name{ "DebugRayTracingPassTemplate" }, m_pipeline);
+            JE::Render::RPI::PassSystemInterface::Get()->ForEachPass(
                 filter,
-                [&](AZ::RPI::Pass* pass)
+                [&](JE::Render::RPI::Pass* pass)
                 {
                     pass->SetEnabled(m_isEnabled);
-                    return AZ::RPI::PassFilterExecutionFlow::ContinueVisitingPasses;
+                    return JE::Render::RPI::PassFilterExecutionFlow::ContinueVisitingPasses;
                 });
         }
 
@@ -129,7 +129,7 @@ namespace AZ::Render
     {
         if (m_pipeline)
         {
-            m_pipeline->MarkPipelinePassChanges(RPI::PipelinePassChanges::PipelineChangedByFeatureProcessor);
+            m_pipeline->MarkPipelinePassChanges(JE::Render::RPI::PipelinePassChanges::PipelineChangedByFeatureProcessor);
         }
     }
 } // namespace AZ::Render

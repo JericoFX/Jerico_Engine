@@ -14,24 +14,24 @@
 #include <Atom/RHI/Factory.h>
 #include <Atom/RHI/FrameScheduler.h>
 
-#include <Atom/RPI.Reflect/Pass/PassTemplate.h>
+#include <JE/Render/RPI/Reflect/Pass/PassTemplate.h>
 
-#include <Atom/RPI.Public/Pass/PassUtils.h>
-#include <Atom/RPI.Public/Pass/PassAttachment.h>
-#include <Atom/RPI.Public/Pass/PassDefines.h>
-#include <Atom/RPI.Public/Pass/PassFactory.h>
-#include <Atom/RPI.Public/Pass/PassSystemInterface.h>
-#include <Atom/RPI.Public/RPIUtils.h>
-#include <Atom/RPI.Public/Scene.h>
-#include <Atom/RPI.Public/RenderPipeline.h>
-#include <Atom/RPI.Public/View.h>
-#include <Atom/RPI.Public/RPISystemInterface.h>
-#include <Atom/RPI.Public/Shader/ShaderResourceGroup.h>
+#include <JE/Render/RPI/Public/Pass/PassUtils.h>
+#include <JE/Render/RPI/Public/Pass/PassAttachment.h>
+#include <JE/Render/RPI/Public/Pass/PassDefines.h>
+#include <JE/Render/RPI/Public/Pass/PassFactory.h>
+#include <JE/Render/RPI/Public/Pass/PassSystemInterface.h>
+#include <JE/Render/RPI/Public/RPIUtils.h>
+#include <JE/Render/RPI/Public/Scene.h>
+#include <JE/Render/RPI/Public/RenderPipeline.h>
+#include <JE/Render/RPI/Public/View.h>
+#include <JE/Render/RPI/Public/RPISystemInterface.h>
+#include <JE/Render/RPI/Public/Shader/ShaderResourceGroup.h>
 
-#include <Atom/RPI.Public/Image/AttachmentImagePool.h>
-#include <Atom/RPI.Public/Image/ImageSystemInterface.h>
+#include <JE/Render/RPI/Public/Image/AttachmentImagePool.h>
+#include <JE/Render/RPI/Public/Image/ImageSystemInterface.h>
 
-#include <Atom/RPI.Reflect/Pass/ComputePassData.h>
+#include <JE/Render/RPI/Reflect/Pass/ComputePassData.h>
 
 #include <sstream>
 
@@ -49,17 +49,17 @@ namespace AZ
             constexpr float BlurFilterMinRadius = 0;
         }
 
-        RPI::Ptr<BloomBlurPass> BloomBlurPass::Create(const RPI::PassDescriptor& descriptor)
+        JE::Render::RPI::Ptr<BloomBlurPass> BloomBlurPass::Create(const JE::Render::RPI::PassDescriptor& descriptor)
         {
-            RPI::Ptr<BloomBlurPass> pass = aznew BloomBlurPass(descriptor);
+            JE::Render::RPI::Ptr<BloomBlurPass> pass = aznew BloomBlurPass(descriptor);
             return pass;
         }
 
-        BloomBlurPass::BloomBlurPass(const RPI::PassDescriptor& descriptor)
+        BloomBlurPass::BloomBlurPass(const JE::Render::RPI::PassDescriptor& descriptor)
             : ParentPass(descriptor)
         {
             // Load DownsampleMipChainPassData (shader asset)
-            const RPI::DownsampleMipChainPassData* passData = RPI::PassUtils::GetPassData<RPI::DownsampleMipChainPassData>(descriptor);
+            const JE::Render::RPI::DownsampleMipChainPassData* passData = JE::Render::RPI::PassUtils::GetPassData<JE::Render::RPI::DownsampleMipChainPassData>(descriptor);
             if (passData == nullptr)
             {
                 AZ_Error("PassSystem", false, "[BloomBlurPass '%s']: Trying to construct without valid DownsampleMipChainPassData!",
@@ -76,7 +76,7 @@ namespace AZ
         void BloomBlurPass::GetInputInfo()
         {
             AZ_Assert(GetInputOutputCount() > 0, "[BloomBlurPass '%s']: must have an input/output", GetPathName().GetCStr());
-            RPI::PassAttachment* attachment = GetInputOutputBinding(0).GetAttachment().get();
+            JE::Render::RPI::PassAttachment* attachment = GetInputOutputBinding(0).GetAttachment().get();
 
             if (attachment != nullptr)
             {
@@ -107,9 +107,9 @@ namespace AZ
                 }
             };
 
-            RPI::Scene* scene = GetScene();
+            JE::Render::RPI::Scene* scene = GetScene();
             PostProcessFeatureProcessor* fp = scene->GetFeatureProcessor<PostProcessFeatureProcessor>();
-            RPI::ViewPtr view = m_pipeline->GetFirstView(GetPipelineViewTag());
+            JE::Render::RPI::ViewPtr view = m_pipeline->GetFirstView(GetPipelineViewTag());
             if (fp)
             {
                 PostProcessSettings* postProcessSettings = fp->GetLevelSettingsFromView(view);
@@ -137,17 +137,17 @@ namespace AZ
 
         void BloomBlurPass::CreateBinding(BloomBlurChildPass* pass, uint32_t mipLevel, bool isHorizontalPass)
         {
-            RPI::PassAttachmentBinding& parentInOutBinding = GetInputOutputBinding(0);
-            const RPI::Ptr<RPI::PassAttachment>& parentInOutAttachment = parentInOutBinding.GetAttachment();
+            JE::Render::RPI::PassAttachmentBinding& parentInOutBinding = GetInputOutputBinding(0);
+            const JE::Render::RPI::Ptr<JE::Render::RPI::PassAttachment>& parentInOutAttachment = parentInOutBinding.GetAttachment();
 
-            RPI::PassAttachmentBinding& parentInBinding = GetInputBinding(0);
-            const RPI::Ptr<RPI::PassAttachment>& parentWorkSpaceAttachment = parentInBinding.GetAttachment();
+            JE::Render::RPI::PassAttachmentBinding& parentInBinding = GetInputBinding(0);
+            const JE::Render::RPI::Ptr<JE::Render::RPI::PassAttachment>& parentWorkSpaceAttachment = parentInBinding.GetAttachment();
 
             // Create input binding, from downsampling pass
-            RPI::PassAttachmentBinding inBinding;
+            JE::Render::RPI::PassAttachmentBinding inBinding;
             inBinding.m_name = "Input";
             inBinding.m_shaderInputName = "m_inputTexture";
-            inBinding.m_slotType = RPI::PassSlotType::Input;
+            inBinding.m_slotType = JE::Render::RPI::PassSlotType::Input;
             inBinding.m_scopeAttachmentUsage = RHI::ScopeAttachmentUsage::Shader;
             inBinding.m_connectedBinding = isHorizontalPass ? &parentInOutBinding : &parentInBinding;
 
@@ -160,10 +160,10 @@ namespace AZ
             pass->AddAttachmentBinding(inBinding);
 
             // Create output binding, owned by current pass
-            RPI::PassAttachmentBinding outBinding;
+            JE::Render::RPI::PassAttachmentBinding outBinding;
             outBinding.m_name = "Output";
             outBinding.m_shaderInputName = "m_outputTexture";
-            outBinding.m_slotType = RPI::PassSlotType::Output;
+            outBinding.m_slotType = JE::Render::RPI::PassSlotType::Output;
             outBinding.m_scopeAttachmentUsage = RHI::ScopeAttachmentUsage::Shader;
             outBinding.m_connectedBinding = isHorizontalPass ? &parentInBinding : &parentInOutBinding;
 
@@ -192,7 +192,7 @@ namespace AZ
             else
             {
                 // Create children
-                RPI::PassSystemInterface* passSystem = RPI::PassSystemInterface::Get();
+                JE::Render::RPI::PassSystemInterface* passSystem = JE::Render::RPI::PassSystemInterface::Get();
 
                 uint32_t stageCount = Render::Bloom::MaxStageCount;
                 for (uint32_t childIndex = 0; childIndex < stageCount * 2; ++childIndex)
@@ -200,9 +200,9 @@ namespace AZ
                     uint32_t stageIndex = childIndex % stageCount;
                     bool isHorizontalPass = childIndex < stageCount;
 
-                    RPI::PassDescriptor childDesc;
-                    childDesc.m_passData = AZStd::make_shared<RPI::ComputePassData>();
-                    RPI::ComputePassData* passData = static_cast<RPI::ComputePassData*>(childDesc.m_passData.get());
+                    JE::Render::RPI::PassDescriptor childDesc;
+                    childDesc.m_passData = AZStd::make_shared<JE::Render::RPI::ComputePassData>();
+                    JE::Render::RPI::ComputePassData* passData = static_cast<JE::Render::RPI::ComputePassData*>(childDesc.m_passData.get());
                     passData->m_shaderReference = m_passData.m_shaderReference;
 
                     if (isHorizontalPass)
@@ -213,7 +213,7 @@ namespace AZ
                     {
                         childDesc.m_passName = Name{ AZStd::string::format("BloomBlurVertical%d", stageIndex) };
                     }
-                    RPI::Ptr<BloomBlurChildPass> childPass = passSystem->CreatePass<BloomBlurChildPass>(childDesc);
+                    JE::Render::RPI::Ptr<BloomBlurChildPass> childPass = passSystem->CreatePass<BloomBlurChildPass>(childDesc);
 
                     CreateBinding(childPass.get(), stageIndex, isHorizontalPass);
                     AddChild(childPass);
@@ -275,7 +275,7 @@ namespace AZ
             m_offsetData.clear();
             m_kernelRadiusData.clear();
 
-            RPI::PassAttachment* inOutAttachment = GetInputOutputBinding(0).GetAttachment().get();
+            JE::Render::RPI::PassAttachment* inOutAttachment = GetInputOutputBinding(0).GetAttachment().get();
             uint32_t imageWidth = inOutAttachment->m_descriptor.m_image.m_size.m_width;
 
             // Horizontal & vertical pass shared the same kernel
@@ -376,20 +376,20 @@ namespace AZ
                 std::stringstream ss;
                 ss << GetPathName().GetCStr() << ".WeightBuffer.Stage" << blurStageIndex;
 
-                RPI::CommonBufferDescriptor desc;
-                desc.m_poolType = RPI::CommonBufferPoolType::ReadOnly;
+                JE::Render::RPI::CommonBufferDescriptor desc;
+                desc.m_poolType = JE::Render::RPI::CommonBufferPoolType::ReadOnly;
                 desc.m_bufferName = ss.str().c_str();
                 desc.m_elementSize = sizeof(float);
                 desc.m_elementFormat = RHI::Format::R32_FLOAT;
                 desc.m_byteCount = byteCount;
                 desc.m_bufferData = static_cast<void*>(m_weightData[blurStageIndex].data());
-                m_weightBuffer[blurStageIndex] = RPI::BufferSystemInterface::Get()->CreateBufferFromCommonPool(desc);
+                m_weightBuffer[blurStageIndex] = JE::Render::RPI::BufferSystemInterface::Get()->CreateBufferFromCommonPool(desc);
 
                 ss.clear();
                 ss << GetPathName().GetCStr() << "OffsetBuffer.Stage" << blurStageIndex;
                 desc.m_bufferName = ss.str().c_str();
                 desc.m_bufferData = static_cast<void*>(m_offsetData[blurStageIndex].data());
-                m_offsetBuffer[blurStageIndex] = RPI::BufferSystemInterface::Get()->CreateBufferFromCommonPool(desc);
+                m_offsetBuffer[blurStageIndex] = JE::Render::RPI::BufferSystemInterface::Get()->CreateBufferFromCommonPool(desc);
             }
             else
             {
@@ -407,19 +407,19 @@ namespace AZ
 
         // ============ Child pass's member function ============
 
-        RPI::Ptr<BloomBlurChildPass> BloomBlurChildPass::Create(const RPI::PassDescriptor& descriptor)
+        JE::Render::RPI::Ptr<BloomBlurChildPass> BloomBlurChildPass::Create(const JE::Render::RPI::PassDescriptor& descriptor)
         {
-            RPI::Ptr<BloomBlurChildPass> pass = aznew BloomBlurChildPass(descriptor);
+            JE::Render::RPI::Ptr<BloomBlurChildPass> pass = aznew BloomBlurChildPass(descriptor);
             return pass;
         }
 
-        BloomBlurChildPass::BloomBlurChildPass(const RPI::PassDescriptor& descriptor)
+        BloomBlurChildPass::BloomBlurChildPass(const JE::Render::RPI::PassDescriptor& descriptor)
             : ComputePass(descriptor)
         { }
 
         void BloomBlurChildPass::UpdateParameters(
-            Data::Instance<RPI::Buffer> offsetBuffer,
-            Data::Instance<RPI::Buffer> weightBuffer,
+            Data::Instance<JE::Render::RPI::Buffer> offsetBuffer,
+            Data::Instance<JE::Render::RPI::Buffer> weightBuffer,
             uint32_t radius,
             bool direction,
             uint32_t mipLevel,

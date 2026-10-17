@@ -12,7 +12,7 @@
 
 #include <Atom/RHI.Reflect/ShaderResourceGroupLayoutDescriptor.h>
 
-#include <Atom/RPI.Public/View.h>
+#include <JE/Render/RPI/Public/View.h>
 
 #include <Atom/Feature/PostProcess/ExposureControl/ExposureControlSettingsInterface.h>
 
@@ -101,9 +101,9 @@ namespace AZ
             bool m_shouldUpdateShaderParameters = true;
 
             // Cache of the default view of the render pipeline to check change of the default view.
-            const RPI::View* m_lastDefaultView = nullptr;
+            const JE::Render::RPI::View* m_lastDefaultView = nullptr;
 
-            AZ::Data::Instance<RPI::Buffer> m_buffer;
+            AZ::Data::Instance<JE::Render::RPI::Buffer> m_buffer;
 
             const AZ::Name m_eyeAdaptationPassTemplateNameId;
             const AZ::Name m_luminanceHeatmapNameId;

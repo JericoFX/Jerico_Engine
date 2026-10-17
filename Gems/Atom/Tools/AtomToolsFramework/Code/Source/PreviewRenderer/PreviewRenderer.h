@@ -9,8 +9,8 @@
 #pragma once
 
 #include <Atom/Feature/Utils/FrameCaptureBus.h>
-#include <Atom/RPI.Public/Base.h>
-#include <Atom/RPI.Public/Pass/AttachmentReadback.h>
+#include <JE/Render/RPI/Public/Base.h>
+#include <JE/Render/RPI/Public/Pass/AttachmentReadback.h>
 #include <AtomToolsFramework/PreviewRenderer/PreviewContent.h>
 #include <AtomToolsFramework/PreviewRenderer/PreviewRendererCaptureRequest.h>
 #include <AtomToolsFramework/PreviewRenderer/PreviewRendererInterface.h>
@@ -36,8 +36,8 @@ namespace AtomToolsFramework
 
         void AddCaptureRequest(const PreviewRendererCaptureRequest& captureRequest) override;
 
-        AZ::RPI::ScenePtr GetScene() const override;
-        AZ::RPI::ViewPtr GetView() const override;
+        JE::Render::RPI::ScenePtr GetScene() const override;
+        JE::Render::RPI::ViewPtr GetView() const override;
         AZ::Uuid GetEntityContextId() const override;
 
         void ProcessCaptureRequests();
@@ -66,10 +66,10 @@ namespace AtomToolsFramework
         static constexpr float FarDist = 100.0f;
         static constexpr float FieldOfView = AZ::Constants::HalfPi;
 
-        AZ::RPI::ScenePtr m_scene;
+        JE::Render::RPI::ScenePtr m_scene;
         AZStd::shared_ptr<AzFramework::Scene> m_frameworkScene;
-        AZ::RPI::RenderPipelinePtr m_renderPipeline;
-        AZ::RPI::ViewPtr m_view;
+        JE::Render::RPI::RenderPipelinePtr m_renderPipeline;
+        JE::Render::RPI::ViewPtr m_view;
         AZStd::vector<AZStd::string> m_passHierarchy;
         AZStd::unique_ptr<AzFramework::EntityContext> m_entityContext;
 

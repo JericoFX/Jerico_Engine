@@ -8,7 +8,7 @@
 #pragma once
 
 #include <AzCore/Memory/SystemAllocator.h>
-#include <Atom/RPI.Public/Pass/FullscreenTrianglePass.h>
+#include <JE/Render/RPI/Public/Pass/FullscreenTrianglePass.h>
 
 namespace AZ::Render
 {
@@ -18,19 +18,19 @@ namespace AZ::Render
     // if there's no objects that draw into the silhouette gather pass.
     // We don't enable/disable the pass because that causes render pass rebuilding when using subpass merging.
     class SilhouetteCompositePass final
-        : public RPI::FullscreenTrianglePass
+        : public JE::Render::RPI::FullscreenTrianglePass
     {
         AZ_RPI_PASS(SilhouetteCompositePass);
 
     public:
-        AZ_RTTI(SilhouetteCompositePass, "{D5185238-790C-4B1D-A12E-8193EA25EF76}", RPI::FullscreenTrianglePass);
+        AZ_RTTI(SilhouetteCompositePass, "{D5185238-790C-4B1D-A12E-8193EA25EF76}", JE::Render::RPI::FullscreenTrianglePass);
         AZ_CLASS_ALLOCATOR(SilhouetteCompositePass, SystemAllocator);
         ~SilhouetteCompositePass() = default;
 
-        static RPI::Ptr<SilhouetteCompositePass> Create(const RPI::PassDescriptor& descriptor);
+        static JE::Render::RPI::Ptr<SilhouetteCompositePass> Create(const JE::Render::RPI::PassDescriptor& descriptor);
 
     protected:
-        SilhouetteCompositePass(const RPI::PassDescriptor& descriptor);
+        SilhouetteCompositePass(const JE::Render::RPI::PassDescriptor& descriptor);
 
         // Pass behavior overrides...
         void InitializeInternal() override;

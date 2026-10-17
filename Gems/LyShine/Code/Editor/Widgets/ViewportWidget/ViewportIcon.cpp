@@ -15,8 +15,8 @@
 #include <LyShine/Bus/UiCanvasBus.h>
 #include <LyShine/Bus/UiTransformBus.h>
 
-#include <Atom/RPI.Public/Image/StreamingImage.h>
-#include <Atom/RPI.Reflect/Image/StreamingImageAsset.h>
+#include <JE/Render/RPI/Public/Image/StreamingImage.h>
+#include <JE/Render/RPI/Reflect/Image/StreamingImageAsset.h>
 
 float ViewportIcon::m_dpiScaleFactor = 1.0f;
 

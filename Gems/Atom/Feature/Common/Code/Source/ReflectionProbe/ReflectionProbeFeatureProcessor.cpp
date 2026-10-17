@@ -9,10 +9,10 @@
 #include <ReflectionProbe/ReflectionProbeFeatureProcessor.h>
 
 #include <AzCore/Serialization/SerializeContext.h>
-#include <Atom/RPI.Public/RPIUtils.h>
-#include <Atom/RPI.Public/Scene.h>
-#include <Atom/RPI.Public/View.h>
-#include <Atom/RPI.Reflect/Asset/AssetUtils.h>
+#include <JE/Render/RPI/Public/RPIUtils.h>
+#include <JE/Render/RPI/Public/Scene.h>
+#include <JE/Render/RPI/Public/View.h>
+#include <JE/Render/RPI/Reflect/Asset/AssetUtils.h>
 #include <Atom/RHI/Factory.h>
 #include <Atom/RHI/RHISystemInterface.h>
 #include <Atom/RHI/DevicePipelineState.h>
@@ -121,7 +121,7 @@ namespace AZ
                     assetId,
                     &AZ::Data::AssetCatalogRequests::GetAssetIdByPath,
                     notificationEntry.m_relativePath.c_str(),
-                    azrtti_typeid<AZ::RPI::StreamingImageAsset>(),
+                    azrtti_typeid<JE::Render::RPI::StreamingImageAsset>(),
                     false);
 
                 if (assetId.IsValid())
@@ -309,7 +309,7 @@ namespace AZ
             return it->second->GetTransform();
         }
 
-        void ReflectionProbeFeatureProcessor::SetCubeMap(const ReflectionProbeHandle& handle, Data::Instance<RPI::Image>& cubeMapImage, const AZStd::string& relativePath)
+        void ReflectionProbeFeatureProcessor::SetCubeMap(const ReflectionProbeHandle& handle, Data::Instance<JE::Render::RPI::Image>& cubeMapImage, const AZStd::string& relativePath)
         {
             if (!ValidateHandle(handle))
             {
@@ -321,7 +321,7 @@ namespace AZ
             m_meshFeatureProcessorUpdateRequired = true;
         }
 
-        Data::Instance<RPI::Image> ReflectionProbeFeatureProcessor::GetCubeMap(const ReflectionProbeHandle& handle) const
+        Data::Instance<JE::Render::RPI::Image> ReflectionProbeFeatureProcessor::GetCubeMap(const ReflectionProbeHandle& handle) const
         {
             if (!ValidateHandle(handle))
             {
@@ -400,7 +400,7 @@ namespace AZ
                 assetId,
                 &AZ::Data::AssetCatalogRequests::GetAssetIdByPath,
                 relativePath.c_str(),
-                azrtti_typeid<AZ::RPI::StreamingImageAsset>(),
+                azrtti_typeid<JE::Render::RPI::StreamingImageAsset>(),
                 false);
 
             // we only track notifications for new cubemap assets, existing assets are automatically reloaded by the RPI
@@ -410,7 +410,7 @@ namespace AZ
             }
         }
 
-        bool ReflectionProbeFeatureProcessor::CheckCubeMapAssetNotification(const AZStd::string& relativePath, Data::Asset<RPI::StreamingImageAsset>& outCubeMapAsset, CubeMapAssetNotificationType& outNotificationType)
+        bool ReflectionProbeFeatureProcessor::CheckCubeMapAssetNotification(const AZStd::string& relativePath, Data::Asset<JE::Render::RPI::StreamingImageAsset>& outCubeMapAsset, CubeMapAssetNotificationType& outNotificationType)
         {
             for (NotifyCubeMapAssetVector::iterator itNotification = m_notifyCubeMapAssets.begin(); itNotification != m_notifyCubeMapAssets.end(); ++itNotification)
             {
@@ -484,7 +484,7 @@ namespace AZ
                     {
                         if (entry->m_typeFlags & AzFramework::VisibilityEntry::TypeFlags::TYPE_RPI_Cullable)
                         {
-                            if (RPI::Cullable* cullable = static_cast<RPI::Cullable*>(entry->m_userData);
+                            if (JE::Render::RPI::Cullable* cullable = static_cast<JE::Render::RPI::Cullable*>(entry->m_userData);
                                 cullable && cullable->m_cullData.m_componentType == Culling::ComponentType::ReflectionProbe)
                             {
                                 AZ::Uuid uuid = cullable->m_cullData.m_componentUuid;
@@ -658,13 +658,13 @@ namespace AZ
 
         void ReflectionProbeFeatureProcessor::LoadShader(
             const char* filePath,
-            RPI::Ptr<RPI::PipelineStateForDraw>& pipelineState,
-            Data::Instance<RPI::Shader>& shader,
+            JE::Render::RPI::Ptr<JE::Render::RPI::PipelineStateForDraw>& pipelineState,
+            Data::Instance<JE::Render::RPI::Shader>& shader,
             RHI::Ptr<RHI::ShaderResourceGroupLayout>& srgLayout,
             RHI::DrawListTag& drawListTag)
         {
             // load shader
-            shader = RPI::LoadCriticalShader(filePath);
+            shader = JE::Render::RPI::LoadCriticalShader(filePath);
 
             if (shader == nullptr)
             {
@@ -676,21 +676,21 @@ namespace AZ
             drawListTag = shader->GetDrawListTag();
 
             // create pipeline state
-            pipelineState = aznew RPI::PipelineStateForDraw;
+            pipelineState = aznew JE::Render::RPI::PipelineStateForDraw;
             pipelineState->Init(shader); // uses default shader variant
             pipelineState->SetInputStreamLayout(m_boxStreamLayout);
             pipelineState->SetOutputFromScene(GetParentScene());
             pipelineState->Finalize();
 
             // load object shader resource group
-            srgLayout = shader->FindShaderResourceGroupLayout(RPI::SrgBindingSlot::Object);
+            srgLayout = shader->FindShaderResourceGroupLayout(JE::Render::RPI::SrgBindingSlot::Object);
             AZ_Error("ReflectionProbeFeatureProcessor", srgLayout != nullptr, "Failed to find ObjectSrg layout from shader [%s]", filePath);
         }
 
-        void ReflectionProbeFeatureProcessor::OnRenderPipelineChanged(RPI::RenderPipeline* renderPipeline,
-            RPI::SceneNotification::RenderPipelineChangeType changeType)
+        void ReflectionProbeFeatureProcessor::OnRenderPipelineChanged(JE::Render::RPI::RenderPipeline* renderPipeline,
+            JE::Render::RPI::SceneNotification::RenderPipelineChangeType changeType)
         {
-            if (changeType == RPI::SceneNotification::RenderPipelineChangeType::PassChanged)
+            if (changeType == JE::Render::RPI::SceneNotification::RenderPipelineChangeType::PassChanged)
             {
                 for (auto& reflectionProbe : m_reflectionProbes)
                 {
@@ -724,7 +724,7 @@ namespace AZ
                 if (itNotification->m_assetId == asset.GetId())
                 {
                     // store the cubemap asset
-                    itNotification->m_asset = Data::static_pointer_cast<RPI::StreamingImageAsset>(asset);
+                    itNotification->m_asset = Data::static_pointer_cast<JE::Render::RPI::StreamingImageAsset>(asset);
                     itNotification->m_notificationType = notificationType;
 
                     // stop notifications on this asset

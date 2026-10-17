@@ -9,7 +9,7 @@
 
 #pragma once
 
-#include <Atom/RPI.Public/Model/ModelLod.h>
+#include <JE/Render/RPI/Public/Model/ModelLod.h>
 #include <DeferredMaterial/DeferredDrawPacket.h>
 #include <DeferredMaterial/DeferredDrawPacketManager.h>
 
@@ -23,7 +23,7 @@ namespace AZ::Render
     public:
         DeferredMeshDrawPacket() = default;
         DeferredMeshDrawPacket(
-            Data::Instance<RPI::ModelLod> modelLod, size_t modelLodMeshIndex, Data::Instance<RPI::Material> materialOverride);
+            Data::Instance<JE::Render::RPI::ModelLod> modelLod, size_t modelLodMeshIndex, Data::Instance<JE::Render::RPI::Material> materialOverride);
 
         ~DeferredMeshDrawPacket();
 
@@ -37,16 +37,16 @@ namespace AZ::Render
 
         auto GetDeferredDrawPacket(const RHI::DrawListTag& drawList) -> Data::Instance<DeferredDrawPacket>;
 
-        void Update(RPI::Scene* scene, DeferredDrawPacketManager* manager, bool forceRebuild);
+        void Update(JE::Render::RPI::Scene* scene, DeferredDrawPacketManager* manager, bool forceRebuild);
 
     private:
         // a mesh can have a DeferredDrawPacket for multiple DrawListTags
         AZStd::unordered_map<RHI::DrawListTag, Data::Instance<DeferredDrawPacket>> m_deferredDrawPackets;
-        Data::Instance<RPI::ModelLod> m_modelLod;
+        Data::Instance<JE::Render::RPI::ModelLod> m_modelLod;
         size_t m_modelLodMeshIndex;
-        Data::Instance<RPI::Material> m_material;
+        Data::Instance<JE::Render::RPI::Material> m_material;
         // Tracks whether the Material has change since the DrawPacket was last built
-        RPI::Material::ChangeId m_materialChangeId = RPI::Material::DEFAULT_CHANGE_ID;
+        JE::Render::RPI::Material::ChangeId m_materialChangeId = JE::Render::RPI::Material::DEFAULT_CHANGE_ID;
     };
 
 } // namespace AZ::Render

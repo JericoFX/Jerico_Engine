@@ -26,10 +26,10 @@ namespace UnitTest
             return m_temp.Resolve(name).Native();
         }
 
-        static AZ::RPI::AttachmentReadback::ReadbackResult Readback(uint32_t size = 2)
+        static JE::Render::RPI::AttachmentReadback::ReadbackResult Readback(uint32_t size = 2)
         {
-            AZ::RPI::AttachmentReadback::ReadbackResult result;
-            result.m_state = AZ::RPI::AttachmentReadback::ReadbackState::Success;
+            JE::Render::RPI::AttachmentReadback::ReadbackResult result;
+            result.m_state = JE::Render::RPI::AttachmentReadback::ReadbackState::Success;
             result.m_attachmentType = AZ::RHI::AttachmentType::Image;
             result.m_imageDescriptor.m_format = AZ::RHI::Format::R32G32B32A32_FLOAT;
             result.m_imageDescriptor.m_size = { size * size, size, 1 };
@@ -50,7 +50,7 @@ namespace UnitTest
             return result;
         }
 
-        static void SetPixel(AZ::RPI::AttachmentReadback::ReadbackResult& result, size_t index, const float (&pixel)[4])
+        static void SetPixel(JE::Render::RPI::AttachmentReadback::ReadbackResult& result, size_t index, const float (&pixel)[4])
         {
             std::memcpy(result.m_dataBuffer->data() + index * sizeof(pixel), pixel, sizeof(pixel));
         }
@@ -79,7 +79,7 @@ namespace UnitTest
             return count;
         }
 
-        void ExpectRejected(const AZ::RPI::AttachmentReadback::ReadbackResult& result) const
+        void ExpectRejected(const JE::Render::RPI::AttachmentReadback::ReadbackResult& result) const
         {
             EXPECT_FALSE(JE::ColorGrading::WriteLutSource(result, Base()).IsSuccess());
             EXPECT_FALSE(AZ::IO::SystemFile::Exists((Base() + ".3dl").c_str()));
@@ -141,9 +141,9 @@ namespace UnitTest
     TEST_F(JEEditorLutWriterTests, RejectsFailedReadbackAndWrongAttachmentOrFormat)
     {
         auto readback = Readback();
-        readback.m_state = AZ::RPI::AttachmentReadback::ReadbackState::Failed;
+        readback.m_state = JE::Render::RPI::AttachmentReadback::ReadbackState::Failed;
         ExpectRejected(readback);
-        readback.m_state = AZ::RPI::AttachmentReadback::ReadbackState::Success;
+        readback.m_state = JE::Render::RPI::AttachmentReadback::ReadbackState::Success;
         readback.m_attachmentType = AZ::RHI::AttachmentType::Buffer;
         ExpectRejected(readback);
         readback.m_attachmentType = AZ::RHI::AttachmentType::Image;

@@ -8,7 +8,7 @@
 
 #include <CoreLights/EditorAreaLightComponent.h>
 
-#include <Atom/RPI.Edit/Common/ColorUtils.h>
+#include <JE/Editor/Render/RPI/Edit/Common/ColorUtils.h>
 #include <AzToolsFramework/Component/EditorComponentAPIBus.h>
 #include <AzToolsFramework/API/EntityCompositionRequestBus.h>
 #include <AzToolsFramework/ViewportSelection/EditorSelectionUtil.h>
@@ -91,7 +91,7 @@ namespace AZ
                             QT_TRANSLATE_NOOP("AtomLyIntegration", "Color of the light"))
                             ->Attribute(Edit::Attributes::ChangeNotify, Edit::PropertyRefreshLevels::ValuesOnly)
                             ->Attribute(Edit::Attributes::Visibility, &AreaLightComponentConfig::LightTypeIsSelected)
-                            ->Attribute("ColorEditorConfiguration", RPI::ColorUtils::GetLinearRgbEditorConfig())
+                            ->Attribute("ColorEditorConfiguration", JE::Render::RPI::ColorUtils::GetLinearRgbEditorConfig())
                         ->DataElement(Edit::UIHandlers::ComboBox, &AreaLightComponentConfig::m_intensityMode,
                             QT_TRANSLATE_NOOP("AtomLyIntegration", "Intensity mode"),
                             QT_TRANSLATE_NOOP("AtomLyIntegration", "Allows specifying which photometric unit to work in."))

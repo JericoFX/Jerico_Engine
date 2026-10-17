@@ -27,19 +27,19 @@ namespace AZ
             virtual ~SMAANeighborhoodBlendingPass() = default;
 
             //! Creates a SMAANeighborhoodBlendingPass
-            static RPI::Ptr<SMAANeighborhoodBlendingPass> Create(const RPI::PassDescriptor& descriptor);
+            static JE::Render::RPI::Ptr<SMAANeighborhoodBlendingPass> Create(const JE::Render::RPI::PassDescriptor& descriptor);
 
             void SetOutputMode(SMAAOutputMode mode);
 
         private:
-            SMAANeighborhoodBlendingPass(const RPI::PassDescriptor& descriptor);
+            SMAANeighborhoodBlendingPass(const JE::Render::RPI::PassDescriptor& descriptor);
 
             // Pass behavior overrides
             void InitializeInternal() override;
 
             // SMAABasePass functions...
             void UpdateSRG() override;
-            void GetCurrentShaderOption(AZ::RPI::ShaderOptionGroup& shaderOption) const override;
+            void GetCurrentShaderOption(JE::Render::RPI::ShaderOptionGroup& shaderOption) const override;
 
             RHI::ShaderInputNameIndex m_renderTargetMetricsShaderInputIndex = "m_renderTargetMetrics";
 

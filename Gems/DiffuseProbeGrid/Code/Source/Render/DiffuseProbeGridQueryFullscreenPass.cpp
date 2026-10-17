@@ -11,10 +11,10 @@
 #include <Atom/RHI/FrameGraphBuilder.h>
 #include <Atom/RHI/FrameGraphInterface.h>
 #include <Atom/RHI/DevicePipelineState.h>
-#include <Atom/RPI.Public/RenderPipeline.h>
-#include <Atom/RPI.Public/Pass/PassUtils.h>
-#include <Atom/RPI.Public/RPIUtils.h>
-#include <Atom/RPI.Public/Scene.h>
+#include <JE/Render/RPI/Public/RenderPipeline.h>
+#include <JE/Render/RPI/Public/Pass/PassUtils.h>
+#include <JE/Render/RPI/Public/RPIUtils.h>
+#include <JE/Render/RPI/Public/Scene.h>
 #include <DiffuseProbeGrid_Traits_Platform.h>
 #include <Render/DiffuseProbeGridQueryFullscreenPass.h>
 #include <Render/DiffuseProbeGridQueryFullscreenPassData.h>
@@ -23,14 +23,14 @@ namespace AZ
 {
     namespace Render
     {
-        RPI::Ptr<DiffuseProbeGridQueryFullscreenPass> DiffuseProbeGridQueryFullscreenPass::Create(const RPI::PassDescriptor& descriptor)
+        JE::Render::RPI::Ptr<DiffuseProbeGridQueryFullscreenPass> DiffuseProbeGridQueryFullscreenPass::Create(const JE::Render::RPI::PassDescriptor& descriptor)
         {
-            RPI::Ptr<DiffuseProbeGridQueryFullscreenPass> pass = aznew DiffuseProbeGridQueryFullscreenPass(descriptor);
+            JE::Render::RPI::Ptr<DiffuseProbeGridQueryFullscreenPass> pass = aznew DiffuseProbeGridQueryFullscreenPass(descriptor);
             return pass;
         }
 
-        DiffuseProbeGridQueryFullscreenPass::DiffuseProbeGridQueryFullscreenPass(const RPI::PassDescriptor& descriptor)
-            : RPI::RenderPass(descriptor),
+        DiffuseProbeGridQueryFullscreenPass::DiffuseProbeGridQueryFullscreenPass(const JE::Render::RPI::PassDescriptor& descriptor)
+            : JE::Render::RPI::RenderPass(descriptor),
               m_passDescriptor(descriptor)
         {
             if (!AZ_TRAIT_DIFFUSE_GI_PASSES_SUPPORTED)
@@ -46,7 +46,7 @@ namespace AZ
 
         void DiffuseProbeGridQueryFullscreenPass::LoadShader()
         {
-            auto passData = RPI::PassUtils::GetPassData<DiffuseProbeGridQueryFullscreenPassData>(m_passDescriptor);
+            auto passData = JE::Render::RPI::PassUtils::GetPassData<DiffuseProbeGridQueryFullscreenPassData>(m_passDescriptor);
             bool useAlbedoTexture = (passData && passData->m_useAlbedoTexture);
 
             // load shader
@@ -54,7 +54,7 @@ namespace AZ
             static const char* QueryFullscreenShaderFilePath = "Shaders/DiffuseGlobalIllumination/DiffuseProbeGridQueryFullscreen.azshader";
             static const char* QueryFullscreenWithAlbedoShaderFilePath = "Shaders/DiffuseGlobalIllumination/DiffuseProbeGridQueryFullscreenWithAlbedo.azshader";
             AZStd::string shaderFilePath = useAlbedoTexture ? QueryFullscreenWithAlbedoShaderFilePath : QueryFullscreenShaderFilePath;
-            m_shader = RPI::LoadCriticalShader(shaderFilePath);
+            m_shader = JE::Render::RPI::LoadCriticalShader(shaderFilePath);
             if (m_shader == nullptr)
             {
                 return;
@@ -62,25 +62,25 @@ namespace AZ
 
             // load pipeline state
             RHI::PipelineStateDescriptorForDispatch pipelineStateDescriptor;
-            const auto& shaderVariant = m_shader->GetVariant(RPI::ShaderAsset::RootShaderVariantStableId);
+            const auto& shaderVariant = m_shader->GetVariant(JE::Render::RPI::ShaderAsset::RootShaderVariantStableId);
             shaderVariant.ConfigurePipelineState(pipelineStateDescriptor);
             m_pipelineState = m_shader->AcquirePipelineState(pipelineStateDescriptor);
 
             // load the ObjectSrg layout
-            m_objectSrgLayout = m_shader->FindShaderResourceGroupLayout(RPI::SrgBindingSlot::Object);
+            m_objectSrgLayout = m_shader->FindShaderResourceGroupLayout(JE::Render::RPI::SrgBindingSlot::Object);
 
             // load the PassSrg
-            const auto passSrgLayout = m_shader->FindShaderResourceGroupLayout(RPI::SrgBindingSlot::Pass);
+            const auto passSrgLayout = m_shader->FindShaderResourceGroupLayout(JE::Render::RPI::SrgBindingSlot::Pass);
             if (passSrgLayout)
             {
-                m_shaderResourceGroup = RPI::ShaderResourceGroup::Create(m_shader->GetAsset(), m_shader->GetSupervariantIndex(), passSrgLayout->GetName());
+                m_shaderResourceGroup = JE::Render::RPI::ShaderResourceGroup::Create(m_shader->GetAsset(), m_shader->GetSupervariantIndex(), passSrgLayout->GetName());
                 AZ_Assert(m_shaderResourceGroup, "[DiffuseProbeGridQueryFullscreenPass]: Failed to create PassSrg", GetPathName().GetCStr());
 
-                RPI::PassUtils::BindDataMappingsToSrg(m_passDescriptor, m_shaderResourceGroup.get());
+                JE::Render::RPI::PassUtils::BindDataMappingsToSrg(m_passDescriptor, m_shaderResourceGroup.get());
             }
 
             // retrieve the number of threads per thread group from the shader
-            const auto outcome = RPI::GetComputeShaderNumThreads(m_shader->GetAsset(), m_dispatchArgs);
+            const auto outcome = JE::Render::RPI::GetComputeShaderNumThreads(m_shader->GetAsset(), m_dispatchArgs);
             if (!outcome.IsSuccess())
             {
                 AZ_Error("PassSystem", false, "[DiffuseProbeGridQueryFullscreenPass '%s']: Shader '%s' contains invalid numthreads arguments:\n%s", GetPathName().GetCStr(), shaderFilePath.c_str(), outcome.GetError().c_str());
@@ -94,7 +94,7 @@ namespace AZ
                 return false;
             }
 
-            RPI::Scene* scene = m_pipeline->GetScene();
+            JE::Render::RPI::Scene* scene = m_pipeline->GetScene();
             if (!scene)
             {
                 return false;
@@ -115,7 +115,7 @@ namespace AZ
         {
             RenderPass::SetupFrameGraphDependencies(frameGraph);
 
-            RPI::Scene* scene = m_pipeline->GetScene();
+            JE::Render::RPI::Scene* scene = m_pipeline->GetScene();
             DiffuseProbeGridFeatureProcessor* diffuseProbeGridFeatureProcessor = scene->GetFeatureProcessor<DiffuseProbeGridFeatureProcessor>();
 
             frameGraph.SetEstimatedItemCount(aznumeric_cast<uint32_t>(diffuseProbeGridFeatureProcessor->GetVisibleProbeGrids().size()));
@@ -172,7 +172,7 @@ namespace AZ
                 m_shaderResourceGroup->Compile();
             }
 
-            RPI::Scene* scene = m_pipeline->GetScene();
+            JE::Render::RPI::Scene* scene = m_pipeline->GetScene();
             DiffuseProbeGridFeatureProcessor* diffuseProbeGridFeatureProcessor = scene->GetFeatureProcessor<DiffuseProbeGridFeatureProcessor>();
             for (auto& diffuseProbeGrid : diffuseProbeGridFeatureProcessor->GetVisibleProbeGrids())
             {
@@ -191,7 +191,7 @@ namespace AZ
         void DiffuseProbeGridQueryFullscreenPass::BuildCommandListInternal(const RHI::FrameGraphExecuteContext& context)
         {
             RHI::CommandList* commandList = context.GetCommandList();
-            RPI::Scene* scene = m_pipeline->GetScene();
+            JE::Render::RPI::Scene* scene = m_pipeline->GetScene();
             DiffuseProbeGridFeatureProcessor* diffuseProbeGridFeatureProcessor = scene->GetFeatureProcessor<DiffuseProbeGridFeatureProcessor>();
 
             // submit the DispatchItems for each DiffuseProbeGrid in this range
@@ -199,14 +199,14 @@ namespace AZ
             {
                 AZStd::shared_ptr<DiffuseProbeGrid> diffuseProbeGrid = diffuseProbeGridFeatureProcessor->GetVisibleProbeGrids()[index];
 
-                const AZStd::vector<RPI::ViewPtr>& views = m_pipeline->GetViews(RPI::PipelineViewTag{ "MainCamera" });
+                const AZStd::vector<JE::Render::RPI::ViewPtr>& views = m_pipeline->GetViews(JE::Render::RPI::PipelineViewTag{ "MainCamera" });
                 if (views.empty())
                 {
                     return;
                 }
 
                 // retrieve output image for the number of dispatch threads
-                RPI::PassAttachment* outputAttachment = nullptr;
+                JE::Render::RPI::PassAttachment* outputAttachment = nullptr;
                 if (GetOutputCount() > 0)
                 {
                     outputAttachment = GetOutputBinding(0).GetAttachment().get();

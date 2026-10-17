@@ -15,10 +15,15 @@
 
 namespace AZ
 {
-    namespace RPI
-    {
+    }
+
+namespace JE::Render::RPI
+{
         class Pass;
     }
+
+namespace AZ
+{
 
     namespace Render
     {
@@ -76,7 +81,7 @@ namespace AZ
             void OnTick(float deltaTime, ScriptTimePoint time) override;
 
             // Recursively collect all the passes from the root pass.
-            AZStd::vector<const RPI::Pass*> CollectPassesRecursively(const RPI::Pass* root) const;
+            AZStd::vector<const JE::Render::RPI::Pass*> CollectPassesRecursively(const JE::Render::RPI::Pass* root) const;
 
             DelayedQueryCaptureHelper m_timestampCapture;
             DelayedQueryCaptureHelper m_cpuFrameTimeStatisticsCapture;

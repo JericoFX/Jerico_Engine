@@ -9,19 +9,19 @@
 #include <DisplayMapper/DisplayMapperPass.h>
 #include <ACES/Aces.h>
 #include <Atom/Feature/ACES/AcesDisplayMapperFeatureProcessor.h>
-#include <Atom/RPI.Public/Pass/FullscreenTrianglePass.h>
-#include <Atom/RPI.Public/Pass/PassFilter.h>
-#include <Atom/RPI.Public/Pass/PassFactory.h>
-#include <Atom/RPI.Public/Pass/PassSystemInterface.h>
-#include <Atom/RPI.Public/Pass/PassUtils.h>
-#include <Atom/RPI.Public/Pass/Specific/SwapChainPass.h>
-#include <Atom/RPI.Public/RenderPipeline.h>
-#include <Atom/RPI.Public/RPIUtils.h>
-#include <Atom/RPI.Public/Scene.h>
-#include <Atom/RPI.Public/View.h>
-#include <Atom/RPI.Reflect/Pass/ComputePassData.h>
-#include <Atom/RPI.Reflect/Pass/FullscreenTrianglePassData.h>
-#include <Atom/RPI.Reflect/Asset/AssetUtils.h>
+#include <JE/Render/RPI/Public/Pass/FullscreenTrianglePass.h>
+#include <JE/Render/RPI/Public/Pass/PassFilter.h>
+#include <JE/Render/RPI/Public/Pass/PassFactory.h>
+#include <JE/Render/RPI/Public/Pass/PassSystemInterface.h>
+#include <JE/Render/RPI/Public/Pass/PassUtils.h>
+#include <JE/Render/RPI/Public/Pass/Specific/SwapChainPass.h>
+#include <JE/Render/RPI/Public/RenderPipeline.h>
+#include <JE/Render/RPI/Public/RPIUtils.h>
+#include <JE/Render/RPI/Public/Scene.h>
+#include <JE/Render/RPI/Public/View.h>
+#include <JE/Render/RPI/Reflect/Pass/ComputePassData.h>
+#include <JE/Render/RPI/Reflect/Pass/FullscreenTrianglePassData.h>
+#include <JE/Render/RPI/Reflect/Asset/AssetUtils.h>
 
 #include <Atom/RHI/Factory.h>
 #include <Atom/RHI/FrameScheduler.h>
@@ -34,16 +34,16 @@ namespace AZ
 {
     namespace Render
     {
-        RPI::Ptr<DisplayMapperPass> DisplayMapperPass::Create(const RPI::PassDescriptor& descriptor)
+        JE::Render::RPI::Ptr<DisplayMapperPass> DisplayMapperPass::Create(const JE::Render::RPI::PassDescriptor& descriptor)
         {
-            RPI::Ptr<DisplayMapperPass> pass = aznew DisplayMapperPass(descriptor);
+            JE::Render::RPI::Ptr<DisplayMapperPass> pass = aznew DisplayMapperPass(descriptor);
             return pass;
         }
 
-        DisplayMapperPass::DisplayMapperPass(const RPI::PassDescriptor& descriptor)
-            : RPI::ParentPass(descriptor)
+        DisplayMapperPass::DisplayMapperPass(const JE::Render::RPI::PassDescriptor& descriptor)
+            : JE::Render::RPI::ParentPass(descriptor)
         {
-            const DisplayMapperPassData* passData = RPI::PassUtils::GetPassData<DisplayMapperPassData>(descriptor);
+            const DisplayMapperPassData* passData = JE::Render::RPI::PassUtils::GetPassData<DisplayMapperPassData>(descriptor);
             if (passData != nullptr)
             {
                 m_defaultDisplayMapperConfigurationDescriptor = passData->m_config;
@@ -173,12 +173,12 @@ namespace AZ
             // their parent's output, which is a non-conventional and non-standard workflow. Parent outputs are
             // updated after child outputs, so post-build the child outputs do not yet point to the attachments on
             // the parent bindings they are connected to. Forcing this refresh sets the attachment on the child output.
-            for (const RPI::Ptr<Pass>& child : m_children)
+            for (const JE::Render::RPI::Ptr<Pass>& child : m_children)
             {
                 child->UpdateConnectedBindings();
             }
 
-            RPI::ParentPass::InitializeInternal();
+            JE::Render::RPI::ParentPass::InitializeInternal();
         }
 
         void DisplayMapperPass::FrameBeginInternal(FramePrepareParams params)
@@ -200,33 +200,33 @@ namespace AZ
             CreateGradingAndAcesPasses();
         }
 
-        AZStd::shared_ptr<RPI::PassTemplate> CreatePassTemplateHelper(
+        AZStd::shared_ptr<JE::Render::RPI::PassTemplate> CreatePassTemplateHelper(
             const Name& templateName, const Name& passClass, bool renderToOwnedImage, const Name& ownedImageName, const char* shaderFilePath)
         {
-            auto passTemplate = AZStd::make_shared<RPI::PassTemplate>();
+            auto passTemplate = AZStd::make_shared<JE::Render::RPI::PassTemplate>();
             passTemplate->m_name = templateName;
             passTemplate->m_passClass = passClass;
 
             // Slots
             passTemplate->m_slots.resize(2);
-            RPI::PassSlot& inSlot = passTemplate->m_slots[0];
+            JE::Render::RPI::PassSlot& inSlot = passTemplate->m_slots[0];
             inSlot.m_name = "Input";
-            inSlot.m_slotType = RPI::PassSlotType::Input;
+            inSlot.m_slotType = JE::Render::RPI::PassSlotType::Input;
             inSlot.m_scopeAttachmentUsage = RHI::ScopeAttachmentUsage::SubpassInput;
             inSlot.m_loadStoreAction.m_loadAction = RHI::AttachmentLoadAction::Load;
 
-            RPI::PassSlot& outSlot = passTemplate->m_slots[1];
+            JE::Render::RPI::PassSlot& outSlot = passTemplate->m_slots[1];
             outSlot.m_name = "Output";
-            outSlot.m_slotType = RPI::PassSlotType::Output;
+            outSlot.m_slotType = JE::Render::RPI::PassSlotType::Output;
             outSlot.m_scopeAttachmentUsage = RHI::ScopeAttachmentUsage::RenderTarget;
 
             passTemplate->m_connections.resize(1);
-            RPI::PassConnection& outConnection = passTemplate->m_connections[0];
+            JE::Render::RPI::PassConnection& outConnection = passTemplate->m_connections[0];
             if (renderToOwnedImage)
             {
                 // If rendering to it's own image attachment
                 passTemplate->m_imageAttachments.resize(1);
-                RPI::PassImageAttachmentDesc& imageAttachment = passTemplate->m_imageAttachments[0];
+                JE::Render::RPI::PassImageAttachmentDesc& imageAttachment = passTemplate->m_imageAttachments[0];
                 imageAttachment.m_name = ownedImageName;
                 imageAttachment.m_sizeSource.m_source.m_pass = "This";
                 imageAttachment.m_sizeSource.m_source.m_attachment = "Input";
@@ -249,14 +249,14 @@ namespace AZ
             AZStd::string azshaderPath = shaderFilePath;
             AZ::StringFunc::Path::ReplaceExtension(azshaderPath, "azshader");
 
-            Data::AssetId shaderAssetId = AZ::RPI::AssetUtils::GetAssetIdForProductPath(azshaderPath.c_str(), AZ::RPI::AssetUtils::TraceLevel::Assert, azrtti_typeid<RPI::ShaderAsset>());
+            Data::AssetId shaderAssetId = JE::Render::RPI::AssetUtils::GetAssetIdForProductPath(azshaderPath.c_str(), JE::Render::RPI::AssetUtils::TraceLevel::Assert, azrtti_typeid<JE::Render::RPI::ShaderAsset>());
             if (!shaderAssetId.IsValid())
             {
                 // The above GetAssetIdForProductPath will already have asserted if the asset was not found.
                 return nullptr;
             }
 
-            AZStd::shared_ptr<RPI::FullscreenTrianglePassData> passData = AZStd::make_shared<RPI::FullscreenTrianglePassData>();
+            AZStd::shared_ptr<JE::Render::RPI::FullscreenTrianglePassData> passData = AZStd::make_shared<JE::Render::RPI::FullscreenTrianglePassData>();
             passData->m_shaderAsset.m_filePath = shaderFilePath;
             passData->m_shaderAsset.m_assetId = shaderAssetId;
             passTemplate->m_passData = AZStd::move(passData);
@@ -264,30 +264,30 @@ namespace AZ
             return passTemplate;
         }
 
-        AZStd::shared_ptr<RPI::PassTemplate> CreateBakeAcesLutPassTemplateHelper(
+        AZStd::shared_ptr<JE::Render::RPI::PassTemplate> CreateBakeAcesLutPassTemplateHelper(
             const Name& templateName, const Name& passClass, const char* shaderFilePath)
         {
-            auto passTemplate = AZStd::make_shared<RPI::PassTemplate>();
+            auto passTemplate = AZStd::make_shared<JE::Render::RPI::PassTemplate>();
             passTemplate->m_name = templateName;
             passTemplate->m_passClass = passClass;
 
             // Slots
             passTemplate->m_slots.resize(1);
-            RPI::PassSlot& outSlot = passTemplate->m_slots[0];
+            JE::Render::RPI::PassSlot& outSlot = passTemplate->m_slots[0];
             outSlot.m_name = "Output";
-            outSlot.m_slotType = RPI::PassSlotType::Output;
+            outSlot.m_slotType = JE::Render::RPI::PassSlotType::Output;
             outSlot.m_scopeAttachmentUsage = RHI::ScopeAttachmentUsage::Shader;
             outSlot.m_loadStoreAction.m_loadAction = RHI::AttachmentLoadAction::Clear;
 
             // Since this asset is required or a fatal assert occurs, we can use GetAssetIdForProductPath to ensure that it is built if at all possible.
-            Data::AssetId shaderAssetId = AZ::RPI::AssetUtils::GetAssetIdForProductPath(shaderFilePath, AZ::RPI::AssetUtils::TraceLevel::Assert, azrtti_typeid<RPI::ShaderAsset>());
+            Data::AssetId shaderAssetId = JE::Render::RPI::AssetUtils::GetAssetIdForProductPath(shaderFilePath, JE::Render::RPI::AssetUtils::TraceLevel::Assert, azrtti_typeid<JE::Render::RPI::ShaderAsset>());
             if (!shaderAssetId.IsValid())
             {
                 // The above GetAssetIdForProductPath will already have asserted if the asset was not found.
                 return nullptr;
             }
 
-            AZStd::shared_ptr<RPI::ComputePassData> passData = AZStd::make_shared<RPI::ComputePassData>();
+            AZStd::shared_ptr<JE::Render::RPI::ComputePassData> passData = AZStd::make_shared<JE::Render::RPI::ComputePassData>();
             passData->m_totalNumberOfThreadsX = 32;
             passData->m_totalNumberOfThreadsY = 32;
             passData->m_totalNumberOfThreadsZ = 32;
@@ -393,22 +393,22 @@ namespace AZ
         }
 
         template<typename PassType>
-            RPI::Ptr<PassType> CreatePassHelper(RPI::PassSystemInterface* passSystem, AZStd::shared_ptr<RPI::PassTemplate> passTemplate, const Name& passName)
+            JE::Render::RPI::Ptr<PassType> CreatePassHelper(JE::Render::RPI::PassSystemInterface* passSystem, AZStd::shared_ptr<JE::Render::RPI::PassTemplate> passTemplate, const Name& passName)
         {
-            RPI::Ptr<RPI::Pass> pass = passSystem->CreatePassFromTemplate(passTemplate, passName);
+            JE::Render::RPI::Ptr<JE::Render::RPI::Pass> pass = passSystem->CreatePassFromTemplate(passTemplate, passName);
             if (!pass)
             {
                 AZ_Assert(false, "[DisplayMapperPass] Unable to create %s.", passName.GetCStr());
                 return nullptr;
             }
 
-            RPI::Ptr<PassType> returnPass = static_cast<PassType*>(pass.get());
+            JE::Render::RPI::Ptr<PassType> returnPass = static_cast<PassType*>(pass.get());
             return returnPass;
         }
 
         void DisplayMapperPass::CreateGradingAndAcesPasses()
         {
-            RPI::PassSystemInterface* passSystem = RPI::PassSystemInterface::Get();
+            JE::Render::RPI::PassSystemInterface* passSystem = JE::Render::RPI::PassSystemInterface::Get();
 
             if (m_displayMapperConfigurationDescriptor.m_operationType == DisplayMapperOperationType::Aces)
             {
@@ -530,7 +530,7 @@ namespace AZ
         {
             // If no configuration is found, then use the default value that was set for the pass.
             DisplayMapperConfigurationDescriptor desc = m_defaultDisplayMapperConfigurationDescriptor;
-            AZ::RPI::Scene* scene = GetScene();
+            JE::Render::RPI::Scene* scene = GetScene();
             if (scene)
             {
                 AcesDisplayMapperFeatureProcessor* fp = scene->GetFeatureProcessor<AcesDisplayMapperFeatureProcessor>();

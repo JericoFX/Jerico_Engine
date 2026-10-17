@@ -7,8 +7,8 @@
  */
 
 #include <Atom/Feature/Material/ConvertEmissiveUnitFunctor.h>
-#include <Atom/RPI.Public/Material/Material.h>
-#include <Atom/RPI.Public/Shader/ShaderResourceGroup.h>
+#include <JE/Render/RPI/Public/Material/Material.h>
+#include <JE/Render/RPI/Public/Shader/ShaderResourceGroup.h>
 
 namespace AZ
 {
@@ -18,7 +18,7 @@ namespace AZ
         {
             if (auto* serializeContext = azrtti_cast<AZ::SerializeContext*>(context))
             {
-                serializeContext->Class<ConvertEmissiveUnitFunctor, AZ::RPI::MaterialFunctor>()
+                serializeContext->Class<ConvertEmissiveUnitFunctor, JE::Render::RPI::MaterialFunctor>()
                     ->Version(7) // changed shaderInputIndex to shaderParameter
                     ->Field("intensityPropertyIndex", &ConvertEmissiveUnitFunctor::m_intensityPropertyIndex)
                     ->Field("lightUnitPropertyIndex", &ConvertEmissiveUnitFunctor::m_lightUnitPropertyIndex)
@@ -32,7 +32,7 @@ namespace AZ
             }
         }
 
-        void ConvertEmissiveUnitFunctor::Process(RPI::MaterialFunctorAPI::RuntimeContext& context)
+        void ConvertEmissiveUnitFunctor::Process(JE::Render::RPI::MaterialFunctorAPI::RuntimeContext& context)
         {
             // Convert unit on runtime
             float sourceValue = context.GetMaterialPropertyValue<float>(m_intensityPropertyIndex);
@@ -41,7 +41,7 @@ namespace AZ
             context.GetMaterialShaderParameter()->SetParameter(m_shaderParameter, targetValue);
         }
 
-        void ConvertEmissiveUnitFunctor::Process(RPI::MaterialFunctorAPI::EditorContext& context)
+        void ConvertEmissiveUnitFunctor::Process(JE::Render::RPI::MaterialFunctorAPI::EditorContext& context)
         {
             // Update Editor based on selected light unit
             uint32_t lightUnit = context.GetMaterialPropertyValue<uint32_t>(m_lightUnitPropertyIndex);
@@ -82,7 +82,7 @@ namespace AZ
             return PhotometricValue::ConvertIntensityBetweenUnits(sourceType, PhotometricUnit::Nit, originalEmissiveIntensity);
         }
 
-        bool ConvertEmissiveUnitFunctor::UpdateShaderParameterConnections(const RPI::MaterialShaderParameterLayout* layout)
+        bool ConvertEmissiveUnitFunctor::UpdateShaderParameterConnections(const JE::Render::RPI::MaterialShaderParameterLayout* layout)
         {
             if (m_shaderParameter.ValidateOrFindIndex(layout) == false)
             {

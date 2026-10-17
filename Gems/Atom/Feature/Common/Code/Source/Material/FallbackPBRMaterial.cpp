@@ -8,7 +8,7 @@
 
 #include <Atom/Feature/Material/ConvertEmissiveUnitFunctor.h>
 #include <Atom/Feature/Material/FallbackPBRMaterial.h>
-#include <Atom/RPI.Public/Image/StreamingImage.h>
+#include <JE/Render/RPI/Public/Image/StreamingImage.h>
 #include <AzCore/Name/NameDictionary.h>
 
 namespace AZ::Render
@@ -18,7 +18,7 @@ namespace AZ::Render
         class MaterialConversionUtil
         {
         public:
-            MaterialConversionUtil(RPI::Material* sourceMaterial)
+            MaterialConversionUtil(JE::Render::RPI::Material* sourceMaterial)
                 : m_material(sourceMaterial)
             {
             }
@@ -51,7 +51,7 @@ namespace AZ::Render
             template<>
             RHI::Ptr<const RHI::ImageView> GetProperty(const AZ::Name& propertyName, const RHI::Ptr<const RHI::ImageView> defaultValue)
             {
-                auto image = GetProperty<Data::Instance<RPI::Image>>(propertyName, nullptr);
+                auto image = GetProperty<Data::Instance<JE::Render::RPI::Image>>(propertyName, nullptr);
                 if (image)
                 {
                     return image->GetImageView();
@@ -86,10 +86,10 @@ namespace AZ::Render
             }
 
         private:
-            AZ::RPI::Material* m_material;
+            JE::Render::RPI::Material* m_material;
         };
 
-        void ConvertMaterial(RPI::Material* material, MaterialParameters& convertedMaterial)
+        void ConvertMaterial(JE::Render::RPI::Material* material, MaterialParameters& convertedMaterial)
         {
             if (material == nullptr)
             {
@@ -150,11 +150,11 @@ namespace AZ::Render
             {
                 // if we can't find the useTexture - switch, assume we want to use a texture if it's assigned
                 bool useTexture = util.GetProperty(AZ_NAME_LITERAL("baseColor.useTexture"), true);
-                Data::Instance<RPI::Image> baseColorImage =
-                    util.GetProperty<Data::Instance<RPI::Image>>(AZ_NAME_LITERAL("baseColor.textureMap"));
+                Data::Instance<JE::Render::RPI::Image> baseColorImage =
+                    util.GetProperty<Data::Instance<JE::Render::RPI::Image>>(AZ_NAME_LITERAL("baseColor.textureMap"));
                 if (useTexture && baseColorImage)
                 {
-                    auto baseColorStreamingImg = azdynamic_cast<RPI::StreamingImage*>(baseColorImage.get());
+                    auto baseColorStreamingImg = azdynamic_cast<JE::Render::RPI::StreamingImage*>(baseColorImage.get());
                     if (baseColorStreamingImg)
                     {
                         // Note: there are quite a few hidden assumptions in using the average

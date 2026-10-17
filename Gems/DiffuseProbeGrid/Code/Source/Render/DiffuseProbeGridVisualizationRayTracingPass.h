@@ -7,10 +7,10 @@
  */
 #pragma once
 
-#include <Atom/RPI.Public/Pass/RenderPass.h>
+#include <JE/Render/RPI/Public/Pass/RenderPass.h>
 #include <Atom/RHI/RayTracingPipelineState.h>
 #include <Atom/RHI/RayTracingShaderTable.h>
-#include <Atom/RPI.Public/Shader/ShaderResourceGroup.h>
+#include <JE/Render/RPI/Public/Shader/ShaderResourceGroup.h>
 
 namespace AZ
 {
@@ -18,21 +18,21 @@ namespace AZ
     {
         //! Ray tracing shader that generates the probe visualization image for a DiffuseProbeGrid
         class DiffuseProbeGridVisualizationRayTracingPass final
-            : public RPI::RenderPass
+            : public JE::Render::RPI::RenderPass
         {
         public:
             AZ_RPI_PASS(DiffuseProbeGridVisualizationRayTracingPass);
 
-            AZ_RTTI(DiffuseProbeGridVisualizationRayTracingPass, "{CDFB5C03-08D1-4FCA-8B63-2F8326E0DF1D}", RPI::RenderPass);
+            AZ_RTTI(DiffuseProbeGridVisualizationRayTracingPass, "{CDFB5C03-08D1-4FCA-8B63-2F8326E0DF1D}", JE::Render::RPI::RenderPass);
             AZ_CLASS_ALLOCATOR(DiffuseProbeGridVisualizationRayTracingPass, SystemAllocator);
 
             //! Creates a DiffuseProbeGridVisualizationRayTracingPass
-            static RPI::Ptr<DiffuseProbeGridVisualizationRayTracingPass> Create(const RPI::PassDescriptor& descriptor);
+            static JE::Render::RPI::Ptr<DiffuseProbeGridVisualizationRayTracingPass> Create(const JE::Render::RPI::PassDescriptor& descriptor);
 
             ~DiffuseProbeGridVisualizationRayTracingPass() = default;
 
         private:
-            explicit DiffuseProbeGridVisualizationRayTracingPass(const RPI::PassDescriptor& descriptor);
+            explicit DiffuseProbeGridVisualizationRayTracingPass(const JE::Render::RPI::PassDescriptor& descriptor);
 
             void CreateRayTracingPipelineState();
 
@@ -46,9 +46,9 @@ namespace AZ
             void FrameBeginInternal(FramePrepareParams params) override;
 
             // ray tracing shader and pipeline state
-            Data::Instance<RPI::Shader> m_rayTracingShader;
-            Data::Instance<RPI::Shader> m_missShader;
-            Data::Instance<RPI::Shader> m_closestHitShader;
+            Data::Instance<JE::Render::RPI::Shader> m_rayTracingShader;
+            Data::Instance<JE::Render::RPI::Shader> m_missShader;
+            Data::Instance<JE::Render::RPI::Shader> m_closestHitShader;
             RHI::Ptr<RHI::RayTracingPipelineState> m_rayTracingPipelineState;
 
             // ray tracing shader table

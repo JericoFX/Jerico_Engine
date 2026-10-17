@@ -8,14 +8,14 @@
 
 namespace JE::ShaderVariants
 {
-    AZ::Outcome<AZ::RPI::ShaderVariantListSourceData, Failure> Generate(
+    AZ::Outcome<JE::Render::RPI::ShaderVariantListSourceData, Failure> Generate(
         const AZStd::string& shaderPath,
-        const AZ::RPI::ShaderOptionGroupLayout& layout,
+        const JE::Render::RPI::ShaderOptionGroupLayout& layout,
         const AZStd::vector<MaterialVariant>& materials,
-        const AZ::RPI::ShaderOptionValuesSourceData& systemOptions,
+        const JE::Render::RPI::ShaderOptionValuesSourceData& systemOptions,
         const AZStd::function<bool()>& isCancelled)
     {
-        using namespace AZ::RPI;
+        using namespace JE::Render::RPI;
         const auto invalid = [](const char* message) { return AZ::Failure(Failure{FailureReason::InvalidInput, message}); };
         const auto cancelled = [] { return AZ::Failure(Failure{FailureReason::Cancelled, {}}); };
         const auto poll = [&isCancelled] { return isCancelled && isCancelled(); };

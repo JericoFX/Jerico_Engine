@@ -714,15 +714,15 @@ namespace OpenParticle
             if (defaultSpriteEmitMaterialId.IsValid())
             {
                 // we don't actually have to load the asset, just want to place it into a struct for serialize.
-                mat = AZ::Data::AssetManager::Instance().GetAsset<AZ::RPI::MaterialAsset>(
+                mat = AZ::Data::AssetManager::Instance().GetAsset<JE::Render::RPI::MaterialAsset>(
                     // PreLoad to match the load path, so the behaviour written to the file agrees with the
                     // behaviour the asset is given when it is read back.
                     defaultSpriteEmitMaterialId, AZ::Data::AssetLoadBehavior::PreLoad);
             }
         }
 
-        auto materialAssetType = azrtti_typeid<AZ::Data::Asset<AZ::RPI::MaterialAsset>>();
-        auto modelAssetType = azrtti_typeid<AZ::Data::Asset<AZ::RPI::ModelAsset>>();
+        auto materialAssetType = azrtti_typeid<AZ::Data::Asset<JE::Render::RPI::MaterialAsset>>();
+        auto modelAssetType = azrtti_typeid<AZ::Data::Asset<JE::Render::RPI::ModelAsset>>();
         resultCode.Combine(ContinueStoringToJsonObjectField(outputValue, "material", &mat, nullptr, materialAssetType, context));
 
         // Only written when the emitter actually overrides something, so untouched particle files stay byte

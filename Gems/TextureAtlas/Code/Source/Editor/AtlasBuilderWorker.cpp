@@ -24,7 +24,7 @@
 #include <Atom/ImageProcessing/ImageObject.h>
 #include <Atom/ImageProcessing/ImageProcessingBus.h>
 #include <Atom/ImageProcessing/PixelFormats.h>
-#include <Atom/RPI.Reflect/Image/StreamingImageAsset.h>
+#include <JE/Render/RPI/Reflect/Image/StreamingImageAsset.h>
 
 #include <QImage>
 #include <QString>

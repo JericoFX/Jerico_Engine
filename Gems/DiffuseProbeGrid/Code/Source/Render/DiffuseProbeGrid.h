@@ -10,9 +10,9 @@
 #include <Atom/RHI/DrawPacketBuilder.h>
 #include <Atom/RHI/GeometryView.h>
 #include <Atom/RHI/RayTracingAccelerationStructure.h>
-#include <Atom/RPI.Public/Culling.h>
-#include <Atom/RPI.Public/PipelineState.h>
-#include <Atom/RPI.Public/Scene.h>
+#include <JE/Render/RPI/Public/Culling.h>
+#include <JE/Render/RPI/Public/PipelineState.h>
+#include <JE/Render/RPI/Public/Scene.h>
 #include <AzCore/Math/Random.h>
 #include <AzCore/Math/Aabb.h>
 #include <Render/DiffuseProbeGridTextureReadback.h>
@@ -46,10 +46,10 @@ namespace AZ
             RHI::BufferViewDescriptor m_gridDataBufferViewDescriptor;
 
             // render pipeline state
-            RPI::Ptr<RPI::PipelineStateForDraw> m_pipelineState;
+            JE::Render::RPI::Ptr<JE::Render::RPI::PipelineStateForDraw> m_pipelineState;
 
             // For the render Srg
-            Data::Instance<RPI::Shader> m_shader;
+            Data::Instance<JE::Render::RPI::Shader> m_shader;
             RHI::Ptr<RHI::ShaderResourceGroupLayout> m_srgLayout;
 
             // render drawlist tag
@@ -164,7 +164,7 @@ namespace AZ
             DiffuseProbeGrid();
             ~DiffuseProbeGrid();
 
-            void Init(RPI::Scene* scene, DiffuseProbeGridRenderData* diffuseProbeGridRenderData);
+            void Init(JE::Render::RPI::Scene* scene, DiffuseProbeGridRenderData* diffuseProbeGridRenderData);
             void Simulate(uint32_t probeIndex);
 
             void SetTransform(const AZ::Transform& transform);
@@ -242,34 +242,34 @@ namespace AZ
             void GetTexture2DProbeCount(uint32_t& probeCountX, uint32_t& probeCountY) const;
 
             // Srgs
-            const Data::Instance<RPI::ShaderResourceGroup>& GetPrepareSrg() const { return m_prepareSrg; }
-            const Data::Instance<RPI::ShaderResourceGroup>& GetRayTraceSrg() const { return m_rayTraceSrg; }
-            const Data::Instance<RPI::ShaderResourceGroup>& GetBlendIrradianceSrg() const { return m_blendIrradianceSrg; }
-            const Data::Instance<RPI::ShaderResourceGroup>& GetBlendDistanceSrg() const { return m_blendDistanceSrg; }
-            const Data::Instance<RPI::ShaderResourceGroup>& GetBorderUpdateRowIrradianceSrg() const { return m_borderUpdateRowIrradianceSrg; }
-            const Data::Instance<RPI::ShaderResourceGroup>& GetBorderUpdateColumnIrradianceSrg() const { return m_borderUpdateColumnIrradianceSrg; }
-            const Data::Instance<RPI::ShaderResourceGroup>& GetBorderUpdateRowDistanceSrg() const { return m_borderUpdateRowDistanceSrg; }
-            const Data::Instance<RPI::ShaderResourceGroup>& GetBorderUpdateColumnDistanceSrg() const { return m_borderUpdateColumnDistanceSrg; }
-            const Data::Instance<RPI::ShaderResourceGroup>& GetRelocationSrg() const { return m_relocationSrg; }
-            const Data::Instance<RPI::ShaderResourceGroup>& GetClassificationSrg() const { return m_classificationSrg; }
-            const Data::Instance<RPI::ShaderResourceGroup>& GetRenderObjectSrg() const { return m_renderObjectSrg; }
-            const Data::Instance<RPI::ShaderResourceGroup>& GetVisualizationPrepareSrg() const { return m_visualizationPrepareSrg; }
-            const Data::Instance<RPI::ShaderResourceGroup>& GetVisualizationRayTraceSrg() const { return m_visualizationRayTraceSrg; }
-            const Data::Instance<RPI::ShaderResourceGroup>& GetQuerySrg() const { return m_querySrg; }
+            const Data::Instance<JE::Render::RPI::ShaderResourceGroup>& GetPrepareSrg() const { return m_prepareSrg; }
+            const Data::Instance<JE::Render::RPI::ShaderResourceGroup>& GetRayTraceSrg() const { return m_rayTraceSrg; }
+            const Data::Instance<JE::Render::RPI::ShaderResourceGroup>& GetBlendIrradianceSrg() const { return m_blendIrradianceSrg; }
+            const Data::Instance<JE::Render::RPI::ShaderResourceGroup>& GetBlendDistanceSrg() const { return m_blendDistanceSrg; }
+            const Data::Instance<JE::Render::RPI::ShaderResourceGroup>& GetBorderUpdateRowIrradianceSrg() const { return m_borderUpdateRowIrradianceSrg; }
+            const Data::Instance<JE::Render::RPI::ShaderResourceGroup>& GetBorderUpdateColumnIrradianceSrg() const { return m_borderUpdateColumnIrradianceSrg; }
+            const Data::Instance<JE::Render::RPI::ShaderResourceGroup>& GetBorderUpdateRowDistanceSrg() const { return m_borderUpdateRowDistanceSrg; }
+            const Data::Instance<JE::Render::RPI::ShaderResourceGroup>& GetBorderUpdateColumnDistanceSrg() const { return m_borderUpdateColumnDistanceSrg; }
+            const Data::Instance<JE::Render::RPI::ShaderResourceGroup>& GetRelocationSrg() const { return m_relocationSrg; }
+            const Data::Instance<JE::Render::RPI::ShaderResourceGroup>& GetClassificationSrg() const { return m_classificationSrg; }
+            const Data::Instance<JE::Render::RPI::ShaderResourceGroup>& GetRenderObjectSrg() const { return m_renderObjectSrg; }
+            const Data::Instance<JE::Render::RPI::ShaderResourceGroup>& GetVisualizationPrepareSrg() const { return m_visualizationPrepareSrg; }
+            const Data::Instance<JE::Render::RPI::ShaderResourceGroup>& GetVisualizationRayTraceSrg() const { return m_visualizationRayTraceSrg; }
+            const Data::Instance<JE::Render::RPI::ShaderResourceGroup>& GetQuerySrg() const { return m_querySrg; }
 
             // Srg updates
-            void UpdatePrepareSrg(const Data::Instance<RPI::Shader>& shader, const RHI::Ptr<RHI::ShaderResourceGroupLayout>& srgLayout);
-            void UpdateRayTraceSrg(const Data::Instance<RPI::Shader>& shader, const RHI::Ptr<RHI::ShaderResourceGroupLayout>& srgLayout);
-            void UpdateBlendIrradianceSrg(const Data::Instance<RPI::Shader>& shader, const RHI::Ptr<RHI::ShaderResourceGroupLayout>& srgLayout);
-            void UpdateBlendDistanceSrg(const Data::Instance<RPI::Shader>& shader, const RHI::Ptr<RHI::ShaderResourceGroupLayout>& srgLayout);
-            void UpdateBorderUpdateSrgs(const Data::Instance<RPI::Shader>& rowShader, const RHI::Ptr<RHI::ShaderResourceGroupLayout>& rowSrgLayout,
-                                        const Data::Instance<RPI::Shader>& columnShader, const RHI::Ptr<RHI::ShaderResourceGroupLayout>& columnSrgLayout);
-            void UpdateRelocationSrg(const Data::Instance<RPI::Shader>& shader, const RHI::Ptr<RHI::ShaderResourceGroupLayout>& srgLayout);
-            void UpdateClassificationSrg(const Data::Instance<RPI::Shader>& shader, const RHI::Ptr<RHI::ShaderResourceGroupLayout>& srgLayout);
+            void UpdatePrepareSrg(const Data::Instance<JE::Render::RPI::Shader>& shader, const RHI::Ptr<RHI::ShaderResourceGroupLayout>& srgLayout);
+            void UpdateRayTraceSrg(const Data::Instance<JE::Render::RPI::Shader>& shader, const RHI::Ptr<RHI::ShaderResourceGroupLayout>& srgLayout);
+            void UpdateBlendIrradianceSrg(const Data::Instance<JE::Render::RPI::Shader>& shader, const RHI::Ptr<RHI::ShaderResourceGroupLayout>& srgLayout);
+            void UpdateBlendDistanceSrg(const Data::Instance<JE::Render::RPI::Shader>& shader, const RHI::Ptr<RHI::ShaderResourceGroupLayout>& srgLayout);
+            void UpdateBorderUpdateSrgs(const Data::Instance<JE::Render::RPI::Shader>& rowShader, const RHI::Ptr<RHI::ShaderResourceGroupLayout>& rowSrgLayout,
+                                        const Data::Instance<JE::Render::RPI::Shader>& columnShader, const RHI::Ptr<RHI::ShaderResourceGroupLayout>& columnSrgLayout);
+            void UpdateRelocationSrg(const Data::Instance<JE::Render::RPI::Shader>& shader, const RHI::Ptr<RHI::ShaderResourceGroupLayout>& srgLayout);
+            void UpdateClassificationSrg(const Data::Instance<JE::Render::RPI::Shader>& shader, const RHI::Ptr<RHI::ShaderResourceGroupLayout>& srgLayout);
             void UpdateRenderObjectSrg();
-            void UpdateVisualizationPrepareSrg(const Data::Instance<RPI::Shader>& shader, const RHI::Ptr<RHI::ShaderResourceGroupLayout>& srgLayout);
-            void UpdateVisualizationRayTraceSrg(const Data::Instance<RPI::Shader>& shader, const RHI::Ptr<RHI::ShaderResourceGroupLayout>& srgLayout, const RHI::ImageView* outputImageView);
-            void UpdateQuerySrg(const Data::Instance<RPI::Shader>& shader, const RHI::Ptr<RHI::ShaderResourceGroupLayout>& srgLayout);
+            void UpdateVisualizationPrepareSrg(const Data::Instance<JE::Render::RPI::Shader>& shader, const RHI::Ptr<RHI::ShaderResourceGroupLayout>& srgLayout);
+            void UpdateVisualizationRayTraceSrg(const Data::Instance<JE::Render::RPI::Shader>& shader, const RHI::Ptr<RHI::ShaderResourceGroupLayout>& srgLayout, const RHI::ImageView* outputImageView);
+            void UpdateQuerySrg(const Data::Instance<JE::Render::RPI::Shader>& shader, const RHI::Ptr<RHI::ShaderResourceGroupLayout>& srgLayout);
 
             // textures
             const RHI::Ptr<RHI::Image> GetRayTraceImage() { return m_rayTraceImage[m_currentImageIndex]; }
@@ -323,7 +323,7 @@ namespace AZ
             void UpdateCulling();
 
             // scene
-            RPI::Scene* m_scene = nullptr;
+            JE::Render::RPI::Scene* m_scene = nullptr;
 
             // probe grid transform
             AZ::Transform m_transform = AZ::Transform::CreateIdentity();
@@ -390,7 +390,7 @@ namespace AZ
             RHI::DrawItemSortKey m_sortKey = InvalidSortKey;
 
             // culling
-            RPI::Cullable m_cullable;
+            JE::Render::RPI::Cullable m_cullable;
 
             // grid mode (RealTime or Baked)
             DiffuseProbeGridMode m_mode = DiffuseProbeGridMode::RealTime;
@@ -410,9 +410,9 @@ namespace AZ
             bool m_updateTextures = false;
 
             // baked textures
-            Data::Instance<RPI::Image> m_bakedIrradianceImage;
-            Data::Instance<RPI::Image> m_bakedDistanceImage;
-            Data::Instance<RPI::Image> m_bakedProbeDataImage;
+            Data::Instance<JE::Render::RPI::Image> m_bakedIrradianceImage;
+            Data::Instance<JE::Render::RPI::Image> m_bakedDistanceImage;
+            Data::Instance<JE::Render::RPI::Image> m_bakedProbeDataImage;
 
             // baked texture relative paths
             AZStd::string m_bakedIrradianceRelativePath;
@@ -423,18 +423,18 @@ namespace AZ
             DiffuseProbeGridTextureReadback m_textureReadback;
 
             // Srgs
-            Data::Instance<RPI::ShaderResourceGroup> m_prepareSrg;
-            Data::Instance<RPI::ShaderResourceGroup> m_rayTraceSrg;
-            Data::Instance<RPI::ShaderResourceGroup> m_blendIrradianceSrg;
-            Data::Instance<RPI::ShaderResourceGroup> m_blendDistanceSrg;
-            Data::Instance<RPI::ShaderResourceGroup> m_borderUpdateRowIrradianceSrg;
-            Data::Instance<RPI::ShaderResourceGroup> m_borderUpdateColumnIrradianceSrg;
-            Data::Instance<RPI::ShaderResourceGroup> m_borderUpdateRowDistanceSrg;
-            Data::Instance<RPI::ShaderResourceGroup> m_borderUpdateColumnDistanceSrg;
-            Data::Instance<RPI::ShaderResourceGroup> m_relocationSrg;
-            Data::Instance<RPI::ShaderResourceGroup> m_classificationSrg;
-            Data::Instance<RPI::ShaderResourceGroup> m_renderObjectSrg;
-            Data::Instance<RPI::ShaderResourceGroup> m_querySrg;
+            Data::Instance<JE::Render::RPI::ShaderResourceGroup> m_prepareSrg;
+            Data::Instance<JE::Render::RPI::ShaderResourceGroup> m_rayTraceSrg;
+            Data::Instance<JE::Render::RPI::ShaderResourceGroup> m_blendIrradianceSrg;
+            Data::Instance<JE::Render::RPI::ShaderResourceGroup> m_blendDistanceSrg;
+            Data::Instance<JE::Render::RPI::ShaderResourceGroup> m_borderUpdateRowIrradianceSrg;
+            Data::Instance<JE::Render::RPI::ShaderResourceGroup> m_borderUpdateColumnIrradianceSrg;
+            Data::Instance<JE::Render::RPI::ShaderResourceGroup> m_borderUpdateRowDistanceSrg;
+            Data::Instance<JE::Render::RPI::ShaderResourceGroup> m_borderUpdateColumnDistanceSrg;
+            Data::Instance<JE::Render::RPI::ShaderResourceGroup> m_relocationSrg;
+            Data::Instance<JE::Render::RPI::ShaderResourceGroup> m_classificationSrg;
+            Data::Instance<JE::Render::RPI::ShaderResourceGroup> m_renderObjectSrg;
+            Data::Instance<JE::Render::RPI::ShaderResourceGroup> m_querySrg;
             bool m_updateRenderObjectSrg = true;
 
             // attachment Ids
@@ -452,8 +452,8 @@ namespace AZ
             bool m_visualizationTlasUpdateRequired = false;
             RHI::AttachmentId m_visualizationTlasAttachmentId;
             RHI::AttachmentId m_visualizationTlasInstancesAttachmentId;
-            Data::Instance<RPI::ShaderResourceGroup> m_visualizationPrepareSrg;
-            Data::Instance<RPI::ShaderResourceGroup> m_visualizationRayTraceSrg;
+            Data::Instance<JE::Render::RPI::ShaderResourceGroup> m_visualizationPrepareSrg;
+            Data::Instance<JE::Render::RPI::ShaderResourceGroup> m_visualizationRayTraceSrg;
         };
     }   // namespace Render
 }   // namespace AZ

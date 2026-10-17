@@ -13,11 +13,11 @@
 #include <Atom/RHI/RayTracingAccelerationStructure.h>
 #include <Atom/RHI/RayTracingCompactionQueryPool.h>
 #include <Atom/RHI.Reflect/VertexFormat.h>
-#include <Atom/RPI.Public/Buffer/Buffer.h>
-#include <Atom/RPI.Public/FeatureProcessor.h>
-#include <Atom/RPI.Public/GpuQuery/Query.h>
-#include <Atom/RPI.Public/Shader/Shader.h>
-#include <Atom/RPI.Reflect/Image/Image.h>
+#include <JE/Render/RPI/Public/Buffer/Buffer.h>
+#include <JE/Render/RPI/Public/FeatureProcessor.h>
+#include <JE/Render/RPI/Public/GpuQuery/Query.h>
+#include <JE/Render/RPI/Public/Shader/Shader.h>
+#include <JE/Render/RPI/Reflect/Image/Image.h>
 #include <Atom/Utils/StableDynamicArray.h>
 
 namespace AZ::Render
@@ -39,10 +39,10 @@ namespace AZ::Render
     AZ_DEFINE_ENUM_BITWISE_OPERATORS(AZ::Render::RayTracingSubMeshTextureFlags);
 
     //! This feature processor manages ray tracing data for a Scene
-    class RayTracingFeatureProcessorInterface : public RPI::FeatureProcessor
+    class RayTracingFeatureProcessorInterface : public JE::Render::RPI::FeatureProcessor
     {
     public:
-        AZ_RTTI(AZ::Render::RayTracingFeatureProcessorInterface, "{84C37D5E-3676-4E39-A0E6-CB048E2F7E5E}", AZ::RPI::FeatureProcessor);
+        AZ_RTTI(AZ::Render::RayTracingFeatureProcessorInterface, "{84C37D5E-3676-4E39-A0E6-CB048E2F7E5E}", JE::Render::RPI::FeatureProcessor);
 
         struct Mesh;
 
@@ -54,8 +54,8 @@ namespace AZ::Render
             // id for accessing the blas instance (assetId, subMeshIdx)
             AZStd::pair<Data::AssetId, int> m_blasInstanceId;
 
-            AZ::Data::Instance<AZ::RPI::Material> m_material;
-            Data::Instance<RPI::ModelLod> m_modelLod;
+            AZ::Data::Instance<JE::Render::RPI::Material> m_material;
+            Data::Instance<JE::Render::RPI::ModelLod> m_modelLod;
             size_t m_modelLodMeshIndex;
 
             // optional: A cluster-BLAS descriptor
@@ -109,7 +109,7 @@ namespace AZ::Render
         struct ProceduralGeometryType
         {
             Name m_name;
-            Data::Instance<RPI::Shader> m_intersectionShader;
+            Data::Instance<JE::Render::RPI::Shader> m_intersectionShader;
             Name m_intersectionShaderName;
             AZStd::unordered_map<int, uint32_t> m_bindlessBufferIndices;
             int m_instanceCount = 0;
@@ -148,7 +148,7 @@ namespace AZ::Render
         //! variables should be accessed or changed directly.
         virtual ProceduralGeometryTypeHandle RegisterProceduralGeometryType(
             const AZStd::string& name,
-            const Data::Instance<RPI::Shader>& intersectionShader,
+            const Data::Instance<JE::Render::RPI::Shader>& intersectionShader,
             const AZStd::string& intersectionShaderName,
             const AZStd::unordered_map<int, uint32_t>& bindlessBufferIndices = {}) = 0;
 
@@ -223,7 +223,7 @@ namespace AZ::Render
         virtual const MeshMap& GetMeshMap() = 0;
 
         //! Retrieves the RayTracingSceneSrg
-        virtual Data::Instance<RPI::ShaderResourceGroup> GetRayTracingSceneSrg() const = 0;
+        virtual Data::Instance<JE::Render::RPI::ShaderResourceGroup> GetRayTracingSceneSrg() const = 0;
 
         //! Retrieves the RayTracingTlas
         virtual const RHI::Ptr<RHI::RayTracingTlas>& GetTlas() const = 0;

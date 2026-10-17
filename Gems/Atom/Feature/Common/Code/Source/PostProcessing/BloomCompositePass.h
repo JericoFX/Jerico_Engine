@@ -7,14 +7,14 @@
  */
 #pragma once
 
-#include <Atom/RPI.Public/Pass/ComputePass.h>
+#include <JE/Render/RPI/Public/Pass/ComputePass.h>
 
-#include <Atom/RPI.Public/Pass/Pass.h>
-#include <Atom/RPI.Public/Pass/ParentPass.h>
-#include <Atom/RPI.Public/Shader/ShaderResourceGroup.h>
-#include <Atom/RPI.Public/Shader/Shader.h>
+#include <JE/Render/RPI/Public/Pass/Pass.h>
+#include <JE/Render/RPI/Public/Pass/ParentPass.h>
+#include <JE/Render/RPI/Public/Shader/ShaderResourceGroup.h>
+#include <JE/Render/RPI/Public/Shader/Shader.h>
 
-#include <Atom/RPI.Reflect/Pass/DownsampleMipChainPassData.h>
+#include <JE/Render/RPI/Reflect/Pass/DownsampleMipChainPassData.h>
 #include <Atom/Feature/PostProcess/Bloom/BloomConstants.h>
 
 namespace AZ
@@ -25,7 +25,7 @@ namespace AZ
 
         // Pass for combining contributions of all downsampled images to the render target
         class BloomCompositePass
-            : public RPI::ParentPass
+            : public JE::Render::RPI::ParentPass
         {
             AZ_RPI_PASS(BloomCompositePass);
 
@@ -35,9 +35,9 @@ namespace AZ
             virtual ~BloomCompositePass() = default;
 
             //! Creates a BloomCompositePass
-            static RPI::Ptr<BloomCompositePass> Create(const RPI::PassDescriptor& descriptor);
+            static JE::Render::RPI::Ptr<BloomCompositePass> Create(const JE::Render::RPI::PassDescriptor& descriptor);
         protected:
-            BloomCompositePass(const RPI::PassDescriptor& descriptor);
+            BloomCompositePass(const JE::Render::RPI::PassDescriptor& descriptor);
 
             // Pass behaviour overrides...
             void BuildInternal() override;
@@ -49,7 +49,7 @@ namespace AZ
             void UpdateChildren();
             void CreateBinding(BloomCompositeChildPass* pass, uint32_t mipLevel);
 
-            RPI::DownsampleMipChainPassData m_passData;
+            JE::Render::RPI::DownsampleMipChainPassData m_passData;
 
             uint32_t m_inputWidth = 0;
             uint32_t m_inputHeight = 0;
@@ -72,7 +72,7 @@ namespace AZ
 
         // Pass spawned by parent composite pass for additive upsampling
         class BloomCompositeChildPass
-            : public RPI::ComputePass
+            : public JE::Render::RPI::ComputePass
         {
             AZ_RPI_PASS(BloomCompositeChildPass);
 
@@ -84,12 +84,12 @@ namespace AZ
             virtual ~BloomCompositeChildPass() = default;
 
             //! Creates a BloomCompositeChildPass
-            static RPI::Ptr<BloomCompositeChildPass> Create(const RPI::PassDescriptor& descriptor);
+            static JE::Render::RPI::Ptr<BloomCompositeChildPass> Create(const JE::Render::RPI::PassDescriptor& descriptor);
 
             void UpdateParameters(uint32_t sourceMip, uint32_t sourceImageWidth, uint32_t sourceImageHeight, uint32_t targetImageWidth, uint32_t targetImageHeight, bool enableBicubic, Vector3 tint, float intensity);
 
         protected:
-            BloomCompositeChildPass(const RPI::PassDescriptor& descriptor);
+            BloomCompositeChildPass(const JE::Render::RPI::PassDescriptor& descriptor);
 
             // Pass Behaviour Overrides...
             void FrameBeginInternal(FramePrepareParams params) override;

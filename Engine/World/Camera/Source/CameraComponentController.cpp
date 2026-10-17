@@ -10,10 +10,10 @@
 #include "AzCore/Component/TransformBus.h"
 #include <JE/World/Camera/CameraViewRegistrationBus.h>
 
-#include <Atom/RPI.Public/Pass/PassFilter.h>
-#include <Atom/RPI.Public/View.h>
-#include <Atom/RPI.Public/ViewportContextManager.h>
-#include <Atom/RPI.Public/ViewportContext.h>
+#include <JE/Render/RPI/Public/Pass/PassFilter.h>
+#include <JE/Render/RPI/Public/View.h>
+#include <JE/Render/RPI/Public/ViewportContextManager.h>
+#include <JE/Render/RPI/Public/ViewportContext.h>
 
 #include <AzCore/Asset/AssetSerializer.h>
 #include <AzCore/Component/EntityBus.h>
@@ -153,14 +153,14 @@ namespace JE::World::Camera
 
     void CameraComponentController::ActivateAtomView()
     {
-        auto atomViewportRequests = AZ::Interface<AZ::RPI::ViewportContextRequestsInterface>::Get();
+        auto atomViewportRequests = AZ::Interface<JE::Render::RPI::ViewportContextRequestsInterface>::Get();
         if (atomViewportRequests)
         {
             AZ_Assert(GetView(), "Attempted to activate Atom camera before component activation");
 
             const AZ::Name contextName = atomViewportRequests->GetDefaultViewportContextName();
 
-            AZ::RPI::ViewportContextNotificationBus::Handler::BusConnect(contextName);
+            JE::Render::RPI::ViewportContextNotificationBus::Handler::BusConnect(contextName);
 
             // Ensure the Atom camera is updated with our current transform state
             AZ::Transform localTransform;
@@ -177,12 +177,12 @@ namespace JE::World::Camera
 
     void CameraComponentController::DeactivateAtomView()
     {
-        if (auto atomViewportRequests = AZ::Interface<AZ::RPI::ViewportContextRequestsInterface>::Get())
+        if (auto atomViewportRequests = AZ::Interface<JE::Render::RPI::ViewportContextRequestsInterface>::Get())
         {
             const AZ::Name contextName = atomViewportRequests->GetDefaultViewportContextName();
             atomViewportRequests->PopViewGroup(contextName, m_atomCameraViewGroup);
 
-            AZ::RPI::ViewportContextNotificationBus::Handler::BusDisconnect(contextName);
+            JE::Render::RPI::ViewportContextNotificationBus::Handler::BusDisconnect(contextName);
         }
     }
 
@@ -239,23 +239,23 @@ namespace JE::World::Camera
 
     void CameraComponentController::Init()
     {
-        AZStd::function<void(AZ::RPI::ViewPtr view)> onChange = [this](AZ::RPI::ViewPtr view)
+        AZStd::function<void(JE::Render::RPI::ViewPtr view)> onChange = [this](JE::Render::RPI::ViewPtr view)
         {
             if (!m_updatingTransformFromEntity && !m_isLockedFn())
             {
                 AZ::TransformBus::Event(m_entityId, &AZ::TransformInterface::SetWorldTM, view->GetCameraTransform());
             }
         };
-        m_atomCameraViewGroup = AZStd::make_shared<AZ::RPI::ViewGroup>();
-        m_atomCameraViewGroup->Init(AZ::RPI::ViewGroup::Descriptor{ onChange, nullptr });
+        m_atomCameraViewGroup = AZStd::make_shared<JE::Render::RPI::ViewGroup>();
+        m_atomCameraViewGroup->Init(JE::Render::RPI::ViewGroup::Descriptor{ onChange, nullptr });
         
-        if (auto rpiSystemInterface = AZ::RPI::RPISystemInterface::Get())
+        if (auto rpiSystemInterface = JE::Render::RPI::RPISystemInterface::Get())
         {
             m_xrSystem = rpiSystemInterface->GetXRSystem();
             if (m_xrSystem)
             {
                 m_numSterescopicViews = m_xrSystem->GetNumViews();
-                AZ_Assert(m_numSterescopicViews <= AZ::RPI::XRMaxNumViews, "Atom only supports two XR views");
+                AZ_Assert(m_numSterescopicViews <= JE::Render::RPI::XRMaxNumViews, "Atom only supports two XR views");
             }
         }
     }
@@ -270,9 +270,9 @@ namespace JE::World::Camera
         m_xrHeadToLeftEyeTm = AZ::Transform::CreateIdentity();
         m_xrHeadToRightEyeTm = AZ::Transform::CreateIdentity();
 
-        AZ::RPI::XRSpaceNotificationBus::Handler::BusConnect();
+        JE::Render::RPI::XRSpaceNotificationBus::Handler::BusConnect();
 
-        auto atomViewportRequests = AZ::Interface<AZ::RPI::ViewportContextRequestsInterface>::Get();
+        auto atomViewportRequests = AZ::Interface<JE::Render::RPI::ViewportContextRequestsInterface>::Get();
         
         if (atomViewportRequests)
         {
@@ -283,9 +283,9 @@ namespace JE::World::Camera
             // Also, when using the Editor and opening the level for the first time,  GetViewForEntity() will return a null ViewPtr.
             if (GetView() == nullptr && editorEntityId.IsValid())
             {
-                AZ::RPI::ViewPtr atomEditorView = nullptr;
+                JE::Render::RPI::ViewPtr atomEditorView = nullptr;
                 CameraViewRegistrationRequestsBus::BroadcastResult(atomEditorView, &CameraViewRegistrationRequests::GetViewForEntity, editorEntityId);
-                m_atomCameraViewGroup->SetView(atomEditorView, AZ::RPI::ViewType::Default);
+                m_atomCameraViewGroup->SetView(atomEditorView, JE::Render::RPI::ViewType::Default);
             }
 
             AZStd::string entityName;
@@ -305,7 +305,7 @@ namespace JE::World::Camera
             }
             m_atomCameraViewGroup->CreateStereoscopicViews(cameraName);
 
-            AZ::RPI::ViewProviderBus::Handler::BusConnect(m_entityId);
+            JE::Render::RPI::ViewProviderBus::Handler::BusConnect(m_entityId);
             m_atomCameraViewGroup->Activate();
         }
 
@@ -334,11 +334,11 @@ namespace JE::World::Camera
 
     void CameraComponentController::Deactivate()
     {
-        AZ::RPI::XRSpaceNotificationBus::Handler::BusDisconnect();
+        JE::Render::RPI::XRSpaceNotificationBus::Handler::BusDisconnect();
 
         if (m_renderToTexturePipeline)
         {
-            auto scene = AZ::RPI::RPISystemInterface::Get()->GetSceneByName(AZ::Name("Main"));
+            auto scene = JE::Render::RPI::RPISystemInterface::Get()->GetSceneByName(AZ::Name("Main"));
             scene->RemoveRenderPipeline(m_renderToTexturePipeline->GetId());
             m_renderToTexturePipeline = nullptr;
         }
@@ -347,7 +347,7 @@ namespace JE::World::Camera
         ::Camera::CameraBus::Handler::BusDisconnect();
         AZ::TransformNotificationBus::Handler::BusDisconnect(m_entityId);
         ::Camera::CameraRequestBus::Handler::BusDisconnect(m_entityId);
-        AZ::RPI::ViewProviderBus::Handler::BusDisconnect(m_entityId);
+        JE::Render::RPI::ViewProviderBus::Handler::BusDisconnect(m_entityId);
         m_atomCameraViewGroup->Deactivate();
        
         DeactivateAtomView();
@@ -355,17 +355,17 @@ namespace JE::World::Camera
 
     void CameraComponentController::CreateRenderPipelineForTexture()
     {
-        auto scene = AZ::RPI::RPISystemInterface::Get()->GetSceneByName(AZ::Name("Main"));
+        auto scene = JE::Render::RPI::RPISystemInterface::Get()->GetSceneByName(AZ::Name("Main"));
 
         const AZStd::string pipelineName = "Camera_" + m_entityId.ToString() + "_Pipeline";
 
-        AZ::RPI::RenderPipelineDescriptor pipelineDesc;
+        JE::Render::RPI::RenderPipelineDescriptor pipelineDesc;
         pipelineDesc.m_mainViewTagName = "MainCamera";
         pipelineDesc.m_name = pipelineName;
         pipelineDesc.m_rootPassTemplate = m_config.m_pipelineTemplate;
-        pipelineDesc.m_renderSettings.m_multisampleState = AZ::RPI::RPISystemInterface::Get()->GetApplicationMultisampleState();
+        pipelineDesc.m_renderSettings.m_multisampleState = JE::Render::RPI::RPISystemInterface::Get()->GetApplicationMultisampleState();
         pipelineDesc.m_allowModification = m_config.m_allowPipelineChanges;
-        m_renderToTexturePipeline = AZ::RPI::RenderPipeline::CreateRenderPipelineForImage(pipelineDesc, m_config.m_renderTextureAsset);
+        m_renderToTexturePipeline = JE::Render::RPI::RenderPipeline::CreateRenderPipelineForImage(pipelineDesc, m_config.m_renderTextureAsset);
 
         if (!m_renderToTexturePipeline)
         {
@@ -389,9 +389,9 @@ namespace JE::World::Camera
         return m_config;
     }
 
-    AZ::RPI::ViewportContextPtr CameraComponentController::GetViewportContext()
+    JE::Render::RPI::ViewportContextPtr CameraComponentController::GetViewportContext()
     {
-        if (auto atomViewportRequests = AZ::Interface<AZ::RPI::ViewportContextRequestsInterface>::Get();
+        if (auto atomViewportRequests = AZ::Interface<JE::Render::RPI::ViewportContextRequestsInterface>::Get();
             m_atomCameraViewGroup && atomViewportRequests)
         {
             return atomViewportRequests->GetDefaultViewportContext();
@@ -633,17 +633,17 @@ namespace JE::World::Camera
         }
     }
 
-    void CameraComponentController::OnViewportDefaultViewChanged(AZ::RPI::ViewPtr view)
+    void CameraComponentController::OnViewportDefaultViewChanged(JE::Render::RPI::ViewPtr view)
     {
         m_isActiveView = GetView() == view;
     }
 
-    AZ::RPI::ViewPtr CameraComponentController::GetView() const
+    JE::Render::RPI::ViewPtr CameraComponentController::GetView() const
     {
-        return m_atomCameraViewGroup->GetView(AZ::RPI::ViewType::Default);
+        return m_atomCameraViewGroup->GetView(JE::Render::RPI::ViewType::Default);
     }
 
-    AZ::RPI::ViewPtr CameraComponentController::GetStereoscopicView(AZ::RPI::ViewType viewType) const
+    JE::Render::RPI::ViewPtr CameraComponentController::GetStereoscopicView(JE::Render::RPI::ViewType viewType) const
     {
         return m_atomCameraViewGroup->GetView(viewType);
     }
@@ -693,8 +693,8 @@ namespace JE::World::Camera
                 AZ::Matrix4x4 projection = AZ::Matrix4x4::CreateIdentity();
                 for (AZ::u32 i = 0; i < m_numSterescopicViews; i++)
                 {
-                    AZ::RPI::ViewType viewType = i == 0 ? AZ::RPI::ViewType::XrLeft : AZ::RPI::ViewType::XrRight;
-                    AZ::RPI::FovData fovData;
+                    JE::Render::RPI::ViewType viewType = i == 0 ? JE::Render::RPI::ViewType::XrLeft : JE::Render::RPI::ViewType::XrRight;
+                    JE::Render::RPI::FovData fovData;
                     m_xrSystem->GetViewFov(i, fovData);
 
                     if ( (fovData.m_angleLeft != 0 || fovData.m_angleRight != 0) && (fovData.m_angleUp != 0 || fovData.m_angleDown != 0))
@@ -715,11 +715,11 @@ namespace JE::World::Camera
         }
     }
 
-    void CameraComponentController::SetupAtomAuxGeom(AZ::RPI::ViewportContextPtr viewportContext)
+    void CameraComponentController::SetupAtomAuxGeom(JE::Render::RPI::ViewportContextPtr viewportContext)
     {
         if (auto scene = viewportContext->GetRenderScene())
         {
-            if (auto auxGeomFP = scene->GetFeatureProcessor<AZ::RPI::AuxGeomFeatureProcessorInterface>())
+            if (auto auxGeomFP = scene->GetFeatureProcessor<JE::Render::RPI::AuxGeomFeatureProcessorInterface>())
             {
                 m_atomAuxGeom = auxGeomFP->GetOrCreateDrawQueueForView(GetView().get());
             }
@@ -751,12 +751,12 @@ namespace JE::World::Camera
         // Update camera world matrix for the left eye pipeline.
         m_xrHeadToLeftEyeTm = headToleftEyeTm;
         const auto leftEyeWorldTm = mainCameraWorldTm * headToleftEyeTm;
-        m_atomCameraViewGroup->SetCameraTransform(AZ::Matrix3x4::CreateFromTransform(leftEyeWorldTm), AZ::RPI::ViewType::XrLeft);
+        m_atomCameraViewGroup->SetCameraTransform(AZ::Matrix3x4::CreateFromTransform(leftEyeWorldTm), JE::Render::RPI::ViewType::XrLeft);
 
         // Update camera world matrix for the right eye pipeline.
         m_xrHeadToRightEyeTm = headToRightEyeTm;
         const auto rightEyeWorldTm = mainCameraWorldTm * headToRightEyeTm;
-        m_atomCameraViewGroup->SetCameraTransform(AZ::Matrix3x4::CreateFromTransform(rightEyeWorldTm), AZ::RPI::ViewType::XrRight);
+        m_atomCameraViewGroup->SetCameraTransform(AZ::Matrix3x4::CreateFromTransform(rightEyeWorldTm), JE::Render::RPI::ViewType::XrRight);
 
         UpdateCamera();
 

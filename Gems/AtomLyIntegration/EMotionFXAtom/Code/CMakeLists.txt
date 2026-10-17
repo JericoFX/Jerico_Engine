@@ -21,7 +21,7 @@ ly_add_target(
             Gem::Atom_Utils.Static
             Gem::Atom_Feature_Common
             Gem::Atom_Feature_Common.Public
-            Gem::Atom_RPI.Public
+            JE::RenderIntegration
             Gem::Atom_RHI.Reflect
             Gem::CommonFeaturesAtom.Public
             JE::RenderMaterials

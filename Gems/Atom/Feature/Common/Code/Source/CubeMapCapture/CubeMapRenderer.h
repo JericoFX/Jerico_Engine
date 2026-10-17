@@ -9,9 +9,9 @@
 #pragma once
 
 #include <AzCore/Math/Transform.h>
-#include <Atom/RPI.Public/Base.h>
-#include <Atom/RPI.Public/Pass/Specific/EnvironmentCubeMapPass.h>
-#include <Atom/RPI.Public/Scene.h>
+#include <JE/Render/RPI/Public/Base.h>
+#include <JE/Render/RPI/Public/Pass/Specific/EnvironmentCubeMapPass.h>
+#include <JE/Render/RPI/Public/Scene.h>
 
 namespace AZ
 {
@@ -34,8 +34,8 @@ namespace AZ
             void CheckAndRemovePipeline();
 
             bool IsRenderingCubeMap() const { return m_renderingCubeMap; }
-            void SetScene(RPI::Scene* scene) { m_scene = scene; }
-            void SetDefaultView(RPI::RenderPipeline* renderPipeline);
+            void SetScene(JE::Render::RPI::Scene* scene) { m_scene = scene; }
+            void SetDefaultView(JE::Render::RPI::RenderPipeline* renderPipeline);
 
         protected:
             CubeMapRenderer() = default;
@@ -44,12 +44,12 @@ namespace AZ
         private:
             AZ_DISABLE_COPY_MOVE(CubeMapRenderer);
 
-            RPI::Scene* m_scene = nullptr;
+            JE::Render::RPI::Scene* m_scene = nullptr;
             float m_exposure = 0.0f;
 
             // render pipeline
-            RPI::Ptr<RPI::EnvironmentCubeMapPass> m_environmentCubeMapPass = nullptr;
-            RPI::RenderPipelineId m_environmentCubeMapPipelineId;
+            JE::Render::RPI::Ptr<JE::Render::RPI::EnvironmentCubeMapPass> m_environmentCubeMapPass = nullptr;
+            JE::Render::RPI::RenderPipelineId m_environmentCubeMapPipelineId;
             RenderCubeMapCallback m_callback;
             RHI::ShaderInputNameIndex m_globalIblExposureConstantIndex = "m_iblExposure";
             RHI::ShaderInputNameIndex m_skyBoxExposureConstantIndex = "m_cubemapExposure";

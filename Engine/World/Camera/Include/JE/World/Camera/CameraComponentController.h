@@ -14,15 +14,15 @@
 #include <AzCore/Component/TransformBus.h>
 #include <AzFramework/Components/CameraBus.h>
 #include <AzFramework/Viewport/CameraState.h>
-#include <Atom/RPI.Public/AuxGeom/AuxGeomFeatureProcessorInterface.h>
-#include <Atom/RPI.Public/Base.h>
-#include <Atom/RPI.Public/RenderPipeline.h>
-#include <Atom/RPI.Public/ViewGroup.h>
-#include <Atom/RPI.Public/ViewportContextBus.h>
-#include <Atom/RPI.Public/ViewProviderBus.h>
-#include <Atom/RPI.Public/XR/XRRenderingInterface.h>
-#include <Atom/RPI.Public/XR/XRSpaceNotificationBus.h>
-#include <Atom/RPI.Reflect/Image/AttachmentImageAsset.h>
+#include <JE/Render/RPI/Public/AuxGeom/AuxGeomFeatureProcessorInterface.h>
+#include <JE/Render/RPI/Public/Base.h>
+#include <JE/Render/RPI/Public/RenderPipeline.h>
+#include <JE/Render/RPI/Public/ViewGroup.h>
+#include <JE/Render/RPI/Public/ViewportContextBus.h>
+#include <JE/Render/RPI/Public/ViewProviderBus.h>
+#include <JE/Render/RPI/Public/XR/XRRenderingInterface.h>
+#include <JE/Render/RPI/Public/XR/XRSpaceNotificationBus.h>
+#include <JE/Render/RPI/Reflect/Image/AttachmentImageAsset.h>
 
 namespace JE::World::Camera
 {
@@ -65,7 +65,7 @@ namespace JE::World::Camera
 
         // Members for render to texture
         // The texture assets which is used for render to texture feature. It defines the resolution, format etc.
-        AZ::Data::Asset<AZ::RPI::AttachmentImageAsset> m_renderTextureAsset;
+        AZ::Data::Asset<JE::Render::RPI::AttachmentImageAsset> m_renderTextureAsset;
         // The pass template name used for render pipeline's root template
         AZStd::string m_pipelineTemplate = "CameraPipeline";
     private:
@@ -77,9 +77,9 @@ namespace JE::World::Camera
         : public ::Camera::CameraBus::Handler
         , public ::Camera::CameraRequestBus::Handler
         , public AZ::TransformNotificationBus::Handler
-        , public AZ::RPI::ViewportContextNotificationBus::Handler
-        , public AZ::RPI::ViewProviderBus::Handler
-        , public AZ::RPI::XRSpaceNotificationBus::Handler
+        , public JE::Render::RPI::ViewportContextNotificationBus::Handler
+        , public JE::Render::RPI::ViewProviderBus::Handler
+        , public JE::Render::RPI::XRSpaceNotificationBus::Handler
     {
     public:
         AZ_TYPE_INFO(CameraComponentController, "{A27A0725-8C07-4BF2-BF95-B6CB0CBD01B8}");
@@ -105,7 +105,7 @@ namespace JE::World::Camera
         void Deactivate();
         void SetConfiguration(const CameraComponentConfig& config);
         const CameraComponentConfig& GetConfiguration() const;
-        AZ::RPI::ViewportContextPtr GetViewportContext();
+        JE::Render::RPI::ViewportContextPtr GetViewportContext();
 
         // CameraBus::Handler interface
         AZ::EntityId GetCameras() override;
@@ -142,11 +142,11 @@ namespace JE::World::Camera
 
         // AZ::RPI::ViewportContextNotificationBus::Handler interface
         void OnViewportSizeChanged(AzFramework::WindowSize size) override;
-        void OnViewportDefaultViewChanged(AZ::RPI::ViewPtr view) override;
+        void OnViewportDefaultViewChanged(JE::Render::RPI::ViewPtr view) override;
 
         // AZ::RPI::ViewProviderBus::Handler interface
-        AZ::RPI::ViewPtr GetView() const override;
-        AZ::RPI::ViewPtr GetStereoscopicView(AZ::RPI::ViewType viewType) const override;
+        JE::Render::RPI::ViewPtr GetView() const override;
+        JE::Render::RPI::ViewPtr GetStereoscopicView(JE::Render::RPI::ViewType viewType) const override;
 
         ///////////////////////////////////////////////////////////////////////
         // AZ::RPI::XRSpaceNotificationBus::Handler Overrides
@@ -164,16 +164,16 @@ namespace JE::World::Camera
         void ActivateAtomView();
         void DeactivateAtomView();
         void UpdateCamera();
-        void SetupAtomAuxGeom(AZ::RPI::ViewportContextPtr viewportContext);
+        void SetupAtomAuxGeom(JE::Render::RPI::ViewportContextPtr viewportContext);
         AzFramework::CameraState GetCameraState();
 
         CameraComponentConfig m_config;
         AZ::EntityId m_entityId;
 
         // Atom integration
-        AZ::RPI::ViewGroupPtr m_atomCameraViewGroup = nullptr;
+        JE::Render::RPI::ViewGroupPtr m_atomCameraViewGroup = nullptr;
 
-        AZ::RPI::AuxGeomDrawPtr m_atomAuxGeom;
+        JE::Render::RPI::AuxGeomDrawPtr m_atomAuxGeom;
        
         bool m_updatingTransformFromEntity = false;
         bool m_isActiveView = false;
@@ -182,11 +182,11 @@ namespace JE::World::Camera
         AZStd::function<bool()> m_isLockedFn = []{ return false; };
 
         // for render to texture
-        AZ::RPI::RenderPipelinePtr m_renderToTexturePipeline;
+        JE::Render::RPI::RenderPipelinePtr m_renderToTexturePipeline;
 
         //! From this point onwards the member variables are only applicable
         //! when the XRRenderingInterface is active.
-        AZ::RPI::XRRenderingInterface* m_xrSystem = nullptr;
+        JE::Render::RPI::XRRenderingInterface* m_xrSystem = nullptr;
         AZ::u32 m_numSterescopicViews = 0;
 
         // Remarks, When using the XR Gem the world camera transform will be:

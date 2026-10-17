@@ -8,20 +8,20 @@
 
 #include "DiffuseProbeGridDownsamplePass.h"
 #include <Render/DiffuseProbeGridFeatureProcessor.h>
-#include <Atom/RPI.Public/RenderPipeline.h>
+#include <JE/Render/RPI/Public/RenderPipeline.h>
 
 namespace AZ
 {
     namespace Render
     {
-        RPI::Ptr<DiffuseProbeGridDownsamplePass> DiffuseProbeGridDownsamplePass::Create(const RPI::PassDescriptor& descriptor)
+        JE::Render::RPI::Ptr<DiffuseProbeGridDownsamplePass> DiffuseProbeGridDownsamplePass::Create(const JE::Render::RPI::PassDescriptor& descriptor)
         {
-            RPI::Ptr<DiffuseProbeGridDownsamplePass> pass = aznew DiffuseProbeGridDownsamplePass(descriptor);
+            JE::Render::RPI::Ptr<DiffuseProbeGridDownsamplePass> pass = aznew DiffuseProbeGridDownsamplePass(descriptor);
             return pass;
         }
 
-        DiffuseProbeGridDownsamplePass::DiffuseProbeGridDownsamplePass(const RPI::PassDescriptor& descriptor)
-            : RPI::FullscreenTrianglePass(descriptor)
+        DiffuseProbeGridDownsamplePass::DiffuseProbeGridDownsamplePass(const JE::Render::RPI::PassDescriptor& descriptor)
+            : JE::Render::RPI::FullscreenTrianglePass(descriptor)
         {
         }
 
@@ -32,7 +32,7 @@ namespace AZ
                 return false;
             }
 
-            RPI::Scene* scene = m_pipeline->GetScene();
+            JE::Render::RPI::Scene* scene = m_pipeline->GetScene();
             if (!scene)
             {
                 return false;

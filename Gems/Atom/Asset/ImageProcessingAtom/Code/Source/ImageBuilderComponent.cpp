@@ -25,9 +25,9 @@
 
 #include <AzQtComponents/Utilities/QtPluginPaths.h>
 
-#include <Atom/RPI.Reflect/Asset/AssetHandler.h>
-#include <Atom/RPI.Reflect/Image/StreamingImageAssetHandler.h>
-#include <Atom/RPI.Reflect/Image/ImageMipChainAsset.h>
+#include <JE/Render/RPI/Reflect/Asset/AssetHandler.h>
+#include <JE/Render/RPI/Reflect/Image/StreamingImageAssetHandler.h>
+#include <JE/Render/RPI/Reflect/Image/ImageMipChainAsset.h>
 
 namespace ImageProcessingAtom
 {
@@ -79,8 +79,8 @@ namespace ImageProcessingAtom
         m_imageBuilder.BusConnect(builderDescriptor.m_busId);
         AssetBuilderSDK::AssetBuilderBus::Broadcast(&AssetBuilderSDK::AssetBuilderBusTraits::RegisterBuilderInformation, builderDescriptor);
 
-        m_assetHandlers.emplace_back(AZ::RPI::MakeAssetHandler<AZ::RPI::ImageMipChainAssetHandler>());
-        m_assetHandlers.emplace_back(AZ::RPI::MakeAssetHandler<AZ::RPI::StreamingImageAssetHandler>());
+        m_assetHandlers.emplace_back(JE::Render::RPI::MakeAssetHandler<JE::Render::RPI::ImageMipChainAssetHandler>());
+        m_assetHandlers.emplace_back(JE::Render::RPI::MakeAssetHandler<JE::Render::RPI::StreamingImageAssetHandler>());
 
         ImageProcessingRequestBus::Handler::BusConnect();
         ImageBuilderRequestBus::Handler::BusConnect();

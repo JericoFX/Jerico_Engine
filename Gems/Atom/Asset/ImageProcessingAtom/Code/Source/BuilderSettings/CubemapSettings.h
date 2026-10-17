@@ -12,7 +12,7 @@
 #include <AzCore/RTTI/ReflectContext.h>
 #include <AzCore/Memory/Memory.h>
 #include <Atom/ImageProcessing/ImageProcessingDefines.h>
-#include <Atom/RPI.Reflect/Image/StreamingImageAsset.h>
+#include <JE/Render/RPI/Reflect/Image/StreamingImageAsset.h>
 
 namespace ImageProcessingAtom
 {
@@ -56,6 +56,6 @@ namespace ImageProcessingAtom
         bool m_requiresConvolve = true;
 
         //product subId, allows a specific subId to be specified for an output cubemap product
-        AZ::u32 m_subId = AZ::RPI::StreamingImageAsset::GetImageAssetSubId();
+        AZ::u32 m_subId = JE::Render::RPI::StreamingImageAsset::GetImageAssetSubId();
     };
 } // namespace ImageProcessingAtom

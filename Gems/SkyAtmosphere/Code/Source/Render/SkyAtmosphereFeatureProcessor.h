@@ -33,7 +33,7 @@ namespace SkyAtmosphere
         //! FeatureProcessor 
         void Activate() override;
         void Deactivate() override;
-        void AddRenderPasses(AZ::RPI::RenderPipeline* renderPipeline) override;
+        void AddRenderPasses(JE::Render::RPI::RenderPipeline* renderPipeline) override;
         void Render(const RenderPacket& packet) override;
 
         //! SkyAtmosphereFeatureProcessorInterface
@@ -46,7 +46,7 @@ namespace SkyAtmosphere
     private:
 
         //! RPI::SceneNotificationBus::Handler
-        void OnRenderPipelineChanged(AZ::RPI::RenderPipeline* pipeline, AZ::RPI::SceneNotification::RenderPipelineChangeType changeType) override;
+        void OnRenderPipelineChanged(JE::Render::RPI::RenderPipeline* pipeline, JE::Render::RPI::SceneNotification::RenderPipelineChangeType changeType) override;
         
         void InitializeAtmosphere(AtmosphereId id);
         void UpdateBackgroundClearColor();
@@ -61,6 +61,6 @@ namespace SkyAtmosphere
         };
 
         AZ::Render::SparseVector<SkyAtmosphere> m_atmospheres;
-        AZStd::map<AZ::RPI::RenderPipeline*, SkyAtmosphereParentPass*> m_renderPipelineToSkyAtmosphereParentPass;
+        AZStd::map<JE::Render::RPI::RenderPipeline*, SkyAtmosphereParentPass*> m_renderPipelineToSkyAtmosphereParentPass;
     };
 }

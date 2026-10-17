@@ -14,8 +14,8 @@
 #include <AzToolsFramework/API/EditorAssetSystemAPI.h>
 #include <AzToolsFramework/UI/PropertyEditor/PropertyEditorAPI.h>
 #include <AzCore/IO/SystemFile.h>
-#include <Atom/RPI.Reflect/Image/StreamingImagePoolAsset.h>
-#include <Atom/RPI.Reflect/Model/ModelAsset.h>
+#include <JE/Render/RPI/Reflect/Image/StreamingImagePoolAsset.h>
+#include <JE/Render/RPI/Reflect/Model/ModelAsset.h>
 #include <AzCore/Asset/AssetSerializer.h>
 #include <AzCore/Component/Entity.h>
 
@@ -56,7 +56,7 @@ namespace AZ
                             ->Attribute(AZ::Edit::Attributes::AutoExpand, true)
                             ->Attribute(AZ::Edit::Attributes::Visibility, AZ::Edit::PropertyVisibility::ShowChildrenOnly)
                             ->Attribute(Edit::Attributes::HelpPageURL, "https://www.o3de.org/docs/user-guide/components/reference/atom/reflection-probe/")
-                            ->Attribute(AZ::Edit::Attributes::PrimaryAssetType, AZ::AzTypeInfo<RPI::ModelAsset>::Uuid())
+                            ->Attribute(AZ::Edit::Attributes::PrimaryAssetType, AZ::AzTypeInfo<JE::Render::RPI::ModelAsset>::Uuid())
                         ->ClassElement(AZ::Edit::ClassElements::Group, QT_TRANSLATE_NOOP("AtomLyIntegration", "Cubemap Bake"))
                             ->Attribute(AZ::Edit::Attributes::AutoExpand, true)
                             ->UIElement(AZ::Edit::UIHandlers::Button, QT_TRANSLATE_NOOP("AtomLyIntegration", "Bake Reflection Probe"), QT_TRANSLATE_NOOP("AtomLyIntegration", "Bake Reflection Probe"))
@@ -195,7 +195,7 @@ namespace AZ
             if (m_controller.m_configuration.m_useBakedCubemap)
             {
                 AZStd::string cubeMapRelativePath = m_controller.m_configuration.m_bakedCubeMapRelativePath + ".streamingimage";
-                Data::Asset<RPI::StreamingImageAsset> cubeMapAsset;
+                Data::Asset<JE::Render::RPI::StreamingImageAsset> cubeMapAsset;
                 CubeMapAssetNotificationType notificationType = CubeMapAssetNotificationType::None;
                 if (m_controller.m_featureProcessor->CheckCubeMapAssetNotification(cubeMapRelativePath, cubeMapAsset, notificationType))
                 {

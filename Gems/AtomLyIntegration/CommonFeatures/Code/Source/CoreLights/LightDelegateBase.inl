@@ -6,7 +6,7 @@
  *
  */
 
-#include <Atom/RPI.Public/Scene.h>
+#include <JE/Render/RPI/Public/Scene.h>
 
 namespace AZ
 {
@@ -15,7 +15,7 @@ namespace AZ
         template <typename FeatureProcessorType>
         LightDelegateBase<FeatureProcessorType>::LightDelegateBase(EntityId entityId, bool isVisible)
         {
-            m_featureProcessor = RPI::Scene::GetFeatureProcessorForEntity<FeatureProcessorType>(entityId);
+            m_featureProcessor = JE::Render::RPI::Scene::GetFeatureProcessorForEntity<FeatureProcessorType>(entityId);
             AZ_Error("LightDelegateBase", m_featureProcessor, "Unable to find a %s on the scene.", FeatureProcessorType::RTTI_TypeName());
 
             if (m_featureProcessor && isVisible)

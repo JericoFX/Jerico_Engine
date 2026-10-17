@@ -14,7 +14,7 @@
 #include "SlicerView.h"
 #include "SpriteBorderEditorCommon.h"
 
-#include <Atom/RPI.Reflect/Image/StreamingImageAsset.h>
+#include <JE/Render/RPI/Reflect/Image/StreamingImageAsset.h>
 #include <AzCore/Interface/Interface.h>
 #include <AzCore/Math/Vector2.h>
 #include <LyShine/ILyShine.h>
@@ -60,7 +60,7 @@ SpriteBorderEditor::SpriteBorderEditor(const char* path, QWidget* parent)
 
     // Make sure the sprite can load and be displayed before continuing
     m_sprite = AZ::Interface<ILyShine>::Get()->LoadSprite(m_spritePath.toLatin1().constData());
-    QString fullPath = Path::GamePathToFullPath((m_sprite->GetTexturePathname() + "." + AZ::RPI::StreamingImageAsset::Extension).c_str());
+    QString fullPath = Path::GamePathToFullPath((m_sprite->GetTexturePathname() + "." + JE::Render::RPI::StreamingImageAsset::Extension).c_str());
     const bool imageWontLoad = !m_sprite || QPixmap(fullPath).isNull();
     if (imageWontLoad)
     {
@@ -426,7 +426,7 @@ void SpriteBorderEditor::AddSelectCellSection(QGridLayout* gridLayout, int& rowN
     QPixmap scaledPixmap;
     {
         QString fullPath =
-            Path::GamePathToFullPath((m_sprite->GetTexturePathname() + "." + AZ::RPI::StreamingImageAsset::Extension).c_str());
+            Path::GamePathToFullPath((m_sprite->GetTexturePathname() + "." + JE::Render::RPI::StreamingImageAsset::Extension).c_str());
         m_unscaledSpriteSheet = QPixmap(fullPath);
         if ((m_unscaledSpriteSheet.height() <= 0) && (m_unscaledSpriteSheet.width() <= 0))
         {
@@ -666,7 +666,7 @@ void SpriteBorderEditor::AddPropertiesSection(QGridLayout* gridLayout, int& rowN
     QSize scaledPixmapSize;
     {
         QString fullPath =
-            Path::GamePathToFullPath((m_sprite->GetTexturePathname() + "." + AZ::RPI::StreamingImageAsset::Extension).c_str());
+            Path::GamePathToFullPath((m_sprite->GetTexturePathname() + "." + JE::Render::RPI::StreamingImageAsset::Extension).c_str());
         m_unscaledSpriteSheet = QPixmap(fullPath);
         if ((m_unscaledSpriteSheet.size().height() <= 0) && (m_unscaledSpriteSheet.size().width() <= 0))
         {
@@ -920,7 +920,7 @@ void SpriteBorderEditor::AddButtonsSection(QGridLayout* gridLayout, int& rowNum)
                 // will give a path in the project even if the texture is in a gem.
                 // The texture is guaranteed to exist so use that to get the full path.
                 QString fullTexturePath =
-                    Path::GamePathToFullPath((m_sprite->GetTexturePathname() + "." + AZ::RPI::StreamingImageAsset::Extension).c_str());
+                    Path::GamePathToFullPath((m_sprite->GetTexturePathname() + "." + JE::Render::RPI::StreamingImageAsset::Extension).c_str());
                 const char* const spriteExtension = "sprite";
                 AZStd::string fullSpritePath = PathUtil::ReplaceExtension(fullTexturePath.toUtf8().data(), spriteExtension);
 

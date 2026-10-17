@@ -9,7 +9,7 @@ ly_add_target(
     NAMESPACE JE
     FILES_CMAKE render_debug_public_files.cmake
     INCLUDE_DIRECTORIES INTERFACE Include
-    BUILD_DEPENDENCIES INTERFACE AZ::AzCore Gem::Atom_RPI.Public
+    BUILD_DEPENDENCIES INTERFACE AZ::AzCore JE::RenderIntegration
 )
 
 ly_add_target(

@@ -10,7 +10,7 @@
 #include <QSettings>
 #include <QMouseEvent>
 
-#include <Atom/RPI.Public/SceneBus.h>
+#include <JE/Render/RPI/Public/SceneBus.h>
 #include <AtomToolsFramework/Viewport/RenderViewportWidget.h>
 #include <AzFramework/Viewport/CameraInput.h>
 #include <AzToolsFramework/ViewportUi/ViewportUiManager.h>
@@ -29,7 +29,7 @@ namespace EMStudio
         : public AtomToolsFramework::RenderViewportWidget
         , private AnimViewportRequestBus::Handler
         , private ViewportPluginRequestBus::Handler
-        , private AZ::RPI::SceneNotificationBus::Handler
+        , private JE::Render::RPI::SceneNotificationBus::Handler
     {
     public:
         AnimViewportWidget(AtomRenderPlugin* parentPlugin);

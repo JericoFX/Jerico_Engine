@@ -10,12 +10,12 @@
 
 #include <Atom/Feature/Mesh/MeshInfo.h>
 #include <Atom/RHI.Reflect/ShaderSemantic.h>
-#include <Atom/RPI.Public/Buffer/BufferSystemInterface.h>
-#include <Atom/RPI.Public/Buffer/RingBuffer.h>
-#include <Atom/RPI.Public/Material/Material.h>
-#include <Atom/RPI.Public/Material/PersistentIndexAllocator.h>
-#include <Atom/RPI.Public/Model/Model.h>
-#include <Atom/RPI.Public/Scene.h>
+#include <JE/Render/RPI/Public/Buffer/BufferSystemInterface.h>
+#include <JE/Render/RPI/Public/Buffer/RingBuffer.h>
+#include <JE/Render/RPI/Public/Material/Material.h>
+#include <JE/Render/RPI/Public/Material/PersistentIndexAllocator.h>
+#include <JE/Render/RPI/Public/Model/Model.h>
+#include <JE/Render/RPI/Public/Scene.h>
 #include <AzCore/std/parallel/mutex.h>
 
 
@@ -25,7 +25,7 @@ namespace AZ::Render
     {
     public:
         MeshInfoManager();
-        void Activate(RPI::Scene* scene);
+        void Activate(JE::Render::RPI::Scene* scene);
         void Deactivate();
 
         // integration with the MeshFeatureProcessor
@@ -33,7 +33,7 @@ namespace AZ::Render
         void ReleaseMeshInfoEntry(const MeshInfoHandle handle);
         const RHI::Ptr<MeshInfoEntry> GetMeshInfoEntry(const MeshInfoHandle handle);
         void UpdateMeshInfoEntry(const MeshInfoHandle handle, AZStd::function<bool(MeshInfoEntry*)> updateFunction);
-        const Data::Instance<RPI::Buffer>& GetMeshInfoBuffer() const;
+        const Data::Instance<JE::Render::RPI::Buffer>& GetMeshInfoBuffer() const;
 
         void UpdateMeshInfoBuffer();
 
@@ -44,28 +44,28 @@ namespace AZ::Render
 
         // utility function to initialize the buffer indices from default models
         static void InitMeshInfoGeometryBuffers(
-            const AZ::RPI::Model* model,
+            const JE::Render::RPI::Model* model,
             const size_t lod,
             const size_t meshIndex,
-            const RPI::Material* material,
-            const RPI::MaterialModelUvOverrideMap& uvMapping,
+            const JE::Render::RPI::Material* material,
+            const JE::Render::RPI::MaterialModelUvOverrideMap& uvMapping,
             MeshInfoEntry* entry);
 
     private:
         bool m_isEnabled = false;
 
-        RPI::SceneId m_sceneId;
+        JE::Render::RPI::SceneId m_sceneId;
 
-        RPI::PersistentIndexAllocator<int32_t> m_meshInfoIndices;
+        JE::Render::RPI::PersistentIndexAllocator<int32_t> m_meshInfoIndices;
         AZStd::mutex m_mutex;
 
         AZStd::vector<RHI::Ptr<MeshInfoEntry>> m_meshInfoData;
-        RPI::RingBuffer m_meshInfoBuffer;
+        JE::Render::RPI::RingBuffer m_meshInfoBuffer;
 
         bool m_meshInfoNeedsUpdate = false;
 
         RHI::ShaderInputNameIndex m_meshInfoIndex = "m_meshInfo";
-        RPI::Scene::PrepareSceneSrgEvent::Handler m_updateSceneSrgHandler;
+        JE::Render::RPI::Scene::PrepareSceneSrgEvent::Handler m_updateSceneSrgHandler;
     };
 
 } // namespace AZ::Render

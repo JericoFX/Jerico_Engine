@@ -7,9 +7,9 @@
  */
 #pragma once
 
-#include <Atom/RPI.Public/Pass/ComputePass.h>
+#include <JE/Render/RPI/Public/Pass/ComputePass.h>
 
-namespace AZ
+namespace JE::Render
 {
     namespace RPI
     {
@@ -24,7 +24,7 @@ namespace AZ
 
         public:
             AZ_RTTI(SubsurfaceScatteringPass, "{15036827-D18C-4752-B58F-6F17D59D6D9E}", RenderPass);
-            AZ_CLASS_ALLOCATOR(SubsurfaceScatteringPass, SystemAllocator);
+            AZ_CLASS_ALLOCATOR(SubsurfaceScatteringPass, AZ::SystemAllocator);
             virtual ~SubsurfaceScatteringPass() = default;
 
             //! Creates a SubsurfaceScatteringPass
@@ -33,7 +33,7 @@ namespace AZ
         protected:
             SubsurfaceScatteringPass(const PassDescriptor& descriptor);
 
-            void CompileResources(const RHI::FrameGraphCompileContext& context) override;
+            void CompileResources(const AZ::RHI::FrameGraphCompileContext& context) override;
 
             // output texture vertical dimension required by compute shader
             AZ::RHI::ShaderInputNameIndex m_screenSizeInputIndex = "m_screenSize";

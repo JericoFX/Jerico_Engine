@@ -8,7 +8,7 @@
 
 #include <AzCore/RTTI/BehaviorContext.h>
 
-#include <Atom/RPI.Public/Scene.h>
+#include <JE/Render/RPI/Public/Scene.h>
 
 #include <AzFramework/Components/TransformComponent.h>
 
@@ -84,7 +84,7 @@ namespace AZ
             {
                 m_entityId = entityId;
 
-                m_featureProcessor = RPI::Scene::GetFeatureProcessorForEntity<Hair::HairFeatureProcessor>(m_entityId);
+                m_featureProcessor = JE::Render::RPI::Scene::GetFeatureProcessorForEntity<Hair::HairFeatureProcessor>(m_entityId);
                 if (m_featureProcessor)
                 {
                     m_featureProcessor->SetHairGlobalSettings(m_configuration.m_hairGlobalSettings);

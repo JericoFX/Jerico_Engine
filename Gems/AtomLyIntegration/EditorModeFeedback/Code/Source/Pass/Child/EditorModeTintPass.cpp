@@ -8,9 +8,9 @@
 
 #include <Pass/Child/EditorModeTintPass.h>
 
-#include <Atom/RPI.Public/RenderPipeline.h>
-#include <Atom/RPI.Public/Scene.h>
-#include <Atom/RPI.Public/View.h>
+#include <JE/Render/RPI/Public/RenderPipeline.h>
+#include <JE/Render/RPI/Public/Scene.h>
+#include <JE/Render/RPI/Public/View.h>
 
 // Temporary measure for setting the color tint pass shader parameters at runtime until GHI 3455 is implemented
 AZ_EDITOR_MODE_PASS_TRANSITION_CVARS(cl_editorModeTintPass, 0.0f, 0.0f, 0.0f, 1.0f);
@@ -21,13 +21,13 @@ namespace AZ
 {
     namespace Render
     {
-        RPI::Ptr<EditorModeTintPass> EditorModeTintPass::Create(const RPI::PassDescriptor& descriptor)
+        JE::Render::RPI::Ptr<EditorModeTintPass> EditorModeTintPass::Create(const JE::Render::RPI::PassDescriptor& descriptor)
         {
-            RPI::Ptr<EditorModeTintPass> pass = aznew EditorModeTintPass(descriptor);
+            JE::Render::RPI::Ptr<EditorModeTintPass> pass = aznew EditorModeTintPass(descriptor);
             return pass;
         }
 
-        EditorModeTintPass::EditorModeTintPass(const RPI::PassDescriptor& descriptor)
+        EditorModeTintPass::EditorModeTintPass(const JE::Render::RPI::PassDescriptor& descriptor)
             : EditorModeFeedbackChildPassBase(descriptor)
         {
         }

@@ -16,9 +16,9 @@
 #include <Atom/Feature/CoreLights/EsmShadowmapsPassData.h>
 #include <Atom/Feature/CoreLights/PhotometricValue.h>
 #include <Atom/Feature/CoreLights/ShadowConstants.h>
-#include <Atom/RPI.Public/FeatureProcessorFactory.h>
-#include <Atom/RPI.Public/Shader/ShaderSystem.h>
-#include <Atom/RPI.Public/Pass/PassSystemInterface.h>
+#include <JE/Render/RPI/Public/FeatureProcessorFactory.h>
+#include <JE/Render/RPI/Public/Shader/ShaderSystem.h>
+#include <JE/Render/RPI/Public/Pass/PassSystemInterface.h>
 
 #include <CoreLights/CascadedShadowmapsPass.h>
 #include <CoreLights/SimplePointLightFeatureProcessor.h>
@@ -43,7 +43,7 @@ namespace AZ
             false,
             [](const bool& value)
             {
-                RPI::ShaderSystemInterface::Get()->SetGlobalShaderOption(AZ::Name{ "o_area_light_validation" }, AZ::RPI::ShaderOptionValue{ value });
+                JE::Render::RPI::ShaderSystemInterface::Get()->SetGlobalShaderOption(AZ::Name{ "o_area_light_validation" }, JE::Render::RPI::ShaderOptionValue{ value });
             },
             ConsoleFunctorFlags::Null,
             "Turns on a much more accurate an expensive mode for area lights for validating the accuracy of the inexpensive versions."
@@ -118,16 +118,16 @@ namespace AZ
 
             m_ltcCommonInterface.reset(aznew LtcCommon());
 
-            AZ::RPI::FeatureProcessorFactory::Get()->RegisterFeatureProcessorWithInterface<SimplePointLightFeatureProcessor, SimplePointLightFeatureProcessorInterface>();
-            AZ::RPI::FeatureProcessorFactory::Get()->RegisterFeatureProcessorWithInterface<SimpleSpotLightFeatureProcessor, SimpleSpotLightFeatureProcessorInterface>();
-            AZ::RPI::FeatureProcessorFactory::Get()->RegisterFeatureProcessorWithInterface<PointLightFeatureProcessor, PointLightFeatureProcessorInterface>();
-            AZ::RPI::FeatureProcessorFactory::Get()->RegisterFeatureProcessorWithInterface<DirectionalLightFeatureProcessor, DirectionalLightFeatureProcessorInterface>();
-            AZ::RPI::FeatureProcessorFactory::Get()->RegisterFeatureProcessorWithInterface<DiskLightFeatureProcessor, DiskLightFeatureProcessorInterface>();
-            AZ::RPI::FeatureProcessorFactory::Get()->RegisterFeatureProcessorWithInterface<CapsuleLightFeatureProcessor, CapsuleLightFeatureProcessorInterface>();
-            AZ::RPI::FeatureProcessorFactory::Get()->RegisterFeatureProcessorWithInterface<QuadLightFeatureProcessor, QuadLightFeatureProcessorInterface>();
-            AZ::RPI::FeatureProcessorFactory::Get()->RegisterFeatureProcessorWithInterface<PolygonLightFeatureProcessor, PolygonLightFeatureProcessorInterface>();
+            JE::Render::RPI::FeatureProcessorFactory::Get()->RegisterFeatureProcessorWithInterface<SimplePointLightFeatureProcessor, SimplePointLightFeatureProcessorInterface>();
+            JE::Render::RPI::FeatureProcessorFactory::Get()->RegisterFeatureProcessorWithInterface<SimpleSpotLightFeatureProcessor, SimpleSpotLightFeatureProcessorInterface>();
+            JE::Render::RPI::FeatureProcessorFactory::Get()->RegisterFeatureProcessorWithInterface<PointLightFeatureProcessor, PointLightFeatureProcessorInterface>();
+            JE::Render::RPI::FeatureProcessorFactory::Get()->RegisterFeatureProcessorWithInterface<DirectionalLightFeatureProcessor, DirectionalLightFeatureProcessorInterface>();
+            JE::Render::RPI::FeatureProcessorFactory::Get()->RegisterFeatureProcessorWithInterface<DiskLightFeatureProcessor, DiskLightFeatureProcessorInterface>();
+            JE::Render::RPI::FeatureProcessorFactory::Get()->RegisterFeatureProcessorWithInterface<CapsuleLightFeatureProcessor, CapsuleLightFeatureProcessorInterface>();
+            JE::Render::RPI::FeatureProcessorFactory::Get()->RegisterFeatureProcessorWithInterface<QuadLightFeatureProcessor, QuadLightFeatureProcessorInterface>();
+            JE::Render::RPI::FeatureProcessorFactory::Get()->RegisterFeatureProcessorWithInterface<PolygonLightFeatureProcessor, PolygonLightFeatureProcessorInterface>();
 
-            auto* passSystem = RPI::PassSystemInterface::Get();
+            auto* passSystem = JE::Render::RPI::PassSystemInterface::Get();
             AZ_Assert(passSystem, "Cannot get the pass system.");
             passSystem->AddPassCreator(Name("CascadedShadowmapsPass"), &CascadedShadowmapsPass::Create);
             passSystem->AddPassCreator(Name("DepthExponentiationPass"), &DepthExponentiationPass::Create);

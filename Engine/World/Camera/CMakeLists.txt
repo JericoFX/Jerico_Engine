@@ -8,7 +8,7 @@ ly_add_target(
     FILES_CMAKE camera_files.cmake
     INCLUDE_DIRECTORIES PRIVATE Source PUBLIC Include
     COMPILE_DEFINITIONS PRIVATE JE_WORLD_CAMERA_EXPORTS
-    BUILD_DEPENDENCIES PUBLIC AZ::AzCore AZ::AzFramework Gem::Atom_RPI.Public
+    BUILD_DEPENDENCIES PUBLIC AZ::AzCore AZ::AzFramework JE::RenderIntegration
 )
 set_target_properties(WorldCamera PROPERTIES UNITY_BUILD OFF)
 

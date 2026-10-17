@@ -13,12 +13,12 @@
 #include <AzToolsFramework/API/EditorAssetSystemAPI.h>
 #include <AzCore/Serialization/Json/JsonUtils.h>
 #include <Atom/RHI.Edit/ShaderPlatformInterface.h>
-#include <Atom/RPI.Edit/Common/AssetUtils.h>
-#include <Atom/RPI.Reflect/Asset/AssetReference.h>
-#include <Atom/RPI.Reflect/Shader/PrecompiledShaderAssetSourceData.h>
-#include <Atom/RPI.Reflect/Shader/ShaderAsset.h>
-#include <Atom/RPI.Reflect/Shader/ShaderVariantAsset.h>
-#include <Atom/RPI.Reflect/Shader/ShaderAssetCreator.h>
+#include <JE/Editor/Render/RPI/Edit/Common/AssetUtils.h>
+#include <JE/Render/RPI/Reflect/Asset/AssetReference.h>
+#include <JE/Render/RPI/Reflect/Shader/PrecompiledShaderAssetSourceData.h>
+#include <JE/Render/RPI/Reflect/Shader/ShaderAsset.h>
+#include <JE/Render/RPI/Reflect/Shader/ShaderVariantAsset.h>
+#include <JE/Render/RPI/Reflect/Shader/ShaderAssetCreator.h>
 #include <AssetBuilderSDK/AssetBuilderSDK.h>
 #include <ShaderPlatformInterfaceRequest.h>
 #include "ShaderBuilderUtility.h"
@@ -49,8 +49,8 @@ namespace JE::Assets::RenderBuilders::Shader
         AzFramework::StringFunc::Path::ConstructFull(request.m_watchFolder.c_str(), request.m_sourceFile.c_str(), fullPath, true);
 
         // load precompiled shader information file
-        AZ::RPI::PrecompiledShaderAssetSourceData precompiledShaderAsset;
-        auto loadResult = AZ::JsonSerializationUtils::LoadObjectFromFile<AZ::RPI::PrecompiledShaderAssetSourceData>(precompiledShaderAsset, fullPath);
+        JE::Render::RPI::PrecompiledShaderAssetSourceData precompiledShaderAsset;
+        auto loadResult = AZ::JsonSerializationUtils::LoadObjectFromFile<JE::Render::RPI::PrecompiledShaderAssetSourceData>(precompiledShaderAsset, fullPath);
         if (!loadResult.IsSuccess())
         {
             AZ_Error(PrecompiledShaderBuilderName, false, "Failed to load precompiled shader assets file [%s] error [%s]", fullPath.c_str(), loadResult.GetError().data());
@@ -61,7 +61,7 @@ namespace JE::Assets::RenderBuilders::Shader
         // Re-run this builder when the precompiled shader binary changes, even if the manifest does not.
         AssetBuilderSDK::SourceFileDependency shaderAssetDependency;
         shaderAssetDependency.m_sourceFileDependencyPath =
-            AZ::RPI::AssetUtils::ResolvePathReference(fullPath, precompiledShaderAsset.m_shaderAssetFileName);
+            JE::Render::RPI::AssetUtils::ResolvePathReference(fullPath, precompiledShaderAsset.m_shaderAssetFileName);
         response.m_sourceFileDependencyList.push_back(AZStd::move(shaderAssetDependency));
 
         for (const AssetBuilderSDK::PlatformInfo& platformInfo : request.m_enabledPlatforms)
@@ -102,7 +102,7 @@ namespace JE::Assets::RenderBuilders::Shader
                             continue;
                         }
 
-                        const AZStd::string rootShaderVariantAssetPath = AZ::RPI::AssetUtils::ResolvePathReference(
+                        const AZStd::string rootShaderVariantAssetPath = JE::Render::RPI::AssetUtils::ResolvePathReference(
                             request.m_sourceFile, rootShaderVariantAsset->m_rootShaderVariantAssetFileName);
 
                         AssetBuilderSDK::JobDependency jobDependency;
@@ -145,8 +145,8 @@ namespace JE::Assets::RenderBuilders::Shader
         }
 
         // load precompiled shader information file
-        AZ::RPI::PrecompiledShaderAssetSourceData precompiledShaderAsset;
-        auto loadResult = AZ::JsonSerializationUtils::LoadObjectFromFile<AZ::RPI::PrecompiledShaderAssetSourceData>(precompiledShaderAsset, request.m_fullPath);
+        JE::Render::RPI::PrecompiledShaderAssetSourceData precompiledShaderAsset;
+        auto loadResult = AZ::JsonSerializationUtils::LoadObjectFromFile<JE::Render::RPI::PrecompiledShaderAssetSourceData>(precompiledShaderAsset, request.m_fullPath);
         if (!loadResult.IsSuccess())
         {
             AZ_Error(PrecompiledShaderBuilderName, false, "Failed to load precompiled shader assets file [%s] error [%s]", request.m_fullPath.c_str(), loadResult.GetError().c_str());
@@ -156,8 +156,8 @@ namespace JE::Assets::RenderBuilders::Shader
 
         // load shader source asset
         // this is the precompiled shader asset that we will be cloning and recreating from this builder
-        AZStd::string fullShaderAssetPath = AZ::RPI::AssetUtils::ResolvePathReference(request.m_fullPath, precompiledShaderAsset.m_shaderAssetFileName);
-        AZ::RPI::ShaderAsset* shaderAsset = LoadSourceAsset<AZ::RPI::ShaderAsset>(context, fullShaderAssetPath);
+        AZStd::string fullShaderAssetPath = JE::Render::RPI::AssetUtils::ResolvePathReference(request.m_fullPath, precompiledShaderAsset.m_shaderAssetFileName);
+        JE::Render::RPI::ShaderAsset* shaderAsset = LoadSourceAsset<JE::Render::RPI::ShaderAsset>(context, fullShaderAssetPath);
         if (!shaderAsset)
         {
             AZ_Error(PrecompiledShaderBuilderName, false, "Failed to retrieve shader asset for file [%s]", fullShaderAssetPath.c_str());
@@ -177,10 +177,10 @@ namespace JE::Assets::RenderBuilders::Shader
 
         // load the variant product assets, for each supervariant
         // these are the dependency root variant asset products that were processed prior to running this job
-        AZ::RPI::ShaderAssetCreator::ShaderSupervariants supervariants;
+        JE::Render::RPI::ShaderAssetCreator::ShaderSupervariants supervariants;
         for (const auto& supervariant : precompiledShaderAsset.m_supervariants)
         {
-            AZ::RPI::ShaderAssetCreator::ShaderRootVariantAssets rootVariantProductAssets;
+            JE::Render::RPI::ShaderAssetCreator::ShaderRootVariantAssets rootVariantProductAssets;
             for (const auto& rootShaderVariantAsset : supervariant->m_rootShaderVariantAssets)
             {
                 // find the API in the list of supported APIs on this platform
@@ -199,7 +199,7 @@ namespace JE::Assets::RenderBuilders::Shader
                 }
 
                 // retrieve the variant asset
-                auto assetOutcome = AZ::RPI::AssetUtils::LoadAsset<AZ::RPI::ShaderVariantAsset>(request.m_fullPath, rootShaderVariantAsset->m_rootShaderVariantAssetFileName, 0);
+                auto assetOutcome = JE::Render::RPI::AssetUtils::LoadAsset<JE::Render::RPI::ShaderVariantAsset>(request.m_fullPath, rootShaderVariantAsset->m_rootShaderVariantAssetFileName, 0);
                 if (!assetOutcome)
                 {
                     AZ_Error(PrecompiledShaderBuilderName, false, "Failed to retrieve Variant asset for file [%s]", rootShaderVariantAsset->m_rootShaderVariantAssetFileName.c_str());
@@ -229,10 +229,10 @@ namespace JE::Assets::RenderBuilders::Shader
 
         // use the ShaderAssetCreator to clone the shader asset, which  will update the embedded Srg and Variant asset UUIDs
         // Note that the Srg and Variant assets do not have embedded asset references and are processed with the RC Copy functionality
-        AZ::RPI::ShaderAssetCreator shaderAssetCreator;
+        JE::Render::RPI::ShaderAssetCreator shaderAssetCreator;
         shaderAssetCreator.Clone(AZ::Uuid::CreateRandom(), *shaderAsset, supervariants, platformInterfaces);
 
-        AZ::Data::Asset<AZ::RPI::ShaderAsset> outputShaderAsset;
+        AZ::Data::Asset<JE::Render::RPI::ShaderAsset> outputShaderAsset;
         if (!shaderAssetCreator.End(outputShaderAsset))
         {
             response.m_resultCode = AssetBuilderSDK::ProcessJobResult_Failed;
@@ -254,8 +254,8 @@ namespace JE::Assets::RenderBuilders::Shader
 
         // setup the job product
         jobProduct.m_productFileName = destPath;
-        jobProduct.m_productSubID = static_cast<uint32_t>(AZ::RPI::ShaderAssetSubId::ShaderAsset);
-        jobProduct.m_productAssetType = azrtti_typeid<AZ::RPI::ShaderAsset>();
+        jobProduct.m_productSubID = static_cast<uint32_t>(JE::Render::RPI::ShaderAssetSubId::ShaderAsset);
+        jobProduct.m_productAssetType = azrtti_typeid<JE::Render::RPI::ShaderAsset>();
         jobProduct.m_dependenciesHandled = true;
         response.m_outputProducts.push_back(AZStd::move(jobProduct));
         response.m_resultCode = AssetBuilderSDK::ProcessJobResult_Success;

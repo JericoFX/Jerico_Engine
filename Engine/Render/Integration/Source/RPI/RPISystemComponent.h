@@ -17,13 +17,13 @@
 #include <AzCore/Debug/PerformanceCollector.h>
 
 #include <Atom/RHI/RHISystemInterface.h>
-#include <Atom/RPI.Public/RPISystem.h>
-#include <Atom/RPI.Public/GpuQuery/GpuPassProfiler.h>
-#include <Atom/RPI.Public/XR/XRRenderingInterface.h>
+#include <JE/Render/RPI/Public/RPISystem.h>
+#include <JE/Render/RPI/Public/GpuQuery/GpuPassProfiler.h>
+#include <JE/Render/RPI/Public/XR/XRRenderingInterface.h>
 
 #include "PerformanceCVarManager.h"
 
-namespace AZ::RPI
+namespace JE::Render::RPI
 {
     class MaterialFunctorSourceDataRegistration;
 }
@@ -48,7 +48,7 @@ namespace JE::Render::RPI
             : public AZ::Component
             , public AZ::SystemTickBus::Handler
             , public AZ::RHI::RHISystemNotificationBus::Handler
-            , public AZ::RPI::XRRegisterInterface::Registrar
+            , public JE::Render::RPI::XRRegisterInterface::Registrar
             , public PerformanceCollectorOwner::Registrar
         {
         public:
@@ -67,7 +67,7 @@ namespace JE::Render::RPI
 
             ///////////////////////////////////////////////////////////////////
             // IXRRegisterInterface overrides
-            void RegisterXRInterface(AZ::RPI::XRRenderingInterface* xrSystemInterface) override;
+            void RegisterXRInterface(JE::Render::RPI::XRRenderingInterface* xrSystemInterface) override;
             void UnRegisterXRInterface() override;
             ///////////////////////////////////////////////////////////////////
 
@@ -83,7 +83,7 @@ namespace JE::Render::RPI
             ///////////////////////////////////////////////////////////////////
             // IPerformanceCollectorOwner overrides
             AZ::Debug::PerformanceCollector* GetPerformanceCollector() override { return m_performanceCollector.get(); }
-            AZ::RPI::GpuPassProfiler* GetGpuPassProfiler() override { return m_gpuPassProfiler.get(); }
+            JE::Render::RPI::GpuPassProfiler* GetGpuPassProfiler() override { return m_gpuPassProfiler.get(); }
             ///////////////////////////////////////////////////////////////////
 
             ///////////////////////////////////////////////////////////////////
@@ -102,14 +102,14 @@ namespace JE::Render::RPI
             static constexpr AZStd::string_view PerformanceSpecGpuTime = "Frame Gpu Time";
 
             AZStd::unique_ptr<AZ::Debug::PerformanceCollector> m_performanceCollector;
-            AZStd::unique_ptr<AZ::RPI::GpuPassProfiler> m_gpuPassProfiler; // Used to measure "Render Pipeline Gpu Time".
+            AZStd::unique_ptr<JE::Render::RPI::GpuPassProfiler> m_gpuPassProfiler; // Used to measure "Render Pipeline Gpu Time".
             ///////////////////////////////////////////////////////////////////
 
-            AZ::RPI::RPISystem m_rpiSystem;
+            JE::Render::RPI::RPISystem m_rpiSystem;
 
-            AZ::RPI::RPISystemDescriptor m_rpiDescriptor;
+            JE::Render::RPI::RPISystemDescriptor m_rpiDescriptor;
 
-            AZ::RPI::MaterialFunctorSourceDataRegistration* m_materialFunctorRegistration = nullptr;
+            JE::Render::RPI::MaterialFunctorSourceDataRegistration* m_materialFunctorRegistration = nullptr;
         };
     } // namespace Runtime or Editor
 } // namespace JE::Render::RPI

@@ -11,11 +11,11 @@
 
 #include <AzCore/Name/NameDictionary.h>
 
-#include <Atom/RPI.Reflect/Asset/AssetUtils.h>
-#include <Atom/RPI.Public/RenderPipeline.h>
-#include <Atom/RPI.Public/RPISystemInterface.h>
-#include <Atom/RPI.Public/Pass/PassSystem.h>
-#include <Atom/RPI.Public/Pass/PassFilter.h>
+#include <JE/Render/RPI/Reflect/Asset/AssetUtils.h>
+#include <JE/Render/RPI/Public/RenderPipeline.h>
+#include <JE/Render/RPI/Public/RPISystemInterface.h>
+#include <JE/Render/RPI/Public/Pass/PassSystem.h>
+#include <JE/Render/RPI/Public/Pass/PassFilter.h>
 
 namespace SkyAtmosphere
 {
@@ -115,7 +115,7 @@ namespace SkyAtmosphere
         }
     }
 
-    void SkyAtmosphereFeatureProcessor::AddRenderPasses(AZ::RPI::RenderPipeline* renderPipeline)
+    void SkyAtmosphereFeatureProcessor::AddRenderPasses(JE::Render::RPI::RenderPipeline* renderPipeline)
     {
         if (m_renderPipelineToSkyAtmosphereParentPass.find(renderPipeline) != m_renderPipelineToSkyAtmosphereParentPass.end())
         {
@@ -123,26 +123,26 @@ namespace SkyAtmosphere
         }
         m_renderPipelineToSkyAtmosphereParentPass[renderPipeline] = nullptr;
 
-        AZ::RPI::PassFilter passFilter = AZ::RPI::PassFilter::CreateWithTemplateName(AZ::Name("SkyAtmosphereParentTemplate"), renderPipeline);
-        AZ::RPI::PassSystemInterface::Get()->ForEachPass(
+        JE::Render::RPI::PassFilter passFilter = JE::Render::RPI::PassFilter::CreateWithTemplateName(AZ::Name("SkyAtmosphereParentTemplate"), renderPipeline);
+        JE::Render::RPI::PassSystemInterface::Get()->ForEachPass(
             passFilter,
-            [](AZ::RPI::Pass* pass) -> AZ::RPI::PassFilterExecutionFlow
+            [](JE::Render::RPI::Pass* pass) -> JE::Render::RPI::PassFilterExecutionFlow
             {
-                AZ::RPI::PassSystemInterface::Get()->RemovePassFromLibrary(pass);
-                return AZ::RPI::PassFilterExecutionFlow::ContinueVisitingPasses;
+                JE::Render::RPI::PassSystemInterface::Get()->RemovePassFromLibrary(pass);
+                return JE::Render::RPI::PassFilterExecutionFlow::ContinueVisitingPasses;
             });
 
         const char* passRequestAssetFilePath = "Passes/SkyAtmospherePassRequest.azasset";
-        AZ::Data::Asset<AZ::RPI::AnyAsset> passRequestAsset = AZ::RPI::AssetUtils::LoadAssetByProductPath<AZ::RPI::AnyAsset>(
-            passRequestAssetFilePath, AZ::RPI::AssetUtils::TraceLevel::Warning);
+        AZ::Data::Asset<JE::Render::RPI::AnyAsset> passRequestAsset = JE::Render::RPI::AssetUtils::LoadAssetByProductPath<JE::Render::RPI::AnyAsset>(
+            passRequestAssetFilePath, JE::Render::RPI::AssetUtils::TraceLevel::Warning);
 
-        const AZ::RPI::PassRequest *passRequest = nullptr;
+        const JE::Render::RPI::PassRequest *passRequest = nullptr;
         if (passRequestAsset->IsReady())
         {
-            passRequest = passRequestAsset->GetDataAs<AZ::RPI::PassRequest>();
+            passRequest = passRequestAsset->GetDataAs<JE::Render::RPI::PassRequest>();
         }
         // Create the pass
-        AZ::RPI::Ptr<AZ::RPI::Pass> parentPass = AZ::RPI::PassSystemInterface::Get()->CreatePassFromRequest(passRequest);
+        JE::Render::RPI::Ptr<JE::Render::RPI::Pass> parentPass = JE::Render::RPI::PassSystemInterface::Get()->CreatePassFromRequest(passRequest);
         if (!parentPass)
         {
             AZ_Error("SkyAtmosphere", false, "Create SkyAtmosphere parent pass from pass request failed");
@@ -170,16 +170,16 @@ namespace SkyAtmosphere
         }
     }
 
-    void SkyAtmosphereFeatureProcessor::OnRenderPipelineChanged([[maybe_unused]] AZ::RPI::RenderPipeline* pipeline,
-        AZ::RPI::SceneNotification::RenderPipelineChangeType changeType)
+    void SkyAtmosphereFeatureProcessor::OnRenderPipelineChanged([[maybe_unused]] JE::Render::RPI::RenderPipeline* pipeline,
+        JE::Render::RPI::SceneNotification::RenderPipelineChangeType changeType)
     {
-        if (changeType == AZ::RPI::SceneNotification::RenderPipelineChangeType::Added
-            || changeType == AZ::RPI::SceneNotification::RenderPipelineChangeType::PassChanged)
+        if (changeType == JE::Render::RPI::SceneNotification::RenderPipelineChangeType::Added
+            || changeType == JE::Render::RPI::SceneNotification::RenderPipelineChangeType::PassChanged)
         {
             UpdateBackgroundClearColor();
         }
 
-        if (changeType == AZ::RPI::SceneNotification::RenderPipelineChangeType::Removed)
+        if (changeType == JE::Render::RPI::SceneNotification::RenderPipelineChangeType::Removed)
         {
             m_renderPipelineToSkyAtmosphereParentPass.erase(pipeline);
         }
@@ -234,27 +234,27 @@ namespace SkyAtmosphere
         // is unlikely to find.  Unfortunately, the viewport will revert to the
         // grey color when resizing momentarily.
         const AZ::RHI::ClearValue blackClearValue = AZ::RHI::ClearValue::CreateVector4Float(0.f, 0.f, 0.f, 0.f);
-        AZ::RPI::PassFilter passFilter;
+        JE::Render::RPI::PassFilter passFilter;
         AZStd::string slot;
 
-        auto setClearValue = [&](AZ::RPI::Pass* pass)-> AZ::RPI::PassFilterExecutionFlow
+        auto setClearValue = [&](JE::Render::RPI::Pass* pass)-> JE::Render::RPI::PassFilterExecutionFlow
         {
             AZ::Name slotName = AZ::Name::FromStringLiteral(slot, AZ::Interface<AZ::NameDictionary>::Get());
             if (auto binding = pass->FindAttachmentBinding(slotName))
             {
                 binding->m_unifiedScopeDesc.m_loadStoreAction.m_clearValue = blackClearValue;
             }
-            return AZ::RPI::PassFilterExecutionFlow::ContinueVisitingPasses;
+            return JE::Render::RPI::PassFilterExecutionFlow::ContinueVisitingPasses;
         };
 
         slot = "SpecularOutput";
-        passFilter= AZ::RPI::PassFilter::CreateWithTemplateName(AZ::Name("ForwardPassTemplate"), GetParentScene());
-        AZ::RPI::PassSystemInterface::Get()->ForEachPass(passFilter, setClearValue);
-        passFilter = AZ::RPI::PassFilter::CreateWithTemplateName(AZ::Name("ForwardMSAAPassTemplate"), GetParentScene());
-        AZ::RPI::PassSystemInterface::Get()->ForEachPass(passFilter, setClearValue);
+        passFilter= JE::Render::RPI::PassFilter::CreateWithTemplateName(AZ::Name("ForwardPassTemplate"), GetParentScene());
+        JE::Render::RPI::PassSystemInterface::Get()->ForEachPass(passFilter, setClearValue);
+        passFilter = JE::Render::RPI::PassFilter::CreateWithTemplateName(AZ::Name("ForwardMSAAPassTemplate"), GetParentScene());
+        JE::Render::RPI::PassSystemInterface::Get()->ForEachPass(passFilter, setClearValue);
 
         slot = "ReflectionOutput";
-        passFilter = AZ::RPI::PassFilter::CreateWithTemplateName(AZ::Name("ReflectionGlobalFullscreenPassTemplate"), GetParentScene());
-        AZ::RPI::PassSystemInterface::Get()->ForEachPass(passFilter, setClearValue);
+        passFilter = JE::Render::RPI::PassFilter::CreateWithTemplateName(AZ::Name("ReflectionGlobalFullscreenPassTemplate"), GetParentScene());
+        JE::Render::RPI::PassSystemInterface::Get()->ForEachPass(passFilter, setClearValue);
     }
 }

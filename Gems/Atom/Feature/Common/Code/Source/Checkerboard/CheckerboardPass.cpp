@@ -6,8 +6,8 @@
  *
  */
 
-#include <Atom/RPI.Public/Image/AttachmentImagePool.h>
-#include <Atom/RPI.Public/Image/ImageSystemInterface.h>
+#include <JE/Render/RPI/Public/Image/AttachmentImagePool.h>
+#include <JE/Render/RPI/Public/Image/ImageSystemInterface.h>
 
 #include <Checkerboard/CheckerboardPass.h>
 
@@ -15,12 +15,12 @@ namespace AZ
 {
     namespace Render
     {
-        RPI::Ptr<Render::CheckerboardPass> CheckerboardPass::Create(const RPI::PassDescriptor& descriptor)
+        JE::Render::RPI::Ptr<Render::CheckerboardPass> CheckerboardPass::Create(const JE::Render::RPI::PassDescriptor& descriptor)
         {
             return aznew CheckerboardPass(descriptor);
         }
 
-        CheckerboardPass::CheckerboardPass(const RPI::PassDescriptor& descriptor)
+        CheckerboardPass::CheckerboardPass(const JE::Render::RPI::PassDescriptor& descriptor)
             : Base(descriptor)
         {
             // CheckerboardPass defines its own viewport and scissor
@@ -48,11 +48,11 @@ namespace AZ
 
         void CheckerboardPass::BuildInternal()
         {
-            Data::Instance<RPI::AttachmentImagePool> pool = RPI::ImageSystemInterface::Get()->GetSystemAttachmentPool();
+            Data::Instance<JE::Render::RPI::AttachmentImagePool> pool = JE::Render::RPI::ImageSystemInterface::Get()->GetSystemAttachmentPool();
 
             // Create persistent attachment images to replace transient pass attachments
             // It's better to check if it connects to output slots too
-            for (RPI::Ptr<RPI::PassAttachment>& attachment : m_ownedAttachments)
+            for (JE::Render::RPI::Ptr<JE::Render::RPI::PassAttachment>& attachment : m_ownedAttachments)
             {
                 if (attachment->m_lifetime == RHI::AttachmentLifetimeType::Transient)
                 {
@@ -83,9 +83,9 @@ namespace AZ
                             imageDesc.m_bindFlags |= RHI::ImageBindFlags::Color;
                         }
                         
-                        m_imageAttachments[attachment->m_name][0] = RPI::AttachmentImage::Create(*pool.get(), imageDesc,
+                        m_imageAttachments[attachment->m_name][0] = JE::Render::RPI::AttachmentImage::Create(*pool.get(), imageDesc,
                             Name(AZStd::string::format("%s_0", attachment->m_path.GetCStr())), &clearValue, nullptr);
-                        m_imageAttachments[attachment->m_name][1] = RPI::AttachmentImage::Create(*pool.get(), imageDesc,
+                        m_imageAttachments[attachment->m_name][1] = JE::Render::RPI::AttachmentImage::Create(*pool.get(), imageDesc,
                             Name(AZStd::string::format("%s_1", attachment->m_path.GetCStr())), &clearValue, nullptr);
 
                         attachment->m_path = m_imageAttachments[attachment->m_name][0]->GetAttachmentId();
@@ -101,7 +101,7 @@ namespace AZ
         }
 
 
-        Data::Instance<RPI::AttachmentImage> CheckerboardPass::GetAttachmentImage(Name attachmentName, uint8_t frameOffset)
+        Data::Instance<JE::Render::RPI::AttachmentImage> CheckerboardPass::GetAttachmentImage(Name attachmentName, uint8_t frameOffset)
         {
             if (m_imageAttachments.find(attachmentName) != m_imageAttachments.end())
             {
@@ -115,11 +115,11 @@ namespace AZ
             m_frameOffset = 1 - m_frameOffset;
             // For next frame, we switch the internal attachment image for each owned pass attachments
             // So we can preserve the render target from current frame
-            for (RPI::Ptr<RPI::PassAttachment>& attachment : m_ownedAttachments)
+            for (JE::Render::RPI::Ptr<JE::Render::RPI::PassAttachment>& attachment : m_ownedAttachments)
             {
                 if (attachment->m_descriptor.m_type == RHI::AttachmentType::Image)
                 {
-                    Data::Instance<RPI::AttachmentImage> nextAttachment = GetAttachmentImage(attachment->m_name, m_frameOffset);
+                    Data::Instance<JE::Render::RPI::AttachmentImage> nextAttachment = GetAttachmentImage(attachment->m_name, m_frameOffset);
                     if (nextAttachment)
                     {
                         // update the attachment id and resource

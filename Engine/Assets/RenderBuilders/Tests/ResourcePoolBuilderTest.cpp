@@ -14,7 +14,7 @@
 #include <Atom/RHI.Reflect/ImagePoolDescriptor.h>
 #include <Atom/RHI.Reflect/StreamingImagePoolDescriptor.h>
 
-#include <Atom/RPI.Reflect/Image/StreamingImagePoolAsset.h>
+#include <JE/Render/RPI/Reflect/Image/StreamingImagePoolAsset.h>
 
 #include <AzCore/Serialization/ObjectStream.h>
 #include <AzCore/Serialization/SerializeContext.h>
@@ -32,15 +32,15 @@ namespace UnitTest
         : public BuilderTestFixture
     {
     protected:
-        AZStd::unique_ptr<AZ::RPI::StreamingImagePoolAssetHandler> m_streamingImagePoolAssetHandler;
-        AZStd::unique_ptr<AZ::RPI::ResourcePoolAssetHandler> m_resourcePoolAssetHandler;
+        AZStd::unique_ptr<JE::Render::RPI::StreamingImagePoolAssetHandler> m_streamingImagePoolAssetHandler;
+        AZStd::unique_ptr<JE::Render::RPI::ResourcePoolAssetHandler> m_resourcePoolAssetHandler;
 
         void SetUp() override
         {
             BuilderTestFixture::SetUp();
 
-            m_streamingImagePoolAssetHandler = AZStd::make_unique<AZ::RPI::StreamingImagePoolAssetHandler>();
-            m_resourcePoolAssetHandler = AZStd::make_unique<AZ::RPI::ResourcePoolAssetHandler>();
+            m_streamingImagePoolAssetHandler = AZStd::make_unique<JE::Render::RPI::StreamingImagePoolAssetHandler>();
+            m_resourcePoolAssetHandler = AZStd::make_unique<JE::Render::RPI::ResourcePoolAssetHandler>();
             m_streamingImagePoolAssetHandler->m_serializeContext = m_context.get();
             m_resourcePoolAssetHandler->m_serializeContext = m_context.get();
             m_streamingImagePoolAssetHandler->Register();
@@ -73,15 +73,15 @@ namespace UnitTest
         request.m_fullPath = sourceFilePath.Native();
         request.m_tempDirPath = productDir.GetDirectory();
 
-        AZ::RPI::ResourcePoolSourceData sourceData;
+        JE::Render::RPI::ResourcePoolSourceData sourceData;
         sourceData.m_poolName = "DefaultIndexBufferPool";
-        sourceData.m_poolType = AZ::RPI::ResourcePoolAssetType::BufferPool;
+        sourceData.m_poolType = JE::Render::RPI::ResourcePoolAssetType::BufferPool;
         sourceData.m_budgetInBytes = 25165824;
         sourceData.m_heapMemoryLevel = AZ::RHI::HeapMemoryLevel::Device;
         sourceData.m_hostMemoryAccess = AZ::RHI::HostMemoryAccess::Write;
         sourceData.m_bufferPoolBindFlags = AZ::RHI::BufferBindFlags::InputAssembly;
 
-        AZ::Outcome<void, AZStd::string> saveResult = AZ::JsonSerializationUtils::SaveObjectToFile<AZ::RPI::ResourcePoolSourceData>(&sourceData,
+        AZ::Outcome<void, AZStd::string> saveResult = AZ::JsonSerializationUtils::SaveObjectToFile<JE::Render::RPI::ResourcePoolSourceData>(&sourceData,
             sourceFilePath.Native());
 
         // Process
@@ -93,7 +93,7 @@ namespace UnitTest
         EXPECT_TRUE(response.m_outputProducts[0].m_dependencies.size() == 0);
 
         // verify output file and verify loaded asset
-        auto outAsset = AZ::Utils::LoadObjectFromFile<AZ::RPI::ResourcePoolAsset>(response.m_outputProducts[0].m_productFileName, m_context.get());
+        auto outAsset = AZ::Utils::LoadObjectFromFile<JE::Render::RPI::ResourcePoolAsset>(response.m_outputProducts[0].m_productFileName, m_context.get());
         auto poolDescriptor = outAsset->GetPoolDescriptor();
         EXPECT_TRUE(sourceData.m_poolName == outAsset->GetPoolName());
         EXPECT_TRUE(azrtti_typeid <AZ::RHI::BufferPoolDescriptor>() == azrtti_typeid(poolDescriptor.get()));
@@ -120,13 +120,13 @@ namespace UnitTest
         request.m_fullPath = sourceFilePath.Native();
         request.m_tempDirPath = productDir.GetDirectory();
 
-        AZ::RPI::ResourcePoolSourceData sourceData;
+        JE::Render::RPI::ResourcePoolSourceData sourceData;
         sourceData.m_poolName = "DefaultImagePool";
-        sourceData.m_poolType = AZ::RPI::ResourcePoolAssetType::ImagePool;
+        sourceData.m_poolType = JE::Render::RPI::ResourcePoolAssetType::ImagePool;
         sourceData.m_budgetInBytes = 25165824;
         sourceData.m_imagePoolBindFlags = AZ::RHI::ImageBindFlags::Color;
 
-        AZ::Outcome<void, AZStd::string> saveResult = AZ::JsonSerializationUtils::SaveObjectToFile<AZ::RPI::ResourcePoolSourceData>(&sourceData,
+        AZ::Outcome<void, AZStd::string> saveResult = AZ::JsonSerializationUtils::SaveObjectToFile<JE::Render::RPI::ResourcePoolSourceData>(&sourceData,
             sourceFilePath.Native());
 
         // Process
@@ -138,7 +138,7 @@ namespace UnitTest
         EXPECT_TRUE(response.m_outputProducts[0].m_dependencies.size() == 0);
 
         // verify output file and verify loaded asset
-        auto outAsset = AZ::Utils::LoadObjectFromFile<AZ::RPI::ResourcePoolAsset>(response.m_outputProducts[0].m_productFileName, m_context.get());
+        auto outAsset = AZ::Utils::LoadObjectFromFile<JE::Render::RPI::ResourcePoolAsset>(response.m_outputProducts[0].m_productFileName, m_context.get());
         auto poolDescriptor = outAsset->GetPoolDescriptor();
         EXPECT_TRUE(sourceData.m_poolName == outAsset->GetPoolName());
         EXPECT_TRUE(azrtti_typeid<AZ::RHI::ImagePoolDescriptor>() == azrtti_typeid(poolDescriptor.get()));
@@ -163,12 +163,12 @@ namespace UnitTest
         request.m_fullPath = sourceFilePath.Native();
         request.m_tempDirPath = productDir.GetDirectory();
 
-        AZ::RPI::ResourcePoolSourceData sourceData;
+        JE::Render::RPI::ResourcePoolSourceData sourceData;
         sourceData.m_poolName = "DefaultStreamingImagePool";
-        sourceData.m_poolType = AZ::RPI::ResourcePoolAssetType::StreamingImagePool;
+        sourceData.m_poolType = JE::Render::RPI::ResourcePoolAssetType::StreamingImagePool;
         sourceData.m_budgetInBytes = 2147483648;
 
-        AZ::Outcome<void, AZStd::string> saveResult = AZ::JsonSerializationUtils::SaveObjectToFile<AZ::RPI::ResourcePoolSourceData>(&sourceData,
+        AZ::Outcome<void, AZStd::string> saveResult = AZ::JsonSerializationUtils::SaveObjectToFile<JE::Render::RPI::ResourcePoolSourceData>(&sourceData,
             sourceFilePath.Native());
 
         // Process
@@ -183,7 +183,7 @@ namespace UnitTest
         AZ::Utils::FilterDescriptor filter; // disable loading the controller asset inside
         filter.m_assetCB = AZ::Data::AssetFilterNoAssetLoading;
 
-        auto outAsset = AZ::Utils::LoadObjectFromFile<AZ::RPI::StreamingImagePoolAsset>(response.m_outputProducts[0].m_productFileName, m_context.get(), filter);
+        auto outAsset = AZ::Utils::LoadObjectFromFile<JE::Render::RPI::StreamingImagePoolAsset>(response.m_outputProducts[0].m_productFileName, m_context.get(), filter);
         auto poolDescriptor = outAsset->GetPoolDescriptor();
         EXPECT_TRUE(azrtti_typeid <AZ::RHI::StreamingImagePoolDescriptor>() == azrtti_typeid(poolDescriptor));
         EXPECT_TRUE(sourceData.m_budgetInBytes == poolDescriptor.m_budgetInBytes);

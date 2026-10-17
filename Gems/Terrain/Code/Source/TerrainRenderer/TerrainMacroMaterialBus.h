@@ -14,7 +14,7 @@
 #include <AzCore/Math/Aabb.h>
 #include <AzCore/Math/Color.h>
 #include <Atom/RHI.Reflect/Size.h>
-#include <Atom/RPI.Reflect/Image/Image.h>
+#include <JE/Render/RPI/Reflect/Image/Image.h>
 
 namespace Terrain
 {
@@ -27,8 +27,8 @@ namespace Terrain
         AZ::EntityId m_entityId;
         AZ::Aabb m_bounds = AZ::Aabb::CreateNull();
 
-        AZ::Data::Instance<AZ::RPI::Image> m_colorImage;
-        AZ::Data::Instance<AZ::RPI::Image> m_normalImage;
+        AZ::Data::Instance<JE::Render::RPI::Image> m_colorImage;
+        AZ::Data::Instance<JE::Render::RPI::Image> m_normalImage;
         bool m_normalFlipX{ false };
         bool m_normalFlipY{ false };
         float m_normalFactor{ 0.0f };

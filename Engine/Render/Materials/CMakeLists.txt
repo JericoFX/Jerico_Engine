@@ -11,7 +11,7 @@ ly_add_target(
         PUBLIC
             AZ::AzCore
             AZ::AzFramework
-            Gem::Atom_RPI.Public
+            JE::RenderIntegration
             Gem::Atom_Feature_Common.Public
 )
 

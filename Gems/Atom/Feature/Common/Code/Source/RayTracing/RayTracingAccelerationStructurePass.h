@@ -8,9 +8,9 @@
 #pragma once
 
 #include <Atom/RHI/ScopeProducer.h>
-#include <Atom/RPI.Public/GpuQuery/Query.h>
-#include <Atom/RPI.Public/Pass/Pass.h>
-#include <Atom/RPI.Public/Buffer/Buffer.h>
+#include <JE/Render/RPI/Public/GpuQuery/Query.h>
+#include <JE/Render/RPI/Public/Pass/Pass.h>
+#include <JE/Render/RPI/Public/Buffer/Buffer.h>
 
 namespace AZ
 {
@@ -18,26 +18,26 @@ namespace AZ
     {
         //! This pass builds the RayTracing acceleration structures for a scene
         class RayTracingAccelerationStructurePass final
-            : public RPI::Pass
+            : public JE::Render::RPI::Pass
             , public RHI::ScopeProducer
         {
         public:
             AZ_RPI_PASS(RayTracingAccelerationStructurePass);
 
-            using ScopeQuery = AZStd::array<AZ::RHI::Ptr<AZ::RPI::Query>, static_cast<size_t>(AZ::RPI::ScopeQueryType::Count)>;
+            using ScopeQuery = AZStd::array<AZ::RHI::Ptr<JE::Render::RPI::Query>, static_cast<size_t>(JE::Render::RPI::ScopeQueryType::Count)>;
 
             AZ_RTTI(RayTracingAccelerationStructurePass, "{6BAA1755-D7D2-497F-BCDB-CA28B42728DC}", Pass);
             AZ_CLASS_ALLOCATOR(RayTracingAccelerationStructurePass, SystemAllocator);
 
             //! Creates a RayTracingAccelerationStructurePass
-            static RPI::Ptr<RayTracingAccelerationStructurePass> Create(const RPI::PassDescriptor& descriptor);
+            static JE::Render::RPI::Ptr<RayTracingAccelerationStructurePass> Create(const JE::Render::RPI::PassDescriptor& descriptor);
 
             ~RayTracingAccelerationStructurePass() = default;
 
             void AddScopeQueryToFrameGraph(AZ::RHI::FrameGraphInterface frameGraph);
 
         private:
-            explicit RayTracingAccelerationStructurePass(const RPI::PassDescriptor& descriptor);
+            explicit RayTracingAccelerationStructurePass(const JE::Render::RPI::PassDescriptor& descriptor);
 
             // Scope producer functions
             void SetupFrameGraphDependencies(RHI::FrameGraphInterface frameGraph) override;
@@ -50,7 +50,7 @@ namespace AZ
             bool RaytracingRevisionOutdated() const;
 
             // Helper function to get the query by the scope index and query type
-            AZ::RHI::Ptr<AZ::RPI::Query> GetQuery(AZ::RPI::ScopeQueryType queryType);
+            AZ::RHI::Ptr<JE::Render::RPI::Query> GetQuery(JE::Render::RPI::ScopeQueryType queryType);
 
             // Executes a lambda depending on the passed ScopeQuery types
             template<typename Func>
@@ -58,8 +58,8 @@ namespace AZ
             template<typename Func>
             void ExecuteOnPipelineStatisticsQuery(Func&& func);
 
-            RPI::TimestampResult GetTimestampResultInternal() const override;
-            RPI::PipelineStatisticsResult GetPipelineStatisticsResultInternal() const override;
+            JE::Render::RPI::TimestampResult GetTimestampResultInternal() const override;
+            JE::Render::RPI::PipelineStatisticsResult GetPipelineStatisticsResultInternal() const override;
 
             // Begin recording commands for the ScopeQueries
             void BeginScopeQuery(const AZ::RHI::FrameGraphExecuteContext& context);
@@ -80,10 +80,10 @@ namespace AZ
             static constexpr uint32_t SKINNED_BLAS_REBUILD_FRAME_INTERVAL = 8;
 
             // Readback results from the Timestamp queries
-            AZ::RPI::TimestampResult m_timestampResult{};
+            JE::Render::RPI::TimestampResult m_timestampResult{};
 
             // Readback results from the PipelineStatistics queries
-            AZ::RPI::PipelineStatisticsResult m_statisticsResult{};
+            JE::Render::RPI::PipelineStatisticsResult m_statisticsResult{};
 
             // The device index the pass ran on during the last frame, necessary to read the queries.
             int m_lastDeviceIndex = RHI::MultiDevice::DefaultDeviceIndex;

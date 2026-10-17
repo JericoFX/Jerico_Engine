@@ -9,7 +9,7 @@
 #pragma once
 
 #include <AzCore/Component/Component.h>
-#include <Atom/RPI.Reflect/Image/StreamingImageAsset.h>
+#include <JE/Render/RPI/Reflect/Image/StreamingImageAsset.h>
 #include <AzCore/Math/Matrix4x4.h>
 
 namespace AZ
@@ -25,7 +25,7 @@ namespace AZ
 
             static void Reflect(ReflectContext* context);
 
-            Data::Asset<RPI::StreamingImageAsset> m_cubemapAsset;
+            Data::Asset<JE::Render::RPI::StreamingImageAsset> m_cubemapAsset;
             Data::AssetId m_cubemapAssetId;
 
             float m_exposure = 0.0f;

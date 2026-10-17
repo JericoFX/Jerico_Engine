@@ -103,7 +103,7 @@ namespace AZ
             ////////////////////////////////////////////////////////////////////////
             // MeshComponentEvents
             //! When target's mesh changes
-            void OnModelReady(const AZ::Data::Asset<AZ::RPI::ModelAsset>& modelAsset, const AZ::Data::Instance<AZ::RPI::Model>& model) override;
+            void OnModelReady(const AZ::Data::Asset<JE::Render::RPI::ModelAsset>& modelAsset, const AZ::Data::Instance<JE::Render::RPI::Model>& model) override;
             ////////////////////////////////////////////////////////////////////////
 
             void BindTargetBone();

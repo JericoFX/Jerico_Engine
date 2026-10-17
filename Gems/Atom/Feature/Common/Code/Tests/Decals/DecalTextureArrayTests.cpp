@@ -13,8 +13,8 @@
 #include <gtest/gtest.h>
 #include <AzCore/Math/Random.h>
 #include <Decals/DecalTextureArray.h>
-#include <Atom/RPI.Public/Image/StreamingImagePool.h>
-#include <Atom/RPI.Reflect/Image/StreamingImagePoolAssetCreator.h>
+#include <JE/Render/RPI/Public/Image/StreamingImagePool.h>
+#include <JE/Render/RPI/Reflect/Image/StreamingImagePoolAssetCreator.h>
 #include <AzCore/UnitTest/TestTypes.h>
 
 

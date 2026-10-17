@@ -21,8 +21,8 @@
 #include <Atom/RHI.Reflect/BufferPoolDescriptor.h>
 #include <Atom/RHI.Reflect/ImagePoolDescriptor.h>
 
-#include <Atom/RPI.Reflect/ResourcePoolAssetCreator.h>
-#include <Atom/RPI.Reflect/Image/StreamingImagePoolAssetCreator.h>
+#include <JE/Render/RPI/Reflect/ResourcePoolAssetCreator.h>
+#include <JE/Render/RPI/Reflect/Image/StreamingImagePoolAssetCreator.h>
 
 namespace JE::Assets::RenderBuilders
 {
@@ -89,8 +89,8 @@ namespace JE::Assets::RenderBuilders
             return;
         }
 
-        AZ::RPI::ResourcePoolSourceData poolSourceData;
-        AZ::Outcome<void, AZStd::string> loadResult = AZ::JsonSerializationUtils::LoadObjectFromFile<AZ::RPI::ResourcePoolSourceData>(poolSourceData,
+        JE::Render::RPI::ResourcePoolSourceData poolSourceData;
+        AZ::Outcome<void, AZStd::string> loadResult = AZ::JsonSerializationUtils::LoadObjectFromFile<JE::Render::RPI::ResourcePoolSourceData>(poolSourceData,
             request.m_fullPath);
 
         if (!loadResult.IsSuccess())
@@ -107,14 +107,14 @@ namespace JE::Assets::RenderBuilders
         AZ::Data::AssetData* assetData = nullptr;
         const char* extension;
         AZ::Data::Asset<AZ::Data::AssetData> poolAsset;
-        if (poolSourceData.m_poolType == AZ::RPI::ResourcePoolAssetType::StreamingImagePool)
+        if (poolSourceData.m_poolType == JE::Render::RPI::ResourcePoolAssetType::StreamingImagePool)
         {
-            extension = AZ::RPI::StreamingImagePoolAsset::Extension;
+            extension = JE::Render::RPI::StreamingImagePoolAsset::Extension;
             poolAsset = CreateStreamingPoolAssetFromSource(poolSourceData);
         }
         else
         {
-            extension = AZ::RPI::ResourcePoolAsset::Extension;
+            extension = JE::Render::RPI::ResourcePoolAsset::Extension;
             poolAsset = CreatePoolAssetFromSource(poolSourceData);
         }
 
@@ -162,14 +162,14 @@ namespace JE::Assets::RenderBuilders
         m_isShuttingDown = true;
     }
 
-    AZ::Data::Asset<AZ::Data::AssetData> ResourcePoolBuilder::CreatePoolAssetFromSource(const AZ::RPI::ResourcePoolSourceData& sourceData)
+    AZ::Data::Asset<AZ::Data::AssetData> ResourcePoolBuilder::CreatePoolAssetFromSource(const JE::Render::RPI::ResourcePoolSourceData& sourceData)
     {
-        AZ::RPI::ResourcePoolAssetCreator assetCreator;
+        JE::Render::RPI::ResourcePoolAssetCreator assetCreator;
         assetCreator.Begin(AZ::Data::AssetId(AZ::Uuid::CreateRandom()));
         assetCreator.SetPoolName(sourceData.m_poolName);
         switch (sourceData.m_poolType)
         {
-        case AZ::RPI::ResourcePoolAssetType::BufferPool:
+        case JE::Render::RPI::ResourcePoolAssetType::BufferPool:
         {
             // [GFX TODO][ATOM-112] - Need to create pool descriptor based on device .
             AZStd::unique_ptr<AZ::RHI::BufferPoolDescriptor> bufferPoolDescriptor = AZStd::make_unique<AZ::RHI::BufferPoolDescriptor>();
@@ -180,7 +180,7 @@ namespace JE::Assets::RenderBuilders
             assetCreator.SetPoolDescriptor(AZStd::move(bufferPoolDescriptor));
             break;
         }
-        case AZ::RPI::ResourcePoolAssetType::ImagePool:
+        case JE::Render::RPI::ResourcePoolAssetType::ImagePool:
         {
             AZStd::unique_ptr<AZ::RHI::ImagePoolDescriptor> imagePoolDescriptor = AZStd::make_unique<AZ::RHI::ImagePoolDescriptor>();
             imagePoolDescriptor->m_budgetInBytes = sourceData.m_budgetInBytes;
@@ -192,7 +192,7 @@ namespace JE::Assets::RenderBuilders
             break;
         }
 
-        AZ::Data::Asset<AZ::RPI::ResourcePoolAsset> poolAsset;
+        AZ::Data::Asset<JE::Render::RPI::ResourcePoolAsset> poolAsset;
 
         if (assetCreator.End(poolAsset))
         {
@@ -201,11 +201,11 @@ namespace JE::Assets::RenderBuilders
         return {};
     }
 
-    AZ::Data::Asset<AZ::Data::AssetData> ResourcePoolBuilder::CreateStreamingPoolAssetFromSource(const AZ::RPI::ResourcePoolSourceData& sourceData)
+    AZ::Data::Asset<AZ::Data::AssetData> ResourcePoolBuilder::CreateStreamingPoolAssetFromSource(const JE::Render::RPI::ResourcePoolSourceData& sourceData)
     {
-        AZ_Assert(sourceData.m_poolType == AZ::RPI::ResourcePoolAssetType::StreamingImagePool, "Please use CreatePoolAssetFromSource for other type of pools");
+        AZ_Assert(sourceData.m_poolType == JE::Render::RPI::ResourcePoolAssetType::StreamingImagePool, "Please use CreatePoolAssetFromSource for other type of pools");
 
-        AZ::RPI::StreamingImagePoolAssetCreator assetCreator;
+        JE::Render::RPI::StreamingImagePoolAssetCreator assetCreator;
         assetCreator.Begin(AZ::Data::AssetId(AZ::Uuid::CreateRandom()));
 
         AZStd::unique_ptr<AZ::RHI::StreamingImagePoolDescriptor> poolDescriptor = AZStd::make_unique<AZ::RHI::StreamingImagePoolDescriptor>();
@@ -213,7 +213,7 @@ namespace JE::Assets::RenderBuilders
         assetCreator.SetPoolDescriptor(AZStd::move(poolDescriptor));
         assetCreator.SetPoolName(sourceData.m_poolName);
 
-        AZ::Data::Asset<AZ::RPI::StreamingImagePoolAsset> poolAsset;
+        AZ::Data::Asset<JE::Render::RPI::StreamingImagePoolAsset> poolAsset;
         assetCreator.End(poolAsset);
         return poolAsset;
     }

@@ -13,7 +13,7 @@
 #include <AzCore/std/containers/vector.h>
 
 #include <AzToolsFramework/API/EditorViewportIconDisplayInterface.h>
-#include <Atom/RPI.Public/DynamicDraw/DynamicDrawInterface.h>
+#include <JE/Render/RPI/Public/DynamicDraw/DynamicDrawInterface.h>
 #include <JE/Render/Bootstrap/BootstrapNotificationBus.h>
 
 #include <QImage>
@@ -56,7 +56,7 @@ namespace AZ
             IconLoadStatus GetIconLoadStatus(IconId icon) override;
 
             // JE::Render::Bootstrap::NotificationBus::Handler overrides...
-            void OnBootstrapSceneReady(AZ::RPI::Scene* bootstrapScene) override;
+            void OnBootstrapSceneReady(JE::Render::RPI::Scene* bootstrapScene) override;
 
             // Data::AssetBus::Handler overrides...
             void OnAssetReady(Data::Asset<Data::AssetData> asset) override;
@@ -68,10 +68,10 @@ namespace AZ
 
             QString FindAssetPath(const QString& path) const;
             QImage RenderSvgToImage(const QString& svgPath) const;
-            AZ::Data::Instance<AZ::RPI::Image> ConvertToAtomImage(AZ::Uuid assetId, QImage image) const;
-            AZ::Data::Instance<AZ::RPI::ShaderResourceGroup> CreateIconSRG(AzFramework::ViewportId viewportId, AZ::Data::Instance<AZ::RPI::Image> image);
-            RHI::Ptr<RPI::DynamicDrawContext> GetDynamicDrawContextForViewport(AzFramework::ViewportId viewportId);
-            AZ::Data::Instance<AZ::RPI::Image> GetImageForIconId(IconId iconId);
+            AZ::Data::Instance<JE::Render::RPI::Image> ConvertToAtomImage(AZ::Uuid assetId, QImage image) const;
+            AZ::Data::Instance<JE::Render::RPI::ShaderResourceGroup> CreateIconSRG(AzFramework::ViewportId viewportId, AZ::Data::Instance<JE::Render::RPI::Image> image);
+            RHI::Ptr<JE::Render::RPI::DynamicDrawContext> GetDynamicDrawContextForViewport(AzFramework::ViewportId viewportId);
+            AZ::Data::Instance<JE::Render::RPI::Image> GetImageForIconId(IconId iconId);
 
             Name m_drawContextName = Name("ViewportIconDisplay");
             bool m_shaderIndexesInitialized = false;
@@ -81,7 +81,7 @@ namespace AZ
             struct IconData
             {
                 AZStd::string m_path;
-                AZ::Data::Instance<AZ::RPI::Image> m_image = nullptr;
+                AZ::Data::Instance<JE::Render::RPI::Image> m_image = nullptr;
             };
             AZStd::unordered_map<IconId, IconData> m_iconData;
             IconId m_currentId = 0;

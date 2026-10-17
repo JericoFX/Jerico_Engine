@@ -8,7 +8,7 @@
 #include <AzCore/UnitTest/TestTypes.h>
 #include <AzCore/std/smart_ptr/unique_ptr.h>
 #include <Atom/Feature/ColorGrading/LutGenerationCaptureBus.h>
-#include <Atom/RPI.Public/View.h>
+#include <JE/Render/RPI/Public/View.h>
 #include <PostProcess/PostProcessFeatureProcessor.h>
 
 namespace UnitTest
@@ -26,7 +26,7 @@ namespace UnitTest
             }
             m_processor = AZStd::make_unique<AZ::Render::PostProcessFeatureProcessor>();
             m_processor->Activate();
-            m_view = AZ::RPI::View::CreateView(AZ::Name("LUT frame metadata"), AZ::RPI::View::UsageCamera);
+            m_view = JE::Render::RPI::View::CreateView(AZ::Name("LUT frame metadata"), JE::Render::RPI::View::UsageCamera);
         }
 
         void TearDown() override
@@ -60,10 +60,10 @@ namespace UnitTest
             return hdr;
         }
 
-        static AZ::RPI::AttachmentReadback::ReadbackResult Readback(AZ::Render::FrameCaptureId id, uint32_t resolution)
+        static JE::Render::RPI::AttachmentReadback::ReadbackResult Readback(AZ::Render::FrameCaptureId id, uint32_t resolution)
         {
-            AZ::RPI::AttachmentReadback::ReadbackResult result{};
-            result.m_state = AZ::RPI::AttachmentReadback::ReadbackState::Success;
+            JE::Render::RPI::AttachmentReadback::ReadbackResult result{};
+            result.m_state = JE::Render::RPI::AttachmentReadback::ReadbackState::Success;
             result.m_attachmentType = AZ::RHI::AttachmentType::Image;
             result.m_userIdentifier = id;
             result.m_imageDescriptor.m_format = AZ::RHI::Format::R32G32B32A32_FLOAT;
@@ -73,7 +73,7 @@ namespace UnitTest
 
         bool m_ownsNames = false;
         AZStd::unique_ptr<AZ::Render::PostProcessFeatureProcessor> m_processor;
-        AZ::RPI::ViewPtr m_view;
+        JE::Render::RPI::ViewPtr m_view;
     };
 
     TEST_F(LutGenerationCaptureTests, SnapshotUsesEffectiveViewTupleRatherThanRequestingController)
@@ -138,7 +138,7 @@ namespace UnitTest
         readback.m_attachmentType = AZ::RHI::AttachmentType::Buffer;
         EXPECT_FALSE(metadata.MatchesReadback(9, readback));
         readback = Readback(9, 16);
-        readback.m_state = AZ::RPI::AttachmentReadback::ReadbackState::Failed;
+        readback.m_state = JE::Render::RPI::AttachmentReadback::ReadbackState::Failed;
         EXPECT_FALSE(metadata.MatchesReadback(9, readback));
         EXPECT_FALSE(JE::ColorGrading::LutGenerationCaptureMetadata{}.MatchesReadback(9, Readback(9, 16)));
     }

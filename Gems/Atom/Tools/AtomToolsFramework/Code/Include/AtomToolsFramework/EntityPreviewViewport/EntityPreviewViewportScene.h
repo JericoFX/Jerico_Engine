@@ -8,8 +8,8 @@
 
 #pragma once
 
-#include <Atom/RPI.Public/Base.h>
-#include <Atom/RPI.Public/Pass/Specific/SwapChainPass.h>
+#include <JE/Render/RPI/Public/Base.h>
+#include <JE/Render/RPI/Public/Pass/Specific/SwapChainPass.h>
 #include <AzFramework/Entity/GameEntityContextComponent.h>
 
 namespace AtomToolsFramework
@@ -32,30 +32,30 @@ namespace AtomToolsFramework
         bool ActivateRenderPipeline(const AZ::Data::AssetId& pipelineAssetId);
 
         //! Returns a pointer to the scene used for rendering the viewport content
-        AZ::RPI::ScenePtr GetScene() const;
+        JE::Render::RPI::ScenePtr GetScene() const;
 
         //! Returns a pointer to the pipeline used for rendering the viewport content
-        AZ::RPI::RenderPipelinePtr GetPipeline() const;
+        JE::Render::RPI::RenderPipelinePtr GetPipeline() const;
 
         //! Returns the AssetId of the active render pipeline 
         AZ::Data::AssetId GetPipelineAssetId() const;
 
     private:
-        using RenderPipelineMap = AZStd::unordered_map<AZ::Data::AssetId, AZ::RPI::RenderPipelinePtr>;
+        using RenderPipelineMap = AZStd::unordered_map<AZ::Data::AssetId, JE::Render::RPI::RenderPipelinePtr>;
 
         RenderPipelineMap::iterator AddRenderPipeline(const AZ::Data::AssetId& pipelineAssetId);
 
         const AZ::Crc32 m_toolId = {};
-        AZ::RPI::ScenePtr m_scene;
+        JE::Render::RPI::ScenePtr m_scene;
         AZStd::shared_ptr<AzFramework::Scene> m_frameworkScene;
 
         RenderPipelineMap m_renderPipelines;
         AZ::Data::AssetId m_activeRenderPipelineId;
-        AZ::RPI::RenderPipelinePtr m_activeRenderPipeline;
+        JE::Render::RPI::RenderPipelinePtr m_activeRenderPipeline;
         AZStd::string m_viewportIdSuffix;
-        AZ::RPI::WindowContextSharedPtr m_windowContext;
+        JE::Render::RPI::WindowContextSharedPtr m_windowContext;
 
-        AZ::Data::Instance<AZ::RPI::SwapChainPass> m_swapChainPass;
+        AZ::Data::Instance<JE::Render::RPI::SwapChainPass> m_swapChainPass;
         AZStd::shared_ptr<AzFramework::EntityContext> m_entityContext;
     };
 } // namespace AtomToolsFramework

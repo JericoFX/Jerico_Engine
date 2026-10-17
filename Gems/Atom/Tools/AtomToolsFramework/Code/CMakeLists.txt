@@ -46,8 +46,7 @@ ly_add_target(
             Gem::Atom_Feature_Common.Public
             Gem::Atom_RHI.Public
             Gem::Atom_RHI.Reflect
-            Gem::Atom_RPI.Edit
-            Gem::Atom_RPI.Public
+            JE::RenderIntegration
             Gem::GraphCanvasWidgets
             Gem::GraphModel.Editor.Static
             Gem::ImageProcessingAtom.Headers

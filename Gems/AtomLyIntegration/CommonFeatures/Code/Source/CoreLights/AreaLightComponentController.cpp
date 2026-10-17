@@ -15,7 +15,7 @@
 #include <CoreLights/SimpleSpotLightDelegate.h>
 #include <CoreLights/SphereLightDelegate.h>
 #include <Atom/Feature/CoreLights/PhotometricValue.h>
-#include <Atom/RPI.Public/Image/StreamingImage.h>
+#include <JE/Render/RPI/Public/Image/StreamingImage.h>
 
 #include <AzCore/RTTI/BehaviorContext.h>
 #include <AzCore/Serialization/EditContext.h>
@@ -273,10 +273,10 @@ namespace AZ::Render
             m_lightShapeDelegate->SetUseFastApproximation(m_configuration.m_useFastApproximation);
             m_lightShapeDelegate->SetAffectsGI(m_configuration.m_affectsGI);
             m_lightShapeDelegate->SetAffectsGIFactor(m_configuration.m_affectsGIFactor);
-            AZ::Data::Instance<AZ::RPI::StreamingImage> image = nullptr;
+            AZ::Data::Instance<JE::Render::RPI::StreamingImage> image = nullptr;
             if (m_configuration.m_goboImageAsset.GetId().IsValid())
             {
-                image = AZ::RPI::StreamingImage::FindOrCreate(m_configuration.m_goboImageAsset);
+                image = JE::Render::RPI::StreamingImage::FindOrCreate(m_configuration.m_goboImageAsset);
             }
             m_lightShapeDelegate->SetGoboTexture(image);
         }

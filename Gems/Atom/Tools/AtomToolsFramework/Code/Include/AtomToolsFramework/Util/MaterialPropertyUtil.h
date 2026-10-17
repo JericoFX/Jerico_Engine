@@ -7,28 +7,28 @@
  */
 #pragma once
 
-#include <Atom/RPI.Edit/Material/MaterialTypeSourceData.h>
-#include <Atom/RPI.Reflect/Material/MaterialPropertyDescriptor.h>
-#include <Atom/RPI.Reflect/Material/MaterialPropertyValue.h>
+#include <JE/Editor/Render/RPI/Edit/Material/MaterialTypeSourceData.h>
+#include <JE/Render/RPI/Reflect/Material/MaterialPropertyDescriptor.h>
+#include <JE/Render/RPI/Reflect/Material/MaterialPropertyValue.h>
 #include <AtomToolsFramework/DynamicProperty/DynamicProperty.h>
 #include <AzCore/std/any.h>
 
 namespace AtomToolsFramework
 {
     //! Convert an editor property stored in a AZStd::any into a material property value
-    AZ::RPI::MaterialPropertyValue ConvertToRuntimeType(const AZStd::any& value);
+    JE::Render::RPI::MaterialPropertyValue ConvertToRuntimeType(const AZStd::any& value);
 
     //! Convert a material property value into a AZStd::any that can be used as a dynamic property
-    AZStd::any ConvertToEditableType(const AZ::RPI::MaterialPropertyValue& value);
+    AZStd::any ConvertToEditableType(const JE::Render::RPI::MaterialPropertyValue& value);
 
     //! Convert and assign material type source data property definition fields to editor dynamic property configuration 
-    void ConvertToPropertyConfig(AtomToolsFramework::DynamicPropertyConfig& propertyConfig, const AZ::RPI::MaterialPropertySourceData& propertyDefinition);
+    void ConvertToPropertyConfig(AtomToolsFramework::DynamicPropertyConfig& propertyConfig, const JE::Render::RPI::MaterialPropertySourceData& propertyDefinition);
 
     //! Convert and assign material property meta data fields to editor dynamic property configuration 
-    void ConvertToPropertyConfig(AtomToolsFramework::DynamicPropertyConfig& propertyConfig, const AZ::RPI::MaterialPropertyDynamicMetadata& propertyMetaData);
+    void ConvertToPropertyConfig(AtomToolsFramework::DynamicPropertyConfig& propertyConfig, const JE::Render::RPI::MaterialPropertyDynamicMetadata& propertyMetaData);
 
     //! Convert and assign editor dynamic property configuration fields to material property meta data
-    void ConvertToPropertyMetaData(AZ::RPI::MaterialPropertyDynamicMetadata& propertyMetaData, const AtomToolsFramework::DynamicPropertyConfig& propertyConfig);
+    void ConvertToPropertyMetaData(JE::Render::RPI::MaterialPropertyDynamicMetadata& propertyMetaData, const AtomToolsFramework::DynamicPropertyConfig& propertyConfig);
 
     //! Compare equality of data types and values of editor property stored in AZStd::any
     bool ArePropertyValuesEqual(const AZStd::any& valueA, const AZStd::any& valueB);
@@ -41,9 +41,9 @@ namespace AtomToolsFramework
     bool ConvertToExportFormat(
         const AZStd::string& exportPath,
         [[maybe_unused]] const AZ::Name& propertyId,
-        const AZ::RPI::MaterialPropertySourceData& propertyDefinition,
-        AZ::RPI::MaterialPropertyValue& propertyValue);
+        const JE::Render::RPI::MaterialPropertySourceData& propertyDefinition,
+        JE::Render::RPI::MaterialPropertyValue& propertyValue);
 
-    AZ::RPI::MaterialPropertyDataType GetMaterialPropertyDataTypeFromValue(
-        AZ::RPI::MaterialPropertyValue& propertyValue, bool hasEnumValues);
+    JE::Render::RPI::MaterialPropertyDataType GetMaterialPropertyDataTypeFromValue(
+        JE::Render::RPI::MaterialPropertyValue& propertyValue, bool hasEnumValues);
 } // namespace AtomToolsFramework

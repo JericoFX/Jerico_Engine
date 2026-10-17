@@ -8,7 +8,7 @@
 
 #include <CoreLights/EditorDirectionalLightComponent.h>
 
-#include <Atom/RPI.Edit/Common/ColorUtils.h>
+#include <JE/Editor/Render/RPI/Edit/Common/ColorUtils.h>
 #include <AzToolsFramework/ViewportSelection/EditorSelectionUtil.h>
 #include <AzCore/Component/TransformBus.h>
 #include <AzCore/Math/Transform.h>
@@ -65,7 +65,7 @@ namespace AZ
                             QT_TRANSLATE_NOOP("AtomLyIntegration", "Color"),
                             QT_TRANSLATE_NOOP("AtomLyIntegration", "Color of the light"))
                             ->Attribute(Edit::Attributes::ChangeNotify, Edit::PropertyRefreshLevels::ValuesOnly)
-                            ->Attribute("ColorEditorConfiguration", AZ::RPI::ColorUtils::GetLinearRgbEditorConfig())
+                            ->Attribute("ColorEditorConfiguration", JE::Render::RPI::ColorUtils::GetLinearRgbEditorConfig())
                         ->DataElement(Edit::UIHandlers::ComboBox, &DirectionalLightComponentConfig::m_intensityMode,
                             QT_TRANSLATE_NOOP("AtomLyIntegration", "Intensity mode"),
                             QT_TRANSLATE_NOOP("AtomLyIntegration", "Allows specifying light values in lux or Ev100"))

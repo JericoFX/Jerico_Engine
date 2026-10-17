@@ -9,22 +9,22 @@
 #include <PostProcess/PostProcessFeatureProcessor.h>
 #include <PostProcessing/DepthUpsamplePass.h>
 #include <AzCore/Math/MathUtils.h>
-#include <Atom/RPI.Public/RenderPipeline.h>
-#include <Atom/RPI.Public/Scene.h>
-#include <Atom/RPI.Public/View.h>
+#include <JE/Render/RPI/Public/RenderPipeline.h>
+#include <JE/Render/RPI/Public/Scene.h>
+#include <JE/Render/RPI/Public/View.h>
 
 namespace AZ
 {
     namespace Render
     {
-        RPI::Ptr<DepthUpsamplePass> DepthUpsamplePass::Create(const RPI::PassDescriptor& descriptor)
+        JE::Render::RPI::Ptr<DepthUpsamplePass> DepthUpsamplePass::Create(const JE::Render::RPI::PassDescriptor& descriptor)
         {
-            RPI::Ptr<DepthUpsamplePass> pass = aznew DepthUpsamplePass(descriptor);
+            JE::Render::RPI::Ptr<DepthUpsamplePass> pass = aznew DepthUpsamplePass(descriptor);
             return pass;
         }
 
-        DepthUpsamplePass::DepthUpsamplePass(const RPI::PassDescriptor& descriptor)
-            : RPI::ComputePass(descriptor)
+        DepthUpsamplePass::DepthUpsamplePass(const JE::Render::RPI::PassDescriptor& descriptor)
+            : JE::Render::RPI::ComputePass(descriptor)
         { }
 
         void DepthUpsamplePass::FrameBeginInternal(FramePrepareParams params)
@@ -44,8 +44,8 @@ namespace AZ
 
             AZ_Assert(GetInputCount() == 3, "DepthUpsamplePass requires three inputs!");
             AZ_Assert(GetOutputCount() == 1, "DepthUpsamplePass requires one output!");
-            RPI::PassAttachment* inputAttachment = GetInputBinding(2).GetAttachment().get();
-            RPI::PassAttachment* outputAttachment = GetOutputBinding(0).GetAttachment().get();
+            JE::Render::RPI::PassAttachment* inputAttachment = GetInputBinding(2).GetAttachment().get();
+            JE::Render::RPI::PassAttachment* outputAttachment = GetOutputBinding(0).GetAttachment().get();
 
             AZ_Assert(inputAttachment != nullptr, "DepthUpsamplePass: Input binding has no attachment!");
             AZ_Assert(outputAttachment != nullptr, "DepthUpsamplePass: Output binding has no attachment!");
@@ -76,7 +76,7 @@ namespace AZ
 
             m_shaderResourceGroup->SetConstant(m_constantsIndex, upsampleConstants);
 
-            RPI::ComputePass::FrameBeginInternal(params);
+            JE::Render::RPI::ComputePass::FrameBeginInternal(params);
         }
 
     }   // namespace Render

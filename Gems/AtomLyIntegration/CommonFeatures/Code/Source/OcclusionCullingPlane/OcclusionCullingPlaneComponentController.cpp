@@ -9,9 +9,9 @@
 #include <OcclusionCullingPlane/OcclusionCullingPlaneComponentController.h>
 #include <OcclusionCullingPlane/OcclusionCullingPlaneComponentConstants.h>
 
-#include <Atom/RPI.Public/Model/Model.h>
-#include <Atom/RPI.Public/Image/StreamingImage.h>
-#include <Atom/RPI.Public/Scene.h>
+#include <JE/Render/RPI/Public/Model/Model.h>
+#include <JE/Render/RPI/Public/Image/StreamingImage.h>
+#include <JE/Render/RPI/Public/Scene.h>
 
 #include <AzCore/Asset/AssetManager.h>
 #include <AzCore/Asset/AssetManagerBus.h>
@@ -89,7 +89,7 @@ namespace AZ
 
             TransformNotificationBus::Handler::BusConnect(m_entityId);
 
-            m_featureProcessor = RPI::Scene::GetFeatureProcessorForEntity<OcclusionCullingPlaneFeatureProcessorInterface>(entityId);
+            m_featureProcessor = JE::Render::RPI::Scene::GetFeatureProcessorForEntity<OcclusionCullingPlaneFeatureProcessorInterface>(entityId);
             AZ_Assert(m_featureProcessor, "OcclusionCullingPlaneComponentController was unable to find a OcclusionCullingPlaneFeatureProcessor on the EntityContext provided.");
 
             m_transformInterface = TransformBus::FindFirstHandler(entityId);

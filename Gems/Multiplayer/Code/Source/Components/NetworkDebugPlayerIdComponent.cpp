@@ -9,7 +9,7 @@
 #include <Multiplayer/Components/NetworkDebugPlayerIdComponent.h>
 #include <Multiplayer/ConnectionData/IConnectionData.h>
 
-#include <Atom/RPI.Public/ViewportContextBus.h>
+#include <JE/Render/RPI/Public/ViewportContextBus.h>
 #include <AzCore/Component/TransformBus.h>
 #include <AzCore/Serialization/SerializeContext.h>
 #include <AzFramework/Viewport/ViewportScreen.h>
@@ -58,7 +58,7 @@ namespace Multiplayer
     void NetworkDebugPlayerIdComponent::OnActivate([[maybe_unused]] EntityIsMigrating entityIsMigrating)
     {
         #if (AZ_TRAIT_CLIENT)
-            m_viewport = AZ::RPI::ViewportContextRequests::Get()->GetDefaultViewportContext();
+            m_viewport = JE::Render::RPI::ViewportContextRequests::Get()->GetDefaultViewportContext();
             if (!m_viewport)
             {
                 AZ_Assert(false, "NetworkDebugPlayerIdComponent failed to find the a rendering viewport. Debug rendering will be disabled.");

@@ -16,8 +16,8 @@
 #include "Util/PredefinedAspectRatios.h"
 #include "Viewport.h"
 
-#include <Atom/RPI.Public/SceneBus.h>
-#include <Atom/RPI.Public/ViewportContext.h>
+#include <JE/Render/RPI/Public/SceneBus.h>
+#include <JE/Render/RPI/Public/ViewportContext.h>
 #include <AzCore/Component/EntityId.h>
 #include <AzCore/std/optional.h>
 #include <AzFramework/Asset/AssetCatalogBus.h>
@@ -91,7 +91,7 @@ class SANDBOX_API EditorViewportWidget final
     , private AzToolsFramework::ViewportInteraction::MainEditorViewportInteractionRequestBus::Handler
     , private AzToolsFramework::ViewportInteraction::EditorEntityViewportInteractionRequestBus::Handler
     , private AzFramework::AssetCatalogEventBus::Handler
-    , private AZ::RPI::SceneNotificationBus::Handler
+    , private JE::Render::RPI::SceneNotificationBus::Handler
     , private AzToolsFramework::Prefab::PrefabPublicNotificationBus::Handler
 {
     Q_OBJECT
@@ -292,7 +292,7 @@ private:
     void UnProjectFromScreen(float sx, float sy, float* px, float* py, float* pz) const;
     void ProjectToScreen(float ptx, float pty, float ptz, float* sx, float* sy) const;
 
-    AZ::RPI::ViewPtr GetCurrentAtomView() const;
+    JE::Render::RPI::ViewPtr GetCurrentAtomView() const;
 
     ////////////////////////////////////////////////////////////////////////
     // Members ...

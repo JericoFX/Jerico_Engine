@@ -15,8 +15,8 @@
 #include <AzCore/Settings/SettingsRegistry.h>
 #include <AzToolsFramework/API/EditorAssetSystemAPI.h>
 
-#include <Atom/RPI.Reflect/Material/MaterialAsset.h>
-#include <Atom/RPI.Edit/Material/MaterialUtils.h>
+#include <JE/Render/RPI/Reflect/Material/MaterialAsset.h>
+#include <JE/Editor/Render/RPI/Edit/Material/MaterialUtils.h>
 
 namespace AZ
 {
@@ -60,12 +60,12 @@ namespace AZ
                 settingsRegistry->GetObject(m_settings, "/O3DE/SceneAPI/MaterialConverter");
             }
 
-            RPI::MaterialConverterBus::Handler::BusConnect();
+            JE::Render::RPI::MaterialConverterBus::Handler::BusConnect();
         }
 
         void MaterialConverterSystemComponent::Deactivate()
         {
-            RPI::MaterialConverterBus::Handler::BusDisconnect();
+            JE::Render::RPI::MaterialConverterBus::Handler::BusDisconnect();
         }
         
         bool MaterialConverterSystemComponent::IsEnabled() const
@@ -91,9 +91,9 @@ namespace AZ
         }
 
         bool MaterialConverterSystemComponent::ConvertMaterial(
-            const AZ::SceneAPI::DataTypes::IMaterialData& materialData, RPI::MaterialSourceData& sourceData)
+            const AZ::SceneAPI::DataTypes::IMaterialData& materialData, JE::Render::RPI::MaterialSourceData& sourceData)
         {
-            using namespace AZ::RPI;
+            using namespace JE::Render::RPI;
             
             if (!m_settings.m_enable)
             {
@@ -219,7 +219,7 @@ namespace AZ
 
         AZStd::string MaterialConverterSystemComponent::GetMaterialTypePath() const
         {
-            return AZ::RPI::MaterialUtils::PredictIntermediateMaterialTypeSourcePath("Materials/Types/StandardPBR.materialtype");
+            return JE::Render::RPI::MaterialUtils::PredictIntermediateMaterialTypeSourcePath("Materials/Types/StandardPBR.materialtype");
         }
 
         AZStd::string MaterialConverterSystemComponent::GetDefaultMaterialPath() const

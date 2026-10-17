@@ -10,7 +10,7 @@
 #include <JE/Render/Debug/RenderDebugExports.h>
 
 #include <AzCore/Component/EntityId.h>
-#include <Atom/RPI.Public/MeshDrawPacket.h>
+#include <JE/Render/RPI/Public/MeshDrawPacket.h>
 
 namespace JE::Render::Debug
 {
@@ -22,7 +22,7 @@ namespace JE::Render::Debug
         void SetSelectedEntityId(AZ::EntityId entityId);
 
         //! Returns the collection of MeshDrawPackets currently used by the selected entity.
-        const AZ::RPI::MeshDrawPacketLods* GetMeshDrawPackets() const;
+        const JE::Render::RPI::MeshDrawPacketLods* GetMeshDrawPackets() const;
 
         //! Returns the name of the selected entity.
         AZStd::string GetSelectionName() const;

@@ -6,7 +6,7 @@
  *
  */
 
-#include <Atom/RPI.Public/Buffer/BufferSystemInterface.h>
+#include <JE/Render/RPI/Public/Buffer/BufferSystemInterface.h>
 #include <AzCore/Instance/Instance.h>
 #include <AzCore/std/smart_ptr/unique_ptr.h>
 #include <Math/GaussianMathFilter.h>
@@ -40,7 +40,7 @@ namespace AZ
             // If there already exists the filter parameter buffer,
             // return it along with parameter counts of each filters.
             AZStd::string uniqueName = GenerateName(descriptor);
-            if (auto buffer = RPI::BufferSystemInterface::Get()->FindCommonBuffer(uniqueName))
+            if (auto buffer = JE::Render::RPI::BufferSystemInterface::Get()->FindCommonBuffer(uniqueName))
             {
                 return AZStd::make_pair(buffer, GetElementCounts(filters));
             }
@@ -63,8 +63,8 @@ namespace AZ
             }
 
             // Create the filter parameter buffer.
-            RPI::CommonBufferDescriptor desc;
-            desc.m_poolType = RPI::CommonBufferPoolType::ReadOnly;
+            JE::Render::RPI::CommonBufferDescriptor desc;
+            desc.m_poolType = JE::Render::RPI::CommonBufferPoolType::ReadOnly;
             desc.m_bufferName = uniqueName;
             desc.m_elementSize = elementSize;
             desc.m_elementFormat = filters.front()->GetElementFormat();
@@ -72,7 +72,7 @@ namespace AZ
             desc.m_bufferData = data.data();
             desc.m_isUniqueName = true;
 
-            auto buffer = RPI::BufferSystemInterface::Get()->CreateBufferFromCommonPool(desc);
+            auto buffer = JE::Render::RPI::BufferSystemInterface::Get()->CreateBufferFromCommonPool(desc);
 
             // Return the buffer along with parameter counts of each filters.
             return make_pair(buffer, GetElementCounts(filters));

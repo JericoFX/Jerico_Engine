@@ -8,8 +8,8 @@
 
 #pragma once
 
-#include <Atom/RPI.Public/Base.h>
-#include <Atom/RPI.Public/Shader/ShaderResourceGroup.h>
+#include <JE/Render/RPI/Public/Base.h>
+#include <JE/Render/RPI/Public/Shader/ShaderResourceGroup.h>
 #include <AzCore/Instance/Instance.h>
 #include <AzCore/Memory/SystemAllocator.h>
 #include <AzCore/RTTI/RTTI.h>
@@ -33,9 +33,9 @@ namespace AZ
 
         protected:
 
-            RPI::ShaderResourceGroup* GetSceneSrg() const;
-            RPI::Scene* GetParentScene() const;
-            AZ::Data::Instance<AZ::RPI::ShaderResourceGroup> GetDefaultViewSrg() const;
+            JE::Render::RPI::ShaderResourceGroup* GetSceneSrg() const;
+            JE::Render::RPI::Scene* GetParentScene() const;
+            AZ::Data::Instance<JE::Render::RPI::ShaderResourceGroup> GetDefaultViewSrg() const;
 
             PostProcessFeatureProcessor* m_featureProcessor = nullptr;
         };

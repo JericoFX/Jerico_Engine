@@ -30,15 +30,15 @@
 
 #include <AzCore/std/parallel/lock.h>
 
-#include <Atom/RPI.Public/RPISystemInterface.h>
+#include <JE/Render/RPI/Public/RPISystemInterface.h>
 #include <Atom/RHI/RHISystemInterface.h>
-#include <Atom/RPI.Public/Shader/Shader.h>
-#include <Atom/RPI.Public/RPIUtils.h>
-#include <Atom/RPI.Public/ViewportContext.h>
-#include <Atom/RPI.Public/View.h>
-#include <Atom/RPI.Public/Image/ImageSystemInterface.h>
-#include <Atom/RPI.Public/Image/AttachmentImagePool.h>
-#include <Atom/RPI.Public/ViewportContextManager.h>
+#include <JE/Render/RPI/Public/Shader/Shader.h>
+#include <JE/Render/RPI/Public/RPIUtils.h>
+#include <JE/Render/RPI/Public/ViewportContext.h>
+#include <JE/Render/RPI/Public/View.h>
+#include <JE/Render/RPI/Public/Image/ImageSystemInterface.h>
+#include <JE/Render/RPI/Public/Image/AttachmentImagePool.h>
+#include <JE/Render/RPI/Public/ViewportContextManager.h>
 #include <AzCore/Interface/Interface.h>
 
 #include <Atom/RHI/Factory.h>
@@ -72,13 +72,13 @@ AZ::FFont::FFont(AZ::AtomFont* atomFont, const char* fontName)
     AddRef();
 }
 
-AZ::RPI::ViewportContextPtr AZ::FFont::GetDefaultViewportContext() const
+JE::Render::RPI::ViewportContextPtr AZ::FFont::GetDefaultViewportContext() const
 {
-    auto viewContextManager = AZ::Interface<AZ::RPI::ViewportContextRequestsInterface>::Get();
+    auto viewContextManager = AZ::Interface<JE::Render::RPI::ViewportContextRequestsInterface>::Get();
     return viewContextManager->GetDefaultViewportContext();
 }
 
-AZ::RPI::WindowContextSharedPtr AZ::FFont::GetDefaultWindowContext() const
+JE::Render::RPI::WindowContextSharedPtr AZ::FFont::GetDefaultWindowContext() const
 {
     if (auto defaultViewportContext = GetDefaultViewportContext())
     {
@@ -229,7 +229,7 @@ void AZ::FFont::DrawString(float x, float y, float z, const char* str, const boo
 
 void AZ::FFont::DrawStringUInternal(
     const RHI::Viewport& viewport, 
-    RPI::ViewportContextPtr viewportContext, 
+    JE::Render::RPI::ViewportContextPtr viewportContext, 
     float x,
     float y, 
     float z, 
@@ -271,7 +271,7 @@ void AZ::FFont::DrawStringUInternal(
     Matrix4x4 modelViewProjMat;
     if (!orthoMode)
     {
-        AZ::RPI::ViewPtr view = viewportContext->GetDefaultView();
+        JE::Render::RPI::ViewPtr view = viewportContext->GetDefaultView();
         modelViewProjMat = view->GetWorldToClipMatrix();
     }
     else
@@ -336,7 +336,7 @@ void AZ::FFont::DrawStringUInternal(
 
     if (numQuads)
     {
-        AZ::RPI::Ptr<AZ::RPI::DynamicDrawContext> dynamicDraw = JE::Render::Integration::PerViewportDynamicDraw::Get()->GetDynamicDrawContextForViewport(m_dynamicDrawContextName, viewportContext->GetId());
+        JE::Render::RPI::Ptr<JE::Render::RPI::DynamicDrawContext> dynamicDraw = JE::Render::Integration::PerViewportDynamicDraw::Get()->GetDynamicDrawContextForViewport(m_dynamicDrawContextName, viewportContext->GetId());
         if (dynamicDraw)
         {
             //setup per draw srg
@@ -1436,9 +1436,9 @@ bool AZ::FFont::InitTexture()
     const int height = m_fontTexture->GetHeight();
     const Name imageName(m_name.c_str());
 
-    Data::Instance<RPI::AttachmentImagePool> imagePool = RPI::ImageSystemInterface::Get()->GetSystemAttachmentPool();
+    Data::Instance<JE::Render::RPI::AttachmentImagePool> imagePool = JE::Render::RPI::ImageSystemInterface::Get()->GetSystemAttachmentPool();
     RHI::ImageDescriptor imageDescriptor = RHI::ImageDescriptor::Create2D(RHI::ImageBindFlags::ShaderRead, width, height, rhiImageFormat);
-    m_fontAttachmentImage = RPI::AttachmentImage::Create(*imagePool.get(), imageDescriptor, imageName);
+    m_fontAttachmentImage = JE::Render::RPI::AttachmentImage::Create(*imagePool.get(), imageDescriptor, imageName);
 
     m_fontImage = m_fontAttachmentImage->GetRHIImage();
     m_fontImage->SetName(imageName);
@@ -1606,7 +1606,7 @@ AZ::FFont::DrawParameters AZ::FFont::ExtractDrawParameters(const AzFramework::Te
 
     float posX = params.m_position.GetX();
     float posY = params.m_position.GetY();
-    internalParams.m_viewportContext = AZ::Interface<AZ::RPI::ViewportContextRequestsInterface>::Get()->GetViewportContextById(params.m_drawViewportId);
+    internalParams.m_viewportContext = AZ::Interface<JE::Render::RPI::ViewportContextRequestsInterface>::Get()->GetViewportContextById(params.m_drawViewportId);
     const auto viewportSize = internalParams.m_viewportContext->GetViewportSize();
     internalParams.m_viewport = AZ::RHI::Viewport(0, aznumeric_caster(viewportSize.m_width), 0, aznumeric_caster(viewportSize.m_height));
     auto& viewport = internalParams.m_viewport;
@@ -1705,7 +1705,7 @@ void AZ::FFont::DrawScreenAlignedText3d(
     {
         return;
     }
-    AZ::RPI::ViewPtr currentView = internalParams.m_viewportContext->GetDefaultView();
+    JE::Render::RPI::ViewPtr currentView = internalParams.m_viewportContext->GetDefaultView();
     if (!currentView)
     {
         return;

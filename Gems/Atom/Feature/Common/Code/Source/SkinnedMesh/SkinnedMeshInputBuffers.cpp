@@ -10,15 +10,15 @@
 #include <Atom/Feature/MorphTargets/MorphTargetInputBuffers.h>
 #include <SkinnedMesh/SkinnedMeshOutputStreamManager.h>
 
-#include <Atom/RPI.Reflect/ResourcePoolAssetCreator.h>
-#include <Atom/RPI.Reflect/Buffer/BufferAssetCreator.h>
-#include <Atom/RPI.Reflect/Model/ModelAssetCreator.h>
-#include <Atom/RPI.Reflect/Model/ModelLodAssetCreator.h>
-#include <Atom/RPI.Reflect/Model/MorphTargetMetaAsset.h>
-#include <Atom/RPI.Reflect/Model/MorphTargetDelta.h>
-#include <Atom/RPI.Public/Base.h>
-#include <Atom/RPI.Public/Shader/ShaderResourceGroup.h>
-#include <Atom/RPI.Public/Model/Model.h>
+#include <JE/Render/RPI/Reflect/ResourcePoolAssetCreator.h>
+#include <JE/Render/RPI/Reflect/Buffer/BufferAssetCreator.h>
+#include <JE/Render/RPI/Reflect/Model/ModelAssetCreator.h>
+#include <JE/Render/RPI/Reflect/Model/ModelLodAssetCreator.h>
+#include <JE/Render/RPI/Reflect/Model/MorphTargetMetaAsset.h>
+#include <JE/Render/RPI/Reflect/Model/MorphTargetDelta.h>
+#include <JE/Render/RPI/Public/Base.h>
+#include <JE/Render/RPI/Public/Shader/ShaderResourceGroup.h>
+#include <JE/Render/RPI/Public/Model/Model.h>
 #include <Atom/RHI/Factory.h>
 
 #include <AzCore/std/algorithm.h>
@@ -29,11 +29,11 @@ namespace AZ
 {
     namespace Render
     {
-        Data::Asset<RPI::BufferAsset> CreateBufferAsset(const void* data, const RHI::BufferViewDescriptor& viewDescriptor, RHI::BufferBindFlags bindFlags, Data::Asset<RPI::ResourcePoolAsset> resourcePoolAsset, const char* bufferName)
+        Data::Asset<JE::Render::RPI::BufferAsset> CreateBufferAsset(const void* data, const RHI::BufferViewDescriptor& viewDescriptor, RHI::BufferBindFlags bindFlags, Data::Asset<JE::Render::RPI::ResourcePoolAsset> resourcePoolAsset, const char* bufferName)
         {
             const uint32_t bufferSize = viewDescriptor.m_elementCount * viewDescriptor.m_elementSize;
 
-            Data::Asset<RPI::BufferAsset> asset;
+            Data::Asset<JE::Render::RPI::BufferAsset> asset;
             {
                 RHI::BufferDescriptor bufferDescriptor;
                 bufferDescriptor.m_bindFlags = bindFlags;
@@ -41,7 +41,7 @@ namespace AZ
                 bufferDescriptor.m_byteCount = bufferSize;
                 bufferDescriptor.m_alignment = viewDescriptor.m_elementSize;
 
-                RPI::BufferAssetCreator creator;
+                JE::Render::RPI::BufferAssetCreator creator;
                 Uuid uuid = Uuid::CreateRandom();
                 creator.Begin(uuid);
 
@@ -89,13 +89,13 @@ namespace AZ
             uint32_t lodIndex,
             uint32_t meshIndex,
             const RHI::InputStreamLayout& inputLayout,
-            RPI::ModelLod::Mesh& mesh,
+            JE::Render::RPI::ModelLod::Mesh& mesh,
             const RHI::StreamBufferIndices& streamIndices,
             const char* modelName)
         {
             SkinnedSubMeshProperties& skinnedSubMesh = m_meshes[meshIndex];
             const auto modelLodAssetMeshes = m_modelLodAsset->GetMeshes();
-            const RPI::ModelLodAsset::Mesh& modelLodAssetMesh = modelLodAssetMeshes[meshIndex];
+            const JE::Render::RPI::ModelLodAsset::Mesh& modelLodAssetMesh = modelLodAssetMeshes[meshIndex];
 
             // Keep track of whether or not an input stream exists
             HasInputStreamArray meshHasInputStream{ false };
@@ -158,7 +158,7 @@ namespace AZ
         {
             SkinnedSubMeshProperties& skinnedSubMesh = m_meshes[meshIndex];
             const auto modelLodAssetMeshes = m_modelLodAsset->GetMeshes();
-            const RPI::ModelLodAsset::Mesh& modelLodAssetMesh = modelLodAssetMeshes[meshIndex];
+            const JE::Render::RPI::ModelLodAsset::Mesh& modelLodAssetMesh = modelLodAssetMeshes[meshIndex];
 
             for (uint8_t outputStreamIndex = 0; outputStreamIndex < static_cast<uint8_t>(SkinnedMeshOutputVertexStreams::NumVertexStreams);
                  ++outputStreamIndex)
@@ -185,9 +185,9 @@ namespace AZ
         {
             SkinnedSubMeshProperties& skinnedSubMesh = m_meshes[meshIndex];
             const auto modelLodAssetMeshes = m_modelLodAsset->GetMeshes();
-            const RPI::ModelLodAsset::Mesh& modelLodAssetMesh = modelLodAssetMeshes[meshIndex];
+            const JE::Render::RPI::ModelLodAsset::Mesh& modelLodAssetMesh = modelLodAssetMeshes[meshIndex];
 
-            for (const RPI::ModelLodAsset::Mesh::StreamBufferInfo& streamBufferInfo : modelLodAssetMesh.GetStreamBufferInfoList())
+            for (const JE::Render::RPI::ModelLodAsset::Mesh::StreamBufferInfo& streamBufferInfo : modelLodAssetMesh.GetStreamBufferInfoList())
             {
                 // If it is not part of the skinning compute shader input or output, then it is a static buffer used for rendering instead
                 // of skinning
@@ -210,11 +210,11 @@ namespace AZ
         }
 
         void SkinnedMeshInputLod::CreateFromModelLod(
-            const Data::Asset<RPI::ModelAsset>& modelAsset, const Data::Instance<RPI::Model>& model, uint32_t lodIndex)
+            const Data::Asset<JE::Render::RPI::ModelAsset>& modelAsset, const Data::Instance<JE::Render::RPI::Model>& model, uint32_t lodIndex)
         {
             m_modelLodAsset = modelAsset->GetLodAssets()[lodIndex];
             const auto modelLods = model->GetLods();
-            const Data::Instance<RPI::ModelLod>& modelLod = modelLods[lodIndex];
+            const Data::Instance<JE::Render::RPI::ModelLod>& modelLod = modelLods[lodIndex];
 
             // Collect the vertex count for each output stream
             m_outputVertexCountsByStream = SkinnedMeshOutputVertexCounts{ 0 };
@@ -223,13 +223,13 @@ namespace AZ
             m_meshes.resize(modelLod->GetMeshes().size());
             for (uint32_t meshIndex = 0; meshIndex < modelLod->GetMeshes().size(); ++meshIndex)
             {
-                RPI::ModelLod::Mesh mesh = modelLod->GetMeshes()[meshIndex];
+                JE::Render::RPI::ModelLod::Mesh mesh = modelLod->GetMeshes()[meshIndex];
                 SkinnedSubMeshProperties& skinnedSubMesh = m_meshes[meshIndex];
                 skinnedSubMesh.m_vertexOffsetsFromStreamStartInBytes = SkinnedMeshOutputVertexOffsets{ 0 };
 
                 // Get the source mesh
                 const auto modelLodAssetMeshes = m_modelLodAsset->GetMeshes();
-                const RPI::ModelLodAsset::Mesh& modelLodAssetMesh = modelLodAssetMeshes[meshIndex];
+                const JE::Render::RPI::ModelLodAsset::Mesh& modelLodAssetMesh = modelLodAssetMeshes[meshIndex];
                 skinnedSubMesh.m_vertexCount = modelLodAssetMesh.GetVertexCount();
 
                 // Get all of the streams potentially used as input to the skinning compute shader
@@ -250,7 +250,7 @@ namespace AZ
             }
         }
 
-        Data::Asset<RPI::ModelLodAsset> SkinnedMeshInputLod::GetModelLodAsset() const
+        Data::Asset<JE::Render::RPI::ModelLodAsset> SkinnedMeshInputLod::GetModelLodAsset() const
         {
             return m_modelLodAsset;
         }
@@ -261,8 +261,8 @@ namespace AZ
         }
 
         void SkinnedMeshInputLod::AddMorphTarget(
-            const RPI::MorphTargetMetaAsset::MorphTarget& morphTarget,
-            const RPI::BufferAssetView* morphBufferAssetView,
+            const JE::Render::RPI::MorphTargetMetaAsset::MorphTarget& morphTarget,
+            const JE::Render::RPI::BufferAssetView* morphBufferAssetView,
             const AZStd::string& bufferNamePrefix,
             float minWeight = 0.0f,
             float maxWeight = 1.0f)
@@ -276,7 +276,7 @@ namespace AZ
             RHI::BufferViewDescriptor morphView = morphBufferAssetView->GetBufferViewDescriptor();
             morphView.m_elementOffset += morphTarget.m_startIndex;
             morphView.m_elementCount = morphTarget.m_numVertices;
-            RPI::BufferAssetView morphTargetDeltaView{ morphBufferAssetView->GetBufferAsset(), morphView };
+            JE::Render::RPI::BufferAssetView morphTargetDeltaView{ morphBufferAssetView->GetBufferAsset(), morphView };
 
             m_morphTargetInputBuffers.push_back(aznew MorphTargetInputBuffers{ morphTargetDeltaView, bufferNamePrefix });
         }
@@ -335,7 +335,7 @@ namespace AZ
         SkinnedMeshInputBuffers::SkinnedMeshInputBuffers() = default;
         SkinnedMeshInputBuffers::~SkinnedMeshInputBuffers() = default;
 
-        void SkinnedMeshInputBuffers::CreateFromModelAsset(const Data::Asset<RPI::ModelAsset>& modelAsset)
+        void SkinnedMeshInputBuffers::CreateFromModelAsset(const Data::Asset<JE::Render::RPI::ModelAsset>& modelAsset)
         {
             if (!modelAsset.IsReady())
             {
@@ -344,7 +344,7 @@ namespace AZ
             }
 
             m_modelAsset = modelAsset;
-            m_model = RPI::Model::FindOrCreate(m_modelAsset);
+            m_model = JE::Render::RPI::Model::FindOrCreate(m_modelAsset);
 
             if (m_model)
             {
@@ -358,12 +358,12 @@ namespace AZ
             }
         }
 
-        Data::Asset<RPI::ModelAsset> SkinnedMeshInputBuffers::GetModelAsset() const
+        Data::Asset<JE::Render::RPI::ModelAsset> SkinnedMeshInputBuffers::GetModelAsset() const
         {
             return m_modelAsset;
         }
 
-        Data::Instance<RPI::Model> SkinnedMeshInputBuffers::GetModel() const
+        Data::Instance<JE::Render::RPI::Model> SkinnedMeshInputBuffers::GetModel() const
         {
             return m_model;
         }
@@ -411,8 +411,8 @@ namespace AZ
 
         void SkinnedMeshInputBuffers::AddMorphTarget(
             uint32_t lodIndex,
-            const RPI::MorphTargetMetaAsset::MorphTarget& morphTarget,
-            const RPI::BufferAssetView* morphBufferAssetView,
+            const JE::Render::RPI::MorphTargetMetaAsset::MorphTarget& morphTarget,
+            const JE::Render::RPI::BufferAssetView* morphBufferAssetView,
             const AZStd::string& bufferNamePrefix,
             float minWeight,
             float maxWeight)
@@ -429,7 +429,7 @@ namespace AZ
         }
 
         void SkinnedMeshInputBuffers::SetBufferViewsOnShaderResourceGroup(
-            uint32_t lodIndex, uint32_t meshIndex, const Data::Instance<RPI::ShaderResourceGroup>& perInstanceSRG)
+            uint32_t lodIndex, uint32_t meshIndex, const Data::Instance<JE::Render::RPI::ShaderResourceGroup>& perInstanceSRG)
         {
             AZ_Assert(lodIndex < m_lods.size() && meshIndex < m_lods[lodIndex].m_modelLodAsset->GetMeshes().size(), "Lod %" PRIu32 " Mesh %" PRIu32 " out of range for model '%s'", lodIndex, meshIndex, m_modelAsset->GetName().GetCStr());
 
@@ -588,10 +588,10 @@ namespace AZ
             uint8_t outputStreamIndex,
             uint32_t lodVertexCount,
             uint32_t submeshVertexCount,
-            Data::Asset<RPI::BufferAsset> skinnedMeshOutputBufferAsset,
+            Data::Asset<JE::Render::RPI::BufferAsset> skinnedMeshOutputBufferAsset,
             const SkinnedMeshOutputVertexOffsets& streamOffsetsFromBufferStart,
             SkinnedMeshOutputVertexOffsets& subMeshOffsetsFromStreamStart,
-            RPI::ModelLodAssetCreator& modelLodCreator)
+            JE::Render::RPI::ModelLodAssetCreator& modelLodCreator)
         {
             const SkinnedMeshOutputVertexStreamInfo& outputStreamInfo = SkinnedMeshVertexStreamPropertyInterface::Get()->GetOutputStreamInfo(static_cast<SkinnedMeshOutputVertexStreams>(outputStreamIndex));
 
@@ -603,7 +603,7 @@ namespace AZ
 
             AZ_Assert(streamOffsetsFromBufferStart[outputStreamIndex] % outputStreamInfo.m_elementSize == 0, "The SkinnedMeshOutputStreamManager is supposed to guarantee that offsets can always align.");
 
-            RPI::BufferAssetView bufferView{ skinnedMeshOutputBufferAsset, viewDescriptor };
+            JE::Render::RPI::BufferAssetView bufferView{ skinnedMeshOutputBufferAsset, viewDescriptor };
             modelLodCreator.AddMeshStreamBuffer(outputStreamInfo.m_semantic, AZ::Name(), bufferView);
 
             if (static_cast<SkinnedMeshOutputVertexStreams>(outputStreamIndex) == SkinnedMeshOutputVertexStreams::Position)
@@ -643,24 +643,24 @@ namespace AZ
             AZStd::intrusive_ptr<SkinnedMeshInstance> instance = aznew SkinnedMeshInstance;
 
             // Each model gets a unique, random ID, so if the same source model is used for multiple instances, multiple target models will be created.
-            RPI::ModelAssetCreator modelCreator;
+            JE::Render::RPI::ModelAssetCreator modelCreator;
             modelCreator.Begin(Uuid::CreateRandom());
 
             // Use the name from the original model
             modelCreator.SetName(m_modelAsset->GetName().GetStringView());
 
-            Data::Asset<RPI::BufferAsset> skinnedMeshOutputBufferAsset = SkinnedMeshOutputStreamManagerInterface::Get()->GetBufferAsset();
+            Data::Asset<JE::Render::RPI::BufferAsset> skinnedMeshOutputBufferAsset = SkinnedMeshOutputStreamManagerInterface::Get()->GetBufferAsset();
 
             size_t lodIndex = 0;
             for (const SkinnedMeshInputLod& lod : m_lods)
             {
-                RPI::ModelLodAssetCreator modelLodCreator;
+                JE::Render::RPI::ModelLodAssetCreator modelLodCreator;
                 modelLodCreator.Begin(Data::AssetId(Uuid::CreateRandom()));
 
                 //
                 // Lod
                 //
-                Data::Asset<RPI::ModelLodAsset> inputLodAsset = m_modelAsset->GetLodAssets()[lodIndex];
+                Data::Asset<JE::Render::RPI::ModelLodAsset> inputLodAsset = m_modelAsset->GetLodAssets()[lodIndex];
 
                 // Add a reference to the shared index buffer
                 modelLodCreator.AddLodStreamBuffer(inputLodAsset->GetIndexBufferAsset());
@@ -669,7 +669,7 @@ namespace AZ
                 modelLodCreator.AddLodStreamBuffer(skinnedMeshOutputBufferAsset);
 
                 // Add any shared static buffers
-                for (const Data::Asset<RPI::BufferAsset>& staticBufferAsset : lod.m_staticBufferAssets)
+                for (const Data::Asset<JE::Render::RPI::BufferAsset>& staticBufferAsset : lod.m_staticBufferAssets)
                 {
                     modelLodCreator.AddLodStreamBuffer(staticBufferAsset);
                 }
@@ -716,7 +716,7 @@ namespace AZ
 
                     // Set the index buffer view
                     const auto inputMeshes = lod.m_modelLodAsset->GetMeshes();
-                    const RPI::ModelLodAsset::Mesh& inputMesh = inputMeshes[i];
+                    const JE::Render::RPI::ModelLodAsset::Mesh& inputMesh = inputMeshes[i];
                     modelLodCreator.SetMeshIndexBuffer(inputMesh.GetIndexBufferAssetView());
 
                     // Track the offsets from the start of the global output buffer
@@ -749,7 +749,7 @@ namespace AZ
                     }
 
                     // Set the views into the static buffers
-                    for (const RPI::ModelLodAsset::Mesh::StreamBufferInfo& staticBufferInfo : lod.m_meshes[i].m_staticBufferInfo)
+                    for (const JE::Render::RPI::ModelLodAsset::Mesh::StreamBufferInfo& staticBufferInfo : lod.m_meshes[i].m_staticBufferInfo)
                     {
                         modelLodCreator.AddMeshStreamBuffer(staticBufferInfo.m_semantic, staticBufferInfo.m_customName, staticBufferInfo.m_bufferAssetView);
                     }
@@ -771,7 +771,7 @@ namespace AZ
                 instance->m_positionHistoryBufferOffsetsInBytes.push_back(meshPositionHistoryBufferOffsetsInBytes);
                 instance->m_isSkinningEnabled.push_back(isSkinningEnabledPerMesh);
 
-                Data::Asset<RPI::ModelLodAsset> lodAsset;
+                Data::Asset<JE::Render::RPI::ModelLodAsset> lodAsset;
                 modelLodCreator.End(lodAsset);
                 if (!lodAsset.IsReady())
                 {
@@ -783,10 +783,10 @@ namespace AZ
                 lodIndex++;
             }
 
-            Data::Asset<RPI::ModelAsset> modelAsset;
+            Data::Asset<JE::Render::RPI::ModelAsset> modelAsset;
             modelCreator.End(modelAsset);
 
-            instance->m_model = RPI::Model::FindOrCreate(modelAsset);
+            instance->m_model = JE::Render::RPI::Model::FindOrCreate(modelAsset);
             return instance;
         }
     } // namespace Render

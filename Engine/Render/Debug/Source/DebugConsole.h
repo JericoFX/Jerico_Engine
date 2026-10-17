@@ -15,7 +15,7 @@
 #include <AzCore/std/containers/deque.h>
 #include <AzCore/std/string/string.h>
 
-#include <Atom/RPI.Public/ViewportContextBus.h>
+#include <JE/Render/RPI/Public/ViewportContextBus.h>
 
 #ifdef IMGUI_ENABLED
 #   include <imgui/imgui.h>

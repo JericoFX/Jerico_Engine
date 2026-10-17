@@ -10,10 +10,10 @@
 
 #include <Stars/StarsFeatureProcessorInterface.h>
 
-#include <Atom/RPI.Public/Buffer/Buffer.h>
-#include <Atom/RPI.Public/PipelineState.h>
-#include <Atom/RPI.Public/Shader/ShaderResourceGroup.h>
-#include <Atom/RPI.Public/ViewportContextBus.h>
+#include <JE/Render/RPI/Public/Buffer/Buffer.h>
+#include <JE/Render/RPI/Public/PipelineState.h>
+#include <JE/Render/RPI/Public/Shader/ShaderResourceGroup.h>
+#include <JE/Render/RPI/Public/ViewportContextBus.h>
 
 namespace AZ::Render
 {
@@ -22,7 +22,7 @@ namespace AZ::Render
 
     class StarsFeatureProcessor final
         : public StarsFeatureProcessorInterface
-        , protected RPI::ViewportContextIdNotificationBus::Handler
+        , protected JE::Render::RPI::ViewportContextIdNotificationBus::Handler
         , protected Data::AssetBus::Handler
     {
     public:
@@ -49,7 +49,7 @@ namespace AZ::Render
 
     protected:
         //! RPI::SceneNotificationBus
-        void OnRenderPipelineChanged(RPI::RenderPipeline* pipeline, RPI::SceneNotification::RenderPipelineChangeType changeType) override;
+        void OnRenderPipelineChanged(JE::Render::RPI::RenderPipeline* pipeline, JE::Render::RPI::SceneNotification::RenderPipelineChangeType changeType) override;
 
         //! RPI::ViewportContextIdNotificationBus
         void OnViewportSizeChanged(AzFramework::WindowSize size) override;
@@ -69,16 +69,16 @@ namespace AZ::Render
         //! build a draw packet to draw the star mesh
         RHI::ConstPtr<RHI::DrawPacket> BuildDrawPacket();
 
-        RPI::Ptr<RPI::PipelineStateForDraw> m_meshPipelineState;
+        JE::Render::RPI::Ptr<JE::Render::RPI::PipelineStateForDraw> m_meshPipelineState;
         RHI::GeometryView m_geometryView{ RHI::MultiDevice::AllDevices };
 
-        Data::Instance<RPI::ShaderResourceGroup> m_drawSrg = nullptr;
-        Data::Instance<RPI::Shader> m_shader = nullptr;
+        Data::Instance<JE::Render::RPI::ShaderResourceGroup> m_drawSrg = nullptr;
+        Data::Instance<JE::Render::RPI::Shader> m_shader = nullptr;
 
         RHI::ShaderInputNameIndex m_starParamsIndex = "m_starParams";
         RHI::ShaderInputNameIndex m_rotationIndex = "m_rotation";
 
-        Data::Instance<RPI::Buffer> m_starsVertexBuffer = nullptr;
+        Data::Instance<JE::Render::RPI::Buffer> m_starsVertexBuffer = nullptr;
         RHI::DrawListTag m_drawListTag;
         RHI::ConstPtr<RHI::DrawPacket> m_drawPacket;
 

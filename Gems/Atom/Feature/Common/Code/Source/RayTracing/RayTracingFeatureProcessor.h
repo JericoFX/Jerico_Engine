@@ -18,9 +18,9 @@
 #include <Atom/RHI/RayTracingBufferPools.h>
 #include <Atom/RHI/RayTracingCompactionQueryPool.h>
 #include <Atom/RHI/StreamBufferView.h>
-#include <Atom/RPI.Public/Buffer/RingBuffer.h>
-#include <Atom/RPI.Public/Shader/Shader.h>
-#include <Atom/RPI.Reflect/Image/Image.h>
+#include <JE/Render/RPI/Public/Buffer/RingBuffer.h>
+#include <JE/Render/RPI/Public/Shader/Shader.h>
+#include <JE/Render/RPI/Reflect/Image/Image.h>
 #include <Atom/Utils/StableDynamicArray.h>
 #include <AzCore/Math/Aabb.h>
 #include <AzCore/Math/Color.h>
@@ -57,7 +57,7 @@ namespace AZ
             // RayTracingFeatureProcessorInterface overrides
             ProceduralGeometryTypeHandle RegisterProceduralGeometryType(
                 const AZStd::string& name,
-                const Data::Instance<RPI::Shader>& intersectionShader,
+                const Data::Instance<JE::Render::RPI::Shader>& intersectionShader,
                 const AZStd::string& intersectionShaderName,
                 const AZStd::unordered_map<int, uint32_t>& bindlessBufferIndices = {}) override;
             void SetProceduralGeometryTypeBindlessBufferIndex(
@@ -87,7 +87,7 @@ namespace AZ
             uint32_t GetSubMeshCount() const override { return m_subMeshCount; }
             uint32_t GetSkinnedMeshCount() const override { return m_skinnedMeshCount; }
 
-            Data::Instance<RPI::ShaderResourceGroup> GetRayTracingSceneSrg() const override { return m_rayTracingSceneSrg; }
+            Data::Instance<JE::Render::RPI::ShaderResourceGroup> GetRayTracingSceneSrg() const override { return m_rayTracingSceneSrg; }
             void Render(const RenderPacket&) override;
             void BeginFrame(int deviceIndex) override;
             uint32_t GetRevision() const override { return m_revision; }
@@ -142,8 +142,8 @@ namespace AZ
             RHI::Ptr<RHI::RayTracingTlas> m_tlas;
 
             // RayTracingScene and RayTracingMaterial asset and Srgs
-            Data::Asset<RPI::ShaderAsset> m_rayTracingSrgAsset;
-            Data::Instance<RPI::ShaderResourceGroup> m_rayTracingSceneSrg;
+            Data::Asset<JE::Render::RPI::ShaderAsset> m_rayTracingSrgAsset;
+            Data::Instance<JE::Render::RPI::ShaderResourceGroup> m_rayTracingSceneSrg;
 
             // current revision number of ray tracing data
             uint32_t m_revision = 0;
@@ -172,7 +172,7 @@ namespace AZ
             // mutex for the m_blasBuilt flag manipulation
             AZStd::mutex m_blasBuiltMutex;
 
-            RPI::RingBuffer m_proceduralGeometryInfoGpuBuffer{ "ProceduralGeometryInfo", RPI::CommonBufferPoolType::ReadOnly, RHI::Format::R32G32_UINT };
+            JE::Render::RPI::RingBuffer m_proceduralGeometryInfoGpuBuffer{ "ProceduralGeometryInfo", JE::Render::RPI::CommonBufferPoolType::ReadOnly, RHI::Format::R32G32_UINT };
             // update flags
             bool m_proceduralGeometryInfoBufferNeedsUpdate = false;
 

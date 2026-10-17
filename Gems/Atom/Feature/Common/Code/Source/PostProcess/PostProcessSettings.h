@@ -69,7 +69,7 @@ namespace AZ
 
             // camera-to-blendWeight setters and getters
             void CopyViewToBlendWeightSettings(const ViewBlendWeightMap& perViewBlendWeights) override;
-            float GetBlendWeightForView(AZ::RPI::View* view) const;
+            float GetBlendWeightForView(JE::Render::RPI::View* view) const;
 
         private:
 

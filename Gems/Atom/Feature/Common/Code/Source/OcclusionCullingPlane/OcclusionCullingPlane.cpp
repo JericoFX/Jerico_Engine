@@ -8,9 +8,9 @@
 
 #include <OcclusionCullingPlane/OcclusionCullingPlaneFeatureProcessor.h>
 #include <AzCore/Math/Random.h>
-#include <Atom/RPI.Public/Scene.h>
-#include <Atom/RPI.Reflect/Asset/AssetUtils.h>
-#include <Atom/RPI.Reflect/Material/MaterialAsset.h>
+#include <JE/Render/RPI/Public/Scene.h>
+#include <JE/Render/RPI/Reflect/Asset/AssetUtils.h>
+#include <JE/Render/RPI/Reflect/Material/MaterialAsset.h>
 
 namespace AZ
 {
@@ -22,16 +22,16 @@ namespace AZ
             m_meshFeatureProcessor->ReleaseMesh(m_visualizationMeshHandle);
         }
 
-        void OcclusionCullingPlane::Init(RPI::Scene* scene)
+        void OcclusionCullingPlane::Init(JE::Render::RPI::Scene* scene)
         {
             AZ_Assert(scene, "OcclusionCullingPlane::Init called with a null Scene pointer");
 
             m_meshFeatureProcessor = scene->GetFeatureProcessor<Render::MeshFeatureProcessorInterface>();
 
             // load visualization plane model and material
-            m_visualizationModelAsset = AZ::RPI::AssetUtils::LoadCriticalAsset<AZ::RPI::ModelAsset>(
+            m_visualizationModelAsset = JE::Render::RPI::AssetUtils::LoadCriticalAsset<JE::Render::RPI::ModelAsset>(
                 "Models/OcclusionCullingPlane.fbx.azmodel",
-                AZ::RPI::AssetUtils::TraceLevel::Assert);
+                JE::Render::RPI::AssetUtils::TraceLevel::Assert);
 
             m_visualizationMeshHandle = m_meshFeatureProcessor->AcquireMesh(MeshHandleDescriptor(m_visualizationModelAsset));
             m_meshFeatureProcessor->SetExcludeFromReflectionCubeMaps(m_visualizationMeshHandle, true);
@@ -53,8 +53,8 @@ namespace AZ
                 materialAssetPath = "Materials/OcclusionCullingPlane/OcclusionCullingPlaneVisualization.azmaterial";
             }
 
-            RPI::AssetUtils::TraceLevel traceLevel = AZ::RPI::AssetUtils::TraceLevel::Assert;
-            m_visualizationMaterialAsset = AZ::RPI::AssetUtils::LoadCriticalAsset<AZ::RPI::MaterialAsset>(materialAssetPath.c_str(), traceLevel);
+            JE::Render::RPI::AssetUtils::TraceLevel traceLevel = JE::Render::RPI::AssetUtils::TraceLevel::Assert;
+            m_visualizationMaterialAsset = JE::Render::RPI::AssetUtils::LoadCriticalAsset<JE::Render::RPI::MaterialAsset>(materialAssetPath.c_str(), traceLevel);
             m_visualizationMaterialAsset.QueueLoad();
             Data::AssetBus::MultiHandler::BusConnect(m_visualizationMaterialAsset.GetId());
         }
@@ -66,7 +66,7 @@ namespace AZ
                 m_visualizationMaterialAsset = asset;
                 Data::AssetBus::MultiHandler::BusDisconnect(asset.GetId());
 
-                m_visualizationMaterial = AZ::RPI::Material::FindOrCreate(m_visualizationMaterialAsset);
+                m_visualizationMaterial = JE::Render::RPI::Material::FindOrCreate(m_visualizationMaterialAsset);
                 m_meshFeatureProcessor->SetCustomMaterials(m_visualizationMeshHandle, m_visualizationMaterial);
             }
         }

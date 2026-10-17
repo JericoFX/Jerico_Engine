@@ -14,11 +14,11 @@
 #include <AzCore/Math/Matrix4x4.h>
 #include <AzCore/Math/Transform.h>
 
-#include <Atom/RPI.Public/Scene.h>
-#include <Atom/RPI.Public/RenderPipeline.h>
-#include <Atom/RPI.Public/Pass/PassFilter.h>
-#include <Atom/RPI.Public/Pass/PassSystemInterface.h>
-#include <Atom/RPI.Reflect/Asset/AssetUtils.h>
+#include <JE/Render/RPI/Public/Scene.h>
+#include <JE/Render/RPI/Public/RenderPipeline.h>
+#include <JE/Render/RPI/Public/Pass/PassFilter.h>
+#include <JE/Render/RPI/Public/Pass/PassSystemInterface.h>
+#include <JE/Render/RPI/Reflect/Asset/AssetUtils.h>
 
 #include <Atom/Feature/RenderCommon.h>
 
@@ -72,7 +72,7 @@ namespace AZ
             m_renderPass = nullptr;
         }
 
-        void MeshletsFeatureProcessor::Init([[maybe_unused]]RPI::RenderPipeline* pipeline)
+        void MeshletsFeatureProcessor::Init([[maybe_unused]]JE::Render::RPI::RenderPipeline* pipeline)
         {
             InitComputePass(MeshletsComputePassName);
             InitRenderPass(MeshletsRenderPassName);
@@ -83,7 +83,7 @@ namespace AZ
             if (auto* serializeContext = azrtti_cast<SerializeContext*>(context))
             {
                 serializeContext
-                    ->Class<MeshletsFeatureProcessor, RPI::FeatureProcessor>()
+                    ->Class<MeshletsFeatureProcessor, JE::Render::RPI::FeatureProcessor>()
                     ->Version(0);
             }
         }
@@ -109,18 +109,18 @@ namespace AZ
             return AZ::TICK_PRE_RENDER;
         }
 
-        bool MeshletsFeatureProcessor::HasMeshletPasses(RPI::RenderPipeline* renderPipeline)
+        bool MeshletsFeatureProcessor::HasMeshletPasses(JE::Render::RPI::RenderPipeline* renderPipeline)
         {
-            RPI::PassFilter passFilter = RPI::PassFilter::CreateWithPassName(MeshletsComputePassName, renderPipeline);
-            RPI::Ptr<RPI::Pass> desiredPass = RPI::PassSystemInterface::Get()->FindFirstPass(passFilter);
+            JE::Render::RPI::PassFilter passFilter = JE::Render::RPI::PassFilter::CreateWithPassName(MeshletsComputePassName, renderPipeline);
+            JE::Render::RPI::Ptr<JE::Render::RPI::Pass> desiredPass = JE::Render::RPI::PassSystemInterface::Get()->FindFirstPass(passFilter);
             return desiredPass ? true : false;
         }
 
         bool MeshletsFeatureProcessor::InitComputePass(const Name& passName)
         {
             m_computePass = Data::Instance<MultiDispatchComputePass>();
-            RPI::PassFilter passFilter = RPI::PassFilter::CreateWithPassName(passName, m_renderPipeline);
-            RPI::Ptr<RPI::Pass> desiredPass = RPI::PassSystemInterface::Get()->FindFirstPass(passFilter);
+            JE::Render::RPI::PassFilter passFilter = JE::Render::RPI::PassFilter::CreateWithPassName(passName, m_renderPipeline);
+            JE::Render::RPI::Ptr<JE::Render::RPI::Pass> desiredPass = JE::Render::RPI::PassSystemInterface::Get()->FindFirstPass(passFilter);
 
             if (desiredPass)
             {
@@ -140,8 +140,8 @@ namespace AZ
         bool MeshletsFeatureProcessor::InitRenderPass(const Name& passName)
         {
             m_renderPass = Data::Instance<MeshletsRenderPass>();
-            RPI::PassFilter passFilter = RPI::PassFilter::CreateWithPassName(passName, m_renderPipeline);
-            RPI::Ptr<RPI::Pass> desiredPass = RPI::PassSystemInterface::Get()->FindFirstPass(passFilter);
+            JE::Render::RPI::PassFilter passFilter = JE::Render::RPI::PassFilter::CreateWithPassName(passName, m_renderPipeline);
+            JE::Render::RPI::Ptr<JE::Render::RPI::Pass> desiredPass = JE::Render::RPI::PassSystemInterface::Get()->FindFirstPass(passFilter);
 
             if (desiredPass)
             {
@@ -163,7 +163,7 @@ namespace AZ
         // not the same for both pipelines, special care should be taken (on MainPipeline
         // it comes after OpaquePass while on the LowEndPipeline after MSAAResolvePass). It
         // is possible to simplify the logic and only hook to the active pipeline.
-        bool MeshletsFeatureProcessor::AddMeshletsPassesToPipeline(RPI::RenderPipeline* renderPipeline)
+        bool MeshletsFeatureProcessor::AddMeshletsPassesToPipeline(JE::Render::RPI::RenderPipeline* renderPipeline)
         {
             if (HasMeshletPasses(renderPipeline))
             {   // This pipeline is not relevant - exist without changing anything.
@@ -171,12 +171,12 @@ namespace AZ
             }
 
             const char* passRequestAssetFilePath = "Passes/MeshletsPassRequest.azasset";
-            m_passRequestAsset = AZ::RPI::AssetUtils::LoadAssetByProductPath<AZ::RPI::AnyAsset>(
-                passRequestAssetFilePath, AZ::RPI::AssetUtils::TraceLevel::Warning);
-            const AZ::RPI::PassRequest* passRequest = nullptr;
+            m_passRequestAsset = JE::Render::RPI::AssetUtils::LoadAssetByProductPath<JE::Render::RPI::AnyAsset>(
+                passRequestAssetFilePath, JE::Render::RPI::AssetUtils::TraceLevel::Warning);
+            const JE::Render::RPI::PassRequest* passRequest = nullptr;
             if (m_passRequestAsset->IsReady())
             {
-                passRequest = m_passRequestAsset->GetDataAs<AZ::RPI::PassRequest>();
+                passRequest = m_passRequestAsset->GetDataAs<JE::Render::RPI::PassRequest>();
             }
             if (!passRequest)
             {
@@ -185,7 +185,7 @@ namespace AZ
             }
 
             // Create the pass
-            RPI::Ptr<RPI::Pass> pass = RPI::PassSystemInterface::Get()->CreatePassFromRequest(passRequest);
+            JE::Render::RPI::Ptr<JE::Render::RPI::Pass> pass = JE::Render::RPI::PassSystemInterface::Get()->CreatePassFromRequest(passRequest);
             if (!pass)
             {
                 AZ_Error("Meshlets", false, "Failed creating meshlets pass from pass request for pipeline [%s]",
@@ -204,7 +204,7 @@ namespace AZ
 
         // This method will be called by the scene to establish all required injections
         // to the pass pipeline
-        void MeshletsFeatureProcessor::AddRenderPasses(RPI::RenderPipeline* renderPipeline)
+        void MeshletsFeatureProcessor::AddRenderPasses(JE::Render::RPI::RenderPipeline* renderPipeline)
         {
             AddMeshletsPassesToPipeline(renderPipeline);
         }
@@ -354,14 +354,14 @@ namespace AZ
             // OnTick can be used instead of the ::Simulate since it is set to be before the render
         }
 
-        void MeshletsFeatureProcessor::Simulate(const RPI::FeatureProcessor::SimulatePacket& packet)
+        void MeshletsFeatureProcessor::Simulate(const JE::Render::RPI::FeatureProcessor::SimulatePacket& packet)
         {
             AZ_PROFILE_FUNCTION(AzRender);
 
             AZ_UNUSED(packet);
         }
 
-        void MeshletsFeatureProcessor::Render([[maybe_unused]] const RPI::FeatureProcessor::RenderPacket& packet)
+        void MeshletsFeatureProcessor::Render([[maybe_unused]] const JE::Render::RPI::FeatureProcessor::RenderPacket& packet)
         {
             AZ_PROFILE_FUNCTION(AzRender);
 
@@ -404,21 +404,21 @@ namespace AZ
             m_renderPass->AddDrawPackets(drawPackets);
         }
 
-        void MeshletsFeatureProcessor::OnRenderPipelineChanged(RPI::RenderPipeline* renderPipeline, RPI::SceneNotification::RenderPipelineChangeType changeType)
+        void MeshletsFeatureProcessor::OnRenderPipelineChanged(JE::Render::RPI::RenderPipeline* renderPipeline, JE::Render::RPI::SceneNotification::RenderPipelineChangeType changeType)
         {
             if (!HasMeshletPasses(renderPipeline))
             {   // This pipeline is not relevant - exist without changing anything.
                 return;
             }
 
-            if (changeType == RPI::SceneNotification::RenderPipelineChangeType::Added
-                || changeType == RPI::SceneNotification::RenderPipelineChangeType::PassChanged)
+            if (changeType == JE::Render::RPI::SceneNotification::RenderPipelineChangeType::Added
+                || changeType == JE::Render::RPI::SceneNotification::RenderPipelineChangeType::PassChanged)
             {
                 m_renderPipeline = renderPipeline;
                 CreateResources();
                 Init(m_renderPipeline);
             }
-            else if (changeType == RPI::SceneNotification::RenderPipelineChangeType::Removed)
+            else if (changeType == JE::Render::RPI::SceneNotification::RenderPipelineChangeType::Removed)
             {
                 m_renderPipeline = nullptr;
             }

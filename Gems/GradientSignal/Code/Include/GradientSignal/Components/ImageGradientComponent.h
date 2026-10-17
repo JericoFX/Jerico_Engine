@@ -8,7 +8,7 @@
 
 #pragma once
 
-#include <Atom/RPI.Reflect/Image/StreamingImageAsset.h>
+#include <JE/Render/RPI/Reflect/Image/StreamingImageAsset.h>
 #include <AzCore/Asset/AssetCommon.h>
 #include <AzCore/Component/Component.h>
 #include <AzCore/Math/Vector2.h>
@@ -87,7 +87,7 @@ namespace GradientSignal
         // Serialized properties that control the image data.
 
         //! The image asset used for the image gradient.
-        AZ::Data::Asset<AZ::RPI::StreamingImageAsset> m_imageAsset = { AZ::Data::AssetLoadBehavior::QueueLoad };
+        AZ::Data::Asset<JE::Render::RPI::StreamingImageAsset> m_imageAsset = { AZ::Data::AssetLoadBehavior::QueueLoad };
         //! How often the image should repeat within its shape bounds.
         AZ::Vector2 m_tiling = AZ::Vector2::CreateOne();
         //! Which color channel to use from the image.
@@ -173,8 +173,8 @@ namespace GradientSignal
         bool ImageIsModified() const;
 
     protected:
-        AZ::Data::Asset<AZ::RPI::StreamingImageAsset> GetImageAsset() const;
-        void SetImageAsset(const AZ::Data::Asset<AZ::RPI::StreamingImageAsset>& asset);
+        AZ::Data::Asset<JE::Render::RPI::StreamingImageAsset> GetImageAsset() const;
+        void SetImageAsset(const AZ::Data::Asset<JE::Render::RPI::StreamingImageAsset>& asset);
 
         AZStd::vector<float>* GetImageModificationBuffer();
 

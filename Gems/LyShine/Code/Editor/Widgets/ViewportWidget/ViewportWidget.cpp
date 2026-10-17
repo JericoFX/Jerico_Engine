@@ -24,9 +24,9 @@
 #include "Windows/EditorCommon.h"
 #include "Windows/EditorWindow/EditorWindow.h"
 
-#include <Atom/RPI.Public/Image/ImageSystemInterface.h>
-#include <Atom/RPI.Public/RenderPipeline.h>
-#include <Atom/RPI.Public/Scene.h>
+#include <JE/Render/RPI/Public/Image/ImageSystemInterface.h>
+#include <JE/Render/RPI/Public/RenderPipeline.h>
+#include <JE/Render/RPI/Public/Scene.h>
 #include <AzCore/Interface/Interface.h>
 #include <AzCore/std/containers/map.h>
 #include <AzFramework/Input/Devices/Keyboard/InputDeviceKeyboard.h>
@@ -255,7 +255,7 @@ ViewportWidget::ViewportWidget(EditorWindow* parent)
 
     FontNotificationBus::Handler::BusConnect();
     AZ::TickBus::Handler::BusConnect();
-    AZ::RPI::ViewportContextNotificationBus::Handler::BusConnect(GetCurrentContextName());
+    JE::Render::RPI::ViewportContextNotificationBus::Handler::BusConnect(GetCurrentContextName());
 }
 
 ViewportWidget::~ViewportWidget()
@@ -264,7 +264,7 @@ ViewportWidget::~ViewportWidget()
     FontNotificationBus::Handler::BusDisconnect();
     AZ::TickBus::Handler::BusDisconnect();
     LyShinePassDataRequestBus::Handler::BusDisconnect();
-    AZ::RPI::ViewportContextNotificationBus::Handler::BusDisconnect();
+    JE::Render::RPI::ViewportContextNotificationBus::Handler::BusDisconnect();
 
     removeEventFilter(m_editorWindow);
 
@@ -1221,7 +1221,7 @@ void ViewportWidget::RenderPreviewMode()
         AZ::Vector2 bottomRightInViewportSpace = CanvasHelpers::GetViewportPoint(canvasEntityId, canvasSize);
         AZ::Vector2 sizeInViewportSpace = bottomRightInViewportSpace - topLeftInViewportSpace;
         Draw2dHelper draw2d(m_draw2d.get());
-        auto image = AZ::RPI::ImageSystemInterface::Get()->GetSystemImage(AZ::RPI::SystemImage::Black);
+        auto image = JE::Render::RPI::ImageSystemInterface::Get()->GetSystemImage(JE::Render::RPI::SystemImage::Black);
         draw2d.DrawImage(image, topLeftInViewportSpace, sizeInViewportSpace);
 
         // Render this canvas
@@ -1236,7 +1236,7 @@ void ViewportWidget::RenderViewportBackground()
 {
     AZ::Vector2 viewportSize = GetRenderViewportSize();
     AZ::Color backgroundColor = ViewportHelpers::backgroundColorDark;
-    const AZ::Data::Instance<AZ::RPI::Image>& image = AZ::RPI::ImageSystemInterface::Get()->GetSystemImage(AZ::RPI::SystemImage::White);
+    const AZ::Data::Instance<JE::Render::RPI::Image>& image = JE::Render::RPI::ImageSystemInterface::Get()->GetSystemImage(JE::Render::RPI::SystemImage::White);
 
     Draw2dHelper draw2d(m_draw2d.get());
     draw2d.SetImageColor(backgroundColor.GetAsVector3());

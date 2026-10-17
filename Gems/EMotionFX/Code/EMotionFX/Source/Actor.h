@@ -31,9 +31,9 @@
 #include "Pose.h"
 #include "Skeleton.h"
 
-#include <Atom/RPI.Reflect/Model/ModelAsset.h>
-#include <Atom/RPI.Reflect/Model/MorphTargetMetaAsset.h>
-#include <Atom/RPI.Reflect/Model/SkinMetaAsset.h>
+#include <JE/Render/RPI/Reflect/Model/ModelAsset.h>
+#include <JE/Render/RPI/Reflect/Model/MorphTargetMetaAsset.h>
+#include <JE/Render/RPI/Reflect/Model/SkinMetaAsset.h>
 
 namespace EMotionFX
 {
@@ -733,9 +733,9 @@ namespace EMotionFX
         void SetMeshAssetId(const AZ::Data::AssetId& assetId);
         AZ::Data::AssetId GetMeshAssetId() const { return m_meshAssetId; };
 
-        const AZ::Data::Asset<AZ::RPI::ModelAsset>& GetMeshAsset() const { return m_meshAsset; }
-        const AZ::Data::Asset<AZ::RPI::SkinMetaAsset>& GetSkinMetaAsset() const { return m_skinMetaAsset; }
-        const AZ::Data::Asset<AZ::RPI::MorphTargetMetaAsset>& GetMorphTargetMetaAsset() const { return m_morphTargetMetaAsset; }
+        const AZ::Data::Asset<JE::Render::RPI::ModelAsset>& GetMeshAsset() const { return m_meshAsset; }
+        const AZ::Data::Asset<JE::Render::RPI::SkinMetaAsset>& GetSkinMetaAsset() const { return m_skinMetaAsset; }
+        const AZ::Data::Asset<JE::Render::RPI::MorphTargetMetaAsset>& GetMorphTargetMetaAsset() const { return m_morphTargetMetaAsset; }
         const AZStd::unordered_map<AZ::u16, AZ::u16>& GetSkinToSkeletonIndexMap() const { return m_skinToSkeletonIndexMap; }
 
         /**
@@ -756,7 +756,7 @@ namespace EMotionFX
     private:
         void InsertJointAndParents(size_t jointIndex, AZStd::unordered_set<size_t>& includedJointIndices);
 
-        AZStd::unordered_map<AZ::u16, AZ::u16> ConstructSkinToSkeletonIndexMap(const AZ::Data::Asset<AZ::RPI::SkinMetaAsset>& skinMetaAsset);
+        AZStd::unordered_map<AZ::u16, AZ::u16> ConstructSkinToSkeletonIndexMap(const AZ::Data::Asset<JE::Render::RPI::SkinMetaAsset>& skinMetaAsset);
         void ConstructMeshes();
         void ConstructMorphTargets();
 
@@ -812,9 +812,9 @@ namespace EMotionFX
 
         MeshLODData m_meshLodData;
         AZ::Data::AssetId m_meshAssetId;
-        AZ::Data::Asset<AZ::RPI::ModelAsset> m_meshAsset;
-        AZ::Data::Asset<AZ::RPI::SkinMetaAsset> m_skinMetaAsset;
-        AZ::Data::Asset<AZ::RPI::MorphTargetMetaAsset> m_morphTargetMetaAsset;
+        AZ::Data::Asset<JE::Render::RPI::ModelAsset> m_meshAsset;
+        AZ::Data::Asset<JE::Render::RPI::SkinMetaAsset> m_skinMetaAsset;
+        AZ::Data::Asset<JE::Render::RPI::MorphTargetMetaAsset> m_morphTargetMetaAsset;
         AZStd::recursive_mutex m_mutex;
         AZStd::unordered_map<AZ::u16, AZ::u16> m_skinToSkeletonIndexMap; //!< Mapping joint indices in skin metadata to skeleton indices.
 
@@ -824,7 +824,7 @@ namespace EMotionFX
         static AZ::Data::AssetId ConstructMorphTargetMetaAssetId(const AZ::Data::AssetId& meshAssetId);
         static bool DoesMorphTargetMetaAssetExist(const AZ::Data::AssetId& meshAssetId);
 
-        Node* FindMeshJoint(const AZ::Data::Asset<AZ::RPI::ModelLodAsset>& lodModelAsset) const;
+        Node* FindMeshJoint(const AZ::Data::Asset<JE::Render::RPI::ModelLodAsset>& lodModelAsset) const;
 
         Skeleton*                                       m_skeleton;                  /**< The skeleton, containing the nodes and bind pose. */
         AZStd::vector<Dependency>                        m_dependencies;              /**< The dependencies on other actors (shared meshes and transforms). */

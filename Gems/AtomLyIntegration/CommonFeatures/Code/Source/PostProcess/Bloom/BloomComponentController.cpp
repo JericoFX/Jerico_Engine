@@ -8,7 +8,7 @@
 
 #include <AzCore/RTTI/BehaviorContext.h>
 
-#include <Atom/RPI.Public/Scene.h>
+#include <JE/Render/RPI/Public/Scene.h>
 
 #include <PostProcess/Bloom/BloomComponentController.h>
 
@@ -67,7 +67,7 @@ namespace AZ
         {
             m_entityId = entityId;
 
-            PostProcessFeatureProcessorInterface* fp = RPI::Scene::GetFeatureProcessorForEntity<PostProcessFeatureProcessorInterface>(m_entityId);
+            PostProcessFeatureProcessorInterface* fp = JE::Render::RPI::Scene::GetFeatureProcessorForEntity<PostProcessFeatureProcessorInterface>(m_entityId);
             if (fp)
             {
                 m_postProcessInterface = fp->GetOrCreateSettingsInterface(m_entityId);

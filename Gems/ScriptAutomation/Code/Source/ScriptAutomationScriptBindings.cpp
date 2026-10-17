@@ -31,8 +31,8 @@
 #include <AzFramework/IO/LocalFileIO.h>
 #include <AzFramework/Windowing/NativeWindow.h>
 
-#include <Atom/RPI.Public/Pass/AttachmentReadback.h>
-#include <Atom/RPI.Public/RPISystemInterface.h>
+#include <JE/Render/RPI/Public/Pass/AttachmentReadback.h>
+#include <JE/Render/RPI/Public/RPISystemInterface.h>
 
 #include <ScriptAutomation_Traits.h>
 
@@ -368,7 +368,7 @@ namespace AZ::ScriptAutomation
 
         AZStd::string GetRenderApiName()
         {
-            AZ::RPI::RPISystemInterface* rpiSystem = AZ::RPI::RPISystemInterface::Get();
+            JE::Render::RPI::RPISystemInterface* rpiSystem = JE::Render::RPI::RPISystemInterface::Get();
             return rpiSystem->GetRenderApiName().GetCStr();
         }
 
@@ -593,14 +593,14 @@ namespace AZ::ScriptAutomation
             dc.ReadArg(2, stringValue);
             imageName = AZStd::string(stringValue);
 
-            AZ::RPI::PassAttachmentReadbackOption readbackOption = AZ::RPI::PassAttachmentReadbackOption::Output;
+            JE::Render::RPI::PassAttachmentReadbackOption readbackOption = JE::Render::RPI::PassAttachmentReadbackOption::Output;
             if (dc.GetNumArguments() == 4)
             {
                 AZStd::string option;
                 dc.ReadArg(3, option);
                 if (option == "Input")
                 {
-                    readbackOption = AZ::RPI::PassAttachmentReadbackOption::Input;
+                    readbackOption = JE::Render::RPI::PassAttachmentReadbackOption::Input;
                 }
             }
 

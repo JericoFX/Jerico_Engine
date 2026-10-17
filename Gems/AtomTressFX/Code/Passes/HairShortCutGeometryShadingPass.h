@@ -36,7 +36,7 @@ namespace AZ
                 AZ_RTTI(HairShortCutGeometryShadingPass, "{11BA673D-0788-4B25-978D-9737BF4E48FE}", HairGeometryRasterPass);
                 AZ_CLASS_ALLOCATOR(HairShortCutGeometryShadingPass, SystemAllocator);
 
-                static RPI::Ptr<HairShortCutGeometryShadingPass> Create(const RPI::PassDescriptor& descriptor);
+                static JE::Render::RPI::Ptr<HairShortCutGeometryShadingPass> Create(const JE::Render::RPI::PassDescriptor& descriptor);
 
                 void CompileResources(const RHI::FrameGraphCompileContext& context) override;
 
@@ -53,7 +53,7 @@ namespace AZ
                 AZ::Name o_enableLongtitudeCoeff;
                 AZ::Name o_enableAzimuthCoeff;
 
-                explicit HairShortCutGeometryShadingPass(const RPI::PassDescriptor& descriptor);
+                explicit HairShortCutGeometryShadingPass(const JE::Render::RPI::PassDescriptor& descriptor);
 
                 void UpdateGlobalShaderOptions();
 

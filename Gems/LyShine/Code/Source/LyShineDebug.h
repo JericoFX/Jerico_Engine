@@ -12,7 +12,7 @@
 #include <AzCore/Instance/Instance.h>
 #include <AzCore/std/containers/vector.h>
 
-#include <Atom/RPI.Reflect/Image/Image.h>
+#include <JE/Render/RPI/Reflect/Image/Image.h>
 #endif
 
 #include <CryCommon/ISystem.h>
@@ -66,7 +66,7 @@ public: // static member functions
 
     struct DebugInfoTextureUsage
     {
-        AZ::Data::Instance<AZ::RPI::Image> m_texture;
+        AZ::Data::Instance<JE::Render::RPI::Image> m_texture;
         bool        m_isClampTextureUsage;
         int         m_numCanvasesUsed;
         int         m_numDrawCallsUsed;

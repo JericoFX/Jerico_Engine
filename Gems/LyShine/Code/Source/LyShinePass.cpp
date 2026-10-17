@@ -7,23 +7,23 @@
 #include <AzCore/Debug/Trace.h>
 #include <Atom/RHI/DrawListTagRegistry.h>
 #include <Atom/RHI/RHISystemInterface.h>
-#include <Atom/RPI.Public/Pass/PassAttachment.h>
-#include <Atom/RPI.Public/Image/ImageSystemInterface.h>
-#include <Atom/RPI.Public/Image/AttachmentImagePool.h>
-#include <Atom/RPI.Public/Scene.h>
-#include <Atom/RPI.Reflect/Pass/RasterPassData.h>
+#include <JE/Render/RPI/Public/Pass/PassAttachment.h>
+#include <JE/Render/RPI/Public/Image/ImageSystemInterface.h>
+#include <JE/Render/RPI/Public/Image/AttachmentImagePool.h>
+#include <JE/Render/RPI/Public/Scene.h>
+#include <JE/Render/RPI/Reflect/Pass/RasterPassData.h>
 #include <AzCore/std/iterator.h>
 
 #include "LyShinePass.h"
 
 namespace LyShine
 {
-    AZ::RPI::Ptr<LyShinePass> LyShinePass::Create(const AZ::RPI::PassDescriptor& descriptor)
+    JE::Render::RPI::Ptr<LyShinePass> LyShinePass::Create(const JE::Render::RPI::PassDescriptor& descriptor)
     {
         return aznew LyShinePass(descriptor);
     }
 
-    LyShinePass::LyShinePass(const AZ::RPI::PassDescriptor& descriptor)
+    LyShinePass::LyShinePass(const JE::Render::RPI::PassDescriptor& descriptor)
         : Base(descriptor)
     {
     }
@@ -40,7 +40,7 @@ namespace LyShine
         Base::ResetInternal();
     }
 
-    void LyShinePass::SetRenderPipeline(AZ::RPI::RenderPipeline* pipeline)
+    void LyShinePass::SetRenderPipeline(JE::Render::RPI::RenderPipeline* pipeline)
     {
         if (pipeline == nullptr)
         {
@@ -53,7 +53,7 @@ namespace LyShine
 
     void LyShinePass::BuildInternal()
     {
-        AZ::RPI::Scene* scene = GetScene();
+        JE::Render::RPI::Scene* scene = GetScene();
         if (scene)
         {
             // Listen for rebuild requests
@@ -68,7 +68,7 @@ namespace LyShine
 
     void LyShinePass::CreateChildPassesInternal()
     {
-        AZ::RPI::Scene* scene = GetScene();
+        JE::Render::RPI::Scene* scene = GetScene();
         if (scene)
         {
             // Get the current list of render targets being used across all loaded UI Canvases
@@ -89,19 +89,19 @@ namespace LyShine
         QueueForBuildAndInitialization();
     }
 
-    AZ::RPI::RasterPass* LyShinePass::GetRttPass(const AZStd::string& name)
+    JE::Render::RPI::RasterPass* LyShinePass::GetRttPass(const AZStd::string& name)
     {
         for (auto child:m_children)
         {
             if (child->GetName() == AZ::Name(name))
             {
-                return azrtti_cast<AZ::RPI::RasterPass*>(child.get());
+                return azrtti_cast<JE::Render::RPI::RasterPass*>(child.get());
             }
         }
         return nullptr;
     }
 
-    AZ::RPI::RasterPass* LyShinePass::GetUiCanvasPass()
+    JE::Render::RPI::RasterPass* LyShinePass::GetUiCanvasPass()
     {
         return m_uiCanvasChildPass.get();
     }
@@ -114,14 +114,14 @@ namespace LyShine
         }
     }
 
-    void LyShinePass::AddRttChildPass(AZ::Data::Instance<AZ::RPI::AttachmentImage> attachmentImage, AttachmentImages attachmentImageDependencies)
+    void LyShinePass::AddRttChildPass(AZ::Data::Instance<JE::Render::RPI::AttachmentImage> attachmentImage, AttachmentImages attachmentImageDependencies)
     {
         // Add a pass that renders to the specified texture
-        AZ::RPI::PassSystemInterface* passSystem = AZ::RPI::PassSystemInterface::Get();
+        JE::Render::RPI::PassSystemInterface* passSystem = JE::Render::RPI::PassSystemInterface::Get();
         if (attachmentImage)
         {
             auto passName = attachmentImage->GetRHIImage()->GetName(); // Use attachment name (but not attachment id) as pass name so the pass can be found by GetRttPass() function
-            AZ::RPI::Ptr<RttChildPass> rttChildPass = azrtti_cast<RttChildPass*>(passSystem->CreatePassFromTemplate(AZ::Name("RttChildPassTemplate"), passName).get());
+            JE::Render::RPI::Ptr<RttChildPass> rttChildPass = azrtti_cast<RttChildPass*>(passSystem->CreatePassFromTemplate(AZ::Name("RttChildPassTemplate"), passName).get());
             AZ_Assert(rttChildPass, "[LyShinePass] Unable to create a RttChildPass.");
 
             // Store the info needed to attach to slots and set up frame graph dependencies
@@ -139,7 +139,7 @@ namespace LyShine
     {
         if (!m_uiCanvasChildPass)
         {
-            AZ::RPI::PassSystemInterface* passSystem = AZ::RPI::PassSystemInterface::Get();
+            JE::Render::RPI::PassSystemInterface* passSystem = JE::Render::RPI::PassSystemInterface::Get();
             m_uiCanvasChildPass = azrtti_cast<LyShineChildPass*>(passSystem->CreatePassFromTemplate(AZ::Name("LyShineChildPassTemplate"), AZ::Name("LyShineChildPass")).get());
             AZ_Assert(m_uiCanvasChildPass, "[LyShinePass] Unable to create a LyShineChildPass.");
         }
@@ -154,12 +154,12 @@ namespace LyShine
         AddChild(m_uiCanvasChildPass);
     }
 
-    AZ::RPI::Ptr<LyShineChildPass> LyShineChildPass::Create(const AZ::RPI::PassDescriptor& descriptor)
+    JE::Render::RPI::Ptr<LyShineChildPass> LyShineChildPass::Create(const JE::Render::RPI::PassDescriptor& descriptor)
     {
         return aznew LyShineChildPass(descriptor);
     }
 
-    LyShineChildPass::LyShineChildPass(const AZ::RPI::PassDescriptor& descriptor)
+    LyShineChildPass::LyShineChildPass(const JE::Render::RPI::PassDescriptor& descriptor)
         : RasterPass(descriptor)
     {
     }
@@ -170,7 +170,7 @@ namespace LyShine
 
     void LyShineChildPass::SetupFrameGraphDependencies(AZ::RHI::FrameGraphInterface frameGraph)
     {
-        AZ::RPI::RasterPass::SetupFrameGraphDependencies(frameGraph);
+        JE::Render::RPI::RasterPass::SetupFrameGraphDependencies(frameGraph);
 
         for (auto attachmentImage : m_attachmentImageDependencies)
         {
@@ -191,12 +191,12 @@ namespace LyShine
         }
     }
 
-    AZ::RPI::Ptr<RttChildPass> RttChildPass::Create(const AZ::RPI::PassDescriptor& descriptor)
+    JE::Render::RPI::Ptr<RttChildPass> RttChildPass::Create(const JE::Render::RPI::PassDescriptor& descriptor)
     {
         return aznew RttChildPass(descriptor);
     }
 
-    RttChildPass::RttChildPass(const AZ::RPI::PassDescriptor& descriptor)
+    RttChildPass::RttChildPass(const JE::Render::RPI::PassDescriptor& descriptor)
         : LyShineChildPass(descriptor)
     {
     }

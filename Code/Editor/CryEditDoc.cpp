@@ -50,8 +50,8 @@
 #include "LevelFileDialog.h"
 #include "Undo/Undo.h"
 
-#include <Atom/RPI.Public/ViewportContext.h>
-#include <Atom/RPI.Public/ViewportContextBus.h>
+#include <JE/Render/RPI/Public/ViewportContext.h>
+#include <JE/Render/RPI/Public/ViewportContextBus.h>
 
 // LmbrCentral
 #include <LmbrCentral/Audio/AudioSystemComponentBus.h>
@@ -372,7 +372,7 @@ void CCryEditDoc::SerializeViewSettings(CXmlArchive& xmlAr)
             AZ::Transform tm = AZ::Transform::CreateFromQuaternionAndTranslation(
                 AZ::Quaternion::CreateFromEulerRadiansZYX(LYAng3ToAZVec3(va)), LYVec3ToAZVec3(vp));
 
-            auto viewportContextManager = AZ::Interface<AZ::RPI::ViewportContextRequestsInterface>::Get();
+            auto viewportContextManager = AZ::Interface<JE::Render::RPI::ViewportContextRequestsInterface>::Get();
             if (auto viewportContext = viewportContextManager->GetViewportContextById(i))
             {
                 viewportContext->SetCameraTransform(tm);

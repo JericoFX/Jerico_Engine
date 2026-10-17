@@ -72,7 +72,7 @@ namespace AZ
             m_perViewBlendWeights = perViewBlendWeights;
         }
 
-        float PostProcessSettings::GetBlendWeightForView(AZ::RPI::View* view) const
+        float PostProcessSettings::GetBlendWeightForView(JE::Render::RPI::View* view) const
         {
             const auto& settingsIterator = m_perViewBlendWeights.find(view);
             return settingsIterator != m_perViewBlendWeights.end() ? settingsIterator->second : defaultBlendWeight;

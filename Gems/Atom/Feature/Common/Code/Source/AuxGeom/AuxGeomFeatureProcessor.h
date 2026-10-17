@@ -8,7 +8,7 @@
 
 #pragma once
 
-#include <Atom/RPI.Public/AuxGeom/AuxGeomFeatureProcessorInterface.h>
+#include <JE/Render/RPI/Public/AuxGeom/AuxGeomFeatureProcessorInterface.h>
 
 namespace AZ
 {
@@ -22,12 +22,12 @@ namespace AZ
          * FeatureProcessor for Auxiliary Geometry
          */
         class AuxGeomFeatureProcessor final
-            : public RPI::AuxGeomFeatureProcessorInterface
+            : public JE::Render::RPI::AuxGeomFeatureProcessorInterface
         {
         public: // functions
             AZ_CLASS_ALLOCATOR(AuxGeomFeatureProcessor, AZ::SystemAllocator)
 
-            AZ_RTTI(AZ::Render::AuxGeomFeatureProcessor, "{75E17417-C8E3-4B64-8469-7662D1E0904A}", AZ::RPI::AuxGeomFeatureProcessorInterface);
+            AZ_RTTI(AZ::Render::AuxGeomFeatureProcessor, "{75E17417-C8E3-4B64-8469-7662D1E0904A}", JE::Render::RPI::AuxGeomFeatureProcessorInterface);
             AZ_FEATURE_PROCESSOR(AuxGeomFeatureProcessor);
 
             static void Reflect(AZ::ReflectContext* context);
@@ -42,14 +42,14 @@ namespace AZ
             void OnRenderEnd() override;
 
             // RPI::AuxGeomFeatureProcessorInterface
-            RPI::AuxGeomDrawPtr GetDrawQueue() override; // returns the scene DrawQueue
-            RPI::AuxGeomDrawPtr GetDrawQueueForView(const RPI::View* view) override;
+            JE::Render::RPI::AuxGeomDrawPtr GetDrawQueue() override; // returns the scene DrawQueue
+            JE::Render::RPI::AuxGeomDrawPtr GetDrawQueueForView(const JE::Render::RPI::View* view) override;
 
-            RPI::AuxGeomDrawPtr GetOrCreateDrawQueueForView(const RPI::View* view) override;
-            void ReleaseDrawQueueForView(const RPI::View* view) override;
+            JE::Render::RPI::AuxGeomDrawPtr GetOrCreateDrawQueueForView(const JE::Render::RPI::View* view) override;
+            void ReleaseDrawQueueForView(const JE::Render::RPI::View* view) override;
 
             // RPI::SceneNotificationBus::Handler overrides...
-            void OnRenderPipelineChanged(AZ::RPI::RenderPipeline* pipeline, RPI::SceneNotification::RenderPipelineChangeType changeType) override;
+            void OnRenderPipelineChanged(JE::Render::RPI::RenderPipeline* pipeline, JE::Render::RPI::SceneNotification::RenderPipelineChangeType changeType) override;
 
         private: // functions
 
@@ -61,10 +61,10 @@ namespace AZ
             static const char* s_featureProcessorName;
             
             //! Cache a pointer to the AuxGeom draw queue for our scene
-            RPI::AuxGeomDrawPtr m_sceneDrawQueue = nullptr;
+            JE::Render::RPI::AuxGeomDrawPtr m_sceneDrawQueue = nullptr;
 
             //! Map used to store the AuxGeomDrawQueue for each view
-            AZStd::map<const RPI::View*, RPI::AuxGeomDrawPtr> m_viewDrawDataMap; // using View* as key to not hold a reference to the view
+            AZStd::map<const JE::Render::RPI::View*, JE::Render::RPI::AuxGeomDrawPtr> m_viewDrawDataMap; // using View* as key to not hold a reference to the view
 
             //! The object that handles the dynamic primitive geometry data
             AZStd::unique_ptr<DynamicPrimitiveProcessor> m_dynamicPrimitiveProcessor;
@@ -73,7 +73,7 @@ namespace AZ
             AZStd::unique_ptr<FixedShapeProcessor> m_fixedShapeProcessor;
         };
 
-        inline RPI::AuxGeomDrawPtr AuxGeomFeatureProcessor::GetDrawQueue()
+        inline JE::Render::RPI::AuxGeomDrawPtr AuxGeomFeatureProcessor::GetDrawQueue()
         {
             return m_sceneDrawQueue;
         }

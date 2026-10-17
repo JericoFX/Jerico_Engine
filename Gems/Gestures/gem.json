@@ -20,6 +20,5 @@
     "requirements": "",
     "documentation_url": "https://www.o3de.org/docs/user-guide/gems/reference/input/gestures/",
     "dependencies": [
-        "Atom_RPI"
     ]
 }

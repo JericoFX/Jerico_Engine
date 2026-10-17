@@ -11,29 +11,29 @@
 #include <AzCore/Serialization/SerializeContext.h>
 #include <AzCore/Script/ScriptAsset.h>
 
-#include <Atom/RPI.Edit/Material/MaterialTypeSourceData.h>
-#include <Atom/RPI.Edit/Material/MaterialSourceData.h>
-#include <Atom/RPI.Edit/Material/MaterialPipelineSourceData.h>
-#include <Atom/RPI.Edit/Material/MaterialPropertyValueSourceData.h>
-#include <Atom/RPI.Edit/Material/MaterialPropertySourceData.h>
-#include <Atom/RPI.Edit/Material/MaterialFunctorSourceDataHolder.h>
-#include <Atom/RPI.Edit/Material/LuaMaterialFunctorSourceData.h>
-#include <Atom/RPI.Edit/Shader/ShaderSourceData.h>
-#include <Atom/RPI.Edit/Shader/ShaderVariantListSourceData.h>
-#include <Atom/RPI.Edit/Common/AssetAliasesSourceData.h>
+#include <JE/Editor/Render/RPI/Edit/Material/MaterialTypeSourceData.h>
+#include <JE/Editor/Render/RPI/Edit/Material/MaterialSourceData.h>
+#include <JE/Editor/Render/RPI/Edit/Material/MaterialPipelineSourceData.h>
+#include <JE/Editor/Render/RPI/Edit/Material/MaterialPropertyValueSourceData.h>
+#include <JE/Editor/Render/RPI/Edit/Material/MaterialPropertySourceData.h>
+#include <JE/Editor/Render/RPI/Edit/Material/MaterialFunctorSourceDataHolder.h>
+#include <JE/Editor/Render/RPI/Edit/Material/LuaMaterialFunctorSourceData.h>
+#include <JE/Editor/Render/RPI/Edit/Shader/ShaderSourceData.h>
+#include <JE/Editor/Render/RPI/Edit/Shader/ShaderVariantListSourceData.h>
+#include <JE/Editor/Render/RPI/Edit/Common/AssetAliasesSourceData.h>
 
-#include <Atom/RPI.Reflect/Asset/AssetHandler.h>
-#include <Atom/RPI.Reflect/Material/MaterialAsset.h>
-#include <Atom/RPI.Reflect/Shader/ShaderAsset.h>
-#include <Atom/RPI.Reflect/Image/StreamingImagePoolAsset.h>
-#include <Atom/RPI.Reflect/Buffer/BufferAsset.h>
-#include <Atom/RPI.Reflect/Model/ModelLodAsset.h>
-#include <Atom/RPI.Reflect/Model/ModelAsset.h>
-#include <Atom/RPI.Reflect/Model/MorphTargetMetaAsset.h>
-#include <Atom/RPI.Reflect/Model/SkinMetaAsset.h>
-#include <Atom/RPI.Reflect/Pass/PassAsset.h>
-#include <Atom/RPI.Reflect/Shader/ShaderVariantAsset.h>
-#include <Atom/RPI.Reflect/Shader/ShaderVariantTreeAsset.h>
+#include <JE/Render/RPI/Reflect/Asset/AssetHandler.h>
+#include <JE/Render/RPI/Reflect/Material/MaterialAsset.h>
+#include <JE/Render/RPI/Reflect/Shader/ShaderAsset.h>
+#include <JE/Render/RPI/Reflect/Image/StreamingImagePoolAsset.h>
+#include <JE/Render/RPI/Reflect/Buffer/BufferAsset.h>
+#include <JE/Render/RPI/Reflect/Model/ModelLodAsset.h>
+#include <JE/Render/RPI/Reflect/Model/ModelAsset.h>
+#include <JE/Render/RPI/Reflect/Model/MorphTargetMetaAsset.h>
+#include <JE/Render/RPI/Reflect/Model/SkinMetaAsset.h>
+#include <JE/Render/RPI/Reflect/Pass/PassAsset.h>
+#include <JE/Render/RPI/Reflect/Shader/ShaderVariantAsset.h>
+#include <JE/Render/RPI/Reflect/Shader/ShaderVariantTreeAsset.h>
 
 #include <BuilderComponent.h>
 #include <Common/AnyAssetBuilder.h>
@@ -55,19 +55,19 @@ namespace JE::Assets::RenderBuilders
             ;
         }
 
-        AZ::RPI::MaterialPropertySourceData::Reflect(context);
-        AZ::RPI::MaterialTypeSourceData::Reflect(context);
-        AZ::RPI::MaterialSourceData::Reflect(context);
-        AZ::RPI::MaterialPipelineSourceData::Reflect(context);
-        AZ::RPI::MaterialPropertyValueSourceData::Reflect(context);
-        AZ::RPI::MaterialFunctorSourceData::Reflect(context);
-        AZ::RPI::MaterialFunctorSourceDataHolder::Reflect(context);
-        AZ::RPI::LuaMaterialFunctorSourceData::Reflect(context);
-        AZ::RPI::ResourcePoolSourceData::Reflect(context);
-        AZ::RPI::ConvertibleSource::Reflect(context);
-        AZ::RPI::AssetAliasesSourceData::Reflect(context);
-        AZ::RPI::ShaderSourceData::Reflect(context);
-        AZ::RPI::ShaderVariantListSourceData::Reflect(context);
+        JE::Render::RPI::MaterialPropertySourceData::Reflect(context);
+        JE::Render::RPI::MaterialTypeSourceData::Reflect(context);
+        JE::Render::RPI::MaterialSourceData::Reflect(context);
+        JE::Render::RPI::MaterialPipelineSourceData::Reflect(context);
+        JE::Render::RPI::MaterialPropertyValueSourceData::Reflect(context);
+        JE::Render::RPI::MaterialFunctorSourceData::Reflect(context);
+        JE::Render::RPI::MaterialFunctorSourceDataHolder::Reflect(context);
+        JE::Render::RPI::LuaMaterialFunctorSourceData::Reflect(context);
+        JE::Render::RPI::ResourcePoolSourceData::Reflect(context);
+        JE::Render::RPI::ConvertibleSource::Reflect(context);
+        JE::Render::RPI::AssetAliasesSourceData::Reflect(context);
+        JE::Render::RPI::ShaderSourceData::Reflect(context);
+        JE::Render::RPI::ShaderVariantListSourceData::Reflect(context);
         MaterialPipelineScriptRunner::Reflect(context);
     }
 
@@ -105,19 +105,19 @@ namespace JE::Assets::RenderBuilders
         m_assetWorkers.emplace_back(MakeAssetBuilder<AnyAssetBuilder>());
         m_assetWorkers.emplace_back(MakeAssetBuilder<PassBuilder>());
 
-        m_assetHandlers.emplace_back(AZ::RPI::MakeAssetHandler<AZ::RPI::ShaderAssetHandler>());
-        m_assetHandlers.emplace_back(AZ::RPI::MakeAssetHandler<AZ::RPI::MaterialTypeAssetHandler>());
-        m_assetHandlers.emplace_back(AZ::RPI::MakeAssetHandler<AZ::RPI::MaterialAssetHandler>());
-        m_assetHandlers.emplace_back(AZ::RPI::MakeAssetHandler<AZ::RPI::ResourcePoolAssetHandler>());
-        m_assetHandlers.emplace_back(AZ::RPI::MakeAssetHandler<AZ::RPI::StreamingImagePoolAssetHandler>());
-        m_assetHandlers.emplace_back(AZ::RPI::MakeAssetHandler<AZ::RPI::BufferAssetHandler>());
-        m_assetHandlers.emplace_back(AZ::RPI::MakeAssetHandler<AZ::RPI::ModelLodAssetHandler>());
-        m_assetHandlers.emplace_back(AZ::RPI::MakeAssetHandler<AZ::RPI::ModelAssetHandler>());
-        m_assetHandlers.emplace_back(AZ::RPI::MakeAssetHandler<AZ::RPI::PassAssetHandler>());
-        m_assetHandlers.emplace_back(AZ::RPI::MakeAssetHandler<AZ::RPI::ShaderVariantAssetHandler>());
-        m_assetHandlers.emplace_back(AZ::RPI::MakeAssetHandler<AZ::RPI::ShaderVariantTreeAssetHandler>());
-        m_assetHandlers.emplace_back(AZ::RPI::MakeAssetHandler<AZ::RPI::SkinMetaAssetHandler>());
-        m_assetHandlers.emplace_back(AZ::RPI::MakeAssetHandler<AZ::RPI::MorphTargetMetaAssetHandler>());
+        m_assetHandlers.emplace_back(JE::Render::RPI::MakeAssetHandler<JE::Render::RPI::ShaderAssetHandler>());
+        m_assetHandlers.emplace_back(JE::Render::RPI::MakeAssetHandler<JE::Render::RPI::MaterialTypeAssetHandler>());
+        m_assetHandlers.emplace_back(JE::Render::RPI::MakeAssetHandler<JE::Render::RPI::MaterialAssetHandler>());
+        m_assetHandlers.emplace_back(JE::Render::RPI::MakeAssetHandler<JE::Render::RPI::ResourcePoolAssetHandler>());
+        m_assetHandlers.emplace_back(JE::Render::RPI::MakeAssetHandler<JE::Render::RPI::StreamingImagePoolAssetHandler>());
+        m_assetHandlers.emplace_back(JE::Render::RPI::MakeAssetHandler<JE::Render::RPI::BufferAssetHandler>());
+        m_assetHandlers.emplace_back(JE::Render::RPI::MakeAssetHandler<JE::Render::RPI::ModelLodAssetHandler>());
+        m_assetHandlers.emplace_back(JE::Render::RPI::MakeAssetHandler<JE::Render::RPI::ModelAssetHandler>());
+        m_assetHandlers.emplace_back(JE::Render::RPI::MakeAssetHandler<JE::Render::RPI::PassAssetHandler>());
+        m_assetHandlers.emplace_back(JE::Render::RPI::MakeAssetHandler<JE::Render::RPI::ShaderVariantAssetHandler>());
+        m_assetHandlers.emplace_back(JE::Render::RPI::MakeAssetHandler<JE::Render::RPI::ShaderVariantTreeAssetHandler>());
+        m_assetHandlers.emplace_back(JE::Render::RPI::MakeAssetHandler<JE::Render::RPI::SkinMetaAssetHandler>());
+        m_assetHandlers.emplace_back(JE::Render::RPI::MakeAssetHandler<JE::Render::RPI::MorphTargetMetaAssetHandler>());
     }
 
     void BuilderComponent::Deactivate()

@@ -45,8 +45,8 @@ namespace AZ
             void SetTransform(const ReflectionProbeHandle& handle, const AZ::Transform& transform) override;
             AZ::Transform GetTransform(const ReflectionProbeHandle& handle) const override;
 
-            void SetCubeMap(const ReflectionProbeHandle& handle, Data::Instance<RPI::Image>& cubeMapImage, const AZStd::string& relativePath) override;
-            Data::Instance<RPI::Image> GetCubeMap(const ReflectionProbeHandle& handle) const override;
+            void SetCubeMap(const ReflectionProbeHandle& handle, Data::Instance<JE::Render::RPI::Image>& cubeMapImage, const AZStd::string& relativePath) override;
+            Data::Instance<JE::Render::RPI::Image> GetCubeMap(const ReflectionProbeHandle& handle) const override;
 
             void SetRenderExposure(const ReflectionProbeHandle& handle, float renderExposure) override;
             float GetRenderExposure(const ReflectionProbeHandle& handle) const override;
@@ -57,7 +57,7 @@ namespace AZ
             bool GetUseParallaxCorrection(const ReflectionProbeHandle& handle) const override;
 
             void Bake(const ReflectionProbeHandle& handle, BuildCubeMapCallback callback, const AZStd::string& relativePath) override;
-            bool CheckCubeMapAssetNotification(const AZStd::string& relativePath, Data::Asset<RPI::StreamingImageAsset>& outCubeMapAsset, CubeMapAssetNotificationType& outNotificationType) override;
+            bool CheckCubeMapAssetNotification(const AZStd::string& relativePath, Data::Asset<JE::Render::RPI::StreamingImageAsset>& outCubeMapAsset, CubeMapAssetNotificationType& outNotificationType) override;
             bool IsCubeMapReferenced(const AZStd::string& relativePath) override;
             void ShowVisualization(const ReflectionProbeHandle& handle, bool showVisualization) override;
             void FindReflectionProbes(const AZ::Vector3& position, ReflectionProbeHandleVector& reflectionProbeHandles) override;
@@ -78,11 +78,11 @@ namespace AZ
 
             // load the shader and retrieve pipeline state, shader, Srg Layout, and drawListTag
             void LoadShader(
-                const char* filePath, RPI::Ptr<RPI::PipelineStateForDraw>& pipelineState, Data::Instance<RPI::Shader>& shader,
+                const char* filePath, JE::Render::RPI::Ptr<JE::Render::RPI::PipelineStateForDraw>& pipelineState, Data::Instance<JE::Render::RPI::Shader>& shader,
                 RHI::Ptr<RHI::ShaderResourceGroupLayout>& srgLayout, RHI::DrawListTag& drawListTag);
 
             // RPI::SceneNotificationBus::Handler overrides
-            void OnRenderPipelineChanged(AZ::RPI::RenderPipeline* pipeline, RPI::SceneNotification::RenderPipelineChangeType changeType) override;
+            void OnRenderPipelineChanged(JE::Render::RPI::RenderPipeline* pipeline, JE::Render::RPI::SceneNotification::RenderPipelineChangeType changeType) override;
 
             void UpdatePipelineStates();
 
@@ -114,7 +114,7 @@ namespace AZ
             {
                 AZStd::string m_relativePath;
                 AZ::Data::AssetId m_assetId;
-                Data::Asset<RPI::StreamingImageAsset> m_asset;
+                Data::Asset<JE::Render::RPI::StreamingImageAsset> m_asset;
                 CubeMapAssetNotificationType m_notificationType = CubeMapAssetNotificationType::None;
             };
             typedef AZStd::vector<NotifyCubeMapAssetEntry> NotifyCubeMapAssetVector;

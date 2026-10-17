@@ -7,7 +7,7 @@
  */
 
 #include <AtomLyIntegration/CommonFeatures/Mesh/MeshComponentBus.h>
-#include <Atom/RPI.Reflect/Model/ModelAsset.h>
+#include <JE/Render/RPI/Reflect/Model/ModelAsset.h>
 
 #include <NvCloth/ITangentSpaceHelper.h>
 
@@ -22,7 +22,7 @@ namespace NvCloth
 
     void MeshAssetHelper::GatherClothMeshNodes(MeshNodeList& meshNodes)
     {
-        AZ::Data::Asset<AZ::RPI::ModelAsset> modelDataAsset;
+        AZ::Data::Asset<JE::Render::RPI::ModelAsset> modelDataAsset;
         AZ::Render::MeshComponentRequestBus::EventResult(
             modelDataAsset, m_entityId, &AZ::Render::MeshComponentRequestBus::Events::GetModelAsset);
         if (!modelDataAsset.IsReady())
@@ -30,7 +30,7 @@ namespace NvCloth
             return;
         }
 
-        const AZ::RPI::ModelAsset* modelAsset = modelDataAsset.Get();
+        const JE::Render::RPI::ModelAsset* modelAsset = modelDataAsset.Get();
         if (!modelAsset)
         {
             return;
@@ -44,7 +44,7 @@ namespace NvCloth
         {
             const int lodLevel = 0;
 
-            if (const AZ::RPI::ModelLodAsset* lodAsset = lodAssets[lodLevel].Get())
+            if (const JE::Render::RPI::ModelLodAsset* lodAsset = lodAssets[lodLevel].Get())
             {
                 const auto meshes = lodAsset->GetMeshes();
 
@@ -69,7 +69,7 @@ namespace NvCloth
     {
         AZ_PROFILE_FUNCTION(Cloth);
 
-        AZ::Data::Asset<AZ::RPI::ModelAsset> modelDataAsset;
+        AZ::Data::Asset<JE::Render::RPI::ModelAsset> modelDataAsset;
         AZ::Render::MeshComponentRequestBus::EventResult(
             modelDataAsset, m_entityId, &AZ::Render::MeshComponentRequestBus::Events::GetModelAsset);
         if (!modelDataAsset.IsReady())
@@ -77,7 +77,7 @@ namespace NvCloth
             return false;
         }
 
-        const AZ::RPI::ModelAsset* modelAsset = modelDataAsset.Get();
+        const JE::Render::RPI::ModelAsset* modelAsset = modelDataAsset.Get();
         if (!modelAsset)
         {
             return false;
@@ -85,14 +85,14 @@ namespace NvCloth
 
         const auto lodAssets = modelAsset->GetLodAssets();
 
-        AZStd::vector<const AZ::RPI::ModelLodAsset::Mesh*> meshNodes;
+        AZStd::vector<const JE::Render::RPI::ModelLodAsset::Mesh*> meshNodes;
         AZStd::vector<size_t> meshPrimitiveIndices;
 
         if(!lodAssets.empty())
         {
             const int lodLevel = 0;
 
-            if (const AZ::RPI::ModelLodAsset* lodAsset = lodAssets[lodLevel].Get())
+            if (const JE::Render::RPI::ModelLodAsset* lodAsset = lodAssets[lodLevel].Get())
             {
                 const auto meshes = lodAsset->GetMeshes();
 
@@ -150,7 +150,7 @@ namespace NvCloth
     }
 
     bool MeshAssetHelper::CopyDataFromMeshes(
-        const AZStd::vector<const AZ::RPI::ModelLodAsset::Mesh*>& meshes,
+        const AZStd::vector<const JE::Render::RPI::ModelLodAsset::Mesh*>& meshes,
         MeshClothInfo& meshClothInfo)
     {
         uint32_t numTotalVertices = 0;

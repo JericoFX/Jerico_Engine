@@ -52,14 +52,14 @@ namespace JE::Editor::Camera
 
         //////////////////////////////////////////////////////////////////////////
         // CameraViewRegistrationRequestsBus::Handler
-        void SetViewForEntity(const AZ::EntityId& id, AZ::RPI::ViewPtr view) override;
-        AZ::RPI::ViewPtr GetViewForEntity(const AZ::EntityId& id) override;
+        void SetViewForEntity(const AZ::EntityId& id, JE::Render::RPI::ViewPtr view) override;
+        JE::Render::RPI::ViewPtr GetViewForEntity(const AZ::EntityId& id) override;
         //////////////////////////////////////////////////////////////////////////
 
         // ActionManagerRegistrationNotificationBus overrides ...
         void OnActionRegistrationHook() override;
         void OnMenuBindingHook() override;
 
-        AZStd::map<AZ::EntityId, AZStd::weak_ptr<AZ::RPI::View>> m_entityViewMap;
+        AZStd::map<AZ::EntityId, AZStd::weak_ptr<JE::Render::RPI::View>> m_entityViewMap;
     };
 }

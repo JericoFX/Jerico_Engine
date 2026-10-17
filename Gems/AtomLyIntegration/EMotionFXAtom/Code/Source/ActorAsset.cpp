@@ -20,13 +20,13 @@
 
 // For creating a skinned mesh from an actor
 #include <Atom/Feature/SkinnedMesh/SkinnedMeshInputBuffers.h>
-#include <Atom/RPI.Reflect/ResourcePoolAssetCreator.h>
-#include <Atom/RPI.Reflect/Buffer/BufferAssetCreator.h>
-#include <Atom/RPI.Reflect/Material/MaterialAsset.h>
-#include <Atom/RPI.Reflect/Model/ModelAssetHelpers.h>
-#include <Atom/RPI.Reflect/Model/ModelAssetCreator.h>
-#include <Atom/RPI.Reflect/Model/ModelLodAssetCreator.h>
-#include <Atom/RPI.Public/Model/Model.h>
+#include <JE/Render/RPI/Reflect/ResourcePoolAssetCreator.h>
+#include <JE/Render/RPI/Reflect/Buffer/BufferAssetCreator.h>
+#include <JE/Render/RPI/Reflect/Material/MaterialAsset.h>
+#include <JE/Render/RPI/Reflect/Model/ModelAssetHelpers.h>
+#include <JE/Render/RPI/Reflect/Model/ModelAssetCreator.h>
+#include <JE/Render/RPI/Reflect/Model/ModelLodAssetCreator.h>
+#include <JE/Render/RPI/Public/Model/Model.h>
 
 #include <AzCore/Asset/AssetManager.h>
 #include <AzCore/base.h>
@@ -106,13 +106,13 @@ namespace AZ
 
                 //Pad the blend weight and index buffers in order for it to respect alignment of RPI::SkinnedMeshBufferAlignment
                 //as that is the expected behavior of the source asset
-                RPI::ModelAssetHelpers::AlignStreamBuffer<float>(
-                    blendWeightBufferData, blendWeightBufferData.size(), RPI::SkinWeightFormat, RPI::SkinnedMeshBufferAlignment);
+                JE::Render::RPI::ModelAssetHelpers::AlignStreamBuffer<float>(
+                    blendWeightBufferData, blendWeightBufferData.size(), JE::Render::RPI::SkinWeightFormat, JE::Render::RPI::SkinnedMeshBufferAlignment);
 
                 //We dont use RPI::SkinIndicesFormat as blendIndexBufferData contains uint32_t instead of uint16_t
                 RHI::Format blendIndexFormat = RHI::Format::R32_FLOAT;
-                RPI::ModelAssetHelpers::AlignStreamBuffer<uint32_t>(
-                    blendIndexBufferData, blendIndexBufferData.size(), blendIndexFormat, RPI::SkinnedMeshBufferAlignment);
+                JE::Render::RPI::ModelAssetHelpers::AlignStreamBuffer<uint32_t>(
+                    blendIndexBufferData, blendIndexBufferData.size(), blendIndexFormat, JE::Render::RPI::SkinnedMeshBufferAlignment);
             }
         }
 
@@ -128,7 +128,7 @@ namespace AZ
                 const auto& modelLodAsset = skinnedMeshInputBuffers->GetLod(lodIndex).GetModelLodAsset();
 
                 AZ_Assert(actor->GetMorphTargetMetaAsset().IsReady(), "Trying to create morph targets from actor '%s', but the MorphTargetMetaAsset isn't loaded.", actor->GetName());
-                const AZStd::vector<AZ::RPI::MorphTargetMetaAsset::MorphTarget>& metaDatas = actor->GetMorphTargetMetaAsset()->GetMorphTargets();
+                const AZStd::vector<JE::Render::RPI::MorphTargetMetaAsset::MorphTarget>& metaDatas = actor->GetMorphTargetMetaAsset()->GetMorphTargets();
 
                 // Loop over all the EMotionFX morph targets
                 const size_t numMorphTargets = morphSetup->GetNumMorphTargets();
@@ -154,7 +154,7 @@ namespace AZ
                             const auto lodMeshes = modelLodAsset->GetMeshes();
                             const auto& modelLodMesh = lodMeshes[metaData.m_meshIndex];
 
-                            const RPI::BufferAssetView* morphBufferAssetView =
+                            const JE::Render::RPI::BufferAssetView* morphBufferAssetView =
                                 modelLodMesh.GetSemanticBufferAssetView(Name{ "MORPHTARGET_VERTEXDELTAS" });
 
                             skinnedMeshInputBuffers->AddMorphTarget(
@@ -168,7 +168,7 @@ namespace AZ
         AZStd::intrusive_ptr<SkinnedMeshInputBuffers> CreateSkinnedMeshInputFromActor(const Data::AssetId& actorAssetId, const EMotionFX::Actor* actor)
         {
 
-            Data::Asset<RPI::ModelAsset> modelAsset = actor->GetMeshAsset();
+            Data::Asset<JE::Render::RPI::ModelAsset> modelAsset = actor->GetMeshAsset();
             if (!modelAsset.IsReady())
             {
                 AZ_Warning("CreateSkinnedMeshInputFromActor", false, "Check if the actor has a mesh added. Right click the source file in the asset browser, click edit settings, "
@@ -200,16 +200,16 @@ namespace AZ
             for (uint32_t lodIndex = 0; lodIndex < numLODs; ++lodIndex)
             {
                 // Create a single LOD
-                Data::Asset<RPI::ModelLodAsset> modelLodAsset = modelAsset->GetLodAssets()[lodIndex];
+                Data::Asset<JE::Render::RPI::ModelLodAsset> modelLodAsset = modelAsset->GetLodAssets()[lodIndex];
 
                 // Clear out the vector for re-mapped joint data that will be populated by values from EMotionFX
                 blendIndexBufferData.clear();
                 blendWeightBufferData.clear();
 
-                const RPI::BufferAssetView* indicesBuffAssetView =
-                    modelLodAsset->GetSemanticBufferAssetView(Name(RPI::ShaderSemanticName_SkinJointIndices));
-                const RPI::BufferAssetView* weightsBuffAssetView =
-                    modelLodAsset->GetSemanticBufferAssetView(Name(RPI::ShaderSemanticName_SkinWeights));
+                const JE::Render::RPI::BufferAssetView* indicesBuffAssetView =
+                    modelLodAsset->GetSemanticBufferAssetView(Name(JE::Render::RPI::ShaderSemanticName_SkinJointIndices));
+                const JE::Render::RPI::BufferAssetView* weightsBuffAssetView =
+                    modelLodAsset->GetSemanticBufferAssetView(Name(JE::Render::RPI::ShaderSemanticName_SkinWeights));
 
                 if(!indicesBuffAssetView || !weightsBuffAssetView)
                 {
@@ -259,8 +259,8 @@ namespace AZ
                         }   // for all submeshes
                     } // for all meshes
 
-                    const RPI::BufferAssetView* jointIndicesBufferView = nullptr;
-                    const RPI::BufferAssetView* skinWeightsBufferView = nullptr;
+                    const JE::Render::RPI::BufferAssetView* jointIndicesBufferView = nullptr;
+                    const JE::Render::RPI::BufferAssetView* skinWeightsBufferView = nullptr;
 
                     for (const auto& modelLodMesh : modelLodAsset->GetMeshes())
                     {
@@ -288,8 +288,8 @@ namespace AZ
                     }
                     else
                     {
-                        Data::Asset<RPI::BufferAsset> jointIndicesBufferAsset = jointIndicesBufferView->GetBufferAsset();
-                        Data::Asset<RPI::BufferAsset> skinWeightsBufferAsset = skinWeightsBufferView->GetBufferAsset();
+                        Data::Asset<JE::Render::RPI::BufferAsset> jointIndicesBufferAsset = jointIndicesBufferView->GetBufferAsset();
+                        Data::Asset<JE::Render::RPI::BufferAsset> skinWeightsBufferAsset = skinWeightsBufferView->GetBufferAsset();
 
                         // We're using the indices/weights buffers directly from the model.
                         // However, EMFX has done some re-mapping of the id's, so we need to update the GPU buffer for it to have the correct data.
@@ -299,11 +299,11 @@ namespace AZ
                         AZ_Assert(jointIndicesBufferAsset->GetBufferDescriptor().m_byteCount == remappedJointIndexBufferSizeInBytes, "Joint indices data from EMotionFX is not the same size as the buffer from the model in '%s', lod '%d'", fullFileName.c_str(), lodIndex);
                         AZ_Assert(skinWeightsBufferAsset->GetBufferDescriptor().m_byteCount == remappedSkinWeightsBufferSizeInBytes, "Skin weights data from EMotionFX is not the same size as the buffer from the model in '%s', lod '%d'", fullFileName.c_str(), lodIndex);
 
-                        if (Data::Instance<RPI::Buffer> jointIndicesBuffer = RPI::Buffer::FindOrCreate(jointIndicesBufferAsset))
+                        if (Data::Instance<JE::Render::RPI::Buffer> jointIndicesBuffer = JE::Render::RPI::Buffer::FindOrCreate(jointIndicesBufferAsset))
                         {
                             jointIndicesBuffer->UpdateData(blendIndexBufferData.data(), remappedJointIndexBufferSizeInBytes);
                         }
-                        if (Data::Instance<RPI::Buffer> skinWeightsBuffer = RPI::Buffer::FindOrCreate(skinWeightsBufferAsset))
+                        if (Data::Instance<JE::Render::RPI::Buffer> skinWeightsBuffer = JE::Render::RPI::Buffer::FindOrCreate(skinWeightsBufferAsset))
                         {
                             skinWeightsBuffer->UpdateData(blendWeightBufferData.data(), remappedSkinWeightsBufferSizeInBytes);
                         }
@@ -345,7 +345,7 @@ namespace AZ
             }
         }
 
-        Data::Instance<RPI::Buffer> CreateBoneTransformBufferFromActorInstance(const EMotionFX::ActorInstance* actorInstance, EMotionFX::Integration::SkinningMethod skinningMethod)
+        Data::Instance<JE::Render::RPI::Buffer> CreateBoneTransformBufferFromActorInstance(const EMotionFX::ActorInstance* actorInstance, EMotionFX::Integration::SkinningMethod skinningMethod)
         {
             // Get the actual transforms
             AZStd::vector<float> boneTransforms;
@@ -371,13 +371,13 @@ namespace AZ
             }
 
             // Create a buffer and populate it with the transforms
-            RPI::CommonBufferDescriptor descriptor;
+            JE::Render::RPI::CommonBufferDescriptor descriptor;
             descriptor.m_bufferData = boneTransforms.data();
             descriptor.m_bufferName = AZStd::string::format("BoneTransformBuffer_%s", actorInstance->GetActor()->GetName());
             descriptor.m_byteCount = boneTransforms.size() * sizeof(float);
             descriptor.m_elementSize = static_cast<uint32_t>(floatsPerBone * sizeof(float));
-            descriptor.m_poolType = RPI::CommonBufferPoolType::ReadOnly;
-            return RPI::BufferSystemInterface::Get()->CreateBufferFromCommonPool(descriptor);
+            descriptor.m_poolType = JE::Render::RPI::CommonBufferPoolType::ReadOnly;
+            return JE::Render::RPI::BufferSystemInterface::Get()->CreateBufferFromCommonPool(descriptor);
         }
 
     } //namespace Render

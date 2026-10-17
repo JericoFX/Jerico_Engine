@@ -20,12 +20,12 @@
 #include <AzFramework/Windowing/NativeWindow.h>
 #include <AzFramework/Windowing/WindowBus.h>
 
-#include <Atom/RPI.Public/Base.h>
-#include <Atom/RPI.Public/Scene.h>
-#include <Atom/RPI.Public/ViewportContext.h>
-#include <Atom/RPI.Public/WindowContext.h>
-#include <Atom/RPI.Public/Image/AttachmentImage.h>
-#include <Atom/RPI.Public/Pass/Specific/SwapChainPass.h>
+#include <JE/Render/RPI/Public/Base.h>
+#include <JE/Render/RPI/Public/Scene.h>
+#include <JE/Render/RPI/Public/ViewportContext.h>
+#include <JE/Render/RPI/Public/WindowContext.h>
+#include <JE/Render/RPI/Public/Image/AttachmentImage.h>
+#include <JE/Render/RPI/Public/Pass/Specific/SwapChainPass.h>
 
 #include <JE/Render/Bootstrap/DefaultWindowBus.h>
 #include <JE/Render/Bootstrap/BootstrapRequestBus.h>
@@ -63,15 +63,15 @@ namespace JE
                 AzFramework::NativeWindowHandle GetDefaultWindowHandle() override;
 
                 // JE::Render::Bootstrap::DefaultWindowBus::Handler overrides ...
-                AZStd::shared_ptr<AZ::RPI::WindowContext> GetDefaultWindowContext() override;
+                AZStd::shared_ptr<JE::Render::RPI::WindowContext> GetDefaultWindowContext() override;
                 void SetCreateDefaultScene(bool create) override;
 
                 // JE::Render::Bootstrap::RequestBus::Handler overrides ...
-                AZ::RPI::ScenePtr GetOrCreateAtomSceneFromAzScene(AzFramework::Scene* scene) override;
-                bool EnsureDefaultRenderPipelineInstalledForScene(AZ::RPI::ScenePtr scene, AZ::RPI::ViewportContextPtr viewportContext) override;
-                void SwitchRenderPipeline(const AZ::RPI::RenderPipelineDescriptor& newRenderPipelineDesc, AZ::RPI::ViewportContextPtr viewportContext) override;
-                void SwitchAntiAliasing(const AZStd::string& newAntiAliasing, AZ::RPI::ViewportContextPtr viewportContext) override;
-                void SwitchMultiSample(const uint16_t newSampleCount, AZ::RPI::ViewportContextPtr viewportContext) override;
+                JE::Render::RPI::ScenePtr GetOrCreateAtomSceneFromAzScene(AzFramework::Scene* scene) override;
+                bool EnsureDefaultRenderPipelineInstalledForScene(JE::Render::RPI::ScenePtr scene, JE::Render::RPI::ViewportContextPtr viewportContext) override;
+                void SwitchRenderPipeline(const JE::Render::RPI::RenderPipelineDescriptor& newRenderPipelineDesc, JE::Render::RPI::ViewportContextPtr viewportContext) override;
+                void SwitchAntiAliasing(const AZStd::string& newAntiAliasing, JE::Render::RPI::ViewportContextPtr viewportContext) override;
+                void SwitchMultiSample(const uint16_t newSampleCount, JE::Render::RPI::ViewportContextPtr viewportContext) override;
                 void RefreshWindowResolution() override;
 
             protected:
@@ -106,39 +106,39 @@ namespace JE
                 void SetWindowResolution();
 
                 //! Run the BRDF pipeline to generate the BRDF texture
-                void RunBRDFPipeline(AZ::RPI::ScenePtr scene, AZ::RPI::ViewportContextPtr viewportContext);
+                void RunBRDFPipeline(JE::Render::RPI::ScenePtr scene, JE::Render::RPI::ViewportContextPtr viewportContext);
 
                 //! Load a render pipeline from disk and add it to the scene
-                AZ::RPI::RenderPipelinePtr LoadPipeline(
-                    const AZ::RPI::ScenePtr scene,
-                    const AZ::RPI::ViewportContextPtr viewportContext,
+                JE::Render::RPI::RenderPipelinePtr LoadPipeline(
+                    const JE::Render::RPI::ScenePtr scene,
+                    const JE::Render::RPI::ViewportContextPtr viewportContext,
                     AZStd::string_view xrPipelineName,
-                    AZ::RPI::ViewType viewType,
+                    JE::Render::RPI::ViewType viewType,
                     AZ::RHI::MultisampleState& multisampleState);
 
                 AzFramework::Scene::RemovalEvent::Handler m_sceneRemovalHandler;
 
                 AZStd::unique_ptr<AzFramework::NativeWindow> m_nativeWindow;
                 AzFramework::NativeWindowHandle m_windowHandle = nullptr;
-                AZ::RPI::ViewportContextPtr m_viewportContext;
+                JE::Render::RPI::ViewportContextPtr m_viewportContext;
 
-                AZ::RPI::ScenePtr m_defaultScene = nullptr;
+                JE::Render::RPI::ScenePtr m_defaultScene = nullptr;
                 AZStd::shared_ptr<AzFramework::Scene> m_defaultFrameworkScene = nullptr;
 
                 bool m_isInitialized = false;
 
                 // The id of the render pipeline created by this component
-                AZ::RPI::RenderPipelineId m_renderPipelineId;
+                JE::Render::RPI::RenderPipelineId m_renderPipelineId;
 
                 // Save a reference to the image created by the BRDF pipeline so it doesn't get auto deleted if it's ref count goes to zero
                 // For example, if we delete all the passes, we won't have to recreate the BRDF pipeline to recreate the BRDF texture
-                AZ::Data::Instance<AZ::RPI::AttachmentImage> m_brdfTexture;
+                AZ::Data::Instance<JE::Render::RPI::AttachmentImage> m_brdfTexture;
 
                 bool m_createDefaultScene = true;
                 bool m_defaultSceneReady = false;
 
                 // Maps AZ scenes to RPI scene weak pointers to allow looking up a ScenePtr instead of a raw Scene*
-                AZStd::unordered_map<AzFramework::Scene*, AZStd::weak_ptr<AZ::RPI::Scene>> m_azSceneToAtomSceneMap;
+                AZStd::unordered_map<AzFramework::Scene*, AZStd::weak_ptr<JE::Render::RPI::Scene>> m_azSceneToAtomSceneMap;
 
                 AZ::SettingsRegistryInterface::NotifyEventHandler m_componentApplicationLifecycleHandler;
             };

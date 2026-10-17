@@ -8,7 +8,7 @@
 
 #pragma once
 
-#include <Atom/RPI.Reflect/Image/StreamingImageAsset.h>
+#include <JE/Render/RPI/Reflect/Image/StreamingImageAsset.h>
 
 #include <AzToolsFramework/AssetBrowser/AssetPicker/AssetPickerDialog.h>
 #include <AzToolsFramework/UI/PropertyEditor/PropertyAssetCtrl.hxx>

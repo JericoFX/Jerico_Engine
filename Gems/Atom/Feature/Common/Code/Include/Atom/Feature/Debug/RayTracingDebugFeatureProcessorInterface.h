@@ -9,16 +9,16 @@
 #pragma once
 
 #include <Atom/Feature/Debug/RayTracingDebugSettingsInterface.h>
-#include <Atom/RPI.Public/FeatureProcessor.h>
+#include <JE/Render/RPI/Public/FeatureProcessor.h>
 
 namespace AZ::Render
 {
     //! Interface for the RayTracingDebugFeatureProcessor, which handles debug ray tracing settings for the scene, such as displaying only
     //! InstanceID, PrimitiveIndex, barycentric coordinates, normals, etc.
-    class RayTracingDebugFeatureProcessorInterface : public RPI::FeatureProcessor
+    class RayTracingDebugFeatureProcessorInterface : public JE::Render::RPI::FeatureProcessor
     {
     public:
-        AZ_RTTI(RayTracingDebugFeatureProcessorInterface, "{873F5D8A-5A0D-41F3-BADF-57394F8542D8}", RPI::FeatureProcessor);
+        AZ_RTTI(RayTracingDebugFeatureProcessorInterface, "{873F5D8A-5A0D-41F3-BADF-57394F8542D8}", JE::Render::RPI::FeatureProcessor);
 
         //! Retrieves existing settings. If none found, returns nullptr.
         virtual RayTracingDebugSettingsInterface* GetSettingsInterface() = 0;

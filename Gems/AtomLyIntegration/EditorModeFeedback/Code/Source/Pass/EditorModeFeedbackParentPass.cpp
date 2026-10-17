@@ -14,14 +14,14 @@ namespace AZ
 {
     namespace Render
     {
-        RPI::Ptr<EditorModeFeedbackParentPass> EditorModeFeedbackParentPass::Create(const RPI::PassDescriptor& descriptor)
+        JE::Render::RPI::Ptr<EditorModeFeedbackParentPass> EditorModeFeedbackParentPass::Create(const JE::Render::RPI::PassDescriptor& descriptor)
         {
-            RPI::Ptr<EditorModeFeedbackParentPass> pass = aznew EditorModeFeedbackParentPass(descriptor);
+            JE::Render::RPI::Ptr<EditorModeFeedbackParentPass> pass = aznew EditorModeFeedbackParentPass(descriptor);
             return pass;
         }
 
-        EditorModeFeedbackParentPass::EditorModeFeedbackParentPass(const RPI::PassDescriptor& descriptor)
-            : AZ::RPI::ParentPass(descriptor)
+        EditorModeFeedbackParentPass::EditorModeFeedbackParentPass(const JE::Render::RPI::PassDescriptor& descriptor)
+            : JE::Render::RPI::ParentPass(descriptor)
         {
         }
 

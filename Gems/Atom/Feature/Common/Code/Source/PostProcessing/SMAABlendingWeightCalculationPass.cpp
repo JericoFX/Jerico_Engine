@@ -6,18 +6,18 @@
  *
  */
 
-#include <Atom/RPI.Public/Image/ImageSystemInterface.h>
-#include <Atom/RPI.Public/Pass/PassUtils.h>
-#include <Atom/RPI.Public/Pass/PassFactory.h>
-#include <Atom/RPI.Public/Pass/FullscreenTrianglePass.h>
-#include <Atom/RPI.Public/RenderPipeline.h>
-#include <Atom/RPI.Public/RPIUtils.h>
-#include <Atom/RPI.Public/View.h>
-#include <Atom/RPI.Public/Shader/ShaderVariant.h>
+#include <JE/Render/RPI/Public/Image/ImageSystemInterface.h>
+#include <JE/Render/RPI/Public/Pass/PassUtils.h>
+#include <JE/Render/RPI/Public/Pass/PassFactory.h>
+#include <JE/Render/RPI/Public/Pass/FullscreenTrianglePass.h>
+#include <JE/Render/RPI/Public/RenderPipeline.h>
+#include <JE/Render/RPI/Public/RPIUtils.h>
+#include <JE/Render/RPI/Public/View.h>
+#include <JE/Render/RPI/Public/Shader/ShaderVariant.h>
 
-#include <Atom/RPI.Public/RPIUtils.h>
-#include <Atom/RPI.Reflect/Pass/PassTemplate.h>
-#include <Atom/RPI.Reflect/Shader/ShaderAsset.h>
+#include <JE/Render/RPI/Public/RPIUtils.h>
+#include <JE/Render/RPI/Reflect/Pass/PassTemplate.h>
+#include <JE/Render/RPI/Reflect/Shader/ShaderAsset.h>
 
 #include <Atom/RHI/Factory.h>
 #include <Atom/RHI/FrameScheduler.h>
@@ -33,12 +33,12 @@ namespace AZ
 {
     namespace Render
     {
-        RPI::Ptr<SMAABlendingWeightCalculationPass> SMAABlendingWeightCalculationPass::Create(const RPI::PassDescriptor& descriptor)
+        JE::Render::RPI::Ptr<SMAABlendingWeightCalculationPass> SMAABlendingWeightCalculationPass::Create(const JE::Render::RPI::PassDescriptor& descriptor)
         {
             return aznew SMAABlendingWeightCalculationPass(descriptor);
         }
 
-        SMAABlendingWeightCalculationPass::SMAABlendingWeightCalculationPass(const RPI::PassDescriptor& descriptor)
+        SMAABlendingWeightCalculationPass::SMAABlendingWeightCalculationPass(const JE::Render::RPI::PassDescriptor& descriptor)
             : SMAABasePass(descriptor)
             , m_enableDiagonalDetectionFeatureOptionName(EnableDiagonalDetectionFeatureOptionName)
             , m_enableCornerDetectionFeatureOptionName(EnableCornerDetectionFeatureOptionName)
@@ -96,8 +96,8 @@ namespace AZ
 
             AZ_Assert(m_shaderResourceGroup != nullptr, "SMAABlendingWeightCalculationPass %s has a null shader resource group when calling Init.", GetPathName().GetCStr());
 
-            m_areaTexture = AZ::RPI::LoadStreamingTexture(PathToSMAAAreaTexture);
-            m_searchTexture = AZ::RPI::LoadStreamingTexture(PathToSMAASearchTexture);
+            m_areaTexture = JE::Render::RPI::LoadStreamingTexture(PathToSMAAAreaTexture);
+            m_searchTexture = JE::Render::RPI::LoadStreamingTexture(PathToSMAASearchTexture);
 
             m_areaTextureShaderInputIndex.Reset();
             m_searchTextureShaderInputIndex.Reset();
@@ -117,7 +117,7 @@ namespace AZ
             m_shaderResourceGroup->SetConstant(m_cornerRoundingShaderInputIndex, m_cornerRounding);
         }
 
-        void SMAABlendingWeightCalculationPass::GetCurrentShaderOption(AZ::RPI::ShaderOptionGroup& shaderOption) const
+        void SMAABlendingWeightCalculationPass::GetCurrentShaderOption(JE::Render::RPI::ShaderOptionGroup& shaderOption) const
         {
             shaderOption.SetValue(m_enableDiagonalDetectionFeatureOptionName, m_enableDiagonalDetection ? AZ::Name("true") : AZ::Name("false"));
             shaderOption.SetValue(m_enableCornerDetectionFeatureOptionName, m_enableCornerDetection ? AZ::Name("true") : AZ::Name("false"));

@@ -8,7 +8,7 @@
 
 #include "./Transform2DFunctorSourceData.h"
 #include <Atom/RHI.Reflect/ShaderResourceGroupLayout.h>
-#include <Atom/RPI.Reflect/Material/MaterialNameContext.h>
+#include <JE/Render/RPI/Reflect/Material/MaterialNameContext.h>
 #include <AzCore/Serialization/SerializeContext.h>
 
 namespace AZ
@@ -19,7 +19,7 @@ namespace AZ
         {
             if (auto* serializeContext = azrtti_cast<SerializeContext*>(context))
             {
-                serializeContext->Class<Transform2DFunctorSourceData, RPI::MaterialFunctorSourceData>()
+                serializeContext->Class<Transform2DFunctorSourceData, JE::Render::RPI::MaterialFunctorSourceData>()
                     ->Version(4)
                     ->Field("transformOrder", &Transform2DFunctorSourceData::m_transformOrder)
                     ->Field("centerProperty", &Transform2DFunctorSourceData::m_center)
@@ -34,11 +34,11 @@ namespace AZ
             }
         }
 
-        RPI::MaterialFunctorSourceData::FunctorResult Transform2DFunctorSourceData::CreateFunctor(const RuntimeContext& context) const
+        JE::Render::RPI::MaterialFunctorSourceData::FunctorResult Transform2DFunctorSourceData::CreateFunctor(const RuntimeContext& context) const
         {
-            using namespace RPI;
+            using namespace JE::Render::RPI;
 
-            RPI::Ptr<Transform2DFunctor> functor = aznew Transform2DFunctor;
+            JE::Render::RPI::Ptr<Transform2DFunctor> functor = aznew Transform2DFunctor;
 
             functor->m_center        = context.FindMaterialPropertyIndex(Name{ m_center });
             functor->m_scale         = context.FindMaterialPropertyIndex(Name{ m_scale });
@@ -100,7 +100,7 @@ namespace AZ
 
             SetFunctorShaderParameter(functor, GetMaterialShaderParameters(context.GetNameContext()));
 
-            return Success(RPI::Ptr<MaterialFunctor>(functor));
+            return Success(JE::Render::RPI::Ptr<MaterialFunctor>(functor));
         }
     }
 }

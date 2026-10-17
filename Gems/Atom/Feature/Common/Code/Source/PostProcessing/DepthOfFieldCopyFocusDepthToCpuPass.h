@@ -9,8 +9,8 @@
 
 #include <Atom/RHI/CopyItem.h>
 #include <Atom/RHI/ScopeProducer.h>
-#include <Atom/RPI.Public/Pass/Pass.h>
-#include <Atom/RPI.Public/Buffer/Buffer.h>
+#include <JE/Render/RPI/Public/Pass/Pass.h>
+#include <JE/Render/RPI/Public/Buffer/Buffer.h>
 
 namespace AZ
 {
@@ -18,7 +18,7 @@ namespace AZ
     {
         //! This pass is used to read back the depth value written to the buffer.
         class DepthOfFieldCopyFocusDepthToCpuPass final
-            : public RPI::Pass
+            : public JE::Render::RPI::Pass
             , public RHI::ScopeProducer
         {
             AZ_RPI_PASS(DepthOfFieldCopyFocusDepthToCpuPass);
@@ -28,15 +28,15 @@ namespace AZ
             AZ_CLASS_ALLOCATOR(DepthOfFieldCopyFocusDepthToCpuPass, SystemAllocator);
 
             //! Creates an DepthOfFieldCopyFocusDepthToCpuPass
-            static RPI::Ptr<DepthOfFieldCopyFocusDepthToCpuPass> Create(const RPI::PassDescriptor& descriptor);
+            static JE::Render::RPI::Ptr<DepthOfFieldCopyFocusDepthToCpuPass> Create(const JE::Render::RPI::PassDescriptor& descriptor);
 
             ~DepthOfFieldCopyFocusDepthToCpuPass() = default;
 
-            void SetBufferRef(RPI::Ptr<RPI::Buffer> bufferRef);
+            void SetBufferRef(JE::Render::RPI::Ptr<JE::Render::RPI::Buffer> bufferRef);
             float GetFocusDepth();
 
         private:
-            explicit DepthOfFieldCopyFocusDepthToCpuPass(const RPI::PassDescriptor& descriptor);
+            explicit DepthOfFieldCopyFocusDepthToCpuPass(const JE::Render::RPI::PassDescriptor& descriptor);
 
             // Scope producer functions
             void SetupFrameGraphDependencies(RHI::FrameGraphInterface frameGraph) override;
@@ -47,8 +47,8 @@ namespace AZ
             void BuildInternal() override;
             void FrameBeginInternal(FramePrepareParams params) override;
 
-            RPI::Ptr<RPI::Buffer> m_bufferRef;
-            Data::Instance<RPI::Buffer> m_readbackBuffer;
+            JE::Render::RPI::Ptr<JE::Render::RPI::Buffer> m_bufferRef;
+            Data::Instance<JE::Render::RPI::Buffer> m_readbackBuffer;
             RHI::CopyBufferDescriptor m_copyDescriptor;
             bool m_needsInitialize = true;
             RHI::Ptr<RHI::Fence> m_fence;

@@ -6,10 +6,10 @@
  *
  */
 
-#include <Atom/RPI.Reflect/Asset/AssetUtils.h>
-#include <Atom/RPI.Reflect/Image/AttachmentImageAsset.h>
-#include <Atom/RPI.Reflect/Image/StreamingImageAsset.h>
-#include <Atom/RPI.Reflect/Material/MaterialAsset.h>
+#include <JE/Render/RPI/Reflect/Asset/AssetUtils.h>
+#include <JE/Render/RPI/Reflect/Image/AttachmentImageAsset.h>
+#include <JE/Render/RPI/Reflect/Image/StreamingImageAsset.h>
+#include <JE/Render/RPI/Reflect/Material/MaterialAsset.h>
 #include <AzCore/Asset/AssetSerializer.h>
 #include <AzCore/Instance/InstanceDatabase.h>
 #include <AzCore/Serialization/SerializeContext.h>
@@ -251,7 +251,7 @@ namespace JE
         void MaterialComponentController::LoadMaterials()
         {
             // Caching previously loaded unique materials to avoid unloading and reloading assets that have not changed
-            AZStd::unordered_map<AZ::Data::AssetId, AZ::Data::Asset<AZ::RPI::MaterialAsset>> uniqueMaterialMapBeforeLoad;
+            AZStd::unordered_map<AZ::Data::AssetId, AZ::Data::Asset<JE::Render::RPI::MaterialAsset>> uniqueMaterialMapBeforeLoad;
             AZStd::swap(uniqueMaterialMapBeforeLoad, m_uniqueMaterialMap);
 
             // Clear any previously loaded or queued material assets, instances, or notifications
@@ -356,7 +356,7 @@ namespace JE
         void MaterialComponentController::InitializeNotifiedMaterialAsset(AZ::Data::Asset<AZ::Data::AssetData> asset)
         {
             bool allReady = true;
-            auto updateAsset = [&](AZ::Data::Asset<AZ::RPI::MaterialAsset>& materialAsset)
+            auto updateAsset = [&](AZ::Data::Asset<JE::Render::RPI::MaterialAsset>& materialAsset)
             {
                 if (materialAsset.GetId() == asset.GetId())
                 {
@@ -626,14 +626,14 @@ namespace JE
                 if (materialIt->second.m_materialAsset.GetId() != materialAssetId)
                 {
                     materialIt->second.m_materialAsset =
-                        AZ::Data::Asset<AZ::RPI::MaterialAsset>(materialAssetId, AZ::AzTypeInfo<AZ::RPI::MaterialAsset>::Uuid());
+                        AZ::Data::Asset<JE::Render::RPI::MaterialAsset>(materialAssetId, AZ::AzTypeInfo<JE::Render::RPI::MaterialAsset>::Uuid());
                     QueueLoadMaterials();
                     return;
                 }
             }
 
             m_configuration.m_materials[materialAssignmentId].m_materialAsset =
-                AZ::Data::Asset<AZ::RPI::MaterialAsset>(materialAssetId, AZ::AzTypeInfo<AZ::RPI::MaterialAsset>::Uuid());
+                AZ::Data::Asset<JE::Render::RPI::MaterialAsset>(materialAssetId, AZ::AzTypeInfo<JE::Render::RPI::MaterialAsset>::Uuid());
             QueueLoadMaterials();
         }
 
@@ -698,7 +698,7 @@ namespace JE
         AZStd::any MaterialComponentController::GetPropertyValue(
             const MaterialAssignmentId& materialAssignmentId, const AZStd::string& propertyName) const
         {
-            AZ::Data::Asset<AZ::RPI::MaterialAsset> materialAsset;
+            AZ::Data::Asset<JE::Render::RPI::MaterialAsset> materialAsset;
 
             // First, check if there is an explicit property value override matching the name and material slot
             const auto materialIt = m_configuration.m_materials.find(materialAssignmentId);
@@ -737,7 +737,7 @@ namespace JE
                 if (index.IsValid())
                 {
                     auto propertyValue = materialAsset->GetPropertyValues()[index.GetIndex()];
-                    return ConvertAssetsForSerialization(AZ::RPI::MaterialPropertyValue::ToAny(propertyValue));
+                    return ConvertAssetsForSerialization(JE::Render::RPI::MaterialPropertyValue::ToAny(propertyValue));
                 }
             }
 
@@ -828,7 +828,7 @@ namespace JE
         MaterialPropertyOverrideMap MaterialComponentController::GetPropertyValues(const MaterialAssignmentId& materialAssignmentId) const
         {
             MaterialPropertyOverrideMap properties;
-            AZ::Data::Asset<AZ::RPI::MaterialAsset> materialAsset;
+            AZ::Data::Asset<JE::Render::RPI::MaterialAsset> materialAsset;
 
             const auto materialIt = m_configuration.m_materials.find(materialAssignmentId);
             if (materialIt != m_configuration.m_materials.end())
@@ -860,10 +860,10 @@ namespace JE
                 const auto layout = materialAsset->GetMaterialPropertiesLayout();
                 for (size_t propertyIndex = 0; propertyIndex < layout->GetPropertyCount(); ++propertyIndex)
                 {
-                    auto descriptor = layout->GetPropertyDescriptor(AZ::RPI::MaterialPropertyIndex{ propertyIndex });
+                    auto descriptor = layout->GetPropertyDescriptor(JE::Render::RPI::MaterialPropertyIndex{ propertyIndex });
                     auto propertyValue = materialAsset->GetPropertyValues()[propertyIndex];
                     properties.emplace(descriptor->GetName().GetStringView(),
-                                       ConvertAssetsForSerialization(AZ::RPI::MaterialPropertyValue::ToAny(propertyValue)));
+                                       ConvertAssetsForSerialization(JE::Render::RPI::MaterialPropertyValue::ToAny(propertyValue)));
                 }
             }
 
@@ -871,7 +871,7 @@ namespace JE
         }
 
         void MaterialComponentController::SetModelUvOverrides(
-            const MaterialAssignmentId& materialAssignmentId, const AZ::RPI::MaterialModelUvOverrideMap& modelUvOverrides)
+            const MaterialAssignmentId& materialAssignmentId, const JE::Render::RPI::MaterialModelUvOverrideMap& modelUvOverrides)
         {
             auto& materialAssignment = m_configuration.m_materials[materialAssignmentId];
             materialAssignment.m_matModUvOverrides = modelUvOverrides;
@@ -888,12 +888,12 @@ namespace JE
             QueueMaterialsUpdatedNotification();
         }
 
-        AZ::RPI::MaterialModelUvOverrideMap MaterialComponentController::GetModelUvOverrides(
+        JE::Render::RPI::MaterialModelUvOverrideMap MaterialComponentController::GetModelUvOverrides(
             const MaterialAssignmentId& materialAssignmentId) const
         {
             const auto materialIt = m_configuration.m_materials.find(materialAssignmentId);
             return materialIt != m_configuration.m_materials.end() ? materialIt->second.m_matModUvOverrides
-                                                                   : AZ::RPI::MaterialModelUvOverrideMap();
+                                                                   : JE::Render::RPI::MaterialModelUvOverrideMap();
         }
 
         void MaterialComponentController::OnMaterialAssignmentSlotsChanged()
@@ -948,17 +948,17 @@ namespace JE
             {
                 return AZStd::any(AZStd::any_cast<AZ::Data::Asset<AZ::Data::AssetData>>(value).GetId());
             }
-            if (value.is<AZ::Data::Asset<AZ::RPI::AttachmentImageAsset>>())
+            if (value.is<AZ::Data::Asset<JE::Render::RPI::AttachmentImageAsset>>())
             {
-                return AZStd::any(AZStd::any_cast<AZ::Data::Asset<AZ::RPI::AttachmentImageAsset>>(value).GetId());
+                return AZStd::any(AZStd::any_cast<AZ::Data::Asset<JE::Render::RPI::AttachmentImageAsset>>(value).GetId());
             }
-            if (value.is<AZ::Data::Asset<AZ::RPI::StreamingImageAsset>>())
+            if (value.is<AZ::Data::Asset<JE::Render::RPI::StreamingImageAsset>>())
             {
-                return AZStd::any(AZStd::any_cast<AZ::Data::Asset<AZ::RPI::StreamingImageAsset>>(value).GetId());
+                return AZStd::any(AZStd::any_cast<AZ::Data::Asset<JE::Render::RPI::StreamingImageAsset>>(value).GetId());
             }
-            if (value.is<AZ::Data::Asset<AZ::RPI::ImageAsset>>())
+            if (value.is<AZ::Data::Asset<JE::Render::RPI::ImageAsset>>())
             {
-                return AZStd::any(AZStd::any_cast<AZ::Data::Asset<AZ::RPI::ImageAsset>>(value).GetId());
+                return AZStd::any(AZStd::any_cast<AZ::Data::Asset<JE::Render::RPI::ImageAsset>>(value).GetId());
             }
 
             return value;

@@ -23,7 +23,7 @@ ly_add_target(
             JE::RenderIntegration.Public
             Gem::Atom_RHI.Public
             Gem::Atom_RHI.Reflect
-            Gem::Atom_RPI.Public
+            JE::RenderIntegration
             Gem::AudioSystem.API
 )
 
@@ -45,7 +45,7 @@ ly_add_target(
             JE::RenderIntegration.Public
             Gem::Atom_RHI.Public
             Gem::Atom_RHI.Reflect
-            Gem::Atom_RPI.Public
+            JE::RenderIntegration
 
     RUNTIME_DEPENDENCIES
         Gem::LmbrCentral
@@ -94,7 +94,7 @@ if (PAL_TRAIT_BUILD_HOST_TOOLS)
                 JE::RenderIntegration.Public
                 Gem::Atom_RHI.Public
                 Gem::Atom_RHI.Reflect
-                Gem::Atom_RPI.Public
+                JE::RenderIntegration
 
         RUNTIME_DEPENDENCIES
             Gem::LmbrCentral.Editor

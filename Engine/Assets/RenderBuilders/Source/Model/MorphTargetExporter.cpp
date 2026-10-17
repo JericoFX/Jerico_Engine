@@ -7,7 +7,7 @@
  */
 
 #include <Model/MorphTargetExporter.h>
-#include <Atom/RPI.Reflect/Model/MorphTargetDelta.h>
+#include <JE/Render/RPI/Reflect/Model/MorphTargetDelta.h>
 #include <SceneAPI/SceneCore/Containers/Utilities/Filters.h>
 #include <SceneAPI/SceneCore/Containers/Utilities/SceneGraphUtilities.h>
 #include <SceneAPI/SceneCore/Utilities/SceneGraphSelector.h>
@@ -68,7 +68,7 @@ namespace JE::Assets::RenderBuilders
         const AZ::SceneAPI::Containers::Scene& scene,
         const ModelAssetBuilderComponent::SourceMeshContent& sourceMesh,
         ModelAssetBuilderComponent::ProductMeshContent& productMesh,
-        AZ::RPI::MorphTargetMetaAssetCreator& metaAssetCreator,
+        JE::Render::RPI::MorphTargetMetaAssetCreator& metaAssetCreator,
         const AZ::SceneAPI::CoordinateSystemConverter& coordSysConverter)
     {
         const AZ::SceneAPI::Containers::SceneGraph& sceneGraph = scene.GetGraph();
@@ -143,7 +143,7 @@ namespace JE::Assets::RenderBuilders
         const AZStd::map<uint32_t, uint32_t>& oldToNewIndicesMap,
         const ModelAssetBuilderComponent::SourceMeshContent& sourceMesh,
         ModelAssetBuilderComponent::ProductMeshContent& productMesh,
-        AZ::RPI::MorphTargetMetaAssetCreator& metaAssetCreator,
+        JE::Render::RPI::MorphTargetMetaAssetCreator& metaAssetCreator,
         const AZStd::string& blendShapeName,
         const AZStd::shared_ptr<const AZ::SceneAPI::DataTypes::IBlendShapeData>& blendShapeData,
         const AZ::SceneAPI::DataTypes::MatrixType& globalTransform,
@@ -153,9 +153,9 @@ namespace JE::Assets::RenderBuilders
         const float tolerance = CalcPositionDeltaTolerance(sourceMesh);
         AZ::Aabb deltaPositionAabb = AZ::Aabb::CreateNull();
 
-        AZStd::vector<AZ::RPI::PackedCompressedMorphTargetDelta>& packedCompressedMorphTargetVertexData = productMesh.m_morphTargetVertexData;
+        AZStd::vector<JE::Render::RPI::PackedCompressedMorphTargetDelta>& packedCompressedMorphTargetVertexData = productMesh.m_morphTargetVertexData;
 
-        AZ::RPI::MorphTargetMetaAsset::MorphTarget metaData;
+        JE::Render::RPI::MorphTargetMetaAsset::MorphTarget metaData;
         metaData.m_meshNodeName = sourceMesh.m_name.GetStringView();
         metaData.m_morphTargetName = blendShapeName;
         metaData.m_meshIndex = productMeshIndex;
@@ -185,7 +185,7 @@ namespace JE::Assets::RenderBuilders
         AZStd::vector<AZ::Vector3> uncompressedPositionDeltas;
         uncompressedPositionDeltas.reserve(numVertices);
 
-        AZStd::vector<AZ::RPI::CompressedMorphTargetDelta> compressedDeltas;
+        AZStd::vector<JE::Render::RPI::CompressedMorphTargetDelta> compressedDeltas;
         compressedDeltas.reserve(numVertices);
 
         uint32_t numMorphedVertices = 0;
@@ -205,8 +205,8 @@ namespace JE::Assets::RenderBuilders
             {
                 // Add a new delta
                 numMorphedVertices++;
-                compressedDeltas.emplace_back(AZ::RPI::CompressedMorphTargetDelta{});
-                AZ::RPI::CompressedMorphTargetDelta& currentDelta = compressedDeltas.back();
+                compressedDeltas.emplace_back(JE::Render::RPI::CompressedMorphTargetDelta{});
+                JE::Render::RPI::CompressedMorphTargetDelta& currentDelta = compressedDeltas.back();
 
                 // Set the morphed index
                 const auto& iter = oldToNewIndicesMap.find(vertexIndex);
@@ -239,25 +239,25 @@ namespace JE::Assets::RenderBuilders
 
                     const AZ::Vector3 deltaNormal = targetNormal - neutralNormal;
 
-                    currentDelta.m_normalX = Compress<uint8_t>(deltaNormal.GetX(), AZ::RPI::MorphTargetDeltaConstants::s_tangentSpaceDeltaMin, AZ::RPI::MorphTargetDeltaConstants::s_tangentSpaceDeltaMax);
-                    currentDelta.m_normalY = Compress<uint8_t>(deltaNormal.GetY(), AZ::RPI::MorphTargetDeltaConstants::s_tangentSpaceDeltaMin, AZ::RPI::MorphTargetDeltaConstants::s_tangentSpaceDeltaMax);
-                    currentDelta.m_normalZ = Compress<uint8_t>(deltaNormal.GetZ(), AZ::RPI::MorphTargetDeltaConstants::s_tangentSpaceDeltaMin, AZ::RPI::MorphTargetDeltaConstants::s_tangentSpaceDeltaMax);
+                    currentDelta.m_normalX = Compress<uint8_t>(deltaNormal.GetX(), JE::Render::RPI::MorphTargetDeltaConstants::s_tangentSpaceDeltaMin, JE::Render::RPI::MorphTargetDeltaConstants::s_tangentSpaceDeltaMax);
+                    currentDelta.m_normalY = Compress<uint8_t>(deltaNormal.GetY(), JE::Render::RPI::MorphTargetDeltaConstants::s_tangentSpaceDeltaMin, JE::Render::RPI::MorphTargetDeltaConstants::s_tangentSpaceDeltaMax);
+                    currentDelta.m_normalZ = Compress<uint8_t>(deltaNormal.GetZ(), JE::Render::RPI::MorphTargetDeltaConstants::s_tangentSpaceDeltaMin, JE::Render::RPI::MorphTargetDeltaConstants::s_tangentSpaceDeltaMax);
                 }
 
                 // Tangent
                 {
                     // Insert zero-delta until morphed tangents are supported in SceneAPI
-                    currentDelta.m_tangentX = Compress<uint8_t>(0.0f, AZ::RPI::MorphTargetDeltaConstants::s_tangentSpaceDeltaMin, AZ::RPI::MorphTargetDeltaConstants::s_tangentSpaceDeltaMax);
-                    currentDelta.m_tangentY = Compress<uint8_t>(0.0f, AZ::RPI::MorphTargetDeltaConstants::s_tangentSpaceDeltaMin, AZ::RPI::MorphTargetDeltaConstants::s_tangentSpaceDeltaMax);
-                    currentDelta.m_tangentZ = Compress<uint8_t>(0.0f, AZ::RPI::MorphTargetDeltaConstants::s_tangentSpaceDeltaMin, AZ::RPI::MorphTargetDeltaConstants::s_tangentSpaceDeltaMax);
+                    currentDelta.m_tangentX = Compress<uint8_t>(0.0f, JE::Render::RPI::MorphTargetDeltaConstants::s_tangentSpaceDeltaMin, JE::Render::RPI::MorphTargetDeltaConstants::s_tangentSpaceDeltaMax);
+                    currentDelta.m_tangentY = Compress<uint8_t>(0.0f, JE::Render::RPI::MorphTargetDeltaConstants::s_tangentSpaceDeltaMin, JE::Render::RPI::MorphTargetDeltaConstants::s_tangentSpaceDeltaMax);
+                    currentDelta.m_tangentZ = Compress<uint8_t>(0.0f, JE::Render::RPI::MorphTargetDeltaConstants::s_tangentSpaceDeltaMin, JE::Render::RPI::MorphTargetDeltaConstants::s_tangentSpaceDeltaMax);
                 }
 
                 // Bitangent
                 {
                     // Insert zero-delta until morphed bitangents are supported in SceneAPI
-                    currentDelta.m_bitangentX = Compress<uint8_t>(0.0f, AZ::RPI::MorphTargetDeltaConstants::s_tangentSpaceDeltaMin, AZ::RPI::MorphTargetDeltaConstants::s_tangentSpaceDeltaMax);
-                    currentDelta.m_bitangentY = Compress<uint8_t>(0.0f, AZ::RPI::MorphTargetDeltaConstants::s_tangentSpaceDeltaMin, AZ::RPI::MorphTargetDeltaConstants::s_tangentSpaceDeltaMax);
-                    currentDelta.m_bitangentZ = Compress<uint8_t>(0.0f, AZ::RPI::MorphTargetDeltaConstants::s_tangentSpaceDeltaMin, AZ::RPI::MorphTargetDeltaConstants::s_tangentSpaceDeltaMax);
+                    currentDelta.m_bitangentX = Compress<uint8_t>(0.0f, JE::Render::RPI::MorphTargetDeltaConstants::s_tangentSpaceDeltaMin, JE::Render::RPI::MorphTargetDeltaConstants::s_tangentSpaceDeltaMax);
+                    currentDelta.m_bitangentY = Compress<uint8_t>(0.0f, JE::Render::RPI::MorphTargetDeltaConstants::s_tangentSpaceDeltaMin, JE::Render::RPI::MorphTargetDeltaConstants::s_tangentSpaceDeltaMax);
+                    currentDelta.m_bitangentZ = Compress<uint8_t>(0.0f, JE::Render::RPI::MorphTargetDeltaConstants::s_tangentSpaceDeltaMin, JE::Render::RPI::MorphTargetDeltaConstants::s_tangentSpaceDeltaMax);
                 }
             }
         }
@@ -316,7 +316,7 @@ namespace JE::Assets::RenderBuilders
             packedCompressedMorphTargetVertexData.reserve(packedCompressedMorphTargetVertexData.size() + compressedDeltas.size());
             for (size_t i = 0; i < compressedDeltas.size(); ++i)
             {
-                packedCompressedMorphTargetVertexData.emplace_back(AZ::RPI::PackMorphTargetDelta(compressedDeltas[i]));
+                packedCompressedMorphTargetVertexData.emplace_back(JE::Render::RPI::PackMorphTargetDelta(compressedDeltas[i]));
             }
 
             AZ_Assert((packedCompressedMorphTargetVertexData.size() - metaData.m_startIndex) == numMorphedVertices, "Vertex index range (%d) in morph target meta data does not match number of morphed vertices (%d).",
@@ -332,9 +332,9 @@ namespace JE::Assets::RenderBuilders
         }
     }
 
-    AZ::Data::Asset<AZ::RPI::StreamingImageAsset> MorphTargetExporter::GetWrinkleMask(const AZStd::string& sourceSceneFullFilePath, const AZStd::string& blendShapeName) const
+    AZ::Data::Asset<JE::Render::RPI::StreamingImageAsset> MorphTargetExporter::GetWrinkleMask(const AZStd::string& sourceSceneFullFilePath, const AZStd::string& blendShapeName) const
     {
-        AZ::Data::Asset<AZ::RPI::StreamingImageAsset> imageAsset;
+        AZ::Data::Asset<JE::Render::RPI::StreamingImageAsset> imageAsset;
 
         // See if there is a wrinkle map mask for this mesh
         AZStd::string sceneRelativeFilePath;

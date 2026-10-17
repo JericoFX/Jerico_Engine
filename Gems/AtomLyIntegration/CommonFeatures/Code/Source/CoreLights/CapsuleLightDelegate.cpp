@@ -7,7 +7,7 @@
  */
 
 #include <Atom/Feature/CoreLights/CapsuleLightFeatureProcessorInterface.h>
-#include <Atom/RPI.Public/Scene.h>
+#include <JE/Render/RPI/Public/Scene.h>
 #include <AtomLyIntegration/CommonFeatures/CoreLights/AreaLightComponentConfig.h>
 #include <CoreLights/CapsuleLightDelegate.h>
 

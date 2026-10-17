@@ -33,16 +33,16 @@
 #pragma once
 
 #include <AzCore/Component/Component.h>
-#include <Atom/RPI.Public/FeatureProcessor.h>
-#include <Atom/RPI.Public/Pass/Pass.h>
+#include <JE/Render/RPI/Public/FeatureProcessor.h>
+#include <JE/Render/RPI/Public/Pass/Pass.h>
 
 namespace ${GemName}
 {
     class ${SanitizedCppName}FeatureProcessor final
-        : public AZ::RPI::FeatureProcessor
+        : public JE::Render::RPI::FeatureProcessor
     {
     public:
-        AZ_RTTI(${GemName}::${SanitizedCppName}FeatureProcessor, "{${Random_Uuid}}", AZ::RPI::FeatureProcessor);
+        AZ_RTTI(${GemName}::${SanitizedCppName}FeatureProcessor, "{${Random_Uuid}}", JE::Render::RPI::FeatureProcessor);
         AZ_CLASS_ALLOCATOR(${SanitizedCppName}FeatureProcessor, AZ::SystemAllocator);
 
         static void Reflect(AZ::ReflectContext* context);
@@ -57,7 +57,7 @@ namespace ${GemName}
 
         //! Called by Atom once per pipeline before pass finalization.
         //! This is where the pass gets spliced into the pipeline graph.
-        void AddRenderPasses(AZ::RPI::RenderPipeline* renderPipeline) override;
+        void AddRenderPasses(JE::Render::RPI::RenderPipeline* renderPipeline) override;
 
         //! Per-frame hook -- used here only to honour the runtime CVar toggle.
         void OnRenderEnd() override;
@@ -65,8 +65,8 @@ namespace ${GemName}
     private:
         void SetPassEnabled(bool enabled);
 
-        AZ::RPI::Pass*           m_pass = nullptr;
-        AZ::RPI::RenderPipeline* m_renderPipeline = nullptr;
+        JE::Render::RPI::Pass*           m_pass = nullptr;
+        JE::Render::RPI::RenderPipeline* m_renderPipeline = nullptr;
     };
 
 } // namespace ${GemName}

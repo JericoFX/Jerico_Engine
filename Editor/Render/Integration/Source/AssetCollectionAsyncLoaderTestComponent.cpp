@@ -18,10 +18,10 @@
 #include <AzCore/Serialization/Json/JsonUtils.h>
 
 // Included so we can deduce the asset type from asset paths.
-#include <Atom/RPI.Edit/Common/JsonUtils.h>
-#include <Atom/RPI.Reflect/Shader/ShaderAsset.h>
-#include <Atom/RPI.Reflect/Model/ModelAsset.h>
-#include <Atom/RPI.Reflect/Image/StreamingImageAsset.h>
+#include <JE/Editor/Render/RPI/Edit/Common/JsonUtils.h>
+#include <JE/Render/RPI/Reflect/Shader/ShaderAsset.h>
+#include <JE/Render/RPI/Reflect/Model/ModelAsset.h>
+#include <JE/Render/RPI/Reflect/Image/StreamingImageAsset.h>
 #include <AzFramework/Translation/TranslationDef.h>
 
 namespace JE::Editor::RenderIntegration
@@ -116,7 +116,7 @@ namespace JE::Editor::RenderIntegration
         {
             rapidjson::Document jsonDoc;
 
-            auto readJsonResult = AZ::JsonSerializationUtils::ReadJsonFile(pathToAssetListJson, AZ::RPI::JsonUtils::DefaultMaxFileSize);
+            auto readJsonResult = AZ::JsonSerializationUtils::ReadJsonFile(pathToAssetListJson, JE::Render::RPI::JsonUtils::DefaultMaxFileSize);
 
             if (!readJsonResult.IsSuccess())
             {
@@ -149,15 +149,15 @@ namespace JE::Editor::RenderIntegration
 
             if (extension == "azshader")
             {
-                return azrtti_typeid<AZ::RPI::ShaderAsset>();
+                return azrtti_typeid<JE::Render::RPI::ShaderAsset>();
             }
             else if (extension == "azmodel")
             {
-                return azrtti_typeid<AZ::RPI::ModelAsset>();
+                return azrtti_typeid<JE::Render::RPI::ModelAsset>();
             }
             else if (extension == "streamingimage")
             {
-                return azrtti_typeid<AZ::RPI::StreamingImageAsset>();
+                return azrtti_typeid<JE::Render::RPI::StreamingImageAsset>();
             }
 
             AZ_Error(AssetCollectionAsyncLoaderTestComponentName, false, "Do not know the asset type for file: %s", assetPath.c_str());
@@ -246,20 +246,20 @@ namespace JE::Editor::RenderIntegration
         bool AssetCollectionAsyncLoaderTestComponent::ValidateAssetWasLoaded(const AZStd::string& assetPath) const
         {
             AZ::Data::AssetType assetType = GetAssetTypeFromAssetPath(assetPath);
-            if (assetType == azrtti_typeid<AZ::RPI::ShaderAsset>())
+            if (assetType == azrtti_typeid<JE::Render::RPI::ShaderAsset>())
             {
-                auto asset = m_assetCollectionAsyncLoader->GetAsset<AZ::RPI::ShaderAsset>(assetPath);
+                auto asset = m_assetCollectionAsyncLoader->GetAsset<JE::Render::RPI::ShaderAsset>(assetPath);
                 return (bool)asset && asset.GetId().IsValid() && asset.IsReady() && !asset->GetName().IsEmpty();
 
             }
-            else if (assetType == azrtti_typeid<AZ::RPI::ModelAsset>())
+            else if (assetType == azrtti_typeid<JE::Render::RPI::ModelAsset>())
             {
-                auto asset = m_assetCollectionAsyncLoader->GetAsset<AZ::RPI::ModelAsset>(assetPath);
+                auto asset = m_assetCollectionAsyncLoader->GetAsset<JE::Render::RPI::ModelAsset>(assetPath);
                 return (bool)asset && asset.GetId().IsValid() && asset.IsReady() && asset->GetLodCount();
             }
-            else if (assetType == azrtti_typeid<AZ::RPI::StreamingImageAsset>())
+            else if (assetType == azrtti_typeid<JE::Render::RPI::StreamingImageAsset>())
             {
-                auto asset = m_assetCollectionAsyncLoader->GetAsset<AZ::RPI::StreamingImageAsset>(assetPath);
+                auto asset = m_assetCollectionAsyncLoader->GetAsset<JE::Render::RPI::StreamingImageAsset>(assetPath);
                 return (bool)asset && asset.GetId().IsValid() && asset.IsReady() && asset->GetTotalImageDataSize();
             }
 

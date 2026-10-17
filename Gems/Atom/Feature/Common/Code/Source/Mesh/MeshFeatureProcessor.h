@@ -14,9 +14,9 @@
 #include <Atom/Feature/Mesh/MeshInfo.h>
 #include <Atom/Feature/Mesh/ModelReloaderSystemInterface.h>
 #include <Atom/RHI/TagBitRegistry.h>
-#include <Atom/RPI.Public/Culling.h>
-#include <Atom/RPI.Public/MeshDrawPacket.h>
-#include <Atom/RPI.Public/Shader/ShaderSystemInterface.h>
+#include <JE/Render/RPI/Public/Culling.h>
+#include <JE/Render/RPI/Public/MeshDrawPacket.h>
+#include <JE/Render/RPI/Public/Shader/ShaderSystemInterface.h>
 #include <AzCore/Asset/AssetCommon.h>
 #include <AzCore/Component/TickBus.h>
 #include <AzCore/Console/Console.h>
@@ -47,16 +47,16 @@ namespace AZ
             AZ_RTTI(AZ::Render::ModelDataInstance, "{AF38DCED-9692-4B88-8738-9710BA70F49C}", AZ::Render::ModelDataInstanceInterface);
             ModelDataInstance();
 
-            const Data::Instance<RPI::Model>& GetModel() override
+            const Data::Instance<JE::Render::RPI::Model>& GetModel() override
             {
                 return m_model;
             }
-            const Data::Asset<RPI::ModelAsset>& GetProductModelAsset() override
+            const Data::Asset<JE::Render::RPI::ModelAsset>& GetProductModelAsset() override
             {
                 return m_descriptor.m_productModelAsset;
             }
 
-            const RPI::Cullable& GetCullable() override
+            const JE::Render::RPI::Cullable& GetCullable() override
             {
                 return m_cullable;
             }
@@ -86,7 +86,7 @@ namespace AZ
                 return m_objectId;
             }
 
-            void HandleDrawPacketUpdate(uint32_t lodIndex, uint32_t meshIndex, RPI::MeshDrawPacket& meshDrawPacket) override;
+            void HandleDrawPacketUpdate(uint32_t lodIndex, uint32_t meshIndex, JE::Render::RPI::MeshDrawPacket& meshDrawPacket) override;
             void ConnectMeshDrawPacketUpdatedHandler(MeshDrawPacketUpdatedEvent::Handler& handler) override;
 
             CustomMaterialInfo GetCustomMaterialWithFallback(const CustomMaterialId& id) const override;
@@ -98,7 +98,7 @@ namespace AZ
                 , private AzFramework::AssetCatalogEventBus::Handler
             {
             public:
-                MeshLoader(const Data::Asset<RPI::ModelAsset>& modelAsset, ModelDataInstance* parent);
+                MeshLoader(const Data::Asset<JE::Render::RPI::ModelAsset>& modelAsset, ModelDataInstance* parent);
                 ~MeshLoader();
 
             private:
@@ -115,11 +115,11 @@ namespace AZ
                 void OnCatalogAssetAdded(const AZ::Data::AssetId& assetId) override;
 
                 void OnModelReloaded(Data::Asset<Data::AssetData> asset);
-                ModelReloadedEvent::Handler m_modelReloadedEventHandler{ [&](Data::Asset<RPI::ModelAsset> modelAsset)
+                ModelReloadedEvent::Handler m_modelReloadedEventHandler{ [&](Data::Asset<JE::Render::RPI::ModelAsset> modelAsset)
                                                                          {
                                                                              OnModelReloaded(modelAsset);
                                                                          } };
-                Data::Asset<RPI::ModelAsset> m_modelAsset;
+                Data::Asset<JE::Render::RPI::ModelAsset> m_modelAsset;
                 ModelDataInstance* m_parent = nullptr;
             };// class MeshLoader
 
@@ -128,7 +128,7 @@ namespace AZ
             // Clear all the data that is created by the MeshFeatureProcessor, such as the draw packets, cullable, and ray-tracing data,
             // but preserve all the settings such as the model, material assignment, etc., then queue it for re-initialization
             void ReInit(MeshFeatureProcessor* meshFeatureProcessor);
-            void QueueInit(const Data::Instance<RPI::Model>& model);
+            void QueueInit(const Data::Instance<JE::Render::RPI::Model>& model);
             void Init(MeshFeatureProcessor* meshFeatureProcessor);
             void UpdateMeshInfo(MeshFeatureProcessor* meshFeatureProcessor, size_t modelLodIndex);
             void RemoveMeshInfo(MeshFeatureProcessor* meshFeatureProcessor);
@@ -140,19 +140,19 @@ namespace AZ
             void RemoveDeferredMaterialData(MeshFeatureProcessor* meshFeatureProcessor);
             RHI::DrawItemSortKey GetSortKey() const;
             void SetLightingChannelMask(MeshFeatureProcessor* meshFeatureProcessor, uint32_t lightingChannelMask);
-            void SetMeshLodConfiguration(RPI::Cullable::LodConfiguration meshLodConfig);
-            RPI::Cullable::LodConfiguration GetMeshLodConfiguration() const;
+            void SetMeshLodConfiguration(JE::Render::RPI::Cullable::LodConfiguration meshLodConfig);
+            JE::Render::RPI::Cullable::LodConfiguration GetMeshLodConfiguration() const;
             void UpdateDrawPackets(bool forceUpdate = false);
             void BuildCullable();
             void UpdateCullBounds(const MeshFeatureProcessor* meshFeatureProcessor);
             void UpdateObjectSrg(MeshFeatureProcessor* meshFeatureProcessor);
-            bool MaterialRequiresForwardPassIblSpecular(Data::Instance<RPI::Material> material) const;
+            bool MaterialRequiresForwardPassIblSpecular(Data::Instance<JE::Render::RPI::Material> material) const;
             void SetVisible(bool isVisible);
 
             // When instancing is disabled, draw packets are owned by the ModelDataInstance
-            RPI::MeshDrawPacketLods m_meshDrawPacketListsByLod;
+            JE::Render::RPI::MeshDrawPacketLods m_meshDrawPacketListsByLod;
 
-            using MeshInfoIndicesLods = AZStd::fixed_vector<MeshInfoHandleList, RPI::ModelLodAsset::LodCountMax>;
+            using MeshInfoIndicesLods = AZStd::fixed_vector<MeshInfoHandleList, JE::Render::RPI::ModelLodAsset::LodCountMax>;
             MeshInfoIndicesLods m_meshInfoIndicesByLod;
             
             // When instancing is enabled, draw packets are owned by the MeshInstanceManager,
@@ -162,15 +162,15 @@ namespace AZ
             
             size_t m_lodBias = 0;
 
-            RPI::Cullable m_cullable;
+            JE::Render::RPI::Cullable m_cullable;
             MeshHandleDescriptor m_descriptor;
-            Data::Instance<RPI::Model> m_model;
+            Data::Instance<JE::Render::RPI::Model> m_model;
 
             //! A reference to the original model asset in case it got cloned before creating the model instance.
-            Data::Asset<RPI::ModelAsset> m_originalModelAsset;
+            Data::Asset<JE::Render::RPI::ModelAsset> m_originalModelAsset;
 
             //! List of object SRGs used by meshes in this model 
-            AZStd::vector<Data::Instance<RPI::ShaderResourceGroup>> m_objectSrgList;
+            AZStd::vector<Data::Instance<JE::Render::RPI::ShaderResourceGroup>> m_objectSrgList;
             //! Event that gets triggered whenever the model is changed, loaded, or reloaded.
             MeshHandleDescriptor::ModelChangedEvent m_modelChangedEvent;
 
@@ -183,7 +183,7 @@ namespace AZ
             // MeshLoader is a shared pointer because it can queue a reference to itself on the SystemTickBus. The reference
             // needs to stay alive until the queued function is executed.
             AZStd::shared_ptr<MeshLoader> m_meshLoader;
-            RPI::Scene* m_scene = nullptr;
+            JE::Render::RPI::Scene* m_scene = nullptr;
             RHI::DrawItemSortKey m_sortKey = 0;
             uint32_t m_lightingChannelMask = 1;
 
@@ -220,7 +220,7 @@ namespace AZ
 
             AZ_CONSOLEFUNC(MeshFeatureProcessor, ReportShaderOptionFlags, AZ::ConsoleFunctorFlags::Null, "Report currently used shader option flags.");
 
-            using FlagRegistry = RHI::TagBitRegistry<RPI::Cullable::FlagType>;
+            using FlagRegistry = RHI::TagBitRegistry<JE::Render::RPI::Cullable::FlagType>;
 
             static void Reflect(AZ::ReflectContext* context);
 
@@ -248,12 +248,12 @@ namespace AZ
 
             void PrintDrawPacketInfo(const MeshHandle& meshHandle) override;
             void SetDrawItemEnabled(const MeshHandle& meshHandle, RHI::DrawListTag drawListTag, bool enabled) override;
-            Data::Instance<RPI::Model> GetModel(const MeshHandle& meshHandle) const override;
-            Data::Asset<RPI::ModelAsset> GetModelAsset(const MeshHandle& meshHandle) const override;
-            const RPI::MeshDrawPacketLods& GetDrawPackets(const MeshHandle& meshHandle) const override;
-            const AZStd::vector<Data::Instance<RPI::ShaderResourceGroup>>& GetObjectSrgs(const MeshHandle& meshHandle) const override;
+            Data::Instance<JE::Render::RPI::Model> GetModel(const MeshHandle& meshHandle) const override;
+            Data::Asset<JE::Render::RPI::ModelAsset> GetModelAsset(const MeshHandle& meshHandle) const override;
+            const JE::Render::RPI::MeshDrawPacketLods& GetDrawPackets(const MeshHandle& meshHandle) const override;
+            const AZStd::vector<Data::Instance<JE::Render::RPI::ShaderResourceGroup>>& GetObjectSrgs(const MeshHandle& meshHandle) const override;
             void QueueObjectSrgForCompile(const MeshHandle& meshHandle) const override;
-            void SetCustomMaterials(const MeshHandle& meshHandle, const Data::Instance<RPI::Material>& material) override;
+            void SetCustomMaterials(const MeshHandle& meshHandle, const Data::Instance<JE::Render::RPI::Material>& material) override;
             void SetCustomMaterials(const MeshHandle& meshHandle, const CustomMaterialMap& materials) override;
             const CustomMaterialMap& GetCustomMaterials(const MeshHandle& meshHandle) const override;
             AZStd::unique_ptr<StreamBufferViewsBuilderInterface> CreateStreamBufferViewsBuilder(const MeshHandle& meshHandle) const override;
@@ -276,8 +276,8 @@ namespace AZ
             void SetLightingChannelMask(const MeshHandle& meshHandle, uint32_t lightingChannelMask) override;
             uint32_t GetLightingChannelMask(const MeshHandle& meshHandle) const override;
 
-            void SetMeshLodConfiguration(const MeshHandle& meshHandle, const RPI::Cullable::LodConfiguration& meshLodConfig) override;
-            RPI::Cullable::LodConfiguration GetMeshLodConfiguration(const MeshHandle& meshHandle) const override;
+            void SetMeshLodConfiguration(const MeshHandle& meshHandle, const JE::Render::RPI::Cullable::LodConfiguration& meshLodConfig) override;
+            JE::Render::RPI::Cullable::LodConfiguration GetMeshLodConfiguration(const MeshHandle& meshHandle) const override;
 
             void SetExcludeFromReflectionCubeMaps(const MeshHandle& meshHandle, bool excludeFromReflectionCubeMaps) override;
             bool GetExcludeFromReflectionCubeMaps(const MeshHandle& meshHandle) const override;
@@ -309,20 +309,20 @@ namespace AZ
             MeshInstanceManager& GetMeshInstanceManager();
             bool IsMeshInstancingEnabled() const;
 
-            const Data::Instance<RPI::ShaderResourceGroup>& GetDrawSrg(const MeshHandle& meshHandle, uint32_t lodIndex, uint32_t subMeshIndex,
+            const Data::Instance<JE::Render::RPI::ShaderResourceGroup>& GetDrawSrg(const MeshHandle& meshHandle, uint32_t lodIndex, uint32_t subMeshIndex,
                 RHI::DrawListTag drawListTag, RHI::DrawFilterMask materialPipelineMask) const override;
 
             const RHI::Ptr<MeshInfoEntry> GetMeshInfoEntry(const MeshInfoHandle handle) override;
             MeshInfoHandle AcquireMeshInfoEntry() override;
             void ReleaseMeshInfoEntry(const MeshInfoHandle handle) override;
             void UpdateMeshInfoEntry(const MeshInfoHandle handle, AZStd::function<bool(MeshInfoEntry*)> updateFunction) override;
-            const Data::Instance<RPI::Buffer>& GetMeshInfoBuffer() const override;
+            const Data::Instance<JE::Render::RPI::Buffer>& GetMeshInfoBuffer() const override;
             MeshInfoManager& GetMeshInfoManager();
 
             const RHI::Ptr<FallbackPBR::MaterialEntry> GetFallbackPBRMaterialEntry(const MeshInfoHandle handle) override;
             void UpdateFallbackPBRMaterialEntry(
                 const MeshInfoHandle handle, AZStd::function<bool(FallbackPBR::MaterialEntry*)> updateFunction) override;
-            const Data::Instance<RPI::Buffer>& GetFallbackPBRMaterialBuffer() const override;
+            const Data::Instance<JE::Render::RPI::Buffer>& GetFallbackPBRMaterialBuffer() const override;
             FallbackPBR::MaterialManager& GetFallbackPBRMaterialManager();
 
         private:
@@ -338,7 +338,7 @@ namespace AZ
             void PrintShaderOptionFlags();
 
             // RPI::SceneNotificationBus::Handler overrides...
-            void OnRenderPipelineChanged(AZ::RPI::RenderPipeline* pipeline, RPI::SceneNotification::RenderPipelineChangeType changeType) override;
+            void OnRenderPipelineChanged(JE::Render::RPI::RenderPipeline* pipeline, JE::Render::RPI::SceneNotification::RenderPipelineChangeType changeType) override;
 
             void CheckForInstancingCVarChange();
             AZStd::vector<AZ::Job*> CreateInitJobQueue();
@@ -349,10 +349,10 @@ namespace AZ
             
             
             void ResizePerViewInstanceVectors(size_t viewCount);
-            void AddVisibleObjectsToBuckets(TaskGraph& addVisibleObjectsToBucketsTG, size_t viewIndex, const RPI::ViewPtr& view);
+            void AddVisibleObjectsToBuckets(TaskGraph& addVisibleObjectsToBucketsTG, size_t viewIndex, const JE::Render::RPI::ViewPtr& view);
             void SortInstanceBufferBuckets(TaskGraph& sortInstanceBufferBucketsTG, size_t viewIndex);
-            void BuildInstanceBufferAndDrawCalls(TaskGraph& taskGraph, size_t viewIndex, const RPI::ViewPtr& view);
-            void UpdateGPUInstanceBufferForView(size_t viewIndex, const RPI::ViewPtr& view);
+            void BuildInstanceBufferAndDrawCalls(TaskGraph& taskGraph, size_t viewIndex, const JE::Render::RPI::ViewPtr& view);
+            void UpdateGPUInstanceBufferForView(size_t viewIndex, const JE::Render::RPI::ViewPtr& view);
 
             // Helper function for BuildDispatchDrawItemList()
             void InitializeDispatchItemFromDrawItem(
@@ -412,8 +412,8 @@ namespace AZ
             RayTracingFeatureProcessor* m_rayTracingFeatureProcessor = nullptr;
             DeferredMaterialFeatureProcessorInterface* m_deferredMaterialFeatureProcessor = nullptr;
             ReflectionProbeFeatureProcessor* m_reflectionProbeFeatureProcessor = nullptr;
-            AZ::RPI::ShaderSystemInterface::GlobalShaderOptionUpdatedEvent::Handler m_handleGlobalShaderOptionUpdate;
-            RPI::MeshDrawPacketLods m_emptyDrawPacketLods;
+            JE::Render::RPI::ShaderSystemInterface::GlobalShaderOptionUpdatedEvent::Handler m_handleGlobalShaderOptionUpdate;
+            JE::Render::RPI::MeshDrawPacketLods m_emptyDrawPacketLods;
             RHI::Ptr<FlagRegistry> m_flagRegistry = nullptr;
             AZ::RHI::Handle<uint32_t> m_meshMovedFlag;
             RHI::DrawListTag m_meshMotionDrawListTag;

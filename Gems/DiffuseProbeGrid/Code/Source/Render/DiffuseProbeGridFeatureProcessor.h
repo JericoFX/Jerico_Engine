@@ -11,8 +11,8 @@
 #include <DiffuseProbeGrid/DiffuseProbeGridFeatureProcessorInterface.h>
 #include <Atom/RHI/RayTracingBufferPools.h>
 #include <Atom/RHI/RayTracingAccelerationStructure.h>
-#include <Atom/RPI.Public/Buffer/RingBuffer.h>
-#include <Atom/RPI.Public/Model/Model.h>
+#include <JE/Render/RPI/Public/Buffer/RingBuffer.h>
+#include <JE/Render/RPI/Public/Model/Model.h>
 #include <Render/DiffuseProbeGrid.h>
 
 namespace AZ
@@ -72,7 +72,7 @@ namespace AZ
 
             bool CheckTextureAssetNotification(
                 const AZStd::string& relativePath,
-                Data::Asset<RPI::StreamingImageAsset>& outTextureAsset,
+                Data::Asset<JE::Render::RPI::StreamingImageAsset>& outTextureAsset,
                 DiffuseProbeGridTextureNotificationType& outNotificationType) override;
 
             bool AreBakedTexturesReferenced(
@@ -113,15 +113,15 @@ namespace AZ
 
             // irradiance query accessors
             uint32_t GetIrradianceQueryCount() const { return aznumeric_cast<uint32_t>(m_irradianceQueries.size()); }
-            const Data::Instance<RPI::Buffer>& GetQueryBuffer() const { return m_queryBuffer.GetCurrentBuffer(); }
+            const Data::Instance<JE::Render::RPI::Buffer>& GetQueryBuffer() const { return m_queryBuffer.GetCurrentBuffer(); }
             const RHI::AttachmentId GetQueryBufferAttachmentId() const { return m_queryBufferAttachmentId; }
             const RHI::BufferViewDescriptor& GetQueryBufferViewDescriptor() const { return m_queryBufferViewDescriptor; }
 
             // Returns the Scene SRG that can tbe use with precompiled shaders
-            RPI::ShaderResourceGroup* GetSceneSrg() const;
+            JE::Render::RPI::ShaderResourceGroup* GetSceneSrg() const;
 
             // Returns the View SRG for a pipeline and PipelineViewTag combination that can be used with precompiled shaders
-            RPI::ShaderResourceGroup* GetViewSrg(RPI::RenderPipeline* pipeline, RPI::PipelineViewTag viewTag) const;     
+            JE::Render::RPI::ShaderResourceGroup* GetViewSrg(JE::Render::RPI::RenderPipeline* pipeline, JE::Render::RPI::PipelineViewTag viewTag) const;     
 
         private:
             AZ_DISABLE_COPY_MOVE(DiffuseProbeGridFeatureProcessor);
@@ -145,15 +145,15 @@ namespace AZ
             // RPI::SceneNotificationBus::Handler overrides
             void OnBeginPrepareRender() override;
             void OnEndPrepareRender() override;
-            void OnRenderPipelineChanged(RPI::RenderPipeline* pipeline, RPI::SceneNotification::RenderPipelineChangeType changeType) override;
+            void OnRenderPipelineChanged(JE::Render::RPI::RenderPipeline* pipeline, JE::Render::RPI::SceneNotification::RenderPipelineChangeType changeType) override;
             void OnRenderPipelinePersistentViewChanged(
-                RPI::RenderPipeline* renderPipeline, RPI::PipelineViewTag viewTag, RPI::ViewPtr newView, RPI::ViewPtr previousView) override;
+                JE::Render::RPI::RenderPipeline* renderPipeline, JE::Render::RPI::PipelineViewTag viewTag, JE::Render::RPI::ViewPtr newView, JE::Render::RPI::ViewPtr previousView) override;
 
             
             // FeatureProcessor overrides
-            void AddRenderPasses(RPI::RenderPipeline* renderPipeline) override;
+            void AddRenderPasses(JE::Render::RPI::RenderPipeline* renderPipeline) override;
             
-            void AddPassRequest(RPI::RenderPipeline* renderPipeline, const char* passRequestAssetFilePath, const char* insertionPointPassName);
+            void AddPassRequest(JE::Render::RPI::RenderPipeline* renderPipeline, const char* passRequestAssetFilePath, const char* insertionPointPassName);
             void UpdatePipelineStates();
             void UpdatePasses();
 
@@ -207,7 +207,7 @@ namespace AZ
             {
                 AZStd::string m_relativePath;
                 AZ::Data::AssetId m_assetId;
-                Data::Asset<RPI::StreamingImageAsset> m_asset;
+                Data::Asset<JE::Render::RPI::StreamingImageAsset> m_asset;
                 DiffuseProbeGridTextureNotificationType m_notificationType = DiffuseProbeGridTextureNotificationType::None;
             };
             typedef AZStd::vector<NotifyTextureAssetEntry> NotifyTextureAssetVector;
@@ -215,9 +215,9 @@ namespace AZ
 
             // visualization
             RHI::Ptr<RHI::RayTracingBufferPools> m_visualizationBufferPools;
-            Data::Asset<RPI::ModelAsset> m_visualizationModelAsset;
+            Data::Asset<JE::Render::RPI::ModelAsset> m_visualizationModelAsset;
             RHI::Ptr<RHI::RayTracingBlas> m_visualizationBlas;
-            Data::Instance<RPI::Model> m_visualizationModel;
+            Data::Instance<JE::Render::RPI::Model> m_visualizationModel;
             RHI::StreamBufferView m_visualizationVB;
             RHI::IndexBufferView m_visualizationIB;
 
@@ -232,21 +232,21 @@ namespace AZ
             IrradianceQueryVector m_irradianceQueries;
             RHI::BufferViewDescriptor m_queryBufferViewDescriptor;
             RHI::AttachmentId m_queryBufferAttachmentId;
-            RPI::RingBuffer m_queryBuffer{ "DiffuseQueryBuffer", RPI::CommonBufferPoolType::ReadWrite, sizeof(IrradianceQuery) };
+            JE::Render::RPI::RingBuffer m_queryBuffer{ "DiffuseQueryBuffer", JE::Render::RPI::CommonBufferPoolType::ReadWrite, sizeof(IrradianceQuery) };
 
             // SSR state, for controlling the DiffuseProbeGridQueryPass in the SSR pipeline
             SpecularReflectionsFeatureProcessorInterface* m_specularReflectionsFeatureProcessor = nullptr;
             bool m_ssrRayTracingEnabled = false;
 
             // Shader that contains the scene and view SRGs for precompiled shaders
-            Data::Instance<RPI::Shader> m_sceneAndViewShader;
+            Data::Instance<JE::Render::RPI::Shader> m_sceneAndViewShader;
 
             // SRG for copying the Scene SRG shader inputs
-            Data::Instance<RPI::ShaderResourceGroup> m_sceneShaderResourceGroup = nullptr;
+            Data::Instance<JE::Render::RPI::ShaderResourceGroup> m_sceneShaderResourceGroup = nullptr;
 
             // SRGs for copying the View SRGs shader inputs
-            using ViewShaderResourceGroups = AZStd::unordered_map<RPI::PipelineViewTag, Data::Instance<RPI::ShaderResourceGroup>>;
-            AZStd::unordered_map<RPI::RenderPipeline*, ViewShaderResourceGroups> m_viewShaderResourceGroups;
+            using ViewShaderResourceGroups = AZStd::unordered_map<JE::Render::RPI::PipelineViewTag, Data::Instance<JE::Render::RPI::ShaderResourceGroup>>;
+            AZStd::unordered_map<JE::Render::RPI::RenderPipeline*, ViewShaderResourceGroups> m_viewShaderResourceGroups;
         };
     } // namespace Render
 } // namespace AZ

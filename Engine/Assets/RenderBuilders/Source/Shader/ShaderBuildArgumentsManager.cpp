@@ -13,7 +13,7 @@
 #include <AzCore/Serialization/Json/JsonUtils.h>
 #include <AzCore/IO/FileIO.h>
 
-#include <Atom/RPI.Edit/Common/JsonUtils.h>
+#include <JE/Editor/Render/RPI/Edit/Common/JsonUtils.h>
 #include <Atom/RHI.Edit/ShaderBuildOptions.h>
 
 namespace JE::Assets::RenderBuilders
@@ -43,7 +43,7 @@ namespace JE::Assets::RenderBuilders
             for (auto const& [scopeName, jsonFilePath] : configFiles)
             {
                 AZ::RHI::ShaderBuildOptions shaderBuildOptions;
-                if (!AZ::RPI::JsonUtils::LoadObjectFromFile(jsonFilePath.c_str(), shaderBuildOptions))
+                if (!JE::Render::RPI::JsonUtils::LoadObjectFromFile(jsonFilePath.c_str(), shaderBuildOptions))
                 {
                     AZ_Error(
                         LogName, false, "Failed to load shader build options file=<%s> for scope=<%s>", jsonFilePath.c_str(),

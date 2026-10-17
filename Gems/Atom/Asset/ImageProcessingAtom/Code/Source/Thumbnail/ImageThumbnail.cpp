@@ -8,7 +8,7 @@
 
 #include <AssetBrowser/Thumbnails/ProductThumbnail.h>
 #include <AssetBrowser/Thumbnails/SourceThumbnail.h>
-#include <Atom/RPI.Reflect/Image/StreamingImageAsset.h>
+#include <JE/Render/RPI/Reflect/Image/StreamingImageAsset.h>
 #include <AzToolsFramework/API/EditorAssetSystemAPI.h>
 #include <QtConcurrent/QtConcurrent>
 #include <Source/ImageLoader/ImageLoaders.h>
@@ -42,7 +42,7 @@ namespace ImageProcessingAtom
             }
 
             auto productKey = azrtti_cast<const AzToolsFramework::AssetBrowser::ProductThumbnailKey*>(key.get());
-            if (productKey && productKey->GetAssetType() == AZ::RPI::StreamingImageAsset::RTTI_Type())
+            if (productKey && productKey->GetAssetType() == JE::Render::RPI::StreamingImageAsset::RTTI_Type())
             {
                 m_assetIds.insert(productKey->GetAssetId());
             }
@@ -61,7 +61,7 @@ namespace ImageProcessingAtom
         {
             m_state = State::Loading;
             AzToolsFramework::Thumbnailer::ThumbnailerRendererRequestBus::QueueEvent(
-                AZ::RPI::StreamingImageAsset::RTTI_Type(), &AzToolsFramework::Thumbnailer::ThumbnailerRendererRequests::RenderThumbnail,
+                JE::Render::RPI::StreamingImageAsset::RTTI_Type(), &AzToolsFramework::Thumbnailer::ThumbnailerRendererRequests::RenderThumbnail,
                 m_key, ImageThumbnailSize);
         }
 
@@ -129,7 +129,7 @@ namespace ImageProcessingAtom
             }
 
             auto productKey = azrtti_cast<const AzToolsFramework::AssetBrowser::ProductThumbnailKey*>(key.get());
-            return productKey && productKey->GetAssetType() == AZ::RPI::StreamingImageAsset::RTTI_Type();
+            return productKey && productKey->GetAssetType() == JE::Render::RPI::StreamingImageAsset::RTTI_Type();
         }
     } // namespace Thumbnails
 } // namespace ImageProcessingAtom

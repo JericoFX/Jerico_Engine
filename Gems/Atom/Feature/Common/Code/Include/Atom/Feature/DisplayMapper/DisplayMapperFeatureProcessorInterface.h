@@ -8,13 +8,13 @@
 
 #pragma once
 
-#include <Atom/RPI.Public/FeatureProcessor.h>
+#include <JE/Render/RPI/Public/FeatureProcessor.h>
 
 #include <Atom/Feature/DisplayMapper/DisplayMapperConfigurationDescriptor.h>
 
 #include <Atom/RHI/ImagePool.h>
 
-#include <Atom/RPI.Public/Image/StreamingImage.h>
+#include <JE/Render/RPI/Public/Image/StreamingImage.h>
 
 namespace AZ
 {
@@ -29,15 +29,15 @@ namespace AZ
 
         struct DisplayMapperAssetLut
         {
-            Data::Instance<RPI::StreamingImage>     m_lutStreamingImage;
+            Data::Instance<JE::Render::RPI::StreamingImage>     m_lutStreamingImage;
         };
 
         //! The display mapper feature processor interface for setting and retreiving tonemapping settings, and handing LUTs.
         class DisplayMapperFeatureProcessorInterface
-            : public RPI::FeatureProcessor
+            : public JE::Render::RPI::FeatureProcessor
         {
         public:
-            AZ_RTTI(AZ::Render::DisplayMapperFeatureProcessorInterface, "{FA57793A-1C7B-4B44-88C4-02AA431C468F}", AZ::RPI::FeatureProcessor);
+            AZ_RTTI(AZ::Render::DisplayMapperFeatureProcessorInterface, "{FA57793A-1C7B-4B44-88C4-02AA431C468F}", JE::Render::RPI::FeatureProcessor);
 
             virtual void GetOwnedLut(DisplayMapperLut& displayMapperLut, const AZ::Name& lutName) = 0;
             virtual void GetDisplayMapperLut(DisplayMapperLut& displayMapperLut) = 0;

@@ -17,7 +17,7 @@
 #include <AzCore/Serialization/EditContextConstants.inl>
 #include <Atom/RHI/RHIMemoryStatisticsInterface.h>
 #include <Atom/RHI.Profiler/GraphicsProfilerBus.h>
-#include <Atom/RPI.Public/Pass/PassSystemInterface.h>
+#include <JE/Render/RPI/Public/Pass/PassSystemInterface.h>
 #include <AzFramework/Components/ConsoleBus.h>
 #include <JE/Debug/ImGui/ImGuiBus.h>
 
@@ -96,11 +96,11 @@ namespace JE::Render::Debug
     {
         if (m_showPassTree)
         {
-            m_imguiPassTree.Draw(m_showPassTree, AZ::RPI::PassSystemInterface::Get()->GetRootPass().get());
+            m_imguiPassTree.Draw(m_showPassTree, JE::Render::RPI::PassSystemInterface::Get()->GetRootPass().get());
         }
         if (m_showGpuProfiler)
         {
-            m_imguiGpuProfiler.Draw(m_showGpuProfiler, AZ::RPI::PassSystemInterface::Get()->GetRootPass().get());
+            m_imguiGpuProfiler.Draw(m_showGpuProfiler, JE::Render::RPI::PassSystemInterface::Get()->GetRootPass().get());
         }
         if (m_showTransientAttachmentProfiler)
         {

@@ -73,7 +73,7 @@ namespace OpenParticle
             defaultSpriteEmitMaterialId,
             &catalogBus::Events::GetAssetIdByPath,
             defaultMaterialProductFile,
-            azrtti_typeid<AZ::RPI::MaterialAsset>(),
+            azrtti_typeid<JE::Render::RPI::MaterialAsset>(),
             false);
         m_cachedDefaultEmitterMaterialAssetId = defaultSpriteEmitMaterialId;
 

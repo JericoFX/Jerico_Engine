@@ -10,21 +10,21 @@
 #include <Atom/Feature/ACES/AcesDisplayMapperFeatureProcessor.h>
 
 #include <Atom/RHI/FrameGraphAttachmentInterface.h>
-#include <Atom/RPI.Public/RenderPipeline.h>
-#include <Atom/RPI.Public/Scene.h>
+#include <JE/Render/RPI/Public/RenderPipeline.h>
+#include <JE/Render/RPI/Public/Scene.h>
 
 namespace AZ
 {
     namespace Render
     {
-        RPI::Ptr<BakeAcesOutputTransformLutPass> BakeAcesOutputTransformLutPass::Create(const RPI::PassDescriptor& descriptor)
+        JE::Render::RPI::Ptr<BakeAcesOutputTransformLutPass> BakeAcesOutputTransformLutPass::Create(const JE::Render::RPI::PassDescriptor& descriptor)
         {
-            RPI::Ptr<BakeAcesOutputTransformLutPass> pass = aznew BakeAcesOutputTransformLutPass(descriptor);
+            JE::Render::RPI::Ptr<BakeAcesOutputTransformLutPass> pass = aznew BakeAcesOutputTransformLutPass(descriptor);
             return pass;
         }
 
-        BakeAcesOutputTransformLutPass::BakeAcesOutputTransformLutPass(const RPI::PassDescriptor& descriptor)
-            : RPI::ComputePass(descriptor)
+        BakeAcesOutputTransformLutPass::BakeAcesOutputTransformLutPass(const JE::Render::RPI::PassDescriptor& descriptor)
+            : JE::Render::RPI::ComputePass(descriptor)
         {
             m_needToUpdateLut = true;
         }

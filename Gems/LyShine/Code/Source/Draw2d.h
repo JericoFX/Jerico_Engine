@@ -11,8 +11,8 @@
 
 #include <AzFramework/Font/FontInterface.h>
 #include <JE/Render/Bootstrap/BootstrapNotificationBus.h>
-#include <Atom/RPI.Public/DynamicDraw/DynamicDrawInterface.h>
-#include <Atom/RPI.Public/ViewportContext.h>
+#include <JE/Render/RPI/Public/DynamicDraw/DynamicDrawInterface.h>
+#include <JE/Render/RPI/Public/ViewportContext.h>
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 //! Implementation of IDraw2d interface for 2D drawing in screen space
@@ -28,7 +28,7 @@ public: // types
 public: // member functions
 
     //! Constructor, constructed by the LyShine class
-    CDraw2d(AZ::RPI::ViewportContextPtr viewportContext = nullptr);
+    CDraw2d(JE::Render::RPI::ViewportContextPtr viewportContext = nullptr);
 
     // IDraw2d
 
@@ -53,7 +53,7 @@ public: // member functions
     //! \param minMaxTexCoords  An optional two component array. The first component is the UV coord for the top left
     //!                         point of the quad and the second is the UV coord of the bottom right point of the quad
     //! \param imageOptions     Optional struct specifying options that tend to be the same from call to call
-    void DrawImage(AZ::Data::Instance<AZ::RPI::Image> image, AZ::Vector2 position, AZ::Vector2 size, float opacity = 1.0f,
+    void DrawImage(AZ::Data::Instance<JE::Render::RPI::Image> image, AZ::Vector2 position, AZ::Vector2 size, float opacity = 1.0f,
         float rotation = 0.0f, const AZ::Vector2* pivotPoint = nullptr, const AZ::Vector2* minMaxTexCoords = nullptr,
         ImageOptions* imageOptions = nullptr) override;
 
@@ -71,7 +71,7 @@ public: // member functions
     //! \param minMaxTexCoords  An optional two component array. The first component is the UV coord for the top left
     //!                         point of the quad and the second is the UV coord of the bottom right point of the quad
     //! \param imageOptions     Optional struct specifying options that tend to be the same from call to call
-    void DrawImageAligned(AZ::Data::Instance<AZ::RPI::Image> image, AZ::Vector2 position, AZ::Vector2 size,
+    void DrawImageAligned(AZ::Data::Instance<JE::Render::RPI::Image> image, AZ::Vector2 position, AZ::Vector2 size,
         HAlign horizontalAlignment, VAlign verticalAlignment,
         float opacity = 1.0f, float rotation = 0.0f, const AZ::Vector2* minMaxTexCoords = nullptr,
         ImageOptions* imageOptions = nullptr) override;
@@ -82,7 +82,7 @@ public: // member functions
     //! \param verts        An array of 4 vertices, in clockwise order (e.g. top left, top right, bottom right, bottom left)
     //! \param pixelRounding Whether and how to round pixel coordinates
     //! \param renderState  Blend mode and depth state
-    void DrawQuad(AZ::Data::Instance<AZ::RPI::Image> image,
+    void DrawQuad(AZ::Data::Instance<JE::Render::RPI::Image> image,
         VertexPosColUV* verts,
         Rounding pixelRounding = Rounding::Nearest,
         bool clamp = false,
@@ -105,7 +105,7 @@ public: // member functions
     //! \param verts        An array of 2 vertices for the start and end points of the line
     //! \param pixelRounding Whether and how to round pixel coordinates
     //! \param renderState  Blend mode and depth state
-    void DrawLineTextured(AZ::Data::Instance<AZ::RPI::Image> image,
+    void DrawLineTextured(AZ::Data::Instance<JE::Render::RPI::Image> image,
         VertexPosColUV* verts,
         IDraw2d::Rounding pixelRounding = IDraw2d::Rounding::Nearest,
         const RenderState& renderState = RenderState{}) override;
@@ -128,7 +128,7 @@ public: // member functions
     //! \param downVec          Down vector. Specified because the rect's width/height could be 0
     //! \param color            The color of the outline
     //! \param lineThickness    The thickness in pixels of the outline. If 0, it will be based on image height
-    void DrawRectOutlineTextured(AZ::Data::Instance<AZ::RPI::Image> image,
+    void DrawRectOutlineTextured(AZ::Data::Instance<JE::Render::RPI::Image> image,
         UiTransformInterface::RectPoints points,
         AZ::Vector2 rightVec,
         AZ::Vector2 downVec,
@@ -176,12 +176,12 @@ private:
     AZ_DISABLE_COPY_MOVE(CDraw2d);
 
     // JE::Render::Bootstrap::NotificationBus overrides
-    void OnBootstrapSceneReady(AZ::RPI::Scene* bootstrapScene) override;
+    void OnBootstrapSceneReady(JE::Render::RPI::Scene* bootstrapScene) override;
 
 public: // static member functions
 
     //! Helper to load a texture
-    static AZ::Data::Instance<AZ::RPI::Image> LoadTexture(const AZStd::string& pathName);
+    static AZ::Data::Instance<JE::Render::RPI::Image> LoadTexture(const AZStd::string& pathName);
 
 protected: // types and constants
 
@@ -195,17 +195,17 @@ protected: // types and constants
     {
         AZ::RHI::ShaderInputImageIndex m_imageInputIndex;
         AZ::RHI::ShaderInputConstantIndex m_viewProjInputIndex;
-        AZ::RPI::ShaderVariantId m_shaderOptionsClamp;
-        AZ::RPI::ShaderVariantId m_shaderOptionsWrap;
+        JE::Render::RPI::ShaderVariantId m_shaderOptionsClamp;
+        JE::Render::RPI::ShaderVariantId m_shaderOptionsWrap;
     };
 
     class DeferredPrimitive
     {
     public:
         virtual ~DeferredPrimitive() {};
-        virtual void Draw(AZ::RHI::Ptr<AZ::RPI::DynamicDrawContext> dynamicDraw,
+        virtual void Draw(AZ::RHI::Ptr<JE::Render::RPI::DynamicDrawContext> dynamicDraw,
             const Draw2dShaderData& shaderData,
-            AZ::RPI::ViewportContextPtr viewportContext) const = 0;
+            JE::Render::RPI::ViewportContextPtr viewportContext) const = 0;
     };
 
     class DeferredQuad
@@ -213,14 +213,14 @@ protected: // types and constants
     {
     public:
         ~DeferredQuad() override {};
-        void Draw(AZ::RHI::Ptr<AZ::RPI::DynamicDrawContext> dynamicDraw,
+        void Draw(AZ::RHI::Ptr<JE::Render::RPI::DynamicDrawContext> dynamicDraw,
             const Draw2dShaderData& shaderData,
-            AZ::RPI::ViewportContextPtr viewportContext) const override;
+            JE::Render::RPI::ViewportContextPtr viewportContext) const override;
 
         AZ::Vector2 m_points[4];
         AZ::Vector2 m_texCoords[4];
         uint32      m_packedColors[4];
-        AZ::Data::Instance<AZ::RPI::Image> m_image;
+        AZ::Data::Instance<JE::Render::RPI::Image> m_image;
         bool m_clamp;
         RenderState m_renderState;
     };
@@ -230,11 +230,11 @@ protected: // types and constants
     {
     public:
         ~DeferredLine() override {};
-        void Draw(AZ::RHI::Ptr<AZ::RPI::DynamicDrawContext> dynamicDraw,
+        void Draw(AZ::RHI::Ptr<JE::Render::RPI::DynamicDrawContext> dynamicDraw,
             const Draw2dShaderData& shaderData,
-            AZ::RPI::ViewportContextPtr viewportContext) const override;
+            JE::Render::RPI::ViewportContextPtr viewportContext) const override;
 
-        AZ::Data::Instance<AZ::RPI::Image> m_image;
+        AZ::Data::Instance<JE::Render::RPI::Image> m_image;
         AZ::Vector2 m_points[2];
         AZ::Vector2 m_texCoords[2];
         uint32      m_packedColors[2];
@@ -246,9 +246,9 @@ protected: // types and constants
     {
     public:
         ~DeferredText() override {};
-        void Draw(AZ::RHI::Ptr<AZ::RPI::DynamicDrawContext> dynamicDraw,
+        void Draw(AZ::RHI::Ptr<JE::Render::RPI::DynamicDrawContext> dynamicDraw,
             const Draw2dShaderData& shaderData,
-            AZ::RPI::ViewportContextPtr viewportContext) const override;
+            JE::Render::RPI::ViewportContextPtr viewportContext) const override;
 
         AzFramework::TextDrawParameters m_drawParameters;
         AzFramework::FontId m_fontId;
@@ -260,11 +260,11 @@ protected: // types and constants
     {
     public:
         ~DeferredRectOutline() override {};
-        void Draw(AZ::RHI::Ptr<AZ::RPI::DynamicDrawContext> dynamicDraw,
+        void Draw(AZ::RHI::Ptr<JE::Render::RPI::DynamicDrawContext> dynamicDraw,
             const Draw2dShaderData& shaderData,
-            AZ::RPI::ViewportContextPtr viewportContext) const override;
+            JE::Render::RPI::ViewportContextPtr viewportContext) const override;
 
-        AZ::Data::Instance<AZ::RPI::Image> m_image;
+        AZ::Data::Instance<JE::Render::RPI::Image> m_image;
 
         static constexpr int32 NUM_VERTS = 8;
         AZ::Vector2 m_verts2d[NUM_VERTS];
@@ -298,7 +298,7 @@ protected: // member functions
     void DrawOrDeferRectOutline(const DeferredRectOutline* outlineRect);
 
     //! Get specified viewport context or default viewport context if not specified
-    AZ::RPI::ViewportContextPtr GetViewportContext() const;
+    JE::Render::RPI::ViewportContextPtr GetViewportContext() const;
 
 protected: // attributes
 
@@ -310,7 +310,7 @@ protected: // attributes
 
     std::vector<DeferredPrimitive*> m_deferredPrimitives;
 
-    AZ::RPI::ViewportContextPtr m_viewportContext;
-    AZ::RHI::Ptr<AZ::RPI::DynamicDrawContext> m_dynamicDraw;
+    JE::Render::RPI::ViewportContextPtr m_viewportContext;
+    AZ::RHI::Ptr<JE::Render::RPI::DynamicDrawContext> m_dynamicDraw;
     Draw2dShaderData m_shaderData;
 };

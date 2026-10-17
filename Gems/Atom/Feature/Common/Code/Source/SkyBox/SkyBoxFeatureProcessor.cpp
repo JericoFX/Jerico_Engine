@@ -14,15 +14,15 @@
 #include <Atom/RHI/RHISystemInterface.h>
 
 #include <Atom/RHI.Reflect/InputStreamLayoutBuilder.h>
-#include <Atom/RPI.Reflect/Shader/ShaderAsset.h>
+#include <JE/Render/RPI/Reflect/Shader/ShaderAsset.h>
 
-#include <Atom/RPI.Public/ColorManagement/TransformColor.h>
-#include <Atom/RPI.Public/RenderPipeline.h>
-#include <Atom/RPI.Public/Image/StreamingImage.h>
-#include <Atom/RPI.Public/RPIUtils.h>
-#include <Atom/RPI.Public/Shader/ShaderResourceGroup.h>
-#include <Atom/RPI.Public/Scene.h>
-#include <Atom/RPI.Public/View.h>
+#include <JE/Render/RPI/Public/ColorManagement/TransformColor.h>
+#include <JE/Render/RPI/Public/RenderPipeline.h>
+#include <JE/Render/RPI/Public/Image/StreamingImage.h>
+#include <JE/Render/RPI/Public/RPIUtils.h>
+#include <JE/Render/RPI/Public/Shader/ShaderResourceGroup.h>
+#include <JE/Render/RPI/Public/Scene.h>
+#include <JE/Render/RPI/Public/View.h>
 
 #include <SkyBox/SkyBoxLUT.h>
 
@@ -196,20 +196,20 @@ namespace AZ
         {
             const uint32_t byteCount = sizeof(PhysicalSkyData);
 
-            RPI::CommonBufferDescriptor desc;
-            desc.m_poolType = RPI::CommonBufferPoolType::Constant;
+            JE::Render::RPI::CommonBufferDescriptor desc;
+            desc.m_poolType = JE::Render::RPI::CommonBufferPoolType::Constant;
             desc.m_bufferName = "SkyboxBuffer";
             desc.m_byteCount = byteCount;
             desc.m_elementSize = byteCount;
             desc.m_bufferData = &m_physicalSkyData;
 
-            m_buffer = RPI::BufferSystemInterface::Get()->CreateBufferFromCommonPool(desc);
+            m_buffer = JE::Render::RPI::BufferSystemInterface::Get()->CreateBufferFromCommonPool(desc);
         }
 
         void SkyBoxFeatureProcessor::LoadDefaultCubeMap()
         {
             const constexpr char* DefaultCubeMapPath = "textures/default/default_skyboxcm.dds.streamingimage";
-            m_defaultCubemapTexture = RPI::LoadStreamingTexture(DefaultCubeMapPath);
+            m_defaultCubemapTexture = JE::Render::RPI::LoadStreamingTexture(DefaultCubeMapPath);
             AZ_Assert(m_defaultCubemapTexture, "Failed to load default cubemap");
         }
 
@@ -228,7 +228,7 @@ namespace AZ
             m_cubemapRotationMatrix = matrix;
         }
 
-        void SkyBoxFeatureProcessor::SetCubemap(Data::Instance<RPI::Image> cubemap)
+        void SkyBoxFeatureProcessor::SetCubemap(Data::Instance<JE::Render::RPI::Image> cubemap)
         {
             m_cubemapTexture = cubemap.get() ? cubemap : m_defaultCubemapTexture;
         }
@@ -523,7 +523,7 @@ namespace AZ
 
             result.Normalize();
 
-            return AZ::RPI::TransformColor(Color::CreateFromVector3(result.GetAsVector3()), AZ::RPI::ColorSpaceId::LinearSRGB, AZ::RPI::ColorSpaceId::ACEScg).GetAsVector4();
+            return JE::Render::RPI::TransformColor(Color::CreateFromVector3(result.GetAsVector3()), JE::Render::RPI::ColorSpaceId::LinearSRGB, JE::Render::RPI::ColorSpaceId::ACEScg).GetAsVector4();
         }
 
         AZ::Vector3 SkyBoxFeatureProcessor::EvaluateCIEXYZ(int lambda)

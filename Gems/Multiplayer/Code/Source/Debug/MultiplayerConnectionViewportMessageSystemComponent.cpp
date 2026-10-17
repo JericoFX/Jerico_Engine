@@ -8,8 +8,8 @@
 
 
 #include "MultiplayerConnectionViewportMessageSystemComponent.h"
-#include <Atom/RPI.Public/ViewportContextBus.h>
-#include <Atom/RPI.Public/ViewportContext.h>
+#include <JE/Render/RPI/Public/ViewportContextBus.h>
+#include <JE/Render/RPI/Public/ViewportContext.h>
 #include <AzCore/Console/IConsole.h>
 #include <AzCore/Console/ILogger.h>
 #include <AzFramework/Entity/EntityDebugDisplayBus.h>
@@ -48,8 +48,8 @@ namespace Multiplayer
 
     void MultiplayerConnectionViewportMessageSystemComponent::Activate()
     {
-        AZ::RPI::ViewportContextNotificationBus::Handler::BusConnect(
-            AZ::RPI::ViewportContextRequests::Get()->GetDefaultViewportContextName());
+        JE::Render::RPI::ViewportContextNotificationBus::Handler::BusConnect(
+            JE::Render::RPI::ViewportContextRequests::Get()->GetDefaultViewportContextName());
         MultiplayerEditorServerNotificationBus::Handler::BusConnect();
 
         if (auto multiplayerSystemComponent = AZ::Interface<IMultiplayer>::Get())
@@ -66,7 +66,7 @@ namespace Multiplayer
         m_levelLoadBlockedHandler.Disconnect();
         m_versionMismatchEventHandler.Disconnect();
         MultiplayerEditorServerNotificationBus::Handler::BusDisconnect();
-        AZ::RPI::ViewportContextNotificationBus::Handler::BusDisconnect();
+        JE::Render::RPI::ViewportContextNotificationBus::Handler::BusDisconnect();
     }
 
     void MultiplayerConnectionViewportMessageSystemComponent::OnRenderTick()
@@ -76,7 +76,7 @@ namespace Multiplayer
             return;
         }
 
-        AZ::RPI::ViewportContextPtr viewport = AZ::RPI::ViewportContextRequests::Get()->GetDefaultViewportContext();
+        JE::Render::RPI::ViewportContextPtr viewport = JE::Render::RPI::ViewportContextRequests::Get()->GetDefaultViewportContext();
         if (!viewport)
         {
             return;
@@ -219,7 +219,7 @@ namespace Multiplayer
 
     void MultiplayerConnectionViewportMessageSystemComponent::DrawCenterViewportMessage(const char* title, const AZ::Color& titleColor, const char* message, float alpha)
     {
-        const AZ::RPI::ViewportContextPtr viewport = AZ::RPI::ViewportContextRequests::Get()->GetDefaultViewportContext();
+        const JE::Render::RPI::ViewportContextPtr viewport = JE::Render::RPI::ViewportContextRequests::Get()->GetDefaultViewportContext();
         if (!viewport)
         {
             return;
@@ -324,7 +324,7 @@ namespace Multiplayer
 
     void MultiplayerConnectionViewportMessageSystemComponent::DrawScrim(float alphaMultiplier) const
     {
-        AZ::RPI::ViewportContextPtr viewport = AZ::RPI::ViewportContextRequests::Get()->GetDefaultViewportContext();
+        JE::Render::RPI::ViewportContextPtr viewport = JE::Render::RPI::ViewportContextRequests::Get()->GetDefaultViewportContext();
         if (!viewport)
         {
             return;

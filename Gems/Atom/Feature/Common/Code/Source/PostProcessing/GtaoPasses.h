@@ -7,8 +7,8 @@
  */
 #pragma once
 
-#include <Atom/RPI.Public/Pass/ComputePass.h>
-#include <Atom/RPI.Public/Pass/ParentPass.h>
+#include <JE/Render/RPI/Public/Pass/ComputePass.h>
+#include <JE/Render/RPI/Public/Pass/ParentPass.h>
 #include <PostProcessing/PostProcessingShaderOptionBase.h>
 #include <Atom/Feature/PostProcess/AmbientOcclusion/AoSettingsInterface.h>
 
@@ -18,17 +18,17 @@ namespace AZ
     {
         // Parent pass for GTAO that contains the GTAO compute pass
         class GtaoParentPass final
-            : public RPI::ParentPass
+            : public JE::Render::RPI::ParentPass
         {
             AZ_RPI_PASS(GtaoParentPass);
 
         public:
-            AZ_RTTI(AZ::Render::GtaoParentPass, "{6EA8F19C-78E7-475A-A0B6-92948D5C4DB5}", AZ::RPI::ParentPass);
+            AZ_RTTI(AZ::Render::GtaoParentPass, "{6EA8F19C-78E7-475A-A0B6-92948D5C4DB5}", JE::Render::RPI::ParentPass);
             AZ_CLASS_ALLOCATOR(GtaoParentPass, SystemAllocator);
             virtual ~GtaoParentPass() = default;
 
             //! Creates an GtaoParentPass
-            static RPI::Ptr<GtaoParentPass> Create(const RPI::PassDescriptor& descriptor);
+            static JE::Render::RPI::Ptr<GtaoParentPass> Create(const JE::Render::RPI::PassDescriptor& descriptor);
 
             bool IsEnabled() const override;
 
@@ -38,7 +38,7 @@ namespace AZ
             void FrameBeginInternal(FramePrepareParams params) override;
 
         private:
-            GtaoParentPass(const RPI::PassDescriptor& descriptor);
+            GtaoParentPass(const JE::Render::RPI::PassDescriptor& descriptor);
 
             // Direct pointers to child passes for enable/disable
             ParentPass* m_blurParentPass = nullptr;
@@ -50,18 +50,18 @@ namespace AZ
 
         // Computer shader pass that calculates GTAO from a linear depth buffer
         class GtaoComputePass final
-            : public RPI::ComputePass,
+            : public JE::Render::RPI::ComputePass,
               public PostProcessingShaderOptionBase
         {
             AZ_RPI_PASS(GtaoComputePass);
 
         public:
-            AZ_RTTI(AZ::Render::GtaoComputePass, "{0BA5F6F7-15D2-490A-8254-7E61F25B62F9}", AZ::RPI::ComputePass);
+            AZ_RTTI(AZ::Render::GtaoComputePass, "{0BA5F6F7-15D2-490A-8254-7E61F25B62F9}", JE::Render::RPI::ComputePass);
             AZ_CLASS_ALLOCATOR(GtaoComputePass, SystemAllocator);
             virtual ~GtaoComputePass() = default;
 
             //! Creates an GtaoComputePass
-            static RPI::Ptr<GtaoComputePass> Create(const RPI::PassDescriptor& descriptor);
+            static JE::Render::RPI::Ptr<GtaoComputePass> Create(const JE::Render::RPI::PassDescriptor& descriptor);
 
             void SetQualityLevel(Ao::GtaoQualityLevel qualityLevel);
 
@@ -71,7 +71,7 @@ namespace AZ
             void FrameBeginInternal(FramePrepareParams params) override;
 
         private:
-            GtaoComputePass(const RPI::PassDescriptor& descriptor);
+            GtaoComputePass(const JE::Render::RPI::PassDescriptor& descriptor);
             void InitializeShaderVariant();
             void UpdateCurrentShaderVariant();
 

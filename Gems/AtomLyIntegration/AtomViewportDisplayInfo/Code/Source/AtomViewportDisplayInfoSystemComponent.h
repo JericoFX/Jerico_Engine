@@ -13,8 +13,8 @@
 #include <AzCore/Script/ScriptTimePoint.h>
 #include <AzFramework/Entity/EntityDebugDisplayBus.h>
 #include <AzFramework/Font/FontInterface.h>
-#include <Atom/RPI.Public/Base.h>
-#include <Atom/RPI.Public/ViewportContextBus.h>
+#include <JE/Render/RPI/Public/Base.h>
+#include <JE/Render/RPI/Public/ViewportContextBus.h>
 #include <AtomLyIntegration/AtomViewportDisplayInfo/AtomViewportInfoDisplayBus.h>
 
 namespace AZ
@@ -25,7 +25,7 @@ namespace AZ
     {
         class AtomViewportDisplayInfoSystemComponent
             : public AZ::Component
-            , public AZ::RPI::ViewportContextNotificationBus::Handler
+            , public JE::Render::RPI::ViewportContextNotificationBus::Handler
             , public AZ::AtomBridge::AtomViewportInfoDisplayRequestBus::Handler
         {
         public:
@@ -51,7 +51,7 @@ namespace AZ
             void SetDisplayState(AtomBridge::ViewportInfoDisplayState state) override;
 
         private:
-            AZ::RPI::ViewportContextPtr GetViewportContext() const;
+            JE::Render::RPI::ViewportContextPtr GetViewportContext() const;
             void DrawLine(AZStd::string_view line, AZ::Color color = AZ::Colors::White);
 
             void UpdateFramerate();

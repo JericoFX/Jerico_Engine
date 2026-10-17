@@ -8,18 +8,18 @@
 
 #include <SkinnedMesh/SkinnedMeshShaderOptionsCache.h>
 
-#include <Atom/RPI.Public/Shader/Shader.h>
+#include <JE/Render/RPI/Public/Shader/Shader.h>
 
 namespace AZ
 {
     namespace Render
     {
-        void CachedSkinnedMeshShaderOptions::SetShader(Data::Instance<RPI::Shader> shader)
+        void CachedSkinnedMeshShaderOptions::SetShader(Data::Instance<JE::Render::RPI::Shader> shader)
         {
             m_shader = shader;
 
             // Cache the different possible indices and values so they are efficent to set later
-            const RPI::ShaderOptionGroupLayout* layout = m_shader->GetAsset()->GetShaderOptionGroupLayout();
+            const JE::Render::RPI::ShaderOptionGroupLayout* layout = m_shader->GetAsset()->GetShaderOptionGroupLayout();
             m_skinningMethodOptionIndex = layout->FindShaderOptionIndex(AZ::Name("o_skinningMethod"));
             m_skinningMethodLinearSkinningValue = layout->FindValue(m_skinningMethodOptionIndex, AZ::Name("SkinningMethod::LinearSkinning"));
             m_skinningMethodDualQuaternionValue = layout->FindValue(m_skinningMethodOptionIndex, AZ::Name("SkinningMethod::DualQuaternion"));
@@ -37,9 +37,9 @@ namespace AZ
             shaderReinitializedEventHandler.BusConnect(this);
         }
 
-        RPI::ShaderOptionGroup CachedSkinnedMeshShaderOptions::CreateShaderOptionGroup(const SkinnedMeshShaderOptions& shaderOptions) const
+        JE::Render::RPI::ShaderOptionGroup CachedSkinnedMeshShaderOptions::CreateShaderOptionGroup(const SkinnedMeshShaderOptions& shaderOptions) const
         {
-            RPI::ShaderOptionGroup shaderOptionGroup = m_shader->CreateShaderOptionGroup();
+            JE::Render::RPI::ShaderOptionGroup shaderOptionGroup = m_shader->CreateShaderOptionGroup();
             switch (shaderOptions.m_skinningMethod)
             {
             case SkinningMethod::DualQuaternion:

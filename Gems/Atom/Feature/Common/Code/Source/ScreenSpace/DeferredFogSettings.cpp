@@ -9,9 +9,9 @@
 #include <AzCore/Math/MathUtils.h>
 #include <AzCore/Serialization/SerializeContext.h>
 
-#include <Atom/RPI.Public/RenderPipeline.h>
-#include <Atom/RPI.Public/Shader/ShaderResourceGroup.h>
-#include <Atom/RPI.Public/RPIUtils.h>
+#include <JE/Render/RPI/Public/RenderPipeline.h>
+#include <JE/Render/RPI/Public/Shader/ShaderResourceGroup.h>
+#include <JE/Render/RPI/Public/RPIUtils.h>
 
 #include <ScreenSpace/DeferredFogSettings.h>
 #include <ScreenSpace/DeferredFogPass.h>
@@ -26,10 +26,10 @@ namespace AZ
         DeferredFogSettings::DeferredFogSettings()
             : PostProcessBase(nullptr) {}
 
-        AZ::Data::Instance<AZ::RPI::StreamingImage> DeferredFogSettings::LoadStreamingImage(
+        AZ::Data::Instance<JE::Render::RPI::StreamingImage> DeferredFogSettings::LoadStreamingImage(
             const char* textureFilePath, [[maybe_unused]] const char* sampleName)
         {
-            return AZ::RPI::LoadStreamingTexture(textureFilePath);
+            return JE::Render::RPI::LoadStreamingTexture(textureFilePath);
         }
 
         void DeferredFogSettings::OnSettingsChanged()

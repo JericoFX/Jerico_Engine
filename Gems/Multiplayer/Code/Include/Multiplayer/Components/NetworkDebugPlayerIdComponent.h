@@ -8,11 +8,11 @@
 #pragma once
 
 #include <Source/AutoGen/NetworkDebugPlayerIdComponent.AutoComponent.h>
-#include <Atom/RPI.Public/ViewportContext.h>
+#include <JE/Render/RPI/Public/ViewportContext.h>
 #include <AzCore/Component/TickBus.h>
 #include <AzFramework/Font/FontInterface.h>
 
-namespace AZ::RPI
+namespace JE::Render::RPI
 {
     class ViewportContext;
 }
@@ -59,7 +59,7 @@ namespace Multiplayer
         AZ::Color m_fontColor = AZ::Colors::Wheat;
 
         // Cache properties required for font rendering...
-        AZ::RPI::ViewportContextPtr m_viewport;
+        JE::Render::RPI::ViewportContextPtr m_viewport;
         AzFramework::FontDrawInterface* m_fontDrawInterface = nullptr;
         AzFramework::TextDrawParameters m_drawParams;
     };

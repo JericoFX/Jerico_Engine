@@ -13,8 +13,8 @@
 #include <SkinnedMesh/SkinnedMeshOutputStreamManager.h>
 #include <MorphTargets/MorphTargetComputePass.h>
 
-#include <Atom/RPI.Public/FeatureProcessorFactory.h>
-#include <Atom/RPI.Public/Pass/PassSystemInterface.h>
+#include <JE/Render/RPI/Public/FeatureProcessorFactory.h>
+#include <JE/Render/RPI/Public/Pass/PassSystemInterface.h>
 
 #include <AzCore/Serialization/SerializeContext.h>
 
@@ -62,9 +62,9 @@ namespace AZ
             m_vertexStreamProperties = AZStd::make_unique<SkinnedMeshVertexStreamProperties>();
             m_outputStreamManager = AZStd::make_unique<SkinnedMeshOutputStreamManager>();
 
-            AZ::RPI::FeatureProcessorFactory::Get()->RegisterFeatureProcessor<SkinnedMeshFeatureProcessor>();
+            JE::Render::RPI::FeatureProcessorFactory::Get()->RegisterFeatureProcessor<SkinnedMeshFeatureProcessor>();
 
-            auto* passSystem = RPI::PassSystemInterface::Get();
+            auto* passSystem = JE::Render::RPI::PassSystemInterface::Get();
             AZ_Assert(passSystem, "Cannot get the pass system.");
             passSystem->AddPassCreator(Name("MorphTargetComputePass"), &MorphTargetComputePass::Create);
             passSystem->AddPassCreator(Name("SkinnedMeshComputePass"), &SkinnedMeshComputePass::Create);
@@ -72,7 +72,7 @@ namespace AZ
 
         void SkinnedMeshSystemComponent::Deactivate()
         {
-            AZ::RPI::FeatureProcessorFactory::Get()->UnregisterFeatureProcessor<SkinnedMeshFeatureProcessor>();
+            JE::Render::RPI::FeatureProcessorFactory::Get()->UnregisterFeatureProcessor<SkinnedMeshFeatureProcessor>();
             m_outputStreamManager.reset();
             m_vertexStreamProperties.reset();
         }

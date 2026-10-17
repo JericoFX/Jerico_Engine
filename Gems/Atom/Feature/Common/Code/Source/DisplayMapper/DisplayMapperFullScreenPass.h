@@ -8,7 +8,7 @@
 #pragma once
 
 #include <AzCore/Memory/SystemAllocator.h>
-#include <Atom/RPI.Public/Pass/FullscreenTrianglePass.h>
+#include <JE/Render/RPI/Public/Pass/FullscreenTrianglePass.h>
 
 namespace AZ
 {
@@ -22,23 +22,23 @@ namespace AZ
          * attachment. These are determined when the children passes are created by the DisplayMapper.
          */
         class DisplayMapperFullScreenPass
-            : public RPI::FullscreenTrianglePass
+            : public JE::Render::RPI::FullscreenTrianglePass
         {
             AZ_RPI_PASS(DisplayMapperFullScreenPass);
 
         public:
-            AZ_RTTI(DisplayMapperFullScreenPass, "{11E9EBE0-DF6D-4260-9281-C99E386231BF}", RPI::FullscreenTrianglePass);
+            AZ_RTTI(DisplayMapperFullScreenPass, "{11E9EBE0-DF6D-4260-9281-C99E386231BF}", JE::Render::RPI::FullscreenTrianglePass);
             AZ_CLASS_ALLOCATOR(DisplayMapperFullScreenPass, SystemAllocator);
             virtual ~DisplayMapperFullScreenPass();
 
             /// Creates a DisplayMapperFullScreenPass
-            static RPI::Ptr<DisplayMapperFullScreenPass> Create(const RPI::PassDescriptor& descriptor);
+            static JE::Render::RPI::Ptr<DisplayMapperFullScreenPass> Create(const JE::Render::RPI::PassDescriptor& descriptor);
 
             void SetInputReferencePassName(const Name& passName);
             void SetInputReferenceAttachmentName(const Name& attachmentName);
 
         protected:
-            explicit DisplayMapperFullScreenPass(const RPI::PassDescriptor& descriptor);
+            explicit DisplayMapperFullScreenPass(const JE::Render::RPI::PassDescriptor& descriptor);
 
             // Pass behavior overrides...
             virtual void BuildInternal() override;

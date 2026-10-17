@@ -10,8 +10,8 @@
 
 #include <Atom/Feature/CoreLights/PhotometricValue.h>
 #include <Atom/Feature/CoreLights/ShadowConstants.h>
-#include <Atom/RPI.Public/Buffer/Buffer.h>
-#include <Atom/RPI.Public/FeatureProcessor.h>
+#include <JE/Render/RPI/Public/Buffer/Buffer.h>
+#include <JE/Render/RPI/Public/FeatureProcessor.h>
 #include <AzCore/Math/Color.h>
 #include <AzFramework/Components/CameraBus.h>
 
@@ -24,10 +24,10 @@ namespace AZ
         //! This is necessary for code outside of the Atom features gem
         //! to communicate with the DirectionalLightFeatureProcessor.
         class DirectionalLightFeatureProcessorInterface
-            : public RPI::FeatureProcessor
+            : public JE::Render::RPI::FeatureProcessor
         {
         public:
-            AZ_RTTI(AZ::Render::DirectionalLightFeatureProcessorInterface, "82C274F8-C635-4725-9ECB-0D7FA0DC0C6C", AZ::RPI::FeatureProcessor);
+            AZ_RTTI(AZ::Render::DirectionalLightFeatureProcessorInterface, "82C274F8-C635-4725-9ECB-0D7FA0DC0C6C", JE::Render::RPI::FeatureProcessor);
 
             using LightHandle = RHI::Handle<uint16_t, class DirectionalLight>;
 
@@ -110,7 +110,7 @@ namespace AZ
             virtual void SetCameraConfiguration(
                 LightHandle handle,
                 const Camera::Configuration& cameraConfiguration,
-                const RPI::RenderPipelineId& renderPipelineId = RPI::RenderPipelineId()) = 0;
+                const JE::Render::RPI::RenderPipelineId& renderPipelineId = JE::Render::RPI::RenderPipelineId()) = 0;
 
             //! This sets shadow specific far clip depth.
             //! Pixels beyond the far clip depth do not receive shadows.
@@ -125,7 +125,7 @@ namespace AZ
             virtual void SetCameraTransform(
                 LightHandle handle,
                 const Transform& cameraTransform,
-                const RPI::RenderPipelineId& renderPipelineId = RPI::RenderPipelineId()) = 0;
+                const JE::Render::RPI::RenderPipelineId& renderPipelineId = JE::Render::RPI::RenderPipelineId()) = 0;
 
             //! This specifies the height of the ground.
             //! @param handle the light handle.
@@ -189,7 +189,7 @@ namespace AZ
             virtual void SetLightingChannelMask(LightHandle handle, uint32_t lightingChannelMask) = 0;
 
             //! Returns the buffer containing the light data for all directional lights
-            virtual const Data::Instance<RPI::Buffer> GetLightBuffer() const = 0;
+            virtual const Data::Instance<JE::Render::RPI::Buffer> GetLightBuffer() const = 0;
 
             //! Returns the number of directional lights
             virtual uint32_t GetLightCount() const = 0;

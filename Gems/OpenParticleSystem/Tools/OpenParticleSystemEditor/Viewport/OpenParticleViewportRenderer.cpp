@@ -16,13 +16,13 @@
 #include <AzFramework/Components/NonUniformScaleComponent.h>
 #include <AzFramework/Entity/GameEntityContextBus.h>
 
-#include <Atom/RPI.Public/WindowContext.h>
-#include <Atom/RPI.Public/Pass/Specific/SwapChainPass.h>
-#include <Atom/RPI.Public/RPISystemInterface.h>
-#include <Atom/RPI.Public/RenderPipeline.h>
-#include <Atom/RPI.Public/Scene.h>
-#include <Atom/RPI.Public/Material/Material.h>
-#include <Atom/RPI.Public/Image/StreamingImage.h>
+#include <JE/Render/RPI/Public/WindowContext.h>
+#include <JE/Render/RPI/Public/Pass/Specific/SwapChainPass.h>
+#include <JE/Render/RPI/Public/RPISystemInterface.h>
+#include <JE/Render/RPI/Public/RenderPipeline.h>
+#include <JE/Render/RPI/Public/Scene.h>
+#include <JE/Render/RPI/Public/Material/Material.h>
+#include <JE/Render/RPI/Public/Image/StreamingImage.h>
 
 #include <JE/World/Camera/Debug/CameraComponent.h>
 #include <Atom/Feature/PostProcessing/PostProcessingConstants.h>
@@ -62,7 +62,7 @@ namespace OpenParticleSystemEditor
 {
     static constexpr float DepthNear = 0.01f;
 
-    OpenParticleViewportRenderer::OpenParticleViewportRenderer(AZStd::shared_ptr<AZ::RPI::WindowContext> windowContext)
+    OpenParticleViewportRenderer::OpenParticleViewportRenderer(AZStd::shared_ptr<JE::Render::RPI::WindowContext> windowContext)
         : m_windowContext(windowContext)
         , m_viewportController(AZStd::make_shared<OpenParticleEditorViewportInputController>())
     {
@@ -79,7 +79,7 @@ namespace OpenParticleSystemEditor
         // Currently the scene has to be activated after render pipeline was added so some feature processors (i.e. imgui) can be initialized properly
         // with pipeline's pass information.
         m_scene->Activate();
-        AZ::RPI::RPISystemInterface::Get()->RegisterScene(m_scene);
+        JE::Render::RPI::RPISystemInterface::Get()->RegisterScene(m_scene);
 
         AzFramework::EntityContextId entityContextId = m_entityContext.get()->GetContextId();
         CreateCamera(entityContextId);
@@ -149,7 +149,7 @@ namespace OpenParticleSystemEditor
         mainScene->UnsetSubsystem(m_entityContext.get());
         sceneSystem->RemoveScene(SCENE_NAME);
 
-        AZ::RPI::RPISystemInterface::Get()->UnregisterScene(m_scene);
+        JE::Render::RPI::RPISystemInterface::Get()->UnregisterScene(m_scene);
         m_scene = nullptr;
     }
 
@@ -161,12 +161,12 @@ namespace OpenParticleSystemEditor
     void OpenParticleViewportRenderer::CreateRenderScene()
     {
         // Create and register a scene with feature processors defined in the viewport settings
-        AZ::RPI::SceneDescriptor sceneDesc;
+        JE::Render::RPI::SceneDescriptor sceneDesc;
         sceneDesc.m_nameId = SCENE_NAME;
         auto settingsRegistry = AZ::SettingsRegistry::Get();
         const char* viewportSettingPath = VIEWPOINT_SETTING_PATH.data();
         bool sceneDescLoaded = settingsRegistry->GetObject(sceneDesc, viewportSettingPath);
-        m_scene = AZ::RPI::Scene::CreateScene(sceneDesc);
+        m_scene = JE::Render::RPI::Scene::CreateScene(sceneDesc);
 
         if (!sceneDescLoaded)
         {
@@ -192,16 +192,16 @@ namespace OpenParticleSystemEditor
     void OpenParticleViewportRenderer::CreateAssetRenderPipeline()
     {
         const AZ::RHI::MultisampleState appMsaa =
-            AZ::RPI::RPISystemInterface::Get()->GetApplicationMultisampleState();
+            JE::Render::RPI::RPISystemInterface::Get()->GetApplicationMultisampleState();
         const bool useLowEnd = (appMsaa.m_samples == 1);
 
-        AZ::RPI::RenderPipelineDescriptor pipelineDesc;
+        JE::Render::RPI::RenderPipelineDescriptor pipelineDesc;
         pipelineDesc.m_mainViewTagName = "MainCamera";
         pipelineDesc.m_name = "ParticleEditorPipeline";
         pipelineDesc.m_rootPassTemplate = useLowEnd ? "LowEndPipelineTemplate" : "MainPipeline";
         pipelineDesc.m_renderSettings.m_multisampleState = appMsaa;
 
-        m_renderPipeline = AZ::RPI::RenderPipeline::CreateRenderPipelineForWindow(pipelineDesc, *m_windowContext.get());
+        m_renderPipeline = JE::Render::RPI::RenderPipeline::CreateRenderPipelineForWindow(pipelineDesc, *m_windowContext.get());
 
         if (!m_renderPipeline)
         {
@@ -216,13 +216,13 @@ namespace OpenParticleSystemEditor
     void OpenParticleViewportRenderer::CreateBRDFTexturePipeline() const
     {
         // As part of our initialization we need to create the BRDF texture generation pipeline
-        AZ::RPI::RenderPipelineDescriptor pipelineDesc;
+        JE::Render::RPI::RenderPipelineDescriptor pipelineDesc;
         pipelineDesc.m_mainViewTagName = "MainCamera";
         pipelineDesc.m_name = "BRDFTexturePipeline";
         pipelineDesc.m_rootPassTemplate = "BRDFTexturePipeline";
         pipelineDesc.m_executeOnce = true;
 
-        AZ::RPI::RenderPipelinePtr brdfTexturePipeline = AZ::RPI::RenderPipeline::CreateRenderPipeline(pipelineDesc);
+        JE::Render::RPI::RenderPipelinePtr brdfTexturePipeline = JE::Render::RPI::RenderPipeline::CreateRenderPipeline(pipelineDesc);
         m_scene->AddRenderPipeline(brdfTexturePipeline);
     }
 
@@ -431,7 +431,7 @@ namespace OpenParticleSystemEditor
 
     void OpenParticleViewportRenderer::DrawAxisGizmo() const
     {
-        AZ::RPI::AuxGeomDrawPtr auxGeom = AZ::RPI::AuxGeomFeatureProcessorInterface::GetDrawQueueForScene(m_scene);
+        JE::Render::RPI::AuxGeomDrawPtr auxGeom = JE::Render::RPI::AuxGeomFeatureProcessorInterface::GetDrawQueueForScene(m_scene);
         if (auxGeom == nullptr)
         {
             return;
@@ -552,7 +552,7 @@ namespace OpenParticleSystemEditor
     }
 
     void OpenParticleViewportRenderer::DrawLine2d(
-        AZ::RPI::AuxGeomDrawPtr auxGeomPtr, const AZ::Vector2& p1, const AZ::Vector2& p2, const AZ::Color& color, float z) const
+        JE::Render::RPI::AuxGeomDrawPtr auxGeomPtr, const AZ::Vector2& p1, const AZ::Vector2& p2, const AZ::Color& color, float z) const
     {
         if (auxGeomPtr == nullptr)
         {
@@ -563,13 +563,13 @@ namespace OpenParticleSystemEditor
         points[0] = AZ::Vector3(p1.GetX(), p1.GetY(), z);
         points[1] = AZ::Vector3(p2.GetX(), p2.GetY(), z);
 
-        AZ::RPI::AuxGeomDraw::AuxGeomDynamicDrawArguments drawArgs;
+        JE::Render::RPI::AuxGeomDraw::AuxGeomDynamicDrawArguments drawArgs;
         drawArgs.m_verts = points;
         drawArgs.m_vertCount = 2;
         drawArgs.m_colors = &color;
         drawArgs.m_colorCount = 1;
         drawArgs.m_size = (AZ::u8)4.0f;
-        drawArgs.m_depthTest = AZ::RPI::AuxGeomDraw::DepthTest::Off;
+        drawArgs.m_depthTest = JE::Render::RPI::AuxGeomDraw::DepthTest::Off;
         drawArgs.m_viewProjectionOverrideIndex = auxGeomPtr->GetOrAdd2DViewProjOverride();
         auxGeomPtr->DrawLines(drawArgs);
     }

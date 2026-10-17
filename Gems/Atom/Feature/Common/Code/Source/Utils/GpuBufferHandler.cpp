@@ -9,7 +9,7 @@
 #include <Atom/Feature/Utils/GpuBufferHandler.h>
 #include <Atom/RHI/Buffer.h>
 #include <Atom/RHI/Factory.h>
-#include <Atom/RPI.Public/Buffer/BufferSystemInterface.h>
+#include <JE/Render/RPI/Public/Buffer/BufferSystemInterface.h>
 #include <Atom/Utils/Utils.h>
 #include <cinttypes>
 
@@ -39,14 +39,14 @@ namespace AZ
             {
                 uint32_t byteCount = RHI::NextPowerOfTwo(GetMax<uint32_t>(BufferMinSize, m_elementCount * m_elementSize));
                 
-                RPI::CommonBufferDescriptor desc;
-                desc.m_poolType = RPI::CommonBufferPoolType::ReadOnly;
+                JE::Render::RPI::CommonBufferDescriptor desc;
+                desc.m_poolType = JE::Render::RPI::CommonBufferPoolType::ReadOnly;
                 desc.m_bufferName = descriptor.m_bufferName;
                 desc.m_byteCount = byteCount;
                 desc.m_elementSize = m_elementSize;
                 desc.m_elementFormat = descriptor.m_elementFormat;
 
-                m_buffer = RPI::BufferSystemInterface::Get()->CreateBufferFromCommonPool(desc);
+                m_buffer = JE::Render::RPI::BufferSystemInterface::Get()->CreateBufferFromCommonPool(desc);
             }
         }
 
@@ -113,7 +113,7 @@ namespace AZ
             return true;
         }
 
-        void GpuBufferHandler::UpdateSrg(RPI::ShaderResourceGroup* srg) const
+        void GpuBufferHandler::UpdateSrg(JE::Render::RPI::ShaderResourceGroup* srg) const
         {
             if (m_bufferIndex.IsValid())
             {

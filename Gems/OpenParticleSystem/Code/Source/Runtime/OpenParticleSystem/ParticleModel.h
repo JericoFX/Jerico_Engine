@@ -8,9 +8,9 @@
 
 #pragma once
 
-#include <Atom/RPI.Public/Buffer/Buffer.h>
-#include <Atom/RPI.Public/Material/Material.h>
-#include <Atom/RPI.Public/Model/UvStreamTangentBitmask.h>
+#include <JE/Render/RPI/Public/Buffer/Buffer.h>
+#include <JE/Render/RPI/Public/Material/Material.h>
+#include <JE/Render/RPI/Public/Model/UvStreamTangentBitmask.h>
 
 #include <Atom/RHI.Reflect/InputStreamLayoutBuilder.h>
 #include <Atom/RHI/DrawItem.h>
@@ -18,10 +18,10 @@
 #include <Atom/RHI.Reflect/Base.h>
 #include <Atom/RHI.Reflect/Limits.h>
 
-#include <Atom/RPI.Public/Model/Model.h>
-#include <Atom/RPI.Public/Model/ModelLod.h>
-#include <Atom/RPI.Reflect/Model/ModelAsset.h>
-#include <Atom/RPI.Reflect/Model/ModelLodAsset.h>
+#include <JE/Render/RPI/Public/Model/Model.h>
+#include <JE/Render/RPI/Public/Model/ModelLod.h>
+#include <JE/Render/RPI/Reflect/Model/ModelAsset.h>
+#include <JE/Render/RPI/Reflect/Model/ModelLodAsset.h>
 
 #include <AzCore/std/containers/fixed_vector.h>
 #include <AzCore/std/containers/vector_set.h>
@@ -34,50 +34,50 @@ namespace OpenParticle
         ParticleModel() = default;
         ~ParticleModel() = default;
 
-        void SetupModel(AZ::Data::Asset<AZ::RPI::ModelAsset>& model, size_t lodIndex);
+        void SetupModel(AZ::Data::Asset<JE::Render::RPI::ModelAsset>& model, size_t lodIndex);
 
         size_t GetMeshCount() const;
 
-        AZ::Data::Instance<AZ::RPI::ModelLod> GetModelLod() const;
+        AZ::Data::Instance<JE::Render::RPI::ModelLod> GetModelLod() const;
 
-        bool BuildInputStreamLayouts(const AZ::RPI::ShaderInputContract& contract);
+        bool BuildInputStreamLayouts(const JE::Render::RPI::ShaderInputContract& contract);
 
         bool IsInputStreamLayoutsValid(size_t meshIndex) const;
 
         const AZ::RHI::InputStreamLayout& GetInputStreamLayout(size_t meshIndex) const;
 
-        const AZ::RPI::UvStreamTangentBitmask& GetUvStreamTangentBitmask(size_t meshIndex) const;
+        const JE::Render::RPI::UvStreamTangentBitmask& GetUvStreamTangentBitmask(size_t meshIndex) const;
 
-        const AZ::RPI::ModelLod::StreamBufferViewList& GetStreamBufferViewList(size_t meshIndex) const;
+        const JE::Render::RPI::ModelLod::StreamBufferViewList& GetStreamBufferViewList(size_t meshIndex) const;
 
     private:
         bool GetStreamsForMesh(
             AZ::RHI::InputStreamLayoutBuilder& layoutBuilder,
-            AZ::RPI::UvStreamTangentBitmask* uvStreamTangentBitmaskOut,
-            const AZ::RPI::ShaderInputContract& contract,
+            JE::Render::RPI::UvStreamTangentBitmask* uvStreamTangentBitmaskOut,
+            const JE::Render::RPI::ShaderInputContract& contract,
             size_t meshIndex,
-            const AZ::RPI::MaterialModelUvOverrideMap& materialModelUvMap = {},
-            const AZ::RPI::MaterialUvNameMap& materialUvNameMap = {});
+            const JE::Render::RPI::MaterialModelUvOverrideMap& materialModelUvMap = {},
+            const JE::Render::RPI::MaterialUvNameMap& materialUvNameMap = {});
 
-        AZ::RPI::ModelLod::StreamInfoList::const_iterator FindMatchingStream(
+        JE::Render::RPI::ModelLod::StreamInfoList::const_iterator FindMatchingStream(
             size_t meshIndex,
-            const AZ::RPI::MaterialModelUvOverrideMap& materialModelUvMap,
-            const AZ::RPI::MaterialUvNameMap& materialUvNameMap,
-            const AZ::RPI::ShaderInputContract::StreamChannelInfo& contractStreamChannel,
-            AZ::RPI::ModelLod::StreamInfoList::const_iterator defaultUv,
-            AZ::RPI::ModelLod::StreamInfoList::const_iterator firstUv,
-            AZ::RPI::UvStreamTangentBitmask* uvStreamTangentBitmaskOut);
+            const JE::Render::RPI::MaterialModelUvOverrideMap& materialModelUvMap,
+            const JE::Render::RPI::MaterialUvNameMap& materialUvNameMap,
+            const JE::Render::RPI::ShaderInputContract::StreamChannelInfo& contractStreamChannel,
+            JE::Render::RPI::ModelLod::StreamInfoList::const_iterator defaultUv,
+            JE::Render::RPI::ModelLod::StreamInfoList::const_iterator firstUv,
+            JE::Render::RPI::UvStreamTangentBitmask* uvStreamTangentBitmaskOut);
 
-        AZ::RPI::ModelLod::StreamInfoList::const_iterator FindFirstUvStreamFromMesh(size_t meshIndex);
-        AZ::RPI::ModelLod::StreamInfoList::const_iterator FindDefaultUvStream(
-            size_t meshIndex, const AZ::RPI::MaterialUvNameMap& materialUvNameMap);
+        JE::Render::RPI::ModelLod::StreamInfoList::const_iterator FindFirstUvStreamFromMesh(size_t meshIndex);
+        JE::Render::RPI::ModelLod::StreamInfoList::const_iterator FindDefaultUvStream(
+            size_t meshIndex, const JE::Render::RPI::MaterialUvNameMap& materialUvNameMap);
 
-        AZ::Data::Instance<AZ::RPI::Model> m_modelInstance;
-        AZ::Data::Instance<AZ::RPI::ModelLod> m_modelLod;
+        AZ::Data::Instance<JE::Render::RPI::Model> m_modelInstance;
+        AZ::Data::Instance<JE::Render::RPI::ModelLod> m_modelLod;
         size_t m_lodIndex = 0;
         AZ::HashValue64 m_lastContractHash = AZ::HashValue64{ 0 };
         AZStd::vector<AZ::RHI::InputStreamLayout> m_inputStreamLayouts;
-        AZStd::vector<AZ::RPI::UvStreamTangentBitmask> m_uvStreamTangentBitmasks;
-        AZStd::vector<AZ::RPI::ModelLod::StreamBufferViewList> m_streamBufferViews;
+        AZStd::vector<JE::Render::RPI::UvStreamTangentBitmask> m_uvStreamTangentBitmasks;
+        AZStd::vector<JE::Render::RPI::ModelLod::StreamBufferViewList> m_streamBufferViews;
     };
 } // namespace OpenParticle

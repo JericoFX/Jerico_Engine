@@ -10,7 +10,7 @@
 
 #include <AzCore/Component/ComponentBus.h>
 #include <SurfaceData/SurfaceDataTypes.h>
-#include <Atom/RPI.Public/Material/Material.h>
+#include <JE/Render/RPI/Public/Material/Material.h>
 
 namespace Terrain
 {
@@ -51,7 +51,7 @@ namespace Terrain
         //! The default surface material has been assigned and loaded
         virtual void OnTerrainDefaultSurfaceMaterialCreated(
             [[maybe_unused]] AZ::EntityId entityId,
-            [[maybe_unused]] AZ::Data::Instance<AZ::RPI::Material> material)
+            [[maybe_unused]] AZ::Data::Instance<JE::Render::RPI::Material> material)
         {
         }
 
@@ -64,7 +64,7 @@ namespace Terrain
         //! The default surface material has been changed to a different material
         virtual void OnTerrainDefaultSurfaceMaterialChanged(
             [[maybe_unused]] AZ::EntityId entityId,
-            [[maybe_unused]] AZ::Data::Instance<AZ::RPI::Material> newMaterial)
+            [[maybe_unused]] AZ::Data::Instance<JE::Render::RPI::Material> newMaterial)
         {
         }
 
@@ -72,7 +72,7 @@ namespace Terrain
         virtual void OnTerrainSurfaceMaterialMappingCreated(
             [[maybe_unused]] AZ::EntityId entityId,
             [[maybe_unused]] SurfaceData::SurfaceTag surface,
-            [[maybe_unused]] AZ::Data::Instance<AZ::RPI::Material> material)
+            [[maybe_unused]] AZ::Data::Instance<JE::Render::RPI::Material> material)
         {
         }
 
@@ -95,7 +95,7 @@ namespace Terrain
         virtual void OnTerrainSurfaceMaterialMappingMaterialChanged(
             [[maybe_unused]] AZ::EntityId entityId,
             [[maybe_unused]] SurfaceData::SurfaceTag surface,
-            [[maybe_unused]] AZ::Data::Instance<AZ::RPI::Material> material)
+            [[maybe_unused]] AZ::Data::Instance<JE::Render::RPI::Material> material)
         {
         }
         

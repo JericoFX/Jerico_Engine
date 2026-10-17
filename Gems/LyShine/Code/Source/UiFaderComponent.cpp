@@ -17,7 +17,7 @@
 #include <AzCore/Serialization/EditContext.h>
 #include <AzCore/RTTI/BehaviorContext.h>
 
-#include <Atom/RPI.Public/Image/AttachmentImage.h>
+#include <JE/Render/RPI/Public/Image/AttachmentImage.h>
 
 #include <LyShine/Bus/UiElementBus.h>
 #include <LyShine/Bus/UiRenderBus.h>
@@ -570,7 +570,7 @@ void UiFaderComponent::RenderRttFader(LyShine::IRenderGraph* renderGraph, UiElem
     UiRenderInterface* renderInterface, int numChildren, bool isInGame)
 {
     // Get the render target
-    AZ::Data::Instance<AZ::RPI::AttachmentImage> attachmentImage;
+    AZ::Data::Instance<JE::Render::RPI::AttachmentImage> attachmentImage;
     AZ::EntityId canvasEntityId;
     UiElementBus::EventResult(canvasEntityId, GetEntityId(), &UiElementBus::Events::GetCanvasEntityId);
     LyShine::RenderToTextureRequestBus::EventResult(
@@ -622,7 +622,7 @@ void UiFaderComponent::RenderRttFader(LyShine::IRenderGraph* renderGraph, UiElem
         // Add a primitive to render a quad using the render target we have created
         {
             // Set the texture and other render state required
-            AZ::Data::Instance<AZ::RPI::Image> image = attachmentImage;
+            AZ::Data::Instance<JE::Render::RPI::Image> image = attachmentImage;
             bool isClampTextureMode = true;
             bool isTextureSRGB = true;
             bool isTexturePremultipliedAlpha = true;

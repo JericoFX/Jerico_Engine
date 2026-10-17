@@ -19,7 +19,7 @@ namespace AZ
         {
         public:
 
-            using MaterialAssetPtr = AZ::Data::Asset<AZ::RPI::MaterialAsset>;
+            using MaterialAssetPtr = AZ::Data::Asset<JE::Render::RPI::MaterialAsset>;
 
             void TrackAssetLoad(const FeatureProcessorHandle handle, const MaterialAssetPtr asset)
             {

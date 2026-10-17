@@ -8,36 +8,36 @@
 
 #include "ReflectionCopyFrameBufferPass.h"
 #include "ReflectionScreenSpaceTracePass.h"
-#include <Atom/RPI.Public/Pass/PassSystemInterface.h>
-#include <Atom/RPI.Public/Pass/PassFilter.h>
+#include <JE/Render/RPI/Public/Pass/PassSystemInterface.h>
+#include <JE/Render/RPI/Public/Pass/PassFilter.h>
 
 namespace AZ
 {
     namespace Render
     {
-        RPI::Ptr<ReflectionCopyFrameBufferPass> ReflectionCopyFrameBufferPass::Create(const RPI::PassDescriptor& descriptor)
+        JE::Render::RPI::Ptr<ReflectionCopyFrameBufferPass> ReflectionCopyFrameBufferPass::Create(const JE::Render::RPI::PassDescriptor& descriptor)
         {
-            RPI::Ptr<ReflectionCopyFrameBufferPass> pass = aznew ReflectionCopyFrameBufferPass(descriptor);
+            JE::Render::RPI::Ptr<ReflectionCopyFrameBufferPass> pass = aznew ReflectionCopyFrameBufferPass(descriptor);
             return pass;
         }
 
-        ReflectionCopyFrameBufferPass::ReflectionCopyFrameBufferPass(const RPI::PassDescriptor& descriptor)
-            : RPI::FullscreenTrianglePass(descriptor)
+        ReflectionCopyFrameBufferPass::ReflectionCopyFrameBufferPass(const JE::Render::RPI::PassDescriptor& descriptor)
+            : JE::Render::RPI::FullscreenTrianglePass(descriptor)
         {
         }
 
         void ReflectionCopyFrameBufferPass::BuildInternal()
         {
-            RPI::PassFilter passFilter = RPI::PassFilter::CreateWithPassName(AZ::Name("ReflectionScreenSpaceTracePass"), GetRenderPipeline());
-            RPI::PassSystemInterface::Get()->ForEachPass(passFilter, [this](RPI::Pass* pass) -> RPI::PassFilterExecutionFlow
+            JE::Render::RPI::PassFilter passFilter = JE::Render::RPI::PassFilter::CreateWithPassName(AZ::Name("ReflectionScreenSpaceTracePass"), GetRenderPipeline());
+            JE::Render::RPI::PassSystemInterface::Get()->ForEachPass(passFilter, [this](JE::Render::RPI::Pass* pass) -> JE::Render::RPI::PassFilterExecutionFlow
                 {
                     Render::ReflectionScreenSpaceTracePass* tracePass = azrtti_cast<ReflectionScreenSpaceTracePass*>(pass);
-                    Data::Instance<RPI::AttachmentImage>& frameBufferAttachment = tracePass->GetPreviousFrameImageAttachment();
+                    Data::Instance<JE::Render::RPI::AttachmentImage>& frameBufferAttachment = tracePass->GetPreviousFrameImageAttachment();
 
-                    RPI::PassAttachmentBinding& outputBinding = GetOutputBinding(0);
+                    JE::Render::RPI::PassAttachmentBinding& outputBinding = GetOutputBinding(0);
                     AttachImageToSlot(outputBinding.m_name, frameBufferAttachment);
 
-                    return RPI::PassFilterExecutionFlow::StopVisitingPasses;
+                    return JE::Render::RPI::PassFilterExecutionFlow::StopVisitingPasses;
                 });
 
             FullscreenTrianglePass::BuildInternal();

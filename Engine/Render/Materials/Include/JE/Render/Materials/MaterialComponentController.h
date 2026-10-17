@@ -12,7 +12,7 @@
 
 #include <AzCore/Component/Component.h>
 #include <AzCore/Component/TickBus.h>
-#include <Atom/RPI.Public/Material/Material.h>
+#include <JE/Render/RPI/Public/Material/Material.h>
 #include <JE/Render/Materials/MaterialComponentBus.h>
 #include <JE/Render/Materials/MaterialComponentConfig.h>
 
@@ -86,8 +86,8 @@ namespace JE
                 const MaterialAssignmentId& materialAssignmentId, const MaterialPropertyOverrideMap& propertyOverrides) override;
             MaterialPropertyOverrideMap GetPropertyValues(const MaterialAssignmentId& materialAssignmentId) const override;
             void SetModelUvOverrides(
-                const MaterialAssignmentId& materialAssignmentId, const AZ::RPI::MaterialModelUvOverrideMap& modelUvOverrides) override;
-            AZ::RPI::MaterialModelUvOverrideMap GetModelUvOverrides(const MaterialAssignmentId& materialAssignmentId) const override;
+                const MaterialAssignmentId& materialAssignmentId, const JE::Render::RPI::MaterialModelUvOverrideMap& modelUvOverrides) override;
+            JE::Render::RPI::MaterialModelUvOverrideMap GetModelUvOverrides(const MaterialAssignmentId& materialAssignmentId) const override;
 
             //! MaterialConsumerNotificationBus::Handler overrides...
             void OnMaterialAssignmentSlotsChanged() override;
@@ -138,7 +138,7 @@ namespace JE
             AZ::EntityId m_entityId;
             MaterialComponentConfig m_configuration;
             MaterialAssignmentMap m_defaultMaterialMap;
-            AZStd::unordered_map<AZ::Data::AssetId, AZ::Data::Asset<AZ::RPI::MaterialAsset>> m_uniqueMaterialMap;
+            AZStd::unordered_map<AZ::Data::AssetId, AZ::Data::Asset<JE::Render::RPI::MaterialAsset>> m_uniqueMaterialMap;
             AZStd::unordered_set<MaterialAssignmentId> m_materialsWithDirtyProperties;
             //! We store here references to all the material assets for which we are connected to the
             //! AssetBus for notifications. Instead of taking action upon being notified, we simply store

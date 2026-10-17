@@ -7,10 +7,10 @@
  */
 
 #include <Atom/RHI/RHISystemInterface.h>
-#include <Atom/RPI.Public/Image/AttachmentImagePool.h>
-#include <Atom/RPI.Public/Image/ImageSystemInterface.h>
-#include <Atom/RPI.Public/RenderPipeline.h>
-#include <Atom/RPI.Public/RPIUtils.h>
+#include <JE/Render/RPI/Public/Image/AttachmentImagePool.h>
+#include <JE/Render/RPI/Public/Image/ImageSystemInterface.h>
+#include <JE/Render/RPI/Public/RenderPipeline.h>
+#include <JE/Render/RPI/Public/RPIUtils.h>
 #include <DiffuseProbeGrid_Traits_Platform.h>
 #include <Render/DiffuseProbeGridRenderPass.h>
 #include <Render/DiffuseProbeGridFeatureProcessor.h>
@@ -19,12 +19,12 @@ namespace AZ
 {
     namespace Render
     {
-        RPI::Ptr<Render::DiffuseProbeGridRenderPass> DiffuseProbeGridRenderPass::Create(const RPI::PassDescriptor& descriptor)
+        JE::Render::RPI::Ptr<Render::DiffuseProbeGridRenderPass> DiffuseProbeGridRenderPass::Create(const JE::Render::RPI::PassDescriptor& descriptor)
         {
             return aznew DiffuseProbeGridRenderPass(descriptor);
         }
 
-        DiffuseProbeGridRenderPass::DiffuseProbeGridRenderPass(const RPI::PassDescriptor& descriptor)
+        DiffuseProbeGridRenderPass::DiffuseProbeGridRenderPass(const JE::Render::RPI::PassDescriptor& descriptor)
             : Base(descriptor)
         {
             if (!AZ_TRAIT_DIFFUSE_GI_PASSES_SUPPORTED)
@@ -37,16 +37,16 @@ namespace AZ
             // create the shader resource group
             // Note: the shader may not be available on all platforms
             AZStd::string shaderFilePath = "Shaders/DiffuseGlobalIllumination/DiffuseProbeGridRender.azshader";
-            m_shader = RPI::LoadCriticalShader(shaderFilePath);
+            m_shader = JE::Render::RPI::LoadCriticalShader(shaderFilePath);
             if (m_shader == nullptr)
             {
                 return;
             }
 
-            m_srgLayout = m_shader->FindShaderResourceGroupLayout(RPI::SrgBindingSlot::Pass);
+            m_srgLayout = m_shader->FindShaderResourceGroupLayout(JE::Render::RPI::SrgBindingSlot::Pass);
             AZ_Assert(m_srgLayout != nullptr, "[DiffuseProbeGridRenderPass '%s']: Failed to find SRG layout", GetPathName().GetCStr());
 
-            m_shaderResourceGroup = RPI::ShaderResourceGroup::Create(m_shader->GetAsset(), m_shader->GetSupervariantIndex(), m_srgLayout->GetName());
+            m_shaderResourceGroup = JE::Render::RPI::ShaderResourceGroup::Create(m_shader->GetAsset(), m_shader->GetSupervariantIndex(), m_srgLayout->GetName());
             AZ_Assert(m_shaderResourceGroup, "[DiffuseProbeGridRenderPass '%s']: Failed to create SRG", GetPathName().GetCStr());
         }
 
@@ -57,7 +57,7 @@ namespace AZ
                 return false;
             }
 
-            RPI::Scene* scene = m_pipeline->GetScene();
+            JE::Render::RPI::Scene* scene = m_pipeline->GetScene();
             if (!scene)
             {
                 return false;
@@ -75,12 +75,12 @@ namespace AZ
 
         void DiffuseProbeGridRenderPass::FrameBeginInternal(FramePrepareParams params)
         {
-            RPI::Scene* scene = m_pipeline->GetScene();
+            JE::Render::RPI::Scene* scene = m_pipeline->GetScene();
             DiffuseProbeGridFeatureProcessor* diffuseProbeGridFeatureProcessor = scene->GetFeatureProcessor<DiffuseProbeGridFeatureProcessor>();
 
             // get output attachment size
             AZ_Assert(GetInputOutputCount() > 0, "DiffuseProbeGridRenderPass: Could not find output bindings");
-            RPI::PassAttachment* m_outputAttachment = GetInputOutputBinding(0).GetAttachment().get();
+            JE::Render::RPI::PassAttachment* m_outputAttachment = GetInputOutputBinding(0).GetAttachment().get();
             AZ_Assert(m_outputAttachment, "DiffuseProbeGridRenderPass: Output binding has no attachment!");
             
             RHI::Size size = m_outputAttachment->m_descriptor.m_image.m_size;
@@ -104,7 +104,7 @@ namespace AZ
 
         void DiffuseProbeGridRenderPass::SetupFrameGraphDependencies(RHI::FrameGraphInterface frameGraph)
         {
-            RPI::Scene* scene = m_pipeline->GetScene();
+            JE::Render::RPI::Scene* scene = m_pipeline->GetScene();
             DiffuseProbeGridFeatureProcessor* diffuseProbeGridFeatureProcessor = scene->GetFeatureProcessor<DiffuseProbeGridFeatureProcessor>();
 
             for (auto& diffuseProbeGrid : diffuseProbeGridFeatureProcessor->GetProbeGrids())
@@ -186,7 +186,7 @@ namespace AZ
 
         void DiffuseProbeGridRenderPass::CompileResources(const RHI::FrameGraphCompileContext& context)
         {
-            RPI::Scene* scene = m_pipeline->GetScene();
+            JE::Render::RPI::Scene* scene = m_pipeline->GetScene();
             DiffuseProbeGridFeatureProcessor* diffuseProbeGridFeatureProcessor = scene->GetFeatureProcessor<DiffuseProbeGridFeatureProcessor>();
 
             for (auto& diffuseProbeGrid : diffuseProbeGridFeatureProcessor->GetProbeGrids())

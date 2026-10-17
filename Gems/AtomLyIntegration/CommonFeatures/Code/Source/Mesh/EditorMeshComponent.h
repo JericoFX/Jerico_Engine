@@ -58,7 +58,7 @@ namespace AZ
             void DisplayEntityViewport(const AzFramework::ViewportInfo&, AzFramework::DebugDisplayRequests&) override;
 
             // MeshComponentNotificationBus overrides ...
-            void OnModelReady(const Data::Asset<RPI::ModelAsset>& modelAsset, const Data::Instance<RPI::Model>& model) override;
+            void OnModelReady(const Data::Asset<JE::Render::RPI::ModelAsset>& modelAsset, const Data::Instance<JE::Render::RPI::Model>& model) override;
 
             // AzToolsFramework::EditorEntityVisibilityNotificationBus::Handler overrides
             void OnEntityVisibilityChanged(bool visibility) override;

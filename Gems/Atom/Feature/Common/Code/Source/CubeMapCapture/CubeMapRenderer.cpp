@@ -7,11 +7,11 @@
  */
 
 #include <CubeMapCapture/CubeMapRenderer.h>
-#include <Atom/RPI.Public/Pass/Pass.h>
-#include <Atom/RPI.Public/Pass/PassSystemInterface.h>
-#include <Atom/RPI.Public/RenderPipeline.h>
-#include <Atom/RPI.Public/View.h>
-#include <Atom/RPI.Reflect/Pass/EnvironmentCubeMapPassData.h>
+#include <JE/Render/RPI/Public/Pass/Pass.h>
+#include <JE/Render/RPI/Public/Pass/PassSystemInterface.h>
+#include <JE/Render/RPI/Public/RenderPipeline.h>
+#include <JE/Render/RPI/Public/View.h>
+#include <JE/Render/RPI/Reflect/Pass/EnvironmentCubeMapPassData.h>
 
 namespace AZ
 {
@@ -30,11 +30,11 @@ namespace AZ
             m_callback = callback;
             m_exposure = exposure;
 
-            AZ::RPI::RenderPipelineDescriptor environmentCubeMapPipelineDesc;
+            JE::Render::RPI::RenderPipelineDescriptor environmentCubeMapPipelineDesc;
             environmentCubeMapPipelineDesc.m_mainViewTagName = "MainCamera";
-            environmentCubeMapPipelineDesc.m_renderSettings.m_multisampleState = RPI::RPISystemInterface::Get()->GetApplicationMultisampleState();
-            environmentCubeMapPipelineDesc.m_renderSettings.m_size.m_width = RPI::EnvironmentCubeMapPass::CubeMapFaceSize;
-            environmentCubeMapPipelineDesc.m_renderSettings.m_size.m_height = RPI::EnvironmentCubeMapPass::CubeMapFaceSize;
+            environmentCubeMapPipelineDesc.m_renderSettings.m_multisampleState = JE::Render::RPI::RPISystemInterface::Get()->GetApplicationMultisampleState();
+            environmentCubeMapPipelineDesc.m_renderSettings.m_size.m_width = JE::Render::RPI::EnvironmentCubeMapPass::CubeMapFaceSize;
+            environmentCubeMapPipelineDesc.m_renderSettings.m_size.m_height = JE::Render::RPI::EnvironmentCubeMapPass::CubeMapFaceSize;
             environmentCubeMapPipelineDesc.m_allowModification = true; // Enable pipeline modification since we need to have GI lighting for the baking
 
             // create a unique name for the pipeline
@@ -42,23 +42,23 @@ namespace AZ
             AZStd::string uuidString;
             uuid.ToString(uuidString);
             environmentCubeMapPipelineDesc.m_name = AZStd::string::format("EnvironmentCubeMapPipeline_%s", uuidString.c_str());
-            RPI::RenderPipelinePtr environmentCubeMapPipeline = AZ::RPI::RenderPipeline::CreateRenderPipeline(environmentCubeMapPipelineDesc);
+            JE::Render::RPI::RenderPipelinePtr environmentCubeMapPipeline = JE::Render::RPI::RenderPipeline::CreateRenderPipeline(environmentCubeMapPipelineDesc);
             m_environmentCubeMapPipelineId = environmentCubeMapPipeline->GetId();
 
-            AZStd::shared_ptr<RPI::EnvironmentCubeMapPassData> passData = AZStd::make_shared<RPI::EnvironmentCubeMapPassData>();
+            AZStd::shared_ptr<JE::Render::RPI::EnvironmentCubeMapPassData> passData = AZStd::make_shared<JE::Render::RPI::EnvironmentCubeMapPassData>();
             passData->m_position = transform.GetTranslation();
 
-            RPI::PassDescriptor environmentCubeMapPassDescriptor(Name("EnvironmentCubeMapPass"));
+            JE::Render::RPI::PassDescriptor environmentCubeMapPassDescriptor(Name("EnvironmentCubeMapPass"));
             environmentCubeMapPassDescriptor.m_passData = passData;
 
-            m_environmentCubeMapPass = RPI::EnvironmentCubeMapPass::Create(environmentCubeMapPassDescriptor);
+            m_environmentCubeMapPass = JE::Render::RPI::EnvironmentCubeMapPass::Create(environmentCubeMapPassDescriptor);
             m_environmentCubeMapPass->SetRenderPipeline(environmentCubeMapPipeline.get());
 
-            const RPI::Ptr<RPI::ParentPass>& rootPass = environmentCubeMapPipeline->GetRootPass();
+            const JE::Render::RPI::Ptr<JE::Render::RPI::ParentPass>& rootPass = environmentCubeMapPipeline->GetRootPass();
             rootPass->AddChild(m_environmentCubeMapPass);
 
             // store the current exposure values
-            Data::Instance<RPI::ShaderResourceGroup> sceneSrg = m_scene->GetShaderResourceGroup();
+            Data::Instance<JE::Render::RPI::ShaderResourceGroup> sceneSrg = m_scene->GetShaderResourceGroup();
             m_previousGlobalIblExposure = sceneSrg->GetConstant<float>(m_globalIblExposureConstantIndex);
             m_previousSkyBoxExposure = sceneSrg->GetConstant<float>(m_skyBoxExposureConstantIndex);
 
@@ -70,7 +70,7 @@ namespace AZ
         {
             if (m_renderingCubeMap)
             {
-                Data::Instance<RPI::ShaderResourceGroup> sceneSrg = m_scene->GetShaderResourceGroup();
+                Data::Instance<JE::Render::RPI::ShaderResourceGroup> sceneSrg = m_scene->GetShaderResourceGroup();
 
                 // set exposures to the user specified value while baking the cubemap
                 sceneSrg->SetConstant(m_globalIblExposureConstantIndex, m_exposure);
@@ -82,7 +82,7 @@ namespace AZ
         {
             if (m_environmentCubeMapPass && m_environmentCubeMapPass->IsFinished())
             {
-                Data::Instance<RPI::ShaderResourceGroup> sceneSrg = m_scene->GetShaderResourceGroup();
+                Data::Instance<JE::Render::RPI::ShaderResourceGroup> sceneSrg = m_scene->GetShaderResourceGroup();
 
                 // all faces of the cubemap have been rendered, invoke the callback
                 m_callback(m_environmentCubeMapPass->GetTextureData(), m_environmentCubeMapPass->GetTextureFormat());
@@ -100,7 +100,7 @@ namespace AZ
             }
         }
 
-        void CubeMapRenderer::SetDefaultView(RPI::RenderPipeline* renderPipeline)
+        void CubeMapRenderer::SetDefaultView(JE::Render::RPI::RenderPipeline* renderPipeline)
         {
             // check for an active cubemap build and matching pipeline
             if (m_environmentCubeMapPass

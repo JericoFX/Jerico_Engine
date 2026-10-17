@@ -13,7 +13,7 @@
 #include <Atom/Feature/SkinnedMesh/SkinnedMeshFeatureProcessorInterface.h>
 #include <Atom/Feature/SkinnedMesh/SkinnedMeshShaderOptions.h>
 
-#include <Atom/RPI.Reflect/Model/ModelLodAsset.h>
+#include <JE/Render/RPI/Reflect/Model/ModelLodAsset.h>
 #include <Atom/Utils/StableDynamicArray.h>
 
 #include <AzCore/base.h>
@@ -21,11 +21,16 @@
 
 namespace AZ
 {
-    namespace RPI
-    {
+    }
+
+namespace JE::Render::RPI
+{
         class Model;
         class Scene;
     }
+
+namespace AZ
+{
 
     namespace Render
     {
@@ -50,17 +55,17 @@ namespace AZ
 
             AZ_DISABLE_COPY_MOVE(SkinnedMeshRenderProxy);
 
-            bool Init(const RPI::Scene& scene, SkinnedMeshFeatureProcessor* featureProcessor);
-            bool BuildDispatchItem(const RPI::Scene& scene, uint32_t modelLodIndex, const SkinnedMeshShaderOptions& shaderOptions);
+            bool Init(const JE::Render::RPI::Scene& scene, SkinnedMeshFeatureProcessor* featureProcessor);
+            bool BuildDispatchItem(const JE::Render::RPI::Scene& scene, uint32_t modelLodIndex, const SkinnedMeshShaderOptions& shaderOptions);
 
-            AZStd::fixed_vector<AZStd::vector<AZStd::unique_ptr<SkinnedMeshDispatchItem>>, RPI::ModelLodAsset::LodCountMax> m_dispatchItemsByLod;
-            AZStd::fixed_vector<AZStd::vector<AZStd::unique_ptr<MorphTargetDispatchItem>>, RPI::ModelLodAsset::LodCountMax> m_morphTargetDispatchItemsByLod;
+            AZStd::fixed_vector<AZStd::vector<AZStd::unique_ptr<SkinnedMeshDispatchItem>>, JE::Render::RPI::ModelLodAsset::LodCountMax> m_dispatchItemsByLod;
+            AZStd::fixed_vector<AZStd::vector<AZStd::unique_ptr<MorphTargetDispatchItem>>, JE::Render::RPI::ModelLodAsset::LodCountMax> m_morphTargetDispatchItemsByLod;
             Data::Instance<SkinnedMeshInputBuffers> m_inputBuffers;
             AZStd::intrusive_ptr<SkinnedMeshInstance> m_instance;
             AZStd::shared_ptr<MeshFeatureProcessorInterface::MeshHandle> m_meshHandle;
             SkinnedMeshShaderOptions m_shaderOptions;
 
-            Data::Instance<RPI::Buffer> m_boneTransforms;
+            Data::Instance<JE::Render::RPI::Buffer> m_boneTransforms;
 
             SkinnedMeshFeatureProcessor* m_featureProcessor = nullptr;
         };

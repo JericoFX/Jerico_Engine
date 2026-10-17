@@ -18,7 +18,7 @@
 
 #include <Atom/RHI.Reflect/ReflectSystemComponent.h>
 
-#include <Atom/RPI.Public/RPISystem.h>
+#include <JE/Render/RPI/Public/RPISystem.h>
 
 #include <BuilderComponent.h>
 
@@ -51,7 +51,7 @@ namespace UnitTest
     void BuilderTestFixture::Reflect(AZ::ReflectContext* context)
     {
         AZ::RHI::ReflectSystemComponent::Reflect(context);
-        AZ::RPI::RPISystem::Reflect(context);
+        JE::Render::RPI::RPISystem::Reflect(context);
         JE::Assets::RenderBuilders::BuilderComponent::Reflect(context);
         AZ::Name::Reflect(context);
         MyAssetManagerComponent::Reflect(context);

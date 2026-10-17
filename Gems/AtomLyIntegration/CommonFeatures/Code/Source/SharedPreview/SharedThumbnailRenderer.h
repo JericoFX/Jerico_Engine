@@ -8,10 +8,10 @@
 
 #pragma once
 
-#include <Atom/RPI.Reflect/Asset/AssetUtils.h>
-#include <Atom/RPI.Reflect/Material/MaterialAsset.h>
-#include <Atom/RPI.Reflect/Model/ModelAsset.h>
-#include <Atom/RPI.Reflect/System/AnyAsset.h>
+#include <JE/Render/RPI/Reflect/Asset/AssetUtils.h>
+#include <JE/Render/RPI/Reflect/Material/MaterialAsset.h>
+#include <JE/Render/RPI/Reflect/Model/ModelAsset.h>
+#include <JE/Render/RPI/Reflect/System/AnyAsset.h>
 #include <AzCore/Component/TickBus.h>
 #include <AzToolsFramework/Thumbnails/Thumbnail.h>
 #include <AzToolsFramework/Thumbnails/ThumbnailerBus.h>
@@ -36,9 +36,9 @@ namespace AZ
             struct ThumbnailConfig
             {
                 bool IsValid() const;
-                Data::Asset<RPI::ModelAsset> m_modelAsset;
-                Data::Asset<RPI::MaterialAsset> m_materialAsset;
-                Data::Asset<RPI::AnyAsset> m_lightingAsset;
+                Data::Asset<JE::Render::RPI::ModelAsset> m_modelAsset;
+                Data::Asset<JE::Render::RPI::MaterialAsset> m_materialAsset;
+                Data::Asset<JE::Render::RPI::AnyAsset> m_lightingAsset;
             };
 
             ThumbnailConfig GetThumbnailConfig(AzToolsFramework::Thumbnailer::SharedThumbnailKey thumbnailKey);
@@ -51,10 +51,10 @@ namespace AZ
             void OnSystemTick() override;
 
             // Default assets to be kept loaded and used for rendering if not overridden
-            Data::Asset<RPI::AnyAsset> m_defaultLightingPresetAsset;
-            Data::Asset<RPI::ModelAsset> m_defaultModelAsset;
-            Data::Asset<RPI::MaterialAsset> m_defaultMaterialAsset;
-            Data::Asset<RPI::MaterialAsset> m_reflectionMaterialAsset;
+            Data::Asset<JE::Render::RPI::AnyAsset> m_defaultLightingPresetAsset;
+            Data::Asset<JE::Render::RPI::ModelAsset> m_defaultModelAsset;
+            Data::Asset<JE::Render::RPI::MaterialAsset> m_defaultMaterialAsset;
+            Data::Asset<JE::Render::RPI::MaterialAsset> m_reflectionMaterialAsset;
         };
     } // namespace LyIntegration
 } // namespace AZ

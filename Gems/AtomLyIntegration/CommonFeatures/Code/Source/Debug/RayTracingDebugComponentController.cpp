@@ -8,7 +8,7 @@
 
 #include <Atom/Feature/Debug/RayTracingDebugFeatureProcessorInterface.h>
 #include <Atom/RHI/RHISystemInterface.h>
-#include <Atom/RPI.Public/Scene.h>
+#include <JE/Render/RPI/Public/Scene.h>
 #include <Debug/RayTracingDebugComponentController.h>
 
 namespace AZ::Render
@@ -56,7 +56,7 @@ namespace AZ::Render
 
         m_entityId = entityId;
 
-        auto fp{ RPI::Scene::GetFeatureProcessorForEntity<RayTracingDebugFeatureProcessorInterface>(m_entityId) };
+        auto fp{ JE::Render::RPI::Scene::GetFeatureProcessorForEntity<RayTracingDebugFeatureProcessorInterface>(m_entityId) };
         if (fp)
         {
             m_rayTracingDebugSettingsInterface = fp->GetSettingsInterface();
@@ -76,7 +76,7 @@ namespace AZ::Render
             return;
         }
 
-        auto fp{ RPI::Scene::GetFeatureProcessorForEntity<RayTracingDebugFeatureProcessorInterface>(m_entityId) };
+        auto fp{ JE::Render::RPI::Scene::GetFeatureProcessorForEntity<RayTracingDebugFeatureProcessorInterface>(m_entityId) };
         if (fp)
         {
             fp->OnRayTracingDebugComponentRemoved();

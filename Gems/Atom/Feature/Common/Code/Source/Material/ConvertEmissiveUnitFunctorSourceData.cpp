@@ -18,7 +18,7 @@ namespace AZ
         {
             if (auto* serializeContext = azrtti_cast<AZ::SerializeContext*>(context))
             {
-                serializeContext->Class<ConvertEmissiveUnitFunctorSourceData, RPI::MaterialFunctorSourceData>()
+                serializeContext->Class<ConvertEmissiveUnitFunctorSourceData, JE::Render::RPI::MaterialFunctorSourceData>()
                     ->Version(6) // added base-class
                     ->Field("intensityProperty", &ConvertEmissiveUnitFunctorSourceData::m_intensityPropertyName)
                     ->Field("lightUnitProperty", &ConvertEmissiveUnitFunctorSourceData::m_lightUnitPropertyName)
@@ -30,9 +30,9 @@ namespace AZ
             }
         }
 
-        RPI::MaterialFunctorSourceData::FunctorResult ConvertEmissiveUnitFunctorSourceData::CreateFunctor(const RuntimeContext& context) const
+        JE::Render::RPI::MaterialFunctorSourceData::FunctorResult ConvertEmissiveUnitFunctorSourceData::CreateFunctor(const RuntimeContext& context) const
         {
-            RPI::Ptr<ConvertEmissiveUnitFunctor> functor = aznew ConvertEmissiveUnitFunctor;
+            JE::Render::RPI::Ptr<ConvertEmissiveUnitFunctor> functor = aznew ConvertEmissiveUnitFunctor;
 
             functor->m_intensityPropertyIndex = context.FindMaterialPropertyIndex(AZ::Name{ m_intensityPropertyName });
             if (functor->m_intensityPropertyIndex.IsNull())
@@ -48,19 +48,19 @@ namespace AZ
             }
             AddMaterialPropertyDependency(functor, functor->m_lightUnitPropertyIndex);
 
-            functor->m_shaderParameter = RPI::MaterialShaderParameterNameIndex{ m_shaderInputName, context.GetNameContext() };
+            functor->m_shaderParameter = JE::Render::RPI::MaterialShaderParameterNameIndex{ m_shaderInputName, context.GetNameContext() };
 
             functor->m_ev100Index = m_ev100Index;
             functor->m_nitIndex = m_nitIndex;
 
             SetFunctorShaderParameter(functor, GetMaterialShaderParameters(context.GetNameContext()));
 
-            return Success(RPI::Ptr<RPI::MaterialFunctor>(functor));
+            return Success(JE::Render::RPI::Ptr<JE::Render::RPI::MaterialFunctor>(functor));
         }
 
-        RPI::MaterialFunctorSourceData::FunctorResult ConvertEmissiveUnitFunctorSourceData::CreateFunctor(const EditorContext& context) const
+        JE::Render::RPI::MaterialFunctorSourceData::FunctorResult ConvertEmissiveUnitFunctorSourceData::CreateFunctor(const EditorContext& context) const
         {
-            RPI::Ptr<ConvertEmissiveUnitFunctor> functor = aznew ConvertEmissiveUnitFunctor;
+            JE::Render::RPI::Ptr<ConvertEmissiveUnitFunctor> functor = aznew ConvertEmissiveUnitFunctor;
 
             functor->m_intensityPropertyIndex = context.FindMaterialPropertyIndex(AZ::Name{ m_intensityPropertyName });
             if (functor->m_intensityPropertyIndex.IsNull())
@@ -85,7 +85,7 @@ namespace AZ
 
             SetFunctorShaderParameter(functor, GetMaterialShaderParameters(context.GetNameContext()));
 
-            return Success(RPI::Ptr<RPI::MaterialFunctor>(functor));
+            return Success(JE::Render::RPI::Ptr<JE::Render::RPI::MaterialFunctor>(functor));
         }
     }
 }

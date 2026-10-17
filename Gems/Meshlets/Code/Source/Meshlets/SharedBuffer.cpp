@@ -10,8 +10,8 @@
 #include <Atom/RHI/RHIUtils.h>
 #include <Atom/RHI/Factory.h>
 
-#include <Atom/RPI.Reflect/Buffer/BufferAssetCreator.h>
-#include <Atom/RPI.Reflect/ResourcePoolAssetCreator.h>
+#include <JE/Render/RPI/Reflect/Buffer/BufferAssetCreator.h>
+#include <JE/Render/RPI/Reflect/ResourcePoolAssetCreator.h>
 
 #include <SharedBuffer.h>
 
@@ -26,9 +26,9 @@ namespace AZ
         void SharedBuffer::CreateSharedBuffer(SrgBufferDescriptor& bufferDesc)
         {
             // Descriptor setting
-            RPI::CommonBufferDescriptor descriptor;
+            JE::Render::RPI::CommonBufferDescriptor descriptor;
 
-            descriptor.m_poolType = RPI::CommonBufferPoolType::ReadWrite;
+            descriptor.m_poolType = JE::Render::RPI::CommonBufferPoolType::ReadWrite;
             descriptor.m_elementFormat = bufferDesc.m_elementFormat;
             descriptor.m_elementSize = bufferDesc.m_elementSize;
             descriptor.m_bufferName = bufferDesc.m_bufferName.GetCStr();
@@ -36,7 +36,7 @@ namespace AZ
             descriptor.m_bufferData = nullptr;
 
             // The actual RPI shared buffer creation
-            m_buffer = RPI::BufferSystemInterface::Get()->CreateBufferFromCommonPool(descriptor);
+            m_buffer = JE::Render::RPI::BufferSystemInterface::Get()->CreateBufferFromCommonPool(descriptor);
         }
 
         //--------------------------------------------------------------------------
@@ -109,7 +109,7 @@ namespace AZ
             // validation test will fail.
             // The change should be done in 'BufferSystem::CreateCommonBufferPool'.
             SrgBufferDescriptor  sharedBufferDesc = SrgBufferDescriptor(
-                RPI::CommonBufferPoolType::ReadWrite, 
+                JE::Render::RPI::CommonBufferPoolType::ReadWrite, 
                 RHI::Format::Unknown,
                 RHI::BufferBindFlags::InputAssembly | RHI::BufferBindFlags::Indirect | RHI::BufferBindFlags::ShaderReadWrite,
                 sizeof(uint32_t), uint32_t(m_sizeInBytes / sizeof(uint32_t)),
@@ -168,7 +168,7 @@ namespace AZ
             }
         }
 
-        Data::Instance<RPI::Buffer> SharedBuffer::GetBuffer()
+        Data::Instance<JE::Render::RPI::Buffer> SharedBuffer::GetBuffer()
         {
             AZ_Assert(m_buffer, "SharedBuffer - the buffer doesn't exist yet");
             return m_buffer;

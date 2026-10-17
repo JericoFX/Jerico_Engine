@@ -9,21 +9,21 @@
 #include <ColorGrading/LutGenerationPass.h>
 #include <Atom/Feature/ACES/AcesDisplayMapperFeatureProcessor.h>
 
-#include <Atom/RPI.Public/Scene.h>
-#include <Atom/RPI.Reflect/Asset/AssetUtils.h>
+#include <JE/Render/RPI/Public/Scene.h>
+#include <JE/Render/RPI/Reflect/Asset/AssetUtils.h>
 
 namespace AZ
 {
     namespace Render
     {
 
-        RPI::Ptr<LutGenerationPass> LutGenerationPass::Create(const RPI::PassDescriptor& descriptor)
+        JE::Render::RPI::Ptr<LutGenerationPass> LutGenerationPass::Create(const JE::Render::RPI::PassDescriptor& descriptor)
         {
-            RPI::Ptr<LutGenerationPass> pass = aznew LutGenerationPass(descriptor);
+            JE::Render::RPI::Ptr<LutGenerationPass> pass = aznew LutGenerationPass(descriptor);
             return pass;
         }
 
-         LutGenerationPass::LutGenerationPass(const RPI::PassDescriptor& descriptor)
+         LutGenerationPass::LutGenerationPass(const JE::Render::RPI::PassDescriptor& descriptor)
             : HDRColorGradingPass(descriptor)
         {
         }
@@ -60,8 +60,8 @@ namespace AZ
 
             // Pass::FrameBegin submits this output reservation immediately after returning.
             if (m_frameEncodingValid && m_attachmentReadback &&
-                m_readbackOption == RPI::PassAttachmentReadbackOption::Output &&
-                m_attachmentReadback->GetReadbackState() == RPI::AttachmentReadback::ReadbackState::AttachmentSet)
+                m_readbackOption == JE::Render::RPI::PassAttachmentReadbackOption::Output &&
+                m_attachmentReadback->GetReadbackState() == JE::Render::RPI::AttachmentReadback::ReadbackState::AttachmentSet)
             {
                 const auto captureId = m_attachmentReadback->GetUserIdentifier();
                 if (captureId != InvalidFrameCaptureId)
@@ -80,7 +80,7 @@ namespace AZ
                 const uint32_t lutResolution = aznumeric_cast<uint32_t>(m_frameEncoding.m_resolution);
                 RHI::Size lutSize{ lutResolution * lutResolution, lutResolution, 1 };
 
-                RPI::Ptr<RPI::PassAttachment> attachment = FindOwnedAttachment(Name{ "ColorGradingLut" });
+                JE::Render::RPI::Ptr<JE::Render::RPI::PassAttachment> attachment = FindOwnedAttachment(Name{ "ColorGradingLut" });
                 RHI::ImageDescriptor& imageDescriptor = attachment->m_descriptor.m_image;
                 imageDescriptor.m_size = lutSize;
                 SetViewportScissorFromImageSize(lutSize);

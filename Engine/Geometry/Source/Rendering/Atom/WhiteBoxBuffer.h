@@ -10,10 +10,10 @@
 
 #include "PackedFloat2.h"
 
-#include <Atom/RPI.Public/Buffer/Buffer.h>
-#include <Atom/RPI.Reflect/Buffer/BufferAsset.h>
-#include <Atom/RPI.Reflect/Buffer/BufferAssetCreator.h>
-#include <Atom/RPI.Reflect/Buffer/BufferAssetView.h>
+#include <JE/Render/RPI/Public/Buffer/Buffer.h>
+#include <JE/Render/RPI/Reflect/Buffer/BufferAsset.h>
+#include <JE/Render/RPI/Reflect/Buffer/BufferAssetCreator.h>
+#include <JE/Render/RPI/Reflect/Buffer/BufferAssetView.h>
 #include <AzCore/Math/PackedVector3.h>
 #include <AzCore/Math/Vector2.h>
 #include <AzCore/Math/Vector3.h>
@@ -57,13 +57,13 @@ namespace JE::Geometry
         Buffer(const AZStd::vector<VertexStreamDataType>& data);
 
         //! Retrieves the buffer asset.
-        const AZ::Data::Asset<AZ::RPI::BufferAsset>& GetBuffer() const;
+        const AZ::Data::Asset<JE::Render::RPI::BufferAsset>& GetBuffer() const;
 
         //! Retrieves the buffer view descriptor.
         const AZ::RHI::BufferViewDescriptor& GetBufferViewDescriptor() const;
 
         //! Retrieves the buffer asset view.
-        const AZ::RPI::BufferAssetView& GetBufferAssetView() const;
+        const JE::Render::RPI::BufferAssetView& GetBufferAssetView() const;
 
         //! Returns true of the buffer is valid, otherwise false.
         bool IsValid() const;
@@ -72,9 +72,9 @@ namespace JE::Geometry
         bool UpdateData(const AZStd::vector<VertexStreamDataType>& data);
 
     private:
-        AZ::Data::Asset<AZ::RPI::BufferAsset> m_buffer;
+        AZ::Data::Asset<JE::Render::RPI::BufferAsset> m_buffer;
         AZ::RHI::BufferViewDescriptor m_bufferViewDescriptor;
-        AZ::RPI::BufferAssetView m_bufferAssetView;
+        JE::Render::RPI::BufferAssetView m_bufferAssetView;
         bool m_isValid = false;
 
         //! The format used by the buffer (must be one of the supported types in GetFormatForVertexStreamDataType).
@@ -100,9 +100,9 @@ namespace JE::Geometry
         bufferDescriptor.m_alignment = elementSize;
 
         // create the buffer with the specified data
-        AZ::RPI::BufferAssetCreator bufferAssetCreator;
+        JE::Render::RPI::BufferAssetCreator bufferAssetCreator;
         bufferAssetCreator.Begin(AZ::Uuid::CreateRandom());
-        bufferAssetCreator.SetUseCommonPool(AZ::RPI::CommonBufferPoolType::StaticInputAssembly);
+        bufferAssetCreator.SetUseCommonPool(JE::Render::RPI::CommonBufferPoolType::StaticInputAssembly);
         bufferAssetCreator.SetBuffer(data.data(), bufferDescriptor.m_byteCount, bufferDescriptor);
         bufferAssetCreator.SetBufferViewDescriptor(m_bufferViewDescriptor);
 
@@ -120,13 +120,13 @@ namespace JE::Geometry
         }
         else
         {
-            m_bufferAssetView = AZ::RPI::BufferAssetView{m_buffer, m_bufferViewDescriptor};
+            m_bufferAssetView = JE::Render::RPI::BufferAssetView{m_buffer, m_bufferViewDescriptor};
             m_isValid = true;
         }
     }
 
     template<typename VertexStreamDataType>
-    const AZ::Data::Asset<AZ::RPI::BufferAsset>& Buffer<VertexStreamDataType>::GetBuffer() const
+    const AZ::Data::Asset<JE::Render::RPI::BufferAsset>& Buffer<VertexStreamDataType>::GetBuffer() const
     {
         return m_buffer;
     }
@@ -138,7 +138,7 @@ namespace JE::Geometry
     }
 
     template<typename VertexStreamDataType>
-    const AZ::RPI::BufferAssetView& Buffer<VertexStreamDataType>::GetBufferAssetView() const
+    const JE::Render::RPI::BufferAssetView& Buffer<VertexStreamDataType>::GetBufferAssetView() const
     {
         return m_bufferAssetView;
     }
@@ -159,7 +159,7 @@ namespace JE::Geometry
             return false;
         }
 
-        auto buffer = AZ::RPI::Buffer::FindOrCreate(m_buffer);
+        auto buffer = JE::Render::RPI::Buffer::FindOrCreate(m_buffer);
 
         if (!buffer)
         {

@@ -3,9 +3,9 @@
 #include "Workspace/MaterialWorkspaceSession.h"
 #include "Workspace/MaterialWorkspaceWidget.h"
 #include <JE/Editor/Materials/MaterialBrowserInteractions.h>
-#include <Atom/RPI.Edit/Material/MaterialSourceData.h>
-#include <Atom/RPI.Edit/Material/MaterialTypeSourceData.h>
-#include <Atom/RPI.Edit/Shader/ShaderSourceData.h>
+#include <JE/Editor/Render/RPI/Edit/Material/MaterialSourceData.h>
+#include <JE/Editor/Render/RPI/Edit/Material/MaterialTypeSourceData.h>
+#include <JE/Editor/Render/RPI/Edit/Shader/ShaderSourceData.h>
 
 #include <AtomToolsFramework/Document/AtomToolsAnyDocument.h>
 #include <AtomToolsFramework/Document/AtomToolsDocumentInspector.h>
@@ -306,14 +306,14 @@ namespace UnitTest
             AtomToolsFramework::AtomToolsAnyDocument::BuildDocumentTypeInfo("Material Graph Node Config",
                 {"materialgraphnode"}, {"materialgraphnodetemplate"}, AZStd::any(AtomToolsFramework::DynamicNodeConfig()), AZ::Uuid::CreateNull()),
             AtomToolsFramework::AtomToolsAnyDocument::BuildDocumentTypeInfo("Shader Source Data",
-                {"shader"}, {}, AZStd::any(AZ::RPI::ShaderSourceData()), azrtti_typeid<AZ::RPI::ShaderSourceData>())};
+                {"shader"}, {}, AZStd::any(JE::Render::RPI::ShaderSourceData()), azrtti_typeid<JE::Render::RPI::ShaderSourceData>())};
         session.RegisterGraphDocumentTypes(types);
         session.RegisterGraphDocumentTypes(types);
         ASSERT_EQ(session.GetGraphDocumentTypes().size(), 2);
         const auto materialId = CreateDocument(session);
         ASSERT_FALSE(materialId.IsNull());
         EXPECT_FALSE(session.IsGraphDocument(materialId));
-        const AZ::Uuid expectedTypes[] = {azrtti_typeid<AtomToolsFramework::DynamicNodeConfig>(), azrtti_typeid<AZ::RPI::ShaderSourceData>()};
+        const AZ::Uuid expectedTypes[] = {azrtti_typeid<AtomToolsFramework::DynamicNodeConfig>(), azrtti_typeid<JE::Render::RPI::ShaderSourceData>()};
         AZ::Uuid ids[2];
         for (size_t index = 0; index < types.size(); ++index)
         {
@@ -443,8 +443,8 @@ namespace UnitTest
             // Like the RPI fixtures, install the real JSON serializers and source reflections, without initializing RPI/GPU.
             // Tracking them in the native manager also removes the JSON serializers before context destruction.
             auto* reflectionManager = AZ::ReflectionEnvironment::GetReflectionManager();
-            reflectionManager->Reflect(azrtti_typeid<AZ::RPI::MaterialTypeSourceData>(), &AZ::RPI::MaterialTypeSourceData::Reflect);
-            reflectionManager->Reflect(azrtti_typeid<AZ::RPI::MaterialSourceData>(), &AZ::RPI::MaterialSourceData::Reflect);
+            reflectionManager->Reflect(azrtti_typeid<JE::Render::RPI::MaterialTypeSourceData>(), &JE::Render::RPI::MaterialTypeSourceData::Reflect);
+            reflectionManager->Reflect(azrtti_typeid<JE::Render::RPI::MaterialSourceData>(), &JE::Render::RPI::MaterialSourceData::Reflect);
         }
 
         void TearDown() override

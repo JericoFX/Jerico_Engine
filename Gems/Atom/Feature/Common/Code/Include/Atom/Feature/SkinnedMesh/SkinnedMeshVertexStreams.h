@@ -8,8 +8,8 @@
 
 #pragma once
 
-#include <Atom/RPI.Public/Model/Model.h>
-#include <Atom/RPI.Public/Shader/Shader.h>
+#include <JE/Render/RPI/Public/Model/Model.h>
+#include <JE/Render/RPI/Public/Shader/Shader.h>
 #include <AzCore/Instance/InstanceData.h>
 #include <AzCore/std/smart_ptr/intrusive_base.h>
 #include <AzCore/Interface/Interface.h>
@@ -121,12 +121,12 @@ namespace AZ
             //! Get the output stream info
             virtual const SkinnedMeshOutputVertexStreamInfo& GetOutputStreamInfo(SkinnedMeshOutputVertexStreams stream) const = 0;
 
-            virtual Data::Asset<RPI::ResourcePoolAsset> GetOutputStreamResourcePool() const = 0;
+            virtual Data::Asset<JE::Render::RPI::ResourcePoolAsset> GetOutputStreamResourcePool() const = 0;
             
             virtual uint32_t GetMaxSupportedVertexCount() const = 0;
 
             //! Get an input contract that describes the streams used as input to the skinning compute shader
-            virtual const RPI::ShaderInputContract& GetComputeShaderInputContract() const = 0;
+            virtual const JE::Render::RPI::ShaderInputContract& GetComputeShaderInputContract() const = 0;
         };
     }
 }

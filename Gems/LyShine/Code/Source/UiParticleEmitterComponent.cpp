@@ -785,7 +785,7 @@ void UiParticleEmitterComponent::Render(LyShine::IRenderGraph* renderGraph)
         UiCanvasBus::EventResult(transform, canvasID, &UiCanvasBus::Events::GetCanvasToViewportMatrix);
     }
 
-    AZ::Data::Instance<AZ::RPI::Image> image;
+    AZ::Data::Instance<JE::Render::RPI::Image> image;
     if (m_sprite)
     {
         image = m_sprite->GetImage();

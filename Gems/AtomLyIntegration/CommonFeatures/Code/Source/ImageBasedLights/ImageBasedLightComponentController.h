@@ -52,10 +52,10 @@ namespace AZ
             void OnAssetError(Data::Asset<Data::AssetData> asset) override;
 
             //! ImageBasedLightComponentRequestBus overrides...
-            void SetSpecularImageAsset(const Data::Asset<RPI::StreamingImageAsset>& imageAsset) override;
-            void SetDiffuseImageAsset(const Data::Asset<RPI::StreamingImageAsset>& imageAsset) override;
-            Data::Asset<RPI::StreamingImageAsset> GetSpecularImageAsset() const override;
-            Data::Asset<RPI::StreamingImageAsset> GetDiffuseImageAsset() const override;
+            void SetSpecularImageAsset(const Data::Asset<JE::Render::RPI::StreamingImageAsset>& imageAsset) override;
+            void SetDiffuseImageAsset(const Data::Asset<JE::Render::RPI::StreamingImageAsset>& imageAsset) override;
+            Data::Asset<JE::Render::RPI::StreamingImageAsset> GetSpecularImageAsset() const override;
+            Data::Asset<JE::Render::RPI::StreamingImageAsset> GetDiffuseImageAsset() const override;
             void SetSpecularImageAssetId(const Data::AssetId imageAssetId) override;
             void SetDiffuseImageAssetId(const Data::AssetId imageAssetId) override;
             Data::AssetId GetSpecularImageAssetId() const override;
@@ -71,7 +71,7 @@ namespace AZ
             void OnTransformChanged(const AZ::Transform& local, const AZ::Transform& world) override;
 
             //! Queues a load of an image Asset
-            void LoadImage(Data::Asset<RPI::StreamingImageAsset>& imageAsset);
+            void LoadImage(Data::Asset<JE::Render::RPI::StreamingImageAsset>& imageAsset);
             
             //! Releases all image assest.
             void ReleaseImages();
@@ -80,7 +80,7 @@ namespace AZ
             void UpdateWithAsset(Data::Asset<Data::AssetData> updatedAsset);
             
             //! Validates individual asset updates, returns true for valid ready assets.
-            bool HandleAssetUpdate(Data::Asset<Data::AssetData> updatedAsset, Data::Asset<RPI::StreamingImageAsset>& configAsset);
+            bool HandleAssetUpdate(Data::Asset<Data::AssetData> updatedAsset, Data::Asset<JE::Render::RPI::StreamingImageAsset>& configAsset);
 
             EntityId m_entityId;
             ImageBasedLightComponentConfig m_configuration;

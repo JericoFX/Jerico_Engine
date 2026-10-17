@@ -13,9 +13,9 @@
 #include <Atom/RHI/DeviceDrawItem.h>
 #include <Atom/RHI/ScopeProducer.h>
 
-#include <Atom/RPI.Public/Pass/FullscreenTrianglePass.h>
-#include <Atom/RPI.Public/Shader/Shader.h>
-#include <Atom/RPI.Public/Shader/ShaderResourceGroup.h>
+#include <JE/Render/RPI/Public/Pass/FullscreenTrianglePass.h>
+#include <JE/Render/RPI/Public/Shader/Shader.h>
+#include <JE/Render/RPI/Public/Shader/ShaderResourceGroup.h>
 
 #include <Atom/Feature/ACES/AcesDisplayMapperFeatureProcessor.h>
 #include <DisplayMapper/DisplayMapperFullScreenPass.h>
@@ -39,11 +39,11 @@ namespace AZ
             virtual ~AcesOutputTransformLutPass();
 
             /// Creates a AcesOutputTransformLutPass
-            static RPI::Ptr<AcesOutputTransformLutPass> Create(const RPI::PassDescriptor& descriptor);
+            static JE::Render::RPI::Ptr<AcesOutputTransformLutPass> Create(const JE::Render::RPI::PassDescriptor& descriptor);
 
             void SetShaperParams(const ShaperParams& shaperParams);
         private:
-            explicit AcesOutputTransformLutPass(const RPI::PassDescriptor& descriptor);
+            explicit AcesOutputTransformLutPass(const JE::Render::RPI::PassDescriptor& descriptor);
 
             // Pass behavior overrides...
             void InitializeInternal() override;

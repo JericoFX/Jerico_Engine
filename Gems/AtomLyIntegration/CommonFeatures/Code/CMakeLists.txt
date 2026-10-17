@@ -141,7 +141,7 @@ if(PAL_TRAIT_BUILD_HOST_TOOLS)
         BUILD_DEPENDENCIES
             PUBLIC
                 Gem::${gem_name}.Static
-                Gem::Atom_RPI.Edit
+                JE::EditorRenderIntegration
                 JE::EditorMaterials
                 Gem::AtomToolsFramework.Static
                 Gem::AtomToolsFramework.Editor

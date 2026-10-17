@@ -11,22 +11,22 @@
 #include <PostProcessing/DepthOfFieldPencilMap.h>
 #include <PostProcessing/DepthOfFieldBokehBlurPass.h>
 #include <AzCore/Math/MathUtils.h>
-#include <Atom/RPI.Public/RenderPipeline.h>
-#include <Atom/RPI.Public/Scene.h>
-#include <Atom/RPI.Public/View.h>
+#include <JE/Render/RPI/Public/RenderPipeline.h>
+#include <JE/Render/RPI/Public/Scene.h>
+#include <JE/Render/RPI/Public/View.h>
 
 namespace AZ
 {
     namespace Render
     {
-        RPI::Ptr<DepthOfFieldBokehBlurPass> DepthOfFieldBokehBlurPass::Create(const RPI::PassDescriptor& descriptor)
+        JE::Render::RPI::Ptr<DepthOfFieldBokehBlurPass> DepthOfFieldBokehBlurPass::Create(const JE::Render::RPI::PassDescriptor& descriptor)
         {
-            RPI::Ptr<DepthOfFieldBokehBlurPass> pass = aznew DepthOfFieldBokehBlurPass(descriptor);
+            JE::Render::RPI::Ptr<DepthOfFieldBokehBlurPass> pass = aznew DepthOfFieldBokehBlurPass(descriptor);
             return pass;
         }
 
-        DepthOfFieldBokehBlurPass::DepthOfFieldBokehBlurPass(const RPI::PassDescriptor& descriptor)
-            : RPI::FullscreenTrianglePass(descriptor)
+        DepthOfFieldBokehBlurPass::DepthOfFieldBokehBlurPass(const JE::Render::RPI::PassDescriptor& descriptor)
+            : JE::Render::RPI::FullscreenTrianglePass(descriptor)
             // option names from the azsl file
             , m_optionName("o_sampleNumber")
             , m_optionValues
@@ -95,7 +95,7 @@ namespace AZ
                 break;
             }
 
-            RPI::ShaderOptionGroup shaderOption = m_shader->CreateShaderOptionGroup();
+            JE::Render::RPI::ShaderOptionGroup shaderOption = m_shader->CreateShaderOptionGroup();
             shaderOption.SetValue(m_optionName, m_optionValues[index]);
             UpdateShaderVariant(shaderOption);
 
@@ -104,9 +104,9 @@ namespace AZ
 
         void DepthOfFieldBokehBlurPass::FrameBeginInternal(FramePrepareParams params)
         {
-            RPI::Scene* scene = GetScene();
+            JE::Render::RPI::Scene* scene = GetScene();
             PostProcessFeatureProcessor* fp = scene->GetFeatureProcessor<PostProcessFeatureProcessor>();
-            AZ::RPI::ViewPtr view = GetRenderPipeline()->GetFirstView(GetPipelineViewTag());
+            JE::Render::RPI::ViewPtr view = GetRenderPipeline()->GetFirstView(GetPipelineViewTag());
             if (fp)
             {
                 PostProcessSettings* postProcessSettings = fp->GetLevelSettingsFromView(view);
@@ -141,7 +141,7 @@ namespace AZ
                     }
                 }
             }
-            RPI::FullscreenTrianglePass::FrameBeginInternal(params);
+            JE::Render::RPI::FullscreenTrianglePass::FrameBeginInternal(params);
         }
 
         void DepthOfFieldBokehBlurPass::CompileResources(const RHI::FrameGraphCompileContext& context)

@@ -13,7 +13,7 @@
 #include <AzCore/RTTI/RTTI.h>
 #include <AzToolsFramework/API/EditorAssetSystemAPI.h>
 
-namespace AZ::RPI::MaterialUtils
+namespace JE::Render::RPI::MaterialUtils
 {
     using ImportedJsonFiles = AZStd::unordered_set<AZ::IO::Path>;
 }
@@ -93,7 +93,7 @@ namespace AtomToolsFramework
 
         //! This contains absolute paths of other source files that affect this document.
         //! If any of the source files in this container are modified, the document system is notified to reload this document.
-        AZ::RPI::MaterialUtils::ImportedJsonFiles m_sourceDependencies;
+        JE::Render::RPI::MaterialUtils::ImportedJsonFiles m_sourceDependencies;
 
         //! If this flag is true then the next source file change notification for this document will be ignored.
         bool m_ignoreSourceFileChangeToSelf = false;

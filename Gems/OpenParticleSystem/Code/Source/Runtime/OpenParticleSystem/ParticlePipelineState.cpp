@@ -9,14 +9,14 @@
 #include <Atom/RHI.Reflect/InputStreamLayoutBuilder.h>
 #include <Atom/RHI/Factory.h>
 #include <Atom/RHI/RHISystemInterface.h>
-#include <Atom/RPI.Public/RPIUtils.h>
-#include <Atom/RPI.Public/Scene.h>
-#include <Atom/RPI.Reflect/Asset/AssetUtils.h>
+#include <JE/Render/RPI/Public/RPIUtils.h>
+#include <JE/Render/RPI/Public/Scene.h>
+#include <JE/Render/RPI/Reflect/Asset/AssetUtils.h>
 #include <OpenParticleSystem/ParticlePipelineState.h>
 
 namespace OpenParticle
 {
-    void EmitterInstance::Setup(AZ::Data::Asset<AZ::RPI::MaterialAsset>& mat, const JE::Render::MaterialPropertyOverrideMap& overrides)
+    void EmitterInstance::Setup(AZ::Data::Asset<JE::Render::RPI::MaterialAsset>& mat, const JE::Render::MaterialPropertyOverrideMap& overrides)
     {
         m_materialAsset = mat;
         m_materialOverrides = overrides;
@@ -27,7 +27,7 @@ namespace OpenParticle
         {
             m_materialAsset.QueueLoad();
         }
-        m_material = AZ::RPI::Material::Create(m_materialAsset);
+        m_material = JE::Render::RPI::Material::Create(m_materialAsset);
 
         if (!m_material)
         {
@@ -92,7 +92,7 @@ namespace OpenParticle
             // Material creation previously failed - try again
             if (m_materialAsset && m_materialAsset->IsReady())
             {
-                m_material = AZ::RPI::Material::Create(m_materialAsset);
+                m_material = JE::Render::RPI::Material::Create(m_materialAsset);
                 if (!m_material)
                 {
                     AZ_Warning("ParticleSystem", false,
@@ -147,11 +147,11 @@ namespace OpenParticle
         if (objectSrgLayout != nullptr)
         {
             auto& objSrgAsset = m_material->GetAsset()->GetMaterialTypeAsset()->GetShaderAssetForObjectSrg();
-            m_objSrg = AZ::RPI::ShaderResourceGroup::Create(objSrgAsset, objectSrgLayout->GetName());
+            m_objSrg = JE::Render::RPI::ShaderResourceGroup::Create(objSrgAsset, objectSrgLayout->GetName());
         }
 
         m_material->ForAllShaderItems(
-            [this](const AZ::Name& materialPipelineName, const AZ::RPI::ShaderCollection::Item& shaderItem)
+            [this](const AZ::Name& materialPipelineName, const JE::Render::RPI::ShaderCollection::Item& shaderItem)
             {
                 if (!shaderItem.IsEnabled())
                 {
@@ -175,7 +175,7 @@ namespace OpenParticle
                     return true;
                 }
 
-                auto shader = AZ::RPI::Shader::FindOrCreate(shaderItem.GetShaderAsset());
+                auto shader = JE::Render::RPI::Shader::FindOrCreate(shaderItem.GetShaderAsset());
                 if (!shader)
                 {
                     return true;
@@ -192,7 +192,7 @@ namespace OpenParticle
                 if (drawSrgLayout)
                 {
                     auto drawSrg =
-                        AZ::RPI::ShaderResourceGroup::Create(shader->GetAsset(), shader->GetSupervariantIndex(), drawSrgLayout->GetName());
+                        JE::Render::RPI::ShaderResourceGroup::Create(shader->GetAsset(), shader->GetSupervariantIndex(), drawSrgLayout->GetName());
                     m_perDrawSrgs.emplace_back(drawSrg);
                     m_emitterForDrawPair.emplace(
                         drawKey,

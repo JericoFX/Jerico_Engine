@@ -15,7 +15,7 @@
 #include "SequenceBatchRenderDialog.h"
 #include "TrackViewMessageBox.h"
 
-#include <Atom/RPI.Public/ViewProviderBus.h>
+#include <JE/Render/RPI/Public/ViewProviderBus.h>
 #include <AzCore/Component/ComponentApplication.h>
 #include <AzFramework/Windowing/WindowBus.h>
 #include <AzToolsFramework/UI/UICore/WidgetHelpers.h>
@@ -1332,7 +1332,7 @@ void CSequenceBatchRenderDialog::OnKickIdle()
             // readback result callback (how the image should be captured)
             // currently only .dds and .ppm
             const auto readbackCallback = [filePath,
-                                           imageFormatExtension](const AZ::RPI::AttachmentReadback::ReadbackResult& readbackResult) {
+                                           imageFormatExtension](const JE::Render::RPI::AttachmentReadback::ReadbackResult& readbackResult) {
                 const auto imageFormatExtensionUtf8 = imageFormatExtension.toUtf8();
                 const auto imageFormatExtensionCstr = imageFormatExtensionUtf8.constData();
 
@@ -1679,8 +1679,8 @@ void CSequenceBatchRenderDialog::UpdateAtomOutputFrameCaptureView(const int widt
 {
     const AZ::EntityId activeCameraEntityId = TrackView::ActiveCameraEntityId();
     AZ_Assert(activeCameraEntityId.IsValid(), "Active camera Entity Id is invalid");
-    AZ::RPI::ViewPtr view = nullptr;
-    AZ::RPI::ViewProviderBus::EventResult(view, activeCameraEntityId, &AZ::RPI::ViewProvider::GetView);
+    JE::Render::RPI::ViewPtr view = nullptr;
+    JE::Render::RPI::ViewProviderBus::EventResult(view, activeCameraEntityId, &JE::Render::RPI::ViewProvider::GetView);
     m_atomOutputFrameCapture.UpdateView(
         TrackView::TransformFromEntityId(activeCameraEntityId),
         TrackView::ProjectionFromCameraEntityId(activeCameraEntityId, aznumeric_cast<float>(width), aznumeric_cast<float>(height)),

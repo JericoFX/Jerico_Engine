@@ -8,7 +8,7 @@
 
 #pragma once
 
-#include <Atom/RPI.Public/FeatureProcessor.h>
+#include <JE/Render/RPI/Public/FeatureProcessor.h>
 
 namespace AZ
 {
@@ -81,10 +81,10 @@ namespace AZ
         //! SMAAFeatureProcessorInterface provides an interface to SMAA feature. This is necessary for code outside of
         //! the Atom features gem to communicate with the SMAAFeatureProcessor.
         class SMAAFeatureProcessorInterface
-            : public RPI::FeatureProcessor
+            : public JE::Render::RPI::FeatureProcessor
         {
         public:
-            AZ_RTTI(AZ::Render::SMAAFeatureProcessorInterface, "{7E6A9FB5-E42C-41C3-8F84-40A1D4433A94}", AZ::RPI::FeatureProcessor);
+            AZ_RTTI(AZ::Render::SMAAFeatureProcessorInterface, "{7E6A9FB5-E42C-41C3-8F84-40A1D4433A94}", JE::Render::RPI::FeatureProcessor);
 
             //! Enable/disable SMAA feature.
             //! @param enable Flag for SMAA feature.

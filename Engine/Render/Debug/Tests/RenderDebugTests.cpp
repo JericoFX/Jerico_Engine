@@ -122,8 +122,8 @@ namespace JE::Render::Debug
         public:
             explicit MeshCallbacks(AZ::EntityId id) { BusConnect(id); }
             ~MeshCallbacks() override { BusDisconnect(); }
-            const AZ::RPI::MeshDrawPacketLods* GetDrawPackets() const override { return &m_packets; }
-            AZ::RPI::MeshDrawPacketLods m_packets;
+            const JE::Render::RPI::MeshDrawPacketLods* GetDrawPackets() const override { return &m_packets; }
+            JE::Render::RPI::MeshDrawPacketLods m_packets;
         };
 
         MaterialShaderDetailsController controller;

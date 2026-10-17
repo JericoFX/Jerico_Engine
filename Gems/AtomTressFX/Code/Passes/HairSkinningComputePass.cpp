@@ -13,15 +13,15 @@
 #include <Atom/RHI/FrameGraphInterface.h>
 #include <Atom/RHI/DevicePipelineState.h>
 
-#include <Atom/RPI.Public/Base.h>
-#include <Atom/RPI.Public/Pass/PassUtils.h>
-#include <Atom/RPI.Public/RenderPipeline.h>
+#include <JE/Render/RPI/Public/Base.h>
+#include <JE/Render/RPI/Public/Pass/PassUtils.h>
+#include <JE/Render/RPI/Public/RenderPipeline.h>
 #include <Atom/RHI/RHISystemInterface.h>
-#include <Atom/RPI.Public/RPIUtils.h>
-#include <Atom/RPI.Public/Scene.h>
-#include <Atom/RPI.Public/View.h>
-#include <Atom/RPI.Reflect/Pass/PassTemplate.h>
-#include <Atom/RPI.Reflect/Shader/ShaderAsset.h>
+#include <JE/Render/RPI/Public/RPIUtils.h>
+#include <JE/Render/RPI/Public/Scene.h>
+#include <JE/Render/RPI/Public/View.h>
+#include <JE/Render/RPI/Reflect/Pass/PassTemplate.h>
+#include <JE/Render/RPI/Reflect/Shader/ShaderAsset.h>
 
 // Hair Specific
 #include <Rendering/HairCommon.h>
@@ -38,7 +38,7 @@ namespace AZ
     {
         namespace Hair
         {
-            Data::Instance<RPI::Shader> HairSkinningComputePass::GetShader()
+            Data::Instance<JE::Render::RPI::Shader> HairSkinningComputePass::GetShader()
             {
                 return m_shader;
             }
@@ -50,7 +50,7 @@ namespace AZ
                     return true;
                 }
 
-                RPI::Scene* scene = GetScene();
+                JE::Render::RPI::Scene* scene = GetScene();
                 if (scene)
                 {
                     m_featureProcessor = scene->GetFeatureProcessor<HairFeatureProcessor>();
@@ -70,14 +70,14 @@ namespace AZ
                 return true;
             }
 
-            RPI::Ptr<HairSkinningComputePass> HairSkinningComputePass::Create(const RPI::PassDescriptor& descriptor)
+            JE::Render::RPI::Ptr<HairSkinningComputePass> HairSkinningComputePass::Create(const JE::Render::RPI::PassDescriptor& descriptor)
             {
-                RPI::Ptr<HairSkinningComputePass> pass = aznew HairSkinningComputePass(descriptor);
+                JE::Render::RPI::Ptr<HairSkinningComputePass> pass = aznew HairSkinningComputePass(descriptor);
                 return pass;
             }
 
-            HairSkinningComputePass::HairSkinningComputePass(const RPI::PassDescriptor& descriptor)
-                : RPI::ComputePass(descriptor)
+            HairSkinningComputePass::HairSkinningComputePass(const JE::Render::RPI::PassDescriptor& descriptor)
+                : JE::Render::RPI::ComputePass(descriptor)
             {
             }
 
@@ -102,7 +102,7 @@ namespace AZ
                 // This is the buffer that is shared between all objects and dispatches and contains
                 // the dynamic data that can be changed between passes.
                 Name bufferName = Name{ "SkinnedHairSharedBuffer" };
-                RPI::PassAttachmentBinding* localBinding = FindAttachmentBinding(bufferName);
+                JE::Render::RPI::PassAttachmentBinding* localBinding = FindAttachmentBinding(bufferName);
                 if (localBinding && !localBinding->GetAttachment())
                 {
                     AttachBufferToSlot(Name{ "SkinnedHairSharedBuffer" }, HairSharedBufferInterface::Get()->GetBuffer());
@@ -137,14 +137,14 @@ namespace AZ
                 // Clear the objects, hence this is only done once per object/shader lifetime
                 m_newRenderObjects.clear();
 
-                RPI::ComputePass::FrameBeginInternal(params);
+                JE::Render::RPI::ComputePass::FrameBeginInternal(params);
             }
 
             void HairSkinningComputePass::SetupFrameGraphDependencies(RHI::FrameGraphInterface frameGraph)
             {
                 frameGraph.SetEstimatedItemCount(aznumeric_cast<uint32_t>(m_dispatchItems.size()));
 
-                RPI::ComputePass::SetupFrameGraphDependencies(frameGraph);
+                JE::Render::RPI::ComputePass::SetupFrameGraphDependencies(frameGraph);
             }
 
             void HairSkinningComputePass::CompileResources([[maybe_unused]] const RHI::FrameGraphCompileContext& context)
@@ -166,7 +166,7 @@ namespace AZ
 
             bool HairSkinningComputePass::IsEnabled() const
             {
-                return RPI::ComputePass::IsEnabled();// (m_dispatchItems.size() ? true : false);
+                return JE::Render::RPI::ComputePass::IsEnabled();// (m_dispatchItems.size() ? true : false);
             }
 
             bool HairSkinningComputePass::BuildDispatchItem(HairRenderObject* hairObject, DispatchLevel dispatchLevel)
@@ -260,17 +260,17 @@ namespace AZ
             // be a case where dispatch resources are destructed and will most certainly cause a GPU crash.
             // If we flag the need for rebuild, the build will be made at the start of the next frame - at
             // this stage the dispatch items should have been cleared - now we can load the shader and data.
-            void HairSkinningComputePass::OnShaderReinitialized([[maybe_unused]] const AZ::RPI::Shader& shader)
+            void HairSkinningComputePass::OnShaderReinitialized([[maybe_unused]] const JE::Render::RPI::Shader& shader)
             {
                 BuildShaderAndRenderData();
             }
 
-            void HairSkinningComputePass::OnShaderAssetReinitialized([[maybe_unused]] const Data::Asset<AZ::RPI::ShaderAsset>& shaderAsset)
+            void HairSkinningComputePass::OnShaderAssetReinitialized([[maybe_unused]] const Data::Asset<JE::Render::RPI::ShaderAsset>& shaderAsset)
             {
                 BuildShaderAndRenderData();
             }
 
-            void HairSkinningComputePass::OnShaderVariantReinitialized([[maybe_unused]] const AZ::RPI::ShaderVariant& shaderVariant)
+            void HairSkinningComputePass::OnShaderVariantReinitialized([[maybe_unused]] const JE::Render::RPI::ShaderVariant& shaderVariant)
             {
                 BuildShaderAndRenderData();
             }

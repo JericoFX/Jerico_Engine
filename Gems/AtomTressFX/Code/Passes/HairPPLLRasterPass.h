@@ -40,10 +40,10 @@ namespace AZ
                 AZ_CLASS_ALLOCATOR(HairPPLLRasterPass, SystemAllocator);
 
                 //! Creates a HairPPLLRasterPass
-                static RPI::Ptr<HairPPLLRasterPass> Create(const RPI::PassDescriptor& descriptor);
+                static JE::Render::RPI::Ptr<HairPPLLRasterPass> Create(const JE::Render::RPI::PassDescriptor& descriptor);
 
             protected:
-                explicit HairPPLLRasterPass(const RPI::PassDescriptor& descriptor);
+                explicit HairPPLLRasterPass(const JE::Render::RPI::PassDescriptor& descriptor);
 
                 // Pass behavior overrides
                 void BuildInternal() override;

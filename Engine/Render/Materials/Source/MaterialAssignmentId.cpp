@@ -41,7 +41,7 @@ namespace JE
                 }
                 else
                 {
-                    classElement.AddElementWithData(context, "materialSlotStableId", AZ::RPI::ModelMaterialSlot::InvalidStableId);
+                    classElement.AddElementWithData(context, "materialSlotStableId", JE::Render::RPI::ModelMaterialSlot::InvalidStableId);
                 }
             }
 
@@ -79,7 +79,7 @@ namespace JE
                     ->Attribute(AZ::Script::Attributes::Module, "render")
                     ->Constructor()
                     ->Constructor<const MaterialAssignmentId&>()
-                    ->Constructor<MaterialAssignmentLodIndex, AZ::RPI::ModelMaterialSlot::StableId>()
+                    ->Constructor<MaterialAssignmentLodIndex, JE::Render::RPI::ModelMaterialSlot::StableId>()
                     ->Method("IsDefault", &MaterialAssignmentId::IsDefault)
                     ->Method("IsAssetOnly", &MaterialAssignmentId::IsSlotIdOnly)     // Included for compatibility. Use "IsSlotIdOnly" instead.
                     ->Method("IsLodAndAsset", &MaterialAssignmentId::IsLodAndSlotId) // Included for compatibility. Use "IsLodAndSlotId" instead.
@@ -92,7 +92,7 @@ namespace JE
             }
         }
 
-        MaterialAssignmentId::MaterialAssignmentId(MaterialAssignmentLodIndex lodIndex, AZ::RPI::ModelMaterialSlot::StableId materialSlotStableId)
+        MaterialAssignmentId::MaterialAssignmentId(MaterialAssignmentLodIndex lodIndex, JE::Render::RPI::ModelMaterialSlot::StableId materialSlotStableId)
             : m_lodIndex(lodIndex)
             , m_materialSlotStableId(materialSlotStableId)
         {
@@ -100,33 +100,33 @@ namespace JE
 
         MaterialAssignmentId MaterialAssignmentId::CreateDefault()
         {
-            return MaterialAssignmentId(NonLodIndex, AZ::RPI::ModelMaterialSlot::InvalidStableId);
+            return MaterialAssignmentId(NonLodIndex, JE::Render::RPI::ModelMaterialSlot::InvalidStableId);
         }
 
-        MaterialAssignmentId MaterialAssignmentId::CreateFromStableIdOnly(AZ::RPI::ModelMaterialSlot::StableId materialSlotStableId)
+        MaterialAssignmentId MaterialAssignmentId::CreateFromStableIdOnly(JE::Render::RPI::ModelMaterialSlot::StableId materialSlotStableId)
         {
             return MaterialAssignmentId(NonLodIndex, materialSlotStableId);
         }
 
         MaterialAssignmentId MaterialAssignmentId::CreateFromLodAndStableId(
-            MaterialAssignmentLodIndex lodIndex, AZ::RPI::ModelMaterialSlot::StableId materialSlotStableId)
+            MaterialAssignmentLodIndex lodIndex, JE::Render::RPI::ModelMaterialSlot::StableId materialSlotStableId)
         {
             return MaterialAssignmentId(lodIndex, materialSlotStableId);
         }
 
         bool MaterialAssignmentId::IsDefault() const
         {
-            return m_lodIndex == NonLodIndex && m_materialSlotStableId == AZ::RPI::ModelMaterialSlot::InvalidStableId;
+            return m_lodIndex == NonLodIndex && m_materialSlotStableId == JE::Render::RPI::ModelMaterialSlot::InvalidStableId;
         }
 
         bool MaterialAssignmentId::IsSlotIdOnly() const
         {
-            return m_lodIndex == NonLodIndex && m_materialSlotStableId != AZ::RPI::ModelMaterialSlot::InvalidStableId;
+            return m_lodIndex == NonLodIndex && m_materialSlotStableId != JE::Render::RPI::ModelMaterialSlot::InvalidStableId;
         }
 
         bool MaterialAssignmentId::IsLodAndSlotId() const
         {
-            return m_lodIndex != NonLodIndex && m_materialSlotStableId != AZ::RPI::ModelMaterialSlot::InvalidStableId;
+            return m_lodIndex != NonLodIndex && m_materialSlotStableId != JE::Render::RPI::ModelMaterialSlot::InvalidStableId;
         }
 
         AZStd::string MaterialAssignmentId::ToString() const

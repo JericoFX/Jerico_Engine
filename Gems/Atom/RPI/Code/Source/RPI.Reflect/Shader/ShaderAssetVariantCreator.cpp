@@ -5,11 +5,11 @@
  * SPDX-License-Identifier: Apache-2.0 OR MIT
  *
  */
-#include <Atom/RPI.Reflect/Shader/ShaderAssetVariantCreator.h>
+#include <JE/Render/RPI/Reflect/Shader/ShaderAssetVariantCreator.h>
 
 #include <AzCore/Utils/TypeHash.h>
 
-namespace AZ
+namespace JE::Render
 {
     namespace RPI
     {
@@ -21,7 +21,7 @@ namespace AZ
         ShaderAssetVariant ShaderAssetVariantCreator::End()
         {
             const uint8_t*  functionIdData = reinterpret_cast<const uint8_t*>(m_variant.m_functionIdsByStage.data());
-            const size_t functionIdDataSize = m_variant.m_functionIdsByStage.size() * sizeof(RHI::ShaderStageFunctionId);
+            const size_t functionIdDataSize = m_variant.m_functionIdsByStage.size() * sizeof(AZ::RHI::ShaderStageFunctionId);
 
             HashValue64 hash = HashValue64{ 0 };
             hash = TypeHash64(functionIdData, functionIdDataSize, hash);
@@ -33,7 +33,7 @@ namespace AZ
             return m_variant;
         }
 
-        void ShaderAssetVariantCreator::SetShaderFunctionId(RHI::ShaderStage shaderStage, RHI::ShaderStageFunctionId functionId)
+        void ShaderAssetVariantCreator::SetShaderFunctionId(AZ::RHI::ShaderStage shaderStage, AZ::RHI::ShaderStageFunctionId functionId)
         {
             m_variant.m_functionIdsByStage[static_cast<size_t>(shaderStage)] = functionId;
         }
@@ -48,7 +48,7 @@ namespace AZ
             m_variant.m_outputContract = contract;
         }
 
-        void ShaderAssetVariantCreator::SetRenderStates(const RHI::RenderStates& renderStates)
+        void ShaderAssetVariantCreator::SetRenderStates(const AZ::RHI::RenderStates& renderStates)
         {
             m_variant.m_renderStates = renderStates;
         }

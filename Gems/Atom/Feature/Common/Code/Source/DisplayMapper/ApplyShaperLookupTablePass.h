@@ -8,7 +8,7 @@
 #pragma once
 
 #include <AzCore/Memory/SystemAllocator.h>
-#include <Atom/RPI.Public/Pass/FullscreenTrianglePass.h>
+#include <JE/Render/RPI/Public/Pass/FullscreenTrianglePass.h>
 #include <ACES/Aces.h>
 #include <Atom/Feature/ACES/AcesDisplayMapperFeatureProcessor.h>
 #include <DisplayMapper/DisplayMapperFullScreenPass.h>
@@ -34,14 +34,14 @@ namespace AZ
             virtual ~ApplyShaperLookupTablePass();
 
             /// Creates a AcesOutputTransformLutPass
-            static RPI::Ptr<ApplyShaperLookupTablePass> Create(const RPI::PassDescriptor& descriptor);
+            static JE::Render::RPI::Ptr<ApplyShaperLookupTablePass> Create(const JE::Render::RPI::PassDescriptor& descriptor);
 
             void SetShaperParameters(const ShaperParams& shaperParams);
             void SetLutAssetId(const AZ::Data::AssetId& assetId);
             const AZ::Data::AssetId& GetLutAssetId() const;
 
         protected:
-            explicit ApplyShaperLookupTablePass(const RPI::PassDescriptor& descriptor);
+            explicit ApplyShaperLookupTablePass(const JE::Render::RPI::PassDescriptor& descriptor);
 
             // Pass behavior overrides...
             void InitializeInternal() override;

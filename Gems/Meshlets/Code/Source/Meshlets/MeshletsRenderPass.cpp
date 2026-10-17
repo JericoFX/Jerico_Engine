@@ -10,17 +10,17 @@
 #include <Atom/RHI/DeviceDrawPacketBuilder.h>
 #include <Atom/RHI/DevicePipelineState.h>
 
-#include <Atom/RPI.Public/View.h>
-#include <Atom/RPI.Public/RPIUtils.h>
-#include <Atom/RPI.Public/RenderPipeline.h>
-#include <Atom/RPI.Public/RPISystemInterface.h>
-#include <Atom/RPI.Public/Pass/PassUtils.h>
-#include <Atom/RPI.Public/Scene.h>
+#include <JE/Render/RPI/Public/View.h>
+#include <JE/Render/RPI/Public/RPIUtils.h>
+#include <JE/Render/RPI/Public/RenderPipeline.h>
+#include <JE/Render/RPI/Public/RPISystemInterface.h>
+#include <JE/Render/RPI/Public/Pass/PassUtils.h>
+#include <JE/Render/RPI/Public/Scene.h>
 
-#include <Atom/RPI.Reflect/Asset/AssetUtils.h>
-#include <Atom/RPI.Reflect/Pass/RasterPassData.h>
-#include <Atom/RPI.Reflect/Pass/PassTemplate.h>
-#include <Atom/RPI.Reflect/Shader/ShaderAsset.h>
+#include <JE/Render/RPI/Reflect/Asset/AssetUtils.h>
+#include <JE/Render/RPI/Reflect/Pass/RasterPassData.h>
+#include <JE/Render/RPI/Reflect/Pass/PassTemplate.h>
+#include <JE/Render/RPI/Reflect/Shader/ShaderAsset.h>
 
 #include <MeshletsRenderPass.h>
 #include <MeshletsUtilities.h>
@@ -31,13 +31,13 @@ namespace AZ
     namespace Meshlets
     {
         // --- Creation & Initialization ---
-        RPI::Ptr<MeshletsRenderPass> MeshletsRenderPass::Create(const RPI::PassDescriptor& descriptor)
+        JE::Render::RPI::Ptr<MeshletsRenderPass> MeshletsRenderPass::Create(const JE::Render::RPI::PassDescriptor& descriptor)
         {
-            RPI::Ptr<MeshletsRenderPass> pass = aznew MeshletsRenderPass(descriptor);
+            JE::Render::RPI::Ptr<MeshletsRenderPass> pass = aznew MeshletsRenderPass(descriptor);
             return pass;
         }
 
-        MeshletsRenderPass::MeshletsRenderPass(const RPI::PassDescriptor& descriptor)
+        MeshletsRenderPass::MeshletsRenderPass(const JE::Render::RPI::PassDescriptor& descriptor)
             : RasterPass(descriptor),
             m_passDescriptor(descriptor)
         {
@@ -54,7 +54,7 @@ namespace AZ
                 return true;
             }
 
-            RPI::Scene* scene = GetScene();
+            JE::Render::RPI::Scene* scene = GetScene();
             if (!scene)
             {
                 return false;
@@ -82,9 +82,9 @@ namespace AZ
 
         bool MeshletsRenderPass::LoadShader()
         {
-            RPI::ShaderReloadNotificationBus::Handler::BusDisconnect();
+            JE::Render::RPI::ShaderReloadNotificationBus::Handler::BusDisconnect();
 
-            const RPI::RasterPassData* passData = RPI::PassUtils::GetPassData<RPI::RasterPassData>(m_passDescriptor);
+            const JE::Render::RPI::RasterPassData* passData = JE::Render::RPI::PassUtils::GetPassData<JE::Render::RPI::RasterPassData>(m_passDescriptor);
 
             // If we successfully retrieved our custom data, use it to set the DrawListTag
             if (!passData)
@@ -95,8 +95,8 @@ namespace AZ
 
             // Load Shader
             const char* shaderFilePath = m_shaderPath.c_str();
-            Data::Asset<RPI::ShaderAsset> shaderAsset =
-                RPI::AssetUtils::LoadAssetByProductPath<RPI::ShaderAsset>(shaderFilePath, RPI::AssetUtils::TraceLevel::Error);
+            Data::Asset<JE::Render::RPI::ShaderAsset> shaderAsset =
+                JE::Render::RPI::AssetUtils::LoadAssetByProductPath<JE::Render::RPI::ShaderAsset>(shaderFilePath, JE::Render::RPI::AssetUtils::TraceLevel::Error);
 
             if (!shaderAsset.GetId().IsValid())
             {
@@ -104,7 +104,7 @@ namespace AZ
                 return false;
             }
 
-            m_shader = RPI::Shader::FindOrCreate(shaderAsset);
+            m_shader = JE::Render::RPI::Shader::FindOrCreate(shaderAsset);
             if (!m_shader)
             {
                 AZ_Error("Meshlets", false, "Pass failed to load shader '%s'!", shaderFilePath);
@@ -124,7 +124,7 @@ namespace AZ
                     return false;
                 }
             }
-            RPI::ShaderReloadNotificationBus::Handler::BusConnect(shaderAsset.GetId());
+            JE::Render::RPI::ShaderReloadNotificationBus::Handler::BusConnect(shaderAsset.GetId());
 
             return true;
         }
@@ -136,11 +136,11 @@ namespace AZ
                 return false;
             }
 
-            const RPI::ShaderVariant& shaderVariant = m_shader->GetVariant(RPI::ShaderAsset::RootShaderVariantStableId);
+            const JE::Render::RPI::ShaderVariant& shaderVariant = m_shader->GetVariant(JE::Render::RPI::ShaderAsset::RootShaderVariantStableId);
             RHI::PipelineStateDescriptorForDraw pipelineStateDescriptor;
             shaderVariant.ConfigurePipelineState(pipelineStateDescriptor);
 
-            RPI::Scene* scene = GetScene();
+            JE::Render::RPI::Scene* scene = GetScene();
             if (!scene)
             {
                 AZ_Error("Meshlets", false, "Scene could not be acquired");
@@ -163,7 +163,7 @@ namespace AZ
             return true;
         }
 
-        Data::Instance<RPI::Shader> MeshletsRenderPass::GetShader()
+        Data::Instance<JE::Render::RPI::Shader> MeshletsRenderPass::GetShader()
         {
             if (!m_shader)
             {
@@ -237,7 +237,7 @@ namespace AZ
                 return;
             }
 
-            RPI::RasterPass::FrameBeginInternal(params);
+            JE::Render::RPI::RasterPass::FrameBeginInternal(params);
         }
 
         void MeshletsRenderPass::CompileResources(const RHI::FrameGraphCompileContext& context)
@@ -250,7 +250,7 @@ namespace AZ
             }
 
             // Compilation of remaining srgs will be done by the parent class 
-            RPI::RasterPass::CompileResources(context);
+            JE::Render::RPI::RasterPass::CompileResources(context);
         }
 
         void MeshletsRenderPass::BuildShaderAndRenderData()
@@ -263,17 +263,17 @@ namespace AZ
             }
         }
 
-        void MeshletsRenderPass::OnShaderReinitialized([[maybe_unused]] const RPI::Shader & shader)
+        void MeshletsRenderPass::OnShaderReinitialized([[maybe_unused]] const JE::Render::RPI::Shader & shader)
         {
             BuildShaderAndRenderData();
         }
 
-        void MeshletsRenderPass::OnShaderAssetReinitialized([[maybe_unused]] const Data::Asset<RPI::ShaderAsset>& shaderAsset)
+        void MeshletsRenderPass::OnShaderAssetReinitialized([[maybe_unused]] const Data::Asset<JE::Render::RPI::ShaderAsset>& shaderAsset)
         {
             BuildShaderAndRenderData();
         }
 
-        void MeshletsRenderPass::OnShaderVariantReinitialized([[maybe_unused]] const AZ::RPI::ShaderVariant& shaderVariant)
+        void MeshletsRenderPass::OnShaderVariantReinitialized([[maybe_unused]] const JE::Render::RPI::ShaderVariant& shaderVariant)
         {
             BuildShaderAndRenderData();
         }

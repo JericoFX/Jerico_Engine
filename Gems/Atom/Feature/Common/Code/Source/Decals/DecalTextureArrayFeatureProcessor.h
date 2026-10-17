@@ -12,8 +12,8 @@
 #include <Atom/Feature/Utils/IndexedDataVector.h>
 #include <Atom/Feature/Decals/DecalFeatureProcessorInterface.h>
 #include <Atom/Feature/Utils/MultiIndexedDataVector.h>
-#include <Atom/RPI.Reflect/Image/ImageAsset.h>
-#include <Atom/RPI.Public/Image/StreamingImage.h>
+#include <JE/Render/RPI/Reflect/Image/ImageAsset.h>
+#include <JE/Render/RPI/Public/Image/StreamingImage.h>
 #include <Atom/Feature/Utils/IndexableList.h>
 #include <AzCore/Instance/Instance.h>
 #include <AzCore/Math/Sphere.h>
@@ -22,11 +22,16 @@
 
 namespace AZ
 {
-    namespace RPI
-    {
+    }
+
+namespace JE::Render::RPI
+{
         class Material;
         class Buffer;
     }
+
+namespace AZ
+{
 
     namespace Render
     {
@@ -50,15 +55,15 @@ namespace AZ
             void Activate() override;
 
             void Deactivate() override;
-            void Simulate(const RPI::FeatureProcessor::SimulatePacket& packet) override;
-            void Render(const RPI::FeatureProcessor::RenderPacket& packet) override;
+            void Simulate(const JE::Render::RPI::FeatureProcessor::SimulatePacket& packet) override;
+            void Render(const JE::Render::RPI::FeatureProcessor::RenderPacket& packet) override;
 
             DecalHandle AcquireDecal() override;
             bool ReleaseDecal(const DecalHandle handle) override;
             DecalHandle CloneDecal(const DecalHandle handle) override;
             void SetDecalData(const DecalHandle handle, const DecalData& data) override;
 
-            const Data::Instance<RPI::Buffer> GetDecalBuffer() const override;
+            const Data::Instance<JE::Render::RPI::Buffer> GetDecalBuffer() const override;
             uint32_t GetDecalCount() const override;
 
             //! Sets the position of the decal
@@ -103,10 +108,10 @@ namespace AZ
 
             // SceneNotificationBus::Handler overrides...
             void OnRenderPipelinePersistentViewChanged(
-                RPI::RenderPipeline* renderPipeline,
-                RPI::PipelineViewTag viewTag,
-                RPI::ViewPtr newView,
-                RPI::ViewPtr previousView) override;
+                JE::Render::RPI::RenderPipeline* renderPipeline,
+                JE::Render::RPI::PipelineViewTag viewTag,
+                JE::Render::RPI::ViewPtr newView,
+                JE::Render::RPI::ViewPtr previousView) override;
 
         private:
 
@@ -130,11 +135,11 @@ namespace AZ
 
             void OnAssetReady(Data::Asset<Data::AssetData> asset) override;
 
-            void SetPackedTexturesToSrg(const RPI::ViewPtr& view);
+            void SetPackedTexturesToSrg(const JE::Render::RPI::ViewPtr& view);
             void CacheShaderIndices();
 
             // This call could fail (returning nullopt) if we run out of texture arrays
-            AZStd::optional<DecalLocation> AddMaterialToTextureArrays(AZ::RPI::MaterialAsset* materialAsset);
+            AZStd::optional<DecalLocation> AddMaterialToTextureArrays(JE::Render::RPI::MaterialAsset* materialAsset);
 
             int FindTextureArrayWithLayout(const DecalTextureArray::PackingLayout& layout) const;
             void RemoveMaterialFromDecal(const uint16_t decalIndex);
@@ -143,9 +148,9 @@ namespace AZ
             bool RemoveDecalFromTextureArrays(const DecalLocation decalLocation);
             AZ::Data::AssetId GetMaterialUsedByDecal(const DecalHandle handle) const;
             void PackTexureArrays();
-            void SetMaterialToDecals(RPI::MaterialAsset* materialAsset, const AZStd::vector<DecalHandle>& decalsThatUseThisMaterial);
+            void SetMaterialToDecals(JE::Render::RPI::MaterialAsset* materialAsset, const AZStd::vector<DecalHandle>& decalsThatUseThisMaterial);
             // Cull the decals for a view using the CPU.
-            void CullDecals(const RPI::ViewPtr& view);
+            void CullDecals(const JE::Render::RPI::ViewPtr& view);
             void UpdateBounds(const DecalHandle handle);
 
             MultiIndexedDataVector<DecalData, AZ::Aabb> m_decalData;
@@ -168,7 +173,7 @@ namespace AZ
             // Number of buffers being used for visibility in the current frame.
             uint32_t m_visibleDecalBufferUsedCount = 0;
             // Views that have a GPU culling pass per render pipeline.
-            AZStd::unordered_map<const RPI::View*, AZStd::vector<const RPI::RenderPipeline*>> m_cpuCulledPipelinesPerView;
+            AZStd::unordered_map<const JE::Render::RPI::View*, AZStd::vector<const JE::Render::RPI::RenderPipeline*>> m_cpuCulledPipelinesPerView;
         };
     } // namespace Render
 } // namespace AZ

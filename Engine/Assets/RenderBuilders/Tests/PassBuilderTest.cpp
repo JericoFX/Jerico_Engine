@@ -21,9 +21,9 @@
 
 #include <Atom/RHI.Reflect/ReflectSystemComponent.h>
 
-#include <Atom/RPI.Reflect/Pass/FullscreenTrianglePassData.h>
-#include <Atom/RPI.Reflect/Pass/PassAsset.h>
-#include <Atom/RPI.Reflect/Pass/PassTemplate.h>
+#include <JE/Render/RPI/Reflect/Pass/FullscreenTrianglePassData.h>
+#include <JE/Render/RPI/Reflect/Pass/PassAsset.h>
+#include <JE/Render/RPI/Reflect/Pass/PassTemplate.h>
 #include <Pass/PassBuilder.h>
 
 #include <BuilderTestFixture.h>
@@ -37,13 +37,13 @@ namespace UnitTest
     {
     protected:
 
-        AZ::RPI::PassAssetHandler* m_assetHandler;
+        JE::Render::RPI::PassAssetHandler* m_assetHandler;
 
         void SetUp() override
         {
             BuilderTestFixture::SetUp();
 
-            m_assetHandler = new AZ::RPI::PassAssetHandler();
+            m_assetHandler = new JE::Render::RPI::PassAssetHandler();
             m_assetHandler->m_serializeContext = m_context.get();
             m_assetHandler->Register();
         }
@@ -87,7 +87,7 @@ namespace UnitTest
             return outAsset;
         }
 
-        void SetPassTemplateForTestingOnly(AZ::RPI::PassAsset& passAsset, AZ::RPI::PassTemplate& passTemplate)
+        void SetPassTemplateForTestingOnly(JE::Render::RPI::PassAsset& passAsset, JE::Render::RPI::PassTemplate& passTemplate)
         {
             passAsset.SetPassTemplateForTestingOnly(passTemplate);
         }
@@ -108,16 +108,16 @@ namespace UnitTest
         request.m_tempDirPath = productDir.GetDirectory();
 
         // Dummy pass template
-        AZ::RPI::PassTemplate passTemplate;
+        JE::Render::RPI::PassTemplate passTemplate;
         passTemplate.m_name = "TemplateTestName";
 
         // Dummy pass data with random asset ID to test asset dependency
-        AZStd::shared_ptr<AZ::RPI::FullscreenTrianglePassData> passData = AZStd::make_shared<AZ::RPI::FullscreenTrianglePassData>();
+        AZStd::shared_ptr<JE::Render::RPI::FullscreenTrianglePassData> passData = AZStd::make_shared<JE::Render::RPI::FullscreenTrianglePassData>();
         passData->m_shaderAsset.m_assetId = AZ::Data::AssetId(AZ::Uuid::CreateRandom(), 1);
         passTemplate.m_passData = passData;
 
         // Create and write pass data
-        AZ::RPI::PassAsset passAsset;
+        JE::Render::RPI::PassAsset passAsset;
         SetPassTemplateForTestingOnly(passAsset, passTemplate);
         AZ::JsonSerializationUtils::SaveObjectToFile(&passAsset, sourceFilePath.Native());
 
@@ -132,7 +132,7 @@ namespace UnitTest
 
         // Verify input and output names are the same
         AZ::Data::Asset<AZ::Data::AssetData> readAsset = LoadAssetFromFile(response.m_outputProducts[0].m_productFileName.c_str());
-        AZ::RPI::PassAsset* readPassAsset = static_cast<AZ::RPI::PassAsset*>(readAsset.GetData());
+        JE::Render::RPI::PassAsset* readPassAsset = static_cast<JE::Render::RPI::PassAsset*>(readAsset.GetData());
         EXPECT_TRUE(passTemplate.m_name == readPassAsset->GetPassTemplate()->m_name);
     }
 

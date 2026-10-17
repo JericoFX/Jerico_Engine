@@ -8,7 +8,7 @@
 
 #pragma once
 #include <OpenParticleSystem/Asset/ParticleArchive.h>
-#include <Atom/RPI.Reflect/Material/MaterialAsset.h>
+#include <JE/Render/RPI/Reflect/Material/MaterialAsset.h>
 #include <AzCore/Asset/AssetCommon.h>
 #include <AzCore/std/containers/vector.h>
 #include <OpenParticleSystem/ParticleConfig.h>

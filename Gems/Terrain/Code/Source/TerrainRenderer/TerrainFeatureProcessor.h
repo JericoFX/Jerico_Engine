@@ -17,10 +17,10 @@
 #include <TerrainRenderer/TerrainClipmapManager.h>
 #include <TerrainRenderer/TerrainMeshManager.h>
 
-#include <Atom/RPI.Public/FeatureProcessor.h>
-#include <Atom/RPI.Public/Image/AttachmentImage.h>
+#include <JE/Render/RPI/Public/FeatureProcessor.h>
+#include <JE/Render/RPI/Public/Image/AttachmentImage.h>
 
-namespace AZ::RPI
+namespace JE::Render::RPI
 {
     namespace AssetUtils
     {
@@ -33,13 +33,13 @@ namespace AZ::RPI
 namespace Terrain
 {
     class TerrainFeatureProcessor final
-        : public AZ::RPI::FeatureProcessor
+        : public JE::Render::RPI::FeatureProcessor
         , public AZ::Data::AssetBus::Handler
         , private AzFramework::Terrain::TerrainDataNotificationBus::Handler
     {
     public:
         AZ_CLASS_ALLOCATOR(TerrainFeatureProcessor, AZ::SystemAllocator)
-        AZ_RTTI(TerrainFeatureProcessor, "{D7DAC1F9-4A9F-4D3C-80AE-99579BF8AB1C}", AZ::RPI::FeatureProcessor);
+        AZ_RTTI(TerrainFeatureProcessor, "{D7DAC1F9-4A9F-4D3C-80AE-99579BF8AB1C}", JE::Render::RPI::FeatureProcessor);
         AZ_DISABLE_COPY_MOVE(TerrainFeatureProcessor);
         AZ_FEATURE_PROCESSOR(TerrainFeatureProcessor);
 
@@ -51,18 +51,18 @@ namespace Terrain
         // AZ::RPI::FeatureProcessor overrides...
         void Activate() override;
         void Deactivate() override;
-        void Render(const AZ::RPI::FeatureProcessor::RenderPacket& packet) override;
+        void Render(const JE::Render::RPI::FeatureProcessor::RenderPacket& packet) override;
 
         void SetDetailMaterialConfiguration(const DetailMaterialConfiguration& config);
         void SetMeshConfiguration(const MeshConfiguration& config);
         void SetClipmapConfiguration(const ClipmapConfiguration& config);
 
-        const AZ::Data::Instance<AZ::RPI::ShaderResourceGroup> GetTerrainShaderResourceGroup() const;
-        const AZ::Data::Instance<AZ::RPI::Material> GetMaterial() const;
+        const AZ::Data::Instance<JE::Render::RPI::ShaderResourceGroup> GetTerrainShaderResourceGroup() const;
+        const AZ::Data::Instance<JE::Render::RPI::Material> GetMaterial() const;
         const TerrainClipmapManager& GetClipmapManager() const;
     private:
 
-        using MaterialInstance = AZ::Data::Instance<AZ::RPI::Material>;
+        using MaterialInstance = AZ::Data::Instance<JE::Render::RPI::Material>;
         
         struct WorldShaderData
         {
@@ -81,10 +81,10 @@ namespace Terrain
         void OnTerrainDataChanged(const AZ::Aabb& dirtyRegion, TerrainDataChangedMask dataChangedMask) override;
 
         // AZ::RPI::SceneNotificationBus overrides...
-        void OnRenderPipelineChanged(AZ::RPI::RenderPipeline* pipeline, AZ::RPI::SceneNotification::RenderPipelineChangeType changeType) override;
+        void OnRenderPipelineChanged(JE::Render::RPI::RenderPipeline* pipeline, JE::Render::RPI::SceneNotification::RenderPipelineChangeType changeType) override;
         
         // AZ::RPI::FeatureProcessor overrides...
-        void AddRenderPasses(AZ::RPI::RenderPipeline* renderPipeline) override;
+        void AddRenderPasses(JE::Render::RPI::RenderPipeline* renderPipeline) override;
 
         void Initialize();
 
@@ -99,10 +99,10 @@ namespace Terrain
         TerrainDetailMaterialManager m_detailMaterialManager;
         TerrainClipmapManager m_clipmapManager;
 
-        AZ::Data::Asset<AZ::RPI::MaterialAsset> m_materialAsset;
+        AZ::Data::Asset<JE::Render::RPI::MaterialAsset> m_materialAsset;
         MaterialInstance m_materialInstance;
 
-        AZ::Data::Instance<AZ::RPI::ShaderResourceGroup> m_terrainSrg;
+        AZ::Data::Instance<JE::Render::RPI::ShaderResourceGroup> m_terrainSrg;
 
         AZ::RHI::ShaderInputNameIndex m_worldDataIndex = "m_terrainWorldData";
 
@@ -111,6 +111,6 @@ namespace Terrain
         
         bool m_terrainBoundsNeedUpdate{ false };
 
-        AZStd::vector<AZ::RPI::RenderPass*> m_passes;
+        AZStd::vector<JE::Render::RPI::RenderPass*> m_passes;
     };
 }

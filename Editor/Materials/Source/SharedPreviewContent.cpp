@@ -10,8 +10,8 @@
 #include <Atom/Feature/PostProcess/PostProcessFeatureProcessorInterface.h>
 #include <Atom/Feature/SkyBox/SkyBoxFeatureProcessorInterface.h>
 #include <Atom/Feature/Utils/LightingPreset.h>
-#include <Atom/RPI.Public/Scene.h>
-#include <Atom/RPI.Reflect/Asset/AssetUtils.h>
+#include <JE/Render/RPI/Public/Scene.h>
+#include <JE/Render/RPI/Reflect/Asset/AssetUtils.h>
 #include <JE/Render/Materials/MaterialComponentBus.h>
 #include <JE/Render/Materials/MaterialComponentConstants.h>
 #include <AtomLyIntegration/CommonFeatures/Mesh/MeshComponentBus.h>
@@ -30,12 +30,12 @@ namespace JE
     namespace Editor
     {
         SharedPreviewContent::SharedPreviewContent(
-            AZ::RPI::ScenePtr scene,
-            AZ::RPI::ViewPtr view,
+            JE::Render::RPI::ScenePtr scene,
+            JE::Render::RPI::ViewPtr view,
             AZ::Uuid entityContextId,
-            const AZ::Data::Asset<AZ::RPI::ModelAsset>& modelAsset,
-            const AZ::Data::Asset<AZ::RPI::MaterialAsset>& materialAsset,
-            const AZ::Data::Asset<AZ::RPI::AnyAsset>& lightingPresetAsset,
+            const AZ::Data::Asset<JE::Render::RPI::ModelAsset>& modelAsset,
+            const AZ::Data::Asset<JE::Render::RPI::MaterialAsset>& materialAsset,
+            const AZ::Data::Asset<JE::Render::RPI::AnyAsset>& lightingPresetAsset,
             const JE::Render::MaterialPropertyOverrideMap& materialPropertyOverrides)
             : m_scene(scene)
             , m_view(view)
@@ -62,7 +62,7 @@ namespace JE
                     const AZ::Render::ModelDataInstanceInterface& meshHandleIface,
                     uint32_t lodIndex,
                     uint32_t meshIndex,
-                    const AZ::RPI::MeshDrawPacket& meshDrawPacket)
+                    const JE::Render::RPI::MeshDrawPacket& meshDrawPacket)
                 {
                     OnMeshDrawPacketUpdated(meshHandleIface, lodIndex, meshIndex, meshDrawPacket);
                 }
@@ -204,7 +204,7 @@ namespace JE
             [[maybe_unused]] const AZ::Render::ModelDataInstanceInterface& meshHandleIface,
             [[maybe_unused]] uint32_t lodIndex,
             [[maybe_unused]] uint32_t meshIndex,
-            [[maybe_unused]] const AZ::RPI::MeshDrawPacket& meshDrawPacket)
+            [[maybe_unused]] const JE::Render::RPI::MeshDrawPacket& meshDrawPacket)
         {
             // Typically we only get two updates.
             // The first update is triggered by the creation of the Mesh with all its defaults.

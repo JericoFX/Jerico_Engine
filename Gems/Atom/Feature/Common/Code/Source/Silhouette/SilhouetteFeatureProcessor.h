@@ -8,9 +8,9 @@
 
 #pragma once
 
-#include <Atom/RPI.Public/FeatureProcessor.h>
+#include <JE/Render/RPI/Public/FeatureProcessor.h>
 
-namespace AZ::RPI
+namespace JE::Render::RPI
 {
     class Pass;
     class RasterPass;
@@ -25,12 +25,12 @@ namespace AZ::Render
     // The silhouette full screen pass then composites the render target with all the 
     // silhouettes into the framebuffer and adds an outline.
     class SilhouetteFeatureProcessor final
-        : public AZ::RPI::FeatureProcessor
+        : public JE::Render::RPI::FeatureProcessor
     {
     public:
         AZ_CLASS_ALLOCATOR(SilhouetteFeatureProcessor, AZ::SystemAllocator)
 
-        AZ_RTTI(AZ::Render::SilhouetteFeatureProcessor, "{E32ABBE6-2472-4404-AEDB-1CE7A12E7C43}", AZ::RPI::FeatureProcessor);
+        AZ_RTTI(AZ::Render::SilhouetteFeatureProcessor, "{E32ABBE6-2472-4404-AEDB-1CE7A12E7C43}", JE::Render::RPI::FeatureProcessor);
 
         static void Reflect(AZ::ReflectContext* context);
 
@@ -44,20 +44,20 @@ namespace AZ::Render
         //! FeatureProcessor 
         void Activate() override;
         void Deactivate() override;
-        void AddRenderPasses(AZ::RPI::RenderPipeline* renderPipeline) override;
+        void AddRenderPasses(JE::Render::RPI::RenderPipeline* renderPipeline) override;
 
         //! RPI::SceneNotificationBus
         void OnRenderEnd() override;
-        void OnRenderPipelineChanged(AZ::RPI::RenderPipeline* pipeline, AZ::RPI::SceneNotification::RenderPipelineChangeType changeType) override;
+        void OnRenderPipelineChanged(JE::Render::RPI::RenderPipeline* pipeline, JE::Render::RPI::SceneNotification::RenderPipelineChangeType changeType) override;
 
         bool NeedsCompositePass() const;
 
     private:
-        void UpdatePasses(AZ::RPI::RenderPipeline* renderPipeline);
+        void UpdatePasses(JE::Render::RPI::RenderPipeline* renderPipeline);
 
-        AZ::RPI::RasterPass* m_rasterPass = nullptr;
-        AZ::RPI::Pass* m_compositePass = nullptr;
-        AZ::RPI::RenderPipeline* m_renderPipeline = nullptr;
+        JE::Render::RPI::RasterPass* m_rasterPass = nullptr;
+        JE::Render::RPI::Pass* m_compositePass = nullptr;
+        JE::Render::RPI::RenderPipeline* m_renderPipeline = nullptr;
     };
 }
 

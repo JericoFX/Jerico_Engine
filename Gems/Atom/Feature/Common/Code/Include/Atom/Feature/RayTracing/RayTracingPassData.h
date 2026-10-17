@@ -7,8 +7,8 @@
  */
 #pragma once
 
-#include <Atom/RPI.Reflect/Asset/AssetReference.h>
-#include <Atom/RPI.Reflect/Pass/RenderPassData.h>
+#include <JE/Render/RPI/Reflect/Asset/AssetReference.h>
+#include <JE/Render/RPI/Reflect/Pass/RenderPassData.h>
 #include <AzCore/Serialization/SerializeContext.h>
 
 namespace AZ
@@ -17,9 +17,9 @@ namespace AZ
     {
         //! Custom data for the RayTracingPass, specified in the PassRequest.
         struct RayTracingPassData
-            : public RPI::RenderPassData
+            : public JE::Render::RPI::RenderPassData
         {
-            AZ_RTTI(RayTracingPassData, "{26C2E2FD-D30A-4142-82A3-0167BC94B3EE}", RPI::RenderPassData);
+            AZ_RTTI(RayTracingPassData, "{26C2E2FD-D30A-4142-82A3-0167BC94B3EE}", JE::Render::RPI::RenderPassData);
             AZ_CLASS_ALLOCATOR(RayTracingPassData, SystemAllocator);
 
             RayTracingPassData() = default;
@@ -55,15 +55,15 @@ namespace AZ
                 }
             }
 
-            RPI::AssetReference m_rayGenerationShaderAssetReference;
+            JE::Render::RPI::AssetReference m_rayGenerationShaderAssetReference;
             AZStd::string m_rayGenerationShaderName;
-            RPI::AssetReference m_closestHitShaderAssetReference;
+            JE::Render::RPI::AssetReference m_closestHitShaderAssetReference;
             AZStd::string m_closestHitShaderName;
-            RPI::AssetReference m_closestHitProceduralShaderAssetReference;
+            JE::Render::RPI::AssetReference m_closestHitProceduralShaderAssetReference;
             AZStd::string m_closestHitProceduralShaderName;
-            RPI::AssetReference m_missShaderAssetReference;
+            JE::Render::RPI::AssetReference m_missShaderAssetReference;
             AZStd::string m_missShaderName;
-            RPI::AssetReference m_intersectionShaderAssetReference;
+            JE::Render::RPI::AssetReference m_intersectionShaderAssetReference;
             AZStd::string m_intersectionShaderName;
 
             uint32_t m_maxPayloadSize = 64;

@@ -17,7 +17,7 @@
 #include <AzCore/RTTI/RTTI.h>
 #include <AzCore/RTTI/ReflectContext.h>
 #include <AzCore/StringFunc/StringFunc.h>
-#include <Atom/RPI.Reflect/Model/ModelMaterialSlot.h>
+#include <JE/Render/RPI/Reflect/Model/ModelMaterialSlot.h>
 
 namespace JE
 {
@@ -37,16 +37,16 @@ namespace JE
 
             MaterialAssignmentId() = default;
 
-            MaterialAssignmentId(MaterialAssignmentLodIndex lodIndex, AZ::RPI::ModelMaterialSlot::StableId materialSlotStableId);
+            MaterialAssignmentId(MaterialAssignmentLodIndex lodIndex, JE::Render::RPI::ModelMaterialSlot::StableId materialSlotStableId);
 
             //! Create an ID that maps to all material slots, regardless of slot ID or LOD, effectively applying to an entire model.
             static MaterialAssignmentId CreateDefault();
 
             //! Create an ID that maps to all material slots with a corresponding slot ID, regardless of LOD.
-            static MaterialAssignmentId CreateFromStableIdOnly(AZ::RPI::ModelMaterialSlot::StableId materialSlotStableId);
+            static MaterialAssignmentId CreateFromStableIdOnly(JE::Render::RPI::ModelMaterialSlot::StableId materialSlotStableId);
 
             //! Create an ID that maps to a specific material slot with a corresponding stable ID and LOD.
-            static MaterialAssignmentId CreateFromLodAndStableId(MaterialAssignmentLodIndex lodIndex, AZ::RPI::ModelMaterialSlot::StableId materialSlotStableId);
+            static MaterialAssignmentId CreateFromLodAndStableId(MaterialAssignmentLodIndex lodIndex, JE::Render::RPI::ModelMaterialSlot::StableId materialSlotStableId);
 
             //! Returns true if the slot stable ID and LOD are invalid, meaning this assignment applies to the entire model.
             bool IsDefault() const;
@@ -69,7 +69,7 @@ namespace JE
             static constexpr MaterialAssignmentLodIndex NonLodIndex = std::numeric_limits<MaterialAssignmentLodIndex>::max();
 
             MaterialAssignmentLodIndex m_lodIndex = NonLodIndex;
-            AZ::RPI::ModelMaterialSlot::StableId m_materialSlotStableId = AZ::RPI::ModelMaterialSlot::InvalidStableId;
+            JE::Render::RPI::ModelMaterialSlot::StableId m_materialSlotStableId = JE::Render::RPI::ModelMaterialSlot::InvalidStableId;
         };
 
     } // namespace Render

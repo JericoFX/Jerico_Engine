@@ -14,11 +14,11 @@
 #include <AzCore/Math/Vector3.h>
 #include <AzCore/Math/Color.h>
 #include <Atom/RHI/Factory.h>
-#include <Atom/RPI.Public/ColorManagement/TransformColor.h>
-#include <Atom/RPI.Public/RenderPipeline.h>
-#include <Atom/RPI.Public/RPISystemInterface.h>
-#include <Atom/RPI.Public/Scene.h>
-#include <Atom/RPI.Public/View.h>
+#include <JE/Render/RPI/Public/ColorManagement/TransformColor.h>
+#include <JE/Render/RPI/Public/RenderPipeline.h>
+#include <JE/Render/RPI/Public/RPISystemInterface.h>
+#include <JE/Render/RPI/Public/Scene.h>
+#include <JE/Render/RPI/Public/View.h>
 #include <numeric>
 
 //! If modified, ensure that r_maxVisiblePointLights is equal to or lower than ENABLE_SIMPLE_POINTLIGHTS_CAP which is the limit set by the shader on GPU.
@@ -50,7 +50,7 @@ namespace AZ
             desc.m_bufferSrgName = "m_simplePointLights";
             desc.m_elementCountSrgName = "m_simplePointLightCount";
             desc.m_elementSize = sizeof(SimplePointLightData);
-            desc.m_srgLayout = RPI::RPISystemInterface::Get()->GetViewSrgLayout().get();
+            desc.m_srgLayout = JE::Render::RPI::RPISystemInterface::Get()->GetViewSrgLayout().get();
 
             m_lightBufferHandler = GpuBufferHandler(desc);
             
@@ -147,7 +147,7 @@ namespace AZ
         {
             AZ_PROFILE_SCOPE(RPI, "SimplePointLightFeatureProcessor: Render");
             m_visiblePointLightsBufferUsedCount = 0;
-            for (const RPI::ViewPtr& view : packet.m_views)
+            for (const JE::Render::RPI::ViewPtr& view : packet.m_views)
             {
                 m_lightBufferHandler.UpdateSrg(view->GetShaderResourceGroup().get());
                 CullLights(view);
@@ -158,7 +158,7 @@ namespace AZ
         {
             AZ_Assert(handle.IsValid(), "Invalid LightHandle passed to SimplePointLightFeatureProcessor::SetRgbIntensity().");
 
-            auto transformedColor = AZ::RPI::TransformColor(lightRgbIntensity, AZ::RPI::ColorSpaceId::LinearSRGB, AZ::RPI::ColorSpaceId::ACEScg);
+            auto transformedColor = JE::Render::RPI::TransformColor(lightRgbIntensity, JE::Render::RPI::ColorSpaceId::LinearSRGB, JE::Render::RPI::ColorSpaceId::ACEScg);
 
             AZStd::array<float, 3>& rgbIntensity = m_lightData.GetData<0>(handle.GetIndex()).m_rgbIntensity;
             rgbIntensity[0] = transformedColor.GetR();
@@ -212,7 +212,7 @@ namespace AZ
             m_deviceBufferNeedsUpdate = true;
         }
 
-        const Data::Instance<RPI::Buffer> SimplePointLightFeatureProcessor::GetLightBuffer() const
+        const Data::Instance<JE::Render::RPI::Buffer> SimplePointLightFeatureProcessor::GetLightBuffer() const
         {
             return m_lightBufferHandler.GetBuffer();
         }
@@ -223,17 +223,17 @@ namespace AZ
         }
 
         void SimplePointLightFeatureProcessor::OnRenderPipelinePersistentViewChanged(
-            RPI::RenderPipeline* renderPipeline,
-            [[maybe_unused]] RPI::PipelineViewTag viewTag,
-            RPI::ViewPtr newView,
-            RPI::ViewPtr previousView)
+            JE::Render::RPI::RenderPipeline* renderPipeline,
+            [[maybe_unused]] JE::Render::RPI::PipelineViewTag viewTag,
+            JE::Render::RPI::ViewPtr newView,
+            JE::Render::RPI::ViewPtr previousView)
         {
             Render::LightCommon::CacheCPUCulledPipelineInfo(renderPipeline, newView, previousView, m_cpuCulledPipelinesPerView);
         }
 
-        void SimplePointLightFeatureProcessor::CullLights(const RPI::ViewPtr& view)
+        void SimplePointLightFeatureProcessor::CullLights(const JE::Render::RPI::ViewPtr& view)
         {
-            if (!AZ::RHI::CheckBitsAll(view->GetUsageFlags(), RPI::View::UsageFlags::UsageCamera) ||
+            if (!AZ::RHI::CheckBitsAll(view->GetUsageFlags(), JE::Render::RPI::View::UsageFlags::UsageCamera) ||
                 !Render::LightCommon::NeedsCPUCulling(view, m_cpuCulledPipelinesPerView))
             {
                 return;

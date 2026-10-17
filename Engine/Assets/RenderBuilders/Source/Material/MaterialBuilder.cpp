@@ -10,9 +10,9 @@
 #include "MaterialTypeBuilder.h"
 #include <Material/MaterialBuilderUtils.h>
 
-#include <Atom/RPI.Edit/Material/MaterialUtils.h>
-#include <Atom/RPI.Edit/Common/AssetUtils.h>
-#include <Atom/RPI.Edit/Common/JsonUtils.h>
+#include <JE/Editor/Render/RPI/Edit/Material/MaterialUtils.h>
+#include <JE/Editor/Render/RPI/Edit/Common/AssetUtils.h>
+#include <JE/Editor/Render/RPI/Edit/Common/JsonUtils.h>
 #include <AzCore/Serialization/Json/JsonUtils.h>
 #include <AssetBuilderSDK/SerializationDependencies.h>
 #include <AzCore/Settings/SettingsRegistry.h>
@@ -82,7 +82,7 @@ namespace JE::Assets::RenderBuilders
 
         // Rather than just reading the JSON document, we read the material source data structure because we need access
         // to material type, parent material, and all of the properties to enumerate images and other dependencies.
-        const auto materialSourceDataOutcome = AZ::RPI::MaterialUtils::LoadMaterialSourceData(materialSourcePath);
+        const auto materialSourceDataOutcome = JE::Render::RPI::MaterialUtils::LoadMaterialSourceData(materialSourcePath);
         if (!materialSourceDataOutcome)
         {
             AZ_Error(MaterialBuilderName, false, "Failed to load material source data: %s", materialSourcePath.c_str());
@@ -98,7 +98,7 @@ namespace JE::Assets::RenderBuilders
             // Register dependency on the parent material source file so we can load and use its data to build this material.
             MaterialBuilderUtils::AddJobDependency(
                 outputJobDescriptor,
-                AZ::RPI::AssetUtils::ResolvePathReference(materialSourcePath, materialSourceData.m_parentMaterial),
+                JE::Render::RPI::AssetUtils::ResolvePathReference(materialSourcePath, materialSourceData.m_parentMaterial),
                 JobKey,
                 {},
                 { 0 });
@@ -114,8 +114,8 @@ namespace JE::Assets::RenderBuilders
         {
             // We usually won't load file during CreateJob since we want to keep the function fast. But here we have to load the
             // material type data to find the exact material type format so we could create an accurate source dependency.
-            const auto materialResolvedPath = AZ::RPI::AssetUtils::ResolvePathReference(materialSourcePath, materialSourceData.m_materialType);
-            const auto resolvedMaterialTypePath = AZ::RPI::MaterialUtils::PredictOriginalMaterialTypeSourcePath(materialResolvedPath);
+            const auto materialResolvedPath = JE::Render::RPI::AssetUtils::ResolvePathReference(materialSourcePath, materialSourceData.m_materialType);
+            const auto resolvedMaterialTypePath = JE::Render::RPI::MaterialUtils::PredictOriginalMaterialTypeSourcePath(materialResolvedPath);
 
             AZ_Warning(
                 MaterialBuilderName,
@@ -123,7 +123,7 @@ namespace JE::Assets::RenderBuilders
                 "Material type is referencing an asset in the intermediate or cache folder. Please update it with the proper path %s",
                 resolvedMaterialTypePath.c_str());
 
-            const auto& materialTypeSourceDataOutcome = AZ::RPI::MaterialUtils::LoadMaterialTypeSourceData(resolvedMaterialTypePath);
+            const auto& materialTypeSourceDataOutcome = JE::Render::RPI::MaterialUtils::LoadMaterialTypeSourceData(resolvedMaterialTypePath);
             if (!materialTypeSourceDataOutcome)
             {
                 AZ_Error(MaterialBuilderName, false, "Failed to load material type source data: %s", resolvedMaterialTypePath.c_str());
@@ -131,16 +131,16 @@ namespace JE::Assets::RenderBuilders
             }
 
             const auto& materialTypeSourceData = materialTypeSourceDataOutcome.GetValue();
-            const AZ::RPI::MaterialTypeSourceData::Format materialTypeFormat = materialTypeSourceData.GetFormat();
+            const JE::Render::RPI::MaterialTypeSourceData::Format materialTypeFormat = materialTypeSourceData.GetFormat();
 
             // If the material uses the "Direct" format, then there will need to be a dependency on that file. If it uses the "Abstract"
             // format, then there will be an intermediate .materialtype and there needs to be a dependency on that file instead.
-            if (materialTypeFormat == AZ::RPI::MaterialTypeSourceData::Format::Direct)
+            if (materialTypeFormat == JE::Render::RPI::MaterialTypeSourceData::Format::Direct)
             {
                 MaterialBuilderUtils::AddJobDependency(
                     outputJobDescriptor, resolvedMaterialTypePath, MaterialTypeBuilder::FinalStageJobKey, {}, { 0 }, false);
             }
-            else if (materialTypeFormat == AZ::RPI::MaterialTypeSourceData::Format::Abstract)
+            else if (materialTypeFormat == JE::Render::RPI::MaterialTypeSourceData::Format::Abstract)
             {
                 // Create a dependency on the abstract, pipeline, version of the material type and its products. The pipeline based
                 // material type builder uses the 'common' asset platform ID because it produces immediate assets. The sub ID filter
@@ -157,7 +157,7 @@ namespace JE::Assets::RenderBuilders
                 // attempts to predict where that source asset will be located in the intermediate asset folder then maps it as a
                 // product dependency if it exists or a source dependency if it is to be created in the future.
                 const auto& intermediateMaterialTypePath =
-                    AZ::RPI::MaterialUtils::PredictIntermediateMaterialTypeSourcePath(resolvedMaterialTypePath);
+                    JE::Render::RPI::MaterialUtils::PredictIntermediateMaterialTypeSourcePath(resolvedMaterialTypePath);
                 if (!intermediateMaterialTypePath.empty())
                 {
                     // Add the ordered product dependency for the intermediate material type source file so that the material cannot be
@@ -213,7 +213,7 @@ namespace JE::Assets::RenderBuilders
         AzFramework::StringFunc::Path::ConstructFull(
             request.m_watchFolder.c_str(), request.m_sourceFile.c_str(), materialSourcePath, true);
 
-        const auto& materialSourceDataOutcome = AZ::RPI::MaterialUtils::LoadMaterialSourceData(materialSourcePath);
+        const auto& materialSourceDataOutcome = JE::Render::RPI::MaterialUtils::LoadMaterialSourceData(materialSourcePath);
         if (!materialSourceDataOutcome)
         {
             AZ_Error(MaterialBuilderName, false, "Failed to load material source data: %s", materialSourcePath.c_str());
@@ -246,7 +246,7 @@ namespace JE::Assets::RenderBuilders
         // "bed_frame.001", and calling ReplaceExtension would result in "bed_frame.azmaterial" and we'd lose
         // the original material name. Instead, by using the append operator, the fileName results in "bed_frame.001.azmaterial".
         fileName += ".";
-        fileName += AZ::RPI::MaterialAsset::Extension;
+        fileName += JE::Render::RPI::MaterialAsset::Extension;
         AzFramework::StringFunc::Path::ConstructFull(request.m_tempDirPath.c_str(), fileName.c_str(), materialProductPath, true);
 
         if (!AZ::Utils::SaveObjectToFile(materialProductPath, AZ::DataStream::ST_BINARY, materialAsset.Get()))
@@ -257,7 +257,7 @@ namespace JE::Assets::RenderBuilders
 
         AssetBuilderSDK::JobProduct jobProduct;
         if (!AssetBuilderSDK::OutputObject(
-                materialAsset.Get(), materialProductPath, azrtti_typeid<AZ::RPI::MaterialAsset>(), 0, jobProduct))
+                materialAsset.Get(), materialProductPath, azrtti_typeid<JE::Render::RPI::MaterialAsset>(), 0, jobProduct))
         {
             AZ_Error(MaterialBuilderName, false, "Failed to output product dependencies.");
             return;

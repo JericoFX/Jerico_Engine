@@ -12,12 +12,12 @@
 #include <Atom/Feature/Mesh/MeshInfo.h>
 #include <Atom/Feature/TransformService/TransformServiceFeatureProcessorInterface.h>
 #include <Atom/RHI/DispatchItem.h>
-#include <Atom/RPI.Public/Buffer/RingBuffer.h>
-#include <Atom/RPI.Public/Culling.h>
-#include <Atom/RPI.Public/FeatureProcessor.h>
-#include <Atom/RPI.Public/MeshDrawPacket.h>
-#include <Atom/RPI.Public/Model/Model.h>
-#include <Atom/RPI.Reflect/Model/ModelAsset.h>
+#include <JE/Render/RPI/Public/Buffer/RingBuffer.h>
+#include <JE/Render/RPI/Public/Culling.h>
+#include <JE/Render/RPI/Public/FeatureProcessor.h>
+#include <JE/Render/RPI/Public/MeshDrawPacket.h>
+#include <JE/Render/RPI/Public/Model/Model.h>
+#include <JE/Render/RPI/Reflect/Model/ModelAsset.h>
 #include <Atom/Utils/StableDynamicArray.h>
 #include <AzCore/EBus/Event.h>
 #include <AzCore/Outcome/Outcome.h>
@@ -78,8 +78,8 @@ namespace AZ
         //! mapping reassignments
         struct CustomMaterialInfo
         {
-            Data::Instance<RPI::Material> m_material;
-            RPI::MaterialModelUvOverrideMap m_uvMapping;
+            Data::Instance<JE::Render::RPI::Material> m_material;
+            JE::Render::RPI::MaterialModelUvOverrideMap m_uvMapping;
         };
 
         //! Mesh feature processor data types for customizing model materials
@@ -101,12 +101,12 @@ namespace AZ
             virtual ~ModelDataInstanceInterface() = default;
 
             virtual const TransformServiceFeatureProcessorInterface::ObjectId GetObjectId() const = 0;
-            virtual const Data::Instance<RPI::Model>& GetModel() = 0;
+            virtual const Data::Instance<JE::Render::RPI::Model>& GetModel() = 0;
 
             //! If this is a skinned mesh, ProductModelAssetId is the asset-id of the original, non-animated asset.
             //! Returns a invalid Asset for non-skinned meshes.
-            virtual const Data::Asset<RPI::ModelAsset>& GetProductModelAsset() = 0;
-            virtual const RPI::Cullable& GetCullable() = 0;
+            virtual const Data::Asset<JE::Render::RPI::ModelAsset>& GetProductModelAsset() = 0;
+            virtual const JE::Render::RPI::Cullable& GetCullable() = 0;
 
             virtual const uint32_t GetLightingChannelMask() = 0;
             virtual MeshInfoHandle GetMeshInfoHandle(size_t modelLodIndex, size_t meshIndex) const = 0;
@@ -128,12 +128,12 @@ namespace AZ
             virtual const AZ::Uuid& GetRayTracingUuid() const = 0;
 
             //! Internally called when a DrawPacket used by this ModelDataInstance was updated.
-            virtual void HandleDrawPacketUpdate(uint32_t lodIndex, uint32_t meshIndex, RPI::MeshDrawPacket& meshDrawPacket) = 0;
+            virtual void HandleDrawPacketUpdate(uint32_t lodIndex, uint32_t meshIndex, JE::Render::RPI::MeshDrawPacket& meshDrawPacket) = 0;
 
             //! Event that let's us know whenever one of the MeshDrawPackets has been updated.
             //! This event can occur on multiple threads.
             //! Provides the ModelDataInstance parent object that owns the MeshDrawPacket.
-            using MeshDrawPacketUpdatedEvent = Event<const ModelDataInstanceInterface&, uint32_t /*lodIndex*/, uint32_t /*meshIndex*/, const AZ::RPI::MeshDrawPacket&>;
+            using MeshDrawPacketUpdatedEvent = Event<const ModelDataInstanceInterface&, uint32_t /*lodIndex*/, uint32_t /*meshIndex*/, const JE::Render::RPI::MeshDrawPacket&>;
             //! Connects @handler to the MeshDrawPacketUpdatedEvent.
             //! One of the most common reasons a MeshDrawPacket gets updated is
             //! when a RenderPipeline is instantiated at runtime and it happens to contain
@@ -153,34 +153,34 @@ namespace AZ
         //! Settings to apply to a mesh handle when acquiring it for the first time
         struct MeshHandleDescriptor
         {
-            using RequiresCloneCallback = AZStd::function<bool(const Data::Asset<RPI::ModelAsset>& modelAsset)>;
-            using ModelChangedEvent = Event<const Data::Instance<RPI::Model>&>;
-            using ObjectSrgCreatedEvent = Event<const Data::Instance<RPI::ShaderResourceGroup>&>;
+            using RequiresCloneCallback = AZStd::function<bool(const Data::Asset<JE::Render::RPI::ModelAsset>& modelAsset)>;
+            using ModelChangedEvent = Event<const Data::Instance<JE::Render::RPI::Model>&>;
+            using ObjectSrgCreatedEvent = Event<const Data::Instance<JE::Render::RPI::ShaderResourceGroup>&>;
 
             MeshHandleDescriptor() = default;
 
-            MeshHandleDescriptor(const Data::Asset<RPI::ModelAsset>& modelAsset)
+            MeshHandleDescriptor(const Data::Asset<JE::Render::RPI::ModelAsset>& modelAsset)
                 : m_modelAsset(modelAsset)
             {
             }
 
-            MeshHandleDescriptor(const Data::Asset<RPI::ModelAsset>& modelAsset, const CustomMaterialMap& customMaterials)
+            MeshHandleDescriptor(const Data::Asset<JE::Render::RPI::ModelAsset>& modelAsset, const CustomMaterialMap& customMaterials)
                 : m_modelAsset(modelAsset)
                 , m_customMaterials(customMaterials)
             {
             }
 
-            MeshHandleDescriptor(const Data::Asset<RPI::ModelAsset>& modelAsset, const Data::Instance<RPI::Material>& material)
+            MeshHandleDescriptor(const Data::Asset<JE::Render::RPI::ModelAsset>& modelAsset, const Data::Instance<JE::Render::RPI::Material>& material)
                 : m_modelAsset(modelAsset)
                 , m_customMaterials({ { AZ::Render::DefaultCustomMaterialId, { material, {} } } })
             {
             }
 
             AZ::EntityId m_entityId{ AZ::EntityId::InvalidEntityId };
-            Data::Asset<RPI::ModelAsset> m_modelAsset;
+            Data::Asset<JE::Render::RPI::ModelAsset> m_modelAsset;
             // If the mesh is a skinned mesh, the m_productModelAsset refers to the original, non-animated mesh asset.
             // Otherwhise this is empty.
-            Data::Asset<RPI::ModelAsset> m_productModelAsset;
+            Data::Asset<JE::Render::RPI::ModelAsset> m_productModelAsset;
             bool m_isRayTracingEnabled = true;
             bool m_useForwardPassIblSpecular = false;
             bool m_isAlwaysDynamic = false;
@@ -193,10 +193,10 @@ namespace AZ
             RequiresCloneCallback m_requiresCloneCallback{};
 
             //! Connects to an event that gets triggered whenever the model is changed, loaded, or reloaded.
-            ModelChangedEvent::Handler m_modelChangedEventHandler{ [](const Data::Instance<RPI::Model>&){} };
+            ModelChangedEvent::Handler m_modelChangedEventHandler{ [](const Data::Instance<JE::Render::RPI::Model>&){} };
 
             //! Connects to an event that triggers whenever the ObjectSrg is created.
-            ObjectSrgCreatedEvent::Handler m_objectSrgCreatedHandler{ [](const Data::Instance<RPI::ShaderResourceGroup>&){} };
+            ObjectSrgCreatedEvent::Handler m_objectSrgCreatedHandler{ [](const Data::Instance<JE::Render::RPI::ShaderResourceGroup>&){} };
         };
 
         //! Helper structure used to create a DispatchItem from a DrawItem.
@@ -217,10 +217,10 @@ namespace AZ
 
         //! MeshFeatureProcessorInterface provides an interface to acquire and release a MeshHandle from the underlying
         //! MeshFeatureProcessor
-        class MeshFeatureProcessorInterface : public RPI::FeatureProcessor
+        class MeshFeatureProcessorInterface : public JE::Render::RPI::FeatureProcessor
         {
         public:
-            AZ_RTTI(AZ::Render::MeshFeatureProcessorInterface, "{975D7F0C-2E7E-4819-94D0-D3C4E2024721}", AZ::RPI::FeatureProcessor);
+            AZ_RTTI(AZ::Render::MeshFeatureProcessorInterface, "{975D7F0C-2E7E-4819-94D0-D3C4E2024721}", JE::Render::RPI::FeatureProcessor);
 
             using MeshHandle = StableDynamicArrayHandle<ModelDataInstanceInterface>;
 
@@ -235,13 +235,13 @@ namespace AZ
             virtual MeshHandle CloneMesh(const MeshHandle& meshHandle) = 0;
 
             //! Gets the underlying RPI::Model instance for a meshHandle. May be null if the model has not loaded.
-            virtual Data::Instance<RPI::Model> GetModel(const MeshHandle& meshHandle) const = 0;
+            virtual Data::Instance<JE::Render::RPI::Model> GetModel(const MeshHandle& meshHandle) const = 0;
             //! Gets the underlying RPI::ModelAsset for a meshHandle.
-            virtual Data::Asset<RPI::ModelAsset> GetModelAsset(const MeshHandle& meshHandle) const = 0;
+            virtual Data::Asset<JE::Render::RPI::ModelAsset> GetModelAsset(const MeshHandle& meshHandle) const = 0;
 
             //! This function provides insight into what materials, shaders, etc. are actively being used to render the model.
             //! Useful for custom feature processors that work in tandem with the MeshFeatureProcessor.
-            virtual const RPI::MeshDrawPacketLods& GetDrawPackets(const MeshHandle& meshHandle) const = 0;
+            virtual const JE::Render::RPI::MeshDrawPacketLods& GetDrawPackets(const MeshHandle& meshHandle) const = 0;
 
             //! Gets the ObjectSrgs for a meshHandle.
             //! Updating the ObjectSrgs should be followed by a call to QueueObjectSrgForCompile,
@@ -250,12 +250,12 @@ namespace AZ
             //! Simulate, or it will create a race between updating the data and the call to Compile
             //! Cases where there may be multiple ObjectSrgs: if a model has multiple submeshes and those submeshes use different
             //! materials with different object SRGs.
-            virtual const AZStd::vector<Data::Instance<RPI::ShaderResourceGroup>>& GetObjectSrgs(const MeshHandle& meshHandle) const = 0;
+            virtual const AZStd::vector<Data::Instance<JE::Render::RPI::ShaderResourceGroup>>& GetObjectSrgs(const MeshHandle& meshHandle) const = 0;
             //! Queues the object srg for compile.
             virtual void QueueObjectSrgForCompile(const MeshHandle& meshHandle) const = 0;
             //! Sets the CustomMaterialMap for a meshHandle, using just a single material for the DefaultCustomMaterialId.
             //! Note if there is already a CustomMaterialMap, this will replace the entire map with just a single material.
-            virtual void SetCustomMaterials(const MeshHandle& meshHandle, const Data::Instance<RPI::Material>& material) = 0;
+            virtual void SetCustomMaterials(const MeshHandle& meshHandle, const Data::Instance<JE::Render::RPI::Material>& material) = 0;
             //! Sets the CustomMaterialMap for a meshHandle.
             virtual void SetCustomMaterials(const MeshHandle& meshHandle, const CustomMaterialMap& materials) = 0;
             //! Gets the CustomMaterialMap for a meshHandle.
@@ -283,9 +283,9 @@ namespace AZ
             //! Gets the lighting channel mask for a given mesh handle.
             virtual uint32_t GetLightingChannelMask(const MeshHandle& meshHandle) const = 0;
             //! Sets LOD mesh configurations to be used in the Mesh Feature Processor
-            virtual void SetMeshLodConfiguration(const MeshHandle& meshHandle, const RPI::Cullable::LodConfiguration& meshLodConfig) = 0;
+            virtual void SetMeshLodConfiguration(const MeshHandle& meshHandle, const JE::Render::RPI::Cullable::LodConfiguration& meshLodConfig) = 0;
             //! Gets the LOD mesh configurations being used in the Mesh Feature Processor
-            virtual RPI::Cullable::LodConfiguration GetMeshLodConfiguration(const MeshHandle& meshHandle) const = 0;
+            virtual JE::Render::RPI::Cullable::LodConfiguration GetMeshLodConfiguration(const MeshHandle& meshHandle) const = 0;
             //! Sets the option to exclude this mesh from baked reflection probe cubemaps
             virtual void SetExcludeFromReflectionCubeMaps(const MeshHandle& meshHandle, bool excludeFromReflectionCubeMaps) = 0;
             //! Gets the if this mesh is excluded from baked reflection probe cubemaps
@@ -335,19 +335,19 @@ namespace AZ
             //! Returns the DrawSrg from the first DrawItem that matches @drawListTag
             //! and its material pipeline matches @materialPipelineMask.
             //! The search is done only within the DrawItems of the subMesh identifiable by the tuple (@meshHandle, @lodIndex, @subMeshIndex). 
-            virtual const Data::Instance<RPI::ShaderResourceGroup>& GetDrawSrg(const MeshHandle& meshHandle, uint32_t lodIndex, uint32_t subMeshIndex,
+            virtual const Data::Instance<JE::Render::RPI::ShaderResourceGroup>& GetDrawSrg(const MeshHandle& meshHandle, uint32_t lodIndex, uint32_t subMeshIndex,
                 RHI::DrawListTag drawListTag, RHI::DrawFilterMask materialPipelineMask) const = 0;
 
             virtual const RHI::Ptr<MeshInfoEntry> GetMeshInfoEntry(const MeshInfoHandle handle) = 0;
             virtual MeshInfoHandle AcquireMeshInfoEntry() = 0;
             virtual void ReleaseMeshInfoEntry(const MeshInfoHandle handle) = 0;
             virtual void UpdateMeshInfoEntry(const MeshInfoHandle handle, AZStd::function<bool(MeshInfoEntry*)> updateFunction) = 0;
-            virtual const Data::Instance<RPI::Buffer>& GetMeshInfoBuffer() const = 0;
+            virtual const Data::Instance<JE::Render::RPI::Buffer>& GetMeshInfoBuffer() const = 0;
 
             virtual const RHI::Ptr<FallbackPBR::MaterialEntry> GetFallbackPBRMaterialEntry(const MeshInfoHandle handle) = 0;
             virtual void UpdateFallbackPBRMaterialEntry(
                 const MeshInfoHandle handle, AZStd::function<bool(FallbackPBR::MaterialEntry*)> updateFunction) = 0;
-            virtual const Data::Instance<RPI::Buffer>& GetFallbackPBRMaterialBuffer() const = 0;
+            virtual const Data::Instance<JE::Render::RPI::Buffer>& GetFallbackPBRMaterialBuffer() const = 0;
         };
     } // namespace Render
 } // namespace AZ

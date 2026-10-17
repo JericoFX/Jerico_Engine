@@ -10,9 +10,9 @@
 #include <Pass/State/FocusedEntityState.h>
 #include <Pass/State/SelectedEntityState.h>
 
-#include <Atom/RPI.Public/Pass/PassFilter.h>
-#include <Atom/RPI.Public/RenderPipeline.h>
-#include <Atom/RPI.Reflect/Asset/AssetUtils.h>
+#include <JE/Render/RPI/Public/Pass/PassFilter.h>
+#include <JE/Render/RPI/Public/RenderPipeline.h>
+#include <JE/Render/RPI/Reflect/Asset/AssetUtils.h>
 #include <Atom/Utils/Utils.h>
 
 namespace AZ
@@ -25,11 +25,11 @@ namespace AZ
         }
 
         // Creates the material for the mask pass shader
-        static Data::Instance<RPI::Material> CreateMaskMaterial()
+        static Data::Instance<JE::Render::RPI::Material> CreateMaskMaterial()
         {
             const AZStd::string path = "shaders/editormodemask.azmaterial";
-            const auto materialAsset = RPI::AssetUtils::LoadCriticalAsset<RPI::MaterialAsset>(path);
-            const auto maskMaterial = RPI::Material::FindOrCreate(materialAsset);
+            const auto materialAsset = JE::Render::RPI::AssetUtils::LoadCriticalAsset<JE::Render::RPI::MaterialAsset>(path);
+            const auto maskMaterial = JE::Render::RPI::Material::FindOrCreate(materialAsset);
             return maskMaterial;
         }
 
@@ -38,7 +38,7 @@ namespace AZ
             if (auto* serializeContext = azrtti_cast<SerializeContext*>(context))
             {
                 serializeContext
-                    ->Class<EditorModeFeatureProcessor, RPI::FeatureProcessor>()
+                    ->Class<EditorModeFeatureProcessor, JE::Render::RPI::FeatureProcessor>()
                     ->Version(1);
             }
         }
@@ -61,26 +61,26 @@ namespace AZ
             DisableSceneNotification();
         }
 
-        void EditorModeFeatureProcessor::OnRenderPipelineChanged(RPI::RenderPipeline* renderPipeline,
-            RPI::SceneNotification::RenderPipelineChangeType changeType)
+        void EditorModeFeatureProcessor::OnRenderPipelineChanged(JE::Render::RPI::RenderPipeline* renderPipeline,
+            JE::Render::RPI::SceneNotification::RenderPipelineChangeType changeType)
         {
             if (!m_editorStatePassSystem)
             {
                 return;
             }
 
-            if (changeType == RPI::SceneNotification::RenderPipelineChangeType::Added
-                || changeType == RPI::SceneNotification::RenderPipelineChangeType::PassChanged)
+            if (changeType == JE::Render::RPI::SceneNotification::RenderPipelineChangeType::Added
+                || changeType == JE::Render::RPI::SceneNotification::RenderPipelineChangeType::PassChanged)
             {
                 m_editorStatePassSystem->ConfigureStatePassesForPipeline(renderPipeline);
             }
-            else if (changeType == RPI::SceneNotification::RenderPipelineChangeType::Removed)
+            else if (changeType == JE::Render::RPI::SceneNotification::RenderPipelineChangeType::Removed)
             {
                 m_editorStatePassSystem->RemoveStatePassesForPipeline(renderPipeline);
             }
         }
 
-        void EditorModeFeatureProcessor::AddRenderPasses(RPI::RenderPipeline* renderPipeline)
+        void EditorModeFeatureProcessor::AddRenderPasses(JE::Render::RPI::RenderPipeline* renderPipeline)
         {
             if (!m_editorStatePassSystem)
             {
@@ -153,11 +153,11 @@ namespace AZ
 
             const auto templateName = Name(m_editorStatePassSystem->GetParentPassTemplateName());
 
-            auto passFilter = AZ::RPI::PassFilter::CreateWithTemplateName(templateName, GetParentScene());
-            AZ::RPI::PassSystemInterface::Get()->ForEachPass(passFilter,  [enableRender](RPI::Pass* pass) -> RPI::PassFilterExecutionFlow
+            auto passFilter = JE::Render::RPI::PassFilter::CreateWithTemplateName(templateName, GetParentScene());
+            JE::Render::RPI::PassSystemInterface::Get()->ForEachPass(passFilter,  [enableRender](JE::Render::RPI::Pass* pass) -> JE::Render::RPI::PassFilterExecutionFlow
                 {
                     pass->SetEnabled(enableRender);
-                    return RPI::PassFilterExecutionFlow::ContinueVisitingPasses;
+                    return JE::Render::RPI::PassFilterExecutionFlow::ContinueVisitingPasses;
                 });
         }
     } // namespace Render

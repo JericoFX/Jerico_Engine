@@ -8,7 +8,7 @@
 
 #include <SkyBox/PhysicalSkyComponentController.h>
 #include <AzCore/RTTI/BehaviorContext.h>
-#include <Atom/RPI.Public/Scene.h>
+#include <JE/Render/RPI/Public/Scene.h>
 
 namespace AZ
 {
@@ -70,7 +70,7 @@ namespace AZ
 
         void PhysicalSkyComponentController::Activate(EntityId entityId)
         {
-            m_featureProcessorInterface = RPI::Scene::GetFeatureProcessorForEntity<SkyBoxFeatureProcessorInterface>(entityId);
+            m_featureProcessorInterface = JE::Render::RPI::Scene::GetFeatureProcessorForEntity<SkyBoxFeatureProcessorInterface>(entityId);
 
             // only activate if there is no other skybox activate
             if (!m_featureProcessorInterface->IsEnabled())

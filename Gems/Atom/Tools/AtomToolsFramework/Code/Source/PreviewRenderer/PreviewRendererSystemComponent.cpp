@@ -10,7 +10,7 @@
 #include <AzCore/Serialization/EditContextConstants.inl>
 #include <AzCore/Serialization/SerializeContext.h>
 #include <PreviewRenderer/PreviewRendererSystemComponent.h>
-#include <Atom/RPI.Public/RPISystemInterface.h>
+#include <JE/Render/RPI/Public/RPISystemInterface.h>
 #include <AzFramework/Translation/TranslationDef.h>
 
 namespace AtomToolsFramework
@@ -74,7 +74,7 @@ namespace AtomToolsFramework
     void PreviewRendererSystemComponent::OnSystemTick()
     {
         // Do not create the preview reader until the RPI has been initialized
-        if (AZ::RPI::RPISystemInterface::Get() && AZ::RPI::RPISystemInterface::Get()->IsInitialized())
+        if (JE::Render::RPI::RPISystemInterface::Get() && JE::Render::RPI::RPISystemInterface::Get()->IsInitialized())
         {
             if (!m_previewRenderer)
             {

@@ -56,9 +56,9 @@
 #include <MathConversion.h>
 
 #include <Atom/ImageProcessing/ImageProcessingDefines.h>
-#include <Atom/RPI.Public/ViewportContext.h>
-#include <Atom/RPI.Public/ViewportContextBus.h>
-#include <Atom/RPI.Reflect/Image/StreamingImageAsset.h>
+#include <JE/Render/RPI/Public/ViewportContext.h>
+#include <JE/Render/RPI/Public/ViewportContextBus.h>
+#include <JE/Render/RPI/Reflect/Image/StreamingImageAsset.h>
 #include <AtomToolsFramework/Viewport/ModularViewportCameraControllerRequestBus.h>
 
 #include "UI/QComponentEntityEditorMainWindow.h"
@@ -638,7 +638,7 @@ void SandboxIntegrationManager::GoToEntitiesInViewports(const AzToolsFramework::
     AZ::Vector3 center;
     aabb.GetAsSphere(center, radius);
 
-    auto viewportContextManager = AZ::Interface<AZ::RPI::ViewportContextRequestsInterface>::Get();
+    auto viewportContextManager = AZ::Interface<JE::Render::RPI::ViewportContextRequestsInterface>::Get();
     const int viewCount = GetIEditor()->GetViewManager()->GetViewCount(); // legacy call
     for (int viewIndex = 0; viewIndex < viewCount; ++viewIndex)
     {
@@ -816,7 +816,7 @@ AZStd::string SandboxIntegrationManager::GetComponentIconPath(const AZ::Uuid& co
                     }
                     if (supportedStreamingImage)
                     {
-                        iconPath = AZStd::string::format("%s.%s", iconPath.c_str(), AZ::RPI::StreamingImageAsset::Extension);
+                        iconPath = AZStd::string::format("%s.%s", iconPath.c_str(), JE::Render::RPI::StreamingImageAsset::Extension);
 
                         AssetSysReqBus::BroadcastResult(
                             pathFound, &AssetSysReqBus::Events::GetFullSourcePathFromRelativeProductPath,

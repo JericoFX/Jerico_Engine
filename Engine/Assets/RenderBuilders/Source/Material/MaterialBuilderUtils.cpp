@@ -7,12 +7,12 @@
  */
 
 #include "MaterialBuilderUtils.h"
-#include <Atom/RPI.Edit/Common/AssetUtils.h>
-#include <Atom/RPI.Edit/Material/MaterialSourceData.h>
-#include <Atom/RPI.Edit/Material/MaterialTypeSourceData.h>
-#include <Atom/RPI.Reflect/Image/StreamingImageAsset.h>
-#include <Atom/RPI.Reflect/Material/MaterialAsset.h>
-#include <Atom/RPI.Reflect/Material/MaterialTypeAsset.h>
+#include <JE/Editor/Render/RPI/Edit/Common/AssetUtils.h>
+#include <JE/Editor/Render/RPI/Edit/Material/MaterialSourceData.h>
+#include <JE/Editor/Render/RPI/Edit/Material/MaterialTypeSourceData.h>
+#include <JE/Render/RPI/Reflect/Image/StreamingImageAsset.h>
+#include <JE/Render/RPI/Reflect/Material/MaterialAsset.h>
+#include <JE/Render/RPI/Reflect/Material/MaterialTypeAsset.h>
 #include <AzCore/Settings/SettingsRegistry.h>
 #include <AzToolsFramework/API/EditorAssetSystemAPI.h>
 
@@ -42,8 +42,8 @@ namespace JE::Assets::RenderBuilders::MaterialBuilderUtils
     }
 
     void AddImageAssetDependenciesToProduct(
-        const AZ::RPI::MaterialPropertiesLayout* propertyLayout,
-        const AZStd::vector<AZ::RPI::MaterialPropertyValue>& propertyValues,
+        const JE::Render::RPI::MaterialPropertiesLayout* propertyLayout,
+        const AZStd::vector<JE::Render::RPI::MaterialPropertyValue>& propertyValues,
         AssetBuilderSDK::JobProduct& product)
     {
         if (!propertyLayout)
@@ -53,9 +53,9 @@ namespace JE::Assets::RenderBuilders::MaterialBuilderUtils
 
         for (size_t propertyIndex = 0; propertyIndex < propertyLayout->GetPropertyCount(); ++propertyIndex)
         {
-            const AZ::RPI::MaterialPropertyDescriptor* descriptor = propertyLayout->GetPropertyDescriptor(AZ::RPI::MaterialPropertyIndex{ propertyIndex });
+            const JE::Render::RPI::MaterialPropertyDescriptor* descriptor = propertyLayout->GetPropertyDescriptor(JE::Render::RPI::MaterialPropertyIndex{ propertyIndex });
 
-            if ((!descriptor) || (descriptor->GetDataType() != AZ::RPI::MaterialPropertyDataType::Image))
+            if ((!descriptor) || (descriptor->GetDataType() != JE::Render::RPI::MaterialPropertyDataType::Image))
             {
                 continue;
             }
@@ -67,14 +67,14 @@ namespace JE::Assets::RenderBuilders::MaterialBuilderUtils
                 continue;
             }
 
-            const AZ::RPI::MaterialPropertyValue& propertyValue = propertyValues[propertyIndex];
+            const JE::Render::RPI::MaterialPropertyValue& propertyValue = propertyValues[propertyIndex];
             if (!propertyValue.IsValid())
             {
                 // its okay for a property value not to be assigned an actual value, ie, an empty image assignment.
                 continue;
             }
 
-            AZ::Data::Asset<AZ::RPI::ImageAsset> imageAsset = propertyValue.GetValue<AZ::Data::Asset<AZ::RPI::ImageAsset>>();
+            AZ::Data::Asset<JE::Render::RPI::ImageAsset> imageAsset = propertyValue.GetValue<AZ::Data::Asset<JE::Render::RPI::ImageAsset>>();
             if (imageAsset.GetId().IsValid())
             {
                 // preload images (set to NoLoad to avoid this)
@@ -84,7 +84,7 @@ namespace JE::Assets::RenderBuilders::MaterialBuilderUtils
         }
     }
 
-    void AddImageAssetDependenciesToProduct(const AZ::RPI::MaterialAsset* materialAsset, AssetBuilderSDK::JobProduct& product)
+    void AddImageAssetDependenciesToProduct(const JE::Render::RPI::MaterialAsset* materialAsset, AssetBuilderSDK::JobProduct& product)
     {
         if (!materialAsset)
         {
@@ -95,7 +95,7 @@ namespace JE::Assets::RenderBuilders::MaterialBuilderUtils
 
     }
 
-    void AddImageAssetDependenciesToProduct(const AZ::RPI::MaterialTypeAsset* materialTypeAsset, AssetBuilderSDK::JobProduct& product)
+    void AddImageAssetDependenciesToProduct(const JE::Render::RPI::MaterialTypeAsset* materialTypeAsset, AssetBuilderSDK::JobProduct& product)
     {
         if (!materialTypeAsset)
         {

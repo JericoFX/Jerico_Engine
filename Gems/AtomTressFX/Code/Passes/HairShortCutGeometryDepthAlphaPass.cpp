@@ -6,9 +6,9 @@
  *
  */
 
-#include <Atom/RPI.Reflect/Pass/RasterPassData.h>
-#include <Atom/RPI.Reflect/Pass/PassTemplate.h>
-#include <Atom/RPI.Reflect/Shader/ShaderAsset.h>
+#include <JE/Render/RPI/Reflect/Pass/RasterPassData.h>
+#include <JE/Render/RPI/Reflect/Pass/PassTemplate.h>
+#include <JE/Render/RPI/Reflect/Shader/ShaderAsset.h>
 
 #include <Passes/HairShortCutGeometryDepthAlphaPass.h>
 #include <Rendering/HairRenderObject.h>
@@ -21,15 +21,15 @@ namespace AZ
         namespace Hair
         {
 
-            HairShortCutGeometryDepthAlphaPass::HairShortCutGeometryDepthAlphaPass(const RPI::PassDescriptor& descriptor)
+            HairShortCutGeometryDepthAlphaPass::HairShortCutGeometryDepthAlphaPass(const JE::Render::RPI::PassDescriptor& descriptor)
                 : HairGeometryRasterPass(descriptor)
             {
                 SetShaderPath("Shaders/hairshortcutgeometrydepthalpha.azshader");  
             }
 
-            RPI::Ptr<HairShortCutGeometryDepthAlphaPass> HairShortCutGeometryDepthAlphaPass::Create(const RPI::PassDescriptor& descriptor)
+            JE::Render::RPI::Ptr<HairShortCutGeometryDepthAlphaPass> HairShortCutGeometryDepthAlphaPass::Create(const JE::Render::RPI::PassDescriptor& descriptor)
             {
-                RPI::Ptr<HairShortCutGeometryDepthAlphaPass> pass = aznew HairShortCutGeometryDepthAlphaPass(descriptor);
+                JE::Render::RPI::Ptr<HairShortCutGeometryDepthAlphaPass> pass = aznew HairShortCutGeometryDepthAlphaPass(descriptor);
                 return pass;
             }
 

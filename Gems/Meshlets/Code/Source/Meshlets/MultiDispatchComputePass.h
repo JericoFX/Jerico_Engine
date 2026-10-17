@@ -13,9 +13,9 @@
 #include <Atom/RHI.Reflect/Size.h>
 #include <Atom/RHI/DispatchItem.h>
 
-#include <Atom/RPI.Public/Pass/ComputePass.h>
-#include <Atom/RPI.Public/Shader/Shader.h>
-#include <Atom/RPI.Public/Shader/ShaderResourceGroup.h>
+#include <JE/Render/RPI/Public/Pass/ComputePass.h>
+#include <JE/Render/RPI/Public/Shader/Shader.h>
+#include <JE/Render/RPI/Public/Shader/ShaderResourceGroup.h>
 
 #include <MeshletsRenderObject.h>
 
@@ -31,16 +31,16 @@ namespace AZ
         //! [To Do] - revisit the 'BuildCommandListInternal' method and refactor to handle
         //! 'under the hood' RHI CPU threads that carries the submissions in parallel
         class MultiDispatchComputePass final
-            : public RPI::ComputePass
+            : public JE::Render::RPI::ComputePass
         {
             AZ_RPI_PASS(MultiDispatchComputePass);
 
         public:
-            AZ_RTTI(MultiDispatchComputePass, "{13B3BAC7-0F12-4C23-BD9E-F82A7830195E}", RPI::ComputePass);
+            AZ_RTTI(MultiDispatchComputePass, "{13B3BAC7-0F12-4C23-BD9E-F82A7830195E}", JE::Render::RPI::ComputePass);
             AZ_CLASS_ALLOCATOR(MultiDispatchComputePass, SystemAllocator);
             ~MultiDispatchComputePass() = default;
 
-            static RPI::Ptr<MultiDispatchComputePass> Create(const RPI::PassDescriptor& descriptor);
+            static JE::Render::RPI::Ptr<MultiDispatchComputePass> Create(const JE::Render::RPI::PassDescriptor& descriptor);
 
             //! Thread-safe function for adding the frame's dispatch items
             void AddDispatchItems(AZStd::list<RHI::DispatchItem*>& dispatchItems);
@@ -49,19 +49,19 @@ namespace AZ
             void CompileResources(const RHI::FrameGraphCompileContext& context) override;
 
             //! Returns the shader held by the ComputePass
-            Data::Instance<RPI::Shader> GetShader();
+            Data::Instance<JE::Render::RPI::Shader> GetShader();
 
         protected:
-            MultiDispatchComputePass(const RPI::PassDescriptor& descriptor);
+            MultiDispatchComputePass(const JE::Render::RPI::PassDescriptor& descriptor);
 
             // Overriding methods
             void BuildInternal() override;
             void BuildCommandListInternal(const RHI::FrameGraphExecuteContext& context) override;
 
             // ShaderReloadNotificationBus::Handler overrides...
-            void OnShaderReinitialized(const AZ::RPI::Shader& shader) override;
-            void OnShaderAssetReinitialized(const Data::Asset<AZ::RPI::ShaderAsset>& shaderAsset) override;
-            void OnShaderVariantReinitialized(const AZ::RPI::ShaderVariant& shaderVariant) override;
+            void OnShaderReinitialized(const JE::Render::RPI::Shader& shader) override;
+            void OnShaderAssetReinitialized(const Data::Asset<JE::Render::RPI::ShaderAsset>& shaderAsset) override;
+            void OnShaderVariantReinitialized(const JE::Render::RPI::ShaderVariant& shaderVariant) override;
 
             void BuildShaderAndRenderData();
 

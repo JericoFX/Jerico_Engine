@@ -6,10 +6,10 @@
  *
  */
 
-#include <Atom/RPI.Edit/Common/AssetUtils.h>
-#include <Atom/RPI.Edit/Common/JsonUtils.h>
-#include <Atom/RPI.Reflect/Asset/AssetUtils.h>
-#include <Atom/RPI.Reflect/System/AnyAsset.h>
+#include <JE/Editor/Render/RPI/Edit/Common/AssetUtils.h>
+#include <JE/Editor/Render/RPI/Edit/Common/JsonUtils.h>
+#include <JE/Render/RPI/Reflect/Asset/AssetUtils.h>
+#include <JE/Render/RPI/Reflect/System/AnyAsset.h>
 #include <AzCore/Component/TickBus.h>
 #include <AzCore/RTTI/BehaviorContext.h>
 #include <AzCore/Serialization/EditContext.h>
@@ -124,15 +124,15 @@ namespace OpenParticleSystemEditor
         {
             if (info.m_assetId.IsValid())
             {
-                AZ::Data::Asset<AZ::RPI::AnyAsset> asset = AZ::RPI::AssetUtils::LoadAssetById<AZ::RPI::AnyAsset>(
-                    info.m_assetId, AZ::RPI::AssetUtils::TraceLevel::Warning);
+                AZ::Data::Asset<JE::Render::RPI::AnyAsset> asset = JE::Render::RPI::AssetUtils::LoadAssetById<JE::Render::RPI::AnyAsset>(
+                    info.m_assetId, JE::Render::RPI::AssetUtils::TraceLevel::Warning);
                 if (asset)
                 {
                     const AZ::Render::LightingPreset* preset = asset->GetDataAs<AZ::Render::LightingPreset>();
                     if (preset)
                     {
                         auto presetPtr = AddLightingPreset(*preset);
-                        auto sourcePath = AZ::RPI::AssetUtils::GetSourcePathByAssetId(info.m_assetId);
+                        auto sourcePath = JE::Render::RPI::AssetUtils::GetSourcePathByAssetId(info.m_assetId);
                         const AZStd::string displayName = AtomToolsFramework::GetDisplayNameFromPath(sourcePath);
                         m_lightingPresetDisplayNameMap[displayName] = presetPtr;
                         m_lightingPresetNameSet.insert(displayName);

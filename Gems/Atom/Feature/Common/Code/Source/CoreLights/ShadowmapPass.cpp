@@ -7,10 +7,10 @@
  */
 
 #include <CoreLights/ShadowmapPass.h>
-#include <Atom/RPI.Public/Pass/PassUtils.h>
-#include <Atom/RPI.Public/Pass/ParentPass.h>
-#include <Atom/RPI.Public/RenderPipeline.h>
-#include <Atom/RPI.Public/View.h>
+#include <JE/Render/RPI/Public/Pass/PassUtils.h>
+#include <JE/Render/RPI/Public/Pass/ParentPass.h>
+#include <JE/Render/RPI/Public/RenderPipeline.h>
+#include <JE/Render/RPI/Public/View.h>
 
 namespace AZ
 {
@@ -18,74 +18,74 @@ namespace AZ
     {
         // --- Pass Creation ---
 
-        RPI::Ptr<Render::ShadowmapPass> ShadowmapPass::Create(const RPI::PassDescriptor& descriptor)
+        JE::Render::RPI::Ptr<Render::ShadowmapPass> ShadowmapPass::Create(const JE::Render::RPI::PassDescriptor& descriptor)
         {
             return aznew ShadowmapPass(descriptor);
         }
 
-        ShadowmapPass::ShadowmapPass(const RPI::PassDescriptor& descriptor)
+        ShadowmapPass::ShadowmapPass(const JE::Render::RPI::PassDescriptor& descriptor)
             : Base(descriptor)
         {
             m_overrideViewportState = true;
             m_overrideScissorSate = true;
         }
 
-        RPI::Ptr<Render::ShadowmapPass> ShadowmapPass::CreateWithPassRequest(const Name& passName, AZStd::shared_ptr<RPI::RasterPassData> passData)
+        JE::Render::RPI::Ptr<Render::ShadowmapPass> ShadowmapPass::CreateWithPassRequest(const Name& passName, AZStd::shared_ptr<JE::Render::RPI::RasterPassData> passData)
         {
             // Create a pass request for the descriptor so we can connect it to the parent class input connections
-            RPI::PassRequest childRequest;
+            JE::Render::RPI::PassRequest childRequest;
             childRequest.m_templateName = Name{ "ShadowmapPassTemplate" };
             childRequest.m_passName = passName;
 
             // Add a connection to the skinned mesh input
-            RPI::PassConnection passConnection;
+            JE::Render::RPI::PassConnection passConnection;
             passConnection.m_localSlot = Name{ "SkinnedMeshes" };
             passConnection.m_attachmentRef.m_pass = Name{ "Parent" };
             passConnection.m_attachmentRef.m_attachment = Name{ "SkinnedMeshes" };
             childRequest.m_connections.emplace_back(passConnection);
 
             // Get the template
-            const AZStd::shared_ptr<const RPI::PassTemplate> childTemplate = RPI::PassSystemInterface::Get()->GetPassTemplate(childRequest.m_templateName);
+            const AZStd::shared_ptr<const JE::Render::RPI::PassTemplate> childTemplate = JE::Render::RPI::PassSystemInterface::Get()->GetPassTemplate(childRequest.m_templateName);
             AZ_Assert(childTemplate, "ShadowmapPass::CreateWIthPassRequest - attempting to create a shadowmap pass before the template has been created.");
 
             // Create the pass
-            RPI::PassDescriptor descriptor{ passName, childTemplate, &childRequest };
+            JE::Render::RPI::PassDescriptor descriptor{ passName, childTemplate, &childRequest };
             descriptor.m_passData = AZStd::move(passData);
             return Create(descriptor);
         }
 
         void ShadowmapPass::CreatePassTemplate()
         {
-            AZStd::shared_ptr<RPI::PassTemplate> m_childTemplate = AZStd::make_shared<RPI::PassTemplate>();
+            AZStd::shared_ptr<JE::Render::RPI::PassTemplate> m_childTemplate = AZStd::make_shared<JE::Render::RPI::PassTemplate>();
             m_childTemplate->m_name = Name{ "ShadowmapPassTemplate" };
             m_childTemplate->m_passClass = "ShadowmapPass";
 
             m_childTemplate->m_slots.resize(2);
-            RPI::PassSlot& slot = m_childTemplate->m_slots[0];
+            JE::Render::RPI::PassSlot& slot = m_childTemplate->m_slots[0];
             slot.m_name = Name{ "Shadowmap" };
-            slot.m_slotType = RPI::PassSlotType::Output;
+            slot.m_slotType = JE::Render::RPI::PassSlotType::Output;
             slot.m_scopeAttachmentUsage = RHI::ScopeAttachmentUsage::DepthStencil;
 
             // This slot it used to create a connection between the skinned mesh compute pass and the cascade shadow map pass
-            RPI::PassSlot& skinnedMeshSlot = m_childTemplate->m_slots[1];
+            JE::Render::RPI::PassSlot& skinnedMeshSlot = m_childTemplate->m_slots[1];
             skinnedMeshSlot.m_name = Name{ "SkinnedMeshes" };
-            skinnedMeshSlot.m_slotType = RPI::PassSlotType::Input;
+            skinnedMeshSlot.m_slotType = JE::Render::RPI::PassSlotType::Input;
             skinnedMeshSlot.m_scopeAttachmentUsage = RHI::ScopeAttachmentUsage::InputAssembly;
 
             m_childTemplate->m_connections.resize(1);
-            RPI::PassConnection& connection = m_childTemplate->m_connections[0];
+            JE::Render::RPI::PassConnection& connection = m_childTemplate->m_connections[0];
             connection.m_localSlot = Name{ "Shadowmap" };
             connection.m_attachmentRef.m_pass = Name{ "Parent" };
             connection.m_attachmentRef.m_attachment = Name{ "Shadowmap" };
 
-            RPI::PassSystemInterface::Get()->AddPassTemplate(Name{ "ShadowmapPassTemplate" }, m_childTemplate);
+            JE::Render::RPI::PassSystemInterface::Get()->AddPassTemplate(Name{ "ShadowmapPassTemplate" }, m_childTemplate);
         }
 
         // --- Build Override ---
 
         void ShadowmapPass::BuildInternal()
         {
-            RPI::Ptr<RPI::ParentPass> parentPass = GetParent();
+            JE::Render::RPI::Ptr<JE::Render::RPI::ParentPass> parentPass = GetParent();
             if (!parentPass)
             {
                 return;
@@ -95,9 +95,9 @@ namespace AZ
             imageViewDescriptor.m_arraySliceMin = m_arraySlice;
             imageViewDescriptor.m_arraySliceMax = m_arraySlice;
 
-            RPI::PassAttachmentBinding& binding = GetOutputBinding(0);
+            JE::Render::RPI::PassAttachmentBinding& binding = GetOutputBinding(0);
 
-            RPI::Ptr<RPI::PassAttachment> attachment = parentPass->GetOutputBinding(0).GetAttachment();
+            JE::Render::RPI::Ptr<JE::Render::RPI::PassAttachment> attachment = parentPass->GetOutputBinding(0).GetAttachment();
             if (!attachment)
             {
                 AZ_Assert(false, "[ShadowmapPass %s] Cannot find shadowmap image attachment.", GetPathName().GetCStr());
@@ -163,7 +163,7 @@ namespace AZ
             m_clearShadowDrawPacket = clearShadowDrawPacket;
         }
 
-        void ShadowmapPass::UpdatePipelineViewTag(const RPI::PipelineViewTag& viewTag)
+        void ShadowmapPass::UpdatePipelineViewTag(const JE::Render::RPI::PipelineViewTag& viewTag)
         {
             SetPipelineViewTag(viewTag);
         }
@@ -183,7 +183,7 @@ namespace AZ
                 const auto& views = m_pipeline->GetViews(GetPipelineViewTag());
                 if (!views.empty())
                 {
-                    const RPI::ViewPtr& view = views.front();
+                    const JE::Render::RPI::ViewPtr& view = views.front();
                     if (view && (view->GetOrFlags() & m_casterMovedBit.GetIndex()) == 0)
                     {
                         // Shadow is static and no casters moved since last frame.

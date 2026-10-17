@@ -22,13 +22,13 @@
 #include <Atom/RHI/RHISystemInterface.h>
 
 
-#include <Atom/RPI.Public/Scene.h>
-#include <Atom/RPI.Public/View.h>
-#include <Atom/RPI.Public/AuxGeom/AuxGeomDraw.h>
-#include <Atom/RPI.Public/AuxGeom/AuxGeomFeatureProcessorInterface.h>
-#include <Atom/RPI.Public/Buffer/Buffer.h>
-#include <Atom/RPI.Public/Model/Model.h>
-#include <Atom/RPI.Public/Shader/ShaderResourceGroup.h>
+#include <JE/Render/RPI/Public/Scene.h>
+#include <JE/Render/RPI/Public/View.h>
+#include <JE/Render/RPI/Public/AuxGeom/AuxGeomDraw.h>
+#include <JE/Render/RPI/Public/AuxGeom/AuxGeomFeatureProcessorInterface.h>
+#include <JE/Render/RPI/Public/Buffer/Buffer.h>
+#include <JE/Render/RPI/Public/Model/Model.h>
+#include <JE/Render/RPI/Public/Shader/ShaderResourceGroup.h>
 
 #include <Atom/Feature/Mesh/MeshCommon.h>
 #include <Atom/Feature/Mesh/MeshFeatureProcessorInterface.h>
@@ -47,7 +47,7 @@ namespace Terrain
         false,
         [](const bool& value)
         {
-            AZ::RPI::ShaderSystemInterface::Get()->SetGlobalShaderOption(AZ::Name{ "o_debugTerrainLodLevels" }, AZ::RPI::ShaderOptionValue{ value });
+            JE::Render::RPI::ShaderSystemInterface::Get()->SetGlobalShaderOption(AZ::Name{ "o_debugTerrainLodLevels" }, JE::Render::RPI::ShaderOptionValue{ value });
         },
         AZ::ConsoleFunctorFlags::Null,
         "Turns on debug coloring for terrain mesh lods."
@@ -70,17 +70,17 @@ namespace Terrain
         AzFramework::Terrain::TerrainDataNotificationBus::Handler::BusDisconnect();
     }
 
-    void TerrainMeshManager::Initialize(AZ::RPI::Scene& parentScene)
+    void TerrainMeshManager::Initialize(JE::Render::RPI::Scene& parentScene)
     {
         m_parentScene = &parentScene;
 
         AzFramework::Terrain::TerrainDataNotificationBus::Handler::BusConnect();
 
-        m_handleGlobalShaderOptionUpdate = AZ::RPI::ShaderSystemInterface::GlobalShaderOptionUpdatedEvent::Handler
+        m_handleGlobalShaderOptionUpdate = JE::Render::RPI::ShaderSystemInterface::GlobalShaderOptionUpdatedEvent::Handler
         {
-            [this](const AZ::Name&, AZ::RPI::ShaderOptionValue) { m_rebuildDrawPackets = true; }
+            [this](const AZ::Name&, JE::Render::RPI::ShaderOptionValue) { m_rebuildDrawPackets = true; }
         };
-        AZ::RPI::ShaderSystemInterface::Get()->Connect(m_handleGlobalShaderOptionUpdate);
+        JE::Render::RPI::ShaderSystemInterface::Get()->Connect(m_handleGlobalShaderOptionUpdate);
         
         m_meshMovedFlag = m_parentScene->GetViewTagBitRegistry().AcquireTag(AZ::Render::MeshCommon::MeshMovedName);
 
@@ -105,7 +105,7 @@ namespace Terrain
         }
 
         // This will trigger a draw packet rebuild later.
-        AZ::RPI::ShaderSystemInterface::Get()->SetGlobalShaderOption(AZ::Name{ "o_useTerrainClod" }, AZ::RPI::ShaderOptionValue{ m_config.m_clodEnabled });
+        JE::Render::RPI::ShaderSystemInterface::Get()->SetGlobalShaderOption(AZ::Name{ "o_useTerrainClod" }, JE::Render::RPI::ShaderOptionValue{ m_config.m_clodEnabled });
     }
 
     bool TerrainMeshManager::UpdateGridSize(float distanceToFirstLod)
@@ -139,9 +139,9 @@ namespace Terrain
 
             // Queue the load of the material's shaders now since they'll be needed later.
             m_materialInstance->ForAllShaderItems(
-                [&](const AZ::Name&, const AZ::RPI::ShaderCollection::Item& shaderItem)
+                [&](const AZ::Name&, const JE::Render::RPI::ShaderCollection::Item& shaderItem)
                 {
-                    AZ::Data::Asset<AZ::RPI::ShaderAsset> shaderAsset = shaderItem.GetShaderAsset();
+                    AZ::Data::Asset<JE::Render::RPI::ShaderAsset> shaderAsset = shaderItem.GetShaderAsset();
                     if (!shaderAsset.IsReady())
                     {
                         shaderAsset.QueueLoad();
@@ -202,7 +202,7 @@ namespace Terrain
         m_rayTracedItems.clear();
     }
 
-    void TerrainMeshManager::Update(const AZ::RPI::ViewPtr mainView, AZ::Data::Instance<AZ::RPI::ShaderResourceGroup>& terrainSrg)
+    void TerrainMeshManager::Update(const JE::Render::RPI::ViewPtr mainView, AZ::Data::Instance<JE::Render::RPI::ShaderResourceGroup>& terrainSrg)
     {
         if (m_rebuildDrawPackets)
         {
@@ -300,7 +300,7 @@ namespace Terrain
 
     }
 
-    AZ::RHI::StreamBufferView TerrainMeshManager::CreateStreamBufferView(AZ::Data::Instance<AZ::RPI::Buffer>& buffer, uint32_t offset)
+    AZ::RHI::StreamBufferView TerrainMeshManager::CreateStreamBufferView(AZ::Data::Instance<JE::Render::RPI::Buffer>& buffer, uint32_t offset)
     {
         return
         {
@@ -327,7 +327,7 @@ namespace Terrain
 
         for (CachedDrawData& drawData : m_cachedDrawData)
         {
-            AZ::Data::Instance<AZ::RPI::Shader>& shader = drawData.m_shader;
+            AZ::Data::Instance<JE::Render::RPI::Shader>& shader = drawData.m_shader;
 
             AZ::RHI::DrawPacketBuilder::DrawRequest drawRequest;
             drawRequest.m_listTag = drawData.m_drawListTag;
@@ -335,18 +335,18 @@ namespace Terrain
             drawRequest.m_streamIndices = sector.m_geometryView.GetFullStreamBufferIndices();
             drawRequest.m_stencilRef = AZ::Render::StencilRefs::UseDiffuseGIPass | AZ::Render::StencilRefs::UseIBLSpecularPass;
 
-            if (drawData.m_materialPipelineName != AZ::RPI::MaterialPipelineNone)
+            if (drawData.m_materialPipelineName != JE::Render::RPI::MaterialPipelineNone)
             {
                 AZ::RHI::DrawFilterTag pipelineTag = m_parentScene->GetDrawFilterTagRegistry()->AcquireTag(drawData.m_materialPipelineName);
                 AZ_Assert(pipelineTag.IsValid(), "Could not acquire pipeline filter tag '%s'.", drawData.m_materialPipelineName.GetCStr());
                 drawRequest.m_drawFilterMask = 1 << pipelineTag.GetIndex();
             }
 
-            AZ::Data::Instance<AZ::RPI::ShaderResourceGroup> drawSrg;
+            AZ::Data::Instance<JE::Render::RPI::ShaderResourceGroup> drawSrg;
             if (drawData.m_drawSrgLayout)
             {
                 // If the DrawSrg exists we must create and bind it, otherwise the CommandList will fail validation for SRG being null
-                drawSrg = AZ::RPI::ShaderResourceGroup::Create(shader->GetAsset(), shader->GetSupervariantIndex(), drawData.m_drawSrgLayout->GetName());
+                drawSrg = JE::Render::RPI::ShaderResourceGroup::Create(shader->GetAsset(), shader->GetSupervariantIndex(), drawData.m_drawSrgLayout->GetName());
                 if (drawData.m_shaderVariant.UseKeyFallback() && drawData.m_drawSrgLayout->HasShaderVariantKeyFallbackEntry())
                 {
                     drawSrg->SetShaderVariantKeyFallbackValue(drawData.m_shaderOptions.GetShaderVariantKeyFallbackValue());
@@ -498,7 +498,7 @@ namespace Terrain
 
             for (Sector& sector : lodGrid.m_sectors)
             {
-                sector.m_srg = AZ::RPI::ShaderResourceGroup::Create(shaderAsset, materialAsset->GetObjectSrgLayout()->GetName());
+                sector.m_srg = JE::Render::RPI::ShaderResourceGroup::Create(shaderAsset, materialAsset->GetObjectSrgLayout()->GetName());
 
                 sector.m_heightsNormalsBuffer = CreateMeshBufferInstance(sizeof(HeightNormalVertex), m_gridVerts2D);
 
@@ -534,7 +534,7 @@ namespace Terrain
         }
     }
 
-    void TerrainMeshManager::DrawMeshes(const AZ::RPI::FeatureProcessor::RenderPacket& process, const AZ::RPI::ViewPtr mainView)
+    void TerrainMeshManager::DrawMeshes(const JE::Render::RPI::FeatureProcessor::RenderPacket& process, const JE::Render::RPI::ViewPtr mainView)
     {
         AZ::Vector3 mainCameraPosition = mainView->GetCameraTransform().GetTranslation();
         CheckLodGridsForUpdate(mainCameraPosition);
@@ -555,8 +555,8 @@ namespace Terrain
             UpdateCandidateSectors();
         }
 
-        const AZ::RPI::AuxGeomDrawPtr auxGeomPtr = r_debugTerrainAabbs ?
-            AZ::RPI::AuxGeomFeatureProcessorInterface::GetDrawQueueForScene(m_parentScene) :
+        const JE::Render::RPI::AuxGeomDrawPtr auxGeomPtr = r_debugTerrainAabbs ?
+            JE::Render::RPI::AuxGeomFeatureProcessorInterface::GetDrawQueueForScene(m_parentScene) :
             nullptr;
 
         // Compare view frustums against the list of candidate sectors and submit those sectors to draw.
@@ -575,7 +575,7 @@ namespace Terrain
                     view->AddDrawPacket(candidateSector.m_rhiDrawPacket);
                     if (auxGeomPtr && view == mainView)
                     {
-                        auxGeomPtr->DrawAabb(candidateSector.m_aabb, AZ::Colors::Red, AZ::RPI::AuxGeomDraw::DrawStyle::Line);
+                        auxGeomPtr->DrawAabb(candidateSector.m_aabb, AZ::Colors::Red, JE::Render::RPI::AuxGeomDraw::DrawStyle::Line);
                     }
                 }
             }
@@ -596,15 +596,15 @@ namespace Terrain
 
         // Rebuild common draw packet data
         m_materialInstance->ForAllShaderItems(
-            [&](const AZ::Name& materialPipelineName, const AZ::RPI::ShaderCollection::Item& shaderItem)
+            [&](const AZ::Name& materialPipelineName, const JE::Render::RPI::ShaderCollection::Item& shaderItem)
             {
-                if (!shaderItem.IsEnabled() || shaderItem.GetDrawItemType() != AZ::RPI::ShaderCollection::Item::DrawItemType::Raster)
+                if (!shaderItem.IsEnabled() || shaderItem.GetDrawItemType() != JE::Render::RPI::ShaderCollection::Item::DrawItemType::Raster)
                 {
                     return true;
                 }
 
                 // Force load and cache shader instances.
-                AZ::Data::Instance<AZ::RPI::Shader> shader = AZ::RPI::Shader::FindOrCreate(shaderItem.GetShaderAsset());
+                AZ::Data::Instance<JE::Render::RPI::Shader> shader = JE::Render::RPI::Shader::FindOrCreate(shaderItem.GetShaderAsset());
                 if (!shader)
                 {
                     AZ_Error(
@@ -638,11 +638,11 @@ namespace Terrain
                 // (because FindVariantStableId treats unspecified options as a request specifically for a variant that doesn't specify those
                 // options) [GFX TODO][ATOM-3883] We should consider updating the FindVariantStableId algorithm to handle default values for us,
                 // and remove this step here.
-                AZ::RPI::ShaderOptionGroup shaderOptions = *shaderItem.GetShaderOptions();
+                JE::Render::RPI::ShaderOptionGroup shaderOptions = *shaderItem.GetShaderOptions();
                 shaderOptions.SetUnspecifiedToDefaultValues();
 
-                const AZ::RPI::ShaderVariantId finalVariantId = shaderOptions.GetShaderVariantId();
-                const AZ::RPI::ShaderVariant& variant = shader->GetVariant(finalVariantId);
+                const JE::Render::RPI::ShaderVariantId finalVariantId = shaderOptions.GetShaderVariantId();
+                const JE::Render::RPI::ShaderVariant& variant = shader->GetVariant(finalVariantId);
 
                 AZ::RHI::PipelineStateDescriptorForDraw pipelineStateDescriptor;
                 variant.ConfigurePipelineState(pipelineStateDescriptor, shaderOptions);
@@ -1461,10 +1461,10 @@ namespace Terrain
         }
     }
 
-    AZ::Data::Instance<AZ::RPI::Buffer> TerrainMeshManager::CreateMeshBufferInstance(uint32_t elementSize, uint32_t elementCount, const void* initialData, const char* name)
+    AZ::Data::Instance<JE::Render::RPI::Buffer> TerrainMeshManager::CreateMeshBufferInstance(uint32_t elementSize, uint32_t elementCount, const void* initialData, const char* name)
     {
-        AZ::RPI::CommonBufferDescriptor desc;
-        desc.m_poolType = AZ::RPI::CommonBufferPoolType::StaticInputAssembly;
+        JE::Render::RPI::CommonBufferDescriptor desc;
+        desc.m_poolType = JE::Render::RPI::CommonBufferPoolType::StaticInputAssembly;
         desc.m_elementSize = elementSize;
         desc.m_byteCount = desc.m_elementSize * elementCount;
         desc.m_bufferData = initialData;
@@ -1474,13 +1474,13 @@ namespace Terrain
             desc.m_bufferName = name;
         }
 
-        return AZ::RPI::BufferSystemInterface::Get()->CreateBufferFromCommonPool(desc);
+        return JE::Render::RPI::BufferSystemInterface::Get()->CreateBufferFromCommonPool(desc);
     }
 
-    AZ::Data::Instance<AZ::RPI::Buffer> TerrainMeshManager::CreateRayTracingMeshBufferInstance(AZ::RHI::Format elementFormat, uint32_t elementCount, const void* initialData, const char* name)
+    AZ::Data::Instance<JE::Render::RPI::Buffer> TerrainMeshManager::CreateRayTracingMeshBufferInstance(AZ::RHI::Format elementFormat, uint32_t elementCount, const void* initialData, const char* name)
     {
-        AZ::RPI::CommonBufferDescriptor desc;
-        desc.m_poolType = AZ::RPI::CommonBufferPoolType::DynamicInputAssembly;
+        JE::Render::RPI::CommonBufferDescriptor desc;
+        desc.m_poolType = JE::Render::RPI::CommonBufferPoolType::DynamicInputAssembly;
         desc.m_elementSize = AZ::RHI::GetFormatSize(elementFormat);
         desc.m_byteCount = desc.m_elementSize * elementCount;
         desc.m_bufferData = initialData;
@@ -1491,7 +1491,7 @@ namespace Terrain
             desc.m_bufferName = name;
         }
 
-        return AZ::RPI::BufferSystemInterface::Get()->CreateBufferFromCommonPool(desc);
+        return JE::Render::RPI::BufferSystemInterface::Get()->CreateBufferFromCommonPool(desc);
     }
 
 }

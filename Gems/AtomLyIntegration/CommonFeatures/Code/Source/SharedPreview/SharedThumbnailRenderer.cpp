@@ -8,9 +8,9 @@
 
 #include <Atom/Feature/Utils/LightingPreset.h>
 #include <Atom/Feature/Utils/ModelPreset.h>
-#include <Atom/RPI.Edit/Common/AssetUtils.h>
-#include <Atom/RPI.Edit/Material/MaterialSourceData.h>
-#include <Atom/RPI.Reflect/System/AnyAsset.h>
+#include <JE/Editor/Render/RPI/Edit/Common/AssetUtils.h>
+#include <JE/Editor/Render/RPI/Edit/Material/MaterialSourceData.h>
+#include <JE/Render/RPI/Reflect/System/AnyAsset.h>
 #include <AtomToolsFramework/PreviewRenderer/PreviewRendererCaptureRequest.h>
 #include <AtomToolsFramework/PreviewRenderer/PreviewRendererInterface.h>
 #include <AtomToolsFramework/Util/Util.h>
@@ -71,7 +71,7 @@ namespace AZ
             AzToolsFramework::Thumbnailer::SharedThumbnailKey thumbnailKey)
         {
             const auto assetInfo = SharedPreviewUtils::GetSupportedAssetInfo(thumbnailKey);
-            if (assetInfo.m_assetType == RPI::ModelAsset::RTTI_Type())
+            if (assetInfo.m_assetType == JE::Render::RPI::ModelAsset::RTTI_Type())
             {
                 ThumbnailConfig thumbnailConfig;
                 LoadPreviewAsset(thumbnailConfig.m_modelAsset, assetInfo.m_assetId);
@@ -86,7 +86,7 @@ namespace AZ
                 return thumbnailConfig;
             }
 
-            if (assetInfo.m_assetType == RPI::MaterialAsset::RTTI_Type())
+            if (assetInfo.m_assetType == JE::Render::RPI::MaterialAsset::RTTI_Type())
             {
                 ThumbnailConfig thumbnailConfig;
                 LoadPreviewAsset(thumbnailConfig.m_materialAsset, assetInfo.m_assetId);
@@ -101,12 +101,12 @@ namespace AZ
                 return thumbnailConfig;
             }
 
-            if (assetInfo.m_assetType == RPI::MaterialTypeAsset::RTTI_Type())
+            if (assetInfo.m_assetType == JE::Render::RPI::MaterialTypeAsset::RTTI_Type())
             {
                 // Material type assets are not renderable so we generate a material asset from the material type.
                 ThumbnailConfig thumbnailConfig;
-                AZ::RPI::MaterialSourceData materialSourceData;
-                materialSourceData.m_materialType = AZ::RPI::AssetUtils::GetSourcePathByAssetId(assetInfo.m_assetId);
+                JE::Render::RPI::MaterialSourceData materialSourceData;
+                materialSourceData.m_materialType = JE::Render::RPI::AssetUtils::GetSourcePathByAssetId(assetInfo.m_assetId);
                 auto outcome = materialSourceData.CreateMaterialAsset(AZ::Uuid::CreateRandom(), "", false);
 
                 if (outcome)
@@ -125,8 +125,8 @@ namespace AZ
                 return thumbnailConfig;
             }
 
-            const auto& path = AZ::RPI::AssetUtils::GetSourcePathByAssetId(assetInfo.m_assetId);
-            if (assetInfo.m_assetType == RPI::AnyAsset::RTTI_Type() && path.ends_with(AZ::Render::LightingPreset::Extension))
+            const auto& path = JE::Render::RPI::AssetUtils::GetSourcePathByAssetId(assetInfo.m_assetId);
+            if (assetInfo.m_assetType == JE::Render::RPI::AnyAsset::RTTI_Type() && path.ends_with(AZ::Render::LightingPreset::Extension))
             {
                 ThumbnailConfig thumbnailConfig;
                 LoadPreviewAsset(thumbnailConfig.m_lightingAsset, assetInfo.m_assetId);
@@ -141,12 +141,12 @@ namespace AZ
                 return thumbnailConfig;
             }
 
-            if (assetInfo.m_assetType == RPI::AnyAsset::RTTI_Type() && path.ends_with(AZ::Render::ModelPreset::Extension))
+            if (assetInfo.m_assetType == JE::Render::RPI::AnyAsset::RTTI_Type() && path.ends_with(AZ::Render::ModelPreset::Extension))
             {
                 // Model preset assets are relatively small JSON files containing a reference to a model asset and possibly other
                 // parameters. The preset must be loaded to get the model asset ID. Then the preview will be rendered like any other model.
-                AZ::Data::Asset<AZ::RPI::AnyAsset> asset = AZ::RPI::AssetUtils::LoadAssetById<AZ::RPI::AnyAsset>(assetInfo.m_assetId);
-                const AZ::Render::ModelPreset& preset = *AZ::RPI::GetDataFromAnyAsset<AZ::Render::ModelPreset>(asset);
+                AZ::Data::Asset<JE::Render::RPI::AnyAsset> asset = JE::Render::RPI::AssetUtils::LoadAssetById<JE::Render::RPI::AnyAsset>(assetInfo.m_assetId);
+                const AZ::Render::ModelPreset& preset = *JE::Render::RPI::GetDataFromAnyAsset<AZ::Render::ModelPreset>(asset);
 
                 ThumbnailConfig thumbnailConfig;
                 thumbnailConfig.m_modelAsset = preset.m_modelAsset;

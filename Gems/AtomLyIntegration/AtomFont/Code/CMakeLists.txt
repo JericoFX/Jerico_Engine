@@ -24,7 +24,7 @@ ly_add_target(
             AZ::AzCore
             Legacy::CryCommon
             Gem::Atom_RHI.Reflect
-            Gem::Atom_RPI.Public
+            JE::RenderIntegration
         PUBLIC
             JE::RenderIntegration.Public
 )

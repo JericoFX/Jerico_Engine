@@ -18,7 +18,7 @@ ly_add_target(
             Include
     BUILD_DEPENDENCIES
         PUBLIC
-            Gem::Atom_RPI.Public
+            JE::RenderIntegration
         PRIVATE
             Legacy::CryCommon
 )

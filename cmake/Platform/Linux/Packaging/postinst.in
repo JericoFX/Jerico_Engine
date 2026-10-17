@@ -55,7 +55,6 @@ X-GNOME-Autostart-enabled=true\n\
     # python.
     sudo chmod a+w Tools/LyTestTools
     sudo chmod a+w Tools/RemoteConsole/ly_remote_console
-    sudo chmod a+w Gems/Atom/RPI/Tools
     sudo chmod a+w Gems/AtomLyIntegration/TechnicalArt/DccScriptingInterface
     sudo chmod a+w scripts/o3de
 

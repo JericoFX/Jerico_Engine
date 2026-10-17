@@ -15,8 +15,8 @@
 #include <AzFramework/Input/Events/InputTextEventListener.h>
 
 #include <JE/Render/Bootstrap/BootstrapNotificationBus.h>
-#include <Atom/RPI.Public/ViewportContextBus.h>
-#include <Atom/RPI.Reflect/Image/Image.h>
+#include <JE/Render/RPI/Public/ViewportContextBus.h>
+#include <JE/Render/RPI/Reflect/Image/Image.h>
 
 #include "LyShinePassDataBus.h"
 
@@ -41,7 +41,7 @@ class CLyShine
     , public AzFramework::InputChannelEventListener
     , public AzFramework::InputTextEventListener
     , public AZ::TickBus::Handler
-    , public AZ::RPI::ViewportContextNotificationBus::Handler
+    , public JE::Render::RPI::ViewportContextNotificationBus::Handler
     , protected JE::Render::Bootstrap::NotificationBus::Handler
     , protected LyShinePassDataRequestBus::Handler
 {
@@ -70,9 +70,9 @@ public:
     void ReleaseCanvasDeferred(AZ::EntityId canvas) override;
 
     ISprite* LoadSprite(const AZStd::string& pathname) override;
-    ISprite* CreateSprite(const AZ::Data::Asset<AZ::RPI::AttachmentImageAsset>& attachmentImageAsset) override;
+    ISprite* CreateSprite(const AZ::Data::Asset<JE::Render::RPI::AttachmentImageAsset>& attachmentImageAsset) override;
     bool DoesSpriteTextureAssetExist(const AZStd::string& pathname) override;
-    AZ::Data::Instance<AZ::RPI::Image> LoadTexture(const AZStd::string& pathname) override;
+    AZ::Data::Instance<JE::Render::RPI::Image> LoadTexture(const AZStd::string& pathname) override;
 
     void PostInit() override;
 
@@ -113,7 +113,7 @@ public:
     void OnRenderTick() override;
 
     // JE::Render::Bootstrap::NotificationBus
-    void OnBootstrapSceneReady(AZ::RPI::Scene* bootstrapScene) override;
+    void OnBootstrapSceneReady(JE::Render::RPI::Scene* bootstrapScene) override;
     // ~JE::Render::Bootstrap::NotificationBus
 
     // LyShinePassDataRequestBus
@@ -155,7 +155,7 @@ private: // data
     std::unique_ptr<UiCanvasManager> m_uiCanvasManager;
 
     AZStd::string m_cursorImagePathToLoad;
-    AZ::Data::Instance<AZ::RPI::Image> m_uiCursorTexture;
+    AZ::Data::Instance<JE::Render::RPI::Image> m_uiCursorTexture;
     int m_uiCursorVisibleCounter;
 
     bool m_updatingLoadedCanvases = false;  // guard against nested updates

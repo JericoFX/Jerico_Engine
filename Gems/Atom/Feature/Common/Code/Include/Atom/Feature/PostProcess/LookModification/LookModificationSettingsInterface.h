@@ -11,9 +11,9 @@
 #include <AzCore/RTTI/RTTI.h>
 #include <AzCore/Component/EntityId.h>
 #include <ACES/Aces.h>
-#include <Atom/RPI.Reflect/Image/StreamingImageAsset.h>
+#include <JE/Render/RPI/Reflect/Image/StreamingImageAsset.h>
 #include <AzCore/Asset/AssetCommon.h>
-#include <Atom/RPI.Reflect/System/AnyAsset.h>
+#include <JE/Render/RPI/Reflect/System/AnyAsset.h>
 
 namespace AZ
 {

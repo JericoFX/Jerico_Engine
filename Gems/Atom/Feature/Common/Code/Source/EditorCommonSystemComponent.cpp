@@ -24,8 +24,8 @@
 #include <AzToolsFramework/API/EditorAssetSystemAPI.h>
 #include <AzFramework/Application/Application.h>
 
-#include <Atom/RPI.Edit/Material/MaterialFunctorSourceDataRegistration.h>
-#include <Atom/RPI.Edit/Material/LuaMaterialFunctorSourceData.h>
+#include <JE/Editor/Render/RPI/Edit/Material/MaterialFunctorSourceDataRegistration.h>
+#include <JE/Editor/Render/RPI/Edit/Material/LuaMaterialFunctorSourceData.h>
 
 
 namespace AZ
@@ -86,7 +86,7 @@ namespace AZ
 
         void EditorCommonSystemComponent::Activate()
         {
-            RPI::MaterialFunctorSourceDataRegistration* materialFunctorRegistration = RPI::MaterialFunctorSourceDataRegistration::Get();
+            JE::Render::RPI::MaterialFunctorSourceDataRegistration* materialFunctorRegistration = JE::Render::RPI::MaterialFunctorSourceDataRegistration::Get();
             if (!materialFunctorRegistration)
             {
                 // On some host platforms shader processing is not supported and this interface is not available.
@@ -97,7 +97,7 @@ namespace AZ
             materialFunctorRegistration->RegisterMaterialFunctor("Transform2D",              azrtti_typeid<Transform2DFunctorSourceData>());
             materialFunctorRegistration->RegisterMaterialFunctor("ConvertEmissiveUnit",      azrtti_typeid<ConvertEmissiveUnitFunctorSourceData>());
             materialFunctorRegistration->RegisterMaterialFunctor("HandleSubsurfaceScatteringParameters", azrtti_typeid<SubsurfaceTransmissionParameterFunctorSourceData>());
-            materialFunctorRegistration->RegisterMaterialFunctor("Lua", azrtti_typeid<RPI::LuaMaterialFunctorSourceData>());
+            materialFunctorRegistration->RegisterMaterialFunctor("Lua", azrtti_typeid<JE::Render::RPI::LuaMaterialFunctorSourceData>());
         }
 
         void EditorCommonSystemComponent::Deactivate()

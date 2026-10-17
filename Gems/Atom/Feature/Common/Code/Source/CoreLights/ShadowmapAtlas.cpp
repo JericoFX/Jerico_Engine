@@ -7,7 +7,7 @@
  */
 
 #include <CoreLights/ShadowmapAtlas.h>
-#include <Atom/RPI.Public/Buffer/Buffer.h>
+#include <JE/Render/RPI/Public/Buffer/Buffer.h>
 #include <AzCore/std/sort.h>
 
 namespace AZ
@@ -193,18 +193,18 @@ namespace AZ
             return m_shadowmapIndexNodeTree.at(location);
         }
 
-        Data::Instance<RPI::Buffer> ShadowmapAtlas::CreateShadowmapIndexTableBuffer(const AZStd::string& bufferName) const
+        Data::Instance<JE::Render::RPI::Buffer> ShadowmapAtlas::CreateShadowmapIndexTableBuffer(const AZStd::string& bufferName) const
         {
             AZ_Assert(!m_requireFinalize, "Finalization is required.");
-            RPI::CommonBufferDescriptor desc;
-            desc.m_poolType = RPI::CommonBufferPoolType::ReadOnly;
+            JE::Render::RPI::CommonBufferDescriptor desc;
+            desc.m_poolType = JE::Render::RPI::CommonBufferPoolType::ReadOnly;
             desc.m_bufferName = bufferName;
             desc.m_elementSize = sizeof(ShadowmapIndexNode);
             desc.m_elementFormat = RHI::Format::R32G32_UINT;
             desc.m_byteCount = m_indexTableData.size() * sizeof(ShadowmapIndexNode);
             desc.m_bufferData = m_indexTableData.data();
 
-            return RPI::BufferSystemInterface::Get()->CreateBufferFromCommonPool(desc);
+            return JE::Render::RPI::BufferSystemInterface::Get()->CreateBufferFromCommonPool(desc);
         }
 
         const AZStd::vector<ShadowmapAtlas::ShadowmapIndexNode> &ShadowmapAtlas::GetShadowmapIndexTable() const

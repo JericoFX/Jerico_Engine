@@ -8,9 +8,9 @@
 
 #include <PostProcess/PostProcessFeatureProcessor.h>
 
-#include <Atom/RPI.Public/Shader/ShaderResourceGroup.h>
-#include <Atom/RPI.Public/Scene.h>
-#include <Atom/RPI.Public/View.h>
+#include <JE/Render/RPI/Public/Shader/ShaderResourceGroup.h>
+#include <JE/Render/RPI/Public/Scene.h>
+#include <JE/Render/RPI/Public/View.h>
 
 // Using ebus as a temporary workaround
 #include <AzFramework/Components/CameraBus.h>
@@ -48,12 +48,12 @@ namespace AZ
             m_deltaTime = deltaTime.count();
         }
 
-        void PostProcessFeatureProcessor::SetViewAlias(const AZ::RPI::ViewPtr sourceView, const AZ::RPI::ViewPtr targetView)
+        void PostProcessFeatureProcessor::SetViewAlias(const JE::Render::RPI::ViewPtr sourceView, const JE::Render::RPI::ViewPtr targetView)
         {
             m_viewAliasMap[sourceView.get()] = targetView.get();
         }
 
-        void PostProcessFeatureProcessor::RemoveViewAlias(const AZ::RPI::ViewPtr sourceView)
+        void PostProcessFeatureProcessor::RemoveViewAlias(const JE::Render::RPI::ViewPtr sourceView)
         {
             m_viewAliasMap.erase(sourceView.get());
         }
@@ -117,7 +117,7 @@ namespace AZ
                 m_globalAggregateLevelSettings->ApplySettingsTo(&settings);
             }
             // Apply settings from priority sorted list of level settings
-            AZStd::vector_set<const RPI::View*> activeViews;
+            AZStd::vector_set<const JE::Render::RPI::View*> activeViews;
             for (auto& settings : m_sortedFrameSettings)
             {
                 // Apply settings that are not associated with views
@@ -130,14 +130,14 @@ namespace AZ
                 for (auto& viewWeightPair : settings->m_perViewBlendWeights)
                 {
                     // create a post process setting if it doesn't exist
-                    AZ::RPI::View* view = viewWeightPair.first;
+                    JE::Render::RPI::View* view = viewWeightPair.first;
                     activeViews.insert(view);
 
                     auto viewSettngsIterator = m_blendedPerViewSettings.find(view);
                     if (viewSettngsIterator == m_blendedPerViewSettings.end())
                     {
                         viewSettngsIterator = m_blendedPerViewSettings.insert(
-                            AZStd::pair<AZ::RPI::View*, PostProcessSettings>(
+                            AZStd::pair<JE::Render::RPI::View*, PostProcessSettings>(
                                 view,
                                 PostProcessSettings(this))).first;
                     }
@@ -151,7 +151,7 @@ namespace AZ
             //RemoveOutdatedViewSettings(activeViews);
         }
 
-        void PostProcessFeatureProcessor::RemoveOutdatedViewSettings(const AZStd::vector_set<const RPI::View*>& activeViews)
+        void PostProcessFeatureProcessor::RemoveOutdatedViewSettings(const AZStd::vector_set<const JE::Render::RPI::View*>& activeViews)
         {
             for (auto perViewSetting = m_blendedPerViewSettings.begin(); perViewSetting != m_blendedPerViewSettings.end(); )
             {
@@ -216,7 +216,7 @@ namespace AZ
             }
         }
 
-        AZ::Render::PostProcessSettings* PostProcessFeatureProcessor::GetLevelSettingsFromView(AZ::RPI::ViewPtr view)
+        AZ::Render::PostProcessSettings* PostProcessFeatureProcessor::GetLevelSettingsFromView(JE::Render::RPI::ViewPtr view)
         {
             // check for view aliases first
             auto viewAliasiterator = m_viewAliasMap.find(view.get());

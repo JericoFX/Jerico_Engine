@@ -14,14 +14,14 @@
 #include <AzFramework/Components/CameraBus.h>
 #include <AzFramework/Asset/AssetSystemBus.h>
 
-#include <Atom/RPI.Public/Image/ImageSystemInterface.h>
-#include <Atom/RPI.Public/Pass/PassFilter.h>
-#include <Atom/RPI.Public/Pass/PassSystemInterface.h>
-#include <Atom/RPI.Public/RenderPipeline.h>
-#include <Atom/RPI.Public/RPIUtils.h>
-#include <Atom/RPI.Public/Shader/ShaderResourceGroup.h>
-#include <Atom/RPI.Public/Scene.h>
-#include <Atom/RPI.Public/View.h>
+#include <JE/Render/RPI/Public/Image/ImageSystemInterface.h>
+#include <JE/Render/RPI/Public/Pass/PassFilter.h>
+#include <JE/Render/RPI/Public/Pass/PassSystemInterface.h>
+#include <JE/Render/RPI/Public/RenderPipeline.h>
+#include <JE/Render/RPI/Public/RPIUtils.h>
+#include <JE/Render/RPI/Public/Shader/ShaderResourceGroup.h>
+#include <JE/Render/RPI/Public/Scene.h>
+#include <JE/Render/RPI/Public/View.h>
 
 #include <PostProcess/DepthOfField/DepthOfFieldSettings.h>
 #include <PostProcess/PostProcessFeatureProcessor.h>
@@ -76,7 +76,7 @@ namespace AZ
 
         void DepthOfFieldSettings::LoadPencilMap()
         {
-            m_pencilMap = RPI::LoadStreamingTexture(PencilMap::TextureFilePath);
+            m_pencilMap = JE::Render::RPI::LoadStreamingTexture(PencilMap::TextureFilePath);
             if (!m_pencilMap)
             {
                 AZ_Error("DepthOfFieldSettings", false, "Failed to find or create an image instance from image asset '%s'", PencilMap::TextureFilePath);
@@ -115,7 +115,7 @@ namespace AZ
             }
         }
 
-        void DepthOfFieldSettings::SetValuesToViewSrg(AZ::Data::Instance<RPI::ShaderResourceGroup> viewSrg)
+        void DepthOfFieldSettings::SetValuesToViewSrg(AZ::Data::Instance<JE::Render::RPI::ShaderResourceGroup> viewSrg)
         {
             viewSrg->SetConstant(m_cameraParametersIndex, m_configurationToViewSRG.m_cameraParameters);
             viewSrg->SetConstant(m_pencilMapTexcoordToCocRadiusIndex, m_configurationToViewSRG.m_pencilMapTexcoordToCocRadius);
@@ -280,15 +280,15 @@ namespace AZ
         {
             const Name TemplateNameReadBackFocusDepth = Name("DepthOfFieldReadBackFocusDepthTemplate");
             // [GFX TODO][ATOM-4908] multiple camera should be distingushed.
-            RPI::PassFilter passFilter = RPI::PassFilter::CreateWithTemplateName(TemplateNameReadBackFocusDepth, GetParentScene());
-            RPI::PassSystemInterface::Get()->ForEachPass(passFilter, [this, enabled](RPI::Pass* pass) -> RPI::PassFilterExecutionFlow
+            JE::Render::RPI::PassFilter passFilter = JE::Render::RPI::PassFilter::CreateWithTemplateName(TemplateNameReadBackFocusDepth, GetParentScene());
+            JE::Render::RPI::PassSystemInterface::Get()->ForEachPass(passFilter, [this, enabled](JE::Render::RPI::Pass* pass) -> JE::Render::RPI::PassFilterExecutionFlow
                 {
                     auto* dofPass = azrtti_cast<AZ::Render::DepthOfFieldReadBackFocusDepthPass*>(pass);
                     if (enabled)
                     {
                         m_normalizedFocusDistanceForAutoFocus = dofPass->GetNormalizedFocusDistanceForAutoFocus();
                     }
-                    return RPI::PassFilterExecutionFlow::ContinueVisitingPasses;
+                    return JE::Render::RPI::PassFilterExecutionFlow::ContinueVisitingPasses;
                 });
         }
 

@@ -11,7 +11,7 @@
 #include <AzCore/Debug/Profiler.h>
 #include <AzCore/Serialization/EditContext.h>
 #include <AzCore/Serialization/SerializeContext.h>
-#include <Atom/RPI.Reflect/Model/ModelAssetCreator.h>
+#include <JE/Render/RPI/Reflect/Model/ModelAssetCreator.h>
 
 #include <SurfaceData/SurfaceDataSystemRequestBus.h>
 #include <SurfaceData/Utility/SurfaceDataUtility.h>
@@ -157,7 +157,7 @@ namespace SurfaceData
 
         AZStd::shared_lock<decltype(m_cacheMutex)> lock(m_cacheMutex);
 
-        AZ::RPI::ModelAsset* mesh = m_meshAssetData.GetAs<AZ::RPI::ModelAsset>();
+        JE::Render::RPI::ModelAsset* mesh = m_meshAssetData.GetAs<JE::Render::RPI::ModelAsset>();
         if (!mesh)
         {
             return;
@@ -203,7 +203,7 @@ namespace SurfaceData
         }
     }
 
-    void SurfaceDataMeshComponent::OnModelReady([[maybe_unused]] const AZ::Data::Asset<AZ::RPI::ModelAsset>& modelAsset, [[maybe_unused]] const AZ::Data::Instance<AZ::RPI::Model>& model)
+    void SurfaceDataMeshComponent::OnModelReady([[maybe_unused]] const AZ::Data::Asset<JE::Render::RPI::ModelAsset>& modelAsset, [[maybe_unused]] const AZ::Data::Instance<JE::Render::RPI::Model>& model)
     {
         OnCompositionChanged();
     }
@@ -235,7 +235,7 @@ namespace SurfaceData
         {
             AZStd::unique_lock<decltype(m_cacheMutex)> lock(m_cacheMutex);
 
-            meshValidBeforeUpdate = (m_meshAssetData.GetAs<AZ::RPI::ModelAsset>() != nullptr) && (m_meshBounds.IsValid());
+            meshValidBeforeUpdate = (m_meshAssetData.GetAs<JE::Render::RPI::ModelAsset>() != nullptr) && (m_meshBounds.IsValid());
 
             m_meshAssetData = {};
             AZ::Render::MeshComponentRequestBus::EventResult(m_meshAssetData, GetEntityId(), &AZ::Render::MeshComponentRequestBus::Events::GetModelAsset);
@@ -250,7 +250,7 @@ namespace SurfaceData
             m_meshNonUniformScale = AZ::Vector3::CreateOne();
             AZ::NonUniformScaleRequestBus::EventResult(m_meshNonUniformScale, GetEntityId(), &AZ::NonUniformScaleRequests::GetScale);
 
-            meshValidAfterUpdate = (m_meshAssetData.GetAs<AZ::RPI::ModelAsset>() != nullptr) && (m_meshBounds.IsValid());
+            meshValidAfterUpdate = (m_meshAssetData.GetAs<JE::Render::RPI::ModelAsset>() != nullptr) && (m_meshBounds.IsValid());
         }
 
         SurfaceDataRegistryEntry registryEntry;

@@ -10,7 +10,7 @@
 
 #include <JE/Editor/Materials/Base.h>
 
-#include <Atom/RPI.Reflect/Material/MaterialAsset.h>
+#include <JE/Render/RPI/Reflect/Material/MaterialAsset.h>
 #include <JE/Editor/Materials/EditorMaterialSystemComponentNotificationBus.h>
 #include <JE/Render/Materials/MaterialAssignment.h>
 #include <AzCore/Asset/AssetCommon.h>
@@ -58,7 +58,7 @@ namespace JE
             bool HasSourceData() const;
 
             //! Assign a new material override asset
-            void SetAsset(const AZ::Data::Asset<AZ::RPI::MaterialAsset>& asset);
+            void SetAsset(const AZ::Data::Asset<JE::Render::RPI::MaterialAsset>& asset);
 
             //! Assign a new material override asset
             void SetAssetId(const AZ::Data::AssetId& assetId);
@@ -92,7 +92,7 @@ namespace JE
 
             AZ::EntityId m_entityId;
             JE::Render::MaterialAssignmentId m_id;
-            AZ::Data::Asset<AZ::RPI::MaterialAsset> m_materialAsset;
+            AZ::Data::Asset<JE::Render::RPI::MaterialAsset> m_materialAsset;
 
         private:
             void OpenPopupMenu(const AZ::Data::AssetId& assetId, const AZ::Data::AssetType& assetType);

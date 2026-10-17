@@ -6,8 +6,8 @@
  *
  */
 
-#include <Atom/RPI.Edit/Common/AssetUtils.h>
-#include <Atom/RPI.Reflect/Asset/AssetUtils.h>
+#include <JE/Editor/Render/RPI/Edit/Common/AssetUtils.h>
+#include <JE/Render/RPI/Reflect/Asset/AssetUtils.h>
 #include <AzCore/Serialization/Json/JsonSerialization.h>
 #include <AzCore/Serialization/Json/RegistrationContext.h>
 #include <AzCore/std/containers/unordered_set.h>
@@ -162,8 +162,8 @@ namespace OpenParticle
                 return AZ::Failure(CreateParticleAssetFailure::MaterialMissing);
             }
 
-            AZ::Data::Asset<AZ::RPI::ModelAsset> modelAsset;
-            AZ::Data::Asset<AZ::RPI::ModelAsset> skeletonAsset;
+            AZ::Data::Asset<JE::Render::RPI::ModelAsset> modelAsset;
+            AZ::Data::Asset<JE::Render::RPI::ModelAsset> skeletonAsset;
 
             if (emitter->m_renderConfig.empty())
             {

@@ -6,9 +6,9 @@
  *
  */
 
-#include <Atom/RPI.Edit/Material/MaterialSourceData.h>
-#include <Atom/RPI.Edit/Material/MaterialTypeSourceData.h>
-#include <Atom/RPI.Reflect/Asset/AssetUtils.h>
+#include <JE/Editor/Render/RPI/Edit/Material/MaterialSourceData.h>
+#include <JE/Editor/Render/RPI/Edit/Material/MaterialTypeSourceData.h>
+#include <JE/Render/RPI/Reflect/Asset/AssetUtils.h>
 #include <JE/Editor/Materials/EditorMaterialSystemComponentNotificationBus.h>
 #include <JE/Render/Materials/MaterialComponentBus.h>
 #include <JE/Render/Debug/AtomImGuiToolsBus.h>
@@ -285,7 +285,7 @@ namespace JE
                     propertyOverrides, entityId, &JE::Render::MaterialComponentRequestBus::Events::GetPropertyValues, materialAssignmentId);
 
                 // Having an invalid material asset will use the default asset on the model.
-                AZ::Data::Asset<AZ::RPI::MaterialAsset> materialAsset;
+                AZ::Data::Asset<JE::Render::RPI::MaterialAsset> materialAsset;
                 materialAsset.Create(materialAssetId);
 
                 previewRenderer->AddCaptureRequest(
@@ -423,11 +423,11 @@ namespace JE
             {
                 return AzToolsFramework::AssetBrowser::SourceFileDetails(":/Icons/PhysXMaterial_80.svg");
             }
-            if (path.ends_with(AZ::RPI::MaterialSourceData::Extension))
+            if (path.ends_with(JE::Render::RPI::MaterialSourceData::Extension))
             {
                 return AzToolsFramework::AssetBrowser::SourceFileDetails(":/Icons/Material_80.svg");
             }
-            if (path.ends_with(AZ::RPI::MaterialTypeSourceData::Extension))
+            if (path.ends_with(JE::Render::RPI::MaterialTypeSourceData::Extension))
             {
                 return AzToolsFramework::AssetBrowser::SourceFileDetails(":/Icons/MaterialType_80.svg");
             }
@@ -438,11 +438,11 @@ namespace JE
             {
                 return AzToolsFramework::AssetBrowser::SourceFileDetails(":/Icons/MaterialGraph_80.svg");
             }
-            if (path.ends_with(AZ::RPI::BufferAsset::Extension))
+            if (path.ends_with(JE::Render::RPI::BufferAsset::Extension))
             {
                 return AzToolsFramework::AssetBrowser::SourceFileDetails(":/Icons/BufferAsset_80.svg");
             }
-            if (path.ends_with(AZ::RPI::ShaderAsset::Extension))
+            if (path.ends_with(JE::Render::RPI::ShaderAsset::Extension))
             {
                 return AzToolsFramework::AssetBrowser::SourceFileDetails(":/Icons/Shader_80.svg");
             }

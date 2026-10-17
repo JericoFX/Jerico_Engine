@@ -37,7 +37,7 @@ ly_add_target(
     BUILD_DEPENDENCIES
         INTERFACE
            AZ::AzCore
-           Gem::Atom_RPI.Public
+           JE::RenderIntegration
            Gem::Atom_Feature_Common
            Gem::Atom_Feature_Common.Public
 )
@@ -60,7 +60,7 @@ ly_add_target(
         PUBLIC
             AZ::AzCore
             AZ::AzFramework
-            Gem::Atom_RPI.Public
+            JE::RenderIntegration
             Gem::Atom_Utils.Static
             Gem::Atom_Feature_Common
             Gem::CommonFeaturesAtom.Static

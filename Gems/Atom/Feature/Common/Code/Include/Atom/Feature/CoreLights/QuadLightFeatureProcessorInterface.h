@@ -9,8 +9,8 @@
 #pragma once
 
 #include <Atom/Feature/CoreLights/PhotometricValue.h>
-#include <Atom/RPI.Public/Buffer/Buffer.h>
-#include <Atom/RPI.Public/FeatureProcessor.h>
+#include <JE/Render/RPI/Public/Buffer/Buffer.h>
+#include <JE/Render/RPI/Public/FeatureProcessor.h>
 #include <AzCore/Math/Quaternion.h>
 
 namespace AZ
@@ -62,10 +62,10 @@ namespace AZ
         //! QuadLightFeatureProcessorInterface provides an interface to acquire, release, and update a quad light. This is necessary for code outside of
         //! the Atom features gem to communicate with the QuadLightFeatureProcessor.
         class QuadLightFeatureProcessorInterface
-            : public RPI::FeatureProcessor
+            : public JE::Render::RPI::FeatureProcessor
         {
         public:
-            AZ_RTTI(AZ::Render::QuadLightFeatureProcessorInterface, "{D86216E4-92A8-43BE-A5E4-883489C6AF06}", AZ::RPI::FeatureProcessor);
+            AZ_RTTI(AZ::Render::QuadLightFeatureProcessorInterface, "{D86216E4-92A8-43BE-A5E4-883489C6AF06}", JE::Render::RPI::FeatureProcessor);
 
             using LightHandle = RHI::Handle<uint16_t, class QuadLight>;
             static constexpr PhotometricUnit PhotometricUnitType = PhotometricUnit::Nit;
@@ -102,7 +102,7 @@ namespace AZ
             virtual void SetQuadData(LightHandle handle, const QuadLightData& data) = 0;
 
             //! Returns the buffer containing the light data for all quad lights
-            virtual const Data::Instance<RPI::Buffer> GetLightBuffer() const = 0;
+            virtual const Data::Instance<JE::Render::RPI::Buffer> GetLightBuffer() const = 0;
             //! Returns the number of quad lights
             virtual uint32_t GetLightCount() const = 0;
         };

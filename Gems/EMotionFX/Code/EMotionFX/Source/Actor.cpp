@@ -42,7 +42,7 @@
 #include <MCore/Source/Compare.h>
 #include <MCore/Source/LogManager.h>
 
-#include <Atom/RPI.Reflect/Model/MorphTargetDelta.h>
+#include <JE/Render/RPI/Reflect/Model/MorphTargetDelta.h>
 
 namespace EMotionFX
 {
@@ -1254,7 +1254,7 @@ namespace EMotionFX
         AZStd::string baseMeshAssetFileName;
         AzFramework::StringFunc::Path::GetFileName(meshAssetFileName.c_str(), baseMeshAssetFileName);
 
-        return AZ::RPI::SkinMetaAsset::ConstructAssetId(meshAssetId, baseMeshAssetFileName);
+        return JE::Render::RPI::SkinMetaAsset::ConstructAssetId(meshAssetId, baseMeshAssetFileName);
     }
 
     bool Actor::DoesSkinMetaAssetExist(const AZ::Data::AssetId& meshAssetId)
@@ -1281,7 +1281,7 @@ namespace EMotionFX
         AZStd::string baseMeshAssetFileName;
         AzFramework::StringFunc::Path::GetFileName(meshAssetFileName.c_str(), baseMeshAssetFileName);
 
-        return AZ::RPI::MorphTargetMetaAsset::ConstructAssetId(meshAssetId, baseMeshAssetFileName);
+        return JE::Render::RPI::MorphTargetMetaAsset::ConstructAssetId(meshAssetId, baseMeshAssetFileName);
     }
 
     bool Actor::DoesMorphTargetMetaAssetExist(const AZ::Data::AssetId& meshAssetId)
@@ -1304,13 +1304,13 @@ namespace EMotionFX
         if (m_meshAssetId.IsValid())
         {
             // Get the mesh asset.
-            m_meshAsset = AZ::Data::AssetManager::Instance().GetAsset<AZ::RPI::ModelAsset>(m_meshAssetId, AZ::Data::AssetLoadBehavior::PreLoad);
+            m_meshAsset = AZ::Data::AssetManager::Instance().GetAsset<JE::Render::RPI::ModelAsset>(m_meshAssetId, AZ::Data::AssetLoadBehavior::PreLoad);
 
             // Get the skin meta asset.
             const AZ::Data::AssetId skinMetaAssetId = ConstructSkinMetaAssetId(m_meshAssetId);
             if (DoesSkinMetaAssetExist(m_meshAssetId) && skinMetaAssetId.IsValid())
             {
-                m_skinMetaAsset = AZ::Data::AssetManager::Instance().GetAsset<AZ::RPI::SkinMetaAsset>(
+                m_skinMetaAsset = AZ::Data::AssetManager::Instance().GetAsset<JE::Render::RPI::SkinMetaAsset>(
                     skinMetaAssetId, AZ::Data::AssetLoadBehavior::PreLoad);
             }
 
@@ -1318,7 +1318,7 @@ namespace EMotionFX
             const AZ::Data::AssetId morphTargetMetaAssetId = ConstructMorphTargetMetaAssetId(m_meshAssetId);
             if (DoesMorphTargetMetaAssetExist(m_meshAssetId) && morphTargetMetaAssetId.IsValid())
             {
-                m_morphTargetMetaAsset = AZ::Data::AssetManager::Instance().GetAsset<AZ::RPI::MorphTargetMetaAsset>(
+                m_morphTargetMetaAsset = AZ::Data::AssetManager::Instance().GetAsset<JE::Render::RPI::MorphTargetMetaAsset>(
                     morphTargetMetaAssetId, AZ::Data::AssetLoadBehavior::PreLoad);
             }
 
@@ -2420,12 +2420,12 @@ namespace EMotionFX
         m_meshAssetId = assetId;
     }
 
-    Node* Actor::FindMeshJoint(const AZ::Data::Asset<AZ::RPI::ModelLodAsset>& lodModelAsset) const
+    Node* Actor::FindMeshJoint(const AZ::Data::Asset<JE::Render::RPI::ModelLodAsset>& lodModelAsset) const
     {
-        const AZStd::span<const AZ::RPI::ModelLodAsset::Mesh>& sourceMeshes = lodModelAsset->GetMeshes();
+        const AZStd::span<const JE::Render::RPI::ModelLodAsset::Mesh>& sourceMeshes = lodModelAsset->GetMeshes();
 
         // Use the first joint that we can find for any of the Atom sub meshes and use it as owner of our mesh.
-        for (const AZ::RPI::ModelLodAsset::Mesh& sourceMesh : sourceMeshes)
+        for (const JE::Render::RPI::ModelLodAsset::Mesh& sourceMesh : sourceMeshes)
         {
             const AZ::Name& meshName = sourceMesh.GetName();
             Node* joint = FindJointByMeshName(meshName.GetStringView());
@@ -2445,7 +2445,7 @@ namespace EMotionFX
         AZ_Assert(m_meshAsset.IsReady(), "Mesh asset should be fully loaded and ready.");
 
         AZStd::vector<LODLevel>& lodLevels = m_meshLodData.m_lodLevels;
-        const AZStd::span<const AZ::Data::Asset<AZ::RPI::ModelLodAsset>>& lodAssets = m_meshAsset->GetLodAssets();
+        const AZStd::span<const AZ::Data::Asset<JE::Render::RPI::ModelLodAsset>>& lodAssets = m_meshAsset->GetLodAssets();
         const size_t numLODLevels = lodAssets.size();
 
         lodLevels.clear();
@@ -2454,7 +2454,7 @@ namespace EMotionFX
 
         for (size_t lodLevel = 0; lodLevel < numLODLevels; ++lodLevel)
         {
-            const AZ::Data::Asset<AZ::RPI::ModelLodAsset>& lodAsset = lodAssets[lodLevel];
+            const AZ::Data::Asset<JE::Render::RPI::ModelLodAsset>& lodAsset = lodAssets[lodLevel];
 
             lodLevels[lodLevel].m_nodeInfos.resize(numNodes);
 
@@ -2537,7 +2537,7 @@ namespace EMotionFX
         return joint;
     }
 
-    AZStd::unordered_map<AZ::u16, AZ::u16> Actor::ConstructSkinToSkeletonIndexMap(const AZ::Data::Asset<AZ::RPI::SkinMetaAsset>& skinMetaAsset)
+    AZStd::unordered_map<AZ::u16, AZ::u16> Actor::ConstructSkinToSkeletonIndexMap(const AZ::Data::Asset<JE::Render::RPI::SkinMetaAsset>& skinMetaAsset)
     {
         AZ_Assert(skinMetaAsset && skinMetaAsset.IsReady(), "Cannot construct skin to skeleton index mapping. Skin meta asset needs to be loaded and ready.");
 
@@ -2562,15 +2562,15 @@ namespace EMotionFX
         AZ_Assert(m_meshAsset.IsReady() && m_morphTargetMetaAsset.IsReady(),
             "Mesh as well as morph target meta asset asset should be fully loaded and ready.");
         AZStd::vector<LODLevel>& lodLevels = m_meshLodData.m_lodLevels;
-        const AZStd::span<const AZ::Data::Asset<AZ::RPI::ModelLodAsset>>& lodAssets = m_meshAsset->GetLodAssets();
+        const AZStd::span<const AZ::Data::Asset<JE::Render::RPI::ModelLodAsset>>& lodAssets = m_meshAsset->GetLodAssets();
         const size_t numLODLevels = lodAssets.size();
 
         AZ_Assert(m_morphSetups.size() == numLODLevels, "There needs to be a morph setup for every single LOD level.");
 
         for (size_t lodLevel = 0; lodLevel < numLODLevels; ++lodLevel)
         {
-            const AZ::Data::Asset<AZ::RPI::ModelLodAsset>& lodAsset = lodAssets[lodLevel];
-            const AZStd::span<const AZ::RPI::ModelLodAsset::Mesh>& sourceMeshes = lodAsset->GetMeshes();
+            const AZ::Data::Asset<JE::Render::RPI::ModelLodAsset>& lodAsset = lodAssets[lodLevel];
+            const AZStd::span<const JE::Render::RPI::ModelLodAsset::Mesh>& sourceMeshes = lodAsset->GetMeshes();
 
             MorphSetup* morphSetup = m_morphSetups[static_cast<uint32>(lodLevel)];
             if (!morphSetup)
@@ -2607,7 +2607,7 @@ namespace EMotionFX
             // The lod has shared buffers that combine the data from each submesh. In case any of the submeshes has a
             // morph target buffer view we can access the entire morph target buffer via the buffer asset.
             AZStd::span<const uint8_t> morphTargetDeltaView;
-            for (const AZ::RPI::ModelLodAsset::Mesh& sourceMesh : sourceMeshes)
+            for (const JE::Render::RPI::ModelLodAsset::Mesh& sourceMesh : sourceMeshes)
             {
                 if (const auto* bufferAssetView = sourceMesh.GetSemanticBufferAssetView(AZ::Name("MORPHTARGET_VERTEXDELTAS")))
                 {
@@ -2621,7 +2621,7 @@ namespace EMotionFX
             }
 
             AZ_Assert(morphTargetDeltaView.data(), "Unable to find MORPHTARGET_VERTEXDELTAS buffer");
-            const AZ::RPI::PackedCompressedMorphTargetDelta* vertexDeltas = reinterpret_cast<const AZ::RPI::PackedCompressedMorphTargetDelta*>(morphTargetDeltaView.data());
+            const JE::Render::RPI::PackedCompressedMorphTargetDelta* vertexDeltas = reinterpret_cast<const JE::Render::RPI::PackedCompressedMorphTargetDelta*>(morphTargetDeltaView.data());
 
             const size_t numMorphTargets = morphSetup->GetNumMorphTargets();
             for (size_t mtIndex = 0; mtIndex < numMorphTargets; ++mtIndex)
@@ -2631,7 +2631,7 @@ namespace EMotionFX
                 // Remove all previously added deform datas for the given joint as we set a new mesh.
                 morphTarget->RemoveAllDeformDatasFor(meshJoint);
 
-                const AZStd::vector<AZ::RPI::MorphTargetMetaAsset::MorphTarget>& metaDatas = m_morphTargetMetaAsset->GetMorphTargets();
+                const AZStd::vector<JE::Render::RPI::MorphTargetMetaAsset::MorphTarget>& metaDatas = m_morphTargetMetaAsset->GetMorphTargets();
                 for (const auto& metaData : metaDatas)
                 {
                     if (metaData.m_morphTargetName == morphTarget->GetNameString())
@@ -2649,8 +2649,8 @@ namespace EMotionFX
                             const AZ::u32 vertexIndex = metaData.m_startIndex + deformVtx;
 
                             // Unpack the delta
-                            const AZ::RPI::PackedCompressedMorphTargetDelta& packedCompressedDelta = vertexDeltas[vertexIndex];
-                            AZ::RPI::CompressedMorphTargetDelta unpackedCompressedDelta = AZ::RPI::UnpackMorphTargetDelta(packedCompressedDelta);
+                            const JE::Render::RPI::PackedCompressedMorphTargetDelta& packedCompressedDelta = vertexDeltas[vertexIndex];
+                            JE::Render::RPI::CompressedMorphTargetDelta unpackedCompressedDelta = JE::Render::RPI::UnpackMorphTargetDelta(packedCompressedDelta);
 
                             // Set the EMotionFX deform data from the CmopressedMorphTargetDelta
                             deformData->m_deltas[deformVtx].m_vertexNr = unpackedCompressedDelta.m_morphedVertexIndex;

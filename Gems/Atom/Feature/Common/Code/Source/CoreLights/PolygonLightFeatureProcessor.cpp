@@ -17,11 +17,11 @@
 
 #include <Atom/RHI/Factory.h>
 
-#include <Atom/RPI.Public/ColorManagement/TransformColor.h>
-#include <Atom/RPI.Public/Image/StreamingImage.h>
-#include <Atom/RPI.Public/RPISystemInterface.h>
-#include <Atom/RPI.Public/Scene.h>
-#include <Atom/RPI.Public/View.h>
+#include <JE/Render/RPI/Public/ColorManagement/TransformColor.h>
+#include <JE/Render/RPI/Public/Image/StreamingImage.h>
+#include <JE/Render/RPI/Public/RPISystemInterface.h>
+#include <JE/Render/RPI/Public/Scene.h>
+#include <JE/Render/RPI/Public/View.h>
 
 namespace AZ::Render
 {
@@ -48,7 +48,7 @@ namespace AZ::Render
         desc.m_bufferSrgName = "m_polygonLights";
         desc.m_elementCountSrgName = "m_polygonLightCount";
         desc.m_elementSize = sizeof(PolygonLightData);
-        desc.m_srgLayout = RPI::RPISystemInterface::Get()->GetViewSrgLayout().get();
+        desc.m_srgLayout = JE::Render::RPI::RPISystemInterface::Get()->GetViewSrgLayout().get();
 
         m_lightBufferHandler = GpuBufferHandler(desc);
 
@@ -57,7 +57,7 @@ namespace AZ::Render
         desc.m_bufferSrgName = "m_polygonLightPoints";
         desc.m_elementCountSrgName = "";
         desc.m_elementSize = 16; // While only a 12 byte float3 is needed for positions, using 16 bytes since that's the minimal alignment.
-        desc.m_srgLayout = RPI::RPISystemInterface::Get()->GetViewSrgLayout().get();
+        desc.m_srgLayout = JE::Render::RPI::RPISystemInterface::Get()->GetViewSrgLayout().get();
 
         m_lightPolygonPointBufferHandler = GpuBufferHandler(desc);
 
@@ -165,7 +165,7 @@ namespace AZ::Render
     {
         AZ_PROFILE_SCOPE(RPI, "PolygonLightFeatureProcessor: Render");
 
-        for (const RPI::ViewPtr& view : packet.m_views)
+        for (const JE::Render::RPI::ViewPtr& view : packet.m_views)
         {
             m_lightBufferHandler.UpdateSrg(view->GetShaderResourceGroup().get());
             m_lightPolygonPointBufferHandler.UpdateSrg(view->GetShaderResourceGroup().get());
@@ -176,7 +176,7 @@ namespace AZ::Render
     {
         AZ_Assert(handle.IsValid(), "Invalid LightHandle passed to PolygonLightFeatureProcessor::SetRgbIntensity().");
 
-        auto transformedColor = AZ::RPI::TransformColor(lightRgbIntensity, AZ::RPI::ColorSpaceId::LinearSRGB, AZ::RPI::ColorSpaceId::ACEScg);
+        auto transformedColor = JE::Render::RPI::TransformColor(lightRgbIntensity, JE::Render::RPI::ColorSpaceId::LinearSRGB, JE::Render::RPI::ColorSpaceId::ACEScg);
 
         AZStd::array<float, 3>& rgbIntensity = m_lightData.GetData<0>(handle.GetIndex()).m_rgbIntensityNits;
         transformedColor.GetAsVector3().StoreToFloat3(rgbIntensity.data());
@@ -259,12 +259,12 @@ namespace AZ::Render
         m_deviceBufferNeedsUpdate = true;
     }
 
-    const Data::Instance<RPI::Buffer> PolygonLightFeatureProcessor::GetLightBuffer()const
+    const Data::Instance<JE::Render::RPI::Buffer> PolygonLightFeatureProcessor::GetLightBuffer()const
     {
         return m_lightBufferHandler.GetBuffer();
     }
 
-    const Data::Instance<RPI::Buffer> PolygonLightFeatureProcessor::GetLightPointBuffer() const
+    const Data::Instance<JE::Render::RPI::Buffer> PolygonLightFeatureProcessor::GetLightPointBuffer() const
     {
         return m_lightPolygonPointBufferHandler.GetBuffer();
     }

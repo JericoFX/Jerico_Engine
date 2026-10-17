@@ -15,14 +15,14 @@ namespace AZ
 {
     namespace Render
     {
-        RPI::Ptr<DisplayMapperFullScreenPass> DisplayMapperFullScreenPass::Create(const RPI::PassDescriptor& descriptor)
+        JE::Render::RPI::Ptr<DisplayMapperFullScreenPass> DisplayMapperFullScreenPass::Create(const JE::Render::RPI::PassDescriptor& descriptor)
         {
-            RPI::Ptr<DisplayMapperFullScreenPass> pass = aznew DisplayMapperFullScreenPass(descriptor);
+            JE::Render::RPI::Ptr<DisplayMapperFullScreenPass> pass = aznew DisplayMapperFullScreenPass(descriptor);
             return pass;
         }
 
-        DisplayMapperFullScreenPass::DisplayMapperFullScreenPass(const RPI::PassDescriptor& descriptor)
-            : RPI::FullscreenTrianglePass(descriptor)
+        DisplayMapperFullScreenPass::DisplayMapperFullScreenPass(const JE::Render::RPI::PassDescriptor& descriptor)
+            : JE::Render::RPI::FullscreenTrianglePass(descriptor)
         {
         }
 
@@ -32,7 +32,7 @@ namespace AZ
 
         void DisplayMapperFullScreenPass::BuildInternal()
         {
-            RPI::PassConnection inConnection;
+            JE::Render::RPI::PassConnection inConnection;
             inConnection.m_localSlot = InputAttachmentName;
             inConnection.m_attachmentRef.m_pass = m_inputReferencePassName;
             inConnection.m_attachmentRef.m_attachment = m_inputReferenceAttachmentName;

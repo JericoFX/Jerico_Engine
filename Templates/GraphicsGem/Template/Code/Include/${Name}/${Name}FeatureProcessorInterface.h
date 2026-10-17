@@ -9,7 +9,7 @@
 #pragma once
 
 #include <AzCore/base.h>
-#include <Atom/RPI.Public/FeatureProcessor.h>
+#include <JE/Render/RPI/Public/FeatureProcessor.h>
 
 namespace ${SanitizedCppName}
 {
@@ -19,10 +19,10 @@ namespace ${SanitizedCppName}
 
     // ${Name}FeatureProcessorInterface provides an interface to the feature processor for code outside of Atom
     class ${SanitizedCppName}FeatureProcessorInterface
-        : public AZ::RPI::FeatureProcessor
+        : public JE::Render::RPI::FeatureProcessor
     {
     public:
-        AZ_RTTI(${SanitizedCppName}FeatureProcessorInterface, "{${Random_Uuid}}", AZ::RPI::FeatureProcessor);
+        AZ_RTTI(${SanitizedCppName}FeatureProcessorInterface, "{${Random_Uuid}}", JE::Render::RPI::FeatureProcessor);
 
     };
 }

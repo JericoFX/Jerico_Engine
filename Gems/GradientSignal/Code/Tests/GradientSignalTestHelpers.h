@@ -14,8 +14,8 @@
 #include <AzTest/AzTest.h>
 
 #include <Atom/RHI.Reflect/ImageSubresource.h>
-#include <Atom/RPI.Reflect/Image/ImageMipChainAsset.h>
-#include <Atom/RPI.Reflect/Image/StreamingImageAsset.h>
+#include <JE/Render/RPI/Reflect/Image/ImageMipChainAsset.h>
+#include <JE/Render/RPI/Reflect/Image/StreamingImageAsset.h>
 
 namespace UnitTest
 {
@@ -41,7 +41,7 @@ namespace UnitTest
     //! @param pixelSize The number of bytes per pixel
     //! @param data The raw pixel data
     //! @return A mip chain asset with the specified basic image data
-    AZ::Data::Asset<AZ::RPI::ImageMipChainAsset> BuildBasicMipChainAsset(
+    AZ::Data::Asset<JE::Render::RPI::ImageMipChainAsset> BuildBasicMipChainAsset(
         AZ::u16 mipLevels, AZ::u32 width, AZ::u32 height, AZ::u32 pixelSize, AZStd::span<const uint8_t> data);
 
     //! Construct an array of image data where all the pixels are 0 except for one at the given coordinate
@@ -61,7 +61,7 @@ namespace UnitTest
     //! @param format The format of the pixel data
     //! @param data The raw pixel data
     //! \return The AZ::RPI::StreamingImageAsset in a loaded ready state
-    AZ::Data::Asset<AZ::RPI::StreamingImageAsset> CreateImageAssetFromPixelData(
+    AZ::Data::Asset<JE::Render::RPI::StreamingImageAsset> CreateImageAssetFromPixelData(
         AZ::u32 width, AZ::u32 height, AZ::RHI::Format format, AZStd::span<const uint8_t> data);
 
     //! Creates a deterministically random set of pixel data as an AZ::RPI::StreamingImageAsset.
@@ -69,7 +69,7 @@ namespace UnitTest
     //! \param height The height of the AZ::RPI::StreamingImageAsset
     //! \param seed The random seed to use for generating the random data
     //! \return The AZ::RPI::StreamingImageAsset in a loaded ready state
-    AZ::Data::Asset<AZ::RPI::StreamingImageAsset> CreateImageAsset(AZ::u32 width, AZ::u32 height, AZ::s32 seed);
+    AZ::Data::Asset<JE::Render::RPI::StreamingImageAsset> CreateImageAsset(AZ::u32 width, AZ::u32 height, AZ::s32 seed);
 
     //! Creates an AZ::RPI::StreamingImageAsset where all the pixels are 0 except for the one pixel at the given coordinates, which is set to a specific value based on the component.
     //! \param width The width of the AZ::RPI::StreamingImageAsset
@@ -78,7 +78,7 @@ namespace UnitTest
     //! \param pixelY The Y coordinate of the pixel to set to a specific value
     //! @param setPixelValues The values to set the one specific pixel to (one value per pixel channel, determined by pixelSize)
     //! \return The AZ::RPI::StreamingImageAsset in a loaded ready state
-    AZ::Data::Asset<AZ::RPI::StreamingImageAsset> CreateSpecificPixelImageAsset(
+    AZ::Data::Asset<JE::Render::RPI::StreamingImageAsset> CreateSpecificPixelImageAsset(
         AZ::u32 width, AZ::u32 height, AZ::u32 pixelX, AZ::u32 pixelY, AZStd::span<const AZ::u8> setPixelValues);
 
     //! Converts a set of pixel coordinates in an image to a world space value that represents the center of the pixel.

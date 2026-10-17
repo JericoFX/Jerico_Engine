@@ -9,7 +9,7 @@
 #pragma once
 
 #include <AzCore/Component/Component.h>
-#include <Atom/RPI.Reflect/Material/MaterialAsset.h>
+#include <JE/Render/RPI/Reflect/Material/MaterialAsset.h>
 
 namespace AZ
 {
@@ -24,7 +24,7 @@ namespace AZ
 
             static const uint8_t DefaultDecalSortKey = 16;
 
-            Data::Asset<RPI::MaterialAsset> m_materialAsset;
+            Data::Asset<JE::Render::RPI::MaterialAsset> m_materialAsset;
             float m_attenuationAngle = 1.0f;
             float m_opacity = 1.0f;
             float m_normalMapOpacity = 1.0f;

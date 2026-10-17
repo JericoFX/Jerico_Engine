@@ -8,7 +8,7 @@
 #pragma once
 
 #include <Atom/Feature/CoreLights/CoreLightsConstants.h>
-#include <Atom/RPI.Public/Pass/ParentPass.h>
+#include <JE/Render/RPI/Public/Pass/ParentPass.h>
 #include <AzCore/std/containers/span.h>
 #include <AzCore/std/containers/fixed_vector.h>
 #include <CoreLights/ShadowmapAtlas.h>
@@ -20,9 +20,9 @@ namespace AZ
     {
         //! CascadedShadowmapsPass owns and manages ShadowmapPasses.
         class CascadedShadowmapsPass final
-            : public RPI::ParentPass
+            : public JE::Render::RPI::ParentPass
         {
-            using Base = RPI::ParentPass;
+            using Base = JE::Render::RPI::ParentPass;
             AZ_RPI_PASS(CascadedShadowmapsPass);
 
         public:
@@ -30,13 +30,13 @@ namespace AZ
             AZ_CLASS_ALLOCATOR(CascadedShadowmapsPass, SystemAllocator);
 
             virtual ~CascadedShadowmapsPass();
-            static RPI::Ptr<CascadedShadowmapsPass> Create(const RPI::PassDescriptor& descriptor);
+            static JE::Render::RPI::Ptr<CascadedShadowmapsPass> Create(const JE::Render::RPI::PassDescriptor& descriptor);
 
             //! This sets camera view name.
             void SetCameraViewName(const AZStd::string& viewName);
 
             //! This returns pipeline view tag for children.
-            const AZStd::span<const RPI::PipelineViewTag> GetPipelineViewTags();
+            const AZStd::span<const JE::Render::RPI::PipelineViewTag> GetPipelineViewTags();
 
             //! This exposes the shadowmap atlas.
             ShadowmapAtlas& GetShadowmapAtlas() { return m_atlas; }
@@ -46,12 +46,12 @@ namespace AZ
 
         private:
             CascadedShadowmapsPass() = delete;
-            explicit CascadedShadowmapsPass(const RPI::PassDescriptor& descriptor);
+            explicit CascadedShadowmapsPass(const JE::Render::RPI::PassDescriptor& descriptor);
 
             // RPI::Pass overrides...
             void BuildInternal() override;
-            void GetPipelineViewTags(RPI::PipelineViewTags& outTags) const override;
-            void GetViewDrawListInfo(RHI::DrawListMask& outDrawListMask, RPI::PassesByDrawList& outPassesByDrawList, const RPI::PipelineViewTag& viewTag) const override;
+            void GetPipelineViewTags(JE::Render::RPI::PipelineViewTags& outTags) const override;
+            void GetViewDrawListInfo(RHI::DrawListMask& outDrawListMask, JE::Render::RPI::PassesByDrawList& outPassesByDrawList, const JE::Render::RPI::PipelineViewTag& viewTag) const override;
 
             void CreateChildPassesInternal() override;
             void CreateChildShadowMapPass(u16 cascadeIndex);
@@ -67,7 +67,7 @@ namespace AZ
             AZStd::string m_cameraViewName;
 
             // Generated pipeline view tags for the children (ShadowmapPass).
-            AZStd::fixed_vector<RPI::PipelineViewTag, Shadow::MaxNumberOfCascades> m_childrenPipelineViewTags;
+            AZStd::fixed_vector<JE::Render::RPI::PipelineViewTag, Shadow::MaxNumberOfCascades> m_childrenPipelineViewTags;
             u16 m_numCascades = 0;
 
             ShadowmapAtlas m_atlas;

@@ -43,7 +43,7 @@ namespace JE::Assets::RenderBuilders
         AZ::SceneAPI::Events::ProcessingResult ConvertMaterials(MaterialAssetBuilderContext& context) const;
         AZ::SceneAPI::Events::ProcessingResult AssignDefaultMaterials(MaterialAssetBuilderContext& context) const;
 
-        AZ::Data::Asset<AZ::RPI::MaterialAsset> GetDefaultMaterialAsset() const;
+        AZ::Data::Asset<JE::Render::RPI::MaterialAsset> GetDefaultMaterialAsset() const;
     };
 
     /**

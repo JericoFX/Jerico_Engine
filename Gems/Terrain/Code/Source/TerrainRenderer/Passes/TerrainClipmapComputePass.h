@@ -9,15 +9,15 @@
 
 #include <AzCore/Memory/SystemAllocator.h>
 
-#include <Atom/RPI.Public/Pass/ComputePass.h>
-#include <Atom/RPI.Public/Pass/ParentPass.h>
-#include <Atom/RPI.Public/Pass/Pass.h>
-#include <Atom/RPI.Public/Shader/ShaderReloadNotificationBus.h>
-#include <Atom/RPI.Reflect/Pass/ComputePassData.h>
-#include <Atom/RPI.Reflect/Pass/PassDescriptor.h>
+#include <JE/Render/RPI/Public/Pass/ComputePass.h>
+#include <JE/Render/RPI/Public/Pass/ParentPass.h>
+#include <JE/Render/RPI/Public/Pass/Pass.h>
+#include <JE/Render/RPI/Public/Shader/ShaderReloadNotificationBus.h>
+#include <JE/Render/RPI/Reflect/Pass/ComputePassData.h>
+#include <JE/Render/RPI/Reflect/Pass/PassDescriptor.h>
 #include <TerrainRenderer/TerrainClipmapManager.h>
 
-#include <Atom/RPI.Reflect/Pass/RenderPassData.h>
+#include <JE/Render/RPI/Reflect/Pass/RenderPassData.h>
 
 namespace Terrain
 {
@@ -25,16 +25,16 @@ namespace Terrain
     //! DetailClipmapGenerationPass has images depending on this pass.
     //! It will gather all the data from the macro materials into a clipmap stack.
     class TerrainMacroClipmapGenerationPass
-        : public AZ::RPI::ComputePass
+        : public JE::Render::RPI::ComputePass
     {
         AZ_RPI_PASS(TerrainMacroClipmapGenerationPass);
 
     public:
-        AZ_RTTI(Terrain::TerrainMacroClipmapGenerationPass, "{E1F7C18F-E77A-496E-ABD7-1EC7D75AA4B0}", AZ::RPI::ComputePass);
+        AZ_RTTI(Terrain::TerrainMacroClipmapGenerationPass, "{E1F7C18F-E77A-496E-ABD7-1EC7D75AA4B0}", JE::Render::RPI::ComputePass);
         AZ_CLASS_ALLOCATOR(Terrain::TerrainMacroClipmapGenerationPass, AZ::SystemAllocator);
         virtual ~TerrainMacroClipmapGenerationPass() = default;
 
-        static AZ::RPI::Ptr<TerrainMacroClipmapGenerationPass> Create(const AZ::RPI::PassDescriptor& descriptor);
+        static JE::Render::RPI::Ptr<TerrainMacroClipmapGenerationPass> Create(const JE::Render::RPI::PassDescriptor& descriptor);
 
         void SetupFrameGraphDependencies(AZ::RHI::FrameGraphInterface frameGraph) override;
         void CompileResources(const AZ::RHI::FrameGraphCompileContext& context) override;
@@ -43,7 +43,7 @@ namespace Terrain
         //! the pass can be disabled by the case that no update is triggered.
         bool IsEnabled() const override;
     private:
-        TerrainMacroClipmapGenerationPass(const AZ::RPI::PassDescriptor& descriptor);
+        TerrainMacroClipmapGenerationPass(const JE::Render::RPI::PassDescriptor& descriptor);
 
         //! Macro clipmap only contains color and normal. Bound as RW.
         AZ::RHI::ShaderInputNameIndex m_macroColorClipmapsIndex =
@@ -59,16 +59,16 @@ namespace Terrain
     //! It depends on MacroClipmapGenerationPass the generate macro color clipmaps first.
     //! It will gather all the data from the detail materials into a clipmap stack.
     class TerrainDetailClipmapGenerationPass
-        : public AZ::RPI::ComputePass
+        : public JE::Render::RPI::ComputePass
     {
         AZ_RPI_PASS(TerrainDetailClipmapGenerationPass);
 
     public:
-        AZ_RTTI(Terrain::TerrainDetailClipmapGenerationPass, "{BD504E93-87F4-484E-A17A-E337C3F2279C}", AZ::RPI::ComputePass);
+        AZ_RTTI(Terrain::TerrainDetailClipmapGenerationPass, "{BD504E93-87F4-484E-A17A-E337C3F2279C}", JE::Render::RPI::ComputePass);
         AZ_CLASS_ALLOCATOR(Terrain::TerrainDetailClipmapGenerationPass, AZ::SystemAllocator);
         virtual ~TerrainDetailClipmapGenerationPass() = default;
 
-        static AZ::RPI::Ptr<TerrainDetailClipmapGenerationPass> Create(const AZ::RPI::PassDescriptor& descriptor);
+        static JE::Render::RPI::Ptr<TerrainDetailClipmapGenerationPass> Create(const JE::Render::RPI::PassDescriptor& descriptor);
 
         void SetupFrameGraphDependencies(AZ::RHI::FrameGraphInterface frameGraph) override;
         void CompileResources(const AZ::RHI::FrameGraphCompileContext& context) override;
@@ -79,7 +79,7 @@ namespace Terrain
         //! Used to check if clipmap rendering is enabled.
         bool ClipmapFeatureIsEnabled() const;
     private:
-        TerrainDetailClipmapGenerationPass(const AZ::RPI::PassDescriptor& descriptor);
+        TerrainDetailClipmapGenerationPass(const JE::Render::RPI::PassDescriptor& descriptor);
 
         //! It takes in all clipmaps including macro. Macro clipmaps are bound as RO and detail ones RW.
         AZ::RHI::ShaderInputNameIndex m_clipmapImageIndex[TerrainClipmapManager::ClipmapName::Count];

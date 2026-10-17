@@ -8,7 +8,7 @@
 
 #pragma once
 
-#include <Atom/RPI.Public/SceneBus.h>
+#include <JE/Render/RPI/Public/SceneBus.h>
 #include <AtomLyIntegration/CommonFeatures/Grid/GridComponentBus.h>
 #include <AtomLyIntegration/CommonFeatures/Grid/GridComponentConfig.h>
 #include <AzCore/Component/Component.h>
@@ -22,7 +22,7 @@ namespace AZ
         class GridComponentController final
             : public GridComponentRequestBus::Handler
             , public AZ::TransformNotificationBus::Handler
-            , public AZ::RPI::SceneNotificationBus::Handler
+            , public JE::Render::RPI::SceneNotificationBus::Handler
         {
         public:
             friend class EditorGridComponent;

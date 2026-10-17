@@ -19,7 +19,7 @@
 #include <Atom/Feature/PostProcess/PostProcessSettingsInterface.h>
 #include <Atom/Feature/PostProcess/PostProcessFeatureProcessorInterface.h>
 #include <AzCore/Asset/AssetCommon.h>
-#include <Atom/RPI.Reflect/System/AnyAsset.h>
+#include <JE/Render/RPI/Reflect/System/AnyAsset.h>
 
 namespace AZ
 {

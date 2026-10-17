@@ -8,12 +8,12 @@
 
 #include "AtomOutputFrameCapture.h"
 
-#include <Atom/RPI.Public/Pass/Specific/RenderToTexturePass.h>
-#include <Atom/RPI.Public/RenderPipeline.h>
-#include <Atom/RPI.Public/RPISystemInterface.h>
-#include <Atom/RPI.Public/Scene.h>
-#include <Atom/RPI.Public/View.h>
-#include <Atom/RPI.Reflect/System/RenderPipelineDescriptor.h>
+#include <JE/Render/RPI/Public/Pass/Specific/RenderToTexturePass.h>
+#include <JE/Render/RPI/Public/RenderPipeline.h>
+#include <JE/Render/RPI/Public/RPISystemInterface.h>
+#include <JE/Render/RPI/Public/Scene.h>
+#include <JE/Render/RPI/Public/View.h>
+#include <JE/Render/RPI/Reflect/System/RenderPipelineDescriptor.h>
 #include <Atom/Feature/PostProcess/PostProcessFeatureProcessorInterface.h>
 #include <AzCore/Component/TransformBus.h>
 #include <AzCore/Math/MatrixUtils.h>
@@ -25,16 +25,16 @@
 namespace TrackView
 {
     void AtomOutputFrameCapture::CreatePipeline(
-        AZ::RPI::Scene& scene, const AZStd::string& pipelineName, const uint32_t width, const uint32_t height)
+        JE::Render::RPI::Scene& scene, const AZStd::string& pipelineName, const uint32_t width, const uint32_t height)
     {
-        AZ::RPI::RenderPipelineDescriptor pipelineDesc;
+        JE::Render::RPI::RenderPipelineDescriptor pipelineDesc;
         pipelineDesc.m_mainViewTagName = "MainCamera"; // must be "MainCamera"
         pipelineDesc.m_name = pipelineName;
         pipelineDesc.m_rootPassTemplate = "MainPipelineRenderToTexture";
-        pipelineDesc.m_renderSettings.m_multisampleState = AZ::RPI::RPISystemInterface::Get()->GetApplicationMultisampleState();
-        m_renderPipeline = AZ::RPI::RenderPipeline::CreateRenderPipeline(pipelineDesc);
+        pipelineDesc.m_renderSettings.m_multisampleState = JE::Render::RPI::RPISystemInterface::Get()->GetApplicationMultisampleState();
+        m_renderPipeline = JE::Render::RPI::RenderPipeline::CreateRenderPipeline(pipelineDesc);
 
-        if (auto renderToTexturePass = azrtti_cast<AZ::RPI::RenderToTexturePass*>(m_renderPipeline->GetRootPass().get()))
+        if (auto renderToTexturePass = azrtti_cast<JE::Render::RPI::RenderToTexturePass*>(m_renderPipeline->GetRootPass().get()))
         {
             renderToTexturePass->ResizeOutput(width, height);
         }
@@ -47,7 +47,7 @@ namespace TrackView
 
         // retrieve View from the camera that's animating
         AZ::Name viewName = AZ::Name("MainCamera");
-        m_view = AZ::RPI::View::CreateView(viewName, AZ::RPI::View::UsageCamera);
+        m_view = JE::Render::RPI::View::CreateView(viewName, JE::Render::RPI::View::UsageCamera);
         m_renderPipeline->SetDefaultView(m_view);
         m_targetView = scene.GetDefaultRenderPipeline()->GetDefaultView();
         if (auto* fp = scene.GetFeatureProcessor<AZ::Render::PostProcessFeatureProcessorInterface>())
@@ -58,7 +58,7 @@ namespace TrackView
         m_pipelineCreated = true;
     }
 
-    void AtomOutputFrameCapture::DestroyPipeline(AZ::RPI::Scene& scene)
+    void AtomOutputFrameCapture::DestroyPipeline(JE::Render::RPI::Scene& scene)
     {
         if (!m_pipelineCreated)
         {
@@ -79,11 +79,11 @@ namespace TrackView
         m_pipelineCreated = false;
     }
 
-    void AtomOutputFrameCapture::UpdateView(const AZ::Matrix3x4& cameraTransform, const AZ::Matrix4x4& cameraProjection, const AZ::RPI::ViewPtr targetView)
+    void AtomOutputFrameCapture::UpdateView(const AZ::Matrix3x4& cameraTransform, const AZ::Matrix4x4& cameraProjection, const JE::Render::RPI::ViewPtr targetView)
     {
         if (targetView && targetView != m_targetView)
         {
-            if (AZ::RPI::Scene* scene = SceneFromGameEntityContext())
+            if (JE::Render::RPI::Scene* scene = SceneFromGameEntityContext())
             {
                 if (auto* fp = scene->GetFeatureProcessor<AZ::Render::PostProcessFeatureProcessorInterface>())
                 {
@@ -98,7 +98,7 @@ namespace TrackView
     }
 
     bool AtomOutputFrameCapture::BeginCapture(
-        const AZ::RPI::AttachmentReadback::CallbackFunction& attachmentReadbackCallback, CaptureFinishedCallback captureFinishedCallback)
+        const JE::Render::RPI::AttachmentReadback::CallbackFunction& attachmentReadbackCallback, CaptureFinishedCallback captureFinishedCallback)
     {
         m_captureFinishedCallback = AZStd::move(captureFinishedCallback);
 
@@ -110,7 +110,7 @@ namespace TrackView
             attachmentReadbackCallback,
             m_passHierarchy,
             AZStd::string("Output"),
-            AZ::RPI::PassAttachmentReadbackOption::Output);
+            JE::Render::RPI::PassAttachmentReadbackOption::Output);
 
         if (captureOutcome.IsSuccess())
         {
@@ -154,12 +154,12 @@ namespace TrackView
         return viewToClipMatrix;
     }
 
-    AZ::RPI::Scene* SceneFromGameEntityContext()
+    JE::Render::RPI::Scene* SceneFromGameEntityContext()
     {
         AzFramework::EntityContextId entityContextId;
         AzFramework::GameEntityContextRequestBus::BroadcastResult(
             entityContextId, &AzFramework::GameEntityContextRequestBus::Events::GetGameEntityContextId);
 
-        return AZ::RPI::Scene::GetSceneForEntityContextId(entityContextId);
+        return JE::Render::RPI::Scene::GetSceneForEntityContextId(entityContextId);
     }
 } // namespace TrackView

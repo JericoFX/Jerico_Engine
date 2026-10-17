@@ -13,8 +13,8 @@
 
 #include <AzFramework/Viewport/CameraState.h>
 
-#include <Atom/RPI.Public/View.h>
-#include <Atom/RPI.Public/ViewportContextBus.h>
+#include <JE/Render/RPI/Public/View.h>
+#include <JE/Render/RPI/Public/ViewportContextBus.h>
 
 namespace JE::World::Camera
 {
@@ -59,7 +59,7 @@ namespace JE::World::Camera
             // In game, this is an impossible state and if we reached here, we'll likely fail somehow...
             m_activeViewProperties.transform = AZ::Transform::CreateIdentity();
 
-            using namespace AZ::RPI;
+            using namespace JE::Render::RPI;
             if (auto viewSystem = ViewportContextRequests::Get())
             {
                 if (auto viewGroup = viewSystem->GetCurrentViewGroup(viewSystem->GetDefaultViewportContextName()))
@@ -85,7 +85,7 @@ namespace JE::World::Camera
 
             // In editor, invalid entity ID for the active view denotes the "default editor camera"
             // In game, this is an impossible state and if we reached here, we'll likely fail somehow...
-            using namespace AZ::RPI;
+            using namespace JE::Render::RPI;
             if (auto viewSystem = ViewportContextRequests::Get())
             {
                 if (auto viewGroup = viewSystem->GetCurrentViewGroup(viewSystem->GetDefaultViewportContextName()))

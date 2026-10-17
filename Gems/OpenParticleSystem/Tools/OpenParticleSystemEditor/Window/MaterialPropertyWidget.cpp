@@ -8,9 +8,9 @@
 
 #include <Window/MaterialPropertyWidget.h>
 
-#include <Atom/RPI.Edit/Common/AssetUtils.h>
-#include <Atom/RPI.Edit/Material/MaterialUtils.h>
-#include <Atom/RPI.Reflect/Material/MaterialPropertiesLayout.h>
+#include <JE/Editor/Render/RPI/Edit/Common/AssetUtils.h>
+#include <JE/Editor/Render/RPI/Edit/Material/MaterialUtils.h>
+#include <JE/Render/RPI/Reflect/Material/MaterialPropertiesLayout.h>
 
 #include <AtomToolsFramework/Inspector/InspectorPropertyGroupWidget.h>
 #include <AtomToolsFramework/Util/MaterialPropertyUtil.h>
@@ -109,7 +109,7 @@ namespace OpenParticleSystemEditor
     {
         m_materialAssetId = m_detail->m_material.GetId();
 
-        auto materialAssetOutcome = AZ::RPI::AssetUtils::LoadAsset<AZ::RPI::MaterialAsset>(m_materialAssetId);
+        auto materialAssetOutcome = JE::Render::RPI::AssetUtils::LoadAsset<JE::Render::RPI::MaterialAsset>(m_materialAssetId);
         if (!materialAssetOutcome)
         {
             AZ_Warning("MaterialPropertyWidget", false, "Failed to load the material assigned to this emitter.");
@@ -123,7 +123,7 @@ namespace OpenParticleSystemEditor
         // The property layout that ships in the material type product asset only carries ids and raw types.
         // Display names, descriptions, groups, ranges and enum labels all live in the .materialtype source
         // file, so that is what we load to build a UI that matches the mesh material inspector.
-        const AZStd::string materialTypeSourcePath = AZ::RPI::AssetUtils::GetSourcePathByAssetId(m_materialTypeAsset.GetId());
+        const AZStd::string materialTypeSourcePath = JE::Render::RPI::AssetUtils::GetSourcePathByAssetId(m_materialTypeAsset.GetId());
         if (materialTypeSourcePath.empty())
         {
             AZ_Warning("MaterialPropertyWidget", false, "Could not locate the source material type for this emitter's material.");
@@ -131,7 +131,7 @@ namespace OpenParticleSystemEditor
             return false;
         }
 
-        auto materialTypeOutcome = AZ::RPI::MaterialUtils::LoadMaterialTypeSourceData(materialTypeSourcePath);
+        auto materialTypeOutcome = JE::Render::RPI::MaterialUtils::LoadMaterialTypeSourceData(materialTypeSourcePath);
         if (!materialTypeOutcome.IsSuccess())
         {
             AZ_Warning("MaterialPropertyWidget", false, "Failed to load material type source data: %s", materialTypeSourcePath.c_str());
@@ -157,9 +157,9 @@ namespace OpenParticleSystemEditor
         AddGroupsBegin();
 
         m_materialTypeSourceData.EnumeratePropertyGroups(
-            [this](const AZ::RPI::MaterialTypeSourceData::PropertyGroupStack& propertyGroupStack)
+            [this](const JE::Render::RPI::MaterialTypeSourceData::PropertyGroupStack& propertyGroupStack)
             {
-                using namespace AZ::RPI;
+                using namespace JE::Render::RPI;
 
                 const MaterialTypeSourceData::PropertyGroup* propertyGroupDefinition = propertyGroupStack.back();
                 MaterialNameContext groupNameContext = MaterialTypeSourceData::MakeMaterialNameContext(propertyGroupStack);

@@ -8,8 +8,8 @@
 #pragma once
 
 #include <AzCore/Memory/SystemAllocator.h>
-#include <Atom/RPI.Public/Pass/ComputePass.h>
-#include <Atom/RPI.Public/Buffer/Buffer.h>
+#include <JE/Render/RPI/Public/Pass/ComputePass.h>
+#include <JE/Render/RPI/Public/Buffer/Buffer.h>
 
 namespace AZ
 {
@@ -17,29 +17,29 @@ namespace AZ
     {
         //! This pass is used to write the depth value of the specified screen coordinates to the buffer.
         class DepthOfFieldWriteFocusDepthFromGpuPass final
-            : public RPI::ComputePass
+            : public JE::Render::RPI::ComputePass
         {
             AZ_RPI_PASS(DepthOfFieldWriteFocusDepthFromGpuPass);
 
         public:
-            AZ_RTTI(DepthOfFieldWriteFocusDepthFromGpuPass, "{60DF04D2-A9FE-4B21-8050-96AFFC46BB87}", RPI::ComputePass);
+            AZ_RTTI(DepthOfFieldWriteFocusDepthFromGpuPass, "{60DF04D2-A9FE-4B21-8050-96AFFC46BB87}", JE::Render::RPI::ComputePass);
             AZ_CLASS_ALLOCATOR(DepthOfFieldWriteFocusDepthFromGpuPass, SystemAllocator);
 
             /// Creates a DepthOfFieldWriteFocusDepthFromGpuPass
-            static RPI::Ptr<DepthOfFieldWriteFocusDepthFromGpuPass> Create(const RPI::PassDescriptor& descriptor);
+            static JE::Render::RPI::Ptr<DepthOfFieldWriteFocusDepthFromGpuPass> Create(const JE::Render::RPI::PassDescriptor& descriptor);
 
             // Set pass parameter interfaces...
             void SetScreenPosition(const AZ::Vector2& screenPosition);
-            void SetBufferRef(RPI::Ptr<RPI::Buffer> bufferRef);
+            void SetBufferRef(JE::Render::RPI::Ptr<JE::Render::RPI::Buffer> bufferRef);
 
         private:
-            DepthOfFieldWriteFocusDepthFromGpuPass(const RPI::PassDescriptor& descriptor);
+            DepthOfFieldWriteFocusDepthFromGpuPass(const JE::Render::RPI::PassDescriptor& descriptor);
 
             // SRG binding indices...
             RHI::ShaderInputNameIndex m_autoFocusDataBufferIndex = "m_outputFocusDepth";
             RHI::ShaderInputNameIndex m_autoFocusScreenPositionIndex = "m_autoFocusScreenPosition";
 
-            RPI::Ptr<RPI::Buffer> m_bufferRef = nullptr;
+            JE::Render::RPI::Ptr<JE::Render::RPI::Buffer> m_bufferRef = nullptr;
             AZ::Vector2 m_autoFocusScreenPosition{ 0.0f, 0.0f };
 
             // Scope producer functions...

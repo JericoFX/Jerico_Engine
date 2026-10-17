@@ -10,8 +10,8 @@
 
 #include <AssetBuilderSDK/AssetBuilderSDK.h>
 
-#include <Atom/RPI.Reflect/Image/ImageMipChainAsset.h>
-#include <Atom/RPI.Reflect/Image/StreamingImageAsset.h>
+#include <JE/Render/RPI/Reflect/Image/ImageMipChainAsset.h>
+#include <JE/Render/RPI/Reflect/Image/StreamingImageAsset.h>
 
 #include <Atom/ImageProcessing/ImageObject.h>
 
@@ -59,7 +59,7 @@ namespace ImageProcessingAtom
 
         // Generate one MipChainAsset
         bool BuildMipChainAsset(const Data::AssetId& chainAssetId, uint32_t startMip, uint32_t mipLevels,
-            Data::Asset<RPI::ImageMipChainAsset>& outAsset, bool saveAsProduct);
+            Data::Asset<JE::Render::RPI::ImageMipChainAsset>& outAsset, bool saveAsProduct);
 
         // Generate product assets' full path
         AZStd::string GenerateAssetFullPath(ImageAssetType assetType, uint32_t assetSubId);
@@ -72,7 +72,7 @@ namespace ImageProcessingAtom
         const AZStd::string m_productFolder;
         const Data::AssetId m_sourceAssetId;
         const AZStd::string m_fileName;
-        const uint32_t m_subId = AZ::RPI::StreamingImageAsset::GetImageAssetSubId();
+        const uint32_t m_subId = JE::Render::RPI::StreamingImageAsset::GetImageAssetSubId();
         const uint8_t m_numResidentMips = 0u;
         AZStd::set<AZStd::string> m_tags;
 

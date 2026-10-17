@@ -7,8 +7,8 @@
  */
 #pragma once
 
-#include <Atom/RPI.Public/Pass/ComputePass.h>
-#include <Atom/RPI.Public/Pass/ParentPass.h>
+#include <JE/Render/RPI/Public/Pass/ComputePass.h>
+#include <JE/Render/RPI/Public/Pass/ParentPass.h>
 
 namespace AZ
 {
@@ -50,17 +50,17 @@ namespace AZ
 
         //! Pass for an optimized horizontal blur with edge detection
         class FastDepthAwareBlurHorPass final
-            : public RPI::ComputePass
+            : public JE::Render::RPI::ComputePass
         {
             AZ_RPI_PASS(FastDepthAwareBlurHorPass);
 
         public:
-            AZ_RTTI(AZ::Render::FastDepthAwareBlurHorPass, "{934F3772-06DA-42E3-A305-2921FFCEDCD4}", AZ::RPI::ComputePass);
+            AZ_RTTI(AZ::Render::FastDepthAwareBlurHorPass, "{934F3772-06DA-42E3-A305-2921FFCEDCD4}", JE::Render::RPI::ComputePass);
             AZ_CLASS_ALLOCATOR(FastDepthAwareBlurHorPass, SystemAllocator);
             virtual ~FastDepthAwareBlurHorPass() = default;
 
             //! Creates an FastDepthAwareBlurHorPass
-            static RPI::Ptr<FastDepthAwareBlurHorPass> Create(const RPI::PassDescriptor& descriptor);
+            static JE::Render::RPI::Ptr<FastDepthAwareBlurHorPass> Create(const JE::Render::RPI::PassDescriptor& descriptor);
 
             //! Sets the constants to be forwarded to the shader
             void SetConstants(float constFalloff, float depthFalloffThreshold, float depthFalloffStrength);
@@ -70,7 +70,7 @@ namespace AZ
             void FrameBeginInternal(FramePrepareParams params) override;
 
         private:
-            FastDepthAwareBlurHorPass(const RPI::PassDescriptor& descriptor);
+            FastDepthAwareBlurHorPass(const JE::Render::RPI::PassDescriptor& descriptor);
 
             // SRG binding indices...
             AZ::RHI::ShaderInputNameIndex m_constantsIndex = "m_constants";
@@ -80,17 +80,17 @@ namespace AZ
 
         //! Pass for an optimized vertical blur with edge detection
         class FastDepthAwareBlurVerPass final
-            : public RPI::ComputePass
+            : public JE::Render::RPI::ComputePass
         {
             AZ_RPI_PASS(FastDepthAwareBlurVerPass);
 
         public:
-            AZ_RTTI(AZ::Render::FastDepthAwareBlurVerPass, "{0DCB71EB-5417-4351-AADE-444DBCDF980E}", AZ::RPI::ComputePass);
+            AZ_RTTI(AZ::Render::FastDepthAwareBlurVerPass, "{0DCB71EB-5417-4351-AADE-444DBCDF980E}", JE::Render::RPI::ComputePass);
             AZ_CLASS_ALLOCATOR(FastDepthAwareBlurVerPass, SystemAllocator);
             virtual ~FastDepthAwareBlurVerPass() = default;
 
             //! Creates an FastDepthAwareBlurVerPass
-            static RPI::Ptr<FastDepthAwareBlurVerPass> Create(const RPI::PassDescriptor& descriptor);
+            static JE::Render::RPI::Ptr<FastDepthAwareBlurVerPass> Create(const JE::Render::RPI::PassDescriptor& descriptor);
 
             void SetConstants(float constFalloff, float depthFalloffThreshold, float depthFalloffStrength);
 
@@ -99,7 +99,7 @@ namespace AZ
             void FrameBeginInternal(FramePrepareParams params) override;
 
         private:
-            FastDepthAwareBlurVerPass(const RPI::PassDescriptor& descriptor);
+            FastDepthAwareBlurVerPass(const JE::Render::RPI::PassDescriptor& descriptor);
 
             // SRG binding indices...
             AZ::RHI::ShaderInputNameIndex m_constantsIndex = "m_constants";

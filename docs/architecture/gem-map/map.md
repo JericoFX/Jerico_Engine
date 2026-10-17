@@ -859,3 +859,21 @@ flowchart LR
 ```
 
 Pruebas588/588, PE/consumidor SDK focal, Editor/White Box/Material Workspace y runtime Vulkan reales. Dos DLL de módulos menos; no se afirma absorción de todo Atom, cierre SDK packaging, AP global, Linux, VR, Shipping ni mejora global de RAM. La evidencia y límites están en [corte98](../../evidence/n0/native-rpi-initialization-2026-10-16/README.md). Reutilizar SDK96; no repetir install/configure/build por cambios que no invalidan esa evidencia.
+## Delta99 — RPI absorbido en owners nativos, Windows/Profile/Vulkan
+
+Sustituye las referencias Public/Edit residuales del delta98 para el corte validado. Public/Reflect y datos editables viven en RenderIntegration; Edit en EditorRenderIntegration, con JE::Render::RPI. Los consumers conservan enlaces/factorías existentes. Las flechas expresan ownership, no un callgraph runtime nuevo. Dos DLL legacy retiradas; ninguna productiva nueva. Evidencia: ../../evidence/n0/native-rpi-bodies-2026-10-17.
+
+~~~mermaid
+flowchart LR
+  Scope99["RPI · absorción99 Windows"]
+  RI99["RenderIntegration.dll · JE::Render::RPI"]
+  ERI99["EditorRenderIntegration.dll"]
+  Assets99["Engine/Render/Integration/RPI/Assets"]
+  Registry99["Registry RPI nativo · discovery/políticas"]
+  Scope99 -->|"Public + Reflect"| RI99
+  Scope99 -->|"Edit"| ERI99
+  RI99 -->|"owner"| Assets99
+  Registry99 -->|"descubrimiento"| Assets99
+~~~
+
+707casos, Editor/BSP/UV/materiales, runtime Vulkan y SDK6imports/30DLL verificados. Source-free físico, Linux/VR/Shipping/Beauty y AP336 pendientes.11identidades nominales históricas, incremento global0; sin total certificado de Gems pendientes. El snapshot estático previo conserva su fecha; no es un ledger de aceptación.

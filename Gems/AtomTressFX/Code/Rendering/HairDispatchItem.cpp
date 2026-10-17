@@ -12,9 +12,9 @@
 #include <Rendering/HairRenderObject.h>
 #include <Passes/HairSkinningComputePass.h>
 
-#include <Atom/RPI.Public/Shader/ShaderResourceGroup.h>
-#include <Atom/RPI.Public/Shader/Shader.h>
-#include <Atom/RPI.Public/Buffer/Buffer.h>
+#include <JE/Render/RPI/Public/Shader/ShaderResourceGroup.h>
+#include <JE/Render/RPI/Public/Shader/Shader.h>
+#include <JE/Render/RPI/Public/Buffer/Buffer.h>
 
 #include <Atom/RHI/Factory.h>
 #include <Atom/RHI/DeviceBufferView.h>
@@ -35,9 +35,9 @@ namespace AZ
             // Reference in the code above that tackles handling of the different dispatches possible
             // This one is targeting the per vertex dispatches for now.
             void HairDispatchItem::InitSkinningDispatch(
-                RPI::Shader* shader,
-                RPI::ShaderResourceGroup* hairGenerationSrg,
-                RPI::ShaderResourceGroup* hairSimSrg,
+                JE::Render::RPI::Shader* shader,
+                JE::Render::RPI::ShaderResourceGroup* hairGenerationSrg,
+                JE::Render::RPI::ShaderResourceGroup* hairSimSrg,
                 uint32_t elementsAmount )
             {
                 m_shader = shader;
@@ -47,7 +47,7 @@ namespace AZ
                 );
                 m_dispatchItem.SetArguments(dispatchArgs);
                 RHI::PipelineStateDescriptorForDispatch pipelineDesc;
-                m_shader->GetVariant(RPI::ShaderAsset::RootShaderVariantStableId).ConfigurePipelineState(pipelineDesc);
+                m_shader->GetVariant(JE::Render::RPI::ShaderAsset::RootShaderVariantStableId).ConfigurePipelineState(pipelineDesc);
                 m_dispatchItem.SetPipelineState(m_shader->AcquirePipelineState(pipelineDesc));
                 AZStd::array<const RHI::ShaderResourceGroup*, 2> srgs{
                     hairGenerationSrg->GetRHIShaderResourceGroup(), // Static generation data

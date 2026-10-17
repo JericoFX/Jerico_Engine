@@ -7,7 +7,7 @@
  */
 
 #include "StarsComponentController.h"
-#include <Atom/RPI.Public/Scene.h>
+#include <JE/Render/RPI/Public/Scene.h>
 #include <StarsFeatureProcessor.h>
 
 namespace AZ::Render
@@ -86,7 +86,7 @@ namespace AZ::Render
 
     void StarsComponentController::EnableFeatureProcessor(EntityId entityId)
     {
-        m_scene = RPI::Scene::GetSceneForEntityId(entityId);
+        m_scene = JE::Render::RPI::Scene::GetSceneForEntityId(entityId);
         if (m_scene)
         {
             m_starsFeatureProcessor = m_scene->EnableFeatureProcessor<StarsFeatureProcessor>();

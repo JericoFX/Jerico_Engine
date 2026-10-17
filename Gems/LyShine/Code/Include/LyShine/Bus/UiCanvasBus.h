@@ -13,7 +13,7 @@
 #include <AzFramework/Input/Channels/InputChannelDigitalWithSharedModifierKeyStates.h>
 #include <AzFramework/Input/User/LocalUserId.h>
 #include <LyShine/UiBase.h>
-#include <Atom/RPI.Reflect/Image/AttachmentImageAsset.h>
+#include <JE/Render/RPI/Reflect/Image/AttachmentImageAsset.h>
 
 // Forward declarations
 struct IUiAnimationSystem;
@@ -221,10 +221,10 @@ public: // member functions
     virtual void SetIsRenderToTexture(bool isRenderToTexture) = 0;
 
     //! Get the attachment image that this canvas will render to
-    virtual const AZ::Data::Asset<AZ::RPI::AttachmentImageAsset>& GetAttachmentImageAsset() = 0;
+    virtual const AZ::Data::Asset<JE::Render::RPI::AttachmentImageAsset>& GetAttachmentImageAsset() = 0;
 
     //! Set the attachment image that this canvas will render to
-    virtual void SetAttachmentImageAsset(const AZ::Data::Asset<AZ::RPI::AttachmentImageAsset>& attachmentImageAsset) = 0;
+    virtual void SetAttachmentImageAsset(const AZ::Data::Asset<JE::Render::RPI::AttachmentImageAsset>& attachmentImageAsset) = 0;
 
     //! Get flag that controls whether this canvas automatically handles positional input (mouse/touch)
     virtual bool GetIsPositionalInputSupported() = 0;

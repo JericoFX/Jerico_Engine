@@ -9,9 +9,9 @@
 #include <Debug/RenderDebugFeatureProcessor.h>
 #include <Debug/RenderDebugSettings.h>
 
-#include <Atom/RPI.Public/Scene.h>
-#include <Atom/RPI.Public/View.h>
-#include <Atom/RPI.Public/Shader/ShaderSystemInterface.h>
+#include <JE/Render/RPI/Public/Scene.h>
+#include <JE/Render/RPI/Public/View.h>
+#include <JE/Render/RPI/Public/Shader/ShaderSystemInterface.h>
 
 namespace AZ::Render
 {
@@ -24,7 +24,7 @@ namespace AZ::Render
         if (auto* serializeContext = azrtti_cast<SerializeContext*>(context))
         {
             serializeContext
-                ->Class<RenderDebugFeatureProcessor, RPI::FeatureProcessor>()
+                ->Class<RenderDebugFeatureProcessor, JE::Render::RPI::FeatureProcessor>()
                 ->Version(0);
         }
     }
@@ -57,7 +57,7 @@ namespace AZ::Render
         m_settings = nullptr;
     }
 
-    void RenderDebugFeatureProcessor::Simulate(const RPI::FeatureProcessor::SimulatePacket& packet)
+    void RenderDebugFeatureProcessor::Simulate(const JE::Render::RPI::FeatureProcessor::SimulatePacket& packet)
     {
         AZ_PROFILE_SCOPE(RPI, "RenderDebugFeatureProcessor: Simulate");
         AZ_UNUSED(packet);
@@ -68,7 +68,7 @@ namespace AZ::Render
         }
     }
 
-    void RenderDebugFeatureProcessor::Render(const RPI::FeatureProcessor::RenderPacket& packet)
+    void RenderDebugFeatureProcessor::Render(const JE::Render::RPI::FeatureProcessor::RenderPacket& packet)
     {
         AZ_PROFILE_SCOPE(RPI, "RenderDebugFeatureProcessor: Render");
         AZ_UNUSED(packet);
@@ -76,7 +76,7 @@ namespace AZ::Render
         // Disable debugging if no render debug level component is active
         bool debugEnabled = (m_debugComponentCount > 0) && m_settings->GetEnabled();
 
-        RPI::ShaderSystemInterface::Get()->SetGlobalShaderOption(m_shaderDebugEnableOptionName, AZ::RPI::ShaderOptionValue{ debugEnabled });
+        JE::Render::RPI::ShaderSystemInterface::Get()->SetGlobalShaderOption(m_shaderDebugEnableOptionName, JE::Render::RPI::ShaderOptionValue{ debugEnabled });
 
         if (m_sceneSrg)
         {
@@ -113,11 +113,11 @@ namespace AZ::Render
             m_sceneSrg->SetConstant(m_customDebugFloatIndex09, m_settings->GetCustomDebugFloat09());
         }
 
-        for (const RPI::ViewPtr& view : packet.m_views)
+        for (const JE::Render::RPI::ViewPtr& view : packet.m_views)
         {
-            if (view->GetUsageFlags() & (RPI::View::UsageFlags::UsageCamera | RPI::View::UsageFlags::UsageReflectiveCubeMap))
+            if (view->GetUsageFlags() & (JE::Render::RPI::View::UsageFlags::UsageCamera | JE::Render::RPI::View::UsageFlags::UsageReflectiveCubeMap))
             {
-                Data::Instance<RPI::ShaderResourceGroup> viewSrg = view->GetShaderResourceGroup();
+                Data::Instance<JE::Render::RPI::ShaderResourceGroup> viewSrg = view->GetShaderResourceGroup();
 
                 if (viewSrg)
                 {

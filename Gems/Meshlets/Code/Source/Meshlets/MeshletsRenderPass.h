@@ -12,10 +12,10 @@
 
 #include <Atom/RHI.Reflect/Size.h>
 
-#include <Atom/RPI.Public/Pass/RasterPass.h>
-#include <Atom/RPI.Public/Shader/Shader.h>
-#include <Atom/RPI.Public/Shader/ShaderResourceGroup.h>
-#include <Atom/RPI.Public/Shader/ShaderReloadNotificationBus.h>
+#include <JE/Render/RPI/Public/Pass/RasterPass.h>
+#include <JE/Render/RPI/Public/Shader/Shader.h>
+#include <JE/Render/RPI/Public/Shader/ShaderResourceGroup.h>
+#include <JE/Render/RPI/Public/Shader/ShaderReloadNotificationBus.h>
 
 #include <Atom/Feature/TransformService/TransformServiceFeatureProcessorInterface.h>
 
@@ -35,8 +35,8 @@ namespace AZ
         class MeshletsFeatureProcessor;
 
         class MeshletsRenderPass
-            : public RPI::RasterPass
-            , private RPI::ShaderReloadNotificationBus::Handler
+            : public JE::Render::RPI::RasterPass
+            , private JE::Render::RPI::ShaderReloadNotificationBus::Handler
         {
             AZ_RPI_PASS(MeshletsRenderPass);
 
@@ -44,13 +44,13 @@ namespace AZ
             AZ_RTTI(MeshletsRenderPass, "{753E455B-8E36-4DC3-B315-789F0EF0483C}", RasterPass);
             AZ_CLASS_ALLOCATOR(MeshletsRenderPass, SystemAllocator);
 
-            static RPI::Ptr<MeshletsRenderPass> Create(const RPI::PassDescriptor& descriptor);
+            static JE::Render::RPI::Ptr<MeshletsRenderPass> Create(const JE::Render::RPI::PassDescriptor& descriptor);
 
             // Adds the lod array of render data
             bool FillDrawRequestData(RHI::DrawPacketBuilder::DrawRequest& drawRequest);
             bool AddDrawPackets(AZStd::list<const RHI::DrawPacket*> drawPackets);
 
-            Data::Instance<RPI::Shader> GetShader();
+            Data::Instance<JE::Render::RPI::Shader> GetShader();
 
             void SetFeatureProcessor(MeshletsFeatureProcessor* featureProcessor)
             {
@@ -58,12 +58,12 @@ namespace AZ
             }
 
         protected:
-            explicit MeshletsRenderPass(const RPI::PassDescriptor& descriptor);
+            explicit MeshletsRenderPass(const JE::Render::RPI::PassDescriptor& descriptor);
 
             // ShaderReloadNotificationBus::Handler overrides...
-            void OnShaderReinitialized(const RPI::Shader& shader) override;
-            void OnShaderAssetReinitialized(const Data::Asset<RPI::ShaderAsset>& shaderAsset) override;
-            void OnShaderVariantReinitialized(const AZ::RPI::ShaderVariant& shaderVariant) override;
+            void OnShaderReinitialized(const JE::Render::RPI::Shader& shader) override;
+            void OnShaderAssetReinitialized(const Data::Asset<JE::Render::RPI::ShaderAsset>& shaderAsset) override;
+            void OnShaderVariantReinitialized(const JE::Render::RPI::ShaderVariant& shaderVariant) override;
 
             void SetShaderPath(const char* shaderPath) { m_shaderPath = shaderPath; }
             bool LoadShader();
@@ -82,16 +82,16 @@ namespace AZ
             MeshletsFeatureProcessor* m_featureProcessor = nullptr;
 
             // The  shader that will be used by the pass
-            Data::Instance<RPI::Shader> m_shader = nullptr;
+            Data::Instance<JE::Render::RPI::Shader> m_shader = nullptr;
 
             // Override the following in the inherited class
             AZStd::string m_shaderPath = "dummyShaderPath";
 
             // To help create the pipeline state 
-            RPI::PassDescriptor m_passDescriptor;
+            JE::Render::RPI::PassDescriptor m_passDescriptor;
 
             const RHI::PipelineState* m_pipelineState = nullptr;
-            RPI::ViewPtr m_currentView = nullptr;
+            JE::Render::RPI::ViewPtr m_currentView = nullptr;
         };
 
     } // namespace Meshlets

@@ -9,10 +9,10 @@
 #pragma once
 
 #include <AzCore/base.h>
-#include <Atom/RPI.Public/FeatureProcessor.h>
+#include <JE/Render/RPI/Public/FeatureProcessor.h>
 #include <Atom/RHI.Reflect/Size.h>
-#include <Atom/RPI.Reflect/Image/StreamingImageAsset.h>
-#include <Atom/RPI.Reflect/Image/Image.h>
+#include <JE/Render/RPI/Reflect/Image/StreamingImageAsset.h>
+#include <JE/Render/RPI/Reflect/Image/Image.h>
 
 namespace AZ
 {
@@ -108,22 +108,22 @@ namespace AZ
         struct DiffuseProbeGridBakedTextures
         {
             // irradiance and distance images can be used directly 
-            Data::Instance<RPI::Image> m_irradianceImage;
+            Data::Instance<JE::Render::RPI::Image> m_irradianceImage;
             AZStd::string m_irradianceImageRelativePath;
 
-            Data::Instance<RPI::Image> m_distanceImage;
+            Data::Instance<JE::Render::RPI::Image> m_distanceImage;
             AZStd::string m_distanceImageRelativePath;
 
-            Data::Instance<RPI::Image> m_probeDataImage;
+            Data::Instance<JE::Render::RPI::Image> m_probeDataImage;
             AZStd::string m_probeDataImageRelativePath;
         };
 
         // DiffuseProbeGridFeatureProcessorInterface provides an interface to the feature processor for code outside of Atom
         class DiffuseProbeGridFeatureProcessorInterface
-            : public RPI::FeatureProcessor
+            : public JE::Render::RPI::FeatureProcessor
         {
         public:
-            AZ_RTTI(AZ::Render::DiffuseProbeGridFeatureProcessorInterface, "{6EF4F226-D473-4D50-8884-D407E4D145F4}", AZ::RPI::FeatureProcessor);
+            AZ_RTTI(AZ::Render::DiffuseProbeGridFeatureProcessorInterface, "{6EF4F226-D473-4D50-8884-D407E4D145F4}", JE::Render::RPI::FeatureProcessor);
 
             virtual DiffuseProbeGridHandle AddProbeGrid(const AZ::Transform& transform, const AZ::Vector3& extents, const AZ::Vector3& probeSpacing) = 0;
             virtual void RemoveProbeGrid(DiffuseProbeGridHandle& handle) = 0;
@@ -162,7 +162,7 @@ namespace AZ
             // check for and retrieve a new baked texture asset (does not apply to hot-reloaded assets, only initial bakes)
             virtual bool CheckTextureAssetNotification(
                 const AZStd::string& relativePath,
-                Data::Asset<RPI::StreamingImageAsset>& outTextureAsset,
+                Data::Asset<JE::Render::RPI::StreamingImageAsset>& outTextureAsset,
                 DiffuseProbeGridTextureNotificationType& outNotificationType) = 0;
 
             virtual bool AreBakedTexturesReferenced(

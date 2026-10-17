@@ -13,11 +13,11 @@
 #include <Atom/RHI/DeviceDrawItem.h>
 #include <Atom/RHI/ScopeProducer.h>
 
-#include <Atom/RPI.Public/Pass/ParentPass.h>
-#include <Atom/RPI.Public/Pass/FullscreenTrianglePass.h>
-#include <Atom/RPI.Public/Shader/Shader.h>
-#include <Atom/RPI.Public/Shader/ShaderResourceGroup.h>
-#include <Atom/RPI.Reflect/Pass/FullscreenTrianglePassData.h>
+#include <JE/Render/RPI/Public/Pass/ParentPass.h>
+#include <JE/Render/RPI/Public/Pass/FullscreenTrianglePass.h>
+#include <JE/Render/RPI/Public/Shader/Shader.h>
+#include <JE/Render/RPI/Public/Shader/ShaderResourceGroup.h>
+#include <JE/Render/RPI/Reflect/Pass/FullscreenTrianglePassData.h>
 
 #include <Atom/Feature/ACES/AcesDisplayMapperFeatureProcessor.h>
 #include <Atom/Feature/DisplayMapper/DisplayMapperConfigurationDescriptor.h>
@@ -55,20 +55,20 @@ namespace AZ
          *  [GFX TODO][ATOM-4189] Optimize the passthrough function in the DisplayMapper
          */
         class DisplayMapperPass
-            : public RPI::ParentPass
+            : public JE::Render::RPI::ParentPass
         {
             AZ_RPI_PASS(DisplayMapperPass);
 
         public:
-            AZ_RTTI(DisplayMapperPass, "{B022D9D6-BDFA-4435-B27C-466DC4C91D18}", RPI::ParentPass);
+            AZ_RTTI(DisplayMapperPass, "{B022D9D6-BDFA-4435-B27C-466DC4C91D18}", JE::Render::RPI::ParentPass);
             AZ_CLASS_ALLOCATOR(DisplayMapperPass, SystemAllocator);
             virtual ~DisplayMapperPass() = default;
 
             //! Creates a DisplayMapperPass
-            static RPI::Ptr<DisplayMapperPass> Create(const RPI::PassDescriptor& descriptor);
+            static JE::Render::RPI::Ptr<DisplayMapperPass> Create(const JE::Render::RPI::PassDescriptor& descriptor);
 
         protected:
-            DisplayMapperPass(const RPI::PassDescriptor& descriptor);
+            DisplayMapperPass(const JE::Render::RPI::PassDescriptor& descriptor);
 
             // Pass behavior overrides
             void BuildInternal() final;
@@ -94,27 +94,27 @@ namespace AZ
             DisplayMapperConfigurationDescriptor m_displayMapperConfigurationDescriptor;
             DisplayMapperConfigurationDescriptor m_defaultDisplayMapperConfigurationDescriptor;
             bool m_mergeLdrGradingLut = false;
-            RPI::AssetReference m_outputTransformOverrideShader;
+            JE::Render::RPI::AssetReference m_outputTransformOverrideShader;
             bool m_needToRebuildChildren = false;
 
-            const RPI::PassAttachmentBinding* m_pipelineOutput = nullptr;
+            const JE::Render::RPI::PassAttachmentBinding* m_pipelineOutput = nullptr;
 
             AZ::Render::DisplayMapperParameters m_displayMapperParameters = {};
 
-            AZStd::shared_ptr<RPI::PassTemplate> m_acesOutputTransformTemplate;
-            AZStd::shared_ptr<RPI::PassTemplate> m_acesOutputTransformLutTemplate;
-            AZStd::shared_ptr<RPI::PassTemplate> m_bakeAcesOutputTransformLutTemplate;
-            AZStd::shared_ptr<RPI::PassTemplate> m_passthroughTemplate;
-            AZStd::shared_ptr<RPI::PassTemplate> m_sRGBTemplate;
-            AZStd::shared_ptr<RPI::PassTemplate> m_ldrGradingLookupTableTemplate;
-            AZStd::shared_ptr<RPI::PassTemplate> m_outputTransformTemplate;
-            RPI::Ptr<AcesOutputTransformPass> m_acesOutputTransformPass = nullptr;
-            RPI::Ptr<BakeAcesOutputTransformLutPass> m_bakeAcesOutputTransformLutPass = nullptr;
-            RPI::Ptr<AcesOutputTransformLutPass> m_acesOutputTransformLutPass = nullptr;
-            RPI::Ptr<DisplayMapperFullScreenPass> m_displayMapperPassthroughPass = nullptr;
-            RPI::Ptr<DisplayMapperFullScreenPass> m_displayMapperSRGBPass = nullptr;
-            RPI::Ptr<ApplyShaperLookupTablePass> m_ldrGradingLookupTablePass = nullptr;
-            RPI::Ptr<OutputTransformPass> m_outputTransformPass = nullptr;
+            AZStd::shared_ptr<JE::Render::RPI::PassTemplate> m_acesOutputTransformTemplate;
+            AZStd::shared_ptr<JE::Render::RPI::PassTemplate> m_acesOutputTransformLutTemplate;
+            AZStd::shared_ptr<JE::Render::RPI::PassTemplate> m_bakeAcesOutputTransformLutTemplate;
+            AZStd::shared_ptr<JE::Render::RPI::PassTemplate> m_passthroughTemplate;
+            AZStd::shared_ptr<JE::Render::RPI::PassTemplate> m_sRGBTemplate;
+            AZStd::shared_ptr<JE::Render::RPI::PassTemplate> m_ldrGradingLookupTableTemplate;
+            AZStd::shared_ptr<JE::Render::RPI::PassTemplate> m_outputTransformTemplate;
+            JE::Render::RPI::Ptr<AcesOutputTransformPass> m_acesOutputTransformPass = nullptr;
+            JE::Render::RPI::Ptr<BakeAcesOutputTransformLutPass> m_bakeAcesOutputTransformLutPass = nullptr;
+            JE::Render::RPI::Ptr<AcesOutputTransformLutPass> m_acesOutputTransformLutPass = nullptr;
+            JE::Render::RPI::Ptr<DisplayMapperFullScreenPass> m_displayMapperPassthroughPass = nullptr;
+            JE::Render::RPI::Ptr<DisplayMapperFullScreenPass> m_displayMapperSRGBPass = nullptr;
+            JE::Render::RPI::Ptr<ApplyShaperLookupTablePass> m_ldrGradingLookupTablePass = nullptr;
+            JE::Render::RPI::Ptr<OutputTransformPass> m_outputTransformPass = nullptr;
 
             const Name m_applyShaperLookupTableOutputName = Name{ "ApplyShaperLookupTableOutput" };
             const Name m_applyShaperLookupTablePassName = Name{ "ApplyShaperLookupTable" };

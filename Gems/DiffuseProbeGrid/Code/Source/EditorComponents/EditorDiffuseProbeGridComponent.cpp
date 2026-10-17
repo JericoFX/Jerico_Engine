@@ -13,8 +13,8 @@
 #include <AzToolsFramework/API/EditorAssetSystemAPI.h>
 #include <AzCore/Component/Entity.h>
 #include <AzCore/IO/SystemFile.h>
-#include <Atom/RPI.Reflect/Image/StreamingImagePoolAsset.h>
-#include <Atom/RPI.Reflect/Model/ModelAsset.h>
+#include <JE/Render/RPI/Reflect/Image/StreamingImagePoolAsset.h>
+#include <JE/Render/RPI/Reflect/Model/ModelAsset.h>
 #include <Atom/Utils/DdsFile.h>
 
 AZ_PUSH_DISABLE_WARNING(4251 4800, "-Wunknown-warning-option") // disable warnings spawned by QT
@@ -66,7 +66,7 @@ namespace AZ
                             ->Attribute(AZ::Edit::Attributes::AppearsInAddComponentMenu, AZ_CRC_CE("Game"))
                             ->Attribute(AZ::Edit::Attributes::AutoExpand, true)
                             ->Attribute(Edit::Attributes::HelpPageURL, "https://o3de.org/docs/user-guide/components/reference/atom/diffuse-probe-grid/")
-                            ->Attribute(AZ::Edit::Attributes::PrimaryAssetType, AZ::AzTypeInfo<RPI::ModelAsset>::Uuid())
+                            ->Attribute(AZ::Edit::Attributes::PrimaryAssetType, AZ::AzTypeInfo<JE::Render::RPI::ModelAsset>::Uuid())
                         ->ClassElement(AZ::Edit::ClassElements::Group, QT_TRANSLATE_NOOP("DiffuseProbeGrid", "Probe Spacing"))
                             ->Attribute(AZ::Edit::Attributes::AutoExpand, true)
                             ->DataElement(AZ::Edit::UIHandlers::Default, &EditorDiffuseProbeGridComponent::m_probeSpacingX,
@@ -287,9 +287,9 @@ namespace AZ
             CheckTextureAssetNotification(configuration.m_bakedProbeDataTextureRelativePath, configuration.m_bakedProbeDataTextureAsset);
         }
 
-        void EditorDiffuseProbeGridComponent::CheckTextureAssetNotification(const AZStd::string& relativePath, Data::Asset<RPI::StreamingImageAsset>& configurationAsset)
+        void EditorDiffuseProbeGridComponent::CheckTextureAssetNotification(const AZStd::string& relativePath, Data::Asset<JE::Render::RPI::StreamingImageAsset>& configurationAsset)
         {
-            Data::Asset<RPI::StreamingImageAsset> textureAsset;
+            Data::Asset<JE::Render::RPI::StreamingImageAsset> textureAsset;
             DiffuseProbeGridTextureNotificationType notificationType = DiffuseProbeGridTextureNotificationType::None;
             if (m_controller.m_featureProcessor->CheckTextureAssetNotification(relativePath + ".streamingimage", textureAsset, notificationType))
             {

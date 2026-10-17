@@ -92,7 +92,7 @@ namespace JE::Assets::RenderBuilders
             bool LoadShaderResourceGroupLayouts(
                 [[maybe_unused]] const char* builderName,
                 const SrgDataContainer& resourceGroups,
-                AZ::RPI::ShaderResourceGroupLayoutList& srgLayoutList)
+                JE::Render::RPI::ShaderResourceGroupLayoutList& srgLayoutList)
             {
                 // Load all SRGs included in source file
                 for (const SrgData& srgData : resourceGroups)

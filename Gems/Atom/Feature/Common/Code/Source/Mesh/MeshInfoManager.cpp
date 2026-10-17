@@ -151,11 +151,11 @@ namespace AZ::Render
     }
 
     MeshInfoManager::MeshInfoManager()
-        : m_meshInfoBuffer{ "MeshInfo", RPI::CommonBufferPoolType::ReadOnly, static_cast<uint32_t>(sizeof(GPU::MeshInfo)) }
+        : m_meshInfoBuffer{ "MeshInfo", JE::Render::RPI::CommonBufferPoolType::ReadOnly, static_cast<uint32_t>(sizeof(GPU::MeshInfo)) }
     {
     }
 
-    void MeshInfoManager::Activate(RPI::Scene* scene)
+    void MeshInfoManager::Activate(JE::Render::RPI::Scene* scene)
     {
         m_meshInfoNeedsUpdate = true;
         UpdateMeshInfoBuffer();
@@ -168,8 +168,8 @@ namespace AZ::Render
         m_sceneId = scene->GetId();
 
         // We need to register the buffer in the SceneSrg even if we are disabled
-        m_updateSceneSrgHandler = RPI::Scene::PrepareSceneSrgEvent::Handler(
-            [this](RPI::ShaderResourceGroup* sceneSrg)
+        m_updateSceneSrgHandler = JE::Render::RPI::Scene::PrepareSceneSrgEvent::Handler(
+            [this](JE::Render::RPI::ShaderResourceGroup* sceneSrg)
             {
                 sceneSrg->SetBufferView(m_meshInfoIndex, GetMeshInfoBuffer()->GetBufferView());
             });
@@ -315,17 +315,17 @@ namespace AZ::Render
         return entry;
     }
 
-    const Data::Instance<RPI::Buffer>& MeshInfoManager::GetMeshInfoBuffer() const
+    const Data::Instance<JE::Render::RPI::Buffer>& MeshInfoManager::GetMeshInfoBuffer() const
     {
         return m_meshInfoBuffer.GetCurrentBuffer();
     }
 
-    void CreateShaderInputContract(RPI::ShaderInputContract& contract, AZStd::vector<RHI::Format>& channelFormat)
+    void CreateShaderInputContract(JE::Render::RPI::ShaderInputContract& contract, AZStd::vector<RHI::Format>& channelFormat)
     {
         auto AddIndexedStreamChannel =
             [&](const char* name, const uint32_t bufferIndex, const RHI::Format format, const bool isOptional = false)
         {
-            RPI::ShaderInputContract::StreamChannelInfo streamChannelInfo;
+            JE::Render::RPI::ShaderInputContract::StreamChannelInfo streamChannelInfo;
             streamChannelInfo.m_semantic = RHI::ShaderSemantic{ AZ::Name(name), bufferIndex };
             streamChannelInfo.m_componentCount = RHI::GetFormatComponentCount(format);
             streamChannelInfo.m_isOptional = isOptional;
@@ -357,17 +357,17 @@ namespace AZ::Render
 
     // utility function to initialize the buffer indices from default models
     void MeshInfoManager::InitMeshInfoGeometryBuffers(
-        const RPI::Model* model,
+        const JE::Render::RPI::Model* model,
         const size_t lod,
         const size_t meshIndex,
-        const RPI::Material* material,
-        const RPI::MaterialModelUvOverrideMap& uvMapping,
+        const JE::Render::RPI::Material* material,
+        const JE::Render::RPI::MaterialModelUvOverrideMap& uvMapping,
         MeshInfoEntry* entry)
     {
         auto& modelLod = model->GetLods()[lod];
         auto& mesh = modelLod->GetMeshes()[meshIndex];
 
-        RPI::ShaderInputContract inputContract;
+        JE::Render::RPI::ShaderInputContract inputContract;
         AZStd::vector<RHI::Format> inputChannelFormat;
 
         // TODO: Find out if shaders need optional inputs

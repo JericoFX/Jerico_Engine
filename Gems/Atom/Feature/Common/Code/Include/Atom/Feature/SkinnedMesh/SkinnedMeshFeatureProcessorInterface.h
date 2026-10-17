@@ -11,7 +11,7 @@
 #include <Atom/Feature/SkinnedMesh/SkinnedMeshInstance.h>
 #include <Atom/Feature/SkinnedMesh/SkinnedMeshShaderOptions.h>
 #include <Atom/Feature/Mesh/MeshFeatureProcessorInterface.h>
-#include <Atom/RPI.Public/FeatureProcessor.h>
+#include <JE/Render/RPI/Public/FeatureProcessor.h>
 #include <AzCore/Instance/Instance.h>
 
 namespace AZ
@@ -23,10 +23,10 @@ namespace AZ
 
         //! SkinnedMeshFeatureProcessorInterface provides an interface to acquire and release a SkinnedMeshRenderProxy from the underlying SkinnedMeshFeatureProcessor
         class SkinnedMeshFeatureProcessorInterface
-            : public RPI::FeatureProcessor
+            : public JE::Render::RPI::FeatureProcessor
         {
         public:
-            AZ_RTTI(AZ::Render::SkinnedMeshFeatureProcessorInterface, "{6BE6D9D7-FFD7-4C35-9A84-4EFDE730F06B}", AZ::RPI::FeatureProcessor);
+            AZ_RTTI(AZ::Render::SkinnedMeshFeatureProcessorInterface, "{6BE6D9D7-FFD7-4C35-9A84-4EFDE730F06B}", JE::Render::RPI::FeatureProcessor);
 
             using SkinnedMeshHandle = StableDynamicArrayHandle<SkinnedMeshRenderProxy>;
 
@@ -35,7 +35,7 @@ namespace AZ
                 Data::Instance<SkinnedMeshInputBuffers> m_inputBuffers;
                 AZStd::intrusive_ptr<SkinnedMeshInstance> m_instance;
                 AZStd::shared_ptr<MeshFeatureProcessorInterface::MeshHandle> m_meshHandle;
-                Data::Instance<RPI::Buffer> m_boneTransforms;
+                Data::Instance<JE::Render::RPI::Buffer> m_boneTransforms;
                 SkinnedMeshShaderOptions m_shaderOptions;
             };
 

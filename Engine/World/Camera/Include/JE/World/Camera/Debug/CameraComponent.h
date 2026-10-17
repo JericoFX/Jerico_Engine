@@ -15,15 +15,16 @@
 
 #include <AzFramework/Components/CameraBus.h>
 
-#include <Atom/RPI.Public/ViewProviderBus.h>
-#include <Atom/RPI.Public/Shader/ShaderResourceGroup.h>
-#include <Atom/RPI.Public/View.h>
-#include <Atom/RPI.Public/ViewGroup.h>
-#include <Atom/RPI.Public/WindowContext.h>
-#include <Atom/RPI.Public/WindowContextBus.h>
-#include <Atom/RPI.Public/XR/XRRenderingInterface.h>
+#include <JE/Render/RPI/Public/ViewProviderBus.h>
+#include <JE/Render/RPI/Public/Shader/ShaderResourceGroup.h>
+#include <JE/Render/RPI/Public/View.h>
+#include <JE/Render/RPI/Public/ViewGroup.h>
+#include <JE/Render/RPI/Public/WindowContext.h>
+#include <JE/Render/RPI/Public/WindowContextBus.h>
+#include <JE/Render/RPI/Public/XR/XRRenderingInterface.h>
 
-namespace AZ::RPI { class AuxGeomFeatureProcessorInterface; }
+namespace JE::Render::RPI
+{ class AuxGeomFeatureProcessorInterface; }
 
 #include <JE/World/Camera/CameraExports.h>
 
@@ -40,7 +41,7 @@ namespace JE::World::Camera::Debug
 
         CameraComponentConfig() {}
 
-        explicit CameraComponentConfig(AZStd::shared_ptr<AZ::RPI::WindowContext> target)
+        explicit CameraComponentConfig(AZStd::shared_ptr<JE::Render::RPI::WindowContext> target)
             : m_target(target)
         {}
 
@@ -48,15 +49,15 @@ namespace JE::World::Camera::Debug
         float m_depthNear = 0.1f;
         float m_depthFar = 100.0f;
         float m_aspectRatioOverride = 0.0f;
-        AZStd::shared_ptr<AZ::RPI::WindowContext> m_target = nullptr;
+        AZStd::shared_ptr<JE::Render::RPI::WindowContext> m_target = nullptr;
     };
 
     class JE_WORLD_CAMERA_API CameraComponent
         : public AZ::Component
         , public AZ::TransformNotificationBus::Handler
-        , public AZ::RPI::ViewProviderBus::Handler
+        , public JE::Render::RPI::ViewProviderBus::Handler
         , public ::Camera::CameraRequestBus::Handler
-        , public AZ::RPI::WindowContextNotificationBus::Handler
+        , public JE::Render::RPI::WindowContextNotificationBus::Handler
     {
     public:
         AZ_COMPONENT(CameraComponent, "{2BAFDA24-B354-4C5C-95BE-D7254B4BD415}", AZ::Component);
@@ -74,8 +75,8 @@ namespace JE::World::Camera::Debug
         void Deactivate() override;
 
         // AZ::RPI::ViewProviderBus::Handler overrides...
-        AZ::RPI::ViewPtr GetView() const override;
-        AZ::RPI::ViewPtr GetStereoscopicView(AZ::RPI::ViewType viewType) const override;
+        JE::Render::RPI::ViewPtr GetView() const override;
+        JE::Render::RPI::ViewPtr GetStereoscopicView(JE::Render::RPI::ViewType viewType) const override;
 
     private:
         // AZ::Component overrides...
@@ -119,18 +120,18 @@ namespace JE::World::Camera::Debug
 
         // ViewGroup to help manage stereoscopic and non-stereoscopic views.
         // This will allow us to render to PC window as well as a XR device at the same time
-        AZ::RPI::ViewGroupPtr m_cameraView;
+        JE::Render::RPI::ViewGroupPtr m_cameraView;
 
         // Stereoscopic view related data
-        AZ::RPI::XRRenderingInterface* m_xrSystem = nullptr;
+        JE::Render::RPI::XRRenderingInterface* m_xrSystem = nullptr;
         AZ::u32 m_numXrViews = 0;
-        AZStd::fixed_vector<AZ::Quaternion, AZ::RPI::XRMaxNumViews> m_stereoscopicViewQuats;
+        AZStd::fixed_vector<AZ::Quaternion, JE::Render::RPI::XRMaxNumViews> m_stereoscopicViewQuats;
         // Boolean used to indicate when the stereoscopic view was updated
         bool m_stereoscopicViewUpdate = false;
 
         // Work around the EntityContext being detached before the camera component is deactivated.
         // Without EntityContext class can't get AuxGeomFeatureProcessor to clean up per view draw interface.
-        AZ::RPI::AuxGeomFeatureProcessorInterface* m_auxGeomFeatureProcessor = nullptr;
+        JE::Render::RPI::AuxGeomFeatureProcessorInterface* m_auxGeomFeatureProcessor = nullptr;
 
         CameraComponentConfig m_componentConfig;
         float m_aspectRatio = 1.0f;

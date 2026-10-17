@@ -14,9 +14,9 @@
 #include <Atom/RHI/ScopeProducer.h>
 #include <Atom/RHI.Reflect/ShaderResourceGroupLayoutDescriptor.h>
 
-#include <Atom/RPI.Public/Pass/FullscreenTrianglePass.h>
-#include <Atom/RPI.Public/Shader/Shader.h>
-#include <Atom/RPI.Public/Shader/ShaderResourceGroup.h>
+#include <JE/Render/RPI/Public/Pass/FullscreenTrianglePass.h>
+#include <JE/Render/RPI/Public/Shader/Shader.h>
+#include <JE/Render/RPI/Public/Shader/ShaderResourceGroup.h>
 
 #include <ScreenSpace/DeferredFogSettings.h>
 
@@ -35,24 +35,24 @@ namespace AZ
         // Enhancements of this fog can contain more advanced noise handling (real volumetric), areal
         // mask, blending between areal fog nodes and other enhancements required for production.
         class DeferredFogPass final
-            : public RPI::FullscreenTrianglePass
+            : public JE::Render::RPI::FullscreenTrianglePass
         {
             AZ_RPI_PASS(DeferredFogPass);
 
         public:
-            AZ_RTTI(DeferredFogPass, "{0406C8AB-E95D-43A7-AF53-BDEE22D36746}", RPI::FullscreenTrianglePass);
+            AZ_RTTI(DeferredFogPass, "{0406C8AB-E95D-43A7-AF53-BDEE22D36746}", JE::Render::RPI::FullscreenTrianglePass);
             AZ_CLASS_ALLOCATOR(DeferredFogPass, SystemAllocator);
             ~DeferredFogPass() = default;
 
 
-            static RPI::Ptr<DeferredFogPass> Create(const RPI::PassDescriptor& descriptor);
+            static JE::Render::RPI::Ptr<DeferredFogPass> Create(const JE::Render::RPI::PassDescriptor& descriptor);
 
             DeferredFogSettings* GetPassFogSettings();
 
             virtual bool IsEnabled() const override;
 
         protected:
-            DeferredFogPass(const RPI::PassDescriptor& descriptor);
+            DeferredFogPass(const JE::Render::RPI::PassDescriptor& descriptor);
 
             // Pass behavior overrides...
             void InitializeInternal() override;

@@ -6,9 +6,9 @@
  *
  */
 
-#include <Atom/RPI.Edit/Common/AssetUtils.h>
-#include <Atom/RPI.Edit/Common/JsonUtils.h>
-#include <Atom/RPI.Reflect/System/AnyAsset.h>
+#include <JE/Editor/Render/RPI/Edit/Common/AssetUtils.h>
+#include <JE/Editor/Render/RPI/Edit/Common/JsonUtils.h>
+#include <JE/Render/RPI/Reflect/System/AnyAsset.h>
 #include <AtomToolsFramework/Graph/DynamicNode/DynamicNode.h>
 #include <AtomToolsFramework/Graph/DynamicNode/DynamicNodeManager.h>
 #include <AtomToolsFramework/Graph/DynamicNode/DynamicNodePaletteItem.h>

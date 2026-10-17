@@ -8,7 +8,7 @@
 
 #pragma once
 #include <AzCore/Component/ComponentBus.h>
-#include <Atom/RPI.Public/Image/StreamingImage.h>
+#include <JE/Render/RPI/Public/Image/StreamingImage.h>
 
 namespace AZ
 {
@@ -24,8 +24,8 @@ namespace AZ
             static const EBusHandlerPolicy HandlerPolicy = EBusHandlerPolicy::Single;
             virtual ~HDRiSkyboxRequests() {}
 
-            virtual Data::Asset<RPI::StreamingImageAsset> GetCubemapAsset() const = 0;
-            virtual void SetCubemapAsset(const Data::Asset<RPI::StreamingImageAsset>& cubemapAsset) = 0;
+            virtual Data::Asset<JE::Render::RPI::StreamingImageAsset> GetCubemapAsset() const = 0;
+            virtual void SetCubemapAsset(const Data::Asset<JE::Render::RPI::StreamingImageAsset>& cubemapAsset) = 0;
             virtual void SetCubemapAssetPath(const AZStd::string& path) = 0;
             virtual AZStd::string GetCubemapAssetPath() const = 0;
 

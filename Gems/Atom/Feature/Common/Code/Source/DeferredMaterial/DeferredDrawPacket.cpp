@@ -8,7 +8,7 @@
 #include <Atom/Feature/RenderCommon.h>
 #include <Atom/RHI/DrawPacketBuilder.h>
 #include <Atom/RHI/RHIUtils.h>
-#include <Atom/RPI.Reflect/Material/MaterialTypeAsset.h>
+#include <JE/Render/RPI/Reflect/Material/MaterialTypeAsset.h>
 #include <DeferredMaterial/DeferredDrawPacket.h>
 #include <DeferredMaterial/DeferredDrawPacketManager.h>
 
@@ -16,10 +16,10 @@ namespace AZ::Render
 {
     DeferredDrawPacket::DeferredDrawPacket(
         DeferredDrawPacketManager* drawPacketManager,
-        const RPI::Scene* scene,
-        RPI::Material* material,
+        const JE::Render::RPI::Scene* scene,
+        JE::Render::RPI::Material* material,
         const Name& materialPipelineName,
-        const RPI::ShaderCollection::Item& shaderItem,
+        const JE::Render::RPI::ShaderCollection::Item& shaderItem,
         const uint32_t drawPacketId)
         : m_drawPacketManager(drawPacketManager)
         , m_drawPacketId(drawPacketId)
@@ -30,48 +30,48 @@ namespace AZ::Render
 
     DeferredDrawPacket::~DeferredDrawPacket()
     {
-        AZ::RPI::ShaderReloadNotificationBus::Handler::BusDisconnect();
+        JE::Render::RPI::ShaderReloadNotificationBus::Handler::BusDisconnect();
     }
 
     // ShaderReloadNotificationBus::Handler overrides...
-    void DeferredDrawPacket::OnShaderReinitialized([[maybe_unused]] const RPI::Shader& shader)
+    void DeferredDrawPacket::OnShaderReinitialized([[maybe_unused]] const JE::Render::RPI::Shader& shader)
     {
         m_needsRebuild = true;
         m_drawPacketManager->SetNeedsUpdate(true);
     }
-    void DeferredDrawPacket::OnShaderAssetReinitialized([[maybe_unused]] const Data::Asset<RPI::ShaderAsset>& shaderAsset)
+    void DeferredDrawPacket::OnShaderAssetReinitialized([[maybe_unused]] const Data::Asset<JE::Render::RPI::ShaderAsset>& shaderAsset)
     {
         m_needsRebuild = true;
         m_drawPacketManager->SetNeedsUpdate(true);
     }
-    void DeferredDrawPacket::OnShaderVariantReinitialized([[maybe_unused]] const RPI::ShaderVariant& shaderVariant)
+    void DeferredDrawPacket::OnShaderVariantReinitialized([[maybe_unused]] const JE::Render::RPI::ShaderVariant& shaderVariant)
     {
         m_needsRebuild = true;
         m_drawPacketManager->SetNeedsUpdate(true);
     }
 
     void DeferredDrawPacket::Init(
-        const RPI::Scene* scene, RPI::Material* material, const Name& materialPipelineName, const RPI::ShaderCollection::Item& shaderItem)
+        const JE::Render::RPI::Scene* scene, JE::Render::RPI::Material* material, const Name& materialPipelineName, const JE::Render::RPI::ShaderCollection::Item& shaderItem)
     {
         auto materialAsset = material->GetAsset();
 
 #ifdef DEFERRED_DRAWPACKET_DEBUG_PRINT
             m_instigatingMaterialAsset =
-                Data::Asset<RPI::MaterialAsset>(materialAsset.GetId(), materialAsset.GetType(), materialAsset.GetHint());
+                Data::Asset<JE::Render::RPI::MaterialAsset>(materialAsset.GetId(), materialAsset.GetType(), materialAsset.GetHint());
             // the draw-packet can outlast the original material asset it was created for, so don't keep a real reference to the asset
             m_instigatingMaterialAsset.SetAutoLoadBehavior(Data::AssetLoadBehavior::NoLoad);
 
             auto materialTypeAsset = materialAsset->GetMaterialTypeAsset();
             m_instigatingMaterialTypeAsset =
-                Data::Asset<RPI::MaterialTypeAsset>(materialTypeAsset.GetId(), materialTypeAsset.GetType(), materialTypeAsset.GetHint());
+                Data::Asset<JE::Render::RPI::MaterialTypeAsset>(materialTypeAsset.GetId(), materialTypeAsset.GetType(), materialTypeAsset.GetHint());
             m_instigatingMaterialTypeAsset.SetAutoLoadBehavior(Data::AssetLoadBehavior::NoLoad);
 #endif /* DEFERRED_DRAWPACKET_DEBUG_PRINT */
 
-            RPI::ShaderOptionGroup shaderOptions = *shaderItem.GetShaderOptions();
+            JE::Render::RPI::ShaderOptionGroup shaderOptions = *shaderItem.GetShaderOptions();
             shaderOptions.SetUnspecifiedToDefaultValues();
             m_shaderVariantId = shaderOptions.GetShaderVariantId();
 
-            m_shader = RPI::Shader::FindOrCreate(shaderItem.GetShaderAsset());
+            m_shader = JE::Render::RPI::Shader::FindOrCreate(shaderItem.GetShaderAsset());
             if (!m_shader)
             {
                 AZ_Error(
@@ -83,7 +83,7 @@ namespace AZ::Render
                 return;
             }
 
-            AZ::RPI::ShaderReloadNotificationBus::Handler::BusConnect(m_shader->GetAssetId());
+            JE::Render::RPI::ShaderReloadNotificationBus::Handler::BusConnect(m_shader->GetAssetId());
 
             m_drawListTag = shaderItem.GetDrawListTagOverride();
             if (!m_drawListTag.IsValid())
@@ -102,7 +102,7 @@ namespace AZ::Render
             }
 
             // Shader - Variant and pipeline-State
-            const AZ::RPI::ShaderVariant& variant = m_shader->GetVariant(m_shaderVariantId);
+            const JE::Render::RPI::ShaderVariant& variant = m_shader->GetVariant(m_shaderVariantId);
 
             // Deferred Draw-SRG: Holds the shaderOptions, the material-Type - ID and the shaderDrawPacketId
             m_drawSrg = m_shader->CreateDrawSrgForShaderVariant(shaderOptions, false);
@@ -173,7 +173,7 @@ namespace AZ::Render
             drawRequest.m_sortKey = 0;
             drawRequest.m_uniqueShaderResourceGroup = m_drawSrg->GetRHIShaderResourceGroup();
 
-            if (m_materialPipelineName != RPI::MaterialPipelineNone)
+            if (m_materialPipelineName != JE::Render::RPI::MaterialPipelineNone)
             {
                 RHI::DrawFilterTag pipelineTag = scene->GetDrawFilterTagRegistry()->AcquireTag(m_materialPipelineName);
                 AZ_Assert(pipelineTag.IsValid(), "Could not acquire pipeline filter tag '%s'.", m_materialPipelineName.GetCStr());
@@ -193,7 +193,7 @@ namespace AZ::Render
             m_drawPacket = drawPacketBuilder.End();
     }
 
-        void DeferredDrawPacket::CompileDrawSrg(Data::Instance<RPI::Buffer> drawPacketIdBuffer)
+        void DeferredDrawPacket::CompileDrawSrg(Data::Instance<JE::Render::RPI::Buffer> drawPacketIdBuffer)
         {
             // unique id for combination of the material type and shader options
             RHI::ShaderInputNameIndex shaderDrawPacketIds{ "m_drawPacketIds" };

@@ -19,11 +19,11 @@ namespace ImageProcessingAtom
 
         AZ::RHI::Format PixelFormatToRHIFormat(EPixelFormat pixelFormat, bool isSrgb);
 
-        AZ::Data::Asset<AZ::RPI::StreamingImageAsset> LoadImageAsset(const AZ::Data::AssetId& assetId);
+        AZ::Data::Asset<JE::Render::RPI::StreamingImageAsset> LoadImageAsset(const AZ::Data::AssetId& assetId);
 
         IImageObjectPtr LoadImageFromImageAsset(const AZ::Data::AssetId& assetId);
 
-        IImageObjectPtr LoadImageFromImageAsset(const AZ::Data::Asset<AZ::RPI::StreamingImageAsset>& asset);
+        IImageObjectPtr LoadImageFromImageAsset(const AZ::Data::Asset<JE::Render::RPI::StreamingImageAsset>& asset);
 
         bool SaveImageToDdsFile(IImageObjectPtr image, AZStd::string_view filePath);
 
@@ -33,7 +33,7 @@ namespace ImageProcessingAtom
         class AsyncImageAssetLoader : public AZ::Data::AssetBus::MultiHandler
         {
         public:
-            using Callback = AZStd::function<void(const AZ::Data::Asset<AZ::RPI::StreamingImageAsset>&)>;
+            using Callback = AZStd::function<void(const AZ::Data::Asset<JE::Render::RPI::StreamingImageAsset>&)>;
 
             AsyncImageAssetLoader() = default;
             ~AsyncImageAssetLoader();
@@ -51,7 +51,7 @@ namespace ImageProcessingAtom
 
             void HandleAssetNotification(AZ::Data::Asset<AZ::Data::AssetData> asset);
 
-            using AssetCallbackPair = AZStd::pair<AZ::Data::Asset<AZ::RPI::StreamingImageAsset>, Callback>;
+            using AssetCallbackPair = AZStd::pair<AZ::Data::Asset<JE::Render::RPI::StreamingImageAsset>, Callback>;
             using AssetCallbackMap = AZStd::unordered_map<AZ::Data::AssetId, AssetCallbackPair>;
             AssetCallbackMap m_assetCallbackMap;
         };

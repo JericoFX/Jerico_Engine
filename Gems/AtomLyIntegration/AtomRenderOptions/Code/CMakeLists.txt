@@ -19,7 +19,7 @@ if(PAL_TRAIT_BUILD_HOST_TOOLS)
             PRIVATE
                 AZ::AzCore
                 AZ::AzToolsFramework
-                Gem::Atom_RPI.Public
+                JE::RenderIntegration
     )
 
     # Inject the gem name into the Module source file

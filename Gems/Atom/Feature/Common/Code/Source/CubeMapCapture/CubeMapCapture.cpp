@@ -13,7 +13,7 @@ namespace AZ
 {
     namespace Render
     {
-        void CubeMapCapture::Init(RPI::Scene* scene)
+        void CubeMapCapture::Init(JE::Render::RPI::Scene* scene)
         {
             AZ_Assert(scene, "CubeMapCapture::Init called with a null Scene pointer");
             m_scene = scene;
@@ -43,7 +43,7 @@ namespace AZ
             CubeMapRenderer::StartRender(callback, m_transform, m_exposure);
         }
 
-        void CubeMapCapture::OnRenderPipelinePassesChanged(RPI::RenderPipeline* renderPipeline)
+        void CubeMapCapture::OnRenderPipelinePassesChanged(JE::Render::RPI::RenderPipeline* renderPipeline)
         {
             CubeMapRenderer::SetDefaultView(renderPipeline);
         }

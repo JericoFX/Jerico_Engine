@@ -10,8 +10,8 @@
 #include <Atom/RHI/FrameScheduler.h>
 #include <Atom/RHI/CommandList.h>
 #include <Atom/RHI/RHISystemInterface.h>
-#include <Atom/RPI.Public/RenderPipeline.h>
-#include <Atom/RPI.Public/Scene.h>
+#include <JE/Render/RPI/Public/RenderPipeline.h>
+#include <JE/Render/RPI/Public/Scene.h>
 #include <DiffuseProbeGrid_Traits_Platform.h>
 #include <Render/DiffuseProbeGridFeatureProcessor.h>
 #include <Render/DiffuseProbeGridVisualizationAccelerationStructurePass.h>
@@ -20,13 +20,13 @@ namespace AZ
 {
     namespace Render
     {
-        RPI::Ptr<DiffuseProbeGridVisualizationAccelerationStructurePass> DiffuseProbeGridVisualizationAccelerationStructurePass::Create(const RPI::PassDescriptor& descriptor)
+        JE::Render::RPI::Ptr<DiffuseProbeGridVisualizationAccelerationStructurePass> DiffuseProbeGridVisualizationAccelerationStructurePass::Create(const JE::Render::RPI::PassDescriptor& descriptor)
         {
-            RPI::Ptr<DiffuseProbeGridVisualizationAccelerationStructurePass> diffuseProbeGridVisualizationAccelerationStructurePass = aznew DiffuseProbeGridVisualizationAccelerationStructurePass(descriptor);
+            JE::Render::RPI::Ptr<DiffuseProbeGridVisualizationAccelerationStructurePass> diffuseProbeGridVisualizationAccelerationStructurePass = aznew DiffuseProbeGridVisualizationAccelerationStructurePass(descriptor);
             return diffuseProbeGridVisualizationAccelerationStructurePass;
         }
 
-        DiffuseProbeGridVisualizationAccelerationStructurePass::DiffuseProbeGridVisualizationAccelerationStructurePass(const RPI::PassDescriptor& descriptor)
+        DiffuseProbeGridVisualizationAccelerationStructurePass::DiffuseProbeGridVisualizationAccelerationStructurePass(const JE::Render::RPI::PassDescriptor& descriptor)
             : Pass(descriptor)
         {
             // disable this pass if we're on a platform that doesn't support raytracing
@@ -48,7 +48,7 @@ namespace AZ
                 return false;
             }
 
-            RPI::Scene* scene = m_pipeline->GetScene();
+            JE::Render::RPI::Scene* scene = m_pipeline->GetScene();
             if (!scene)
             {
                 return false;
@@ -81,7 +81,7 @@ namespace AZ
 
         void DiffuseProbeGridVisualizationAccelerationStructurePass::SetupFrameGraphDependencies(RHI::FrameGraphInterface frameGraph)
         {
-            RPI::Scene* scene = m_pipeline->GetScene();
+            JE::Render::RPI::Scene* scene = m_pipeline->GetScene();
             DiffuseProbeGridFeatureProcessor* diffuseProbeGridFeatureProcessor = scene->GetFeatureProcessor<DiffuseProbeGridFeatureProcessor>();
 
             frameGraph.SetEstimatedItemCount(aznumeric_cast<uint32_t>(diffuseProbeGridFeatureProcessor->GetVisibleProbeGrids().size()));
@@ -145,7 +145,7 @@ namespace AZ
 
         void DiffuseProbeGridVisualizationAccelerationStructurePass::BuildCommandList(const RHI::FrameGraphExecuteContext& context)
         {
-            RPI::Scene* scene = m_pipeline->GetScene();
+            JE::Render::RPI::Scene* scene = m_pipeline->GetScene();
             DiffuseProbeGridFeatureProcessor* diffuseProbeGridFeatureProcessor = scene->GetFeatureProcessor<DiffuseProbeGridFeatureProcessor>();
 
             // build the visualization BLAS from the DiffuseProbeGridFeatureProcessor
@@ -181,7 +181,7 @@ namespace AZ
 
         void DiffuseProbeGridVisualizationAccelerationStructurePass::FrameEndInternal()
         {
-            RPI::Scene* scene = m_pipeline->GetScene();
+            JE::Render::RPI::Scene* scene = m_pipeline->GetScene();
             DiffuseProbeGridFeatureProcessor* diffuseProbeGridFeatureProcessor = scene->GetFeatureProcessor<DiffuseProbeGridFeatureProcessor>();
 
             for (auto& diffuseProbeGrid : diffuseProbeGridFeatureProcessor->GetVisibleProbeGrids())

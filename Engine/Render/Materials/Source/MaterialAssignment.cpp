@@ -6,7 +6,7 @@
  *
  */
 
-#include <Atom/RPI.Reflect/Model/ModelAsset.h>
+#include <JE/Render/RPI/Reflect/Model/ModelAsset.h>
 #include <JE/Render/Materials/MaterialAssignment.h>
 #include <AzCore/Asset/AssetSerializer.h>
 #include <AzCore/RTTI/BehaviorContext.h>
@@ -61,8 +61,8 @@ namespace JE
                     ->Constructor()
                     ->Constructor<const MaterialAssignment&>()
                     ->Constructor<const AZ::Data::AssetId&>()
-                    ->Constructor<const AZ::Data::Asset<AZ::RPI::MaterialAsset>&>()
-                    ->Constructor<const AZ::Data::Asset<AZ::RPI::MaterialAsset>&, const AZ::Data::Instance<AZ::RPI::Material>&>()
+                    ->Constructor<const AZ::Data::Asset<JE::Render::RPI::MaterialAsset>&>()
+                    ->Constructor<const AZ::Data::Asset<JE::Render::RPI::MaterialAsset>&, const AZ::Data::Instance<JE::Render::RPI::Material>&>()
                     ->Method("ToString", &MaterialAssignment::ToString)
                     ->Property("materialAsset", BehaviorValueProperty(&MaterialAssignment::m_materialAsset))
                     ->Property("propertyOverrides", BehaviorValueProperty(&MaterialAssignment::m_propertyOverrides));
@@ -85,16 +85,16 @@ namespace JE
         }
 
         MaterialAssignment::MaterialAssignment(const AZ::Data::AssetId& materialAssetId)
-            : MaterialAssignment(AZ::Data::Asset<AZ::RPI::MaterialAsset>(materialAssetId, AZ::AzTypeInfo<AZ::RPI::MaterialAsset>::Uuid()))
+            : MaterialAssignment(AZ::Data::Asset<JE::Render::RPI::MaterialAsset>(materialAssetId, AZ::AzTypeInfo<JE::Render::RPI::MaterialAsset>::Uuid()))
         {
         }
 
-        MaterialAssignment::MaterialAssignment(const AZ::Data::Asset<AZ::RPI::MaterialAsset>& asset)
-            : MaterialAssignment(asset, AZ::Data::Instance<AZ::RPI::Material>())
+        MaterialAssignment::MaterialAssignment(const AZ::Data::Asset<JE::Render::RPI::MaterialAsset>& asset)
+            : MaterialAssignment(asset, AZ::Data::Instance<JE::Render::RPI::Material>())
         {
         }
 
-        MaterialAssignment::MaterialAssignment(const AZ::Data::Asset<AZ::RPI::MaterialAsset>& asset, const AZ::Data::Instance<AZ::RPI::Material>& instance)
+        MaterialAssignment::MaterialAssignment(const AZ::Data::Asset<JE::Render::RPI::MaterialAsset>& asset, const AZ::Data::Instance<JE::Render::RPI::Material>& instance)
             : m_defaultMaterialAsset(asset)
             , m_materialAsset(asset)
             , m_materialInstance(instance)
@@ -111,7 +111,7 @@ namespace JE
             if (m_materialAsset.GetId().IsValid() && m_materialAsset.IsReady())
             {
                 const bool createUniqueInstance = m_materialInstanceMustBeUnique || !m_propertyOverrides.empty();
-                m_materialInstance = createUniqueInstance ? AZ::RPI::Material::Create(m_materialAsset) : AZ::RPI::Material::FindOrCreate(m_materialAsset);
+                m_materialInstance = createUniqueInstance ? JE::Render::RPI::Material::Create(m_materialAsset) : JE::Render::RPI::Material::FindOrCreate(m_materialAsset);
                 AZ_Error("MaterialAssignment", m_materialInstance, "Material instance not initialized");
                 return;
             }
@@ -119,7 +119,7 @@ namespace JE
             if (m_defaultMaterialAsset.GetId().IsValid() && m_defaultMaterialAsset.IsReady())
             {
                 const bool createUniqueInstance = m_materialInstanceMustBeUnique || !m_propertyOverrides.empty();
-                m_materialInstance = createUniqueInstance ? AZ::RPI::Material::Create(m_defaultMaterialAsset) : AZ::RPI::Material::FindOrCreate(m_defaultMaterialAsset);
+                m_materialInstance = createUniqueInstance ? JE::Render::RPI::Material::Create(m_defaultMaterialAsset) : JE::Render::RPI::Material::FindOrCreate(m_defaultMaterialAsset);
                 AZ_Error("MaterialAssignment", m_materialInstance, "Material instance not initialized");
                 return;
             }
@@ -174,7 +174,7 @@ namespace JE
                 {
                     bool wasRenamed = false;
                     AZ::Name newName;
-                    AZ::RPI::MaterialPropertyIndex materialPropertyIndex =
+                    JE::Render::RPI::MaterialPropertyIndex materialPropertyIndex =
                         m_materialInstance->FindPropertyIndex(propertyPair.first, &wasRenamed, &newName);
 
                     // FindPropertyIndex will have already reported a message about what the old and new names are. Here we just add
@@ -253,7 +253,7 @@ namespace JE
             return DefaultMaterialAssignment;
         }
 
-        MaterialAssignmentMap GetDefaultMaterialMapFromModelAsset(const AZ::Data::Asset<AZ::RPI::ModelAsset> modelAsset)
+        MaterialAssignmentMap GetDefaultMaterialMapFromModelAsset(const AZ::Data::Asset<JE::Render::RPI::ModelAsset> modelAsset)
         {
             MaterialAssignmentMap materials;
             materials[DefaultMaterialAssignmentId] = MaterialAssignment();
@@ -281,7 +281,7 @@ namespace JE
             return materials;
         }
 
-        MaterialAssignmentLabelMap GetMaterialSlotLabelsFromModelAsset(const AZ::Data::Asset<AZ::RPI::ModelAsset> modelAsset)
+        MaterialAssignmentLabelMap GetMaterialSlotLabelsFromModelAsset(const AZ::Data::Asset<JE::Render::RPI::ModelAsset> modelAsset)
         {
             MaterialAssignmentLabelMap labels;
             labels[DefaultMaterialAssignmentId] = "Default Material";
@@ -289,12 +289,12 @@ namespace JE
             if (modelAsset.IsReady())
             {
                 MaterialAssignmentLodIndex lodIndex = 0;
-                for (const AZ::Data::Asset<AZ::RPI::ModelLodAsset>& lod : modelAsset->GetLodAssets())
+                for (const AZ::Data::Asset<JE::Render::RPI::ModelLodAsset>& lod : modelAsset->GetLodAssets())
                 {
-                    for (const AZ::RPI::ModelLodAsset::Mesh& mesh : lod->GetMeshes())
+                    for (const JE::Render::RPI::ModelLodAsset::Mesh& mesh : lod->GetMeshes())
                     {
-                        const AZ::RPI::ModelMaterialSlot::StableId slotId = mesh.GetMaterialSlotId();
-                        const AZ::RPI::ModelMaterialSlot& slot = modelAsset->FindMaterialSlot(slotId);
+                        const JE::Render::RPI::ModelMaterialSlot::StableId slotId = mesh.GetMaterialSlotId();
+                        const JE::Render::RPI::ModelMaterialSlot& slot = modelAsset->FindMaterialSlot(slotId);
 
                         const MaterialAssignmentId generalId = MaterialAssignmentId::CreateFromStableIdOnly(slotId);
                         labels[generalId] = slot.m_displayName.GetStringView();
@@ -310,12 +310,12 @@ namespace JE
         }
 
         MaterialAssignmentId GetMaterialSlotIdFromLodAsset(
-            const AZ::Data::Asset<AZ::RPI::ModelAsset> modelAsset,
-            const AZ::Data::Asset<AZ::RPI::ModelLodAsset>& lodAsset,
+            const AZ::Data::Asset<JE::Render::RPI::ModelAsset> modelAsset,
+            const AZ::Data::Asset<JE::Render::RPI::ModelLodAsset>& lodAsset,
             const MaterialAssignmentLodIndex lodIndex,
             const AZStd::string& labelFilter)
         {
-            for (const AZ::RPI::ModelLodAsset::Mesh& mesh : lodAsset->GetMeshes())
+            for (const JE::Render::RPI::ModelLodAsset::Mesh& mesh : lodAsset->GetMeshes())
             {
                 const auto slotId = mesh.GetMaterialSlotId();
                 const auto& slot = modelAsset->FindMaterialSlot(slotId);
@@ -328,7 +328,7 @@ namespace JE
         }
 
         MaterialAssignmentId GetMaterialSlotIdFromModelAsset(
-            const AZ::Data::Asset<AZ::RPI::ModelAsset> modelAsset, const MaterialAssignmentLodIndex lodFilter, const AZStd::string& labelFilter)
+            const AZ::Data::Asset<JE::Render::RPI::ModelAsset> modelAsset, const MaterialAssignmentLodIndex lodFilter, const AZStd::string& labelFilter)
         {
             if (modelAsset.IsReady() && !labelFilter.empty())
             {
@@ -352,7 +352,7 @@ namespace JE
         }
 
         template<typename T>
-        AZ::RPI::MaterialPropertyValue ConvertMaterialPropertyValueNumericType(const AZStd::any& value)
+        JE::Render::RPI::MaterialPropertyValue ConvertMaterialPropertyValueNumericType(const AZStd::any& value)
         {
             if (value.is<int32_t>())
             {
@@ -371,15 +371,15 @@ namespace JE
                 return aznumeric_cast<T>(AZStd::any_cast<double>(value));
             }
 
-            return AZ::RPI::MaterialPropertyValue::FromAny(value);
+            return JE::Render::RPI::MaterialPropertyValue::FromAny(value);
         }
 
-        AZ::RPI::MaterialPropertyValue ConvertMaterialPropertyValueFromScript(
-            const AZ::RPI::MaterialPropertyDescriptor* propertyDescriptor, const AZStd::any& value)
+        JE::Render::RPI::MaterialPropertyValue ConvertMaterialPropertyValueFromScript(
+            const JE::Render::RPI::MaterialPropertyDescriptor* propertyDescriptor, const AZStd::any& value)
         {
             switch (propertyDescriptor->GetDataType())
             {
-            case AZ::RPI::MaterialPropertyDataType::Enum:
+            case JE::Render::RPI::MaterialPropertyDataType::Enum:
                 if (value.is<AZ::Name>())
                 {
                     return propertyDescriptor->GetEnumValue(AZStd::any_cast<AZ::Name>(value));
@@ -389,19 +389,19 @@ namespace JE
                     return propertyDescriptor->GetEnumValue(AZ::Name(AZStd::any_cast<AZStd::string>(value)));
                 }
                 return ConvertMaterialPropertyValueNumericType<uint32_t>(value);
-            case AZ::RPI::MaterialPropertyDataType::Int:
+            case JE::Render::RPI::MaterialPropertyDataType::Int:
                 return ConvertMaterialPropertyValueNumericType<int32_t>(value);
-            case AZ::RPI::MaterialPropertyDataType::UInt:
+            case JE::Render::RPI::MaterialPropertyDataType::UInt:
                 return ConvertMaterialPropertyValueNumericType<uint32_t>(value);
-            case AZ::RPI::MaterialPropertyDataType::Float:
+            case JE::Render::RPI::MaterialPropertyDataType::Float:
                 return ConvertMaterialPropertyValueNumericType<float>(value);
-            case AZ::RPI::MaterialPropertyDataType::Bool:
+            case JE::Render::RPI::MaterialPropertyDataType::Bool:
                 return ConvertMaterialPropertyValueNumericType<bool>(value);
             default:
                 break;
             }
 
-            return AZ::RPI::MaterialPropertyValue::FromAny(value);
+            return JE::Render::RPI::MaterialPropertyValue::FromAny(value);
         }
 
         AZ::Render::CustomMaterialMap ConvertToCustomMaterialMap(const JE::Render::MaterialAssignmentMap& materials)

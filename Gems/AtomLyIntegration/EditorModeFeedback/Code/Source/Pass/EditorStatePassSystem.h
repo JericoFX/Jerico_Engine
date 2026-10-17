@@ -32,16 +32,16 @@ namespace AZ::Render
         EditorStatePassSystem(EditorStateList&& editorStates);
 
         //! Adds the editor state effect parent passes to the specified render pipeline.
-        void AddPassesToRenderPipeline(RPI::RenderPipeline* renderPipeline);
+        void AddPassesToRenderPipeline(JE::Render::RPI::RenderPipeline* renderPipeline);
 
         //! Returns the map of masks to the entities to be rendered to those masks.
         EntityMaskMap GetEntitiesForEditorStates() const;
 
         //! Configures the editor state pass instances for the specified render pipeline.
-        void ConfigureStatePassesForPipeline(RPI::RenderPipeline* renderPipeline);
+        void ConfigureStatePassesForPipeline(JE::Render::RPI::RenderPipeline* renderPipeline);
 
         //! Removes the editor state pass instances for the specified render pipeline.
-        void RemoveStatePassesForPipeline(RPI::RenderPipeline* renderPipeline);
+        void RemoveStatePassesForPipeline(JE::Render::RPI::RenderPipeline* renderPipeline);
 
         //! Returns the set of all masks used by this pass system.
         const AZStd::unordered_set<Name>& GetMasks() const

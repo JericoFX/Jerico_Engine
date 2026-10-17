@@ -21,7 +21,6 @@
         "Asset/ImageProcessingAtom",
         "Feature/Common",
         "RHI",
-        "RPI",
         "Tools/AtomToolsFramework",
         "Tools/MaterialCanvas",
         "Tools/MaterialEditor",
@@ -31,7 +30,6 @@
     "dependencies": [
         "Atom_Feature_Common",
         "Atom_RHI",
-        "Atom_RPI",
         "AtomToolsFramework",
         "ShaderManagementConsole",
         "Atom_RHI_Null",

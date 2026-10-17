@@ -15,9 +15,9 @@
 
 #include <Atom/RHI.Reflect/ShaderResourceGroupLayoutDescriptor.h>
 
-#include <Atom/RPI.Public/Shader/Shader.h>
-#include <Atom/RPI.Public/Shader/ShaderResourceGroup.h>
-#include <Atom/RPI.Public/Image/StreamingImage.h>
+#include <JE/Render/RPI/Public/Shader/Shader.h>
+#include <JE/Render/RPI/Public/Shader/ShaderResourceGroup.h>
+#include <JE/Render/RPI/Public/Image/StreamingImage.h>
 
 #include <Atom/Feature/ParamMacros/ParamMacrosHowTo.inl>    // for education purposes
 #include <Atom/Feature/ScreenSpace/DeferredFogSettingsInterface.h>
@@ -81,7 +81,7 @@ namespace AZ
             // Applies settings from this onto target using override settings and passed alpha value for blending
             void ApplySettingsTo(DeferredFogSettings* target, float alpha) const;
 
-            Data::Instance<RPI::StreamingImage> LoadStreamingImage(const char* textureFilePath, const char* sampleName);
+            Data::Instance<JE::Render::RPI::StreamingImage> LoadStreamingImage(const char* textureFilePath, const char* sampleName);
 
             //---------------------------------------------------------
             // Generate Get / Set override methods
@@ -127,7 +127,7 @@ namespace AZ
             // Macro to replace only the image macro for defining only image resources
 #undef  AZ_GFX_TEXTURE2D_PARAM
 #define AZ_GFX_TEXTURE2D_PARAM(Name, MemberName, DefaultValue)            \
-            Data::Instance<AZ::RPI::Image> MemberName##Image;             \
+            Data::Instance<JE::Render::RPI::Image> MemberName##Image;             \
             AZStd::string MemberName##CurrentlyLoaded;
 
 #include <Atom/Feature/ScreenSpace/DeferredFogParams.inl>

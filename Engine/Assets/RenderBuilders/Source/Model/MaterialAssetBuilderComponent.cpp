@@ -26,12 +26,12 @@
 
 #include <SceneAPI/SceneCore/DataTypes/GraphData/IMaterialData.h>
 
-#include <Atom/RPI.Edit/Material/MaterialSourceData.h>
-#include <Atom/RPI.Edit/Material/MaterialConverterBus.h>
-#include <Atom/RPI.Edit/Material/MaterialUtils.h>
-#include <Atom/RPI.Edit/Common/AssetUtils.h>
+#include <JE/Editor/Render/RPI/Edit/Material/MaterialSourceData.h>
+#include <JE/Editor/Render/RPI/Edit/Material/MaterialConverterBus.h>
+#include <JE/Editor/Render/RPI/Edit/Material/MaterialUtils.h>
+#include <JE/Editor/Render/RPI/Edit/Common/AssetUtils.h>
 
-#include <Atom/RPI.Reflect/Material/MaterialAsset.h>
+#include <JE/Render/RPI/Reflect/Material/MaterialAsset.h>
 #include <AzCore/Settings/SettingsRegistry.h>
 
 
@@ -73,11 +73,11 @@ namespace JE::Assets::RenderBuilders
     void MaterialAssetDependenciesComponent::ReportJobDependencies(AZ::SceneAPI::JobDependencyList& jobDependencyList, const char* platformIdentifier)
     {
         bool conversionEnabled = false;
-        AZ::RPI::MaterialConverterBus::BroadcastResult(conversionEnabled, &AZ::RPI::MaterialConverterBus::Events::IsEnabled);
+        JE::Render::RPI::MaterialConverterBus::BroadcastResult(conversionEnabled, &JE::Render::RPI::MaterialConverterBus::Events::IsEnabled);
 
         // Right now, scene file importing only supports a single material type, once that changes, this will have to be re-designed, see ATOM-3554
         AZStd::string materialTypePath;
-        AZ::RPI::MaterialConverterBus::BroadcastResult(materialTypePath, &AZ::RPI::MaterialConverterBus::Events::GetMaterialTypePath);
+        JE::Render::RPI::MaterialConverterBus::BroadcastResult(materialTypePath, &JE::Render::RPI::MaterialConverterBus::Events::GetMaterialTypePath);
 
         if (conversionEnabled && !materialTypePath.empty())
         {
@@ -100,7 +100,7 @@ namespace JE::Assets::RenderBuilders
         // This will cause scene files to be reprocessed whenever the global MaterialConverter settings change.
 
         AZStd::string conversionInfo = "[Material conversion info missing]";
-        AZ::RPI::MaterialConverterBus::BroadcastResult(conversionInfo, &AZ::RPI::MaterialConverterBus::Events::GetFingerprintInfo);
+        JE::Render::RPI::MaterialConverterBus::BroadcastResult(conversionInfo, &JE::Render::RPI::MaterialConverterBus::Events::GetFingerprintInfo);
         fingerprintInfo.insert(conversionInfo);
     }
 
@@ -113,10 +113,10 @@ namespace JE::Assets::RenderBuilders
         }
     }
 
-    AZ::Data::Asset<AZ::RPI::MaterialAsset> MaterialAssetBuilderComponent::GetDefaultMaterialAsset() const
+    AZ::Data::Asset<JE::Render::RPI::MaterialAsset> MaterialAssetBuilderComponent::GetDefaultMaterialAsset() const
     {
         AZStd::string defaultMaterialPath;
-        AZ::RPI::MaterialConverterBus::BroadcastResult(defaultMaterialPath, &AZ::RPI::MaterialConverterBus::Events::GetDefaultMaterialPath);
+        JE::Render::RPI::MaterialConverterBus::BroadcastResult(defaultMaterialPath, &JE::Render::RPI::MaterialConverterBus::Events::GetDefaultMaterialPath);
 
         if (defaultMaterialPath.empty())
         {
@@ -124,7 +124,7 @@ namespace JE::Assets::RenderBuilders
         }
         else
         {
-            auto defaultMaterialAssetId = AZ::RPI::AssetUtils::MakeAssetId(defaultMaterialPath, 0);
+            auto defaultMaterialAssetId = JE::Render::RPI::AssetUtils::MakeAssetId(defaultMaterialPath, 0);
             if (!defaultMaterialAssetId.IsSuccess())
             {
                 AZ_Error("MaterialAssetBuilderComponent", false, "Could not find asset '%s'", defaultMaterialPath.c_str());
@@ -132,7 +132,7 @@ namespace JE::Assets::RenderBuilders
             }
             else
             {
-                return AZ::Data::AssetManager::Instance().CreateAsset<AZ::RPI::MaterialAsset>(defaultMaterialAssetId.GetValue(), AZ::Data::AssetLoadBehaviorNamespace::PreLoad);
+                return AZ::Data::AssetManager::Instance().CreateAsset<JE::Render::RPI::MaterialAsset>(defaultMaterialAssetId.GetValue(), AZ::Data::AssetLoadBehaviorNamespace::PreLoad);
             }
         }
     }
@@ -178,7 +178,7 @@ namespace JE::Assets::RenderBuilders
 
         struct NamedMaterialSourceData
         {
-            AZ::RPI::MaterialSourceData m_data;
+            JE::Render::RPI::MaterialSourceData m_data;
             AZStd::string m_name;
         };
         AZStd::unordered_map<uint64_t, NamedMaterialSourceData> materialSourceDataByUid;
@@ -202,11 +202,11 @@ namespace JE::Assets::RenderBuilders
                 }
 
                 // The source data for generating material asset
-                AZ::RPI::MaterialSourceData sourceData;
+                JE::Render::RPI::MaterialSourceData sourceData;
 
                 // User hook to create their materials based on the data from the scene pipeline
                 bool result = false;
-                AZ::RPI::MaterialConverterBus::BroadcastResult(result, &AZ::RPI::MaterialConverterBus::Events::ConvertMaterial, *materialData, sourceData);
+                JE::Render::RPI::MaterialConverterBus::BroadcastResult(result, &JE::Render::RPI::MaterialConverterBus::Events::ConvertMaterial, *materialData, sourceData);
                 if (result)
                 {
                     materialSourceDataByUid[materialUid] = { AZStd::move(sourceData), materialData->GetMaterialName() };
@@ -221,7 +221,7 @@ namespace JE::Assets::RenderBuilders
             AZ::Data::AssetId assetId(sourceSceneUuid, GetMaterialAssetSubId(materialUid));
 
             auto materialSourceData = itr.second;
-            AZ::Outcome<AZ::Data::Asset<AZ::RPI::MaterialAsset>> result = materialSourceData.m_data.CreateMaterialAsset(assetId, "", false);
+            AZ::Outcome<AZ::Data::Asset<JE::Render::RPI::MaterialAsset>> result = materialSourceData.m_data.CreateMaterialAsset(assetId, "", false);
             if (result.IsSuccess())
             {
                 context.m_outputMaterialsByUid[materialUid] = { result.GetValue(), materialSourceData.m_name };
@@ -238,7 +238,7 @@ namespace JE::Assets::RenderBuilders
 
     AZ::SceneAPI::Events::ProcessingResult MaterialAssetBuilderComponent::AssignDefaultMaterials(MaterialAssetBuilderContext& context) const
     {
-        AZ::Data::Asset<AZ::RPI::MaterialAsset> defaultMaterialAsset = GetDefaultMaterialAsset();
+        AZ::Data::Asset<JE::Render::RPI::MaterialAsset> defaultMaterialAsset = GetDefaultMaterialAsset();
 
         if (!defaultMaterialAsset.GetId().IsValid())
         {
@@ -280,7 +280,7 @@ namespace JE::Assets::RenderBuilders
     AZ::SceneAPI::Events::ProcessingResult MaterialAssetBuilderComponent::BuildMaterials(MaterialAssetBuilderContext& context) const
     {
         bool conversionEnabled = false;
-        AZ::RPI::MaterialConverterBus::BroadcastResult(conversionEnabled, &AZ::RPI::MaterialConverterBus::Events::IsEnabled);
+        JE::Render::RPI::MaterialConverterBus::BroadcastResult(conversionEnabled, &JE::Render::RPI::MaterialConverterBus::Events::IsEnabled);
 
         if (conversionEnabled)
         {

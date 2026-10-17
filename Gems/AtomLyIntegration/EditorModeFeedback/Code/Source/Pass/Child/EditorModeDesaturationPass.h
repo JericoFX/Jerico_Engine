@@ -25,13 +25,13 @@ namespace AZ
             virtual ~EditorModeDesaturationPass() = default;
 
             //! Creates a EditorModeDesaturationPass
-            static RPI::Ptr<EditorModeDesaturationPass> Create(const RPI::PassDescriptor& descriptor);
+            static JE::Render::RPI::Ptr<EditorModeDesaturationPass> Create(const JE::Render::RPI::PassDescriptor& descriptor);
 
             //! Sets the amount of desaturation to apply.
             void SetDesaturationAmount(float amount);
 
         protected:
-            EditorModeDesaturationPass(const RPI::PassDescriptor& descriptor);
+            EditorModeDesaturationPass(const JE::Render::RPI::PassDescriptor& descriptor);
             
             //! Pass behavior overrides
             void InitializeInternal() override;

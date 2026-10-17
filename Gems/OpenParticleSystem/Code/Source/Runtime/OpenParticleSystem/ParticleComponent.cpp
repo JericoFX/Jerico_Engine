@@ -8,7 +8,7 @@
 
 #include "ParticleComponent.h"
 
-#include <Atom/RPI.Public/Scene.h>
+#include <JE/Render/RPI/Public/Scene.h>
 #include <AzCore/Serialization/SerializeContext.h>
 #include <OpenParticleSystem/ParticleFeatureProcessor.h>
 

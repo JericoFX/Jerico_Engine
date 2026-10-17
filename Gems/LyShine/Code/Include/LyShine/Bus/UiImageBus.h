@@ -14,7 +14,7 @@
 
 class ISprite;
 
-namespace AZ::RPI
+namespace JE::Render::RPI
 {
     class AttachmentImageAsset;
 }
@@ -99,9 +99,9 @@ public: // member functions
     //! Returns whether the sprite changed
     virtual bool SetSpritePathnameIfExists(AZStd::string spritePath) = 0;
 
-    virtual AZ::Data::Asset<AZ::RPI::AttachmentImageAsset> GetAttachmentImageAsset() = 0;
+    virtual AZ::Data::Asset<JE::Render::RPI::AttachmentImageAsset> GetAttachmentImageAsset() = 0;
 
-    virtual void SetAttachmentImageAsset(const AZ::Data::Asset<AZ::RPI::AttachmentImageAsset>& attachmentImageAsset) = 0;
+    virtual void SetAttachmentImageAsset(const AZ::Data::Asset<JE::Render::RPI::AttachmentImageAsset>& attachmentImageAsset) = 0;
 
     //! Gets whether the render target is in sRGB color space
     virtual bool GetIsRenderTargetSRGB() = 0;

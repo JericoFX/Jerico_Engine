@@ -15,9 +15,9 @@
 #include <Atom/RHI.Reflect/ShaderResourceGroupLayoutDescriptor.h>
 #include <Atom/RHI.Reflect/ShaderInputNameIndex.h>
 
-#include <Atom/RPI.Public/Pass/ComputePass.h>
-#include <Atom/RPI.Public/Shader/Shader.h>
-#include <Atom/RPI.Public/Shader/ShaderResourceGroup.h>
+#include <JE/Render/RPI/Public/Pass/ComputePass.h>
+#include <JE/Render/RPI/Public/Shader/Shader.h>
+#include <JE/Render/RPI/Public/Shader/ShaderResourceGroup.h>
 
 namespace AZ
 {
@@ -29,23 +29,23 @@ namespace AZ
         //! The eye adaptation pass.
         //! This pass apply auto exposure control by like eye adaptation for input framebuffer color.
         class EyeAdaptationPass final
-            : public RPI::ComputePass
+            : public JE::Render::RPI::ComputePass
         {
             AZ_RPI_PASS(EyeAdaptationPass);
 
         public:
-            AZ_RTTI(EyeAdaptationPass, "{CC66CFD9-3266-4FD7-A5A8-ACA3753BDF4A}", RPI::ComputePass);
+            AZ_RTTI(EyeAdaptationPass, "{CC66CFD9-3266-4FD7-A5A8-ACA3753BDF4A}", JE::Render::RPI::ComputePass);
             AZ_CLASS_ALLOCATOR(EyeAdaptationPass, SystemAllocator);
             ~EyeAdaptationPass() = default;
 
             // Creates a EyeAdaptationPass
-            static RPI::Ptr<EyeAdaptationPass> Create(const RPI::PassDescriptor& descriptor);
+            static JE::Render::RPI::Ptr<EyeAdaptationPass> Create(const JE::Render::RPI::PassDescriptor& descriptor);
 
             // Check if we should enable of disable this pass
             bool IsEnabled() const override;
 
         protected:
-            EyeAdaptationPass(const RPI::PassDescriptor& descriptor);
+            EyeAdaptationPass(const JE::Render::RPI::PassDescriptor& descriptor);
             void InitBuffer();
 
             // A StructuredBuffer for exposure calculation on the GPU.
@@ -59,7 +59,7 @@ namespace AZ
 
             void FrameBeginInternal(FramePrepareParams params) override;
 
-            AZ::Data::Instance<RPI::Buffer> m_buffer;
+            AZ::Data::Instance<JE::Render::RPI::Buffer> m_buffer;
 
             // SRG binding indices...
             AZ::RHI::ShaderInputNameIndex m_exposureControlBufferInputIndex = "m_exposureControl";

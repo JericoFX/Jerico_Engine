@@ -16,7 +16,7 @@
 
 #include <AzFramework/Gem/GemInfo.h>
 
-#include <Atom/RPI.Reflect/Asset/AssetUtils.h>
+#include <JE/Render/RPI/Reflect/Asset/AssetUtils.h>
 
 namespace JE::Render
 {
@@ -59,12 +59,12 @@ namespace JE::Render
         void PassTemplatesAutoLoader::Activate()
         {
             // Register the event handler.
-            m_loadTemplatesHandler = AZ::RPI::PassSystemInterface::OnReadyLoadTemplatesEvent::Handler(
+            m_loadTemplatesHandler = JE::Render::RPI::PassSystemInterface::OnReadyLoadTemplatesEvent::Handler(
                 [&]()
                 {
                     LoadPassTemplates();
                 });
-            AZ::RPI::PassSystemInterface::Get()->ConnectEvent(m_loadTemplatesHandler);
+            JE::Render::RPI::PassSystemInterface::Get()->ConnectEvent(m_loadTemplatesHandler);
         }
 
         void PassTemplatesAutoLoader::Deactivate()
@@ -82,7 +82,7 @@ namespace JE::Render
                 return;
             }
 
-            auto* passSystemInterface = AZ::RPI::PassSystemInterface::Get();
+            auto* passSystemInterface = JE::Render::RPI::PassSystemInterface::Get();
             AZStd::unordered_set<AZStd::string> loadedTemplates; // See CAVEAT below.
             auto loadFunc = [&](const AZStd::string& assetPath)
             {
@@ -93,7 +93,7 @@ namespace JE::Render
                     // the PassTemplate asset located at <PROJECT_ROOT>/Passes/<PROJECT_NAME>/AutoLoadPassTemplates.azasset
                     return;
                 }
-                const auto assetId = AZ::RPI::AssetUtils::GetAssetIdForProductPath(assetPath.c_str(), AZ::RPI::AssetUtils::TraceLevel::None);
+                const auto assetId = JE::Render::RPI::AssetUtils::GetAssetIdForProductPath(assetPath.c_str(), JE::Render::RPI::AssetUtils::TraceLevel::None);
                 if (!assetId.IsValid())
                 {
                     // This is the most common scenario.

@@ -45,8 +45,8 @@
 #include <AzFramework/Input/Devices/Mouse/InputDeviceMouse.h>
 #include <AzFramework/Input/Devices/Touch/InputDeviceTouch.h>
 
-#include <Atom/RPI.Public/Image/ImageSystemInterface.h>
-#include <Atom/RPI.Public/Image/AttachmentImagePool.h>
+#include <JE/Render/RPI/Public/Image/ImageSystemInterface.h>
+#include <JE/Render/RPI/Public/Image/AttachmentImagePool.h>
 
 #include "Animation/UiAnimationSystem.h"
 
@@ -316,7 +316,7 @@ namespace
         return canHandleEvents;
     }
 
-    bool IsAttachmentImageAssetCompatible(const AZ::Data::Asset<AZ::RPI::AttachmentImageAsset>& attachmentImageAsset)
+    bool IsAttachmentImageAssetCompatible(const AZ::Data::Asset<JE::Render::RPI::AttachmentImageAsset>& attachmentImageAsset)
     {
         // Check that the attachment image asset's bind flags are compatible
         // - Supports use as a color attachment on a scope
@@ -1029,13 +1029,13 @@ void UiCanvasComponent::SetIsRenderToTexture(bool isRenderToTexture)
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-const AZ::Data::Asset<AZ::RPI::AttachmentImageAsset>& UiCanvasComponent::GetAttachmentImageAsset()
+const AZ::Data::Asset<JE::Render::RPI::AttachmentImageAsset>& UiCanvasComponent::GetAttachmentImageAsset()
 {
     return m_attachmentImageAsset;
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-void UiCanvasComponent::SetAttachmentImageAsset(const AZ::Data::Asset<AZ::RPI::AttachmentImageAsset>& attachmentImageAsset)
+void UiCanvasComponent::SetAttachmentImageAsset(const AZ::Data::Asset<JE::Render::RPI::AttachmentImageAsset>& attachmentImageAsset)
 {
     if (m_attachmentImageAsset != attachmentImageAsset)
     {
@@ -1922,17 +1922,17 @@ void UiCanvasComponent::MarkRenderGraphDirty()
 AZ::RHI::AttachmentId UiCanvasComponent::UseRenderTarget(const AZ::Name& renderTargetName, AZ::RHI::Size size)
 {
     // Create a render target that UI elements will render to
-    AZ::RPI::CreateAttachmentImageRequest createImageRequest;
+    JE::Render::RPI::CreateAttachmentImageRequest createImageRequest;
     AZ::RHI::ImageDescriptor& imageDesc = createImageRequest.m_imageDescriptor;
     imageDesc.m_bindFlags = AZ::RHI::ImageBindFlags::Color | AZ::RHI::ImageBindFlags::ShaderReadWrite;
     imageDesc.m_size = size;
     imageDesc.m_format = AZ::RHI::Format::R8G8B8A8_UNORM;
 
-    createImageRequest.m_imagePool = AZ::RPI::ImageSystemInterface::Get()->GetSystemAttachmentPool().get();
+    createImageRequest.m_imagePool = JE::Render::RPI::ImageSystemInterface::Get()->GetSystemAttachmentPool().get();
     createImageRequest.m_imageName = renderTargetName;
     createImageRequest.m_isUniqueName = false;  // Can't use an unique name since the previous render target's release is delayed
 
-    auto attachmentImage = AZ::RPI::AttachmentImage::Create(createImageRequest);
+    auto attachmentImage = JE::Render::RPI::AttachmentImage::Create(createImageRequest);
     if (!attachmentImage)
     {
         AZ_Warning("UI", false, "Failed to create render target");
@@ -1948,7 +1948,7 @@ AZ::RHI::AttachmentId UiCanvasComponent::UseRenderTarget(const AZ::Name& renderT
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-AZ::RHI::AttachmentId UiCanvasComponent::UseRenderTargetAsset(const AZ::Data::Asset<AZ::RPI::AttachmentImageAsset>& attachmentImageAsset)
+AZ::RHI::AttachmentId UiCanvasComponent::UseRenderTargetAsset(const AZ::Data::Asset<JE::Render::RPI::AttachmentImageAsset>& attachmentImageAsset)
 {
     AZ::RHI::AttachmentId attachmentId = AZ::RHI::AttachmentId{};
 
@@ -1962,7 +1962,7 @@ AZ::RHI::AttachmentId UiCanvasComponent::UseRenderTargetAsset(const AZ::Data::As
     if (IsAttachmentImageAssetCompatible(attachmentImageAsset))
     {
         // Instantiate or get an existing image instance for the specified asset
-        if (auto attachmentImage = AZ::RPI::AttachmentImage::FindOrCreate(attachmentImageAsset))
+        if (auto attachmentImage = JE::Render::RPI::AttachmentImage::FindOrCreate(attachmentImageAsset))
         {
             attachmentId = attachmentImage->GetAttachmentId();
             m_attachmentImageMap[attachmentId] = attachmentImage;
@@ -1990,7 +1990,7 @@ void UiCanvasComponent::ReleaseRenderTarget(const AZ::RHI::AttachmentId& attachm
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-AZ::Data::Instance<AZ::RPI::AttachmentImage> UiCanvasComponent::GetRenderTarget(const AZ::RHI::AttachmentId& attachmentId)
+AZ::Data::Instance<JE::Render::RPI::AttachmentImage> UiCanvasComponent::GetRenderTarget(const AZ::RHI::AttachmentId& attachmentId)
 {
     return m_attachmentImageMap[attachmentId];
 }
@@ -2068,7 +2068,7 @@ void UiCanvasComponent::RenderCanvas(bool isInGame, AZ::Vector2 viewportSize, Ui
 
             // Start building the render to texture node in the render graph
             AZ::Vector2 viewportTopLeft = AZ::Vector2::CreateZero();
-            AZ::Data::Instance<AZ::RPI::AttachmentImage> attachmentImage;
+            AZ::Data::Instance<JE::Render::RPI::AttachmentImage> attachmentImage;
             LyShine::RenderToTextureRequestBus::EventResult(attachmentImage, GetEntityId(),
                 &LyShine::RenderToTextureRequestBus::Events::GetRenderTarget, m_attachmentImageId);
             m_renderGraph.BeginRenderToTexture(attachmentImage, viewportTopLeft, viewportSize, clearColor);
@@ -2098,7 +2098,7 @@ void UiCanvasComponent::RenderCanvas(bool isInGame, AZ::Vector2 viewportSize, Ui
         if (!m_attachmentImageMap.empty())
         {
             // Process any queued pass changes to get rtt draw list tags in sync prior to adding draw calls
-            AZ::RPI::PassSystemInterface* passSystem = AZ::RPI::PassSystemInterface::Get();
+            JE::Render::RPI::PassSystemInterface* passSystem = JE::Render::RPI::PassSystemInterface::Get();
             passSystem->ProcessQueuedChanges();
         }
 
@@ -2180,9 +2180,9 @@ void UiCanvasComponent::QueueRttPassRebuild()
     UiRenderer* uiRenderer = m_renderInEditor ? GetUiRendererForEditor() : GetUiRendererForGame();
     if (uiRenderer && uiRenderer->GetViewportContext()) // can be null in automated testing
     {
-        if (const AZ::RPI::ScenePtr& scene = uiRenderer->GetViewportContext()->GetRenderScene())
+        if (const JE::Render::RPI::ScenePtr& scene = uiRenderer->GetViewportContext()->GetRenderScene())
         {
-            AZ::RPI::SceneId sceneId = scene->GetId();
+            JE::Render::RPI::SceneId sceneId = scene->GetId();
             LyShinePassRequestBus::Event(sceneId, &LyShinePassRequestBus::Events::RebuildRttChildren);
         }
     }

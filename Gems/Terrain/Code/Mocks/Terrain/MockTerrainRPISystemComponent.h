@@ -7,7 +7,7 @@
  */
 #pragma once
 
-#include <Atom/RPI.Public/RPISystem.h>
+#include <JE/Render/RPI/Public/RPISystem.h>
 #include <AzCore/Component/Component.h>
 
 namespace UnitTest
@@ -23,12 +23,12 @@ namespace UnitTest
 
         void Activate() override
         {
-            AZ::RPI::RPISystemDescriptor rpiSystemDescriptor;
-            m_rpiSystem = AZStd::make_unique<AZ::RPI::RPISystem>();
+            JE::Render::RPI::RPISystemDescriptor rpiSystemDescriptor;
+            m_rpiSystem = AZStd::make_unique<JE::Render::RPI::RPISystem>();
             m_rpiSystem->Initialize(rpiSystemDescriptor);
 
-            AZ::RPI::ImageSystemDescriptor imageSystemDescriptor;
-            m_imageSystem = AZStd::make_unique<AZ::RPI::ImageSystem>();
+            JE::Render::RPI::ImageSystemDescriptor imageSystemDescriptor;
+            m_imageSystem = AZStd::make_unique<JE::Render::RPI::ImageSystem>();
             m_imageSystem->Init(imageSystemDescriptor);
         }
 
@@ -46,8 +46,8 @@ namespace UnitTest
             services.push_back(AZ_CRC_CE("RPISystem"));
         }
 
-        AZStd::unique_ptr<AZ::RPI::RPISystem> m_rpiSystem;
-        AZStd::unique_ptr<AZ::RPI::ImageSystem> m_imageSystem;
+        AZStd::unique_ptr<JE::Render::RPI::RPISystem> m_rpiSystem;
+        AZStd::unique_ptr<JE::Render::RPI::ImageSystem> m_imageSystem;
     };
 
 } // namespace UnitTest

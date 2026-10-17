@@ -14,8 +14,8 @@
 #include <AzFramework/Entity/GameEntityContextBus.h>
 #include <AzFramework/Translation/TranslationDef.h>
 
-#include <Atom/RPI.Public/Scene.h>
-#include <Atom/RPI.Public/FeatureProcessorFactory.h>
+#include <JE/Render/RPI/Public/Scene.h>
+#include <JE/Render/RPI/Public/FeatureProcessorFactory.h>
 #include <TerrainRenderer/TerrainFeatureProcessor.h>
 
 namespace Terrain
@@ -241,21 +241,21 @@ namespace Terrain
         }
     }
 
-    AZ::RPI::Scene* TerrainWorldRendererComponent::GetScene() const
+    JE::Render::RPI::Scene* TerrainWorldRendererComponent::GetScene() const
     {
         // Find the entity context for the entity ID.
         AzFramework::EntityContextId entityContextId = AzFramework::EntityContextId::CreateNull();
         AzFramework::EntityIdContextQueryBus::EventResult(
             entityContextId, GetEntityId(), &AzFramework::EntityIdContextQueryBus::Events::GetOwningContextId);
 
-        return AZ::RPI::Scene::GetSceneForEntityContextId(entityContextId);
+        return JE::Render::RPI::Scene::GetSceneForEntityContextId(entityContextId);
     }
 
     void TerrainWorldRendererComponent::Activate()
     {
         // On component activation, register the terrain feature processor with Atom and the scene related to this entity context.
 
-        if (AZ::RPI::Scene* scene = GetScene(); scene)
+        if (JE::Render::RPI::Scene* scene = GetScene(); scene)
         {
             m_terrainFeatureProcessor = scene->EnableFeatureProcessor<Terrain::TerrainFeatureProcessor>();
 
@@ -275,7 +275,7 @@ namespace Terrain
         // On component deactivation, unregister the feature processor and remove it from the default scene.
         m_terrainRendererActive = false;
 
-        if (AZ::RPI::Scene* scene = GetScene(); scene)
+        if (JE::Render::RPI::Scene* scene = GetScene(); scene)
         {
             if (scene->GetFeatureProcessor<Terrain::TerrainFeatureProcessor>())
             {

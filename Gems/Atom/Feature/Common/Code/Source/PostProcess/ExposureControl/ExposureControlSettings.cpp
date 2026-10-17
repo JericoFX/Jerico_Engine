@@ -9,12 +9,12 @@
 #include <AzCore/Math/MathUtils.h>
 #include <AzCore/Serialization/SerializeContext.h>
 
-#include <Atom/RPI.Public/Pass/PassFilter.h>
-#include <Atom/RPI.Public/Pass/PassSystemInterface.h>
-#include <Atom/RPI.Public/RenderPipeline.h>
-#include <Atom/RPI.Public/Shader/ShaderResourceGroup.h>
-#include <Atom/RPI.Public/Scene.h>
-#include <Atom/RPI.Public/View.h>
+#include <JE/Render/RPI/Public/Pass/PassFilter.h>
+#include <JE/Render/RPI/Public/Pass/PassSystemInterface.h>
+#include <JE/Render/RPI/Public/RenderPipeline.h>
+#include <JE/Render/RPI/Public/Shader/ShaderResourceGroup.h>
+#include <JE/Render/RPI/Public/Scene.h>
+#include <JE/Render/RPI/Public/View.h>
 
 #include <PostProcess/ExposureControl/ExposureControlSettings.h>
 #include <PostProcess/PostProcessFeatureProcessor.h>
@@ -56,10 +56,10 @@ namespace AZ
         void ExposureControlSettings::UpdateExposureControlRelatedPassParameters()
         {
             // [GFX TODO][ATOM-13128] Adapting to render pipeline other than default.
-            RPI::RenderPipelinePtr defaultRP = GetParentScene()->GetDefaultRenderPipeline();
+            JE::Render::RPI::RenderPipelinePtr defaultRP = GetParentScene()->GetDefaultRenderPipeline();
             if (defaultRP)
             {
-                const RPI::View* defaultView = defaultRP->GetDefaultView().get();
+                const JE::Render::RPI::View* defaultView = defaultRP->GetDefaultView().get();
                 if (defaultView != m_lastDefaultView)
                 {
                     m_shouldUpdatePassParameters = true;
@@ -100,13 +100,13 @@ namespace AZ
 
         bool ExposureControlSettings::InitCommonBuffer()
         {
-            RPI::CommonBufferDescriptor desc;
-            desc.m_poolType = RPI::CommonBufferPoolType::Constant;
+            JE::Render::RPI::CommonBufferDescriptor desc;
+            desc.m_poolType = JE::Render::RPI::CommonBufferPoolType::Constant;
             desc.m_bufferName = ExposureControlBufferName;
             desc.m_byteCount = sizeof(ShaderParameters);
             desc.m_elementSize = sizeof(ShaderParameters);
 
-            m_buffer = RPI::BufferSystemInterface::Get()->CreateBufferFromCommonPool(desc);
+            m_buffer = JE::Render::RPI::BufferSystemInterface::Get()->CreateBufferFromCommonPool(desc);
 
             if (!m_buffer)
             {
@@ -194,18 +194,18 @@ namespace AZ
         {
             // [GFX-TODO][ATOM-13194] Support multiple views for the luminance heatmap
             // [GFX-TODO][ATOM-13224] Remove UpdateLuminanceHeatmap and UpdateEyeAdaptationPass            
-            RPI::PassFilter heatmapPassFilter = RPI::PassFilter::CreateWithPassName(m_luminanceHeatmapNameId, GetParentScene());
-            RPI::PassSystemInterface::Get()->ForEachPass(heatmapPassFilter, [this](RPI::Pass* pass) -> RPI::PassFilterExecutionFlow
+            JE::Render::RPI::PassFilter heatmapPassFilter = JE::Render::RPI::PassFilter::CreateWithPassName(m_luminanceHeatmapNameId, GetParentScene());
+            JE::Render::RPI::PassSystemInterface::Get()->ForEachPass(heatmapPassFilter, [this](JE::Render::RPI::Pass* pass) -> JE::Render::RPI::PassFilterExecutionFlow
                 {
                     pass->SetEnabled(m_heatmapEnabled);
-                    return RPI::PassFilterExecutionFlow::ContinueVisitingPasses;
+                    return JE::Render::RPI::PassFilterExecutionFlow::ContinueVisitingPasses;
                 });
 
-            RPI::PassFilter histogramPassFilter = RPI::PassFilter::CreateWithPassName(m_luminanceHistogramGeneratorNameId, GetParentScene());
-            RPI::PassSystemInterface::Get()->ForEachPass(histogramPassFilter, [this](RPI::Pass* pass) -> RPI::PassFilterExecutionFlow
+            JE::Render::RPI::PassFilter histogramPassFilter = JE::Render::RPI::PassFilter::CreateWithPassName(m_luminanceHistogramGeneratorNameId, GetParentScene());
+            JE::Render::RPI::PassSystemInterface::Get()->ForEachPass(histogramPassFilter, [this](JE::Render::RPI::Pass* pass) -> JE::Render::RPI::PassFilterExecutionFlow
                 {
                     pass->SetEnabled(m_heatmapEnabled);
-                    return RPI::PassFilterExecutionFlow::ContinueVisitingPasses;
+                    return JE::Render::RPI::PassFilterExecutionFlow::ContinueVisitingPasses;
                 });
         }
 

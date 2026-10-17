@@ -7,8 +7,8 @@
  */
 
 #include "./Transform2DFunctor.h"
-#include <Atom/RPI.Public/Material/Material.h>
-#include <Atom/RPI.Public/Shader/ShaderResourceGroup.h>
+#include <JE/Render/RPI/Public/Material/Material.h>
+#include <JE/Render/RPI/Public/Shader/ShaderResourceGroup.h>
 
 namespace AZ
 {
@@ -24,7 +24,7 @@ namespace AZ
                     ->Value("Translate", TransformType::Translate)
                     ;
 
-                serializeContext->Class<Transform2DFunctor, RPI::MaterialFunctor>()
+                serializeContext->Class<Transform2DFunctor, JE::Render::RPI::MaterialFunctor>()
                     ->Version(3)
                     ->Field("transformOrder", &Transform2DFunctor::m_transformOrder)
                     ->Field("center", &Transform2DFunctor::m_center)
@@ -44,9 +44,9 @@ namespace AZ
             }
         }
         
-        void Transform2DFunctor::Process(RPI::MaterialFunctorAPI::RuntimeContext& context)
+        void Transform2DFunctor::Process(JE::Render::RPI::MaterialFunctorAPI::RuntimeContext& context)
         {
-            using namespace RPI;
+            using namespace JE::Render::RPI;
 
             UvTransformDescriptor desc;
             desc.m_center = context.GetMaterialPropertyValue<Vector2>(m_center);
@@ -78,10 +78,10 @@ namespace AZ
             }
         }
 
-        bool Transform2DFunctor::UpdateShaderParameterConnections(const RPI::MaterialShaderParameterLayout* layout)
+        bool Transform2DFunctor::UpdateShaderParameterConnections(const JE::Render::RPI::MaterialShaderParameterLayout* layout)
         {
             bool valid = true;
-            auto ValidateRow = [&](RPI::MaterialShaderParameterNameIndex& idx) -> bool
+            auto ValidateRow = [&](JE::Render::RPI::MaterialShaderParameterNameIndex& idx) -> bool
             {
                 if (idx.ValidateOrFindIndex(layout) == false)
                 {

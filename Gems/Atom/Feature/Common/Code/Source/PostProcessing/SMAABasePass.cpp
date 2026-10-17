@@ -6,16 +6,16 @@
  *
  */
 
-#include <Atom/RPI.Public/Pass/PassUtils.h>
-#include <Atom/RPI.Public/Pass/PassFactory.h>
-#include <Atom/RPI.Public/Pass/FullscreenTrianglePass.h>
-#include <Atom/RPI.Public/RenderPipeline.h>
-#include <Atom/RPI.Public/RPIUtils.h>
-#include <Atom/RPI.Public/View.h>
-#include <Atom/RPI.Public/Shader/ShaderVariant.h>
+#include <JE/Render/RPI/Public/Pass/PassUtils.h>
+#include <JE/Render/RPI/Public/Pass/PassFactory.h>
+#include <JE/Render/RPI/Public/Pass/FullscreenTrianglePass.h>
+#include <JE/Render/RPI/Public/RenderPipeline.h>
+#include <JE/Render/RPI/Public/RPIUtils.h>
+#include <JE/Render/RPI/Public/View.h>
+#include <JE/Render/RPI/Public/Shader/ShaderVariant.h>
 
-#include <Atom/RPI.Reflect/Pass/PassTemplate.h>
-#include <Atom/RPI.Reflect/Shader/ShaderAsset.h>
+#include <JE/Render/RPI/Reflect/Pass/PassTemplate.h>
+#include <JE/Render/RPI/Reflect/Shader/ShaderAsset.h>
 
 #include <Atom/RHI/Factory.h>
 #include <Atom/RHI/FrameScheduler.h>
@@ -30,8 +30,8 @@ namespace AZ
 {
     namespace Render
     {
-        SMAABasePass::SMAABasePass(const RPI::PassDescriptor& descriptor)
-            : AZ::RPI::FullscreenTrianglePass(descriptor)
+        SMAABasePass::SMAABasePass(const JE::Render::RPI::PassDescriptor& descriptor)
+            : JE::Render::RPI::FullscreenTrianglePass(descriptor)
         {
         }
 
@@ -97,11 +97,11 @@ namespace AZ
             m_needToUpdateSRG = true;
         }
 
-        AZ::Vector4 SMAABasePass::CalculateRenderTargetMetrics(const RPI::PassAttachment* attachment)
+        AZ::Vector4 SMAABasePass::CalculateRenderTargetMetrics(const JE::Render::RPI::PassAttachment* attachment)
         {
             AZ_Assert(attachment != nullptr, "Null PassAttachment pointer have been passed in SMAABasePass::CalculateRenderTargetMetrics().");
 
-            const RPI::PassAttachmentBinding* sizeSource = attachment->m_sizeSource;
+            const JE::Render::RPI::PassAttachmentBinding* sizeSource = attachment->m_sizeSource;
             AZ_Assert(sizeSource != nullptr, "Binding sizeSource of attachment is null.");
             AZ_Assert(sizeSource->GetAttachment() != nullptr, "Attachment of sizeSource is null.");
             AZ::RHI::Size size = sizeSource->GetAttachment()->m_descriptor.m_image.m_size;

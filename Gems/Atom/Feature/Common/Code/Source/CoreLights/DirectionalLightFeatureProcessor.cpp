@@ -12,15 +12,15 @@
 #include <CoreLights/Shadow.h>
 #include <Math/GaussianMathFilter.h>
 
-#include <Atom/RPI.Public/AuxGeom/AuxGeomDraw.h>
-#include <Atom/RPI.Public/ColorManagement/TransformColor.h>
-#include <Atom/RPI.Public/Pass/PassSystemInterface.h>
-#include <Atom/RPI.Public/Pass/PassFilter.h>
-#include <Atom/RPI.Public/Pass/Specific/EnvironmentCubeMapPass.h>
-#include <Atom/RPI.Public/RenderPipeline.h>
-#include <Atom/RPI.Public/Scene.h>
-#include <Atom/RPI.Public/View.h>
-#include <Atom/RPI.Public/Shader/ShaderSystemInterface.h>
+#include <JE/Render/RPI/Public/AuxGeom/AuxGeomDraw.h>
+#include <JE/Render/RPI/Public/ColorManagement/TransformColor.h>
+#include <JE/Render/RPI/Public/Pass/PassSystemInterface.h>
+#include <JE/Render/RPI/Public/Pass/PassFilter.h>
+#include <JE/Render/RPI/Public/Pass/Specific/EnvironmentCubeMapPass.h>
+#include <JE/Render/RPI/Public/RenderPipeline.h>
+#include <JE/Render/RPI/Public/Scene.h>
+#include <JE/Render/RPI/Public/View.h>
+#include <JE/Render/RPI/Public/Shader/ShaderSystemInterface.h>
 #include <AzCore/Console/Console.h>
 #include <AzCore/Instance/Instance.h>
 #include <AzCore/Math/MatrixUtils.h>
@@ -144,14 +144,14 @@ namespace AZ
             if (auto* serializeContext = azrtti_cast<SerializeContext*>(context))
             {
                 serializeContext
-                    ->Class<DirectionalLightFeatureProcessor, RPI::FeatureProcessor>()
+                    ->Class<DirectionalLightFeatureProcessor, JE::Render::RPI::FeatureProcessor>()
                     ->Version(0);
             }
         }
 
         void DirectionalLightFeatureProcessor::Activate()
         {
-            const RHI::ShaderResourceGroupLayout* sceneSrgLayout = RPI::RPISystemInterface::Get()->GetSceneSrgLayout().get();
+            const RHI::ShaderResourceGroupLayout* sceneSrgLayout = JE::Render::RPI::RPISystemInterface::Get()->GetSceneSrgLayout().get();
 
             GpuBufferHandler::Descriptor desc;
 
@@ -165,7 +165,7 @@ namespace AZ
 
             m_shadowIndexDirectionalLightIndex.Reset();
 
-            m_auxGeomFeatureProcessor = GetParentScene()->GetFeatureProcessor<RPI::AuxGeomFeatureProcessorInterface>();
+            m_auxGeomFeatureProcessor = GetParentScene()->GetFeatureProcessor<JE::Render::RPI::AuxGeomFeatureProcessorInterface>();
 
             PrepareForChangingRenderPipelineAndCameraView();
             EnableSceneNotification();
@@ -194,7 +194,7 @@ namespace AZ
             // Remove retaining AuxGeomDraw for camera views.
             if (m_auxGeomFeatureProcessor)
             {
-                for (const RPI::View* cameraView : m_viewsRetainingAuxGeomDraw)
+                for (const JE::Render::RPI::View* cameraView : m_viewsRetainingAuxGeomDraw)
                 {
                     m_auxGeomFeatureProcessor->ReleaseDrawQueueForView(cameraView);
                 }
@@ -217,7 +217,7 @@ namespace AZ
                 {
                     shadowFilterMethod = r_directionalShadowFilteringMethod;
                 }
-                RPI::ShaderSystemInterface::Get()->SetGlobalShaderOption(m_directionalShadowFilteringMethodName, AZ::RPI::ShaderOptionValue{shadowFilterMethod});
+                JE::Render::RPI::ShaderSystemInterface::Get()->SetGlobalShaderOption(m_directionalShadowFilteringMethodName, JE::Render::RPI::ShaderOptionValue{shadowFilterMethod});
 
                 uint32_t shadowFilteringSampleCountMode = shadowData.m_filteringSampleCountMode;
                 if(r_directionalShadowFilteringSampleCountMode >= 0)
@@ -225,22 +225,22 @@ namespace AZ
                     shadowFilteringSampleCountMode = r_directionalShadowFilteringSampleCountMode;
                 }
                 
-                RPI::ShaderSystemInterface::Get()->SetGlobalShaderOption(
-                    m_directionalShadowFilteringSamplecountName, AZ::RPI::ShaderOptionValue{ shadowFilteringSampleCountMode });
+                JE::Render::RPI::ShaderSystemInterface::Get()->SetGlobalShaderOption(
+                    m_directionalShadowFilteringSamplecountName, JE::Render::RPI::ShaderOptionValue{ shadowFilteringSampleCountMode });
                 
-                RPI::ShaderSystemInterface::Get()->SetGlobalShaderOption(m_directionalShadowReceiverPlaneBiasEnableName, AZ::RPI::ShaderOptionValue{ m_shadowProperties.GetData(m_shadowingLightHandle.GetIndex()).m_isReceiverPlaneBiasEnabled });
+                JE::Render::RPI::ShaderSystemInterface::Get()->SetGlobalShaderOption(m_directionalShadowReceiverPlaneBiasEnableName, JE::Render::RPI::ShaderOptionValue{ m_shadowProperties.GetData(m_shadowingLightHandle.GetIndex()).m_isReceiverPlaneBiasEnabled });
 
                 const uint32_t cascadeCount = shadowData.m_cascadeCount;
 
-                RPI::ShaderSystemInterface::Get()->SetGlobalShaderOption(m_BlendBetweenCascadesEnableName, AZ::RPI::ShaderOptionValue{cascadeCount > 1 && m_shadowProperties.GetData(m_shadowingLightHandle.GetIndex()).m_blendBetweenCascades });
+                JE::Render::RPI::ShaderSystemInterface::Get()->SetGlobalShaderOption(m_BlendBetweenCascadesEnableName, JE::Render::RPI::ShaderOptionValue{cascadeCount > 1 && m_shadowProperties.GetData(m_shadowingLightHandle.GetIndex()).m_blendBetweenCascades });
 
                 ShadowProperty& property = m_shadowProperties.GetData(m_shadowingLightHandle.GetIndex());
                 bool segmentsNeedUpdate = property.m_segments.empty();
                 for (const auto& passIt : m_cascadedShadowmapsPasses)
                 {
                     const CascadedShadowmapsPass* pass = passIt.second.front();
-                    RPI::RenderPipeline* pipeline = pass->GetRenderPipeline();
-                    const RPI::View* cameraView = pipeline->GetDefaultView().get();
+                    JE::Render::RPI::RenderPipeline* pipeline = pass->GetRenderPipeline();
+                    const JE::Render::RPI::View* cameraView = pipeline->GetDefaultView().get();
                     if (property.m_segments.find(cameraView) == property.m_segments.end())
                     {
                         segmentsNeedUpdate = true;
@@ -293,7 +293,7 @@ namespace AZ
             }
         }
 
-        void DirectionalLightFeatureProcessor::PrepareViews(const PrepareViewsPacket&, AZStd::vector<AZStd::pair<RPI::PipelineViewTag, RPI::ViewPtr>>& outViews)
+        void DirectionalLightFeatureProcessor::PrepareViews(const PrepareViewsPacket&, AZStd::vector<AZStd::pair<JE::Render::RPI::PipelineViewTag, JE::Render::RPI::ViewPtr>>& outViews)
         {
             if (m_shadowingLightHandle.IsValid())
             {
@@ -303,9 +303,9 @@ namespace AZ
                     for (const CascadeSegment& segment : segmentIt.second)
                     {
                         RHI::DrawListMask drawListMask;
-                        for (const RPI::RenderPipelineId& renderPipelineId : m_renderPipelineIdsForPersistentView.at(segmentIt.first))
+                        for (const JE::Render::RPI::RenderPipelineId& renderPipelineId : m_renderPipelineIdsForPersistentView.at(segmentIt.first))
                         {
-                            const RPI::RenderPipelinePtr renderPipeline = GetParentScene()->GetRenderPipeline(renderPipelineId);
+                            const JE::Render::RPI::RenderPipelinePtr renderPipeline = GetParentScene()->GetRenderPipeline(renderPipelineId);
                             const RHI::DrawListMask pipelineDrawListMask = renderPipeline->GetDrawListMask(segment.m_pipelineViewTag);
                             drawListMask |= pipelineDrawListMask;
                         }
@@ -331,12 +331,12 @@ namespace AZ
 
             m_lightBufferHandler.UpdateSrg(GetParentScene()->GetShaderResourceGroup().get());
 
-            for (const RPI::ViewPtr& view : packet.m_views)
+            for (const JE::Render::RPI::ViewPtr& view : packet.m_views)
             {
                 if (m_renderPipelineIdsForPersistentView.find(view.get()) != m_renderPipelineIdsForPersistentView.end() &&
-                    (RHI::CheckBitsAny(view->GetUsageFlags(), RPI::View::UsageCamera | RPI::View::UsageReflectiveCubeMap)))
+                    (RHI::CheckBitsAny(view->GetUsageFlags(), JE::Render::RPI::View::UsageCamera | JE::Render::RPI::View::UsageReflectiveCubeMap)))
                 {
-                    RPI::ShaderResourceGroup* viewSrg = view->GetShaderResourceGroup().get();
+                    JE::Render::RPI::ShaderResourceGroup* viewSrg = view->GetShaderResourceGroup().get();
 
                     uint32_t rawShadowIndex = 0; // The shader recoginizable index of the shadowing light.
                     if (m_shadowingLightHandle.IsValid())
@@ -433,7 +433,7 @@ namespace AZ
 
         void DirectionalLightFeatureProcessor::SetRgbIntensity(LightHandle handle, const PhotometricColor<PhotometricUnit::Lux>& lightColor)
         {
-            const auto transformedColor = RPI::TransformColor(lightColor, RPI::ColorSpaceId::LinearSRGB, RPI::ColorSpaceId::ACEScg);
+            const auto transformedColor = JE::Render::RPI::TransformColor(lightColor, JE::Render::RPI::ColorSpaceId::LinearSRGB, JE::Render::RPI::ColorSpaceId::ACEScg);
 
             auto& rgbIntensity = m_lightData.GetData(handle.GetIndex()).m_rgbIntensity;
             rgbIntensity[0] = transformedColor.GetR();
@@ -515,10 +515,10 @@ namespace AZ
         void DirectionalLightFeatureProcessor::SetCameraConfiguration(
             LightHandle handle,
             const Camera::Configuration& baseCameraConfiguration,
-            const RPI::RenderPipelineId& renderPipelineId)
+            const JE::Render::RPI::RenderPipelineId& renderPipelineId)
         {
             ShadowProperty& property = m_shadowProperties.GetData(handle.GetIndex());
-            auto update = [&property, &baseCameraConfiguration](const RPI::View* view)
+            auto update = [&property, &baseCameraConfiguration](const JE::Render::RPI::View* view)
             {
                 CascadeShadowCameraConfiguration& cameraConfig = property.m_cameraConfigurations[view];
                 if (!cameraConfig.HasSameConfiguration(baseCameraConfiguration))
@@ -528,9 +528,9 @@ namespace AZ
                 }
             };
 
-            if (RPI::RenderPipeline* renderPipeline = GetParentScene()->GetRenderPipeline(renderPipelineId).get())
+            if (JE::Render::RPI::RenderPipeline* renderPipeline = GetParentScene()->GetRenderPipeline(renderPipelineId).get())
             {
-                const RPI::View* cameraView = renderPipeline->GetDefaultView().get();
+                const JE::Render::RPI::View* cameraView = renderPipeline->GetDefaultView().get();
                 update(cameraView);
             }
             else
@@ -543,7 +543,7 @@ namespace AZ
         void DirectionalLightFeatureProcessor::SetCameraTransform(
             LightHandle handle,
             const Transform&,
-            const RPI::RenderPipelineId&)
+            const JE::Render::RPI::RenderPipelineId&)
         {
             ShadowProperty& property = m_shadowProperties.GetData(handle.GetIndex());
             property.m_shadowmapViewNeedsUpdate = true;
@@ -703,15 +703,15 @@ namespace AZ
             m_lightBufferNeedsUpdate = true;
         }
 
-        void DirectionalLightFeatureProcessor::OnRenderPipelineChanged([[maybe_unused]] RPI::RenderPipeline* pipeline,
-            RPI::SceneNotification::RenderPipelineChangeType changeType)
+        void DirectionalLightFeatureProcessor::OnRenderPipelineChanged([[maybe_unused]] JE::Render::RPI::RenderPipeline* pipeline,
+            JE::Render::RPI::SceneNotification::RenderPipelineChangeType changeType)
         {
-            if (changeType == RPI::SceneNotification::RenderPipelineChangeType::Added
-                || changeType == RPI::SceneNotification::RenderPipelineChangeType::PassChanged)
+            if (changeType == JE::Render::RPI::SceneNotification::RenderPipelineChangeType::Added
+                || changeType == JE::Render::RPI::SceneNotification::RenderPipelineChangeType::PassChanged)
             {
                 PrepareForChangingRenderPipelineAndCameraView();
             }
-            else if (changeType == RPI::SceneNotification::RenderPipelineChangeType::Removed)
+            else if (changeType == JE::Render::RPI::SceneNotification::RenderPipelineChangeType::Removed)
             {
                 if (m_cascadedShadowmapsPasses.find(pipeline->GetId()) != m_cascadedShadowmapsPasses.end()
                     || m_esmShadowmapsPasses.find(pipeline->GetId()) != m_esmShadowmapsPasses.end())
@@ -721,7 +721,7 @@ namespace AZ
             }
         }
 
-        void DirectionalLightFeatureProcessor::OnRenderPipelinePersistentViewChanged(RPI::RenderPipeline*, RPI::PipelineViewTag, RPI::ViewPtr, RPI::ViewPtr)
+        void DirectionalLightFeatureProcessor::OnRenderPipelinePersistentViewChanged(JE::Render::RPI::RenderPipeline*, JE::Render::RPI::PipelineViewTag, JE::Render::RPI::ViewPtr, JE::Render::RPI::ViewPtr)
         {
             PrepareForChangingRenderPipelineAndCameraView();
         }
@@ -743,11 +743,11 @@ namespace AZ
         {
             m_cascadedShadowmapsPasses.clear();
 
-            RPI::PassFilter passFilter = RPI::PassFilter::CreateWithTemplateName(Name("CascadedShadowmapsTemplate"), GetParentScene());
-            RPI::PassSystemInterface::Get()->ForEachPass(passFilter, [this](RPI::Pass* pass) -> RPI::PassFilterExecutionFlow
+            JE::Render::RPI::PassFilter passFilter = JE::Render::RPI::PassFilter::CreateWithTemplateName(Name("CascadedShadowmapsTemplate"), GetParentScene());
+            JE::Render::RPI::PassSystemInterface::Get()->ForEachPass(passFilter, [this](JE::Render::RPI::Pass* pass) -> JE::Render::RPI::PassFilterExecutionFlow
                 {
-                    RPI::RenderPipeline* pipeline = pass->GetRenderPipeline();
-                    const RPI::RenderPipelineId pipelineId = pipeline->GetId();
+                    JE::Render::RPI::RenderPipeline* pipeline = pass->GetRenderPipeline();
+                    const JE::Render::RPI::RenderPipelineId pipelineId = pipeline->GetId();
 
                     CascadedShadowmapsPass* shadowPass = azrtti_cast<CascadedShadowmapsPass*>(pass);
                     AZ_Assert(shadowPass, "It is not a CascadedShadowmapPass.");
@@ -755,18 +755,18 @@ namespace AZ
                     {
                         m_cascadedShadowmapsPasses[pipelineId].push_back(shadowPass);
                     }
-                    return RPI::PassFilterExecutionFlow::ContinueVisitingPasses;
+                    return JE::Render::RPI::PassFilterExecutionFlow::ContinueVisitingPasses;
                 });
         }
 
         void DirectionalLightFeatureProcessor::CacheFullscreenPass()
         {
             m_fullscreenShadowPass = nullptr;
-            RPI::PassFilter passFilter = RPI::PassFilter::CreateWithTemplateName(Name("FullscreenShadowTemplate"), GetParentScene());
-            RPI::PassSystemInterface::Get()->ForEachPass(passFilter, [this](RPI::Pass* pass) -> RPI::PassFilterExecutionFlow
+            JE::Render::RPI::PassFilter passFilter = JE::Render::RPI::PassFilter::CreateWithTemplateName(Name("FullscreenShadowTemplate"), GetParentScene());
+            JE::Render::RPI::PassSystemInterface::Get()->ForEachPass(passFilter, [this](JE::Render::RPI::Pass* pass) -> JE::Render::RPI::PassFilterExecutionFlow
                 {
-                    RPI::RenderPipeline* pipeline = pass->GetRenderPipeline();
-                    const RPI::RenderPipelineId pipelineId = pipeline->GetId();
+                    JE::Render::RPI::RenderPipeline* pipeline = pass->GetRenderPipeline();
+                    const JE::Render::RPI::RenderPipelineId pipelineId = pipeline->GetId();
 
                     FullscreenShadowPass* shadowPass = azrtti_cast<FullscreenShadowPass*>(pass);
                     AZ_Assert(shadowPass, "It is not a FullscreenShadowPass.");
@@ -774,22 +774,22 @@ namespace AZ
                     {
                         m_fullscreenShadowPass = shadowPass;
                     }
-                    return RPI::PassFilterExecutionFlow::StopVisitingPasses;
+                    return JE::Render::RPI::PassFilterExecutionFlow::StopVisitingPasses;
                 });
 
             m_fullscreenShadowBlurPass = nullptr;
-            RPI::PassFilter blurPassFilter = RPI::PassFilter::CreateWithPassName(Name("FullscreenShadowBlur"), GetParentScene());
-            RPI::PassSystemInterface::Get()->ForEachPass(blurPassFilter, [this](RPI::Pass* pass) -> RPI::PassFilterExecutionFlow
+            JE::Render::RPI::PassFilter blurPassFilter = JE::Render::RPI::PassFilter::CreateWithPassName(Name("FullscreenShadowBlur"), GetParentScene());
+            JE::Render::RPI::PassSystemInterface::Get()->ForEachPass(blurPassFilter, [this](JE::Render::RPI::Pass* pass) -> JE::Render::RPI::PassFilterExecutionFlow
                 {
-                    RPI::RenderPipeline* pipeline = pass->GetRenderPipeline();
-                    const RPI::RenderPipelineId pipelineId = pipeline->GetId();
+                    JE::Render::RPI::RenderPipeline* pipeline = pass->GetRenderPipeline();
+                    const JE::Render::RPI::RenderPipelineId pipelineId = pipeline->GetId();
 
-                    RPI::ParentPass* fullscreenShadowBlurPass = azrtti_cast<RPI::ParentPass*>(pass);
+                    JE::Render::RPI::ParentPass* fullscreenShadowBlurPass = azrtti_cast<JE::Render::RPI::ParentPass*>(pass);
                     if (pipeline->GetDefaultView())
                     {
                         m_fullscreenShadowBlurPass = fullscreenShadowBlurPass;
                     }
-                    return RPI::PassFilterExecutionFlow::StopVisitingPasses;
+                    return JE::Render::RPI::PassFilterExecutionFlow::StopVisitingPasses;
                 });
         }
 
@@ -797,10 +797,10 @@ namespace AZ
         {
             m_esmShadowmapsPasses.clear();
 
-            RPI::PassFilter passFilter = RPI::PassFilter::CreateWithTemplateName(Name("EsmShadowmapsTemplate"), GetParentScene());
-            RPI::PassSystemInterface::Get()->ForEachPass(passFilter, [this](RPI::Pass* pass) -> RPI::PassFilterExecutionFlow
+            JE::Render::RPI::PassFilter passFilter = JE::Render::RPI::PassFilter::CreateWithTemplateName(Name("EsmShadowmapsTemplate"), GetParentScene());
+            JE::Render::RPI::PassSystemInterface::Get()->ForEachPass(passFilter, [this](JE::Render::RPI::Pass* pass) -> JE::Render::RPI::PassFilterExecutionFlow
                 {
-                    const RPI::RenderPipelineId pipelineId = pass->GetRenderPipeline()->GetId();
+                    const JE::Render::RPI::RenderPipelineId pipelineId = pass->GetRenderPipeline()->GetId();
 
                     if (m_cascadedShadowmapsPasses.find(pipelineId) != m_cascadedShadowmapsPasses.end())
                     {
@@ -811,7 +811,7 @@ namespace AZ
                             m_esmShadowmapsPasses[pipelineId].push_back(esmPass);
                         }
                     }
-                    return RPI::PassFilterExecutionFlow::ContinueVisitingPasses;
+                    return JE::Render::RPI::PassFilterExecutionFlow::ContinueVisitingPasses;
                 });
         }
 
@@ -819,13 +819,13 @@ namespace AZ
         {
             m_cameraViewNames.clear();
             m_cameraViewNames[nullptr] = "Null Camera View"; // it makes a placeholder for the null camera view.
-            AZStd::vector<const RPI::View*> cameraViews;
+            AZStd::vector<const JE::Render::RPI::View*> cameraViews;
             for (const auto& passIt : m_cascadedShadowmapsPasses)
             {
-                const RPI::RenderPipelineId& pipelineId = passIt.first;
+                const JE::Render::RPI::RenderPipelineId& pipelineId = passIt.first;
                 for (const CascadedShadowmapsPass* pass : passIt.second)
                 {
-                    if (RPI::View* cameraView = pass->GetRenderPipeline()->GetDefaultView().get())
+                    if (JE::Render::RPI::View* cameraView = pass->GetRenderPipeline()->GetDefaultView().get())
                     {
                         cameraViews.push_back(cameraView);
                         if (m_cameraViewNames.find(cameraView) == m_cameraViewNames.end())
@@ -860,7 +860,7 @@ namespace AZ
             // Remove retaining AuxGeomDraw for camera views.
             if (m_auxGeomFeatureProcessor)
             {
-                for (const RPI::View* cameraView : m_viewsRetainingAuxGeomDraw)
+                for (const JE::Render::RPI::View* cameraView : m_viewsRetainingAuxGeomDraw)
                 {
                     m_auxGeomFeatureProcessor->ReleaseDrawQueueForView(cameraView);
                 }
@@ -876,7 +876,7 @@ namespace AZ
             // the buffer handler for the old camera view with the same name.
             // So bumping of buffer handler name is required as below.
 
-            const auto removeIfNotOccur = [](auto& unorderedMap, const AZStd::vector<const RPI::View*> activeViews)
+            const auto removeIfNotOccur = [](auto& unorderedMap, const AZStd::vector<const JE::Render::RPI::View*> activeViews)
             {
                 for (auto handlerIt = unorderedMap.begin(); handlerIt != unorderedMap.end(); )
                 {
@@ -892,7 +892,7 @@ namespace AZ
                 }
             };
 
-            const RHI::ShaderResourceGroupLayout* viewSrgLayout = RPI::RPISystemInterface::Get()->GetViewSrgLayout().get();
+            const RHI::ShaderResourceGroupLayout* viewSrgLayout = JE::Render::RPI::RPISystemInterface::Get()->GetViewSrgLayout().get();
             const IndexedDataVector<DirectionalLightShadowData> lastShadowData = m_shadowData[nullptr];
             IndexedDataVector<EsmShadowmapsPass::FilterParameter> lastEsmParameter = m_esmParameterData[nullptr];
             while (lastEsmParameter.GetDataCount() < Shadow::MaxNumberOfCascades)
@@ -902,12 +902,12 @@ namespace AZ
 
             m_shadowData[nullptr] = lastShadowData;
             m_esmParameterData[nullptr] = lastEsmParameter;
-            AZStd::vector<const RPI::View*> cameraViews;
+            AZStd::vector<const JE::Render::RPI::View*> cameraViews;
             cameraViews.reserve(m_cascadedShadowmapsPasses.size());
             for (const auto& passIt : m_cascadedShadowmapsPasses)
             {
-                const RPI::RenderPipelineId& pipelineId = passIt.first;
-                const RPI::View* cameraView = passIt.second.front()->GetRenderPipeline()->GetDefaultView().get();
+                const JE::Render::RPI::RenderPipelineId& pipelineId = passIt.first;
+                const JE::Render::RPI::View* cameraView = passIt.second.front()->GetRenderPipeline()->GetDefaultView().get();
                 if (!cameraView)
                 {
                     continue;
@@ -939,8 +939,8 @@ namespace AZ
             cameraViews.clear();
             for (const auto& passIt : m_esmShadowmapsPasses)
             {
-                const RPI::RenderPipelineId& pipelineId = passIt.first;
-                const RPI::View* cameraView = passIt.second.front()->GetRenderPipeline()->GetDefaultView().get();
+                const JE::Render::RPI::RenderPipelineId& pipelineId = passIt.first;
+                const JE::Render::RPI::View* cameraView = passIt.second.front()->GetRenderPipeline()->GetDefaultView().get();
                 if (!cameraView)
                 {
                     continue;
@@ -978,12 +978,12 @@ namespace AZ
             m_renderPipelineIdsForPersistentView.clear();
             for (const auto& passIt : m_cascadedShadowmapsPasses)
             {
-                const RPI::RenderPipeline* pipeline = passIt.second.front()->GetRenderPipeline();
+                const JE::Render::RPI::RenderPipeline* pipeline = passIt.second.front()->GetRenderPipeline();
                 for (const auto& pipelineView : pipeline->GetPipelineViews())
                 {
-                    if (pipelineView.second.m_type == RPI::PipelineViewType::Persistent)
+                    if (pipelineView.second.m_type == JE::Render::RPI::PipelineViewType::Persistent)
                     {
-                        for (const RPI::ViewPtr& view : pipelineView.second.m_views)
+                        for (const JE::Render::RPI::ViewPtr& view : pipelineView.second.m_views)
                         {
                             m_renderPipelineIdsForPersistentView[view.get()].push_back(passIt.first);
                         }
@@ -1002,8 +1002,8 @@ namespace AZ
 
             for (const auto& passIt : m_cascadedShadowmapsPasses)
             {
-                RPI::RenderPipeline* pipeline = passIt.second.front()->GetRenderPipeline();
-                const RPI::View* cameraView = pipeline->GetDefaultView().get();
+                JE::Render::RPI::RenderPipeline* pipeline = passIt.second.front()->GetRenderPipeline();
+                const JE::Render::RPI::View* cameraView = pipeline->GetDefaultView().get();
 
                 const ShadowProperty& property2 = m_shadowProperties.GetData(m_shadowingLightHandle.GetIndex());
                 if (property2.m_segments.find(cameraView) != property2.m_segments.end())
@@ -1049,7 +1049,7 @@ namespace AZ
             return 0;
         }
 
-        const CascadeShadowCameraConfiguration& DirectionalLightFeatureProcessor::GetCameraConfiguration(LightHandle handle, const RPI::View* cameraView) const
+        const CascadeShadowCameraConfiguration& DirectionalLightFeatureProcessor::GetCameraConfiguration(LightHandle handle, const JE::Render::RPI::View* cameraView) const
         {
             const ShadowProperty& property = m_shadowProperties.GetData(handle.GetIndex());
             const auto findIt = property.m_cameraConfigurations.find(cameraView);
@@ -1131,8 +1131,8 @@ namespace AZ
             for (const auto& passIt : m_cascadedShadowmapsPasses)
             {
                 CascadedShadowmapsPass* shadowPass = passIt.second.front();
-                RPI::RenderPipeline* pipeline = shadowPass->GetRenderPipeline();
-                RPI::View* cameraView = pipeline->GetDefaultView().get();
+                JE::Render::RPI::RenderPipeline* pipeline = shadowPass->GetRenderPipeline();
+                JE::Render::RPI::View* cameraView = pipeline->GetDefaultView().get();
                 shadowPass->SetCameraViewName(m_cameraViewNames.at(cameraView));
             }
         }
@@ -1148,36 +1148,36 @@ namespace AZ
             for (const auto& passIt : m_cascadedShadowmapsPasses)
             {
                 CascadedShadowmapsPass* shadowPass = passIt.second.front();
-                const AZStd::span<const RPI::PipelineViewTag>& viewTags = shadowPass->GetPipelineViewTags();
+                const AZStd::span<const JE::Render::RPI::PipelineViewTag>& viewTags = shadowPass->GetPipelineViewTags();
                 AZ_Assert(viewTags.size() >= cascadeCount, "DirectionalLightFeatureProcessor: There is not enough pipeline view tags.");
 
-                RPI::RenderPipeline* pipeline = shadowPass->GetRenderPipeline();
-                RPI::View* cameraView = pipeline->GetDefaultView().get();
+                JE::Render::RPI::RenderPipeline* pipeline = shadowPass->GetRenderPipeline();
+                JE::Render::RPI::View* cameraView = pipeline->GetDefaultView().get();
                 AZ_Assert(cameraView, "The default view of the pipeline is null.");
                 property.m_segments[cameraView].resize(cascadeCount);
                 for (size_t index = 0; index < cascadeCount; ++index)
                 {
                     CascadeSegment& segment = property.m_segments.at(cameraView)[index];
-                    const RPI::PipelineViewTag& viewTag = viewTags[index];
+                    const JE::Render::RPI::PipelineViewTag& viewTag = viewTags[index];
                     const Name viewName{
                         AZStd::string::format("DirLightShadowView (cascade: %zu, LightHandle: %d)", index, handle.GetIndex()) };
 
                     segment.m_pipelineViewTag = viewTag;
                     if (!segment.m_view || segment.m_view->GetName() != viewName)
                     {
-                        RPI::View::UsageFlags usageFlags = RPI::View::UsageShadow;
+                        JE::Render::RPI::View::UsageFlags usageFlags = JE::Render::RPI::View::UsageShadow;
 
                         // if the shadow is rendering in an EnvironmentCubeMapPass it also needs to be a ReflectiveCubeMap view,
                         // to filter out shadows from objects that are excluded from the cubemap
-                        RPI::PassFilter passFilter = RPI::PassFilter::CreateWithPassClass<RPI::EnvironmentCubeMapPass>();
+                        JE::Render::RPI::PassFilter passFilter = JE::Render::RPI::PassFilter::CreateWithPassClass<JE::Render::RPI::EnvironmentCubeMapPass>();
                         passFilter.SetOwnerScene(GetParentScene()); // only handles passes for this scene
-                        RPI::PassSystemInterface::Get()->ForEachPass(passFilter, [&usageFlags]([[maybe_unused]] RPI::Pass* pass) -> RPI::PassFilterExecutionFlow
+                        JE::Render::RPI::PassSystemInterface::Get()->ForEachPass(passFilter, [&usageFlags]([[maybe_unused]] JE::Render::RPI::Pass* pass) -> JE::Render::RPI::PassFilterExecutionFlow
                             {
-                                usageFlags |= RPI::View::UsageReflectiveCubeMap;
-                                return RPI::PassFilterExecutionFlow::StopVisitingPasses;
+                                usageFlags |= JE::Render::RPI::View::UsageReflectiveCubeMap;
+                                return JE::Render::RPI::PassFilterExecutionFlow::StopVisitingPasses;
                             });
 
-                        segment.m_view = RPI::View::CreateView(viewName, usageFlags);
+                        segment.m_view = JE::Render::RPI::View::CreateView(viewName, usageFlags);
                         segment.m_view->SetShadowPassRenderPipelineId(pipeline->GetId());
                     }
                 }
@@ -1225,14 +1225,14 @@ namespace AZ
 
             for (const auto& passIt : m_esmShadowmapsPasses)
             {
-                const RPI::View* cameraView = passIt.second.front()->GetRenderPipeline()->GetDefaultView().get();
+                const JE::Render::RPI::View* cameraView = passIt.second.front()->GetRenderPipeline()->GetDefaultView().get();
                 UpdateFilterEnabled(handle, cameraView);
                 UpdateShadowmapPositionInAtlas(handle, cameraView);
                 SetFilterParameterToPass(handle, cameraView);
             }
         }
 
-        void DirectionalLightFeatureProcessor::UpdateFilterEnabled(LightHandle handle, const RPI::View* cameraView)
+        void DirectionalLightFeatureProcessor::UpdateFilterEnabled(LightHandle handle, const JE::Render::RPI::View* cameraView)
         {
             if (handle != m_shadowingLightHandle)
             {
@@ -1261,7 +1261,7 @@ namespace AZ
             }
         }
         
-        void DirectionalLightFeatureProcessor::UpdateShadowmapPositionInAtlas(LightHandle handle, const RPI::View* cameraView)
+        void DirectionalLightFeatureProcessor::UpdateShadowmapPositionInAtlas(LightHandle handle, const JE::Render::RPI::View* cameraView)
         {
             if (handle != m_shadowingLightHandle)
             {
@@ -1282,7 +1282,7 @@ namespace AZ
             }
         }
 
-        void DirectionalLightFeatureProcessor::SetFilterParameterToPass(LightHandle handle, const RPI::View* cameraView)
+        void DirectionalLightFeatureProcessor::SetFilterParameterToPass(LightHandle handle, const JE::Render::RPI::View* cameraView)
         {
             AZ_PROFILE_SCOPE(RPI, "DirectionalLightFeatureProcessor::SetFilterParameterToPass");
 
@@ -1300,15 +1300,15 @@ namespace AZ
             }
 
             // Create index table buffer.
-            const RPI::RenderPipelineId cameraPipelineId = m_renderPipelineIdsForPersistentView.at(cameraView).front();
+            const JE::Render::RPI::RenderPipelineId cameraPipelineId = m_renderPipelineIdsForPersistentView.at(cameraView).front();
             const ShadowmapAtlas& atlas = m_cascadedShadowmapsPasses.at(cameraPipelineId).front()->GetShadowmapAtlas();
             const AZStd::string indexTableBufferName =
                 AZStd::string::format("IndexTableBuffer(Directional) %d",
                     m_shadowmapIndexTableBufferNameIndex++);
-            const Data::Instance<RPI::Buffer> indexTableBuffer = atlas.CreateShadowmapIndexTableBuffer(indexTableBufferName);
+            const Data::Instance<JE::Render::RPI::Buffer> indexTableBuffer = atlas.CreateShadowmapIndexTableBuffer(indexTableBufferName);
 
             // Set index table buffer and ESM parameter buffer to ESM pass.
-            for (const RPI::RenderPipelineId& pipelineId : m_renderPipelineIdsForPersistentView.at(cameraView))
+            for (const JE::Render::RPI::RenderPipelineId& pipelineId : m_renderPipelineIdsForPersistentView.at(cameraView))
             {
                 for (EsmShadowmapsPass* esmPass : m_esmShadowmapsPasses.at(pipelineId))
                 {
@@ -1360,7 +1360,7 @@ namespace AZ
             property.m_shadowmapViewNeedsUpdate = true;
         }
 
-        float DirectionalLightFeatureProcessor::GetShadowmapSizeFromCameraView(const LightHandle handle, const RPI::View* cameraView) const
+        float DirectionalLightFeatureProcessor::GetShadowmapSizeFromCameraView(const LightHandle handle, const JE::Render::RPI::View* cameraView) const
         {
             const DirectionalLightShadowData& shadowData = m_shadowData.at(cameraView).GetData(handle.GetIndex());
             return static_cast<float>(shadowData.m_shadowmapSize);
@@ -1475,7 +1475,7 @@ namespace AZ
 
         Aabb DirectionalLightFeatureProcessor::CalculateShadowViewAabb(
             LightHandle handle,
-            const RPI::View* cameraView,
+            const JE::Render::RPI::View* cameraView,
             uint16_t cascadeIndex,
             const Matrix3x4& lightTransform)
         {
@@ -1552,7 +1552,7 @@ namespace AZ
 
         void DirectionalLightFeatureProcessor::GetDepthNearFar(
             LightHandle handle,
-            const RPI::View* cameraView,
+            const JE::Render::RPI::View* cameraView,
             uint16_t cascadeIndex,
             float& outDepthNear,
             float& outDepthFar) const
@@ -1565,7 +1565,7 @@ namespace AZ
             outDepthFar = property.m_segments.at(cameraView)[cascadeIndex].m_borderFarDepth;
         }
 
-        void DirectionalLightFeatureProcessor::GetDepthNearFar(LightHandle handle, const RPI::View* cameraView, float& outDepthNear, float& outDepthFar) const
+        void DirectionalLightFeatureProcessor::GetDepthNearFar(LightHandle handle, const JE::Render::RPI::View* cameraView, float& outDepthNear, float& outDepthFar) const
         {
             float unused;
             GetDepthNearFar(handle, cameraView, 0, outDepthNear, unused);
@@ -1574,7 +1574,7 @@ namespace AZ
 
         Vector3 DirectionalLightFeatureProcessor::GetWorldCenterPosition(
             LightHandle handle,
-            const RPI::View* cameraView,
+            const JE::Render::RPI::View* cameraView,
             float depthNear,
             float depthFar) const
         {
@@ -1588,7 +1588,7 @@ namespace AZ
 
         float DirectionalLightFeatureProcessor::GetRadius(
             LightHandle handle,
-            const RPI::View* cameraView,
+            const JE::Render::RPI::View* cameraView,
             float depthNear,
             float depthFar) const
         {
@@ -1617,7 +1617,7 @@ namespace AZ
 
         Vector3 DirectionalLightFeatureProcessor::CalculateCorrectedWorldCenterPosition(
             LightHandle handle,
-            const RPI::View* cameraView,
+            const JE::Render::RPI::View* cameraView,
             float depthNear,
             float depthFar) const
         {
@@ -1716,7 +1716,7 @@ namespace AZ
             const ShadowProperty& property = m_shadowProperties.GetData(handle.GetIndex());
             for (const auto& it : m_cascadedShadowmapsPasses)
             {
-                const RPI::View* cameraView = it.second.front()->GetRenderPipeline()->GetDefaultView().get();
+                const JE::Render::RPI::View* cameraView = it.second.front()->GetRenderPipeline()->GetDefaultView().get();
                 DirectionalLightShadowData& shadowData = m_shadowData.at(cameraView).GetData(handle.GetIndex());
 
                 for (uint16_t cascadeIndex = 0; cascadeIndex < GetCascadeCount(handle); ++cascadeIndex)
@@ -1751,13 +1751,13 @@ namespace AZ
 
             for (const auto& shadowIt : m_shadowData)
             {
-                const RPI::View* cameraView = shadowIt.first;
+                const JE::Render::RPI::View* cameraView = shadowIt.first;
                 if (!cameraView || (shadowIt.second.GetData(handle.GetIndex()).m_debugFlags & DebugDrawFlags::DebugDrawBoundingBoxes) == 0)
                 {
                     continue;
                 }
 
-                RPI::AuxGeomDrawPtr auxGeom = m_auxGeomFeatureProcessor->GetDrawQueueForView(cameraView);
+                JE::Render::RPI::AuxGeomDrawPtr auxGeom = m_auxGeomFeatureProcessor->GetDrawQueueForView(cameraView);
                 if (!auxGeom)
                 {
                     auxGeom = m_auxGeomFeatureProcessor->GetOrCreateDrawQueueForView(cameraView);
@@ -1792,7 +1792,7 @@ namespace AZ
                     const Vector3 center = transformOrigin * lightLocation + axisY * aabb.GetYExtent() / 2.f;
                     const auto obb = Obb::CreateFromPositionRotationAndHalfLengths(
                         center, rotation, aabb.GetExtents() / 2.0f);
-                    auxGeom->DrawObb(obb, Vector3::CreateZero(), colors[cascadeIndex], RPI::AuxGeomDraw::DrawStyle::Line);
+                    auxGeom->DrawObb(obb, Vector3::CreateZero(), colors[cascadeIndex], JE::Render::RPI::AuxGeomDraw::DrawStyle::Line);
                 }
             }
         }
@@ -1821,8 +1821,8 @@ namespace AZ
 
                 if(fullscreenBlurEnabled)
                 {
-                    RPI::Pass* child_0 = m_fullscreenShadowBlurPass->FindChildPass(Name("VerticalBlur")).get();
-                    RPI::Pass* child_1 = m_fullscreenShadowBlurPass->FindChildPass(Name("HorizontalBlur")).get();
+                    JE::Render::RPI::Pass* child_0 = m_fullscreenShadowBlurPass->FindChildPass(Name("VerticalBlur")).get();
+                    JE::Render::RPI::Pass* child_1 = m_fullscreenShadowBlurPass->FindChildPass(Name("HorizontalBlur")).get();
 
                     FastDepthAwareBlurVerPass* verBlurPass = azrtti_cast<FastDepthAwareBlurVerPass*>(child_0);
                     FastDepthAwareBlurHorPass* horBlurPass = azrtti_cast<FastDepthAwareBlurHorPass*>(child_1);

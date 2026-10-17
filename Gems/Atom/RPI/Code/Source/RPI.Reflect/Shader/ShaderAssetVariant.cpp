@@ -5,17 +5,17 @@
  * SPDX-License-Identifier: Apache-2.0 OR MIT
  *
  */
-#include <Atom/RPI.Reflect/Shader/ShaderAssetVariant.h>
+#include <JE/Render/RPI/Reflect/Shader/ShaderAssetVariant.h>
 
 #include <AzCore/Serialization/SerializeContext.h>
 
-namespace AZ
+namespace JE::Render
 {
     namespace RPI
     {
-        void ShaderAssetVariant::Reflect(ReflectContext* context)
+        void ShaderAssetVariant::Reflect(AZ::ReflectContext* context)
         {
-            if (auto* serializeContext = azrtti_cast<SerializeContext*>(context))
+            if (auto* serializeContext = azrtti_cast<AZ::SerializeContext*>(context))
             {
                 serializeContext->Class<ShaderAssetVariant>()
                     ->Version(2)
@@ -34,7 +34,7 @@ namespace AZ
             return m_shaderVariantId;
         }
 
-        RHI::ShaderStageFunctionId ShaderAssetVariant::GetShaderStageFunctionId(RHI::ShaderStage shaderStage) const
+        AZ::RHI::ShaderStageFunctionId ShaderAssetVariant::GetShaderStageFunctionId(AZ::RHI::ShaderStage shaderStage) const
         {
             return m_functionIdsByStage[static_cast<size_t>(shaderStage)];
         }
@@ -49,7 +49,7 @@ namespace AZ
             return m_outputContract;
         }
 
-        RHI::RenderStates ShaderAssetVariant::GetRenderStates() const
+        AZ::RHI::RenderStates ShaderAssetVariant::GetRenderStates() const
         {
             return m_renderStates;
         }

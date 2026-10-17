@@ -17,8 +17,8 @@
 #include <AzToolsFramework/AssetBrowser/AssetBrowserEntry.h>
 #include <AzToolsFramework/AssetBrowser/Thumbnails/ProductThumbnail.h>
 #include <Thumbnail/ParticleMaterialThumbnail.h>
-#include <Atom/RPI.Reflect/Material/MaterialAsset.h>
-#include <Atom/RPI.Edit/Common/AssetUtils.h>
+#include <JE/Render/RPI/Reflect/Material/MaterialAsset.h>
+#include <JE/Editor/Render/RPI/Edit/Common/AssetUtils.h>
 
 namespace OpenParticleSystem
 {
@@ -64,7 +64,7 @@ namespace OpenParticleSystem
         void ParticleMaterialThumbnailSystemComponent::Activate()
         {
             AzFramework::ApplicationLifecycleEvents::Bus::Handler::BusConnect();
-            AzToolsFramework::Thumbnailer::ThumbnailerRendererRequestBus::Handler::BusConnect(AZ::RPI::MaterialAsset::RTTI_Type());
+            AzToolsFramework::Thumbnailer::ThumbnailerRendererRequestBus::Handler::BusConnect(JE::Render::RPI::MaterialAsset::RTTI_Type());
             SetupThumbnails();
         }
 

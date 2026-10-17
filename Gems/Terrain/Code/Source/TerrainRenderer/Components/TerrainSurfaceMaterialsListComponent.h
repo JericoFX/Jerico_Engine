@@ -13,7 +13,7 @@
 #include <AzCore/Component/TickBus.h>
 #include <AzCore/Serialization/EditContext.h>
 
-#include <Atom/RPI.Reflect/Material/MaterialAsset.h>
+#include <JE/Render/RPI/Reflect/Material/MaterialAsset.h>
 
 #include <LmbrCentral/Shape/ShapeComponentBus.h>
 
@@ -34,8 +34,8 @@ namespace Terrain
         AZ_RTTI(TerrainSurfaceMaterialMapping, "{37D2A586-CDDD-4FB7-A7D6-0B4CC575AB8C}");
         static void Reflect(AZ::ReflectContext* context);
 
-        AZ::Data::Asset<AZ::RPI::MaterialAsset> m_materialAsset;
-        AZ::Data::Instance<AZ::RPI::Material> m_materialInstance;
+        AZ::Data::Asset<JE::Render::RPI::MaterialAsset> m_materialAsset;
+        AZ::Data::Instance<JE::Render::RPI::Material> m_materialInstance;
 
         // Surface tags not used by default material
         SurfaceData::SurfaceTag m_surfaceTag;

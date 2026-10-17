@@ -10,22 +10,22 @@
 #include <PostProcess/DepthOfField/DepthOfFieldSettings.h>
 #include <PostProcessing/DepthOfFieldCompositePass.h>
 
-#include <Atom/RPI.Public/RenderPipeline.h>
-#include <Atom/RPI.Public/Scene.h>
-#include <Atom/RPI.Public/View.h>
+#include <JE/Render/RPI/Public/RenderPipeline.h>
+#include <JE/Render/RPI/Public/Scene.h>
+#include <JE/Render/RPI/Public/View.h>
 
 namespace AZ
 {
     namespace Render
     {
-        RPI::Ptr<DepthOfFieldCompositePass> DepthOfFieldCompositePass::Create(const RPI::PassDescriptor& descriptor)
+        JE::Render::RPI::Ptr<DepthOfFieldCompositePass> DepthOfFieldCompositePass::Create(const JE::Render::RPI::PassDescriptor& descriptor)
         {
-            RPI::Ptr<DepthOfFieldCompositePass> pass = aznew DepthOfFieldCompositePass(descriptor);
+            JE::Render::RPI::Ptr<DepthOfFieldCompositePass> pass = aznew DepthOfFieldCompositePass(descriptor);
             return pass;
         }
 
-        DepthOfFieldCompositePass::DepthOfFieldCompositePass(const RPI::PassDescriptor& descriptor)
-            : RPI::FullscreenTrianglePass(descriptor)
+        DepthOfFieldCompositePass::DepthOfFieldCompositePass(const JE::Render::RPI::PassDescriptor& descriptor)
+            : JE::Render::RPI::FullscreenTrianglePass(descriptor)
             // option names from the azsl file
             , m_optionName("o_dofMode")
             , m_optionValues
@@ -70,7 +70,7 @@ namespace AZ
         {
             AZ_Assert(m_shader != nullptr, "DepthOfFieldCompositePass %s has a null shader when calling UpdateCurrentShaderVariant.", GetPathName().GetCStr());
 
-            RPI::ShaderOptionGroup shaderOption = m_shader->CreateShaderOptionGroup();
+            JE::Render::RPI::ShaderOptionGroup shaderOption = m_shader->CreateShaderOptionGroup();
 
             // DebugColoring::Disabled == 0
             // DebugColoring::Enabled == 1
@@ -86,9 +86,9 @@ namespace AZ
         {
             FullscreenTrianglePass::FrameBeginInternal(params);
 
-            RPI::Scene* scene = GetScene();
+            JE::Render::RPI::Scene* scene = GetScene();
             PostProcessFeatureProcessor* fp = scene->GetFeatureProcessor<PostProcessFeatureProcessor>();
-            AZ::RPI::ViewPtr view = GetRenderPipeline()->GetFirstView(GetPipelineViewTag());
+            JE::Render::RPI::ViewPtr view = GetRenderPipeline()->GetFirstView(GetPipelineViewTag());
             if (fp)
             {
                 PostProcessSettings* postProcessSettings = fp->GetLevelSettingsFromView(view);

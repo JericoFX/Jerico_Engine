@@ -7,8 +7,8 @@
  */
 
 #include <AzCore/Serialization/SerializeContext.h>
-#include <Atom/RPI.Public/Pass/PassSystemInterface.h>
-#include <Atom/RPI.Public/FeatureProcessorFactory.h>
+#include <JE/Render/RPI/Public/Pass/PassSystemInterface.h>
+#include <JE/Render/RPI/Public/FeatureProcessorFactory.h>
 #include <Components/DiffuseProbeGridSystemComponent.h>
 #include <Components/DiffuseProbeGridComponentController.h>
 #include <Render/DiffuseProbeGridFeatureProcessor.h>
@@ -67,7 +67,7 @@ namespace AZ
 
         void DiffuseProbeGridSystemComponent::LoadPassTemplateMappings()
         {
-            auto* passSystem = RPI::PassSystemInterface::Get();
+            auto* passSystem = JE::Render::RPI::PassSystemInterface::Get();
             AZ_Assert(passSystem, "PassSystemInterface is null");
 
             const char* passTemplatesFile = "Passes/DiffuseProbeGridTemplates.azasset";
@@ -77,14 +77,14 @@ namespace AZ
         void DiffuseProbeGridSystemComponent::Activate()
         {
             // register feature processors
-            RPI::FeatureProcessorFactory::Get()->RegisterFeatureProcessor<DiffuseProbeGridFeatureProcessor>();
-            RPI::FeatureProcessorFactory::Get()->RegisterFeatureProcessor<DiffuseGlobalIlluminationFeatureProcessor>();
+            JE::Render::RPI::FeatureProcessorFactory::Get()->RegisterFeatureProcessor<DiffuseProbeGridFeatureProcessor>();
+            JE::Render::RPI::FeatureProcessorFactory::Get()->RegisterFeatureProcessor<DiffuseGlobalIlluminationFeatureProcessor>();
 
-            auto* passSystem = RPI::PassSystemInterface::Get();
+            auto* passSystem = JE::Render::RPI::PassSystemInterface::Get();
             AZ_Assert(passSystem, "PassSystemInterface is null");
 
             // setup handler for pass templates mappings
-            m_loadTemplatesHandler = RPI::PassSystemInterface::OnReadyLoadTemplatesEvent::Handler([this]() { this->LoadPassTemplateMappings(); });
+            m_loadTemplatesHandler = JE::Render::RPI::PassSystemInterface::OnReadyLoadTemplatesEvent::Handler([this]() { this->LoadPassTemplateMappings(); });
             passSystem->ConnectEvent(m_loadTemplatesHandler);
 
             // load the DiffuseProbeGrid pass classes
@@ -107,8 +107,8 @@ namespace AZ
 
         void DiffuseProbeGridSystemComponent::Deactivate()
         {
-            RPI::FeatureProcessorFactory::Get()->UnregisterFeatureProcessor<DiffuseProbeGridFeatureProcessor>();
-            RPI::FeatureProcessorFactory::Get()->UnregisterFeatureProcessor<DiffuseGlobalIlluminationFeatureProcessor>();
+            JE::Render::RPI::FeatureProcessorFactory::Get()->UnregisterFeatureProcessor<DiffuseProbeGridFeatureProcessor>();
+            JE::Render::RPI::FeatureProcessorFactory::Get()->UnregisterFeatureProcessor<DiffuseGlobalIlluminationFeatureProcessor>();
 
             m_loadTemplatesHandler.Disconnect();
         }

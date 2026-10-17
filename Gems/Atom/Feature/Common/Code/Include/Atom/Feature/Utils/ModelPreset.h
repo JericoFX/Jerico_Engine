@@ -15,8 +15,8 @@
 #include <AzCore/std/smart_ptr/shared_ptr.h>
 #include <AzCore/std/string/string.h>
 #include <Atom/Feature/Base.h>
-#include <Atom/RPI.Reflect/Model/ModelAsset.h>
-#include <Atom/RPI.Reflect/Image/StreamingImageAsset.h>
+#include <JE/Render/RPI/Reflect/Model/ModelAsset.h>
+#include <JE/Render/RPI/Reflect/Image/StreamingImageAsset.h>
 
 namespace AZ
 {
@@ -30,7 +30,7 @@ namespace AZ
             static void Reflect(AZ::ReflectContext* context);
 
             static constexpr char const Extension[] = "modelpreset.azasset";
-            AZ::Data::Asset<AZ::RPI::ModelAsset> m_modelAsset;
+            AZ::Data::Asset<JE::Render::RPI::ModelAsset> m_modelAsset;
         };
 
         using ModelPresetPtr = AZStd::shared_ptr<ModelPreset>;

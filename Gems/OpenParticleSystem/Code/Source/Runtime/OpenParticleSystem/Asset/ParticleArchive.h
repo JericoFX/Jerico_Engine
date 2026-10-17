@@ -18,9 +18,9 @@
 #include <particle/core/ParticleRender.h>
 #include <particle/core/ParticleSystem.h>
 
-#include <Atom/RPI.Reflect/Material/MaterialAsset.h>
-#include <Atom/RPI.Reflect/Model/ModelAsset.h>
-#include <Atom/RPI.Public/Model/Model.h>
+#include <JE/Render/RPI/Reflect/Material/MaterialAsset.h>
+#include <JE/Render/RPI/Reflect/Model/ModelAsset.h>
+#include <JE/Render/RPI/Public/Model/Model.h>
 
 #include <OpenParticleSystem/MaterialPropertyOverride.h>
 
@@ -58,12 +58,12 @@ namespace OpenParticle
 
             AZ::u32 m_config = 0;
             AZStd::pair<AZ::Uuid, AZ::u32> m_render;
-            AZ::Data::Asset<AZ::RPI::MaterialAsset> m_material;
+            AZ::Data::Asset<JE::Render::RPI::MaterialAsset> m_material;
             //! Property values that differ from m_material for this emitter only. Applied to the emitter's
             //! own material instance at load, so two emitters can share a material asset and still look different.
             JE::Render::MaterialPropertyOverrideMap m_materialOverrides;
-            AZ::Data::Asset<AZ::RPI::ModelAsset> m_model;
-            AZ::Data::Asset<AZ::RPI::ModelAsset> m_skeletonModel;
+            AZ::Data::Asset<JE::Render::RPI::ModelAsset> m_model;
+            AZ::Data::Asset<JE::Render::RPI::ModelAsset> m_skeletonModel;
             AZStd::vector<AZStd::tuple<AZ::Uuid, AZ::u32>> m_effectors;
             SimuCore::ParticleCore::MeshSampleType m_meshSampleType;
         };
@@ -82,13 +82,13 @@ namespace OpenParticle
 
         ParticleArchive& RenderConfig(const AZStd::any& val);
 
-        ParticleArchive& Material(const AZ::Data::Asset<AZ::RPI::MaterialAsset>& asset);
+        ParticleArchive& Material(const AZ::Data::Asset<JE::Render::RPI::MaterialAsset>& asset);
 
         ParticleArchive& MaterialOverrides(const JE::Render::MaterialPropertyOverrideMap& overrides);
 
-        ParticleArchive& Model(const AZ::Data::Asset<AZ::RPI::ModelAsset>& asset);
+        ParticleArchive& Model(const AZ::Data::Asset<JE::Render::RPI::ModelAsset>& asset);
 
-        ParticleArchive& SkeletonModel(const AZ::Data::Asset<AZ::RPI::ModelAsset>& asset);
+        ParticleArchive& SkeletonModel(const AZ::Data::Asset<JE::Render::RPI::ModelAsset>& asset);
 
         ParticleArchive& AddEffector(const AZStd::any& val);
 

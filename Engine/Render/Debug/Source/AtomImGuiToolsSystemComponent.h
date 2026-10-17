@@ -10,7 +10,7 @@
 #include <JE/Render/Debug/RenderDebugExports.h>
 
 #include <AzCore/Component/Component.h>
-#include <Atom/RPI.Public/Pass/Pass.h>
+#include <JE/Render/RPI/Public/Pass/Pass.h>
 #include <CrySystemBus.h>
 
 #if defined(IMGUI_ENABLED)

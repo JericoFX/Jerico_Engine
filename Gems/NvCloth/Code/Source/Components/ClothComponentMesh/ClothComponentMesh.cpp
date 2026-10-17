@@ -29,9 +29,9 @@
 #include <AzFramework/Physics/PhysicsScene.h>
 #include <AzFramework/Physics/WindBus.h>
 #include <AzFramework/Physics/Common/PhysicsTypes.h>
-#include <Atom/RPI.Reflect/Buffer/BufferAssetView.h>
-#include <Atom/RPI.Reflect/Model/ModelAsset.h>
-#include <Atom/RPI.Reflect/Model/ModelLodAsset.h>
+#include <JE/Render/RPI/Reflect/Buffer/BufferAssetView.h>
+#include <JE/Render/RPI/Reflect/Model/ModelAsset.h>
+#include <JE/Render/RPI/Reflect/Model/ModelLodAsset.h>
 
 namespace NvCloth
 {
@@ -47,7 +47,7 @@ namespace NvCloth
     {
     public:
         MappedBuffer(
-            const AZ::RPI::BufferAssetView* bufferAssetView,
+            const JE::Render::RPI::BufferAssetView* bufferAssetView,
             const size_t expectedElementCount,
             const AZ::RHI::Format expectedElementFormat);
         ~MappedBuffer();
@@ -58,13 +58,13 @@ namespace NvCloth
         }
 
     private:
-        AZ::Data::Instance<AZ::RPI::Buffer> m_rpiBuffer;
+        AZ::Data::Instance<JE::Render::RPI::Buffer> m_rpiBuffer;
         AZStd::unordered_map<int, T*> m_buffer;
     };
 
     template<typename T>
     MappedBuffer<T>::MappedBuffer(
-        const AZ::RPI::BufferAssetView* bufferAssetView,
+        const JE::Render::RPI::BufferAssetView* bufferAssetView,
         [[maybe_unused]] const size_t expectedElementCount,
         [[maybe_unused]] const AZ::RHI::Format expectedElementFormat)
     {
@@ -81,8 +81,8 @@ namespace NvCloth
         AZ_Assert(bufferViewDescriptor.m_elementFormat == expectedElementFormat,
             "Unexpected buffer format: expected is %d but descriptor's is %d", expectedElementFormat, bufferViewDescriptor.m_elementFormat);
 
-        const AZ::Data::Asset<AZ::RPI::BufferAsset>& bufferAsset = bufferAssetView->GetBufferAsset();
-        m_rpiBuffer = AZ::RPI::Buffer::FindOrCreate(bufferAsset);
+        const AZ::Data::Asset<JE::Render::RPI::BufferAsset>& bufferAsset = bufferAssetView->GetBufferAsset();
+        m_rpiBuffer = JE::Render::RPI::Buffer::FindOrCreate(bufferAsset);
         if (m_rpiBuffer == nullptr)
         {
             AZ_Error("ClothComponentMesh", false,
@@ -485,14 +485,14 @@ namespace NvCloth
         // internally it created a new asset for the model instance. So it's important to
         // get the asset from the model when we want to write to them, instead of getting the
         // ModelAsset directly from the bus (which returns the original asset shared by all entities).
-        AZ::Data::Instance<AZ::RPI::Model> model;
+        AZ::Data::Instance<JE::Render::RPI::Model> model;
         AZ::Render::MeshComponentRequestBus::EventResult(model, m_entityId, &AZ::Render::MeshComponentRequestBus::Events::GetModel);
         if (!model)
         {
             return;
         }
 
-        AZ::Data::Asset<AZ::RPI::ModelAsset> modelAsset = model->GetModelAsset();
+        AZ::Data::Asset<JE::Render::RPI::ModelAsset> modelAsset = model->GetModelAsset();
         if (!modelAsset.IsReady())
         {
             return;
@@ -509,7 +509,7 @@ namespace NvCloth
         }
 
         const auto modelLodAssets = modelAsset->GetLodAssets();
-        const AZ::Data::Asset<AZ::RPI::ModelLodAsset> modelLodAsset = modelLodAssets[m_meshNodeInfo.m_lodLevel];
+        const AZ::Data::Asset<JE::Render::RPI::ModelLodAsset> modelLodAsset = modelLodAssets[m_meshNodeInfo.m_lodLevel];
         if (!modelLodAsset.GetId().IsValid())
         {
             AZ_Error("ClothComponentMesh", false,
@@ -539,7 +539,7 @@ namespace NvCloth
             }
             
             const auto subMeshes = modelLodAsset->GetMeshes();
-            const AZ::RPI::ModelLodAsset::Mesh& subMesh = subMeshes[subMeshInfo.m_primitiveIndex];
+            const JE::Render::RPI::ModelLodAsset::Mesh& subMesh = subMeshes[subMeshInfo.m_primitiveIndex];
 
             const int numVertices = subMeshInfo.m_numVertices;
             const int firstVertex = subMeshInfo.m_verticesFirstIndex;

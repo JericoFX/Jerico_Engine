@@ -8,8 +8,8 @@
 
 #include <Atom/RHI/DrawListTagRegistry.h>
 #include <Atom/RHI/RHISystemInterface.h>
-#include <Atom/RPI.Public/RenderPipeline.h>
-#include <Atom/RPI.Reflect/Pass/RasterPassData.h>
+#include <JE/Render/RPI/Public/RenderPipeline.h>
+#include <JE/Render/RPI/Reflect/Pass/RasterPassData.h>
 #include <CoreLights/CascadedShadowmapsPass.h>
 #include <CoreLights/ShadowmapPass.h>
 
@@ -19,10 +19,10 @@ namespace AZ
     {
         // Pass Creation ...
 
-        CascadedShadowmapsPass::CascadedShadowmapsPass(const RPI::PassDescriptor& descriptor)
+        CascadedShadowmapsPass::CascadedShadowmapsPass(const JE::Render::RPI::PassDescriptor& descriptor)
             : Base(descriptor)
         {
-            const RPI::RasterPassData* passData = RPI::PassUtils::GetPassData<RPI::RasterPassData>(descriptor);
+            const JE::Render::RPI::RasterPassData* passData = JE::Render::RPI::PassUtils::GetPassData<JE::Render::RPI::RasterPassData>(descriptor);
             if (passData)
             {
                 m_drawListTagName = passData->m_drawListTag;
@@ -42,7 +42,7 @@ namespace AZ
             }
         }
 
-        RPI::Ptr<CascadedShadowmapsPass> CascadedShadowmapsPass::Create(const RPI::PassDescriptor& descriptor)
+        JE::Render::RPI::Ptr<CascadedShadowmapsPass> CascadedShadowmapsPass::Create(const JE::Render::RPI::PassDescriptor& descriptor)
         {
             return aznew CascadedShadowmapsPass(descriptor);
         }
@@ -52,7 +52,7 @@ namespace AZ
         void CascadedShadowmapsPass::CreateChildShadowMapPass(u16 cascadeIndex)
         {
             const Name passName{ AZStd::string::format("%d", cascadeIndex) };
-            auto passData = AZStd::make_shared<RPI::RasterPassData>();
+            auto passData = AZStd::make_shared<JE::Render::RPI::RasterPassData>();
             passData->m_drawListTag = m_drawListTagName;
             passData->m_pipelineViewTag = GetPipelineViewTags()[cascadeIndex];
             passData->m_bindViewSrg = true;
@@ -110,11 +110,11 @@ namespace AZ
         void CascadedShadowmapsPass::UpdateShadowmapImageSize()
         {
             // [GFX TODO][ATOM-2470] stop caring about attachment
-            RPI::Ptr<RPI::PassAttachment> attachment = m_ownedAttachments.front();
+            JE::Render::RPI::Ptr<JE::Render::RPI::PassAttachment> attachment = m_ownedAttachments.front();
             AZ_Assert(attachment, "[CascadedShadowmapsPass %s] Cannot find shadowmap image attachment.", GetPathName().GetCStr());
             AZ_Assert(attachment->m_descriptor.m_type == RHI::AttachmentType::Image, "[CascadedShadowmapsPass %s] requires an image attachment", GetPathName().GetCStr());
 
-            RPI::PassAttachmentBinding& binding = GetOutputBinding(0);
+            JE::Render::RPI::PassAttachmentBinding& binding = GetOutputBinding(0);
             binding.SetAttachment(attachment);
 
             RHI::ImageDescriptor& imageDescriptor = attachment->m_descriptor.m_image;
@@ -140,7 +140,7 @@ namespace AZ
             }
         }
 
-        const AZStd::span<const RPI::PipelineViewTag> CascadedShadowmapsPass::GetPipelineViewTags()
+        const AZStd::span<const JE::Render::RPI::PipelineViewTag> CascadedShadowmapsPass::GetPipelineViewTags()
         {
             if (m_childrenPipelineViewTags.size() != Shadow::MaxNumberOfCascades)
             {
@@ -156,7 +156,7 @@ namespace AZ
             return m_childrenPipelineViewTags;
         }
 
-        void CascadedShadowmapsPass::GetPipelineViewTags(RPI::PipelineViewTags& outTags) const
+        void CascadedShadowmapsPass::GetPipelineViewTags(JE::Render::RPI::PipelineViewTags& outTags) const
         {
             for (size_t childIndex = 0; childIndex < m_numCascades; ++childIndex)
             {
@@ -164,7 +164,7 @@ namespace AZ
             }
         }
 
-        void CascadedShadowmapsPass::GetViewDrawListInfo(RHI::DrawListMask& outDrawListMask, RPI::PassesByDrawList& outPassesByDrawList, const RPI::PipelineViewTag& viewTag) const
+        void CascadedShadowmapsPass::GetViewDrawListInfo(RHI::DrawListMask& outDrawListMask, JE::Render::RPI::PassesByDrawList& outPassesByDrawList, const JE::Render::RPI::PipelineViewTag& viewTag) const
         {
             if (AZStd::find(
                 m_childrenPipelineViewTags.begin(),

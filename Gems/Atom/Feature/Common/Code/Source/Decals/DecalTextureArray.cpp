@@ -6,16 +6,16 @@
  *
  */
 #include "DecalTextureArray.h"
-#include <Atom/RPI.Public/Image/ImageSystemInterface.h>
-#include <Atom/RPI.Reflect/Image/StreamingImageAssetCreator.h>
-#include <Atom/RPI.Public/Image/StreamingImagePool.h>
-#include <Atom/RPI.Reflect/Image/ImageMipChainAsset.h>
-#include <Atom/RPI.Reflect/Image/ImageMipChainAssetCreator.h>
-#include <Atom/RPI.Reflect/Image/StreamingImageAssetHandler.h>
-#include <Atom/RPI.Public/Image/StreamingImage.h>
-#include <Atom/RPI.Reflect/Material/MaterialAsset.h>
-#include <Atom/RPI.Public/Material/Material.h>
-#include <Atom/RPI.Reflect/Image/StreamingImageAsset.h>
+#include <JE/Render/RPI/Public/Image/ImageSystemInterface.h>
+#include <JE/Render/RPI/Reflect/Image/StreamingImageAssetCreator.h>
+#include <JE/Render/RPI/Public/Image/StreamingImagePool.h>
+#include <JE/Render/RPI/Reflect/Image/ImageMipChainAsset.h>
+#include <JE/Render/RPI/Reflect/Image/ImageMipChainAssetCreator.h>
+#include <JE/Render/RPI/Reflect/Image/StreamingImageAssetHandler.h>
+#include <JE/Render/RPI/Public/Image/StreamingImage.h>
+#include <JE/Render/RPI/Reflect/Material/MaterialAsset.h>
+#include <JE/Render/RPI/Public/Material/Material.h>
+#include <JE/Render/RPI/Reflect/Image/StreamingImageAsset.h>
 #include <AzCore/Name/NameDictionary.h>
 
 namespace AZ
@@ -39,20 +39,20 @@ namespace AZ
 
             static AZ::Data::AssetId GetImagePoolId()
             {
-                const Data::Instance<RPI::StreamingImagePool>& imagePool = RPI::ImageSystemInterface::Get()->GetSystemStreamingPool();
+                const Data::Instance<JE::Render::RPI::StreamingImagePool>& imagePool = JE::Render::RPI::ImageSystemInterface::Get()->GetSystemStreamingPool();
                 return imagePool->GetAssetId();
             }
 
-            static AZ::Data::Asset<AZ::RPI::MaterialAsset> QueueLoad(const AZ::Data::AssetId id)
+            static AZ::Data::Asset<JE::Render::RPI::MaterialAsset> QueueLoad(const AZ::Data::AssetId id)
             {
-                auto asset = AZ::Data::AssetManager::Instance().GetAsset<AZ::RPI::MaterialAsset>(
+                auto asset = AZ::Data::AssetManager::Instance().GetAsset<JE::Render::RPI::MaterialAsset>(
                     id, AZ::Data::AssetLoadBehavior::QueueLoad);
 
                 return asset;
             }
 
             // Extract exactly which texture asset we need to load from the given material and map type (diffuse, normal, etc).
-            static AZ::Data::Asset<AZ::RPI::StreamingImageAsset> GetStreamingImageAsset(AZ::RPI::MaterialAsset& materialAsset, const AZ::Name& propertyName)
+            static AZ::Data::Asset<JE::Render::RPI::StreamingImageAsset> GetStreamingImageAsset(JE::Render::RPI::MaterialAsset& materialAsset, const AZ::Name& propertyName)
             {
                 if (!materialAsset.IsReady())
                 {
@@ -60,8 +60,8 @@ namespace AZ
                     return {};
                 }
 
-                const AZ::RPI::MaterialPropertiesLayout* materialLayout = materialAsset.GetMaterialPropertiesLayout();
-                const AZ::RPI::MaterialPropertyIndex propertyIndex = materialLayout->FindPropertyIndex(propertyName);
+                const JE::Render::RPI::MaterialPropertiesLayout* materialLayout = materialAsset.GetMaterialPropertiesLayout();
+                const JE::Render::RPI::MaterialPropertyIndex propertyIndex = materialLayout->FindPropertyIndex(propertyName);
                 if (propertyIndex.IsNull())
                 {
                     AZ_Warning("DecalTextureArray", false, "Unable to find material property with the name: %s", propertyName.GetCStr());
@@ -69,8 +69,8 @@ namespace AZ
                 }
 
                 const auto& propertyValues = materialAsset.GetPropertyValues();
-                const AZ::RPI::MaterialPropertyValue& propertyValue = propertyValues[propertyIndex.GetIndex()];
-                auto imageAsset = propertyValue.GetValue<Data::Asset<RPI::ImageAsset>>();
+                const JE::Render::RPI::MaterialPropertyValue& propertyValue = propertyValues[propertyIndex.GetIndex()];
+                auto imageAsset = propertyValue.GetValue<Data::Asset<JE::Render::RPI::ImageAsset>>();
                 const auto& assetId = imageAsset.GetId();
 
                 if (assetId.IsValid())
@@ -84,18 +84,18 @@ namespace AZ
                     AZ_Warning("DecalTextureArray", false, "Material property: %s does not have a valid asset Id", propertyName.GetCStr());
                     return {};
                 }
-                return Data::static_pointer_cast<AZ::RPI::StreamingImageAsset>(imageAsset);
+                return Data::static_pointer_cast<JE::Render::RPI::StreamingImageAsset>(imageAsset);
             }
 
-            static AZ::Data::Asset<AZ::RPI::StreamingImageAsset> GetStreamingImageAsset(const AZ::Data::Asset<Data::AssetData> materialAssetData, const AZ::Name& propertyName)
+            static AZ::Data::Asset<JE::Render::RPI::StreamingImageAsset> GetStreamingImageAsset(const AZ::Data::Asset<Data::AssetData> materialAssetData, const AZ::Name& propertyName)
             {
                 AZ_Assert(materialAssetData->IsReady(), "GetStreamingImageAsset() called with AssetData that is not ready.");
-                AZ::RPI::MaterialAsset* materialAsset = materialAssetData.GetAs<AZ::RPI::MaterialAsset>();
+                JE::Render::RPI::MaterialAsset* materialAsset = materialAssetData.GetAs<JE::Render::RPI::MaterialAsset>();
                 return GetStreamingImageAsset(*materialAsset, propertyName);
             }
         }
 
-        DecalTextureArray::PackingLayout DecalTextureArray::GetPackingLayout(AZ::RPI::MaterialAsset& materialAsset)
+        DecalTextureArray::PackingLayout DecalTextureArray::GetPackingLayout(JE::Render::RPI::MaterialAsset& materialAsset)
         {
             PackingLayout layout;
 
@@ -163,19 +163,19 @@ namespace AZ
             return baseColorAsset->GetImageDescriptor().m_size;
         }
 
-        const AZ::Data::Instance<AZ::RPI::StreamingImage>& DecalTextureArray::GetPackedTexture(const DecalMapType mapType) const
+        const AZ::Data::Instance<JE::Render::RPI::StreamingImage>& DecalTextureArray::GetPackedTexture(const DecalMapType mapType) const
         {
             return m_textureArrayPacked[mapType];
         }
 
-        bool DecalTextureArray::IsValidDecalMaterial(AZ::RPI::MaterialAsset& materialAsset)
+        bool DecalTextureArray::IsValidDecalMaterial(JE::Render::RPI::MaterialAsset& materialAsset)
         {
             return GetStreamingImageAsset(materialAsset, GetMapName(DecalMapType_Diffuse)).IsReady();
         }
 
-        AZ::Data::Asset<AZ::RPI::ImageMipChainAsset> DecalTextureArray::BuildPackedMipChainAsset(const DecalMapType mapType, const size_t numTexturesToCreate)
+        AZ::Data::Asset<JE::Render::RPI::ImageMipChainAsset> DecalTextureArray::BuildPackedMipChainAsset(const DecalMapType mapType, const size_t numTexturesToCreate)
         {
-            RPI::ImageMipChainAssetCreator assetCreator;
+            JE::Render::RPI::ImageMipChainAssetCreator assetCreator;
             const uint32_t mipLevels = GetNumMipLevels(mapType);
 
             assetCreator.Begin(Data::AssetId(AZ::Uuid::CreateRandom()), aznumeric_cast<uint16_t>(mipLevels), aznumeric_cast<uint16_t>(numTexturesToCreate));
@@ -194,7 +194,7 @@ namespace AZ
                 assetCreator.EndMip();
             }
 
-            Data::Asset<RPI::ImageMipChainAsset> asset;
+            Data::Asset<JE::Render::RPI::ImageMipChainAsset> asset;
             assetCreator.End(asset);
 
             return asset;
@@ -236,18 +236,18 @@ namespace AZ
                 RHI::ImageViewDescriptor imageViewDescriptor;
                 imageViewDescriptor.m_isArray = true;
 
-                RPI::StreamingImageAssetCreator assetCreator;
+                JE::Render::RPI::StreamingImageAssetCreator assetCreator;
                 assetCreator.Begin(Data::AssetId(Uuid::CreateRandom()));
                 assetCreator.SetPoolAssetId(GetImagePoolId());
-                assetCreator.SetFlags(RPI::StreamingImageFlags::None);
+                assetCreator.SetFlags(JE::Render::RPI::StreamingImageFlags::None);
                 assetCreator.SetImageDescriptor(
                     CreatePackedImageDescriptor(mapType, aznumeric_cast<uint16_t>(numTexturesToCreate), GetNumMipLevels(mapType)));
                 assetCreator.SetImageViewDescriptor(imageViewDescriptor);
                 assetCreator.AddMipChainAsset(*mipChainAsset);
-                Data::Asset<RPI::StreamingImageAsset> packedAsset;
+                Data::Asset<JE::Render::RPI::StreamingImageAsset> packedAsset;
                 const bool createdOk = assetCreator.End(packedAsset);
                 AZ_Error("TextureArrayData", createdOk, "Pack() call failed.");
-                m_textureArrayPacked[i] = createdOk ? RPI::StreamingImage::FindOrCreate(packedAsset) : nullptr;
+                m_textureArrayPacked[i] = createdOk ? JE::Render::RPI::StreamingImage::FindOrCreate(packedAsset) : nullptr;
 
             }
 

@@ -13,10 +13,10 @@
 #include <Atom/RHI.Reflect/ShaderResourceGroupLayoutDescriptor.h>
 
 #include <Atom/Feature/PostProcess/FilmGrain/FilmGrainSettingsInterface.h>
-#include <Atom/RPI.Public/Image/StreamingImage.h>
+#include <JE/Render/RPI/Public/Image/StreamingImage.h>
 #include <PostProcess/PostProcessBase.h>
 
-#include <Atom/RPI.Public/View.h>
+#include <JE/Render/RPI/Public/View.h>
 
 namespace AZ
 {
@@ -48,7 +48,7 @@ namespace AZ
             // Applies settings from this onto target using override settings and passed alpha value for blending
             void ApplySettingsTo(FilmGrainSettings* target, float alpha) const;
 
-            Data::Instance<RPI::StreamingImage> LoadStreamingImage(const char* textureFilePath, const char* sampleName);
+            Data::Instance<JE::Render::RPI::StreamingImage> LoadStreamingImage(const char* textureFilePath, const char* sampleName);
 
             // Generate getters and setters.
 #include <Atom/Feature/ParamMacros/StartParamFunctionsOverrideImpl.inl>

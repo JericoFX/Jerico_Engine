@@ -13,12 +13,12 @@
 #include <Atom/RHI/Factory.h>
 #include <Atom/RHI.Reflect/InputStreamLayoutBuilder.h>
 
-#include <Atom/RPI.Reflect/Shader/ShaderAsset.h>
-#include <Atom/RPI.Public/DynamicDraw/DynamicDrawInterface.h>
-#include <Atom/RPI.Public/RPIUtils.h>
-#include <Atom/RPI.Public/Scene.h>
-#include <Atom/RPI.Public/Shader/Shader.h>
-#include <Atom/RPI.Public/View.h>
+#include <JE/Render/RPI/Reflect/Shader/ShaderAsset.h>
+#include <JE/Render/RPI/Public/DynamicDraw/DynamicDrawInterface.h>
+#include <JE/Render/RPI/Public/RPIUtils.h>
+#include <JE/Render/RPI/Public/Scene.h>
+#include <JE/Render/RPI/Public/Shader/Shader.h>
+#include <JE/Render/RPI/Public/View.h>
 
 #include <AzCore/Debug/Profiler.h>
 
@@ -36,7 +36,7 @@ namespace AZ
             };
         }
 
-        bool DynamicPrimitiveProcessor::Initialize(const AZ::RPI::Scene* scene)
+        bool DynamicPrimitiveProcessor::Initialize(const JE::Render::RPI::Scene* scene)
         {
             for (int primitiveType = 0; primitiveType < PrimitiveType_Count; ++primitiveType)
             {
@@ -59,7 +59,7 @@ namespace AZ
             m_shader = nullptr;
             m_scene = nullptr;
 
-            for (RPI::Ptr<RPI::PipelineStateForDraw>* pipelineState : m_createdPipelineStates)
+            for (JE::Render::RPI::Ptr<JE::Render::RPI::PipelineStateForDraw>* pipelineState : m_createdPipelineStates)
             {
                 pipelineState->reset();
             }
@@ -71,7 +71,7 @@ namespace AZ
             if (m_needUpdatePipelineStates)
             {
                 // for created pipeline state, re-set their data from scene
-                for (RPI::Ptr<RPI::PipelineStateForDraw>* pipelineState : m_createdPipelineStates)
+                for (JE::Render::RPI::Ptr<JE::Render::RPI::PipelineStateForDraw>* pipelineState : m_createdPipelineStates)
                 {
                     (*pipelineState)->SetOutputFromScene(m_scene);
                     (*pipelineState)->Finalize();
@@ -86,7 +86,7 @@ namespace AZ
             m_drawPackets.clear();
         }
 
-        void DynamicPrimitiveProcessor::ProcessDynamicPrimitives(AuxGeomBufferData* bufferData, const RPI::FeatureProcessor::RenderPacket& fpPacket)
+        void DynamicPrimitiveProcessor::ProcessDynamicPrimitives(AuxGeomBufferData* bufferData, const JE::Render::RPI::FeatureProcessor::RenderPacket& fpPacket)
         {
             AZ_PROFILE_SCOPE(AzRender, "DynamicPrimitiveProcessor: ProcessDynamicPrimitives");
             RHI::DrawPacketBuilder drawPacketBuilder{RHI::MultiDevice::AllDevices};
@@ -113,7 +113,7 @@ namespace AZ
 
                 // Loop over all the primitives and use one draw call for each AuxGeom API call
                 // We have to create separate draw packets for each view that the AuxGeom is in (typically only one)
-                AZStd::vector<RPI::ViewPtr> auxGeomViews;
+                AZStd::vector<JE::Render::RPI::ViewPtr> auxGeomViews;
                 for (auto& view : fpPacket.m_views)
                 {
                     // If this view is ignoring packets with our draw list tag then skip this view
@@ -135,12 +135,12 @@ namespace AZ
                     pipelineStateOptions.m_depthReadType = primitive.m_depthReadType;
                     pipelineStateOptions.m_depthWriteType = primitive.m_depthWriteType;
                     pipelineStateOptions.m_faceCullMode = primitive.m_faceCullMode;
-                    RPI::Ptr<RPI::PipelineStateForDraw> pipelineState = GetPipelineState(pipelineStateOptions);
+                    JE::Render::RPI::Ptr<JE::Render::RPI::PipelineStateForDraw> pipelineState = GetPipelineState(pipelineStateOptions);
 
-                    Data::Instance<RPI::ShaderResourceGroup> srg;
+                    Data::Instance<JE::Render::RPI::ShaderResourceGroup> srg;
                     if (useManualViewProjectionOverride || primitive.m_primitiveType == PrimitiveType_PointList)
                     {
-                        srg = RPI::ShaderResourceGroup::Create(m_shader->GetAsset(), m_shader->GetSupervariantIndex(), m_shaderData.m_perDrawSrgLayout->GetName());
+                        srg = JE::Render::RPI::ShaderResourceGroup::Create(m_shader->GetAsset(), m_shader->GetSupervariantIndex(), m_shaderData.m_perDrawSrgLayout->GetName());
                         if (!srg)
                         {
                             AZ_Warning("AuxGeom", false, "Failed to create a shader resource group for an AuxGeom draw, Ignoring the draw");
@@ -193,7 +193,7 @@ namespace AZ
         {
             const size_t sourceByteSize = source.size() * sizeof(AuxGeomIndex);
             
-            RHI::Ptr<RPI::DynamicBuffer> dynamicBuffer = RPI::DynamicDrawInterface::Get()->GetDynamicBuffer(static_cast<uint32_t>(sourceByteSize), RHI::Alignment::InputAssembly);
+            RHI::Ptr<JE::Render::RPI::DynamicBuffer> dynamicBuffer = JE::Render::RPI::DynamicDrawInterface::Get()->GetDynamicBuffer(static_cast<uint32_t>(sourceByteSize), RHI::Alignment::InputAssembly);
             if (!dynamicBuffer)
             {
                 AZ_WarningOnce("AuxGeom", false, "Failed to allocate dynamic buffer of size %d.", sourceByteSize);
@@ -208,7 +208,7 @@ namespace AZ
         {
             const size_t sourceByteSize = source.size() * sizeof(AuxGeomDynamicVertex);
 
-            RHI::Ptr<RPI::DynamicBuffer> dynamicBuffer = RPI::DynamicDrawInterface::Get()->GetDynamicBuffer(static_cast<uint32_t>(sourceByteSize), RHI::Alignment::InputAssembly);
+            RHI::Ptr<JE::Render::RPI::DynamicBuffer> dynamicBuffer = JE::Render::RPI::DynamicDrawInterface::Get()->GetDynamicBuffer(static_cast<uint32_t>(sourceByteSize), RHI::Alignment::InputAssembly);
             if (!dynamicBuffer)
             {
                 AZ_WarningOnce("AuxGeom", false, "Failed to allocate dynamic buffer of size %d.", sourceByteSize);
@@ -252,7 +252,7 @@ namespace AZ
             inputStreamLayout = layoutBuilder.End();
         }
 
-        RPI::Ptr<RPI::PipelineStateForDraw>& DynamicPrimitiveProcessor::GetPipelineState(const PipelineStateOptions& pipelineStateOptions)
+        JE::Render::RPI::Ptr<JE::Render::RPI::PipelineStateForDraw>& DynamicPrimitiveProcessor::GetPipelineState(const PipelineStateOptions& pipelineStateOptions)
         {
             // The declaration: m_pipelineStates[PerspectiveType_Count][BlendMode_Count][PrimitiveType_Count][DepthRead_Count][DepthWrite_Count][FaceCull_Count];
             return m_pipelineStates[pipelineStateOptions.m_perpectiveType][pipelineStateOptions.m_blendMode][pipelineStateOptions.m_primitiveType]
@@ -269,28 +269,28 @@ namespace AZ
             // Use the the pipeline state for PipelineStateOptions with default values and input perspective type as base pipeline state. Create one if it was empty.
             PipelineStateOptions defaultOptions;
             defaultOptions.m_perpectiveType = pipelineStateOptions.m_perpectiveType;
-            RPI::Ptr<RPI::PipelineStateForDraw>& basePipelineState = GetPipelineState(defaultOptions);
+            JE::Render::RPI::Ptr<JE::Render::RPI::PipelineStateForDraw>& basePipelineState = GetPipelineState(defaultOptions);
             if (basePipelineState.get() == nullptr)
             {
-                basePipelineState = aznew RPI::PipelineStateForDraw;
+                basePipelineState = aznew JE::Render::RPI::PipelineStateForDraw;
                 Name perspectiveTypeViewProjection = Name("ViewProjectionMode::ViewProjection");
                 Name perspectiveTypeManualOverride = Name("ViewProjectionMode::ManualOverride");
                 Name optionViewProjectionModeName = Name("o_viewProjMode");
 
-                RPI::ShaderOptionList shaderOptionAndValues;
-                shaderOptionAndValues.push_back(RPI::ShaderOption(optionViewProjectionModeName,
+                JE::Render::RPI::ShaderOptionList shaderOptionAndValues;
+                shaderOptionAndValues.push_back(JE::Render::RPI::ShaderOption(optionViewProjectionModeName,
                     (pipelineStateOptions.m_perpectiveType == AuxGeomShapePerpectiveType::PerspectiveType_ViewProjection)?perspectiveTypeViewProjection: perspectiveTypeManualOverride));
                 basePipelineState->Init(m_shader, &shaderOptionAndValues);
 
                 m_createdPipelineStates.push_back(&basePipelineState);
             }
 
-            RPI::Ptr<RPI::PipelineStateForDraw>& destPipelineState = GetPipelineState(pipelineStateOptions);
+            JE::Render::RPI::Ptr<JE::Render::RPI::PipelineStateForDraw>& destPipelineState = GetPipelineState(pipelineStateOptions);
 
             // Copy from base pipeline state. Skip if it's the base pipeline state 
             if (destPipelineState.get() == nullptr)
             {
-                destPipelineState = aznew RPI::PipelineStateForDraw(*basePipelineState.get());
+                destPipelineState = aznew JE::Render::RPI::PipelineStateForDraw(*basePipelineState.get());
                 m_createdPipelineStates.push_back(&destPipelineState);
             }
 
@@ -326,7 +326,7 @@ namespace AZ
         {
             const char* auxGeomWorldShaderFilePath = "Shaders/auxgeom/auxgeomworld.azshader";
 
-            m_shader = RPI::LoadCriticalShader(auxGeomWorldShaderFilePath);
+            m_shader = JE::Render::RPI::LoadCriticalShader(auxGeomWorldShaderFilePath);
             if (!m_shader)
             {
                 AZ_Error("DynamicPrimitiveProcessor", false, "Failed to get shader");
@@ -334,7 +334,7 @@ namespace AZ
             }
 
             // Get the per-object SRG and store the indices of the data we need to set per object
-            m_shaderData.m_perDrawSrgLayout = m_shader->FindShaderResourceGroupLayout(RPI::SrgBindingSlot::Draw); 
+            m_shaderData.m_perDrawSrgLayout = m_shader->FindShaderResourceGroupLayout(JE::Render::RPI::SrgBindingSlot::Draw); 
             if (!m_shaderData.m_perDrawSrgLayout)
             {
                 AZ_Error("DynamicPrimitiveProcessor", false, "Failed to get shader resource group layout");
@@ -348,7 +348,7 @@ namespace AZ
             m_shaderData.m_drawListTag = m_shader->GetDrawListTag();
 
             // Create a default SRG for draws that don't use a manual view projection override
-            m_shaderData.m_defaultSRG = RPI::ShaderResourceGroup::Create(m_shader->GetAsset(), m_shader->GetSupervariantIndex(), m_shaderData.m_perDrawSrgLayout->GetName());
+            m_shaderData.m_defaultSRG = JE::Render::RPI::ShaderResourceGroup::Create(m_shader->GetAsset(), m_shader->GetSupervariantIndex(), m_shaderData.m_perDrawSrgLayout->GetName());
             AZ_Assert(m_shaderData.m_defaultSRG != nullptr, "Creating the default SRG unexpectedly failed");
             m_shaderData.m_defaultSRG->SetConstant(m_shaderData.m_pointSizeIndex, 10.0f);
             m_shaderData.m_defaultSRG->Compile();
@@ -391,8 +391,8 @@ namespace AZ
 
         RHI::ConstPtr<RHI::DrawPacket> DynamicPrimitiveProcessor::BuildDrawPacketForDynamicPrimitive(
             RHI::GeometryView& geometryView,
-            const RPI::Ptr<RPI::PipelineStateForDraw>& pipelineState,
-            Data::Instance<RPI::ShaderResourceGroup> srg,
+            const JE::Render::RPI::Ptr<JE::Render::RPI::PipelineStateForDraw>& pipelineState,
+            Data::Instance<JE::Render::RPI::ShaderResourceGroup> srg,
             RHI::DrawPacketBuilder& drawPacketBuilder,
             RHI::DrawItemSortKey sortKey)
         {

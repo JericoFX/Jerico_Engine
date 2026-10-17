@@ -9,7 +9,7 @@
 
 #include "AuxGeomDrawQueue.h"
 
-#include <Atom/RPI.Public/Scene.h>
+#include <JE/Render/RPI/Public/Scene.h>
 
 #include <AzCore/Casting/numeric_cast.h>
 #include <AzCore/Math/Obb.h>
@@ -614,7 +614,7 @@ namespace AZ
                     FarBottomRight = Frustum::CornerIndices::FarBottomRight,
                 };
 
-                RPI::AuxGeomDraw::AuxGeomDynamicIndexedDrawArguments drawArgs;
+                JE::Render::RPI::AuxGeomDraw::AuxGeomDynamicIndexedDrawArguments drawArgs;
                 drawArgs.m_verts = corners.data();
                 drawArgs.m_vertCount = 8;
                 drawArgs.m_colors = &color;
@@ -732,7 +732,7 @@ namespace AZ
                         Colors::MediumPurple, Colors::MediumPurple, //top
                     };
 
-                    RPI::AuxGeomDraw::AuxGeomDynamicDrawArguments planeNormalLineArgs;
+                    JE::Render::RPI::AuxGeomDraw::AuxGeomDynamicDrawArguments planeNormalLineArgs;
                     planeNormalLineArgs.m_verts = planeNormals;
                     planeNormalLineArgs.m_vertCount = 12;
                     planeNormalLineArgs.m_colors = planeNormalColors;

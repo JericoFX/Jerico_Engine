@@ -8,7 +8,7 @@
 
 #include <CubeMapCapture/CubeMapCaptureComponentController.h>
 #include <CubeMapCapture/CubeMapCaptureComponentConstants.h>
-#include <Atom/RPI.Public/Scene.h>
+#include <JE/Render/RPI/Public/Scene.h>
 #include <AzCore/Serialization/SerializeContext.h>
 
 namespace AZ
@@ -79,7 +79,7 @@ namespace AZ
 
             TransformNotificationBus::Handler::BusConnect(m_entityId);
 
-            m_featureProcessor = RPI::Scene::GetFeatureProcessorForEntity<CubeMapCaptureFeatureProcessorInterface>(entityId);
+            m_featureProcessor = JE::Render::RPI::Scene::GetFeatureProcessorForEntity<CubeMapCaptureFeatureProcessorInterface>(entityId);
             AZ_Assert(m_featureProcessor, "CubeMapCaptureComponentController was unable to find a CubeMapCaptureFeatureProcessor on the EntityContext provided.");
 
             m_transformInterface = TransformBus::FindFirstHandler(entityId);

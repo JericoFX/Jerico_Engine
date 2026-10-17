@@ -10,10 +10,10 @@
 
 #include <JE/Editor/Materials/Base.h>
 #include <AzCore/EBus/EBus.h>
-#include <Atom/RPI.Public/Material/Material.h>
-#include <Atom/RPI.Reflect/Material/MaterialAsset.h>
+#include <JE/Render/RPI/Public/Material/Material.h>
+#include <JE/Render/RPI/Reflect/Material/MaterialAsset.h>
 
-namespace AZ
+namespace JE::Render
 {
     namespace RPI
     {
@@ -35,16 +35,16 @@ namespace JE::Editor
         typedef AZ::Uuid BusIdType;
 
         //! Get material asset created by MaterialDocument
-        virtual AZ::Data::Asset<AZ::RPI::MaterialAsset> GetAsset() const = 0;
+        virtual AZ::Data::Asset<JE::Render::RPI::MaterialAsset> GetAsset() const = 0;
 
         //! Get material instance created from asset loaded by MaterialDocument
-        virtual AZ::Data::Instance<AZ::RPI::Material> GetInstance() const = 0;
+        virtual AZ::Data::Instance<JE::Render::RPI::Material> GetInstance() const = 0;
 
         //! Get the internal material source data
-        virtual const AZ::RPI::MaterialSourceData* GetMaterialSourceData() const = 0;
+        virtual const JE::Render::RPI::MaterialSourceData* GetMaterialSourceData() const = 0;
 
         //! Get the internal material type source data
-        virtual const AZ::RPI::MaterialTypeSourceData* GetMaterialTypeSourceData() const = 0;
+        virtual const JE::Render::RPI::MaterialTypeSourceData* GetMaterialTypeSourceData() const = 0;
 
         //! Modify property value
         virtual void SetPropertyValue(const AZStd::string& propertyFullName, const AZStd::any& value) = 0;

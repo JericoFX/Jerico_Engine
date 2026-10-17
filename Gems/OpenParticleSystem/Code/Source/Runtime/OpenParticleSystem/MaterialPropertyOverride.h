@@ -8,10 +8,10 @@
 
 #pragma once
 
-#include <Atom/RPI.Public/Material/Material.h>
-#include <Atom/RPI.Reflect/Material/MaterialAsset.h>
-#include <Atom/RPI.Reflect/Material/MaterialPropertyDescriptor.h>
-#include <Atom/RPI.Reflect/Material/MaterialPropertyValue.h>
+#include <JE/Render/RPI/Public/Material/Material.h>
+#include <JE/Render/RPI/Reflect/Material/MaterialAsset.h>
+#include <JE/Render/RPI/Reflect/Material/MaterialPropertyDescriptor.h>
+#include <JE/Render/RPI/Reflect/Material/MaterialPropertyValue.h>
 
 #include <AzCore/Name/Name.h>
 #include <AzCore/RTTI/ReflectContext.h>
@@ -39,18 +39,18 @@ namespace OpenParticle
     //! Numeric and enum properties need coercing because the editor and script layers are loose about which
     //! concrete numeric type they hand back. Everything else falls through to MaterialPropertyValue::FromAny,
     //! which already knows how to turn asset ids and image assets into image property values.
-    AZ::RPI::MaterialPropertyValue ConvertMaterialPropertyValue(
-        const AZ::RPI::MaterialPropertyDescriptor* propertyDescriptor, const AZStd::any& value);
+    JE::Render::RPI::MaterialPropertyValue ConvertMaterialPropertyValue(
+        const JE::Render::RPI::MaterialPropertyDescriptor* propertyDescriptor, const AZStd::any& value);
 
     //! Applies every override in the map to the given material instance and compiles it.
     //! Returns true if the instance is up to date afterwards (nothing to compile, or the compile succeeded).
     //! A false return generally means the material SRG was still in use this frame and the caller should
     //! try again next tick.
     bool ApplyMaterialPropertyOverrides(
-        const AZ::Data::Instance<AZ::RPI::Material>& material, const JE::Render::MaterialPropertyOverrideMap& overrides);
+        const AZ::Data::Instance<JE::Render::RPI::Material>& material, const JE::Render::MaterialPropertyOverrideMap& overrides);
 
     //! Drops overrides whose property id does not exist in the given material asset.
     //! Used when an emitter is pointed at a different material so stale ids do not linger in the source data.
     void PruneMaterialPropertyOverrides(
-        const AZ::Data::Asset<AZ::RPI::MaterialAsset>& materialAsset, JE::Render::MaterialPropertyOverrideMap& overrides);
+        const AZ::Data::Asset<JE::Render::RPI::MaterialAsset>& materialAsset, JE::Render::MaterialPropertyOverrideMap& overrides);
 } // namespace OpenParticle

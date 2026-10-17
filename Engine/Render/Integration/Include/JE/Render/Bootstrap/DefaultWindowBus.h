@@ -11,7 +11,7 @@
 #include <AzCore/EBus/EBus.h>
 #include <AzCore/std/smart_ptr/shared_ptr.h>
 
-#include <Atom/RPI.Public/WindowContext.h>
+#include <JE/Render/RPI/Public/WindowContext.h>
 
 namespace JE
 {
@@ -29,7 +29,7 @@ namespace JE
                 static const AZ::EBusAddressPolicy AddressPolicy = AZ::EBusAddressPolicy::Single;
                 static const AZ::EBusHandlerPolicy HandlerPolicy = AZ::EBusHandlerPolicy::Single;
 
-                virtual AZStd::shared_ptr<AZ::RPI::WindowContext> GetDefaultWindowContext() = 0;
+                virtual AZStd::shared_ptr<JE::Render::RPI::WindowContext> GetDefaultWindowContext() = 0;
 
                 //! whether to create the default render scene when default window is created in Bootstrap
                 virtual void SetCreateDefaultScene(bool create) = 0;
@@ -61,7 +61,7 @@ namespace JE
                         AZ::EBusConnectionPolicy<Bus>::Connect(busPtr, context, handler, connectLock, id);
 
                         // Check if default window already exists and fire notifications if it does
-                        AZStd::shared_ptr<AZ::RPI::WindowContext> sharedWC;
+                        AZStd::shared_ptr<JE::Render::RPI::WindowContext> sharedWC;
                         DefaultWindowBus::BroadcastResult(sharedWC, &DefaultWindowBus::Events::GetDefaultWindowContext);
                         if (sharedWC)
                         {

@@ -9,7 +9,7 @@
 
 #include <AzCore/Component/Component.h>
 #include <AzCore/Asset/AssetCommon.h>
-#include <Atom/RPI.Public/Pass/PassSystemInterface.h>
+#include <JE/Render/RPI/Public/Pass/PassSystemInterface.h>
 
 namespace AZ
 {
@@ -41,7 +41,7 @@ namespace AZ
             ////////////////////////////////////////////////////////////////////////
 
             //! Used for loading the pass templates of the hair gem.
-            RPI::PassSystemInterface::OnReadyLoadTemplatesEvent::Handler m_loadTemplatesHandler;
+            JE::Render::RPI::PassSystemInterface::OnReadyLoadTemplatesEvent::Handler m_loadTemplatesHandler;
         };
     }
 }

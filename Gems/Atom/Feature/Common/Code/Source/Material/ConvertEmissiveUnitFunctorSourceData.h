@@ -9,8 +9,8 @@
 #pragma once
 
 #include <Atom/Feature/Material/ConvertEmissiveUnitFunctor.h>
-#include <Atom/RPI.Edit/Material/MaterialFunctorSourceData.h>
-#include <Atom/RPI.Reflect/Material/MaterialPropertiesLayout.h>
+#include <JE/Editor/Render/RPI/Edit/Material/MaterialFunctorSourceData.h>
+#include <JE/Render/RPI/Reflect/Material/MaterialPropertiesLayout.h>
 #include <AzCore/Math/Vector2.h>
 
 namespace AZ
@@ -22,11 +22,11 @@ namespace AZ
         //! Builds a ConvertEmissiveUnitFunctor
         //! Please add it into the shaderInputFunctors list in material file
         class ConvertEmissiveUnitFunctorSourceData final
-            : public AZ::RPI::MaterialFunctorSourceData
+            : public JE::Render::RPI::MaterialFunctorSourceData
         {
         public:
             AZ_CLASS_ALLOCATOR(ConvertEmissiveUnitFunctorSourceData, AZ::SystemAllocator)
-            AZ_RTTI(ConvertEmissiveUnitFunctorSourceData, "{B476A346-C5E0-4DB9-BCFD-B2AFA8587D24}", AZ::RPI::MaterialFunctorSourceData);
+            AZ_RTTI(ConvertEmissiveUnitFunctorSourceData, "{B476A346-C5E0-4DB9-BCFD-B2AFA8587D24}", JE::Render::RPI::MaterialFunctorSourceData);
 
             static void Reflect(AZ::ReflectContext* context);
 

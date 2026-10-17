@@ -360,7 +360,7 @@ namespace Maestro
             #endif // 0
 
             // Actual  code could be something like this:
-            AZ::Data::Instance<AZ::RPI::Image> image = nullptr; // Legal for no texture, just color fading
+            AZ::Data::Instance<JE::Render::RPI::Image> image = nullptr; // Legal for no texture, just color fading
             if (pTrack->IsTextureVisible())
             {
                 image = pTrack->GetActiveTexture();

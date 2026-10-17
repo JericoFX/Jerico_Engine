@@ -8,8 +8,8 @@
 
 #include <BarrierInputMouse.h>
 
-#include <Atom/RPI.Public/ViewportContext.h>
-#include <Atom/RPI.Public/ViewportContextBus.h>
+#include <JE/Render/RPI/Public/ViewportContext.h>
+#include <JE/Render/RPI/Public/ViewportContextBus.h>
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 namespace BarrierInput
@@ -105,8 +105,8 @@ namespace BarrierInput
         }
 
         // Update the system cursor position
-        auto atomViewportRequests = AZ::Interface<AZ::RPI::ViewportContextRequestsInterface>::Get();
-        AZ::RPI::ViewportContextPtr viewportContext = atomViewportRequests->GetDefaultViewportContext();
+        auto atomViewportRequests = AZ::Interface<JE::Render::RPI::ViewportContextRequestsInterface>::Get();
+        JE::Render::RPI::ViewportContextPtr viewportContext = atomViewportRequests->GetDefaultViewportContext();
         if (viewportContext)
         {
             const AzFramework::WindowSize windowSize = viewportContext->GetViewportSize();

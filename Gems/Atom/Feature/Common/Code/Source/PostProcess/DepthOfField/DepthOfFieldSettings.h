@@ -13,10 +13,10 @@
 #include <Atom/RHI.Reflect/ShaderResourceGroupLayoutDescriptor.h>
 
 #include <Atom/Feature/PostProcess/DepthOfField/DepthOfFieldSettingsInterface.h>
-#include <Atom/RPI.Public/Image/StreamingImage.h>
+#include <JE/Render/RPI/Public/Image/StreamingImage.h>
 #include <PostProcess/PostProcessBase.h>
 
-#include <Atom/RPI.Public/View.h>
+#include <JE/Render/RPI/Public/View.h>
 
 namespace AZ
 {
@@ -75,7 +75,7 @@ namespace AZ
             AZ::RHI::Handle<uint32_t> GetSplitSizeForPass(const Name& passName) const;
 
             // Set dof related settings to the viewSrg
-            void SetValuesToViewSrg(AZ::Data::Instance<RPI::ShaderResourceGroup> viewSrg);
+            void SetValuesToViewSrg(AZ::Data::Instance<JE::Render::RPI::ShaderResourceGroup> viewSrg);
 
             // Generate all getters and override setters.
             // Declare non-override setters, which will be defined in the .cpp
@@ -109,7 +109,7 @@ namespace AZ
             void LoadPencilMap();
             void UpdatePencilMapTexture() const;
 
-            AZ::Data::Instance<AZ::RPI::StreamingImage> m_pencilMap;
+            AZ::Data::Instance<JE::Render::RPI::StreamingImage> m_pencilMap;
             RHI::ShaderInputImageIndex m_pencilMapIndex;
 
             // From DepthOfFieldRenderProxy...

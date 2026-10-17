@@ -7,8 +7,8 @@
  */
 #pragma once
 
-#include <Atom/RPI.Public/Pass/ComputePass.h>
-#include <Atom/RPI.Public/Pass/ParentPass.h>
+#include <JE/Render/RPI/Public/Pass/ComputePass.h>
+#include <JE/Render/RPI/Public/Pass/ParentPass.h>
 
 namespace AZ
 {
@@ -16,17 +16,17 @@ namespace AZ
     {
         // Parent pass for SSAO that contains the SSAO compute pass 
         class SsaoParentPass final
-            : public RPI::ParentPass
+            : public JE::Render::RPI::ParentPass
         {
             AZ_RPI_PASS(SsaoParentPass);
 
         public:
-            AZ_RTTI(AZ::Render::SsaoParentPass, "{A03B5913-B201-4146-AF0A-999E6BF31A1A}", AZ::RPI::ParentPass);
+            AZ_RTTI(AZ::Render::SsaoParentPass, "{A03B5913-B201-4146-AF0A-999E6BF31A1A}", JE::Render::RPI::ParentPass);
             AZ_CLASS_ALLOCATOR(SsaoParentPass, SystemAllocator);
             virtual ~SsaoParentPass() = default;
 
             //! Creates an SsaoParentPass
-            static RPI::Ptr<SsaoParentPass> Create(const RPI::PassDescriptor& descriptor);
+            static JE::Render::RPI::Ptr<SsaoParentPass> Create(const JE::Render::RPI::PassDescriptor& descriptor);
 
             bool IsEnabled() const override;
 
@@ -36,7 +36,7 @@ namespace AZ
             void FrameBeginInternal(FramePrepareParams params) override;
 
         private:
-            SsaoParentPass(const RPI::PassDescriptor& descriptor);
+            SsaoParentPass(const JE::Render::RPI::PassDescriptor& descriptor);
 
             // Direct pointers to child passes for enable/disable
             ParentPass* m_blurParentPass = nullptr;
@@ -48,24 +48,24 @@ namespace AZ
 
         // Computer shader pass that calculates SSAO from a linear depth buffer
         class SsaoComputePass final
-            : public RPI::ComputePass
+            : public JE::Render::RPI::ComputePass
         {
             AZ_RPI_PASS(SsaoComputePass);
 
         public:
-            AZ_RTTI(AZ::Render::SsaoComputePass, "{0BA5F6F7-15D2-490A-8254-7E61F25B62F9}", AZ::RPI::ComputePass);
+            AZ_RTTI(AZ::Render::SsaoComputePass, "{0BA5F6F7-15D2-490A-8254-7E61F25B62F9}", JE::Render::RPI::ComputePass);
             AZ_CLASS_ALLOCATOR(SsaoComputePass, SystemAllocator);
             virtual ~SsaoComputePass() = default;
 
             //! Creates an SsaoComputePass
-            static RPI::Ptr<SsaoComputePass> Create(const RPI::PassDescriptor& descriptor);
+            static JE::Render::RPI::Ptr<SsaoComputePass> Create(const JE::Render::RPI::PassDescriptor& descriptor);
 
         protected:
             // Behavior functions override...
             void FrameBeginInternal(FramePrepareParams params) override;
 
         private:
-            SsaoComputePass(const RPI::PassDescriptor& descriptor);
+            SsaoComputePass(const JE::Render::RPI::PassDescriptor& descriptor);
 
             // SRG binding indices...
             AZ::RHI::ShaderInputNameIndex m_constantsIndex = "m_constants";

@@ -16,9 +16,9 @@
 #include <Atom/RHI/BufferView.h>
 #include <Atom/RHI/IndexBufferView.h>
 #include <Atom/RHI/StreamBufferView.h>
-#include <Atom/RPI.Public/Buffer/BufferSystemInterface.h>
-#include <Atom/RPI.Public/Model/UvStreamTangentBitmask.h>
-#include <Atom/RPI.Reflect/Shader/ShaderOptionGroup.h>
+#include <JE/Render/RPI/Public/Buffer/BufferSystemInterface.h>
+#include <JE/Render/RPI/Public/Model/UvStreamTangentBitmask.h>
+#include <JE/Render/RPI/Reflect/Shader/ShaderOptionGroup.h>
 
 namespace AZ::Render
 {
@@ -125,8 +125,8 @@ namespace AZ::Render
     struct MeshInfoEntry : public AZStd::intrusive_base
     {
         // Info from the mesh about the geometry buffers
-        RPI::UvStreamTangentBitmask m_streamTangentBitmask{};
-        RPI::ShaderOptionGroup m_optionalInputStreamShaderOptions{};
+        JE::Render::RPI::UvStreamTangentBitmask m_streamTangentBitmask{};
+        JE::Render::RPI::ShaderOptionGroup m_optionalInputStreamShaderOptions{};
 
         // Geometry buffers and index buffer
         AZStd::unordered_map<RHI::ShaderSemantic, BufferViewIndexAndOffset> m_meshBuffers{};

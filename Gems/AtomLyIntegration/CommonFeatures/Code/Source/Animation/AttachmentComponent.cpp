@@ -6,7 +6,7 @@
  *
  */
 #include "AttachmentComponent.h"
-#include <Atom/RPI.Reflect/Model/ModelAsset.h>
+#include <JE/Render/RPI/Reflect/Model/ModelAsset.h>
 #include <AzCore/Serialization/SerializeContext.h>
 #include <AzCore/RTTI/BehaviorContext.h>
 #include <AzCore/Component/Entity.h>
@@ -206,7 +206,7 @@ namespace AZ
             }
         }
 
-        void BoneFollower::OnModelReady([[maybe_unused]] const AZ::Data::Asset<AZ::RPI::ModelAsset>& modelAsset, [[maybe_unused]] const AZ::Data::Instance<AZ::RPI::Model>& model)
+        void BoneFollower::OnModelReady([[maybe_unused]] const AZ::Data::Asset<JE::Render::RPI::ModelAsset>& modelAsset, [[maybe_unused]] const AZ::Data::Instance<JE::Render::RPI::Model>& model)
         {
             // reset character values
             BindTargetBone();

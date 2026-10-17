@@ -8,7 +8,7 @@
 
 #pragma once
 
-#include <Atom/RPI.Public/Base.h>
+#include <JE/Render/RPI/Public/Base.h>
 #include <AtomToolsFramework/EntityPreviewViewport/EntityPreviewViewportContent.h>
 #include <AtomToolsFramework/EntityPreviewViewport/EntityPreviewViewportInputController.h>
 #include <AtomToolsFramework/EntityPreviewViewport/EntityPreviewViewportScene.h>

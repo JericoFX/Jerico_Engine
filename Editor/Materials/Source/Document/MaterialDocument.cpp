@@ -6,15 +6,15 @@
  *
  */
 
-#include <Atom/RPI.Edit/Common/AssetUtils.h>
-#include <Atom/RPI.Edit/Common/JsonUtils.h>
-#include <Atom/RPI.Edit/Material/MaterialFunctorSourceData.h>
-#include <Atom/RPI.Edit/Material/MaterialPropertyId.h>
-#include <Atom/RPI.Edit/Material/MaterialUtils.h>
-#include <Atom/RPI.Public/Material/Material.h>
-#include <Atom/RPI.Reflect/Material/MaterialFunctor.h>
-#include <Atom/RPI.Reflect/Material/MaterialNameContext.h>
-#include <Atom/RPI.Reflect/Material/MaterialPropertiesLayout.h>
+#include <JE/Editor/Render/RPI/Edit/Common/AssetUtils.h>
+#include <JE/Editor/Render/RPI/Edit/Common/JsonUtils.h>
+#include <JE/Editor/Render/RPI/Edit/Material/MaterialFunctorSourceData.h>
+#include <JE/Editor/Render/RPI/Edit/Material/MaterialPropertyId.h>
+#include <JE/Editor/Render/RPI/Edit/Material/MaterialUtils.h>
+#include <JE/Render/RPI/Public/Material/Material.h>
+#include <JE/Render/RPI/Reflect/Material/MaterialFunctor.h>
+#include <JE/Render/RPI/Reflect/Material/MaterialNameContext.h>
+#include <JE/Render/RPI/Reflect/Material/MaterialPropertiesLayout.h>
 #include <AtomToolsFramework/Document/AtomToolsDocumentNotificationBus.h>
 #include <AtomToolsFramework/Util/MaterialPropertyUtil.h>
 #include <AtomToolsFramework/Util/Util.h>
@@ -136,22 +136,22 @@ namespace JE::Editor
         AZ::SystemTickBus::Handler::BusDisconnect();
     }
 
-    AZ::Data::Asset<AZ::RPI::MaterialAsset> MaterialDocument::GetAsset() const
+    AZ::Data::Asset<JE::Render::RPI::MaterialAsset> MaterialDocument::GetAsset() const
     {
         return m_materialAsset;
     }
 
-    AZ::Data::Instance<AZ::RPI::Material> MaterialDocument::GetInstance() const
+    AZ::Data::Instance<JE::Render::RPI::Material> MaterialDocument::GetInstance() const
     {
         return m_materialInstance;
     }
 
-    const AZ::RPI::MaterialSourceData* MaterialDocument::GetMaterialSourceData() const
+    const JE::Render::RPI::MaterialSourceData* MaterialDocument::GetMaterialSourceData() const
     {
         return &m_materialSourceData;
     }
 
-    const AZ::RPI::MaterialTypeSourceData* MaterialDocument::GetMaterialTypeSourceData() const
+    const JE::Render::RPI::MaterialTypeSourceData* MaterialDocument::GetMaterialTypeSourceData() const
     {
         return &m_materialTypeSourceData;
     }
@@ -171,7 +171,7 @@ namespace JE::Editor
                     if (m_materialInstance)
                     {
                         // This first converts to an acceptable runtime type in case the value came from script
-                        const AZ::RPI::MaterialPropertyValue propertyValue = AtomToolsFramework::ConvertToRuntimeType(value);
+                        const JE::Render::RPI::MaterialPropertyValue propertyValue = AtomToolsFramework::ConvertToRuntimeType(value);
 
                         property.SetValue(AtomToolsFramework::ConvertToEditableType(propertyValue));
 
@@ -180,7 +180,7 @@ namespace JE::Editor
                         {
                             if (m_materialInstance->SetPropertyValue(propertyIndex, propertyValue))
                             {
-                                AZ::RPI::MaterialPropertyFlags dirtyFlags = m_materialInstance->GetPropertyDirtyFlags();
+                                JE::Render::RPI::MaterialPropertyFlags dirtyFlags = m_materialInstance->GetPropertyDirtyFlags();
 
                                 Recompile();
                                 RunEditorMaterialFunctors(dirtyFlags);
@@ -224,11 +224,11 @@ namespace JE::Editor
         documentType.m_documentTypeName = "Material";
         documentType.m_documentFactoryCallback = [historyOwner](const AZ::Crc32& toolId, const AtomToolsFramework::DocumentTypeInfo& documentTypeInfo) {
             return aznew MaterialDocument(toolId, documentTypeInfo, historyOwner); };
-        documentType.m_supportedExtensionsToCreate.push_back({ "Material Type", AZ::RPI::MaterialTypeSourceData::Extension });
-        documentType.m_supportedExtensionsToCreate.push_back({ "Material", AZ::RPI::MaterialSourceData::Extension });
-        documentType.m_supportedExtensionsToOpen.push_back({ "Material Type", AZ::RPI::MaterialTypeSourceData::Extension });
-        documentType.m_supportedExtensionsToOpen.push_back({ "Material", AZ::RPI::MaterialSourceData::Extension });
-        documentType.m_supportedExtensionsToSave.push_back({ "Material", AZ::RPI::MaterialSourceData::Extension });
+        documentType.m_supportedExtensionsToCreate.push_back({ "Material Type", JE::Render::RPI::MaterialTypeSourceData::Extension });
+        documentType.m_supportedExtensionsToCreate.push_back({ "Material", JE::Render::RPI::MaterialSourceData::Extension });
+        documentType.m_supportedExtensionsToOpen.push_back({ "Material Type", JE::Render::RPI::MaterialTypeSourceData::Extension });
+        documentType.m_supportedExtensionsToOpen.push_back({ "Material", JE::Render::RPI::MaterialSourceData::Extension });
+        documentType.m_supportedExtensionsToSave.push_back({ "Material", JE::Render::RPI::MaterialSourceData::Extension });
         documentType.m_defaultDocumentTemplate =
             AtomToolsFramework::GetPathWithoutAlias(AtomToolsFramework::GetSettingsValue<AZStd::string>(
                 "/O3DE/Atom/MaterialEditor/DefaultMaterialType",
@@ -259,7 +259,7 @@ namespace JE::Editor
         }
 
         // populate sourceData with modified or overridden properties and save object
-        AZ::RPI::MaterialSourceData sourceData;
+        JE::Render::RPI::MaterialSourceData sourceData;
         if (m_materialAsset.IsReady() &&
             m_materialAsset->GetMaterialTypeAsset().IsReady())
         {
@@ -299,7 +299,7 @@ namespace JE::Editor
         }
 
         // populate sourceData with modified or overridden properties and save object
-        AZ::RPI::MaterialSourceData sourceData;
+        JE::Render::RPI::MaterialSourceData sourceData;
         if (m_materialAsset.IsReady() &&
             m_materialAsset->GetMaterialTypeAsset().IsReady())
         {
@@ -335,7 +335,7 @@ namespace JE::Editor
         }
 
         // populate sourceData with modified or overridden properties and save object
-        AZ::RPI::MaterialSourceData sourceData;
+        JE::Render::RPI::MaterialSourceData sourceData;
         if (m_materialAsset.IsReady() &&
             m_materialAsset->GetMaterialTypeAsset().IsReady())
         {
@@ -344,7 +344,7 @@ namespace JE::Editor
         sourceData.m_materialType = AtomToolsFramework::GetPathToExteralReference(m_savePathNormalized, m_materialSourceData.m_materialType);
 
         // Only assign a parent path if the source was a .material
-        if (AzFramework::StringFunc::Path::IsExtension(m_absolutePath.c_str(), AZ::RPI::MaterialSourceData::Extension))
+        if (AzFramework::StringFunc::Path::IsExtension(m_absolutePath.c_str(), JE::Render::RPI::MaterialSourceData::Extension))
         {
             sourceData.m_parentMaterial = AtomToolsFramework::GetPathToExteralReference(m_savePathNormalized, m_absolutePath);
         }
@@ -478,12 +478,12 @@ namespace JE::Editor
         }
     }
 
-    bool MaterialDocument::SaveSourceData(AZ::RPI::MaterialSourceData& sourceData, PropertyFilterFunction propertyFilter) const
+    bool MaterialDocument::SaveSourceData(JE::Render::RPI::MaterialSourceData& sourceData, PropertyFilterFunction propertyFilter) const
     {
         bool addPropertiesResult = true;
 
         // populate sourceData with properties that meet the filter
-        m_materialTypeSourceData.EnumerateProperties([&](const auto& propertyDefinition, const AZ::RPI::MaterialNameContext& nameContext) {
+        m_materialTypeSourceData.EnumerateProperties([&](const auto& propertyDefinition, const JE::Render::RPI::MaterialNameContext& nameContext) {
 
             AZ::Name propertyId{propertyDefinition->GetName()};
             nameContext.ContextualizeProperty(propertyId);
@@ -491,7 +491,7 @@ namespace JE::Editor
             const auto property = FindProperty(propertyId);
             if (property && propertyFilter(*property))
             {
-                AZ::RPI::MaterialPropertyValue propertyValue = AtomToolsFramework::ConvertToRuntimeType(property->GetValue());
+                JE::Render::RPI::MaterialPropertyValue propertyValue = AtomToolsFramework::ConvertToRuntimeType(property->GetValue());
                 if (propertyValue.IsValid())
                 {
                     if (!AtomToolsFramework::ConvertToExportFormat(m_savePathNormalized, propertyId, *propertyDefinition, propertyValue))
@@ -520,7 +520,7 @@ namespace JE::Editor
             sourceData.m_description = AZStd::any_cast<AZStd::string>(descriptionProperty);
         }
 
-        if (!AZ::RPI::JsonUtils::SaveObjectToFile(m_savePathNormalized, sourceData))
+        if (!JE::Render::RPI::JsonUtils::SaveObjectToFile(m_savePathNormalized, sourceData))
         {
             AZ_Error("MaterialDocument", false, "Document could not be saved: '%s'.", m_savePathNormalized.c_str());
             return false;
@@ -540,14 +540,14 @@ namespace JE::Editor
         // not supported but they can be used to save a child or create a new material from the material type. This could also be extended
         // to load material product assets, like the material instance editor on the material component. Those would also not be savable
         // but could be used to create material source file, like the material component UI.
-        if (AzFramework::StringFunc::Path::IsExtension(m_absolutePath.c_str(), AZ::RPI::MaterialSourceData::Extension))
+        if (AzFramework::StringFunc::Path::IsExtension(m_absolutePath.c_str(), JE::Render::RPI::MaterialSourceData::Extension))
         {
             if (!LoadMaterialSourceData())
             {
                 return OpenFailed();
             }
         }
-        else if (AzFramework::StringFunc::Path::IsExtension(m_absolutePath.c_str(), AZ::RPI::MaterialTypeSourceData::Extension))
+        else if (AzFramework::StringFunc::Path::IsExtension(m_absolutePath.c_str(), JE::Render::RPI::MaterialTypeSourceData::Extension))
         {
             if (!LoadMaterialTypeSourceData())
             {
@@ -591,12 +591,12 @@ namespace JE::Editor
         }
 
         // The parent material asset is only needed to retrieve property values for comparison.
-        AZStd::span<const AZ::RPI::MaterialPropertyValue> parentPropertyValues = materialTypeAsset->GetDefaultPropertyValues();
-        AZ::Data::Asset<AZ::RPI::MaterialAsset> parentMaterialAsset;
+        AZStd::span<const JE::Render::RPI::MaterialPropertyValue> parentPropertyValues = materialTypeAsset->GetDefaultPropertyValues();
+        AZ::Data::Asset<JE::Render::RPI::MaterialAsset> parentMaterialAsset;
         if (!m_materialSourceData.m_parentMaterial.empty())
         {
-            AZ::RPI::MaterialSourceData parentMaterialSourceData;
-            auto loadResult = AZ::RPI::MaterialUtils::LoadMaterialSourceData(m_materialSourceData.m_parentMaterial);
+            JE::Render::RPI::MaterialSourceData parentMaterialSourceData;
+            auto loadResult = JE::Render::RPI::MaterialUtils::LoadMaterialSourceData(m_materialSourceData.m_parentMaterial);
             if (!loadResult)
             {
                 AZ_Error("MaterialDocument", false, "Material parent source data could not be loaded for: '%s'.", m_materialSourceData.m_parentMaterial.c_str());
@@ -605,7 +605,7 @@ namespace JE::Editor
 
             parentMaterialSourceData = loadResult.TakeValue();
 
-            const auto parentMaterialAssetIdResult = AZ::RPI::AssetUtils::MakeAssetId(m_materialSourceData.m_parentMaterial, 0);
+            const auto parentMaterialAssetIdResult = JE::Render::RPI::AssetUtils::MakeAssetId(m_materialSourceData.m_parentMaterial, 0);
             if (!parentMaterialAssetIdResult)
             {
                 AZ_Error("MaterialDocument", false, "Material parent asset ID could not be created: '%s'.", m_materialSourceData.m_parentMaterial.c_str());
@@ -629,7 +629,7 @@ namespace JE::Editor
         // on the object in the viewport. Now that there is much better support for hot reloading, and material assets cook fairly
         // quickly, this direct connection to the viewport instance may not be required. It will still be required for functors. The
         // instance will fail to create a new document will not open if the material asset has bad texture or material type references.
-        m_materialInstance = AZ::RPI::Material::Create(m_materialAsset);
+        m_materialInstance = JE::Render::RPI::Material::Create(m_materialAsset);
         if (!m_materialInstance)
         {
             AZ_Error("MaterialDocument", false, "Material instance could not be created: '%s'.", m_absolutePath.c_str());
@@ -638,7 +638,7 @@ namespace JE::Editor
 
         // Pipeline State Object changes are always allowed in the material editor because it only runs on developer systems where such
         // changes are supported at runtime.
-        m_materialInstance->SetPsoHandlingOverride(AZ::RPI::MaterialPropertyPsoHandling::Allowed);
+        m_materialInstance->SetPsoHandlingOverride(JE::Render::RPI::MaterialPropertyPsoHandling::Allowed);
 
         // Inserting hardcoded properties to display material type, parent material, description, UV set names, and other information at the
         // top of the inspector. Dynamic properties were originally created to generically adapt and edit JSON and other non-standard
@@ -696,8 +696,8 @@ namespace JE::Editor
         m_groups.back()->m_displayName = "UV Sets";
         m_groups.back()->m_description = "UV set names in this material, which can be renamed to match those in the model.";
 
-        const AZ::RPI::MaterialUvNameMap& uvNameMap = materialTypeAsset->GetUvNameMap();
-        for (const AZ::RPI::UvNamePair& uvNamePair : uvNameMap)
+        const JE::Render::RPI::MaterialUvNameMap& uvNameMap = materialTypeAsset->GetUvNameMap();
+        for (const JE::Render::RPI::UvNamePair& uvNamePair : uvNameMap)
         {
             const AZStd::string shaderInput = uvNamePair.m_shaderInput.ToString();
             const AZStd::string uvName = uvNamePair.m_uvName.GetStringView();
@@ -708,9 +708,9 @@ namespace JE::Editor
         // Assets must still be used for now because they contain the final accumulated value after all other materials
         // in the hierarchy are applied
         bool enumerateResult = m_materialTypeSourceData.EnumeratePropertyGroups(
-            [this, &parentPropertyValues](const AZ::RPI::MaterialTypeSourceData::PropertyGroupStack& propertyGroupStack)
+            [this, &parentPropertyValues](const JE::Render::RPI::MaterialTypeSourceData::PropertyGroupStack& propertyGroupStack)
             {
-                using namespace AZ::RPI;
+                using namespace JE::Render::RPI;
 
                 const MaterialTypeSourceData::PropertyGroup* propertyGroup = propertyGroupStack.back();
 
@@ -840,13 +840,13 @@ namespace JE::Editor
         }
 
         // Add material functors that are in the top-level functors list.
-        AZ::RPI::MaterialNameContext materialNameContext; // There is no name context for top-level functors, only functors inside PropertyGroups
+        JE::Render::RPI::MaterialNameContext materialNameContext; // There is no name context for top-level functors, only functors inside PropertyGroups
         if (!AddEditorMaterialFunctors(m_materialTypeSourceData.m_materialFunctorSourceData, materialNameContext))
         {
             return OpenFailed();
         }
 
-        AZ::RPI::MaterialPropertyFlags dirtyFlags;
+        JE::Render::RPI::MaterialPropertyFlags dirtyFlags;
         dirtyFlags.set(); // Mark all properties as dirty since we just loaded the material and need to initialize property visibility
         RunEditorMaterialFunctors(dirtyFlags);
 
@@ -864,8 +864,8 @@ namespace JE::Editor
         m_compilePending = {};
         m_groups.clear();
         m_editorFunctors.clear();
-        m_materialTypeSourceData = AZ::RPI::MaterialTypeSourceData();
-        m_materialSourceData = AZ::RPI::MaterialSourceData();
+        m_materialTypeSourceData = JE::Render::RPI::MaterialTypeSourceData();
+        m_materialSourceData = JE::Render::RPI::MaterialSourceData();
         m_propertyValuesBeforeEdit.clear();
     }
 
@@ -903,7 +903,7 @@ namespace JE::Editor
 
     bool MaterialDocument::LoadMaterialSourceData()
     {
-        auto loadResult = AZ::RPI::MaterialUtils::LoadMaterialSourceData(m_absolutePath);
+        auto loadResult = JE::Render::RPI::MaterialUtils::LoadMaterialSourceData(m_absolutePath);
         if (!loadResult)
         {
             AZ_Error("MaterialDocument", false, "Material source data could not be loaded: '%s'.", m_absolutePath.c_str());
@@ -915,16 +915,16 @@ namespace JE::Editor
         // We always need the absolute path for the material type and parent material to load source data and resolving
         // relative paths when saving. This will convert and store them as absolute paths for use within the document.
         m_materialSourceData.m_parentMaterial =
-            AZ::RPI::AssetUtils::ResolvePathReference(m_absolutePath, m_materialSourceData.m_parentMaterial);
+            JE::Render::RPI::AssetUtils::ResolvePathReference(m_absolutePath, m_materialSourceData.m_parentMaterial);
         m_materialSourceData.m_materialType =
-            AZ::RPI::AssetUtils::ResolvePathReference(m_absolutePath, m_materialSourceData.m_materialType);
+            JE::Render::RPI::AssetUtils::ResolvePathReference(m_absolutePath, m_materialSourceData.m_materialType);
         // If the material was previously saved with a reference to a material pipeline generated material type in the intermediate asset
         // folder, attempt to redirect to the original source material type.
         m_materialSourceData.m_materialType =
-            AZ::RPI::MaterialUtils::PredictOriginalMaterialTypeSourcePath(m_materialSourceData.m_materialType);
+            JE::Render::RPI::MaterialUtils::PredictOriginalMaterialTypeSourcePath(m_materialSourceData.m_materialType);
 
         // Load the material type source data which provides the layout and default values of all of the properties
-        auto materialTypeOutcome = AZ::RPI::MaterialUtils::LoadMaterialTypeSourceData(m_materialSourceData.m_materialType);
+        auto materialTypeOutcome = JE::Render::RPI::MaterialUtils::LoadMaterialTypeSourceData(m_materialSourceData.m_materialType);
         if (!materialTypeOutcome.IsSuccess())
         {
             AZ_Error("MaterialDocument", false, "Material type source data could not be loaded: '%s'.", m_materialSourceData.m_materialType.c_str());
@@ -940,7 +940,7 @@ namespace JE::Editor
         // A material document can be created or loaded from material or material type source data. If we are attempting to load
         // material type source data then the material source data object can be created just by referencing the document path as the
         // material type path.
-        auto materialTypeOutcome = AZ::RPI::MaterialUtils::LoadMaterialTypeSourceData(m_absolutePath);
+        auto materialTypeOutcome = JE::Render::RPI::MaterialUtils::LoadMaterialTypeSourceData(m_absolutePath);
         if (!materialTypeOutcome.IsSuccess())
         {
             AZ_Error("MaterialDocument", false, "Material type source data could not be loaded: '%s'.", m_absolutePath.c_str());
@@ -966,19 +966,19 @@ namespace JE::Editor
     }
 
     bool MaterialDocument::AddEditorMaterialFunctors(
-        const AZStd::vector<AZ::RPI::Ptr<AZ::RPI::MaterialFunctorSourceDataHolder>>& functorSourceDataHolders,
-        const AZ::RPI::MaterialNameContext& nameContext)
+        const AZStd::vector<JE::Render::RPI::Ptr<JE::Render::RPI::MaterialFunctorSourceDataHolder>>& functorSourceDataHolders,
+        const JE::Render::RPI::MaterialNameContext& nameContext)
     {
-        const AZ::RPI::MaterialFunctorSourceData::EditorContext editorContext = AZ::RPI::MaterialFunctorSourceData::EditorContext(
+        const JE::Render::RPI::MaterialFunctorSourceData::EditorContext editorContext = JE::Render::RPI::MaterialFunctorSourceData::EditorContext(
             m_materialSourceData.m_materialType, m_materialAsset->GetMaterialPropertiesLayout(), &nameContext);
 
-        for (AZ::RPI::Ptr<AZ::RPI::MaterialFunctorSourceDataHolder> functorData : functorSourceDataHolders)
+        for (JE::Render::RPI::Ptr<JE::Render::RPI::MaterialFunctorSourceDataHolder> functorData : functorSourceDataHolders)
         {
-            AZ::RPI::MaterialFunctorSourceData::FunctorResult result = functorData->CreateFunctor(editorContext);
+            JE::Render::RPI::MaterialFunctorSourceData::FunctorResult result = functorData->CreateFunctor(editorContext);
 
             if (result.IsSuccess())
             {
-                AZ::RPI::Ptr<AZ::RPI::MaterialFunctor>& functor = result.GetValue();
+                JE::Render::RPI::Ptr<JE::Render::RPI::MaterialFunctor>& functor = result.GetValue();
                 if (functor != nullptr)
                 {
                     m_editorFunctors.push_back(functor);
@@ -994,19 +994,19 @@ namespace JE::Editor
         return true;
     }
 
-    void MaterialDocument::RunEditorMaterialFunctors(AZ::RPI::MaterialPropertyFlags dirtyFlags)
+    void MaterialDocument::RunEditorMaterialFunctors(JE::Render::RPI::MaterialPropertyFlags dirtyFlags)
     {
         if (!m_materialInstance)
         {
             return;
         }
 
-        AZStd::unordered_map<AZ::Name, AZ::RPI::MaterialPropertyDynamicMetadata> propertyDynamicMetadata;
-        AZStd::unordered_map<AZ::Name, AZ::RPI::MaterialPropertyGroupDynamicMetadata> propertyGroupDynamicMetadata;
+        AZStd::unordered_map<AZ::Name, JE::Render::RPI::MaterialPropertyDynamicMetadata> propertyDynamicMetadata;
+        AZStd::unordered_map<AZ::Name, JE::Render::RPI::MaterialPropertyGroupDynamicMetadata> propertyGroupDynamicMetadata;
 
         TraverseGroups(m_groups, [&](auto& group) {
-            AZ::RPI::MaterialPropertyGroupDynamicMetadata& metadata = propertyGroupDynamicMetadata[AZ::Name{ group->m_name }];
-            metadata.m_visibility = group->m_visible ? AZ::RPI::MaterialPropertyGroupVisibility::Enabled : AZ::RPI::MaterialPropertyGroupVisibility::Hidden;
+            JE::Render::RPI::MaterialPropertyGroupDynamicMetadata& metadata = propertyGroupDynamicMetadata[AZ::Name{ group->m_name }];
+            metadata.m_visibility = group->m_visible ? JE::Render::RPI::MaterialPropertyGroupVisibility::Enabled : JE::Render::RPI::MaterialPropertyGroupVisibility::Hidden;
 
             for (auto& property : group->m_properties)
             {
@@ -1018,15 +1018,15 @@ namespace JE::Editor
         AZStd::unordered_set<AZ::Name> updatedProperties;
         AZStd::unordered_set<AZ::Name> updatedPropertyGroups;
 
-        for (AZ::RPI::Ptr<AZ::RPI::MaterialFunctor>& functor : m_editorFunctors)
+        for (JE::Render::RPI::Ptr<JE::Render::RPI::MaterialFunctor>& functor : m_editorFunctors)
         {
-            const AZ::RPI::MaterialPropertyFlags& materialPropertyDependencies = functor->GetMaterialPropertyDependencies();
+            const JE::Render::RPI::MaterialPropertyFlags& materialPropertyDependencies = functor->GetMaterialPropertyDependencies();
 
             // None also covers case that the client code doesn't register material properties to dependencies,
             // which will later get caught in Process() when trying to access a property.
             if (materialPropertyDependencies.none() || functor->NeedsProcess(dirtyFlags))
             {
-                AZ::RPI::MaterialFunctorAPI::EditorContext context = AZ::RPI::MaterialFunctorAPI::EditorContext(
+                JE::Render::RPI::MaterialFunctorAPI::EditorContext context = JE::Render::RPI::MaterialFunctorAPI::EditorContext(
                     m_materialInstance->GetPropertyCollection(), propertyDynamicMetadata,
                     propertyGroupDynamicMetadata, updatedProperties, updatedPropertyGroups,
                     &materialPropertyDependencies);
@@ -1039,8 +1039,8 @@ namespace JE::Editor
             bool groupRebuilt = false;
             if (updatedPropertyGroups.find(AZ::Name(group->m_name)) != updatedPropertyGroups.end())
             {
-                AZ::RPI::MaterialPropertyGroupDynamicMetadata& metadata = propertyGroupDynamicMetadata[AZ::Name{ group->m_name }];
-                group->m_visible = metadata.m_visibility != AZ::RPI::MaterialPropertyGroupVisibility::Hidden;
+                JE::Render::RPI::MaterialPropertyGroupDynamicMetadata& metadata = propertyGroupDynamicMetadata[AZ::Name{ group->m_name }];
+                group->m_visible = metadata.m_visibility != JE::Render::RPI::MaterialPropertyGroupVisibility::Hidden;
                 groupChange = true;
             }
 

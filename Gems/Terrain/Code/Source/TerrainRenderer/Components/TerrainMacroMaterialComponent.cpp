@@ -17,11 +17,11 @@
 #include <AzCore/Serialization/EditContext.h>
 #include <AzCore/Serialization/SerializeContext.h>
 
-#include <Atom/RPI.Public/Image/AttachmentImage.h>
-#include <Atom/RPI.Public/Image/AttachmentImagePool.h>
-#include <Atom/RPI.Public/Image/ImageSystemInterface.h>
-#include <Atom/RPI.Public/Image/StreamingImage.h>
-#include <Atom/RPI.Public/RPIUtils.h>
+#include <JE/Render/RPI/Public/Image/AttachmentImage.h>
+#include <JE/Render/RPI/Public/Image/AttachmentImagePool.h>
+#include <JE/Render/RPI/Public/Image/ImageSystemInterface.h>
+#include <JE/Render/RPI/Public/Image/StreamingImage.h>
+#include <JE/Render/RPI/Public/RPIUtils.h>
 
 #include <LmbrCentral/Dependency/DependencyMonitor.h>
 
@@ -274,7 +274,7 @@ namespace Terrain
         if (asset.GetId() == m_configuration.m_macroColorAsset.GetId())
         {
             m_configuration.m_macroColorAsset = asset;
-            m_colorImage = AZ::RPI::StreamingImage::FindOrCreate(m_configuration.m_macroColorAsset);
+            m_colorImage = JE::Render::RPI::StreamingImage::FindOrCreate(m_configuration.m_macroColorAsset);
             m_colorImage->GetRHIImage()->SetName(AZ::Name(m_configuration.m_macroColorAsset.GetHint()));
 
             // If we're changing the image data while we're in the middle of modifications,
@@ -288,7 +288,7 @@ namespace Terrain
         else if (asset.GetId() == m_configuration.m_macroNormalAsset.GetId())
         {
             m_configuration.m_macroNormalAsset = asset;
-            m_normalImage = AZ::RPI::StreamingImage::FindOrCreate(m_configuration.m_macroNormalAsset);
+            m_normalImage = JE::Render::RPI::StreamingImage::FindOrCreate(m_configuration.m_macroNormalAsset);
             m_normalImage->GetRHIImage()->SetName(AZ::Name(m_configuration.m_macroNormalAsset.GetHint()));
         }
 
@@ -341,12 +341,12 @@ namespace Terrain
         return AZ::Vector2::CreateZero();
     }
 
-    AZ::Data::Asset<AZ::RPI::StreamingImageAsset> TerrainMacroMaterialComponent::GetMacroColorAsset() const
+    AZ::Data::Asset<JE::Render::RPI::StreamingImageAsset> TerrainMacroMaterialComponent::GetMacroColorAsset() const
     {
         return m_configuration.m_macroColorAsset;
     }
 
-    void TerrainMacroMaterialComponent::SetMacroColorAsset(const AZ::Data::Asset<AZ::RPI::StreamingImageAsset>& asset)
+    void TerrainMacroMaterialComponent::SetMacroColorAsset(const AZ::Data::Asset<JE::Render::RPI::StreamingImageAsset>& asset)
     {
         // If we're setting the component to the same asset we're already using, then early-out.
         if (asset.GetId() == m_configuration.m_macroColorAsset.GetId())
@@ -531,7 +531,7 @@ namespace Terrain
             {
                 for (uint32_t x = 0; x < width; x++)
                 {
-                    AZ::Color pixel = AZ::RPI::GetImageDataPixelValue<AZ::Color>(imageData, imageDescriptor, x, y);
+                    AZ::Color pixel = JE::Render::RPI::GetImageDataPixelValue<AZ::Color>(imageData, imageDescriptor, x, y);
                     m_modifiedMacroColorImageData.emplace_back(pixel.ToU32());
                 }
             }
@@ -545,12 +545,12 @@ namespace Terrain
                 reinterpret_cast<uint8_t*>(m_modifiedMacroColorImageData.data()), m_modifiedMacroColorImageData.size() * sizeof(uint32_t));
 
             // Create the initial buffer for the downloaded color data
-            const AZ::Data::Instance<AZ::RPI::AttachmentImagePool> imagePool =
-                AZ::RPI::ImageSystemInterface::Get()->GetSystemAttachmentPool();
+            const AZ::Data::Instance<JE::Render::RPI::AttachmentImagePool> imagePool =
+                JE::Render::RPI::ImageSystemInterface::Get()->GetSystemAttachmentPool();
 
             const AZ::Name ModificationImageName = AZ::Name("ModifiedMacroColorImage");
             m_colorImage =
-                AZ::RPI::AttachmentImage::Create(*imagePool.get(), modifiedImageDescriptor, ModificationImageName, nullptr, nullptr);
+                JE::Render::RPI::AttachmentImage::Create(*imagePool.get(), modifiedImageDescriptor, ModificationImageName, nullptr, nullptr);
             AZ_Error("Terrain", m_colorImage, "Failed to initialize the modification image buffer.");
 
             // Push our initialized pixel data up to the GPU.

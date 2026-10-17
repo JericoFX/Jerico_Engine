@@ -15,10 +15,10 @@ namespace AZ::Render
 {
     namespace ImGuiShaderUtils
     {
-        inline void DrawShaderVariantTable(const AZ::RPI::ShaderOptionGroupLayout* layout, AZ::RPI::ShaderVariantId requestedVariantId, AZ::RPI::ShaderVariantId selectedVariantId)
+        inline void DrawShaderVariantTable(const JE::Render::RPI::ShaderOptionGroupLayout* layout, JE::Render::RPI::ShaderVariantId requestedVariantId, JE::Render::RPI::ShaderVariantId selectedVariantId)
         {
-            AZ::RPI::ShaderOptionGroup requestedShaderVariantOptions{layout, requestedVariantId};
-            AZ::RPI::ShaderOptionGroup selectedShaderVariantOptions{layout, selectedVariantId};
+            JE::Render::RPI::ShaderOptionGroup requestedShaderVariantOptions{layout, requestedVariantId};
+            JE::Render::RPI::ShaderOptionGroup selectedShaderVariantOptions{layout, selectedVariantId};
             auto& shaderOptionDescriptors = layout->GetShaderOptions();
 
             // Note I tried using ImGui columns but they don't work so well, and I already had this manual formatting approach shelved elsewhere
@@ -39,12 +39,12 @@ namespace AZ::Render
             for (size_t i = 0; i < shaderOptionDescriptors.size(); ++i)
             {
                 // TODO Consider giving ShaderOptionDescriptor its index value so we can use for-each.
-                const AZ::RPI::ShaderOptionDescriptor& shaderOptionDesc = shaderOptionDescriptors[i];
-                AZ::RPI::ShaderOptionIndex optionIndex{i};
+                const JE::Render::RPI::ShaderOptionDescriptor& shaderOptionDesc = shaderOptionDescriptors[i];
+                JE::Render::RPI::ShaderOptionIndex optionIndex{i};
 
                 const char* optionName = shaderOptionDesc.GetName().GetCStr();
-                AZ::RPI::ShaderOptionValue requestedValue = requestedShaderVariantOptions.GetValue(optionIndex);
-                AZ::RPI::ShaderOptionValue selectedValue = selectedShaderVariantOptions.GetValue(optionIndex);
+                JE::Render::RPI::ShaderOptionValue requestedValue = requestedShaderVariantOptions.GetValue(optionIndex);
+                JE::Render::RPI::ShaderOptionValue selectedValue = selectedShaderVariantOptions.GetValue(optionIndex);
 
                 AZStd::string optionNameLabel = AZStd::string::format("%-*s", longestOptionNameLength, optionName);
                 AzFramework::StringFunc::Replace(optionNameLabel, ' ', '.');
@@ -70,7 +70,7 @@ namespace AZ::Render
 
         }
 
-        inline void DrawShaderDetails(const AZ::RPI::MeshDrawPacket::ShaderData& shaderData)
+        inline void DrawShaderDetails(const JE::Render::RPI::MeshDrawPacket::ShaderData& shaderData)
         {
             bool copyVariantTable = false;
             bool copyRequestedVariantAsJson = false;
@@ -118,13 +118,13 @@ namespace AZ::Render
             }
         }
 
-        inline AZStd::string GetShaderVariantIdJson(const AZ::RPI::ShaderOptionGroupLayout* layout, AZ::RPI::ShaderVariantId variantId)
+        inline AZStd::string GetShaderVariantIdJson(const JE::Render::RPI::ShaderOptionGroupLayout* layout, JE::Render::RPI::ShaderVariantId variantId)
         {
             AZStd::string json;
             // This map happens to be the same definition as ShaderOptionValuesSourceData, so Atom Utils doesn't have to depend on the RPI.Edit library.
             AZStd::unordered_map<Name/*optionName*/, Name/*valueName*/> options;
 
-            AZ::RPI::ShaderOptionGroup shaderOptionGroup{layout, variantId};
+            JE::Render::RPI::ShaderOptionGroup shaderOptionGroup{layout, variantId};
 
             const auto& shaderOptionDescriptors = layout->GetShaderOptions();
             for (const auto& shaderOptionDescriptor : shaderOptionDescriptors)

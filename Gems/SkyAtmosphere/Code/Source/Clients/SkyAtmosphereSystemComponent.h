@@ -9,7 +9,7 @@
 #pragma once
 
 #include <AzCore/Component/Component.h>
-#include <Atom/RPI.Public/Pass/PassSystemInterface.h>
+#include <JE/Render/RPI/Public/Pass/PassSystemInterface.h>
 
 namespace SkyAtmosphere
 {
@@ -43,7 +43,7 @@ namespace SkyAtmosphere
         ////////////////////////////////////////////////////////////////////////
 
     private:
-        AZ::RPI::PassSystemInterface::OnReadyLoadTemplatesEvent::Handler m_loadTemplatesHandler;
+        JE::Render::RPI::PassSystemInterface::OnReadyLoadTemplatesEvent::Handler m_loadTemplatesHandler;
     };
 
 } // namespace SkyAtmosphere

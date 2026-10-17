@@ -9,7 +9,7 @@
 #include <Atom/RHI/FrameGraphAttachmentInterface.h>
 #include <Atom/RHI/FrameGraphBuilder.h>
 
-#include <Atom/RPI.Public/View.h>
+#include <JE/Render/RPI/Public/View.h>
 
 #include <Checkerboard/CheckerboardColorResolvePass.h>
 #include <Checkerboard/CheckerboardPass.h>
@@ -18,12 +18,12 @@ namespace AZ
 {
     namespace Render
     {
-        RPI::Ptr<Render::CheckerboardColorResolvePass> CheckerboardColorResolvePass::Create(const RPI::PassDescriptor& descriptor)
+        JE::Render::RPI::Ptr<Render::CheckerboardColorResolvePass> CheckerboardColorResolvePass::Create(const JE::Render::RPI::PassDescriptor& descriptor)
         {
             return aznew CheckerboardColorResolvePass(descriptor);
         }
 
-        CheckerboardColorResolvePass::CheckerboardColorResolvePass(const RPI::PassDescriptor& descriptor)
+        CheckerboardColorResolvePass::CheckerboardColorResolvePass(const JE::Render::RPI::PassDescriptor& descriptor)
             : Base(descriptor)
         {
         }
@@ -32,9 +32,9 @@ namespace AZ
         {
             // Import input attachments since some of them might be from last frame
             auto attachmentDatabase = params.m_frameGraphBuilder->GetAttachmentDatabase();
-            for (const RPI::PassAttachmentBinding& binding : m_attachmentBindings)
+            for (const JE::Render::RPI::PassAttachmentBinding& binding : m_attachmentBindings)
             {
-                if (binding.m_slotType == RPI::PassSlotType::Input && binding.GetAttachment())
+                if (binding.m_slotType == JE::Render::RPI::PassSlotType::Input && binding.GetAttachment())
                 {
                     const auto& attachment = binding.GetAttachment();
                     if (attachment->m_lifetime == RHI::AttachmentLifetimeType::Imported)
@@ -43,7 +43,7 @@ namespace AZ
                         RHI::AttachmentId attachmentId = attachment->GetAttachmentId();
                         if (!attachmentDatabase.IsAttachmentValid(attachmentId))
                         {
-                            RPI::Image* image = azrtti_cast<RPI::Image*>(attachment->m_importedResource.get());
+                            JE::Render::RPI::Image* image = azrtti_cast<JE::Render::RPI::Image*>(attachment->m_importedResource.get());
                             if (image)
                             {
                                 attachmentDatabase.ImportImage(attachmentId, image->GetRHIImage());
@@ -67,16 +67,16 @@ namespace AZ
             //      InputColor0_prev
             //      InputColor1_curr
             //      InputColor1_prev
-            Data::Instance<RPI::AttachmentImage> inputImage;
+            Data::Instance<JE::Render::RPI::AttachmentImage> inputImage;
             for (auto& binding : m_attachmentBindings)
             {
-                if (binding.m_slotType == RPI::PassSlotType::Input)
+                if (binding.m_slotType == JE::Render::RPI::PassSlotType::Input)
                 {
                     if (binding.GetAttachment())
                     {
                         if (binding.GetAttachment()->m_ownerPass)
                         {
-                            const RPI::Ptr<CheckerboardPass> checkerboardPass = azrtti_cast<CheckerboardPass*>(binding.GetAttachment()->m_ownerPass);
+                            const JE::Render::RPI::Ptr<CheckerboardPass> checkerboardPass = azrtti_cast<CheckerboardPass*>(binding.GetAttachment()->m_ownerPass);
                             if (checkerboardPass)
                             {
                                 inputImage = checkerboardPass->GetAttachmentImage(binding.GetAttachment()->m_name, 1);
@@ -139,10 +139,10 @@ namespace AZ
             //    And we need to attach diffuse_1 for to InputColor0_prev.
             //  - For the 2*N+1 frame, the CheckerboardPass uses diffuse_1 for the output attachment, and diffuse_1 is the InputColor0_curr of the CheckerboardColorResolvePass
             //    because of the slot connection. So for InputColor0_prev slot, we need to use diffuse_0 as its input. 
-            Data::Instance<RPI::AttachmentImage> nextAttachmentImage;
+            Data::Instance<JE::Render::RPI::AttachmentImage> nextAttachmentImage;
             for (auto& binding : m_attachmentBindings)
             {
-                if (binding.m_slotType == RPI::PassSlotType::Input && binding.GetAttachment())
+                if (binding.m_slotType == JE::Render::RPI::PassSlotType::Input && binding.GetAttachment())
                 {
                     auto& attachment = binding.GetAttachment();
                     // Use the input from current frame to find the owner CheckerboardPass
@@ -150,7 +150,7 @@ namespace AZ
                     // Save the output in nextAttachmentImage and uses it in next binding (in the else condition)
                     if (attachment->m_ownerPass != this) // input from current frame
                     {
-                        RPI::Ptr<CheckerboardPass> checkerboardPass = azrtti_cast<CheckerboardPass*>(binding.GetAttachment()->m_ownerPass);
+                        JE::Render::RPI::Ptr<CheckerboardPass> checkerboardPass = azrtti_cast<CheckerboardPass*>(binding.GetAttachment()->m_ownerPass);
                         nextAttachmentImage = checkerboardPass->GetAttachmentImage(binding.GetAttachment()->m_name, m_frameOffset);
                         AZ_Assert(nextAttachmentImage != binding.GetAttachment()->m_importedResource, "attachments shouldn't be same");
                     }

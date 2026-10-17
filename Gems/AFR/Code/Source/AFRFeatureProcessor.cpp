@@ -7,15 +7,15 @@
  */
 #include <Atom/RHI/RHISystemInterface.h>
 #include <Atom/RHI/RHIUtils.h>
-#include <Atom/RPI.Public/Pass/CopyPass.h>
-#include <Atom/RPI.Public/Pass/ParentPass.h>
-#include <Atom/RPI.Public/Pass/PassFilter.h>
-#include <Atom/RPI.Public/Pass/PassSystemInterface.h>
-#include <Atom/RPI.Public/Pass/Specific/SwapChainPass.h>
-#include <Atom/RPI.Public/PipelinePassChanges.h>
-#include <Atom/RPI.Public/RenderPipeline.h>
-#include <Atom/RPI.Reflect/Asset/AssetUtils.h>
-#include <Atom/RPI.Reflect/Pass/CopyPassData.h>
+#include <JE/Render/RPI/Public/Pass/CopyPass.h>
+#include <JE/Render/RPI/Public/Pass/ParentPass.h>
+#include <JE/Render/RPI/Public/Pass/PassFilter.h>
+#include <JE/Render/RPI/Public/Pass/PassSystemInterface.h>
+#include <JE/Render/RPI/Public/Pass/Specific/SwapChainPass.h>
+#include <JE/Render/RPI/Public/PipelinePassChanges.h>
+#include <JE/Render/RPI/Public/RenderPipeline.h>
+#include <JE/Render/RPI/Reflect/Asset/AssetUtils.h>
+#include <JE/Render/RPI/Reflect/Pass/CopyPassData.h>
 
 #include <AFR/AFRFeatureProcessor.h>
 
@@ -25,7 +25,7 @@ namespace AFR
     {
         if (auto* serialize = azrtti_cast<AZ::SerializeContext*>(context))
         {
-            serialize->Class<AFRFeatureProcessor, AZ::RPI::FeatureProcessor>()->Version(0);
+            serialize->Class<AFRFeatureProcessor, JE::Render::RPI::FeatureProcessor>()->Version(0);
         }
     }
 
@@ -56,7 +56,7 @@ namespace AFR
         AZ::RHI::FrameEventBus::Handler::BusDisconnect();
     }
 
-    void AFRFeatureProcessor::OnRenderPipelineChanged(AZ::RPI::RenderPipeline* renderPipeline, RenderPipelineChangeType pipelineChangeType)
+    void AFRFeatureProcessor::OnRenderPipelineChanged(JE::Render::RPI::RenderPipeline* renderPipeline, RenderPipelineChangeType pipelineChangeType)
     {
         switch (pipelineChangeType)
         {
@@ -67,13 +67,13 @@ namespace AFR
                     if(m_afrRenderPipeline.second)
                     {
                         AZ_Assert(!m_afrPipelineName.empty(), "AFR Pipeline had already been set, reset to this pipeline");
-                        m_afrRenderPipeline = { AZ::RPI::RenderPipelineId(""), nullptr };
+                        m_afrRenderPipeline = { JE::Render::RPI::RenderPipelineId(""), nullptr };
                         m_afrCopyPasses.clear();
                     }
 
-                    AZ::RPI::PassFilter passFilter = AZ::RPI::PassFilter::CreateWithPassName(AZ::Name("CopyToSwapChain"), renderPipeline);
+                    JE::Render::RPI::PassFilter passFilter = JE::Render::RPI::PassFilter::CreateWithPassName(AZ::Name("CopyToSwapChain"), renderPipeline);
 
-                    AZ::RPI::Pass* copyToSwapchainPass = AZ::RPI::PassSystemInterface::Get()->FindFirstPass(passFilter);
+                    JE::Render::RPI::Pass* copyToSwapchainPass = JE::Render::RPI::PassSystemInterface::Get()->FindFirstPass(passFilter);
 
                     if (!copyToSwapchainPass)
                     {
@@ -113,7 +113,7 @@ namespace AFR
                 if (renderPipeline->GetId() == m_afrRenderPipeline.first)
                 {
                     // Clear CopyPasses
-                    m_afrRenderPipeline = { AZ::RPI::RenderPipelineId(""), nullptr };
+                    m_afrRenderPipeline = { JE::Render::RPI::RenderPipelineId(""), nullptr };
                     m_afrCopyPasses.clear();
                     m_scheduledPasses.clear();
                     m_afrSetupState = AFRSetupState::NOT_INITIALIZED;
@@ -125,7 +125,7 @@ namespace AFR
         }
     }
 
-    void AFRFeatureProcessor::CollectPassesToSchedule(AZ::RPI::RenderPipeline* renderPipeline)
+    void AFRFeatureProcessor::CollectPassesToSchedule(JE::Render::RPI::RenderPipeline* renderPipeline)
     {
         if(m_afrSetupState == AFRSetupState::SCHEDULING)
         {
@@ -137,7 +137,7 @@ namespace AFR
         }
         m_scheduledPasses.clear();
 
-        AZStd::stack<AZ::RPI::Pass*> stack;
+        AZStd::stack<JE::Render::RPI::Pass*> stack;
         stack.push(renderPipeline->GetRootPass().get());
         while (!stack.empty())
         {
@@ -166,7 +166,7 @@ namespace AFR
         }
     }
 
-    bool IsEnabled(AZ::RPI::Pass* pass)
+    bool IsEnabled(JE::Render::RPI::Pass* pass)
     {
         if(!pass->IsEnabled())
         {
@@ -222,15 +222,15 @@ namespace AFR
 
         ++frameNumber;
     }
-    void AFRFeatureProcessor::AddAFRCopyPass(AZ::RPI::RenderPipeline* renderPipeline, int deviceIndex)
+    void AFRFeatureProcessor::AddAFRCopyPass(JE::Render::RPI::RenderPipeline* renderPipeline, int deviceIndex)
     {
         if (m_afrCopyPasses.contains(deviceIndex))
         {
             // Already setup
-            AZ::RPI::PassFilter passFilter =
-                AZ::RPI::PassFilter::CreateWithPassName(AZ::Name("SwapchainMultiDeviceCopyPass"+ AZStd::to_string(deviceIndex)) , renderPipeline);
+            JE::Render::RPI::PassFilter passFilter =
+                JE::Render::RPI::PassFilter::CreateWithPassName(AZ::Name("SwapchainMultiDeviceCopyPass"+ AZStd::to_string(deviceIndex)) , renderPipeline);
 
-            AZ::RPI::Pass* pass = AZ::RPI::PassSystemInterface::Get()->FindFirstPass(passFilter);
+            JE::Render::RPI::Pass* pass = JE::Render::RPI::PassSystemInterface::Get()->FindFirstPass(passFilter);
 
             if (m_afrRenderPipeline.second != renderPipeline || pass)
             {
@@ -238,9 +238,9 @@ namespace AFR
             }
         }
 
-        AZ::RPI::PassFilter passFilter = AZ::RPI::PassFilter::CreateWithPassName(AZ::Name("CopyToSwapChain"), renderPipeline);
+        JE::Render::RPI::PassFilter passFilter = JE::Render::RPI::PassFilter::CreateWithPassName(AZ::Name("CopyToSwapChain"), renderPipeline);
 
-        AZ::RPI::Pass* copyToSwapchainPass = AZ::RPI::PassSystemInterface::Get()->FindFirstPass(passFilter);
+        JE::Render::RPI::Pass* copyToSwapchainPass = JE::Render::RPI::PassSystemInterface::Get()->FindFirstPass(passFilter);
 
         if (!copyToSwapchainPass)
         {
@@ -250,19 +250,19 @@ namespace AFR
 
         // Add a multi-device CopyPass to copy from deviceIndex to MultiDevice::DefaultDeviceIndex
 
-        AZStd::shared_ptr<AZ::RPI::PassRequest> passRequest = AZStd::make_shared<AZ::RPI::PassRequest>();
+        AZStd::shared_ptr<JE::Render::RPI::PassRequest> passRequest = AZStd::make_shared<JE::Render::RPI::PassRequest>();
 
         passRequest->m_templateName = AZ::Name("MultiDeviceCopyPassTemplate");
 
         passRequest->m_passName = AZ::Name("SwapchainMultiDeviceCopyPass" + AZStd::to_string(deviceIndex));
 
-        AZStd::shared_ptr<AZ::RPI::CopyPassData> passData = AZStd::make_shared<AZ::RPI::CopyPassData>();
+        AZStd::shared_ptr<JE::Render::RPI::CopyPassData> passData = AZStd::make_shared<JE::Render::RPI::CopyPassData>();
         passData->m_sourceDeviceIndex = deviceIndex;
         passData->m_destinationDeviceIndex = AZ::RHI::MultiDevice::DefaultDeviceIndex;
         passData->m_cloneInput = false;
         passRequest->m_passData = passData;
 
-        AZ::RPI::PassConnection passConnection;
+        JE::Render::RPI::PassConnection passConnection;
 
         passConnection.m_localSlot = AZ::Name{ "InputOutput" };
 
@@ -284,7 +284,7 @@ namespace AFR
 
         passRequest->m_connections.emplace_back(passConnection);
 
-        auto afrCopyPass{ AZ::RPI::PassSystemInterface::Get()->CreatePassFromRequest(passRequest.get()) };
+        auto afrCopyPass{ JE::Render::RPI::PassSystemInterface::Get()->CreatePassFromRequest(passRequest.get()) };
         m_afrCopyPasses[deviceIndex] = afrCopyPass;
 
         auto* parent{ copyToSwapchainPass->GetParent() };

@@ -29,9 +29,9 @@
 #endif // DEBUGDRAW_GEM_EDITOR
 
 #include <Atom/RHI/RHIUtils.h>
-#include <Atom/RPI.Public/RPISystemInterface.h>
-#include <Atom/RPI.Public/RPIUtils.h>
-#include <Atom/RPI.Public/Scene.h>
+#include <JE/Render/RPI/Public/RPISystemInterface.h>
+#include <JE/Render/RPI/Public/RPIUtils.h>
+#include <JE/Render/RPI/Public/Scene.h>
 
 namespace
 {
@@ -131,7 +131,7 @@ namespace DebugDraw
         AzToolsFramework::EditorEntityContextNotificationBus::Handler::BusDisconnect();
         #endif // DEBUGDRAW_GEM_EDITOR
 
-        AZ::RPI::SceneNotificationBus::Handler::BusDisconnect();
+        JE::Render::RPI::SceneNotificationBus::Handler::BusDisconnect();
         DebugDrawRequestBus::Handler::BusDisconnect();
         DebugDrawInternalRequestBus::Handler::BusDisconnect();
 
@@ -174,11 +174,11 @@ namespace DebugDraw
         m_spheresRayTracingIndices.Reset();
     }
 
-    void DebugDrawSystemComponent::OnBootstrapSceneReady(AZ::RPI::Scene* scene)
+    void DebugDrawSystemComponent::OnBootstrapSceneReady(JE::Render::RPI::Scene* scene)
     {
         AZ_Assert(scene, "Invalid scene received in OnBootstrapSceneReady");
-        AZ::RPI::SceneNotificationBus::Handler::BusDisconnect();
-        AZ::RPI::SceneNotificationBus::Handler::BusConnect(scene->GetId());
+        JE::Render::RPI::SceneNotificationBus::Handler::BusDisconnect();
+        JE::Render::RPI::SceneNotificationBus::Handler::BusConnect(scene->GetId());
     }
 
     #ifdef DEBUGDRAW_GEM_EDITOR
@@ -1128,22 +1128,22 @@ namespace DebugDraw
         if (!m_sphereRayTracingTypeHandle.IsValid())
         {
             m_rayTracingFeatureProcessor =
-                AZ::RPI::Scene::GetFeatureProcessorForEntity<AZ::Render::RayTracingFeatureProcessorInterface>(element.m_targetEntityId);
+                JE::Render::RPI::Scene::GetFeatureProcessorForEntity<AZ::Render::RayTracingFeatureProcessorInterface>(element.m_targetEntityId);
 
             m_meshFeatureProcessor =
-                AZ::RPI::Scene::GetFeatureProcessorForEntity<AZ::Render::MeshFeatureProcessorInterface>(element.m_targetEntityId);
+                JE::Render::RPI::Scene::GetFeatureProcessorForEntity<AZ::Render::MeshFeatureProcessorInterface>(element.m_targetEntityId);
 
-            auto shaderAsset = AZ::RPI::FindShaderAsset("shaders/sphereintersection.azshader");
-            auto rayTracingShader = AZ::RPI::Shader::FindOrCreate(shaderAsset, AZ::RHI::GetDefaultSupervariantNameWithNoFloat16Fallback());
+            auto shaderAsset = JE::Render::RPI::FindShaderAsset("shaders/sphereintersection.azshader");
+            auto rayTracingShader = JE::Render::RPI::Shader::FindOrCreate(shaderAsset, AZ::RHI::GetDefaultSupervariantNameWithNoFloat16Fallback());
 
-            AZ::RPI::CommonBufferDescriptor desc;
+            JE::Render::RPI::CommonBufferDescriptor desc;
             desc.m_bufferName = "SpheresBuffer";
-            desc.m_poolType = AZ::RPI::CommonBufferPoolType::ReadOnly;
+            desc.m_poolType = JE::Render::RPI::CommonBufferPoolType::ReadOnly;
             desc.m_byteCount = sizeof(float); // Start with just 1 element
             desc.m_elementSize = sizeof(float);
             desc.m_elementFormat = AZ::RHI::Format::R32_FLOAT;
             desc.m_bufferData = nullptr;
-            m_spheresRayTracingIndicesBuffer = AZ::RPI::BufferSystemInterface::Get()->CreateBufferFromCommonPool(desc);
+            m_spheresRayTracingIndicesBuffer = JE::Render::RPI::BufferSystemInterface::Get()->CreateBufferFromCommonPool(desc);
 
             m_sphereRayTracingTypeHandle = m_rayTracingFeatureProcessor->RegisterProceduralGeometryType(
                 "DebugDraw::Sphere",
@@ -1213,13 +1213,13 @@ namespace DebugDraw
         if (!m_obbRayTracingTypeHandle.IsValid())
         {
             m_rayTracingFeatureProcessor =
-                AZ::RPI::Scene::GetFeatureProcessorForEntity<AZ::Render::RayTracingFeatureProcessorInterface>(element.m_targetEntityId);
+                JE::Render::RPI::Scene::GetFeatureProcessorForEntity<AZ::Render::RayTracingFeatureProcessorInterface>(element.m_targetEntityId);
 
             m_meshFeatureProcessor =
-                AZ::RPI::Scene::GetFeatureProcessorForEntity<AZ::Render::MeshFeatureProcessorInterface>(element.m_targetEntityId);
+                JE::Render::RPI::Scene::GetFeatureProcessorForEntity<AZ::Render::MeshFeatureProcessorInterface>(element.m_targetEntityId);
 
-            auto shaderAsset = AZ::RPI::FindShaderAsset("shaders/obbintersection.azshader");
-            auto rayTracingShader = AZ::RPI::Shader::FindOrCreate(shaderAsset, AZ::RHI::GetDefaultSupervariantNameWithNoFloat16Fallback());
+            auto shaderAsset = JE::Render::RPI::FindShaderAsset("shaders/obbintersection.azshader");
+            auto rayTracingShader = JE::Render::RPI::Shader::FindOrCreate(shaderAsset, AZ::RHI::GetDefaultSupervariantNameWithNoFloat16Fallback());
 
             m_obbRayTracingTypeHandle =
                 m_rayTracingFeatureProcessor->RegisterProceduralGeometryType("DebugDraw::Obb", rayTracingShader, "ObbIntersection");

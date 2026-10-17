@@ -20,9 +20,9 @@
 
 #include <JE/Render/Integration/AtomBridgeBus.h>
 
-#include <Atom/RPI.Public/View.h>
-#include <Atom/RPI.Public/Shader/ShaderResourceGroup.h>
-#include <Atom/RPI.Public/ViewportContextBus.h>
+#include <JE/Render/RPI/Public/View.h>
+#include <JE/Render/RPI/Public/Shader/ShaderResourceGroup.h>
+#include <JE/Render/RPI/Public/ViewportContextBus.h>
 #include <JE/Render/Bootstrap/BootstrapNotificationBus.h>
 
 namespace JE::Render::Integration
@@ -37,7 +37,7 @@ namespace JE::Render::Integration
             , public AzFramework::Components::DeprecatedComponentsRequestBus::Handler
             , public JE::Render::Bootstrap::NotificationBus::Handler
             , protected AtomBridgeRequestBus::Handler
-            , public AZ::RPI::ViewportContextManagerNotificationsBus::Handler
+            , public JE::Render::RPI::ViewportContextManagerNotificationsBus::Handler
         {
         public:
             AZ_COMPONENT(AtomBridgeSystemComponent, "{FFB99CE4-2C9E-476D-8140-50A8A696E242}");
@@ -68,15 +68,15 @@ namespace JE::Render::Integration
             // (Empty)
 
             // JE::Render::Bootstrap::NotificationBus overrides
-            void OnBootstrapSceneReady(AZ::RPI::Scene* bootstrapScene) override;
+            void OnBootstrapSceneReady(JE::Render::RPI::Scene* bootstrapScene) override;
 
             // ViewportContextManagerNotificationsBus overrides
-            void OnViewportContextAdded(AZ::RPI::ViewportContextPtr viewportContext) override;
+            void OnViewportContextAdded(JE::Render::RPI::ViewportContextPtr viewportContext) override;
             void OnViewportContextRemoved(AzFramework::ViewportId viewportId) override;
 
             AzFramework::EntityContextId m_entityContextId;
 
-            AZ::RPI::ViewPtr m_view = nullptr;
+            JE::Render::RPI::ViewPtr m_view = nullptr;
 
             AZStd::unordered_map<AzFramework::ViewportId, AZStd::shared_ptr<AtomDebugDisplayViewportInterface> > m_activeViewportsList;
             AZStd::unique_ptr<PerViewportDynamicDrawManager> m_dynamicDrawManager;

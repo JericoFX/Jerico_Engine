@@ -9,7 +9,7 @@
 #pragma once
 
 #include "./UseTextureFunctor.h"
-#include <Atom/RPI.Edit/Material/MaterialFunctorSourceData.h>
+#include <JE/Editor/Render/RPI/Edit/Material/MaterialFunctorSourceData.h>
 
 namespace AZ
 {
@@ -21,11 +21,11 @@ namespace AZ
         //! Materials can use this functor to control whether a specific texture property will be sampled. 
         //! Sampling will be disabled if no texture is bound or if the useTexture flag is disabled.
         class UseTextureFunctorSourceData final
-            : public RPI::MaterialFunctorSourceData
+            : public JE::Render::RPI::MaterialFunctorSourceData
         {
         public:
             AZ_CLASS_ALLOCATOR(UseTextureFunctorSourceData , AZ::SystemAllocator)
-            AZ_RTTI(UseTextureFunctorSourceData, "{2CBB80CF-5EEB-4C0F-B628-1FE0729E2D18}", RPI::MaterialFunctorSourceData);
+            AZ_RTTI(UseTextureFunctorSourceData, "{2CBB80CF-5EEB-4C0F-B628-1FE0729E2D18}", JE::Render::RPI::MaterialFunctorSourceData);
 
             static void Reflect(ReflectContext* context);
 

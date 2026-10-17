@@ -11,19 +11,24 @@
 #include <Atom/Feature/Utils/IndexableList.h>
 #include <Atom/RHI.Reflect/ImageDescriptor.h>
 #include <Atom/RHI.Reflect/ImageSubresource.h>
-#include <Atom/RPI.Public/Image/StreamingImage.h>
+#include <JE/Render/RPI/Public/Image/StreamingImage.h>
 #include <AzCore/Asset/AssetCommon.h>
 #include <AzCore/Instance/Instance.h>
 #include <AzCore/std/containers/span.h>
 
 namespace AZ
 {
-    namespace RPI
-    {
+    }
+
+namespace JE::Render::RPI
+{
         class ImageMipChainAsset;
         class StreamingImageAsset;
         class MaterialAsset;
     }
+
+namespace AZ
+{
 
     namespace Render
     {
@@ -64,7 +69,7 @@ namespace AZ
             };
 
             //! Returns the packing layout this material requires across all decal map types.
-            static PackingLayout GetPackingLayout(RPI::MaterialAsset& materialAsset);
+            static PackingLayout GetPackingLayout(JE::Render::RPI::MaterialAsset& materialAsset);
 
             int AddMaterial(const AZ::Data::AssetId materialAssetId);
             void RemoveMaterial(const int index);
@@ -77,9 +82,9 @@ namespace AZ
 
             // Note that we pack each type into a separate texture array. This is because formats are
             // often different (BC5 for normals, BC7 for diffuse, etc)
-            const Data::Instance<RPI::StreamingImage>& GetPackedTexture(const DecalMapType mapType) const;
+            const Data::Instance<JE::Render::RPI::StreamingImage>& GetPackedTexture(const DecalMapType mapType) const;
 
-            static bool IsValidDecalMaterial(RPI::MaterialAsset& materialAsset);
+            static bool IsValidDecalMaterial(JE::Render::RPI::MaterialAsset& materialAsset);
 
         private:
 
@@ -96,7 +101,7 @@ namespace AZ
             int FindMaterial(const AZ::Data::AssetId materialAssetId) const;
 
             // packs the contents of the source images into a texture array readable by the GPU and returns it
-            AZ::Data::Asset<AZ::RPI::ImageMipChainAsset> BuildPackedMipChainAsset(const DecalMapType mapType, const size_t numTexturesToCreate);
+            AZ::Data::Asset<JE::Render::RPI::ImageMipChainAsset> BuildPackedMipChainAsset(const DecalMapType mapType, const size_t numTexturesToCreate);
             RHI::ImageDescriptor CreatePackedImageDescriptor(const DecalMapType mapType, const uint16_t arraySize, const uint16_t mipLevels) const;
 
             uint16_t GetNumMipLevels(const DecalMapType mapType) const;
@@ -120,7 +125,7 @@ namespace AZ
             bool NeedsPacking() const;
 
             IndexableList<MaterialData> m_materials;
-            AZStd::array<Data::Instance<RPI::StreamingImage>, DecalMapType_Num> m_textureArrayPacked;
+            AZStd::array<Data::Instance<JE::Render::RPI::StreamingImage>, DecalMapType_Num> m_textureArrayPacked;
 
             AZStd::unordered_set<AZ::Data::AssetId> m_assetsCurrentlyLoading;
         };

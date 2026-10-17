@@ -14,17 +14,17 @@
 #include <AzCore/std/sort.h>
 #include <AzCore/std/string/string.h>
 
-#include <Atom/RPI.Public/Scene.h>
-#include <Atom/RPI.Public/Culling.h>
+#include <JE/Render/RPI/Public/Scene.h>
+#include <JE/Render/RPI/Public/Culling.h>
 
 namespace AZ
 {    
     namespace Render
     {
         //"inline" is necessary since this is declared in a .inl file. Remove it if this definition moves into a .cpp at some point
-        inline void ImGuiDrawCullingDebug(bool& draw, AZ::RPI::Scene* scene)
+        inline void ImGuiDrawCullingDebug(bool& draw, JE::Render::RPI::Scene* scene)
         {
-            using namespace RPI;
+            using namespace JE::Render::RPI;
 
             CullingScene* cullScene = scene->GetCullingScene();
             CullingDebugContext& debugCtx = cullScene->GetDebugContext();

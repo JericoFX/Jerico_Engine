@@ -23,7 +23,7 @@
 #include <JE/World/Camera/CameraComponent.h>
 #include <JE/World/Camera/CameraComponentController.h>
 
-#include <Atom/RPI.Public/Base.h>
+#include <JE/Render/RPI/Public/Base.h>
 
 namespace JE::Editor::Camera
 {

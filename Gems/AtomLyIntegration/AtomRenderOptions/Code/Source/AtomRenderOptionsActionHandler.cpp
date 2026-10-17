@@ -10,7 +10,7 @@
 
 #include "AtomRenderOptions.h"
 
-#include <Atom/RPI.Public/Base.h>
+#include <JE/Render/RPI/Public/Base.h>
 
 #include <AzCore/Debug/Trace.h>
 #include <AzCore/Interface/Interface.h>

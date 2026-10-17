@@ -10,23 +10,23 @@
 
 #include <Atom/Utils/Utils.h>
 #include <Atom/RHI/RHISystemInterface.h>
-#include <Atom/RPI.Reflect/Asset/AssetUtils.h>
-#include <Atom/RPI.Public/RPIUtils.h>
-#include <Atom/RPI.Public/Scene.h>
-#include <Atom/RPI.Public/View.h>
-#include <Atom/RPI.Public/Image/ImageSystemInterface.h>
-#include <Atom/RPI.Public/Image/AttachmentImagePool.h>
-#include <Atom/RPI.Public/Material/Material.h>
-#include <Atom/RPI.Public/Pass/PassFilter.h>
-#include <Atom/RPI.Public/Pass/PassSystemInterface.h>
-#include <Atom/RPI.Public/Pass/RasterPass.h>
-#include <Atom/RPI.Public/RenderPipeline.h>
+#include <JE/Render/RPI/Reflect/Asset/AssetUtils.h>
+#include <JE/Render/RPI/Public/RPIUtils.h>
+#include <JE/Render/RPI/Public/Scene.h>
+#include <JE/Render/RPI/Public/View.h>
+#include <JE/Render/RPI/Public/Image/ImageSystemInterface.h>
+#include <JE/Render/RPI/Public/Image/AttachmentImagePool.h>
+#include <JE/Render/RPI/Public/Material/Material.h>
+#include <JE/Render/RPI/Public/Pass/PassFilter.h>
+#include <JE/Render/RPI/Public/Pass/PassSystemInterface.h>
+#include <JE/Render/RPI/Public/Pass/RasterPass.h>
+#include <JE/Render/RPI/Public/RenderPipeline.h>
 #include <Atom/Feature/RenderCommon.h>
 
 #include <SurfaceData/SurfaceDataSystemRequestBus.h>
 
-#include <Atom/RPI.Reflect/Asset/AssetUtils.h>
-#include <Atom/RPI.Reflect/Material/MaterialAssetCreator.h>
+#include <JE/Render/RPI/Reflect/Asset/AssetUtils.h>
+#include <JE/Render/RPI/Reflect/Material/MaterialAssetCreator.h>
 
 namespace Terrain
 {
@@ -39,7 +39,7 @@ namespace Terrain
     {
         if (AZ::SerializeContext* serialize = azrtti_cast<AZ::SerializeContext*>(context))
         {
-            serialize->Class<TerrainFeatureProcessor, AZ::RPI::FeatureProcessor>()
+            serialize->Class<TerrainFeatureProcessor, JE::Render::RPI::FeatureProcessor>()
                 ->Version(0)
                 ;
         }
@@ -55,12 +55,12 @@ namespace Terrain
 
     void TerrainFeatureProcessor::Initialize()
     {
-        auto sceneSrgLayout = AZ::RPI::RPISystemInterface::Get()->GetSceneSrgLayout();
+        auto sceneSrgLayout = JE::Render::RPI::RPISystemInterface::Get()->GetSceneSrgLayout();
 
         // Load the terrain material asynchronously
         static constexpr const char* materialFilePath = "Materials/Terrain/DefaultPbrTerrain.azmaterial";
         const AZ::Data::AssetId materialAssetId =
-            AZ::RPI::AssetUtils::GetAssetIdForProductPath(materialFilePath, AZ::RPI::AssetUtils::TraceLevel::Error);
+            JE::Render::RPI::AssetUtils::GetAssetIdForProductPath(materialFilePath, JE::Render::RPI::AssetUtils::TraceLevel::Error);
         if (materialAssetId.IsValid())
         {
             m_materialAsset.Create(materialAssetId);
@@ -93,7 +93,7 @@ namespace Terrain
         }
     }
 
-    void TerrainFeatureProcessor::Render(const AZ::RPI::FeatureProcessor::RenderPacket& packet)
+    void TerrainFeatureProcessor::Render(const JE::Render::RPI::FeatureProcessor::RenderPacket& packet)
     {
         ProcessSurfaces(packet);
     }
@@ -107,7 +107,7 @@ namespace Terrain
         }
         else
         {
-            m_materialInstance = AZ::RPI::Material::FindOrCreate(m_materialAsset);
+            m_materialInstance = JE::Render::RPI::Material::FindOrCreate(m_materialAsset);
             PrepareMaterialData();
             m_terrainBoundsNeedUpdate = true;
         }
@@ -134,8 +134,8 @@ namespace Terrain
         }
     }
 
-    void TerrainFeatureProcessor::OnRenderPipelineChanged([[maybe_unused]] AZ::RPI::RenderPipeline* renderPipeline,
-        [[maybe_unused]] AZ::RPI::SceneNotification::RenderPipelineChangeType changeType)
+    void TerrainFeatureProcessor::OnRenderPipelineChanged([[maybe_unused]] JE::Render::RPI::RenderPipeline* renderPipeline,
+        [[maybe_unused]] JE::Render::RPI::SceneNotification::RenderPipelineChangeType changeType)
     {
         CachePasses();
         if (changeType == RenderPipelineChangeType::Added || changeType == RenderPipelineChangeType::PassChanged)
@@ -144,7 +144,7 @@ namespace Terrain
         }
     }
 
-    void TerrainFeatureProcessor::AddRenderPasses(AZ::RPI::RenderPipeline* renderPipeline)
+    void TerrainFeatureProcessor::AddRenderPasses(JE::Render::RPI::RenderPipeline* renderPipeline)
     {
         // Get the pass requests to create passes from the asset
         AddPassRequestToRenderPipeline(renderPipeline, "Passes/TerrainPassRequest.azasset", "DepthPrePass", true);
@@ -161,12 +161,12 @@ namespace Terrain
         m_terrainSrg = {};
 
         m_materialInstance->ForAllShaderItems(
-            [&](const AZ::Name&, const AZ::RPI::ShaderCollection::Item& shaderItem)
+            [&](const AZ::Name&, const JE::Render::RPI::ShaderCollection::Item& shaderItem)
             {
                 if (shaderItem.GetShaderAsset()->GetDrawListName() == AZ::Name("forward"))
                 {
                     const auto& shaderAsset = shaderItem.GetShaderAsset();
-                    m_terrainSrg = AZ::RPI::ShaderResourceGroup::Create(
+                    m_terrainSrg = JE::Render::RPI::ShaderResourceGroup::Create(
                         shaderItem.GetShaderAsset(), shaderAsset->GetSupervariantIndex(AZ::Name()), AZ::Name{ "TerrainSrg" });
                     AZ_Error(TerrainFPName, m_terrainSrg, "Failed to create Terrain shader resource group");
 
@@ -234,10 +234,10 @@ namespace Terrain
         if (m_materialInstance && m_materialInstance->CanCompile())
         {
             AZ::Vector3 cameraPosition = AZ::Vector3::CreateZero();
-            AZ::RPI::ViewPtr mainView;
+            JE::Render::RPI::ViewPtr mainView;
             for (auto& view : process.m_views)
             {
-                if ((view->GetUsageFlags() & AZ::RPI::View::UsageFlags::UsageCamera) > 0)
+                if ((view->GetUsageFlags() & JE::Render::RPI::View::UsageFlags::UsageCamera) > 0)
                 {
                     mainView = view;
                     cameraPosition = view->GetCameraTransform().GetTranslation();
@@ -325,19 +325,19 @@ namespace Terrain
     {
         m_passes.clear();
 
-        auto rasterPassFilter = AZ::RPI::PassFilter::CreateWithPassClass<AZ::RPI::RasterPass>();
+        auto rasterPassFilter = JE::Render::RPI::PassFilter::CreateWithPassClass<JE::Render::RPI::RasterPass>();
         rasterPassFilter.SetOwnerScene(GetParentScene());
         AZ::RHI::RHISystemInterface* rhiSystem = AZ::RHI::RHISystemInterface::Get();
         const AZ::RHI::DrawListTag forwardTag = rhiSystem->GetDrawListTagRegistry()->AcquireTag(AZ::Name("forward"));
         const AZ::RHI::DrawListTag depthTag = rhiSystem->GetDrawListTagRegistry()->AcquireTag(AZ::Name("depth"));
         const AZ::RHI::DrawListTag shadowTag = rhiSystem->GetDrawListTagRegistry()->AcquireTag(AZ::Name("shadow"));
 
-        AZ::RPI::PassSystemInterface::Get()->ForEachPass(rasterPassFilter,
-            [&](AZ::RPI::Pass* pass) -> AZ::RPI::PassFilterExecutionFlow
+        JE::Render::RPI::PassSystemInterface::Get()->ForEachPass(rasterPassFilter,
+            [&](JE::Render::RPI::Pass* pass) -> JE::Render::RPI::PassFilterExecutionFlow
             {
-                auto* rasterPass = azrtti_cast<AZ::RPI::RasterPass*>(pass);
+                auto* rasterPass = azrtti_cast<JE::Render::RPI::RasterPass*>(pass);
 
-                if (rasterPass && rasterPass->GetPassState() != AZ::RPI::PassState::Orphaned)
+                if (rasterPass && rasterPass->GetPassState() != JE::Render::RPI::PassState::Orphaned)
                 {
                     if (rasterPass->GetDrawListTag() == forwardTag ||
                         rasterPass->GetDrawListTag() == depthTag ||
@@ -346,17 +346,17 @@ namespace Terrain
                         m_passes.push_back(rasterPass);
                     }
                 }
-                return AZ::RPI::PassFilterExecutionFlow::ContinueVisitingPasses;
+                return JE::Render::RPI::PassFilterExecutionFlow::ContinueVisitingPasses;
             }
         );
     }
 
-    const AZ::Data::Instance<AZ::RPI::ShaderResourceGroup> TerrainFeatureProcessor::GetTerrainShaderResourceGroup() const
+    const AZ::Data::Instance<JE::Render::RPI::ShaderResourceGroup> TerrainFeatureProcessor::GetTerrainShaderResourceGroup() const
     {
         return m_terrainSrg;
     }
 
-    const AZ::Data::Instance<AZ::RPI::Material> TerrainFeatureProcessor::GetMaterial() const
+    const AZ::Data::Instance<JE::Render::RPI::Material> TerrainFeatureProcessor::GetMaterial() const
     {
         return m_materialInstance;
     }

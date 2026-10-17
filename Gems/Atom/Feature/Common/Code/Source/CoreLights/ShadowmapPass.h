@@ -9,8 +9,8 @@
 
 #include <Atom/RHI.Reflect/Size.h>
 #include <Atom/RHI/DrawPacket.h>
-#include <Atom/RPI.Public/Pass/RasterPass.h>
-#include <Atom/RPI.Reflect/Pass/RasterPassData.h>
+#include <JE/Render/RPI/Public/Pass/RasterPass.h>
+#include <JE/Render/RPI/Reflect/Pass/RasterPassData.h>
 
 namespace AZ
 {
@@ -18,12 +18,12 @@ namespace AZ
     {
         //! ShadowmapPass outputs shadowmap depth images.
         class ShadowmapPass final
-            : public RPI::RasterPass
+            : public JE::Render::RPI::RasterPass
         {
             friend class CascadedShadowmapsPass;
             friend class ProjectedShadowmapsPass;
 
-            using Base = RPI::RasterPass;
+            using Base = JE::Render::RPI::RasterPass;
             AZ_RPI_PASS(ShadowmapPass);
       
         public:
@@ -32,14 +32,14 @@ namespace AZ
 
             ~ShadowmapPass() = default;
 
-            static RPI::Ptr<ShadowmapPass> Create(const RPI::PassDescriptor& descriptor);
+            static JE::Render::RPI::Ptr<ShadowmapPass> Create(const JE::Render::RPI::PassDescriptor& descriptor);
 
             // Creates a common pass template for the child shadowmap passes.
             static void CreatePassTemplate();
 
             //! Creates a pass descriptor from the input, using the ShadowmapPassTemplate, and adds a pass request to connect to the parent pass.
             //! This function assumes the parent pass has a SkinnedMeshes input slot
-            static RPI::Ptr<ShadowmapPass> CreateWithPassRequest(const Name& passName, AZStd::shared_ptr<RPI::RasterPassData> passData);
+            static JE::Render::RPI::Ptr<ShadowmapPass> CreateWithPassRequest(const Name& passName, AZStd::shared_ptr<JE::Render::RPI::RasterPassData> passData);
 
             //! This updates array slice for this shadowmap.
             void SetArraySlice(uint16_t arraySlice);
@@ -67,10 +67,10 @@ namespace AZ
 
         private:
             ShadowmapPass() = delete;
-            explicit ShadowmapPass(const RPI::PassDescriptor& descriptor);
+            explicit ShadowmapPass(const JE::Render::RPI::PassDescriptor& descriptor);
 
             // Sets the underlying pipeline view tag. Purpose of this function is to allow parent shadow passes to update the view tag.
-            void UpdatePipelineViewTag(const RPI::PipelineViewTag& viewTag);
+            void UpdatePipelineViewTag(const JE::Render::RPI::PipelineViewTag& viewTag);
 
             // RHI::Pass overrides...
             void BuildInternal() override;

@@ -8,8 +8,8 @@
 
 #include <Atom/Feature/Utils/LightingPreset.h>
 #include <Atom/Feature/Utils/ModelPreset.h>
-#include <Atom/RPI.Edit/Common/AssetUtils.h>
-#include <Atom/RPI.Reflect/System/AnyAsset.h>
+#include <JE/Editor/Render/RPI/Edit/Common/AssetUtils.h>
+#include <JE/Render/RPI/Reflect/System/AnyAsset.h>
 #include <AtomToolsFramework/EntityPreviewViewport/EntityPreviewViewportSettingsInspector.h>
 #include <AtomToolsFramework/EntityPreviewViewport/EntityPreviewViewportSettingsRequestBus.h>
 #include <AtomToolsFramework/Inspector/InspectorPropertyGroupWidget.h>

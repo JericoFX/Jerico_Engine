@@ -56,7 +56,7 @@ namespace AZ
             OcclusionCullingPlaneVector m_occlusionCullingPlanes;
 
             // prebuilt list of RPI scene occlusion planes
-            RPI::CullingScene::OcclusionPlaneVector m_rpiOcclusionPlanes;
+            JE::Render::RPI::CullingScene::OcclusionPlaneVector m_rpiOcclusionPlanes;
             bool m_rpiListNeedsUpdate = false;
         };
     } // namespace Render

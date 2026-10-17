@@ -25,7 +25,7 @@
 #include <AzCore/Serialization/SerializeContext.h>
 #include <AzCore/std/containers/set.h>
 
-#include <Atom/RPI.Reflect/Image/Image.h>
+#include <JE/Render/RPI/Reflect/Image/Image.h>
 
 // Only needed for internal unit-testing
 #include <LyShine.h>
@@ -88,7 +88,7 @@ public: //types
         bool OnAtlasLoaded(const TextureAtlasNamespace::TextureAtlas* atlas);
         bool OnAtlasUnloaded(const TextureAtlasNamespace::TextureAtlas* atlas);
 
-        AZ::Data::Instance<AZ::RPI::Image> m_texture;
+        AZ::Data::Instance<JE::Render::RPI::Image> m_texture;
         AZ::Vector2 m_size;
         VAlign m_vAlign;
         float m_yOffset;
@@ -613,7 +613,7 @@ private: // types
 
     struct RenderCacheImageBatch
     {
-        AZ::Data::Instance<AZ::RPI::Image>  m_texture;
+        AZ::Data::Instance<JE::Render::RPI::Image>  m_texture;
         LyShine::UiPrimitive             m_cachedPrimitive;
     };
 

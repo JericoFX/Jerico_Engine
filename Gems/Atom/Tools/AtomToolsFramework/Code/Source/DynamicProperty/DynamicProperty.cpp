@@ -6,7 +6,7 @@
  *
  */
 
-#include <Atom/RPI.Edit/Common/ColorUtils.h>
+#include <JE/Editor/Render/RPI/Edit/Common/ColorUtils.h>
 #include <AtomToolsFramework/DynamicProperty/DynamicProperty.h>
 #include <AzCore/Serialization/SerializeContext.h>
 #include <AzCore/std/algorithm.h>
@@ -165,7 +165,7 @@ namespace AtomToolsFramework
 
             if (m_value.is<AZ::Color>())
             {
-                AddEditDataAttribute(AZ_CRC_CE("ColorEditorConfiguration"), AZ::RPI::ColorUtils::GetLinearRgbEditorConfig());
+                AddEditDataAttribute(AZ_CRC_CE("ColorEditorConfiguration"), JE::Render::RPI::ColorUtils::GetLinearRgbEditorConfig());
             }
 
             if (!m_config.m_enumValues.empty() && IsValueInteger())

@@ -9,12 +9,12 @@
 #pragma once
 
 #include <AssetBuilderSDK/AssetBuilderBusses.h>
-#include <Atom/RPI.Edit/Material/MaterialPipelineSourceData.h>
-#include <Atom/RPI.Public/Material/MaterialShaderParameterLayout.h>
-#include <Atom/RPI.Reflect/Material/MaterialTypeAsset.h>
+#include <JE/Editor/Render/RPI/Edit/Material/MaterialPipelineSourceData.h>
+#include <JE/Render/RPI/Public/Material/MaterialShaderParameterLayout.h>
+#include <JE/Render/RPI/Reflect/Material/MaterialTypeAsset.h>
 #include <AzCore/JSON/document.h>
 
-namespace AZ::RPI
+namespace JE::Render::RPI
 {
     class MaterialTypeSourceData;
 }
@@ -56,16 +56,16 @@ namespace JE::Assets::RenderBuilders
                 const AssetBuilderSDK::CreateJobsRequest& request,
                 AssetBuilderSDK::CreateJobsResponse& response,
                 const AZStd::string& materialTypeSourcePath,
-                const AZ::RPI::MaterialTypeSourceData& materialTypeSourceData) const;
+                const JE::Render::RPI::MaterialTypeSourceData& materialTypeSourceData) const;
             void ProcessJobHelper(
                 const AssetBuilderSDK::ProcessJobRequest& request,
                 AssetBuilderSDK::ProcessJobResponse& response,
                 const AZStd::string& materialTypeSourcePath,
-                AZ::RPI::MaterialTypeSourceData& materialTypeSourceData) const;
+                JE::Render::RPI::MaterialTypeSourceData& materialTypeSourceData) const;
 
         private:
             AZStd::set<AZStd::string> GetMaterialPipelinePaths() const;
-            AZStd::map<AZ::IO::Path, AZ::RPI::MaterialPipelineSourceData> LoadMaterialPipelines() const;
+            AZStd::map<AZ::IO::Path, JE::Render::RPI::MaterialPipelineSourceData> LoadMaterialPipelines() const;
             AZ::Name GetMaterialPipelineName(const AZ::IO::Path& materialPipelineFilePath) const;
 
         } m_pipelineStage;
@@ -81,19 +81,19 @@ namespace JE::Assets::RenderBuilders
                 const AssetBuilderSDK::CreateJobsRequest& request,
                 AssetBuilderSDK::CreateJobsResponse& response,
                 const AZStd::string& materialTypeSourcePath,
-                const AZ::RPI::MaterialTypeSourceData& materialTypeSourceData) const;
+                const JE::Render::RPI::MaterialTypeSourceData& materialTypeSourceData) const;
             void ProcessJobHelper(
                 const AssetBuilderSDK::ProcessJobRequest& request,
                 AssetBuilderSDK::ProcessJobResponse& response,
                 const AZStd::string& materialTypeSourcePath,
-                const AZ::RPI::MaterialTypeSourceData& materialTypeSourceData) const;
+                const JE::Render::RPI::MaterialTypeSourceData& materialTypeSourceData) const;
 
         private:
             bool ShouldOutputAllPropertiesMaterial() const;
 
             enum class MaterialTypeProductSubId : AZ::u32
             {
-                MaterialTypeAsset = AZ::RPI::MaterialTypeAsset::SubId,
+                MaterialTypeAsset = JE::Render::RPI::MaterialTypeAsset::SubId,
                 AllPropertiesMaterialSourceFile,
                 MaterialShaderParameterLayoutSourceFile
             };

@@ -20,7 +20,7 @@ ly_add_target(
     COMPILE_DEFINITIONS PRIVATE JE_GEOMETRY_EXPORTS
     BUILD_DEPENDENCIES PUBLIC
         AZ::AzCore
-        Gem::Atom_RPI.Public
+        JE::RenderIntegration
         Gem::Atom_Feature_Common.Public
         Gem::CommonFeaturesAtom.Public
         JE::RenderMaterials

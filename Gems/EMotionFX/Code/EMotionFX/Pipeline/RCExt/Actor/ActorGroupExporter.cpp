@@ -25,7 +25,7 @@
 #include <RCExt/Actor/ActorGroupExporter.h>
 #include <RCExt/ExportContexts.h>
 
-#include <Atom/RPI.Reflect/Model/ModelAsset.h>
+#include <JE/Render/RPI/Reflect/Model/ModelAsset.h>
 
 namespace EMotionFX
 {
@@ -150,9 +150,9 @@ namespace EMotionFX
             // In here we set them as the dependency of the actor asset. That make sure those assets get automatically loaded before actor asset.
             // Default to the first product until we are able to establish a link between mesh and actor (ATOM-13590).
             const AZ::Data::AssetType assetDependencyList[] = {
-                azrtti_typeid<AZ::RPI::ModelAsset>(),
-                azrtti_typeid<AZ::RPI::SkinMetaAsset>(),
-                azrtti_typeid<AZ::RPI::MorphTargetMetaAsset>()
+                azrtti_typeid<JE::Render::RPI::ModelAsset>(),
+                azrtti_typeid<JE::Render::RPI::SkinMetaAsset>(),
+                azrtti_typeid<JE::Render::RPI::MorphTargetMetaAsset>()
             };
 
             for (const AZ::Data::AssetType& assetDependency : assetDependencyList)
@@ -171,7 +171,7 @@ namespace EMotionFX
 
         AZStd::optional<AZ::Data::AssetId> ActorGroupExporter::GetMeshAssetId(const ActorGroupExportContext& context) const
         {
-            AZ::Data::AssetType atomModelAssetType = azrtti_typeid<AZ::RPI::ModelAsset>();
+            AZ::Data::AssetType atomModelAssetType = azrtti_typeid<JE::Render::RPI::ModelAsset>();
             const AZStd::vector<AZ::SceneAPI::Events::ExportProduct>& products = context.m_products.GetProducts();
 
             // Gather the asset ids from the exported mesh groups (Atom model assets).

@@ -9,7 +9,7 @@
 
 #include <SkinnedMesh/SkinnedMeshShaderOptionsCache.h>
 
-#include <Atom/RPI.Public/Pass/ComputePass.h>
+#include <JE/Render/RPI/Public/Pass/ComputePass.h>
 #include <Atom/RHI.Reflect/Base.h>
 
 namespace AZ
@@ -20,26 +20,26 @@ namespace AZ
 
         //! The skinned mesh compute pass submits dispatch items for skinning. The dispatch items are cleared every frame, so it needs to be re-populated.
         class SkinnedMeshComputePass
-            : public RPI::ComputePass
+            : public JE::Render::RPI::ComputePass
         {
             AZ_RPI_PASS(SkinnedMeshComputePass);
         public:
-            AZ_RTTI(AZ::Render::SkinnedMeshComputePass, "{CE046FFC-B870-40EE-872A-DB0958B97CC3}", RPI::ComputePass);
+            AZ_RTTI(AZ::Render::SkinnedMeshComputePass, "{CE046FFC-B870-40EE-872A-DB0958B97CC3}", JE::Render::RPI::ComputePass);
             AZ_CLASS_ALLOCATOR(SkinnedMeshComputePass, SystemAllocator);
 
-            SkinnedMeshComputePass(const RPI::PassDescriptor& descriptor);
+            SkinnedMeshComputePass(const JE::Render::RPI::PassDescriptor& descriptor);
 
-            static RPI::Ptr<SkinnedMeshComputePass> Create(const RPI::PassDescriptor& descriptor);
+            static JE::Render::RPI::Ptr<SkinnedMeshComputePass> Create(const JE::Render::RPI::PassDescriptor& descriptor);
 
-            Data::Instance<RPI::Shader> GetShader() const;
+            Data::Instance<JE::Render::RPI::Shader> GetShader() const;
 
         private:
             void SetupFrameGraphDependencies(RHI::FrameGraphInterface frameGraph) override;
             void BuildCommandListInternal(const RHI::FrameGraphExecuteContext& context) override;
 
             // ShaderReloadNotificationBus::Handler overrides...
-            void OnShaderReinitialized(const RPI::Shader& shader) override;
-            void OnShaderVariantReinitialized(const RPI::ShaderVariant& shaderVariant) override;
+            void OnShaderReinitialized(const JE::Render::RPI::Shader& shader) override;
+            void OnShaderVariantReinitialized(const JE::Render::RPI::ShaderVariant& shaderVariant) override;
 
             SkinnedMeshFeatureProcessor* GetSkinnedMeshFeatureProcessor();
         };

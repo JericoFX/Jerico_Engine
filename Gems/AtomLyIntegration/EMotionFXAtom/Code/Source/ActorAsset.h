@@ -23,11 +23,16 @@ namespace EMotionFX
 
 namespace AZ
 {
-    namespace RPI
-    {
+    }
+
+namespace JE::Render::RPI
+{
         class Model;
         class Buffer;
     }
+
+namespace AZ
+{
 
     namespace Render
     {
@@ -40,7 +45,7 @@ namespace AZ
         void GetBoneTransformsFromActorInstance(const EMotionFX::ActorInstance* actorInstance, AZStd::vector<float>& boneTransforms, EMotionFX::Integration::SkinningMethod skinningMethod);
 
         //! Create a buffer for bone transforms that can be used as input to the skinning shader
-        Data::Instance<RPI::Buffer> CreateBoneTransformBufferFromActorInstance(const EMotionFX::ActorInstance* actorInstance, EMotionFX::Integration::SkinningMethod skinningMethod);
+        Data::Instance<JE::Render::RPI::Buffer> CreateBoneTransformBufferFromActorInstance(const EMotionFX::ActorInstance* actorInstance, EMotionFX::Integration::SkinningMethod skinningMethod);
 
     } // namespace Render
 } // namespace AZ

@@ -14,7 +14,7 @@
 #include <AzCore/RTTI/BehaviorContext.h>
 #include <AzCore/Component/ComponentApplicationBus.h>
 
-#include <Atom/RPI.Reflect/Image/AttachmentImageAsset.h>
+#include <JE/Render/RPI/Reflect/Image/AttachmentImageAsset.h>
 
 #include <LyShine/IDraw2d.h>
 #include <LyShine/UiSerializeHelpers.h>
@@ -279,9 +279,9 @@ namespace
         14, 15, 21, 21, 20, 14,     // center quad
     };
 
-    AZ::Data::Instance<AZ::RPI::Image> GetSpriteImage(ISprite* sprite)
+    AZ::Data::Instance<JE::Render::RPI::Image> GetSpriteImage(ISprite* sprite)
     {
-        AZ::Data::Instance<AZ::RPI::Image> image;
+        AZ::Data::Instance<JE::Render::RPI::Image> image;
         if (sprite)
         {
             image = sprite->GetImage();
@@ -463,7 +463,7 @@ void UiImageComponent::Render(LyShine::IRenderGraph* renderGraph)
             }
         }
 
-        AZ::Data::Instance<AZ::RPI::Image> image = GetSpriteImage(sprite);
+        AZ::Data::Instance<JE::Render::RPI::Image> image = GetSpriteImage(sprite);
         bool isClampTextureMode = m_imageType == ImageType::Tiled ? false : true;
         bool isTextureSRGB = IsSpriteTypeRenderTarget() && m_isRenderTargetSRGB;
         bool isTexturePremultipliedAlpha = false; // we are not rendering from a render target with alpha in it
@@ -595,13 +595,13 @@ bool UiImageComponent::SetSpritePathnameIfExists(AZStd::string spritePath)
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-AZ::Data::Asset<AZ::RPI::AttachmentImageAsset> UiImageComponent::GetAttachmentImageAsset()
+AZ::Data::Asset<JE::Render::RPI::AttachmentImageAsset> UiImageComponent::GetAttachmentImageAsset()
 {
     return m_attachmentImageAsset;
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-void UiImageComponent::SetAttachmentImageAsset(const AZ::Data::Asset<AZ::RPI::AttachmentImageAsset>& attachmentImageAsset)
+void UiImageComponent::SetAttachmentImageAsset(const AZ::Data::Asset<JE::Render::RPI::AttachmentImageAsset>& attachmentImageAsset)
 {
     m_attachmentImageAsset = attachmentImageAsset;
 
@@ -2336,7 +2336,7 @@ void UiImageComponent::SnapOffsetsToFixedImage()
     }
 
     // if the image has no texture it will not use Fixed rendering so do nothing
-    AZ::Data::Instance<AZ::RPI::Image> image = GetSpriteImage(m_sprite);
+    AZ::Data::Instance<JE::Render::RPI::Image> image = GetSpriteImage(m_sprite);
     if (!image)
     {
         return;

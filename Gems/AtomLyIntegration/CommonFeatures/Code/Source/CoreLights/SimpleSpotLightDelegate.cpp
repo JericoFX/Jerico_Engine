@@ -6,7 +6,7 @@
  *
  */
 
-#include <Atom/RPI.Public/Scene.h>
+#include <JE/Render/RPI/Public/Scene.h>
 #include <AtomLyIntegration/CommonFeatures/CoreLights/AreaLightComponentConfig.h>
 #include <CoreLights/SimpleSpotLightDelegate.h>
 
@@ -185,7 +185,7 @@ namespace AZ::Render
         }
     }
 
-    void SimpleSpotLightDelegate::SetGoboTexture(AZ::Data::Instance<AZ::RPI::Image> goboTexture)
+    void SimpleSpotLightDelegate::SetGoboTexture(AZ::Data::Instance<JE::Render::RPI::Image> goboTexture)
     {
         if (GetLightHandle().IsValid())
         {

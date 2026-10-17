@@ -8,7 +8,7 @@
 
 #pragma once
 
-#include <Atom/RPI.Public/ViewportContextBus.h>
+#include <JE/Render/RPI/Public/ViewportContextBus.h>
 #include <AzCore/Component/Component.h>
 #include <AzFramework/Font/FontInterface.h>
 #include <Multiplayer/IMultiplayer.h>
@@ -20,7 +20,7 @@ namespace Multiplayer
     //! System component that draws viewport messaging as the editor attempts connection to the editor-server while starting up game-mode.
     class MultiplayerConnectionViewportMessageSystemComponent final
         : public AZ::Component
-        , public AZ::RPI::ViewportContextNotificationBus::Handler
+        , public JE::Render::RPI::ViewportContextNotificationBus::Handler
         , MultiplayerEditorServerNotificationBus::Handler
     {
     public:

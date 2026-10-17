@@ -7,11 +7,11 @@
  */
 
 #include <Atom/Feature/CoreLights/CapsuleLightFeatureProcessorInterface.h>
-#include <Atom/RPI.Public/Base.h>
-#include <Atom/RPI.Public/FeatureProcessorFactory.h>
-#include <Atom/RPI.Public/RPISystem.h>
-#include <Atom/RPI.Public/Scene.h>
-#include <Atom/RPI.Reflect/System/SceneDescriptor.h>
+#include <JE/Render/RPI/Public/Base.h>
+#include <JE/Render/RPI/Public/FeatureProcessorFactory.h>
+#include <JE/Render/RPI/Public/RPISystem.h>
+#include <JE/Render/RPI/Public/Scene.h>
+#include <JE/Render/RPI/Reflect/System/SceneDescriptor.h>
 #include <AzFramework/Visibility/BoundsBus.h>
 #include <AzTest/AzTest.h>
 #include <AZTestShared/Utils/Utils.h>

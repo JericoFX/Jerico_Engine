@@ -7,11 +7,11 @@
  */
 
 #include <Atom/RHI.Reflect/SamplerState.h>
-#include <Atom/RPI.Edit/Common/AssetUtils.h>
-#include <Atom/RPI.Edit/Common/JsonUtils.h>
-#include <Atom/RPI.Edit/Material/MaterialTypeSourceData.h>
-#include <Atom/RPI.Edit/Material/MaterialUtils.h>
-#include <Atom/RPI.Reflect/Image/StreamingImageAsset.h>
+#include <JE/Editor/Render/RPI/Edit/Common/AssetUtils.h>
+#include <JE/Editor/Render/RPI/Edit/Common/JsonUtils.h>
+#include <JE/Editor/Render/RPI/Edit/Material/MaterialTypeSourceData.h>
+#include <JE/Editor/Render/RPI/Edit/Material/MaterialUtils.h>
+#include <JE/Render/RPI/Reflect/Image/StreamingImageAsset.h>
 #include <AtomToolsFramework/Graph/DynamicNode/DynamicNode.h>
 #include <AtomToolsFramework/Graph/DynamicNode/DynamicNodeUtil.h>
 #include <AtomToolsFramework/Graph/GraphTemplateFileDataCacheRequestBus.h>
@@ -826,7 +826,7 @@ namespace JE::Editor
                 return srgMember;
             }
 
-            if (AZStd::any_cast<const AZ::Data::Asset<AZ::RPI::StreamingImageAsset>>(&slotValue))
+            if (AZStd::any_cast<const AZ::Data::Asset<JE::Render::RPI::StreamingImageAsset>>(&slotValue))
             {
                 return AZStd::string::format("Texture2D SLOTNAME;\n");
             }
@@ -1136,7 +1136,7 @@ namespace JE::Editor
         }
 
         // Load the material type template file, which is the same format as MaterialTypeSourceData with a different extension
-        auto materialTypeOutcome = AZ::RPI::MaterialUtils::LoadMaterialTypeSourceData(templateInputPath);
+        auto materialTypeOutcome = JE::Render::RPI::MaterialUtils::LoadMaterialTypeSourceData(templateInputPath);
         if (!materialTypeOutcome.IsSuccess())
         {
             AZ_Error("MaterialGraphCompiler", false, "Material type template could not be loaded: '%s'.", templateInputPath.c_str());
@@ -1144,7 +1144,7 @@ namespace JE::Editor
         }
 
         // Copy the material type source data from the template and begin populating it.
-        AZ::RPI::MaterialTypeSourceData materialTypeSourceData = materialTypeOutcome.TakeValue();
+        JE::Render::RPI::MaterialTypeSourceData materialTypeSourceData = materialTypeOutcome.TakeValue();
 
         // If the node providing all the template information has a description then assign it to the material type source data.
         materialTypeSourceData.m_description = GetStringValueFromSlot(templateNode->GetSlot("inDescription"));
@@ -1353,7 +1353,7 @@ namespace JE::Editor
                 property->m_displayName = materialPropertyDisplayNameUnique;
                 property->m_description = materialPropertyDescription;
                 property->m_enumValues = materialPropertyValueSlotConfig.m_enumValues;
-                property->m_value = AZ::RPI::MaterialPropertyValue::FromAny(materialPropertyValue);
+                property->m_value = JE::Render::RPI::MaterialPropertyValue::FromAny(materialPropertyValue);
 
                 // The property definition requires an explicit type enum that's converted from the actual data type.
                 property->m_dataType = GetMaterialPropertyDataTypeFromValue(property->m_value, !property->m_enumValues.empty());
@@ -1367,17 +1367,17 @@ namespace JE::Editor
                     if (AZ::StringFunc::Equal(materialPropertyConnectionType, "ShaderInput"))
                     {
                         property->m_outputConnections.emplace_back(
-                            AZ::RPI::MaterialPropertyOutputType::ShaderInput, materialPropertyConnectionName);
+                            JE::Render::RPI::MaterialPropertyOutputType::ShaderInput, materialPropertyConnectionName);
                     }
                     else if (AZ::StringFunc::Equal(materialPropertyConnectionType, "ShaderOption"))
                     {
                         property->m_outputConnections.emplace_back(
-                            AZ::RPI::MaterialPropertyOutputType::ShaderOption, materialPropertyConnectionName);
+                            JE::Render::RPI::MaterialPropertyOutputType::ShaderOption, materialPropertyConnectionName);
                     }
                     else if (AZ::StringFunc::Equal(materialPropertyConnectionType, "InternalProperty"))
                     {
                         property->m_outputConnections.emplace_back(
-                            AZ::RPI::MaterialPropertyOutputType::InternalProperty, materialPropertyConnectionName);
+                            JE::Render::RPI::MaterialPropertyOutputType::InternalProperty, materialPropertyConnectionName);
                     }
                 }
             }
@@ -1388,7 +1388,7 @@ namespace JE::Editor
 
         // The file is written to an in memory buffer before saving to facilitate string substitutions.
         AZStd::string templateOutputText;
-        if (!AZ::RPI::JsonUtils::SaveObjectToString(templateOutputText, materialTypeSourceData))
+        if (!JE::Render::RPI::JsonUtils::SaveObjectToString(templateOutputText, materialTypeSourceData))
         {
             AZ_Error("MaterialGraphCompiler", false, "Material type template could not be saved: '%s'.", templateOutputPath.c_str());
             return false;

@@ -10,10 +10,10 @@
 #include <AzCore/Memory/SystemAllocator.h>
 #include <AzCore/std/containers/unordered_map.h>
 
-#include <Atom/RPI.Reflect/Shader/ShaderVariantKey.h>
-#include <Atom/RPI.Public/Pass/FullscreenTrianglePass.h>
-#include <Atom/RPI.Public/Shader/Shader.h>
-#include <Atom/RPI.Public/Shader/ShaderResourceGroup.h>
+#include <JE/Render/RPI/Reflect/Shader/ShaderVariantKey.h>
+#include <JE/Render/RPI/Public/Pass/FullscreenTrianglePass.h>
+#include <JE/Render/RPI/Public/Shader/Shader.h>
+#include <JE/Render/RPI/Public/Shader/ShaderResourceGroup.h>
 
 namespace AZ
 {
@@ -29,20 +29,20 @@ namespace AZ
         protected:
             //! Creates the PSO for ShaderOption and save it as a cache. Use this for raster passes.
             void PreloadShaderVariantForDraw(
-                const Data::Instance<AZ::RPI::Shader>& shader,
-                const RPI::ShaderOptionGroup& shaderOption,
+                const Data::Instance<JE::Render::RPI::Shader>& shader,
+                const JE::Render::RPI::ShaderOptionGroup& shaderOption,
                 const RHI::RenderAttachmentConfiguration& renderAttachmentConfiguration,
                 const RHI::MultisampleState& multisampleState);
             //! Creates the PSO for ShaderOption and save it as a cache. Use this for compute passes.
             void PreloadShaderVariantForDispatch(
-                const Data::Instance<AZ::RPI::Shader>& shader,
-                const RPI::ShaderOptionGroup& shaderOption);
+                const Data::Instance<JE::Render::RPI::Shader>& shader,
+                const JE::Render::RPI::ShaderOptionGroup& shaderOption);
 
             //! Update shaderVariant. Used when the shader is switched.
-            void UpdateShaderVariant(const AZ::RPI::ShaderOptionGroup& shaderOption);
+            void UpdateShaderVariant(const JE::Render::RPI::ShaderOptionGroup& shaderOption);
 
             //! Set a key in the SRG for dynamic branching for shaders not created in advance.
-            void CompileShaderVariant(Data::Instance<AZ::RPI::ShaderResourceGroup>& shaderResourceGroup);
+            void CompileShaderVariant(Data::Instance<JE::Render::RPI::ShaderResourceGroup>& shaderResourceGroup);
 
             //! Get precomputed pipeline.
             const AZ::RHI::PipelineState* GetPipelineStateFromShaderVariant() const;
@@ -55,7 +55,7 @@ namespace AZ
             };
             AZStd::unordered_map<AZ::u64, ShaderVariantInformation> m_shaderVariantTable;
             AZ::u64 m_currentShaderVariantKeyValue = 0;
-            AZ::RPI::ShaderVariantKey m_currentShaderVariantKeyFallbackValue;
+            JE::Render::RPI::ShaderVariantKey m_currentShaderVariantKeyFallbackValue;
 
             const ShaderVariantInformation* GetShaderVariant(AZ::u64 key) const;
         };

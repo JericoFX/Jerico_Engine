@@ -8,9 +8,9 @@
 
 #include <AzCore/Debug/PerformanceCollector.h>
 
-#include <Atom/RPI.Public/Pass/PassSystemInterface.h>
-#include <Atom/RPI.Public/Pass/ParentPass.h>
-#include <Atom/RPI.Public/GpuQuery/GpuPassProfiler.h>
+#include <JE/Render/RPI/Public/Pass/PassSystemInterface.h>
+#include <JE/Render/RPI/Public/Pass/ParentPass.h>
+#include <JE/Render/RPI/Public/GpuQuery/GpuPassProfiler.h>
 #include "PerformanceCVarManager.h"
 
 namespace JE::Render

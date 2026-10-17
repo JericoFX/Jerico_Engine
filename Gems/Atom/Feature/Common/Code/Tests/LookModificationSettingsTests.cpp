@@ -10,7 +10,7 @@
 #include <AzCore/Name/NameDictionary.h>
 #include <AzCore/UnitTest/TestTypes.h>
 #include <AzCore/std/smart_ptr/unique_ptr.h>
-#include <Atom/RPI.Public/View.h>
+#include <JE/Render/RPI/Public/View.h>
 #include <PostProcess/PostProcessFeatureProcessor.h>
 
 namespace UnitTest
@@ -30,7 +30,7 @@ namespace UnitTest
             }
             m_processor = AZStd::make_unique<AZ::Render::PostProcessFeatureProcessor>();
             m_processor->Activate();
-            m_view = AZ::RPI::View::CreateView(AZ::Name("Look LUT stack regression"), AZ::RPI::View::UsageCamera);
+            m_view = JE::Render::RPI::View::CreateView(AZ::Name("Look LUT stack regression"), JE::Render::RPI::View::UsageCamera);
             BusConnect();
         }
 
@@ -56,11 +56,11 @@ namespace UnitTest
             return false; // Keep the existing test environment's trace handling.
         }
 
-        static AZ::Data::Asset<AZ::RPI::AnyAsset> Lut(AZ::u32 subId)
+        static AZ::Data::Asset<JE::Render::RPI::AnyAsset> Lut(AZ::u32 subId)
         {
             // Valid identity only: aggregation must not need an AssetManager, GPU or loaded LUT data.
             return {AZ::Data::AssetId(AZ::Uuid::CreateString("{82B2A28F-A53D-4E44-AB95-39FF771FA5E7}"), subId),
-                azrtti_typeid<AZ::RPI::AnyAsset>()};
+                azrtti_typeid<JE::Render::RPI::AnyAsset>()};
         }
 
         AZ::Render::PostProcessSettingsInterface* AddLayer(AZ::u64 entityId, AZ::u32 lutId, int priority = 0)
@@ -105,7 +105,7 @@ namespace UnitTest
         bool m_ownsNameDictionary = false;
         size_t m_lutWarnings = 0;
         AZStd::unique_ptr<AZ::Render::PostProcessFeatureProcessor> m_processor;
-        AZ::RPI::ViewPtr m_view;
+        JE::Render::RPI::ViewPtr m_view;
     };
 
     TEST_F(LookModificationSettingsTests, OneLutRemainsOneAcrossTenViewUpdates)

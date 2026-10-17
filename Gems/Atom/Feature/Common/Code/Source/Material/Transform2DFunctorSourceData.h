@@ -9,7 +9,7 @@
 #pragma once
 
 #include "./Transform2DFunctor.h"
-#include <Atom/RPI.Edit/Material/MaterialFunctorSourceData.h>
+#include <JE/Editor/Render/RPI/Edit/Material/MaterialFunctorSourceData.h>
 #include <Atom/Utils/MaterialUtils.h>
 
 namespace AZ
@@ -19,15 +19,15 @@ namespace AZ
         //! Builds a Transform2DFunctor.
         //! Materials can use this functor to map 2D scale, translate, and rotate properties into a float3x3 transform matrix.
         class Transform2DFunctorSourceData final
-            : public AZ::RPI::MaterialFunctorSourceData
+            : public JE::Render::RPI::MaterialFunctorSourceData
         {
         public:
             AZ_CLASS_ALLOCATOR(Transform2DFunctorSourceData, AZ::SystemAllocator)
-            AZ_RTTI(Transform2DFunctorSourceData, "{82E9FE9B-A0C2-42D4-BCE7-A0C10CC0E445}", RPI::MaterialFunctorSourceData);
+            AZ_RTTI(Transform2DFunctorSourceData, "{82E9FE9B-A0C2-42D4-BCE7-A0C10CC0E445}", JE::Render::RPI::MaterialFunctorSourceData);
 
             static void Reflect(AZ::ReflectContext* context);
 
-            using AZ::RPI::MaterialFunctorSourceData::CreateFunctor;
+            using JE::Render::RPI::MaterialFunctorSourceData::CreateFunctor;
             FunctorResult CreateFunctor(const RuntimeContext& context) const override;
 
         private:

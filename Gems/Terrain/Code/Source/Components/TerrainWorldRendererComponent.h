@@ -17,7 +17,7 @@ namespace LmbrCentral
     class EditorWrappedComponentBase;
 }
 
-namespace AZ::RPI
+namespace JE::Render::RPI
 {
     class Scene;
 }
@@ -62,7 +62,7 @@ namespace Terrain
 
     protected:
 
-        AZ::RPI::Scene* GetScene() const;
+        JE::Render::RPI::Scene* GetScene() const;
 
     private:
         TerrainWorldRendererConfig m_configuration;

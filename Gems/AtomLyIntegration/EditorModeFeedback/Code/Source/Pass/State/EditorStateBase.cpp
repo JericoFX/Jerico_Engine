@@ -64,7 +64,7 @@ namespace AZ::Render
         return Name(GetStateName() + "Pass");
     }
 
-    void EditorStateBase::AddParentPassForPipeline(const Name& pipelineName, RPI::Ptr<RPI::Pass> parentPass)
+    void EditorStateBase::AddParentPassForPipeline(const Name& pipelineName, JE::Render::RPI::Ptr<JE::Render::RPI::Pass> parentPass)
     {
         m_parentPasses[pipelineName] = parentPass;
     }
@@ -78,7 +78,7 @@ namespace AZ::Render
     {
         for (auto& [pipelineName, parentPass] : m_parentPasses)
         {
-            UpdatePassData(azdynamic_cast<RPI::ParentPass*>(parentPass.get()));
+            UpdatePassData(azdynamic_cast<JE::Render::RPI::ParentPass*>(parentPass.get()));
         }
     }
 

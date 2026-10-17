@@ -13,9 +13,9 @@
 #include <AzFramework/Translation/TranslationDef.h>
 
 #include <Atom/RHI/Factory.h>
-#include <Atom/RPI.Public/RPISystemInterface.h>
+#include <JE/Render/RPI/Public/RPISystemInterface.h>
 
-#include <Atom/RPI.Public/FeatureProcessorFactory.h>
+#include <JE/Render/RPI/Public/FeatureProcessorFactory.h>
 
 #include <MeshletsSystemComponent.h>
 #include <MeshletsFeatureProcessor.h>
@@ -90,7 +90,7 @@ namespace AZ
 
         void MeshletsSystemComponent::LoadPassTemplateMappings()
         {
-            auto* passSystem = AZ::RPI::PassSystemInterface::Get();
+            auto* passSystem = JE::Render::RPI::PassSystemInterface::Get();
             AZ_Assert(passSystem, "Meshlets Gem - cannot get the pass system.");
 
             const char* passTemplatesFile = "Passes/MeshletsPassTemplates.azasset";
@@ -100,13 +100,13 @@ namespace AZ
         void MeshletsSystemComponent::Activate()
         {
             // Feature processor
-            AZ::RPI::FeatureProcessorFactory::Get()->RegisterFeatureProcessor<Meshlets::MeshletsFeatureProcessor>();
+            JE::Render::RPI::FeatureProcessorFactory::Get()->RegisterFeatureProcessor<Meshlets::MeshletsFeatureProcessor>();
 
-            auto* passSystem = AZ::RPI::PassSystemInterface::Get();
+            auto* passSystem = JE::Render::RPI::PassSystemInterface::Get();
             AZ_Assert(passSystem, "Cannot get the pass system.");
 
             // Setup handler for load pass templates mappings
-            m_loadTemplatesHandler = AZ::RPI::PassSystemInterface::OnReadyLoadTemplatesEvent::Handler([this]() { this->LoadPassTemplateMappings(); });
+            m_loadTemplatesHandler = JE::Render::RPI::PassSystemInterface::OnReadyLoadTemplatesEvent::Handler([this]() { this->LoadPassTemplateMappings(); });
             passSystem->ConnectEvent(m_loadTemplatesHandler);
 
             passSystem->AddPassCreator(AZ::Name("MultiDispatchComputePass"), &MultiDispatchComputePass::Create);
@@ -121,7 +121,7 @@ namespace AZ
             AZ::TickBus::Handler::BusDisconnect();
             MeshletsRequestBus::Handler::BusDisconnect();
 
-            AZ::RPI::FeatureProcessorFactory::Get()->UnregisterFeatureProcessor<Meshlets::MeshletsFeatureProcessor>();
+            JE::Render::RPI::FeatureProcessorFactory::Get()->UnregisterFeatureProcessor<Meshlets::MeshletsFeatureProcessor>();
         }
 
         void MeshletsSystemComponent::OnTick([[maybe_unused]] float deltaTime, [[maybe_unused]] AZ::ScriptTimePoint time)

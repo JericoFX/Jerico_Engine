@@ -8,9 +8,9 @@
 
 #pragma once
 
-#include <Atom/RPI.Edit/Shader/ShaderSourceData.h>
-#include <Atom/RPI.Edit/Shader/ShaderVariantListSourceData.h>
-#include <Atom/RPI.Reflect/Shader/ShaderOptionGroupLayout.h>
+#include <JE/Editor/Render/RPI/Edit/Shader/ShaderSourceData.h>
+#include <JE/Editor/Render/RPI/Edit/Shader/ShaderVariantListSourceData.h>
+#include <JE/Render/RPI/Reflect/Shader/ShaderOptionGroupLayout.h>
 #include <AzCore/Asset/AssetCommon.h>
 
 namespace ShaderManagementConsole
@@ -65,10 +65,10 @@ namespace ShaderManagementConsole
         //! Set the shader variant list source data on the document.
         //! This function can be used to edit and update the data contained within the document.
         //! Functions can be added to this bus for more fine grained editing of shader variant list data.
-        virtual void SetShaderVariantListSourceData(const AZ::RPI::ShaderVariantListSourceData& shaderVariantListSourceData) = 0;
+        virtual void SetShaderVariantListSourceData(const JE::Render::RPI::ShaderVariantListSourceData& shaderVariantListSourceData) = 0;
 
         //! Get the shader variant list source data from the document.
-        virtual const AZ::RPI::ShaderVariantListSourceData& GetShaderVariantListSourceData() const = 0;
+        virtual const JE::Render::RPI::ShaderVariantListSourceData& GetShaderVariantListSourceData() const = 0;
 
         //! Get the number of shader options stored in the shader asset.
         //! Note that the shader asset can contain more descriptors than are stored in the shader variant list source data.
@@ -76,7 +76,7 @@ namespace ShaderManagementConsole
 
         //! Get the shader option descriptor from the shader asset.
         //! Note that the shader asset can contain more descriptors than are stored in the shader variant list source data.
-        virtual const AZ::RPI::ShaderOptionDescriptor& GetShaderOptionDescriptor(size_t index) const = 0;
+        virtual const JE::Render::RPI::ShaderOptionDescriptor& GetShaderOptionDescriptor(size_t index) const = 0;
 
         //! Verify before save that some guarantees are respected (like contiguous stableids)
         virtual DocumentVerificationResult Verify() const = 0;

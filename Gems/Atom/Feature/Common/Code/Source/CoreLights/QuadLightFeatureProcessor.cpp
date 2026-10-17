@@ -18,11 +18,11 @@
 
 #include <Atom/RHI/Factory.h>
 
-#include <Atom/RPI.Public/ColorManagement/TransformColor.h>
-#include <Atom/RPI.Public/Image/StreamingImage.h>
-#include <Atom/RPI.Public/RPISystemInterface.h>
-#include <Atom/RPI.Public/Scene.h>
-#include <Atom/RPI.Public/View.h>
+#include <JE/Render/RPI/Public/ColorManagement/TransformColor.h>
+#include <JE/Render/RPI/Public/Image/StreamingImage.h>
+#include <JE/Render/RPI/Public/RPISystemInterface.h>
+#include <JE/Render/RPI/Public/Scene.h>
+#include <JE/Render/RPI/Public/View.h>
 
 namespace AZ
 {
@@ -51,7 +51,7 @@ namespace AZ
             desc.m_bufferSrgName = "m_quadLights";
             desc.m_elementCountSrgName = "m_quadLightCount";
             desc.m_elementSize = sizeof(QuadLightData);
-            desc.m_srgLayout = RPI::RPISystemInterface::Get()->GetViewSrgLayout().get();
+            desc.m_srgLayout = JE::Render::RPI::RPISystemInterface::Get()->GetViewSrgLayout().get();
 
             m_lightBufferHandler = GpuBufferHandler(desc);
 
@@ -145,7 +145,7 @@ namespace AZ
         {
             AZ_PROFILE_SCOPE(RPI, "QuadLightFeatureProcessor: Render");
 
-            for (const RPI::ViewPtr& view : packet.m_views)
+            for (const JE::Render::RPI::ViewPtr& view : packet.m_views)
             {
                 m_lightBufferHandler.UpdateSrg(view->GetShaderResourceGroup().get());
             }
@@ -155,7 +155,7 @@ namespace AZ
         {
             AZ_Assert(handle.IsValid(), "Invalid LightHandle passed to QuadLightFeatureProcessor::SetRgbIntensity().");
 
-            auto transformedColor = AZ::RPI::TransformColor(lightRgbIntensity, AZ::RPI::ColorSpaceId::LinearSRGB, AZ::RPI::ColorSpaceId::ACEScg);
+            auto transformedColor = JE::Render::RPI::TransformColor(lightRgbIntensity, JE::Render::RPI::ColorSpaceId::LinearSRGB, JE::Render::RPI::ColorSpaceId::ACEScg);
 
             AZStd::array<float, 3>& rgbIntensity = m_lightData.GetData<0>(handle.GetIndex()).m_rgbIntensityNits;
             rgbIntensity[0] = transformedColor.GetR();
@@ -269,7 +269,7 @@ namespace AZ
             m_deviceBufferNeedsUpdate = true;
         }
 
-        const Data::Instance<RPI::Buffer> QuadLightFeatureProcessor::GetLightBuffer()const
+        const Data::Instance<JE::Render::RPI::Buffer> QuadLightFeatureProcessor::GetLightBuffer()const
         {
             return m_lightBufferHandler.GetBuffer();
         }

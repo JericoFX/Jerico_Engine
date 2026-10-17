@@ -11,7 +11,7 @@
 #include "${Name}Pass.h"
 #include "${Name}SettingsComponent.h"
 
-#include <Atom/RPI.Public/Pass/PassSystemInterface.h>
+#include <JE/Render/RPI/Public/Pass/PassSystemInterface.h>
 
 #include <AzCore/RTTI/BehaviorContext.h>
 #include <AzCore/Serialization/SerializeContext.h>

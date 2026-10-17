@@ -10,7 +10,7 @@
 
 #include <Atom/Feature/MorphTargets/MorphTargetInputBuffers.h>
 
-#include <Atom/RPI.Public/Shader/ShaderReloadNotificationBus.h>
+#include <JE/Render/RPI/Public/Shader/ShaderReloadNotificationBus.h>
 #include <Atom/RHI/DispatchItem.h>
 #include <Atom/RHI/ConstantsData.h>
 #include <AzCore/Instance/Instance.h>
@@ -23,13 +23,18 @@ namespace AZ
         class PipelineState;
     }
 
-    namespace RPI
-    {
+    }
+
+namespace JE::Render::RPI
+{
         class Buffer;
         class ModelLod;
         class Shader;
         class ShaderResourceGroup;
     }
+
+namespace AZ
+{
 
     namespace Render
     {
@@ -37,7 +42,7 @@ namespace AZ
 
         //! Holds and manages an RHI DispatchItem for a specific morph target, and the resources that are needed to build and maintain it.
         class MorphTargetDispatchItem
-            : private RPI::ShaderReloadNotificationBus::Handler
+            : private JE::Render::RPI::ShaderReloadNotificationBus::Handler
         {
         public:
             AZ_CLASS_ALLOCATOR(MorphTargetDispatchItem, AZ::SystemAllocator);
@@ -67,20 +72,20 @@ namespace AZ
             void InitRootConstants(const RHI::ConstantsLayout* rootConstantsLayout);
 
             // ShaderInstanceNotificationBus::Handler overrides
-            void OnShaderReinitialized(const RPI::Shader& shader) override;
-            void OnShaderAssetReinitialized(const Data::Asset<RPI::ShaderAsset>& shaderAsset) override;
-            void OnShaderVariantReinitialized(const RPI::ShaderVariant& shaderVariant) override;
+            void OnShaderReinitialized(const JE::Render::RPI::Shader& shader) override;
+            void OnShaderAssetReinitialized(const Data::Asset<JE::Render::RPI::ShaderAsset>& shaderAsset) override;
+            void OnShaderVariantReinitialized(const JE::Render::RPI::ShaderVariant& shaderVariant) override;
 
             RHI::DispatchItem m_dispatchItem;
 
             // The morph target shader used for this instance
-            Data::Instance<RPI::Shader> m_morphTargetShader;
+            Data::Instance<JE::Render::RPI::Shader> m_morphTargetShader;
 
             // The vertex deltas
             AZStd::intrusive_ptr<MorphTargetInputBuffers> m_inputBuffers;
 
             // The per-object shader resource group
-            Data::Instance<RPI::ShaderResourceGroup> m_instanceSrg;
+            Data::Instance<JE::Render::RPI::ShaderResourceGroup> m_instanceSrg;
 
             // Metadata used to set the root constants for the shader
             MorphTargetComputeMetaData m_morphTargetComputeMetaData;

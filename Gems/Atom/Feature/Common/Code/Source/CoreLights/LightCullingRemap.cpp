@@ -13,12 +13,12 @@
 #include <Atom/RHI/FrameGraphInterface.h>
 #include <Atom/RHI/FrameGraphAttachmentInterface.h>
 #include <Atom/RHI/Device.h>
-#include <Atom/RPI.Public/Pass/PassUtils.h>
-#include <Atom/RPI.Public/RenderPipeline.h>
-#include <Atom/RPI.Public/RPIUtils.h>
-#include <Atom/RPI.Reflect/Pass/PassTemplate.h>
-#include <Atom/RPI.Public/View.h>
-#include <Atom/RPI.Public/Scene.h>
+#include <JE/Render/RPI/Public/Pass/PassUtils.h>
+#include <JE/Render/RPI/Public/RenderPipeline.h>
+#include <JE/Render/RPI/Public/RPIUtils.h>
+#include <JE/Render/RPI/Reflect/Pass/PassTemplate.h>
+#include <JE/Render/RPI/Public/View.h>
+#include <JE/Render/RPI/Public/Scene.h>
 #include <CoreLights/PointLightFeatureProcessor.h>
 #include <CoreLights/DiskLightFeatureProcessor.h>
 #include <AzCore/Casting/lossy_cast.h>
@@ -33,14 +33,14 @@ namespace AZ
         // ATOM-3975
         const RHI::Format LightListRemappedFormat = RHI::Format::R32_UINT;
 
-        RPI::Ptr<LightCullingRemap> LightCullingRemap::Create(const RPI::PassDescriptor& descriptor)
+        JE::Render::RPI::Ptr<LightCullingRemap> LightCullingRemap::Create(const JE::Render::RPI::PassDescriptor& descriptor)
         {
-            RPI::Ptr<LightCullingRemap> pass = aznew LightCullingRemap(descriptor);
+            JE::Render::RPI::Ptr<LightCullingRemap> pass = aznew LightCullingRemap(descriptor);
             return pass;
         }
 
-        LightCullingRemap::LightCullingRemap(const RPI::PassDescriptor& descriptor)
-            : RPI::ComputePass(descriptor)
+        LightCullingRemap::LightCullingRemap(const JE::Render::RPI::PassDescriptor& descriptor)
+            : JE::Render::RPI::ComputePass(descriptor)
         {
         }
 
@@ -116,12 +116,12 @@ namespace AZ
 
         void LightCullingRemap::CreateRemappedLightListBuffer()
         {
-            RPI::CommonBufferDescriptor desc;
-            desc.m_poolType = RPI::CommonBufferPoolType::ReadWrite;
+            JE::Render::RPI::CommonBufferDescriptor desc;
+            desc.m_poolType = JE::Render::RPI::CommonBufferPoolType::ReadWrite;
             desc.m_bufferName = "LightListRemapped";
             desc.m_elementSize = RHI::GetFormatSize(LightListRemappedFormat);
             desc.m_byteCount = m_tileDim.m_width * m_tileDim.m_height * NumBins * MaxLightsPerTile * desc.m_elementSize;
-            m_lightListRemapped = RPI::BufferSystemInterface::Get()->CreateBufferFromCommonPool(desc);
+            m_lightListRemapped = JE::Render::RPI::BufferSystemInterface::Get()->CreateBufferFromCommonPool(desc);
         }
 
         AZ::RHI::Size LightCullingRemap::GetTileDataBufferResolution()

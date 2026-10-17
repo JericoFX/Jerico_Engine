@@ -114,8 +114,7 @@ ly_add_target(
             JE::RenderDebug
             JE::EditorMaterials
             Gem::Atom_Feature_Common.Public
-            Gem::Atom_RPI.Edit
-            Gem::Atom_RPI.Public
+            JE::RenderIntegration
             Gem::AtomToolsFramework.Static
             Gem::AtomViewportDisplayInfo
             Gem::EditorModeFeedback.Editor.Static

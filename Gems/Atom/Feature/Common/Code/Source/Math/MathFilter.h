@@ -9,7 +9,7 @@
 #pragma once
 
 #include <Atom/RHI.Reflect/Format.h>
-#include <Atom/RPI.Public/Buffer/Buffer.h>
+#include <JE/Render/RPI/Public/Buffer/Buffer.h>
 #include <AzCore/std/string/string.h>
 #include <Math/MathFilterDescriptor.h>
 
@@ -21,7 +21,7 @@ namespace AZ
         class MathFilter
         {
         public:
-            using BufferWithElementCounts = AZStd::pair<Data::Instance<RPI::Buffer>, AZStd::vector<uint32_t>>;
+            using BufferWithElementCounts = AZStd::pair<Data::Instance<JE::Render::RPI::Buffer>, AZStd::vector<uint32_t>>;
 
             MathFilter() = default;
             virtual ~MathFilter() = default;

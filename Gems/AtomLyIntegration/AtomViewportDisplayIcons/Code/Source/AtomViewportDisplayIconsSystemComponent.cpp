@@ -21,17 +21,17 @@
 #include <AzToolsFramework/Viewport/ViewportMessages.h>
 #include <AzToolsFramework/API/EditorAssetSystemAPI.h>
 
-#include <Atom/RPI.Public/View.h>
-#include <Atom/RPI.Public/Scene.h>
-#include <Atom/RPI.Public/ViewportContextBus.h>
-#include <Atom/RPI.Public/ViewportContext.h>
-#include <Atom/RPI.Public/DynamicDraw/DynamicDrawContext.h>
-#include <Atom/RPI.Public/RPIUtils.h>
-#include <Atom/RPI.Public/Image/ImageSystemInterface.h>
-#include <Atom/RPI.Reflect/Image/StreamingImageAssetCreator.h>
-#include <Atom/RPI.Reflect/Image/ImageMipChainAssetCreator.h>
-#include <Atom/RPI.Reflect/Asset/AssetUtils.h>
-#include <Atom/RPI.Public/Image/StreamingImagePool.h>
+#include <JE/Render/RPI/Public/View.h>
+#include <JE/Render/RPI/Public/Scene.h>
+#include <JE/Render/RPI/Public/ViewportContextBus.h>
+#include <JE/Render/RPI/Public/ViewportContext.h>
+#include <JE/Render/RPI/Public/DynamicDraw/DynamicDrawContext.h>
+#include <JE/Render/RPI/Public/RPIUtils.h>
+#include <JE/Render/RPI/Public/Image/ImageSystemInterface.h>
+#include <JE/Render/RPI/Reflect/Image/StreamingImageAssetCreator.h>
+#include <JE/Render/RPI/Reflect/Image/ImageMipChainAssetCreator.h>
+#include <JE/Render/RPI/Reflect/Asset/AssetUtils.h>
+#include <JE/Render/RPI/Public/Image/StreamingImagePool.h>
 
 #include <JE/Render/Integration/PerViewportDynamicDrawInterface.h>
 
@@ -142,13 +142,13 @@ namespace AZ::Render
     }
 
     // create a SRG specific to the viewport dimensions and icon.
-    AZ::Data::Instance<AZ::RPI::ShaderResourceGroup> AtomViewportDisplayIconsSystemComponent::CreateIconSRG(AzFramework::ViewportId viewportId, AZ::Data::Instance<AZ::RPI::Image> image)
+    AZ::Data::Instance<JE::Render::RPI::ShaderResourceGroup> AtomViewportDisplayIconsSystemComponent::CreateIconSRG(AzFramework::ViewportId viewportId, AZ::Data::Instance<JE::Render::RPI::Image> image)
     {
         using namespace AZ;
 
-        RHI::Ptr<RPI::DynamicDrawContext> dynamicDraw = GetDynamicDrawContextForViewport(m_drawRequestViewportId);
+        RHI::Ptr<JE::Render::RPI::DynamicDrawContext> dynamicDraw = GetDynamicDrawContextForViewport(m_drawRequestViewportId);
 
-        AZ::RPI::ViewportContextPtr viewportContext = RPI::ViewportContextRequests::Get()->GetViewportContextById(viewportId);
+        JE::Render::RPI::ViewportContextPtr viewportContext = JE::Render::RPI::ViewportContextRequests::Get()->GetViewportContextById(viewportId);
         if (viewportContext == nullptr)
         {
             return {};
@@ -157,14 +157,14 @@ namespace AZ::Render
         const auto [viewportWidth, viewportHeight] = viewportContext->GetViewportSize();
         const auto viewportSize = AzFramework::ScreenSize(viewportWidth, viewportHeight);
 
-        AZ::Data::Instance<AZ::RPI::ShaderResourceGroup> drawSrg = dynamicDraw->NewDrawSrg();
+        AZ::Data::Instance<JE::Render::RPI::ShaderResourceGroup> drawSrg = dynamicDraw->NewDrawSrg();
         drawSrg->SetConstant(m_viewportSizeIndex, AzFramework::Vector2FromScreenSize(viewportSize));
         drawSrg->SetImageView(m_textureParameterIndex, image->GetImageView());
         drawSrg->Compile();
         return drawSrg;
     }
 
-    RHI::Ptr<RPI::DynamicDrawContext> AtomViewportDisplayIconsSystemComponent::GetDynamicDrawContextForViewport(AzFramework::ViewportId viewportId)
+    RHI::Ptr<JE::Render::RPI::DynamicDrawContext> AtomViewportDisplayIconsSystemComponent::GetDynamicDrawContextForViewport(AzFramework::ViewportId viewportId)
     {
         JE::Render::Integration::PerViewportDynamicDrawInterface* perViewportDynamicDrawInterface = JE::Render::Integration::PerViewportDynamicDraw::Get();
         if (!perViewportDynamicDrawInterface)
@@ -174,7 +174,7 @@ namespace AZ::Render
         return perViewportDynamicDrawInterface->GetDynamicDrawContextForViewport(m_drawContextName, viewportId);
     }
 
-    AZ::Data::Instance<AZ::RPI::Image> AtomViewportDisplayIconsSystemComponent::GetImageForIconId(IconId iconId)
+    AZ::Data::Instance<JE::Render::RPI::Image> AtomViewportDisplayIconsSystemComponent::GetImageForIconId(IconId iconId)
     {
         if (auto iconIt = m_iconData.find(iconId); iconIt != m_iconData.end())
         {
@@ -185,7 +185,7 @@ namespace AZ::Render
             }
         }
 
-        return AZ::RPI::ImageSystemInterface::Get()->GetSystemImage(AZ::RPI::SystemImage::Grey);
+        return JE::Render::RPI::ImageSystemInterface::Get()->GetSystemImage(JE::Render::RPI::SystemImage::Grey);
     }
 
     void AtomViewportDisplayIconsSystemComponent::DrawIcons()
@@ -216,8 +216,8 @@ namespace AZ::Render
 
         AZ_Assert(m_drawRequestViewportId != AzFramework::InvalidViewportId, "Viewport ID is somehow invalid despite icons being in the list.");
 
-        RHI::Ptr<RPI::DynamicDrawContext> dynamicDraw = GetDynamicDrawContextForViewport(m_drawRequestViewportId);
-        AZ::RPI::ViewportContextPtr viewportContext = RPI::ViewportContextRequests::Get()->GetViewportContextById(m_drawRequestViewportId);
+        RHI::Ptr<JE::Render::RPI::DynamicDrawContext> dynamicDraw = GetDynamicDrawContextForViewport(m_drawRequestViewportId);
+        JE::Render::RPI::ViewportContextPtr viewportContext = JE::Render::RPI::ViewportContextRequests::Get()->GetViewportContextById(m_drawRequestViewportId);
         if ((viewportContext == nullptr) || (dynamicDraw == nullptr))
         {
             // this is not an error or assert as we might be running headlessly.
@@ -240,8 +240,8 @@ namespace AZ::Render
                 continue;
             }
 
-            AZ::Data::Instance<AZ::RPI::Image> image = GetImageForIconId(iconId);
-            AZ::Data::Instance<AZ::RPI::ShaderResourceGroup> drawSrg = CreateIconSRG(m_drawRequestViewportId, image);
+            AZ::Data::Instance<JE::Render::RPI::Image> image = GetImageForIconId(iconId);
+            AZ::Data::Instance<JE::Render::RPI::ShaderResourceGroup> drawSrg = CreateIconSRG(m_drawRequestViewportId, image);
 
             // add all of the icons to draw buffers.
             m_vertexCache.clear();
@@ -384,12 +384,12 @@ namespace AZ::Render
         return image;
     }
 
-    AZ::Data::Instance<AZ::RPI::Image> AtomViewportDisplayIconsSystemComponent::ConvertToAtomImage(AZ::Uuid assetId, QImage image) const
+    AZ::Data::Instance<JE::Render::RPI::Image> AtomViewportDisplayIconsSystemComponent::ConvertToAtomImage(AZ::Uuid assetId, QImage image) const
     {
         // Ensure our image is in the correct pixel format so we can memcpy it to our renderer image
         image.convertTo(QtImageFormat);
-        Data::Instance<RPI::StreamingImagePool> streamingImagePool = RPI::ImageSystemInterface::Get()->GetSystemStreamingPool();
-        return RPI::StreamingImage::CreateFromCpuData(
+        Data::Instance<JE::Render::RPI::StreamingImagePool> streamingImagePool = JE::Render::RPI::ImageSystemInterface::Get()->GetSystemStreamingPool();
+        return JE::Render::RPI::StreamingImage::CreateFromCpuData(
             *streamingImagePool.get(),
             RHI::ImageDimension::Image2D,
             RHI::Size(image.width(), image.height(), 1),
@@ -465,10 +465,10 @@ namespace AZ::Render
         return IconLoadStatus::Error;
     }
 
-    void AtomViewportDisplayIconsSystemComponent::OnBootstrapSceneReady([[maybe_unused]]AZ::RPI::Scene* bootstrapScene)
+    void AtomViewportDisplayIconsSystemComponent::OnBootstrapSceneReady([[maybe_unused]]JE::Render::RPI::Scene* bootstrapScene)
     {
         // Queue a load for the draw context shader, and wait for it to load
-        Data::Asset<RPI::ShaderAsset> shaderAsset = RPI::AssetUtils::GetAssetByProductPath<RPI::ShaderAsset>(DrawContextShaderPath, RPI::AssetUtils::TraceLevel::Assert);
+        Data::Asset<JE::Render::RPI::ShaderAsset> shaderAsset = JE::Render::RPI::AssetUtils::GetAssetByProductPath<JE::Render::RPI::ShaderAsset>(DrawContextShaderPath, JE::Render::RPI::AssetUtils::TraceLevel::Assert);
         shaderAsset.QueueLoad();
         Data::AssetBus::Handler::BusConnect(shaderAsset.GetId());
     }
@@ -476,15 +476,15 @@ namespace AZ::Render
     void AtomViewportDisplayIconsSystemComponent::OnAssetReady(Data::Asset<Data::AssetData> asset)
     {
         // Once the shader is loaded, register it with the dynamic draw context
-        Data::Asset<RPI::ShaderAsset> shaderAsset = asset;
-        JE::Render::Integration::PerViewportDynamicDraw::Get()->RegisterDynamicDrawContext(m_drawContextName, [shaderAsset](RPI::Ptr<RPI::DynamicDrawContext> dynamicDraw)
+        Data::Asset<JE::Render::RPI::ShaderAsset> shaderAsset = asset;
+        JE::Render::Integration::PerViewportDynamicDraw::Get()->RegisterDynamicDrawContext(m_drawContextName, [shaderAsset](JE::Render::RPI::Ptr<JE::Render::RPI::DynamicDrawContext> dynamicDraw)
             {
                 AZ_Assert(shaderAsset->IsReady(), "Attempting to register the AtomViewportDisplayIconsSystemComponent"
                     " dynamic draw context before the shader asset is loaded. The shader should be loaded first"
                     " to avoid a blocking asset load and potential deadlock, since the DynamicDrawContext lambda"
                     " will be executed during scene processing and there may be multiple scenes executing in parallel.");
 
-                Data::Instance<RPI::Shader> shader = RPI::Shader::FindOrCreate(shaderAsset);
+                Data::Instance<JE::Render::RPI::Shader> shader = JE::Render::RPI::Shader::FindOrCreate(shaderAsset);
                 dynamicDraw->InitShader(shader);
                 dynamicDraw->InitVertexFormat({ { "POSITION", RHI::Format::R32G32B32_FLOAT },
                                                 { "COLOR", RHI::Format::R8G8B8A8_UNORM },

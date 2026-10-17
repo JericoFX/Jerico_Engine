@@ -6,11 +6,11 @@
  *
  */
 
-#include <Atom/RPI.Edit/Common/AssetUtils.h>
-#include <Atom/RPI.Edit/Material/MaterialPropertyId.h>
-#include <Atom/RPI.Public/Image/StreamingImage.h>
-#include <Atom/RPI.Reflect/Material/MaterialAsset.h>
-#include <Atom/RPI.Reflect/Material/MaterialTypeAsset.h>
+#include <JE/Editor/Render/RPI/Edit/Common/AssetUtils.h>
+#include <JE/Editor/Render/RPI/Edit/Material/MaterialPropertyId.h>
+#include <JE/Render/RPI/Public/Image/StreamingImage.h>
+#include <JE/Render/RPI/Reflect/Material/MaterialAsset.h>
+#include <JE/Render/RPI/Reflect/Material/MaterialTypeAsset.h>
 #include <AtomLyIntegration/CommonFeatures/Mesh/MeshComponentBus.h>
 #include <AzCore/Asset/AssetManagerBus.h>
 #include <AzCore/RTTI/BehaviorContext.h>
@@ -97,7 +97,7 @@ namespace JE
                             ->Attribute(AZ::Edit::Attributes::AppearsInAddComponentMenu, AZ_CRC_CE("Game"))
                             ->Attribute(AZ::Edit::Attributes::AutoExpand, true)
                             ->Attribute(AZ::Edit::Attributes::HelpPageURL, "https://www.o3de.org/docs/user-guide/components/reference/atom/material/")
-                            ->Attribute(AZ::Edit::Attributes::PrimaryAssetType, AZ::AzTypeInfo<AZ::RPI::MaterialAsset>::Uuid())
+                            ->Attribute(AZ::Edit::Attributes::PrimaryAssetType, AZ::AzTypeInfo<JE::Render::RPI::MaterialAsset>::Uuid())
                         ->UIElement(AZ::Edit::UIHandlers::Button, GenerateMaterialsButtonText, GenerateMaterialsToolTipText)
                             ->Attribute(AZ::Edit::Attributes::NameLabelOverride, "")
                             ->Attribute(AZ::Edit::Attributes::ButtonText, GenerateMaterialsButtonText)
@@ -288,7 +288,7 @@ namespace JE
             {
                 if (materialAssignment.second.m_materialInstance)
                 {
-                    materialAssignment.second.m_materialInstance->SetPsoHandlingOverride(AZ::RPI::MaterialPropertyPsoHandling::Allowed);
+                    materialAssignment.second.m_materialInstance->SetPsoHandlingOverride(JE::Render::RPI::MaterialPropertyPsoHandling::Allowed);
                 }
             }
         }

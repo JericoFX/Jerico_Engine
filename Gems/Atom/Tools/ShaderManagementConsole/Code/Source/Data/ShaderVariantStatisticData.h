@@ -7,7 +7,7 @@
  */
 #pragma once
 
-#include <Atom/RPI.Reflect/Shader/ShaderOptionGroup.h>
+#include <JE/Render/RPI/Reflect/Shader/ShaderOptionGroup.h>
 #include <AzCore/RTTI/ReflectContext.h>
 #include <AzCore/Asset/AssetCommon.h>
 
@@ -18,7 +18,7 @@ namespace ShaderManagementConsole
         AZ_TYPE_INFO(ShaderVariantInfo, "{FF831BC7-CEA3-4525-B55E-6204D3B75ADD}");
         AZ_CLASS_ALLOCATOR(ShaderVariantInfo, AZ::SystemAllocator);
 
-        AZ::RPI::ShaderOptionGroup m_shaderOptionGroup;
+        JE::Render::RPI::ShaderOptionGroup m_shaderOptionGroup;
         int m_count;
     };
     struct ShaderVariantStatisticData
@@ -28,7 +28,7 @@ namespace ShaderManagementConsole
 
         static void Reflect(AZ::ReflectContext* context);
 
-        AZStd::map<AZ::RPI::ShaderVariantId, ShaderVariantInfo> m_shaderVariantUsage;
+        AZStd::map<JE::Render::RPI::ShaderVariantId, ShaderVariantInfo> m_shaderVariantUsage;
         AZStd::unordered_map<AZ::Name, AZStd::unordered_map<AZ::Name, int>> m_shaderOptionUsage;
     };
 }

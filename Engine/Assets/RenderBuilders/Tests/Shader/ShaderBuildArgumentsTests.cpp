@@ -10,8 +10,8 @@
 #include <AzCore/UnitTest/TestTypes.h>
 #include <AzCore/std/algorithm.h>
 
-#include <Atom/RPI.Edit/Common/JsonUtils.h>
-#include <Atom/RPI.Edit/Shader/ShaderSourceData.h>
+#include <JE/Editor/Render/RPI/Edit/Common/JsonUtils.h>
+#include <JE/Editor/Render/RPI/Edit/Shader/ShaderSourceData.h>
 #include <Atom/RHI.Edit/Utils.h>
 
 #include "Common/ShaderBuilderTestFixture.h"

@@ -10,7 +10,7 @@
 
 #include <AzCore/Component/Component.h>
 #include <Atom/Feature/DisplayMapper/DisplayMapperConfigurationDescriptor.h>
-#include <Atom/RPI.Reflect/System/AnyAsset.h>
+#include <JE/Render/RPI/Reflect/System/AnyAsset.h>
 
 namespace AZ
 {
@@ -27,7 +27,7 @@ namespace AZ
 
             DisplayMapperOperationType m_displayMapperOperation = DisplayMapperOperationType::Aces;
             bool m_ldrColorGradingLutEnabled = false;
-            Data::Asset<RPI::AnyAsset> m_ldrColorGradingLut = {};
+            Data::Asset<JE::Render::RPI::AnyAsset> m_ldrColorGradingLut = {};
             AcesParameterOverrides m_acesParameterOverrides;
         };
     }

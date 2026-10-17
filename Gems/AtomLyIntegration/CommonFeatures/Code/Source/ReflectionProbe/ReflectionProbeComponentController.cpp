@@ -9,9 +9,9 @@
 #include <ReflectionProbe/ReflectionProbeComponentController.h>
 #include <ReflectionProbe/ReflectionProbeComponentConstants.h>
 
-#include <Atom/RPI.Public/Model/Model.h>
-#include <Atom/RPI.Public/Image/StreamingImage.h>
-#include <Atom/RPI.Public/Scene.h>
+#include <JE/Render/RPI/Public/Model/Model.h>
+#include <JE/Render/RPI/Public/Image/StreamingImage.h>
+#include <JE/Render/RPI/Public/Scene.h>
 
 #include <AzCore/Asset/AssetManager.h>
 #include <AzCore/Asset/AssetManagerBus.h>
@@ -99,7 +99,7 @@ namespace AZ
             TransformNotificationBus::Handler::BusConnect(m_entityId);
             AzFramework::BoundsRequestBus::Handler::BusConnect(entityId);
 
-            m_featureProcessor = RPI::Scene::GetFeatureProcessorForEntity<ReflectionProbeFeatureProcessorInterface>(entityId);
+            m_featureProcessor = JE::Render::RPI::Scene::GetFeatureProcessorForEntity<ReflectionProbeFeatureProcessorInterface>(entityId);
             AZ_Assert(m_featureProcessor, "ReflectionProbeComponentController was unable to find a ReflectionProbeFeatureProcessor on the EntityContext provided.");
 
             m_transformInterface = TransformBus::FindFirstHandler(entityId);
@@ -150,7 +150,7 @@ namespace AZ
             m_featureProcessor->SetInnerExtents(m_handle, AZ::Vector3(m_configuration.m_innerWidth, m_configuration.m_innerLength, m_configuration.m_innerHeight));
 
             // load cubemap
-            Data::Asset<RPI::StreamingImageAsset>& cubeMapAsset =
+            Data::Asset<JE::Render::RPI::StreamingImageAsset>& cubeMapAsset =
                 m_configuration.m_useBakedCubemap ? m_configuration.m_bakedCubeMapAsset : m_configuration.m_authoredCubeMapAsset;
 
             if (cubeMapAsset.GetId().IsValid())
@@ -192,7 +192,7 @@ namespace AZ
             const AZStd::string& relativePath =
                 m_configuration.m_useBakedCubemap ? m_configuration.m_bakedCubeMapRelativePath : m_configuration.m_authoredCubeMapAsset.GetHint();
 
-            Data::Instance<RPI::Image> image = RPI::StreamingImage::FindOrCreate(asset);
+            Data::Instance<JE::Render::RPI::Image> image = JE::Render::RPI::StreamingImage::FindOrCreate(asset);
             m_featureProcessor->SetCubeMap(m_handle, image, relativePath);
         }
 
@@ -223,7 +223,7 @@ namespace AZ
             // disconnect the asset bus since we might reconnect with a different asset
             Data::AssetBus::MultiHandler::BusDisconnect();
 
-            Data::Asset<RPI::StreamingImageAsset>& cubeMapAsset =
+            Data::Asset<JE::Render::RPI::StreamingImageAsset>& cubeMapAsset =
                 m_configuration.m_useBakedCubemap ? m_configuration.m_bakedCubeMapAsset : m_configuration.m_authoredCubeMapAsset;
 
             if (cubeMapAsset.GetId().IsValid())
@@ -236,7 +236,7 @@ namespace AZ
             else
             {
                 // clear the current cubemap
-                Data::Instance<RPI::Image> image = nullptr;
+                Data::Instance<JE::Render::RPI::Image> image = nullptr;
                 m_featureProcessor->SetCubeMap(m_handle, image, {});
             }
         }

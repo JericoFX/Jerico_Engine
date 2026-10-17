@@ -16,8 +16,8 @@
 #include <AzCore/Name/NameDictionary.h>
 #include <AzCore/std/containers/variant.h>
 
-#include <Atom/RPI.Public/Culling.h>
-#include <Atom/RPI.Public/Scene.h>
+#include <JE/Render/RPI/Public/Culling.h>
+#include <JE/Render/RPI/Public/Scene.h>
 
 namespace AZ::Render::MeshCommon
 {
@@ -28,7 +28,7 @@ namespace AZ::Render::MeshCommon
     inline static AZ::Name MotionDrawListTagName = AZ::Name::FromStringLiteral("motion", AZ::Interface<AZ::NameDictionary>::Get());
 
     template <typename BoundsType>
-    void MarkMeshesForBounds(AZ::RPI::Scene* scene, const BoundsType& bounds, AZ::RPI::Cullable::FlagType flag)
+    void MarkMeshesForBounds(JE::Render::RPI::Scene* scene, const BoundsType& bounds, JE::Render::RPI::Cullable::FlagType flag)
     {
         AzFramework::IVisibilityScene* visScene = scene->GetVisibilityScene();
 
@@ -40,7 +40,7 @@ namespace AZ::Render::MeshCommon
                     if (visibleEntry->m_typeFlags & AzFramework::VisibilityEntry::TYPE_RPI_Cullable ||
                         visibleEntry->m_typeFlags & AzFramework::VisibilityEntry::TYPE_RPI_VisibleObjectList)
                     {
-                        RPI::Cullable* cullable = static_cast<RPI::Cullable*>(visibleEntry->m_userData);
+                        JE::Render::RPI::Cullable* cullable = static_cast<JE::Render::RPI::Cullable*>(visibleEntry->m_userData);
 
                         if (nodeIsContainedInBounds || ShapeIntersection::Overlaps(boundsRef, cullable->m_cullData.m_boundingSphere))
                         {
@@ -62,7 +62,7 @@ namespace AZ::Render::MeshCommon
     };
 
     template <typename BoundsType, class Filter = EmptyFilter<BoundsType>>
-    void MarkMeshesWithFlag(AZ::RPI::Scene* scene, AZStd::span<const BoundsType> boundsCollection, AZ::RPI::Cullable::FlagType flag, Filter filter = {})
+    void MarkMeshesWithFlag(JE::Render::RPI::Scene* scene, AZStd::span<const BoundsType> boundsCollection, JE::Render::RPI::Cullable::FlagType flag, Filter filter = {})
     {
         for (const BoundsType& bounds : boundsCollection)
         {
@@ -74,7 +74,7 @@ namespace AZ::Render::MeshCommon
     }
 
     template <class Filter = EmptyFilter<BoundsVariant>>
-    void MarkMeshesWithFlag(AZ::RPI::Scene* scene, AZStd::span<const BoundsVariant> boundsCollection, AZ::RPI::Cullable::FlagType flag, Filter filter = {})
+    void MarkMeshesWithFlag(JE::Render::RPI::Scene* scene, AZStd::span<const BoundsVariant> boundsCollection, JE::Render::RPI::Cullable::FlagType flag, Filter filter = {})
     {
         for (const BoundsVariant& bounds : boundsCollection)
         {

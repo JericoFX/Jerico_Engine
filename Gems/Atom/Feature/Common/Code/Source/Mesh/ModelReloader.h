@@ -15,10 +15,15 @@
 
 namespace AZ
 {
-    namespace RPI
-    {
+    }
+
+namespace JE::Render::RPI
+{
         class ModelAsset;
     }
+
+namespace AZ
+{
 
     namespace Render
     {
@@ -35,7 +40,7 @@ namespace AZ
 
             //! Reload a model asset
             //! @param modelAsset - the asset to be reloaded
-            ModelReloader(Data::Asset<RPI::ModelAsset> modelAsset);
+            ModelReloader(Data::Asset<JE::Render::RPI::ModelAsset> modelAsset);
 
             //! Connects a handler that will handle an event when the model is finished reloading
             void ConnectOnReloadedEventHandler(ModelReloadedEvent::Handler& onReloadedEventHandler);

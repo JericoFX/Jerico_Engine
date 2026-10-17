@@ -11,12 +11,12 @@
 #include <AssetBrowser/Thumbnails/SourceThumbnail.h>
 #include <Atom/Feature/Utils/LightingPreset.h>
 #include <Atom/Feature/Utils/ModelPreset.h>
-#include <Atom/RPI.Edit/Common/AssetUtils.h>
-#include <Atom/RPI.Reflect/Asset/AssetUtils.h>
-#include <Atom/RPI.Reflect/Material/MaterialAsset.h>
-#include <Atom/RPI.Reflect/Material/MaterialTypeAsset.h>
-#include <Atom/RPI.Reflect/Model/ModelAsset.h>
-#include <Atom/RPI.Reflect/System/AnyAsset.h>
+#include <JE/Editor/Render/RPI/Edit/Common/AssetUtils.h>
+#include <JE/Render/RPI/Reflect/Asset/AssetUtils.h>
+#include <JE/Render/RPI/Reflect/Material/MaterialAsset.h>
+#include <JE/Render/RPI/Reflect/Material/MaterialTypeAsset.h>
+#include <JE/Render/RPI/Reflect/Model/ModelAsset.h>
+#include <JE/Render/RPI/Reflect/System/AnyAsset.h>
 #include <AtomToolsFramework/Util/Util.h>
 #include <SharedPreview/SharedPreviewUtils.h>
 
@@ -28,8 +28,8 @@ namespace AZ
         {
             AZStd::vector<AZ::Uuid> GetSupportedAssetTypes()
             {
-                return { RPI::ModelAsset::RTTI_Type(), RPI::MaterialAsset::RTTI_Type(), RPI::MaterialTypeAsset::RTTI_Type(),
-                         RPI::AnyAsset::RTTI_Type() };
+                return { JE::Render::RPI::ModelAsset::RTTI_Type(), JE::Render::RPI::MaterialAsset::RTTI_Type(), JE::Render::RPI::MaterialTypeAsset::RTTI_Type(),
+                         JE::Render::RPI::AnyAsset::RTTI_Type() };
             }
 
             bool IsSupportedAssetType(AzToolsFramework::Thumbnailer::SharedThumbnailKey key)
@@ -68,14 +68,14 @@ namespace AZ
                     {
                         if (assetInfo.m_assetType == typeId)
                         {
-                            const auto& path = AZ::RPI::AssetUtils::GetSourcePathByAssetId(assetInfo.m_assetId);
+                            const auto& path = JE::Render::RPI::AssetUtils::GetSourcePathByAssetId(assetInfo.m_assetId);
                             if (!AtomToolsFramework::IsDocumentPathPreviewable(path))
                             {
                                 continue;
                             }
 
                             // Reject any assets that don't match supported source file extensions
-                            if (assetInfo.m_assetType == RPI::AnyAsset::RTTI_Type())
+                            if (assetInfo.m_assetType == JE::Render::RPI::AnyAsset::RTTI_Type())
                             {
                                 if (!path.ends_with(AZ::Render::LightingPreset::Extension) &&
                                     !path.ends_with(AZ::Render::ModelPreset::Extension))
@@ -96,7 +96,7 @@ namespace AZ
             {
                 if (!productPath.empty())
                 {
-                    return AZ::RPI::AssetUtils::GetAssetIdForProductPath(productPath.data());
+                    return JE::Render::RPI::AssetUtils::GetAssetIdForProductPath(productPath.data());
                 }
                 return AZ::Data::AssetId();
             }
