@@ -104,7 +104,7 @@ namespace JE::Assets::RenderBuilders
         //! and in turn parses the included files.
         //! The included files are searched in the directories listed in @includeDirectories. Basically it's a similar approach
         //! as how most C-preprocessors would find included files.
-        static void GetListOfIncludedFiles(AZStd::string_view sourceFilePath, const AZStd::vector<AZStd::string>& includeDirectories,
+        void GetListOfIncludedFiles(AZStd::string_view sourceFilePath, const AZStd::vector<AZStd::string>& includeDirectories,
             const ShaderBuilderUtility::IncludedFilesParser& includedFilesParser, AZStd::unordered_set<AZStd::string>& includedFiles)
         {
             auto outcome = includedFilesParser.ParseFileAndGetIncludedFiles(sourceFilePath);
@@ -126,8 +126,9 @@ namespace JE::Assets::RenderBuilders
             }
 
             auto listOfRelativePaths = outcome.TakeValue();
-            for (const auto& relativePath : listOfRelativePaths)
+            for (const auto& parsedPath : listOfRelativePaths)
             {
+                const auto relativePath = ResolveNativeShaderInclude(parsedPath);
                 auto fullPath = DiscoverFullPath(relativePath, sourceFileFolderPath, includeDirectories);
                 if (fullPath.empty())
                 {

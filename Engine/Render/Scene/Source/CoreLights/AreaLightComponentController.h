@@ -63,15 +63,15 @@ namespace JE::Render
             void SetLightEmitsBothDirections(bool value) override;
             bool GetUseFastApproximation() const override;
             void SetUseFastApproximation(bool useFastApproximation) override;
-            AZ::Render::PhotometricUnit GetIntensityMode() const override;
+            JE::Render::Features::PhotometricUnit GetIntensityMode() const override;
             float GetIntensity() const override;
-            void SetIntensityAndMode(float intensity, AZ::Render::PhotometricUnit intensityMode) override;
-            void SetIntensity(float intensity, AZ::Render::PhotometricUnit intensityMode) override;
+            void SetIntensityAndMode(float intensity, JE::Render::Features::PhotometricUnit intensityMode) override;
+            void SetIntensity(float intensity, JE::Render::Features::PhotometricUnit intensityMode) override;
             void SetIntensity(float intensity) override;
             float GetAttenuationRadius() const override;
             void SetAttenuationRadius(float radius) override;
             void SetAttenuationRadiusMode(LightAttenuationRadiusMode attenuationRadiusMode) override;
-            void ConvertToIntensityMode(AZ::Render::PhotometricUnit intensityMode) override;
+            void ConvertToIntensityMode(JE::Render::Features::PhotometricUnit intensityMode) override;
             float GetSurfaceArea() const override;
 
             bool GetEnableShutters() const override;
@@ -85,10 +85,10 @@ namespace JE::Render
             void SetEnableShadow(bool enabled) override;
             float GetShadowBias() const override;
             void SetShadowBias(float bias) override;
-            AZ::Render::ShadowmapSize GetShadowmapMaxSize() const override;
-            void SetShadowmapMaxSize(AZ::Render::ShadowmapSize size) override;
-            AZ::Render::ShadowFilterMethod GetShadowFilterMethod() const override;
-            void SetShadowFilterMethod(AZ::Render::ShadowFilterMethod method) override;
+            JE::Render::Features::ShadowmapSize GetShadowmapMaxSize() const override;
+            void SetShadowmapMaxSize(JE::Render::Features::ShadowmapSize size) override;
+            JE::Render::Features::ShadowFilterMethod GetShadowFilterMethod() const override;
+            void SetShadowFilterMethod(JE::Render::Features::ShadowFilterMethod method) override;
             uint32_t GetFilteringSampleCount() const override;
             void SetFilteringSampleCount(uint32_t count) override;
             float GetEsmExponent() const override;

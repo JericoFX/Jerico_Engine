@@ -1128,10 +1128,10 @@ namespace DebugDraw
         if (!m_sphereRayTracingTypeHandle.IsValid())
         {
             m_rayTracingFeatureProcessor =
-                JE::Render::RPI::Scene::GetFeatureProcessorForEntity<AZ::Render::RayTracingFeatureProcessorInterface>(element.m_targetEntityId);
+                JE::Render::RPI::Scene::GetFeatureProcessorForEntity<JE::Render::Features::RayTracingFeatureProcessorInterface>(element.m_targetEntityId);
 
             m_meshFeatureProcessor =
-                JE::Render::RPI::Scene::GetFeatureProcessorForEntity<AZ::Render::MeshFeatureProcessorInterface>(element.m_targetEntityId);
+                JE::Render::RPI::Scene::GetFeatureProcessorForEntity<JE::Render::Features::MeshFeatureProcessorInterface>(element.m_targetEntityId);
 
             auto shaderAsset = JE::Render::RPI::FindShaderAsset("shaders/sphereintersection.azshader");
             auto rayTracingShader = JE::Render::RPI::Shader::FindOrCreate(shaderAsset, AZ::RHI::GetDefaultSupervariantNameWithNoFloat16Fallback());
@@ -1176,7 +1176,7 @@ namespace DebugDraw
         element.m_meshInfoHandle = m_meshFeatureProcessor->AcquireMeshInfoEntry();
         m_meshFeatureProcessor->UpdateMeshInfoEntry(
             element.m_meshInfoHandle,
-            [](AZ::Render::MeshInfoEntry* entry)
+            [](JE::Render::Features::MeshInfoEntry* entry)
             {
                 // enable all lighting channels for the procedural mesh.
                 // everything else is empty
@@ -1187,7 +1187,7 @@ namespace DebugDraw
         // The FallbackPBR - entry was created with the AcquireMeshInfoEntry() call above, but we have to fill the data
         m_meshFeatureProcessor->UpdateFallbackPBRMaterialEntry(
             element.m_meshInfoHandle,
-            [&element](AZ::Render::FallbackPBR::MaterialEntry* entry)
+            [&element](JE::Render::Features::FallbackPBR::MaterialEntry* entry)
             {
                 entry->m_materialParameters.m_baseColor = element.m_color;
                 entry->m_materialParameters.m_roughnessFactor = 0.9f;
@@ -1213,10 +1213,10 @@ namespace DebugDraw
         if (!m_obbRayTracingTypeHandle.IsValid())
         {
             m_rayTracingFeatureProcessor =
-                JE::Render::RPI::Scene::GetFeatureProcessorForEntity<AZ::Render::RayTracingFeatureProcessorInterface>(element.m_targetEntityId);
+                JE::Render::RPI::Scene::GetFeatureProcessorForEntity<JE::Render::Features::RayTracingFeatureProcessorInterface>(element.m_targetEntityId);
 
             m_meshFeatureProcessor =
-                JE::Render::RPI::Scene::GetFeatureProcessorForEntity<AZ::Render::MeshFeatureProcessorInterface>(element.m_targetEntityId);
+                JE::Render::RPI::Scene::GetFeatureProcessorForEntity<JE::Render::Features::MeshFeatureProcessorInterface>(element.m_targetEntityId);
 
             auto shaderAsset = JE::Render::RPI::FindShaderAsset("shaders/obbintersection.azshader");
             auto rayTracingShader = JE::Render::RPI::Shader::FindOrCreate(shaderAsset, AZ::RHI::GetDefaultSupervariantNameWithNoFloat16Fallback());
@@ -1229,7 +1229,7 @@ namespace DebugDraw
 
         m_meshFeatureProcessor->UpdateMeshInfoEntry(
             element.m_meshInfoHandle,
-            [](AZ::Render::MeshInfoEntry* entry)
+            [](JE::Render::Features::MeshInfoEntry* entry)
             {
                 // enable all lighting channels for the procedural mesh.
                 // everything else is empty
@@ -1240,7 +1240,7 @@ namespace DebugDraw
         // The FallbackPBR - entry was created with the AcquireMeshInfoEntry() call above, but we have to fill the data
         m_meshFeatureProcessor->UpdateFallbackPBRMaterialEntry(
             element.m_meshInfoHandle,
-            [&element](AZ::Render::FallbackPBR::MaterialEntry* entry)
+            [&element](JE::Render::Features::FallbackPBR::MaterialEntry* entry)
             {
                 entry->m_materialParameters.m_baseColor = element.m_color;
                 entry->m_materialParameters.m_roughnessFactor = 0.9f;
@@ -1269,7 +1269,7 @@ namespace DebugDraw
                 m_spheresRayTracingIndices.Reset();
             }
             m_meshFeatureProcessor->ReleaseMeshInfoEntry(element.m_meshInfoHandle);
-            element.m_meshInfoHandle = AZ::Render::MeshInfoHandle{};
+            element.m_meshInfoHandle = JE::Render::Features::MeshInfoHandle{};
         }
     }
 
@@ -1283,7 +1283,7 @@ namespace DebugDraw
                 m_obbRayTracingTypeHandle.Free();
             }
             m_meshFeatureProcessor->ReleaseMeshInfoEntry(element.m_meshInfoHandle);
-            element.m_meshInfoHandle = AZ::Render::MeshInfoHandle{};
+            element.m_meshInfoHandle = JE::Render::Features::MeshInfoHandle{};
         }
     }
 } // namespace DebugDraw

@@ -10,7 +10,7 @@
 
 #include <AzCore/Component/Component.h>
 #include <AzCore/Component/TransformBus.h>
-#include <Atom/Feature/SpecularReflections/SpecularReflectionsFeatureProcessorInterface.h>
+#include <JE/Render/Features/SpecularReflections/SpecularReflectionsFeatureProcessorInterface.h>
 #include <SpecularReflections/SpecularReflectionsComponentConfig.h>
 
 namespace JE::Editor::Render::Scene
@@ -47,7 +47,7 @@ namespace JE::Render
             void OnConfigChanged();
 
             SpecularReflectionsComponentConfig m_configuration;
-            AZ::Render::SpecularReflectionsFeatureProcessorInterface* m_featureProcessor = nullptr;
+            JE::Render::Features::SpecularReflectionsFeatureProcessorInterface* m_featureProcessor = nullptr;
         };
     }
 }

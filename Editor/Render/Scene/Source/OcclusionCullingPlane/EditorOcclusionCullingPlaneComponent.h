@@ -12,18 +12,18 @@
 #include <AzToolsFramework/API/ComponentEntitySelectionBus.h>
 #include <OcclusionCullingPlane/OcclusionCullingPlaneComponent.h>
 #include <OcclusionCullingPlane/OcclusionCullingPlaneComponentConstants.h>
-#include <Atom/Feature/Utils/EditorRenderComponentAdapter.h>
+#include <JE/Editor/Render/Features/Utils/EditorRenderComponentAdapter.h>
 
 namespace JE::Editor::Render
 {
     namespace Scene
     {        
         class EditorOcclusionCullingPlaneComponent final
-            : public AZ::Render::EditorRenderComponentAdapter<JE::Render::Scene::OcclusionCullingPlaneComponentController, JE::Render::Scene::OcclusionCullingPlaneComponent, JE::Render::Scene::OcclusionCullingPlaneComponentConfig>
+            : public JE::Editor::Render::Features::EditorRenderComponentAdapter<JE::Render::Scene::OcclusionCullingPlaneComponentController, JE::Render::Scene::OcclusionCullingPlaneComponent, JE::Render::Scene::OcclusionCullingPlaneComponentConfig>
             , private AzFramework::EntityDebugDisplayEventBus::Handler
         {
         public:
-            using BaseClass = AZ::Render::EditorRenderComponentAdapter<JE::Render::Scene::OcclusionCullingPlaneComponentController, JE::Render::Scene::OcclusionCullingPlaneComponent, JE::Render::Scene::OcclusionCullingPlaneComponentConfig>;
+            using BaseClass = JE::Editor::Render::Features::EditorRenderComponentAdapter<JE::Render::Scene::OcclusionCullingPlaneComponentController, JE::Render::Scene::OcclusionCullingPlaneComponent, JE::Render::Scene::OcclusionCullingPlaneComponentConfig>;
             AZ_RTTI_WITH_NAME(JE::Editor::Render::Scene::EditorOcclusionCullingPlaneComponent, "AZ::Render::EditorOcclusionCullingPlaneComponent", JE::Render::Scene::EditorOcclusionCullingPlaneComponentTypeId, BaseClass, AzToolsFramework::Components::EditorComponentBase)
             AZ_EDITOR_COMPONENT_INTRUSIVE_DESCRIPTOR_TYPE(JE::Editor::Render::Scene::EditorOcclusionCullingPlaneComponent)
             AZ_COMPONENT_BASE(JE::Editor::Render::Scene::EditorOcclusionCullingPlaneComponent)

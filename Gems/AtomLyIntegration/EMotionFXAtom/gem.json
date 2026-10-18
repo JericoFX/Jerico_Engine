@@ -16,7 +16,6 @@
     "documentation_url": "",
     "dependencies": [
         "EMotionFX",
-        "Atom_Feature_Common",
         "Atom_RHI",
         "LmbrCentral",
         "GradientSignal",

@@ -11,7 +11,7 @@
 #include <AzCore/Component/Component.h>
 #include <AzFramework/Components/ComponentAdapter.h>
 #include <JE/Render/Scene/PostProcess/DepthOfField/DepthOfFieldComponentConfig.h>
-#include <Atom/Feature/PostProcess/DepthOfField/DepthOfFieldConstants.h>
+#include <JE/Render/Features/PostProcess/DepthOfField/DepthOfFieldConstants.h>
 #include <PostProcess/DepthOfField/DepthOfFieldComponentController.h>
 
 namespace JE::Render

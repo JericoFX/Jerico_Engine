@@ -11,7 +11,7 @@
 #include <AzCore/Asset/AssetCommon.h>
 #include <AzCore/Component/Component.h>
 #include <AzCore/Component/TransformBus.h>
-#include <Atom/Feature/OcclusionCullingPlane/OcclusionCullingPlaneFeatureProcessorInterface.h>
+#include <JE/Render/Features/OcclusionCullingPlane/OcclusionCullingPlaneFeatureProcessorInterface.h>
 #include <JE/Render/RPI/Public/Model/Model.h>
 #include <LmbrCentral/Shape/BoxShapeComponentBus.h>
 #include <OcclusionCullingPlane/OcclusionCullingPlaneComponentConstants.h>
@@ -71,9 +71,9 @@ namespace JE::Render
             void OnTransformChanged(const AZ::Transform& local, const AZ::Transform& world) override;
 
             // handle for this occlusion plane in the feature processor
-            AZ::Render::OcclusionCullingPlaneHandle m_handle;
+            JE::Render::Features::OcclusionCullingPlaneHandle m_handle;
 
-            AZ::Render::OcclusionCullingPlaneFeatureProcessorInterface* m_featureProcessor = nullptr;
+            JE::Render::Features::OcclusionCullingPlaneFeatureProcessorInterface* m_featureProcessor = nullptr;
             AZ::TransformInterface* m_transformInterface = nullptr;
             AZ::EntityId m_entityId;
             OcclusionCullingPlaneComponentConfig m_configuration;

@@ -39,6 +39,7 @@
 #endif
 #include <JE/Render/Materials/MaterialsRegistration.h>
 #include <JE/Render/Scene/SceneModule.h>
+#include <JE/Render/Features/FeatureModule.h>
 
 #include <ISystem.h>
 
@@ -76,6 +77,7 @@ namespace JE::Runtime
             outModules.emplace_back(JE::Geometry::CreateRuntimeModule());
             outModules.emplace_back(JE::World::Camera::CreateRuntimeModule());
             outModules.emplace_back(JE::Render::Scene::CreateModule());
+            outModules.emplace_back(JE::Render::Features::CreateModule());
             outModules.emplace_back(JE::Debug::CreateRuntimeModule());
 #if defined(JE_LAUNCHER_HEADLESS)
             outModules.emplace_back(JE::Debug::Profiler::CreateCaptureModule());

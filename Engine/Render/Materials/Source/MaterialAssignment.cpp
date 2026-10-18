@@ -404,15 +404,15 @@ namespace JE
             return JE::Render::RPI::MaterialPropertyValue::FromAny(value);
         }
 
-        AZ::Render::CustomMaterialMap ConvertToCustomMaterialMap(const JE::Render::MaterialAssignmentMap& materials)
+        JE::Render::Features::CustomMaterialMap ConvertToCustomMaterialMap(const JE::Render::MaterialAssignmentMap& materials)
         {
-            AZ::Render::CustomMaterialMap customMaterials;
+            JE::Render::Features::CustomMaterialMap customMaterials;
             customMaterials.reserve(materials.size());
             for (const auto& materialAssignment : materials)
             {
                 customMaterials.emplace(
-                    AZ::Render::CustomMaterialId{ materialAssignment.first.m_lodIndex, materialAssignment.first.m_materialSlotStableId },
-                    AZ::Render::CustomMaterialInfo{ materialAssignment.second.m_materialInstance, materialAssignment.second.m_matModUvOverrides });
+                    JE::Render::Features::CustomMaterialId{ materialAssignment.first.m_lodIndex, materialAssignment.first.m_materialSlotStableId },
+                    JE::Render::Features::CustomMaterialInfo{ materialAssignment.second.m_materialInstance, materialAssignment.second.m_matModUvOverrides });
             }
             return customMaterials;
         }

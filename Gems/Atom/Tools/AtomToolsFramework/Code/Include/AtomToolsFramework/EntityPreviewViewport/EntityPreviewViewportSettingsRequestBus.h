@@ -9,8 +9,8 @@
 #pragma once
 
 #include <ACES/Aces.h>
-#include <Atom/Feature/Utils/LightingPreset.h>
-#include <Atom/Feature/Utils/ModelPreset.h>
+#include <JE/Render/Features/Utils/LightingPreset.h>
+#include <JE/Render/Features/Utils/ModelPreset.h>
 #include <AzCore/EBus/EBus.h>
 #include <AzCore/std/string/string.h>
 
@@ -26,11 +26,11 @@ namespace AtomToolsFramework
 
         //! Set current lighting preset
         //! @param preset lighting preset to assign
-        virtual void SetLightingPreset(const AZ::Render::LightingPreset& preset) = 0;
+        virtual void SetLightingPreset(const JE::Render::Features::LightingPreset& preset) = 0;
 
         //! Get current lighting preset
         //! @returns current preset
-        virtual const AZ::Render::LightingPreset& GetLightingPreset() const = 0;
+        virtual const JE::Render::Features::LightingPreset& GetLightingPreset() const = 0;
 
         //! Save lighting preset
         //! @returns true if preset was saved, otherwise false
@@ -64,11 +64,11 @@ namespace AtomToolsFramework
 
         //! Set current model preset
         //! @param preset Model preset to assign
-        virtual void SetModelPreset(const AZ::Render::ModelPreset& preset) = 0;
+        virtual void SetModelPreset(const JE::Render::Features::ModelPreset& preset) = 0;
 
         //! Get current model preset
         //! @returns current preset
-        virtual const AZ::Render::ModelPreset& GetModelPreset() const = 0;
+        virtual const JE::Render::Features::ModelPreset& GetModelPreset() const = 0;
 
         //! Save model preset
         //! @returns true if preset was saved, otherwise false

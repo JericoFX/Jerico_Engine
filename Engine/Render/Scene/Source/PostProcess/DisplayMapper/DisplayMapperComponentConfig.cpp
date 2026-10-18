@@ -17,7 +17,7 @@ namespace JE::Render
     {
         void DisplayMapperComponentConfig::Reflect(AZ::ReflectContext* context)
         {
-            AZ::Render::AcesParameterOverrides::Reflect(context);
+            JE::Render::Features::AcesParameterOverrides::Reflect(context);
 
             if (auto serializeContext = azrtti_cast<AZ::SerializeContext*>(context))
             {

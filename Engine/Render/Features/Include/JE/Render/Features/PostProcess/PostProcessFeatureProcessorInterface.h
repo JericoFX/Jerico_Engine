@@ -1,0 +1,44 @@
+/*
+ * Copyright (c) Contributors to the Open 3D Engine Project.
+ * For complete copyright and license terms please see the LICENSE at the root of this distribution.
+ *
+ * SPDX-License-Identifier: Apache-2.0 OR MIT
+ *
+ */
+
+#pragma once
+
+#include <JE/Render/RPI/Public/FeatureProcessor.h>
+#include <JE/Render/Features/PostProcess/PostProcessSettingsInterface.h>
+
+namespace JE::Render
+{
+    namespace Features
+    {
+        //! Abstract interface for PostProcessFeatureProcessor so it can be access outside of Atom (for example in AtomLyIntegration)
+        class PostProcessFeatureProcessorInterface
+            : public JE::Render::RPI::FeatureProcessor
+        {
+        public:
+            AZ_RTTI_WITH_NAME(JE::Render::Features::PostProcessFeatureProcessorInterface, "AZ::Render::PostProcessFeatureProcessorInterface", "{720EE4B9-78C1-4151-AFEF-13DB5CC500D1}", JE::Render::RPI::FeatureProcessor);
+
+            //! Retrieves existing post process settings for corresponding entity ID. If none found, returns nullptr.
+            virtual PostProcessSettingsInterface* GetSettingsInterface(AZ::EntityId entityId) = 0;
+
+            //! Retrieves existing post process settings for corresponding entity ID. If none found, creates a new instance.
+            virtual PostProcessSettingsInterface* GetOrCreateSettingsInterface(AZ::EntityId entityId) = 0;
+
+            //! Removes post process settings for corresponding entity ID.
+            virtual void RemoveSettingsInterface(AZ::EntityId entityId) = 0;
+
+            //! Called to notify the feature processor that changes have been made to it's owned post process settings
+            virtual void OnPostProcessSettingsChanged() = 0;
+
+            //! Set an alias for the given sourceView
+            virtual void SetViewAlias(const JE::Render::RPI::ViewPtr sourceView, const JE::Render::RPI::ViewPtr targetView) = 0;
+
+            //! Removes the alias for sourceView
+            virtual void RemoveViewAlias(const JE::Render::RPI::ViewPtr sourceView) = 0;
+        };
+    }
+}

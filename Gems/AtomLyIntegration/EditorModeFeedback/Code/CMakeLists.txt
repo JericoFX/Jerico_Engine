@@ -21,7 +21,7 @@ if(PAL_TRAIT_BUILD_HOST_TOOLS)
                 AZ::AzCore
                 AZ::AzToolsFramework
                 JE::RenderIntegration
-                Gem::Atom_Feature_Common.Public
+                JE::RenderFeatures
                 JE::RenderScene
     )
 

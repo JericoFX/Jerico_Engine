@@ -8,10 +8,10 @@
 
 #pragma once
 
-#include <Atom/Feature/PostProcess/FilmGrain/FilmGrainConstants.h>
-#include <Atom/Feature/PostProcess/FilmGrain/FilmGrainSettingsInterface.h>
-#include <Atom/Feature/PostProcess/PostProcessFeatureProcessorInterface.h>
-#include <Atom/Feature/PostProcess/PostProcessSettingsInterface.h>
+#include <JE/Render/Features/PostProcess/FilmGrain/FilmGrainConstants.h>
+#include <JE/Render/Features/PostProcess/FilmGrain/FilmGrainSettingsInterface.h>
+#include <JE/Render/Features/PostProcess/PostProcessFeatureProcessorInterface.h>
+#include <JE/Render/Features/PostProcess/PostProcessSettingsInterface.h>
 
 #include <JE/Render/Scene/PostProcess/FilmGrain/FilmGrainBus.h>
 #include <JE/Render/Scene/PostProcess/FilmGrain/FilmGrainComponentConfig.h>
@@ -49,17 +49,17 @@ namespace JE::Render
             const FilmGrainComponentConfig& GetConfiguration() const;
 
             // Auto-gen function override declarations (functions definitions in .cpp)...
-#include <Atom/Feature/ParamMacros/StartParamFunctionsOverride.inl>
-#include <Atom/Feature/PostProcess/FilmGrain/FilmGrainParams.inl>
-#include <Atom/Feature/ParamMacros/EndParams.inl>
+#include <JE/Render/Features/ParamMacros/StartParamFunctionsOverride.inl>
+#include <JE/Render/Features/PostProcess/FilmGrain/FilmGrainParams.inl>
+#include <JE/Render/Features/ParamMacros/EndParams.inl>
 
         private:
             AZ_DISABLE_COPY(FilmGrainComponentController);
 
             void OnConfigChanged();
 
-            AZ::Render::PostProcessSettingsInterface* m_postProcessInterface = nullptr;
-            AZ::Render::FilmGrainSettingsInterface* m_settingsInterface = nullptr;
+            JE::Render::Features::PostProcessSettingsInterface* m_postProcessInterface = nullptr;
+            JE::Render::Features::FilmGrainSettingsInterface* m_settingsInterface = nullptr;
             FilmGrainComponentConfig m_configuration;
             AZ::EntityId m_entityId;
         };

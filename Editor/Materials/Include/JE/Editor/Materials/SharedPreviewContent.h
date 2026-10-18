@@ -53,12 +53,12 @@ namespace JE
 
             ///////////////////////////////////////////////////////////////
             //AZ::Render::MeshHandleStateNotificationBus::Handler overrides
-            void OnMeshHandleSet(const AZ::Render::MeshFeatureProcessorInterface::MeshHandle* meshHandle) override;
+            void OnMeshHandleSet(const JE::Render::Features::MeshFeatureProcessorInterface::MeshHandle* meshHandle) override;
             ///////////////////////////////////////////////////////////////
 
             // Called by @m_meshUpdatedHandler
             void OnMeshDrawPacketUpdated(
-                const AZ::Render::ModelDataInstanceInterface& meshHandleIface,
+                const JE::Render::Features::ModelDataInstanceInterface& meshHandleIface,
                 uint32_t lodIndex, uint32_t meshIndex, const JE::Render::RPI::MeshDrawPacket& meshDrawPacket);
 
             static constexpr float AspectRatio = 1.0f;
@@ -80,8 +80,8 @@ namespace JE
             // We need @m_meshHandle to be able to register for MeshDrawPacketUpdatedEvent(s).
             // These events are the signals we need to have assurance that the scene is fully available
             // on GPU and we are ready to render and generate the Thumbnail.
-            const AZ::Render::MeshFeatureProcessorInterface::MeshHandle* m_meshHandle = nullptr;
-            AZ::Render::ModelDataInstanceInterface::MeshDrawPacketUpdatedEvent::Handler m_meshUpdatedHandler;
+            const JE::Render::Features::MeshFeatureProcessorInterface::MeshHandle* m_meshHandle = nullptr;
+            JE::Render::Features::ModelDataInstanceInterface::MeshDrawPacketUpdatedEvent::Handler m_meshUpdatedHandler;
             uint32_t m_meshDrawPacketUpdateCount = 0;
         };
     } // namespace Editor

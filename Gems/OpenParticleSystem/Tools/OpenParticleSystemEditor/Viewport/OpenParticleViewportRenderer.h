@@ -9,8 +9,8 @@
 #pragma once
 
 #include <OpenParticleSystem/ParticleEditorRequestBus.h>
-#include <Atom/Feature/CoreLights/DirectionalLightFeatureProcessorInterface.h>
-#include <Atom/Feature/SkyBox/SkyBoxFeatureProcessorInterface.h>
+#include <JE/Render/Features/CoreLights/DirectionalLightFeatureProcessorInterface.h>
+#include <JE/Render/Features/SkyBox/SkyBoxFeatureProcessorInterface.h>
 #include <JE/Render/RPI/Public/AuxGeom/AuxGeomDraw.h>
 #include <JE/Render/RPI/Public/AuxGeom/AuxGeomFeatureProcessorInterface.h>
 #include <JE/Render/RPI/Public/Base.h>
@@ -23,11 +23,16 @@
 #include <InputController/OpenParticleEditorViewportInputController.h>
 #include <OpenParticleViewportNotificationBus.h>
 #include <PerformanceMonitorComponent.h>
+namespace JE::Render::Features
+{
+    class DisplayMapperFeatureProcessorInterface;
+}
+
 namespace AZ
 {
     namespace Render
     {
-        class DisplayMapperFeatureProcessorInterface;
+
     }
 
     class Entity;
@@ -111,7 +116,7 @@ namespace OpenParticleSystemEditor
         AZStd::shared_ptr<JE::Render::RPI::WindowContext> m_windowContext;
         JE::Render::RPI::RenderPipelinePtr m_renderPipeline;
         JE::Render::RPI::ScenePtr m_scene;
-        AZ::Render::DirectionalLightFeatureProcessorInterface* m_directionalLightFeatureProcessor = nullptr;
+        JE::Render::Features::DirectionalLightFeatureProcessorInterface* m_directionalLightFeatureProcessor = nullptr;
 
         AZStd::unique_ptr<AzFramework::EntityContext> m_entityContext;
 
@@ -121,10 +126,10 @@ namespace OpenParticleSystemEditor
         AZ::Entity* m_postProcessEntity = nullptr;
         AZ::Entity* m_gridEntity = nullptr;
 
-        using DirectionalLightHandle = AZ::Render::DirectionalLightFeatureProcessorInterface::LightHandle;
+        using DirectionalLightHandle = JE::Render::Features::DirectionalLightFeatureProcessorInterface::LightHandle;
         AZStd::vector<DirectionalLightHandle> m_lightHandles;
 
-        AZ::Render::SkyBoxFeatureProcessorInterface* m_skyboxFeatureProcessor = nullptr;
+        JE::Render::Features::SkyBoxFeatureProcessorInterface* m_skyboxFeatureProcessor = nullptr;
 
         AZStd::shared_ptr<OpenParticleEditorViewportInputController> m_viewportController;
         AZ::Entity* m_particleEntity = nullptr;

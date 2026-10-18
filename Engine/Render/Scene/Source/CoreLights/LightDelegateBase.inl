@@ -85,7 +85,7 @@ namespace JE::Render
         }
 
         template <typename FeatureProcessorType>
-        float LightDelegateBase<FeatureProcessorType>::SetPhotometricUnit(AZ::Render::PhotometricUnit unit)
+        float LightDelegateBase<FeatureProcessorType>::SetPhotometricUnit(JE::Render::Features::PhotometricUnit unit)
         {
             m_photometricValue.SetArea(GetSurfaceArea());
             m_photometricValue.ConvertToPhotometricUnit(unit);

@@ -11,7 +11,7 @@
 #include <AzCore/Component/Component.h>
 #include <AzFramework/Components/ComponentAdapter.h>
 #include <JE/Render/Scene/PostProcess/AmbientOcclusion/AoComponentConfiguration.h>
-#include <Atom/Feature/PostProcess/AmbientOcclusion/AoConstants.h>
+#include <JE/Render/Features/PostProcess/AmbientOcclusion/AoConstants.h>
 #include <PostProcess/AmbientOcclusion/AoComponentController.h>
 
 namespace JE::Render

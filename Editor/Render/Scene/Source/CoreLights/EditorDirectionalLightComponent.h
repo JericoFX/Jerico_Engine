@@ -9,8 +9,8 @@
 #pragma once
 
 #include <CoreLights/DirectionalLightComponent.h>
-#include <Atom/Feature/CoreLights/DirectionalLightShadowNotificationBus.h>
-#include <Atom/Feature/Utils/EditorRenderComponentAdapter.h>
+#include <JE/Render/Features/CoreLights/DirectionalLightShadowNotificationBus.h>
+#include <JE/Editor/Render/Features/Utils/EditorRenderComponentAdapter.h>
 #include <JE/Render/Scene/CoreLights/DirectionalLightComponentConfig.h>
 #include <AzFramework/Entity/EntityDebugDisplayBus.h>
 
@@ -19,13 +19,13 @@ namespace JE::Editor::Render
     namespace Scene
     {
         class EditorDirectionalLightComponent final
-            : public AZ::Render::EditorRenderComponentAdapter<JE::Render::Scene::DirectionalLightComponentController, JE::Render::Scene::DirectionalLightComponent, JE::Render::Scene::DirectionalLightComponentConfig>
-            , public AZ::Render::ShadowingDirectionalLightNotificationsBus::Handler
+            : public JE::Editor::Render::Features::EditorRenderComponentAdapter<JE::Render::Scene::DirectionalLightComponentController, JE::Render::Scene::DirectionalLightComponent, JE::Render::Scene::DirectionalLightComponentConfig>
+            , public JE::Render::Features::ShadowingDirectionalLightNotificationsBus::Handler
             , private AzFramework::EntityDebugDisplayEventBus::Handler
         {
         public:
 
-            using BaseClass = AZ::Render::EditorRenderComponentAdapter<JE::Render::Scene::DirectionalLightComponentController, JE::Render::Scene::DirectionalLightComponent, JE::Render::Scene::DirectionalLightComponentConfig>;
+            using BaseClass = JE::Editor::Render::Features::EditorRenderComponentAdapter<JE::Render::Scene::DirectionalLightComponentController, JE::Render::Scene::DirectionalLightComponent, JE::Render::Scene::DirectionalLightComponentConfig>;
             AZ_RTTI_WITH_NAME(JE::Editor::Render::Scene::EditorDirectionalLightComponent, "AZ::Render::EditorDirectionalLightComponent", JE::Render::Scene::EditorDirectionalLightComponentTypeId, BaseClass, AzToolsFramework::Components::EditorComponentBase)
             AZ_EDITOR_COMPONENT_INTRUSIVE_DESCRIPTOR_TYPE(JE::Editor::Render::Scene::EditorDirectionalLightComponent)
             AZ_COMPONENT_BASE(JE::Editor::Render::Scene::EditorDirectionalLightComponent)
@@ -43,7 +43,7 @@ namespace JE::Editor::Render
             AZ::u32 OnConfigurationChanged() override;
 
             // ShadowingDirectionalLightNotificationsBus overrides
-            void OnShadowingDirectionalLightChanged(const AZ::Render::DirectionalLightFeatureProcessorInterface::LightHandle& handle) override;
+            void OnShadowingDirectionalLightChanged(const JE::Render::Features::DirectionalLightFeatureProcessorInterface::LightHandle& handle) override;
 
             //! AzFramework::EntityDebugDisplayEventBus::Handler overrides...
             void DisplayEntityViewport(

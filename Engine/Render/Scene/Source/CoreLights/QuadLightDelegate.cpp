@@ -13,7 +13,7 @@
 namespace JE::Render::Scene
 {
     QuadLightDelegate::QuadLightDelegate(LmbrCentral::QuadShapeComponentRequests* shapeBus, AZ::EntityId entityId, bool isVisible)
-        : LightDelegateBase<AZ::Render::QuadLightFeatureProcessorInterface>(entityId, isVisible)
+        : LightDelegateBase<JE::Render::Features::QuadLightFeatureProcessorInterface>(entityId, isVisible)
         , m_shapeBus(shapeBus)
     {
         InitBase(entityId);
@@ -38,7 +38,7 @@ namespace JE::Render::Scene
     float QuadLightDelegate::CalculateAttenuationRadius(float lightThreshold) const
     {
         // Calculate the radius at which the irradiance will be equal to cutoffIntensity.
-        const float intensity = GetPhotometricValue().GetCombinedIntensity(AZ::Render::PhotometricUnit::Lumen);
+        const float intensity = GetPhotometricValue().GetCombinedIntensity(JE::Render::Features::PhotometricUnit::Lumen);
         return AZ::Sqrt(intensity / lightThreshold);
     }
 

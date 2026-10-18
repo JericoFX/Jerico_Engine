@@ -8,10 +8,10 @@
 
 #pragma once
 
-#include <Atom/Feature/PostProcess/Vignette/VignetteConstants.h>
-#include <Atom/Feature/PostProcess/Vignette/VignetteSettingsInterface.h>
-#include <Atom/Feature/PostProcess/PostProcessFeatureProcessorInterface.h>
-#include <Atom/Feature/PostProcess/PostProcessSettingsInterface.h>
+#include <JE/Render/Features/PostProcess/Vignette/VignetteConstants.h>
+#include <JE/Render/Features/PostProcess/Vignette/VignetteSettingsInterface.h>
+#include <JE/Render/Features/PostProcess/PostProcessFeatureProcessorInterface.h>
+#include <JE/Render/Features/PostProcess/PostProcessSettingsInterface.h>
 
 #include <JE/Render/Scene/PostProcess/Vignette/VignetteBus.h>
 #include <JE/Render/Scene/PostProcess/Vignette/VignetteComponentConfig.h>
@@ -49,17 +49,17 @@ namespace JE::Render
             const VignetteComponentConfig& GetConfiguration() const;
 
             // Auto-gen function override declarations (functions definitions in .cpp)...
-#include <Atom/Feature/ParamMacros/StartParamFunctionsOverride.inl>
-#include <Atom/Feature/PostProcess/Vignette/VignetteParams.inl>
-#include <Atom/Feature/ParamMacros/EndParams.inl>
+#include <JE/Render/Features/ParamMacros/StartParamFunctionsOverride.inl>
+#include <JE/Render/Features/PostProcess/Vignette/VignetteParams.inl>
+#include <JE/Render/Features/ParamMacros/EndParams.inl>
 
         private:
             AZ_DISABLE_COPY(VignetteComponentController);
 
             void OnConfigChanged();
 
-            AZ::Render::PostProcessSettingsInterface* m_postProcessInterface = nullptr;
-            AZ::Render::VignetteSettingsInterface* m_settingsInterface = nullptr;
+            JE::Render::Features::PostProcessSettingsInterface* m_postProcessInterface = nullptr;
+            JE::Render::Features::VignetteSettingsInterface* m_settingsInterface = nullptr;
             VignetteComponentConfig m_configuration;
             AZ::EntityId m_entityId;
         };

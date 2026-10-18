@@ -6,7 +6,7 @@
  *
  */
 
-#include <Atom/Feature/RayTracing/RayTracingFeatureProcessorInterface.h>
+#include <JE/Render/Features/RayTracing/RayTracingFeatureProcessorInterface.h>
 #include <Atom/RHI.Reflect/ShaderResourceGroupLayoutDescriptor.h>
 #include <JE/Render/RPI/Public/Shader/ShaderResourceGroup.h>
 #include <Render/DiffuseProbeGrid.h>
@@ -753,7 +753,7 @@ namespace AZ
             }
 
             uint32_t tlasInstancesBufferByteCount = aznumeric_cast<uint32_t>(m_visualizationTlas->GetTlasInstancesBuffer()->GetDescriptor().m_byteCount);
-            RHI::BufferViewDescriptor bufferViewDescriptor = RHI::BufferViewDescriptor::CreateStructured(0, tlasInstancesBufferByteCount / RayTracingTlasInstanceElementSize, RayTracingTlasInstanceElementSize);
+            RHI::BufferViewDescriptor bufferViewDescriptor = RHI::BufferViewDescriptor::CreateStructured(0, tlasInstancesBufferByteCount / JE::Render::Features::RayTracingTlasInstanceElementSize, JE::Render::Features::RayTracingTlasInstanceElementSize);
             m_visualizationPrepareSrg->SetBufferView(
                 m_renderData->m_visualizationPrepareSrgTlasInstancesNameIndex,
                 m_visualizationTlas->GetTlasInstancesBuffer()->GetBufferView(bufferViewDescriptor).get());

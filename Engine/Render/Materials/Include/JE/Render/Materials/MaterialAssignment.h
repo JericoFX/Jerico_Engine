@@ -10,7 +10,7 @@
 
 #include <JE/Render/Materials/Base.h>
 
-#include <Atom/Feature/Mesh/MeshFeatureProcessorInterface.h>
+#include <JE/Render/Features/Mesh/MeshFeatureProcessorInterface.h>
 #include <JE/Render/RPI/Public/Material/Material.h>
 #include <JE/Render/RPI/Public/Model/Model.h>
 #include <JE/Render/Materials/MaterialAssignmentId.h>
@@ -94,6 +94,6 @@ namespace JE
             const JE::Render::RPI::MaterialPropertyDescriptor* propertyDescriptor, const AZStd::any& value);
 
         //! Converting material assignment map to a mesh feature processor custom material map
-        JE_RENDER_MATERIALS_API AZ::Render::CustomMaterialMap ConvertToCustomMaterialMap(const JE::Render::MaterialAssignmentMap& materials);
+        JE_RENDER_MATERIALS_API JE::Render::Features::CustomMaterialMap ConvertToCustomMaterialMap(const JE::Render::MaterialAssignmentMap& materials);
     } // namespace Render
 } // namespace JE

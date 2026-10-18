@@ -19,6 +19,7 @@ ly_add_target(
             JE::RenderMaterials
             AZ::AzToolsFramework
             JE::EditorRenderIntegration
+            JE::EditorRenderFeatures
             Gem::AtomToolsFramework.Static
             Gem::AtomToolsFramework.Editor
             JE::RenderScene.Public

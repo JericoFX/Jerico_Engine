@@ -8,8 +8,8 @@
 
 #pragma once
 
-#include <Atom/Feature/Utils/EditorRenderComponentAdapter.h>
-#include <Atom/Feature/SkyBox/SkyboxConstants.h>
+#include <JE/Editor/Render/Features/Utils/EditorRenderComponentAdapter.h>
+#include <JE/Render/Features/SkyBox/SkyboxConstants.h>
 #include <SkyBox/PhysicalSkyComponent.h>
 
 namespace JE::Editor::Render
@@ -17,12 +17,12 @@ namespace JE::Editor::Render
     namespace Scene
     {
         class EditorPhysicalSkyComponent final
-            : public AZ::Render::EditorRenderComponentAdapter<JE::Render::Scene::PhysicalSkyComponentController, JE::Render::Scene::PhysicalSkyComponent, JE::Render::Scene::PhysicalSkyComponentConfig>
+            : public JE::Editor::Render::Features::EditorRenderComponentAdapter<JE::Render::Scene::PhysicalSkyComponentController, JE::Render::Scene::PhysicalSkyComponent, JE::Render::Scene::PhysicalSkyComponentConfig>
         {
         public:
 
-            using BaseClass = AZ::Render::EditorRenderComponentAdapter<JE::Render::Scene::PhysicalSkyComponentController, JE::Render::Scene::PhysicalSkyComponent, JE::Render::Scene::PhysicalSkyComponentConfig>;
-            AZ_RTTI_WITH_NAME(JE::Editor::Render::Scene::EditorPhysicalSkyComponent, "AZ::Render::EditorPhysicalSkyComponent", AZ::Render::EditorPhysicalSkyComponentTypeId, BaseClass, AzToolsFramework::Components::EditorComponentBase)
+            using BaseClass = JE::Editor::Render::Features::EditorRenderComponentAdapter<JE::Render::Scene::PhysicalSkyComponentController, JE::Render::Scene::PhysicalSkyComponent, JE::Render::Scene::PhysicalSkyComponentConfig>;
+            AZ_RTTI_WITH_NAME(JE::Editor::Render::Scene::EditorPhysicalSkyComponent, "AZ::Render::EditorPhysicalSkyComponent", JE::Render::Features::EditorPhysicalSkyComponentTypeId, BaseClass, AzToolsFramework::Components::EditorComponentBase)
             AZ_EDITOR_COMPONENT_INTRUSIVE_DESCRIPTOR_TYPE(JE::Editor::Render::Scene::EditorPhysicalSkyComponent)
             AZ_COMPONENT_BASE(JE::Editor::Render::Scene::EditorPhysicalSkyComponent)
             AZ_CLASS_ALLOCATOR(JE::Editor::Render::Scene::EditorPhysicalSkyComponent, AZ::ComponentAllocator);

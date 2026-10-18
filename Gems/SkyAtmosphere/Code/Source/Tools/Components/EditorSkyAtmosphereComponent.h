@@ -9,17 +9,17 @@
 #pragma once
 
 #include <AzCore/RTTI/TypeInfo.h>
-#include <Atom/Feature/Utils/EditorRenderComponentAdapter.h>
+#include <JE/Editor/Render/Features/Utils/EditorRenderComponentAdapter.h>
 #include <Components/SkyAtmosphereComponent.h>
 
 namespace SkyAtmosphere
 {
     class EditorSkyAtmosphereComponent final
-        : public AZ::Render::EditorRenderComponentAdapter<SkyAtmosphereComponentController, SkyAtmosphereComponent, SkyAtmosphereComponentConfig>
+        : public JE::Editor::Render::Features::EditorRenderComponentAdapter<SkyAtmosphereComponentController, SkyAtmosphereComponent, SkyAtmosphereComponentConfig>
     {
     public:
 
-        using BaseClass = AZ::Render::EditorRenderComponentAdapter<SkyAtmosphereComponentController, SkyAtmosphereComponent, SkyAtmosphereComponentConfig>;
+        using BaseClass = JE::Editor::Render::Features::EditorRenderComponentAdapter<SkyAtmosphereComponentController, SkyAtmosphereComponent, SkyAtmosphereComponentConfig>;
         AZ_EDITOR_COMPONENT(EditorSkyAtmosphereComponent, "{9DE5B9CD-B2C8-4AB5-8D7D-21B43AAD56C3}", BaseClass);
 
         static void Reflect(AZ::ReflectContext* context);

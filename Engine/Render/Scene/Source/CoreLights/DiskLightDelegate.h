@@ -16,15 +16,15 @@
 #include <LmbrCentral/Shape/DiskShapeComponentBus.h>
 #include <LmbrCentral/Shape/ShapeComponentBus.h>
 
-#include <Atom/Feature/CoreLights/DiskLightFeatureProcessorInterface.h>
+#include <JE/Render/Features/CoreLights/DiskLightFeatureProcessorInterface.h>
 
 namespace JE::Render::Scene
 {
     //! Manages rendering a disk light through the disk light feature processor and communication with a disk shape bus for the area light
     //! component.
-    class DiskLightDelegate final : public LightDelegateBase<AZ::Render::DiskLightFeatureProcessorInterface>
+    class DiskLightDelegate final : public LightDelegateBase<JE::Render::Features::DiskLightFeatureProcessorInterface>
     {
-        using Base = LightDelegateBase<AZ::Render::DiskLightFeatureProcessorInterface>;
+        using Base = LightDelegateBase<JE::Render::Features::DiskLightFeatureProcessorInterface>;
 
     public:
         DiskLightDelegate(LmbrCentral::DiskShapeComponentRequests* shapeBus, AZ::EntityId entityId, bool isVisible);
@@ -42,8 +42,8 @@ namespace JE::Render::Scene
         void SetShutterAngles(float innerAngleDegrees, float outerAngleDegrees) override;
         void SetEnableShadow(bool enabled) override;
         void SetShadowBias(float bias) override;
-        void SetShadowmapMaxSize(AZ::Render::ShadowmapSize size) override;
-        void SetShadowFilterMethod(AZ::Render::ShadowFilterMethod method) override;
+        void SetShadowmapMaxSize(JE::Render::Features::ShadowmapSize size) override;
+        void SetShadowFilterMethod(JE::Render::Features::ShadowFilterMethod method) override;
         void SetFilteringSampleCount(uint32_t count) override;
         void SetEsmExponent(float exponent) override;
         void SetNormalShadowBias(float bias) override;
@@ -72,6 +72,6 @@ namespace JE::Render::Scene
 
     inline float DiskLightDelegate::GetEffectiveSolidAngle() const
     {
-        return AZ::Render::PhotometricValue::DirectionalEffectiveSteradians;
+        return JE::Render::Features::PhotometricValue::DirectionalEffectiveSteradians;
     }
 } // namespace AZ::Render

@@ -66,8 +66,19 @@ namespace JE::Render
                 AZ::IO::FileIOBase::GetInstance()->ReplaceAlias(originatingPath, AZ::IO::PathView{ originatingSourceFilePath });
                 originatingPath = originatingPath.LexicallyNormal();
 
+                // Temporary JE::Render::RPI read compatibility; remove after serialized v1 owner references migrate.
+                constexpr AZStd::string_view retiredFeatureRoot = "@gemroot:Atom_Feature_Common@";
+                AZStd::string referencedSourcePath = referencedSourceFilePath;
+                if (referencedSourcePath.starts_with(retiredFeatureRoot) &&
+                    (referencedSourcePath.size() == retiredFeatureRoot.size() ||
+                        referencedSourcePath[retiredFeatureRoot.size()] == '/' ||
+                        referencedSourcePath[retiredFeatureRoot.size()] == '\\'))
+                {
+                    referencedSourcePath.replace(0, retiredFeatureRoot.size(), "@engroot@/Engine/Render/Features");
+                }
+
                 AZ::IO::FixedMaxPath referencedPath;
-                AZ::IO::FileIOBase::GetInstance()->ReplaceAlias(referencedPath, AZ::IO::PathView{ referencedSourceFilePath });
+                AZ::IO::FileIOBase::GetInstance()->ReplaceAlias(referencedPath, AZ::IO::PathView{ referencedSourcePath });
                 referencedPath = referencedPath.LexicallyNormal();
 
                 // If the referenced path is empty or absolute then the path does not need to be resolved and can be returned immediately

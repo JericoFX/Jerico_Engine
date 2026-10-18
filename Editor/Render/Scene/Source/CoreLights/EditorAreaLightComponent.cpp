@@ -175,10 +175,10 @@ namespace JE::Editor::Render
                         ->DataElement(AZ::Edit::UIHandlers::ComboBox, &JE::Render::Scene::AreaLightComponentConfig::m_shadowmapMaxSize,
                             QT_TRANSLATE_NOOP("AtomLyIntegration", "Shadowmap size"),
                             QT_TRANSLATE_NOOP("AtomLyIntegration", "Width and height of shadowmap"))
-                            ->EnumAttribute(AZ::Render::ShadowmapSize::Size256, " 256")
-                            ->EnumAttribute(AZ::Render::ShadowmapSize::Size512, " 512")
-                            ->EnumAttribute(AZ::Render::ShadowmapSize::Size1024, "1024")
-                            ->EnumAttribute(AZ::Render::ShadowmapSize::Size2048, "2048")
+                            ->EnumAttribute(JE::Render::Features::ShadowmapSize::Size256, " 256")
+                            ->EnumAttribute(JE::Render::Features::ShadowmapSize::Size512, " 512")
+                            ->EnumAttribute(JE::Render::Features::ShadowmapSize::Size1024, "1024")
+                            ->EnumAttribute(JE::Render::Features::ShadowmapSize::Size2048, "2048")
                             ->Attribute(AZ::Edit::Attributes::ChangeNotify, AZ::Edit::PropertyRefreshLevels::ValuesOnly)
                             ->Attribute(AZ::Edit::Attributes::Visibility, &JE::Render::Scene::AreaLightComponentConfig::SupportsShadows)
                             ->Attribute(AZ::Edit::Attributes::ReadOnly, &JE::Render::Scene::AreaLightComponentConfig::ShadowsDisabled)
@@ -201,13 +201,13 @@ namespace JE::Editor::Render
                             "  ESM: Exponential shadow maps\n"
                             "  ESM+PCF: ESM with a PCF fallback\n"
                             "For BehaviorContext (or track view), None=0, PCF=1, ESM=2, ESM+PCF=3"))
-                            ->EnumAttribute(AZ::Render::ShadowFilterMethod::None,
+                            ->EnumAttribute(JE::Render::Features::ShadowFilterMethod::None,
                                 QT_TRANSLATE_NOOP("AtomLyIntegration", "None"))
-                            ->EnumAttribute(AZ::Render::ShadowFilterMethod::Pcf,
+                            ->EnumAttribute(JE::Render::Features::ShadowFilterMethod::Pcf,
                                 QT_TRANSLATE_NOOP("AtomLyIntegration", "PCF"))
-                            ->EnumAttribute(AZ::Render::ShadowFilterMethod::Esm,
+                            ->EnumAttribute(JE::Render::Features::ShadowFilterMethod::Esm,
                                 QT_TRANSLATE_NOOP("AtomLyIntegration", "ESM"))
-                            ->EnumAttribute(AZ::Render::ShadowFilterMethod::EsmPcf,
+                            ->EnumAttribute(JE::Render::Features::ShadowFilterMethod::EsmPcf,
                                 QT_TRANSLATE_NOOP("AtomLyIntegration", "ESM+PCF"))
                             ->Attribute(AZ::Edit::Attributes::ChangeNotify, AZ::Edit::PropertyRefreshLevels::AttributesAndValues)
                             ->Attribute(AZ::Edit::Attributes::Visibility, &JE::Render::Scene::AreaLightComponentConfig::SupportsShadows)
@@ -352,15 +352,15 @@ namespace JE::Editor::Render
             auto foundIt = AZStd::find_if(
                 supportedPhotometricUnits.begin(),
                 supportedPhotometricUnits.end(),
-                [&](const AZ::Edit::EnumConstant<AZ::Render::PhotometricUnit>& entry) -> bool
+                [&](const AZ::Edit::EnumConstant<JE::Render::Features::PhotometricUnit>& entry) -> bool
                 {
-                    return AZStd::RemoveEnum<AZ::Render::PhotometricUnit>::type(m_controller.m_configuration.m_intensityMode) == entry.m_value;
+                    return AZStd::RemoveEnum<JE::Render::Features::PhotometricUnit>::type(m_controller.m_configuration.m_intensityMode) == entry.m_value;
                 }
             );
 
             if (foundIt == supportedPhotometricUnits.end())
             {
-                m_controller.ConvertToIntensityMode(AZ::Render::PhotometricUnit::Lumen);
+                m_controller.ConvertToIntensityMode(JE::Render::Features::PhotometricUnit::Lumen);
             }
             
             // components may be removed or added here, so deactivate now and reactivate the entity when everything is done shifting around.

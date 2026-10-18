@@ -14,26 +14,26 @@ namespace JE::Editor::Render
 {
     namespace Scene
     {
-        using AoMethodComboBoxVec = AZStd::vector<AZ::Edit::EnumConstant<AZ::Render::Ao::AoMethodType>>;
+        using AoMethodComboBoxVec = AZStd::vector<AZ::Edit::EnumConstant<JE::Render::Features::Ao::AoMethodType>>;
         static AoMethodComboBoxVec PopulateAoMethodList()
         {
             return AoMethodComboBoxVec
             {
-                { AZ::Render::Ao::AoMethodType::SSAO, "SSAO" },
-                { AZ::Render::Ao::AoMethodType::GTAO, "GTAO" },
+                { JE::Render::Features::Ao::AoMethodType::SSAO, "SSAO" },
+                { JE::Render::Features::Ao::AoMethodType::GTAO, "GTAO" },
             };
         }
 
-        using GtaoQualityLevelComboBoxVec = AZStd::vector<AZ::Edit::EnumConstant<AZ::Render::Ao::GtaoQualityLevel>>;
+        using GtaoQualityLevelComboBoxVec = AZStd::vector<AZ::Edit::EnumConstant<JE::Render::Features::Ao::GtaoQualityLevel>>;
         static GtaoQualityLevelComboBoxVec PopulateGtaoQualityLevelList()
         {
             return GtaoQualityLevelComboBoxVec
             {
-                { AZ::Render::Ao::GtaoQualityLevel::SuperLow, "Super Low" },
-                { AZ::Render::Ao::GtaoQualityLevel::Low, "Low" },
-                { AZ::Render::Ao::GtaoQualityLevel::Medium, "Medium" },
-                { AZ::Render::Ao::GtaoQualityLevel::High, "High" },
-                { AZ::Render::Ao::GtaoQualityLevel::SuperHigh, "Super High" },
+                { JE::Render::Features::Ao::GtaoQualityLevel::SuperLow, "Super Low" },
+                { JE::Render::Features::Ao::GtaoQualityLevel::Low, "Low" },
+                { JE::Render::Features::Ao::GtaoQualityLevel::Medium, "Medium" },
+                { JE::Render::Features::Ao::GtaoQualityLevel::High, "High" },
+                { JE::Render::Features::Ao::GtaoQualityLevel::SuperHigh, "Super High" },
             };
         }
 
@@ -172,12 +172,12 @@ namespace JE::Editor::Render
 
                         // Auto-gen editor context settings for overrides
 #define EDITOR_CLASS JE::Render::Scene::AoComponentConfig
-#include <Atom/Feature/ParamMacros/StartOverrideEditorContext.inl>
-#include <Atom/Feature/PostProcess/AmbientOcclusion/AoParams.inl>
-#include <Atom/Feature/PostProcess/AmbientOcclusion/SsaoParams.inl>
-#include <Atom/Feature/PostProcess/AmbientOcclusion/GtaoParams.inl>
+#include <JE/Render/Features/ParamMacros/StartOverrideEditorContext.inl>
+#include <JE/Render/Features/PostProcess/AmbientOcclusion/AoParams.inl>
+#include <JE/Render/Features/PostProcess/AmbientOcclusion/SsaoParams.inl>
+#include <JE/Render/Features/PostProcess/AmbientOcclusion/GtaoParams.inl>
 
-#include <Atom/Feature/ParamMacros/EndParams.inl>
+#include <JE/Render/Features/ParamMacros/EndParams.inl>
 #undef EDITOR_CLASS
                             ;
                 }

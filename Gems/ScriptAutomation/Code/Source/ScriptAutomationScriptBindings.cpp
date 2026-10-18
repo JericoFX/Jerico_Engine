@@ -281,7 +281,7 @@ namespace AZ::ScriptAutomation
                 scriptAutomationInterface->StartProfilingCapture();
                 scriptAutomationInterface->PauseAutomation();
 
-                AZ::Render::ProfilingCaptureRequestBus::Broadcast(&AZ::Render::ProfilingCaptureRequestBus::Events::CapturePassTimestamp, outputFilePath);
+                JE::Render::Features::ProfilingCaptureRequestBus::Broadcast(&JE::Render::Features::ProfilingCaptureRequestBus::Events::CapturePassTimestamp, outputFilePath);
             };
 
             ScriptAutomationInterface::Get()->QueueScriptOperation(AZStd::move(operation));
@@ -295,7 +295,7 @@ namespace AZ::ScriptAutomation
                 scriptAutomationInterface->StartProfilingCapture();
                 scriptAutomationInterface->PauseAutomation();
 
-                AZ::Render::ProfilingCaptureRequestBus::Broadcast(&AZ::Render::ProfilingCaptureRequestBus::Events::CaptureCpuFrameTime, outputFilePath);
+                JE::Render::Features::ProfilingCaptureRequestBus::Broadcast(&JE::Render::Features::ProfilingCaptureRequestBus::Events::CaptureCpuFrameTime, outputFilePath);
             };
 
             ScriptAutomationInterface::Get()->QueueScriptOperation(AZStd::move(operation));
@@ -310,7 +310,7 @@ namespace AZ::ScriptAutomation
                 scriptAutomationInterface->StartProfilingCapture();
                 scriptAutomationInterface->PauseAutomation();
 
-                AZ::Render::ProfilingCaptureRequestBus::Broadcast(&AZ::Render::ProfilingCaptureRequestBus::Events::CapturePassPipelineStatistics, outputFilePath);
+                JE::Render::Features::ProfilingCaptureRequestBus::Broadcast(&JE::Render::Features::ProfilingCaptureRequestBus::Events::CapturePassPipelineStatistics, outputFilePath);
             };
 
             ScriptAutomationInterface::Get()->QueueScriptOperation(AZStd::move(operation));
@@ -344,7 +344,7 @@ namespace AZ::ScriptAutomation
                 scriptAutomationInterface->StartProfilingCapture();
                 scriptAutomationInterface->PauseAutomation();
 
-                AZ::Render::ProfilingCaptureRequestBus::Broadcast(&AZ::Render::ProfilingCaptureRequestBus::Events::CaptureBenchmarkMetadata, benchmarkName, outputFilePath);
+                JE::Render::Features::ProfilingCaptureRequestBus::Broadcast(&JE::Render::Features::ProfilingCaptureRequestBus::Events::CaptureBenchmarkMetadata, benchmarkName, outputFilePath);
             };
 
             ScriptAutomationInterface::Get()->QueueScriptOperation(AZStd::move(operation));
@@ -405,9 +405,9 @@ namespace AZ::ScriptAutomation
 
         bool PrepareForScreenCapture(const AZStd::string& imageName)
         {
-            AZ::Render::FrameCapturePathOutcome pathOutcome;
-            AZ::Render::FrameCaptureTestRequestBus::BroadcastResult(
-                pathOutcome, &AZ::Render::FrameCaptureTestRequestBus::Events::BuildScreenshotFilePath, imageName, true);
+            JE::Render::Features::FrameCapturePathOutcome pathOutcome;
+            JE::Render::Features::FrameCaptureTestRequestBus::BroadcastResult(
+                pathOutcome, &JE::Render::Features::FrameCaptureTestRequestBus::Events::BuildScreenshotFilePath, imageName, true);
 
             if (!pathOutcome.IsSuccess())
             {
@@ -445,8 +445,8 @@ namespace AZ::ScriptAutomation
         {
             auto operation = [screenshotFolder]()
             {
-                AZ::Render::FrameCaptureTestRequestBus::Broadcast(
-                    &AZ::Render::FrameCaptureTestRequestBus::Events::SetScreenshotFolder, screenshotFolder);
+                JE::Render::Features::FrameCaptureTestRequestBus::Broadcast(
+                    &JE::Render::Features::FrameCaptureTestRequestBus::Events::SetScreenshotFolder, screenshotFolder);
             };
 
             ScriptAutomationInterface::Get()->QueueScriptOperation(AZStd::move(operation));
@@ -456,7 +456,7 @@ namespace AZ::ScriptAutomation
         {
             auto operation = [envPath]()
             {
-                AZ::Render::FrameCaptureTestRequestBus::Broadcast(&AZ::Render::FrameCaptureTestRequestBus::Events::SetTestEnvPath, envPath);
+                JE::Render::Features::FrameCaptureTestRequestBus::Broadcast(&JE::Render::Features::FrameCaptureTestRequestBus::Events::SetTestEnvPath, envPath);
             };
 
             ScriptAutomationInterface::Get()->QueueScriptOperation(AZStd::move(operation));
@@ -466,8 +466,8 @@ namespace AZ::ScriptAutomation
         {
             auto operation = [baselineFolder]()
             {
-                AZ::Render::FrameCaptureTestRequestBus::Broadcast(
-                    &AZ::Render::FrameCaptureTestRequestBus::Events::SetOfficialBaselineImageFolder, baselineFolder);
+                JE::Render::Features::FrameCaptureTestRequestBus::Broadcast(
+                    &JE::Render::Features::FrameCaptureTestRequestBus::Events::SetOfficialBaselineImageFolder, baselineFolder);
             };
 
             ScriptAutomationInterface::Get()->QueueScriptOperation(AZStd::move(operation));
@@ -477,8 +477,8 @@ namespace AZ::ScriptAutomation
         {
             auto operation = [baselineFolder]()
             {
-                AZ::Render::FrameCaptureTestRequestBus::Broadcast(
-                    &AZ::Render::FrameCaptureTestRequestBus::Events::SetLocalBaselineImageFolder, baselineFolder);
+                JE::Render::Features::FrameCaptureTestRequestBus::Broadcast(
+                    &JE::Render::Features::FrameCaptureTestRequestBus::Events::SetLocalBaselineImageFolder, baselineFolder);
             };
 
             ScriptAutomationInterface::Get()->QueueScriptOperation(AZStd::move(operation));
@@ -491,16 +491,16 @@ namespace AZ::ScriptAutomation
                 // Note this will pause the script until the capture is complete
                 if (PrepareForScreenCapture(imageName))
                 {
-                    AZ::Render::FrameCapturePathOutcome pathOutcome;
-                    AZ::Render::FrameCaptureTestRequestBus::BroadcastResult(
-                        pathOutcome, &AZ::Render::FrameCaptureTestRequestBus::Events::BuildScreenshotFilePath, imageName, true);
+                    JE::Render::Features::FrameCapturePathOutcome pathOutcome;
+                    JE::Render::Features::FrameCaptureTestRequestBus::BroadcastResult(
+                        pathOutcome, &JE::Render::Features::FrameCaptureTestRequestBus::Events::BuildScreenshotFilePath, imageName, true);
 
                     AZ_Assert(pathOutcome.IsSuccess(), "Path check should already be done in PrepareForScreenCapture().");
                     AZStd::string screenshotFilePath = pathOutcome.GetValue();
 
                     auto scriptAutomationInterface = ScriptAutomationInterface::Get();
-                    AZ::Render::FrameCaptureOutcome captureOutcome;
-                    AZ::Render::FrameCaptureRequestBus::BroadcastResult(captureOutcome, &AZ::Render::FrameCaptureRequestBus::Events::CaptureScreenshot, screenshotFilePath);
+                    JE::Render::Features::FrameCaptureOutcome captureOutcome;
+                    JE::Render::Features::FrameCaptureRequestBus::BroadcastResult(captureOutcome, &JE::Render::Features::FrameCaptureRequestBus::Events::CaptureScreenshot, screenshotFilePath);
 
                     AZ_Error("ScriptAutomation", captureOutcome.IsSuccess(),
                         "Frame capture initialization failed. %s", captureOutcome.GetError().m_errorMessage.c_str());
@@ -526,16 +526,16 @@ namespace AZ::ScriptAutomation
                 // Note this will pause the script until the capture is complete
                 if (PrepareForScreenCapture(imageName))
                 {
-                    AZ::Render::FrameCapturePathOutcome pathOutcome;
-                    AZ::Render::FrameCaptureTestRequestBus::BroadcastResult(
-                        pathOutcome, &AZ::Render::FrameCaptureTestRequestBus::Events::BuildScreenshotFilePath, imageName, true);
+                    JE::Render::Features::FrameCapturePathOutcome pathOutcome;
+                    JE::Render::Features::FrameCaptureTestRequestBus::BroadcastResult(
+                        pathOutcome, &JE::Render::Features::FrameCaptureTestRequestBus::Events::BuildScreenshotFilePath, imageName, true);
 
                     AZ_Assert(pathOutcome.IsSuccess(), "Path check should already be done in PrepareForScreenCapture().");
                     AZStd::string screenshotFilePath = pathOutcome.GetValue();
 
                     auto scriptAutomationInterface = ScriptAutomationInterface::Get();
-                    AZ::Render::FrameCaptureOutcome captureOutcome;
-                    AZ::Render::FrameCaptureRequestBus::BroadcastResult(captureOutcome, &AZ::Render::FrameCaptureRequestBus::Events::CaptureScreenshotWithPreview, screenshotFilePath);
+                    JE::Render::Features::FrameCaptureOutcome captureOutcome;
+                    JE::Render::Features::FrameCaptureRequestBus::BroadcastResult(captureOutcome, &JE::Render::Features::FrameCaptureRequestBus::Events::CaptureScreenshotWithPreview, screenshotFilePath);
 
                     AZ_Error("ScriptAutomation", captureOutcome.IsSuccess(),
                         "Frame capture initialization failed. %s", captureOutcome.GetError().m_errorMessage.c_str());
@@ -635,18 +635,18 @@ namespace AZ::ScriptAutomation
                 // Note this will pause the script until the capture is complete
                 if (PrepareForScreenCapture(imageName))
                 {
-                    AZ::Render::FrameCapturePathOutcome pathOutcome;
-                    AZ::Render::FrameCaptureTestRequestBus::BroadcastResult(
-                        pathOutcome, &AZ::Render::FrameCaptureTestRequestBus::Events::BuildScreenshotFilePath, imageName, true);
+                    JE::Render::Features::FrameCapturePathOutcome pathOutcome;
+                    JE::Render::Features::FrameCaptureTestRequestBus::BroadcastResult(
+                        pathOutcome, &JE::Render::Features::FrameCaptureTestRequestBus::Events::BuildScreenshotFilePath, imageName, true);
 
                     AZ_Assert(pathOutcome.IsSuccess(), "Path check should already be done in PrepareForScreenCapture().");
                     AZStd::string screenshotFilePath = pathOutcome.GetValue();
 
                     auto scriptAutomationInterface = ScriptAutomationInterface::Get();
-                    AZ::Render::FrameCaptureOutcome captureOutcome;
-                    AZ::Render::FrameCaptureRequestBus::BroadcastResult(
+                    JE::Render::Features::FrameCaptureOutcome captureOutcome;
+                    JE::Render::Features::FrameCaptureRequestBus::BroadcastResult(
                         captureOutcome,
-                        &AZ::Render::FrameCaptureRequestBus::Events::CapturePassAttachment,
+                        &JE::Render::Features::FrameCaptureRequestBus::Events::CapturePassAttachment,
                         screenshotFilePath,
                         passHierarchy,
                         slot,
@@ -684,10 +684,10 @@ namespace AZ::ScriptAutomation
                 AZStd::string resolvedPathA = ResolvePath(filePathA);
                 AZStd::string resolvedPathB = ResolvePath(filePathB);
 
-                AZ::Render::FrameCaptureComparisonOutcome compareOutcome;
-                AZ::Render::FrameCaptureTestRequestBus::BroadcastResult(
+                JE::Render::Features::FrameCaptureComparisonOutcome compareOutcome;
+                JE::Render::Features::FrameCaptureTestRequestBus::BroadcastResult(
                     compareOutcome,
-                    &AZ::Render::FrameCaptureTestRequestBus::Events::CompareScreenshots,
+                    &JE::Render::Features::FrameCaptureTestRequestBus::Events::CompareScreenshots,
                     resolvedPathA,
                     resolvedPathB,
                     minDiffFilter);
@@ -751,9 +751,9 @@ namespace AZ::ScriptAutomation
                 }
 
                 // build test image filepath
-                AZ::Render::FrameCapturePathOutcome pathOutcome;
-                AZ::Render::FrameCaptureTestRequestBus::BroadcastResult(
-                    pathOutcome, &AZ::Render::FrameCaptureTestRequestBus::Events::BuildScreenshotFilePath, imageName, true);
+                JE::Render::Features::FrameCapturePathOutcome pathOutcome;
+                JE::Render::Features::FrameCaptureTestRequestBus::BroadcastResult(
+                    pathOutcome, &JE::Render::Features::FrameCaptureTestRequestBus::Events::BuildScreenshotFilePath, imageName, true);
 
                 if (!pathOutcome.IsSuccess())
                 {
@@ -767,8 +767,8 @@ namespace AZ::ScriptAutomation
                 AZStd::string screenshotFilePath = pathOutcome.GetValue();
 
                 // build official comparison image filepath
-                AZ::Render::FrameCaptureTestRequestBus::BroadcastResult(
-                    pathOutcome, &AZ::Render::FrameCaptureTestRequestBus::Events::BuildOfficialBaselineFilePath, imageName, true);
+                JE::Render::Features::FrameCaptureTestRequestBus::BroadcastResult(
+                    pathOutcome, &JE::Render::Features::FrameCaptureTestRequestBus::Events::BuildOfficialBaselineFilePath, imageName, true);
 
                 if (!pathOutcome.IsSuccess())
                 {
@@ -782,10 +782,10 @@ namespace AZ::ScriptAutomation
                 AZStd::string baselineFilePath = pathOutcome.GetValue();
 
                 // compare test image against the official baseline
-                AZ::Render::FrameCaptureComparisonOutcome compareOutcome;
-                AZ::Render::FrameCaptureTestRequestBus::BroadcastResult(
+                JE::Render::Features::FrameCaptureComparisonOutcome compareOutcome;
+                JE::Render::Features::FrameCaptureTestRequestBus::BroadcastResult(
                     compareOutcome,
-                    &AZ::Render::FrameCaptureTestRequestBus::Events::CompareScreenshots,
+                    &JE::Render::Features::FrameCaptureTestRequestBus::Events::CompareScreenshots,
                     screenshotFilePath,
                     baselineFilePath,
                     minDiffFilter);

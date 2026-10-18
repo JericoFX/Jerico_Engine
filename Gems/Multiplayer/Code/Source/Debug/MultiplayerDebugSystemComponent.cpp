@@ -20,7 +20,7 @@
 #include <Multiplayer/MultiplayerConstants.h>
 #include <Multiplayer/MultiplayerPerformanceStats.h>
 #include <Multiplayer/MultiplayerMetrics.h>
-#include <Atom/Feature/ImGui/SystemBus.h>
+#include <JE/Render/Features/ImGui/SystemBus.h>
 #include <JE/Debug/ImGui/ImGuiContextScope.h>
 #include <imgui/imgui.h>
 #include <imgui/imgui_internal.h>

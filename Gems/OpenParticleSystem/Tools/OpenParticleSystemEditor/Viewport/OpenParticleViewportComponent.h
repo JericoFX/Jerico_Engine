@@ -9,8 +9,8 @@
 #pragma once
 
 #include <ACES/Aces.h>
-#include <Atom/Feature/Utils/LightingPreset.h>
-#include <Atom/Feature/Utils/ModelPreset.h>
+#include <JE/Render/Features/Utils/LightingPreset.h>
+#include <JE/Render/Features/Utils/ModelPreset.h>
 #include <AzCore/Component/Component.h>
 #include <AzFramework/Asset/AssetCatalogBus.h>
 #include <AzFramework/Application/Application.h>
@@ -52,11 +52,11 @@ namespace OpenParticleSystemEditor
         // OpenParticleViewportRequestBus::Handler overrides ...
         void ReloadContent() override;
 
-        AZ::Render::LightingPresetPtr AddLightingPreset(const AZ::Render::LightingPreset& preset) override;
+        JE::Render::Features::LightingPresetPtr AddLightingPreset(const JE::Render::Features::LightingPreset& preset) override;
         OpenParticleViewportPresetNameSet GetLightingPresets() const override;
-        AZ::Render::LightingPresetPtr GetLightingPresetByName(const AZStd::string& name) const override;
+        JE::Render::Features::LightingPresetPtr GetLightingPresetByName(const AZStd::string& name) const override;
         AZStd::string GetLightingPresetSelection() const override;
-        void SelectLightingPreset(AZ::Render::LightingPresetPtr preset) override;
+        void SelectLightingPreset(JE::Render::Features::LightingPresetPtr preset) override;
         void SelectLightingPresetByName(const AZStd::string& name) override;
 
         void SetGridEnabled(bool enable) override;
@@ -71,15 +71,15 @@ namespace OpenParticleSystemEditor
 
         void OnApplicationAboutToStop() override;
 
-        AZ::Render::LightingPresetPtrVector m_lightingPresetVector;
+        JE::Render::Features::LightingPresetPtrVector m_lightingPresetVector;
         OpenParticleViewportPresetNameSet m_lightingPresetNameSet;
-        AZ::Render::LightingPresetPtr m_lightingPresetSelection;
+        JE::Render::Features::LightingPresetPtr m_lightingPresetSelection;
         AZStd::string m_lightingPresetNameSelection;
 
-        AZ::Render::ModelPresetPtrVector m_modelPresetVector;
-        AZ::Render::ModelPresetPtr m_modelPresetSelection;
+        JE::Render::Features::ModelPresetPtrVector m_modelPresetVector;
+        JE::Render::Features::ModelPresetPtr m_modelPresetSelection;
 
-        mutable AZStd::map<AZStd::string, AZ::Render::LightingPresetPtr> m_lightingPresetDisplayNameMap;
+        mutable AZStd::map<AZStd::string, JE::Render::Features::LightingPresetPtr> m_lightingPresetDisplayNameMap;
 
         AZStd::intrusive_ptr<OpenParticleViewportSettings> m_viewportSettings;
     };

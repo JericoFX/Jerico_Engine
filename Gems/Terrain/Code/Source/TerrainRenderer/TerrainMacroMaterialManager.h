@@ -13,8 +13,8 @@
 #include <JE/Render/RPI/Public/Shader/ShaderResourceGroup.h>
 #include <JE/Render/RPI/Public/Base.h>
 
-#include <Atom/Feature/Utils/GpuBufferHandler.h>
-#include <Atom/Feature/Utils/SparseVector.h>
+#include <JE/Render/Features/Utils/GpuBufferHandler.h>
+#include <JE/Render/Features/Utils/SparseVector.h>
 
 #include <TerrainRenderer/TerrainMacroMaterialBus.h>
 #include <TerrainRenderer/Vector2i.h>
@@ -117,7 +117,7 @@ namespace Terrain
 
         // Macro materials stored in a grid of (MacroMaterialGridCount * MacroMaterialGridCount) where each tile in the grid covers
         // an area of (MacroMaterialGridSize * MacroMaterialGridSize) and each tile can hold MacroMaterialsPerTile macro materials
-        AZ::Render::SparseVector<MacroMaterialPriority> m_materialPriorityData; // Priority info about the macro material itself.
+        JE::Render::Features::SparseVector<MacroMaterialPriority> m_materialPriorityData; // Priority info about the macro material itself.
         AZStd::unordered_map<int, AZStd::vector<MacroMaterialShaderData>> m_materialShaderData; // Shader info about the macro material itself.
         AZStd::vector<TileMaterials> m_materialRefGridShaderData; // A grid of macro material references that covers the world.
 
@@ -126,8 +126,8 @@ namespace Terrain
         int32_t m_tiles1D{ 0 };
         ClipmapBounds m_macroMaterialTileBounds;
 
-        AZ::Render::GpuBufferHandler m_materialDataBuffer;
-        AZ::Render::GpuBufferHandler m_materialRefGridDataBuffer;
+        JE::Render::Features::GpuBufferHandler m_materialDataBuffer;
+        JE::Render::Features::GpuBufferHandler m_materialRefGridDataBuffer;
 
         AZ::RHI::ShaderInputNameIndex m_macroMaterialGridIndex = "m_macroMaterialGridInfo";
 

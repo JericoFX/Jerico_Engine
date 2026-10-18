@@ -29,9 +29,9 @@ namespace JE::Render::Scene
 
                 // Auto-gen behavior context...
 #define PARAM_EVENT_BUS RenderDebugRequestBus::Events
-#include <Atom/Feature/ParamMacros/StartParamBehaviorContext.inl>
-#include <Atom/Feature/Debug/RenderDebugParams.inl>
-#include <Atom/Feature/ParamMacros/EndParams.inl>
+#include <JE/Render/Features/ParamMacros/StartParamBehaviorContext.inl>
+#include <JE/Render/Features/Debug/RenderDebugParams.inl>
+#include <JE/Render/Features/ParamMacros/EndParams.inl>
 #undef PARAM_EVENT_BUS
 
                 ;
@@ -62,7 +62,7 @@ namespace JE::Render::Scene
     {
         m_entityId = entityId;
 
-        AZ::Render::RenderDebugFeatureProcessorInterface* fp = JE::Render::RPI::Scene::GetFeatureProcessorForEntity<AZ::Render::RenderDebugFeatureProcessorInterface>(m_entityId);
+        JE::Render::Features::RenderDebugFeatureProcessorInterface* fp = JE::Render::RPI::Scene::GetFeatureProcessorForEntity<JE::Render::Features::RenderDebugFeatureProcessorInterface>(m_entityId);
         if (fp)
         {
             m_renderDebugSettingsInterface = fp->GetSettingsInterface();
@@ -77,7 +77,7 @@ namespace JE::Render::Scene
 
     void RenderDebugComponentController::Deactivate()
     {
-        AZ::Render::RenderDebugFeatureProcessorInterface* fp = JE::Render::RPI::Scene::GetFeatureProcessorForEntity<AZ::Render::RenderDebugFeatureProcessorInterface>(m_entityId);
+        JE::Render::Features::RenderDebugFeatureProcessorInterface* fp = JE::Render::RPI::Scene::GetFeatureProcessorForEntity<JE::Render::Features::RenderDebugFeatureProcessorInterface>(m_entityId);
         if (fp)
         {
             fp->OnRenderDebugComponentRemoved();
@@ -146,8 +146,8 @@ namespace JE::Render::Scene
         }                                                                                           \
     }                                                                                               \
 
-#include <Atom/Feature/ParamMacros/MapAllCommon.inl>
-#include <Atom/Feature/Debug/RenderDebugParams.inl>
-#include <Atom/Feature/ParamMacros/EndParams.inl>
+#include <JE/Render/Features/ParamMacros/MapAllCommon.inl>
+#include <JE/Render/Features/Debug/RenderDebugParams.inl>
+#include <JE/Render/Features/ParamMacros/EndParams.inl>
 
 }

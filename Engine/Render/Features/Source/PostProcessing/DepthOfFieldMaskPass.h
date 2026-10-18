@@ -1,0 +1,57 @@
+/*
+ * Copyright (c) Contributors to the Open 3D Engine Project.
+ * For complete copyright and license terms please see the LICENSE at the root of this distribution.
+ *
+ * SPDX-License-Identifier: Apache-2.0 OR MIT
+ *
+ */
+#pragma once
+
+#include <JE/Render/RPI/Public/Pass/FullscreenTrianglePass.h>
+
+namespace JE::Render
+{
+    namespace Features
+    {
+        //! Pass used to prevent the foreground color to smear into the background blur.
+        class DepthOfFieldMaskPass final
+            : public JE::Render::RPI::FullscreenTrianglePass
+        {
+            AZ_RPI_PASS(DepthOfFieldMaskPass);
+
+        public:
+            AZ_RTTI_WITH_NAME(JE::Render::Features::DepthOfFieldMaskPass, "AZ::Render::DepthOfFieldMaskPass", "{37025565-2187-4841-8F17-FE90600BA884}", JE::Render::RPI::FullscreenTrianglePass);
+            AZ_CLASS_ALLOCATOR(DepthOfFieldMaskPass, AZ::SystemAllocator);
+            virtual ~DepthOfFieldMaskPass() = default;
+
+            //! Creates a DepthOfFieldMaskPass
+            static JE::Render::RPI::Ptr<DepthOfFieldMaskPass> Create(const JE::Render::RPI::PassDescriptor& descriptor);
+
+            // Set pass parameter interfaces...
+            void SetBlendFactor(const AZStd::array<float, 2>& blendFactor);
+            void SetRadiusMinMax(float min, float max);
+
+        protected:
+            // Pass behavior overrides...
+            void InitializeInternal() override;
+            void FrameBeginInternal(FramePrepareParams params) override;
+
+        private:
+            DepthOfFieldMaskPass(const JE::Render::RPI::PassDescriptor& descriptor);
+
+            // SRG binding indices...
+            AZ::RHI::ShaderInputNameIndex m_blendFactorIndex = "m_blendFactor";
+            AZ::RHI::ShaderInputNameIndex m_inputResolutionInverseIndex = "m_inputResolutionInverse";
+            AZ::RHI::ShaderInputNameIndex m_radiusMinIndex = "m_radiusMin";
+            AZ::RHI::ShaderInputNameIndex m_radiusMaxIndex = "m_radiusMax";
+
+            AZStd::array<float, 2> m_blendFactor = {{0.0f, 0.0f}};
+            AZStd::array<float, 2> m_inputResolutionInverse = {{0.0f, 0.0f}};
+            float m_radiusMin = 0.0f;
+            float m_radiusMax = 0.0f;
+            
+            // Scope producer functions...
+            void CompileResources(const AZ::RHI::FrameGraphCompileContext& context) override;
+        };
+    } // namespace Features
+} // namespace JE::Render

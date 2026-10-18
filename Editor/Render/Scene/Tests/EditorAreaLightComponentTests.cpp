@@ -6,7 +6,7 @@
  *
  */
 
-#include <Atom/Feature/CoreLights/CapsuleLightFeatureProcessorInterface.h>
+#include <JE/Render/Features/CoreLights/CapsuleLightFeatureProcessorInterface.h>
 #include <JE/Render/RPI/Public/Base.h>
 #include <JE/Render/RPI/Public/FeatureProcessorFactory.h>
 #include <JE/Render/RPI/Public/RPISystem.h>

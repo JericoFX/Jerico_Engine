@@ -40,7 +40,7 @@ if(PAL_TRAIT_BUILD_HOST_TOOLS)
                 Gem::LmbrCentral
                 Gem::Atom_RHI.Public
                 JE::RenderIntegration
-                Gem::Atom_Feature_Common.Public
+                JE::RenderFeatures
                 JE::RenderScene
                 Gem::EMotionFXStaticLib
     )
@@ -83,7 +83,7 @@ else()
                 Gem::LmbrCentral
                 Gem::Atom_RHI.Public
                 JE::RenderIntegration
-                Gem::Atom_Feature_Common.Public
+                JE::RenderFeatures
                 JE::RenderScene
                 Gem::EMotionFXStaticLib
     )

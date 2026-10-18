@@ -8,7 +8,7 @@
 
 #pragma once
 
-#include <Atom/Feature/Utils/FrameCaptureBus.h>
+#include <JE/Render/Features/Utils/FrameCaptureBus.h>
 #include <JE/Render/RPI/Public/Base.h>
 #include <JE/Render/RPI/Public/Pass/AttachmentReadback.h>
 #include <AtomToolsFramework/PreviewRenderer/PreviewContent.h>
@@ -51,7 +51,7 @@ namespace AtomToolsFramework
         void PoseContent();
 
         bool IsContentReadyToRender();
-        AZ::Render::FrameCaptureId StartCapture();
+        JE::Render::Features::FrameCaptureId StartCapture();
         void EndCapture();
 
     private:

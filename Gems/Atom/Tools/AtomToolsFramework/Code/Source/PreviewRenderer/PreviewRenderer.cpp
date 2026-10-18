@@ -6,7 +6,7 @@
  *
  */
 
-#include <Atom/Feature/Utils/FrameCaptureBus.h>
+#include <JE/Render/Features/Utils/FrameCaptureBus.h>
 #include <JE/Render/RPI/Public/Pass/Specific/RenderToTexturePass.h>
 #include <JE/Render/RPI/Public/RPISystemInterface.h>
 #include <JE/Render/RPI/Public/RenderPipeline.h>
@@ -144,7 +144,7 @@ namespace AtomToolsFramework
             m_captureRequestQueue.pop();
 
             bool canCapture = false;
-            AZ::Render::FrameCaptureRequestBus::BroadcastResult(canCapture, &AZ::Render::FrameCaptureRequestBus::Events::CanCapture);
+            JE::Render::Features::FrameCaptureRequestBus::BroadcastResult(canCapture, &JE::Render::Features::FrameCaptureRequestBus::Events::CanCapture);
 
             // if we're not on a device that can capture, immediately trigger the "failed" state.
             if (!canCapture)
@@ -214,7 +214,7 @@ namespace AtomToolsFramework
         return m_currentCaptureRequest.m_content->IsReadyToRender();
     }
 
-    AZ::Render::FrameCaptureId PreviewRenderer::StartCapture()
+    JE::Render::Features::FrameCaptureId PreviewRenderer::StartCapture()
     {
         auto captureCompleteCallback = m_currentCaptureRequest.m_captureCompleteCallback;
         auto captureFailedCallback = m_currentCaptureRequest.m_captureFailedCallback;
@@ -248,10 +248,10 @@ namespace AtomToolsFramework
 
         m_renderPipeline->AddToRenderTickOnce();
 
-        AZ::Render::FrameCaptureOutcome captureOutcome;
-        AZ::Render::FrameCaptureRequestBus::BroadcastResult(
+        JE::Render::Features::FrameCaptureOutcome captureOutcome;
+        JE::Render::Features::FrameCaptureRequestBus::BroadcastResult(
             captureOutcome,
-            &AZ::Render::FrameCaptureRequestBus::Events::CapturePassAttachmentWithCallback,
+            &JE::Render::Features::FrameCaptureRequestBus::Events::CapturePassAttachmentWithCallback,
             captureCallback,
             m_passHierarchy,
             AZStd::string("Output"), JE::Render::RPI::PassAttachmentReadbackOption::Output);
@@ -259,8 +259,8 @@ namespace AtomToolsFramework
         AZ_Error("PreviewRenderer", captureOutcome.IsSuccess(),
             "Frame capture initialization failed. %s", captureOutcome.GetError().m_errorMessage.c_str());
 
-        AZ::Render::FrameCaptureId frameCaptureId = captureOutcome.IsSuccess() ?
-            captureOutcome.GetValue() : AZ::Render::InvalidFrameCaptureId;
+        JE::Render::Features::FrameCaptureId frameCaptureId = captureOutcome.IsSuccess() ?
+            captureOutcome.GetValue() : JE::Render::Features::InvalidFrameCaptureId;
 
         return frameCaptureId;
     }

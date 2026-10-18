@@ -6,8 +6,8 @@
  *
  */
 
-#include <Atom/Feature/Utils/LightingPreset.h>
-#include <Atom/Feature/Utils/ModelPreset.h>
+#include <JE/Render/Features/Utils/LightingPreset.h>
+#include <JE/Render/Features/Utils/ModelPreset.h>
 #include <JE/Editor/Render/RPI/Edit/Common/AssetUtils.h>
 #include <JE/Render/RPI/Reflect/System/AnyAsset.h>
 #include <AtomToolsFramework/EntityPreviewViewport/EntityPreviewViewportSettingsInspector.h>
@@ -40,7 +40,7 @@ namespace AtomToolsFramework
             "/O3DE/AtomToolsFramework/EntityPreviewViewportSettingsInspector/AssetSelectionGrid/ModelItemSize", 128));
 
         m_modelPresetDialog.reset(new AssetSelectionGrid("Model Preset Browser", [](const AZStd::string& path) {
-            return path.ends_with(AZ::Render::ModelPreset::Extension);
+            return path.ends_with(JE::Render::Features::ModelPreset::Extension);
         }, QSize(modelPresetDialogItemSize, modelPresetDialogItemSize), GetToolMainWindow()));
 
         // Pre create the lighting preset dialog so that it is not repopulated every time it's opened.
@@ -48,7 +48,7 @@ namespace AtomToolsFramework
             "/O3DE/AtomToolsFramework/EntityPreviewViewportSettingsInspector/AssetSelectionGrid/LightingItemSize", 128));
 
         m_lightingPresetDialog.reset(new AssetSelectionGrid("Lighting Preset Browser", [](const AZStd::string& path) {
-            return path.ends_with(AZ::Render::LightingPreset::Extension);
+            return path.ends_with(JE::Render::Features::LightingPreset::Extension);
         }, QSize(lightingPresetDialogItemSize, lightingPresetDialogItemSize), GetToolMainWindow()));
 
         // Prepopulating preset selection widgets with previously registered presets.
@@ -157,11 +157,11 @@ namespace AtomToolsFramework
     void EntityPreviewViewportSettingsInspector::CreateModelPreset()
     {
         const AZStd::string savePath =
-            GetSaveFilePathFromDialog({}, { { "Model Preset", AZ::Render::ModelPreset::Extension } }, "Model Preset");
+            GetSaveFilePathFromDialog({}, { { "Model Preset", JE::Render::Features::ModelPreset::Extension } }, "Model Preset");
         if (!savePath.empty())
         {
             EntityPreviewViewportSettingsRequestBus::Event(
-                m_toolId, &EntityPreviewViewportSettingsRequestBus::Events::SetModelPreset, AZ::Render::ModelPreset());
+                m_toolId, &EntityPreviewViewportSettingsRequestBus::Events::SetModelPreset, JE::Render::Features::ModelPreset());
             EntityPreviewViewportSettingsRequestBus::Event(
                 m_toolId, &EntityPreviewViewportSettingsRequestBus::Events::SaveModelPreset, savePath);
             OnViewportSettingsChanged();
@@ -191,7 +191,7 @@ namespace AtomToolsFramework
             defaultPath, m_toolId, &EntityPreviewViewportSettingsRequestBus::Events::GetLastModelPresetPath);
 
         const AZStd::string savePath =
-            GetSaveFilePathFromDialog(defaultPath, { { "Model Preset", AZ::Render::ModelPreset::Extension } }, "Model Preset");
+            GetSaveFilePathFromDialog(defaultPath, { { "Model Preset", JE::Render::Features::ModelPreset::Extension } }, "Model Preset");
         if (!savePath.empty())
         {
             EntityPreviewViewportSettingsRequestBus::Event(
@@ -237,11 +237,11 @@ namespace AtomToolsFramework
     void EntityPreviewViewportSettingsInspector::CreateLightingPreset()
     {
         const AZStd::string savePath =
-            GetSaveFilePathFromDialog({}, { { "Lighting Preset", AZ::Render::LightingPreset::Extension } }, "Lighting Preset");
+            GetSaveFilePathFromDialog({}, { { "Lighting Preset", JE::Render::Features::LightingPreset::Extension } }, "Lighting Preset");
         if (!savePath.empty())
         {
             EntityPreviewViewportSettingsRequestBus::Event(
-                m_toolId, &EntityPreviewViewportSettingsRequestBus::Events::SetLightingPreset, AZ::Render::LightingPreset());
+                m_toolId, &EntityPreviewViewportSettingsRequestBus::Events::SetLightingPreset, JE::Render::Features::LightingPreset());
             EntityPreviewViewportSettingsRequestBus::Event(
                 m_toolId, &EntityPreviewViewportSettingsRequestBus::Events::SaveLightingPreset, savePath);
             OnViewportSettingsChanged();
@@ -271,7 +271,7 @@ namespace AtomToolsFramework
             defaultPath, m_toolId, &EntityPreviewViewportSettingsRequestBus::Events::GetLastLightingPresetPath);
 
         const AZStd::string savePath =
-            GetSaveFilePathFromDialog(defaultPath, { { "Lighting Preset", AZ::Render::LightingPreset::Extension } }, "Lighting Preset");
+            GetSaveFilePathFromDialog(defaultPath, { { "Lighting Preset", JE::Render::Features::LightingPreset::Extension } }, "Lighting Preset");
         if (!savePath.empty())
         {
             EntityPreviewViewportSettingsRequestBus::Event(

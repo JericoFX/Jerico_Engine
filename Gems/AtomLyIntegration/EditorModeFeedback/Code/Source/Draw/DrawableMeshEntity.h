@@ -38,11 +38,11 @@ namespace AZ::Render
         JE::Render::RPI::ModelLodIndex GetModelLodIndex(const JE::Render::RPI::ViewPtr view, Data::Instance<JE::Render::RPI::Model> model) const;
 
         // MeshHandleStateNotificationBus overrides ...
-        void OnMeshHandleSet(const MeshFeatureProcessorInterface::MeshHandle* meshHandle) override;
+        void OnMeshHandleSet(const JE::Render::Features::MeshFeatureProcessorInterface::MeshHandle* meshHandle) override;
 
         //! Builds the entity's drawable mesh data from scratch, overwriting any existing data.
         void CreateOrUpdateMeshDrawPackets(
-            const MeshFeatureProcessorInterface* featureProcessor,
+            const JE::Render::Features::MeshFeatureProcessorInterface* featureProcessor,
             const JE::Render::RPI::ModelLodIndex modelLodIndex,
             Data::Instance<JE::Render::RPI::Model> model);
 
@@ -55,10 +55,10 @@ namespace AZ::Render
 
         // Creates the mask shader resource group for the Atom mesh.
         Data::Instance<JE::Render::RPI::ShaderResourceGroup> CreateMaskShaderResourceGroup(
-            const MeshFeatureProcessorInterface* featureProcessor) const;
+            const JE::Render::Features::MeshFeatureProcessorInterface* featureProcessor) const;
 
         EntityId m_entityId;
-        const MeshFeatureProcessorInterface::MeshHandle* m_meshHandle = nullptr;
+        const JE::Render::Features::MeshFeatureProcessorInterface::MeshHandle* m_meshHandle = nullptr;
         Data::Instance<JE::Render::RPI::Material> m_maskMaterial = nullptr;
         Name m_drawList;
         JE::Render::RPI::ModelLodIndex m_modelLodIndex = JE::Render::RPI::ModelLodIndex::Null;

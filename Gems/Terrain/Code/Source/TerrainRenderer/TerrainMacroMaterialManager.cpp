@@ -88,19 +88,19 @@ namespace Terrain
     {
         const AZ::RHI::ShaderResourceGroupLayout* terrainSrgLayout = terrainSrg->GetLayout();
         
-        AZ::Render::GpuBufferHandler::Descriptor desc;
+        JE::Render::Features::GpuBufferHandler::Descriptor desc;
         desc.m_srgLayout = terrainSrgLayout;
 
         // Set up the gpu buffer for macro material data
         desc.m_bufferName = "Macro Material Data";
         desc.m_bufferSrgName = TerrainSrgInputs::MacroMaterialData;
         desc.m_elementSize = sizeof(MacroMaterialShaderData);
-        m_materialDataBuffer = AZ::Render::GpuBufferHandler(desc);
+        m_materialDataBuffer = JE::Render::Features::GpuBufferHandler(desc);
 
         desc.m_bufferName = "Macro Material Ref Grid";
         desc.m_bufferSrgName = TerrainSrgInputs::MacroMaterialGridRefs;
         desc.m_elementSize = sizeof(TileMaterials);
-        m_materialRefGridDataBuffer = AZ::Render::GpuBufferHandler(desc);
+        m_materialRefGridDataBuffer = JE::Render::Features::GpuBufferHandler(desc);
 
         m_bufferNeedsUpdate = true;
 

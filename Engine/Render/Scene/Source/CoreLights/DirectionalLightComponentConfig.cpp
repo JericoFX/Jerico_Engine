@@ -6,7 +6,7 @@
  *
  */
 
-#include <Atom/Feature/CoreLights/PhotometricValue.h>
+#include <JE/Render/Features/CoreLights/PhotometricValue.h>
 #include <JE/Render/Scene/CoreLights/DirectionalLightComponentConfig.h>
 #include <AzCore/Serialization/SerializeContext.h>
 #include <AzCore/Serialization/EditContext.h>
@@ -55,16 +55,16 @@ namespace JE::Render
 
         const char* DirectionalLightComponentConfig::GetIntensitySuffix() const
         {
-            return AZ::Render::PhotometricValue::GetTypeSuffix(m_intensityMode);
+            return JE::Render::Features::PhotometricValue::GetTypeSuffix(m_intensityMode);
         }
 
         float DirectionalLightComponentConfig::GetIntensityMin() const
         {
             switch (m_intensityMode)
             {
-            case AZ::Render::PhotometricUnit::Lux:
+            case JE::Render::Features::PhotometricUnit::Lux:
                 return 0.0f;
-            case AZ::Render::PhotometricUnit::Ev100Illuminance:
+            case JE::Render::Features::PhotometricUnit::Ev100Illuminance:
                 return AZStd::numeric_limits<float>::lowest();
             }
             return 0.0f;
@@ -80,9 +80,9 @@ namespace JE::Render
         {
             switch (m_intensityMode)
             {
-            case AZ::Render::PhotometricUnit::Lux:
+            case JE::Render::Features::PhotometricUnit::Lux:
                 return 0.0f;
-            case AZ::Render::PhotometricUnit::Ev100Illuminance:
+            case JE::Render::Features::PhotometricUnit::Ev100Illuminance:
                 return -4.0f;
             }
             return 0.0f;
@@ -92,9 +92,9 @@ namespace JE::Render
         {
             switch (m_intensityMode)
             {
-            case AZ::Render::PhotometricUnit::Lux:
+            case JE::Render::Features::PhotometricUnit::Lux:
                 return 200'000.0f;
-            case AZ::Render::PhotometricUnit::Ev100Illuminance:
+            case JE::Render::Features::PhotometricUnit::Ev100Illuminance:
                 return 16.0f;
             }
             return 0.0f;
@@ -122,24 +122,24 @@ namespace JE::Render
 
         bool DirectionalLightComponentConfig::IsShadowFilteringDisabled() const
         {
-            return (!m_shadowEnabled || m_shadowFilterMethod == AZ::Render::ShadowFilterMethod::None);
+            return (!m_shadowEnabled || m_shadowFilterMethod == JE::Render::Features::ShadowFilterMethod::None);
         }
 
         bool DirectionalLightComponentConfig::IsShadowPcfDisabled() const
         {
-            return !m_shadowEnabled || m_shadowFilterMethod != AZ::Render::ShadowFilterMethod::Pcf;
+            return !m_shadowEnabled || m_shadowFilterMethod != JE::Render::Features::ShadowFilterMethod::Pcf;
         }
 
         bool DirectionalLightComponentConfig::IsEsmDisabled() const
         {
-            return !m_shadowEnabled || (m_shadowFilterMethod != AZ::Render::ShadowFilterMethod::Esm && m_shadowFilterMethod != AZ::Render::ShadowFilterMethod::EsmPcf);
+            return !m_shadowEnabled || (m_shadowFilterMethod != JE::Render::Features::ShadowFilterMethod::Esm && m_shadowFilterMethod != JE::Render::Features::ShadowFilterMethod::EsmPcf);
         }
 
         AZ::Crc32 DirectionalLightComponentConfig::UpdateCascadeFarDepths()
         {
             if (IsSplitAutomatic())
             {
-                for (uint32_t i = 0; i < AZ::Render::Shadow::MaxNumberOfCascades; ++i)
+                for (uint32_t i = 0; i < JE::Render::Features::Shadow::MaxNumberOfCascades; ++i)
                 {
                     m_cascadeFarDepths.SetElement(
                         i, i < m_cascadeCount ? m_shadowFarClipDistance * (i + 1) / m_cascadeCount : m_shadowFarClipDistance);

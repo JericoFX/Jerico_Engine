@@ -69,7 +69,7 @@ namespace JE::Render
         {
             m_entityId = entityId;
 
-            m_featureProcessor = JE::Render::RPI::Scene::GetFeatureProcessorForEntity<AZ::Render::ImageBasedLightFeatureProcessorInterface>(m_entityId);
+            m_featureProcessor = JE::Render::RPI::Scene::GetFeatureProcessorForEntity<JE::Render::Features::ImageBasedLightFeatureProcessorInterface>(m_entityId);
             AZ_Error("ImageBasedLightComponentController", m_featureProcessor, "Unable to find a ImageBasedLightFeatureProcessorInterface on this entity's scene.");
 
             if (m_featureProcessor)

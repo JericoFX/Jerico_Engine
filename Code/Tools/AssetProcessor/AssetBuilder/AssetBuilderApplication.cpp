@@ -7,12 +7,14 @@
  */
 
 #include <AzCore/Debug/Trace.h>
+#include <AzCore/Module/ModuleManagerBus.h>
 #include <JE/Geometry/GeometryModule.h>
 #include <JE/Editor/Camera/CameraModule.h>
 #include <JE/World/Camera/Debug/DebugCameraModule.h>
 #include <JE/Editor/RenderIntegration/AssetProcessingModule.h>
 #include <JE/Editor/RenderIntegration/RenderIntegrationModule.h>
 #include <JE/Editor/Render/Scene/SceneModule.h>
+#include <JE/Editor/Render/Features/FeatureModule.h>
 #include <JE/Render/Integration/RenderIntegrationModule.h>
 #include <JE/Assets/Prefab/PrefabBuilderModule.h>
 #include <JE/Assets/RenderBuilders/RenderAssetBuildersModule.h>
@@ -133,13 +135,9 @@ void AssetBuilderApplication::CreateStaticModules(AZStd::vector<AZ::Module*>& ou
     outModules.emplace_back(JE::Geometry::CreateAuthoringModule());
     outModules.emplace_back(JE::Editor::Camera::CreateAuthoringModule());
     outModules.emplace_back(JE::World::Camera::Debug::CreateDebugModule());
-    outModules.emplace_back(JE::Editor::RenderIntegration::CreateRpiEditorModule());
-    outModules.emplace_back(JE::Editor::Render::Scene::CreateModule());
     outModules.emplace_back(JE::Render::Integration::CreateBootstrapModule(false));
     outModules.emplace_back(JE::Editor::RenderIntegration::CreateAssetProcessingModule());
     outModules.emplace_back(JE::Assets::Prefab::CreateToolsModule());
-    outModules.emplace_back(JE::Assets::RenderBuilders::CreateToolsModule());
-    outModules.emplace_back(JE::Assets::RenderBuilders::CreateShaderCompilerToolsModule());
     outModules.emplace_back(JE::Debug::CreateToolsModule());
     outModules.emplace_back(JE::Debug::Profiler::CreateCaptureModule());
 }
@@ -204,9 +202,85 @@ void AssetBuilderApplication::StartCommon(AZ::Entity* systemEntity)
         }
     }
 
+    // Builders need native render reflection without activating renderer modules or an RHI backend.
+    // Reflect native presets before dynamic tools consume them; keep required-component contracts intact.
+    if (!systemEntity || systemEntity->GetState() != AZ::Entity::State::Active)
+    {
+        AZ_Error("AssetBuilder", false, "Native render descriptor registration requires an active system entity.");
+        ExitMainLoop();
+        return;
+    }
+
+    AZ::ModuleManagerRequests::LoadModulesResult renderModules;
+    AZ::ModuleManagerRequestBus::BroadcastResult(
+        renderModules, &AZ::ModuleManagerRequests::LoadStaticModules,
+        [](AZStd::vector<AZ::Module*>& modules)
+        {
+            modules.emplace_back(JE::Editor::RenderIntegration::CreateRpiEditorModule());
+            modules.emplace_back(JE::Editor::Render::Scene::CreateModule());
+            modules.emplace_back(JE::Editor::Render::Features::CreateModule());
+        },
+        AZ::ModuleInitializationSteps::RegisterComponentDescriptors);
+
+    if (renderModules.size() != 3)
+    {
+        AZ_Error("AssetBuilder", false, "Failed to register the three native render modules.");
+        ExitMainLoop();
+        return;
+    }
+    for (const auto& moduleResult : renderModules)
+    {
+        if (!moduleResult.IsSuccess())
+        {
+            AZ_Error("AssetBuilder", false, "%s", moduleResult.GetError().c_str());
+            ExitMainLoop();
+            return;
+        }
+        if (moduleResult.GetValue()->GetEntity() != nullptr)
+        {
+            AZ_Error("AssetBuilder", false, "Native render descriptor-only module unexpectedly created an entity.");
+            ExitMainLoop();
+            return;
+        }
+    }
+
     // Loads dynamic modules and registers any component descriptors populated into the AZ::Module m_descriptor list
     // for each instantiated module class
     LoadDynamicModules();
+
+    // RHI types are now reflected. Register builders without a module entity;
+    // InitializeBuilderComponents activates their AssetBuilder-tagged components exactly once.
+    AZ::ModuleManagerRequests::LoadModulesResult builderModules;
+    AZ::ModuleManagerRequestBus::BroadcastResult(
+        builderModules, &AZ::ModuleManagerRequests::LoadStaticModules,
+        [](AZStd::vector<AZ::Module*>& modules)
+        {
+            modules.emplace_back(JE::Assets::RenderBuilders::CreateToolsModule());
+            modules.emplace_back(JE::Assets::RenderBuilders::CreateShaderCompilerToolsModule());
+        },
+        AZ::ModuleInitializationSteps::RegisterComponentDescriptors);
+
+    if (builderModules.size() != 2)
+    {
+        AZ_Error("AssetBuilder", false, "Failed to register the two native builder modules.");
+        ExitMainLoop();
+        return;
+    }
+    for (const auto& moduleResult : builderModules)
+    {
+        if (!moduleResult.IsSuccess())
+        {
+            AZ_Error("AssetBuilder", false, "%s", moduleResult.GetError().c_str());
+            ExitMainLoop();
+            return;
+        }
+        if (moduleResult.GetValue()->GetEntity() != nullptr)
+        {
+            AZ_Error("AssetBuilder", false, "Native builder descriptor-only module unexpectedly created an entity.");
+            ExitMainLoop();
+            return;
+        }
+    }
 
     AssetBuilderSDK::InitializeSerializationContext();
     AssetBuilderSDK::InitializeBehaviorContext();

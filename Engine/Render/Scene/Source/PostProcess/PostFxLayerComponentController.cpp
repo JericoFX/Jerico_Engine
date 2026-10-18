@@ -37,9 +37,9 @@ namespace JE::Render
 
                     // Auto-gen behavior context...
 #define PARAM_EVENT_BUS PostFxLayerRequestBus::Events
-#include <Atom/Feature/ParamMacros/StartParamBehaviorContext.inl>
-#include <Atom/Feature/PostProcess/PostProcessParams.inl>
-#include <Atom/Feature/ParamMacros/EndParams.inl>
+#include <JE/Render/Features/ParamMacros/StartParamBehaviorContext.inl>
+#include <JE/Render/Features/PostProcess/PostProcessParams.inl>
+#include <JE/Render/Features/ParamMacros/EndParams.inl>
 #undef PARAM_EVENT_BUS
 
                     ;
@@ -96,7 +96,7 @@ namespace JE::Render
             }
 
             // calculate blend weights for all cameras
-            AZ::Render::PostProcessSettingsInterface::ViewBlendWeightMap perViewBlendWeights;
+            JE::Render::Features::PostProcessSettingsInterface::ViewBlendWeightMap perViewBlendWeights;
             for (auto view : allSceneViews)
             {
                 if (view)
@@ -245,7 +245,7 @@ namespace JE::Render
         {
             m_entityId = entityId;
 
-            m_featureProcessorInterface = JE::Render::RPI::Scene::GetFeatureProcessorForEntity<AZ::Render::PostProcessFeatureProcessorInterface>(m_entityId);
+            m_featureProcessorInterface = JE::Render::RPI::Scene::GetFeatureProcessorForEntity<JE::Render::Features::PostProcessFeatureProcessorInterface>(m_entityId);
             if (m_featureProcessorInterface)
             {
                 m_postProcessInterface = m_featureProcessorInterface->GetOrCreateSettingsInterface(m_entityId);
@@ -334,8 +334,8 @@ namespace JE::Render
             }                                                                                                   \
         }                                                                                                       \
 
-#include <Atom/Feature/ParamMacros/MapAllCommon.inl>
-#include <Atom/Feature/PostProcess/PostProcessParams.inl>
-#include <Atom/Feature/ParamMacros/EndParams.inl>
+#include <JE/Render/Features/ParamMacros/MapAllCommon.inl>
+#include <JE/Render/Features/PostProcess/PostProcessParams.inl>
+#include <JE/Render/Features/ParamMacros/EndParams.inl>
     } // namespace Render
 } // namespace AZ

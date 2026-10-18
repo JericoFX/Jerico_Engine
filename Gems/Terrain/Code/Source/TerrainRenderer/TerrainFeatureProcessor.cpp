@@ -21,7 +21,7 @@
 #include <JE/Render/RPI/Public/Pass/PassSystemInterface.h>
 #include <JE/Render/RPI/Public/Pass/RasterPass.h>
 #include <JE/Render/RPI/Public/RenderPipeline.h>
-#include <Atom/Feature/RenderCommon.h>
+#include <JE/Render/Features/RenderCommon.h>
 
 #include <SurfaceData/SurfaceDataSystemRequestBus.h>
 

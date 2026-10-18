@@ -1,5 +1,5 @@
 {
-    "materialType": "@gemroot:Atom_Feature_Common@/Assets/Materials/Types/StandardPBR.materialtype",
+    "materialType": "@engroot@/Engine/Render/Features/Assets/Materials/Types/StandardPBR.materialtype",
     "materialTypeVersion": 5,
     "propertyValues": {
         "baseColor.color": [
@@ -8,7 +8,7 @@
             0.11703670024871826,
             1.0
         ],
-        "baseColor.textureMap": "@gemroot:Atom_Feature_Common@/Assets/Textures/Default/default_basecolor.tif",
+        "baseColor.textureMap": "@engroot@/Engine/Render/Features/Assets/Textures/Default/default_basecolor.tif",
         "opacity.alphaSource": "Split",
         "opacity.factor": 0.75,
         "opacity.mode": "TintedTransparent",

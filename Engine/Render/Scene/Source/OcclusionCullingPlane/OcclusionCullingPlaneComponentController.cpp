@@ -89,7 +89,7 @@ namespace JE::Render
 
             AZ::TransformNotificationBus::Handler::BusConnect(m_entityId);
 
-            m_featureProcessor = JE::Render::RPI::Scene::GetFeatureProcessorForEntity<AZ::Render::OcclusionCullingPlaneFeatureProcessorInterface>(entityId);
+            m_featureProcessor = JE::Render::RPI::Scene::GetFeatureProcessorForEntity<JE::Render::Features::OcclusionCullingPlaneFeatureProcessorInterface>(entityId);
             AZ_Assert(m_featureProcessor, "OcclusionCullingPlaneComponentController was unable to find a OcclusionCullingPlaneFeatureProcessor on the EntityContext provided.");
 
             m_transformInterface = AZ::TransformBus::FindFirstHandler(entityId);

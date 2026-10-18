@@ -11,7 +11,7 @@
 #include <AzCore/base.h>
 #include <AzCore/std/containers/array.h>
 #include <AzFramework/Terrain/TerrainDataRequestBus.h>
-#include <Atom/Feature/Utils/GpuBufferHandler.h>
+#include <JE/Render/Features/Utils/GpuBufferHandler.h>
 #include <Atom/RHI/FrameGraphAttachmentInterface.h>
 #include <Atom/RHI/FrameGraphInterface.h>
 #include <JE/Render/RPI/Public/Image/AttachmentImage.h>
@@ -318,8 +318,8 @@ namespace Terrain
         AZStd::vector<ClipmapBounds> m_detailClipmapBounds;
 
         //! GPU buffer containing the region aabbs to be updated during this frame.
-        AZ::Render::GpuBufferHandler m_macroClipmapUpdateRegionsBuffer;
-        AZ::Render::GpuBufferHandler m_detailClipmapUpdateRegionsBuffer;
+        JE::Render::Features::GpuBufferHandler m_macroClipmapUpdateRegionsBuffer;
+        JE::Render::Features::GpuBufferHandler m_detailClipmapUpdateRegionsBuffer;
 
         struct ClipmapUpdateRegion
         {

@@ -19,7 +19,7 @@
 #include <MCore/Source/DualQuaternion.h>
 
 // For creating a skinned mesh from an actor
-#include <Atom/Feature/SkinnedMesh/SkinnedMeshInputBuffers.h>
+#include <JE/Render/Features/SkinnedMesh/SkinnedMeshInputBuffers.h>
 #include <JE/Render/RPI/Reflect/ResourcePoolAssetCreator.h>
 #include <JE/Render/RPI/Reflect/Buffer/BufferAssetCreator.h>
 #include <JE/Render/RPI/Reflect/Material/MaterialAsset.h>
@@ -52,7 +52,7 @@ namespace AZ
     {
         static bool IsVertexCountWithinSupportedRange(size_t vertexOffset, size_t vertexCount)
         {
-            return vertexOffset + vertexCount <= aznumeric_cast<size_t>(SkinnedMeshVertexStreamPropertyInterface::Get()->GetMaxSupportedVertexCount());
+            return vertexOffset + vertexCount <= aznumeric_cast<size_t>(JE::Render::Features::SkinnedMeshVertexStreamPropertyInterface::Get()->GetMaxSupportedVertexCount());
         }
 
         static void ProcessSkinInfluences(
@@ -120,7 +120,7 @@ namespace AZ
             uint32_t lodIndex,
             const EMotionFX::Actor* actor,
             const AZStd::string& fullFileName,
-            AZStd::intrusive_ptr<SkinnedMeshInputBuffers> skinnedMeshInputBuffers)
+            AZStd::intrusive_ptr<JE::Render::Features::SkinnedMeshInputBuffers> skinnedMeshInputBuffers)
         {
             EMotionFX::MorphSetup* morphSetup = actor->GetMorphSetup(lodIndex);
             if (morphSetup)
@@ -165,7 +165,7 @@ namespace AZ
             }
         }
 
-        AZStd::intrusive_ptr<SkinnedMeshInputBuffers> CreateSkinnedMeshInputFromActor(const Data::AssetId& actorAssetId, const EMotionFX::Actor* actor)
+        AZStd::intrusive_ptr<JE::Render::Features::SkinnedMeshInputBuffers> CreateSkinnedMeshInputFromActor(const Data::AssetId& actorAssetId, const EMotionFX::Actor* actor)
         {
 
             Data::Asset<JE::Render::RPI::ModelAsset> modelAsset = actor->GetMeshAsset();
@@ -176,7 +176,7 @@ namespace AZ
                 return nullptr;
             }
 
-            AZStd::intrusive_ptr<SkinnedMeshInputBuffers> skinnedMeshInputBuffers = aznew SkinnedMeshInputBuffers;
+            AZStd::intrusive_ptr<JE::Render::Features::SkinnedMeshInputBuffers> skinnedMeshInputBuffers = aznew JE::Render::Features::SkinnedMeshInputBuffers;
             skinnedMeshInputBuffers->CreateFromModelAsset(modelAsset);
 
             // Get the fileName, which will be used to label the buffers

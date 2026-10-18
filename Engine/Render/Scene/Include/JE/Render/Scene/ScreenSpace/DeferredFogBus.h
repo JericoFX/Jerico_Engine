@@ -9,7 +9,7 @@
 #pragma once
 
 #include <AzCore/Component/Component.h>
-#include <Atom/Feature/ScreenSpace/DeferredFogSettingsInterface.h>
+#include <JE/Render/Features/ScreenSpace/DeferredFogSettingsInterface.h>
 
 namespace JE::Render
 {
@@ -30,9 +30,9 @@ namespace JE::Render
         virtual ValueType Get##Name() const = 0;                                                        \
         virtual void Set##Name(ValueType val) = 0;                                                      \
 
-#include <Atom/Feature/ParamMacros/MapParamCommon.inl>
-#include <Atom/Feature/ScreenSpace/DeferredFogParams.inl>
-#include <Atom/Feature/ParamMacros/EndParams.inl>
+#include <JE/Render/Features/ParamMacros/MapParamCommon.inl>
+#include <JE/Render/Features/ScreenSpace/DeferredFogParams.inl>
+#include <JE/Render/Features/ParamMacros/EndParams.inl>
         };
 
         typedef AZ::EBus<DeferredFogRequests> DeferredFogRequestsBus;

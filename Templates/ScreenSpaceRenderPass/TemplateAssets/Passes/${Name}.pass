@@ -22,7 +22,7 @@
         "",
         "EFFECT MODEL : sample-and-transform (owned output) ----------------",
         "    This template uses the canonical sample model, matching the engine's",
-        "    Gems/Atom/Feature/Common/Assets/Passes/ConvertToAcescg.pass:",
+        "    Engine/Render/Features/Assets/Passes/ConvertToAcescg.pass:",
         "      * InputColor  (Input, Shader)        - sampled in the pixel shader",
         "                                             as PassSrg::m_framebuffer.",
         "      * OutputColor (Output, RenderTarget) - written by the shader. It is",

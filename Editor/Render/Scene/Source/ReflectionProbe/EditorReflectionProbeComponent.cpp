@@ -196,11 +196,11 @@ namespace JE::Editor::Render
             {
                 AZStd::string cubeMapRelativePath = m_controller.m_configuration.m_bakedCubeMapRelativePath + ".streamingimage";
                 AZ::Data::Asset<JE::Render::RPI::StreamingImageAsset> cubeMapAsset;
-                AZ::Render::CubeMapAssetNotificationType notificationType = AZ::Render::CubeMapAssetNotificationType::None;
+                JE::Render::Features::CubeMapAssetNotificationType notificationType = JE::Render::Features::CubeMapAssetNotificationType::None;
                 if (m_controller.m_featureProcessor->CheckCubeMapAssetNotification(cubeMapRelativePath, cubeMapAsset, notificationType))
                 {
                     // a cubemap bake is in progress for this entity component
-                    if (notificationType == AZ::Render::CubeMapAssetNotificationType::Ready)
+                    if (notificationType == JE::Render::Features::CubeMapAssetNotificationType::Ready)
                     {
                         // bake is complete, update configuration with the new baked cubemap asset
                         AzToolsFramework::ScopedUndoBatch undoBatch("ReflectionProbe Bake");
@@ -214,7 +214,7 @@ namespace JE::Editor::Render
                         using NotifyBus = AzToolsFramework::ToolsApplicationNotificationBus;
                         NotifyBus::Broadcast(&NotifyBus::Events::InvalidatePropertyDisplayForComponent, AZ::EntityComponentIdPair(GetEntityId(), GetId()), AzToolsFramework::Refresh_Values);
                     }
-                    else if (notificationType == AZ::Render::CubeMapAssetNotificationType::Error)
+                    else if (notificationType == JE::Render::Features::CubeMapAssetNotificationType::Error)
                     {
                         // cubemap bake failed
                         QMessageBox::information(
@@ -341,7 +341,7 @@ namespace JE::Editor::Render
             }
 
             AZ::u32 result = RenderCubeMap(
-                [&](AZ::Render::RenderCubeMapCallback callback, AZStd::string& relativePath) { m_controller.BakeReflectionProbe(callback, relativePath); },
+                [&](JE::Render::Features::RenderCubeMapCallback callback, AZStd::string& relativePath) { m_controller.BakeReflectionProbe(callback, relativePath); },
                 "Baking Reflection Probe...",
                 GetEntity(),
                 "ReflectionProbes",

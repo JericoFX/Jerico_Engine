@@ -8,7 +8,7 @@
 
 #pragma once
 
-#include <Atom/Feature/PostProcess/WhiteBalance/WhiteBalanceSettingsInterface.h>
+#include <JE/Render/Features/PostProcess/WhiteBalance/WhiteBalanceSettingsInterface.h>
 #include <AzCore/Component/Component.h>
 
 namespace JE::Render
@@ -23,17 +23,17 @@ namespace JE::Render
             static void Reflect(AZ::ReflectContext* context);
 
             // Generate members...
-#include <Atom/Feature/ParamMacros/StartParamMembers.inl>
-#include <Atom/Feature/PostProcess/WhiteBalance/WhiteBalanceParams.inl>
-#include <Atom/Feature/ParamMacros/EndParams.inl>
+#include <JE/Render/Features/ParamMacros/StartParamMembers.inl>
+#include <JE/Render/Features/PostProcess/WhiteBalance/WhiteBalanceParams.inl>
+#include <JE/Render/Features/ParamMacros/EndParams.inl>
 
             // Generate Getters/Setters...
-#include <Atom/Feature/ParamMacros/StartParamFunctions.inl>
-#include <Atom/Feature/PostProcess/WhiteBalance/WhiteBalanceParams.inl>
-#include <Atom/Feature/ParamMacros/EndParams.inl>
+#include <JE/Render/Features/ParamMacros/StartParamFunctions.inl>
+#include <JE/Render/Features/PostProcess/WhiteBalance/WhiteBalanceParams.inl>
+#include <JE/Render/Features/ParamMacros/EndParams.inl>
 
-            void CopySettingsFrom(AZ::Render::WhiteBalanceSettingsInterface* settings);
-            void CopySettingsTo(AZ::Render::WhiteBalanceSettingsInterface* settings);
+            void CopySettingsFrom(JE::Render::Features::WhiteBalanceSettingsInterface* settings);
+            void CopySettingsTo(JE::Render::Features::WhiteBalanceSettingsInterface* settings);
 
             bool ArePropertiesReadOnly() const
             {

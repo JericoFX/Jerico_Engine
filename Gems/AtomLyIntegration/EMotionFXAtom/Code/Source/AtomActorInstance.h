@@ -21,16 +21,23 @@
 #include <JE/Render/Scene/Mesh/MeshHandleStateBus.h>
 #include <JE/Render/Scene/Mesh/MeshComponentBus.h>
 #include <JE/Render/Scene/SkinnedMesh/SkinnedMeshOverrideBus.h>
-#include <Atom/Feature/SkinnedMesh/SkinnedMeshFeatureProcessorBus.h>
-#include <Atom/Feature/SkinnedMesh/SkinnedMeshFeatureProcessorInterface.h>
-#include <Atom/Feature/SkinnedMesh/SkinnedMeshInputBuffers.h>
-#include <Atom/Feature/SkinnedMesh/SkinnedMeshOutputStreamManagerInterface.h>
-#include <Atom/Feature/SkinnedMesh/SkinnedMeshShaderOptions.h>
-#include <Atom/Feature/Mesh/MeshFeatureProcessorInterface.h>
+#include <JE/Render/Features/SkinnedMesh/SkinnedMeshFeatureProcessorBus.h>
+#include <JE/Render/Features/SkinnedMesh/SkinnedMeshFeatureProcessorInterface.h>
+#include <JE/Render/Features/SkinnedMesh/SkinnedMeshInputBuffers.h>
+#include <JE/Render/Features/SkinnedMesh/SkinnedMeshOutputStreamManagerInterface.h>
+#include <JE/Render/Features/SkinnedMesh/SkinnedMeshShaderOptions.h>
+#include <JE/Render/Features/Mesh/MeshFeatureProcessorInterface.h>
 #include <Atom/RHI.Reflect/ShaderResourceGroupLayoutDescriptor.h>
 
 #include <AzCore/Component/TransformBus.h>
 #include <AzCore/std/smart_ptr/intrusive_base.h>
+
+namespace JE::Render::Features
+{
+    class SkinnedMeshFeatureProcessorInterface;
+    class SkinnedMeshInputBuffers;
+    class MeshFeatureProcessorInterface;
+}
 
 namespace EMotionFX
 {
@@ -50,9 +57,9 @@ namespace AZ
 {
     namespace Render
     {
-        class SkinnedMeshFeatureProcessorInterface;
-        class SkinnedMeshInputBuffers;
-        class MeshFeatureProcessorInterface;
+
+
+
         class AtomActor;
         class AtomActorDebugDraw;
 
@@ -67,8 +74,8 @@ namespace AZ
             , public JE::Render::MaterialComponentNotificationBus::Handler
             , public JE::Render::Scene::MeshComponentRequestBus::Handler
             , public JE::Render::Scene::SkinnedMeshOverrideRequestBus::Handler
-            , private AZ::Render::SkinnedMeshFeatureProcessorNotificationBus::Handler
-            , private AZ::Render::SkinnedMeshOutputStreamNotificationBus::Handler
+            , private JE::Render::Features::SkinnedMeshFeatureProcessorNotificationBus::Handler
+            , private JE::Render::Features::SkinnedMeshOutputStreamNotificationBus::Handler
             , private LmbrCentral::SkeletalHierarchyRequestBus::Handler
             , private Data::AssetBus::MultiHandler
             , private JE::Render::Scene::MeshHandleStateRequestBus::Handler
@@ -93,7 +100,7 @@ namespace AZ
             void DebugDraw(const EMotionFX::ActorRenderFlags& renderFlags);
             void UpdateBounds() override;
             void SetSkinningMethod(EMotionFX::Integration::SkinningMethod emfxSkinningMethod) override;
-            SkinningMethod GetAtomSkinningMethod() const;
+            JE::Render::Features::SkinningMethod GetAtomSkinningMethod() const;
             void SetIsVisible(bool isVisible) override;
 
             // BoundsRequestBus overrides ...
@@ -188,7 +195,7 @@ namespace AZ
 
         private:
             // MeshHandleStateRequestBus overrides ...
-            const MeshFeatureProcessorInterface::MeshHandle* GetMeshHandle() const override;
+            const JE::Render::Features::MeshFeatureProcessorInterface::MeshHandle* GetMeshHandle() const override;
 
             void CreateSkinnedMeshInstance();
 
@@ -211,14 +218,14 @@ namespace AZ
             // Debug geometry rendering
             AZStd::unique_ptr<AtomActorDebugDraw> m_atomActorDebugDraw;
 
-            AZStd::intrusive_ptr<AZ::Render::SkinnedMeshInputBuffers> m_skinnedMeshInputBuffers = nullptr;
-            AZStd::intrusive_ptr<SkinnedMeshInstance> m_skinnedMeshInstance;
+            AZStd::intrusive_ptr<JE::Render::Features::SkinnedMeshInputBuffers> m_skinnedMeshInputBuffers = nullptr;
+            AZStd::intrusive_ptr<JE::Render::Features::SkinnedMeshInstance> m_skinnedMeshInstance;
             AZ::Data::Instance<JE::Render::RPI::Buffer> m_boneTransforms = nullptr;
-            AZ::Render::SkinnedMeshFeatureProcessorInterface::SkinnedMeshHandle m_skinnedMeshHandle;
-            AZ::Render::SkinnedMeshFeatureProcessorInterface* m_skinnedMeshFeatureProcessor = nullptr;
-            AZ::Render::MeshFeatureProcessorInterface* m_meshFeatureProcessor = nullptr;
+            JE::Render::Features::SkinnedMeshFeatureProcessorInterface::SkinnedMeshHandle m_skinnedMeshHandle;
+            JE::Render::Features::SkinnedMeshFeatureProcessorInterface* m_skinnedMeshFeatureProcessor = nullptr;
+            JE::Render::Features::MeshFeatureProcessorInterface* m_meshFeatureProcessor = nullptr;
             //m_meshHandle is wrapped in a shared pointer so that it can be shared between this and the SkinnedMeshRenderProxy (the handle itself cannot be copied)
-            AZStd::shared_ptr<MeshFeatureProcessorInterface::MeshHandle> m_meshHandle;
+            AZStd::shared_ptr<JE::Render::Features::MeshFeatureProcessorInterface::MeshHandle> m_meshHandle;
             AZ::TransformInterface* m_transformInterface = nullptr;
             AZStd::set<Data::AssetId> m_waitForMaterialLoadIds;
             AZStd::vector<float> m_morphTargetWeights;
@@ -229,12 +236,12 @@ namespace AZ
             AZStd::vector<Data::Instance<JE::Render::RPI::Image>> m_wrinkleMasks;
             AZStd::vector<float> m_wrinkleMaskWeights;
 
-            MeshHandleDescriptor::ModelChangedEvent::Handler m_modelChangedEventHandler
+            JE::Render::Features::MeshHandleDescriptor::ModelChangedEvent::Handler m_modelChangedEventHandler
             {
                  [&](const Data::Instance<JE::Render::RPI::Model>& model) { HandleModelChange(model); } 
             };
 
-            MeshHandleDescriptor::ObjectSrgCreatedEvent::Handler m_objectSrgCreatedHandler
+            JE::Render::Features::MeshHandleDescriptor::ObjectSrgCreatedEvent::Handler m_objectSrgCreatedHandler
             {
                 [&](const Data::Instance<JE::Render::RPI::ShaderResourceGroup>& objectSrg) { HandleObjectSrgCreate(objectSrg); }
             };

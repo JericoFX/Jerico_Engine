@@ -8,7 +8,7 @@
 
 #pragma once
 
-#include <Atom/Feature/PostProcess/PaniniProjection/PaniniProjectionConstants.h>
+#include <JE/Render/Features/PostProcess/PaniniProjection/PaniniProjectionConstants.h>
 #include <AzCore/Component/Component.h>
 
 namespace JE::Render
@@ -27,9 +27,9 @@ namespace JE::Render
             }
 
             // Auto-gen virtual getters/setters...
-#include <Atom/Feature/ParamMacros/StartParamFunctionsVirtual.inl>
-#include <Atom/Feature/PostProcess/PaniniProjection/PaniniProjectionParams.inl>
-#include <Atom/Feature/ParamMacros/EndParams.inl>
+#include <JE/Render/Features/ParamMacros/StartParamFunctionsVirtual.inl>
+#include <JE/Render/Features/PostProcess/PaniniProjection/PaniniProjectionParams.inl>
+#include <JE/Render/Features/ParamMacros/EndParams.inl>
         };
 
         typedef AZ::EBus<PaniniProjectionRequests> PaniniProjectionRequestBus;

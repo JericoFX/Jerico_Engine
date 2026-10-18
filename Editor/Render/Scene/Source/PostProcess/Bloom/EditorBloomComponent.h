@@ -9,7 +9,7 @@
 #pragma once
 
 #include <AzToolsFramework/ToolsComponents/EditorComponentAdapter.h>
-#include <Atom/Feature/PostProcess/DepthOfField/DepthOfFieldConstants.h>
+#include <JE/Render/Features/PostProcess/DepthOfField/DepthOfFieldConstants.h>
 #include <PostProcess/Bloom/BloomComponent.h>
 
 namespace JE::Editor::Render

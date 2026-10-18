@@ -1,4 +1,4 @@
 {
-    "materialType": "@gemroot:Atom_Feature_Common@/Assets/Materials/Types/StandardPBR.materialtype",
+    "materialType": "@engroot@/Engine/Render/Features/Assets/Materials/Types/StandardPBR.materialtype",
     "materialTypeVersion": 5
 }

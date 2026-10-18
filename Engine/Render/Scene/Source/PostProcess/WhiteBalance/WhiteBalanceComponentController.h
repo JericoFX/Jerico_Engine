@@ -8,10 +8,10 @@
 
 #pragma once
 
-#include <Atom/Feature/PostProcess/WhiteBalance/WhiteBalanceConstants.h>
-#include <Atom/Feature/PostProcess/WhiteBalance/WhiteBalanceSettingsInterface.h>
-#include <Atom/Feature/PostProcess/PostProcessFeatureProcessorInterface.h>
-#include <Atom/Feature/PostProcess/PostProcessSettingsInterface.h>
+#include <JE/Render/Features/PostProcess/WhiteBalance/WhiteBalanceConstants.h>
+#include <JE/Render/Features/PostProcess/WhiteBalance/WhiteBalanceSettingsInterface.h>
+#include <JE/Render/Features/PostProcess/PostProcessFeatureProcessorInterface.h>
+#include <JE/Render/Features/PostProcess/PostProcessSettingsInterface.h>
 
 #include <JE/Render/Scene/PostProcess/WhiteBalance/WhiteBalanceBus.h>
 #include <JE/Render/Scene/PostProcess/WhiteBalance/WhiteBalanceComponentConfig.h>
@@ -49,17 +49,17 @@ namespace JE::Render
             const WhiteBalanceComponentConfig& GetConfiguration() const;
 
             // Auto-gen function override declarations (functions definitions in .cpp)...
-#include <Atom/Feature/ParamMacros/StartParamFunctionsOverride.inl>
-#include <Atom/Feature/PostProcess/WhiteBalance/WhiteBalanceParams.inl>
-#include <Atom/Feature/ParamMacros/EndParams.inl>
+#include <JE/Render/Features/ParamMacros/StartParamFunctionsOverride.inl>
+#include <JE/Render/Features/PostProcess/WhiteBalance/WhiteBalanceParams.inl>
+#include <JE/Render/Features/ParamMacros/EndParams.inl>
 
         private:
             AZ_DISABLE_COPY(WhiteBalanceComponentController);
 
             void OnConfigChanged();
 
-            AZ::Render::PostProcessSettingsInterface* m_postProcessInterface = nullptr;
-            AZ::Render::WhiteBalanceSettingsInterface* m_settingsInterface = nullptr;
+            JE::Render::Features::PostProcessSettingsInterface* m_postProcessInterface = nullptr;
+            JE::Render::Features::WhiteBalanceSettingsInterface* m_settingsInterface = nullptr;
             WhiteBalanceComponentConfig m_configuration;
             AZ::EntityId m_entityId;
         };

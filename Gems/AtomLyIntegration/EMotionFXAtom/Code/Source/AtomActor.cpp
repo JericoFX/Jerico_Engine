@@ -18,7 +18,7 @@
 #include <EMotionFX/Source/SkinningInfoVertexAttributeLayer.h>
 #include <AtomActor.h>
 #include <ActorAsset.h>
-#include <Atom/Feature/SkinnedMesh/SkinnedMeshInputBuffers.h>
+#include <JE/Render/Features/SkinnedMesh/SkinnedMeshInputBuffers.h>
 
 namespace AZ
 {
@@ -43,7 +43,7 @@ namespace AZ
             m_skinnedMeshInputBuffers.reset();
         }
 
-        AZStd::intrusive_ptr<AZ::Render::SkinnedMeshInputBuffers> AtomActor::FindOrCreateSkinnedMeshInputBuffers()
+        AZStd::intrusive_ptr<JE::Render::Features::SkinnedMeshInputBuffers> AtomActor::FindOrCreateSkinnedMeshInputBuffers()
         {
             if (!m_skinnedMeshInputBuffers)
             {

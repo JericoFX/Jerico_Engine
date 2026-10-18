@@ -8,7 +8,7 @@
 
 #pragma once
 
-#include <Atom/Feature/PostProcess/FilmGrain/FilmGrainConstants.h>
+#include <JE/Render/Features/PostProcess/FilmGrain/FilmGrainConstants.h>
 #include <PostProcess/FilmGrain/FilmGrainComponentController.h>
 #include <JE/Render/Scene/PostProcess/FilmGrain/FilmGrainComponentConfig.h>
 #include <AzCore/Component/Component.h>

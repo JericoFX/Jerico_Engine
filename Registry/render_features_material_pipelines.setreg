@@ -1,0 +1,12 @@
+{
+    "O3DE": {
+        "Atom": {
+            "RPI": {
+                "MaterialPipelineFiles": [
+                    "@engroot@/Engine/Render/Features/Assets/Materials/Pipelines/MainPipeline/MainPipeline.materialpipeline",
+                    "@engroot@/Engine/Render/Features/Assets/Materials/Pipelines/LowEndPipeline/LowEndPipeline.materialpipeline"
+                ]
+            }
+        }
+    }
+}

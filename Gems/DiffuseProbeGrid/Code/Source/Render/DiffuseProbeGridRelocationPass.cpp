@@ -6,7 +6,7 @@
  *
  */
 
-#include <Atom/Feature/RayTracing/RayTracingFeatureProcessorInterface.h>
+#include <JE/Render/Features/RayTracing/RayTracingFeatureProcessorInterface.h>
 #include <Atom/RHI/Factory.h>
 #include <Atom/RHI/DevicePipelineState.h>
 #include <Atom/RHI/FrameGraphInterface.h>
@@ -87,7 +87,7 @@ namespace AZ
                 return false;
             }
 
-            auto* rayTracingFeatureProcessor = scene->GetFeatureProcessor<RayTracingFeatureProcessorInterface>();
+            auto* rayTracingFeatureProcessor = scene->GetFeatureProcessor<JE::Render::Features::RayTracingFeatureProcessorInterface>();
             if (!rayTracingFeatureProcessor || !rayTracingFeatureProcessor->GetSubMeshCount())
             {
                 // empty scene
@@ -124,7 +124,7 @@ namespace AZ
         {
             JE::Render::RPI::Scene* scene = m_pipeline->GetScene();
             DiffuseProbeGridFeatureProcessor* diffuseProbeGridFeatureProcessor = scene->GetFeatureProcessor<DiffuseProbeGridFeatureProcessor>();
-            auto* rayTracingFeatureProcessor = scene->GetFeatureProcessor<RayTracingFeatureProcessorInterface>();
+            auto* rayTracingFeatureProcessor = scene->GetFeatureProcessor<JE::Render::Features::RayTracingFeatureProcessorInterface>();
             AZ_Assert(rayTracingFeatureProcessor, "DiffuseProbeGridRelocationPass requires the RayTracingFeatureProcessor");
 
             // reset the relocation iterations on the grids if the TLAS was updated

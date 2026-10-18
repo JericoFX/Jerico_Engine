@@ -25,15 +25,15 @@ namespace JE::Render
 
                     // Auto-gen serialize context code...
 #define SERIALIZE_CLASS LookModificationComponentConfig
-#include <Atom/Feature/ParamMacros/StartParamSerializeContext.inl>
-#include <Atom/Feature/PostProcess/LookModification/LookModificationParams.inl>
-#include <Atom/Feature/ParamMacros/EndParams.inl>
+#include <JE/Render/Features/ParamMacros/StartParamSerializeContext.inl>
+#include <JE/Render/Features/PostProcess/LookModification/LookModificationParams.inl>
+#include <JE/Render/Features/ParamMacros/EndParams.inl>
 #undef SERIALIZE_CLASS
                     ;
             }
         }
 
-        void LookModificationComponentConfig::CopySettingsFrom(AZ::Render::LookModificationSettingsInterface* settings)
+        void LookModificationComponentConfig::CopySettingsFrom(JE::Render::Features::LookModificationSettingsInterface* settings)
         {
             if (!settings)
             {
@@ -41,13 +41,13 @@ namespace JE::Render
             }
 
 #define COPY_SOURCE settings
-#include <Atom/Feature/ParamMacros/StartParamCopySettingsFrom.inl>
-#include <Atom/Feature/PostProcess/LookModification/LookModificationParams.inl>
-#include <Atom/Feature/ParamMacros/EndParams.inl>
+#include <JE/Render/Features/ParamMacros/StartParamCopySettingsFrom.inl>
+#include <JE/Render/Features/PostProcess/LookModification/LookModificationParams.inl>
+#include <JE/Render/Features/ParamMacros/EndParams.inl>
 #undef COPY_SOURCE
         }
 
-        void LookModificationComponentConfig::CopySettingsTo(AZ::Render::LookModificationSettingsInterface* settings)
+        void LookModificationComponentConfig::CopySettingsTo(JE::Render::Features::LookModificationSettingsInterface* settings)
         {
             if (!settings)
             {
@@ -55,9 +55,9 @@ namespace JE::Render
             }
 
 #define COPY_TARGET settings
-#include <Atom/Feature/ParamMacros/StartParamCopySettingsTo.inl>
-#include <Atom/Feature/PostProcess/LookModification/LookModificationParams.inl>
-#include <Atom/Feature/ParamMacros/EndParams.inl>
+#include <JE/Render/Features/ParamMacros/StartParamCopySettingsTo.inl>
+#include <JE/Render/Features/PostProcess/LookModification/LookModificationParams.inl>
+#include <JE/Render/Features/ParamMacros/EndParams.inl>
 #undef COPY_TARGET
         }
 

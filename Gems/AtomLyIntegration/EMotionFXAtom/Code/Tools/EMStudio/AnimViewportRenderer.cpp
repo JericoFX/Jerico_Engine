@@ -15,11 +15,11 @@
 #include <JE/Render/RPI/Public/RenderPipeline.h>
 #include <JE/Render/RPI/Public/RPIUtils.h>
 #include <JE/Render/RPI/Reflect/Asset/AssetUtils.h>
-#include <Atom/Feature/CoreLights/DirectionalLightFeatureProcessorInterface.h>
-#include <Atom/Feature/DisplayMapper/DisplayMapperFeatureProcessorInterface.h>
-#include <Atom/Feature/PostProcess/PostProcessFeatureProcessorInterface.h>
-#include <Atom/Feature/ImageBasedLights/ImageBasedLightFeatureProcessorInterface.h>
-#include <Atom/Feature/Mesh/MeshFeatureProcessorInterface.h>
+#include <JE/Render/Features/CoreLights/DirectionalLightFeatureProcessorInterface.h>
+#include <JE/Render/Features/DisplayMapper/DisplayMapperFeatureProcessorInterface.h>
+#include <JE/Render/Features/PostProcess/PostProcessFeatureProcessorInterface.h>
+#include <JE/Render/Features/ImageBasedLights/ImageBasedLightFeatureProcessorInterface.h>
+#include <JE/Render/Features/Mesh/MeshFeatureProcessorInterface.h>
 #include <JE/World/Camera/Debug/CameraComponent.h>
 #include <JE/World/Camera/Debug/NoClipControllerComponent.h>
 
@@ -101,7 +101,7 @@ namespace EMStudio
         AzFramework::EntityContextId entityContextId = m_entityContext->GetContextId();
 
         // Get the FeatureProcessors
-        m_meshFeatureProcessor = m_scene->GetFeatureProcessor<AZ::Render::MeshFeatureProcessorInterface>();
+        m_meshFeatureProcessor = m_scene->GetFeatureProcessor<JE::Render::Features::MeshFeatureProcessorInterface>();
 
         // Configure tone mapper
         AzFramework::EntityContextRequestBus::EventResult(
@@ -115,15 +115,15 @@ namespace EMStudio
         m_postProcessEntity->Activate();
 
         // Init directional light processor
-        m_directionalLightFeatureProcessor = m_scene->GetFeatureProcessor<AZ::Render::DirectionalLightFeatureProcessorInterface>();
+        m_directionalLightFeatureProcessor = m_scene->GetFeatureProcessor<JE::Render::Features::DirectionalLightFeatureProcessorInterface>();
 
         // Init display mapper processor
-        m_displayMapperFeatureProcessor = m_scene->GetFeatureProcessor<AZ::Render::DisplayMapperFeatureProcessorInterface>();
+        m_displayMapperFeatureProcessor = m_scene->GetFeatureProcessor<JE::Render::Features::DisplayMapperFeatureProcessorInterface>();
 
         // Init Skybox
-        m_skyboxFeatureProcessor = m_scene->GetFeatureProcessor<AZ::Render::SkyBoxFeatureProcessorInterface>();
+        m_skyboxFeatureProcessor = m_scene->GetFeatureProcessor<JE::Render::Features::SkyBoxFeatureProcessorInterface>();
         m_skyboxFeatureProcessor->Enable(true);
-        m_skyboxFeatureProcessor->SetSkyboxMode(AZ::Render::SkyBoxMode::Cubemap);
+        m_skyboxFeatureProcessor->SetSkyboxMode(JE::Render::Features::SkyBoxMode::Cubemap);
 
         // Create IBL
         AzFramework::EntityContextRequestBus::EventResult(
@@ -138,7 +138,7 @@ namespace EMStudio
         // Load light preset
         AZ::Data::Asset<JE::Render::RPI::AnyAsset> lightingPresetAsset = JE::Render::RPI::AssetUtils::LoadAssetByProductPath<JE::Render::RPI::AnyAsset>(
             "lightingpresets/default.lightingpreset.azasset", JE::Render::RPI::AssetUtils::TraceLevel::Warning);
-        const AZ::Render::LightingPreset* preset = lightingPresetAsset->GetDataAs<AZ::Render::LightingPreset>();
+        const JE::Render::Features::LightingPreset* preset = lightingPresetAsset->GetDataAs<JE::Render::Features::LightingPreset>();
         SetLightingPreset(preset);
 
         // Create the ground plane
@@ -168,7 +168,7 @@ namespace EMStudio
         m_actorEntities.clear();
         m_entityContext->DestroyContext();
 
-        for (AZ::Render::DirectionalLightFeatureProcessorInterface::LightHandle& handle : m_lightHandles)
+        for (JE::Render::Features::DirectionalLightFeatureProcessorInterface::LightHandle& handle : m_lightHandles)
         {
             m_directionalLightFeatureProcessor->ReleaseLight(handle);
         }
@@ -273,7 +273,7 @@ namespace EMStudio
         AZ::TransformBus::Event(m_iblEntity->GetId(), &AZ::TransformBus::Events::SetLocalTM, iblTransform);
 
         const AZ::Matrix4x4 rotationMatrix = AZ::Matrix4x4::CreateIdentity();
-        auto skyBoxFeatureProcessorInterface = m_scene->GetFeatureProcessor<AZ::Render::SkyBoxFeatureProcessorInterface>();
+        auto skyBoxFeatureProcessorInterface = m_scene->GetFeatureProcessor<JE::Render::Features::SkyBoxFeatureProcessorInterface>();
         skyBoxFeatureProcessorInterface->SetCubemapRotationMatrix(rotationMatrix);
 
         // Reset ground entity
@@ -369,7 +369,7 @@ namespace EMStudio
         return actorEntity;
     }
 
-    void AnimViewportRenderer::SetLightingPreset(const AZ::Render::LightingPreset* preset)
+    void AnimViewportRenderer::SetLightingPreset(const JE::Render::Features::LightingPreset* preset)
     {
         if (!preset)
         {
@@ -377,11 +377,11 @@ namespace EMStudio
             return;
         }
 
-        AZ::Render::ImageBasedLightFeatureProcessorInterface* iblFeatureProcessor =
-            m_scene->GetFeatureProcessor<AZ::Render::ImageBasedLightFeatureProcessorInterface>();
-        AZ::Render::PostProcessFeatureProcessorInterface* postProcessFeatureProcessor =
-            m_scene->GetFeatureProcessor<AZ::Render::PostProcessFeatureProcessorInterface>();
-        AZ::Render::ExposureControlSettingsInterface* exposureControlSettingInterface =
+        JE::Render::Features::ImageBasedLightFeatureProcessorInterface* iblFeatureProcessor =
+            m_scene->GetFeatureProcessor<JE::Render::Features::ImageBasedLightFeatureProcessorInterface>();
+        JE::Render::Features::PostProcessFeatureProcessorInterface* postProcessFeatureProcessor =
+            m_scene->GetFeatureProcessor<JE::Render::Features::PostProcessFeatureProcessorInterface>();
+        JE::Render::Features::ExposureControlSettingsInterface* exposureControlSettingInterface =
             postProcessFeatureProcessor->GetOrCreateSettingsInterface(m_postProcessEntity->GetId())
                 ->GetOrCreateExposureControlSettingsInterface();
 

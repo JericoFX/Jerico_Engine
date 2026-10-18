@@ -11,8 +11,8 @@
 #include <AzCore/Component/ComponentBus.h>
 #include <AzCore/Component/EntityId.h>
 #include <AzCore/Math/Color.h>
-#include <Atom/Feature/CoreLights/PhotometricValue.h>
-#include <Atom/Feature/CoreLights/ShadowConstants.h>
+#include <JE/Render/Features/CoreLights/PhotometricValue.h>
+#include <JE/Render/Features/CoreLights/ShadowConstants.h>
 
 namespace JE::Render
 {
@@ -36,11 +36,11 @@ namespace JE::Render
 
             //! Gets the intensity mode of a directional light
             //! @return directional light's intensity mode
-            virtual AZ::Render::PhotometricUnit GetIntensityMode() const = 0;
+            virtual JE::Render::Features::PhotometricUnit GetIntensityMode() const = 0;
 
             //! Sets the intensity mode of a directional light
             //! @param directional light's intensity mode
-            virtual void SetIntensityMode(AZ::Render::PhotometricUnit intensityMode) = 0;
+            virtual void SetIntensityMode(JE::Render::Features::PhotometricUnit intensityMode) = 0;
 
             //! Gets a directional light's intensity. This value is independent from its color.
             //! @return directional light's intensity
@@ -49,7 +49,7 @@ namespace JE::Render
             //! Sets a directional light's intensity. This value is independent from its color.
             //! @param intensity directional light's intensity
             //! @param type The photometric unit of the intensity.
-            virtual void SetIntensity(float intensity, AZ::Render::PhotometricUnit unit) = 0;
+            virtual void SetIntensity(float intensity, JE::Render::Features::PhotometricUnit unit) = 0;
 
             //! Sets a directional light's intensity. This value is independent from its color.
             //! Assumes no change in the current photometric unit of the intensity.
@@ -72,10 +72,10 @@ namespace JE::Render
 
             //! This gets shadowmap size (width/height).
             //! @return shadowmap size.
-            virtual AZ::Render::ShadowmapSize GetShadowmapSize() const = 0;
+            virtual JE::Render::Features::ShadowmapSize GetShadowmapSize() const = 0;
 
             //! This specifies the size of shadowmaps (for each cascade) to size x size.
-            virtual void SetShadowmapSize(AZ::Render::ShadowmapSize size) = 0;
+            virtual void SetShadowmapSize(JE::Render::Features::ShadowmapSize size) = 0;
 
             //! This gets cascade count of the shadowmap.
             //! @return cascade count
@@ -165,11 +165,11 @@ namespace JE::Render
 
             //! This gets the filter method of shadows.
             //! @return filter method 
-            virtual AZ::Render::ShadowFilterMethod GetShadowFilterMethod() const = 0;
+            virtual JE::Render::Features::ShadowFilterMethod GetShadowFilterMethod() const = 0;
 
             //! This specifies filter method of shadows.
             //! @param method filter method.
-            virtual void SetShadowFilterMethod(AZ::Render::ShadowFilterMethod method) = 0;
+            virtual void SetShadowFilterMethod(JE::Render::Features::ShadowFilterMethod method) = 0;
 
             //! This gets the sample count for filtering of the shadow boundary.
             //! @return Sample Count for filtering (up to 64)

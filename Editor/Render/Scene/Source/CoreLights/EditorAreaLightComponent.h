@@ -12,7 +12,7 @@
 #include <AzFramework/Entity/EntityDebugDisplayBus.h>
 #include <AzFramework/Visibility/BoundsBus.h>
 
-#include <Atom/Feature/Utils/EditorRenderComponentAdapter.h>
+#include <JE/Editor/Render/Features/Utils/EditorRenderComponentAdapter.h>
 #include <CoreLights/AreaLightComponent.h>
 
 namespace JE::Editor::Render
@@ -20,12 +20,12 @@ namespace JE::Editor::Render
     namespace Scene
     {
         class EditorAreaLightComponent final
-            : public AZ::Render::EditorRenderComponentAdapter<JE::Render::Scene::AreaLightComponentController, JE::Render::Scene::AreaLightComponent, JE::Render::Scene::AreaLightComponentConfig>
+            : public JE::Editor::Render::Features::EditorRenderComponentAdapter<JE::Render::Scene::AreaLightComponentController, JE::Render::Scene::AreaLightComponent, JE::Render::Scene::AreaLightComponentConfig>
             , private AzFramework::EntityDebugDisplayEventBus::Handler
             , public AzFramework::BoundsRequestBus::Handler
         {
         public:
-            using BaseClass = AZ::Render::EditorRenderComponentAdapter<JE::Render::Scene::AreaLightComponentController, JE::Render::Scene::AreaLightComponent, JE::Render::Scene::AreaLightComponentConfig>;
+            using BaseClass = JE::Editor::Render::Features::EditorRenderComponentAdapter<JE::Render::Scene::AreaLightComponentController, JE::Render::Scene::AreaLightComponent, JE::Render::Scene::AreaLightComponentConfig>;
             AZ_RTTI_WITH_NAME(JE::Editor::Render::Scene::EditorAreaLightComponent, "AZ::Render::EditorAreaLightComponent", JE::Render::Scene::EditorAreaLightComponentTypeId, BaseClass, AzToolsFramework::Components::EditorComponentBase)
             AZ_EDITOR_COMPONENT_INTRUSIVE_DESCRIPTOR_TYPE(JE::Editor::Render::Scene::EditorAreaLightComponent)
             AZ_COMPONENT_BASE(JE::Editor::Render::Scene::EditorAreaLightComponent)

@@ -33,8 +33,8 @@ namespace OpenParticleSystemEditor
     private:
         // OpenParticleViewportNotificationsBus::Handler overrides...
         void OnLightingPresetSelected(AZStd::string preset) override;
-        void OnLightingPresetAdded(AZ::Render::LightingPresetPtr preset) override;
-        void OnLightingPresetChanged(AZ::Render::LightingPresetPtr preset) override;
+        void OnLightingPresetAdded(JE::Render::Features::LightingPresetPtr preset) override;
+        void OnLightingPresetChanged(JE::Render::Features::LightingPresetPtr preset) override;
         void OnBeginReloadContent() override;
         void OnEndReloadContent() override;
 

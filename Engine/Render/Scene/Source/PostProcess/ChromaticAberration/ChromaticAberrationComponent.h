@@ -8,7 +8,7 @@
 
 #pragma once
 
-#include <Atom/Feature/PostProcess/ChromaticAberration/ChromaticAberrationConstants.h>
+#include <JE/Render/Features/PostProcess/ChromaticAberration/ChromaticAberrationConstants.h>
 #include <PostProcess/ChromaticAberration/ChromaticAberrationComponentController.h>
 #include <JE/Render/Scene/PostProcess/ChromaticAberration/ChromaticAberrationComponentConfig.h>
 #include <AzCore/Component/Component.h>

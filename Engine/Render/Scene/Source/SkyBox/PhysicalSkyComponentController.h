@@ -12,8 +12,8 @@
 #include <AzCore/Component/TransformBus.h>
 #include <JE/Render/Scene/SkyBox/PhysicalSkyComponentConfig.h>
 #include <JE/Render/Scene/SkyBox/PhysicalSkyBus.h>
-#include <Atom/Feature/SkyBox/SkyBoxFogBus.h>
-#include <Atom/Feature/SkyBox/SkyBoxFeatureProcessorInterface.h>
+#include <JE/Render/Features/SkyBox/SkyBoxFogBus.h>
+#include <JE/Render/Features/SkyBox/SkyBoxFeatureProcessorInterface.h>
 
 namespace JE::Editor::Render::Scene
 {
@@ -27,7 +27,7 @@ namespace JE::Render
         class PhysicalSkyComponentController final
             : public AZ::TransformNotificationBus::Handler
             , public PhysicalSkyRequestBus::Handler
-            , public AZ::Render::SkyBoxFogRequestBus::Handler
+            , public JE::Render::Features::SkyBoxFogRequestBus::Handler
         {
         public:
             friend class JE::Editor::Render::Scene::EditorPhysicalSkyComponent;
@@ -57,13 +57,13 @@ namespace JE::Render
             int GetTurbidity() override;
             void SetSunRadiusFactor(float factor) override;
             float GetSunRadiusFactor() override;
-            void SetSkyIntensity(float intensity, AZ::Render::PhotometricUnit unit) override;
+            void SetSkyIntensity(float intensity, JE::Render::Features::PhotometricUnit unit) override;
             void SetSkyIntensity(float intensity) override;
-            float GetSkyIntensity(AZ::Render::PhotometricUnit unit) override;
+            float GetSkyIntensity(JE::Render::Features::PhotometricUnit unit) override;
             float GetSkyIntensity() override;
-            void SetSunIntensity(float intensity, AZ::Render::PhotometricUnit unit) override;
+            void SetSunIntensity(float intensity, JE::Render::Features::PhotometricUnit unit) override;
             void SetSunIntensity(float intensity) override;
-            float GetSunIntensity(AZ::Render::PhotometricUnit unit) override;
+            float GetSunIntensity(JE::Render::Features::PhotometricUnit unit) override;
             float GetSunIntensity() override;
 
             // SkyBoxFogRequestBus::Handler overrides ...
@@ -77,17 +77,17 @@ namespace JE::Render
             float GetBottomHeight() const override;
 
             //! Get Sun azimuth and altitude from entity transform, without scale
-            AZ::Render::SunPosition GetSunTransform(const AZ::Transform& world);
+            JE::Render::Features::SunPosition GetSunTransform(const AZ::Transform& world);
 
             AZ::TransformInterface* m_transformInterface = nullptr;
-            AZ::Render::SkyBoxFeatureProcessorInterface* m_featureProcessorInterface = nullptr;
+            JE::Render::Features::SkyBoxFeatureProcessorInterface* m_featureProcessorInterface = nullptr;
             PhysicalSkyComponentConfig m_configuration;
             AZ::EntityId m_entityId;
             bool m_isActive = false;
 
             // For light unit update on UI
-            AZ::Render::PhotometricValue m_skyPhotometricValue;
-            AZ::Render::PhotometricValue m_sunPhotometricValue;
+            JE::Render::Features::PhotometricValue m_skyPhotometricValue;
+            JE::Render::Features::PhotometricValue m_sunPhotometricValue;
         };
     }
 }

@@ -28,7 +28,7 @@ if(PAL_TRAIT_BUILD_HOST_TOOLS)
             PRIVATE
                 Gem::AtomToolsFramework.Static
                 Gem::AtomToolsFramework.Editor
-                Gem::Atom_Feature_Common.Public
+                JE::RenderFeatures
                 JE::RenderScene
                 JE::EditorRenderScene
                 JE::RenderMaterials
@@ -38,7 +38,6 @@ if(PAL_TRAIT_BUILD_HOST_TOOLS)
             Gem::Atom_RHI_Vulkan.Private
             Gem::Atom_RHI.Private
             JE::RenderAssetBuilders
-            Gem::Atom_Feature_Common.Editor
             Gem::AtomToolsFramework.Editor
     )
 endif()

@@ -16,7 +16,7 @@
 #include <JE/Render/RPI/Public/Pass/PassFilter.h>
 #include <Render/DiffuseProbeGridFeatureProcessor.h>
 #include <DiffuseProbeGrid_Traits_Platform.h>
-#include <Atom/Feature/SpecularReflections/SpecularReflectionsFeatureProcessorInterface.h>
+#include <JE/Render/Features/SpecularReflections/SpecularReflectionsFeatureProcessorInterface.h>
 #include <Atom/RHI/Factory.h>
 #include <Atom/RHI/RHISystemInterface.h>
 #include <Atom/RHI/DevicePipelineState.h>
@@ -173,10 +173,10 @@ namespace AZ
             m_queryBufferAttachmentId = AZStd::string::format("DiffuseProbeGridQueryBuffer_%s", uuidString.c_str());
 
             // cache the SpecularReflectionsFeatureProcessor and SSR RayTracing state
-            m_specularReflectionsFeatureProcessor = GetParentScene()->GetFeatureProcessor<SpecularReflectionsFeatureProcessorInterface>();
+            m_specularReflectionsFeatureProcessor = GetParentScene()->GetFeatureProcessor<JE::Render::Features::SpecularReflectionsFeatureProcessorInterface>();
             if (m_specularReflectionsFeatureProcessor)
             {
-                const SSROptions& ssrOptions = m_specularReflectionsFeatureProcessor->GetSSROptions();
+                const JE::Render::Features::SSROptions& ssrOptions = m_specularReflectionsFeatureProcessor->GetSSROptions();
                 m_ssrRayTracingEnabled = ssrOptions.IsRayTracingEnabled();
             }
 
@@ -279,7 +279,7 @@ namespace AZ
 
             if (m_specularReflectionsFeatureProcessor)
             {
-                const SSROptions& ssrOptions = m_specularReflectionsFeatureProcessor->GetSSROptions();
+                const JE::Render::Features::SSROptions& ssrOptions = m_specularReflectionsFeatureProcessor->GetSSROptions();
                 if (m_ssrRayTracingEnabled != ssrOptions.IsRayTracingEnabled())
                 {
                     m_ssrRayTracingEnabled = ssrOptions.IsRayTracingEnabled();

@@ -10,7 +10,7 @@
 
 #include <AzCore/Component/Component.h>
 #include <AzCore/Component/TransformBus.h>
-#include <Atom/Feature/CubeMapCapture/CubeMapCaptureFeatureProcessorInterface.h>
+#include <JE/Render/Features/CubeMapCapture/CubeMapCaptureFeatureProcessorInterface.h>
 #include <JE/Render/Scene/CubeMapCapture/CubeMapCaptureTypes.h>
 #include <CubeMapCapture/CubeMapCaptureComponentConstants.h>
 
@@ -66,7 +66,7 @@ namespace JE::Render
             void SetExposure(float bakeExposure);
 
             // initiate the cubemap capture, invokes callback when complete
-            void RenderCubeMap(AZ::Render::RenderCubeMapCallback callback, const AZStd::string& relativePath);
+            void RenderCubeMap(JE::Render::Features::RenderCubeMapCallback callback, const AZStd::string& relativePath);
 
         private:
             AZ_DISABLE_COPY(CubeMapCaptureComponentController);
@@ -74,11 +74,11 @@ namespace JE::Render
             // TransformNotificationBus overrides ...
             void OnTransformChanged(const AZ::Transform& local, const AZ::Transform& world) override;
 
-            AZ::Render::CubeMapCaptureFeatureProcessorInterface* m_featureProcessor = nullptr;
+            JE::Render::Features::CubeMapCaptureFeatureProcessorInterface* m_featureProcessor = nullptr;
             AZ::TransformInterface* m_transformInterface = nullptr;
             AZ::EntityId m_entityId;
             CubeMapCaptureComponentConfig m_configuration;
-            AZ::Render::CubeMapCaptureHandle m_handle;
+            JE::Render::Features::CubeMapCaptureHandle m_handle;
         };
     } // namespace Render
 } // namespace AZ

@@ -22,15 +22,15 @@ namespace JE::Render
 
                 // Auto-gen serialize context code...
 #define SERIALIZE_CLASS MotionBlurComponentConfig
-#include <Atom/Feature/ParamMacros/StartParamSerializeContext.inl>
-#include <Atom/Feature/PostProcess/MotionBlur/MotionBlurParams.inl>
-#include <Atom/Feature/ParamMacros/EndParams.inl>
+#include <JE/Render/Features/ParamMacros/StartParamSerializeContext.inl>
+#include <JE/Render/Features/PostProcess/MotionBlur/MotionBlurParams.inl>
+#include <JE/Render/Features/ParamMacros/EndParams.inl>
 #undef SERIALIZE_CLASS
                     ;
             }
         }
 
-        void MotionBlurComponentConfig::CopySettingsFrom(AZ::Render::MotionBlurSettingsInterface* settings)
+        void MotionBlurComponentConfig::CopySettingsFrom(JE::Render::Features::MotionBlurSettingsInterface* settings)
         {
             if (!settings)
             {
@@ -38,13 +38,13 @@ namespace JE::Render
             }
 
 #define COPY_SOURCE settings
-#include <Atom/Feature/ParamMacros/StartParamCopySettingsFrom.inl>
-#include <Atom/Feature/PostProcess/MotionBlur/MotionBlurParams.inl>
-#include <Atom/Feature/ParamMacros/EndParams.inl>
+#include <JE/Render/Features/ParamMacros/StartParamCopySettingsFrom.inl>
+#include <JE/Render/Features/PostProcess/MotionBlur/MotionBlurParams.inl>
+#include <JE/Render/Features/ParamMacros/EndParams.inl>
 #undef COPY_SOURCE
         }
 
-        void MotionBlurComponentConfig::CopySettingsTo(AZ::Render::MotionBlurSettingsInterface* settings)
+        void MotionBlurComponentConfig::CopySettingsTo(JE::Render::Features::MotionBlurSettingsInterface* settings)
         {
             if (!settings)
             {
@@ -52,9 +52,9 @@ namespace JE::Render
             }
 
 #define COPY_TARGET settings
-#include <Atom/Feature/ParamMacros/StartParamCopySettingsTo.inl>
-#include <Atom/Feature/PostProcess/MotionBlur/MotionBlurParams.inl>
-#include <Atom/Feature/ParamMacros/EndParams.inl>
+#include <JE/Render/Features/ParamMacros/StartParamCopySettingsTo.inl>
+#include <JE/Render/Features/PostProcess/MotionBlur/MotionBlurParams.inl>
+#include <JE/Render/Features/ParamMacros/EndParams.inl>
 #undef COPY_TARGET
         }
 

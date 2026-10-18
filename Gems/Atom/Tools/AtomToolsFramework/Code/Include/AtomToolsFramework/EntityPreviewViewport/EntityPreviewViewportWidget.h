@@ -8,6 +8,8 @@
 
 #pragma once
 
+#include <JE/Render/Features/CoreLights/DirectionalLightFeatureProcessorInterface.h>
+
 #include <JE/Render/RPI/Public/Base.h>
 #include <AtomToolsFramework/EntityPreviewViewport/EntityPreviewViewportContent.h>
 #include <AtomToolsFramework/EntityPreviewViewport/EntityPreviewViewportInputController.h>
@@ -59,7 +61,7 @@ namespace AtomToolsFramework
         AZ::Transform m_cameraTransformOld = AZ::Transform::CreateIdentity();
 
         // Directional light handles produced by the lighting preset
-        using DirectionalLightHandle = AZ::Render::DirectionalLightFeatureProcessorInterface::LightHandle;
+        using DirectionalLightHandle = JE::Render::Features::DirectionalLightFeatureProcessorInterface::LightHandle;
         AZStd::vector<DirectionalLightHandle> m_lightHandles;
     };
 } // namespace AtomToolsFramework

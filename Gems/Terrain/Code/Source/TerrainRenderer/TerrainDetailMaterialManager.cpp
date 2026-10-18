@@ -180,12 +180,12 @@ namespace Terrain
         AZ_Error(TerrainDetailMaterialManagerName, m_detailScalePropertyIndex.IsValid(), "Failed to find terrain srg input constant %s.", TerrainSrgInputs::DetailMaterialScale);
 
         // Set up the gpu buffer for detail material data
-        AZ::Render::GpuBufferHandler::Descriptor desc;
+        JE::Render::Features::GpuBufferHandler::Descriptor desc;
         desc.m_bufferName = "Detail Material Data";
         desc.m_bufferSrgName = TerrainSrgInputs::DetailMaterialData;
         desc.m_elementSize = sizeof(DetailMaterialShaderData);
         desc.m_srgLayout = terrainSrgLayout;
-        m_detailMaterialDataBuffer = AZ::Render::GpuBufferHandler(desc);
+        m_detailMaterialDataBuffer = JE::Render::Features::GpuBufferHandler(desc);
 
         bool IndicesValid =
             m_detailMaterialIdPropertyIndex.IsValid() &&
@@ -1013,7 +1013,7 @@ namespace Terrain
         }
     }
 
-    auto TerrainDetailMaterialManager::FindByEntityId(AZ::EntityId entityId, AZ::Render::IndexedDataVector<DetailMaterialListRegion>& container)
+    auto TerrainDetailMaterialManager::FindByEntityId(AZ::EntityId entityId, JE::Render::Features::IndexedDataVector<DetailMaterialListRegion>& container)
         -> DetailMaterialListRegion*
     {
         for (DetailMaterialListRegion& data : container.GetDataVector())
@@ -1026,7 +1026,7 @@ namespace Terrain
         return nullptr;
     }
     
-    auto TerrainDetailMaterialManager::FindOrCreateByEntityId(AZ::EntityId entityId, AZ::Render::IndexedDataVector<DetailMaterialListRegion>& container)
+    auto TerrainDetailMaterialManager::FindOrCreateByEntityId(AZ::EntityId entityId, JE::Render::Features::IndexedDataVector<DetailMaterialListRegion>& container)
         -> DetailMaterialListRegion&
     {
         DetailMaterialListRegion* dataPtr = FindByEntityId(entityId, container);
@@ -1036,14 +1036,14 @@ namespace Terrain
         }
 
         const uint16_t slotId = container.GetFreeSlotIndex();
-        AZ_Assert(slotId != AZ::Render::IndexedDataVector<TerrainDetailMaterialManager>::NoFreeSlot, "Ran out of indices");
+        AZ_Assert(slotId != JE::Render::Features::IndexedDataVector<TerrainDetailMaterialManager>::NoFreeSlot, "Ran out of indices");
 
         DetailMaterialListRegion& data = container.GetData(slotId);
         data.m_entityId = entityId;
         return data;
     }
     
-    void TerrainDetailMaterialManager::RemoveByEntityId(AZ::EntityId entityId, AZ::Render::IndexedDataVector<DetailMaterialListRegion>& container)
+    void TerrainDetailMaterialManager::RemoveByEntityId(AZ::EntityId entityId, JE::Render::Features::IndexedDataVector<DetailMaterialListRegion>& container)
     {
         for (DetailMaterialListRegion& data : container.GetDataVector())
         {

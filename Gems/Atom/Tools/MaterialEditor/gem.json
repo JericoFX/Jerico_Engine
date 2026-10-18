@@ -17,7 +17,6 @@
     "dependencies": [
         "AtomToolsFramework",
         "Atom_RHI",
-        "Atom_Feature_Common",
         "ImageProcessingAtom",
         "LmbrCentral",
         "GradientSignal",

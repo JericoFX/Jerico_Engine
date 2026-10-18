@@ -6,12 +6,12 @@
  *
  */
 
-#include <Atom/Feature/CoreLights/DirectionalLightFeatureProcessorInterface.h>
-#include <Atom/Feature/ImageBasedLights/ImageBasedLightFeatureProcessorInterface.h>
-#include <Atom/Feature/PostProcess/PostProcessFeatureProcessorInterface.h>
-#include <Atom/Feature/PostProcessing/PostProcessingConstants.h>
-#include <Atom/Feature/SkyBox/SkyBoxFeatureProcessorInterface.h>
-#include <Atom/Feature/Utils/ModelPreset.h>
+#include <JE/Render/Features/CoreLights/DirectionalLightFeatureProcessorInterface.h>
+#include <JE/Render/Features/ImageBasedLights/ImageBasedLightFeatureProcessorInterface.h>
+#include <JE/Render/Features/PostProcess/PostProcessFeatureProcessorInterface.h>
+#include <JE/Render/Features/PostProcessing/PostProcessingConstants.h>
+#include <JE/Render/Features/SkyBox/SkyBoxFeatureProcessorInterface.h>
+#include <JE/Render/Features/Utils/ModelPreset.h>
 #include <JE/Render/RPI/Public/RenderPipeline.h>
 #include <JE/Render/RPI/Public/Scene.h>
 #include <JE/Editor/Render/RPI/Edit/Common/AssetUtils.h>
@@ -76,12 +76,12 @@ namespace AtomToolsFramework
 
                 // Update lighting preset, skybox, and shadows
                 auto scene = m_viewportScene->GetScene();
-                auto imageBasedLightFP = scene->GetFeatureProcessor<AZ::Render::ImageBasedLightFeatureProcessorInterface>();
-                auto postProcessFP = scene->GetFeatureProcessor<AZ::Render::PostProcessFeatureProcessorInterface>();
+                auto imageBasedLightFP = scene->GetFeatureProcessor<JE::Render::Features::ImageBasedLightFeatureProcessorInterface>();
+                auto postProcessFP = scene->GetFeatureProcessor<JE::Render::Features::PostProcessFeatureProcessorInterface>();
                 auto postProcessSettingInterface = postProcessFP->GetOrCreateSettingsInterface(m_viewportContent->GetPostFxEntityId());
                 auto exposureControlSettingInterface = postProcessSettingInterface->GetOrCreateExposureControlSettingsInterface();
-                auto directionalLightFP = scene->GetFeatureProcessor<AZ::Render::DirectionalLightFeatureProcessorInterface>();
-                auto skyboxFP = scene->GetFeatureProcessor<AZ::Render::SkyBoxFeatureProcessorInterface>();
+                auto directionalLightFP = scene->GetFeatureProcessor<JE::Render::Features::DirectionalLightFeatureProcessorInterface>();
+                auto skyboxFP = scene->GetFeatureProcessor<JE::Render::Features::SkyBoxFeatureProcessorInterface>();
 
                 Camera::Configuration cameraConfig;
                 Camera::CameraRequestBus::EventResult(
@@ -120,7 +120,7 @@ namespace AtomToolsFramework
         {
             m_cameraTransformOld = cameraTransform;
             auto scene = m_viewportScene->GetScene();
-            auto directionalLightFP = scene->GetFeatureProcessor<AZ::Render::DirectionalLightFeatureProcessorInterface>();
+            auto directionalLightFP = scene->GetFeatureProcessor<JE::Render::Features::DirectionalLightFeatureProcessorInterface>();
             for (const DirectionalLightHandle& id : m_lightHandles)
             {
                 directionalLightFP->SetCameraTransform(id, cameraTransform);

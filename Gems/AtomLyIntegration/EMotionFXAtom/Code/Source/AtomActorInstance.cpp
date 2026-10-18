@@ -11,7 +11,7 @@
 #include <AtomActorDebugDraw.h>
 #include <ActorAsset.h>
 
-#include <Atom/Feature/SkinnedMesh/SkinnedMeshInputBuffers.h>
+#include <JE/Render/Features/SkinnedMesh/SkinnedMeshInputBuffers.h>
 #include <JE/Render/Scene/SkinnedMesh/SkinnedMeshOverrideBus.h>
 #include <Integration/System/SystemCommon.h>
 #include <Integration/System/SystemComponent.h>
@@ -135,21 +135,21 @@ namespace AZ::Render
         RegisterActor();
     }
 
-    SkinningMethod AtomActorInstance::GetAtomSkinningMethod() const
+    JE::Render::Features::SkinningMethod AtomActorInstance::GetAtomSkinningMethod() const
     {
         switch (GetSkinningMethod())
         {
         case EMotionFX::Integration::SkinningMethod::DualQuat:
-            return SkinningMethod::DualQuaternion;
+            return JE::Render::Features::SkinningMethod::DualQuaternion;
         case EMotionFX::Integration::SkinningMethod::Linear:
-            return SkinningMethod::LinearSkinning;
+            return JE::Render::Features::SkinningMethod::LinearSkinning;
         case EMotionFX::Integration::SkinningMethod::None:
-            return SkinningMethod::NoSkinning;
+            return JE::Render::Features::SkinningMethod::NoSkinning;
         default:
             AZ_Error("AtomActorInstance", false, "Unsupported skinning method. Defaulting to linear");
         }
 
-        return SkinningMethod::LinearSkinning;
+        return JE::Render::Features::SkinningMethod::LinearSkinning;
     }
 
     void AtomActorInstance::SetIsVisible(bool isVisible)
@@ -185,16 +185,16 @@ namespace AZ::Render
 
     void AtomActorInstance::Activate()
     {
-        m_skinnedMeshFeatureProcessor = JE::Render::RPI::Scene::GetFeatureProcessorForEntity<SkinnedMeshFeatureProcessorInterface>(m_entityId);
+        m_skinnedMeshFeatureProcessor = JE::Render::RPI::Scene::GetFeatureProcessorForEntity<JE::Render::Features::SkinnedMeshFeatureProcessorInterface>(m_entityId);
         AZ_Assert(m_skinnedMeshFeatureProcessor, "AtomActorInstance was unable to find a SkinnedMeshFeatureProcessor on the EntityContext provided.");
 
-        m_meshFeatureProcessor = JE::Render::RPI::Scene::GetFeatureProcessorForEntity<MeshFeatureProcessorInterface>(m_entityId);
+        m_meshFeatureProcessor = JE::Render::RPI::Scene::GetFeatureProcessorForEntity<JE::Render::Features::MeshFeatureProcessorInterface>(m_entityId);
         AZ_Assert(m_meshFeatureProcessor, "AtomActorInstance was unable to find a MeshFeatureProcessor on the EntityContext provided.");
 
         m_transformInterface = TransformBus::FindFirstHandler(m_entityId);
         AZ_Warning("AtomActorInstance", m_transformInterface, "Unable to attach to a TransformBus handler. This skinned mesh will always be rendered at the origin.");
 
-        SkinnedMeshFeatureProcessorNotificationBus::Handler::BusConnect();
+        JE::Render::Features::SkinnedMeshFeatureProcessorNotificationBus::Handler::BusConnect();
         JE::Render::MaterialConsumerRequestBus::Handler::BusConnect(m_entityId);
         LmbrCentral::SkeletalHierarchyRequestBus::Handler::BusConnect(m_entityId);
 
@@ -203,10 +203,10 @@ namespace AZ::Render
 
     void AtomActorInstance::Deactivate()
     {
-        SkinnedMeshOutputStreamNotificationBus::Handler::BusDisconnect();
+        JE::Render::Features::SkinnedMeshOutputStreamNotificationBus::Handler::BusDisconnect();
         LmbrCentral::SkeletalHierarchyRequestBus::Handler::BusDisconnect();
         JE::Render::MaterialConsumerRequestBus::Handler::BusDisconnect();
-        SkinnedMeshFeatureProcessorNotificationBus::Handler::BusDisconnect();
+        JE::Render::Features::SkinnedMeshFeatureProcessorNotificationBus::Handler::BusDisconnect();
 
         Destroy();
 
@@ -485,7 +485,7 @@ namespace AZ::Render
             uint32_t lodCount = m_skinnedMeshInputBuffers->GetLodCount();
             for (uint32_t lodIndex = 0; lodIndex < lodCount; ++lodIndex)
             {
-                const SkinnedMeshInputLod& inputLod = m_skinnedMeshInputBuffers->GetLod(lodIndex);
+                const JE::Render::Features::SkinnedMeshInputLod& inputLod = m_skinnedMeshInputBuffers->GetLod(lodIndex);
                 Data::Asset<JE::Render::RPI::ModelLodAsset> modelLodAsset = inputLod.GetModelLodAsset();
                 for (const JE::Render::RPI::ModelLodAsset::Mesh& submesh : modelLodAsset->GetMeshes())
                 {
@@ -687,11 +687,11 @@ namespace AZ::Render
 
     void AtomActorInstance::CreateRenderProxy(const JE::Render::MaterialAssignmentMap& materials)
     {
-        auto meshFeatureProcessor = JE::Render::RPI::Scene::GetFeatureProcessorForEntity<MeshFeatureProcessorInterface>(m_entityId);
+        auto meshFeatureProcessor = JE::Render::RPI::Scene::GetFeatureProcessorForEntity<JE::Render::Features::MeshFeatureProcessorInterface>(m_entityId);
         AZ_Error("ActorComponentController", meshFeatureProcessor, "Unable to find a MeshFeatureProcessorInterface on the entityId.");
         if (meshFeatureProcessor)
         {
-            MeshHandleDescriptor meshDescriptor;
+            JE::Render::Features::MeshHandleDescriptor meshDescriptor;
             meshDescriptor.m_entityId = m_entityId;
             meshDescriptor.m_modelAsset = m_skinnedMeshInstance->m_model->GetModelAsset();
             meshDescriptor.m_productModelAsset = m_actorAsset->GetActor()->GetMeshAsset();
@@ -703,11 +703,11 @@ namespace AZ::Render
             meshDescriptor.m_supportRayIntersection = true; // we need to keep the buffer data in order to initialize the actor.
             meshDescriptor.m_modelChangedEventHandler = m_modelChangedEventHandler;
             meshDescriptor.m_objectSrgCreatedHandler = m_objectSrgCreatedHandler;
-            m_meshHandle = AZStd::make_shared<MeshFeatureProcessorInterface::MeshHandle>(m_meshFeatureProcessor->AcquireMesh(meshDescriptor));
+            m_meshHandle = AZStd::make_shared<JE::Render::Features::MeshFeatureProcessorInterface::MeshHandle>(m_meshFeatureProcessor->AcquireMesh(meshDescriptor));
         }
 
         // If render proxies already exist, they will be auto-freed
-        SkinnedMeshFeatureProcessorInterface::SkinnedMeshHandleDescriptor desc{ m_skinnedMeshInputBuffers, m_skinnedMeshInstance, m_meshHandle, m_boneTransforms, {GetAtomSkinningMethod()} };
+        JE::Render::Features::SkinnedMeshFeatureProcessorInterface::SkinnedMeshHandleDescriptor desc{ m_skinnedMeshInputBuffers, m_skinnedMeshInstance, m_meshHandle, m_boneTransforms, {GetAtomSkinningMethod()} };
         m_skinnedMeshHandle = m_skinnedMeshFeatureProcessor->AcquireSkinnedMesh(desc);
 
         if (m_transformInterface)
@@ -723,7 +723,7 @@ namespace AZ::Render
 
     void AtomActorInstance::CreateSkinnedMeshInstance()
     {
-        SkinnedMeshOutputStreamNotificationBus::Handler::BusDisconnect();
+        JE::Render::Features::SkinnedMeshOutputStreamNotificationBus::Handler::BusDisconnect();
         m_skinnedMeshInstance = m_skinnedMeshInputBuffers->CreateSkinnedMeshInstance();
         if (m_skinnedMeshInstance && m_skinnedMeshInstance->m_model)
         {
@@ -734,7 +734,7 @@ namespace AZ::Render
         else
         {
             AZ_Warning("AtomActorInstance", m_skinnedMeshInstance, "Failed to create target skinned model. Will automatically attempt to re-create when skinned mesh memory is freed up.");
-            SkinnedMeshOutputStreamNotificationBus::Handler::BusConnect();
+            JE::Render::Features::SkinnedMeshOutputStreamNotificationBus::Handler::BusConnect();
         }
     }
 
@@ -869,7 +869,7 @@ namespace AZ::Render
         }
     }
 
-    const MeshFeatureProcessorInterface::MeshHandle* AtomActorInstance::GetMeshHandle() const
+    const JE::Render::Features::MeshFeatureProcessorInterface::MeshHandle* AtomActorInstance::GetMeshHandle() const
     {
         return m_meshHandle.get();
     }

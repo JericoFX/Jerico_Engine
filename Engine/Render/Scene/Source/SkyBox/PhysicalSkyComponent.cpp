@@ -34,7 +34,7 @@ namespace JE::Render
                     ->RequestBus("PhysicalSkyRequestBus")
                     ->RequestBus("SkyBoxFogRequestBus");
 
-                behaviorContext->ConstantProperty("PhysicalSkyComponentTypeId", BehaviorConstant(AZ::Uuid(AZ::Render::PhysicalSkyComponentTypeId)))
+                behaviorContext->ConstantProperty("PhysicalSkyComponentTypeId", BehaviorConstant(AZ::Uuid(JE::Render::Features::PhysicalSkyComponentTypeId)))
                     ->Attribute(AZ::Script::Attributes::Module, "render")
                     ->Attribute(AZ::Script::Attributes::Scope, AZ::Script::Attributes::ScopeFlags::Common);
             }

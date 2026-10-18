@@ -108,13 +108,14 @@ ly_add_target(
             JE::WorldCamera
             JE::EditorRenderIntegration
             JE::EditorRenderScene
+            JE::EditorRenderFeatures
             JE::PrefabBuilder
             JE::RenderAssetBuilders
             JE::DebugImGui
             JE::ProfilerView
             JE::RenderDebug
             JE::EditorMaterials
-            Gem::Atom_Feature_Common.Public
+            JE::RenderFeatures
             JE::RenderIntegration
             Gem::AtomToolsFramework.Static
             Gem::AtomViewportDisplayInfo

@@ -10,9 +10,14 @@
 #include <AzCore/Component/ComponentBus.h>
 #include <ACES/Aces.h>
 
-namespace AZ::Render
+namespace JE::Render::Features
 {
     struct AcesParameterOverrides;
+}
+
+namespace AZ::Render
+{
+
 }
 
 namespace JE::Render
@@ -37,9 +42,9 @@ namespace JE::Render
             //! Get display mapper type
             virtual AZ::Render::DisplayMapperOperationType GetDisplayMapperOperationType() const = 0;
             //! Set ACES parameter overrides for ACES mapping, display mapper must be set to Aces to see the difference
-            virtual void SetAcesParameterOverrides(const AZ::Render::AcesParameterOverrides& parameterOverrides) = 0;
+            virtual void SetAcesParameterOverrides(const JE::Render::Features::AcesParameterOverrides& parameterOverrides) = 0;
             //! Get ACES parameter overrides
-            virtual const AZ::Render::AcesParameterOverrides& GetAcesParameterOverrides() const = 0;
+            virtual const JE::Render::Features::AcesParameterOverrides& GetAcesParameterOverrides() const = 0;
 
             // Enable or disable ACES parameter overrides
             virtual void SetOverrideAcesParameters(bool value) = 0;
@@ -108,7 +113,7 @@ namespace JE::Render
             }
 
             //! Notifies that ACES parameter overrides changed
-            virtual void OnAcesParameterOverridesUpdated([[maybe_unused]] const AZ::Render::AcesParameterOverrides& acesParameterOverrides)
+            virtual void OnAcesParameterOverridesUpdated([[maybe_unused]] const JE::Render::Features::AcesParameterOverrides& acesParameterOverrides)
             {
             }
         };

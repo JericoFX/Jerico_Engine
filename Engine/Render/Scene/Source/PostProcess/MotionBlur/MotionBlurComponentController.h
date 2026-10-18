@@ -8,10 +8,10 @@
 
 #pragma once
 
-#include <Atom/Feature/PostProcess/MotionBlur/MotionBlurConstants.h>
-#include <Atom/Feature/PostProcess/MotionBlur/MotionBlurSettingsInterface.h>
-#include <Atom/Feature/PostProcess/PostProcessFeatureProcessorInterface.h>
-#include <Atom/Feature/PostProcess/PostProcessSettingsInterface.h>
+#include <JE/Render/Features/PostProcess/MotionBlur/MotionBlurConstants.h>
+#include <JE/Render/Features/PostProcess/MotionBlur/MotionBlurSettingsInterface.h>
+#include <JE/Render/Features/PostProcess/PostProcessFeatureProcessorInterface.h>
+#include <JE/Render/Features/PostProcess/PostProcessSettingsInterface.h>
 
 #include <JE/Render/Scene/PostProcess/MotionBlur/MotionBlurBus.h>
 #include <JE/Render/Scene/PostProcess/MotionBlur/MotionBlurComponentConfig.h>
@@ -49,17 +49,17 @@ namespace JE::Render
             const MotionBlurComponentConfig& GetConfiguration() const;
 
             // Auto-gen function override declarations (functions definitions in .cpp)...
-#include <Atom/Feature/ParamMacros/StartParamFunctionsOverride.inl>
-#include <Atom/Feature/PostProcess/MotionBlur/MotionBlurParams.inl>
-#include <Atom/Feature/ParamMacros/EndParams.inl>
+#include <JE/Render/Features/ParamMacros/StartParamFunctionsOverride.inl>
+#include <JE/Render/Features/PostProcess/MotionBlur/MotionBlurParams.inl>
+#include <JE/Render/Features/ParamMacros/EndParams.inl>
 
         private:
             AZ_DISABLE_COPY(MotionBlurComponentController);
 
             void OnConfigChanged();
 
-            AZ::Render::PostProcessSettingsInterface* m_postProcessInterface = nullptr;
-            AZ::Render::MotionBlurSettingsInterface* m_settingsInterface = nullptr;
+            JE::Render::Features::PostProcessSettingsInterface* m_postProcessInterface = nullptr;
+            JE::Render::Features::MotionBlurSettingsInterface* m_settingsInterface = nullptr;
             MotionBlurComponentConfig m_configuration;
             AZ::EntityId m_entityId;
         };

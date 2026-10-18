@@ -55,8 +55,8 @@ namespace JE::Editor::Render
                             &JE::Render::Scene::ExposureControlComponentConfig::m_exposureControlType,
                             QT_TRANSLATE_NOOP("AtomLyIntegration", "Control Type"),
                             QT_TRANSLATE_NOOP("AtomLyIntegration", "How to control a exposure value."))
-                        ->EnumAttribute(AZ::Render::ExposureControl::ExposureControlType::ManualOnly, QT_TRANSLATE_NOOP("AtomLyIntegration", "Manual Only"))
-                        ->EnumAttribute(AZ::Render::ExposureControl::ExposureControlType::EyeAdaptation, QT_TRANSLATE_NOOP("AtomLyIntegration", "Eye Adaptation"))
+                        ->EnumAttribute(JE::Render::Features::ExposureControl::ExposureControlType::ManualOnly, QT_TRANSLATE_NOOP("AtomLyIntegration", "Manual Only"))
+                        ->EnumAttribute(JE::Render::Features::ExposureControl::ExposureControlType::EyeAdaptation, QT_TRANSLATE_NOOP("AtomLyIntegration", "Eye Adaptation"))
                         ->Attribute(AZ::Edit::Attributes::ChangeNotify, AZ::Edit::PropertyRefreshLevels::ValuesOnly)
                         ->Attribute(AZ::Edit::Attributes::ReadOnly, &JE::Render::Scene::ExposureControlComponentConfig::ArePropertiesReadOnly)
 
@@ -100,9 +100,9 @@ namespace JE::Editor::Render
                         ->Attribute(AZ::Edit::Attributes::AutoExpand, false)
                         // Auto-gen editor context settings for overrides
 #define EDITOR_CLASS JE::Render::Scene::ExposureControlComponentConfig
-#include <Atom/Feature/ParamMacros/StartOverrideEditorContext.inl>
-#include <Atom/Feature/PostProcess/ExposureControl/ExposureControlParams.inl>
-#include <Atom/Feature/ParamMacros/EndParams.inl>
+#include <JE/Render/Features/ParamMacros/StartOverrideEditorContext.inl>
+#include <JE/Render/Features/PostProcess/ExposureControl/ExposureControlParams.inl>
+#include <JE/Render/Features/ParamMacros/EndParams.inl>
 #undef EDITOR_CLASS
                             ;
                 }

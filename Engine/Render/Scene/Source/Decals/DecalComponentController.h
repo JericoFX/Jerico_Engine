@@ -13,7 +13,7 @@
 #include <AzCore/Component/NonUniformScaleBus.h>
 #include <JE/Render/Scene/Decals/DecalBus.h>
 #include <JE/Render/Scene/Decals/DecalComponentConfig.h>
-#include <Atom/Feature/Decals/DecalFeatureProcessorInterface.h>
+#include <JE/Render/Features/Decals/DecalFeatureProcessorInterface.h>
 
 namespace JE::Editor::Render::Scene
 {
@@ -82,8 +82,8 @@ namespace JE::Render
             void HandleNonUniformScaleChange(const AZ::Vector3& nonUniformScale);
 
             DecalComponentConfig m_configuration;
-            AZ::Render::DecalFeatureProcessorInterface* m_featureProcessor = nullptr;
-            AZ::Render::DecalFeatureProcessorInterface::DecalHandle m_handle;
+            JE::Render::Features::DecalFeatureProcessorInterface* m_featureProcessor = nullptr;
+            JE::Render::Features::DecalFeatureProcessorInterface::DecalHandle m_handle;
             AZ::EntityId m_entityId;
             AZ::Vector3 m_cachedNonUniformScale = AZ::Vector3::CreateOne();
 

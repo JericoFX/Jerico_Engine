@@ -6,7 +6,7 @@
  *
  */
 
-#include <Atom/Feature/SkyBox/SkyboxConstants.h>
+#include <JE/Render/Features/SkyBox/SkyboxConstants.h>
 #include <Components/SkyAtmosphereComponentController.h>
 #include <JE/Render/Scene/CoreLights/DirectionalLightBus.h>
 

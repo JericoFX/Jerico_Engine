@@ -99,7 +99,7 @@ namespace JE::Render
             AZ::TransformNotificationBus::Handler::BusConnect(m_entityId);
             AzFramework::BoundsRequestBus::Handler::BusConnect(entityId);
 
-            m_featureProcessor = JE::Render::RPI::Scene::GetFeatureProcessorForEntity<AZ::Render::ReflectionProbeFeatureProcessorInterface>(entityId);
+            m_featureProcessor = JE::Render::RPI::Scene::GetFeatureProcessorForEntity<JE::Render::Features::ReflectionProbeFeatureProcessorInterface>(entityId);
             AZ_Assert(m_featureProcessor, "ReflectionProbeComponentController was unable to find a ReflectionProbeFeatureProcessor on the EntityContext provided.");
 
             m_transformInterface = AZ::TransformBus::FindFirstHandler(entityId);
@@ -168,7 +168,7 @@ namespace JE::Render
             if (m_featureProcessor)
             {
                 m_featureProcessor->RemoveReflectionProbe(m_handle);
-                m_handle = AZ::Render::ReflectionProbeHandle{};
+                m_handle = JE::Render::Features::ReflectionProbeHandle{};
             }
 
             LmbrCentral::ShapeComponentNotificationsBus::Handler::BusDisconnect();
@@ -302,7 +302,7 @@ namespace JE::Render
             m_featureProcessor->SetBakeExposure(m_handle, bakeExposure);
         }
 
-        void ReflectionProbeComponentController::BakeReflectionProbe(AZ::Render::BuildCubeMapCallback callback, const AZStd::string& relativePath)
+        void ReflectionProbeComponentController::BakeReflectionProbe(JE::Render::Features::BuildCubeMapCallback callback, const AZStd::string& relativePath)
         {
             if (!m_featureProcessor)
             {

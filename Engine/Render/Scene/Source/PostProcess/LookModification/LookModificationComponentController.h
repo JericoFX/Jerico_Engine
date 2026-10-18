@@ -15,9 +15,9 @@
 #include <JE/Render/Scene/PostProcess/LookModification/LookModificationComponentConfig.h>
 
 #include <ACES/Aces.h>
-#include <Atom/Feature/PostProcess/LookModification/LookModificationSettingsInterface.h>
-#include <Atom/Feature/PostProcess/PostProcessSettingsInterface.h>
-#include <Atom/Feature/PostProcess/PostProcessFeatureProcessorInterface.h>
+#include <JE/Render/Features/PostProcess/LookModification/LookModificationSettingsInterface.h>
+#include <JE/Render/Features/PostProcess/PostProcessSettingsInterface.h>
+#include <JE/Render/Features/PostProcess/PostProcessFeatureProcessorInterface.h>
 #include <AzCore/Asset/AssetCommon.h>
 #include <JE/Render/RPI/Reflect/System/AnyAsset.h>
 
@@ -51,17 +51,17 @@ namespace JE::Render
             const LookModificationComponentConfig& GetConfiguration() const;
 
             // Auto-gen function override declarations (functions definitions in .cpp)...
-#include <Atom/Feature/ParamMacros/StartParamFunctionsOverride.inl>
-#include <Atom/Feature/PostProcess/LookModification/LookModificationParams.inl>
-#include <Atom/Feature/ParamMacros/EndParams.inl>
+#include <JE/Render/Features/ParamMacros/StartParamFunctionsOverride.inl>
+#include <JE/Render/Features/PostProcess/LookModification/LookModificationParams.inl>
+#include <JE/Render/Features/ParamMacros/EndParams.inl>
 
         private:
             AZ_DISABLE_COPY(LookModificationComponentController);
 
             void OnConfigChanged();
 
-            AZ::Render::PostProcessSettingsInterface* m_postProcessInterface = nullptr;
-            AZ::Render::LookModificationSettingsInterface* m_settingsInterface = nullptr;
+            JE::Render::Features::PostProcessSettingsInterface* m_postProcessInterface = nullptr;
+            JE::Render::Features::LookModificationSettingsInterface* m_settingsInterface = nullptr;
             LookModificationComponentConfig m_configuration;
             AZ::EntityId m_entityId;
         };

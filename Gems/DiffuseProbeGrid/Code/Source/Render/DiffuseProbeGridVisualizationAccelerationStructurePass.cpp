@@ -6,7 +6,7 @@
  *
  */
 
-#include <Atom/Feature/RayTracing/RayTracingFeatureProcessorInterface.h>
+#include <JE/Render/Features/RayTracing/RayTracingFeatureProcessorInterface.h>
 #include <Atom/RHI/FrameScheduler.h>
 #include <Atom/RHI/CommandList.h>
 #include <Atom/RHI/RHISystemInterface.h>
@@ -130,7 +130,7 @@ namespace AZ
                         }
 
                         uint32_t byteCount = aznumeric_cast<uint32_t>(tlasInstancesBuffer->GetDescriptor().m_byteCount);
-                        RHI::BufferViewDescriptor bufferViewDescriptor = RHI::BufferViewDescriptor::CreateStructured(0, byteCount / RayTracingTlasInstanceElementSize, RayTracingTlasInstanceElementSize);
+                        RHI::BufferViewDescriptor bufferViewDescriptor = RHI::BufferViewDescriptor::CreateStructured(0, byteCount / JE::Render::Features::RayTracingTlasInstanceElementSize, JE::Render::Features::RayTracingTlasInstanceElementSize);
 
                         RHI::BufferScopeAttachmentDescriptor desc;
                         desc.m_attachmentId = attachmentId;

@@ -10,7 +10,7 @@
 
 #include <AzCore/EBus/EBus.h>
 #include <AzCore/Component/EntityId.h>
-#include <Atom/Feature/Mesh/MeshFeatureProcessorInterface.h>
+#include <JE/Render/Features/Mesh/MeshFeatureProcessorInterface.h>
 
 namespace JE::Render
 {
@@ -26,7 +26,7 @@ namespace JE::Render
             using BusIdType = AZ::EntityId;
 
             //! Returns the handle to the mesh.
-            virtual const AZ::Render::MeshFeatureProcessorInterface::MeshHandle* GetMeshHandle() const = 0;
+            virtual const JE::Render::Features::MeshFeatureProcessorInterface::MeshHandle* GetMeshHandle() const = 0;
         };
 
         using MeshHandleStateRequestBus = AZ::EBus<MeshHandleStateRequests>;
@@ -41,7 +41,7 @@ namespace JE::Render
             using BusIdType = AZ::EntityId;
 
             //! Notification for when the mesh handle has been set (and thus ready for use).
-            virtual void OnMeshHandleSet(const AZ::Render::MeshFeatureProcessorInterface::MeshHandle* meshHandle) = 0;
+            virtual void OnMeshHandleSet(const JE::Render::Features::MeshFeatureProcessorInterface::MeshHandle* meshHandle) = 0;
 
             //! When connecting to this bus, if the handle is ready you will immediately get an OnMeshHandleAcquire notification.
             template<class Bus>
@@ -63,7 +63,7 @@ namespace JE::Render
                         return;
                     }
 
-                    const AZ::Render::MeshFeatureProcessorInterface::MeshHandle* meshHandle = nullptr;
+                    const JE::Render::Features::MeshFeatureProcessorInterface::MeshHandle* meshHandle = nullptr;
                     MeshHandleStateRequestBus::EventResult(meshHandle, id, &MeshHandleStateRequestBus::Events::GetMeshHandle);
 
                     if (meshHandle && meshHandle->IsValid())

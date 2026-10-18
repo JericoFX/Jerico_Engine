@@ -70,17 +70,17 @@ namespace JE::Render
 
         void PhysicalSkyComponentController::Activate(AZ::EntityId entityId)
         {
-            m_featureProcessorInterface = JE::Render::RPI::Scene::GetFeatureProcessorForEntity<AZ::Render::SkyBoxFeatureProcessorInterface>(entityId);
+            m_featureProcessorInterface = JE::Render::RPI::Scene::GetFeatureProcessorForEntity<JE::Render::Features::SkyBoxFeatureProcessorInterface>(entityId);
 
             // only activate if there is no other skybox activate
             if (!m_featureProcessorInterface->IsEnabled())
             {
-                m_featureProcessorInterface->SetSkyboxMode(AZ::Render::SkyBoxMode::PhysicalSky);
+                m_featureProcessorInterface->SetSkyboxMode(JE::Render::Features::SkyBoxMode::PhysicalSky);
                 m_featureProcessorInterface->Enable(true);
 
                 m_entityId = entityId;
-                m_skyPhotometricValue = AZ::Render::PhotometricValue(m_configuration.m_skyIntensity, AZ::Color::CreateOne(), m_configuration.m_intensityMode);
-                m_sunPhotometricValue = AZ::Render::PhotometricValue(m_configuration.m_sunIntensity, AZ::Color::CreateOne(), m_configuration.m_intensityMode);
+                m_skyPhotometricValue = JE::Render::Features::PhotometricValue(m_configuration.m_skyIntensity, AZ::Color::CreateOne(), m_configuration.m_intensityMode);
+                m_sunPhotometricValue = JE::Render::Features::PhotometricValue(m_configuration.m_sunIntensity, AZ::Color::CreateOne(), m_configuration.m_intensityMode);
 
                 SetTurbidity(m_configuration.m_turbidity);
                 SetSunRadiusFactor(m_configuration.m_sunRadiusFactor);
@@ -95,7 +95,7 @@ namespace JE::Render
                 m_featureProcessorInterface->SetFogSettings(m_configuration.m_skyBoxFogSettings);
 
                 PhysicalSkyRequestBus::Handler::BusConnect(m_entityId);
-                AZ::Render::SkyBoxFogRequestBus::Handler::BusConnect(m_entityId);
+                JE::Render::Features::SkyBoxFogRequestBus::Handler::BusConnect(m_entityId);
                 AZ::TransformNotificationBus::Handler::BusConnect(m_entityId);
 
                 m_isActive = true;
@@ -113,7 +113,7 @@ namespace JE::Render
             if (m_isActive)
             {
                 PhysicalSkyRequestBus::Handler::BusDisconnect();
-                AZ::Render::SkyBoxFogRequestBus::Handler::BusDisconnect();
+                JE::Render::Features::SkyBoxFogRequestBus::Handler::BusDisconnect();
                 AZ::TransformNotificationBus::Handler::BusDisconnect();
 
                 m_featureProcessorInterface->Enable(false);
@@ -161,7 +161,7 @@ namespace JE::Render
             return m_configuration.m_sunRadiusFactor;
         }
 
-        void PhysicalSkyComponentController::SetSkyIntensity(float intensity, AZ::Render::PhotometricUnit unit)
+        void PhysicalSkyComponentController::SetSkyIntensity(float intensity, JE::Render::Features::PhotometricUnit unit)
         {
             m_skyPhotometricValue.ConvertToPhotometricUnit(unit);
             m_skyPhotometricValue.SetIntensity(intensity);
@@ -176,7 +176,7 @@ namespace JE::Render
             m_featureProcessorInterface->SetSkyIntensity(intensity, m_skyPhotometricValue.GetType());
         }
 
-        float PhysicalSkyComponentController::GetSkyIntensity(AZ::Render::PhotometricUnit unit)
+        float PhysicalSkyComponentController::GetSkyIntensity(JE::Render::Features::PhotometricUnit unit)
         {
             m_skyPhotometricValue.ConvertToPhotometricUnit(unit);
             m_configuration.m_skyIntensity = m_skyPhotometricValue.GetIntensity();
@@ -188,7 +188,7 @@ namespace JE::Render
             return m_configuration.m_skyIntensity;
         }
 
-        void PhysicalSkyComponentController::SetSunIntensity(float intensity, AZ::Render::PhotometricUnit unit)
+        void PhysicalSkyComponentController::SetSunIntensity(float intensity, JE::Render::Features::PhotometricUnit unit)
         {
             m_sunPhotometricValue.ConvertToPhotometricUnit(unit);
             m_sunPhotometricValue.SetIntensity(intensity);
@@ -203,7 +203,7 @@ namespace JE::Render
             m_featureProcessorInterface->SetSunIntensity(intensity, m_sunPhotometricValue.GetType());
         }
 
-        float PhysicalSkyComponentController::GetSunIntensity(AZ::Render::PhotometricUnit unit)
+        float PhysicalSkyComponentController::GetSunIntensity(JE::Render::Features::PhotometricUnit unit)
         {
             m_sunPhotometricValue.ConvertToPhotometricUnit(unit);
             m_configuration.m_sunIntensity = m_sunPhotometricValue.GetIntensity();
@@ -215,7 +215,7 @@ namespace JE::Render
             return m_configuration.m_sunIntensity;
         }
 
-        AZ::Render::SunPosition PhysicalSkyComponentController::GetSunTransform(const AZ::Transform& world)
+        JE::Render::Features::SunPosition PhysicalSkyComponentController::GetSunTransform(const AZ::Transform& world)
         {
             AZ::Transform worldNoScale = world;
             worldNoScale.ExtractUniformScale();
@@ -227,7 +227,7 @@ namespace JE::Render
             sunPosition.SetY(sunPositionAtom.GetZ());
             sunPosition.SetZ(sunPositionAtom.GetX());
 
-            return AZ::Render::SunPosition(atan2(sunPosition.GetZ(), sunPosition.GetX()), asin(sunPosition.GetY()));
+            return JE::Render::Features::SunPosition(atan2(sunPosition.GetZ(), sunPosition.GetX()), asin(sunPosition.GetY()));
         }
 
         void PhysicalSkyComponentController::SetEnabled(bool enable)

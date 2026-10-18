@@ -48,8 +48,8 @@ namespace JE::Editor::Render
                         "PhysicalSkyComponentConfig", "")
                         ->ClassElement(AZ::Edit::ClassElements::EditorData, "")
                             ->DataElement(AZ::Edit::UIHandlers::ComboBox, &JE::Render::Scene::PhysicalSkyComponentConfig::m_intensityMode, QT_TRANSLATE_NOOP("AtomLyIntegration", "Intensity Mode"), QT_TRANSLATE_NOOP("AtomLyIntegration", "Specifying the light unit"))
-                                ->EnumAttribute(AZ::Render::PhotometricUnit::Ev100Luminance, QT_TRANSLATE_NOOP("AtomLyIntegration", "Ev100"))
-                                ->EnumAttribute(AZ::Render::PhotometricUnit::Nit, QT_TRANSLATE_NOOP("AtomLyIntegration", "Nit"))
+                                ->EnumAttribute(JE::Render::Features::PhotometricUnit::Ev100Luminance, QT_TRANSLATE_NOOP("AtomLyIntegration", "Ev100"))
+                                ->EnumAttribute(JE::Render::Features::PhotometricUnit::Nit, QT_TRANSLATE_NOOP("AtomLyIntegration", "Nit"))
                             ->DataElement(AZ::Edit::UIHandlers::Slider, &JE::Render::Scene::PhysicalSkyComponentConfig::m_skyIntensity, QT_TRANSLATE_NOOP("AtomLyIntegration", "Sky Intensity"), QT_TRANSLATE_NOOP("AtomLyIntegration", "Brightness of the sky"))
                                 ->Attribute(AZ::Edit::Attributes::Min, &JE::Render::Scene::PhysicalSkyComponentConfig::GetSkyIntensityMin)
                                 ->Attribute(AZ::Edit::Attributes::Max, &JE::Render::Scene::PhysicalSkyComponentConfig::GetSkyIntensityMax)
@@ -77,7 +77,7 @@ namespace JE::Editor::Render
                     ->RequestBus("PhysicalSkyRequestBus")
                     ->RequestBus("SkyBoxFogRequestBus");
 
-                behaviorContext->ConstantProperty("EditorPhysicalSkyComponentTypeId", BehaviorConstant(AZ::Uuid(AZ::Render::EditorPhysicalSkyComponentTypeId)))
+                behaviorContext->ConstantProperty("EditorPhysicalSkyComponentTypeId", BehaviorConstant(AZ::Uuid(JE::Render::Features::EditorPhysicalSkyComponentTypeId)))
                     ->Attribute(AZ::Script::Attributes::Module, "render")
                     ->Attribute(AZ::Script::Attributes::Scope, AZ::Script::Attributes::ScopeFlags::Automation);
             }

@@ -11,9 +11,9 @@
 #include <JE/Render/Scene/Debug/RenderDebugBus.h>
 #include <JE/Render/Scene/Debug/RenderDebugComponentConfig.h>
 
-#include <Atom/Feature/Debug/RenderDebugSettingsInterface.h>
-#include <Atom/Feature/Debug/RenderDebugSettingsInterface.h>
-#include <Atom/Feature/Debug/RenderDebugFeatureProcessorInterface.h>
+#include <JE/Render/Features/Debug/RenderDebugSettingsInterface.h>
+#include <JE/Render/Features/Debug/RenderDebugSettingsInterface.h>
+#include <JE/Render/Features/Debug/RenderDebugFeatureProcessorInterface.h>
 
 namespace JE::Editor::Render::Scene
 {
@@ -43,16 +43,16 @@ namespace JE::Render::Scene
         const RenderDebugComponentConfig& GetConfiguration() const;
 
         // Auto-gen function override declarations (functions definitions in .cpp)...
-#include <Atom/Feature/ParamMacros/StartParamFunctionsOverride.inl>
-#include <Atom/Feature/Debug/RenderDebugParams.inl>
-#include <Atom/Feature/ParamMacros/EndParams.inl>
+#include <JE/Render/Features/ParamMacros/StartParamFunctionsOverride.inl>
+#include <JE/Render/Features/Debug/RenderDebugParams.inl>
+#include <JE/Render/Features/ParamMacros/EndParams.inl>
 
     private:
         AZ_DISABLE_COPY(RenderDebugComponentController);
 
         void OnConfigChanged();
 
-        AZ::Render::RenderDebugSettingsInterface* m_renderDebugSettingsInterface = nullptr;
+        JE::Render::Features::RenderDebugSettingsInterface* m_renderDebugSettingsInterface = nullptr;
         RenderDebugComponentConfig m_configuration;
         AZ::EntityId m_entityId;
     };

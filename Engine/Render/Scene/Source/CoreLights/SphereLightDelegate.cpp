@@ -8,13 +8,13 @@
 
 #include <CoreLights/SphereLightDelegate.h>
 #include <JE/Render/RPI/Public/Scene.h>
-#include <Atom/Feature/CoreLights/PointLightFeatureProcessorInterface.h>
+#include <JE/Render/Features/CoreLights/PointLightFeatureProcessorInterface.h>
 #include <JE/Render/Scene/CoreLights/AreaLightComponentConfig.h>
 
 namespace JE::Render::Scene
 {
     SphereLightDelegate::SphereLightDelegate(LmbrCentral::SphereShapeComponentRequests* shapeBus, AZ::EntityId entityId, bool isVisible)
-        : LightDelegateBase<AZ::Render::PointLightFeatureProcessorInterface>(entityId, isVisible)
+        : LightDelegateBase<JE::Render::Features::PointLightFeatureProcessorInterface>(entityId, isVisible)
         , m_sphereShapeBus(shapeBus)
     {
         InitBase(entityId);
@@ -23,7 +23,7 @@ namespace JE::Render::Scene
     float SphereLightDelegate::CalculateAttenuationRadius(float lightThreshold) const
     {
         // Calculate the radius at which the irradiance will be equal to cutoffIntensity.
-        float intensity = GetPhotometricValue().GetCombinedIntensity(AZ::Render::PhotometricUnit::Lumen);
+        float intensity = GetPhotometricValue().GetCombinedIntensity(JE::Render::Features::PhotometricUnit::Lumen);
         return sqrt(intensity / lightThreshold);
     }
         
@@ -76,7 +76,7 @@ namespace JE::Render::Scene
         }
     }
 
-    void SphereLightDelegate::SetShadowmapMaxSize(AZ::Render::ShadowmapSize size)
+    void SphereLightDelegate::SetShadowmapMaxSize(JE::Render::Features::ShadowmapSize size)
     {
         if (GetShadowsEnabled() && GetLightHandle().IsValid())
         {
@@ -84,7 +84,7 @@ namespace JE::Render::Scene
         }
     }
 
-    void SphereLightDelegate::SetShadowFilterMethod(AZ::Render::ShadowFilterMethod method)
+    void SphereLightDelegate::SetShadowFilterMethod(JE::Render::Features::ShadowFilterMethod method)
     {
         if (GetShadowsEnabled() && GetLightHandle().IsValid())
         {

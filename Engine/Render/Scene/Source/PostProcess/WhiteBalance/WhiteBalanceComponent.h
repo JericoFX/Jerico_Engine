@@ -8,7 +8,7 @@
 
 #pragma once
 
-#include <Atom/Feature/PostProcess/WhiteBalance/WhiteBalanceConstants.h>
+#include <JE/Render/Features/PostProcess/WhiteBalance/WhiteBalanceConstants.h>
 #include <PostProcess/WhiteBalance/WhiteBalanceComponentController.h>
 #include <JE/Render/Scene/PostProcess/WhiteBalance/WhiteBalanceComponentConfig.h>
 #include <AzCore/Component/Component.h>

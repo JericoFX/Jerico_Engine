@@ -7,7 +7,7 @@
 
 #pragma once
 
-#include <Atom/Feature/LookupTable/LookupTableAsset.h>
+#include <JE/Render/Features/LookupTable/LookupTableAsset.h>
 #include <JE/Render/RPI/Public/Pass/AttachmentReadback.h>
 #include <AzCore/Outcome/Outcome.h>
 #include <AzCore/std/string/string.h>
@@ -20,5 +20,5 @@ namespace JE::Editor::Render::Scene
         const JE::Render::RPI::AttachmentReadback::ReadbackResult& readback, const AZStd::string& absoluteOutputBase);
 
     //! Validate the native LUT data before the display mapper indexes its RGB triplets.
-    AZ::Outcome<void, AZStd::string> ValidateLookupTable(const AZ::Render::LookupTableAsset& lookupTable);
+    AZ::Outcome<void, AZStd::string> ValidateLookupTable(const JE::Render::Features::LookupTableAsset& lookupTable);
 }

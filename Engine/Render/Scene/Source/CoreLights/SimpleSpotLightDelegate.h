@@ -11,14 +11,14 @@
 #include <AzCore/Component/TransformBus.h>
 #include <CoreLights/LightDelegateBase.h>
 
-#include <Atom/Feature/CoreLights/SimpleSpotLightFeatureProcessorInterface.h>
+#include <JE/Render/Features/CoreLights/SimpleSpotLightFeatureProcessorInterface.h>
 #include <AzFramework/Entity/EntityDebugDisplayBus.h>
 
 namespace JE::Render::Scene
 {
-    class SimpleSpotLightDelegate final : public LightDelegateBase<AZ::Render::SimpleSpotLightFeatureProcessorInterface>
+    class SimpleSpotLightDelegate final : public LightDelegateBase<JE::Render::Features::SimpleSpotLightFeatureProcessorInterface>
     {
-        using Base = LightDelegateBase<AZ::Render::SimpleSpotLightFeatureProcessorInterface>;
+        using Base = LightDelegateBase<JE::Render::Features::SimpleSpotLightFeatureProcessorInterface>;
 
     public:
         SimpleSpotLightDelegate(AZ::EntityId entityId, bool isVisible);
@@ -38,8 +38,8 @@ namespace JE::Render::Scene
         AZ::Aabb GetLocalVisualizationBounds() const override;
         void SetEnableShadow(bool enabled) override;
         void SetShadowBias(float bias) override;
-        void SetShadowmapMaxSize(AZ::Render::ShadowmapSize size) override;
-        void SetShadowFilterMethod(AZ::Render::ShadowFilterMethod method) override;
+        void SetShadowmapMaxSize(JE::Render::Features::ShadowmapSize size) override;
+        void SetShadowFilterMethod(JE::Render::Features::ShadowFilterMethod method) override;
         void SetFilteringSampleCount(uint32_t count) override;
         void SetEsmExponent(float exponent) override;
         void SetNormalShadowBias(float bias) override;
@@ -60,6 +60,6 @@ namespace JE::Render::Scene
 
     inline float SimpleSpotLightDelegate::GetEffectiveSolidAngle() const
     {
-        return AZ::Render::PhotometricValue::DirectionalEffectiveSteradians;
+        return JE::Render::Features::PhotometricValue::DirectionalEffectiveSteradians;
     }
 } // namespace AZ::Render

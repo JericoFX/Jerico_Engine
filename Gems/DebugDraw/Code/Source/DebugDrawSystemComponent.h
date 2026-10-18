@@ -32,7 +32,7 @@
 #include <JE/Render/RPI/Public/Shader/Shader.h>
 #include <JE/Render/RPI/Public/Shader/ShaderResourceGroup.h>
 #include <JE/Render/Bootstrap/BootstrapNotificationBus.h>
-#include <Atom/Feature/RayTracing/RayTracingFeatureProcessorInterface.h>
+#include <JE/Render/Features/RayTracing/RayTracingFeatureProcessorInterface.h>
 
 namespace DebugDraw
 {
@@ -148,7 +148,7 @@ namespace DebugDraw
 
         struct DebugDrawSphereElementWrapper : DebugDrawSphereElement
         {
-            AZ::Render::MeshInfoHandle m_meshInfoHandle;
+            JE::Render::Features::MeshInfoHandle m_meshInfoHandle;
             AZ::Vector3 m_previousWorldLocation = AZ::Vector3::CreateZero();
             float m_previousRadius = 0;
             uint32_t m_localInstanceIndex = 0;
@@ -156,7 +156,7 @@ namespace DebugDraw
 
         struct DebugDrawObbElementWrapper : DebugDrawObbElement
         {
-            AZ::Render::MeshInfoHandle m_meshInfoHandle;
+            JE::Render::Features::MeshInfoHandle m_meshInfoHandle;
             AZ::Vector3    m_previousWorldLocation;
             AZ::Vector3    m_previousScale;
             AZ::Quaternion m_previousRotation;
@@ -189,11 +189,11 @@ namespace DebugDraw
         AZStd::vector<AZ::Vector3> m_batchPoints;
         AZStd::vector<AZ::Color> m_batchColors;
 
-        AZ::Render::RayTracingFeatureProcessorInterface* m_rayTracingFeatureProcessor = nullptr;
-        AZ::Render::MeshFeatureProcessorInterface* m_meshFeatureProcessor = nullptr;
+        JE::Render::Features::RayTracingFeatureProcessorInterface* m_rayTracingFeatureProcessor = nullptr;
+        JE::Render::Features::MeshFeatureProcessorInterface* m_meshFeatureProcessor = nullptr;
         JE::Render::RPI::Ptr<JE::Render::RPI::Buffer> m_spheresRayTracingIndicesBuffer;
-        AZ::Render::RayTracingFeatureProcessorInterface::ProceduralGeometryTypeHandle m_sphereRayTracingTypeHandle;
-        AZ::Render::RayTracingIndexList<1> m_spheresRayTracingIndices;
-        AZ::Render::RayTracingFeatureProcessorInterface::ProceduralGeometryTypeHandle m_obbRayTracingTypeHandle;
+        JE::Render::Features::RayTracingFeatureProcessorInterface::ProceduralGeometryTypeHandle m_sphereRayTracingTypeHandle;
+        JE::Render::Features::RayTracingIndexList<1> m_spheresRayTracingIndices;
+        JE::Render::Features::RayTracingFeatureProcessorInterface::ProceduralGeometryTypeHandle m_obbRayTracingTypeHandle;
     };
 }

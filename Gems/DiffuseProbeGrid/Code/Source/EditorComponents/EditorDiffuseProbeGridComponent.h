@@ -14,7 +14,7 @@
 #include <AzToolsFramework/Entity/EditorEntityInfoBus.h>
 #include <Components/DiffuseProbeGridComponent.h>
 #include <Components/DiffuseProbeGridComponentConstants.h>
-#include <Atom/Feature/Utils/EditorRenderComponentAdapter.h>
+#include <JE/Editor/Render/Features/Utils/EditorRenderComponentAdapter.h>
 
 namespace AZ
 {

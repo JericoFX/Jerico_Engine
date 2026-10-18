@@ -12,7 +12,7 @@
 #include <AzCore/Component/Component.h>
 #include <AzCore/Component/TransformBus.h>
 #include <AzFramework/Visibility/BoundsBus.h>
-#include <Atom/Feature/ReflectionProbe/ReflectionProbeFeatureProcessorInterface.h>
+#include <JE/Render/Features/ReflectionProbe/ReflectionProbeFeatureProcessorInterface.h>
 #include <JE/Render/RPI/Public/Model/Model.h>
 #include <LmbrCentral/Shape/BoxShapeComponentBus.h>
 #include <ReflectionProbe/ReflectionProbeComponentConstants.h>
@@ -89,7 +89,7 @@ namespace JE::Render
             void SetBakeExposure(float bakeExposure);
 
             // initiate the reflection probe bake, invokes callback when complete
-            void BakeReflectionProbe(AZ::Render::BuildCubeMapCallback callback, const AZStd::string& relativePath);
+            void BakeReflectionProbe(JE::Render::Features::BuildCubeMapCallback callback, const AZStd::string& relativePath);
 
             // update the currently rendering cubemap asset for this probe
             void UpdateCubeMap();
@@ -125,9 +125,9 @@ namespace JE::Render
             LmbrCentral::ShapeComponentRequests* m_shapeBus = nullptr;
 
             // handle for this probe in the feature processor
-            AZ::Render::ReflectionProbeHandle m_handle;
+            JE::Render::Features::ReflectionProbeHandle m_handle;
 
-            AZ::Render::ReflectionProbeFeatureProcessorInterface* m_featureProcessor = nullptr;
+            JE::Render::Features::ReflectionProbeFeatureProcessorInterface* m_featureProcessor = nullptr;
             AZ::TransformInterface* m_transformInterface = nullptr;
             AZ::EntityId m_entityId;
             ReflectionProbeComponentConfig m_configuration;

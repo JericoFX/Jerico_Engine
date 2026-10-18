@@ -102,7 +102,7 @@ namespace JE::Render
         void DecalComponentController::Activate(AZ::EntityId entityId)
         {
             m_entityId = entityId;
-            m_featureProcessor = JE::Render::RPI::Scene::GetFeatureProcessorForEntity<AZ::Render::DecalFeatureProcessorInterface>(entityId);
+            m_featureProcessor = JE::Render::RPI::Scene::GetFeatureProcessorForEntity<JE::Render::Features::DecalFeatureProcessorInterface>(entityId);
             AZ_Assert(m_featureProcessor, "DecalRenderProxy was unable to find a decal FeatureProcessor on the entityId provided.");
             if (m_featureProcessor)
             {

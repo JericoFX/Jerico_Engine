@@ -10,8 +10,8 @@
 
 #include <AzCore/Component/Component.h>
 #include <AzCore/Math/Color.h>
-#include <Atom/Feature/CoreLights/PhotometricValue.h>
-#include <Atom/Feature/LightingChannel/LightingChannelConfiguration.h>
+#include <JE/Render/Features/CoreLights/PhotometricValue.h>
+#include <JE/Render/Features/LightingChannel/LightingChannelConfiguration.h>
 #include <JE/Render/Scene/CoreLights/CoreLightsConstants.h>
 
 namespace JE::Render
@@ -50,7 +50,7 @@ namespace JE::Render
             AZ::Color m_color = AZ::Color::CreateOne();
 
             //! Lux or Ev100
-            AZ::Render::PhotometricUnit m_intensityMode = AZ::Render::PhotometricUnit::Ev100Illuminance;
+            JE::Render::Features::PhotometricUnit m_intensityMode = JE::Render::Features::PhotometricUnit::Ev100Illuminance;
             //! Intensity in lux or Ev100 (depending on m_intensityMode)
             float m_intensity = 4.0f;
 
@@ -67,7 +67,7 @@ namespace JE::Render
             bool m_shadowEnabled = true;
 
             //! Width/Height of shadowmap images.
-            AZ::Render::ShadowmapSize m_shadowmapSize = AZ::Render::ShadowmapSize::Size1024;
+            JE::Render::Features::ShadowmapSize m_shadowmapSize = JE::Render::Features::ShadowmapSize::Size1024;
 
             //! Number of cascades.
             uint32_t m_cascadeCount = 4;
@@ -89,10 +89,10 @@ namespace JE::Render
             //! This is valid only when m_shadowmapFrustumSplitIsAutomatic = false.
             AZ::Vector4 m_cascadeFarDepths
             {
-                m_shadowFarClipDistance * 1 / AZ::Render::Shadow::MaxNumberOfCascades,
-                m_shadowFarClipDistance * 2 / AZ::Render::Shadow::MaxNumberOfCascades,
-                m_shadowFarClipDistance * 3 / AZ::Render::Shadow::MaxNumberOfCascades,
-                m_shadowFarClipDistance * 4 / AZ::Render::Shadow::MaxNumberOfCascades
+                m_shadowFarClipDistance * 1 / JE::Render::Features::Shadow::MaxNumberOfCascades,
+                m_shadowFarClipDistance * 2 / JE::Render::Features::Shadow::MaxNumberOfCascades,
+                m_shadowFarClipDistance * 3 / JE::Render::Features::Shadow::MaxNumberOfCascades,
+                m_shadowFarClipDistance * 4 / JE::Render::Features::Shadow::MaxNumberOfCascades
             };
 
             //! Height of camera from the ground.
@@ -109,7 +109,7 @@ namespace JE::Render
             bool m_isDebugColoringEnabled = false;
 
             //! Method of shadow's filtering.
-            AZ::Render::ShadowFilterMethod m_shadowFilterMethod = AZ::Render::ShadowFilterMethod::None;
+            JE::Render::Features::ShadowFilterMethod m_shadowFilterMethod = JE::Render::Features::ShadowFilterMethod::None;
 
             // Reduces acne by biasing the shadowmap lookup along the geometric normal.
             float m_normalShadowBias = 2.5f;
@@ -143,7 +143,7 @@ namespace JE::Render
             float m_affectsGIFactor = 1.0f;
 
             // Lighting channel
-            AZ::Render::LightingChannelConfiguration m_lightingChannelConfig;
+            JE::Render::Features::LightingChannelConfiguration m_lightingChannelConfig;
             bool IsSplitManual() const;
             bool IsSplitAutomatic() const;
             bool IsShadowDisabled() const;

@@ -7,8 +7,8 @@
  */
 #pragma once
 
-#include <Atom/Feature/SkinnedMesh/SkinnedMeshInputBuffers.h>
-#include <Atom/Feature/SkinnedMesh/SkinnedMeshInstance.h>
+#include <JE/Render/Features/SkinnedMesh/SkinnedMeshInputBuffers.h>
+#include <JE/Render/Features/SkinnedMesh/SkinnedMeshInstance.h>
 #include <AzCore/Component/ComponentBus.h>
 
 namespace JE::Render

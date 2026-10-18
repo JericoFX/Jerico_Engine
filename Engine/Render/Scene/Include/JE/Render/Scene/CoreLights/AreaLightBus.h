@@ -54,14 +54,14 @@ namespace JE::Render::Scene
             virtual void SetUseFastApproximation(bool useFastApproximation) = 0;
 
             //! Gets an area light's photometric type.
-            virtual AZ::Render::PhotometricUnit GetIntensityMode() const = 0;
+            virtual JE::Render::Features::PhotometricUnit GetIntensityMode() const = 0;
 
             //! Sets an area light's intensity and intensity mode. This value is independent from its color.
-            virtual void SetIntensityAndMode(float intensity, AZ::Render::PhotometricUnit intensityMode) = 0;
+            virtual void SetIntensityAndMode(float intensity, JE::Render::Features::PhotometricUnit intensityMode) = 0;
             
             //! Sets an area light's intensity and intensity mode. This value is independent from its color.
             //! O3DE_DEPRECATION_NOTICE(GHI-16553)
-            virtual void SetIntensity(float intensity, AZ::Render::PhotometricUnit intensityMode) = 0;
+            virtual void SetIntensity(float intensity, JE::Render::Features::PhotometricUnit intensityMode) = 0;
 
             //! Sets an area light's intensity. This value is independent from its color.
             //! Assumes no change in the current photometric unit of the intensity.
@@ -80,7 +80,7 @@ namespace JE::Render::Scene
             virtual void SetAttenuationRadiusMode(LightAttenuationRadiusMode attenuationRadiusMode) = 0;
 
             //! Sets the photometric unit to the one provided and converts the intensity to the photometric unit so actual light intensity remains constant.
-            virtual void ConvertToIntensityMode(AZ::Render::PhotometricUnit intensityMode) = 0;
+            virtual void ConvertToIntensityMode(JE::Render::Features::PhotometricUnit intensityMode) = 0;
 
             //! Gets the surface area of the shape.
             virtual float GetSurfaceArea() const = 0;
@@ -120,16 +120,16 @@ namespace JE::Render::Scene
             virtual void SetShadowBias(float bias) = 0;
 
             //! Returns the maximum width and height of shadowmap.
-            virtual AZ::Render::ShadowmapSize GetShadowmapMaxSize() const = 0;
+            virtual JE::Render::Features::ShadowmapSize GetShadowmapMaxSize() const = 0;
 
             //! Sets the maximum width and height of shadowmap.
-            virtual void SetShadowmapMaxSize(AZ::Render::ShadowmapSize size) = 0;
+            virtual void SetShadowmapMaxSize(JE::Render::Features::ShadowmapSize size) = 0;
 
             //! Returns the filter method of shadows.
-            virtual AZ::Render::ShadowFilterMethod GetShadowFilterMethod() const = 0;
+            virtual JE::Render::Features::ShadowFilterMethod GetShadowFilterMethod() const = 0;
 
             //! Sets the filter method of shadows.
-            virtual void SetShadowFilterMethod(AZ::Render::ShadowFilterMethod method) = 0;
+            virtual void SetShadowFilterMethod(JE::Render::Features::ShadowFilterMethod method) = 0;
 
             //! Gets the sample count for filtering of the shadow boundary.
             virtual uint32_t GetFilteringSampleCount() const = 0;
@@ -206,7 +206,7 @@ namespace JE::Render::Scene
              * @param intensity A reference to the new intensity of the light.
              * @param intenstiyMode A reference to the intensity mode of the light (lux or lumens).
              */
-            virtual void OnIntensityChanged(float /*intensity*/, AZ::Render::PhotometricUnit /*intenstiyMode*/) { }
+            virtual void OnIntensityChanged(float /*intensity*/, JE::Render::Features::PhotometricUnit /*intenstiyMode*/) { }
 
             /**
              * Signals that the color or intensity of the light changed. This is useful when both the color and intensity are need in the same call.

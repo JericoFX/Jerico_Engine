@@ -8,7 +8,7 @@
 
 #pragma once
 
-#include <Atom/Feature/Utils/FrameCaptureBus.h>
+#include <JE/Render/Features/Utils/FrameCaptureBus.h>
 #include <AzFramework/Components/CameraBus.h>
 
 namespace TrackView
@@ -17,7 +17,7 @@ namespace TrackView
     //! A new pipeline is created (and associated with the scene provided), a callback can be
     //! provided to handle the attachment readback (what to do with the captured frame) and also
     //! what to do after an individual capture fully completes (called in OnCaptureFinished).
-    class AtomOutputFrameCapture : private AZ::Render::FrameCaptureNotificationBus::Handler
+    class AtomOutputFrameCapture : private JE::Render::Features::FrameCaptureNotificationBus::Handler
     {
     public:
         AtomOutputFrameCapture() = default;
@@ -53,7 +53,7 @@ namespace TrackView
         bool m_pipelineCreated{};
 
         // FrameCaptureNotificationBus overrides ...
-        void OnFrameCaptureFinished(AZ::Render::FrameCaptureResult result, const AZStd::string& info) override;
+        void OnFrameCaptureFinished(JE::Render::Features::FrameCaptureResult result, const AZStd::string& info) override;
     };
 
     inline AZ::EntityId ActiveCameraEntityId()

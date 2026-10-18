@@ -9,8 +9,8 @@
 #pragma once
 
 #include <AzCore/Component/Component.h>
-#include <Atom/Feature/PostProcess/ExposureControl/ExposureControlConstants.h>
-#include <Atom/Feature/PostProcess/ExposureControl/ExposureControlSettingsInterface.h>
+#include <JE/Render/Features/PostProcess/ExposureControl/ExposureControlConstants.h>
+#include <JE/Render/Features/PostProcess/ExposureControl/ExposureControlSettingsInterface.h>
 
 namespace JE::Render
 {
@@ -26,20 +26,20 @@ namespace JE::Render
             static void Reflect(AZ::ReflectContext* context);
 
             // Generate members...
-#include <Atom/Feature/ParamMacros/StartParamMembers.inl>
-#include <Atom/Feature/PostProcess/ExposureControl/ExposureControlParams.inl>
-#include <Atom/Feature/ParamMacros/EndParams.inl>
+#include <JE/Render/Features/ParamMacros/StartParamMembers.inl>
+#include <JE/Render/Features/PostProcess/ExposureControl/ExposureControlParams.inl>
+#include <JE/Render/Features/ParamMacros/EndParams.inl>
 
             // Generate Getters/Setters...
-#include <Atom/Feature/ParamMacros/StartParamFunctions.inl>
-#include <Atom/Feature/PostProcess/ExposureControl/ExposureControlParams.inl>
-#include <Atom/Feature/ParamMacros/EndParams.inl>
+#include <JE/Render/Features/ParamMacros/StartParamFunctions.inl>
+#include <JE/Render/Features/PostProcess/ExposureControl/ExposureControlParams.inl>
+#include <JE/Render/Features/ParamMacros/EndParams.inl>
 
-            void CopySettingsFrom(AZ::Render::ExposureControlSettingsInterface* settings);
-            void CopySettingsTo(AZ::Render::ExposureControlSettingsInterface* settings);
+            void CopySettingsFrom(JE::Render::Features::ExposureControlSettingsInterface* settings);
+            void CopySettingsTo(JE::Render::Features::ExposureControlSettingsInterface* settings);
 
             bool ArePropertiesReadOnly() const { return !m_enabled; }
-            bool IsEyeAdaptation() const { return m_exposureControlType == AZ::Render::ExposureControl::ExposureControlType::EyeAdaptation; }
+            bool IsEyeAdaptation() const { return m_exposureControlType == JE::Render::Features::ExposureControl::ExposureControlType::EyeAdaptation; }
         };
     }
 }

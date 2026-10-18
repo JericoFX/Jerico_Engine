@@ -38,8 +38,7 @@ ly_add_target(
         INTERFACE
            AZ::AzCore
            JE::RenderIntegration
-           Gem::Atom_Feature_Common
-           Gem::Atom_Feature_Common.Public
+           JE::RenderFeatures
 )
 
 # The ${gem_name}.Private.Object target is an internal target
@@ -62,7 +61,7 @@ ly_add_target(
             AZ::AzFramework
             JE::RenderIntegration
             Gem::Atom_Utils.Static
-            Gem::Atom_Feature_Common
+            JE::RenderFeatures
             JE::RenderScene
 )
 
@@ -147,10 +146,11 @@ if(PAL_TRAIT_BUILD_HOST_TOOLS)
                 Source
         BUILD_DEPENDENCIES
             PUBLIC
+                JE::EditorRenderFeatures
                 AZ::AzToolsFramework
                 ${gem_name}.Private.Object
                 Gem::Atom_Utils.Static
-                Gem::Atom_Feature_Common.Public
+                JE::RenderFeatures
                 JE::RenderScene
     )
 

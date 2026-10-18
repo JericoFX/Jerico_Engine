@@ -1,0 +1,20 @@
+{
+    "O3DE": {
+        "Atom": {
+            "Tools": {
+                "EditablePathSettings": {
+                    "@engroot@/Engine/Render/Features/Assets/Materials/ReflectionProbe/ReflectionProbeVisualization.material": false,
+                    "@engroot@/Engine/Render/Features/Assets/Materials/ReflectionProbe/ReflectionProbeVisualization.materialtype": false,
+                    "@engroot@/Engine/Render/Features/Assets/Materials/Special/ShadowCatcher.material": false,
+                    "@engroot@/Engine/Render/Features/Assets/Materials/Special/ShadowCatcher.materialtype": false
+                },
+                "PreviewablePathSettings": {
+                    "@engroot@/Engine/Render/Features/Assets/Materials/ReflectionProbe/ReflectionProbeVisualization.material": false,
+                    "@engroot@/Engine/Render/Features/Assets/Materials/ReflectionProbe/ReflectionProbeVisualization.materialtype": false,
+                    "@engroot@/Engine/Render/Features/Assets/Materials/Special/ShadowCatcher.material": false,
+                    "@engroot@/Engine/Render/Features/Assets/Materials/Special/ShadowCatcher.materialtype": false
+                }
+            }
+        }
+    }
+}

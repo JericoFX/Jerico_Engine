@@ -6,8 +6,8 @@
  *
  */
 
-#include <Atom/Feature/SkyBox/SkyboxConstants.h>
-#include <Atom/Feature/Utils/ModelPreset.h>
+#include <JE/Render/Features/SkyBox/SkyboxConstants.h>
+#include <JE/Render/Features/Utils/ModelPreset.h>
 #include <JE/Editor/Render/RPI/Edit/Common/AssetUtils.h>
 #include <JE/Render/RPI/Reflect/Asset/AssetUtils.h>
 #include <JE/Render/Scene/Grid/GridComponentBus.h>
@@ -49,7 +49,7 @@ namespace PassCanvas
         // Create IBL
         m_environmentEntity = CreateEntity(
             "EnvironmentEntity",
-            { AZ::Render::HDRiSkyboxComponentTypeId, JE::Render::Scene::ImageBasedLightComponentTypeId,
+            { JE::Render::Features::HDRiSkyboxComponentTypeId, JE::Render::Scene::ImageBasedLightComponentTypeId,
               azrtti_typeid<AzFramework::TransformComponent>() });
 
         // Create model

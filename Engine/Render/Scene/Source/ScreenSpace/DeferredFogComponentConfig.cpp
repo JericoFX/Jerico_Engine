@@ -26,15 +26,15 @@ namespace JE::Render
 #define AZ_GFX_COMMON_PARAM(ValueType, Name, MemberName, DefaultValue)                                  \
         ->Field(#Name, &SERIALIZE_CLASS::MemberName)                                                    \
 
-#include <Atom/Feature/ParamMacros/MapParamCommon.inl>
-#include <Atom/Feature/ScreenSpace/DeferredFogParams.inl>
-#include <Atom/Feature/ParamMacros/EndParams.inl>
+#include <JE/Render/Features/ParamMacros/MapParamCommon.inl>
+#include <JE/Render/Features/ScreenSpace/DeferredFogParams.inl>
+#include <JE/Render/Features/ParamMacros/EndParams.inl>
 #undef SERIALIZE_CLASS
                     ;
             }
         }
 
-        void DeferredFogComponentConfig::CopySettingsFrom(AZ::Render::DeferredFogSettingsInterface* settings)
+        void DeferredFogComponentConfig::CopySettingsFrom(JE::Render::Features::DeferredFogSettingsInterface* settings)
         {
             if (!settings)
             {
@@ -45,13 +45,13 @@ namespace JE::Render
 #define AZ_GFX_COMMON_PARAM(ValueType, Name, MemberName, DefaultValue)                                  \
         MemberName = COPY_SOURCE->Get##Name();                                                          \
 
-#include <Atom/Feature/ParamMacros/MapParamCommon.inl>
-#include <Atom/Feature/ScreenSpace/DeferredFogParams.inl>
-#include <Atom/Feature/ParamMacros/EndParams.inl>
+#include <JE/Render/Features/ParamMacros/MapParamCommon.inl>
+#include <JE/Render/Features/ScreenSpace/DeferredFogParams.inl>
+#include <JE/Render/Features/ParamMacros/EndParams.inl>
 #undef COPY_SOURCE
         }
 
-        void DeferredFogComponentConfig::CopySettingsTo(AZ::Render::DeferredFogSettingsInterface* settings)
+        void DeferredFogComponentConfig::CopySettingsTo(JE::Render::Features::DeferredFogSettingsInterface* settings)
         {
             if (!settings)
             {
@@ -62,9 +62,9 @@ namespace JE::Render
 #define AZ_GFX_COMMON_PARAM(ValueType, Name, MemberName, DefaultValue)                                  \
         COPY_TARGET->Set##Name(MemberName);                                                             \
 
-#include <Atom/Feature/ParamMacros/MapParamCommon.inl>
-#include <Atom/Feature/ScreenSpace/DeferredFogParams.inl>
-#include <Atom/Feature/ParamMacros/EndParams.inl>
+#include <JE/Render/Features/ParamMacros/MapParamCommon.inl>
+#include <JE/Render/Features/ScreenSpace/DeferredFogParams.inl>
+#include <JE/Render/Features/ParamMacros/EndParams.inl>
 #undef COPY_TARGET
         }
 

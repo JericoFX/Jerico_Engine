@@ -9,8 +9,8 @@
 #pragma once
 
 #include <ACES/Aces.h>
-#include <Atom/Feature/Utils/LightingPreset.h>
-#include <Atom/Feature/Utils/ModelPreset.h>
+#include <JE/Render/Features/Utils/LightingPreset.h>
+#include <JE/Render/Features/Utils/ModelPreset.h>
 #include <AtomToolsFramework/AssetSelection/AssetSelectionGrid.h>
 #include <AtomToolsFramework/EntityPreviewViewport/EntityPreviewViewportSettings.h>
 #include <AtomToolsFramework/EntityPreviewViewport/EntityPreviewViewportSettingsNotificationBus.h>
@@ -71,11 +71,11 @@ namespace AtomToolsFramework
         const AZ::Crc32 m_toolId = {};
 
         AZStd::string m_modelPresetPath;
-        AZ::Render::ModelPreset m_modelPreset;
+        JE::Render::Features::ModelPreset m_modelPreset;
         AZStd::unique_ptr<AssetSelectionGrid> m_modelPresetDialog;
 
         AZStd::string m_lightingPresetPath;
-        AZ::Render::LightingPreset m_lightingPreset;
+        JE::Render::Features::LightingPreset m_lightingPreset;
         AZStd::unique_ptr<AssetSelectionGrid> m_lightingPresetDialog;
 
         EntityPreviewViewportSettings m_viewportSettings;

@@ -8,10 +8,10 @@
 
 #pragma once
 
-#include <Atom/Feature/PostProcess/PaniniProjection/PaniniProjectionConstants.h>
-#include <Atom/Feature/PostProcess/PaniniProjection/PaniniProjectionSettingsInterface.h>
-#include <Atom/Feature/PostProcess/PostProcessFeatureProcessorInterface.h>
-#include <Atom/Feature/PostProcess/PostProcessSettingsInterface.h>
+#include <JE/Render/Features/PostProcess/PaniniProjection/PaniniProjectionConstants.h>
+#include <JE/Render/Features/PostProcess/PaniniProjection/PaniniProjectionSettingsInterface.h>
+#include <JE/Render/Features/PostProcess/PostProcessFeatureProcessorInterface.h>
+#include <JE/Render/Features/PostProcess/PostProcessSettingsInterface.h>
 
 #include <JE/Render/Scene/PostProcess/PaniniProjection/PaniniProjectionBus.h>
 #include <JE/Render/Scene/PostProcess/PaniniProjection/PaniniProjectionComponentConfig.h>
@@ -49,17 +49,17 @@ namespace JE::Render
             const PaniniProjectionComponentConfig& GetConfiguration() const;
 
             // Auto-gen function override declarations (functions definitions in .cpp)...
-#include <Atom/Feature/ParamMacros/StartParamFunctionsOverride.inl>
-#include <Atom/Feature/PostProcess/PaniniProjection/PaniniProjectionParams.inl>
-#include <Atom/Feature/ParamMacros/EndParams.inl>
+#include <JE/Render/Features/ParamMacros/StartParamFunctionsOverride.inl>
+#include <JE/Render/Features/PostProcess/PaniniProjection/PaniniProjectionParams.inl>
+#include <JE/Render/Features/ParamMacros/EndParams.inl>
 
         private:
             AZ_DISABLE_COPY(PaniniProjectionComponentController);
 
             void OnConfigChanged();
 
-            AZ::Render::PostProcessSettingsInterface* m_postProcessInterface = nullptr;
-            AZ::Render::PaniniProjectionSettingsInterface* m_settingsInterface = nullptr;
+            JE::Render::Features::PostProcessSettingsInterface* m_postProcessInterface = nullptr;
+            JE::Render::Features::PaniniProjectionSettingsInterface* m_settingsInterface = nullptr;
             PaniniProjectionComponentConfig m_configuration;
             AZ::EntityId m_entityId;
         };

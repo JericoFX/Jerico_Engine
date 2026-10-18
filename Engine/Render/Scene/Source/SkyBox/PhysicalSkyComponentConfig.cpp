@@ -32,16 +32,16 @@ namespace JE::Render
 
         const char* PhysicalSkyComponentConfig::GetIntensitySuffix() const
         {
-            return AZ::Render::PhotometricValue::GetTypeSuffix(m_intensityMode);
+            return JE::Render::Features::PhotometricValue::GetTypeSuffix(m_intensityMode);
         }
 
         float PhysicalSkyComponentConfig::GetSunIntensityMin() const
         {
             switch (m_intensityMode)
             {
-            case AZ::Render::PhotometricUnit::Nit:
+            case JE::Render::Features::PhotometricUnit::Nit:
                 return 0.1f;
-            case AZ::Render::PhotometricUnit::Ev100Luminance:
+            case JE::Render::Features::PhotometricUnit::Ev100Luminance:
                 return -4.0f;
             }
             return 0.0f;
@@ -51,9 +51,9 @@ namespace JE::Render
         {
             switch (m_intensityMode)
             {
-            case AZ::Render::PhotometricUnit::Nit:
+            case JE::Render::Features::PhotometricUnit::Nit:
                 return 100'000.0f;
-            case AZ::Render::PhotometricUnit::Ev100Luminance:
+            case JE::Render::Features::PhotometricUnit::Ev100Luminance:
                 return 16.0f;
             }
             return 0.0f;
@@ -63,9 +63,9 @@ namespace JE::Render
         {
             switch (m_intensityMode)
             {
-            case AZ::Render::PhotometricUnit::Nit:
+            case JE::Render::Features::PhotometricUnit::Nit:
                 return 0.1f;
-            case AZ::Render::PhotometricUnit::Ev100Luminance:
+            case JE::Render::Features::PhotometricUnit::Ev100Luminance:
                 return -4.0f;
             }
             return 0.0f;
@@ -75,9 +75,9 @@ namespace JE::Render
         {
             switch (m_intensityMode)
             {
-            case AZ::Render::PhotometricUnit::Nit:
+            case JE::Render::Features::PhotometricUnit::Nit:
                 return 5000.0f;
-            case AZ::Render::PhotometricUnit::Ev100Luminance:
+            case JE::Render::Features::PhotometricUnit::Ev100Luminance:
                 return 11.0;
             }
             return 0.0f;

@@ -1,8 +1,8 @@
 {
-    "materialType": "@gemroot:Atom_Feature_Common@/Assets/Materials/Types/StandardPBR.materialtype",
+    "materialType": "@engroot@/Engine/Render/Features/Assets/Materials/Types/StandardPBR.materialtype",
     "materialTypeVersion": 5,
     "propertyValues": {
-        "baseColor.textureMap": "@gemroot:Atom_Feature_Common@/Assets/Textures/Default/default_basecolor.tif",
+        "baseColor.textureMap": "@engroot@/Engine/Render/Features/Assets/Textures/Default/default_basecolor.tif",
         "emissive.color": [
             0.003936827648431063,
             1.0,

@@ -66,7 +66,7 @@ namespace JE::Editor::Render
                                 "0 : Standard Bokeh blur.\n"
                                 "1 : High quality Bokeh blur (large number of sample)"))
                         ->Attribute(AZ::Edit::Attributes::Min, 0)
-                        ->Attribute(AZ::Edit::Attributes::Max, AZ::Render::DepthOfField::QualityLevelMax - 1)
+                        ->Attribute(AZ::Edit::Attributes::Max, JE::Render::Features::DepthOfField::QualityLevelMax - 1)
                         ->Attribute(AZ::Edit::Attributes::Step, 1)
                         ->Attribute(AZ::Edit::Attributes::ChangeNotify, AZ::Edit::PropertyRefreshLevels::ValuesOnly)
                         ->Attribute(AZ::Edit::Attributes::ReadOnly, &JE::Render::Scene::DepthOfFieldComponentConfig::ArePropertiesReadOnly)
@@ -138,7 +138,7 @@ namespace JE::Editor::Render
                                 "Specify the distance that focus moves per second,\n"
                                 "normalizing the distance from view near to view far as 1.0."))
                         ->Attribute(AZ::Edit::Attributes::Min, 0.0f)
-                        ->Attribute(AZ::Edit::Attributes::Max, AZ::Render::DepthOfField::AutoFocusSpeedMax)
+                        ->Attribute(AZ::Edit::Attributes::Max, JE::Render::Features::DepthOfField::AutoFocusSpeedMax)
                         ->Attribute(AZ::Edit::Attributes::ChangeNotify, AZ::Edit::PropertyRefreshLevels::ValuesOnly)
                         ->Attribute(AZ::Edit::Attributes::ReadOnly, &JE::Render::Scene::DepthOfFieldComponentConfig::IsAutoFocusReadOnly)
 
@@ -146,7 +146,7 @@ namespace JE::Editor::Render
                             QT_TRANSLATE_NOOP("AtomLyIntegration", "Auto Focus Delay"),
                             QT_TRANSLATE_NOOP("AtomLyIntegration", "Specifies a delay time for focus to shift from one to another target."))
                         ->Attribute(AZ::Edit::Attributes::Min, 0.0f)
-                        ->Attribute(AZ::Edit::Attributes::Max, AZ::Render::DepthOfField::AutoFocusDelayMax)
+                        ->Attribute(AZ::Edit::Attributes::Max, JE::Render::Features::DepthOfField::AutoFocusDelayMax)
                         ->Attribute(AZ::Edit::Attributes::Suffix, QT_TRANSLATE_NOOP("AtomLyIntegration", "[s]"))
                         ->Attribute(AZ::Edit::Attributes::ChangeNotify, AZ::Edit::PropertyRefreshLevels::ValuesOnly)
                         ->Attribute(AZ::Edit::Attributes::ReadOnly, &JE::Render::Scene::DepthOfFieldComponentConfig::IsAutoFocusReadOnly)
@@ -175,9 +175,9 @@ namespace JE::Editor::Render
 
                         // Auto-gen editor context settings for overrides
 #define EDITOR_CLASS JE::Render::Scene::DepthOfFieldComponentConfig
-#include <Atom/Feature/ParamMacros/StartOverrideEditorContext.inl>
-#include <Atom/Feature/PostProcess/DepthOfField/DepthOfFieldParams.inl>
-#include <Atom/Feature/ParamMacros/EndParams.inl>
+#include <JE/Render/Features/ParamMacros/StartOverrideEditorContext.inl>
+#include <JE/Render/Features/PostProcess/DepthOfField/DepthOfFieldParams.inl>
+#include <JE/Render/Features/ParamMacros/EndParams.inl>
 #undef EDITOR_CLASS
                             ;
                 }

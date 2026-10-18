@@ -64,7 +64,7 @@ ly_add_target(
         PUBLIC
             Gem::${gem_name}.API
             Gem::Atom_Utils.Static
-            Gem::Atom_Feature_Common.Public
+            JE::RenderFeatures
             Gem::EMotionFX.Static
             JE::RenderMaterials
             AZ::AzCore

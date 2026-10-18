@@ -113,10 +113,10 @@ namespace UnitTest
 
         // Load the real reflected type, not a second test-only LUT model.
         AZ::SerializeContext context;
-        AZ::Render::LookupTableAsset::Reflect(&context);
+        JE::Render::Features::LookupTableAsset::Reflect(&context);
         AZ::JsonDeserializerSettings settings;
         settings.m_serializeContext = &context;
-        AZ::Render::LookupTableAsset loaded;
+        JE::Render::Features::LookupTableAsset loaded;
         const auto load = AZ::JsonSerializationUtils::LoadObjectFromString(loaded, jsonText, &settings);
         ASSERT_TRUE(load.IsSuccess()) << load.GetError().c_str();
         EXPECT_EQ(loaded.m_name, "LookupTable");
@@ -228,7 +228,7 @@ namespace UnitTest
 
     TEST_F(JEEditorLutWriterTests, ValidatesLoadedCardinalityIntervalsAndTwelveBitValues)
     {
-        AZ::Render::LookupTableAsset loaded;
+        JE::Render::Features::LookupTableAsset loaded;
         loaded.m_intervals = { 0, 1023 };
         loaded.m_values.resize(24, 4095);
         ASSERT_TRUE(JE::Editor::Render::Scene::ValidateLookupTable(loaded).IsSuccess());

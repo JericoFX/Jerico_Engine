@@ -15,7 +15,7 @@ namespace JE::Render::Scene
     static const float DefaultConeAngleDegrees = 25.0f; // 25 degrees debug display
 
     DiskLightDelegate::DiskLightDelegate(LmbrCentral::DiskShapeComponentRequests* shapeBus, AZ::EntityId entityId, bool isVisible)
-        : LightDelegateBase<AZ::Render::DiskLightFeatureProcessorInterface>(entityId, isVisible)
+        : LightDelegateBase<JE::Render::Features::DiskLightFeatureProcessorInterface>(entityId, isVisible)
         , m_shapeBus(shapeBus)
     {
         InitBase(entityId);
@@ -24,7 +24,7 @@ namespace JE::Render::Scene
     float DiskLightDelegate::CalculateAttenuationRadius(float lightThreshold) const
     {
         // Calculate the radius at which the irradiance will be equal to cutoffIntensity.
-        const float intensity = GetPhotometricValue().GetCombinedIntensity(AZ::Render::PhotometricUnit::Lumen);
+        const float intensity = GetPhotometricValue().GetCombinedIntensity(JE::Render::Features::PhotometricUnit::Lumen);
         return AZ::Sqrt(intensity / lightThreshold);
     }
 
@@ -175,7 +175,7 @@ namespace JE::Render::Scene
         }
     }
 
-    void DiskLightDelegate::SetShadowmapMaxSize(AZ::Render::ShadowmapSize size)
+    void DiskLightDelegate::SetShadowmapMaxSize(JE::Render::Features::ShadowmapSize size)
     {
         if (GetShadowsEnabled() && GetLightHandle().IsValid())
         {
@@ -183,7 +183,7 @@ namespace JE::Render::Scene
         }
     }
 
-    void DiskLightDelegate::SetShadowFilterMethod(AZ::Render::ShadowFilterMethod method)
+    void DiskLightDelegate::SetShadowFilterMethod(JE::Render::Features::ShadowFilterMethod method)
     {
         if (GetShadowsEnabled() && GetLightHandle().IsValid())
         {

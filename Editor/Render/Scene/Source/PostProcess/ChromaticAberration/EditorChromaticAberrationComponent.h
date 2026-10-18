@@ -8,7 +8,7 @@
 
 #pragma once
 
-#include <Atom/Feature/PostProcess/DepthOfField/DepthOfFieldConstants.h>
+#include <JE/Render/Features/PostProcess/DepthOfField/DepthOfFieldConstants.h>
 #include <AzToolsFramework/ToolsComponents/EditorComponentAdapter.h>
 #include <PostProcess/ChromaticAberration/ChromaticAberrationComponent.h>
 

@@ -9,8 +9,8 @@
 #pragma once
 
 #include <ACES/Aces.h>
-#include <Atom/Feature/Utils/LightingPreset.h>
-#include <Atom/Feature/Utils/ModelPreset.h>
+#include <JE/Render/Features/Utils/LightingPreset.h>
+#include <JE/Render/Features/Utils/ModelPreset.h>
 #include <JE/Render/RPI/Reflect/System/RenderPipelineDescriptor.h>
 #include <AtomToolsFramework/EntityPreviewViewport/EntityPreviewViewportSettingsRequestBus.h>
 #include <AzCore/Asset/AssetCommon.h>
@@ -39,8 +39,8 @@ namespace AtomToolsFramework
         void ClearContent();
 
         // EntityPreviewViewportSettingsRequestBus::Handler overrides ...
-        void SetLightingPreset(const AZ::Render::LightingPreset& preset) override;
-        const AZ::Render::LightingPreset& GetLightingPreset() const override;
+        void SetLightingPreset(const JE::Render::Features::LightingPreset& preset) override;
+        const JE::Render::Features::LightingPreset& GetLightingPreset() const override;
         bool SaveLightingPreset(const AZStd::string& path) override;
         bool LoadLightingPreset(const AZStd::string& path) override;
         AZStd::string GetLastLightingPresetPath() const override;
@@ -51,8 +51,8 @@ namespace AtomToolsFramework
         void UnregisterLightingPresetPath(const AZStd::string& path) override;
         AZStd::set<AZStd::string> GetRegisteredLightingPresetPaths() const override;
 
-        void SetModelPreset(const AZ::Render::ModelPreset& preset) override;
-        const AZ::Render::ModelPreset& GetModelPreset() const override;
+        void SetModelPreset(const JE::Render::Features::ModelPreset& preset) override;
+        const JE::Render::Features::ModelPreset& GetModelPreset() const override;
         bool SaveModelPreset(const AZStd::string& path) override;
         bool LoadModelPreset(const AZStd::string& path) override;
         bool LoadModelPresetByAssetId(const AZ::Data::AssetId& assetId) override;
@@ -93,19 +93,19 @@ namespace AtomToolsFramework
         void OnCatalogAssetChanged(const AZ::Data::AssetId& assetId) override;
         void OnCatalogAssetAdded(const AZ::Data::AssetId& assetId) override;
 
-        void RegisterLightingPreset(const AZStd::string& path, const AZ::Render::LightingPreset& preset);
-        void RegisterModelPreset(const AZStd::string& path, const AZ::Render::ModelPreset& preset);
+        void RegisterLightingPreset(const AZStd::string& path, const JE::Render::Features::LightingPreset& preset);
+        void RegisterModelPreset(const AZStd::string& path, const JE::Render::Features::ModelPreset& preset);
         void RegisterRenderPipeline(const AZStd::string& path, const JE::Render::RPI::RenderPipelineDescriptor& preset);
         void PreloadPresets();
 
         const AZ::Crc32 m_toolId = {};
 
-        AZ::Render::LightingPreset m_lightingPreset;
-        AZ::Render::ModelPreset m_modelPreset;
+        JE::Render::Features::LightingPreset m_lightingPreset;
+        JE::Render::Features::ModelPreset m_modelPreset;
         JE::Render::RPI::RenderPipelineDescriptor m_renderPipelineDescriptor;
 
-        mutable AZStd::unordered_map<AZStd::string, AZ::Render::LightingPreset> m_lightingPresetCache;
-        mutable AZStd::unordered_map<AZStd::string, AZ::Render::ModelPreset> m_modelPresetCache;
+        mutable AZStd::unordered_map<AZStd::string, JE::Render::Features::LightingPreset> m_lightingPresetCache;
+        mutable AZStd::unordered_map<AZStd::string, JE::Render::Features::ModelPreset> m_modelPresetCache;
         mutable AZStd::unordered_map<AZStd::string, JE::Render::RPI::RenderPipelineDescriptor> m_renderPipelineDescriptorCache;
         mutable bool m_settingsNotificationPending = {};
     };

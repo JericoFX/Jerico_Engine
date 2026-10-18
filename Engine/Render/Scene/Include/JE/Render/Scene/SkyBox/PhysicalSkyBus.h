@@ -8,7 +8,7 @@
 
 #pragma once
 #include <AzCore/Component/ComponentBus.h>
-#include <Atom/Feature/CoreLights/PhotometricValue.h>
+#include <JE/Render/Features/CoreLights/PhotometricValue.h>
 
 namespace JE::Render
 {
@@ -33,15 +33,15 @@ namespace JE::Render
             virtual float GetSunRadiusFactor() = 0;
 
             // reasonable range is -4.0 ~ 11.0 for EV100
-            virtual void SetSkyIntensity(float intensity, AZ::Render::PhotometricUnit unit) = 0;
+            virtual void SetSkyIntensity(float intensity, JE::Render::Features::PhotometricUnit unit) = 0;
             virtual void SetSkyIntensity(float intensity) = 0;
-            virtual float GetSkyIntensity(AZ::Render::PhotometricUnit unit) = 0;
+            virtual float GetSkyIntensity(JE::Render::Features::PhotometricUnit unit) = 0;
             virtual float GetSkyIntensity() = 0;
 
             // reasonable range is -4.0 ~ 16.0 for EV100
-            virtual void SetSunIntensity(float intensity, AZ::Render::PhotometricUnit unit) = 0;
+            virtual void SetSunIntensity(float intensity, JE::Render::Features::PhotometricUnit unit) = 0;
             virtual void SetSunIntensity(float intensity) = 0;
-            virtual float GetSunIntensity(AZ::Render::PhotometricUnit unit) = 0;
+            virtual float GetSunIntensity(JE::Render::Features::PhotometricUnit unit) = 0;
             virtual float GetSunIntensity() = 0;
         };
 

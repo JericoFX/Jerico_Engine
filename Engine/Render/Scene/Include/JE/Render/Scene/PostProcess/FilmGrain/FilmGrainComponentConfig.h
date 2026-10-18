@@ -8,7 +8,7 @@
 
 #pragma once
 
-#include <Atom/Feature/PostProcess/FilmGrain/FilmGrainSettingsInterface.h>
+#include <JE/Render/Features/PostProcess/FilmGrain/FilmGrainSettingsInterface.h>
 #include <AzCore/Component/Component.h>
 
 namespace JE::Render
@@ -23,17 +23,17 @@ namespace JE::Render
             static void Reflect(AZ::ReflectContext* context);
 
             // Generate members...
-#include <Atom/Feature/ParamMacros/StartParamMembers.inl>
-#include <Atom/Feature/PostProcess/FilmGrain/FilmGrainParams.inl>
-#include <Atom/Feature/ParamMacros/EndParams.inl>
+#include <JE/Render/Features/ParamMacros/StartParamMembers.inl>
+#include <JE/Render/Features/PostProcess/FilmGrain/FilmGrainParams.inl>
+#include <JE/Render/Features/ParamMacros/EndParams.inl>
 
             // Generate Getters/Setters...
-#include <Atom/Feature/ParamMacros/StartParamFunctions.inl>
-#include <Atom/Feature/PostProcess/FilmGrain/FilmGrainParams.inl>
-#include <Atom/Feature/ParamMacros/EndParams.inl>
+#include <JE/Render/Features/ParamMacros/StartParamFunctions.inl>
+#include <JE/Render/Features/PostProcess/FilmGrain/FilmGrainParams.inl>
+#include <JE/Render/Features/ParamMacros/EndParams.inl>
 
-            void CopySettingsFrom(AZ::Render::FilmGrainSettingsInterface* settings);
-            void CopySettingsTo(AZ::Render::FilmGrainSettingsInterface* settings);
+            void CopySettingsFrom(JE::Render::Features::FilmGrainSettingsInterface* settings);
+            void CopySettingsTo(JE::Render::Features::FilmGrainSettingsInterface* settings);
 
             bool ArePropertiesReadOnly() const
             {

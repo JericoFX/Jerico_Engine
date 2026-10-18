@@ -55,7 +55,7 @@ namespace JE::Render
                 return;
             }
 
-            m_featureProcessor = JE::Render::RPI::Scene::GetFeatureProcessorForEntity<AZ::Render::SpecularReflectionsFeatureProcessorInterface>(entityId);
+            m_featureProcessor = JE::Render::RPI::Scene::GetFeatureProcessorForEntity<JE::Render::Features::SpecularReflectionsFeatureProcessorInterface>(entityId);
             OnConfigChanged();
         }
 

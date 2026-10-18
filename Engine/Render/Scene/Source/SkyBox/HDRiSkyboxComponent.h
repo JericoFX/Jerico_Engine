@@ -9,7 +9,7 @@
 #pragma once
 
 #include <AzFramework/Components/ComponentAdapter.h>
-#include <Atom/Feature/SkyBox/SkyboxConstants.h>
+#include <JE/Render/Features/SkyBox/SkyboxConstants.h>
 #include <JE/Render/Scene/SkyBox/HDRiSkyboxComponentConfig.h>
 #include <SkyBox/HDRiSkyboxComponentController.h>
 
@@ -22,7 +22,7 @@ namespace JE::Render
         {
         public:
             using BaseClass = AzFramework::Components::ComponentAdapter<HDRiSkyboxComponentController, HDRiSkyboxComponentConfig>;
-            AZ_RTTI_WITH_NAME(JE::Render::Scene::HDRiSkyboxComponent, "AZ::Render::HDRiSkyboxComponent", AZ::Render::HDRiSkyboxComponentTypeId , BaseClass, AZ::Component)
+            AZ_RTTI_WITH_NAME(JE::Render::Scene::HDRiSkyboxComponent, "AZ::Render::HDRiSkyboxComponent", JE::Render::Features::HDRiSkyboxComponentTypeId , BaseClass, AZ::Component)
             AZ_COMPONENT_INTRUSIVE_DESCRIPTOR_TYPE(JE::Render::Scene::HDRiSkyboxComponent)
             AZ_COMPONENT_BASE(JE::Render::Scene::HDRiSkyboxComponent)
             AZ_CLASS_ALLOCATOR(JE::Render::Scene::HDRiSkyboxComponent, AZ::ComponentAllocator);

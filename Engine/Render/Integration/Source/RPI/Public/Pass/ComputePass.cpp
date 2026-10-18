@@ -27,7 +27,7 @@
 
 using uint = uint32_t;
 using uint4 = uint[4];
-#include "../../../Feature/Common/Assets/ShaderLib/Atom/Features/IndirectRendering.azsli"
+#include "../../../../../Features/Assets/ShaderLib/Atom/Features/IndirectRendering.azsli"
 
 namespace JE::Render
 {

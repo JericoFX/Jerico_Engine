@@ -20,7 +20,7 @@
 #include <JE/Render/RPI/Reflect/Model/ModelAsset.h>
 #include <Atom/RHI/DrawPacketBuilder.h>
 
-#include <Atom/Feature/TransformService/TransformServiceFeatureProcessorInterface.h>
+#include <JE/Render/Features/TransformService/TransformServiceFeatureProcessorInterface.h>
 
 #include <meshoptimizer.h>
 
@@ -56,7 +56,7 @@ namespace AZ
         // having any instance data (matrices, Id, etc..)
         struct MeshRenderData
         {
-            Render::TransformServiceFeatureProcessorInterface::ObjectId ObjectId;   // should be per instance
+            JE::Render::Features::TransformServiceFeatureProcessorInterface::ObjectId ObjectId;   // should be per instance
 
             uint32_t MeshletsCount = 0;
 

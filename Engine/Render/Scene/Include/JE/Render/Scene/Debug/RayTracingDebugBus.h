@@ -25,9 +25,9 @@ namespace JE::Render::Scene
 
         // clang-format off
         // Generate virtual getters and setters
-        #include <Atom/Feature/ParamMacros/StartParamFunctionsVirtual.inl>
-        #include <Atom/Feature/Debug/RayTracingDebugParams.inl>
-        #include <Atom/Feature/ParamMacros/EndParams.inl>
+        #include <JE/Render/Features/ParamMacros/StartParamFunctionsVirtual.inl>
+        #include <JE/Render/Features/Debug/RayTracingDebugParams.inl>
+        #include <JE/Render/Features/ParamMacros/EndParams.inl>
         // clang-format on
     };
 

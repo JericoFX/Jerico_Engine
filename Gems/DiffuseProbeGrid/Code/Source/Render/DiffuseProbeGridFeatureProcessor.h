@@ -15,11 +15,15 @@
 #include <JE/Render/RPI/Public/Model/Model.h>
 #include <Render/DiffuseProbeGrid.h>
 
+namespace JE::Render::Features
+{
+    class SpecularReflectionsFeatureProcessorInterface;
+}
+
 namespace AZ
 {
     namespace Render
     {
-        class SpecularReflectionsFeatureProcessorInterface;
 
         //! This class manages DiffuseProbeGrids which generate diffuse global illumination
         class DiffuseProbeGridFeatureProcessor final
@@ -235,7 +239,7 @@ namespace AZ
             JE::Render::RPI::RingBuffer m_queryBuffer{ "DiffuseQueryBuffer", JE::Render::RPI::CommonBufferPoolType::ReadWrite, sizeof(IrradianceQuery) };
 
             // SSR state, for controlling the DiffuseProbeGridQueryPass in the SSR pipeline
-            SpecularReflectionsFeatureProcessorInterface* m_specularReflectionsFeatureProcessor = nullptr;
+            JE::Render::Features::SpecularReflectionsFeatureProcessorInterface* m_specularReflectionsFeatureProcessor = nullptr;
             bool m_ssrRayTracingEnabled = false;
 
             // Shader that contains the scene and view SRGs for precompiled shaders

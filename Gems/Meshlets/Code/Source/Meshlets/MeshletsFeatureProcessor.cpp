@@ -20,7 +20,7 @@
 #include <JE/Render/RPI/Public/Pass/PassSystemInterface.h>
 #include <JE/Render/RPI/Reflect/Asset/AssetUtils.h>
 
-#include <Atom/Feature/RenderCommon.h>
+#include <JE/Render/Features/RenderCommon.h>
 
 #include <MeshletsRenderObject.h>
 #include <MeshletsFeatureProcessor.h>
@@ -90,7 +90,7 @@ namespace AZ
 
         void MeshletsFeatureProcessor::Activate()
         {
-            m_transformServiceFeatureProcessor = GetParentScene()->GetFeatureProcessor<Render::TransformServiceFeatureProcessorInterface>();
+            m_transformServiceFeatureProcessor = GetParentScene()->GetFeatureProcessor<JE::Render::Features::TransformServiceFeatureProcessorInterface>();
             AZ_Assert(m_transformServiceFeatureProcessor, "MeshFeatureProcessor requires a TransformServiceFeatureProcessor on its parent scene.");
 
             EnableSceneNotification();
@@ -210,7 +210,7 @@ namespace AZ
         }
 
         void MeshletsFeatureProcessor::SetTransform(
-            const Render::TransformServiceFeatureProcessorInterface::ObjectId objectId, 
+            const JE::Render::Features::TransformServiceFeatureProcessorInterface::ObjectId objectId, 
             const AZ::Transform& transform)
         {
             m_transformServiceFeatureProcessor->SetTransformForId(objectId, transform);
@@ -231,7 +231,7 @@ namespace AZ
         // shared between instances)
         bool MeshletsFeatureProcessor::BuildDrawPacket(
             ModelLodDataArray& lodRenderDataArray,
-            Render::TransformServiceFeatureProcessorInterface::ObjectId objectId)
+            JE::Render::Features::TransformServiceFeatureProcessorInterface::ObjectId objectId)
         {
             if (!m_renderPass)
             {
@@ -303,10 +303,10 @@ namespace AZ
         // To enhance this, create an ObjectInstanceData and per instance srg rather than per object
         // and create a new instance every time this method is invoked.
         // This will also require to split the srg from the srg with the meshlets buffers.
-        Render::TransformServiceFeatureProcessorInterface::ObjectId
+        JE::Render::Features::TransformServiceFeatureProcessorInterface::ObjectId
             MeshletsFeatureProcessor::AddMeshletsRenderObject(MeshletsRenderObject* meshletsRenderObject)
         {
-            Render::TransformServiceFeatureProcessorInterface::ObjectId objectId = m_transformServiceFeatureProcessor->ReserveObjectId();
+            JE::Render::Features::TransformServiceFeatureProcessorInterface::ObjectId objectId = m_transformServiceFeatureProcessor->ReserveObjectId();
 
             if (m_renderPass)
             {
@@ -388,7 +388,7 @@ namespace AZ
                     if (renderData)
                     {
                         // the following is for testing only
-                        Render::TransformServiceFeatureProcessorInterface::ObjectId objectId = renderData->ObjectId;
+                        JE::Render::Features::TransformServiceFeatureProcessorInterface::ObjectId objectId = renderData->ObjectId;
                         [[maybe_unused]] Transform transform = m_transformServiceFeatureProcessor->GetTransformForId(objectId);
 
                         if (MeshletsRenderObject::CreateAndBindComputeSrgAndDispatch(m_computeShader, *renderData))

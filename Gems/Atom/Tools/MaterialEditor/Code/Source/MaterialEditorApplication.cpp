@@ -9,6 +9,7 @@
 #include <AtomToolsFramework/Document/AtomToolsDocumentSystemRequestBus.h>
 #include <JE/Editor/Camera/CameraModule.h>
 #include <JE/Editor/Render/Scene/SceneModule.h>
+#include <JE/Editor/Render/Features/FeatureModule.h>
 #include <AzCore/Settings/SettingsRegistryMergeUtils.h>
 #include <MaterialEditorApplication.h>
 #include <JE/Render/Materials/MaterialsRegistration.h>
@@ -69,6 +70,7 @@ namespace MaterialEditor
     {
         Base::CreateStaticModules(outModules);
         outModules.emplace_back(JE::Editor::Render::Scene::CreateModule());
+        outModules.emplace_back(JE::Editor::Render::Features::CreateModule());
         outModules.emplace_back(JE::Editor::Camera::CreateAuthoringModule());
     }
 

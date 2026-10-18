@@ -342,12 +342,12 @@ namespace Terrain
 
     void TerrainClipmapManager::InitializeMacroClipmapGpuBuffer()
     {
-        AZ::Render::GpuBufferHandler::Descriptor desc;
+        JE::Render::Features::GpuBufferHandler::Descriptor desc;
         desc.m_bufferName = "Macro Clipmap Update Regions";
         desc.m_bufferSrgName = "m_macroClipmapUpdateRegions";
         desc.m_elementSize = sizeof(ClipmapUpdateRegion);
         desc.m_srgLayout = m_terrainSrg->GetLayout();
-        m_macroClipmapUpdateRegionsBuffer = AZ::Render::GpuBufferHandler(desc);
+        m_macroClipmapUpdateRegionsBuffer = JE::Render::Features::GpuBufferHandler(desc);
 
         // Reserve the max possible size.
         m_macroClipmapUpdateRegions.reserve(ClipmapBounds::MaxUpdateRegions * m_macroClipmapStackSize);
@@ -355,12 +355,12 @@ namespace Terrain
 
     void TerrainClipmapManager::InitializeDetailClipmapGpuBuffer()
     {
-        AZ::Render::GpuBufferHandler::Descriptor desc;
+        JE::Render::Features::GpuBufferHandler::Descriptor desc;
         desc.m_bufferName = "Detail Clipmap Update Regions";
         desc.m_bufferSrgName = "m_detailClipmapUpdateRegions";
         desc.m_elementSize = sizeof(ClipmapUpdateRegion);
         desc.m_srgLayout = m_terrainSrg->GetLayout();
-        m_detailClipmapUpdateRegionsBuffer = AZ::Render::GpuBufferHandler(desc);
+        m_detailClipmapUpdateRegionsBuffer = JE::Render::Features::GpuBufferHandler(desc);
 
         // Reserve the max possible size.
         m_detailClipmapUpdateRegions.reserve(ClipmapBounds::MaxUpdateRegions * m_detailClipmapStackSize);

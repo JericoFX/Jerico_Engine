@@ -10,7 +10,7 @@
 
 #include <JE/Editor/Materials/Base.h>
 
-#include <Atom/Feature/Utils/EditorRenderComponentAdapter.h>
+#include <JE/Editor/Render/Features/Utils/EditorRenderComponentAdapter.h>
 #include <JE/Render/Materials/MaterialComponentBus.h>
 #include <JE/Render/Materials/MaterialComponentConstants.h>
 #include <JE/Editor/Materials/EditorMaterialComponentSlot.h>
@@ -22,13 +22,13 @@ namespace JE
     {
         //! In-editor material component for displaying and editing material assignments.
         class JE_EDITOR_MATERIALS_API EditorMaterialComponent final
-            : public AZ::Render::EditorRenderComponentAdapter<JE::Render::MaterialComponentController, JE::Render::MaterialComponent, JE::Render::MaterialComponentConfig>
+            : public JE::Editor::Render::Features::EditorRenderComponentAdapter<JE::Render::MaterialComponentController, JE::Render::MaterialComponent, JE::Render::MaterialComponentConfig>
             , public JE::Render::MaterialComponentNotificationBus::Handler
         {
         public:
             friend class JsonEditorMaterialComponentSerializer;
 
-            using BaseClass = AZ::Render::EditorRenderComponentAdapter<JE::Render::MaterialComponentController, JE::Render::MaterialComponent, JE::Render::MaterialComponentConfig>;
+            using BaseClass = JE::Editor::Render::Features::EditorRenderComponentAdapter<JE::Render::MaterialComponentController, JE::Render::MaterialComponent, JE::Render::MaterialComponentConfig>;
             AZ_EDITOR_COMPONENT(EditorMaterialComponent, JE::Render::EditorMaterialComponentTypeId, BaseClass);
 
             static void Reflect(AZ::ReflectContext* context);

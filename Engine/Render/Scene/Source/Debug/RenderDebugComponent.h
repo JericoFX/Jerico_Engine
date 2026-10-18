@@ -11,7 +11,7 @@
 #include <AzCore/Component/Component.h>
 #include <AzFramework/Components/ComponentAdapter.h>
 #include <JE/Render/Scene/Debug/RenderDebugComponentConfig.h>
-#include <Atom/Feature/Debug/RenderDebugConstants.h>
+#include <JE/Render/Features/Debug/RenderDebugConstants.h>
 #include <Debug/RenderDebugComponentController.h>
 
 namespace JE::Render::Scene

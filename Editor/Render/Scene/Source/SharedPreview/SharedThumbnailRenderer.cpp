@@ -6,8 +6,8 @@
  *
  */
 
-#include <Atom/Feature/Utils/LightingPreset.h>
-#include <Atom/Feature/Utils/ModelPreset.h>
+#include <JE/Render/Features/Utils/LightingPreset.h>
+#include <JE/Render/Features/Utils/ModelPreset.h>
 #include <JE/Editor/Render/RPI/Edit/Common/AssetUtils.h>
 #include <JE/Editor/Render/RPI/Edit/Material/MaterialSourceData.h>
 #include <JE/Render/RPI/Reflect/System/AnyAsset.h>
@@ -126,7 +126,7 @@ namespace JE::Editor::Render
             }
 
             const auto& path = JE::Render::RPI::AssetUtils::GetSourcePathByAssetId(assetInfo.m_assetId);
-            if (assetInfo.m_assetType == JE::Render::RPI::AnyAsset::RTTI_Type() && path.ends_with(AZ::Render::LightingPreset::Extension))
+            if (assetInfo.m_assetType == JE::Render::RPI::AnyAsset::RTTI_Type() && path.ends_with(JE::Render::Features::LightingPreset::Extension))
             {
                 ThumbnailConfig thumbnailConfig;
                 LoadPreviewAsset(thumbnailConfig.m_lightingAsset, assetInfo.m_assetId);
@@ -141,12 +141,12 @@ namespace JE::Editor::Render
                 return thumbnailConfig;
             }
 
-            if (assetInfo.m_assetType == JE::Render::RPI::AnyAsset::RTTI_Type() && path.ends_with(AZ::Render::ModelPreset::Extension))
+            if (assetInfo.m_assetType == JE::Render::RPI::AnyAsset::RTTI_Type() && path.ends_with(JE::Render::Features::ModelPreset::Extension))
             {
                 // Model preset assets are relatively small JSON files containing a reference to a model asset and possibly other
                 // parameters. The preset must be loaded to get the model asset ID. Then the preview will be rendered like any other model.
                 AZ::Data::Asset<JE::Render::RPI::AnyAsset> asset = JE::Render::RPI::AssetUtils::LoadAssetById<JE::Render::RPI::AnyAsset>(assetInfo.m_assetId);
-                const AZ::Render::ModelPreset& preset = *JE::Render::RPI::GetDataFromAnyAsset<AZ::Render::ModelPreset>(asset);
+                const JE::Render::Features::ModelPreset& preset = *JE::Render::RPI::GetDataFromAnyAsset<JE::Render::Features::ModelPreset>(asset);
 
                 ThumbnailConfig thumbnailConfig;
                 thumbnailConfig.m_modelAsset = preset.m_modelAsset;

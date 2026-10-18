@@ -8,7 +8,7 @@
 
 #pragma once
 
-#include <Atom/Feature/Common/Assets/Shaders/Materials/StandardPBR/StandardPBR_MaterialInputs.azsli>
+#include <Engine/Render/Features/Assets/Shaders/Materials/StandardPBR/StandardPBR_MaterialInputs.azsli>
 #include <OpenParticle/ParticleMeshCommon.azsli>
 
 // LoadInstanceData / ComputeParticleWorldPosition (DrawSrg is declared in
@@ -79,9 +79,9 @@
         return OUT;
     }
 
-    #include <Atom/Feature/Common/Assets/Shaders/Materials/StandardPBR/StandardPBR_PixelGeometryEval.azsli>
-    #include <Atom/Feature/Common/Assets/Shaders/Materials/StandardPBR/StandardPBR_SurfaceEval.azsli>
-    #include <Atom/Feature/Common/Assets/Shaders/Materials/StandardPBR/StandardPBR_LightingEval.azsli>
+    #include <Engine/Render/Features/Assets/Shaders/Materials/StandardPBR/StandardPBR_PixelGeometryEval.azsli>
+    #include <Engine/Render/Features/Assets/Shaders/Materials/StandardPBR/StandardPBR_SurfaceEval.azsli>
+    #include <Engine/Render/Features/Assets/Shaders/Materials/StandardPBR/StandardPBR_LightingEval.azsli>
 
 #elif MATERIALPIPELINE_SHADER_HAS_GEOMETRIC_PIXEL_STAGE
 
@@ -112,8 +112,8 @@
         return OUT;
     }
 
-    #include <Atom/Feature/Common/Assets/Shaders/Materials/StandardPBR/StandardPBR_PixelGeometryEval.azsli>
-    #include "Atom/Feature/Common/Assets/Shaders/Materials/MaterialFunctions/StandardGetAlphaAndClip.azsli"
+    #include <Engine/Render/Features/Assets/Shaders/Materials/StandardPBR/StandardPBR_PixelGeometryEval.azsli>
+    #include "Engine/Render/Features/Assets/Shaders/Materials/MaterialFunctions/StandardGetAlphaAndClip.azsli"
 
     void EvaluateSurface(VsOutput IN, VsSystemValues SV, PixelGeometryData geoData, const MaterialParameters params)
     {

@@ -11,7 +11,7 @@
 #include <AzFramework/Entity/EntityDebugDisplayBus.h>
 #include <AzToolsFramework/ToolsComponents/EditorVisibilityBus.h>
 #include <AzToolsFramework/API/ComponentEntitySelectionBus.h>
-#include <Atom/Feature/Utils/EditorRenderComponentAdapter.h>
+#include <JE/Editor/Render/Features/Utils/EditorRenderComponentAdapter.h>
 #include <JE/Render/Scene/Mesh/MeshComponentConstants.h>
 #include <Mesh/MeshComponent.h>
 #include <Mesh/EditorMeshStats.h>
@@ -26,13 +26,13 @@ namespace JE::Editor::Render
          * effects when changing fields in the editor.
          */
         class EditorMeshComponent final
-            : public AZ::Render::EditorRenderComponentAdapter<JE::Render::Scene::MeshComponentController, JE::Render::Scene::MeshComponent, JE::Render::Scene::MeshComponentConfig>
+            : public JE::Editor::Render::Features::EditorRenderComponentAdapter<JE::Render::Scene::MeshComponentController, JE::Render::Scene::MeshComponent, JE::Render::Scene::MeshComponentConfig>
             , private AzToolsFramework::EditorComponentSelectionRequestsBus::Handler
             , private AzFramework::EntityDebugDisplayEventBus::Handler
             , private JE::Render::Scene::MeshComponentNotificationBus::Handler
         {
         public:
-            using BaseClass = AZ::Render::EditorRenderComponentAdapter<JE::Render::Scene::MeshComponentController, JE::Render::Scene::MeshComponent, JE::Render::Scene::MeshComponentConfig>;
+            using BaseClass = JE::Editor::Render::Features::EditorRenderComponentAdapter<JE::Render::Scene::MeshComponentController, JE::Render::Scene::MeshComponent, JE::Render::Scene::MeshComponentConfig>;
             AZ_RTTI_WITH_NAME(JE::Editor::Render::Scene::EditorMeshComponent, "AZ::Render::EditorMeshComponent", JE::Render::Scene::EditorMeshComponentTypeId, BaseClass, AzToolsFramework::Components::EditorComponentBase)
             AZ_EDITOR_COMPONENT_INTRUSIVE_DESCRIPTOR_TYPE(JE::Editor::Render::Scene::EditorMeshComponent)
             AZ_COMPONENT_BASE(JE::Editor::Render::Scene::EditorMeshComponent)

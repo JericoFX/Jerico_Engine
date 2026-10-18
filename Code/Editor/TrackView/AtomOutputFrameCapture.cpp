@@ -14,7 +14,7 @@
 #include <JE/Render/RPI/Public/Scene.h>
 #include <JE/Render/RPI/Public/View.h>
 #include <JE/Render/RPI/Reflect/System/RenderPipelineDescriptor.h>
-#include <Atom/Feature/PostProcess/PostProcessFeatureProcessorInterface.h>
+#include <JE/Render/Features/PostProcess/PostProcessFeatureProcessorInterface.h>
 #include <AzCore/Component/TransformBus.h>
 #include <AzCore/Math/MatrixUtils.h>
 #include <AzCore/Name/Name.h>
@@ -50,7 +50,7 @@ namespace TrackView
         m_view = JE::Render::RPI::View::CreateView(viewName, JE::Render::RPI::View::UsageCamera);
         m_renderPipeline->SetDefaultView(m_view);
         m_targetView = scene.GetDefaultRenderPipeline()->GetDefaultView();
-        if (auto* fp = scene.GetFeatureProcessor<AZ::Render::PostProcessFeatureProcessorInterface>())
+        if (auto* fp = scene.GetFeatureProcessor<JE::Render::Features::PostProcessFeatureProcessorInterface>())
         {
             // This will be set again to mimic the active camera in UpdateView
             fp->SetViewAlias(m_view, m_targetView);
@@ -65,7 +65,7 @@ namespace TrackView
             return;
         }
 
-        if (auto* fp = scene.GetFeatureProcessor<AZ::Render::PostProcessFeatureProcessorInterface>())
+        if (auto* fp = scene.GetFeatureProcessor<JE::Render::Features::PostProcessFeatureProcessorInterface>())
         {
             // Remove view alias introduced in CreatePipeline and UpdateView
             fp->RemoveViewAlias(m_view);
@@ -85,7 +85,7 @@ namespace TrackView
         {
             if (JE::Render::RPI::Scene* scene = SceneFromGameEntityContext())
             {
-                if (auto* fp = scene->GetFeatureProcessor<AZ::Render::PostProcessFeatureProcessorInterface>())
+                if (auto* fp = scene->GetFeatureProcessor<JE::Render::Features::PostProcessFeatureProcessorInterface>())
                 {
                     fp->SetViewAlias(m_view, targetView);
                     m_targetView = targetView;
@@ -103,10 +103,10 @@ namespace TrackView
         m_captureFinishedCallback = AZStd::move(captureFinishedCallback);
 
         // note: "Output" (slot name) maps to MainPipeline.pass CopyToSwapChain
-        AZ::Render::FrameCaptureOutcome captureOutcome;
-        AZ::Render::FrameCaptureRequestBus::BroadcastResult(
+        JE::Render::Features::FrameCaptureOutcome captureOutcome;
+        JE::Render::Features::FrameCaptureRequestBus::BroadcastResult(
             captureOutcome,
-            &AZ::Render::FrameCaptureRequestBus::Events::CapturePassAttachmentWithCallback,
+            &JE::Render::Features::FrameCaptureRequestBus::Events::CapturePassAttachmentWithCallback,
             attachmentReadbackCallback,
             m_passHierarchy,
             AZStd::string("Output"),
@@ -114,7 +114,7 @@ namespace TrackView
 
         if (captureOutcome.IsSuccess())
         {
-            AZ::Render::FrameCaptureNotificationBus::Handler::BusConnect(captureOutcome.GetValue());
+            JE::Render::Features::FrameCaptureNotificationBus::Handler::BusConnect(captureOutcome.GetValue());
             return true;
         }
 
@@ -125,9 +125,9 @@ namespace TrackView
     }
 
     void AtomOutputFrameCapture::OnFrameCaptureFinished(
-        [[maybe_unused]] AZ::Render::FrameCaptureResult result, [[maybe_unused]] const AZStd::string& info)
+        [[maybe_unused]] JE::Render::Features::FrameCaptureResult result, [[maybe_unused]] const AZStd::string& info)
     {
-        AZ::Render::FrameCaptureNotificationBus::Handler::BusDisconnect();
+        JE::Render::Features::FrameCaptureNotificationBus::Handler::BusDisconnect();
         m_captureFinishedCallback();
     }
 

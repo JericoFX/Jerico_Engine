@@ -10,7 +10,7 @@
 #include <AzCore/Asset/AssetCommon.h>
 #include <AzCore/RTTI/RTTI.h>
 #include <AzCore/std/containers/map.h>
-#include <Atom/Feature/PostProcess/PostFxLayerCategoriesConstants.h>
+#include <JE/Render/Features/PostProcess/PostFxLayerCategoriesConstants.h>
 
 namespace JE::Editor::Render
 {
@@ -26,7 +26,7 @@ namespace JE::Editor::Render
             static void Reflect(AZ::ReflectContext* context);
 
             // layer categories for PostFX Layer Component indexed by priority
-            AZ::Render::PostFx::LayerCategoriesMap m_layerCategories;
+            JE::Render::Features::PostFx::LayerCategoriesMap m_layerCategories;
         };
     }
 }

@@ -9,7 +9,7 @@
 #pragma once
 
 #include <AzCore/Interface/Interface.h>
-#include <Atom/Feature/Mesh/MeshFeatureProcessorInterface.h>
+#include <JE/Render/Features/Mesh/MeshFeatureProcessorInterface.h>
 
 namespace AZ
 {

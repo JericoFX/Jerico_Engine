@@ -34,7 +34,7 @@
 #include <AzToolsFramework/Entity/PrefabEditorEntityOwnershipInterface.h>
 #include <AzToolsFramework/Prefab/PrefabPublicInterface.h>
 #include <AzToolsFramework/Prefab/PrefabSystemComponentInterface.h>
-#include <Atom/Feature/Utils/FrameCaptureBus.h>
+#include <JE/Render/Features/Utils/FrameCaptureBus.h>
 #include <Atom/RHI/Factory.h>
 #include <JE/Render/RPI/Public/Material/Material.h>
 #include <JE/Render/RPI/Public/ViewportContext.h>
@@ -284,7 +284,7 @@ namespace JE::BSP::Editor
     class FixtureVerification::Implementation final
         : public AZ::TickBus::Handler
         , public JE::Render::RPI::ViewportContextNotificationBus::Handler
-        , public AZ::Render::FrameCaptureNotificationBus::Handler
+        , public JE::Render::Features::FrameCaptureNotificationBus::Handler
     {
     public:
         ~Implementation() override { Deactivate(); }
@@ -357,11 +357,11 @@ namespace JE::BSP::Editor
             m_stage = Stage::Services;
             m_enteredGame = false;
             m_selectedCamera = false;
-            m_captureId = AZ::Render::InvalidFrameCaptureId;
-            m_editorCaptureId = m_runtimeCaptureId = AZ::Render::InvalidFrameCaptureId;
+            m_captureId = JE::Render::Features::InvalidFrameCaptureId;
+            m_editorCaptureId = m_runtimeCaptureId = JE::Render::Features::InvalidFrameCaptureId;
             m_editorCaptured = m_runtimeCaptured = false;
             m_captureFinished = false;
-            m_captureResult = AZ::Render::FrameCaptureResult::None;
+            m_captureResult = JE::Render::Features::FrameCaptureResult::None;
             m_captureInfo.clear();
             m_capturePath.clear();
             m_backend.clear();
@@ -642,7 +642,7 @@ namespace JE::BSP::Editor
             const auto size = viewport->GetViewportSize();
             if (!size.m_width || !size.m_height) { return NotReady("viewport dimensions are zero"); }
             bool canCapture = false;
-            AZ::Render::FrameCaptureRequestBus::BroadcastResult(canCapture, &AZ::Render::FrameCaptureRequests::CanCapture);
+            JE::Render::Features::FrameCaptureRequestBus::BroadcastResult(canCapture, &JE::Render::Features::FrameCaptureRequests::CanCapture);
             if (!canCapture) { return NotReady("Atom frame capture is unavailable"); }
             AZ::EntityId activeCamera;
             Camera::CameraSystemRequestBus::BroadcastResult(activeCamera, &Camera::CameraSystemRequests::GetActiveCamera);
@@ -690,11 +690,11 @@ namespace JE::BSP::Editor
             const QFileInfo destination(m_capturePath);
             if (!UnlinkedExistingPath(m_output) || destination.exists() || destination.isSymLink()) { return false; }
             const auto viewport = JE::Render::RPI::ViewportContextRequests::Get()->GetDefaultViewportContext();
-            AZ::Render::FrameCaptureOutcome result;
-            AZ::Render::FrameCaptureRequestBus::BroadcastResult(result,
-                &AZ::Render::FrameCaptureRequests::CaptureScreenshotForWindow,
+            JE::Render::Features::FrameCaptureOutcome result;
+            JE::Render::Features::FrameCaptureRequestBus::BroadcastResult(result,
+                &JE::Render::Features::FrameCaptureRequests::CaptureScreenshotForWindow,
                 AZStd::string(m_capturePath.toUtf8().constData()), viewport->GetWindowHandle());
-            if (!result.IsSuccess() || result.GetValue() == AZ::Render::InvalidFrameCaptureId)
+            if (!result.IsSuccess() || result.GetValue() == JE::Render::Features::InvalidFrameCaptureId)
             {
                 AZ_Error("JEEditorFixture", false, "Atom capture rejected: %s", result.IsSuccess() ? "invalid ID" : result.GetError().m_errorMessage.c_str());
                 return false;
@@ -705,7 +705,7 @@ namespace JE::BSP::Editor
             m_captureFinished = false;
             m_stage = runtime ? Stage::RuntimeCapture : Stage::EditorCapture;
             m_lastReadinessGate = "waiting for matching Atom capture notification";
-            AZ::Render::FrameCaptureNotificationBus::Handler::BusConnect(m_captureId);
+            JE::Render::Features::FrameCaptureNotificationBus::Handler::BusConnect(m_captureId);
             AZ_Printf("JEEditorFixture", "Atom %s capture ID %u, backend %s, %ux%u, path %s.\n",
                 runtime ? "runtime" : "Editor", m_captureId, m_backend.c_str(), m_width, m_height, m_capturePath.toUtf8().constData());
             return true;
@@ -713,14 +713,14 @@ namespace JE::BSP::Editor
 
         void OnRenderTick() override { if (m_stage == Stage::EditorView || m_stage == Stage::RuntimeView) { ++m_frames; } }
 
-        void OnFrameCaptureFinished(AZ::Render::FrameCaptureResult result, const AZStd::string& info) override
+        void OnFrameCaptureFinished(JE::Render::Features::FrameCaptureResult result, const AZStd::string& info) override
         {
-            const auto* id = AZ::Render::FrameCaptureNotificationBus::GetCurrentBusId();
+            const auto* id = JE::Render::Features::FrameCaptureNotificationBus::GetCurrentBusId();
             if (!id || *id != m_captureId || (m_stage != Stage::EditorCapture && m_stage != Stage::RuntimeCapture)) { return; }
             m_captureFinished = true;
             m_captureResult = result;
             m_captureInfo = info;
-            AZ::Render::FrameCaptureNotificationBus::Handler::BusDisconnect();
+            JE::Render::Features::FrameCaptureNotificationBus::Handler::BusDisconnect();
         }
 
         void OnTick(float, AZ::ScriptTimePoint) override
@@ -785,7 +785,7 @@ namespace JE::BSP::Editor
             else if (m_stage == Stage::EditorCapture || m_stage == Stage::RuntimeCapture)
             {
                 if (!m_captureFinished) { return; }
-                if (m_captureResult != AZ::Render::FrameCaptureResult::Success || !UnlinkedExistingPath(m_capturePath))
+                if (m_captureResult != JE::Render::Features::FrameCaptureResult::Success || !UnlinkedExistingPath(m_capturePath))
                 { Finish(false, (AZStd::string("Atom capture failed: ") + m_captureInfo).c_str()); return; }
                 const QImage image(m_capturePath);
                 if (image.width() != static_cast<int>(m_width) || image.height() != static_cast<int>(m_height) || !HasFixtureCaptureContent(image))
@@ -823,7 +823,7 @@ namespace JE::BSP::Editor
         {
             AZ::TickBus::Handler::BusDisconnect();
             JE::Render::RPI::ViewportContextNotificationBus::Handler::BusDisconnect();
-            AZ::Render::FrameCaptureNotificationBus::Handler::BusDisconnect();
+            JE::Render::Features::FrameCaptureNotificationBus::Handler::BusDisconnect();
             if (m_runtimeIdentity)
             {
                 AZStd::lock_guard lock(m_runtimeIdentity->m_mutex);
@@ -897,10 +897,10 @@ namespace JE::BSP::Editor
         uint32_t m_width = 0, m_height = 0;
         AZ::EntityId m_room, m_camera, m_previousView;
         AZ::Vector3 m_tint = AZ::Vector3::CreateZero();
-        AZ::Render::FrameCaptureId m_captureId = AZ::Render::InvalidFrameCaptureId;
-        AZ::Render::FrameCaptureId m_editorCaptureId = AZ::Render::InvalidFrameCaptureId;
-        AZ::Render::FrameCaptureId m_runtimeCaptureId = AZ::Render::InvalidFrameCaptureId;
-        AZ::Render::FrameCaptureResult m_captureResult = AZ::Render::FrameCaptureResult::None;
+        JE::Render::Features::FrameCaptureId m_captureId = JE::Render::Features::InvalidFrameCaptureId;
+        JE::Render::Features::FrameCaptureId m_editorCaptureId = JE::Render::Features::InvalidFrameCaptureId;
+        JE::Render::Features::FrameCaptureId m_runtimeCaptureId = JE::Render::Features::InvalidFrameCaptureId;
+        JE::Render::Features::FrameCaptureResult m_captureResult = JE::Render::Features::FrameCaptureResult::None;
         AZStd::string m_captureInfo, m_backend, m_level;
         AZStd::string m_sourceCameraName, m_lastReadinessGate;
         AZStd::shared_ptr<RuntimeIdentityRequest> m_runtimeIdentity;

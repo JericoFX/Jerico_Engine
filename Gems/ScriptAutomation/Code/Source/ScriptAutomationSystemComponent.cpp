@@ -190,17 +190,17 @@ namespace AZ::ScriptAutomation
         m_scriptIdleSeconds = numSeconds;
     }
 
-    void ScriptAutomationSystemComponent::SetFrameCaptureId(AZ::Render::FrameCaptureId frameCaptureId)
+    void ScriptAutomationSystemComponent::SetFrameCaptureId(JE::Render::Features::FrameCaptureId frameCaptureId)
     {
          // FrameCapture system supports multiple active frame captures, Script Automation would need changes to support more than 1 active at a time.
-        AZ_Assert(m_scriptFrameCaptureId == AZ::Render::InvalidFrameCaptureId, "Attempting to start a frame capture while one is in progress");
+        AZ_Assert(m_scriptFrameCaptureId == JE::Render::Features::InvalidFrameCaptureId, "Attempting to start a frame capture while one is in progress");
         m_scriptFrameCaptureId = frameCaptureId;
-        AZ::Render::FrameCaptureNotificationBus::Handler::BusConnect(frameCaptureId);
+        JE::Render::Features::FrameCaptureNotificationBus::Handler::BusConnect(frameCaptureId);
     }
 
     void ScriptAutomationSystemComponent::StartProfilingCapture()
     {
-        AZ::Render::ProfilingCaptureNotificationBus::Handler::BusConnect();
+        JE::Render::Features::ProfilingCaptureNotificationBus::Handler::BusConnect();
     }
 
     void ScriptAutomationSystemComponent::Activate()
@@ -374,38 +374,38 @@ namespace AZ::ScriptAutomation
 
     void ScriptAutomationSystemComponent::OnCaptureQueryTimestampFinished([[maybe_unused]] bool result, [[maybe_unused]] const AZStd::string& info)
     {
-        AZ::Render::ProfilingCaptureNotificationBus::Handler::BusDisconnect();
+        JE::Render::Features::ProfilingCaptureNotificationBus::Handler::BusDisconnect();
         ResumeAutomation();
     }
 
     void ScriptAutomationSystemComponent::OnCaptureCpuFrameTimeFinished([[maybe_unused]] bool result, [[maybe_unused]] const AZStd::string& info)
     {
-        AZ::Render::ProfilingCaptureNotificationBus::Handler::BusDisconnect();
+        JE::Render::Features::ProfilingCaptureNotificationBus::Handler::BusDisconnect();
         ResumeAutomation();
     }
 
     void ScriptAutomationSystemComponent::OnCaptureQueryPipelineStatisticsFinished([[maybe_unused]] bool result, [[maybe_unused]] const AZStd::string& info)
     {
-        AZ::Render::ProfilingCaptureNotificationBus::Handler::BusDisconnect();
+        JE::Render::Features::ProfilingCaptureNotificationBus::Handler::BusDisconnect();
         ResumeAutomation();
     }
 
     void ScriptAutomationSystemComponent::OnCaptureBenchmarkMetadataFinished([[maybe_unused]] bool result, [[maybe_unused]] const AZStd::string& info)
     {
-        AZ::Render::ProfilingCaptureNotificationBus::Handler::BusDisconnect();
+        JE::Render::Features::ProfilingCaptureNotificationBus::Handler::BusDisconnect();
         ResumeAutomation();
     }
 
-    void ScriptAutomationSystemComponent::OnFrameCaptureFinished(AZ::Render::FrameCaptureResult result, const AZStd::string &info)
+    void ScriptAutomationSystemComponent::OnFrameCaptureFinished(JE::Render::Features::FrameCaptureResult result, const AZStd::string &info)
     {
-        m_scriptFrameCaptureId = AZ::Render::InvalidFrameCaptureId;
-        AZ::Render::FrameCaptureNotificationBus::Handler::BusDisconnect();
+        m_scriptFrameCaptureId = JE::Render::Features::InvalidFrameCaptureId;
+        JE::Render::Features::FrameCaptureNotificationBus::Handler::BusDisconnect();
         ResumeAutomation();
 
         // This is checking for the exact scenario that results from an HDR setup. The goal is to add a very specific and prominent message that will
         // alert users to a common issue and what action to take. Any other Format issues will be reported by FrameCaptureSystemComponent with a
         // "Can't save image with format %s to a ppm file" message.
-        if (result == AZ::Render::FrameCaptureResult::UnsupportedFormat && info.find(AZ::RHI::ToString(AZ::RHI::Format::R10G10B10A2_UNORM)) != AZStd::string::npos)
+        if (result == JE::Render::Features::FrameCaptureResult::UnsupportedFormat && info.find(AZ::RHI::ToString(AZ::RHI::Format::R10G10B10A2_UNORM)) != AZStd::string::npos)
         {
             AZ_Assert(false, "ScriptAutomation Screen Capture - HDR Not Supported, Screen capture to image is not supported from RGB10A2 display format. Please change the system configuration to disable the HDR display feature.");
         }

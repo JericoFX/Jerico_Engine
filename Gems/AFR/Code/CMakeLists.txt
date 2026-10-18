@@ -21,7 +21,7 @@ ly_add_target(
             Source
     BUILD_DEPENDENCIES
         PRIVATE
-            Gem::Atom_Feature_Common.Public
+            JE::RenderFeatures
             Gem::DiffuseProbeGrid.Static
         PUBLIC
             AZ::AzCore

@@ -7,7 +7,7 @@
  */
 
 #include <PostProcess/DisplayMapper/EditorDisplayMapperComponent.h>
-#include <Atom/Feature/ACES/AcesDisplayMapperFeatureProcessor.h>
+#include <JE/Render/Features/ACES/AcesDisplayMapperFeatureProcessor.h>
 #include <AzCore/Asset/AssetSerializer.h>
 #include <AzCore/RTTI/BehaviorContext.h>
 #include <AzFramework/Translation/TranslationDef.h>
@@ -46,81 +46,81 @@ namespace JE::Editor::Render
                         ->Attribute(AZ::Edit::Attributes::Visibility, AZ::Edit::PropertyVisibility::ShowChildrenOnly)
                         ;
 
-                    editContext->Class<AZ::Render::AcesParameterOverrides>(
+                    editContext->Class<JE::Render::Features::AcesParameterOverrides>(
                         "AcesParameterOverrides", "")
                         ->ClassElement(AZ::Edit::ClassElements::EditorData, "")
                         ->Attribute(AZ::Edit::Attributes::AutoExpand, true)
 
                         // m_overrideDefaults
                         ->DataElement(
-                            AZ::Edit::UIHandlers::CheckBox, &AZ::Render::AcesParameterOverrides::m_overrideDefaults, QT_TRANSLATE_NOOP("AtomLyIntegration", "Override Defaults"),
+                            AZ::Edit::UIHandlers::CheckBox, &JE::Render::Features::AcesParameterOverrides::m_overrideDefaults, QT_TRANSLATE_NOOP("AtomLyIntegration", "Override Defaults"),
                             QT_TRANSLATE_NOOP("AtomLyIntegration", "When enabled allows parameter overrides for ACES configuration"))
                         ->Attribute(AZ::Edit::Attributes::ChangeNotify, AZ::Edit::PropertyRefreshLevels::ValuesOnly)
 
                         // m_alterSurround
                         ->DataElement(
-                            AZ::Edit::UIHandlers::CheckBox, &AZ::Render::AcesParameterOverrides::m_alterSurround, QT_TRANSLATE_NOOP("AtomLyIntegration", "Alter Surround"),
+                            AZ::Edit::UIHandlers::CheckBox, &JE::Render::Features::AcesParameterOverrides::m_alterSurround, QT_TRANSLATE_NOOP("AtomLyIntegration", "Alter Surround"),
                             QT_TRANSLATE_NOOP("AtomLyIntegration", "Apply gamma adjustment to compensate for dim surround"))
                         ->Attribute(AZ::Edit::Attributes::ChangeNotify, AZ::Edit::PropertyRefreshLevels::ValuesOnly)
 
                         // m_applyDesaturation
                         ->DataElement(
-                            AZ::Edit::UIHandlers::CheckBox, &AZ::Render::AcesParameterOverrides::m_applyDesaturation, QT_TRANSLATE_NOOP("AtomLyIntegration", "Alter Desaturation"),
+                            AZ::Edit::UIHandlers::CheckBox, &JE::Render::Features::AcesParameterOverrides::m_applyDesaturation, QT_TRANSLATE_NOOP("AtomLyIntegration", "Alter Desaturation"),
                             QT_TRANSLATE_NOOP("AtomLyIntegration", "Apply desaturation to compensate for luminance difference"))
                         ->Attribute(AZ::Edit::Attributes::ChangeNotify, AZ::Edit::PropertyRefreshLevels::ValuesOnly)
 
                         // m_applyCATD60toD65
                         ->DataElement(
-                            AZ::Edit::UIHandlers::CheckBox, &AZ::Render::AcesParameterOverrides::m_applyCATD60toD65, QT_TRANSLATE_NOOP("AtomLyIntegration", "Alter CAT D60 to D65"),
+                            AZ::Edit::UIHandlers::CheckBox, &JE::Render::Features::AcesParameterOverrides::m_applyCATD60toD65, QT_TRANSLATE_NOOP("AtomLyIntegration", "Alter CAT D60 to D65"),
                             QT_TRANSLATE_NOOP("AtomLyIntegration", "Apply Color appearance transform (CAT) from ACES white point to assumed observer adapted white point"))
                         ->Attribute(AZ::Edit::Attributes::ChangeNotify, AZ::Edit::PropertyRefreshLevels::ValuesOnly)
 
                         // m_cinemaLimitsBlack
                         ->DataElement(
-                            AZ::Edit::UIHandlers::Slider, &AZ::Render::AcesParameterOverrides::m_cinemaLimitsBlack,
+                            AZ::Edit::UIHandlers::Slider, &JE::Render::Features::AcesParameterOverrides::m_cinemaLimitsBlack,
                             QT_TRANSLATE_NOOP("AtomLyIntegration", "Cinema Limit (black)"),
                             QT_TRANSLATE_NOOP("AtomLyIntegration", "Reference black luminance value"))
                         ->Attribute(AZ::Edit::Attributes::Min, 0.02f)
-                        ->Attribute(AZ::Edit::Attributes::Max, &AZ::Render::AcesParameterOverrides::m_cinemaLimitsWhite)
+                        ->Attribute(AZ::Edit::Attributes::Max, &JE::Render::Features::AcesParameterOverrides::m_cinemaLimitsWhite)
                         ->Attribute(AZ::Edit::Attributes::Step, 0.005f)
                         ->Attribute(AZ::Edit::Attributes::ChangeNotify, AZ::Edit::PropertyRefreshLevels::ValuesOnly)
 
                         // m_cinemaLimitsWhite
                         ->DataElement(
-                            AZ::Edit::UIHandlers::Slider, &AZ::Render::AcesParameterOverrides::m_cinemaLimitsWhite,
+                            AZ::Edit::UIHandlers::Slider, &JE::Render::Features::AcesParameterOverrides::m_cinemaLimitsWhite,
                             QT_TRANSLATE_NOOP("AtomLyIntegration", "Cinema Limit (white)"),
                             QT_TRANSLATE_NOOP("AtomLyIntegration", "Reference white luminance value"))
-                        ->Attribute(AZ::Edit::Attributes::Min, &AZ::Render::AcesParameterOverrides::m_cinemaLimitsBlack)
+                        ->Attribute(AZ::Edit::Attributes::Min, &JE::Render::Features::AcesParameterOverrides::m_cinemaLimitsBlack)
                         ->Attribute(AZ::Edit::Attributes::Max, 4000.f)
                         ->Attribute(AZ::Edit::Attributes::Step, 0.005f)
                         ->Attribute(AZ::Edit::Attributes::ChangeNotify, AZ::Edit::PropertyRefreshLevels::ValuesOnly)
 
                         // m_minPoint
                         ->DataElement(
-                            AZ::Edit::UIHandlers::Slider, &AZ::Render::AcesParameterOverrides::m_minPoint, QT_TRANSLATE_NOOP("AtomLyIntegration", "Min Point (luminance)"),
+                            AZ::Edit::UIHandlers::Slider, &JE::Render::Features::AcesParameterOverrides::m_minPoint, QT_TRANSLATE_NOOP("AtomLyIntegration", "Min Point (luminance)"),
                             QT_TRANSLATE_NOOP("AtomLyIntegration", "Linear extension below this"))
                         ->Attribute(AZ::Edit::Attributes::Min, 0.002f)
-                        ->Attribute(AZ::Edit::Attributes::Max, &AZ::Render::AcesParameterOverrides::m_midPoint)
+                        ->Attribute(AZ::Edit::Attributes::Max, &JE::Render::Features::AcesParameterOverrides::m_midPoint)
                         ->Attribute(AZ::Edit::Attributes::ChangeNotify, AZ::Edit::PropertyRefreshLevels::AttributesAndValues)
 
                         // m_midPoint
-                        ->DataElement(AZ::Edit::UIHandlers::Slider, &AZ::Render::AcesParameterOverrides::m_midPoint,
+                        ->DataElement(AZ::Edit::UIHandlers::Slider, &JE::Render::Features::AcesParameterOverrides::m_midPoint,
                             QT_TRANSLATE_NOOP("AtomLyIntegration", "Mid Point (luminance)"), QT_TRANSLATE_NOOP("AtomLyIntegration", "Middle gray"))
-                        ->Attribute(AZ::Edit::Attributes::Min, &AZ::Render::AcesParameterOverrides::m_minPoint)
-                        ->Attribute(AZ::Edit::Attributes::Max, &AZ::Render::AcesParameterOverrides::m_maxPoint)
+                        ->Attribute(AZ::Edit::Attributes::Min, &JE::Render::Features::AcesParameterOverrides::m_minPoint)
+                        ->Attribute(AZ::Edit::Attributes::Max, &JE::Render::Features::AcesParameterOverrides::m_maxPoint)
                         ->Attribute(AZ::Edit::Attributes::ChangeNotify, AZ::Edit::PropertyRefreshLevels::AttributesAndValues)
 
                         // m_maxPoint
                         ->DataElement(
-                            AZ::Edit::UIHandlers::Slider, &AZ::Render::AcesParameterOverrides::m_maxPoint, QT_TRANSLATE_NOOP("AtomLyIntegration", "Max Point (luminance)"),
+                            AZ::Edit::UIHandlers::Slider, &JE::Render::Features::AcesParameterOverrides::m_maxPoint, QT_TRANSLATE_NOOP("AtomLyIntegration", "Max Point (luminance)"),
                             QT_TRANSLATE_NOOP("AtomLyIntegration", "Linear extension above this"))
-                        ->Attribute(AZ::Edit::Attributes::Min, &AZ::Render::AcesParameterOverrides::m_midPoint)
+                        ->Attribute(AZ::Edit::Attributes::Min, &JE::Render::Features::AcesParameterOverrides::m_midPoint)
                         ->Attribute(AZ::Edit::Attributes::Max, 4000.f)
                         ->Attribute(AZ::Edit::Attributes::ChangeNotify, AZ::Edit::PropertyRefreshLevels::AttributesAndValues)
 
                         // m_surroundGamma
                         ->DataElement(
-                            AZ::Edit::UIHandlers::Slider, &AZ::Render::AcesParameterOverrides::m_surroundGamma, QT_TRANSLATE_NOOP("AtomLyIntegration", "Surround Gamma"),
+                            AZ::Edit::UIHandlers::Slider, &JE::Render::Features::AcesParameterOverrides::m_surroundGamma, QT_TRANSLATE_NOOP("AtomLyIntegration", "Surround Gamma"),
                             QT_TRANSLATE_NOOP("AtomLyIntegration", "Gamma adjustment to be applied to compensate for the condition of the viewing environment"))
                         ->Attribute(AZ::Edit::Attributes::Min, 0.6f)
                         ->Attribute(AZ::Edit::Attributes::Max, 1.2f)
@@ -129,7 +129,7 @@ namespace JE::Editor::Render
 
                         // m_gamma
                         ->DataElement(
-                            AZ::Edit::UIHandlers::Slider, &AZ::Render::AcesParameterOverrides::m_gamma, QT_TRANSLATE_NOOP("AtomLyIntegration", "Gamma"),
+                            AZ::Edit::UIHandlers::Slider, &JE::Render::Features::AcesParameterOverrides::m_gamma, QT_TRANSLATE_NOOP("AtomLyIntegration", "Gamma"),
                             QT_TRANSLATE_NOOP("AtomLyIntegration", "Optional gamma value that is applied as basic gamma curve OETF"))
                         ->Attribute(AZ::Edit::Attributes::Min, 0.2f)
                         ->Attribute(AZ::Edit::Attributes::Max, 4.0f)
@@ -140,14 +140,14 @@ namespace JE::Editor::Render
                         ->ClassElement(AZ::Edit::ClassElements::Group, QT_TRANSLATE_NOOP("AtomLyIntegration", "Load Preset"))
                         ->Attribute(AZ::Edit::Attributes::AutoExpand, true)
                         ->DataElement(
-                            AZ::Edit::UIHandlers::ComboBox, &AZ::Render::AcesParameterOverrides::m_preset, QT_TRANSLATE_NOOP("AtomLyIntegration", "Preset Selection"),
+                            AZ::Edit::UIHandlers::ComboBox, &JE::Render::Features::AcesParameterOverrides::m_preset, QT_TRANSLATE_NOOP("AtomLyIntegration", "Preset Selection"),
                             QT_TRANSLATE_NOOP("AtomLyIntegration", "Allows specifying default preset for different ODT modes"))
                         ->EnumAttribute(AZ::Render::OutputDeviceTransformType::OutputDeviceTransformType_48Nits, QT_TRANSLATE_NOOP("AtomLyIntegration", "48 Nits"))
                         ->EnumAttribute(AZ::Render::OutputDeviceTransformType::OutputDeviceTransformType_1000Nits, QT_TRANSLATE_NOOP("AtomLyIntegration", "1000 Nits"))
                         ->EnumAttribute(AZ::Render::OutputDeviceTransformType::OutputDeviceTransformType_2000Nits, QT_TRANSLATE_NOOP("AtomLyIntegration", "2000 Nits"))
                         ->EnumAttribute(AZ::Render::OutputDeviceTransformType::OutputDeviceTransformType_4000Nits, QT_TRANSLATE_NOOP("AtomLyIntegration", "4000 Nits"))
                         ->UIElement(AZ::Edit::UIHandlers::Button, QT_TRANSLATE_NOOP("AtomLyIntegration", "Load"), QT_TRANSLATE_NOOP("AtomLyIntegration", "Load default preset"))
-                        ->Attribute(AZ::Edit::Attributes::ChangeNotify, &AZ::Render::AcesParameterOverrides::LoadPreset)
+                        ->Attribute(AZ::Edit::Attributes::ChangeNotify, &JE::Render::Features::AcesParameterOverrides::LoadPreset)
                         ->Attribute(AZ::Edit::Attributes::ButtonText, QT_TRANSLATE_NOOP("AtomLyIntegration", "Load"))
                         ;
 

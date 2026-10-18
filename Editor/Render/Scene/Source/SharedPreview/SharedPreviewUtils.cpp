@@ -9,8 +9,8 @@
 #include <API/EditorAssetSystemAPI.h>
 #include <AssetBrowser/Thumbnails/ProductThumbnail.h>
 #include <AssetBrowser/Thumbnails/SourceThumbnail.h>
-#include <Atom/Feature/Utils/LightingPreset.h>
-#include <Atom/Feature/Utils/ModelPreset.h>
+#include <JE/Render/Features/Utils/LightingPreset.h>
+#include <JE/Render/Features/Utils/ModelPreset.h>
 #include <JE/Editor/Render/RPI/Edit/Common/AssetUtils.h>
 #include <JE/Render/RPI/Reflect/Asset/AssetUtils.h>
 #include <JE/Render/RPI/Reflect/Material/MaterialAsset.h>
@@ -77,8 +77,8 @@ namespace JE::Editor::Render
                             // Reject any assets that don't match supported source file extensions
                             if (assetInfo.m_assetType == JE::Render::RPI::AnyAsset::RTTI_Type())
                             {
-                                if (!path.ends_with(AZ::Render::LightingPreset::Extension) &&
-                                    !path.ends_with(AZ::Render::ModelPreset::Extension))
+                                if (!path.ends_with(JE::Render::Features::LightingPreset::Extension) &&
+                                    !path.ends_with(JE::Render::Features::ModelPreset::Extension))
                                 {
                                     continue;
                                 }

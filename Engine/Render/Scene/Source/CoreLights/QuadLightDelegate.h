@@ -16,13 +16,13 @@
 #include <LmbrCentral/Shape/QuadShapeComponentBus.h>
 #include <LmbrCentral/Shape/ShapeComponentBus.h>
 
-#include <Atom/Feature/CoreLights/QuadLightFeatureProcessorInterface.h>
+#include <JE/Render/Features/CoreLights/QuadLightFeatureProcessorInterface.h>
 
 namespace JE::Render::Scene
 {
     //! Manages rendering a quad light through the quad light feature processor and communication with a quad shape bus for the area light
     //! component.
-    class QuadLightDelegate final : public LightDelegateBase<AZ::Render::QuadLightFeatureProcessorInterface>
+    class QuadLightDelegate final : public LightDelegateBase<JE::Render::Features::QuadLightFeatureProcessorInterface>
     {
     public:
         QuadLightDelegate(LmbrCentral::QuadShapeComponentRequests* shapeBus, AZ::EntityId entityId, bool isVisible);
@@ -54,6 +54,6 @@ namespace JE::Render::Scene
 
     inline float QuadLightDelegate::GetEffectiveSolidAngle() const
     {
-        return AZ::Render::PhotometricValue::DirectionalEffectiveSteradians;
+        return JE::Render::Features::PhotometricValue::DirectionalEffectiveSteradians;
     }
 } // namespace AZ::Render

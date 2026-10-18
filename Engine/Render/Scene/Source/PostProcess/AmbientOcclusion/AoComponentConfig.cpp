@@ -23,18 +23,18 @@ namespace JE::Render
 
                     // Auto-gen serialize context code...
 #define SERIALIZE_CLASS AoComponentConfig
-#include <Atom/Feature/ParamMacros/StartParamSerializeContext.inl>
-#include <Atom/Feature/PostProcess/AmbientOcclusion/AoParams.inl>
-#include <Atom/Feature/PostProcess/AmbientOcclusion/SsaoParams.inl>
-#include <Atom/Feature/PostProcess/AmbientOcclusion/GtaoParams.inl>
+#include <JE/Render/Features/ParamMacros/StartParamSerializeContext.inl>
+#include <JE/Render/Features/PostProcess/AmbientOcclusion/AoParams.inl>
+#include <JE/Render/Features/PostProcess/AmbientOcclusion/SsaoParams.inl>
+#include <JE/Render/Features/PostProcess/AmbientOcclusion/GtaoParams.inl>
 
-#include <Atom/Feature/ParamMacros/EndParams.inl>
+#include <JE/Render/Features/ParamMacros/EndParams.inl>
 #undef SERIALIZE_CLASS
                 ;
             }
         }
 
-        void AoComponentConfig::CopySettingsFrom(AZ::Render::AoSettingsInterface* settings)
+        void AoComponentConfig::CopySettingsFrom(JE::Render::Features::AoSettingsInterface* settings)
         {
             if (!settings)
             {
@@ -42,16 +42,16 @@ namespace JE::Render
             }
 
 #define COPY_SOURCE settings
-#include <Atom/Feature/ParamMacros/StartParamCopySettingsFrom.inl>
-#include <Atom/Feature/PostProcess/AmbientOcclusion/AoParams.inl>
-#include <Atom/Feature/PostProcess/AmbientOcclusion/SsaoParams.inl>
-#include <Atom/Feature/PostProcess/AmbientOcclusion/GtaoParams.inl>
+#include <JE/Render/Features/ParamMacros/StartParamCopySettingsFrom.inl>
+#include <JE/Render/Features/PostProcess/AmbientOcclusion/AoParams.inl>
+#include <JE/Render/Features/PostProcess/AmbientOcclusion/SsaoParams.inl>
+#include <JE/Render/Features/PostProcess/AmbientOcclusion/GtaoParams.inl>
 
-#include <Atom/Feature/ParamMacros/EndParams.inl>
+#include <JE/Render/Features/ParamMacros/EndParams.inl>
 #undef COPY_SOURCE
         }
 
-        void AoComponentConfig::CopySettingsTo(AZ::Render::AoSettingsInterface* settings)
+        void AoComponentConfig::CopySettingsTo(JE::Render::Features::AoSettingsInterface* settings)
         {
             if (!settings)
             {
@@ -59,23 +59,23 @@ namespace JE::Render
             }
 
 #define COPY_TARGET settings
-#include <Atom/Feature/ParamMacros/StartParamCopySettingsTo.inl>
-#include <Atom/Feature/PostProcess/AmbientOcclusion/AoParams.inl>
-#include <Atom/Feature/PostProcess/AmbientOcclusion/SsaoParams.inl>
-#include <Atom/Feature/PostProcess/AmbientOcclusion/GtaoParams.inl>
+#include <JE/Render/Features/ParamMacros/StartParamCopySettingsTo.inl>
+#include <JE/Render/Features/PostProcess/AmbientOcclusion/AoParams.inl>
+#include <JE/Render/Features/PostProcess/AmbientOcclusion/SsaoParams.inl>
+#include <JE/Render/Features/PostProcess/AmbientOcclusion/GtaoParams.inl>
 
-#include <Atom/Feature/ParamMacros/EndParams.inl>
+#include <JE/Render/Features/ParamMacros/EndParams.inl>
 #undef COPY_TARGET
         }
 
         bool AoComponentConfig::IsSsaoInactive()
         {
-            return m_aoMethod != AZ::Render::Ao::AoMethodType::SSAO;
+            return m_aoMethod != JE::Render::Features::Ao::AoMethodType::SSAO;
         }
 
         bool AoComponentConfig::IsGtaoInactive()
         {
-            return m_aoMethod != AZ::Render::Ao::AoMethodType::GTAO;
+            return m_aoMethod != JE::Render::Features::Ao::AoMethodType::GTAO;
         }
     } // namespace Render
 } // namespace AZ

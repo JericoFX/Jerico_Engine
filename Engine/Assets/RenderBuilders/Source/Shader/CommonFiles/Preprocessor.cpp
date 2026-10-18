@@ -7,6 +7,7 @@
  */
 
 #include <AzCore/PlatformDef.h>
+#include <cstring>
 
 #include <CommonFiles/Preprocessor.h>
 
@@ -171,6 +172,59 @@ namespace JE::Assets::RenderBuilders
             return Fputs_StaticHinge(result, od);
         }
 
+        AZStd::string ResolveNativeShaderInclude(AZStd::string_view includeName)
+        {
+            struct Prefix
+            {
+                AZStd::string_view m_legacy;
+                AZStd::string_view m_native;
+            };
+            constexpr Prefix prefixes[] = {
+                { "Atom/Feature/Common/Assets", "Engine/Render/Features/Assets" },
+                { "Atom/RPI/Assets/ShaderLib", "Engine/Render/Integration/RPI/Assets/ShaderLib" }
+            };
+            for (const auto& prefix : prefixes)
+            {
+                if (includeName.size() < prefix.m_legacy.size())
+                {
+                    continue;
+                }
+                bool matches = true;
+                for (size_t index = 0; index < prefix.m_legacy.size(); ++index)
+                {
+                    const char value = includeName[index] == '\\' ? '/' : includeName[index];
+                    matches &= value == prefix.m_legacy[index];
+                }
+                const auto suffix = includeName.substr(prefix.m_legacy.size());
+                // A bare prefix or separators alone names no file. Leave it to
+                // the existing file-open error path; extensionless headers remain valid.
+                if (matches && !suffix.empty() && (suffix.front() == '/' || suffix.front() == '\\')
+                    && suffix.find_first_not_of("/\\") != AZStd::string_view::npos)
+                {
+                    AZStd::string result(prefix.m_native);
+                    result.append(suffix.data(), suffix.size());
+                    return result;
+                }
+            }
+            return AZStd::string(includeName);
+        }
+
+        int McppBinder::ResolveInclude_StaticHinge(const char* name, char* resolved, size_t capacity)
+        {
+            const auto nativeName = ResolveNativeShaderInclude(name);
+            if (nativeName == name)
+            {
+                return 0;
+            }
+            if (nativeName.size() >= capacity)
+            {
+                return -1;
+            }
+            std::memcpy(resolved, nativeName.data(), nativeName.size());
+            resolved[nativeName.size()] = '\0';
+            return aznumeric_cast<int>(nativeName.size());
+        }
+
         void McppBinder::IncludeReport_StaticHinge(FILE*, const char*, const char*, const char* path)
         {
             s_currentInstance->m_outputData.includedPaths.insert(path);
@@ -184,6 +238,8 @@ namespace JE::Assets::RenderBuilders
 
         void McppBinder::SetupMcppCallbacks()
         {
+            // Scoped pre-open resolution; include-report continues reporting the opened file.
+            mcpp_set_resolve_include_callback(ResolveInclude_StaticHinge);
             // callback for header included notification
             mcpp_set_report_include_callback(IncludeReport_StaticHinge);
             // callback for output redirection
@@ -403,6 +459,18 @@ namespace JE::Assets::RenderBuilders
                     {
                         includePaths.emplace_back(AZStd::move(shaderScanFolder.LexicallyNormal().Native()));
                     }
+                }
+            }
+
+            // Allow engine-relative includes for native render assets.
+            AZ::IO::Path engineRootFolder(AZStd::string_view{ AZ::Utils::GetEnginePath() });
+            engineRootFolder = engineRootFolder.LexicallyNormal();
+            if (auto it = AZStd::find_if(includePaths.begin(), includePaths.end(), PathCompare(engineRootFolder));
+                it == includePaths.end())
+            {
+                if (AZ::IO::SystemFile::Exists(engineRootFolder.c_str()))
+                {
+                    includePaths.emplace_back(AZStd::move(engineRootFolder.Native()));
                 }
             }
 

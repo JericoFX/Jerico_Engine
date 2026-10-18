@@ -91,7 +91,10 @@ int main(int argc, char** argv)
 
     bool result = false;
 
-    BuilderBus::BroadcastResult(result, &BuilderBus::Events::Run);
+    if (!app.WasExitMainLoopRequested())
+    {
+        BuilderBus::BroadcastResult(result, &BuilderBus::Events::Run);
+    }
 
     traceMessageHook.EnableTraceContext(false);
     app.Stop();

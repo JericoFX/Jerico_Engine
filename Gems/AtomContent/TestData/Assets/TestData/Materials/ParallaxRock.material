@@ -1,7 +1,7 @@
 {
-    "materialType": "@gemroot:Atom_Feature_Common@/Assets/Materials/Types/StandardPBR.materialtype",
+    "materialType": "@engroot@/Engine/Render/Features/Assets/Materials/Types/StandardPBR.materialtype",
     "materialTypeVersion": 5,
-    "parentMaterial": "@gemroot:Atom_Feature_Common@/Assets/Materials/Presets/PBR/default_grid.material",
+    "parentMaterial": "@engroot@/Engine/Render/Features/Assets/Materials/Presets/PBR/default_grid.material",
     "propertyValues": {
         "baseColor.textureMap": "../Textures/cc0/Rock030_2K_Color.jpg",
         "metallic.useTexture": false,

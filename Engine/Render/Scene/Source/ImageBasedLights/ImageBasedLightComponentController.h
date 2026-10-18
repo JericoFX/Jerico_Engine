@@ -10,7 +10,7 @@
 
 #include <AzCore/Component/Component.h>
 #include <AzCore/Component/TransformBus.h>
-#include <Atom/Feature/ImageBasedLights/ImageBasedLightFeatureProcessorInterface.h>
+#include <JE/Render/Features/ImageBasedLights/ImageBasedLightFeatureProcessorInterface.h>
 #include <JE/Render/Scene/ImageBasedLights/ImageBasedLightComponentBus.h>
 #include <JE/Render/Scene/ImageBasedLights/ImageBasedLightComponentConfig.h>
 
@@ -89,7 +89,7 @@ namespace JE::Render
 
             AZ::EntityId m_entityId;
             ImageBasedLightComponentConfig m_configuration;
-            AZ::Render::ImageBasedLightFeatureProcessorInterface* m_featureProcessor = nullptr;
+            JE::Render::Features::ImageBasedLightFeatureProcessorInterface* m_featureProcessor = nullptr;
         };
     } // namespace Render
 } // namespace AZ

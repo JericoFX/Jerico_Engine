@@ -17,7 +17,7 @@
 #include <JE/Render/RPI/Public/Shader/ShaderResourceGroup.h>
 #include <JE/Render/RPI/Public/Shader/ShaderReloadNotificationBus.h>
 
-#include <Atom/Feature/TransformService/TransformServiceFeatureProcessorInterface.h>
+#include <JE/Render/Features/TransformService/TransformServiceFeatureProcessorInterface.h>
 
 #include <MeshletsRenderObject.h>
 

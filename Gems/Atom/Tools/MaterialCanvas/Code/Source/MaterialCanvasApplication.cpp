@@ -8,6 +8,7 @@
 
 #include <JE/Editor/Camera/CameraModule.h>
 #include <JE/Editor/Render/Scene/SceneModule.h>
+#include <JE/Editor/Render/Features/FeatureModule.h>
 #include <Atom/RHI/Factory.h>
 #include <AtomToolsFramework/Document/AtomToolsDocumentSystemRequestBus.h>
 #include <AtomToolsFramework/Graph/GraphDocumentView.h>
@@ -67,6 +68,7 @@ namespace MaterialCanvas
     {
         Base::CreateStaticModules(outModules);
         outModules.emplace_back(JE::Editor::Render::Scene::CreateModule());
+        outModules.emplace_back(JE::Editor::Render::Features::CreateModule());
         outModules.emplace_back(JE::Editor::Camera::CreateAuthoringModule());
     }
 

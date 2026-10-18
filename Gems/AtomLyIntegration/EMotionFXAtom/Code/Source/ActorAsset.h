@@ -15,6 +15,11 @@
 #include <AzCore/Instance/Instance.h>
 #include <AzCore/std/containers/vector.h>
 
+namespace JE::Render::Features
+{
+    class SkinnedMeshInputBuffers;
+}
+
 namespace EMotionFX
 {
     class Actor;
@@ -36,10 +41,10 @@ namespace AZ
 
     namespace Render
     {
-        class SkinnedMeshInputBuffers;
+
 
         //! Create a buffers and buffer views that are shared between all actor instances that use the same actor asset.
-        AZStd::intrusive_ptr<SkinnedMeshInputBuffers> CreateSkinnedMeshInputFromActor(const Data::AssetId& actorAssetId, const EMotionFX::Actor* actor);
+        AZStd::intrusive_ptr<JE::Render::Features::SkinnedMeshInputBuffers> CreateSkinnedMeshInputFromActor(const Data::AssetId& actorAssetId, const EMotionFX::Actor* actor);
 
         //! Get the bone transforms from the actor instance and adjust them to be in the format needed by the renderer
         void GetBoneTransformsFromActorInstance(const EMotionFX::ActorInstance* actorInstance, AZStd::vector<float>& boneTransforms, EMotionFX::Integration::SkinningMethod skinningMethod);

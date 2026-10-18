@@ -15,8 +15,8 @@
 #include <JE/Render/Scene/PostProcess/DisplayMapper/DisplayMapperComponentConfig.h>
 #include <JE/Render/Scene/PostProcess/DisplayMapper/DisplayMapperComponentBus.h>
 
-#include <Atom/Feature/PostProcess/PostProcessSettingsInterface.h>
-#include <Atom/Feature/PostProcess/PostProcessFeatureProcessorInterface.h>
+#include <JE/Render/Features/PostProcess/PostProcessSettingsInterface.h>
+#include <JE/Render/Features/PostProcess/PostProcessFeatureProcessorInterface.h>
 
 namespace JE::Editor::Render::Scene
 {
@@ -53,8 +53,8 @@ namespace JE::Render
             void LoadPreset(AZ::Render::OutputDeviceTransformType preset) override;
             void SetDisplayMapperOperationType(AZ::Render::DisplayMapperOperationType displayMapperOperationType) override;
             AZ::Render::DisplayMapperOperationType GetDisplayMapperOperationType() const override;
-            void SetAcesParameterOverrides(const AZ::Render::AcesParameterOverrides& parameterOverrides) override;
-            const AZ::Render::AcesParameterOverrides& GetAcesParameterOverrides() const override;
+            void SetAcesParameterOverrides(const JE::Render::Features::AcesParameterOverrides& parameterOverrides) override;
+            const JE::Render::Features::AcesParameterOverrides& GetAcesParameterOverrides() const override;
             void SetOverrideAcesParameters(bool value) override;
             bool GetOverrideAcesParameters() const override;
             void SetAlterSurround(bool value) override;
@@ -83,7 +83,7 @@ namespace JE::Render
 
             void OnConfigChanged();
 
-            AZ::Render::PostProcessSettingsInterface* m_postProcessInterface = nullptr;
+            JE::Render::Features::PostProcessSettingsInterface* m_postProcessInterface = nullptr;
             DisplayMapperComponentConfig m_configuration;
             AZ::EntityId m_entityId;
         };

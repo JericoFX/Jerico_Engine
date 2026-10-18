@@ -9,7 +9,7 @@
 #pragma once
 
 #include <AzToolsFramework/ToolsComponents/EditorComponentAdapter.h>
-#include <Atom/Feature/Debug/RenderDebugConstants.h>
+#include <JE/Render/Features/Debug/RenderDebugConstants.h>
 #include <Debug/RenderDebugComponent.h>
 
 namespace JE::Editor::Render::Scene

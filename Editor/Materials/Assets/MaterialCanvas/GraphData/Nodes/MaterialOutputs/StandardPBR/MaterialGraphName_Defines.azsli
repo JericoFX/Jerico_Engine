@@ -55,14 +55,14 @@ option bool o_clearCoat_normal_override_enabled = false;
 
 #if MATERIALPIPELINE_SHADER_HAS_PIXEL_STAGE
 
-#include <Atom/Feature/Common/Assets/Shaders/Materials/BasePBR/BasePBR_VertexData.azsli>
-#include <Atom/Feature/Common/Assets/Shaders/Materials/StandardPBR/StandardPBR_PixelGeometryData.azsli>
-#include <Atom/Feature/Common/Assets/Shaders/Materials/StandardPBR/StandardPBR_SurfaceData.azsli>
+#include <Engine/Render/Features/Assets/Shaders/Materials/BasePBR/BasePBR_VertexData.azsli>
+#include <Engine/Render/Features/Assets/Shaders/Materials/StandardPBR/StandardPBR_PixelGeometryData.azsli>
+#include <Engine/Render/Features/Assets/Shaders/Materials/StandardPBR/StandardPBR_SurfaceData.azsli>
 
 #elif MATERIALPIPELINE_SHADER_HAS_GEOMETRIC_PIXEL_STAGE
     
-#include <Atom/Feature/Common/Assets/Shaders/Materials/BasePBR/BasePBR_VertexData.azsli>
-#include <Atom/Feature/Common/Assets/Shaders/Materials/StandardPBR/StandardPBR_PixelGeometryData.azsli>
+#include <Engine/Render/Features/Assets/Shaders/Materials/BasePBR/BasePBR_VertexData.azsli>
+#include <Engine/Render/Features/Assets/Shaders/Materials/StandardPBR/StandardPBR_PixelGeometryData.azsli>
 
 #else
 

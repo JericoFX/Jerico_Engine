@@ -31,11 +31,11 @@
 
 
 #include <Atom/RPI/TangentSpace.azsli>
-#include <Atom/Feature/Common/Assets/Shaders/Materials/MaterialFunctions/EvaluateTangentFrame.azsli>
+#include <Engine/Render/Features/Assets/Shaders/Materials/MaterialFunctions/EvaluateTangentFrame.azsli>
 
 #if ENABLE_PARALLAX
-#include <Atom/Feature/Common/Assets/Shaders/Materials/MaterialFunctions/StandardGetAlphaAndClip.azsli>
-#include <Atom/Feature/Common/Assets/Shaders/Materials/MaterialFunctions/ParallaxDepth.azsli>
+#include <Engine/Render/Features/Assets/Shaders/Materials/MaterialFunctions/StandardGetAlphaAndClip.azsli>
+#include <Engine/Render/Features/Assets/Shaders/Materials/MaterialFunctions/ParallaxDepth.azsli>
 COMMON_OPTIONS_PARALLAX()
 #endif
  
@@ -79,9 +79,9 @@ bool NeedsTangentFrame()
 #include "MaterialGraphName_PixelGeometryEval.azsli"
 #include "MaterialGraphName_SurfaceEval.azsli"
 
-#include <Atom/Feature/Common/Assets/Shaders/Materials/BasePBR/BasePBR_LightingData.azsli>
-#include <Atom/Feature/Common/Assets/Shaders/Materials/StandardPBR/StandardPBR_LightingBrdf.azsli>
-#include <Atom/Feature/Common/Assets/Shaders/Materials/StandardPBR/StandardPBR_LightingEval.azsli>
+#include <Engine/Render/Features/Assets/Shaders/Materials/BasePBR/BasePBR_LightingData.azsli>
+#include <Engine/Render/Features/Assets/Shaders/Materials/StandardPBR/StandardPBR_LightingBrdf.azsli>
+#include <Engine/Render/Features/Assets/Shaders/Materials/StandardPBR/StandardPBR_LightingEval.azsli>
 
 #elif MATERIALPIPELINE_SHADER_HAS_GEOMETRIC_PIXEL_STAGE
 

@@ -8,7 +8,7 @@
 
 #include <CryCommon/IConsole.h>
 #include <SkinnedMesh/SkinnedMeshDebugDisplay.h>
-#include <Atom/Feature/SkinnedMesh/SkinnedMeshStatsBus.h>
+#include <JE/Render/Features/SkinnedMesh/SkinnedMeshStatsBus.h>
 #include <JE/Render/RPI/Public/Scene.h>
 #include <AzFramework/Scene/SceneSystemInterface.h>
 
@@ -74,8 +74,8 @@ namespace JE::Editor::Render
             if (r_skinnedMeshDisplaySceneStats == 1)
             {
                 // Get scene id when DisplayViewport2d is called. The RPI Scene may not be ready when OnCryEditorInitialized was called
-                AZ::Render::SkinnedMeshSceneStats stats{};
-                AZ::Render::SkinnedMeshStatsRequestBus::EventResult(stats, m_sceneId, &AZ::Render::SkinnedMeshStatsRequestBus::Events::GetSceneStats);
+                JE::Render::Features::SkinnedMeshSceneStats stats{};
+                JE::Render::Features::SkinnedMeshStatsRequestBus::EventResult(stats, m_sceneId, &JE::Render::Features::SkinnedMeshStatsRequestBus::Events::GetSceneStats);
 
                 float x = 0;
                 float y = 16.0f; // By default, the editor's debug display text shows the number of entities in the top left corner. Offset so the skinned mesh stats don't overlap

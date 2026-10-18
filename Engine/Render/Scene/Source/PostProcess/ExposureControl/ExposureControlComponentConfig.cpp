@@ -23,15 +23,15 @@ namespace JE::Render
 
                     // Auto-gen serialize context code...
 #define SERIALIZE_CLASS ExposureControlComponentConfig
-#include <Atom/Feature/ParamMacros/StartParamSerializeContext.inl>
-#include <Atom/Feature/PostProcess/ExposureControl/ExposureControlParams.inl>
-#include <Atom/Feature/ParamMacros/EndParams.inl>
+#include <JE/Render/Features/ParamMacros/StartParamSerializeContext.inl>
+#include <JE/Render/Features/PostProcess/ExposureControl/ExposureControlParams.inl>
+#include <JE/Render/Features/ParamMacros/EndParams.inl>
 #undef SERIALIZE_CLASS
                     ;
             }
         }
 
-        void ExposureControlComponentConfig::CopySettingsFrom(AZ::Render::ExposureControlSettingsInterface* settings)
+        void ExposureControlComponentConfig::CopySettingsFrom(JE::Render::Features::ExposureControlSettingsInterface* settings)
         {
             if (!settings)
             {
@@ -39,13 +39,13 @@ namespace JE::Render
             }
 
 #define COPY_SOURCE settings
-#include <Atom/Feature/ParamMacros/StartParamCopySettingsFrom.inl>
-#include <Atom/Feature/PostProcess/ExposureControl/ExposureControlParams.inl>
-#include <Atom/Feature/ParamMacros/EndParams.inl>
+#include <JE/Render/Features/ParamMacros/StartParamCopySettingsFrom.inl>
+#include <JE/Render/Features/PostProcess/ExposureControl/ExposureControlParams.inl>
+#include <JE/Render/Features/ParamMacros/EndParams.inl>
 #undef COPY_SOURCE
         }
 
-        void ExposureControlComponentConfig::CopySettingsTo(AZ::Render::ExposureControlSettingsInterface* settings)
+        void ExposureControlComponentConfig::CopySettingsTo(JE::Render::Features::ExposureControlSettingsInterface* settings)
         {
             if (!settings)
             {
@@ -53,9 +53,9 @@ namespace JE::Render
             }
 
 #define COPY_TARGET settings
-#include <Atom/Feature/ParamMacros/StartParamCopySettingsTo.inl>
-#include <Atom/Feature/PostProcess/ExposureControl/ExposureControlParams.inl>
-#include <Atom/Feature/ParamMacros/EndParams.inl>
+#include <JE/Render/Features/ParamMacros/StartParamCopySettingsTo.inl>
+#include <JE/Render/Features/PostProcess/ExposureControl/ExposureControlParams.inl>
+#include <JE/Render/Features/ParamMacros/EndParams.inl>
 #undef COPY_TARGET
         }
 

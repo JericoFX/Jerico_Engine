@@ -22,15 +22,15 @@ namespace JE::Render
 
                 // Auto-gen serialize context code...
 #define SERIALIZE_CLASS ChromaticAberrationComponentConfig
-#include <Atom/Feature/ParamMacros/StartParamSerializeContext.inl>
-#include <Atom/Feature/PostProcess/ChromaticAberration/ChromaticAberrationParams.inl>
-#include <Atom/Feature/ParamMacros/EndParams.inl>
+#include <JE/Render/Features/ParamMacros/StartParamSerializeContext.inl>
+#include <JE/Render/Features/PostProcess/ChromaticAberration/ChromaticAberrationParams.inl>
+#include <JE/Render/Features/ParamMacros/EndParams.inl>
 #undef SERIALIZE_CLASS
                     ;
             }
         }
 
-        void ChromaticAberrationComponentConfig::CopySettingsFrom(AZ::Render::ChromaticAberrationSettingsInterface* settings)
+        void ChromaticAberrationComponentConfig::CopySettingsFrom(JE::Render::Features::ChromaticAberrationSettingsInterface* settings)
         {
             if (!settings)
             {
@@ -38,13 +38,13 @@ namespace JE::Render
             }
 
 #define COPY_SOURCE settings
-#include <Atom/Feature/ParamMacros/StartParamCopySettingsFrom.inl>
-#include <Atom/Feature/PostProcess/ChromaticAberration/ChromaticAberrationParams.inl>
-#include <Atom/Feature/ParamMacros/EndParams.inl>
+#include <JE/Render/Features/ParamMacros/StartParamCopySettingsFrom.inl>
+#include <JE/Render/Features/PostProcess/ChromaticAberration/ChromaticAberrationParams.inl>
+#include <JE/Render/Features/ParamMacros/EndParams.inl>
 #undef COPY_SOURCE
         }
 
-        void ChromaticAberrationComponentConfig::CopySettingsTo(AZ::Render::ChromaticAberrationSettingsInterface* settings)
+        void ChromaticAberrationComponentConfig::CopySettingsTo(JE::Render::Features::ChromaticAberrationSettingsInterface* settings)
         {
             if (!settings)
             {
@@ -52,9 +52,9 @@ namespace JE::Render
             }
 
 #define COPY_TARGET settings
-#include <Atom/Feature/ParamMacros/StartParamCopySettingsTo.inl>
-#include <Atom/Feature/PostProcess/ChromaticAberration/ChromaticAberrationParams.inl>
-#include <Atom/Feature/ParamMacros/EndParams.inl>
+#include <JE/Render/Features/ParamMacros/StartParamCopySettingsTo.inl>
+#include <JE/Render/Features/PostProcess/ChromaticAberration/ChromaticAberrationParams.inl>
+#include <JE/Render/Features/ParamMacros/EndParams.inl>
 #undef COPY_TARGET
         }
 

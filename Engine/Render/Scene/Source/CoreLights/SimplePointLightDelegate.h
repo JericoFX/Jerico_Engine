@@ -11,12 +11,12 @@
 #include <AzCore/Component/TransformBus.h>
 #include <CoreLights/LightDelegateBase.h>
 
-#include <Atom/Feature/CoreLights/SimplePointLightFeatureProcessorInterface.h>
+#include <JE/Render/Features/CoreLights/SimplePointLightFeatureProcessorInterface.h>
 #include <AzFramework/Entity/EntityDebugDisplayBus.h>
 
 namespace JE::Render::Scene
 {
-    class SimplePointLightDelegate final : public LightDelegateBase<AZ::Render::SimplePointLightFeatureProcessorInterface>
+    class SimplePointLightDelegate final : public LightDelegateBase<JE::Render::Features::SimplePointLightFeatureProcessorInterface>
     {
     public:
         SimplePointLightDelegate(AZ::EntityId entityId, bool isVisible);
@@ -40,6 +40,6 @@ namespace JE::Render::Scene
 
     inline float SimplePointLightDelegate::GetEffectiveSolidAngle() const
     {
-        return AZ::Render::PhotometricValue::OmnidirectionalSteradians;
+        return JE::Render::Features::PhotometricValue::OmnidirectionalSteradians;
     }
 } // namespace AZ::Render

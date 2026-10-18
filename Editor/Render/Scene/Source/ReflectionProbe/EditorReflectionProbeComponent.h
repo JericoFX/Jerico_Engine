@@ -15,7 +15,7 @@
 #include <ReflectionProbe/ReflectionProbeComponent.h>
 #include <ReflectionProbe/ReflectionProbeComponentConstants.h>
 #include <CubeMapCapture/EditorCubeMapRenderer.h>
-#include <Atom/Feature/Utils/EditorRenderComponentAdapter.h>
+#include <JE/Editor/Render/Features/Utils/EditorRenderComponentAdapter.h>
 #include <JE/Editor/Render/Scene/ReflectionProbe/EditorReflectionProbeBus.h>
 
 namespace JE::Editor::Render
@@ -23,7 +23,7 @@ namespace JE::Editor::Render
     namespace Scene
     {        
         class EditorReflectionProbeComponent final
-            : public AZ::Render::EditorRenderComponentAdapter<JE::Render::Scene::ReflectionProbeComponentController, JE::Render::Scene::ReflectionProbeComponent, JE::Render::Scene::ReflectionProbeComponentConfig>
+            : public JE::Editor::Render::Features::EditorRenderComponentAdapter<JE::Render::Scene::ReflectionProbeComponentController, JE::Render::Scene::ReflectionProbeComponent, JE::Render::Scene::ReflectionProbeComponentConfig>
             , public EditorReflectionProbeBus::Handler
             , private AzToolsFramework::EditorComponentSelectionRequestsBus::Handler
             , private AzFramework::EntityDebugDisplayEventBus::Handler
@@ -31,7 +31,7 @@ namespace JE::Editor::Render
             , private EditorCubeMapRenderer
         {
         public:
-            using BaseClass = AZ::Render::EditorRenderComponentAdapter<JE::Render::Scene::ReflectionProbeComponentController, JE::Render::Scene::ReflectionProbeComponent, JE::Render::Scene::ReflectionProbeComponentConfig>;
+            using BaseClass = JE::Editor::Render::Features::EditorRenderComponentAdapter<JE::Render::Scene::ReflectionProbeComponentController, JE::Render::Scene::ReflectionProbeComponent, JE::Render::Scene::ReflectionProbeComponentConfig>;
             AZ_RTTI_WITH_NAME(JE::Editor::Render::Scene::EditorReflectionProbeComponent, "AZ::Render::EditorReflectionProbeComponent", JE::Render::Scene::EditorReflectionProbeComponentTypeId, BaseClass, AzToolsFramework::Components::EditorComponentBase)
             AZ_EDITOR_COMPONENT_INTRUSIVE_DESCRIPTOR_TYPE(JE::Editor::Render::Scene::EditorReflectionProbeComponent)
             AZ_COMPONENT_BASE(JE::Editor::Render::Scene::EditorReflectionProbeComponent)

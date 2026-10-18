@@ -18,17 +18,17 @@
 #include <Atom/Features/ColorManagement/TransformColor.azsli>
 #include <Atom/Features/BlendUtility.azsli>
 
-#include <Atom/Feature/Common/Assets/Shaders/Materials/MaterialInputs/UvSetCount.azsli>
+#include <Engine/Render/Features/Assets/Shaders/Materials/MaterialInputs/UvSetCount.azsli>
 
-#include "Atom/Feature/Common/Assets/Shaders/Materials/MaterialInputs/SpecularInput.azsli"
-#include "Atom/Feature/Common/Assets/Shaders/Materials/MaterialInputs/AlphaInput.azsli"
-#include "Atom/Feature/Common/Assets/Shaders/Materials/MaterialInputs/BaseColorInput.azsli"
-#include "Atom/Feature/Common/Assets/Shaders/Materials/MaterialInputs/RoughnessInput.azsli"
-#include "Atom/Feature/Common/Assets/Shaders/Materials/MaterialInputs/MetallicInput.azsli"
-#include "Atom/Feature/Common/Assets/Shaders/Materials/MaterialInputs/NormalInput.azsli"
-#include "Atom/Feature/Common/Assets/Shaders/Materials/MaterialInputs/ClearCoatInput.azsli"
-#include "Atom/Feature/Common/Assets/Shaders/Materials/MaterialInputs/OcclusionInput.azsli"
-#include "Atom/Feature/Common/Assets/Shaders/Materials/MaterialInputs/EmissiveInput.azsli"
+#include "Engine/Render/Features/Assets/Shaders/Materials/MaterialInputs/SpecularInput.azsli"
+#include "Engine/Render/Features/Assets/Shaders/Materials/MaterialInputs/AlphaInput.azsli"
+#include "Engine/Render/Features/Assets/Shaders/Materials/MaterialInputs/BaseColorInput.azsli"
+#include "Engine/Render/Features/Assets/Shaders/Materials/MaterialInputs/RoughnessInput.azsli"
+#include "Engine/Render/Features/Assets/Shaders/Materials/MaterialInputs/MetallicInput.azsli"
+#include "Engine/Render/Features/Assets/Shaders/Materials/MaterialInputs/NormalInput.azsli"
+#include "Engine/Render/Features/Assets/Shaders/Materials/MaterialInputs/ClearCoatInput.azsli"
+#include "Engine/Render/Features/Assets/Shaders/Materials/MaterialInputs/OcclusionInput.azsli"
+#include "Engine/Render/Features/Assets/Shaders/Materials/MaterialInputs/EmissiveInput.azsli"
 
 COMMON_OPTIONS_BASE_COLOR()
 COMMON_OPTIONS_ROUGHNESS()

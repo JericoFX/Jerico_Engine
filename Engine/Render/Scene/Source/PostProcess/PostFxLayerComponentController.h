@@ -12,7 +12,7 @@
 #include <JE/Render/Scene/PostProcess/PostFxLayerComponentConfig.h>
 #include <JE/Render/Scene/PostProcess/PostFxLayerBus.h>
 #include <AzCore/Component/TickBus.h>
-#include <Atom/Feature/PostProcess/PostProcessFeatureProcessorInterface.h>
+#include <JE/Render/Features/PostProcess/PostProcessFeatureProcessorInterface.h>
 #include <LmbrCentral/Scripting/TagComponentBus.h>
 #include <AzFramework/Components/CameraBus.h>
 
@@ -59,9 +59,9 @@ namespace JE::Render
             void OnCameraRemoved(const AZ::EntityId& cameraId) override;
 
             // Auto-gen function override declarations (functions definitions in .cpp)...
-#include <Atom/Feature/ParamMacros/StartParamFunctionsOverride.inl>
-#include <Atom/Feature/PostProcess/PostProcessParams.inl>
-#include <Atom/Feature/ParamMacros/EndParams.inl>
+#include <JE/Render/Features/ParamMacros/StartParamFunctionsOverride.inl>
+#include <JE/Render/Features/PostProcess/PostProcessParams.inl>
+#include <JE/Render/Features/ParamMacros/EndParams.inl>
 
         private:
             AZ_DISABLE_COPY(PostFxLayerComponentController);
@@ -84,8 +84,8 @@ namespace JE::Render
             // a list of camera views in the scene. This is used to test if a view is an editor view.
             AZStd::unordered_set<JE::Render::RPI::View*> m_allCameraViews;
 
-            AZ::Render::PostProcessFeatureProcessorInterface* m_featureProcessorInterface = nullptr;
-            AZ::Render::PostProcessSettingsInterface* m_postProcessInterface = nullptr;
+            JE::Render::Features::PostProcessFeatureProcessorInterface* m_featureProcessorInterface = nullptr;
+            JE::Render::Features::PostProcessSettingsInterface* m_postProcessInterface = nullptr;
             PostFxLayerComponentConfig m_configuration;
             AZ::EntityId m_entityId;
         };

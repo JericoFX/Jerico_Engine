@@ -9,7 +9,7 @@
 #pragma once
 
 #include <AzCore/Component/TransformBus.h>
-#include <Atom/Feature/CoreLights/PhotometricValue.h>
+#include <JE/Render/Features/CoreLights/PhotometricValue.h>
 #include <JE/Render/Scene/CoreLights/AreaLightComponentConfig.h>
 #include <LmbrCentral/Shape/SphereShapeComponentBus.h>
 #include <CoreLights/LightDelegateInterface.h>
@@ -44,9 +44,9 @@ namespace JE::Render::Scene
             // LightDelegateInterface overrides...
             void SetChroma(const AZ::Color& chroma) override;
             void SetIntensity(float intensity) override;
-            float SetPhotometricUnit(AZ::Render::PhotometricUnit unit) override;
+            float SetPhotometricUnit(JE::Render::Features::PhotometricUnit unit) override;
             void SetAttenuationRadius(float radius) override;
-            const AZ::Render::PhotometricValue& GetPhotometricValue() const override { return m_photometricValue; }
+            const JE::Render::Features::PhotometricValue& GetPhotometricValue() const override { return m_photometricValue; }
             void SetLightEmitsBothDirections([[maybe_unused]] bool lightEmitsBothDirections) override {}
             void SetUseFastApproximation([[maybe_unused]] bool useFastApproximation) override {}
             void SetVisibility(bool visibility) override;
@@ -56,8 +56,8 @@ namespace JE::Render::Scene
 
             void SetEnableShadow(bool enabled) override { m_shadowsEnabled = enabled; }
             void SetShadowBias([[maybe_unused]] float bias) override {}
-            void SetShadowmapMaxSize([[maybe_unused]] AZ::Render::ShadowmapSize size) override {}
-            void SetShadowFilterMethod([[maybe_unused]] AZ::Render::ShadowFilterMethod method) override {}
+            void SetShadowmapMaxSize([[maybe_unused]] JE::Render::Features::ShadowmapSize size) override {}
+            void SetShadowFilterMethod([[maybe_unused]] JE::Render::Features::ShadowFilterMethod method) override {}
             void SetFilteringSampleCount([[maybe_unused]] uint32_t count) override {}
             void SetEsmExponent([[maybe_unused]] float esmExponent) override {}
             void SetNormalShadowBias([[maybe_unused]] float bias) override {}
@@ -98,7 +98,7 @@ namespace JE::Render::Scene
             const AreaLightComponentConfig* m_componentConfig = nullptr;
 
             AZ::Transform m_transform;
-            AZ::Render::PhotometricValue m_photometricValue;
+            JE::Render::Features::PhotometricValue m_photometricValue;
             bool m_shuttersEnabled = false;
             bool m_shadowsEnabled = false;
         };

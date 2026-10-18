@@ -1,0 +1,16 @@
+{
+    "Amazon": {
+        "AssetProcessor": {
+            "Settings": {
+                // Preserve Core asset identities and relative paths at their native owner.
+                // Order100 is native Engine policy; the previous effective Gem order was not observed.
+                "ScanFolder gemassets-{9E495C1E-D191-5CE4-AA2F-0D95C51C3570}": {
+                    "watch": "@ENGINEROOT@/Engine/Render/Features/Assets",
+                    "display": "Engine/Render/Features",
+                    "recursive": 1,
+                    "order": 100
+                }
+            }
+        }
+    }
+}

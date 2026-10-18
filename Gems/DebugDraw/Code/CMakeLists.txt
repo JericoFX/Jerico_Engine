@@ -36,7 +36,7 @@ ly_add_target(
             AZ::AzFramework
             JE::RenderIntegration
             JE::RenderIntegration.Public
-            Gem::Atom_Feature_Common.Public
+            JE::RenderFeatures
 )
 
 ly_add_target(
@@ -89,7 +89,7 @@ if(PAL_TRAIT_BUILD_HOST_TOOLS)
                 AZ::AzFramework
                 JE::RenderIntegration
                 JE::RenderIntegration.Public
-                Gem::Atom_Feature_Common.Public
+                JE::RenderFeatures
                 AZ::AzToolsFramework
     )
 

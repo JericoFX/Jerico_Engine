@@ -10,7 +10,7 @@
 
 #include <AzCore/Serialization/SerializeContext.h>
 #include <AzFramework/Windowing/WindowBus.h>
-#include <Atom/Feature/ImGui/SystemBus.h>
+#include <JE/Render/Features/ImGui/SystemBus.h>
 #include <JE/Render/RPI/Public/ViewportContext.h>
 
 #if defined(IMGUI_ENABLED)
@@ -87,7 +87,7 @@ namespace JE::Render::Debug
                 ImDrawData* drawData = imguiManager->GetImguiDrawData();
                 if (drawData != nullptr)
                 {
-                    AZ::Render::ImGuiSystemRequestBus::Broadcast(&AZ::Render::ImGuiSystemRequests::RenderImGuiBuffersToCurrentViewport, *drawData);
+                    JE::Render::Features::ImGuiSystemRequestBus::Broadcast(&JE::Render::Features::ImGuiSystemRequests::RenderImGuiBuffersToCurrentViewport, *drawData);
                 }
             }
 #endif

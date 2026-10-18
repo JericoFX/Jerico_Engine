@@ -11,7 +11,7 @@
 #include <OpenParticleSystem/ParticleEditorRequestBus.h>
 #include <OpenParticleSystem/ParticleFeatureProcessor.h>
 
-#include <Atom/Feature/RenderCommon.h>
+#include <JE/Render/Features/RenderCommon.h>
 #include <Atom/RHI.Reflect/BufferViewDescriptor.h>
 #include <Atom/RHI/DrawPacketBuilder.h>
 #include <JE/Render/RPI/Public/Model/UvStreamTangentBitmask.h>
@@ -116,7 +116,7 @@ namespace OpenParticle
         m_entityId = id;
     }
 
-    void ParticleSystem::SetObjectId(const AZ::Render::TransformServiceFeatureProcessorInterface::ObjectId& id)
+    void ParticleSystem::SetObjectId(const JE::Render::Features::TransformServiceFeatureProcessorInterface::ObjectId& id)
     {
         m_objectId = id;
     }
@@ -709,16 +709,16 @@ namespace OpenParticle
             return;
         }
 
-        AZ::Render::SimplePointLightFeatureProcessorInterface* lightFP =
-            m_scene->GetFeatureProcessor<AZ::Render::SimplePointLightFeatureProcessorInterface>();
+        JE::Render::Features::SimplePointLightFeatureProcessorInterface* lightFP =
+            m_scene->GetFeatureProcessor<JE::Render::Features::SimplePointLightFeatureProcessorInterface>();
 
-        AZStd::vector<AZ::Render::SimplePointLightFeatureProcessorInterface::LightHandle> lights;
+        AZStd::vector<JE::Render::Features::SimplePointLightFeatureProcessorInterface::LightHandle> lights;
         for (size_t lightIndex = 0; lightIndex < item.positionBuffer.size(); ++lightIndex)
         {
-            AZ::Render::SimplePointLightFeatureProcessorInterface::LightHandle light = lightFP->AcquireLight();
+            JE::Render::Features::SimplePointLightFeatureProcessorInterface::LightHandle light = lightFP->AcquireLight();
             auto lightParticle = lightParticles[lightIndex];
             lightFP->SetAttenuationRadius(light, lightParticle.radianScale);
-            AZ::Render::PhotometricColor<AZ::Render::PhotometricUnit::Candela> color(
+            JE::Render::Features::PhotometricColor<JE::Render::Features::PhotometricUnit::Candela> color(
                 AZ::Color(lightParticle.lightColor.GetR(), lightParticle.lightColor.GetG(),
                 lightParticle.lightColor.GetB(), lightParticle.lightColor.GetA()));
             lightFP->SetRgbIntensity(light, color);
@@ -732,8 +732,8 @@ namespace OpenParticle
 
     void ParticleSystem::ClearLightEffects(AZ::u32 emitterId)
     {
-        AZ::Render::SimplePointLightFeatureProcessorInterface* lightFP =
-            m_scene->GetFeatureProcessor<AZ::Render::SimplePointLightFeatureProcessorInterface>();
+        JE::Render::Features::SimplePointLightFeatureProcessorInterface* lightFP =
+            m_scene->GetFeatureProcessor<JE::Render::Features::SimplePointLightFeatureProcessorInterface>();
 
         auto iter = lightHandles.find(emitterId);
         if (iter != lightHandles.end())
@@ -748,8 +748,8 @@ namespace OpenParticle
 
     void ParticleSystem::ClearAllLightEffects()
     {
-        AZ::Render::SimplePointLightFeatureProcessorInterface* lightFP =
-            m_scene->GetFeatureProcessor<AZ::Render::SimplePointLightFeatureProcessorInterface>();
+        JE::Render::Features::SimplePointLightFeatureProcessorInterface* lightFP =
+            m_scene->GetFeatureProcessor<JE::Render::Features::SimplePointLightFeatureProcessorInterface>();
         for (auto iter = lightHandles.begin(); iter != lightHandles.end();)
         {
             for (auto lightHandle : iter->second)
@@ -961,8 +961,8 @@ namespace OpenParticle
         if (meshIndex >= 0)
         {
             drawRequest.m_stencilRef = (MaterialRequiresForwardPassIblSpecular(instance.m_material) ?
-                AZ::Render::StencilRefs::None : AZ::Render::StencilRefs::UseIBLSpecularPass) |
-                AZ::Render::StencilRefs::UseDiffuseGIPass;
+                JE::Render::Features::StencilRefs::None : JE::Render::Features::StencilRefs::UseIBLSpecularPass) |
+                JE::Render::Features::StencilRefs::UseDiffuseGIPass;
         }
 
         drawRequest.m_streamIndices = geometryView.GetFullStreamBufferIndices();

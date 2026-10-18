@@ -10,7 +10,7 @@
 
 #include <AzCore/Component/Component.h>
 #include <ACES/Aces.h>
-#include <Atom/Feature/PostProcess/LookModification/LookModificationSettingsInterface.h>
+#include <JE/Render/Features/PostProcess/LookModification/LookModificationSettingsInterface.h>
 #include <JE/Render/RPI/Reflect/Image/StreamingImageAsset.h>
 
 namespace JE::Render
@@ -27,17 +27,17 @@ namespace JE::Render
             static void Reflect(AZ::ReflectContext* context);
 
             // Generate members...
-#include <Atom/Feature/ParamMacros/StartParamMembers.inl>
-#include <Atom/Feature/PostProcess/LookModification/LookModificationParams.inl>
-#include <Atom/Feature/ParamMacros/EndParams.inl>
+#include <JE/Render/Features/ParamMacros/StartParamMembers.inl>
+#include <JE/Render/Features/PostProcess/LookModification/LookModificationParams.inl>
+#include <JE/Render/Features/ParamMacros/EndParams.inl>
 
             // Generate Getters/Setters...
-#include <Atom/Feature/ParamMacros/StartParamFunctions.inl>
-#include <Atom/Feature/PostProcess/LookModification/LookModificationParams.inl>
-#include <Atom/Feature/ParamMacros/EndParams.inl>
+#include <JE/Render/Features/ParamMacros/StartParamFunctions.inl>
+#include <JE/Render/Features/PostProcess/LookModification/LookModificationParams.inl>
+#include <JE/Render/Features/ParamMacros/EndParams.inl>
 
-            void CopySettingsFrom(AZ::Render::LookModificationSettingsInterface* settings);
-            void CopySettingsTo(AZ::Render::LookModificationSettingsInterface* settings);
+            void CopySettingsFrom(JE::Render::Features::LookModificationSettingsInterface* settings);
+            void CopySettingsTo(JE::Render::Features::LookModificationSettingsInterface* settings);
 
             bool ArePropertiesReadOnly() const { return !m_enabled; }
 

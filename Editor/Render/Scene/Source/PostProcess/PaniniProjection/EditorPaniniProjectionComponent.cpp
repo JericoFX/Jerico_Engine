@@ -63,9 +63,9 @@ namespace JE::Editor::Render
 
                     // Auto-gen editor context settings for overrides
 #define EDITOR_CLASS JE::Render::Scene::PaniniProjectionComponentConfig
-#include <Atom/Feature/ParamMacros/StartOverrideEditorContext.inl>
-#include <Atom/Feature/PostProcess/PaniniProjection/PaniniProjectionParams.inl>
-#include <Atom/Feature/ParamMacros/EndParams.inl>
+#include <JE/Render/Features/ParamMacros/StartOverrideEditorContext.inl>
+#include <JE/Render/Features/PostProcess/PaniniProjection/PaniniProjectionParams.inl>
+#include <JE/Render/Features/ParamMacros/EndParams.inl>
 #undef EDITOR_CLASS
                         ;
                 }

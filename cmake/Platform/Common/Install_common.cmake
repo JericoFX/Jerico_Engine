@@ -1018,7 +1018,7 @@ function(ly_setup_assets)
             "${gem_candidate_dir}/*"
         )
         # Exclude transient artifacts that shouldn't be copied to the install layout
-        list(FILTER external_subdir_files_tenative EXCLUDE REGEX "/([Bb]uild|[Cc]ache|[Uu]ser)$|/Gems/AtomLyIntegration/CommonFeatures$")
+        list(FILTER external_subdir_files_tenative EXCLUDE REGEX "/([Bb]uild|[Cc]ache|[Uu]ser)$|/Gems/AtomLyIntegration/CommonFeatures$|/Gems/Atom/Feature/Common$")
 
         # Exclude folders that themselves are gem_candidate_dirs with their own gem.json
         foreach(check_file IN LISTS external_subdir_files_tenative)
@@ -1078,6 +1078,7 @@ function(ly_setup_assets)
 
         # gem directories and files to install
         get_property(gems_assets_paths DIRECTORY ${gem_candidate_dir} PROPERTY gems_assets_paths)
+        list(FILTER gems_assets_paths EXCLUDE REGEX "/Gems/Atom/Feature/Common(/|$)")
         foreach(gem_absolute_path IN LISTS gems_assets_paths)
             # If an external subdirectory is not a subdirectory of the engine root, then
             # prepend "External" to its subdirectory root

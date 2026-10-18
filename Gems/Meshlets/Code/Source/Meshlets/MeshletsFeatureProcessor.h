@@ -18,7 +18,7 @@
 
 #include <JE/Render/RPI/Public/FeatureProcessor.h>
 
-#include <Atom/Feature/TransformService/TransformServiceFeatureProcessorInterface.h>
+#include <JE/Render/Features/TransformService/TransformServiceFeatureProcessorInterface.h>
 
 #include <SharedBuffer.h>
 #include <MultiDispatchComputePass.h>
@@ -44,7 +44,7 @@ namespace AZ
         // Not used yet - should be developed to support instancing
         struct RenderObjectInstanceData
         {
-            Render::TransformServiceFeatureProcessorInterface::ObjectId m_objectId;
+            JE::Render::Features::TransformServiceFeatureProcessorInterface::ObjectId m_objectId;
             MeshletsRenderObject* meshletsRenderObject;
         };
 
@@ -80,9 +80,9 @@ namespace AZ
             int GetTickOrder() override;
 
             void SetTransform(
-                const Render::TransformServiceFeatureProcessorInterface::ObjectId objectId,
+                const JE::Render::Features::TransformServiceFeatureProcessorInterface::ObjectId objectId,
                 const AZ::Transform& transform);
-            Render::TransformServiceFeatureProcessorInterface::ObjectId AddMeshletsRenderObject(
+            JE::Render::Features::TransformServiceFeatureProcessorInterface::ObjectId AddMeshletsRenderObject(
                 MeshletsRenderObject* meshletsRenderObject);
             void RemoveMeshletsRenderObject(MeshletsRenderObject* meshletsRenderObject);
 
@@ -95,7 +95,7 @@ namespace AZ
 
             bool BuildDrawPacket(
                 ModelLodDataArray& lodRenderDataArray,
-                Render::TransformServiceFeatureProcessorInterface::ObjectId objectId);
+                JE::Render::Features::TransformServiceFeatureProcessorInterface::ObjectId objectId);
 
             bool HasMeshletPasses(JE::Render::RPI::RenderPipeline* renderPipeline);
             bool AddMeshletsPassesToPipeline(JE::Render::RPI::RenderPipeline* renderPipeline);
@@ -128,7 +128,7 @@ namespace AZ
             //! pass name per pipeline.
             JE::Render::RPI::RenderPipeline* m_renderPipeline = nullptr;
 
-            Render::TransformServiceFeatureProcessorInterface* m_transformServiceFeatureProcessor = nullptr;
+            JE::Render::Features::TransformServiceFeatureProcessorInterface* m_transformServiceFeatureProcessor = nullptr;
 
             AZStd::list<MeshletsRenderObject*> m_renderObjectsMarkedForDeletion;
 

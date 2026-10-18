@@ -30,7 +30,6 @@
         "EMotionFX_Atom",
         "Atom_RHI",
         "Atom_RHI_Null",
-        "Atom_Feature_Common",
         "ImageProcessingAtom",
         "AtomToolsFramework",
         "PassCanvas",

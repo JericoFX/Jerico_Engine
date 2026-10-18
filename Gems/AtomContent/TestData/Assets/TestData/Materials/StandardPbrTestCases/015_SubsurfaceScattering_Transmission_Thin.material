@@ -1,5 +1,5 @@
 {
-    "materialType": "@gemroot:Atom_Feature_Common@/Assets/Materials/Types/EnhancedPBR.materialtype",
+    "materialType": "@engroot@/Engine/Render/Features/Assets/Materials/Types/EnhancedPBR.materialtype",
     "materialTypeVersion": 6,
     "propertyValues": {
         "baseColor.color": [

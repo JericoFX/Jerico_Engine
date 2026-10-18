@@ -30,10 +30,10 @@
 #include <JE/Render/RPI/Public/Model/Model.h>
 #include <JE/Render/RPI/Public/Shader/ShaderResourceGroup.h>
 
-#include <Atom/Feature/Mesh/MeshCommon.h>
-#include <Atom/Feature/Mesh/MeshFeatureProcessorInterface.h>
-#include <Atom/Feature/Mesh/MeshInfo.h>
-#include <Atom/Feature/RenderCommon.h>
+#include <JE/Render/Features/Mesh/MeshCommon.h>
+#include <JE/Render/Features/Mesh/MeshFeatureProcessorInterface.h>
+#include <JE/Render/Features/Mesh/MeshInfo.h>
+#include <JE/Render/Features/RenderCommon.h>
 
 namespace Terrain
 {
@@ -82,11 +82,11 @@ namespace Terrain
         };
         JE::Render::RPI::ShaderSystemInterface::Get()->Connect(m_handleGlobalShaderOptionUpdate);
         
-        m_meshMovedFlag = m_parentScene->GetViewTagBitRegistry().AcquireTag(AZ::Render::MeshCommon::MeshMovedName);
+        m_meshMovedFlag = m_parentScene->GetViewTagBitRegistry().AcquireTag(JE::Render::Features::MeshCommon::MeshMovedName);
 
-        m_meshfeatureProcessor = m_parentScene->GetFeatureProcessor<AZ::Render::MeshFeatureProcessorInterface>();
+        m_meshfeatureProcessor = m_parentScene->GetFeatureProcessor<JE::Render::Features::MeshFeatureProcessorInterface>();
 
-        m_rayTracingFeatureProcessor = m_parentScene->GetFeatureProcessor<AZ::Render::RayTracingFeatureProcessorInterface>();
+        m_rayTracingFeatureProcessor = m_parentScene->GetFeatureProcessor<JE::Render::Features::RayTracingFeatureProcessorInterface>();
         m_rayTracingEnabled = (AZ::RHI::RHISystemInterface::Get()->GetRayTracingSupport() != AZ::RHI::MultiDevice::NoDevices) && m_rayTracingFeatureProcessor;
 
         m_isInitialized = true;
@@ -333,7 +333,7 @@ namespace Terrain
             drawRequest.m_listTag = drawData.m_drawListTag;
             drawRequest.m_pipelineState = drawData.m_pipelineState;
             drawRequest.m_streamIndices = sector.m_geometryView.GetFullStreamBufferIndices();
-            drawRequest.m_stencilRef = AZ::Render::StencilRefs::UseDiffuseGIPass | AZ::Render::StencilRefs::UseIBLSpecularPass;
+            drawRequest.m_stencilRef = JE::Render::Features::StencilRefs::UseDiffuseGIPass | JE::Render::Features::StencilRefs::UseIBLSpecularPass;
 
             if (drawData.m_materialPipelineName != JE::Render::RPI::MaterialPipelineNone)
             {
@@ -420,25 +420,25 @@ namespace Terrain
                 m_meshfeatureProcessor->ReleaseMeshInfoEntry(meshGroup.m_submeshVector.back().m_meshInfoHandle);
             }
             meshGroup.m_submeshVector.clear();
-            AZ::Render::RayTracingFeatureProcessorInterface::SubMesh& subMesh = meshGroup.m_submeshVector.emplace_back();
+            JE::Render::Features::RayTracingFeatureProcessorInterface::SubMesh& subMesh = meshGroup.m_submeshVector.emplace_back();
 
             // Create a meshinfo - entry for the terrain mesh, so we can add it to the raytracing TLAS
             subMesh.m_meshInfoHandle = m_meshfeatureProcessor->AcquireMeshInfoEntry();
             m_meshfeatureProcessor->UpdateMeshInfoEntry(
                 subMesh.m_meshInfoHandle,
-                [&](AZ::Render::MeshInfoEntry* entry) -> bool
+                [&](JE::Render::Features::MeshInfoEntry* entry) -> bool
                 {
                     AZ::RHI::ShaderSemantic position{ AZ::Name{ "POSITION" } };
-                    entry->m_meshBuffers[position] = AZ::Render::BufferViewIndexAndOffset::Create(
+                    entry->m_meshBuffers[position] = JE::Render::Features::BufferViewIndexAndOffset::Create(
                         positionsVertexBufferView, AZ::RHI::ConvertToVertexFormat(positionsBufferFormat));
 
                     AZ::RHI::ShaderSemantic normal{ AZ::Name{ "NORMAL" } };
-                    entry->m_meshBuffers[normal] = AZ::Render::BufferViewIndexAndOffset::Create(
+                    entry->m_meshBuffers[normal] = JE::Render::Features::BufferViewIndexAndOffset::Create(
                         normalsVertexBufferView, AZ::RHI::ConvertToVertexFormat(normalsBufferFormat));
 
                     auto indexBufferView =
                         AZ::RHI::IndexBufferView(rhiIndexBuffer, indexBufferByteOffset, indexBufferByteCount, indexBufferFormat);
-                    entry->m_indexBuffer = AZ::Render::IndexBufferViewIndexAndOffset::Create(indexBufferView);
+                    entry->m_indexBuffer = JE::Render::Features::IndexBufferViewIndexAndOffset::Create(indexBufferView);
                     return true;
                 });
             meshGroup.m_mesh.m_assetId = AZ::Data::AssetId(meshGroup.m_id);

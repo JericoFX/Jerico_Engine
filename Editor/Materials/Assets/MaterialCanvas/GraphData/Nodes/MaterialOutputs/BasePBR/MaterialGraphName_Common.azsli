@@ -16,7 +16,7 @@
 // O3DE_GENERATED_FUNCTIONS_END
 
 #include <Atom/RPI/TangentSpace.azsli>
-#include <Atom/Feature/Common/Assets/Shaders/Materials/MaterialFunctions/EvaluateTangentFrame.azsli>
+#include <Engine/Render/Features/Assets/Shaders/Materials/MaterialFunctions/EvaluateTangentFrame.azsli>
 
 bool NeedsTangentFrame()
 {
@@ -27,13 +27,13 @@ bool NeedsTangentFrame()
 
 #include "MaterialGraphName_VertexEval.azsli"
 
-#include <Atom/Feature/Common/Assets/Shaders/Materials/BasePBR/BasePBR_PixelGeometryEval.azsli>
+#include <Engine/Render/Features/Assets/Shaders/Materials/BasePBR/BasePBR_PixelGeometryEval.azsli>
 
 #include "MaterialGraphName_SurfaceEval.azsli"
 
-#include <Atom/Feature/Common/Assets/Shaders/Materials/BasePBR/BasePBR_LightingData.azsli>
-#include <Atom/Feature/Common/Assets/Shaders/Materials/BasePBR/BasePBR_LightingBrdf.azsli>
-#include <Atom/Feature/Common/Assets/Shaders/Materials/BasePBR/BasePBR_LightingEval.azsli>
+#include <Engine/Render/Features/Assets/Shaders/Materials/BasePBR/BasePBR_LightingData.azsli>
+#include <Engine/Render/Features/Assets/Shaders/Materials/BasePBR/BasePBR_LightingBrdf.azsli>
+#include <Engine/Render/Features/Assets/Shaders/Materials/BasePBR/BasePBR_LightingEval.azsli>
 
 #else
 

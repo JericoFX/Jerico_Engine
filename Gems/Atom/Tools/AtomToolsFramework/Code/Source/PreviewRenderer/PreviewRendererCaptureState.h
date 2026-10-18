@@ -8,7 +8,7 @@
 
 #pragma once
 
-#include <Atom/Feature/Utils/FrameCaptureBus.h>
+#include <JE/Render/Features/Utils/FrameCaptureBus.h>
 #include <PreviewRenderer/PreviewRendererState.h>
 
 namespace AtomToolsFramework
@@ -16,7 +16,7 @@ namespace AtomToolsFramework
     //! PreviewRendererCaptureState renders a preview to an image
     class PreviewRendererCaptureState final
         : public PreviewRendererState
-        , public AZ::Render::FrameCaptureNotificationBus::Handler
+        , public JE::Render::Features::FrameCaptureNotificationBus::Handler
     {
     public:
         PreviewRendererCaptureState(PreviewRenderer* renderer);
@@ -25,7 +25,7 @@ namespace AtomToolsFramework
 
     private:
         //! AZ::Render::FrameCaptureNotificationBus::Handler overrides...
-        void OnFrameCaptureFinished(AZ::Render::FrameCaptureResult result, const AZStd::string& info) override;
+        void OnFrameCaptureFinished(JE::Render::Features::FrameCaptureResult result, const AZStd::string& info) override;
 
         //! Track the amount of time since the capture request was initiated
         AZStd::chrono::steady_clock::time_point m_startTime = AZStd::chrono::steady_clock::now();

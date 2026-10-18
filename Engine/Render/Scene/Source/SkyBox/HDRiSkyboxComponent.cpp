@@ -32,7 +32,7 @@ namespace JE::Render
             {
                 behaviorContext->Class<HDRiSkyboxComponent>()->RequestBus("HDRiSkyboxRequestBus");
 
-                behaviorContext->ConstantProperty("HDRiSkyboxComponentTypeId", BehaviorConstant(AZ::Uuid(AZ::Render::HDRiSkyboxComponentTypeId)))
+                behaviorContext->ConstantProperty("HDRiSkyboxComponentTypeId", BehaviorConstant(AZ::Uuid(JE::Render::Features::HDRiSkyboxComponentTypeId)))
                     ->Attribute(AZ::Script::Attributes::Module, "render")
                     ->Attribute(AZ::Script::Attributes::Scope, AZ::Script::Attributes::ScopeFlags::Common);
             }

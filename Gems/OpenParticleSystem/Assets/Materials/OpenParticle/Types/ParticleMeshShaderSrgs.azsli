@@ -15,7 +15,7 @@
 // Pull in the standard ObjectSrg / DrawSrg / MaterialSrg / MaterialParameters
 // that the StandardPBR pipeline callbacks (LightingChannels, etc.) reference
 // before the material shader code is included.
-#include <Atom/Feature/Common/Assets/Materials/Types/StandardPBR_Defines.azsli>
+#include <Engine/Render/Features/Assets/Materials/Types/StandardPBR_Defines.azsli>
 
 #include <OpenParticle/ParticleMeshCommon.azsli>
 

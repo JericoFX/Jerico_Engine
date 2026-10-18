@@ -9,7 +9,7 @@
 #pragma once
 
 #include <AzCore/Component/Component.h>
-#include <Atom/Feature/PostProcess/ExposureControl/ExposureControlConstants.h>
+#include <JE/Render/Features/PostProcess/ExposureControl/ExposureControlConstants.h>
 
 namespace JE::Render
 {
@@ -26,9 +26,9 @@ namespace JE::Render
             virtual ~ExposureControlRequests() {}
 
             // Auto-gen virtual getters/setters...
-#include <Atom/Feature/ParamMacros/StartParamFunctionsVirtual.inl>
-#include <Atom/Feature/PostProcess/ExposureControl/ExposureControlParams.inl>
-#include <Atom/Feature/ParamMacros/EndParams.inl>
+#include <JE/Render/Features/ParamMacros/StartParamFunctionsVirtual.inl>
+#include <JE/Render/Features/PostProcess/ExposureControl/ExposureControlParams.inl>
+#include <JE/Render/Features/ParamMacros/EndParams.inl>
 
         };
 

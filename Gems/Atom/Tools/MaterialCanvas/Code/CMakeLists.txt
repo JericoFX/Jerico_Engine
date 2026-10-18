@@ -42,6 +42,7 @@ ly_add_target(
             Gem::AtomToolsFramework.Editor
             JE::EditorCamera
             JE::EditorRenderScene
+            JE::EditorRenderFeatures
             Gem::AtomToolsFramework.Static
     TARGET_PROPERTIES
         EXCLUDE_FROM_ALL TRUE

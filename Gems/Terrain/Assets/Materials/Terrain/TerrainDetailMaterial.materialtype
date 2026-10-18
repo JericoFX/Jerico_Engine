@@ -4,25 +4,25 @@
     "propertyLayout": {
         "propertyGroups": [
             { 
-                "$import": "../../../../Atom/Feature/Common/Assets/Materials/Types/MaterialInputs/BaseColorPropertyGroup.json"
+                "$import": "../../../../../Engine/Render/Features/Assets/Materials/Types/MaterialInputs/BaseColorPropertyGroup.json"
             },
             { 
-                "$import": "../../../../Atom/Feature/Common/Assets/Materials/Types/MaterialInputs/MetallicPropertyGroup.json"
+                "$import": "../../../../../Engine/Render/Features/Assets/Materials/Types/MaterialInputs/MetallicPropertyGroup.json"
             },
             { 
-                "$import": "../../../../Atom/Feature/Common/Assets/Materials/Types/MaterialInputs/RoughnessPropertyGroup.json"
+                "$import": "../../../../../Engine/Render/Features/Assets/Materials/Types/MaterialInputs/RoughnessPropertyGroup.json"
             },
             {
-                "$import": "../../../../Atom/Feature/Common/Assets/Materials/Types/MaterialInputs/SpecularPropertyGroup.json"
+                "$import": "../../../../../Engine/Render/Features/Assets/Materials/Types/MaterialInputs/SpecularPropertyGroup.json"
             },
             { 
-                "$import": "../../../../Atom/Feature/Common/Assets/Materials/Types/MaterialInputs/NormalPropertyGroup.json"
+                "$import": "../../../../../Engine/Render/Features/Assets/Materials/Types/MaterialInputs/NormalPropertyGroup.json"
             },
             { 
-                "$import": "../../../../Atom/Feature/Common/Assets/Materials/Types/MaterialInputs/OcclusionPropertyGroup.json"
+                "$import": "../../../../../Engine/Render/Features/Assets/Materials/Types/MaterialInputs/OcclusionPropertyGroup.json"
             },
             { 
-                "$import": "../../../../Atom/Feature/Common/Assets/Materials/Types/MaterialInputs/ParallaxPropertyGroup.json" 
+                "$import": "../../../../../Engine/Render/Features/Assets/Materials/Types/MaterialInputs/ParallaxPropertyGroup.json" 
             },
             {
                 "name": "terrain",
@@ -84,25 +84,25 @@
                 ]
             },
             { 
-                "$import": "../../../../Atom/Feature/Common/Assets/Materials/Types/MaterialInputs/UvPropertyGroup.json"
+                "$import": "../../../../../Engine/Render/Features/Assets/Materials/Types/MaterialInputs/UvPropertyGroup.json"
             },
             { 
-                "$import": "../../../../Atom/Feature/Common/Assets/Materials/Types/MaterialInputs/IrradiancePropertyGroup.json"
+                "$import": "../../../../../Engine/Render/Features/Assets/Materials/Types/MaterialInputs/IrradiancePropertyGroup.json"
             },
             { 
-                "$import": "../../../../Atom/Feature/Common/Assets/Materials/Types/MaterialInputs/GeneralCommonPropertyGroup.json"
+                "$import": "../../../../../Engine/Render/Features/Assets/Materials/Types/MaterialInputs/GeneralCommonPropertyGroup.json"
             },
             { 
-                "$import": "../../../../Atom/Feature/Common/Assets/Materials/Types/MaterialInputs/VertexColorPropertyGroup.json"
+                "$import": "../../../../../Engine/Render/Features/Assets/Materials/Types/MaterialInputs/VertexColorPropertyGroup.json"
             },
             { 
-                "$import": "../../../../Atom/Feature/Common/Assets/Materials/Types/MaterialInputs/OpacityPropertyGroup.json"
+                "$import": "../../../../../Engine/Render/Features/Assets/Materials/Types/MaterialInputs/OpacityPropertyGroup.json"
             },
             { 
-                "$import": "../../../../Atom/Feature/Common/Assets/Materials/Types/MaterialInputs/EmissivePropertyGroup.json"
+                "$import": "../../../../../Engine/Render/Features/Assets/Materials/Types/MaterialInputs/EmissivePropertyGroup.json"
             },
             { 
-                "$import": "../../../../Atom/Feature/Common/Assets/Materials/Types/MaterialInputs/ClearCoatPropertyGroup.json"
+                "$import": "../../../../../Engine/Render/Features/Assets/Materials/Types/MaterialInputs/ClearCoatPropertyGroup.json"
             }
         ]
     },

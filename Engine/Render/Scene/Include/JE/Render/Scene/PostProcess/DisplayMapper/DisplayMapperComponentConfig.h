@@ -9,7 +9,7 @@
 #pragma once
 
 #include <AzCore/Component/Component.h>
-#include <Atom/Feature/DisplayMapper/DisplayMapperConfigurationDescriptor.h>
+#include <JE/Render/Features/DisplayMapper/DisplayMapperConfigurationDescriptor.h>
 #include <JE/Render/RPI/Reflect/System/AnyAsset.h>
 
 namespace JE::Render
@@ -28,7 +28,7 @@ namespace JE::Render
             AZ::Render::DisplayMapperOperationType m_displayMapperOperation = AZ::Render::DisplayMapperOperationType::Aces;
             bool m_ldrColorGradingLutEnabled = false;
             AZ::Data::Asset<JE::Render::RPI::AnyAsset> m_ldrColorGradingLut = {};
-            AZ::Render::AcesParameterOverrides m_acesParameterOverrides;
+            JE::Render::Features::AcesParameterOverrides m_acesParameterOverrides;
         };
     }
 }

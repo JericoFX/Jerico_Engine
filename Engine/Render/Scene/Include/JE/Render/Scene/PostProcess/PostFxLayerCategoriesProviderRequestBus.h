@@ -9,7 +9,7 @@
 #pragma once
 
 #include <AzCore/EBus/EBus.h>
-#include <Atom/Feature/PostProcess/PostFxLayerCategoriesConstants.h>
+#include <JE/Render/Features/PostProcess/PostFxLayerCategoriesConstants.h>
 /**
 * the EBus is used to request registered tags
 */
@@ -29,7 +29,7 @@ namespace JE::Render
             //! allows multiple threads to call
             using MutexType = AZStd::recursive_mutex;
 
-            virtual void GetLayerCategories(AZ::Render::PostFx::LayerCategoriesMap& layerCategories) const = 0;
+            virtual void GetLayerCategories(JE::Render::Features::PostFx::LayerCategoriesMap& layerCategories) const = 0;
         };
 
         typedef AZ::EBus<PostFxLayerCategoriesProviderRequests> PostFxLayerCategoriesProviderRequestBus;

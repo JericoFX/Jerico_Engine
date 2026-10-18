@@ -8,7 +8,7 @@
 
 #pragma once
 
-#include <Atom/Feature/PostProcess/ChromaticAberration/ChromaticAberrationConstants.h>
+#include <JE/Render/Features/PostProcess/ChromaticAberration/ChromaticAberrationConstants.h>
 #include <AzCore/Component/Component.h>
 
 namespace JE::Render
@@ -27,9 +27,9 @@ namespace JE::Render
             }
 
             // Auto-gen virtual getters/setters...
-#include <Atom/Feature/ParamMacros/StartParamFunctionsVirtual.inl>
-#include <Atom/Feature/PostProcess/ChromaticAberration/ChromaticAberrationParams.inl>
-#include <Atom/Feature/ParamMacros/EndParams.inl>
+#include <JE/Render/Features/ParamMacros/StartParamFunctionsVirtual.inl>
+#include <JE/Render/Features/PostProcess/ChromaticAberration/ChromaticAberrationParams.inl>
+#include <JE/Render/Features/ParamMacros/EndParams.inl>
         };
 
         typedef AZ::EBus<ChromaticAberrationRequests> ChromaticAberrationRequestBus;

@@ -23,7 +23,7 @@
 #include <AzCore/Console/IConsole.h>
 #include <AzCore/Interface/Interface.h>
 
-#include <Atom/Feature/ImGui/SystemBus.h>
+#include <JE/Render/Features/ImGui/SystemBus.h>
 #include <JE/Debug/ImGui/ImGuiContextScope.h>
 #include <imgui/imgui.h>
 

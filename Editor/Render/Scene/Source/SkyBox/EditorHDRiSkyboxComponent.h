@@ -8,8 +8,8 @@
 
 #pragma once
 
-#include <Atom/Feature/Utils/EditorRenderComponentAdapter.h>
-#include <Atom/Feature/SkyBox/SkyboxConstants.h>
+#include <JE/Editor/Render/Features/Utils/EditorRenderComponentAdapter.h>
+#include <JE/Render/Features/SkyBox/SkyboxConstants.h>
 #include <SkyBox/HDRiSkyboxComponent.h>
 
 namespace JE::Editor::Render
@@ -17,12 +17,12 @@ namespace JE::Editor::Render
     namespace Scene
     {
         class EditorHDRiSkyboxComponent final
-            : public AZ::Render::EditorRenderComponentAdapter<JE::Render::Scene::HDRiSkyboxComponentController, JE::Render::Scene::HDRiSkyboxComponent, JE::Render::Scene::HDRiSkyboxComponentConfig>
+            : public JE::Editor::Render::Features::EditorRenderComponentAdapter<JE::Render::Scene::HDRiSkyboxComponentController, JE::Render::Scene::HDRiSkyboxComponent, JE::Render::Scene::HDRiSkyboxComponentConfig>
         {
         public:
 
-            using BaseClass = AZ::Render::EditorRenderComponentAdapter<JE::Render::Scene::HDRiSkyboxComponentController, JE::Render::Scene::HDRiSkyboxComponent, JE::Render::Scene::HDRiSkyboxComponentConfig>;
-            AZ_RTTI_WITH_NAME(JE::Editor::Render::Scene::EditorHDRiSkyboxComponent, "AZ::Render::EditorHDRiSkyboxComponent", AZ::Render::EditorHDRiSkyboxComponentTypeId, BaseClass, AzToolsFramework::Components::EditorComponentBase)
+            using BaseClass = JE::Editor::Render::Features::EditorRenderComponentAdapter<JE::Render::Scene::HDRiSkyboxComponentController, JE::Render::Scene::HDRiSkyboxComponent, JE::Render::Scene::HDRiSkyboxComponentConfig>;
+            AZ_RTTI_WITH_NAME(JE::Editor::Render::Scene::EditorHDRiSkyboxComponent, "AZ::Render::EditorHDRiSkyboxComponent", JE::Render::Features::EditorHDRiSkyboxComponentTypeId, BaseClass, AzToolsFramework::Components::EditorComponentBase)
             AZ_EDITOR_COMPONENT_INTRUSIVE_DESCRIPTOR_TYPE(JE::Editor::Render::Scene::EditorHDRiSkyboxComponent)
             AZ_COMPONENT_BASE(JE::Editor::Render::Scene::EditorHDRiSkyboxComponent)
             AZ_CLASS_ALLOCATOR(JE::Editor::Render::Scene::EditorHDRiSkyboxComponent, AZ::ComponentAllocator);

@@ -9,7 +9,7 @@
 #pragma once
 
 #include <AzCore/Component/Component.h>
-#include <Atom/Feature/PostProcess/Bloom/BloomSettingsInterface.h>
+#include <JE/Render/Features/PostProcess/Bloom/BloomSettingsInterface.h>
 
 namespace JE::Render
 {
@@ -25,17 +25,17 @@ namespace JE::Render
             static void Reflect(AZ::ReflectContext* context);
 
             // Generate members...
-#include <Atom/Feature/ParamMacros/StartParamMembers.inl>
-#include <Atom/Feature/PostProcess/Bloom/BloomParams.inl>
-#include <Atom/Feature/ParamMacros/EndParams.inl>
+#include <JE/Render/Features/ParamMacros/StartParamMembers.inl>
+#include <JE/Render/Features/PostProcess/Bloom/BloomParams.inl>
+#include <JE/Render/Features/ParamMacros/EndParams.inl>
 
             // Generate Getters/Setters...
-#include <Atom/Feature/ParamMacros/StartParamFunctions.inl>
-#include <Atom/Feature/PostProcess/Bloom/BloomParams.inl>
-#include <Atom/Feature/ParamMacros/EndParams.inl>
+#include <JE/Render/Features/ParamMacros/StartParamFunctions.inl>
+#include <JE/Render/Features/PostProcess/Bloom/BloomParams.inl>
+#include <JE/Render/Features/ParamMacros/EndParams.inl>
 
-            void CopySettingsFrom(AZ::Render::BloomSettingsInterface* settings);
-            void CopySettingsTo(AZ::Render::BloomSettingsInterface* settings);
+            void CopySettingsFrom(JE::Render::Features::BloomSettingsInterface* settings);
+            void CopySettingsTo(JE::Render::Features::BloomSettingsInterface* settings);
 
             bool ArePropertiesReadOnly() const { return !m_enabled; }
         };

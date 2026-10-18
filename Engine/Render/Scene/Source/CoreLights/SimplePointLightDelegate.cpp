@@ -6,7 +6,7 @@
  *
  */
 
-#include <Atom/Feature/CoreLights/SimplePointLightFeatureProcessorInterface.h>
+#include <JE/Render/Features/CoreLights/SimplePointLightFeatureProcessorInterface.h>
 #include <JE/Render/RPI/Public/Scene.h>
 #include <JE/Render/Scene/CoreLights/AreaLightComponentConfig.h>
 #include <CoreLights/SimplePointLightDelegate.h>
@@ -14,7 +14,7 @@
 namespace JE::Render::Scene
 {
     SimplePointLightDelegate::SimplePointLightDelegate(AZ::EntityId entityId, bool isVisible)
-        : LightDelegateBase<AZ::Render::SimplePointLightFeatureProcessorInterface>(entityId, isVisible)
+        : LightDelegateBase<JE::Render::Features::SimplePointLightFeatureProcessorInterface>(entityId, isVisible)
     {
         InitBase(entityId);
         if (GetLightHandle().IsValid())
@@ -26,7 +26,7 @@ namespace JE::Render::Scene
     float SimplePointLightDelegate::CalculateAttenuationRadius(float lightThreshold) const
     {
         // Calculate the radius at which the irradiance will be equal to cutoffIntensity.
-        const float intensity = GetPhotometricValue().GetCombinedIntensity(AZ::Render::PhotometricUnit::Lumen);
+        const float intensity = GetPhotometricValue().GetCombinedIntensity(JE::Render::Features::PhotometricUnit::Lumen);
         return AZ::Sqrt(intensity / lightThreshold);
     }
 

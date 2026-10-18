@@ -9,7 +9,7 @@
 #pragma once
 
 #include <SkyAtmosphere/SkyAtmosphereFeatureProcessorInterface.h>
-#include <Atom/Feature/Utils/SparseVector.h>
+#include <JE/Render/Features/Utils/SparseVector.h>
 
 namespace SkyAtmosphere
 {
@@ -60,7 +60,7 @@ namespace SkyAtmosphere
             bool m_enabled = false;
         };
 
-        AZ::Render::SparseVector<SkyAtmosphere> m_atmospheres;
+        JE::Render::Features::SparseVector<SkyAtmosphere> m_atmospheres;
         AZStd::map<JE::Render::RPI::RenderPipeline*, SkyAtmosphereParentPass*> m_renderPipelineToSkyAtmosphereParentPass;
     };
 }

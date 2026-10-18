@@ -24,9 +24,9 @@ namespace JE::Render
             static const AZ::EBusHandlerPolicy HandlerPolicy = AZ::EBusHandlerPolicy::Single;
             virtual ~HDRColorGradingRequests() {}
             // Auto-gen virtual getters/setters...
-#include <Atom/Feature/ParamMacros/StartParamFunctionsVirtual.inl>
-#include <Atom/Feature/PostProcess/ColorGrading/HDRColorGradingParams.inl>
-#include <Atom/Feature/ParamMacros/EndParams.inl>
+#include <JE/Render/Features/ParamMacros/StartParamFunctionsVirtual.inl>
+#include <JE/Render/Features/PostProcess/ColorGrading/HDRColorGradingParams.inl>
+#include <JE/Render/Features/ParamMacros/EndParams.inl>
         };
 
         typedef AZ::EBus<HDRColorGradingRequests> HDRColorGradingRequestBus;

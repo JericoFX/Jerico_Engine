@@ -33,7 +33,7 @@ ly_add_target(
             AZ::AzCore
             AZ::AzFramework
             Gem::${gem_name}.API
-            Gem::Atom_Feature_Common.Public
+            JE::RenderFeatures
             JE::RenderIntegration
 )
 

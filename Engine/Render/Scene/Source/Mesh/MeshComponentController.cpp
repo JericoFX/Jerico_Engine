@@ -260,7 +260,7 @@ namespace JE::Render
                 "MeshComponentController", m_transformInterface,
                 "Unable to attach to a TransformBus handler. This mesh will always be rendered at the origin.");
 
-            m_meshFeatureProcessor = JE::Render::RPI::Scene::GetFeatureProcessorForEntity<AZ::Render::MeshFeatureProcessorInterface>(entityId);
+            m_meshFeatureProcessor = JE::Render::RPI::Scene::GetFeatureProcessorForEntity<JE::Render::Features::MeshFeatureProcessorInterface>(entityId);
             AZ_Error("MeshComponentController", m_meshFeatureProcessor, "Unable to find a MeshFeatureProcessorInterface on the entityId.");
 
             m_cachedNonUniformScale = AZ::Vector3::CreateOne();
@@ -439,7 +439,7 @@ namespace JE::Render
                 JE::Render::MaterialComponentRequestBus::EventResult(materials, entityId, &JE::Render::MaterialComponentRequests::GetMaterialMap);
 
                 m_meshFeatureProcessor->ReleaseMesh(m_meshHandle);
-                AZ::Render::MeshHandleDescriptor meshDescriptor;
+                JE::Render::Features::MeshHandleDescriptor meshDescriptor;
                 meshDescriptor.m_entityId = m_entityComponentIdPair.GetEntityId();
                 meshDescriptor.m_modelAsset = m_configuration.m_modelAsset;
                 meshDescriptor.m_customMaterials = JE::Render::ConvertToCustomMaterialMap(materials);
@@ -841,7 +841,7 @@ namespace JE::Render
 
                 // Materials provided by the material component take priority over materials provided by the model asset.
                 const JE::Render::MaterialAssignmentId id(lodIndex, materialSlotId);
-                const JE::Render::MaterialAssignmentId ignoreLodId(AZ::Render::DefaultCustomMaterialLodIndex, materialSlotId);
+                const JE::Render::MaterialAssignmentId ignoreLodId(JE::Render::Features::DefaultCustomMaterialLodIndex, materialSlotId);
                 for (const auto& currentId : { id, ignoreLodId, JE::Render::DefaultMaterialAssignmentId })
                 {
                     if (auto itr = materials.find(currentId); itr != materials.end() && itr->second.m_materialInstance)
@@ -923,7 +923,7 @@ namespace JE::Render
             return result;
         }
 
-        const AZ::Render::MeshFeatureProcessorInterface::MeshHandle* MeshComponentController::GetMeshHandle() const
+        const JE::Render::Features::MeshFeatureProcessorInterface::MeshHandle* MeshComponentController::GetMeshHandle() const
         {
             return &m_meshHandle;
         }

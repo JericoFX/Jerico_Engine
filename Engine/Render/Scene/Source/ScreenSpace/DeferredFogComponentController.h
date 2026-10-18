@@ -17,9 +17,9 @@
 #include <JE/Render/Scene/ScreenSpace/DeferredFogBus.h>
 #include <JE/Render/Scene/ScreenSpace/DeferredFogComponentConfig.h>
 
-#include <Atom/Feature/ScreenSpace/DeferredFogSettingsInterface.h>
-#include <Atom/Feature/PostProcess/PostProcessFeatureProcessorInterface.h>
-#include <Atom/Feature/PostProcess/PostProcessSettingsInterface.h>
+#include <JE/Render/Features/ScreenSpace/DeferredFogSettingsInterface.h>
+#include <JE/Render/Features/PostProcess/PostProcessFeatureProcessorInterface.h>
+#include <JE/Render/Features/PostProcess/PostProcessSettingsInterface.h>
 
 namespace JE::Editor::Render::Scene
 {
@@ -57,17 +57,17 @@ namespace JE::Render
         ValueType Get##Name() const override;                                                           \
         void Set##Name(ValueType val) override;                                                         \
 
-#include <Atom/Feature/ParamMacros/MapParamCommon.inl>
-#include <Atom/Feature/ScreenSpace/DeferredFogParams.inl>
-#include <Atom/Feature/ParamMacros/EndParams.inl>
+#include <JE/Render/Features/ParamMacros/MapParamCommon.inl>
+#include <JE/Render/Features/ScreenSpace/DeferredFogParams.inl>
+#include <JE/Render/Features/ParamMacros/EndParams.inl>
 
         private:
             AZ_DISABLE_COPY(DeferredFogComponentController);
 
             void OnConfigChanged();
 
-            AZ::Render::PostProcessSettingsInterface* m_postProcessInterface = nullptr;
-            AZ::Render::DeferredFogSettingsInterface* m_settingsInterface = nullptr;    // interface into the single setting structure
+            JE::Render::Features::PostProcessSettingsInterface* m_postProcessInterface = nullptr;
+            JE::Render::Features::DeferredFogSettingsInterface* m_settingsInterface = nullptr;    // interface into the single setting structure
             DeferredFogComponentConfig m_configuration;     // configuration / settings per entity component - several can co-exist
             AZ::EntityId m_entityId;
         };

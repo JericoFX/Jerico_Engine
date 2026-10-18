@@ -9,7 +9,7 @@
 #pragma once
 
 #include <AzCore/Component/Component.h>
-#include <Atom/Feature/PostProcess/ColorGrading/HDRColorGradingSettingsInterface.h>
+#include <JE/Render/Features/PostProcess/ColorGrading/HDRColorGradingSettingsInterface.h>
 
 namespace JE::Render
 {
@@ -25,16 +25,16 @@ namespace JE::Render
             static void Reflect(AZ::ReflectContext* context);
 
             // Generate members...
-#include <Atom/Feature/ParamMacros/StartParamMembers.inl>
-#include <Atom/Feature/PostProcess/ColorGrading/HDRColorGradingParams.inl>
-#include <Atom/Feature/ParamMacros/EndParams.inl>
+#include <JE/Render/Features/ParamMacros/StartParamMembers.inl>
+#include <JE/Render/Features/PostProcess/ColorGrading/HDRColorGradingParams.inl>
+#include <JE/Render/Features/ParamMacros/EndParams.inl>
 
             // Generate Getters/Setters...
-#include <Atom/Feature/ParamMacros/StartParamFunctions.inl>
-#include <Atom/Feature/PostProcess/ColorGrading/HDRColorGradingParams.inl>
-#include <Atom/Feature/ParamMacros/EndParams.inl>
+#include <JE/Render/Features/ParamMacros/StartParamFunctions.inl>
+#include <JE/Render/Features/PostProcess/ColorGrading/HDRColorGradingParams.inl>
+#include <JE/Render/Features/ParamMacros/EndParams.inl>
 
-            void CopySettingsTo(AZ::Render::HDRColorGradingSettingsInterface* settings);
+            void CopySettingsTo(JE::Render::Features::HDRColorGradingSettingsInterface* settings);
         };
     } // namespace Render
 } // namespace AZ

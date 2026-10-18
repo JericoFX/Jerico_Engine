@@ -9,7 +9,7 @@
 #include <PostProcess/ColorGrading/EditorHDRColorGradingComponent.h>
 #include <PostProcess/ColorGrading/JEEditorLutWriter.h>
 #include <PostProcess/LookModification/EditorLookModificationComponent.h>
-#include <Atom/Feature/LookupTable/LookupTableAsset.h>
+#include <JE/Render/Features/LookupTable/LookupTableAsset.h>
 #include <JE/Render/RPI/Reflect/System/AnyAsset.h>
 #include <JE/Render/Scene/PostProcess/LookModification/LookModificationBus.h>
 #include <AzCore/Asset/AssetManager.h>
@@ -340,8 +340,8 @@ namespace JE::Editor::Render
             bool m_received = false;
             JE::Render::RPI::AttachmentReadback::ReadbackResult m_readback{};
             bool m_metadataReceived = false;
-            JE::ColorGrading::LutGenerationCaptureMetadata m_frameEncoding;
-            AZ::Render::FrameCaptureId m_submittedCaptureId = AZ::Render::InvalidFrameCaptureId;
+            JE::Render::Features::LutGenerationCaptureMetadata m_frameEncoding;
+            JE::Render::Features::FrameCaptureId m_submittedCaptureId = JE::Render::Features::InvalidFrameCaptureId;
             Phase m_phase = Phase::PrepareCapture;
             bool m_waitOneFrame = true;
             bool m_activate = false;
@@ -350,8 +350,8 @@ namespace JE::Editor::Render
             float m_minimumExposure = 0.0f;
             float m_maximumExposure = 0.0f;
             bool m_captureFinished = false;
-            AZ::Render::FrameCaptureId m_captureId = AZ::Render::InvalidFrameCaptureId;
-            AZ::Render::FrameCaptureResult m_captureResult = AZ::Render::FrameCaptureResult::None;
+            JE::Render::Features::FrameCaptureId m_captureId = JE::Render::Features::InvalidFrameCaptureId;
+            JE::Render::Features::FrameCaptureResult m_captureResult = JE::Render::Features::FrameCaptureResult::None;
             AZStd::string m_captureInfo;
             AZStd::string m_outputBase;
             AZStd::string m_sourcePath;
@@ -516,9 +516,9 @@ namespace JE::Editor::Render
 
                         ->ClassElement(AZ::Edit::ClassElements::Group, QT_TRANSLATE_NOOP("AtomLyIntegration", "LUT Generation"))
                         ->DataElement(AZ::Edit::UIHandlers::ComboBox, &JE::Render::Scene::HDRColorGradingComponentConfig::m_lutResolution, QT_TRANSLATE_NOOP("AtomLyIntegration", "LUT Resolution"), QT_TRANSLATE_NOOP("AtomLyIntegration", "Resolution of generated LUT"))
-                            ->EnumAttribute(AZ::Render::LutResolution::Lut16x16x16, QT_TRANSLATE_NOOP("AtomLyIntegration", "16x16x16"))
-                            ->EnumAttribute(AZ::Render::LutResolution::Lut32x32x32, QT_TRANSLATE_NOOP("AtomLyIntegration", "32x32x32"))
-                            ->EnumAttribute(AZ::Render::LutResolution::Lut64x64x64, QT_TRANSLATE_NOOP("AtomLyIntegration", "64x64x64"))
+                            ->EnumAttribute(JE::Render::Features::LutResolution::Lut16x16x16, QT_TRANSLATE_NOOP("AtomLyIntegration", "16x16x16"))
+                            ->EnumAttribute(JE::Render::Features::LutResolution::Lut32x32x32, QT_TRANSLATE_NOOP("AtomLyIntegration", "32x32x32"))
+                            ->EnumAttribute(JE::Render::Features::LutResolution::Lut64x64x64, QT_TRANSLATE_NOOP("AtomLyIntegration", "64x64x64"))
                         ->DataElement(AZ::Edit::UIHandlers::ComboBox, &JE::Render::Scene::HDRColorGradingComponentConfig::m_shaperPresetType,
                             QT_TRANSLATE_NOOP("AtomLyIntegration", "Shaper Type"), QT_TRANSLATE_NOOP("AtomLyIntegration", "Shaper Type."))
                             ->EnumAttribute(AZ::Render::ShaperPresetType::None, QT_TRANSLATE_NOOP("AtomLyIntegration", "None"))
@@ -573,19 +573,19 @@ namespace JE::Editor::Render
         void EditorHDRColorGradingComponent::CancelOperation()
         {
             AZ::TickBus::Handler::BusDisconnect();
-            JE::ColorGrading::LutGenerationCaptureNotificationBus::Handler::BusDisconnect();
-            AZ::Render::FrameCaptureNotificationBus::Handler::BusDisconnect();
+            JE::Render::Features::LutGenerationCaptureNotificationBus::Handler::BusDisconnect();
+            JE::Render::Features::FrameCaptureNotificationBus::Handler::BusDisconnect();
             if (m_operation)
             {
                 {
                     AZStd::scoped_lock lock(m_operation->m_mutex);
                     m_operation->m_cancelled = true;
                 }
-                if (m_operation->m_captureId != AZ::Render::InvalidFrameCaptureId)
+                if (m_operation->m_captureId != JE::Render::Features::InvalidFrameCaptureId)
                 {
-                    AZ::Render::FrameCaptureRequestBus::Broadcast(
-                        &AZ::Render::FrameCaptureRequests::CancelPendingCapture, m_operation->m_captureId);
-                    m_operation->m_captureId = AZ::Render::InvalidFrameCaptureId;
+                    JE::Render::Features::FrameCaptureRequestBus::Broadcast(
+                        &JE::Render::Features::FrameCaptureRequests::CancelPendingCapture, m_operation->m_captureId);
+                    m_operation->m_captureId = JE::Render::Features::InvalidFrameCaptureId;
                 }
                 if (!m_operation->m_activate)
                 {
@@ -684,9 +684,9 @@ namespace JE::Editor::Render
                 {
                     return;
                 }
-                AZ::Render::FrameCaptureOutcome outcome;
-                AZ::Render::FrameCaptureRequestBus::BroadcastResult(
-                    outcome, &AZ::Render::FrameCaptureRequests::CapturePassAttachmentWithCallback,
+                JE::Render::Features::FrameCaptureOutcome outcome;
+                JE::Render::Features::FrameCaptureRequestBus::BroadcastResult(
+                    outcome, &JE::Render::Features::FrameCaptureRequests::CapturePassAttachmentWithCallback,
                     [operation](const JE::Render::RPI::AttachmentReadback::ReadbackResult& result)
                     {
                         AZStd::scoped_lock lock(operation->m_mutex);
@@ -723,8 +723,8 @@ namespace JE::Editor::Render
                 operation->m_submittedCaptureId = outcome.GetValue();
                 operation->m_phase = LutOperation::Phase::Capture;
                 // The request reserves a pass attachment; publication occurs in its subsequent FrameBegin.
-                JE::ColorGrading::LutGenerationCaptureNotificationBus::Handler::BusConnect(outcome.GetValue());
-                AZ::Render::FrameCaptureNotificationBus::Handler::BusConnect(outcome.GetValue());
+                JE::Render::Features::LutGenerationCaptureNotificationBus::Handler::BusConnect(outcome.GetValue());
+                JE::Render::Features::FrameCaptureNotificationBus::Handler::BusConnect(outcome.GetValue());
                 return;
             }
             if (operation->m_phase == LutOperation::Phase::Capture)
@@ -733,13 +733,13 @@ namespace JE::Editor::Render
                 {
                     return;
                 }
-                if (operation->m_captureResult != AZ::Render::FrameCaptureResult::Success)
+                if (operation->m_captureResult != JE::Render::Features::FrameCaptureResult::Success)
                 {
                     FailOperation(AZStd::string::format("LUT readback failed: %s", operation->m_captureInfo.c_str()));
                     return;
                 }
                 JE::Render::RPI::AttachmentReadback::ReadbackResult readback{};
-                JE::ColorGrading::LutGenerationCaptureMetadata encoding;
+                JE::Render::Features::LutGenerationCaptureMetadata encoding;
                 bool metadataReceived = false;
                 {
                     AZStd::scoped_lock lock(operation->m_mutex);
@@ -797,7 +797,7 @@ namespace JE::Editor::Render
             {
                 return;
             }
-            const auto* lut = operation->m_asset->GetDataAs<AZ::Render::LookupTableAsset>();
+            const auto* lut = operation->m_asset->GetDataAs<JE::Render::Features::LookupTableAsset>();
             if (!lut)
             {
                 FailOperation("The .azasset product does not contain LookupTableAsset.");
@@ -846,7 +846,7 @@ namespace JE::Editor::Render
         }
 
         void EditorHDRColorGradingComponent::OnLutGenerationCapture(
-            const JE::ColorGrading::LutGenerationCaptureMetadata& metadata)
+            const JE::Render::Features::LutGenerationCaptureMetadata& metadata)
         {
             const auto operation = m_operation;
             if (!operation || operation->m_phase != LutOperation::Phase::Capture)
@@ -862,13 +862,13 @@ namespace JE::Editor::Render
             }
         }
 
-        void EditorHDRColorGradingComponent::OnFrameCaptureFinished(AZ::Render::FrameCaptureResult result, const AZStd::string& info)
+        void EditorHDRColorGradingComponent::OnFrameCaptureFinished(JE::Render::Features::FrameCaptureResult result, const AZStd::string& info)
         {
-            JE::ColorGrading::LutGenerationCaptureNotificationBus::Handler::BusDisconnect();
-            AZ::Render::FrameCaptureNotificationBus::Handler::BusDisconnect();
+            JE::Render::Features::LutGenerationCaptureNotificationBus::Handler::BusDisconnect();
+            JE::Render::Features::FrameCaptureNotificationBus::Handler::BusDisconnect();
             if (m_operation && m_operation->m_phase == LutOperation::Phase::Capture)
             {
-                m_operation->m_captureId = AZ::Render::InvalidFrameCaptureId;
+                m_operation->m_captureId = JE::Render::Features::InvalidFrameCaptureId;
                 m_operation->m_captureResult = result;
                 m_operation->m_captureInfo = info;
                 m_operation->m_captureFinished = true;

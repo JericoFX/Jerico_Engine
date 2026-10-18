@@ -18,6 +18,7 @@ namespace LuaBuilderComponentCpp
         AddDependenciesToAsset = 9,
         UpdatedErrorMessage = 10,
         IgnoreRootedAndDirectoryPathCandidates = 11,
+        TrackNonLuaProductPathDependencies = 12,
 
         // add new, descriptive, entry above
         Current

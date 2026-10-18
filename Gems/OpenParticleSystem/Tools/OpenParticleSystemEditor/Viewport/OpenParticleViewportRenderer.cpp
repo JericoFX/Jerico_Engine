@@ -25,14 +25,14 @@
 #include <JE/Render/RPI/Public/Image/StreamingImage.h>
 
 #include <JE/World/Camera/Debug/CameraComponent.h>
-#include <Atom/Feature/PostProcessing/PostProcessingConstants.h>
-#include <Atom/Feature/PostProcess/PostProcessFeatureProcessorInterface.h>
-#include <Atom/Feature/ImageBasedLights/ImageBasedLightFeatureProcessorInterface.h>
-#include <Atom/Feature/ACES/AcesDisplayMapperFeatureProcessor.h>
+#include <JE/Render/Features/PostProcessing/PostProcessingConstants.h>
+#include <JE/Render/Features/PostProcess/PostProcessFeatureProcessorInterface.h>
+#include <JE/Render/Features/ImageBasedLights/ImageBasedLightFeatureProcessorInterface.h>
+#include <JE/Render/Features/ACES/AcesDisplayMapperFeatureProcessor.h>
 #include <JE/World/Camera/Debug/NoClipControllerComponent.h>
 
-#include <Atom/Feature/Utils/LightingPreset.h>
-#include <Atom/Feature/Utils/ModelPreset.h>
+#include <JE/Render/Features/Utils/LightingPreset.h>
+#include <JE/Render/Features/Utils/ModelPreset.h>
 #include <OpenParticleViewportRequestBus.h>
 #include <OpenParticleViewportSettings.h>
 
@@ -87,7 +87,7 @@ namespace OpenParticleSystemEditor
         CreatePostProcessEntity(entityContextId);
 
         // Init directional light processor
-        m_directionalLightFeatureProcessor = m_scene->GetFeatureProcessor<AZ::Render::DirectionalLightFeatureProcessorInterface>();
+        m_directionalLightFeatureProcessor = m_scene->GetFeatureProcessor<JE::Render::Features::DirectionalLightFeatureProcessorInterface>();
 
         InitSkybox();
 
@@ -319,9 +319,9 @@ namespace OpenParticleSystemEditor
     void OpenParticleViewportRenderer::InitSkybox()
     {
         // Init Skybox
-        m_skyboxFeatureProcessor = m_scene->GetFeatureProcessor<AZ::Render::SkyBoxFeatureProcessorInterface>();
+        m_skyboxFeatureProcessor = m_scene->GetFeatureProcessor<JE::Render::Features::SkyBoxFeatureProcessorInterface>();
         m_skyboxFeatureProcessor->Enable(true);
-        m_skyboxFeatureProcessor->SetSkyboxMode(AZ::Render::SkyBoxMode::Cubemap);
+        m_skyboxFeatureProcessor->SetSkyboxMode(JE::Render::Features::SkyBoxMode::Cubemap);
     }
 
     void OpenParticleViewportRenderer::ConnectEBus()
@@ -351,10 +351,10 @@ namespace OpenParticleSystemEditor
             return;
         }
         
-        AZ::Render::ImageBasedLightFeatureProcessorInterface* iblFeatureProcessor = m_scene->GetFeatureProcessor<AZ::Render::ImageBasedLightFeatureProcessorInterface>();
-        AZ::Render::PostProcessFeatureProcessorInterface* postProcessFeatureProcessor = m_scene->GetFeatureProcessor<AZ::Render::PostProcessFeatureProcessorInterface>();
+        JE::Render::Features::ImageBasedLightFeatureProcessorInterface* iblFeatureProcessor = m_scene->GetFeatureProcessor<JE::Render::Features::ImageBasedLightFeatureProcessorInterface>();
+        JE::Render::Features::PostProcessFeatureProcessorInterface* postProcessFeatureProcessor = m_scene->GetFeatureProcessor<JE::Render::Features::PostProcessFeatureProcessorInterface>();
 
-        AZ::Render::ExposureControlSettingsInterface* exposureControlSettingInterface = postProcessFeatureProcessor->GetOrCreateSettingsInterface(m_postProcessEntity->GetId())->GetOrCreateExposureControlSettingsInterface();
+        JE::Render::Features::ExposureControlSettingsInterface* exposureControlSettingInterface = postProcessFeatureProcessor->GetOrCreateSettingsInterface(m_postProcessEntity->GetId())->GetOrCreateExposureControlSettingsInterface();
 
         Camera::Configuration cameraConfig;
         Camera::CameraRequestBus::EventResult(cameraConfig, m_cameraEntity->GetId(), &Camera::CameraRequestBus::Events::GetCameraConfiguration);
@@ -363,7 +363,7 @@ namespace OpenParticleSystemEditor
         OpenParticleViewportRequestBus::BroadcastResult(
             enableAlternateSkybox, &OpenParticleViewportRequestBus::Events::GetAlternateSkyboxEnabled);
 
-        AZ::Render::LightingPresetPtr presetPtr;
+        JE::Render::Features::LightingPresetPtr presetPtr;
         EBUS_EVENT_RESULT(presetPtr, OpenParticleViewportRequestBus, GetLightingPresetByName, preset);
         if (presetPtr)
         {

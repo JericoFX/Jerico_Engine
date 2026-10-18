@@ -9,10 +9,10 @@
 #pragma once
 
 #include <AzCore/Component/Component.h>
-#include <Atom/Feature/PostProcess/AmbientOcclusion/AoSettingsInterface.h>
-#include <Atom/Feature/PostProcess/AmbientOcclusion/AoConstants.h>
-#include <Atom/Feature/PostProcess/AmbientOcclusion/SsaoConstants.h>
-#include <Atom/Feature/PostProcess/AmbientOcclusion/GtaoConstants.h>
+#include <JE/Render/Features/PostProcess/AmbientOcclusion/AoSettingsInterface.h>
+#include <JE/Render/Features/PostProcess/AmbientOcclusion/AoConstants.h>
+#include <JE/Render/Features/PostProcess/AmbientOcclusion/SsaoConstants.h>
+#include <JE/Render/Features/PostProcess/AmbientOcclusion/GtaoConstants.h>
 
 namespace JE::Render
 {
@@ -29,12 +29,12 @@ namespace JE::Render
             virtual ~AoRequests() {}
 
             // Auto-gen virtual getters/setters...
-#include <Atom/Feature/ParamMacros/StartParamFunctionsVirtual.inl>
-#include <Atom/Feature/PostProcess/AmbientOcclusion/AoParams.inl>
-#include <Atom/Feature/PostProcess/AmbientOcclusion/SsaoParams.inl>
-#include <Atom/Feature/PostProcess/AmbientOcclusion/GtaoParams.inl>
+#include <JE/Render/Features/ParamMacros/StartParamFunctionsVirtual.inl>
+#include <JE/Render/Features/PostProcess/AmbientOcclusion/AoParams.inl>
+#include <JE/Render/Features/PostProcess/AmbientOcclusion/SsaoParams.inl>
+#include <JE/Render/Features/PostProcess/AmbientOcclusion/GtaoParams.inl>
 
-#include <Atom/Feature/ParamMacros/EndParams.inl>
+#include <JE/Render/Features/ParamMacros/EndParams.inl>
 
         };
 

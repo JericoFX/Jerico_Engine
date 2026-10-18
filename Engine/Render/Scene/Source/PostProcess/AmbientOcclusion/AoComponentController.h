@@ -14,9 +14,9 @@
 #include <JE/Render/Scene/PostProcess/AmbientOcclusion/AoBus.h>
 #include <JE/Render/Scene/PostProcess/AmbientOcclusion/AoComponentConfiguration.h>
 
-#include <Atom/Feature/PostProcess/AmbientOcclusion/AoSettingsInterface.h>
-#include <Atom/Feature/PostProcess/PostProcessSettingsInterface.h>
-#include <Atom/Feature/PostProcess/PostProcessFeatureProcessorInterface.h>
+#include <JE/Render/Features/PostProcess/AmbientOcclusion/AoSettingsInterface.h>
+#include <JE/Render/Features/PostProcess/PostProcessSettingsInterface.h>
+#include <JE/Render/Features/PostProcess/PostProcessFeatureProcessorInterface.h>
 
 namespace JE::Editor::Render::Scene
 {
@@ -48,20 +48,20 @@ namespace JE::Render
             const AoComponentConfig& GetConfiguration() const;
 
             // Auto-gen function override declarations (functions definitions in .cpp)...
-#include <Atom/Feature/ParamMacros/StartParamFunctionsOverride.inl>
-#include <Atom/Feature/PostProcess/AmbientOcclusion/AoParams.inl>
-#include <Atom/Feature/PostProcess/AmbientOcclusion/SsaoParams.inl>
-#include <Atom/Feature/PostProcess/AmbientOcclusion/GtaoParams.inl>
+#include <JE/Render/Features/ParamMacros/StartParamFunctionsOverride.inl>
+#include <JE/Render/Features/PostProcess/AmbientOcclusion/AoParams.inl>
+#include <JE/Render/Features/PostProcess/AmbientOcclusion/SsaoParams.inl>
+#include <JE/Render/Features/PostProcess/AmbientOcclusion/GtaoParams.inl>
 
-#include <Atom/Feature/ParamMacros/EndParams.inl>
+#include <JE/Render/Features/ParamMacros/EndParams.inl>
 
         private:
             AZ_DISABLE_COPY(AoComponentController);
 
             void OnConfigChanged();
 
-            AZ::Render::PostProcessSettingsInterface* m_postProcessInterface = nullptr;
-            AZ::Render::AoSettingsInterface* m_ssaoSettingsInterface = nullptr;
+            JE::Render::Features::PostProcessSettingsInterface* m_postProcessInterface = nullptr;
+            JE::Render::Features::AoSettingsInterface* m_ssaoSettingsInterface = nullptr;
             AoComponentConfig m_configuration;
             AZ::EntityId m_entityId;
         };

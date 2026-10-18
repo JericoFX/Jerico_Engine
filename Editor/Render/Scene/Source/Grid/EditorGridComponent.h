@@ -11,7 +11,7 @@
 #include <Grid/GridComponent.h>
 #include <JE/Render/Scene/Grid/GridComponentConstants.h>
 #include <JE/Render/Scene/Grid/GridComponentBus.h>
-#include <Atom/Feature/Utils/EditorRenderComponentAdapter.h>
+#include <JE/Editor/Render/Features/Utils/EditorRenderComponentAdapter.h>
 
 namespace JE::Editor::Render
 {
@@ -19,10 +19,10 @@ namespace JE::Editor::Render
     {
         //! In-editor grid component
         class EditorGridComponent final
-            : public AZ::Render::EditorRenderComponentAdapter<JE::Render::Scene::GridComponentController, JE::Render::Scene::GridComponent, JE::Render::Scene::GridComponentConfig>
+            : public JE::Editor::Render::Features::EditorRenderComponentAdapter<JE::Render::Scene::GridComponentController, JE::Render::Scene::GridComponent, JE::Render::Scene::GridComponentConfig>
         {
         public:
-            using BaseClass = AZ::Render::EditorRenderComponentAdapter<JE::Render::Scene::GridComponentController, JE::Render::Scene::GridComponent, JE::Render::Scene::GridComponentConfig>;
+            using BaseClass = JE::Editor::Render::Features::EditorRenderComponentAdapter<JE::Render::Scene::GridComponentController, JE::Render::Scene::GridComponent, JE::Render::Scene::GridComponentConfig>;
             AZ_RTTI_WITH_NAME(JE::Editor::Render::Scene::EditorGridComponent, "AZ::Render::EditorGridComponent", JE::Render::Scene::EditorGridComponentTypeId, BaseClass, AzToolsFramework::Components::EditorComponentBase)
             AZ_EDITOR_COMPONENT_INTRUSIVE_DESCRIPTOR_TYPE(JE::Editor::Render::Scene::EditorGridComponent)
             AZ_COMPONENT_BASE(JE::Editor::Render::Scene::EditorGridComponent)

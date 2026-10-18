@@ -128,7 +128,7 @@ namespace OpenParticleSystemEditor
                     info.m_assetId, JE::Render::RPI::AssetUtils::TraceLevel::Warning);
                 if (asset)
                 {
-                    const AZ::Render::LightingPreset* preset = asset->GetDataAs<AZ::Render::LightingPreset>();
+                    const JE::Render::Features::LightingPreset* preset = asset->GetDataAs<JE::Render::Features::LightingPreset>();
                     if (preset)
                     {
                         auto presetPtr = AddLightingPreset(*preset);
@@ -151,9 +151,9 @@ namespace OpenParticleSystemEditor
         AZ_TracePrintf("OpenParticle Editor", "Finished loading viewport configurations.\n");
     }
 
-    AZ::Render::LightingPresetPtr OpenParticleViewportComponent::AddLightingPreset(const AZ::Render::LightingPreset& preset)
+    JE::Render::Features::LightingPresetPtr OpenParticleViewportComponent::AddLightingPreset(const JE::Render::Features::LightingPreset& preset)
     {
-        m_lightingPresetVector.push_back(AZStd::make_shared<AZ::Render::LightingPreset>(preset));
+        m_lightingPresetVector.push_back(AZStd::make_shared<JE::Render::Features::LightingPreset>(preset));
         auto presetPtr = m_lightingPresetVector.back();
 
         OpenParticleViewportNotificationBus::Broadcast(&OpenParticleViewportNotificationBus::Events::OnLightingPresetAdded, presetPtr);
@@ -166,7 +166,7 @@ namespace OpenParticleSystemEditor
         return presetPtr;
     }
 
-    AZ::Render::LightingPresetPtr OpenParticleViewportComponent::GetLightingPresetByName(const AZStd::string& name) const
+    JE::Render::Features::LightingPresetPtr OpenParticleViewportComponent::GetLightingPresetByName(const AZStd::string& name) const
     {
         return m_lightingPresetDisplayNameMap[name];
     }
@@ -181,7 +181,7 @@ namespace OpenParticleSystemEditor
         return m_lightingPresetNameSelection;
     }
 
-    void OpenParticleViewportComponent::SelectLightingPreset(AZ::Render::LightingPresetPtr preset)
+    void OpenParticleViewportComponent::SelectLightingPreset(JE::Render::Features::LightingPresetPtr preset)
     {
         if (preset)
         {

@@ -1,0 +1,76 @@
+--- a/src/mcpp_lib.h
++++ b/src/mcpp_lib.h
+@@ -43,6 +43,15 @@
+                                               const char *  fullname)  /* Full path            */
+     );
+ 
++    /* Called after include macro expansion, before include search/open.
++     * Return 0 to keep the name, -1 to reject, or the replacement byte length
++     * excluding NUL. A replacement must fit capacity including NUL. The name
++     * is borrowed only during this call; MCPP immediately copies it to its
++     * normal filename storage. NULL disables the callback. Not thread-safe.
++     */
++    extern DLL_DECL void mcpp_set_resolve_include_callback(
++        int (*resolve_include)(const char * name, char * resolved, size_t capacity));
++
+ #ifdef __cplusplus
+ }
+ #endif
+--- a/src/internal.H
++++ b/src/internal.H
+@@ -504,6 +504,7 @@
+                 (* mcpp_fprintf)( OUTDEST od, const char * format, ...);
+ 
+ extern void     (*g_report_include)(FILE *, const char *, const char *, const char *);
++extern int      (*g_resolve_include)(const char *, char *, size_t);
+ 
+ /* system.c */
+ extern void     do_options( int argc, char ** argv, char ** in_pp
+--- a/src/support.c
++++ b/src/support.c
+@@ -364,6 +364,14 @@
+ }
+ #endif
+ 
++int (*g_resolve_include)(const char *, char *, size_t);
++
++void mcpp_set_resolve_include_callback(
++    int (*resolve_include)(const char *, char *, size_t))
++{
++    g_resolve_include = resolve_include;
++}
++
+ void (*g_report_include)(FILE *, const char *, const char *, const char *);
+ 
+ void mcpp_set_report_include_callback(
+--- a/src/mcpp_lib.def
++++ b/src/mcpp_lib.def
+@@ -6,3 +6,4 @@
+ 	mcpp_use_mem_buffers
+ 	mcpp_get_mem_buffer
+ 	mcpp_set_report_include_callback
++	mcpp_set_resolve_include_callback
+--- a/src/system.c
++++ b/src/system.c
+@@ -3164,6 +3164,21 @@
+ #if SYS_FAMILY == SYS_WIN
+     bsl2sl( fname);
+ #endif
++    if (g_resolve_include) {
++        char resolved[ PATHMAX] = { EOS, };
++        int length = g_resolve_include( fname, resolved, sizeof resolved);
++        if (length < 0 || (length > 0 &&
++                ((size_t) length >= sizeof resolved || resolved[ length] != EOS
++                    || strlen( resolved) != (size_t) length))) {
++            cerror( "Invalid include resolution for \"%s\"", fname, 0L, NULL);
++            goto error;
++        }
++        if (length > 0) {
++            /* open_file/add_file retains this allocation as real_fname. */
++            free( fname);
++            fname = save_string( resolved);
++        }
++    }
+     filename = fname;
+ #if NO_DIR                              /* Unofficial feature           */
+     if (no_dir) {                       /* Strip directory components   */

@@ -13,7 +13,7 @@
 namespace JE::Render::Scene
 {
     SimpleSpotLightDelegate::SimpleSpotLightDelegate(AZ::EntityId entityId, bool isVisible)
-        : LightDelegateBase<AZ::Render::SimpleSpotLightFeatureProcessorInterface>(entityId, isVisible)
+        : LightDelegateBase<JE::Render::Features::SimpleSpotLightFeatureProcessorInterface>(entityId, isVisible)
     {
         InitBase(entityId);
     }
@@ -29,7 +29,7 @@ namespace JE::Render::Scene
     float SimpleSpotLightDelegate::CalculateAttenuationRadius(float lightThreshold) const
     {
         // Calculate the radius at which the irradiance will be equal to cutoffIntensity.
-        float intensity = GetPhotometricValue().GetCombinedIntensity(AZ::Render::PhotometricUnit::Lumen);
+        float intensity = GetPhotometricValue().GetCombinedIntensity(JE::Render::Features::PhotometricUnit::Lumen);
         return AZ::Sqrt(intensity / lightThreshold);
     }
 
@@ -144,7 +144,7 @@ namespace JE::Render::Scene
         }
     }
 
-    void SimpleSpotLightDelegate::SetShadowmapMaxSize(AZ::Render::ShadowmapSize size)
+    void SimpleSpotLightDelegate::SetShadowmapMaxSize(JE::Render::Features::ShadowmapSize size)
     {
         if (GetShadowsEnabled() && GetLightHandle().IsValid())
         {
@@ -152,7 +152,7 @@ namespace JE::Render::Scene
         }
     }
 
-    void SimpleSpotLightDelegate::SetShadowFilterMethod(AZ::Render::ShadowFilterMethod method)
+    void SimpleSpotLightDelegate::SetShadowFilterMethod(JE::Render::Features::ShadowFilterMethod method)
     {
         if (GetShadowsEnabled() && GetLightHandle().IsValid())
         {

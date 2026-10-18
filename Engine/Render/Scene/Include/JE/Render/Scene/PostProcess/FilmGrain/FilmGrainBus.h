@@ -8,7 +8,7 @@
 
 #pragma once
 
-#include <Atom/Feature/PostProcess/FilmGrain/FilmGrainConstants.h>
+#include <JE/Render/Features/PostProcess/FilmGrain/FilmGrainConstants.h>
 #include <AzCore/Component/Component.h>
 
 namespace JE::Render
@@ -27,9 +27,9 @@ namespace JE::Render
             }
 
             // Auto-gen virtual getters/setters...
-#include <Atom/Feature/ParamMacros/StartParamFunctionsVirtual.inl>
-#include <Atom/Feature/PostProcess/FilmGrain/FilmGrainParams.inl>
-#include <Atom/Feature/ParamMacros/EndParams.inl>
+#include <JE/Render/Features/ParamMacros/StartParamFunctionsVirtual.inl>
+#include <JE/Render/Features/PostProcess/FilmGrain/FilmGrainParams.inl>
+#include <JE/Render/Features/ParamMacros/EndParams.inl>
         };
 
         typedef AZ::EBus<FilmGrainRequests> FilmGrainRequestBus;

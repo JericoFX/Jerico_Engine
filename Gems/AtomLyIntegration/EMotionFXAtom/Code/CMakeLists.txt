@@ -19,8 +19,7 @@ ly_add_target(
             AZ::AzCore
             Gem::EMotionFXStaticLib
             Gem::Atom_Utils.Static
-            Gem::Atom_Feature_Common
-            Gem::Atom_Feature_Common.Public
+            JE::RenderFeatures
             JE::RenderIntegration
             Gem::Atom_RHI.Reflect
             JE::RenderScene.Public
@@ -74,7 +73,7 @@ if(PAL_TRAIT_BUILD_HOST_TOOLS)
                 Gem::AtomToolsFramework.Static
                 Gem::AtomToolsFramework.Editor
                 JE::WorldCamera
-                Gem::Atom_Feature_Common.Public
+                JE::RenderFeatures
                 JE::RenderScene
         RUNTIME_DEPENDENCIES
             Gem::EMotionFX.Editor

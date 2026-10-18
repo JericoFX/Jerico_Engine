@@ -22,9 +22,14 @@
 #include <JE/Render/RPI/Public/FeatureProcessor.h>
 #include <JE/Render/RPI/Public/MeshDrawPacket.h>
 
-#include <Atom/Feature/RayTracing/RayTracingFeatureProcessorInterface.h>
+#include <JE/Render/Features/RayTracing/RayTracingFeatureProcessorInterface.h>
 
 #include <TerrainRenderer/Vector2i.h>
+
+namespace JE::Render::Features
+{
+    class MeshFeatureProcessor;
+}
 
 namespace JE::Render::RPI
 {
@@ -38,7 +43,7 @@ namespace AZ::RHI
 
 namespace AZ::Render
 {
-    class MeshFeatureProcessor;
+
 }
 
 namespace Terrain
@@ -146,8 +151,8 @@ namespace Terrain
             struct MeshGroup
             {
                 AZ::Uuid m_id { AZ::Uuid::CreateRandom() };
-                AZ::Render::RayTracingFeatureProcessorInterface::Mesh m_mesh;
-                AZ::Render::RayTracingFeatureProcessorInterface::SubMeshVector m_submeshVector;
+                JE::Render::Features::RayTracingFeatureProcessorInterface::Mesh m_mesh;
+                JE::Render::Features::RayTracingFeatureProcessorInterface::SubMeshVector m_submeshVector;
                 bool m_isVisible = false;
             };
 
@@ -301,7 +306,7 @@ namespace Terrain
 
         MeshConfiguration m_config;
         JE::Render::RPI::Scene* m_parentScene;
-        AZ::Render::RayTracingFeatureProcessorInterface* m_rayTracingFeatureProcessor;
+        JE::Render::Features::RayTracingFeatureProcessorInterface* m_rayTracingFeatureProcessor;
 
         MaterialInstance m_materialInstance;
         AZStd::vector<CachedDrawData> m_cachedDrawData; // Holds common parts of draw packets
@@ -351,6 +356,6 @@ namespace Terrain
         AZ::RHI::Handle<uint32_t> m_meshMovedFlag;
 
         // Cached MeshFeatureProcessor
-        AZ::Render::MeshFeatureProcessorInterface* m_meshfeatureProcessor;
+        JE::Render::Features::MeshFeatureProcessorInterface* m_meshfeatureProcessor;
     };
 }

@@ -8,7 +8,7 @@
 
 #pragma once
 
-#include <Atom/Feature/PostProcess/Vignette/VignetteConstants.h>
+#include <JE/Render/Features/PostProcess/Vignette/VignetteConstants.h>
 #include <PostProcess/Vignette/VignetteComponentController.h>
 #include <JE/Render/Scene/PostProcess/Vignette/VignetteComponentConfig.h>
 #include <AzCore/Component/Component.h>

@@ -120,7 +120,7 @@ namespace JE::Editor::Render::Scene
         };
     }
 
-    AZ::Outcome<void, AZStd::string> ValidateLookupTable(const AZ::Render::LookupTableAsset& lookupTable)
+    AZ::Outcome<void, AZStd::string> ValidateLookupTable(const JE::Render::Features::LookupTableAsset& lookupTable)
     {
         size_t valueCount = 0;
         if (!CubeSize(lookupTable.m_intervals.size(), 3, valueCount) || lookupTable.m_values.size() != valueCount)
@@ -176,7 +176,7 @@ namespace JE::Editor::Render::Scene
             return AZ::Failure(AZStd::string("LUT readback must contain exactly the tightly packed RGBA float bytes."));
         }
 
-        AZ::Render::LookupTableAsset lut;
+        JE::Render::Features::LookupTableAsset lut;
         lut.m_name = "LookupTable";
         lut.m_intervals.reserve(size);
         lut.m_values.reserve(byteCount / sizeof(float) / 4 * 3);

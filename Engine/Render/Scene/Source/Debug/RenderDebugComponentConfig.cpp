@@ -21,15 +21,15 @@ namespace JE::Render::Scene
 
                 // Auto-gen serialize context code...
 #define SERIALIZE_CLASS RenderDebugComponentConfig
-#include <Atom/Feature/ParamMacros/StartParamSerializeContext.inl>
-#include <Atom/Feature/Debug/RenderDebugParams.inl>
-#include <Atom/Feature/ParamMacros/EndParams.inl>
+#include <JE/Render/Features/ParamMacros/StartParamSerializeContext.inl>
+#include <JE/Render/Features/Debug/RenderDebugParams.inl>
+#include <JE/Render/Features/ParamMacros/EndParams.inl>
 #undef SERIALIZE_CLASS
                 ;
         }
     }
 
-    void RenderDebugComponentConfig::CopySettingsFrom(AZ::Render::RenderDebugSettingsInterface* settings)
+    void RenderDebugComponentConfig::CopySettingsFrom(JE::Render::Features::RenderDebugSettingsInterface* settings)
     {
         if (!settings)
         {
@@ -37,13 +37,13 @@ namespace JE::Render::Scene
         }
 
 #define COPY_SOURCE settings
-#include <Atom/Feature/ParamMacros/StartParamCopySettingsFrom.inl>
-#include <Atom/Feature/Debug/RenderDebugParams.inl>
-#include <Atom/Feature/ParamMacros/EndParams.inl>
+#include <JE/Render/Features/ParamMacros/StartParamCopySettingsFrom.inl>
+#include <JE/Render/Features/Debug/RenderDebugParams.inl>
+#include <JE/Render/Features/ParamMacros/EndParams.inl>
 #undef COPY_SOURCE
     }
 
-    void RenderDebugComponentConfig::CopySettingsTo(AZ::Render::RenderDebugSettingsInterface* settings)
+    void RenderDebugComponentConfig::CopySettingsTo(JE::Render::Features::RenderDebugSettingsInterface* settings)
     {
         if (!settings)
         {
@@ -51,9 +51,9 @@ namespace JE::Render::Scene
         }
 
 #define COPY_TARGET settings
-#include <Atom/Feature/ParamMacros/StartParamCopySettingsTo.inl>
-#include <Atom/Feature/Debug/RenderDebugParams.inl>
-#include <Atom/Feature/ParamMacros/EndParams.inl>
+#include <JE/Render/Features/ParamMacros/StartParamCopySettingsTo.inl>
+#include <JE/Render/Features/Debug/RenderDebugParams.inl>
+#include <JE/Render/Features/ParamMacros/EndParams.inl>
 #undef COPY_TARGET
     }
 

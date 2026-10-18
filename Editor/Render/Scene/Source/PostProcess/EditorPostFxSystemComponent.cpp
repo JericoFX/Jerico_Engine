@@ -74,7 +74,7 @@ namespace JE::Editor::Render
             }
         }
 
-        void EditorPostFxSystemComponent::GetLayerCategories(AZ::Render::PostFx::LayerCategoriesMap& layerCategories) const
+        void EditorPostFxSystemComponent::GetLayerCategories(JE::Render::Features::PostFx::LayerCategoriesMap& layerCategories) const
         {
             // use layer category definitions from all postfxlayercategories asset files
             for (const auto& assetPair : m_layerCategoriesAssetMap)
@@ -88,7 +88,7 @@ namespace JE::Editor::Render
             }
 
             // insert default layer
-            layerCategories[AZ::Render::PostFx::DefaultLayerCategory] = AZ::Render::PostFx::DefaultLayerCategoryValue;
+            layerCategories[JE::Render::Features::PostFx::DefaultLayerCategory] = JE::Render::Features::PostFx::DefaultLayerCategoryValue;
         }
 
         void EditorPostFxSystemComponent::OnCatalogLoaded(const char* catalogFile)

@@ -12,7 +12,7 @@
 #include <AzFramework/Components/ComponentAdapter.h>
 #include <JE/Render/Scene/PostProcess/ExposureControl/ExposureControlComponentConfig.h>
 #include <JE/Render/Scene/PostProcess/ExposureControl/ExposureControlComponentConstants.h>
-#include <Atom/Feature/PostProcess/ExposureControl/ExposureControlConstants.h>
+#include <JE/Render/Features/PostProcess/ExposureControl/ExposureControlConstants.h>
 #include <PostProcess/ExposureControl/ExposureControlComponentController.h>
 
 namespace JE::Render

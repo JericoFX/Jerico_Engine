@@ -1,0 +1,76 @@
+/*
+ * Copyright (c) Contributors to the Open 3D Engine Project.
+ * For complete copyright and license terms please see the LICENSE at the root of this distribution.
+ *
+ * SPDX-License-Identifier: Apache-2.0 OR MIT
+ *
+ */
+
+#include <AzCore/Math/MathUtils.h>
+#include <AzCore/Serialization/SerializeContext.h>
+
+#include <JE/Render/RPI/Public/RenderPipeline.h>
+#include <JE/Render/RPI/Public/Shader/ShaderResourceGroup.h>
+#include <JE/Render/RPI/Public/RPIUtils.h>
+
+#include <ScreenSpace/DeferredFogSettings.h>
+#include <ScreenSpace/DeferredFogPass.h>
+
+namespace JE::Render
+{
+    namespace Features
+    {
+        DeferredFogSettings::DeferredFogSettings(PostProcessFeatureProcessor* featureProcessor)
+            : PostProcessBase(featureProcessor) {}
+
+        DeferredFogSettings::DeferredFogSettings()
+            : PostProcessBase(nullptr) {}
+
+        AZ::Data::Instance<JE::Render::RPI::StreamingImage> DeferredFogSettings::LoadStreamingImage(
+            const char* textureFilePath, [[maybe_unused]] const char* sampleName)
+        {
+            return JE::Render::RPI::LoadStreamingTexture(textureFilePath);
+        }
+
+        void DeferredFogSettings::OnSettingsChanged()
+        {
+            m_needUpdate = true;   // even if disabled, mark it for when it'll become enabled
+        }
+
+        //-------------------------------------------
+        // Getters / setters macro
+#define AZ_GFX_COMMON_PARAM(ValueType, Name, MemberName, DefaultValue)                              \
+        ValueType DeferredFogSettings::Get##Name() const                                            \
+        {                                                                                           \
+            return MemberName;                                                                      \
+        }                                                                                           \
+        void DeferredFogSettings::Set##Name(ValueType val)                                          \
+        {                                                                                           \
+            MemberName = val;                                                                       \
+            OnSettingsChanged();                                                                    \
+        }                                                                                           \
+
+#include <JE/Render/Features/ParamMacros/MapParamCommon.inl>
+#include <JE/Render/Features/ScreenSpace/DeferredFogParams.inl>
+#include <JE/Render/Features/ParamMacros/EndParams.inl>
+        //-------------------------------------------
+
+        void DeferredFogSettings::ApplySettingsTo(DeferredFogSettings* target, [[maybe_unused]] float alpha) const
+        {
+            AZ_Assert(target != nullptr, "DeferredFogSettings::ApplySettingsTo called with nullptr as argument.");
+            if (!target)
+            {
+                return;
+            }
+
+            // For now the fog should be singleton - later on we'd need a better blending functionality 
+#define AZ_GFX_COMMON_PARAM(ValueType, Name, MemberName, DefaultValue)                              \
+            target->Set##Name(MemberName);                                                          \
+
+#include <JE/Render/Features/ParamMacros/MapAllCommon.inl>
+#include <JE/Render/Features/ScreenSpace/DeferredFogParams.inl>
+#include <JE/Render/Features/ParamMacros/EndParams.inl>
+        }
+    } // namespace Features
+} // namespace JE::Render
+

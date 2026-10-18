@@ -9,7 +9,7 @@
 #pragma once
 
 #include <AzCore/Component/Component.h>
-#include <Atom/Feature/Debug/RenderDebugConstants.h>
+#include <JE/Render/Features/Debug/RenderDebugConstants.h>
 
 namespace JE::Render::Scene
 {
@@ -24,9 +24,9 @@ namespace JE::Render::Scene
         virtual ~RenderDebugRequests() {}
 
         // Auto-gen virtual getters/setters...
-#include <Atom/Feature/ParamMacros/StartParamFunctionsVirtual.inl>
-#include <Atom/Feature/Debug/RenderDebugParams.inl>
-#include <Atom/Feature/ParamMacros/EndParams.inl>
+#include <JE/Render/Features/ParamMacros/StartParamFunctionsVirtual.inl>
+#include <JE/Render/Features/Debug/RenderDebugParams.inl>
+#include <JE/Render/Features/ParamMacros/EndParams.inl>
 
     };
 

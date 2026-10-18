@@ -9,7 +9,7 @@
 #pragma once
 
 #include <AzFramework/Components/ComponentAdapter.h>
-#include <Atom/Feature/SkyBox/SkyboxConstants.h>
+#include <JE/Render/Features/SkyBox/SkyboxConstants.h>
 #include <JE/Render/Scene/SkyBox/PhysicalSkyComponentConfig.h>
 #include <SkyBox/PhysicalSkyComponentController.h>
 
@@ -22,7 +22,7 @@ namespace JE::Render
         {
         public:
             using BaseClass = AzFramework::Components::ComponentAdapter<PhysicalSkyComponentController, PhysicalSkyComponentConfig>;
-            AZ_RTTI_WITH_NAME(JE::Render::Scene::PhysicalSkyComponent, "AZ::Render::PhysicalSkyComponent", AZ::Render::PhysicalSkyComponentTypeId , BaseClass, AZ::Component)
+            AZ_RTTI_WITH_NAME(JE::Render::Scene::PhysicalSkyComponent, "AZ::Render::PhysicalSkyComponent", JE::Render::Features::PhysicalSkyComponentTypeId , BaseClass, AZ::Component)
             AZ_COMPONENT_INTRUSIVE_DESCRIPTOR_TYPE(JE::Render::Scene::PhysicalSkyComponent)
             AZ_COMPONENT_BASE(JE::Render::Scene::PhysicalSkyComponent)
             AZ_CLASS_ALLOCATOR(JE::Render::Scene::PhysicalSkyComponent, AZ::ComponentAllocator);

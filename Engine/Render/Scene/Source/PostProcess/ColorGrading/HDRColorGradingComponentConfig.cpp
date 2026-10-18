@@ -22,15 +22,15 @@ namespace JE::Render
 
                 // Auto-gen serialize context code...
 #define SERIALIZE_CLASS HDRColorGradingComponentConfig
-#include <Atom/Feature/ParamMacros/StartParamSerializeContext.inl>
-#include <Atom/Feature/PostProcess/ColorGrading/HDRColorGradingParams.inl>
-#include <Atom/Feature/ParamMacros/EndParams.inl>
+#include <JE/Render/Features/ParamMacros/StartParamSerializeContext.inl>
+#include <JE/Render/Features/PostProcess/ColorGrading/HDRColorGradingParams.inl>
+#include <JE/Render/Features/ParamMacros/EndParams.inl>
 #undef SERIALIZE_CLASS
                     ;
             }
         }
 
-        void HDRColorGradingComponentConfig::CopySettingsTo (AZ::Render::HDRColorGradingSettingsInterface* settings)
+        void HDRColorGradingComponentConfig::CopySettingsTo (JE::Render::Features::HDRColorGradingSettingsInterface* settings)
         {
             if (!settings)
             {
@@ -38,9 +38,9 @@ namespace JE::Render
             }
 
 #define COPY_TARGET settings
-#include <Atom/Feature/ParamMacros/StartParamCopySettingsTo.inl>
-#include <Atom/Feature/PostProcess/ColorGrading/HDRColorGradingParams.inl>
-#include <Atom/Feature/ParamMacros/EndParams.inl>
+#include <JE/Render/Features/ParamMacros/StartParamCopySettingsTo.inl>
+#include <JE/Render/Features/PostProcess/ColorGrading/HDRColorGradingParams.inl>
+#include <JE/Render/Features/ParamMacros/EndParams.inl>
 #undef COPY_TARGET
         }
     } // namespace Render

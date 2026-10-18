@@ -11,7 +11,7 @@
 #include <CubeMapCapture/CubeMapCaptureComponent.h>
 #include <CubeMapCapture/CubeMapCaptureComponentConstants.h>
 #include <CubeMapCapture/EditorCubeMapRenderer.h>
-#include <Atom/Feature/Utils/EditorRenderComponentAdapter.h>
+#include <JE/Editor/Render/Features/Utils/EditorRenderComponentAdapter.h>
 #include <JE/Render/Scene/CubeMapCapture/EditorCubeMapCaptureBus.h>
 
 namespace JE::Editor::Render
@@ -19,12 +19,12 @@ namespace JE::Editor::Render
     namespace Scene
     {        
         class EditorCubeMapCaptureComponent final
-            : public AZ::Render::EditorRenderComponentAdapter<JE::Render::Scene::CubeMapCaptureComponentController, JE::Render::Scene::CubeMapCaptureComponent, JE::Render::Scene::CubeMapCaptureComponentConfig>
+            : public JE::Editor::Render::Features::EditorRenderComponentAdapter<JE::Render::Scene::CubeMapCaptureComponentController, JE::Render::Scene::CubeMapCaptureComponent, JE::Render::Scene::CubeMapCaptureComponentConfig>
             , public JE::Render::Scene::EditorCubeMapCaptureBus::Handler
             , private EditorCubeMapRenderer
         {
         public:
-            using BaseClass = AZ::Render::EditorRenderComponentAdapter<JE::Render::Scene::CubeMapCaptureComponentController, JE::Render::Scene::CubeMapCaptureComponent, JE::Render::Scene::CubeMapCaptureComponentConfig>;
+            using BaseClass = JE::Editor::Render::Features::EditorRenderComponentAdapter<JE::Render::Scene::CubeMapCaptureComponentController, JE::Render::Scene::CubeMapCaptureComponent, JE::Render::Scene::CubeMapCaptureComponentConfig>;
             AZ_RTTI_WITH_NAME(JE::Editor::Render::Scene::EditorCubeMapCaptureComponent, "AZ::Render::EditorCubeMapCaptureComponent", JE::Render::Scene::EditorCubeMapCaptureComponentTypeId, BaseClass, AzToolsFramework::Components::EditorComponentBase)
             AZ_EDITOR_COMPONENT_INTRUSIVE_DESCRIPTOR_TYPE(JE::Editor::Render::Scene::EditorCubeMapCaptureComponent)
             AZ_COMPONENT_BASE(JE::Editor::Render::Scene::EditorCubeMapCaptureComponent)

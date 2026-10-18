@@ -9,7 +9,7 @@
 #pragma once
 
 #include <ImageBasedLights/ImageBasedLightComponent.h>
-#include <Atom/Feature/Utils/EditorRenderComponentAdapter.h>
+#include <JE/Editor/Render/Features/Utils/EditorRenderComponentAdapter.h>
 #include <JE/Render/Scene/ImageBasedLights/ImageBasedLightComponentConstants.h>
 #include <JE/Render/Scene/ImageBasedLights/ImageBasedLightComponentBus.h>
 
@@ -19,10 +19,10 @@ namespace JE::Editor::Render
     {
         //! In-editor image based lighting component
         class EditorImageBasedLightComponent final
-            : public AZ::Render::EditorRenderComponentAdapter<JE::Render::Scene::ImageBasedLightComponentController, JE::Render::Scene::ImageBasedLightComponent, JE::Render::Scene::ImageBasedLightComponentConfig>
+            : public JE::Editor::Render::Features::EditorRenderComponentAdapter<JE::Render::Scene::ImageBasedLightComponentController, JE::Render::Scene::ImageBasedLightComponent, JE::Render::Scene::ImageBasedLightComponentConfig>
         {
         public:
-            using BaseClass = AZ::Render::EditorRenderComponentAdapter<JE::Render::Scene::ImageBasedLightComponentController, JE::Render::Scene::ImageBasedLightComponent, JE::Render::Scene::ImageBasedLightComponentConfig>;
+            using BaseClass = JE::Editor::Render::Features::EditorRenderComponentAdapter<JE::Render::Scene::ImageBasedLightComponentController, JE::Render::Scene::ImageBasedLightComponent, JE::Render::Scene::ImageBasedLightComponentConfig>;
             AZ_RTTI_WITH_NAME(JE::Editor::Render::Scene::EditorImageBasedLightComponent, "AZ::Render::EditorImageBasedLightComponent", JE::Render::Scene::EditorImageBasedLightComponentTypeId, BaseClass, AzToolsFramework::Components::EditorComponentBase)
             AZ_EDITOR_COMPONENT_INTRUSIVE_DESCRIPTOR_TYPE(JE::Editor::Render::Scene::EditorImageBasedLightComponent)
             AZ_COMPONENT_BASE(JE::Editor::Render::Scene::EditorImageBasedLightComponent)

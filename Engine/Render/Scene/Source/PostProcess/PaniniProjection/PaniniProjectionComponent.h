@@ -8,7 +8,7 @@
 
 #pragma once
 
-#include <Atom/Feature/PostProcess/PaniniProjection/PaniniProjectionConstants.h>
+#include <JE/Render/Features/PostProcess/PaniniProjection/PaniniProjectionConstants.h>
 #include <PostProcess/PaniniProjection/PaniniProjectionComponentController.h>
 #include <JE/Render/Scene/PostProcess/PaniniProjection/PaniniProjectionComponentConfig.h>
 #include <AzCore/Component/Component.h>

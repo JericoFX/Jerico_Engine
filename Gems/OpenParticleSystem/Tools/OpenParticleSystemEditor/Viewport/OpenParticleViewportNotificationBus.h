@@ -10,8 +10,8 @@
 
 #include <ACES/Aces.h>
 #include <AzCore/EBus/EBus.h>
-#include <Atom/Feature/Utils/LightingPreset.h>
-#include <Atom/Feature/Utils/ModelPreset.h>
+#include <JE/Render/Features/Utils/LightingPreset.h>
+#include <JE/Render/Features/Utils/ModelPreset.h>
 
 namespace OpenParticleSystemEditor
 {
@@ -30,7 +30,7 @@ namespace OpenParticleSystemEditor
 
         //! Signal that a preset was added
         //! @param preset being added
-        virtual void OnLightingPresetAdded([[maybe_unused]] AZ::Render::LightingPresetPtr preset) {}
+        virtual void OnLightingPresetAdded([[maybe_unused]] JE::Render::Features::LightingPresetPtr preset) {}
 
         //! Signal that a preset was selected
         //! @param preset being selected
@@ -38,7 +38,7 @@ namespace OpenParticleSystemEditor
 
         //! Signal that a preset was changed
         //! @param preset being changed
-        virtual void OnLightingPresetChanged([[maybe_unused]] AZ::Render::LightingPresetPtr preset) {}
+        virtual void OnLightingPresetChanged([[maybe_unused]] JE::Render::Features::LightingPresetPtr preset) {}
 
         //! Notify when enabled state for grid changes
         virtual void OnGridEnabledChanged([[maybe_unused]] bool enable) {}

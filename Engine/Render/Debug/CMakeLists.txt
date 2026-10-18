@@ -21,7 +21,7 @@ ly_add_target(
     BUILD_DEPENDENCIES
         PUBLIC JE::RenderDebug.Public
         PRIVATE AZ::AzFramework Legacy::CryCommon JE::DebugImGui
-            Gem::Atom_Feature_Common.Public Gem::Atom_Utils.Static
+            JE::RenderFeatures Gem::Atom_Utils.Static
 )
 set_target_properties(RenderDebug PROPERTIES UNITY_BUILD OFF)
 

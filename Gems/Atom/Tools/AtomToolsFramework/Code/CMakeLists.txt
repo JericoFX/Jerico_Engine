@@ -42,8 +42,7 @@ ly_add_target(
             JE::RenderAssetBuilders
             JE::RenderIntegration.Public
             JE::WorldCamera
-            Gem::Atom_Feature_Common
-            Gem::Atom_Feature_Common.Public
+            JE::RenderFeatures
             Gem::Atom_RHI.Public
             Gem::Atom_RHI.Reflect
             JE::RenderIntegration
@@ -69,7 +68,6 @@ ly_add_target(
             Gem::${gem_name}.Static
     RUNTIME_DEPENDENCIES
         JE::RenderIntegration
-        Gem::Atom_Feature_Common.Editor
         Gem::Atom_RHI.Private
         Gem::GraphCanvas.Editor
         Gem::GraphCanvasWidgets

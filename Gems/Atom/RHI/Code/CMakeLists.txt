@@ -210,7 +210,7 @@ if(PAL_TRAIT_BUILD_TESTS_SUPPORTED)
                     AZ::AzFramework
                     Gem::${gem_name}.Edit
                     Gem::${gem_name}.Public
-                    Gem::Atom_Feature_Common.Public
+                    JE::RenderFeatures
         )
         ly_add_googletest(
             NAME Gem::${gem_name}.Tests

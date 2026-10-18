@@ -6,7 +6,7 @@
  *
  */
 
-#include <Atom/Feature/CoreLights/CapsuleLightFeatureProcessorInterface.h>
+#include <JE/Render/Features/CoreLights/CapsuleLightFeatureProcessorInterface.h>
 #include <JE/Render/RPI/Public/Scene.h>
 #include <JE/Render/Scene/CoreLights/AreaLightComponentConfig.h>
 #include <CoreLights/CapsuleLightDelegate.h>
@@ -14,7 +14,7 @@
 namespace JE::Render::Scene
 {
     CapsuleLightDelegate::CapsuleLightDelegate(LmbrCentral::CapsuleShapeComponentRequests* shapeBus, AZ::EntityId entityId, bool isVisible)
-        : LightDelegateBase<AZ::Render::CapsuleLightFeatureProcessorInterface>(entityId, isVisible)
+        : LightDelegateBase<JE::Render::Features::CapsuleLightFeatureProcessorInterface>(entityId, isVisible)
         , m_capsuleShapeBus(shapeBus)
     {
         InitBase(entityId);
@@ -36,7 +36,7 @@ namespace JE::Render::Scene
         float h4 = h2 * h2;
 
         float radius = AZ::Sqrt(((-h2 / 4.0f) + AZ::Sqrt((h4 / 16.0f) + (4.0f / t2))) / 2.0f);
-        float intensity = GetPhotometricValue().GetCombinedIntensity(AZ::Render::PhotometricUnit::Candela);
+        float intensity = GetPhotometricValue().GetCombinedIntensity(JE::Render::Features::PhotometricUnit::Candela);
 
         return radius * intensity;
     }
@@ -107,7 +107,7 @@ namespace JE::Render::Scene
 
     float CapsuleLightDelegate::GetEffectiveSolidAngle() const
     {
-        return AZ::Render::PhotometricValue::OmnidirectionalSteradians;
+        return JE::Render::Features::PhotometricValue::OmnidirectionalSteradians;
     }
 
     CapsuleLightDelegate::CapsuleVisualizationDimensions CapsuleLightDelegate::CalculateCapsuleVisualizationDimensions() const

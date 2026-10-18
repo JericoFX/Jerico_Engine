@@ -33,7 +33,9 @@ namespace LuaBuilder
 {
     namespace
     {
-        AZStd::vector<AZ::Data::Asset<AZ::ScriptAsset>> ConvertToAssets(AssetBuilderSDK::ProductPathDependencySet& dependencySet)
+        AZStd::vector<AZ::Data::Asset<AZ::ScriptAsset>> ConvertToAssets(
+            const AssetBuilderSDK::ProductPathDependencySet& dependencySet,
+            AssetBuilderSDK::ProductPathDependencySet* productPathDependencies = nullptr)
         {
             AZStd::vector<AZ::Data::Asset<AZ::ScriptAsset>> assets;
 
@@ -45,6 +47,14 @@ namespace LuaBuilder
                     AZ::Data::AssetInfo assetInfo;
                     AZ::IO::Path path(dependency.m_dependencyPath);
                     bool isLuaDependency = !path.HasExtension() || path.Extension() == ".lua" || path.Extension() == ".luac";
+                    if (!isLuaDependency)
+                    {
+                        if (productPathDependencies)
+                        {
+                            productPathDependencies->insert(dependency);
+                        }
+                        continue;
+                    }
                     auto sourcePath = path.ReplaceExtension(".lua");
 
                     if (assetSystem->GetSourceInfoBySourcePath(sourcePath.c_str(), assetInfo, watchFolder)
@@ -57,16 +67,9 @@ namespace LuaBuilder
                         asset.SetAutoLoadBehavior(AZ::Data::AssetLoadBehavior::PreLoad);
                         assets.push_back(asset);
                     }
-                    else if(isLuaDependency)
-                    {
-                        AZ_Error("LuaBuilder", false, "Did not find dependency %s referenced by script.", dependency.m_dependencyPath.c_str());
-                    }
                     else
                     {
-                        AZ_Error("LuaBuilder", false, "%s referenced by script does not appear to be a lua file.\n"
-                            "References to assets should be handled using Property slots and AssetIds to ensure proper dependency tracking.\n"
-                            "This file will not be tracked as a dependency.",
-                            dependency.m_dependencyPath.c_str());
+                        AZ_Error("LuaBuilder", false, "Did not find dependency %s referenced by script.", dependency.m_dependencyPath.c_str());
                     }
                 }
             }
@@ -191,7 +194,8 @@ namespace LuaBuilder
         assetData.m_debugName = debugName;
         AssetBuilderSDK::ProductPathDependencySet dependencySet;
         ParseDependencies(request.m_fullPath, dependencySet);
-        assetData.m_dependencies = ConvertToAssets(dependencySet);
+        AssetBuilderSDK::ProductPathDependencySet productPathDependencies;
+        assetData.m_dependencies = ConvertToAssets(dependencySet, &productPathDependencies);
         auto scriptStream = assetData.CreateScriptWriteStream();
         LB_VERIFY(LuaDumpToStream(scriptStream, scriptContext.NativeContext()), "Failed to write lua bytecode to stream.");
 
@@ -214,6 +218,7 @@ namespace LuaBuilder
         }
 
         AssetBuilderSDK::JobProduct compileProduct{ destFileName, azrtti_typeid<AZ::ScriptAsset>(), AZ::ScriptAsset::CompiledAssetSubId };
+        compileProduct.m_pathDependencies = AZStd::move(productPathDependencies);
 
         for (auto& dependency : assetData.m_dependencies)
         {

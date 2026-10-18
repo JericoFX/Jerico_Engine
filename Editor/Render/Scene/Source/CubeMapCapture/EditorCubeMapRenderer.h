@@ -13,7 +13,7 @@
 #include <AzCore/Component/Entity.h>
 #include <AzCore/IO/SystemFile.h>
 #include <Atom/Utils/DdsFile.h>
-#include <Atom/Feature/CubeMapCapture/CubeMapCaptureFeatureProcessorInterface.h>
+#include <JE/Render/Features/CubeMapCapture/CubeMapCaptureFeatureProcessorInterface.h>
 
 namespace JE::Editor::Render
 {
@@ -41,7 +41,7 @@ namespace JE::Editor::Render
 
             // initiate the cubemap render and update the relative path if necessary
             AZ::u32 RenderCubeMap(
-                AZStd::function<void(AZ::Render::RenderCubeMapCallback, AZStd::string&)> renderCubeMapFn,
+                AZStd::function<void(JE::Render::Features::RenderCubeMapCallback, AZStd::string&)> renderCubeMapFn,
                 const AZStd::string dialogText,
                 const AZ::Entity* entityRequestingRender,
                 const AZStd::string& folderName,

@@ -110,7 +110,7 @@ namespace JE::Editor::Render
             JE::Render::Scene::CubeMapCaptureComponentConfig& configuration = m_controller.m_configuration;
 
             return RenderCubeMap(
-                [&](AZ::Render::RenderCubeMapCallback callback, AZStd::string& relativePath) { m_controller.RenderCubeMap(callback, relativePath); },
+                [&](JE::Render::Features::RenderCubeMapCallback callback, AZStd::string& relativePath) { m_controller.RenderCubeMap(callback, relativePath); },
                 "Capturing Cubemap...",
                 GetEntity(),
                 "CubeMapCaptures",

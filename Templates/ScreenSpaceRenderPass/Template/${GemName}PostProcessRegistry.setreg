@@ -12,7 +12,7 @@
         "",
         "WHAT YOU CAN ADD TO IT:",
         "  - PassTemplate aliases via Atom's AssetAliasesSourceData. See",
-        "    Gems/Atom/Feature/Common/Assets/Passes/PassTemplates.azasset for the",
+        "    Engine/Render/Features/Assets/Passes/PassTemplates.azasset for the",
         "    canonical example. Pair such an azasset with a LoadPassTemplateMappings",
         "    call in your RenderingSystemComponent (commented stub already there).",
         "",

@@ -1339,7 +1339,7 @@ void CSequenceBatchRenderDialog::OnKickIdle()
                 const AZStd::string fileName = AZStd::string::format("%s.%s", filePath.c_str(), imageFormatExtensionCstr);
                 if (AZ::StringFunc::Equal(imageFormatExtensionCstr, "dds"))
                 {
-                    if (const AZ::Render::FrameCaptureOutputResult result = AZ::Render::DdsFrameCaptureOutput(fileName, readbackResult);
+                    if (const JE::Render::Features::FrameCaptureOutputResult result = JE::Render::Features::DdsFrameCaptureOutput(fileName, readbackResult);
                         result.m_errorMessage.has_value())
                     {
                         AZ_Printf("TrackView", "Dds frame capture failed: %s", result.m_errorMessage.value().c_str());
@@ -1347,7 +1347,7 @@ void CSequenceBatchRenderDialog::OnKickIdle()
                 }
                 else if (AZ::StringFunc::Equal(imageFormatExtensionCstr, "ppm"))
                 {
-                    if (const AZ::Render::FrameCaptureOutputResult result = AZ::Render::PpmFrameCaptureOutput(fileName, readbackResult);
+                    if (const JE::Render::Features::FrameCaptureOutputResult result = JE::Render::Features::PpmFrameCaptureOutput(fileName, readbackResult);
                         result.m_errorMessage.has_value())
                     {
                         AZ_Printf("TrackView", "Ppm frame capture failed: %s", result.m_errorMessage.value().c_str());

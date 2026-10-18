@@ -10,7 +10,7 @@
 
 #include <AzCore/Component/Component.h>
 #include <AzCore/Component/TransformBus.h>
-#include <Atom/Feature/SkyBox/SkyBoxFeatureProcessorInterface.h>
+#include <JE/Render/Features/SkyBox/SkyBoxFeatureProcessorInterface.h>
 #include <JE/Render/Scene/SkyBox/HDRiSkyboxComponentConfig.h>
 #include <JE/Render/Scene/SkyBox/HDRiSkyboxBus.h>
 
@@ -79,7 +79,7 @@ namespace JE::Render
             AZ::Matrix4x4 GetInverseTransform(const AZ::Transform& world);
 
             AZ::TransformInterface* m_transformInterface = nullptr;
-            AZ::Render::SkyBoxFeatureProcessorInterface* m_featureProcessorInterface = nullptr;
+            JE::Render::Features::SkyBoxFeatureProcessorInterface* m_featureProcessorInterface = nullptr;
             HDRiSkyboxComponentConfig m_configuration;
             AZ::EntityId m_entityId;
             bool m_isActive = false;

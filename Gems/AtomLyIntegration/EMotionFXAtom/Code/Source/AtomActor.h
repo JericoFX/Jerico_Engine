@@ -15,6 +15,11 @@
 #include <AzCore/std/smart_ptr/intrusive_ptr.h>
 #include <AzCore/Asset/AssetCommon.h>
 
+namespace JE::Render::Features
+{
+    class SkinnedMeshInputBuffers;
+}
+
 namespace EMotionFX::Integration
 {
     class ActorAsset;
@@ -24,7 +29,7 @@ namespace AZ
 {
     namespace Render
     {
-        class SkinnedMeshInputBuffers;
+
 
 
         struct SkinInfluences
@@ -44,10 +49,10 @@ namespace AZ
             AtomActor(EMotionFX::Integration::ActorAsset* actorAsset);
             ~AtomActor();
 
-            AZStd::intrusive_ptr<AZ::Render::SkinnedMeshInputBuffers> FindOrCreateSkinnedMeshInputBuffers();
+            AZStd::intrusive_ptr<JE::Render::Features::SkinnedMeshInputBuffers> FindOrCreateSkinnedMeshInputBuffers();
 
         private:
-            AZStd::intrusive_ptr<AZ::Render::SkinnedMeshInputBuffers> m_skinnedMeshInputBuffers;
+            AZStd::intrusive_ptr<JE::Render::Features::SkinnedMeshInputBuffers> m_skinnedMeshInputBuffers;
             EMotionFX::Integration::ActorAsset* m_actorAsset;
         };
     } // namespace Render

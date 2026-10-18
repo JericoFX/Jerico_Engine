@@ -10,7 +10,7 @@
 
 #include <AzCore/Component/Component.h>
 #include <JE/Render/RPI/Reflect/System/AnyAsset.h>
-#include <Atom/Feature/SpecularReflections/SpecularReflectionsFeatureProcessorInterface.h>
+#include <JE/Render/Features/SpecularReflections/SpecularReflectionsFeatureProcessorInterface.h>
 
 namespace JE::Render
 {
@@ -24,7 +24,7 @@ namespace JE::Render
 
             static void Reflect(AZ::ReflectContext* context);
 
-            AZ::Render::SSROptions m_options;
+            JE::Render::Features::SSROptions m_options;
         };
 
         class SpecularReflectionsComponentConfig final

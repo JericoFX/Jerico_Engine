@@ -11,7 +11,7 @@
 #include <AzCore/Component/Component.h>
 #include <AzFramework/Components/ComponentAdapter.h>
 #include <JE/Render/Scene/PostProcess/Bloom/BloomComponentConfig.h>
-#include <Atom/Feature/PostProcess/Bloom/BloomConstants.h>
+#include <JE/Render/Features/PostProcess/Bloom/BloomConstants.h>
 #include <PostProcess/Bloom/BloomComponentController.h>
 
 namespace JE::Render

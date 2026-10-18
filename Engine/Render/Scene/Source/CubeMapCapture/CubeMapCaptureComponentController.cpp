@@ -79,7 +79,7 @@ namespace JE::Render
 
             AZ::TransformNotificationBus::Handler::BusConnect(m_entityId);
 
-            m_featureProcessor = JE::Render::RPI::Scene::GetFeatureProcessorForEntity<AZ::Render::CubeMapCaptureFeatureProcessorInterface>(entityId);
+            m_featureProcessor = JE::Render::RPI::Scene::GetFeatureProcessorForEntity<JE::Render::Features::CubeMapCaptureFeatureProcessorInterface>(entityId);
             AZ_Assert(m_featureProcessor, "CubeMapCaptureComponentController was unable to find a CubeMapCaptureFeatureProcessor on the EntityContext provided.");
 
             m_transformInterface = AZ::TransformBus::FindFirstHandler(entityId);
@@ -145,7 +145,7 @@ namespace JE::Render
             m_featureProcessor->SetExposure(m_handle, exposure);
         }
 
-        void CubeMapCaptureComponentController::RenderCubeMap(AZ::Render::RenderCubeMapCallback callback, const AZStd::string& relativePath)
+        void CubeMapCaptureComponentController::RenderCubeMap(JE::Render::Features::RenderCubeMapCallback callback, const AZStd::string& relativePath)
         {
             if (!m_featureProcessor)
             {

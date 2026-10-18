@@ -8,9 +8,9 @@
 
 #pragma once
 
-#include <Atom/Feature/Mesh/MeshFeatureProcessorInterface.h>
+#include <JE/Render/Features/Mesh/MeshFeatureProcessorInterface.h>
 #include <JE/Render/RPI/Public/Model/Model.h>
-#include <Atom/Feature/LightingChannel/LightingChannelConfiguration.h>
+#include <JE/Render/Features/LightingChannel/LightingChannelConfiguration.h>
 #include <JE/Render/Debug/AtomImGuiToolsBus.h>
 #include <JE/Render/Materials/MaterialAssignment.h>
 #include <JE/Render/Materials/MaterialComponentBus.h>
@@ -64,7 +64,7 @@ namespace JE::Render
             float m_minimumScreenCoverage = 1.0f / 1080.0f;
             float m_qualityDecayRate = 0.5f;
 
-            AZ::Render::LightingChannelConfiguration m_lightingChannelConfig;
+            JE::Render::Features::LightingChannelConfiguration m_lightingChannelConfig;
         };
 
         class MeshComponentController final
@@ -115,7 +115,7 @@ namespace JE::Render
             const JE::Render::RPI::MeshDrawPacketLods* GetDrawPackets() const override;
 
             // MeshHandleStateRequestBus overrides ...
-            const AZ::Render::MeshFeatureProcessorInterface::MeshHandle* GetMeshHandle() const override;
+            const JE::Render::Features::MeshFeatureProcessorInterface::MeshHandle* GetMeshHandle() const override;
 
             void SetSortKey(AZ::RHI::DrawItemSortKey sortKey) override;
             AZ::RHI::DrawItemSortKey GetSortKey() const override;
@@ -192,8 +192,8 @@ namespace JE::Render
 
             void LightingChannelMaskChanged();
 
-            AZ::Render::MeshFeatureProcessorInterface* m_meshFeatureProcessor = nullptr;
-            AZ::Render::MeshFeatureProcessorInterface::MeshHandle m_meshHandle;
+            JE::Render::Features::MeshFeatureProcessorInterface* m_meshFeatureProcessor = nullptr;
+            JE::Render::Features::MeshFeatureProcessorInterface::MeshHandle m_meshHandle;
             AZ::TransformInterface* m_transformInterface = nullptr;
             AZ::EntityComponentIdPair m_entityComponentIdPair;
             bool m_isVisible = true;
@@ -202,12 +202,12 @@ namespace JE::Render
             //! Cached bus to use to notify RenderGeometry::Intersector the entity/component has changed.
             AzFramework::RenderGeometry::IntersectionNotificationBus::BusPtr m_intersectionNotificationBus;
 
-            AZ::Render::MeshHandleDescriptor::ModelChangedEvent::Handler m_modelChangedEventHandler
+            JE::Render::Features::MeshHandleDescriptor::ModelChangedEvent::Handler m_modelChangedEventHandler
             {
                 [&](const AZ::Data::Instance<JE::Render::RPI::Model>& model) { HandleModelChange(model); }
             };
             
-            AZ::Render::MeshHandleDescriptor::ObjectSrgCreatedEvent::Handler m_objectSrgCreatedHandler
+            JE::Render::Features::MeshHandleDescriptor::ObjectSrgCreatedEvent::Handler m_objectSrgCreatedHandler
             {
                 [&](const AZ::Data::Instance<JE::Render::RPI::ShaderResourceGroup>& objectSrg) { HandleObjectSrgCreate(objectSrg); }
             };

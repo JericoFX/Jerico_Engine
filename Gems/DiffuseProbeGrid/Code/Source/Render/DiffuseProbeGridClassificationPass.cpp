@@ -6,7 +6,7 @@
  *
  */
 
-#include <Atom/Feature/RayTracing/RayTracingFeatureProcessorInterface.h>
+#include <JE/Render/Features/RayTracing/RayTracingFeatureProcessorInterface.h>
 #include <Atom/RHI/Factory.h>
 #include <Atom/RHI/DevicePipelineState.h>
 #include <Atom/RHI/FrameGraphInterface.h>
@@ -92,7 +92,7 @@ namespace AZ
                 return false;
             }
 
-            auto* rayTracingFeatureProcessor = scene->GetFeatureProcessor<RayTracingFeatureProcessorInterface>();
+            auto* rayTracingFeatureProcessor = scene->GetFeatureProcessor<JE::Render::Features::RayTracingFeatureProcessorInterface>();
             if (!rayTracingFeatureProcessor || !rayTracingFeatureProcessor->GetSubMeshCount())
             {
                 // empty scene

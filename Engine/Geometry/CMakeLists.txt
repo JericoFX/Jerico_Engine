@@ -21,7 +21,7 @@ ly_add_target(
     BUILD_DEPENDENCIES PUBLIC
         AZ::AzCore
         JE::RenderIntegration
-        Gem::Atom_Feature_Common.Public
+        JE::RenderFeatures
         JE::RenderScene.Public
         JE::RenderMaterials
         Legacy::CryCommon

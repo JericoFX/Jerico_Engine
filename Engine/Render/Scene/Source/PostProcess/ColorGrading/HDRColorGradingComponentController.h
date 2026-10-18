@@ -12,9 +12,9 @@
 #include <JE/Render/Scene/PostProcess/ColorGrading/HDRColorGradingComponentConfig.h>
 #include <JE/Render/Scene/PostProcess/ColorGrading/HDRColorGradingBus.h>
 
-#include <Atom/Feature/PostProcess/ColorGrading/HDRColorGradingSettingsInterface.h>
-#include <Atom/Feature/PostProcess/PostProcessFeatureProcessorInterface.h>
-#include <Atom/Feature/PostProcess/PostProcessSettingsInterface.h>
+#include <JE/Render/Features/PostProcess/ColorGrading/HDRColorGradingSettingsInterface.h>
+#include <JE/Render/Features/PostProcess/PostProcessFeatureProcessorInterface.h>
+#include <JE/Render/Features/PostProcess/PostProcessSettingsInterface.h>
 
 namespace JE::Editor::Render::Scene
 {
@@ -46,17 +46,17 @@ namespace JE::Render
             const HDRColorGradingComponentConfig& GetConfiguration() const;
 
             // Auto-gen function override declarations (functions definitions in .cpp)...
-#include <Atom/Feature/ParamMacros/StartParamFunctionsOverride.inl>
-#include <Atom/Feature/PostProcess/ColorGrading/HDRColorGradingParams.inl>
-#include <Atom/Feature/ParamMacros/EndParams.inl>
+#include <JE/Render/Features/ParamMacros/StartParamFunctionsOverride.inl>
+#include <JE/Render/Features/PostProcess/ColorGrading/HDRColorGradingParams.inl>
+#include <JE/Render/Features/ParamMacros/EndParams.inl>
 
         private:
             AZ_DISABLE_COPY(HDRColorGradingComponentController);
 
             void OnConfigChanged();
 
-            AZ::Render::PostProcessSettingsInterface* m_postProcessInterface = nullptr;
-            AZ::Render::HDRColorGradingSettingsInterface* m_settingsInterface = nullptr;
+            JE::Render::Features::PostProcessSettingsInterface* m_postProcessInterface = nullptr;
+            JE::Render::Features::HDRColorGradingSettingsInterface* m_settingsInterface = nullptr;
             HDRColorGradingComponentConfig m_configuration;
             AZ::EntityId m_entityId;
         };

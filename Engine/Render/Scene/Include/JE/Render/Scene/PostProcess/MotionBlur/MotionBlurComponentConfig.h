@@ -8,7 +8,7 @@
 
 #pragma once
 
-#include <Atom/Feature/PostProcess/MotionBlur/MotionBlurSettingsInterface.h>
+#include <JE/Render/Features/PostProcess/MotionBlur/MotionBlurSettingsInterface.h>
 #include <AzCore/Component/Component.h>
 
 namespace JE::Render
@@ -23,17 +23,17 @@ namespace JE::Render
             static void Reflect(AZ::ReflectContext* context);
 
             // Generate members...
-#include <Atom/Feature/ParamMacros/StartParamMembers.inl>
-#include <Atom/Feature/PostProcess/MotionBlur/MotionBlurParams.inl>
-#include <Atom/Feature/ParamMacros/EndParams.inl>
+#include <JE/Render/Features/ParamMacros/StartParamMembers.inl>
+#include <JE/Render/Features/PostProcess/MotionBlur/MotionBlurParams.inl>
+#include <JE/Render/Features/ParamMacros/EndParams.inl>
 
             // Generate Getters/Setters...
-#include <Atom/Feature/ParamMacros/StartParamFunctions.inl>
-#include <Atom/Feature/PostProcess/MotionBlur/MotionBlurParams.inl>
-#include <Atom/Feature/ParamMacros/EndParams.inl>
+#include <JE/Render/Features/ParamMacros/StartParamFunctions.inl>
+#include <JE/Render/Features/PostProcess/MotionBlur/MotionBlurParams.inl>
+#include <JE/Render/Features/ParamMacros/EndParams.inl>
 
-            void CopySettingsFrom(AZ::Render::MotionBlurSettingsInterface* settings);
-            void CopySettingsTo(AZ::Render::MotionBlurSettingsInterface* settings);
+            void CopySettingsFrom(JE::Render::Features::MotionBlurSettingsInterface* settings);
+            void CopySettingsTo(JE::Render::Features::MotionBlurSettingsInterface* settings);
 
             bool ArePropertiesReadOnly() const
             {

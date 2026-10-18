@@ -8,7 +8,7 @@
 
 #pragma once
 
-#include <Atom/Feature/PostProcess/PaniniProjection/PaniniProjectionSettingsInterface.h>
+#include <JE/Render/Features/PostProcess/PaniniProjection/PaniniProjectionSettingsInterface.h>
 #include <AzCore/Component/Component.h>
 
 namespace JE::Render
@@ -23,17 +23,17 @@ namespace JE::Render
             static void Reflect(AZ::ReflectContext* context);
 
             // Generate members...
-#include <Atom/Feature/ParamMacros/StartParamMembers.inl>
-#include <Atom/Feature/PostProcess/PaniniProjection/PaniniProjectionParams.inl>
-#include <Atom/Feature/ParamMacros/EndParams.inl>
+#include <JE/Render/Features/ParamMacros/StartParamMembers.inl>
+#include <JE/Render/Features/PostProcess/PaniniProjection/PaniniProjectionParams.inl>
+#include <JE/Render/Features/ParamMacros/EndParams.inl>
 
             // Generate Getters/Setters...
-#include <Atom/Feature/ParamMacros/StartParamFunctions.inl>
-#include <Atom/Feature/PostProcess/PaniniProjection/PaniniProjectionParams.inl>
-#include <Atom/Feature/ParamMacros/EndParams.inl>
+#include <JE/Render/Features/ParamMacros/StartParamFunctions.inl>
+#include <JE/Render/Features/PostProcess/PaniniProjection/PaniniProjectionParams.inl>
+#include <JE/Render/Features/ParamMacros/EndParams.inl>
 
-            void CopySettingsFrom(AZ::Render::PaniniProjectionSettingsInterface* settings);
-            void CopySettingsTo(AZ::Render::PaniniProjectionSettingsInterface* settings);
+            void CopySettingsFrom(JE::Render::Features::PaniniProjectionSettingsInterface* settings);
+            void CopySettingsTo(JE::Render::Features::PaniniProjectionSettingsInterface* settings);
 
             bool ArePropertiesReadOnly() const
             {

@@ -23,9 +23,9 @@
 #include <JE/Render/RPI/Public/Material/Material.h>
 #include <JE/Render/RPI/Public/Image/AttachmentImage.h>
 #include <JE/Render/RPI/Reflect/Image/Image.h>
-#include <Atom/Feature/Utils/IndexedDataVector.h>
-#include <Atom/Feature/Utils/SparseVector.h>
-#include <Atom/Feature/Utils/GpuBufferHandler.h>
+#include <JE/Render/Features/Utils/IndexedDataVector.h>
+#include <JE/Render/Features/Utils/SparseVector.h>
+#include <JE/Render/Features/Utils/GpuBufferHandler.h>
 
 namespace Terrain
 {
@@ -174,7 +174,7 @@ namespace Terrain
             }
         };
         
-        using DetailMaterialContainer = AZ::Render::IndexedDataVector<DetailMaterialData>;
+        using DetailMaterialContainer = JE::Render::Features::IndexedDataVector<DetailMaterialData>;
         static constexpr auto InvalidDetailMaterialId = DetailMaterialContainer::NoFreeSlot;
         
         // System-level parameters
@@ -231,9 +231,9 @@ namespace Terrain
         using DefaultMaterialSurfaceCallback = AZStd::function<void(DetailMaterialSurface&)>;
         bool ForSurfaceTag(DetailMaterialListRegion& materialRegion,
             SurfaceData::SurfaceTag surfaceTag, DefaultMaterialSurfaceCallback callback);
-        DetailMaterialListRegion* FindByEntityId(AZ::EntityId entityId, AZ::Render::IndexedDataVector<DetailMaterialListRegion>& container);
-        DetailMaterialListRegion& FindOrCreateByEntityId(AZ::EntityId entityId, AZ::Render::IndexedDataVector<DetailMaterialListRegion>& container);
-        void RemoveByEntityId(AZ::EntityId entityId, AZ::Render::IndexedDataVector<DetailMaterialListRegion>& container);
+        DetailMaterialListRegion* FindByEntityId(AZ::EntityId entityId, JE::Render::Features::IndexedDataVector<DetailMaterialListRegion>& container);
+        DetailMaterialListRegion& FindOrCreateByEntityId(AZ::EntityId entityId, JE::Render::Features::IndexedDataVector<DetailMaterialListRegion>& container);
+        void RemoveByEntityId(AZ::EntityId entityId, JE::Render::Features::IndexedDataVector<DetailMaterialListRegion>& container);
 
         DetailMaterialConfiguration m_config;
 
@@ -241,10 +241,10 @@ namespace Terrain
         AZ::Data::Instance<JE::Render::RPI::Material> m_terrainMaterial;
 
         DetailMaterialContainer m_detailMaterials;
-        AZ::Render::IndexedDataVector<DetailMaterialListRegion> m_detailMaterialRegions;
-        AZ::Render::SparseVector<size_t> m_detailMaterialShaderIndex;
+        JE::Render::Features::IndexedDataVector<DetailMaterialListRegion> m_detailMaterialRegions;
+        JE::Render::Features::SparseVector<size_t> m_detailMaterialShaderIndex;
         AZStd::unordered_map<int, AZStd::vector<DetailMaterialShaderData>> m_detailMaterialShaderData;
-        AZ::Render::GpuBufferHandler m_detailMaterialDataBuffer;
+        JE::Render::Features::GpuBufferHandler m_detailMaterialDataBuffer;
         uint8_t m_passthroughMaterialId = 0;
 
         AZ::Aabb m_dirtyDetailRegion{ AZ::Aabb::CreateNull() };

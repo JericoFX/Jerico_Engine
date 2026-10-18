@@ -50,6 +50,7 @@ ly_add_target(
         PRIVATE
             JE::EditorCamera
             JE::EditorRenderScene
+            JE::EditorRenderFeatures
             Gem::AtomToolsFramework.Static
             Gem::AtomToolsFramework.Editor
             JE::RenderAssetBuilders

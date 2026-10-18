@@ -26,9 +26,9 @@ namespace JE::Render
                     ->Field("layerCategory", &PostFxLayerComponentConfig::m_layerCategoryValue)
 
 #define SERIALIZE_CLASS PostFxLayerComponentConfig
-#include <Atom/Feature/ParamMacros/StartParamSerializeContext.inl>
-#include <Atom/Feature/PostProcess/PostProcessParams.inl>
-#include <Atom/Feature/ParamMacros/EndParams.inl>
+#include <JE/Render/Features/ParamMacros/StartParamSerializeContext.inl>
+#include <JE/Render/Features/PostProcess/PostProcessParams.inl>
+#include <JE/Render/Features/ParamMacros/EndParams.inl>
 #undef SERIALIZE_CLASS
 
                     ->Field("cameraTags", &PostFxLayerComponentConfig::m_cameraTags)
@@ -37,7 +37,7 @@ namespace JE::Render
             }
         }
 
-        void PostFxLayerComponentConfig::CopySettingsTo(AZ::Render::PostProcessSettingsInterface* settings) const
+        void PostFxLayerComponentConfig::CopySettingsTo(JE::Render::Features::PostProcessSettingsInterface* settings) const
         {
             if (!settings)
             {
@@ -45,9 +45,9 @@ namespace JE::Render
             }
 
 #define COPY_TARGET settings
-#include <Atom/Feature/ParamMacros/StartParamCopySettingsTo.inl>
-#include <Atom/Feature/PostProcess/PostProcessParams.inl>
-#include <Atom/Feature/ParamMacros/EndParams.inl>
+#include <JE/Render/Features/ParamMacros/StartParamCopySettingsTo.inl>
+#include <JE/Render/Features/PostProcess/PostProcessParams.inl>
+#include <JE/Render/Features/ParamMacros/EndParams.inl>
 #undef COPY_TARGET
 
             settings->SetLayerCategoryValue(m_layerCategoryValue);
@@ -69,7 +69,7 @@ namespace JE::Render
         AZStd::vector<AZStd::pair<int, AZStd::string>> PostFxLayerComponentConfig::BuildLayerCategories() const
         {
             // Call the bus to retrieve a list of categories
-            AZ::Render::PostFx::LayerCategoriesMap layerCategories;
+            JE::Render::Features::PostFx::LayerCategoriesMap layerCategories;
             PostFxLayerCategoriesProviderRequestBus::Broadcast(&PostFxLayerCategoriesProviderRequests::GetLayerCategories, layerCategories);
 
             AZStd::vector<AZStd::pair<int, AZStd::string>> results;

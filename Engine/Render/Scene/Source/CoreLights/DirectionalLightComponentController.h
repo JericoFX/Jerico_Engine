@@ -8,7 +8,7 @@
 
 #pragma once
 
-#include <Atom/Feature/CoreLights/DirectionalLightFeatureProcessorInterface.h>
+#include <JE/Render/Features/CoreLights/DirectionalLightFeatureProcessorInterface.h>
 #include <JE/Render/Scene/CoreLights/DirectionalLightBus.h>
 #include <JE/Render/Scene/CoreLights/DirectionalLightComponentConfig.h>
 #include <AzCore/Component/Component.h>
@@ -54,16 +54,16 @@ namespace JE::Render
             const AZ::Color& GetColor() const override;
             void SetColor(const AZ::Color& color) override;
             float GetIntensity() const override;
-            AZ::Render::PhotometricUnit GetIntensityMode() const override;
-            void SetIntensityMode(AZ::Render::PhotometricUnit unit) override;
-            void SetIntensity(float intensity, AZ::Render::PhotometricUnit unit) override;
+            JE::Render::Features::PhotometricUnit GetIntensityMode() const override;
+            void SetIntensityMode(JE::Render::Features::PhotometricUnit unit) override;
+            void SetIntensity(float intensity, JE::Render::Features::PhotometricUnit unit) override;
             void SetIntensity(float intensity) override;
             float GetAngularDiameter() const override;
             void SetAngularDiameter(float angularDiameter) override;
             void SetShadowEnabled(bool enable) override;
             bool GetShadowEnabled() const override;
-            AZ::Render::ShadowmapSize GetShadowmapSize() const override;
-            void SetShadowmapSize(AZ::Render::ShadowmapSize size) override;
+            JE::Render::Features::ShadowmapSize GetShadowmapSize() const override;
+            void SetShadowmapSize(JE::Render::Features::ShadowmapSize size) override;
             uint32_t GetCascadeCount() const override;
             void SetCascadeCount(uint32_t cascadeCount) override;
             float GetShadowmapFrustumSplitSchemeRatio() const override;
@@ -82,8 +82,8 @@ namespace JE::Render
             void SetViewFrustumCorrectionEnabled(bool enabled) override;
             bool GetDebugColoringEnabled() const override;
             void SetDebugColoringEnabled(bool enabled) override;
-            AZ::Render::ShadowFilterMethod GetShadowFilterMethod() const override;
-            void SetShadowFilterMethod(AZ::Render::ShadowFilterMethod method) override;
+            JE::Render::Features::ShadowFilterMethod GetShadowFilterMethod() const override;
+            void SetShadowFilterMethod(JE::Render::Features::ShadowFilterMethod method) override;
             uint32_t GetFilteringSampleCount() const override;
             void SetFilteringSampleCount(uint32_t count) override;
             bool GetShadowReceiverPlaneBiasEnabled() const override;
@@ -141,10 +141,10 @@ namespace JE::Render
             AZ::EntityId m_entityId{ AZ::EntityId::InvalidEntityId };
             AZ::Transform m_lastCameraTransform = AZ::Transform::CreateTranslation(AZ::Vector3(std::numeric_limits<float>::max()));
 
-            AZ::Render::PhotometricValue m_photometricValue;
+            JE::Render::Features::PhotometricValue m_photometricValue;
 
-            AZ::Render::DirectionalLightFeatureProcessorInterface* m_featureProcessor = nullptr;
-            AZ::Render::DirectionalLightFeatureProcessorInterface::LightHandle m_lightHandle;
+            JE::Render::Features::DirectionalLightFeatureProcessorInterface* m_featureProcessor = nullptr;
+            JE::Render::Features::DirectionalLightFeatureProcessorInterface::LightHandle m_lightHandle;
 
             //! Event used to signal when at least one of the properties changes.
             DirectionalLightConfigurationChangedEvent m_configurationChangedEvent;

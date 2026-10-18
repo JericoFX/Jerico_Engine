@@ -187,13 +187,13 @@ namespace AtomToolsFramework
         }
     }
 
-    void EntityPreviewViewportSettingsSystem::SetLightingPreset(const AZ::Render::LightingPreset& preset)
+    void EntityPreviewViewportSettingsSystem::SetLightingPreset(const JE::Render::Features::LightingPreset& preset)
     {
         m_lightingPreset = preset;
         m_settingsNotificationPending = true;
     }
 
-    const AZ::Render::LightingPreset& EntityPreviewViewportSettingsSystem::GetLightingPreset() const
+    const JE::Render::Features::LightingPreset& EntityPreviewViewportSettingsSystem::GetLightingPreset() const
     {
         return m_lightingPreset;
     }
@@ -227,10 +227,10 @@ namespace AtomToolsFramework
         if (!pathWithoutAlias.empty())
         {
             auto loadResult = AZ::JsonSerializationUtils::LoadAnyObjectFromFile(pathWithoutAlias);
-            if (loadResult && loadResult.GetValue().is<AZ::Render::LightingPreset>())
+            if (loadResult && loadResult.GetValue().is<JE::Render::Features::LightingPreset>())
             {
                 SetSettingsValue("/O3DE/AtomToolsFramework/EntityPreviewViewportSettings/LightingPresetPath", pathWithAlias);
-                m_lightingPreset = AZStd::any_cast<AZ::Render::LightingPreset>(loadResult.GetValue());
+                m_lightingPreset = AZStd::any_cast<JE::Render::Features::LightingPreset>(loadResult.GetValue());
                 RegisterLightingPreset(pathWithAlias, m_lightingPreset);
                 return true;
             }
@@ -263,7 +263,7 @@ namespace AtomToolsFramework
 
     void EntityPreviewViewportSettingsSystem::RegisterLightingPresetPath(const AZStd::string& path)
     {
-        if (path.ends_with(AZ::Render::LightingPreset::Extension))
+        if (path.ends_with(JE::Render::Features::LightingPreset::Extension))
         {
             auto paths = GetRegisteredLightingPresetPaths();
             paths.insert(JE::Editor::CanonicalPreviewAlias(path));
@@ -274,7 +274,7 @@ namespace AtomToolsFramework
 
     void EntityPreviewViewportSettingsSystem::UnregisterLightingPresetPath(const AZStd::string& path)
     {
-        if (path.ends_with(AZ::Render::LightingPreset::Extension))
+        if (path.ends_with(JE::Render::Features::LightingPreset::Extension))
         {
             auto paths = GetRegisteredLightingPresetPaths();
             paths.erase(JE::Editor::CanonicalPreviewAlias(path));
@@ -292,13 +292,13 @@ namespace AtomToolsFramework
                 "@engroot@/Editor/Materials/Preview/Assets/MaterialEditor/LightingPresets/neutral_urban.lightingpreset.azasset" }));
     }
 
-    void EntityPreviewViewportSettingsSystem::SetModelPreset(const AZ::Render::ModelPreset& preset)
+    void EntityPreviewViewportSettingsSystem::SetModelPreset(const JE::Render::Features::ModelPreset& preset)
     {
         m_modelPreset = preset;
         m_settingsNotificationPending = true;
     }
 
-    const AZ::Render::ModelPreset& EntityPreviewViewportSettingsSystem::GetModelPreset() const
+    const JE::Render::Features::ModelPreset& EntityPreviewViewportSettingsSystem::GetModelPreset() const
     {
         return m_modelPreset;
     }
@@ -332,10 +332,10 @@ namespace AtomToolsFramework
         if (!pathWithoutAlias.empty())
         {
             auto loadResult = AZ::JsonSerializationUtils::LoadAnyObjectFromFile(pathWithoutAlias);
-            if (loadResult && loadResult.GetValue().is<AZ::Render::ModelPreset>())
+            if (loadResult && loadResult.GetValue().is<JE::Render::Features::ModelPreset>())
             {
                 SetSettingsValue("/O3DE/AtomToolsFramework/EntityPreviewViewportSettings/ModelPresetPath", pathWithAlias);
-                m_modelPreset = AZStd::any_cast<AZ::Render::ModelPreset>(loadResult.GetValue());
+                m_modelPreset = AZStd::any_cast<JE::Render::Features::ModelPreset>(loadResult.GetValue());
                 RegisterModelPreset(pathWithAlias, m_modelPreset);
                 return true;
             }
@@ -368,7 +368,7 @@ namespace AtomToolsFramework
 
     void EntityPreviewViewportSettingsSystem::RegisterModelPresetPath(const AZStd::string& path)
     {
-        if (path.ends_with(AZ::Render::ModelPreset::Extension))
+        if (path.ends_with(JE::Render::Features::ModelPreset::Extension))
         {
             auto paths = GetRegisteredModelPresetPaths();
             paths.insert(JE::Editor::CanonicalPreviewAlias(path));
@@ -379,7 +379,7 @@ namespace AtomToolsFramework
 
     void EntityPreviewViewportSettingsSystem::UnregisterModelPresetPath(const AZStd::string& path)
     {
-        if (path.ends_with(AZ::Render::ModelPreset::Extension))
+        if (path.ends_with(JE::Render::Features::ModelPreset::Extension))
         {
             auto paths = GetRegisteredModelPresetPaths();
             paths.erase(JE::Editor::CanonicalPreviewAlias(path));
@@ -566,22 +566,22 @@ namespace AtomToolsFramework
     void EntityPreviewViewportSettingsSystem::PreloadPreset(const AZStd::string& path)
     {
         const auto pathWithoutAlias = GetPathWithoutAlias(JE::Editor::CanonicalPreviewPath(path));
-        if (path.ends_with(AZ::Render::LightingPreset::Extension))
+        if (path.ends_with(JE::Render::Features::LightingPreset::Extension))
         {
             auto loadResult = AZ::JsonSerializationUtils::LoadAnyObjectFromFile(pathWithoutAlias);
-            if (loadResult && loadResult.GetValue().is<AZ::Render::LightingPreset>())
+            if (loadResult && loadResult.GetValue().is<JE::Render::Features::LightingPreset>())
             {
-                RegisterLightingPreset(path, AZStd::any_cast<AZ::Render::LightingPreset>(loadResult.GetValue()));
+                RegisterLightingPreset(path, AZStd::any_cast<JE::Render::Features::LightingPreset>(loadResult.GetValue()));
             }
             return;
         }
 
-        if (path.ends_with(AZ::Render::ModelPreset::Extension))
+        if (path.ends_with(JE::Render::Features::ModelPreset::Extension))
         {
             auto loadResult = AZ::JsonSerializationUtils::LoadAnyObjectFromFile(pathWithoutAlias);
-            if (loadResult && loadResult.GetValue().is<AZ::Render::ModelPreset>())
+            if (loadResult && loadResult.GetValue().is<JE::Render::Features::ModelPreset>())
             {
-                RegisterModelPreset(path, AZStd::any_cast<AZ::Render::ModelPreset>(loadResult.GetValue()));
+                RegisterModelPreset(path, AZStd::any_cast<JE::Render::Features::ModelPreset>(loadResult.GetValue()));
             }
             return;
         }
@@ -597,7 +597,7 @@ namespace AtomToolsFramework
         }
     }
 
-    void EntityPreviewViewportSettingsSystem::RegisterLightingPreset(const AZStd::string& path, const AZ::Render::LightingPreset& preset)
+    void EntityPreviewViewportSettingsSystem::RegisterLightingPreset(const AZStd::string& path, const JE::Render::Features::LightingPreset& preset)
     {
         const auto& pathWithAlias = JE::Editor::CanonicalPreviewAlias(path);
         m_lightingPresetCache[pathWithAlias] = preset;
@@ -607,7 +607,7 @@ namespace AtomToolsFramework
             m_toolId, &EntityPreviewViewportSettingsNotificationBus::Events::OnLightingPresetAdded, pathWithAlias);
     }
 
-    void EntityPreviewViewportSettingsSystem::RegisterModelPreset(const AZStd::string& path, const AZ::Render::ModelPreset& preset)
+    void EntityPreviewViewportSettingsSystem::RegisterModelPreset(const AZStd::string& path, const JE::Render::Features::ModelPreset& preset)
     {
         const auto& pathWithAlias = JE::Editor::CanonicalPreviewAlias(path);
         m_modelPresetCache[pathWithAlias] = preset;
@@ -644,8 +644,8 @@ namespace AtomToolsFramework
                 auto filterFn = [](const AZStd::string& path)
                 {
                     return
-                        path.ends_with(AZ::Render::LightingPreset::Extension) ||
-                        path.ends_with(AZ::Render::ModelPreset::Extension) ||
+                        path.ends_with(JE::Render::Features::LightingPreset::Extension) ||
+                        path.ends_with(JE::Render::Features::ModelPreset::Extension) ||
                         path.ends_with(JE::Render::RPI::RenderPipelineDescriptor::Extension);
                 };
 

@@ -11,8 +11,8 @@
 #include <AzCore/Component/Component.h>
 #include <AzCore/Math/Color.h>
 #include <AzCore/Serialization/EditContext.h>
-#include <Atom/Feature/CoreLights/PhotometricValue.h>
-#include <Atom/Feature/LightingChannel/LightingChannelConfiguration.h>
+#include <JE/Render/Features/CoreLights/PhotometricValue.h>
+#include <JE/Render/Features/LightingChannel/LightingChannelConfiguration.h>
 #include <JE/Render/RPI/Reflect/Image/StreamingImageAsset.h>
 #include <JE/Render/Scene/CoreLights/CoreLightsConstants.h>
 
@@ -52,7 +52,7 @@ namespace JE::Render
             AZ::Color m_color = AZ::Color::CreateOne();
             float m_intensity = 100.0f;
             float m_attenuationRadius = 0.0f;
-            AZ::Render::PhotometricUnit m_intensityMode = AZ::Render::PhotometricUnit::Lumen;
+            JE::Render::Features::PhotometricUnit m_intensityMode = JE::Render::Features::PhotometricUnit::Lumen;
             LightAttenuationRadiusMode m_attenuationRadiusMode = LightAttenuationRadiusMode::Automatic;
             bool m_lightEmitsBothDirections = false;
             bool m_useFastApproximation = false;
@@ -70,19 +70,19 @@ namespace JE::Render
             mutable bool m_cacheShadows = false; // proxy property used for the edit context.
             float m_bias = 0.1f;
             float m_normalShadowBias = 0.0f;
-            AZ::Render::ShadowmapSize m_shadowmapMaxSize = AZ::Render::ShadowmapSize::Size256;
-            AZ::Render::ShadowFilterMethod m_shadowFilterMethod = AZ::Render::ShadowFilterMethod::None;
+            JE::Render::Features::ShadowmapSize m_shadowmapMaxSize = JE::Render::Features::ShadowmapSize::Size256;
+            JE::Render::Features::ShadowFilterMethod m_shadowFilterMethod = JE::Render::Features::ShadowFilterMethod::None;
             uint16_t m_filteringSampleCount = 12;
             float m_esmExponent = 87.0f;
 
             // Global Illumination
             bool m_affectsGI = true;
             float m_affectsGIFactor = 1.0f;
-            AZ::Render::LightingChannelConfiguration m_lightingChannelConfig;
+            JE::Render::Features::LightingChannelConfiguration m_lightingChannelConfig;
 
             // The following functions provide information to an EditContext...
 
-            AZStd::vector<AZ::Edit::EnumConstant<AZ::Render::PhotometricUnit>> GetValidPhotometricUnits() const;
+            AZStd::vector<AZ::Edit::EnumConstant<JE::Render::Features::PhotometricUnit>> GetValidPhotometricUnits() const;
 
             bool RequiresShapeComponent() const;
 

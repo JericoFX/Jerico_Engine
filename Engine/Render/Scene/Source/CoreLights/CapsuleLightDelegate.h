@@ -16,13 +16,13 @@
 #include <LmbrCentral/Shape/CapsuleShapeComponentBus.h>
 #include <LmbrCentral/Shape/ShapeComponentBus.h>
 
-#include <Atom/Feature/CoreLights/CapsuleLightFeatureProcessorInterface.h>
+#include <JE/Render/Features/CoreLights/CapsuleLightFeatureProcessorInterface.h>
 
 namespace JE::Render::Scene
 {
     //! Manages rendering a capsule light through the capsule light feature processor and communication with a capsule shape bus for the
     //! area light component.
-    class CapsuleLightDelegate final : public LightDelegateBase<AZ::Render::CapsuleLightFeatureProcessorInterface>
+    class CapsuleLightDelegate final : public LightDelegateBase<JE::Render::Features::CapsuleLightFeatureProcessorInterface>
     {
     public:
         CapsuleLightDelegate(LmbrCentral::CapsuleShapeComponentRequests* shapeBus, AZ::EntityId entityId, bool isVisible);

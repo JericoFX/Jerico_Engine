@@ -51,15 +51,15 @@ namespace JE::Editor::Render::Scene
                     // Render Debug View Mode
                     ->DataElement(AZ::Edit::UIHandlers::ComboBox, &JE::Render::Scene::RenderDebugComponentConfig::m_renderDebugViewMode,
                         QT_TRANSLATE_NOOP("AtomLyIntegration", "Debug View Mode"), QT_TRANSLATE_NOOP("AtomLyIntegration", "What debug info to output to the view."))
-                        ->EnumAttribute(AZ::Render::RenderDebugViewMode::None, QT_TRANSLATE_NOOP("AtomLyIntegration", "None"))
-                        ->EnumAttribute(AZ::Render::RenderDebugViewMode::BaseColor, QT_TRANSLATE_NOOP("AtomLyIntegration", "Base Color"))
-                        ->EnumAttribute(AZ::Render::RenderDebugViewMode::Albedo, QT_TRANSLATE_NOOP("AtomLyIntegration", "Albedo"))
-                        ->EnumAttribute(AZ::Render::RenderDebugViewMode::Roughness, QT_TRANSLATE_NOOP("AtomLyIntegration", "Roughness"))
-                        ->EnumAttribute(AZ::Render::RenderDebugViewMode::Metallic, QT_TRANSLATE_NOOP("AtomLyIntegration", "Metallic"))
-                        ->EnumAttribute(AZ::Render::RenderDebugViewMode::Normal, QT_TRANSLATE_NOOP("AtomLyIntegration", "Normal"))
-                        ->EnumAttribute(AZ::Render::RenderDebugViewMode::Tangent, QT_TRANSLATE_NOOP("AtomLyIntegration", "Tangent"))
-                        ->EnumAttribute(AZ::Render::RenderDebugViewMode::Bitangent, QT_TRANSLATE_NOOP("AtomLyIntegration", "Bitangent"))
-                        ->EnumAttribute(AZ::Render::RenderDebugViewMode::CascadeShadows, QT_TRANSLATE_NOOP("AtomLyIntegration", "CascadeShadows"))
+                        ->EnumAttribute(JE::Render::Features::RenderDebugViewMode::None, QT_TRANSLATE_NOOP("AtomLyIntegration", "None"))
+                        ->EnumAttribute(JE::Render::Features::RenderDebugViewMode::BaseColor, QT_TRANSLATE_NOOP("AtomLyIntegration", "Base Color"))
+                        ->EnumAttribute(JE::Render::Features::RenderDebugViewMode::Albedo, QT_TRANSLATE_NOOP("AtomLyIntegration", "Albedo"))
+                        ->EnumAttribute(JE::Render::Features::RenderDebugViewMode::Roughness, QT_TRANSLATE_NOOP("AtomLyIntegration", "Roughness"))
+                        ->EnumAttribute(JE::Render::Features::RenderDebugViewMode::Metallic, QT_TRANSLATE_NOOP("AtomLyIntegration", "Metallic"))
+                        ->EnumAttribute(JE::Render::Features::RenderDebugViewMode::Normal, QT_TRANSLATE_NOOP("AtomLyIntegration", "Normal"))
+                        ->EnumAttribute(JE::Render::Features::RenderDebugViewMode::Tangent, QT_TRANSLATE_NOOP("AtomLyIntegration", "Tangent"))
+                        ->EnumAttribute(JE::Render::Features::RenderDebugViewMode::Bitangent, QT_TRANSLATE_NOOP("AtomLyIntegration", "Bitangent"))
+                        ->EnumAttribute(JE::Render::Features::RenderDebugViewMode::CascadeShadows, QT_TRANSLATE_NOOP("AtomLyIntegration", "CascadeShadows"))
                         ->Attribute(AZ::Edit::Attributes::ChangeNotify, AZ::Edit::PropertyRefreshLevels::ValuesOnly)
                         ->Attribute(AZ::Edit::Attributes::Visibility, &JE::Render::Scene::RenderDebugComponentConfig::GetEnabled)
 
@@ -70,18 +70,18 @@ namespace JE::Editor::Render::Scene
 
                     ->DataElement(AZ::Edit::UIHandlers::ComboBox, &JE::Render::Scene::RenderDebugComponentConfig::m_renderDebugLightingType,
                         QT_TRANSLATE_NOOP("AtomLyIntegration", "Lighting Type"), QT_TRANSLATE_NOOP("AtomLyIntegration", "Controls whether diffuse or specular lighting is displayed."))
-                        ->EnumAttribute(AZ::Render::RenderDebugLightingType::DiffuseAndSpecular, QT_TRANSLATE_NOOP("AtomLyIntegration", "Diffuse + Specular"))
-                        ->EnumAttribute(AZ::Render::RenderDebugLightingType::Diffuse, QT_TRANSLATE_NOOP("AtomLyIntegration", "Diffuse"))
-                        ->EnumAttribute(AZ::Render::RenderDebugLightingType::Specular, QT_TRANSLATE_NOOP("AtomLyIntegration", "Specular"))
+                        ->EnumAttribute(JE::Render::Features::RenderDebugLightingType::DiffuseAndSpecular, QT_TRANSLATE_NOOP("AtomLyIntegration", "Diffuse + Specular"))
+                        ->EnumAttribute(JE::Render::Features::RenderDebugLightingType::Diffuse, QT_TRANSLATE_NOOP("AtomLyIntegration", "Diffuse"))
+                        ->EnumAttribute(JE::Render::Features::RenderDebugLightingType::Specular, QT_TRANSLATE_NOOP("AtomLyIntegration", "Specular"))
                         ->Attribute(AZ::Edit::Attributes::ChangeNotify, AZ::Edit::PropertyRefreshLevels::ValuesOnly)
                         ->Attribute(AZ::Edit::Attributes::Visibility, &JE::Render::Scene::RenderDebugComponentConfig::GetEnabled)
 
                     ->DataElement(AZ::Edit::UIHandlers::ComboBox, &JE::Render::Scene::RenderDebugComponentConfig::m_renderDebugLightingSource,
                         QT_TRANSLATE_NOOP("AtomLyIntegration", "Lighting Source"), QT_TRANSLATE_NOOP("AtomLyIntegration", "Controls whether direct or indirect lighting is displayed."))
-                        ->EnumAttribute(AZ::Render::RenderDebugLightingSource::DirectAndIndirect, QT_TRANSLATE_NOOP("AtomLyIntegration", "Direct + Indirect"))
-                        ->EnumAttribute(AZ::Render::RenderDebugLightingSource::Direct, QT_TRANSLATE_NOOP("AtomLyIntegration", "Direct"))
-                        ->EnumAttribute(AZ::Render::RenderDebugLightingSource::Indirect, QT_TRANSLATE_NOOP("AtomLyIntegration", "Indirect"))
-                        ->EnumAttribute(AZ::Render::RenderDebugLightingSource::DebugLight, QT_TRANSLATE_NOOP("AtomLyIntegration", "Debug Light"))
+                        ->EnumAttribute(JE::Render::Features::RenderDebugLightingSource::DirectAndIndirect, QT_TRANSLATE_NOOP("AtomLyIntegration", "Direct + Indirect"))
+                        ->EnumAttribute(JE::Render::Features::RenderDebugLightingSource::Direct, QT_TRANSLATE_NOOP("AtomLyIntegration", "Direct"))
+                        ->EnumAttribute(JE::Render::Features::RenderDebugLightingSource::Indirect, QT_TRANSLATE_NOOP("AtomLyIntegration", "Indirect"))
+                        ->EnumAttribute(JE::Render::Features::RenderDebugLightingSource::DebugLight, QT_TRANSLATE_NOOP("AtomLyIntegration", "Debug Light"))
                         ->Attribute(AZ::Edit::Attributes::ChangeNotify, AZ::Edit::PropertyRefreshLevels::ValuesOnly)
                         ->Attribute(AZ::Edit::Attributes::Visibility, &JE::Render::Scene::RenderDebugComponentConfig::GetEnabled)
 

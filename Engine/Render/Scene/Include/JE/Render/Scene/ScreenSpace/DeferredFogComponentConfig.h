@@ -12,8 +12,8 @@
 #include <AzCore/Math/Vector3.h>
 #include <AzCore/Component/Component.h>
 
-#include <Atom/Feature/ParamMacros/ParamMacrosHowTo.inl>    // for education purposes
-#include <Atom/Feature/ScreenSpace/DeferredFogSettingsInterface.h>
+#include <JE/Render/Features/ParamMacros/ParamMacrosHowTo.inl>    // for education purposes
+#include <JE/Render/Features/ScreenSpace/DeferredFogSettingsInterface.h>
 
 
 
@@ -45,16 +45,16 @@ namespace JE::Render
 
             static void Reflect(AZ::ReflectContext* context);
 
-            void CopySettingsFrom(AZ::Render::DeferredFogSettingsInterface* settings);
-            void CopySettingsTo(AZ::Render::DeferredFogSettingsInterface* settings);
+            void CopySettingsFrom(JE::Render::Features::DeferredFogSettingsInterface* settings);
+            void CopySettingsTo(JE::Render::Features::DeferredFogSettingsInterface* settings);
 
             bool SupportsFogDensity()
             {
-                return m_fogMode == AZ::Render::FogMode::Exponential || m_fogMode == AZ::Render::FogMode::ExponentialSquared;
+                return m_fogMode == JE::Render::Features::FogMode::Exponential || m_fogMode == JE::Render::Features::FogMode::ExponentialSquared;
             }
             bool SupportsFogEnd()
             {
-                return m_fogMode == AZ::Render::FogMode::Linear;
+                return m_fogMode == JE::Render::Features::FogMode::Linear;
             }
 
             // Generate Get / Set methods
@@ -62,9 +62,9 @@ namespace JE::Render
         virtual ValueType Get##Name() const { return MemberName; }                                      \
         virtual void Set##Name(ValueType val) { MemberName = val; }                                     \
 
-#include <Atom/Feature/ParamMacros/MapParamCommon.inl>
-#include <Atom/Feature/ScreenSpace/DeferredFogParams.inl>
-#include <Atom/Feature/ParamMacros/EndParams.inl>
+#include <JE/Render/Features/ParamMacros/MapParamCommon.inl>
+#include <JE/Render/Features/ScreenSpace/DeferredFogParams.inl>
+#include <JE/Render/Features/ParamMacros/EndParams.inl>
 
         private:
 
@@ -72,9 +72,9 @@ namespace JE::Render
 #define AZ_GFX_COMMON_PARAM(ValueType, Name, MemberName, DefaultValue)                                  \
         ValueType MemberName = DefaultValue;                                                            \
 
-#include <Atom/Feature/ParamMacros/MapParamCommon.inl>
-#include <Atom/Feature/ScreenSpace/DeferredFogParams.inl>
-#include <Atom/Feature/ParamMacros/EndParams.inl>
+#include <JE/Render/Features/ParamMacros/MapParamCommon.inl>
+#include <JE/Render/Features/ScreenSpace/DeferredFogParams.inl>
+#include <JE/Render/Features/ParamMacros/EndParams.inl>
 
         };
 

@@ -19,7 +19,6 @@
     "documentation_url": "https://o3de.org/docs/user-guide/gems/reference/rendering/atom/atom/",
     "external_subdirectories": [
         "Asset/ImageProcessingAtom",
-        "Feature/Common",
         "RHI",
         "Tools/AtomToolsFramework",
         "Tools/MaterialCanvas",
@@ -28,7 +27,6 @@
         "Tools/ShaderManagementConsole"
     ],
     "dependencies": [
-        "Atom_Feature_Common",
         "Atom_RHI",
         "AtomToolsFramework",
         "ShaderManagementConsole",

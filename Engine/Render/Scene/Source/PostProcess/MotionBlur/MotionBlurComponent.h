@@ -8,7 +8,7 @@
 
 #pragma once
 
-#include <Atom/Feature/PostProcess/MotionBlur/MotionBlurConstants.h>
+#include <JE/Render/Features/PostProcess/MotionBlur/MotionBlurConstants.h>
 #include <PostProcess/MotionBlur/MotionBlurComponentController.h>
 #include <JE/Render/Scene/PostProcess/MotionBlur/MotionBlurComponentConfig.h>
 #include <AzCore/Component/Component.h>

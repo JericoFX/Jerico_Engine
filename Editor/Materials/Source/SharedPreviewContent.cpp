@@ -6,10 +6,10 @@
  *
  */
 
-#include <Atom/Feature/ImageBasedLights/ImageBasedLightFeatureProcessorInterface.h>
-#include <Atom/Feature/PostProcess/PostProcessFeatureProcessorInterface.h>
-#include <Atom/Feature/SkyBox/SkyBoxFeatureProcessorInterface.h>
-#include <Atom/Feature/Utils/LightingPreset.h>
+#include <JE/Render/Features/ImageBasedLights/ImageBasedLightFeatureProcessorInterface.h>
+#include <JE/Render/Features/PostProcess/PostProcessFeatureProcessorInterface.h>
+#include <JE/Render/Features/SkyBox/SkyBoxFeatureProcessorInterface.h>
+#include <JE/Render/Features/Utils/LightingPreset.h>
 #include <JE/Render/RPI/Public/Scene.h>
 #include <JE/Render/RPI/Reflect/Asset/AssetUtils.h>
 #include <JE/Render/Materials/MaterialComponentBus.h>
@@ -57,9 +57,9 @@ namespace JE
             m_modelEntity->Activate();
 
             // Create the mesh update handler, this handler will become active once @m_meshHandle becomes valid.
-            m_meshUpdatedHandler = AZ::Render::ModelDataInstanceInterface::MeshDrawPacketUpdatedEvent::Handler{
+            m_meshUpdatedHandler = JE::Render::Features::ModelDataInstanceInterface::MeshDrawPacketUpdatedEvent::Handler{
                 [this](
-                    const AZ::Render::ModelDataInstanceInterface& meshHandleIface,
+                    const JE::Render::Features::ModelDataInstanceInterface& meshHandleIface,
                     uint32_t lodIndex,
                     uint32_t meshIndex,
                     const JE::Render::RPI::MeshDrawPacket& meshDrawPacket)
@@ -144,18 +144,18 @@ namespace JE
         {
             if (m_lightingPresetAsset.IsReady())
             {
-                auto preset = m_lightingPresetAsset->GetDataAs<AZ::Render::LightingPreset>();
+                auto preset = m_lightingPresetAsset->GetDataAs<JE::Render::Features::LightingPreset>();
                 if (preset)
                 {
-                    auto iblFeatureProcessor = m_scene->GetFeatureProcessor<AZ::Render::ImageBasedLightFeatureProcessorInterface>();
-                    auto postProcessFeatureProcessor = m_scene->GetFeatureProcessor<AZ::Render::PostProcessFeatureProcessorInterface>();
+                    auto iblFeatureProcessor = m_scene->GetFeatureProcessor<JE::Render::Features::ImageBasedLightFeatureProcessorInterface>();
+                    auto postProcessFeatureProcessor = m_scene->GetFeatureProcessor<JE::Render::Features::PostProcessFeatureProcessorInterface>();
                     auto postProcessSettingInterface = postProcessFeatureProcessor->GetOrCreateSettingsInterface(AZ::EntityId());
                     auto exposureControlSettingInterface = postProcessSettingInterface->GetOrCreateExposureControlSettingsInterface();
                     auto directionalLightFeatureProcessor =
-                        m_scene->GetFeatureProcessor<AZ::Render::DirectionalLightFeatureProcessorInterface>();
-                    auto skyboxFeatureProcessor = m_scene->GetFeatureProcessor<AZ::Render::SkyBoxFeatureProcessorInterface>();
+                        m_scene->GetFeatureProcessor<JE::Render::Features::DirectionalLightFeatureProcessorInterface>();
+                    auto skyboxFeatureProcessor = m_scene->GetFeatureProcessor<JE::Render::Features::SkyBoxFeatureProcessorInterface>();
                     skyboxFeatureProcessor->Enable(true);
-                    skyboxFeatureProcessor->SetSkyboxMode(AZ::Render::SkyBoxMode::Cubemap);
+                    skyboxFeatureProcessor->SetSkyboxMode(JE::Render::Features::SkyBoxMode::Cubemap);
 
                     Camera::Configuration cameraConfig;
                     cameraConfig.m_fovRadians = FieldOfView;
@@ -164,7 +164,7 @@ namespace JE
                     cameraConfig.m_frustumWidth = 100.0f;
                     cameraConfig.m_frustumHeight = 100.0f;
 
-                    AZStd::vector<AZ::Render::DirectionalLightFeatureProcessorInterface::LightHandle> lightHandles;
+                    AZStd::vector<JE::Render::Features::DirectionalLightFeatureProcessorInterface::LightHandle> lightHandles;
 
                     preset->ApplyLightingPreset(
                         iblFeatureProcessor, skyboxFeatureProcessor, exposureControlSettingInterface, directionalLightFeatureProcessor,
@@ -192,7 +192,7 @@ namespace JE
 
         ////////////////////////////////////////////////////////////////
         // AZ::Render::MeshHandleStateNotificationBus::Handler overrides
-        void SharedPreviewContent::OnMeshHandleSet(const AZ::Render::MeshFeatureProcessorInterface::MeshHandle* meshHandle)
+        void SharedPreviewContent::OnMeshHandleSet(const JE::Render::Features::MeshFeatureProcessorInterface::MeshHandle* meshHandle)
         {
             m_meshHandle = meshHandle;
             (*m_meshHandle)->ConnectMeshDrawPacketUpdatedHandler(m_meshUpdatedHandler);
@@ -201,7 +201,7 @@ namespace JE
 
         // Function called by the callback defined in @m_meshUpdatedHandler
         void SharedPreviewContent::OnMeshDrawPacketUpdated(
-            [[maybe_unused]] const AZ::Render::ModelDataInstanceInterface& meshHandleIface,
+            [[maybe_unused]] const JE::Render::Features::ModelDataInstanceInterface& meshHandleIface,
             [[maybe_unused]] uint32_t lodIndex,
             [[maybe_unused]] uint32_t meshIndex,
             [[maybe_unused]] const JE::Render::RPI::MeshDrawPacket& meshDrawPacket)

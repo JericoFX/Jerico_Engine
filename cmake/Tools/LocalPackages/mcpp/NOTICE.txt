@@ -34,3 +34,12 @@ Full O3DE license texts, original patch and recipe are in LICENSES/O3DE.
 JERecipe.json separates the source release/archive hash from the adaptation commit.
 The new JE identity and measured package hash do not impersonate the historical
 mcpp-2.7.2_az.2-rev1-windows binary or its checksum.
+
+JE pre-open read extension (candidate ABI v1): adds one bounded generic resolver
+callback after macro expansion and before include search. The existing include
+report remains post-open and reports the actual file. No JE path policy resides
+in mcpp. The original _az.2 patch/manifest are retained; extension identity and
+five source before/after hashes are recorded separately. Header/importlib/DLL
+hashes in JEPreopenAbi.json bind the artifacts from the same producer. This is
+not the historical je-rev1 binary/archive or its checksum. All license terms
+and contributor notices above remain applicable.

@@ -16,13 +16,13 @@
 #include <LmbrCentral/Shape/PolygonPrismShapeComponentBus.h>
 #include <LmbrCentral/Shape/ShapeComponentBus.h>
 
-#include <Atom/Feature/CoreLights/PolygonLightFeatureProcessorInterface.h>
+#include <JE/Render/Features/CoreLights/PolygonLightFeatureProcessorInterface.h>
 
 namespace JE::Render::Scene
 {
     //! Manages rendering a Polygon light through the Polygon light feature processor and communication with a Polygon shape bus for the
     //! area light component.
-    class PolygonLightDelegate final : public LightDelegateBase<AZ::Render::PolygonLightFeatureProcessorInterface>
+    class PolygonLightDelegate final : public LightDelegateBase<JE::Render::Features::PolygonLightFeatureProcessorInterface>
     {
     public:
         PolygonLightDelegate(LmbrCentral::PolygonPrismShapeComponentRequests* shapeBus, AZ::EntityId entityId, bool isVisible);
@@ -48,6 +48,6 @@ namespace JE::Render::Scene
 
     inline float PolygonLightDelegate::GetEffectiveSolidAngle() const
     {
-        return AZ::Render::PhotometricValue::DirectionalEffectiveSteradians;
+        return JE::Render::Features::PhotometricValue::DirectionalEffectiveSteradians;
     }
 } // namespace AZ::Render

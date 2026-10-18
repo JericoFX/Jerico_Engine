@@ -1,0 +1,90 @@
+{
+  "schema": "JE.McppPreopenReadExtension.v1",
+  "abiVersion": 1,
+  "callback": "mcpp_set_resolve_include_callback",
+  "basePatchSHA256": "8797760AF297BE90586F03AE69C3FFAEB89591FA69199C4242E05F4DF6EFDC6B",
+  "baseManifestSHA256": "9F8522A8A06AB9C4207F5F5EE7E7B41837831118512B07B0A8507BB5997AAEC3",
+  "patchSHA256": "021789ADB3019C6A5E00D018ABDEDAE5A35706ACEE713A5EAF3FCBD5126D938A",
+  "files": [
+    {
+      "path": "src/mcpp_lib.h",
+      "beforeSHA256": "7D248A44999D75616D0F0A03CCD9619E6B9A767C0FBA835ECAD110D4BEC13728",
+      "afterSHA256": "A67FB95603635A3FECF995ED7900D91DD80191575EA70FF0B1EEBFC634933194",
+      "beforeBytes": 1786,
+      "afterBytes": 2324,
+      "hunks": [
+        {
+          "sourceOffset": 1624,
+          "oldBytes": 134,
+          "newBytes": 672,
+          "patchOffset": 61,
+          "patchBytes": 687
+        }
+      ]
+    },
+    {
+      "path": "src/internal.H",
+      "beforeSHA256": "96B68AE6597667EC61D9246659336C06E48D56F01D86E06B45986D88D2A9F6A7",
+      "afterSHA256": "9CB2FDD090960F8BF4A61A1CDF0E00FEBE8F75359FA8192DAFFCC406FF5F8204",
+      "beforeBytes": 26067,
+      "afterBytes": 26135,
+      "hunks": [
+        {
+          "sourceOffset": 23755,
+          "oldBytes": 243,
+          "newBytes": 311,
+          "patchOffset": 810,
+          "patchBytes": 318
+        }
+      ]
+    },
+    {
+      "path": "src/support.c",
+      "beforeSHA256": "3A0C93768AD2537646ADF131855C2CBE60157DEB53A3DA7019768CFD905E68EC",
+      "afterSHA256": "981D0C5896741F8D5276260F3A23B599EAEAEEADEB11C05E76D0C4F9CC2C7525",
+      "beforeBytes": 100842,
+      "afterBytes": 101043,
+      "hunks": [
+        {
+          "sourceOffset": 11416,
+          "oldBytes": 126,
+          "newBytes": 327,
+          "patchOffset": 1189,
+          "patchBytes": 341
+        }
+      ]
+    },
+    {
+      "path": "src/mcpp_lib.def",
+      "beforeSHA256": "57F7DA2C5B68D3B83C801A8EDA7CDDAE331CEF5B120A86AAF7DAA9EBE1F9D017",
+      "afterSHA256": "A60B19CD60CA3FFCD00E0AA4EC30AC37DAAF2071846740BF4C7DD28550F36553",
+      "beforeBytes": 158,
+      "afterBytes": 193,
+      "hunks": [
+        {
+          "sourceOffset": 81,
+          "oldBytes": 77,
+          "newBytes": 112,
+          "patchOffset": 1592,
+          "patchBytes": 116
+        }
+      ]
+    },
+    {
+      "path": "src/system.c",
+      "beforeSHA256": "C32160CF095E0837F024C550C4570B690462DAE8C01259E992BDBEC87DD5F13B",
+      "afterSHA256": "115FF08D4FEDC2750ADFCA9B70C793A80CE8DE5A329FD7203A6994E53391DECE",
+      "beforeBytes": 172659,
+      "afterBytes": 173294,
+      "hunks": [
+        {
+          "sourceOffset": 112636,
+          "oldBytes": 225,
+          "newBytes": 860,
+          "patchOffset": 1769,
+          "patchBytes": 881
+        }
+      ]
+    }
+  ]
+}

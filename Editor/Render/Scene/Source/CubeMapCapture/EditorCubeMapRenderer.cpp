@@ -23,7 +23,7 @@ namespace JE::Editor::Render
     namespace Scene
     {
         AZ::u32 EditorCubeMapRenderer::RenderCubeMap(
-            AZStd::function<void(AZ::Render::RenderCubeMapCallback, AZStd::string&)> renderCubeMapFn,
+            AZStd::function<void(JE::Render::Features::RenderCubeMapCallback, AZStd::string&)> renderCubeMapFn,
             const AZStd::string dialogText,
             const AZ::Entity* entityRequestingRender,
             const AZStd::string& folderName,
@@ -135,7 +135,7 @@ namespace JE::Editor::Render
             relativePath = cubeMapRelativePath;
 
             // callback from the EnvironmentCubeMapPass when the cubemap render is complete
-            AZ::Render::RenderCubeMapCallback renderCubeMapCallback = [this, cubeMapFullPath](uint8_t* const* cubeMapFaceTextureData, const AZ::RHI::Format cubeMapTextureFormat)
+            JE::Render::Features::RenderCubeMapCallback renderCubeMapCallback = [this, cubeMapFullPath](uint8_t* const* cubeMapFaceTextureData, const AZ::RHI::Format cubeMapTextureFormat)
             {
                 // write the cubemap data to the .dds file
                 WriteOutputFile(cubeMapFullPath.c_str(), cubeMapFaceTextureData, cubeMapTextureFormat);

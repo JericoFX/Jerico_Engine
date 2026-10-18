@@ -9,7 +9,7 @@
 #include <CoreLights/DirectionalLightComponentController.h>
 
 #include <JE/Render/RPI/Public/Scene.h>
-#include <Atom/Feature/CoreLights/ShadowConstants.h>
+#include <JE/Render/Features/CoreLights/ShadowConstants.h>
 
 #include <AzCore/RTTI/BehaviorContext.h>
 #include <AzCore/Component/TransformBus.h>
@@ -38,15 +38,15 @@ namespace JE::Render
             if (AZ::BehaviorContext* behaviorContext = azrtti_cast<AZ::BehaviorContext*>(context))
             {
                 behaviorContext
-                    ->Enum<static_cast<uint32_t>(AZ::Render::ShadowFilterMethod::None)>("ShadowFilterMethod_None")
-                    ->Enum<static_cast<uint32_t>(AZ::Render::ShadowFilterMethod::Pcf)>("ShadowFilterMethod_PCF")
-                    ->Enum<static_cast<uint32_t>(AZ::Render::ShadowFilterMethod::Esm)>("ShadowFilterMethod_ESM")
-                    ->Enum<static_cast<uint32_t>(AZ::Render::ShadowFilterMethod::EsmPcf)>("ShadowFilterMethod_ESM_PCF")
-                    ->Enum<static_cast<uint32_t>(AZ::Render::ShadowmapSize::None)>("ShadowmapSize_None")
-                    ->Enum<static_cast<uint32_t>(AZ::Render::ShadowmapSize::Size256)>("ShadowmapSize_256")
-                    ->Enum<static_cast<uint32_t>(AZ::Render::ShadowmapSize::Size512)>("ShadowmapSize_512")
-                    ->Enum<static_cast<uint32_t>(AZ::Render::ShadowmapSize::Size1024)>("ShadowmapSize_1024")
-                    ->Enum<static_cast<uint32_t>(AZ::Render::ShadowmapSize::Size2048)>("ShadowmapSize_2045")
+                    ->Enum<static_cast<uint32_t>(JE::Render::Features::ShadowFilterMethod::None)>("ShadowFilterMethod_None")
+                    ->Enum<static_cast<uint32_t>(JE::Render::Features::ShadowFilterMethod::Pcf)>("ShadowFilterMethod_PCF")
+                    ->Enum<static_cast<uint32_t>(JE::Render::Features::ShadowFilterMethod::Esm)>("ShadowFilterMethod_ESM")
+                    ->Enum<static_cast<uint32_t>(JE::Render::Features::ShadowFilterMethod::EsmPcf)>("ShadowFilterMethod_ESM_PCF")
+                    ->Enum<static_cast<uint32_t>(JE::Render::Features::ShadowmapSize::None)>("ShadowmapSize_None")
+                    ->Enum<static_cast<uint32_t>(JE::Render::Features::ShadowmapSize::Size256)>("ShadowmapSize_256")
+                    ->Enum<static_cast<uint32_t>(JE::Render::Features::ShadowmapSize::Size512)>("ShadowmapSize_512")
+                    ->Enum<static_cast<uint32_t>(JE::Render::Features::ShadowmapSize::Size1024)>("ShadowmapSize_1024")
+                    ->Enum<static_cast<uint32_t>(JE::Render::Features::ShadowmapSize::Size2048)>("ShadowmapSize_2045")
                     ;
 
                 behaviorContext->EBus<DirectionalLightRequestBus>("DirectionalLightRequestBus")
@@ -148,7 +148,7 @@ namespace JE::Render
         void DirectionalLightComponentController::Activate(AZ::EntityId entityId)
         {
             m_entityId = entityId;
-            m_featureProcessor = JE::Render::RPI::Scene::GetFeatureProcessorForEntity<AZ::Render::DirectionalLightFeatureProcessorInterface>(entityId);
+            m_featureProcessor = JE::Render::RPI::Scene::GetFeatureProcessorForEntity<JE::Render::Features::DirectionalLightFeatureProcessorInterface>(entityId);
             AZ_Error("DirectionalLightComponentController", m_featureProcessor, "Could not find a DirectionalLightFeatureProcessorInterface on the scene.");
 
             if (m_featureProcessor)
@@ -204,12 +204,12 @@ namespace JE::Render
             return m_configuration.m_intensity;
         }
 
-        AZ::Render::PhotometricUnit DirectionalLightComponentController::GetIntensityMode() const
+        JE::Render::Features::PhotometricUnit DirectionalLightComponentController::GetIntensityMode() const
         {
             return m_configuration.m_intensityMode;
         }
 
-        void DirectionalLightComponentController::SetIntensityMode(AZ::Render::PhotometricUnit unit)
+        void DirectionalLightComponentController::SetIntensityMode(JE::Render::Features::PhotometricUnit unit)
         {
             m_photometricValue.ConvertToPhotometricUnit(unit);
             m_configuration.m_intensityMode = unit;
@@ -217,7 +217,7 @@ namespace JE::Render
             ColorIntensityChanged();
         }
 
-        void DirectionalLightComponentController::SetIntensity(float intensity, AZ::Render::PhotometricUnit unit)
+        void DirectionalLightComponentController::SetIntensity(float intensity, JE::Render::Features::PhotometricUnit unit)
         {
             m_photometricValue.ConvertToPhotometricUnit(unit);
             m_photometricValue.SetIntensity(intensity);
@@ -247,30 +247,30 @@ namespace JE::Render
             }
         }
 
-        AZ::Render::ShadowmapSize DirectionalLightComponentController::GetShadowmapSize() const
+        JE::Render::Features::ShadowmapSize DirectionalLightComponentController::GetShadowmapSize() const
         {
             return m_configuration.m_shadowmapSize;
         }
 
-        void DirectionalLightComponentController::SetShadowmapSize(AZ::Render::ShadowmapSize size)
+        void DirectionalLightComponentController::SetShadowmapSize(JE::Render::Features::ShadowmapSize size)
         {
             // The minimum valid ShadowmapSize is 256 and maximum one is 2048.
             const uint32_t sizeInt = aznumeric_cast<uint32_t>(size);
-            if (sizeInt < aznumeric_cast<uint32_t>(AZ::Render::ShadowmapSize::Size512))
+            if (sizeInt < aznumeric_cast<uint32_t>(JE::Render::Features::ShadowmapSize::Size512))
             {
-                size = AZ::Render::ShadowmapSize::Size256;
+                size = JE::Render::Features::ShadowmapSize::Size256;
             }
-            else if (sizeInt < aznumeric_cast<uint32_t>(AZ::Render::ShadowmapSize::Size1024))
+            else if (sizeInt < aznumeric_cast<uint32_t>(JE::Render::Features::ShadowmapSize::Size1024))
             {
-                size = AZ::Render::ShadowmapSize::Size512;
+                size = JE::Render::Features::ShadowmapSize::Size512;
             }
-            else if (sizeInt < aznumeric_cast<uint32_t>(AZ::Render::ShadowmapSize::Size2048))
+            else if (sizeInt < aznumeric_cast<uint32_t>(JE::Render::Features::ShadowmapSize::Size2048))
             {
-                size = AZ::Render::ShadowmapSize::Size1024;
+                size = JE::Render::Features::ShadowmapSize::Size1024;
             }
             else
             {
-                size = AZ::Render::ShadowmapSize::Size2048;
+                size = JE::Render::Features::ShadowmapSize::Size2048;
             }
 
             m_configuration.m_shadowmapSize = size;
@@ -287,7 +287,7 @@ namespace JE::Render
 
         void DirectionalLightComponentController::SetCascadeCount(uint32_t cascadeCount)
         {
-            const uint16_t cascadeCount16 = AZ::GetMin(static_cast<uint16_t>(AZ::Render::Shadow::MaxNumberOfCascades), AZ::GetMax<uint16_t>(1, aznumeric_cast<uint16_t>(cascadeCount)));
+            const uint16_t cascadeCount16 = AZ::GetMin(static_cast<uint16_t>(JE::Render::Features::Shadow::MaxNumberOfCascades), AZ::GetMax<uint16_t>(1, aznumeric_cast<uint16_t>(cascadeCount)));
             cascadeCount = cascadeCount16;
             m_configuration.m_cascadeCount = cascadeCount16;
             if (m_featureProcessor)
@@ -322,7 +322,7 @@ namespace JE::Render
             m_configuration.m_cascadeFarDepths = farDepth;
             if (m_featureProcessor)
             {
-                for (uint16_t index = 0; index < AZ::Render::Shadow::MaxNumberOfCascades; ++index)
+                for (uint16_t index = 0; index < JE::Render::Features::Shadow::MaxNumberOfCascades; ++index)
                 {
                     m_featureProcessor->SetCascadeFarDepth(m_lightHandle, index, farDepth.GetElement(index));
                 }
@@ -411,22 +411,22 @@ namespace JE::Render
             if (m_featureProcessor)
             {
                 m_featureProcessor->SetDebugFlags(m_lightHandle, enabled ?
-                    AZ::Render::DirectionalLightFeatureProcessorInterface::DebugDrawFlags::DebugDrawAll :
-                    AZ::Render::DirectionalLightFeatureProcessorInterface::DebugDrawFlags::DebugDrawNone
+                    JE::Render::Features::DirectionalLightFeatureProcessorInterface::DebugDrawFlags::DebugDrawAll :
+                    JE::Render::Features::DirectionalLightFeatureProcessorInterface::DebugDrawFlags::DebugDrawNone
                 );
             }
         }
 
-        AZ::Render::ShadowFilterMethod DirectionalLightComponentController::GetShadowFilterMethod() const
+        JE::Render::Features::ShadowFilterMethod DirectionalLightComponentController::GetShadowFilterMethod() const
         {
             return m_configuration.m_shadowFilterMethod;
         }
 
-        void DirectionalLightComponentController::SetShadowFilterMethod(AZ::Render::ShadowFilterMethod method)
+        void DirectionalLightComponentController::SetShadowFilterMethod(JE::Render::Features::ShadowFilterMethod method)
         {
-            if (aznumeric_cast<uint32_t>(method) >= aznumeric_cast<uint32_t>(AZ::Render::ShadowFilterMethod::Count))
+            if (aznumeric_cast<uint32_t>(method) >= aznumeric_cast<uint32_t>(JE::Render::Features::ShadowFilterMethod::Count))
             {
-                method = AZ::Render::ShadowFilterMethod::None;
+                method = JE::Render::Features::ShadowFilterMethod::None;
             }
             m_configuration.m_shadowFilterMethod = method;
             if (m_featureProcessor)
@@ -470,7 +470,7 @@ namespace JE::Render
 
         void DirectionalLightComponentController::SetFilteringSampleCount(uint32_t count)
         {
-            const uint16_t count16 = AZ::GetMin(AZ::Render::Shadow::MaxPcfSamplingCount, aznumeric_cast<uint16_t>(count));
+            const uint16_t count16 = AZ::GetMin(JE::Render::Features::Shadow::MaxPcfSamplingCount, aznumeric_cast<uint16_t>(count));
             m_configuration.m_filteringSampleCount = count16;
             if (m_featureProcessor)
             {
@@ -603,7 +603,7 @@ namespace JE::Render
 
         void DirectionalLightComponentController::ApplyConfiguration()
         {
-            m_photometricValue = AZ::Render::PhotometricValue(m_configuration.m_intensity, m_configuration.m_color, m_configuration.m_intensityMode);
+            m_photometricValue = JE::Render::Features::PhotometricValue(m_configuration.m_intensity, m_configuration.m_color, m_configuration.m_intensityMode);
 
             ColorIntensityChanged();
             SetAngularDiameter(m_configuration.m_angularDiameter);
@@ -727,7 +727,7 @@ namespace JE::Render
             m_photometricValue.SetIntensity(m_configuration.m_intensity);
             if (m_featureProcessor)
             {
-                m_featureProcessor->SetRgbIntensity(m_lightHandle, m_photometricValue.GetCombinedRgb<AZ::Render::PhotometricUnit::Lux>());
+                m_featureProcessor->SetRgbIntensity(m_lightHandle, m_photometricValue.GetCombinedRgb<JE::Render::Features::PhotometricUnit::Lux>());
             }
         }
 

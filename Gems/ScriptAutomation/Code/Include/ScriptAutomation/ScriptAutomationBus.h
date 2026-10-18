@@ -16,11 +16,12 @@
 namespace AZ
 {
     class BehaviorContext;
-    namespace Render
-    {
-        using FrameCaptureId = uint32_t;
-    }
 } // namespace AZ
+
+namespace JE::Render::Features
+{
+    using FrameCaptureId = uint32_t;
+}
 
 namespace AZ::ScriptAutomation
 {
@@ -60,7 +61,7 @@ namespace AZ::ScriptAutomation
         virtual void SetIdleSeconds(float numSeconds) = 0;
 
         //! pass the frame capture id to the automation system so it can listen for capture completion
-        virtual void SetFrameCaptureId(AZ::Render::FrameCaptureId frameCaptureId) = 0;
+        virtual void SetFrameCaptureId(JE::Render::Features::FrameCaptureId frameCaptureId) = 0;
 
         //! tell the automation system that a profiling capture has started
         virtual void StartProfilingCapture() = 0;

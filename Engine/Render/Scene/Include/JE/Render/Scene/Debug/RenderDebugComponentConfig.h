@@ -9,7 +9,7 @@
 #pragma once
 
 #include <AzCore/Component/Component.h>
-#include <Atom/Feature/Debug/RenderDebugSettingsInterface.h>
+#include <JE/Render/Features/Debug/RenderDebugSettingsInterface.h>
 
 namespace JE::Render::Scene
 {
@@ -23,22 +23,22 @@ namespace JE::Render::Scene
         static void Reflect(AZ::ReflectContext* context);
 
         // Generate members...
-#include <Atom/Feature/ParamMacros/StartParamMembers.inl>
-#include <Atom/Feature/Debug/RenderDebugParams.inl>
-#include <Atom/Feature/ParamMacros/EndParams.inl>
+#include <JE/Render/Features/ParamMacros/StartParamMembers.inl>
+#include <JE/Render/Features/Debug/RenderDebugParams.inl>
+#include <JE/Render/Features/ParamMacros/EndParams.inl>
 
         // Generate Getters/Setters...
-#include <Atom/Feature/ParamMacros/StartParamFunctions.inl>
-#include <Atom/Feature/Debug/RenderDebugParams.inl>
-#include <Atom/Feature/ParamMacros/EndParams.inl>
+#include <JE/Render/Features/ParamMacros/StartParamFunctions.inl>
+#include <JE/Render/Features/Debug/RenderDebugParams.inl>
+#include <JE/Render/Features/ParamMacros/EndParams.inl>
 
-        void CopySettingsFrom(AZ::Render::RenderDebugSettingsInterface* settings);
-        void CopySettingsTo(AZ::Render::RenderDebugSettingsInterface* settings);
+        void CopySettingsFrom(JE::Render::Features::RenderDebugSettingsInterface* settings);
+        void CopySettingsTo(JE::Render::Features::RenderDebugSettingsInterface* settings);
 
         bool IsBaseColorReadOnly() { return !GetOverrideBaseColor(); }
         bool IsRoughnessReadOnly() { return !GetOverrideRoughness(); }
         bool IsMetallicReadOnly() { return !GetOverrideMetallic(); }
-        bool IsDebugLightReadOnly() { return GetRenderDebugLightingSource() != AZ::Render::RenderDebugLightingSource::DebugLight; }
+        bool IsDebugLightReadOnly() { return GetRenderDebugLightingSource() != JE::Render::Features::RenderDebugLightingSource::DebugLight; }
 
     };
 

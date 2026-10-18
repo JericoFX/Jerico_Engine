@@ -22,15 +22,15 @@ namespace JE::Render
 
                 // Auto-gen serialize context code...
 #define SERIALIZE_CLASS PaniniProjectionComponentConfig
-#include <Atom/Feature/ParamMacros/StartParamSerializeContext.inl>
-#include <Atom/Feature/PostProcess/PaniniProjection/PaniniProjectionParams.inl>
-#include <Atom/Feature/ParamMacros/EndParams.inl>
+#include <JE/Render/Features/ParamMacros/StartParamSerializeContext.inl>
+#include <JE/Render/Features/PostProcess/PaniniProjection/PaniniProjectionParams.inl>
+#include <JE/Render/Features/ParamMacros/EndParams.inl>
 #undef SERIALIZE_CLASS
                     ;
             }
         }
 
-        void PaniniProjectionComponentConfig::CopySettingsFrom(AZ::Render::PaniniProjectionSettingsInterface* settings)
+        void PaniniProjectionComponentConfig::CopySettingsFrom(JE::Render::Features::PaniniProjectionSettingsInterface* settings)
         {
             if (!settings)
             {
@@ -38,13 +38,13 @@ namespace JE::Render
             }
 
 #define COPY_SOURCE settings
-#include <Atom/Feature/ParamMacros/StartParamCopySettingsFrom.inl>
-#include <Atom/Feature/PostProcess/PaniniProjection/PaniniProjectionParams.inl>
-#include <Atom/Feature/ParamMacros/EndParams.inl>
+#include <JE/Render/Features/ParamMacros/StartParamCopySettingsFrom.inl>
+#include <JE/Render/Features/PostProcess/PaniniProjection/PaniniProjectionParams.inl>
+#include <JE/Render/Features/ParamMacros/EndParams.inl>
 #undef COPY_SOURCE
         }
 
-        void PaniniProjectionComponentConfig::CopySettingsTo(AZ::Render::PaniniProjectionSettingsInterface* settings)
+        void PaniniProjectionComponentConfig::CopySettingsTo(JE::Render::Features::PaniniProjectionSettingsInterface* settings)
         {
             if (!settings)
             {
@@ -52,9 +52,9 @@ namespace JE::Render
             }
 
 #define COPY_TARGET settings
-#include <Atom/Feature/ParamMacros/StartParamCopySettingsTo.inl>
-#include <Atom/Feature/PostProcess/PaniniProjection/PaniniProjectionParams.inl>
-#include <Atom/Feature/ParamMacros/EndParams.inl>
+#include <JE/Render/Features/ParamMacros/StartParamCopySettingsTo.inl>
+#include <JE/Render/Features/PostProcess/PaniniProjection/PaniniProjectionParams.inl>
+#include <JE/Render/Features/ParamMacros/EndParams.inl>
 #undef COPY_TARGET
         }
 

@@ -36,19 +36,19 @@ namespace AZ::Render
         DrawableMetaData(EntityId entityId);
         JE::Render::RPI::Scene* GetScene() const;
         const JE::Render::RPI::ViewPtr GetView() const;
-        const MeshFeatureProcessorInterface* GetFeatureProcessor() const;
+        const JE::Render::Features::MeshFeatureProcessorInterface* GetFeatureProcessor() const;
 
     private:
         JE::Render::RPI::Scene* m_scene = nullptr;
         JE::Render::RPI::ViewPtr m_view = nullptr;
-        MeshFeatureProcessorInterface* m_featureProcessor = nullptr;
+        JE::Render::Features::MeshFeatureProcessorInterface* m_featureProcessor = nullptr;
     };
 
     DrawableMetaData::DrawableMetaData(EntityId entityId)
     {
         m_scene = JE::Render::RPI::Scene::GetSceneForEntityId(entityId);
         m_view = GetViewFromScene(m_scene);
-        m_featureProcessor = m_scene->GetFeatureProcessor<MeshFeatureProcessorInterface>();
+        m_featureProcessor = m_scene->GetFeatureProcessor<JE::Render::Features::MeshFeatureProcessorInterface>();
     }
 
     JE::Render::RPI::Scene* DrawableMetaData::GetScene() const
@@ -61,7 +61,7 @@ namespace AZ::Render
         return m_view;
     }
 
-    const MeshFeatureProcessorInterface* DrawableMetaData::GetFeatureProcessor() const
+    const JE::Render::Features::MeshFeatureProcessorInterface* DrawableMetaData::GetFeatureProcessor() const
     {
         return m_featureProcessor;
     }
@@ -142,7 +142,7 @@ namespace AZ::Render
         return JE::Render::RPI::ModelLodUtils::SelectLod(view.get(), worldTM, *model);
     }
 
-    void DrawableMeshEntity::OnMeshHandleSet(const MeshFeatureProcessorInterface::MeshHandle* meshHandle)
+    void DrawableMeshEntity::OnMeshHandleSet(const JE::Render::Features::MeshFeatureProcessorInterface::MeshHandle* meshHandle)
     {
         m_meshHandle = meshHandle;
         if (!m_meshHandle || !m_meshHandle->IsValid())
@@ -160,7 +160,7 @@ namespace AZ::Render
     }
 
     void DrawableMeshEntity::CreateOrUpdateMeshDrawPackets(
-        const MeshFeatureProcessorInterface* featureProcessor, const JE::Render::RPI::ModelLodIndex modelLodIndex, Data::Instance<JE::Render::RPI::Model> model)
+        const JE::Render::Features::MeshFeatureProcessorInterface* featureProcessor, const JE::Render::RPI::ModelLodIndex modelLodIndex, Data::Instance<JE::Render::RPI::Model> model)
     {
         ClearDrawData();
 
@@ -192,7 +192,7 @@ namespace AZ::Render
     }
 
     Data::Instance<JE::Render::RPI::ShaderResourceGroup> DrawableMeshEntity::CreateMaskShaderResourceGroup(
-        const MeshFeatureProcessorInterface* featureProcessor) const
+        const JE::Render::Features::MeshFeatureProcessorInterface* featureProcessor) const
     {
         const auto& shaderAsset = m_maskMaterial->GetAsset()->GetMaterialTypeAsset()->GetShaderAssetForObjectSrg();
         const auto& objectSrgLayout = m_maskMaterial->GetAsset()->GetObjectSrgLayout();

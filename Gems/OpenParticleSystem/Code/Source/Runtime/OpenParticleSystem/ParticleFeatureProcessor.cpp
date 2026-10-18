@@ -232,7 +232,7 @@ namespace OpenParticle
 
     void ParticleFeatureProcessor::InitFeature()
     {
-        m_transformService = GetParentScene()->GetFeatureProcessor<AZ::Render::TransformServiceFeatureProcessorInterface>();
+        m_transformService = GetParentScene()->GetFeatureProcessor<JE::Render::Features::TransformServiceFeatureProcessorInterface>();
         AZ_Assert(m_transformService != nullptr, "Failed to load transform service");
     }
 

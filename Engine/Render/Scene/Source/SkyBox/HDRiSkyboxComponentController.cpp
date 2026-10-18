@@ -6,7 +6,7 @@
  *
  */
 
-#include <Atom/Feature/SkyBox/SkyboxConstants.h>
+#include <JE/Render/Features/SkyBox/SkyboxConstants.h>
 #include <SkyBox/HDRiSkyboxComponentController.h>
 
 #include <AzCore/RTTI/BehaviorContext.h>
@@ -69,12 +69,12 @@ namespace JE::Render
 
         void HDRiSkyboxComponentController::Activate(AZ::EntityId entityId)
         {
-            m_featureProcessorInterface = JE::Render::RPI::Scene::GetFeatureProcessorForEntity<AZ::Render::SkyBoxFeatureProcessorInterface>(entityId);
+            m_featureProcessorInterface = JE::Render::RPI::Scene::GetFeatureProcessorForEntity<JE::Render::Features::SkyBoxFeatureProcessorInterface>(entityId);
 
             // only activate if there is no other skybox activate
             if (m_featureProcessorInterface && !m_featureProcessorInterface->IsEnabled())
             {
-                m_featureProcessorInterface->SetSkyboxMode(AZ::Render::SkyBoxMode::Cubemap);
+                m_featureProcessorInterface->SetSkyboxMode(JE::Render::Features::SkyBoxMode::Cubemap);
                 m_featureProcessorInterface->Enable(true);
 
                 m_entityId = entityId;

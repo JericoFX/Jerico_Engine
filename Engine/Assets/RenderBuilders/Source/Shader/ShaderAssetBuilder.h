@@ -9,6 +9,9 @@
 #pragma once
 
 #include <AzCore/base.h>
+#include <AzCore/std/containers/unordered_set.h>
+#include <AzCore/std/containers/vector.h>
+#include <AzCore/std/string/string.h>
 #include <AssetBuilderSDK/AssetBuilderBusses.h>
 #include <AssetBuilderSDK/AssetBuilderSDK.h>
 
@@ -32,6 +35,14 @@ namespace JE::Assets::RenderBuilders
     namespace Shader
     {
         struct AzslData;
+        namespace ShaderBuilderUtility
+        {
+            class IncludedFilesParser;
+        }
+
+        // Tools-internal DFS seam, not an installed/public API. CreateJobs uses this same function.
+        void GetListOfIncludedFiles(AZStd::string_view sourceFilePath, const AZStd::vector<AZStd::string>& includeDirectories,
+            const ShaderBuilderUtility::IncludedFilesParser& includedFilesParser, AZStd::unordered_set<AZStd::string>& includedFiles);
 
         class ShaderAssetBuilder
             : public AssetBuilderSDK::AssetBuilderCommandBus::Handler

@@ -230,7 +230,7 @@ ly_add_target(
             AZ::AzCore
             AZ::AzFramework
             AZ::AzNetworking
-            Gem::Atom_Feature_Common.Public
+            JE::RenderFeatures
             Gem::${gem_name}.Client.Static
             JE::DebugImGui
 )
@@ -251,7 +251,7 @@ ly_add_target(
             AZ::AzCore
             AZ::AzFramework
             AZ::AzNetworking
-            Gem::Atom_Feature_Common.Public
+            JE::RenderFeatures
             Gem::${gem_name}.Unified.Static
             JE::DebugImGui
 )

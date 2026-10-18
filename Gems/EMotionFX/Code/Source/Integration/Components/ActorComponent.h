@@ -24,7 +24,7 @@
 #include <Integration/ActorComponentBus.h>
 #include <Integration/Rendering/RenderActorInstance.h>
 
-#include <Atom/Feature/LightingChannel/LightingChannelConfiguration.h>
+#include <JE/Render/Features/LightingChannel/LightingChannelConfiguration.h>
 
 #include <EMotionFX/Source/ActorBus.h>
 #include <LmbrCentral/Animation/AttachmentComponentBus.h>
@@ -98,7 +98,7 @@ namespace EMotionFX
 
                 bool m_excludeFromReflectionCubeMaps = true;
 
-                AZ::Render::LightingChannelConfiguration m_lightingChannelConfig;
+                JE::Render::Features::LightingChannelConfiguration m_lightingChannelConfig;
 
                 static void Reflect(AZ::ReflectContext* context);
             };

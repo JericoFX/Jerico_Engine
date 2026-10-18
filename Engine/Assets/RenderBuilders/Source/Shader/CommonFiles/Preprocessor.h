@@ -102,6 +102,10 @@ namespace JE::Assets::RenderBuilders
             AZStd::string& sourceCode,
             AZStd::string newFileOrigin);
 
+        // Temporary read compatibility owned by JE::Assets::RenderBuilders.
+        // Remove after serialized v1 shader include references have been migrated.
+        AZStd::string ResolveNativeShaderInclude(AZStd::string_view includeName);
+
         //! Binder helper to Matsui C-Pre-Processor library
         class McppBinder
         {
@@ -117,6 +121,8 @@ namespace JE::Assets::RenderBuilders
             }
             ~McppBinder()
             {
+                // Reset while still holding the same exclusive MCPP lifetime.
+                mcpp_set_resolve_include_callback(nullptr);
                 s_currentInstance = nullptr;
                 s_mcppExclusiveProtection.unlock();
             }
@@ -143,6 +149,7 @@ namespace JE::Assets::RenderBuilders
             static int Fprintf_StaticHinge(MCPP_OUTDEST od, const char* format, ...);
 
             static void IncludeReport_StaticHinge(FILE*, const char*, const char*, const char* path);
+            static int ResolveInclude_StaticHinge(const char* name, char* resolved, size_t capacity);
 
             // ====== utility methods =====
 

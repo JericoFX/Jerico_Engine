@@ -8,7 +8,7 @@
 
 #pragma once
 
-#include <Atom/Feature/Debug/RayTracingDebugSettingsInterface.h>
+#include <JE/Render/Features/Debug/RayTracingDebugSettingsInterface.h>
 #include <AzCore/Component/ComponentBus.h>
 
 namespace JE::Render::Scene
@@ -23,17 +23,17 @@ namespace JE::Render::Scene
 
         // clang-format off
         // Generate members
-        #include <Atom/Feature/ParamMacros/StartParamMembers.inl>
-        #include <Atom/Feature/Debug/RayTracingDebugParams.inl>
-        #include <Atom/Feature/ParamMacros/EndParams.inl>
+        #include <JE/Render/Features/ParamMacros/StartParamMembers.inl>
+        #include <JE/Render/Features/Debug/RayTracingDebugParams.inl>
+        #include <JE/Render/Features/ParamMacros/EndParams.inl>
 
         // Generate Getters/Setters
-        #include <Atom/Feature/ParamMacros/StartParamFunctions.inl>
-        #include <Atom/Feature/Debug/RayTracingDebugParams.inl>
-        #include <Atom/Feature/ParamMacros/EndParams.inl>
+        #include <JE/Render/Features/ParamMacros/StartParamFunctions.inl>
+        #include <JE/Render/Features/Debug/RayTracingDebugParams.inl>
+        #include <JE/Render/Features/ParamMacros/EndParams.inl>
         // clang-format on
 
-        void CopySettingsFrom(AZ::Render::RayTracingDebugSettingsInterface* settings);
-        void CopySettingsTo(AZ::Render::RayTracingDebugSettingsInterface* settings);
+        void CopySettingsFrom(JE::Render::Features::RayTracingDebugSettingsInterface* settings);
+        void CopySettingsTo(JE::Render::Features::RayTracingDebugSettingsInterface* settings);
     };
 } // namespace AZ::Render

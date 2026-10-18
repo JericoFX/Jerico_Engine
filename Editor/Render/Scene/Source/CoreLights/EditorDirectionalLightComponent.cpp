@@ -14,7 +14,7 @@
 #include <AzCore/Math/Transform.h>
 #include <AzCore/Math/Vector3.h>
 
-#include <Atom/Feature/CoreLights/PhotometricValue.h>
+#include <JE/Render/Features/CoreLights/PhotometricValue.h>
 
 #include <AzFramework/Translation/TranslationDef.h>
 
@@ -69,9 +69,9 @@ namespace JE::Editor::Render
                         ->DataElement(AZ::Edit::UIHandlers::ComboBox, &JE::Render::Scene::DirectionalLightComponentConfig::m_intensityMode,
                             QT_TRANSLATE_NOOP("AtomLyIntegration", "Intensity mode"),
                             QT_TRANSLATE_NOOP("AtomLyIntegration", "Allows specifying light values in lux or Ev100"))
-                            ->EnumAttribute(AZ::Render::PhotometricUnit::Lux,
+                            ->EnumAttribute(JE::Render::Features::PhotometricUnit::Lux,
                                 QT_TRANSLATE_NOOP("AtomLyIntegration", "Lux"))
-                            ->EnumAttribute(AZ::Render::PhotometricUnit::Ev100Illuminance, "Ev100")
+                            ->EnumAttribute(JE::Render::Features::PhotometricUnit::Ev100Illuminance, "Ev100")
                             ->Attribute(AZ::Edit::Attributes::ChangeNotify, AZ::Edit::PropertyRefreshLevels::AttributesAndValues)
                         ->DataElement(AZ::Edit::UIHandlers::Slider, &JE::Render::Scene::DirectionalLightComponentConfig::m_intensity,
                             QT_TRANSLATE_NOOP("AtomLyIntegration", "Intensity"),
@@ -113,17 +113,17 @@ namespace JE::Editor::Render
                         ->DataElement(AZ::Edit::UIHandlers::ComboBox, &JE::Render::Scene::DirectionalLightComponentConfig::m_shadowmapSize,
                             QT_TRANSLATE_NOOP("AtomLyIntegration", "Shadowmap size"),
                             QT_TRANSLATE_NOOP("AtomLyIntegration", "Width/Height of shadowmap"))
-                            ->EnumAttribute(AZ::Render::ShadowmapSize::Size256, " 256")
-                            ->EnumAttribute(AZ::Render::ShadowmapSize::Size512, " 512")
-                            ->EnumAttribute(AZ::Render::ShadowmapSize::Size1024, "1024")
-                            ->EnumAttribute(AZ::Render::ShadowmapSize::Size2048, "2048")
+                            ->EnumAttribute(JE::Render::Features::ShadowmapSize::Size256, " 256")
+                            ->EnumAttribute(JE::Render::Features::ShadowmapSize::Size512, " 512")
+                            ->EnumAttribute(JE::Render::Features::ShadowmapSize::Size1024, "1024")
+                            ->EnumAttribute(JE::Render::Features::ShadowmapSize::Size2048, "2048")
                             ->Attribute(AZ::Edit::Attributes::ChangeNotify, AZ::Edit::PropertyRefreshLevels::ValuesOnly)
                             ->Attribute(AZ::Edit::Attributes::ReadOnly, &JE::Render::Scene::DirectionalLightComponentConfig::IsShadowDisabled)
                         ->DataElement(AZ::Edit::UIHandlers::Slider, &JE::Render::Scene::DirectionalLightComponentConfig::m_cascadeCount,
                             QT_TRANSLATE_NOOP("AtomLyIntegration", "Cascade count"),
                             QT_TRANSLATE_NOOP("AtomLyIntegration", "Number of cascades"))
                             ->Attribute(AZ::Edit::Attributes::Min, 1)
-                            ->Attribute(AZ::Edit::Attributes::Max, AZ::Render::Shadow::MaxNumberOfCascades)
+                            ->Attribute(AZ::Edit::Attributes::Max, JE::Render::Features::Shadow::MaxNumberOfCascades)
                             ->Attribute(AZ::Edit::Attributes::ChangeNotify, AZ::Edit::PropertyRefreshLevels::ValuesOnly)
                             ->Attribute(AZ::Edit::Attributes::ChangeNotify, &JE::Render::Scene::DirectionalLightComponentConfig::UpdateCascadeFarDepths)
                             ->Attribute(AZ::Edit::Attributes::ReadOnly, &JE::Render::Scene::DirectionalLightComponentConfig::IsShadowDisabled)
@@ -179,11 +179,11 @@ namespace JE::Editor::Render
                             "  ESM: Exponential shadow maps\n"
                             "  ESM+PCF: ESM with a PCF fallback\n"
                             "For BehaviorContext (or TrackView), None=0, PCF=1, ESM=2, ESM+PCF=3"))
-                            ->EnumAttribute(AZ::Render::ShadowFilterMethod::None,
+                            ->EnumAttribute(JE::Render::Features::ShadowFilterMethod::None,
                                 QT_TRANSLATE_NOOP("AtomLyIntegration", "None"))
-                            ->EnumAttribute(AZ::Render::ShadowFilterMethod::Pcf, "PCF")
-                            ->EnumAttribute(AZ::Render::ShadowFilterMethod::Esm, "ESM")
-                            ->EnumAttribute(AZ::Render::ShadowFilterMethod::EsmPcf, "ESM+PCF")
+                            ->EnumAttribute(JE::Render::Features::ShadowFilterMethod::Pcf, "PCF")
+                            ->EnumAttribute(JE::Render::Features::ShadowFilterMethod::Esm, "ESM")
+                            ->EnumAttribute(JE::Render::Features::ShadowFilterMethod::EsmPcf, "ESM+PCF")
                             ->Attribute(AZ::Edit::Attributes::ChangeNotify, AZ::Edit::PropertyRefreshLevels::ValuesOnly)
                             ->Attribute(AZ::Edit::Attributes::ReadOnly, &JE::Render::Scene::DirectionalLightComponentConfig::IsShadowDisabled)
                         ->DataElement(AZ::Edit::UIHandlers::Slider, &JE::Render::Scene::DirectionalLightComponentConfig::m_filteringSampleCount,
@@ -275,14 +275,14 @@ namespace JE::Editor::Render
         {
             BaseClass::Activate();
             AzFramework::EntityDebugDisplayEventBus::Handler::BusConnect(GetEntityId());
-            AZ::Render::ShadowingDirectionalLightNotificationsBus::Handler::BusConnect();
+            JE::Render::Features::ShadowingDirectionalLightNotificationsBus::Handler::BusConnect();
         }
 
         void EditorDirectionalLightComponent::Deactivate()
         {
             AzFramework::EntityDebugDisplayEventBus::Handler::BusDisconnect();
             BaseClass::Deactivate();
-            AZ::Render::ShadowingDirectionalLightNotificationsBus::Handler::BusDisconnect();
+            JE::Render::Features::ShadowingDirectionalLightNotificationsBus::Handler::BusDisconnect();
         }
 
         void EditorDirectionalLightComponent::DisplayEntityViewport(
@@ -328,7 +328,7 @@ namespace JE::Editor::Render
             debugDisplay.DrawDisk(origin, transform.TransformVector(forward), originScale);
         }
 
-        void EditorDirectionalLightComponent::OnShadowingDirectionalLightChanged(const AZ::Render::DirectionalLightFeatureProcessorInterface::LightHandle& handle)
+        void EditorDirectionalLightComponent::OnShadowingDirectionalLightChanged(const JE::Render::Features::DirectionalLightFeatureProcessorInterface::LightHandle& handle)
         {
             if (m_controller.m_lightHandle != handle)
             {

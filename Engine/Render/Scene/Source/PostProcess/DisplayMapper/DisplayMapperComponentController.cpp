@@ -13,8 +13,8 @@
 #include <JE/Render/RPI/Public/Scene.h>
 
 #include <PostProcess/DisplayMapper/DisplayMapperComponentController.h>
-#include <Atom/Feature/ACES/AcesDisplayMapperFeatureProcessor.h>
-#include <Atom/Feature/DisplayMapper/DisplayMapperConfigurationDescriptor.h>
+#include <JE/Render/Features/ACES/AcesDisplayMapperFeatureProcessor.h>
+#include <JE/Render/Features/DisplayMapper/DisplayMapperConfigurationDescriptor.h>
 
 namespace JE::Render
 {
@@ -125,8 +125,8 @@ namespace JE::Render
 
         void DisplayMapperComponentController::Deactivate()
         {
-            AZ::Render::DisplayMapperFeatureProcessorInterface* fp =
-                JE::Render::RPI::Scene::GetFeatureProcessorForEntity<AZ::Render::DisplayMapperFeatureProcessorInterface>(m_entityId);
+            JE::Render::Features::DisplayMapperFeatureProcessorInterface* fp =
+                JE::Render::RPI::Scene::GetFeatureProcessorForEntity<JE::Render::Features::DisplayMapperFeatureProcessorInterface>(m_entityId);
             if (fp)
             {
                 fp->UnregisterDisplayMapperConfiguration();
@@ -150,7 +150,7 @@ namespace JE::Render
 
         void DisplayMapperComponentController::LoadPreset(AZ::Render::OutputDeviceTransformType preset)
         {
-            AZ::Render::AcesParameterOverrides propertyOverrides;
+            JE::Render::Features::AcesParameterOverrides propertyOverrides;
             propertyOverrides.m_preset = preset;
             propertyOverrides.m_overrideDefaults = true;
             propertyOverrides.LoadPreset();
@@ -174,7 +174,7 @@ namespace JE::Render
             return m_configuration.m_displayMapperOperation;
         }
 
-        void DisplayMapperComponentController::SetAcesParameterOverrides(const AZ::Render::AcesParameterOverrides& parameterOverrides)
+        void DisplayMapperComponentController::SetAcesParameterOverrides(const JE::Render::Features::AcesParameterOverrides& parameterOverrides)
         {
             m_configuration.m_acesParameterOverrides = parameterOverrides;
             if (m_configuration.m_displayMapperOperation == AZ::Render::DisplayMapperOperationType::Aces)
@@ -186,7 +186,7 @@ namespace JE::Render
                 m_configuration.m_acesParameterOverrides);
         }
 
-        const AZ::Render::AcesParameterOverrides& DisplayMapperComponentController::GetAcesParameterOverrides() const
+        const JE::Render::Features::AcesParameterOverrides& DisplayMapperComponentController::GetAcesParameterOverrides() const
         {
             return m_configuration.m_acesParameterOverrides;
         }
@@ -364,8 +364,8 @@ namespace JE::Render
         void DisplayMapperComponentController::OnConfigChanged()
         {
             // Register the configuration with the  AcesDisplayMapperFeatureProcessor for this scene.
-            AZ::Render::DisplayMapperFeatureProcessorInterface* fp = JE::Render::RPI::Scene::GetFeatureProcessorForEntity<AZ::Render::DisplayMapperFeatureProcessorInterface>(m_entityId);
-            AZ::Render::DisplayMapperConfigurationDescriptor desc;
+            JE::Render::Features::DisplayMapperFeatureProcessorInterface* fp = JE::Render::RPI::Scene::GetFeatureProcessorForEntity<JE::Render::Features::DisplayMapperFeatureProcessorInterface>(m_entityId);
+            JE::Render::Features::DisplayMapperConfigurationDescriptor desc;
             desc.m_operationType = m_configuration.m_displayMapperOperation;
             desc.m_ldrGradingLutEnabled = m_configuration.m_ldrColorGradingLutEnabled;
             desc.m_ldrColorGradingLut = m_configuration.m_ldrColorGradingLut;

@@ -15,9 +15,16 @@
 #include <Integration/Assets/ActorAsset.h>
 #include <JE/Render/RPI/Public/Base.h>
 #include <JE/Render/RPI/Public/ViewportContext.h>
-#include <Atom/Feature/SkyBox/SkyBoxFeatureProcessorInterface.h>
-#include <Atom/Feature/CoreLights/DirectionalLightFeatureProcessorInterface.h>
-#include <Atom/Feature/Utils/LightingPreset.h>
+#include <JE/Render/Features/SkyBox/SkyBoxFeatureProcessorInterface.h>
+#include <JE/Render/Features/CoreLights/DirectionalLightFeatureProcessorInterface.h>
+#include <JE/Render/Features/Utils/LightingPreset.h>
+
+namespace JE::Render::Features
+{
+    class DisplayMapperFeatureProcessorInterface;
+    class DirectionalLightFeatureProcessorInterface;
+    class MeshFeatureProcessorInterface;
+}
 
 namespace AZ
 {
@@ -26,9 +33,9 @@ namespace AZ
 
     namespace Render
     {
-        class DisplayMapperFeatureProcessorInterface;
-        class DirectionalLightFeatureProcessorInterface;
-        class MeshFeatureProcessorInterface;
+
+
+
     }
 
     }
@@ -88,17 +95,17 @@ namespace EMStudio
         AZ::Entity* CreateActorEntity(AZ::Data::Asset<EMotionFX::Integration::ActorAsset> actorAsset);
 
         AZ::Entity* FindActorEntity(AZ::Data::Asset<EMotionFX::Integration::ActorAsset> actorAsset) const;
-        void SetLightingPreset(const AZ::Render::LightingPreset* preset);
+        void SetLightingPreset(const JE::Render::Features::LightingPreset* preset);
 
         AZStd::shared_ptr<JE::Render::RPI::WindowContext> m_windowContext;
         AZStd::unique_ptr<AzFramework::EntityContext> m_entityContext;
         AZStd::shared_ptr<AzFramework::Scene> m_frameworkScene;
         JE::Render::RPI::ScenePtr m_scene;
         JE::Render::RPI::RenderPipelinePtr m_renderPipeline;
-        AZ::Render::DirectionalLightFeatureProcessorInterface* m_directionalLightFeatureProcessor = nullptr;
-        AZ::Render::DisplayMapperFeatureProcessorInterface* m_displayMapperFeatureProcessor = nullptr;
-        AZ::Render::SkyBoxFeatureProcessorInterface* m_skyboxFeatureProcessor = nullptr;
-        AZ::Render::MeshFeatureProcessorInterface* m_meshFeatureProcessor = nullptr;
+        JE::Render::Features::DirectionalLightFeatureProcessorInterface* m_directionalLightFeatureProcessor = nullptr;
+        JE::Render::Features::DisplayMapperFeatureProcessorInterface* m_displayMapperFeatureProcessor = nullptr;
+        JE::Render::Features::SkyBoxFeatureProcessorInterface* m_skyboxFeatureProcessor = nullptr;
+        JE::Render::Features::MeshFeatureProcessorInterface* m_meshFeatureProcessor = nullptr;
 
         AZ::Entity* m_postProcessEntity = nullptr;
         AZ::Entity* m_iblEntity = nullptr;
@@ -108,6 +115,6 @@ namespace EMStudio
 
         const float DefaultFrustumDimension = 128.0f;
         const float TileSize = 1.0f;
-        AZStd::vector<AZ::Render::DirectionalLightFeatureProcessorInterface::LightHandle> m_lightHandles;
+        AZStd::vector<JE::Render::Features::DirectionalLightFeatureProcessorInterface::LightHandle> m_lightHandles;
     };
 }

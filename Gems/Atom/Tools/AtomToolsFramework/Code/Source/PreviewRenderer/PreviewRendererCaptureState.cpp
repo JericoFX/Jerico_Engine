@@ -19,7 +19,7 @@ namespace AtomToolsFramework
 
     PreviewRendererCaptureState::~PreviewRendererCaptureState()
     {
-        AZ::Render::FrameCaptureNotificationBus::Handler::BusDisconnect();
+        JE::Render::Features::FrameCaptureNotificationBus::Handler::BusDisconnect();
         m_renderer->EndCapture();
     }
 
@@ -27,36 +27,36 @@ namespace AtomToolsFramework
     {
         if (m_captureComplete)
         {
-            AZ::Render::FrameCaptureNotificationBus::Handler::BusDisconnect();
+            JE::Render::Features::FrameCaptureNotificationBus::Handler::BusDisconnect();
             m_renderer->CompleteCaptureRequest();
             return;
         }
 
         if (AZStd::chrono::steady_clock::now() > m_abortTime)
         {
-            AZ::Render::FrameCaptureNotificationBus::Handler::BusDisconnect();
+            JE::Render::Features::FrameCaptureNotificationBus::Handler::BusDisconnect();
             m_renderer->CancelCaptureRequest();
             return;
         }
 
         if (m_renderer->IsContentReadyToRender())
         {
-            if (!AZ::Render::FrameCaptureNotificationBus::Handler::BusIsConnected())
+            if (!JE::Render::Features::FrameCaptureNotificationBus::Handler::BusIsConnected())
             {
                 // if the start capture call fails the capture will be retried next tick.
-                const AZ::Render::FrameCaptureId frameCaptureId = m_renderer->StartCapture();
-                if (frameCaptureId != AZ::Render::InvalidFrameCaptureId)
+                const JE::Render::Features::FrameCaptureId frameCaptureId = m_renderer->StartCapture();
+                if (frameCaptureId != JE::Render::Features::InvalidFrameCaptureId)
                 {
-                    AZ::Render::FrameCaptureNotificationBus::Handler::BusConnect(frameCaptureId);
+                    JE::Render::Features::FrameCaptureNotificationBus::Handler::BusConnect(frameCaptureId);
                 }
             }
         }
     }
 
     void PreviewRendererCaptureState::OnFrameCaptureFinished(
-        [[maybe_unused]] AZ::Render::FrameCaptureResult result, [[maybe_unused]] const AZStd::string& info)
+        [[maybe_unused]] JE::Render::Features::FrameCaptureResult result, [[maybe_unused]] const AZStd::string& info)
     {
-        AZ::Render::FrameCaptureNotificationBus::Handler::BusDisconnect();
+        JE::Render::Features::FrameCaptureNotificationBus::Handler::BusDisconnect();
         m_captureComplete = true;
     }
 } // namespace AtomToolsFramework

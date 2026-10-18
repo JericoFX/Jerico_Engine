@@ -34,6 +34,7 @@ ly_add_target(
             JE::RenderIntegration
             JE::RenderMaterials
             JE::RenderScene
+            JE::RenderFeatures
             Legacy::CryCommon
 )
 
@@ -60,6 +61,7 @@ ly_add_target(
             JE::ProfilerCapture
             JE::RenderMaterials
             JE::RenderScene
+            JE::RenderFeatures
             Legacy::CryCommon
 )
 

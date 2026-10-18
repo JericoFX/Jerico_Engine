@@ -14,9 +14,9 @@
 #include <JE/Render/Scene/PostProcess/DepthOfField/DepthOfFieldBus.h>
 #include <JE/Render/Scene/PostProcess/DepthOfField/DepthOfFieldComponentConfig.h>
 
-#include <Atom/Feature/PostProcess/DepthOfField/DepthOfFieldSettingsInterface.h>
-#include <Atom/Feature/PostProcess/PostProcessSettingsInterface.h>
-#include <Atom/Feature/PostProcess/PostProcessFeatureProcessorInterface.h>
+#include <JE/Render/Features/PostProcess/DepthOfField/DepthOfFieldSettingsInterface.h>
+#include <JE/Render/Features/PostProcess/PostProcessSettingsInterface.h>
+#include <JE/Render/Features/PostProcess/PostProcessFeatureProcessorInterface.h>
 
 namespace JE::Editor::Render::Scene
 {
@@ -51,17 +51,17 @@ namespace JE::Render
             void UpdateInferredParams();
 
             // Auto-gen function override declarations (functions definitions in .cpp)...
-#include <Atom/Feature/ParamMacros/StartParamFunctionsOverride.inl>
-#include <Atom/Feature/PostProcess/DepthOfField/DepthOfFieldParams.inl>
-#include <Atom/Feature/ParamMacros/EndParams.inl>
+#include <JE/Render/Features/ParamMacros/StartParamFunctionsOverride.inl>
+#include <JE/Render/Features/PostProcess/DepthOfField/DepthOfFieldParams.inl>
+#include <JE/Render/Features/ParamMacros/EndParams.inl>
 
         private:
             AZ_DISABLE_COPY(DepthOfFieldComponentController);
 
             void OnConfigChanged();
 
-            AZ::Render::PostProcessSettingsInterface* m_postProcessInterface = nullptr;
-            AZ::Render::DepthOfFieldSettingsInterface* m_depthOfFieldSettingsInterface = nullptr;
+            JE::Render::Features::PostProcessSettingsInterface* m_postProcessInterface = nullptr;
+            JE::Render::Features::DepthOfFieldSettingsInterface* m_depthOfFieldSettingsInterface = nullptr;
             DepthOfFieldComponentConfig m_configuration;
             AZ::EntityId m_entityId;
         };

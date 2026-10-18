@@ -83,14 +83,14 @@ namespace AtomToolsFramework
 
         // Add lighting preset combo box
         m_lightingPresetComboBox = new AssetSelectionComboBox([](const AZStd::string& path) {
-            return path.ends_with(AZ::Render::LightingPreset::Extension);
+            return path.ends_with(JE::Render::Features::LightingPreset::Extension);
         }, this);
         m_lightingPresetComboBox->view()->setMinimumWidth(minComboBoxDropdownWidth);
         addWidget(m_lightingPresetComboBox);
 
         // Add model preset combo box
         m_modelPresetComboBox = new AssetSelectionComboBox([](const AZStd::string& path) {
-            return path.ends_with(AZ::Render::ModelPreset::Extension);
+            return path.ends_with(JE::Render::Features::ModelPreset::Extension);
         }, this);
         m_modelPresetComboBox->view()->setMinimumWidth(minComboBoxDropdownWidth);
         addWidget(m_modelPresetComboBox);

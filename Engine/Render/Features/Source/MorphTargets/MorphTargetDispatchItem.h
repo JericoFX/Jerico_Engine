@@ -1,0 +1,104 @@
+/*
+ * Copyright (c) Contributors to the Open 3D Engine Project.
+ * For complete copyright and license terms please see the LICENSE at the root of this distribution.
+ *
+ * SPDX-License-Identifier: Apache-2.0 OR MIT
+ *
+ */
+
+#pragma once
+
+#include <JE/Render/Features/MorphTargets/MorphTargetInputBuffers.h>
+
+#include <JE/Render/RPI/Public/Shader/ShaderReloadNotificationBus.h>
+#include <Atom/RHI/DispatchItem.h>
+#include <Atom/RHI/ConstantsData.h>
+#include <AzCore/Instance/Instance.h>
+
+namespace AZ
+{
+    namespace RHI
+    {
+        class BufferView;
+        class PipelineState;
+    }
+
+    }
+
+namespace JE::Render::RPI
+{
+        class Buffer;
+        class ModelLod;
+        class Shader;
+        class ShaderResourceGroup;
+    }
+
+namespace JE::Render
+{
+
+    namespace Features
+    {
+        class SkinnedMeshFeatureProcessor;
+
+        //! Holds and manages an RHI DispatchItem for a specific morph target, and the resources that are needed to build and maintain it.
+        class MorphTargetDispatchItem
+            : private JE::Render::RPI::ShaderReloadNotificationBus::Handler
+        {
+        public:
+            AZ_CLASS_ALLOCATOR(MorphTargetDispatchItem, AZ::SystemAllocator);
+
+            MorphTargetDispatchItem() = delete;
+            //! Create one dispatch item per morph target
+            explicit MorphTargetDispatchItem(
+                const AZStd::intrusive_ptr<MorphTargetInputBuffers> inputBuffers,
+                const MorphTargetComputeMetaData& morphTargetMetaData,
+                SkinnedMeshFeatureProcessor* skinnedMeshFeatureProcessor,
+                MorphTargetInstanceMetaData morphInstanceMetaData,
+                float accumulatedDeltaRange
+            );
+            ~MorphTargetDispatchItem();
+
+            // The event handler cannot be copied
+            AZ_DISABLE_COPY_MOVE(MorphTargetDispatchItem);
+
+            bool Init();
+
+            const AZ::RHI::DispatchItem& GetRHIDispatchItem() const;
+
+            void SetWeight(float weight);
+            float GetWeight() const;
+        private:
+            bool InitPerInstanceSRG();
+            void InitRootConstants(const AZ::RHI::ConstantsLayout* rootConstantsLayout);
+
+            // ShaderInstanceNotificationBus::Handler overrides
+            void OnShaderReinitialized(const JE::Render::RPI::Shader& shader) override;
+            void OnShaderAssetReinitialized(const AZ::Data::Asset<JE::Render::RPI::ShaderAsset>& shaderAsset) override;
+            void OnShaderVariantReinitialized(const JE::Render::RPI::ShaderVariant& shaderVariant) override;
+
+            AZ::RHI::DispatchItem m_dispatchItem;
+
+            // The morph target shader used for this instance
+            AZ::Data::Instance<JE::Render::RPI::Shader> m_morphTargetShader;
+
+            // The vertex deltas
+            AZStd::intrusive_ptr<MorphTargetInputBuffers> m_inputBuffers;
+
+            // The per-object shader resource group
+            AZ::Data::Instance<JE::Render::RPI::ShaderResourceGroup> m_instanceSrg;
+
+            // Metadata used to set the root constants for the shader
+            MorphTargetComputeMetaData m_morphTargetComputeMetaData;
+
+            AZ::RHI::ConstantsData m_rootConstantData;
+
+            // Per-SkinnedMeshInstance constants for morph targets
+            MorphTargetInstanceMetaData m_morphInstanceMetaData;
+            // A conservative value for encoding/decoding the accumulated deltas
+            float m_accumulatedDeltaIntegerEncoding;
+
+            // Keep track of the constant index of m_weight since it is updated frequently
+            AZ::RHI::ShaderInputConstantIndex m_weightIndex;
+        };
+    } // namespace Features
+} // namespace JE::Render

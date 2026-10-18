@@ -6,7 +6,7 @@
  *
  */
 
-#include <Atom/Feature/Debug/RayTracingDebugFeatureProcessorInterface.h>
+#include <JE/Render/Features/Debug/RayTracingDebugFeatureProcessorInterface.h>
 #include <Atom/RHI/RHISystemInterface.h>
 #include <JE/Render/RPI/Public/Scene.h>
 #include <Debug/RayTracingDebugComponentController.h>
@@ -33,9 +33,9 @@ namespace JE::Render::Scene
             behaviorContext->EBus<RayTracingDebugRequestBus>("RayTracingDebugRequestBus")
                 // Generate behavior context
                 #define PARAM_EVENT_BUS RayTracingDebugRequestBus::Events
-                #include <Atom/Feature/ParamMacros/StartParamBehaviorContext.inl>
-                #include <Atom/Feature/Debug/RayTracingDebugParams.inl>
-                #include <Atom/Feature/ParamMacros/EndParams.inl>
+                #include <JE/Render/Features/ParamMacros/StartParamBehaviorContext.inl>
+                #include <JE/Render/Features/Debug/RayTracingDebugParams.inl>
+                #include <JE/Render/Features/ParamMacros/EndParams.inl>
                 #undef PARAM_EVENT_BUS
             ;
             // clang-format on
@@ -56,7 +56,7 @@ namespace JE::Render::Scene
 
         m_entityId = entityId;
 
-        auto fp{ JE::Render::RPI::Scene::GetFeatureProcessorForEntity<AZ::Render::RayTracingDebugFeatureProcessorInterface>(m_entityId) };
+        auto fp{ JE::Render::RPI::Scene::GetFeatureProcessorForEntity<JE::Render::Features::RayTracingDebugFeatureProcessorInterface>(m_entityId) };
         if (fp)
         {
             m_rayTracingDebugSettingsInterface = fp->GetSettingsInterface();
@@ -76,7 +76,7 @@ namespace JE::Render::Scene
             return;
         }
 
-        auto fp{ JE::Render::RPI::Scene::GetFeatureProcessorForEntity<AZ::Render::RayTracingDebugFeatureProcessorInterface>(m_entityId) };
+        auto fp{ JE::Render::RPI::Scene::GetFeatureProcessorForEntity<JE::Render::Features::RayTracingDebugFeatureProcessorInterface>(m_entityId) };
         if (fp)
         {
             fp->OnRayTracingDebugComponentRemoved();
@@ -151,8 +151,8 @@ namespace JE::Render::Scene
         }                                                                               \
     }                                                                                   \
 
-    #include <Atom/Feature/ParamMacros/MapAllCommon.inl>
-    #include <Atom/Feature/Debug/RayTracingDebugParams.inl>
-    #include <Atom/Feature/ParamMacros/EndParams.inl>
+    #include <JE/Render/Features/ParamMacros/MapAllCommon.inl>
+    #include <JE/Render/Features/Debug/RayTracingDebugParams.inl>
+    #include <JE/Render/Features/ParamMacros/EndParams.inl>
     // clang-format on
 } // namespace AZ::Render

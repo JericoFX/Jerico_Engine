@@ -1,0 +1,49 @@
+/*
+ * Copyright (c) Contributors to the Open 3D Engine Project.
+ * For complete copyright and license terms please see the LICENSE at the root of this distribution.
+ *
+ * SPDX-License-Identifier: Apache-2.0 OR MIT
+ *
+ */
+#pragma once
+
+#include <AzCore/Memory/SystemAllocator.h>
+
+#include <Atom/RHI/CommandList.h>
+#include <Atom/RHI/DeviceDrawItem.h>
+#include <Atom/RHI/ScopeProducer.h>
+#include <Atom/RHI.Reflect/ShaderResourceGroupLayoutDescriptor.h>
+
+#include <JE/Render/RPI/Public/Pass/ComputePass.h>
+#include <JE/Render/RPI/Public/Shader/Shader.h>
+#include <JE/Render/RPI/Public/Shader/ShaderResourceGroup.h>
+
+namespace JE::Render
+{
+    namespace Features
+    {
+        //! This class generates a histogram of luminance values for the input color buffer.
+        class LuminanceHistogramGeneratorPass final
+            : public JE::Render::RPI::ComputePass
+        {
+            AZ_RPI_PASS(LuminanceHistogramGeneratorPass);
+
+        public:
+            AZ_RTTI(LuminanceHistogramGeneratorPass, "{062D0696-B159-491C-9ECC-AA02767ED4CF}", JE::Render::RPI::ComputePass);
+            AZ_CLASS_ALLOCATOR(LuminanceHistogramGeneratorPass, AZ::SystemAllocator);
+            ~LuminanceHistogramGeneratorPass() = default;
+
+            static JE::Render::RPI::Ptr<LuminanceHistogramGeneratorPass> Create(const JE::Render::RPI::PassDescriptor& descriptor);
+            void BuildCommandListInternal(const AZ::RHI::FrameGraphExecuteContext& context) override;
+
+        protected:
+            LuminanceHistogramGeneratorPass(const JE::Render::RPI::PassDescriptor& descriptor);
+            virtual void BuildInternal() override;
+            void CreateHistogramBuffer();
+            void AttachHistogramBuffer();
+            AZ::RHI::Size GetColorBufferResolution();
+
+            AZ::Data::Instance<JE::Render::RPI::Buffer> m_histogram;
+        };
+    } // namespace Features
+} // namespace JE::Render

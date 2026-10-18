@@ -74,9 +74,10 @@ if(PAL_TRAIT_BUILD_HOST_TOOLS)
                 Include
         BUILD_DEPENDENCIES
             PUBLIC
+                JE::EditorRenderFeatures
                 AZ::AzToolsFramework
                 Gem::${gem_name}.Static
-                Gem::Atom_Feature_Common.Public
+                JE::RenderFeatures
     )
 
     ly_add_target(

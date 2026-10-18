@@ -52,20 +52,20 @@ namespace JE::Render
             }
         }
         
-        AZStd::vector<AZ::Edit::EnumConstant<AZ::Render::PhotometricUnit>> AreaLightComponentConfig::GetValidPhotometricUnits() const
+        AZStd::vector<AZ::Edit::EnumConstant<JE::Render::Features::PhotometricUnit>> AreaLightComponentConfig::GetValidPhotometricUnits() const
         {
-            AZStd::vector<AZ::Edit::EnumConstant<AZ::Render::PhotometricUnit>> enumValues =
+            AZStd::vector<AZ::Edit::EnumConstant<JE::Render::Features::PhotometricUnit>> enumValues =
             {
                 // Candela & lumen always supported.
-                AZ::Edit::EnumConstant<AZ::Render::PhotometricUnit>(AZ::Render::PhotometricUnit::Candela, "Candela"),
-                AZ::Edit::EnumConstant<AZ::Render::PhotometricUnit>(AZ::Render::PhotometricUnit::Lumen, "Lumen"),
+                AZ::Edit::EnumConstant<JE::Render::Features::PhotometricUnit>(JE::Render::Features::PhotometricUnit::Candela, "Candela"),
+                AZ::Edit::EnumConstant<JE::Render::Features::PhotometricUnit>(JE::Render::Features::PhotometricUnit::Lumen, "Lumen"),
             };
 
             if (RequiresShapeComponent())
             {
                 // Lights with surface area also support nits and ev100.
-                enumValues.push_back(AZ::Edit::EnumConstant<AZ::Render::PhotometricUnit>(AZ::Render::PhotometricUnit::Nit, "Nit"));
-                enumValues.push_back(AZ::Edit::EnumConstant<AZ::Render::PhotometricUnit>(AZ::Render::PhotometricUnit::Ev100Luminance, "Ev100"));
+                enumValues.push_back(AZ::Edit::EnumConstant<JE::Render::Features::PhotometricUnit>(JE::Render::Features::PhotometricUnit::Nit, "Nit"));
+                enumValues.push_back(AZ::Edit::EnumConstant<JE::Render::Features::PhotometricUnit>(JE::Render::Features::PhotometricUnit::Ev100Luminance, "Ev100"));
             }
             return enumValues;
         }
@@ -138,18 +138,18 @@ namespace JE::Render
 
         const char* AreaLightComponentConfig::GetIntensitySuffix() const
         {
-            return AZ::Render::PhotometricValue::GetTypeSuffix(m_intensityMode);
+            return JE::Render::Features::PhotometricValue::GetTypeSuffix(m_intensityMode);
         }
 
         float AreaLightComponentConfig::GetIntensityMin() const
         {
             switch (m_intensityMode)
             {
-            case AZ::Render::PhotometricUnit::Candela:
-            case AZ::Render::PhotometricUnit::Lumen:
-            case AZ::Render::PhotometricUnit::Nit:
+            case JE::Render::Features::PhotometricUnit::Candela:
+            case JE::Render::Features::PhotometricUnit::Lumen:
+            case JE::Render::Features::PhotometricUnit::Nit:
                 return 0.0f;
-            case AZ::Render::PhotometricUnit::Ev100Luminance:
+            case JE::Render::Features::PhotometricUnit::Ev100Luminance:
                 return AZStd::numeric_limits<float>::lowest();
             }
             return 0.0f;
@@ -165,10 +165,10 @@ namespace JE::Render
         {
             switch (m_intensityMode)
             {
-            case AZ::Render::PhotometricUnit::Candela:
-            case AZ::Render::PhotometricUnit::Lumen:
-            case AZ::Render::PhotometricUnit::Nit:
-            case AZ::Render::PhotometricUnit::Ev100Luminance:
+            case JE::Render::Features::PhotometricUnit::Candela:
+            case JE::Render::Features::PhotometricUnit::Lumen:
+            case JE::Render::Features::PhotometricUnit::Nit:
+            case JE::Render::Features::PhotometricUnit::Ev100Luminance:
                 return 0.0f;
             }
             return 0.0f;
@@ -178,11 +178,11 @@ namespace JE::Render
         {
             switch (m_intensityMode)
             {
-            case AZ::Render::PhotometricUnit::Candela:
-            case AZ::Render::PhotometricUnit::Lumen:
-            case AZ::Render::PhotometricUnit::Nit:
+            case JE::Render::Features::PhotometricUnit::Candela:
+            case JE::Render::Features::PhotometricUnit::Lumen:
+            case JE::Render::Features::PhotometricUnit::Nit:
                 return 1'000.0f;
-            case AZ::Render::PhotometricUnit::Ev100Luminance:
+            case JE::Render::Features::PhotometricUnit::Ev100Luminance:
                 return 16.0f;
             }
             return 0.0f;
@@ -190,19 +190,19 @@ namespace JE::Render
         
         bool AreaLightComponentConfig::IsShadowFilteringDisabled() const
         {
-            return (m_shadowFilterMethod == AZ::Render::ShadowFilterMethod::None);
+            return (m_shadowFilterMethod == JE::Render::Features::ShadowFilterMethod::None);
         }
 
         bool AreaLightComponentConfig::IsShadowPcfDisabled() const
         {
-            return ShadowsDisabled() || !(m_shadowFilterMethod == AZ::Render::ShadowFilterMethod::Pcf ||
-                m_shadowFilterMethod == AZ::Render::ShadowFilterMethod::EsmPcf);
+            return ShadowsDisabled() || !(m_shadowFilterMethod == JE::Render::Features::ShadowFilterMethod::Pcf ||
+                m_shadowFilterMethod == JE::Render::Features::ShadowFilterMethod::EsmPcf);
         }
 
         bool AreaLightComponentConfig::IsEsmDisabled() const
         {
             return ShadowsDisabled() ||
-                !(m_shadowFilterMethod == AZ::Render::ShadowFilterMethod::Esm || m_shadowFilterMethod == AZ::Render::ShadowFilterMethod::EsmPcf);
+                !(m_shadowFilterMethod == JE::Render::Features::ShadowFilterMethod::Esm || m_shadowFilterMethod == JE::Render::Features::ShadowFilterMethod::EsmPcf);
         }
 
         bool AreaLightComponentConfig::SupportsGobo() const

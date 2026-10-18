@@ -1,0 +1,90 @@
+/*
+ * Copyright (c) Contributors to the Open 3D Engine Project.
+ * For complete copyright and license terms please see the LICENSE at the root of this distribution.
+ *
+ * SPDX-License-Identifier: Apache-2.0 OR MIT
+ *
+ */
+#pragma once
+
+#include <JE/Render/RPI/Public/Pass/ComputePass.h>
+#include <JE/Render/RPI/Public/Pass/ParentPass.h>
+#include <PostProcessing/PostProcessingShaderOptionBase.h>
+#include <JE/Render/Features/PostProcess/AmbientOcclusion/AoSettingsInterface.h>
+
+namespace JE::Render
+{
+    namespace Features
+    {
+        // Parent pass for GTAO that contains the GTAO compute pass
+        class GtaoParentPass final
+            : public JE::Render::RPI::ParentPass
+        {
+            AZ_RPI_PASS(GtaoParentPass);
+
+        public:
+            AZ_RTTI_WITH_NAME(JE::Render::Features::GtaoParentPass, "AZ::Render::GtaoParentPass", "{6EA8F19C-78E7-475A-A0B6-92948D5C4DB5}", JE::Render::RPI::ParentPass);
+            AZ_CLASS_ALLOCATOR(GtaoParentPass, AZ::SystemAllocator);
+            virtual ~GtaoParentPass() = default;
+
+            //! Creates an GtaoParentPass
+            static JE::Render::RPI::Ptr<GtaoParentPass> Create(const JE::Render::RPI::PassDescriptor& descriptor);
+
+            bool IsEnabled() const override;
+
+        protected:
+            // Behavior functions override...
+            void InitializeInternal() override;
+            void FrameBeginInternal(FramePrepareParams params) override;
+
+        private:
+            GtaoParentPass(const JE::Render::RPI::PassDescriptor& descriptor);
+
+            // Direct pointers to child passes for enable/disable
+            ParentPass* m_blurParentPass = nullptr;
+            FastDepthAwareBlurHorPass* m_blurHorizontalPass = nullptr;
+            FastDepthAwareBlurVerPass* m_blurVerticalPass = nullptr;
+            Pass* m_downsamplePass = nullptr;
+            Pass* m_upsamplePass = nullptr;
+        };
+
+        // Computer shader pass that calculates GTAO from a linear depth buffer
+        class GtaoComputePass final
+            : public JE::Render::RPI::ComputePass,
+              public PostProcessingShaderOptionBase
+        {
+            AZ_RPI_PASS(GtaoComputePass);
+
+        public:
+            AZ_RTTI_WITH_NAME(GtaoComputePass, "AZ::Render::GtaoComputePass", "{0BA5F6F7-15D2-490A-8254-7E61F25B62F9}", JE::Render::RPI::ComputePass);
+            AZ_CLASS_ALLOCATOR(GtaoComputePass, AZ::SystemAllocator);
+            virtual ~GtaoComputePass() = default;
+
+            //! Creates an GtaoComputePass
+            static JE::Render::RPI::Ptr<GtaoComputePass> Create(const JE::Render::RPI::PassDescriptor& descriptor);
+
+            void SetQualityLevel(Ao::GtaoQualityLevel qualityLevel);
+
+        protected:
+            // Behavior functions override...
+            void InitializeInternal() override;
+            void FrameBeginInternal(FramePrepareParams params) override;
+
+        private:
+            GtaoComputePass(const JE::Render::RPI::PassDescriptor& descriptor);
+            void InitializeShaderVariant();
+            void UpdateCurrentShaderVariant();
+
+            // Scope producer functions...
+            void CompileResources(const AZ::RHI::FrameGraphCompileContext& context) override;
+            void BuildCommandListInternal(const AZ::RHI::FrameGraphExecuteContext& context) override;
+
+            Ao::GtaoQualityLevel m_qualityLevel = Ao::GtaoQualityLevel::Medium;
+            const AZ::Name m_qualityLevelShaderVariantOptionName{ "o_qualityLevel" };
+            bool m_needToUpdateShaderVariant = true;
+
+            // SRG binding indices...
+            AZ::RHI::ShaderInputNameIndex m_constantsIndex = "m_constants";
+        };
+    } // namespace Features
+} // namespace JE::Render

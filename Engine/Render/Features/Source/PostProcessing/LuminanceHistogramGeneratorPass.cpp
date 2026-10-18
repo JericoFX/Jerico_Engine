@@ -1,0 +1,94 @@
+/*
+ * Copyright (c) Contributors to the Open 3D Engine Project.
+ * For complete copyright and license terms please see the LICENSE at the root of this distribution.
+ *
+ * SPDX-License-Identifier: Apache-2.0 OR MIT
+ *
+ */
+
+#include <PostProcessing/LuminanceHistogramGeneratorPass.h>
+
+#include <Atom/RHI/Factory.h>
+#include <Atom/RHI/FrameGraphAttachmentInterface.h>
+#include <Atom/RHI/FrameGraphInterface.h>
+#include <Atom/RHI/DevicePipelineState.h>
+
+#include <JE/Render/RPI/Public/Base.h>
+#include <JE/Render/RPI/Public/Pass/PassUtils.h>
+#include <JE/Render/RPI/Public/RenderPipeline.h>
+#include <Atom/RHI/RHISystemInterface.h>
+#include <JE/Render/RPI/Public/RPIUtils.h>
+#include <JE/Render/RPI/Public/Scene.h>
+#include <JE/Render/RPI/Public/View.h>
+#include <JE/Render/RPI/Reflect/Pass/PassTemplate.h>
+#include <JE/Render/RPI/Reflect/Shader/ShaderAsset.h>
+
+#include <PostProcess/PostProcessFeatureProcessor.h>
+#include <PostProcess/ExposureControl/ExposureControlSettings.h>
+
+namespace JE::Render
+{
+    namespace Features
+    {
+        // This must match the value in LuminanceHistogramCommon.azsli
+        static const size_t NumHistogramBins = 128;
+
+        JE::Render::RPI::Ptr<LuminanceHistogramGeneratorPass> LuminanceHistogramGeneratorPass::Create(const JE::Render::RPI::PassDescriptor& descriptor)
+        {
+            JE::Render::RPI::Ptr<LuminanceHistogramGeneratorPass> pass = aznew LuminanceHistogramGeneratorPass(descriptor);
+            return pass;
+        }
+
+        LuminanceHistogramGeneratorPass::LuminanceHistogramGeneratorPass(const JE::Render::RPI::PassDescriptor& descriptor)
+            : JE::Render::RPI::ComputePass(descriptor)
+        {
+        }
+
+        void LuminanceHistogramGeneratorPass::BuildCommandListInternal(const AZ::RHI::FrameGraphExecuteContext& context)
+        {
+            AZ::RHI::CommandList* commandList = context.GetCommandList();
+
+            SetSrgsForDispatch(context);
+
+            const AZ::RHI::Size resolution = GetColorBufferResolution();
+            SetTargetThreadCounts(resolution.m_width, resolution.m_height, 1);
+
+            commandList->Submit(m_dispatchItem.GetDeviceDispatchItem(context.GetDeviceIndex()));
+        }
+
+        void LuminanceHistogramGeneratorPass::CreateHistogramBuffer()
+        {
+            JE::Render::RPI::CommonBufferDescriptor desc;
+            desc.m_poolType = JE::Render::RPI::CommonBufferPoolType::ReadWrite;
+            desc.m_bufferName = "LuminanceHistogramBuffer";
+            desc.m_elementSize = sizeof(uint32_t);
+            desc.m_byteCount = NumHistogramBins * sizeof(uint32_t);
+            desc.m_elementFormat = AZ::RHI::Format::Unknown;
+            m_histogram = JE::Render::RPI::BufferSystemInterface::Get()->CreateBufferFromCommonPool(desc);
+            AZ_Assert(m_histogram != nullptr, "Unable to allocate buffer");
+        }
+
+
+        AZ::RHI::Size LuminanceHistogramGeneratorPass::GetColorBufferResolution()
+        {
+            const auto& binding = GetInputBinding(0);
+            AZ_Assert(binding.m_name == AZ::Name("ColorInput"), "ColorInput was expected to be the first input");
+            const JE::Render::RPI::PassAttachment* colorBuffer = binding.GetAttachment().get();
+            return colorBuffer->m_descriptor.m_image.m_size;
+        }
+
+        void LuminanceHistogramGeneratorPass::BuildInternal()
+        {
+            CreateHistogramBuffer();
+            AttachHistogramBuffer();
+        }
+
+        void LuminanceHistogramGeneratorPass::AttachHistogramBuffer()
+        {
+            if (m_histogram != nullptr)
+            {
+                AttachBufferToSlot(AZ::Name("Output"), m_histogram);
+            }
+        }
+    } // namespace Features
+} // namespace JE::Render

@@ -17,7 +17,7 @@
 #include <Rendering/WhiteBoxRenderData.h>
 #include <Rendering/WhiteBoxRenderMeshInterface.h>
 
-#include <Atom/Feature/Mesh/MeshFeatureProcessorInterface.h>
+#include <JE/Render/Features/Mesh/MeshFeatureProcessorInterface.h>
 #include <JE/Render/Scene/Mesh/MeshHandleStateBus.h>
 #include <JE/Render/Materials/MaterialComponentBus.h>
 #include <AzCore/Component/TransformBus.h>
@@ -78,7 +78,7 @@ namespace JE::Geometry
         }
 
         // MeshHandleStateRequestBus overrides ...
-        const AZ::Render::MeshFeatureProcessorInterface::MeshHandle* GetMeshHandle() const override;
+        const JE::Render::Features::MeshFeatureProcessorInterface::MeshHandle* GetMeshHandle() const override;
 
         // Native Atom material authority and Inspector integration.
         JE::Render::MaterialAssignmentId FindMaterialAssignmentId(
@@ -106,8 +106,8 @@ namespace JE::Geometry
         AZ::Data::Asset<JE::Render::RPI::ModelLodAsset> m_lodAsset;
         AZ::Data::Asset<JE::Render::RPI::ModelAsset> m_modelAsset;
         AZ::Data::Instance<JE::Render::RPI::Model> m_model;
-        AZ::Render::MeshFeatureProcessorInterface* m_meshFeatureProcessor = nullptr;
-        AZ::Render::MeshFeatureProcessorInterface::MeshHandle m_meshHandle;
+        JE::Render::Features::MeshFeatureProcessorInterface* m_meshFeatureProcessor = nullptr;
+        JE::Render::Features::MeshFeatureProcessorInterface::MeshHandle m_meshHandle;
         AZ::Data::Instance<JE::Render::RPI::Material> m_materialInstance;
         uint32_t m_vertexCount = 0;
         AZStd::vector<JE::BSP::MaterialIndexRange> m_materialRanges;

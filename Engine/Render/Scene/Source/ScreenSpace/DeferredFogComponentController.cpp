@@ -40,9 +40,9 @@ namespace JE::Render
         ->Event("Get" #Name, &PARAM_EVENT_BUS::Get##Name)                                               \
         ->VirtualProperty(#Name, "Get" #Name, "Set" #Name)                                              \
 
-#include <Atom/Feature/ParamMacros/MapParamCommon.inl>
-#include <Atom/Feature/ScreenSpace/DeferredFogParams.inl>
-#include <Atom/Feature/ParamMacros/EndParams.inl>
+#include <JE/Render/Features/ParamMacros/MapParamCommon.inl>
+#include <JE/Render/Features/ScreenSpace/DeferredFogParams.inl>
+#include <JE/Render/Features/ParamMacros/EndParams.inl>
 #undef PARAM_EVENT_BUS
 
                     ;
@@ -73,7 +73,7 @@ namespace JE::Render
         {
             m_entityId = entityId;
 
-            AZ::Render::PostProcessFeatureProcessorInterface* featureProcessor = JE::Render::RPI::Scene::GetFeatureProcessorForEntity<AZ::Render::PostProcessFeatureProcessorInterface>(m_entityId);
+            JE::Render::Features::PostProcessFeatureProcessorInterface* featureProcessor = JE::Render::RPI::Scene::GetFeatureProcessorForEntity<JE::Render::Features::PostProcessFeatureProcessorInterface>(m_entityId);
             if (featureProcessor)
             {
                 m_postProcessInterface = featureProcessor->GetOrCreateSettingsInterface(m_entityId);
@@ -146,9 +146,9 @@ namespace JE::Render
             }                                                                                           \
         }                                                                                               \
 
-#include <Atom/Feature/ParamMacros/MapParamCommon.inl>
-#include <Atom/Feature/ScreenSpace/DeferredFogParams.inl>
-#include <Atom/Feature/ParamMacros/EndParams.inl>
+#include <JE/Render/Features/ParamMacros/MapParamCommon.inl>
+#include <JE/Render/Features/ScreenSpace/DeferredFogParams.inl>
+#include <JE/Render/Features/ParamMacros/EndParams.inl>
 
     } // namespace Render
 } // namespace AZ

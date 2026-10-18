@@ -15,7 +15,6 @@
     "requirements": "",
     "documentation_url": "",
     "dependencies": [
-        "Atom_Feature_Common",
         "Atom_RHI",
         "LmbrCentral",
         "GradientSignal",

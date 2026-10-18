@@ -25,7 +25,7 @@ ly_add_target(
             AZ::AzFramework
             JE::RenderIntegration
             Gem::Atom_Utils.Static
-            Gem::Atom_Feature_Common
+            JE::RenderFeatures
             JE::RenderScene
             Gem::LmbrCentral
 )
@@ -84,6 +84,7 @@ if(PAL_TRAIT_BUILD_HOST_TOOLS)
                 Include
         BUILD_DEPENDENCIES
             PUBLIC
+                JE::EditorRenderFeatures
                 AZ::AzToolsFramework
                 Gem::${gem_name}.Static
     )

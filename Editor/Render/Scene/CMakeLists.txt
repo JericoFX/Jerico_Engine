@@ -12,7 +12,7 @@ ly_add_target(
         PRIVATE . Source ${LY_ROOT_FOLDER}/Engine/Render/Scene/Source ${LY_ROOT_FOLDER}/Engine/Render/Scene
         PUBLIC Include
     BUILD_DEPENDENCIES PUBLIC
-        JE::RenderScene JE::EditorRenderIntegration JE::EditorMaterials
+        JE::RenderScene JE::EditorRenderFeatures JE::EditorRenderIntegration JE::EditorMaterials
         Gem::AtomToolsFramework.Static Gem::AtomToolsFramework.Editor
         AZ::SceneCore AZ::SceneData Legacy::Editor.Headers Legacy::CryCommon
     RUNTIME_DEPENDENCIES 3rdParty::OpenImageIO::Tools::Binaries

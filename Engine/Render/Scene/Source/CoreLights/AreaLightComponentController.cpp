@@ -14,7 +14,7 @@
 #include <CoreLights/SimplePointLightDelegate.h>
 #include <CoreLights/SimpleSpotLightDelegate.h>
 #include <CoreLights/SphereLightDelegate.h>
-#include <Atom/Feature/CoreLights/PhotometricValue.h>
+#include <JE/Render/Features/CoreLights/PhotometricValue.h>
 #include <JE/Render/RPI/Public/Image/StreamingImage.h>
 
 #include <AzCore/RTTI/BehaviorContext.h>
@@ -398,7 +398,7 @@ namespace JE::Render::Scene
         m_configuration.m_useFastApproximation = value;
     }
 
-    AZ::Render::PhotometricUnit AreaLightComponentController::GetIntensityMode() const
+    JE::Render::Features::PhotometricUnit AreaLightComponentController::GetIntensityMode() const
     {
         return m_configuration.m_intensityMode;
     }
@@ -408,7 +408,7 @@ namespace JE::Render::Scene
         return m_configuration.m_intensity;
     }
 
-    void AreaLightComponentController::SetIntensityAndMode(float intensity, AZ::Render::PhotometricUnit intensityMode)
+    void AreaLightComponentController::SetIntensityAndMode(float intensity, JE::Render::Features::PhotometricUnit intensityMode)
     {
         m_configuration.m_intensityMode = intensityMode;
         m_configuration.m_intensity = intensity;
@@ -417,7 +417,7 @@ namespace JE::Render::Scene
         IntensityChanged();
     }
 
-    void AreaLightComponentController::SetIntensity(float intensity, AZ::Render::PhotometricUnit intensityMode)
+    void AreaLightComponentController::SetIntensity(float intensity, JE::Render::Features::PhotometricUnit intensityMode)
     {
         AZ_Warning("Main Window", false, "This verion of SetIntensity() is deprecated. Use SetIntensityMode() instead.");
 
@@ -454,7 +454,7 @@ namespace JE::Render::Scene
         AttenuationRadiusChanged();
     }
 
-    void AreaLightComponentController::ConvertToIntensityMode(AZ::Render::PhotometricUnit intensityMode)
+    void AreaLightComponentController::ConvertToIntensityMode(JE::Render::Features::PhotometricUnit intensityMode)
     {
         if (m_lightShapeDelegate && m_lightShapeDelegate->GetPhotometricValue().GetType() != intensityMode)
         {
@@ -552,12 +552,12 @@ namespace JE::Render::Scene
         return m_configuration.m_normalShadowBias;
     }
 
-    AZ::Render::ShadowmapSize AreaLightComponentController::GetShadowmapMaxSize() const
+    JE::Render::Features::ShadowmapSize AreaLightComponentController::GetShadowmapMaxSize() const
     {
         return m_configuration.m_shadowmapMaxSize;
     }
 
-    void AreaLightComponentController::SetShadowmapMaxSize(AZ::Render::ShadowmapSize size)
+    void AreaLightComponentController::SetShadowmapMaxSize(JE::Render::Features::ShadowmapSize size)
     {
         m_configuration.m_shadowmapMaxSize = size;
         if (m_lightShapeDelegate)
@@ -566,12 +566,12 @@ namespace JE::Render::Scene
         }
     }
 
-    AZ::Render::ShadowFilterMethod AreaLightComponentController::GetShadowFilterMethod() const
+    JE::Render::Features::ShadowFilterMethod AreaLightComponentController::GetShadowFilterMethod() const
     {
         return m_configuration.m_shadowFilterMethod;
     }
 
-    void AreaLightComponentController::SetShadowFilterMethod(AZ::Render::ShadowFilterMethod method)
+    void AreaLightComponentController::SetShadowFilterMethod(JE::Render::Features::ShadowFilterMethod method)
     {
         m_configuration.m_shadowFilterMethod = method;
         if (m_lightShapeDelegate)

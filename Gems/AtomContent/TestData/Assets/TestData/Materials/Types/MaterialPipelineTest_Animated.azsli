@@ -68,8 +68,8 @@ void CalcPositions(const MaterialParameters params, float3 inPosition, VsSystemV
         return EvaluateSurface(IN, SV, geoData, params);
     }
 
-    #include <Atom/Feature/Common/Assets/Shaders/Materials/BasePBR/BasePBR_LightingBrdf.azsli>
-    #include <Atom/Feature/Common/Assets/Shaders/Materials/BasePBR/BasePBR_LightingEval.azsli>
+    #include <Engine/Render/Features/Assets/Shaders/Materials/BasePBR/BasePBR_LightingBrdf.azsli>
+    #include <Engine/Render/Features/Assets/Shaders/Materials/BasePBR/BasePBR_LightingEval.azsli>
 
 #else
 

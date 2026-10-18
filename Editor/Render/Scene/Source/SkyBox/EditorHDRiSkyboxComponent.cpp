@@ -66,7 +66,7 @@ namespace JE::Editor::Render
             {
                 behaviorContext->Class<EditorHDRiSkyboxComponent>()->RequestBus("HDRiSkyboxRequestBus");
 
-                behaviorContext->ConstantProperty("EditorHDRiSkyboxComponentTypeId", BehaviorConstant(AZ::Uuid(AZ::Render::EditorHDRiSkyboxComponentTypeId)))
+                behaviorContext->ConstantProperty("EditorHDRiSkyboxComponentTypeId", BehaviorConstant(AZ::Uuid(JE::Render::Features::EditorHDRiSkyboxComponentTypeId)))
                     ->Attribute(AZ::Script::Attributes::Module, "render")
                     ->Attribute(AZ::Script::Attributes::Scope, AZ::Script::Attributes::ScopeFlags::Automation);
             }

@@ -1,0 +1,50 @@
+/*
+ * Copyright (c) Contributors to the Open 3D Engine Project.
+ * For complete copyright and license terms please see the LICENSE at the root of this distribution.
+ *
+ * SPDX-License-Identifier: Apache-2.0 OR MIT
+ *
+ */
+#pragma once
+
+
+#include <JE/Render/RPI/Public/Pass/ComputePass.h>
+#include <JE/Render/RPI/Public/Pass/ParentPass.h>
+
+namespace JE::Render
+{
+    namespace Features
+    {
+        // Parent pass for all AO methods, controls which AO method is used
+        class AoParentPass final
+            : public JE::Render::RPI::ParentPass
+        {
+            AZ_RPI_PASS(AoParentPass);
+
+        public:
+            AZ_RTTI_WITH_NAME(JE::Render::Features::AoParentPass, "AZ::Render::AoParentPass", "{7ACD89D5-ACFC-4D8F-81EF-88E7EE0E706D}", JE::Render::RPI::ParentPass);
+            AZ_CLASS_ALLOCATOR(AoParentPass, AZ::SystemAllocator);
+            virtual ~AoParentPass() = default;
+
+            //! Creates an AoParentPass
+            static JE::Render::RPI::Ptr<AoParentPass> Create(const JE::Render::RPI::PassDescriptor& descriptor);
+
+            bool IsEnabled() const override;
+
+        protected:
+            // Behavior functions override...
+            void InitializeInternal() override;
+            void FrameBeginInternal(FramePrepareParams params) override;
+
+        private:
+            AoParentPass(const JE::Render::RPI::PassDescriptor& descriptor);
+
+            // Direct pointers to child passes for enable/disable
+            SsaoParentPass* m_ssaoParentPass = nullptr;
+            GtaoParentPass* m_gtaoParentPass = nullptr;
+
+            // SSAO is enabled by default, according to the pass file
+            Ao::AoMethodType m_currentAoMethod = Ao::AoMethodType::SSAO;
+        };
+    } // namespace Features
+} // namespace JE::Render

@@ -15,10 +15,10 @@
 #define EvaluatePixelGeometry EvaluatePixelGeometry_MaterialGraphName
 #endif
 
-#include <Atom/Feature/Common/Assets/Shaders/Materials/BasePBR/BasePBR_PixelGeometryEval.azsli>
+#include <Engine/Render/Features/Assets/Shaders/Materials/BasePBR/BasePBR_PixelGeometryEval.azsli>
 
 #if ENABLE_PARALLAX
-#include "Atom/Feature/Common/Assets/Shaders/Materials/MaterialFunctions/ParallaxDepth.azsli"
+#include "Engine/Render/Features/Assets/Shaders/Materials/MaterialFunctions/ParallaxDepth.azsli"
 #endif
 
 #include <Atom/Features/Debug.azsli>

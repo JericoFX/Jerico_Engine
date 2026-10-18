@@ -11,7 +11,7 @@
 #include <AzFramework/Entity/EntityDebugDisplayBus.h>
 #include <AzFramework/Visibility/BoundsBus.h>
 #include <AzToolsFramework/API/ComponentEntitySelectionBus.h>
-#include <Atom/Feature/Utils/EditorRenderComponentAdapter.h>
+#include <JE/Editor/Render/Features/Utils/EditorRenderComponentAdapter.h>
 #include <JE/Render/Scene/Decals/DecalConstants.h>
 #include <Decals/DecalComponent.h>
 
@@ -20,14 +20,14 @@ namespace JE::Editor::Render
     namespace Scene
     {
         class EditorDecalComponent final
-            : public AZ::Render::EditorRenderComponentAdapter<JE::Render::Scene::DecalComponentController, JE::Render::Scene::DecalComponent, JE::Render::Scene::DecalComponentConfig>
+            : public JE::Editor::Render::Features::EditorRenderComponentAdapter<JE::Render::Scene::DecalComponentController, JE::Render::Scene::DecalComponent, JE::Render::Scene::DecalComponentConfig>
             , private AzToolsFramework::EditorComponentSelectionRequestsBus::Handler
             , private AzFramework::EntityDebugDisplayEventBus::Handler
             , public AzFramework::BoundsRequestBus::Handler
         {
         public:
 
-            using BaseClass = AZ::Render::EditorRenderComponentAdapter<JE::Render::Scene::DecalComponentController, JE::Render::Scene::DecalComponent, JE::Render::Scene::DecalComponentConfig>;
+            using BaseClass = JE::Editor::Render::Features::EditorRenderComponentAdapter<JE::Render::Scene::DecalComponentController, JE::Render::Scene::DecalComponent, JE::Render::Scene::DecalComponentConfig>;
             AZ_RTTI_WITH_NAME(JE::Editor::Render::Scene::EditorDecalComponent, "AZ::Render::EditorDecalComponent", JE::Render::Scene::EditorDecalComponentTypeId, BaseClass, AzToolsFramework::Components::EditorComponentBase)
             AZ_EDITOR_COMPONENT_INTRUSIVE_DESCRIPTOR_TYPE(JE::Editor::Render::Scene::EditorDecalComponent)
             AZ_COMPONENT_BASE(JE::Editor::Render::Scene::EditorDecalComponent)

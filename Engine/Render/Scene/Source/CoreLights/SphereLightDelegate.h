@@ -10,14 +10,14 @@
 
 #include <CoreLights/LightDelegateBase.h>
 
-#include <Atom/Feature/CoreLights/PointLightFeatureProcessorInterface.h>
+#include <JE/Render/Features/CoreLights/PointLightFeatureProcessorInterface.h>
 #include <AzFramework/Entity/EntityDebugDisplayBus.h>
 
 namespace JE::Render::Scene
 {
-    class SphereLightDelegate final : public LightDelegateBase<AZ::Render::PointLightFeatureProcessorInterface>
+    class SphereLightDelegate final : public LightDelegateBase<JE::Render::Features::PointLightFeatureProcessorInterface>
     {
-        using Base = LightDelegateBase<AZ::Render::PointLightFeatureProcessorInterface>;
+        using Base = LightDelegateBase<JE::Render::Features::PointLightFeatureProcessorInterface>;
 
     public:
         SphereLightDelegate(LmbrCentral::SphereShapeComponentRequests* shapeBus, AZ::EntityId entityId, bool isVisible);
@@ -33,8 +33,8 @@ namespace JE::Render::Scene
         float GetEffectiveSolidAngle() const override;
         void SetEnableShadow(bool enabled) override;
         void SetShadowBias(float bias) override;
-        void SetShadowmapMaxSize(AZ::Render::ShadowmapSize size) override;
-        void SetShadowFilterMethod(AZ::Render::ShadowFilterMethod method) override;
+        void SetShadowmapMaxSize(JE::Render::Features::ShadowmapSize size) override;
+        void SetShadowFilterMethod(JE::Render::Features::ShadowFilterMethod method) override;
         void SetFilteringSampleCount(uint32_t count) override;
         void SetEsmExponent(float esmExponent) override;
         void SetNormalShadowBias(float bias) override;
@@ -54,6 +54,6 @@ namespace JE::Render::Scene
 
     inline float SphereLightDelegate::GetEffectiveSolidAngle() const
     {
-        return AZ::Render::PhotometricValue::OmnidirectionalSteradians;
+        return JE::Render::Features::PhotometricValue::OmnidirectionalSteradians;
     }
 } // namespace AZ::Render

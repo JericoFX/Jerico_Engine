@@ -10,7 +10,7 @@
 
 #include <AzCore/Math/MathUtils.h>
 #include <AzCore/RTTI/BehaviorContext.h>
-#include <Atom/Feature/CoreLights/CoreLightsConstants.h>
+#include <JE/Render/Features/CoreLights/CoreLightsConstants.h>
 
 namespace JE::Render
 {

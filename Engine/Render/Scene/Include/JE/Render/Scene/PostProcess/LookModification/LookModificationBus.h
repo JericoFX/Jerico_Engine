@@ -26,9 +26,9 @@ namespace JE::Render
             static const AZ::EBusHandlerPolicy HandlerPolicy = AZ::EBusHandlerPolicy::Single;
             virtual ~LookModificationRequests() {}
             // Auto-gen virtual getters/setters...
-#include <Atom/Feature/ParamMacros/StartParamFunctionsVirtual.inl>
-#include <Atom/Feature/PostProcess/LookModification/LookModificationParams.inl>
-#include <Atom/Feature/ParamMacros/EndParams.inl>
+#include <JE/Render/Features/ParamMacros/StartParamFunctionsVirtual.inl>
+#include <JE/Render/Features/PostProcess/LookModification/LookModificationParams.inl>
+#include <JE/Render/Features/ParamMacros/EndParams.inl>
 
         };
 

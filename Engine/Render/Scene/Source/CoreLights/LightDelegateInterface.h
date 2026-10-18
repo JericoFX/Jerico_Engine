@@ -8,8 +8,8 @@
 
 #pragma once
 
-#include <Atom/Feature/CoreLights/PhotometricValue.h>
-#include <Atom/Feature/CoreLights/ShadowConstants.h>
+#include <JE/Render/Features/CoreLights/PhotometricValue.h>
+#include <JE/Render/Features/CoreLights/ShadowConstants.h>
 #include <AzCore/Component/TransformBus.h>
 #include <AzCore/Instance/Instance.h>
 
@@ -49,11 +49,11 @@ namespace JE::Render
             //! Sets the light intensity.
             virtual void SetIntensity(float intensity) = 0;
             //! Sets the light unit, and returns the converted light intensity.
-            virtual float SetPhotometricUnit(AZ::Render::PhotometricUnit unit) = 0;
+            virtual float SetPhotometricUnit(JE::Render::Features::PhotometricUnit unit) = 0;
             //! Sets the maximum distance from any part of the surface of the area light at which this light will have an effect.
             virtual void SetAttenuationRadius(float radius) = 0;
             //! Gets the light intensity.
-            virtual const AZ::Render::PhotometricValue& GetPhotometricValue() const = 0;
+            virtual const JE::Render::Features::PhotometricValue& GetPhotometricValue() const = 0;
             //! Gets the surface area of the shape.
             virtual float GetSurfaceArea() const = 0;
             //! Returns the number of steradians covered by this light type.
@@ -89,9 +89,9 @@ namespace JE::Render
             //! Sets the shadow bias.
             virtual void SetShadowBias(float bias) = 0;
             //! Sets the maximum resolution of the shadow map.
-            virtual void SetShadowmapMaxSize(AZ::Render::ShadowmapSize size) = 0;
+            virtual void SetShadowmapMaxSize(JE::Render::Features::ShadowmapSize size) = 0;
             //! Sets the filter method for the shadow.
-            virtual void SetShadowFilterMethod(AZ::Render::ShadowFilterMethod method) = 0;
+            virtual void SetShadowFilterMethod(JE::Render::Features::ShadowFilterMethod method) = 0;
             //! Sets the sample count for filtering of the shadow boundary, max 64.
             virtual void SetFilteringSampleCount(uint32_t count) = 0;
             //! Sets the Esm exponent to use. Higher values produce a steeper falloff between light and shadow.

@@ -201,7 +201,7 @@ namespace JE::Geometry
     {
         m_model = JE::Render::RPI::Model::FindOrCreate(m_modelAsset);
         m_meshFeatureProcessor =
-            JE::Render::RPI::Scene::GetFeatureProcessorForEntity<AZ::Render::MeshFeatureProcessorInterface>(m_entityId);
+            JE::Render::RPI::Scene::GetFeatureProcessorForEntity<JE::Render::Features::MeshFeatureProcessorInterface>(m_entityId);
 
         if (!m_meshFeatureProcessor)
         {
@@ -212,7 +212,7 @@ namespace JE::Geometry
         }
 
         m_meshFeatureProcessor->ReleaseMesh(m_meshHandle);
-        m_meshHandle = m_meshFeatureProcessor->AcquireMesh(AZ::Render::MeshHandleDescriptor(m_modelAsset));
+        m_meshHandle = m_meshFeatureProcessor->AcquireMesh(JE::Render::Features::MeshHandleDescriptor(m_modelAsset));
         JE::Render::MaterialConsumerNotificationBus::Event(
             m_entityId, &JE::Render::MaterialConsumerNotifications::OnMaterialAssignmentSlotsChanged);
         JE::Render::MaterialAssignmentMap materials;
@@ -393,7 +393,7 @@ namespace JE::Geometry
         return m_visible;
     }
 
-    const AZ::Render::MeshFeatureProcessorInterface::MeshHandle* AtomRenderMesh::GetMeshHandle() const
+    const JE::Render::Features::MeshFeatureProcessorInterface::MeshHandle* AtomRenderMesh::GetMeshHandle() const
     {
         return &m_meshHandle;
     }

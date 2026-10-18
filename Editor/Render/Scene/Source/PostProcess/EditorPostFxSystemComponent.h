@@ -13,7 +13,7 @@
 #include <AzFramework/Asset/AssetCatalogBus.h>
 #include <AzToolsFramework/ToolsComponents/EditorComponentBase.h>
 #include <JE/Render/Scene/PostProcess/PostFxLayerCategoriesProviderRequestBus.h>
-#include <Atom/Feature/PostProcess/PostFxLayerCategoriesConstants.h>
+#include <JE/Render/Features/PostProcess/PostFxLayerCategoriesConstants.h>
 #include <PostProcess/EditorPostFxLayerCategoriesAsset.h>
 #include <AzFramework/Asset/GenericAssetHandler.h>
 
@@ -36,7 +36,7 @@ namespace JE::Editor::Render
             void Deactivate() override;
 
             // PostFxLayerCategoriesProviderRequestBus Override
-            void GetLayerCategories(AZ::Render::PostFx::LayerCategoriesMap& layerCategories) const override;
+            void GetLayerCategories(JE::Render::Features::PostFx::LayerCategoriesMap& layerCategories) const override;
 
             // AssetCatalogEventBus Overrides
             void OnCatalogLoaded(const char* catalogFile) override;

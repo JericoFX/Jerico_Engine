@@ -14,15 +14,15 @@ namespace JE::Editor::Render
 {
     namespace Scene
     {
-        using MotionBlurQualityComboBoxVec = AZStd::vector<AZ::Edit::EnumConstant<AZ::Render::MotionBlur::SampleQuality>>;
+        using MotionBlurQualityComboBoxVec = AZStd::vector<AZ::Edit::EnumConstant<JE::Render::Features::MotionBlur::SampleQuality>>;
         static MotionBlurQualityComboBoxVec PopulateMotionBlurQualityList()
         {
             return MotionBlurQualityComboBoxVec
             {
-                { AZ::Render::MotionBlur::SampleQuality::Low, "Low" },
-                { AZ::Render::MotionBlur::SampleQuality::Medium, "Medium" },
-                { AZ::Render::MotionBlur::SampleQuality::High, "High" },
-                { AZ::Render::MotionBlur::SampleQuality::Ultra, "Ultra" },
+                { JE::Render::Features::MotionBlur::SampleQuality::Low, "Low" },
+                { JE::Render::Features::MotionBlur::SampleQuality::Medium, "Medium" },
+                { JE::Render::Features::MotionBlur::SampleQuality::High, "High" },
+                { JE::Render::Features::MotionBlur::SampleQuality::Ultra, "Ultra" },
             };
         }
 
@@ -80,9 +80,9 @@ namespace JE::Editor::Render
 
                     // Auto-gen editor context settings for overrides
 #define EDITOR_CLASS JE::Render::Scene::MotionBlurComponentConfig
-#include <Atom/Feature/ParamMacros/StartOverrideEditorContext.inl>
-#include <Atom/Feature/PostProcess/MotionBlur/MotionBlurParams.inl>
-#include <Atom/Feature/ParamMacros/EndParams.inl>
+#include <JE/Render/Features/ParamMacros/StartOverrideEditorContext.inl>
+#include <JE/Render/Features/PostProcess/MotionBlur/MotionBlurParams.inl>
+#include <JE/Render/Features/ParamMacros/EndParams.inl>
 #undef EDITOR_CLASS
                         ;
                 }

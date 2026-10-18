@@ -11,8 +11,8 @@
 #include <AzCore/Component/TickBus.h>
 #include <AzCore/std/smart_ptr/shared_ptr.h>
 #include <AzToolsFramework/ToolsComponents/EditorComponentAdapter.h>
-#include <Atom/Feature/Utils/FrameCaptureBus.h>
-#include <Atom/Feature/ColorGrading/LutGenerationCaptureBus.h>
+#include <JE/Render/Features/Utils/FrameCaptureBus.h>
+#include <JE/Render/Features/ColorGrading/LutGenerationCaptureBus.h>
 #include <PostProcess/ColorGrading/HDRColorGradingComponent.h>
 #include <JE/Editor/Render/Scene/PostProcess/ColorGrading/EditorHDRColorGradingBus.h>
 
@@ -26,8 +26,8 @@ namespace JE::Editor::Render
             : public AzToolsFramework::Components::
                   EditorComponentAdapter<JE::Render::Scene::HDRColorGradingComponentController, JE::Render::Scene::HDRColorGradingComponent, JE::Render::Scene::HDRColorGradingComponentConfig>
             , private AZ::TickBus::Handler
-            , private AZ::Render::FrameCaptureNotificationBus::Handler
-            , private JE::ColorGrading::LutGenerationCaptureNotificationBus::Handler
+            , private JE::Render::Features::FrameCaptureNotificationBus::Handler
+            , private JE::Render::Features::LutGenerationCaptureNotificationBus::Handler
             , private EditorHDRColorGradingRequestBus::Handler
         {
         public:
@@ -53,9 +53,9 @@ namespace JE::Editor::Render
             void OnTick(float deltaTime, AZ::ScriptTimePoint time) override;
 
             // FrameCaptureNotificationBus overrides ...
-            void OnFrameCaptureFinished(AZ::Render::FrameCaptureResult result, const AZStd::string& info) override;
+            void OnFrameCaptureFinished(JE::Render::Features::FrameCaptureResult result, const AZStd::string& info) override;
 
-            void OnLutGenerationCapture(const JE::ColorGrading::LutGenerationCaptureMetadata& metadata) override;
+            void OnLutGenerationCapture(const JE::Render::Features::LutGenerationCaptureMetadata& metadata) override;
 
             //! EditorHDRColorGradingRequestBus overrides...
             void GenerateLutAsync() override;

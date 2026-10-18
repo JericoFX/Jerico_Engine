@@ -17,9 +17,9 @@
 
 #include <AzFramework/API/ApplicationAPI.h>
 
-#include <Atom/Feature/Utils/ProfilingCaptureBus.h>
-#include <Atom/Feature/Utils/FrameCaptureBus.h>
-#include <Atom/Feature/Utils/FrameCaptureTestBus.h>
+#include <JE/Render/Features/Utils/ProfilingCaptureBus.h>
+#include <JE/Render/Features/Utils/FrameCaptureBus.h>
+#include <JE/Render/Features/Utils/FrameCaptureTestBus.h>
 
 namespace AZ
 {
@@ -43,8 +43,8 @@ namespace AZ::ScriptAutomation
         : public AZ::Component
         , public AZ::TickBus::Handler
         , public ScriptAutomationRequestBus::Handler
-        , public AZ::Render::ProfilingCaptureNotificationBus::Handler
-        , public AZ::Render::FrameCaptureNotificationBus::Handler
+        , public JE::Render::Features::ProfilingCaptureNotificationBus::Handler
+        , public JE::Render::Features::FrameCaptureNotificationBus::Handler
         , public AzFramework::LevelSystemLifecycleNotificationBus::Handler
     {
     public:
@@ -62,7 +62,7 @@ namespace AZ::ScriptAutomation
 
         void SetIdleFrames(int numFrames) override;
         void SetIdleSeconds(float numSeconds) override;
-        void SetFrameCaptureId(AZ::Render::FrameCaptureId frameCaptureId) override;
+        void SetFrameCaptureId(JE::Render::Features::FrameCaptureId frameCaptureId) override;
         void StartProfilingCapture() override;
 
         void ActivateScript(const char* scriptPath) override;
@@ -86,7 +86,7 @@ namespace AZ::ScriptAutomation
         void LoadLevel(const char* levelName) override;
 
         // FrameCaptureNotificationBus implementation
-        void OnFrameCaptureFinished(AZ::Render::FrameCaptureResult result, const AZStd::string& info) override;
+        void OnFrameCaptureFinished(JE::Render::Features::FrameCaptureResult result, const AZStd::string& info) override;
 
         // ProfilingCaptureNotificationBus implementation
         void OnCaptureQueryTimestampFinished(bool result, const AZStd::string& info) override;
@@ -115,7 +115,7 @@ namespace AZ::ScriptAutomation
 
         float m_scriptPauseTimeout = 0.0f;
         bool m_scriptPaused = false;
-        AZ::Render::FrameCaptureId m_scriptFrameCaptureId = AZ::Render::InvalidFrameCaptureId;
+        JE::Render::Features::FrameCaptureId m_scriptFrameCaptureId = JE::Render::Features::InvalidFrameCaptureId;
 
         bool m_isStarted = false;
         bool m_exitOnFinish = false;

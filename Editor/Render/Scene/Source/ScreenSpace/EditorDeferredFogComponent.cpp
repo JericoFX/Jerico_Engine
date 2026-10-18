@@ -71,7 +71,7 @@ namespace JE::Editor::Render
                         ->DataElement(AZ::Edit::UIHandlers::ComboBox, &JE::Render::Scene::DeferredFogComponentConfig::m_fogMode,
                             QT_TRANSLATE_NOOP("AtomLyIntegration", "Fog Mode"),
                             QT_TRANSLATE_NOOP("AtomLyIntegration", "Which formula to use for calculating the fog."))
-                            ->Attribute(AZ::Edit::Attributes::EnumValues, AZ::Edit::GetEnumConstantsFromTraits<AZ::Render::FogMode>())
+                            ->Attribute(AZ::Edit::Attributes::EnumValues, AZ::Edit::GetEnumConstantsFromTraits<JE::Render::Features::FogMode>())
 
                         ->ClassElement(AZ::Edit::ClassElements::Group, QT_TRANSLATE_NOOP("AtomLyIntegration", "Distance"))
                             ->Attribute(AZ::Edit::Attributes::AutoExpand, true)

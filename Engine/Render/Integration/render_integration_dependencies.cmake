@@ -4,7 +4,6 @@
 # Host composition only: implementation libraries do not load the remnant Gem modules.
 set(JE_RENDER_INTEGRATION_RUNTIME_DEPENDENCIES
     Gem::Atom_RHI.Private
-    Gem::Atom_Feature_Common
     JE::WorldCamera
     Gem::LmbrCentral.Clients
     Gem::GradientSignal.Clients
@@ -16,8 +15,6 @@ set(JE_RENDER_INTEGRATION_RUNTIME_DEPENDENCIES
 set(JE_RENDER_INTEGRATION_TOOL_DEPENDENCIES
     Gem::Atom_RHI.Private
     JE::RenderAssetBuilders
-    Gem::Atom_Feature_Common.Builders
-    Gem::Atom_Feature_Common.Editor
     JE::WorldCamera
     Gem::AtomRenderOptions.Editor
     Gem::LmbrCentral.Editor

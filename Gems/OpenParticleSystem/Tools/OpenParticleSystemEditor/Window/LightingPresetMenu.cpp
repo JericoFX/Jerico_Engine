@@ -8,7 +8,7 @@
 
 #include <LightingPresetMenu.h>
 #include <Viewport/OpenParticleViewportRequestBus.h>
-#include <Atom/Feature/Utils/LightingPreset.h>
+#include <JE/Render/Features/Utils/LightingPreset.h>
 
 namespace OpenParticleSystemEditor
 {
@@ -86,7 +86,7 @@ namespace OpenParticleSystemEditor
         }
     }
 
-    void LightingPresetMenu::OnLightingPresetAdded([[maybe_unused]]AZ::Render::LightingPresetPtr preset)
+    void LightingPresetMenu::OnLightingPresetAdded([[maybe_unused]]JE::Render::Features::LightingPresetPtr preset)
     {
         if (!m_reloading)
         {
@@ -94,7 +94,7 @@ namespace OpenParticleSystemEditor
         }
     }
 
-    void LightingPresetMenu::OnLightingPresetChanged([[maybe_unused]]AZ::Render::LightingPresetPtr preset)
+    void LightingPresetMenu::OnLightingPresetChanged([[maybe_unused]]JE::Render::Features::LightingPresetPtr preset)
     {
     }
 

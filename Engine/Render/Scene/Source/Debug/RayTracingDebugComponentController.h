@@ -36,9 +36,9 @@ namespace JE::Render::Scene
 
         // clang-format off
         // Generate function override declarations (functions definitions in .cpp)
-        #include <Atom/Feature/ParamMacros/StartParamFunctionsOverride.inl>
-        #include <Atom/Feature/Debug/RayTracingDebugParams.inl>
-        #include <Atom/Feature/ParamMacros/EndParams.inl>
+        #include <JE/Render/Features/ParamMacros/StartParamFunctionsOverride.inl>
+        #include <JE/Render/Features/Debug/RayTracingDebugParams.inl>
+        #include <JE/Render/Features/ParamMacros/EndParams.inl>
         // clang-format on
 
     private:
@@ -46,7 +46,7 @@ namespace JE::Render::Scene
         bool IsRayTracingSupported() const;
         bool IsRayTracingNotSupported() const;
 
-        AZ::Render::RayTracingDebugSettingsInterface* m_rayTracingDebugSettingsInterface{ nullptr };
+        JE::Render::Features::RayTracingDebugSettingsInterface* m_rayTracingDebugSettingsInterface{ nullptr };
         AZ::EntityId m_entityId{ AZ::EntityId::InvalidEntityId };
         RayTracingDebugComponentConfig m_configuration;
     };

@@ -33,9 +33,9 @@ namespace JE::Render
 
                     // Auto-gen behavior context...
 #define PARAM_EVENT_BUS DepthOfFieldRequestBus::Events
-#include <Atom/Feature/ParamMacros/StartParamBehaviorContext.inl>
-#include <Atom/Feature/PostProcess/DepthOfField/DepthOfFieldParams.inl>
-#include <Atom/Feature/ParamMacros/EndParams.inl>
+#include <JE/Render/Features/ParamMacros/StartParamBehaviorContext.inl>
+#include <JE/Render/Features/PostProcess/DepthOfField/DepthOfFieldParams.inl>
+#include <JE/Render/Features/ParamMacros/EndParams.inl>
 #undef PARAM_EVENT_BUS
 
                     ;
@@ -66,7 +66,7 @@ namespace JE::Render
         {
             m_entityId = entityId;
 
-            AZ::Render::PostProcessFeatureProcessorInterface* fp = JE::Render::RPI::Scene::GetFeatureProcessorForEntity<AZ::Render::PostProcessFeatureProcessorInterface>(m_entityId);
+            JE::Render::Features::PostProcessFeatureProcessorInterface* fp = JE::Render::RPI::Scene::GetFeatureProcessorForEntity<JE::Render::Features::PostProcessFeatureProcessorInterface>(m_entityId);
             if (fp)
             {
                 m_postProcessInterface = fp->GetOrCreateSettingsInterface(m_entityId);
@@ -160,9 +160,9 @@ namespace JE::Render
             }                                                                                           \
         }                                                                                               \
 
-#include <Atom/Feature/ParamMacros/MapAllCommon.inl>
-#include <Atom/Feature/PostProcess/DepthOfField/DepthOfFieldParams.inl>
-#include <Atom/Feature/ParamMacros/EndParams.inl>
+#include <JE/Render/Features/ParamMacros/MapAllCommon.inl>
+#include <JE/Render/Features/PostProcess/DepthOfField/DepthOfFieldParams.inl>
+#include <JE/Render/Features/ParamMacros/EndParams.inl>
 
 
     } // namespace Render

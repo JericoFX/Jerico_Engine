@@ -21,7 +21,7 @@ ly_add_target(
             AZ::AzFramework
             JE::RenderIntegration
             Gem::Atom_Utils.Static
-            Gem::Atom_Feature_Common.Public
+            JE::RenderFeatures
             JE::RenderScene
             JE::RenderMaterials
             Gem::GradientSignal.Static

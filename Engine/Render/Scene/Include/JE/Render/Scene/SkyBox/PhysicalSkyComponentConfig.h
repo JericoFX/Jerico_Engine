@@ -9,9 +9,9 @@
 #pragma once
 
 #include <AzCore/Component/Component.h>
-#include <Atom/Feature/CoreLights/PhotometricValue.h>
-#include <Atom/Feature/SkyBox/SkyboxConstants.h>
-#include <Atom/Feature/SkyBox/SkyBoxFogSettings.h>
+#include <JE/Render/Features/CoreLights/PhotometricValue.h>
+#include <JE/Render/Features/SkyBox/SkyboxConstants.h>
+#include <JE/Render/Features/SkyBox/SkyBoxFogSettings.h>
 
 namespace JE::Render
 {
@@ -26,14 +26,14 @@ namespace JE::Render
 
             static void Reflect(AZ::ReflectContext* context);
 
-            AZ::Render::PhotometricUnit m_intensityMode = AZ::Render::PhotometricUnit::Ev100Luminance;
-            float m_skyIntensity = AZ::Render::PhysicalSkyDefaultIntensity;
-            float m_sunIntensity = AZ::Render::PhysicalSunDefaultIntensity;
+            JE::Render::Features::PhotometricUnit m_intensityMode = JE::Render::Features::PhotometricUnit::Ev100Luminance;
+            float m_skyIntensity = JE::Render::Features::PhysicalSkyDefaultIntensity;
+            float m_sunIntensity = JE::Render::Features::PhysicalSunDefaultIntensity;
 
             int m_turbidity = 1;
             float m_sunRadiusFactor = 1.0f;
 
-            AZ::Render::SkyBoxFogSettings m_skyBoxFogSettings;
+            JE::Render::Features::SkyBoxFogSettings m_skyBoxFogSettings;
 
             //! Returns characters for a suffix for the light type including a space. " lm" for lumens for example.
             const char* GetIntensitySuffix() const;

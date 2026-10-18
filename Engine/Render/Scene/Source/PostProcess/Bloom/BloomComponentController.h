@@ -14,10 +14,10 @@
 #include <JE/Render/Scene/PostProcess/Bloom/BloomBus.h>
 #include <JE/Render/Scene/PostProcess/Bloom/BloomComponentConfig.h>
 
-#include <Atom/Feature/PostProcess/Bloom/BloomConstants.h>
-#include <Atom/Feature/PostProcess/Bloom/BloomSettingsInterface.h>
-#include <Atom/Feature/PostProcess/PostProcessSettingsInterface.h>
-#include <Atom/Feature/PostProcess/PostProcessFeatureProcessorInterface.h>
+#include <JE/Render/Features/PostProcess/Bloom/BloomConstants.h>
+#include <JE/Render/Features/PostProcess/Bloom/BloomSettingsInterface.h>
+#include <JE/Render/Features/PostProcess/PostProcessSettingsInterface.h>
+#include <JE/Render/Features/PostProcess/PostProcessFeatureProcessorInterface.h>
 
 namespace JE::Editor::Render::Scene
 {
@@ -49,17 +49,17 @@ namespace JE::Render
             const BloomComponentConfig& GetConfiguration() const;
 
             // Auto-gen function override declarations (functions definitions in .cpp)...
-#include <Atom/Feature/ParamMacros/StartParamFunctionsOverride.inl>
-#include <Atom/Feature/PostProcess/Bloom/BloomParams.inl>
-#include <Atom/Feature/ParamMacros/EndParams.inl>
+#include <JE/Render/Features/ParamMacros/StartParamFunctionsOverride.inl>
+#include <JE/Render/Features/PostProcess/Bloom/BloomParams.inl>
+#include <JE/Render/Features/ParamMacros/EndParams.inl>
 
         private:
             AZ_DISABLE_COPY(BloomComponentController);
 
             void OnConfigChanged();
 
-            AZ::Render::PostProcessSettingsInterface* m_postProcessInterface = nullptr;
-            AZ::Render::BloomSettingsInterface* m_settingsInterface = nullptr;
+            JE::Render::Features::PostProcessSettingsInterface* m_postProcessInterface = nullptr;
+            JE::Render::Features::BloomSettingsInterface* m_settingsInterface = nullptr;
             BloomComponentConfig m_configuration;
             AZ::EntityId m_entityId;
         };

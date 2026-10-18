@@ -20,8 +20,8 @@
 #include <JE/Render/RPI/Public/RPIUtils.h>
 #include <JE/Render/RPI/Public/View.h>
 #include <DiffuseProbeGrid_Traits_Platform.h>
-#include <Atom/Feature/RayTracing/RayTracingFeatureProcessorInterface.h>
-#include <Atom/Feature/TransformService/TransformServiceFeatureProcessorInterface.h>
+#include <JE/Render/Features/RayTracing/RayTracingFeatureProcessorInterface.h>
+#include <JE/Render/Features/TransformService/TransformServiceFeatureProcessorInterface.h>
 #include <Render/DiffuseProbeGridFeatureProcessor.h>
 #include <Render/DiffuseProbeGridRayTracingPass.h>
 
@@ -117,7 +117,7 @@ namespace AZ
                 return false;
             }
 
-            auto* rayTracingFeatureProcessor = scene->GetFeatureProcessor<RayTracingFeatureProcessorInterface>();
+            auto* rayTracingFeatureProcessor = scene->GetFeatureProcessor<JE::Render::Features::RayTracingFeatureProcessorInterface>();
             if (!rayTracingFeatureProcessor)
             {
                 return false;
@@ -144,7 +144,7 @@ namespace AZ
         void DiffuseProbeGridRayTracingPass::FrameBeginInternal(FramePrepareParams params)
         {
             JE::Render::RPI::Scene* scene = m_pipeline->GetScene();
-            auto* rayTracingFeatureProcessor = scene->GetFeatureProcessor<RayTracingFeatureProcessorInterface>();
+            auto* rayTracingFeatureProcessor = scene->GetFeatureProcessor<JE::Render::Features::RayTracingFeatureProcessorInterface>();
 
             if (!m_rayTracingShaderTable)
             {
@@ -163,7 +163,7 @@ namespace AZ
 
             JE::Render::RPI::Scene* scene = m_pipeline->GetScene();
             DiffuseProbeGridFeatureProcessor* diffuseProbeGridFeatureProcessor = scene->GetFeatureProcessor<DiffuseProbeGridFeatureProcessor>();
-            auto* rayTracingFeatureProcessor = scene->GetFeatureProcessor<RayTracingFeatureProcessorInterface>();
+            auto* rayTracingFeatureProcessor = scene->GetFeatureProcessor<JE::Render::Features::RayTracingFeatureProcessorInterface>();
 
             frameGraph.SetEstimatedItemCount(aznumeric_cast<uint32_t>(diffuseProbeGridFeatureProcessor->GetVisibleRealTimeProbeGrids().size()));
 
@@ -265,7 +265,7 @@ namespace AZ
         {
             JE::Render::RPI::Scene* scene = m_pipeline->GetScene();
             DiffuseProbeGridFeatureProcessor* diffuseProbeGridFeatureProcessor = scene->GetFeatureProcessor<DiffuseProbeGridFeatureProcessor>();
-            auto* rayTracingFeatureProcessor = scene->GetFeatureProcessor<RayTracingFeatureProcessorInterface>();
+            auto* rayTracingFeatureProcessor = scene->GetFeatureProcessor<JE::Render::Features::RayTracingFeatureProcessorInterface>();
 
             if (rayTracingFeatureProcessor->GetTlas()->GetTlasBuffer() && rayTracingFeatureProcessor->GetSubMeshCount())
             {
@@ -309,7 +309,7 @@ namespace AZ
         {
             JE::Render::RPI::Scene* scene = m_pipeline->GetScene();
             DiffuseProbeGridFeatureProcessor* diffuseProbeGridFeatureProcessor = scene->GetFeatureProcessor<DiffuseProbeGridFeatureProcessor>();
-            auto* rayTracingFeatureProcessor = scene->GetFeatureProcessor<RayTracingFeatureProcessorInterface>();
+            auto* rayTracingFeatureProcessor = scene->GetFeatureProcessor<JE::Render::Features::RayTracingFeatureProcessorInterface>();
             AZ_Assert(rayTracingFeatureProcessor, "DiffuseProbeGridRayTracingPass requires the RayTracingFeatureProcessor");
 
             if (rayTracingFeatureProcessor &&

@@ -9,9 +9,9 @@
 #pragma once
 
 #include <AzToolsFramework/ToolsComponents/EditorComponentAdapter.h>
-#include <Atom/Feature/PostProcess/AmbientOcclusion/AoConstants.h>
-#include <Atom/Feature/PostProcess/AmbientOcclusion/SsaoConstants.h>
-#include <Atom/Feature/PostProcess/AmbientOcclusion/GtaoConstants.h>
+#include <JE/Render/Features/PostProcess/AmbientOcclusion/AoConstants.h>
+#include <JE/Render/Features/PostProcess/AmbientOcclusion/SsaoConstants.h>
+#include <JE/Render/Features/PostProcess/AmbientOcclusion/GtaoConstants.h>
 #include <PostProcess/AmbientOcclusion/AoComponent.h>
 
 namespace JE::Editor::Render

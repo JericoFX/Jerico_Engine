@@ -141,6 +141,49 @@ namespace
         return valid;
     }
 
+    int ResolveInclude(const char* name, char* resolved, size_t capacity)
+    {
+        if (std::string(name) != "je_callback/native.h")
+        {
+            return 0;
+        }
+        const std::string target = "nested.h";
+        if (target.size() >= capacity)
+        {
+            return -1;
+        }
+        std::copy(target.begin(), target.end(), resolved);
+        resolved[target.size()] = '\0';
+        return static_cast<int>(target.size());
+    }
+
+    int InvalidResolution(const char*, char*, size_t capacity)
+    {
+        return static_cast<int>(capacity);
+    }
+
+    bool IncludeResolution(const std::filesystem::path& root)
+    {
+        const std::vector<std::string> args = { "builder", (root / "resolver.azsl").generic_string(),
+            "-I" + (root / "include").generic_string(), "-P" };
+        struct ResetResolver
+        {
+            ~ResetResolver() { mcpp_set_resolve_include_callback(nullptr); }
+        } resetResolver;
+        mcpp_set_resolve_include_callback(nullptr);
+        bool valid = Require(Run(args) != 0, "unresolved include unexpectedly accepted without callback");
+        mcpp_set_resolve_include_callback(ResolveInclude);
+        valid &= Require(Run(args) == 0, "macro-expanded pre-open resolution failed");
+        valid &= Require(Compact(output[MCPP_OUT]).find("intresolved=40;") != std::string::npos, "resolved provider marker missing");
+        valid &= Require(includes.size() == 1 && Normalize(includes.front()) == Normalize((root / "include/nested.h").generic_string()),
+            "report_include must report the actual opened provider");
+        mcpp_set_resolve_include_callback(InvalidResolution);
+        valid &= Require(Run(args) != 0, "invalid/oversized callback result accepted");
+        mcpp_set_resolve_include_callback(nullptr);
+        valid &= Require(Run(args) != 0, "resolver reset did not restore original missing-include behavior");
+        return valid;
+    }
+
     bool Comments(const std::filesystem::path& root)
     {
         if (!Require(Run({"builder", (root / "comments.azsl").generic_string(), "-C", "-P"}) == 0, "comment preprocessing failed"))
@@ -186,7 +229,7 @@ int main(int argc, char** argv)
     const std::string test = argv[1];
     const std::filesystem::path root(argv[2]);
     const bool valid = test == "preprocessing" ? Preprocessing(root) : test == "comments" ? Comments(root)
-        : test == "errors" ? Errors(root) : false;
+        : test == "errors" ? Errors(root) : test == "include-resolution" ? IncludeResolution(root) : false;
     std::cout << "JE mcpp " << test << (valid ? " PASS\n" : " FAIL\n");
     return valid ? 0 : 1;
 }

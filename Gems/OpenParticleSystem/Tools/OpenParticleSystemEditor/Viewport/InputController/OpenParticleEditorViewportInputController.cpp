@@ -23,7 +23,7 @@
 #include <JE/Render/RPI/Public/RPISystemInterface.h>
 #include <JE/Render/RPI/Public/Scene.h>
 #include <JE/Render/RPI/Reflect/Model/ModelAsset.h>
-#include <Atom/Feature/SkyBox/SkyBoxFeatureProcessorInterface.h>
+#include <JE/Render/Features/SkyBox/SkyBoxFeatureProcessorInterface.h>
 
 #include <InputController/OpenParticleEditorViewportInputController.h>
 #include <InputController/IdleBehavior.h>

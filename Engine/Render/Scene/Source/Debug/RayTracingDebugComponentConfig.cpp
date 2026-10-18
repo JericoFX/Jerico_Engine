@@ -20,16 +20,16 @@ namespace JE::Render::Scene
                 ->Version(0)
                 // Auto-gen serialize context code
                 #define SERIALIZE_CLASS RayTracingDebugComponentConfig
-                #include <Atom/Feature/ParamMacros/StartParamSerializeContext.inl>
-                #include <Atom/Feature/Debug/RayTracingDebugParams.inl>
-                #include <Atom/Feature/ParamMacros/EndParams.inl>
+                #include <JE/Render/Features/ParamMacros/StartParamSerializeContext.inl>
+                #include <JE/Render/Features/Debug/RayTracingDebugParams.inl>
+                #include <JE/Render/Features/ParamMacros/EndParams.inl>
                 #undef SERIALIZE_CLASS
             ;
             // clang-format on
         }
     }
 
-    void RayTracingDebugComponentConfig::CopySettingsFrom(AZ::Render::RayTracingDebugSettingsInterface* settings)
+    void RayTracingDebugComponentConfig::CopySettingsFrom(JE::Render::Features::RayTracingDebugSettingsInterface* settings)
     {
         if (!settings)
         {
@@ -38,14 +38,14 @@ namespace JE::Render::Scene
 
         // clang-format off
         #define COPY_SOURCE settings
-        #include <Atom/Feature/ParamMacros/StartParamCopySettingsFrom.inl>
-        #include <Atom/Feature/Debug/RayTracingDebugParams.inl>
-        #include <Atom/Feature/ParamMacros/EndParams.inl>
+        #include <JE/Render/Features/ParamMacros/StartParamCopySettingsFrom.inl>
+        #include <JE/Render/Features/Debug/RayTracingDebugParams.inl>
+        #include <JE/Render/Features/ParamMacros/EndParams.inl>
         #undef COPY_SOURCE
         // clang-format on
     }
 
-    void RayTracingDebugComponentConfig::CopySettingsTo(AZ::Render::RayTracingDebugSettingsInterface* settings)
+    void RayTracingDebugComponentConfig::CopySettingsTo(JE::Render::Features::RayTracingDebugSettingsInterface* settings)
     {
         if (!settings)
         {
@@ -54,9 +54,9 @@ namespace JE::Render::Scene
 
         // clang-format off
         #define COPY_TARGET settings
-        #include <Atom/Feature/ParamMacros/StartParamCopySettingsTo.inl>
-        #include <Atom/Feature/Debug/RayTracingDebugParams.inl>
-        #include <Atom/Feature/ParamMacros/EndParams.inl>
+        #include <JE/Render/Features/ParamMacros/StartParamCopySettingsTo.inl>
+        #include <JE/Render/Features/Debug/RayTracingDebugParams.inl>
+        #include <JE/Render/Features/ParamMacros/EndParams.inl>
         #undef COPY_TARGET
         // clang-format on
     }

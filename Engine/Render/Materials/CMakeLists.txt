@@ -12,7 +12,7 @@ ly_add_target(
             AZ::AzCore
             AZ::AzFramework
             JE::RenderIntegration
-            Gem::Atom_Feature_Common.Public
+            JE::RenderFeatures
 )
 
 set_target_properties(RenderMaterials PROPERTIES UNITY_BUILD OFF)

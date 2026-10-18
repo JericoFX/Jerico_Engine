@@ -9,8 +9,8 @@
 #pragma once
 
 #include <AzCore/Component/Component.h>
-#include <Atom/Feature/PostProcess/PostProcessSettingsInterface.h>
-#include <Atom/Feature/PostProcess/PostFxLayerCategoriesConstants.h>
+#include <JE/Render/Features/PostProcess/PostProcessSettingsInterface.h>
+#include <JE/Render/Features/PostProcess/PostFxLayerCategoriesConstants.h>
 
 namespace JE::Render
 {
@@ -28,19 +28,19 @@ namespace JE::Render
             AZStd::string GetPriorityLabel();
 
             // Generate members...
-#include <Atom/Feature/ParamMacros/StartParamMembers.inl>
-#include <Atom/Feature/PostProcess/PostProcessParams.inl>
-#include <Atom/Feature/ParamMacros/EndParams.inl>
+#include <JE/Render/Features/ParamMacros/StartParamMembers.inl>
+#include <JE/Render/Features/PostProcess/PostProcessParams.inl>
+#include <JE/Render/Features/ParamMacros/EndParams.inl>
 
             // Generate Getters/Setters...
-#include <Atom/Feature/ParamMacros/StartParamFunctions.inl>
-#include <Atom/Feature/PostProcess/PostProcessParams.inl>
-#include <Atom/Feature/ParamMacros/EndParams.inl>
-            void CopySettingsTo(AZ::Render::PostProcessSettingsInterface* settings) const;
+#include <JE/Render/Features/ParamMacros/StartParamFunctions.inl>
+#include <JE/Render/Features/PostProcess/PostProcessParams.inl>
+#include <JE/Render/Features/ParamMacros/EndParams.inl>
+            void CopySettingsTo(JE::Render::Features::PostProcessSettingsInterface* settings) const;
 
             // Returns a sorted list of priority-to-layer-categories
             AZStd::vector<AZStd::pair<int, AZStd::string>> BuildLayerCategories() const;
-            int m_layerCategoryValue = AZ::Render::PostFx::DefaultLayerCategoryValue;
+            int m_layerCategoryValue = JE::Render::Features::PostFx::DefaultLayerCategoryValue;
 
             // If entity containing the tags have cameras, PostFx will limit the effect to those specific entities
             AZStd::vector<AZStd::string> m_cameraTags;

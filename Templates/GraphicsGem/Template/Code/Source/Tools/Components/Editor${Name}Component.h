@@ -8,7 +8,7 @@
 
 #pragma once
 
-#include <Atom/Feature/Utils/EditorRenderComponentAdapter.h>
+#include <JE/Editor/Render/Features/Utils/EditorRenderComponentAdapter.h>
 
 #include <AzCore/Component/TickBus.h>
 #include <AzFramework/Entity/EntityDebugDisplayBus.h>
@@ -24,14 +24,14 @@ namespace ${Name}
     inline constexpr AZ::TypeId EditorComponentTypeId { "{${Random_Uuid}}" };
 
     class Editor${Name}Component final
-        : public AZ::Render::EditorRenderComponentAdapter<${Name}ComponentController, ${Name}Component, ${Name}ComponentConfig>
+        : public JE::Editor::Render::Features::EditorRenderComponentAdapter<${Name}ComponentController, ${Name}Component, ${Name}ComponentConfig>
         , private AzToolsFramework::EditorComponentSelectionRequestsBus::Handler
         , private AzFramework::EntityDebugDisplayEventBus::Handler
         , private AZ::TickBus::Handler
         , private AzToolsFramework::EditorEntityInfoNotificationBus::Handler
     {
     public:
-        using BaseClass = AZ::Render::EditorRenderComponentAdapter <${Name}ComponentController, ${Name}Component, ${Name}ComponentConfig>;
+        using BaseClass = JE::Editor::Render::Features::EditorRenderComponentAdapter <${Name}ComponentController, ${Name}Component, ${Name}ComponentConfig>;
         AZ_EDITOR_COMPONENT(Editor${Name}Component, EditorComponentTypeId, BaseClass);
 
         static void Reflect(AZ::ReflectContext* context);

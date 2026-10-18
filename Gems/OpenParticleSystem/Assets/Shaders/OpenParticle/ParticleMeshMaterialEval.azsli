@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Atom/Feature/Common/Assets/Shaders/Materials/MaterialFunctions/StandardGetAlphaAndClip.azsli"
+#include "Engine/Render/Features/Assets/Shaders/Materials/MaterialFunctions/StandardGetAlphaAndClip.azsli"
 #include <Atom/Features/PBR/Lighting/StandardLighting.azsli>
 
 void EvaluateStandardSurface(
