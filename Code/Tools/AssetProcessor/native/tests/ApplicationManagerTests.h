@@ -20,6 +20,9 @@ namespace UnitTests
 {
     struct MockBatchApplicationManager : BatchApplicationManager
     {
+        using ApplicationManagerBase::CheckReprocessFileList;
+        using ApplicationManagerBase::m_filesToReprocess;
+        using ApplicationManagerBase::m_reprocessFileList;
         using ApplicationManagerBase::InitFileMonitor;
         using ApplicationManagerBase::DestroyFileMonitor;
         using ApplicationManagerBase::InitFileStateCache;
@@ -36,6 +39,7 @@ namespace UnitTests
     protected:
         void SetUp() override;
         void TearDown() override;
+        virtual AZStd::unique_ptr<MockAssetProcessorManager> CreateAssetProcessorManager();
 
         AssetProcessor::MockAssetDatabaseRequestsHandler m_databaseLocationListener;
 

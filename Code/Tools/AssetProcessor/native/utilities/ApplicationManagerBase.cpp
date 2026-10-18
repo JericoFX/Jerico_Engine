@@ -1451,10 +1451,18 @@ bool ApplicationManagerBase::CheckReprocessFileList()
     // Queue one at a time, and wait for idle.
     // This makes sure the files in the list are processed in the same order.
     // Otherwise, the order can shuffle based on Asset Processor state.
-    m_assetProcessorManager->RequestReprocess(m_filesToReprocess.front());
-    m_filesToReprocess.pop_front();
+    // Requests with no jobs do not trigger another idle notification.
+    while (!m_filesToReprocess.empty())
+    {
+        const AZ::u64 filesRequested = m_assetProcessorManager->RequestReprocess(m_filesToReprocess.front());
+        m_filesToReprocess.pop_front();
+        if (filesRequested > 0)
+        {
+            return true;
+        }
+    }
 
-    return true;
+    return false;
 }
 
 bool ApplicationManagerBase::Activate()
