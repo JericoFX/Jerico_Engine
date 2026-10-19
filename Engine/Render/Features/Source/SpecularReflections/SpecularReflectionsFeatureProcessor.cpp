@@ -81,7 +81,7 @@ namespace JE::Render
                         }
 
                         // size multiplier
-                        static AZStd::vector<AZ::Name> attachmentNames = { AZ::Name("RayTracingCoordsOutput"), AZ::Name("FallbackColor") };
+                        const AZ::Name attachmentNames[] = { AZ::Name("RayTracingCoordsOutput"), AZ::Name("FallbackColor") };
                         for (const auto& attachmentName : attachmentNames)
                         {
                             JE::Render::RPI::PassAttachmentBinding* attachmentBinding = pass->FindAttachmentBinding(attachmentName);
@@ -136,7 +136,7 @@ namespace JE::Render
                             rayTracingPassSrg->SetConstant(m_rayTraceFallbackSpecularNameIndex, m_ssrOptions.m_rayTraceFallbackSpecular);
 
                             // size multiplier
-                            static AZStd::vector<AZ::Name> attachmentNames = { AZ::Name("FallbackAlbedo"), AZ::Name("FallbackPosition"), AZ::Name("FallbackNormal") };
+                            const AZ::Name attachmentNames[] = { AZ::Name("FallbackAlbedo"), AZ::Name("FallbackPosition"), AZ::Name("FallbackNormal") };
                             for (const auto& attachmentName : attachmentNames)
                             {
                                 JE::Render::RPI::PassAttachmentBinding* attachmentBinding = pass->FindAttachmentBinding(attachmentName);
@@ -165,7 +165,7 @@ namespace JE::Render
                 JE::Render::RPI::PassSystemInterface::Get()->ForEachPass(passFilter, [sizeMultiplier](JE::Render::RPI::Pass* pass) -> JE::Render::RPI::PassFilterExecutionFlow
                     {
                         // size multiplier
-                        static AZStd::vector<AZ::Name> attachmentNames = { AZ::Name("ScreenSpaceReflectionOutput"), AZ::Name("TraceCoordsOutput") };
+                        const AZ::Name attachmentNames[] = { AZ::Name("ScreenSpaceReflectionOutput"), AZ::Name("TraceCoordsOutput") };
                         for (const auto& attachmentName : attachmentNames)
                         {
                             JE::Render::RPI::PassAttachmentBinding* attachmentBinding = pass->FindAttachmentBinding(attachmentName);
@@ -217,7 +217,7 @@ namespace JE::Render
                 JE::Render::RPI::PassSystemInterface::Get()->ForEachPass(passFilter, [sizeMultiplier](JE::Render::RPI::Pass* pass) -> JE::Render::RPI::PassFilterExecutionFlow
                     {
                         // size multiplier
-                        static AZStd::vector<AZ::Name> attachmentNames = { AZ::Name("Output") };
+                        const AZ::Name attachmentNames[] = { AZ::Name("Output") };
                         for (const auto& attachmentName : attachmentNames)
                         {
                             JE::Render::RPI::PassAttachmentBinding* attachmentBinding = pass->FindAttachmentBinding(attachmentName);

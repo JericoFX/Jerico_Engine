@@ -53,7 +53,7 @@ namespace AZ::RHI
 
     //! Returns the default supervariant name of an empty string if float16 is supported and the name of "NoFloat16" if float16 is not
     //! supported. This is useful for loading the correct supervariant when a shader needs to have a version with and without float16.
-    ATOM_RHI_PUBLIC_API const AZ::Name& GetDefaultSupervariantNameWithNoFloat16Fallback();
+    ATOM_RHI_PUBLIC_API AZ::Name GetDefaultSupervariantNameWithNoFloat16Fallback();
 
     //! Utility function to write captured pool data to a json document
     //! Ensure the passed pool won't be modified during the call to this function
