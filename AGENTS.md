@@ -11,7 +11,7 @@
 ## Reglas de producto que sustituyen las anteriores
 
 - JE es la nomenclatura propia: C++ `JE::` con subnamespaces, CMake `JE::`, macros `JE_`, rutas/targets/diagnósticos propios coherentes. Migrar también internals adaptados de O3DE; no dejar `AZ` para siempre detrás de alias/fachada. Preservar nombres genuinos de SDKs/bibliotecas privadas y avisos. Detalles en contrato JE.
-- Orden posterior del propietario, 2026-10-15: sólo Vulkan activo por ahora, con Windows-Vulkan y Linux-Vulkan como gates separados. Conservar DX12 en fuente e historial, fuera del build/cook/distribución y pruebas activos hasta nueva orden. VR/OpenXR continúa sobre Vulkan. Rendering RT, Metal/WebGPU/DX11/OpenGL/móvil siguen fuera. Null tests/headless no es renderer permitido de producto.
+- Orden posterior del propietario, 2026-10-15: sólo Vulkan activo por ahora, con Windows-Vulkan y Linux-Vulkan como gates separados. Conservar DX12 en fuente e historial, fuera del build/cook/distribución y pruebas activos hasta nueva orden. VR/OpenXR continúa sobre Vulkan. Orden posterior del propietario (2026-10-19): conservar DDGI y ray tracing en Atom sobre Vulkan; revoca la exclusión temporal de RT. Metal/WebGPU/DX11/OpenGL/móvil siguen fuera. Null tests/headless no es renderer permitido de producto.
 - AWS y multiplayer EXCLUIDOS, no opcionales ni deferred. No server/matchmaking/replication/cloud identity/telemetry/services. Auditar bootstrap/cook/deployment y no solo lista de Gems.
 - Geología REACTIVADA. No obedecer cancelación integral anterior. BSP→OpenVDB sigue cancelado; no confundir reactivar herramientas con reactivar backend descartado.
 - BSP/UI/materiales visibles son el primer camino. No postergar geometría hasta terminar audio/IA/packaging avanzado. Resto de capacidades existentes se conserva sin añadir plataforma online.
@@ -50,7 +50,7 @@ En cada checkpoint visible: escena/cámara/settings/build/backend, captura antes
 
 Después: actualizar HANDOFF/ACTIVE_SLICE y el requisito probado. Evidencia detallada por vertical, lecciones en error book; no diarios repetidos en todos los masters. Docs-only puede verificarse como documentación sin compilar el engine; jamás PRODUCT PASS. Bloqueo nombra fallo/permiso/paquete y próximos trabajos independientes.
 
-Buoyancy continúa DESIGN ONLY. Rendering RT/underwater y capacidades históricas diferidas no se activan por reordenar el roadmap. Multiplayer es excluido incluso si un master anterior decía deferred. No borrar evidencia anterior ni acreditar O3DE con PASS de Cry.
+Buoyancy continúa DESIGN ONLY. DDGI y ray tracing se conservan por la orden explícita del propietario del 2026-10-19. Underwater y las demás capacidades históricas diferidas no se activan por reordenar el roadmap. Multiplayer es excluido incluso si un master anterior decía deferred. No borrar evidencia anterior ni acreditar O3DE con PASS de Cry.
 
 ## Consulta previa de upstream O3DE
 
