@@ -1,0 +1,9 @@
+# Vulkan: cierre del pool de compactación RT
+
+Corrección focal sobre development, base2e56931f4e059fa743ea2e4999dead9f43567f34. RayTracingCompactionQueryPool creaba un VkQueryPool sin retirarlo. Su Shutdown ahora usa la cola diferida ReleaseContainer existente, limpia el handle y termina con Base::Shutdown; no desactiva ray tracing ni DDGI.
+
+El diff sólo añade el override en dos archivos. Revisión de fuente y build mínimo Atom_RHI_Vulkan.Private/Profile/serial1: exit0/33,6079739s. Regresión real Windows/Vulkan con el mismo BSP, assets y capa350: antes se informa un VkQueryPool al destruir VkDevice (VUID-vkDestroyDevice-device-00378); después no aparece ese error ni otro error de validación. Cierre normal desde el menú de sistema, exit0/219,5957489s; postflight sin drift ni auxiliares nativos pendientes. El módulo cargado corresponde al nuevo DLL B56DFD14, no a un binario anterior.
+
+La captura original1913x1080 muestra el BSP, no una prueba de iluminación DDGI: esta escena no tiene grid. Persisten diez reportes de formato storage-image, el aviso DynamicDrawContext y seis referencias NameDictionary con assert al cerrar. No se afirma Vulkan libre de avisos, cierre completo de Gem, SDK actualizado, VR, Linux o Shipping.
+
+Los resultados proceden de la cohorte de trabajo R16 (15.571 inputs/2.957 ausencias, freeze EA44EEC3), con la integración nativa DPG aún pendiente; no se presentan como una prueba desde un checkout limpio de este commit focal. Los logs íntegros, hashes de módulos, recibo de fuente y reviews del padre delimitan la evidencia. La capa350 fue un overlay diagnóstico local firmado y se restauró luego a261; su adopción duradera va en otro corte. La referencia administrativa05137 usada antes para este error era incorrecta; el stdout RED preservado contiene el VUID real00378.

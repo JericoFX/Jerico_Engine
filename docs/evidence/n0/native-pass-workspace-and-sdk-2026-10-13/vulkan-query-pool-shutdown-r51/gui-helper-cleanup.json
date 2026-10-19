@@ -1,0 +1,20 @@
+{
+  "utc": "2026-10-19T20:36:44.6600032Z",
+  "checks": [
+    {
+      "pid": 20624,
+      "createdUtc": "2026-10-19T20:35:54.4359550Z",
+      "originalAbsent": true,
+      "currentExe": null
+    },
+    {
+      "pid": 5220,
+      "createdUtc": "2026-10-19T20:35:54.4388190Z",
+      "originalAbsent": true,
+      "currentExe": null
+    }
+  ],
+  "freeGiB": 19.77,
+  "usedPercent": 38.06,
+  "sharedServicesPreserved": true
+}

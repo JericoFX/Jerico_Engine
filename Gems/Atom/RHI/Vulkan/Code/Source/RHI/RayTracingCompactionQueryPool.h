@@ -69,6 +69,7 @@ namespace AZ
 
             //////////////////////////////////////////////////////////////////////////
             // RHI::DeviceRayTracingCompactionQueryPool
+            void Shutdown() override;
             RHI::ResultCode InitInternal(RHI::RayTracingCompactionQueryPoolDescriptor desc) override;
             //////////////////////////////////////////////////////////////////////////
 

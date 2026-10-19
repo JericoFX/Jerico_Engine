@@ -1,0 +1,27 @@
+--- a/Gems/Atom/RHI/Vulkan/Code/Source/RHI/RayTracingCompactionQueryPool.h
++++ b/Gems/Atom/RHI/Vulkan/Code/Source/RHI/RayTracingCompactionQueryPool.h
+@@ -72,1 +72,2 @@
+-            RHI::ResultCode InitInternal(RHI::RayTracingCompactionQueryPoolDescriptor desc) override;
++            void Shutdown() override;
++            RHI::ResultCode InitInternal(RHI::RayTracingCompactionQueryPoolDescriptor desc) override;
+--- a/Gems/Atom/RHI/Vulkan/Code/Source/RHI/RayTracingCompactionQueryPool.cpp
++++ b/Gems/Atom/RHI/Vulkan/Code/Source/RHI/RayTracingCompactionQueryPool.cpp
+@@ -12,1 +12,2 @@
+-#include <RHI/RayTracingCompactionQueryPool.h>
++#include <RHI/RayTracingCompactionQueryPool.h>
++#include <RHI/ReleaseContainer.h>
+@@ -111,1 +112,13 @@
+-        RHI::ResultCode RayTracingCompactionQueryPool::InitInternal(RHI::RayTracingCompactionQueryPoolDescriptor desc)
++        void RayTracingCompactionQueryPool::Shutdown()
++        {
++            if (m_nativeQueryPool)
++            {
++                auto& device = static_cast<Device&>(GetDevice());
++                device.QueueForRelease(
++                    new ReleaseContainer<VkQueryPool>(device.GetNativeDevice(), m_nativeQueryPool, device.GetContext().DestroyQueryPool));
++                m_nativeQueryPool = VK_NULL_HANDLE;
++            }
++            Base::Shutdown();
++        }
++
++        RHI::ResultCode RayTracingCompactionQueryPool::InitInternal(RHI::RayTracingCompactionQueryPoolDescriptor desc)

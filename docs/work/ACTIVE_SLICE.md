@@ -1,3 +1,12 @@
+## Estado actual — DDGI/RT conservados y fuga QueryPool corregida
+
+2026-10-19 UTC. El propietario confirmó mantener DDGI y ray tracing de Atom; esta orden reemplaza la exclusión RT de los registros históricos inferiores. Vulkan sigue activo. DiffuseProbeGrid continúa en integración; no Gem terminada ni incremento certificado.
+
+Cambio focal: Shutdown del pool de compactación Vulkan encola su handle en la cola de liberación existente antes de Base::Shutdown y lo nulifica. Build mínimo Private/Profile/serial1:0/33,608s. Runtime BSP con el mismo par350 firmado y nuevo DLL B56DFD14:0/219,596s, sin el error anterior de VkQueryPool (VUID-vkDestroyDevice-device-00378), postflight sin drift, cierre normal y procesos propios terminados. [Evidencia y límites](../../docs/evidence/n0/native-pass-workspace-and-sdk-2026-10-13/vulkan-query-pool-shutdown-r51/README.md).
+
+La prueba usa la cohorte R16 sobre2e56931, no un checkout limpio del commit focal. Persisten diez reportes storage-image, warning DynamicDrawContext y seis referencias NameDictionary con assert. La escena aún no tiene grid: faltan contribución DDGI RealTime/AutoSelect, bake, Ready y Save/reopen. El overlay350 se restauró a261; su proveedor local duradero está preparado, pendiente de configurar/desplegar. SDK/Baked/GUI/VR/Linux/Shipping/N0/GOAL permanecen abiertos. Reutilizar evidencia válida; no repetir suites o SDK completo por este fix.
+
+## Registro previo (histórico; prevalece el estado anterior)
 ## Estado actual — SRG compartido instalado y cuatro shaders verificados
 
 2026-10-19 UTC. Checkout único development, base e04567254e22ee9288d8ad8443a53754265a5dd3. El corte R51 sigue siendo DiffuseProbeGrid. No Gem terminada ni incremento certificado.

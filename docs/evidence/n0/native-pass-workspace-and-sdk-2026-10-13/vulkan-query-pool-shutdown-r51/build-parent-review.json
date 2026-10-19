@@ -1,0 +1,117 @@
+{
+  "utc": "2026-10-19T20:31:12.9330342Z",
+  "scope": "Minimum existing Vulkan Private provider, pool shutdown2-file fix",
+  "acceptedCompilationOnly": true,
+  "gpuLeakFixVerified": false,
+  "phase": {
+    "seconds": 33.6079739,
+    "ramGuardTriggered": false,
+    "stdout": {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-corefeature102\\build-vulkan-compaction-pool-shutdown-r51-attempt1\\build-vulkan-compaction-pool-shutdown-r51.stdout.log",
+      "bytes": 1925,
+      "sha256": "65C9F2914316CBC754C01C844F5B397E2E999ED5788461AA2C7389C9524E8AE8"
+    },
+    "priorityError": null,
+    "timedOut": false,
+    "exitCode": 0,
+    "priorityRequested": "BelowNormal",
+    "stderr": {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-corefeature102\\build-vulkan-compaction-pool-shutdown-r51-attempt1\\build-vulkan-compaction-pool-shutdown-r51.stderr.log",
+      "bytes": 0,
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    }
+  },
+  "postflight": {
+    "fatal": null,
+    "nativeCensusEmpty": true,
+    "accepted": false,
+    "utc": "2026-10-19T20:29:23.0209894Z",
+    "frozenInputsVerified": true,
+    "inputDrift": 0
+  },
+  "outputs": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_RHI_Vulkan.Private.dll",
+      "bytes": 1918464,
+      "sha256": "B56DFD1404992BE1D885FB28F8FB025F0F0C435BDC875196ECB31CFF25C10F8C"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_RHI_Vulkan.Private.pdb",
+      "bytes": 26103808,
+      "sha256": "2EECC5F60FA9A2FAD61D71C47DF7415C23A412B9A30AF1A943051960AEEFD5F7"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\lib\\profile\\Atom_RHI_Vulkan.Private.lib",
+      "bytes": 2780,
+      "sha256": "DE94A4E503D19BDA0951D0D5AEEEF7152B48E8D9877F75F6A34DD8DD05867DFB"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\lib\\profile\\Atom_RHI_Vulkan.Private.exp",
+      "bytes": 1307,
+      "sha256": "CFC707E9B5966D5EF5ABB8A779E4F21E8D2B98A67DABC0CD36AA1B11B79C98B8"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\lib\\profile\\Atom_RHI_Vulkan.Private.Static.lib",
+      "bytes": 28367186,
+      "sha256": "BF8BE31080C7F6FCE611C0AE5A2DA2D937AA8C10514AC115DE617682DDB18EF0"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\lib\\profile\\Atom_RHI_Vulkan.Private.Static.pdb",
+      "bytes": 17772544,
+      "sha256": "4C77FEA01EB6735CD000EF47E6F26F6A3D23C04641713557ACA062F6721CA2F8"
+    }
+  ],
+  "deltas": [
+    {
+      "before": {
+        "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_RHI_Vulkan.Private.dll",
+        "bytes": 1917440,
+        "sha256": "3E2EFCECC9F46B55989D415863D1582847A13F8944534AEBA655C959E2E2C4D8"
+      },
+      "after": {
+        "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_RHI_Vulkan.Private.dll",
+        "bytes": 1918464,
+        "sha256": "B56DFD1404992BE1D885FB28F8FB025F0F0C435BDC875196ECB31CFF25C10F8C"
+      }
+    },
+    {
+      "before": {
+        "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_RHI_Vulkan.Private.pdb",
+        "bytes": 26103808,
+        "sha256": "38E05B8450DE6CE98EA0E9D1C60B03DA2DA216882DF1652481F579237DF159FC"
+      },
+      "after": {
+        "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_RHI_Vulkan.Private.pdb",
+        "bytes": 26103808,
+        "sha256": "2EECC5F60FA9A2FAD61D71C47DF7415C23A412B9A30AF1A943051960AEEFD5F7"
+      }
+    },
+    {
+      "before": {
+        "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\lib\\profile\\Atom_RHI_Vulkan.Private.Static.lib",
+        "bytes": 28348750,
+        "sha256": "5F52FE77CBD4BBC1A799D87B12001686814EF4A56A425DEBB6A01B560C33F41D"
+      },
+      "after": {
+        "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\lib\\profile\\Atom_RHI_Vulkan.Private.Static.lib",
+        "bytes": 28367186,
+        "sha256": "BF8BE31080C7F6FCE611C0AE5A2DA2D937AA8C10514AC115DE617682DDB18EF0"
+      }
+    },
+    {
+      "before": {
+        "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\lib\\profile\\Atom_RHI_Vulkan.Private.Static.pdb",
+        "bytes": 17772544,
+        "sha256": "AE1FBFAEB3FFD0E2C0F3C5208571BC89081091C2D4140E52F4AB2C4301B51BCF"
+      },
+      "after": {
+        "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\lib\\profile\\Atom_RHI_Vulkan.Private.Static.pdb",
+        "bytes": 17772544,
+        "sha256": "4C77FEA01EB6735CD000EF47E6F26F6A3D23C04641713557ACA062F6721CA2F8"
+      }
+    }
+  ],
+  "protected125PinsVerifiedByRunner": true,
+  "importlibAndExpExact": true,
+  "wholeGemIncrement": 0
+}

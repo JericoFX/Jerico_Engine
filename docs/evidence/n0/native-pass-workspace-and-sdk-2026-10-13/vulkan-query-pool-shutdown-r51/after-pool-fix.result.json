@@ -1,0 +1,18 @@
+{
+  "priorityError": null,
+  "seconds": 219.5957489,
+  "exitCode": 0,
+  "stdout": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-corefeature102\\runtime-vulkan-compaction-pool-r51-attempt1\\runtime-vulkan-compaction-pool-check-r51.stdout.log",
+    "bytes": 14153,
+    "sha256": "530388DC27B009D93E1CE058E1A671518CDE1741E90CB92B692D9C5F93B1087B"
+  },
+  "priorityRequested": "BelowNormal",
+  "ramGuardTriggered": false,
+  "timedOut": false,
+  "stderr": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-corefeature102\\runtime-vulkan-compaction-pool-r51-attempt1\\runtime-vulkan-compaction-pool-check-r51.stderr.log",
+    "bytes": 0,
+    "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "utc": "2026-10-19T20:37:46.4738099Z",
+  "scope": "Native Vulkan compaction query pool deferred destruction with DDGI and RT retained",
+  "acceptedFocalPoolRegression": true,
+  "acceptedProductValidation": false,
+  "sourceFreeze": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-corefeature102\\analysis-parent\\diffuse-probe-tools-request-r51\\dpg-native-source-freeze-r16.json",
+    "bytes": 4251502,
+    "sha256": "EA44EEC3BACBC68331CDB4D493CCE74CBE19F7B65FBC17E2FA990B301DFEF8EB"
+  },
+  "phase": {
+    "priorityError": null,
+    "seconds": 219.5957489,
+    "exitCode": 0,
+    "stdout": {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-corefeature102\\runtime-vulkan-compaction-pool-r51-attempt1\\runtime-vulkan-compaction-pool-check-r51.stdout.log",
+      "bytes": 14153,
+      "sha256": "530388DC27B009D93E1CE058E1A671518CDE1741E90CB92B692D9C5F93B1087B"
+    },
+    "priorityRequested": "BelowNormal",
+    "ramGuardTriggered": false,
+    "timedOut": false,
+    "stderr": {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-corefeature102\\runtime-vulkan-compaction-pool-r51-attempt1\\runtime-vulkan-compaction-pool-check-r51.stderr.log",
+      "bytes": 0,
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    }
+  },
+  "postflight": {
+    "accepted": false,
+    "utc": "2026-10-19T20:36:44.5534701Z",
+    "fatal": null,
+    "inputDrift": 0,
+    "frozenInputsVerified": true,
+    "nativeCensusEmpty": true
+  },
+  "baseline": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-corefeature102\\runtime-vulkan-layer350-ddgi-bsp-r51-attempt1\\runtime-vulkan-layer350-ddgi-bsp-r51.stdout.log",
+    "bytes": 15025,
+    "sha256": "0009236D6E8B5396C23605DFCF090BD863D111E30227AA055DC02F79FC70A65C"
+  },
+  "baselineActualVUID": "VUID-vkDestroyDevice-device-00378",
+  "erratum": "Prior parent AB review shorthand VUID05137 was incorrect; raw preserved baseline is authority. Baseline has one leaked VkQueryPool at vkDestroyDevice; current same layer and scene has none.",
+  "delta": "R15 -> R16 adds only RayTracingCompactionQueryPool Shutdown override and rebuilt Vulkan private DLL",
+  "actualModules": [
+    {
+      "name": "Atom_RHI_Vulkan.Private.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_RHI_Vulkan.Private.dll",
+      "sha256": "B56DFD1404992BE1D885FB28F8FB025F0F0C435BDC875196ECB31CFF25C10F8C"
+    },
+    {
+      "name": "VkLayer_khronos_validation.dll",
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\VkLayer_khronos_validation.dll",
+      "sha256": "37BA9EE56EBD4C57DA6E1E0E2CE4AA15F147F308ED7C6C7CDF5F22D2636BC22D"
+    }
+  ],
+  "validationErrorLines": 0,
+  "storageImageReports": 10,
+  "remainingWarningLines": [
+    "<17:32:54> [Warning] Config file game.cfg not found!",
+    "<17:32:55> [Warning] (vkDebugMessage) - [WARNING][Validation] vkCmdDispatch(): the storage image descriptor [VkDescriptorSet 0xaa50000000aa5[ModulateTexture_PassSrg0_0], Set 0, Binding 1, Index 0, variable \"PassSrg_m_inputOutput\"] is accessed by a OpTypeImage that has a Format operand Rgba32f (equivalent to VK_FORMAT_R32G32B32A32_SFLOAT) which doesn't match the VkImageView 0x112c000000112c format (VK_FORMAT_R16G16B16A16_SFLOAT). Any loads or stores with the variable will produce undefined values to the whole image (not just the texel being accessed).",
+    "<17:32:55> [Warning] (vkDebugMessage) - [WARNING][Validation] vkCmdDispatch(): the storage image descriptor [VkDescriptorSet 0xa190000000a19[FastDepthAwareBlurVer_PassSrg0_0], Set 0, Binding 2, Index 0, variable \"PassSrg_m_blurTarget\"] is accessed by a OpTypeImage that has a Format operand R32f (equivalent to VK_FORMAT_R32_SFLOAT) which doesn't match the VkImageView 0x111d000000111d format (VK_FORMAT_R8_UNORM). Any loads or stores with the variable will produce undefined values to the whole image (not just the texel being accessed).",
+    "<17:32:55> [Warning] (vkDebugMessage) - [WARNING][Validation] vkCmdDispatch(): the storage image descriptor [VkDescriptorSet 0xa1f0000000a1f[FastDepthAwareBlurHor_PassSrg0_0], Set 0, Binding 2, Index 0, variable \"PassSrg_m_blurTarget\"] is accessed by a OpTypeImage that has a Format operand R32f (equivalent to VK_FORMAT_R32_SFLOAT) which doesn't match the VkImageView 0x111e000000111e format (VK_FORMAT_R8_UNORM). Any loads or stores with the variable will produce undefined values to the whole image (not just the texel being accessed).",
+    "<17:32:55> [Warning] (vkDebugMessage) - [WARNING][Validation] vkCmdDispatch(): the storage image descriptor [VkDescriptorSet 0xa460000000a46[ScreenSpaceSubsurfaceScatteringCS_PassSrg0_0], Set 0, Binding 3, Index 0, variable \"PassSrg_m_outputTexture\"] is accessed by a OpTypeImage that has a Format operand Rgba32f (equivalent to VK_FORMAT_R32G32B32A32_SFLOAT) which doesn't match the VkImageView 0x112c000000112c format (VK_FORMAT_R16G16B16A16_SFLOAT). Any loads or stores with the variable will produce undefined values to the whole image (not just the texel being accessed).",
+    "<17:32:55> [Warning] (vkDebugMessage) - [WARNING][Validation] vkCmdDispatch(): the storage image descriptor [VkDescriptorSet 0xbbd0000000bbd[DownsampleSinglePassLuminance_PassSrg0_0], Set 0, Binding 1, Index 0, variable \"PassSrg_m_imageDestination\"] is accessed by a OpTypeImage that has a Format operand Rgba32f (equivalent to VK_FORMAT_R32G32B32A32_SFLOAT) which doesn't match the VkImageView 0x11370000001137 format (VK_FORMAT_R16G16B16A16_SFLOAT). Any loads or stores with the variable will produce undefined values to the whole image (not just the texel being accessed).",
+    "<17:32:55> [Warning] (vkDebugMessage) - [WARNING][Validation] vkCmdDispatch(): the storage image descriptor [VkDescriptorSet 0xbbd0000000bbd[DownsampleSinglePassLuminance_PassSrg0_0], Set 0, Binding 1, Index 1, variable \"PassSrg_m_imageDestination\"] is accessed by a OpTypeImage that has a Format operand Rgba32f (equivalent to VK_FORMAT_R32G32B32A32_SFLOAT) which doesn't match the VkImageView 0x116c000000116c format (VK_FORMAT_R16G16B16A16_SFLOAT). Any loads or stores with the variable will produce undefined values to the whole image (not just the texel being accessed).",
+    "<17:32:55> [Warning] (vkDebugMessage) - [WARNING][Validation] vkCmdDispatch(): the storage image descriptor [VkDescriptorSet 0xbbd0000000bbd[DownsampleSinglePassLuminance_PassSrg0_0], Set 0, Binding 1, Index 2, variable \"PassSrg_m_imageDestination\"] is accessed by a OpTypeImage that has a Format operand Rgba32f (equivalent to VK_FORMAT_R32G32B32A32_SFLOAT) which doesn't match the VkImageView 0x116d000000116d format (VK_FORMAT_R16G16B16A16_SFLOAT). Any loads or stores with the variable will produce undefined values to the whole image (not just the texel being accessed).",
+    "<17:32:55> [Warning] (vkDebugMessage) - [WARNING][Validation] vkCmdDispatch(): the storage image descriptor [VkDescriptorSet 0xbbd0000000bbd[DownsampleSinglePassLuminance_PassSrg0_0], Set 0, Binding 1, Index 3, variable \"PassSrg_m_imageDestination\"] is accessed by a OpTypeImage that has a Format operand Rgba32f (equivalent to VK_FORMAT_R32G32B32A32_SFLOAT) which doesn't match the VkImageView 0x116e000000116e format (VK_FORMAT_R16G16B16A16_SFLOAT). Any loads or stores with the variable will produce undefined values to the whole image (not just the texel being accessed).",
+    "<17:32:55> [Warning] (vkDebugMessage) - [WARNING][Validation] vkCmdDispatch(): the storage image descriptor [VkDescriptorSet 0xbbd0000000bbd[DownsampleSinglePassLuminance_PassSrg0_0], Set 0, Binding 1, Index 4, variable \"PassSrg_m_imageDestination\"] is accessed by a OpTypeImage that has a Format operand Rgba32f (equivalent to VK_FORMAT_R32G32B32A32_SFLOAT) which doesn't match the VkImageView 0x116f000000116f format (VK_FORMAT_R16G16B16A16_SFLOAT). Any loads or stores with the variable will produce undefined values to the whole image (not just the texel being accessed).",
+    "<17:32:55> [Warning] (vkDebugMessage) - [WARNING][Validation] (Warning - This VUID has now been reported 10 times, which is the duplicate_message_limit value, this will be the last time reporting it).",
+    "<17:36:32> [Warning] (RPI) - Failed to initialize PipelineState for DynamicDrawContext"
+  ],
+  "remainingNameReferences": [
+    "NameDictionary: \tLeaked Name [  1 reference(s)]: hash 0x11A66505, 'ScreenSpaceReflectionOutput'",
+    "NameDictionary: \tLeaked Name [  1 reference(s)]: hash 0xC3CC559A, 'FallbackColor'",
+    "NameDictionary: \tLeaked Name [  1 reference(s)]: hash 0x303440C4, 'RayTracingCoordsOutput'",
+    "NameDictionary: \tLeaked Name [  1 reference(s)]: hash 0x90920A57, 'NoFloat16'",
+    "NameDictionary: \tLeaked Name [  1 reference(s)]: hash 0xBCB7C91D, 'TraceCoordsOutput'",
+    "NameDictionary: \tLeaked Name [  1 reference(s)]: hash 0x3F54F664, 'Output'"
+  ],
+  "shutdownAssertPreserved": true,
+  "normalWindowsClose": true,
+  "originalFrame": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-corefeature102\\runtime-vulkan-compaction-pool-r51-attempt1\\windowed-bsp-pool-fixed.jpg",
+    "bytes": 87205,
+    "sha256": "5CBD2EC000273C5D376519FC1C1CA8AE53E37966134A0263F21C5D07EE95F481"
+  },
+  "actualModuleList": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-corefeature102\\runtime-vulkan-compaction-pool-r51-attempt1\\loaded-modules-parent.json",
+    "bytes": 23343,
+    "sha256": "D08A05255A7C1C66BD734E0E56B36F8519FB15638E9C8F8AFB6EDD9EEE7C7D65"
+  },
+  "guiHelperCleanup": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-corefeature102\\analysis-parent\\diffuse-probe-tools-request-r51\\computer-use-pool-fix-helper-cleanup-r51.json",
+    "bytes": 440,
+    "sha256": "637BFF171F1AFB41F8692C7788290EA476FC63955BEB94F042CFD96B365B675D"
+  },
+  "limits": [
+    "Scene has no DiffuseProbeGrid entity; not actual DDGI contribution/bake acceptance",
+    "Storage-image format warnings, DynamicDraw and NameDictionary shutdown assert remain",
+    "No new SDK package/consumer, VR, Linux, Shipping or whole-Gem acceptance"
+  ],
+  "wholeGemIncrement": 0
+}

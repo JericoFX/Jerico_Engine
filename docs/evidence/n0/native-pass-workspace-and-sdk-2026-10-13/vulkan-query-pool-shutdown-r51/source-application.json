@@ -1,0 +1,80 @@
+{
+  "applied": true,
+  "accepted": false,
+  "scope": [
+    "Gems/Atom/RHI/Vulkan/Code/Source/RHI/RayTracingCompactionQueryPool.h",
+    "Gems/Atom/RHI/Vulkan/Code/Source/RHI/RayTracingCompactionQueryPool.cpp"
+  ],
+  "before": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-corefeature102\\analysis-source\\dpg-cpp-implementation-r51\\vulkan-compaction-pool-shutdown-r51\\RayTracingCompactionQueryPool.h.before",
+      "bytes": 3171,
+      "sha256": "A56EFECD894ABAB2D71FA10A116700F7E5D7DA60EA90A92092A70E02E4F7568E"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-corefeature102\\analysis-source\\dpg-cpp-implementation-r51\\vulkan-compaction-pool-shutdown-r51\\RayTracingCompactionQueryPool.cpp.before",
+      "bytes": 5355,
+      "sha256": "FCC6181F8C99D6C01227E03629E34FCE986D87743CE980CB991D6BF38FA966CE"
+    }
+  ],
+  "after": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\RHI\\Vulkan\\Code\\Source\\RHI\\RayTracingCompactionQueryPool.h",
+      "bytes": 3210,
+      "sha256": "49F7C8C11655869D0BB84A4FA78230B86593F41C5177E8B434E5E9B499939EE2"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\RHI\\Vulkan\\Code\\Source\\RHI\\RayTracingCompactionQueryPool.cpp",
+      "bytes": 5868,
+      "sha256": "7AD4D102A4A6A1F9B60B78B0274D61D745110919FDE37F67AF3E0FE2189DC91D"
+    }
+  ],
+  "forward": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-corefeature102\\analysis-source\\dpg-cpp-implementation-r51\\vulkan-compaction-pool-shutdown-r51\\forward.diff",
+    "bytes": 1455,
+    "sha256": "B262239FB44164E5598CE3AC6DC08A0F0D78D22C97ECC05B9DC23CF69005D389"
+  },
+  "inverse": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-corefeature102\\analysis-source\\dpg-cpp-implementation-r51\\vulkan-compaction-pool-shutdown-r51\\inverse.diff",
+    "bytes": 1455,
+    "sha256": "2E32B94E99D164F9E3427571F2EFA25A9497FDB930C67753E8F6EDAF8E1D36F4"
+  },
+  "operations": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-corefeature102\\analysis-source\\dpg-cpp-implementation-r51\\vulkan-compaction-pool-shutdown-r51\\operations.json",
+    "bytes": 1618,
+    "sha256": "401036F002AEED0749C2F2CAD40D39F9441576F01FC8262A4613E8F871B02BE4"
+  },
+  "rawInverseReplayExact": "2/2",
+  "crlfAndOutsideBytesPreserved": true,
+  "lifecycle": "Override existing virtual Shutdown, conditional nativehandle QueueForRelease with ReleaseContainer/DestroyQueryPool, nullhandle, then Base::Shutdown; uninitialized/null path does not access GetDevice",
+  "retainedDefaultDestructor": true,
+  "noPublicApiSchemaFeatureChange": true,
+  "pattern": "Existing Vulkan QueryPool.cpp83-91, ReleaseContainer.h",
+  "upstream": "PR18636 be4f92a6521a1d94d483c1c2b3e6c468d43551c2 reviewed as origin, noimport",
+  "regression": "Real GPU RED05137 preserved; parent will validate normalVulkan/RT startup+shutdownwithlayer350. Sourcefix doesnotattributehandle0x96 or fixNameDictionary/DynamicDraw.",
+  "heldSources": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Features\\Source\\DiffuseProbeGrid\\Render\\DiffuseProbeGridFeatureProcessor.cpp",
+      "bytes": 55249,
+      "sha256": "159156AA21E6C8C26E391AA2E0A9702C0D4733A73F497284556B61EFD6A363DB"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\Gems\\Atom\\RHI\\Vulkan\\Code\\Source\\RHI\\Device.cpp",
+      "bytes": 107028,
+      "sha256": "4266E1F75EE9D5E09EFC34B64EC9705E2EF8BD6A621C46991A6BF73E7310355B"
+    }
+  ],
+  "graft": "These2files now stale; previouslyfresh consulted source/pattern/cards, no refresh started. Device4266 remainsfresh.",
+  "skills": "Complete CPP/Game reading reused unchanged",
+  "noBuildTestGit": true,
+  "helper": {
+    "pid": 14052,
+    "exe": "C:\\Users\\Jerico\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+    "creation": "2026-10-19T17:25:57.580599-03:00",
+    "parent": 14564,
+    "owner": "/root/bsp_writer",
+    "purpose": "Authorized2file Vulkan compaction QueryPool lifecycle fix",
+    "persistent": false
+  },
+  "helpersRetained": []
+}

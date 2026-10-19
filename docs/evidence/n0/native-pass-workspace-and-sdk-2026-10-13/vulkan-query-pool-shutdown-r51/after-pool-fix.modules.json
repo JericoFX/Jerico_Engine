@@ -1,0 +1,592 @@
+[
+  {
+    "name": "JEEditorFixture.GameLauncher.exe",
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\JEEditorFixture.GameLauncher.exe",
+    "sha256": "609A875E5D91407CF267F6B2E24FE839334C12F2D531D3A0476693CD891E6761"
+  },
+  {
+    "name": "ntdll.dll",
+    "path": "C:\\WINDOWS\\SYSTEM32\\ntdll.dll",
+    "sha256": "651AC9041AF8E6B5EBD331D53163244C0A27D36D1433F0F15CAC1F28C5F2E82C"
+  },
+  {
+    "name": "KERNEL32.DLL",
+    "path": "C:\\WINDOWS\\System32\\KERNEL32.DLL",
+    "sha256": "E132EBA4166256E2F414B91FE7D5386590BC5EA8626AEE5AF9C9738383CF2AE1"
+  },
+  {
+    "name": "KERNELBASE.dll",
+    "path": "C:\\WINDOWS\\System32\\KERNELBASE.dll",
+    "sha256": "5C29B73622CE0976E1ADA566F31F2197BA0F8BEAEA89C3EC033366126172C3D0"
+  },
+  {
+    "name": "ucrtbase.dll",
+    "path": "C:\\WINDOWS\\System32\\ucrtbase.dll",
+    "sha256": "DEDB7611E1ABC1FF3852DCAC3D4C93A048D729E25B061973B9969F22698F14CA"
+  },
+  {
+    "name": "VCRUNTIME140.dll",
+    "path": "C:\\WINDOWS\\SYSTEM32\\VCRUNTIME140.dll",
+    "sha256": "D1F4225DF2CD877DBF130D5668A021DCE3F94118455FF5EC952061C30AFC9CE7"
+  },
+  {
+    "name": "USER32.dll",
+    "path": "C:\\WINDOWS\\System32\\USER32.dll",
+    "sha256": "F285937030BCB325CAD39EE5BE4818F6666241229ADEADEA4FF1AE469DFD7EF3"
+  },
+  {
+    "name": "win32u.dll",
+    "path": "C:\\WINDOWS\\System32\\win32u.dll",
+    "sha256": "D46A695DB805E808EFA63D1095CE3E1B6BE9C0155DAD405D444530EFC1ED0362"
+  },
+  {
+    "name": "WorldCamera.dll",
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\WorldCamera.dll",
+    "sha256": "6126878655299406C2922819CCD38F90A03A44813755F4E12F23B8A7EB74C212"
+  },
+  {
+    "name": "GDI32.dll",
+    "path": "C:\\WINDOWS\\System32\\GDI32.dll",
+    "sha256": "772C73E294A4C5F5E0D4146288AF95287A85C074D3AEE3FA9F320DC010D7DBFE"
+  },
+  {
+    "name": "gdi32full.dll",
+    "path": "C:\\WINDOWS\\System32\\gdi32full.dll",
+    "sha256": "52DE3E02898E9C0E243D08D5C51D54871E9BCE90DE883EFF7DF29A30FC8AEAC9"
+  },
+  {
+    "name": "RenderDebug.dll",
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\RenderDebug.dll",
+    "sha256": "E8C0647B58AFD9D609F265E41B159A4258315C1C33DEEABD02C57A94EB2B73C3"
+  },
+  {
+    "name": "Geometry.dll",
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Geometry.dll",
+    "sha256": "5389BD4DA4A0D990A1FF14652B8CB244E04181E74E15C8F5520AEC4C94BAD87E"
+  },
+  {
+    "name": "msvcp_win.dll",
+    "path": "C:\\WINDOWS\\System32\\msvcp_win.dll",
+    "sha256": "B9DACD83201E59BB74E5282D8F0DCC8C428525409B4BC458A39EB8D2A9373A9A"
+  },
+  {
+    "name": "RenderMaterials.dll",
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\RenderMaterials.dll",
+    "sha256": "6B8BEA5F3FB207ABF7BF03E2E3E20BF89259FF4BCDFEF48E07228072CAB2F20C"
+  },
+  {
+    "name": "RenderFeatures.dll",
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\RenderFeatures.dll",
+    "sha256": "5A520DCBE6009DEAE39448A06BE2521E70623A6FDD0E2D10AA7033F360133C44"
+  },
+  {
+    "name": "ProfilerView.dll",
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\ProfilerView.dll",
+    "sha256": "7109F65E1AA915D34B0E9B6B2C4040E3A5F07EADA7A05924155B511FB8D4D1FF"
+  },
+  {
+    "name": "RenderIntegration.dll",
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\RenderIntegration.dll",
+    "sha256": "D25AA493D15FE448C2C18BE4FE3750C9F7010A8A1CAD76541877D324CAA1BC24"
+  },
+  {
+    "name": "DebugImGui.dll",
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\DebugImGui.dll",
+    "sha256": "5B1F40D89BF0E9CEACFDBC207AF23F7794147290A1F74438AC539556D0DE0493"
+  },
+  {
+    "name": "AzFramework.dll",
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AzFramework.dll",
+    "sha256": "61FEFD874D58E614066053FCB8A30E002CA04A1AEC9BD95AAD3D1C8E0D716054"
+  },
+  {
+    "name": "AzFramework.NativeUI.dll",
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AzFramework.NativeUI.dll",
+    "sha256": "4CE9B354BE461C2F8F717BDC3E26A2DD5C308A63F799894B523607FC034B8940"
+  },
+  {
+    "name": "AzCore.dll",
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AzCore.dll",
+    "sha256": "5699C61A11F2952239CB2885E227A7E1EF6DC0488F09119623853E0F2F5857D4"
+  },
+  {
+    "name": "Atom_RHI.Public.dll",
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_RHI.Public.dll",
+    "sha256": "85872600F4AB13F6C4DDF9D58B350A4D4A2ECDF64B6370500B7E642BD13E5D88"
+  },
+  {
+    "name": "ADVAPI32.dll",
+    "path": "C:\\WINDOWS\\System32\\ADVAPI32.dll",
+    "sha256": "B864E1468A01A44F1901E03C05C1029E71655DD9ABDDD6D840BCFFF5E7227D44"
+  },
+  {
+    "name": "msvcrt.dll",
+    "path": "C:\\WINDOWS\\System32\\msvcrt.dll",
+    "sha256": "FC1447DB4E4814CBCB002179A8003A41F383FC417879F628727043CAB8C25093"
+  },
+  {
+    "name": "SHELL32.dll",
+    "path": "C:\\WINDOWS\\System32\\SHELL32.dll",
+    "sha256": "C55A5F3B6EF059871FE2A0C8D82F086E0998D1154023E3ECF49698B97F9341F6"
+  },
+  {
+    "name": "sechost.dll",
+    "path": "C:\\WINDOWS\\System32\\sechost.dll",
+    "sha256": "B4A345AD9AF0635F50E27EEA8AE0FF37255DCA90E6D5991BDBC4806FB02AAA72"
+  },
+  {
+    "name": "RPCRT4.dll",
+    "path": "C:\\WINDOWS\\System32\\RPCRT4.dll",
+    "sha256": "C060F02C11FB19C9C8A30B5077A87CDB17D4BE40F08070A539EC73EB53402775"
+  },
+  {
+    "name": "WS2_32.dll",
+    "path": "C:\\WINDOWS\\System32\\WS2_32.dll",
+    "sha256": "B123B00C46C415D7BAEAADA58C29C3E6920895DB836EE4C0CFEE49D738AF60AD"
+  },
+  {
+    "name": "CRYPT32.dll",
+    "path": "C:\\WINDOWS\\System32\\CRYPT32.dll",
+    "sha256": "71DA5F9806F7AAF9E081C1DF28B13182D2643B7F3534173F868BA65287612BBB"
+  },
+  {
+    "name": "MSVCP140.dll",
+    "path": "C:\\WINDOWS\\SYSTEM32\\MSVCP140.dll",
+    "sha256": "7C26614E1D733892C2DEAC7E245CE115504B1D80592DD0A01B08E3E5A55F89CA"
+  },
+  {
+    "name": "Atom_RHI.Reflect.dll",
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_RHI.Reflect.dll",
+    "sha256": "FA762F84C1912EE9EA315067F65171F8EE86BFDADC19758804374FD519E149FA"
+  },
+  {
+    "name": "ole32.dll",
+    "path": "C:\\WINDOWS\\System32\\ole32.dll",
+    "sha256": "1053FFB858CDDBE29EAAA6A5B0836B88C7CD11FBD58605288600E507C06DB443"
+  },
+  {
+    "name": "VCRUNTIME140_1.dll",
+    "path": "C:\\WINDOWS\\SYSTEM32\\VCRUNTIME140_1.dll",
+    "sha256": "A7146C08F89FE5B04541AB507CDB59FF7B44534D4BA3C668A426C6450A03434E"
+  },
+  {
+    "name": "combase.dll",
+    "path": "C:\\WINDOWS\\System32\\combase.dll",
+    "sha256": "087F72ECC0C979A3B784AB319285AB64D053DFC0C274DF5B28FD40CF204A234F"
+  },
+  {
+    "name": "OLEAUT32.dll",
+    "path": "C:\\WINDOWS\\System32\\OLEAUT32.dll",
+    "sha256": "E3FCDBBF040FD1E3C3504876CF060AC3908C134AC81B3D0C57F0F735769280EA"
+  },
+  {
+    "name": "DearImGui.dll",
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\DearImGui.dll",
+    "sha256": "9CA08DB915179B6B6E44A5AD746E4EC47979AA8C06559F070E2A19ABA5D9B067"
+  },
+  {
+    "name": "ProfilerCapture.dll",
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\ProfilerCapture.dll",
+    "sha256": "6024775F53C43E5BC8FFFE8D0009DB1AB35F1575614D18421142319C26042C97"
+  },
+  {
+    "name": "VERSION.dll",
+    "path": "C:\\WINDOWS\\SYSTEM32\\VERSION.dll",
+    "sha256": "CEA99F212AF557A9613150C5509631403ED0F05F5D9A06AC42039BD59B40E39A"
+  },
+  {
+    "name": "MSVCP140_ATOMIC_WAIT.dll",
+    "path": "C:\\WINDOWS\\SYSTEM32\\MSVCP140_ATOMIC_WAIT.dll",
+    "sha256": "3D0CBFAA1BF3EECF5A3F4491D2960EE803CB994F30292C6ADC4A07C498F60E2B"
+  },
+  {
+    "name": "bcrypt.dll",
+    "path": "C:\\WINDOWS\\SYSTEM32\\bcrypt.dll",
+    "sha256": "D0FC7863D7B034DA33F34DC82B96A8604572598A217668A43FC9ECA3A8E2A8E1"
+  },
+  {
+    "name": "IMM32.DLL",
+    "path": "C:\\WINDOWS\\System32\\IMM32.DLL",
+    "sha256": "7E45F12C1C555E2407C5CA082BD925B34655278FDE4DBFAC53A0468CC1E77411"
+  },
+  {
+    "name": "bcryptprimitives.dll",
+    "path": "C:\\WINDOWS\\System32\\bcryptprimitives.dll",
+    "sha256": "F0DBA794068893C9616B0B54BEF1BE8F904BE89EB2CB09B575D3D7FB1B5000F8"
+  },
+  {
+    "name": "windows.storage.dll",
+    "path": "C:\\WINDOWS\\SYSTEM32\\windows.storage.dll",
+    "sha256": "A0D41FCFD66F4FBBA8DBB84776C7D344F66969CE8B6EDAC19B3AC1DD737A628A"
+  },
+  {
+    "name": "SHCORE.dll",
+    "path": "C:\\WINDOWS\\System32\\SHCORE.dll",
+    "sha256": "60FA3FACE0CFECCD442EF8C10F0D98F7991998784D21C8F7B77FC1048B222C95"
+  },
+  {
+    "name": "shlwapi.dll",
+    "path": "C:\\WINDOWS\\System32\\shlwapi.dll",
+    "sha256": "77B883AE848E1209B17DED14E6558656651F84D47CD656D1D3C118CC5409ED5B"
+  },
+  {
+    "name": "profapi.dll",
+    "path": "C:\\WINDOWS\\SYSTEM32\\profapi.dll",
+    "sha256": "8983B0B95CE9E3282D3A09890316FC7290BA1AD45624167C576FBC691FBE66B0"
+  },
+  {
+    "name": "CRYPTSP.dll",
+    "path": "C:\\WINDOWS\\SYSTEM32\\CRYPTSP.dll",
+    "sha256": "A00222CCEE9F6FBBFD3F34437CC54F4BFBE9025E3F3399A9C2CEDC88C37C3F46"
+  },
+  {
+    "name": "rsaenh.dll",
+    "path": "C:\\WINDOWS\\system32\\rsaenh.dll",
+    "sha256": "731771049467B6D01C7028A1269DF17DA37AF8D323621E01A32856E306795400"
+  },
+  {
+    "name": "CRYPTBASE.dll",
+    "path": "C:\\WINDOWS\\SYSTEM32\\CRYPTBASE.dll",
+    "sha256": "09C2D3E0F1C3D86F4A69496ACF6D0C0901715EE2F02F20AFC10D6DC9E639B03F"
+  },
+  {
+    "name": "AtomViewportDisplayInfo.dll",
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AtomViewportDisplayInfo.dll",
+    "sha256": "BC21AD2511AA3023D73D4E38D150C7E8CAEF49A65A773563AA46C468D96DA6EB"
+  },
+  {
+    "name": "AudioSystem.dll",
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AudioSystem.dll",
+    "sha256": "E4E9C340C126DDC276F69DAA93EBB6EAD0DE5DA3DA19CD5BE351C0EB596128AD"
+  },
+  {
+    "name": "LmbrCentral.dll",
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\LmbrCentral.dll",
+    "sha256": "9A2773B39581F265DB981BB811A1C8E7014C495419D5102877039DD69D399B5C"
+  },
+  {
+    "name": "GradientSignal.dll",
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\GradientSignal.dll",
+    "sha256": "0D408B7C66AC24C3C5430A6686BF6C6F48DBF4289C7C0458F62BE8732BCE410F"
+  },
+  {
+    "name": "SurfaceData.dll",
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\SurfaceData.dll",
+    "sha256": "E57D932F6F06DE8EA2E6F3E0974C2111BADDEC4CC6C549E098F8A6063CEAB9D5"
+  },
+  {
+    "name": "Maestro.dll",
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Maestro.dll",
+    "sha256": "D2C85E4F6259161D4EABB713D7703F6070D6AE8A7FAB7E39926EAE85D1156833"
+  },
+  {
+    "name": "AtomFont.dll",
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\AtomFont.dll",
+    "sha256": "D0F235BC7A913694015A5A586031AFE43D08B2CD2CB3B71DB935033C91710FB5"
+  },
+  {
+    "name": "Atom_RHI.Private.dll",
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_RHI.Private.dll",
+    "sha256": "337CF346DA113566E1E2CCDA94278FE47062DDADDD438A0444E4BE164B28DC1F"
+  },
+  {
+    "name": "Atom_RHI_Vulkan.Private.dll",
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\Atom_RHI_Vulkan.Private.dll",
+    "sha256": "B56DFD1404992BE1D885FB28F8FB025F0F0C435BDC875196ECB31CFF25C10F8C"
+  },
+  {
+    "name": "EMotionFX.dll",
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\EMotionFX.dll",
+    "sha256": "A5EF3D8BD063174AA88E3E1C5F5BA1C91B03CCCFB3C1A33217BCAAE3BC1BF83E"
+  },
+  {
+    "name": "EMotionFX_Atom.dll",
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\EMotionFX_Atom.dll",
+    "sha256": "8F0D9FD9812B3150EFAF09DC810D535BA26174F2E62ECA14D78D3341F2D62CBF"
+  },
+  {
+    "name": "PhysX5.Gem.dll",
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\PhysX5.Gem.dll",
+    "sha256": "1108E86AF88FAF42655874C3471BC7A4FADB76922553930490886A0B8049DA37"
+  },
+  {
+    "name": "kernel.appcore.dll",
+    "path": "C:\\WINDOWS\\SYSTEM32\\kernel.appcore.dll",
+    "sha256": "ED6D62F2555D260547CC94A5CDFE2A6FCB684F18B8E182F78F9E4DE224321FC9"
+  },
+  {
+    "name": "SspiCli.dll",
+    "path": "C:\\WINDOWS\\SYSTEM32\\SspiCli.dll",
+    "sha256": "5AA8F7BBCC7A8A422D14612D9CA1F8A50ACD6030EB4BFF204A205FEC76F27A59"
+  },
+  {
+    "name": "icu.dll",
+    "path": "C:\\WINDOWS\\SYSTEM32\\icu.dll",
+    "sha256": "218EE9BFF41E8E9FFE8032CCD5DDF9C651D2DD72DDE7643BAC03865B9DDB163F"
+  },
+  {
+    "name": "XInput9_1_0.dll",
+    "path": "C:\\WINDOWS\\SYSTEM32\\XInput9_1_0.dll",
+    "sha256": "BAB5E6E06DF32CD7DB46D0E94C0ECD9AFCBF04798115DE4588670D46A3C1A469"
+  },
+  {
+    "name": "uxtheme.dll",
+    "path": "C:\\WINDOWS\\system32\\uxtheme.dll",
+    "sha256": "E5087142F87989C7430D82A65616817A2515A79FA582549BA48A1DD6AC1B7200"
+  },
+  {
+    "name": "clbcatq.dll",
+    "path": "C:\\WINDOWS\\System32\\clbcatq.dll",
+    "sha256": "48A18351E09D5DA0A7B45EB81BC7819488B160FB71F8979129FF5A4BD34D2595"
+  },
+  {
+    "name": "amsi.dll",
+    "path": "C:\\WINDOWS\\SYSTEM32\\amsi.dll",
+    "sha256": "9DF7AD9E6826AB76294A91BEF274696EE13D18A8CEBABCD5C4C352A3D1141DF3"
+  },
+  {
+    "name": "USERENV.dll",
+    "path": "C:\\WINDOWS\\SYSTEM32\\USERENV.dll",
+    "sha256": "AEB1A6A15397BEE7A0EBC67B8188F751E10089C0ADADFD86146496C5FAAE914C"
+  },
+  {
+    "name": "MpOav.dll",
+    "path": "C:\\ProgramData\\Microsoft\\Windows Defender\\Platform\\4.18.26090.9-0\\MpOav.dll",
+    "sha256": "24870690FB1E4DFAF6ACDB09F12A7FFBBB44B5F3942F24A18ECC17900DFBA044"
+  },
+  {
+    "name": "vulkan-1.dll",
+    "path": "C:\\WINDOWS\\SYSTEM32\\vulkan-1.dll",
+    "sha256": "0419974F00E82A3D619077BA414DA265A774F8DB9D45AD93BC1843F44B2C2C1F"
+  },
+  {
+    "name": "CFGMGR32.dll",
+    "path": "C:\\WINDOWS\\SYSTEM32\\CFGMGR32.dll",
+    "sha256": "FEA3F02BA1A9AC87F7EC53932A5821D3D894D70C828A441C8767059EFA53F5C5"
+  },
+  {
+    "name": "dxgi.dll",
+    "path": "C:\\WINDOWS\\system32\\dxgi.dll",
+    "sha256": "4225E13F27A4F3A4A4738E64A57FA0949D8589F317FC6F8EC194B3A4D394A528"
+  },
+  {
+    "name": "powrprof.dll",
+    "path": "C:\\WINDOWS\\SYSTEM32\\powrprof.dll",
+    "sha256": "096B3C77AD7FECE122BE0362C72530B1EDC024FE7107D1D40D8BCD8FA5428A0E"
+  },
+  {
+    "name": "UMPDC.dll",
+    "path": "C:\\WINDOWS\\SYSTEM32\\UMPDC.dll",
+    "sha256": "B3407A812C7F34AC6B5BEEFB2A78E8F2D7C4376F7C7012F880AAB4FE07235E4E"
+  },
+  {
+    "name": "windows.staterepositorycore.dll",
+    "path": "C:\\WINDOWS\\SYSTEM32\\windows.staterepositorycore.dll",
+    "sha256": "153C79F36F5C9D8B541CDD5C2CC838AB430ABA0298EE81CEACA641BA82BF9370"
+  },
+  {
+    "name": "dxcore.dll",
+    "path": "C:\\WINDOWS\\SYSTEM32\\dxcore.dll",
+    "sha256": "DF9B1DA21162C1DBA8399C755805B66D2BFDE06E55313C73B1360BBED2E2F71D"
+  },
+  {
+    "name": "directxdatabasehelper.dll",
+    "path": "C:\\WINDOWS\\SYSTEM32\\directxdatabasehelper.dll",
+    "sha256": "5D93B932415287F077AC3BDE9DAD9DE2FB87D907F818C976B35E6CAF1C095DDD"
+  },
+  {
+    "name": "nvoglv64.dll",
+    "path": "C:\\WINDOWS\\System32\\DriverStore\\FileRepository\\nvmdi.inf_amd64_21e6b42b376b80b2\\nvoglv64.dll",
+    "sha256": "693F471A56BB374FF04CEFBF4A67A082974A32627D5145F5B1F2D6418736CF6A"
+  },
+  {
+    "name": "SETUPAPI.dll",
+    "path": "C:\\WINDOWS\\System32\\SETUPAPI.dll",
+    "sha256": "9CCA168A1A95FEF4A69B8CB0F1E310B793563833658169CACAF3AD67382BA2C7"
+  },
+  {
+    "name": "WTSAPI32.dll",
+    "path": "C:\\WINDOWS\\SYSTEM32\\WTSAPI32.dll",
+    "sha256": "9BC998A7B2E3ECA0941BF7B5449049B3AA0EF67A840BAF78A7B04DBC323595C4"
+  },
+  {
+    "name": "msasn1.dll",
+    "path": "C:\\WINDOWS\\SYSTEM32\\msasn1.dll",
+    "sha256": "A28902AE7AD6FF2D1B904F73C7CA22DBBF11A36CEE70B5B22DD605364DD0FA2E"
+  },
+  {
+    "name": "cryptnet.dll",
+    "path": "C:\\WINDOWS\\SYSTEM32\\cryptnet.dll",
+    "sha256": "E478DD3D872606A1B0CBB4B50BED941EA8ACA92B71DF4178CA7B164AAFB7428A"
+  },
+  {
+    "name": "wldp.dll",
+    "path": "C:\\WINDOWS\\SYSTEM32\\wldp.dll",
+    "sha256": "5F09D68230309D09C6C0123DBCCF85A6F9B70D5EC8BCBE69613D9F2C6E6FE24B"
+  },
+  {
+    "name": "drvstore.dll",
+    "path": "C:\\WINDOWS\\SYSTEM32\\drvstore.dll",
+    "sha256": "F9301CAB112EBF2971AF6F4E70B3F9D263204861219CE4933F80D53D99C806EE"
+  },
+  {
+    "name": "devobj.dll",
+    "path": "C:\\WINDOWS\\SYSTEM32\\devobj.dll",
+    "sha256": "39CE6BA5957B16D36AD8EE09224126A1D194F2E9B1BFC048A269A9BA1D9FEB50"
+  },
+  {
+    "name": "ntmarta.dll",
+    "path": "C:\\WINDOWS\\SYSTEM32\\ntmarta.dll",
+    "sha256": "F2BFD7121052DDFA5AFFAE30EFA070AC98052D76E6A5723F31FF75171C561974"
+  },
+  {
+    "name": "WINTRUST.dll",
+    "path": "C:\\WINDOWS\\System32\\WINTRUST.dll",
+    "sha256": "A24FF2ACE63B7FACF6F62CD024A596083342EEBC6A8D3748FF98938B6DE93A0E"
+  },
+  {
+    "name": "imagehlp.dll",
+    "path": "C:\\WINDOWS\\System32\\imagehlp.dll",
+    "sha256": "58117BBC51C4A56B6C4789E190F33A540B7734E394ADA9652E2832E3D2E16588"
+  },
+  {
+    "name": "nvgpucomp64.dll",
+    "path": "C:\\WINDOWS\\System32\\DriverStore\\FileRepository\\nvmdi.inf_amd64_21e6b42b376b80b2\\nvgpucomp64.dll",
+    "sha256": "565391BF59BF48E6DC524B26C846DE5324A81C42DBDE27B4BFE61121611D788B"
+  },
+  {
+    "name": "WinTypes.dll",
+    "path": "C:\\Windows\\System32\\WinTypes.dll",
+    "sha256": "D19DA3E350F70116097EB200A25AA31497415ED3999BB2D87FAF7B724B7D2E74"
+  },
+  {
+    "name": "rometadata.dll",
+    "path": "C:\\WINDOWS\\SYSTEM32\\rometadata.dll",
+    "sha256": "47A51A488149BD7AEBFDAB0B4BDCD19B758CC78F87CA606CA3C23DDB3046C0D4"
+  },
+  {
+    "name": "VkLayer_khronos_validation.dll",
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\VkLayer_khronos_validation.dll",
+    "sha256": "37BA9EE56EBD4C57DA6E1E0E2CE4AA15F147F308ED7C6C7CDF5F22D2636BC22D"
+  },
+  {
+    "name": "nvspcap64.dll",
+    "path": "C:\\WINDOWS\\system32\\nvspcap64.dll",
+    "sha256": "EC8837A6F35507BEEF70382071842EF4B3A0D466AA0B8BE02F0D5FA911D79767"
+  },
+  {
+    "name": "dwmapi.dll",
+    "path": "C:\\WINDOWS\\SYSTEM32\\dwmapi.dll",
+    "sha256": "733C4DBF3E3FC521199AE57A5ADC0B780D8C63D3DE96676670CBF6D27CFED5E2"
+  },
+  {
+    "name": "nvrtum64.dll",
+    "path": "C:\\WINDOWS\\System32\\DriverStore\\FileRepository\\nvmdi.inf_amd64_21e6b42b376b80b2\\nvrtum64.dll",
+    "sha256": "B41E43D9130DC3B6A94F413DA9573081C29A6FC846D83FFAA4B79B5F3F57D00E"
+  },
+  {
+    "name": "nvcuda64.dll",
+    "path": "C:\\WINDOWS\\System32\\DriverStore\\FileRepository\\nvmdi.inf_amd64_21e6b42b376b80b2\\nvcuda64.dll",
+    "sha256": "C60E766D0E4697AACA4E31CE61426B807AE8C0DA5D298654A1660B9722C0CAFE"
+  },
+  {
+    "name": "nvobjectloader64.dll",
+    "path": "C:\\WINDOWS\\System32\\DriverStore\\FileRepository\\nvmdi.inf_amd64_21e6b42b376b80b2\\nvobjectloader64.dll",
+    "sha256": "8FACA1611DC6E851A30F8DC1B20CDA5EB2C10A2B2CDAC7B4FD75F630BDBD8174"
+  },
+  {
+    "name": "MSCTF.dll",
+    "path": "C:\\WINDOWS\\System32\\MSCTF.dll",
+    "sha256": "E8F3FE84EE46760E6E9EB914D61F88125D699047AD0E17B9283FB553927417BE"
+  },
+  {
+    "name": "textinputframework.dll",
+    "path": "C:\\WINDOWS\\SYSTEM32\\textinputframework.dll",
+    "sha256": "29B8E6B039E8DE5B3AA68D6D64F8A7868A69BD8F137B885F326810AABFC5D076"
+  },
+  {
+    "name": "CoreMessaging.dll",
+    "path": "C:\\WINDOWS\\SYSTEM32\\CoreMessaging.dll",
+    "sha256": "E770EC95D5BAC814EFD8B76F8C37CAEE2A6D05AA8F0FE57F7E14A29B5F513B16"
+  },
+  {
+    "name": "CoreUIComponents.dll",
+    "path": "C:\\WINDOWS\\SYSTEM32\\CoreUIComponents.dll",
+    "sha256": "52AE7DEC07057DA535CB356BFF6E8CB85267E4E650241BC98432C481635590AD"
+  },
+  {
+    "name": "CrySystem.dll",
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\CrySystem.dll",
+    "sha256": "A35803590D3F860B3A5CEDDF0935A86B33D72FA3B37FC9EECAE00C9E084FFA62"
+  },
+  {
+    "name": "nvapi64.dll",
+    "path": "C:\\WINDOWS\\SYSTEM32\\nvapi64.dll",
+    "sha256": "11F66428948436B666DFC987A8D3DF4A0CA6293D10E4F9DDF7E40A10D759EF73"
+  },
+  {
+    "name": "nvapi64_impl.dll",
+    "path": "C:\\WINDOWS\\system32\\DriverStore\\FileRepository\\nvmdi.inf_amd64_21e6b42b376b80b2\\nvapi64_impl.dll",
+    "sha256": "3F26731D9FF492C2EF3BE879B0DA68E415ED563DAE5CAEE901EB01F66C32379D"
+  },
+  {
+    "name": "WINMM.dll",
+    "path": "C:\\WINDOWS\\SYSTEM32\\WINMM.dll",
+    "sha256": "B9035DA2EE058FE565ECB3C0064F46F2D09BDE01F29E423FFE6B33E15C773F04"
+  },
+  {
+    "name": "DispBroker.dll",
+    "path": "C:\\Windows\\System32\\DispBroker.dll",
+    "sha256": "45BD46679DF5C7077BFEBDEDEB063F5CFF18B9036AC67E434E52A46BB3F9E5C1"
+  },
+  {
+    "name": "opengl32.dll",
+    "path": "C:\\WINDOWS\\SYSTEM32\\opengl32.dll",
+    "sha256": "659BE03CF2B88B5063A35B2637D9EF38122D7F6F30DAFFF118FA41B273AA5ECE"
+  },
+  {
+    "name": "GLU32.dll",
+    "path": "C:\\WINDOWS\\SYSTEM32\\GLU32.dll",
+    "sha256": "3120BA185C4505B0864FE4C113CAFF3FD0BBF0E231F8A95C89CAF9B74E957A54"
+  },
+  {
+    "name": "nvppex.dll",
+    "path": "C:\\WINDOWS\\System32\\DriverStore\\FileRepository\\nvmdi.inf_amd64_21e6b42b376b80b2\\nvppex.dll",
+    "sha256": "63941F59A5BE2CC0581729CCD3B93CE37208733E6FC1C23B4B52F2EB45CEB871"
+  },
+  {
+    "name": "WINSTA.dll",
+    "path": "C:\\WINDOWS\\SYSTEM32\\WINSTA.dll",
+    "sha256": "DD27B81ACBED25DA1C67EFE2B5CEFF4C305357430937A0324DCF63167CFEB610"
+  },
+  {
+    "name": "XInput1_4.dll",
+    "path": "C:\\WINDOWS\\SYSTEM32\\XInput1_4.dll",
+    "sha256": "5F41070A6F2AFD762CAECE55C932355210719DE07D3361077701D85B9FC8542F"
+  },
+  {
+    "name": "inputhost.dll",
+    "path": "C:\\WINDOWS\\SYSTEM32\\inputhost.dll",
+    "sha256": "5C0CBA72CFD0DBA95AF431FF070E76FA999F23CE68AA844F44373C6F108EDC07"
+  },
+  {
+    "name": "uiautomationcore.dll",
+    "path": "C:\\WINDOWS\\SYSTEM32\\uiautomationcore.dll",
+    "sha256": "BE5037BF46E61566D3E5A83A6C628CEBE9035771E4AE741A7B9AA27B5696D989"
+  },
+  {
+    "name": "OLEACC.dll",
+    "path": "C:\\WINDOWS\\SYSTEM32\\OLEACC.dll",
+    "sha256": "F250765D7F61F7C5AEB5E8BB3B5FA737F148FD444783357E52AEF21000DEF46F"
+  },
+  {
+    "name": "threadpoolwinrt.dll",
+    "path": "C:\\Windows\\System32\\threadpoolwinrt.dll",
+    "sha256": "556D65BC0E5FD7DFF550F37E9A8B1B7BD45C7359B8059FD3B4905E748AED230F"
+  },
+  {
+    "name": "TextShaping.dll",
+    "path": "C:\\WINDOWS\\SYSTEM32\\TextShaping.dll",
+    "sha256": "16141DD306643E7670B12AB81895E499A96B60E9E8E89966CD2EECE0CA9D210D"
+  }
+]
