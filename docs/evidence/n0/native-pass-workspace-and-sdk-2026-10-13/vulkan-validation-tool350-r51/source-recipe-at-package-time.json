@@ -1,0 +1,62 @@
+{
+  "schema": "LOCAL_SIGNED_SDK350_BINARY_PAIR_PROVENANCE",
+  "approved": false,
+  "reviewer": null,
+  "kind": "Imported existing signed SDK release binary pair, not compiled here",
+  "sourceRelease": "vulkan-sdk-1.4.350.0",
+  "sourceArtifactKind": "SIGNED_SDK_RELEASE_DLL",
+  "sourceURL": "file:///C:/VulkanSDK/1.4.350.0/Bin/VkLayer_khronos_validation.dll",
+  "sourceSHA256": "37BA9EE56EBD4C57DA6E1E0E2CE4AA15F147F308ED7C6C7CDF5F22D2636BC22D",
+  "sourceHashInterpretation": "Hash of source DLL named by sourceURL, NOT hash of SDK installer/archive or upstream source tree",
+  "sourcePins": [
+    {
+      "path": "C:/VulkanSDK/1.4.350.0/Bin/VkLayer_khronos_validation.dll",
+      "bytes": 20813240,
+      "sha256": "37BA9EE56EBD4C57DA6E1E0E2CE4AA15F147F308ED7C6C7CDF5F22D2636BC22D"
+    },
+    {
+      "path": "C:/VulkanSDK/1.4.350.0/Bin/VkLayer_khronos_validation.json",
+      "bytes": 117475,
+      "sha256": "E275925D7C6AC0C87E0BDFFAE4CAEF8B62D3CACEE28268D535DA42AD72448E5F"
+    }
+  ],
+  "apiVersion": "1.4.350",
+  "sourceBuildConfiguration": "SDK Release runtime tool",
+  "engineDeploymentConfigurations": [
+    "debug",
+    "profile"
+  ],
+  "releaseShippingPayloads": 0,
+  "debugBinaryBuilt": false,
+  "duplicateDebugBinary": false,
+  "upstreamCommit": null,
+  "officialSourceTag": "vulkan-sdk-1.4.350.0",
+  "signature": "Valid LunarG Inc., previous local addendum CEEB",
+  "officialLicense": {
+    "path": "F:/JericoEngine/JericoEngine/build/n0-validation/native-corefeature102/analysis-wiring/validation350-local-package-candidate-r51/legal/LICENSE.txt",
+    "bytes": 14509,
+    "sha256": "956A282096CFC658A59DB5D7B1CF03625DECFCC32A1059E9AD90A99E897436F7"
+  },
+  "officialNotice": "NOTICE.txt HEAD404 retained; no substituted261 notice",
+  "licenseExpression": "Apache-2.0 AND MIT AND BSL-1.0",
+  "limitations": [
+    "SDK release/component manifests and signature are provenance; exact binary build source commit/CRT/toolset not attested.",
+    "No source build/Python/dependency download/newrenderer or package installation.",
+    "Package, extraction consumer and configuration generation remain unexecuted; no ready/acceptance claim."
+  ],
+  "originalFind261": {
+    "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/VulkanValidationLayers/Findvulkan-validationlayers.cmake",
+    "bytes": 2425,
+    "sha256": "EB4AF016E919C1C5B03E40C00BAF58387194216E00739CC78139D3DDE7AA9BBD"
+  },
+  "originalAssociation": {
+    "path": "F:/JericoEngine/JericoEngine/cmake/3rdParty/Platform/Windows/BuiltInPackages_windows.cmake",
+    "bytes": 6802,
+    "sha256": "F9E71213F99F421558E1F8B77B0A617BA4B0766C5AB2266975CB562D2BA2DCEB"
+  },
+  "genericPackager": {
+    "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/JECreateLocalPackage.cmake",
+    "bytes": 7461,
+    "sha256": "ADB8601D690D3FF8E37F1E8E1897790CE94A1E1361B32270E4959886A8BD3382"
+  }
+}

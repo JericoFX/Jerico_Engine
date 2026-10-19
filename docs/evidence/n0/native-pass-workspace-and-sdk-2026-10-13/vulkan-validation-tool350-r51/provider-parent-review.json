@@ -1,0 +1,87 @@
+{
+  "utc": "2026-10-19T20:55:53.3985434Z",
+  "acceptedLocalDevelopmentProvider": true,
+  "acceptedFullProduct": false,
+  "sourceFreeze": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-corefeature102\\analysis-parent\\diffuse-probe-tools-request-r51\\dpg-native-source-freeze-r17.json",
+    "bytes": 4251477,
+    "sha256": "56B500725AB0518D4E183030FF711E4E6A16C0797AAD00D0B969FF773B511E21"
+  },
+  "actualPair": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\VkLayer_khronos_validation.dll",
+      "bytes": 20813240,
+      "sha256": "37BA9EE56EBD4C57DA6E1E0E2CE4AA15F147F308ED7C6C7CDF5F22D2636BC22D"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\original-engine\\bin\\profile\\VkLayer_khronos_validation.json",
+      "bytes": 117475,
+      "sha256": "E275925D7C6AC0C87E0BDFFAE4CAEF8B62D3CACEE28268D535DA42AD72448E5F"
+    }
+  ],
+  "newConfigurationPaths": [
+    "cmake/Tools/LocalPackages/VulkanValidationLayers/Sdk350/Findvulkan-validationlayers.cmake",
+    "cmake/3rdParty/Platform/Windows/BuiltInPackages_windows.cmake"
+  ],
+  "packageArchive": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-corefeature102\\analysis-wiring\\validation350-local-package-candidate-r51\\execution-package-attempt1\\packages\\vulkan-validationlayers-1.4.350-je-sdk-rev1-windows.tar.xz",
+    "bytes": 3998880,
+    "sha256": "986F8EC6343B28DD6AD34D2A5AAA456890A8D42F96B8B4903D532CB5D499255E"
+  },
+  "configure": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-corefeature102\\configure-vulkan-validation350-r51-attempt1\\configure-vulkan-validation350-r51.result.json",
+    "bytes": 781,
+    "sha256": "5ADD76B3950351351E0BCC57BAAAA6EFAA475EE069994FF3724DBD26CF6D67DC"
+  },
+  "generatedAndExtractedReview": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-corefeature102\\analysis-wiring\\validation350-local-package-candidate-r51\\productive-config-preparation\\postconfigure-review\\review.json",
+    "bytes": 27163,
+    "sha256": "D518AB102FD584EFF5626A01D04576D06BC31F1CA7D1BE08FCCD26971E1B3454"
+  },
+  "deploy": {
+    "exitCode": 0,
+    "ramGuardTriggered": false,
+    "stdout": {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-corefeature102\\deploy-vulkan-validation350-profile-r51-attempt1\\deploy-vulkan-validation350-profile-r51.stdout.log",
+      "bytes": 0,
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    "seconds": 0.0742071,
+    "stderr": {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-corefeature102\\deploy-vulkan-validation350-profile-r51-attempt1\\deploy-vulkan-validation350-profile-r51.stderr.log",
+      "bytes": 0,
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    "priorityError": null,
+    "timedOut": false,
+    "priorityRequested": "BelowNormal"
+  },
+  "postflight": {
+    "utc": "2026-10-19T20:54:36.9438802Z",
+    "frozenInputsVerified": true,
+    "inputDrift": 0,
+    "fatal": null,
+    "nativeCensusEmpty": true,
+    "accepted": false
+  },
+  "debugProfileNonemptySources": 2,
+  "releaseNonemptySources": 0,
+  "releaseFullShippingAcceptance": false,
+  "newEngineDlls": 0,
+  "toolPairPayloadBeforeBytes": 22997255,
+  "toolPairPayloadAfterBytes": 20930715,
+  "toolPairPayloadDeltaBytes": -2066540,
+  "runtimeEvidenceReused": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-corefeature102\\analysis-parent\\diffuse-probe-tools-request-r51\\dpg-vulkan-pool-runtime-parent-review.json",
+    "bytes": 10392,
+    "sha256": "6B4BEED9BFA3BD3E00A658F1D9F1CF2CCBBF4B0B8086424C16ADBA6405064DE8"
+  },
+  "reuseReason": "Exactly identical actual loaded layer DLL+JSON and VulkanB56/RenderFeatures5A520 native images/assets; packaging/configuration location only. No extra GPU run or fullSDK rebuild.",
+  "limits": [
+    "Release generated plan verified; no full Shipping build/layout/platform claim",
+    "No new SDK deployment or cleanHEAD product run",
+    "Storage-image warnings, DynamicDraw and NameDictionary shutdown assertions remain",
+    "DDGI grid contribution/bake/save-reopen not yet verified"
+  ],
+  "wholeGemIncrement": 0
+}

@@ -1,0 +1,18 @@
+{
+  "stderr": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-corefeature102\\configure-vulkan-validation350-r51-attempt1\\configure-vulkan-validation350-r51.stderr.log",
+    "bytes": 1189,
+    "sha256": "E4AAD40ADB2F7C1F6FD6443D22D5B73B58448EA48F5654D451726CDB24C33803"
+  },
+  "exitCode": 0,
+  "seconds": 108.2180768,
+  "ramGuardTriggered": false,
+  "stdout": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-corefeature102\\configure-vulkan-validation350-r51-attempt1\\configure-vulkan-validation350-r51.stdout.log",
+    "bytes": 55138,
+    "sha256": "C204046FC8F1BC47A85E1A62F1E8721477619FE747E2B045705B1F6EAF6886CC"
+  },
+  "priorityRequested": "BelowNormal",
+  "timedOut": false,
+  "priorityError": null
+}

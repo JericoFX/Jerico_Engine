@@ -1,0 +1,528 @@
+{
+  "schema": "VVL350_R17_POSTCONFIGURE_METADATA_REVIEW",
+  "utc": "2026-10-19T20:52:14.2886195Z",
+  "approved": false,
+  "reviewer": null,
+  "assignedChecksPass": true,
+  "sourceFreezeReportedByParent": "56B500725AB0518D4E183030FF711E4E6A16C0797AAD00D0B969FF773B511E21",
+  "configureReportedByParent": "Native0/108.218s; postflight0drift/nativeempty",
+  "scripts": [
+    {
+      "config": "debug",
+      "host": "Editor",
+      "script": {
+        "path": "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/runtime_dependencies/debug/Editor.cmake",
+        "bytes": 86812,
+        "sha256": "2916B7BDB0C833A94C98D2977049F7B606ABAD1DD8603341AC9982B0286F243B"
+      },
+      "layerCopyCalls": [
+        {
+          "line": 130,
+          "source": "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/vulkan-validationlayers-1.4.350-je-sdk-rev1-windows/vulkan-validationlayers/lib/release/VkLayer_khronos_validation.json",
+          "targetDirectory": "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/debug",
+          "literal": "ly_copy(\"F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/vulkan-validationlayers-1.4.350-je-sdk-rev1-windows/vulkan-validationlayers/lib/release/VkLayer_khronos_validation.json\" \"\" TARGET_FILE_DIR \"F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/debug\" SOURCE_TYPE \"\" SOURCE_GEM_MODULE \"\")"
+        },
+        {
+          "line": 131,
+          "source": "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/vulkan-validationlayers-1.4.350-je-sdk-rev1-windows/vulkan-validationlayers/lib/release/VkLayer_khronos_validation.dll",
+          "targetDirectory": "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/debug",
+          "literal": "ly_copy(\"F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/vulkan-validationlayers-1.4.350-je-sdk-rev1-windows/vulkan-validationlayers/lib/release/VkLayer_khronos_validation.dll\" \"\" TARGET_FILE_DIR \"F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/debug\" SOURCE_TYPE \"\" SOURCE_GEM_MODULE \"\")"
+        }
+      ],
+      "layerTargetCopyFiles": [
+        "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/vulkan-validationlayers-1.4.350-je-sdk-rev1-windows/vulkan-validationlayers/lib/release/VkLayer_khronos_validation.json",
+        "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/vulkan-validationlayers-1.4.350-je-sdk-rev1-windows/vulkan-validationlayers/lib/release/VkLayer_khronos_validation.dll"
+      ],
+      "emptyCopyCalls": [],
+      "old261References": 0,
+      "functionLine": 19,
+      "emptyListForeachLine": 31,
+      "pass": true
+    },
+    {
+      "config": "debug",
+      "host": "JEEditorFixture.GameLauncher",
+      "script": {
+        "path": "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/runtime_dependencies/debug/JEEditorFixture.GameLauncher.cmake",
+        "bytes": 16111,
+        "sha256": "0C62772E70F63A2AADC6DBF8D811E9A94FFA8A9A35CC75C9943CFBE489E22E82"
+      },
+      "layerCopyCalls": [
+        {
+          "line": 53,
+          "source": "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/vulkan-validationlayers-1.4.350-je-sdk-rev1-windows/vulkan-validationlayers/lib/release/VkLayer_khronos_validation.json",
+          "targetDirectory": "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/debug",
+          "literal": "ly_copy(\"F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/vulkan-validationlayers-1.4.350-je-sdk-rev1-windows/vulkan-validationlayers/lib/release/VkLayer_khronos_validation.json\" \"\" TARGET_FILE_DIR \"F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/debug\" SOURCE_TYPE \"\" SOURCE_GEM_MODULE \"\")"
+        },
+        {
+          "line": 54,
+          "source": "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/vulkan-validationlayers-1.4.350-je-sdk-rev1-windows/vulkan-validationlayers/lib/release/VkLayer_khronos_validation.dll",
+          "targetDirectory": "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/debug",
+          "literal": "ly_copy(\"F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/vulkan-validationlayers-1.4.350-je-sdk-rev1-windows/vulkan-validationlayers/lib/release/VkLayer_khronos_validation.dll\" \"\" TARGET_FILE_DIR \"F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/debug\" SOURCE_TYPE \"\" SOURCE_GEM_MODULE \"\")"
+        }
+      ],
+      "layerTargetCopyFiles": [
+        "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/vulkan-validationlayers-1.4.350-je-sdk-rev1-windows/vulkan-validationlayers/lib/release/VkLayer_khronos_validation.json",
+        "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/vulkan-validationlayers-1.4.350-je-sdk-rev1-windows/vulkan-validationlayers/lib/release/VkLayer_khronos_validation.dll"
+      ],
+      "emptyCopyCalls": [],
+      "old261References": 0,
+      "functionLine": 19,
+      "emptyListForeachLine": 31,
+      "pass": true
+    },
+    {
+      "config": "profile",
+      "host": "Editor",
+      "script": {
+        "path": "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/runtime_dependencies/profile/Editor.cmake",
+        "bytes": 86508,
+        "sha256": "8CF3BE18D9F0C6B9F5EE5BBED616F0517CA45A652317786AA2E2930304B37AD0"
+      },
+      "layerCopyCalls": [
+        {
+          "line": 130,
+          "source": "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/vulkan-validationlayers-1.4.350-je-sdk-rev1-windows/vulkan-validationlayers/lib/release/VkLayer_khronos_validation.json",
+          "targetDirectory": "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/profile",
+          "literal": "ly_copy(\"F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/vulkan-validationlayers-1.4.350-je-sdk-rev1-windows/vulkan-validationlayers/lib/release/VkLayer_khronos_validation.json\" \"\" TARGET_FILE_DIR \"F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/profile\" SOURCE_TYPE \"\" SOURCE_GEM_MODULE \"\")"
+        },
+        {
+          "line": 131,
+          "source": "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/vulkan-validationlayers-1.4.350-je-sdk-rev1-windows/vulkan-validationlayers/lib/release/VkLayer_khronos_validation.dll",
+          "targetDirectory": "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/profile",
+          "literal": "ly_copy(\"F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/vulkan-validationlayers-1.4.350-je-sdk-rev1-windows/vulkan-validationlayers/lib/release/VkLayer_khronos_validation.dll\" \"\" TARGET_FILE_DIR \"F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/profile\" SOURCE_TYPE \"\" SOURCE_GEM_MODULE \"\")"
+        }
+      ],
+      "layerTargetCopyFiles": [
+        "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/vulkan-validationlayers-1.4.350-je-sdk-rev1-windows/vulkan-validationlayers/lib/release/VkLayer_khronos_validation.json",
+        "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/vulkan-validationlayers-1.4.350-je-sdk-rev1-windows/vulkan-validationlayers/lib/release/VkLayer_khronos_validation.dll"
+      ],
+      "emptyCopyCalls": [],
+      "old261References": 0,
+      "functionLine": 19,
+      "emptyListForeachLine": 31,
+      "pass": true
+    },
+    {
+      "config": "profile",
+      "host": "JEEditorFixture.GameLauncher",
+      "script": {
+        "path": "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/runtime_dependencies/profile/JEEditorFixture.GameLauncher.cmake",
+        "bytes": 16331,
+        "sha256": "B9A72E242602E5C13A318C024697AA0C145343E2D069A176BEA923018A0C0250"
+      },
+      "layerCopyCalls": [
+        {
+          "line": 53,
+          "source": "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/vulkan-validationlayers-1.4.350-je-sdk-rev1-windows/vulkan-validationlayers/lib/release/VkLayer_khronos_validation.json",
+          "targetDirectory": "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/profile",
+          "literal": "ly_copy(\"F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/vulkan-validationlayers-1.4.350-je-sdk-rev1-windows/vulkan-validationlayers/lib/release/VkLayer_khronos_validation.json\" \"\" TARGET_FILE_DIR \"F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/profile\" SOURCE_TYPE \"\" SOURCE_GEM_MODULE \"\")"
+        },
+        {
+          "line": 54,
+          "source": "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/vulkan-validationlayers-1.4.350-je-sdk-rev1-windows/vulkan-validationlayers/lib/release/VkLayer_khronos_validation.dll",
+          "targetDirectory": "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/profile",
+          "literal": "ly_copy(\"F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/vulkan-validationlayers-1.4.350-je-sdk-rev1-windows/vulkan-validationlayers/lib/release/VkLayer_khronos_validation.dll\" \"\" TARGET_FILE_DIR \"F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/profile\" SOURCE_TYPE \"\" SOURCE_GEM_MODULE \"\")"
+        }
+      ],
+      "layerTargetCopyFiles": [
+        "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/vulkan-validationlayers-1.4.350-je-sdk-rev1-windows/vulkan-validationlayers/lib/release/VkLayer_khronos_validation.json",
+        "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/vulkan-validationlayers-1.4.350-je-sdk-rev1-windows/vulkan-validationlayers/lib/release/VkLayer_khronos_validation.dll"
+      ],
+      "emptyCopyCalls": [],
+      "old261References": 0,
+      "functionLine": 19,
+      "emptyListForeachLine": 31,
+      "pass": true
+    },
+    {
+      "config": "release",
+      "host": "Editor",
+      "script": {
+        "path": "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/runtime_dependencies/release/Editor.cmake",
+        "bytes": 85717,
+        "sha256": "57019C8ACEE5D0B41634FA36F04C8EB2A4B65B1F702F2998CBEE40C30E5839F0"
+      },
+      "layerCopyCalls": [],
+      "layerTargetCopyFiles": [],
+      "emptyCopyCalls": [
+        {
+          "line": 130,
+          "literal": "ly_copy(\"\" \"\" TARGET_FILE_DIR \"F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/release\" SOURCE_TYPE \"\" SOURCE_GEM_MODULE \"\")"
+        },
+        {
+          "line": 131,
+          "literal": "ly_copy(\"\" \"\" TARGET_FILE_DIR \"F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/release\" SOURCE_TYPE \"\" SOURCE_GEM_MODULE \"\")"
+        }
+      ],
+      "old261References": 0,
+      "functionLine": 19,
+      "emptyListForeachLine": 31,
+      "pass": true
+    },
+    {
+      "config": "release",
+      "host": "JEEditorFixture.GameLauncher",
+      "script": {
+        "path": "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/runtime_dependencies/release/JEEditorFixture.GameLauncher.cmake",
+        "bytes": 15541,
+        "sha256": "396799635B3206AE86BC52AB90792BE5DE3DC16848238DE638CE10F7985A86F7"
+      },
+      "layerCopyCalls": [],
+      "layerTargetCopyFiles": [],
+      "emptyCopyCalls": [
+        {
+          "line": 53,
+          "literal": "ly_copy(\"\" \"\" TARGET_FILE_DIR \"F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/release\" SOURCE_TYPE \"\" SOURCE_GEM_MODULE \"\")"
+        },
+        {
+          "line": 54,
+          "literal": "ly_copy(\"\" \"\" TARGET_FILE_DIR \"F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/release\" SOURCE_TYPE \"\" SOURCE_GEM_MODULE \"\")"
+        }
+      ],
+      "old261References": 0,
+      "functionLine": 19,
+      "emptyListForeachLine": 31,
+      "pass": true
+    }
+  ],
+  "archive": {
+    "path": "F:/JericoEngine/JericoEngine/build/n0-validation/native-corefeature102/analysis-wiring/validation350-local-package-candidate-r51/execution-package-attempt1/packages/vulkan-validationlayers-1.4.350-je-sdk-rev1-windows.tar.xz",
+    "bytes": 3998880,
+    "sha256": "986F8EC6343B28DD6AD34D2A5AAA456890A8D42F96B8B4903D532CB5D499255E"
+  },
+  "extractedRoot": "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/vulkan-validationlayers-1.4.350-je-sdk-rev1-windows",
+  "extractedPayloadCount": 13,
+  "payloads": [
+    {
+      "relativePath": "Findvulkan-validationlayers.cmake",
+      "actual": {
+        "path": "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/vulkan-validationlayers-1.4.350-je-sdk-rev1-windows/Findvulkan-validationlayers.cmake",
+        "bytes": 2481,
+        "sha256": "C6E45EF3555BB88A8772C490D62EFD06C12CF2ACD73D153C92917D6526157CE7"
+      },
+      "expected": {
+        "bytes": 2481,
+        "sha256": "C6E45EF3555BB88A8772C490D62EFD06C12CF2ACD73D153C92917D6526157CE7",
+        "origin": "Pinned stage11"
+      },
+      "pass": true
+    },
+    {
+      "relativePath": "JERequireLocalPath.cmake",
+      "actual": {
+        "path": "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/vulkan-validationlayers-1.4.350-je-sdk-rev1-windows/JERequireLocalPath.cmake",
+        "bytes": 1982,
+        "sha256": "4B74565484AC8EA233D6D899E74D3128E1023B92F20DA3BE2CCB540EFFA05143"
+      },
+      "expected": {
+        "bytes": 1982,
+        "sha256": "4B74565484AC8EA233D6D899E74D3128E1023B92F20DA3BE2CCB540EFFA05143",
+        "origin": "Pinned stage11"
+      },
+      "pass": true
+    },
+    {
+      "relativePath": "LICENSES/O3DE/LICENSE_APACHE2.TXT",
+      "actual": {
+        "path": "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/vulkan-validationlayers-1.4.350-je-sdk-rev1-windows/LICENSES/O3DE/LICENSE_APACHE2.TXT",
+        "bytes": 11557,
+        "sha256": "59DD59CFBD4A7F5AF07AD841A11A1865B609E4C1EDC68B415A241F3DC0DE1244"
+      },
+      "expected": {
+        "bytes": 11557,
+        "sha256": "59DD59CFBD4A7F5AF07AD841A11A1865B609E4C1EDC68B415A241F3DC0DE1244",
+        "origin": "Pinned stage11"
+      },
+      "pass": true
+    },
+    {
+      "relativePath": "LICENSES/O3DE/LICENSE_MIT.TXT",
+      "actual": {
+        "path": "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/vulkan-validationlayers-1.4.350-je-sdk-rev1-windows/LICENSES/O3DE/LICENSE_MIT.TXT",
+        "bytes": 1074,
+        "sha256": "C6EF1CAC3ABC6C48B4EB9D847F1B886F77CAD441F7360F6C5554A32F380D796F"
+      },
+      "expected": {
+        "bytes": 1074,
+        "sha256": "C6EF1CAC3ABC6C48B4EB9D847F1B886F77CAD441F7360F6C5554A32F380D796F",
+        "origin": "Pinned stage11"
+      },
+      "pass": true
+    },
+    {
+      "relativePath": "LICENSES/O3DE/LICENSE.txt",
+      "actual": {
+        "path": "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/vulkan-validationlayers-1.4.350-je-sdk-rev1-windows/LICENSES/O3DE/LICENSE.txt",
+        "bytes": 1502,
+        "sha256": "B6B5890AF83000F2E87EAAE73AFC69415AC59EF1E470BD542B537245951E744D"
+      },
+      "expected": {
+        "bytes": 1502,
+        "sha256": "B6B5890AF83000F2E87EAAE73AFC69415AC59EF1E470BD542B537245951E744D",
+        "origin": "Pinned stage11"
+      },
+      "pass": true
+    },
+    {
+      "relativePath": "LICENSES/SDK/LICENSE.txt",
+      "actual": {
+        "path": "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/vulkan-validationlayers-1.4.350-je-sdk-rev1-windows/LICENSES/SDK/LICENSE.txt",
+        "bytes": 944,
+        "sha256": "03B9DD9957F288BC26EF39D188672D5A761F2F35C972D959B65C0F32CD4D576F"
+      },
+      "expected": {
+        "bytes": 944,
+        "sha256": "03B9DD9957F288BC26EF39D188672D5A761F2F35C972D959B65C0F32CD4D576F",
+        "origin": "Pinned stage11"
+      },
+      "pass": true
+    },
+    {
+      "relativePath": "LICENSES/vvl/LICENSE.txt",
+      "actual": {
+        "path": "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/vulkan-validationlayers-1.4.350-je-sdk-rev1-windows/LICENSES/vvl/LICENSE.txt",
+        "bytes": 14509,
+        "sha256": "956A282096CFC658A59DB5D7B1CF03625DECFCC32A1059E9AD90A99E897436F7"
+      },
+      "expected": {
+        "bytes": 14509,
+        "sha256": "956A282096CFC658A59DB5D7B1CF03625DECFCC32A1059E9AD90A99E897436F7",
+        "origin": "Pinned stage11"
+      },
+      "pass": true
+    },
+    {
+      "relativePath": "NOTICE.txt",
+      "actual": {
+        "path": "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/vulkan-validationlayers-1.4.350-je-sdk-rev1-windows/NOTICE.txt",
+        "bytes": 1052,
+        "sha256": "546B3AF3A0DEE72140B90A33B2E0CE7F0EADDA447D156E44BF618AAB74C24E68"
+      },
+      "expected": {
+        "bytes": 1052,
+        "sha256": "546B3AF3A0DEE72140B90A33B2E0CE7F0EADDA447D156E44BF618AAB74C24E68",
+        "origin": "Pinned stage11"
+      },
+      "pass": true
+    },
+    {
+      "relativePath": "PackageInfo.json",
+      "actual": {
+        "path": "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/vulkan-validationlayers-1.4.350-je-sdk-rev1-windows/PackageInfo.json",
+        "bytes": 403,
+        "sha256": "EDD07100911FAEAC6EA6416F9B75FE41D873821D0D27CA7E9B3B5E626AB02E8D"
+      },
+      "expected": {
+        "bytes": 403,
+        "sha256": "EDD07100911FAEAC6EA6416F9B75FE41D873821D0D27CA7E9B3B5E626AB02E8D",
+        "origin": "Actual producer .contents metadata"
+      },
+      "pass": true
+    },
+    {
+      "relativePath": "SHA256SUMS",
+      "actual": {
+        "path": "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/vulkan-validationlayers-1.4.350-je-sdk-rev1-windows/SHA256SUMS",
+        "bytes": 1204,
+        "sha256": "539A120FD3BA0F126F92AE6DE470C5312FBA9A983DE5D1760D866097D5D41EED"
+      },
+      "expected": {
+        "bytes": 1204,
+        "sha256": "539A120FD3BA0F126F92AE6DE470C5312FBA9A983DE5D1760D866097D5D41EED",
+        "origin": "Actual producer .contents metadata"
+      },
+      "pass": true
+    },
+    {
+      "relativePath": "vulkan-validationlayers/JERecipe.json",
+      "actual": {
+        "path": "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/vulkan-validationlayers-1.4.350-je-sdk-rev1-windows/vulkan-validationlayers/JERecipe.json",
+        "bytes": 2929,
+        "sha256": "66CCF312FAC2B95A58D622D952B7DA571C89A727CFBD3EB4DBB769E1E25B5735"
+      },
+      "expected": {
+        "bytes": 2929,
+        "sha256": "66CCF312FAC2B95A58D622D952B7DA571C89A727CFBD3EB4DBB769E1E25B5735",
+        "origin": "Pinned stage11"
+      },
+      "pass": true
+    },
+    {
+      "relativePath": "vulkan-validationlayers/lib/release/VkLayer_khronos_validation.dll",
+      "actual": {
+        "path": "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/vulkan-validationlayers-1.4.350-je-sdk-rev1-windows/vulkan-validationlayers/lib/release/VkLayer_khronos_validation.dll",
+        "bytes": 20813240,
+        "sha256": "37BA9EE56EBD4C57DA6E1E0E2CE4AA15F147F308ED7C6C7CDF5F22D2636BC22D"
+      },
+      "expected": {
+        "bytes": 20813240,
+        "sha256": "37BA9EE56EBD4C57DA6E1E0E2CE4AA15F147F308ED7C6C7CDF5F22D2636BC22D",
+        "origin": "Pinned stage11"
+      },
+      "pass": true
+    },
+    {
+      "relativePath": "vulkan-validationlayers/lib/release/VkLayer_khronos_validation.json",
+      "actual": {
+        "path": "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/vulkan-validationlayers-1.4.350-je-sdk-rev1-windows/vulkan-validationlayers/lib/release/VkLayer_khronos_validation.json",
+        "bytes": 117475,
+        "sha256": "E275925D7C6AC0C87E0BDFFAE4CAEF8B62D3CACEE28268D535DA42AD72448E5F"
+      },
+      "expected": {
+        "bytes": 117475,
+        "sha256": "E275925D7C6AC0C87E0BDFFAE4CAEF8B62D3CACEE28268D535DA42AD72448E5F",
+        "origin": "Pinned stage11"
+      },
+      "pass": true
+    }
+  ],
+  "manifestRows": [
+    {
+      "relativePath": "Findvulkan-validationlayers.cmake",
+      "sha256": "C6E45EF3555BB88A8772C490D62EFD06C12CF2ACD73D153C92917D6526157CE7",
+      "pass": true
+    },
+    {
+      "relativePath": "JERequireLocalPath.cmake",
+      "sha256": "4B74565484AC8EA233D6D899E74D3128E1023B92F20DA3BE2CCB540EFFA05143",
+      "pass": true
+    },
+    {
+      "relativePath": "LICENSES/O3DE/LICENSE.txt",
+      "sha256": "B6B5890AF83000F2E87EAAE73AFC69415AC59EF1E470BD542B537245951E744D",
+      "pass": true
+    },
+    {
+      "relativePath": "LICENSES/O3DE/LICENSE_APACHE2.TXT",
+      "sha256": "59DD59CFBD4A7F5AF07AD841A11A1865B609E4C1EDC68B415A241F3DC0DE1244",
+      "pass": true
+    },
+    {
+      "relativePath": "LICENSES/O3DE/LICENSE_MIT.TXT",
+      "sha256": "C6EF1CAC3ABC6C48B4EB9D847F1B886F77CAD441F7360F6C5554A32F380D796F",
+      "pass": true
+    },
+    {
+      "relativePath": "LICENSES/SDK/LICENSE.txt",
+      "sha256": "03B9DD9957F288BC26EF39D188672D5A761F2F35C972D959B65C0F32CD4D576F",
+      "pass": true
+    },
+    {
+      "relativePath": "LICENSES/vvl/LICENSE.txt",
+      "sha256": "956A282096CFC658A59DB5D7B1CF03625DECFCC32A1059E9AD90A99E897436F7",
+      "pass": true
+    },
+    {
+      "relativePath": "NOTICE.txt",
+      "sha256": "546B3AF3A0DEE72140B90A33B2E0CE7F0EADDA447D156E44BF618AAB74C24E68",
+      "pass": true
+    },
+    {
+      "relativePath": "PackageInfo.json",
+      "sha256": "EDD07100911FAEAC6EA6416F9B75FE41D873821D0D27CA7E9B3B5E626AB02E8D",
+      "pass": true
+    },
+    {
+      "relativePath": "vulkan-validationlayers/JERecipe.json",
+      "sha256": "66CCF312FAC2B95A58D622D952B7DA571C89A727CFBD3EB4DBB769E1E25B5735",
+      "pass": true
+    },
+    {
+      "relativePath": "vulkan-validationlayers/lib/release/VkLayer_khronos_validation.dll",
+      "sha256": "37BA9EE56EBD4C57DA6E1E0E2CE4AA15F147F308ED7C6C7CDF5F22D2636BC22D",
+      "pass": true
+    },
+    {
+      "relativePath": "vulkan-validationlayers/lib/release/VkLayer_khronos_validation.json",
+      "sha256": "E275925D7C6AC0C87E0BDFFAE4CAEF8B62D3CACEE28268D535DA42AD72448E5F",
+      "pass": true
+    }
+  ],
+  "producerManifest": {
+    "path": "F:/JericoEngine/JericoEngine/build/n0-validation/native-corefeature102/analysis-wiring/validation350-local-package-candidate-r51/execution-package-attempt1/packages/vulkan-validationlayers-1.4.350-je-sdk-rev1-windows.contents/SHA256SUMS",
+    "bytes": 1204,
+    "sha256": "539A120FD3BA0F126F92AE6DE470C5312FBA9A983DE5D1760D866097D5D41EED"
+  },
+  "extractedManifest": {
+    "path": "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/vulkan-validationlayers-1.4.350-je-sdk-rev1-windows/SHA256SUMS",
+    "bytes": 1204,
+    "sha256": "539A120FD3BA0F126F92AE6DE470C5312FBA9A983DE5D1760D866097D5D41EED"
+  },
+  "authoritativeFind": {
+    "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/VulkanValidationLayers/Sdk350/Findvulkan-validationlayers.cmake",
+    "bytes": 2481,
+    "sha256": "C6E45EF3555BB88A8772C490D62EFD06C12CF2ACD73D153C92917D6526157CE7"
+  },
+  "extractedFind": {
+    "path": "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/vulkan-validationlayers-1.4.350-je-sdk-rev1-windows/Findvulkan-validationlayers.cmake",
+    "bytes": 2481,
+    "sha256": "C6E45EF3555BB88A8772C490D62EFD06C12CF2ACD73D153C92917D6526157CE7"
+  },
+  "cache": {
+    "path": "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/CMakeCache.txt",
+    "bytes": 118675,
+    "sha256": "6588BFEB834E90127E723C87BB8FFC590643C21D8D6A76845B5FBB197FABEF1A"
+  },
+  "cacheLines": [
+    {
+      "line": 801,
+      "text": "LY_PACKAGE_DOWNLOAD_CACHE_LOCATION:PATH=F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/root-package-cache"
+    },
+    {
+      "line": 811,
+      "text": "LY_PACKAGE_SERVER_URLS:STRING="
+    },
+    {
+      "line": 814,
+      "text": "LY_PACKAGE_UNPACK_LOCATION:PATH=@LY_3RDPARTY_PATH@/packages"
+    },
+    {
+      "line": 818,
+      "text": "LY_PACKAGE_VALIDATE_CONTENTS:BOOL=ON"
+    },
+    {
+      "line": 823,
+      "text": "LY_PACKAGE_VALIDATE_PACKAGE:BOOL=ON"
+    },
+    {
+      "line": 1867,
+      "text": "FIND_PACKAGE_MESSAGE_DETAILS_vulkan-validationlayers:INTERNAL=[F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/vulkan-validationlayers-1.4.350-je-sdk-rev1-windows][v1.4.350()]"
+    }
+  ],
+  "BinProfileBeforeDeploy": [
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/profile/VkLayer_khronos_validation.dll",
+      "bytes": 22924800,
+      "sha256": "E978226AE955A0C183489A63DDAE93788362967A80ACD14554968A239EE8FE32"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/profile/VkLayer_khronos_validation.json",
+      "bytes": 72455,
+      "sha256": "D207785E5C2B0DE13A9F797AB423522B3680AC78DDCEEF875E16B14871C54CBD"
+    }
+  ],
+  "BinStillOriginal261": true,
+  "emptyCopyExplanation": "Actual generated Release calls have source_files empty. Existing function ly_copy foreach(source_file IN LISTS source_files) line31 has zero iterations, so no file/SIZE/COPY action. No CMake script executed by this review.",
+  "scopeLimits": [
+    "Exactly Editor and GameLauncher across3Windows configurations reviewed, not every executable/platform.",
+    "Debug/Release physical outputs and existing stale layer files were not mutated or certified absent.",
+    "Current Bin/Profile remains261; no deploy or extra GPU/runtime/SDK/C++ job performed.",
+    "JE_RUNTIME_FILES custom metadata has no direct consumer in the standard config files reviewed; actual generated standard runtime rules are the measured authority here."
+  ],
+  "helper": {
+    "owner": "DESKTOP-288HHOD/Jerico",
+    "exe": "C:\\Users\\Jerico\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+    "purpose": "Assigned readonly6generatedscripts/13extractedpayloads/2Binpreimage review",
+    "persistent": false,
+    "parent": 14564,
+    "createdUtc": "2026-10-19T20:52:13.5826730Z",
+    "pid": 552
+  },
+  "resources": {
+    "freeGiB": 19.558292388916016,
+    "usedPct": 38.712677780354454
+  },
+  "ownPersistentHelpers": 0,
+  "state": "HOLD; parent acceptance/deploy pending"
+}

@@ -1,3 +1,8 @@
+## Estado actual — proveedor Vulkan350 local desplegado
+
+2026-10-19 UTC. Sobre3a3aa8d, el mismo target de validación cambia al par350 firmado ya instalado, desde un paquete local auditado. Configure existente0/108,218s,13payloads/12filas exactos y seis scripts verificados: Debug/Profile dos fuentes350; Release cero fuentes no vacías. Despliegue de los dos archivos Profile0/0,074s y hashes37BA/E275 exactos. No añade DLL del engine ni requiere repetir build C++/SDK/runtime por estos mismos bytes. [Evidencia y obtención local](../evidence/n0/native-pass-workspace-and-sdk-2026-10-13/vulkan-validation-tool350-r51/README.md).
+
+Se reutiliza la regresión GPU del par idéntico y VulkanB56/RenderFeatures5A520. Release generado no acredita Shipping completo. Persisten storage-image warnings, DynamicDraw y NameDictionary/assert; DDGI con grid real, bake y Save/reopen siguen pendientes. No Gem terminada. Próxima prueba: copia JEDiffuseProbeGridValidationR51 de JEMaterialCookNative5, conservando el original4C5E4365. Vulkan y VR/OpenXR vigentes; DDGI+RT conservados.
 ## Estado actual — DDGI/RT conservados y fuga QueryPool corregida
 
 2026-10-19 UTC. El propietario confirmó mantener DDGI y ray tracing de Atom; esta orden reemplaza la exclusión RT de los registros históricos inferiores. Vulkan sigue activo. DiffuseProbeGrid continúa en integración; no Gem terminada ni incremento certificado.

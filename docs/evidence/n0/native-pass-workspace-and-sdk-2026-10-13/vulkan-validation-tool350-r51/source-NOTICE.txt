@@ -1,0 +1,17 @@
+JE local import of Vulkan Validation Layers SDK release 1.4.350.0.
+
+The only executable payload is the unchanged LunarG-signed Release DLL and
+its matching relative-path JSON, copied from the already installed local SDK.
+There is no separately built Debug DLL. Debug/Profile use this same Release
+diagnostic tool, as the previous provider did. Release/Shipping get no layer.
+
+LICENSES/vvl/LICENSE.txt is the complete official LICENSE at
+KhronosGroup/Vulkan-ValidationLayers tag vulkan-sdk-1.4.350.0, obtained with
+HEAD/GET200, exact URL and no redirects. That tag has no NOTICE.txt (HEAD404).
+It includes Apache2 default terms and permissive third-party VMA/Boost terms.
+LICENSES/SDK is retained as installer provenance, not a substitute license.
+LICENSES/O3DE covers the packaging/CMake glue. Retain all included notices.
+
+JERecipe records the actual source DLL hash and release reference; it does
+not claim an installer/source-archive hash, source build, compiler/CRT version,
+full SDK migration, redistribution approval or engine/product acceptance.

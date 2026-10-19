@@ -1,0 +1,147 @@
+{
+  "schema": "VVL350_EXACT2_CONFIG2_CACHE_APPLICATION",
+  "utc": "2026-10-19T20:46:22.4346710Z",
+  "parentAuthorized": true,
+  "applied": true,
+  "HEADBefore": "3a3aa8d06d9de329244dc41fee7a76a3c5b92d04",
+  "nativeCensusBefore": [],
+  "sourceBefore": [
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/VulkanValidationLayers/Sdk350/Findvulkan-validationlayers.cmake",
+      "present": false
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/3rdParty/Platform/Windows/BuiltInPackages_windows.cmake",
+      "bytes": 6802,
+      "sha256": "F9E71213F99F421558E1F8B77B0A617BA4B0766C5AB2266975CB562D2BA2DCEB",
+      "mtime": "2026-10-18T15:07:22.6926874Z",
+      "creation": "2026-10-10T20:05:11.6380042Z",
+      "attributes": 32
+    }
+  ],
+  "sourceAfter": [
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/VulkanValidationLayers/Sdk350/Findvulkan-validationlayers.cmake",
+      "bytes": 2481,
+      "sha256": "C6E45EF3555BB88A8772C490D62EFD06C12CF2ACD73D153C92917D6526157CE7",
+      "mtime": "2026-10-19T20:45:15.8343416Z",
+      "attributes": 32
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/3rdParty/Platform/Windows/BuiltInPackages_windows.cmake",
+      "bytes": 6802,
+      "sha256": "CE9ED7CDA26FFE351B2CFE2C9B87720261484A986039BCAFA3A82361B801E8CB",
+      "mtime": "2026-10-19T20:45:15.8377160Z",
+      "attributes": 32
+    }
+  ],
+  "cacheBefore": [
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/root-package-cache/vulkan-validationlayers-1.4.350-je-sdk-rev1-windows.tar.xz",
+      "present": false
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/root-package-cache/vulkan-validationlayers-1.4.350-je-sdk-rev1-windows.tar.xz.SHA256SUMS",
+      "present": false
+    }
+  ],
+  "cacheAfter": [
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/root-package-cache/vulkan-validationlayers-1.4.350-je-sdk-rev1-windows.tar.xz",
+      "bytes": 3998880,
+      "sha256": "986F8EC6343B28DD6AD34D2A5AAA456890A8D42F96B8B4903D532CB5D499255E",
+      "mtime": "2026-10-19T20:45:15.8397614Z",
+      "attributes": 32
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/local-packages/root-package-cache/vulkan-validationlayers-1.4.350-je-sdk-rev1-windows.tar.xz.SHA256SUMS",
+      "bytes": 126,
+      "sha256": "1A15F0F3EFA866281DED182A64A7CC70F0FAB04C1CD0B7D78E726E30D1CFAB0E",
+      "mtime": "2026-10-19T20:45:15.8397614Z",
+      "attributes": 32
+    }
+  ],
+  "associationBackup": {
+    "path": "F:/JericoEngine/JericoEngine/build/n0-validation/native-corefeature102/analysis-wiring/validation350-local-package-candidate-r51/productive-config-preparation/application/before/BuiltInPackages_windows.cmake",
+    "bytes": 6802,
+    "sha256": "F9E71213F99F421558E1F8B77B0A617BA4B0766C5AB2266975CB562D2BA2DCEB",
+    "mtime": "2026-10-18T15:07:22.6926874Z",
+    "attributes": 32
+  },
+  "operationPin": {
+    "path": "F:/JericoEngine/JericoEngine/build/n0-validation/native-corefeature102/analysis-wiring/validation350-local-package-candidate-r51/productive-config-preparation/operations.json",
+    "bytes": 23431,
+    "sha256": "404566C301E666BABBA9212101DFB074CE5663020228C92795EC5BB3A9D4B34D",
+    "mtime": "2026-10-19T20:42:41.6779547Z",
+    "attributes": 32
+  },
+  "forwardPin": {
+    "path": "F:/JericoEngine/JericoEngine/build/n0-validation/native-corefeature102/analysis-wiring/validation350-local-package-candidate-r51/productive-config-preparation/forward.patch",
+    "bytes": 3212,
+    "sha256": "69AB7FEAAE6EEC15756343EB7B439336F53236BFE871EE74359BAC06EDF7B522",
+    "mtime": "2026-10-19T20:42:41.6810482Z",
+    "attributes": 32
+  },
+  "inversePin": {
+    "path": "F:/JericoEngine/JericoEngine/build/n0-validation/native-corefeature102/analysis-wiring/validation350-local-package-candidate-r51/productive-config-preparation/inverse-operations.json",
+    "bytes": 9670,
+    "sha256": "20182A9B809B9A67AD09060C29351205FB568564B9701922426DEDE60152B444",
+    "mtime": "2026-10-19T20:42:41.6810482Z",
+    "attributes": 32
+  },
+  "inverseAssociationByteExact": true,
+  "newFinderInverse": "Remove own new file only after exact afterSHA guard; prestate absent recorded",
+  "cacheInverse": "Only2new cache files may be removed if rollback separately authorized and current hashes match; preserve root and old261",
+  "eolObservations": [
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/VulkanValidationLayers/Sdk350/Findvulkan-validationlayers.cmake",
+      "CRLF": 0,
+      "loneLF": 42,
+      "loneCR": 0,
+      "utf8BOM": false
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/native-corefeature102/analysis-wiring/validation350-local-package-candidate-r51/productive-config-preparation/application/before/BuiltInPackages_windows.cmake",
+      "CRLF": 44,
+      "loneLF": 0,
+      "loneCR": 0,
+      "utf8BOM": false
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/cmake/3rdParty/Platform/Windows/BuiltInPackages_windows.cmake",
+      "CRLF": 44,
+      "loneLF": 0,
+      "loneCR": 0,
+      "utf8BOM": false
+    }
+  ],
+  "sourceInputsHOLD": true,
+  "configureBuildDeployInstallExecuted": false,
+  "stageJERecipeArchiveOld261Untouched": true,
+  "serializationErratum": "First application helper completed four managed writes/hash checks but exit1 in final receipt EOL array concatenation (directory treated as file). No apply retry. This receipt derives from fresh exact physical four-file hashes and retained before/backup, with corrected parenthesized EOL path array.",
+  "originalApplicationHelper": {
+    "parent": 14564,
+    "pid": 21028,
+    "persistent": false,
+    "purpose": "Parent-authorized exactly2config+2freshcachefile application",
+    "createdUtc": "2026-10-19T20:45:15.0996260Z",
+    "owner": "DESKTOP-288HHOD/Jerico",
+    "exe": "C:\\Users\\Jerico\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe"
+  },
+  "originalApplicationHelperAbsent": true,
+  "receiptHelper": {
+    "exe": "C:\\Users\\Jerico\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+    "pid": 23380,
+    "createdUtc": "2026-10-19T20:46:21.9297750Z",
+    "parent": 14564,
+    "owner": "DESKTOP-288HHOD/Jerico",
+    "persistent": false,
+    "purpose": "Receipt-only recovery and physical four-path verification; no source/cache writes"
+  },
+  "resources": {
+    "usedPct": 37.424757879234875,
+    "freeGiB": 19.96929931640625
+  },
+  "ownPersistentHelpers": 0,
+  "state": "SOURCE_HOLD2INPUTS; parentR17 and soleLuna configure pending"
+}
