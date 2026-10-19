@@ -1,0 +1,96 @@
+~~1792433419821~~1~~00000000000051F0~~Builder::RunJob~~Request started builder [8BCEE176629B4766819086E3D9E93D28 - 5] task (process) Shaders/DiffuseGlobalIllumination/DiffuseProbeGridDownsample.shader 
+~~1792433419831~~1~~00000000000051F0~~AssetBuilder~~AssetBuilder: AllocatorManager before: allocatedBytes = 55064843 capacityBytes = 53687091200
+~~1792433419831~~1~~00000000000051F0~~AssetBuilder~~AssetBuilder: Running processJob task
+~~1792433419831~~1~~00000000000051F0~~AssetBuilder~~AssetBuilder: Source = F:/JericoEngine/JericoEngine/build/sdk-vk102/Engine/Render/Features/Assets/DiffuseProbeGrid/Shaders/DiffuseGlobalIllumination/DiffuseProbeGridDownsample.shader
+~~1792433419831~~1~~00000000000051F0~~AssetBuilder~~AssetBuilder: Platform = pc
+~~1792433419831~~1~~00000000000051F0~~AssetBuilder~~ShaderAssetBuilder: Original AZSL File: F:\JericoEngine\JericoEngine\build\sdk-vk102\Engine\Render\Features\Assets\DiffuseProbeGrid\Shaders\DiffuseGlobalIllumination\DiffuseProbeGridDownsample.azsl 
+~~1792433419831~~1~~00000000000051F0~~AssetBuilder~~C: [Platform API] = vulkan
+~~1792433419831~~1~~00000000000051F0~~AssetBuilder~~Preprocessor: builder F:\JericoEngine\JericoEngine\build\n0-validation\native-scene100\sdk-preparation\source\user\AssetProcessorTemp\JobTemp-aTCfPj\DiffuseProbeGridDownsample.azsl.vulkan.prepend -C -+ -IF:\JericoEngine\JericoEngine\build\sdk-vk102\Engine\Render\Features\Assets\DiffuseProbeGrid\Shaders\DiffuseGlobalIllumination -IF:\JericoEngine\JericoEngine\build\n0-validation\native-scene100\sdk-preparation\source -IF:\JericoEngine\JericoEngine\build\n0-validation\native-scene100\sdk-preparation\source\ShaderLib -IF:\JericoEngine\JericoEngine\build\sdk-vk102\Engine\Render\Features\Assets\ShaderLib -IF:\JericoEngine\JericoEngine\build\sdk-vk102\Engine\Render\Integration\RPI\Assets\ShaderLib -IF:\JericoEngine\JericoEngine\build\sdk-vk102\Gems\Atom\RHI\Assets\ShaderLib -IF:\JericoEngine\JericoEngine\build\sdk-vk102 -IF:\JericoEngine\JericoEngine\build\sdk-vk102\Gems
+~~1792433419841~~1~~00000000000051F0~~AssetBuilder~~C: [Platform API] = vulkan
+~~1792433419841~~1~~00000000000051F0~~AssetBuilder~~C: [Trace] = F:/JericoEngine/JericoEngine/Gems/Atom/RHI/Code/Source/RHI.Edit/Utils.cpp(402): 'bool __cdecl AZ::RHI::ReportMessages(class AZStd::basic_string_view<char,struct AZStd::char_traits<char> >,class AZStd::basic_string_view<char,struct AZStd::char_traits<char> >,bool)'
+~~1792433419841~~1~~00000000000051F0~~AssetBuilder~~C: [Type] = Trace::Warning
+~~1792433419841~~1~~00000000000051F0~~AssetBuilder~~W: ShaderAssetBuilder: F:/JericoEngine/JericoEngine/build/n0-validation/native-scene100/sdk-preparation/source/user/AssetProcessorTemp/JobTemp-aTCfPj/DiffuseProbeGridDownsample.azsl.vulkan.prepend:0: warning: Unknown encoding: C.UTF-8
+~~1792433419841~~1~~00000000000051F0~~AssetBuilder~~C: [Platform API] = vulkan
+~~1792433419841~~1~~00000000000051F0~~AssetBuilder~~C: [Trace] = F:/JericoEngine/JericoEngine/Gems/Atom/RHI/Code/Source/RHI.Edit/Utils.cpp(402): 'bool __cdecl AZ::RHI::ReportMessages(class AZStd::basic_string_view<char,struct AZStd::char_traits<char> >,class AZStd::basic_string_view<char,struct AZStd::char_traits<char> >,bool)'
+~~1792433419841~~1~~00000000000051F0~~AssetBuilder~~C: [Type] = Trace::Warning
+~~1792433419841~~1~~00000000000051F0~~AssetBuilder~~W:     
+~~1792433420039~~1~~00000000000051F0~~AssetBuilder~~C: [Platform API] = vulkan
+~~1792433420039~~1~~00000000000051F0~~AssetBuilder~~ShaderAssetBuilder: Preprocessed AZSL File: F:\JericoEngine\JericoEngine\build\n0-validation\native-scene100\sdk-preparation\source\user\AssetProcessorTemp\JobTemp-aTCfPj\DiffuseProbeGridDownsample.azsl.vulkan.prepend 
+~~1792433420039~~1~~00000000000051F0~~AssetBuilder~~C: [Platform API] = vulkan
+~~1792433420039~~1~~00000000000051F0~~AssetBuilder~~ShaderPlatformInterface: Executing '"F:\JericoEngine\JericoEngine\build\sdk-vk102\bin\Windows\profile\Default\azslc.exe" "F:\JericoEngine\JericoEngine\build\n0-validation\native-scene100\sdk-preparation\source\user\AssetProcessorTemp\JobTemp-aTCfPj\DiffuseProbeGridDownsample_vulkan.azslin" --full --Zpr --W1 --strip-unused-srgs --root-const=128 --sc-options --namespace=vk --unique-idx -o "F:\JericoEngine\JericoEngine\build\n0-validation\native-scene100\sdk-preparation\source\user\AssetProcessorTemp\JobTemp-aTCfPj\DiffuseProbeGridDownsample_vulkan.hlsl"' ...
+~~1792433420039~~1~~00000000000051F0~~AssetBuilder~~C: [Platform API] = vulkan
+~~1792433420040~~1~~00000000000051F0~~AssetBuilder~~ShaderPlatformInterface: AZ::RHI::ExecuteShaderCompiler elapsedTimeMillis: 141
+~~1792433420040~~1~~00000000000051F0~~AssetBuilder~~C: [Platform API] = vulkan
+~~1792433420040~~1~~00000000000051F0~~AssetBuilder~~ShaderAssetBuilder: Note: This shader uses 1 of 128 available shader variant key bits. 
+~~1792433420040~~1~~00000000000051F0~~AssetBuilder~~C: [Platform API] = vulkan
+~~1792433420040~~1~~00000000000051F0~~AssetBuilder~~ShaderVariantAssetBuilder: Variant StableId: 0
+~~1792433420040~~1~~00000000000051F0~~AssetBuilder~~C: [Platform API] = vulkan
+~~1792433420040~~1~~00000000000051F0~~AssetBuilder~~ShaderVariantAssetBuilder: Variant Shader Options: DefaultOption=?
+~~1792433420040~~1~~00000000000051F0~~AssetBuilder~~C: [Platform API] = vulkan
+~~1792433420040~~1~~00000000000051F0~~AssetBuilder~~ShaderVariantAssetBuilder: Entry Point: MainVS
+~~1792433420040~~1~~00000000000051F0~~AssetBuilder~~C: [Platform API] = vulkan
+~~1792433420040~~1~~00000000000051F0~~AssetBuilder~~ShaderVariantAssetBuilder: Begin compiling shader function "MainVS"
+~~1792433420040~~1~~00000000000051F0~~AssetBuilder~~C: [Platform API] = vulkan
+~~1792433420040~~1~~00000000000051F0~~AssetBuilder~~ShaderPlatformInterface: Executing '"F:\JericoEngine\JericoEngine\build\sdk-vk102\bin\Windows\profile\Default\Builders\DirectXShaderCompiler\dxc.exe" -E MainVS -T vs_6_2 -Zpr -spirv -fvk-use-dx-layout -fvk-invert-y -Fo "F:\JericoEngine\JericoEngine\build\n0-validation\native-scene100\sdk-preparation\source\user\AssetProcessorTemp\JobTemp-aTCfPj\DiffuseProbeGridDownsample_vulkan.spirv.bin" -Fh "F:\JericoEngine\JericoEngine\build\n0-validation\native-scene100\sdk-preparation\source\user\AssetProcessorTemp\JobTemp-aTCfPj\DiffuseProbeGridDownsample_vulkan.spirv.txt" "F:\JericoEngine\JericoEngine\build\n0-validation\native-scene100\sdk-preparation\source\user\AssetProcessorTemp\JobTemp-aTCfPj\DiffuseProbeGridDownsample_vulkan.hlsl.prepend"' ...
+~~1792433420040~~1~~00000000000051F0~~AssetBuilder~~C: [Platform API] = vulkan
+~~1792433420040~~1~~00000000000051F0~~AssetBuilder~~ShaderPlatformInterface: AZ::RHI::ExecuteShaderCompiler elapsedTimeMillis: 20
+~~1792433420040~~1~~00000000000051F0~~AssetBuilder~~C: [Platform API] = vulkan
+~~1792433420040~~1~~00000000000051F0~~AssetBuilder~~ShaderVariantAssetBuilder: Finished compiling shader function. Number of dynamic branches: 0
+~~1792433420040~~1~~00000000000051F0~~AssetBuilder~~C: [Platform API] = vulkan
+~~1792433420040~~1~~00000000000051F0~~AssetBuilder~~ShaderVariantAssetBuilder: Entry Point: MainPS
+~~1792433420040~~1~~00000000000051F0~~AssetBuilder~~C: [Platform API] = vulkan
+~~1792433420040~~1~~00000000000051F0~~AssetBuilder~~ShaderVariantAssetBuilder: Begin compiling shader function "MainPS"
+~~1792433420040~~1~~00000000000051F0~~AssetBuilder~~C: [Platform API] = vulkan
+~~1792433420040~~1~~00000000000051F0~~AssetBuilder~~ShaderPlatformInterface: Executing '"F:\JericoEngine\JericoEngine\build\sdk-vk102\bin\Windows\profile\Default\Builders\DirectXShaderCompiler\dxc.exe" -E MainPS -T ps_6_2 -Zpr -spirv -fvk-use-dx-layout -fvk-use-dx-position-w -Fo "F:\JericoEngine\JericoEngine\build\n0-validation\native-scene100\sdk-preparation\source\user\AssetProcessorTemp\JobTemp-aTCfPj\DiffuseProbeGridDownsample_vulkan.spirv.bin" -Fh "F:\JericoEngine\JericoEngine\build\n0-validation\native-scene100\sdk-preparation\source\user\AssetProcessorTemp\JobTemp-aTCfPj\DiffuseProbeGridDownsample_vulkan.spirv.txt" "F:\JericoEngine\JericoEngine\build\n0-validation\native-scene100\sdk-preparation\source\user\AssetProcessorTemp\JobTemp-aTCfPj\DiffuseProbeGridDownsample_vulkan.hlsl.prepend"' ...
+~~1792433420040~~1~~00000000000051F0~~AssetBuilder~~C: [Platform API] = vulkan
+~~1792433420040~~1~~00000000000051F0~~AssetBuilder~~ShaderPlatformInterface: AZ::RHI::ExecuteShaderCompiler elapsedTimeMillis: 23
+~~1792433420040~~1~~00000000000051F0~~AssetBuilder~~C: [Platform API] = vulkan
+~~1792433420040~~1~~00000000000051F0~~AssetBuilder~~ShaderVariantAssetBuilder: Finished compiling shader function. Number of dynamic branches: 7
+~~1792433420040~~1~~00000000000051F0~~AssetBuilder~~C: [Platform API] = vulkan
+~~1792433420040~~1~~00000000000051F0~~AssetBuilder~~ShaderVariantAssetBuilder: Shader Variant Asset [F:\JericoEngine\JericoEngine\build\n0-validation\native-scene100\sdk-preparation\source\user\AssetProcessorTemp\JobTemp-aTCfPj\DiffuseProbeGridDownsample_vulkan_0.azshadervariant] compiled successfully.
+~~1792433420040~~1~~00000000000051F0~~AssetBuilder~~C: [Platform API] = vulkan
+~~1792433420040~~1~~00000000000051F0~~AssetBuilder~~Preprocessor: builder F:\JericoEngine\JericoEngine\build\n0-validation\native-scene100\sdk-preparation\source\user\AssetProcessorTemp\JobTemp-aTCfPj\DiffuseProbeGridDownsample.azsl.vulkan.prepend -C -+ -IF:\JericoEngine\JericoEngine\build\sdk-vk102\Engine\Render\Features\Assets\DiffuseProbeGrid\Shaders\DiffuseGlobalIllumination -IF:\JericoEngine\JericoEngine\build\n0-validation\native-scene100\sdk-preparation\source -IF:\JericoEngine\JericoEngine\build\n0-validation\native-scene100\sdk-preparation\source\ShaderLib -IF:\JericoEngine\JericoEngine\build\sdk-vk102\Engine\Render\Features\Assets\ShaderLib -IF:\JericoEngine\JericoEngine\build\sdk-vk102\Engine\Render\Integration\RPI\Assets\ShaderLib -IF:\JericoEngine\JericoEngine\build\sdk-vk102\Gems\Atom\RHI\Assets\ShaderLib -IF:\JericoEngine\JericoEngine\build\sdk-vk102 -IF:\JericoEngine\JericoEngine\build\sdk-vk102\Gems
+~~1792433420050~~1~~00000000000051F0~~AssetBuilder~~C: [Platform API] = vulkan
+~~1792433420050~~1~~00000000000051F0~~AssetBuilder~~C: [Trace] = F:/JericoEngine/JericoEngine/Gems/Atom/RHI/Code/Source/RHI.Edit/Utils.cpp(402): 'bool __cdecl AZ::RHI::ReportMessages(class AZStd::basic_string_view<char,struct AZStd::char_traits<char> >,class AZStd::basic_string_view<char,struct AZStd::char_traits<char> >,bool)'
+~~1792433420050~~1~~00000000000051F0~~AssetBuilder~~C: [Type] = Trace::Warning
+~~1792433420050~~1~~00000000000051F0~~AssetBuilder~~W: ShaderAssetBuilder: F:/JericoEngine/JericoEngine/build/n0-validation/native-scene100/sdk-preparation/source/user/AssetProcessorTemp/JobTemp-aTCfPj/DiffuseProbeGridDownsample.azsl.vulkan.prepend:0: warning: Unknown encoding: C.UTF-8
+~~1792433420050~~1~~00000000000051F0~~AssetBuilder~~C: [Platform API] = vulkan
+~~1792433420050~~1~~00000000000051F0~~AssetBuilder~~C: [Trace] = F:/JericoEngine/JericoEngine/Gems/Atom/RHI/Code/Source/RHI.Edit/Utils.cpp(402): 'bool __cdecl AZ::RHI::ReportMessages(class AZStd::basic_string_view<char,struct AZStd::char_traits<char> >,class AZStd::basic_string_view<char,struct AZStd::char_traits<char> >,bool)'
+~~1792433420050~~1~~00000000000051F0~~AssetBuilder~~C: [Type] = Trace::Warning
+~~1792433420050~~1~~00000000000051F0~~AssetBuilder~~W:     
+~~1792433420258~~1~~00000000000051F0~~AssetBuilder~~C: [Platform API] = vulkan
+~~1792433420258~~1~~00000000000051F0~~AssetBuilder~~ShaderAssetBuilder: Preprocessed AZSL File: F:\JericoEngine\JericoEngine\build\n0-validation\native-scene100\sdk-preparation\source\user\AssetProcessorTemp\JobTemp-aTCfPj\DiffuseProbeGridDownsample.azsl.vulkan.prepend 
+~~1792433420258~~1~~00000000000051F0~~AssetBuilder~~C: [Platform API] = vulkan
+~~1792433420258~~1~~00000000000051F0~~AssetBuilder~~ShaderPlatformInterface: Executing '"F:\JericoEngine\JericoEngine\build\sdk-vk102\bin\Windows\profile\Default\azslc.exe" "F:\JericoEngine\JericoEngine\build\n0-validation\native-scene100\sdk-preparation\source\user\AssetProcessorTemp\JobTemp-aTCfPj\DiffuseProbeGridDownsample-NoMSAA_vulkan.azslin" --full --Zpr --W1 --strip-unused-srgs --root-const=128 --sc-options --namespace=vk --unique-idx --no-ms -o "F:\JericoEngine\JericoEngine\build\n0-validation\native-scene100\sdk-preparation\source\user\AssetProcessorTemp\JobTemp-aTCfPj\DiffuseProbeGridDownsample-NoMSAA_vulkan.hlsl"' ...
+~~1792433420258~~1~~00000000000051F0~~AssetBuilder~~C: [Platform API] = vulkan
+~~1792433420258~~1~~00000000000051F0~~AssetBuilder~~ShaderPlatformInterface: AZ::RHI::ExecuteShaderCompiler elapsedTimeMillis: 142
+~~1792433420258~~1~~00000000000051F0~~AssetBuilder~~C: [Platform API] = vulkan
+~~1792433420258~~1~~00000000000051F0~~AssetBuilder~~ShaderVariantAssetBuilder: Variant StableId: 0
+~~1792433420258~~1~~00000000000051F0~~AssetBuilder~~C: [Platform API] = vulkan
+~~1792433420258~~1~~00000000000051F0~~AssetBuilder~~ShaderVariantAssetBuilder: Variant Shader Options: DefaultOption=?
+~~1792433420258~~1~~00000000000051F0~~AssetBuilder~~C: [Platform API] = vulkan
+~~1792433420258~~1~~00000000000051F0~~AssetBuilder~~ShaderVariantAssetBuilder: Entry Point: MainVS
+~~1792433420258~~1~~00000000000051F0~~AssetBuilder~~C: [Platform API] = vulkan
+~~1792433420258~~1~~00000000000051F0~~AssetBuilder~~ShaderVariantAssetBuilder: Begin compiling shader function "MainVS"
+~~1792433420258~~1~~00000000000051F0~~AssetBuilder~~C: [Platform API] = vulkan
+~~1792433420258~~1~~00000000000051F0~~AssetBuilder~~ShaderPlatformInterface: Executing '"F:\JericoEngine\JericoEngine\build\sdk-vk102\bin\Windows\profile\Default\Builders\DirectXShaderCompiler\dxc.exe" -E MainVS -T vs_6_2 -Zpr -spirv -fvk-use-dx-layout -fvk-invert-y -Fo "F:\JericoEngine\JericoEngine\build\n0-validation\native-scene100\sdk-preparation\source\user\AssetProcessorTemp\JobTemp-aTCfPj\DiffuseProbeGridDownsample-NoMSAA_vulkan.spirv.bin" -Fh "F:\JericoEngine\JericoEngine\build\n0-validation\native-scene100\sdk-preparation\source\user\AssetProcessorTemp\JobTemp-aTCfPj\DiffuseProbeGridDownsample-NoMSAA_vulkan.spirv.txt" "F:\JericoEngine\JericoEngine\build\n0-validation\native-scene100\sdk-preparation\source\user\AssetProcessorTemp\JobTemp-aTCfPj\DiffuseProbeGridDownsample-NoMSAA_vulkan.hlsl.prepend"' ...
+~~1792433420258~~1~~00000000000051F0~~AssetBuilder~~C: [Platform API] = vulkan
+~~1792433420258~~1~~00000000000051F0~~AssetBuilder~~ShaderPlatformInterface: AZ::RHI::ExecuteShaderCompiler elapsedTimeMillis: 22
+~~1792433420258~~1~~00000000000051F0~~AssetBuilder~~C: [Platform API] = vulkan
+~~1792433420258~~1~~00000000000051F0~~AssetBuilder~~ShaderVariantAssetBuilder: Finished compiling shader function. Number of dynamic branches: 0
+~~1792433420258~~1~~00000000000051F0~~AssetBuilder~~C: [Platform API] = vulkan
+~~1792433420258~~1~~00000000000051F0~~AssetBuilder~~ShaderVariantAssetBuilder: Entry Point: MainPS
+~~1792433420258~~1~~00000000000051F0~~AssetBuilder~~C: [Platform API] = vulkan
+~~1792433420258~~1~~00000000000051F0~~AssetBuilder~~ShaderVariantAssetBuilder: Begin compiling shader function "MainPS"
+~~1792433420258~~1~~00000000000051F0~~AssetBuilder~~C: [Platform API] = vulkan
+~~1792433420258~~1~~00000000000051F0~~AssetBuilder~~ShaderPlatformInterface: Executing '"F:\JericoEngine\JericoEngine\build\sdk-vk102\bin\Windows\profile\Default\Builders\DirectXShaderCompiler\dxc.exe" -E MainPS -T ps_6_2 -Zpr -spirv -fvk-use-dx-layout -fvk-use-dx-position-w -Fo "F:\JericoEngine\JericoEngine\build\n0-validation\native-scene100\sdk-preparation\source\user\AssetProcessorTemp\JobTemp-aTCfPj\DiffuseProbeGridDownsample-NoMSAA_vulkan.spirv.bin" -Fh "F:\JericoEngine\JericoEngine\build\n0-validation\native-scene100\sdk-preparation\source\user\AssetProcessorTemp\JobTemp-aTCfPj\DiffuseProbeGridDownsample-NoMSAA_vulkan.spirv.txt" "F:\JericoEngine\JericoEngine\build\n0-validation\native-scene100\sdk-preparation\source\user\AssetProcessorTemp\JobTemp-aTCfPj\DiffuseProbeGridDownsample-NoMSAA_vulkan.hlsl.prepend"' ...
+~~1792433420258~~1~~00000000000051F0~~AssetBuilder~~C: [Platform API] = vulkan
+~~1792433420258~~1~~00000000000051F0~~AssetBuilder~~ShaderPlatformInterface: AZ::RHI::ExecuteShaderCompiler elapsedTimeMillis: 24
+~~1792433420258~~1~~00000000000051F0~~AssetBuilder~~C: [Platform API] = vulkan
+~~1792433420258~~1~~00000000000051F0~~AssetBuilder~~ShaderVariantAssetBuilder: Finished compiling shader function. Number of dynamic branches: 7
+~~1792433420258~~1~~00000000000051F0~~AssetBuilder~~C: [Platform API] = vulkan
+~~1792433420258~~1~~00000000000051F0~~AssetBuilder~~ShaderVariantAssetBuilder: Shader Variant Asset [F:\JericoEngine\JericoEngine\build\n0-validation\native-scene100\sdk-preparation\source\user\AssetProcessorTemp\JobTemp-aTCfPj\DiffuseProbeGridDownsample-NoMSAA_vulkan_0.azshadervariant] compiled successfully.
+~~1792433420258~~1~~00000000000051F0~~AssetBuilder~~ShaderAssetBuilder: Finished processing Shaders/DiffuseGlobalIllumination/DiffuseProbeGridDownsample.shader in 0.435 seconds
+~~1792433420258~~1~~00000000000051F0~~AssetBuilder~~AssetBuilder: AllocatorManager after: allocatedBytes = 55074347 capacityBytes = 53687091200; allocated change = 9504
+~~1792433420258~~1~~00000000000051F0~~AssetBuilder~~S: 0 errors, 2 warnings
+~~1792433420259~~1~~00000000000051F0~~Builder::RunJob~~Request stopped builder [8BCEE176629B4766819086E3D9E93D28 - 5] task (process) Shaders/DiffuseGlobalIllumination/DiffuseProbeGridDownsample.shader 

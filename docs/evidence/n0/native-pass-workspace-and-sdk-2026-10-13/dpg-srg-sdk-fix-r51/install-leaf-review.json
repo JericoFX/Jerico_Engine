@@ -1,0 +1,61 @@
+{
+  "schema": "DPG_FEATURES_ASSETS_LEAF_PARENT_REVIEW_R51",
+  "utc": "2026-10-19T17:59:39.3627966Z",
+  "native": {
+    "exitCode": 0,
+    "stdout": {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-corefeature102\\install-dpg-sdk-features-assets-r51-attempt1\\install-dpg-sdk-features-assets-r51.stdout.log",
+      "bytes": 0,
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    "stderr": {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-corefeature102\\install-dpg-sdk-features-assets-r51-attempt1\\install-dpg-sdk-features-assets-r51.stderr.log",
+      "bytes": 0,
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    "ramGuardTriggered": false,
+    "seconds": 0.1665556,
+    "timedOut": false,
+    "priorityRequested": "BelowNormal",
+    "priorityError": null
+  },
+  "postflight": {
+    "accepted": false,
+    "nativeCensusEmpty": true,
+    "utc": "2026-10-19T17:57:12.1410780Z",
+    "inputDrift": 0,
+    "fatal": null,
+    "frozenInputsVerified": true
+  },
+  "binding": {
+    "path": "F:/JericoEngine/JericoEngine/build/n0-validation/native-corefeature102/analysis-parent/diffuse-probe-tools-request-r51/dpg-features-assets-leaf.once.approved.json",
+    "bytes": 5779193,
+    "sha256": "3AF14ED8BE14282C5009E1254EBFA861128F54AB787895C7D06BDC236D2797F6"
+  },
+  "SDKDelta": {
+    "removed": [],
+    "inactive82Absent": true,
+    "added": {
+      "path": "F:/JericoEngine/JericoEngine/build/sdk-vk102/Engine/Render/Features/Assets/ShaderLib/Atom/Features/Terrain/SceneSrg.azsli",
+      "bytes": 587,
+      "sha256": "B5CB22C38957A027E1875D8BAA626FC3808CCF5E84554C565158E2E63DBCC8AD"
+    },
+    "changed": {
+      "path": "F:/JericoEngine/JericoEngine/build/sdk-vk102/Engine/Render/Features/Assets/ShaderResourceGroups/SceneSrgAll.azsli",
+      "bytes": 576,
+      "sha256": "B8CEEC3DBB31D94A48B2CDC3D5B01E96397CB0221CD08F0C289B9EC2E7A16853"
+    },
+    "bytes": 3710792512.0,
+    "files": 11319,
+    "unexpected": []
+  },
+  "derivedActualInventory": {
+    "path": "F:/JericoEngine/JericoEngine/build/n0-validation/native-corefeature102/analysis-parent/diffuse-probe-tools-request-r51/sdk-after-features-leaf-derived-inventory.json",
+    "bytes": 2338209,
+    "sha256": "E0B671EFBEB80B92ABE9653D7686679AB88F28DA338BBDE39BC3C668729C2D09"
+  },
+  "method": "Actual A9DC baseline plus two independently hashed outputs and actual11319 file membership/sizes. Audited D98 terminal postflight protects all11317 unchangedSDK files and producer120; no second full snapshot or C++/wholeSDK rebuild.",
+  "originalPidsRemaining": [],
+  "acceptedScope": "Focal installed shader include seam only. Recook/GUI/GI and wholeGem remain open.",
+  "wholeGemIncrement": 0
+}

@@ -1,0 +1,18 @@
+{
+  "seconds": 303.2514853,
+  "ramGuardTriggered": false,
+  "stdout": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-corefeature102\\cook-dpg-sdk-srg-fix-r51-attempt1\\cook-dpg-sdk-srg-fix-r51.stdout.log",
+    "bytes": 277947,
+    "sha256": "B87793E0FBA6F17732026CF7D17A2EF1169946F01222DF3C9197EBFEC246A394"
+  },
+  "priorityRequested": "BelowNormal",
+  "timedOut": false,
+  "exitCode": 1,
+  "priorityError": null,
+  "stderr": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-corefeature102\\cook-dpg-sdk-srg-fix-r51-attempt1\\cook-dpg-sdk-srg-fix-r51.stderr.log",
+    "bytes": 0,
+    "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+  }
+}

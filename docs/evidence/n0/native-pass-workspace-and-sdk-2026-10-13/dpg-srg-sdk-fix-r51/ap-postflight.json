@@ -1,0 +1,8 @@
+{
+  "nativeCensusEmpty": true,
+  "frozenInputsVerified": true,
+  "accepted": false,
+  "utc": "2026-10-19T18:10:16.2770950Z",
+  "fatal": "Native phase failed: cook-dpg-sdk-srg-fix-r51, exit=1, RAM=False, timeout=False",
+  "inputDrift": 0
+}

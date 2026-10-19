@@ -1,0 +1,214 @@
+{
+  "schema": "DPG_SRG_SOURCE_APPLICATION_R51",
+  "applied": true,
+  "accepted": false,
+  "utc": "2026-10-19T17:51:15.888543+00:00",
+  "parentApprovedProposal": {
+    "path": "F:/JericoEngine/JericoEngine/build/n0-validation/native-corefeature102/analysis-source/dpg-installed-srg-include-diagnostic-r51/fixture-and-terrain-proposal/proposal.json",
+    "bytes": 12440,
+    "sha256": "24C012BF946B5270636FEFDC351088BB12FB9C1431CA5C57BE9CA7591015DD51"
+  },
+  "parentApprovedSameLineAdjustment": "Remove obsolete Temporary until gem comment; include only, no replacement comment.",
+  "operations": [
+    {
+      "index": 0,
+      "target": "F:/JericoEngine/JericoEngine/build/n0-validation/native-scene100/sdk-preparation/source/ShaderLib/scenesrg.srgi",
+      "before": null,
+      "beforeBackup": null,
+      "after": {
+        "path": "F:/JericoEngine/JericoEngine/build/n0-validation/native-scene100/sdk-preparation/source/ShaderLib/scenesrg.srgi",
+        "bytes": 793,
+        "sha256": "0BAB50BED308F31F62A6D234B17BCD47676EF0FF2A4793933A79F507F35B5C89"
+      },
+      "afterBackup": {
+        "path": "F:/JericoEngine/JericoEngine/build/n0-validation/native-corefeature102/analysis-source/dpg-installed-srg-include-diagnostic-r51/fixture-and-terrain-proposal/application-r51/after/00",
+        "bytes": 793,
+        "sha256": "0BAB50BED308F31F62A6D234B17BCD47676EF0FF2A4793933A79F507F35B5C89"
+      },
+      "inverseRestoresAbsence": true
+    },
+    {
+      "index": 1,
+      "target": "F:/JericoEngine/JericoEngine/build/n0-validation/native-scene100/sdk-preparation/source/ShaderLib/viewsrg.srgi",
+      "before": null,
+      "beforeBackup": null,
+      "after": {
+        "path": "F:/JericoEngine/JericoEngine/build/n0-validation/native-scene100/sdk-preparation/source/ShaderLib/viewsrg.srgi",
+        "bytes": 789,
+        "sha256": "33959B6021D4A0276D20F13AD4C36C3D6436B86DE01B32700A63D43179B185C6"
+      },
+      "afterBackup": {
+        "path": "F:/JericoEngine/JericoEngine/build/n0-validation/native-corefeature102/analysis-source/dpg-installed-srg-include-diagnostic-r51/fixture-and-terrain-proposal/application-r51/after/01",
+        "bytes": 789,
+        "sha256": "33959B6021D4A0276D20F13AD4C36C3D6436B86DE01B32700A63D43179B185C6"
+      },
+      "inverseRestoresAbsence": true
+    },
+    {
+      "index": 2,
+      "target": "F:/JericoEngine/JericoEngine/Engine/Render/Features/Assets/ShaderLib/Atom/Features/Terrain/SceneSrg.azsli",
+      "before": null,
+      "beforeBackup": null,
+      "after": {
+        "path": "F:/JericoEngine/JericoEngine/Engine/Render/Features/Assets/ShaderLib/Atom/Features/Terrain/SceneSrg.azsli",
+        "bytes": 587,
+        "sha256": "B5CB22C38957A027E1875D8BAA626FC3808CCF5E84554C565158E2E63DBCC8AD"
+      },
+      "afterBackup": {
+        "path": "F:/JericoEngine/JericoEngine/build/n0-validation/native-corefeature102/analysis-source/dpg-installed-srg-include-diagnostic-r51/fixture-and-terrain-proposal/application-r51/after/02",
+        "bytes": 587,
+        "sha256": "B5CB22C38957A027E1875D8BAA626FC3808CCF5E84554C565158E2E63DBCC8AD"
+      },
+      "inverseRestoresAbsence": true
+    },
+    {
+      "index": 3,
+      "target": "F:/JericoEngine/JericoEngine/Engine/Render/Features/Assets/ShaderResourceGroups/SceneSrgAll.azsli",
+      "before": {
+        "path": "F:/JericoEngine/JericoEngine/Engine/Render/Features/Assets/ShaderResourceGroups/SceneSrgAll.azsli",
+        "bytes": 657,
+        "sha256": "438D872FADAA0188EBDE4E7C560352C6C567F07DFFE2294D9D95522C7590C5D5"
+      },
+      "beforeBackup": {
+        "path": "F:/JericoEngine/JericoEngine/build/n0-validation/native-corefeature102/analysis-source/dpg-installed-srg-include-diagnostic-r51/fixture-and-terrain-proposal/application-r51/before/03",
+        "bytes": 657,
+        "sha256": "438D872FADAA0188EBDE4E7C560352C6C567F07DFFE2294D9D95522C7590C5D5"
+      },
+      "after": {
+        "path": "F:/JericoEngine/JericoEngine/Engine/Render/Features/Assets/ShaderResourceGroups/SceneSrgAll.azsli",
+        "bytes": 576,
+        "sha256": "B8CEEC3DBB31D94A48B2CDC3D5B01E96397CB0221CD08F0C289B9EC2E7A16853"
+      },
+      "afterBackup": {
+        "path": "F:/JericoEngine/JericoEngine/build/n0-validation/native-corefeature102/analysis-source/dpg-installed-srg-include-diagnostic-r51/fixture-and-terrain-proposal/application-r51/after/03",
+        "bytes": 576,
+        "sha256": "B8CEEC3DBB31D94A48B2CDC3D5B01E96397CB0221CD08F0C289B9EC2E7A16853"
+      },
+      "inverseRestoresAbsence": false
+    },
+    {
+      "index": 4,
+      "target": "F:/JericoEngine/JericoEngine/Gems/Terrain/Assets/Shaders/Terrain/SceneSrg.azsli",
+      "before": {
+        "path": "F:/JericoEngine/JericoEngine/Gems/Terrain/Assets/Shaders/Terrain/SceneSrg.azsli",
+        "bytes": 587,
+        "sha256": "B5CB22C38957A027E1875D8BAA626FC3808CCF5E84554C565158E2E63DBCC8AD"
+      },
+      "beforeBackup": {
+        "path": "F:/JericoEngine/JericoEngine/build/n0-validation/native-corefeature102/analysis-source/dpg-installed-srg-include-diagnostic-r51/fixture-and-terrain-proposal/application-r51/before/04",
+        "bytes": 587,
+        "sha256": "B5CB22C38957A027E1875D8BAA626FC3808CCF5E84554C565158E2E63DBCC8AD"
+      },
+      "after": null,
+      "afterBackup": null,
+      "inverseRestoresAbsence": false
+    }
+  ],
+  "operationCount": 5,
+  "createCount": 3,
+  "modifyCount": 1,
+  "deleteCount": 1,
+  "postimagesVerified": 5,
+  "oldTerrainProviderAbsent": true,
+  "uniqueProviderPayloadByteExact": true,
+  "consumersUnchanged": [
+    {
+      "path": "F:/JericoEngine/JericoEngine/Gems/Terrain/Assets/Shaders/Terrain/TerrainCommon.azsli",
+      "bytes": 2828,
+      "sha256": "487DFCCEA873C05194505DD8D519F03F0C5F5093E6376ADD39D5964BDB3AD7E2"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/Gems/Terrain/Assets/Shaders/Terrain/Terrain_DepthPass.azsl",
+      "bytes": 802,
+      "sha256": "5CE786CE28AE8AF10A13B348F2985C4312C7B1CAECCCF01D24714222390A626F"
+    },
+    {
+      "path": "F:/JericoEngine/JericoEngine/Gems/Terrain/Assets/Shaders/Terrain/TerrainPBR_ForwardPass.azsl",
+      "bytes": 10009,
+      "sha256": "D31516154206B6A0141BB91E12532B1054957F4EF6C9167460E09D663F4390E8"
+    }
+  ],
+  "privateConsumerOriginal4Unchanged": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-scene100\\sdk-preparation\\source\\main.cpp",
+      "bytes": 47260,
+      "sha256": "74EE7069FD0BA527BD093DFAAC52745CC060C6934856F006CCB4047B6BF7DCA2"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-scene100\\sdk-preparation\\source\\CMakeLists.txt",
+      "bytes": 11154,
+      "sha256": "A39F02BA2CF283D268367C1F2F276B57A31D3DA1214A68A03D93FAEA2E0C9512"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-scene100\\sdk-preparation\\source\\consumer_files.cmake",
+      "bytes": 25,
+      "sha256": "2F0ACA6BAD0CF988A388EC9D4664ED2E2D507B4E03958E23730768D314E3006E"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-scene100\\sdk-preparation\\source\\project.json",
+      "bytes": 388,
+      "sha256": "3A7625CD2BE22DFD8B3C36C4C68932693611513A980111870371A291F12197C4"
+    }
+  ],
+  "physicalInverseReplay": [
+    {
+      "index": 0,
+      "restoredAbsence": true
+    },
+    {
+      "index": 1,
+      "restoredAbsence": true
+    },
+    {
+      "index": 2,
+      "restoredAbsence": true
+    },
+    {
+      "index": 3,
+      "restoredOriginalBytes": true
+    },
+    {
+      "index": 4,
+      "restoredOriginalBytes": true
+    }
+  ],
+  "inverseRestoresAll5OriginalBytesOrAbsences": true,
+  "sameLineOnly": true,
+  "aggregateLineCountPreserved": true,
+  "aggregateLineEndingCountsBeforeAfter": {
+    "beforeCRLF": 17,
+    "afterCRLF": 17,
+    "beforeLF": 17,
+    "afterLF": 17
+  },
+  "sourceR9Historical": {
+    "freezeNotModified": true,
+    "scopeInputsActuallyIntersecting": [
+      {
+        "path": "F:\\JericoEngine\\JericoEngine\\Engine\\Render\\Features\\Assets\\ShaderResourceGroups\\SceneSrgAll.azsli",
+        "bytes": 657,
+        "sha256": "438D872FADAA0188EBDE4E7C560352C6C567F07DFFE2294D9D95522C7590C5D5"
+      }
+    ],
+    "scopeAbsentInputsActuallyIntersecting": [],
+    "freshR10RequiredBeforeNextJob": true,
+    "fullR9PostflightNotClaimed": "Only assigned5paths/3consumers/consumer4 verified by W1. Parent owns new fullfreeze and other writers."
+  },
+  "forward": {
+    "path": "F:/JericoEngine/JericoEngine/build/n0-validation/native-corefeature102/analysis-source/dpg-installed-srg-include-diagnostic-r51/fixture-and-terrain-proposal/application-r51/forward.diff",
+    "bytes": 3991,
+    "sha256": "0C4E3BCF183AB55234AD11CC6D36F1C5CEB78B555AE6DCBF256C1254FD3BB647"
+  },
+  "inverse": {
+    "path": "F:/JericoEngine/JericoEngine/build/n0-validation/native-corefeature102/analysis-source/dpg-installed-srg-include-diagnostic-r51/fixture-and-terrain-proposal/application-r51/inverse.diff",
+    "bytes": 3991,
+    "sha256": "6191726944CE3D365B7948ED804EF675B4C0D0984130D7AEE70C880233BBAA3D"
+  },
+  "skillsCompleteReadingReused": {
+    "cpp": "53017F862C526DF6080210A1A00E6678C2CD5382B5D1A51026BF3B0BDE7F7ED2",
+    "game": "4578FACCE19AC99396E5FE904EAC173066FA517AF16AE0F49B03F9082A1057EC"
+  },
+  "GraftReuse": "No new C++ lookup or change; reused fresh Preprocessor1A82/card/fallback proof from prior diagnostic. Asset/config fixture changes do not justify new graph loader.",
+  "noBuildCookInstallGitDocsExecuted": true,
+  "wholeGemIncrement": 0
+}

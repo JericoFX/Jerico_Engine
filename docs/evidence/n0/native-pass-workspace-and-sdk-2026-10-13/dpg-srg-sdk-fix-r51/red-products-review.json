@@ -1,0 +1,1574 @@
+{
+  "schema": "DPG_POSTAP19_ACTUAL_PRODUCT_JOIN_PARENT_R51",
+  "utc": "2026-10-19T17:51:52.8372643Z",
+  "queryPin": {
+    "path": "F:/JericoEngine/JericoEngine/build/n0-validation/native-corefeature102/analysis-wiring/dpg-t2-implementation-r51/postcook-readonly-preparation-r51-r2/execution-after-dpg-sdk19-r51-attempt1/query-result.json",
+    "bytes": 305156,
+    "sha256": "C496F60D1AE117EC3938E98644B3D2CA4828795C054DCC86A8AD5BCDB0B29616"
+  },
+  "recipePin": {
+    "path": "F:/JericoEngine/JericoEngine/build/n0-validation/native-corefeature102/analysis-wiring/dpg-t2-implementation-r51/postcook-readonly-preparation-r51-r2/recipe.json",
+    "bytes": 8312,
+    "sha256": "1631880B4BCB3F113639F1F383CB52FDE5EB459D5EA196F08B7407157CF48A44"
+  },
+  "oraclePin": {
+    "path": "F:/JericoEngine/JericoEngine/build/n0-validation/native-corefeature102/analysis-wiring/dpg-t2-implementation-r51/precompiled-expected-oracle-r51/expected-manifest.json",
+    "bytes": 117697,
+    "sha256": "71EA80AF1E80B35E69BAB2B02D1B33F742D8ED705F91F69B6368DB919AF8BCF9"
+  },
+  "descriptors": [
+    {
+      "index": 0,
+      "source": "Shaders/DiffuseGlobalIllumination/DiffuseProbeGridBlendDistance.precompiledshader",
+      "jobCount": 1,
+      "productCount": 1,
+      "jobID": "528",
+      "runKey": "4750",
+      "status": "4",
+      "errors": "0",
+      "warnings": "0",
+      "lastLogTime": "1792431903307",
+      "withinActualCook": true,
+      "sourceGuidHex": "34e20a18cb2e5d9384cfc2b9e144da75",
+      "subID": "0",
+      "assetTypeHex": "823395a3d57049f499a9d820cd1def98",
+      "productID": "728",
+      "logPin": {
+        "path": "F:/JericoEngine/JericoEngine/build/n0-validation/ap102-dpg-precompiled19-sdk-logs-attempt1/JobLogs/Shaders/DiffuseGlobalIllumination/DiffuseProbeGridBlendDistance.precompiledshader-2428291008-4750.log",
+        "bytes": 1243,
+        "sha256": "A88D5FA6A179884E0AB46BA3FDA6ADA1DF006806EC25C452AFB9C9A68514B811"
+      },
+      "productPin": {
+        "path": "F:/JericoEngine/JericoEngine/build/n0-validation/native-scene100/sdk-preparation/source/Cache/pc/shaders/diffuseglobalillumination/diffuseprobegridblenddistance.azshader",
+        "bytes": 99728,
+        "sha256": "0A26DAC8BFEAAC1F4322595B6D208066AC71A4AB12B79D4BC2196EE2D176DC72"
+      },
+      "pass": true
+    },
+    {
+      "index": 1,
+      "source": "Shaders/DiffuseGlobalIllumination/DiffuseProbeGridBlendIrradiance.precompiledshader",
+      "jobCount": 1,
+      "productCount": 1,
+      "jobID": "529",
+      "runKey": "4752",
+      "status": "4",
+      "errors": "0",
+      "warnings": "0",
+      "lastLogTime": "1792431903349",
+      "withinActualCook": true,
+      "sourceGuidHex": "f70a2001cc2c5dfebc87b98a4e0e57eb",
+      "subID": "0",
+      "assetTypeHex": "823395a3d57049f499a9d820cd1def98",
+      "productID": "729",
+      "logPin": {
+        "path": "F:/JericoEngine/JericoEngine/build/n0-validation/ap102-dpg-precompiled19-sdk-logs-attempt1/JobLogs/Shaders/DiffuseGlobalIllumination/DiffuseProbeGridBlendIrradiance.precompiledshader-1304751946-4752.log",
+        "bytes": 1249,
+        "sha256": "8052C2F2F011754561546590004355EFDCFC586B4EDCD4768DF58C37FA745F78"
+      },
+      "productPin": {
+        "path": "F:/JericoEngine/JericoEngine/build/n0-validation/native-scene100/sdk-preparation/source/Cache/pc/shaders/diffuseglobalillumination/diffuseprobegridblendirradiance.azshader",
+        "bytes": 99858,
+        "sha256": "DD9826DF39CCC060D71C744A18D92BFD51464DF035DF258258FE1E412F472FCD"
+      },
+      "pass": true
+    },
+    {
+      "index": 2,
+      "source": "Shaders/DiffuseGlobalIllumination/DiffuseProbeGridBorderUpdateColumn.precompiledshader",
+      "jobCount": 1,
+      "productCount": 1,
+      "jobID": "530",
+      "runKey": "4754",
+      "status": "4",
+      "errors": "0",
+      "warnings": "0",
+      "lastLogTime": "1792431903374",
+      "withinActualCook": true,
+      "sourceGuidHex": "f60afd1e1ced5e33930e17db4eaa1f81",
+      "subID": "0",
+      "assetTypeHex": "823395a3d57049f499a9d820cd1def98",
+      "productID": "730",
+      "logPin": {
+        "path": "F:/JericoEngine/JericoEngine/build/n0-validation/ap102-dpg-precompiled19-sdk-logs-attempt1/JobLogs/Shaders/DiffuseGlobalIllumination/DiffuseProbeGridBorderUpdateColumn.precompiledshader-1453792335-4754.log",
+        "bytes": 1257,
+        "sha256": "6332BDDE2346531273246AFFE1D9D7D1E11BFBCA5CCDD077A856147811F608D2"
+      },
+      "productPin": {
+        "path": "F:/JericoEngine/JericoEngine/build/n0-validation/native-scene100/sdk-preparation/source/Cache/pc/shaders/diffuseglobalillumination/diffuseprobegridborderupdatecolumn.azshader",
+        "bytes": 10300,
+        "sha256": "43BCA24726BCC862B1ABD8C0B404D8EEFE2E0D6DF8CA90BBD4708B85C0CF3365"
+      },
+      "pass": true
+    },
+    {
+      "index": 3,
+      "source": "Shaders/DiffuseGlobalIllumination/DiffuseProbeGridBorderUpdateRow.precompiledshader",
+      "jobCount": 1,
+      "productCount": 1,
+      "jobID": "531",
+      "runKey": "4756",
+      "status": "4",
+      "errors": "0",
+      "warnings": "0",
+      "lastLogTime": "1792431903399",
+      "withinActualCook": true,
+      "sourceGuidHex": "44260d0599d85a8683e7b7c5ec48f297",
+      "subID": "0",
+      "assetTypeHex": "823395a3d57049f499a9d820cd1def98",
+      "productID": "731",
+      "logPin": {
+        "path": "F:/JericoEngine/JericoEngine/build/n0-validation/ap102-dpg-precompiled19-sdk-logs-attempt1/JobLogs/Shaders/DiffuseGlobalIllumination/DiffuseProbeGridBorderUpdateRow.precompiledshader-921060440-4756.log",
+        "bytes": 1248,
+        "sha256": "3A35E04CE942CDE23B1F11FF333543784FC087FBAD65A2450792B06A94489C4D"
+      },
+      "productPin": {
+        "path": "F:/JericoEngine/JericoEngine/build/n0-validation/native-scene100/sdk-preparation/source/Cache/pc/shaders/diffuseglobalillumination/diffuseprobegridborderupdaterow.azshader",
+        "bytes": 10294,
+        "sha256": "5F54856CB4E6FA31C3D821F170D4142ACD54139F86DBF1A62C042E4CEBE500D4"
+      },
+      "pass": true
+    },
+    {
+      "index": 4,
+      "source": "Shaders/DiffuseGlobalIllumination/DiffuseProbeGridClassification.precompiledshader",
+      "jobCount": 1,
+      "productCount": 1,
+      "jobID": "532",
+      "runKey": "4758",
+      "status": "4",
+      "errors": "0",
+      "warnings": "0",
+      "lastLogTime": "1792431903440",
+      "withinActualCook": true,
+      "sourceGuidHex": "7547fd2e163058b19293f4c9f33e0d72",
+      "subID": "0",
+      "assetTypeHex": "823395a3d57049f499a9d820cd1def98",
+      "productID": "732",
+      "logPin": {
+        "path": "F:/JericoEngine/JericoEngine/build/n0-validation/ap102-dpg-precompiled19-sdk-logs-attempt1/JobLogs/Shaders/DiffuseGlobalIllumination/DiffuseProbeGridClassification.precompiledshader-2786221899-4758.log",
+        "bytes": 1246,
+        "sha256": "4F0A33651E11E2A9C5EAA992D1AE985FF84F50B5C9E4FAB1A6E5BF9D4486202C"
+      },
+      "productPin": {
+        "path": "F:/JericoEngine/JericoEngine/build/n0-validation/native-scene100/sdk-preparation/source/Cache/pc/shaders/diffuseglobalillumination/diffuseprobegridclassification.azshader",
+        "bytes": 92449,
+        "sha256": "D5DA514557504E334462C1C6CA88AD408CF30355FFA0491B4EED29A020EB9698"
+      },
+      "pass": true
+    },
+    {
+      "index": 5,
+      "source": "Shaders/DiffuseGlobalIllumination/DiffuseProbeGridPrepare.precompiledshader",
+      "jobCount": 1,
+      "productCount": 1,
+      "jobID": "533",
+      "runKey": "4760",
+      "status": "4",
+      "errors": "0",
+      "warnings": "0",
+      "lastLogTime": "1792431903464",
+      "withinActualCook": true,
+      "sourceGuidHex": "49d6ca837ae45bf59428636b9eb6dcc7",
+      "subID": "0",
+      "assetTypeHex": "823395a3d57049f499a9d820cd1def98",
+      "productID": "733",
+      "logPin": {
+        "path": "F:/JericoEngine/JericoEngine/build/n0-validation/ap102-dpg-precompiled19-sdk-logs-attempt1/JobLogs/Shaders/DiffuseGlobalIllumination/DiffuseProbeGridPrepare.precompiledshader-359764151-4760.log",
+        "bytes": 1224,
+        "sha256": "0780529FDCE29971B982354C4B6D20CBF7A09EAC4888F9727A17EDEA86424687"
+      },
+      "productPin": {
+        "path": "F:/JericoEngine/JericoEngine/build/n0-validation/native-scene100/sdk-preparation/source/Cache/pc/shaders/diffuseglobalillumination/diffuseprobegridprepare.azshader",
+        "bytes": 21602,
+        "sha256": "AEFEF335828E36A466E95ABB6BE5175A63AEEEC77954DD156D56C17807FCEB34"
+      },
+      "pass": true
+    },
+    {
+      "index": 6,
+      "source": "Shaders/DiffuseGlobalIllumination/DiffuseProbeGridQuery.precompiledshader",
+      "jobCount": 1,
+      "productCount": 1,
+      "jobID": "534",
+      "runKey": "4762",
+      "status": "4",
+      "errors": "0",
+      "warnings": "0",
+      "lastLogTime": "1792431903486",
+      "withinActualCook": true,
+      "sourceGuidHex": "d20adc05ecf9530593fcf0a88ab2072d",
+      "subID": "0",
+      "assetTypeHex": "823395a3d57049f499a9d820cd1def98",
+      "productID": "734",
+      "logPin": {
+        "path": "F:/JericoEngine/JericoEngine/build/n0-validation/ap102-dpg-precompiled19-sdk-logs-attempt1/JobLogs/Shaders/DiffuseGlobalIllumination/DiffuseProbeGridQuery.precompiledshader-729260281-4762.log",
+        "bytes": 1218,
+        "sha256": "B2CFEF7A725E63B19C6EB7E70E553747034A195DB93C27BA8CAEE1BA371DD793"
+      },
+      "productPin": {
+        "path": "F:/JericoEngine/JericoEngine/build/n0-validation/native-scene100/sdk-preparation/source/Cache/pc/shaders/diffuseglobalillumination/diffuseprobegridquery.azshader",
+        "bytes": 18467,
+        "sha256": "413185D2337B7A406378F2E9566BF13ECD972865AD68D4147F60D99AA4C49BD9"
+      },
+      "pass": true
+    },
+    {
+      "index": 7,
+      "source": "Shaders/DiffuseGlobalIllumination/DiffuseProbeGridQueryFullScreen.precompiledshader",
+      "jobCount": 1,
+      "productCount": 1,
+      "jobID": "535",
+      "runKey": "4764",
+      "status": "4",
+      "errors": "0",
+      "warnings": "0",
+      "lastLogTime": "1792431903512",
+      "withinActualCook": true,
+      "sourceGuidHex": "59c6f5443cfe5f2ba4a1e1d14bab6839",
+      "subID": "0",
+      "assetTypeHex": "823395a3d57049f499a9d820cd1def98",
+      "productID": "735",
+      "logPin": {
+        "path": "F:/JericoEngine/JericoEngine/build/n0-validation/ap102-dpg-precompiled19-sdk-logs-attempt1/JobLogs/Shaders/DiffuseGlobalIllumination/DiffuseProbeGridQueryFullScreen.precompiledshader-485850207-4764.log",
+        "bytes": 1249,
+        "sha256": "51E7B48FAC1A15B4540E43B2D9882C124783543A5AA979285E769B7EB85C1198"
+      },
+      "productPin": {
+        "path": "F:/JericoEngine/JericoEngine/build/n0-validation/native-scene100/sdk-preparation/source/Cache/pc/shaders/diffuseglobalillumination/diffuseprobegridqueryfullscreen.azshader",
+        "bytes": 92867,
+        "sha256": "DA78942A089BFAD2CBB59D3EBA1167D13E84C3443F82471334B624C11428EBA5"
+      },
+      "pass": true
+    },
+    {
+      "index": 8,
+      "source": "Shaders/DiffuseGlobalIllumination/DiffuseProbeGridQueryFullScreenWithAlbedo.precompiledshader",
+      "jobCount": 1,
+      "productCount": 1,
+      "jobID": "536",
+      "runKey": "4766",
+      "status": "4",
+      "errors": "0",
+      "warnings": "0",
+      "lastLogTime": "1792431903539",
+      "withinActualCook": true,
+      "sourceGuidHex": "2aac574de80d5d41be1232b192306fd1",
+      "subID": "0",
+      "assetTypeHex": "823395a3d57049f499a9d820cd1def98",
+      "productID": "736",
+      "logPin": {
+        "path": "F:/JericoEngine/JericoEngine/build/n0-validation/ap102-dpg-precompiled19-sdk-logs-attempt1/JobLogs/Shaders/DiffuseGlobalIllumination/DiffuseProbeGridQueryFullScreenWithAlbedo.precompiledshader-2879686856-4766.log",
+        "bytes": 1279,
+        "sha256": "1BA2A471058FF6A6961E4B3EC77242B57AE5F6CCC498BF97073282F9249096D9"
+      },
+      "productPin": {
+        "path": "F:/JericoEngine/JericoEngine/build/n0-validation/native-scene100/sdk-preparation/source/Cache/pc/shaders/diffuseglobalillumination/diffuseprobegridqueryfullscreenwithalbedo.azshader",
+        "bytes": 92907,
+        "sha256": "487DD8ED2ECB6767E0855F6BD86B04F5162A6EFC465187249FF3F969D32E6AC3"
+      },
+      "pass": true
+    },
+    {
+      "index": 9,
+      "source": "Shaders/DiffuseGlobalIllumination/DiffuseProbeGridRayTracing.precompiledshader",
+      "jobCount": 1,
+      "productCount": 1,
+      "jobID": "537",
+      "runKey": "4768",
+      "status": "4",
+      "errors": "0",
+      "warnings": "0",
+      "lastLogTime": "1792431903565",
+      "withinActualCook": true,
+      "sourceGuidHex": "55bdc206985952d8ae08457f5664f509",
+      "subID": "0",
+      "assetTypeHex": "823395a3d57049f499a9d820cd1def98",
+      "productID": "737",
+      "logPin": {
+        "path": "F:/JericoEngine/JericoEngine/build/n0-validation/ap102-dpg-precompiled19-sdk-logs-attempt1/JobLogs/Shaders/DiffuseGlobalIllumination/DiffuseProbeGridRayTracing.precompiledshader-2985357655-4768.log",
+        "bytes": 1234,
+        "sha256": "AB530F6CE473936F97EF2FB9D7B10F1F3FDDF133024646EC24582BCD1F837CCC"
+      },
+      "productPin": {
+        "path": "F:/JericoEngine/JericoEngine/build/n0-validation/native-scene100/sdk-preparation/source/Cache/pc/shaders/diffuseglobalillumination/diffuseprobegridraytracing.azshader",
+        "bytes": 81009,
+        "sha256": "F60CC1C986451647396548CCDD84ABE137EB546E07AD71059A0CC6F59BEF1724"
+      },
+      "pass": true
+    },
+    {
+      "index": 10,
+      "source": "Shaders/DiffuseGlobalIllumination/DiffuseProbeGridRayTracingClosestHit.precompiledshader",
+      "jobCount": 1,
+      "productCount": 1,
+      "jobID": "538",
+      "runKey": "4770",
+      "status": "4",
+      "errors": "0",
+      "warnings": "0",
+      "lastLogTime": "1792431903590",
+      "withinActualCook": true,
+      "sourceGuidHex": "3e4941a556bf5ecd95b364e6d6803159",
+      "subID": "0",
+      "assetTypeHex": "823395a3d57049f499a9d820cd1def98",
+      "productID": "738",
+      "logPin": {
+        "path": "F:/JericoEngine/JericoEngine/build/n0-validation/ap102-dpg-precompiled19-sdk-logs-attempt1/JobLogs/Shaders/DiffuseGlobalIllumination/DiffuseProbeGridRayTracingClosestHit.precompiledshader-594404495-4770.log",
+        "bytes": 1264,
+        "sha256": "ABA13F474CEE4F5BE796EEAD86820406228A08D949258D7B5911CDBA9F838B08"
+      },
+      "productPin": {
+        "path": "F:/JericoEngine/JericoEngine/build/n0-validation/native-scene100/sdk-preparation/source/Cache/pc/shaders/diffuseglobalillumination/diffuseprobegridraytracingclosesthit.azshader",
+        "bytes": 81029,
+        "sha256": "208239ED7FD979F8DC827A49EF00FD44099DF6902CDE6C68DD8C1128FFF6A9CE"
+      },
+      "pass": true
+    },
+    {
+      "index": 11,
+      "source": "Shaders/DiffuseGlobalIllumination/DiffuseProbeGridRayTracingMiss.precompiledshader",
+      "jobCount": 1,
+      "productCount": 1,
+      "jobID": "539",
+      "runKey": "4772",
+      "status": "4",
+      "errors": "0",
+      "warnings": "0",
+      "lastLogTime": "1792431903617",
+      "withinActualCook": true,
+      "sourceGuidHex": "eb5538d41028534c9fc01421e0926e31",
+      "subID": "0",
+      "assetTypeHex": "823395a3d57049f499a9d820cd1def98",
+      "productID": "739",
+      "logPin": {
+        "path": "F:/JericoEngine/JericoEngine/build/n0-validation/ap102-dpg-precompiled19-sdk-logs-attempt1/JobLogs/Shaders/DiffuseGlobalIllumination/DiffuseProbeGridRayTracingMiss.precompiledshader-1036631278-4772.log",
+        "bytes": 1246,
+        "sha256": "B81D4EF61DFB205AC67E971D5BF28891BD9171AA99A6BFEEA7A5D504A6A04073"
+      },
+      "productPin": {
+        "path": "F:/JericoEngine/JericoEngine/build/n0-validation/native-scene100/sdk-preparation/source/Cache/pc/shaders/diffuseglobalillumination/diffuseprobegridraytracingmiss.azshader",
+        "bytes": 81017,
+        "sha256": "FD3CD7262850A6AB62D48B480169B29A518FB1826D54E7C363DF4286278FDF64"
+      },
+      "pass": true
+    },
+    {
+      "index": 12,
+      "source": "Shaders/DiffuseGlobalIllumination/DiffuseProbeGridRelocation.precompiledshader",
+      "jobCount": 1,
+      "productCount": 1,
+      "jobID": "540",
+      "runKey": "4774",
+      "status": "4",
+      "errors": "0",
+      "warnings": "0",
+      "lastLogTime": "1792431903640",
+      "withinActualCook": true,
+      "sourceGuidHex": "582d60385953585b8840ca5b993b5b08",
+      "subID": "0",
+      "assetTypeHex": "823395a3d57049f499a9d820cd1def98",
+      "productID": "740",
+      "logPin": {
+        "path": "F:/JericoEngine/JericoEngine/build/n0-validation/ap102-dpg-precompiled19-sdk-logs-attempt1/JobLogs/Shaders/DiffuseGlobalIllumination/DiffuseProbeGridRelocation.precompiledshader-1947981531-4774.log",
+        "bytes": 1233,
+        "sha256": "FA724315ECD379ABFC205BB98B46B0997F5E4C4A3040B57A0F76D996F073B7F6"
+      },
+      "productPin": {
+        "path": "F:/JericoEngine/JericoEngine/build/n0-validation/native-scene100/sdk-preparation/source/Cache/pc/shaders/diffuseglobalillumination/diffuseprobegridrelocation.azshader",
+        "bytes": 12708,
+        "sha256": "494198CDEBA2B640A7465A16D9B74DCBBAC794BE0F0000FB8E2614D952A7C56B"
+      },
+      "pass": true
+    },
+    {
+      "index": 13,
+      "source": "Shaders/DiffuseGlobalIllumination/DiffuseProbeGridRender.precompiledshader",
+      "jobCount": 1,
+      "productCount": 1,
+      "jobID": "541",
+      "runKey": "4776",
+      "status": "4",
+      "errors": "0",
+      "warnings": "0",
+      "lastLogTime": "1792431903674",
+      "withinActualCook": true,
+      "sourceGuidHex": "5a28bc2622c85dc2870b3ee03a6dc723",
+      "subID": "0",
+      "assetTypeHex": "823395a3d57049f499a9d820cd1def98",
+      "productID": "741",
+      "logPin": {
+        "path": "F:/JericoEngine/JericoEngine/build/n0-validation/ap102-dpg-precompiled19-sdk-logs-attempt1/JobLogs/Shaders/DiffuseGlobalIllumination/DiffuseProbeGridRender.precompiledshader-260356632-4776.log",
+        "bytes": 1222,
+        "sha256": "D2D2EE6D5871EACC655A3B552E48B73D2DFB76919594E5312DA869C54B2032CF"
+      },
+      "productPin": {
+        "path": "F:/JericoEngine/JericoEngine/build/n0-validation/native-scene100/sdk-preparation/source/Cache/pc/shaders/diffuseglobalillumination/diffuseprobegridrender.azshader",
+        "bytes": 186612,
+        "sha256": "8F8948A3DB305366C807F3A4BCF79CD61B4BCF229D71B86A1D97929F8A780E55"
+      },
+      "pass": true
+    },
+    {
+      "index": 14,
+      "source": "Shaders/DiffuseGlobalIllumination/DiffuseProbeGridVisualizationPrepare.precompiledshader",
+      "jobCount": 1,
+      "productCount": 1,
+      "jobID": "542",
+      "runKey": "4778",
+      "status": "4",
+      "errors": "0",
+      "warnings": "0",
+      "lastLogTime": "1792431903701",
+      "withinActualCook": true,
+      "sourceGuidHex": "b3b664b643405a359a67dc00a5361d62",
+      "subID": "0",
+      "assetTypeHex": "823395a3d57049f499a9d820cd1def98",
+      "productID": "742",
+      "logPin": {
+        "path": "F:/JericoEngine/JericoEngine/build/n0-validation/ap102-dpg-precompiled19-sdk-logs-attempt1/JobLogs/Shaders/DiffuseGlobalIllumination/DiffuseProbeGridVisualizationPrepare.precompiledshader-1789975460-4778.log",
+        "bytes": 1263,
+        "sha256": "CB7A61086C509038529EFA5858B0138F8922229E4C56AC2A60F5E7D87AABC3B5"
+      },
+      "productPin": {
+        "path": "F:/JericoEngine/JericoEngine/build/n0-validation/native-scene100/sdk-preparation/source/Cache/pc/shaders/diffuseglobalillumination/diffuseprobegridvisualizationprepare.azshader",
+        "bytes": 12235,
+        "sha256": "EFADC8F029D3D075D6558B18E26C111D628421BD3C7181618B761F3B5A0120B8"
+      },
+      "pass": true
+    },
+    {
+      "index": 15,
+      "source": "Shaders/DiffuseGlobalIllumination/DiffuseProbeGridVisualizationRayTracing.precompiledshader",
+      "jobCount": 1,
+      "productCount": 1,
+      "jobID": "543",
+      "runKey": "4780",
+      "status": "4",
+      "errors": "0",
+      "warnings": "0",
+      "lastLogTime": "1792431903725",
+      "withinActualCook": true,
+      "sourceGuidHex": "189103a665485b7ea3ac0f854d865b09",
+      "subID": "0",
+      "assetTypeHex": "823395a3d57049f499a9d820cd1def98",
+      "productID": "743",
+      "logPin": {
+        "path": "F:/JericoEngine/JericoEngine/build/n0-validation/ap102-dpg-precompiled19-sdk-logs-attempt1/JobLogs/Shaders/DiffuseGlobalIllumination/DiffuseProbeGridVisualizationRayTracing.precompiledshader-1350469865-4780.log",
+        "bytes": 1273,
+        "sha256": "F31032145004936FCBC8FFBD0D17F8E28D5CD3E8CE18D57D26A6E66E1F5E4D2D"
+      },
+      "productPin": {
+        "path": "F:/JericoEngine/JericoEngine/build/n0-validation/native-scene100/sdk-preparation/source/Cache/pc/shaders/diffuseglobalillumination/diffuseprobegridvisualizationraytracing.azshader",
+        "bytes": 149843,
+        "sha256": "E725EBBACD9280CA2C004F0A829F766D11F3B9B371C70642E2600AA6E1E1E483"
+      },
+      "pass": true
+    },
+    {
+      "index": 16,
+      "source": "Shaders/DiffuseGlobalIllumination/DiffuseProbeGridVisualizationRayTracingClosestHit.precompiledshader",
+      "jobCount": 1,
+      "productCount": 1,
+      "jobID": "544",
+      "runKey": "4782",
+      "status": "4",
+      "errors": "0",
+      "warnings": "0",
+      "lastLogTime": "1792431903752",
+      "withinActualCook": true,
+      "sourceGuidHex": "858724e9b36d5f368944947224609995",
+      "subID": "0",
+      "assetTypeHex": "823395a3d57049f499a9d820cd1def98",
+      "productID": "744",
+      "logPin": {
+        "path": "F:/JericoEngine/JericoEngine/build/n0-validation/ap102-dpg-precompiled19-sdk-logs-attempt1/JobLogs/Shaders/DiffuseGlobalIllumination/DiffuseProbeGridVisualizationRayTracingClosestHit.precompiledshader-204738752-4782.log",
+        "bytes": 1303,
+        "sha256": "A488066FAABA50FE2500E1C70209824EF4A4BA509636CFF21DF6F35AB4E592F2"
+      },
+      "productPin": {
+        "path": "F:/JericoEngine/JericoEngine/build/n0-validation/native-scene100/sdk-preparation/source/Cache/pc/shaders/diffuseglobalillumination/diffuseprobegridvisualizationraytracingclosesthit.azshader",
+        "bytes": 123440,
+        "sha256": "30E7060761E079F133C9149CA11A7B7776385B55D0ADE8B01D17EDAA3B651011"
+      },
+      "pass": true
+    },
+    {
+      "index": 17,
+      "source": "Shaders/DiffuseGlobalIllumination/DiffuseProbeGridVisualizationRayTracingMiss.precompiledshader",
+      "jobCount": 1,
+      "productCount": 1,
+      "jobID": "545",
+      "runKey": "4784",
+      "status": "4",
+      "errors": "0",
+      "warnings": "0",
+      "lastLogTime": "1792431903778",
+      "withinActualCook": true,
+      "sourceGuidHex": "59981f358d895f2bb3ebc94f46a3a7fa",
+      "subID": "0",
+      "assetTypeHex": "823395a3d57049f499a9d820cd1def98",
+      "productID": "745",
+      "logPin": {
+        "path": "F:/JericoEngine/JericoEngine/build/n0-validation/ap102-dpg-precompiled19-sdk-logs-attempt1/JobLogs/Shaders/DiffuseGlobalIllumination/DiffuseProbeGridVisualizationRayTracingMiss.precompiledshader-3913920947-4784.log",
+        "bytes": 1285,
+        "sha256": "9066564040727CF4CFFF82230AD64246447502F25648583162A4FD6AFEDE27B9"
+      },
+      "productPin": {
+        "path": "F:/JericoEngine/JericoEngine/build/n0-validation/native-scene100/sdk-preparation/source/Cache/pc/shaders/diffuseglobalillumination/diffuseprobegridvisualizationraytracingmiss.azshader",
+        "bytes": 123428,
+        "sha256": "D93F749097765C4D77D66FB0387A6154179AA3CF21DFCD9399C78B432184FBA5"
+      },
+      "pass": true
+    },
+    {
+      "index": 18,
+      "source": "Shaders/DiffuseGlobalIllumination/sceneandviewsrgs.precompiledshader",
+      "jobCount": 1,
+      "productCount": 1,
+      "jobID": "546",
+      "runKey": "4786",
+      "status": "4",
+      "errors": "0",
+      "warnings": "0",
+      "lastLogTime": "1792431903806",
+      "withinActualCook": true,
+      "sourceGuidHex": "5d846658301b548d870ab9f812d1586f",
+      "subID": "0",
+      "assetTypeHex": "823395a3d57049f499a9d820cd1def98",
+      "productID": "746",
+      "logPin": {
+        "path": "F:/JericoEngine/JericoEngine/build/n0-validation/ap102-dpg-precompiled19-sdk-logs-attempt1/JobLogs/Shaders/DiffuseGlobalIllumination/sceneandviewsrgs.precompiledshader-4166844361-4786.log",
+        "bytes": 1204,
+        "sha256": "7914518D78A70F289E7B88F5CBE23A6F255AFB9A1602E01CF5BAE75935B6CA51"
+      },
+      "productPin": {
+        "path": "F:/JericoEngine/JericoEngine/build/n0-validation/native-scene100/sdk-preparation/source/Cache/pc/shaders/diffuseglobalillumination/sceneandviewsrgs.azshader",
+        "bytes": 139240,
+        "sha256": "CEBAA881DC3B17104B502092C5A74DBD6D4A116C9A102629B59A71DB0FF00994"
+      },
+      "pass": true
+    }
+  ],
+  "vulkanTuples": [
+    {
+      "descriptorIndex": 0,
+      "supervariant": "",
+      "api": "vulkan",
+      "source": "Shaders/DiffuseGlobalIllumination/diffuseprobegridblenddistance_vulkan_0.azshadervariant",
+      "sourceGuidHex": "b93c7aa91ebc5f029fc1b50e1a857d93",
+      "subID": "0",
+      "assetTypeHex": "51bed81536d8410e90f01fa9ff765fba",
+      "variantProducts": 1,
+      "matchingEdges": 1,
+      "dependencyIDs": [
+        "629"
+      ],
+      "flags": [
+        "0"
+      ],
+      "payloadPin": {
+        "path": "F:/JericoEngine/JericoEngine/build/n0-validation/native-scene100/sdk-preparation/source/Cache/pc/shaders/diffuseglobalillumination/diffuseprobegridblenddistance_vulkan_0.azshadervariant",
+        "bytes": 13383,
+        "sha256": "F0C728073AB951CC56D14C04E3D65CFB7C0EC5F8500BBA49C025B344156532E2"
+      },
+      "payloadEqualsPreservedSource": true,
+      "pass": true
+    },
+    {
+      "descriptorIndex": 0,
+      "supervariant": "NumRaysPerProbe144",
+      "api": "vulkan",
+      "source": "Shaders/DiffuseGlobalIllumination/diffuseprobegridblenddistance-numraysperprobe144_vulkan_0.azshadervariant",
+      "sourceGuidHex": "2a485ea3c3ec5650a9a0ccaa988d272f",
+      "subID": "0",
+      "assetTypeHex": "51bed81536d8410e90f01fa9ff765fba",
+      "variantProducts": 1,
+      "matchingEdges": 1,
+      "dependencyIDs": [
+        "627"
+      ],
+      "flags": [
+        "0"
+      ],
+      "payloadPin": {
+        "path": "F:/JericoEngine/JericoEngine/build/n0-validation/native-scene100/sdk-preparation/source/Cache/pc/shaders/diffuseglobalillumination/diffuseprobegridblenddistance-numraysperprobe144_vulkan_0.azshadervariant",
+        "bytes": 13383,
+        "sha256": "D2F67526C5500B8EE7240C6ABFCF7C1FD7BB570047D68032C07721393A8ECC0E"
+      },
+      "payloadEqualsPreservedSource": true,
+      "pass": true
+    },
+    {
+      "descriptorIndex": 0,
+      "supervariant": "NumRaysPerProbe288",
+      "api": "vulkan",
+      "source": "Shaders/DiffuseGlobalIllumination/diffuseprobegridblenddistance-numraysperprobe288_vulkan_0.azshadervariant",
+      "sourceGuidHex": "b0fec7e4082e52548e8268b5dfa2ebc4",
+      "subID": "0",
+      "assetTypeHex": "51bed81536d8410e90f01fa9ff765fba",
+      "variantProducts": 1,
+      "matchingEdges": 1,
+      "dependencyIDs": [
+        "625"
+      ],
+      "flags": [
+        "0"
+      ],
+      "payloadPin": {
+        "path": "F:/JericoEngine/JericoEngine/build/n0-validation/native-scene100/sdk-preparation/source/Cache/pc/shaders/diffuseglobalillumination/diffuseprobegridblenddistance-numraysperprobe288_vulkan_0.azshadervariant",
+        "bytes": 13383,
+        "sha256": "F0C728073AB951CC56D14C04E3D65CFB7C0EC5F8500BBA49C025B344156532E2"
+      },
+      "payloadEqualsPreservedSource": true,
+      "pass": true
+    },
+    {
+      "descriptorIndex": 0,
+      "supervariant": "NumRaysPerProbe432",
+      "api": "vulkan",
+      "source": "Shaders/DiffuseGlobalIllumination/diffuseprobegridblenddistance-numraysperprobe432_vulkan_0.azshadervariant",
+      "sourceGuidHex": "015a53ea0503566d819c48f907333114",
+      "subID": "0",
+      "assetTypeHex": "51bed81536d8410e90f01fa9ff765fba",
+      "variantProducts": 1,
+      "matchingEdges": 1,
+      "dependencyIDs": [
+        "628"
+      ],
+      "flags": [
+        "0"
+      ],
+      "payloadPin": {
+        "path": "F:/JericoEngine/JericoEngine/build/n0-validation/native-scene100/sdk-preparation/source/Cache/pc/shaders/diffuseglobalillumination/diffuseprobegridblenddistance-numraysperprobe432_vulkan_0.azshadervariant",
+        "bytes": 13383,
+        "sha256": "24FD62B19C628FFCFCD760776891D313BC301B15F1CD2957C4460F6E97667805"
+      },
+      "payloadEqualsPreservedSource": true,
+      "pass": true
+    },
+    {
+      "descriptorIndex": 0,
+      "supervariant": "NumRaysPerProbe576",
+      "api": "vulkan",
+      "source": "Shaders/DiffuseGlobalIllumination/diffuseprobegridblenddistance-numraysperprobe576_vulkan_0.azshadervariant",
+      "sourceGuidHex": "afef3199d909598fb14b414d1ae10341",
+      "subID": "0",
+      "assetTypeHex": "51bed81536d8410e90f01fa9ff765fba",
+      "variantProducts": 1,
+      "matchingEdges": 1,
+      "dependencyIDs": [
+        "630"
+      ],
+      "flags": [
+        "0"
+      ],
+      "payloadPin": {
+        "path": "F:/JericoEngine/JericoEngine/build/n0-validation/native-scene100/sdk-preparation/source/Cache/pc/shaders/diffuseglobalillumination/diffuseprobegridblenddistance-numraysperprobe576_vulkan_0.azshadervariant",
+        "bytes": 13383,
+        "sha256": "6C625EA8FB62BBA4ED308CA1D0D2B12098A3B067F7D93AA2B93D96D08D075B6A"
+      },
+      "payloadEqualsPreservedSource": true,
+      "pass": true
+    },
+    {
+      "descriptorIndex": 0,
+      "supervariant": "NumRaysPerProbe720",
+      "api": "vulkan",
+      "source": "Shaders/DiffuseGlobalIllumination/diffuseprobegridblenddistance-numraysperprobe720_vulkan_0.azshadervariant",
+      "sourceGuidHex": "5ea43f766a455046b48323a4c999ddc3",
+      "subID": "0",
+      "assetTypeHex": "51bed81536d8410e90f01fa9ff765fba",
+      "variantProducts": 1,
+      "matchingEdges": 1,
+      "dependencyIDs": [
+        "623"
+      ],
+      "flags": [
+        "0"
+      ],
+      "payloadPin": {
+        "path": "F:/JericoEngine/JericoEngine/build/n0-validation/native-scene100/sdk-preparation/source/Cache/pc/shaders/diffuseglobalillumination/diffuseprobegridblenddistance-numraysperprobe720_vulkan_0.azshadervariant",
+        "bytes": 13383,
+        "sha256": "589F1D1D3D5FDE0F3972020BD2733B3F41F10318647E883E842EA2791C8AA023"
+      },
+      "payloadEqualsPreservedSource": true,
+      "pass": true
+    },
+    {
+      "descriptorIndex": 0,
+      "supervariant": "NumRaysPerProbe864",
+      "api": "vulkan",
+      "source": "Shaders/DiffuseGlobalIllumination/diffuseprobegridblenddistance-numraysperprobe864_vulkan_0.azshadervariant",
+      "sourceGuidHex": "480cae0666a15a0a8e509e84155b66f5",
+      "subID": "0",
+      "assetTypeHex": "51bed81536d8410e90f01fa9ff765fba",
+      "variantProducts": 1,
+      "matchingEdges": 1,
+      "dependencyIDs": [
+        "626"
+      ],
+      "flags": [
+        "0"
+      ],
+      "payloadPin": {
+        "path": "F:/JericoEngine/JericoEngine/build/n0-validation/native-scene100/sdk-preparation/source/Cache/pc/shaders/diffuseglobalillumination/diffuseprobegridblenddistance-numraysperprobe864_vulkan_0.azshadervariant",
+        "bytes": 13383,
+        "sha256": "F5EC8DDD2D0EC9C714F45C78A39673C068C657687B703E77286497495D40E0AE"
+      },
+      "payloadEqualsPreservedSource": true,
+      "pass": true
+    },
+    {
+      "descriptorIndex": 0,
+      "supervariant": "NumRaysPerProbe1008",
+      "api": "vulkan",
+      "source": "Shaders/DiffuseGlobalIllumination/diffuseprobegridblenddistance-numraysperprobe1008_vulkan_0.azshadervariant",
+      "sourceGuidHex": "6bcdf436b21d5308b800288572e5dd6b",
+      "subID": "0",
+      "assetTypeHex": "51bed81536d8410e90f01fa9ff765fba",
+      "variantProducts": 1,
+      "matchingEdges": 1,
+      "dependencyIDs": [
+        "624"
+      ],
+      "flags": [
+        "0"
+      ],
+      "payloadPin": {
+        "path": "F:/JericoEngine/JericoEngine/build/n0-validation/native-scene100/sdk-preparation/source/Cache/pc/shaders/diffuseglobalillumination/diffuseprobegridblenddistance-numraysperprobe1008_vulkan_0.azshadervariant",
+        "bytes": 13383,
+        "sha256": "E4CCC254C20EC077990BEE967937D0CBCDCC9042A24D298B33840B385F71A472"
+      },
+      "payloadEqualsPreservedSource": true,
+      "pass": true
+    },
+    {
+      "descriptorIndex": 1,
+      "supervariant": "",
+      "api": "vulkan",
+      "source": "Shaders/DiffuseGlobalIllumination/diffuseprobegridblendirradiance_vulkan_0.azshadervariant",
+      "sourceGuidHex": "87df969118f158e5838c65f022f74d85",
+      "subID": "0",
+      "assetTypeHex": "51bed81536d8410e90f01fa9ff765fba",
+      "variantProducts": 1,
+      "matchingEdges": 1,
+      "dependencyIDs": [
+        "636"
+      ],
+      "flags": [
+        "0"
+      ],
+      "payloadPin": {
+        "path": "F:/JericoEngine/JericoEngine/build/n0-validation/native-scene100/sdk-preparation/source/Cache/pc/shaders/diffuseglobalillumination/diffuseprobegridblendirradiance_vulkan_0.azshadervariant",
+        "bytes": 15631,
+        "sha256": "1E93D2E1BE8E39AB0CAEEB2D3A65A28DBB80E6B0EA2CAC9B71D54FC4C0F45053"
+      },
+      "payloadEqualsPreservedSource": true,
+      "pass": true
+    },
+    {
+      "descriptorIndex": 1,
+      "supervariant": "NumRaysPerProbe144",
+      "api": "vulkan",
+      "source": "Shaders/DiffuseGlobalIllumination/diffuseprobegridblendirradiance-numraysperprobe144_vulkan_0.azshadervariant",
+      "sourceGuidHex": "5b5482a5280a5ad9b3c77fdcf11099a8",
+      "subID": "0",
+      "assetTypeHex": "51bed81536d8410e90f01fa9ff765fba",
+      "variantProducts": 1,
+      "matchingEdges": 1,
+      "dependencyIDs": [
+        "637"
+      ],
+      "flags": [
+        "0"
+      ],
+      "payloadPin": {
+        "path": "F:/JericoEngine/JericoEngine/build/n0-validation/native-scene100/sdk-preparation/source/Cache/pc/shaders/diffuseglobalillumination/diffuseprobegridblendirradiance-numraysperprobe144_vulkan_0.azshadervariant",
+        "bytes": 15631,
+        "sha256": "F5F0EE3D09B8810E93E1CB216D9CB4216BFEF2ABD570DE7659018E54296AFB93"
+      },
+      "payloadEqualsPreservedSource": true,
+      "pass": true
+    },
+    {
+      "descriptorIndex": 1,
+      "supervariant": "NumRaysPerProbe288",
+      "api": "vulkan",
+      "source": "Shaders/DiffuseGlobalIllumination/diffuseprobegridblendirradiance-numraysperprobe288_vulkan_0.azshadervariant",
+      "sourceGuidHex": "e5a70fbb08fe5985b0c055e4095a96fa",
+      "subID": "0",
+      "assetTypeHex": "51bed81536d8410e90f01fa9ff765fba",
+      "variantProducts": 1,
+      "matchingEdges": 1,
+      "dependencyIDs": [
+        "638"
+      ],
+      "flags": [
+        "0"
+      ],
+      "payloadPin": {
+        "path": "F:/JericoEngine/JericoEngine/build/n0-validation/native-scene100/sdk-preparation/source/Cache/pc/shaders/diffuseglobalillumination/diffuseprobegridblendirradiance-numraysperprobe288_vulkan_0.azshadervariant",
+        "bytes": 15631,
+        "sha256": "1E93D2E1BE8E39AB0CAEEB2D3A65A28DBB80E6B0EA2CAC9B71D54FC4C0F45053"
+      },
+      "payloadEqualsPreservedSource": true,
+      "pass": true
+    },
+    {
+      "descriptorIndex": 1,
+      "supervariant": "NumRaysPerProbe432",
+      "api": "vulkan",
+      "source": "Shaders/DiffuseGlobalIllumination/diffuseprobegridblendirradiance-numraysperprobe432_vulkan_0.azshadervariant",
+      "sourceGuidHex": "a52a65c0b0ba5cd08eb5d144e25869e1",
+      "subID": "0",
+      "assetTypeHex": "51bed81536d8410e90f01fa9ff765fba",
+      "variantProducts": 1,
+      "matchingEdges": 1,
+      "dependencyIDs": [
+        "633"
+      ],
+      "flags": [
+        "0"
+      ],
+      "payloadPin": {
+        "path": "F:/JericoEngine/JericoEngine/build/n0-validation/native-scene100/sdk-preparation/source/Cache/pc/shaders/diffuseglobalillumination/diffuseprobegridblendirradiance-numraysperprobe432_vulkan_0.azshadervariant",
+        "bytes": 15631,
+        "sha256": "2988E687820FF8B6E7EB0E17059C0D46E3AECD1AD35AD1F50C1C99ACA31162E0"
+      },
+      "payloadEqualsPreservedSource": true,
+      "pass": true
+    },
+    {
+      "descriptorIndex": 1,
+      "supervariant": "NumRaysPerProbe576",
+      "api": "vulkan",
+      "source": "Shaders/DiffuseGlobalIllumination/diffuseprobegridblendirradiance-numraysperprobe576_vulkan_0.azshadervariant",
+      "sourceGuidHex": "649c2be383175a308ed1099bb438026b",
+      "subID": "0",
+      "assetTypeHex": "51bed81536d8410e90f01fa9ff765fba",
+      "variantProducts": 1,
+      "matchingEdges": 1,
+      "dependencyIDs": [
+        "632"
+      ],
+      "flags": [
+        "0"
+      ],
+      "payloadPin": {
+        "path": "F:/JericoEngine/JericoEngine/build/n0-validation/native-scene100/sdk-preparation/source/Cache/pc/shaders/diffuseglobalillumination/diffuseprobegridblendirradiance-numraysperprobe576_vulkan_0.azshadervariant",
+        "bytes": 15631,
+        "sha256": "8BEFCF362BAD7F658A5E03B486F3ADDBB45CFA8ED64E663C1D7284D25B2F9939"
+      },
+      "payloadEqualsPreservedSource": true,
+      "pass": true
+    },
+    {
+      "descriptorIndex": 1,
+      "supervariant": "NumRaysPerProbe720",
+      "api": "vulkan",
+      "source": "Shaders/DiffuseGlobalIllumination/diffuseprobegridblendirradiance-numraysperprobe720_vulkan_0.azshadervariant",
+      "sourceGuidHex": "a177528b933e5ab1be5dc5978bf0c197",
+      "subID": "0",
+      "assetTypeHex": "51bed81536d8410e90f01fa9ff765fba",
+      "variantProducts": 1,
+      "matchingEdges": 1,
+      "dependencyIDs": [
+        "634"
+      ],
+      "flags": [
+        "0"
+      ],
+      "payloadPin": {
+        "path": "F:/JericoEngine/JericoEngine/build/n0-validation/native-scene100/sdk-preparation/source/Cache/pc/shaders/diffuseglobalillumination/diffuseprobegridblendirradiance-numraysperprobe720_vulkan_0.azshadervariant",
+        "bytes": 15631,
+        "sha256": "15A9005657802842D89F08AF1CEE4DF63374C45B099B2292D9A1BCC1D397D14A"
+      },
+      "payloadEqualsPreservedSource": true,
+      "pass": true
+    },
+    {
+      "descriptorIndex": 1,
+      "supervariant": "NumRaysPerProbe864",
+      "api": "vulkan",
+      "source": "Shaders/DiffuseGlobalIllumination/diffuseprobegridblendirradiance-numraysperprobe864_vulkan_0.azshadervariant",
+      "sourceGuidHex": "254b8eef38a25ae6a1678aa4e0f2478e",
+      "subID": "0",
+      "assetTypeHex": "51bed81536d8410e90f01fa9ff765fba",
+      "variantProducts": 1,
+      "matchingEdges": 1,
+      "dependencyIDs": [
+        "631"
+      ],
+      "flags": [
+        "0"
+      ],
+      "payloadPin": {
+        "path": "F:/JericoEngine/JericoEngine/build/n0-validation/native-scene100/sdk-preparation/source/Cache/pc/shaders/diffuseglobalillumination/diffuseprobegridblendirradiance-numraysperprobe864_vulkan_0.azshadervariant",
+        "bytes": 15631,
+        "sha256": "882598760D8D10D9C5CB3E61A52F83461CF63568D57B3EC01A7302D9B0734FAA"
+      },
+      "payloadEqualsPreservedSource": true,
+      "pass": true
+    },
+    {
+      "descriptorIndex": 1,
+      "supervariant": "NumRaysPerProbe1008",
+      "api": "vulkan",
+      "source": "Shaders/DiffuseGlobalIllumination/diffuseprobegridblendirradiance-numraysperprobe1008_vulkan_0.azshadervariant",
+      "sourceGuidHex": "19d677b04b865afb9692c9a7f22f2021",
+      "subID": "0",
+      "assetTypeHex": "51bed81536d8410e90f01fa9ff765fba",
+      "variantProducts": 1,
+      "matchingEdges": 1,
+      "dependencyIDs": [
+        "635"
+      ],
+      "flags": [
+        "0"
+      ],
+      "payloadPin": {
+        "path": "F:/JericoEngine/JericoEngine/build/n0-validation/native-scene100/sdk-preparation/source/Cache/pc/shaders/diffuseglobalillumination/diffuseprobegridblendirradiance-numraysperprobe1008_vulkan_0.azshadervariant",
+        "bytes": 15631,
+        "sha256": "317CBEE26EB0A664C55A8026BD833D3E3447F2AD85F2C8CC1C8D7F3F3269A150"
+      },
+      "payloadEqualsPreservedSource": true,
+      "pass": true
+    },
+    {
+      "descriptorIndex": 2,
+      "supervariant": "",
+      "api": "vulkan",
+      "source": "Shaders/DiffuseGlobalIllumination/diffuseprobegridborderupdatecolumn_vulkan_0.azshadervariant",
+      "sourceGuidHex": "273bb6331cab5d07881622648afacd13",
+      "subID": "0",
+      "assetTypeHex": "51bed81536d8410e90f01fa9ff765fba",
+      "variantProducts": 1,
+      "matchingEdges": 1,
+      "dependencyIDs": [
+        "639"
+      ],
+      "flags": [
+        "0"
+      ],
+      "payloadPin": {
+        "path": "F:/JericoEngine/JericoEngine/build/n0-validation/native-scene100/sdk-preparation/source/Cache/pc/shaders/diffuseglobalillumination/diffuseprobegridborderupdatecolumn_vulkan_0.azshadervariant",
+        "bytes": 2710,
+        "sha256": "48DF26A1C0837B8C9E38D2FC6A6D613B860FB8B6EDA7A532805B9DD6E0321D74"
+      },
+      "payloadEqualsPreservedSource": true,
+      "pass": true
+    },
+    {
+      "descriptorIndex": 3,
+      "supervariant": "",
+      "api": "vulkan",
+      "source": "Shaders/DiffuseGlobalIllumination/diffuseprobegridborderupdaterow_vulkan_0.azshadervariant",
+      "sourceGuidHex": "ee324d345a305e819b66927f9223cc1a",
+      "subID": "0",
+      "assetTypeHex": "51bed81536d8410e90f01fa9ff765fba",
+      "variantProducts": 1,
+      "matchingEdges": 1,
+      "dependencyIDs": [
+        "640"
+      ],
+      "flags": [
+        "0"
+      ],
+      "payloadPin": {
+        "path": "F:/JericoEngine/JericoEngine/build/n0-validation/native-scene100/sdk-preparation/source/Cache/pc/shaders/diffuseglobalillumination/diffuseprobegridborderupdaterow_vulkan_0.azshadervariant",
+        "bytes": 2279,
+        "sha256": "5209C02CC5220C793BDFA33A6A75C58F9EF06E53C898516888620A03358FBCD6"
+      },
+      "payloadEqualsPreservedSource": true,
+      "pass": true
+    },
+    {
+      "descriptorIndex": 4,
+      "supervariant": "",
+      "api": "vulkan",
+      "source": "Shaders/DiffuseGlobalIllumination/diffuseprobegridclassification_vulkan_0.azshadervariant",
+      "sourceGuidHex": "93d3e133ff7351c293f4670426cc8498",
+      "subID": "0",
+      "assetTypeHex": "51bed81536d8410e90f01fa9ff765fba",
+      "variantProducts": 1,
+      "matchingEdges": 1,
+      "dependencyIDs": [
+        "647"
+      ],
+      "flags": [
+        "0"
+      ],
+      "payloadPin": {
+        "path": "F:/JericoEngine/JericoEngine/build/n0-validation/native-scene100/sdk-preparation/source/Cache/pc/shaders/diffuseglobalillumination/diffuseprobegridclassification_vulkan_0.azshadervariant",
+        "bytes": 11135,
+        "sha256": "52BFE7EB265E78693D2DCFB194901A483E67E0F1C5FEC7E8DAC4D16B127CA6BD"
+      },
+      "payloadEqualsPreservedSource": true,
+      "pass": true
+    },
+    {
+      "descriptorIndex": 4,
+      "supervariant": "NumRaysPerProbe144",
+      "api": "vulkan",
+      "source": "Shaders/DiffuseGlobalIllumination/diffuseprobegridclassification-numraysperprobe144_vulkan_0.azshadervariant",
+      "sourceGuidHex": "9dcfedd9d876525f9094e8ba89ea3d35",
+      "subID": "0",
+      "assetTypeHex": "51bed81536d8410e90f01fa9ff765fba",
+      "variantProducts": 1,
+      "matchingEdges": 1,
+      "dependencyIDs": [
+        "646"
+      ],
+      "flags": [
+        "0"
+      ],
+      "payloadPin": {
+        "path": "F:/JericoEngine/JericoEngine/build/n0-validation/native-scene100/sdk-preparation/source/Cache/pc/shaders/diffuseglobalillumination/diffuseprobegridclassification-numraysperprobe144_vulkan_0.azshadervariant",
+        "bytes": 11135,
+        "sha256": "52BFE7EB265E78693D2DCFB194901A483E67E0F1C5FEC7E8DAC4D16B127CA6BD"
+      },
+      "payloadEqualsPreservedSource": true,
+      "pass": true
+    },
+    {
+      "descriptorIndex": 4,
+      "supervariant": "NumRaysPerProbe288",
+      "api": "vulkan",
+      "source": "Shaders/DiffuseGlobalIllumination/diffuseprobegridclassification-numraysperprobe288_vulkan_0.azshadervariant",
+      "sourceGuidHex": "fa765fbeb6af5fa4b488f2e81c6eb88d",
+      "subID": "0",
+      "assetTypeHex": "51bed81536d8410e90f01fa9ff765fba",
+      "variantProducts": 1,
+      "matchingEdges": 1,
+      "dependencyIDs": [
+        "648"
+      ],
+      "flags": [
+        "0"
+      ],
+      "payloadPin": {
+        "path": "F:/JericoEngine/JericoEngine/build/n0-validation/native-scene100/sdk-preparation/source/Cache/pc/shaders/diffuseglobalillumination/diffuseprobegridclassification-numraysperprobe288_vulkan_0.azshadervariant",
+        "bytes": 11135,
+        "sha256": "52BFE7EB265E78693D2DCFB194901A483E67E0F1C5FEC7E8DAC4D16B127CA6BD"
+      },
+      "payloadEqualsPreservedSource": true,
+      "pass": true
+    },
+    {
+      "descriptorIndex": 4,
+      "supervariant": "NumRaysPerProbe432",
+      "api": "vulkan",
+      "source": "Shaders/DiffuseGlobalIllumination/diffuseprobegridclassification-numraysperprobe432_vulkan_0.azshadervariant",
+      "sourceGuidHex": "ec7a6475e8d055fabf6838eec785b832",
+      "subID": "0",
+      "assetTypeHex": "51bed81536d8410e90f01fa9ff765fba",
+      "variantProducts": 1,
+      "matchingEdges": 1,
+      "dependencyIDs": [
+        "645"
+      ],
+      "flags": [
+        "0"
+      ],
+      "payloadPin": {
+        "path": "F:/JericoEngine/JericoEngine/build/n0-validation/native-scene100/sdk-preparation/source/Cache/pc/shaders/diffuseglobalillumination/diffuseprobegridclassification-numraysperprobe432_vulkan_0.azshadervariant",
+        "bytes": 11135,
+        "sha256": "52BFE7EB265E78693D2DCFB194901A483E67E0F1C5FEC7E8DAC4D16B127CA6BD"
+      },
+      "payloadEqualsPreservedSource": true,
+      "pass": true
+    },
+    {
+      "descriptorIndex": 4,
+      "supervariant": "NumRaysPerProbe576",
+      "api": "vulkan",
+      "source": "Shaders/DiffuseGlobalIllumination/diffuseprobegridclassification-numraysperprobe576_vulkan_0.azshadervariant",
+      "sourceGuidHex": "88b23213f44c5f9c943147e4f7630abc",
+      "subID": "0",
+      "assetTypeHex": "51bed81536d8410e90f01fa9ff765fba",
+      "variantProducts": 1,
+      "matchingEdges": 1,
+      "dependencyIDs": [
+        "644"
+      ],
+      "flags": [
+        "0"
+      ],
+      "payloadPin": {
+        "path": "F:/JericoEngine/JericoEngine/build/n0-validation/native-scene100/sdk-preparation/source/Cache/pc/shaders/diffuseglobalillumination/diffuseprobegridclassification-numraysperprobe576_vulkan_0.azshadervariant",
+        "bytes": 11135,
+        "sha256": "52BFE7EB265E78693D2DCFB194901A483E67E0F1C5FEC7E8DAC4D16B127CA6BD"
+      },
+      "payloadEqualsPreservedSource": true,
+      "pass": true
+    },
+    {
+      "descriptorIndex": 4,
+      "supervariant": "NumRaysPerProbe720",
+      "api": "vulkan",
+      "source": "Shaders/DiffuseGlobalIllumination/diffuseprobegridclassification-numraysperprobe720_vulkan_0.azshadervariant",
+      "sourceGuidHex": "77726820b2d65d5d9050dba9fe14f583",
+      "subID": "0",
+      "assetTypeHex": "51bed81536d8410e90f01fa9ff765fba",
+      "variantProducts": 1,
+      "matchingEdges": 1,
+      "dependencyIDs": [
+        "643"
+      ],
+      "flags": [
+        "0"
+      ],
+      "payloadPin": {
+        "path": "F:/JericoEngine/JericoEngine/build/n0-validation/native-scene100/sdk-preparation/source/Cache/pc/shaders/diffuseglobalillumination/diffuseprobegridclassification-numraysperprobe720_vulkan_0.azshadervariant",
+        "bytes": 11135,
+        "sha256": "52BFE7EB265E78693D2DCFB194901A483E67E0F1C5FEC7E8DAC4D16B127CA6BD"
+      },
+      "payloadEqualsPreservedSource": true,
+      "pass": true
+    },
+    {
+      "descriptorIndex": 4,
+      "supervariant": "NumRaysPerProbe864",
+      "api": "vulkan",
+      "source": "Shaders/DiffuseGlobalIllumination/diffuseprobegridclassification-numraysperprobe864_vulkan_0.azshadervariant",
+      "sourceGuidHex": "857e8c822dc556a7b80630e5eda07961",
+      "subID": "0",
+      "assetTypeHex": "51bed81536d8410e90f01fa9ff765fba",
+      "variantProducts": 1,
+      "matchingEdges": 1,
+      "dependencyIDs": [
+        "641"
+      ],
+      "flags": [
+        "0"
+      ],
+      "payloadPin": {
+        "path": "F:/JericoEngine/JericoEngine/build/n0-validation/native-scene100/sdk-preparation/source/Cache/pc/shaders/diffuseglobalillumination/diffuseprobegridclassification-numraysperprobe864_vulkan_0.azshadervariant",
+        "bytes": 11135,
+        "sha256": "52BFE7EB265E78693D2DCFB194901A483E67E0F1C5FEC7E8DAC4D16B127CA6BD"
+      },
+      "payloadEqualsPreservedSource": true,
+      "pass": true
+    },
+    {
+      "descriptorIndex": 4,
+      "supervariant": "NumRaysPerProbe1008",
+      "api": "vulkan",
+      "source": "Shaders/DiffuseGlobalIllumination/diffuseprobegridclassification-numraysperprobe1008_vulkan_0.azshadervariant",
+      "sourceGuidHex": "1c6ebc073d3455afbff68af6f55d3828",
+      "subID": "0",
+      "assetTypeHex": "51bed81536d8410e90f01fa9ff765fba",
+      "variantProducts": 1,
+      "matchingEdges": 1,
+      "dependencyIDs": [
+        "642"
+      ],
+      "flags": [
+        "0"
+      ],
+      "payloadPin": {
+        "path": "F:/JericoEngine/JericoEngine/build/n0-validation/native-scene100/sdk-preparation/source/Cache/pc/shaders/diffuseglobalillumination/diffuseprobegridclassification-numraysperprobe1008_vulkan_0.azshadervariant",
+        "bytes": 11135,
+        "sha256": "52BFE7EB265E78693D2DCFB194901A483E67E0F1C5FEC7E8DAC4D16B127CA6BD"
+      },
+      "payloadEqualsPreservedSource": true,
+      "pass": true
+    },
+    {
+      "descriptorIndex": 5,
+      "supervariant": "",
+      "api": "vulkan",
+      "source": "Shaders/DiffuseGlobalIllumination/diffuseprobegridprepare_vulkan_0.azshadervariant",
+      "sourceGuidHex": "e1b37ddebbc1595ba32eb9b07db76da8",
+      "subID": "0",
+      "assetTypeHex": "51bed81536d8410e90f01fa9ff765fba",
+      "variantProducts": 1,
+      "matchingEdges": 1,
+      "dependencyIDs": [
+        "649"
+      ],
+      "flags": [
+        "0"
+      ],
+      "payloadPin": {
+        "path": "F:/JericoEngine/JericoEngine/build/n0-validation/native-scene100/sdk-preparation/source/Cache/pc/shaders/diffuseglobalillumination/diffuseprobegridprepare_vulkan_0.azshadervariant",
+        "bytes": 11263,
+        "sha256": "2FA7466D2F236A2F4E6D18BC5D0B235A23A5524BCEFEE653FA86866C33087161"
+      },
+      "payloadEqualsPreservedSource": true,
+      "pass": true
+    },
+    {
+      "descriptorIndex": 6,
+      "supervariant": "",
+      "api": "vulkan",
+      "source": "Shaders/DiffuseGlobalIllumination/diffuseprobegridquery_vulkan_0.azshadervariant",
+      "sourceGuidHex": "c6f7466385e85616a78e66d8d5b064d8",
+      "subID": "0",
+      "assetTypeHex": "51bed81536d8410e90f01fa9ff765fba",
+      "variantProducts": 1,
+      "matchingEdges": 1,
+      "dependencyIDs": [
+        "650"
+      ],
+      "flags": [
+        "0"
+      ],
+      "payloadPin": {
+        "path": "F:/JericoEngine/JericoEngine/build/n0-validation/native-scene100/sdk-preparation/source/Cache/pc/shaders/diffuseglobalillumination/diffuseprobegridquery_vulkan_0.azshadervariant",
+        "bytes": 14759,
+        "sha256": "4486329A11D2F7974B8FC9B7C47D1DCE792275E9521807ECA0850C7150E7549C"
+      },
+      "payloadEqualsPreservedSource": true,
+      "pass": true
+    },
+    {
+      "descriptorIndex": 7,
+      "supervariant": "",
+      "api": "vulkan",
+      "source": "Shaders/DiffuseGlobalIllumination/diffuseprobegridqueryfullscreen_vulkan_0.azshadervariant",
+      "sourceGuidHex": "7b629ed91604560981e045b94f9034bd",
+      "subID": "0",
+      "assetTypeHex": "51bed81536d8410e90f01fa9ff765fba",
+      "variantProducts": 1,
+      "matchingEdges": 1,
+      "dependencyIDs": [
+        "651"
+      ],
+      "flags": [
+        "0"
+      ],
+      "payloadPin": {
+        "path": "F:/JericoEngine/JericoEngine/build/n0-validation/native-scene100/sdk-preparation/source/Cache/pc/shaders/diffuseglobalillumination/diffuseprobegridqueryfullscreen_vulkan_0.azshadervariant",
+        "bytes": 17731,
+        "sha256": "BCE0D2CE821E4DF6D317B5870B8D8D96C62921D03C0CC788725E8445DB16C49D"
+      },
+      "payloadEqualsPreservedSource": true,
+      "pass": true
+    },
+    {
+      "descriptorIndex": 8,
+      "supervariant": "",
+      "api": "vulkan",
+      "source": "Shaders/DiffuseGlobalIllumination/diffuseprobegridqueryfullscreenwithalbedo_vulkan_0.azshadervariant",
+      "sourceGuidHex": "cec91fe72b5e58549bea1968b899e6d8",
+      "subID": "0",
+      "assetTypeHex": "51bed81536d8410e90f01fa9ff765fba",
+      "variantProducts": 1,
+      "matchingEdges": 1,
+      "dependencyIDs": [
+        "652"
+      ],
+      "flags": [
+        "0"
+      ],
+      "payloadPin": {
+        "path": "F:/JericoEngine/JericoEngine/build/n0-validation/native-scene100/sdk-preparation/source/Cache/pc/shaders/diffuseglobalillumination/diffuseprobegridqueryfullscreenwithalbedo_vulkan_0.azshadervariant",
+        "bytes": 18015,
+        "sha256": "B163B7DF6BE349C294DAF58747DEC4DB1A081FA881B732571EC0E02F7F544056"
+      },
+      "payloadEqualsPreservedSource": true,
+      "pass": true
+    },
+    {
+      "descriptorIndex": 9,
+      "supervariant": "",
+      "api": "vulkan",
+      "source": "Shaders/DiffuseGlobalIllumination/diffuseprobegridraytracing_vulkan_0.azshadervariant",
+      "sourceGuidHex": "1b917ce5251b5147b0e7e5c0e3d7e9b7",
+      "subID": "0",
+      "assetTypeHex": "51bed81536d8410e90f01fa9ff765fba",
+      "variantProducts": 1,
+      "matchingEdges": 1,
+      "dependencyIDs": [
+        "653"
+      ],
+      "flags": [
+        "0"
+      ],
+      "payloadPin": {
+        "path": "F:/JericoEngine/JericoEngine/build/n0-validation/native-scene100/sdk-preparation/source/Cache/pc/shaders/diffuseglobalillumination/diffuseprobegridraytracing_vulkan_0.azshadervariant",
+        "bytes": 117781,
+        "sha256": "E5305211EA26873F2820CE3D217C551B03A669A904F77986A664D4D3FE9E02FC"
+      },
+      "payloadEqualsPreservedSource": true,
+      "pass": true
+    },
+    {
+      "descriptorIndex": 10,
+      "supervariant": "",
+      "api": "vulkan",
+      "source": "Shaders/DiffuseGlobalIllumination/diffuseprobegridraytracingclosesthit_vulkan_0.azshadervariant",
+      "sourceGuidHex": "927067cb73e450e9b84d4f2310c45b76",
+      "subID": "0",
+      "assetTypeHex": "51bed81536d8410e90f01fa9ff765fba",
+      "variantProducts": 1,
+      "matchingEdges": 1,
+      "dependencyIDs": [
+        "654"
+      ],
+      "flags": [
+        "0"
+      ],
+      "payloadPin": {
+        "path": "F:/JericoEngine/JericoEngine/build/n0-validation/native-scene100/sdk-preparation/source/Cache/pc/shaders/diffuseglobalillumination/diffuseprobegridraytracingclosesthit_vulkan_0.azshadervariant",
+        "bytes": 65932,
+        "sha256": "1D445C8CAA3637D05D90FBA8BE72C89859E2C9174F39569288CD4A70DD6E070F"
+      },
+      "payloadEqualsPreservedSource": true,
+      "pass": true
+    },
+    {
+      "descriptorIndex": 11,
+      "supervariant": "",
+      "api": "vulkan",
+      "source": "Shaders/DiffuseGlobalIllumination/diffuseprobegridraytracingmiss_vulkan_0.azshadervariant",
+      "sourceGuidHex": "038ae428b9d457a7ade0907ba42c124f",
+      "subID": "0",
+      "assetTypeHex": "51bed81536d8410e90f01fa9ff765fba",
+      "variantProducts": 1,
+      "matchingEdges": 1,
+      "dependencyIDs": [
+        "655"
+      ],
+      "flags": [
+        "0"
+      ],
+      "payloadPin": {
+        "path": "F:/JericoEngine/JericoEngine/build/n0-validation/native-scene100/sdk-preparation/source/Cache/pc/shaders/diffuseglobalillumination/diffuseprobegridraytracingmiss_vulkan_0.azshadervariant",
+        "bytes": 5945,
+        "sha256": "CE4D39ADF6D60D5BAF8E29C72D00FE5F3034F68D0441422770A5386545167DE3"
+      },
+      "payloadEqualsPreservedSource": true,
+      "pass": true
+    },
+    {
+      "descriptorIndex": 12,
+      "supervariant": "",
+      "api": "vulkan",
+      "source": "Shaders/DiffuseGlobalIllumination/diffuseprobegridrelocation_vulkan_0.azshadervariant",
+      "sourceGuidHex": "3c72b74c48a8502eb675b5c5824b2c1b",
+      "subID": "0",
+      "assetTypeHex": "51bed81536d8410e90f01fa9ff765fba",
+      "variantProducts": 1,
+      "matchingEdges": 1,
+      "dependencyIDs": [
+        "656"
+      ],
+      "flags": [
+        "0"
+      ],
+      "payloadPin": {
+        "path": "F:/JericoEngine/JericoEngine/build/n0-validation/native-scene100/sdk-preparation/source/Cache/pc/shaders/diffuseglobalillumination/diffuseprobegridrelocation_vulkan_0.azshadervariant",
+        "bytes": 11447,
+        "sha256": "79D9F8FF7E07702E70F9F5C3E7942DD48D1C67E7B795AA588DE3FE6AD28E1E50"
+      },
+      "payloadEqualsPreservedSource": true,
+      "pass": true
+    },
+    {
+      "descriptorIndex": 13,
+      "supervariant": "",
+      "api": "vulkan",
+      "source": "Shaders/DiffuseGlobalIllumination/diffuseprobegridrender_vulkan_0.azshadervariant",
+      "sourceGuidHex": "87e2bdd7ce4354a2b4e2e0dbe0b64060",
+      "subID": "0",
+      "assetTypeHex": "51bed81536d8410e90f01fa9ff765fba",
+      "variantProducts": 1,
+      "matchingEdges": 1,
+      "dependencyIDs": [
+        "657"
+      ],
+      "flags": [
+        "0"
+      ],
+      "payloadPin": {
+        "path": "F:/JericoEngine/JericoEngine/build/n0-validation/native-scene100/sdk-preparation/source/Cache/pc/shaders/diffuseglobalillumination/diffuseprobegridrender_vulkan_0.azshadervariant",
+        "bytes": 24290,
+        "sha256": "0F070198600F4B69A32E009AEA70886FFE506AFA2243428DCABF7572FC330FB8"
+      },
+      "payloadEqualsPreservedSource": true,
+      "pass": true
+    },
+    {
+      "descriptorIndex": 13,
+      "supervariant": "NoMSAA",
+      "api": "vulkan",
+      "source": "Shaders/DiffuseGlobalIllumination/diffuseprobegridrender-nomsaa_vulkan_0.azshadervariant",
+      "sourceGuidHex": "cb260c25ed5854a1a8a5f1c33e488bcf",
+      "subID": "0",
+      "assetTypeHex": "51bed81536d8410e90f01fa9ff765fba",
+      "variantProducts": 1,
+      "matchingEdges": 1,
+      "dependencyIDs": [
+        "658"
+      ],
+      "flags": [
+        "0"
+      ],
+      "payloadPin": {
+        "path": "F:/JericoEngine/JericoEngine/build/n0-validation/native-scene100/sdk-preparation/source/Cache/pc/shaders/diffuseglobalillumination/diffuseprobegridrender-nomsaa_vulkan_0.azshadervariant",
+        "bytes": 24222,
+        "sha256": "5E318D06E06DCFAD00AD9F876FD50312622CFB5C15340CA89DAC53E784DBF825"
+      },
+      "payloadEqualsPreservedSource": true,
+      "pass": true
+    },
+    {
+      "descriptorIndex": 14,
+      "supervariant": "",
+      "api": "vulkan",
+      "source": "Shaders/DiffuseGlobalIllumination/diffuseprobegridvisualizationprepare_vulkan_0.azshadervariant",
+      "sourceGuidHex": "49ccb0af3b8259b99bc99fed4cf15897",
+      "subID": "0",
+      "assetTypeHex": "51bed81536d8410e90f01fa9ff765fba",
+      "variantProducts": 1,
+      "matchingEdges": 1,
+      "dependencyIDs": [
+        "659"
+      ],
+      "flags": [
+        "0"
+      ],
+      "payloadPin": {
+        "path": "F:/JericoEngine/JericoEngine/build/n0-validation/native-scene100/sdk-preparation/source/Cache/pc/shaders/diffuseglobalillumination/diffuseprobegridvisualizationprepare_vulkan_0.azshadervariant",
+        "bytes": 7515,
+        "sha256": "08C3163B60A20D27A70E6B6E6C73681E1A371A343A5483E4BC8C22F35362C379"
+      },
+      "payloadEqualsPreservedSource": true,
+      "pass": true
+    },
+    {
+      "descriptorIndex": 15,
+      "supervariant": "",
+      "api": "vulkan",
+      "source": "Shaders/DiffuseGlobalIllumination/diffuseprobegridvisualizationraytracing_vulkan_0.azshadervariant",
+      "sourceGuidHex": "6287c86ab66c53a2ad1d264f3363fc17",
+      "subID": "0",
+      "assetTypeHex": "51bed81536d8410e90f01fa9ff765fba",
+      "variantProducts": 1,
+      "matchingEdges": 1,
+      "dependencyIDs": [
+        "660"
+      ],
+      "flags": [
+        "0"
+      ],
+      "payloadPin": {
+        "path": "F:/JericoEngine/JericoEngine/build/n0-validation/native-scene100/sdk-preparation/source/Cache/pc/shaders/diffuseglobalillumination/diffuseprobegridvisualizationraytracing_vulkan_0.azshadervariant",
+        "bytes": 13516,
+        "sha256": "DD642EBF2305777FA0DCB06032F20B5DA16358B033884627752B206F45540B04"
+      },
+      "payloadEqualsPreservedSource": true,
+      "pass": true
+    },
+    {
+      "descriptorIndex": 16,
+      "supervariant": "",
+      "api": "vulkan",
+      "source": "Shaders/DiffuseGlobalIllumination/diffuseprobegridvisualizationraytracingclosesthit_vulkan_0.azshadervariant",
+      "sourceGuidHex": "1cfcee4c220e5730a725dcb101b8ac42",
+      "subID": "0",
+      "assetTypeHex": "51bed81536d8410e90f01fa9ff765fba",
+      "variantProducts": 1,
+      "matchingEdges": 1,
+      "dependencyIDs": [
+        "661"
+      ],
+      "flags": [
+        "0"
+      ],
+      "payloadPin": {
+        "path": "F:/JericoEngine/JericoEngine/build/n0-validation/native-scene100/sdk-preparation/source/Cache/pc/shaders/diffuseglobalillumination/diffuseprobegridvisualizationraytracingclosesthit_vulkan_0.azshadervariant",
+        "bytes": 1360,
+        "sha256": "708CDA47668015A596875D1E997797C094996F32686044C22CF1F338845E5C93"
+      },
+      "payloadEqualsPreservedSource": true,
+      "pass": true
+    },
+    {
+      "descriptorIndex": 17,
+      "supervariant": "",
+      "api": "vulkan",
+      "source": "Shaders/DiffuseGlobalIllumination/diffuseprobegridvisualizationraytracingmiss_vulkan_0.azshadervariant",
+      "sourceGuidHex": "e0cf8b60779359679ad5d601397bbf95",
+      "subID": "0",
+      "assetTypeHex": "51bed81536d8410e90f01fa9ff765fba",
+      "variantProducts": 1,
+      "matchingEdges": 1,
+      "dependencyIDs": [
+        "662"
+      ],
+      "flags": [
+        "0"
+      ],
+      "payloadPin": {
+        "path": "F:/JericoEngine/JericoEngine/build/n0-validation/native-scene100/sdk-preparation/source/Cache/pc/shaders/diffuseglobalillumination/diffuseprobegridvisualizationraytracingmiss_vulkan_0.azshadervariant",
+        "bytes": 1089,
+        "sha256": "380F776B81AA2A765B1A621278D9CCD5C257B057E36FA4C2D85F17F60AEC47C6"
+      },
+      "payloadEqualsPreservedSource": true,
+      "pass": true
+    },
+    {
+      "descriptorIndex": 18,
+      "supervariant": "",
+      "api": "vulkan",
+      "source": "Shaders/DiffuseGlobalIllumination/sceneandviewsrgs_vulkan_0.azshadervariant",
+      "sourceGuidHex": "255d10042c355464a2b13dd09370e38e",
+      "subID": "0",
+      "assetTypeHex": "51bed81536d8410e90f01fa9ff765fba",
+      "variantProducts": 1,
+      "matchingEdges": 1,
+      "dependencyIDs": [
+        "663"
+      ],
+      "flags": [
+        "0"
+      ],
+      "payloadPin": {
+        "path": "F:/JericoEngine/JericoEngine/build/n0-validation/native-scene100/sdk-preparation/source/Cache/pc/shaders/diffuseglobalillumination/sceneandviewsrgs_vulkan_0.azshadervariant",
+        "bytes": 1862,
+        "sha256": "7865F7018A1E7B3255AA5F19BA9BF6C8D9DFA8ECB24333D39054C08DC925B091"
+      },
+      "payloadEqualsPreservedSource": true,
+      "pass": true
+    }
+  ],
+  "expectedDescriptors": 19,
+  "passedDescriptors": 19,
+  "expectedTuples": 41,
+  "passedTuples": 41,
+  "actualPrecompiledOutgoingEdges": 41,
+  "unexpectedEdges": [],
+  "failedSourceJobs": [
+    {
+      "SourceName": "Shaders/DiffuseGlobalIllumination/DiffuseComposite.shader",
+      "JobID": "671",
+      "JobRunKey": "3470",
+      "Status": "2",
+      "ErrorCount": "1",
+      "LastLogFile": "@log@/JobLogs/Shaders/DiffuseGlobalIllumination/DiffuseComposite.shader-2832108281-3470.log"
+    },
+    {
+      "SourceName": "Shaders/DiffuseGlobalIllumination/DiffuseProbeGridDownsample.shader",
+      "JobID": "673",
+      "JobRunKey": "3118",
+      "Status": "2",
+      "ErrorCount": "1",
+      "LastLogFile": "@log@/JobLogs/Shaders/DiffuseGlobalIllumination/DiffuseProbeGridDownsample.shader-3014814416-3118.log"
+    },
+    {
+      "SourceName": "Shaders/DiffuseGlobalIllumination/DiffuseProbeGridVisualizationComposite.shader",
+      "JobID": "675",
+      "JobRunKey": "3176",
+      "Status": "2",
+      "ErrorCount": "1",
+      "LastLogFile": "@log@/JobLogs/Shaders/DiffuseGlobalIllumination/DiffuseProbeGridVisualizationComposite.shader-1326548106-3176.log"
+    }
+  ],
+  "originalNode20088Absent": true,
+  "acceptedScope": "Installed precompiled DPG19 actual fresh jobs and exact41 Vulkan PreLoad dependencies only if all comparisons pass; no forcedfresh41 jobs, no globalAP, source shaders, viewport/GI or wholeGem acceptance",
+  "wholeGemIncrement": 0
+}

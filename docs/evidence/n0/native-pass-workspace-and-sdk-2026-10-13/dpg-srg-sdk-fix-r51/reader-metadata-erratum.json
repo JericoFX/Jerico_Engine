@@ -1,0 +1,20 @@
+{
+  "schema": "DPG_FOUR_SOURCE_READER_METADATA_ERRATUM_R51",
+  "utc": "2026-10-19T18:19:07.9184764Z",
+  "recipeSHA256": "A509481101CF5E13EE6042604C6FAFB52B275010F8778CC8F0291C30004A3EC1",
+  "originalMetadata": [
+    "F:/JericoEngine/JericoEngine/build/sdk-vk102/Engine/Render/Features/Assets/DiffuseProbeGrid/Shaders/DiffuseGlobalIllumination/DiffuseComposite.shader",
+    "F:/JericoEngine/JericoEngine/build/sdk-vk102/Engine/Render/Features/Assets/DiffuseProbeGrid/Shaders/DiffuseGlobalIllumination/Downsample.shader",
+    "F:/JericoEngine/JericoEngine/build/sdk-vk102/Engine/Render/Features/Assets/DiffuseProbeGrid/Shaders/DiffuseGlobalIllumination/VisualizationComposite.shader",
+    "F:/JericoEngine/JericoEngine/build/sdk-vk102/Engine/Render/Features/Assets/Shaders/DiffuseGlobalIllumination/DiffuseGlobalFullscreen.shader"
+  ],
+  "correctLiteralActualAPSourceList": [
+    "F:/JericoEngine/JericoEngine/build/sdk-vk102/Engine/Render/Features/Assets/DiffuseProbeGrid/Shaders/DiffuseGlobalIllumination/DiffuseComposite.shader",
+    "F:/JericoEngine/JericoEngine/build/sdk-vk102/Engine/Render/Features/Assets/DiffuseProbeGrid/Shaders/DiffuseGlobalIllumination/DiffuseProbeGridDownsample.shader",
+    "F:/JericoEngine/JericoEngine/build/sdk-vk102/Engine/Render/Features/Assets/DiffuseProbeGrid/Shaders/DiffuseGlobalIllumination/DiffuseProbeGridVisualizationComposite.shader",
+    "F:/JericoEngine/JericoEngine/build/sdk-vk102/Engine/Render/Features/Assets/Shaders/DiffuseGlobalIllumination/DiffuseGlobalFullscreen.shader"
+  ],
+  "usedRecipePreserved": true,
+  "querySelectionUnaffected": "Reader selected exact installed DPG owner plus exact Core shader; the inaccurate metadata array is not used by SQL or guards. Parent independent join used full actual names and actual4AP list; no equivalent-name inference or new SQL run.",
+  "parentReview": "73E8EEF2BA2DA2B31B51EEAB8572DFF3744D300D67D68760EADB094E3E38F8ED"
+}

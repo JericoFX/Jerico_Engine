@@ -1,3 +1,20 @@
+## Estado actual — SRG compartido instalado y cuatro shaders verificados
+
+2026-10-19 UTC. Checkout único development, base e04567254e22ee9288d8ad8443a53754265a5dd3. El corte R51 sigue siendo DiffuseProbeGrid. No Gem terminada ni incremento certificado.
+
+Corrección focal revisada: el único SceneSrg compartido de Terrain pasa byteexacto a Engine/Render/Features/Assets/ShaderLib/Atom/Features/Terrain/SceneSrg.azsli; SceneSrgAll incluye esa ruta y retira su comentario Gem obsoleto. Se conservan campos, layout, guard, licencia y tres consumidores. El proyecto SDK privado recibe scenesrg.srgi/viewsrg.srgi del template instalado. El contrato wrapper + hooks se contrastó con upstream PR18566; no se importó su patch. La revisión de24 archivos productores confirma que ShaderCompiler/MCPP requeridos ya coinciden con HEAD; no necesita C++ adicional ni adopta WIP ajeno.
+
+Instalación incremental del leaf Features Assets existente: native0/0,1665556s, +1 archivo/1 cambio/0 retiros. SDK11319 archivos; otros11317 y120 productos del productor protegidos,82 payloads inactivos ausentes. Sin configure, rebuild C++ o SDK completo nuevos.
+
+AP4 terminó1/303,2514853s global; guard/timeout false, postflight sin drift y procesos originales cerrados. Los cuatro shaders fuente focales son Status4/error0/warning2 y producen17 productos físicos cada uno. Se conservan24 fallos globales y avisos C.UTF-8; el primer fatal global es un header candidato de261 caracteres en templates MaterialCanvas. No excluir plantillas para ocultarlo ni declarar AP/SDK global PASS.
+
+Lectura DB readonly0/0,123s: DB byteexacta,91 sources/jobs/155 products, lector Node cerrado y sidecars conservados. Revisión padre73E8EEF2 confirma cuatro jobs actuales RunKeys6460/6464/6470/6472 y68 productos físicos;19 jobs precompiled anteriores y41 dependencias Vulkan PreLoad exactas conservados, sin llamarlos nuevos jobs AP4. Los29 seeds unen GUID+SubId0+path real; default0 demostrado en AssetId/loader de entradas nuevas (85E11DB1). Erratum de dos nombres abreviados en metadata no usada por SQL conservado. Evidencia pública: docs/evidence/n0/native-pass-workspace-and-sdk-2026-10-13/dpg-srg-sdk-fix-r51/README.md.
+
+Reutilizar CPU669, ownership2262 y consumidor instalado127 destinos exactos/DPG692/0/Core6 para sus entradas intactas; no extenderlos a GI visible. Este commit publica sólo el arreglo SRG y su evidencia, sin cerrar la absorción completa. Pendientes: política efectiva ceroRT y prueba Vulkan Baked/AutoSelect/GUI con atlas válido. No atlas authored válido encontrado; fixture CPU1x1 no prueba producto. Mantener GI de Atom; no introducir otra técnica. Linux/VR/Shipping/N0/GOAL siguen abiertos.
+
+No job nativo activo. Padre integra/publica; W1/W2/Luna HOLD y auxiliares propios cerrados. Último censo18:24Z: RAM37,437%/19,965GiB libres, sin builds/AP; servicios MCP compartidos preservados. Antes de otro job pesado: admisión fresca RAM<70%/≥10GiB, guard80%, un dueño y nuevo freeze: R10 es evidencia histórica tras cambios documentales. Conservar escenas, decisiones manuales, repositorios previos y WIP ajeno.
+
+---
 ## Corte vigente — creación y selección directa de materiales verificada (R50)
 
 2026-10-19 UTC. Checkout único F:\JericoEngine\JericoEngine, development; base publicada ab98ab2d5863f8954f0eab2ecd088bcfc6c61568. Candidato canónico de 24 archivos listo para publicación selectiva. Incremento de Gems aceptadas 0; Atom_Feature_Common, N0 y GOAL siguen abiertos. No repetir suites/SDK sin invalidación de sus entradas.

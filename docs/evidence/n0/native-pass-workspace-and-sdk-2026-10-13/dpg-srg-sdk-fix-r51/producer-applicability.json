@@ -1,0 +1,583 @@
+{
+  "approved": false,
+  "scope": "Only publication applicability of SRG3asset seam and four shader GREEN to existing published producer baseline; no cleanHEAD/fullGem assertion.",
+  "utc": "2026-10-19T18:21:26.204563+00:00",
+  "HEAD": "e04567254e22ee9288d8ad8443a53754265a5dd3",
+  "verdict": {
+    "pendingWIPCppInExaminedProducerScopes": false,
+    "scopedGitStatusEntries": 0,
+    "scopedGitDiffBytes": 0,
+    "directHeadRawComparisons": 24,
+    "allNormalizedExact": true,
+    "additionalCppHunksRequiredForThisSeam": [],
+    "conclusion": "No unpublished R51 ShaderCompiler/MCPP/Preprocessor path fix is required by this bounded seam. Existing preopen ABI/path resolver/build-include behavior is required but already present in published e045672 source/recipes/package association. Publish only approved asset delta coherently; do not absorb unrelated DPG C++/otherWIP on this evidence."
+  },
+  "scopeGitPaths": [
+    "Code/Tools/ShaderCompiler",
+    "Engine/Assets/RenderBuilders/Source/Shader",
+    "cmake/Tools/LocalPackages/mcpp",
+    "cmake/3rdParty"
+  ],
+  "sourceAndHEADComparisons": [
+    {
+      "path": "Engine/Assets/RenderBuilders/Source/Shader/CommonFiles/Preprocessor.h",
+      "currentRaw": {
+        "path": "F:/JericoEngine/JericoEngine/Engine/Assets/RenderBuilders/Source/Shader/CommonFiles/Preprocessor.h",
+        "bytes": 7296,
+        "sha256": "1A60260410952D0A0B5DB219DB9DE6E620AEBA101E18CA244501004753E262F8"
+      },
+      "HEADGitBlobOID": "ef0188e37a052754052b0e4a66c4897e23f5ade0",
+      "HEADBlobBytes": 7124,
+      "HEADBlobSHA256": "F2A6D1C5681EF4807AC6C1A39BA44E941063470B1214C189098635CCF220AEBF",
+      "rawByteExact": false,
+      "onlyCRLFNormalizationNeeded": true,
+      "normalizedByteExact": true,
+      "indexedWorkingFresh": true
+    },
+    {
+      "path": "Engine/Assets/RenderBuilders/Source/Shader/CommonFiles/Preprocessor.cpp",
+      "currentRaw": {
+        "path": "F:/JericoEngine/JericoEngine/Engine/Assets/RenderBuilders/Source/Shader/CommonFiles/Preprocessor.cpp",
+        "bytes": 23695,
+        "sha256": "1A82F24292F61C195792F8B4393189B7C5F729856EC8498B34EF32B33E7B2164"
+      },
+      "HEADGitBlobOID": "40498be95429fa2e8e0651dc9ce9713b7ca9a568",
+      "HEADBlobBytes": 23202,
+      "HEADBlobSHA256": "F6A2372CDDC83C7D9CF524B947175C6220D3FC70C9E02AC6B3A1E991278A2041",
+      "rawByteExact": false,
+      "onlyCRLFNormalizationNeeded": true,
+      "normalizedByteExact": true,
+      "indexedWorkingFresh": true
+    },
+    {
+      "path": "Engine/Assets/RenderBuilders/Source/Shader/ShaderAssetBuilder.h",
+      "currentRaw": {
+        "path": "F:/JericoEngine/JericoEngine/Engine/Assets/RenderBuilders/Source/Shader/ShaderAssetBuilder.h",
+        "bytes": 2256,
+        "sha256": "5C4E1B1FF394AD8574A2A902E6F24657EAAB6ECE5DFF456914B5A2EB82872973"
+      },
+      "HEADGitBlobOID": "eb9e70a02201f65348fff7a6988e7cdde5e2b1c6",
+      "HEADBlobBytes": 2186,
+      "HEADBlobSHA256": "5C6C94B718B5EF8D073CABA39622F749BB3664E92026B6040F54D2CDD6F257A5",
+      "rawByteExact": false,
+      "onlyCRLFNormalizationNeeded": true,
+      "normalizedByteExact": true,
+      "indexedWorkingFresh": true
+    },
+    {
+      "path": "Engine/Assets/RenderBuilders/Source/Shader/ShaderAssetBuilder.cpp",
+      "currentRaw": {
+        "path": "F:/JericoEngine/JericoEngine/Engine/Assets/RenderBuilders/Source/Shader/ShaderAssetBuilder.cpp",
+        "bytes": 46193,
+        "sha256": "3438DA4F38F63F99AEACAED1CD45B9085895F8D91B206BA3C17CC6B44A4AE90A"
+      },
+      "HEADGitBlobOID": "7895d26ab424d0a7270ca4675a3e805193c595d8",
+      "HEADBlobBytes": 45410,
+      "HEADBlobSHA256": "DCE7D104CD7F64C0C83D4321436D2DAB9F599E6B1835B2F3423D493D79C7667C",
+      "rawByteExact": false,
+      "onlyCRLFNormalizationNeeded": true,
+      "normalizedByteExact": true,
+      "indexedWorkingFresh": true
+    },
+    {
+      "path": "Engine/Assets/RenderBuilders/Source/Shader/ShaderBuilderUtility.h",
+      "currentRaw": {
+        "path": "F:/JericoEngine/JericoEngine/Engine/Assets/RenderBuilders/Source/Shader/ShaderBuilderUtility.h",
+        "bytes": 10009,
+        "sha256": "8AD929E655F2138B194D0786EB96974223F1BA9F06C8895AFEE7FCE3D5B3F1F4"
+      },
+      "HEADGitBlobOID": "c284ecab6653e159712559d438cf73b737f13166",
+      "HEADBlobBytes": 9833,
+      "HEADBlobSHA256": "82DEF045BC263FDDC1DC18B78E681FFA6B755EC1CA58AB1D559BBCAF737F2442",
+      "rawByteExact": false,
+      "onlyCRLFNormalizationNeeded": true,
+      "normalizedByteExact": true,
+      "indexedWorkingFresh": true
+    },
+    {
+      "path": "Engine/Assets/RenderBuilders/Source/Shader/ShaderBuilderUtility.cpp",
+      "currentRaw": {
+        "path": "F:/JericoEngine/JericoEngine/Engine/Assets/RenderBuilders/Source/Shader/ShaderBuilderUtility.cpp",
+        "bytes": 50142,
+        "sha256": "C1F4CDBC80C91805B83CD738EF3AA8E3A346A95429EB357651B95783250F5ED7"
+      },
+      "HEADGitBlobOID": "47f8640037b66902eee11bec3d0db05b93788f39",
+      "HEADBlobBytes": 49207,
+      "HEADBlobSHA256": "A4E04F36F86032023F539DEBD2542703A8B566747E5C7D23F455D55CE23C9BD9",
+      "rawByteExact": false,
+      "onlyCRLFNormalizationNeeded": true,
+      "normalizedByteExact": true,
+      "indexedWorkingFresh": true
+    },
+    {
+      "path": "Code/Tools/ShaderCompiler/Source/Main.cpp",
+      "currentRaw": {
+        "path": "F:/JericoEngine/JericoEngine/Code/Tools/ShaderCompiler/Source/Main.cpp",
+        "bytes": 35502,
+        "sha256": "1FCB60E40F51E68771445F4B301686564483C65411CFFF9252860F601601EBCA"
+      },
+      "HEADGitBlobOID": "abfb08cdee987ba98eb79aa063e3c0a21f843751",
+      "HEADBlobBytes": 34694,
+      "HEADBlobSHA256": "4B466FE93B76F7ACB59BB8DFFBCB1C211E506B26F815132FA5D2998EF82FD3ED",
+      "rawByteExact": false,
+      "onlyCRLFNormalizationNeeded": true,
+      "normalizedByteExact": true,
+      "indexedWorkingFresh": true
+    },
+    {
+      "path": "Code/Tools/ShaderCompiler/Source/Emitters/VulkanPlatformEmitter.cpp",
+      "currentRaw": {
+        "path": "F:/JericoEngine/JericoEngine/Code/Tools/ShaderCompiler/Source/Emitters/VulkanPlatformEmitter.cpp",
+        "bytes": 1710,
+        "sha256": "475AA2CB97A564CA0BBD5DA9769A5A8813CDC272AF9718D1258FF8C74D89AD00"
+      },
+      "HEADGitBlobOID": "fb5eb94e1664038c93f39af9e1bfb93f2d8b73d4",
+      "HEADBlobBytes": 1663,
+      "HEADBlobSHA256": "B9652CCC5099E38A7ABE7D23D24E3924E4F1C6B6B673EFB24E6D753EF92B6497",
+      "rawByteExact": false,
+      "onlyCRLFNormalizationNeeded": true,
+      "normalizedByteExact": true,
+      "indexedWorkingFresh": true
+    },
+    {
+      "path": "Code/Tools/ShaderCompiler/Source/Emitters/CommonVulkanPlatformEmitter.cpp",
+      "currentRaw": {
+        "path": "F:/JericoEngine/JericoEngine/Code/Tools/ShaderCompiler/Source/Emitters/CommonVulkanPlatformEmitter.cpp",
+        "bytes": 4867,
+        "sha256": "B4CBD438ED69D038EDF1A36D2A5030CDF8399DA811AFCA7DEB4F1813C2A2D118"
+      },
+      "HEADGitBlobOID": "abb654cc32a876ec7ed57a576b2f8bb52b697c42",
+      "HEADBlobBytes": 4777,
+      "HEADBlobSHA256": "BC958573F8082645883F832863A02958BDBC4A7DF5DD435CF1C235D427373D03",
+      "rawByteExact": false,
+      "onlyCRLFNormalizationNeeded": true,
+      "normalizedByteExact": true,
+      "indexedWorkingFresh": true
+    },
+    {
+      "path": "cmake/Tools/LocalPackages/mcpp/CMakeLists.txt",
+      "currentRaw": {
+        "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/mcpp/CMakeLists.txt",
+        "bytes": 4232,
+        "sha256": "F8E3278870F36B21DEA8BB72FB80B5267F38AF3C884E3865D26B5F3268BCBD46"
+      },
+      "HEADGitBlobOID": "9e5583bc7d08640ddde6ae01280f1ed6bc1dba63",
+      "HEADBlobBytes": 4163,
+      "HEADBlobSHA256": "C589236452D1359558E092DBAC1D79A7CA8E750E0DD96E9C5706B814151B14AC",
+      "rawByteExact": false,
+      "onlyCRLFNormalizationNeeded": true,
+      "normalizedByteExact": true,
+      "indexedWorkingFresh": "CONFIG_OR_PATCH_NOT_CPP_INDEXED"
+    },
+    {
+      "path": "cmake/Tools/LocalPackages/mcpp/BuildMcppPackage.cmake",
+      "currentRaw": {
+        "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/mcpp/BuildMcppPackage.cmake",
+        "bytes": 8390,
+        "sha256": "CF2E65EDCF7406BA9392D1185A468CB765C04A22AAB2F2E9BAA720029A9F6D4B"
+      },
+      "HEADGitBlobOID": "e3892ac783812ab24ad1e338641b29dbae07d8c5",
+      "HEADBlobBytes": 8264,
+      "HEADBlobSHA256": "D1C9ED6BF8AB9053F3CD943649FCB48DEA6CD596A4EB23254B682B37B92A128F",
+      "rawByteExact": false,
+      "onlyCRLFNormalizationNeeded": true,
+      "normalizedByteExact": true,
+      "indexedWorkingFresh": "CONFIG_OR_PATCH_NOT_CPP_INDEXED"
+    },
+    {
+      "path": "cmake/Tools/LocalPackages/mcpp/Findmcpp.cmake",
+      "currentRaw": {
+        "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/mcpp/Findmcpp.cmake",
+        "bytes": 4200,
+        "sha256": "D3AEB0628AD75BE6258F717433D4F1C3CD050963818605441F5948C965096CEF"
+      },
+      "HEADGitBlobOID": "7823869ae66558a6713c16f52565df3ba23d4df7",
+      "HEADBlobBytes": 4117,
+      "HEADBlobSHA256": "F0AB82EB1613FA07C6F006CD20F3A7BE40B930BFB4D5DB47641689EED78F2F61",
+      "rawByteExact": false,
+      "onlyCRLFNormalizationNeeded": true,
+      "normalizedByteExact": true,
+      "indexedWorkingFresh": "CONFIG_OR_PATCH_NOT_CPP_INDEXED"
+    },
+    {
+      "path": "cmake/Tools/LocalPackages/mcpp/NOTICE.txt",
+      "currentRaw": {
+        "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/mcpp/NOTICE.txt",
+        "bytes": 2963,
+        "sha256": "AC444E307DAF341B4C2052A9BC76C0194D432C10082593021338C6AFAE226DE0"
+      },
+      "HEADGitBlobOID": "efe796fc955ab536e386684d8aff4c47547be8f8",
+      "HEADBlobBytes": 2963,
+      "HEADBlobSHA256": "AC444E307DAF341B4C2052A9BC76C0194D432C10082593021338C6AFAE226DE0",
+      "rawByteExact": true,
+      "onlyCRLFNormalizationNeeded": false,
+      "normalizedByteExact": true,
+      "indexedWorkingFresh": "CONFIG_OR_PATCH_NOT_CPP_INDEXED"
+    },
+    {
+      "path": "cmake/Tools/LocalPackages/mcpp/tests/CMakeLists.txt",
+      "currentRaw": {
+        "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/mcpp/tests/CMakeLists.txt",
+        "bytes": 3861,
+        "sha256": "3C250161C95A6C5EA24F4493CD072895A0957543A47399C8EB5EC0CFB19897E8"
+      },
+      "HEADGitBlobOID": "d87dbe2fd681618ee392bb17ed8b1722c335273f",
+      "HEADBlobBytes": 3799,
+      "HEADBlobSHA256": "5034F5BDBAFD2EADDCDF460C5E4D4A1392ED8397EF6AC155280884135513672D",
+      "rawByteExact": false,
+      "onlyCRLFNormalizationNeeded": true,
+      "normalizedByteExact": true,
+      "indexedWorkingFresh": "CONFIG_OR_PATCH_NOT_CPP_INDEXED"
+    },
+    {
+      "path": "cmake/Tools/LocalPackages/mcpp/tests/McppConsumer.cpp",
+      "currentRaw": {
+        "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/mcpp/tests/McppConsumer.cpp",
+        "bytes": 9337,
+        "sha256": "6A6D6207358E89B10846B8189EFB77A4DF0107A975AB688BCE2D95E361CAC7F4"
+      },
+      "HEADGitBlobOID": "328f4576c9e9977413a16ed1f416fe5d8dbe0102",
+      "HEADBlobBytes": 9102,
+      "HEADBlobSHA256": "C1CBB765368A5F748ABDE1516BB040C2459A0037A9706522A22CA7EE52B2D844",
+      "rawByteExact": false,
+      "onlyCRLFNormalizationNeeded": true,
+      "normalizedByteExact": true,
+      "indexedWorkingFresh": true
+    },
+    {
+      "path": "cmake/Tools/LocalPackages/mcpp/ApplyMcppPreopenExtension.cmake",
+      "currentRaw": {
+        "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/mcpp/ApplyMcppPreopenExtension.cmake",
+        "bytes": 4323,
+        "sha256": "EAAD70EC9FA295D29613A4C8F58FB7A9D250D67C3AA15F2BDDE1D5B124F99CC6"
+      },
+      "HEADGitBlobOID": "5dc9dcff4dbfbf8b98ffa10c8d9505d70035c700",
+      "HEADBlobBytes": 4323,
+      "HEADBlobSHA256": "EAAD70EC9FA295D29613A4C8F58FB7A9D250D67C3AA15F2BDDE1D5B124F99CC6",
+      "rawByteExact": true,
+      "onlyCRLFNormalizationNeeded": false,
+      "normalizedByteExact": true,
+      "indexedWorkingFresh": "CONFIG_OR_PATCH_NOT_CPP_INDEXED"
+    },
+    {
+      "path": "cmake/Tools/LocalPackages/mcpp/McppPreopenExtensionManifest.json",
+      "currentRaw": {
+        "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/mcpp/McppPreopenExtensionManifest.json",
+        "bytes": 2742,
+        "sha256": "4B060D0BFC905496E43158966A1666C4E4D642A88F739A15647CA456DB2F3A0B"
+      },
+      "HEADGitBlobOID": "d6149dcfaab3d9473bd416a6f30ac9101686077c",
+      "HEADBlobBytes": 2742,
+      "HEADBlobSHA256": "4B060D0BFC905496E43158966A1666C4E4D642A88F739A15647CA456DB2F3A0B",
+      "rawByteExact": true,
+      "onlyCRLFNormalizationNeeded": false,
+      "normalizedByteExact": true,
+      "indexedWorkingFresh": "CONFIG_OR_PATCH_NOT_CPP_INDEXED"
+    },
+    {
+      "path": "cmake/Tools/LocalPackages/mcpp/mcpp_preopen_read.patch",
+      "currentRaw": {
+        "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/mcpp/mcpp_preopen_read.patch",
+        "bytes": 2650,
+        "sha256": "021789ADB3019C6A5E00D018ABDEDAE5A35706ACEE713A5EAF3FCBD5126D938A"
+      },
+      "HEADGitBlobOID": "28305bd6e1ca40bbf50212a465640ed40cc26d80",
+      "HEADBlobBytes": 2650,
+      "HEADBlobSHA256": "021789ADB3019C6A5E00D018ABDEDAE5A35706ACEE713A5EAF3FCBD5126D938A",
+      "rawByteExact": true,
+      "onlyCRLFNormalizationNeeded": false,
+      "normalizedByteExact": true,
+      "indexedWorkingFresh": "CONFIG_OR_PATCH_NOT_CPP_INDEXED"
+    },
+    {
+      "path": "cmake/Tools/LocalPackages/mcpp/ApplyMcppPatch.cmake",
+      "currentRaw": {
+        "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/mcpp/ApplyMcppPatch.cmake",
+        "bytes": 4697,
+        "sha256": "87F5AA8CFD5B00EB41CC721E300E7214AB1C143E93018AA4985DC55B57A1E4EC"
+      },
+      "HEADGitBlobOID": "88f2a8f51cb1a25a5a4033b4f8f0fd516213765c",
+      "HEADBlobBytes": 4610,
+      "HEADBlobSHA256": "1FFEC3FE0A739CBBC31F6FA91A6BF9459EB47FB89045F4EDE149B592B972A092",
+      "rawByteExact": false,
+      "onlyCRLFNormalizationNeeded": true,
+      "normalizedByteExact": true,
+      "indexedWorkingFresh": "CONFIG_OR_PATCH_NOT_CPP_INDEXED"
+    },
+    {
+      "path": "cmake/Tools/LocalPackages/mcpp/McppPatchManifest.json",
+      "currentRaw": {
+        "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/mcpp/McppPatchManifest.json",
+        "bytes": 10343,
+        "sha256": "9F8522A8A06AB9C4207F5F5EE7E7B41837831118512B07B0A8507BB5997AAEC3"
+      },
+      "HEADGitBlobOID": "63d582eee092552b192214e54085c8a0711aaf58",
+      "HEADBlobBytes": 10003,
+      "HEADBlobSHA256": "FEDDFB71C26E8D74E1CF04181B32785DFF45BF2D5C8087FBA6E6EDDFE9754095",
+      "rawByteExact": false,
+      "onlyCRLFNormalizationNeeded": true,
+      "normalizedByteExact": true,
+      "indexedWorkingFresh": "CONFIG_OR_PATCH_NOT_CPP_INDEXED"
+    },
+    {
+      "path": "cmake/Tools/LocalPackages/mcpp/mcpp_2.7.2_az.patch",
+      "currentRaw": {
+        "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/mcpp/mcpp_2.7.2_az.patch",
+        "bytes": 20311,
+        "sha256": "8797760AF297BE90586F03AE69C3FFAEB89591FA69199C4242E05F4DF6EFDC6B"
+      },
+      "HEADGitBlobOID": "3cf1a5dea9ddb7fca80b49e79a975a9a959a13fa",
+      "HEADBlobBytes": 20311,
+      "HEADBlobSHA256": "8797760AF297BE90586F03AE69C3FFAEB89591FA69199C4242E05F4DF6EFDC6B",
+      "rawByteExact": true,
+      "onlyCRLFNormalizationNeeded": false,
+      "normalizedByteExact": true,
+      "indexedWorkingFresh": "CONFIG_OR_PATCH_NOT_CPP_INDEXED"
+    },
+    {
+      "path": "cmake/Tools/LocalPackages/mcpp/visualc.mak.original",
+      "currentRaw": {
+        "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/mcpp/visualc.mak.original",
+        "bytes": 4712,
+        "sha256": "A35DC1B5C93ACF904EBBAD69065125FF93F1B2905D822AE518AA6593FB000C7F"
+      },
+      "HEADGitBlobOID": "d6df63e2d1969f8aa1254f1df9bd286aab2ff06e",
+      "HEADBlobBytes": 4712,
+      "HEADBlobSHA256": "A35DC1B5C93ACF904EBBAD69065125FF93F1B2905D822AE518AA6593FB000C7F",
+      "rawByteExact": true,
+      "onlyCRLFNormalizationNeeded": false,
+      "normalizedByteExact": true,
+      "indexedWorkingFresh": "CONFIG_OR_PATCH_NOT_CPP_INDEXED"
+    },
+    {
+      "path": "cmake/Tools/LocalPackages/mcpp/README.md",
+      "currentRaw": {
+        "path": "F:/JericoEngine/JericoEngine/cmake/Tools/LocalPackages/mcpp/README.md",
+        "bytes": 8454,
+        "sha256": "D39B3A3F3D420947D5DCF2E2B6BE379F8AA5201634A3E2A65FAE1B4581FAB2E1"
+      },
+      "HEADGitBlobOID": "6f16e622f96d4f428f883c2b0a242c786e95807f",
+      "HEADBlobBytes": 8454,
+      "HEADBlobSHA256": "D39B3A3F3D420947D5DCF2E2B6BE379F8AA5201634A3E2A65FAE1B4581FAB2E1",
+      "rawByteExact": true,
+      "onlyCRLFNormalizationNeeded": false,
+      "normalizedByteExact": true,
+      "indexedWorkingFresh": "CONFIG_OR_PATCH_NOT_CPP_INDEXED"
+    },
+    {
+      "path": "cmake/3rdParty/Platform/Windows/BuiltInPackages_windows.cmake",
+      "currentRaw": {
+        "path": "F:/JericoEngine/JericoEngine/cmake/3rdParty/Platform/Windows/BuiltInPackages_windows.cmake",
+        "bytes": 6802,
+        "sha256": "F9E71213F99F421558E1F8B77B0A617BA4B0766C5AB2266975CB562D2BA2DCEB"
+      },
+      "HEADGitBlobOID": "9f9e233cdfaa27f3cf25be7706f2c1f78269bb9f",
+      "HEADBlobBytes": 6758,
+      "HEADBlobSHA256": "DF191599528F48610046398B4C19FFEC3080560EED9413C80008A22032377406",
+      "rawByteExact": false,
+      "onlyCRLFNormalizationNeeded": true,
+      "normalizedByteExact": true,
+      "indexedWorkingFresh": "CONFIG_OR_PATCH_NOT_CPP_INDEXED"
+    }
+  ],
+  "graft": {
+    "index": "F:/JericoEngine/JericoEngine/build/n0-validation/graft-native-owner-rev1",
+    "fingerprint": {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/graft-native-owner-rev1/.cache/fingerprint.fb846616d35ffa27.json",
+      "bytes": 2912347,
+      "sha256": "8AD3330509DE95749DB33CF6B23CA9E31B4888D5A2347972CD1CE4275F4306CE"
+    },
+    "cardsReused": [
+      "Engine/Assets/RenderBuilders/Source/Shader/CommonFiles/Preprocessor.md",
+      "Engine/Assets/RenderBuilders/Source/Shader/ShaderAssetBuilder.md",
+      "Code/Tools/ShaderCompiler/Source/Main.md"
+    ],
+    "workingOnly": "Graft represents working source; HEAD comparison is explicit readonly cat-file bytes, not inferred from working cards.",
+    "newGraphLoads": 0
+  },
+  "existingRequiredPublishedBehavior": [
+    {
+      "source": "Engine/Assets/RenderBuilders/Source/Shader/CommonFiles/Preprocessor.cpp",
+      "lines": "212-246",
+      "behavior": "Preopen callback/register/reset and native resolver ABI already HEAD-exact; historical shader-preopen GREEN covers this dependency."
+    },
+    {
+      "source": "Engine/Assets/RenderBuilders/Source/Shader/CommonFiles/Preprocessor.cpp",
+      "lines": "412-489",
+      "behavior": "Shader folder, project root, existing scanfolder/ShaderLib and engine root/Gems include path construction already HEAD-exact. New project hooks are authored inputs using existing discovery; not a missing C++ include-path fix."
+    },
+    {
+      "source": "cmake/3rdParty/Platform/Windows/BuiltInPackages_windows.cmake",
+      "lines": "26",
+      "behavior": "Published association selects mcpp-2.7.2_az.2-je-preopen-r32-windows, archiveACE0EA137A8056CF9A0C41820E13F413644A5FDA0618922EB86542EF0E9C19F3. Source patches/headerABI/producerrecipe/README are HEAD-exact, not private ignored-only repairs."
+    }
+  ],
+  "actualAP4ProducerProvenance": {
+    "binding": {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/native-corefeature102/analysis-parent/diffuse-probe-tools-request-r51/dpg-srg-shaders4.once.approved.json",
+      "bytes": 2930612,
+      "sha256": "D119E83F264E4B09EB9D245F244160C83645ED4AF71D5B37D833F23C620D9221"
+    },
+    "actualSourceFreeze": {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-corefeature102\\analysis-parent\\diffuse-probe-tools-request-r51\\dpg-native-source-freeze-r10.json",
+      "bytes": 4280787,
+      "sha256": "128DB2ADFD04ECAA1765FDB67B0F96ED3E47BAC87A0C4AD9089DBAEAC2A5D98D"
+    },
+    "physicalSDKAndOriginalProducerPinsRechecked": [
+      {
+        "path": "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/profile/azslc.exe",
+        "bytes": 2198528,
+        "sha256": "082C58C8FC126945A888EA98A16668D04F8DC759B8CC5D5C87D1C33E05139926"
+      },
+      {
+        "path": "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/profile/mcpp0.dll",
+        "bytes": 136192,
+        "sha256": "B3BD7BA4E702E00CC16DFA871E329017F5F76E018A8C3BF2FABBBC08AC5656E4"
+      },
+      {
+        "path": "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/profile/RenderAssetBuilders.dll",
+        "bytes": 2247680,
+        "sha256": "4B1B1C636D6254303CB5BE9DEC3C235CC0353FE467B110C81E4B3F0F858C78DC"
+      },
+      {
+        "path": "F:/JericoEngine/JericoEngine/build/sdk-vk102/bin/Windows/profile/Default/azslc.exe",
+        "bytes": 2198528,
+        "sha256": "082C58C8FC126945A888EA98A16668D04F8DC759B8CC5D5C87D1C33E05139926"
+      },
+      {
+        "path": "F:/JericoEngine/JericoEngine/build/sdk-vk102/bin/Windows/profile/Default/mcpp0.dll",
+        "bytes": 136192,
+        "sha256": "B3BD7BA4E702E00CC16DFA871E329017F5F76E018A8C3BF2FABBBC08AC5656E4"
+      },
+      {
+        "path": "F:/JericoEngine/JericoEngine/build/sdk-vk102/bin/Windows/profile/Default/RenderAssetBuilders.dll",
+        "bytes": 2247680,
+        "sha256": "4B1B1C636D6254303CB5BE9DEC3C235CC0353FE467B110C81E4B3F0F858C78DC"
+      }
+    ],
+    "note": "No new build/PE/cook run. Existing AP4 uses SDK not sourceengine; no physical source hiding/cleanHEAD rebuild claim."
+  },
+  "historicalValidatedDependencyReused": {
+    "review": {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/native-corefeature102/analysis-parent/shader-preopen-native-green-review-r35.json",
+      "bytes": 6356,
+      "sha256": "4D4F7B5FAE315277CEE324F58F306A14C9620A9A14F4A8480210BF774801F38C"
+    },
+    "cases": 20,
+    "failures": 0,
+    "mcppDeployedB3BD": "B3BD7BA4E702E00CC16DFA871E329017F5F76E018A8C3BF2FABBBC08AC5656E4",
+    "RenderAssetBuildersSameAsR35": "4B1B1C636D6254303CB5BE9DEC3C235CC0353FE467B110C81E4B3F0F858C78DC",
+    "notRerun": true
+  },
+  "existingPEEvidence": {
+    "result": {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/native-corefeature102/pe-imports-dpg-sdk-consumer-r51-attempt1/pe-imports-dpg-sdk-consumer-r51.result.json",
+      "bytes": 765,
+      "sha256": "25E608FF98E75072CD404EE1C79281D7F11C3596AE47B7391A683B9510B2BBCC"
+    },
+    "stdout": {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/native-corefeature102/pe-imports-dpg-sdk-consumer-r51-attempt1/pe-imports-dpg-sdk-consumer-r51.stdout.log",
+      "bytes": 239646,
+      "sha256": "D46E69252CD20F7C621B8B1124C586ED4C569F01112A6A00A6DE76BAE9588F1D"
+    },
+    "limit": "Consumer PE is current imported-ABI evidence, not a separate claim it proves every shader dependency or a clean source build. Current AP producer pins and accepted R35 shader/ABI checks supply the bounded producer link."
+  },
+  "assetDeltaDistinct": {
+    "application": {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/native-corefeature102/analysis-source/dpg-installed-srg-include-diagnostic-r51/fixture-and-terrain-proposal/application-r51/application-receipt.json",
+      "bytes": 9495,
+      "sha256": "EFEE2B178C5AAC33571EF630796F2681A7FF2BE36F4CCB7A399EB68CEE667A3B"
+    },
+    "sourcePaths": [
+      "Gems/Terrain/Assets/Shaders/Terrain/SceneSrg.azsli DELETE",
+      "Engine/Render/Features/Assets/ShaderLib/Atom/Features/Terrain/SceneSrg.azsli ADD_BYTEEXACT",
+      "Engine/Render/Features/Assets/ShaderResourceGroups/SceneSrgAll.azsli ONE_INCLUDE_LINE"
+    ],
+    "privateFixtureHooksNotPublicationSource": "Two project ShaderLib files remain private validation fixture, not a new product alias/stub."
+  },
+  "limits": [
+    "This is not wholeSDK/Gem/cleanHEAD acceptance or proof of absence of all other foreign WIP. Other DPG move/factory/test/config changes remain parent-owned integration scope.",
+    "Public MCPP source+recipe association do not prove remote package availability or bitexact rebuild on another toolchain; prior package-distribution contract remains.",
+    "No copied195payload rehash, suites, source/config/docs/Git mutation, native product execution or noRT implementation."
+  ],
+  "skillsCompleteReadingReused": true,
+  "shortReadonlyGitChildren": [
+    {
+      "pid": 21784,
+      "parent": 21608,
+      "executable": "C:\\Program Files\\Git\\cmd\\git.EXE",
+      "owner": "/root/bsp_writer",
+      "purpose": "Read-only Git HEAD/raw producer applicability",
+      "argv": [
+        "rev-parse",
+        "HEAD"
+      ],
+      "startedBeforeCommunicationUtc": "2026-10-19T18:21:25.947587+00:00",
+      "exit": 0,
+      "terminal": true,
+      "stderr": "",
+      "processHandleDisposed": true
+    },
+    {
+      "pid": 11884,
+      "parent": 21608,
+      "executable": "C:\\Program Files\\Git\\cmd\\git.EXE",
+      "owner": "/root/bsp_writer",
+      "purpose": "Read-only Git HEAD/raw producer applicability",
+      "argv": [
+        "status",
+        "--porcelain=v1",
+        "--untracked-files=all",
+        "--",
+        "Code/Tools/ShaderCompiler",
+        "Engine/Assets/RenderBuilders/Source/Shader",
+        "cmake/Tools/LocalPackages/mcpp",
+        "cmake/3rdParty"
+      ],
+      "startedBeforeCommunicationUtc": "2026-10-19T18:21:25.971627+00:00",
+      "exit": 0,
+      "terminal": true,
+      "stderr": "",
+      "processHandleDisposed": true
+    },
+    {
+      "pid": 15844,
+      "parent": 21608,
+      "executable": "C:\\Program Files\\Git\\cmd\\git.EXE",
+      "owner": "/root/bsp_writer",
+      "purpose": "Read-only Git HEAD/raw producer applicability",
+      "argv": [
+        "diff",
+        "--binary",
+        "e04567254e22ee9288d8ad8443a53754265a5dd3",
+        "--",
+        "Code/Tools/ShaderCompiler",
+        "Engine/Assets/RenderBuilders/Source/Shader",
+        "cmake/Tools/LocalPackages/mcpp",
+        "cmake/3rdParty"
+      ],
+      "startedBeforeCommunicationUtc": "2026-10-19T18:21:26.011159+00:00",
+      "exit": 0,
+      "terminal": true,
+      "stderr": "",
+      "processHandleDisposed": true
+    },
+    {
+      "pid": 14668,
+      "parent": 21608,
+      "executable": "C:\\Program Files\\Git\\cmd\\git.EXE",
+      "owner": "/root/bsp_writer",
+      "purpose": "Read-only Git HEAD/raw producer applicability",
+      "argv": [
+        "cat-file",
+        "--batch"
+      ],
+      "startedBeforeCommunicationUtc": "2026-10-19T18:21:26.046702+00:00",
+      "exit": 0,
+      "terminal": true,
+      "stderr": "",
+      "processHandleDisposed": true
+    }
+  ],
+  "wholeGemIncrement": 0
+}

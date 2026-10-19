@@ -1,0 +1,425 @@
+{
+  "approved": false,
+  "nativeJSONLoadExecuted": false,
+  "SQLExecuted": false,
+  "utc": "2026-10-19T18:15:49.588042+00:00",
+  "scope": "Only default AssetId subId and omitted JSON field loading for current29 DPG seeds; no source/DB/payload mutation or GUID derivation.",
+  "verdict": {
+    "freshAssetIdDefaultSubId": 0,
+    "omittedSubIdLeavesExistingMemberUnchanged": true,
+    "actualSeedLoaderFreshVector": true,
+    "currentSeedCount": 29,
+    "omittedSubIdCount": 29,
+    "effectiveSubIdCounts": {
+      "0": 29
+    },
+    "join": "Use authored GUID and effectiveSubID0 for omitted members in these freshly loaded SeedInfo entries. Do not join only GUID/pathHint or substitute a nonzero observed product SubID.",
+    "limitation": "Missing subId does not forcibly zero an already populated AssetId during in-place partial JSON load. It preserves existing value; zero conclusion here depends on actual fresh seed vector/default construction."
+  },
+  "versions": {
+    "AssetIdSerializeContextVersion": 1,
+    "SeedInfoSerializeContextVersion": 2,
+    "AssetSeedListReflectorVersion": 1,
+    "currentSeedJSONEnvelopeVersion": 1,
+    "envelopeVersionIsNotAssetIdClassVersion": true
+  },
+  "seedPin": {
+    "path": "F:/JericoEngine/JericoEngine/Engine/Render/Features/Assets/DiffuseProbeGrid/seedList.seed",
+    "bytes": 7714,
+    "sha256": "B135AC6D6BBC7A3CFA49FC4723CEE2078AA56645A24BFFBFF57CF4B36622F7D9"
+  },
+  "effectiveAuthoredAssetIDs": [
+    {
+      "index": 0,
+      "guidAuthoredLiteral": "{34E20A18-CB2E-5D93-84CF-C2B9E144DA75}",
+      "subIdEffectiveOnFreshLoad": 0,
+      "subIdPresentInJSON": false,
+      "subIdProvenance": "ASSETID_DEFAULT_CTOR_ZERO_PRESERVED_BY_MISSING_FIELD",
+      "platformFlags": 3,
+      "pathHint": "shaders/diffuseglobalillumination/diffuseprobegridblenddistance.azshader",
+      "joinConstraint": "AssetGUID plus SubID; platform separately, never pathHint-only"
+    },
+    {
+      "index": 1,
+      "guidAuthoredLiteral": "{F70A2001-CC2C-5DFE-BC87-B98A4E0E57EB}",
+      "subIdEffectiveOnFreshLoad": 0,
+      "subIdPresentInJSON": false,
+      "subIdProvenance": "ASSETID_DEFAULT_CTOR_ZERO_PRESERVED_BY_MISSING_FIELD",
+      "platformFlags": 3,
+      "pathHint": "shaders/diffuseglobalillumination/diffuseprobegridblendirradiance.azshader",
+      "joinConstraint": "AssetGUID plus SubID; platform separately, never pathHint-only"
+    },
+    {
+      "index": 2,
+      "guidAuthoredLiteral": "{44260D05-99D8-5A86-83E7-B7C5EC48F297}",
+      "subIdEffectiveOnFreshLoad": 0,
+      "subIdPresentInJSON": false,
+      "subIdProvenance": "ASSETID_DEFAULT_CTOR_ZERO_PRESERVED_BY_MISSING_FIELD",
+      "platformFlags": 3,
+      "pathHint": "shaders/diffuseglobalillumination/diffuseprobegridborderupdaterow.azshader",
+      "joinConstraint": "AssetGUID plus SubID; platform separately, never pathHint-only"
+    },
+    {
+      "index": 3,
+      "guidAuthoredLiteral": "{F60AFD1E-1CED-5E33-930E-17DB4EAA1F81}",
+      "subIdEffectiveOnFreshLoad": 0,
+      "subIdPresentInJSON": false,
+      "subIdProvenance": "ASSETID_DEFAULT_CTOR_ZERO_PRESERVED_BY_MISSING_FIELD",
+      "platformFlags": 3,
+      "pathHint": "shaders/diffuseglobalillumination/diffuseprobegridborderupdatecolumn.azshader",
+      "joinConstraint": "AssetGUID plus SubID; platform separately, never pathHint-only"
+    },
+    {
+      "index": 4,
+      "guidAuthoredLiteral": "{7547FD2E-1630-58B1-9293-F4C9F33E0D72}",
+      "subIdEffectiveOnFreshLoad": 0,
+      "subIdPresentInJSON": false,
+      "subIdProvenance": "ASSETID_DEFAULT_CTOR_ZERO_PRESERVED_BY_MISSING_FIELD",
+      "platformFlags": 3,
+      "pathHint": "shaders/diffuseglobalillumination/diffuseprobegridclassification.azshader",
+      "joinConstraint": "AssetGUID plus SubID; platform separately, never pathHint-only"
+    },
+    {
+      "index": 5,
+      "guidAuthoredLiteral": "{5A28BC26-22C8-5DC2-870B-3EE03A6DC723}",
+      "subIdEffectiveOnFreshLoad": 0,
+      "subIdPresentInJSON": false,
+      "subIdProvenance": "ASSETID_DEFAULT_CTOR_ZERO_PRESERVED_BY_MISSING_FIELD",
+      "platformFlags": 3,
+      "pathHint": "shaders/diffuseglobalillumination/diffuseprobegridrender.azshader",
+      "joinConstraint": "AssetGUID plus SubID; platform separately, never pathHint-only"
+    },
+    {
+      "index": 6,
+      "guidAuthoredLiteral": "{55BDC206-9859-52D8-AE08-457F5664F509}",
+      "subIdEffectiveOnFreshLoad": 0,
+      "subIdPresentInJSON": false,
+      "subIdProvenance": "ASSETID_DEFAULT_CTOR_ZERO_PRESERVED_BY_MISSING_FIELD",
+      "platformFlags": 3,
+      "pathHint": "shaders/diffuseglobalillumination/diffuseprobegridraytracing.azshader",
+      "joinConstraint": "AssetGUID plus SubID; platform separately, never pathHint-only"
+    },
+    {
+      "index": 7,
+      "guidAuthoredLiteral": "{3E4941A5-56BF-5ECD-95B3-64E6D6803159}",
+      "subIdEffectiveOnFreshLoad": 0,
+      "subIdPresentInJSON": false,
+      "subIdProvenance": "ASSETID_DEFAULT_CTOR_ZERO_PRESERVED_BY_MISSING_FIELD",
+      "platformFlags": 3,
+      "pathHint": "shaders/diffuseglobalillumination/diffuseprobegridraytracingclosesthit.azshader",
+      "joinConstraint": "AssetGUID plus SubID; platform separately, never pathHint-only"
+    },
+    {
+      "index": 8,
+      "guidAuthoredLiteral": "{EB5538D4-1028-534C-9FC0-1421E0926E31}",
+      "subIdEffectiveOnFreshLoad": 0,
+      "subIdPresentInJSON": false,
+      "subIdProvenance": "ASSETID_DEFAULT_CTOR_ZERO_PRESERVED_BY_MISSING_FIELD",
+      "platformFlags": 3,
+      "pathHint": "shaders/diffuseglobalillumination/diffuseprobegridraytracingmiss.azshader",
+      "joinConstraint": "AssetGUID plus SubID; platform separately, never pathHint-only"
+    },
+    {
+      "index": 9,
+      "guidAuthoredLiteral": "{582D6038-5953-585B-8840-CA5B993B5B08}",
+      "subIdEffectiveOnFreshLoad": 0,
+      "subIdPresentInJSON": false,
+      "subIdProvenance": "ASSETID_DEFAULT_CTOR_ZERO_PRESERVED_BY_MISSING_FIELD",
+      "platformFlags": 3,
+      "pathHint": "shaders/diffuseglobalillumination/diffuseprobegridrelocation.azshader",
+      "joinConstraint": "AssetGUID plus SubID; platform separately, never pathHint-only"
+    },
+    {
+      "index": 10,
+      "guidAuthoredLiteral": "{E1A185DF-DC80-58B1-B77B-CE8BEDB61D3B}",
+      "subIdEffectiveOnFreshLoad": 0,
+      "subIdPresentInJSON": false,
+      "subIdProvenance": "ASSETID_DEFAULT_CTOR_ZERO_PRESERVED_BY_MISSING_FIELD",
+      "platformFlags": 255,
+      "pathHint": "passes/diffuseprobegridupdatepassrequest.azasset",
+      "joinConstraint": "AssetGUID plus SubID; platform separately, never pathHint-only"
+    },
+    {
+      "index": 11,
+      "guidAuthoredLiteral": "{522C32A8-CB02-51CE-B450-C4B8E38C084D}",
+      "subIdEffectiveOnFreshLoad": 0,
+      "subIdPresentInJSON": false,
+      "subIdProvenance": "ASSETID_DEFAULT_CTOR_ZERO_PRESERVED_BY_MISSING_FIELD",
+      "platformFlags": 255,
+      "pathHint": "passes/diffuseprobegridrenderpassrequest.azasset",
+      "joinConstraint": "AssetGUID plus SubID; platform separately, never pathHint-only"
+    },
+    {
+      "index": 12,
+      "guidAuthoredLiteral": "{B428ED95-3E5F-50D5-98A7-A2AECEAA1898}",
+      "subIdEffectiveOnFreshLoad": 0,
+      "subIdPresentInJSON": false,
+      "subIdProvenance": "ASSETID_DEFAULT_CTOR_ZERO_PRESERVED_BY_MISSING_FIELD",
+      "platformFlags": 255,
+      "pathHint": "passes/diffuseprobegridvisualizationpassrequest.azasset",
+      "joinConstraint": "AssetGUID plus SubID; platform separately, never pathHint-only"
+    },
+    {
+      "index": 13,
+      "guidAuthoredLiteral": "{A6F9D127-D963-5D78-B19F-A31E73C5C2B5}",
+      "subIdEffectiveOnFreshLoad": 0,
+      "subIdPresentInJSON": false,
+      "subIdProvenance": "ASSETID_DEFAULT_CTOR_ZERO_PRESERVED_BY_MISSING_FIELD",
+      "platformFlags": 255,
+      "pathHint": "passes/diffuseprobegridtemplates.azasset",
+      "joinConstraint": "AssetGUID plus SubID; platform separately, never pathHint-only"
+    },
+    {
+      "index": 14,
+      "guidAuthoredLiteral": "{49D6CA83-7AE4-5BF5-9428-636B9EB6DCC7}",
+      "subIdEffectiveOnFreshLoad": 0,
+      "subIdPresentInJSON": false,
+      "subIdProvenance": "ASSETID_DEFAULT_CTOR_ZERO_PRESERVED_BY_MISSING_FIELD",
+      "platformFlags": 3,
+      "pathHint": "shaders/diffuseglobalillumination/diffuseprobegridprepare.azshader",
+      "joinConstraint": "AssetGUID plus SubID; platform separately, never pathHint-only"
+    },
+    {
+      "index": 15,
+      "guidAuthoredLiteral": "{D20ADC05-ECF9-5305-93FC-F0A88AB2072D}",
+      "subIdEffectiveOnFreshLoad": 0,
+      "subIdPresentInJSON": false,
+      "subIdProvenance": "ASSETID_DEFAULT_CTOR_ZERO_PRESERVED_BY_MISSING_FIELD",
+      "platformFlags": 3,
+      "pathHint": "shaders/diffuseglobalillumination/diffuseprobegridquery.azshader",
+      "joinConstraint": "AssetGUID plus SubID; platform separately, never pathHint-only"
+    },
+    {
+      "index": 16,
+      "guidAuthoredLiteral": "{B3B664B6-4340-5A35-9A67-DC00A5361D62}",
+      "subIdEffectiveOnFreshLoad": 0,
+      "subIdPresentInJSON": false,
+      "subIdProvenance": "ASSETID_DEFAULT_CTOR_ZERO_PRESERVED_BY_MISSING_FIELD",
+      "platformFlags": 3,
+      "pathHint": "shaders/diffuseglobalillumination/diffuseprobegridvisualizationprepare.azshader",
+      "joinConstraint": "AssetGUID plus SubID; platform separately, never pathHint-only"
+    },
+    {
+      "index": 17,
+      "guidAuthoredLiteral": "{82253586-BC83-5289-8E14-4DF83E7032D2}",
+      "subIdEffectiveOnFreshLoad": 0,
+      "subIdPresentInJSON": false,
+      "subIdProvenance": "ASSETID_DEFAULT_CTOR_ZERO_PRESERVED_BY_MISSING_FIELD",
+      "platformFlags": 255,
+      "pathHint": "passes/diffuseprobegridscreenspacereflectionsquerypassrequest.azasset",
+      "joinConstraint": "AssetGUID plus SubID; platform separately, never pathHint-only"
+    },
+    {
+      "index": 18,
+      "guidAuthoredLiteral": "{2AAC574D-E80D-5D41-BE12-32B192306FD1}",
+      "subIdEffectiveOnFreshLoad": 0,
+      "subIdPresentInJSON": false,
+      "subIdProvenance": "ASSETID_DEFAULT_CTOR_ZERO_PRESERVED_BY_MISSING_FIELD",
+      "platformFlags": 3,
+      "pathHint": "shaders/diffuseglobalillumination/diffuseprobegridqueryfullscreenwithalbedo.azshader",
+      "joinConstraint": "AssetGUID plus SubID; platform separately, never pathHint-only"
+    },
+    {
+      "index": 19,
+      "guidAuthoredLiteral": "{8BC56BD7-1477-5396-A410-D8A36D4DDB25}",
+      "subIdEffectiveOnFreshLoad": 0,
+      "subIdPresentInJSON": false,
+      "subIdProvenance": "ASSETID_DEFAULT_CTOR_ZERO_PRESERVED_BY_MISSING_FIELD",
+      "platformFlags": 255,
+      "pathHint": "passes/diffuseprobegridpreparepassrequest.azasset",
+      "joinConstraint": "AssetGUID plus SubID; platform separately, never pathHint-only"
+    },
+    {
+      "index": 20,
+      "guidAuthoredLiteral": "{66A5858B-5FFB-5CCE-ACEC-C065470941F2}",
+      "subIdEffectiveOnFreshLoad": 0,
+      "subIdPresentInJSON": false,
+      "subIdProvenance": "ASSETID_DEFAULT_CTOR_ZERO_PRESERVED_BY_MISSING_FIELD",
+      "platformFlags": 3,
+      "pathHint": "shaders/diffuseglobalillumination/diffusecomposite.azshader",
+      "joinConstraint": "AssetGUID plus SubID; platform separately, never pathHint-only"
+    },
+    {
+      "index": 21,
+      "guidAuthoredLiteral": "{985FA532-05D5-532C-AAAB-7A38D99B249E}",
+      "subIdEffectiveOnFreshLoad": 0,
+      "subIdPresentInJSON": false,
+      "subIdProvenance": "ASSETID_DEFAULT_CTOR_ZERO_PRESERVED_BY_MISSING_FIELD",
+      "platformFlags": 3,
+      "pathHint": "shaders/diffuseglobalillumination/diffuseglobalfullscreen.azshader",
+      "joinConstraint": "AssetGUID plus SubID; platform separately, never pathHint-only"
+    },
+    {
+      "index": 22,
+      "guidAuthoredLiteral": "{C36E2078-9853-5548-A8E0-33F2607B7838}",
+      "subIdEffectiveOnFreshLoad": 0,
+      "subIdPresentInJSON": false,
+      "subIdProvenance": "ASSETID_DEFAULT_CTOR_ZERO_PRESERVED_BY_MISSING_FIELD",
+      "platformFlags": 3,
+      "pathHint": "shaders/diffuseglobalillumination/diffuseprobegriddownsample.azshader",
+      "joinConstraint": "AssetGUID plus SubID; platform separately, never pathHint-only"
+    },
+    {
+      "index": 23,
+      "guidAuthoredLiteral": "{59C6F544-3CFE-5F2B-A4A1-E1D14BAB6839}",
+      "subIdEffectiveOnFreshLoad": 0,
+      "subIdPresentInJSON": false,
+      "subIdProvenance": "ASSETID_DEFAULT_CTOR_ZERO_PRESERVED_BY_MISSING_FIELD",
+      "platformFlags": 3,
+      "pathHint": "shaders/diffuseglobalillumination/diffuseprobegridqueryfullscreen.azshader",
+      "joinConstraint": "AssetGUID plus SubID; platform separately, never pathHint-only"
+    },
+    {
+      "index": 24,
+      "guidAuthoredLiteral": "{55EBE62C-1FB4-5823-B66D-B03853006672}",
+      "subIdEffectiveOnFreshLoad": 0,
+      "subIdPresentInJSON": false,
+      "subIdProvenance": "ASSETID_DEFAULT_CTOR_ZERO_PRESERVED_BY_MISSING_FIELD",
+      "platformFlags": 3,
+      "pathHint": "shaders/diffuseglobalillumination/diffuseprobegridvisualizationcomposite.azshader",
+      "joinConstraint": "AssetGUID plus SubID; platform separately, never pathHint-only"
+    },
+    {
+      "index": 25,
+      "guidAuthoredLiteral": "{189103A6-6548-5B7E-A3AC-0F854D865B09}",
+      "subIdEffectiveOnFreshLoad": 0,
+      "subIdPresentInJSON": false,
+      "subIdProvenance": "ASSETID_DEFAULT_CTOR_ZERO_PRESERVED_BY_MISSING_FIELD",
+      "platformFlags": 3,
+      "pathHint": "shaders/diffuseglobalillumination/diffuseprobegridvisualizationraytracing.azshader",
+      "joinConstraint": "AssetGUID plus SubID; platform separately, never pathHint-only"
+    },
+    {
+      "index": 26,
+      "guidAuthoredLiteral": "{858724E9-B36D-5F36-8944-947224609995}",
+      "subIdEffectiveOnFreshLoad": 0,
+      "subIdPresentInJSON": false,
+      "subIdProvenance": "ASSETID_DEFAULT_CTOR_ZERO_PRESERVED_BY_MISSING_FIELD",
+      "platformFlags": 3,
+      "pathHint": "shaders/diffuseglobalillumination/diffuseprobegridvisualizationraytracingclosesthit.azshader",
+      "joinConstraint": "AssetGUID plus SubID; platform separately, never pathHint-only"
+    },
+    {
+      "index": 27,
+      "guidAuthoredLiteral": "{59981F35-8D89-5F2B-B3EB-C94F46A3A7FA}",
+      "subIdEffectiveOnFreshLoad": 0,
+      "subIdPresentInJSON": false,
+      "subIdProvenance": "ASSETID_DEFAULT_CTOR_ZERO_PRESERVED_BY_MISSING_FIELD",
+      "platformFlags": 3,
+      "pathHint": "shaders/diffuseglobalillumination/diffuseprobegridvisualizationraytracingmiss.azshader",
+      "joinConstraint": "AssetGUID plus SubID; platform separately, never pathHint-only"
+    },
+    {
+      "index": 28,
+      "guidAuthoredLiteral": "{5D846658-301B-548D-870A-B9F812D1586F}",
+      "subIdEffectiveOnFreshLoad": 0,
+      "subIdPresentInJSON": false,
+      "subIdProvenance": "ASSETID_DEFAULT_CTOR_ZERO_PRESERVED_BY_MISSING_FIELD",
+      "platformFlags": 3,
+      "pathHint": "shaders/diffuseglobalillumination/sceneandviewsrgs.azshader",
+      "joinConstraint": "AssetGUID plus SubID; platform separately, never pathHint-only"
+    }
+  ],
+  "proofSpans": [
+    {
+      "pin": {
+        "path": "F:/JericoEngine/JericoEngine/Code/Framework/AzCore/AzCore/Asset/AssetCommon.h",
+        "bytes": 55755,
+        "sha256": "BCFA1C7D69488ACFA28ED24581E10106F2766EC7BB6CF827AE9750DD4585D72B"
+      },
+      "indexedSHA256": "bcfa1c7d69488acfa28ed24581e10106f2766ec7bb6cf827ae9750dd4585d72b",
+      "fresh": true,
+      "first": 50,
+      "last": 57,
+      "text": "        struct AZCORE_API AssetId\n        {\n            AZ_TYPE_INFO(AssetId, \"{652ED536-3402-439B-AEBE-4A5DBC554085}\");\n\n            /// Create asset id in invalid state\n            AssetId();\n            explicit AssetId(AZStd::string_view guidString, u32 subId = 0);\n            AssetId(const Uuid& guid, u32 subId = 0);"
+    },
+    {
+      "pin": {
+        "path": "F:/JericoEngine/JericoEngine/Code/Framework/AzCore/AzCore/Asset/AssetCommon.h",
+        "bytes": 55755,
+        "sha256": "BCFA1C7D69488ACFA28ED24581E10106F2766EC7BB6CF827AE9750DD4585D72B"
+      },
+      "indexedSHA256": "bcfa1c7d69488acfa28ed24581e10106f2766ec7bb6cf827ae9750dd4585d72b",
+      "fresh": true,
+      "first": 682,
+      "last": 701,
+      "text": "        inline AssetId::AssetId()\n            : m_guid(AZ::Uuid::CreateNull())\n            , m_subId(0)\n        {\n            // Verify that the correct number of pad bytes have been added to the structure.\n            // i.e. The structure should be the exact size of all the members added together, including\n            // our choice of padding.  If it's ever different, it means we need to adjust the amount of padding\n            // that's manually added into the structure.\n            static_assert(sizeof(AssetId) == (sizeof(m_guid) + sizeof(m_subId) + sizeof(m_padBytes)));\n        }\n\n        //=========================================================================\n        inline AssetId::AssetId(AZStd::string_view guidString, u32 subId)\n            : AssetId(AZ::Uuid(guidString), subId)\n        {\n        }\n        inline AssetId::AssetId(const Uuid& guid, u32 subId)\n            : m_guid(guid)\n            , m_subId(subId)\n        {"
+    },
+    {
+      "pin": {
+        "path": "F:/JericoEngine/JericoEngine/Code/Framework/AzCore/AzCore/Asset/AssetCommon.cpp",
+        "bytes": 18923,
+        "sha256": "253B92746A2D33CFF72F8A60F30B0E6E1684C8968921A321954ADCCEFE746946"
+      },
+      "indexedSHA256": "253b92746a2d33cff72f8a60f30b0e6e1684c8968921a321954adccefe746946",
+      "fresh": true,
+      "first": 101,
+      "last": 109,
+      "text": "    void AssetId::Reflect(AZ::ReflectContext* context)\n    {\n        if (SerializeContext* serializeContext = azrtti_cast<SerializeContext*>(context))\n        {\n            serializeContext->Class<Data::AssetId>()\n                ->Version(1)\n                ->Field(\"guid\", &Data::AssetId::m_guid)\n                ->Field(\"subId\", &Data::AssetId::m_subId)\n                ;"
+    },
+    {
+      "pin": {
+        "path": "F:/JericoEngine/JericoEngine/Code/Framework/AzCore/AzCore/Serialization/Json/JsonDeserializer.cpp",
+        "bytes": 46617,
+        "sha256": "1D614ED14AEA4F5B01BEF2236FE677291DA1DE2958BC05201AB1364C2FB8B9C5"
+      },
+      "indexedSHA256": "1d614ed14aea4f5b01bef2236fe677291da1de2958bc05201ab1364c2fb8b9c5",
+      "fresh": true,
+      "first": 187,
+      "last": 245,
+      "text": "    JsonSerializationResult::ResultCode JsonDeserializer::LoadClass(void* object, const SerializeContext::ClassData& classData,\n        const rapidjson::Value& value, JsonDeserializerContext& context)\n    {\n        using namespace AZ::JsonSerializationResult;\n\n        AZ_Assert(context.GetRegistrationContext() && context.GetSerializeContext(), \"Expected valid registration context and serialize context.\");\n\n        // Compatibility with Reflection Serialize - it expects this callback after before into a C++ class.\n        if (classData.m_eventHandler)\n        {\n            classData.m_eventHandler->OnWriteBegin(object);\n        }\n\n        size_t numLoads = 0;\n        ResultCode retVal(Tasks::ReadField);\n        for (auto iter = value.MemberBegin(); iter != value.MemberEnd(); ++iter)\n        {\n            const rapidjson::Value& val = iter->value;\n            AZStd::string_view name(iter->name.GetString(), iter->name.GetStringLength());\n            if (name == JsonSerialization::TypeIdFieldIdentifier)\n            {\n                continue;\n            }\n            Crc32 nameCrc(name);\n            ElementDataResult foundElementData = FindElementByNameCrc(*context.GetSerializeContext(), object, classData, nameCrc);\n\n            ScopedContextPath subPath(context, name);\n            if (foundElementData.m_found)\n            {\n                ResultCode result = LoadWithClassElement(foundElementData.m_data, val, *foundElementData.m_info, context);\n                retVal.Combine(result);\n\n                if (result.GetProcessing() == Processing::Halted)\n                {\n                    return context.Report(result, \"Loading of element has failed.\");\n                }\n                else if (result.GetProcessing() != Processing::Altered)\n                {\n                    numLoads++;\n                }\n            }\n            else\n            {\n                retVal.Combine(context.Report(Tasks::ReadField, Outcomes::Skipped,\n                    \"Skipping field as there's no matching variable in the target.\"));\n            }\n        }\n\n        size_t elementCount = CountElements(*context.GetSerializeContext(), classData);\n        if (elementCount > numLoads)\n        {\n            retVal.Combine(ResultCode(Tasks::ReadField, numLoads == 0 ? Outcomes::DefaultsUsed : Outcomes::PartialDefaults));\n        }\n\n        // Compatibility with Reflection Serialize - it expects this callback after reading into a C++ class.\n        if (classData.m_eventHandler)\n        {\n            classData.m_eventHandler->OnWriteEnd(object);\n        }"
+    },
+    {
+      "pin": {
+        "path": "F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Asset/AssetSeedList.h",
+        "bytes": 1405,
+        "sha256": "4DD28918A4953DE782664AF880C50B2C9307BD55899E0D7226D492284BAAFAC8"
+      },
+      "indexedSHA256": "4dd28918a4953de782664af880c50b2c9307bd55899e0d7226d492284baafac8",
+      "fresh": true,
+      "first": 18,
+      "last": 33,
+      "text": "    struct AZF_API SeedInfo\n    {\n        AZ_TYPE_INFO(SeedInfo, \"{FACC3682-2ACA-4AA4-B85A-07AD276D18A0}\");\n\n        SeedInfo() = default;\n        SeedInfo(AZ::Data::AssetId assetId, PlatformFlags platformFlags, const AZStd::string& path, const AZStd::string& seedListFilePath = AZStd::string());\n\n        static void Reflect(AZ::ReflectContext* context);\n\n        AZ::Data::AssetId m_assetId;\n        PlatformFlags m_platformFlags;\n        AZStd::string m_assetRelativePath;\n        AZStd::string m_seedListFilePath;\n    };\n\n    using AssetSeedList = AZStd::vector<SeedInfo>;"
+    },
+    {
+      "pin": {
+        "path": "F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Asset/AssetSeedList.cpp",
+        "bytes": 1583,
+        "sha256": "8A673DEB686C2A5E3BE04E962966D7E15E21ED12D05B84C04701863448AA0DB9"
+      },
+      "indexedSHA256": "8a673deb686c2a5e3be04e962966d7e15e21ed12d05b84c04701863448aa0db9",
+      "fresh": true,
+      "first": 23,
+      "last": 44,
+      "text": "    void SeedInfo::Reflect(AZ::ReflectContext* context)\n    {\n        if (AZ::SerializeContext* serializeContext = azrtti_cast<AZ::SerializeContext*>(context))\n        {\n            serializeContext->Class<SeedInfo>()\n                ->Version(2)\n                ->Field(\"assetId\", &SeedInfo::m_assetId)\n                ->Field(\"platformFlags\", &SeedInfo::m_platformFlags)\n                ->Field(\"pathHint\", &SeedInfo::m_assetRelativePath);\n        }\n\n    }\n\n    void AssetSeedListReflector::Reflect(AZ::ReflectContext* context)\n    {\n        if (AZ::SerializeContext* serializeContext = azrtti_cast<AZ::SerializeContext*>(context))\n        {\n            serializeContext->Class<AssetSeedListReflector>()\n                ->Version(1)\n                ->Field(\"assetList\", &AssetSeedListReflector::m_fileInfoList);\n        }\n    }"
+    },
+    {
+      "pin": {
+        "path": "F:/JericoEngine/JericoEngine/Code/Framework/AzToolsFramework/AzToolsFramework/Asset/AssetSeedManager.cpp",
+        "bytes": 39093,
+        "sha256": "A625C7EF50A41F5B0297182F4DD5D643EDD4B5E6D37982549ABBE5880567B85A"
+      },
+      "indexedSHA256": "a625c7ef50a41f5b0297182f4dd5d643edd4b5e6d37982549abbe5880567b85a",
+      "fresh": true,
+      "first": 771,
+      "last": 819,
+      "text": "    bool AssetSeedManager::Load(const AZStd::string& sourceFilePath)\n    {\n        auto fileExtensionOutcome = ValidateSeedFileExtension(sourceFilePath);\n        if (!fileExtensionOutcome.IsSuccess())\n        {\n            AZ_Error(\"AssetSeedManager\", false, fileExtensionOutcome.GetError().c_str());\n            return false;\n        }\n\n        AzFramework::AssetSeedList assetSeedList;\n\n        // As the seed file can support both JSON and ObjectStream XML\n        // It is opened and read into memory first\n        AZ::IO::FileIOStream assetSeedStream;\n        if (!assetSeedStream.Open(sourceFilePath.c_str(), AZ::IO::OpenMode::ModeRead | AZ::IO::OpenMode::ModeBinary))\n        {\n            return false;\n        }\n\n        auto ReadAssetSeedData = [&assetSeedStream](char* buffer, size_t size) -> size_t\n        {\n            return assetSeedStream.Read(size, buffer);\n        };\n\n        AZStd::string assetSeedData;\n        assetSeedData.resize_and_overwrite(assetSeedStream.GetLength(), ReadAssetSeedData);\n\n        // If the asset seed file starts with the ObjectStream XML stream tag\n        // then load the data using the ObjectStream\n        constexpr AZ::u8 xmlObjectStreamTag = '<';\n        if (assetSeedData.starts_with(xmlObjectStreamTag))\n        {\n            if (!AZ::Utils::LoadObjectFromBufferInPlace(assetSeedData.c_str(), assetSeedData.size(), assetSeedList))\n            {\n                return false;\n            }\n        }\n        else\n        {\n            // Load the asset seed file using Json Serialization\n            if (!AZ::JsonSerializationUtils::LoadObjectFromString(assetSeedList, assetSeedData))\n            {\n                return false;\n            }\n        }\n\n        for (AzFramework::SeedInfo& seedInfo : assetSeedList)\n        {\n            AddSeedAsset(seedInfo.m_assetId, seedInfo.m_platformFlags, seedInfo.m_assetRelativePath, sourceFilePath.c_str());"
+    }
+  ],
+  "graft": {
+    "index": "F:/JericoEngine/JericoEngine/build/n0-validation/graft-native-owner-rev1",
+    "fingerprint": {
+      "path": "F:/JericoEngine/JericoEngine/build/n0-validation/graft-native-owner-rev1/.cache/fingerprint.fb846616d35ffa27.json",
+      "bytes": 2912347,
+      "sha256": "8AD3330509DE95749DB33CF6B23CA9E31B4888D5A2347972CD1CE4275F4306CE"
+    },
+    "allProofProvidersFresh": true,
+    "fallbackReason": "Cached AssetCommon/AssetJsonSerializer/JsonDeserializer/AssetSeedManager basename cards expose headers, not implementations/inline constructor bodies; bounded exact implementation spans read after card/fingerprint checks. No CLI/Node/graph loader."
+  },
+  "GUIDHandling": "Authored GUID literals retained verbatim; no byte-order conversion, GUID/path algorithm or product identity invented. Parent uses existing proven DB GUID normalization for actual joins.",
+  "skillsCompleteReadingReused": {
+    "cpp": "53017F862C526DF6080210A1A00E6678C2CD5382B5D1A51026BF3B0BDE7F7ED2",
+    "game": "4578FACCE19AC99396E5FE904EAC173066FA517AF16AE0F49B03F9082A1057EC"
+  },
+  "wholeGemIncrement": 0
+}

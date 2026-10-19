@@ -1,0 +1,98 @@
+[
+  {
+    "source": "F:/JericoEngine/JericoEngine/build/n0-validation/native-corefeature102/analysis-parent/diffuse-probe-tools-request-r51/dpg-four-source-products-parent-review.json",
+    "file": "products-review.json",
+    "bytes": 80586,
+    "sha256": "73E8EEF2BA2DA2B31B51EEAB8572DFF3744D300D67D68760EADB094E3E38F8ED"
+  },
+  {
+    "source": "F:/JericoEngine/JericoEngine/build/n0-validation/native-corefeature102/analysis-source/dpg-seed-assetid-json-default-r51/review.json",
+    "file": "seed-default-proof.json",
+    "bytes": 26685,
+    "sha256": "85E11DB1F377266D1B7C78FB7BC0FFF5E32E8E38960F7C1739EDAC93C34789E7"
+  },
+  {
+    "source": "F:/JericoEngine/JericoEngine/build/n0-validation/native-corefeature102/cook-dpg-sdk-srg-fix-r51-attempt1/cook-dpg-sdk-srg-fix-r51.result.json",
+    "file": "ap-result.json",
+    "bytes": 739,
+    "sha256": "C56567C8359CFAEE26FF9F9C6D4D185C18C03E6AEAC24658283B1E513C0A45A3"
+  },
+  {
+    "source": "F:/JericoEngine/JericoEngine/build/n0-validation/native-corefeature102/cook-dpg-sdk-srg-fix-r51-attempt1/postflight.json",
+    "file": "ap-postflight.json",
+    "bytes": 245,
+    "sha256": "96C061C59A243C06319F64E901867A9BA50836E348D87CFE38D1926453AABDB6"
+  },
+  {
+    "source": "F:/JericoEngine/JericoEngine/build/n0-validation/native-corefeature102/analysis-source/dpg-four-source-postcook-reader-preparation-r51/execution-after-dpg-sdk-srg-fix-r51-attempt1/result.json",
+    "file": "reader-result.json",
+    "bytes": 1159,
+    "sha256": "73C73E636298FC027BD4E8127CCE1491F7A0C25513D0A2C07634A2D67E1359F9"
+  },
+  {
+    "source": "F:/JericoEngine/JericoEngine/build/n0-validation/native-corefeature102/analysis-source/dpg-four-source-postcook-reader-preparation-r51/execution-after-dpg-sdk-srg-fix-r51-attempt1/query-result.json",
+    "file": "query-result.json",
+    "bytes": 364827,
+    "sha256": "BD43ED6FC33646FBD65C5600B8B122D64366346A7D4E72E1D790B4CE8BAA65C9"
+  },
+  {
+    "source": "F:/JericoEngine/JericoEngine/build/n0-validation/native-corefeature102/analysis-parent/diffuse-probe-tools-request-r51/dpg-four-source-reader-metadata-erratum.json",
+    "file": "reader-metadata-erratum.json",
+    "bytes": 1935,
+    "sha256": "65DFC8C42660CAC544F7535D2A34F173121C2F496109E781CBE1AAFE71F6B0A8"
+  },
+  {
+    "source": "F:/JericoEngine/JericoEngine/build/n0-validation/native-corefeature102/analysis-parent/diffuse-probe-tools-request-r51/dpg-features-assets-leaf-parent-review.json",
+    "file": "install-leaf-review.json",
+    "bytes": 2850,
+    "sha256": "DC6F99BF048EB59369D95BA0126A849EADBEB1C23665FA66B68C85C1EC4B26B4"
+  },
+  {
+    "source": "F:/JericoEngine/JericoEngine/build/n0-validation/ap102-dpg-sdk-srg-fix-logs-attempt1/JobLogs/Shaders/DiffuseGlobalIllumination/DiffuseComposite.shader-2832108281-6460.log",
+    "file": "DiffuseComposite.log",
+    "bytes": 17127,
+    "sha256": "84B7F8AF7D3A8E0646BE6D82794B7E254DFBEB45F51E2950357151ACCCF2A6A2"
+  },
+  {
+    "source": "F:/JericoEngine/JericoEngine/build/n0-validation/ap102-dpg-sdk-srg-fix-logs-attempt1/JobLogs/Shaders/DiffuseGlobalIllumination/DiffuseProbeGridDownsample.shader-3014814416-6464.log",
+    "file": "DiffuseProbeGridDownsample.log",
+    "bytes": 17389,
+    "sha256": "81478F25CAC34B927E7ACD93A7E43A8EE0E671009E747EDAF0B1A6092E3357EB"
+  },
+  {
+    "source": "F:/JericoEngine/JericoEngine/build/n0-validation/ap102-dpg-sdk-srg-fix-logs-attempt1/JobLogs/Shaders/DiffuseGlobalIllumination/DiffuseProbeGridVisualizationComposite.shader-1326548106-6470.log",
+    "file": "DiffuseProbeGridVisualizationComposite.log",
+    "bytes": 17737,
+    "sha256": "1EAEABA65D206478510DFEAD917E8DC37D7BEE09298389F03488B540263C03EB"
+  },
+  {
+    "source": "F:/JericoEngine/JericoEngine/build/n0-validation/ap102-dpg-sdk-srg-fix-logs-attempt1/JobLogs/Shaders/DiffuseGlobalIllumination/DiffuseGlobalFullscreen.shader-3126510417-6472.log",
+    "file": "DiffuseGlobalFullscreen.log",
+    "bytes": 17234,
+    "sha256": "46B759F90D26447B04266818C0C1F178905FD1627522FA41B3B10F3CB6813D5C"
+  },
+  {
+    "source": "F:/JericoEngine/JericoEngine/build/n0-validation/native-corefeature102/analysis-source/dpg-srg-publication-producer-applicability-r51/review.json",
+    "file": "producer-applicability.json",
+    "bytes": 26613,
+    "sha256": "11238AB90D916DB3E619DEC4B8CB3120C8D5ABD9A0B62B0D5F4BB3AFD8369985"
+  },
+  {
+    "source": "F:/JericoEngine/JericoEngine/build/n0-validation/native-corefeature102/analysis-parent/diffuse-probe-tools-request-r51/dpg-ap19-actual-products-parent-review.json",
+    "file": "red-products-review.json",
+    "bytes": 65067,
+    "sha256": "E440F87D11CB60E56F9149338F96209DC27EE52D585F1AACFD48C804F168427F"
+  },
+  {
+    "source": "F:/JericoEngine/JericoEngine/build/n0-validation/native-corefeature102/analysis-parent/diffuse-probe-tools-request-r51/dpg-srg-upstream-review-r51.json",
+    "file": "upstream-review.json",
+    "bytes": 6370,
+    "sha256": "B93A9FC543256774CBA0F9D06F20D159CC8829A345166B951D7F258CB068F019"
+  },
+  {
+    "source": "F:/JericoEngine/JericoEngine/build/n0-validation/native-corefeature102/analysis-source/dpg-installed-srg-include-diagnostic-r51/fixture-and-terrain-proposal/application-r51/application-receipt.json",
+    "file": "application-receipt.json",
+    "bytes": 9495,
+    "sha256": "EFEE2B178C5AAC33571EF630796F2681A7FF2BE36F4CCB7A399EB68CEE667A3B"
+  }
+]

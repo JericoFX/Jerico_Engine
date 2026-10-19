@@ -1,0 +1,21 @@
+{
+  "rawExitCode": 0,
+  "timedOut": false,
+  "fatal": null,
+  "process": {
+    "pid": 12100,
+    "startedUtc": "2026-10-19T18:12:42.7982856Z",
+    "executable": "C:/Program Files/nodejs/node.exe",
+    "argv": [
+      "F:/JericoEngine/JericoEngine/build/n0-validation/native-corefeature102/analysis-source/dpg-four-source-postcook-reader-preparation-r51/ReadDiffuseProbeGridIdentities.cjs",
+      "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-corefeature102\\analysis-source\\dpg-four-source-postcook-reader-preparation-r51\\recipe.json",
+      "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-corefeature102\\analysis-source\\dpg-four-source-postcook-reader-preparation-r51\\execution-after-dpg-sdk-srg-fix-r51-attempt1\\query-result.json"
+    ],
+    "recipeSHA256": "A509481101CF5E13EE6042604C6FAFB52B275010F8778CC8F0291C30004A3EC1",
+    "finishedUtc": "2026-10-19T18:12:42.9952457Z",
+    "exited": true
+  },
+  "databaseByteExact": true,
+  "snapshots": "DB/WAL/SHM before/after; sidecars retained, never cleaned",
+  "interpretation": "Reader completion is not asset, runtime, visual or global AP acceptance"
+}
