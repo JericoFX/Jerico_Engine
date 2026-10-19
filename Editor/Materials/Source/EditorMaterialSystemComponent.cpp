@@ -185,14 +185,20 @@ namespace JE
                     return;
                 }
             }
-            AzToolsFramework::OpenViewPane(MaterialWorkspaceWidget::PaneName);
             if (!materialPath.empty())
             {
-                if (auto* workspace = AzToolsFramework::GetViewPaneWidget<MaterialWorkspaceWidget>(MaterialWorkspaceWidget::PaneName))
+                if (!m_workspaceSession)
                 {
-                    workspace->OpenDocument(materialPath);
+                    return;
+                }
+                // Bind the real document before the pane constructs its inspector and preview.
+                const auto id = m_workspaceSession->OpenDocument(materialPath);
+                if (id.IsNull() || !m_workspaceSession->SelectDocument(id))
+                {
+                    return;
                 }
             }
+            AzToolsFramework::OpenViewPane(MaterialWorkspaceWidget::PaneName);
         }
 
         void EditorMaterialSystemComponent::OpenMaterialCanvas(const AZStd::string& sourcePath)

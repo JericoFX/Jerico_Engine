@@ -43,6 +43,10 @@ set(FILES
     Source/EditorMaterialModelUvNameMapInspector.cpp
     Source/EditorMaterialSystemComponent.cpp
     Source/MaterialBrowserInteractions.cpp
+    Source/MaterialTextureSet.cpp
+    Source/MaterialTextureSet.h
     Source/MaterialsRegistration.cpp
     Source/SharedPreviewContent.cpp
+    Include/JE/Editor/Materials/Viewport/MaterialPreviewViewportContent.h
+    Source/Viewport/MaterialPreviewViewportContent.cpp
 )

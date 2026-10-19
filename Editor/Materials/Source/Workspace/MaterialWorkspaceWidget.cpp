@@ -1,6 +1,17 @@
 /* Copyright (c) Contributors to the Open 3D Engine Project.
  * SPDX-License-Identifier: Apache-2.0 OR MIT */
 #include "MaterialWorkspaceWidget.h"
+#include <JE/Editor/Materials/Viewport/MaterialPreviewViewportContent.h>
+#include <JE/Editor/Materials/Document/MaterialDocumentRequestBus.h>
+#include <AtomToolsFramework/EntityPreviewViewport/EntityPreviewViewportWidget.h>
+#include <AtomToolsFramework/EntityPreviewViewport/EntityPreviewViewportToolBar.h>
+#include <Atom/RHI/RHISystemInterface.h>
+#include <JE/Render/RPI/Public/RPISystemInterface.h>
+#include <JE/Render/RPI/Public/ViewportContextBus.h>
+#include <AzFramework/Entity/EntityContext.h>
+#include <AzCore/std/smart_ptr/make_shared.h>
+#include <QShowEvent>
+#include <QSplitter>
 
 #include <AtomToolsFramework/Document/AtomToolsDocumentInspector.h>
 #include <AtomToolsFramework/Document/AtomToolsDocumentRequestBus.h>
@@ -39,7 +50,16 @@ namespace JE::Editor
         layout->addWidget(m_documents);
         m_inspector = new AtomToolsFramework::AtomToolsDocumentInspector(MaterialWorkspaceSession::GetToolId(), this);
         m_inspector->SetDocumentSettingsPrefix("/JE/Editor/MaterialWorkspace/Inspector");
-        layout->addWidget(m_inspector);
+        auto* splitter = new QSplitter(Qt::Horizontal, this);
+        m_previewHost = new QWidget(splitter);
+        m_previewHost->hide();
+        m_previewLayout = new QVBoxLayout(m_previewHost);
+        m_previewLayout->setContentsMargins(0, 0, 0, 0);
+        splitter->addWidget(m_previewHost);
+        splitter->addWidget(m_inspector);
+        splitter->setStretchFactor(0, 1);
+        splitter->setStretchFactor(1, 1);
+        layout->addWidget(splitter, 1);
 
         connect(open, &QPushButton::clicked, this, [this]() { OpenDocumentDialog(); });
         connect(m_save, &QPushButton::clicked, this, [this]() {
@@ -68,22 +88,107 @@ namespace JE::Editor
             {
                 m_displayedDocumentId = id;
                 m_inspector->SetDocumentId(id);
+                RefreshPreview();
             }
             RefreshActions();
         });
         AtomToolsFramework::AtomToolsDocumentNotificationBus::Handler::BusConnect(MaterialWorkspaceSession::GetToolId());
         AzToolsFramework::ToolsApplicationNotificationBus::Handler::BusConnect();
+        connect(&session, &MaterialWorkspaceSession::AboutToClose, this,
+            &MaterialWorkspaceWidget::OnSessionClosing, Qt::DirectConnection);
         qApp->installEventFilter(this);
         RefreshDocuments();
     }
 
     MaterialWorkspaceWidget::~MaterialWorkspaceWidget()
     {
-        qApp->removeEventFilter(this);
+        OnSessionClosing();
+    }
+
+    void MaterialWorkspaceWidget::ReleasePreview()
+    {
+        if (m_previewContent)
+        {
+            m_previewContent->SetDocumentId(AZ::Uuid::CreateNull());
+        }
+        m_previewContent.reset();
+        delete m_previewHost;
+        m_previewHost = nullptr;
+        m_previewLayout = nullptr;
+        m_previewViewport = nullptr;
+    }
+
+    void MaterialWorkspaceWidget::OnSessionClosing()
+    {
         FinishEditing();
         m_inspector->SetDocumentId(AZ::Uuid::CreateNull());
+        ReleasePreview();
+        m_displayedDocumentId = AZ::Uuid::CreateNull();
+        m_session = nullptr;
+        m_documents->clear();
+        setEnabled(false);
         AtomToolsFramework::AtomToolsDocumentNotificationBus::Handler::BusDisconnect();
         AzToolsFramework::ToolsApplicationNotificationBus::Handler::BusDisconnect();
+        qApp->removeEventFilter(this);
+    }
+
+    void MaterialWorkspaceWidget::showEvent(QShowEvent* event)
+    {
+        QWidget::showEvent(event);
+        RefreshPreview();
+    }
+
+    void MaterialWorkspaceWidget::CreatePreview()
+    {
+        if (m_previewViewport || !isVisible() || m_displayedDocumentId.IsNull() || !m_session || !JE::Render::RPI::RPISystemInterface::Get() ||
+            !AZ::RHI::RHISystemInterface::Get() ||
+            !AZ::Interface<JE::Render::RPI::ViewportContextRequestsInterface>::Get())
+        {
+            return;
+        }
+        m_session->EnsureMaterialPreviewSettings();
+        const auto toolId = MaterialWorkspaceSession::GetToolId();
+        auto* toolbar = new AtomToolsFramework::EntityPreviewViewportToolBar(toolId, m_previewHost);
+        m_previewViewport = new AtomToolsFramework::EntityPreviewViewportWidget(toolId, m_previewHost, true);
+        auto entityContext = AZStd::make_shared<AzFramework::EntityContext>();
+        entityContext->InitContext();
+        auto scene = AZStd::make_shared<AtomToolsFramework::EntityPreviewViewportScene>(
+            toolId, m_previewViewport, entityContext, "MaterialWorkspacePreview", "passes/mainrenderpipeline.azasset", true);
+        m_previewContent = AZStd::make_shared<MaterialPreviewViewportContent>(toolId, m_previewViewport, entityContext, false);
+        auto controller = AZStd::make_shared<AtomToolsFramework::EntityPreviewViewportInputController>(
+            toolId, m_previewViewport, m_previewContent);
+        m_previewViewport->Init(entityContext, scene, m_previewContent, controller);
+        m_previewLayout->addWidget(toolbar);
+        m_previewLayout->addWidget(m_previewViewport, 1);
+    }
+
+    void MaterialWorkspaceWidget::RefreshPreview()
+    {
+        if (!m_previewHost)
+        {
+            return;
+        }
+        AZ::Data::Instance<JE::Render::RPI::Material> material;
+        if (isVisible() && !m_displayedDocumentId.IsNull())
+        {
+            MaterialDocumentRequestBus::EventResult(
+                material, m_displayedDocumentId, &MaterialDocumentRequests::GetInstance);
+        }
+        if (!material)
+        {
+            m_previewHost->hide();
+            if (m_previewContent)
+            {
+                m_previewContent->SetDocumentId(AZ::Uuid::CreateNull());
+            }
+            return;
+        }
+        CreatePreview();
+        if (m_previewContent)
+        {
+            m_previewContent->SetDocumentId(m_displayedDocumentId);
+            m_previewHost->show();
+        }
     }
 
     void MaterialWorkspaceWidget::OpenDocumentDialog()
@@ -222,6 +327,7 @@ namespace JE::Editor
             m_displayedDocumentId = AZ::Uuid::CreateString(m_documents->itemData(0).toString().toUtf8().constData());
         }
         m_inspector->SetDocumentId(m_displayedDocumentId);
+        RefreshPreview();
         RefreshActions();
     }
 
@@ -268,15 +374,20 @@ namespace JE::Editor
         {
             m_displayedDocumentId = AZ::Uuid::CreateNull();
             m_inspector->SetDocumentId(m_displayedDocumentId);
+            RefreshPreview();
         }
     }
     void MaterialWorkspaceWidget::OnDocumentDestroyed(const AZ::Uuid& id) { RefreshDocuments(id); }
     void MaterialWorkspaceWidget::OnDocumentModified(const AZ::Uuid& id)
     {
         RefreshDocumentLabel(id);
+        if (id == m_displayedDocumentId)
+        {
+            RefreshPreview();
+        }
         RefreshActions();
     }
     void MaterialWorkspaceWidget::OnDocumentSaved(const AZ::Uuid&) { RefreshDocuments(); }
-    void MaterialWorkspaceWidget::AfterUndoRedo() { RefreshActions(); }
-    void MaterialWorkspaceWidget::OnEndUndo(const char*, bool) { RefreshActions(); }
+    void MaterialWorkspaceWidget::AfterUndoRedo() { RefreshPreview(); RefreshActions(); }
+    void MaterialWorkspaceWidget::OnEndUndo(const char*, bool) { RefreshPreview(); RefreshActions(); }
 }

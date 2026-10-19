@@ -39,6 +39,12 @@ namespace JE::Editor
         {
             constexpr AZStd::string_view legacyPrefix = "@gemroot:MaterialEditor@/Assets/MaterialEditor/";
             const auto normalized = AZ::IO::FixedMaxPath(path).LexicallyNormal().StringAsPosix();
+            constexpr AZStd::string_view legacyPipelinePrefix = "@gemroot:Atom_Feature_Common@/Assets/Passes/";
+            if (normalized.starts_with(legacyPipelinePrefix))
+            {
+                return AZStd::string("@engroot@/Engine/Render/Features/Assets/Passes/") +
+                    normalized.substr(legacyPipelinePrefix.size());
+            }
             if (normalized.starts_with(legacyPrefix))
             {
                 return AZStd::string(NativePreviewPrefix) + normalized.substr(legacyPrefix.size());
@@ -444,9 +450,9 @@ namespace AtomToolsFramework
 
     AZStd::string EntityPreviewViewportSettingsSystem::GetLastRenderPipelinePath() const
     {
-        return GetPathWithoutAlias(GetSettingsValue<AZStd::string>(
+        return GetPathWithoutAlias(JE::Editor::CanonicalPreviewPath(GetSettingsValue<AZStd::string>(
             "/O3DE/AtomToolsFramework/EntityPreviewViewportSettings/RenderPipelinePath",
-            "@gemroot:Atom_Feature_Common@/Assets/Passes/MainRenderPipeline.azasset"));
+            "@engroot@/Engine/Render/Features/Assets/Passes/MainRenderPipeline.azasset")));
     }
 
     AZStd::string EntityPreviewViewportSettingsSystem::GetLastRenderPipelinePathWithoutAlias() const
@@ -487,7 +493,7 @@ namespace AtomToolsFramework
         return JE::Editor::CanonicalPreviewPaths(GetSettingsObject<AZStd::set<AZStd::string>>(
             "/O3DE/AtomToolsFramework/EntityPreviewViewportSettings/RegisteredRenderPipelinePaths",
             AZStd::set<AZStd::string>{
-                "@gemroot:Atom_Feature_Common@/Assets/Passes/MainRenderPipeline.azasset" }));
+                "@engroot@/Engine/Render/Features/Assets/Passes/MainRenderPipeline.azasset" }));
     }
 
     void EntityPreviewViewportSettingsSystem::SetShadowCatcherEnabled(bool enable)

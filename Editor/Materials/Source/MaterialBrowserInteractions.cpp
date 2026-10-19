@@ -7,28 +7,569 @@
  */
 
 #include <JE/Editor/Render/RPI/Edit/Common/AssetUtils.h>
-#include <JE/Editor/Render/RPI/Edit/Common/JsonUtils.h>
-#include <JE/Editor/Render/RPI/Edit/Material/MaterialSourceData.h>
 #include <JE/Editor/Render/RPI/Edit/Material/MaterialTypeSourceData.h>
-#include <JE/Editor/Render/RPI/Edit/Material/MaterialUtils.h>
 #include <JE/Render/RPI/Reflect/System/AnyAsset.h>
 #include <JE/Editor/Materials/EditorMaterialSystemComponentRequestBus.h>
 #include <AtomToolsFramework/Document/CreateDocumentDialog.h>
 #include <AtomToolsFramework/Util/Util.h>
 #include <AzCore/IO/FileIO.h>
 #include <AzCore/IO/Path/Path.h>
-#include <AzCore/IO/SystemFile.h>
 #include <QMessageBox>
 #include <AzCore/std/string/wildcard.h>
 #include <AzToolsFramework/API/ToolsApplicationAPI.h>
 #include <AzToolsFramework/AssetBrowser/AssetBrowserBus.h>
 #include <JE/Editor/Materials/EditorMaterialComponentUtil.h>
 #include <JE/Editor/Materials/MaterialBrowserInteractions.h>
+#include "MaterialTextureSet.h"
+#include <AzToolsFramework/AssetBrowser/Entries/SourceAssetBrowserEntry.h>
+#include <AzToolsFramework/AssetBrowser/Entries/AssetBrowserEntryCache.h>
+#include <QAction>
+#include <QMenu>
+#include <QDialog>
+#include <QDialogButtonBox>
+#include <QComboBox>
+#include <QFileInfo>
+#include <QDir>
+#include <QFormLayout>
+#include <QGroupBox>
+#include <QLabel>
+#include <QPushButton>
+#include <QVBoxLayout>
+#include <QScopedValueRollback>
+#include <QPointer>
+#include <QTimer>
+#include <Atom/ImageProcessing/ImageProcessingEditorBus.h>
+#include <AzCore/Math/Sha1.h>
+#include <AzCore/PlatformIncl.h>
+#include <AzCore/IO/SystemFile.h>
+#include <AzCore/Utils/Utils.h>
+#include <AzCore/std/containers/array.h>
+#include <AzCore/std/optional.h>
+#include <AzToolsFramework/AssetBrowser/AssetBrowserModel.h>
+#if defined(AZ_PLATFORM_LINUX)
+#include <sys/stat.h>
+#endif
 
 namespace JE
 {
     namespace Editor
     {
+        namespace
+        {
+            bool IsTexturePathInCurrentProject(const AZStd::string& path)
+            {
+                const auto project = AZ::Utils::GetProjectPath();
+                const QString root = QFileInfo(QString::fromUtf8(project.c_str())).canonicalFilePath();
+                const QFileInfo target(QString::fromUtf8(path.c_str()));
+                const QString parent = target.exists()
+                    ? QFileInfo(target.canonicalFilePath()).dir().canonicalPath()
+                    : target.dir().canonicalPath();
+                if (project.empty() || root.isEmpty() || parent.isEmpty())
+                {
+                    return false;
+                }
+    #if defined(AZ_PLATFORM_WINDOWS)
+                constexpr auto sensitivity = Qt::CaseInsensitive;
+    #else
+                constexpr auto sensitivity = Qt::CaseSensitive;
+    #endif
+                if (parent.compare(root, sensitivity) != 0 && !parent.startsWith(root + '/', sensitivity))
+                {
+                    return false;
+                }
+                const QString first = QDir(root).relativeFilePath(parent).section('/', 0, 0).toLower();
+                return first != "cache" && first != "user" && first != "build" &&
+                    first != "gems" && first != "3rdparty" && first != "external";
+            }
+
+            using TexturePresetPlan = AZStd::vector<AZStd::pair<AZStd::string, AZStd::string>>;
+
+            AZ::Outcome<TexturePresetPlan, AZStd::string> PlanTexturePresets(
+                const MaterialTextureSet& set, const AZStd::vector<size_t>& selected)
+            {
+                TexturePresetPlan plan;
+                for (const auto index : selected)
+                {
+                    if (index >= set.candidates.size())
+                    {
+                        return AZ::Failure(AZStd::string("A selected texture candidate no longer exists."));
+                    }
+                    const auto& candidate = set.candidates[index];
+                    if (!IsTexturePathInCurrentProject(candidate.path))
+                    {
+                        return AZ::Failure(AZStd::string("Selected textures must be project sources outside Cache, user, build, Gems, 3rdParty and External. No settings have been written."));
+                    }
+                    const QString token = QString::fromUtf8(candidate.token.c_str()).toLower();
+                    const bool packed = token == "arm" || token == "orm" || token == "ordp";
+                    const char* preset = nullptr;
+                    if (packed)
+                    {
+                        preset = "LayerMask";
+                    }
+                    else
+                    {
+                        switch (candidate.role)
+                        {
+                        case MaterialTextureRole::BaseColor: preset = "Albedo"; break;
+                        case MaterialTextureRole::Normal: preset = "Normals"; break;
+                        case MaterialTextureRole::Roughness:
+                        case MaterialTextureRole::Metallic: preset = "Reflectance"; break;
+                        case MaterialTextureRole::Occlusion: preset = "AmbientOcclusion"; break;
+                        case MaterialTextureRole::Emissive: preset = "Emissive"; break;
+                        case MaterialTextureRole::Height: preset = "Displacement"; break;
+                        default: break;
+                        }
+                    }
+                    if (!candidate.supported || !preset || !IsMaterialTextureSource(candidate.path))
+                    {
+                        return AZ::Failure(AZStd::string("A selected texture has no supported processing preset. Review it before creating the material."));
+                    }
+                    bool found = false;
+                    for (const auto& entry : plan)
+                    {
+                        if (entry.first == candidate.path)
+                        {
+                            if (entry.second != preset)
+                            {
+                                return AZ::Failure(AZStd::string("One texture requires conflicting processing presets. Resolve the assignments before creating the material."));
+                            }
+                            found = true;
+                            break;
+                        }
+                    }
+                    if (!found)
+                    {
+                        plan.emplace_back(candidate.path, preset);
+                    }
+                }
+                return AZ::Success(AZStd::move(plan));
+            }
+
+            struct TextureSidecarSnapshot
+            {
+                AZStd::string path;
+                AZStd::string bytes;
+                AZStd::array<AZ::u64, 6> identity{};
+                AZStd::array<AZ::u32, 5> digest{};
+            };
+
+            bool CaptureTextureSidecar(const AZStd::string& path, TextureSidecarSnapshot& snapshot)
+            {
+                AZ::IO::SystemFile file;
+                if (!file.Open(path.c_str(), AZ::IO::SystemFile::SF_OPEN_READ_ONLY))
+                {
+                    return false;
+                }
+                snapshot.path = path;
+    #if defined(AZ_PLATFORM_WINDOWS)
+                BY_HANDLE_FILE_INFORMATION info{};
+                if (!GetFileInformationByHandle(file.NativeHandle(), &info))
+                {
+                    return false;
+                }
+                const auto value64 = [](DWORD low, DWORD high) { return (AZ::u64(high) << 32) | low; };
+                if (value64(info.nFileIndexLow, info.nFileIndexHigh) == 0)
+                {
+                    return false;
+                }
+                snapshot.identity = {info.dwVolumeSerialNumber, value64(info.nFileIndexLow, info.nFileIndexHigh),
+                    value64(info.ftCreationTime.dwLowDateTime, info.ftCreationTime.dwHighDateTime),
+                    value64(info.ftLastWriteTime.dwLowDateTime, info.ftLastWriteTime.dwHighDateTime),
+                    info.dwFileAttributes, value64(info.nFileSizeLow, info.nFileSizeHigh)};
+    #elif defined(AZ_PLATFORM_LINUX)
+                struct stat info{};
+                if (fstat(file.NativeHandle(), &info) != 0 || info.st_ino == 0)
+                {
+                    return false;
+                }
+                snapshot.identity = {static_cast<AZ::u64>(info.st_dev), static_cast<AZ::u64>(info.st_ino),
+                    static_cast<AZ::u64>(info.st_ctim.tv_sec), static_cast<AZ::u64>(info.st_ctim.tv_nsec),
+                    static_cast<AZ::u64>(info.st_mtim.tv_sec), static_cast<AZ::u64>(info.st_mtim.tv_nsec)};
+    #else
+                return false;
+    #endif
+                // These are newly written XML settings, not texture payloads. Retain an unexpected large file for review.
+                const auto length = file.Length();
+                if (length > 1024 * 1024)
+                {
+                    return false;
+                }
+                snapshot.bytes.resize(static_cast<size_t>(length));
+                if (file.Read(length, snapshot.bytes.data()) != length)
+                {
+                    return false;
+                }
+                AZ::Sha1 hash;
+                hash.ProcessBytes(reinterpret_cast<const AZStd::byte*>(snapshot.bytes.data()), snapshot.bytes.size());
+                AZ::u32 digest[5]{};
+                hash.GetDigest(digest);
+                for (size_t index = 0; index < snapshot.digest.size(); ++index)
+                {
+                    snapshot.digest[index] = digest[index];
+                }
+                return true;
+            }
+
+            QStringList RollbackTextureSidecars(const AZStd::vector<TextureSidecarSnapshot>& created)
+            {
+                QStringList retained;
+                for (const auto& owned : created)
+                {
+                    if (!AZ::IO::SystemFile::Exists(owned.path.c_str()))
+                    {
+                        continue;
+                    }
+                    TextureSidecarSnapshot current;
+                    if (!CaptureTextureSidecar(owned.path, current) || owned.identity != current.identity ||
+                        owned.digest != current.digest || owned.bytes != current.bytes ||
+                        !AZ::IO::SystemFile::Delete(owned.path.c_str()))
+                    {
+                        retained << QString::fromUtf8(owned.path.c_str());
+                    }
+                    // This is a revalidated best-effort rollback, not an atomic check-and-delete transaction.
+                }
+                return retained;
+            }
+            // File discovery precedes source metadata; wait for the model to publish the complete source.
+            class PendingMaterialSelection final
+                : public QObject
+                , private AzToolsFramework::AssetBrowser::AssetBrowserModelNotificationBus::Handler
+            {
+            public:
+                PendingMaterialSelection(QWidget* caller, const AZStd::string& path)
+                    : QObject(caller), m_caller(caller), m_path(path)
+                {
+                    setObjectName("PendingGeneratedMaterialSelection");
+                    BusConnect();
+                    TryQueueSelection();
+                }
+                ~PendingMaterialSelection() override { BusDisconnect(); }
+
+            private:
+                bool IsSourceReady() const
+                {
+                    if (!m_model)
+                    {
+                        return false;
+                    }
+                    const auto index = m_model->findIndex(QDir::fromNativeSeparators(QString::fromUtf8(m_path.c_str())));
+                    const auto* entry = index.isValid()
+                        ? index.data(AzToolsFramework::AssetBrowser::AssetBrowserModel::Roles::EntryRole)
+                            .value<const AzToolsFramework::AssetBrowser::AssetBrowserEntry*>() : nullptr;
+                    const auto* source = azrtti_cast<const AzToolsFramework::AssetBrowser::SourceAssetBrowserEntry*>(entry);
+                    if (!source || source->GetSourceID() < 0 || source->GetSourceUuid().IsNull()
+                        || AZ::IO::PathView(source->GetFullPath()).LexicallyNormal() != AZ::IO::PathView(m_path).LexicallyNormal())
+                    {
+                        return false;
+                    }
+                    const auto cache = AzToolsFramework::AssetBrowser::EntryCache::GetInstance();
+                    if (!cache)
+                    {
+                        return false;
+                    }
+                    const auto file = cache->m_fileIdMap.find(source->GetFileID());
+                    const auto id = cache->m_sourceIdMap.find(source->GetSourceID());
+                    const auto guid = cache->m_sourceUuidMap.find(source->GetSourceUuid());
+                    return file != cache->m_fileIdMap.end() && file->second == source
+                        && id != cache->m_sourceIdMap.end() && id->second == source
+                        && guid != cache->m_sourceUuidMap.end() && guid->second == source;
+                }
+                void EntryAdded(const AzToolsFramework::AssetBrowser::AssetBrowserEntry* entry) override
+                {
+                    const auto* source = azrtti_cast<const AzToolsFramework::AssetBrowser::SourceAssetBrowserEntry*>(entry);
+                    if (source && AZ::IO::PathView(source->GetFullPath()).LexicallyNormal() == AZ::IO::PathView(m_path).LexicallyNormal())
+                    {
+                        TryQueueSelection();
+                    }
+                }
+                void TryQueueSelection()
+                {
+                    if (m_selectionQueued)
+                    {
+                        return;
+                    }
+                    if (!m_model)
+                    {
+                        AzToolsFramework::AssetBrowser::AssetBrowserModel* model = nullptr;
+                        AzToolsFramework::AssetBrowser::AssetBrowserComponentRequestBus::BroadcastResult(model,
+                            &AzToolsFramework::AssetBrowser::AssetBrowserComponentRequests::GetAssetBrowserModel);
+                        m_model = model;
+                        if (m_model)
+                        {
+                            connect(m_model.data(), &QAbstractItemModel::dataChanged, this, [this]() { TryQueueSelection(); });
+                        }
+                    }
+                    if (IsSourceReady())
+                    {
+                        QueueSelection();
+                    }
+                }
+                void QueueSelection()
+                {
+                    m_selectionQueued = true;
+                    BusDisconnect();
+                    disconnect(m_model.data(), nullptr, this, nullptr);
+                    // Retain one queued UI action with QObject cancellation, without retaining a source entry.
+                    QTimer::singleShot(0, this, [this]()
+                    {
+                        if (m_caller && IsSourceReady())
+                        {
+                            AzToolsFramework::AssetBrowser::AssetBrowserInteractionNotificationBus::Broadcast(
+                                &AzToolsFramework::AssetBrowser::AssetBrowserInteractionNotifications::SelectAsset,
+                                m_caller.data(), m_path);
+                        }
+                        deleteLater();
+                    });
+                }
+                QPointer<QWidget> m_caller;
+                QPointer<AzToolsFramework::AssetBrowser::AssetBrowserModel> m_model;
+                AZStd::string m_path;
+                bool m_selectionQueued = false;
+            };
+
+            void SelectGeneratedMaterial(QWidget* caller, const AZStd::string& path)
+            {
+                if (!caller)
+                {
+                    return;
+                }
+                // A later user action replaces an unfinished selection owned by this same browser widget.
+                delete caller->findChild<QObject*>("PendingGeneratedMaterialSelection", Qt::FindDirectChildrenOnly);
+                new PendingMaterialSelection(caller, path);
+            }
+
+            class TextureMaterialCreationDialog final : public QDialog
+            {
+            public:
+                explicit TextureMaterialCreationDialog(QWidget* caller)
+                    : QDialog(caller)
+                    , m_browserCaller(caller)
+                {
+                    setObjectName("MaterialTextureReview");
+                    setWindowTitle(tr("Generar material"));
+                    setAttribute(Qt::WA_DeleteOnClose);
+                    new QVBoxLayout(this);
+                }
+                void GenerateMaterialFromTexture(const AZStd::string& sourcePath);
+
+            private:
+                void CreateTextureMaterial();
+                QPointer<QWidget> m_browserCaller;
+                AZStd::optional<MaterialTextureSet> m_textureSet;
+                QWidget* m_texturePanel = nullptr;
+                QLabel* m_textureStatus = nullptr;
+                QPushButton* m_textureCreate = nullptr;
+                AZStd::vector<QComboBox*> m_textureChoices;
+                bool m_creatingTextureMaterial = false;
+            };
+        }
+        void TextureMaterialCreationDialog::GenerateMaterialFromTexture(const AZStd::string& sourcePath)
+        {
+            m_texturePanel = new QGroupBox(tr("Generar material desde texturas"), this);
+            m_texturePanel->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Maximum);
+            auto* panelLayout = new QVBoxLayout(m_texturePanel);
+            m_textureStatus = new QLabel(m_texturePanel);
+            m_textureStatus->setObjectName("MaterialTextureStatus");
+            m_textureStatus->setWordWrap(true);
+            m_textureStatus->setTextFormat(Qt::PlainText);
+            m_textureStatus->setTextInteractionFlags(Qt::TextSelectableByMouse | Qt::TextSelectableByKeyboard);
+            panelLayout->addWidget(m_textureStatus);
+            static_cast<QVBoxLayout*>(layout())->addWidget(m_texturePanel);
+            auto* buttons = new QDialogButtonBox(QDialogButtonBox::Cancel, this);
+            connect(buttons, &QDialogButtonBox::rejected, this, &QDialog::reject);
+            static_cast<QVBoxLayout*>(layout())->addWidget(buttons);
+
+            auto analyzed = AnalyzeMaterialTextureSet(sourcePath);
+            if (!analyzed.IsSuccess())
+            {
+                m_textureStatus->setText(QString::fromUtf8(analyzed.GetError().c_str()));
+                show();
+                return;
+            }
+            m_textureSet = AZStd::move(analyzed.GetValue());
+            if (AZ::IO::SystemFile::Exists(m_textureSet->suggestedMaterialPath.c_str()))
+            {
+                // A generated source already records its assignments; retain subsequent manual edits.
+                CreateTextureMaterial();
+                return;
+            }
+            QStringList information;
+            information << tr("Destino: %1").arg(QString::fromUtf8(m_textureSet->suggestedMaterialPath.c_str()));
+            if (!m_textureSet->missing.empty())
+            {
+                information << tr("Conjunto incompleto: se conservarán los orígenes; los mapas ausentes no se inventan.");
+            }
+            for (const auto& warning : m_textureSet->warnings)
+            {
+                information << QString::fromUtf8(warning.c_str());
+            }
+            auto* choices = new QFormLayout();
+            panelLayout->addLayout(choices);
+            const char* labels[] = {"Color base", "Normal", "Rugosidad", "Metallic", "Oclusión", "Emisión", "Altura"};
+            for (size_t roleIndex = 0; roleIndex < AZ_ARRAY_SIZE(labels); ++roleIndex)
+            {
+                const auto role = static_cast<MaterialTextureRole>(roleIndex);
+                size_t count = 0;
+                for (const auto& candidate : m_textureSet->candidates)
+                {
+                    count += candidate.supported && candidate.role == role ? 1 : 0;
+                }
+                if (count < 2)
+                {
+                    continue;
+                }
+                auto* choice = new QComboBox(m_texturePanel);
+                choice->setObjectName(QString("MaterialTextureChoice%1").arg(roleIndex));
+                choice->addItem(tr("Sin asignar"), -1);
+                for (size_t index = 0; index < m_textureSet->candidates.size(); ++index)
+                {
+                    const auto& candidate = m_textureSet->candidates[index];
+                    if (candidate.supported && candidate.role == role)
+                    {
+                        choice->addItem(QString::fromUtf8(candidate.path.c_str()), static_cast<int>(index));
+                        choice->setItemData(choice->count() - 1, QString::fromUtf8(candidate.token.c_str()), Qt::ToolTipRole);
+                    }
+                }
+                choices->addRow(tr(labels[roleIndex]), choice);
+                m_textureChoices.push_back(choice);
+            }
+            if (!m_textureChoices.empty())
+            {
+                information << tr("Hay mapas en conflicto. Elija un candidato por función o deje Sin asignar para crear un material parcial.");
+                m_textureCreate = new QPushButton(tr("Crear material"), m_texturePanel);
+                m_textureCreate->setObjectName("CreateMaterialFromTextures");
+                m_textureCreate->setDefault(true);
+                panelLayout->addWidget(m_textureCreate);
+                connect(m_textureCreate, &QPushButton::clicked, this, &TextureMaterialCreationDialog::CreateTextureMaterial);
+            }
+            m_textureStatus->setText(information.join('\n'));
+            if (m_textureChoices.empty())
+            {
+                CreateTextureMaterial();
+            }
+            else
+            {
+                show();
+            }
+        }
+
+        void TextureMaterialCreationDialog::CreateTextureMaterial()
+        {
+            if (m_creatingTextureMaterial || !m_textureSet || !m_textureStatus)
+            {
+                return;
+            }
+            const QScopedValueRollback<bool> generating(m_creatingTextureMaterial, true);
+            const auto report = [this](const QString& message)
+            {
+                m_textureStatus->setText(m_textureStatus->text() + "\n" + message);
+                show();
+            };
+            AZStd::string path = m_textureSet->suggestedMaterialPath;
+            if (!AtomToolsFramework::ValidateDocumentPath(path))
+            {
+                report(tr("El destino del material no es editable."));
+                return;
+            }
+            if (!IsTexturePathInCurrentProject(path))
+            {
+                report(tr("El destino debe estar en las fuentes del proyecto actual, fuera de Cache/user/build/Gems/3rdParty/External. No se ha escrito ningún archivo."));
+                return;
+            }
+            if (AZ::IO::SystemFile::Exists(path.c_str()))
+            {
+                if (!IsMaterialForTextureSet(*m_textureSet, path))
+                {
+                    report(tr("El nombre está ocupado por otro material. No se ha modificado ni adoptado ese archivo."));
+                    return;
+                }
+                // Existing generated materials keep all subsequent manual property edits.
+                SelectGeneratedMaterial(m_browserCaller.data(), path);
+            }
+            else
+            {
+                auto selected = m_textureSet->selected;
+                for (const auto* choice : m_textureChoices)
+                {
+                    const int index = choice->currentData().toInt();
+                    if (index >= 0)
+                    {
+                        selected.push_back(static_cast<size_t>(index));
+                    }
+                }
+                auto source = BuildTextureMaterialSource(*m_textureSet, selected, path);
+                if (!source.IsSuccess())
+                {
+                    report(QString::fromUtf8(source.GetError().c_str()));
+                    return;
+                }
+                auto plan = PlanTexturePresets(*m_textureSet, selected);
+                if (!plan.IsSuccess())
+                {
+                    report(QString::fromUtf8(plan.GetError().c_str()));
+                    return;
+                }
+                AZStd::vector<TextureSidecarSnapshot> created;
+                const auto rollback = [&created, &report](const QString& error)
+                {
+                    const auto retained = RollbackTextureSidecars(created);
+                    report(error);
+                    if (!retained.empty())
+                    {
+                        report(tr("Se conservaron archivos de configuración que no se pudieron retirar con seguridad:\n%1")
+                            .arg(retained.join('\n')));
+                    }
+                };
+                // Validate the complete plan before asking the existing image-processing owner to write anything.
+                for (const auto& entry : plan.GetValue())
+                {
+                    AZ::Outcome<bool, AZStd::string> prepared = AZ::Failure(AZStd::string(
+                        "Image processing is unavailable. Review the texture presets before creating the material."));
+                    ImageProcessingAtomEditor::ImageProcessingEditorRequestBus::BroadcastResult(prepared,
+                        &ImageProcessingAtomEditor::ImageProcessingEditorRequests::EnsureTexturePresetIfUnset,
+                        entry.first, entry.second);
+                    if (!prepared.IsSuccess())
+                    {
+                        rollback(QString::fromUtf8(prepared.GetError().c_str()));
+                        return;
+                    }
+                    if (prepared.GetValue())
+                    {
+                        TextureSidecarSnapshot snapshot;
+                        const auto sidecarPath = entry.first + ".assetinfo";
+                        if (!CaptureTextureSidecar(sidecarPath, snapshot))
+                        {
+                            rollback(tr("Se creó una configuración, pero no se pudo verificar su identidad. Se conserva para revisión: %1")
+                                .arg(QString::fromUtf8(sidecarPath.c_str())));
+                            return;
+                        }
+                        created.push_back(AZStd::move(snapshot));
+                    }
+                }
+                const auto written = WriteMaterialSourceFileNew(source.GetValue(), path);
+                if (!written.IsSuccess())
+                {
+                    rollback(QString::fromUtf8(written.GetError().c_str()));
+                    return;
+                }
+                AzToolsFramework::AssetBrowser::AssetBrowserFileCreationNotificationBus::Event(
+                    AzToolsFramework::AssetBrowser::AssetBrowserFileCreationNotifications::FileCreationNotificationBusId,
+                    &AzToolsFramework::AssetBrowser::AssetBrowserFileCreationNotifications::HandleAssetCreatedInEditor,
+                    path.c_str(), AZ::Crc32(), false);
+                SelectGeneratedMaterial(m_browserCaller.data(), path);
+            }
+            for (auto* choice : m_textureChoices)
+            {
+                choice->setEnabled(false);
+            }
+            if (m_textureCreate)
+            {
+                m_textureCreate->setEnabled(false);
+            }
+            hide();
+            deleteLater();
+        }
+
         MaterialBrowserInteractions::MaterialBrowserInteractions()
         {
             AzToolsFramework::AssetBrowser::AssetBrowserInteractionNotificationBus::Handler::BusConnect();
@@ -37,6 +578,40 @@ namespace JE
         MaterialBrowserInteractions::~MaterialBrowserInteractions()
         {
             AzToolsFramework::AssetBrowser::AssetBrowserInteractionNotificationBus::Handler::BusDisconnect();
+        }
+
+        void MaterialBrowserInteractions::AddContextMenuActions(
+            QWidget* caller, QMenu* menu,
+            const AZStd::vector<const AzToolsFramework::AssetBrowser::AssetBrowserEntry*>& entries)
+        {
+            if (!menu || entries.size() != 1)
+            {
+                return;
+            }
+            const auto* source = azrtti_cast<const AzToolsFramework::AssetBrowser::SourceAssetBrowserEntry*>(entries.front());
+            if (!source || !IsMaterialTextureSource(source->GetFullPath()))
+            {
+                return;
+            }
+            const AZStd::string path = source->GetFullPath();
+            auto* action = menu->addAction(QObject::tr("Generar material"));
+            QWidget* owner = caller;
+            if (!owner)
+            {
+                AzToolsFramework::EditorRequests::Bus::BroadcastResult(
+                    owner, &AzToolsFramework::EditorRequests::Bus::Events::GetMainWindow);
+            }
+            const QPointer<QWidget> context(owner);
+            QObject::connect(action, &QAction::triggered, action, [path, context]()
+            {
+                if (!context)
+                {
+                    return;
+                }
+                delete context->findChild<QDialog*>("MaterialTextureReview", Qt::FindDirectChildrenOnly);
+                auto* review = new TextureMaterialCreationDialog(context.data());
+                review->GenerateMaterialFromTexture(path);
+            });
         }
 
         void MaterialBrowserInteractions::AddSourceFileOpeners(const char* fullSourceFileName, [[maybe_unused]] const AZ::Uuid& sourceUUID, AzToolsFramework::AssetBrowser::SourceFileOpenerList& openers)
@@ -178,59 +753,7 @@ namespace JE
         AZ::Outcome<void, AZStd::string> MaterialBrowserInteractions::CreateMaterialSourceFile(
             const AZStd::string& materialTypePath, const AZStd::string& materialPath)
         {
-            const AZStd::string sourcePath = AtomToolsFramework::GetPathWithoutAlias(materialTypePath);
-            if (!AZ::IO::PathView(sourcePath).IsAbsolute() ||
-                !sourcePath.ends_with(EditorMaterialComponentUtil::MaterialTypeExtensionWithDot) ||
-                !AZ::IO::PathView(materialPath).IsAbsolute() ||
-                !materialPath.ends_with(EditorMaterialComponentUtil::MaterialExtensionWithDot))
-            {
-                return AZ::Failure(AZStd::string("Select an absolute .materialtype source and a .material destination."));
-            }
-            if (AZ::IO::SystemFile::Exists(materialPath.c_str()))
-            {
-                return AZ::Failure(AZStd::string("The material destination already exists."));
-            }
-            auto materialType = JE::Render::RPI::MaterialUtils::LoadMaterialTypeSourceData(sourcePath);
-            if (!materialType.IsSuccess())
-            {
-                return AZ::Failure(AZStd::string("Failed to load the selected material type."));
-            }
-            JE::Render::RPI::MaterialSourceData materialData;
-            materialData.m_materialTypeVersion = materialType.GetValue().m_version;
-            materialData.m_materialType = AtomToolsFramework::GetPathToExteralReference(materialPath, sourcePath);
-            materialData.m_parentMaterial.clear();
-
-            // Preserve the unwrapped .material schema and check the actual write, not only serialization.
-            rapidjson::Document document;
-            document.SetObject();
-            AZ::JsonSerializerSettings settings;
-            JE::Render::RPI::JsonReportingHelper reporting;
-            reporting.Attach(settings);
-            AZ::JsonSerialization::Store(document, document.GetAllocator(), materialData, settings);
-            if (reporting.ErrorsReported())
-            {
-                return AZ::Failure(AZStd::string("Failed to serialize the material source."));
-            }
-            AZStd::string contents;
-            auto serialized = AZ::JsonSerializationUtils::WriteJsonString(document, contents);
-            if (!serialized.IsSuccess())
-            {
-                return serialized;
-            }
-            AZ::IO::SystemFile output;
-            if (!output.Open(materialPath.c_str(), AZ::IO::SystemFile::SF_OPEN_WRITE_ONLY | AZ::IO::SystemFile::SF_OPEN_CREATE_NEW))
-            {
-                return AZ::Failure(AZStd::string("Failed to create the material destination. Existing files are not overwritten."));
-            }
-            const auto written = output.Write(contents.data(), contents.size());
-            output.Close();
-            if (written != contents.size())
-            {
-                // This operation exclusively created the file; never remove a pre-existing destination.
-                AZ::IO::SystemFile::Delete(materialPath.c_str());
-                return AZ::Failure(AZStd::string("Failed to write the complete material source."));
-            }
-            return AZ::Success();
+            return JE::Editor::CreateMaterialSourceFile(materialTypePath, materialPath);
         }
 
         bool MaterialBrowserInteractions::HandlesSource(AZStd::string_view fileName) const

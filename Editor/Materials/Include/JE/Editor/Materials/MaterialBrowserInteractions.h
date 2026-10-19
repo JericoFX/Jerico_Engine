@@ -49,6 +49,8 @@ namespace JE
 
         private:
             //! AssetBrowserInteractionNotificationBus::Handler overrides...
+            void AddContextMenuActions(QWidget* caller, QMenu* menu,
+                const AZStd::vector<const AzToolsFramework::AssetBrowser::AssetBrowserEntry*>& entries) override;
             void AddSourceFileOpeners(const char* fullSourceFileName, const AZ::Uuid& sourceUUID, AzToolsFramework::AssetBrowser::SourceFileOpenerList& openers) override;
             void AddSourceFileCreators(const char* fullSourceFolderName, const AZ::Uuid& sourceUUID, AzToolsFramework::AssetBrowser::SourceFileCreatorList& creators) override;
             

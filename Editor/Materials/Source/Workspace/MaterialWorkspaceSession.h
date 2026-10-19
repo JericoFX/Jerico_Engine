@@ -16,6 +16,7 @@ class QWidget;
 namespace AtomToolsFramework
 {
     class AtomToolsDocumentSystem;
+    class EntityPreviewViewportSettingsSystem;
 }
 
 namespace JE::Editor
@@ -40,6 +41,7 @@ namespace JE::Editor
         const AtomToolsFramework::DocumentTypeInfoVector& GetGraphDocumentTypes() const;
         void RegisterGraphDocumentTypes(const AtomToolsFramework::DocumentTypeInfoVector& types);
         MaterialGraphEnvironment& EnableGraphDocuments();
+        void EnsureMaterialPreviewSettings();
         bool IsGraphDocument(const AZ::Uuid& documentId) const;
         AZ::Uuid OpenDocument(const AZStd::string& sourcePath);
         AZ::Uuid CreateDocument(const AZStd::string& sourcePath, const AZStd::string& targetPath);
@@ -51,6 +53,8 @@ namespace JE::Editor
         bool RequestCompile(const AZ::Uuid& documentId);
 
     Q_SIGNALS:
+        // Views release renderer-backed resources synchronously before documents and settings are destroyed.
+        void AboutToClose();
         // Document/compiler notifications are dispatched on the main thread; observers see the updated session state.
         void CompileStateChanged(const AZ::Uuid& documentId);
 
@@ -68,6 +72,7 @@ namespace JE::Editor
 
         AtomToolsFramework::DocumentTypeInfo m_documentType;
         AtomToolsFramework::DocumentTypeInfoVector m_graphDocumentTypes;
+        AZStd::unique_ptr<AtomToolsFramework::EntityPreviewViewportSettingsSystem> m_previewSettings;
         AZStd::unique_ptr<MaterialGraphEnvironment> m_graphEnvironment;
         AZStd::unique_ptr<AtomToolsFramework::AtomToolsDocumentSystem> m_documentSystem;
         AZStd::vector<AZ::Uuid> m_documentIds;

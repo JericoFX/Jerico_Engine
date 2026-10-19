@@ -26,8 +26,9 @@ namespace AtomToolsFramework
         RenderViewportWidget* widget,
         AZStd::shared_ptr<AzFramework::EntityContext> entityContext,
         const AZStd::string& sceneName,
-        const AZStd::string& defaultRenderPipelineAssetPath)
+        const AZStd::string& defaultRenderPipelineAssetPath, bool embedded)
         : m_toolId(toolId)
+        , m_embedded(embedded)
         , m_entityContext(entityContext)
     {
         JE::Render::RPI::ViewportContextPtr viewportContext = widget->GetViewportContext();
@@ -40,7 +41,10 @@ namespace AtomToolsFramework
         // Systems like frame capturing and post FX expect there to be a context with DefaultViewportContextName
         auto viewportContextManager = AZ::Interface<JE::Render::RPI::ViewportContextRequestsInterface>::Get();
         const AZ::Name defaultContextName = viewportContextManager->GetDefaultViewportContextName();
-        viewportContextManager->RenameViewportContext(viewportContext, defaultContextName);
+        if (!m_embedded)
+        {
+            viewportContextManager->RenameViewportContext(viewportContext, defaultContextName);
+        }
 
         // Create and register a scene with all available feature processors
         JE::Render::RPI::SceneDescriptor sceneDesc;
@@ -104,6 +108,10 @@ namespace AtomToolsFramework
         }
 
         // Create a render pipeline from the specified asset for the window context and add the pipeline to the scene
+        if (m_embedded)
+        {
+            pipelineDesc->m_renderSettings.m_multisampleState = JE::Render::RPI::RPISystemInterface::Get()->GetApplicationMultisampleState();
+        }
         JE::Render::RPI::RenderPipelinePtr renderPipeline = JE::Render::RPI::RenderPipeline::CreateRenderPipelineForWindow(pipelineDesc.value(), *m_windowContext.get());
 
         if (renderPipeline)
@@ -148,7 +156,14 @@ namespace AtomToolsFramework
 
             // TODO SetApplicationMultisampleState should only be called once per application and will need to consider multiple viewports
             // and pipelines. The default pipeline determines the initial MSAA state for the application.
-            JE::Render::RPI::RPISystemInterface::Get()->SetApplicationMultisampleState(m_activeRenderPipeline->GetRenderSettings().m_multisampleState);
+            if (!m_embedded)
+            {
+                JE::Render::RPI::RPISystemInterface::Get()->SetApplicationMultisampleState(m_activeRenderPipeline->GetRenderSettings().m_multisampleState);
+            }
+            else
+            {
+                m_activeRenderPipeline->RemoveFromRenderTick();
+            }
         }
 
         return true;

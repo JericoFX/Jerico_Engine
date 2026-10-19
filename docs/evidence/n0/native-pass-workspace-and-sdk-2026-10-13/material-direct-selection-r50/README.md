@@ -1,0 +1,15 @@
+# Material directo y selección de fuente — R50
+
+**Aceptación acotada:** Windows/Profile/Vulkan. Generar material crea y selecciona su fuente sin abrir Material Workspace; apertura explícita carga el material correcto y sus mapas. La captura original R50 muestra la primera creación ambigua seleccionada. La apertura explícita y sus mapas se acreditan reutilizando la captura R47 identificada en su nombre; el segundo JPG R50 era duplicado del primero, con accessibility vacío, y se excluye de la evidencia publicada. Su original privado permanece intacto. No son mockups. Los conceptos del futuro rediseño quedan fuera de esta evidencia de producto.
+
+Qt reparentaba el chooser a WindowDecorationWrapper; parentWidget() perdía el caller original. Pending se destruía antes de SourceReady. El arreglo conserva QPointer del navegador original y su cancelación. Los dos casos nuevos fallan en RED(84/86pasan) y GREEN pasa86/86sin errors/skips/disabled. XML conservados.
+
+Build GREEN115,417s0, CTest6,971s0. Se recompilaron Browser y las unidades de Window/Tree/Thumbnail;114hosts cotejados,111idénticos/3nuevos, sin trazas temporales en las tres DLL afectadas. GUI nativo0/301,413s y comprobación visual humana del padre;15.332fuentes/2.679ausencias,86/73protegidos y114hosts sin drift. acceptance-r50.json contiene pins, alcance y cierre terminal que sustituye el indicador nativeExitPending histórico.
+
+R44/R47 se reutilizan para factor0,65, Undo/Redo/Save/reopen, recarga A→B→A, Cancel sin escritura y destino existente intacto. ATF17/RPI583/SDK anteriores no se presentan como nuevas ejecuciones. No repetir suites enteras por cambios UI internos que no invalidan sus entradas.
+
+PRs upstream consultados: [7866](https://github.com/o3de/o3de/pull/7866)(f321789, lifecycle/presets),[15833](https://github.com/o3de/o3de/pull/15833)(3df9305, escena antes de pipeline),[5109](https://github.com/o3de/o3de/pull/5109)(87c7023, path/Undo/Save),[11506](https://github.com/o3de/o3de/pull/11506)(descartado flujo duplicado),[19684](https://github.com/o3de/o3de/pull/19684)(8e500893f01d8706bbde30cfd63ab2b8d99b20bf, no corrige SourceReady/caller/lifetime relevante). Revisión informativa, sin adopción automática. Esta corrección de ownership UI no incorpora algoritmo SIGGRAPH ni acredita rendimiento.
+
+**Límites:** DiffuseProbeGridUpdatePassTemplate ausente y avisos PipelineState al cierre siguen en el log. No se certifica renderer global, Linux, VR, Shipping ni Gem completa. Incremento global de Gems0. Nodos/rediseño y asociación de material/grafo siguen pendientes. Fuente validada fue el candidato canónico; WIP ajeno mixto restaurado no se presenta como clean-HEAD/source-free acceptance.
+
+Publicación: RootAssetBrowserEntry conserva los bytes CRLF probados en Windows; sólo su blob Git se normaliza reversiblemente a LF, conforme a core.autocrlf=true y al HEAD anterior. No cambia ningún token C++ ni requiere otra build. Las otras23postimágenes de fuente conservan sus bytes canónicos. Se exige diff --cached --check estricto sin excepciones.

@@ -21,16 +21,26 @@
 #include <AzFramework/Components/TransformComponent.h>
 #include <AzFramework/Viewport/ViewportControllerList.h>
 #include <AzToolsFramework/API/EditorAssetSystemAPI.h>
+#include <QShowEvent>
+#include <QHideEvent>
 
 namespace AtomToolsFramework
 {
-    EntityPreviewViewportWidget::EntityPreviewViewportWidget(const AZ::Crc32& toolId, QWidget* parent)
+    EntityPreviewViewportWidget::EntityPreviewViewportWidget(const AZ::Crc32& toolId, QWidget* parent, bool embedded)
         : RenderViewportWidget(parent)
         , m_toolId(toolId)
+        , m_embedded(embedded)
     {
         setSizePolicy(QSizePolicy::MinimumExpanding, QSizePolicy::MinimumExpanding);
 
-        AZ::TickBus::Handler::BusConnect();
+        if (!m_embedded)
+        {
+            AZ::TickBus::Handler::BusConnect();
+        }
+        else
+        {
+            AZ::TickBus::Handler::BusDisconnect();
+        }
         EntityPreviewViewportSettingsNotificationBus::Handler::BusConnect(m_toolId);
     }
 
@@ -64,6 +74,10 @@ namespace AtomToolsFramework
         m_viewportScene->GetPipeline()->SetDefaultViewFromEntity(m_viewportContent->GetCameraEntityId());
 
         OnViewportSettingsChanged();
+        if (m_embedded && isVisible())
+        {
+            AZ::TickBus::Handler::BusConnect();
+        }
     }
 
     void EntityPreviewViewportWidget::OnViewportSettingsChanged()
@@ -103,8 +117,34 @@ namespace AtomToolsFramework
             });
     }
 
+    void EntityPreviewViewportWidget::showEvent(QShowEvent* event)
+    {
+        RenderViewportWidget::showEvent(event);
+        if (m_embedded && m_viewportScene)
+        {
+            AZ::TickBus::Handler::BusConnect();
+        }
+    }
+
+    void EntityPreviewViewportWidget::hideEvent(QHideEvent* event)
+    {
+        if (m_embedded)
+        {
+            AZ::TickBus::Handler::BusDisconnect();
+            if (m_viewportScene)
+            {
+                m_viewportScene->GetPipeline()->RemoveFromRenderTick();
+            }
+        }
+        RenderViewportWidget::hideEvent(event);
+    }
+
     void EntityPreviewViewportWidget::OnTick(float deltaTime, AZ::ScriptTimePoint time)
     {
+        if (m_embedded && (!isVisible() || !m_viewportScene))
+        {
+            return;
+        }
         RenderViewportWidget::OnTick(deltaTime, time);
 
         const auto objectLocalBounds = m_viewportContent->GetObjectLocalBounds();

@@ -20,6 +20,7 @@
 #include <AzCore/Utils/Utils.h>
 
 #include <AzToolsFramework/AssetBrowser/Entries/RootAssetBrowserEntry.h>
+#include <AzToolsFramework/AssetBrowser/AssetBrowserModel.h>
 #include <AzToolsFramework/AssetBrowser/Entries/FolderAssetBrowserEntry.h>
 #include <AzToolsFramework/AssetBrowser/Entries/SourceAssetBrowserEntry.h>
 #include <AzToolsFramework/AssetBrowser/Entries/SourceAssetBrowserEntry.h>
@@ -250,6 +251,18 @@ namespace AzToolsFramework
             source->PathsUpdated(); // update thumbnailkey to valid uuid
             entryCache->m_sourceUuidMap[source->m_sourceUuid] = source;
             entryCache->m_sourceIdMap[source->m_sourceId] = source;
+
+            // Publish metadata only after the source fields and both lookup maps are complete.
+            AssetBrowserModel* model = nullptr;
+            AssetBrowserComponentRequestBus::BroadcastResult(model, &AssetBrowserComponentRequests::GetAssetBrowserModel);
+            if (model)
+            {
+                const auto index = model->findIndex(AzToQtUtf8String(source->GetFullPath()));
+                if (index.isValid() && index.data(AssetBrowserModel::Roles::EntryRole).value<const AssetBrowserEntry*>() == source)
+                {
+                    Q_EMIT model->dataChanged(index.siblingAtColumn(0), index.siblingAtColumn(model->columnCount(index.parent()) - 1));
+                }
+            }
             return true;
         }
 

@@ -1,5 +1,9 @@
 # JericoEngine — objetivo vigente: JE, BSP y motor integrado
 
+**Aclaración del propietario, 2026-10-18 — materiales sin pantalla intermedia:** «Generar material» desde una textura crea el archivo y lo selecciona en el Asset Browser, sin abrir automáticamente Material Workspace ni una pantalla de edición. El doble clic o apertura explícita lleva directamente a ese material con su preview y propiedades. Se conserva la elección explícita ante conflictos, Cancel sin escritura y la protección de ajustes manuales, fuentes y destinos existentes; no aplica el material a un objeto. Flujo verificado de forma acotada en Windows/Profile/Vulkan R50, con86/86casos y comprobación GUI; no acredita toda la Gem ni otros backends/plataformas. El Inspector del Asset Browser ya abierto puede actualizar sus metadatos/preview con la selección. Esta orden sustituye la presentación automática en Workspace descrita más abajo.
+
+**Dirección de materiales aceptada por el propietario, 2026-10-19:** UI Hammer2+custom más clara, pestañas Propiedades | Nodos dentro del mismo material y guardado de conexiones/constantes; creación desde conjuntos de texturas, maestros/instancias, mezclas y diagnóstico comprensible. Reutilizar los sistemas nativos existentes. El rediseño, la pestaña Nodos y su asociación/persistencia de material/grafo continúan pendientes; las imágenes conceptuales solicitadas no son implementación ni aceptación. Continuar el GOAL y la absorción nativa sin pausarlos para esas imágenes.
+
 **Directiva del propietario: 2026-10-10, posterior a a536fb7. Estado: ACTIVE / IMPLEMENTACIÓN NO VERIFICADA.**
 Repositorio único: `JericoFX/Jerico_Engine`. Rama única de trabajo/publicación: `development`.
 

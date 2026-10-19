@@ -23,6 +23,8 @@
 #include <AzCore/RTTI/BehaviorContext.h>
 #include <AzCore/Serialization/EditContext.h>
 #include <AzCore/Serialization/SerializeContext.h>
+#include <AzCore/Serialization/Json/JsonSerialization.h>
+#include <AzCore/Serialization/Json/JsonUtils.h>
 #include <JE/Editor/Materials/Document/MaterialDocument.h>
 #include <AzToolsFramework/API/ToolsApplicationAPI.h>
 #include <AzToolsFramework/Undo/UndoSystem.h>
@@ -34,6 +36,13 @@ namespace JE::Editor
     namespace
     {
         using PropertyValueMap = AZStd::unordered_map<AZ::Name, AZStd::any>;
+
+        void NormalizeMaterialSourceReferences(JE::Render::RPI::MaterialSourceData& source, const AZStd::string& path)
+        {
+            source.m_parentMaterial = JE::Render::RPI::AssetUtils::ResolvePathReference(path, source.m_parentMaterial);
+            source.m_materialType = JE::Render::RPI::AssetUtils::ResolvePathReference(path, source.m_materialType);
+            source.m_materialType = JE::Render::RPI::MaterialUtils::PredictOriginalMaterialTypeSourcePath(source.m_materialType);
+        }
 
         // Resolve the retained session document at replay time. Commands never own a document pointer.
         bool RestoreDocumentSnapshot(const AZ::Uuid& documentId, const AZStd::string& sourcePath,
@@ -275,6 +284,9 @@ namespace JE::Editor
         {
             return SaveFailed();
         }
+
+        m_materialSourceData = AZStd::move(sourceData);
+        NormalizeMaterialSourceReferences(m_materialSourceData, m_absolutePath);
 
         // after saving, reset to a clean state
         TraverseGroups(m_groups, [&](auto& group) {
@@ -853,6 +865,67 @@ namespace JE::Editor
         return OpenSucceeded();
     }
 
+    void MaterialDocument::SourceFileChanged(AZStd::string relativePath, AZStd::string scanFolder, AZ::Uuid sourceUUID)
+    {
+        const auto sourcePath = JE::Render::RPI::AssetUtils::ResolvePathReference(scanFolder, relativePath);
+        if (sourcePath == m_absolutePath &&
+            AzFramework::StringFunc::Path::IsExtension(sourcePath.c_str(), JE::Render::RPI::MaterialSourceData::Extension))
+        {
+            // AP also reports the initial discovery of a newly created source. Compare only the last loaded/saved source,
+            // not the dynamic properties, so an unchanged notification never discards unsaved edits or history.
+            auto json = AZ::JsonSerializationUtils::ReadJsonFile(sourcePath, JE::Render::RPI::JsonUtils::DefaultMaxFileSize);
+            if (json.IsSuccess())
+            {
+                using namespace AZ::JsonSerializationResult;
+                const auto completed = [](ResultCode result)
+                {
+                    const auto outcome = result.GetOutcome();
+                    return result.GetProcessing() == Processing::Completed &&
+                        (outcome == Outcomes::Success || outcome == Outcomes::DefaultsUsed || outcome == Outcomes::PartialDefaults);
+                };
+                bool comparable = true;
+                AZ::JsonDeserializerSettings settings;
+                settings.m_reporting = [&comparable, &completed](
+                    AZStd::string_view, ResultCode result, AZStd::string_view)
+                {
+                    // This is a local probe. Anything skipped, warned about or not fully loaded follows the normal reload path.
+                    comparable = comparable && completed(result);
+                    return result;
+                };
+                JE::Render::RPI::MaterialSourceData source;
+                const auto result = AZ::JsonSerialization::Load(source, json.GetValue(), settings);
+                if (comparable && completed(result))
+                {
+                    source.UpgradeLegacyFormat();
+                    NormalizeMaterialSourceReferences(source, m_absolutePath);
+                    const auto& loadedValues = m_materialSourceData.GetPropertyValues();
+                    const auto& sourceValues = source.GetPropertyValues();
+                    bool propertiesMatch = loadedValues.size() == sourceValues.size();
+                    for (const auto& [name, value] : sourceValues)
+                    {
+                        const auto found = loadedValues.find(name);
+                        if (found == loadedValues.end() || !(found->second == value))
+                        {
+                            propertiesMatch = false;
+                            break;
+                        }
+                    }
+                    if (propertiesMatch && source.m_description == m_materialSourceData.m_description &&
+                        source.m_materialType == m_materialSourceData.m_materialType &&
+                        source.m_parentMaterial == m_materialSourceData.m_parentMaterial &&
+                        source.m_materialTypeVersion == m_materialSourceData.m_materialTypeVersion)
+                    {
+                        m_ignoreSourceFileChangeToSelf = false;
+                        return;
+                    }
+                }
+            }
+            // A failed probe or real difference must not be hidden by a still-pending self-save notification.
+            m_ignoreSourceFileChangeToSelf = false;
+        }
+        AtomToolsDocument::SourceFileChanged(AZStd::move(relativePath), AZStd::move(scanFolder), sourceUUID);
+    }
+
     void MaterialDocument::Clear()
     {
         AtomToolsFramework::AtomToolsDocument::Clear();
@@ -914,14 +987,9 @@ namespace JE::Editor
 
         // We always need the absolute path for the material type and parent material to load source data and resolving
         // relative paths when saving. This will convert and store them as absolute paths for use within the document.
-        m_materialSourceData.m_parentMaterial =
-            JE::Render::RPI::AssetUtils::ResolvePathReference(m_absolutePath, m_materialSourceData.m_parentMaterial);
-        m_materialSourceData.m_materialType =
-            JE::Render::RPI::AssetUtils::ResolvePathReference(m_absolutePath, m_materialSourceData.m_materialType);
         // If the material was previously saved with a reference to a material pipeline generated material type in the intermediate asset
         // folder, attempt to redirect to the original source material type.
-        m_materialSourceData.m_materialType =
-            JE::Render::RPI::MaterialUtils::PredictOriginalMaterialTypeSourcePath(m_materialSourceData.m_materialType);
+        NormalizeMaterialSourceReferences(m_materialSourceData, m_absolutePath);
 
         // Load the material type source data which provides the layout and default values of all of the properties
         auto materialTypeOutcome = JE::Render::RPI::MaterialUtils::LoadMaterialTypeSourceData(m_materialSourceData.m_materialType);

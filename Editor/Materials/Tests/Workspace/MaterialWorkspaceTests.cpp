@@ -4,6 +4,17 @@
 #include "Workspace/MaterialWorkspaceWidget.h"
 #include <JE/Editor/Materials/MaterialBrowserInteractions.h>
 #include <JE/Editor/Render/RPI/Edit/Material/MaterialSourceData.h>
+#include <JE/Editor/Render/RPI/Edit/Material/MaterialUtils.h>
+#include <JE/Editor/Render/RPI/Edit/Material/MaterialPropertyValueSerializer.h>
+#include <AzCore/Serialization/Json/RegistrationContext.h>
+#include <AzCore/Serialization/SerializeContext.h>
+#include "MaterialTextureSet.h"
+#include <QLabel>
+#include <QPushButton>
+#include <AtomToolsFramework/Util/Util.h>
+#include <Atom/ImageProcessing/ImageProcessingEditorBus.h>
+#include <AzCore/Settings/SettingsRegistryMergeUtils.h>
+#include <QFileInfo>
 #include <JE/Editor/Render/RPI/Edit/Material/MaterialTypeSourceData.h>
 #include <JE/Editor/Render/RPI/Edit/Shader/ShaderSourceData.h>
 
@@ -27,15 +38,25 @@
 #include <AzQtComponents/Utilities/ColorUtilities.h>
 #include <AzCore/UnitTest/TestTypes.h>
 #include <AzCore/std/smart_ptr/unique_ptr.h>
+#include <AzCore/std/smart_ptr/make_shared.h>
 #include <AzTest/AzTest.h>
 #include <QApplication>
 #include <QAbstractButton>
 #include <QMessageBox>
+#include <QDialog>
 #include <QTimer>
 #include <QTemporaryDir>
 #include <QImage>
 #include <QComboBox>
 #include <QDir>
+#include <AzToolsFramework/AssetBrowser/Entries/SourceAssetBrowserEntry.h>
+#include <AzToolsFramework/AssetBrowser/Entries/RootAssetBrowserEntry.h>
+#include <AzToolsFramework/AssetBrowser/Entries/AssetBrowserEntryCache.h>
+#include <AzToolsFramework/AssetBrowser/Favorites/AssetBrowserFavoritesManager.h>
+#include <AzToolsFramework/AssetBrowser/AssetBrowserModel.h>
+#include <AzToolsFramework/AssetDatabase/AssetDatabaseConnection.h>
+#include <QAction>
+#include <QMenu>
 
 namespace UnitTest
 {
@@ -460,6 +481,50 @@ namespace UnitTest
         AZStd::unique_ptr<AZ::IO::LocalFileIO> m_fileIO;
     };
 
+    TEST_F(MaterialSourceCreationTests, TextureContextMenuOffersOneGenerateMaterialActionOnlyForImages)
+    {
+        QTemporaryDir directory;
+        ASSERT_TRUE(directory.isValid());
+        const QString imagePath = directory.filePath("rock_diff.png");
+        QImage image(2, 2, QImage::Format_RGBA8888);
+        image.fill(Qt::white);
+        ASSERT_TRUE(image.save(imagePath, "PNG"));
+        const AZStd::string textPath = directory.filePath("notes.txt").toUtf8().constData();
+        ASSERT_TRUE(AZ::Utils::WriteFile("not a texture", textPath).IsSuccess());
+
+        JE::Editor::MaterialBrowserInteractions interactions;
+        QWidget caller;
+        AzToolsFramework::AssetBrowser::SourceAssetBrowserEntry texture;
+        texture.SetFullPath(AZ::IO::Path(imagePath.toUtf8().constData()));
+        QMenu textureMenu;
+        AzToolsFramework::AssetBrowser::AssetBrowserInteractionNotificationBus::Broadcast(
+            &AzToolsFramework::AssetBrowser::AssetBrowserInteractionNotifications::AddContextMenuActions,
+            &caller, &textureMenu,
+            AZStd::vector<const AzToolsFramework::AssetBrowser::AssetBrowserEntry*>{&texture});
+        int generateActions = 0;
+        for (const auto* action : textureMenu.actions())
+        {
+            if (action->text() == QString::fromUtf8("Generar material"))
+            {
+                ++generateActions;
+                EXPECT_TRUE(action->isEnabled());
+            }
+        }
+        EXPECT_EQ(generateActions, 1);
+
+        AzToolsFramework::AssetBrowser::SourceAssetBrowserEntry text;
+        text.SetFullPath(AZ::IO::Path(textPath));
+        QMenu textMenu;
+        AzToolsFramework::AssetBrowser::AssetBrowserInteractionNotificationBus::Broadcast(
+            &AzToolsFramework::AssetBrowser::AssetBrowserInteractionNotifications::AddContextMenuActions,
+            &caller, &textMenu,
+            AZStd::vector<const AzToolsFramework::AssetBrowser::AssetBrowserEntry*>{&text});
+        for (const auto* action : textMenu.actions())
+        {
+            EXPECT_NE(action->text(), QString::fromUtf8("Generar material"));
+        }
+    }
+
     class GraphDocumentCreationTests : public MaterialSourceCreationTests
     {
     protected:
@@ -484,6 +549,1146 @@ namespace UnitTest
         QTemporaryDir m_directory;
         testing::NiceMock<UnitTests::MockAssetSystemRequest> m_assetSystem;
     };
+
+    class TextureContextMenuTests : public GraphDocumentCreationTests
+    {
+    protected:
+        // Records the image-owner boundary only. Its default false models an already compatible inference;
+        // the real owner/preset/cook behavior is verified separately, never simulated as RPI readiness here.
+        class PresetBoundary final : public ImageProcessingAtomEditor::ImageProcessingEditorRequestBus::Handler
+        {
+        public:
+            PresetBoundary() { BusConnect(); }
+            ~PresetBoundary() override { BusDisconnect(); }
+            void OpenSourceTextureFile(const AZ::Uuid&) override { ADD_FAILURE() << "No texture dialog expected"; }
+            AZ::Outcome<bool, AZStd::string> EnsureTexturePresetIfUnset(
+                const AZStd::string& path, const AZStd::string& preset) override
+            {
+                calls.emplace_back(path, preset);
+                if (callback) { return callback(path, preset); }
+                return AZ::Success(false);
+            }
+            AZStd::vector<AZStd::pair<AZStd::string, AZStd::string>> calls;
+            AZStd::function<AZ::Outcome<bool, AZStd::string>(const AZStd::string&, const AZStd::string&)> callback;
+        };
+        AZStd::unique_ptr<PresetBoundary> m_presets;
+
+        struct ProjectRootOverride
+        {
+            ProjectRootOverride(AZ::SettingsRegistryInterface& registry, const char* path) : m_registry(registry)
+            {
+                m_hadValue = m_registry.Get(m_previous, AZ::SettingsRegistryMergeUtils::FilePathKey_ProjectPath);
+                EXPECT_TRUE(m_registry.Set(AZ::SettingsRegistryMergeUtils::FilePathKey_ProjectPath, path));
+            }
+            ~ProjectRootOverride()
+            {
+                if (m_hadValue)
+                {
+                    m_registry.Set(AZ::SettingsRegistryMergeUtils::FilePathKey_ProjectPath, m_previous.c_str());
+                }
+                else
+                {
+                    m_registry.Remove(AZ::SettingsRegistryMergeUtils::FilePathKey_ProjectPath);
+                }
+            }
+            AZ::SettingsRegistryInterface& m_registry;
+            AZ::SettingsRegistryInterface::FixedValueString m_previous;
+            bool m_hadValue = false;
+        };
+        AZStd::unique_ptr<ProjectRootOverride> m_projectRoot;
+
+        struct EngineAlias
+        {
+            explicit EngineAlias(const char* path) : m_io(AZ::IO::FileIOBase::GetInstance())
+            {
+                const auto* previous = m_io->GetAlias("@engroot@");
+                m_hadAlias = previous != nullptr;
+                if (previous) { m_previous = previous; }
+                m_io->SetAlias("@engroot@", path);
+            }
+            ~EngineAlias()
+            {
+                if (m_hadAlias) { m_io->SetAlias("@engroot@", m_previous.c_str()); }
+                else { m_io->ClearAlias("@engroot@"); }
+            }
+            AZ::IO::FileIOBase* m_io;
+            AZStd::string m_previous;
+            bool m_hadAlias = false;
+        };
+
+        void SetUp() override
+        {
+            GraphDocumentCreationTests::SetUp();
+            auto* manager = AZ::ReflectionEnvironment::GetReflectionManager();
+            // Native document opening persists RecentFilePaths as this container in the settings registry.
+            manager->Reflect(azrtti_typeid<AZStd::vector<AZStd::string>>(), [](AZ::ReflectContext* context)
+            {
+                if (auto* serialize = azrtti_cast<AZ::SerializeContext*>(context))
+                {
+                    serialize->RegisterGenericType<AZStd::vector<AZStd::string>>();
+                }
+            });
+            manager->Reflect(azrtti_typeid<JE::Render::RPI::MaterialPropertyValue>(), &JE::Render::RPI::MaterialPropertyValue::Reflect);
+            manager->Reflect(azrtti_typeid<JE::Render::RPI::JsonMaterialPropertyValueSerializer>(), [](AZ::ReflectContext* context)
+            {
+                if (auto* json = azrtti_cast<AZ::JsonRegistrationContext*>(context))
+                {
+                    json->Serializer<JE::Render::RPI::JsonMaterialPropertyValueSerializer>()->HandlesType<JE::Render::RPI::MaterialPropertyValue>();
+                }
+            });
+            // The callback fixture needs only the source version/reference, not a shader/functor or RPI instance.
+            const AZStd::string typePath = m_directory.filePath(
+                "Engine/Render/Features/Assets/Materials/Types/StandardPBR.materialtype").toUtf8().constData();
+            ASSERT_TRUE(AZ::Utils::WriteFile(R"({"version":6})", typePath).IsSuccess());
+            m_engineAlias = AZStd::make_unique<EngineAlias>(m_directory.path().toUtf8().constData());
+            auto* registry = AZ::Interface<AZ::SettingsRegistryInterface>::Get();
+            ASSERT_NE(registry, nullptr);
+            m_projectRoot = AZStd::make_unique<ProjectRootOverride>(*registry, m_directory.path().toUtf8().constData());
+            m_presets = AZStd::make_unique<PresetBoundary>();
+        }
+
+        void TearDown() override
+        {
+            m_presets.reset();
+            m_projectRoot.reset();
+            m_engineAlias.reset();
+            GraphDocumentCreationTests::TearDown();
+        }
+        AZStd::unique_ptr<EngineAlias> m_engineAlias;
+
+        // This document reads the real material source and exercises native document dispatch/lifetime.
+        // It does not create an RPI instance or claim that a cooked texture/material is ready.
+        class SourceDocument final : public AtomToolsFramework::AtomToolsDocument
+        {
+        public:
+            AZ_CLASS_ALLOCATOR(SourceDocument, AZ::SystemAllocator);
+            SourceDocument(const AZ::Crc32& toolId, const AtomToolsFramework::DocumentTypeInfo& info, int& opens)
+                : AtomToolsDocument(toolId, info), m_opens(opens) {}
+            bool Open(const AZStd::string& path) override
+            {
+                ++m_opens;
+                if (!AtomToolsDocument::Open(path)) { return false; }
+                if (!JE::Render::RPI::MaterialUtils::LoadMaterialSourceData(path).IsSuccess()) { return OpenFailed(); }
+                return OpenSucceeded();
+            }
+            int& m_opens;
+        };
+
+        AtomToolsFramework::DocumentTypeInfo SourceType(int& opens)
+        {
+            auto type = EmptyDocumentType();
+            type.m_supportedExtensionsToOpen.push_back({"Material source", "material"});
+            type.m_documentFactoryCallback = [&opens](const AZ::Crc32& toolId, const AtomToolsFramework::DocumentTypeInfo& info)
+                -> AtomToolsFramework::AtomToolsDocumentRequests*
+            {
+                return aznew SourceDocument(toolId, info, opens);
+            };
+            return type;
+        }
+
+        class CreatedNotifications final
+            : public AzToolsFramework::AssetBrowser::AssetBrowserFileCreationNotificationBus::Handler
+        {
+        public:
+            CreatedNotifications()
+            {
+                BusConnect(AzToolsFramework::AssetBrowser::AssetBrowserFileCreationNotifications::FileCreationNotificationBusId);
+            }
+            ~CreatedNotifications() override { BusDisconnect(); }
+            void HandleAssetCreatedInEditor(const AZStd::string_view path, const AZ::Crc32&, bool rename) override
+            {
+                EXPECT_FALSE(rename);
+                m_path = path;
+                ++m_created;
+            }
+            AZStd::string m_path;
+            int m_created = 0;
+        };
+
+        // The Editor owns pane construction. Generation must complete without requesting that boundary.
+        class UnopenedPaneRequests final : public AzToolsFramework::EditorRequests::Bus::Handler
+        {
+        public:
+            UnopenedPaneRequests() { BusConnect(); }
+            ~UnopenedPaneRequests() override { BusDisconnect(); }
+            void OpenViewPane(const char*) override { ++m_showRequests; }
+            QWidget* GetViewPaneWidget(const char*) override { ++m_widgetRequests; return nullptr; }
+            void BrowseForAssets(AzToolsFramework::AssetBrowser::AssetSelectionModel&) override {}
+            int m_showRequests = 0;
+            int m_widgetRequests = 0;
+        };
+
+        class MaterialSelectionRequests final
+            : public AzToolsFramework::AssetBrowser::AssetBrowserInteractionNotificationBus::Handler
+        {
+        public:
+            MaterialSelectionRequests() { BusConnect(); }
+            ~MaterialSelectionRequests() override { BusDisconnect(); }
+            void SelectAsset(QWidget* caller, const AZStd::string& path) override
+            {
+                m_caller = caller;
+                m_paths.push_back(path);
+                AzToolsFramework::AssetBrowser::AssetBrowserModel* model = nullptr;
+                AzToolsFramework::AssetBrowser::AssetBrowserComponentRequestBus::BroadcastResult(model,
+                    &AzToolsFramework::AssetBrowser::AssetBrowserComponentRequests::GetAssetBrowserModel);
+                const auto index = model ? model->findIndex(QDir::fromNativeSeparators(QString::fromUtf8(path.c_str()))) : QModelIndex();
+                const auto* entry = index.isValid()
+                    ? index.data(AzToolsFramework::AssetBrowser::AssetBrowserModel::Roles::EntryRole)
+                        .value<const AzToolsFramework::AssetBrowser::AssetBrowserEntry*>() : nullptr;
+                const auto* source = azrtti_cast<const AzToolsFramework::AssetBrowser::SourceAssetBrowserEntry*>(entry);
+                m_sourceIds.push_back(source ? source->GetSourceID() : -1);
+                m_sourceGuids.push_back(source ? source->GetSourceUuid() : AZ::Uuid::CreateNull());
+            }
+            QWidget* m_caller = nullptr;
+            AZStd::vector<AZStd::string> m_paths;
+            AZStd::vector<AZ::s64> m_sourceIds;
+            AZStd::vector<AZ::Uuid> m_sourceGuids;
+        };
+
+        // Same real model/root/cache population API used by AzToolsFramework AssetBrowserTests.
+        class CachedMaterialModel final
+            : public AzToolsFramework::AssetBrowser::AssetBrowserComponentRequestBus::Handler
+        {
+        public:
+            explicit CachedMaterialModel(const AZStd::string& directory, bool publishSourceMetadata = true)
+                : m_root(AZStd::make_shared<AzToolsFramework::AssetBrowser::RootAssetBrowserEntry>())
+                , m_model(AZStd::make_unique<AzToolsFramework::AssetBrowser::AssetBrowserModel>())
+            {
+                m_model->SetRootEntry(m_root);
+                BusConnect();
+                m_root->Update(directory.c_str());
+                AzToolsFramework::AssetDatabase::ScanFolderDatabaseEntry folder;
+                folder.m_scanFolderID = 1;
+                folder.m_scanFolder = directory;
+                folder.m_displayName = "Material creation fixture";
+                folder.m_isRoot = true;
+                m_root->AddScanFolder(folder);
+                AzToolsFramework::AssetDatabase::FileDatabaseEntry file;
+                file.m_scanFolderPK = 1;
+                file.m_fileID = 77;
+                file.m_fileName = "rock.material";
+                file.m_isFolder = false;
+                m_root->AddFile(file);
+                if (publishSourceMetadata)
+                {
+                    m_sourceAdded = PublishSourceMetadata();
+                }
+            }
+            ~CachedMaterialModel() override
+            {
+                BusDisconnect();
+                m_model.reset();
+                m_root.reset();
+                AzToolsFramework::AssetBrowser::EntryCache::DestroyInstance();
+                AzToolsFramework::AssetBrowser::AssetBrowserFavoritesManager::DestroyInstance();
+            }
+            AzToolsFramework::AssetBrowser::AssetBrowserModel* GetAssetBrowserModel() override { return m_model.get(); }
+            bool AreEntriesReady() override { return true; }
+            void PickAssets(AzToolsFramework::AssetBrowser::AssetSelectionModel&, QWidget*) override {}
+            AzQtComponents::StyledBusyLabel* GetStyledBusyLabel() override { return nullptr; }
+            bool PublishSourceMetadata()
+            {
+                AzToolsFramework::AssetBrowser::SourceWithFileID source;
+                source.first = 77;
+                source.second.m_scanFolderPK = 1;
+                source.second.m_sourceName = "rock.material";
+                source.second.m_sourceID = 77;
+                source.second.m_sourceGuid = AZ::Uuid::CreateString("{6EBC8841-EB4A-43CC-941F-C2A8EC00CBED}");
+                return m_root->AddSource(source);
+            }
+            bool m_sourceAdded = false;
+        private:
+            AZStd::shared_ptr<AzToolsFramework::AssetBrowser::RootAssetBrowserEntry> m_root;
+            AZStd::unique_ptr<AzToolsFramework::AssetBrowser::AssetBrowserModel> m_model;
+        };
+
+        AZStd::string WriteTexture(const char* name)
+        {
+            const QString path = m_directory.filePath(name);
+            QImage image(2, 2, QImage::Format_RGBA8888);
+            image.fill(Qt::white);
+            EXPECT_TRUE(image.save(path, "PNG"));
+            return path.toUtf8().constData();
+        }
+
+        void InvokeWithoutUnexpectedModal(const AZStd::function<void()>& callback)
+        {
+            int unexpectedModals = 0;
+            QTimer rejectUnexpected;
+            QObject::connect(&rejectUnexpected, &QTimer::timeout, &rejectUnexpected, [&unexpectedModals]()
+            {
+                if (auto* modal = QApplication::activeModalWidget())
+                {
+                    ++unexpectedModals;
+                    QString details = QStringLiteral("Unexpected modal: class=%1; title=%2")
+                        .arg(QString::fromLatin1(modal->metaObject()->className()))
+                        .arg(modal->windowTitle());
+                    if (auto* messageBox = qobject_cast<QMessageBox*>(modal))
+                    {
+                        details += QStringLiteral("\ntext: %1\ndetailedText: %2")
+                            .arg(messageBox->text(), messageBox->detailedText());
+                    }
+                    ADD_FAILURE() << details.toUtf8().constData();
+                    if (auto* dialog = qobject_cast<QDialog*>(modal))
+                    {
+                        dialog->reject();
+                    }
+                    else
+                    {
+                        modal->close();
+                    }
+                }
+            });
+            rejectUnexpected.start(1);
+            callback();
+            rejectUnexpected.stop();
+            EXPECT_EQ(unexpectedModals, 0);
+            EXPECT_EQ(QApplication::activeModalWidget(), nullptr);
+        }
+
+        void TriggerGenerate(const AZStd::string& path, QWidget* caller = nullptr)
+        {
+            JE::Editor::MaterialBrowserInteractions interactions;
+            AzToolsFramework::AssetBrowser::SourceAssetBrowserEntry source;
+            source.SetFullPath(AZ::IO::Path(path));
+            QMenu menu;
+            AzToolsFramework::AssetBrowser::AssetBrowserInteractionNotificationBus::Broadcast(
+                &AzToolsFramework::AssetBrowser::AssetBrowserInteractionNotifications::AddContextMenuActions,
+                caller, &menu,
+                AZStd::vector<const AzToolsFramework::AssetBrowser::AssetBrowserEntry*>{&source});
+            QAction* generate = nullptr;
+            for (auto* action : menu.actions())
+            {
+                if (action->text() == QString::fromUtf8("Generar material"))
+                {
+                    EXPECT_EQ(generate, nullptr);
+                    generate = action;
+                }
+            }
+            ASSERT_NE(generate, nullptr);
+            InvokeWithoutUnexpectedModal([generate]() { generate->trigger(); });
+        }
+
+        void CreateMaterialFromReparentedChooser(const AZStd::string& texture, const AZStd::string& target,
+            QWidget* browserCaller, QWidget* decorationWrapper, QPointer<QDialog>& review)
+        {
+            ASSERT_FALSE(AZ::IO::SystemFile::Exists(target.c_str()));
+            ASSERT_NO_FATAL_FAILURE(TriggerGenerate(texture, browserCaller));
+            review = browserCaller->findChild<QDialog*>("MaterialTextureReview");
+            ASSERT_NE(review.data(), nullptr);
+            ASSERT_TRUE(review->isVisible());
+            // Reproduce the parent change observed with the native window decoration, without another editor/window manager.
+            review->setParent(decorationWrapper);
+            ASSERT_EQ(review->parentWidget(), decorationWrapper);
+            auto* choice = review->findChild<QComboBox*>("MaterialTextureChoice0");
+            ASSERT_NE(choice, nullptr);
+            int chosen = -1;
+            for (int index = 1; index < choice->count(); ++index)
+            {
+                if (AZ::IO::PathView(choice->itemText(index).toUtf8().constData()).LexicallyNormal() ==
+                    AZ::IO::PathView(texture).LexicallyNormal())
+                {
+                    chosen = index;
+                }
+            }
+            ASSERT_GE(chosen, 1);
+            choice->setCurrentIndex(chosen);
+            auto* create = review->findChild<QPushButton*>("CreateMaterialFromTextures");
+            ASSERT_NE(create, nullptr);
+            InvokeWithoutUnexpectedModal([create]() { create->click(); });
+            ASSERT_TRUE(AZ::IO::SystemFile::Exists(target.c_str()));
+        }
+    };
+
+    TEST_F(TextureContextMenuTests, ContextCreationDoesNotRequireOrOpenAMaterialWorkspace)
+    {
+        const auto texture = WriteTexture("rock_diff.png");
+        const AZStd::string target = AZ::IO::Path(m_directory.filePath("rock.material").toUtf8().constData()).LexicallyNormal().String();
+        QWidget browserCaller;
+        UnopenedPaneRequests panes;
+        CreatedNotifications created;
+
+        TriggerGenerate(texture, &browserCaller);
+
+        EXPECT_EQ(panes.m_showRequests, 0);
+        EXPECT_EQ(panes.m_widgetRequests, 0);
+        EXPECT_EQ(created.m_created, 1);
+        EXPECT_EQ(created.m_path, target);
+        const auto bytes = AZ::Utils::ReadFile<AZStd::string>(target);
+        ASSERT_TRUE(bytes.IsSuccess());
+        auto source = JE::Render::RPI::MaterialUtils::LoadMaterialSourceData(target);
+        ASSERT_TRUE(source.IsSuccess());
+        EXPECT_EQ(source.GetValue().m_materialTypeVersion, 6);
+        ASSERT_EQ(m_presets->calls.size(), 1);
+        EXPECT_EQ(m_presets->calls.front().first, AZ::IO::Path(texture).LexicallyNormal().String());
+        EXPECT_EQ(m_presets->calls.front().second, "Albedo");
+    }
+
+    TEST_F(TextureContextMenuTests, ContextCreationSelectsOnlyItsMaterialWhenTheSourceEntryArrives)
+    {
+        const auto texture = WriteTexture("rock_diff.png");
+        const AZStd::string target = AZ::IO::Path(m_directory.filePath("rock.material").toUtf8().constData()).LexicallyNormal().String();
+        QWidget browserCaller;
+        UnopenedPaneRequests panes;
+        MaterialSelectionRequests selection;
+
+        TriggerGenerate(texture, &browserCaller);
+        EXPECT_EQ(panes.m_showRequests, 0);
+        ASSERT_TRUE(AZ::IO::SystemFile::Exists(target.c_str()));
+        EXPECT_TRUE(selection.m_paths.empty());
+
+        // AP/model discovery is the external boundary; generation and its real source file are not mocked.
+        AzToolsFramework::AssetBrowser::SourceAssetBrowserEntry other;
+        other.SetFullPath(AZ::IO::Path(m_directory.filePath("other.material").toUtf8().constData()));
+        AzToolsFramework::AssetBrowser::AssetBrowserModelNotificationBus::Broadcast(
+            &AzToolsFramework::AssetBrowser::AssetBrowserModelNotifications::EntryAdded, &other);
+        QApplication::processEvents();
+        EXPECT_TRUE(selection.m_paths.empty());
+
+        ASSERT_EQ(AzToolsFramework::AssetBrowser::EntryCache::GetInstance(), nullptr);
+        ASSERT_FALSE(AzToolsFramework::AssetBrowser::AssetBrowserComponentRequestBus::HasHandlers());
+        CachedMaterialModel cached(m_directory.path().toUtf8().constData());
+        ASSERT_TRUE(cached.m_sourceAdded);
+        AzToolsFramework::AssetBrowser::SourceAssetBrowserEntry material;
+#if defined(AZ_PLATFORM_WINDOWS)
+        const auto discoveredPath = QDir::toNativeSeparators(QString::fromUtf8(target.c_str())).toUpper();
+        material.SetFullPath(AZ::IO::Path(discoveredPath.toUtf8().constData()));
+#else
+        material.SetFullPath(AZ::IO::Path(target));
+#endif
+        AzToolsFramework::AssetBrowser::AssetBrowserModelNotificationBus::Broadcast(
+            &AzToolsFramework::AssetBrowser::AssetBrowserModelNotifications::EntryAdded, &material);
+        QApplication::processEvents();
+        ASSERT_EQ(selection.m_paths.size(), 1);
+        EXPECT_EQ(selection.m_paths.front(), target);
+        EXPECT_EQ(selection.m_caller, &browserCaller);
+        AzToolsFramework::AssetBrowser::AssetBrowserModelNotificationBus::Broadcast(
+            &AzToolsFramework::AssetBrowser::AssetBrowserModelNotifications::EntryAdded, &material);
+        QApplication::processEvents();
+        EXPECT_EQ(selection.m_paths.size(), 1);
+        EXPECT_EQ(panes.m_widgetRequests, 0);
+    }
+
+    TEST_F(TextureContextMenuTests, DestroyedBrowserCancelsPendingMaterialSelection)
+    {
+        const auto texture = WriteTexture("rock_diff.png");
+        const AZStd::string target = AZ::IO::Path(m_directory.filePath("rock.material").toUtf8().constData()).LexicallyNormal().String();
+        UnopenedPaneRequests panes;
+        MaterialSelectionRequests selection;
+        {
+            QWidget browserCaller;
+            TriggerGenerate(texture, &browserCaller);
+            ASSERT_TRUE(AZ::IO::SystemFile::Exists(target.c_str()));
+            EXPECT_EQ(panes.m_showRequests, 0);
+        }
+        AzToolsFramework::AssetBrowser::SourceAssetBrowserEntry material;
+        material.SetFullPath(AZ::IO::Path(target));
+        AzToolsFramework::AssetBrowser::AssetBrowserModelNotificationBus::Broadcast(
+            &AzToolsFramework::AssetBrowser::AssetBrowserModelNotifications::EntryAdded, &material);
+        QApplication::processEvents();
+        EXPECT_TRUE(selection.m_paths.empty());
+        EXPECT_EQ(panes.m_widgetRequests, 0);
+
+        // Also cancel a selection already queued by EntryAdded, before its QObject callback runs.
+        {
+            QWidget browserCaller;
+            TriggerGenerate(texture, &browserCaller);
+            AzToolsFramework::AssetBrowser::AssetBrowserModelNotificationBus::Broadcast(
+                &AzToolsFramework::AssetBrowser::AssetBrowserModelNotifications::EntryAdded, &material);
+        }
+        QApplication::processEvents();
+        EXPECT_TRUE(selection.m_paths.empty());
+    }
+
+    TEST_F(TextureContextMenuTests, ExistingCachedGeneratedSourceSelectsOnceWithoutWaitingForAnotherEntryAdded)
+    {
+        const auto texture = WriteTexture("rock_diff.png");
+        const AZStd::string target = AZ::IO::Path(m_directory.filePath("rock.material").toUtf8().constData()).LexicallyNormal().String();
+        UnopenedPaneRequests panes;
+        CreatedNotifications created;
+        {
+            QWidget browserCaller;
+            TriggerGenerate(texture, &browserCaller);
+        }
+        ASSERT_EQ(created.m_created, 1);
+        auto before = AZ::Utils::ReadFile<AZStd::string>(target);
+        ASSERT_TRUE(before.IsSuccess());
+        ASSERT_EQ(AzToolsFramework::AssetBrowser::EntryCache::GetInstance(), nullptr);
+        ASSERT_FALSE(AzToolsFramework::AssetBrowser::AssetBrowserFavoriteRequestBus::HasHandlers());
+        ASSERT_FALSE(AzToolsFramework::AssetBrowser::AssetBrowserComponentRequestBus::HasHandlers());
+        ASSERT_FALSE(AzToolsFramework::AssetBrowser::AssetBrowserModelRequestBus::HasHandlers());
+        CachedMaterialModel cached(m_directory.path().toUtf8().constData());
+        ASSERT_TRUE(cached.m_sourceAdded);
+        const auto* entry = AzToolsFramework::AssetBrowser::SourceAssetBrowserEntry::GetSourceByUuid(
+            AZ::Uuid::CreateString("{6EBC8841-EB4A-43CC-941F-C2A8EC00CBED}"));
+        ASSERT_NE(entry, nullptr);
+        ASSERT_EQ(entry->GetFileID(), 77);
+        ASSERT_EQ(entry->GetSourceID(), 77);
+        ASSERT_TRUE(AZ::IO::PathView(entry->GetFullPath()).LexicallyNormal() == AZ::IO::PathView(target).LexicallyNormal());
+        // LocalFileIO resolves model paths to forward slashes; findIndex requires the actual stored representation.
+        ASSERT_TRUE(cached.GetAssetBrowserModel()->findIndex(QString::fromUtf8(entry->GetFullPath().c_str())).isValid());
+        const auto key = AZ::IO::PathView(target).LexicallyNormal().String();
+        auto* cache = AzToolsFramework::AssetBrowser::EntryCache::GetInstance();
+        ASSERT_NE(cache, nullptr);
+        ASSERT_NE(cache->m_absolutePathToFileId.find(key), cache->m_absolutePathToFileId.end());
+        EXPECT_EQ(cache->m_absolutePathToFileId.at(key), 77);
+        MaterialSelectionRequests selection;
+        QWidget browserCaller;
+        TriggerGenerate(texture, &browserCaller);
+        QApplication::processEvents();
+        ASSERT_EQ(selection.m_paths.size(), 1);
+        EXPECT_EQ(selection.m_paths.front(), target);
+        EXPECT_EQ(selection.m_caller, &browserCaller);
+        AzToolsFramework::AssetBrowser::AssetBrowserModelNotificationBus::Broadcast(
+            &AzToolsFramework::AssetBrowser::AssetBrowserModelNotifications::EntryAdded, entry);
+        QApplication::processEvents();
+        EXPECT_EQ(selection.m_paths.size(), 1);
+        EXPECT_EQ(created.m_created, 1);
+        EXPECT_EQ(m_presets->calls.size(), 1);
+        EXPECT_EQ(panes.m_showRequests, 0);
+        EXPECT_EQ(panes.m_widgetRequests, 0);
+        auto after = AZ::Utils::ReadFile<AZStd::string>(target);
+        ASSERT_TRUE(after.IsSuccess());
+        EXPECT_EQ(after.GetValue(), before.GetValue());
+    }
+
+    TEST_F(TextureContextMenuTests, AmbiguousCreationWaitsForSourceMetadataAfterItsDialogIsDestroyed)
+    {
+        const auto texture = WriteTexture("rock_diff.png");
+        WriteTexture("rock_albedo.png");
+        const AZStd::string target = AZ::IO::Path(m_directory.filePath("rock.material").toUtf8().constData()).LexicallyNormal().String();
+        const auto expectedGuid = AZ::Uuid::CreateString("{6EBC8841-EB4A-43CC-941F-C2A8EC00CBED}");
+        QWidget browserCaller;
+        UnopenedPaneRequests panes;
+        MaterialSelectionRequests selection;
+        TriggerGenerate(texture, &browserCaller);
+        QPointer<QDialog> review = browserCaller.findChild<QDialog*>("MaterialTextureReview");
+        ASSERT_NE(review.data(), nullptr);
+        auto* choice = review->findChild<QComboBox*>("MaterialTextureChoice0");
+        ASSERT_NE(choice, nullptr);
+        int chosen = -1;
+        for (int index = 1; index < choice->count(); ++index)
+        {
+            if (AZ::IO::PathView(choice->itemText(index).toUtf8().constData()).LexicallyNormal() ==
+                AZ::IO::PathView(texture).LexicallyNormal())
+            {
+                chosen = index;
+            }
+        }
+        ASSERT_GE(chosen, 1);
+        choice->setCurrentIndex(chosen);
+        auto* create = review->findChild<QPushButton*>("CreateMaterialFromTextures");
+        ASSERT_NE(create, nullptr);
+        InvokeWithoutUnexpectedModal([create]() { create->click(); });
+        ASSERT_TRUE(AZ::IO::SystemFile::Exists(target.c_str()));
+        ASSERT_TRUE(selection.m_paths.empty());
+        ASSERT_EQ(AzToolsFramework::AssetBrowser::EntryCache::GetInstance(), nullptr);
+        ASSERT_FALSE(AzToolsFramework::AssetBrowser::AssetBrowserFavoriteRequestBus::HasHandlers());
+        ASSERT_FALSE(AzToolsFramework::AssetBrowser::AssetBrowserComponentRequestBus::HasHandlers());
+        ASSERT_FALSE(AzToolsFramework::AssetBrowser::AssetBrowserModelRequestBus::HasHandlers());
+
+        // This is the real AddFile stage: a row/cache entry exists, but AP has not assigned source metadata yet.
+        CachedMaterialModel cached(m_directory.path().toUtf8().constData(), false);
+        auto* model = cached.GetAssetBrowserModel();
+        auto* cache = AzToolsFramework::AssetBrowser::EntryCache::GetInstance();
+        ASSERT_NE(cache, nullptr);
+        ASSERT_NE(cache->m_fileIdMap.find(77), cache->m_fileIdMap.end());
+        const auto* entry = azrtti_cast<const AzToolsFramework::AssetBrowser::SourceAssetBrowserEntry*>(cache->m_fileIdMap.at(77));
+        ASSERT_NE(entry, nullptr);
+        ASSERT_TRUE(model->findIndex(QString::fromUtf8(entry->GetFullPath().c_str())).isValid());
+        EXPECT_EQ(entry->GetFileID(), 77);
+        EXPECT_EQ(entry->GetSourceID(), -1);
+        EXPECT_TRUE(entry->GetSourceUuid().IsNull());
+        QCoreApplication::sendPostedEvents(nullptr, QEvent::DeferredDelete);
+        EXPECT_TRUE(review.isNull());
+        QApplication::processEvents();
+        EXPECT_TRUE(selection.m_paths.empty());
+        EXPECT_NE(browserCaller.findChild<QObject*>("PendingGeneratedMaterialSelection", Qt::FindDirectChildrenOnly), nullptr);
+
+        int sourceDataSignals = 0;
+        bool signalHasCompleteMetadata = true;
+        bool signalCoversTheSourceRow = true;
+        QObject::connect(model, &QAbstractItemModel::dataChanged, &browserCaller,
+            [&](const QModelIndex& first, const QModelIndex& last)
+            {
+                const auto* changed = first.data(AzToolsFramework::AssetBrowser::AssetBrowserModel::Roles::EntryRole)
+                    .value<const AzToolsFramework::AssetBrowser::AssetBrowserEntry*>();
+                if (changed != entry)
+                {
+                    return;
+                }
+                ++sourceDataSignals;
+                // The model canonicalizes entry indices; compare to its real source index, not hypothetical column endpoints.
+                const auto canonical = model->findIndex(QString::fromUtf8(entry->GetFullPath().c_str()));
+                const auto* lastEntry = last.data(AzToolsFramework::AssetBrowser::AssetBrowserModel::Roles::EntryRole)
+                    .value<const AzToolsFramework::AssetBrowser::AssetBrowserEntry*>();
+                signalCoversTheSourceRow &= canonical.isValid() && first.isValid() && last.isValid()
+                    && canonical.model() == model && first.model() == model && last.model() == model
+                    && first == canonical && last == canonical
+                    && first.parent() == canonical.parent() && last.parent() == canonical.parent()
+                    && first.row() == canonical.row() && last.row() == canonical.row()
+                    && changed == entry && lastEntry == entry;
+                signalHasCompleteMetadata &= entry->GetSourceID() == 77 && entry->GetSourceUuid() == expectedGuid &&
+                    cache->m_sourceIdMap.contains(77) && cache->m_sourceIdMap.at(77) == entry &&
+                    cache->m_sourceUuidMap.contains(expectedGuid) && cache->m_sourceUuidMap.at(expectedGuid) == entry;
+            });
+        // No synthetic signal, source replacement, timer delay or cook: the real AddSource must publish completion.
+        ASSERT_TRUE(cached.PublishSourceMetadata());
+        EXPECT_EQ(sourceDataSignals, 1);
+        EXPECT_TRUE(signalHasCompleteMetadata);
+        EXPECT_TRUE(signalCoversTheSourceRow);
+        EXPECT_EQ(entry->GetSourceID(), 77);
+        EXPECT_EQ(entry->GetSourceUuid(), expectedGuid);
+        QApplication::processEvents();
+        ASSERT_EQ(selection.m_paths.size(), 1);
+        EXPECT_EQ(selection.m_paths.front(), target);
+        EXPECT_EQ(selection.m_caller, &browserCaller);
+        ASSERT_EQ(selection.m_sourceIds.size(), 1);
+        EXPECT_EQ(selection.m_sourceIds.front(), 77);
+        ASSERT_EQ(selection.m_sourceGuids.size(), 1);
+        EXPECT_EQ(selection.m_sourceGuids.front(), expectedGuid);
+        ASSERT_TRUE(cached.PublishSourceMetadata());
+        QApplication::processEvents();
+        EXPECT_EQ(sourceDataSignals, 2);
+        EXPECT_EQ(selection.m_paths.size(), 1);
+        EXPECT_EQ(panes.m_showRequests, 0);
+        EXPECT_EQ(panes.m_widgetRequests, 0);
+    }
+
+    TEST_F(TextureContextMenuTests, ReparentedChooserKeepsSelectionOwnedByTheOriginalBrowser)
+    {
+        const auto texture = WriteTexture("rock_diff.png");
+        WriteTexture("rock_albedo.png");
+        const AZStd::string target = AZ::IO::Path(m_directory.filePath("rock.material").toUtf8().constData()).LexicallyNormal().String();
+        const auto expectedGuid = AZ::Uuid::CreateString("{6EBC8841-EB4A-43CC-941F-C2A8EC00CBED}");
+        QWidget browserCaller;
+        auto decorationWrapper = AZStd::make_unique<QWidget>();
+        UnopenedPaneRequests panes;
+        CreatedNotifications created;
+        MaterialSelectionRequests selection;
+        QPointer<QDialog> review;
+        ASSERT_NO_FATAL_FAILURE(CreateMaterialFromReparentedChooser(texture, target, &browserCaller, decorationWrapper.get(), review));
+        ASSERT_EQ(created.m_created, 1);
+        ASSERT_TRUE(selection.m_paths.empty());
+
+        QPointer<QObject> pending = browserCaller.findChild<QObject*>("PendingGeneratedMaterialSelection", Qt::FindDirectChildrenOnly);
+        EXPECT_NE(pending.data(), nullptr);
+        // Observe the erroneous owner's destruction on RED too; the original-browser ownership assertion remains mandatory.
+        if (!pending)
+        {
+            pending = decorationWrapper->findChild<QObject*>("PendingGeneratedMaterialSelection", Qt::FindDirectChildrenOnly);
+        }
+        ASSERT_NE(pending.data(), nullptr);
+        EXPECT_EQ(pending->parent(), &browserCaller);
+        EXPECT_EQ(decorationWrapper->findChild<QObject*>("PendingGeneratedMaterialSelection", Qt::FindDirectChildrenOnly), nullptr);
+
+        ASSERT_EQ(AzToolsFramework::AssetBrowser::EntryCache::GetInstance(), nullptr);
+        ASSERT_FALSE(AzToolsFramework::AssetBrowser::AssetBrowserComponentRequestBus::HasHandlers());
+        CachedMaterialModel cached(m_directory.path().toUtf8().constData(), false);
+        auto* cache = AzToolsFramework::AssetBrowser::EntryCache::GetInstance();
+        ASSERT_NE(cache, nullptr);
+        ASSERT_NE(cache->m_fileIdMap.find(77), cache->m_fileIdMap.end());
+        const auto* entry = azrtti_cast<const AzToolsFramework::AssetBrowser::SourceAssetBrowserEntry*>(cache->m_fileIdMap.at(77));
+        ASSERT_NE(entry, nullptr);
+        EXPECT_EQ(entry->GetSourceID(), -1);
+        EXPECT_TRUE(entry->GetSourceUuid().IsNull());
+        QCoreApplication::sendPostedEvents(nullptr, QEvent::DeferredDelete);
+        EXPECT_TRUE(review.isNull());
+        decorationWrapper.reset();
+        QApplication::processEvents();
+        EXPECT_FALSE(pending.isNull());
+        EXPECT_TRUE(selection.m_paths.empty());
+
+        ASSERT_TRUE(cached.PublishSourceMetadata());
+        QApplication::processEvents();
+        EXPECT_EQ(selection.m_paths.size(), 1);
+        if (selection.m_paths.size() == 1)
+        {
+            EXPECT_EQ(selection.m_paths.front(), target);
+            EXPECT_EQ(selection.m_caller, &browserCaller);
+            ASSERT_EQ(selection.m_sourceIds.size(), 1);
+            EXPECT_EQ(selection.m_sourceIds.front(), 77);
+            ASSERT_EQ(selection.m_sourceGuids.size(), 1);
+            EXPECT_EQ(selection.m_sourceGuids.front(), expectedGuid);
+        }
+        ASSERT_TRUE(cached.PublishSourceMetadata());
+        QApplication::processEvents();
+        EXPECT_EQ(selection.m_paths.size(), 1);
+
+        // The existing-file route still selects explicitly, without rewriting the material or preparing presets again.
+        auto saved = AZ::Utils::ReadFile<AZStd::string>(target);
+        ASSERT_TRUE(saved.IsSuccess());
+        const auto presetCalls = m_presets->calls.size();
+        TriggerGenerate(texture, &browserCaller);
+        QApplication::processEvents();
+        EXPECT_EQ(selection.m_paths.size(), 2);
+        EXPECT_EQ(selection.m_caller, &browserCaller);
+        EXPECT_EQ(m_presets->calls.size(), presetCalls);
+        EXPECT_EQ(created.m_created, 1);
+        auto retained = AZ::Utils::ReadFile<AZStd::string>(target);
+        ASSERT_TRUE(retained.IsSuccess());
+        EXPECT_EQ(retained.GetValue(), saved.GetValue());
+        EXPECT_EQ(panes.m_showRequests, 0);
+        EXPECT_EQ(panes.m_widgetRequests, 0);
+    }
+
+    TEST_F(TextureContextMenuTests, ReparentedChooserPendingSelectionIsCancelledWithTheOriginalBrowser)
+    {
+        const auto texture = WriteTexture("rock_diff.png");
+        WriteTexture("rock_albedo.png");
+        const AZStd::string target = AZ::IO::Path(m_directory.filePath("rock.material").toUtf8().constData()).LexicallyNormal().String();
+        auto browserCaller = AZStd::make_unique<QWidget>();
+        auto decorationWrapper = AZStd::make_unique<QWidget>();
+        UnopenedPaneRequests panes;
+        MaterialSelectionRequests selection;
+        QPointer<QDialog> review;
+        ASSERT_NO_FATAL_FAILURE(CreateMaterialFromReparentedChooser(texture, target, browserCaller.get(), decorationWrapper.get(), review));
+        QPointer<QObject> pending = browserCaller->findChild<QObject*>("PendingGeneratedMaterialSelection", Qt::FindDirectChildrenOnly);
+        EXPECT_NE(pending.data(), nullptr);
+        if (!pending)
+        {
+            pending = decorationWrapper->findChild<QObject*>("PendingGeneratedMaterialSelection", Qt::FindDirectChildrenOnly);
+        }
+        ASSERT_NE(pending.data(), nullptr);
+        EXPECT_EQ(pending->parent(), browserCaller.get());
+        QCoreApplication::sendPostedEvents(nullptr, QEvent::DeferredDelete);
+        EXPECT_TRUE(review.isNull());
+        QPointer<QWidget> originalBrowser = browserCaller.get();
+        browserCaller.reset();
+        EXPECT_TRUE(originalBrowser.isNull());
+        EXPECT_TRUE(pending.isNull());
+        // Keep the wrapper alive: cancellation must come from the original caller's real QObject lifetime.
+        ASSERT_NE(decorationWrapper.get(), nullptr);
+        ASSERT_EQ(AzToolsFramework::AssetBrowser::EntryCache::GetInstance(), nullptr);
+        ASSERT_FALSE(AzToolsFramework::AssetBrowser::AssetBrowserComponentRequestBus::HasHandlers());
+        CachedMaterialModel cached(m_directory.path().toUtf8().constData(), false);
+        ASSERT_TRUE(cached.PublishSourceMetadata());
+        QApplication::processEvents();
+        EXPECT_TRUE(selection.m_paths.empty());
+        ASSERT_TRUE(cached.PublishSourceMetadata());
+        QApplication::processEvents();
+        EXPECT_TRUE(selection.m_paths.empty());
+        EXPECT_EQ(panes.m_showRequests, 0);
+        EXPECT_EQ(panes.m_widgetRequests, 0);
+    }
+
+    TEST_F(TextureContextMenuTests, CancelledAmbiguityDoesNotCreateMaterialOrPreparePresets)
+    {
+        const auto texture = WriteTexture("rock_diff.png");
+        WriteTexture("rock_albedo.png");
+        const AZStd::string target = AZ::IO::Path(m_directory.filePath("rock.material").toUtf8().constData()).LexicallyNormal().String();
+        QWidget browserCaller;
+        UnopenedPaneRequests panes;
+        CreatedNotifications created;
+        TriggerGenerate(texture, &browserCaller);
+        auto* review = browserCaller.findChild<QDialog*>("MaterialTextureReview");
+        ASSERT_NE(review, nullptr);
+        EXPECT_TRUE(review->isVisible());
+        review->reject();
+        QApplication::processEvents();
+        EXPECT_FALSE(AZ::IO::SystemFile::Exists(target.c_str()));
+        EXPECT_TRUE(m_presets->calls.empty());
+        EXPECT_EQ(created.m_created, 0);
+        EXPECT_EQ(panes.m_showRequests, 0);
+        EXPECT_EQ(panes.m_widgetRequests, 0);
+    }
+
+    TEST_F(TextureContextMenuTests, WorkspaceConstructedAfterExplicitOpenAlreadySelectsItsDocument)
+    {
+        const AZStd::string target = m_directory.filePath("explicit.material").toUtf8().constData();
+        const AZStd::string type = m_directory.filePath(
+            "Engine/Render/Features/Assets/Materials/Types/StandardPBR.materialtype").toUtf8().constData();
+        ASSERT_TRUE(JE::Editor::CreateMaterialSourceFile(type, target).IsSuccess());
+        int opens = 0;
+        JE::Editor::MaterialWorkspaceSession session(SourceType(opens));
+        const auto id = session.OpenDocument(target);
+        ASSERT_FALSE(id.IsNull());
+        ASSERT_TRUE(session.SelectDocument(id));
+        EXPECT_EQ(opens, 1);
+        JE::Editor::MaterialWorkspaceWidget pane(session);
+        const auto* documents = pane.findChild<QComboBox*>();
+        ASSERT_NE(documents, nullptr);
+        ASSERT_EQ(documents->count(), 1);
+        EXPECT_EQ(AZ::Uuid::CreateString(documents->currentData().toString().toUtf8().constData()), id);
+        EXPECT_EQ(session.GetActiveDocumentId(), id);
+    }
+
+    TEST_F(TextureContextMenuTests, ContextCallbackPreservesAnOccupiedManualMaterialAndReportsWithoutWorkspace)
+    {
+        const auto texture = WriteTexture("rock_diff.png");
+        auto set = JE::Editor::AnalyzeMaterialTextureSet(texture);
+        ASSERT_TRUE(set.IsSuccess());
+        const auto target = set.GetValue().suggestedMaterialPath;
+        ASSERT_TRUE(AZ::Utils::WriteFile("manual material sentinel", target).IsSuccess());
+        int opens = 0;
+        JE::Editor::MaterialWorkspaceSession session(SourceType(opens));
+        QWidget pane;
+        UnopenedPaneRequests requests;
+        CreatedNotifications notifications;
+        TriggerGenerate(texture, &pane);
+        EXPECT_EQ(requests.m_showRequests, 0);
+        EXPECT_EQ(requests.m_widgetRequests, 0);
+        EXPECT_TRUE(m_presets->calls.empty());
+        EXPECT_EQ(opens, 0);
+        EXPECT_EQ(notifications.m_created, 0);
+        EXPECT_TRUE(session.GetDocumentIds().empty());
+        auto existing = AZ::Utils::ReadFile<AZStd::string>(target);
+        ASSERT_TRUE(existing.IsSuccess());
+        EXPECT_EQ(existing.GetValue(), "manual material sentinel");
+        const auto* status = pane.findChild<QLabel*>("MaterialTextureStatus");
+        ASSERT_NE(status, nullptr);
+        EXPECT_TRUE(status->text().contains("ocupado"));
+    }
+
+    TEST_F(TextureContextMenuTests, ContextCallbackCreatesThenSelectsTheSameGeneratedMaterialWithoutWriting)
+    {
+        const auto texture = WriteTexture("rock_diff.png");
+        auto set = JE::Editor::AnalyzeMaterialTextureSet(texture);
+        ASSERT_TRUE(set.IsSuccess());
+        AZStd::string target = set.GetValue().suggestedMaterialPath;
+        ASSERT_TRUE(AtomToolsFramework::ValidateDocumentPath(target));
+        int opens = 0;
+        JE::Editor::MaterialWorkspaceSession session(SourceType(opens));
+        QWidget pane;
+        UnopenedPaneRequests requests;
+        CreatedNotifications notifications;
+        TriggerGenerate(texture, &pane);
+        EXPECT_EQ(requests.m_showRequests, 0);
+        EXPECT_EQ(requests.m_widgetRequests, 0);
+        EXPECT_EQ(opens, 0);
+        EXPECT_EQ(notifications.m_created, 1);
+        EXPECT_EQ(notifications.m_path, target);
+        EXPECT_TRUE(session.GetDocumentIds().empty());
+        ASSERT_TRUE(JE::Editor::IsMaterialForTextureSet(set.GetValue(), target));
+        auto before = AZ::Utils::ReadFile<AZStd::string>(target);
+        ASSERT_TRUE(before.IsSuccess());
+        auto modified = AZ::JsonSerializationUtils::ReadJsonFile(target);
+        ASSERT_TRUE(modified.IsSuccess());
+        auto& json = modified.GetValue();
+        ASSERT_TRUE(json.HasMember("description"));
+        ASSERT_TRUE(json["description"].IsString());
+        AZStd::string description = json["description"].GetString();
+        description += "\nManual description after generation";
+        json["description"].SetString(description.c_str(), static_cast<rapidjson::SizeType>(description.size()), json.GetAllocator());
+        AZStd::string edited;
+        ASSERT_TRUE(AZ::JsonSerializationUtils::WriteJsonString(json, edited).IsSuccess());
+        ASSERT_TRUE(AZ::Utils::WriteFile(edited, target).IsSuccess());
+        TriggerGenerate(texture, &pane);
+        EXPECT_EQ(requests.m_showRequests, 0);
+        EXPECT_EQ(requests.m_widgetRequests, 0);
+        EXPECT_EQ(m_presets->calls.size(), 1);
+        // Generation selects the source; only explicit editing may load a document.
+        EXPECT_EQ(opens, 0);
+        EXPECT_EQ(notifications.m_created, 1);
+        EXPECT_TRUE(session.GetDocumentIds().empty());
+        auto after = AZ::Utils::ReadFile<AZStd::string>(target);
+        ASSERT_TRUE(after.IsSuccess());
+        EXPECT_EQ(after.GetValue(), edited);
+    }
+
+    TEST_F(TextureContextMenuTests, AmbiguousCandidatesWaitForAnExplicitCompactChoiceWithoutWorkspace)
+    {
+        const auto texture = WriteTexture("rock_diff.png");
+        WriteTexture("rock_albedo.png");
+        auto set = JE::Editor::AnalyzeMaterialTextureSet(texture);
+        ASSERT_TRUE(set.IsSuccess());
+        int opens = 0;
+        JE::Editor::MaterialWorkspaceSession session(SourceType(opens));
+        QWidget pane;
+        UnopenedPaneRequests requests;
+        CreatedNotifications notifications;
+        TriggerGenerate(texture, &pane);
+        EXPECT_EQ(opens, 0);
+        EXPECT_EQ(notifications.m_created, 0);
+        EXPECT_FALSE(AZ::IO::SystemFile::Exists(set.GetValue().suggestedMaterialPath.c_str()));
+        auto* choice = pane.findChild<QComboBox*>("MaterialTextureChoice0");
+        ASSERT_NE(choice, nullptr);
+        ASSERT_EQ(choice->count(), 3);
+        EXPECT_TRUE(m_presets->calls.empty());
+        EXPECT_EQ(choice->currentData().toInt(), -1);
+        auto* create = pane.findChild<QPushButton*>("CreateMaterialFromTextures");
+        ASSERT_NE(create, nullptr);
+        // Keeping Sin asignar is an explicit partial-source decision, not a first-file heuristic.
+        InvokeWithoutUnexpectedModal([create]() { create->click(); });
+        EXPECT_EQ(opens, 0);
+        EXPECT_EQ(notifications.m_created, 1);
+        EXPECT_FALSE(create->isEnabled());
+        auto source = JE::Render::RPI::MaterialUtils::LoadMaterialSourceData(set.GetValue().suggestedMaterialPath);
+        ASSERT_TRUE(source.IsSuccess());
+        EXPECT_FALSE(source.GetValue().HasPropertyValue(AZ::Name("baseColor.textureMap")));
+        EXPECT_NE(source.GetValue().m_description.find("rock_diff.png"), AZStd::string::npos);
+        EXPECT_NE(source.GetValue().m_description.find("rock_albedo.png"), AZStd::string::npos);
+        auto before = AZ::Utils::ReadFile<AZStd::string>(set.GetValue().suggestedMaterialPath);
+        ASSERT_TRUE(before.IsSuccess());
+        TriggerGenerate(texture, &pane);
+        const auto* repeatedReview = pane.findChild<QDialog*>("MaterialTextureReview");
+        ASSERT_NE(repeatedReview, nullptr);
+        EXPECT_FALSE(repeatedReview->isVisible());
+        EXPECT_EQ(repeatedReview->findChild<QComboBox*>("MaterialTextureChoice0"), nullptr);
+        EXPECT_EQ(notifications.m_created, 1);
+        EXPECT_TRUE(m_presets->calls.empty());
+        auto after = AZ::Utils::ReadFile<AZStd::string>(set.GetValue().suggestedMaterialPath);
+        ASSERT_TRUE(after.IsSuccess());
+        EXPECT_EQ(after.GetValue(), before.GetValue());
+    }
+
+    TEST_F(TextureContextMenuTests, ExplicitCandidateSelectionCreatesThatSourceRatherThanTheFirstFile)
+    {
+        const auto texture = WriteTexture("rock_diff.png");
+        const auto selectedPath = WriteTexture("rock_albedo.png");
+        auto set = JE::Editor::AnalyzeMaterialTextureSet(texture);
+        ASSERT_TRUE(set.IsSuccess());
+        int opens = 0;
+        JE::Editor::MaterialWorkspaceSession session(SourceType(opens));
+        QWidget pane;
+        UnopenedPaneRequests requests;
+        CreatedNotifications notifications;
+        TriggerGenerate(texture, &pane);
+        auto* choice = pane.findChild<QComboBox*>("MaterialTextureChoice0");
+        ASSERT_NE(choice, nullptr);
+        int selectedIndex = -1;
+        for (int index = 1; index < choice->count(); ++index)
+        {
+            if (QDir::fromNativeSeparators(choice->itemText(index)) ==
+                QDir::fromNativeSeparators(QString::fromUtf8(selectedPath.c_str())))
+            {
+                selectedIndex = index;
+            }
+        }
+        ASSERT_GE(selectedIndex, 1);
+        choice->setCurrentIndex(selectedIndex);
+        auto* create = pane.findChild<QPushButton*>("CreateMaterialFromTextures");
+        ASSERT_NE(create, nullptr);
+        InvokeWithoutUnexpectedModal([create]() { create->click(); });
+        EXPECT_EQ(opens, 0);
+        EXPECT_EQ(notifications.m_created, 1);
+        auto source = JE::Render::RPI::MaterialUtils::LoadMaterialSourceData(set.GetValue().suggestedMaterialPath);
+        ASSERT_TRUE(source.IsSuccess());
+        const auto& value = source.GetValue().GetPropertyValue(AZ::Name("baseColor.textureMap"));
+        ASSERT_TRUE(value.Is<AZStd::string>());
+        EXPECT_EQ(value.GetValue<AZStd::string>(), "rock_albedo.png");
+        EXPECT_NE(source.GetValue().m_description.find("rock_diff.png"), AZStd::string::npos);
+        EXPECT_NE(source.GetValue().m_description.find("rock_albedo.png"), AZStd::string::npos);
+    }
+
+    TEST_F(TextureContextMenuTests, AllSelectedTextureRolesReachTheirNativePresetOwnerBeforeCreation)
+    {
+        const auto texture = WriteTexture("rock_diff.png");
+        WriteTexture("rock_normal.png");
+        WriteTexture("rock_rough.png");
+        WriteTexture("rock_metal.png");
+        WriteTexture("rock_ao.png");
+        WriteTexture("rock_emissive.png");
+        WriteTexture("rock_disp.png");
+        int opens = 0;
+        JE::Editor::MaterialWorkspaceSession session(SourceType(opens));
+        QWidget pane;
+        UnopenedPaneRequests requests;
+        CreatedNotifications notifications;
+        TriggerGenerate(texture, &pane);
+        EXPECT_EQ(opens, 0);
+        EXPECT_EQ(notifications.m_created, 1);
+        ASSERT_EQ(m_presets->calls.size(), 7);
+        const AZStd::pair<const char*, const char*> expected[] = {
+            {"rock_diff.png", "Albedo"}, {"rock_normal.png", "Normals"},
+            {"rock_rough.png", "Reflectance"}, {"rock_metal.png", "Reflectance"},
+            {"rock_ao.png", "AmbientOcclusion"}, {"rock_emissive.png", "Emissive"},
+            {"rock_disp.png", "Displacement"}};
+        for (const auto& entry : expected)
+        {
+            int count = 0;
+            for (const auto& call : m_presets->calls)
+            {
+                if (QFileInfo(QString::fromUtf8(call.first.c_str())).fileName() == entry.first)
+                {
+                    EXPECT_EQ(call.second, entry.second);
+                    ++count;
+                }
+            }
+            EXPECT_EQ(count, 1);
+        }
+    }
+
+    TEST_F(TextureContextMenuTests, PackedChannelsShareOneLinearRgbPresetRequest)
+    {
+        const auto texture = WriteTexture("rock_arm.png");
+        int opens = 0;
+        JE::Editor::MaterialWorkspaceSession session(SourceType(opens));
+        QWidget pane;
+        UnopenedPaneRequests requests;
+        CreatedNotifications notifications;
+        TriggerGenerate(texture, &pane);
+        EXPECT_EQ(opens, 0);
+        EXPECT_EQ(notifications.m_created, 1);
+        ASSERT_EQ(m_presets->calls.size(), 1);
+        EXPECT_EQ(m_presets->calls.front().second, "LayerMask");
+    }
+
+    TEST_F(TextureContextMenuTests, PresetReviewFailurePreservesManualSettingsAndDoesNotPublishAMaterial)
+    {
+        const auto texture = WriteTexture("rock_diff.png");
+        const auto sidecar = texture + ".assetinfo";
+        ASSERT_TRUE(AZ::Utils::WriteFile("manual settings sentinel", sidecar).IsSuccess());
+        m_presets->callback = [](const AZStd::string&, const AZStd::string&) -> AZ::Outcome<bool, AZStd::string>
+        {
+            return AZ::Failure(AZStd::string("Existing settings require explicit review."));
+        };
+        int opens = 0;
+        JE::Editor::MaterialWorkspaceSession session(SourceType(opens));
+        QWidget pane;
+        UnopenedPaneRequests requests;
+        CreatedNotifications notifications;
+        TriggerGenerate(texture, &pane);
+        EXPECT_EQ(opens, 0);
+        EXPECT_EQ(notifications.m_created, 0);
+        auto data = AZ::Utils::ReadFile<AZStd::string>(sidecar);
+        ASSERT_TRUE(data.IsSuccess());
+        EXPECT_EQ(data.GetValue(), "manual settings sentinel");
+        auto set = JE::Editor::AnalyzeMaterialTextureSet(texture);
+        ASSERT_TRUE(set.IsSuccess());
+        EXPECT_FALSE(AZ::IO::SystemFile::Exists(set.GetValue().suggestedMaterialPath.c_str()));
+        const auto* status = pane.findChild<QLabel*>("MaterialTextureStatus");
+        ASSERT_NE(status, nullptr);
+        EXPECT_TRUE(status->text().contains("review"));
+    }
+
+    TEST_F(TextureContextMenuTests, MaterialCreateRaceRollsBackOnlyTheSidecarJustCreatedByTheOperation)
+    {
+        const auto texture = WriteTexture("rock_diff.png");
+        auto set = JE::Editor::AnalyzeMaterialTextureSet(texture);
+        ASSERT_TRUE(set.IsSuccess());
+        const auto target = set.GetValue().suggestedMaterialPath;
+        const auto sidecar = texture + ".assetinfo";
+        m_presets->callback = [&target](const AZStd::string& source, const AZStd::string&) -> AZ::Outcome<bool, AZStd::string>
+        {
+            // Opaque boundary fixture, not a fabricated XML preset or a claim about the actual image owner.
+            if (!AZ::Utils::WriteFile("owned settings fixture", source + ".assetinfo").IsSuccess() ||
+                !AZ::Utils::WriteFile("concurrent material sentinel", target).IsSuccess())
+            {
+                return AZ::Failure(AZStd::string("fixture write failed"));
+            }
+            return AZ::Success(true);
+        };
+        int opens = 0;
+        JE::Editor::MaterialWorkspaceSession session(SourceType(opens));
+        QWidget pane;
+        UnopenedPaneRequests requests;
+        CreatedNotifications notifications;
+        TriggerGenerate(texture, &pane);
+        EXPECT_EQ(opens, 0);
+        EXPECT_EQ(notifications.m_created, 0);
+        EXPECT_FALSE(AZ::IO::SystemFile::Exists(sidecar.c_str()));
+        auto material = AZ::Utils::ReadFile<AZStd::string>(target);
+        ASSERT_TRUE(material.IsSuccess());
+        EXPECT_EQ(material.GetValue(), "concurrent material sentinel");
+    }
+
+    TEST_F(TextureContextMenuTests, ChangedSidecarIsPreservedWhenLaterPresetPreparationFails)
+    {
+        const auto texture = WriteTexture("rock_diff.png");
+        WriteTexture("rock_rough.png");
+        AZStd::string firstSidecar;
+        m_presets->callback = [&firstSidecar](const AZStd::string& source, const AZStd::string&)
+            -> AZ::Outcome<bool, AZStd::string>
+        {
+            if (firstSidecar.empty())
+            {
+                firstSidecar = source + ".assetinfo";
+                if (!AZ::Utils::WriteFile("owned settings fixture", firstSidecar).IsSuccess())
+                {
+                    return AZ::Failure(AZStd::string("fixture write failed"));
+                }
+                return AZ::Success(true);
+            }
+            if (!AZ::Utils::WriteFile("manual replacement settings", firstSidecar).IsSuccess())
+            {
+                return AZ::Failure(AZStd::string("fixture replacement failed"));
+            }
+            return AZ::Failure(AZStd::string("Second texture requires review."));
+        };
+        int opens = 0;
+        JE::Editor::MaterialWorkspaceSession session(SourceType(opens));
+        QWidget pane;
+        UnopenedPaneRequests requests;
+        CreatedNotifications notifications;
+        TriggerGenerate(texture, &pane);
+        ASSERT_EQ(m_presets->calls.size(), 2);
+        EXPECT_EQ(opens, 0);
+        EXPECT_EQ(notifications.m_created, 0);
+        auto retained = AZ::Utils::ReadFile<AZStd::string>(firstSidecar);
+        ASSERT_TRUE(retained.IsSuccess());
+        EXPECT_EQ(retained.GetValue(), "manual replacement settings");
+        const auto* status = pane.findChild<QLabel*>("MaterialTextureStatus");
+        ASSERT_NE(status, nullptr);
+        EXPECT_TRUE(status->text().contains("Se conservaron"));
+    }
+
+    TEST_F(TextureContextMenuTests, WritableForeignSourceWithoutAssignedMapsCannotPublishOutsideTheCurrentProject)
+    {
+        QTemporaryDir foreign;
+        ASSERT_TRUE(foreign.isValid());
+        const QString imagePath = foreign.filePath("foreign_unrecognized.png");
+        QImage image(2, 2, QImage::Format_RGBA8888);
+        image.fill(Qt::white);
+        ASSERT_TRUE(image.save(imagePath, "PNG"));
+        auto set = JE::Editor::AnalyzeMaterialTextureSet(imagePath.toUtf8().constData());
+        ASSERT_TRUE(set.IsSuccess());
+        ASSERT_TRUE(set.GetValue().selected.empty());
+        ON_CALL(m_assetSystem, GetAssetSafeFolders(testing::_)).WillByDefault(
+            [this, &foreign](AZStd::vector<AZStd::string>& folders)
+            {
+                folders.push_back(m_directory.path().toUtf8().constData());
+                folders.push_back(foreign.path().toUtf8().constData());
+                return true;
+            });
+        AZStd::string target = set.GetValue().suggestedMaterialPath;
+        // The generic source-folder validator permits this location; the authoritative project guard must still reject it.
+        ASSERT_TRUE(AtomToolsFramework::ValidateDocumentPath(target));
+        int opens = 0;
+        JE::Editor::MaterialWorkspaceSession session(SourceType(opens));
+        QWidget pane;
+        UnopenedPaneRequests requests;
+        CreatedNotifications notifications;
+        TriggerGenerate(imagePath.toUtf8().constData(), &pane);
+        EXPECT_TRUE(m_presets->calls.empty());
+        EXPECT_EQ(opens, 0);
+        EXPECT_EQ(notifications.m_created, 0);
+        EXPECT_FALSE(AZ::IO::SystemFile::Exists(target.c_str()));
+        const auto* status = pane.findChild<QLabel*>("MaterialTextureStatus");
+        ASSERT_NE(status, nullptr);
+        EXPECT_TRUE(status->text().contains("proyecto actual"));
+    }
+
+    TEST_F(TextureContextMenuTests, UnassignedMapsCannotCreateMaterialInProtectedProjectDirectories)
+    {
+        int opens = 0;
+        JE::Editor::MaterialWorkspaceSession session(SourceType(opens));
+        QWidget pane;
+        UnopenedPaneRequests requests;
+        CreatedNotifications notifications;
+        for (const char* folder : {"Cache", "user", "build", "Gems", "3rdParty", "External"})
+        {
+            const QString directory = m_directory.filePath(folder);
+            ASSERT_TRUE(QDir().mkpath(directory));
+            const QString imagePath = QDir(directory).filePath("unclassified_texture.png");
+            QImage image(2, 2, QImage::Format_RGBA8888);
+            image.fill(Qt::white);
+            ASSERT_TRUE(image.save(imagePath, "PNG"));
+            auto set = JE::Editor::AnalyzeMaterialTextureSet(imagePath.toUtf8().constData());
+            ASSERT_TRUE(set.IsSuccess());
+            ASSERT_TRUE(set.GetValue().selected.empty());
+            AZStd::string target = set.GetValue().suggestedMaterialPath;
+            ASSERT_TRUE(AtomToolsFramework::ValidateDocumentPath(target));
+            TriggerGenerate(imagePath.toUtf8().constData(), &pane);
+            EXPECT_FALSE(AZ::IO::SystemFile::Exists(target.c_str())) << folder;
+            EXPECT_TRUE(m_presets->calls.empty());
+            EXPECT_EQ(opens, 0);
+            EXPECT_EQ(notifications.m_created, 0);
+            const auto* status = pane.findChild<QLabel*>("MaterialTextureStatus");
+            ASSERT_NE(status, nullptr);
+            EXPECT_TRUE(status->text().contains("Cache/user/build/Gems/3rdParty/External"));
+        }
+    }
 
     TEST_F(GraphDocumentCreationTests, CreatesAtTheFinalPathBeforeEditingAndRemovesItsTemporary)
     {
@@ -536,6 +1741,81 @@ namespace UnitTest
         EXPECT_EQ(documents->count(), 1);
         EXPECT_EQ(AZ::Uuid::CreateString(documents->currentData().toString().toUtf8().constData()), materialId);
         EXPECT_EQ(session.GetDocumentIds().size(), 2);
+    }
+
+    TEST_F(GraphDocumentCreationTests, RetainedPaneBecomesInertBeforeItsSessionDestroysDocuments)
+    {
+        const AZStd::string path = m_directory.filePath("retained.workspace").toUtf8().constData();
+        auto session = AZStd::make_unique<JE::Editor::MaterialWorkspaceSession>(EditableDocumentType());
+        const auto id = session->CreateDocument({}, path);
+        ASSERT_FALSE(id.IsNull());
+        auto pane = AZStd::make_unique<JE::Editor::MaterialWorkspaceWidget>(*session);
+        ASSERT_TRUE(pane->isEnabled());
+        Edit(id);
+        ASSERT_TRUE(IsModified(id));
+        pane->show();
+        QApplication::processEvents();
+        pane->hide();
+        EXPECT_TRUE(pane->isEnabled());
+        EXPECT_EQ(session->GetActiveDocumentId(), id);
+        bool canUndo = false;
+        AtomToolsFramework::AtomToolsDocumentRequestBus::EventResult(
+            canUndo, id, &AtomToolsFramework::AtomToolsDocumentRequests::CanUndo);
+        EXPECT_TRUE(canUndo);
+
+        class CloseObserver final : public AtomToolsFramework::AtomToolsDocumentNotificationBus::Handler
+        {
+        public:
+            CloseObserver(QWidget& pane, const AZ::Uuid& id)
+                : m_pane(pane), m_id(id)
+            {
+                BusConnect(JE::Editor::MaterialWorkspaceSession::GetToolId());
+            }
+            ~CloseObserver() override { BusDisconnect(); }
+            void OnDocumentClosed(const AZ::Uuid& id) override
+            {
+                if (id == m_id)
+                {
+                    EXPECT_FALSE(m_pane.isEnabled());
+                    EXPECT_TRUE(AtomToolsFramework::AtomToolsDocumentRequestBus::HasHandlers(id));
+                    m_closed = true;
+                }
+            }
+            void OnDocumentDestroyed(const AZ::Uuid& id) override
+            {
+                if (id == m_id)
+                {
+                    EXPECT_FALSE(m_pane.isEnabled());
+                    m_destroyed = true;
+                }
+            }
+            QWidget& m_pane;
+            AZ::Uuid m_id;
+            bool m_closed = false;
+            bool m_destroyed = false;
+        } observer(*pane, id);
+
+        // The view manager may retain a hidden pane after its session owner shuts down.
+        session.reset();
+        EXPECT_TRUE(observer.m_closed);
+        EXPECT_TRUE(observer.m_destroyed);
+        EXPECT_FALSE(AtomToolsFramework::AtomToolsDocumentRequestBus::HasHandlers(id));
+        EXPECT_FALSE(pane->isEnabled());
+        pane->show();
+        QApplication::processEvents();
+        EXPECT_FALSE(pane->isEnabled());
+
+        const AZStd::string nextPath = m_directory.filePath("next.workspace").toUtf8().constData();
+        JE::Editor::MaterialWorkspaceSession nextSession(EditableDocumentType());
+        const auto nextId = nextSession.CreateDocument({}, nextPath);
+        ASSERT_FALSE(nextId.IsNull());
+        QApplication::processEvents();
+        EXPECT_FALSE(pane->isEnabled());
+        EXPECT_TRUE(pane->OpenDocument(nextPath).IsNull());
+        EXPECT_EQ(nextSession.GetActiveDocumentId(), nextId);
+        EXPECT_EQ(nextSession.GetDocumentIds().size(), 1);
+        EXPECT_TRUE(AtomToolsFramework::AtomToolsDocumentRequestBus::HasHandlers(nextId));
+        pane->hide();
     }
 
     TEST_F(GraphDocumentCreationTests, RejectsExistingAndRelativeDestinationsWithoutChangingThem)

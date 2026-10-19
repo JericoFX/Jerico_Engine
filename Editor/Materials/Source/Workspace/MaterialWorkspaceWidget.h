@@ -8,13 +8,16 @@
 
 class QComboBox;
 class QPushButton;
+class QVBoxLayout;
 namespace AtomToolsFramework
 {
     class AtomToolsDocumentInspector;
+    class EntityPreviewViewportWidget;
 }
 
 namespace JE::Editor
 {
+    class MaterialPreviewViewportContent;
     class JE_EDITOR_MATERIALS_API MaterialWorkspaceWidget final
         : public QWidget
         , private AtomToolsFramework::AtomToolsDocumentNotificationBus::Handler
@@ -31,6 +34,11 @@ namespace JE::Editor
     private:
         bool eventFilter(QObject* watched, QEvent* event) override;
         void closeEvent(QCloseEvent* event) override;
+        void showEvent(QShowEvent* event) override;
+        void CreatePreview();
+        void RefreshPreview();
+        void ReleasePreview();
+        void OnSessionClosing();
         void FinishEditing();
         void RefreshDocuments(const AZ::Uuid& excludedDocumentId = AZ::Uuid::CreateNull());
         void RefreshActions();
@@ -46,6 +54,10 @@ namespace JE::Editor
         QPointer<MaterialWorkspaceSession> m_session;
         AtomToolsFramework::AtomToolsDocumentInspector* m_inspector = nullptr;
         QComboBox* m_documents = nullptr;
+        QWidget* m_previewHost = nullptr;
+        QVBoxLayout* m_previewLayout = nullptr;
+        AtomToolsFramework::EntityPreviewViewportWidget* m_previewViewport = nullptr;
+        AZStd::shared_ptr<MaterialPreviewViewportContent> m_previewContent;
         QPushButton* m_save = nullptr;
         QPushButton* m_undo = nullptr;
         QPushButton* m_redo = nullptr;

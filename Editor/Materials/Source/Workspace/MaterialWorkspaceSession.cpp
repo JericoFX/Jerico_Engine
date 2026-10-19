@@ -7,6 +7,8 @@
 #include <AtomToolsFramework/Document/AtomToolsDocumentSystem.h>
 #include <AtomToolsFramework/Graph/GraphDocumentRequestBus.h>
 #include <AtomToolsFramework/Util/Util.h>
+#include <AtomToolsFramework/EntityPreviewViewport/EntityPreviewViewportSettingsSystem.h>
+#include <AtomToolsFramework/EntityPreviewViewport/EntityPreviewViewportSettingsRequestBus.h>
 #include <AzCore/std/algorithm.h>
 #include <AzCore/IO/SystemFile.h>
 #include <AzCore/IO/Path/Path.h>
@@ -27,6 +29,7 @@ namespace JE::Editor
 
     MaterialWorkspaceSession::~MaterialWorkspaceSession()
     {
+        emit AboutToClose();
         SetMainWindow(nullptr);
         // Notify inspectors before their document-backed property objects are released.
         m_documentSystem->CloseAllDocuments();
@@ -77,6 +80,14 @@ namespace JE::Editor
             RegisterGraphDocumentTypes(m_graphEnvironment->BuildDocumentTypes(MaterialGraphEnvironment::HistoryOwner::Editor));
         }
         return *m_graphEnvironment;
+    }
+
+    void MaterialWorkspaceSession::EnsureMaterialPreviewSettings()
+    {
+        if (!AtomToolsFramework::EntityPreviewViewportSettingsRequestBus::HasHandlers(GetToolId()))
+        {
+            m_previewSettings = AZStd::make_unique<AtomToolsFramework::EntityPreviewViewportSettingsSystem>(GetToolId());
+        }
     }
 
     bool MaterialWorkspaceSession::IsGraphDocument(const AZ::Uuid& documentId) const

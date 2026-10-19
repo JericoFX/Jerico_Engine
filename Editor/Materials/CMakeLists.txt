@@ -27,6 +27,7 @@ ly_add_target(
             Legacy::CryCommon
         PRIVATE
             JE::RenderDebug
+            Gem::ImageProcessingAtom.Headers
 )
 
 set_target_properties(EditorMaterials PROPERTIES UNITY_BUILD OFF)
@@ -40,6 +41,7 @@ if(PAL_TRAIT_BUILD_TESTS_SUPPORTED)
         INCLUDE_DIRECTORIES PRIVATE Source ${LY_ROOT_FOLDER}/Code/Framework/AzToolsFramework
         BUILD_DEPENDENCIES
             PRIVATE JE::EditorMaterials AZ::AzToolsFramework AZ::AzTest AZ::AzTestShared
+                Gem::ImageProcessingAtom.Headers
         RUNTIME_DEPENDENCIES
             Gem::GraphCanvas.Editor
             Gem::GraphModel.Editor

@@ -83,6 +83,7 @@ namespace JE::Editor
 
         // AtomToolsFramework::AtomToolsDocument overrides...
         void Clear() override;
+        void SourceFileChanged(AZStd::string relativePath, AZStd::string scanFolder, AZ::Uuid sourceUUID) override;
         bool ReopenRecordState() override;
         bool ReopenRestoreState() override;
 

@@ -1,0 +1,193 @@
+{
+  "scope": "Windows/Profile/Vulkan material creation-selection and explicit-open vertical only",
+  "wholeGemAccepted": false,
+  "gemIncrement": 0,
+  "tests": {
+    "greenError": 0,
+    "greenRun": 86,
+    "greenDisabled": 0,
+    "redFail": 2,
+    "redPass": 84,
+    "greenSkip": 0,
+    "redRun": 86,
+    "greenFail": 0
+  },
+  "gui": {
+    "authoredInputsMatch": true,
+    "sourceInputsMatch": true,
+    "visualAccepted": true,
+    "elapsedSeconds": 301.4125383,
+    "hostInputsMatch": true,
+    "ownPIDStillPresent": false,
+    "protectedAbsencesMatch": true,
+    "supersedesNativeExitPendingInObservation": true,
+    "ownProcessHasExited": true,
+    "stoppedByRamGuard": false,
+    "nativeExit": 0
+  },
+  "sourceWindowClosure": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-corefeature102\\analysis-parent\\material-decoration-green-r50\\source-window-closure.json",
+    "bytes": 5451,
+    "sha256": "576CDD841A8F13A9297035BC3090789A105A34BF5A6C77EF7E3C7DC3942B106E"
+  },
+  "canonicalSources": [
+    {
+      "path": "Editor/Materials/Include/JE/Editor/Materials/MaterialBrowserInteractions.h",
+      "bytes": 2333,
+      "sha256": "840E1D274D0554F22BDD18A4947B9E7BD633BF3AE6CF0B1B0812D257596E152E"
+    },
+    {
+      "path": "Editor/Materials/Source/MaterialBrowserInteractions.cpp",
+      "bytes": 38854,
+      "sha256": "200CA0B0A1F3C5F5341AE6D24B9A17E01B835C5BDA8EF62A0A5E1908722F67DF"
+    },
+    {
+      "path": "Editor/Materials/Source/MaterialTextureSet.h",
+      "bytes": 2839,
+      "sha256": "356135816C0F59B79A0C326F1F6AA89EE3AC097BA930D33D0CC61F45266D8225"
+    },
+    {
+      "path": "Editor/Materials/Source/MaterialTextureSet.cpp",
+      "bytes": 24273,
+      "sha256": "FC3BE0C92C379A4EF18A1F867E5342E226F5E0CAA3FE99FBF8BFD3E5EB1ABCE2"
+    },
+    {
+      "path": "Editor/Materials/Include/JE/Editor/Materials/Document/MaterialDocument.h",
+      "bytes": 7910,
+      "sha256": "108CC3811FD4EB2D558DD133611163D59D237965E9481C4E5AB6F809E8A4CB68"
+    },
+    {
+      "path": "Editor/Materials/Source/Document/MaterialDocument.cpp",
+      "bytes": 61280,
+      "sha256": "C77CCF7A2C93A8B000AD3813D205F8275BEBF2A88D53C958C19EF6899983CBF4"
+    },
+    {
+      "path": "Editor/Materials/Source/Workspace/MaterialWorkspaceSession.h",
+      "bytes": 4220,
+      "sha256": "537CF36D2145ACF69A3FE8A7898966D25C28A1E6EDFBAD7823A1AE2AB3330A7F"
+    },
+    {
+      "path": "Editor/Materials/Source/Workspace/MaterialWorkspaceSession.cpp",
+      "bytes": 13457,
+      "sha256": "0A45E8FE475B9622BD248A58B79226ED896A2DCBEE6651E6820374D267BD5CF0"
+    },
+    {
+      "path": "Editor/Materials/Source/Workspace/MaterialWorkspaceWidget.h",
+      "bytes": 2663,
+      "sha256": "16F7CAAB5FD6DAB78EF03E3AC48F3D1A05AA0338169580850F1E2C2DFD5106A3"
+    },
+    {
+      "path": "Editor/Materials/Source/Workspace/MaterialWorkspaceWidget.cpp",
+      "bytes": 16021,
+      "sha256": "2DB4F9E2EFE229A16854F762BC904357B01447D179EA174E8660BB5277DA1A36"
+    },
+    {
+      "path": "Editor/Materials/Include/JE/Editor/Materials/Viewport/MaterialPreviewViewportContent.h",
+      "bytes": 1892,
+      "sha256": "64BD99EF6FC8260751DB1C793295F070A787601D05ADE928476C91AC771ADBC0"
+    },
+    {
+      "path": "Editor/Materials/Source/Viewport/MaterialPreviewViewportContent.cpp",
+      "bytes": 9984,
+      "sha256": "9D322D346797BE39028A97D1E012A32775A5C1FC4EBFC158C04529ADE7B706B2"
+    },
+    {
+      "path": "Gems/Atom/Tools/AtomToolsFramework/Code/Include/AtomToolsFramework/EntityPreviewViewport/EntityPreviewViewportWidget.h",
+      "bytes": 3557,
+      "sha256": "CE669E18217CDE54AF3A884733BC36A573375DFB0F70C1AF3045B6140A069A44"
+    },
+    {
+      "path": "Gems/Atom/Tools/AtomToolsFramework/Code/Source/EntityPreviewViewport/EntityPreviewViewportWidget.cpp",
+      "bytes": 7508,
+      "sha256": "AA5B96371927F1F038CF123097EC854F4B988915EBDBE6D62171DA94946E26CA"
+    },
+    {
+      "path": "Gems/Atom/Tools/AtomToolsFramework/Code/Include/AtomToolsFramework/EntityPreviewViewport/EntityPreviewViewportScene.h",
+      "bytes": 2511,
+      "sha256": "BB7992C26C3A9D558F41708249130FFC3DE586C9D99D6107B93E1817912F28B2"
+    },
+    {
+      "path": "Gems/Atom/Tools/AtomToolsFramework/Code/Source/EntityPreviewViewport/EntityPreviewViewportScene.cpp",
+      "bytes": 8614,
+      "sha256": "8E01325D6090A9721983064D5B66FE9D15BFE789A76DE8F9DF9F690A3D2AC75B"
+    },
+    {
+      "path": "Editor/Materials/Tests/MaterialDocumentTests.cpp",
+      "bytes": 54391,
+      "sha256": "92793F6488D7759F4F8E1568FC6F621E2210DE59EEB45E30F2F95061E1D9BB6B"
+    },
+    {
+      "path": "Editor/Materials/Tests/Workspace/MaterialWorkspaceTests.cpp",
+      "bytes": 102284,
+      "sha256": "E15F130D95547104B613FAC03150CC621A693D5C50579DC52FCD81E706DF50E8"
+    },
+    {
+      "path": "Editor/Materials/Source/EditorMaterialSystemComponent.cpp",
+      "bytes": 27242,
+      "sha256": "E55998DEF74EBAB740AF86D460094DB72D84EEB13591B4009480C6BE625F4506"
+    },
+    {
+      "path": "Editor/Materials/CMakeLists.txt",
+      "bytes": 2209,
+      "sha256": "DCCB9F9140C71CB1BC9EADF182D8EB996226E189A0C6E39D390B816F8D9BCDB9"
+    },
+    {
+      "path": "Editor/Materials/materials_files.cmake",
+      "bytes": 2618,
+      "sha256": "75C1D70F1BC67FECC3071854EA5D184DDBC8AB5E3FA6378C2279E2A364633DF3"
+    },
+    {
+      "path": "Gems/Atom/Tools/AtomToolsFramework/Code/Source/EntityPreviewViewport/EntityPreviewViewportSettingsSystem.cpp",
+      "bytes": 36010,
+      "sha256": "8D9B99C35DCF6BC4963AE420B2F03AE077AF55C339A8135EADD316130F59A389"
+    },
+    {
+      "path": "Gems/Atom/Tools/AtomToolsFramework/Code/Tests/AtomToolsFrameworkTest.cpp",
+      "bytes": 26663,
+      "sha256": "8DE7D7837CAE63591B9238A9F226AFB0EF3BA7AE23AB443A357AF7C77E3F9618"
+    },
+    {
+      "path": "Code/Framework/AzToolsFramework/AzToolsFramework/AssetBrowser/Entries/RootAssetBrowserEntry.cpp",
+      "bytes": 25416,
+      "sha256": "4C17E955783AE1749A29EBBED5F268B5C0E46E5EAF35777CDDA39069D63F8EE5"
+    }
+  ],
+  "limitations": [
+    "DiffuseProbeGridUpdatePassTemplate missing remains open",
+    "PipelineState warnings at shutdown remain recorded",
+    "No Linux VR Shipping or whole-Gem acceptance",
+    "Nodes UI and graph association are pending",
+    "Previous ATF RPI SDK evidence reused only within valid scope"
+  ],
+  "reviewer": "/root",
+  "utc": "2026-10-19T03:37:38.1165577Z",
+  "captureReview": {
+    "freshR50Selection": {
+      "path": "F:\\JericoEngine\\JericoEngine\\docs\\evidence\\n0\\native-pass-workspace-and-sdk-2026-10-13\\material-direct-selection-r50\\01-fresh-ambiguous-create-selected-material.jpg",
+      "bytes": 194101,
+      "sha256": "65821EE9BA9162CBD34A14B345330A0231B0668A9AA64160D8BA629FE8DBDB0B"
+    },
+    "priorR47ExplicitOpenReused": {
+      "path": "F:\\JericoEngine\\JericoEngine\\docs\\evidence\\n0\\native-pass-workspace-and-sdk-2026-10-13\\material-direct-selection-r50\\02-explicit-open-r47-reused.jpg",
+      "bytes": 200436,
+      "sha256": "31E03F0996288A980C1CF353978B28822DCDDB365953EAF591E50A9DD616EAF9"
+    },
+    "priorR44ReviewReused": {
+      "path": "F:\\JericoEngine\\JericoEngine\\docs\\evidence\\n0\\native-pass-workspace-and-sdk-2026-10-13\\material-direct-selection-r50\\prior-gui-review-r44.json",
+      "bytes": 5198,
+      "sha256": "30B59054BB9098EA7BE855702FFCBB9290E2E08D5257B7BEE16DCA35162138F4"
+    },
+    "duplicateR50SecondCaptureExcluded": true,
+    "privateOriginalPreserved": true,
+    "explicitOpenR50ObservationIsNotAnotherStoredCapture": true
+  },
+  "publicationLineEndings": {
+    "path": "Code/Framework/AzToolsFramework/AzToolsFramework/AssetBrowser/Entries/RootAssetBrowserEntry.cpp",
+    "testedPhysicalSHA256": "4C17E955783AE1749A29EBBED5F268B5C0E46E5EAF35777CDDA39069D63F8EE5",
+    "gitLFPostimageSHA256": "ED694E9498AAED6B1E331F74B470927F64082E27ADD87F8FDDC892494FA11DD3",
+    "reversibleCRLFOnly": true,
+    "workingSourceChanged": false,
+    "reason": "Match canonical LF Git blobs and core.autocrlf=true Windows checkout; preprocessor tokens unchanged",
+    "strictWhitespaceCheckRequired": true
+  }
+}

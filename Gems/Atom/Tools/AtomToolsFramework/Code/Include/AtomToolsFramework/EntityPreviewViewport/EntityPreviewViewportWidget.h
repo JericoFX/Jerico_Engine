@@ -9,7 +9,6 @@
 #pragma once
 
 #include <JE/Render/Features/CoreLights/DirectionalLightFeatureProcessorInterface.h>
-
 #include <JE/Render/RPI/Public/Base.h>
 #include <AtomToolsFramework/EntityPreviewViewport/EntityPreviewViewportContent.h>
 #include <AtomToolsFramework/EntityPreviewViewport/EntityPreviewViewportInputController.h>
@@ -30,7 +29,7 @@ namespace AtomToolsFramework
         , public EntityPreviewViewportSettingsNotificationBus::Handler
     {
     public:
-        EntityPreviewViewportWidget(const AZ::Crc32& toolId, QWidget* parent = nullptr);
+        EntityPreviewViewportWidget(const AZ::Crc32& toolId, QWidget* parent = nullptr, bool embedded = false);
         ~EntityPreviewViewportWidget();
 
         //! Initializes the input controller and other content after the render widget has been created. This is not done on construction
@@ -42,6 +41,9 @@ namespace AtomToolsFramework
             AZStd::shared_ptr<EntityPreviewViewportInputController> viewportController);
 
     private:
+        void showEvent(QShowEvent* event) override;
+        void hideEvent(QHideEvent* event) override;
+
         // EntityPreviewViewportSettingsNotificationBus::Handler overrides...
         void OnViewportSettingsChanged() override;
 
@@ -49,6 +51,7 @@ namespace AtomToolsFramework
         void OnTick(float deltaTime, AZ::ScriptTimePoint time) override;
 
         const AZ::Crc32 m_toolId = {};
+        const bool m_embedded = false;
         AZStd::shared_ptr<AzFramework::EntityContext> m_entityContext;
         AZStd::shared_ptr<EntityPreviewViewportScene> m_viewportScene;
         AZStd::shared_ptr<EntityPreviewViewportContent> m_viewportContent;

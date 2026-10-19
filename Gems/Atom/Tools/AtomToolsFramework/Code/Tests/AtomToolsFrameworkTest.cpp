@@ -279,6 +279,83 @@ namespace UnitTest
         EXPECT_EQ(settings.GetRegisteredLightingPresetPaths(), (AZStd::set<AZStd::string>{customLighting}));
     }
 
+    TEST_F(NativePreviewSettingsTest, RenderPipelineDefaultsUseTheNativeOwner)
+    {
+        AtomToolsFramework::EntityPreviewViewportSettingsSystem settings;
+        const AZStd::string native = "@engroot@/Engine/Render/Features/Assets/Passes/MainRenderPipeline.azasset";
+        EXPECT_EQ(m_localFileIO->GetAlias("@gemroot:Atom_Feature_Common@"), nullptr);
+        EXPECT_EQ(settings.GetLastRenderPipelinePath(), AtomToolsFramework::GetPathWithoutAlias(native));
+        EXPECT_EQ(settings.GetLastRenderPipelinePathWithoutAlias(), AtomToolsFramework::GetPathWithoutAlias(native));
+        EXPECT_EQ(settings.GetRegisteredRenderPipelinePaths(), (AZStd::set<AZStd::string>{native}));
+        EXPECT_EQ(m_localFileIO->GetAlias("@gemroot:Atom_Feature_Common@"), nullptr);
+    }
+
+    TEST_F(NativePreviewSettingsTest, StoredLegacyRenderPipelineKeepsTheNativeSourceIdentity)
+    {
+        AtomToolsFramework::EntityPreviewViewportSettingsSystem settings;
+        const AZStd::string legacy = "@gemroot:Atom_Feature_Common@/Assets/Passes/MainRenderPipeline.azasset";
+        const AZStd::string native = "@engroot@/Engine/Render/Features/Assets/Passes/MainRenderPipeline.azasset";
+        const auto absolute = AtomToolsFramework::GetPathWithoutAlias(native);
+        const AZ::Data::AssetId sourceId(AZ::Uuid::CreateString("{2D51D9FC-FA8A-4F5D-9E42-D0E923DA4D01}"), 0);
+        // Only the native source exists; no legacy Gem alias or duplicate source is installed.
+        m_assetSystemStub.RegisterSourceInfo(absolute, sourceId);
+        ASSERT_EQ(m_localFileIO->GetAlias("@gemroot:Atom_Feature_Common@"), nullptr);
+        for (const auto& stored : {legacy, native, absolute})
+        {
+            ASSERT_TRUE(m_registry->Set("/O3DE/AtomToolsFramework/EntityPreviewViewportSettings/RenderPipelinePath", stored));
+            // Stop the RED case here rather than producing a secondary missing-source diagnostic.
+            ASSERT_EQ(settings.GetLastRenderPipelinePath(), absolute);
+            EXPECT_EQ(settings.GetLastRenderPipelinePathWithoutAlias(), absolute);
+            EXPECT_EQ(settings.GetLastRenderPipelineAssetId(), sourceId);
+            AZStd::string retained;
+            ASSERT_TRUE(m_registry->Get(retained, "/O3DE/AtomToolsFramework/EntityPreviewViewportSettings/RenderPipelinePath"));
+            EXPECT_EQ(retained, stored);
+        }
+        EXPECT_EQ(m_localFileIO->GetAlias("@gemroot:Atom_Feature_Common@"), nullptr);
+    }
+
+    TEST_F(NativePreviewSettingsTest, LegacyPipelineFavoritesShareOneNativePathWithoutRewritingStoredValues)
+    {
+        AtomToolsFramework::EntityPreviewViewportSettingsSystem settings;
+        const AZStd::string legacy = "@gemroot:Atom_Feature_Common@/Assets/Passes/MainRenderPipeline.azasset";
+        const AZStd::string native = "@engroot@/Engine/Render/Features/Assets/Passes/MainRenderPipeline.azasset";
+        const AZStd::string secondLegacy = "@gemroot:Atom_Feature_Common@/Assets/Passes/LowEndRenderPipeline.azasset";
+        const AZStd::string secondNative = "@engroot@/Engine/Render/Features/Assets/Passes/LowEndRenderPipeline.azasset";
+        const AZStd::string custom = "@exefolder@/custom/CustomRenderPipeline.azasset";
+        const AZStd::set<AZStd::string> stored{legacy, native, secondLegacy, custom};
+        ASSERT_TRUE(AtomToolsFramework::SetSettingsObject(
+            "/O3DE/AtomToolsFramework/EntityPreviewViewportSettings/RegisteredRenderPipelinePaths", stored));
+        ASSERT_EQ(settings.GetRegisteredRenderPipelinePaths(), (AZStd::set<AZStd::string>{native, secondNative, custom}));
+        EXPECT_EQ(AtomToolsFramework::GetSettingsObject<AZStd::set<AZStd::string>>(
+            "/O3DE/AtomToolsFramework/EntityPreviewViewportSettings/RegisteredRenderPipelinePaths", {}), stored);
+        settings.RegisterRenderPipelinePath(legacy);
+        EXPECT_EQ(settings.GetRegisteredRenderPipelinePaths(), (AZStd::set<AZStd::string>{native, secondNative, custom}));
+        settings.UnregisterRenderPipelinePath(legacy);
+        EXPECT_EQ(settings.GetRegisteredRenderPipelinePaths(), (AZStd::set<AZStd::string>{secondNative, custom}));
+        settings.RegisterRenderPipelinePath(legacy);
+        EXPECT_EQ(settings.GetRegisteredRenderPipelinePaths(), (AZStd::set<AZStd::string>{native, secondNative, custom}));
+        EXPECT_EQ(m_localFileIO->GetAlias("@gemroot:Atom_Feature_Common@"), nullptr);
+    }
+
+    TEST_F(NativePreviewSettingsTest, CustomAndFalsePipelinePrefixesRetainTheirPaths)
+    {
+        AtomToolsFramework::EntityPreviewViewportSettingsSystem settings;
+        const AZStd::set<AZStd::string> paths{
+            "@exefolder@/custom/CustomRenderPipeline.azasset",
+            "@gemroot:Atom_Feature_CommonExtra@/Assets/Passes/MainRenderPipeline.azasset",
+            "@gemroot:Atom_Feature_Common@/Assets/PassesExtra/MainRenderPipeline.azasset",
+            "@gemroot:atom_feature_common@/Assets/Passes/MainRenderPipeline.azasset"};
+        for (const auto& path : paths)
+        {
+            ASSERT_TRUE(m_registry->Set("/O3DE/AtomToolsFramework/EntityPreviewViewportSettings/RenderPipelinePath", path));
+            EXPECT_EQ(settings.GetLastRenderPipelinePath(), AtomToolsFramework::GetPathWithoutAlias(path));
+        }
+        ASSERT_TRUE(AtomToolsFramework::SetSettingsObject(
+            "/O3DE/AtomToolsFramework/EntityPreviewViewportSettings/RegisteredRenderPipelinePaths", paths));
+        EXPECT_EQ(settings.GetRegisteredRenderPipelinePaths(), paths);
+        EXPECT_EQ(m_localFileIO->GetAlias("@gemroot:Atom_Feature_Common@"), nullptr);
+    }
+
     class ReporterJobSource final : public AzToolsFramework::AssetSystemJobRequestBus::Handler
     {
     public:

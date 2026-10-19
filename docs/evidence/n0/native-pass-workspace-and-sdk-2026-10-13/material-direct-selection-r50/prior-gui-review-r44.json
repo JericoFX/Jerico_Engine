@@ -1,0 +1,134 @@
+{
+  "Schema": 1,
+  "Utc": "2026-10-19T01:10:15.5980486Z",
+  "SourceFreeze": "17AA6EF5DE369F5EA85D05F2835FC988BB00FF385B4DDBEC9E080AB8F63D2A45",
+  "ObservedBy": "parent via Sky, original-resolution captures",
+  "NativeExit": 0,
+  "NativeElapsedSeconds": 698.4916654,
+  "Pass": [
+    "unambiguous create selects asset and leaves Workspace closed",
+    "explicit double click opens requested material with bound maps",
+    "Inspector factor1 to0.65, Undo1, Redo0.65, Save",
+    "same-process pane reopen preserves0.65",
+    "existing regeneration preserves13 files byteexact and selects material",
+    "ambiguity Cancel writes no material or presets",
+    "live source reload A to blue B to restored A without pane reopen"
+  ],
+  "Fail": [
+    "ambiguous create writes chosen diffuse material and3presets but original texture remains selected after AP returns0/0"
+  ],
+  "Pending": [
+    "correct asynchronous selection regression",
+    "fresh-process reopen on corrected candidate"
+  ],
+  "BaselineOwnFiles": 13,
+  "CurrentOwnFiles": 17,
+  "ChangedBaselineFiles": [],
+  "NewOwnFiles": [
+    {
+      "Path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Assets\\JETextureMaterialValidation_20261019_direct_r42\\ambiguous\\je_ambiguous_r42_1k.material",
+      "Bytes": 2181,
+      "Sha256": "E00E19B21C5CD685692B2A4EEB2357592096D7293B8074DB9CCE2CF6DE48277F"
+    },
+    {
+      "Path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Assets\\JETextureMaterialValidation_20261019_direct_r42\\ambiguous\\je_ambiguous_r42_ao_1k.png.assetinfo",
+      "Bytes": 2536,
+      "Sha256": "1CCDD2345CD6EF5A22A377878448B875B5763B3A4064430A692547F53DF929CE"
+    },
+    {
+      "Path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Assets\\JETextureMaterialValidation_20261019_direct_r42\\ambiguous\\je_ambiguous_r42_nor_gl_1k.png.assetinfo",
+      "Bytes": 2527,
+      "Sha256": "4CC1D7EFB4F989A27A44AA9D779B710FA9A6C34812B08C783BC37ECC3C9D7443"
+    },
+    {
+      "Path": "F:\\JericoEngine\\JericoEngine\\Projects\\JEEditorFixture\\Assets\\JETextureMaterialValidation_20261019_direct_r42\\ambiguous\\je_ambiguous_r42_rough_1k.png.assetinfo",
+      "Bytes": 2531,
+      "Sha256": "7FFFF1B7860A5CFB3791E6FB878B9C86B58A4ADDC5186F4FE0ED231CAF279B8D"
+    }
+  ],
+  "ProtectedPostflight": {
+    "authoredCount": 86,
+    "absentCount": 2679,
+    "hostInputsMatch": true,
+    "protectedReappeared": [],
+    "protectedAbsentCount": 73,
+    "authoredDrift": [],
+    "sourceDrift": [],
+    "hostCount": 114,
+    "protectedAbsencesMatch": true,
+    "hostDrift": [],
+    "sourceCount": 15332,
+    "sourceInputsMatch": true,
+    "authoredInputsMatch": true
+  },
+  "DeviceLostObserved": false,
+  "OtherError": "DiffuseProbeGridUpdatePass template absent, preserved in actual Editor log; no cause attributed",
+  "WholeGemAccepted": false,
+  "Screenshots": [
+    {
+      "File": "01-created-selected-no-workspace.jpg",
+      "Bytes": 184890,
+      "Sha256": "0374D1ACB69B1044D767B107E59A44644AB4B41D8AEEEB871693DB72B087B1CF"
+    },
+    {
+      "File": "02-open-direct-with-material.jpg",
+      "Bytes": 200373,
+      "Sha256": "832CD0550B4E1E16DA70E78EFCADBA7E078AF6D654DBDA64D074F9DA13E0EC50"
+    },
+    {
+      "File": "03-factor-edited-065.jpg",
+      "Bytes": 198010,
+      "Sha256": "5F811961CFBF599BDCC52B8F18A50A864BC482AA644B14BB4DE1E4AF4D2DF4DB"
+    },
+    {
+      "File": "04-undo-100.jpg",
+      "Bytes": 200281,
+      "Sha256": "F4F810BA87F53B1BF13ACD4ADCCC530BD27CD3EE530DEBD0138ADD0E356B4FCD"
+    },
+    {
+      "File": "05-redo-065.jpg",
+      "Bytes": 199230,
+      "Sha256": "FC1865B6C534B35969CE2F7D0EAE888DDADAD319295590EACCB1C7899928BF36"
+    },
+    {
+      "File": "06-saved-065.jpg",
+      "Bytes": 199390,
+      "Sha256": "A0756CF876DEA74654422905A46C68929D3C1049FF9EAAD1AFFB47EA170643DD"
+    },
+    {
+      "File": "07-regenerate-selects-existing-no-workspace.jpg",
+      "Bytes": 192242,
+      "Sha256": "F2A0CF18C885C18056DF777679E304405FA70127476158B1DEA2203D22153688"
+    },
+    {
+      "File": "08-ambiguity-compact-choice.jpg",
+      "Bytes": 235473,
+      "Sha256": "DD80ED120DE06512897E528D18A5D702CC1A8BC1142CB0858095169E8C9E6297"
+    },
+    {
+      "File": "09-cancel-returns-browser.jpg",
+      "Bytes": 190480,
+      "Sha256": "4F1ADAB4B08E60270FE5125A122EABA3FC75998FABBA6D6C11207D1ED1790002"
+    },
+    {
+      "File": "10-red-ambiguous-created-texture-still-selected.jpg",
+      "Bytes": 180618,
+      "Sha256": "AE827C7184DE08673C1120EFD9DE9A1BFFAEF4B902FE54FCB956BF8CCE0D7565"
+    },
+    {
+      "File": "11-reopened-saved-factor-A.jpg",
+      "Bytes": 199340,
+      "Sha256": "E470CF0C18F222C64B204C23A1381B23A83229708EE20DD31E5281E093D94A17"
+    },
+    {
+      "File": "12-source-reload-B-blue-without-reopen.jpg",
+      "Bytes": 203853,
+      "Sha256": "9BADA99D144A4EC21367DF4234206C3D1ACBC7156CDB85182410FE27692872B8"
+    },
+    {
+      "File": "13-source-reload-restored-A-without-reopen.jpg",
+      "Bytes": 199752,
+      "Sha256": "D382CCB1163E040B8DFA97B8C4A0D1896604A2B7824F4E424A6DFD5C0D08FC4D"
+    }
+  ]
+}

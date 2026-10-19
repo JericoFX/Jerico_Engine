@@ -25,7 +25,7 @@ namespace AtomToolsFramework
             RenderViewportWidget* widget,
             AZStd::shared_ptr<AzFramework::EntityContext> entityContext,
             const AZStd::string& sceneName = "EntityPreviewViewportScene",
-            const AZStd::string& defaultRenderPipelineAssetPath = "passes/mainrenderpipeline.azasset");
+            const AZStd::string& defaultRenderPipelineAssetPath = "passes/mainrenderpipeline.azasset", bool embedded = false);
         ~EntityPreviewViewportScene();
 
         bool ActivateRenderPipeline(const AZStd::string& pipelineAssetPath);
@@ -46,6 +46,7 @@ namespace AtomToolsFramework
         RenderPipelineMap::iterator AddRenderPipeline(const AZ::Data::AssetId& pipelineAssetId);
 
         const AZ::Crc32 m_toolId = {};
+        const bool m_embedded = false;
         JE::Render::RPI::ScenePtr m_scene;
         AZStd::shared_ptr<AzFramework::Scene> m_frameworkScene;
 
