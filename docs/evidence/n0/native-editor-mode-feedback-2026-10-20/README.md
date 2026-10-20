@@ -27,4 +27,4 @@ La revisión final W1/padre reconcilió 143 rutas de producto: 141 del mapa inic
 
 [provenance.json](provenance.json) registra las 22 copias byteexactas, tamaños, SHA-256 y fuentes locales. Las ocho capturas R5 y el log completo se contrastaron contra sus hashes registrados antes de copiar. No se usa el stdout truncado del runner como sustituto del log del editor.
 
-Linux, VR/OpenXR, Shipping, SDK global sin Python y métricas globales siguen abiertos. No hay incremento del contador de Gems ni SHA de publicación de este corte todavía.
+Linux, VR/OpenXR, Shipping, SDK global sin Python y métricas globales siguen abiertos. Publicación focal confirmada en development: `3b439e27be3a2422283d2983c7c7712e0195ec81`, con SHA remoto comprobado. No hay incremento del contador de cierres globales de Gems.

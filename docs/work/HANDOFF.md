@@ -1,3 +1,9 @@
+## EditorModeFeedback103 — integración focal publicada, 2026-10-20
+
+Commit development 3b439e27be3a2422283d2983c7c7712e0195ec81 publicado sin force; SHA remoto confirmado. Owner JE::EditorRenderFeatures STATIC, 40 C++/headers y21assets integrados; ruta Gem/Module/activaciones retiradas, sin DLL nueva. Configure/build/AP identidad14/62, consumidor SDK739/0 y GUI selección/deselección/segunda preview/foco/PlayStop/Save-reopen verificados para sus cohortes. Evidencia durable: docs/evidence/n0/native-editor-mode-feedback-2026-10-20/README.md,22copias byteexactas.
+
+Padre yW1 revisaron143rutas y45operaciones C++; guards heredados UI33/35/36 incorporados explícitamente. Árbol mixto, no clean-tree replay. VUID09600 Preview mip8 yTraceErrors AP preservados; Linux/VR/Shipping/N0/global abiertos, incremento globalGem0 y denominador no reconciliado. No repetir SDK/build/GUI intactos. Siguiente acción: elegir y analizar la próxima absorción según el mapa vigente y consumidores del roadmap, con plan antes de modificar; no reabrir paquetes históricos ni diagnóstico de luminancia por rutina. Writers HOLD, sin build/GUI; auxiliares propios de pruebas terminados. Graft compartido3548/18708 preservado: transporte no atribuido con seguridad.
+
 ## DiffuseProbeGrid — integración focal publicada, 2026-10-20
 
 Publicación selectiva en development: 43d5f493a1c91323305559c8cc7fb877b9b5b67b; push sin force y SHA remoto verificados. Runtime/autoría absorbidos por JE::RenderFeatures / JE::EditorRenderFeatures, sin DLL nueva; legacy Gems/DiffuseProbeGrid y activación retirados. CPU669/0, consumidor SDK692/0, Editor bake/Save/reopen y contribución Baked, muestra nativa Vulkan RT/AutoSelect R43 aceptados con sus límites. Evidencia durable: docs/evidence/n0/native-diffuse-probe-grid-2026-10-20/README.md.
