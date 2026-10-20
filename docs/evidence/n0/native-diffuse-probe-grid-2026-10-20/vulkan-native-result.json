@@ -1,0 +1,18 @@
+{
+  "stdout": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-corefeature102\\runtime-dpg-native-proof-r43-attempt1\\runtime-dpg-native-proof-r43.stdout.log",
+    "bytes": 82032,
+    "sha256": "E82FD22E1931D9820FBFDE970BDD6041930C8A49A93C7AAD6EB1A293FF7D8AD3"
+  },
+  "timedOut": false,
+  "priorityRequested": "BelowNormal",
+  "stderr": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-corefeature102\\runtime-dpg-native-proof-r43-attempt1\\runtime-dpg-native-proof-r43.stderr.log",
+    "bytes": 0,
+    "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+  },
+  "seconds": 35.0937565,
+  "ramGuardTriggered": false,
+  "priorityError": null,
+  "exitCode": 0
+}

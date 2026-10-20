@@ -1,0 +1,60 @@
+{
+  "helper": {
+    "pid": 31892,
+    "executable": "C:\\Users\\Jerico\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+    "creationUtc": "2026-10-20T05:37:09.0326710Z",
+    "parentPid": 14564,
+    "owner": "DESKTOP-288HHOD\\Jerico",
+    "purpose": "Compare saved SDK inventories and exact one physical authored leaf plus backup",
+    "persistent": false
+  },
+  "parentReceipt": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-corefeature102\\analysis-wiring\\dpg-sdk-luminance-leaf-r39\\parent-application.json",
+    "bytes": 1670,
+    "sha256": "15C09E90FE43B8982319CF583A1543229B199463AF391C818F74F7B34A16300B"
+  },
+  "beforeInventory": {
+    "path": "F:/JericoEngine/JericoEngine/build/n0-validation/native-corefeature102/analysis-wiring/dpg-sdk-r30-refresh-preparation/sdk-after-three-leaves-r31-derived-inventory.json",
+    "bytes": 2338209,
+    "sha256": "101F5B0E2FB3DE001FF966A685271F4A7E917C11AC56845C6D443478BDDC08DF"
+  },
+  "afterInventory": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-corefeature102\\analysis-wiring\\dpg-sdk-luminance-leaf-r39\\sdk-after-luminance-r39-derived-inventory.json",
+    "bytes": 2338209,
+    "sha256": "C103A194E6A2B638269683AE8F007AC4DABF640E8A5E3DB65B3C769A8FA289F8"
+  },
+  "beforeRows": 11319,
+  "afterRows": 11319,
+  "added": 0,
+  "removed": 0,
+  "changed": 1,
+  "delta": [
+    {
+      "before": {
+        "relativePath": "Engine/Render/Features/Assets/Shaders/PostProcessing/DownsampleSinglePassLuminance.azsl",
+        "bytes": 4632,
+        "sha256": "9D364F2A29844A3783A43CD14EA2268DE2F91F2664FD9CE034FE9EB0A4C0D925"
+      },
+      "after": {
+        "relativePath": "Engine/Render/Features/Assets/Shaders/PostProcessing/DownsampleSinglePassLuminance.azsl",
+        "bytes": 4664,
+        "sha256": "8C891BE1B37BB5C118B57765AE6E92D45691153138D650CE3C0EBA8E496EB9D6"
+      }
+    }
+  ],
+  "totalBytesBefore": 3710856115,
+  "totalBytesAfter": 3710856147,
+  "physicalDestination": {
+    "path": "F:/JericoEngine/JericoEngine/build/sdk-vk102/Engine/Render/Features/Assets/Shaders/PostProcessing/DownsampleSinglePassLuminance.azsl",
+    "bytes": 4664,
+    "sha256": "8C891BE1B37BB5C118B57765AE6E92D45691153138D650CE3C0EBA8E496EB9D6"
+  },
+  "physicalPreimage": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-corefeature102\\analysis-wiring\\dpg-sdk-luminance-leaf-r39\\sdk-leaf.before.azsl",
+    "bytes": 4632,
+    "sha256": "9D364F2A29844A3783A43CD14EA2268DE2F91F2664FD9CE034FE9EB0A4C0D925"
+  },
+  "checksPassed": true,
+  "limit": "All 11319 saved rows compared; only one SDK destination and its private backup physically hashed. Other11318 historical rows reused, no global rescan or installed cook/GPU claim.",
+  "wholeGemIncrement": 0
+}

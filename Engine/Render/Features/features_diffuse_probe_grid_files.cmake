@@ -1,0 +1,63 @@
+#
+# Copyright (c) Contributors to the Open 3D Engine Project.
+# For complete copyright and license terms please see the LICENSE at the root of this distribution.
+#
+# SPDX-License-Identifier: Apache-2.0 OR MIT
+#
+#
+
+set(FILES
+    Source/DiffuseProbeGrid/Components/DiffuseGlobalIlluminationComponent.cpp
+    Source/DiffuseProbeGrid/Components/DiffuseGlobalIlluminationComponent.h
+    Source/DiffuseProbeGrid/Components/DiffuseGlobalIlluminationComponentConfig.cpp
+    Source/DiffuseProbeGrid/Components/DiffuseGlobalIlluminationComponentConfig.h
+    Source/DiffuseProbeGrid/Components/DiffuseGlobalIlluminationComponentConstants.h
+    Source/DiffuseProbeGrid/Components/DiffuseGlobalIlluminationComponentController.cpp
+    Source/DiffuseProbeGrid/Components/DiffuseGlobalIlluminationComponentController.h
+    Source/DiffuseProbeGrid/Components/DiffuseProbeGridComponent.cpp
+    Source/DiffuseProbeGrid/Components/DiffuseProbeGridComponent.h
+    Source/DiffuseProbeGrid/Components/DiffuseProbeGridComponentConstants.h
+    Source/DiffuseProbeGrid/Components/DiffuseProbeGridComponentController.cpp
+    Source/DiffuseProbeGrid/Components/DiffuseProbeGridComponentController.h
+    Source/DiffuseProbeGrid/Components/DiffuseProbeGridSystemComponent.h
+    Source/DiffuseProbeGrid/Components/DiffuseProbeGridSystemComponent.cpp
+    Source/DiffuseProbeGrid/Render/DiffuseGlobalIlluminationFeatureProcessor.cpp
+    Source/DiffuseProbeGrid/Render/DiffuseGlobalIlluminationFeatureProcessor.h
+    Source/DiffuseProbeGrid/Render/DiffuseProbeGrid.cpp
+    Source/DiffuseProbeGrid/Render/DiffuseProbeGrid.h
+    Source/DiffuseProbeGrid/Render/DiffuseProbeGridBlendDistancePass.cpp
+    Source/DiffuseProbeGrid/Render/DiffuseProbeGridBlendDistancePass.h
+    Source/DiffuseProbeGrid/Render/DiffuseProbeGridBlendIrradiancePass.cpp
+    Source/DiffuseProbeGrid/Render/DiffuseProbeGridBlendIrradiancePass.h
+    Source/DiffuseProbeGrid/Render/DiffuseProbeGridBorderUpdatePass.cpp
+    Source/DiffuseProbeGrid/Render/DiffuseProbeGridBorderUpdatePass.h
+    Source/DiffuseProbeGrid/Render/DiffuseProbeGridClassificationPass.cpp
+    Source/DiffuseProbeGrid/Render/DiffuseProbeGridClassificationPass.h
+    Source/DiffuseProbeGrid/Render/DiffuseProbeGridDownsamplePass.cpp
+    Source/DiffuseProbeGrid/Render/DiffuseProbeGridDownsamplePass.h
+    Source/DiffuseProbeGrid/Render/DiffuseProbeGridFeatureProcessor.cpp
+    Source/DiffuseProbeGrid/Render/DiffuseProbeGridFeatureProcessor.h
+    Source/DiffuseProbeGrid/Render/DiffuseProbeGridPreparePass.cpp
+    Source/DiffuseProbeGrid/Render/DiffuseProbeGridPreparePass.h
+    Source/DiffuseProbeGrid/Render/DiffuseProbeGridQueryPass.cpp
+    Source/DiffuseProbeGrid/Render/DiffuseProbeGridQueryPass.h
+    Source/DiffuseProbeGrid/Render/DiffuseProbeGridQueryFullscreenPass.cpp
+    Source/DiffuseProbeGrid/Render/DiffuseProbeGridQueryFullscreenPass.h
+    Source/DiffuseProbeGrid/Render/DiffuseProbeGridQueryFullscreenPassData.h
+    Source/DiffuseProbeGrid/Render/DiffuseProbeGridRayTracingPass.cpp
+    Source/DiffuseProbeGrid/Render/DiffuseProbeGridRayTracingPass.h
+    Source/DiffuseProbeGrid/Render/DiffuseProbeGridRelocationPass.cpp
+    Source/DiffuseProbeGrid/Render/DiffuseProbeGridRelocationPass.h
+    Source/DiffuseProbeGrid/Render/DiffuseProbeGridRenderPass.cpp
+    Source/DiffuseProbeGrid/Render/DiffuseProbeGridRenderPass.h
+    Source/DiffuseProbeGrid/Render/DiffuseProbeGridTextureReadback.cpp
+    Source/DiffuseProbeGrid/Render/DiffuseProbeGridTextureReadback.h
+    Source/DiffuseProbeGrid/Render/DiffuseProbeGridVisualizationAccelerationStructurePass.cpp
+    Source/DiffuseProbeGrid/Render/DiffuseProbeGridVisualizationAccelerationStructurePass.h
+    Source/DiffuseProbeGrid/Render/DiffuseProbeGridVisualizationCompositePass.cpp
+    Source/DiffuseProbeGrid/Render/DiffuseProbeGridVisualizationCompositePass.h
+    Source/DiffuseProbeGrid/Render/DiffuseProbeGridVisualizationPreparePass.cpp
+    Source/DiffuseProbeGrid/Render/DiffuseProbeGridVisualizationPreparePass.h
+    Source/DiffuseProbeGrid/Render/DiffuseProbeGridVisualizationRayTracingPass.cpp
+    Source/DiffuseProbeGrid/Render/DiffuseProbeGridVisualizationRayTracingPass.h
+)

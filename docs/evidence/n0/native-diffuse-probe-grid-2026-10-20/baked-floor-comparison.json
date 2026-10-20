@@ -1,0 +1,17 @@
+{
+  "scope": "Screen-space central floor only; encoded RGB luminance, not physical GI quality or full-frame equivalence",
+  "roi": {
+    "height": 90,
+    "y": 730,
+    "x": 870,
+    "width": 180
+  },
+  "pixels": 16200,
+  "meanEncodedLuma": [
+    213.2269135802469,
+    243.3506172839506,
+    213.2269135802469
+  ],
+  "meanAbsZeroVsOne": 30.123703703703704,
+  "meanAbsZeroVsReturnedZero": 0.0
+}

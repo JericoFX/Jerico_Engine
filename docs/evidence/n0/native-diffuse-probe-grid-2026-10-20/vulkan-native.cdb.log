@@ -1,0 +1,703 @@
+
+************* Path validation summary **************
+Response                         Time (ms)     Location
+OK                                             F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/profile
+Opened log file 'F:/JericoEngine/JericoEngine/build/n0-validation/native-corefeature102/runtime-dpg-native-proof-r43-attempt1/cdb.log'
+
+************* Preparing the environment for Debugger Extensions Gallery repositories **************
+   ExtensionRepository : Implicit
+   UseExperimentalFeatureForNugetShare : true
+   AllowNugetExeUpdate : true
+   NonInteractiveNuget : true
+   AllowNugetMSCredentialProviderInstall : true
+   AllowParallelInitializationOfLocalRepositories : true
+
+   -- Configuring repositories
+      ----> Repository : LocalInstalled, Enabled: true
+      ----> Repository : UserExtensions, Enabled: true
+
+>>>>>>>>>>>>> Preparing the environment for Debugger Extensions Gallery repositories completed, duration 0.016 seconds
+
+************* Waiting for Debugger Extensions Gallery to Initialize **************
+
+>>>>>>>>>>>>> Waiting for Debugger Extensions Gallery to Initialize completed, duration 0.015 seconds
+   ----> Repository : UserExtensions, Enabled: true, Packages count: 0
+   ----> Repository : LocalInstalled, Enabled: true, Packages count: 46
+
+Microsoft (R) Windows Debugger Version 10.0.29617.1000 AMD64
+Copyright (c) Microsoft Corporation. All rights reserved.
+
+CommandLine: F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/profile/JEEditorFixture.GameLauncher.exe --project-path F:/JericoEngine/JericoEngine/Projects/JEEditorFixture --rhi=vulkan --r_resizable=false --r_fullscreen=false --bg_ConnectToAssetProcessor=false --regset=/Amazon/AzCore/Bootstrap/wait_for_connect=0 --regset=/Amazon/AzCore/Bootstrap/remote_filesystem=0 +exec F:/JericoEngine/JericoEngine/build/n0-validation/native-corefeature102/analysis-source/dpg-realtime-r33/runtime-two-levels.candidate.cfg --rhi-device-validation=enable --defer-command-line
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\atlmfc.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\concurrency.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\cpp_rest.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\ObjectiveC.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\stl.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Windows.Data.Json.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Windows.Devices.Geolocation.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Windows.Devices.Sensors.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Windows.Media.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\windows.natvis'
+NatVis script successfully loaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\winrt.natvis'
+
+************* Path validation summary **************
+Response                         Time (ms)     Location
+OK                                             F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/profile
+Symbol search path is: F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/profile
+Executable search path is: 
+ModLoad: 00007ff7`28860000 00007ff7`29057000   JEEditorFixture.GameLauncher.exe
+ModLoad: 00007ffd`bb280000 00007ffd`bb4e8000   ntdll.dll
+ModLoad: 00007ffd`b9390000 00007ffd`b945b000   C:\WINDOWS\System32\KERNEL32.DLL
+ModLoad: 00007ffd`b8800000 00007ffd`b8c01000   C:\WINDOWS\System32\KERNELBASE.dll
+ModLoad: 00007ffd`b8e30000 00007ffd`b8f7c000   C:\WINDOWS\System32\ucrtbase.dll
+ModLoad: 00007ffd`9b540000 00007ffd`9b56c000   C:\WINDOWS\SYSTEM32\VCRUNTIME140.dll
+ModLoad: 00007ffd`ba920000 00007ffd`baaf7000   C:\WINDOWS\System32\USER32.dll
+ModLoad: 00007ffd`0bcf0000 00007ffd`0bdad000   F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Geometry.dll
+ModLoad: 00007ffd`0b6a0000 00007ffd`0b7fc000   F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\WorldCamera.dll
+ModLoad: 00007ffd`b8c10000 00007ffd`b8c37000   C:\WINDOWS\System32\win32u.dll
+ModLoad: 00007ffd`0ba60000 00007ffd`0bb23000   F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\RenderDebug.dll
+ModLoad: 00007ffd`b9460000 00007ffd`b948b000   C:\WINDOWS\System32\GDI32.dll
+ModLoad: 00007ffd`b8c40000 00007ffd`b8d6a000   C:\WINDOWS\System32\gdi32full.dll
+ModLoad: 00007ffd`b8470000 00007ffd`b8513000   C:\WINDOWS\System32\msvcp_win.dll
+ModLoad: 00007ffd`066b0000 00007ffd`068df000   F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\RenderMaterials.dll
+ModLoad: 00007ffd`05f20000 00007ffd`066a5000   F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\RenderFeatures.dll
+ModLoad: 00007ffd`0c060000 00007ffd`0c0b3000   F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\ProfilerView.dll
+ModLoad: 00007ffd`0b2a0000 00007ffd`0b38e000   F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\DebugImGui.dll
+ModLoad: 00007ffd`09e50000 00007ffd`09f5c000   F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AzFramework.NativeUI.dll
+ModLoad: 00007ffd`053d0000 00007ffd`055d6000   F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_RHI.Public.dll
+ModLoad: 00007ffd`022c0000 00007ffd`037de000   F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AzFramework.dll
+ModLoad: 00007ffd`01110000 00007ffd`022b9000   F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AzCore.dll
+ModLoad: 00007ffd`055e0000 00007ffd`05f1e000   F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\RenderIntegration.dll
+ModLoad: 00007ffd`b9020000 00007ffd`b90dc000   C:\WINDOWS\System32\ADVAPI32.dll
+ModLoad: 0000019d`828f0000 0000019d`829ac000   C:\WINDOWS\System32\ADVAPI32.dll
+ModLoad: 00007ffd`b8520000 00007ffd`b869f000   C:\WINDOWS\System32\CRYPT32.dll
+ModLoad: 00007ffd`ba650000 00007ffd`ba6f9000   C:\WINDOWS\System32\msvcrt.dll
+ModLoad: 00007ffd`babc0000 00007ffd`bac68000   C:\WINDOWS\System32\sechost.dll
+ModLoad: 00007ffd`b9f40000 00007ffd`b9fc1000   C:\WINDOWS\System32\WS2_32.dll
+ModLoad: 00007ffd`050b0000 00007ffd`053cb000   F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_RHI.Reflect.dll
+ModLoad: 00007ffd`bb120000 00007ffd`bb238000   C:\WINDOWS\System32\RPCRT4.dll
+ModLoad: 0000019d`829d0000 0000019d`82ae8000   C:\WINDOWS\System32\RPCRT4.dll
+ModLoad: 00007ffd`b9520000 00007ffd`b9cbc000   C:\WINDOWS\System32\SHELL32.dll
+ModLoad: 00007ffd`ba780000 00007ffd`ba91a000   C:\WINDOWS\System32\ole32.dll
+ModLoad: 00007ffd`9bfc0000 00007ffd`9bfcc000   C:\WINDOWS\SYSTEM32\VCRUNTIME140_1.dll
+ModLoad: 00007ffd`ba1c0000 00007ffd`ba54b000   C:\WINDOWS\System32\combase.dll
+ModLoad: 00007ffd`ba0d0000 00007ffd`ba1a9000   C:\WINDOWS\System32\OLEAUT32.dll
+ModLoad: 00007ffd`09260000 00007ffd`0931c000   F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\DearImGui.dll
+ModLoad: 00007ffd`9b570000 00007ffd`9b60d000   C:\WINDOWS\SYSTEM32\MSVCP140.dll
+ModLoad: 00007ffd`0bca0000 00007ffd`0bcea000   F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\ProfilerCapture.dll
+ModLoad: 00007ffd`a1a70000 00007ffd`a1a86000   C:\WINDOWS\SYSTEM32\MSVCP140_ATOMIC_WAIT.dll
+ModLoad: 00007ffd`b09b0000 00007ffd`b09bb000   C:\WINDOWS\SYSTEM32\VERSION.dll
+ModLoad: 00007ffd`b8350000 00007ffd`b837a000   C:\WINDOWS\SYSTEM32\bcrypt.dll
+(8540.9468): Break instruction exception - code 80000003 (first chance)
+ntdll!RtlGetReturnAddressHijackTarget+0x749:
+00007ffd`bb3a26c9 cc              int     3
+0:000> $$<F:/JericoEngine/JericoEngine/build/n0-validation/native-corefeature102/analysis-source/dpg-realtime-r33/native-proof-r2/setup.commands.txt
+0:000> .echo JE_DPG_NATIVE_PROOF_CANDIDATE
+JE_DPG_NATIVE_PROOF_CANDIDATE
+0:000> .lines -e
+Line number information will be loaded
+0:000> .expr /s masm
+Current expression evaluator: MASM - Microsoft Assembler expressions
+0:000> r @$t0=0n0
+0:000> r @$t1=0n0
+0:000> r @$t2=0n0
+0:000> r @$t3=0n0
+0:000> r @$t4=0n0
+0:000> r @$t5=0n0
+0:000> r @$t6=0n0
+0:000> r @$t7=0n0
+0:000> r @$t8=0n0
+0:000> r @$t9=0n0
+0:000> r @$t10=0n0
+0:000> r @$t11=0n0
+0:000> r @$t12=0n0
+0:000> r @$t13=0n0
+0:000> r @$t14=0n0
+0:000> r @$t15=0n0
+0:000> r @$t16=0n0
+0:000> r @$t17=0n0
+0:000> r @$t18=0n0
+0:000> r @$t19=0n0
+0:000> bu0 RenderFeatures!JE::Render::Features::DiffuseProbeGridComponentController::Activate "$$><F:/JericoEngine/JericoEngine/build/n0-validation/native-corefeature102/analysis-source/dpg-realtime-r33/native-proof-r2/activate.commands.txt"
+*** WARNING: Unable to verify checksum for F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\RenderFeatures.dll
+0:000> bu5 RenderFeatures!JE::Render::Features::DiffuseProbeGridRayTracingPass::BuildCommandListInternal "$$><F:/JericoEngine/JericoEngine/build/n0-validation/native-corefeature102/analysis-source/dpg-realtime-r33/native-proof-r2/build.commands.txt"
+0:000> bd 5
+0:000> sxe -c ".echo JE_NATIVE_UNEXPECTED_AV; .lastevent; .exr -1; .ecxr; kv 16; q" av
+0:000> bl
+ 0 e 00007ffd`06228ca0     0001 (0001)  0:**** RenderFeatures!JE::Render::Features::DiffuseProbeGridComponentController::Activate "$$><F:/JericoEngine/JericoEngine/build/n0-validation/native-corefeature102/analysis-source/dpg-realtime-r33/native-proof-r2/activate.commands.txt"
+ 5 d 00007ffd`06254b10     0001 (0001)  0:**** RenderFeatures!JE::Render::Features::DiffuseProbeGridRayTracingPass::BuildCommandListInternal "$$><F:/JericoEngine/JericoEngine/build/n0-validation/native-corefeature102/analysis-source/dpg-realtime-r33/native-proof-r2/build.commands.txt"
+0:000> g
+ModLoad: 00007ffd`bab80000 00007ffd`babb1000   C:\WINDOWS\System32\IMM32.DLL
+ModLoad: 00007ffd`b8d70000 00007ffd`b8e1c000   C:\WINDOWS\System32\bcryptprimitives.dll
+ModLoad: 00007ffd`b5ef0000 00007ffd`b679e000   C:\WINDOWS\SYSTEM32\windows.storage.dll
+ModLoad: 00007ffd`b9fd0000 00007ffd`ba0c9000   C:\WINDOWS\System32\SHCORE.dll
+ModLoad: 00007ffd`b9cd0000 00007ffd`b9d36000   C:\WINDOWS\System32\shlwapi.dll
+ModLoad: 00007ffd`b8380000 00007ffd`b83a9000   C:\WINDOWS\SYSTEM32\profapi.dll
+Launcher: Running project "JEEditorFixture"
+The project name has been successfully set in the Settings Registry at key "/O3DE/Runtime/Manifest/Project/project_name" for Launcher target "JEEditorFixture_GameLauncher"
+Launcher: The asset cache folder of F:\JericoEngine\JericoEngine\Projects\JEEditorFixture\Cache\pc has been successfully read from the Settings Registry
+ModLoad: 00007ffd`b79c0000 00007ffd`b79db000   C:\WINDOWS\SYSTEM32\CRYPTSP.dll
+ModLoad: 00007ffd`b7070000 00007ffd`b70a9000   C:\WINDOWS\system32\rsaenh.dll
+ModLoad: 00007ffd`b79e0000 00007ffd`b79ec000   C:\WINDOWS\SYSTEM32\CRYPTBASE.dll
+ModLoad: 00007ffd`0b860000 00007ffd`0b89e000   F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AtomViewportDisplayInfo.dll
+ModLoad: 00007ffd`04b50000 00007ffd`04c33000   F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AudioSystem.dll
+ModLoad: 00007ffd`046f0000 00007ffd`04b4e000   F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\LmbrCentral.dll
+ModLoad: 00007ffd`04390000 00007ffd`046e3000   F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\GradientSignal.dll
+ModLoad: 00007ffd`00ff0000 00007ffd`01103000   F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\SurfaceData.dll
+ModLoad: 00007ffd`00da0000 00007ffd`00fe9000   F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Maestro.dll
+ModLoad: 00007ffd`00ca0000 00007ffd`00d98000   F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AtomFont.dll
+ModLoad: 00007ffd`0b640000 00007ffd`0b693000   F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_RHI.Private.dll
+ModLoad: 00007ffd`00ac0000 00007ffd`00c9c000   F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_RHI_Vulkan.Private.dll
+ModLoad: 00007ffd`00360000 00007ffd`00abe000   F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\EMotionFX.dll
+ModLoad: 00007ffd`00270000 00007ffd`0035e000   F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\EMotionFX_Atom.dll
+ModLoad: 00007ffc`ffad0000 00007ffd`0026e000   F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\PhysX5.Gem.dll
+Az Console: 
+==================================================================
+Az Console: Trace::Warning
+ F:\JericoEngine\JericoEngine\Code\Framework\AzCore\AzCore/Console/ConsoleTypeHelpers.inl(150): 'bool __cdecl AZ::ConsoleTypeHelpers::StringSetToIntegralValue<unsigned int,unsigned __int64>(unsigned int &,const class AZStd::fixed_vector<class AZStd::basic_string_view<char,struct AZStd::char_traits<char> >,64> &,const char *,const char *)'
+Az Console: stringstream failed to convert value false to uint32_t type
+
+Az Console: ==================================================================
+Az Console: 
+==================================================================
+Az Console: Trace::Warning
+ F:\JericoEngine\JericoEngine\Code\Framework\AzCore\AzCore/Console/ConsoleTypeHelpers.inl(150): 'bool __cdecl AZ::ConsoleTypeHelpers::StringSetToIntegralValue<unsigned int,unsigned __int64>(unsigned int &,const class AZStd::fixed_vector<class AZStd::basic_string_view<char,struct AZStd::char_traits<char> >,64> &,const char *,const char *)'
+Az Console: stringstream failed to convert value false to uint32_t type
+
+Az Console: ==================================================================
+Launcher: 
+==================================================================
+Launcher: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzGameFramework/AzGameFramework/Application/GameApplication.cpp(149): 'void __cdecl AzGameFramework::GameApplication::StartCommon(class AZ::Entity *)'
+Launcher: Console-mode was requested but not supported on this platform
+
+Launcher: ==================================================================
+ModLoad: 00007ffd`b7110000 00007ffd`b712b000   C:\WINDOWS\SYSTEM32\kernel.appcore.dll
+Streamer: Storage drive (C) created.
+Streamer: Storage drive (F) created.
+ModLoad: 00007ffd`b73d0000 00007ffd`b741a000   C:\WINDOWS\SYSTEM32\SspiCli.dll
+ModLoad: 00007ffd`97360000 00007ffd`975fe000   C:\WINDOWS\SYSTEM32\icu.dll
+ModLoad: 00007ffd`8a410000 00007ffd`8a419000   C:\WINDOWS\SYSTEM32\XInput9_1_0.dll
+System: AudioSystem created!
+ModLoad: 00007ffd`b5580000 00007ffd`b5627000   C:\WINDOWS\system32\uxtheme.dll
+ModLoad: 00007ffd`b90f0000 00007ffd`b919f000   C:\WINDOWS\System32\clbcatq.dll
+ModLoad: 00007ffd`a5b50000 00007ffd`a5b62000   C:\WINDOWS\system32\wbem\wbemprox.dll
+ModLoad: 00007ffd`a4fa0000 00007ffd`a5026000   C:\WINDOWS\SYSTEM32\wbemcomn.dll
+ModLoad: 00007ffd`9abc0000 00007ffd`9abd5000   C:\WINDOWS\system32\wbem\wbemsvc.dll
+ModLoad: 00007ffd`a3780000 00007ffd`a3876000   C:\WINDOWS\system32\wbem\fastprox.dll
+ModLoad: 00007ffd`971c0000 00007ffd`971dd000   C:\WINDOWS\SYSTEM32\amsi.dll
+ModLoad: 00007ffd`b7780000 00007ffd`b77b4000   C:\WINDOWS\SYSTEM32\USERENV.dll
+ModLoad: 00007ffd`95ab0000 00007ffd`95b55000   C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.26090.9-0\MpOav.dll
+ModLoad: 00007ffc`ff920000 00007ffc`ffad0000   C:\WINDOWS\SYSTEM32\vulkan-1.dll
+ModLoad: 00007ffd`b8050000 00007ffd`b80a2000   C:\WINDOWS\SYSTEM32\CFGMGR32.dll
+ModLoad: 00007ffd`b56b0000 00007ffd`b57eb000   C:\WINDOWS\system32\dxgi.dll
+ModLoad: 00007ffd`b8100000 00007ffd`b815e000   C:\WINDOWS\SYSTEM32\powrprof.dll
+ModLoad: 00007ffd`b80e0000 00007ffd`b80f5000   C:\WINDOWS\SYSTEM32\UMPDC.dll
+ModLoad: 00007ffd`94c40000 00007ffd`94c5e000   C:\WINDOWS\SYSTEM32\windows.staterepositorycore.dll
+ModLoad: 00007ffd`b5660000 00007ffd`b56a4000   C:\WINDOWS\SYSTEM32\dxcore.dll
+ModLoad: 00007ffd`b5aa0000 00007ffd`b5ab4000   C:\WINDOWS\SYSTEM32\resourcepolicyclient.dll
+ModLoad: 00007ffd`b2190000 00007ffd`b21ef000   C:\WINDOWS\SYSTEM32\directxdatabasehelper.dll
+ModLoad: 00007ffc`faf90000 00007ffc`fde3b000   C:\WINDOWS\System32\DriverStore\FileRepository\nvmdi.inf_amd64_21e6b42b376b80b2\nvoglv64.dll
+ModLoad: 00007ffd`bac80000 00007ffd`bb107000   C:\WINDOWS\System32\SETUPAPI.dll
+ModLoad: 00007ffd`b53c0000 00007ffd`b53ea000   C:\WINDOWS\SYSTEM32\WTSAPI32.dll
+ModLoad: 00007ffd`b7a40000 00007ffd`b7a53000   C:\WINDOWS\SYSTEM32\msasn1.dll
+ModLoad: 00007ffd`b05a0000 00007ffd`b05db000   C:\WINDOWS\SYSTEM32\cryptnet.dll
+ModLoad: 00007ffd`b7ac0000 00007ffd`b7b41000   C:\WINDOWS\SYSTEM32\wldp.dll
+ModLoad: 00007ffd`b0410000 00007ffd`b058a000   C:\WINDOWS\SYSTEM32\drvstore.dll
+ModLoad: 00007ffd`b8010000 00007ffd`b803f000   C:\WINDOWS\SYSTEM32\devobj.dll
+ModLoad: 00007ffd`b7240000 00007ffd`b7276000   C:\WINDOWS\SYSTEM32\ntmarta.dll
+ModLoad: 00007ffd`b86b0000 00007ffd`b8732000   C:\WINDOWS\System32\WINTRUST.dll
+ModLoad: 00007ffd`ba750000 00007ffd`ba770000   C:\WINDOWS\System32\imagehlp.dll
+ModLoad: 00007ffd`a8d20000 00007ffd`af6c8000   C:\WINDOWS\System32\DriverStore\FileRepository\nvmdi.inf_amd64_21e6b42b376b80b2\nvgpucomp64.dll
+ModLoad: 00007ffd`b22e0000 00007ffd`b244a000   C:\Windows\System32\WinTypes.dll
+ModLoad: 00007ffd`924f0000 00007ffd`92529000   C:\WINDOWS\SYSTEM32\rometadata.dll
+ModLoad: 0000019d`c7080000 0000019d`c715d000   C:\Windows\System32\WinMetadata\Windows.Devices.winmd
+ModLoad: 00007ffc`fe520000 00007ffc`ff91d000   F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\VkLayer_khronos_validation.dll
+ModLoad: 00007ffd`7b5a0000 00007ffd`7b70d000   C:\WINDOWS\system32\nvspcap64.dll
+ModLoad: 00007ffd`bac70000 00007ffd`bac78000   C:\WINDOWS\System32\PSAPI.DLL
+ModLoad: 00007ffd`b05e0000 00007ffd`b082c000   C:\WINDOWS\SYSTEM32\dbghelp.dll
+ModLoad: 00007ffd`b5a10000 00007ffd`b5a3e000   C:\WINDOWS\SYSTEM32\dwmapi.dll
+ModLoad: 00007ffd`bac70000 00007ffd`bac78000   C:\WINDOWS\System32\PSAPI.DLL
+ModLoad: 00007ffd`b05e0000 00007ffd`b082c000   C:\WINDOWS\SYSTEM32\dbghelp.dll
+ModLoad: 00007ffd`bac70000 00007ffd`bac78000   C:\WINDOWS\System32\PSAPI.DLL
+ModLoad: 00007ffd`b05e0000 00007ffd`b082c000   C:\WINDOWS\SYSTEM32\dbghelp.dll
+ModLoad: 00007ffd`bac70000 00007ffd`bac78000   C:\WINDOWS\System32\PSAPI.DLL
+ModLoad: 00007ffd`b05e0000 00007ffd`b082c000   C:\WINDOWS\SYSTEM32\dbghelp.dll
+ModLoad: 00007ffc`f8350000 00007ffc`faf83000   C:\WINDOWS\System32\DriverStore\FileRepository\nvmdi.inf_amd64_21e6b42b376b80b2\nvrtum64.dll
+RHISystem: Initializing RHI...
+RHISystem: 	Enumerated physical device: NVIDIA GeForce RTX 3090
+RHISystem: 	Using physical device: NVIDIA GeForce RTX 3090
+ModLoad: 00007ffc`f7800000 00007ffc`f834a000   C:\WINDOWS\System32\DriverStore\FileRepository\nvmdi.inf_amd64_21e6b42b376b80b2\nvcuda64.dll
+ModLoad: 00007ffd`bac70000 00007ffd`bac78000   C:\WINDOWS\System32\PSAPI.DLL
+ModLoad: 00007ffd`b05e0000 00007ffd`b082c000   C:\WINDOWS\SYSTEM32\dbghelp.dll
+ModLoad: 00007ffc`f69a0000 00007ffc`f77fb000   C:\WINDOWS\System32\DriverStore\FileRepository\nvmdi.inf_amd64_21e6b42b376b80b2\nvobjectloader64.dll
+ModLoad: 00007ffd`b9dd0000 00007ffd`b9f2c000   C:\WINDOWS\System32\MSCTF.dll
+ModLoad: 00007ffd`92c00000 00007ffd`92d46000   C:\WINDOWS\SYSTEM32\textinputframework.dll
+ModLoad: 00007ffd`b4ee0000 00007ffd`b500a000   C:\WINDOWS\SYSTEM32\CoreMessaging.dll
+ModLoad: 00007ffd`b1070000 00007ffd`b1355000   C:\WINDOWS\SYSTEM32\CoreUIComponents.dll
+PhysXSystem: PhysXConfiguration was read from settings registry at pointer path "/Amazon/Gems/PhysX5/PhysXSystemConfiguration
+PhysXSystem: Default Scene Configuration was read from settings registry at pointer path "/Amazon/Gems/PhysX5/DefaultSceneConfiguration
+PhysXSystem: Debug::DebugConfiguration was read from settings registry at pointer path "/Amazon/Gems/PhysX5/Debug/PhysXDebugConfiguration
+AssetCatalog: Initializing asset catalog with root "F:\JericoEngine\JericoEngine\Projects\JEEditorFixture\Cache\pc"AssetCatalog: Loaded registry containing 5811 assets.
+AssetCatalog: Initializing asset catalog with root "F:\JericoEngine\JericoEngine\Projects\JEEditorFixture\Cache\pc"AssetCatalog: Loaded registry containing 5811 assets.
+Launcher: CriticalAssetsCompiled
+Launcher: Application is configured to use device local files at F:\JericoEngine\JericoEngine\Projects\JEEditorFixture\Cache\pc
+Launcher: Log and cache files will be written to device storage
+ModLoad: 00007ffc`fe2e0000 00007ffc`fe3fa000   F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\CrySystem.dll
+<03:15:43> BackupNameAttachment=" Build(0) 20 Oct 26 (03 15 43)"  -- used by backup system
+<03:15:43> Log Started at Tue Oct 20 03:15:43 2026
+<03:15:43> Built on Oct 14 2026 22:00:40
+<03:15:43> Running 64 bit Windows version
+<03:15:43> FileVersion: 0.0.0.0
+<03:15:43> ProductVersion: 0.0.0.0
+<03:15:43> Using Microsoft (tm) C++ Standard Library implementation
+<03:15:43> Project Path: F:\JericoEngine\JericoEngine\Projects\JEEditorFixture
+
+<03:15:43> Project Name: JEEditorFixture
+
+<03:15:43> [Warning] Config file game.cfg not found!
+<03:15:43> creating CVarGroups from directory 'Config/CVarGroups' ...
+<03:15:43> Loading Config file user.cfg (F:/JericoEngine/JericoEngine/Projects/JEEditorFixture/Cache/pc/config/user.cfg)
+<03:15:43> GameName: JEEditorFixture
+<03:15:43> BuildTime: Oct 14 2026 22:00:40
+<03:15:43> > g_languageAudio : en-US
+
+<03:15:43> Running without any Audio Engine!
+
+<03:15:43> Audio System is initialized and ready!
+
+<03:15:43> Initializing additional systems
+
+<03:15:43> Using FreeType 2.11.1
+<03:15:43> > r_streamingImagePoolBudgetMb : 0
+
+<03:15:43> > r_streamingImageMipBias : 0
+
+<03:15:43> (RPI system) - System assets initialized
+
+<03:15:43> > r_shadowCascadeExtrusionAmount : -1
+
+<03:15:43> > r_enablePerMeshShaderOptionFlags : false
+
+<03:15:43> > r_meshInstancingEnabled : false
+
+<03:15:43> > r_meshInstancingEnabledForTransparentObjects : false
+
+<03:15:43> > r_meshInstancingBucketSortScatterBatchSize : 512
+
+ModLoad: 00007ffd`990e0000 00007ffd`99169000   C:\WINDOWS\SYSTEM32\nvapi64.dll
+ModLoad: 00007ffd`97bd0000 00007ffd`98162000   C:\WINDOWS\system32\DriverStore\FileRepository\nvmdi.inf_amd64_21e6b42b376b80b2\nvapi64_impl.dll
+ModLoad: 00007ffd`a5590000 00007ffd`a55c7000   C:\WINDOWS\SYSTEM32\WINMM.dll
+ModLoad: 00007ffd`92130000 00007ffd`921bf000   C:\Windows\System32\DispBroker.dll
+ModLoad: 00007ffd`517e0000 00007ffd`518ec000   C:\WINDOWS\SYSTEM32\opengl32.dll
+ModLoad: 00007ffd`8cb70000 00007ffd`8cba9000   C:\WINDOWS\SYSTEM32\GLU32.dll
+ModLoad: 00007ffd`32150000 00007ffd`32877000   C:\WINDOWS\System32\DriverStore\FileRepository\nvmdi.inf_amd64_21e6b42b376b80b2\nvppex.dll
+ModLoad: 00007ffd`b7c20000 00007ffd`b7c86000   C:\WINDOWS\SYSTEM32\WINSTA.dll
+<03:15:44> SetGlobalState 1->3 'INIT'->'LEVEL_LOAD_PREPARE' 1.0 seconds
+<03:15:44> (LevelSystem) - Level system is preparing to load 'Levels/JEEditorFixture/JEEditorFixture.spawnable'
+
+<03:15:44> SetGlobalState 3->4 'LEVEL_LOAD_PREPARE'->'LEVEL_LOAD_START' 0.0 seconds
+<03:15:44> (LevelSystem) - Level system is loading 'Levels/JEEditorFixture/JEEditorFixture.spawnable'
+
+<03:15:44> (Spawnables) - Root spawnable set to 'levels/jeeditorfixture/jeeditorfixture.spawnable' at generation 1.
+
+<03:15:44> SetGlobalState 4->8 'LEVEL_LOAD_START'->'LEVEL_LOAD_PRECACHE' 0.0 seconds
+<03:15:44> SetGlobalState 8->10 'LEVEL_LOAD_PRECACHE'->'LEVEL_LOAD_END' 0.0 seconds
+<03:15:44> Game Level Load Time: [0.0.0.0] Level Levels/JEEditorFixture/JEEditorFixture.spawnable loaded in 0.00 seconds
+<03:15:44> (LevelSystem) - Level load complete: 'Levels/JEEditorFixture/JEEditorFixture.spawnable'
+
+<03:15:44> > LoadLevel : JEEditorFixture
+
+<03:15:44> Executing command from command line: 
+exec F:/JericoEngine/JericoEngine/build/n0-validation/native-corefeature102/analysis-source/dpg-realtime-r33/runtime-two-levels.candidate.cfg
+<03:15:44> [CONSOLE] Executing console command 'exec F:/JericoEngine/JericoEngine/build/n0-validation/native-corefeature102/analysis-source/dpg-realtime-r33/runtime-two-levels.candidate.cfg'
+<03:15:44> Executing console batch file (try game,config,root): "runtime-two-levels.candidate.cfg" found in game/ ...
+<03:15:44> (RHI) - ****************************************************************
+
+<03:15:44> (RHI) -                     Registering vulkan RHI                          
+
+<03:15:44> (RHI) - ****************************************************************
+
+<03:15:45> [Warning] (vkDebugMessage) - [WARNING][Validation] vkCmdDispatch(): the storage image descriptor [VkDescriptorSet 0xa290000000a29[ModulateTexture_PassSrg0_0], Set 0, Binding 1, Index 0, variable "PassSrg_m_inputOutput"] is accessed by a OpTypeImage that has a Format operand Rgba32f (equivalent to VK_FORMAT_R32G32B32A32_SFLOAT) which doesn't match the VkImageView 0x10b000000010b0 format (VK_FORMAT_R16G16B16A16_SFLOAT). Any loads or stores with the variable will produce undefined values to the whole image (not just the texel being accessed).
+Spec information at https://docs.vulkan.org/spec/latest/chapters/textures.html#textures-format-validation
+<03:15:45> [Warning] (vkDebugMessage) - [WARNING][Validation] vkCmdDispatch(): the storage image descriptor [VkDescriptorSet 0x99d000000099d[FastDepthAwareBlurVer_PassSrg0_0], Set 0, Binding 2, Index 0, variable "PassSrg_m_blurTarget"] is accessed by a OpTypeImage that has a Format operand R32f (equivalent to VK_FORMAT_R32_SFLOAT) which doesn't match the VkImageView 0x10a100000010a1 format (VK_FORMAT_R8_UNORM). Any loads or stores with the variable will produce undefined values to the whole image (not just the texel being accessed).
+Spec information at https://docs.vulkan.org/spec/latest/chapters/textures.html#textures-format-validation
+<03:15:45> [Warning] (vkDebugMessage) - [WARNING][Validation] vkCmdDispatch(): the storage image descriptor [VkDescriptorSet 0x9a300000009a3[FastDepthAwareBlurHor_PassSrg0_0], Set 0, Binding 2, Index 0, variable "PassSrg_m_blurTarget"] is accessed by a OpTypeImage that has a Format operand R32f (equivalent to VK_FORMAT_R32_SFLOAT) which doesn't match the VkImageView 0x10a200000010a2 format (VK_FORMAT_R8_UNORM). Any loads or stores with the variable will produce undefined values to the whole image (not just the texel being accessed).
+Spec information at https://docs.vulkan.org/spec/latest/chapters/textures.html#textures-format-validation
+<03:15:45> [Warning] (vkDebugMessage) - [WARNING][Validation] vkCmdDispatch(): the storage image descriptor [VkDescriptorSet 0x9ca00000009ca[ScreenSpaceSubsurfaceScatteringCS_PassSrg0_0], Set 0, Binding 3, Index 0, variable "PassSrg_m_outputTexture"] is accessed by a OpTypeImage that has a Format operand Rgba32f (equivalent to VK_FORMAT_R32G32B32A32_SFLOAT) which doesn't match the VkImageView 0x10b000000010b0 format (VK_FORMAT_R16G16B16A16_SFLOAT). Any loads or stores with the variable will produce undefined values to the whole image (not just the texel being accessed).
+Spec information at https://docs.vulkan.org/spec/latest/chapters/textures.html#textures-format-validation
+<03:15:45> [Warning] (vkDebugMessage) - [WARNING][Validation] vkCmdDispatch(): the storage image descriptor [VkDescriptorSet 0xc210000000c21[BRDFTextureCS_PassSrg0_0], Set 0, Binding 0, Index 0, variable "PassSrg_m_outputTexture"] is accessed by a OpTypeImage that has a Format operand Rg32f (equivalent to VK_FORMAT_R32G32_SFLOAT) which doesn't match the VkImageView 0x10a800000010a8 format (VK_FORMAT_R16G16_SFLOAT). Any loads or stores with the variable will produce undefined values to the whole image (not just the texel being accessed).
+Spec information at https://docs.vulkan.org/spec/latest/chapters/textures.html#textures-format-validation
+<03:15:45> [Warning] (vkDebugMessage) - [WARNING][Validation] vkCmdDispatch(): the storage image descriptor [VkDescriptorSet 0xa1d0000000a1d[SsaoCompute_PassSrg0_0], Set 0, Binding 1, Index 0, variable "PassSrg_m_ssaoOutput"] is accessed by a OpTypeImage that has a Format operand R32f (equivalent to VK_FORMAT_R32_SFLOAT) which doesn't match the VkImageView 0x10b200000010b2 format (VK_FORMAT_R8_UNORM). Any loads or stores with the variable will produce undefined values to the whole image (not just the texel being accessed).
+Spec information at https://docs.vulkan.org/spec/latest/chapters/textures.html#textures-format-validation
+<03:15:45> [Warning] (vkDebugMessage) - [WARNING][Validation] vkCmdDispatch(): the storage image descriptor [VkDescriptorSet 0xad10000000ad1[MotionBlurTileMaxHor_PassSrg0_0], Set 0, Binding 1, Index 0, variable "PassSrg_m_outputVelocity"] is accessed by a OpTypeImage that has a Format operand Rg32f (equivalent to VK_FORMAT_R32G32_SFLOAT) which doesn't match the VkImageView 0x10b800000010b8 format (VK_FORMAT_R16G16_SFLOAT). Any loads or stores with the variable will produce undefined values to the whole image (not just the texel being accessed).
+Spec information at https://docs.vulkan.org/spec/latest/chapters/textures.html#textures-format-validation
+<03:15:45> [Warning] (vkDebugMessage) - [WARNING][Validation] vkCmdDispatch(): the storage image descriptor [VkDescriptorSet 0xa2c0000000a2c[FastDepthAwareBlurVer_PassSrg0_0], Set 0, Binding 2, Index 0, variable "PassSrg_m_blurTarget"] is accessed by a OpTypeImage that has a Format operand R32f (equivalent to VK_FORMAT_R32_SFLOAT) which doesn't match the VkImageView 0x10b300000010b3 format (VK_FORMAT_R8_UNORM). Any loads or stores with the variable will produce undefined values to the whole image (not just the texel being accessed).
+Spec information at https://docs.vulkan.org/spec/latest/chapters/textures.html#textures-format-validation
+<03:15:45> [Warning] (vkDebugMessage) - [WARNING][Validation] vkCmdDispatch(): the storage image descriptor [VkDescriptorSet 0xa320000000a32[FastDepthAwareBlurHor_PassSrg0_0], Set 0, Binding 2, Index 0, variable "PassSrg_m_blurTarget"] is accessed by a OpTypeImage that has a Format operand R32f (equivalent to VK_FORMAT_R32_SFLOAT) which doesn't match the VkImageView 0x10b400000010b4 format (VK_FORMAT_R8_UNORM). Any loads or stores with the variable will produce undefined values to the whole image (not just the texel being accessed).
+Spec information at https://docs.vulkan.org/spec/latest/chapters/textures.html#textures-format-validation
+<03:15:45> [Warning] (vkDebugMessage) - [WARNING][Validation] (Warning - This VUID has now been reported 10 times, which is the duplicate_message_limit value, this will be the last time reporting it).
+vkCmdDispatch(): the storage image descriptor [VkDescriptorSet 0xad40000000ad4[MotionBlurTileMaxVer_PassSrg0_0], Set 0, Binding 1, Index 0, variable "PassSrg_m_outputVelocity"] is accessed by a OpTypeImage that has a Format operand Rg32f (equivalent to VK_FORMAT_R32G32_SFLOAT) which doesn't match the VkImageView 0x10b900000010b9 format (VK_FORMAT_R16G16_SFLOAT). Any loads or stores with the variable will produce undefined values to the whole image (not just the texel being accessed).
+Spec information at https://docs.vulkan.org/spec/latest/chapters/textures.html#textures-format-validation
+<03:15:45> [CONSOLE] Executing console command 'LoadLevel levels/jediffuseprobegridrealtimer33/jediffuseprobegridrealtimer33.spawnable'
+<03:15:45> (LevelSystem) - UnloadLevel Start
+
+<03:15:45> (LevelSystem) - Level unload complete: 'Levels/JEEditorFixture/JEEditorFixture.spawnable'
+
+<03:15:45> (Spawnables) - New root spawnable 'levels/jeeditorfixture/jeeditorfixture.spawnable' assigned (generation: 1).
+
+<03:15:45> (LevelSystem) - UnloadLevel End: 0.2 sec
+
+<03:15:45> SetGlobalState 10->3 'LEVEL_LOAD_END'->'LEVEL_LOAD_PREPARE' 1.3 seconds
+<03:15:45> (LevelSystem) - Level system is preparing to load 'levels/jediffuseprobegridrealtimer33/jediffuseprobegridrealtimer33.spawnable'
+
+<03:15:45> SetGlobalState 3->4 'LEVEL_LOAD_PREPARE'->'LEVEL_LOAD_START' 0.0 seconds
+<03:15:45> (LevelSystem) - Level system is loading 'levels/jediffuseprobegridrealtimer33/jediffuseprobegridrealtimer33.spawnable'
+
+<03:15:45> (Spawnables) - Root spawnable set to 'levels/jediffuseprobegridrealtimer33/jediffuseprobegridrealtimer33.spawnable' at generation 2.
+
+<03:15:45> SetGlobalState 4->8 'LEVEL_LOAD_START'->'LEVEL_LOAD_PRECACHE' 0.0 seconds
+<03:15:45> SetGlobalState 8->10 'LEVEL_LOAD_PRECACHE'->'LEVEL_LOAD_END' 0.0 seconds
+<03:15:45> Game Level Load Time: [0.0.0.0] Level levels/jediffuseprobegridrealtimer33/jediffuseprobegridrealtimer33.spawnable loaded in 0.00 seconds (Chained)
+<03:15:45> (LevelSystem) - Level load complete: 'levels/jediffuseprobegridrealtimer33/jediffuseprobegridrealtimer33.spawnable'
+
+<03:15:45> [CONSOLE] Executing console command 'wait_seconds 5'
+ModLoad: 00007ffd`71680000 00007ffd`7169b000   C:\WINDOWS\SYSTEM32\XInput1_4.dll
+ModLoad: 00007ffd`85410000 00007ffd`855f6000   C:\WINDOWS\SYSTEM32\inputhost.dll
+<03:15:45> (Spawnables) - New root spawnable 'levels/jediffuseprobegridrealtimer33/jediffuseprobegridrealtimer33.spawnable' assigned (generation: 2).
+
+JE_NATIVE_PHASE authored=0 controller=0000031eb4cb50a0 tid=9468
+<03:15:45> (Spawnables) - Entities from new root spawnable 'levels/jeeditorfixture/jeeditorfixture.spawnable' are ready (generation: 1).
+
+<03:15:45> (Spawnables) - Generation 1 of the root spawnable has been released.
+
+<03:15:45> (Spawnables) - Entities from new root spawnable 'levels/jediffuseprobegridrealtimer33/jediffuseprobegridrealtimer33.spawnable' are ready (generation: 2).
+
+*** WARNING: Unable to verify checksum for F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\RenderIntegration.dll
+JE_NATIVE_DPG_BUILD phase=0 pass=0000031eb4c37000 tid=7b64
+Child-SP          RetAddr               : Args to Child                                                           : Call Site
+00000045`f79ffca8 00007ffd`0580d145     : 00000045`f79ffd30 00007ffd`0186abcb 00004404`222971d9 00007ffd`05528860 : RenderFeatures!JE::Render::Features::DiffuseProbeGridRayTracingPass::BuildCommandListInternal [F:\JericoEngine\JericoEngine\Engine\Render\Features\Source\DiffuseProbeGrid\Render\DiffuseProbeGridRayTracingPass.cpp @ 309]
+*** WARNING: Unable to verify checksum for F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_RHI.Public.dll
+00000045`f79ffcb0 00007ffd`05488c04     : 0000031e`a1c949b8 0000031e`a1f03420 0000031e`b4cb6110 0000031e`a1fadbe0 : RenderIntegration!JE::Render::RPI::RenderPass::BuildCommandList+0x55 [F:\JericoEngine\JericoEngine\Engine\Render\Integration\Source\RPI\Public\Pass\RenderPass.cpp @ 315]
+00000045`f79ffcf0 00007ffd`05488e32     : 0000031e`a1f03420 00000000`00000005 0000031e`a1522070 00000000`0000000d : Atom_RHI_Public!AZ::RHI::FrameScheduler::ExecuteContextInternal+0xc4 [F:\JericoEngine\JericoEngine\Gems\Atom\RHI\Code\Source\RHI\FrameScheduler.cpp @ 579]
+*** WARNING: Unable to verify checksum for F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AzCore.dll
+00000045`f79ffd30 00007ffd`0178bf31     : 00000000`00000000 0000031e`a1f03420 00007ffd`00000001 0000031e`b55f71f8 : Atom_RHI_Public!AZ::RHI::FrameScheduler::ExecuteGroupInternal+0x1d2 [F:\JericoEngine\JericoEngine\Gems\Atom\RHI\Code\Source\RHI\FrameScheduler.cpp @ 606]
+00000045`f79ffdd0 00007ffd`0178c2a0     : 0000031e`a15220a8 0000031e`a00c78e0 00000000`00000000 0000031e`a01381c0 : AzCore!AZ::Internal::JobManagerBase::Process+0x61 [F:\JericoEngine\JericoEngine\Code\Framework\AzCore\AzCore\Jobs\Internal\JobManagerBase.cpp @ 30]
+00000045`f79ffe00 00007ffd`0178c6b4     : 0000031e`a15220a8 0000031e`a1522070 0000031e`a01381c0 0000019d`845d30d8 : AzCore!AZ::Internal::JobManagerWorkStealing::ProcessJobsInternal+0x2e0 [F:\JericoEngine\JericoEngine\Code\Framework\AzCore\AzCore\Jobs\Internal\JobManagerWorkStealing.cpp @ 423]
+00000045`f79ffe80 00007ffd`0117396f     : 0000031e`a1a67af0 00000000`00000000 00000000`00000000 00000000`00000000 : AzCore!AZ::Internal::JobManagerWorkStealing::ProcessJobsWorker+0x54 [F:\JericoEngine\JericoEngine\Code\Framework\AzCore\AzCore\Jobs\Internal\JobManagerWorkStealing.cpp @ 315]
+00000045`f79ffeb0 00007ffd`b8e5cd30     : 0000019d`845cfe40 00000000`00000000 00000000`00000000 00000000`00000000 : AzCore!AZStd::Internal::thread_run_function+0xf [F:\JericoEngine\JericoEngine\Code\Framework\AzCore\Platform\Common\WinAPI\AzCore\std\parallel\internal\thread_WinAPI.cpp @ 38]
+00000045`f79ffef0 00007ffd`b93bdda7     : 00000000`00000000 00000000`00000000 00000000`00000000 00000000`00000000 : ucrtbase!wcsrchr+0x150
+00000045`f79fff20 00007ffd`bb2fee4c     : 00000000`00000000 00000000`00000000 000004f0`fffffb30 000004d0`fffffb30 : KERNEL32!BaseThreadInitThunk+0x17
+00000045`f79fff50 00000000`00000000     : 00000000`00000000 00000000`00000000 00000000`00000000 00000000`00000000 : ntdll!RtlUserThreadStart+0x2c
+*** WARNING: Unable to verify checksum for F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\RenderFeatures.dll
+Symbol options are 0xB1335:
+  0x00000001 - SYMOPT_CASE_INSENSITIVE
+  0x00000004 - SYMOPT_DEFERRED_LOADS
+  0x00000010 - SYMOPT_LOAD_LINES
+  0x00000020 - SYMOPT_OMAP_FIND_NEAREST
+  0x00000100 - SYMOPT_NO_UNQUALIFIED_LOADS
+  0x00000200 - SYMOPT_FAIL_CRITICAL_ERRORS
+  0x00001000 - SYMOPT_IGNORE_NT_SYMPATH
+  0x00010000 - SYMOPT_AUTO_PUBLICS
+  0x00020000 - SYMOPT_NO_IMAGE_SEARCH
+  0x00080000 - SYMOPT_NO_PROMPTS
+*** WARNING: Unable to verify checksum for F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\RenderIntegration.dll
+*** WARNING: Unable to verify checksum for F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_RHI_Vulkan.Private.dll
+00007ffd`00b635f0 Atom_RHI_Vulkan_Private!?Submit@CommandList@Vulkan@AZ@@UEAAXAEBUDeviceDispatchRaysItem@RHI@3@I@Z
+*** WARNING: Unable to verify checksum for F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\RenderFeatures.dll
+Symbol options are 0xB1337:
+  0x00000001 - SYMOPT_CASE_INSENSITIVE
+  0x00000002 - SYMOPT_UNDNAME
+  0x00000004 - SYMOPT_DEFERRED_LOADS
+  0x00000010 - SYMOPT_LOAD_LINES
+  0x00000020 - SYMOPT_OMAP_FIND_NEAREST
+  0x00000100 - SYMOPT_NO_UNQUALIFIED_LOADS
+  0x00000200 - SYMOPT_FAIL_CRITICAL_ERRORS
+  0x00001000 - SYMOPT_IGNORE_NT_SYMPATH
+  0x00010000 - SYMOPT_AUTO_PUBLICS
+  0x00020000 - SYMOPT_NO_IMAGE_SEARCH
+  0x00080000 - SYMOPT_NO_PROMPTS
+JE_NATIVE_CPU_SYMBOL count=1 address=00007ffd00b635f0
+ 6 e 00007ffd`00b635f0     0001 (0001)  0:**** *** WARNING: Unable to verify checksum for F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_RHI_Vulkan.Private.dll
+Atom_RHI_Vulkan_Private!AZ::Vulkan::CommandList::Submit "$$><F:/JericoEngine/JericoEngine/build/n0-validation/native-corefeature102/analysis-source/dpg-realtime-r33/native-proof-r2/cpu-submit.commands.txt"
+*** WARNING: Unable to verify checksum for F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\RenderIntegration.dll
+JE_NATIVE_CPU_CANDIDATE phase=0 tid=7b64 buildTid=7b64 list=0000031eb14ae480
+Child-SP          RetAddr               : Args to Child                                                           : Call Site
+00000045`f79ffa28 00007ffd`062557d8     : 00000000`00000001 0000031e`a88cf320 00007ffd`062be538 00000000`00000008 : Atom_RHI_Vulkan_Private!AZ::Vulkan::CommandList::Submit [F:\JericoEngine\JericoEngine\Gems\Atom\RHI\Vulkan\Code\Source\RHI\CommandList.cpp @ 531]
+00000045`f79ffa30 00007ffd`0580d145     : 00000045`f79ffd30 00007ffd`0186abcb 0000031e`b4cb6110 00007ffd`05528860 : RenderFeatures!JE::Render::Features::DiffuseProbeGridRayTracingPass::BuildCommandListInternal+0xcc8 [F:\JericoEngine\JericoEngine\Engine\Render\Features\Source\DiffuseProbeGrid\Render\DiffuseProbeGridRayTracingPass.cpp @ 344]
+*** WARNING: Unable to verify checksum for F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_RHI.Public.dll
+00000045`f79ffcb0 00007ffd`05488c04     : 0000031e`a1c949b8 0000031e`a1f03420 0000031e`b4cb6110 0000031e`a1fadbe0 : RenderIntegration!JE::Render::RPI::RenderPass::BuildCommandList+0x55 [F:\JericoEngine\JericoEngine\Engine\Render\Integration\Source\RPI\Public\Pass\RenderPass.cpp @ 315]
+00000045`f79ffcf0 00007ffd`05488e32     : 0000031e`a1f03420 00000000`00000005 0000031e`a1522070 00000000`0000000d : Atom_RHI_Public!AZ::RHI::FrameScheduler::ExecuteContextInternal+0xc4 [F:\JericoEngine\JericoEngine\Gems\Atom\RHI\Code\Source\RHI\FrameScheduler.cpp @ 579]
+*** WARNING: Unable to verify checksum for F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AzCore.dll
+00000045`f79ffd30 00007ffd`0178bf31     : 00000000`00000000 0000031e`a1f03420 00007ffd`00000001 0000031e`b55f71f8 : Atom_RHI_Public!AZ::RHI::FrameScheduler::ExecuteGroupInternal+0x1d2 [F:\JericoEngine\JericoEngine\Gems\Atom\RHI\Code\Source\RHI\FrameScheduler.cpp @ 606]
+00000045`f79ffdd0 00007ffd`0178c2a0     : 0000031e`a15220a8 0000031e`a00c78e0 00000000`00000000 0000031e`a01381c0 : AzCore!AZ::Internal::JobManagerBase::Process+0x61 [F:\JericoEngine\JericoEngine\Code\Framework\AzCore\AzCore\Jobs\Internal\JobManagerBase.cpp @ 30]
+00000045`f79ffe00 00007ffd`0178c6b4     : 0000031e`a15220a8 0000031e`a1522070 0000031e`a01381c0 0000019d`845d30d8 : AzCore!AZ::Internal::JobManagerWorkStealing::ProcessJobsInternal+0x2e0 [F:\JericoEngine\JericoEngine\Code\Framework\AzCore\AzCore\Jobs\Internal\JobManagerWorkStealing.cpp @ 423]
+00000045`f79ffe80 00007ffd`0117396f     : 0000031e`a1a67af0 00000000`00000000 00000000`00000000 00000000`00000000 : AzCore!AZ::Internal::JobManagerWorkStealing::ProcessJobsWorker+0x54 [F:\JericoEngine\JericoEngine\Code\Framework\AzCore\AzCore\Jobs\Internal\JobManagerWorkStealing.cpp @ 315]
+00000045`f79ffeb0 00007ffd`b8e5cd30     : 0000019d`845cfe40 00000000`00000000 00000000`00000000 00000000`00000000 : AzCore!AZStd::Internal::thread_run_function+0xf [F:\JericoEngine\JericoEngine\Code\Framework\AzCore\Platform\Common\WinAPI\AzCore\std\parallel\internal\thread_WinAPI.cpp @ 38]
+00000045`f79ffef0 00007ffd`b93bdda7     : 00000000`00000000 00000000`00000000 00000000`00000000 00000000`00000000 : ucrtbase!wcsrchr+0x150
+00000045`f79fff20 00007ffd`bb2fee4c     : 00000000`00000000 00000000`00000000 000004f0`fffffb30 000004d0`fffffb30 : KERNEL32!BaseThreadInitThunk+0x17
+00000045`f79fff50 00000000`00000000     : 00000000`00000000 00000000`00000000 00000000`00000000 00000000`00000000 : ntdll!RtlUserThreadStart+0x2c
+   +0x060 m_descriptor          : 
+      +0x000 m_device              : 0x0000031e`a6c03000 AZ::Vulkan::Device
+      +0x008 m_commandPool         : 0x0000031e`abc66de0 AZ::Vulkan::CommandPool
+      +0x010 m_level               : 0 ( VK_COMMAND_BUFFER_LEVEL_PRIMARY )
+   +0x078 m_nativeCommandBuffer : 0x0000031e`ac611850 VkCommandBuffer_T
+   +0x000 m_arguments               : 
+      +0x000 m_type                    : 0 ( Direct )
+      +0x008 m_direct                  : 
+         +0x000 m_width                   : 0x120
+         +0x004 m_height                  : 0xb4
+         +0x008 m_depth                   : 1
+   +0x038 m_rayTracingPipelineState : 0x0000031e`adf42240 AZ::RHI::DeviceRayTracingPipelineState
+   +0x040 m_rayTracingShaderTable   : 0x0000031e`adf4f300 AZ::RHI::DeviceRayTracingShaderTable
+JE_NATIVE_CONTEXT device=0000031ea6c03000 loader=0000019dc72da5a0 rtCB=0000031eac611850 autoCB=0000000000000000 rtPool=0013880000001388 autoPool=0000000000000000
+JE_NATIVE_PFN CmdTraceRaysKHR=00007ffcfe8d54c0
+JE_NATIVE_PFN QueueSubmit=00007ffcfe850140
+JE_NATIVE_PFN QueueWaitIdle=00007ffcfe850420
+JE_NATIVE_PFN BeginCommandBuffer=00007ffcfe5879c0
+JE_NATIVE_PFN EndCommandBuffer=00007ffcfe857130
+JE_NATIVE_PFN ResetCommandBuffer=00007ffcfe8573c0
+JE_NATIVE_PFN ResetCommandPool=00007ffcfe8568e0
+JE_NATIVE_PFN DestroyCommandPool=00007ffcfe856630
+JE_NATIVE_RAYS cb=0000031eac611850 tid=7b64 buildTid=7b64 callable=00000045f79ff680 width=288 height=180 depth=1
+   +0x000 deviceAddress    : 0xcfe8c00
+   +0x008 stride           : 0x40
+   +0x010 size             : 0x40
+   +0x000 deviceAddress    : 0xcfe8d00
+   +0x008 stride           : 0x40
+   +0x010 size             : 0x40
+   +0x000 deviceAddress    : 0xcfe8e00
+   +0x008 stride           : 0x40
+   +0x010 size             : 0x40
+Child-SP          RetAddr               : Args to Child                                                           : Call Site
+00000045`f79ff528 00007ffd`00b640c8     : 0000031e`adf4f3a8 00000000`00000000 00007ffc`fe86a970 0000019d`c72da5a0 : VkLayer_khronos_validation!vkEnumerateInstanceExtensionProperties+0x86680
+00000045`f79ff530 00007ffd`062557d8     : 00000000`00000001 0000031e`a88cf320 00007ffd`062be538 0000031e`a88cf320 : Atom_RHI_Vulkan_Private!AZ::Vulkan::CommandList::Submit+0xad8 [F:\JericoEngine\JericoEngine\Gems\Atom\RHI\Vulkan\Code\Source\RHI\CommandList.cpp @ 711]
+00000045`f79ffa30 00007ffd`0580d145     : 00000045`f79ffd30 00007ffd`0186abcb 0000031e`b4cb6110 00007ffd`05528860 : RenderFeatures!JE::Render::Features::DiffuseProbeGridRayTracingPass::BuildCommandListInternal+0xcc8 [F:\JericoEngine\JericoEngine\Engine\Render\Features\Source\DiffuseProbeGrid\Render\DiffuseProbeGridRayTracingPass.cpp @ 344]
+00000045`f79ffcb0 00007ffd`05488c04     : 0000031e`a1c949b8 0000031e`a1f03420 0000031e`b4cb6110 0000031e`a1fadbe0 : RenderIntegration!JE::Render::RPI::RenderPass::BuildCommandList+0x55 [F:\JericoEngine\JericoEngine\Engine\Render\Integration\Source\RPI\Public\Pass\RenderPass.cpp @ 315]
+00000045`f79ffcf0 00007ffd`05488e32     : 0000031e`a1f03420 00000000`00000005 0000031e`a1522070 00000000`0000000d : Atom_RHI_Public!AZ::RHI::FrameScheduler::ExecuteContextInternal+0xc4 [F:\JericoEngine\JericoEngine\Gems\Atom\RHI\Code\Source\RHI\FrameScheduler.cpp @ 579]
+00000045`f79ffd30 00007ffd`0178bf31     : 00000000`00000000 0000031e`a1f03420 00007ffd`00000001 0000031e`b55f71f8 : Atom_RHI_Public!AZ::RHI::FrameScheduler::ExecuteGroupInternal+0x1d2 [F:\JericoEngine\JericoEngine\Gems\Atom\RHI\Code\Source\RHI\FrameScheduler.cpp @ 606]
+00000045`f79ffdd0 00007ffd`0178c2a0     : 0000031e`a15220a8 0000031e`a00c78e0 00000000`00000000 0000031e`a01381c0 : AzCore!AZ::Internal::JobManagerBase::Process+0x61 [F:\JericoEngine\JericoEngine\Code\Framework\AzCore\AzCore\Jobs\Internal\JobManagerBase.cpp @ 30]
+00000045`f79ffe00 00007ffd`0178c6b4     : 0000031e`a15220a8 0000031e`a1522070 0000031e`a01381c0 0000019d`845d30d8 : AzCore!AZ::Internal::JobManagerWorkStealing::ProcessJobsInternal+0x2e0 [F:\JericoEngine\JericoEngine\Code\Framework\AzCore\AzCore\Jobs\Internal\JobManagerWorkStealing.cpp @ 423]
+00000045`f79ffe80 00007ffd`0117396f     : 0000031e`a1a67af0 00000000`00000000 00000000`00000000 00000000`00000000 : AzCore!AZ::Internal::JobManagerWorkStealing::ProcessJobsWorker+0x54 [F:\JericoEngine\JericoEngine\Code\Framework\AzCore\AzCore\Jobs\Internal\JobManagerWorkStealing.cpp @ 315]
+00000045`f79ffeb0 00007ffd`b8e5cd30     : 0000019d`845cfe40 00000000`00000000 00000000`00000000 00000000`00000000 : AzCore!AZStd::Internal::thread_run_function+0xf [F:\JericoEngine\JericoEngine\Code\Framework\AzCore\Platform\Common\WinAPI\AzCore\std\parallel\internal\thread_WinAPI.cpp @ 38]
+00000045`f79ffef0 00007ffd`b93bdda7     : 00000000`00000000 00000000`00000000 00000000`00000000 00000000`00000000 : ucrtbase!wcsrchr+0x150
+00000045`f79fff20 00007ffd`bb2fee4c     : 00000000`00000000 00000000`00000000 000004f0`fffffb30 000004d0`fffffb30 : KERNEL32!BaseThreadInitThunk+0x17
+00000045`f79fff50 00000000`00000000     : 00000000`00000000 00000000`00000000 00000000`00000000 00000000`00000000 : ntdll!RtlUserThreadStart+0x2c
+JE_NATIVE_END_ENTRY rt cb=0000031eac611850 tid=7b64 return=00007ffd00b5bee7
+JE_NATIVE_END_RETURN rt result=0 tid=7b64 ip=00007ffd00b5bee7
+JE_NATIVE_QUEUE_ENTRY rt cb=0000031eac611850 queue=0000031ea01655d0 state=7 tid=67e8 return=00007ffd00b72c4f
+   +0x000 sType            : 4 ( VK_STRUCTURE_TYPE_SUBMIT_INFO )
+   +0x008 pNext            : (null) 
+   +0x010 waitSemaphoreCount : 0
+   +0x018 pWaitSemaphores  : (null) 
+   +0x020 pWaitDstStageMask : (null) 
+   +0x028 commandBufferCount : 1
+   +0x030 pCommandBuffers  : 0x0000031e`b5cf0178  -> 0x0000031e`ac611850 VkCommandBuffer_T
+   +0x038 signalSemaphoreCount : 0
+   +0x040 pSignalSemaphores : (null) 
+JE_NATIVE_QUEUE_RETURN rt queue=0000031ea01655d0 result=0 tid=67e8 ip=00007ffd00b72c4f
+<03:15:50> [CONSOLE] Executing console command 'je_dpgAmbient'
+<03:15:50> [Warning] (DiffuseProbeGrid) - je_dpgAmbient: this grid is not active; no change.
+<03:15:50> [CONSOLE] Executing console command 'wait_seconds 10'
+<03:15:50> (DiffuseProbeGrid) - je_dpgAmbient entity=205289785594 authored=1 previous=1 applied=1 action=query
+
+<03:16:00> [CONSOLE] Executing console command 'LoadLevel levels/jediffuseprobegridautoselectr33/jediffuseprobegridautoselectr33.spawnable'
+<03:16:00> (LevelSystem) - UnloadLevel Start
+
+<03:16:00> (LevelSystem) - Level unload complete: 'levels/jediffuseprobegridrealtimer33/jediffuseprobegridrealtimer33.spawnable'
+
+<03:16:00> (LevelSystem) - UnloadLevel End: 0.0 sec
+
+<03:16:00> SetGlobalState 10->3 'LEVEL_LOAD_END'->'LEVEL_LOAD_PREPARE' 15.0 seconds
+<03:16:00> (LevelSystem) - Level system is preparing to load 'levels/jediffuseprobegridautoselectr33/jediffuseprobegridautoselectr33.spawnable'
+
+<03:16:00> SetGlobalState 3->4 'LEVEL_LOAD_PREPARE'->'LEVEL_LOAD_START' 0.0 seconds
+<03:16:00> (LevelSystem) - Level system is loading 'levels/jediffuseprobegridautoselectr33/jediffuseprobegridautoselectr33.spawnable'
+
+<03:16:00> (Spawnables) - Root spawnable set to 'levels/jediffuseprobegridautoselectr33/jediffuseprobegridautoselectr33.spawnable' at generation 3.
+
+<03:16:00> SetGlobalState 4->8 'LEVEL_LOAD_START'->'LEVEL_LOAD_PRECACHE' 0.0 seconds
+<03:16:00> SetGlobalState 8->10 'LEVEL_LOAD_PRECACHE'->'LEVEL_LOAD_END' 0.0 seconds
+<03:16:00> Game Level Load Time: [0.0.0.0] Level levels/jediffuseprobegridautoselectr33/jediffuseprobegridautoselectr33.spawnable loaded in 0.00 seconds (Chained)
+<03:16:00> (LevelSystem) - Level load complete: 'levels/jediffuseprobegridautoselectr33/jediffuseprobegridautoselectr33.spawnable'
+
+<03:16:00> [CONSOLE] Executing console command 'wait_seconds 5'
+<03:16:00> (Spawnables) - Generation 2 of the root spawnable has been released.
+
+<03:16:00> (Spawnables) - New root spawnable 'levels/jediffuseprobegridautoselectr33/jediffuseprobegridautoselectr33.spawnable' assigned (generation: 3).
+
+JE_NATIVE_PHASE authored=2 controller=0000031eb4cb5fa0 tid=9468
+<03:16:00> (Spawnables) - Entities from new root spawnable 'levels/jediffuseprobegridautoselectr33/jediffuseprobegridautoselectr33.spawnable' are ready (generation: 3).
+
+JE_NATIVE_DPG_BUILD phase=2 pass=0000031eb4c37000 tid=6ef4
+Child-SP          RetAddr               : Args to Child                                                           : Call Site
+00000045`f81ffb28 00007ffd`0580d145     : 00000045`f81ffbb0 00007ffd`0186abcb 00004404`2da97059 00007ffd`05528860 : RenderFeatures!JE::Render::Features::DiffuseProbeGridRayTracingPass::BuildCommandListInternal [F:\JericoEngine\JericoEngine\Engine\Render\Features\Source\DiffuseProbeGrid\Render\DiffuseProbeGridRayTracingPass.cpp @ 309]
+00000045`f81ffb30 00007ffd`05488c04     : 0000031e`a1c949b8 0000031e`a1f03420 0000031e`b4cbe310 0000031e`a1fadbe0 : RenderIntegration!JE::Render::RPI::RenderPass::BuildCommandList+0x55 [F:\JericoEngine\JericoEngine\Engine\Render\Integration\Source\RPI\Public\Pass\RenderPass.cpp @ 315]
+00000045`f81ffb70 00007ffd`05488e32     : 0000031e`a1f03420 00000000`00000005 0000031e`a15223f0 00000000`0000000d : Atom_RHI_Public!AZ::RHI::FrameScheduler::ExecuteContextInternal+0xc4 [F:\JericoEngine\JericoEngine\Gems\Atom\RHI\Code\Source\RHI\FrameScheduler.cpp @ 579]
+00000045`f81ffbb0 00007ffd`0178bf31     : 00000000`00000000 0000031e`a1f03420 00007ffd`00000001 0000031e`a937a118 : Atom_RHI_Public!AZ::RHI::FrameScheduler::ExecuteGroupInternal+0x1d2 [F:\JericoEngine\JericoEngine\Gems\Atom\RHI\Code\Source\RHI\FrameScheduler.cpp @ 606]
+00000045`f81ffc50 00007ffd`0178c2a0     : 0000031e`a1522428 0000031e`a00c78e0 00000000`00000000 0000031e`a01381c0 : AzCore!AZ::Internal::JobManagerBase::Process+0x61 [F:\JericoEngine\JericoEngine\Code\Framework\AzCore\AzCore\Jobs\Internal\JobManagerBase.cpp @ 30]
+00000045`f81ffc80 00007ffd`0178c6b4     : 0000031e`a1522428 0000031e`a15223f0 0000031e`a01381c0 0000019d`845e3778 : AzCore!AZ::Internal::JobManagerWorkStealing::ProcessJobsInternal+0x2e0 [F:\JericoEngine\JericoEngine\Code\Framework\AzCore\AzCore\Jobs\Internal\JobManagerWorkStealing.cpp @ 423]
+00000045`f81ffd00 00007ffd`0117396f     : 0000031e`a1a67df0 00000000`00000000 00000000`00000000 00000000`00000000 : AzCore!AZ::Internal::JobManagerWorkStealing::ProcessJobsWorker+0x54 [F:\JericoEngine\JericoEngine\Code\Framework\AzCore\AzCore\Jobs\Internal\JobManagerWorkStealing.cpp @ 315]
+00000045`f81ffd30 00007ffd`b8e5cd30     : 0000019d`845e0050 00000000`00000000 00000000`00000000 00000000`00000000 : AzCore!AZStd::Internal::thread_run_function+0xf [F:\JericoEngine\JericoEngine\Code\Framework\AzCore\Platform\Common\WinAPI\AzCore\std\parallel\internal\thread_WinAPI.cpp @ 38]
+00000045`f81ffd70 00007ffd`b93bdda7     : 00000000`00000000 00000000`00000000 00000000`00000000 00000000`00000000 : ucrtbase!wcsrchr+0x150
+00000045`f81ffda0 00007ffd`bb2fee4c     : 00000000`00000000 00000000`00000000 000004f0`fffffb30 000004d0`fffffb30 : KERNEL32!BaseThreadInitThunk+0x17
+00000045`f81ffdd0 00000000`00000000     : 00000000`00000000 00000000`00000000 00000000`00000000 00000000`00000000 : ntdll!RtlUserThreadStart+0x2c
+*** WARNING: Unable to verify checksum for F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\RenderFeatures.dll
+Symbol options are 0xB1335:
+  0x00000001 - SYMOPT_CASE_INSENSITIVE
+  0x00000004 - SYMOPT_DEFERRED_LOADS
+  0x00000010 - SYMOPT_LOAD_LINES
+  0x00000020 - SYMOPT_OMAP_FIND_NEAREST
+  0x00000100 - SYMOPT_NO_UNQUALIFIED_LOADS
+  0x00000200 - SYMOPT_FAIL_CRITICAL_ERRORS
+  0x00001000 - SYMOPT_IGNORE_NT_SYMPATH
+  0x00010000 - SYMOPT_AUTO_PUBLICS
+  0x00020000 - SYMOPT_NO_IMAGE_SEARCH
+  0x00080000 - SYMOPT_NO_PROMPTS
+*** WARNING: Unable to verify checksum for F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\RenderIntegration.dll
+*** WARNING: Unable to verify checksum for F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_RHI_Vulkan.Private.dll
+00007ffd`00b635f0 Atom_RHI_Vulkan_Private!?Submit@CommandList@Vulkan@AZ@@UEAAXAEBUDeviceDispatchRaysItem@RHI@3@I@Z
+*** WARNING: Unable to verify checksum for F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\RenderFeatures.dll
+Symbol options are 0xB1337:
+  0x00000001 - SYMOPT_CASE_INSENSITIVE
+  0x00000002 - SYMOPT_UNDNAME
+  0x00000004 - SYMOPT_DEFERRED_LOADS
+  0x00000010 - SYMOPT_LOAD_LINES
+  0x00000020 - SYMOPT_OMAP_FIND_NEAREST
+  0x00000100 - SYMOPT_NO_UNQUALIFIED_LOADS
+  0x00000200 - SYMOPT_FAIL_CRITICAL_ERRORS
+  0x00001000 - SYMOPT_IGNORE_NT_SYMPATH
+  0x00010000 - SYMOPT_AUTO_PUBLICS
+  0x00020000 - SYMOPT_NO_IMAGE_SEARCH
+  0x00080000 - SYMOPT_NO_PROMPTS
+JE_NATIVE_CPU_SYMBOL count=1 address=00007ffd00b635f0
+breakpoint 6 exists, redefining
+ 6 e 00007ffd`00b635f0     0001 (0001)  0:**** *** WARNING: Unable to verify checksum for F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_RHI_Vulkan.Private.dll
+Atom_RHI_Vulkan_Private!AZ::Vulkan::CommandList::Submit "$$><F:/JericoEngine/JericoEngine/build/n0-validation/native-corefeature102/analysis-source/dpg-realtime-r33/native-proof-r2/cpu-submit.commands.txt"
+*** WARNING: Unable to verify checksum for F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\RenderIntegration.dll
+JE_NATIVE_CPU_CANDIDATE phase=2 tid=6ef4 buildTid=6ef4 list=0000031eb46c3080
+Child-SP          RetAddr               : Args to Child                                                           : Call Site
+00000045`f81ff8a8 00007ffd`062557d8     : 00000000`00000001 0000031e`a88cf320 00007ffd`062be538 00000000`00000008 : Atom_RHI_Vulkan_Private!AZ::Vulkan::CommandList::Submit [F:\JericoEngine\JericoEngine\Gems\Atom\RHI\Vulkan\Code\Source\RHI\CommandList.cpp @ 531]
+00000045`f81ff8b0 00007ffd`0580d145     : 00000045`f81ffbb0 00007ffd`0186abcb 0000031e`b4cbe310 00007ffd`05528860 : RenderFeatures!JE::Render::Features::DiffuseProbeGridRayTracingPass::BuildCommandListInternal+0xcc8 [F:\JericoEngine\JericoEngine\Engine\Render\Features\Source\DiffuseProbeGrid\Render\DiffuseProbeGridRayTracingPass.cpp @ 344]
+*** WARNING: Unable to verify checksum for F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\Atom_RHI.Public.dll
+00000045`f81ffb30 00007ffd`05488c04     : 0000031e`a1c949b8 0000031e`a1f03420 0000031e`b4cbe310 0000031e`a1fadbe0 : RenderIntegration!JE::Render::RPI::RenderPass::BuildCommandList+0x55 [F:\JericoEngine\JericoEngine\Engine\Render\Integration\Source\RPI\Public\Pass\RenderPass.cpp @ 315]
+00000045`f81ffb70 00007ffd`05488e32     : 0000031e`a1f03420 00000000`00000005 0000031e`a15223f0 00000000`0000000d : Atom_RHI_Public!AZ::RHI::FrameScheduler::ExecuteContextInternal+0xc4 [F:\JericoEngine\JericoEngine\Gems\Atom\RHI\Code\Source\RHI\FrameScheduler.cpp @ 579]
+*** WARNING: Unable to verify checksum for F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile\AzCore.dll
+00000045`f81ffbb0 00007ffd`0178bf31     : 00000000`00000000 0000031e`a1f03420 00007ffd`00000001 0000031e`a937a118 : Atom_RHI_Public!AZ::RHI::FrameScheduler::ExecuteGroupInternal+0x1d2 [F:\JericoEngine\JericoEngine\Gems\Atom\RHI\Code\Source\RHI\FrameScheduler.cpp @ 606]
+00000045`f81ffc50 00007ffd`0178c2a0     : 0000031e`a1522428 0000031e`a00c78e0 00000000`00000000 0000031e`a01381c0 : AzCore!AZ::Internal::JobManagerBase::Process+0x61 [F:\JericoEngine\JericoEngine\Code\Framework\AzCore\AzCore\Jobs\Internal\JobManagerBase.cpp @ 30]
+00000045`f81ffc80 00007ffd`0178c6b4     : 0000031e`a1522428 0000031e`a15223f0 0000031e`a01381c0 0000019d`845e3778 : AzCore!AZ::Internal::JobManagerWorkStealing::ProcessJobsInternal+0x2e0 [F:\JericoEngine\JericoEngine\Code\Framework\AzCore\AzCore\Jobs\Internal\JobManagerWorkStealing.cpp @ 423]
+00000045`f81ffd00 00007ffd`0117396f     : 0000031e`a1a67df0 00000000`00000000 00000000`00000000 00000000`00000000 : AzCore!AZ::Internal::JobManagerWorkStealing::ProcessJobsWorker+0x54 [F:\JericoEngine\JericoEngine\Code\Framework\AzCore\AzCore\Jobs\Internal\JobManagerWorkStealing.cpp @ 315]
+00000045`f81ffd30 00007ffd`b8e5cd30     : 0000019d`845e0050 00000000`00000000 00000000`00000000 00000000`00000000 : AzCore!AZStd::Internal::thread_run_function+0xf [F:\JericoEngine\JericoEngine\Code\Framework\AzCore\Platform\Common\WinAPI\AzCore\std\parallel\internal\thread_WinAPI.cpp @ 38]
+00000045`f81ffd70 00007ffd`b93bdda7     : 00000000`00000000 00000000`00000000 00000000`00000000 00000000`00000000 : ucrtbase!wcsrchr+0x150
+00000045`f81ffda0 00007ffd`bb2fee4c     : 00000000`00000000 00000000`00000000 000004f0`fffffb30 000004d0`fffffb30 : KERNEL32!BaseThreadInitThunk+0x17
+00000045`f81ffdd0 00000000`00000000     : 00000000`00000000 00000000`00000000 00000000`00000000 00000000`00000000 : ntdll!RtlUserThreadStart+0x2c
+   +0x060 m_descriptor          : 
+      +0x000 m_device              : 0x0000031e`a6c03000 AZ::Vulkan::Device
+      +0x008 m_commandPool         : 0x0000031e`b1426ac0 AZ::Vulkan::CommandPool
+      +0x010 m_level               : 0 ( VK_COMMAND_BUFFER_LEVEL_PRIMARY )
+   +0x078 m_nativeCommandBuffer : 0x0000031e`b0ab1050 VkCommandBuffer_T
+   +0x000 m_arguments               : 
+      +0x000 m_type                    : 0 ( Direct )
+      +0x008 m_direct                  : 
+         +0x000 m_width                   : 0x120
+         +0x004 m_height                  : 0xb4
+         +0x008 m_depth                   : 1
+   +0x038 m_rayTracingPipelineState : 0x0000031e`adf42240 AZ::RHI::DeviceRayTracingPipelineState
+   +0x040 m_rayTracingShaderTable   : 0x0000031e`adf4f300 AZ::RHI::DeviceRayTracingShaderTable
+JE_NATIVE_CONTEXT device=0000031ea6c03000 loader=0000019dc72da5a0 rtCB=0000031eac611850 autoCB=0000031eb0ab1050 rtPool=0013880000001388 autoPool=0013840000001384
+JE_NATIVE_PFN CmdTraceRaysKHR=00007ffcfe8d54c0
+breakpoint 7 exists, redefining
+JE_NATIVE_PFN QueueSubmit=00007ffcfe850140
+breakpoint 8 exists, redefining
+JE_NATIVE_PFN QueueWaitIdle=00007ffcfe850420
+breakpoint 9 exists, redefining
+JE_NATIVE_PFN BeginCommandBuffer=00007ffcfe5879c0
+breakpoint 10 exists, redefining
+JE_NATIVE_PFN EndCommandBuffer=00007ffcfe857130
+breakpoint 11 exists, redefining
+JE_NATIVE_PFN ResetCommandBuffer=00007ffcfe8573c0
+breakpoint 12 exists, redefining
+JE_NATIVE_PFN ResetCommandPool=00007ffcfe8568e0
+breakpoint 13 exists, redefining
+JE_NATIVE_PFN DestroyCommandPool=00007ffcfe856630
+breakpoint 14 exists, redefining
+JE_NATIVE_RAYS cb=0000031eb0ab1050 tid=6ef4 buildTid=6ef4 callable=00000045f81ff500 width=288 height=180 depth=1
+   +0x000 deviceAddress    : 0xcfeb600
+   +0x008 stride           : 0x40
+   +0x010 size             : 0x40
+   +0x000 deviceAddress    : 0xcfeb700
+   +0x008 stride           : 0x40
+   +0x010 size             : 0x40
+   +0x000 deviceAddress    : 0xcfeb800
+   +0x008 stride           : 0x40
+   +0x010 size             : 0x40
+Child-SP          RetAddr               : Args to Child                                                           : Call Site
+00000045`f81ff3a8 00007ffd`00b640c8     : 0000031e`adf4f3a8 00000000`00000000 00007ffc`fe86a970 0000019d`c72da5a0 : VkLayer_khronos_validation!vkEnumerateInstanceExtensionProperties+0x86680
+00000045`f81ff3b0 00007ffd`062557d8     : 00000000`00000001 0000031e`a88cf320 00007ffd`062be538 0000031e`a88cf320 : Atom_RHI_Vulkan_Private!AZ::Vulkan::CommandList::Submit+0xad8 [F:\JericoEngine\JericoEngine\Gems\Atom\RHI\Vulkan\Code\Source\RHI\CommandList.cpp @ 711]
+00000045`f81ff8b0 00007ffd`0580d145     : 00000045`f81ffbb0 00007ffd`0186abcb 0000031e`b4cbe310 00007ffd`05528860 : RenderFeatures!JE::Render::Features::DiffuseProbeGridRayTracingPass::BuildCommandListInternal+0xcc8 [F:\JericoEngine\JericoEngine\Engine\Render\Features\Source\DiffuseProbeGrid\Render\DiffuseProbeGridRayTracingPass.cpp @ 344]
+00000045`f81ffb30 00007ffd`05488c04     : 0000031e`a1c949b8 0000031e`a1f03420 0000031e`b4cbe310 0000031e`a1fadbe0 : RenderIntegration!JE::Render::RPI::RenderPass::BuildCommandList+0x55 [F:\JericoEngine\JericoEngine\Engine\Render\Integration\Source\RPI\Public\Pass\RenderPass.cpp @ 315]
+00000045`f81ffb70 00007ffd`05488e32     : 0000031e`a1f03420 00000000`00000005 0000031e`a15223f0 00000000`0000000d : Atom_RHI_Public!AZ::RHI::FrameScheduler::ExecuteContextInternal+0xc4 [F:\JericoEngine\JericoEngine\Gems\Atom\RHI\Code\Source\RHI\FrameScheduler.cpp @ 579]
+00000045`f81ffbb0 00007ffd`0178bf31     : 00000000`00000000 0000031e`a1f03420 00007ffd`00000001 0000031e`a937a118 : Atom_RHI_Public!AZ::RHI::FrameScheduler::ExecuteGroupInternal+0x1d2 [F:\JericoEngine\JericoEngine\Gems\Atom\RHI\Code\Source\RHI\FrameScheduler.cpp @ 606]
+00000045`f81ffc50 00007ffd`0178c2a0     : 0000031e`a1522428 0000031e`a00c78e0 00000000`00000000 0000031e`a01381c0 : AzCore!AZ::Internal::JobManagerBase::Process+0x61 [F:\JericoEngine\JericoEngine\Code\Framework\AzCore\AzCore\Jobs\Internal\JobManagerBase.cpp @ 30]
+00000045`f81ffc80 00007ffd`0178c6b4     : 0000031e`a1522428 0000031e`a15223f0 0000031e`a01381c0 0000019d`845e3778 : AzCore!AZ::Internal::JobManagerWorkStealing::ProcessJobsInternal+0x2e0 [F:\JericoEngine\JericoEngine\Code\Framework\AzCore\AzCore\Jobs\Internal\JobManagerWorkStealing.cpp @ 423]
+00000045`f81ffd00 00007ffd`0117396f     : 0000031e`a1a67df0 00000000`00000000 00000000`00000000 00000000`00000000 : AzCore!AZ::Internal::JobManagerWorkStealing::ProcessJobsWorker+0x54 [F:\JericoEngine\JericoEngine\Code\Framework\AzCore\AzCore\Jobs\Internal\JobManagerWorkStealing.cpp @ 315]
+00000045`f81ffd30 00007ffd`b8e5cd30     : 0000019d`845e0050 00000000`00000000 00000000`00000000 00000000`00000000 : AzCore!AZStd::Internal::thread_run_function+0xf [F:\JericoEngine\JericoEngine\Code\Framework\AzCore\Platform\Common\WinAPI\AzCore\std\parallel\internal\thread_WinAPI.cpp @ 38]
+00000045`f81ffd70 00007ffd`b93bdda7     : 00000000`00000000 00000000`00000000 00000000`00000000 00000000`00000000 : ucrtbase!wcsrchr+0x150
+00000045`f81ffda0 00007ffd`bb2fee4c     : 00000000`00000000 00000000`00000000 000004f0`fffffb30 000004d0`fffffb30 : KERNEL32!BaseThreadInitThunk+0x17
+00000045`f81ffdd0 00000000`00000000     : 00000000`00000000 00000000`00000000 00000000`00000000 00000000`00000000 : ntdll!RtlUserThreadStart+0x2c
+JE_NATIVE_END_ENTRY auto cb=0000031eb0ab1050 tid=6ef4 return=00007ffd00b5bee7
+JE_NATIVE_END_ENTRY auto cb=0000031eb0ab1050 tid=6ef4 return=00007ffd00b5bee7
+breakpoint 16 exists, redefining
+JE_NATIVE_END_RETURN auto result=0 tid=6ef4 ip=00007ffd00b5bee7
+JE_NATIVE_QUEUE_ENTRY auto cb=0000031eb0ab1050 queue=0000031ea01655d0 state=7 tid=67e8 return=00007ffd00b72c4f
+   +0x000 sType            : 4 ( VK_STRUCTURE_TYPE_SUBMIT_INFO )
+   +0x008 pNext            : (null) 
+   +0x010 waitSemaphoreCount : 0
+   +0x018 pWaitSemaphores  : (null) 
+   +0x020 pWaitDstStageMask : (null) 
+   +0x028 commandBufferCount : 1
+   +0x030 pCommandBuffers  : 0x0000031e`b5cf0f50  -> 0x0000031e`b0ab1050 VkCommandBuffer_T
+   +0x038 signalSemaphoreCount : 0
+   +0x040 pSignalSemaphores : (null) 
+JE_NATIVE_QUEUE_RETURN auto queue=0000031ea01655d0 result=0 tid=67e8 ip=00007ffd00b72c4f
+<03:16:05> [CONSOLE] Executing console command 'je_dpgAmbient'
+<03:16:05> [Warning] (DiffuseProbeGrid) - je_dpgAmbient: this grid is not active; no change.
+<03:16:05> [CONSOLE] Executing console command 'wait_seconds 10'
+<03:16:05> (DiffuseProbeGrid) - je_dpgAmbient entity=274009262330 authored=1 previous=1 applied=1 action=query
+
+<03:16:15> [CONSOLE] Executing console command 'quit'
+<03:16:15> CSystem::Quit invoked from thread 0000000000009468 (main is 0000000000009468)
+<03:16:15> CSystem::Quit invoked from thread 0000000000009468 (main is 0000000000009468)
+<03:16:15> System Shutdown
+<03:16:15> (LevelSystem) - UnloadLevel Start
+
+<03:16:15> (LevelSystem) - Level unload complete: 'levels/jediffuseprobegridautoselectr33/jediffuseprobegridautoselectr33.spawnable'
+
+<03:16:15> (LevelSystem) - UnloadLevel End: 0.0 sec
+
+RPI: 
+==================================================================
+RPI: Trace::Warning
+ F:\JericoEngine\JericoEngine\Engine\Render\Integration\Source\RPI\Public\DynamicDraw\DynamicDrawContext.cpp(216): 'void __cdecl JE::Render::RPI::DynamicDrawContext::EndInit(void)'
+RPI: Failed to initialize PipelineState for DynamicDrawContext
+RPI: ==================================================================
+JE_NATIVE_IDLE_ENTRY mask=3 queue=0000031ea01655d0 tid=67e8 return=00007ffd00b72ed0
+JE_NATIVE_IDLE_RETURN both result=0 tid=67e8 ip=00007ffd00b72ed0
+JE_NATIVE_STATES rt=63 auto=63
+Streamer: Storage drive (F) destroyed.
+Streamer: Storage drive (C) destroyed.
+Unable to remove breakpoint 9 at 00007ffc`fe850420, Win32 error 0n998
+    "Se realizó un acceso no válido a la ubicación de memoria."
+The breakpoint was set with BP.  If you want breakpoints
+to track module load/unload state you must use BU.
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\atlmfc.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\concurrency.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\cpp_rest.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\ObjectiveC.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\stl.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Windows.Data.Json.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Windows.Devices.Geolocation.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Windows.Devices.Sensors.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\Windows.Media.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\windows.natvis'
+NatVis script unloaded from 'C:\Program Files\WindowsApps\Microsoft.WinDbg_1.2606.22001.0_x64__8wekyb3d8bbwe\amd64\Visualizers\winrt.natvis'

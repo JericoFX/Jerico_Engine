@@ -1,0 +1,38 @@
+/*
+ * Copyright (c) Contributors to the Open 3D Engine Project.
+ * For complete copyright and license terms please see the LICENSE at the root of this distribution.
+ *
+ * SPDX-License-Identifier: Apache-2.0 OR MIT
+ *
+ */
+#pragma once
+
+#include <JE/Render/RPI/Public/Pass/Pass.h>
+#include <JE/Render/RPI/Public/Pass/FullscreenTrianglePass.h>
+
+namespace JE::Render
+{
+    namespace Features
+    {
+        //! This pass downsamples the scene for use by the DiffuseProbeGridRenderPass.
+        class DiffuseProbeGridDownsamplePass
+            : public JE::Render::RPI::FullscreenTrianglePass
+        {
+            using Base = JE::Render::RPI::FullscreenTrianglePass;
+            AZ_RPI_PASS(DiffuseProbeGridDownsamplePass);
+
+        public:
+            AZ_RTTI_WITH_NAME(DiffuseProbeGridDownsamplePass, "Render::DiffuseProbeGridDownsamplePass", "{B3331B68-F974-44D6-806B-2CFFB4B6B563}", Base);
+            AZ_CLASS_ALLOCATOR(JE::Render::Features::DiffuseProbeGridDownsamplePass, AZ::SystemAllocator);
+
+            //! Creates a new pass without a PassTemplate
+            static JE::Render::RPI::Ptr<DiffuseProbeGridDownsamplePass> Create(const JE::Render::RPI::PassDescriptor& descriptor);
+
+        private:
+            explicit DiffuseProbeGridDownsamplePass(const JE::Render::RPI::PassDescriptor& descriptor);
+
+            // Pass behavior overrides...
+            bool IsEnabled() const override;
+        };
+    }   // namespace RPI
+}   // namespace JE::Render

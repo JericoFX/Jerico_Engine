@@ -20,7 +20,7 @@ struct SpdGlobalAtomicBuffer
 ShaderResourceGroup PassSrg : SRG_PerPass
 {
     Texture2D<float4> m_inputImage;
-    RWTexture2D<float4> m_imageDestination[13];
+    [[vk::image_format("rgba16f")]] RWTexture2D<float4> m_imageDestination[13];
     [[verbatim("globallycoherent")]] RWTexture2D<float4> m_mip6;
     [[verbatim("globallycoherent")]] RWStructuredBuffer<SpdGlobalAtomicBuffer> m_globalAtomic;
 

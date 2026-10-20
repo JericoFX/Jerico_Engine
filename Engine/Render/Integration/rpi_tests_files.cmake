@@ -7,6 +7,7 @@
 #
 
 set(FILES
+    ${LY_ROOT_FOLDER}/Engine/Render/Features/Tests/DiffuseProbeGridTests.cpp
     Tests/RPI/Buffer/BufferTests.cpp
     Tests/RPI/Common/AssetManagerTestFixture.cpp
     Tests/RPI/Common/AssetManagerTestFixture.h

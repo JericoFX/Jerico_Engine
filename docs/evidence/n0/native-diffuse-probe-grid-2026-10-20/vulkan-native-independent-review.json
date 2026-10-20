@@ -1,0 +1,141 @@
+{
+  "schema": "dpg-r43-native-chain-review",
+  "decision": "FOCAL_CHAIN_OBSERVED; PARENT_ACCEPTANCE_REQUIRED",
+  "log": {
+    "path": "F:/JericoEngine/JericoEngine/build/n0-validation/native-corefeature102/runtime-dpg-native-proof-r43-attempt1/cdb.log",
+    "sha256": "07F3EECE95FB6FE5345D345F08E93CAFF77D302C1800680E12BB65C95672474C",
+    "lines": 703
+  },
+  "scriptPinsVerified": 22,
+  "chains": [
+    {
+      "mode": "RealTime",
+      "authored": 0,
+      "phaseLine": 369,
+      "buildLine": 377,
+      "cpuLines": "424-453",
+      "raysLines": "462-485",
+      "cb": "0x31eac611850",
+      "buildAndRaysTid": "0x7b64",
+      "level": 0,
+      "cpuPipeline": "0x31eadf42240",
+      "cpuShaderTable": "0x31eadf4f300",
+      "dimensions": [
+        288,
+        180,
+        1
+      ],
+      "nativeSbt": {
+        "raygen": "0xcfe8c00",
+        "miss": "0xcfe8d00",
+        "hit": "0xcfe8e00",
+        "eachStride": 64,
+        "eachSize": 64
+      },
+      "endEntry": 486,
+      "endReturn": 487,
+      "queueEntry": 488,
+      "queueReturn": 498
+    },
+    {
+      "mode": "AutoSelect",
+      "authored": 2,
+      "phaseLine": 529,
+      "buildLine": 532,
+      "cpuLines": "578-607",
+      "raysLines": "624-647",
+      "cb": "0x31eb0ab1050",
+      "buildAndRaysTid": "0x6ef4",
+      "level": 0,
+      "cpuPipeline": "0x31eadf42240",
+      "cpuShaderTable": "0x31eadf4f300",
+      "dimensions": [
+        288,
+        180,
+        1
+      ],
+      "nativeSbt": {
+        "raygen": "0xcfeb600",
+        "miss": "0xcfeb700",
+        "hit": "0xcfeb800",
+        "eachStride": 64,
+        "eachSize": 64
+      },
+      "endEntries": [
+        648,
+        649
+      ],
+      "endReturn": 651,
+      "queueEntry": 652,
+      "queueReturn": 662
+    }
+  ],
+  "nativeJoin": "Both CPU and native Rays stacks contain DPG BuildCommandListInternal:344 -> Vulkan CommandList::Submit. Native PFN is read from current LoaderContext, not guessed from nearest exported validation symbol. Native dimensions equal CPU Direct arguments; three observed SBT regions are nonzero and stride/size64. Callable pointer logged but its struct was not dumped.",
+  "queue": {
+    "handle": "0x31ea01655d0",
+    "submitTid": "0x67e8",
+    "observedSubmitCount": 1,
+    "observedCommandBufferCount": 1,
+    "submitInfoLines": [
+      "489-497",
+      "653-661"
+    ],
+    "returnResults": [
+      0,
+      0
+    ],
+    "returnAddress": "0x7ffd00b72c4f",
+    "idleEntryLine": 684,
+    "idleReturnLine": 685,
+    "idleMask": 3,
+    "idleResult": 0,
+    "idleTid": "0x67e8",
+    "idleReturnAddress": "0x7ffd00b72ed0",
+    "finalStateLine": 686,
+    "states": [
+      63,
+      63
+    ]
+  },
+  "generation": {
+    "installedBeforeRays": [
+      "454-461",
+      "608-623"
+    ],
+    "monitorFields": "BeginCommandBuffer, ResetCommandBuffer, ResetCommandPool, DestroyCommandPool from current context; matching CB or current native pool invalidates state before accepted submit.",
+    "confirmation": "Installation commands complete without errors; phase2 explicitly reports existing BP10/12/13/14 redefining, proving initial BP objects existed. End and Queue return handlers disable these only after accepted submit. No cap/epoch marker; final states have no invalid/error bit.",
+    "limit": "No reset was forced or positively observed. This proves absence of a matching invalidating event under the armed current-PFN monitor, not an independent test of every invalidation callback. No new forced reset is required for this observational sample."
+  },
+  "anomalies": [
+    {
+      "lines": "648-651",
+      "fact": "Two identical Auto End entries precede one successful current-thread return; second installation reports BP16 redefining.",
+      "interpretation": "Duplicate entry observation, not two independently proved successful End calls. Both entries carry identical CB/tid/return address; successful return is before accepted submission. Cause of duplicate entry is not determined from this raw log."
+    },
+    {
+      "lines": "689-693",
+      "fact": "CDB cannot remove BP9 at the observed QueueWaitIdle PFN, Win32 error998; CDB explains BP does not track module unload.",
+      "interpretation": "Debugger teardown warning after Idle return0, states63/63, System Shutdown and streamer teardown. It is not a target VkResult or recorded target AV; does not erase the earlier complete native chain. Exact unload timing is not independently identified."
+    }
+  ],
+  "diagnosticCounts": {
+    "parserErrors": 0,
+    "typeResolveErrors": 0,
+    "commandFileErrors": 0,
+    "skippedCommandErrors": 0,
+    "incompleteMarkers": 0,
+    "epochMarkers": 0,
+    "capMarkers": 0,
+    "unexpectedAvMarkers": 0
+  },
+  "limits": [
+    "One selected primary CB per authored phase, not all frames or all RT work.",
+    "QueueWaitIdle success after both accepted submissions establishes completion of prior work on that queue, not visual GI quality, performance or whole-Gem acceptance.",
+    "Native PFNs pass through validation dispatch. No direct driver-only entry claim.",
+    "R38 supplies prior effective-mode/device-mask observations; R43 adds native recording/submission/completion, without repeating those values."
+  ],
+  "nativeExecutedByReviewer": false,
+  "productiveWrites": 0,
+  "helpersOwned": 0,
+  "status": "HOLD"
+}

@@ -1,0 +1,15 @@
+{
+    "Amazon": {
+        "AssetProcessor": {
+            "Settings": {
+                // Preserve DPG source-relative suffixes before the enclosing Core scanroot.
+                "ScanFolder gemassets-{BD0C2C4F-9DFB-5A33-8F5E-03D23444CA05}": {
+                    "watch": "@ENGINEROOT@/Engine/Render/Features/Assets/DiffuseProbeGrid",
+                    "display": "Engine/Render/Features/DiffuseProbeGrid",
+                    "recursive": 1,
+                    "order": 99
+                }
+            }
+        }
+    }
+}

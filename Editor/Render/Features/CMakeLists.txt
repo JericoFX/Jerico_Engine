@@ -14,12 +14,14 @@ endif()
 ly_add_target(
     NAME EditorRenderFeatures STATIC
     NAMESPACE JE
-    FILES_CMAKE features_files.cmake
+    FILES_CMAKE features_files.cmake features_diffuse_probe_grid_files.cmake
     PLATFORM_INCLUDE_FILES ${features_runtime_tools}
     INCLUDE_DIRECTORIES PRIVATE Source ${features_pal_dir} ${LY_ROOT_FOLDER}/Engine/Render/Features/Source
+        Source/DiffuseProbeGrid ${LY_ROOT_FOLDER}/Engine/Render/Features/Source/DiffuseProbeGrid
         PUBLIC Include
     BUILD_DEPENDENCIES PUBLIC JE::RenderFeatures JE::EditorRenderIntegration
         AZ::AzToolsFramework AZ::AssetBuilderSDK AZ::SceneCore
+        PRIVATE Gem::LmbrCentral.API
     RUNTIME_DEPENDENCIES Gem::Atom_RHI.Private
 )
 set_target_properties(EditorRenderFeatures PROPERTIES UNITY_BUILD OFF)

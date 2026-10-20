@@ -1,0 +1,128 @@
+{
+  "schema": "dpg-selective-publication-review-r51",
+  "acceptedPublication": false,
+  "scope": "Exact ownership map and bounded excluded-WIP dependency review; no Git or native execution.",
+  "pathManifest": {
+    "path": "path-manifest.json",
+    "bytes": 70028,
+    "sha256": "E307F81D61952998135EC3F0EBDF89B9CBF9D9E3EF8E9B4B047FBAF6891AE0C5",
+    "retired": 281,
+    "wholeOwnedAfter": 276,
+    "sharedHunkOnly": 10,
+    "totalUniquePaths": 567
+  },
+  "composition": {
+    "cppMoves": 71,
+    "cppLegacyModuleRetirements": 2,
+    "sourceAssetsMoved": 195,
+    "filelistsMoved": 8,
+    "legacyPackagingRetirements": 5,
+    "newRegistry": 1,
+    "newTestCpp": 1,
+    "testsOwner": "JE::RenderRpi.Tests (test CPP physically remains Engine/Render/Features/Tests/DiffuseProbeGridTests.cpp)",
+    "testCppSha256": "A0894582DFFC6DFF5D6607B77A0EC7D6935D110CE09E0DBFFEBB17C3CCD1C12E"
+  },
+  "sharedHunks": [
+    {
+      "path": "Engine/Render/Features/Source/FeatureModule.cpp",
+      "owned": "DPG three includes, append runtime three descriptors, append DPGSystemComponent to Required. Current file equals sealed T2 after.",
+      "authority": "analysis-source/dpg-cpp-implementation-r51/forward/073.diff"
+    },
+    {
+      "path": "Editor/Render/Features/Source/FeatureModule.cpp",
+      "owned": "Two DPG editor includes and append two descriptors under existing factory guard. Current equals sealed T2 after.",
+      "authority": "analysis-source/dpg-cpp-implementation-r51/forward/074.diff"
+    },
+    {
+      "path": "Engine/Render/Features/CMakeLists.txt",
+      "owned": "DPG filelist/PAL/private roots and PRIVATE Shape API wiring; DPG TestPrivate five-body exclusions; later existing Assets install EXCLUDE_PATTERNS only82 DX12/Null payloads.",
+      "currentSha256": "0FF7F090CB462F662A918480CAAF86C0E5BE41252850B3F264A131C28D3C21C4",
+      "authority": [
+        "analysis-wiring/dpg-t2-implementation-r51/forward.patch",
+        "analysis-wiring/dpg-sdk-vulkan-filter-r51/forward.patch"
+      ],
+      "matchesFinalFilterReceipt": true
+    },
+    {
+      "path": "Editor/Render/Features/CMakeLists.txt",
+      "owned": "Existing editor owner DPG list/private roots and PRIVATE LmbrCentral.API; no new DLL/Scene edge.",
+      "matchesT2After": true
+    },
+    {
+      "path": "Engine/Render/Features/features_public_files.cmake",
+      "owned": "Two native DPG interfaces.",
+      "matchesT2After": true
+    },
+    {
+      "path": "Engine/Render/Features/features_test_private_files.cmake",
+      "owned": "DPG private-body test helper wiring.",
+      "matchesT2After": true
+    },
+    {
+      "path": "Engine/Render/Integration/CMakeLists.txt",
+      "owned": "Existing RPI.Tests private DPG roots and dependencies from approved R6 fixture-boundary hunk.",
+      "matchesR6After": true
+    },
+    {
+      "path": "Engine/Render/Integration/rpi_tests_files.cmake",
+      "owned": "One existing test source entry to Features/Tests/DiffuseProbeGridTests.cpp.",
+      "matchesR6After": true
+    },
+    {
+      "path": "engine.json",
+      "owned": "Remove only DiffuseProbeGrid external_subdirectories entry.",
+      "matchesT2After": true
+    },
+    {
+      "path": "AutomatedTesting/project.json",
+      "owned": "Remove only DiffuseProbeGrid gem_names entry.",
+      "matchesT2After": true
+    }
+  ],
+  "netZero": "Engine/Render/Features/features_tests_files.cmake current SHA BE8704707C3FE899312F18A22169D39C02DD934BD7D5EFAED85B2F8A99FB7437 equals original T2 preimage: no DPG net hunk to stage.",
+  "laterCppOwnedCorrections": {
+    "count": 8,
+    "meaning": "Current posts differ from sealed initial T2 only at the eight already assigned DPG paths below; all remaining current postimages including both shared factories and test match that sealed inventory.",
+    "paths": [
+      "Engine/Render/Features/Source/DiffuseProbeGrid/Components/DiffuseGlobalIlluminationComponent.cpp",
+      "Engine/Render/Features/Source/DiffuseProbeGrid/Components/DiffuseProbeGridComponent.cpp",
+      "Engine/Render/Features/Source/DiffuseProbeGrid/Components/DiffuseProbeGridComponentController.cpp",
+      "Engine/Render/Features/Source/DiffuseProbeGrid/Components/DiffuseProbeGridComponentController.h",
+      "Editor/Render/Features/Source/DiffuseProbeGrid/EditorComponents/EditorDiffuseGlobalIlluminationComponent.cpp",
+      "Editor/Render/Features/Source/DiffuseProbeGrid/EditorComponents/EditorDiffuseProbeGridComponent.cpp",
+      "Engine/Render/Features/Source/DiffuseProbeGrid/Render/DiffuseProbeGrid.cpp",
+      "Engine/Render/Features/Source/DiffuseProbeGrid/Render/DiffuseProbeGridFeatureProcessor.cpp"
+    ],
+    "corrections": "Four BehaviorConstant SDK macro qualifiers, Sphere qualification, editor array qualification, null-safe Asset wrapper IsReady, approved runtime-only ambient console+all selector. Preserve current posts, not obsolete initial snapshots."
+  },
+  "license": {
+    "path": "Engine/Render/Features/Assets/DiffuseProbeGrid/Shaders/DiffuseGlobalIllumination/Nvidia RTX-GI License.txt",
+    "sha256": "D3E47DEC086CEE18EED8C1F749ADB4098A98427AAEA5BAFCA5DF80282391D685",
+    "currentRehashedExact": true,
+    "sourceLicenseAnd195Payloads": "Moved byteexact, retain notices/attributions. All82 historical DX12/Null remain source payloads; distribution-only exclusion must not become source deletion."
+  },
+  "excludedWipDependency": {
+    "parentDiff": {
+      "path": "analysis-parent/diffuse-probe-tools-request-r51/publication-auxiliary-wip.diff",
+      "sha256": "DCE561B98BDA5A6ABD5946ACAE75AE181E31E750A2257F0CCA24ABF2CA8DC2B0"
+    },
+    "MaterialShaderParameterLayout": "Three changed bodies add bounds/name-cache guards; no declaration/export/signature change. Exhaustive bounded search of all71 DPG C++ destinations finds no Material or MaterialShaderParameterLayout reference. No demonstrated compile/link dependency on this excluded hunk.",
+    "Profiler": "Diff removes only private static cache and replaces calls with existing Interface<Profiler>::Get; public BeginRegion/EndRegion signatures unchanged. Only two DPG AZ_PROFILE_SCOPE calls (FP.cpp215/253) exactly match legacy preimage. No new API/symbol in that WIP is consumed by DPG.",
+    "APMaterials": "No direct AP/EditorMaterials include/API reference in the71 DPG sources. Native AP scanroot Registry is DPG-owned and included; unrelated AP/Materials modifications remain outside exact set.",
+    "priorShaderProducerReview": "Reused analysis-source/dpg-srg-publication-producer-applicability-r51/review.json:24 exact/normalized HEAD-vs-raw producer comparisons, no unpublished preprocessor/MCPP/ShaderCompiler hunk required for that asset seam at e045672. Historical scope retained, not generalized to arbitrary later WIP.",
+    "conclusion": "No excluded source-interface/compile/link hunk proved indispensable to the DPG delta in this bounded review.",
+    "limit": "Verified binaries and R43 ran mixed tree including Profiler/Material guards. This review does NOT establish identical runtime behavior when those excluded bodies are restored to HEAD. Do not relabel mixed-tree validation as a selective clean-tree build/run. Preserve WIP and its independent ownership."
+  },
+  "associatedLauncher": {
+    "path": "Code/LauncherUnified/Launcher.cpp",
+    "ownedHunk": "ExecuteCommandLine(false) -> ExecuteCommandLine(gameApplication.GetCommandLine()->HasSwitch(\"defer-command-line\"))",
+    "authority": "analysis-source/dpg-deferred-command-line-candidate-r28/forward.diff",
+    "meaning": "Explicitly approved console-batch support, separate from Gem provider path universe. Default false unchanged. Parent decides separate staging; no implicit blanket Launcher staging."
+  },
+  "graft": "Reused shared cached header-only cards for DPG System/FP/Rays, MaterialShaderParameterLayout and Profiler before bounded exact CPP searches; no new loader/refresh. CPP/Game complete readings remain hash-identical.",
+  "helpersOwned": 0,
+  "nativeExecuted": false,
+  "gitInvoked": false,
+  "productiveWrites": 0,
+  "status": "HOLD_FOR_PARENT_SELECTIVE_STAGING_AND_ACCEPTANCE"
+}

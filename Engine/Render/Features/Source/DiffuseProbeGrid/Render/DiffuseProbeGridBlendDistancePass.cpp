@@ -1,0 +1,211 @@
+/*
+ * Copyright (c) Contributors to the Open 3D Engine Project.
+ * For complete copyright and license terms please see the LICENSE at the root of this distribution.
+ *
+ * SPDX-License-Identifier: Apache-2.0 OR MIT
+ *
+ */
+
+#include <JE/Render/Features/RayTracing/RayTracingFeatureProcessorInterface.h>
+#include <Atom/RHI/Factory.h>
+#include <Atom/RHI/FrameGraphInterface.h>
+#include <Atom/RHI/FrameGraphAttachmentInterface.h>
+#include <Atom/RHI/Device.h>
+#include <JE/Render/RPI/Public/Pass/PassUtils.h>
+#include <JE/Render/RPI/Public/RenderPipeline.h>
+#include <JE/Render/RPI/Public/RPIUtils.h>
+#include <DiffuseProbeGrid_Traits_Platform.h>
+#include <Render/DiffuseProbeGridBlendDistancePass.h>
+
+namespace JE::Render
+{
+    namespace Features
+    {
+        JE::Render::RPI::Ptr<DiffuseProbeGridBlendDistancePass> DiffuseProbeGridBlendDistancePass::Create(const JE::Render::RPI::PassDescriptor& descriptor)
+        {
+            JE::Render::RPI::Ptr<DiffuseProbeGridBlendDistancePass> pass = aznew DiffuseProbeGridBlendDistancePass(descriptor);
+            return pass;
+        }
+
+        DiffuseProbeGridBlendDistancePass::DiffuseProbeGridBlendDistancePass(const JE::Render::RPI::PassDescriptor& descriptor)
+            : JE::Render::RPI::RenderPass(descriptor)
+        {
+            if (!JE_TRAIT_DIFFUSE_GI_PASSES_SUPPORTED)
+            {
+                // GI is not supported on this platform
+                SetEnabled(false);
+            }
+            else
+            {
+                LoadShader();
+            }
+        }
+
+        void DiffuseProbeGridBlendDistancePass::LoadShader()
+        {
+            // load shaders, each supervariant handles a different number of rays per probe
+            // Note: the raytracing shaders may not be available on all platforms
+            m_shaders.reserve(DiffuseProbeGridNumRaysPerProbeArraySize);
+            for (uint32_t index = 0; index < DiffuseProbeGridNumRaysPerProbeArraySize; ++index)
+            {
+                AZStd::string shaderFilePath = "Shaders/DiffuseGlobalIllumination/DiffuseProbeGridBlendDistance.azshader";
+                AZ::Data::Instance<JE::Render::RPI::Shader> shader = JE::Render::RPI::LoadCriticalShader(shaderFilePath, DiffuseProbeGridNumRaysPerProbeArray[index].m_supervariant);
+                if (shader == nullptr)
+                {
+                    return;
+                }
+
+                AZ::RHI::PipelineStateDescriptorForDispatch pipelineStateDescriptor;
+                const auto& shaderVariant = shader->GetVariant(JE::Render::RPI::ShaderAsset::RootShaderVariantStableId);
+                shaderVariant.ConfigurePipelineState(pipelineStateDescriptor, shader->GetDefaultShaderOptions());
+                const AZ::RHI::PipelineState* pipelineState = shader->AcquirePipelineState(pipelineStateDescriptor);
+                AZ_Assert(pipelineState, "Failed to acquire pipeline state");
+
+                AZ::RHI::Ptr<AZ::RHI::ShaderResourceGroupLayout> srgLayout = shader->FindShaderResourceGroupLayout(JE::Render::RPI::SrgBindingSlot::Pass);
+                AZ_Assert(srgLayout.get(), "Failed to find Srg layout");
+
+                AZ::RHI::DispatchDirect dispatchArgs;
+                const auto outcome = JE::Render::RPI::GetComputeShaderNumThreads(shader->GetAsset(), dispatchArgs);
+                if (!outcome.IsSuccess())
+                {
+                    AZ_Error("PassSystem", false, "[DiffuseProbeBlendIrradiancePass '%s']: Shader '%s' contains invalid numthreads arguments:\n%s", GetPathName().GetCStr(), shaderFilePath.c_str(), outcome.GetError().c_str());
+                }
+
+                m_shaders.push_back({ shader, pipelineState, srgLayout, dispatchArgs });
+            }
+        }
+
+        bool DiffuseProbeGridBlendDistancePass::IsEnabled() const
+        {
+            if (!RenderPass::IsEnabled())
+            {
+                return false;
+            }
+
+            JE::Render::RPI::Scene* scene = m_pipeline->GetScene();
+            if (!scene)
+            {
+                return false;
+            }
+
+            auto* rayTracingFeatureProcessor = scene->GetFeatureProcessor<JE::Render::Features::RayTracingFeatureProcessorInterface>();
+            if (!rayTracingFeatureProcessor || !rayTracingFeatureProcessor->GetSubMeshCount())
+            {
+                // empty scene
+                return false;
+            }
+
+            DiffuseProbeGridFeatureProcessor* diffuseProbeGridFeatureProcessor = scene->GetFeatureProcessor<DiffuseProbeGridFeatureProcessor>();
+            if (!diffuseProbeGridFeatureProcessor || diffuseProbeGridFeatureProcessor->GetVisibleRealTimeProbeGrids().empty())
+            {
+                // no diffuse probe grids
+                return false;
+            }
+
+            return true;
+        }
+
+        void DiffuseProbeGridBlendDistancePass::SetupFrameGraphDependencies(AZ::RHI::FrameGraphInterface frameGraph)
+        {
+            RenderPass::SetupFrameGraphDependencies(frameGraph);
+
+            JE::Render::RPI::Scene* scene = m_pipeline->GetScene();
+            DiffuseProbeGridFeatureProcessor* diffuseProbeGridFeatureProcessor = scene->GetFeatureProcessor<DiffuseProbeGridFeatureProcessor>();
+
+            frameGraph.SetEstimatedItemCount(aznumeric_cast<uint32_t>(diffuseProbeGridFeatureProcessor->GetVisibleRealTimeProbeGrids().size()));
+
+            for (auto& diffuseProbeGrid : diffuseProbeGridFeatureProcessor->GetVisibleRealTimeProbeGrids())
+            {
+                // grid data
+                {
+                    AZ::RHI::BufferScopeAttachmentDescriptor desc;
+                    desc.m_attachmentId = diffuseProbeGrid->GetGridDataBufferAttachmentId();
+                    desc.m_bufferViewDescriptor = diffuseProbeGrid->GetRenderData()->m_gridDataBufferViewDescriptor;
+                    desc.m_loadStoreAction.m_loadAction = AZ::RHI::AttachmentLoadAction::Load;
+
+                    frameGraph.UseShaderAttachment(desc, AZ::RHI::ScopeAttachmentAccess::Read, AZ::RHI::ScopeAttachmentStage::ComputeShader);
+                }
+
+                // probe raytrace image
+                {
+                    AZ::RHI::ImageScopeAttachmentDescriptor desc;
+                    desc.m_attachmentId = diffuseProbeGrid->GetRayTraceImageAttachmentId();
+                    desc.m_imageViewDescriptor = diffuseProbeGrid->GetRenderData()->m_probeRayTraceImageViewDescriptor;
+                    desc.m_loadStoreAction.m_loadAction = AZ::RHI::AttachmentLoadAction::Load;
+
+                    frameGraph.UseShaderAttachment(desc, AZ::RHI::ScopeAttachmentAccess::ReadWrite, AZ::RHI::ScopeAttachmentStage::ComputeShader);
+                }
+
+                // probe distance image
+                {
+                    AZ::RHI::ImageScopeAttachmentDescriptor desc;
+                    desc.m_attachmentId = diffuseProbeGrid->GetDistanceImageAttachmentId();
+                    desc.m_imageViewDescriptor = diffuseProbeGrid->GetRenderData()->m_probeDistanceImageViewDescriptor;
+                    desc.m_loadStoreAction.m_loadAction = AZ::RHI::AttachmentLoadAction::Load;
+
+                    frameGraph.UseShaderAttachment(desc, AZ::RHI::ScopeAttachmentAccess::ReadWrite, AZ::RHI::ScopeAttachmentStage::ComputeShader);
+                }
+
+                // probe data image
+                {
+                    AZ::RHI::ImageScopeAttachmentDescriptor desc;
+                    desc.m_attachmentId = diffuseProbeGrid->GetProbeDataImageAttachmentId();
+                    desc.m_imageViewDescriptor = diffuseProbeGrid->GetRenderData()->m_probeDataImageViewDescriptor;
+                    desc.m_loadStoreAction.m_loadAction = AZ::RHI::AttachmentLoadAction::Load;
+
+                    frameGraph.UseShaderAttachment(desc, AZ::RHI::ScopeAttachmentAccess::ReadWrite, AZ::RHI::ScopeAttachmentStage::ComputeShader);
+                }
+            }
+        }
+
+        void DiffuseProbeGridBlendDistancePass::CompileResources([[maybe_unused]] const AZ::RHI::FrameGraphCompileContext& context)
+        {
+            JE::Render::RPI::Scene* scene = m_pipeline->GetScene();
+            DiffuseProbeGridFeatureProcessor* diffuseProbeGridFeatureProcessor = scene->GetFeatureProcessor<DiffuseProbeGridFeatureProcessor>();
+
+            for (auto& diffuseProbeGrid : diffuseProbeGridFeatureProcessor->GetVisibleRealTimeProbeGrids())
+            {
+                // the diffuse probe grid Srg must be updated in the Compile phase in order to successfully bind the ReadWrite shader inputs
+                // (see ValidateSetImageView() in ShaderResourceGroupData.cpp)
+                DiffuseProbeGridShader& shader = m_shaders[diffuseProbeGrid->GetNumRaysPerProbe().m_index];
+                diffuseProbeGrid->UpdateBlendDistanceSrg(shader.m_shader, shader.m_srgLayout);
+                if (!diffuseProbeGrid->GetBlendDistanceSrg()->IsQueuedForCompile())
+                {
+                    diffuseProbeGrid->GetBlendDistanceSrg()->Compile();
+                }
+            }
+        }
+
+        void DiffuseProbeGridBlendDistancePass::BuildCommandListInternal(const AZ::RHI::FrameGraphExecuteContext& context)
+        {
+            AZ::RHI::CommandList* commandList = context.GetCommandList();
+            JE::Render::RPI::Scene* scene = m_pipeline->GetScene();
+            DiffuseProbeGridFeatureProcessor* diffuseProbeGridFeatureProcessor = scene->GetFeatureProcessor<DiffuseProbeGridFeatureProcessor>();
+
+            // submit the DispatchItems for each DiffuseProbeGrid in this range
+            for (uint32_t index = context.GetSubmitRange().m_startIndex; index < context.GetSubmitRange().m_endIndex; ++index)
+            {
+                AZStd::shared_ptr<DiffuseProbeGrid> diffuseProbeGrid = diffuseProbeGridFeatureProcessor->GetVisibleRealTimeProbeGrids()[index];
+                DiffuseProbeGridShader& shader = m_shaders[diffuseProbeGrid->GetNumRaysPerProbe().m_index];
+
+                const AZ::RHI::ShaderResourceGroup* shaderResourceGroup = diffuseProbeGrid->GetBlendDistanceSrg()->GetRHIShaderResourceGroup();
+                commandList->SetShaderResourceGroupForDispatch(*shaderResourceGroup->GetDeviceShaderResourceGroup(context.GetDeviceIndex()));
+
+                uint32_t probeCountX;
+                uint32_t probeCountY;
+                diffuseProbeGrid->GetTexture2DProbeCount(probeCountX, probeCountY);
+
+                probeCountX = AZ::DivideAndRoundUp(probeCountX, diffuseProbeGrid->GetFrameUpdateCount());
+
+                AZ::RHI::DeviceDispatchItem dispatchItem;
+                dispatchItem.m_arguments = shader.m_dispatchArgs;
+                dispatchItem.m_pipelineState = shader.m_pipelineState->GetDevicePipelineState(context.GetDeviceIndex()).get();
+                dispatchItem.m_arguments.m_direct.m_totalNumberOfThreadsX = probeCountX * dispatchItem.m_arguments.m_direct.m_threadsPerGroupX;
+                dispatchItem.m_arguments.m_direct.m_totalNumberOfThreadsY = probeCountY * dispatchItem.m_arguments.m_direct.m_threadsPerGroupY;
+                dispatchItem.m_arguments.m_direct.m_totalNumberOfThreadsZ = 1;
+
+                commandList->Submit(dispatchItem, index);
+            }
+        }
+    }   // namespace Features
+}   // namespace JE::Render

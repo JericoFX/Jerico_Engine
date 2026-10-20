@@ -655,7 +655,7 @@ namespace O3DELauncher
                 // via --console-command-file=%filename% and execute it
                 ExecuteConsoleCommandFile(gameApplication);
 
-                gEnv->pSystem->ExecuteCommandLine(false);
+                gEnv->pSystem->ExecuteCommandLine(gameApplication.GetCommandLine()->HasSwitch("defer-command-line"));
 
                 AZ::ComponentApplicationLifecycle::SignalEvent(*settingsRegistry, "LegacyCommandLineProcessed", R"({})");
 

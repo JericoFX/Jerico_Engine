@@ -1,0 +1,46 @@
+{
+  "scope": "DPG RealTime and AutoSelect native Vulkan submission and completion; one primary CB sample each",
+  "acceptedBy": "parent",
+  "accepted": true,
+  "wholeGemAccepted": false,
+  "logSha256": "07F3EECE95FB6FE5345D345F08E93CAFF77D302C1800680E12BB65C95672474C",
+  "rt": {
+    "thread": "7b64",
+    "endReturnLine": 487,
+    "queueReturnLine": 498,
+    "cb": "0000031eac611850",
+    "raysLine": 462
+  },
+  "auto": {
+    "thread": "6ef4",
+    "endReturnLine": 651,
+    "queueReturnLine": 662,
+    "cb": "0000031eb0ab1050",
+    "raysLine": 624
+  },
+  "queue": "0000031ea01655d0",
+  "completionLines": [
+    684,
+    685,
+    686
+  ],
+  "states": [
+    63,
+    63
+  ],
+  "dimensions": [
+    288,
+    180,
+    1
+  ],
+  "nativeExit": 0,
+  "seconds": 35.0937565,
+  "inputDrift": 0,
+  "limits": [
+    "One observed generation per mode, no image quality/performance claim",
+    "Auto End entry duplicated with identical CB/thread/return; cause not established, single successful return observed",
+    "Breakpoint9 removal error998 after successful queue idle and shutdown, not VkResult or observed target AV",
+    "Generic storage image and DynamicDraw warnings retained; no claim of zero warnings"
+  ],
+  "next": "Reconcile Gem plan, final integration review, selective publication"
+}

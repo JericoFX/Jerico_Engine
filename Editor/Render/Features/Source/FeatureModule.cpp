@@ -4,6 +4,8 @@
 #include <FeatureModuleInternal.h>
 #include <EditorCommonSystemComponent.h>
 #include <Material/MaterialConverterSystemComponent.h>
+#include <DiffuseProbeGrid/EditorComponents/EditorDiffuseProbeGridComponent.h>
+#include <DiffuseProbeGrid/EditorComponents/EditorDiffuseGlobalIlluminationComponent.h>
 
 namespace JE::Editor::Render::Features
 {
@@ -18,6 +20,8 @@ namespace JE::Editor::Render::Features
             JE::Render::Features::AppendOwnedRuntimeComponentDescriptors(m_descriptors);
             JE::Render::Features::AppendOwnedComponentDescriptor<EditorCommonSystemComponent>(m_descriptors);
             JE::Render::Features::AppendOwnedComponentDescriptor<MaterialConverterSystemComponent>(m_descriptors);
+            JE::Render::Features::AppendOwnedComponentDescriptor<EditorDiffuseProbeGridComponent>(m_descriptors);
+            JE::Render::Features::AppendOwnedComponentDescriptor<EditorDiffuseGlobalIlluminationComponent>(m_descriptors);
         }
 
         AZ::ComponentTypeList GetRequiredSystemComponents() const override

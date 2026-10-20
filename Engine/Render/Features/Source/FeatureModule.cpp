@@ -8,6 +8,9 @@
 #include <ImGui/ImGuiSystemComponent.h>
 #include <SkinnedMesh/SkinnedMeshSystemComponent.h>
 #include <CoreLights/CoreLightsSystemComponent.h>
+#include <DiffuseProbeGrid/Components/DiffuseProbeGridSystemComponent.h>
+#include <DiffuseProbeGrid/Components/DiffuseProbeGridComponent.h>
+#include <DiffuseProbeGrid/Components/DiffuseGlobalIlluminationComponent.h>
 
 namespace JE::Render::Features
 {
@@ -19,6 +22,9 @@ namespace JE::Render::Features
         AppendOwnedComponentDescriptor<ProfilingCaptureSystemComponent>(descriptors);
         AppendOwnedComponentDescriptor<ImGuiSystemComponent>(descriptors);
         AppendOwnedComponentDescriptor<SkinnedMeshSystemComponent>(descriptors);
+        AppendOwnedComponentDescriptor<DiffuseProbeGridSystemComponent>(descriptors);
+        AppendOwnedComponentDescriptor<DiffuseProbeGridComponent>(descriptors);
+        AppendOwnedComponentDescriptor<DiffuseGlobalIlluminationComponent>(descriptors);
     }
 
     AZ::ComponentTypeList GetRuntimeRequiredSystemComponents()
@@ -29,7 +35,8 @@ namespace JE::Render::Features
             azrtti_typeid<ProfilingCaptureSystemComponent>(),
             azrtti_typeid<CoreLightsSystemComponent>(),
             azrtti_typeid<ImGuiSystemComponent>(),
-            azrtti_typeid<SkinnedMeshSystemComponent>()
+            azrtti_typeid<SkinnedMeshSystemComponent>(),
+            azrtti_typeid<DiffuseProbeGridSystemComponent>()
         };
     }
 

@@ -1,0 +1,38 @@
+/*
+ * Copyright (c) Contributors to the Open 3D Engine Project.
+ * For complete copyright and license terms please see the LICENSE at the root of this distribution.
+ *
+ * SPDX-License-Identifier: Apache-2.0 OR MIT
+ *
+ */
+
+#pragma once
+
+#include <AzCore/base.h>
+#include <JE/Render/RPI/Public/FeatureProcessor.h>
+
+namespace JE::Render
+{
+    namespace Features
+    {
+        enum class DiffuseGlobalIlluminationQualityLevel : uint8_t
+        {
+            Low,
+            Medium,
+            High,
+
+            Count
+        };
+
+        //! This class provides general features and configuration for the diffuse global illumination environment,
+        //! which consists of DiffuseProbeGrids and the diffuse Global IBL cubemap.
+        class DiffuseGlobalIlluminationFeatureProcessorInterface
+            : public JE::Render::RPI::FeatureProcessor
+        {
+        public:
+            AZ_RTTI_WITH_NAME(DiffuseGlobalIlluminationFeatureProcessorInterface, "AZ::Render::DiffuseGlobalIlluminationFeatureProcessorInterface", "{BD8CA35A-47C3-4FD8-932B-18495EF07527}", JE::Render::RPI::FeatureProcessor);
+
+            virtual void SetQualityLevel(DiffuseGlobalIlluminationQualityLevel qualityLevel) = 0;
+        };
+    } // namespace Features
+} // namespace JE::Render

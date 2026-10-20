@@ -1,0 +1,57 @@
+{
+  "reviewer": "parent",
+  "scope": "DPG live console and reversible contribution in fixed floor ROI only",
+  "nativeExitCode": 0,
+  "seconds": 117.6369621,
+  "inputDrift": 0,
+  "captures": [
+    {
+      "stage": 1,
+      "value": 0,
+      "sha256": "B8F238F72961F2B4C2C3037574A462805F53DAC19EA9BD0960DFC35A3063959B",
+      "before": "je_dpgAmbient entity=205543050718 authored=1 previous=0 applied=0 action=query",
+      "after": "je_dpgAmbient entity=205543050718 authored=1 previous=0 applied=0 action=query"
+    },
+    {
+      "stage": 2,
+      "value": 1,
+      "sha256": "F78CA3E8AF992176B1DCE04B7903F73B4D208D1C4AC16AD40C14774DE4CAA3FF",
+      "before": "je_dpgAmbient entity=205543050718 authored=1 previous=1 applied=1 action=query",
+      "after": "je_dpgAmbient entity=205543050718 authored=1 previous=1 applied=1 action=query"
+    },
+    {
+      "stage": 3,
+      "value": 0,
+      "sha256": "1B9FF5EE708C3BE03627C709B75658FD84931FCDD6B892F3FC46913F0B1E4571",
+      "before": "je_dpgAmbient entity=205543050718 authored=1 previous=0 applied=0 action=query",
+      "after": "je_dpgAmbient entity=205543050718 authored=1 previous=0 applied=0 action=query"
+    }
+  ],
+  "logSHA256": "F22397BC48705F44E713AF9012F71D2B0C588F907568DC9F037FD91B782376C7",
+  "floor": {
+    "scope": "Screen-space central floor only; encoded RGB luminance, not physical GI quality or full-frame equivalence",
+    "roi": {
+      "height": 90,
+      "y": 730,
+      "x": 870,
+      "width": 180
+    },
+    "pixels": 16200,
+    "meanEncodedLuma": [
+      213.2269135802469,
+      243.3506172839506,
+      213.2269135802469
+    ],
+    "meanAbsZeroVsOne": 30.123703703703704,
+    "meanAbsZeroVsReturnedZero": 0.0
+  },
+  "focalAccepted": true,
+  "wholeGemAccepted": false,
+  "wholeGemIncrement": 0,
+  "limitations": [
+    "Not whole-frame equivalence or physical GI quality",
+    "Inactive handler warnings preserved",
+    "Default no-flag launch and current installed SDK pending",
+    "First run stage3 followed reset1 and is not valid return-zero evidence"
+  ]
+}

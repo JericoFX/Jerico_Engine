@@ -31,6 +31,8 @@ set(FILES
     Include/JE/Render/Features/Debug/RenderDebugSettingsInterface.h
     Include/JE/Render/Features/Decals/DecalFeatureProcessorInterface.h
     Include/JE/Render/Features/DeferredMaterial/DeferredMaterialFeatureProcessorInterface.h
+    Include/JE/Render/Features/DiffuseProbeGrid/DiffuseGlobalIlluminationFeatureProcessorInterface.h
+    Include/JE/Render/Features/DiffuseProbeGrid/DiffuseProbeGridFeatureProcessorInterface.h
     Include/JE/Render/Features/DisplayMapper/DisplayMapperConfigurationDescriptor.h
     Include/JE/Render/Features/DisplayMapper/DisplayMapperFeatureProcessorInterface.h
     Include/JE/Render/Features/FeatureModule.h

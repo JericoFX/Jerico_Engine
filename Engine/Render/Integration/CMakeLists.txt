@@ -76,10 +76,13 @@ if(PAL_TRAIT_BUILD_TESTS_SUPPORTED AND PAL_TRAIT_BUILD_HOST_TOOLS)
         NAMESPACE JE
         FILES_CMAKE rpi_tests_files.cmake
         INCLUDE_DIRECTORIES PRIVATE Source Tests/RPI
+            ${LY_ROOT_FOLDER}/Engine/Render/Features/Source/DiffuseProbeGrid
+            ${LY_ROOT_FOLDER}/Engine/Render/Features/Source/DiffuseProbeGrid/Platform/${PAL_PLATFORM_NAME}
         BUILD_DEPENDENCIES PRIVATE
             AZ::AzTest AZ::AzTestShared AZ::AzFramework AZ::AzToolsFramework Legacy::CryCommon
             Gem::Atom_RHI.Public Gem::Atom_Utils.TestUtils.Static
             JE::EditorRenderIntegration JE::RenderIntegration JE::RenderRpi.TestUtils
+            JE::RenderFeatures JE::RenderFeatures.TestPrivate Gem::LmbrCentral.API
     )
     set_target_properties(RenderRpi.Tests PROPERTIES JE_EXCLUDE_FROM_SDK TRUE)
     ly_add_googletest(NAME JE::RenderRpi.Tests LABELS REQUIRES_tiaf)

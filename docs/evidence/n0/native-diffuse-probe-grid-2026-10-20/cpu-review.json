@@ -1,0 +1,68 @@
+{
+  "reviewer": "/root",
+  "utc": "2026-10-19T16:04:05.2069412Z",
+  "nativeExit": 0,
+  "wrapperExit": 0,
+  "seconds": 20.1487855,
+  "originalPid": 16088,
+  "creationUtc": "2026-10-19T16:00:15.2739055Z",
+  "endUtc": "2026-10-19T16:00:35.4226909+00:00",
+  "stdoutReadInFull": true,
+  "stdout": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-corefeature102\\test-dpg-two-suites-r51-attempt1\\test-dpg-two-suites-r51.stdout.log",
+    "bytes": 549,
+    "sha256": "157A977D6852674BF3A8DDA1F2C9BBCF7C66237C215A8D21B326EEB094D6E1A1"
+  },
+  "sourceInputsVerified": 15567,
+  "absencesVerified": 2956,
+  "inputDrift": 0,
+  "cohort120VerifiedUnchanged": true,
+  "provenancePinsVerifiedUnchanged": 71,
+  "suites": [
+    {
+      "name": "Features",
+      "caseCount": 82,
+      "unique": 82,
+      "exactExpectedIdentitySet": true,
+      "run": 82,
+      "completed": 82,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "disabled": 0,
+      "groups": 12,
+      "xml": {
+        "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-corefeature102\\test-dpg-two-suites-r51-attempt1\\JE_RenderFeatures.Tests.xml",
+        "bytes": 24894,
+        "sha256": "E0238D946CF0A559D6F42EDA297F9D6AB740DFC014AC4D1FE8B12985391804F7"
+      },
+      "actualMtimeUtc": "2026-10-19T16:00:35.4069800Z",
+      "mtimeWithinNativeInterval": true
+    },
+    {
+      "name": "RPI",
+      "caseCount": 587,
+      "unique": 587,
+      "exactExpectedIdentitySet": true,
+      "run": 587,
+      "completed": 587,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "disabled": 0,
+      "groups": 40,
+      "xml": {
+        "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-corefeature102\\test-dpg-two-suites-r51-attempt1\\JE_RenderRpi.Tests.xml",
+        "bytes": 204490,
+        "sha256": "9C5FDFAF6A8CD474A5CFE56AB8B4033145EFE261507A17CCFEEFF59761299871"
+      },
+      "actualMtimeUtc": "2026-10-19T16:00:35.3306406Z",
+      "mtimeWithinNativeInterval": true
+    }
+  ],
+  "totalCases": 669,
+  "newDpgCases": 4,
+  "acceptedCpuGates": true,
+  "wholeGemIncrement": 0,
+  "limits": "Windows/Profile CPU fixtures and real RPI StubRHI lifecycle only; no Vulkan device/rendered baked light, authored atlas, GPU workload/cook/SDK/GUI/global acceptance"
+}
