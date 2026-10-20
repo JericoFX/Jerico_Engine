@@ -1,6 +1,6 @@
 # DiffuseProbeGrid — integración nativa
 
-Estado: gates focales y revisión final de integración aceptados por el padre; publicación en preparación. Esta evidencia no declara completados N0, el GOAL ni otras plataformas. El [plan de la Gem](../../../work/gems/DiffuseProbeGrid.md) mantiene los requisitos y la trazabilidad completa.
+Estado: gates focales y revisión final de integración aceptados por el padre; publicación confirmada en development: 43d5f493a1c91323305559c8cc7fb877b9b5b67b. Esta evidencia no declara completados N0, el GOAL ni otras plataformas. El [plan de la Gem](../../../work/gems/DiffuseProbeGrid.md) mantiene los requisitos y la trazabilidad completa.
 
 La implementación runtime se integra en `JE::RenderFeatures`, bajo `JE::Render::Features`; la autoría se integra en `JE::EditorRenderFeatures`, bajo `JE::Editor::Render::Features`. Se conservan DDGI, ray tracing, Baked, RealTime, AutoSelect y los contratos serializados. No se añade otro renderer ni una DLL para esta capacidad.
 

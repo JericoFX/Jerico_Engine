@@ -1,3 +1,10 @@
+## DiffuseProbeGrid — integración focal publicada, 2026-10-20
+
+Publicación selectiva en development: 43d5f493a1c91323305559c8cc7fb877b9b5b67b; push sin force y SHA remoto verificados. Runtime/autoría absorbidos por JE::RenderFeatures / JE::EditorRenderFeatures, sin DLL nueva; legacy Gems/DiffuseProbeGrid y activación retirados. CPU669/0, consumidor SDK692/0, Editor bake/Save/reopen y contribución Baked, muestra nativa Vulkan RT/AutoSelect R43 aceptados con sus límites. Evidencia durable: docs/evidence/n0/native-diffuse-probe-grid-2026-10-20/README.md.
+
+Revisión W1/padre completada. R43 usó la anotación Luminance actual8C891; no precede ese cambio. Pruebas del árbol mixto con guards Profiler/Material, no replay del árbol selectivo limpio. N0/global, Linux/VR/Shipping, Beauty/performance y avisos genéricos siguen abiertos; no incremento de Gems globalmente certificadas ni denominador pendiente inventado. Los once nombres históricos son identidades nominales, no once cierres globales. Los pendientes de publicación DPG en entradas históricas inferiores quedan superados. Conservar WIP ajeno y reutilizar evidencia válida; no repetir SDK ni runtime por documentación. GOAL activo; seguir el roadmap autorizado tras esta integración focal.
+
+RAM previa60,70%/12,54GiB libres; agentes sin auxiliares propios pendientes y sin build/native activos. Graft MCP3548/13508 conectado (~2,42GiB): relación de transporte no verificada, preservado. No se afirma limpieza global. Autonomía nocturna renovada por el propietario dentro del GOAL.
 ## Estado actual — proveedor Vulkan350 local desplegado
 
 2026-10-19 UTC. Sobre3a3aa8d, el mismo target de validación cambia al par350 firmado ya instalado, desde un paquete local auditado. Configure existente0/108,218s,13payloads/12filas exactos y seis scripts verificados: Debug/Profile dos fuentes350; Release cero fuentes no vacías. Despliegue de los dos archivos Profile0/0,074s y hashes37BA/E275 exactos. No añade DLL del engine ni requiere repetir build C++/SDK/runtime por estos mismos bytes. [Evidencia y obtención local](../evidence/n0/native-pass-workspace-and-sdk-2026-10-13/vulkan-validation-tool350-r51/README.md).
