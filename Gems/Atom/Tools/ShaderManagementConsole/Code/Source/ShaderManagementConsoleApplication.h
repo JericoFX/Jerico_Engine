@@ -9,7 +9,7 @@
 #pragma once
 
 #include <JE/Render/RPI/Reflect/Material/MaterialAsset.h>
-#include <AtomToolsFramework/Document/AtomToolsDocumentApplication.h>
+#include <JE/Editor/Tools/Document/AtomToolsDocumentApplication.h>
 #include <AzToolsFramework/API/EditorWindowRequestBus.h>
 #include <ShaderManagementConsoleRequestBus.h>
 #include <Window/ShaderManagementConsoleWindow.h>
@@ -18,7 +18,7 @@
 namespace ShaderManagementConsole
 {
     class ShaderManagementConsoleApplication
-        : public AtomToolsFramework::AtomToolsDocumentApplication
+        : public JE::Editor::Tools::AtomToolsDocumentApplication
         , private ShaderManagementConsoleRequestBus::Handler
         , private AzToolsFramework::EditorWindowRequestBus::Handler
     {
@@ -26,7 +26,7 @@ namespace ShaderManagementConsole
         AZ_CLASS_ALLOCATOR(ShaderManagementConsoleApplication, AZ::SystemAllocator)
         AZ_TYPE_INFO(ShaderManagementConsole::ShaderManagementConsoleApplication, "{A31B1AEB-4DA3-49CD-884A-CC998FF7546F}");
 
-        using Base = AtomToolsFramework::AtomToolsDocumentApplication;
+        using Base = JE::Editor::Tools::AtomToolsDocumentApplication;
 
         ShaderManagementConsoleApplication(int* argc, char*** argv);
         ~ShaderManagementConsoleApplication();

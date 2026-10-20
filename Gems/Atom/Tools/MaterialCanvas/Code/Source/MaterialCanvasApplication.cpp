@@ -10,9 +10,9 @@
 #include <JE/Editor/Render/Scene/SceneModule.h>
 #include <JE/Editor/Render/Features/FeatureModule.h>
 #include <Atom/RHI/Factory.h>
-#include <AtomToolsFramework/Document/AtomToolsDocumentSystemRequestBus.h>
-#include <AtomToolsFramework/Graph/GraphDocumentView.h>
-#include <AtomToolsFramework/Util/Util.h>
+#include <JE/Editor/Tools/Document/AtomToolsDocumentSystemRequestBus.h>
+#include <JE/Editor/Tools/Graph/GraphDocumentView.h>
+#include <JE/Editor/Tools/Util/Util.h>
 #include <AzCore/Utils/Utils.h>
 #include <JE/Editor/Materials/Graph/MaterialGraphEnvironment.h>
 #include <MaterialCanvasApplication.h>
@@ -47,12 +47,12 @@ namespace MaterialCanvas
 
         AzToolsFramework::EditorWindowRequestBus::Handler::BusConnect();
         AZ::RHI::FactoryManagerNotificationBus::Handler::BusConnect();
-        AtomToolsFramework::AtomToolsDocumentNotificationBus::Handler::BusConnect(m_toolId);
+        JE::Editor::Tools::AtomToolsDocumentNotificationBus::Handler::BusConnect(m_toolId);
     }
 
     MaterialCanvasApplication::~MaterialCanvasApplication()
     {
-        AtomToolsFramework::AtomToolsDocumentNotificationBus::Handler::BusDisconnect();
+        JE::Editor::Tools::AtomToolsDocumentNotificationBus::Handler::BusDisconnect();
         AzToolsFramework::EditorWindowRequestBus::Handler::BusDisconnect();
         AZ::RHI::FactoryManagerNotificationBus::Handler::BusDisconnect();
         m_window.reset();
@@ -139,7 +139,7 @@ namespace MaterialCanvas
                     if (isGraph)
                     {
                         return m_window->AddDocumentTab(documentId,
-                            aznew AtomToolsFramework::GraphDocumentView(toolId, documentId, viewSettings, m_window.get()));
+                            aznew JE::Editor::Tools::GraphDocumentView(toolId, documentId, viewSettings, m_window.get()));
                     }
                     auto* view = new QLabel("Document properties can be edited in the inspector.", m_window.get());
                     view->setAlignment(Qt::AlignCenter);
@@ -151,7 +151,7 @@ namespace MaterialCanvas
 
     void MaterialCanvasApplication::InitMainWindow()
     {
-        m_viewportSettingsSystem.reset(aznew AtomToolsFramework::EntityPreviewViewportSettingsSystem(m_toolId));
+        m_viewportSettingsSystem.reset(aznew JE::Editor::Tools::EntityPreviewViewportSettingsSystem(m_toolId));
 
         m_window.reset(aznew MaterialCanvasMainWindow(m_toolId, m_graphEnvironment->GetViewSettings()));
         m_window->show();
@@ -160,17 +160,17 @@ namespace MaterialCanvas
     void MaterialCanvasApplication::InitDefaultDocument()
     {
         // Create an untitled, empty graph document as soon as the application starts so the user can begin creating immediately.
-        if (AtomToolsFramework::GetSettingsValue("/O3DE/Atom/MaterialCanvas/CreateDefaultDocumentOnStart", true))
+        if (JE::Editor::Tools::GetSettingsValue("/O3DE/Atom/MaterialCanvas/CreateDefaultDocumentOnStart", true))
         {
             AZ::Uuid documentId = AZ::Uuid::CreateNull();
-            AtomToolsFramework::AtomToolsDocumentSystemRequestBus::EventResult(
+            JE::Editor::Tools::AtomToolsDocumentSystemRequestBus::EventResult(
                 documentId,
                 m_toolId,
-                &AtomToolsFramework::AtomToolsDocumentSystemRequestBus::Handler::CreateDocumentFromTypeName,
+                &JE::Editor::Tools::AtomToolsDocumentSystemRequestBus::Handler::CreateDocumentFromTypeName,
                 "Material Graph");
 
-            AtomToolsFramework::AtomToolsDocumentNotificationBus::Event(
-                m_toolId, &AtomToolsFramework::AtomToolsDocumentNotificationBus::Handler::OnDocumentOpened, documentId);
+            JE::Editor::Tools::AtomToolsDocumentNotificationBus::Event(
+                m_toolId, &JE::Editor::Tools::AtomToolsDocumentNotificationBus::Handler::OnDocumentOpened, documentId);
         }
     }
 
@@ -194,7 +194,7 @@ namespace MaterialCanvas
                 projectPath / AZ::SettingsRegistryConstants::DevUserRegistryFolder / "user_minimal_shader_build_dx12.setreg");
 
             const bool enableFasterShaderBuilds =
-                AtomToolsFramework::GetSettingsValue<bool>("/O3DE/Atom/MaterialCanvas/EnableFasterShaderBuilds", false);
+                JE::Editor::Tools::GetSettingsValue<bool>("/O3DE/Atom/MaterialCanvas/EnableFasterShaderBuilds", false);
 
             if (enableFasterShaderBuilds)
             {

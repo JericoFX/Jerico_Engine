@@ -46,11 +46,11 @@ namespace AZ::ViewportHelpers
     class EditorEntityNotifications;
 } // namespace AZ::ViewportHelpers
 
-namespace AtomToolsFramework
+namespace JE::Editor::Tools
 {
     class RenderViewportWidget;
     class ModularViewportCameraController;
-} // namespace AtomToolsFramework
+} // namespace JE::Editor::Tools
 
 namespace AzToolsFramework
 {
@@ -370,7 +370,7 @@ private:
     AZStd::unique_ptr<AZ::ViewportHelpers::EditorEntityNotifications> m_editorEntityNotifications;
 
     // The widget to which Atom will actually render
-    AtomToolsFramework::RenderViewportWidget* m_renderViewport = nullptr;
+    JE::Editor::Tools::RenderViewportWidget* m_renderViewport = nullptr;
 
     // Atom debug display
     AzFramework::DebugDisplayRequests* m_debugDisplay = nullptr;

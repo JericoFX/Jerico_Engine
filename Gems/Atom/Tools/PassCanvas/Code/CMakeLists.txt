@@ -46,9 +46,9 @@ ly_add_target(
             JE::EditorCamera
             JE::EditorRenderScene
             JE::EditorRenderFeatures
-            Gem::AtomToolsFramework.Static
+            JE::EditorTools
     RUNTIME_DEPENDENCIES
-        Gem::AtomToolsFramework.Editor
+        JE::EditorTools
 )
 
 if(PAL_TRAIT_BUILD_EXTERNAL_CRASH_HANDLER_SUPPORTED)

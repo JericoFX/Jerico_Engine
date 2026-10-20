@@ -19,7 +19,7 @@
 #include "Widgets/HierarchyWidget/TreeWidgetItemList.h"
 
 #include <JE/Render/RPI/Public/ViewportContextBus.h>
-#include <AtomToolsFramework/Viewport/RenderViewportWidget.h>
+#include <JE/Editor/Tools/Viewport/RenderViewportWidget.h>
 #include <AzCore/Component/EntityId.h>
 #include <AzCore/Math/Vector2.h>
 #include <AzCore/std/smart_ptr/shared_ptr.h>
@@ -35,7 +35,7 @@ class EditorWindow;
 class QWidget;
 
 class ViewportWidget
-    : public AtomToolsFramework::RenderViewportWidget
+    : public JE::Editor::Tools::RenderViewportWidget
     , private AzToolsFramework::EditorPickModeNotificationBus::Handler
     , private FontNotificationBus::Handler
     , private LyShinePassDataRequestBus::Handler

@@ -1,0 +1,17 @@
+CMake Warning (dev) at C:/Program Files/CMake/share/cmake-4.3/Modules/FindPackageHandleStandardArgs.cmake:493 (message):
+  The package name passed to find_package_handle_standard_args()
+  (OpenColorIO) does not match the name of the calling package (OpenImageIO).
+  This can lead to problems in calling code that expects find_package()
+  result variables (e.g., `_FOUND`) to follow a certain pattern.
+Call Stack (most recent call first):
+  F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/openimageio-opencolorio-2.3.17-je-rev1-windows/FindOpenColorIO.cmake:23 (find_package_handle_standard_args)
+  F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/openimageio-opencolorio-2.3.17-je-rev1-windows/FindOpenImageIO.cmake:42 (include)
+  F:/JericoEngine/JericoEngine/build/sdk-vk102/cmake/3rdParty.cmake:74 (find_package)
+  F:/JericoEngine/JericoEngine/build/sdk-vk102/cmake/LYWrappers.cmake:636 (o3de_find_3rdparty_package)
+  F:/JericoEngine/JericoEngine/build/sdk-vk102/cmake/LYWrappers.cmake:438 (ly_parse_third_party_dependencies)
+  F:/JericoEngine/JericoEngine/build/sdk-vk102/cmake/LYWrappers.cmake:268 (ly_target_link_libraries)
+  F:/JericoEngine/JericoEngine/build/sdk-vk102/Gems/GradientSignal/Code/Platform/Windows/Default/permutation.cmake:74 (ly_add_target)
+  F:/JericoEngine/JericoEngine/build/sdk-vk102/Gems/GradientSignal/Code/Platform/Windows/platform_windows.cmake:12 (include)
+  F:/JericoEngine/JericoEngine/build/sdk-vk102/Gems/GradientSignal/Code/CMakeLists.txt:12 (include)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+

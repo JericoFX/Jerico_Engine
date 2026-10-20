@@ -1,0 +1,1579 @@
+AssetProcessor: Branch token (0x05FD6BD0) is already correct, not updating
+AssetProcessor: AssetProcessor will process assets from project root F:/JericoEngine/JericoEngine/Projects/JEEditorFixture.
+AssetProcessor: No builder configuration file found at F:/JericoEngine/JericoEngine/Projects/JEEditorFixture/BuilderConfig.ini - skipping
+AssetProcessor: Asset Processor CPU Usage: (settings registry 'Jobs' section):
+AssetProcessor:     - Process up to 1 jobs in parallel
+AssetProcessor:     - only use 1 jobs when critical work is waiting, 1 otherwise.
+AssetProcessor: Listening Port: 45644
+AssetProcessor: Asset Processor Batch Processing Started.
+AssetProcessor: -----------------------------------------
+BuilderManager: Starting new builder for job request
+AssetProcessor: Scanning file system for changes...
+AssetBuilder: System: 
+AssetBuilder: ==================================================================
+AssetBuilder: System: Trace::Assert
+AssetBuilder:  F:/JericoEngine/JericoEngine/Code/Framework/AzCore/AzCore/Script/ScriptContext.cpp(3462): (23824) '__cdecl AZ::LuaScriptCaller::LuaScriptCaller(class AZ::BehaviorContext *,class AZ::BehaviorMethod *)'
+AssetBuilder: System: The argument type: AZ::Render::LightingPreset const& for method: SetLightingPreset is not serialized and/or reflected for scripting.
+AssetBuilder: Make sure AZ::Render::LightingPreset const& is added to the SerializeContext and reflected to the BehaviorContext
+AssetBuilder: For example, verify these two exist and are being called in a Reflect function:
+AssetBuilder: serializeContext->Class<AZ::Render::LightingPreset const&>();
+AssetBuilder: behaviorContext->Class<AZ::Render::LightingPreset const&>();
+AssetBuilder: SetLightingPreset will not be available for scripting unless these requirements are met.
+AssetBuilder: E: The argument type: AZ::Render::LightingPreset const& for method: SetLightingPreset is not serialized and/or reflected for scripting.
+AssetBuilder: E: Make sure AZ::Render::LightingPreset const& is added to the SerializeContext and reflected to the BehaviorContext
+AssetBuilder: E: For example, verify these two exist and are being called in a Reflect function:
+AssetBuilder: E: serializeContext->Class<AZ::Render::LightingPreset const&>();
+AssetBuilder: E: behaviorContext->Class<AZ::Render::LightingPreset const&>();
+AssetBuilder: E: SetLightingPreset will not be available for scripting unless these requirements are met.
+AssetProcessor: File system scan done.
+AssetProcessor: Analyzing scanned files for changes...
+Catalog: Read 5815 assets from database for pc in 0.317000s
+AssetBuilder: F:\JericoEngine\JericoEngine\Code\Framework\AzCore\AzCore\Script\ScriptContext.cpp (3464) : AZ::LuaScriptCaller::LuaScriptCaller
+AssetBuilder: F:\JericoEngine\JericoEngine\Code\Framework\AzCore\AzCore\Script\ScriptContext.cpp (4649) : AZ::ScriptContextImpl::CreateLuaCaller
+AssetBuilder: F:\JericoEngine\JericoEngine\Code\Framework\AzCore\AzCore\Script\ScriptContext.cpp (4674) : AZ::ScriptContextImpl::BindMethodOnStack
+AssetBuilder: F:\JericoEngine\JericoEngine\Code\Framework\AzCore\AzCore\Script\ScriptContext.cpp (5301) : AZ::ScriptContextImpl::BindEBus
+AssetBuilder: F:\JericoEngine\JericoEngine\Code\Framework\AzCore\AzCore\Script\ScriptContext.cpp (5552) : AZ::ScriptContextImpl::BindTo
+AssetBuilder: F:\JericoEngine\JericoEngine\Code\Framework\AzCore\AzCore\Script\ScriptSystemComponent.cpp (204) : AZ::ScriptSystemComponent::AddContextWithId
+AssetBuilder: F:\JericoEngine\JericoEngine\Code\Framework\AzCore\AzCore\Script\ScriptSystemComponent.cpp (91) : AZ::ScriptSystemComponent::Activate
+AssetBuilder: F:\JericoEngine\JericoEngine\Code\Framework\AzCore\AzCore\Component\Entity.cpp (213) : AZ::Entity::Activate
+AssetBuilder: F:\JericoEngine\JericoEngine\Code\Framework\AzFramework\AzFramework\Application\Application.cpp (231) : AzFramework::Application::StartCommon
+AssetBuilder: F:\JericoEngine\JericoEngine\Code\Framework\AzToolsFramework\AzToolsFramework\Application\ToolsApplication.cpp (277) : AzToolsFramework::ToolsApplication::StartCommon
+AssetBuilder: F:\JericoEngine\JericoEngine\Code\Tools\AssetProcessor\AssetBuilder\AssetBuilderApplication.cpp (190) : AssetBuilderApplication::StartCommon
+AssetBuilder: F:\JericoEngine\JericoEngine\Code\Framework\AzFramework\AzFramework\Application\Application.cpp (222) : AzFramework::Application::Start
+AssetBuilder: F:\JericoEngine\JericoEngine\Code\Framework\AzToolsFramework\AzToolsFramework\Application\ToolsApplication.cpp (262) : AzToolsFramework::ToolsApplication::Start
+AssetBuilder: F:\JericoEngine\JericoEngine\Code\Tools\AssetProcessor\AssetBuilder\main.cpp (89) : main
+AssetBuilder: D:\a\_work\1\s\src\vctools\crt\vcstartup\src\startup\exe_common.inl (288) : __scrt_common_main_seh
+AssetBuilder: 00007FFDB93BDDA7 (KERNEL32) : BaseThreadInitThunk
+AssetBuilder: 00007FFDBB2FEE4C (ntdll) : RtlUserThreadStart
+AssetBuilder: System: ==================================================================
+AssetBuilder: System: 
+AssetBuilder: ==================================================================
+AssetBuilder: System: Trace::Assert
+AssetBuilder:  F:/JericoEngine/JericoEngine/Code/Framework/AzCore/AzCore/Script/ScriptContext.cpp(3462): (23824) '__cdecl AZ::LuaScriptCaller::LuaScriptCaller(class AZ::BehaviorContext *,class AZ::BehaviorMethod *)'
+AssetBuilder: System: The argument type: AZ::Render::ModelPreset const& for method: SetModelPreset is not serialized and/or reflected for scripting.
+AssetBuilder: Make sure AZ::Render::ModelPreset const& is added to the SerializeContext and reflected to the BehaviorContext
+AssetBuilder: For example, verify these two exist and are being called in a Reflect function:
+AssetBuilder: serializeContext->Class<AZ::Render::ModelPreset const&>();
+AssetBuilder: behaviorContext->Class<AZ::Render::ModelPreset const&>();
+AssetBuilder: SetModelPreset will not be available for scripting unless these requirements are met.
+AssetBuilder: E: The argument type: AZ::Render::ModelPreset const& for method: SetModelPreset is not serialized and/or reflected for scripting.
+AssetBuilder: E: Make sure AZ::Render::ModelPreset const& is added to the SerializeContext and reflected to the BehaviorContext
+AssetBuilder: E: For example, verify these two exist and are being called in a Reflect function:
+AssetBuilder: E: serializeContext->Class<AZ::Render::ModelPreset const&>();
+AssetBuilder: E: behaviorContext->Class<AZ::Render::ModelPreset const&>();
+AssetBuilder: E: SetModelPreset will not be available for scripting unless these requirements are met.
+AssetBuilder: F:\JericoEngine\JericoEngine\Code\Framework\AzCore\AzCore\Script\ScriptContext.cpp (3464) : AZ::LuaScriptCaller::LuaScriptCaller
+AssetBuilder: F:\JericoEngine\JericoEngine\Code\Framework\AzCore\AzCore\Script\ScriptContext.cpp (4649) : AZ::ScriptContextImpl::CreateLuaCaller
+AssetBuilder: F:\JericoEngine\JericoEngine\Code\Framework\AzCore\AzCore\Script\ScriptContext.cpp (4674) : AZ::ScriptContextImpl::BindMethodOnStack
+AssetBuilder: F:\JericoEngine\JericoEngine\Code\Framework\AzCore\AzCore\Script\ScriptContext.cpp (5301) : AZ::ScriptContextImpl::BindEBus
+AssetBuilder: F:\JericoEngine\JericoEngine\Code\Framework\AzCore\AzCore\Script\ScriptContext.cpp (5552) : AZ::ScriptContextImpl::BindTo
+AssetBuilder: F:\JericoEngine\JericoEngine\Code\Framework\AzCore\AzCore\Script\ScriptSystemComponent.cpp (204) : AZ::ScriptSystemComponent::AddContextWithId
+AssetBuilder: F:\JericoEngine\JericoEngine\Code\Framework\AzCore\AzCore\Script\ScriptSystemComponent.cpp (91) : AZ::ScriptSystemComponent::Activate
+AssetBuilder: F:\JericoEngine\JericoEngine\Code\Framework\AzCore\AzCore\Component\Entity.cpp (213) : AZ::Entity::Activate
+AssetBuilder: F:\JericoEngine\JericoEngine\Code\Framework\AzFramework\AzFramework\Application\Application.cpp (231) : AzFramework::Application::StartCommon
+AssetBuilder: F:\JericoEngine\JericoEngine\Code\Framework\AzToolsFramework\AzToolsFramework\Application\ToolsApplication.cpp (277) : AzToolsFramework::ToolsApplication::StartCommon
+AssetBuilder: F:\JericoEngine\JericoEngine\Code\Tools\AssetProcessor\AssetBuilder\AssetBuilderApplication.cpp (190) : AssetBuilderApplication::StartCommon
+AssetBuilder: F:\JericoEngine\JericoEngine\Code\Framework\AzFramework\AzFramework\Application\Application.cpp (222) : AzFramework::Application::Start
+AssetBuilder: F:\JericoEngine\JericoEngine\Code\Framework\AzToolsFramework\AzToolsFramework\Application\ToolsApplication.cpp (262) : AzToolsFramework::ToolsApplication::Start
+AssetBuilder: F:\JericoEngine\JericoEngine\Code\Tools\AssetProcessor\AssetBuilder\main.cpp (89) : main
+AssetBuilder: D:\a\_work\1\s\src\vctools\crt\vcstartup\src\startup\exe_common.inl (288) : __scrt_common_main_seh
+AssetBuilder: 00007FFDB93BDDA7 (KERNEL32) : BaseThreadInitThunk
+AssetBuilder: 00007FFDBB2FEE4C (ntdll) : RtlUserThreadStart
+AssetBuilder: System: ==================================================================
+AssetBuilder: System: 
+AssetBuilder: ==================================================================
+AssetBuilder: System: Trace::Assert
+AssetBuilder:  F:/JericoEngine/JericoEngine/Code/Framework/AzCore/AzCore/Script/ScriptContext.cpp(3462): (23824) '__cdecl AZ::LuaScriptCaller::LuaScriptCaller(class AZ::BehaviorContext *,class AZ::BehaviorMethod *)'
+AssetBuilder: System: The argument type: AZ::Render::LightingPreset const& for method: SetLightingPreset is not serialized and/or reflected for scripting.
+AssetBuilder: Make sure AZ::Render::LightingPreset const& is added to the SerializeContext and reflected to the BehaviorContext
+AssetBuilder: For example, verify these two exist and are being called in a Reflect function:
+AssetBuilder: serializeContext->Class<AZ::Render::LightingPreset const&>();
+AssetBuilder: behaviorContext->Class<AZ::Render::LightingPreset const&>();
+AssetBuilder: SetLightingPreset will not be available for scripting unless these requirements are met.
+AssetBuilder: E: The argument type: AZ::Render::LightingPreset const& for method: SetLightingPreset is not serialized and/or reflected for scripting.
+AssetBuilder: E: Make sure AZ::Render::LightingPreset const& is added to the SerializeContext and reflected to the BehaviorContext
+AssetBuilder: E: For example, verify these two exist and are being called in a Reflect function:
+AssetBuilder: E: serializeContext->Class<AZ::Render::LightingPreset const&>();
+AssetBuilder: E: behaviorContext->Class<AZ::Render::LightingPreset const&>();
+AssetBuilder: E: SetLightingPreset will not be available for scripting unless these requirements are met.
+AssetBuilder: F:\JericoEngine\JericoEngine\Code\Framework\AzCore\AzCore\Script\ScriptContext.cpp (3464) : AZ::LuaScriptCaller::LuaScriptCaller
+AssetBuilder: F:\JericoEngine\JericoEngine\Code\Framework\AzCore\AzCore\Script\ScriptContext.cpp (4649) : AZ::ScriptContextImpl::CreateLuaCaller
+AssetBuilder: F:\JericoEngine\JericoEngine\Code\Framework\AzCore\AzCore\Script\ScriptContext.cpp (4674) : AZ::ScriptContextImpl::BindMethodOnStack
+AssetBuilder: F:\JericoEngine\JericoEngine\Code\Framework\AzCore\AzCore\Script\ScriptContext.cpp (5332) : AZ::ScriptContextImpl::BindEBus
+AssetBuilder: F:\JericoEngine\JericoEngine\Code\Framework\AzCore\AzCore\Script\ScriptContext.cpp (5552) : AZ::ScriptContextImpl::BindTo
+AssetBuilder: F:\JericoEngine\JericoEngine\Code\Framework\AzCore\AzCore\Script\ScriptSystemComponent.cpp (204) : AZ::ScriptSystemComponent::AddContextWithId
+AssetBuilder: F:\JericoEngine\JericoEngine\Code\Framework\AzCore\AzCore\Script\ScriptSystemComponent.cpp (91) : AZ::ScriptSystemComponent::Activate
+AssetBuilder: F:\JericoEngine\JericoEngine\Code\Framework\AzCore\AzCore\Component\Entity.cpp (213) : AZ::Entity::Activate
+AssetBuilder: F:\JericoEngine\JericoEngine\Code\Framework\AzFramework\AzFramework\Application\Application.cpp (231) : AzFramework::Application::StartCommon
+AssetBuilder: F:\JericoEngine\JericoEngine\Code\Framework\AzToolsFramework\AzToolsFramework\Application\ToolsApplication.cpp (277) : AzToolsFramework::ToolsApplication::StartCommon
+AssetBuilder: F:\JericoEngine\JericoEngine\Code\Tools\AssetProcessor\AssetBuilder\AssetBuilderApplication.cpp (190) : AssetBuilderApplication::StartCommon
+AssetBuilder: F:\JericoEngine\JericoEngine\Code\Framework\AzFramework\AzFramework\Application\Application.cpp (222) : AzFramework::Application::Start
+AssetBuilder: F:\JericoEngine\JericoEngine\Code\Framework\AzToolsFramework\AzToolsFramework\Application\ToolsApplication.cpp (262) : AzToolsFramework::ToolsApplication::Start
+AssetBuilder: F:\JericoEngine\JericoEngine\Code\Tools\AssetProcessor\AssetBuilder\main.cpp (89) : main
+AssetBuilder: D:\a\_work\1\s\src\vctools\crt\vcstartup\src\startup\exe_common.inl (288) : __scrt_common_main_seh
+AssetBuilder: 00007FFDB93BDDA7 (KERNEL32) : BaseThreadInitThunk
+AssetBuilder: 00007FFDBB2FEE4C (ntdll) : RtlUserThreadStart
+AssetBuilder: System: ==================================================================
+AssetBuilder: System: 
+AssetBuilder: ==================================================================
+AssetBuilder: System: Trace::Assert
+AssetBuilder:  F:/JericoEngine/JericoEngine/Code/Framework/AzCore/AzCore/Script/ScriptContext.cpp(3462): (23824) '__cdecl AZ::LuaScriptCaller::LuaScriptCaller(class AZ::BehaviorContext *,class AZ::BehaviorMethod *)'
+AssetBuilder: System: The argument type: AZ::Render::ModelPreset const& for method: SetModelPreset is not serialized and/or reflected for scripting.
+AssetBuilder: Make sure AZ::Render::ModelPreset const& is added to the SerializeContext and reflected to the BehaviorContext
+AssetBuilder: For example, verify these two exist and are being called in a Reflect function:
+AssetBuilder: serializeContext->Class<AZ::Render::ModelPreset const&>();
+AssetBuilder: behaviorContext->Class<AZ::Render::ModelPreset const&>();
+AssetBuilder: SetModelPreset will not be available for scripting unless these requirements are met.
+AssetBuilder: E: The argument type: AZ::Render::ModelPreset const& for method: SetModelPreset is not serialized and/or reflected for scripting.
+AssetBuilder: E: Make sure AZ::Render::ModelPreset const& is added to the SerializeContext and reflected to the BehaviorContext
+AssetBuilder: E: For example, verify these two exist and are being called in a Reflect function:
+AssetBuilder: E: serializeContext->Class<AZ::Render::ModelPreset const&>();
+AssetBuilder: E: behaviorContext->Class<AZ::Render::ModelPreset const&>();
+AssetBuilder: E: SetModelPreset will not be available for scripting unless these requirements are met.
+AssetBuilder: F:\JericoEngine\JericoEngine\Code\Framework\AzCore\AzCore\Script\ScriptContext.cpp (3464) : AZ::LuaScriptCaller::LuaScriptCaller
+AssetBuilder: F:\JericoEngine\JericoEngine\Code\Framework\AzCore\AzCore\Script\ScriptContext.cpp (4649) : AZ::ScriptContextImpl::CreateLuaCaller
+AssetBuilder: F:\JericoEngine\JericoEngine\Code\Framework\AzCore\AzCore\Script\ScriptContext.cpp (4674) : AZ::ScriptContextImpl::BindMethodOnStack
+AssetBuilder: F:\JericoEngine\JericoEngine\Code\Framework\AzCore\AzCore\Script\ScriptContext.cpp (5332) : AZ::ScriptContextImpl::BindEBus
+AssetBuilder: F:\JericoEngine\JericoEngine\Code\Framework\AzCore\AzCore\Script\ScriptContext.cpp (5552) : AZ::ScriptContextImpl::BindTo
+AssetBuilder: F:\JericoEngine\JericoEngine\Code\Framework\AzCore\AzCore\Script\ScriptSystemComponent.cpp (204) : AZ::ScriptSystemComponent::AddContextWithId
+AssetBuilder: F:\JericoEngine\JericoEngine\Code\Framework\AzCore\AzCore\Script\ScriptSystemComponent.cpp (91) : AZ::ScriptSystemComponent::Activate
+AssetBuilder: F:\JericoEngine\JericoEngine\Code\Framework\AzCore\AzCore\Component\Entity.cpp (213) : AZ::Entity::Activate
+AssetBuilder: F:\JericoEngine\JericoEngine\Code\Framework\AzFramework\AzFramework\Application\Application.cpp (231) : AzFramework::Application::StartCommon
+AssetBuilder: F:\JericoEngine\JericoEngine\Code\Framework\AzToolsFramework\AzToolsFramework\Application\ToolsApplication.cpp (277) : AzToolsFramework::ToolsApplication::StartCommon
+AssetBuilder: F:\JericoEngine\JericoEngine\Code\Tools\AssetProcessor\AssetBuilder\AssetBuilderApplication.cpp (190) : AssetBuilderApplication::StartCommon
+AssetBuilder: F:\JericoEngine\JericoEngine\Code\Framework\AzFramework\AzFramework\Application\Application.cpp (222) : AzFramework::Application::Start
+AssetBuilder: F:\JericoEngine\JericoEngine\Code\Framework\AzToolsFramework\AzToolsFramework\Application\ToolsApplication.cpp (262) : AzToolsFramework::ToolsApplication::Start
+AssetBuilder: F:\JericoEngine\JericoEngine\Code\Tools\AssetProcessor\AssetBuilder\main.cpp (89) : main
+AssetBuilder: D:\a\_work\1\s\src\vctools\crt\vcstartup\src\startup\exe_common.inl (288) : __scrt_common_main_seh
+AssetBuilder: 00007FFDB93BDDA7 (KERNEL32) : BaseThreadInitThunk
+AssetBuilder: 00007FFDBB2FEE4C (ntdll) : RtlUserThreadStart
+AssetProcessor: BuilderManager: Builder 5A84BB753AB5440199FEF9FE9D2D6DC9 connected, connId: 1
+BuilderManager: Builder started successfully
+AssetProcessor: Received 3176 files from the scanner.  Assessing...
+AssetProcessor: Assessing files from scanner complete. Total files: 3176. Assets with new builders: 0. Unregistered/new files: 0. Old timestamps: 0. Modified dependencies: 0.
+AssetProcessor: Initial Scan complete, checking for missing files...
+AssetProcessor: BuilderManager: Builder 6D31043AD5B04F969BFC5DBCD8CB0BF4 connected, connId: 3
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+Log Component: 
+==================================================================
+Log Component: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Logging/LogFile.cpp(134): 'void __cdecl AzFramework::LogFile::InitAbsolute(const char *,bool)'
+Log Component: Unable to open the log file for writing
+Log Component: ==================================================================
+AssetProcessor: Builder optimization: 1920 / 3174 files required full analysis, 1254 sources found but not processed by anyone. 4 override collisions.
+AssetProcessor: Processing Assets/jenative_graph_workspace_test.material "Material Builder" (pc)...
+AssetProcessor: Processed "F:/JericoEngine/JericoEngine/Projects/JEEditorFixture/Assets/jenative_graph_workspace_test.material" ("pc")... 
+AssetProcessor: Processing Passes/Child/EditorModeBlur.pass "Pass Asset Builder" (pc)...
+AssetProcessor: Processed "F:/JericoEngine/JericoEngine/Editor/Render/Features/Assets/EditorModeFeedback/Passes/Child/EditorModeBlur.pass" ("pc")... 
+AssetProcessor: Processing Passes/Child/EditorModeBlurParent.pass "Pass Asset Builder" (pc)...
+AssetProcessor: Processed "F:/JericoEngine/JericoEngine/Editor/Render/Features/Assets/EditorModeFeedback/Passes/Child/EditorModeBlurParent.pass" ("pc")... 
+AssetProcessor: Processing Passes/Child/EditorModeDesaturation.pass "Pass Asset Builder" (pc)...
+AssetProcessor: Processed "F:/JericoEngine/JericoEngine/Editor/Render/Features/Assets/EditorModeFeedback/Passes/Child/EditorModeDesaturation.pass" ("pc")... 
+AssetProcessor: Processing Passes/Child/EditorModeFeedback_ChildPassTemplates.azasset "Any Asset Builder" (pc)...
+AssetProcessor: Processed "F:/JericoEngine/JericoEngine/Editor/Render/Features/Assets/EditorModeFeedback/Passes/Child/EditorModeFeedback_ChildPassTemplates.azasset" ("pc")... 
+AssetProcessor: Processing Passes/Child/EditorModeOutline.pass "Pass Asset Builder" (pc)...
+AssetProcessor: Processed "F:/JericoEngine/JericoEngine/Editor/Render/Features/Assets/EditorModeFeedback/Passes/Child/EditorModeOutline.pass" ("pc")... 
+AssetProcessor: Processing Passes/Child/EditorModeTint.pass "Pass Asset Builder" (pc)...
+AssetProcessor: Processed "F:/JericoEngine/JericoEngine/Editor/Render/Features/Assets/EditorModeFeedback/Passes/Child/EditorModeTint.pass" ("pc")... 
+AssetProcessor: Processing Shaders/EditorModeBlur.shader "Shader Asset" (pc)...
+AssetProcessor: Processed "F:/JericoEngine/JericoEngine/Editor/Render/Features/Assets/EditorModeFeedback/Shaders/EditorModeBlur.shader" ("pc")... 
+AssetProcessor: Processing Shaders/EditorModeBufferCopy.shader "Shader Asset" (pc)...
+AssetProcessor: Processed "F:/JericoEngine/JericoEngine/Editor/Render/Features/Assets/EditorModeFeedback/Shaders/EditorModeBufferCopy.shader" ("pc")... 
+AssetProcessor: Processing Shaders/EditorModeDesaturation.shader "Shader Asset" (pc)...
+AssetProcessor: Processed "F:/JericoEngine/JericoEngine/Editor/Render/Features/Assets/EditorModeFeedback/Shaders/EditorModeDesaturation.shader" ("pc")... 
+AssetProcessor: Processing Shaders/EditorModeMask.material "Material Builder" (pc)...
+AssetProcessor: Processed "F:/JericoEngine/JericoEngine/Editor/Render/Features/Assets/EditorModeFeedback/Shaders/EditorModeMask.material" ("pc")... 
+AssetProcessor: Processing Shaders/EditorModeMask.materialtype "Material Type Builder (Final Stage)" (pc)...
+AssetProcessor: Processed "F:/JericoEngine/JericoEngine/Editor/Render/Features/Assets/EditorModeFeedback/Shaders/EditorModeMask.materialtype" ("pc")... 
+AssetProcessor: Processing Shaders/EditorModeMask.shader "Shader Asset" (pc)...
+AssetProcessor: Processed "F:/JericoEngine/JericoEngine/Editor/Render/Features/Assets/EditorModeFeedback/Shaders/EditorModeMask.shader" ("pc")... 
+AssetProcessor: Processing Shaders/EditorModeOutline.shader "Shader Asset" (pc)...
+AssetProcessor: Processed "F:/JericoEngine/JericoEngine/Editor/Render/Features/Assets/EditorModeFeedback/Shaders/EditorModeOutline.shader" ("pc")... 
+AssetProcessor: Processing Shaders/EditorModeTint.shader "Shader Asset" (pc)...
+AssetProcessor: Processed "F:/JericoEngine/JericoEngine/Editor/Render/Features/Assets/EditorModeFeedback/Shaders/EditorModeTint.shader" ("pc")... 
+AssetProcessor: No assets remain in the build queue.  Saving the catalog, and then shutting down.
+AssetProcessor: App quit requested 5 listeners notified.
+AssetProcessor: App Quit Object of type BatchApplicationServer indicates it is ready.
+AssetProcessor: App Quit Object of type AssetProcessor::RCController indicates it is ready.
+AssetProcessor: App Quit Object of type AssetProcessor::FileProcessor indicates it is ready.
+AssetProcessor: App Quit: Object of type ConnectionManager is not yet ready to quit.
+AssetBuilder: C: [Trace] = F:\JericoEngine\JericoEngine\Code\Tools\AssetProcessor\AssetBuilder\AssetBuilderComponent.cpp(835): 'void __cdecl AssetBuilderComponent::Disconnected(class AzFramework::SocketConnection *)'
+AssetBuilder: C: [Type] = Trace::Error
+AssetBuilder: E: AssetBuilder: Lost connection to Asset Processor, shutting down
+AssetProcessor: BuilderManager: Lost connection to builder 5A84BB753AB5440199FEF9FE9D2D6DC9, index 1, removed from pool
+AssetBuilder: C: [Trace] = F:\JericoEngine\JericoEngine\Code\Tools\AssetProcessor\AssetBuilder\AssetBuilderComponent.cpp(835): 'void __cdecl AssetBuilderComponent::Disconnected(class AzFramework::SocketConnection *)'
+AssetBuilder: C: [Type] = Trace::Error
+AssetBuilder: E: AssetBuilder: Lost connection to Asset Processor, shutting down
+AssetProcessor: BuilderManager: Lost connection to builder 6D31043AD5B04F969BFC5DBCD8CB0BF4, index 3, removed from pool
+AssetProcessor: App Quit Object of type ConnectionManager indicates it is ready.
+AssetProcessor: App Quit: Object of type AssetProcessor::AssetProcessorManager is not yet ready to quit.
+AssetProcessor: App Quit Object of type AssetProcessor::AssetProcessorManager indicates it is ready.
+AssetProcessor: App quit requested, and all objects are ready.  Quitting app.
+AssetProcessor: Saved pc catalog containing 5815 assets in 0.019000s
+AssetProcessor: -----------------------------------------
+AssetProcessor: Asset Processor Batch Processing complete
+AssetProcessor: Number of Assets Successfully Processed: 15.
+AssetProcessor: Number of Assets Failed to Process: 0.
+AssetProcessor: Number of Warnings Reported: 6.
+AssetProcessor: Number of Errors Reported: 0.
+AssetProcessor: Total Assets Processing Time: 28.849001s
+AssetProcessor: Asset Processor Batch Processing Completed.
+AssetProcessor:     Time:          000ms, EventName: LoadingGems
+AssetProcessor:     Time:          285ms, EventName: AssetScanning
+AssetProcessor:     Time:          000ms, EventName: WarmingFileCache
+AssetProcessor:     Time:          097ms, EventName: InitialFileAssessment
+AssetProcessor:     Time:       03s142ms, Count: 3221, Average:          000ms, EventName: HashFileTotal
+AssetProcessor: Top 4 longest individual file hashes:
+AssetProcessor:     Time:          136ms, EventName: HashFile,F:/JericoEngine/JericoEngine/Gems/EMotionFX/Assets/Editor/Images/Icons/Collider.svg
+AssetProcessor:     Time:          058ms, EventName: HashFile,F:/JericoEngine/JericoEngine/Assets/Editor/Translation/scriptcanvas_en_us.ts
+AssetProcessor:     Time:          047ms, EventName: HashFile,F:/JericoEngine/JericoEngine/Projects/JEEditorFixture/Assets/vcsncbkew_8K_Displacement.exr
+AssetProcessor:     Time:          043ms, EventName: HashFile,F:/JericoEngine/JericoEngine/Projects/JEEditorFixture/stone_cliff_vjbode1mw/vjbode1mw_8K_Displacement.exr
+AssetProcessor:     Time:       10s957ms, Count: 1998, Average:          005ms, EventName: CreateJobsTotal
+AssetProcessor: Top 4 longest individual CreateJobs
+AssetProcessor:     Time:       01s154ms, EventName: CreateJobs,shaders/postprocessing/outputtransformmobile_0.hashedvariantbatch,Shader Variant Asset Builder
+AssetProcessor:     Time:          288ms, EventName: CreateJobs,Scripts/Utils/Math.lua,Lua Worker Builder
+AssetProcessor:     Time:          256ms, EventName: CreateJobs,materials/types/standardmultilayerpbr_generated.materialtype,Material Type Builder
+AssetProcessor:     Time:          165ms, EventName: CreateJobs,assets/jematerial_cold_cook_green20261014_common_5_shadowmappass_customz.shader,Shader Asset Builder
+AssetProcessor: Top 4 longest CreateJobs By builder
+AssetProcessor:     Time:       05s088ms, Count:  305, Average:          016ms, EventName: CreateJobsByBuilder,Shader Asset Builder
+AssetProcessor:     Time:       01s569ms, Count:  495, Average:          003ms, EventName: CreateJobsByBuilder,Atom Image Builder
+AssetProcessor:     Time:       01s287ms, Count:   34, Average:          037ms, EventName: CreateJobsByBuilder,Shader Variant Asset Builder
+AssetProcessor:     Time:          936ms, Count:   37, Average:          025ms, EventName: CreateJobsByBuilder,Material Type Builder
+AssetProcessor:     Time:       01s098ms, Count:   15, Average:          073ms, EventName: ProcessJobsTotal
+AssetProcessor: Top 4 longest individual ProcessJob
+AssetProcessor:     Time:          193ms, EventName: ProcessJob,F:/JericoEngine/JericoEngine/Editor/Render/Features/Assets/EditorModeFeedback,Shaders/EditorModeMask.shader,Shader Asset,pc,{C94DA151-82BC-4475-86FA-E6C92A0BD6F8}
+AssetProcessor:     Time:          176ms, EventName: ProcessJob,F:/JericoEngine/JericoEngine/Editor/Render/Features/Assets/EditorModeFeedback,Shaders/EditorModeBlur.shader,Shader Asset,pc,{C94DA151-82BC-4475-86FA-E6C92A0BD6F8}
+AssetProcessor:     Time:          166ms, EventName: ProcessJob,F:/JericoEngine/JericoEngine/Editor/Render/Features/Assets/EditorModeFeedback,Shaders/EditorModeBufferCopy.shader,Shader Asset,pc,{C94DA151-82BC-4475-86FA-E6C92A0BD6F8}
+AssetProcessor:     Time:          166ms, EventName: ProcessJob,F:/JericoEngine/JericoEngine/Editor/Render/Features/Assets/EditorModeFeedback,Shaders/EditorModeTint.shader,Shader Asset,pc,{C94DA151-82BC-4475-86FA-E6C92A0BD6F8}
+AssetProcessor: Top 4 cumulative time spent in ProcessJob by JobKey
+AssetProcessor:     Time:          193ms, EventName: ProcessJobsByJobKey,Shaders/EditorModeMask.shader
+AssetProcessor:     Time:          176ms, EventName: ProcessJobsByJobKey,Shaders/EditorModeBlur.shader
+AssetProcessor:     Time:          166ms, EventName: ProcessJobsByJobKey,Shaders/EditorModeBufferCopy.shader
+AssetProcessor:     Time:          166ms, EventName: ProcessJobsByJobKey,Shaders/EditorModeTint.shader
+AssetProcessor: Top 4 cumulative time spent in ProcessJob by Platform
+AssetProcessor:     Time:       01s020ms, Count:    6, Average:          170ms, EventName: ProcessJobsByPlatform,Shader Asset
+AssetProcessor:     Time:          036ms, Count:    5, Average:          007ms, EventName: ProcessJobsByPlatform,Pass Asset Builder
+AssetProcessor:     Time:          019ms, Count:    2, Average:          009ms, EventName: ProcessJobsByPlatform,Material Builder
+AssetProcessor:     Time:          014ms, EventName: ProcessJobsByPlatform,Material Type Builder (Final Stage)
+AssetProcessor:     Time:          010ms, EventName: ComputeStatsTime
+JSON Serialization: 
+==================================================================
+JSON Serialization: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzCore/AzCore/Serialization/Json/JsonSerialization.cpp(504): 'union AZ::JsonSerializationResult::ResultCode __cdecl AZ::JsonSerialization::DefaultIssueReporter(class AZStd::basic_string<char,struct AZStd::char_traits<char>,struct AZStd::allocator> &,class AZStd::basic_string_view<char,struct AZStd::char_traits<char> >,union AZ::JsonSerializationResult::ResultCode,class AZStd::basic_string_view<char,struct AZStd::char_traits<char> >)'
+JSON Serialization: Unable to retrieve context information.
+    Reason: The operation has halted during a retrieve info operation because a catastrophic issue was encountered.
+JSON Serialization: ==================================================================
+JSON Serialization: 
+==================================================================
+JSON Serialization: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzCore/AzCore/Serialization/Json/JsonSerialization.cpp(504): 'union AZ::JsonSerializationResult::ResultCode __cdecl AZ::JsonSerialization::DefaultIssueReporter(class AZStd::basic_string<char,struct AZStd::char_traits<char>,struct AZStd::allocator> &,class AZStd::basic_string_view<char,struct AZStd::char_traits<char> >,union AZ::JsonSerializationResult::ResultCode,class AZStd::basic_string_view<char,struct AZStd::char_traits<char> >)'
+JSON Serialization: Unable to retrieve context information.
+    Reason: The operation has halted during a retrieve info operation because a catastrophic issue was encountered.
+JSON Serialization: ==================================================================

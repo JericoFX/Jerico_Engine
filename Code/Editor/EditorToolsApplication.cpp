@@ -7,6 +7,7 @@
  */
 
 #include "EditorDefs.h"
+#include <JE/Editor/Tools/Module.h>
 
 #include "EditorToolsApplication.h"
 
@@ -123,6 +124,7 @@ namespace EditorInternal
     void EditorToolsApplication::CreateStaticModules(AZStd::vector<AZ::Module*>& outModules)
     {
         AzToolsFramework::ToolsApplication::CreateStaticModules(outModules);
+        outModules.emplace_back(JE::Editor::Tools::CreateModule());
         outModules.emplace_back(JE::Geometry::CreateAuthoringModule());
         outModules.emplace_back(JE::Editor::Camera::CreateAuthoringModule());
         outModules.emplace_back(JE::World::Camera::Debug::CreateDebugModule());

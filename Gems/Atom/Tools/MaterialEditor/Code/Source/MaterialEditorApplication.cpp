@@ -6,7 +6,7 @@
  *
  */
 
-#include <AtomToolsFramework/Document/AtomToolsDocumentSystemRequestBus.h>
+#include <JE/Editor/Tools/Document/AtomToolsDocumentSystemRequestBus.h>
 #include <JE/Editor/Camera/CameraModule.h>
 #include <JE/Editor/Render/Scene/SceneModule.h>
 #include <JE/Editor/Render/Features/FeatureModule.h>
@@ -103,10 +103,10 @@ namespace MaterialEditor
             emptyWidget->setFixedSize(0, 0);
             return m_window->AddDocumentTab(documentId, emptyWidget);
         };
-        AtomToolsFramework::AtomToolsDocumentSystemRequestBus::Event(
-            m_toolId, &AtomToolsFramework::AtomToolsDocumentSystemRequestBus::Handler::RegisterDocumentType, documentTypeInfo);
+        JE::Editor::Tools::AtomToolsDocumentSystemRequestBus::Event(
+            m_toolId, &JE::Editor::Tools::AtomToolsDocumentSystemRequestBus::Handler::RegisterDocumentType, documentTypeInfo);
 
-        m_viewportSettingsSystem.reset(aznew AtomToolsFramework::EntityPreviewViewportSettingsSystem(m_toolId));
+        m_viewportSettingsSystem.reset(aznew JE::Editor::Tools::EntityPreviewViewportSettingsSystem(m_toolId));
 
         m_window.reset(aznew MaterialEditorMainWindow(m_toolId));
         m_window->show();

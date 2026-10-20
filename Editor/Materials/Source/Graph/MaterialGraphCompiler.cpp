@@ -12,12 +12,12 @@
 #include <JE/Editor/Render/RPI/Edit/Material/MaterialTypeSourceData.h>
 #include <JE/Editor/Render/RPI/Edit/Material/MaterialUtils.h>
 #include <JE/Render/RPI/Reflect/Image/StreamingImageAsset.h>
-#include <AtomToolsFramework/Graph/DynamicNode/DynamicNode.h>
-#include <AtomToolsFramework/Graph/DynamicNode/DynamicNodeUtil.h>
-#include <AtomToolsFramework/Graph/GraphTemplateFileDataCacheRequestBus.h>
-#include <AtomToolsFramework/Graph/GraphUtil.h>
-#include <AtomToolsFramework/Util/MaterialPropertyUtil.h>
-#include <AtomToolsFramework/Util/Util.h>
+#include <JE/Editor/Tools/Graph/DynamicNode/DynamicNode.h>
+#include <JE/Editor/Tools/Graph/DynamicNode/DynamicNodeUtil.h>
+#include <JE/Editor/Tools/Graph/GraphTemplateFileDataCacheRequestBus.h>
+#include <JE/Editor/Tools/Graph/GraphUtil.h>
+#include <JE/Editor/Tools/Util/MaterialPropertyUtil.h>
+#include <JE/Editor/Tools/Util/Util.h>
 #include <AzCore/Jobs/Algorithms.h>
 #include <AzCore/Math/Color.h>
 #include <AzCore/Math/Vector2.h>
@@ -43,14 +43,14 @@ namespace JE::Editor
     {
         if (auto serialize = azrtti_cast<AZ::SerializeContext*>(context))
         {
-            serialize->Class<MaterialGraphCompiler, AtomToolsFramework::GraphCompiler>()
+            serialize->Class<MaterialGraphCompiler, JE::Editor::Tools::GraphCompiler>()
                 ->Version(0)
                 ;
         }
     }
 
     MaterialGraphCompiler::MaterialGraphCompiler(const AZ::Crc32& toolId)
-        : AtomToolsFramework::GraphCompiler(toolId)
+        : JE::Editor::Tools::GraphCompiler(toolId)
     {
     }
 
@@ -60,7 +60,7 @@ namespace JE::Editor
 
     AZStd::string MaterialGraphCompiler::GetGraphPath() const
     {
-        if (const auto& graphPath = AtomToolsFramework::GraphCompiler::GetGraphPath(); graphPath.ends_with(".materialgraph"))
+        if (const auto& graphPath = JE::Editor::Tools::GraphCompiler::GetGraphPath(); graphPath.ends_with(".materialgraph"))
         {
             return graphPath;
         }
@@ -70,7 +70,7 @@ namespace JE::Editor
 
     bool MaterialGraphCompiler::CompileGraph(GraphModel::GraphPtr graph, const AZStd::string& graphName, const AZStd::string& graphPath)
     {
-        if (!AtomToolsFramework::GraphCompiler::CompileGraph(graph, graphName, graphPath))
+        if (!JE::Editor::Tools::GraphCompiler::CompileGraph(graph, graphName, graphPath))
         {
             return false;
         }
@@ -199,7 +199,7 @@ namespace JE::Editor
 
             // If this is a dynamic node with slot data type groups, we will search for the largest vector or other data type and convert
             // all of the values in the group to the same type.
-            if (auto dynamicNode = azrtti_cast<const AtomToolsFramework::DynamicNode*>(currentNode.get()))
+            if (auto dynamicNode = azrtti_cast<const JE::Editor::Tools::DynamicNode*>(currentNode.get()))
             {
                 const auto& nodeConfig = dynamicNode->GetConfig();
                 for (const auto& slotDataTypeGroup : nodeConfig.m_slotDataTypeGroups)
@@ -212,14 +212,14 @@ namespace JE::Editor
                     // requirements. Search all slots in the data type group for the minimum vector size setting to update the default
                     // minimum vector size.
                     unsigned int vectorSize = 0;
-                    AtomToolsFramework::VisitDynamicNodeSlotConfigs(
+                    JE::Editor::Tools::VisitDynamicNodeSlotConfigs(
                         nodeConfig,
-                        [&](const AtomToolsFramework::DynamicNodeSlotConfig& slotConfig)
+                        [&](const JE::Editor::Tools::DynamicNodeSlotConfig& slotConfig)
                         {
                             if (AZStd::regex_match(slotConfig.m_name, slotDataTypeGroupRegex))
                             {
                                 const AZStd::string vectorSizeStr =
-                                    AtomToolsFramework::GetSettingValueByName(slotConfig.m_settings, "materialPropertyMinVectorSize");
+                                    JE::Editor::Tools::GetSettingValueByName(slotConfig.m_settings, "materialPropertyMinVectorSize");
                                 if (!vectorSizeStr.empty())
                                 {
                                     vectorSize = AZStd::max(vectorSize, static_cast<unsigned int>(AZStd::stoi(vectorSizeStr)));
@@ -266,18 +266,18 @@ namespace JE::Editor
         {
             const auto& currentNode = nodePair.second;
 
-            if (auto dynamicNode = azrtti_cast<const AtomToolsFramework::DynamicNode*>(currentNode.get()))
+            if (auto dynamicNode = azrtti_cast<const JE::Editor::Tools::DynamicNode*>(currentNode.get()))
             {
                 if (!m_configIdsVisited.contains(dynamicNode->GetConfig().m_id))
                 {
                     m_configIdsVisited.insert(dynamicNode->GetConfig().m_id);
-                    AtomToolsFramework::VisitDynamicNodeSettings(
+                    JE::Editor::Tools::VisitDynamicNodeSettings(
                         dynamicNode->GetConfig(),
-                        [&](const AtomToolsFramework::DynamicNodeSettingsMap& settings)
+                        [&](const JE::Editor::Tools::DynamicNodeSettingsMap& settings)
                         {
-                            AtomToolsFramework::CollectDynamicNodeSettings(settings, "includePaths", m_includePaths);
-                            AtomToolsFramework::CollectDynamicNodeSettings(settings, "classDefinitions", m_classDefinitions);
-                            AtomToolsFramework::CollectDynamicNodeSettings(settings, "functionDefinitions", m_functionDefinitions);
+                            JE::Editor::Tools::CollectDynamicNodeSettings(settings, "includePaths", m_includePaths);
+                            JE::Editor::Tools::CollectDynamicNodeSettings(settings, "classDefinitions", m_classDefinitions);
+                            JE::Editor::Tools::CollectDynamicNodeSettings(settings, "functionDefinitions", m_functionDefinitions);
                         });
                 }
             }
@@ -287,13 +287,13 @@ namespace JE::Editor
     void MaterialGraphCompiler::BuildTemplatePathsForCurrentNode(const GraphModel::ConstNodePtr& currentNode)
     {
         m_templatePathsForCurrentNode.clear();
-        if (auto dynamicNode = azrtti_cast<const AtomToolsFramework::DynamicNode*>(currentNode.get()))
+        if (auto dynamicNode = azrtti_cast<const JE::Editor::Tools::DynamicNode*>(currentNode.get()))
         {
-            AtomToolsFramework::VisitDynamicNodeSettings(
+            JE::Editor::Tools::VisitDynamicNodeSettings(
                 dynamicNode->GetConfig(),
-                [&](const AtomToolsFramework::DynamicNodeSettingsMap& settings)
+                [&](const JE::Editor::Tools::DynamicNodeSettingsMap& settings)
                 {
-                    AtomToolsFramework::CollectDynamicNodeSettings(settings, "templatePaths", m_templatePathsForCurrentNode);
+                    JE::Editor::Tools::CollectDynamicNodeSettings(settings, "templatePaths", m_templatePathsForCurrentNode);
                 });
         }
     }
@@ -308,12 +308,12 @@ namespace JE::Editor
             {
                 // Load the unmodified, template source file data, which will be copied and used for insertions, substitutions, and
                 // code generation.
-                AtomToolsFramework::GraphTemplateFileData templateFileData;
-                AtomToolsFramework::GraphTemplateFileDataCacheRequestBus::EventResult(
+                JE::Editor::Tools::GraphTemplateFileData templateFileData;
+                JE::Editor::Tools::GraphTemplateFileDataCacheRequestBus::EventResult(
                     templateFileData,
                     m_toolId,
-                    &AtomToolsFramework::GraphTemplateFileDataCacheRequestBus::Events::Load,
-                    AtomToolsFramework::GetPathWithoutAlias(templatePath));
+                    &JE::Editor::Tools::GraphTemplateFileDataCacheRequestBus::Events::Load,
+                    JE::Editor::Tools::GetPathWithoutAlias(templatePath));
 
                 if (!templateFileData.IsLoaded())
                 {
@@ -329,14 +329,14 @@ namespace JE::Editor
 
     void MaterialGraphCompiler::DeleteExistingFilesForCurrentNode()
     {
-        if (AtomToolsFramework::GetSettingsValue("/O3DE/Atom/MaterialCanvas/ForceDeleteGeneratedFiles", false))
+        if (JE::Editor::Tools::GetSettingsValue("/O3DE/Atom/MaterialCanvas/ForceDeleteGeneratedFiles", false))
         {
             AZ::parallel_for_each(
                 m_templateFileDataVecForCurrentNode.begin(),
                 m_templateFileDataVecForCurrentNode.end(),
                 [this](const auto& templateFileData)
                 {
-                    const auto& templateInputPath = AtomToolsFramework::GetPathWithoutAlias(templateFileData.GetPath());
+                    const auto& templateInputPath = JE::Editor::Tools::GetPathWithoutAlias(templateFileData.GetPath());
                     const auto& templateOutputPath = GetOutputPathFromTemplatePath(templateInputPath);
 
                     auto fileIO = AZ::IO::FileIOBase::GetInstance();
@@ -347,13 +347,13 @@ namespace JE::Editor
 
     void MaterialGraphCompiler::ClearFingerprintsForCurrentNode()
     {
-        if (AtomToolsFramework::GetSettingsValue("/O3DE/Atom/MaterialCanvas/ForceClearAssetFingerprints", false))
+        if (JE::Editor::Tools::GetSettingsValue("/O3DE/Atom/MaterialCanvas/ForceClearAssetFingerprints", false))
         {
             for (const auto& templatePath : m_templatePathsForCurrentNode)
             {
                 if (templatePath.ends_with(".material") || templatePath.ends_with(".materialtype"))
                 {
-                    const auto& templateInputPath = AtomToolsFramework::GetPathWithoutAlias(templatePath);
+                    const auto& templateInputPath = JE::Editor::Tools::GetPathWithoutAlias(templatePath);
                     const auto& templateOutputPath = GetOutputPathFromTemplatePath(templateInputPath);
                     AzToolsFramework::AssetSystemRequestBus::Broadcast(
                         &AzToolsFramework::AssetSystemRequestBus::Events::ClearFingerprintForAsset, templateOutputPath);
@@ -391,7 +391,7 @@ namespace JE::Editor
                             AzToolsFramework::AssetSystemRequestBus::BroadcastResult(
                                 relativePathFound,
                                 &AzToolsFramework::AssetSystem::AssetSystemRequest::GenerateRelativeSourcePath,
-                                AtomToolsFramework::GetPathWithoutAlias(path),
+                                JE::Editor::Tools::GetPathWithoutAlias(path),
                                 relativePath,
                                 relativePathFolder);
 
@@ -465,7 +465,7 @@ namespace JE::Editor
         m_instructionNodesForCurrentNode.erase(
             AZStd::unique(m_instructionNodesForCurrentNode.begin(), m_instructionNodesForCurrentNode.end()),
             m_instructionNodesForCurrentNode.end());
-        AtomToolsFramework::SortNodesInExecutionOrder(m_instructionNodesForCurrentNode);
+        JE::Editor::Tools::SortNodesInExecutionOrder(m_instructionNodesForCurrentNode);
     }
 
     void MaterialGraphCompiler::BuildMaterialSrgForCurrentNode()
@@ -495,7 +495,7 @@ namespace JE::Editor
             }
 
             // Remove any aliases to resolve the absolute path to the template file
-            const auto& templateInputPath = AtomToolsFramework::GetPathWithoutAlias(templatePath);
+            const auto& templateInputPath = JE::Editor::Tools::GetPathWithoutAlias(templatePath);
             const auto& templateOutputPath = GetOutputPathFromTemplatePath(templateInputPath);
             if (!BuildMaterialTypeFromTemplate(currentNode, m_instructionNodesForCurrentNode, templateInputPath, templateOutputPath))
             {
@@ -797,7 +797,7 @@ namespace JE::Editor
     }
 
     AZStd::string MaterialGraphCompiler::GetAzslSrgMemberFromSlot(
-        GraphModel::ConstNodePtr node, const AtomToolsFramework::DynamicNodeSlotConfig& slotConfig) const
+        GraphModel::ConstNodePtr node, const JE::Editor::Tools::DynamicNodeSlotConfig& slotConfig) const
     {
         if (const auto& slot = node->GetSlot(slotConfig.m_name))
         {
@@ -866,7 +866,7 @@ namespace JE::Editor
 
     AZStd::vector<AZStd::string> MaterialGraphCompiler::GetInstructionsFromSlot(
         GraphModel::ConstNodePtr node,
-        const AtomToolsFramework::DynamicNodeSlotConfig& slotConfig,
+        const JE::Editor::Tools::DynamicNodeSlotConfig& slotConfig,
         const AZStd::vector<AZStd::pair<AZStd::string, AZStd::string>>& substitutionSymbols) const
     {
         AZStd::vector<AZStd::string> instructionsForSlot;
@@ -874,12 +874,12 @@ namespace JE::Editor
         auto slot = node->GetSlot(slotConfig.m_name);
         if (slot && (slot->GetSlotDirection() != GraphModel::SlotDirection::Output || !slot->GetConnections().empty()))
         {
-            AtomToolsFramework::CollectDynamicNodeSettings(slotConfig.m_settings, "instructions", instructionsForSlot);
+            JE::Editor::Tools::CollectDynamicNodeSettings(slotConfig.m_settings, "instructions", instructionsForSlot);
 
-            AtomToolsFramework::ReplaceSymbolsInContainer(substitutionSymbols, instructionsForSlot);
-            AtomToolsFramework::ReplaceSymbolsInContainer("SLOTNAME", GetSymbolNameFromSlot(slot), instructionsForSlot);
-            AtomToolsFramework::ReplaceSymbolsInContainer("SLOTTYPE", GetAzslTypeFromSlot(slot), instructionsForSlot);
-            AtomToolsFramework::ReplaceSymbolsInContainer("SLOTVALUE", GetAzslValueFromSlot(slot), instructionsForSlot);
+            JE::Editor::Tools::ReplaceSymbolsInContainer(substitutionSymbols, instructionsForSlot);
+            JE::Editor::Tools::ReplaceSymbolsInContainer("SLOTNAME", GetSymbolNameFromSlot(slot), instructionsForSlot);
+            JE::Editor::Tools::ReplaceSymbolsInContainer("SLOTTYPE", GetAzslTypeFromSlot(slot), instructionsForSlot);
+            JE::Editor::Tools::ReplaceSymbolsInContainer("SLOTVALUE", GetAzslValueFromSlot(slot), instructionsForSlot);
         }
 
         return instructionsForSlot;
@@ -931,7 +931,7 @@ namespace JE::Editor
             nodes.push_back(nodePair.second);
         }
 
-        AtomToolsFramework::SortNodesInExecutionOrder(nodes);
+        JE::Editor::Tools::SortNodesInExecutionOrder(nodes);
         return nodes;
     }
 
@@ -960,7 +960,7 @@ namespace JE::Editor
                 instructionNodes.push_back(inputNode);
             }
 
-            auto dynamicNode = azrtti_cast<const AtomToolsFramework::DynamicNode*>(inputNode.get());
+            auto dynamicNode = azrtti_cast<const JE::Editor::Tools::DynamicNode*>(inputNode.get());
             if (dynamicNode)
             {
                 const auto& nodeConfig = dynamicNode->GetConfig();
@@ -970,8 +970,8 @@ namespace JE::Editor
 
                 // Gather and perform substitutions on instructions embedded directly in the node.
                 AZStd::vector<AZStd::string> instructionsForNode;
-                AtomToolsFramework::CollectDynamicNodeSettings(nodeConfig.m_settings, "instructions", instructionsForNode);
-                AtomToolsFramework::ReplaceSymbolsInContainer(substitutionSymbols, instructionsForNode);
+                JE::Editor::Tools::CollectDynamicNodeSettings(nodeConfig.m_settings, "instructions", instructionsForNode);
+                JE::Editor::Tools::ReplaceSymbolsInContainer(substitutionSymbols, instructionsForNode);
 
                 // Gather and perform substitutions on instructions contained in property slots.
                 AZStd::vector<AZStd::string> instructionsForPropertySlots;
@@ -1016,18 +1016,18 @@ namespace JE::Editor
 
     AZStd::string MaterialGraphCompiler::GetSymbolNameFromNode(GraphModel::ConstNodePtr node) const
     {
-        return AtomToolsFramework::GetSymbolNameFromText(AZStd::string::format("node%u_%s", node->GetId(), node->GetTitle()));
+        return JE::Editor::Tools::GetSymbolNameFromText(AZStd::string::format("node%u_%s", node->GetId(), node->GetTitle()));
     }
 
     AZStd::string MaterialGraphCompiler::GetSymbolNameFromSlot(GraphModel::ConstSlotPtr slot) const
     {
         bool allowNameSubstitution = true;
-        if (auto dynamicNode = azrtti_cast<const AtomToolsFramework::DynamicNode*>(slot->GetParentNode().get()))
+        if (auto dynamicNode = azrtti_cast<const JE::Editor::Tools::DynamicNode*>(slot->GetParentNode().get()))
         {
             const auto& nodeConfig = dynamicNode->GetConfig();
-            AtomToolsFramework::VisitDynamicNodeSlotConfigs(
+            JE::Editor::Tools::VisitDynamicNodeSlotConfigs(
                 nodeConfig,
-                [&](const AtomToolsFramework::DynamicNodeSlotConfig& slotConfig)
+                [&](const JE::Editor::Tools::DynamicNodeSlotConfig& slotConfig)
                 {
                     if (slot->GetName() == slotConfig.m_name)
                     {
@@ -1052,20 +1052,20 @@ namespace JE::Editor
 
     AZStd::vector<AZStd::string> MaterialGraphCompiler::GetMaterialPropertySrgMemberFromSlot(
         GraphModel::ConstNodePtr node,
-        const AtomToolsFramework::DynamicNodeSlotConfig& slotConfig,
+        const JE::Editor::Tools::DynamicNodeSlotConfig& slotConfig,
         const AZStd::vector<AZStd::pair<AZStd::string, AZStd::string>>& substitutionSymbols) const
     {
         AZStd::vector<AZStd::string> materialPropertySrgMemberForSlot;
 
         if (auto slot = node->GetSlot(slotConfig.m_name))
         {
-            AtomToolsFramework::CollectDynamicNodeSettings(slotConfig.m_settings, "materialPropertySrgMember", materialPropertySrgMemberForSlot);
+            JE::Editor::Tools::CollectDynamicNodeSettings(slotConfig.m_settings, "materialPropertySrgMember", materialPropertySrgMemberForSlot);
 
-            AtomToolsFramework::ReplaceSymbolsInContainer(substitutionSymbols, materialPropertySrgMemberForSlot);
-            AtomToolsFramework::ReplaceSymbolsInContainer("STANDARD_SRG_MEMBER", GetAzslSrgMemberFromSlot(node, slotConfig), materialPropertySrgMemberForSlot);
-            AtomToolsFramework::ReplaceSymbolsInContainer("SLOTNAME", GetSymbolNameFromSlot(slot), materialPropertySrgMemberForSlot);
-            AtomToolsFramework::ReplaceSymbolsInContainer("SLOTTYPE", GetAzslTypeFromSlot(slot), materialPropertySrgMemberForSlot);
-            AtomToolsFramework::ReplaceSymbolsInContainer("SLOTVALUE", GetAzslValueFromSlot(slot), materialPropertySrgMemberForSlot);
+            JE::Editor::Tools::ReplaceSymbolsInContainer(substitutionSymbols, materialPropertySrgMemberForSlot);
+            JE::Editor::Tools::ReplaceSymbolsInContainer("STANDARD_SRG_MEMBER", GetAzslSrgMemberFromSlot(node, slotConfig), materialPropertySrgMemberForSlot);
+            JE::Editor::Tools::ReplaceSymbolsInContainer("SLOTNAME", GetSymbolNameFromSlot(slot), materialPropertySrgMemberForSlot);
+            JE::Editor::Tools::ReplaceSymbolsInContainer("SLOTTYPE", GetAzslTypeFromSlot(slot), materialPropertySrgMemberForSlot);
+            JE::Editor::Tools::ReplaceSymbolsInContainer("SLOTVALUE", GetAzslValueFromSlot(slot), materialPropertySrgMemberForSlot);
         }
 
         return materialPropertySrgMemberForSlot;
@@ -1084,20 +1084,20 @@ namespace JE::Editor
 
         for (const auto& inputNode : instructionNodes)
         {
-            auto dynamicNode = azrtti_cast<const AtomToolsFramework::DynamicNode*>(inputNode.get());
+            auto dynamicNode = azrtti_cast<const JE::Editor::Tools::DynamicNode*>(inputNode.get());
             if (dynamicNode)
             {
                 const auto& nodeConfig = dynamicNode->GetConfig();
                 const auto& substitutionSymbols = GetSubstitutionSymbolsFromNode(inputNode);
 
                 AZStd::vector<AZStd::string> materialPropertySrgMembersForNode;
-                AtomToolsFramework::CollectDynamicNodeSettings(
+                JE::Editor::Tools::CollectDynamicNodeSettings(
                     nodeConfig.m_settings, "materialPropertySrgMember", materialPropertySrgMembersForNode);
-                AtomToolsFramework::ReplaceSymbolsInContainer(substitutionSymbols, materialPropertySrgMembersForNode);
+                JE::Editor::Tools::ReplaceSymbolsInContainer(substitutionSymbols, materialPropertySrgMembersForNode);
 
-                AtomToolsFramework::VisitDynamicNodeSlotConfigs(
+                JE::Editor::Tools::VisitDynamicNodeSlotConfigs(
                     nodeConfig,
-                    [&](const AtomToolsFramework::DynamicNodeSlotConfig& slotConfig)
+                    [&](const JE::Editor::Tools::DynamicNodeSlotConfig& slotConfig)
                     {
                         const auto& materialPropertySrgMemberForSlot =
                             GetMaterialPropertySrgMemberFromSlot(inputNode, slotConfig, substitutionSymbols);
@@ -1121,7 +1121,7 @@ namespace JE::Editor
         const AZStd::string& templateInputPath,
         const AZStd::string& templateOutputPath) const
     {
-        using namespace AtomToolsFramework;
+        using namespace JE::Editor::Tools;
 
         if (!m_graph)
         {
@@ -1397,7 +1397,7 @@ namespace JE::Editor
         // Substitute the material graph name and any other Material Canvas specific tokens
         AZ::StringFunc::Replace(templateOutputText, "MaterialGraphName", GetUniqueGraphName().c_str());
 
-        AZ_TracePrintf_IfTrue(
+        JE_TRACE_PRINTF_IF_TRUE(
             "MaterialGraphCompiler", IsCompileLoggingEnabled(), "Saving generated file: %s\n", templateOutputPath.c_str());
 
         // The material type is complete and can be saved to disk.

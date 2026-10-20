@@ -15,7 +15,6 @@
     "requirements": "",
     "documentation_url": "",
     "dependencies": [
-        "AtomToolsFramework",
         "Atom_RHI",
         "ImageProcessingAtom",
         "LmbrCentral",

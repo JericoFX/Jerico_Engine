@@ -8,9 +8,9 @@
 
 #pragma once
 
-#include <AtomToolsFramework/Document/AtomToolsDocumentApplication.h>
-#include <AtomToolsFramework/EntityPreviewViewport/EntityPreviewViewportSettingsSystem.h>
-#include <AtomToolsFramework/Graph/DynamicNode/DynamicNodeManager.h>
+#include <JE/Editor/Tools/Document/AtomToolsDocumentApplication.h>
+#include <JE/Editor/Tools/EntityPreviewViewport/EntityPreviewViewportSettingsSystem.h>
+#include <JE/Editor/Tools/Graph/DynamicNode/DynamicNodeManager.h>
 #include <AzToolsFramework/API/EditorWindowRequestBus.h>
 #include <GraphModel/Model/GraphContext.h>
 #include <Window/PassCanvasMainWindow.h>
@@ -19,15 +19,15 @@ namespace PassCanvas
 {
     //! The main application class for Pass Canvas, setting up top level systems, document types, and the main window. 
     class PassCanvasApplication
-        : public AtomToolsFramework::AtomToolsDocumentApplication
+        : public JE::Editor::Tools::AtomToolsDocumentApplication
         , private AzToolsFramework::EditorWindowRequestBus::Handler
-        , private AtomToolsFramework::AtomToolsDocumentNotificationBus::Handler
+        , private JE::Editor::Tools::AtomToolsDocumentNotificationBus::Handler
     {
     public:
         AZ_CLASS_ALLOCATOR(PassCanvasApplication, AZ::SystemAllocator)
         AZ_TYPE_INFO(PassCanvas::PassCanvasApplication, "{792D3C47-F380-44BC-B47D-621D8C526360}");
 
-        using Base = AtomToolsFramework::AtomToolsDocumentApplication;
+        using Base = JE::Editor::Tools::AtomToolsDocumentApplication;
 
         PassCanvasApplication(int* argc, char*** argv);
         ~PassCanvasApplication();
@@ -57,9 +57,9 @@ namespace PassCanvas
         void InitDefaultDocument();
 
         AZStd::unique_ptr<PassCanvasMainWindow> m_window;
-        AZStd::unique_ptr<AtomToolsFramework::EntityPreviewViewportSettingsSystem> m_viewportSettingsSystem;
-        AZStd::unique_ptr<AtomToolsFramework::DynamicNodeManager> m_dynamicNodeManager;
+        AZStd::unique_ptr<JE::Editor::Tools::EntityPreviewViewportSettingsSystem> m_viewportSettingsSystem;
+        AZStd::unique_ptr<JE::Editor::Tools::DynamicNodeManager> m_dynamicNodeManager;
         AZStd::shared_ptr<GraphModel::GraphContext> m_graphContext;
-        AtomToolsFramework::GraphViewSettingsPtr m_graphViewSettingsPtr;
+        JE::Editor::Tools::GraphViewSettingsPtr m_graphViewSettingsPtr;
     };
 } // namespace PassCanvas

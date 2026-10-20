@@ -24,7 +24,7 @@
 #include <JE/Render/Scene/PostProcess/ExposureControl/ExposureControlComponentConstants.h>
 #include <JE/Render/Scene/PostProcess/PostFxLayerComponentConstants.h>
 #include <JE/Render/Scene/SkyBox/HDRiSkyboxBus.h>
-#include <AtomToolsFramework/EntityPreviewViewport/EntityPreviewViewportSettingsRequestBus.h>
+#include <JE/Editor/Tools/EntityPreviewViewport/EntityPreviewViewportSettingsRequestBus.h>
 #include <AzFramework/Components/NonUniformScaleComponent.h>
 #include <AzFramework/Components/TransformComponent.h>
 #include <JE/Editor/Materials/Document/MaterialDocumentRequestBus.h>
@@ -34,9 +34,9 @@ namespace JE::Editor
 {
     MaterialPreviewViewportContent::MaterialPreviewViewportContent(
         const AZ::Crc32& toolId,
-        AtomToolsFramework::RenderViewportWidget* widget,
+        JE::Editor::Tools::RenderViewportWidget* widget,
         AZStd::shared_ptr<AzFramework::EntityContext> entityContext, bool followOpenedDocuments)
-        : AtomToolsFramework::EntityPreviewViewportContent(toolId, widget, entityContext)
+        : JE::Editor::Tools::EntityPreviewViewportContent(toolId, widget, entityContext)
         , m_followOpenedDocuments(followOpenedDocuments)
     {
         // Configure tone mapper
@@ -91,14 +91,14 @@ namespace JE::Editor
                 gridComponentRequests->SetSecondaryColor(AZ::Color(0.1f, 0.1f, 0.1f, 1.0f));
             });
 
-        AtomToolsFramework::AtomToolsDocumentNotificationBus::Handler::BusConnect(m_toolId);
+        JE::Editor::Tools::AtomToolsDocumentNotificationBus::Handler::BusConnect(m_toolId);
         OnDocumentOpened(AZ::Uuid::CreateNull());
         OnViewportSettingsChanged();
     }
 
     MaterialPreviewViewportContent::~MaterialPreviewViewportContent()
     {
-        AtomToolsFramework::AtomToolsDocumentNotificationBus::Handler::BusDisconnect();
+        JE::Editor::Tools::AtomToolsDocumentNotificationBus::Handler::BusDisconnect();
     }
 
     AZ::EntityId MaterialPreviewViewportContent::GetObjectEntityId() const
@@ -151,11 +151,11 @@ namespace JE::Editor
 
     void MaterialPreviewViewportContent::OnViewportSettingsChanged()
     {
-        AtomToolsFramework::EntityPreviewViewportContent::OnViewportSettingsChanged();
+        JE::Editor::Tools::EntityPreviewViewportContent::OnViewportSettingsChanged();
 
-        AtomToolsFramework::EntityPreviewViewportSettingsRequestBus::Event(
+        JE::Editor::Tools::EntityPreviewViewportSettingsRequestBus::Event(
             m_toolId,
-            [this](AtomToolsFramework::EntityPreviewViewportSettingsRequestBus::Events* viewportRequests)
+            [this](JE::Editor::Tools::EntityPreviewViewportSettingsRequestBus::Events* viewportRequests)
             {
                 const auto& modelPreset = viewportRequests->GetModelPreset();
                 const auto& lightingPreset = viewportRequests->GetLightingPreset();

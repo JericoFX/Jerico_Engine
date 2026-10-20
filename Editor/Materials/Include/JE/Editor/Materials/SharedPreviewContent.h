@@ -16,14 +16,14 @@
 #include <JE/Render/RPI/Reflect/System/AnyAsset.h>
 #include <JE/Render/Materials/MaterialAssignment.h>
 #include <JE/Render/Scene/Mesh/MeshHandleStateBus.h>
-#include <AtomToolsFramework/PreviewRenderer/PreviewContent.h>
+#include <JE/Editor/Tools/PreviewRenderer/PreviewContent.h>
 
 namespace JE
 {
     namespace Editor
     {
         //! Creates a simple scene used for most previews and thumbnails
-        class JE_EDITOR_MATERIALS_API SharedPreviewContent final : public AtomToolsFramework::PreviewContent, public JE::Render::Scene::MeshHandleStateNotificationBus::Handler
+        class JE_EDITOR_MATERIALS_API SharedPreviewContent final : public JE::Editor::Tools::PreviewContent, public JE::Render::Scene::MeshHandleStateNotificationBus::Handler
         {
         public:
             AZ_CLASS_ALLOCATOR(SharedPreviewContent, AZ::SystemAllocator);

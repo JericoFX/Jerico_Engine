@@ -15,8 +15,8 @@
 #include <JE/Render/RPI/Reflect/Material/MaterialAsset.h>
 #include <JE/Render/RPI/Reflect/Material/MaterialPropertiesLayout.h>
 #include <JE/Render/RPI/Reflect/Material/MaterialTypeAsset.h>
-#include <AtomToolsFramework/Inspector/InspectorPropertyGroupWidget.h>
-#include <AtomToolsFramework/Util/Util.h>
+#include <JE/Editor/Tools/Inspector/InspectorPropertyGroupWidget.h>
+#include <JE/Editor/Tools/Util/Util.h>
 #include <AzFramework/API/ApplicationAPI.h>
 #include <AzToolsFramework/API/EditorAssetSystemAPI.h>
 #include <AzToolsFramework/API/EditorWindowRequestBus.h>
@@ -46,7 +46,7 @@ namespace JE
                 const AZStd::unordered_set<AZ::Name>& modelUvNames,
                 MaterialModelUvOverrideMapChangedCallBack matModUvOverrideMapChangedCallBack,
                 QWidget* parent)
-                : AtomToolsFramework::InspectorWidget(parent)
+                : JE::Editor::Tools::InspectorWidget(parent)
                 , m_matModUvOverrideMapChangedCallBack(matModUvOverrideMapChangedCallBack)
                 , m_matModUvOverrides(matModUvOverrides)
             {
@@ -74,7 +74,7 @@ namespace JE
                 m_activeProperty = {};
                 m_group = {};
 
-                AtomToolsFramework::InspectorWidget::Reset();
+                JE::Editor::Tools::InspectorWidget::Reset();
             }
 
             void MaterialModelUvNameMapInspector::Populate()
@@ -91,7 +91,7 @@ namespace JE
 
                 for (size_t i = 0; i < uvSize; ++i)
                 {
-                    AtomToolsFramework::DynamicPropertyConfig propertyConfig;
+                    JE::Editor::Tools::DynamicPropertyConfig propertyConfig;
                     const AZStd::string shaderInput = m_materialUvNames[i].m_shaderInput.ToString();
                     const AZStd::string materialUvName = m_materialUvNames[i].m_uvName.GetStringView();
 
@@ -108,7 +108,7 @@ namespace JE
                 }
 
                 AddGroup(groupName, groupDisplayName, groupDescription,
-                    new AtomToolsFramework::InspectorPropertyGroupWidget(&m_group, nullptr, m_group.TYPEINFO_Uuid(), this));
+                    new JE::Editor::Tools::InspectorPropertyGroupWidget(&m_group, nullptr, m_group.TYPEINFO_Uuid(), this));
 
                 AddGroupsEnd();
             }
@@ -118,7 +118,7 @@ namespace JE
                 // For some reason the reflected property editor notifications are not symmetrical
                 // This function is called continuously anytime a property changes until the edit has completed
                 // Because of that, we have to track whether or not we are continuing to edit the same property to know when editing has started and ended
-                const auto property = AtomToolsFramework::FindAncestorInstanceDataNodeByType<AtomToolsFramework::DynamicProperty>(pNode);
+                const auto property = JE::Editor::Tools::FindAncestorInstanceDataNodeByType<JE::Editor::Tools::DynamicProperty>(pNode);
                 if (property && m_activeProperty != property)
                 {
                     m_activeProperty = property;
@@ -127,7 +127,7 @@ namespace JE
 
             void MaterialModelUvNameMapInspector::AfterPropertyModified(AzToolsFramework::InstanceDataNode* pNode)
             {
-                const auto property = AtomToolsFramework::FindAncestorInstanceDataNodeByType<AtomToolsFramework::DynamicProperty>(pNode);
+                const auto property = JE::Editor::Tools::FindAncestorInstanceDataNodeByType<JE::Editor::Tools::DynamicProperty>(pNode);
                 if (property && m_activeProperty == property)
                 {
                     uint32_t index = 0;
@@ -158,7 +158,7 @@ namespace JE
             {
                 // As above, there are symmetrical functions on the notification interface for when editing begins and ends and has been completed but they are not being called following that pattern.
                 // when this function executes the changes to the property are ready to be committed or reverted
-                const auto property = AtomToolsFramework::FindAncestorInstanceDataNodeByType<AtomToolsFramework::DynamicProperty>(pNode);
+                const auto property = JE::Editor::Tools::FindAncestorInstanceDataNodeByType<JE::Editor::Tools::DynamicProperty>(pNode);
                 if (property && m_activeProperty == property)
                 {
                     uint32_t index = 0;
@@ -242,7 +242,7 @@ namespace JE
                 size_t uvSize = m_materialUvNames.size();
                 for (size_t i = 0u; i < uvSize; ++i)
                 {
-                    AtomToolsFramework::DynamicPropertyConfig propertyConfig;
+                    JE::Editor::Tools::DynamicPropertyConfig propertyConfig;
                     const AZStd::string shaderInput = m_materialUvNames[i].m_shaderInput.ToString();
                     const AZStd::string materialUvName = m_materialUvNames[i].m_uvName.GetStringView();
 

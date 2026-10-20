@@ -3,8 +3,8 @@
 #include "MaterialWorkspaceWidget.h"
 #include <JE/Editor/Materials/Viewport/MaterialPreviewViewportContent.h>
 #include <JE/Editor/Materials/Document/MaterialDocumentRequestBus.h>
-#include <AtomToolsFramework/EntityPreviewViewport/EntityPreviewViewportWidget.h>
-#include <AtomToolsFramework/EntityPreviewViewport/EntityPreviewViewportToolBar.h>
+#include <JE/Editor/Tools/EntityPreviewViewport/EntityPreviewViewportWidget.h>
+#include <JE/Editor/Tools/EntityPreviewViewport/EntityPreviewViewportToolBar.h>
 #include <Atom/RHI/RHISystemInterface.h>
 #include <JE/Render/RPI/Public/RPISystemInterface.h>
 #include <JE/Render/RPI/Public/ViewportContextBus.h>
@@ -13,9 +13,9 @@
 #include <QShowEvent>
 #include <QSplitter>
 
-#include <AtomToolsFramework/Document/AtomToolsDocumentInspector.h>
-#include <AtomToolsFramework/Document/AtomToolsDocumentRequestBus.h>
-#include <AtomToolsFramework/Util/Util.h>
+#include <JE/Editor/Tools/Document/AtomToolsDocumentInspector.h>
+#include <JE/Editor/Tools/Document/AtomToolsDocumentRequestBus.h>
+#include <JE/Editor/Tools/Util/Util.h>
 #include <AzToolsFramework/Undo/UndoSystem.h>
 #include <QApplication>
 #include <QCloseEvent>
@@ -48,7 +48,7 @@ namespace JE::Editor
         layout->addLayout(actions);
         m_documents = new QComboBox(this);
         layout->addWidget(m_documents);
-        m_inspector = new AtomToolsFramework::AtomToolsDocumentInspector(MaterialWorkspaceSession::GetToolId(), this);
+        m_inspector = new JE::Editor::Tools::AtomToolsDocumentInspector(MaterialWorkspaceSession::GetToolId(), this);
         m_inspector->SetDocumentSettingsPrefix("/JE/Editor/MaterialWorkspace/Inspector");
         auto* splitter = new QSplitter(Qt::Horizontal, this);
         m_previewHost = new QWidget(splitter);
@@ -92,7 +92,7 @@ namespace JE::Editor
             }
             RefreshActions();
         });
-        AtomToolsFramework::AtomToolsDocumentNotificationBus::Handler::BusConnect(MaterialWorkspaceSession::GetToolId());
+        JE::Editor::Tools::AtomToolsDocumentNotificationBus::Handler::BusConnect(MaterialWorkspaceSession::GetToolId());
         AzToolsFramework::ToolsApplicationNotificationBus::Handler::BusConnect();
         connect(&session, &MaterialWorkspaceSession::AboutToClose, this,
             &MaterialWorkspaceWidget::OnSessionClosing, Qt::DirectConnection);
@@ -127,7 +127,7 @@ namespace JE::Editor
         m_session = nullptr;
         m_documents->clear();
         setEnabled(false);
-        AtomToolsFramework::AtomToolsDocumentNotificationBus::Handler::BusDisconnect();
+        JE::Editor::Tools::AtomToolsDocumentNotificationBus::Handler::BusDisconnect();
         AzToolsFramework::ToolsApplicationNotificationBus::Handler::BusDisconnect();
         qApp->removeEventFilter(this);
     }
@@ -148,14 +148,14 @@ namespace JE::Editor
         }
         m_session->EnsureMaterialPreviewSettings();
         const auto toolId = MaterialWorkspaceSession::GetToolId();
-        auto* toolbar = new AtomToolsFramework::EntityPreviewViewportToolBar(toolId, m_previewHost);
-        m_previewViewport = new AtomToolsFramework::EntityPreviewViewportWidget(toolId, m_previewHost, true);
+        auto* toolbar = new JE::Editor::Tools::EntityPreviewViewportToolBar(toolId, m_previewHost);
+        m_previewViewport = new JE::Editor::Tools::EntityPreviewViewportWidget(toolId, m_previewHost, true);
         auto entityContext = AZStd::make_shared<AzFramework::EntityContext>();
         entityContext->InitContext();
-        auto scene = AZStd::make_shared<AtomToolsFramework::EntityPreviewViewportScene>(
+        auto scene = AZStd::make_shared<JE::Editor::Tools::EntityPreviewViewportScene>(
             toolId, m_previewViewport, entityContext, "MaterialWorkspacePreview", "passes/mainrenderpipeline.azasset", true);
         m_previewContent = AZStd::make_shared<MaterialPreviewViewportContent>(toolId, m_previewViewport, entityContext, false);
-        auto controller = AZStd::make_shared<AtomToolsFramework::EntityPreviewViewportInputController>(
+        auto controller = AZStd::make_shared<JE::Editor::Tools::EntityPreviewViewportInputController>(
             toolId, m_previewViewport, m_previewContent);
         m_previewViewport->Init(entityContext, scene, m_previewContent, controller);
         m_previewLayout->addWidget(toolbar);
@@ -199,7 +199,7 @@ namespace JE::Editor
         }
         FinishEditing();
         const auto& type = m_session->GetDocumentType();
-        const auto paths = AtomToolsFramework::GetOpenFilePathsFromDialog(
+        const auto paths = JE::Editor::Tools::GetOpenFilePathsFromDialog(
             {}, type.m_supportedExtensionsToOpen, type.m_documentTypeName, false);
         if (!paths.empty())
         {
@@ -221,8 +221,8 @@ namespace JE::Editor
         }
         if (!m_displayedDocumentId.IsNull())
         {
-            AtomToolsFramework::AtomToolsDocumentRequestBus::Event(
-                m_displayedDocumentId, &AtomToolsFramework::AtomToolsDocumentRequests::EndEdit);
+            JE::Editor::Tools::AtomToolsDocumentRequestBus::Event(
+                m_displayedDocumentId, &JE::Editor::Tools::AtomToolsDocumentRequests::EndEdit);
         }
     }
 
@@ -294,18 +294,18 @@ namespace JE::Editor
                     continue;
                 }
                 bool open = false;
-                AtomToolsFramework::AtomToolsDocumentRequestBus::EventResult(
-                    open, id, &AtomToolsFramework::AtomToolsDocumentRequests::IsOpen);
+                JE::Editor::Tools::AtomToolsDocumentRequestBus::EventResult(
+                    open, id, &JE::Editor::Tools::AtomToolsDocumentRequests::IsOpen);
                 if (!open)
                 {
                     continue;
                 }
                 AZStd::string path;
                 bool modified = false;
-                AtomToolsFramework::AtomToolsDocumentRequestBus::EventResult(
-                    path, id, &AtomToolsFramework::AtomToolsDocumentRequests::GetAbsolutePath);
-                AtomToolsFramework::AtomToolsDocumentRequestBus::EventResult(
-                    modified, id, &AtomToolsFramework::AtomToolsDocumentRequests::IsModified);
+                JE::Editor::Tools::AtomToolsDocumentRequestBus::EventResult(
+                    path, id, &JE::Editor::Tools::AtomToolsDocumentRequests::GetAbsolutePath);
+                JE::Editor::Tools::AtomToolsDocumentRequestBus::EventResult(
+                    modified, id, &JE::Editor::Tools::AtomToolsDocumentRequests::IsModified);
                 auto label = QFileInfo(QString::fromUtf8(path.c_str())).fileName();
                 if (modified)
                 {
@@ -348,10 +348,10 @@ namespace JE::Editor
         {
             AZStd::string path;
             bool modified = false;
-            AtomToolsFramework::AtomToolsDocumentRequestBus::EventResult(
-                path, id, &AtomToolsFramework::AtomToolsDocumentRequests::GetAbsolutePath);
-            AtomToolsFramework::AtomToolsDocumentRequestBus::EventResult(
-                modified, id, &AtomToolsFramework::AtomToolsDocumentRequests::IsModified);
+            JE::Editor::Tools::AtomToolsDocumentRequestBus::EventResult(
+                path, id, &JE::Editor::Tools::AtomToolsDocumentRequests::GetAbsolutePath);
+            JE::Editor::Tools::AtomToolsDocumentRequestBus::EventResult(
+                modified, id, &JE::Editor::Tools::AtomToolsDocumentRequests::IsModified);
             m_documents->setItemText(index, QFileInfo(QString::fromUtf8(path.c_str())).fileName() + (modified ? " *" : ""));
         }
     }

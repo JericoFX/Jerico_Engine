@@ -1,0 +1,14 @@
+{
+  "accepted": false,
+  "phaseResult": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-corefeature102\\atomtools104-canonical-test-materials-ownsave-r5-attempt1\\test-atomtools104-canonical-materials-ownsave-r5.result.json",
+    "bytes": 831,
+    "sha256": "407D36AC8E34AA8FD41B8B745C28D08BF1F1B9DD21F446DB6111AC0E45E324CB"
+  },
+  "phase": "test-atomtools104-canonical-materials-ownsave-r5",
+  "leaseId": "parent-atomtools104-ownsave-test-r5",
+  "fatal": null,
+  "wholeGemIncrement": 0,
+  "postflightValid": true,
+  "parentReviewRequired": true
+}

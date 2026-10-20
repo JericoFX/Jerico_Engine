@@ -1,0 +1,14 @@
+{
+  "parentReviewRequired": true,
+  "fatal": null,
+  "phaseResult": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-corefeature102\\atomtools104-family-materialeditor-startup-r1-attempt1\\materialeditor-atomtools104-family-startup-r1.result.json",
+    "bytes": 820,
+    "sha256": "D178A4B8F8A00FEC2BA7FC1FB62119DF1660900276900CD2A3746E1FD6C56340"
+  },
+  "phase": "materialeditor-atomtools104-family-startup-r1",
+  "accepted": false,
+  "leaseId": "parent-atomtools104-family-materialeditor-r1",
+  "postflightValid": true,
+  "wholeGemIncrement": 0
+}

@@ -59,7 +59,7 @@
 #include <JE/Render/RPI/Public/ViewportContext.h>
 #include <JE/Render/RPI/Public/ViewportContextBus.h>
 #include <JE/Render/RPI/Reflect/Image/StreamingImageAsset.h>
-#include <AtomToolsFramework/Viewport/ModularViewportCameraControllerRequestBus.h>
+#include <JE/Editor/Tools/Viewport/ModularViewportCameraControllerRequestBus.h>
 
 #include "UI/QComponentEntityEditorMainWindow.h"
 

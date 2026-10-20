@@ -1,0 +1,8 @@
+{
+  "inputDrift": 0,
+  "frozenInputsVerified": true,
+  "accepted": false,
+  "fatal": "Native phase failed: atomtools104-sdk-build-consumer-r1, exit=1, RAM=False, timeout=False",
+  "utc": "2026-10-20T17:00:27.8898974Z",
+  "nativeCensusEmpty": true
+}

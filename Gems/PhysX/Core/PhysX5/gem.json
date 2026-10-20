@@ -23,8 +23,7 @@
         "PhysXCommon",
         "LmbrCentral",
         "GradientSignal",
-        "SurfaceData",
-        "AtomToolsFramework"
+        "SurfaceData"
     ],
     "provided_unique_service": "Physics"
 }

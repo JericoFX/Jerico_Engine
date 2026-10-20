@@ -1,0 +1,22 @@
+cwd = F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile
+LIB: F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/profile/EditorMaterials.Tests.dll
+Loading: F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/profile/EditorMaterials.Tests.dll
+OKAY Library loaded: F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/profile/EditorMaterials.Tests.dll
+OKAY Symbol found: AzRunUnitTests
+Note: Google Test filter = PassGraphWorkspaceTests.InitialGraphFramingMatchesLayoutReadyControl:PassGraphWorkspaceTests.InitialGraphFramingDoesNotRepeatAfterManualCameraAndHideShow:PassGraphWorkspaceTests.InputBeforeInitialFramingPreservesManualCamera
+[==========] Running 3 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 3 tests from PassGraphWorkspaceTests
+[ RUN      ] PassGraphWorkspaceTests.InitialGraphFramingMatchesLayoutReadyControl
+[       OK ] PassGraphWorkspaceTests.InitialGraphFramingMatchesLayoutReadyControl (436 ms)
+[ RUN      ] PassGraphWorkspaceTests.InitialGraphFramingDoesNotRepeatAfterManualCameraAndHideShow
+[       OK ] PassGraphWorkspaceTests.InitialGraphFramingDoesNotRepeatAfterManualCameraAndHideShow (405 ms)
+[ RUN      ] PassGraphWorkspaceTests.InputBeforeInitialFramingPreservesManualCamera
+[       OK ] PassGraphWorkspaceTests.InputBeforeInitialFramingPreservesManualCamera (405 ms)
+[----------] 3 tests from PassGraphWorkspaceTests (1247 ms total)
+
+[----------] Global test environment tear-down
+[==========] 3 tests from 1 test suite ran. (1247 ms total)
+[  PASSED  ] 3 tests.
+OKAY AzRunUnitTests() returned 0
+Returning code: 0

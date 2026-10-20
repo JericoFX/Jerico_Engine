@@ -55,12 +55,12 @@ namespace ScriptCanvas
         QApplication::setWindowIcon(QIcon(":/Resources/application.svg"));
 
         AzToolsFramework::EditorWindowRequestBus::Handler::BusConnect();
-        AtomToolsFramework::AtomToolsDocumentNotificationBus::Handler::BusConnect(m_toolId);
+        JE::Editor::Tools::AtomToolsDocumentNotificationBus::Handler::BusConnect(m_toolId);
     }
 
     ScriptCanvasApplication::~ScriptCanvasApplication()
     {
-        AtomToolsFramework::AtomToolsDocumentNotificationBus::Handler::BusDisconnect();
+        JE::Editor::Tools::AtomToolsDocumentNotificationBus::Handler::BusDisconnect();
         AzToolsFramework::EditorWindowRequestBus::Handler::BusDisconnect();
     }
 
@@ -75,8 +75,8 @@ namespace ScriptCanvas
         Base::StartCommon(systemEntity);
 
         auto documentTypeInfo = ScriptCanvasDocument::BuildDocumentTypeInfo();
-        AtomToolsFramework::AtomToolsDocumentSystemRequestBus::Event(
-            m_toolId, &AtomToolsFramework::AtomToolsDocumentSystemRequestBus::Handler::RegisterDocumentType, documentTypeInfo);
+        JE::Editor::Tools::AtomToolsDocumentSystemRequestBus::Event(
+            m_toolId, &JE::Editor::Tools::AtomToolsDocumentSystemRequestBus::Handler::RegisterDocumentType, documentTypeInfo);
 
 #if defined(ENABLE_REMOTE_TOOLS)
         if (auto* remoteToolsInterface = AzFramework::RemoteToolsInterface::Get())

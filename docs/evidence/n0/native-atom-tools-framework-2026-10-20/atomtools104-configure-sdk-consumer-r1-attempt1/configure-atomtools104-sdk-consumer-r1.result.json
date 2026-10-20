@@ -1,0 +1,18 @@
+{
+  "stderr": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-corefeature102\\atomtools104-configure-sdk-consumer-r1-attempt1\\configure-atomtools104-sdk-consumer-r1.stderr.log",
+    "bytes": 1620,
+    "sha256": "81CFDE5249751A7000C3717C13ACC00E67DBBCAD6ACB055A5741992E88B701B8"
+  },
+  "priorityError": null,
+  "ramGuardTriggered": false,
+  "timedOut": false,
+  "seconds": 9.5427704,
+  "stdout": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-corefeature102\\atomtools104-configure-sdk-consumer-r1-attempt1\\configure-atomtools104-sdk-consumer-r1.stdout.log",
+    "bytes": 4152,
+    "sha256": "25088D25F12FC285E2A70379B5606FEEC1DA9799F2266D8D9068EBBFCD0E3EC3"
+  },
+  "exitCode": 0,
+  "priorityRequested": "BelowNormal"
+}

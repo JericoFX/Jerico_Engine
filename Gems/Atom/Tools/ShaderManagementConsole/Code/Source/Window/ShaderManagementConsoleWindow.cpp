@@ -11,10 +11,10 @@
 #include <JE/Editor/Render/RPI/Edit/Common/AssetUtils.h>
 #include <JE/Editor/Render/RPI/Edit/Common/JsonUtils.h>
 #include <JE/Render/RPI/Reflect/Shader/ShaderAsset.h>
-#include <AtomToolsFramework/Debug/TraceRecorder.h>
-#include <AtomToolsFramework/Document/AtomToolsDocumentRequestBus.h>
-#include <AtomToolsFramework/Document/AtomToolsDocumentSystemRequestBus.h>
-#include <AtomToolsFramework/Util/Util.h>
+#include <JE/Editor/Tools/Debug/TraceRecorder.h>
+#include <JE/Editor/Tools/Document/AtomToolsDocumentRequestBus.h>
+#include <JE/Editor/Tools/Document/AtomToolsDocumentSystemRequestBus.h>
+#include <JE/Editor/Tools/Util/Util.h>
 #include <AzToolsFramework/API/EditorAssetSystemAPI.h>
 #include <AzToolsFramework/UI/UICore/WidgetHelpers.h>
 #include <AzCore/Utils/Utils.h>
@@ -55,7 +55,7 @@ namespace ShaderManagementConsole
             { "AZSL", { "azsl", "azsli", "srgi" }, true },
         });
 
-        m_documentInspector = new AtomToolsFramework::AtomToolsDocumentInspector(m_toolId, this);
+        m_documentInspector = new JE::Editor::Tools::AtomToolsDocumentInspector(m_toolId, this);
         m_documentInspector->SetDocumentSettingsPrefix("/O3DE/Atom/ShaderManagementConsole/DocumentInspector");
         AddDockWidget("Inspector", m_documentInspector, Qt::RightDockWidgetArea);
         SetDockWidgetVisible("Inspector", false);
@@ -185,14 +185,14 @@ namespace ShaderManagementConsole
             this,
             [this]()
             {
-                AtomToolsFramework::AtomToolsDocumentRequestBus::Event(
-                    GetCurrentDocumentId(), &AtomToolsFramework::AtomToolsDocumentRequestBus::Events::BeginEdit);
+                JE::Editor::Tools::AtomToolsDocumentRequestBus::Event(
+                    GetCurrentDocumentId(), &JE::Editor::Tools::AtomToolsDocumentRequestBus::Events::BeginEdit);
 
                 ShaderManagementConsoleDocumentRequestBus::Event(
                     GetCurrentDocumentId(), &ShaderManagementConsoleDocumentRequestBus::Events::DefragmentVariantList);
 
-                AtomToolsFramework::AtomToolsDocumentRequestBus::Event(
-                    GetCurrentDocumentId(), &AtomToolsFramework::AtomToolsDocumentRequestBus::Events::EndEdit);
+                JE::Editor::Tools::AtomToolsDocumentRequestBus::Event(
+                    GetCurrentDocumentId(), &JE::Editor::Tools::AtomToolsDocumentRequestBus::Events::EndEdit);
             });
         m_menuFile->insertAction(m_menuFile->actions().back(), compactAction);
 
@@ -225,7 +225,7 @@ namespace ShaderManagementConsole
         {
             QMessageBox::critical(this, tr("Generation failed"), QString::fromUtf8(message.c_str()));
         };
-        if (!AtomToolsFramework::ValidateDocumentPath(shaderPath))
+        if (!JE::Editor::Tools::ValidateDocumentPath(shaderPath))
         {
             fail("The selected shader path is not a supported editable document path.");
             return;
@@ -235,7 +235,7 @@ namespace ShaderManagementConsole
             fail("The shader/material asset service is unavailable.");
             return;
         }
-        AtomToolsFramework::TraceRecorder assetTrace;
+        JE::Editor::Tools::TraceRecorder assetTrace;
         AZ::Data::AssetInfo sourceInfo;
         ShaderManagementConsoleRequestBus::BroadcastResult(
             sourceInfo, &ShaderManagementConsoleRequestBus::Events::GetSourceAssetInfo, shaderPath);
@@ -309,7 +309,7 @@ namespace ShaderManagementConsole
             {
                 return;
             }
-            AtomToolsFramework::TraceRecorder materialTrace;
+            JE::Editor::Tools::TraceRecorder materialTrace;
             AZStd::vector<JE::Render::RPI::ShaderCollection::Item> items;
             ShaderManagementConsoleRequestBus::BroadcastResult(
                 items, &ShaderManagementConsoleRequestBus::Events::GetMaterialInstanceShaderItems, materialIds[index]);
@@ -380,17 +380,17 @@ namespace ShaderManagementConsole
         };
 
         // Opening the shader keeps the absolute source path for existing Save/SaveAs behavior. No file is written here.
-        AtomToolsFramework::TraceRecorder documentTrace;
+        JE::Editor::Tools::TraceRecorder documentTrace;
         AZ::Uuid documentId;
-        AtomToolsFramework::AtomToolsDocumentSystemRequestBus::EventResult(
-            documentId, m_toolId, &AtomToolsFramework::AtomToolsDocumentSystemRequestBus::Events::CreateDocumentFromFilePath,
+        JE::Editor::Tools::AtomToolsDocumentSystemRequestBus::EventResult(
+            documentId, m_toolId, &JE::Editor::Tools::AtomToolsDocumentSystemRequestBus::Events::CreateDocumentFromFilePath,
             shaderPath, AZStd::string{});
         const auto destroy = [&]
         {
             if (!documentId.IsNull())
             {
-                AtomToolsFramework::AtomToolsDocumentSystemRequestBus::Event(
-                    m_toolId, &AtomToolsFramework::AtomToolsDocumentSystemRequestBus::Events::DestroyDocument, documentId);
+                JE::Editor::Tools::AtomToolsDocumentSystemRequestBus::Event(
+                    m_toolId, &JE::Editor::Tools::AtomToolsDocumentSystemRequestBus::Events::DestroyDocument, documentId);
             }
         };
         JE::Render::RPI::ShaderVariantListSourceData openedBaseline;
@@ -408,8 +408,8 @@ namespace ShaderManagementConsole
         bool began = false;
         if (!documentId.IsNull() && documentTrace.GetErrorCount(true) == 0)
         {
-            AtomToolsFramework::AtomToolsDocumentRequestBus::EventResult(
-                began, documentId, &AtomToolsFramework::AtomToolsDocumentRequestBus::Events::BeginEdit);
+            JE::Editor::Tools::AtomToolsDocumentRequestBus::EventResult(
+                began, documentId, &JE::Editor::Tools::AtomToolsDocumentRequestBus::Events::BeginEdit);
         }
         if (!began)
         {
@@ -425,8 +425,8 @@ namespace ShaderManagementConsole
         bool ended = false;
         if (matchesData(applied, generated.GetValue()) && documentTrace.GetErrorCount(true) == 0)
         {
-            AtomToolsFramework::AtomToolsDocumentRequestBus::EventResult(
-                ended, documentId, &AtomToolsFramework::AtomToolsDocumentRequestBus::Events::EndEdit);
+            JE::Editor::Tools::AtomToolsDocumentRequestBus::EventResult(
+                ended, documentId, &JE::Editor::Tools::AtomToolsDocumentRequestBus::Events::EndEdit);
         }
         if (!ended || documentTrace.GetErrorCount(true) != 0)
         {

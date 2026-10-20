@@ -15,11 +15,13 @@
 #include <JE/Render/RPI/Reflect/Material/MaterialFunctor.h>
 #include <JE/Render/RPI/Reflect/Material/MaterialNameContext.h>
 #include <JE/Render/RPI/Reflect/Material/MaterialPropertiesLayout.h>
-#include <AtomToolsFramework/Document/AtomToolsDocumentNotificationBus.h>
-#include <AtomToolsFramework/Util/MaterialPropertyUtil.h>
-#include <AtomToolsFramework/Util/Util.h>
-#include <AtomToolsFramework/Util/Util.h>
+#include <JE/Editor/Tools/Document/AtomToolsDocumentNotificationBus.h>
+#include <JE/Editor/Tools/Util/MaterialPropertyUtil.h>
+#include <JE/Editor/Tools/Util/Util.h>
+#include <JE/Editor/Tools/Util/Util.h>
 #include <AzCore/Instance/Instance.h>
+#include <AzCore/Math/Color.h>
+#include <AzCore/Math/Vector4.h>
 #include <AzCore/RTTI/BehaviorContext.h>
 #include <AzCore/Serialization/EditContext.h>
 #include <AzCore/Serialization/SerializeContext.h>
@@ -48,7 +50,7 @@ namespace JE::Editor
         bool RestoreDocumentSnapshot(const AZ::Uuid& documentId, const AZStd::string& sourcePath,
             const PropertyValueMap& expectedValues, const PropertyValueMap& values)
         {
-            auto* document = AtomToolsFramework::AtomToolsDocumentRequestBus::FindFirstHandler(documentId);
+            auto* document = JE::Editor::Tools::AtomToolsDocumentRequestBus::FindFirstHandler(documentId);
             auto* material = MaterialDocumentRequestBus::FindFirstHandler(documentId);
             if (!document || !material || sourcePath.empty() || document->GetAbsolutePath() != sourcePath)
             {
@@ -66,7 +68,7 @@ namespace JE::Editor
                     return false;
                 }
                 const auto expected = expectedValues.find(name);
-                if (expected == expectedValues.end() || !AtomToolsFramework::ArePropertyValuesEqual(current, expected->second))
+                if (expected == expectedValues.end() || !JE::Editor::Tools::ArePropertyValuesEqual(current, expected->second))
                 {
                     AZ_Error("MaterialDocument", false, "Cannot replay material edit: property '%s' changed outside the retained history.", name.GetCStr());
                     return false;
@@ -113,7 +115,7 @@ namespace JE::Editor
         {
             if (serialize->IsRemovingReflection() || !serialize->FindClassData(azrtti_typeid<MaterialDocument>()))
             {
-                serialize->Class<MaterialDocument, AtomToolsFramework::AtomToolsDocument>()
+                serialize->Class<MaterialDocument, JE::Editor::Tools::AtomToolsDocument>()
                     ->Version(0);
             }
         }
@@ -131,9 +133,9 @@ namespace JE::Editor
         }
     }
 
-    MaterialDocument::MaterialDocument(const AZ::Crc32& toolId, const AtomToolsFramework::DocumentTypeInfo& documentTypeInfo,
+    MaterialDocument::MaterialDocument(const AZ::Crc32& toolId, const JE::Editor::Tools::DocumentTypeInfo& documentTypeInfo,
         HistoryOwner historyOwner)
-        : AtomToolsFramework::AtomToolsDocument(toolId, documentTypeInfo)
+        : JE::Editor::Tools::AtomToolsDocument(toolId, documentTypeInfo)
         , m_historyOwner(historyOwner)
     {
         MaterialDocumentRequestBus::Handler::BusConnect(m_id);
@@ -169,7 +171,7 @@ namespace JE::Editor
     {
         const AZ::Name propertyName(propertyId);
 
-        AtomToolsFramework::DynamicProperty* foundProperty = {};
+        JE::Editor::Tools::DynamicProperty* foundProperty = {};
         TraverseGroups(m_groups, [&, this](auto& group) {
             for (auto& property : group->m_properties)
             {
@@ -180,9 +182,9 @@ namespace JE::Editor
                     if (m_materialInstance)
                     {
                         // This first converts to an acceptable runtime type in case the value came from script
-                        const JE::Render::RPI::MaterialPropertyValue propertyValue = AtomToolsFramework::ConvertToRuntimeType(value);
+                        const JE::Render::RPI::MaterialPropertyValue propertyValue = JE::Editor::Tools::ConvertToRuntimeType(value);
 
-                        property.SetValue(AtomToolsFramework::ConvertToEditableType(propertyValue));
+                        property.SetValue(JE::Editor::Tools::ConvertToEditableType(propertyValue));
 
                         const auto propertyIndex = m_materialInstance->FindPropertyIndex(propertyName);
                         if (!propertyIndex.IsNull())
@@ -197,12 +199,12 @@ namespace JE::Editor
                         }
                     }
 
-                    AtomToolsFramework::AtomToolsDocumentNotificationBus::Event(
-                        m_toolId, &AtomToolsFramework::AtomToolsDocumentNotificationBus::Events::OnDocumentObjectInfoChanged, m_id,
+                    JE::Editor::Tools::AtomToolsDocumentNotificationBus::Event(
+                        m_toolId, &JE::Editor::Tools::AtomToolsDocumentNotificationBus::Events::OnDocumentObjectInfoChanged, m_id,
                         GetObjectInfoFromDynamicPropertyGroup(group.get()), false);
 
-                    AtomToolsFramework::AtomToolsDocumentNotificationBus::Event(
-                        m_toolId, &AtomToolsFramework::AtomToolsDocumentNotificationBus::Events::OnDocumentModified, m_id);
+                    JE::Editor::Tools::AtomToolsDocumentNotificationBus::Event(
+                        m_toolId, &JE::Editor::Tools::AtomToolsDocumentNotificationBus::Events::OnDocumentModified, m_id);
                     return false;
                 }
             }
@@ -227,11 +229,11 @@ namespace JE::Editor
         return property->GetValue();
     }
 
-    AtomToolsFramework::DocumentTypeInfo MaterialDocument::BuildDocumentTypeInfo(HistoryOwner historyOwner)
+    JE::Editor::Tools::DocumentTypeInfo MaterialDocument::BuildDocumentTypeInfo(HistoryOwner historyOwner)
     {
-        AtomToolsFramework::DocumentTypeInfo documentType;
+        JE::Editor::Tools::DocumentTypeInfo documentType;
         documentType.m_documentTypeName = "Material";
-        documentType.m_documentFactoryCallback = [historyOwner](const AZ::Crc32& toolId, const AtomToolsFramework::DocumentTypeInfo& documentTypeInfo) {
+        documentType.m_documentFactoryCallback = [historyOwner](const AZ::Crc32& toolId, const JE::Editor::Tools::DocumentTypeInfo& documentTypeInfo) {
             return aznew MaterialDocument(toolId, documentTypeInfo, historyOwner); };
         documentType.m_supportedExtensionsToCreate.push_back({ "Material Type", JE::Render::RPI::MaterialTypeSourceData::Extension });
         documentType.m_supportedExtensionsToCreate.push_back({ "Material", JE::Render::RPI::MaterialSourceData::Extension });
@@ -239,15 +241,15 @@ namespace JE::Editor
         documentType.m_supportedExtensionsToOpen.push_back({ "Material", JE::Render::RPI::MaterialSourceData::Extension });
         documentType.m_supportedExtensionsToSave.push_back({ "Material", JE::Render::RPI::MaterialSourceData::Extension });
         documentType.m_defaultDocumentTemplate =
-            AtomToolsFramework::GetPathWithoutAlias(AtomToolsFramework::GetSettingsValue<AZStd::string>(
+            JE::Editor::Tools::GetPathWithoutAlias(JE::Editor::Tools::GetSettingsValue<AZStd::string>(
                 "/O3DE/Atom/MaterialEditor/DefaultMaterialType",
                 "@gemroot:Atom_Feature_Common@/Assets/Materials/Types/StandardPBR.materialtype"));
         return documentType;
     }
 
-    AtomToolsFramework::DocumentObjectInfoVector MaterialDocument::GetObjectInfo() const
+    JE::Editor::Tools::DocumentObjectInfoVector MaterialDocument::GetObjectInfo() const
     {
-        AtomToolsFramework::DocumentObjectInfoVector objects = AtomToolsDocument::GetObjectInfo();
+        JE::Editor::Tools::DocumentObjectInfoVector objects = AtomToolsDocument::GetObjectInfo();
         objects.reserve(objects.size() + m_groups.size());
 
         for (const auto& group : m_groups)
@@ -274,10 +276,10 @@ namespace JE::Editor
         {
             sourceData.m_materialTypeVersion = m_materialAsset->GetMaterialTypeAsset()->GetVersion();
         }
-        sourceData.m_materialType = AtomToolsFramework::GetPathToExteralReference(m_absolutePath, m_materialSourceData.m_materialType);
-        sourceData.m_parentMaterial = AtomToolsFramework::GetPathToExteralReference(m_absolutePath, m_materialSourceData.m_parentMaterial);
-        auto propertyFilter = [](const AtomToolsFramework::DynamicProperty& property) {
-            return !AtomToolsFramework::ArePropertyValuesEqual(property.GetValue(), property.GetConfig().m_parentValue);
+        sourceData.m_materialType = JE::Editor::Tools::GetPathToExteralReference(m_absolutePath, m_materialSourceData.m_materialType);
+        sourceData.m_parentMaterial = JE::Editor::Tools::GetPathToExteralReference(m_absolutePath, m_materialSourceData.m_parentMaterial);
+        auto propertyFilter = [](const JE::Editor::Tools::DynamicProperty& property) {
+            return !JE::Editor::Tools::ArePropertyValuesEqual(property.GetValue(), property.GetConfig().m_parentValue);
         };
 
         if (!SaveSourceData(sourceData, propertyFilter))
@@ -317,10 +319,10 @@ namespace JE::Editor
         {
             sourceData.m_materialTypeVersion = m_materialAsset->GetMaterialTypeAsset()->GetVersion();
         }
-        sourceData.m_materialType = AtomToolsFramework::GetPathToExteralReference(m_savePathNormalized, m_materialSourceData.m_materialType);
-        sourceData.m_parentMaterial = AtomToolsFramework::GetPathToExteralReference(m_savePathNormalized, m_materialSourceData.m_parentMaterial);
-        auto propertyFilter = [](const AtomToolsFramework::DynamicProperty& property) {
-            return !AtomToolsFramework::ArePropertyValuesEqual(property.GetValue(), property.GetConfig().m_parentValue);
+        sourceData.m_materialType = JE::Editor::Tools::GetPathToExteralReference(m_savePathNormalized, m_materialSourceData.m_materialType);
+        sourceData.m_parentMaterial = JE::Editor::Tools::GetPathToExteralReference(m_savePathNormalized, m_materialSourceData.m_parentMaterial);
+        auto propertyFilter = [](const JE::Editor::Tools::DynamicProperty& property) {
+            return !JE::Editor::Tools::ArePropertyValuesEqual(property.GetValue(), property.GetConfig().m_parentValue);
         };
 
         if (!SaveSourceData(sourceData, propertyFilter))
@@ -353,16 +355,16 @@ namespace JE::Editor
         {
             sourceData.m_materialTypeVersion = m_materialAsset->GetMaterialTypeAsset()->GetVersion();
         }
-        sourceData.m_materialType = AtomToolsFramework::GetPathToExteralReference(m_savePathNormalized, m_materialSourceData.m_materialType);
+        sourceData.m_materialType = JE::Editor::Tools::GetPathToExteralReference(m_savePathNormalized, m_materialSourceData.m_materialType);
 
         // Only assign a parent path if the source was a .material
         if (AzFramework::StringFunc::Path::IsExtension(m_absolutePath.c_str(), JE::Render::RPI::MaterialSourceData::Extension))
         {
-            sourceData.m_parentMaterial = AtomToolsFramework::GetPathToExteralReference(m_savePathNormalized, m_absolutePath);
+            sourceData.m_parentMaterial = JE::Editor::Tools::GetPathToExteralReference(m_savePathNormalized, m_absolutePath);
         }
 
-        auto propertyFilter = [](const AtomToolsFramework::DynamicProperty& property) {
-            return !AtomToolsFramework::ArePropertyValuesEqual(property.GetValue(), property.GetConfig().m_originalValue);
+        auto propertyFilter = [](const JE::Editor::Tools::DynamicProperty& property) {
+            return !JE::Editor::Tools::ArePropertyValuesEqual(property.GetValue(), property.GetConfig().m_originalValue);
         };
 
         if (!SaveSourceData(sourceData, propertyFilter))
@@ -385,7 +387,7 @@ namespace JE::Editor
         TraverseGroups(m_groups, [&](auto& group) {
             for (auto& property : group->m_properties)
             {
-                if (!AtomToolsFramework::ArePropertyValuesEqual(property.GetValue(), property.GetConfig().m_originalValue))
+                if (!JE::Editor::Tools::ArePropertyValuesEqual(property.GetValue(), property.GetConfig().m_originalValue))
                 {
                     result = true;
                     return false;
@@ -440,7 +442,7 @@ namespace JE::Editor
             const auto& propertyName = propertyBeforeEditPair.first;
             const auto& propertyValueForUndo = propertyBeforeEditPair.second;
             const auto& propertyValueForRedo = GetPropertyValue(propertyName.GetStringView());
-            if (!AtomToolsFramework::ArePropertyValuesEqual(propertyValueForUndo, propertyValueForRedo))
+            if (!JE::Editor::Tools::ArePropertyValuesEqual(propertyValueForUndo, propertyValueForRedo))
             {
                 propertyValuesForUndo[propertyName] = propertyValueForUndo;
                 propertyValuesForRedo[propertyName] = propertyValueForRedo;
@@ -503,14 +505,20 @@ namespace JE::Editor
             const auto property = FindProperty(propertyId);
             if (property && propertyFilter(*property))
             {
-                JE::Render::RPI::MaterialPropertyValue propertyValue = AtomToolsFramework::ConvertToRuntimeType(property->GetValue());
+                JE::Render::RPI::MaterialPropertyValue propertyValue = JE::Editor::Tools::ConvertToRuntimeType(property->GetValue());
                 if (propertyValue.IsValid())
                 {
-                    if (!AtomToolsFramework::ConvertToExportFormat(m_savePathNormalized, propertyId, *propertyDefinition, propertyValue))
+                    if (!JE::Editor::Tools::ConvertToExportFormat(m_savePathNormalized, propertyId, *propertyDefinition, propertyValue))
                     {
                         AZ_Error("MaterialDocument", false, "Document property could not be converted: '%s' in '%s'.", propertyId.GetCStr(), m_absolutePath.c_str());
                         addPropertiesResult = false;
                         return false;
+                    }
+
+                    // Match the JSON source representation retained after Save.
+                    if (propertyValue.Is<AZ::Color>())
+                    {
+                        propertyValue = propertyValue.CastToType(azrtti_typeid<AZ::Vector4>());
                     }
 
                     sourceData.SetPropertyValue(propertyId, propertyValue);
@@ -659,11 +667,11 @@ namespace JE::Editor
         auto createHeadingPropertyConfig = [](const AZStd::string& group, const AZStd::string& name, const AZStd::string& description,
             const AZStd::any& value, bool readOnly)
         {
-            AtomToolsFramework::DynamicPropertyConfig propertyConfig;
+            JE::Editor::Tools::DynamicPropertyConfig propertyConfig;
             propertyConfig.m_name = name;
-            propertyConfig.m_displayName = AtomToolsFramework::GetDisplayNameFromText(propertyConfig.m_name);
+            propertyConfig.m_displayName = JE::Editor::Tools::GetDisplayNameFromText(propertyConfig.m_name);
             propertyConfig.m_groupName = group;
-            propertyConfig.m_groupDisplayName = AtomToolsFramework::GetDisplayNameFromText(propertyConfig.m_groupName);
+            propertyConfig.m_groupDisplayName = JE::Editor::Tools::GetDisplayNameFromText(propertyConfig.m_groupName);
             propertyConfig.m_id = propertyConfig.m_groupName + "." + name;
             propertyConfig.m_description = description;
             propertyConfig.m_parentValue = propertyConfig.m_originalValue = propertyConfig.m_defaultValue = value;
@@ -672,7 +680,7 @@ namespace JE::Editor
             return propertyConfig;
         };
 
-        m_groups.emplace_back(aznew AtomToolsFramework::DynamicPropertyGroup);
+        m_groups.emplace_back(aznew JE::Editor::Tools::DynamicPropertyGroup);
         m_groups.back()->m_name = "overview";
         m_groups.back()->m_displayName = "Overview";
         m_groups.back()->m_description = "Overview of the current material and its dependencies";
@@ -683,7 +691,7 @@ namespace JE::Editor
             AZStd::string::format(
                 "The material type defines the layout, properties, default values, shader connections, and other data needed to create and "
                 "edit a material.\n\nDescription of %s:\n%s",
-                AtomToolsFramework::GetDisplayNameFromPath(m_materialSourceData.m_materialType).c_str(),
+                JE::Editor::Tools::GetDisplayNameFromPath(m_materialSourceData.m_materialType).c_str(),
                 m_materialTypeSourceData.m_description.c_str()),
             AZStd::any(materialTypeAsset),
             true));
@@ -703,7 +711,7 @@ namespace JE::Editor
             false));
 
         // Inserting a hard coded property group to display UV channels specified in the material type.
-        m_groups.emplace_back(aznew AtomToolsFramework::DynamicPropertyGroup);
+        m_groups.emplace_back(aznew JE::Editor::Tools::DynamicPropertyGroup);
         m_groups.back()->m_name = UvGroupName;
         m_groups.back()->m_displayName = "UV Sets";
         m_groups.back()->m_description = "UV set names in this material, which can be renamed to match those in the model.";
@@ -748,8 +756,8 @@ namespace JE::Editor
                 }
 
                 // Create a dynamic property group that will be managed by the document and used to display the properties in the inspector.
-                AZStd::shared_ptr<AtomToolsFramework::DynamicPropertyGroup> dynamicPropertyGroup;
-                dynamicPropertyGroup.reset(aznew AtomToolsFramework::DynamicPropertyGroup);
+                AZStd::shared_ptr<JE::Editor::Tools::DynamicPropertyGroup> dynamicPropertyGroup;
+                dynamicPropertyGroup.reset(aznew JE::Editor::Tools::DynamicPropertyGroup);
 
                 // Copy details about this property group from the material type property group definition. Recombine the group name and
                 // display name vectors so that the complete hierarchy will be displayed in the UI and available for creating property IDs.
@@ -772,7 +780,7 @@ namespace JE::Editor
                 // property class that can be used to display and edit multiple types.
                 for (const auto& propertyDefinition : propertyGroup->GetProperties())
                 {
-                    AtomToolsFramework::DynamicPropertyConfig propertyConfig;
+                    JE::Editor::Tools::DynamicPropertyConfig propertyConfig;
 
                     // The property ID must be set up before calling the function to convert the rest of the material type property
                     // definition into the dynamic property config. The dynamic property config will set up a description that includes the
@@ -795,7 +803,7 @@ namespace JE::Editor
                     if (propertyIndexInBounds)
                     {
                         // Utility function converts most attributes from the property definition into a dynamic property config.
-                        AtomToolsFramework::ConvertToPropertyConfig(propertyConfig, *propertyDefinition);
+                        JE::Editor::Tools::ConvertToPropertyConfig(propertyConfig, *propertyDefinition);
 
                         // The utility function assigns a description from the property definition along with its name and display name.
                         // This will be displayed as the tooltip when dragging over the property in the inspector UI. The description is
@@ -820,9 +828,9 @@ namespace JE::Editor
                         // These values are compared against each other to determine if an indicator needs to be displayed in the property
                         // inspector as well as which values get saved with the material.
                         propertyConfig.m_originalValue =
-                            AtomToolsFramework::ConvertToEditableType(m_materialAsset->GetPropertyValues()[propertyIndex.GetIndex()]);
+                            JE::Editor::Tools::ConvertToEditableType(m_materialAsset->GetPropertyValues()[propertyIndex.GetIndex()]);
                         propertyConfig.m_parentValue =
-                            AtomToolsFramework::ConvertToEditableType(parentPropertyValues[propertyIndex.GetIndex()]);
+                            JE::Editor::Tools::ConvertToEditableType(parentPropertyValues[propertyIndex.GetIndex()]);
 
                         // The data change callback is invoked whenever the properties are modified in the inspector. The changes will be
                         // stored in the dynamic property automatically but need to be processed and applied to the material instance that's
@@ -834,7 +842,7 @@ namespace JE::Editor
                             return AZ::Edit::PropertyRefreshLevels::AttributesAndValues;
                         };
 
-                        dynamicPropertyGroup->m_properties.push_back(AtomToolsFramework::DynamicProperty(propertyConfig));
+                        dynamicPropertyGroup->m_properties.push_back(JE::Editor::Tools::DynamicProperty(propertyConfig));
                     }
                 }
 
@@ -928,7 +936,7 @@ namespace JE::Editor
 
     void MaterialDocument::Clear()
     {
-        AtomToolsFramework::AtomToolsDocument::Clear();
+        JE::Editor::Tools::AtomToolsDocument::Clear();
 
         AZ::SystemTickBus::Handler::BusDisconnect();
 
@@ -948,7 +956,7 @@ namespace JE::Editor
         TraverseGroups(m_groups, [this](auto& group) {
             for (auto& property : group->m_properties)
             {
-                if (!AtomToolsFramework::ArePropertyValuesEqual(property.GetValue(), property.GetConfig().m_parentValue))
+                if (!JE::Editor::Tools::ArePropertyValuesEqual(property.GetValue(), property.GetConfig().m_parentValue))
                 {
                     m_propertyValuesBeforeReopen[property.GetId()] = property.GetValue();
                 }
@@ -1078,7 +1086,7 @@ namespace JE::Editor
 
             for (auto& property : group->m_properties)
             {
-                AtomToolsFramework::ConvertToPropertyMetaData(propertyDynamicMetadata[property.GetId()], property.GetConfig());
+                JE::Editor::Tools::ConvertToPropertyMetaData(propertyDynamicMetadata[property.GetId()], property.GetConfig());
             }
             return true;
         });
@@ -1117,8 +1125,8 @@ namespace JE::Editor
                 if (updatedProperties.find(AZ::Name(property.GetId())) != updatedProperties.end())
                 {
                     const bool visibleBefore = property.GetConfig().m_visible;
-                    AtomToolsFramework::DynamicPropertyConfig propertyConfig = property.GetConfig();
-                    AtomToolsFramework::ConvertToPropertyConfig(propertyConfig, propertyDynamicMetadata[property.GetId()]);
+                    JE::Editor::Tools::DynamicPropertyConfig propertyConfig = property.GetConfig();
+                    JE::Editor::Tools::ConvertToPropertyConfig(propertyConfig, propertyDynamicMetadata[property.GetId()]);
                     property.SetConfig(propertyConfig);
                     groupChange = true;
                     groupRebuilt |= visibleBefore != property.GetConfig().m_visible;
@@ -1127,24 +1135,24 @@ namespace JE::Editor
 
             if (groupChange || groupRebuilt)
             {
-                AtomToolsFramework::AtomToolsDocumentNotificationBus::Event(
-                    m_toolId, &AtomToolsFramework::AtomToolsDocumentNotificationBus::Events::OnDocumentObjectInfoChanged, m_id,
+                JE::Editor::Tools::AtomToolsDocumentNotificationBus::Event(
+                    m_toolId, &JE::Editor::Tools::AtomToolsDocumentNotificationBus::Events::OnDocumentObjectInfoChanged, m_id,
                     GetObjectInfoFromDynamicPropertyGroup(group.get()), groupRebuilt);
             }
             return true;
         });
     }
 
-    AtomToolsFramework::DocumentObjectInfo MaterialDocument::GetObjectInfoFromDynamicPropertyGroup(
-        const AtomToolsFramework::DynamicPropertyGroup* group) const
+    JE::Editor::Tools::DocumentObjectInfo MaterialDocument::GetObjectInfoFromDynamicPropertyGroup(
+        const JE::Editor::Tools::DynamicPropertyGroup* group) const
     {
-        AtomToolsFramework::DocumentObjectInfo objectInfo;
+        JE::Editor::Tools::DocumentObjectInfo objectInfo;
         objectInfo.m_visible = group->m_visible;
         objectInfo.m_name = group->m_name;
         objectInfo.m_displayName = group->m_displayName;
         objectInfo.m_description = group->m_description;
-        objectInfo.m_objectType = azrtti_typeid<AtomToolsFramework::DynamicPropertyGroup>();
-        objectInfo.m_objectPtr = const_cast<AtomToolsFramework::DynamicPropertyGroup*>(group);
+        objectInfo.m_objectType = azrtti_typeid<JE::Editor::Tools::DynamicPropertyGroup>();
+        objectInfo.m_objectPtr = const_cast<JE::Editor::Tools::DynamicPropertyGroup*>(group);
 
         if (group->m_name == "overview")
         {
@@ -1159,8 +1167,8 @@ namespace JE::Editor
         {
             objectInfo.m_nodeIndicatorFunction = [](const AzToolsFramework::InstanceDataNode* node)
             {
-                const auto property = AtomToolsFramework::FindAncestorInstanceDataNodeByType<AtomToolsFramework::DynamicProperty>(node);
-                return property && !AtomToolsFramework::ArePropertyValuesEqual(property->GetValue(), property->GetConfig().m_parentValue)
+                const auto property = JE::Editor::Tools::FindAncestorInstanceDataNodeByType<JE::Editor::Tools::DynamicProperty>(node);
+                return property && !JE::Editor::Tools::ArePropertyValuesEqual(property->GetValue(), property->GetConfig().m_parentValue)
                     ? ":/Icons/changed_property.svg"
                     : ":/Icons/blank.png";
             };
@@ -1170,8 +1178,8 @@ namespace JE::Editor
     }
 
     bool MaterialDocument::TraverseGroups(
-        AZStd::vector<AZStd::shared_ptr<AtomToolsFramework::DynamicPropertyGroup>>& groups,
-        AZStd::function<bool(AZStd::shared_ptr<AtomToolsFramework::DynamicPropertyGroup>&)> callback)
+        AZStd::vector<AZStd::shared_ptr<JE::Editor::Tools::DynamicPropertyGroup>>& groups,
+        AZStd::function<bool(AZStd::shared_ptr<JE::Editor::Tools::DynamicPropertyGroup>&)> callback)
     {
         if (!callback)
         {
@@ -1190,8 +1198,8 @@ namespace JE::Editor
     }
 
     bool MaterialDocument::TraverseGroups(
-        const AZStd::vector<AZStd::shared_ptr<AtomToolsFramework::DynamicPropertyGroup>>& groups,
-        AZStd::function<bool(const AZStd::shared_ptr<AtomToolsFramework::DynamicPropertyGroup>&)> callback) const
+        const AZStd::vector<AZStd::shared_ptr<JE::Editor::Tools::DynamicPropertyGroup>>& groups,
+        AZStd::function<bool(const AZStd::shared_ptr<JE::Editor::Tools::DynamicPropertyGroup>&)> callback) const
     {
         if (!callback)
         {
@@ -1209,9 +1217,9 @@ namespace JE::Editor
         return true;
     }
 
-    AtomToolsFramework::DynamicProperty* MaterialDocument::FindProperty(const AZ::Name& propertyId)
+    JE::Editor::Tools::DynamicProperty* MaterialDocument::FindProperty(const AZ::Name& propertyId)
     {
-        AtomToolsFramework::DynamicProperty* result = nullptr;
+        JE::Editor::Tools::DynamicProperty* result = nullptr;
         TraverseGroups(m_groups, [&](auto& group) {
             for (auto& property : group->m_properties)
             {
@@ -1226,9 +1234,9 @@ namespace JE::Editor
         return result;
     }
 
-    const AtomToolsFramework::DynamicProperty* MaterialDocument::FindProperty(const AZ::Name& propertyId) const
+    const JE::Editor::Tools::DynamicProperty* MaterialDocument::FindProperty(const AZ::Name& propertyId) const
     {
-        AtomToolsFramework::DynamicProperty* result = nullptr;
+        JE::Editor::Tools::DynamicProperty* result = nullptr;
         TraverseGroups(m_groups, [&](auto& group) {
             for (auto& property : group->m_properties)
             {

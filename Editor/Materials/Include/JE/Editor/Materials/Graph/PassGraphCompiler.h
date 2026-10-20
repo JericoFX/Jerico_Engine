@@ -9,16 +9,16 @@
 #pragma once
 
 #include <JE/Editor/Materials/Base.h>
-#include <AtomToolsFramework/Graph/GraphCompiler.h>
+#include <JE/Editor/Tools/Graph/GraphCompiler.h>
 
 namespace JE::Editor::Materials
 {
     //! Validates pass graph compilation inputs. Source generation is not implemented, so valid graphs fail
     //! with a diagnostic and produce no pass or shader files.
-    class JE_EDITOR_MATERIALS_API PassGraphCompiler : public AtomToolsFramework::GraphCompiler
+    class JE_EDITOR_MATERIALS_API PassGraphCompiler : public JE::Editor::Tools::GraphCompiler
     {
     public:
-        AZ_RTTI(PassGraphCompiler, "{4D9407B1-195A-404A-B97A-E2BA22207C87}", AtomToolsFramework::GraphCompiler);
+        AZ_RTTI(PassGraphCompiler, "{4D9407B1-195A-404A-B97A-E2BA22207C87}", JE::Editor::Tools::GraphCompiler);
         AZ_CLASS_ALLOCATOR(PassGraphCompiler, AZ::SystemAllocator);
         AZ_DISABLE_COPY_MOVE(PassGraphCompiler);
 

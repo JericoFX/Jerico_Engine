@@ -1,0 +1,19 @@
+{
+  "executable": "C:/Program Files/CMake/bin/ctest.exe",
+  "cwd": "F:/JericoEngine/JericoEngine",
+  "pid": 30188,
+  "creationUtc": "2026-10-20T13:12:50.8418413Z",
+  "path": null,
+  "argv": [
+    "--test-dir",
+    "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine",
+    "-C",
+    "Profile",
+    "--output-on-failure",
+    "--no-tests=error",
+    "--parallel",
+    "1",
+    "-R",
+    "^(JE::EditorTools\\.Tests\\.main::TEST_RUN|JE::EditorMaterials\\.Tests\\.main::TEST_RUN)$"
+  ]
+}

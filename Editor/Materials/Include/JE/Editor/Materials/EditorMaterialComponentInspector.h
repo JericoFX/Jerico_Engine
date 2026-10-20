@@ -12,8 +12,8 @@
 
 #include <JE/Editor/Materials/EditorMaterialSystemComponentNotificationBus.h>
 #include <JE/Render/Materials/MaterialComponentBus.h>
-#include <AtomToolsFramework/DynamicProperty/DynamicPropertyGroup.h>
-#include <AtomToolsFramework/Inspector/InspectorWidget.h>
+#include <JE/Editor/Tools/DynamicProperty/DynamicPropertyGroup.h>
+#include <JE/Editor/Tools/Inspector/InspectorWidget.h>
 #include <AzCore/Asset/AssetCommon.h>
 #include <AzCore/Component/EntityBus.h>
 #include <AzCore/Component/TickBus.h>
@@ -35,7 +35,7 @@ namespace JE
             //! Inspector window for displaying and editing entity material instance properties
             //! If multiple entities are selected and pinned to this inspector then their corresponding properties will also be updated
             class JE_EDITOR_MATERIALS_API MaterialPropertyInspector
-                : public AtomToolsFramework::InspectorWidget
+                : public JE::Editor::Tools::InspectorWidget
                 , public AzToolsFramework::IPropertyEditorNotify
                 , public AZ::EntitySystemBus::Handler
                 , public AZ::SystemTickBus::Handler
@@ -117,9 +117,9 @@ namespace JE
                 void AddPropertiesGroup();
 
                 void LoadOverridesFromEntity();
-                void SaveOverrideToEntities(const AtomToolsFramework::DynamicProperty& property, bool commitChanges);
+                void SaveOverrideToEntities(const JE::Editor::Tools::DynamicProperty& property, bool commitChanges);
                 void RunEditorMaterialFunctors();
-                void UpdateMaterialInstanceProperty(const AtomToolsFramework::DynamicProperty& property);
+                void UpdateMaterialInstanceProperty(const JE::Editor::Tools::DynamicProperty& property);
 
                 bool AddEditorMaterialFunctors(
                     const AZStd::vector<JE::Render::RPI::Ptr<JE::Render::RPI::MaterialFunctorSourceDataHolder>>& functorSourceDataHolders,
@@ -136,7 +136,7 @@ namespace JE
                 AZ::Data::Instance<JE::Render::RPI::Material> m_materialInstance = {};
                 AZStd::vector<JE::Render::RPI::Ptr<JE::Render::RPI::MaterialFunctor>> m_editorFunctors = {};
                 JE::Render::RPI::MaterialPropertyFlags m_dirtyPropertyFlags = {};
-                AZStd::unordered_map<AZStd::string, AtomToolsFramework::DynamicPropertyGroup> m_groups = {};
+                AZStd::unordered_map<AZStd::string, JE::Editor::Tools::DynamicPropertyGroup> m_groups = {};
                 bool m_internalEditNotification = {};
                 bool m_updateUI = {};
                 bool m_updatePreview = {};

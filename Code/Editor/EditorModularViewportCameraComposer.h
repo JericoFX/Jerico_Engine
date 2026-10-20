@@ -8,7 +8,7 @@
 
 #pragma once
 
-#include <AtomToolsFramework/Viewport/ModularViewportCameraController.h>
+#include <JE/Editor/Tools/Viewport/ModularViewportCameraController.h>
 #include <AzCore/Component/TickBus.h>
 #include <AzFramework/Entity/EntityDebugDisplayBus.h>
 #include <AzFramework/Viewport/CameraInput.h>
@@ -30,7 +30,7 @@ namespace SandboxEditor
         SANDBOX_API ~EditorModularViewportCameraComposer();
 
         //! Build a ModularViewportCameraController from the associated camera inputs.
-        SANDBOX_API AZStd::shared_ptr<AtomToolsFramework::ModularViewportCameraController> CreateModularViewportCameraController();
+        SANDBOX_API AZStd::shared_ptr<JE::Editor::Tools::ModularViewportCameraController> CreateModularViewportCameraController();
 
     private:
         //! Display style/state for the pivot

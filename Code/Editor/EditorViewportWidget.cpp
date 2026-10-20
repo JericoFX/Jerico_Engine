@@ -52,7 +52,7 @@
 #include <AzToolsFramework/ViewportSelection/EditorTransformComponentSelectionRequestBus.h>
 
 // AtomToolsFramework
-#include <AtomToolsFramework/Viewport/RenderViewportWidget.h>
+#include <JE/Editor/Tools/Viewport/RenderViewportWidget.h>
 
 // AzFramework
 #include <AzFramework/Render/IntersectorInterface.h>
@@ -793,7 +793,7 @@ void EditorViewportWidget::SetViewportId(int id)
     }
 
     // Now that we have an ID, we can initialize our viewport.
-    m_renderViewport = new AtomToolsFramework::RenderViewportWidget(this, false);
+    m_renderViewport = new JE::Editor::Tools::RenderViewportWidget(this, false);
     if (!m_renderViewport->InitializeViewportContext(id))
     {
         AZ_Warning("EditorViewportWidget", false, "Failed to initialize RenderViewportWidget's ViewportContext");

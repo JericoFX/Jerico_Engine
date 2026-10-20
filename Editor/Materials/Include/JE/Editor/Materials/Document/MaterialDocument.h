@@ -17,8 +17,8 @@
 #include <JE/Editor/Render/RPI/Edit/Material/MaterialTypeSourceData.h>
 #include <JE/Render/RPI/Public/Material/Material.h>
 #include <JE/Render/RPI/Reflect/Material/MaterialAsset.h>
-#include <AtomToolsFramework/Document/AtomToolsDocument.h>
-#include <AtomToolsFramework/DynamicProperty/DynamicPropertyGroup.h>
+#include <JE/Editor/Tools/Document/AtomToolsDocument.h>
+#include <JE/Editor/Tools/DynamicProperty/DynamicPropertyGroup.h>
 #include <JE/Editor/Materials/Document/MaterialDocumentRequestBus.h>
 
 namespace UnitTest { class MaterialDocumentTests; }
@@ -27,12 +27,12 @@ namespace JE::Editor
 {
     //! MaterialDocument provides an API for modifying and saving material document properties.
     class JE_EDITOR_MATERIALS_API MaterialDocument
-        : public AtomToolsFramework::AtomToolsDocument
+        : public JE::Editor::Tools::AtomToolsDocument
         , public MaterialDocumentRequestBus::Handler
         , public AZ::SystemTickBus::Handler
     {
     public:
-        AZ_RTTI(MaterialDocument, "{90299628-AD02-4FEB-9527-7278FA2817AD}", AtomToolsFramework::AtomToolsDocument);
+        AZ_RTTI(MaterialDocument, "{90299628-AD02-4FEB-9527-7278FA2817AD}", JE::Editor::Tools::AtomToolsDocument);
         AZ_CLASS_ALLOCATOR(MaterialDocument, AZ::SystemAllocator);
         AZ_DISABLE_COPY_MOVE(MaterialDocument);
 
@@ -42,13 +42,13 @@ namespace JE::Editor
         enum class HistoryOwner { Standalone, Editor };
 
         MaterialDocument() = default;
-        MaterialDocument(const AZ::Crc32& toolId, const AtomToolsFramework::DocumentTypeInfo& documentTypeInfo,
+        MaterialDocument(const AZ::Crc32& toolId, const JE::Editor::Tools::DocumentTypeInfo& documentTypeInfo,
             HistoryOwner historyOwner = HistoryOwner::Standalone);
         virtual ~MaterialDocument();
 
         // AtomToolsFramework::AtomToolsDocument overrides...
-        static AtomToolsFramework::DocumentTypeInfo BuildDocumentTypeInfo(HistoryOwner historyOwner = HistoryOwner::Standalone);
-        AtomToolsFramework::DocumentObjectInfoVector GetObjectInfo() const override;
+        static JE::Editor::Tools::DocumentTypeInfo BuildDocumentTypeInfo(HistoryOwner historyOwner = HistoryOwner::Standalone);
+        JE::Editor::Tools::DocumentObjectInfoVector GetObjectInfo() const override;
         bool Open(const AZStd::string& loadPath) override;
         bool Save() override;
         bool SaveAsCopy(const AZStd::string& savePath) override;
@@ -71,7 +71,7 @@ namespace JE::Editor
         const HistoryOwner m_historyOwner = HistoryOwner::Standalone;
 
         // Predicate for evaluating properties
-        using PropertyFilterFunction = AZStd::function<bool(const AtomToolsFramework::DynamicProperty&)>;
+        using PropertyFilterFunction = AZStd::function<bool(const JE::Editor::Tools::DynamicProperty&)>;
 
         // Map of raw property values for undo/redo comparison and storage
         using PropertyValueMap = AZStd::unordered_map<AZ::Name, AZStd::any>;
@@ -103,24 +103,24 @@ namespace JE::Editor
         void RunEditorMaterialFunctors(JE::Render::RPI::MaterialPropertyFlags dirtyFlags);
 
         // Convert a dynamic property group pointer into generic document object info used to populate the inspector
-        AtomToolsFramework::DocumentObjectInfo GetObjectInfoFromDynamicPropertyGroup(
-            const AtomToolsFramework::DynamicPropertyGroup* group) const;
+        JE::Editor::Tools::DocumentObjectInfo GetObjectInfoFromDynamicPropertyGroup(
+            const JE::Editor::Tools::DynamicPropertyGroup* group) const;
 
         // In order traversal of dynamic property groups
         bool TraverseGroups(
-            AZStd::vector<AZStd::shared_ptr<AtomToolsFramework::DynamicPropertyGroup>>& groups,
-            AZStd::function<bool(AZStd::shared_ptr<AtomToolsFramework::DynamicPropertyGroup>&)> callback);
+            AZStd::vector<AZStd::shared_ptr<JE::Editor::Tools::DynamicPropertyGroup>>& groups,
+            AZStd::function<bool(AZStd::shared_ptr<JE::Editor::Tools::DynamicPropertyGroup>&)> callback);
 
         // In order traversal of dynamic property groups
         bool TraverseGroups(
-            const AZStd::vector<AZStd::shared_ptr<AtomToolsFramework::DynamicPropertyGroup>>& groups,
-            AZStd::function<bool(const AZStd::shared_ptr<AtomToolsFramework::DynamicPropertyGroup>&)> callback) const;
+            const AZStd::vector<AZStd::shared_ptr<JE::Editor::Tools::DynamicPropertyGroup>>& groups,
+            AZStd::function<bool(const AZStd::shared_ptr<JE::Editor::Tools::DynamicPropertyGroup>&)> callback) const;
 
         // Traverses dynamic property groups to find a property with a specific ID
-        AtomToolsFramework::DynamicProperty* FindProperty(const AZ::Name& propertyId);
+        JE::Editor::Tools::DynamicProperty* FindProperty(const AZ::Name& propertyId);
 
         // Traverses dynamic property groups to find a property with a specific ID
-        const AtomToolsFramework::DynamicProperty* FindProperty(const AZ::Name& propertyId) const;
+        const JE::Editor::Tools::DynamicProperty* FindProperty(const AZ::Name& propertyId) const;
 
         // Material asset generated from source data, used to get the final values for properties to be assigned to the document 
         AZ::Data::Asset<JE::Render::RPI::MaterialAsset> m_materialAsset;
@@ -149,7 +149,7 @@ namespace JE::Editor
 
         // A container of root level dynamic property groups that represents the reflected, editable data within the document.
         // These groups will be mapped to document object info so they can populate and be edited directly in the inspector.
-        AZStd::vector<AZStd::shared_ptr<AtomToolsFramework::DynamicPropertyGroup>> m_groups;
+        AZStd::vector<AZStd::shared_ptr<JE::Editor::Tools::DynamicPropertyGroup>> m_groups;
 
         // Dummy default value returned whenever a property cannot be located
         AZStd::any m_invalidValue;

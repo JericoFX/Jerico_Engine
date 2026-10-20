@@ -21,8 +21,8 @@
 #include <AzCore/std/containers/unordered_map.h>
 #include <AzToolsFramework/UI/PropertyEditor/PropertyEditorAPI_Internals.h>
 
-#include <AtomToolsFramework/DynamicProperty/DynamicPropertyGroup.h>
-#include <AtomToolsFramework/Inspector/InspectorWidget.h>
+#include <JE/Editor/Tools/DynamicProperty/DynamicPropertyGroup.h>
+#include <JE/Editor/Tools/Inspector/InspectorWidget.h>
 
 namespace JE
 {
@@ -33,7 +33,7 @@ namespace JE
             using MaterialModelUvOverrideMapChangedCallBack = AZStd::function<void(const JE::Render::RPI::MaterialModelUvOverrideMap&)>;
 
             class JE_EDITOR_MATERIALS_API MaterialModelUvNameMapInspector
-                : public AtomToolsFramework::InspectorWidget
+                : public JE::Editor::Tools::InspectorWidget
                 , public AzToolsFramework::IPropertyEditorNotify
             {
                 Q_OBJECT
@@ -76,8 +76,8 @@ namespace JE
                 AZStd::vector<AZStd::string> m_modelUvNames; //! Used as enum values.
                 MaterialModelUvOverrideMapChangedCallBack m_matModUvOverrideMapChangedCallBack;
 
-                AtomToolsFramework::DynamicPropertyGroup m_group;
-                const AtomToolsFramework::DynamicProperty* m_activeProperty = nullptr;
+                JE::Editor::Tools::DynamicPropertyGroup m_group;
+                const JE::Editor::Tools::DynamicProperty* m_activeProperty = nullptr;
             };
 
             bool OpenInspectorDialog(

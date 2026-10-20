@@ -1,0 +1,14 @@
+{
+  "phaseResult": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-corefeature102\\atomtools104-sdk-loader-r1-attempt1\\atomtools104-sdk-loader-r1.result.json",
+    "bytes": 743,
+    "sha256": "F7BDB3AFFF7CBD1577E56024CC0E4CBCD6B325C79D902ADFB19511EB0AC47135"
+  },
+  "parentReviewRequired": true,
+  "leaseId": "parent-atomtools104-sdk-loader-r1",
+  "accepted": false,
+  "phase": "atomtools104-sdk-loader-r1",
+  "fatal": null,
+  "postflightValid": true,
+  "wholeGemIncrement": 0
+}

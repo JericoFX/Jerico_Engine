@@ -11,7 +11,7 @@
 #include <JE/Editor/Render/RPI/Edit/Shader/ShaderVariantListSourceData.h>
 #include <JE/Render/RPI/Reflect/Material/ShaderCollection.h>
 #include <JE/Render/RPI/Reflect/Shader/ShaderAsset.h>
-#include <AtomToolsFramework/Document/AtomToolsDocument.h>
+#include <JE/Editor/Tools/Document/AtomToolsDocument.h>
 #include <AzCore/Asset/AssetCommon.h>
 #include <AzCore/RTTI/RTTI.h>
 #include <AzCore/std/containers/vector.h>
@@ -22,23 +22,23 @@ namespace ShaderManagementConsole
 {
     //! ShaderManagementConsoleDocument provides an API for modifying and saving document properties.
     class ShaderManagementConsoleDocument
-        : public AtomToolsFramework::AtomToolsDocument
+        : public JE::Editor::Tools::AtomToolsDocument
         , public ShaderManagementConsoleDocumentRequestBus::Handler
     {
     public:
-        AZ_RTTI(ShaderManagementConsoleDocument, "{C8FAF1C7-8665-423C-B1DD-82016231B17B}", AtomToolsFramework::AtomToolsDocument);
+        AZ_RTTI(ShaderManagementConsoleDocument, "{C8FAF1C7-8665-423C-B1DD-82016231B17B}", JE::Editor::Tools::AtomToolsDocument);
         AZ_CLASS_ALLOCATOR(ShaderManagementConsoleDocument, AZ::SystemAllocator);
         AZ_DISABLE_COPY_MOVE(ShaderManagementConsoleDocument);
 
         static void Reflect(AZ::ReflectContext* context);
 
         ShaderManagementConsoleDocument() = default;
-        ShaderManagementConsoleDocument(const AZ::Crc32& toolId, const AtomToolsFramework::DocumentTypeInfo& documentTypeInfo);
+        ShaderManagementConsoleDocument(const AZ::Crc32& toolId, const JE::Editor::Tools::DocumentTypeInfo& documentTypeInfo);
         ~ShaderManagementConsoleDocument();
 
         // AtomToolsFramework::AtomToolsDocument overrides...
-        static AtomToolsFramework::DocumentTypeInfo BuildDocumentTypeInfo();
-        AtomToolsFramework::DocumentObjectInfoVector GetObjectInfo() const override;
+        static JE::Editor::Tools::DocumentTypeInfo BuildDocumentTypeInfo();
+        JE::Editor::Tools::DocumentObjectInfoVector GetObjectInfo() const override;
         bool Open(const AZStd::string& loadPath) override;
         bool Save() override;
         bool SaveAsCopy(const AZStd::string& savePath) override;

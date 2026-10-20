@@ -1,0 +1,14 @@
+{
+  "phaseResult": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-corefeature102\\atomtools104-canonical-editor-r5-attempt1\\editor-atomtools104-canonical-r5.result.json",
+    "bytes": 770,
+    "sha256": "CCFCD1AA43020642C6024D81845031331A7092F385AD59E3711C637BE4905AD4"
+  },
+  "phase": "editor-atomtools104-canonical-r5",
+  "wholeGemIncrement": 0,
+  "fatal": null,
+  "parentReviewRequired": true,
+  "leaseId": "parent-atomtools104-editor-r5",
+  "postflightValid": true,
+  "accepted": false
+}

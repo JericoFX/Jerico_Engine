@@ -12,7 +12,7 @@
 #include <OpenParticleSystemEditorWindow.h>
 #include <Editor/EditorParticleSystemComponentRequestBus.h>
 
-#include <AtomToolsFramework/Util/Util.h>
+#include <JE/Editor/Tools/Util/Util.h>
 #include <AssetBrowser/AssetBrowserBus.h>
 #include <ViewInspector.h>
 #include <EmitterInspector.h>
@@ -20,7 +20,7 @@
 #include <InputController/OpenParticleEditorViewportInputControllerBus.h>
 #include <Window/Controls/PropertyDistCtrl.h>
 #include <Window/Controls/PropertyGradientColorCtrl.h>
-#include <AtomToolsFramework/Window/AtomToolsMainWindowNotificationBus.h>
+#include <JE/Editor/Tools/Window/AtomToolsMainWindowNotificationBus.h>
 #include <AzToolsFramework/AssetBrowser/AssetSelectionModel.h>
 #include <AzToolsFramework/AssetBrowser/AssetBrowserEntry.h>
 #include <JE/Editor/Render/RPI/Edit/Common/AssetUtils.h>
@@ -248,8 +248,8 @@ namespace OpenParticleSystemEditor
             return;
         };
 
-        AtomToolsFramework::AtomToolsMainWindowNotificationBus::Broadcast(
-            &AtomToolsFramework::AtomToolsMainWindowNotifications::OnMainWindowClosing);
+        JE::Editor::Tools::AtomToolsMainWindowNotificationBus::Broadcast(
+            &JE::Editor::Tools::AtomToolsMainWindowNotifications::OnMainWindowClosing);
     }
 
     void OpenParticleSystemEditorWindow::ActivateWindow()

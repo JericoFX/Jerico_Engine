@@ -1,0 +1,18 @@
+{
+  "ramGuardTriggered": false,
+  "stdout": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-corefeature102\\atomtools104-canonical-test-materials-zoom-r10-attempt1\\test-atomtools104-canonical-materials-zoom-r10.stdout.log",
+    "bytes": 1680,
+    "sha256": "2CC539855FE8BC83611DBF6EF1E0D8ABF0602BC4090C109834CBD97C7D168852"
+  },
+  "priorityRequested": "BelowNormal",
+  "exitCode": 0,
+  "stderr": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-corefeature102\\atomtools104-canonical-test-materials-zoom-r10-attempt1\\test-atomtools104-canonical-materials-zoom-r10.stderr.log",
+    "bytes": 0,
+    "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+  },
+  "seconds": 1.3053161,
+  "priorityError": null,
+  "timedOut": false
+}

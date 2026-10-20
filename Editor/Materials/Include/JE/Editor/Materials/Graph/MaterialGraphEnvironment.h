@@ -3,9 +3,9 @@
 #pragma once
 
 #include <JE/Editor/Materials/Base.h>
-#include <AtomToolsFramework/Document/AtomToolsDocumentTypeInfo.h>
-#include <AtomToolsFramework/Document/AtomToolsDocumentRequestBus.h>
-#include <AtomToolsFramework/Graph/GraphViewSettings.h>
+#include <JE/Editor/Tools/Document/AtomToolsDocumentTypeInfo.h>
+#include <JE/Editor/Tools/Document/AtomToolsDocumentRequestBus.h>
+#include <JE/Editor/Tools/Graph/GraphViewSettings.h>
 #include <AzCore/RTTI/ReflectContext.h>
 #include <AzCore/std/smart_ptr/unique_ptr.h>
 #include <AzCore/std/containers/vector.h>
@@ -13,7 +13,7 @@
 
 class QTranslator;
 namespace GraphCanvas { class StyleManager; class GraphCanvasTreeItem; }
-namespace AtomToolsFramework
+namespace JE::Editor::Tools
 {
     class DynamicNodeManager;
     class AssetStatusReporterSystem;
@@ -39,8 +39,8 @@ namespace JE::Editor
         const AZStd::shared_ptr<GraphModel::GraphContext>& GetGraphContext(GraphKind kind = GraphKind::Material) const;
         GraphCanvas::GraphCanvasTreeItem* CreateNodePaletteTree(GraphKind kind) const;
         void SetActiveGraphKind(GraphKind kind);
-        const AtomToolsFramework::GraphViewSettingsPtr& GetViewSettings() const;
-        AtomToolsFramework::DocumentTypeInfoVector BuildDocumentTypes(HistoryOwner owner = HistoryOwner::Standalone) const;
+        const JE::Editor::Tools::GraphViewSettingsPtr& GetViewSettings() const;
+        JE::Editor::Tools::DocumentTypeInfoVector BuildDocumentTypes(HistoryOwner owner = HistoryOwner::Standalone) const;
 
     private:
         void InitDynamicNodeManager();
@@ -50,18 +50,18 @@ namespace JE::Editor
         void InitGraphViewSettings();
 
         const AZ::Crc32 m_toolId;
-        AtomToolsFramework::DocumentHistoryPolicy m_editorHistoryPolicy;
+        JE::Editor::Tools::DocumentHistoryPolicy m_editorHistoryPolicy;
         // The manager borrows these attributes; destroy it and its consumers before their sole owner.
         AZStd::vector<AZStd::unique_ptr<AZ::Attribute>> m_editDataAttributes;
-        AZStd::unique_ptr<AtomToolsFramework::DynamicNodeManager> m_dynamicNodeManager;
-        AZStd::unique_ptr<AtomToolsFramework::AssetStatusReporterSystem> m_assetStatusReporterSystem;
-        AZStd::shared_ptr<AtomToolsFramework::GraphTemplateFileDataCache> m_graphTemplateFileDataCache;
+        AZStd::unique_ptr<JE::Editor::Tools::DynamicNodeManager> m_dynamicNodeManager;
+        AZStd::unique_ptr<JE::Editor::Tools::AssetStatusReporterSystem> m_assetStatusReporterSystem;
+        AZStd::shared_ptr<JE::Editor::Tools::GraphTemplateFileDataCache> m_graphTemplateFileDataCache;
         AZStd::shared_ptr<GraphModel::GraphContext> m_graphContext;
         AZStd::shared_ptr<GraphModel::GraphContext> m_passGraphContext;
         AZStd::vector<AZ::Uuid> m_materialNodeConfigs;
         AZStd::vector<AZ::Uuid> m_passNodeConfigs;
         GraphKind m_activeGraphKind = GraphKind::Material;
-        AtomToolsFramework::GraphViewSettingsPtr m_graphViewSettingsPtr;
+        JE::Editor::Tools::GraphViewSettingsPtr m_graphViewSettingsPtr;
         AZStd::unique_ptr<GraphCanvas::StyleManager> m_styleManager;
         AZStd::unique_ptr<QTranslator> m_translator;
     };

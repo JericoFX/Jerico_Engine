@@ -8,8 +8,8 @@
 
 #pragma once
 
-#include <AtomToolsFramework/Document/AtomToolsDocumentInspector.h>
-#include <AtomToolsFramework/Document/AtomToolsDocumentMainWindow.h>
+#include <JE/Editor/Tools/Document/AtomToolsDocumentInspector.h>
+#include <JE/Editor/Tools/Document/AtomToolsDocumentMainWindow.h>
 
 namespace ShaderManagementConsole
 {
@@ -17,13 +17,13 @@ namespace ShaderManagementConsole
 
     //! ShaderManagementConsoleWindow is the main class. Its responsibility is limited to initializing and connecting
     //! its panels, managing selection of assets, and performing high-level actions like saving. It contains...
-    class ShaderManagementConsoleWindow : public AtomToolsFramework::AtomToolsDocumentMainWindow
+    class ShaderManagementConsoleWindow : public JE::Editor::Tools::AtomToolsDocumentMainWindow
     {
         Q_OBJECT
     public:
         AZ_CLASS_ALLOCATOR(ShaderManagementConsoleWindow, AZ::SystemAllocator);
 
-        using Base = AtomToolsFramework::AtomToolsDocumentMainWindow;
+        using Base = JE::Editor::Tools::AtomToolsDocumentMainWindow;
 
         ShaderManagementConsoleWindow(const AZ::Crc32& toolId, QWidget* parent = nullptr);
         ~ShaderManagementConsoleWindow() = default;
@@ -48,7 +48,7 @@ namespace ShaderManagementConsole
     private:
         void closeEvent(QCloseEvent* closeEvent) override;
 
-        AtomToolsFramework::AtomToolsDocumentInspector* m_documentInspector = {};
+        JE::Editor::Tools::AtomToolsDocumentInspector* m_documentInspector = {};
         QWidget* m_statisticView = nullptr;
         bool m_generationInProgress = false;
     };

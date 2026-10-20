@@ -20,8 +20,7 @@ ly_add_target(
             AZ::AzToolsFramework
             JE::EditorRenderIntegration
             JE::EditorRenderFeatures
-            Gem::AtomToolsFramework.Static
-            Gem::AtomToolsFramework.Editor
+            JE::EditorTools
             JE::RenderScene.Public
             Legacy::Editor.Headers
             Legacy::CryCommon

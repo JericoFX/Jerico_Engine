@@ -9,7 +9,7 @@
 #pragma once
 
 #include <AzFramework/Windowing/WindowBus.h>
-#include <AtomToolsFramework/Viewport/RenderViewportWidget.h>
+#include <JE/Editor/Tools/Viewport/RenderViewportWidget.h>
 #include <OpenParticleViewportWidgetRequestsBus.h>
 
  // disable warnings spawned by QT
@@ -32,7 +32,7 @@ namespace OpenParticleSystemEditor
     class OpenParticleViewportRenderer;
 
     class OpenParticleViewportWidget
-        : public AtomToolsFramework::RenderViewportWidget
+        : public JE::Editor::Tools::RenderViewportWidget
         , public OpenParticleViewportWidgetRequestsBus::Handler
     {
     public:

@@ -19,9 +19,9 @@
 #include <JE/Editor/Materials/EditorMaterialSystemComponentRequestBus.h>
 #include <JE/Render/Materials/MaterialComponentBus.h>
 #include <JE/Render/Materials/MaterialComponentConfig.h>
-#include <AtomToolsFramework/Inspector/InspectorPropertyGroupWidget.h>
-#include <AtomToolsFramework/Util/MaterialPropertyUtil.h>
-#include <AtomToolsFramework/Util/Util.h>
+#include <JE/Editor/Tools/Inspector/InspectorPropertyGroupWidget.h>
+#include <JE/Editor/Tools/Util/MaterialPropertyUtil.h>
+#include <JE/Editor/Tools/Util/Util.h>
 #include <AzCore/Utils/Utils.h>
 #include <AzFramework/API/ApplicationAPI.h>
 #include <AzQtComponents/Components/Widgets/Text.h>
@@ -46,7 +46,7 @@ namespace JE
         namespace EditorMaterialComponentInspector
         {
             MaterialPropertyInspector::MaterialPropertyInspector(QWidget* parent)
-                : AtomToolsFramework::InspectorWidget(parent)
+                : JE::Editor::Tools::InspectorWidget(parent)
             {
                 CreateHeading();
                 AZ::SystemTickBus::Handler::BusConnect();
@@ -150,7 +150,7 @@ namespace JE
                 m_dirtyPropertyFlags.set();
                 m_internalEditNotification = {};
 
-                AtomToolsFramework::InspectorWidget::Reset();
+                JE::Editor::Tools::InspectorWidget::Reset();
             }
 
             void MaterialPropertyInspector::CreateHeading()
@@ -310,7 +310,7 @@ namespace JE
 
                 for (const JE::Render::RPI::UvNamePair& uvNamePair : uvNameMap)
                 {
-                    AtomToolsFramework::DynamicPropertyConfig propertyConfig;
+                    JE::Editor::Tools::DynamicPropertyConfig propertyConfig;
 
                     const AZStd::string shaderInputStr = uvNamePair.m_shaderInput.ToString();
                     const AZStd::string uvName = uvNamePair.m_uvName.GetStringView();
@@ -329,7 +329,7 @@ namespace JE
                 }
 
                 // Passing in same group as main and comparison instance to enable custom value comparison for highlighting modified properties
-                auto propertyGroupWidget = new AtomToolsFramework::InspectorPropertyGroupWidget(
+                auto propertyGroupWidget = new JE::Editor::Tools::InspectorPropertyGroupWidget(
                     &group, &group, group.TYPEINFO_Uuid(), this, this, GetGroupSaveStateKey(groupName), {},
                     [this](const auto node) { return GetInstanceNodePropertyIndicator(node); }, 0);
                 AddGroup(groupName, groupDisplayName, groupDescription, propertyGroupWidget);
@@ -372,13 +372,13 @@ namespace JE
                         group.m_properties.reserve(propertyGroupDefinition->GetProperties().size());
                         for (const auto& propertyDefinition : propertyGroupDefinition->GetProperties())
                         {
-                            AtomToolsFramework::DynamicPropertyConfig propertyConfig;
+                            JE::Editor::Tools::DynamicPropertyConfig propertyConfig;
                             
                             // Assign id before conversion so it can be used in dynamic description
                             propertyConfig.m_id = propertyDefinition->GetName();
                             groupNameContext.ContextualizeProperty(propertyConfig.m_id);
                             
-                            AtomToolsFramework::ConvertToPropertyConfig(propertyConfig, *propertyDefinition);
+                            JE::Editor::Tools::ConvertToPropertyConfig(propertyConfig, *propertyDefinition);
                             propertyConfig.m_description +=
                                 "\n\n<img src=\':/Icons/changed_property.svg\'> An indicator icon will be shown to the left of properties "
                                 "with overridden values that are different from the assigned material.\n";
@@ -391,20 +391,20 @@ namespace JE
                             propertyConfig.m_groupDisplayName = group.m_displayName;
                             propertyConfig.m_showThumbnail = true;
                             
-                            propertyConfig.m_defaultValue = AtomToolsFramework::ConvertToEditableType(
+                            propertyConfig.m_defaultValue = JE::Editor::Tools::ConvertToEditableType(
                                 m_editData.m_materialTypeAsset->GetDefaultPropertyValues()[propertyIndex.GetIndex()]);
                             
                             // There is no explicit parent material here. Material instance property overrides replace the values from the
                             // assigned material asset. Its values should be treated as parent, for comparison, in this case.
-                            propertyConfig.m_parentValue = AtomToolsFramework::ConvertToEditableType(
+                            propertyConfig.m_parentValue = JE::Editor::Tools::ConvertToEditableType(
                                 m_editData.m_materialTypeAsset->GetDefaultPropertyValues()[propertyIndex.GetIndex()]);
-                            propertyConfig.m_originalValue = AtomToolsFramework::ConvertToEditableType(
+                            propertyConfig.m_originalValue = JE::Editor::Tools::ConvertToEditableType(
                                 m_editData.m_materialAsset->GetPropertyValues()[propertyIndex.GetIndex()]);
                             group.m_properties.emplace_back(propertyConfig);
                         }
                         
                         // Passing in same group as main and comparison instance to enable custom value comparison for highlighting modified properties
-                        auto propertyGroupWidget = new AtomToolsFramework::InspectorPropertyGroupWidget(
+                        auto propertyGroupWidget = new JE::Editor::Tools::InspectorPropertyGroupWidget(
                             &group, &group, group.TYPEINFO_Uuid(), this, this, GetGroupSaveStateKey(group.m_name), {},
                             [this](const auto node) { return GetInstanceNodePropertyIndicator(node); }, 0);
                         AddGroup(group.m_name, group.m_displayName, group.m_description, propertyGroupWidget);
@@ -456,7 +456,7 @@ namespace JE
                 {
                     for (auto& property : group.second.m_properties)
                     {
-                        const AtomToolsFramework::DynamicPropertyConfig& propertyConfig = property.GetConfig();
+                        const JE::Editor::Tools::DynamicPropertyConfig& propertyConfig = property.GetConfig();
                         const auto overrideItr = m_editData.m_materialPropertyOverrideMap.find(propertyConfig.m_id);
                         const auto& editValue = overrideItr != m_editData.m_materialPropertyOverrideMap.end() ? overrideItr->second : propertyConfig.m_originalValue;
 
@@ -464,10 +464,10 @@ namespace JE
                         const auto propertyIndex = m_materialInstance->FindPropertyIndex(property.GetId());
                         if (propertyIndex.IsValid())
                         {
-                            const auto runtimeValue = AtomToolsFramework::ConvertToRuntimeType(editValue);
+                            const auto runtimeValue = JE::Editor::Tools::ConvertToRuntimeType(editValue);
                             if (runtimeValue.IsValid())
                             {
-                                property.SetValue(AtomToolsFramework::ConvertToEditableType(runtimeValue));
+                                property.SetValue(JE::Editor::Tools::ConvertToEditableType(runtimeValue));
                             }
                         }
                         else
@@ -485,7 +485,7 @@ namespace JE
                 UpdateHeading();
             }
 
-            void MaterialPropertyInspector::SaveOverrideToEntities(const AtomToolsFramework::DynamicProperty& property, bool commitChanges)
+            void MaterialPropertyInspector::SaveOverrideToEntities(const JE::Editor::Tools::DynamicProperty& property, bool commitChanges)
             {
                 if (!IsLoaded())
                 {
@@ -570,7 +570,7 @@ namespace JE
                     
                     for (auto& property : groupPair.second.m_properties)
                     {
-                        AtomToolsFramework::ConvertToPropertyMetaData(propertyDynamicMetadata[property.GetId()], property.GetConfig());
+                        JE::Editor::Tools::ConvertToPropertyMetaData(propertyDynamicMetadata[property.GetId()], property.GetConfig());
                     }
 
                     // It's significant that we check IsGroupHidden rather than IsGroupVisisble, because it follows the same rules as QWidget::isHidden().
@@ -614,11 +614,11 @@ namespace JE
 
                     for (auto& property : groupPair.second.m_properties)
                     {
-                        AtomToolsFramework::DynamicPropertyConfig propertyConfig = property.GetConfig();
+                        JE::Editor::Tools::DynamicPropertyConfig propertyConfig = property.GetConfig();
 
                         const auto oldVisible = propertyConfig.m_visible;
                         const auto oldReadOnly = propertyConfig.m_readOnly;
-                        AtomToolsFramework::ConvertToPropertyConfig(propertyConfig, propertyDynamicMetadata[property.GetId()]);
+                        JE::Editor::Tools::ConvertToPropertyConfig(propertyConfig, propertyDynamicMetadata[property.GetId()]);
                         property.SetConfig(propertyConfig);
 
                         if (oldReadOnly != propertyConfig.m_readOnly)
@@ -634,7 +634,7 @@ namespace JE
                 }
             }
 
-            void MaterialPropertyInspector::UpdateMaterialInstanceProperty(const AtomToolsFramework::DynamicProperty& property)
+            void MaterialPropertyInspector::UpdateMaterialInstanceProperty(const JE::Editor::Tools::DynamicProperty& property)
             {
                 if (!IsLoaded())
                 {
@@ -646,7 +646,7 @@ namespace JE
                 {
                     m_dirtyPropertyFlags.set(propertyIndex.GetIndex());
 
-                    const auto runtimeValue = AtomToolsFramework::ConvertToRuntimeType(property.GetValue());
+                    const auto runtimeValue = JE::Editor::Tools::ConvertToRuntimeType(property.GetValue());
                     if (runtimeValue.IsValid())
                     {
                         m_materialInstance->SetPropertyValue(propertyIndex, runtimeValue);
@@ -663,8 +663,8 @@ namespace JE
 
             bool MaterialPropertyInspector::IsInstanceNodePropertyModifed(const AzToolsFramework::InstanceDataNode* node) const
             {
-                const auto property = AtomToolsFramework::FindAncestorInstanceDataNodeByType<AtomToolsFramework::DynamicProperty>(node);
-                return property && !AtomToolsFramework::ArePropertyValuesEqual(property->GetValue(), property->GetConfig().m_originalValue);
+                const auto property = JE::Editor::Tools::FindAncestorInstanceDataNodeByType<JE::Editor::Tools::DynamicProperty>(node);
+                return property && !JE::Editor::Tools::ArePropertyValuesEqual(property->GetValue(), property->GetConfig().m_originalValue);
             }
 
             const char* MaterialPropertyInspector::GetInstanceNodePropertyIndicator(const AzToolsFramework::InstanceDataNode* node) const
@@ -701,7 +701,7 @@ namespace JE
 
             bool MaterialPropertyInspector::SaveMaterial(const AZStd::string& path) const
             {
-                const AZStd::string saveFilePath = AtomToolsFramework::GetSaveFilePathFromDialog(
+                const AZStd::string saveFilePath = JE::Editor::Tools::GetSaveFilePathFromDialog(
                     path, { { "Material", JE::Render::RPI::MaterialSourceData::Extension } }, "Material");
                 if (saveFilePath.empty())
                 {
@@ -727,7 +727,7 @@ namespace JE
                 QMenu menu(this);
 
                 menu.addAction(tr("Save As..."), [this] {
-                    const auto& defaultPath = AtomToolsFramework::GetUniqueFilePath(AZStd::string::format(
+                    const auto& defaultPath = JE::Editor::Tools::GetUniqueFilePath(AZStd::string::format(
                         "%s/Assets/untitled.%s", AZ::Utils::GetProjectPath().c_str(), JE::Render::RPI::MaterialSourceData::Extension));
                     SaveMaterial(defaultPath);
                 });
@@ -776,7 +776,7 @@ namespace JE
 
             void MaterialPropertyInspector::AfterPropertyModified(AzToolsFramework::InstanceDataNode* pNode)
             {
-                const auto property = AtomToolsFramework::FindAncestorInstanceDataNodeByType<AtomToolsFramework::DynamicProperty>(pNode);
+                const auto property = JE::Editor::Tools::FindAncestorInstanceDataNodeByType<JE::Editor::Tools::DynamicProperty>(pNode);
                 if (property)
                 {
                     m_editData.m_materialPropertyOverrideMap[property->GetId()] = property->GetValue();
@@ -790,7 +790,7 @@ namespace JE
                 // As above, there are symmetrical functions on the notification interface for when editing begins and ends and has been
                 // completed but they are not being called following that pattern. when this function executes the changes to the property
                 // are ready to be committed or reverted
-                const auto property = AtomToolsFramework::FindAncestorInstanceDataNodeByType<AtomToolsFramework::DynamicProperty>(pNode);
+                const auto property = JE::Editor::Tools::FindAncestorInstanceDataNodeByType<JE::Editor::Tools::DynamicProperty>(pNode);
                 if (property)
                 {
                     m_editData.m_materialPropertyOverrideMap[property->GetId()] = property->GetValue();

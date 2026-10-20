@@ -1,0 +1,18 @@
+{
+  "timedOut": false,
+  "priorityError": null,
+  "priorityRequested": "BelowNormal",
+  "ramGuardTriggered": false,
+  "stdout": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-corefeature102\\atomtools104-family-materialeditor-startup-r1-attempt1\\materialeditor-atomtools104-family-startup-r1.stdout.log",
+    "bytes": 5370,
+    "sha256": "B93A261A82F235A0D0B89F0812598DF4F3643DF1A4FE44F98A48A0261501BAF5"
+  },
+  "seconds": 50.2215847,
+  "stderr": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-corefeature102\\atomtools104-family-materialeditor-startup-r1-attempt1\\materialeditor-atomtools104-family-startup-r1.stderr.log",
+    "bytes": 0,
+    "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+  },
+  "exitCode": 0
+}

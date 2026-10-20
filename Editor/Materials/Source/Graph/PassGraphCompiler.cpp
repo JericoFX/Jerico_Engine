@@ -18,14 +18,14 @@ namespace JE::Editor::Materials
     {
         if (auto serialize = azrtti_cast<AZ::SerializeContext*>(context))
         {
-            serialize->Class<PassGraphCompiler, AtomToolsFramework::GraphCompiler>()
+            serialize->Class<PassGraphCompiler, JE::Editor::Tools::GraphCompiler>()
                 ->Version(0)
                 ;
         }
     }
 
     PassGraphCompiler::PassGraphCompiler(const AZ::Crc32& toolId)
-        : AtomToolsFramework::GraphCompiler(toolId)
+        : JE::Editor::Tools::GraphCompiler(toolId)
     {
     }
 
@@ -35,7 +35,7 @@ namespace JE::Editor::Materials
 
     AZStd::string PassGraphCompiler::GetGraphPath() const
     {
-        if (const auto& graphPath = AtomToolsFramework::GraphCompiler::GetGraphPath(); graphPath.ends_with(".passgraph"))
+        if (const auto& graphPath = JE::Editor::Tools::GraphCompiler::GetGraphPath(); graphPath.ends_with(".passgraph"))
         {
             return graphPath;
         }
@@ -45,7 +45,7 @@ namespace JE::Editor::Materials
 
     bool PassGraphCompiler::CompileGraph(GraphModel::GraphPtr graph, const AZStd::string& graphName, const AZStd::string& graphPath)
     {
-        if (!AtomToolsFramework::GraphCompiler::CompileGraph(graph, graphName, graphPath))
+        if (!JE::Editor::Tools::GraphCompiler::CompileGraph(graph, graphName, graphPath))
         {
             return false;
         }

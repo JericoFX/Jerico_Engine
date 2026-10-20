@@ -8,8 +8,8 @@
 
 #pragma once
 
-#include <AtomToolsFramework/Document/AtomToolsDocumentApplication.h>
-#include <AtomToolsFramework/Document/AtomToolsDocumentNotificationBus.h>
+#include <JE/Editor/Tools/Document/AtomToolsDocumentApplication.h>
+#include <JE/Editor/Tools/Document/AtomToolsDocumentNotificationBus.h>
 #include <AzCore/Memory/Memory.h>
 #include <AzCore/Settings/CommandLine.h>
 #include <AzToolsFramework/API/EditorWindowRequestBus.h>
@@ -20,14 +20,14 @@ namespace ScriptCanvas
     AZ_DECLARE_BUDGET(ScriptCanvasApplication);
 
     class ScriptCanvasApplication
-        : public AtomToolsFramework::AtomToolsDocumentApplication
-        , private AtomToolsFramework::AtomToolsDocumentNotificationBus::Handler
+        : public JE::Editor::Tools::AtomToolsDocumentApplication
+        , private JE::Editor::Tools::AtomToolsDocumentNotificationBus::Handler
         , private AzToolsFramework::EditorWindowRequestBus::Handler
     {
     public:
         AZ_CLASS_ALLOCATOR(ScriptCanvasApplication, AZ::SystemAllocator)
         AZ_TYPE_INFO(ScriptCanvasApplication, "{484D42F9-30C5-4221-BF23-EDCA71726C05}");
-        using Base = AtomToolsFramework::AtomToolsDocumentApplication;
+        using Base = JE::Editor::Tools::AtomToolsDocumentApplication;
 
         ScriptCanvasApplication(int* argc, char*** argv);
         virtual ~ScriptCanvasApplication() override;

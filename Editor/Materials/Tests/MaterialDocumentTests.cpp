@@ -7,7 +7,7 @@
 #include <JE/Editor/Render/RPI/Edit/Common/AssetUtils.h>
 #include <JE/Editor/Render/RPI/Edit/Common/JsonUtils.h>
 #include <JE/Editor/Render/RPI/Edit/Material/MaterialPropertySourceData.h>
-#include <AtomToolsFramework/Document/AtomToolsDocumentNotificationBus.h>
+#include <JE/Editor/Tools/Document/AtomToolsDocumentNotificationBus.h>
 #include <AzToolsFramework/API/EditorAssetSystemAPI.h>
 #include <Tests/AssetSystemMocks.h>
 #include <JE/Editor/Render/RPI/Edit/Material/MaterialPropertyValueSerializer.h>
@@ -16,6 +16,8 @@
 #include <AzCore/IO/FileIO.h>
 #include <AzCore/IO/Path/Path.h>
 #include <AzCore/IO/SystemFile.h>
+#include <AzCore/Math/Color.h>
+#include <AzCore/Math/Vector4.h>
 #include <AzCore/RTTI/ReflectionManager.h>
 #include <AzCore/Serialization/Json/JsonUtils.h>
 #include <AzCore/Utils/Utils.h>
@@ -70,7 +72,7 @@ namespace UnitTest
             {
                 for (const auto& object : GetObjectInfo())
                 {
-                    auto* group = static_cast<AtomToolsFramework::DynamicPropertyGroup*>(object.m_objectPtr);
+                    auto* group = static_cast<JE::Editor::Tools::DynamicPropertyGroup*>(object.m_objectPtr);
                     for (auto& property : group->m_properties)
                     {
                         if (property.GetId() == AZ::Name(propertyId))
@@ -138,9 +140,9 @@ namespace UnitTest
 
         void SeedProperties(JE::Editor::MaterialDocument& document)
         {
-            auto group = AZStd::make_shared<AtomToolsFramework::DynamicPropertyGroup>();
+            auto group = AZStd::make_shared<JE::Editor::Tools::DynamicPropertyGroup>();
             group->m_name = "surface";
-            AtomToolsFramework::DynamicPropertyConfig property;
+            JE::Editor::Tools::DynamicPropertyConfig property;
             property.m_id = AZ::Name("surface.roughness");
             property.m_defaultValue = 0.25f;
             property.m_originalValue = 0.25f;
@@ -151,6 +153,26 @@ namespace UnitTest
             property.m_originalValue = 0.0f;
             property.m_parentValue = 0.0f;
             group->m_properties.emplace_back(property);
+            document.m_groups.push_back(AZStd::move(group));
+        }
+
+        void SeedColorProperty(JE::Editor::MaterialDocument& document, const AZ::Name& colorId, const AZ::Color& authoredColor)
+        {
+            auto* definitionGroup = document.m_materialTypeSourceData.AddPropertyGroup("baseColor");
+            ASSERT_NE(definitionGroup, nullptr);
+            auto* definition = definitionGroup->AddProperty("color");
+            ASSERT_NE(definition, nullptr);
+            definition->m_dataType = JE::Render::RPI::MaterialPropertyDataType::Color;
+            definition->m_value = AZ::Color::CreateOne();
+
+            auto group = AZStd::make_shared<JE::Editor::Tools::DynamicPropertyGroup>();
+            group->m_name = "baseColor";
+            JE::Editor::Tools::DynamicPropertyConfig colorConfig;
+            colorConfig.m_id = colorId;
+            colorConfig.m_defaultValue = AZ::Color::CreateOne();
+            colorConfig.m_parentValue = colorConfig.m_defaultValue;
+            colorConfig.m_originalValue = authoredColor;
+            group->m_properties.emplace_back(colorConfig);
             document.m_groups.push_back(AZStd::move(group));
         }
 
@@ -202,9 +224,9 @@ namespace UnitTest
             metallic->m_dataType = JE::Render::RPI::MaterialPropertyDataType::Float;
             metallic->m_value = 0.0f;
 
-            auto overview = AZStd::make_shared<AtomToolsFramework::DynamicPropertyGroup>();
+            auto overview = AZStd::make_shared<JE::Editor::Tools::DynamicPropertyGroup>();
             overview->m_name = "overview";
-            AtomToolsFramework::DynamicPropertyConfig description;
+            JE::Editor::Tools::DynamicPropertyConfig description;
             description.m_id = AZ::Name("overview.materialDescription");
             description.m_defaultValue = document.m_materialSourceData.m_description;
             description.m_originalValue = description.m_defaultValue;
@@ -291,7 +313,7 @@ namespace UnitTest
     TEST_F(MaterialDocumentTests, NativeDocumentPreservesTypeIdentityAndBothFactoryModes)
     {
         AZ::SerializeContext context;
-        AtomToolsFramework::AtomToolsDocument::Reflect(&context);
+        JE::Editor::Tools::AtomToolsDocument::Reflect(&context);
         JE::Editor::MaterialDocument::Reflect(&context);
         JE::Editor::MaterialDocument::Reflect(&context); // Host and standalone callers may share a context.
         const auto* data = context.FindClassData(AZ::Uuid("{90299628-AD02-4FEB-9527-7278FA2817AD}"));
@@ -301,7 +323,7 @@ namespace UnitTest
         for (auto owner : {HistoryOwner::Standalone, HistoryOwner::Editor})
         {
             const auto type = JE::Editor::MaterialDocument::BuildDocumentTypeInfo(owner);
-            AZStd::unique_ptr<AtomToolsFramework::AtomToolsDocumentRequests> document(type.CreateDocument(AZ::Crc32("FactoryTest")));
+            AZStd::unique_ptr<JE::Editor::Tools::AtomToolsDocumentRequests> document(type.CreateDocument(AZ::Crc32("FactoryTest")));
             ASSERT_NE(document, nullptr);
             EXPECT_EQ(document->GetDocumentTypeInfo().m_documentTypeName, "Material");
             EXPECT_TRUE(JE::Editor::MaterialDocumentRequestBus::HasHandlers(document->GetId()));
@@ -315,17 +337,17 @@ namespace UnitTest
             AZ::SerializeContext context;
             if (baseFirst)
             {
-                AtomToolsFramework::AtomToolsDocument::Reflect(&context);
+                JE::Editor::Tools::AtomToolsDocument::Reflect(&context);
             }
             JE::Editor::MaterialDocument::Reflect(&context);
             if (!baseFirst)
             {
-                EXPECT_EQ(context.FindClassData(azrtti_typeid<AtomToolsFramework::AtomToolsDocument>()), nullptr);
-                AtomToolsFramework::AtomToolsDocument::Reflect(&context);
+                EXPECT_EQ(context.FindClassData(azrtti_typeid<JE::Editor::Tools::AtomToolsDocument>()), nullptr);
+                JE::Editor::Tools::AtomToolsDocument::Reflect(&context);
             }
             JE::Editor::MaterialDocument::Reflect(&context);
             ASSERT_NE(context.FindClassData(azrtti_typeid<JE::Editor::MaterialDocument>()), nullptr);
-            ASSERT_NE(context.FindClassData(azrtti_typeid<AtomToolsFramework::AtomToolsDocument>()), nullptr);
+            ASSERT_NE(context.FindClassData(azrtti_typeid<JE::Editor::Tools::AtomToolsDocument>()), nullptr);
         }
     }
 
@@ -806,7 +828,7 @@ namespace UnitTest
     class MaterialDocumentSourceChangeTests : public MaterialDocumentTests
     {
     protected:
-        class SourceNotifications final : public AtomToolsFramework::AtomToolsDocumentNotificationBus::Handler
+        class SourceNotifications final : public JE::Editor::Tools::AtomToolsDocumentNotificationBus::Handler
         {
         public:
             explicit SourceNotifications(const AZ::Uuid& id) : m_id(id) { BusConnect(AZ::Crc32("MaterialHistoryTest")); }
@@ -1011,6 +1033,49 @@ namespace UnitTest
         Notify();
         EXPECT_EQ(notifications.external, 2);
         EXPECT_EQ(notifications.dependency, 0);
+    }
+
+    TEST_F(MaterialDocumentSourceChangeTests, ColorSaveEchoIsIgnoredButExternalColorChangeRemainsObservable)
+    {
+        auto document = OpenSource();
+        ASSERT_NE(document, nullptr);
+        SourceNotifications notifications(document->GetId());
+
+        const AZ::Name colorId("baseColor.color");
+        const AZ::Color authoredColor(0.417883575f, 0.022171360f, 0.686686516f, 1.0f);
+        ASSERT_NO_FATAL_FAILURE(SeedColorProperty(*document, colorId, authoredColor));
+
+        ASSERT_TRUE(document->GetPropertyValue("baseColor.color").is<AZ::Color>());
+        ASSERT_TRUE(document->Save());
+        auto saved = JE::Render::RPI::MaterialUtils::LoadMaterialSourceData(Path("generated.material"));
+        ASSERT_TRUE(saved.IsSuccess());
+        // The generic source serializer resolves an untyped four-number JSON array to Vector4.
+        ASSERT_TRUE(saved.GetValue().GetPropertyValue(colorId).Is<AZ::Vector4>());
+        EXPECT_EQ(saved.GetValue().GetPropertyValue(colorId).GetValue<AZ::Vector4>(),
+            AZ::Vector4(authoredColor.GetR(), authoredColor.GetG(), authoredColor.GetB(), authoredColor.GetA()));
+
+        Edit(*document, 0.9f);
+        Notify();
+        Notify();
+        EXPECT_EQ(notifications.external, 0);
+        EXPECT_EQ(notifications.dependency, 0);
+        EXPECT_FLOAT_EQ(Value(*document), 0.9f);
+        EXPECT_TRUE(document->IsModified());
+
+        auto external = saved.TakeValue();
+        external.SetPropertyValue(colorId,
+            JE::Render::RPI::MaterialPropertyValue(AZ::Vector4(0.1f, 0.2f, 0.3f, 1.0f)));
+        ASSERT_TRUE(JE::Render::RPI::JsonUtils::SaveObjectToFile(Path("generated.material"), external));
+        Notify();
+        EXPECT_EQ(notifications.external, 1);
+        EXPECT_EQ(notifications.dependency, 0);
+        EXPECT_FLOAT_EQ(Value(*document), 0.9f);
+        EXPECT_TRUE(document->IsModified());
+        ASSERT_TRUE(m_application->GetUndoStack()->CanUndo());
+        m_application->GetUndoStack()->Undo();
+        EXPECT_FLOAT_EQ(Value(*document), 0.25f);
+        m_application->GetUndoStack()->Redo();
+        EXPECT_FLOAT_EQ(Value(*document), 0.9f);
     }
 
     TEST_F(MaterialDocumentSourceChangeTests, SaveRefreshesLoadedBaselineAndAnExternalRevertIsNotHidden)

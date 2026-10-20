@@ -6,7 +6,7 @@
  *
  */
 
-#include <AtomToolsFramework/Viewport/ModularViewportCameraController.h>
+#include <JE/Editor/Tools/Viewport/ModularViewportCameraController.h>
 #include <AzCore/Settings/SettingsRegistryImpl.h>
 #include <AzFramework/Viewport/ViewportControllerList.h>
 #include <AzToolsFramework/Input/QtEventToAzInputMapper.h>
@@ -167,9 +167,9 @@ namespace UnitTest
 
             // set some overrides for the test
             controller->SetCameraViewportContextBuilderCallback(
-                [this](AZStd::unique_ptr<AtomToolsFramework::ModularCameraViewportContext>& cameraViewportContext)
+                [this](AZStd::unique_ptr<JE::Editor::Tools::ModularCameraViewportContext>& cameraViewportContext)
                 {
-                    cameraViewportContext = AZStd::make_unique<AtomToolsFramework::PlaceholderModularCameraViewportContextImpl>();
+                    cameraViewportContext = AZStd::make_unique<JE::Editor::Tools::PlaceholderModularCameraViewportContextImpl>();
                     m_cameraViewportContextView = cameraViewportContext.get();
                 });
 
@@ -249,7 +249,7 @@ namespace UnitTest
         AZStd::unique_ptr<AzToolsFramework::QtEventToAzInputMapper> m_inputChannelMapper;
         ::testing::NiceMock<MockWindowRequests> m_mockWindowRequests;
         ViewportMouseCursorRequestImpl m_viewportMouseCursorRequests;
-        AtomToolsFramework::ModularCameraViewportContext* m_cameraViewportContextView = nullptr;
+        JE::Editor::Tools::ModularCameraViewportContext* m_cameraViewportContextView = nullptr;
         AZStd::unique_ptr<AZ::SettingsRegistryInterface> m_settingsRegistry;
         AZStd::unique_ptr<SandboxEditor::EditorModularViewportCameraComposer> m_editorModularViewportCameraComposer;
     };

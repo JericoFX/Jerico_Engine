@@ -1,0 +1,13 @@
+{
+  "cwd": "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/profile",
+  "path": null,
+  "pid": 35872,
+  "creationUtc": "2026-10-20T15:58:59.1370828Z",
+  "executable": "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/profile/AzTestRunner.exe",
+  "argv": [
+    "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/profile/EditorMaterials.Tests.dll",
+    "AzRunUnitTests",
+    "--gtest_filter=PassGraphWorkspaceTests.InitialGraphFramingMatchesLayoutReadyControl:PassGraphWorkspaceTests.InitialGraphFramingDoesNotRepeatAfterManualCameraAndHideShow:PassGraphWorkspaceTests.InputBeforeInitialFramingPreservesManualCamera",
+    "--gtest_output=xml:F:/JericoEngine/JericoEngine/build/n0-validation/native-corefeature102/atomtools104-canonical-test-materials-zoom-r10-attempt1/case.xml"
+  ]
+}

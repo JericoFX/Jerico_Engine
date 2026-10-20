@@ -70,8 +70,7 @@ if(PAL_TRAIT_BUILD_HOST_TOOLS)
                 AZ::AzFramework
                 Gem::${gem_name}.Static
                 Gem::EMotionFX.Editor.Static
-                Gem::AtomToolsFramework.Static
-                Gem::AtomToolsFramework.Editor
+                JE::EditorTools
                 JE::WorldCamera
                 JE::RenderFeatures
                 JE::RenderScene

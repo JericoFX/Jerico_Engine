@@ -1,0 +1,13 @@
+{
+  "cwd": "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/profile",
+  "executable": "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/profile/AzTestRunner.exe",
+  "argv": [
+    "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/profile/EditorMaterials.Tests.dll",
+    "AzRunUnitTests",
+    "--gtest_filter=MaterialDocumentSourceChangeTests.*",
+    "--gtest_output=xml:F:/JericoEngine/JericoEngine/build/n0-validation/native-corefeature102/atomtools104-canonical-test-materials-ownsave-r5-attempt1/case.xml"
+  ],
+  "path": null,
+  "creationUtc": "2026-10-20T14:44:39.5257808Z",
+  "pid": 35816
+}

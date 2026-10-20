@@ -9,11 +9,11 @@
 #pragma once
 
 #include <JE/Editor/Materials/Base.h>
-#include <AtomToolsFramework/Graph/GraphCompiler.h>
-#include <AtomToolsFramework/Graph/GraphTemplateFileDataCacheRequestBus.h>
+#include <JE/Editor/Tools/Graph/GraphCompiler.h>
+#include <JE/Editor/Tools/Graph/GraphTemplateFileDataCacheRequestBus.h>
 #include <GraphModel/Model/Node.h>
 
-namespace AtomToolsFramework
+namespace JE::Editor::Tools
 {
     struct DynamicNodeSlotConfig;
 }
@@ -23,10 +23,10 @@ namespace JE::Editor
     //! MaterialGraphCompiler traverses a material graph, searching for and splicing shader code snippets, variable values and definitions,
     //! and other information into complete, functional material types, materials, and shaders. Currently, the resulting files will be
     //! generated an output into the same folder location has the source graph.
-    class JE_EDITOR_MATERIALS_API MaterialGraphCompiler : public AtomToolsFramework::GraphCompiler
+    class JE_EDITOR_MATERIALS_API MaterialGraphCompiler : public JE::Editor::Tools::GraphCompiler
     {
     public:
-        AZ_RTTI(MaterialGraphCompiler, "{570E3923-48C4-4B91-BC44-3145BE771E9B}", AtomToolsFramework::GraphCompiler);
+        AZ_RTTI(MaterialGraphCompiler, "{570E3923-48C4-4B91-BC44-3145BE771E9B}", JE::Editor::Tools::GraphCompiler);
         AZ_CLASS_ALLOCATOR(MaterialGraphCompiler, AZ::SystemAllocator);
         AZ_DISABLE_COPY_MOVE(MaterialGraphCompiler);
 
@@ -82,7 +82,7 @@ namespace JE::Editor
         // can be entered manually but SamplerState and other data types with several members need additional Handling transform the data
         // into the required format.
         AZStd::string GetAzslSrgMemberFromSlot(
-            GraphModel::ConstNodePtr node, const AtomToolsFramework::DynamicNodeSlotConfig& slotConfig) const;
+            GraphModel::ConstNodePtr node, const JE::Editor::Tools::DynamicNodeSlotConfig& slotConfig) const;
 
         // Creates a table of strings to search for and the values to replace them with for a specific node.
         AZStd::vector<AZStd::pair<AZStd::string, AZStd::string>> GetSubstitutionSymbolsFromNode(GraphModel::ConstNodePtr node) const;
@@ -90,7 +90,7 @@ namespace JE::Editor
         // Collect instructions from a slot and perform substitutions based on node and slot types, names, values, and connections.
         AZStd::vector<AZStd::string> GetInstructionsFromSlot(
             GraphModel::ConstNodePtr node,
-            const AtomToolsFramework::DynamicNodeSlotConfig& slotConfig,
+            const JE::Editor::Tools::DynamicNodeSlotConfig& slotConfig,
             const AZStd::vector<AZStd::pair<AZStd::string, AZStd::string>>& substitutionSymbols) const;
 
         // Determine if instructions contained on an input node should be used as part of code generation based on node connections.
@@ -121,7 +121,7 @@ namespace JE::Editor
         // Convert a material input node into AZSL lines of variables that can be injected into the material SRG
         AZStd::vector<AZStd::string> GetMaterialPropertySrgMemberFromSlot(
             GraphModel::ConstNodePtr node,
-            const AtomToolsFramework::DynamicNodeSlotConfig& slotConfig,
+            const JE::Editor::Tools::DynamicNodeSlotConfig& slotConfig,
             const AZStd::vector<AZStd::pair<AZStd::string, AZStd::string>>& substitutionSymbols) const;
 
         // Convert all material input nodes into AZSL lines of variables that can be injected into the material SRG
@@ -160,7 +160,7 @@ namespace JE::Editor
         AZStd::set<AZStd::string> m_templatePathsForCurrentNode;
 
         // Container of template source file data and lines they need to be transformed as part of compiling the graph.
-        AZStd::list<AtomToolsFramework::GraphTemplateFileData> m_templateFileDataVecForCurrentNode;
+        AZStd::list<JE::Editor::Tools::GraphTemplateFileData> m_templateFileDataVecForCurrentNode;
 
         // A container of all nodes contributing instructions to the current node
         AZStd::mutex m_instructionNodesForCurrentNodeMutex;

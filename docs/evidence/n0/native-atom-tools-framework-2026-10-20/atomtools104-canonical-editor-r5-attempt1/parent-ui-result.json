@@ -1,0 +1,57 @@
+{
+  "observedBy": "parent",
+  "session": "Editor R5",
+  "materialReopen": {
+    "rgb": [
+      80,
+      120,
+      160
+    ],
+    "name": "JENativeAtomTools104Validation.material",
+    "roughness": 0.25,
+    "previewVisible": true
+  },
+  "graph": {
+    "resizeTested": false,
+    "discardOnExit": true,
+    "inspectorVisible": true,
+    "savePerformed": false,
+    "initialFramingReadable": true,
+    "manualWheelChangesCamera": true,
+    "name": "JENativeGraphWorkspaceTest.materialgraph",
+    "hideShowPreservesCameraVisually": true
+  },
+  "limits": [
+    "Main menu visually blank",
+    "BSP viewport black; no Beauty acceptance",
+    "Vulkan Preview mip8 layout errors retained; prior occurrence documented ENGINE_DEBUGGING_BOOK.md1169"
+  ],
+  "captures": [
+    {
+      "file": "graph-initial-framing.jpg",
+      "bytes": 113729,
+      "sha256": "15731CCCFA9A7BDEC846891BFE25FF87AB49C8ABF0FFA9838112A296000D9147"
+    },
+    {
+      "file": "graph-inspector.jpg",
+      "bytes": 172362,
+      "sha256": "80A587388368EFE6985046B26ED6469F51F10220E988222A1FF4766EBCE78579"
+    },
+    {
+      "file": "graph-manual-zoom.jpg",
+      "bytes": 153621,
+      "sha256": "5ACC3B2FD87D9F98C34669D0E1BD3E6E4BDBB47B80F7B32C596C3A7864179E5E"
+    },
+    {
+      "file": "graph-reshown-camera.jpg",
+      "bytes": 154577,
+      "sha256": "CBBBF19BDA77FDC47F718AA07B6E06CB238DD17726333113FBAFD330FF699F3A"
+    },
+    {
+      "file": "material-reopened.jpg",
+      "bytes": 201593,
+      "sha256": "716382F804CA2903B33315C2081AA6D37AD7B4E21A18854BF5C5C353A2008DA2"
+    }
+  ],
+  "wholeGemAccepted": false
+}

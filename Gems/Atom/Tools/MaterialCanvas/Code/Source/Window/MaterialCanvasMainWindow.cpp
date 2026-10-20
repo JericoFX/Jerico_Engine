@@ -6,7 +6,7 @@
  *
  */
 
-#include <AtomToolsFramework/SettingsDialog/SettingsDialog.h>
+#include <JE/Editor/Tools/SettingsDialog/SettingsDialog.h>
 #include <AzCore/IO/FileIO.h>
 #include <AzQtComponents/Components/StyleManager.h>
 #include <GraphCanvas/Widgets/NodePalette/TreeItems/NodePaletteTreeItem.h>
@@ -18,7 +18,7 @@
 namespace MaterialCanvas
 {
     MaterialCanvasMainWindow::MaterialCanvasMainWindow(
-        const AZ::Crc32& toolId, AtomToolsFramework::GraphViewSettingsPtr graphViewSettingsPtr, QWidget* parent)
+        const AZ::Crc32& toolId, JE::Editor::Tools::GraphViewSettingsPtr graphViewSettingsPtr, QWidget* parent)
         : Base(toolId, "MaterialCanvasMainWindow", parent)
         , m_graphViewSettingsPtr(graphViewSettingsPtr)
     {
@@ -38,29 +38,29 @@ namespace MaterialCanvas
             { tr("AZSL").toUtf8().constData(), { "azsl", "azsli", "srgi" }, true },
         });
 
-        m_documentInspector = new AtomToolsFramework::AtomToolsDocumentInspector(m_toolId, this);
+        m_documentInspector = new JE::Editor::Tools::AtomToolsDocumentInspector(m_toolId, this);
         m_documentInspector->SetDocumentSettingsPrefix("/O3DE/Atom/MaterialCanvas/DocumentInspector");
         AddDockWidget(tr("Inspector").toUtf8().constData(), m_documentInspector, Qt::RightDockWidgetArea);
 
         // Set up the toolbar that controls the viewport settings
-        m_toolBar = new AtomToolsFramework::EntityPreviewViewportToolBar(m_toolId, this);
+        m_toolBar = new JE::Editor::Tools::EntityPreviewViewportToolBar(m_toolId, this);
 
         // Create the dockable viewport widget that will be shared between all Material Canvas documents
-        m_materialViewport = new AtomToolsFramework::EntityPreviewViewportWidget(m_toolId, this);
+        m_materialViewport = new JE::Editor::Tools::EntityPreviewViewportWidget(m_toolId, this);
 
         // Initialize the entity context that will be used to create all of the entities displayed in the viewport
         auto entityContext = AZStd::make_shared<AzFramework::EntityContext>();
         entityContext->InitContext();
 
         // Initialize the atom scene and pipeline that will bind to the viewport window to render entities and presets
-        auto viewportScene = AZStd::make_shared<AtomToolsFramework::EntityPreviewViewportScene>(
+        auto viewportScene = AZStd::make_shared<JE::Editor::Tools::EntityPreviewViewportScene>(
             m_toolId, m_materialViewport, entityContext, "MaterialCanvasViewportWidget", "passes/mainrenderpipeline.azasset");
 
         // Viewport content will instantiate all of the entities that will be displayed and controlled by the viewport
         auto viewportContent = AZStd::make_shared<MaterialCanvasViewportContent>(m_toolId, m_materialViewport, entityContext);
 
         // The input controller creates and binds input behaviors to control viewport objects
-        auto viewportController = AZStd::make_shared<AtomToolsFramework::EntityPreviewViewportInputController>(m_toolId, m_materialViewport, viewportContent);
+        auto viewportController = AZStd::make_shared<JE::Editor::Tools::EntityPreviewViewportInputController>(m_toolId, m_materialViewport, viewportContent);
 
         // Inject the entity context, scene, content, and controller into the viewport widget
         m_materialViewport->Init(entityContext, viewportScene, viewportContent, viewportController);
@@ -75,7 +75,7 @@ namespace MaterialCanvas
 
         AddDockWidget(tr("Viewport").toUtf8().constData(), viewPortAndToolbar, Qt::BottomDockWidgetArea);
 
-        m_viewportSettingsInspector = new AtomToolsFramework::EntityPreviewViewportSettingsInspector(m_toolId, this);
+        m_viewportSettingsInspector = new JE::Editor::Tools::EntityPreviewViewportSettingsInspector(m_toolId, this);
         AddDockWidget(tr("Viewport Settings").toUtf8().constData(), m_viewportSettingsInspector, Qt::LeftDockWidgetArea);
         SetDockWidgetVisible(tr("Viewport Settings").toUtf8().constData(), false);
 
@@ -140,12 +140,12 @@ namespace MaterialCanvas
         m_materialViewport->UnlockRenderTargetSize();
     }
 
-    void MaterialCanvasMainWindow::PopulateSettingsInspector(AtomToolsFramework::InspectorWidget* inspector) const
+    void MaterialCanvasMainWindow::PopulateSettingsInspector(JE::Editor::Tools::InspectorWidget* inspector) const
     {
-        m_materialCanvasCompileSettingsGroup = AtomToolsFramework::CreateSettingsPropertyGroup(
+        m_materialCanvasCompileSettingsGroup = JE::Editor::Tools::CreateSettingsPropertyGroup(
             tr("Material Canvas Settings").toUtf8().constData(),
             tr("Material Canvas Settings").toUtf8().constData(),
-            { AtomToolsFramework::CreateSettingsPropertyValue(
+            { JE::Editor::Tools::CreateSettingsPropertyValue(
                   "/O3DE/Atom/MaterialCanvas/EnableFasterShaderBuilds",
                   tr("Enable Faster Shader Builds").toUtf8().constData(),
                   tr("By default, some platforms perform an exhaustive compilation of shaders for multiple RHI. For example, the default "
@@ -156,12 +156,12 @@ namespace MaterialCanvas
                   "require clearing the cache to regenerate shaders for the new RHI.\n\nThe settings files containing the overrides will be "
                   "placed in the user/Registry folder for the current project.").toUtf8().constData(),
                   false),
-              AtomToolsFramework::CreateSettingsPropertyValue(
+              JE::Editor::Tools::CreateSettingsPropertyValue(
                   "/O3DE/Atom/MaterialCanvas/ForceDeleteGeneratedFiles",
                   tr("Delete Files On Compile").toUtf8().constData(),
                   tr("This option forces files previously generated from the current graph to be deleted before creating new ones.").toUtf8().constData(),
                   false),
-              AtomToolsFramework::CreateSettingsPropertyValue(
+              JE::Editor::Tools::CreateSettingsPropertyValue(
                   "/O3DE/Atom/MaterialCanvas/ForceClearAssetFingerprints",
                   tr("Clear Asset Fingerprints On Compile").toUtf8().constData(),
                   tr("This option forces the AP to reprocess generated files even if no differences were detected since last generated. This "
@@ -170,47 +170,47 @@ namespace MaterialCanvas
                   "recognize and not reload yeah materials after shaders are modified. Enabling this setting may affect the time it takes "
                   "for the viewport to reflect shader and material changes.").toUtf8().constData(),
                   false),
-              AtomToolsFramework::CreateSettingsPropertyValue(
+              JE::Editor::Tools::CreateSettingsPropertyValue(
                   "/O3DE/AtomToolsFramework/GraphCompiler/CompileOnOpen",
                   tr("Enable Compile On Open").toUtf8().constData(),
                   tr("If enabled, shaders and materials will automatically be generated whenever a material graph is opened.").toUtf8().constData(),
                   true),
-              AtomToolsFramework::CreateSettingsPropertyValue(
+              JE::Editor::Tools::CreateSettingsPropertyValue(
                   "/O3DE/AtomToolsFramework/GraphCompiler/CompileOnSave",
                   tr("Enable Compile On Save").toUtf8().constData(),
                   tr("If enabled, shaders and materials will automatically be generated whenever a material graph is saved.").toUtf8().constData(),
                   true),
-              AtomToolsFramework::CreateSettingsPropertyValue(
+              JE::Editor::Tools::CreateSettingsPropertyValue(
                   "/O3DE/AtomToolsFramework/GraphCompiler/CompileOnEdit",
                   tr("Enable Compile On Edit").toUtf8().constData(),
                   tr("If enabled, shaders and materials will automatically be generated whenever a material graph is edited.").toUtf8().constData(),
                   true),
-              AtomToolsFramework::CreateSettingsPropertyValue(
+              JE::Editor::Tools::CreateSettingsPropertyValue(
                   "/O3DE/Atom/MaterialCanvas/Viewport/ClearMaterialOnCompileGraphStarted",
                   tr("Clear Viewport Material When Compiling Starts").toUtf8().constData(),
                   tr("Clear the viewport model's material whenever compiling shaders and materials starts.").toUtf8().constData(),
                   true),
-              AtomToolsFramework::CreateSettingsPropertyValue(
+              JE::Editor::Tools::CreateSettingsPropertyValue(
                   "/O3DE/Atom/MaterialCanvas/Viewport/ClearMaterialOnCompileGraphFailed",
                   tr("Clear Viewport Material When Compiling Fails").toUtf8().constData(),
                   tr("Clear the viewport model's material whenever compiling shaders and materials fails.").toUtf8().constData(),
                   true),
-              AtomToolsFramework::CreateSettingsPropertyValue(
+              JE::Editor::Tools::CreateSettingsPropertyValue(
                   "/O3DE/AtomToolsFramework/GraphCompiler/EnableLogging",
                   tr("Enable Compiler Logging").toUtf8().constData(),
                   tr("Toggle verbose logging for material graph generation.").toUtf8().constData(),
                   false),
-              AtomToolsFramework::CreateSettingsPropertyValue(
+              JE::Editor::Tools::CreateSettingsPropertyValue(
                   "/O3DE/AtomToolsFramework/DynamicNode/EnablePropertyEditingOnNodeUI",
                   tr("Enable Property Editing On Nodes").toUtf8().constData(),
                   tr("Toggle settings to display properties and allow them to be added directly on graph nodes.").toUtf8().constData(),
                   true),
-              AtomToolsFramework::CreateSettingsPropertyValue(
+              JE::Editor::Tools::CreateSettingsPropertyValue(
                   "/O3DE/Atom/MaterialCanvas/CreateDefaultDocumentOnStart",
                   tr("Create Untitled Graph Document On Start").toUtf8().constData(),
                   tr("Create a default, untitled graph document when Material Canvas starts.").toUtf8().constData(),
                   true),
-              AtomToolsFramework::CreateSettingsPropertyValue(
+              JE::Editor::Tools::CreateSettingsPropertyValue(
                   "/O3DE/AtomToolsFramework/GraphCompiler/QueueGraphCompileIntervalMs",
                   tr("Queue Graph Compile Interval Ms").toUtf8().constData(),
                   tr("The delay (in milliseconds) before the graph is recompiled after changes.").toUtf8().constData(),
@@ -222,16 +222,16 @@ namespace MaterialCanvas
             m_materialCanvasCompileSettingsGroup->m_name,
             m_materialCanvasCompileSettingsGroup->m_displayName,
             m_materialCanvasCompileSettingsGroup->m_description,
-            new AtomToolsFramework::InspectorPropertyGroupWidget(
+            new JE::Editor::Tools::InspectorPropertyGroupWidget(
                 m_materialCanvasCompileSettingsGroup.get(),
                 m_materialCanvasCompileSettingsGroup.get(),
-                azrtti_typeid<AtomToolsFramework::DynamicPropertyGroup>()));
+                azrtti_typeid<JE::Editor::Tools::DynamicPropertyGroup>()));
 
         inspector->AddGroup(
             tr("Graph View Settings").toUtf8().constData(),
             tr("Graph View Settings").toUtf8().constData(),
             tr("Configuration settings for the graph view interaction, animation, and other behavior.").toUtf8().constData(),
-            new AtomToolsFramework::InspectorPropertyGroupWidget(
+            new JE::Editor::Tools::InspectorPropertyGroupWidget(
                 m_graphViewSettingsPtr.get(), m_graphViewSettingsPtr.get(), m_graphViewSettingsPtr->RTTI_Type()));
 
         Base::PopulateSettingsInspector(inspector);
@@ -239,7 +239,7 @@ namespace MaterialCanvas
 
     void MaterialCanvasMainWindow::OnSettingsDialogClosed()
     {
-        AtomToolsFramework::SetSettingsObject("/O3DE/Atom/GraphView/ViewSettings", m_graphViewSettingsPtr);
+        JE::Editor::Tools::SetSettingsObject("/O3DE/Atom/GraphView/ViewSettings", m_graphViewSettingsPtr);
         Base::OnSettingsDialogClosed();
     }
 

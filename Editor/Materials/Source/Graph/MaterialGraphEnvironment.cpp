@@ -7,14 +7,14 @@
 #include <Atom/RHI.Reflect/SamplerState.h>
 #include <JE/Editor/Render/RPI/Edit/Shader/ShaderSourceData.h>
 #include <JE/Render/RPI/Reflect/Image/StreamingImageAsset.h>
-#include <AtomToolsFramework/Document/AtomToolsAnyDocument.h>
-#include <AtomToolsFramework/Graph/GraphDocument.h>
-#include <AtomToolsFramework/Graph/AssetStatusReporterSystem.h>
-#include <AtomToolsFramework/Graph/GraphTemplateFileDataCache.h>
-#include <AtomToolsFramework/Graph/DynamicNode/DynamicNodeManager.h>
-#include <AtomToolsFramework/Graph/DynamicNode/DynamicNodePaletteItem.h>
-#include <AtomToolsFramework/Graph/DynamicNode/DynamicNodeUtil.h>
-#include <AtomToolsFramework/Util/Util.h>
+#include <JE/Editor/Tools/Document/AtomToolsAnyDocument.h>
+#include <JE/Editor/Tools/Graph/GraphDocument.h>
+#include <JE/Editor/Tools/Graph/AssetStatusReporterSystem.h>
+#include <JE/Editor/Tools/Graph/GraphTemplateFileDataCache.h>
+#include <JE/Editor/Tools/Graph/DynamicNode/DynamicNodeManager.h>
+#include <JE/Editor/Tools/Graph/DynamicNode/DynamicNodePaletteItem.h>
+#include <JE/Editor/Tools/Graph/DynamicNode/DynamicNodeUtil.h>
+#include <JE/Editor/Tools/Util/Util.h>
 #include <AzCore/Serialization/SerializeContext.h>
 #include <AzCore/Math/Color.h>
 #include <AzCore/Math/Vector2.h>
@@ -43,7 +43,7 @@ namespace JE::Editor
     namespace
     {
         // Editing remains functional; no automatic generation job exists for Pass Graph documents.
-        class PassGraphDocument final : public AtomToolsFramework::GraphDocument
+        class PassGraphDocument final : public JE::Editor::Tools::GraphDocument
         {
         public:
             AZ_CLASS_ALLOCATOR(PassGraphDocument, AZ::SystemAllocator);
@@ -58,13 +58,13 @@ namespace JE::Editor
     {
         constexpr const char* nativeDefault =
             "@engroot@/Editor/Materials/RenderPass/Assets/PassCanvas/GraphData/blank_graph.passgraphtemplate";
-        auto path = AtomToolsFramework::GetSettingsValue<AZStd::string>(
+        auto path = JE::Editor::Tools::GetSettingsValue<AZStd::string>(
             "/O3DE/Atom/PassCanvas/DefaultPassGraphTemplate", nativeDefault);
         if (path == "@gemroot:PassCanvas@/Assets/PassCanvas/GraphData/blank_graph.passgraphtemplate")
         {
             path = nativeDefault;
         }
-        return AtomToolsFramework::GetPathWithoutAlias(path);
+        return JE::Editor::Tools::GetPathWithoutAlias(path);
     }
 
     void MaterialGraphEnvironment::Reflect(AZ::ReflectContext* context)
@@ -90,11 +90,11 @@ namespace JE::Editor
         InitDynamicNodeEditData();
         InitSharedGraphContext();
         InitGraphViewSettings();
-        m_assetStatusReporterSystem = AZStd::make_unique<AtomToolsFramework::AssetStatusReporterSystem>(m_toolId);
-        m_graphTemplateFileDataCache = AZStd::make_shared<AtomToolsFramework::GraphTemplateFileDataCache>(m_toolId);
+        m_assetStatusReporterSystem = AZStd::make_unique<JE::Editor::Tools::AssetStatusReporterSystem>(m_toolId);
+        m_graphTemplateFileDataCache = AZStd::make_shared<JE::Editor::Tools::GraphTemplateFileDataCache>(m_toolId);
         m_styleManager = AZStd::make_unique<GraphCanvas::StyleManager>(m_toolId, m_graphViewSettingsPtr->m_styleManagerPath);
         m_translator = AZStd::make_unique<QTranslator>();
-        const auto translationPath = AtomToolsFramework::GetPathWithoutAlias(m_graphViewSettingsPtr->m_translationPath);
+        const auto translationPath = JE::Editor::Tools::GetPathWithoutAlias(m_graphViewSettingsPtr->m_translationPath);
         if (m_translator->load(QLocale::Language::English, translationPath.c_str()))
         {
             qApp->installTranslator(m_translator.get());
@@ -107,7 +107,7 @@ namespace JE::Editor
 
     MaterialGraphEnvironment::~MaterialGraphEnvironment()
     {
-        AtomToolsFramework::SetSettingsObject("/O3DE/Atom/GraphView/ViewSettings", m_graphViewSettingsPtr);
+        JE::Editor::Tools::SetSettingsObject("/O3DE/Atom/GraphView/ViewSettings", m_graphViewSettingsPtr);
         m_graphViewSettingsPtr->m_createNodeTreeItemsFn = {};
         qApp->removeTranslator(m_translator.get());
     }
@@ -133,7 +133,7 @@ namespace JE::Editor
                 item->SetTitlePalette(config.m_titlePaletteName);
                 category = categories.emplace(config.m_category, item).first;
             }
-            category->second->CreateChildNode<AtomToolsFramework::DynamicNodePaletteItem>(m_toolId, config);
+            category->second->CreateChildNode<JE::Editor::Tools::DynamicNodePaletteItem>(m_toolId, config);
         }
         GraphModelIntegration::AddCommonNodePaletteUtilities(root, m_toolId);
         return root;
@@ -146,9 +146,9 @@ namespace JE::Editor
 
     void MaterialGraphEnvironment::LoadNodeConfigs(const AZStd::string& extension, AZStd::vector<AZ::Uuid>& accepted)
     {
-        for (const auto& path : AtomToolsFramework::GetPathsInSourceFoldersMatchingExtension(extension))
+        for (const auto& path : JE::Editor::Tools::GetPathsInSourceFoldersMatchingExtension(extension))
         {
-            AtomToolsFramework::DynamicNodeConfig config;
+            JE::Editor::Tools::DynamicNodeConfig config;
             if (config.Load(path))
             {
                 config.AutoFillMissingData();
@@ -161,7 +161,7 @@ namespace JE::Editor
         }
     }
 
-    const AtomToolsFramework::GraphViewSettingsPtr& MaterialGraphEnvironment::GetViewSettings() const
+    const JE::Editor::Tools::GraphViewSettingsPtr& MaterialGraphEnvironment::GetViewSettings() const
     {
         return m_graphViewSettingsPtr;
     }
@@ -169,7 +169,7 @@ namespace JE::Editor
     void MaterialGraphEnvironment::InitDynamicNodeManager()
     {
         // Instantiate the dynamic node manager to register all dynamic node configurations and data types used in this tool
-        m_dynamicNodeManager.reset(aznew AtomToolsFramework::DynamicNodeManager(m_toolId));
+        m_dynamicNodeManager.reset(aznew JE::Editor::Tools::DynamicNodeManager(m_toolId));
 
         // Creating default sampler state with settings common to pre-existing material types.
         AZ::RHI::SamplerState defaultSamplerState{};
@@ -210,7 +210,7 @@ namespace JE::Editor
         AZ::Edit::ElementData editData;
         const auto addOwnedAttribute = [this, &editData](const AZ::Crc32& id, const auto& value)
         {
-            AtomToolsFramework::AddEditDataAttribute(editData, id, value);
+            JE::Editor::Tools::AddEditDataAttribute(editData, id, value);
             m_editDataAttributes.emplace_back(editData.m_attributes.back().second);
         };
         editData.m_elementId = AZ_CRC_CE("MultilineStringDialog");
@@ -266,8 +266,8 @@ namespace JE::Editor
     void MaterialGraphEnvironment::InitGraphViewSettings()
     {
         // This configuration data is passed through the main window and graph views to setup translation data, styling, and node palettes
-        m_graphViewSettingsPtr = AtomToolsFramework::GetSettingsObject(
-            "/O3DE/Atom/GraphView/ViewSettings", AZStd::make_shared<AtomToolsFramework::GraphViewSettings>());
+        m_graphViewSettingsPtr = JE::Editor::Tools::GetSettingsObject(
+            "/O3DE/Atom/GraphView/ViewSettings", AZStd::make_shared<JE::Editor::Tools::GraphViewSettings>());
 
         // Initialize the application specific graph view settings that are not serialized.
         m_graphViewSettingsPtr->m_translationPath = "@products@/materialcanvas/translation/materialcanvas_en_us.qm";
@@ -280,7 +280,7 @@ namespace JE::Editor
         };
 
         // Initialize the default group preset names and colors needed by the graph canvas view to create node groups.
-        const AZStd::map<AZStd::string, AZ::Color> defaultGroupPresets = AtomToolsFramework::GetSettingsObject(
+        const AZStd::map<AZStd::string, AZ::Color> defaultGroupPresets = JE::Editor::Tools::GetSettingsObject(
             "/O3DE/Atom/GraphView/DefaultGroupPresets",
             AZStd::map<AZStd::string, AZ::Color>{ { "Logic", AZ::Color(0.188f, 0.972f, 0.243f, 1.0f) },
                                                   { "Function", AZ::Color(0.396f, 0.788f, 0.788f, 1.0f) },
@@ -291,41 +291,41 @@ namespace JE::Editor
         m_graphViewSettingsPtr->Initialize(m_toolId, defaultGroupPresets);
     }
 
-    AtomToolsFramework::DocumentTypeInfoVector MaterialGraphEnvironment::BuildDocumentTypes(HistoryOwner owner) const
+    JE::Editor::Tools::DocumentTypeInfoVector MaterialGraphEnvironment::BuildDocumentTypes(HistoryOwner owner) const
     {
-        AtomToolsFramework::DocumentTypeInfoVector types;
-        types.push_back(AtomToolsFramework::GraphDocument::BuildDocumentTypeInfo(
+        JE::Editor::Tools::DocumentTypeInfoVector types;
+        types.push_back(JE::Editor::Tools::GraphDocument::BuildDocumentTypeInfo(
             "Material Graph", {"materialgraph"}, {"materialgraphtemplate"},
-            AtomToolsFramework::GetPathWithoutAlias(AtomToolsFramework::GetSettingsValue<AZStd::string>(
+            JE::Editor::Tools::GetPathWithoutAlias(JE::Editor::Tools::GetSettingsValue<AZStd::string>(
                 "/O3DE/Atom/MaterialCanvas/DefaultMaterialGraphTemplate",
                 "@engroot@/Editor/Materials/Assets/MaterialCanvas/GraphData/blank_graph.materialgraphtemplate")),
             m_graphContext, [toolId = m_toolId]() { return AZStd::make_shared<MaterialGraphCompiler>(toolId); }));
-        types.push_back(AtomToolsFramework::AtomToolsAnyDocument::BuildDocumentTypeInfo(
+        types.push_back(JE::Editor::Tools::AtomToolsAnyDocument::BuildDocumentTypeInfo(
             "Material Graph Node Config", {"materialgraphnode"}, {"materialgraphnodetemplate"},
-            AZStd::any(AtomToolsFramework::DynamicNodeConfig()), AZ::Uuid::CreateNull()));
-        types.push_back(AtomToolsFramework::AtomToolsAnyDocument::BuildDocumentTypeInfo(
+            AZStd::any(JE::Editor::Tools::DynamicNodeConfig()), AZ::Uuid::CreateNull()));
+        types.push_back(JE::Editor::Tools::AtomToolsAnyDocument::BuildDocumentTypeInfo(
             "Shader Source Data", {"shader"}, {}, AZStd::any(JE::Render::RPI::ShaderSourceData()), JE::Render::RPI::ShaderSourceData::TYPEINFO_Uuid()));
-        auto passType = AtomToolsFramework::GraphDocument::BuildDocumentTypeInfo(
+        auto passType = JE::Editor::Tools::GraphDocument::BuildDocumentTypeInfo(
             PassGraphTypeName, {"passgraph"}, {"passgraphtemplate"}, GetDefaultPassGraphTemplatePath(), m_passGraphContext);
         passType.m_documentFactoryCallback = [context = m_passGraphContext](
-            const AZ::Crc32& toolId, const AtomToolsFramework::DocumentTypeInfo& info)
-            -> AtomToolsFramework::AtomToolsDocumentRequests*
+            const AZ::Crc32& toolId, const JE::Editor::Tools::DocumentTypeInfo& info)
+            -> JE::Editor::Tools::AtomToolsDocumentRequests*
         {
             // GraphDocument requires a compiler for its state callback; editing never submits it.
             return aznew PassGraphDocument(toolId, info, context, AZStd::make_shared<Materials::PassGraphCompiler>(toolId));
         };
         types.push_back(AZStd::move(passType));
-        types.push_back(AtomToolsFramework::AtomToolsAnyDocument::BuildDocumentTypeInfo(
+        types.push_back(JE::Editor::Tools::AtomToolsAnyDocument::BuildDocumentTypeInfo(
             PassNodeConfigTypeName, {"passgraphnode"}, {"passgraphnodetemplate"},
-            AZStd::any(AtomToolsFramework::DynamicNodeConfig()), AZ::Uuid::CreateNull()));
+            AZStd::any(JE::Editor::Tools::DynamicNodeConfig()), AZ::Uuid::CreateNull()));
         if (owner == HistoryOwner::Editor)
         {
             for (auto& type : types)
             {
                 const auto factory = type.m_documentFactoryCallback;
                 type.m_documentFactoryCallback = [factory, policy = m_editorHistoryPolicy](
-                    const AZ::Crc32& toolId, const AtomToolsFramework::DocumentTypeInfo& info)
-                    -> AtomToolsFramework::AtomToolsDocumentRequests*
+                    const AZ::Crc32& toolId, const JE::Editor::Tools::DocumentTypeInfo& info)
+                    -> JE::Editor::Tools::AtomToolsDocumentRequests*
                 {
                     auto* document = factory(toolId, info);
                     if (document && !document->SetHistoryPolicy(policy))

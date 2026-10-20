@@ -10,8 +10,8 @@
 #include <JE/Editor/Render/RPI/Edit/Material/MaterialTypeSourceData.h>
 #include <JE/Render/RPI/Reflect/System/AnyAsset.h>
 #include <JE/Editor/Materials/EditorMaterialSystemComponentRequestBus.h>
-#include <AtomToolsFramework/Document/CreateDocumentDialog.h>
-#include <AtomToolsFramework/Util/Util.h>
+#include <JE/Editor/Tools/Document/CreateDocumentDialog.h>
+#include <JE/Editor/Tools/Util/Util.h>
 #include <AzCore/IO/FileIO.h>
 #include <AzCore/IO/Path/Path.h>
 #include <QMessageBox>
@@ -466,7 +466,7 @@ namespace JE
                 show();
             };
             AZStd::string path = m_textureSet->suggestedMaterialPath;
-            if (!AtomToolsFramework::ValidateDocumentPath(path))
+            if (!JE::Editor::Tools::ValidateDocumentPath(path))
             {
                 report(tr("El destino del material no es editable."));
                 return;
@@ -652,7 +652,7 @@ namespace JE
             [[maybe_unused]] const AZ::Uuid& sourceUUID,
             AzToolsFramework::AssetBrowser::SourceFileCreatorList& creators)
         {
-            using namespace AtomToolsFramework;
+            using namespace JE::Editor::Tools;
 
             creators.push_back(
                 { "Material_Creator", "Material", QIcon(),
@@ -666,7 +666,7 @@ namespace JE
                   [&](const AZStd::string& fullSourceFolderNameInCallback, [[maybe_unused]] const AZ::Uuid& sourceUUID)
                   {
                       const AZStd::string defaultMaterialGraphTemplate =
-                          AtomToolsFramework::GetPathWithoutAlias(AtomToolsFramework::GetSettingsValue<AZStd::string>(
+                          JE::Editor::Tools::GetPathWithoutAlias(JE::Editor::Tools::GetSettingsValue<AZStd::string>(
                               "/O3DE/Atom/MaterialCanvas/DefaultMaterialGraphTemplate",
                               "@engroot@/Editor/Materials/Assets/MaterialCanvas/GraphData/blank_graph.materialgraphtemplate"));
 
@@ -707,20 +707,20 @@ namespace JE
             const AZStd::string& initialFolder, const AZStd::string& initialMaterialType)
         {
             const AZStd::string materialType = initialMaterialType.empty()
-                ? AtomToolsFramework::GetPathWithoutAlias(AtomToolsFramework::GetSettingsValue<AZStd::string>(
+                ? JE::Editor::Tools::GetPathWithoutAlias(JE::Editor::Tools::GetSettingsValue<AZStd::string>(
                       "/O3DE/Atom/MaterialEditor/DefaultMaterialType",
                       "@gemroot:Atom_Feature_Common@/Assets/Materials/Types/StandardPBR.materialtype"))
                 : initialMaterialType;
             QWidget* mainWindow = nullptr;
             AzToolsFramework::EditorRequests::Bus::BroadcastResult(
                 mainWindow, &AzToolsFramework::EditorRequests::Bus::Events::GetMainWindow);
-            AtomToolsFramework::CreateDocumentDialog dialog(
+            JE::Editor::Tools::CreateDocumentDialog dialog(
                 QObject::tr("Create Material"), QObject::tr("Select Material Type"),
                 initialFolder.empty() ? QObject::tr("Select Material Path") : QString(),
                 initialFolder.c_str(), {"material"}, materialType.c_str(),
                 [](const AZStd::string& path)
                 {
-                    return AtomToolsFramework::IsDocumentPathEditable(path) &&
+                    return JE::Editor::Tools::IsDocumentPathEditable(path) &&
                         path.ends_with(EditorMaterialComponentUtil::MaterialTypeExtensionWithDot);
                 }, mainWindow);
             dialog.adjustSize();
@@ -732,7 +732,7 @@ namespace JE
             // Keep both strings alive through loading, serialization and the asset creation notification.
             const AZStd::string sourcePath = dialog.m_sourcePath.toUtf8().constData();
             AZStd::string targetPath = dialog.m_targetPath.toUtf8().constData();
-            if (!AtomToolsFramework::ValidateDocumentPath(targetPath))
+            if (!JE::Editor::Tools::ValidateDocumentPath(targetPath))
             {
                 QMessageBox::critical(mainWindow, QObject::tr("Create Material"), QObject::tr("The material destination is not editable."));
                 return {};

@@ -1,0 +1,18 @@
+{
+  "exitCode": 0,
+  "seconds": 401.6610107,
+  "ramGuardTriggered": false,
+  "stderr": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-corefeature102\\atomtools104-canonical-editor-r5-attempt1\\editor-atomtools104-canonical-r5.stderr.log",
+    "bytes": 0,
+    "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+  },
+  "priorityError": null,
+  "stdout": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-corefeature102\\atomtools104-canonical-editor-r5-attempt1\\editor-atomtools104-canonical-r5.stdout.log",
+    "bytes": 16488,
+    "sha256": "A2AA3F72614385DB6E5FB91C4616801E64BCCF5F49ABA059B88225B041DC0F36"
+  },
+  "priorityRequested": "BelowNormal",
+  "timedOut": false
+}

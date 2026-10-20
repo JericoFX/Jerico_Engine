@@ -21,7 +21,7 @@
 #include <AzFramework/Translation/TranslationDef.h>
 #include <AzToolsFramework/API/EditorAssetSystemAPI.h>
 #include <AzToolsFramework/AssetBrowser/AssetBrowserEntry.h>
-#include <AtomToolsFramework/Util/Util.h>
+#include <JE/Editor/Tools/Util/Util.h>
 
 #include <OpenParticleViewportComponent.h>
 #include <OpenParticleViewportNotificationBus.h>
@@ -133,7 +133,7 @@ namespace OpenParticleSystemEditor
                     {
                         auto presetPtr = AddLightingPreset(*preset);
                         auto sourcePath = JE::Render::RPI::AssetUtils::GetSourcePathByAssetId(info.m_assetId);
-                        const AZStd::string displayName = AtomToolsFramework::GetDisplayNameFromPath(sourcePath);
+                        const AZStd::string displayName = JE::Editor::Tools::GetDisplayNameFromPath(sourcePath);
                         m_lightingPresetDisplayNameMap[displayName] = presetPtr;
                         m_lightingPresetNameSet.insert(displayName);
                         AZ_TracePrintf("OpenParticle Editor", "Loaded viewport configuration: %s.\n", info.m_relativePath.c_str());

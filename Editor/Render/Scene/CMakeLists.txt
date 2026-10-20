@@ -13,7 +13,7 @@ ly_add_target(
         PUBLIC Include
     BUILD_DEPENDENCIES PUBLIC
         JE::RenderScene JE::EditorRenderFeatures JE::EditorRenderIntegration JE::EditorMaterials
-        Gem::AtomToolsFramework.Static Gem::AtomToolsFramework.Editor
+        JE::EditorTools
         AZ::SceneCore AZ::SceneData Legacy::Editor.Headers Legacy::CryCommon
     RUNTIME_DEPENDENCIES 3rdParty::OpenImageIO::Tools::Binaries
 )

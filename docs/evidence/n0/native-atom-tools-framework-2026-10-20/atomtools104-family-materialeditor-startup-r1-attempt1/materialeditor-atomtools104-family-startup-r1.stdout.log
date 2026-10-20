@@ -1,0 +1,62 @@
+AtomToolsFramework::LocalServer: Creating local server
+AtomToolsFramework::LocalSocket: Connecting to: O3DE Material Editor
+AtomToolsFramework::LocalSocket: Connecting failed: O3DE Material Editor
+AtomToolsFramework::LocalServer: Disconnecting: 
+AtomToolsFramework::LocalServer: Starting: O3DE Material Editor
+AtomToolsFramework::LocalServer: Started: O3DE Material Editor
+RHISystem: Initializing RHI...
+RHISystem: 	Enumerated physical device: NVIDIA GeForce RTX 3090
+RHISystem: 	Using physical device: NVIDIA GeForce RTX 3090
+AssetCatalog: Initializing asset catalog with root "F:\JericoEngine\JericoEngine\Projects\JEEditorFixture\Cache\pc"AssetCatalog: Loaded registry containing 5815 assets.
+MaterialEditor: Connecting to Asset Processor...
+Asset System Connection: Asset Processor Connection IP: 127.0.0.1, port: 45643, branch token 0x05FD6BD0
+AssetProcessorConnection: 
+==================================================================
+AssetProcessorConnection: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Asset/AssetSystemComponent.cpp(704): 'bool __cdecl AzFramework::AssetSystem::AssetSystemComponent::WaitUntilAssetProcessorConnected(class std::chrono::duration<float,struct std::ratio<1,1> >)'
+AssetProcessorConnection: Network connection attempt failure, Connect returned error AzSockError::eASE_ECONNREFUSED
+AssetProcessorConnection: ==================================================================
+MaterialEditor: Launched Asset Processor and received connection in 1.329388 seconds
+MaterialEditor: Asset Processor working...AssetSystem: Ping time to asset processor: 1.13 milliseconds
+MaterialEditor: Compiling critical assets.
+MaterialEditor: Compiling critical asset matching: passes/.
+MaterialEditor: Compiling critical asset matching: config/.
+MaterialEditor: Compiling critical asset matching: MaterialEditor/.
+AssetCatalog: Initializing asset catalog with root "F:\JericoEngine\JericoEngine\Projects\JEEditorFixture\Cache\pc"AssetCatalog: Loaded registry containing 5815 assets.
+System: > r_streamingImagePoolBudgetMb : 0
+System: > r_streamingImageMipBias : 0
+RPI system: System assets initialized
+EntityPreviewViewportSettingsSystem: Enumerating presets started.Application: 
+==================================================================
+Application: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Application/Application.cpp(782): 'bool __cdecl AzFramework::Application::IsPrefabSystemEnabled(void) const'
+Application: 'IsPrefabSystemEnabled' is deprecated, the editor only supports prefabs for level editing.
+Application: ==================================================================
+System: > r_shadowCascadeExtrusionAmount : -1
+System: > r_enablePerMeshShaderOptionFlags : false
+System: > r_meshInstancingEnabled : false
+System: > r_meshInstancingEnabledForTransparentObjects : false
+System: > r_meshInstancingBucketSortScatterBatchSize : 512
+EntityPreviewViewportSettingsSystem: Enumerating presets finished.RHI: ****************************************************************
+RHI:                     Registering vulkan RHI                          
+RHI: ****************************************************************
+System: > r_shadowCascadeExtrusionAmount : -1
+System: > r_enablePerMeshShaderOptionFlags : false
+System: > r_meshInstancingEnabled : false
+System: > r_meshInstancingEnabledForTransparentObjects : false
+System: > r_meshInstancingBucketSortScatterBatchSize : 512
+JSON Serialization: 
+==================================================================
+JSON Serialization: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzCore/AzCore/Serialization/Json/JsonSerialization.cpp(504): 'union AZ::JsonSerializationResult::ResultCode __cdecl AZ::JsonSerialization::DefaultIssueReporter(class AZStd::basic_string<char,struct AZStd::char_traits<char>,struct AZStd::allocator> &,class AZStd::basic_string_view<char,struct AZStd::char_traits<char> >,union AZ::JsonSerializationResult::ResultCode,class AZStd::basic_string_view<char,struct AZStd::char_traits<char> >)'
+JSON Serialization: Unable to retrieve context information.
+    Reason: The operation has halted during a retrieve info operation because a catastrophic issue was encountered.
+JSON Serialization: ==================================================================
+JSON Serialization: 
+==================================================================
+JSON Serialization: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzCore/AzCore/Serialization/Json/JsonSerialization.cpp(504): 'union AZ::JsonSerializationResult::ResultCode __cdecl AZ::JsonSerialization::DefaultIssueReporter(class AZStd::basic_string<char,struct AZStd::char_traits<char>,struct AZStd::allocator> &,class AZStd::basic_string_view<char,struct AZStd::char_traits<char> >,union AZ::JsonSerializationResult::ResultCode,class AZStd::basic_string_view<char,struct AZStd::char_traits<char> >)'
+JSON Serialization: Unable to retrieve context information.
+    Reason: The operation has halted during a retrieve info operation because a catastrophic issue was encountered.
+JSON Serialization: ==================================================================
+AtomToolsFramework::LocalServer: Disconnecting: O3DE Material Editor

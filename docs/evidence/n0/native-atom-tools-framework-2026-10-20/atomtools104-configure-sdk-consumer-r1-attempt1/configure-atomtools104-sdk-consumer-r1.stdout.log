@@ -1,0 +1,45 @@
+-- Selecting Windows SDK version 10.0.26100.0 to target Windows 10.0.26300.
+-- Basic Configuration Information:
+   CMAKE_SYSTEM_NAME: Windows
+   CMAKE_VERSION: 4.3.4
+   CMAKE_COMMAND: C:/Program Files/CMake/bin/cmake.exe
+   CMAKE_GENERATOR: Visual Studio 17 2022
+   CMAKE_CXX_COMPILER_ID: MSVC
+   CMAKE_CXX_COMPILER_VERSION: 19.44.35228.0
+   O3DE_INSTALL_VERSION_STRING: 2.8.0
+   INSTALLED_ENGINE: TRUE
+-- Initializing O3DE CMake system...
+--   Using package F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/zlib-1.2.11-je-rev1-windows
+--   Using JE local ZLIB 1.2.11 from F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/zlib-1.2.11-je-rev1-windows
+--   Using package F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/freetype-2.11.1-je-rev1-windows
+--   Using package F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/qt-6.11.2-rev1-windows
+--   Using package F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/Python-rev3/packages/python-3.10.13-je-rev3-windows
+--   Using Python venv at F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/Python-rev3/venv/b560491e
+-- Executing CMake scripts...
+--   Using package F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/Lua-5.4.4-je-rev1-windows
+--   Using package F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/zstd-1.3.5-je-rev1-windows
+--   Using package F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/lz4-1.9.4-je-rev1-windows
+--   Using package F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/OpenSSL-1.1.1o-je-rev1-windows
+--   Using package F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/expat-2.4.2-je-rev1-windows
+--   Using JE local Expat 2.4.2 from F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/expat-2.4.2-je-rev1-windows
+--   Using package F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/tiff-4.2.0.15-je-rev1-windows
+--   SDKWrapper Tool uses Assimp v6.0.4 (Custom BSD-3-Clause) from https://github.com/assimp/assimp.git
+--   Using package F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/vulkan-validationlayers-1.3.261-je-rev1-windows
+--   Using package F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/astc-encoder-3.2-je-rev1-windows
+--   Using package F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/ISPCTexComp-36b80aa-je-rev1-windows
+--   Using package F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/OpenEXR-3.1.3-je-rev1-windows
+--   Using JE local ZLIB 1.2.11 from F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/zlib-1.2.11-je-rev1-windows
+--   Using package F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/openimageio-opencolorio-2.3.17-je-rev1-windows
+--   Using package F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/png-1.6.37-je-rev1-windows
+--   JE Geometry Authoring uses OpenMesh-11.0 (BSD-3-Clause) from https://github.com/o3de/openmesh.git
+--   - This is a mirror of https://gitlab.vci.rwth-aachen.de:9000/OpenMesh/OpenMesh.git
+--   JE Geometry Authoring uses Manifold (Apache-2.0) from https://github.com/elalish/manifold.git
+--   Using package F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/mcpp-2.7.2_az.2-je-preopen-r32-windows
+--   Using package F:/JericoEngine/JericoEngine/build/n0-validation/original-engine-deps/packages/DirectXShaderCompilerDxc-1.8.2505.1-o3de-je-rev1-windows
+-- Finishing up configuration...
+--   Computing Runtime Dependencies (files to copy to the target's output directory)...
+-- CPack Package Version: 2.8.0
+-- Packaging is not supported for this platform/configuration
+-- Configuring done (4.4s)
+-- Generating done (5.1s)
+-- Build files have been written to: F:/JericoEngine/JericoEngine/build/sdk-vk-consumer102

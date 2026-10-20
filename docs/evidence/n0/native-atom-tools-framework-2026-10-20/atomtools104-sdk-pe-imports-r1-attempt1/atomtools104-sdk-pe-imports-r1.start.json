@@ -1,0 +1,11 @@
+{
+  "executable": "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/dumpbin.exe",
+  "argv": [
+    "/IMPORTS",
+    "F:/JericoEngine/JericoEngine/build/sdk-vk-consumer102/bin/profile/JENativeSdkConsumer.exe"
+  ],
+  "cwd": "F:/JericoEngine/JericoEngine/build/sdk-vk-consumer102/bin/profile",
+  "path": null,
+  "pid": 36748,
+  "creationUtc": "2026-10-20T17:14:59.8083261Z"
+}

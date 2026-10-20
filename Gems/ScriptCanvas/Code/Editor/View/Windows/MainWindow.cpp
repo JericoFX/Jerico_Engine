@@ -33,7 +33,7 @@
 #include <QProgressDialog>
 #include <QToolButton>
 
-#include <AtomToolsFramework/Document/AtomToolsDocumentRequestBus.h>
+#include <JE/Editor/Tools/Document/AtomToolsDocumentRequestBus.h>
 
 #include <ScriptEvents/ScriptEventsAsset.h>
 
@@ -388,7 +388,7 @@ namespace ScriptCanvasEditor
         , m_styleManager(ScriptCanvasEditor::AssetEditorId, "ScriptCanvas/StyleSheet/graphcanvas_style.json")
         , m_toolId(toolId)
     {
-        AtomToolsFramework::AtomToolsDocumentNotificationBus::Handler::BusConnect(m_toolId);
+        JE::Editor::Tools::AtomToolsDocumentNotificationBus::Handler::BusConnect(m_toolId);
         VariablePaletteRequestBus::Handler::BusConnect();
         GraphCanvas::AssetEditorAutomationRequestBus::Handler::BusConnect(ScriptCanvasEditor::AssetEditorId);
         AssetBrowserComponentNotificationBus::Handler::BusConnect();
@@ -721,7 +721,7 @@ namespace ScriptCanvasEditor
         GraphCanvas::AssetEditorAutomationRequestBus::Handler::BusDisconnect();
         ScriptCanvas::ScriptCanvasSettingsRequestBus::Handler::BusDisconnect();
         AzToolsFramework::AssetSystemBus::Handler::BusDisconnect();
-        AtomToolsFramework::AtomToolsDocumentNotificationBus::Handler::BusDisconnect();
+        JE::Editor::Tools::AtomToolsDocumentNotificationBus::Handler::BusDisconnect();
 
         if (auto hotKeyManagerInterface = AZ::Interface<AzToolsFramework::HotKeyManagerInterface>::Get())
         {
@@ -1080,8 +1080,8 @@ namespace ScriptCanvasEditor
     void MainWindow::OnDocumentOpened(const AZ::Uuid& documentId)
     {
         AZStd::string result;
-        AtomToolsFramework::AtomToolsDocumentRequestBus::EventResult(
-            result, documentId, &AtomToolsFramework::AtomToolsDocumentRequestBus::Events::GetAbsolutePath);
+        JE::Editor::Tools::AtomToolsDocumentRequestBus::EventResult(
+            result, documentId, &JE::Editor::Tools::AtomToolsDocumentRequestBus::Events::GetAbsolutePath);
         OpenFile(result.c_str());
     }
 

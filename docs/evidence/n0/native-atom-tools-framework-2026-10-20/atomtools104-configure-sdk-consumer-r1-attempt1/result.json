@@ -1,0 +1,14 @@
+{
+  "phaseResult": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-corefeature102\\atomtools104-configure-sdk-consumer-r1-attempt1\\configure-atomtools104-sdk-consumer-r1.result.json",
+    "bytes": 794,
+    "sha256": "8786A87997DC249FF7AEF2AFA50587C6D04304F6263E7287B3C447F78155FFFE"
+  },
+  "phase": "configure-atomtools104-sdk-consumer-r1",
+  "fatal": null,
+  "parentReviewRequired": true,
+  "accepted": false,
+  "wholeGemIncrement": 0,
+  "postflightValid": true,
+  "leaseId": "parent-atomtools104-sdk-consumer-configure-r1"
+}

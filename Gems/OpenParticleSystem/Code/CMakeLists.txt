@@ -108,7 +108,7 @@ if(PAL_TRAIT_BUILD_HOST_TOOLS)
                 Legacy::EditorCore
             PRIVATE
                 JE::EditorRenderIntegration
-                Gem::AtomToolsFramework.Static
+                JE::EditorTools
     )
 
     ly_add_target(
@@ -129,7 +129,7 @@ if(PAL_TRAIT_BUILD_HOST_TOOLS)
                 Gem::${gem_name}.API
             PRIVATE
                 Gem::${gem_name}.Editor.Static
-                Gem::AtomToolsFramework.Static
+                JE::EditorTools
                 Gem::OpenParticleSystemEditor
     )
 

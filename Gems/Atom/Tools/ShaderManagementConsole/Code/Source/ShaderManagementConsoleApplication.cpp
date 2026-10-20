@@ -16,7 +16,7 @@
 #include <JE/Render/RPI/Reflect/Material/MaterialAsset.h>
 #include <JE/Render/RPI/Reflect/Image/AttachmentImageAsset.h>
 #include <JE/Render/RPI/Reflect/Image/StreamingImageAsset.h>
-#include <AtomToolsFramework/Document/AtomToolsDocumentSystemRequestBus.h>
+#include <JE/Editor/Tools/Document/AtomToolsDocumentSystemRequestBus.h>
 #include <AzToolsFramework/AssetBrowser/AssetBrowserEntry.h>
 #include <AzCore/Settings/SettingsRegistryMergeUtils.h>
 #include <ShaderManagementConsoleApplication.h>
@@ -126,8 +126,8 @@ namespace ShaderManagementConsole
             new ShaderManagementConsoleContainer(container, toolId, documentId, m_window.get());
             return m_window->AddDocumentTab(documentId, container);
         };
-        AtomToolsFramework::AtomToolsDocumentSystemRequestBus::Event(
-            m_toolId, &AtomToolsFramework::AtomToolsDocumentSystemRequestBus::Handler::RegisterDocumentType, documentTypeInfo);
+        JE::Editor::Tools::AtomToolsDocumentSystemRequestBus::Event(
+            m_toolId, &JE::Editor::Tools::AtomToolsDocumentSystemRequestBus::Handler::RegisterDocumentType, documentTypeInfo);
 
         m_window.reset(aznew ShaderManagementConsoleWindow(m_toolId));
         m_window->show();
@@ -168,7 +168,7 @@ namespace ShaderManagementConsole
     AZStd::vector<AZ::Data::AssetId> ShaderManagementConsoleApplication::FindMaterialAssetsUsingShader(const AZStd::string& shaderFilePath)
     {
         // Find all material types that depend on the input shader file path
-        AZStd::vector<AZStd::string> materialTypeSourcePaths = AtomToolsFramework::GetPathsForAssetSourceDependentsByPath(shaderFilePath);
+        AZStd::vector<AZStd::string> materialTypeSourcePaths = JE::Editor::Tools::GetPathsForAssetSourceDependentsByPath(shaderFilePath);
         AZStd::erase_if(
             materialTypeSourcePaths,
             [](const AZStd::string& path)

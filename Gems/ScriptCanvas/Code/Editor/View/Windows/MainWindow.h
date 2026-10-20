@@ -16,7 +16,7 @@
 #include <QToolButton>
 #include <QWidget>
 
-#include <AtomToolsFramework/Document/AtomToolsDocumentNotificationBus.h>
+#include <JE/Editor/Tools/Document/AtomToolsDocumentNotificationBus.h>
 
 #include <AzCore/Component/ComponentApplicationBus.h>
 #include <AzCore/Component/EntityId.h>
@@ -229,7 +229,7 @@ namespace ScriptCanvasEditor
         , private VariablePaletteRequestBus::Handler
         , private ScriptCanvas::BatchOperationNotificationBus::Handler
         , private AssetGraphSceneBus::Handler
-        , private AtomToolsFramework::AtomToolsDocumentNotificationBus::Handler
+        , private JE::Editor::Tools::AtomToolsDocumentNotificationBus::Handler
         , private AzToolsFramework::AssetBrowser::AssetBrowserComponentNotificationBus::Handler
 #if SCRIPTCANVAS_EDITOR
         //, public IEditorNotifyListener

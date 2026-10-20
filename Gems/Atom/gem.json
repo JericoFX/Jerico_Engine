@@ -20,7 +20,6 @@
     "external_subdirectories": [
         "Asset/ImageProcessingAtom",
         "RHI",
-        "Tools/AtomToolsFramework",
         "Tools/MaterialCanvas",
         "Tools/MaterialEditor",
         "Tools/PassCanvas",
@@ -28,7 +27,6 @@
     ],
     "dependencies": [
         "Atom_RHI",
-        "AtomToolsFramework",
         "ShaderManagementConsole",
         "Atom_RHI_Null",
         "AtomRenderOptions",

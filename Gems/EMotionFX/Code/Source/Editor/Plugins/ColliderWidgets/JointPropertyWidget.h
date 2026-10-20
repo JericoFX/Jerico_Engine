@@ -14,7 +14,7 @@
 #include <UI/PropertyEditor/ReflectedPropertyEditor.hxx>
 #include <EMotionFX/Tools/EMotionStudio/EMStudioSDK/Source/DockWidgetPlugin.h>
 #include <Editor/Plugins/SkeletonOutliner/SkeletonOutlinerBus.h>
-#include <AtomToolsFramework/Inspector/InspectorWidget.h>
+#include <JE/Editor/Tools/Inspector/InspectorWidget.h>
 #include <Editor/Plugins/ColliderWidgets/RagdollNodeWidget.h>
 
 #include <QPushButton>

@@ -17,7 +17,7 @@
 #include <JE/Render/RPI/Reflect/Material/MaterialTypeAsset.h>
 #include <JE/Render/RPI/Reflect/Model/ModelAsset.h>
 #include <JE/Render/RPI/Reflect/System/AnyAsset.h>
-#include <AtomToolsFramework/Util/Util.h>
+#include <JE/Editor/Tools/Util/Util.h>
 #include <SharedPreview/SharedPreviewUtils.h>
 
 namespace JE::Editor::Render
@@ -69,7 +69,7 @@ namespace JE::Editor::Render
                         if (assetInfo.m_assetType == typeId)
                         {
                             const auto& path = JE::Render::RPI::AssetUtils::GetSourcePathByAssetId(assetInfo.m_assetId);
-                            if (!AtomToolsFramework::IsDocumentPathPreviewable(path))
+                            if (!JE::Editor::Tools::IsDocumentPathPreviewable(path))
                             {
                                 continue;
                             }

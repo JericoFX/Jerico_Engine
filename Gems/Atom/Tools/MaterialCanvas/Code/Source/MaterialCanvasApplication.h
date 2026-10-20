@@ -9,8 +9,8 @@
 #pragma once
 
 #include <Atom/RHI/FactoryManagerBus.h>
-#include <AtomToolsFramework/Document/AtomToolsDocumentApplication.h>
-#include <AtomToolsFramework/EntityPreviewViewport/EntityPreviewViewportSettingsSystem.h>
+#include <JE/Editor/Tools/Document/AtomToolsDocumentApplication.h>
+#include <JE/Editor/Tools/EntityPreviewViewport/EntityPreviewViewportSettingsSystem.h>
 #include <AzToolsFramework/API/EditorWindowRequestBus.h>
 #include <JE/Editor/Materials/Graph/MaterialGraphEnvironment.h>
 #include <Window/MaterialCanvasMainWindow.h>
@@ -19,16 +19,16 @@ namespace MaterialCanvas
 {
     //! The main application class for Material Canvas, setting up top level systems, document types, and the main window.
     class MaterialCanvasApplication
-        : public AtomToolsFramework::AtomToolsDocumentApplication
+        : public JE::Editor::Tools::AtomToolsDocumentApplication
         , private AzToolsFramework::EditorWindowRequestBus::Handler
         , private AZ::RHI::FactoryManagerNotificationBus::Handler
-        , private AtomToolsFramework::AtomToolsDocumentNotificationBus::Handler
+        , private JE::Editor::Tools::AtomToolsDocumentNotificationBus::Handler
     {
     public:
         AZ_CLASS_ALLOCATOR(MaterialCanvasApplication, AZ::SystemAllocator)
         AZ_TYPE_INFO(MaterialCanvas::MaterialCanvasApplication, "{30F90CA5-1253-49B5-8143-19CEE37E22BB}");
 
-        using Base = AtomToolsFramework::AtomToolsDocumentApplication;
+        using Base = JE::Editor::Tools::AtomToolsDocumentApplication;
 
         MaterialCanvasApplication(int* argc, char*** argv);
         ~MaterialCanvasApplication();
@@ -57,7 +57,7 @@ namespace MaterialCanvas
         void ApplyShaderBuildSettings();
 
         AZStd::unique_ptr<MaterialCanvasMainWindow> m_window;
-        AZStd::unique_ptr<AtomToolsFramework::EntityPreviewViewportSettingsSystem> m_viewportSettingsSystem;
+        AZStd::unique_ptr<JE::Editor::Tools::EntityPreviewViewportSettingsSystem> m_viewportSettingsSystem;
         AZStd::unique_ptr<JE::Editor::MaterialGraphEnvironment> m_graphEnvironment;
     };
 } // namespace MaterialCanvas

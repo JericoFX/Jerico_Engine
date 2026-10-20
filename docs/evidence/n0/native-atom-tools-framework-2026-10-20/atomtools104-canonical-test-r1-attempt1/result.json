@@ -1,0 +1,14 @@
+{
+  "fatal": "Native phase failed: test-atomtools104-canonical-r1, exit=8, RAM=False, timeout=False",
+  "postflightValid": true,
+  "parentReviewRequired": true,
+  "phaseResult": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-corefeature102\\atomtools104-canonical-test-r1-attempt1\\test-atomtools104-canonical-r1.result.json",
+    "bytes": 761,
+    "sha256": "308C16D7ABD4A4B5DF9C9970CCCDB3F591D38EE7EF3CF04E2EFCCECEE19C7ED3"
+  },
+  "accepted": false,
+  "wholeGemIncrement": 0,
+  "leaseId": "parent-atomtools104-canonical-test-r1",
+  "phase": "test-atomtools104-canonical-r1"
+}

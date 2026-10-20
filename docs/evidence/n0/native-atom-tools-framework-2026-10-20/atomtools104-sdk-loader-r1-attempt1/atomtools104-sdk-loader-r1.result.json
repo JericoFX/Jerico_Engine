@@ -1,0 +1,18 @@
+{
+  "ramGuardTriggered": false,
+  "stdout": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-corefeature102\\atomtools104-sdk-loader-r1-attempt1\\atomtools104-sdk-loader-r1.stdout.log",
+    "bytes": 2108,
+    "sha256": "8D70D502856142F4C6EA7EED2840C02B9F4B81543FFAC15EDCB924138EA48383"
+  },
+  "timedOut": false,
+  "priorityRequested": "BelowNormal",
+  "exitCode": 0,
+  "priorityError": null,
+  "seconds": 0.1188874,
+  "stderr": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-corefeature102\\atomtools104-sdk-loader-r1-attempt1\\atomtools104-sdk-loader-r1.stderr.log",
+    "bytes": 0,
+    "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+  }
+}

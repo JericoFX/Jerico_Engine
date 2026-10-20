@@ -19,8 +19,8 @@
 #include <JE/Render/RPI/Reflect/Material/MaterialPropertiesLayout.h>
 #include <JE/Render/RPI/Reflect/Material/MaterialTypeAsset.h>
 #include <JE/Render/Materials/MaterialComponentBus.h>
-#include <AtomToolsFramework/Util/MaterialPropertyUtil.h>
-#include <AtomToolsFramework/Util/Util.h>
+#include <JE/Editor/Tools/Util/MaterialPropertyUtil.h>
+#include <JE/Editor/Tools/Util/Util.h>
 #include <AzCore/std/ranges/elements_view.h>
 #include <AzFramework/API/ApplicationAPI.h>
 #include <AzToolsFramework/API/EditorAssetSystemAPI.h>
@@ -127,8 +127,8 @@ namespace JE
 
                 // Source material files that should reference the originating source material type instead of the potential intermediate
                 // material type asset.
-                exportData.m_materialType = AtomToolsFramework::GetPathToExteralReference(path, editData.m_originalMaterialTypeSourcePath);
-                exportData.m_parentMaterial = AtomToolsFramework::GetPathToExteralReference(path, editData.m_materialParentSourcePath);
+                exportData.m_materialType = JE::Editor::Tools::GetPathToExteralReference(path, editData.m_originalMaterialTypeSourcePath);
+                exportData.m_parentMaterial = JE::Editor::Tools::GetPathToExteralReference(path, editData.m_materialParentSourcePath);
 
                 // Copy all of the properties from the material asset to the source data that will be exported
                 bool result = true;
@@ -156,7 +156,7 @@ namespace JE
                             propertyValue = JE::Render::RPI::MaterialPropertyValue::FromAny(propertyOverrideItr->second);
                         }
 
-                        if (!AtomToolsFramework::ConvertToExportFormat(path, propertyId, *propertyDefinition, propertyValue))
+                        if (!JE::Editor::Tools::ConvertToExportFormat(path, propertyId, *propertyDefinition, propertyValue))
                         {
                             AZ_Error("JE::Editor::EditorMaterialComponentUtil", false, "Failed to export: %s", path.c_str());
                             result = false;

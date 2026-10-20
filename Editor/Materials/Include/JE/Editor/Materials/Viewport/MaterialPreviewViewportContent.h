@@ -9,19 +9,19 @@
 #pragma once
 
 #include <JE/Editor/Materials/Base.h>
-#include <AtomToolsFramework/Document/AtomToolsDocumentNotificationBus.h>
-#include <AtomToolsFramework/EntityPreviewViewport/EntityPreviewViewportContent.h>
+#include <JE/Editor/Tools/Document/AtomToolsDocumentNotificationBus.h>
+#include <JE/Editor/Tools/EntityPreviewViewport/EntityPreviewViewportContent.h>
 
 namespace JE::Editor
 {
     class JE_EDITOR_MATERIALS_API MaterialPreviewViewportContent final
-        : public AtomToolsFramework::EntityPreviewViewportContent
-        , public AtomToolsFramework::AtomToolsDocumentNotificationBus::Handler
+        : public JE::Editor::Tools::EntityPreviewViewportContent
+        , public JE::Editor::Tools::AtomToolsDocumentNotificationBus::Handler
     {
     public:
         MaterialPreviewViewportContent(
             const AZ::Crc32& toolId,
-            AtomToolsFramework::RenderViewportWidget* widget,
+            JE::Editor::Tools::RenderViewportWidget* widget,
             AZStd::shared_ptr<AzFramework::EntityContext> entityContext, bool followOpenedDocuments = true);
         ~MaterialPreviewViewportContent();
         void SetDocumentId(const AZ::Uuid& documentId);

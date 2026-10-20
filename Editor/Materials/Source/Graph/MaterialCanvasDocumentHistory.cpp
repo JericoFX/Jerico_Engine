@@ -9,8 +9,8 @@ namespace JE::Editor
 {
     namespace
     {
-        using AtomToolsFramework::AtomToolsDocumentRequestBus;
-        using AtomToolsFramework::DocumentHistoryState;
+        using JE::Editor::Tools::AtomToolsDocumentRequestBus;
+        using JE::Editor::Tools::DocumentHistoryState;
 
         struct ReplayResult
         {
@@ -61,10 +61,10 @@ namespace JE::Editor
         };
     }
 
-    AtomToolsFramework::DocumentHistoryPolicy CreateMaterialCanvasDocumentHistoryPolicy()
+    JE::Editor::Tools::DocumentHistoryPolicy CreateMaterialCanvasDocumentHistoryPolicy()
     {
         auto replayResult = AZStd::make_shared<ReplayResult>();
-        AtomToolsFramework::DocumentHistoryPolicy policy;
+        JE::Editor::Tools::DocumentHistoryPolicy policy;
         policy.m_commit = [replayResult](const AZ::Uuid& id, const AZStd::string& path,
             const DocumentHistoryState& before, const DocumentHistoryState& after)
         {

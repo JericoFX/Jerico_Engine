@@ -1,0 +1,14 @@
+{
+  "phaseResult": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-corefeature102\\atomtools104-family-ap-startup-r1-attempt1\\ap-atomtools104-family-startup-r1.result.json",
+    "bytes": 773,
+    "sha256": "67C954A1868B43470259542EB351A81CFC6CDCF5AD55383108854475CE81BCF9"
+  },
+  "accepted": false,
+  "leaseId": "parent-atomtools104-family-ap-startup-r1",
+  "postflightValid": true,
+  "wholeGemIncrement": 0,
+  "fatal": null,
+  "parentReviewRequired": true,
+  "phase": "ap-atomtools104-family-startup-r1"
+}

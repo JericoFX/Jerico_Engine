@@ -10,7 +10,7 @@
 
 #include <AzCore/std/string/string.h>
 
-namespace AtomToolsFramework
+namespace JE::Editor::Tools
 {
     struct DynamicNodeConfig;
 }
@@ -18,7 +18,7 @@ namespace AtomToolsFramework
 namespace MaterialCanvas
 {
     // Convert the node title into a filename for saving test data
-    AZStd::string GetTestDataPathForNodeConfig(const AtomToolsFramework::DynamicNodeConfig& nodeConfig);
+    AZStd::string GetTestDataPathForNodeConfig(const JE::Editor::Tools::DynamicNodeConfig& nodeConfig);
 
     // Create and save several test node configurations that will be loaded by the dynamic node manager
     void CreateTestNodes();

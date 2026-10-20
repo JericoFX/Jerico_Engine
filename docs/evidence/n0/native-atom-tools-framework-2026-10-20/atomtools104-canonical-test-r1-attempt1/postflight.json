@@ -1,0 +1,8 @@
+{
+  "nativeCensusEmpty": true,
+  "inputDrift": 0,
+  "utc": "2026-10-20T13:13:10.9860563Z",
+  "frozenInputsVerified": true,
+  "fatal": "Native phase failed: test-atomtools104-canonical-r1, exit=8, RAM=False, timeout=False",
+  "accepted": false
+}

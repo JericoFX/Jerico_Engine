@@ -8,7 +8,7 @@
 
 #include <JE/Render/RPI/Public/View.h>
 #include <JE/Render/RPI/Public/ViewportContext.h>
-#include <AtomToolsFramework/Viewport/ModularViewportCameraController.h>
+#include <JE/Editor/Tools/Viewport/ModularViewportCameraController.h>
 #include <AzCore/Math/MatrixUtils.h>
 #include <AzFramework/Viewport/CameraInput.h>
 #include <AzFramework/Viewport/ViewportBus.h>
@@ -23,7 +23,7 @@
 namespace EMStudio
 {
     AnimViewportWidget::AnimViewportWidget(AtomRenderPlugin* parentPlugin)
-        : AtomToolsFramework::RenderViewportWidget(parentPlugin->GetInnerWidget())
+        : JE::Editor::Tools::RenderViewportWidget(parentPlugin->GetInnerWidget())
         , m_plugin(parentPlugin)
         , m_renderOverlay(m_plugin->GetInnerWidget())
     {
@@ -113,8 +113,8 @@ namespace EMStudio
             {
                 // when the orbit camera ends, ensure that the internal camera returns to a look state
                 // (internal offset value for camera is zero)
-                AtomToolsFramework::ModularViewportCameraControllerRequestBus::Event(
-                    viewportId, &AtomToolsFramework::ModularViewportCameraControllerRequestBus::Events::LookFromOrbit);
+                JE::Editor::Tools::ModularViewportCameraControllerRequestBus::Event(
+                    viewportId, &JE::Editor::Tools::ModularViewportCameraControllerRequestBus::Events::LookFromOrbit);
             });
 
         m_orbitTranslateCamera = AZStd::make_shared<AzFramework::TranslateCameraInput>(
@@ -140,18 +140,18 @@ namespace EMStudio
 
     void AnimViewportWidget::SetupCameraController()
     {
-        auto controller = AZStd::make_shared<AtomToolsFramework::ModularViewportCameraController>();
+        auto controller = AZStd::make_shared<JE::Editor::Tools::ModularViewportCameraController>();
         controller->SetCameraViewportContextBuilderCallback(
             [viewportId =
-                 GetViewportContext()->GetId()](AZStd::unique_ptr<AtomToolsFramework::ModularCameraViewportContext>& cameraViewportContext)
+                 GetViewportContext()->GetId()](AZStd::unique_ptr<JE::Editor::Tools::ModularCameraViewportContext>& cameraViewportContext)
             {
-                cameraViewportContext = AZStd::make_unique<AtomToolsFramework::ModularCameraViewportContextImpl>(viewportId);
+                cameraViewportContext = AZStd::make_unique<JE::Editor::Tools::ModularCameraViewportContextImpl>(viewportId);
             });
 
         controller->SetCameraPriorityBuilderCallback(
-            [](AtomToolsFramework::CameraControllerPriorityFn& cameraControllerPriorityFn)
+            [](JE::Editor::Tools::CameraControllerPriorityFn& cameraControllerPriorityFn)
             {
-                cameraControllerPriorityFn = AtomToolsFramework::DefaultCameraControllerPriority;
+                cameraControllerPriorityFn = JE::Editor::Tools::DefaultCameraControllerPriority;
             });
 
         controller->SetCameraPropsBuilderCallback(
@@ -229,9 +229,9 @@ namespace EMStudio
         // (when not following, the pivot will be the camera position until alt is pressed)
         if (m_plugin->GetRenderOptions()->GetCameraFollowUp())
         {
-            AtomToolsFramework::ModularViewportCameraControllerRequestBus::Event(
+            JE::Editor::Tools::ModularViewportCameraControllerRequestBus::Event(
                 GetViewportId(),
-                &AtomToolsFramework::ModularViewportCameraControllerRequestBus::Events::SetCameraPivotDetachedImmediate,
+                &JE::Editor::Tools::ModularViewportCameraControllerRequestBus::Events::SetCameraPivotDetachedImmediate,
                 targetPosition);
         }
     }
@@ -247,36 +247,36 @@ namespace EMStudio
                                                                         m_followScrollMotionCamera };
         if (followUp)
         {
-            AtomToolsFramework::ModularViewportCameraControllerRequestBus::Event(
-                GetViewportId(), &AtomToolsFramework::ModularViewportCameraControllerRequestBus::Events::RemoveCameras,
+            JE::Editor::Tools::ModularViewportCameraControllerRequestBus::Event(
+                GetViewportId(), &JE::Editor::Tools::ModularViewportCameraControllerRequestBus::Events::RemoveCameras,
                 lookAndOrbitCameras);
 
-            AtomToolsFramework::ModularViewportCameraControllerRequestBus::Event(
-                GetViewportId(), &AtomToolsFramework::ModularViewportCameraControllerRequestBus::Events::AddCameras, followCameras);
+            JE::Editor::Tools::ModularViewportCameraControllerRequestBus::Event(
+                GetViewportId(), &JE::Editor::Tools::ModularViewportCameraControllerRequestBus::Events::AddCameras, followCameras);
 
-            AtomToolsFramework::ModularViewportCameraControllerRequestBus::Event(
+            JE::Editor::Tools::ModularViewportCameraControllerRequestBus::Event(
                 GetViewportId(),
-                &AtomToolsFramework::ModularViewportCameraControllerRequestBus::Events::SetCameraPivotAttachedImmediate,
+                &JE::Editor::Tools::ModularViewportCameraControllerRequestBus::Events::SetCameraPivotAttachedImmediate,
                 m_renderer->GetCharacterCenter());
 
-            AtomToolsFramework::ModularViewportCameraControllerRequestBus::Event(
-                GetViewportId(), &AtomToolsFramework::ModularViewportCameraControllerRequestBus::Events::SetCameraOffsetImmediate,
+            JE::Editor::Tools::ModularViewportCameraControllerRequestBus::Event(
+                GetViewportId(), &JE::Editor::Tools::ModularViewportCameraControllerRequestBus::Events::SetCameraOffsetImmediate,
                 AZ::Vector3::CreateAxisY(-CameraDistance));
         }
         else
         {
-            AtomToolsFramework::ModularViewportCameraControllerRequestBus::Event(
-                GetViewportId(), &AtomToolsFramework::ModularViewportCameraControllerRequestBus::Events::RemoveCameras, followCameras);
+            JE::Editor::Tools::ModularViewportCameraControllerRequestBus::Event(
+                GetViewportId(), &JE::Editor::Tools::ModularViewportCameraControllerRequestBus::Events::RemoveCameras, followCameras);
 
-            AtomToolsFramework::ModularViewportCameraControllerRequestBus::Event(
-                GetViewportId(), &AtomToolsFramework::ModularViewportCameraControllerRequestBus::Events::AddCameras, lookAndOrbitCameras);
+            JE::Editor::Tools::ModularViewportCameraControllerRequestBus::Event(
+                GetViewportId(), &JE::Editor::Tools::ModularViewportCameraControllerRequestBus::Events::AddCameras, lookAndOrbitCameras);
 
-            AtomToolsFramework::ModularViewportCameraControllerRequestBus::Event(
-                GetViewportId(), &AtomToolsFramework::ModularViewportCameraControllerRequestBus::Events::SetCameraOffsetImmediate,
+            JE::Editor::Tools::ModularViewportCameraControllerRequestBus::Event(
+                GetViewportId(), &JE::Editor::Tools::ModularViewportCameraControllerRequestBus::Events::SetCameraOffsetImmediate,
                 AZ::Vector3::CreateZero());
 
-            AtomToolsFramework::ModularViewportCameraControllerRequestBus::Event(
-                GetViewportId(), &AtomToolsFramework::ModularViewportCameraControllerRequestBus::Events::SetCameraPivotAttachedImmediate,
+            JE::Editor::Tools::ModularViewportCameraControllerRequestBus::Event(
+                GetViewportId(), &JE::Editor::Tools::ModularViewportCameraControllerRequestBus::Events::SetCameraPivotAttachedImmediate,
                 GetViewportContext()->GetCameraTransform().GetTranslation());
         }
     }
@@ -326,8 +326,8 @@ namespace EMStudio
     {
         if (m_plugin->GetRenderOptions()->GetCameraFollowUp())
         {
-            AtomToolsFramework::ModularViewportCameraControllerRequestBus::Event(
-                GetViewportId(), &AtomToolsFramework::ModularViewportCameraControllerRequestBus::Events::SetCameraPivotAttached,
+            JE::Editor::Tools::ModularViewportCameraControllerRequestBus::Event(
+                GetViewportId(), &JE::Editor::Tools::ModularViewportCameraControllerRequestBus::Events::SetCameraPivotAttached,
                 m_renderer->GetCharacterCenter());
 
             m_renderer->UpdateGroundplane();

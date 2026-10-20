@@ -8,22 +8,22 @@
 
 #pragma once
 
-#include <AtomToolsFramework/Document/AtomToolsDocumentApplication.h>
-#include <AtomToolsFramework/EntityPreviewViewport/EntityPreviewViewportSettingsSystem.h>
+#include <JE/Editor/Tools/Document/AtomToolsDocumentApplication.h>
+#include <JE/Editor/Tools/EntityPreviewViewport/EntityPreviewViewportSettingsSystem.h>
 #include <AzToolsFramework/API/EditorWindowRequestBus.h>
 #include <Window/MaterialEditorMainWindow.h>
 
 namespace MaterialEditor
 {
     class MaterialEditorApplication
-        : public AtomToolsFramework::AtomToolsDocumentApplication
+        : public JE::Editor::Tools::AtomToolsDocumentApplication
         , private AzToolsFramework::EditorWindowRequestBus::Handler
     {
     public:
         AZ_CLASS_ALLOCATOR(MaterialEditorApplication, AZ::SystemAllocator)
         AZ_TYPE_INFO(MaterialEditor::MaterialEditorApplication, "{30F90CA5-1253-49B5-8143-19CEE37E22BB}");
 
-        using Base = AtomToolsFramework::AtomToolsDocumentApplication;
+        using Base = JE::Editor::Tools::AtomToolsDocumentApplication;
 
         MaterialEditorApplication(int* argc, char*** argv);
         ~MaterialEditorApplication();
@@ -44,6 +44,6 @@ namespace MaterialEditor
 
     private:
         AZStd::unique_ptr<MaterialEditorMainWindow> m_window;
-        AZStd::unique_ptr<AtomToolsFramework::EntityPreviewViewportSettingsSystem> m_viewportSettingsSystem;
+        AZStd::unique_ptr<JE::Editor::Tools::EntityPreviewViewportSettingsSystem> m_viewportSettingsSystem;
     };
 } // namespace MaterialEditor

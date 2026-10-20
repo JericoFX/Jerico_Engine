@@ -26,8 +26,7 @@ if(PAL_TRAIT_BUILD_HOST_TOOLS)
                 OpenParticleSystemEditor/Viewport
         BUILD_DEPENDENCIES
             PRIVATE
-                Gem::AtomToolsFramework.Static
-                Gem::AtomToolsFramework.Editor
+                JE::EditorTools
                 JE::RenderFeatures
                 JE::RenderScene
                 JE::EditorRenderScene
@@ -38,6 +37,6 @@ if(PAL_TRAIT_BUILD_HOST_TOOLS)
             Gem::Atom_RHI_Vulkan.Private
             Gem::Atom_RHI.Private
             JE::RenderAssetBuilders
-            Gem::AtomToolsFramework.Editor
+            JE::EditorTools
     )
 endif()

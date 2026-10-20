@@ -1,0 +1,18 @@
+{
+  "stdout": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-corefeature102\\atomtools104-canonical-test-materials-ownsave-r5-attempt1\\test-atomtools104-canonical-materials-ownsave-r5.stdout.log",
+    "bytes": 2654,
+    "sha256": "12B58EA90B128530C8FC9521D3F86F8E1A47B7C6C93D95DCB99892DDA75ECFFC"
+  },
+  "timedOut": false,
+  "priorityError": null,
+  "ramGuardTriggered": false,
+  "exitCode": 0,
+  "seconds": 0.4445816,
+  "stderr": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-corefeature102\\atomtools104-canonical-test-materials-ownsave-r5-attempt1\\test-atomtools104-canonical-materials-ownsave-r5.stderr.log",
+    "bytes": 0,
+    "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+  },
+  "priorityRequested": "BelowNormal"
+}

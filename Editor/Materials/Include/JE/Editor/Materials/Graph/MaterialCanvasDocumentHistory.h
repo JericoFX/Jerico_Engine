@@ -3,11 +3,11 @@
 #pragma once
 
 #include <JE/Editor/Materials/Base.h>
-#include <AtomToolsFramework/Document/AtomToolsDocumentRequestBus.h>
+#include <JE/Editor/Tools/Document/AtomToolsDocumentRequestBus.h>
 
 namespace JE::Editor
 {
     //! Inject the same policy into all graph/node-config/shader documents retained by one Editor session.
     //! Empty policy remains the standalone default; no document pointer is retained by global commands.
-    JE_EDITOR_MATERIALS_API AtomToolsFramework::DocumentHistoryPolicy CreateMaterialCanvasDocumentHistoryPolicy();
+    JE_EDITOR_MATERIALS_API JE::Editor::Tools::DocumentHistoryPolicy CreateMaterialCanvasDocumentHistoryPolicy();
 }

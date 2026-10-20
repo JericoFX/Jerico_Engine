@@ -3,12 +3,12 @@
 #include "MaterialWorkspaceSession.h"
 #include <JE/Editor/Materials/Graph/MaterialGraphEnvironment.h>
 
-#include <AtomToolsFramework/Document/AtomToolsDocumentRequestBus.h>
-#include <AtomToolsFramework/Document/AtomToolsDocumentSystem.h>
-#include <AtomToolsFramework/Graph/GraphDocumentRequestBus.h>
-#include <AtomToolsFramework/Util/Util.h>
-#include <AtomToolsFramework/EntityPreviewViewport/EntityPreviewViewportSettingsSystem.h>
-#include <AtomToolsFramework/EntityPreviewViewport/EntityPreviewViewportSettingsRequestBus.h>
+#include <JE/Editor/Tools/Document/AtomToolsDocumentRequestBus.h>
+#include <JE/Editor/Tools/Document/AtomToolsDocumentSystem.h>
+#include <JE/Editor/Tools/Graph/GraphDocumentRequestBus.h>
+#include <JE/Editor/Tools/Util/Util.h>
+#include <JE/Editor/Tools/EntityPreviewViewport/EntityPreviewViewportSettingsSystem.h>
+#include <JE/Editor/Tools/EntityPreviewViewport/EntityPreviewViewportSettingsRequestBus.h>
 #include <AzCore/std/algorithm.h>
 #include <AzCore/IO/SystemFile.h>
 #include <AzCore/IO/Path/Path.h>
@@ -18,13 +18,13 @@
 
 namespace JE::Editor
 {
-    MaterialWorkspaceSession::MaterialWorkspaceSession(const AtomToolsFramework::DocumentTypeInfo& documentType)
+    MaterialWorkspaceSession::MaterialWorkspaceSession(const JE::Editor::Tools::DocumentTypeInfo& documentType)
         : m_documentType(documentType)
-        , m_documentSystem(AZStd::make_unique<AtomToolsFramework::AtomToolsDocumentSystem>(GetToolId()))
+        , m_documentSystem(AZStd::make_unique<JE::Editor::Tools::AtomToolsDocumentSystem>(GetToolId()))
     {
         m_documentSystem->RegisterDocumentType(m_documentType);
-        AtomToolsFramework::AtomToolsDocumentNotificationBus::Handler::BusConnect(GetToolId());
-        AtomToolsFramework::GraphDocumentNotificationBus::Handler::BusConnect(GetToolId());
+        JE::Editor::Tools::AtomToolsDocumentNotificationBus::Handler::BusConnect(GetToolId());
+        JE::Editor::Tools::GraphDocumentNotificationBus::Handler::BusConnect(GetToolId());
     }
 
     MaterialWorkspaceSession::~MaterialWorkspaceSession()
@@ -33,8 +33,8 @@ namespace JE::Editor
         SetMainWindow(nullptr);
         // Notify inspectors before their document-backed property objects are released.
         m_documentSystem->CloseAllDocuments();
-        AtomToolsFramework::AtomToolsDocumentNotificationBus::Handler::BusDisconnect();
-        AtomToolsFramework::GraphDocumentNotificationBus::Handler::BusDisconnect();
+        JE::Editor::Tools::AtomToolsDocumentNotificationBus::Handler::BusDisconnect();
+        JE::Editor::Tools::GraphDocumentNotificationBus::Handler::BusDisconnect();
         m_documentSystem.reset();
     }
 
@@ -48,17 +48,17 @@ namespace JE::Editor
         return m_activeDocumentId;
     }
 
-    const AtomToolsFramework::DocumentTypeInfo& MaterialWorkspaceSession::GetDocumentType() const
+    const JE::Editor::Tools::DocumentTypeInfo& MaterialWorkspaceSession::GetDocumentType() const
     {
         return m_documentType;
     }
 
-    const AtomToolsFramework::DocumentTypeInfoVector& MaterialWorkspaceSession::GetGraphDocumentTypes() const
+    const JE::Editor::Tools::DocumentTypeInfoVector& MaterialWorkspaceSession::GetGraphDocumentTypes() const
     {
         return m_graphDocumentTypes;
     }
 
-    void MaterialWorkspaceSession::RegisterGraphDocumentTypes(const AtomToolsFramework::DocumentTypeInfoVector& types)
+    void MaterialWorkspaceSession::RegisterGraphDocumentTypes(const JE::Editor::Tools::DocumentTypeInfoVector& types)
     {
         for (const auto& type : types)
         {
@@ -84,17 +84,17 @@ namespace JE::Editor
 
     void MaterialWorkspaceSession::EnsureMaterialPreviewSettings()
     {
-        if (!AtomToolsFramework::EntityPreviewViewportSettingsRequestBus::HasHandlers(GetToolId()))
+        if (!JE::Editor::Tools::EntityPreviewViewportSettingsRequestBus::HasHandlers(GetToolId()))
         {
-            m_previewSettings = AZStd::make_unique<AtomToolsFramework::EntityPreviewViewportSettingsSystem>(GetToolId());
+            m_previewSettings = AZStd::make_unique<JE::Editor::Tools::EntityPreviewViewportSettingsSystem>(GetToolId());
         }
     }
 
     bool MaterialWorkspaceSession::IsGraphDocument(const AZ::Uuid& documentId) const
     {
-        AtomToolsFramework::DocumentTypeInfo type;
-        AtomToolsFramework::AtomToolsDocumentRequestBus::EventResult(
-            type, documentId, &AtomToolsFramework::AtomToolsDocumentRequests::GetDocumentTypeInfo);
+        JE::Editor::Tools::DocumentTypeInfo type;
+        JE::Editor::Tools::AtomToolsDocumentRequestBus::EventResult(
+            type, documentId, &JE::Editor::Tools::AtomToolsDocumentRequests::GetDocumentTypeInfo);
         return AZStd::any_of(m_graphDocumentTypes.begin(), m_graphDocumentTypes.end(),
             [&type](const auto& existing) { return existing.m_documentTypeName == type.m_documentTypeName; });
     }
@@ -109,9 +109,9 @@ namespace JE::Editor
         // Creation selects a stable destination before any edits can enter the editor's global history.
         AZStd::string source = sourcePath;
         AZStd::string target = targetPath;
-        if (!AZ::IO::PathView(target).IsAbsolute() || !AtomToolsFramework::ValidateDocumentPath(target) ||
+        if (!AZ::IO::PathView(target).IsAbsolute() || !JE::Editor::Tools::ValidateDocumentPath(target) ||
             AZ::IO::SystemFile::Exists(target.c_str()) ||
-            (!source.empty() && !AtomToolsFramework::ValidateDocumentPath(source)))
+            (!source.empty() && !JE::Editor::Tools::ValidateDocumentPath(source)))
         {
             return AZ::Uuid::CreateNull();
         }
@@ -131,13 +131,13 @@ namespace JE::Editor
         bool published = false;
         if (success && !source.empty())
         {
-            AtomToolsFramework::AtomToolsDocumentRequestBus::EventResult(
-                success, id, &AtomToolsFramework::AtomToolsDocumentRequests::Open, source);
+            JE::Editor::Tools::AtomToolsDocumentRequestBus::EventResult(
+                success, id, &JE::Editor::Tools::AtomToolsDocumentRequests::Open, source);
         }
         if (success)
         {
-            AtomToolsFramework::AtomToolsDocumentRequestBus::EventResult(
-                success, id, &AtomToolsFramework::AtomToolsDocumentRequests::SaveAsChild, temporary);
+            JE::Editor::Tools::AtomToolsDocumentRequestBus::EventResult(
+                success, id, &JE::Editor::Tools::AtomToolsDocumentRequests::SaveAsChild, temporary);
         }
         if (success)
         {
@@ -147,14 +147,14 @@ namespace JE::Editor
         if (success)
         {
             // No modal dialog or event loop between temporary save and final open: queued graph compilation sees only the final path.
-            AtomToolsFramework::AtomToolsDocumentRequestBus::EventResult(
-                success, id, &AtomToolsFramework::AtomToolsDocumentRequests::Open, target);
+            JE::Editor::Tools::AtomToolsDocumentRequestBus::EventResult(
+                success, id, &JE::Editor::Tools::AtomToolsDocumentRequests::Open, target);
         }
         if (!success)
         {
             if (!id.IsNull())
             {
-                AtomToolsFramework::AtomToolsDocumentRequestBus::Event(id, &AtomToolsFramework::AtomToolsDocumentRequests::Close);
+                JE::Editor::Tools::AtomToolsDocumentRequestBus::Event(id, &JE::Editor::Tools::AtomToolsDocumentRequests::Close);
                 m_documentSystem->DestroyDocument(id);
             }
             AZ::IO::SystemFile::Delete(temporary.c_str());
@@ -193,7 +193,7 @@ namespace JE::Editor
             return false;
         }
         bool started = false;
-        AtomToolsFramework::GraphDocumentRequestBus::EventResult(started, documentId, &AtomToolsFramework::GraphDocumentRequests::CompileGraph);
+        JE::Editor::Tools::GraphDocumentRequestBus::EventResult(started, documentId, &JE::Editor::Tools::GraphDocumentRequests::CompileGraph);
         if (started)
         {
             // Job acceptance precedes its main-thread Started notification; it is not compilation success.
@@ -256,18 +256,18 @@ namespace JE::Editor
         const auto documentIds = m_documentIds;
         for (const auto& documentId : documentIds)
         {
-            AtomToolsFramework::AtomToolsDocumentRequestBus::Event(
-                documentId, &AtomToolsFramework::AtomToolsDocumentRequests::EndEdit);
+            JE::Editor::Tools::AtomToolsDocumentRequestBus::Event(
+                documentId, &JE::Editor::Tools::AtomToolsDocumentRequests::EndEdit);
             bool modified = false;
-            AtomToolsFramework::AtomToolsDocumentRequestBus::EventResult(
-                modified, documentId, &AtomToolsFramework::AtomToolsDocumentRequests::IsModified);
+            JE::Editor::Tools::AtomToolsDocumentRequestBus::EventResult(
+                modified, documentId, &JE::Editor::Tools::AtomToolsDocumentRequests::IsModified);
             if (!modified)
             {
                 continue;
             }
             AZStd::string path;
-            AtomToolsFramework::AtomToolsDocumentRequestBus::EventResult(
-                path, documentId, &AtomToolsFramework::AtomToolsDocumentRequests::GetAbsolutePath);
+            JE::Editor::Tools::AtomToolsDocumentRequestBus::EventResult(
+                path, documentId, &JE::Editor::Tools::AtomToolsDocumentRequests::GetAbsolutePath);
             const auto decision = QMessageBox::question(parent, tr("Material Changes"),
                 tr("Save changes to %1 before closing the Editor?").arg(QString::fromUtf8(path.c_str())),
                 QMessageBox::Save | QMessageBox::Discard | QMessageBox::Cancel, QMessageBox::Cancel);

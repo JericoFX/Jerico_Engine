@@ -8,7 +8,7 @@
 
 #include "ScriptCanvasDocument.h"
 
-#include <AtomToolsFramework/Document/AtomToolsDocumentTypeInfo.h>
+#include <JE/Editor/Tools/Document/AtomToolsDocumentTypeInfo.h>
 #include <AzCore/RTTI/BehaviorContext.h>
 #include <AzCore/Serialization/EditContext.h>
 #include <AzCore/Serialization/SerializeContext.h>
@@ -19,12 +19,12 @@ namespace ScriptCanvas
     {
         if (auto serialize = azrtti_cast<AZ::SerializeContext*>(context))
         {
-            serialize->Class<ScriptCanvasDocument, AtomToolsFramework::AtomToolsDocument>()->Version(0);
+            serialize->Class<ScriptCanvasDocument, JE::Editor::Tools::AtomToolsDocument>()->Version(0);
         }
     }
 
-    ScriptCanvasDocument::ScriptCanvasDocument(const AZ::Crc32& toolId, const AtomToolsFramework::DocumentTypeInfo& documentTypeInfo)
-        : AtomToolsFramework::AtomToolsDocument(toolId, documentTypeInfo)
+    ScriptCanvasDocument::ScriptCanvasDocument(const AZ::Crc32& toolId, const JE::Editor::Tools::DocumentTypeInfo& documentTypeInfo)
+        : JE::Editor::Tools::AtomToolsDocument(toolId, documentTypeInfo)
     {
         ScriptCanvasDocumentRequestBus::Handler::BusConnect(m_id);
     }
@@ -34,11 +34,11 @@ namespace ScriptCanvas
         ScriptCanvasDocumentRequestBus::Handler::BusDisconnect();
     }
 
-    AtomToolsFramework::DocumentTypeInfo ScriptCanvasDocument::BuildDocumentTypeInfo()
+    JE::Editor::Tools::DocumentTypeInfo ScriptCanvasDocument::BuildDocumentTypeInfo()
     {
-        AtomToolsFramework::DocumentTypeInfo documentType;
+        JE::Editor::Tools::DocumentTypeInfo documentType;
         documentType.m_documentTypeName = "ScriptCanvas";
-        documentType.m_documentFactoryCallback = [](const AZ::Crc32& toolId, const AtomToolsFramework::DocumentTypeInfo& documentTypeInfo)
+        documentType.m_documentFactoryCallback = [](const AZ::Crc32& toolId, const JE::Editor::Tools::DocumentTypeInfo& documentTypeInfo)
         {
             return aznew ScriptCanvasDocument(toolId, documentTypeInfo);
         };

@@ -10,7 +10,7 @@
 
 #include <JE/Render/RPI/Public/ViewportContext.h>
 #include <JE/Render/RPI/Public/ViewportContextBus.h>
-#include <AtomToolsFramework/Viewport/ModularViewportCameraControllerRequestBus.h>
+#include <JE/Editor/Tools/Viewport/ModularViewportCameraControllerRequestBus.h>
 
 #include <EditorViewportSettings.h>
 
@@ -86,9 +86,9 @@ namespace SandboxEditor
     void InterpolateViewportCameraToTransform(
         const AzFramework::ViewportId viewportId, const AZ::Transform& transform, const float duration)
     {
-        AtomToolsFramework::ModularViewportCameraControllerRequestBus::Event(
+        JE::Editor::Tools::ModularViewportCameraControllerRequestBus::Event(
             viewportId,
-            &AtomToolsFramework::ModularViewportCameraControllerRequestBus::Events::InterpolateToTransform,
+            &JE::Editor::Tools::ModularViewportCameraControllerRequestBus::Events::InterpolateToTransform,
             transform,
             duration);
     }

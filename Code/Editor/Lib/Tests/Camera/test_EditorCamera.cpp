@@ -7,7 +7,7 @@
  */
 
 #include <AZTestShared/Math/MathTestHelpers.h>
-#include <AtomToolsFramework/Viewport/ModularViewportCameraController.h>
+#include <JE/Editor/Tools/Viewport/ModularViewportCameraController.h>
 #include <AzCore/UnitTest/TestTypes.h>
 #include <AzFramework/Viewport/ViewportControllerList.h>
 #include <AzTest/GemTestEnvironment.h>
@@ -27,7 +27,7 @@ namespace UnitTest
     {
     public:
         AZ::ComponentApplication* m_application = nullptr;
-        AtomToolsFramework::ModularCameraViewportContext* m_cameraViewportContextView = nullptr;
+        JE::Editor::Tools::ModularCameraViewportContext* m_cameraViewportContextView = nullptr;
         AZStd::unique_ptr<SandboxEditor::EditorModularViewportCameraComposer> m_editorModularViewportCameraComposer;
         AzFramework::ViewportControllerListPtr m_controllerList;
         AZ::Entity* m_entity = nullptr;
@@ -59,9 +59,9 @@ namespace UnitTest
             auto controller = m_editorModularViewportCameraComposer->CreateModularViewportCameraController();
             // set some overrides for the test
             controller->SetCameraViewportContextBuilderCallback(
-                [this](AZStd::unique_ptr<AtomToolsFramework::ModularCameraViewportContext>& cameraViewportContext) mutable
+                [this](AZStd::unique_ptr<JE::Editor::Tools::ModularCameraViewportContext>& cameraViewportContext) mutable
                 {
-                    cameraViewportContext = AZStd::make_unique<AtomToolsFramework::PlaceholderModularCameraViewportContextImpl>();
+                    cameraViewportContext = AZStd::make_unique<JE::Editor::Tools::PlaceholderModularCameraViewportContextImpl>();
                     m_cameraViewportContextView = cameraViewportContext.get();
                 });
 
@@ -138,12 +138,12 @@ namespace UnitTest
         // Given/When
         const AZ::Transform referenceFrame = AZ::Transform::CreateFromQuaternionAndTranslation(
             AZ::Quaternion::CreateRotationX(AZ::DegToRad(90.0f)), AZ::Vector3(1.0f, 2.0f, 3.0f));
-        AtomToolsFramework::ModularViewportCameraControllerRequestBus::Event(
-            TestViewportId, &AtomToolsFramework::ModularViewportCameraControllerRequestBus::Events::StartTrackingTransform, referenceFrame);
+        JE::Editor::Tools::ModularViewportCameraControllerRequestBus::Event(
+            TestViewportId, &JE::Editor::Tools::ModularViewportCameraControllerRequestBus::Events::StartTrackingTransform, referenceFrame);
 
         bool trackingTransform = false;
-        AtomToolsFramework::ModularViewportCameraControllerRequestBus::EventResult(
-            trackingTransform, TestViewportId, &AtomToolsFramework::ModularViewportCameraControllerRequestBus::Events::IsTrackingTransform);
+        JE::Editor::Tools::ModularViewportCameraControllerRequestBus::EventResult(
+            trackingTransform, TestViewportId, &JE::Editor::Tools::ModularViewportCameraControllerRequestBus::Events::IsTrackingTransform);
 
         // Then
         EXPECT_THAT(trackingTransform, ::testing::IsTrue());
@@ -154,17 +154,17 @@ namespace UnitTest
         // Given
         const AZ::Transform referenceFrame = AZ::Transform::CreateFromQuaternionAndTranslation(
             AZ::Quaternion::CreateRotationX(AZ::DegToRad(90.0f)), AZ::Vector3(1.0f, 2.0f, 3.0f));
-        AtomToolsFramework::ModularViewportCameraControllerRequestBus::Event(
-            TestViewportId, &AtomToolsFramework::ModularViewportCameraControllerRequestBus::Events::StartTrackingTransform, referenceFrame);
+        JE::Editor::Tools::ModularViewportCameraControllerRequestBus::Event(
+            TestViewportId, &JE::Editor::Tools::ModularViewportCameraControllerRequestBus::Events::StartTrackingTransform, referenceFrame);
 
         // When
-        AtomToolsFramework::ModularViewportCameraControllerRequestBus::Event(
-            TestViewportId, &AtomToolsFramework::ModularViewportCameraControllerRequestBus::Events::StopTrackingTransform);
+        JE::Editor::Tools::ModularViewportCameraControllerRequestBus::Event(
+            TestViewportId, &JE::Editor::Tools::ModularViewportCameraControllerRequestBus::Events::StopTrackingTransform);
 
         // Then
         bool trackingTransform = false;
-        AtomToolsFramework::ModularViewportCameraControllerRequestBus::EventResult(
-            trackingTransform, TestViewportId, &AtomToolsFramework::ModularViewportCameraControllerRequestBus::Events::IsTrackingTransform);
+        JE::Editor::Tools::ModularViewportCameraControllerRequestBus::EventResult(
+            trackingTransform, TestViewportId, &JE::Editor::Tools::ModularViewportCameraControllerRequestBus::Events::IsTrackingTransform);
 
         EXPECT_THAT(trackingTransform, ::testing::IsFalse());
     }
@@ -174,9 +174,9 @@ namespace UnitTest
         // When
         AZ::Transform transformToInterpolateTo = AZ::Transform::CreateFromQuaternionAndTranslation(
             AZ::Quaternion::CreateRotationZ(AZ::DegToRad(90.0f)), AZ::Vector3(20.0f, 40.0f, 60.0f));
-        AtomToolsFramework::ModularViewportCameraControllerRequestBus::Event(
+        JE::Editor::Tools::ModularViewportCameraControllerRequestBus::Event(
             TestViewportId,
-            &AtomToolsFramework::ModularViewportCameraControllerRequestBus::Events::InterpolateToTransform,
+            &JE::Editor::Tools::ModularViewportCameraControllerRequestBus::Events::InterpolateToTransform,
             transformToInterpolateTo,
             InterpolateToTransformDuration);
 
@@ -197,16 +197,16 @@ namespace UnitTest
         // Given
         const AZ::Transform referenceFrame = AZ::Transform::CreateFromQuaternionAndTranslation(
             AZ::Quaternion::CreateRotationX(AZ::DegToRad(90.0f)), AZ::Vector3(1.0f, 2.0f, 3.0f));
-        AtomToolsFramework::ModularViewportCameraControllerRequestBus::Event(
-            TestViewportId, &AtomToolsFramework::ModularViewportCameraControllerRequestBus::Events::StartTrackingTransform, referenceFrame);
+        JE::Editor::Tools::ModularViewportCameraControllerRequestBus::Event(
+            TestViewportId, &JE::Editor::Tools::ModularViewportCameraControllerRequestBus::Events::StartTrackingTransform, referenceFrame);
 
         AZ::Transform transformToInterpolateTo = AZ::Transform::CreateFromQuaternionAndTranslation(
             AZ::Quaternion::CreateRotationZ(AZ::DegToRad(90.0f)), AZ::Vector3(20.0f, 40.0f, 60.0f));
 
         // When
-        AtomToolsFramework::ModularViewportCameraControllerRequestBus::Event(
+        JE::Editor::Tools::ModularViewportCameraControllerRequestBus::Event(
             TestViewportId,
-            &AtomToolsFramework::ModularViewportCameraControllerRequestBus::Events::InterpolateToTransform,
+            &JE::Editor::Tools::ModularViewportCameraControllerRequestBus::Events::InterpolateToTransform,
             transformToInterpolateTo,
             InterpolateToTransformDuration);
 
@@ -226,10 +226,10 @@ namespace UnitTest
     {
         // Given/When
         bool interpolationBegan = false;
-        AtomToolsFramework::ModularViewportCameraControllerRequestBus::EventResult(
+        JE::Editor::Tools::ModularViewportCameraControllerRequestBus::EventResult(
             interpolationBegan,
             TestViewportId,
-            &AtomToolsFramework::ModularViewportCameraControllerRequestBus::Events::InterpolateToTransform,
+            &JE::Editor::Tools::ModularViewportCameraControllerRequestBus::Events::InterpolateToTransform,
             AZ::Transform::CreateTranslation(AZ::Vector3(10.0f, 10.0f, 10.0f)),
             InterpolateToTransformDuration);
 
@@ -243,10 +243,10 @@ namespace UnitTest
 
         // Given/When
         bool initialInterpolationBegan = false;
-        AtomToolsFramework::ModularViewportCameraControllerRequestBus::EventResult(
+        JE::Editor::Tools::ModularViewportCameraControllerRequestBus::EventResult(
             initialInterpolationBegan,
             TestViewportId,
-            &AtomToolsFramework::ModularViewportCameraControllerRequestBus::Events::InterpolateToTransform,
+            &JE::Editor::Tools::ModularViewportCameraControllerRequestBus::Events::InterpolateToTransform,
             transformToInterpolateTo,
             InterpolateToTransformDuration);
 
@@ -254,16 +254,16 @@ namespace UnitTest
             { TestViewportId, AzFramework::FloatSeconds(HalfInterpolateToTransformDuration), AZ::ScriptTimePoint() });
 
         bool nextInterpolationBegan = true;
-        AtomToolsFramework::ModularViewportCameraControllerRequestBus::EventResult(
+        JE::Editor::Tools::ModularViewportCameraControllerRequestBus::EventResult(
             nextInterpolationBegan,
             TestViewportId,
-            &AtomToolsFramework::ModularViewportCameraControllerRequestBus::Events::InterpolateToTransform,
+            &JE::Editor::Tools::ModularViewportCameraControllerRequestBus::Events::InterpolateToTransform,
             transformToInterpolateTo,
             InterpolateToTransformDuration);
 
         bool interpolating = false;
-        AtomToolsFramework::ModularViewportCameraControllerRequestBus::EventResult(
-            interpolating, TestViewportId, &AtomToolsFramework::ModularViewportCameraControllerRequestBus::Events::IsInterpolating);
+        JE::Editor::Tools::ModularViewportCameraControllerRequestBus::EventResult(
+            interpolating, TestViewportId, &JE::Editor::Tools::ModularViewportCameraControllerRequestBus::Events::IsInterpolating);
 
         // Then
         EXPECT_THAT(initialInterpolationBegan, ::testing::IsTrue());
@@ -278,10 +278,10 @@ namespace UnitTest
 
         // Given/When
         bool initialInterpolationBegan = false;
-        AtomToolsFramework::ModularViewportCameraControllerRequestBus::EventResult(
+        JE::Editor::Tools::ModularViewportCameraControllerRequestBus::EventResult(
             initialInterpolationBegan,
             TestViewportId,
-            &AtomToolsFramework::ModularViewportCameraControllerRequestBus::Events::InterpolateToTransform,
+            &JE::Editor::Tools::ModularViewportCameraControllerRequestBus::Events::InterpolateToTransform,
             firstTransformToInterpolateTo,
             InterpolateToTransformDuration);
 
@@ -289,16 +289,16 @@ namespace UnitTest
             { TestViewportId, AzFramework::FloatSeconds(HalfInterpolateToTransformDuration), AZ::ScriptTimePoint() });
 
         bool nextInterpolationBegan = false;
-        AtomToolsFramework::ModularViewportCameraControllerRequestBus::EventResult(
+        JE::Editor::Tools::ModularViewportCameraControllerRequestBus::EventResult(
             nextInterpolationBegan,
             TestViewportId,
-            &AtomToolsFramework::ModularViewportCameraControllerRequestBus::Events::InterpolateToTransform,
+            &JE::Editor::Tools::ModularViewportCameraControllerRequestBus::Events::InterpolateToTransform,
             secondTransformToInterpolateTo,
             InterpolateToTransformDuration);
 
         bool interpolating = false;
-        AtomToolsFramework::ModularViewportCameraControllerRequestBus::EventResult(
-            interpolating, TestViewportId, &AtomToolsFramework::ModularViewportCameraControllerRequestBus::Events::IsInterpolating);
+        JE::Editor::Tools::ModularViewportCameraControllerRequestBus::EventResult(
+            interpolating, TestViewportId, &JE::Editor::Tools::ModularViewportCameraControllerRequestBus::Events::IsInterpolating);
 
         m_controllerList->UpdateViewport(
             { TestViewportId, AzFramework::FloatSeconds(InterpolateToTransformDuration), AZ::ScriptTimePoint() });
@@ -316,10 +316,10 @@ namespace UnitTest
     {
         // Given/When
         bool initialInterpolationBegan = false;
-        AtomToolsFramework::ModularViewportCameraControllerRequestBus::EventResult(
+        JE::Editor::Tools::ModularViewportCameraControllerRequestBus::EventResult(
             initialInterpolationBegan,
             TestViewportId,
-            &AtomToolsFramework::ModularViewportCameraControllerRequestBus::Events::InterpolateToTransform,
+            &JE::Editor::Tools::ModularViewportCameraControllerRequestBus::Events::InterpolateToTransform,
             AZ::Transform::CreateTranslation(AZ::Vector3(10.0f, 10.0f, 10.0f)),
             InterpolateToTransformDuration);
 
@@ -327,14 +327,14 @@ namespace UnitTest
             { TestViewportId, AzFramework::FloatSeconds(InterpolateToTransformDuration + 0.5f), AZ::ScriptTimePoint() });
 
         bool interpolating = true;
-        AtomToolsFramework::ModularViewportCameraControllerRequestBus::EventResult(
-            interpolating, TestViewportId, &AtomToolsFramework::ModularViewportCameraControllerRequestBus::Events::IsInterpolating);
+        JE::Editor::Tools::ModularViewportCameraControllerRequestBus::EventResult(
+            interpolating, TestViewportId, &JE::Editor::Tools::ModularViewportCameraControllerRequestBus::Events::IsInterpolating);
 
         bool nextInterpolationBegan = false;
-        AtomToolsFramework::ModularViewportCameraControllerRequestBus::EventResult(
+        JE::Editor::Tools::ModularViewportCameraControllerRequestBus::EventResult(
             nextInterpolationBegan,
             TestViewportId,
-            &AtomToolsFramework::ModularViewportCameraControllerRequestBus::Events::InterpolateToTransform,
+            &JE::Editor::Tools::ModularViewportCameraControllerRequestBus::Events::InterpolateToTransform,
             AZ::Transform::CreateTranslation(AZ::Vector3(20.0f, 20.0f, 20.0f)),
             InterpolateToTransformDuration);
 
@@ -350,10 +350,10 @@ namespace UnitTest
 
         // Given/When
         bool initialInterpolationBegan = false;
-        AtomToolsFramework::ModularViewportCameraControllerRequestBus::EventResult(
+        JE::Editor::Tools::ModularViewportCameraControllerRequestBus::EventResult(
             initialInterpolationBegan,
             TestViewportId,
-            &AtomToolsFramework::ModularViewportCameraControllerRequestBus::Events::InterpolateToTransform,
+            &JE::Editor::Tools::ModularViewportCameraControllerRequestBus::Events::InterpolateToTransform,
             transformToInterpolateTo,
             InterpolateToTransformDuration);
 
@@ -361,14 +361,14 @@ namespace UnitTest
             { TestViewportId, AzFramework::FloatSeconds(InterpolateToTransformDuration), AZ::ScriptTimePoint() });
 
         bool interpolating = true;
-        AtomToolsFramework::ModularViewportCameraControllerRequestBus::EventResult(
-            interpolating, TestViewportId, &AtomToolsFramework::ModularViewportCameraControllerRequestBus::Events::IsInterpolating);
+        JE::Editor::Tools::ModularViewportCameraControllerRequestBus::EventResult(
+            interpolating, TestViewportId, &JE::Editor::Tools::ModularViewportCameraControllerRequestBus::Events::IsInterpolating);
 
         bool nextInterpolationBegan = false;
-        AtomToolsFramework::ModularViewportCameraControllerRequestBus::EventResult(
+        JE::Editor::Tools::ModularViewportCameraControllerRequestBus::EventResult(
             nextInterpolationBegan,
             TestViewportId,
-            &AtomToolsFramework::ModularViewportCameraControllerRequestBus::Events::InterpolateToTransform,
+            &JE::Editor::Tools::ModularViewportCameraControllerRequestBus::Events::InterpolateToTransform,
             transformToInterpolateTo,
             InterpolateToTransformDuration);
 

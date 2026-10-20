@@ -11,7 +11,7 @@
 #include <QMouseEvent>
 
 #include <JE/Render/RPI/Public/SceneBus.h>
-#include <AtomToolsFramework/Viewport/RenderViewportWidget.h>
+#include <JE/Editor/Tools/Viewport/RenderViewportWidget.h>
 #include <AzFramework/Viewport/CameraInput.h>
 #include <AzToolsFramework/ViewportUi/ViewportUiManager.h>
 
@@ -26,7 +26,7 @@ namespace EMStudio
     class AnimViewportRenderer;
 
     class AnimViewportWidget
-        : public AtomToolsFramework::RenderViewportWidget
+        : public JE::Editor::Tools::RenderViewportWidget
         , private AnimViewportRequestBus::Handler
         , private ViewportPluginRequestBus::Handler
         , private JE::Render::RPI::SceneNotificationBus::Handler

@@ -1,7 +1,7 @@
 /* Copyright (c) Contributors to the Open 3D Engine Project.
  * SPDX-License-Identifier: Apache-2.0 OR MIT */
 #include <JE/Editor/Materials/Graph/MaterialCanvasDocumentHistory.h>
-#include <AtomToolsFramework/Document/AtomToolsAnyDocument.h>
+#include <JE/Editor/Tools/Document/AtomToolsAnyDocument.h>
 #include <AzCore/Component/Entity.h>
 #include <AzCore/Serialization/Json/JsonSystemComponent.h>
 #include <AzCore/Serialization/Json/JsonUtils.h>
@@ -50,7 +50,7 @@ namespace UnitTest
             AZ::JsonRegistrationContext m_registrationContext;
         };
 
-        class HistoryAnyDocument final : public AtomToolsFramework::AtomToolsAnyDocument
+        class HistoryAnyDocument final : public JE::Editor::Tools::AtomToolsAnyDocument
         {
         public:
             explicit HistoryAnyDocument(const AZStd::any& content = AZStd::any(1.0f))
@@ -135,7 +135,7 @@ namespace UnitTest
             ASSERT_TRUE(document.EndEdit());
         }
         AZStd::unique_ptr<GraphHistoryApplication> m_application;
-        AtomToolsFramework::DocumentHistoryPolicy m_policy;
+        JE::Editor::Tools::DocumentHistoryPolicy m_policy;
         AZStd::unique_ptr<AZ::IO::LocalFileIO> m_fileIO;
     };
 

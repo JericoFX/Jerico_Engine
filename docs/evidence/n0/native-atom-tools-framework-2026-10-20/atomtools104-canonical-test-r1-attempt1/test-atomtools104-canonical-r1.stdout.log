@@ -1,0 +1,249 @@
+Test project F:/JericoEngine/JericoEngine/build/n0-validation/original-engine
+    Start 106: JE::EditorTools.Tests.main::TEST_RUN
+1/2 Test #106: JE::EditorTools.Tests.main::TEST_RUN .......   Passed    0.49 sec
+    Start 107: JE::EditorMaterials.Tests.main::TEST_RUN
+2/2 Test #107: JE::EditorMaterials.Tests.main::TEST_RUN ...***Failed    7.38 sec
+cwd = F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\Engine\Editor\Materials
+LIB: F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/profile/EditorMaterials.Tests.dll
+Loading: F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/profile/EditorMaterials.Tests.dll
+OKAY Library loaded: F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/profile/EditorMaterials.Tests.dll
+OKAY Symbol found: AzRunUnitTests
+Note: Google Test filter = -*SUITE_smoke*:*SUITE_periodic*:*SUITE_benchmark*:*SUITE_sandbox*:*SUITE_awsi*
+[==========] Running 86 tests from 13 test suites.
+[----------] Global test environment set-up.
+[----------] 2 tests from MaterialGraphCompilerGenerationTests
+[ RUN      ] MaterialGraphCompilerGenerationTests.ConnectedStandardPBRGeneratesRealSourcesWithoutClaimingAPSuccess
+[       OK ] MaterialGraphCompilerGenerationTests.ConnectedStandardPBRGeneratesRealSourcesWithoutClaimingAPSuccess (1151 ms)
+[ RUN      ] MaterialGraphCompilerGenerationTests.MissingTemplateFailsBeforeAPReportingOrSourcePublication
+[       OK ] MaterialGraphCompilerGenerationTests.MissingTemplateFailsBeforeAPReportingOrSourcePublication (632 ms)
+[----------] 2 tests from MaterialGraphCompilerGenerationTests (1784 ms total)
+
+[----------] 4 tests from PassGraphWorkspaceTests
+[ RUN      ] PassGraphWorkspaceTests.PassEditingSaveReopenAndGlobalUndoNeverQueueAutomaticCompilation
+[       OK ] PassGraphWorkspaceTests.PassEditingSaveReopenAndGlobalUndoNeverQueueAutomaticCompilation (636 ms)
+[ RUN      ] PassGraphWorkspaceTests.SharedPaneSwitchesPaletteAndActionsWithoutClosingEitherDocument
+[       OK ] PassGraphWorkspaceTests.SharedPaneSwitchesPaletteAndActionsWithoutClosingEitherDocument (340 ms)
+[ RUN      ] PassGraphWorkspaceTests.PassNodeConfigurationKeepsNoticeCompactAndInspectorUsable
+F:\JericoEngine\JericoEngine\Editor\Materials\Tests\GraphDocumentHistoryTests.cpp(911): error: Expected: (inspector) != (nullptr), actual: NULL vs (nullptr)
+
+[  FAILED  ] PassGraphWorkspaceTests.PassNodeConfigurationKeepsNoticeCompactAndInspectorUsable (187 ms)
+[ RUN      ] PassGraphWorkspaceTests.LegacyDefaultIsCanonicalizedButCustomTemplateIsPreserved
+[       OK ] PassGraphWorkspaceTests.LegacyDefaultIsCanonicalizedButCustomTemplateIsPreserved (138 ms)
+[----------] 4 tests from PassGraphWorkspaceTests (1301 ms total)
+
+[----------] 1 test from PassGraphCollisionTests
+[ RUN      ] PassGraphCollisionTests.DuplicateUuidDoesNotReplaceMaterialConfigOrEnterPassPalette
+[       OK ] PassGraphCollisionTests.DuplicateUuidDoesNotReplaceMaterialConfigOrEnterPassPalette (173 ms)
+[----------] 1 test from PassGraphCollisionTests (173 ms total)
+
+[----------] 2 tests from GraphDocumentHistoryTests
+[ RUN      ] GraphDocumentHistoryTests.RealCanvasReplayAndReopenPreserveLogicalReferencesAndGlobalChronology
+[       OK ] GraphDocumentHistoryTests.RealCanvasReplayAndReopenPreserveLogicalReferencesAndGlobalChronology (1164 ms)
+[ RUN      ] GraphDocumentHistoryTests.RejectedReplayPreservesLiveGraphSceneAndController
+[       OK ] GraphDocumentHistoryTests.RejectedReplayPreservesLiveGraphSceneAndController (283 ms)
+[----------] 2 tests from GraphDocumentHistoryTests (1447 ms total)
+
+[----------] 8 tests from GraphHistoryTests
+[ RUN      ] GraphHistoryTests.AnyDocumentAndEntityShareOneChronologicalHistory
+[       OK ] GraphHistoryTests.AnyDocumentAndEntityShareOneChronologicalHistory (20 ms)
+[ RUN      ] GraphHistoryTests.StandaloneRetainsLocalHistory
+[       OK ] GraphHistoryTests.StandaloneRetainsLocalHistory (19 ms)
+[ RUN      ] GraphHistoryTests.DestroyedDocumentCannotTargetAnotherDocument
+[       OK ] GraphHistoryTests.DestroyedDocumentCannotTargetAnotherDocument (19 ms)
+[ RUN      ] GraphHistoryTests.ChangedPathOrExternalContentRejectsReplayWithoutMutation
+[       OK ] GraphHistoryTests.ChangedPathOrExternalContentRejectsReplayWithoutMutation (20 ms)
+[ RUN      ] GraphHistoryTests.InvalidSnapshotDoesNotReplaceAnyContent
+[       OK ] GraphHistoryTests.InvalidSnapshotDoesNotReplaceAnyContent (19 ms)
+[ RUN      ] GraphHistoryTests.UnorderedContentReplayUsesValuesInsteadOfBinaryIterationOrder
+[       OK ] GraphHistoryTests.UnorderedContentReplayUsesValuesInsteadOfBinaryIterationOrder (22 ms)
+[ RUN      ] GraphHistoryTests.OpeningThenFinishingWithoutAnEditAddsNoHistory
+[       OK ] GraphHistoryTests.OpeningThenFinishingWithoutAnEditAddsNoHistory (26 ms)
+[ RUN      ] GraphHistoryTests.ReopenPreservesGlobalHistoryButChangedSchemaRejectsOldCommands
+[       OK ] GraphHistoryTests.ReopenPreservesGlobalHistoryButChangedSchemaRejectsOldCommands (36 ms)
+[----------] 8 tests from GraphHistoryTests (186 ms total)
+
+[----------] 12 tests from MaterialDocumentTests
+[ RUN      ] MaterialDocumentTests.RegistryObjectWritesKeepReporterLifetimeWithinEachOperation
+[       OK ] MaterialDocumentTests.RegistryObjectWritesKeepReporterLifetimeWithinEachOperation (20 ms)
+[ RUN      ] MaterialDocumentTests.NativeDocumentPreservesTypeIdentityAndBothFactoryModes
+[       OK ] MaterialDocumentTests.NativeDocumentPreservesTypeIdentityAndBothFactoryModes (18 ms)
+[ RUN      ] MaterialDocumentTests.OwnReflectionDoesNotClaimBaseInEitherRegistrationOrder
+[       OK ] MaterialDocumentTests.OwnReflectionDoesNotClaimBaseInEitherRegistrationOrder (19 ms)
+[ RUN      ] MaterialDocumentTests.MaterialAndEntityEditsReplayInOneChronologicalHistory
+[       OK ] MaterialDocumentTests.MaterialAndEntityEditsReplayInOneChronologicalHistory (18 ms)
+[ RUN      ] MaterialDocumentTests.SeparateDocumentsRemainIsolatedDuringGlobalUndo
+[       OK ] MaterialDocumentTests.SeparateDocumentsRemainIsolatedDuringGlobalUndo (19 ms)
+[ RUN      ] MaterialDocumentTests.StandaloneRetainsLocalUndoWithoutPostingToEditor
+[       OK ] MaterialDocumentTests.StandaloneRetainsLocalUndoWithoutPostingToEditor (18 ms)
+[ RUN      ] MaterialDocumentTests.UnchangedOrCancelledEditDoesNotPostHistory
+[       OK ] MaterialDocumentTests.UnchangedOrCancelledEditDoesNotPostHistory (19 ms)
+[ RUN      ] MaterialDocumentTests.DestroyedDocumentRejectsReplayWithoutTargetingAnotherDocument
+[       OK ] MaterialDocumentTests.DestroyedDocumentRejectsReplayWithoutTargetingAnotherDocument (18 ms)
+[ RUN      ] MaterialDocumentTests.ChangedSourcePathRejectsReplayAndPreservesCurrentValues
+[       OK ] MaterialDocumentTests.ChangedSourcePathRejectsReplayAndPreservesCurrentValues (19 ms)
+[ RUN      ] MaterialDocumentTests.ExternalContentChangeRejectsReplayInsteadOfOverwritingNewValues
+[       OK ] MaterialDocumentTests.ExternalContentChangeRejectsReplayInsteadOfOverwritingNewValues (18 ms)
+[ RUN      ] MaterialDocumentTests.ChangedPropertyTypeRejectsReplayWithoutApplyingOldType
+[       OK ] MaterialDocumentTests.ChangedPropertyTypeRejectsReplayWithoutApplyingOldType (18 ms)
+[ RUN      ] MaterialDocumentTests.DependencyReopenStatePreservesEditorHistoryWithoutLocalHistory
+[       OK ] MaterialDocumentTests.DependencyReopenStatePreservesEditorHistoryWithoutLocalHistory (21 ms)
+[----------] 12 tests from MaterialDocumentTests (233 ms total)
+
+[----------] 7 tests from MaterialTextureSetTests
+[ RUN      ] MaterialTextureSetTests.PolyHavenUsesCompleteSuffixesAndOnlyTheRealSameResolutionSet
+[       OK ] MaterialTextureSetTests.PolyHavenUsesCompleteSuffixesAndOnlyTheRealSameResolutionSet (39 ms)
+[ RUN      ] MaterialTextureSetTests.QuixelAndFabPreserveAssetIdAndLeaveDuplicatesUnselected
+[       OK ] MaterialTextureSetTests.QuixelAndFabPreserveAssetIdAndLeaveDuplicatesUnselected (28 ms)
+[ RUN      ] MaterialTextureSetTests.PackedChannelsRoundTripAsNativeMaterialSourceWithoutChangingNormalConvention
+[       OK ] MaterialTextureSetTests.PackedChannelsRoundTripAsNativeMaterialSourceWithoutChangingNormalConvention (35 ms)
+[ RUN      ] MaterialTextureSetTests.OrdpPreservesBlueHeightWithoutConnectingMetallicOrParallax
+[       OK ] MaterialTextureSetTests.OrdpPreservesBlueHeightWithoutConnectingMetallicOrParallax (26 ms)
+[ RUN      ] MaterialTextureSetTests.CreateNewPreservesManualCollisionAndProvenanceDoesNotAdoptAnotherSet
+[       OK ] MaterialTextureSetTests.CreateNewPreservesManualCollisionAndProvenanceDoesNotAdoptAnotherSet (37 ms)
+[ RUN      ] MaterialTextureSetTests.MissingOrInvalidBundledTypeVersionFailsBeforeWriting
+[       OK ] MaterialTextureSetTests.MissingOrInvalidBundledTypeVersionFailsBeforeWriting (52 ms)
+[ RUN      ] MaterialTextureSetTests.ExplicitNormalConventionsEmitComplementaryFlipsAndGenericKeepsTheDefault
+[       OK ] MaterialTextureSetTests.ExplicitNormalConventionsEmitComplementaryFlipsAndGenericKeepsTheDefault (34 ms)
+[----------] 7 tests from MaterialTextureSetTests (255 ms total)
+
+[----------] 7 tests from MaterialDocumentSourceChangeTests
+[ RUN      ] MaterialDocumentSourceChangeTests.IdenticalSourceEventsPreserveUnsavedOverridesAndUndo
+[       OK ] MaterialDocumentSourceChangeTests.IdenticalSourceEventsPreserveUnsavedOverridesAndUndo (45 ms)
+[ RUN      ] MaterialDocumentSourceChangeTests.ExternalPropertiesMetadataAndReferencesRemainObservable
+[       OK ] MaterialDocumentSourceChangeTests.ExternalPropertiesMetadataAndReferencesRemainObservable (68 ms)
+[ RUN      ] MaterialDocumentSourceChangeTests.DependencyChangesKeepTheirSeparateNotification
+[       OK ] MaterialDocumentSourceChangeTests.DependencyChangesKeepTheirSeparateNotification (43 ms)
+[ RUN      ] MaterialDocumentSourceChangeTests.MissingOrUnreadableSourceStillReportsExternalChange
+[       OK ] MaterialDocumentSourceChangeTests.MissingOrUnreadableSourceStillReportsExternalChange (41 ms)
+[ RUN      ] MaterialDocumentSourceChangeTests.SaveRefreshesLoadedBaselineAndAnExternalRevertIsNotHidden
+[       OK ] MaterialDocumentSourceChangeTests.SaveRefreshesLoadedBaselineAndAnExternalRevertIsNotHidden (57 ms)
+[ RUN      ] MaterialDocumentSourceChangeTests.UnknownJsonFieldsDoNotTurnAnExternalChangeIntoAnIdenticalMatch
+[       OK ] MaterialDocumentSourceChangeTests.UnknownJsonFieldsDoNotTurnAnExternalChangeIntoAnIdenticalMatch (46 ms)
+[ RUN      ] MaterialDocumentSourceChangeTests.ExternalRevertBeforeTheSaveEchoIsNotDiscarded
+[       OK ] MaterialDocumentSourceChangeTests.ExternalRevertBeforeTheSaveEchoIsNotDiscarded (43 ms)
+[----------] 7 tests from MaterialDocumentSourceChangeTests (347 ms total)
+
+[----------] 1 test from PassGraphCompilerTests
+[ RUN      ] PassGraphCompilerTests.UnimplementedGenerationFailsWithoutPublishingOutputs
+[       OK ] PassGraphCompilerTests.UnimplementedGenerationFailsWithoutPublishingOutputs (1 ms)
+[----------] 1 test from PassGraphCompilerTests (1 ms total)
+
+[----------] 11 tests from MaterialWorkspaceTests
+[ RUN      ] MaterialWorkspaceTests.ColorPickerAlphaResourceIsARealImage
+[       OK ] MaterialWorkspaceTests.ColorPickerAlphaResourceIsARealImage (25 ms)
+[ RUN      ] MaterialWorkspaceTests.NativeAlphaBrushComposesColorsWithoutMutatingTheCachedBackground
+[       OK ] MaterialWorkspaceTests.NativeAlphaBrushComposesColorsWithoutMutatingTheCachedBackground (25 ms)
+[ RUN      ] MaterialWorkspaceTests.BareInspectorDestruction
+[       OK ] MaterialWorkspaceTests.BareInspectorDestruction (28 ms)
+[ RUN      ] MaterialWorkspaceTests.SelectedInspectorDestruction
+[       OK ] MaterialWorkspaceTests.SelectedInspectorDestruction (29 ms)
+[ RUN      ] MaterialWorkspaceTests.ClosingAndRecreatingPaneRetainsTheNativeDocument
+[       OK ] MaterialWorkspaceTests.ClosingAndRecreatingPaneRetainsTheNativeDocument (32 ms)
+[ RUN      ] MaterialWorkspaceTests.HiddenModifiedDocumentCanCancelMainWindowClose
+[       OK ] MaterialWorkspaceTests.HiddenModifiedDocumentCanCancelMainWindowClose (33 ms)
+[ RUN      ] MaterialWorkspaceTests.DiscardApprovalKeepsDocumentAndHistoryUntilActualShutdown
+[       OK ] MaterialWorkspaceTests.DiscardApprovalKeepsDocumentAndHistoryUntilActualShutdown (31 ms)
+[ RUN      ] MaterialWorkspaceTests.SessionClosesBeforeDestroyingItsDocuments
+[       OK ] MaterialWorkspaceTests.SessionClosesBeforeDestroyingItsDocuments (24 ms)
+[ RUN      ] MaterialWorkspaceTests.NativeNodeAndShaderDocumentsShareTheRetainedSession
+[       OK ] MaterialWorkspaceTests.NativeNodeAndShaderDocumentsShareTheRetainedSession (25 ms)
+[ RUN      ] MaterialWorkspaceTests.CompilationStateOutlivesObserversAndRetainsEditsDuringTheJob
+[       OK ] MaterialWorkspaceTests.CompilationStateOutlivesObserversAndRetainsEditsDuringTheJob (25 ms)
+[ RUN      ] MaterialWorkspaceTests.DestroyedDocumentRejectsLateCompilationNotifications
+[       OK ] MaterialWorkspaceTests.DestroyedDocumentRejectsLateCompilationNotifications (24 ms)
+[----------] 11 tests from MaterialWorkspaceTests (307 ms total)
+
+[----------] 6 tests from MaterialSourceCreationTests
+[ RUN      ] MaterialSourceCreationTests.TextureContextMenuOffersOneGenerateMaterialActionOnlyForImages
+[       OK ] MaterialSourceCreationTests.TextureContextMenuOffersOneGenerateMaterialActionOnlyForImages (33 ms)
+[ RUN      ] MaterialSourceCreationTests.CreatesNativeMaterialSchemaWithTheSelectedTypeVersion
+[       OK ] MaterialSourceCreationTests.CreatesNativeMaterialSchemaWithTheSelectedTypeVersion (34 ms)
+[ RUN      ] MaterialSourceCreationTests.CreatesFromTheAliasedSourceReturnedByTheNativeDialog
+[       OK ] MaterialSourceCreationTests.CreatesFromTheAliasedSourceReturnedByTheNativeDialog (37 ms)
+[ RUN      ] MaterialSourceCreationTests.ExistingDestinationAndMaterialTypeAreNeverOverwritten
+[       OK ] MaterialSourceCreationTests.ExistingDestinationAndMaterialTypeAreNeverOverwritten (33 ms)
+[ RUN      ] MaterialSourceCreationTests.MissingMaterialTypeFailsWithoutCreatingADestination
+[       OK ] MaterialSourceCreationTests.MissingMaterialTypeFailsWithoutCreatingADestination (27 ms)
+[ RUN      ] MaterialSourceCreationTests.DestinationWriteFailureIsReportedWithoutCreatingAMaterial
+[       OK ] MaterialSourceCreationTests.DestinationWriteFailureIsReportedWithoutCreatingAMaterial (28 ms)
+[----------] 6 tests from MaterialSourceCreationTests (195 ms total)
+
+[----------] 20 tests from TextureContextMenuTests
+[ RUN      ] TextureContextMenuTests.ContextCreationDoesNotRequireOrOpenAMaterialWorkspace
+[       OK ] TextureContextMenuTests.ContextCreationDoesNotRequireOrOpenAMaterialWorkspace (42 ms)
+[ RUN      ] TextureContextMenuTests.ContextCreationSelectsOnlyItsMaterialWhenTheSourceEntryArrives
+[       OK ] TextureContextMenuTests.ContextCreationSelectsOnlyItsMaterialWhenTheSourceEntryArrives (41 ms)
+[ RUN      ] TextureContextMenuTests.DestroyedBrowserCancelsPendingMaterialSelection
+[       OK ] TextureContextMenuTests.DestroyedBrowserCancelsPendingMaterialSelection (42 ms)
+[ RUN      ] TextureContextMenuTests.ExistingCachedGeneratedSourceSelectsOnceWithoutWaitingForAnotherEntryAdded
+[       OK ] TextureContextMenuTests.ExistingCachedGeneratedSourceSelectsOnceWithoutWaitingForAnotherEntryAdded (43 ms)
+[ RUN      ] TextureContextMenuTests.AmbiguousCreationWaitsForSourceMetadataAfterItsDialogIsDestroyed
+[       OK ] TextureContextMenuTests.AmbiguousCreationWaitsForSourceMetadataAfterItsDialogIsDestroyed (41 ms)
+[ RUN      ] TextureContextMenuTests.ReparentedChooserKeepsSelectionOwnedByTheOriginalBrowser
+[       OK ] TextureContextMenuTests.ReparentedChooserKeepsSelectionOwnedByTheOriginalBrowser (49 ms)
+[ RUN      ] TextureContextMenuTests.ReparentedChooserPendingSelectionIsCancelledWithTheOriginalBrowser
+[       OK ] TextureContextMenuTests.ReparentedChooserPendingSelectionIsCancelledWithTheOriginalBrowser (43 ms)
+[ RUN      ] TextureContextMenuTests.CancelledAmbiguityDoesNotCreateMaterialOrPreparePresets
+[       OK ] TextureContextMenuTests.CancelledAmbiguityDoesNotCreateMaterialOrPreparePresets (38 ms)
+[ RUN      ] TextureContextMenuTests.WorkspaceConstructedAfterExplicitOpenAlreadySelectsItsDocument
+[       OK ] TextureContextMenuTests.WorkspaceConstructedAfterExplicitOpenAlreadySelectsItsDocument (41 ms)
+[ RUN      ] TextureContextMenuTests.ContextCallbackPreservesAnOccupiedManualMaterialAndReportsWithoutWorkspace
+[       OK ] TextureContextMenuTests.ContextCallbackPreservesAnOccupiedManualMaterialAndReportsWithoutWorkspace (36 ms)
+[ RUN      ] TextureContextMenuTests.ContextCallbackCreatesThenSelectsTheSameGeneratedMaterialWithoutWriting
+[       OK ] TextureContextMenuTests.ContextCallbackCreatesThenSelectsTheSameGeneratedMaterialWithoutWriting (46 ms)
+[ RUN      ] TextureContextMenuTests.AmbiguousCandidatesWaitForAnExplicitCompactChoiceWithoutWorkspace
+[       OK ] TextureContextMenuTests.AmbiguousCandidatesWaitForAnExplicitCompactChoiceWithoutWorkspace (47 ms)
+[ RUN      ] TextureContextMenuTests.ExplicitCandidateSelectionCreatesThatSourceRatherThanTheFirstFile
+[       OK ] TextureContextMenuTests.ExplicitCandidateSelectionCreatesThatSourceRatherThanTheFirstFile (45 ms)
+[ RUN      ] TextureContextMenuTests.AllSelectedTextureRolesReachTheirNativePresetOwnerBeforeCreation
+[       OK ] TextureContextMenuTests.AllSelectedTextureRolesReachTheirNativePresetOwnerBeforeCreation (44 ms)
+[ RUN      ] TextureContextMenuTests.PackedChannelsShareOneLinearRgbPresetRequest
+[       OK ] TextureContextMenuTests.PackedChannelsShareOneLinearRgbPresetRequest (37 ms)
+[ RUN      ] TextureContextMenuTests.PresetReviewFailurePreservesManualSettingsAndDoesNotPublishAMaterial
+[       OK ] TextureContextMenuTests.PresetReviewFailurePreservesManualSettingsAndDoesNotPublishAMaterial (37 ms)
+[ RUN      ] TextureContextMenuTests.MaterialCreateRaceRollsBackOnlyTheSidecarJustCreatedByTheOperation
+[       OK ] TextureContextMenuTests.MaterialCreateRaceRollsBackOnlyTheSidecarJustCreatedByTheOperation (42 ms)
+[ RUN      ] TextureContextMenuTests.ChangedSidecarIsPreservedWhenLaterPresetPreparationFails
+[       OK ] TextureContextMenuTests.ChangedSidecarIsPreservedWhenLaterPresetPreparationFails (43 ms)
+[ RUN      ] TextureContextMenuTests.WritableForeignSourceWithoutAssignedMapsCannotPublishOutsideTheCurrentProject
+[       OK ] TextureContextMenuTests.WritableForeignSourceWithoutAssignedMapsCannotPublishOutsideTheCurrentProject (39 ms)
+[ RUN      ] TextureContextMenuTests.UnassignedMapsCannotCreateMaterialInProtectedProjectDirectories
+[       OK ] TextureContextMenuTests.UnassignedMapsCannotCreateMaterialInProtectedProjectDirectories (59 ms)
+[----------] 20 tests from TextureContextMenuTests (867 ms total)
+
+[----------] 5 tests from GraphDocumentCreationTests
+[ RUN      ] GraphDocumentCreationTests.CreatesAtTheFinalPathBeforeEditingAndRemovesItsTemporary
+[       OK ] GraphDocumentCreationTests.CreatesAtTheFinalPathBeforeEditingAndRemovesItsTemporary (33 ms)
+[ RUN      ] GraphDocumentCreationTests.MaterialPaneKeepsItsDocumentWhileANodeDocumentOpens
+[       OK ] GraphDocumentCreationTests.MaterialPaneKeepsItsDocumentWhileANodeDocumentOpens (39 ms)
+[ RUN      ] GraphDocumentCreationTests.RetainedPaneBecomesInertBeforeItsSessionDestroysDocuments
+[       OK ] GraphDocumentCreationTests.RetainedPaneBecomesInertBeforeItsSessionDestroysDocuments (48 ms)
+[ RUN      ] GraphDocumentCreationTests.RejectsExistingAndRelativeDestinationsWithoutChangingThem
+[       OK ] GraphDocumentCreationTests.RejectsExistingAndRelativeDestinationsWithoutChangingThem (28 ms)
+[ RUN      ] GraphDocumentCreationTests.DestinationAppearingDuringSaveIsPreservedAndTheNewDocumentIsDestroyed
+[       OK ] GraphDocumentCreationTests.DestinationAppearingDuringSaveIsPreservedAndTheNewDocumentIsDestroyed (35 ms)
+[----------] 5 tests from GraphDocumentCreationTests (186 ms total)
+
+[----------] Global test environment tear-down
+[==========] 86 tests from 13 test suites ran. (7287 ms total)
+[  PASSED  ] 85 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] PassGraphWorkspaceTests.PassNodeConfigurationKeepsNoticeCompactAndInspectorUsable
+
+ 1 FAILED TEST
+OKAY AzRunUnitTests() returned 1
+Retry command: 
+F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/profile/AzTestRunner.exe F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/profile/EditorMaterials.Tests.dll AzRunUnitTests
+Returning code: 1
+
+
+50% tests passed, 1 tests failed out of 2
+
+Label Time Summary:
+FRAMEWORK_googletest    =   7.88 sec*proc (2 tests)
+SUITE_main              =   7.88 sec*proc (2 tests)
+
+Total Test time (real) =   8.65 sec
+
+The following tests FAILED:
+	107 - JE::EditorMaterials.Tests.main::TEST_RUN (Failed) FRAMEWORK_googletest SUITE_main

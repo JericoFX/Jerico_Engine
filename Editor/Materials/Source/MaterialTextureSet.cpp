@@ -4,7 +4,7 @@
 
 #include <JE/Editor/Render/RPI/Edit/Common/JsonReportingHelper.h>
 #include <JE/Editor/Render/RPI/Edit/Material/MaterialUtils.h>
-#include <AtomToolsFramework/Util/Util.h>
+#include <JE/Editor/Tools/Util/Util.h>
 #include <AzCore/IO/Path/Path.h>
 #include <AzCore/IO/SystemFile.h>
 #include <AzCore/Serialization/Json/JsonSerialization.h>
@@ -184,7 +184,7 @@ namespace JE::Editor
         AZ::Outcome<JE::Render::RPI::MaterialSourceData, AZStd::string> BlankSource(
             const AZStd::string& typePath, const AZStd::string& target)
         {
-            const AZStd::string source = AtomToolsFramework::GetPathWithoutAlias(typePath);
+            const AZStd::string source = JE::Editor::Tools::GetPathWithoutAlias(typePath);
             if (!AZ::IO::PathView(source).IsAbsolute() || !source.ends_with(".materialtype") ||
                 !AZ::IO::PathView(target).IsAbsolute() || !target.ends_with(".material"))
             {
@@ -201,7 +201,7 @@ namespace JE::Editor
             }
             JE::Render::RPI::MaterialSourceData data;
             data.m_materialTypeVersion = type.GetValue().m_version;
-            data.m_materialType = AtomToolsFramework::GetPathToExteralReference(target, source);
+            data.m_materialType = JE::Editor::Tools::GetPathToExteralReference(target, source);
             data.m_parentMaterial.clear();
             return AZ::Success(AZStd::move(data));
         }
@@ -209,7 +209,7 @@ namespace JE::Editor
         AZ::Outcome<JE::Render::RPI::MaterialSourceData, AZStd::string> StandardPbrSource(const AZStd::string& target)
         {
             // This authoring path only supports the bundled StandardPBR. Full type/functor validation remains with its builder.
-            const AZStd::string source = AtomToolsFramework::GetPathWithoutAlias(
+            const AZStd::string source = JE::Editor::Tools::GetPathWithoutAlias(
                 "@engroot@/Engine/Render/Features/Assets/Materials/Types/StandardPBR.materialtype");
             if (!AZ::IO::PathView(source).IsAbsolute() || !AZ::IO::PathView(target).IsAbsolute() || !target.ends_with(".material"))
             {
@@ -228,7 +228,7 @@ namespace JE::Editor
             }
             JE::Render::RPI::MaterialSourceData data;
             data.m_materialTypeVersion = document["version"].GetUint();
-            data.m_materialType = AtomToolsFramework::GetPathToExteralReference(target, source);
+            data.m_materialType = JE::Editor::Tools::GetPathToExteralReference(target, source);
             data.m_parentMaterial.clear();
             return AZ::Success(AZStd::move(data));
         }
@@ -236,7 +236,7 @@ namespace JE::Editor
 
     bool IsMaterialTextureSource(const AZStd::string& sourcePath)
     {
-        const AZ::IO::Path path = AZ::IO::Path(AtomToolsFramework::GetPathWithoutAlias(sourcePath)).LexicallyNormal();
+        const AZ::IO::Path path = AZ::IO::Path(JE::Editor::Tools::GetPathWithoutAlias(sourcePath)).LexicallyNormal();
         if (!path.IsAbsolute() || !IsImage(path))
         {
             return false;
@@ -252,7 +252,7 @@ namespace JE::Editor
 
     AZ::Outcome<MaterialTextureSet, AZStd::string> AnalyzeMaterialTextureSet(const AZStd::string& anchorPath)
     {
-        const AZ::IO::Path anchor = AZ::IO::Path(AtomToolsFramework::GetPathWithoutAlias(anchorPath)).LexicallyNormal();
+        const AZ::IO::Path anchor = AZ::IO::Path(JE::Editor::Tools::GetPathWithoutAlias(anchorPath)).LexicallyNormal();
         if (!IsMaterialTextureSource(anchor.Native()))
         {
             return AZ::Failure(AZStd::string("Select an existing local texture source."));
@@ -418,7 +418,7 @@ namespace JE::Editor
             {
                 return AZ::Failure(AZStd::string("A scalar texture requires an explicit RGBA channel."));
             }
-            data.SetPropertyValue(AZ::Name(property), AtomToolsFramework::GetPathToExteralReference(materialPath, candidate.path));
+            data.SetPropertyValue(AZ::Name(property), JE::Editor::Tools::GetPathToExteralReference(materialPath, candidate.path));
             if (channelProperty)
             {
                 data.SetPropertyValue(AZ::Name(channelProperty), AZStd::string(ChannelName(candidate.channel)));

@@ -11,20 +11,20 @@
 #include "MaterialTextureSet.h"
 #include <QLabel>
 #include <QPushButton>
-#include <AtomToolsFramework/Util/Util.h>
+#include <JE/Editor/Tools/Util/Util.h>
 #include <Atom/ImageProcessing/ImageProcessingEditorBus.h>
 #include <AzCore/Settings/SettingsRegistryMergeUtils.h>
 #include <QFileInfo>
 #include <JE/Editor/Render/RPI/Edit/Material/MaterialTypeSourceData.h>
 #include <JE/Editor/Render/RPI/Edit/Shader/ShaderSourceData.h>
 
-#include <AtomToolsFramework/Document/AtomToolsAnyDocument.h>
-#include <AtomToolsFramework/Document/AtomToolsDocumentInspector.h>
-#include <AtomToolsFramework/Document/CreateDocumentDialog.h>
-#include <AtomToolsFramework/AssetSelection/AssetSelectionComboBox.h>
-#include <AtomToolsFramework/Inspector/InspectorWidget.h>
-#include <AtomToolsFramework/Document/AtomToolsDocumentSystemRequestBus.h>
-#include <AtomToolsFramework/Graph/DynamicNode/DynamicNodeConfig.h>
+#include <JE/Editor/Tools/Document/AtomToolsAnyDocument.h>
+#include <JE/Editor/Tools/Document/AtomToolsDocumentInspector.h>
+#include <JE/Editor/Tools/Document/CreateDocumentDialog.h>
+#include <JE/Editor/Tools/AssetSelection/AssetSelectionComboBox.h>
+#include <JE/Editor/Tools/Inspector/InspectorWidget.h>
+#include <JE/Editor/Tools/Document/AtomToolsDocumentSystemRequestBus.h>
+#include <JE/Editor/Tools/Graph/DynamicNode/DynamicNodeConfig.h>
 #include <Tests/AssetSystemMocks.h>
 #include <AzCore/Component/ComponentApplication.h>
 #include <AzCore/Debug/TraceMessageBus.h>
@@ -82,7 +82,7 @@ namespace UnitTest
             // This isolated application skips static modules, including the native JSON serializers.
             AZ::ReflectionEnvironment::GetReflectionManager()->Reflect(
                 azrtti_typeid<AZ::JsonSystemComponent>(), &AZ::JsonSystemComponent::Reflect);
-            AtomToolsFramework::InspectorWidget::Reflect(m_application->GetSerializeContext());
+            JE::Editor::Tools::InspectorWidget::Reflect(m_application->GetSerializeContext());
         }
 
         void TearDown() override
@@ -93,13 +93,13 @@ namespace UnitTest
             LeakDetectionFixture::TearDown();
         }
 
-        AtomToolsFramework::DocumentTypeInfo EmptyDocumentType()
+        JE::Editor::Tools::DocumentTypeInfo EmptyDocumentType()
         {
-            AtomToolsFramework::DocumentTypeInfo type;
+            JE::Editor::Tools::DocumentTypeInfo type;
             type.m_documentTypeName = "Workspace lifecycle";
-            type.m_documentFactoryCallback = [](const AZ::Crc32& toolId, const AtomToolsFramework::DocumentTypeInfo& info)
+            type.m_documentFactoryCallback = [](const AZ::Crc32& toolId, const JE::Editor::Tools::DocumentTypeInfo& info)
             {
-                return aznew AtomToolsFramework::AtomToolsDocument(toolId, info);
+                return aznew JE::Editor::Tools::AtomToolsDocument(toolId, info);
             };
             return type;
         }
@@ -107,41 +107,41 @@ namespace UnitTest
         AZ::Uuid CreateDocument(const JE::Editor::MaterialWorkspaceSession& session)
         {
             AZ::Uuid id;
-            AtomToolsFramework::AtomToolsDocumentSystemRequestBus::EventResult(id, session.GetToolId(),
-                &AtomToolsFramework::AtomToolsDocumentSystemRequests::CreateDocumentFromTypeName,
+            JE::Editor::Tools::AtomToolsDocumentSystemRequestBus::EventResult(id, session.GetToolId(),
+                &JE::Editor::Tools::AtomToolsDocumentSystemRequests::CreateDocumentFromTypeName,
                 session.GetDocumentType().m_documentTypeName);
             return id;
         }
 
-        AtomToolsFramework::DocumentTypeInfo EditableDocumentType()
+        JE::Editor::Tools::DocumentTypeInfo EditableDocumentType()
         {
             // Use native document editing/serialization to test session lifetime without an asset/GPU pipeline.
-            return AtomToolsFramework::AtomToolsAnyDocument::BuildDocumentTypeInfo(
+            return JE::Editor::Tools::AtomToolsAnyDocument::BuildDocumentTypeInfo(
                 "Workspace value", {"workspace"}, {}, AZStd::any(0.25f), AZ::Uuid::CreateNull());
         }
 
         void Edit(const AZ::Uuid& id)
         {
             bool success = false;
-            AtomToolsFramework::AtomToolsDocumentRequestBus::EventResult(
-                success, id, &AtomToolsFramework::AtomToolsDocumentRequests::BeginEdit);
+            JE::Editor::Tools::AtomToolsDocumentRequestBus::EventResult(
+                success, id, &JE::Editor::Tools::AtomToolsDocumentRequests::BeginEdit);
             ASSERT_TRUE(success);
-            AtomToolsFramework::DocumentObjectInfoVector objects;
-            AtomToolsFramework::AtomToolsDocumentRequestBus::EventResult(
-                objects, id, &AtomToolsFramework::AtomToolsDocumentRequests::GetObjectInfo);
+            JE::Editor::Tools::DocumentObjectInfoVector objects;
+            JE::Editor::Tools::AtomToolsDocumentRequestBus::EventResult(
+                objects, id, &JE::Editor::Tools::AtomToolsDocumentRequests::GetObjectInfo);
             ASSERT_EQ(objects.size(), 1);
             ASSERT_EQ(objects.front().m_objectType, azrtti_typeid<float>());
             *static_cast<float*>(objects.front().m_objectPtr) = 0.75f;
-            AtomToolsFramework::AtomToolsDocumentRequestBus::EventResult(
-                success, id, &AtomToolsFramework::AtomToolsDocumentRequests::EndEdit);
+            JE::Editor::Tools::AtomToolsDocumentRequestBus::EventResult(
+                success, id, &JE::Editor::Tools::AtomToolsDocumentRequests::EndEdit);
             ASSERT_TRUE(success);
         }
 
         bool IsModified(const AZ::Uuid& id)
         {
             bool modified = false;
-            AtomToolsFramework::AtomToolsDocumentRequestBus::EventResult(
-                modified, id, &AtomToolsFramework::AtomToolsDocumentRequests::IsModified);
+            JE::Editor::Tools::AtomToolsDocumentRequestBus::EventResult(
+                modified, id, &JE::Editor::Tools::AtomToolsDocumentRequests::IsModified);
             return modified;
         }
 
@@ -212,7 +212,7 @@ namespace UnitTest
 
     TEST_F(MaterialWorkspaceTests, BareInspectorDestruction)
     {
-        auto* inspector = new AtomToolsFramework::AtomToolsDocumentInspector(JE::Editor::MaterialWorkspaceSession::GetToolId());
+        auto* inspector = new JE::Editor::Tools::AtomToolsDocumentInspector(JE::Editor::MaterialWorkspaceSession::GetToolId());
         delete inspector;
     }
 
@@ -221,7 +221,7 @@ namespace UnitTest
         JE::Editor::MaterialWorkspaceSession session(EmptyDocumentType());
         const auto id = CreateDocument(session);
         ASSERT_FALSE(id.IsNull());
-        auto* inspector = new AtomToolsFramework::AtomToolsDocumentInspector(JE::Editor::MaterialWorkspaceSession::GetToolId());
+        auto* inspector = new JE::Editor::Tools::AtomToolsDocumentInspector(JE::Editor::MaterialWorkspaceSession::GetToolId());
         inspector->SetDocumentSettingsPrefix("/JE/Editor/MaterialWorkspace/Inspector");
         inspector->SetDocumentId(id);
         inspector->SetDocumentId(AZ::Uuid::CreateNull());
@@ -238,12 +238,12 @@ namespace UnitTest
             JE::Editor::MaterialWorkspaceWidget view(session);
             view.close();
         }
-        ASSERT_TRUE(AtomToolsFramework::AtomToolsDocumentRequestBus::HasHandlers(id));
+        ASSERT_TRUE(JE::Editor::Tools::AtomToolsDocumentRequestBus::HasHandlers(id));
         ASSERT_EQ(session.GetDocumentIds().size(), 1);
         EXPECT_EQ(session.GetActiveDocumentId(), id);
         JE::Editor::MaterialWorkspaceWidget reopened(session);
         EXPECT_EQ(session.GetActiveDocumentId(), id);
-        EXPECT_TRUE(AtomToolsFramework::AtomToolsDocumentRequestBus::HasHandlers(id));
+        EXPECT_TRUE(JE::Editor::Tools::AtomToolsDocumentRequestBus::HasHandlers(id));
     }
 
     TEST_F(MaterialWorkspaceTests, HiddenModifiedDocumentCanCancelMainWindowClose)
@@ -262,7 +262,7 @@ namespace UnitTest
         EXPECT_TRUE(observed);
         EXPECT_TRUE(mainWindow.isVisible());
         EXPECT_TRUE(IsModified(id));
-        EXPECT_TRUE(AtomToolsFramework::AtomToolsDocumentRequestBus::HasHandlers(id));
+        EXPECT_TRUE(JE::Editor::Tools::AtomToolsDocumentRequestBus::HasHandlers(id));
     }
 
     TEST_F(MaterialWorkspaceTests, DiscardApprovalKeepsDocumentAndHistoryUntilActualShutdown)
@@ -277,12 +277,12 @@ namespace UnitTest
         EXPECT_TRUE(observed);
         EXPECT_TRUE(IsModified(id));
         bool canUndo = false;
-        AtomToolsFramework::AtomToolsDocumentRequestBus::EventResult(
-            canUndo, id, &AtomToolsFramework::AtomToolsDocumentRequests::CanUndo);
+        JE::Editor::Tools::AtomToolsDocumentRequestBus::EventResult(
+            canUndo, id, &JE::Editor::Tools::AtomToolsDocumentRequests::CanUndo);
         EXPECT_TRUE(canUndo);
-        AtomToolsFramework::DocumentObjectInfoVector objects;
-        AtomToolsFramework::AtomToolsDocumentRequestBus::EventResult(
-            objects, id, &AtomToolsFramework::AtomToolsDocumentRequests::GetObjectInfo);
+        JE::Editor::Tools::DocumentObjectInfoVector objects;
+        JE::Editor::Tools::AtomToolsDocumentRequestBus::EventResult(
+            objects, id, &JE::Editor::Tools::AtomToolsDocumentRequests::GetObjectInfo);
         ASSERT_EQ(objects.size(), 1);
         EXPECT_FLOAT_EQ(*static_cast<const float*>(objects.front().m_objectPtr), 0.75f);
         // A later close attempt can still be cancelled after another editor pane vetoes exit.
@@ -290,19 +290,19 @@ namespace UnitTest
         ChooseCloseDecision(QMessageBox::Cancel, observed);
         EXPECT_FALSE(session.ConfirmApplicationClose(nullptr));
         EXPECT_TRUE(observed);
-        EXPECT_TRUE(AtomToolsFramework::AtomToolsDocumentRequestBus::HasHandlers(id));
+        EXPECT_TRUE(JE::Editor::Tools::AtomToolsDocumentRequestBus::HasHandlers(id));
     }
 
     TEST_F(MaterialWorkspaceTests, SessionClosesBeforeDestroyingItsDocuments)
     {
-        class CloseRecorder : public AtomToolsFramework::AtomToolsDocumentNotificationBus::Handler
+        class CloseRecorder : public JE::Editor::Tools::AtomToolsDocumentNotificationBus::Handler
         {
         public:
             CloseRecorder() { BusConnect(JE::Editor::MaterialWorkspaceSession::GetToolId()); }
             ~CloseRecorder() override { BusDisconnect(); }
             void OnDocumentClosed(const AZ::Uuid& id) override
             {
-                EXPECT_TRUE(AtomToolsFramework::AtomToolsDocumentRequestBus::HasHandlers(id));
+                EXPECT_TRUE(JE::Editor::Tools::AtomToolsDocumentRequestBus::HasHandlers(id));
                 m_events.push_back("closed");
             }
             void OnDocumentDestroyed(const AZ::Uuid&) override { m_events.push_back("destroyed"); }
@@ -317,16 +317,16 @@ namespace UnitTest
         ASSERT_EQ(recorder.m_events.size(), 2);
         EXPECT_EQ(recorder.m_events[0], "closed");
         EXPECT_EQ(recorder.m_events[1], "destroyed");
-        EXPECT_FALSE(AtomToolsFramework::AtomToolsDocumentRequestBus::HasHandlers(id));
+        EXPECT_FALSE(JE::Editor::Tools::AtomToolsDocumentRequestBus::HasHandlers(id));
     }
 
     TEST_F(MaterialWorkspaceTests, NativeNodeAndShaderDocumentsShareTheRetainedSession)
     {
         JE::Editor::MaterialWorkspaceSession session(EmptyDocumentType());
-        const AtomToolsFramework::DocumentTypeInfoVector types = {
-            AtomToolsFramework::AtomToolsAnyDocument::BuildDocumentTypeInfo("Material Graph Node Config",
-                {"materialgraphnode"}, {"materialgraphnodetemplate"}, AZStd::any(AtomToolsFramework::DynamicNodeConfig()), AZ::Uuid::CreateNull()),
-            AtomToolsFramework::AtomToolsAnyDocument::BuildDocumentTypeInfo("Shader Source Data",
+        const JE::Editor::Tools::DocumentTypeInfoVector types = {
+            JE::Editor::Tools::AtomToolsAnyDocument::BuildDocumentTypeInfo("Material Graph Node Config",
+                {"materialgraphnode"}, {"materialgraphnodetemplate"}, AZStd::any(JE::Editor::Tools::DynamicNodeConfig()), AZ::Uuid::CreateNull()),
+            JE::Editor::Tools::AtomToolsAnyDocument::BuildDocumentTypeInfo("Shader Source Data",
                 {"shader"}, {}, AZStd::any(JE::Render::RPI::ShaderSourceData()), azrtti_typeid<JE::Render::RPI::ShaderSourceData>())};
         session.RegisterGraphDocumentTypes(types);
         session.RegisterGraphDocumentTypes(types);
@@ -334,17 +334,17 @@ namespace UnitTest
         const auto materialId = CreateDocument(session);
         ASSERT_FALSE(materialId.IsNull());
         EXPECT_FALSE(session.IsGraphDocument(materialId));
-        const AZ::Uuid expectedTypes[] = {azrtti_typeid<AtomToolsFramework::DynamicNodeConfig>(), azrtti_typeid<JE::Render::RPI::ShaderSourceData>()};
+        const AZ::Uuid expectedTypes[] = {azrtti_typeid<JE::Editor::Tools::DynamicNodeConfig>(), azrtti_typeid<JE::Render::RPI::ShaderSourceData>()};
         AZ::Uuid ids[2];
         for (size_t index = 0; index < types.size(); ++index)
         {
-            AtomToolsFramework::AtomToolsDocumentSystemRequestBus::EventResult(ids[index], session.GetToolId(),
-                &AtomToolsFramework::AtomToolsDocumentSystemRequests::CreateDocumentFromTypeName, types[index].m_documentTypeName);
+            JE::Editor::Tools::AtomToolsDocumentSystemRequestBus::EventResult(ids[index], session.GetToolId(),
+                &JE::Editor::Tools::AtomToolsDocumentSystemRequests::CreateDocumentFromTypeName, types[index].m_documentTypeName);
             ASSERT_FALSE(ids[index].IsNull());
             EXPECT_TRUE(session.IsGraphDocument(ids[index]));
-            AtomToolsFramework::DocumentObjectInfoVector objects;
-            AtomToolsFramework::AtomToolsDocumentRequestBus::EventResult(objects, ids[index],
-                &AtomToolsFramework::AtomToolsDocumentRequests::GetObjectInfo);
+            JE::Editor::Tools::DocumentObjectInfoVector objects;
+            JE::Editor::Tools::AtomToolsDocumentRequestBus::EventResult(objects, ids[index],
+                &JE::Editor::Tools::AtomToolsDocumentRequests::GetObjectInfo);
             ASSERT_EQ(objects.size(), 1);
             EXPECT_EQ(objects.front().m_objectType, expectedTypes[index]);
             EXPECT_NE(objects.front().m_objectPtr, nullptr);
@@ -352,12 +352,12 @@ namespace UnitTest
         EXPECT_NE(ids[0], ids[1]);
         EXPECT_EQ(session.GetDocumentIds().size(), 3);
         AZ::u32 count = 0;
-        AtomToolsFramework::AtomToolsDocumentSystemRequestBus::EventResult(count, session.GetToolId(),
-            &AtomToolsFramework::AtomToolsDocumentSystemRequests::GetDocumentCount);
+        JE::Editor::Tools::AtomToolsDocumentSystemRequestBus::EventResult(count, session.GetToolId(),
+            &JE::Editor::Tools::AtomToolsDocumentSystemRequests::GetDocumentCount);
         EXPECT_EQ(count, 3);
         ASSERT_TRUE(session.SelectDocument(ids[0]));
         ASSERT_TRUE(session.SelectDocument(ids[1]));
-        EXPECT_TRUE(AtomToolsFramework::AtomToolsDocumentRequestBus::HasHandlers(ids[0]));
+        EXPECT_TRUE(JE::Editor::Tools::AtomToolsDocumentRequestBus::HasHandlers(ids[0]));
         EXPECT_EQ(session.GetActiveDocumentId(), ids[1]);
     }
 
@@ -369,8 +369,8 @@ namespace UnitTest
         const auto type = EditableDocumentType();
         session.RegisterGraphDocumentTypes({type});
         AZ::Uuid id;
-        AtomToolsFramework::AtomToolsDocumentSystemRequestBus::EventResult(id, session.GetToolId(),
-            &AtomToolsFramework::AtomToolsDocumentSystemRequests::CreateDocumentFromTypeName, type.m_documentTypeName);
+        JE::Editor::Tools::AtomToolsDocumentSystemRequestBus::EventResult(id, session.GetToolId(),
+            &JE::Editor::Tools::AtomToolsDocumentSystemRequests::CreateDocumentFromTypeName, type.m_documentTypeName);
         ASSERT_FALSE(id.IsNull());
         int notifications = 0;
         {
@@ -381,16 +381,16 @@ namespace UnitTest
                 EXPECT_EQ(session.GetCompileState(id), State::Compiling);
                 ++notifications;
             });
-            AtomToolsFramework::GraphDocumentNotificationBus::Event(session.GetToolId(),
-                &AtomToolsFramework::GraphDocumentNotifications::OnCompileGraphStarted, id);
+            JE::Editor::Tools::GraphDocumentNotificationBus::Event(session.GetToolId(),
+                &JE::Editor::Tools::GraphDocumentNotifications::OnCompileGraphStarted, id);
             EXPECT_EQ(session.GetCompileState(id), State::Compiling);
             EXPECT_EQ(notifications, 1);
         }
         // The observer is gone. Edit the real native document, then deliver the job's completion contract.
         Edit(id);
         EXPECT_EQ(session.GetCompileState(id), State::CompilingModified);
-        AtomToolsFramework::GraphDocumentNotificationBus::Event(session.GetToolId(),
-            &AtomToolsFramework::GraphDocumentNotifications::OnCompileGraphCompleted, id);
+        JE::Editor::Tools::GraphDocumentNotificationBus::Event(session.GetToolId(),
+            &JE::Editor::Tools::GraphDocumentNotifications::OnCompileGraphCompleted, id);
         EXPECT_EQ(session.GetCompileState(id), State::Modified);
         EXPECT_EQ(notifications, 1); // QObject context destruction disconnected the old pane observer.
 
@@ -402,16 +402,16 @@ namespace UnitTest
             EXPECT_EQ(changedId, id);
             displayed = session.GetCompileState(id);
         });
-        AtomToolsFramework::GraphDocumentNotificationBus::Event(session.GetToolId(),
-            &AtomToolsFramework::GraphDocumentNotifications::OnCompileGraphStarted, id);
+        JE::Editor::Tools::GraphDocumentNotificationBus::Event(session.GetToolId(),
+            &JE::Editor::Tools::GraphDocumentNotifications::OnCompileGraphStarted, id);
         EXPECT_EQ(displayed, State::Compiling);
-        AtomToolsFramework::GraphDocumentNotificationBus::Event(session.GetToolId(),
-            &AtomToolsFramework::GraphDocumentNotifications::OnCompileGraphFailed, id);
+        JE::Editor::Tools::GraphDocumentNotificationBus::Event(session.GetToolId(),
+            &JE::Editor::Tools::GraphDocumentNotifications::OnCompileGraphFailed, id);
         EXPECT_EQ(displayed, State::Failed);
-        AtomToolsFramework::GraphDocumentNotificationBus::Event(session.GetToolId(),
-            &AtomToolsFramework::GraphDocumentNotifications::OnCompileGraphStarted, id);
-        AtomToolsFramework::GraphDocumentNotificationBus::Event(session.GetToolId(),
-            &AtomToolsFramework::GraphDocumentNotifications::OnCompileGraphCompleted, id);
+        JE::Editor::Tools::GraphDocumentNotificationBus::Event(session.GetToolId(),
+            &JE::Editor::Tools::GraphDocumentNotifications::OnCompileGraphStarted, id);
+        JE::Editor::Tools::GraphDocumentNotificationBus::Event(session.GetToolId(),
+            &JE::Editor::Tools::GraphDocumentNotifications::OnCompileGraphCompleted, id);
         EXPECT_EQ(displayed, State::Completed);
     }
 
@@ -423,26 +423,26 @@ namespace UnitTest
         const auto type = EditableDocumentType();
         session.RegisterGraphDocumentTypes({type});
         AZ::Uuid id;
-        AtomToolsFramework::AtomToolsDocumentSystemRequestBus::EventResult(id, session.GetToolId(),
-            &AtomToolsFramework::AtomToolsDocumentSystemRequests::CreateDocumentFromTypeName, type.m_documentTypeName);
+        JE::Editor::Tools::AtomToolsDocumentSystemRequestBus::EventResult(id, session.GetToolId(),
+            &JE::Editor::Tools::AtomToolsDocumentSystemRequests::CreateDocumentFromTypeName, type.m_documentTypeName);
         ASSERT_FALSE(id.IsNull());
-        AtomToolsFramework::GraphDocumentNotificationBus::Event(session.GetToolId(),
-            &AtomToolsFramework::GraphDocumentNotifications::OnCompileGraphStarted, id);
+        JE::Editor::Tools::GraphDocumentNotificationBus::Event(session.GetToolId(),
+            &JE::Editor::Tools::GraphDocumentNotifications::OnCompileGraphStarted, id);
         EXPECT_EQ(session.GetCompileState(id), State::Compiling);
         bool destroyed = false;
-        AtomToolsFramework::AtomToolsDocumentSystemRequestBus::EventResult(destroyed, session.GetToolId(),
-            &AtomToolsFramework::AtomToolsDocumentSystemRequests::DestroyDocument, id);
+        JE::Editor::Tools::AtomToolsDocumentSystemRequestBus::EventResult(destroyed, session.GetToolId(),
+            &JE::Editor::Tools::AtomToolsDocumentSystemRequests::DestroyDocument, id);
         ASSERT_TRUE(destroyed);
         EXPECT_EQ(session.GetCompileState(id), State::NotCompiled);
         EXPECT_TRUE(session.GetDocumentIds().empty());
         int notifications = 0;
         QWidget observer;
         QObject::connect(&session, &Session::CompileStateChanged, &observer, [&](const AZ::Uuid&) { ++notifications; });
-        for (const auto event : {&AtomToolsFramework::GraphDocumentNotifications::OnCompileGraphStarted,
-            &AtomToolsFramework::GraphDocumentNotifications::OnCompileGraphCompleted,
-            &AtomToolsFramework::GraphDocumentNotifications::OnCompileGraphFailed})
+        for (const auto event : {&JE::Editor::Tools::GraphDocumentNotifications::OnCompileGraphStarted,
+            &JE::Editor::Tools::GraphDocumentNotifications::OnCompileGraphCompleted,
+            &JE::Editor::Tools::GraphDocumentNotifications::OnCompileGraphFailed})
         {
-            AtomToolsFramework::GraphDocumentNotificationBus::Event(session.GetToolId(), event, id);
+            JE::Editor::Tools::GraphDocumentNotificationBus::Event(session.GetToolId(), event, id);
             EXPECT_EQ(session.GetCompileState(id), State::NotCompiled);
         }
         EXPECT_EQ(notifications, 0);
@@ -658,11 +658,11 @@ namespace UnitTest
 
         // This document reads the real material source and exercises native document dispatch/lifetime.
         // It does not create an RPI instance or claim that a cooked texture/material is ready.
-        class SourceDocument final : public AtomToolsFramework::AtomToolsDocument
+        class SourceDocument final : public JE::Editor::Tools::AtomToolsDocument
         {
         public:
             AZ_CLASS_ALLOCATOR(SourceDocument, AZ::SystemAllocator);
-            SourceDocument(const AZ::Crc32& toolId, const AtomToolsFramework::DocumentTypeInfo& info, int& opens)
+            SourceDocument(const AZ::Crc32& toolId, const JE::Editor::Tools::DocumentTypeInfo& info, int& opens)
                 : AtomToolsDocument(toolId, info), m_opens(opens) {}
             bool Open(const AZStd::string& path) override
             {
@@ -674,12 +674,12 @@ namespace UnitTest
             int& m_opens;
         };
 
-        AtomToolsFramework::DocumentTypeInfo SourceType(int& opens)
+        JE::Editor::Tools::DocumentTypeInfo SourceType(int& opens)
         {
             auto type = EmptyDocumentType();
             type.m_supportedExtensionsToOpen.push_back({"Material source", "material"});
-            type.m_documentFactoryCallback = [&opens](const AZ::Crc32& toolId, const AtomToolsFramework::DocumentTypeInfo& info)
-                -> AtomToolsFramework::AtomToolsDocumentRequests*
+            type.m_documentFactoryCallback = [&opens](const AZ::Crc32& toolId, const JE::Editor::Tools::DocumentTypeInfo& info)
+                -> JE::Editor::Tools::AtomToolsDocumentRequests*
             {
                 return aznew SourceDocument(toolId, info, opens);
             };
@@ -1346,7 +1346,7 @@ namespace UnitTest
         auto set = JE::Editor::AnalyzeMaterialTextureSet(texture);
         ASSERT_TRUE(set.IsSuccess());
         AZStd::string target = set.GetValue().suggestedMaterialPath;
-        ASSERT_TRUE(AtomToolsFramework::ValidateDocumentPath(target));
+        ASSERT_TRUE(JE::Editor::Tools::ValidateDocumentPath(target));
         int opens = 0;
         JE::Editor::MaterialWorkspaceSession session(SourceType(opens));
         QWidget pane;
@@ -1643,7 +1643,7 @@ namespace UnitTest
             });
         AZStd::string target = set.GetValue().suggestedMaterialPath;
         // The generic source-folder validator permits this location; the authoritative project guard must still reject it.
-        ASSERT_TRUE(AtomToolsFramework::ValidateDocumentPath(target));
+        ASSERT_TRUE(JE::Editor::Tools::ValidateDocumentPath(target));
         int opens = 0;
         JE::Editor::MaterialWorkspaceSession session(SourceType(opens));
         QWidget pane;
@@ -1678,7 +1678,7 @@ namespace UnitTest
             ASSERT_TRUE(set.IsSuccess());
             ASSERT_TRUE(set.GetValue().selected.empty());
             AZStd::string target = set.GetValue().suggestedMaterialPath;
-            ASSERT_TRUE(AtomToolsFramework::ValidateDocumentPath(target));
+            ASSERT_TRUE(JE::Editor::Tools::ValidateDocumentPath(target));
             TriggerGenerate(imagePath.toUtf8().constData(), &pane);
             EXPECT_FALSE(AZ::IO::SystemFile::Exists(target.c_str())) << folder;
             EXPECT_TRUE(m_presets->calls.empty());
@@ -1699,8 +1699,8 @@ namespace UnitTest
         EXPECT_EQ(session.GetActiveDocumentId(), id);
         EXPECT_EQ(session.GetDocumentIds().size(), 1);
         AZStd::string actualPath;
-        AtomToolsFramework::AtomToolsDocumentRequestBus::EventResult(actualPath, id,
-            &AtomToolsFramework::AtomToolsDocumentRequests::GetAbsolutePath);
+        JE::Editor::Tools::AtomToolsDocumentRequestBus::EventResult(actualPath, id,
+            &JE::Editor::Tools::AtomToolsDocumentRequests::GetAbsolutePath);
         EXPECT_EQ(QDir::fromNativeSeparators(QString::fromUtf8(actualPath.c_str())),
             QDir::fromNativeSeparators(QString::fromUtf8(path.c_str())));
         auto json = AZ::JsonSerializationUtils::ReadJsonFile(path);
@@ -1714,7 +1714,7 @@ namespace UnitTest
     TEST_F(GraphDocumentCreationTests, MaterialPaneKeepsItsDocumentWhileANodeDocumentOpens)
     {
         JE::Editor::MaterialWorkspaceSession session(EditableDocumentType());
-        const auto nodeType = AtomToolsFramework::AtomToolsAnyDocument::BuildDocumentTypeInfo(
+        const auto nodeType = JE::Editor::Tools::AtomToolsAnyDocument::BuildDocumentTypeInfo(
             "Workspace node config", {"materialgraphnode"}, {}, AZStd::any(0.25f), AZ::Uuid::CreateNull());
         session.RegisterGraphDocumentTypes({nodeType});
         const AZStd::string materialPath = m_directory.filePath("material.workspace").toUtf8().constData();
@@ -1733,7 +1733,7 @@ namespace UnitTest
             EXPECT_EQ(documents->count(), 1);
             EXPECT_EQ(AZ::Uuid::CreateString(documents->currentData().toString().toUtf8().constData()), materialId);
             pane.close();
-            EXPECT_TRUE(AtomToolsFramework::AtomToolsDocumentRequestBus::HasHandlers(nodeId));
+            EXPECT_TRUE(JE::Editor::Tools::AtomToolsDocumentRequestBus::HasHandlers(nodeId));
         }
         JE::Editor::MaterialWorkspaceWidget reopened(session);
         auto* documents = reopened.findChild<QComboBox*>();
@@ -1759,11 +1759,11 @@ namespace UnitTest
         EXPECT_TRUE(pane->isEnabled());
         EXPECT_EQ(session->GetActiveDocumentId(), id);
         bool canUndo = false;
-        AtomToolsFramework::AtomToolsDocumentRequestBus::EventResult(
-            canUndo, id, &AtomToolsFramework::AtomToolsDocumentRequests::CanUndo);
+        JE::Editor::Tools::AtomToolsDocumentRequestBus::EventResult(
+            canUndo, id, &JE::Editor::Tools::AtomToolsDocumentRequests::CanUndo);
         EXPECT_TRUE(canUndo);
 
-        class CloseObserver final : public AtomToolsFramework::AtomToolsDocumentNotificationBus::Handler
+        class CloseObserver final : public JE::Editor::Tools::AtomToolsDocumentNotificationBus::Handler
         {
         public:
             CloseObserver(QWidget& pane, const AZ::Uuid& id)
@@ -1777,7 +1777,7 @@ namespace UnitTest
                 if (id == m_id)
                 {
                     EXPECT_FALSE(m_pane.isEnabled());
-                    EXPECT_TRUE(AtomToolsFramework::AtomToolsDocumentRequestBus::HasHandlers(id));
+                    EXPECT_TRUE(JE::Editor::Tools::AtomToolsDocumentRequestBus::HasHandlers(id));
                     m_closed = true;
                 }
             }
@@ -1799,7 +1799,7 @@ namespace UnitTest
         session.reset();
         EXPECT_TRUE(observer.m_closed);
         EXPECT_TRUE(observer.m_destroyed);
-        EXPECT_FALSE(AtomToolsFramework::AtomToolsDocumentRequestBus::HasHandlers(id));
+        EXPECT_FALSE(JE::Editor::Tools::AtomToolsDocumentRequestBus::HasHandlers(id));
         EXPECT_FALSE(pane->isEnabled());
         pane->show();
         QApplication::processEvents();
@@ -1814,7 +1814,7 @@ namespace UnitTest
         EXPECT_TRUE(pane->OpenDocument(nextPath).IsNull());
         EXPECT_EQ(nextSession.GetActiveDocumentId(), nextId);
         EXPECT_EQ(nextSession.GetDocumentIds().size(), 1);
-        EXPECT_TRUE(AtomToolsFramework::AtomToolsDocumentRequestBus::HasHandlers(nextId));
+        EXPECT_TRUE(JE::Editor::Tools::AtomToolsDocumentRequestBus::HasHandlers(nextId));
         pane->hide();
     }
 
@@ -1834,11 +1834,11 @@ namespace UnitTest
 
     TEST_F(GraphDocumentCreationTests, DestinationAppearingDuringSaveIsPreservedAndTheNewDocumentIsDestroyed)
     {
-        class ConcurrentDestinationDocument final : public AtomToolsFramework::AtomToolsAnyDocument
+        class ConcurrentDestinationDocument final : public JE::Editor::Tools::AtomToolsAnyDocument
         {
         public:
             AZ_CLASS_ALLOCATOR(ConcurrentDestinationDocument, AZ::SystemAllocator);
-            ConcurrentDestinationDocument(const AZ::Crc32& toolId, const AtomToolsFramework::DocumentTypeInfo& type, const AZStd::string& target)
+            ConcurrentDestinationDocument(const AZ::Crc32& toolId, const JE::Editor::Tools::DocumentTypeInfo& type, const AZStd::string& target)
                 : AtomToolsAnyDocument(toolId, type, AZStd::any(0.25f), AZ::Uuid::CreateNull()), m_target(target) {}
             bool SaveAsChild(const AZStd::string& path) override
             {
@@ -1851,8 +1851,8 @@ namespace UnitTest
         };
         const AZStd::string path = m_directory.filePath("concurrent.workspace").toUtf8().constData();
         auto type = EditableDocumentType();
-        type.m_documentFactoryCallback = [path](const AZ::Crc32& toolId, const AtomToolsFramework::DocumentTypeInfo& info)
-            -> AtomToolsFramework::AtomToolsDocumentRequests*
+        type.m_documentFactoryCallback = [path](const AZ::Crc32& toolId, const JE::Editor::Tools::DocumentTypeInfo& info)
+            -> JE::Editor::Tools::AtomToolsDocumentRequests*
         {
             return aznew ConcurrentDestinationDocument(toolId, info, path);
         };
@@ -1906,10 +1906,10 @@ namespace UnitTest
             ~AliasGuard() { m_fileIO->ClearAlias(m_alias); }
         } aliasGuard{fileIO, alias};
 
-        AtomToolsFramework::CreateDocumentDialog dialog(
+        JE::Editor::Tools::CreateDocumentDialog dialog(
             "Create Material", "Select Material Type", "Select Material Destination", directory.path(), {"material"}, {},
             [](const AZStd::string& path) { return path.ends_with(".materialtype"); });
-        auto* selector = dialog.findChild<AtomToolsFramework::AssetSelectionComboBox*>();
+        auto* selector = dialog.findChild<JE::Editor::Tools::AssetSelectionComboBox*>();
         ASSERT_NE(selector, nullptr);
         selector->AddPath(typePath);
         selector->SelectPath(typePath);

@@ -1,0 +1,18 @@
+{
+  "stderr": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-corefeature102\\atomtools104-family-ap-startup-r2-attempt1\\ap-atomtools104-family-startup-r2.stderr.log",
+    "bytes": 0,
+    "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+  },
+  "timedOut": false,
+  "priorityError": null,
+  "ramGuardTriggered": false,
+  "exitCode": 0,
+  "stdout": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-corefeature102\\atomtools104-family-ap-startup-r2-attempt1\\ap-atomtools104-family-startup-r2.stdout.log",
+    "bytes": 105080,
+    "sha256": "01CDC80E4684E11BE16FCFB84F27719077855A38F746F88FF762C9DE7763DD76"
+  },
+  "priorityRequested": "BelowNormal",
+  "seconds": 34.6993838
+}

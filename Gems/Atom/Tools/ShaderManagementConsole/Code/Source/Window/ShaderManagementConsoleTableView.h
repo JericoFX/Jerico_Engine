@@ -8,7 +8,7 @@
 
 #pragma once
 
-#include <AtomToolsFramework/Document/AtomToolsDocumentNotificationBus.h>
+#include <JE/Editor/Tools/Document/AtomToolsDocumentNotificationBus.h>
 #include <Document/ShaderManagementConsoleDocumentRequestBus.h>
 
 #include <QStandardItemModel>
@@ -28,7 +28,7 @@ namespace ShaderManagementConsole
 
     class ShaderManagementConsoleTableView
         : public QTableWidget
-        , public AtomToolsFramework::AtomToolsDocumentNotificationBus::Handler
+        , public JE::Editor::Tools::AtomToolsDocumentNotificationBus::Handler
     {
     public:
         AZ_CLASS_ALLOCATOR(ShaderManagementConsoleTableView, AZ::SystemAllocator);

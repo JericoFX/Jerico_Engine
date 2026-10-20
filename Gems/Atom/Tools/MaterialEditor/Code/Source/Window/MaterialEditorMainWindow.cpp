@@ -7,7 +7,7 @@
  */
 
 #include <Window/MaterialEditorMainWindow.h>
-#include <Window/MaterialEditorViewportContent.h>
+#include <JE/Editor/Materials/Viewport/MaterialPreviewViewportContent.h>
 
 #include <QApplication>
 #include <QMessageBox>
@@ -21,29 +21,29 @@ namespace MaterialEditor
         m_assetBrowser->GetSearchWidget()->SetFilterState("", JE::Render::RPI::StreamingImageAsset::Group, true);
         m_assetBrowser->GetSearchWidget()->SetFilterState("", JE::Render::RPI::MaterialAsset::Group, true);
 
-        m_documentInspector = new AtomToolsFramework::AtomToolsDocumentInspector(m_toolId, this);
+        m_documentInspector = new JE::Editor::Tools::AtomToolsDocumentInspector(m_toolId, this);
         m_documentInspector->SetDocumentSettingsPrefix("/O3DE/Atom/MaterialEditor/DocumentInspector");
         AddDockWidget(tr("Inspector").toUtf8().constData(), m_documentInspector, Qt::RightDockWidgetArea);
 
         // Set up the toolbar that controls the viewport settings
-        m_toolBar = new AtomToolsFramework::EntityPreviewViewportToolBar(m_toolId, this);
+        m_toolBar = new JE::Editor::Tools::EntityPreviewViewportToolBar(m_toolId, this);
 
         // Create the viewport widget that will be shared between all material editor documents
-        m_materialViewport = new AtomToolsFramework::EntityPreviewViewportWidget(m_toolId, this);
+        m_materialViewport = new JE::Editor::Tools::EntityPreviewViewportWidget(m_toolId, this);
 
         // Initialize the entity context that will be used to create all of the entities displayed in the viewport
         auto entityContext = AZStd::make_shared<AzFramework::EntityContext>();
         entityContext->InitContext();
 
         // Initialize the atom scene and pipeline that will bind to the viewport window to render entities and presets
-        auto viewportScene = AZStd::make_shared<AtomToolsFramework::EntityPreviewViewportScene>(
+        auto viewportScene = AZStd::make_shared<JE::Editor::Tools::EntityPreviewViewportScene>(
             m_toolId, m_materialViewport, entityContext, "MaterialEditorViewportWidget", "passes/mainrenderpipeline.azasset");
 
         // Viewport content will instantiate all of the entities that will be displayed and controlled by the viewport
-        auto viewportContent = AZStd::make_shared<MaterialEditorViewportContent>(m_toolId, m_materialViewport, entityContext);
+        auto viewportContent = AZStd::make_shared<JE::Editor::MaterialPreviewViewportContent>(m_toolId, m_materialViewport, entityContext);
 
         // The input controller creates and binds input behaviors to control viewport objects
-        auto viewportController = AZStd::make_shared<AtomToolsFramework::EntityPreviewViewportInputController>(m_toolId, m_materialViewport, viewportContent);
+        auto viewportController = AZStd::make_shared<JE::Editor::Tools::EntityPreviewViewportInputController>(m_toolId, m_materialViewport, viewportContent);
 
         // Inject the entity context, scene, content, and controller into the viewport widget
         m_materialViewport->Init(entityContext, viewportScene, viewportContent, viewportController);
@@ -52,7 +52,7 @@ namespace MaterialEditor
         centralWidget()->layout()->addWidget(m_toolBar);
         centralWidget()->layout()->addWidget(m_materialViewport);
 
-        m_viewportSettingsInspector = new AtomToolsFramework::EntityPreviewViewportSettingsInspector(m_toolId, this);
+        m_viewportSettingsInspector = new JE::Editor::Tools::EntityPreviewViewportSettingsInspector(m_toolId, this);
         AddDockWidget(tr("Viewport Settings").toUtf8().constData(), m_viewportSettingsInspector, Qt::LeftDockWidgetArea);
         SetDockWidgetVisible(tr("Viewport Settings").toUtf8().constData(), false);
 

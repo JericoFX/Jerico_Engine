@@ -31,6 +31,7 @@ ly_add_target(
                 JE::DebugImGui
                 JE::ProfilerCapture
                 JE::EditorMaterials
+                JE::EditorTools
 )
 
 ly_add_target(

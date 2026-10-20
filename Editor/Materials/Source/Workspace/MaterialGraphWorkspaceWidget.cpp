@@ -3,12 +3,12 @@
 #include "MaterialGraphWorkspaceWidget.h"
 #include <JE/Editor/Materials/Graph/MaterialGraphEnvironment.h>
 #include <JE/Editor/Materials/EditorMaterialSystemComponentRequestBus.h>
-#include <AtomToolsFramework/Document/AtomToolsDocumentInspector.h>
-#include <AtomToolsFramework/Document/AtomToolsDocumentRequestBus.h>
-#include <AtomToolsFramework/Document/CreateDocumentDialog.h>
-#include <AtomToolsFramework/Graph/GraphDocumentRequestBus.h>
-#include <AtomToolsFramework/Graph/GraphDocumentView.h>
-#include <AtomToolsFramework/Util/Util.h>
+#include <JE/Editor/Tools/Document/AtomToolsDocumentInspector.h>
+#include <JE/Editor/Tools/Document/AtomToolsDocumentRequestBus.h>
+#include <JE/Editor/Tools/Document/CreateDocumentDialog.h>
+#include <JE/Editor/Tools/Graph/GraphDocumentRequestBus.h>
+#include <JE/Editor/Tools/Graph/GraphDocumentView.h>
+#include <JE/Editor/Tools/Util/Util.h>
 #include <AzCore/Utils/Utils.h>
 #include <AzCore/IO/Path/Path.h>
 #include <AzCore/std/algorithm.h>
@@ -87,7 +87,7 @@ namespace JE::Editor
         graphColumn->setStretchFactor(0, 1);
         graphColumn->setStretchFactor(1, 1);
         columns->addWidget(graphColumn);
-        m_inspector = new AtomToolsFramework::AtomToolsDocumentInspector(session.GetToolId(), columns);
+        m_inspector = new JE::Editor::Tools::AtomToolsDocumentInspector(session.GetToolId(), columns);
         m_inspector->SetDocumentSettingsPrefix("/O3DE/Atom/MaterialCanvas/DocumentInspector");
         columns->addWidget(m_inspector);
         columns->setStretchFactor(0, 1);
@@ -125,7 +125,7 @@ namespace JE::Editor
                 SelectDocument(AZ::Uuid::CreateString(m_documents->itemData(index).toString().toUtf8().constData()));
             }
         });
-        AtomToolsFramework::AtomToolsDocumentNotificationBus::Handler::BusConnect(session.GetToolId());
+        JE::Editor::Tools::AtomToolsDocumentNotificationBus::Handler::BusConnect(session.GetToolId());
         connect(&session, &MaterialWorkspaceSession::CompileStateChanged, this, [this](const AZ::Uuid& id)
         {
             if (id == m_displayedDocumentId) { RefreshActions(); }
@@ -148,7 +148,7 @@ namespace JE::Editor
             m_graphView->SetActiveGraphId(GraphCanvas::GraphId(), true);
         }
         delete m_graphView;
-        AtomToolsFramework::AtomToolsDocumentNotificationBus::Handler::BusDisconnect();
+        JE::Editor::Tools::AtomToolsDocumentNotificationBus::Handler::BusDisconnect();
         AzToolsFramework::ToolsApplicationNotificationBus::Handler::BusDisconnect();
     }
 
@@ -178,12 +178,12 @@ namespace JE::Editor
             if (name == QString::fromUtf8(type.m_documentTypeName.c_str()))
             {
                 const AZ::IO::FixedMaxPath folder = AZ::IO::FixedMaxPath(AZ::Utils::GetProjectPath()) / "Assets";
-                AtomToolsFramework::CreateDocumentDialog dialog(type, QString::fromUtf8(folder.c_str()), this);
+                JE::Editor::Tools::CreateDocumentDialog dialog(type, QString::fromUtf8(folder.c_str()), this);
                 if (dialog.exec() == QDialog::Accepted)
                 {
-                    const AZStd::string source = AtomToolsFramework::GetPathWithoutAlias(dialog.m_sourcePath.toUtf8().constData());
+                    const AZStd::string source = JE::Editor::Tools::GetPathWithoutAlias(dialog.m_sourcePath.toUtf8().constData());
                     AZStd::string target = dialog.m_targetPath.toUtf8().constData();
-                    if (AtomToolsFramework::ValidateDocumentPath(target))
+                    if (JE::Editor::Tools::ValidateDocumentPath(target))
                     {
                         const auto id = m_session->CreateDocument(source, target);
                         if (id.IsNull())
@@ -203,12 +203,12 @@ namespace JE::Editor
         {
             return;
         }
-        AtomToolsFramework::DocumentTypeInfo::DocumentExtensionInfoVector extensions;
+        JE::Editor::Tools::DocumentTypeInfo::DocumentExtensionInfoVector extensions;
         for (const auto& type : m_session->GetGraphDocumentTypes())
         {
             extensions.insert(extensions.end(), type.m_supportedExtensionsToOpen.begin(), type.m_supportedExtensionsToOpen.end());
         }
-        const auto paths = AtomToolsFramework::GetOpenFilePathsFromDialog({}, extensions, "Graph Documents", false);
+        const auto paths = JE::Editor::Tools::GetOpenFilePathsFromDialog({}, extensions, "Graph Documents", false);
         if (!paths.empty())
         {
             OpenDocument(paths.front());
@@ -229,7 +229,7 @@ namespace JE::Editor
         }
         if (!m_displayedDocumentId.IsNull())
         {
-            AtomToolsFramework::AtomToolsDocumentRequestBus::Event(m_displayedDocumentId, &AtomToolsFramework::AtomToolsDocumentRequests::EndEdit);
+            JE::Editor::Tools::AtomToolsDocumentRequestBus::Event(m_displayedDocumentId, &JE::Editor::Tools::AtomToolsDocumentRequests::EndEdit);
         }
     }
 
@@ -285,7 +285,7 @@ namespace JE::Editor
             if (m_graphView)
             {
                 GraphCanvas::GraphId graphId;
-                AtomToolsFramework::GraphDocumentRequestBus::EventResult(graphId, id, &AtomToolsFramework::GraphDocumentRequests::GetGraphId);
+                JE::Editor::Tools::GraphDocumentRequestBus::EventResult(graphId, id, &JE::Editor::Tools::GraphDocumentRequests::GetGraphId);
                 m_graphView->SetActiveGraphId(graphId, true);
             }
             return;
@@ -297,9 +297,9 @@ namespace JE::Editor
         delete m_graphView;
         m_graphView = nullptr;
         m_displayedDocumentId = id;
-        AtomToolsFramework::DocumentTypeInfo type;
-        AtomToolsFramework::AtomToolsDocumentRequestBus::EventResult(
-            type, id, &AtomToolsFramework::AtomToolsDocumentRequests::GetDocumentTypeInfo);
+        JE::Editor::Tools::DocumentTypeInfo type;
+        JE::Editor::Tools::AtomToolsDocumentRequestBus::EventResult(
+            type, id, &JE::Editor::Tools::AtomToolsDocumentRequests::GetDocumentTypeInfo);
         const bool pass = type.m_documentTypeName == MaterialGraphEnvironment::PassGraphTypeName ||
             type.m_documentTypeName == MaterialGraphEnvironment::PassNodeConfigTypeName;
         const auto kind = pass ? MaterialGraphEnvironment::GraphKind::RenderPass : MaterialGraphEnvironment::GraphKind::Material;
@@ -307,10 +307,10 @@ namespace JE::Editor
         environment.SetActiveGraphKind(kind);
         m_palette->ResetModel(environment.CreateNodePaletteTree(kind));
         GraphCanvas::GraphId graphId;
-        AtomToolsFramework::GraphDocumentRequestBus::EventResult(graphId, id, &AtomToolsFramework::GraphDocumentRequests::GetGraphId);
+        JE::Editor::Tools::GraphDocumentRequestBus::EventResult(graphId, id, &JE::Editor::Tools::GraphDocumentRequests::GetGraphId);
         if (graphId.IsValid())
         {
-            m_graphView = aznew AtomToolsFramework::GraphDocumentView(
+            m_graphView = aznew JE::Editor::Tools::GraphDocumentView(
                 m_session->GetToolId(), id, m_session->EnableGraphDocuments().GetViewSettings(), this);
             m_viewLayout->addWidget(m_graphView);
         }
@@ -330,7 +330,7 @@ namespace JE::Editor
             {
                 if (id == excludedDocumentId || !m_session->IsGraphDocument(id)) { continue; }
                 bool open = false;
-                AtomToolsFramework::AtomToolsDocumentRequestBus::EventResult(open, id, &AtomToolsFramework::AtomToolsDocumentRequests::IsOpen);
+                JE::Editor::Tools::AtomToolsDocumentRequestBus::EventResult(open, id, &JE::Editor::Tools::AtomToolsDocumentRequests::IsOpen);
                 if (!open) { continue; }
                 m_documents->addItem(QString(), QString::fromUtf8(id.ToString<AZStd::string>().c_str()));
                 RefreshDocumentLabel(id);
@@ -357,8 +357,8 @@ namespace JE::Editor
         {
             AZStd::string path;
             bool modified = false;
-            AtomToolsFramework::AtomToolsDocumentRequestBus::EventResult(path, id, &AtomToolsFramework::AtomToolsDocumentRequests::GetAbsolutePath);
-            AtomToolsFramework::AtomToolsDocumentRequestBus::EventResult(modified, id, &AtomToolsFramework::AtomToolsDocumentRequests::IsModified);
+            JE::Editor::Tools::AtomToolsDocumentRequestBus::EventResult(path, id, &JE::Editor::Tools::AtomToolsDocumentRequests::GetAbsolutePath);
+            JE::Editor::Tools::AtomToolsDocumentRequestBus::EventResult(modified, id, &JE::Editor::Tools::AtomToolsDocumentRequests::IsModified);
             m_documents->setItemText(index, QFileInfo(QString::fromUtf8(path.c_str())).fileName() + (modified ? " *" : ""));
             m_documents->setItemData(index, QString::fromUtf8(path.c_str()), Qt::ToolTipRole);
         }
@@ -367,20 +367,20 @@ namespace JE::Editor
     void MaterialGraphWorkspaceWidget::RefreshActions()
     {
         GraphCanvas::GraphId graphId;
-        AtomToolsFramework::GraphDocumentRequestBus::EventResult(graphId, m_displayedDocumentId, &AtomToolsFramework::GraphDocumentRequests::GetGraphId);
+        JE::Editor::Tools::GraphDocumentRequestBus::EventResult(graphId, m_displayedDocumentId, &JE::Editor::Tools::GraphDocumentRequests::GetGraphId);
         bool queued = false;
         AZStd::vector<AZStd::string> outputs;
-        AtomToolsFramework::GraphDocumentRequestBus::EventResult(queued, m_displayedDocumentId, &AtomToolsFramework::GraphDocumentRequests::IsCompileGraphQueued);
-        AtomToolsFramework::GraphDocumentRequestBus::EventResult(outputs, m_displayedDocumentId, &AtomToolsFramework::GraphDocumentRequests::GetGeneratedFilePaths);
+        JE::Editor::Tools::GraphDocumentRequestBus::EventResult(queued, m_displayedDocumentId, &JE::Editor::Tools::GraphDocumentRequests::IsCompileGraphQueued);
+        JE::Editor::Tools::GraphDocumentRequestBus::EventResult(outputs, m_displayedDocumentId, &JE::Editor::Tools::GraphDocumentRequests::GetGeneratedFilePaths);
         using CompileState = MaterialWorkspaceSession::CompileState;
         const auto state = m_session ? m_session->GetCompileState(m_displayedDocumentId) : CompileState::NotCompiled;
         const bool compiling = state == CompileState::Compiling || state == CompileState::CompilingModified;
         const bool failed = state == CompileState::Failed;
         const bool modified = state == CompileState::Modified;
         const bool hasMaterial = AZStd::any_of(outputs.begin(), outputs.end(), [](const auto& path) { return path.ends_with(".material"); });
-        AtomToolsFramework::DocumentTypeInfo type;
-        AtomToolsFramework::AtomToolsDocumentRequestBus::EventResult(type, m_displayedDocumentId,
-            &AtomToolsFramework::AtomToolsDocumentRequests::GetDocumentTypeInfo);
+        JE::Editor::Tools::DocumentTypeInfo type;
+        JE::Editor::Tools::AtomToolsDocumentRequestBus::EventResult(type, m_displayedDocumentId,
+            &JE::Editor::Tools::AtomToolsDocumentRequests::GetDocumentTypeInfo);
         const bool pass = type.m_documentTypeName == MaterialGraphEnvironment::PassGraphTypeName ||
             type.m_documentTypeName == MaterialGraphEnvironment::PassNodeConfigTypeName;
         m_compile->setVisible(!pass);
@@ -404,9 +404,9 @@ namespace JE::Editor
     void MaterialGraphWorkspaceWidget::CompileDocument()
     {
         FinishEditing();
-        AtomToolsFramework::DocumentTypeInfo type;
-        AtomToolsFramework::AtomToolsDocumentRequestBus::EventResult(type, m_displayedDocumentId,
-            &AtomToolsFramework::AtomToolsDocumentRequests::GetDocumentTypeInfo);
+        JE::Editor::Tools::DocumentTypeInfo type;
+        JE::Editor::Tools::AtomToolsDocumentRequestBus::EventResult(type, m_displayedDocumentId,
+            &JE::Editor::Tools::AtomToolsDocumentRequests::GetDocumentTypeInfo);
         if (type.m_documentTypeName != "Material Graph") { return; }
         const bool started = m_session && m_session->RequestCompile(m_displayedDocumentId);
         if (!started)
@@ -418,12 +418,12 @@ namespace JE::Editor
 
     void MaterialGraphWorkspaceWidget::OpenGeneratedMaterial()
     {
-        AtomToolsFramework::DocumentTypeInfo type;
-        AtomToolsFramework::AtomToolsDocumentRequestBus::EventResult(type, m_displayedDocumentId,
-            &AtomToolsFramework::AtomToolsDocumentRequests::GetDocumentTypeInfo);
+        JE::Editor::Tools::DocumentTypeInfo type;
+        JE::Editor::Tools::AtomToolsDocumentRequestBus::EventResult(type, m_displayedDocumentId,
+            &JE::Editor::Tools::AtomToolsDocumentRequests::GetDocumentTypeInfo);
         if (type.m_documentTypeName != "Material Graph") { return; }
         AZStd::vector<AZStd::string> paths;
-        AtomToolsFramework::GraphDocumentRequestBus::EventResult(paths, m_displayedDocumentId, &AtomToolsFramework::GraphDocumentRequests::GetGeneratedFilePaths);
+        JE::Editor::Tools::GraphDocumentRequestBus::EventResult(paths, m_displayedDocumentId, &JE::Editor::Tools::GraphDocumentRequests::GetGeneratedFilePaths);
         QStringList materials;
         for (const auto& path : paths)
         {

@@ -101,7 +101,7 @@ if (PAL_TRAIT_BUILD_HOST_TOOLS)
                 Legacy::CryCommon
                 Gem::LmbrCentral.Editor.Static
                 Gem::TextureAtlas.Static
-                Gem::AtomToolsFramework.Static
+                JE::EditorTools
                 ${additional_dependencies}
             PUBLIC
                 JE::RenderIntegration
@@ -159,8 +159,7 @@ if (PAL_TRAIT_BUILD_HOST_TOOLS)
                 Legacy::CryCommon
                 Gem::LmbrCentral.Editor
                 Gem::TextureAtlas.Editor
-                Gem::AtomToolsFramework.Static
-                Gem::AtomToolsFramework.Editor
+                JE::EditorTools
                 ${additional_dependencies}
             PUBLIC
                 JE::RenderIntegration

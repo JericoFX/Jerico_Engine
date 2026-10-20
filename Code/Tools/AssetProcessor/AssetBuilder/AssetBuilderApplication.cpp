@@ -7,6 +7,7 @@
  */
 
 #include <AzCore/Debug/Trace.h>
+#include <JE/Editor/Tools/Module.h>
 #include <AzCore/Module/ModuleManagerBus.h>
 #include <JE/Geometry/GeometryModule.h>
 #include <JE/Editor/Camera/CameraModule.h>
@@ -242,6 +243,36 @@ void AssetBuilderApplication::StartCommon(AZ::Entity* systemEntity)
             ExitMainLoop();
             return;
         }
+    }
+
+    // The live script context needs native preset reflection before the tools bus is registered.
+    AZ::ModuleManagerRequests::LoadModulesResult toolsModules;
+    AZ::ModuleManagerRequestBus::BroadcastResult(
+        toolsModules, &AZ::ModuleManagerRequests::LoadStaticModules,
+        [](AZStd::vector<AZ::Module*>& modules)
+        {
+            modules.emplace_back(JE::Editor::Tools::CreateModule());
+        },
+        AZ::ModuleInitializationSteps::ActivateEntity);
+    if (toolsModules.size() != 1)
+    {
+        AZ_Error("AssetBuilder", false, "Failed to load the native editor tools module.");
+        ExitMainLoop();
+        return;
+    }
+    const auto& toolsModule = toolsModules.front();
+    if (!toolsModule.IsSuccess())
+    {
+        AZ_Error("AssetBuilder", false, "%s", toolsModule.GetError().c_str());
+        ExitMainLoop();
+        return;
+    }
+    const AZ::Entity* toolsEntity = toolsModule.GetValue()->GetEntity();
+    if (!toolsEntity || toolsEntity->GetState() != AZ::Entity::State::Active)
+    {
+        AZ_Error("AssetBuilder", false, "Native editor tools module did not activate its required components.");
+        ExitMainLoop();
+        return;
     }
 
     // Loads dynamic modules and registers any component descriptors populated into the AZ::Module m_descriptor list

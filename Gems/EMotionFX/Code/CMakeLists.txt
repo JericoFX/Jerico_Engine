@@ -116,8 +116,7 @@ if (PAL_TRAIT_BUILD_HOST_TOOLS)
                 AZ::AzToolsFramework
                 Legacy::Editor.Headers
                 3rdParty::OpenGLInterface
-                Gem::AtomToolsFramework.Static
-                Gem::AtomToolsFramework.Editor
+                JE::EditorTools
                 Gem::GraphCanvasWidgets
         COMPILE_DEFINITIONS
             PUBLIC

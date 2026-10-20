@@ -6,7 +6,7 @@
  *
  */
 
-#include <AtomToolsFramework/Document/AtomToolsDocumentRequestBus.h>
+#include <JE/Editor/Tools/Document/AtomToolsDocumentRequestBus.h>
 #include <AzCore/Name/Name.h>
 #include <AzQtComponents/Components/StyledSpinBox.h>
 #include <Window/ShaderManagementConsoleTableView.h>
@@ -60,7 +60,7 @@ namespace ShaderManagementConsole
         connect(this, &QTableWidget::customContextMenuRequested, this, &ShaderManagementConsoleTableView::ShowContextMenu);
 
         RebuildTable();
-        AtomToolsFramework::AtomToolsDocumentNotificationBus::Handler::BusConnect(m_toolId);
+        JE::Editor::Tools::AtomToolsDocumentNotificationBus::Handler::BusConnect(m_toolId);
     }
 
     void ShaderManagementConsoleTableView::mousePressEvent(QMouseEvent* e)
@@ -79,14 +79,14 @@ namespace ShaderManagementConsole
             tr("Add Variant"),
             [this]()
             {
-                AtomToolsFramework::AtomToolsDocumentRequestBus::Event(
-                    m_documentId, &AtomToolsFramework::AtomToolsDocumentRequestBus::Events::BeginEdit);
+                JE::Editor::Tools::AtomToolsDocumentRequestBus::Event(
+                    m_documentId, &JE::Editor::Tools::AtomToolsDocumentRequestBus::Events::BeginEdit);
 
                 ShaderManagementConsoleDocumentRequestBus::Event(
                     m_documentId, &ShaderManagementConsoleDocumentRequestBus::Events::AddOneVariantRow);
 
-                AtomToolsFramework::AtomToolsDocumentRequestBus::Event(
-                    m_documentId, &AtomToolsFramework::AtomToolsDocumentRequestBus::Events::EndEdit);
+                JE::Editor::Tools::AtomToolsDocumentRequestBus::Event(
+                    m_documentId, &JE::Editor::Tools::AtomToolsDocumentRequestBus::Events::EndEdit);
             });
 
         contextMenu.exec(mapToGlobal(pos));
@@ -94,7 +94,7 @@ namespace ShaderManagementConsole
 
     ShaderManagementConsoleTableView::~ShaderManagementConsoleTableView()
     {
-        AtomToolsFramework::AtomToolsDocumentNotificationBus::Handler::BusDisconnect();
+        JE::Editor::Tools::AtomToolsDocumentNotificationBus::Handler::BusDisconnect();
     }
 
     void ShaderManagementConsoleTableView::OnDocumentOpened(const AZ::Uuid& documentId)
@@ -386,11 +386,11 @@ namespace ShaderManagementConsole
     void ShaderManagementConsoleTableView::TransferViewModelToModel(RebuildMode mode)
     {
         // Temporarily disconnect the document notification bus to prevent recursive notification handling as changes are applied
-        AtomToolsFramework::AtomToolsDocumentNotificationBus::Handler::BusDisconnect();
+        JE::Editor::Tools::AtomToolsDocumentNotificationBus::Handler::BusDisconnect();
 
         // Send the begin edit notification to signify the beginning of an undoable change
-        AtomToolsFramework::AtomToolsDocumentRequestBus::Event(
-            m_documentId, &AtomToolsFramework::AtomToolsDocumentRequestBus::Events::BeginEdit);
+        JE::Editor::Tools::AtomToolsDocumentRequestBus::Event(
+            m_documentId, &JE::Editor::Tools::AtomToolsDocumentRequestBus::Events::BeginEdit);
 
         // Set the shader variant list source data built from the table onto the document
         ShaderManagementConsoleDocumentRequestBus::Event(
@@ -399,11 +399,11 @@ namespace ShaderManagementConsole
             m_shaderVariantListSourceData);
 
         // Signify the end of the undoable change
-        AtomToolsFramework::AtomToolsDocumentRequestBus::Event(
-            m_documentId, &AtomToolsFramework::AtomToolsDocumentRequestBus::Events::EndEdit);
+        JE::Editor::Tools::AtomToolsDocumentRequestBus::Event(
+            m_documentId, &JE::Editor::Tools::AtomToolsDocumentRequestBus::Events::EndEdit);
 
         // Reconnect to the notification bus now that all changes have been applied
-        AtomToolsFramework::AtomToolsDocumentNotificationBus::Handler::BusConnect(m_toolId);
+        JE::Editor::Tools::AtomToolsDocumentNotificationBus::Handler::BusConnect(m_toolId);
 
         if (mode == CallOnModified)
         {
@@ -434,14 +434,14 @@ namespace ShaderManagementConsole
                 &QPushButton::clicked,
                 this,
                 [documentId]() {
-                    AtomToolsFramework::AtomToolsDocumentRequestBus::Event(documentId,
-                        &AtomToolsFramework::AtomToolsDocumentRequestBus::Events::BeginEdit);
+                    JE::Editor::Tools::AtomToolsDocumentRequestBus::Event(documentId,
+                        &JE::Editor::Tools::AtomToolsDocumentRequestBus::Events::BeginEdit);
 
                     ShaderManagementConsoleDocumentRequestBus::Event(documentId,
                         &ShaderManagementConsoleDocumentRequestBus::Events::DefragmentVariantList);
 
-                    AtomToolsFramework::AtomToolsDocumentRequestBus::Event(documentId,
-                        &AtomToolsFramework::AtomToolsDocumentRequestBus::Events::EndEdit);
+                    JE::Editor::Tools::AtomToolsDocumentRequestBus::Event(documentId,
+                        &JE::Editor::Tools::AtomToolsDocumentRequestBus::Events::EndEdit);
                 });
         m_subLayout.addWidget(&m_sortLabel);
         m_subLayout.addWidget(&m_sortComboBox);

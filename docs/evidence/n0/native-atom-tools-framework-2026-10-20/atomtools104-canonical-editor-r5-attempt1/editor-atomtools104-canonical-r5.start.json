@@ -1,0 +1,17 @@
+{
+  "pid": 32040,
+  "creationUtc": "2026-10-20T16:07:16.9843456Z",
+  "path": null,
+  "cwd": "F:/JericoEngine/JericoEngine",
+  "executable": "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/profile/Editor.exe",
+  "argv": [
+    "--project-path",
+    "F:/JericoEngine/JericoEngine/Projects/JEEditorFixture",
+    "--rhi=vulkan",
+    "--rhi-device-validation=enable",
+    "--skipWelcomeScreen",
+    "F:/JericoEngine/JericoEngine/Projects/JEEditorFixture/Levels/JEMaterialCookNative5/JEMaterialCookNative5.prefab",
+    "--regset=/Amazon/AssetProcessor/Settings/Jobs/maxJobs=1",
+    "--regset=/Amazon/AssetProcessor/Settings/Jobs/AlwaysUseMaxJobs=false"
+  ]
+}

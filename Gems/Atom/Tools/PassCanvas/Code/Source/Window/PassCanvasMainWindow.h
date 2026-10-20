@@ -8,12 +8,12 @@
 
 #pragma once
 
-#include <AtomToolsFramework/Document/AtomToolsDocumentInspector.h>
-#include <AtomToolsFramework/Document/AtomToolsDocumentMainWindow.h>
-#include <AtomToolsFramework/EntityPreviewViewport/EntityPreviewViewportSettingsInspector.h>
-#include <AtomToolsFramework/EntityPreviewViewport/EntityPreviewViewportToolBar.h>
-#include <AtomToolsFramework/EntityPreviewViewport/EntityPreviewViewportWidget.h>
-#include <AtomToolsFramework/Graph/GraphViewSettings.h>
+#include <JE/Editor/Tools/Document/AtomToolsDocumentInspector.h>
+#include <JE/Editor/Tools/Document/AtomToolsDocumentMainWindow.h>
+#include <JE/Editor/Tools/EntityPreviewViewport/EntityPreviewViewportSettingsInspector.h>
+#include <JE/Editor/Tools/EntityPreviewViewport/EntityPreviewViewportToolBar.h>
+#include <JE/Editor/Tools/EntityPreviewViewport/EntityPreviewViewportWidget.h>
+#include <JE/Editor/Tools/Graph/GraphViewSettings.h>
 #include <AzCore/Component/ComponentApplicationBus.h>
 #include <GraphCanvas/Styling/StyleManager.h>
 #include <GraphCanvas/Widgets/Bookmarks/BookmarkDockWidget.h>
@@ -26,16 +26,16 @@
 namespace PassCanvas
 {
     //! PassCanvasMainWindow creates and manages all of the graph canvas and viewport related docked windows for Pass Canvas. 
-    class PassCanvasMainWindow : public AtomToolsFramework::AtomToolsDocumentMainWindow
+    class PassCanvasMainWindow : public JE::Editor::Tools::AtomToolsDocumentMainWindow
     {
         Q_OBJECT
     public:
         AZ_CLASS_ALLOCATOR(PassCanvasMainWindow, AZ::SystemAllocator);
 
-        using Base = AtomToolsFramework::AtomToolsDocumentMainWindow;
+        using Base = JE::Editor::Tools::AtomToolsDocumentMainWindow;
 
         PassCanvasMainWindow(
-            const AZ::Crc32& toolId, AtomToolsFramework::GraphViewSettingsPtr graphViewSettingsPtr, QWidget* parent = nullptr);
+            const AZ::Crc32& toolId, JE::Editor::Tools::GraphViewSettingsPtr graphViewSettingsPtr, QWidget* parent = nullptr);
         ~PassCanvasMainWindow() = default;
 
     protected:
@@ -48,20 +48,20 @@ namespace PassCanvas
         void OnDocumentOpened(const AZ::Uuid& documentId) override;
 
         // AtomToolsFramework::AtomToolsDocumentMainWindow overrides...
-        void PopulateSettingsInspector(AtomToolsFramework::InspectorWidget* inspector) const override;
+        void PopulateSettingsInspector(JE::Editor::Tools::InspectorWidget* inspector) const override;
         void OnSettingsDialogClosed() override;
         AZStd::string GetHelpUrl() const override;
 
     private:
-        AtomToolsFramework::AtomToolsDocumentInspector* m_documentInspector = {};
-        AtomToolsFramework::EntityPreviewViewportSettingsInspector* m_viewportSettingsInspector = {};
-        AtomToolsFramework::EntityPreviewViewportToolBar* m_toolBar = {};
-        AtomToolsFramework::EntityPreviewViewportWidget* m_passViewport = {};
-        AtomToolsFramework::GraphViewSettingsPtr m_graphViewSettingsPtr;
+        JE::Editor::Tools::AtomToolsDocumentInspector* m_documentInspector = {};
+        JE::Editor::Tools::EntityPreviewViewportSettingsInspector* m_viewportSettingsInspector = {};
+        JE::Editor::Tools::EntityPreviewViewportToolBar* m_toolBar = {};
+        JE::Editor::Tools::EntityPreviewViewportWidget* m_passViewport = {};
+        JE::Editor::Tools::GraphViewSettingsPtr m_graphViewSettingsPtr;
         GraphCanvas::BookmarkDockWidget* m_bookmarkDockWidget = {};
         GraphCanvas::NodePaletteDockWidget* m_nodePalette = {};
         GraphCanvas::StyleManager m_styleManager;
         QTranslator m_translator;
-        mutable AZStd::shared_ptr<AtomToolsFramework::DynamicPropertyGroup> m_passCanvasCompileSettingsGroup;
+        mutable AZStd::shared_ptr<JE::Editor::Tools::DynamicPropertyGroup> m_passCanvasCompileSettingsGroup;
     };
 } // namespace PassCanvas

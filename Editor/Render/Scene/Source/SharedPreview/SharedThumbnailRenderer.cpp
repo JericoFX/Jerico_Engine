@@ -11,9 +11,9 @@
 #include <JE/Editor/Render/RPI/Edit/Common/AssetUtils.h>
 #include <JE/Editor/Render/RPI/Edit/Material/MaterialSourceData.h>
 #include <JE/Render/RPI/Reflect/System/AnyAsset.h>
-#include <AtomToolsFramework/PreviewRenderer/PreviewRendererCaptureRequest.h>
-#include <AtomToolsFramework/PreviewRenderer/PreviewRendererInterface.h>
-#include <AtomToolsFramework/Util/Util.h>
+#include <JE/Editor/Tools/PreviewRenderer/PreviewRendererCaptureRequest.h>
+#include <JE/Editor/Tools/PreviewRenderer/PreviewRendererInterface.h>
+#include <JE/Editor/Tools/Util/Util.h>
 #include <AzFramework/Asset/AssetSystemBus.h>
 #include <AzToolsFramework/AssetBrowser/AssetBrowserBus.h>
 #include <AzToolsFramework/Thumbnails/ThumbnailerBus.h>
@@ -43,7 +43,7 @@ namespace JE::Editor::Render
         template<typename T>
         void LoadPreviewAsset(AZ::Data::Asset<T>& asset, const AZ::Data::AssetId& assetId, const AZStd::string& assetIdOverrideSettingKey)
         {
-            LoadPreviewAsset(asset, AtomToolsFramework::GetSettingsObject<AZ::Data::AssetId>(assetIdOverrideSettingKey, assetId));
+            LoadPreviewAsset(asset, JE::Editor::Tools::GetSettingsObject<AZ::Data::AssetId>(assetIdOverrideSettingKey, assetId));
         }
 
         SharedThumbnailRenderer::SharedThumbnailRenderer()
@@ -166,7 +166,7 @@ namespace JE::Editor::Render
 
         void SharedThumbnailRenderer::RenderThumbnail(AzToolsFramework::Thumbnailer::SharedThumbnailKey thumbnailKey, int thumbnailSize)
         {
-            auto previewRenderer = AZ::Interface<AtomToolsFramework::PreviewRendererInterface>::Get();
+            auto previewRenderer = AZ::Interface<JE::Editor::Tools::PreviewRendererInterface>::Get();
             if (!previewRenderer)
             {
                 AzToolsFramework::Thumbnailer::ThumbnailerRendererNotificationBus::Event(

@@ -9,7 +9,7 @@
 #include <EditorModularViewportCameraComposer.h>
 
 #include <JE/Render/RPI/Public/ViewportContextBus.h>
-#include <AtomToolsFramework/Viewport/ModularViewportCameraControllerRequestBus.h>
+#include <JE/Editor/Tools/Viewport/ModularViewportCameraControllerRequestBus.h>
 #include <AzCore/Component/TransformBus.h>
 #include <AzCore/std/smart_ptr/make_shared.h>
 #include <AzFramework/Render/IntersectorInterface.h>
@@ -84,23 +84,23 @@ namespace SandboxEditor
         EditorModularViewportCameraComposerNotificationBus::Handler::BusDisconnect();
     }
 
-    AZStd::shared_ptr<AtomToolsFramework::ModularViewportCameraController> EditorModularViewportCameraComposer::
+    AZStd::shared_ptr<JE::Editor::Tools::ModularViewportCameraController> EditorModularViewportCameraComposer::
         CreateModularViewportCameraController()
     {
         SetupCameras();
 
-        auto controller = AZStd::make_shared<AtomToolsFramework::ModularViewportCameraController>();
+        auto controller = AZStd::make_shared<JE::Editor::Tools::ModularViewportCameraController>();
 
         controller->SetCameraViewportContextBuilderCallback(
-            [viewportId = m_viewportId](AZStd::unique_ptr<AtomToolsFramework::ModularCameraViewportContext>& cameraViewportContext)
+            [viewportId = m_viewportId](AZStd::unique_ptr<JE::Editor::Tools::ModularCameraViewportContext>& cameraViewportContext)
             {
-                cameraViewportContext = AZStd::make_unique<AtomToolsFramework::ModularCameraViewportContextImpl>(viewportId);
+                cameraViewportContext = AZStd::make_unique<JE::Editor::Tools::ModularCameraViewportContextImpl>(viewportId);
             });
 
         controller->SetCameraPriorityBuilderCallback(
-            [](AtomToolsFramework::CameraControllerPriorityFn& cameraControllerPriorityFn)
+            [](JE::Editor::Tools::CameraControllerPriorityFn& cameraControllerPriorityFn)
             {
-                cameraControllerPriorityFn = AtomToolsFramework::DefaultCameraControllerPriority;
+                cameraControllerPriorityFn = JE::Editor::Tools::DefaultCameraControllerPriority;
             });
 
         controller->SetCameraPropsBuilderCallback(
@@ -164,8 +164,8 @@ namespace SandboxEditor
         const auto trackingTransform = [viewportId = m_viewportId]
         {
             bool tracking = false;
-            AtomToolsFramework::ModularViewportCameraControllerRequestBus::EventResult(
-                tracking, viewportId, &AtomToolsFramework::ModularViewportCameraControllerRequestBus::Events::IsTrackingTransform);
+            JE::Editor::Tools::ModularViewportCameraControllerRequestBus::EventResult(
+                tracking, viewportId, &JE::Editor::Tools::ModularViewportCameraControllerRequestBus::Events::IsTrackingTransform);
 
             return tracking;
         };
@@ -275,9 +275,9 @@ namespace SandboxEditor
             {
                 // when the orbit camera ends, ensure that the internal camera returns to a look state
                 // (internal offset value for camera is zero)
-                AtomToolsFramework::ModularViewportCameraControllerRequestBus::Event(
+                JE::Editor::Tools::ModularViewportCameraControllerRequestBus::Event(
                     m_viewportId,
-                    &AtomToolsFramework::ModularViewportCameraControllerRequestBus::Events::LookFromOrbit);
+                    &JE::Editor::Tools::ModularViewportCameraControllerRequestBus::Events::LookFromOrbit);
 
                 // when the orbit behavior ends the pivot point should fade out and no longer display
                 m_pivotDisplayState = PivotDisplayState::Hidden;
@@ -335,9 +335,9 @@ namespace SandboxEditor
                     m_pivot = origin + direction * distance;
 
                     // ensure we immediately set the camera pivot to ensure no interpolation of current to target occurs
-                    AtomToolsFramework::ModularViewportCameraControllerRequestBus::Event(
+                    JE::Editor::Tools::ModularViewportCameraControllerRequestBus::Event(
                         m_viewportId,
-                        &AtomToolsFramework::ModularViewportCameraControllerRequestBus::Events::SetCameraPivotDetachedImmediate,
+                        &JE::Editor::Tools::ModularViewportCameraControllerRequestBus::Events::SetCameraPivotDetachedImmediate,
                         m_pivot.value());
                 }
             });
@@ -439,14 +439,14 @@ namespace SandboxEditor
             AZ::Transform worldFromLocal = AZ::Transform::CreateIdentity();
             AZ::TransformBus::EventResult(worldFromLocal, viewEntityId, &AZ::TransformBus::Events::GetWorldTM);
 
-            AtomToolsFramework::ModularViewportCameraControllerRequestBus::Event(
-                m_viewportId, &AtomToolsFramework::ModularViewportCameraControllerRequestBus::Events::StartTrackingTransform,
+            JE::Editor::Tools::ModularViewportCameraControllerRequestBus::Event(
+                m_viewportId, &JE::Editor::Tools::ModularViewportCameraControllerRequestBus::Events::StartTrackingTransform,
                 worldFromLocal);
         }
         else
         {
-            AtomToolsFramework::ModularViewportCameraControllerRequestBus::Event(
-                m_viewportId, &AtomToolsFramework::ModularViewportCameraControllerRequestBus::Events::StopTrackingTransform);
+            JE::Editor::Tools::ModularViewportCameraControllerRequestBus::Event(
+                m_viewportId, &JE::Editor::Tools::ModularViewportCameraControllerRequestBus::Events::StopTrackingTransform);
         }
     }
 

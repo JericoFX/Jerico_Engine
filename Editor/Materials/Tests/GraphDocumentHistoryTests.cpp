@@ -5,7 +5,7 @@
 #include <JE/Editor/Materials/Graph/MaterialGraphEnvironment.h>
 #include "Workspace/MaterialWorkspaceSession.h"
 #include "Workspace/MaterialGraphWorkspaceWidget.h"
-#include <AtomToolsFramework/Inspector/InspectorWidget.h>
+#include <JE/Editor/Tools/Inspector/InspectorWidget.h>
 #include <JE/Editor/Render/RPI/Edit/Material/LuaMaterialFunctorSourceData.h>
 #include <JE/Editor/Render/RPI/Edit/Material/MaterialFunctorSourceDataHolder.h>
 #include <JE/Editor/Render/RPI/Edit/Material/MaterialFunctorSourceDataRegistration.h>
@@ -13,14 +13,16 @@
 #include <JE/Editor/Render/RPI/Edit/Material/MaterialTypeSourceData.h>
 #include <JE/Render/RPI/Reflect/Material/MaterialFunctor.h>
 #include <JE/Render/RPI/Reflect/Material/MaterialPropertyValue.h>
-#include <AtomToolsFramework/Graph/AssetStatusReporterSystemRequestBus.h>
-#include <AtomToolsFramework/Graph/DynamicNode/DynamicNode.h>
-#include <AtomToolsFramework/Graph/DynamicNode/DynamicNodeManager.h>
-#include <AtomToolsFramework/Graph/GraphTemplateFileDataCache.h>
+#include <JE/Editor/Tools/Graph/AssetStatusReporterSystemRequestBus.h>
+#include <JE/Editor/Tools/Graph/DynamicNode/DynamicNode.h>
+#include <JE/Editor/Tools/Graph/DynamicNode/DynamicNodeManager.h>
+#include <JE/Editor/Tools/Graph/GraphTemplateFileDataCache.h>
 #include <AzCore/Component/TickBus.h>
 #include <AzCore/Serialization/Json/RegistrationContext.h>
-#include <AtomToolsFramework/Graph/GraphCompiler.h>
-#include <AtomToolsFramework/Graph/GraphDocument.h>
+#include <JE/Editor/Tools/Graph/GraphCompiler.h>
+#include <JE/Editor/Tools/Graph/GraphDocument.h>
+#include <JE/Editor/Tools/Graph/GraphDocumentView.h>
+#include <JE/Editor/Tools/Graph/GraphView.h>
 #include <AzCore/Asset/AssetManagerComponent.h>
 #include <AzCore/IO/Streamer/StreamerComponent.h>
 #include <AzCore/Jobs/JobManagerComponent.h>
@@ -42,7 +44,10 @@
 #include <AzTest/Utils.h>
 #include <AzQtComponents/Components/StyleManager.h>
 #include <GraphCanvas/Components/GeometryBus.h>
+#include <GraphCanvas/Components/Nodes/NodeLayoutBus.h>
+#include <GraphCanvas/Components/Nodes/NodeUIBus.h>
 #include <GraphCanvas/Components/SceneBus.h>
+#include <GraphCanvas/Components/ViewBus.h>
 #include <GraphCanvas/GraphCanvasBus.h>
 #include <GraphCanvas/Styling/StyleManager.h>
 #include <QDataStream>
@@ -53,6 +58,12 @@
 #include <GraphModel/Model/GraphContext.h>
 #include <GraphModel/Model/Module/InputOutputNodes.h>
 #include <QApplication>
+#include <QCoreApplication>
+#include <QEvent>
+#include <QGraphicsView>
+#include <QGraphicsLayout>
+#include <QKeyEvent>
+#include <QVBoxLayout>
 #include <QElapsedTimer>
 #include <QEventLoop>
 #include <QFont>
@@ -227,10 +238,10 @@ namespace UnitTest
             m_path = m_directory->Resolve("source/history.materialgraph").Native();
             GraphModel::Graph initial(m_graphContext);
             ASSERT_TRUE(AZ::JsonSerializationUtils::SaveObjectToFile(&initial, m_path).IsSuccess());
-            const auto type = AtomToolsFramework::GraphDocument::BuildDocumentTypeInfo(
+            const auto type = JE::Editor::Tools::GraphDocument::BuildDocumentTypeInfo(
                 "Material Graph", {"materialgraph"}, {}, {}, m_graphContext, {});
-            m_document = AZStd::make_unique<AtomToolsFramework::GraphDocument>(CanvasHistoryToolId, type,
-                m_graphContext, AZStd::make_shared<AtomToolsFramework::GraphCompiler>(CanvasHistoryToolId));
+            m_document = AZStd::make_unique<JE::Editor::Tools::GraphDocument>(CanvasHistoryToolId, type,
+                m_graphContext, AZStd::make_shared<JE::Editor::Tools::GraphCompiler>(CanvasHistoryToolId));
             ASSERT_TRUE(m_document->SetHistoryPolicy(m_policy));
             ASSERT_TRUE(m_document->Open(m_path));
             m_graphId = m_document->GetGraphId();
@@ -379,9 +390,9 @@ namespace UnitTest
         AZStd::vector<AZStd::shared_ptr<AZ::ModuleData>> m_modules;
         AZStd::unique_ptr<GraphCanvas::StyleManager> m_styleManager;
         GraphModel::GraphContextPtr m_graphContext;
-        AtomToolsFramework::DocumentHistoryPolicy m_policy;
+        JE::Editor::Tools::DocumentHistoryPolicy m_policy;
         AZStd::unique_ptr<CanvasHistorySourceFolder> m_sourceFolder;
-        AZStd::unique_ptr<AtomToolsFramework::GraphDocument> m_document;
+        AZStd::unique_ptr<JE::Editor::Tools::GraphDocument> m_document;
         AZStd::string m_path;
         GraphCanvas::GraphId m_graphId;
         GraphModel::NodeId m_inputId = 0, m_outputId = 0;
@@ -391,7 +402,7 @@ namespace UnitTest
     namespace
     {
         // Only job-status transport is supplied. No AP, shader compile or product success is simulated.
-        class GenerationJobStatus final : public AtomToolsFramework::AssetStatusReporterSystemRequestBus::Handler
+        class GenerationJobStatus final : public JE::Editor::Tools::AssetStatusReporterSystemRequestBus::Handler
         {
         public:
             GenerationJobStatus() { BusConnect(CanvasHistoryToolId); }
@@ -417,12 +428,12 @@ namespace UnitTest
                 }
             }
             void StopReportingAll() override { StopReporting(m_requestId); }
-            AtomToolsFramework::AssetStatusReporterState GetStatus(const AZ::Uuid& requestId) const override
+            JE::Editor::Tools::AssetStatusReporterState GetStatus(const AZ::Uuid& requestId) const override
             {
                 EXPECT_TRUE(m_active);
                 EXPECT_EQ(requestId, m_requestId);
-                return m_active && requestId == m_requestId ? AtomToolsFramework::AssetStatusReporterState::Failed
-                                                          : AtomToolsFramework::AssetStatusReporterState::Invalid;
+                return m_active && requestId == m_requestId ? JE::Editor::Tools::AssetStatusReporterState::Failed
+                                                          : JE::Editor::Tools::AssetStatusReporterState::Invalid;
             }
             AZ::Uuid m_requestId;
             AZStd::vector<AZStd::string> m_paths;
@@ -437,7 +448,7 @@ namespace UnitTest
     protected:
         static void ReflectGenerationTypes(AZ::ReflectContext* context)
         {
-            AtomToolsFramework::DynamicNode::Reflect(context);
+            JE::Editor::Tools::DynamicNode::Reflect(context);
             JE::Render::RPI::MaterialFunctor::Reflect(context);
             JE::Render::RPI::MaterialPropertyValue::Reflect(context);
             JE::Render::RPI::MaterialPropertySourceData::Reflect(context);
@@ -459,13 +470,13 @@ namespace UnitTest
             m_functorRegistration->Init();
             m_functorRegistration->RegisterMaterialFunctor("Lua", azrtti_typeid<JE::Render::RPI::LuaMaterialFunctorSourceData>());
             m_fileIO->SetAlias("@engroot@", AZ::Test::GetEngineRootPath().c_str());
-            m_nodeManager = AZStd::make_unique<AtomToolsFramework::DynamicNodeManager>(CanvasHistoryToolId);
+            m_nodeManager = AZStd::make_unique<JE::Editor::Tools::DynamicNodeManager>(CanvasHistoryToolId);
             m_nodeManager->RegisterDataTypes({
                 AZStd::make_shared<GraphModel::DataType>(AZ_CRC_CE("bool"), false, "bool"),
                 AZStd::make_shared<GraphModel::DataType>(AZ_CRC_CE("float"), 0.0f, "float"),
                 AZStd::make_shared<GraphModel::DataType>(AZ_CRC_CE("float3"), AZ::Vector3::CreateZero(), "float3"),
                 AZStd::make_shared<GraphModel::DataType>(AZ_CRC_CE("string"), AZStd::string{}, "string")});
-            m_templates = AZStd::make_unique<AtomToolsFramework::GraphTemplateFileDataCache>(CanvasHistoryToolId);
+            m_templates = AZStd::make_unique<JE::Editor::Tools::GraphTemplateFileDataCache>(CanvasHistoryToolId);
             const auto assets = AZ::Test::GetEngineRootPath() + "/Editor/Materials/Assets/MaterialCanvas/GraphData/Nodes/";
             ASSERT_TRUE(m_constantConfig.Load(assets + "Constants/float.materialgraphnode"));
             ASSERT_TRUE(m_outputConfig.Load(assets + "MaterialOutputs/StandardPBR/StandardPBR.materialgraphnode"));
@@ -518,9 +529,9 @@ namespace UnitTest
             GraphModel::Graph initial(m_generationContext);
             ASSERT_TRUE(AZ::JsonSerializationUtils::SaveObjectToFile(&initial, m_generationPath).IsSuccess());
             m_compiler = AZStd::make_shared<JE::Editor::MaterialGraphCompiler>(CanvasHistoryToolId);
-            const auto type = AtomToolsFramework::GraphDocument::BuildDocumentTypeInfo(
+            const auto type = JE::Editor::Tools::GraphDocument::BuildDocumentTypeInfo(
                 "Material Graph", {"materialgraph"}, {}, {}, m_generationContext, {});
-            m_generationDocument = AZStd::make_unique<AtomToolsFramework::GraphDocument>(
+            m_generationDocument = AZStd::make_unique<JE::Editor::Tools::GraphDocument>(
                 CanvasHistoryToolId, type, m_generationContext, m_compiler);
             ASSERT_TRUE(m_generationDocument->Open(m_generationPath));
             auto graph = m_generationDocument->GetGraph();
@@ -555,12 +566,12 @@ namespace UnitTest
 
         bool m_generationReflected = false;
         AZStd::unique_ptr<JE::Render::RPI::MaterialFunctorSourceDataRegistration> m_functorRegistration;
-        AZStd::unique_ptr<AtomToolsFramework::DynamicNodeManager> m_nodeManager;
-        AZStd::unique_ptr<AtomToolsFramework::GraphTemplateFileDataCache> m_templates;
-        AtomToolsFramework::DynamicNodeConfig m_constantConfig, m_outputConfig;
+        AZStd::unique_ptr<JE::Editor::Tools::DynamicNodeManager> m_nodeManager;
+        AZStd::unique_ptr<JE::Editor::Tools::GraphTemplateFileDataCache> m_templates;
+        JE::Editor::Tools::DynamicNodeConfig m_constantConfig, m_outputConfig;
         GraphModel::GraphContextPtr m_generationContext;
         AZStd::shared_ptr<JE::Editor::MaterialGraphCompiler> m_compiler;
-        AZStd::unique_ptr<AtomToolsFramework::GraphDocument> m_generationDocument;
+        AZStd::unique_ptr<JE::Editor::Tools::GraphDocument> m_generationDocument;
         AZStd::string m_generationPath;
         GraphModel::NodeId m_constantId = 0;
     };
@@ -572,7 +583,7 @@ namespace UnitTest
         GenerationJobStatus jobs;
         const auto graph = m_generationDocument->GetGraph();
         EXPECT_FALSE(m_compiler->CompileGraph(graph, "Connected", m_generationPath));
-        EXPECT_EQ(m_compiler->GetState(), AtomToolsFramework::GraphCompiler::State::Failed);
+        EXPECT_EQ(m_compiler->GetState(), JE::Editor::Tools::GraphCompiler::State::Failed);
         ASSERT_EQ(jobs.m_startCount, 1);
         EXPECT_EQ(jobs.m_stopCount, 1);
         EXPECT_EQ(jobs.m_paths, m_compiler->GetGeneratedFilePaths());
@@ -607,7 +618,7 @@ namespace UnitTest
         // Follow the actual connected value on a second generation, rather than the template's default.
         graph->GetNode(m_constantId)->GetSlot("inValue")->SetValue(0.625f);
         EXPECT_FALSE(m_compiler->CompileGraph(graph, "Connected", m_generationPath));
-        EXPECT_EQ(m_compiler->GetState(), AtomToolsFramework::GraphCompiler::State::Failed);
+        EXPECT_EQ(m_compiler->GetState(), JE::Editor::Tools::GraphCompiler::State::Failed);
         EXPECT_EQ(jobs.m_startCount, 2);
         EXPECT_EQ(jobs.m_stopCount, 2);
         const auto changed = AZ::Utils::ReadFile(root + "/Connected_SurfaceEval.azsli");
@@ -625,7 +636,7 @@ namespace UnitTest
         AZ_TEST_START_TRACE_SUPPRESSION;
         EXPECT_FALSE(m_compiler->CompileGraph(m_generationDocument->GetGraph(), "Connected", m_generationPath));
         AZ_TEST_STOP_TRACE_SUPPRESSION(1);
-        EXPECT_EQ(m_compiler->GetState(), AtomToolsFramework::GraphCompiler::State::Failed);
+        EXPECT_EQ(m_compiler->GetState(), JE::Editor::Tools::GraphCompiler::State::Failed);
         EXPECT_TRUE(m_compiler->GetGeneratedFilePaths().empty());
         EXPECT_EQ(jobs.m_startCount, 0);
         EXPECT_EQ(jobs.m_stopCount, 0);
@@ -676,7 +687,7 @@ namespace UnitTest
             ASSERT_TRUE(AZ::Utils::WriteFile(style.GetValue(), stylePath).IsSuccess());
             m_fileIO->SetAlias("@products@", products.c_str());
 
-            AtomToolsFramework::DynamicNodeConfig material, pass;
+            JE::Editor::Tools::DynamicNodeConfig material, pass;
             material.m_title = "Only Material";
             pass.m_title = "Only Pass";
             m_materialConfigId = material.m_id;
@@ -688,11 +699,11 @@ namespace UnitTest
                 pass.m_title = "Rejected Collision";
                 ASSERT_TRUE(pass.Save(m_directory->Resolve("source/collision.passgraphnode").Native()));
             }
-            AtomToolsFramework::DocumentTypeInfo materialType;
+            JE::Editor::Tools::DocumentTypeInfo materialType;
             materialType.m_documentTypeName = "Material";
-            materialType.m_documentFactoryCallback = [](const AZ::Crc32& toolId, const AtomToolsFramework::DocumentTypeInfo& info)
+            materialType.m_documentFactoryCallback = [](const AZ::Crc32& toolId, const JE::Editor::Tools::DocumentTypeInfo& info)
             {
-                return aznew AtomToolsFramework::AtomToolsDocument(toolId, info);
+                return aznew JE::Editor::Tools::AtomToolsDocument(toolId, info);
             };
             m_session = AZStd::make_unique<JE::Editor::MaterialWorkspaceSession>(materialType);
             if (SeedCollision())
@@ -737,10 +748,10 @@ namespace UnitTest
 
         static void ReflectWorkspaceTypes(AZ::ReflectContext* context)
         {
-            AtomToolsFramework::DynamicNode::Reflect(context);
-            AtomToolsFramework::GraphCompiler::Reflect(context);
-            AtomToolsFramework::GraphViewSettings::Reflect(context);
-            AtomToolsFramework::InspectorWidget::Reflect(context);
+            JE::Editor::Tools::DynamicNode::Reflect(context);
+            JE::Editor::Tools::GraphCompiler::Reflect(context);
+            JE::Editor::Tools::GraphViewSettings::Reflect(context);
+            JE::Editor::Tools::InspectorWidget::Reflect(context);
             JE::Editor::MaterialGraphEnvironment::Reflect(context);
         }
 
@@ -754,12 +765,295 @@ namespace UnitTest
             return m_session->OpenDocument(path);
         }
 
+        struct FramingNotifications final : GraphCanvas::ViewNotificationBus::Handler
+        {
+            explicit FramingNotifications(const GraphCanvas::ViewId& viewId) { BusConnect(viewId); }
+            ~FramingNotifications() { BusDisconnect(); }
+            void OnViewCenteredOnArea() override { ++m_centeredCount; }
+            int m_centeredCount = 0;
+        };
+
+        void PrepareFramingDocument(AZ::Uuid& id, GraphCanvas::GraphId& scene)
+        {
+            id = OpenGraph(JE::Editor::MaterialGraphEnvironment::GraphKind::Material);
+            ASSERT_FALSE(id.IsNull());
+            GraphModel::GraphPtr graph;
+            JE::Editor::Tools::GraphDocumentRequestBus::EventResult(
+                graph, id, &JE::Editor::Tools::GraphDocumentRequests::GetGraph);
+            JE::Editor::Tools::GraphDocumentRequestBus::EventResult(
+                scene, id, &JE::Editor::Tools::GraphDocumentRequests::GetGraphId);
+            ASSERT_NE(graph, nullptr);
+            ASSERT_TRUE(scene.IsValid());
+            bool success = false;
+            JE::Editor::Tools::AtomToolsDocumentRequestBus::EventResult(
+                success, id, &JE::Editor::Tools::AtomToolsDocumentRequests::BeginEdit);
+            ASSERT_TRUE(success);
+            auto node = AZStd::make_shared<GraphModel::GraphInputNode>(graph, graph->GetContext()->GetDataType<float>());
+            AZ::Vector2 position(460.0f, 300.0f);
+            GraphCanvas::NodeId canvasNode;
+            GraphModelIntegration::GraphControllerRequestBus::EventResult(
+                canvasNode, scene, &GraphModelIntegration::GraphControllerRequests::AddNode, node, position);
+            ASSERT_TRUE(canvasNode.IsValid());
+            JE::Editor::Tools::AtomToolsDocumentRequestBus::EventResult(
+                success, id, &JE::Editor::Tools::AtomToolsDocumentRequests::EndEdit);
+            ASSERT_TRUE(success);
+            {
+                // Activate and lay out the real scene node without fitting a document view.
+                JE::Editor::Tools::GraphView preparationView(
+                    m_session->GetToolId(), scene, m_session->EnableGraphDocuments().GetViewSettings());
+                QGraphicsLayout* nodeLayout = nullptr;
+                GraphCanvas::NodeLayoutRequestBus::EventResult(
+                    nodeLayout, canvasNode, &GraphCanvas::NodeLayoutRequests::GetLayout);
+                ASSERT_NE(nodeLayout, nullptr);
+                QCoreApplication::sendPostedEvents(nullptr, QEvent::PolishRequest);
+                nodeLayout->activate();
+                GraphCanvas::NodeUIRequestBus::Event(canvasNode, &GraphCanvas::NodeUIRequests::AdjustSize);
+                QCoreApplication::sendPostedEvents(nullptr, QEvent::LayoutRequest);
+                QApplication::processEvents(QEventLoop::ExcludeUserInputEvents);
+                nodeLayout->activate();
+                GraphCanvas::NodeUIRequestBus::Event(canvasNode, &GraphCanvas::NodeUIRequests::AdjustSize);
+            }
+            GraphCanvas::ViewId releasedViewId;
+            GraphCanvas::SceneRequestBus::EventResult(releasedViewId, scene, &GraphCanvas::SceneRequests::GetViewId);
+            ASSERT_FALSE(releasedViewId.IsValid());
+        }
+
         AZStd::unique_ptr<AZ::UserSettingsProvider> m_localUserSettings;
         AZStd::unique_ptr<AZ::UserSettingsProvider> m_globalUserSettings;
         AZStd::unique_ptr<JE::Editor::MaterialWorkspaceSession> m_session;
         AZ::Uuid m_materialConfigId;
         bool m_workspaceReflected = false;
     };
+
+    TEST_F(PassGraphWorkspaceTests, InitialGraphFramingMatchesLayoutReadyControl)
+    {
+        const auto id = OpenGraph(JE::Editor::MaterialGraphEnvironment::GraphKind::Material);
+        ASSERT_FALSE(id.IsNull());
+        GraphModel::GraphPtr graph;
+        GraphCanvas::GraphId scene;
+        JE::Editor::Tools::GraphDocumentRequestBus::EventResult(
+            graph, id, &JE::Editor::Tools::GraphDocumentRequests::GetGraph);
+        JE::Editor::Tools::GraphDocumentRequestBus::EventResult(
+            scene, id, &JE::Editor::Tools::GraphDocumentRequests::GetGraphId);
+        ASSERT_NE(graph, nullptr);
+        ASSERT_TRUE(scene.IsValid());
+        bool success = false;
+        JE::Editor::Tools::AtomToolsDocumentRequestBus::EventResult(
+            success, id, &JE::Editor::Tools::AtomToolsDocumentRequests::BeginEdit);
+        ASSERT_TRUE(success);
+        auto node = AZStd::make_shared<GraphModel::GraphInputNode>(graph, graph->GetContext()->GetDataType<float>());
+        AZ::Vector2 position(460.0f, 300.0f);
+        GraphCanvas::NodeId canvasNode;
+        GraphModelIntegration::GraphControllerRequestBus::EventResult(
+            canvasNode, scene, &GraphModelIntegration::GraphControllerRequests::AddNode, node, position);
+        ASSERT_TRUE(canvasNode.IsValid());
+        JE::Editor::Tools::AtomToolsDocumentRequestBus::EventResult(
+            success, id, &JE::Editor::Tools::AtomToolsDocumentRequests::EndEdit);
+        ASSERT_TRUE(success);
+        QApplication::processEvents(QEventLoop::ExcludeUserInputEvents);
+        {
+            struct ViewParamChanges final : GraphCanvas::ViewNotificationBus::Router
+            {
+                ViewParamChanges() { BusRouterConnect(); }
+                ~ViewParamChanges() { BusRouterDisconnect(); }
+                void OnViewParamsChanged(const GraphCanvas::ViewParams&) override { ++changes; }
+                int changes = 0;
+            } viewParamChanges;
+            GraphCanvas::ViewId preparationViewId;
+            {
+                // Registering the first real view activates scene items/styles, but GraphView does not fit the graph.
+                JE::Editor::Tools::GraphView preparationView(
+                    m_session->GetToolId(), scene, m_session->EnableGraphDocuments().GetViewSettings());
+                GraphCanvas::SceneRequestBus::EventResult(
+                    preparationViewId, scene, &GraphCanvas::SceneRequests::GetViewId);
+                ASSERT_TRUE(preparationViewId.IsValid());
+                qreal preparationZoom = 0.0;
+                GraphCanvas::ViewRequestBus::EventResult(
+                    preparationZoom, preparationViewId, &GraphCanvas::ViewRequests::GetZoomLevel);
+                ASSERT_DOUBLE_EQ(preparationZoom, 1.0);
+                RecordProperty("preparation_zoom", QString::number(preparationZoom, 'g', 17).toStdString());
+
+                QGraphicsLayout* nodeLayout = nullptr;
+                GraphCanvas::NodeLayoutRequestBus::EventResult(
+                    nodeLayout, canvasNode, &GraphCanvas::NodeLayoutRequests::GetLayout);
+                ASSERT_NE(nodeLayout, nullptr);
+                QCoreApplication::sendPostedEvents(nullptr, QEvent::PolishRequest);
+                nodeLayout->activate();
+                GraphCanvas::NodeUIRequestBus::Event(canvasNode, &GraphCanvas::NodeUIRequests::AdjustSize);
+                QCoreApplication::sendPostedEvents(nullptr, QEvent::LayoutRequest);
+                QApplication::processEvents(QEventLoop::ExcludeUserInputEvents);
+                nodeLayout->activate();
+                GraphCanvas::NodeUIRequestBus::Event(canvasNode, &GraphCanvas::NodeUIRequests::AdjustSize);
+
+                QRectF preparedArea;
+                GraphCanvas::ViewRequestBus::EventResult(
+                    preparedArea, preparationViewId, &GraphCanvas::ViewRequests::GetCompleteArea);
+                ASSERT_FALSE(preparedArea.isEmpty());
+                RecordProperty("prepared_node_width", QString::number(preparedArea.width(), 'g', 17).toStdString());
+                RecordProperty("prepared_node_height", QString::number(preparedArea.height(), 'g', 17).toStdString());
+            }
+            GraphCanvas::ViewId releasedViewId;
+            GraphCanvas::SceneRequestBus::EventResult(releasedViewId, scene, &GraphCanvas::SceneRequests::GetViewId);
+            ASSERT_FALSE(releasedViewId.IsValid());
+            ASSERT_FALSE(GraphCanvas::ViewRequestBus::HasHandlers(preparationViewId));
+            ASSERT_EQ(viewParamChanges.changes, 0) << "Preparation persisted zoom/anchor; camera isolation is incomplete.";
+        }
+        ASSERT_EQ(QApplication::mouseButtons(), Qt::NoButton);
+
+        QWidget host;
+        host.resize(900, 650);
+        auto* layout = new QVBoxLayout(&host);
+        auto view = AZStd::make_unique<JE::Editor::Tools::GraphDocumentView>(
+            m_session->GetToolId(), id, m_session->EnableGraphDocuments().GetViewSettings(), &host);
+        const auto graphicsViews = view->findChildren<QGraphicsView*>();
+        ASSERT_EQ(graphicsViews.size(), 1);
+        auto* graphicsView = graphicsViews.front();
+        GraphCanvas::ViewId viewId;
+        GraphCanvas::SceneRequestBus::EventResult(viewId, scene, &GraphCanvas::SceneRequests::GetViewId);
+        ASSERT_TRUE(viewId.IsValid());
+
+        const QSize hiddenViewport = graphicsView->viewport()->size();
+        const QTransform hiddenTransform = graphicsView->transform();
+        QRectF initialArea;
+        GraphCanvas::ViewRequestBus::EventResult(initialArea, viewId, &GraphCanvas::ViewRequests::GetCompleteArea);
+        ASSERT_FALSE(initialArea.isEmpty());
+        RecordProperty("hidden_viewport_width", hiddenViewport.width());
+        RecordProperty("hidden_viewport_height", hiddenViewport.height());
+        RecordProperty("hidden_zoom", QString::number(hiddenTransform.m11(), 'g', 17).toStdString());
+
+        layout->addWidget(view.get());
+        host.ensurePolished();
+        host.show();
+        QCoreApplication::sendPostedEvents(nullptr, QEvent::LayoutRequest);
+        layout->activate();
+        QApplication::processEvents(QEventLoop::ExcludeUserInputEvents);
+        QCoreApplication::sendPostedEvents(nullptr, QEvent::LayoutRequest);
+        layout->activate();
+        ASSERT_TRUE(graphicsView->isVisible());
+        const QSize laidOutViewport = graphicsView->viewport()->size();
+        const QTransform initialAfterLayout = graphicsView->transform();
+        QRectF laidOutArea;
+        GraphCanvas::ViewRequestBus::EventResult(laidOutArea, viewId, &GraphCanvas::ViewRequests::GetCompleteArea);
+        RecordProperty("laid_out_viewport_width", laidOutViewport.width());
+        RecordProperty("laid_out_viewport_height", laidOutViewport.height());
+        RecordProperty("initial_zoom_after_layout", QString::number(initialAfterLayout.m11(), 'g', 17).toStdString());
+        ASSERT_GT(laidOutViewport.width(), hiddenViewport.width());
+        ASSERT_GT(laidOutViewport.height(), hiddenViewport.height());
+        ASSERT_EQ(laidOutArea, initialArea) << "Node bounds changed; viewport timing alone is not isolated.";
+
+        // Re-run the existing fit from the source default only after the real viewport geometry exists.
+        GraphCanvas::ViewRequestBus::Event(viewId, &GraphCanvas::ViewRequests::SetViewParams, GraphCanvas::ViewParams{});
+        GraphCanvas::ViewRequestBus::Event(viewId, &GraphCanvas::ViewRequests::ShowEntireGraph);
+        const QTransform layoutReadyControl = graphicsView->transform();
+        RecordProperty("layout_ready_control_zoom", QString::number(layoutReadyControl.m11(), 'g', 17).toStdString());
+        RecordProperty("initial_transform_dx", QString::number(initialAfterLayout.dx(), 'g', 17).toStdString());
+        RecordProperty("initial_transform_dy", QString::number(initialAfterLayout.dy(), 'g', 17).toStdString());
+        RecordProperty("control_transform_dx", QString::number(layoutReadyControl.dx(), 'g', 17).toStdString());
+        RecordProperty("control_transform_dy", QString::number(layoutReadyControl.dy(), 'g', 17).toStdString());
+        ASSERT_GT(layoutReadyControl.m11(), 0.0);
+        EXPECT_DOUBLE_EQ(initialAfterLayout.m11(), layoutReadyControl.m11())
+            << "Constructor-time framing differs from fitting the same bounds with the final viewport.";
+    }
+
+    TEST_F(PassGraphWorkspaceTests, InitialGraphFramingDoesNotRepeatAfterManualCameraAndHideShow)
+    {
+        AZ::Uuid id;
+        GraphCanvas::GraphId scene;
+        ASSERT_NO_FATAL_FAILURE(PrepareFramingDocument(id, scene));
+        QWidget host;
+        host.resize(900, 650);
+        auto* layout = new QVBoxLayout(&host);
+        auto view = AZStd::make_unique<JE::Editor::Tools::GraphDocumentView>(
+            m_session->GetToolId(), id, m_session->EnableGraphDocuments().GetViewSettings(), &host);
+        const auto graphicsViews = view->findChildren<QGraphicsView*>();
+        ASSERT_EQ(graphicsViews.size(), 1);
+        auto* graphicsView = graphicsViews.front();
+        GraphCanvas::ViewId viewId;
+        GraphCanvas::SceneRequestBus::EventResult(viewId, scene, &GraphCanvas::SceneRequests::GetViewId);
+        ASSERT_TRUE(viewId.IsValid());
+        FramingNotifications notifications(viewId);
+        layout->addWidget(view.get());
+        host.show();
+        QCoreApplication::sendPostedEvents(nullptr, QEvent::LayoutRequest);
+        layout->activate();
+        QApplication::processEvents(QEventLoop::ExcludeUserInputEvents);
+        ASSERT_GT(notifications.m_centeredCount, 0);
+
+        GraphCanvas::ViewParams manualParams;
+        manualParams.m_scale = 0.5;
+        manualParams.m_anchorPointX = 4000.0f;
+        manualParams.m_anchorPointY = 5000.0f;
+        GraphCanvas::ViewRequestBus::Event(viewId, &GraphCanvas::ViewRequests::SetViewParams, manualParams);
+        // SetViewParams can replay the queued first fit; pan after that native restoration.
+        GraphCanvas::ViewRequestBus::Event(viewId, &GraphCanvas::ViewRequests::CenterOn, QPointF(4000.0, 5000.0));
+        const QSize manualViewport = graphicsView->viewport()->size();
+        const QPointF manualCenter = graphicsView->mapToScene(graphicsView->viewport()->rect().center());
+        QRectF graphArea;
+        GraphCanvas::ViewRequestBus::EventResult(graphArea, viewId, &GraphCanvas::ViewRequests::GetCompleteArea);
+        ASSERT_FALSE(graphArea.contains(manualCenter)) << "Manual camera was not displaced before hide/show.";
+        const qreal manualZoom = graphicsView->transform().m11();
+        const int centeredBeforeShow = notifications.m_centeredCount;
+        host.hide();
+        host.show();
+        QCoreApplication::sendPostedEvents(nullptr, QEvent::LayoutRequest);
+        layout->activate();
+        QApplication::processEvents(QEventLoop::ExcludeUserInputEvents);
+        ASSERT_EQ(graphicsView->viewport()->size(), manualViewport);
+        EXPECT_EQ(notifications.m_centeredCount, centeredBeforeShow);
+        EXPECT_EQ(graphicsView->mapToScene(graphicsView->viewport()->rect().center()), manualCenter);
+        EXPECT_DOUBLE_EQ(graphicsView->transform().m11(), manualZoom);
+
+        // Prove that the camera oracle detects a fit even when min(fit, original) preserves zoom.
+        GraphCanvas::ViewRequestBus::Event(viewId, &GraphCanvas::ViewRequests::ShowEntireGraph);
+        EXPECT_GT(notifications.m_centeredCount, centeredBeforeShow);
+        EXPECT_NE(graphicsView->mapToScene(graphicsView->viewport()->rect().center()), manualCenter);
+    }
+
+    TEST_F(PassGraphWorkspaceTests, InputBeforeInitialFramingPreservesManualCamera)
+    {
+        AZ::Uuid id;
+        GraphCanvas::GraphId scene;
+        ASSERT_NO_FATAL_FAILURE(PrepareFramingDocument(id, scene));
+        QWidget host;
+        host.resize(900, 650);
+        auto* layout = new QVBoxLayout(&host);
+        auto view = AZStd::make_unique<JE::Editor::Tools::GraphDocumentView>(
+            m_session->GetToolId(), id, m_session->EnableGraphDocuments().GetViewSettings(), &host);
+        const auto graphicsViews = view->findChildren<QGraphicsView*>();
+        ASSERT_EQ(graphicsViews.size(), 1);
+        auto* graphicsView = graphicsViews.front();
+        GraphCanvas::ViewId viewId;
+        GraphCanvas::SceneRequestBus::EventResult(viewId, scene, &GraphCanvas::SceneRequests::GetViewId);
+        ASSERT_TRUE(viewId.IsValid());
+        FramingNotifications notifications(viewId);
+        layout->addWidget(view.get());
+        host.show();
+        QCoreApplication::sendPostedEvents(nullptr, QEvent::LayoutRequest);
+        layout->activate();
+        ASSERT_EQ(notifications.m_centeredCount, 0) << "The queued first-fit ran before the input precondition.";
+        ASSERT_TRUE(graphicsView->viewport()->isVisible());
+        QKeyEvent press(QEvent::KeyPress, Qt::Key_Shift, Qt::ShiftModifier);
+        QKeyEvent release(QEvent::KeyRelease, Qt::Key_Shift, Qt::NoModifier);
+        QApplication::sendEvent(graphicsView->viewport(), &press);
+        QApplication::sendEvent(graphicsView->viewport(), &release);
+        GraphCanvas::ViewParams manualParams;
+        manualParams.m_scale = 0.5;
+        manualParams.m_anchorPointX = 4000.0f;
+        manualParams.m_anchorPointY = 5000.0f;
+        GraphCanvas::ViewRequestBus::Event(viewId, &GraphCanvas::ViewRequests::SetViewParams, manualParams);
+        const QSize manualViewport = graphicsView->viewport()->size();
+        const QPointF manualCenter = graphicsView->mapToScene(graphicsView->viewport()->rect().center());
+        const qreal manualZoom = graphicsView->transform().m11();
+        QApplication::processEvents(QEventLoop::ExcludeUserInputEvents);
+        ASSERT_EQ(graphicsView->viewport()->size(), manualViewport);
+        EXPECT_EQ(notifications.m_centeredCount, 0);
+        EXPECT_EQ(graphicsView->mapToScene(graphicsView->viewport()->rect().center()), manualCenter);
+        EXPECT_DOUBLE_EQ(graphicsView->transform().m11(), manualZoom);
+
+        GraphCanvas::ViewRequestBus::Event(viewId, &GraphCanvas::ViewRequests::ShowEntireGraph);
+        EXPECT_GT(notifications.m_centeredCount, 0);
+        EXPECT_NE(graphicsView->mapToScene(graphicsView->viewport()->rect().center()), manualCenter);
+    }
 
     TEST_F(PassGraphWorkspaceTests, PassEditingSaveReopenAndGlobalUndoNeverQueueAutomaticCompilation)
     {
@@ -774,12 +1068,12 @@ namespace UnitTest
         ASSERT_FALSE(id.IsNull());
         GraphModel::GraphPtr graph;
         GraphCanvas::GraphId scene;
-        AtomToolsFramework::GraphDocumentRequestBus::EventResult(graph, id, &AtomToolsFramework::GraphDocumentRequests::GetGraph);
-        AtomToolsFramework::GraphDocumentRequestBus::EventResult(scene, id, &AtomToolsFramework::GraphDocumentRequests::GetGraphId);
+        JE::Editor::Tools::GraphDocumentRequestBus::EventResult(graph, id, &JE::Editor::Tools::GraphDocumentRequests::GetGraph);
+        JE::Editor::Tools::GraphDocumentRequestBus::EventResult(scene, id, &JE::Editor::Tools::GraphDocumentRequests::GetGraphId);
         ASSERT_NE(graph, nullptr);
         ASSERT_TRUE(scene.IsValid());
         bool success = false;
-        AtomToolsFramework::AtomToolsDocumentRequestBus::EventResult(success, id, &AtomToolsFramework::AtomToolsDocumentRequests::BeginEdit);
+        JE::Editor::Tools::AtomToolsDocumentRequestBus::EventResult(success, id, &JE::Editor::Tools::AtomToolsDocumentRequests::BeginEdit);
         ASSERT_TRUE(success);
         auto node = AZStd::make_shared<GraphModel::GraphInputNode>(graph, graph->GetContext()->GetDataType<float>());
         node->GetSlot("defaultValue")->SetValue(0.375f);
@@ -789,25 +1083,25 @@ namespace UnitTest
             &GraphModelIntegration::GraphControllerRequests::AddNode, node, position);
         ASSERT_TRUE(canvasNode.IsValid());
         const auto logicalId = node->GetId();
-        AtomToolsFramework::AtomToolsDocumentRequestBus::EventResult(success, id, &AtomToolsFramework::AtomToolsDocumentRequests::EndEdit);
+        JE::Editor::Tools::AtomToolsDocumentRequestBus::EventResult(success, id, &JE::Editor::Tools::AtomToolsDocumentRequests::EndEdit);
         ASSERT_TRUE(success);
         ASSERT_TRUE(m_application->GetUndoStack()->CanUndo());
         m_application->GetUndoStack()->Undo();
-        AtomToolsFramework::GraphDocumentRequestBus::EventResult(graph, id, &AtomToolsFramework::GraphDocumentRequests::GetGraph);
+        JE::Editor::Tools::GraphDocumentRequestBus::EventResult(graph, id, &JE::Editor::Tools::GraphDocumentRequests::GetGraph);
         EXPECT_EQ(graph->GetNodeCount(), 0);
         m_application->GetUndoStack()->Redo();
-        AtomToolsFramework::GraphDocumentRequestBus::EventResult(graph, id, &AtomToolsFramework::GraphDocumentRequests::GetGraph);
+        JE::Editor::Tools::GraphDocumentRequestBus::EventResult(graph, id, &JE::Editor::Tools::GraphDocumentRequests::GetGraph);
         ASSERT_NE(graph->GetNode(logicalId), nullptr);
         EXPECT_FLOAT_EQ(graph->GetNode(logicalId)->GetSlot("defaultValue")->GetValue<float>(), 0.375f);
-        AtomToolsFramework::AtomToolsDocumentRequestBus::EventResult(success, id, &AtomToolsFramework::AtomToolsDocumentRequests::Save);
+        JE::Editor::Tools::AtomToolsDocumentRequestBus::EventResult(success, id, &JE::Editor::Tools::AtomToolsDocumentRequests::Save);
         ASSERT_TRUE(success);
-        AtomToolsFramework::AtomToolsDocumentRequestBus::EventResult(success, id, &AtomToolsFramework::AtomToolsDocumentRequests::Reopen);
+        JE::Editor::Tools::AtomToolsDocumentRequestBus::EventResult(success, id, &JE::Editor::Tools::AtomToolsDocumentRequests::Reopen);
         ASSERT_TRUE(success);
-        AtomToolsFramework::GraphDocumentRequestBus::EventResult(graph, id, &AtomToolsFramework::GraphDocumentRequests::GetGraph);
+        JE::Editor::Tools::GraphDocumentRequestBus::EventResult(graph, id, &JE::Editor::Tools::GraphDocumentRequests::GetGraph);
         ASSERT_NE(graph->GetNode(logicalId), nullptr);
         EXPECT_FLOAT_EQ(graph->GetNode(logicalId)->GetSlot("defaultValue")->GetValue<float>(), 0.375f);
 
-        class CompilationNotifications final : public AtomToolsFramework::GraphDocumentNotificationBus::Handler
+        class CompilationNotifications final : public JE::Editor::Tools::GraphDocumentNotificationBus::Handler
         {
         public:
             CompilationNotifications() { BusConnect(JE::Editor::MaterialWorkspaceSession::GetToolId()); }
@@ -817,9 +1111,9 @@ namespace UnitTest
             void OnCompileGraphFailed(const AZ::Uuid&) override { ++m_count; }
             int m_count = 0;
         } notifications;
-        AtomToolsFramework::GraphDocumentRequestBus::Event(id, &AtomToolsFramework::GraphDocumentRequests::QueueCompileGraph);
+        JE::Editor::Tools::GraphDocumentRequestBus::Event(id, &JE::Editor::Tools::GraphDocumentRequests::QueueCompileGraph);
         bool queued = true;
-        AtomToolsFramework::GraphDocumentRequestBus::EventResult(queued, id, &AtomToolsFramework::GraphDocumentRequests::IsCompileGraphQueued);
+        JE::Editor::Tools::GraphDocumentRequestBus::EventResult(queued, id, &JE::Editor::Tools::GraphDocumentRequests::IsCompileGraphQueued);
         EXPECT_FALSE(queued);
         const auto state = m_session->GetCompileState(id);
         EXPECT_FALSE(m_session->RequestCompile(id));
@@ -832,7 +1126,7 @@ namespace UnitTest
         EXPECT_EQ(notifications.m_count, 0);
         const auto material = OpenGraph(JE::Editor::MaterialGraphEnvironment::GraphKind::Material);
         ASSERT_FALSE(material.IsNull());
-        AtomToolsFramework::GraphDocumentRequestBus::EventResult(queued, material, &AtomToolsFramework::GraphDocumentRequests::IsCompileGraphQueued);
+        JE::Editor::Tools::GraphDocumentRequestBus::EventResult(queued, material, &JE::Editor::Tools::GraphDocumentRequests::IsCompileGraphQueued);
         EXPECT_TRUE(queued); // Control: material auto-compilation remains enabled; do not submit its job in this fixture.
     }
 
@@ -869,18 +1163,18 @@ namespace UnitTest
         EXPECT_NE(contextPalette.FindItemWithName(QStringLiteral("Only Material")), nullptr);
         EXPECT_EQ(contextPalette.FindItemWithName(QStringLiteral("Only Pass")), nullptr);
         EXPECT_FALSE(compile->isHidden());
-        EXPECT_TRUE(AtomToolsFramework::AtomToolsDocumentRequestBus::HasHandlers(pass));
-        EXPECT_TRUE(AtomToolsFramework::AtomToolsDocumentRequestBus::HasHandlers(material));
+        EXPECT_TRUE(JE::Editor::Tools::AtomToolsDocumentRequestBus::HasHandlers(pass));
+        EXPECT_TRUE(JE::Editor::Tools::AtomToolsDocumentRequestBus::HasHandlers(material));
         EXPECT_EQ(m_session->GetGraphDocumentTypes().size(), 5);
         const auto node = m_session->OpenDocument(m_directory->Resolve("source/pass.passgraphnode").Native());
         ASSERT_FALSE(node.IsNull());
-        AtomToolsFramework::DocumentObjectInfoVector objects;
-        AtomToolsFramework::AtomToolsDocumentRequestBus::EventResult(objects, node,
-            &AtomToolsFramework::AtomToolsDocumentRequests::GetObjectInfo);
+        JE::Editor::Tools::DocumentObjectInfoVector objects;
+        JE::Editor::Tools::AtomToolsDocumentRequestBus::EventResult(objects, node,
+            &JE::Editor::Tools::AtomToolsDocumentRequests::GetObjectInfo);
         ASSERT_EQ(objects.size(), 1);
-        EXPECT_EQ(objects.front().m_objectType, azrtti_typeid<AtomToolsFramework::DynamicNodeConfig>());
+        EXPECT_EQ(objects.front().m_objectType, azrtti_typeid<JE::Editor::Tools::DynamicNodeConfig>());
         GraphCanvas::GraphId nodeScene;
-        AtomToolsFramework::GraphDocumentRequestBus::EventResult(nodeScene, node, &AtomToolsFramework::GraphDocumentRequests::GetGraphId);
+        JE::Editor::Tools::GraphDocumentRequestBus::EventResult(nodeScene, node, &JE::Editor::Tools::GraphDocumentRequests::GetGraphId);
         EXPECT_FALSE(nodeScene.IsValid());
         EXPECT_TRUE(compile->isHidden());
         EXPECT_NE(palette->FindItemWithName(QStringLiteral("Only Pass")), nullptr);
@@ -891,18 +1185,18 @@ namespace UnitTest
         JE::Editor::MaterialGraphWorkspaceWidget widget(*m_session);
         const auto node = m_session->OpenDocument(m_directory->Resolve("source/pass.passgraphnode").Native());
         ASSERT_FALSE(node.IsNull());
-        AtomToolsFramework::DocumentObjectInfoVector objects;
-        AtomToolsFramework::AtomToolsDocumentRequestBus::EventResult(objects, node,
-            &AtomToolsFramework::AtomToolsDocumentRequests::GetObjectInfo);
+        JE::Editor::Tools::DocumentObjectInfoVector objects;
+        JE::Editor::Tools::AtomToolsDocumentRequestBus::EventResult(objects, node,
+            &JE::Editor::Tools::AtomToolsDocumentRequests::GetObjectInfo);
         ASSERT_EQ(objects.size(), 1);
-        EXPECT_EQ(objects.front().m_objectType, azrtti_typeid<AtomToolsFramework::DynamicNodeConfig>());
+        EXPECT_EQ(objects.front().m_objectType, azrtti_typeid<JE::Editor::Tools::DynamicNodeConfig>());
 
         auto* notice = widget.findChild<QLabel*>(QStringLiteral("GraphCompileStatus"));
         ASSERT_NE(notice, nullptr);
         QWidget* inspector = nullptr;
         for (auto* child : widget.findChildren<QWidget*>())
         {
-            if (child->qt_metacast("AtomToolsFramework::AtomToolsDocumentInspector"))
+            if (child->qt_metacast("JE::Editor::Tools::AtomToolsDocumentInspector"))
             {
                 inspector = child;
                 break;
@@ -975,9 +1269,9 @@ namespace UnitTest
     TEST_F(PassGraphCollisionTests, DuplicateUuidDoesNotReplaceMaterialConfigOrEnterPassPalette)
     {
         auto& environment = m_session->EnableGraphDocuments();
-        AtomToolsFramework::DynamicNodeConfig config;
-        AtomToolsFramework::DynamicNodeManagerRequestBus::EventResult(config, m_session->GetToolId(),
-            &AtomToolsFramework::DynamicNodeManagerRequests::GetConfigById, m_materialConfigId);
+        JE::Editor::Tools::DynamicNodeConfig config;
+        JE::Editor::Tools::DynamicNodeManagerRequestBus::EventResult(config, m_session->GetToolId(),
+            &JE::Editor::Tools::DynamicNodeManagerRequests::GetConfigById, m_materialConfigId);
         EXPECT_EQ(config.m_id, m_materialConfigId);
         EXPECT_EQ(config.m_title, "Only Material");
         GraphCanvas::NodePaletteWidget palette(nullptr);
@@ -1042,7 +1336,7 @@ namespace UnitTest
         const auto state = m_document->GetHistoryState();
         ASSERT_FALSE(state.empty());
         const auto liveGraph = m_document->GetGraph();
-        const auto invalidTarget = AtomToolsFramework::DocumentHistoryState{0, 1, 2, 3};
+        const auto invalidTarget = JE::Editor::Tools::DocumentHistoryState{0, 1, 2, 3};
         // ObjectStream reports the malformed data in addition to GraphDocument's explicit rejection.
         AZ_TEST_START_TRACE_SUPPRESSION;
         EXPECT_FALSE(m_document->RestoreHistoryState(state, invalidTarget));

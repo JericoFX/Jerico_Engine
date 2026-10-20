@@ -12,9 +12,9 @@
 #include <JE/Editor/Render/RPI/Edit/Material/MaterialUtils.h>
 #include <JE/Render/RPI/Reflect/Material/MaterialPropertiesLayout.h>
 
-#include <AtomToolsFramework/Inspector/InspectorPropertyGroupWidget.h>
-#include <AtomToolsFramework/Util/MaterialPropertyUtil.h>
-#include <AtomToolsFramework/Util/Util.h>
+#include <JE/Editor/Tools/Inspector/InspectorPropertyGroupWidget.h>
+#include <JE/Editor/Tools/Util/MaterialPropertyUtil.h>
+#include <JE/Editor/Tools/Util/Util.h>
 
 #include <AzFramework/StringFunc/StringFunc.h>
 
@@ -23,7 +23,7 @@ namespace OpenParticleSystemEditor
     AZStd::unordered_set<AZ::u32> MaterialPropertyWidget::s_expandedGroups;
 
     MaterialPropertyWidget::MaterialPropertyWidget(QWidget* parent)
-        : AtomToolsFramework::InspectorWidget(parent)
+        : JE::Editor::Tools::InspectorWidget(parent)
     {
         SetGroupSettingsPrefix("/O3DE/OpenParticleSystem/MaterialPropertyWidget");
     }
@@ -41,7 +41,7 @@ namespace OpenParticleSystemEditor
     void MaterialPropertyWidget::Reset()
     {
         m_groups.clear();
-        AtomToolsFramework::InspectorWidget::Reset();
+        JE::Editor::Tools::InspectorWidget::Reset();
     }
 
     bool MaterialPropertyWidget::ShouldGroupAutoExpanded(const AZStd::string& groupName) const
@@ -53,13 +53,13 @@ namespace OpenParticleSystemEditor
     void MaterialPropertyWidget::OnGroupExpanded(const AZStd::string& groupName)
     {
         s_expandedGroups.insert(AZ::Crc32(groupName));
-        AtomToolsFramework::InspectorWidget::OnGroupExpanded(groupName);
+        JE::Editor::Tools::InspectorWidget::OnGroupExpanded(groupName);
     }
 
     void MaterialPropertyWidget::OnGroupCollapsed(const AZStd::string& groupName)
     {
         s_expandedGroups.erase(AZ::Crc32(groupName));
-        AtomToolsFramework::InspectorWidget::OnGroupCollapsed(groupName);
+        JE::Editor::Tools::InspectorWidget::OnGroupCollapsed(groupName);
     }
 
     void MaterialPropertyWidget::SetDetail(OpenParticle::ParticleSourceData::DetailInfo* detail)
@@ -190,13 +190,13 @@ namespace OpenParticleSystemEditor
                 group.m_properties.reserve(propertyGroupDefinition->GetProperties().size());
                 for (const auto& propertyDefinition : propertyGroupDefinition->GetProperties())
                 {
-                    AtomToolsFramework::DynamicPropertyConfig propertyConfig;
+                    JE::Editor::Tools::DynamicPropertyConfig propertyConfig;
 
                     // The id has to be assigned before conversion because it is folded into the description.
                     propertyConfig.m_id = propertyDefinition->GetName();
                     groupNameContext.ContextualizeProperty(propertyConfig.m_id);
 
-                    AtomToolsFramework::ConvertToPropertyConfig(propertyConfig, *propertyDefinition);
+                    JE::Editor::Tools::ConvertToPropertyConfig(propertyConfig, *propertyDefinition);
 
                     const auto& propertyIndex = m_materialAsset->GetMaterialPropertiesLayout()->FindPropertyIndex(propertyConfig.m_id);
                     if (propertyIndex.IsNull())
@@ -213,7 +213,7 @@ namespace OpenParticleSystemEditor
                     // of the assigned material asset, so the asset's values act as both the reset target and the
                     // baseline the "modified" indicator compares against.
                     const auto& assetValue = m_materialAsset->GetPropertyValues()[propertyIndex.GetIndex()];
-                    propertyConfig.m_defaultValue = AtomToolsFramework::ConvertToEditableType(assetValue);
+                    propertyConfig.m_defaultValue = JE::Editor::Tools::ConvertToEditableType(assetValue);
                     propertyConfig.m_parentValue = propertyConfig.m_defaultValue;
                     propertyConfig.m_originalValue = propertyConfig.m_defaultValue;
 
@@ -229,7 +229,7 @@ namespace OpenParticleSystemEditor
 
                 // Passing the same group as both instance and comparison instance enables the custom value
                 // comparison that drives the "this value is overridden" indicator icon.
-                auto propertyGroupWidget = new AtomToolsFramework::InspectorPropertyGroupWidget(
+                auto propertyGroupWidget = new JE::Editor::Tools::InspectorPropertyGroupWidget(
                     &group, &group, group.TYPEINFO_Uuid(), this, this, GetGroupSaveStateKey(group.m_name), {},
                     [this](const auto node)
                     {
@@ -288,9 +288,9 @@ namespace OpenParticleSystemEditor
 
                 // Round trip through the runtime type so values that arrived as an asset id or a loosely
                 // typed number end up in the exact shape the control expects.
-                const auto runtimeValue = AtomToolsFramework::ConvertToRuntimeType(editValue);
+                const auto runtimeValue = JE::Editor::Tools::ConvertToRuntimeType(editValue);
                 property.SetValue(
-                    runtimeValue.IsValid() ? AtomToolsFramework::ConvertToEditableType(runtimeValue) : editValue);
+                    runtimeValue.IsValid() ? JE::Editor::Tools::ConvertToEditableType(runtimeValue) : editValue);
             }
         }
 
@@ -299,7 +299,7 @@ namespace OpenParticleSystemEditor
         RebuildAll();
     }
 
-    void MaterialPropertyWidget::SaveOverrideToDetail(const AtomToolsFramework::DynamicProperty& property)
+    void MaterialPropertyWidget::SaveOverrideToDetail(const JE::Editor::Tools::DynamicProperty& property)
     {
         if (m_detail == nullptr)
         {
@@ -309,7 +309,7 @@ namespace OpenParticleSystemEditor
         // Only store genuine differences. Dragging a slider back to the material's own value removes the
         // entry entirely, which keeps the .particle file clean and lets the emitter fall back to sharing
         // the material's value if the material is later edited.
-        if (AtomToolsFramework::ArePropertyValuesEqual(property.GetValue(), property.GetConfig().m_originalValue))
+        if (JE::Editor::Tools::ArePropertyValuesEqual(property.GetValue(), property.GetConfig().m_originalValue))
         {
             m_detail->m_materialOverrides.erase(property.GetId());
         }
@@ -327,8 +327,8 @@ namespace OpenParticleSystemEditor
 
     bool MaterialPropertyWidget::IsInstanceNodePropertyModified(const AzToolsFramework::InstanceDataNode* node) const
     {
-        const auto property = AtomToolsFramework::FindAncestorInstanceDataNodeByType<AtomToolsFramework::DynamicProperty>(node);
-        return property && !AtomToolsFramework::ArePropertyValuesEqual(property->GetValue(), property->GetConfig().m_originalValue);
+        const auto property = JE::Editor::Tools::FindAncestorInstanceDataNodeByType<JE::Editor::Tools::DynamicProperty>(node);
+        return property && !JE::Editor::Tools::ArePropertyValuesEqual(property->GetValue(), property->GetConfig().m_originalValue);
     }
 
     const char* MaterialPropertyWidget::GetInstanceNodePropertyIndicator(const AzToolsFramework::InstanceDataNode* node) const
@@ -351,7 +351,7 @@ namespace OpenParticleSystemEditor
             return;
         }
 
-        const auto property = AtomToolsFramework::FindAncestorInstanceDataNodeByType<AtomToolsFramework::DynamicProperty>(node);
+        const auto property = JE::Editor::Tools::FindAncestorInstanceDataNodeByType<JE::Editor::Tools::DynamicProperty>(node);
         if (property)
         {
             SaveOverrideToDetail(*property);
@@ -372,7 +372,7 @@ namespace OpenParticleSystemEditor
             return;
         }
 
-        const auto property = AtomToolsFramework::FindAncestorInstanceDataNodeByType<AtomToolsFramework::DynamicProperty>(node);
+        const auto property = JE::Editor::Tools::FindAncestorInstanceDataNodeByType<JE::Editor::Tools::DynamicProperty>(node);
         if (property)
         {
             SaveOverrideToDetail(*property);

@@ -8,11 +8,11 @@
 
 #pragma once
 
-#include <AtomToolsFramework/Document/AtomToolsDocumentInspector.h>
-#include <AtomToolsFramework/Document/AtomToolsDocumentMainWindow.h>
-#include <AtomToolsFramework/EntityPreviewViewport/EntityPreviewViewportSettingsInspector.h>
-#include <AtomToolsFramework/EntityPreviewViewport/EntityPreviewViewportToolBar.h>
-#include <AtomToolsFramework/EntityPreviewViewport/EntityPreviewViewportWidget.h>
+#include <JE/Editor/Tools/Document/AtomToolsDocumentInspector.h>
+#include <JE/Editor/Tools/Document/AtomToolsDocumentMainWindow.h>
+#include <JE/Editor/Tools/EntityPreviewViewport/EntityPreviewViewportSettingsInspector.h>
+#include <JE/Editor/Tools/EntityPreviewViewport/EntityPreviewViewportToolBar.h>
+#include <JE/Editor/Tools/EntityPreviewViewport/EntityPreviewViewportWidget.h>
 #include <AzCore/Component/ComponentApplicationBus.h>
 
 namespace MaterialEditor
@@ -21,13 +21,13 @@ namespace MaterialEditor
     //! its panels, managing selection of assets, and performing high-level actions like saving. It contains...
     //! 2) MaterialViewport        - The user can see the selected Material applied to a model.
     //! 3) MaterialPropertyInspector  - The user edits the properties of the selected Material.
-    class MaterialEditorMainWindow : public AtomToolsFramework::AtomToolsDocumentMainWindow
+    class MaterialEditorMainWindow : public JE::Editor::Tools::AtomToolsDocumentMainWindow
     {
         Q_OBJECT
     public:
         AZ_CLASS_ALLOCATOR(MaterialEditorMainWindow, AZ::SystemAllocator);
 
-        using Base = AtomToolsFramework::AtomToolsDocumentMainWindow;
+        using Base = JE::Editor::Tools::AtomToolsDocumentMainWindow;
 
         MaterialEditorMainWindow(const AZ::Crc32& toolId, QWidget* parent = nullptr);
 
@@ -43,9 +43,9 @@ namespace MaterialEditor
         // AtomToolsFramework::AtomToolsDocumentMainWindow overrides...
         AZStd::string GetHelpUrl() const override;
 
-        AtomToolsFramework::AtomToolsDocumentInspector* m_documentInspector = {};
-        AtomToolsFramework::EntityPreviewViewportSettingsInspector* m_viewportSettingsInspector = {};
-        AtomToolsFramework::EntityPreviewViewportToolBar* m_toolBar = {};
-        AtomToolsFramework::EntityPreviewViewportWidget* m_materialViewport = {};
+        JE::Editor::Tools::AtomToolsDocumentInspector* m_documentInspector = {};
+        JE::Editor::Tools::EntityPreviewViewportSettingsInspector* m_viewportSettingsInspector = {};
+        JE::Editor::Tools::EntityPreviewViewportToolBar* m_toolBar = {};
+        JE::Editor::Tools::EntityPreviewViewportWidget* m_materialViewport = {};
     };
 } // namespace MaterialEditor

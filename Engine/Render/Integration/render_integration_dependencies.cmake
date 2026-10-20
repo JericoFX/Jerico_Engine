@@ -23,7 +23,7 @@ set(JE_RENDER_INTEGRATION_TOOL_DEPENDENCIES
     Gem::EMotionFX_Atom.Editor
     Gem::ImageProcessingAtom.Editor
     Gem::AtomFont
-    Gem::AtomToolsFramework.Editor
+    JE::EditorTools
     Gem::AtomViewportDisplayInfo
     Gem::AtomViewportDisplayIcons.Editor
     Gem::ShaderManagementConsole.Builders

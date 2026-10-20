@@ -1,0 +1,11 @@
+{
+  "executable": "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/profile/MaterialEditor.exe",
+  "creationUtc": "2026-10-20T16:27:08.4656345Z",
+  "cwd": "F:/JericoEngine/JericoEngine",
+  "pid": 3552,
+  "argv": [
+    "--project-path=F:/JericoEngine/JericoEngine/Projects/JEEditorFixture",
+    "--rhi=vulkan"
+  ],
+  "path": null
+}

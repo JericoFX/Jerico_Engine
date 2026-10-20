@@ -12,8 +12,8 @@
 #include <JE/Render/RPI/Reflect/Material/MaterialAsset.h>
 #include <JE/Render/RPI/Reflect/Material/MaterialTypeAsset.h>
 
-#include <AtomToolsFramework/DynamicProperty/DynamicPropertyGroup.h>
-#include <AtomToolsFramework/Inspector/InspectorWidget.h>
+#include <JE/Editor/Tools/DynamicProperty/DynamicPropertyGroup.h>
+#include <JE/Editor/Tools/Inspector/InspectorWidget.h>
 
 #include <AzCore/std/containers/map.h>
 #include <AzCore/std/containers/unordered_set.h>
@@ -34,7 +34,7 @@ namespace OpenParticleSystemEditor
     //! Edited values are written into DetailInfo::m_materialOverrides. The owning inspector is responsible
     //! for syncing that map back onto the emitter and notifying the document so the viewport updates.
     class MaterialPropertyWidget
-        : public AtomToolsFramework::InspectorWidget
+        : public JE::Editor::Tools::InspectorWidget
         , public AzToolsFramework::IPropertyEditorNotify
     {
         Q_OBJECT
@@ -95,7 +95,7 @@ namespace OpenParticleSystemEditor
 
         //! Writes one edited property back into DetailInfo::m_materialOverrides. Values that match the
         //! assigned material are removed rather than stored, so the map only ever holds real differences.
-        void SaveOverrideToDetail(const AtomToolsFramework::DynamicProperty& property);
+        void SaveOverrideToDetail(const JE::Editor::Tools::DynamicProperty& property);
 
         AZ::Crc32 GetGroupSaveStateKey(const AZStd::string& groupName) const;
         bool IsInstanceNodePropertyModified(const AzToolsFramework::InstanceDataNode* node) const;
@@ -109,7 +109,7 @@ namespace OpenParticleSystemEditor
         JE::Render::RPI::MaterialTypeSourceData m_materialTypeSourceData;
 
         //! Ordered so the groups always appear in the same sequence between rebuilds.
-        AZStd::map<AZStd::string, AtomToolsFramework::DynamicPropertyGroup> m_groups;
+        AZStd::map<AZStd::string, JE::Editor::Tools::DynamicPropertyGroup> m_groups;
 
         //! Guards against re-entrancy while LoadOverridesFromDetail is pushing values into the editors.
         bool m_updatingUi = false;

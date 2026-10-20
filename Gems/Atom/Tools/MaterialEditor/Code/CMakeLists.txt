@@ -40,16 +40,15 @@ ly_add_target(
             JE::RenderScene
             JE::RenderMaterials
             JE::EditorMaterials
-            Gem::AtomToolsFramework.Editor
+            JE::EditorTools
             JE::EditorCamera
             JE::EditorRenderScene
             JE::EditorRenderFeatures
-            Gem::AtomToolsFramework.Static
     TARGET_PROPERTIES
         EXCLUDE_FROM_ALL TRUE
         JE_EXCLUDE_FROM_SDK TRUE
     RUNTIME_DEPENDENCIES
-        Gem::AtomToolsFramework.Editor
+        JE::EditorTools
 )
 
 if(PAL_TRAIT_BUILD_EXTERNAL_CRASH_HANDLER_SUPPORTED)

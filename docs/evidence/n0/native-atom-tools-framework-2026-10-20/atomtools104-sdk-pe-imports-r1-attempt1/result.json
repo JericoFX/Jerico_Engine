@@ -1,0 +1,14 @@
+{
+  "phaseResult": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-corefeature102\\atomtools104-sdk-pe-imports-r1-attempt1\\atomtools104-sdk-pe-imports-r1.result.json",
+    "bytes": 761,
+    "sha256": "855CC657C6A6856736800EA1E6B1D0B831FFCF40601681573E58A83853063815"
+  },
+  "phase": "atomtools104-sdk-pe-imports-r1",
+  "fatal": null,
+  "leaseId": "parent-atomtools104-sdk-pe-r1",
+  "parentReviewRequired": true,
+  "accepted": false,
+  "wholeGemIncrement": 0,
+  "postflightValid": true
+}

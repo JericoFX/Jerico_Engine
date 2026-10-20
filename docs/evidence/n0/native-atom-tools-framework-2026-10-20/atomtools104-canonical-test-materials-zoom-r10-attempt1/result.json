@@ -1,0 +1,14 @@
+{
+  "parentReviewRequired": true,
+  "phase": "test-atomtools104-canonical-materials-zoom-r10",
+  "wholeGemIncrement": 0,
+  "fatal": null,
+  "postflightValid": true,
+  "leaseId": "parent-atomtools104-zoom-test-r10",
+  "phaseResult": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-corefeature102\\atomtools104-canonical-test-materials-zoom-r10-attempt1\\test-atomtools104-canonical-materials-zoom-r10.result.json",
+    "bytes": 823,
+    "sha256": "E01A17ADB3BF3CF7030C5182D59D03196BCB2A8AFD7B308B98B9391A19CF5D76"
+  },
+  "accepted": false
+}

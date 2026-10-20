@@ -7,6 +7,7 @@
  */
 
 #include "native/utilities/ApplicationManager.h"
+#include <JE/Editor/Tools/Module.h>
 
 #include <JE/Geometry/GeometryModule.h>
 #include <JE/Editor/Camera/CameraModule.h>
@@ -231,6 +232,7 @@ AZ::ComponentTypeList AssetProcessorAZApplication::GetRequiredSystemComponents()
 void AssetProcessorAZApplication::CreateStaticModules(AZStd::vector<AZ::Module*>& outModules)
 {
     AzToolsFramework::ToolsApplication::CreateStaticModules(outModules);
+    outModules.emplace_back(JE::Editor::Tools::CreateModule());
     outModules.emplace_back(JE::Geometry::CreateAuthoringModule());
     outModules.emplace_back(JE::Editor::Camera::CreateAuthoringModule());
     outModules.emplace_back(JE::World::Camera::Debug::CreateDebugModule());

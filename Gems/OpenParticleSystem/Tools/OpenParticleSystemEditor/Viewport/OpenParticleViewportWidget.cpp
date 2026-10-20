@@ -25,7 +25,7 @@
 namespace OpenParticleSystemEditor
 {
     OpenParticleViewportWidget::OpenParticleViewportWidget(QWidget* parent)
-        : AtomToolsFramework::RenderViewportWidget(parent)
+        : JE::Editor::Tools::RenderViewportWidget(parent)
     {
         if (this->objectName().isEmpty())
         {

@@ -12,9 +12,9 @@
 #include <JE/Editor/Materials/EditorMaterialSystemComponentNotificationBus.h>
 #include <JE/Render/Materials/MaterialComponentBus.h>
 #include <JE/Render/Debug/AtomImGuiToolsBus.h>
-#include <AtomToolsFramework/PreviewRenderer/PreviewRendererCaptureRequest.h>
-#include <AtomToolsFramework/PreviewRenderer/PreviewRendererInterface.h>
-#include <AtomToolsFramework/Util/Util.h>
+#include <JE/Editor/Tools/PreviewRenderer/PreviewRendererCaptureRequest.h>
+#include <JE/Editor/Tools/PreviewRenderer/PreviewRendererInterface.h>
+#include <JE/Editor/Tools/Util/Util.h>
 #include <AzCore/Serialization/EditContext.h>
 #include <AzCore/Serialization/EditContextConstants.inl>
 #include <AzCore/Serialization/SerializeContext.h>
@@ -271,7 +271,7 @@ namespace JE
                 return;
             }
 
-            auto previewRenderer = AZ::Interface<AtomToolsFramework::PreviewRendererInterface>::Get();
+            auto previewRenderer = AZ::Interface<JE::Editor::Tools::PreviewRendererInterface>::Get();
             if (!previewRenderer || !m_materialPreviewModelAsset.IsReady() || !m_materialPreviewLightingPresetAsset.IsReady())
             {
                 return;

@@ -1,0 +1,32 @@
+cwd = F:\JericoEngine\JericoEngine\build\n0-validation\original-engine\bin\profile
+LIB: F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/profile/EditorMaterials.Tests.dll
+Loading: F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/profile/EditorMaterials.Tests.dll
+OKAY Library loaded: F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/profile/EditorMaterials.Tests.dll
+OKAY Symbol found: AzRunUnitTests
+Note: Google Test filter = MaterialDocumentSourceChangeTests.*
+[==========] Running 8 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 8 tests from MaterialDocumentSourceChangeTests
+[ RUN      ] MaterialDocumentSourceChangeTests.IdenticalSourceEventsPreserveUnsavedOverridesAndUndo
+[       OK ] MaterialDocumentSourceChangeTests.IdenticalSourceEventsPreserveUnsavedOverridesAndUndo (53 ms)
+[ RUN      ] MaterialDocumentSourceChangeTests.ExternalPropertiesMetadataAndReferencesRemainObservable
+[       OK ] MaterialDocumentSourceChangeTests.ExternalPropertiesMetadataAndReferencesRemainObservable (67 ms)
+[ RUN      ] MaterialDocumentSourceChangeTests.DependencyChangesKeepTheirSeparateNotification
+[       OK ] MaterialDocumentSourceChangeTests.DependencyChangesKeepTheirSeparateNotification (42 ms)
+[ RUN      ] MaterialDocumentSourceChangeTests.MissingOrUnreadableSourceStillReportsExternalChange
+[       OK ] MaterialDocumentSourceChangeTests.MissingOrUnreadableSourceStillReportsExternalChange (43 ms)
+[ RUN      ] MaterialDocumentSourceChangeTests.ColorSaveEchoIsIgnoredButExternalColorChangeRemainsObservable
+[       OK ] MaterialDocumentSourceChangeTests.ColorSaveEchoIsIgnoredButExternalColorChangeRemainsObservable (45 ms)
+[ RUN      ] MaterialDocumentSourceChangeTests.SaveRefreshesLoadedBaselineAndAnExternalRevertIsNotHidden
+[       OK ] MaterialDocumentSourceChangeTests.SaveRefreshesLoadedBaselineAndAnExternalRevertIsNotHidden (48 ms)
+[ RUN      ] MaterialDocumentSourceChangeTests.UnknownJsonFieldsDoNotTurnAnExternalChangeIntoAnIdenticalMatch
+[       OK ] MaterialDocumentSourceChangeTests.UnknownJsonFieldsDoNotTurnAnExternalChangeIntoAnIdenticalMatch (46 ms)
+[ RUN      ] MaterialDocumentSourceChangeTests.ExternalRevertBeforeTheSaveEchoIsNotDiscarded
+[       OK ] MaterialDocumentSourceChangeTests.ExternalRevertBeforeTheSaveEchoIsNotDiscarded (43 ms)
+[----------] 8 tests from MaterialDocumentSourceChangeTests (391 ms total)
+
+[----------] Global test environment tear-down
+[==========] 8 tests from 1 test suite ran. (391 ms total)
+[  PASSED  ] 8 tests.
+OKAY AzRunUnitTests() returned 0
+Returning code: 0

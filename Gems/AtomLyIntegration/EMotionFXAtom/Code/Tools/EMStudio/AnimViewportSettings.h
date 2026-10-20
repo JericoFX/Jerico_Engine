@@ -8,7 +8,7 @@
 
 #pragma once
 
-#include <AtomToolsFramework/Viewport/ModularViewportCameraController.h>
+#include <JE/Editor/Tools/Viewport/ModularViewportCameraController.h>
 #include <AzCore/Settings/SettingsRegistry.h>
 
 namespace EMStudio::ViewportUtil

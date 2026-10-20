@@ -8,21 +8,21 @@
 
 #pragma once
 
-#include <AtomToolsFramework/Document/AtomToolsDocumentNotificationBus.h>
-#include <AtomToolsFramework/EntityPreviewViewport/EntityPreviewViewportContent.h>
-#include <AtomToolsFramework/Graph/GraphDocumentNotificationBus.h>
+#include <JE/Editor/Tools/Document/AtomToolsDocumentNotificationBus.h>
+#include <JE/Editor/Tools/EntityPreviewViewport/EntityPreviewViewportContent.h>
+#include <JE/Editor/Tools/Graph/GraphDocumentNotificationBus.h>
 
 namespace MaterialCanvas
 {
     class MaterialCanvasViewportContent final
-        : public AtomToolsFramework::EntityPreviewViewportContent
-        , public AtomToolsFramework::AtomToolsDocumentNotificationBus::Handler
-        , public AtomToolsFramework::GraphDocumentNotificationBus::Handler
+        : public JE::Editor::Tools::EntityPreviewViewportContent
+        , public JE::Editor::Tools::AtomToolsDocumentNotificationBus::Handler
+        , public JE::Editor::Tools::GraphDocumentNotificationBus::Handler
     {
     public:
         MaterialCanvasViewportContent(
             const AZ::Crc32& toolId,
-            AtomToolsFramework::RenderViewportWidget* widget,
+            JE::Editor::Tools::RenderViewportWidget* widget,
             AZStd::shared_ptr<AzFramework::EntityContext> entityContext);
         ~MaterialCanvasViewportContent();
 

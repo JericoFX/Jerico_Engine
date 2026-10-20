@@ -1,0 +1,16 @@
+JE SDK CORE_PROVIDER_V1	PhotometricValue::GetTypeSuffix	F:\JericoEngine\JericoEngine\build\sdk-vk-consumer102\bin\profile\RenderFeatures.dll
+JE SDK CORE_PROVIDER_V1	r_enablePerMeshShaderOptionFlags	F:\JericoEngine\JericoEngine\build\sdk-vk-consumer102\bin\profile\RenderFeatures.dll
+JE SDK CORE_PROVIDER_V1	r_meshInstancingEnabled	F:\JericoEngine\JericoEngine\build\sdk-vk-consumer102\bin\profile\RenderFeatures.dll
+JE SDK CORE_PROVIDER_V1	r_meshInstancingEnabledForTransparentObjects	F:\JericoEngine\JericoEngine\build\sdk-vk-consumer102\bin\profile\RenderFeatures.dll
+JE SDK CORE_PROVIDER_V1	r_meshInstancingBucketSortScatterBatchSize	F:\JericoEngine\JericoEngine\build\sdk-vk-consumer102\bin\profile\RenderFeatures.dll
+JE SDK CORE_PROVIDER_V1	r_meshInstancingDebugForceUniqueObjectsForProfiling	F:\JericoEngine\JericoEngine\build\sdk-vk-consumer102\bin\profile\RenderFeatures.dll
+[JE SDK DPG] RESULT cycles=2 checks=739 failures=0
+[JE SDK EditorTools] cycle=0 descriptors=4 required=4 provided-services=4 reflection=present released=1
+[JE SDK EditorTools] cycle=1 descriptors=4 required=4 provided-services=4 reflection=present released=1
+JE SDK: Materials, Camera and RenderIntegration exports resolved; empty PassPipelinePreview exercised.
+JE SDK: native RenderAssetBuilders factory/descriptors/recreation and three public contexts exercised without activation or cook.
+JE SDK: shader compiler factory/descriptors/services/recreation and exported shader option hash exercised without activation or cook.
+JE SDK: native Bootstrap true/false factory/descriptors/services/reflection/recreation and stable buses exercised without activation or window.
+JE SDK: native runtime/editor RPI factory identities/four required descriptors/reflection and two construction cycles exercised without activation.
+JE SDK: native runtime/editor Scene factories,36/74 descriptor identities,1/4 required components,services and two construction cycles exercised without activation.
+JE SDK: Core photometric imported constructor/RGB/suffix and one API/five CVar module addresses exercised without activation.

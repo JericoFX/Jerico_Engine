@@ -117,7 +117,7 @@ ly_add_target(
             JE::EditorMaterials
             JE::RenderFeatures
             JE::RenderIntegration
-            Gem::AtomToolsFramework.Static
+            JE::EditorTools
             Gem::AtomViewportDisplayInfo
             Gem::LmbrCentral.Static
             Legacy::CryCommon
@@ -245,7 +245,7 @@ if(PAL_TRAIT_BUILD_TESTS_SUPPORTED)
                 AZ::AzFrameworkTestShared
                 AZ::AzToolsFrameworkTestCommon
                 Legacy::EditorLib
-                Gem::AtomToolsFramework.Static
+                JE::EditorTools
         RUNTIME_DEPENDENCIES
             Gem::LmbrCentral
     )

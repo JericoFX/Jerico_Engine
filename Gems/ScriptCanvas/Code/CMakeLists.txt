@@ -207,7 +207,7 @@ if(PAL_TRAIT_BUILD_HOST_TOOLS)
                 Gem::ExpressionEvaluation.Static
             PRIVATE
                 Legacy::EditorCore
-                Gem::AtomToolsFramework.Static
+                JE::EditorTools
         RUNTIME_DEPENDENCIES
             Gem::${gem_name}
     )
@@ -275,7 +275,7 @@ if(SCRIPTCANVAS_BUILD_STANDALONE_APPLICATION)
                 Legacy::EditorCore
                 Gem::${gem_name}.Editor
                 Gem::${gem_name}.Editor.Static
-                Gem::AtomToolsFramework.Static
+                JE::EditorTools
         RUNTIME_DEPENDENCIES
             Gem::${gem_name}.Editor
     )

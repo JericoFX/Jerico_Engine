@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="3" failures="0" disabled="0" errors="0" time="1.247" timestamp="2026-10-20T12:58:59.169" name="AllTests">
+  <testsuite name="PassGraphWorkspaceTests" tests="3" failures="0" disabled="0" skipped="0" errors="0" time="1.247" timestamp="2026-10-20T12:58:59.169">
+    <testcase name="InitialGraphFramingMatchesLayoutReadyControl" file="F:\JericoEngine\JericoEngine\Editor\Materials\Tests\GraphDocumentHistoryTests.cpp" line="828" status="run" result="completed" time="0.436" timestamp="2026-10-20T12:58:59.169" classname="PassGraphWorkspaceTests">
+      <properties>
+        <property name="preparation_zoom" value="1"/>
+        <property name="prepared_node_width" value="280"/>
+        <property name="prepared_node_height" value="200"/>
+        <property name="hidden_viewport_width" value="98"/>
+        <property name="hidden_viewport_height" value="28"/>
+        <property name="hidden_zoom" value="1"/>
+        <property name="laid_out_viewport_width" value="876"/>
+        <property name="laid_out_viewport_height" value="562"/>
+        <property name="initial_zoom_after_layout" value="1"/>
+        <property name="layout_ready_control_zoom" value="1"/>
+        <property name="initial_transform_dx" value="0"/>
+        <property name="initial_transform_dy" value="0"/>
+        <property name="control_transform_dx" value="0"/>
+        <property name="control_transform_dy" value="0"/>
+      </properties>
+    </testcase>
+    <testcase name="InitialGraphFramingDoesNotRepeatAfterManualCameraAndHideShow" file="F:\JericoEngine\JericoEngine\Editor\Materials\Tests\GraphDocumentHistoryTests.cpp" line="958" status="run" result="completed" time="0.405" timestamp="2026-10-20T12:58:59.606" classname="PassGraphWorkspaceTests" />
+    <testcase name="InputBeforeInitialFramingPreservesManualCamera" file="F:\JericoEngine\JericoEngine\Editor\Materials\Tests\GraphDocumentHistoryTests.cpp" line="1012" status="run" result="completed" time="0.405" timestamp="2026-10-20T12:59:00.011" classname="PassGraphWorkspaceTests" />
+  </testsuite>
+</testsuites>

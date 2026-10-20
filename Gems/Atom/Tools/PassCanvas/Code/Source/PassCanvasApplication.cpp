@@ -10,12 +10,12 @@
 #include <JE/Editor/Camera/CameraModule.h>
 #include <JE/Editor/Render/Scene/SceneModule.h>
 #include <JE/Editor/Render/Features/FeatureModule.h>
-#include <AtomToolsFramework/Document/AtomToolsAnyDocument.h>
-#include <AtomToolsFramework/Document/AtomToolsDocumentSystemRequestBus.h>
-#include <AtomToolsFramework/Graph/DynamicNode/DynamicNodeUtil.h>
-#include <AtomToolsFramework/Graph/GraphDocument.h>
-#include <AtomToolsFramework/Graph/GraphDocumentView.h>
-#include <AtomToolsFramework/Util/Util.h>
+#include <JE/Editor/Tools/Document/AtomToolsAnyDocument.h>
+#include <JE/Editor/Tools/Document/AtomToolsDocumentSystemRequestBus.h>
+#include <JE/Editor/Tools/Graph/DynamicNode/DynamicNodeUtil.h>
+#include <JE/Editor/Tools/Graph/GraphDocument.h>
+#include <JE/Editor/Tools/Graph/GraphDocumentView.h>
+#include <JE/Editor/Tools/Util/Util.h>
 #include <AzCore/Math/Color.h>
 #include <AzCore/Math/Vector2.h>
 #include <AzCore/Math/Vector3.h>
@@ -68,12 +68,12 @@ namespace PassCanvas
         QApplication::setWindowIcon(QIcon(":/Icons/application.svg"));
 
         AzToolsFramework::EditorWindowRequestBus::Handler::BusConnect();
-        AtomToolsFramework::AtomToolsDocumentNotificationBus::Handler::BusConnect(m_toolId);
+        JE::Editor::Tools::AtomToolsDocumentNotificationBus::Handler::BusConnect(m_toolId);
     }
 
     PassCanvasApplication::~PassCanvasApplication()
     {
-        AtomToolsFramework::AtomToolsDocumentNotificationBus::Handler::BusDisconnect();
+        JE::Editor::Tools::AtomToolsDocumentNotificationBus::Handler::BusDisconnect();
         AzToolsFramework::EditorWindowRequestBus::Handler::BusDisconnect();
         m_window.reset();
     }
@@ -133,7 +133,7 @@ namespace PassCanvas
     void PassCanvasApplication::Destroy()
     {
         // Save all of the graph view configuration settings to the settings registry.
-        AtomToolsFramework::SetSettingsObject("/O3DE/Atom/GraphView/ViewSettings", m_graphViewSettingsPtr);
+        JE::Editor::Tools::SetSettingsObject("/O3DE/Atom/GraphView/ViewSettings", m_graphViewSettingsPtr);
 
         m_graphViewSettingsPtr.reset();
         m_window.reset();
@@ -157,7 +157,7 @@ namespace PassCanvas
     void PassCanvasApplication::InitDynamicNodeManager()
     {
         // Instantiate the dynamic node manager to register all dynamic node configurations and data types used in this tool
-        m_dynamicNodeManager.reset(aznew AtomToolsFramework::DynamicNodeManager(m_toolId));
+        m_dynamicNodeManager.reset(aznew JE::Editor::Tools::DynamicNodeManager(m_toolId));
 
         // Register all data types required by Pass Canvas nodes with the dynamic node manager
         m_dynamicNodeManager->RegisterDataTypes({
@@ -195,8 +195,8 @@ namespace PassCanvas
     void PassCanvasApplication::InitGraphViewSettings()
     {
         // This configuration data is passed through the main window and graph views to setup translation data, styling, and node palettes
-        m_graphViewSettingsPtr = AtomToolsFramework::GetSettingsObject(
-            "/O3DE/Atom/GraphView/ViewSettings", AZStd::make_shared<AtomToolsFramework::GraphViewSettings>());
+        m_graphViewSettingsPtr = JE::Editor::Tools::GetSettingsObject(
+            "/O3DE/Atom/GraphView/ViewSettings", AZStd::make_shared<JE::Editor::Tools::GraphViewSettings>());
 
         // Initialize the application specific graph view settings that are not serialized.
         m_graphViewSettingsPtr->m_translationPath = "@products@/passcanvas/translation/passcanvas_en_us.qm";
@@ -206,13 +206,13 @@ namespace PassCanvas
         m_graphViewSettingsPtr->m_createNodeTreeItemsFn = [](const AZ::Crc32& toolId)
         {
             GraphCanvas::GraphCanvasTreeItem* rootTreeItem = {};
-            AtomToolsFramework::DynamicNodeManagerRequestBus::EventResult(
-                rootTreeItem, toolId, &AtomToolsFramework::DynamicNodeManagerRequestBus::Events::CreateNodePaletteTree);
+            JE::Editor::Tools::DynamicNodeManagerRequestBus::EventResult(
+                rootTreeItem, toolId, &JE::Editor::Tools::DynamicNodeManagerRequestBus::Events::CreateNodePaletteTree);
             return rootTreeItem;
         };
 
         // Initialize the default group preset names and colors needed by the graph canvas view to create node groups.
-        const AZStd::map<AZStd::string, AZ::Color> defaultGroupPresets = AtomToolsFramework::GetSettingsObject(
+        const AZStd::map<AZStd::string, AZ::Color> defaultGroupPresets = JE::Editor::Tools::GetSettingsObject(
             "/O3DE/Atom/GraphView/DefaultGroupPresets",
             AZStd::map<AZStd::string, AZ::Color>{});
 
@@ -223,7 +223,7 @@ namespace PassCanvas
     void PassCanvasApplication::InitPassGraphDocumentType()
     {
         // Acquiring default Pass Canvas document type info so that it can be customized before registration
-        auto documentTypeInfo = AtomToolsFramework::GraphDocument::BuildDocumentTypeInfo(
+        auto documentTypeInfo = JE::Editor::Tools::GraphDocument::BuildDocumentTypeInfo(
             "Pass Graph",
             { "passgraph" },
             { "passgraphtemplate" },
@@ -235,17 +235,17 @@ namespace PassCanvas
         documentTypeInfo.m_documentViewFactoryCallback = [this](const AZ::Crc32& toolId, const AZ::Uuid& documentId)
         {
             m_window->AddDocumentTab(
-                documentId, aznew AtomToolsFramework::GraphDocumentView(toolId, documentId, m_graphViewSettingsPtr, m_window.get()));
+                documentId, aznew JE::Editor::Tools::GraphDocumentView(toolId, documentId, m_graphViewSettingsPtr, m_window.get()));
             return true;
         };
 
-        AtomToolsFramework::AtomToolsDocumentSystemRequestBus::Event(
-            m_toolId, &AtomToolsFramework::AtomToolsDocumentSystemRequestBus::Handler::RegisterDocumentType, documentTypeInfo);
+        JE::Editor::Tools::AtomToolsDocumentSystemRequestBus::Event(
+            m_toolId, &JE::Editor::Tools::AtomToolsDocumentSystemRequestBus::Handler::RegisterDocumentType, documentTypeInfo);
     }
 
     void PassCanvasApplication::InitMainWindow()
     {
-        m_viewportSettingsSystem.reset(aznew AtomToolsFramework::EntityPreviewViewportSettingsSystem(m_toolId));
+        m_viewportSettingsSystem.reset(aznew JE::Editor::Tools::EntityPreviewViewportSettingsSystem(m_toolId));
 
         m_window.reset(aznew PassCanvasMainWindow(m_toolId, m_graphViewSettingsPtr));
         m_window->show();
@@ -254,17 +254,17 @@ namespace PassCanvas
     void PassCanvasApplication::InitDefaultDocument()
     {
         // Create an untitled, empty graph document as soon as the application starts so the user can begin creating immediately.
-        if (AtomToolsFramework::GetSettingsValue("/O3DE/Atom/PassCanvas/CreateDefaultDocumentOnStart", true))
+        if (JE::Editor::Tools::GetSettingsValue("/O3DE/Atom/PassCanvas/CreateDefaultDocumentOnStart", true))
         {
             AZ::Uuid documentId = AZ::Uuid::CreateNull();
-            AtomToolsFramework::AtomToolsDocumentSystemRequestBus::EventResult(
+            JE::Editor::Tools::AtomToolsDocumentSystemRequestBus::EventResult(
                 documentId,
                 m_toolId,
-                &AtomToolsFramework::AtomToolsDocumentSystemRequestBus::Handler::CreateDocumentFromTypeName,
+                &JE::Editor::Tools::AtomToolsDocumentSystemRequestBus::Handler::CreateDocumentFromTypeName,
                 "Pass Graph");
 
-            AtomToolsFramework::AtomToolsDocumentNotificationBus::Event(
-                m_toolId, &AtomToolsFramework::AtomToolsDocumentNotificationBus::Handler::OnDocumentOpened, documentId);
+            JE::Editor::Tools::AtomToolsDocumentNotificationBus::Event(
+                m_toolId, &JE::Editor::Tools::AtomToolsDocumentNotificationBus::Handler::OnDocumentOpened, documentId);
         }
     }
 } // namespace PassCanvas

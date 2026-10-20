@@ -1,0 +1,14 @@
+{
+  "postflightValid": true,
+  "fatal": "Native phase failed: atomtools104-sdk-build-consumer-r1, exit=1, RAM=False, timeout=False",
+  "accepted": false,
+  "parentReviewRequired": true,
+  "phaseResult": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-corefeature102\\atomtools104-sdk-build-consumer-r1-attempt1\\atomtools104-sdk-build-consumer-r1.result.json",
+    "bytes": 776,
+    "sha256": "AB3F5A1010C347E9C9DDFC2677A4061378BDB6A41E24DF5598E1B1F6EEBD008D"
+  },
+  "phase": "atomtools104-sdk-build-consumer-r1",
+  "wholeGemIncrement": 0,
+  "leaseId": "parent-atomtools104-sdk-build-consumer-r1"
+}

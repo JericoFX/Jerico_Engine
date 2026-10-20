@@ -14,7 +14,7 @@
 #include <JE/Render/RPI/Public/Material/Material.h>
 #include <JE/Render/RPI/Reflect/Asset/AssetUtils.h>
 #include <JE/Render/RPI/Reflect/Material/MaterialAsset.h>
-#include <AtomToolsFramework/Document/AtomToolsDocumentNotificationBus.h>
+#include <JE/Editor/Tools/Document/AtomToolsDocumentNotificationBus.h>
 #include <AzCore/IO/SystemFile.h>
 #include <AzCore/RTTI/BehaviorContext.h>
 #include <AzCore/Serialization/EditContext.h>
@@ -33,7 +33,7 @@ namespace ShaderManagementConsole
     {
         if (auto serialize = azrtti_cast<AZ::SerializeContext*>(context))
         {
-            serialize->Class<ShaderManagementConsoleDocument, AtomToolsFramework::AtomToolsDocument>()
+            serialize->Class<ShaderManagementConsoleDocument, JE::Editor::Tools::AtomToolsDocument>()
                 ->Version(1);  // addition of MultiplySparseVariantSet
         }
 
@@ -56,8 +56,8 @@ namespace ShaderManagementConsole
     }
 
     ShaderManagementConsoleDocument::ShaderManagementConsoleDocument(
-        const AZ::Crc32& toolId, const AtomToolsFramework::DocumentTypeInfo& documentTypeInfo)
-        : AtomToolsFramework::AtomToolsDocument(toolId, documentTypeInfo)
+        const AZ::Crc32& toolId, const JE::Editor::Tools::DocumentTypeInfo& documentTypeInfo)
+        : JE::Editor::Tools::AtomToolsDocument(toolId, documentTypeInfo)
     {
         ShaderManagementConsoleDocumentRequestBus::Handler::BusConnect(m_id);
     }
@@ -77,10 +77,10 @@ namespace ShaderManagementConsole
             : m_shaderVariantListSourceData.m_shaderVariants.back().m_stableId + 1;
         m_shaderVariantListSourceData.m_shaderVariants.emplace_back(AZStd::move(variantInfo));
 
-        AtomToolsFramework::AtomToolsDocumentNotificationBus::Event(
-            m_toolId, &AtomToolsFramework::AtomToolsDocumentNotificationBus::Events::OnDocumentObjectInfoInvalidated, m_id);
-        AtomToolsFramework::AtomToolsDocumentNotificationBus::Event(
-            m_toolId, &AtomToolsFramework::AtomToolsDocumentNotificationBus::Events::OnDocumentModified, m_id);
+        JE::Editor::Tools::AtomToolsDocumentNotificationBus::Event(
+            m_toolId, &JE::Editor::Tools::AtomToolsDocumentNotificationBus::Events::OnDocumentObjectInfoInvalidated, m_id);
+        JE::Editor::Tools::AtomToolsDocumentNotificationBus::Event(
+            m_toolId, &JE::Editor::Tools::AtomToolsDocumentNotificationBus::Events::OnDocumentModified, m_id);
         m_modified = true;
     }
 
@@ -296,10 +296,10 @@ namespace ShaderManagementConsole
         // Apply the exact supplied snapshot, including zero variants. Undo must not reload .systemoptions.
         m_shaderVariantListSourceData = shaderVariantListSourceData;
         m_shaderAsset = shaderAssetResult.GetValue();
-        AtomToolsFramework::AtomToolsDocumentNotificationBus::Event(
-            m_toolId, &AtomToolsFramework::AtomToolsDocumentNotificationBus::Events::OnDocumentObjectInfoInvalidated, m_id);
-        AtomToolsFramework::AtomToolsDocumentNotificationBus::Event(
-            m_toolId, &AtomToolsFramework::AtomToolsDocumentNotificationBus::Events::OnDocumentModified, m_id);
+        JE::Editor::Tools::AtomToolsDocumentNotificationBus::Event(
+            m_toolId, &JE::Editor::Tools::AtomToolsDocumentNotificationBus::Events::OnDocumentObjectInfoInvalidated, m_id);
+        JE::Editor::Tools::AtomToolsDocumentNotificationBus::Event(
+            m_toolId, &JE::Editor::Tools::AtomToolsDocumentNotificationBus::Events::OnDocumentModified, m_id);
         m_modified = true;
     }
 
@@ -357,11 +357,11 @@ namespace ShaderManagementConsole
         return {}; // no issue
     }
 
-    AtomToolsFramework::DocumentTypeInfo ShaderManagementConsoleDocument::BuildDocumentTypeInfo()
+    JE::Editor::Tools::DocumentTypeInfo ShaderManagementConsoleDocument::BuildDocumentTypeInfo()
     {
-        AtomToolsFramework::DocumentTypeInfo documentType;
+        JE::Editor::Tools::DocumentTypeInfo documentType;
         documentType.m_documentTypeName = "Shader Variant List";
-        documentType.m_documentFactoryCallback = [](const AZ::Crc32& toolId, const AtomToolsFramework::DocumentTypeInfo& documentTypeInfo) {
+        documentType.m_documentFactoryCallback = [](const AZ::Crc32& toolId, const JE::Editor::Tools::DocumentTypeInfo& documentTypeInfo) {
             return aznew ShaderManagementConsoleDocument(toolId, documentTypeInfo); };
         documentType.m_supportedExtensionsToOpen.push_back({ "Shader Variant List", JE::Render::RPI::ShaderVariantListSourceData::Extension });
         documentType.m_supportedExtensionsToCreate.push_back({ "Shader Asset", JE::Render::RPI::ShaderSourceData::Extension });
@@ -369,11 +369,11 @@ namespace ShaderManagementConsole
         return documentType;
     }
 
-    AtomToolsFramework::DocumentObjectInfoVector ShaderManagementConsoleDocument::GetObjectInfo() const
+    JE::Editor::Tools::DocumentObjectInfoVector ShaderManagementConsoleDocument::GetObjectInfo() const
     {
-        AtomToolsFramework::DocumentObjectInfoVector objects = AtomToolsDocument::GetObjectInfo();
+        JE::Editor::Tools::DocumentObjectInfoVector objects = AtomToolsDocument::GetObjectInfo();
 
-        AtomToolsFramework::DocumentObjectInfo objectInfo;
+        JE::Editor::Tools::DocumentObjectInfo objectInfo;
         objectInfo.m_visible = true;
         objectInfo.m_name = "Shader Variant List";
         objectInfo.m_displayName = "Shader Variant List";
@@ -488,10 +488,10 @@ namespace ShaderManagementConsole
                 [this, undoState]() { SetShaderVariantListSourceData(undoState); },
                 [this, redoState]() { SetShaderVariantListSourceData(redoState); });
 
-            AtomToolsFramework::AtomToolsDocumentNotificationBus::Event(
-                m_toolId, &AtomToolsFramework::AtomToolsDocumentNotificationBus::Events::OnDocumentObjectInfoInvalidated, m_id);
-            AtomToolsFramework::AtomToolsDocumentNotificationBus::Event(
-                m_toolId, &AtomToolsFramework::AtomToolsDocumentNotificationBus::Events::OnDocumentModified, m_id);
+            JE::Editor::Tools::AtomToolsDocumentNotificationBus::Event(
+                m_toolId, &JE::Editor::Tools::AtomToolsDocumentNotificationBus::Events::OnDocumentObjectInfoInvalidated, m_id);
+            JE::Editor::Tools::AtomToolsDocumentNotificationBus::Event(
+                m_toolId, &JE::Editor::Tools::AtomToolsDocumentNotificationBus::Events::OnDocumentModified, m_id);
         }
 
         m_shaderVariantListSourceDataBeforeEdit = {};
@@ -500,7 +500,7 @@ namespace ShaderManagementConsole
 
     void ShaderManagementConsoleDocument::Clear()
     {
-        AtomToolsFramework::AtomToolsDocument::Clear();
+        JE::Editor::Tools::AtomToolsDocument::Clear();
 
         m_shaderVariantListSourceData = {};
         m_shaderVariantListSourceDataBeforeEdit = {};

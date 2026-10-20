@@ -11,7 +11,7 @@
 #include <AzToolsFramework/Viewport/ViewportTypes.h>
 #include <AzToolsFramework/Viewport/ViewportSettings.h>
 #include <AzToolsFramework/Manipulators/ManipulatorManager.h>
-#include <AtomToolsFramework/PerformanceMonitor/PerformanceMonitorRequestBus.h>
+#include <JE/Editor/Tools/PerformanceMonitor/PerformanceMonitorRequestBus.h>
 
 #include <EMStudio/AtomRenderPlugin.h>
 #include <EMStudio/AnimViewportRenderer.h>
@@ -142,15 +142,15 @@ namespace EMStudio
         m_metricsTimer.start();
         connect(&m_metricsTimer, &QTimer::timeout, this, &AtomRenderPlugin::UpdateMetrics);
 
-        AtomToolsFramework::PerformanceMonitorRequestBus::Broadcast(
-            &AtomToolsFramework::PerformanceMonitorRequestBus::Handler::SetProfilerEnabled, true);
+        JE::Editor::Tools::PerformanceMonitorRequestBus::Broadcast(
+            &JE::Editor::Tools::PerformanceMonitorRequestBus::Handler::SetProfilerEnabled, true);
     }
 
     void AtomRenderPlugin::UpdateMetrics()
     {
-        AtomToolsFramework::PerformanceMetrics metrics = {};
-        AtomToolsFramework::PerformanceMonitorRequestBus::BroadcastResult(
-            metrics, &AtomToolsFramework::PerformanceMonitorRequestBus::Handler::GetMetrics);
+        JE::Editor::Tools::PerformanceMetrics metrics = {};
+        JE::Editor::Tools::PerformanceMonitorRequestBus::BroadcastResult(
+            metrics, &JE::Editor::Tools::PerformanceMonitorRequestBus::Handler::GetMetrics);
 
         int frameRate = metrics.m_cpuFrameTimeMs > 0 ? aznumeric_cast<int>(1000 / metrics.m_cpuFrameTimeMs) : 0;
         m_fpsStr = AZStd::string::format("%d FPS", frameRate);

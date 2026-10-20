@@ -10,7 +10,7 @@
 
 #include <OpenParticleSystem/ParticleEditDataConfig.h>
 #include <Atom/RHI/Factory.h>
-#include <AtomToolsFramework/Util/Util.h>
+#include <JE/Editor/Tools/Util/Util.h>
 #include <AzCore/Component/ComponentApplicationLifecycle.h>
 #include <AzCore/Name/Name.h>
 #include <AzCore/Serialization/SerializeContext.h>

@@ -53,6 +53,7 @@ ly_add_target(
             JE::DebugImGui
             JE::ProfilerCapture
             JE::EditorMaterials
+            JE::EditorTools
             ${additional_dependencies}
 )
 

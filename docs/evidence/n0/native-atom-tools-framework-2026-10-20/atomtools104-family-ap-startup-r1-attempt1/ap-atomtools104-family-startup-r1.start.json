@@ -1,0 +1,16 @@
+{
+  "path": null,
+  "executable": "F:/JericoEngine/JericoEngine/build/n0-validation/original-engine/bin/profile/AssetProcessorBatch.exe",
+  "argv": [
+    "--engine-path=F:/JericoEngine/JericoEngine",
+    "--project-path=F:/JericoEngine/JericoEngine/Projects/JEEditorFixture",
+    "--platforms=pc",
+    "--logDir=F:/JericoEngine/JericoEngine/build/n0-validation/native-corefeature102/atomtools104-family-ap-startup-r1-attempt1/APLogs",
+    "--reprocessFileList=F:/JericoEngine/JericoEngine/build/n0-validation/native-editorfeedback103/ap-preparation-r1/reprocess14.txt",
+    "--regset=/Amazon/AssetProcessor/Settings/Jobs/maxJobs=1",
+    "--regset=/Amazon/AssetProcessor/Settings/Jobs/AlwaysUseMaxJobs=false"
+  ],
+  "creationUtc": "2026-10-20T16:24:18.0054002Z",
+  "pid": 38568,
+  "cwd": "F:/JericoEngine/JericoEngine"
+}

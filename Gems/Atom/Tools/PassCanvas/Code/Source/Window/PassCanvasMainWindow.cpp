@@ -6,7 +6,7 @@
  *
  */
 
-#include <AtomToolsFramework/SettingsDialog/SettingsDialog.h>
+#include <JE/Editor/Tools/SettingsDialog/SettingsDialog.h>
 #include <AzCore/IO/FileIO.h>
 #include <AzQtComponents/Components/StyleManager.h>
 #include <GraphCanvas/Widgets/NodePalette/TreeItems/NodePaletteTreeItem.h>
@@ -18,7 +18,7 @@
 namespace PassCanvas
 {
     PassCanvasMainWindow::PassCanvasMainWindow(
-        const AZ::Crc32& toolId, AtomToolsFramework::GraphViewSettingsPtr graphViewSettingsPtr, QWidget* parent)
+        const AZ::Crc32& toolId, JE::Editor::Tools::GraphViewSettingsPtr graphViewSettingsPtr, QWidget* parent)
         : Base(toolId, "PassCanvasMainWindow", parent)
         , m_graphViewSettingsPtr(graphViewSettingsPtr)
         , m_styleManager(toolId, graphViewSettingsPtr->m_styleManagerPath)
@@ -26,29 +26,29 @@ namespace PassCanvas
         m_assetBrowser->GetSearchWidget()->SetFilterState("", JE::Render::RPI::StreamingImageAsset::Group, true);
         m_assetBrowser->GetSearchWidget()->SetFilterState("", JE::Render::RPI::PassAsset::Group, true);
 
-        m_documentInspector = new AtomToolsFramework::AtomToolsDocumentInspector(m_toolId, this);
+        m_documentInspector = new JE::Editor::Tools::AtomToolsDocumentInspector(m_toolId, this);
         m_documentInspector->SetDocumentSettingsPrefix("/O3DE/Atom/PassCanvas/DocumentInspector");
         AddDockWidget("Inspector", m_documentInspector, Qt::RightDockWidgetArea);
 
         // Set up the toolbar that controls the viewport settings
-        m_toolBar = new AtomToolsFramework::EntityPreviewViewportToolBar(m_toolId, this);
+        m_toolBar = new JE::Editor::Tools::EntityPreviewViewportToolBar(m_toolId, this);
 
         // Create the dockable viewport widget that will be shared between all Pass Canvas documents
-        m_passViewport = new AtomToolsFramework::EntityPreviewViewportWidget(m_toolId, this);
+        m_passViewport = new JE::Editor::Tools::EntityPreviewViewportWidget(m_toolId, this);
 
         // Initialize the entity context that will be used to create all of the entities displayed in the viewport
         auto entityContext = AZStd::make_shared<AzFramework::EntityContext>();
         entityContext->InitContext();
 
         // Initialize the atom scene and pipeline that will bind to the viewport window to render entities and presets
-        auto viewportScene = AZStd::make_shared<AtomToolsFramework::EntityPreviewViewportScene>(
+        auto viewportScene = AZStd::make_shared<JE::Editor::Tools::EntityPreviewViewportScene>(
             m_toolId, m_passViewport, entityContext, "PassCanvasViewportWidget", "passes/mainrenderpipeline.azasset");
 
         // Viewport content will instantiate all of the entities that will be displayed and controlled by the viewport
         auto viewportContent = AZStd::make_shared<PassCanvasViewportContent>(m_toolId, m_passViewport, entityContext);
 
         // The input controller creates and binds input behaviors to control viewport objects
-        auto viewportController = AZStd::make_shared<AtomToolsFramework::EntityPreviewViewportInputController>(m_toolId, m_passViewport, viewportContent);
+        auto viewportController = AZStd::make_shared<JE::Editor::Tools::EntityPreviewViewportInputController>(m_toolId, m_passViewport, viewportContent);
 
         // Inject the entity context, scene, content, and controller into the viewport widget
         m_passViewport->Init(entityContext, viewportScene, viewportContent, viewportController);
@@ -63,7 +63,7 @@ namespace PassCanvas
 
         AddDockWidget("Viewport", viewPortAndToolbar, Qt::BottomDockWidgetArea);
 
-        m_viewportSettingsInspector = new AtomToolsFramework::EntityPreviewViewportSettingsInspector(m_toolId, this);
+        m_viewportSettingsInspector = new JE::Editor::Tools::EntityPreviewViewportSettingsInspector(m_toolId, this);
         AddDockWidget("Viewport Settings", m_viewportSettingsInspector, Qt::LeftDockWidgetArea);
         SetDockWidgetVisible("Viewport Settings", false);
 
@@ -143,12 +143,12 @@ namespace PassCanvas
         m_passViewport->UnlockRenderTargetSize();
     }
 
-    void PassCanvasMainWindow::PopulateSettingsInspector(AtomToolsFramework::InspectorWidget* inspector) const
+    void PassCanvasMainWindow::PopulateSettingsInspector(JE::Editor::Tools::InspectorWidget* inspector) const
     {
-        m_passCanvasCompileSettingsGroup = AtomToolsFramework::CreateSettingsPropertyGroup(
+        m_passCanvasCompileSettingsGroup = JE::Editor::Tools::CreateSettingsPropertyGroup(
             "Pass Canvas Settings",
             "Pass Canvas Settings",
-            { AtomToolsFramework::CreateSettingsPropertyValue(
+            { JE::Editor::Tools::CreateSettingsPropertyValue(
                   "/O3DE/Atom/PassCanvas/CreateDefaultDocumentOnStart",
                   "Create Untitled Graph Document On Start",
                   "Create a default, untitled graph document when Pass Canvas starts",
@@ -158,16 +158,16 @@ namespace PassCanvas
             m_passCanvasCompileSettingsGroup->m_name,
             m_passCanvasCompileSettingsGroup->m_displayName,
             m_passCanvasCompileSettingsGroup->m_description,
-            new AtomToolsFramework::InspectorPropertyGroupWidget(
+            new JE::Editor::Tools::InspectorPropertyGroupWidget(
                 m_passCanvasCompileSettingsGroup.get(),
                 m_passCanvasCompileSettingsGroup.get(),
-                azrtti_typeid<AtomToolsFramework::DynamicPropertyGroup>()));
+                azrtti_typeid<JE::Editor::Tools::DynamicPropertyGroup>()));
 
         inspector->AddGroup(
             "Graph View Settings",
             "Graph View Settings",
             "Configuration settings for the graph view interaction, animation, and other behavior.",
-            new AtomToolsFramework::InspectorPropertyGroupWidget(
+            new JE::Editor::Tools::InspectorPropertyGroupWidget(
                 m_graphViewSettingsPtr.get(), m_graphViewSettingsPtr.get(), m_graphViewSettingsPtr->RTTI_Type()));
 
         Base::PopulateSettingsInspector(inspector);
@@ -175,7 +175,7 @@ namespace PassCanvas
 
     void PassCanvasMainWindow::OnSettingsDialogClosed()
     {
-        AtomToolsFramework::SetSettingsObject("/O3DE/Atom/GraphView/ViewSettings", m_graphViewSettingsPtr);
+        JE::Editor::Tools::SetSettingsObject("/O3DE/Atom/GraphView/ViewSettings", m_graphViewSettingsPtr);
         Base::OnSettingsDialogClosed();
     }
 

@@ -1,0 +1,18 @@
+{
+  "exitCode": 0,
+  "ramGuardTriggered": false,
+  "priorityRequested": "BelowNormal",
+  "stderr": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-corefeature102\\atomtools104-sdk-pe-imports-r1-attempt1\\atomtools104-sdk-pe-imports-r1.stderr.log",
+    "bytes": 0,
+    "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+  },
+  "stdout": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-corefeature102\\atomtools104-sdk-pe-imports-r1-attempt1\\atomtools104-sdk-pe-imports-r1.stdout.log",
+    "bytes": 289298,
+    "sha256": "664A9F0E0C154C3A0BC7D6A473590DBDBE5E8D74986E5EDC3F4CD66D57EB463C"
+  },
+  "seconds": 0.0718164,
+  "priorityError": null,
+  "timedOut": false
+}

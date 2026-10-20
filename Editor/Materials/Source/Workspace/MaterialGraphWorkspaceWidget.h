@@ -10,7 +10,7 @@ namespace GraphCanvas { class NodePaletteWidget; }
 class QLabel;
 class QPushButton;
 class QVBoxLayout;
-namespace AtomToolsFramework
+namespace JE::Editor::Tools
 {
     class AtomToolsDocumentInspector;
     class GraphDocumentView;
@@ -20,7 +20,7 @@ namespace JE::Editor
 {
     class JE_EDITOR_MATERIALS_API MaterialGraphWorkspaceWidget final
         : public QWidget
-        , private AtomToolsFramework::AtomToolsDocumentNotificationBus::Handler
+        , private JE::Editor::Tools::AtomToolsDocumentNotificationBus::Handler
         , private AzToolsFramework::ToolsApplicationNotificationBus::Handler
     {
         Q_OBJECT
@@ -51,8 +51,8 @@ namespace JE::Editor
         void OnEndUndo(const char*, bool) override;
 
         QPointer<MaterialWorkspaceSession> m_session;
-        AtomToolsFramework::AtomToolsDocumentInspector* m_inspector = nullptr;
-        AtomToolsFramework::GraphDocumentView* m_graphView = nullptr;
+        JE::Editor::Tools::AtomToolsDocumentInspector* m_inspector = nullptr;
+        JE::Editor::Tools::GraphDocumentView* m_graphView = nullptr;
         QVBoxLayout* m_viewLayout = nullptr;
         QWidget* m_propertiesMessage = nullptr;
         QComboBox* m_documents = nullptr;

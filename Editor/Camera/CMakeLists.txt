@@ -7,7 +7,7 @@ ly_add_target(
     INCLUDE_DIRECTORIES PRIVATE Source PUBLIC Include
     COMPILE_DEFINITIONS PRIVATE JE_EDITOR_CAMERA_EXPORTS
     BUILD_DEPENDENCIES PUBLIC JE::WorldCamera AZ::AzToolsFramework
-        Gem::AtomToolsFramework.Static
+        JE::EditorTools
 )
 set_target_properties(EditorCamera PROPERTIES UNITY_BUILD OFF)
 

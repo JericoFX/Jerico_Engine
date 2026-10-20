@@ -25,9 +25,9 @@
 #include <JE/Render/Scene/PostProcess/ExposureControl/ExposureControlComponentConstants.h>
 #include <JE/Render/Scene/PostProcess/PostFxLayerComponentConstants.h>
 #include <JE/Render/Scene/SkyBox/HDRiSkyboxBus.h>
-#include <AtomToolsFramework/EntityPreviewViewport/EntityPreviewViewportSettingsRequestBus.h>
-#include <AtomToolsFramework/Graph/GraphDocumentRequestBus.h>
-#include <AtomToolsFramework/Util/Util.h>
+#include <JE/Editor/Tools/EntityPreviewViewport/EntityPreviewViewportSettingsRequestBus.h>
+#include <JE/Editor/Tools/Graph/GraphDocumentRequestBus.h>
+#include <JE/Editor/Tools/Util/Util.h>
 #include <AzFramework/Components/NonUniformScaleComponent.h>
 #include <AzFramework/Components/TransformComponent.h>
 #include <Window/MaterialCanvasViewportContent.h>
@@ -36,9 +36,9 @@ namespace MaterialCanvas
 {
     MaterialCanvasViewportContent::MaterialCanvasViewportContent(
         const AZ::Crc32& toolId,
-        AtomToolsFramework::RenderViewportWidget* widget,
+        JE::Editor::Tools::RenderViewportWidget* widget,
         AZStd::shared_ptr<AzFramework::EntityContext> entityContext)
-        : AtomToolsFramework::EntityPreviewViewportContent(toolId, widget, entityContext)
+        : JE::Editor::Tools::EntityPreviewViewportContent(toolId, widget, entityContext)
     {
         // Configure tone mapper
         m_postFxEntity = CreateEntity(
@@ -92,15 +92,15 @@ namespace MaterialCanvas
                 gridComponentRequests->SetSecondaryColor(AZ::Color(0.1f, 0.1f, 0.1f, 1.0f));
             });
 
-        AtomToolsFramework::AtomToolsDocumentNotificationBus::Handler::BusConnect(m_toolId);
-        AtomToolsFramework::GraphDocumentNotificationBus::Handler::BusConnect(m_toolId);
+        JE::Editor::Tools::AtomToolsDocumentNotificationBus::Handler::BusConnect(m_toolId);
+        JE::Editor::Tools::GraphDocumentNotificationBus::Handler::BusConnect(m_toolId);
         OnDocumentOpened(AZ::Uuid::CreateNull());
     }
 
     MaterialCanvasViewportContent::~MaterialCanvasViewportContent()
     {
-        AtomToolsFramework::GraphDocumentNotificationBus::Handler::BusDisconnect();
-        AtomToolsFramework::AtomToolsDocumentNotificationBus::Handler::BusDisconnect();
+        JE::Editor::Tools::GraphDocumentNotificationBus::Handler::BusDisconnect();
+        JE::Editor::Tools::AtomToolsDocumentNotificationBus::Handler::BusDisconnect();
     }
 
     AZ::EntityId MaterialCanvasViewportContent::GetObjectEntityId() const
@@ -143,7 +143,7 @@ namespace MaterialCanvas
     void MaterialCanvasViewportContent::OnCompileGraphStarted(const AZ::Uuid& documentId)
     {
         if (m_lastOpenedDocumentId == documentId &&
-            AtomToolsFramework::GetSettingsValue("/O3DE/Atom/MaterialCanvas/Viewport/ClearMaterialOnCompileGraphStarted", true))
+            JE::Editor::Tools::GetSettingsValue("/O3DE/Atom/MaterialCanvas/Viewport/ClearMaterialOnCompileGraphStarted", true))
         {
             ApplyMaterial({});
         }
@@ -160,7 +160,7 @@ namespace MaterialCanvas
     void MaterialCanvasViewportContent::OnCompileGraphFailed(const AZ::Uuid& documentId)
     {
         if (m_lastOpenedDocumentId == documentId &&
-            AtomToolsFramework::GetSettingsValue("/O3DE/Atom/MaterialCanvas/Viewport/ClearMaterialOnCompileGraphFailed", true))
+            JE::Editor::Tools::GetSettingsValue("/O3DE/Atom/MaterialCanvas/Viewport/ClearMaterialOnCompileGraphFailed", true))
         {
             ApplyMaterial({});
         }
@@ -168,11 +168,11 @@ namespace MaterialCanvas
 
     void MaterialCanvasViewportContent::OnViewportSettingsChanged()
     {
-        AtomToolsFramework::EntityPreviewViewportContent::OnViewportSettingsChanged();
+        JE::Editor::Tools::EntityPreviewViewportContent::OnViewportSettingsChanged();
 
-        AtomToolsFramework::EntityPreviewViewportSettingsRequestBus::Event(
+        JE::Editor::Tools::EntityPreviewViewportSettingsRequestBus::Event(
             m_toolId,
-            [this](AtomToolsFramework::EntityPreviewViewportSettingsRequestBus::Events* viewportRequests)
+            [this](JE::Editor::Tools::EntityPreviewViewportSettingsRequestBus::Events* viewportRequests)
             {
                 const auto& modelPreset = viewportRequests->GetModelPreset();
                 const auto& lightingPreset = viewportRequests->GetLightingPreset();
@@ -220,8 +220,8 @@ namespace MaterialCanvas
         AZ::Data::AssetId assetId;
 
         AZStd::vector<AZStd::string> generatedFiles;
-        AtomToolsFramework::GraphDocumentRequestBus::EventResult(
-            generatedFiles, documentId, &AtomToolsFramework::GraphDocumentRequestBus::Events::GetGeneratedFilePaths);
+        JE::Editor::Tools::GraphDocumentRequestBus::EventResult(
+            generatedFiles, documentId, &JE::Editor::Tools::GraphDocumentRequestBus::Events::GetGeneratedFilePaths);
 
         for (const auto& generatedFile : generatedFiles)
         {

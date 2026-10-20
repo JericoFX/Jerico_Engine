@@ -207,7 +207,7 @@ namespace
 } // anonymous namespace.
 
 ViewportWidget::ViewportWidget(EditorWindow* parent)
-    : AtomToolsFramework::RenderViewportWidget(parent)
+    : JE::Editor::Tools::RenderViewportWidget(parent)
     , m_editorWindow(parent)
     , m_viewportInteraction(new ViewportInteraction(m_editorWindow))
     , m_viewportAnchor(new ViewportAnchor())
