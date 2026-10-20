@@ -1,0 +1,93 @@
+QT CommandLine Parser: QT command line parsing warned with message Unknown option 'skipWelcomeScreen'.. Has the QCommandLineParser had these options added to itStreamer: Storage drive (C) created.
+Streamer: Storage drive (D) created.
+Streamer: Storage drive (E) created.
+Streamer: Storage drive (F) created.
+System: AudioSystem created!
+RHISystem: Initializing RHI...
+RHISystem: 	Enumerated physical device: NVIDIA GeForce RTX 3090
+RHISystem: 	Using physical device: NVIDIA GeForce RTX 3090
+PhysXSystem: PhysXConfiguration was read from settings registry at pointer path "/Amazon/Gems/PhysX5/PhysXSystemConfiguration
+PhysXSystem: Default Scene Configuration was read from settings registry at pointer path "/Amazon/Gems/PhysX5/DefaultSceneConfiguration
+PhysXSystem: Debug::DebugConfiguration was read from settings registry at pointer path "/Amazon/Gems/PhysX5/Debug/PhysXDebugConfiguration
+AssetCatalog: Initializing asset catalog with root "F:\JericoEngine\JericoEngine\Projects\JEEditorFixture\Cache\pc"AssetCatalog: Loaded registry containing 5815 assets.
+QT CommandLine Parser: QT command line parsing warned with message Unknown option 'skipWelcomeScreen'.. Has the QCommandLineParser had these options added to itAsset System Connection: Asset Processor Connection IP: 127.0.0.1, port: 45643, branch token 0x05FD6BD0
+AssetProcessorConnection: 
+==================================================================
+AssetProcessorConnection: Trace::Warning
+ F:/JericoEngine/JericoEngine/Code/Framework/AzFramework/AzFramework/Asset/AssetSystemComponent.cpp(704): 'bool __cdecl AzFramework::AssetSystem::AssetSystemComponent::WaitUntilAssetProcessorConnected(class std::chrono::duration<float,struct std::ratio<1,1> >)'
+AssetProcessorConnection: Network connection attempt failure, Connect returned error AzSockError::eASE_ECONNREFUSED
+AssetProcessorConnection: ==================================================================
+AssetSystem: Ping time to asset processor: 0.23 milliseconds
+Editor: Connected to Asset Processor
+AssetSystem: Ping time to asset processor: 0.38 milliseconds
+Editor: CriticalAssetsCompiled
+AssetCatalog: Initializing asset catalog with root "F:\JericoEngine\JericoEngine\Projects\JEEditorFixture\Cache\pc"AssetCatalog: Loaded registry containing 5815 assets.
+<14:42:46> BackupNameAttachment=" Build(0) 20 Oct 26 (14 42 46)"  -- used by backup system
+<14:42:46> Log Started at Tue Oct 20 14:42:46 2026
+<14:42:46> Built on Oct 14 2026 22:00:40
+<14:42:46> Running 64 bit Windows version
+<14:42:46> FileVersion: 0.0.0.0
+<14:42:46> ProductVersion: 0.0.0.0
+<14:42:46> Using Microsoft (tm) C++ Standard Library implementation
+<14:42:46> [Warning] Config file game.cfg not found!
+<14:42:46> creating CVarGroups from directory 'Config/CVarGroups' ...
+<14:42:46> Loading Config file user.cfg (F:/JericoEngine/JericoEngine/Projects/JEEditorFixture/Cache/pc/config/user.cfg)
+<14:42:46> GameName: JEEditorFixture
+<14:42:46> BuildTime: Oct 14 2026 22:00:40
+<14:42:46> Using FreeType 2.11.1
+<14:42:46> Current Language: Spanish 
+<14:42:46> Microsoft Windows 11 Pro|C:\WINDOWS|\Device\Harddisk3\Partition2 10.0.26300
+<14:42:46> Local time is 14:42:46 10/20/26, system running for 1763 minutes
+<14:42:46> 32679MB phys. memory installed, 19225MB paging available
+<14:42:46> Current display mode is 1920x1080x32, (Unknown graphics card)
+<14:42:46> IBM enhanced (101/102-key) keyboard and 6+ button mouse installed
+<14:42:46> --------------------------------------------------------------------------------
+<14:42:46> project_path = F:\JericoEngine\JericoEngine\Projects\JEEditorFixture
+<14:42:46> sys_localization_folder = Localization
+<14:42:46> [Warning] (Az Console) - attempted to assign out of range value -80
+<14:42:46> [Warning] XML reader: Can't open file (F:/JericoEngine/JericoEngine/Projects/JEEditorFixture/user/Sandbox/Macros.xml)
+<14:42:46> Document created
+<14:42:46> Adding '*$tmp*' to ignore masks for changed files.
+<14:42:47> [Warning] (Application) - 'IsPrefabSystemEnabled' is deprecated, the editor only supports prefabs for level editing.
+<14:42:47> Engine initialized, took 9.20s.
+<14:42:47> [CONSOLE] Executing console command 'exec editor_autoexec.cfg'
+<14:42:47> Executing console batch file (try game,config,root): "@products@/editor_autoexec.cfg" not found!
+<14:42:47> [CONSOLE] Executing console command 'exec editor.cfg'
+<14:42:47> Executing console batch file (try game,config,root): "@products@/editor.cfg" not found!
+<14:42:47> [CONSOLE] Executing console command 'exec user.cfg'
+<14:42:47> Executing console batch file (try game,config,root): "user.cfg" found in game/config/ ...
+<14:42:47> Opening level levels/jematerialcooknative5/jematerialcooknative5.spawnable
+<14:42:47> Loading from F:/JericoEngine/JericoEngine/Projects/JEEditorFixture/Levels/JEMaterialCookNative5/JEMaterialCookNative5.prefab...
+<14:42:47> ---- Start: Game Engine level load
+<14:42:47> Loading map 'F:/JericoEngine/JericoEngine/Projects/JEEditorFixture/Levels/JEMaterialCookNative5' into engine...
+<14:42:47> ---- End: Game Engine level load (0 seconds)
+<14:42:47> ---- Start: Post Load
+<14:42:47> ---- End: Post Load (0 seconds)
+<14:42:47> [LevelLoadTime] Level F:/JericoEngine/JericoEngine/Projects/JEEditorFixture/Levels/JEMaterialCookNative5 loaded in 0 seconds
+<14:42:47> -----------------------------------------------------------
+<14:42:47> Successfully opened document F:/JericoEngine/JericoEngine/Projects/JEEditorFixture/Levels/JEMaterialCookNative5/JEMaterialCookNative5.prefab
+<14:42:47> Level loading time: 0.05 seconds
+<14:42:47> -----------------------------------------------------------
+<14:42:47> [Warning] (Az Console) - attempted to assign out of range value -96
+<14:42:47> [Warning] (vkDebugMessage) - [WARNING][Validation] vkCmdDispatch(): the storage image descriptor [VkDescriptorSet 0xd060000000d06[FastDepthAwareBlurVer_PassSrg0_0], Set 0, Binding 2, Index 0, variable "PassSrg_m_blurTarget"] is accessed by a OpTypeImage that has a Format operand R32f (equivalent to VK_FORMAT_R32_SFLOAT) which doesn't match the VkImageView 0x14b400000014b4 format (VK_FORMAT_R8_UNORM). Any loads or stores with the variable will produce undefined values to the whole image (not just the texel being accessed).
+Spec information at https://docs.vulkan.org/spec/latest/chapters/textures.html#textures-format-validation
+<14:42:47> [Warning] (vkDebugMessage) - [WARNING][Validation] vkCmdDispatch(): the storage image descriptor [VkDescriptorSet 0xa010000000a01[SsaoCompute_PassSrg0_0], Set 0, Binding 1, Index 0, variable "PassSrg_m_ssaoOutput"] is accessed by a OpTypeImage that has a Format operand R32f (equivalent to VK_FORMAT_R32_SFLOAT) which doesn't match the VkImageView 0x14f800000014f8 format (VK_FORMAT_R8_UNORM). Any loads or stores with the variable will produce undefined values to the whole image (not just the texel being accessed).
+Spec information at https://docs.vulkan.org/spec/latest/chapters/textures.html#textures-format-validation
+<14:42:47> [Warning] (vkDebugMessage) - [WARNING][Validation] vkCmdDispatch(): the storage image descriptor [VkDescriptorSet 0xd0c0000000d0c[FastDepthAwareBlurHor_PassSrg0_0], Set 0, Binding 2, Index 0, variable "PassSrg_m_blurTarget"] is accessed by a OpTypeImage that has a Format operand R32f (equivalent to VK_FORMAT_R32_SFLOAT) which doesn't match the VkImageView 0x14b500000014b5 format (VK_FORMAT_R8_UNORM). Any loads or stores with the variable will produce undefined values to the whole image (not just the texel being accessed).
+Spec information at https://docs.vulkan.org/spec/latest/chapters/textures.html#textures-format-validation
+<14:42:47> [Warning] (vkDebugMessage) - [WARNING][Validation] vkCmdDispatch(): the storage image descriptor [VkDescriptorSet 0xa100000000a10[FastDepthAwareBlurVer_PassSrg0_0], Set 0, Binding 2, Index 0, variable "PassSrg_m_blurTarget"] is accessed by a OpTypeImage that has a Format operand R32f (equivalent to VK_FORMAT_R32_SFLOAT) which doesn't match the VkImageView 0x14f900000014f9 format (VK_FORMAT_R8_UNORM). Any loads or stores with the variable will produce undefined values to the whole image (not just the texel being accessed).
+Spec information at https://docs.vulkan.org/spec/latest/chapters/textures.html#textures-format-validation
+<14:42:47> [Warning] (vkDebugMessage) - [WARNING][Validation] vkCmdDispatch(): the storage image descriptor [VkDescriptorSet 0xd860000000d86[SsaoCompute_PassSrg0_0], Set 0, Binding 1, Index 0, variable "PassSrg_m_ssaoOutput"] is accessed by a OpTypeImage that has a Format operand R32f (equivalent to VK_FORMAT_R32_SFLOAT) which doesn't match the VkImageView 0x14c500000014c5 format (VK_FORMAT_R8_UNORM). Any loads or stores with the variable will produce undefined values to the whole image (not just the texel being accessed).
+Spec information at https://docs.vulkan.org/spec/latest/chapters/textures.html#textures-format-validation
+<14:42:47> [Warning] (vkDebugMessage) - [WARNING][Validation] vkCmdDispatch(): the storage image descriptor [VkDescriptorSet 0xfc00000000fc0[BRDFTextureCS_PassSrg0_0], Set 0, Binding 0, Index 0, variable "PassSrg_m_outputTexture"] is accessed by a OpTypeImage that has a Format operand Rg32f (equivalent to VK_FORMAT_R32G32_SFLOAT) which doesn't match the VkImageView 0x14bb00000014bb format (VK_FORMAT_R16G16_SFLOAT). Any loads or stores with the variable will produce undefined values to the whole image (not just the texel being accessed).
+Spec information at https://docs.vulkan.org/spec/latest/chapters/textures.html#textures-format-validation
+<14:42:47> [Warning] (vkDebugMessage) - [WARNING][Validation] vkCmdDispatch(): the storage image descriptor [VkDescriptorSet 0xa160000000a16[FastDepthAwareBlurHor_PassSrg0_0], Set 0, Binding 2, Index 0, variable "PassSrg_m_blurTarget"] is accessed by a OpTypeImage that has a Format operand R32f (equivalent to VK_FORMAT_R32_SFLOAT) which doesn't match the VkImageView 0x14fa00000014fa format (VK_FORMAT_R8_UNORM). Any loads or stores with the variable will produce undefined values to the whole image (not just the texel being accessed).
+Spec information at https://docs.vulkan.org/spec/latest/chapters/textures.html#textures-format-validation
+<14:42:47> [Warning] (vkDebugMessage) - [WARNING][Validation] vkCmdDispatch(): the storage image descriptor [VkDescriptorSet 0xd950000000d95[FastDepthAwareBlurVer_PassSrg0_0], Set 0, Binding 2, Index 0, variable "PassSrg_m_blurTarget"] is accessed by a OpTypeImage that has a Format operand R32f (equivalent to VK_FORMAT_R32_SFLOAT) which doesn't match the VkImageView 0x14c600000014c6 format (VK_FORMAT_R8_UNORM). Any loads or stores with the variable will produce undefined values to the whole image (not just the texel being accessed).
+Spec information at https://docs.vulkan.org/spec/latest/chapters/textures.html#textures-format-validation
+<14:42:47> [Warning] (vkDebugMessage) - [WARNING][Validation] vkCmdDispatch(): the storage image descriptor [VkDescriptorSet 0xa070000000a07[DepthUpsample_PassSrg0_0], Set 0, Binding 3, Index 0, variable "PassSrg_m_outputFullRes"] is accessed by a OpTypeImage that has a Format operand R32f (equivalent to VK_FORMAT_R32_SFLOAT) which doesn't match the VkImageView 0x14fb00000014fb format (VK_FORMAT_R8_UNORM). Any loads or stores with the variable will produce undefined values to the whole image (not just the texel being accessed).
+Spec information at https://docs.vulkan.org/spec/latest/chapters/textures.html#textures-format-validation
+<14:42:47> [Warning] (vkDebugMessage) - [WARNING][Validation] (Warning - This VUID has now been reported 10 times, which is the duplicate_message_limit value, this will be the last time reporting it).
+vkCmdDispatch(): the storage image descriptor [VkDescriptorSet 0x9800000000980[FastDepthAwareBlurVer_PassSrg0_0], Set 0, Binding 2, Index 0, variable "PassSrg_m_blurTarget"] is accessed by a OpTypeImage that has a Format operand R32f (equivalent to VK_FORMAT_R32_SFLOAT) which doesn't match the VkImageView 0x14e900000014e9 format (VK_FORMAT_R8_UNORM). Any loads or stores with the variable will produce undefined values to the whole image (not just the texel being accessed).
+Spec information at https://docs.vulkan.org/spec/latest/chapters/textures.html#textures-format-validation
+<14:42:49> [Err

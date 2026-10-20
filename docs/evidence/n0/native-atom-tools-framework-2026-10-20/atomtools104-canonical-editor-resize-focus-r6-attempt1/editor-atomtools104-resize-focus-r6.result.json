@@ -1,0 +1,18 @@
+{
+  "ramGuardTriggered": false,
+  "priorityError": null,
+  "stdout": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-corefeature102\\atomtools104-canonical-editor-resize-focus-r6-attempt1\\editor-atomtools104-resize-focus-r6.stdout.log",
+    "bytes": 12380,
+    "sha256": "27B7E89A1061966544A894710C4DDD02F3BE21656B21E3C90DC21475BEE8DF4C"
+  },
+  "timedOut": false,
+  "seconds": 153.3376981,
+  "priorityRequested": "BelowNormal",
+  "stderr": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-corefeature102\\atomtools104-canonical-editor-resize-focus-r6-attempt1\\editor-atomtools104-resize-focus-r6.stderr.log",
+    "bytes": 0,
+    "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+  },
+  "exitCode": 0
+}

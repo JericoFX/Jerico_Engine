@@ -1,0 +1,14 @@
+{
+  "applicationLog": "Editor.application.log",
+  "bytes": 13095,
+  "sha256": "AAFAFE9F0E50859D67B9854F5C888D36364B59321E2010EB9283E4B6466853EF",
+  "sourceLastWriteTimeUtc": "2026-10-20T17:45:10.7300465Z",
+  "stdoutTruncated": true,
+  "findings": [
+    "Application log retains the full PreviewRenderer LuminanceMinAvgMax mip8 GENERAL/SHADER_READ_ONLY_OPTIMAL validation error cut off in captured stdout.",
+    "Document-open event at 14:43:33 and two DynamicDrawContext warnings at 14:45:10 are present.",
+    "No SystemShutdown marker: exit code zero and process termination do not prove an error-free or fully logged shutdown.",
+    "Resize observation remains a focal UI result; this log does not certify clean Vulkan rendering."
+  ],
+  "publicationPending": true
+}

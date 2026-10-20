@@ -1,0 +1,19 @@
+{
+  "observedBy": "parent",
+  "phase": "editor-atomtools104-resize-focus-r6",
+  "manualZoomBeforeResize": true,
+  "resizeSequence": "left palette separator A331 -> B449 -> A331; final 2px correction",
+  "selectedNode": "Standard PBR",
+  "selectionAndInspectorPreserved": true,
+  "manualZoomAndFramingVisuallyPreserved": true,
+  "nodePartlyClippedBeforeResize": true,
+  "noSave": true,
+  "discardOnEditorExit": true,
+  "originalResolution": "1920x1032",
+  "limits": [
+    "Visual continuity only; no numeric camera assertion",
+    "No full keyboard/DPI accessibility certification",
+    "Main menu blank and BSP black remain; Vulkan format warnings retained",
+    "Published binaries tested; restored source WIP not built"
+  ]
+}

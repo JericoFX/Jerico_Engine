@@ -2,7 +2,11 @@
 
 Owner: `Editor/Tools`, target `JE::EditorTools` STATIC, namespace `JE::Editor::Tools`. Conserva documentos, previews, ventanas e interacción con materiales y nodos; no añade una DLL ni incorpora autoría al runtime. El [plan](../../../work/gems/AtomToolsFramework.md) conserva contratos, análisis de upstream y límites.
 
-Estado: comprobaciones focales revisadas por el padre; publicación selectiva pendiente. No declara cierre global de Gem, N0 ni GOAL. Las pruebas se ejecutaron en una ventana canonical controlada dentro del árbol mixto, no en un checkout limpio del futuro commit.
+Estado: integración focal revisada por el padre y publicada en development, commit `85729f359465ec56a91752454b569fad5c75d53d`, con SHA remoto comprobado. No declara cierre global de Gem, N0 ni GOAL. Las pruebas se ejecutaron en una ventana canonical controlada dentro del árbol mixto, no en un checkout limpio del futuro commit.
+
+## Aceptación focal posterior
+
+R6 completa la comprobación de resize del Graph Workspace con zoom manual, selección e Inspector preservados visualmente. Editor salió0 en153.34s;25pins sin deriva y censo vacío. Se descartó la cámara temporal; grafo y assets originales permanecen intactos. [Capturas, logs y revisión R6](atomtools104-canonical-editor-resize-focus-r6-attempt1/parent-ui-result.json). El padre acepta la absorción focal Windows/Profile/Vulkan, conservando los límites globales siguientes y sin inventar un contador certificado.
 
 ## Evidencia
 
@@ -25,3 +29,5 @@ Los postflights de las comprobaciones finales conservan cero deriva y censos nat
 Los arranques reales de Editor, AP/Builder y MaterialEditor complementan las pruebas del consumidor; no se usa la factory aislada como sustituto de esos arranques. Linux, VR/OpenXR, Shipping, SDK global sin Python y métricas globales permanecen abiertos. No hay incremento certificado del contador global de Gems.
 
 La publicación debe incorporar los siete fixes finales sobre el traslado canonical; el snapshot inicial T2 no los contiene. Los cambios previos protegidos y sus backups no forman parte automáticamente de este corte.
+
+Revisión del log R6: stdout termina truncado; se conservó también el log de aplicación byteexacto (SHA256 AAFAFE9F0E50859D67B9854F5C888D36364B59321E2010EB9283E4B6466853EF). Contiene el error PreviewRenderer LuminanceMinAvgMax mip8 GENERAL/SHADER_READ_ONLY_OPTIMAL, apertura del grafo y dos avisos DynamicDrawContext al final. No contiene SystemShutdown: exit0 no acredita cierre sin errores ni render limpio. [Revisión y límites](atomtools104-canonical-editor-resize-focus-r6-attempt1/application-log-review.json).

@@ -1,3 +1,9 @@
+## Checkpoint — AtomToolsFramework104, cierre focal y log R6 (2026-10-20)
+
+Implementación publicada en development `85729f359465ec56a91752454b569fad5c75d53d`. R6 completa resize A→B→A del grafo: cámara manual, selección e Inspector conservados visualmente; exit0/153.34s, 25 pins sin deriva y procesos de prueba terminados. El padre acepta la integración focal Windows/Profile/Vulkan; no certifica el engine global. Plan: `docs/work/gems/AtomToolsFramework.md`; evidencia: `docs/evidence/n0/native-atom-tools-framework-2026-10-20/`.
+
+El stdout R6 está truncado. Se recuperó el log de aplicación byteexacto AAFAFE9F0E50859D67B9854F5C888D36364B59321E2010EB9283E4B6466853EF: conserva error PreviewRenderer mip8 y avisos DynamicDrawContext, sin SystemShutdown. No afirmar render limpio ni cierre sin errores. Originales conservados; 18 WIP restaurados no compilados. No repetir SDK/builds intactos. GOAL activo; el siguiente corte debe salir del roadmap vigente. Los estados históricos inferiores no sustituyen este checkpoint.
+
 ## AtomToolsFramework104 — integración focal verificada, publicación selectiva
 
 Owner Editor/Tools, JE::EditorTools STATIC y namespace JE::Editor::Tools. Se conservan los cuatro componentes/servicios y se componen en las cuatro familias de herramientas, sin DLL Gem. Materiales/nodos GUI R5, regresiones Color/zoom, AP R2 sin cuatro aserciones de presets y consumidor instalado configure/build/PE/loader verificados. Evidencia durable: docs/evidence/n0/native-atom-tools-framework-2026-10-20/README.md; plan docs/work/gems/AtomToolsFramework.md. Consumidor EXE A8F232AC3D462399A259A426DAF05EDF4B85C7799FE4CCE4FC9E86E0A23EAE1D, loader dos ciclos4/4 y seis proveedores del despliegue local, postflight sin deriva/censo vacío.

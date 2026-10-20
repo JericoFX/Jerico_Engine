@@ -1,0 +1,27 @@
+{
+  "resources": "Fresh RAM<70%,free>=10GiB and no incompatible native job",
+  "absences": 0,
+  "maxCompilerJobs": 1,
+  "runner": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-corefeature102\\RunNativeCore102Phase.ps1",
+    "bytes": 4607,
+    "sha256": "D98A6067693B49FD10DE46C2BCBCD41A4D31BBB5D615BD727B49C5DBDB34111C"
+  },
+  "leaseId": "parent-atomtools104-resize-focus-r6",
+  "utc": "2026-10-20T17:42:37.3352364Z",
+  "binding": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-atomtools104\\analysis-wiring\\canonical-editor-gui-resize-focus-preparation-r6\\editor.binding.approved.json",
+    "bytes": 28644,
+    "sha256": "2B62AECBC12028754E27074C345AB8A1C58678CF9E3EAE77E394200CE1B660BD"
+  },
+  "inputCount": 25,
+  "phase": "editor-atomtools104-resize-focus-r6",
+  "guardPercent": 80,
+  "parentAcceptance": false,
+  "freeze": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-atomtools104\\analysis-wiring\\canonical-editor-gui-resize-focus-preparation-r6\\freeze.approved.json",
+    "bytes": 7984,
+    "sha256": "8EF0F638F831ED083851BC045E69DBF2F855AE92F8E68FB807EF4166726B0F39"
+  },
+  "serial": true
+}

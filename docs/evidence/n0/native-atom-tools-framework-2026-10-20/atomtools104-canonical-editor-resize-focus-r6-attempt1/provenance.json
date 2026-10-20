@@ -1,0 +1,67 @@
+[
+  {
+    "file": "result.json",
+    "bytes": 559,
+    "sha256": "A398030CBF1CECD6FBBDE0C938B1C4728125AC6FE13621BED872DBB5E37E85CB"
+  },
+  {
+    "file": "postflight.json",
+    "bytes": 168,
+    "sha256": "CF3DCA032DAF47E62C0D026CA487FF0049515A32BCA296AC68FE33AD9EADF257"
+  },
+  {
+    "file": "preflight.json",
+    "bytes": 1217,
+    "sha256": "132CEAFB3F458609FC6CF5BB8DE6768FD50EF70BBF3C3D443ED8A7B6B883249F"
+  },
+  {
+    "file": "editor-atomtools104-resize-focus-r6.result.json",
+    "bytes": 802,
+    "sha256": "4EB146012D1D471C58426AC34C68598094338B293AEA32C17DD906CF9CDA4274"
+  },
+  {
+    "file": "editor-atomtools104-resize-focus-r6.start.json",
+    "bytes": 689,
+    "sha256": "F159FD6C5016E489200DB0BAF5260ACFD157CBFFADDB3FB7936E52EBBF4B20D9"
+  },
+  {
+    "file": "editor-atomtools104-resize-focus-r6.stdout.log",
+    "bytes": 12380,
+    "sha256": "27B7E89A1061966544A894710C4DDD02F3BE21656B21E3C90DC21475BEE8DF4C"
+  },
+  {
+    "file": "editor-atomtools104-resize-focus-r6.stderr.log",
+    "bytes": 0,
+    "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+  },
+  {
+    "file": "parent-ui-result.json",
+    "bytes": 745,
+    "sha256": "696697146CEA0996D145815D3428C2AFCD722C8DF2AB3874A4BBD258DDAEDA1A"
+  },
+  {
+    "file": "resize-A-before.jpg",
+    "bytes": 154931,
+    "sha256": "E59BC5ECBCA5FC8F5E1DB0A02A9BD4FF9A9849146284AE6B8DD3D28AE85A982D"
+  },
+  {
+    "file": "resize-B-narrow.jpg",
+    "bytes": 153164,
+    "sha256": "CCC8BABC85A0925DC9C4006A2F3902F367A9D69057CEFDA9234613BADAEEA875"
+  },
+  {
+    "file": "resize-A-after.jpg",
+    "bytes": 155774,
+    "sha256": "8AE06BE0CF8BCED619C7DFA8144EEDBE722AE43D5B941C8957AF375BB948A451"
+  },
+  {
+    "file": "Editor.application.log",
+    "bytes": 13095,
+    "sha256": "AAFAFE9F0E50859D67B9854F5C888D36364B59321E2010EB9283E4B6466853EF"
+  },
+  {
+    "file": "application-log-review.json",
+    "bytes": 784,
+    "sha256": "26AFA8C7F7C56342A9AD92BA1191A5369827E3677BD2436D05355BC696BF956D"
+  }
+]

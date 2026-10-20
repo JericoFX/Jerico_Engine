@@ -1,0 +1,14 @@
+{
+  "fatal": null,
+  "phase": "editor-atomtools104-resize-focus-r6",
+  "postflightValid": true,
+  "wholeGemIncrement": 0,
+  "phaseResult": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-corefeature102\\atomtools104-canonical-editor-resize-focus-r6-attempt1\\editor-atomtools104-resize-focus-r6.result.json",
+    "bytes": 802,
+    "sha256": "4EB146012D1D471C58426AC34C68598094338B293AEA32C17DD906CF9CDA4274"
+  },
+  "leaseId": "parent-atomtools104-resize-focus-r6",
+  "parentReviewRequired": true,
+  "accepted": false
+}
