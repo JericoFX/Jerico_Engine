@@ -86,6 +86,42 @@ namespace AZ
                     break;
                 case RHI::ScopeAttachmentUsage::DepthStencil:
                     {
+                        // Shader barriers remain explicit outside the renderpass. Preserve the complementary
+                        // aspect's layout during the renderpass without adding a shader framebuffer attachment.
+                        const auto attachmentAspects = attachmentImageView->GetAspectFlags();
+                        const auto& attachmentRange = attachmentImageView->GetVkImageSubresourceRange();
+                        for (const RHI::ImageScopeAttachment* sibling : scope.GetImageAttachments())
+                        {
+                            if (sibling->GetUsage() != RHI::ScopeAttachmentUsage::Shader ||
+                                sibling->GetAccess() != RHI::ScopeAttachmentAccess::Read)
+                            {
+                                continue;
+                            }
+
+                            const ImageView* siblingView =
+                                static_cast<const ImageView*>(sibling->GetImageView()->GetDeviceImageView(scope.GetDeviceIndex()).get());
+                            const auto siblingAspects = siblingView->GetAspectFlags();
+                            const auto& siblingRange = siblingView->GetVkImageSubresourceRange();
+                            const bool complementaryAspects =
+                                (attachmentAspects == RHI::ImageAspectFlags::Depth && siblingAspects == RHI::ImageAspectFlags::Stencil) ||
+                                (attachmentAspects == RHI::ImageAspectFlags::Stencil && siblingAspects == RHI::ImageAspectFlags::Depth);
+                            if (!complementaryAspects || &attachmentImageView->GetImage() != &siblingView->GetImage() ||
+                                attachmentRange.baseMipLevel != siblingRange.baseMipLevel ||
+                                attachmentRange.levelCount != siblingRange.levelCount ||
+                                attachmentRange.baseArrayLayer != siblingRange.baseArrayLayer ||
+                                attachmentRange.layerCount != siblingRange.layerCount)
+                            {
+                                continue;
+                            }
+
+                            const VkImageLayout siblingLayout = GetImageAttachmentLayout(*sibling);
+                            framebufferInfo.m_initialLayout = CombineImageLayout(
+                                FilterImageLayout(framebufferInfo.m_initialLayout, attachmentAspects), siblingLayout);
+                            framebufferInfo.m_finalLayout = CombineImageLayout(
+                                FilterImageLayout(framebufferInfo.m_finalLayout, attachmentAspects), siblingLayout);
+                            break;
+                        }
+
                         m_multisampleState = scopeAttachment->GetFrameAttachment().GetImageDescriptor().m_multisampleState;
                         auto findIter = m_framebufferAttachments.find(scopeAttachmentId);
                         if (findIter != m_framebufferAttachments.end() && findIter->second.m_lastSubpassUsage == framebufferInfo.m_lastSubpassUsage)
