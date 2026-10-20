@@ -1,0 +1,43 @@
+{
+  "utc": "2026-10-20T08:05:24.8449377Z",
+  "phase": "editorfeedback103-r3",
+  "exitCode": 0,
+  "inputDrift": 0,
+  "ramGuardTriggered": false,
+  "observed": [
+    "Deselection removes selected outline",
+    "Second Material Workspace preview opened and closed in same editor process",
+    "EditorLib.dll loaded from current original-engine profile; no module matching EditorModeFeedback loaded",
+    "Editor closed via window X with exit 0"
+  ],
+  "screenshots": [
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-corefeature102\\editorfeedback103-editor-r3-attempt1\\deselection-original.jpg",
+      "bytes": 181058,
+      "sha256": "25BA5FFE23E015DB1286088058687C307413C8E07B385D641C381A5DECD8B771"
+    },
+    {
+      "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-corefeature102\\editorfeedback103-editor-r3-attempt1\\second-preview-original.jpg",
+      "bytes": 201379,
+      "sha256": "14BDE0B37CF7CF7CDC5B627537BC317598F39CAC688F417C41F8E94280ADD8EB"
+    }
+  ],
+  "logErrors": 0,
+  "pending": [
+    "Prefab focus effect",
+    "Play then Stop return to editing",
+    "Save/reopen",
+    "Installed SDK consumer"
+  ],
+  "accepted": false,
+  "wholeGemIncrement": 0,
+  "cleanup": {
+    "editorPid": 12192,
+    "kernelPid": 37900,
+    "workerPid": 31132,
+    "allAbsent": true,
+    "ramUsedPercent": 63.01,
+    "freeGiB": 11.8,
+    "sharedGraftPreserved": "Session/transport ownership not proven; do not terminate shared MCP by name"
+  }
+}

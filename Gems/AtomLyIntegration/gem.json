@@ -26,7 +26,6 @@
         "LmbrCentral",
         "GradientSignal",
         "SurfaceData",
-        "EditorModeFeedback",
         "EMotionFX_Atom",
         "Atom_RHI",
         "Atom_RHI_Null",
@@ -40,7 +39,6 @@
         "AtomRenderOptions",
         "AtomViewportDisplayIcons",
         "AtomViewportDisplayInfo",
-        "EditorModeFeedback",
         "EMotionFXAtom"
     ]
 }

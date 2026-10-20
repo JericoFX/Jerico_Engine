@@ -1,0 +1,69 @@
+{
+  "utc": "2026-10-20T08:47:17.3813897Z",
+  "phase": "editor-editorfeedback103-r5",
+  "editorPid": 23708,
+  "exitCode": 0,
+  "seconds": 309.9746842,
+  "inputDrift": 0,
+  "nativeCensusEmpty": true,
+  "verified": [
+    "Save/reopen nested room prefab: WhiteBox material metal_iron and UV scale 2,2 persisted",
+    "Play-to-Stop using existing ImGui grave key to free cursor, then existing Qt console quit once; product log Entered game 05:41:51, Executing quit and Exited game 05:43:39",
+    "Inspector and outliner restored, passes66 to70; Z framing shows orange selected geometry outline",
+    "Focused light prefab with room outside: Monochromatic visibly blurs/darkens outside geometry; passes70 to75; leaving focus restores sharp geometry and70passes",
+    "Private level saved; Normal mode restored"
+  ],
+  "limitation": "Existing PreviewRenderer LuminanceMinAvgMax mip8 VUID09600 observed in product log; retained, not attributed to103 or silently accepted. Whole-Gem final review/publication pending.",
+  "screenshots": [
+    {
+      "name": "outside-focus-before-original.jpg",
+      "bytes": 233215,
+      "sha256": "3CC2D8C4DDC25E34B439F7D93D3F8082B47947191CF2657AB58F701355EB97D0"
+    },
+    {
+      "name": "outside-focus-monochrome-original.jpg",
+      "bytes": 205652,
+      "sha256": "75D3C8277235015CDF1BA2BF1024C9631726A5679C7DEE7C7239F4B3EC6B0D00"
+    },
+    {
+      "name": "outside-focus-restored-original.jpg",
+      "bytes": 217268,
+      "sha256": "FF1FB49BA314778B98FA69E71A0E600AA80C90D8DC88CB18E02757C1D446C008"
+    },
+    {
+      "name": "play-imgui-unlocked-original.jpg",
+      "bytes": 210954,
+      "sha256": "85E81D05171811C1160F6895354F90721114B9261F0D73BDD7BB9B69C2372EA8"
+    },
+    {
+      "name": "play-stop-restored-original.jpg",
+      "bytes": 253532,
+      "sha256": "3CEF386883B920BDB7D1B793B1C4BD8D374393262989463442C942B147BC0775"
+    },
+    {
+      "name": "post-stop-selection-outline-original.jpg",
+      "bytes": 259626,
+      "sha256": "2079D6A2DCB3EF1B988FC5FD36D4E6E5F86F043FB258959F0D3F889553517E60"
+    },
+    {
+      "name": "reopen-original.jpg",
+      "bytes": 179099,
+      "sha256": "5D8CEA29B9F0EF690E38B511338B5391472EB0C59246AA595FDE4974CA1F7EC1"
+    },
+    {
+      "name": "reopen-whitebox-material-uv-original.jpg",
+      "bytes": 233270,
+      "sha256": "B2F9D0A4FE969ECB178CA34065C4F4093AFDC0E655DE45351590E22D531F93F6"
+    }
+  ],
+  "productLogSHA256": "54E0BDCEA8E581DA6D790A90E09D3D651C6B92AB1D5ECE8764DE6886F7009E10",
+  "helpersOriginalPidsAbsent": [
+    23708,
+    34380,
+    23184
+  ],
+  "ramUsedPercentAfterCleanup": 64.43,
+  "freeGiBAfterCleanup": 11.35,
+  "wholeGemIncrement": 0,
+  "wholeGemAccepted": false
+}

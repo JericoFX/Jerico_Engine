@@ -183,16 +183,6 @@
                     }
                 }
             },
-            "EditorModeFeedback": {
-                "Targets": {
-                    "EditorModeFeedback": {
-                        "AutoLoad": false
-                    },
-                    "EditorModeFeedback.Editor": {
-                        "AutoLoad": false
-                    }
-                }
-            },
             "RecastNavigation": {
                 "Targets": {
                     "RecastNavigation.Editor": {

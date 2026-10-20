@@ -1,0 +1,38 @@
+/*
+ * Copyright (c) Contributors to the Open 3D Engine Project.
+ * For complete copyright and license terms please see the LICENSE at the root of this distribution.
+ *
+ * SPDX-License-Identifier: Apache-2.0 OR MIT
+ *
+ */
+#pragma once
+
+#include <JE/Render/RPI/Public/Pass/ParentPass.h>
+
+namespace JE::Editor
+{
+    namespace Render::Features
+    {
+        //! Parent pass for the editor mode feedback system.
+        class EditorModeFeedbackParentPass 
+        : public JE::Render::RPI::ParentPass
+        {
+        public:
+            AZ_RTTI(EditorModeFeedbackParentPass, "{890482AB-192E-45B6-866C-76CB7C799CF3}", JE::Render::RPI::ParentPass);
+            AZ_CLASS_ALLOCATOR(EditorModeFeedbackParentPass, AZ::SystemAllocator);
+
+            virtual ~EditorModeFeedbackParentPass() = default;
+
+            //! Creates a EditorModeFeedbackParentPass
+            static JE::Render::RPI::Ptr<EditorModeFeedbackParentPass> Create(const JE::Render::RPI::PassDescriptor& descriptor);
+
+        protected:
+            EditorModeFeedbackParentPass(const JE::Render::RPI::PassDescriptor& descriptor);
+
+            //! Pass behavior overrides
+            bool IsEnabled() const override;
+
+        private:
+        };
+    } // namespace Render::Features
+} // namespace JE::Editor

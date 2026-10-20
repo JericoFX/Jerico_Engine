@@ -1,0 +1,137 @@
+<05:41:00> BackupNameAttachment=" Build(0) 20 Oct 26 (05 41 00)"  -- used by backup system
+<05:41:00> Log Started at Tue Oct 20 05:41:00 2026
+<05:41:00> Built on Oct 14 2026 22:00:40
+<05:41:00> Running 64 bit Windows version
+<05:41:00> FileVersion: 0.0.0.0
+<05:41:00> ProductVersion: 0.0.0.0
+<05:41:00> Using Microsoft (tm) C++ Standard Library implementation
+<05:41:00> Project Path: F:\JericoEngine\JericoEngine\Projects\JEEditorFixture
+
+<05:41:00> Project Name: JEEditorFixture
+
+<05:41:00> [Warning] Config file game.cfg not found!
+<05:41:00> creating CVarGroups from directory 'Config/CVarGroups' ...
+<05:41:00> Loading Config file user.cfg (F:/JericoEngine/JericoEngine/Projects/JEEditorFixture/Cache/pc/config/user.cfg)
+<05:41:00> GameName: JEEditorFixture
+<05:41:00> BuildTime: Oct 14 2026 22:00:40
+<05:41:00> > g_languageAudio : en-US
+
+<05:41:00> Running without any Audio Engine!
+
+<05:41:00> Audio System is initialized and ready!
+
+<05:41:00> Initializing additional systems
+
+<05:41:00> Using FreeType 2.11.1
+<05:41:00> Current Language: Spanish 
+<05:41:00> Microsoft Windows 11 Pro|C:\WINDOWS|\Device\Harddisk3\Partition2 10.0.26300
+<05:41:00> Local time is 05:41:00 10/20/26, system running for 1221 minutes
+<05:41:00> 32679MB phys. memory installed, 15307MB paging available
+<05:41:00> Current display mode is 1920x1080x32, (Unknown graphics card)
+<05:41:00> IBM enhanced (101/102-key) keyboard and 6+ button mouse installed
+<05:41:00> --------------------------------------------------------------------------------
+<05:41:00> > r_streamingImagePoolBudgetMb : 0
+
+<05:41:00> > r_streamingImageMipBias : 0
+
+<05:41:00> (RPI system) - System assets initialized
+
+<05:41:00> project_path = F:\JericoEngine\JericoEngine\Projects\JEEditorFixture
+<05:41:00> sys_localization_folder = Localization
+<05:41:00> (SceneAPI) - AssImp Import Context was registered.
+
+<05:41:00> (EMotionFX) - -----------------------------------------------
+
+<05:41:00> (EMotionFX) - EMotion Studio Core - Information
+
+<05:41:00> (EMotionFX) - -----------------------------------------------
+
+<05:41:00> (EMotionFX) - Compilation date: Oct 18 2026
+
+<05:41:00> (EMotionFX) - -----------------------------------------------
+
+<05:41:00> (EMotionFX) - EMotion Studio initialized...
+
+<05:41:00> > r_shadowCascadeExtrusionAmount : -1
+
+<05:41:00> > r_enablePerMeshShaderOptionFlags : false
+
+<05:41:00> > r_meshInstancingEnabled : false
+
+<05:41:00> > r_meshInstancingEnabledForTransparentObjects : false
+
+<05:41:00> > r_meshInstancingBucketSortScatterBatchSize : 512
+
+<05:41:00> [Warning] (Az Console) - attempted to assign out of range value -32
+<05:41:01> [Warning] XML reader: Can't open file (F:/JericoEngine/JericoEngine/Projects/JEEditorFixture/user/Sandbox/Macros.xml)
+<05:41:01> Document created
+<05:41:01> Adding '*$tmp*' to ignore masks for changed files.
+<05:41:01> [Warning] (Application) - 'IsPrefabSystemEnabled' is deprecated, the editor only supports prefabs for level editing.
+<05:41:01> Engine initialized, took 8.34s.
+<05:41:01> [CONSOLE] Executing console command 'exec editor_autoexec.cfg'
+<05:41:01> Executing console batch file (try game,config,root): "@products@/editor_autoexec.cfg" not found!
+<05:41:01> [CONSOLE] Executing console command 'exec editor.cfg'
+<05:41:01> Executing console batch file (try game,config,root): "@products@/editor.cfg" not found!
+<05:41:01> [CONSOLE] Executing console command 'exec user.cfg'
+<05:41:01> Executing console batch file (try game,config,root): "user.cfg" found in game/config/ ...
+<05:41:01> Opening level levels/jeeditorfeedback103/jeeditorfeedback103.spawnable
+<05:41:01> Loading from F:/JericoEngine/JericoEngine/Projects/JEEditorFixture/Levels/JEEditorFeedback103/JEEditorFeedback103.prefab...
+<05:41:01> ---- Start: Game Engine level load
+<05:41:01> Loading map 'F:/JericoEngine/JericoEngine/Projects/JEEditorFixture/Levels/JEEditorFeedback103' into engine...
+<05:41:01> ---- End: Game Engine level load (0 seconds)
+<05:41:01> ---- Start: Post Load
+<05:41:01> ---- End: Post Load (0 seconds)
+<05:41:01> [LevelLoadTime] Level F:/JericoEngine/JericoEngine/Projects/JEEditorFixture/Levels/JEEditorFeedback103 loaded in 0 seconds
+<05:41:01> -----------------------------------------------------------
+<05:41:01> Successfully opened document F:/JericoEngine/JericoEngine/Projects/JEEditorFixture/Levels/JEEditorFeedback103/JEEditorFeedback103.prefab
+<05:41:01> Level loading time: 0.06 seconds
+<05:41:01> -----------------------------------------------------------
+<05:41:01> (RHI) - ****************************************************************
+
+<05:41:01> (RHI) -                     Registering vulkan RHI                          
+
+<05:41:01> (RHI) - ****************************************************************
+
+<05:41:01> > r_shadowCascadeExtrusionAmount : -1
+
+<05:41:01> > r_enablePerMeshShaderOptionFlags : false
+
+<05:41:01> > r_meshInstancingEnabled : false
+
+<05:41:01> > r_meshInstancingEnabledForTransparentObjects : false
+
+<05:41:01> > r_meshInstancingBucketSortScatterBatchSize : 512
+
+<05:41:01> [Warning] (Az Console) - attempted to assign out of range value -48
+<05:41:03> [Warning] (vkDebugMessage) - [WARNING][Validation] vkCmdDispatch(): the storage image descriptor [VkDescriptorSet 0xd060000000d06[FastDepthAwareBlurVer_PassSrg0_0], Set 0, Binding 2, Index 0, variable "PassSrg_m_blurTarget"] is accessed by a OpTypeImage that has a Format operand R32f (equivalent to VK_FORMAT_R32_SFLOAT) which doesn't match the VkImageView 0x14b400000014b4 format (VK_FORMAT_R8_UNORM). Any loads or stores with the variable will produce undefined values to the whole image (not just the texel being accessed).
+Spec information at https://docs.vulkan.org/spec/latest/chapters/textures.html#textures-format-validation
+<05:41:03> [Warning] (vkDebugMessage) - [WARNING][Validation] vkCmdDispatch(): the storage image descriptor [VkDescriptorSet 0xa010000000a01[SsaoCompute_PassSrg0_0], Set 0, Binding 1, Index 0, variable "PassSrg_m_ssaoOutput"] is accessed by a OpTypeImage that has a Format operand R32f (equivalent to VK_FORMAT_R32_SFLOAT) which doesn't match the VkImageView 0x14f800000014f8 format (VK_FORMAT_R8_UNORM). Any loads or stores with the variable will produce undefined values to the whole image (not just the texel being accessed).
+Spec information at https://docs.vulkan.org/spec/latest/chapters/textures.html#textures-format-validation
+<05:41:03> [Warning] (vkDebugMessage) - [WARNING][Validation] vkCmdDispatch(): the storage image descriptor [VkDescriptorSet 0xd0c0000000d0c[FastDepthAwareBlurHor_PassSrg0_0], Set 0, Binding 2, Index 0, variable "PassSrg_m_blurTarget"] is accessed by a OpTypeImage that has a Format operand R32f (equivalent to VK_FORMAT_R32_SFLOAT) which doesn't match the VkImageView 0x14b500000014b5 format (VK_FORMAT_R8_UNORM). Any loads or stores with the variable will produce undefined values to the whole image (not just the texel being accessed).
+Spec information at https://docs.vulkan.org/spec/latest/chapters/textures.html#textures-format-validation
+<05:41:03> [Warning] (vkDebugMessage) - [WARNING][Validation] vkCmdDispatch(): the storage image descriptor [VkDescriptorSet 0xa100000000a10[FastDepthAwareBlurVer_PassSrg0_0], Set 0, Binding 2, Index 0, variable "PassSrg_m_blurTarget"] is accessed by a OpTypeImage that has a Format operand R32f (equivalent to VK_FORMAT_R32_SFLOAT) which doesn't match the VkImageView 0x14f900000014f9 format (VK_FORMAT_R8_UNORM). Any loads or stores with the variable will produce undefined values to the whole image (not just the texel being accessed).
+Spec information at https://docs.vulkan.org/spec/latest/chapters/textures.html#textures-format-validation
+<05:41:03> [Warning] (vkDebugMessage) - [WARNING][Validation] vkCmdDispatch(): the storage image descriptor [VkDescriptorSet 0xd860000000d86[SsaoCompute_PassSrg0_0], Set 0, Binding 1, Index 0, variable "PassSrg_m_ssaoOutput"] is accessed by a OpTypeImage that has a Format operand R32f (equivalent to VK_FORMAT_R32_SFLOAT) which doesn't match the VkImageView 0x14c500000014c5 format (VK_FORMAT_R8_UNORM). Any loads or stores with the variable will produce undefined values to the whole image (not just the texel being accessed).
+Spec information at https://docs.vulkan.org/spec/latest/chapters/textures.html#textures-format-validation
+<05:41:03> [Warning] (vkDebugMessage) - [WARNING][Validation] vkCmdDispatch(): the storage image descriptor [VkDescriptorSet 0xd950000000d95[FastDepthAwareBlurVer_PassSrg0_0], Set 0, Binding 2, Index 0, variable "PassSrg_m_blurTarget"] is accessed by a OpTypeImage that has a Format operand R32f (equivalent to VK_FORMAT_R32_SFLOAT) which doesn't match the VkImageView 0x14c600000014c6 format (VK_FORMAT_R8_UNORM). Any loads or stores with the variable will produce undefined values to the whole image (not just the texel being accessed).
+Spec information at https://docs.vulkan.org/spec/latest/chapters/textures.html#textures-format-validation
+<05:41:03> [Warning] (vkDebugMessage) - [WARNING][Validation] vkCmdDispatch(): the storage image descriptor [VkDescriptorSet 0xa160000000a16[FastDepthAwareBlurHor_PassSrg0_0], Set 0, Binding 2, Index 0, variable "PassSrg_m_blurTarget"] is accessed by a OpTypeImage that has a Format operand R32f (equivalent to VK_FORMAT_R32_SFLOAT) which doesn't match the VkImageView 0x14fa00000014fa format (VK_FORMAT_R8_UNORM). Any loads or stores with the variable will produce undefined values to the whole image (not just the texel being accessed).
+Spec information at https://docs.vulkan.org/spec/latest/chapters/textures.html#textures-format-validation
+<05:41:03> [Warning] (vkDebugMessage) - [WARNING][Validation] vkCmdDispatch(): the storage image descriptor [VkDescriptorSet 0xfc00000000fc0[BRDFTextureCS_PassSrg0_0], Set 0, Binding 0, Index 0, variable "PassSrg_m_outputTexture"] is accessed by a OpTypeImage that has a Format operand Rg32f (equivalent to VK_FORMAT_R32G32_SFLOAT) which doesn't match the VkImageView 0x14bb00000014bb format (VK_FORMAT_R16G16_SFLOAT). Any loads or stores with the variable will produce undefined values to the whole image (not just the texel being accessed).
+Spec information at https://docs.vulkan.org/spec/latest/chapters/textures.html#textures-format-validation
+<05:41:03> [Warning] (vkDebugMessage) - [WARNING][Validation] vkCmdDispatch(): the storage image descriptor [VkDescriptorSet 0xd9b0000000d9b[FastDepthAwareBlurHor_PassSrg0_0], Set 0, Binding 2, Index 0, variable "PassSrg_m_blurTarget"] is accessed by a OpTypeImage that has a Format operand R32f (equivalent to VK_FORMAT_R32_SFLOAT) which doesn't match the VkImageView 0x14c700000014c7 format (VK_FORMAT_R8_UNORM). Any loads or stores with the variable will produce undefined values to the whole image (not just the texel being accessed).
+Spec information at https://docs.vulkan.org/spec/latest/chapters/textures.html#textures-format-validation
+<05:41:03> [Warning] (vkDebugMessage) - [WARNING][Validation] (Warning - This VUID has now been reported 10 times, which is the duplicate_message_limit value, this will be the last time reporting it).
+vkCmdDispatch(): the storage image descriptor [VkDescriptorSet 0x9800000000980[FastDepthAwareBlurVer_PassSrg0_0], Set 0, Binding 2, Index 0, variable "PassSrg_m_blurTarget"] is accessed by a OpTypeImage that has a Format operand R32f (equivalent to VK_FORMAT_R32_SFLOAT) which doesn't match the VkImageView 0x14e900000014e9 format (VK_FORMAT_R8_UNORM). Any loads or stores with the variable will produce undefined values to the whole image (not just the texel being accessed).
+Spec information at https://docs.vulkan.org/spec/latest/chapters/textures.html#textures-format-validation
+<05:41:03> [Error] (vkDebugMessage) - [ERROR][Validation] vkQueueSubmit(): pSubmits[0] command buffer VkCommandBuffer 0x5d1ee018850 expects VkImage 0x148b000000148b[Root.PreviewRendererSystemComponent Preview Pipeline.Pipeline.PostProcessPass.LightAdaptation.DownsampleSinglePassLuminance.LuminanceMinAvgMax] (subresource: aspectMask = VK_IMAGE_ASPECT_COLOR_BIT, mipLevel = 8, arrayLayer = 0) to be in layout VK_IMAGE_LAYOUT_GENERAL--instead, current layout is VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL.
+The Vulkan spec states: If a descriptor with type equal to any of VK_DESCRIPTOR_TYPE_SAMPLE_WEIGHT_IMAGE_QCOM, VK_DESCRIPTOR_TYPE_BLOCK_MATCH_IMAGE_QCOM, VK_DESCRIPTOR_TYPE_SAMPLED_IMAGE, VK_DESCRIPTOR_TYPE_STORAGE_IMAGE, or VK_DESCRIPTOR_TYPE_INPUT_ATTACHMENT is accessed as a result of this command, all image subresources identified by that descriptor must be in the image layout identified when the descriptor was written (https://docs.vulkan.org/spec/latest/chapters/drawing.html#VUID-vkCmdDraw-None-09600)
+<05:41:51> [Warning] (Prefabs) - Prefab - EntityIdMapper: Entity with Id [392129403702797755] has no registered owning instance
+<05:41:51> Entered game mode
+<05:41:51> (Spawnables) - Entities from new root spawnable 'Root.spawnable' are ready (generation: 0).
+
+<05:43:39> quit
+<05:43:39> [CONSOLE] Executing console command 'quit'
+<05:43:39> Exited game mode
+<05:46:02> [Warning] (RPI) - Failed to initialize PipelineState for DynamicDrawContext
+<05:46:02> [Warning] (RPI) - Failed to initialize PipelineState for DynamicDrawContext

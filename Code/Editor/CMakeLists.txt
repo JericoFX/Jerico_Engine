@@ -119,7 +119,6 @@ ly_add_target(
             JE::RenderIntegration
             Gem::AtomToolsFramework.Static
             Gem::AtomViewportDisplayInfo
-            Gem::EditorModeFeedback.Editor.Static
             Gem::LmbrCentral.Static
             Legacy::CryCommon
             ${additional_dependencies}

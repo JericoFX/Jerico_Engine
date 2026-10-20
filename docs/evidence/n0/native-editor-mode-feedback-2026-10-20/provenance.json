@@ -1,0 +1,134 @@
+[
+  {
+    "file": "gui-r5-review.json",
+    "source": "build/n0-validation/native-corefeature102/editorfeedback103-editor-r5-attempt1/parent-visual-review.json",
+    "bytes": 2750,
+    "sha256": "96E9EB0B421343DB81F58B7BBDB94C3A98904A83BB209057429F411D384EF5A8"
+  },
+  {
+    "file": "gui-r5-product.log",
+    "source": "build/n0-validation/native-corefeature102/editorfeedback103-editor-r5-attempt1/Editor.product.log",
+    "bytes": 13242,
+    "sha256": "54E0BDCEA8E581DA6D790A90E09D3D651C6B92AB1D5ECE8764DE6886F7009E10"
+  },
+  {
+    "file": "gui-r5-postflight.json",
+    "source": "build/n0-validation/native-corefeature102/editorfeedback103-editor-r5-attempt1/postflight.json",
+    "bytes": 168,
+    "sha256": "CFF0CFA05037F68DFDAB01F4620787AB3965DF66C2F7AD4A926C0F99E1E74BE9"
+  },
+  {
+    "file": "gui-r5-result.json",
+    "source": "build/n0-validation/native-corefeature102/editorfeedback103-editor-r5-attempt1/editor-editorfeedback103-r5.result.json",
+    "bytes": 750,
+    "sha256": "CEBC7637A4C1445A776A0E1D8A95413A9B9AA20E7224DC2630879500B2D9A5DE"
+  },
+  {
+    "file": "asset-identity-review.json",
+    "source": "build/n0-validation/native-editorfeedback103/ap-preparation-r1/identity-comparison-parent.json",
+    "bytes": 1115,
+    "sha256": "D3F882AB395DC0800FBC9004A0DBC0E7D4706A8A5D9FF824CC43D0BEBEB7BB9F"
+  },
+  {
+    "file": "outside-focus-before-original.jpg",
+    "source": "build/n0-validation/native-corefeature102/editorfeedback103-editor-r5-attempt1/outside-focus-before-original.jpg",
+    "bytes": 233215,
+    "sha256": "3CC2D8C4DDC25E34B439F7D93D3F8082B47947191CF2657AB58F701355EB97D0"
+  },
+  {
+    "file": "outside-focus-monochrome-original.jpg",
+    "source": "build/n0-validation/native-corefeature102/editorfeedback103-editor-r5-attempt1/outside-focus-monochrome-original.jpg",
+    "bytes": 205652,
+    "sha256": "75D3C8277235015CDF1BA2BF1024C9631726A5679C7DEE7C7239F4B3EC6B0D00"
+  },
+  {
+    "file": "outside-focus-restored-original.jpg",
+    "source": "build/n0-validation/native-corefeature102/editorfeedback103-editor-r5-attempt1/outside-focus-restored-original.jpg",
+    "bytes": 217268,
+    "sha256": "FF1FB49BA314778B98FA69E71A0E600AA80C90D8DC88CB18E02757C1D446C008"
+  },
+  {
+    "file": "play-imgui-unlocked-original.jpg",
+    "source": "build/n0-validation/native-corefeature102/editorfeedback103-editor-r5-attempt1/play-imgui-unlocked-original.jpg",
+    "bytes": 210954,
+    "sha256": "85E81D05171811C1160F6895354F90721114B9261F0D73BDD7BB9B69C2372EA8"
+  },
+  {
+    "file": "play-stop-restored-original.jpg",
+    "source": "build/n0-validation/native-corefeature102/editorfeedback103-editor-r5-attempt1/play-stop-restored-original.jpg",
+    "bytes": 253532,
+    "sha256": "3CEF386883B920BDB7D1B793B1C4BD8D374393262989463442C942B147BC0775"
+  },
+  {
+    "file": "post-stop-selection-outline-original.jpg",
+    "source": "build/n0-validation/native-corefeature102/editorfeedback103-editor-r5-attempt1/post-stop-selection-outline-original.jpg",
+    "bytes": 259626,
+    "sha256": "2079D6A2DCB3EF1B988FC5FD36D4E6E5F86F043FB258959F0D3F889553517E60"
+  },
+  {
+    "file": "reopen-original.jpg",
+    "source": "build/n0-validation/native-corefeature102/editorfeedback103-editor-r5-attempt1/reopen-original.jpg",
+    "bytes": 179099,
+    "sha256": "5D8CEA29B9F0EF690E38B511338B5391472EB0C59246AA595FDE4974CA1F7EC1"
+  },
+  {
+    "file": "reopen-whitebox-material-uv-original.jpg",
+    "source": "build/n0-validation/native-corefeature102/editorfeedback103-editor-r5-attempt1/reopen-whitebox-material-uv-original.jpg",
+    "bytes": 233270,
+    "sha256": "B2F9D0A4FE969ECB178CA34065C4F4093AFDC0E655DE45351590E22D531F93F6"
+  },
+  {
+    "file": "sdk-review.json",
+    "source": "build/n0-validation/native-corefeature102/loader-editorfeedback103-sdk-consumer-attempt1/parent-review.json",
+    "bytes": 943,
+    "sha256": "F40AD20174555B1AC2E10CAF6839080E37B24EBFC612456D295A4ED546038A5C"
+  },
+  {
+    "file": "sdk-loader.stdout.log",
+    "source": "build/n0-validation/native-corefeature102/loader-editorfeedback103-sdk-consumer-attempt1/loader-editorfeedback103-sdk-consumer.stdout.log",
+    "bytes": 1898,
+    "sha256": "F22AE84E2F8FAFE1E2D18AF819FF503F5731A71F1DEE7A3A2EF25B3275AA961E"
+  },
+  {
+    "file": "sdk-loader-result.json",
+    "source": "build/n0-validation/native-corefeature102/loader-editorfeedback103-sdk-consumer-attempt1/loader-editorfeedback103-sdk-consumer.result.json",
+    "bytes": 787,
+    "sha256": "74C93286F7D326CAE881C82515C46132F348447E22125E3F6D482A4772EB3F49"
+  },
+  {
+    "file": "sdk-postflight.json",
+    "source": "build/n0-validation/native-corefeature102/loader-editorfeedback103-sdk-consumer-attempt1/postflight.json",
+    "bytes": 168,
+    "sha256": "98390648D0BCEF6A73721DC3F699281A258E6EAC83D8C0AA4372DEC531665839"
+  },
+  {
+    "file": "gui-r3-review.json",
+    "source": "build/n0-validation/native-corefeature102/editorfeedback103-editor-r3-attempt1/parent-visual-review.json",
+    "bytes": 1540,
+    "sha256": "30B222204555F9E70FC0D164E3622F05B82ACE8846E063E035C1F0573E854975"
+  },
+  {
+    "file": "deselection-original.jpg",
+    "source": "build/n0-validation/native-corefeature102/editorfeedback103-editor-r3-attempt1/deselection-original.jpg",
+    "bytes": 181058,
+    "sha256": "25BA5FFE23E015DB1286088058687C307413C8E07B385D641C381A5DECD8B771"
+  },
+  {
+    "file": "second-preview-original.jpg",
+    "source": "build/n0-validation/native-corefeature102/editorfeedback103-editor-r3-attempt1/second-preview-original.jpg",
+    "bytes": 201379,
+    "sha256": "14BDE0B37CF7CF7CDC5B627537BC317598F39CAC688F417C41F8E94280ADD8EB"
+  },
+  {
+    "file": "configure-result.json",
+    "source": "build/n0-validation/native-corefeature102/editorfeedback103-configure-r2-attempt1/configure-editorfeedback103-r2.result.json",
+    "bytes": 764,
+    "sha256": "E011F9EA98C6AD5B12CE4981E6383E6CFDFEF273EBA199CDB59FEAA773E2B242"
+  },
+  {
+    "file": "archive-build-result.json",
+    "source": "build/n0-validation/native-corefeature102/editorfeedback103-build-editorfeatures-r1-attempt1/build-editorfeedback103-editorfeatures-r1.result.json",
+    "bytes": 805,
+    "sha256": "759F528CE4496BFF669142F686BB7C9737E2C0EED227BB074307A6589216C4D5"
+  }
+]

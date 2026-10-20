@@ -1,0 +1,18 @@
+{
+  "priorityError": null,
+  "priorityRequested": "BelowNormal",
+  "seconds": 0.1215228,
+  "stderr": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-corefeature102\\loader-editorfeedback103-sdk-consumer-attempt1\\loader-editorfeedback103-sdk-consumer.stderr.log",
+    "bytes": 0,
+    "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+  },
+  "exitCode": 0,
+  "timedOut": false,
+  "stdout": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-corefeature102\\loader-editorfeedback103-sdk-consumer-attempt1\\loader-editorfeedback103-sdk-consumer.stdout.log",
+    "bytes": 1898,
+    "sha256": "F22AE84E2F8FAFE1E2D18AF819FF503F5731A71F1DEE7A3A2EF25B3275AA961E"
+  },
+  "ramGuardTriggered": false
+}

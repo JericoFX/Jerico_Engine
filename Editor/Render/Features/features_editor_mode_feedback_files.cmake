@@ -1,0 +1,45 @@
+# Copyright (c) Contributors to the Open 3D Engine Project.
+# SPDX-License-Identifier: Apache-2.0 OR MIT
+
+set(FILES
+    Include/JE/Editor/Render/Features/EditorModeFeedback/EditorModeFeedbackInterface.h
+    Include/JE/Editor/Render/Features/EditorModeFeedback/EditorStateRequestsBus.h
+    Source/EditorModeFeedback/Pass/EditorModeFeedbackParentPass.cpp
+    Source/EditorModeFeedback/Pass/EditorModeFeedbackParentPass.h
+    Source/EditorModeFeedback/Pass/Child/EditorModeFeedbackChildPassBase.cpp
+    Source/EditorModeFeedback/Pass/Child/EditorModeFeedbackChildPassBase.h
+    Source/EditorModeFeedback/Pass/Child/EditorModeDesaturationPass.cpp
+    Source/EditorModeFeedback/Pass/Child/EditorModeDesaturationPass.h
+    Source/EditorModeFeedback/Pass/Child/EditorModeTintPass.cpp
+    Source/EditorModeFeedback/Pass/Child/EditorModeTintPass.h
+    Source/EditorModeFeedback/Pass/Child/EditorModeBlurPass.cpp
+    Source/EditorModeFeedback/Pass/Child/EditorModeBlurPass.h
+    Source/EditorModeFeedback/Pass/Child/EditorModeOutlinePass.cpp
+    Source/EditorModeFeedback/Pass/Child/EditorModeOutlinePass.h
+    Source/EditorModeFeedback/Pass/EditorStatePassSystem.cpp
+    Source/EditorModeFeedback/Pass/EditorStatePassSystem.h
+    Source/EditorModeFeedback/Pass/EditorStatePassSystemUtils.cpp
+    Source/EditorModeFeedback/Pass/EditorStatePassSystemUtils.h
+    Source/EditorModeFeedback/Pass/State/EditorStateParentPass.cpp
+    Source/EditorModeFeedback/Pass/State/EditorStateParentPass.h
+    Source/EditorModeFeedback/Pass/State/EditorStateParentPassData.h
+    Source/EditorModeFeedback/Pass/State/EditorStateBase.cpp
+    Source/EditorModeFeedback/Pass/State/EditorStateBase.h
+    Source/EditorModeFeedback/Pass/State/EditorStateBufferCopyPass.cpp
+    Source/EditorModeFeedback/Pass/State/EditorStateBufferCopyPass.h
+    Source/EditorModeFeedback/Pass/State/EditorStateBufferCopyPassData.h
+    Source/EditorModeFeedback/Pass/State/FocusedEntityState.cpp
+    Source/EditorModeFeedback/Pass/State/FocusedEntityState.h
+    Source/EditorModeFeedback/Pass/State/SelectedEntityState.cpp
+    Source/EditorModeFeedback/Pass/State/SelectedEntityState.h
+    Source/EditorModeFeedback/Draw/DrawableMeshEntity.cpp
+    Source/EditorModeFeedback/Draw/DrawableMeshEntity.h
+    Source/EditorModeFeedback/Draw/EditorStateMaskRenderer.cpp
+    Source/EditorModeFeedback/Draw/EditorStateMaskRenderer.h
+    Source/EditorModeFeedback/Draw/EditorStateMeshDrawPacket.cpp
+    Source/EditorModeFeedback/Draw/EditorStateMeshDrawPacket.h
+    Source/EditorModeFeedback/EditorModeFeedbackSystemComponent.cpp
+    Source/EditorModeFeedback/EditorModeFeedbackSystemComponent.h
+    Source/EditorModeFeedback/EditorModeFeedbackFeatureProcessor.cpp
+    Source/EditorModeFeedback/EditorModeFeedbackFeatureProcessor.h
+)

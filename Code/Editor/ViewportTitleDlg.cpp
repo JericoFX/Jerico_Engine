@@ -43,7 +43,7 @@
 #include <AzToolsFramework/Viewport/ViewportSettings.h>
 #include <AzToolsFramework/ViewportSelection/EditorTransformComponentSelectionRequestBus.h>
 #include <Editor/EditorSettingsAPIBus.h>
-#include <EditorModeFeedback/EditorStateRequestsBus.h>
+#include <JE/Editor/Render/Features/EditorModeFeedback/EditorStateRequestsBus.h>
 
 #include <LmbrCentral/Audio/AudioSystemComponentBus.h>
 

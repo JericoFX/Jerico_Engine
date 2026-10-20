@@ -1,0 +1,29 @@
+{
+  "utc": "2026-10-20T08:29:13.0322255Z",
+  "nativeExit": 0,
+  "checks": 739,
+  "failures": 0,
+  "cycles": 2,
+  "inputDrift": 0,
+  "factoryAssertions": {
+    "runtimeDescriptors": 9,
+    "runtimeRequired": 7,
+    "editorDescriptors": 14,
+    "editorRequired": 9,
+    "editorOnlyOverlap": 5,
+    "proof": "Pinned main.cpp reviewed arrays and CheckModule, invoked CheckAlone(false/true) and CheckOverlap inside CheckDpgFeaturesOwnership; RESULT failures=0. Separate36/74 Scene summary is not this contract."
+  },
+  "publicInterface": "UUID, enum and inactive bus checks passed as part of739",
+  "providers": 6,
+  "deployPairsVerified": 179,
+  "legacyImportedDllAbsent": true,
+  "consumerGateAccepted": true,
+  "wholeGemAccepted": false,
+  "wholeGemIncrement": 0,
+  "pending": [
+    "Prefab focus visual",
+    "Play/Stop feedback restoration",
+    "Save/reopen",
+    "Publication and inventory reconciliation"
+  ]
+}

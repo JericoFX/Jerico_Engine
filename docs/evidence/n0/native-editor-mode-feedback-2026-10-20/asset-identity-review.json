@@ -1,0 +1,32 @@
+{
+  "utc": "2026-10-20T07:42:32.2015317Z",
+  "reviewer": "parent",
+  "sources": 14,
+  "products": 62,
+  "sourceDiff": [],
+  "productDiff": [],
+  "scanFolderBefore": [
+    {
+      "ScanFolderID": "30",
+      "ScanFolder": "F:/JericoEngine/JericoEngine/Gems/AtomLyIntegration/EditorModeFeedback/Assets",
+      "DisplayName": "Assets",
+      "PortableKey": "gemassets-{062E99FC-D97E-54CA-8CAA-3F310B9D460E}",
+      "IsRoot": "0"
+    }
+  ],
+  "scanFolderAfter": [
+    {
+      "ScanFolderID": "30",
+      "ScanFolder": "F:/JericoEngine/JericoEngine/Editor/Render/Features/Assets/EditorModeFeedback",
+      "DisplayName": "Editor/Render/Features/EditorModeFeedback",
+      "PortableKey": "gemassets-{062E99FC-D97E-54CA-8CAA-3F310B9D460E}",
+      "IsRoot": "0"
+    }
+  ],
+  "physicalProductsPresent": 62,
+  "jobErrorSum": 0.0,
+  "jobWarningsBefore": 6.0,
+  "jobWarningsAfter": 6.0,
+  "scope": "Source GUID, Product GUID/SubID/AssetType/path preserved; cook summary24/0/12warnings plus2shutdown Trace errors retained. Not product image or whole Gem acceptance.",
+  "wholeGemAccepted": false
+}

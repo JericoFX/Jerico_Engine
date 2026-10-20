@@ -6,6 +6,7 @@
 #include <Material/MaterialConverterSystemComponent.h>
 #include <DiffuseProbeGrid/EditorComponents/EditorDiffuseProbeGridComponent.h>
 #include <DiffuseProbeGrid/EditorComponents/EditorDiffuseGlobalIlluminationComponent.h>
+#include <EditorModeFeedback/EditorModeFeedbackSystemComponent.h>
 
 namespace JE::Editor::Render::Features
 {
@@ -22,12 +23,14 @@ namespace JE::Editor::Render::Features
             JE::Render::Features::AppendOwnedComponentDescriptor<MaterialConverterSystemComponent>(m_descriptors);
             JE::Render::Features::AppendOwnedComponentDescriptor<EditorDiffuseProbeGridComponent>(m_descriptors);
             JE::Render::Features::AppendOwnedComponentDescriptor<EditorDiffuseGlobalIlluminationComponent>(m_descriptors);
+            JE::Render::Features::AppendOwnedComponentDescriptor<EditorModeFeedbackSystemComponent>(m_descriptors);
         }
 
         AZ::ComponentTypeList GetRequiredSystemComponents() const override
         {
             auto required = JE::Render::Features::GetRuntimeRequiredSystemComponents();
             required.push_back(azrtti_typeid<EditorCommonSystemComponent>());
+            required.push_back(azrtti_typeid<EditorModeFeedbackSystemComponent>());
             return required;
         }
     };

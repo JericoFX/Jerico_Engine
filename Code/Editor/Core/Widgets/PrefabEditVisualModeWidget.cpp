@@ -10,7 +10,7 @@
 
 #include <AzToolsFramework/Editor/EditorSettingsAPIBus.h>
 #include <AzToolsFramework/Viewport/ViewportSettings.h>
-#include <EditorModeFeedback/EditorStateRequestsBus.h>
+#include <JE/Editor/Render/Features/EditorModeFeedback/EditorStateRequestsBus.h>
 
 #include <QHBoxLayout>
 
@@ -60,8 +60,8 @@ void PrefabEditVisualModeWidget::UpdatePrefabEditMode()
     {
     case PrefabEditModeUXSetting::Normal:
         {
-            AZ::Render::EditorStateRequestsBus::Event(
-                AZ::Render::EditorState::FocusMode, &AZ::Render::EditorStateRequestsBus::Events::SetEnabled, false);
+            JE::Editor::Render::Features::EditorStateRequestsBus::Event(
+                JE::Editor::Render::Features::EditorState::FocusMode, &JE::Editor::Render::Features::EditorStateRequestsBus::Events::SetEnabled, false);
             AzToolsFramework::SetPrefabEditModeEffectEnabled(false);
             AzToolsFramework::EditorSettingsAPIBus::Broadcast(
                 &AzToolsFramework::EditorSettingsAPIBus::Events::SaveSettingsRegistryFile);
@@ -69,8 +69,8 @@ void PrefabEditVisualModeWidget::UpdatePrefabEditMode()
         }
     case PrefabEditModeUXSetting::Monochromatic:
         {
-            AZ::Render::EditorStateRequestsBus::Event(
-                AZ::Render::EditorState::FocusMode, &AZ::Render::EditorStateRequestsBus::Events::SetEnabled, true);
+            JE::Editor::Render::Features::EditorStateRequestsBus::Event(
+                JE::Editor::Render::Features::EditorState::FocusMode, &JE::Editor::Render::Features::EditorStateRequestsBus::Events::SetEnabled, true);
             AzToolsFramework::SetPrefabEditModeEffectEnabled(true);
             AzToolsFramework::EditorSettingsAPIBus::Broadcast(
                 &AzToolsFramework::EditorSettingsAPIBus::Events::SaveSettingsRegistryFile);
