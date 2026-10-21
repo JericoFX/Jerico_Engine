@@ -9,14 +9,14 @@
 #pragma once
 
 // GraphModel
-#include <GraphModel/Model/GraphContext.h>
+#include <JE/Editor/Tools/GraphModel/Model/GraphContext.h>
 
 // Landscape Canvas
 #include <Editor/Core/DataTypes.h>
 
 namespace LandscapeCanvas
 {
-    class GraphContext : public GraphModel::GraphContext
+    class GraphContext : public JE::Editor::Tools::GraphModel::GraphContext
     {
     public:
         static void SetInstance(AZStd::shared_ptr<GraphContext> graphContext);

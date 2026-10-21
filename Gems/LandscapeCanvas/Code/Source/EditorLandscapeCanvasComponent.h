@@ -10,7 +10,7 @@
 
 #include <AzToolsFramework/ToolsComponents/EditorComponentBase.h>
 
-#include <GraphModel/Model/Graph.h>
+#include <JE/Editor/Tools/GraphModel/Model/Graph.h>
 
 namespace LandscapeCanvas
 {
@@ -40,7 +40,7 @@ namespace LandscapeCanvas
         void BuildGameEntity(AZ::Entity* gameEntity) override;
         //////////////////////////////////////////////////////////////////////////
 
-        GraphModel::Graph m_graph;
+        JE::Editor::Tools::GraphModel::Graph m_graph;
 
     protected:
         AZ::Crc32 OnOpenGraphButtonClicked();

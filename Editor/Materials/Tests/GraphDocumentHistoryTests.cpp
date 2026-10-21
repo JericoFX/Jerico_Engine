@@ -28,6 +28,7 @@
 #include <AzCore/Jobs/JobManagerComponent.h>
 #include <AzCore/Module/ModuleManagerBus.h>
 #include <AzCore/Serialization/Json/JsonUtils.h>
+#include <AzCore/Serialization/SerializeContext.h>
 #include <AzCore/Settings/SettingsRegistry.h>
 #include <AzCore/Task/TaskGraphSystemComponent.h>
 #include <AzCore/UnitTest/TestTypes.h>
@@ -45,22 +46,32 @@
 #include <AzQtComponents/Components/StyleManager.h>
 #include <GraphCanvas/Components/GeometryBus.h>
 #include <GraphCanvas/Components/Nodes/NodeLayoutBus.h>
+#include <GraphCanvas/Components/Nodes/NodeBus.h>
 #include <GraphCanvas/Components/Nodes/NodeUIBus.h>
 #include <GraphCanvas/Components/SceneBus.h>
 #include <GraphCanvas/Components/ViewBus.h>
 #include <GraphCanvas/GraphCanvasBus.h>
+#include <GraphCanvas/Editor/AssetEditorBus.h>
+#include <GraphCanvas/Editor/GraphModelBus.h>
+#include <GraphCanvas/Utils/GraphUtils.h>
 #include <GraphCanvas/Styling/StyleManager.h>
 #include <QDataStream>
 #include <GraphCanvas/Types/QtMetaTypes.h>
 #include <GraphCanvas/Widgets/NodePalette/NodePaletteWidget.h>
-#include <GraphModel/GraphModelBus.h>
-#include <GraphModel/Model/Connection.h>
-#include <GraphModel/Model/GraphContext.h>
-#include <GraphModel/Model/Module/InputOutputNodes.h>
+#include <JE/Editor/Tools/GraphModel/GraphModelBus.h>
+#include <GraphModelSystemComponent.h>
+#include <JE/Editor/Tools/GraphModel/Model/Connection.h>
+#include <JE/Editor/Tools/GraphModel/Model/GraphContext.h>
+#include <JE/Editor/Tools/GraphModel/Model/Module/InputOutputNodes.h>
 #include <QApplication>
 #include <QCoreApplication>
 #include <QEvent>
 #include <QGraphicsView>
+#include <QGraphicsScene>
+#include <QMouseEvent>
+#include <GraphCanvas/Components/Slots/SlotBus.h>
+#include <GraphCanvas/Components/Slots/Extender/ExtenderSlotBus.h>
+#include <GraphCanvas/Widgets/GraphCanvasGraphicsView/GraphCanvasGraphicsView.h>
 #include <QGraphicsLayout>
 #include <QKeyEvent>
 #include <QVBoxLayout>
@@ -134,6 +145,36 @@ namespace UnitTest
         private:
             AZ::Entity& m_entity;
         };
+
+        class ReleaseExtenderNode final : public JE::Editor::Tools::GraphModel::Node
+        {
+        public:
+            AZ_CLASS_ALLOCATOR(ReleaseExtenderNode, AZ::SystemAllocator);
+            AZ_RTTI(ReleaseExtenderNode, "{89540F18-02BB-4C85-AA96-B2C92A3ADD29}", JE::Editor::Tools::GraphModel::Node);
+            static void Reflect(AZ::ReflectContext* context)
+            {
+                if (auto serializeContext = azrtti_cast<AZ::SerializeContext*>(context))
+                {
+                    serializeContext->Class<ReleaseExtenderNode, JE::Editor::Tools::GraphModel::Node>()->Version(0);
+                }
+            }
+            ReleaseExtenderNode() = default;
+            explicit ReleaseExtenderNode(JE::Editor::Tools::GraphModel::GraphPtr graph) : Node(graph)
+            {
+                RegisterSlots();
+                CreateSlotData();
+            }
+            const char* GetTitle() const override { return "Release extender"; }
+        protected:
+            void RegisterSlots() override
+            {
+                const auto type = GetGraphContext()->GetDataType<float>();
+                RegisterSlot(AZStd::make_shared<JE::Editor::Tools::GraphModel::SlotDefinition>(
+                    JE::Editor::Tools::GraphModel::SlotDirection::Input, JE::Editor::Tools::GraphModel::SlotType::Data,
+                    "value", "Value", "", JE::Editor::Tools::GraphModel::DataTypeList{type}, type->GetDefaultValue(),
+                    0, 3, "Add value", "Add a real extensible input"));
+            }
+        };
     }
 
     class GraphDocumentHistoryTests : public LeakDetectionFixture
@@ -185,6 +226,10 @@ namespace UnitTest
             startup.m_createEditContext = true;
             AZ::Entity* system = m_application->AZ::ComponentApplication::Create(descriptor, startup);
             ASSERT_NE(system, nullptr);
+            // Match the native GraphModel fixture without activating unrelated EditorTools services.
+            m_application->RegisterComponentDescriptor(
+                JE::Editor::Tools::GraphModel::GraphModelSystemComponent::CreateDescriptor());
+            ASSERT_NE(system->CreateComponent<JE::Editor::Tools::GraphModel::GraphModelSystemComponent>(), nullptr);
             m_application->InitializeUndo();
             ASSERT_NE(system->FindComponent<AZ::AssetManagerComponent>(), nullptr);
             ASSERT_NE(system->FindComponent<AZ::JobManagerComponent>(), nullptr);
@@ -202,8 +247,8 @@ namespace UnitTest
             qRegisterMetaType<GraphCanvas::Styling::ConnectionCurveType>();
             qRegisterMetaType<GraphCanvas::Styling::PaletteStyle>();
 
-            // Register both production modules before activation so their required services are sorted together.
-            for (const char* name : {"GraphCanvas.Editor", "GraphModel.Editor"})
+            // Register the production GraphCanvas module before activating the system and native GraphModel component.
+            for (const char* name : {"GraphCanvas.Editor"})
             {
                 AZ::ModuleManagerRequests::LoadModuleOutcome result = AZ::Failure(AZStd::string("Module manager unavailable"));
                 AZ::ModuleManagerRequestBus::BroadcastResult(result, &AZ::ModuleManagerRequests::LoadDynamicModule,
@@ -220,7 +265,7 @@ namespace UnitTest
                 ASSERT_EQ(module->GetEntity()->GetState(), AZ::Entity::State::Active);
             }
             ASSERT_TRUE(GraphCanvas::GraphCanvasRequestBus::HasHandlers());
-            ASSERT_TRUE(GraphModelIntegration::GraphManagerRequestBus::HasHandlers());
+            ASSERT_TRUE(JE::Editor::Tools::GraphModel::Integration::GraphManagerRequestBus::HasHandlers());
 
             // Copy the production stylesheet into a private products root; no project cache or authored assets are touched.
             const auto style = AZ::Utils::ReadFile(engineRoot + "/Editor/Materials/Assets/MaterialCanvas/StyleSheet/materialcanvas_style.json");
@@ -229,14 +274,14 @@ namespace UnitTest
             // Seed private products before enabling the real cache-write protection on their alias.
             m_fileIO->SetAlias("@products@", productsRoot.c_str());
             m_styleManager = AZStd::make_unique<GraphCanvas::StyleManager>(CanvasHistoryToolId, "canvas_style.json");
-            const GraphModel::DataTypeList types{
-                AZStd::make_shared<GraphModel::DataType>(1, 0.0f, "Float"),
-                AZStd::make_shared<GraphModel::DataType>(2, AZStd::string{}, "String")};
-            m_graphContext = AZStd::make_shared<GraphModel::GraphContext>("GraphDocumentHistory", ".materialgraph", types);
+            const JE::Editor::Tools::GraphModel::DataTypeList types{
+                AZStd::make_shared<JE::Editor::Tools::GraphModel::DataType>(1, 0.0f, "Float"),
+                AZStd::make_shared<JE::Editor::Tools::GraphModel::DataType>(2, AZStd::string{}, "String")};
+            m_graphContext = AZStd::make_shared<JE::Editor::Tools::GraphModel::GraphContext>("GraphDocumentHistory", ".materialgraph", types);
             m_policy = JE::Editor::CreateMaterialCanvasDocumentHistoryPolicy();
             m_sourceFolder = AZStd::make_unique<CanvasHistorySourceFolder>(sourceRoot);
             m_path = m_directory->Resolve("source/history.materialgraph").Native();
-            GraphModel::Graph initial(m_graphContext);
+            JE::Editor::Tools::GraphModel::Graph initial(m_graphContext);
             ASSERT_TRUE(AZ::JsonSerializationUtils::SaveObjectToFile(&initial, m_path).IsSuccess());
             const auto type = JE::Editor::Tools::GraphDocument::BuildDocumentTypeInfo(
                 "Material Graph", {"materialgraph"}, {}, {}, m_graphContext, {});
@@ -247,7 +292,7 @@ namespace UnitTest
             m_graphId = m_document->GetGraphId();
             ASSERT_TRUE(m_graphId.IsValid());
             ASSERT_TRUE(GraphCanvas::SceneRequestBus::HasHandlers(m_graphId));
-            ASSERT_TRUE(GraphModelIntegration::GraphControllerRequestBus::HasHandlers(m_graphId));
+            ASSERT_TRUE(JE::Editor::Tools::GraphModel::Integration::GraphControllerRequestBus::HasHandlers(m_graphId));
             // Compilation is disabled before construction; no SystemTick or AP connection is needed for replay.
         }
 
@@ -298,27 +343,418 @@ namespace UnitTest
         {
             ASSERT_TRUE(m_document->BeginEdit());
             auto graph = m_document->GetGraph();
-            auto input = AZStd::make_shared<GraphModel::GraphInputNode>(graph, m_graphContext->GetDataType<float>());
-            auto output = AZStd::make_shared<GraphModel::GraphOutputNode>(graph, m_graphContext->GetDataType<float>());
+            auto input = AZStd::make_shared<JE::Editor::Tools::GraphModel::GraphInputNode>(graph, m_graphContext->GetDataType<float>());
+            auto output = AZStd::make_shared<JE::Editor::Tools::GraphModel::GraphOutputNode>(graph, m_graphContext->GetDataType<float>());
             input->GetSlot("name")->SetValue(AZStd::string("input"));
             output->GetSlot("name")->SetValue(AZStd::string("output"));
             input->GetSlot("defaultValue")->SetValue(2.0f);
             AZ::Vector2 inputPosition(24.0f, 48.0f);
             AZ::Vector2 outputPosition(480.0f, 96.0f);
             GraphCanvas::NodeId inputCanvasId, outputCanvasId;
-            GraphModelIntegration::GraphControllerRequestBus::EventResult(inputCanvasId, m_graphId,
-                &GraphModelIntegration::GraphControllerRequests::AddNode, input, inputPosition);
-            GraphModelIntegration::GraphControllerRequestBus::EventResult(outputCanvasId, m_graphId,
-                &GraphModelIntegration::GraphControllerRequests::AddNode, output, outputPosition);
+            JE::Editor::Tools::GraphModel::Integration::GraphControllerRequestBus::EventResult(inputCanvasId, m_graphId,
+                &JE::Editor::Tools::GraphModel::Integration::GraphControllerRequests::AddNode, input, inputPosition);
+            JE::Editor::Tools::GraphModel::Integration::GraphControllerRequestBus::EventResult(outputCanvasId, m_graphId,
+                &JE::Editor::Tools::GraphModel::Integration::GraphControllerRequests::AddNode, output, outputPosition);
             ASSERT_TRUE(inputCanvasId.IsValid());
             ASSERT_TRUE(outputCanvasId.IsValid());
             m_inputId = input->GetId();
             m_outputId = output->GetId();
-            GraphModelIntegration::GraphControllerRequestBus::EventResult(m_inputPosition, m_graphId,
-                &GraphModelIntegration::GraphControllerRequests::GetPosition, input);
-            GraphModelIntegration::GraphControllerRequestBus::EventResult(m_outputPosition, m_graphId,
-                &GraphModelIntegration::GraphControllerRequests::GetPosition, output);
+            JE::Editor::Tools::GraphModel::Integration::GraphControllerRequestBus::EventResult(m_inputPosition, m_graphId,
+                &JE::Editor::Tools::GraphModel::Integration::GraphControllerRequests::GetPosition, input);
+            JE::Editor::Tools::GraphModel::Integration::GraphControllerRequestBus::EventResult(m_outputPosition, m_graphId,
+                &JE::Editor::Tools::GraphModel::Integration::GraphControllerRequests::GetPosition, output);
             ASSERT_TRUE(m_document->EndEdit());
+        }
+
+        enum class ReleaseControl { Normal, ChangedPosition, Cancel };
+
+        void CheckConnectionReleaseGesture(bool moveAfterStart, ReleaseControl control = ReleaseControl::Normal)
+        {
+            ASSERT_NO_FATAL_FAILURE(AddNodes());
+            m_application->FlushUndo();
+            GraphCanvas::GraphCanvasGraphicsView view(nullptr, false);
+            view.resize(1000, 650);
+            view.SetEditorId(CanvasHistoryToolId);
+            view.SetScene(m_graphId);
+            view.show();
+            const auto graph = m_document->GetGraph();
+            const auto source = graph->GetNode(m_inputId)->GetSlot("value");
+            const auto target = graph->GetNode(m_outputId)->GetSlot("value");
+            GraphCanvas::SlotId sourceSlot, targetSlot;
+            JE::Editor::Tools::GraphModel::Integration::GraphControllerRequestBus::EventResult(sourceSlot, m_graphId,
+                &JE::Editor::Tools::GraphModel::Integration::GraphControllerRequests::GetSlotIdBySlot, source);
+            JE::Editor::Tools::GraphModel::Integration::GraphControllerRequestBus::EventResult(targetSlot, m_graphId,
+                &JE::Editor::Tools::GraphModel::Integration::GraphControllerRequests::GetSlotIdBySlot, target);
+            ASSERT_TRUE(sourceSlot.IsValid());
+            ASSERT_TRUE(targetSlot.IsValid());
+            GraphCanvas::Endpoint sourceEndpoint;
+            GraphCanvas::SlotRequestBus::EventResult(sourceEndpoint, sourceSlot, &GraphCanvas::SlotRequests::GetEndpoint);
+            ASSERT_TRUE(sourceEndpoint.IsValid());
+            bool canCreateConnection = false;
+            GraphCanvas::SlotRequestBus::EventResult(canCreateConnection, targetSlot,
+                &GraphCanvas::SlotRequests::CanCreateConnectionTo, sourceEndpoint);
+            RecordProperty("release_can_create_before_gesture", static_cast<int>(canCreateConnection));
+            RecordProperty("release_source_slot", sourceSlot.ToString().c_str());
+            RecordProperty("release_target_slot", targetSlot.ToString().c_str());
+            bool canDisplayConnection = false;
+            GraphCanvas::SlotRequestBus::EventResult(canDisplayConnection, targetSlot,
+                &GraphCanvas::SlotRequests::CanDisplayConnectionTo, sourceEndpoint);
+            GraphCanvas::GraphId targetScene;
+            GraphCanvas::SceneMemberRequestBus::EventResult(targetScene, targetSlot, &GraphCanvas::SceneMemberRequests::GetScene);
+            GraphCanvas::Endpoint targetEndpoint;
+            GraphCanvas::SlotRequestBus::EventResult(targetEndpoint, targetSlot, &GraphCanvas::SlotRequests::GetEndpoint);
+            bool modelConnectionValid = false;
+            if (canDisplayConnection)
+            {
+                modelConnectionValid = GraphCanvas::GraphUtils::IsValidModelConnection(targetScene, sourceEndpoint, targetEndpoint);
+            }
+            RecordProperty("release_can_display_before_gesture", static_cast<int>(canDisplayConnection));
+            RecordProperty("release_target_scene", targetScene.ToString().c_str());
+            RecordProperty("release_document_scene", m_graphId.ToString().c_str());
+            RecordProperty("release_model_handler_present", static_cast<int>(GraphCanvas::GraphModelRequestBus::HasHandlers(targetScene)));
+            RecordProperty("release_model_check_evaluated", static_cast<int>(canDisplayConnection));
+            RecordProperty("release_model_connection_valid", canDisplayConnection ? static_cast<int>(modelConnectionValid) : -1);
+            bool directModelValid = false;
+            GraphCanvas::GraphModelRequestBus::EventResult(directModelValid, targetScene,
+                &GraphCanvas::GraphModelRequests::IsValidConnection, sourceEndpoint, targetEndpoint);
+            RecordProperty("release_direct_model_valid", static_cast<int>(directModelValid));
+            const auto remappedSources = GraphCanvas::GraphUtils::RemapEndpointForModel(sourceEndpoint);
+            const auto remappedTargets = GraphCanvas::GraphUtils::RemapEndpointForModel(targetEndpoint);
+            RecordProperty("release_remapped_source_count", static_cast<int>(remappedSources.size()));
+            RecordProperty("release_remapped_target_count", static_cast<int>(remappedTargets.size()));
+            int remappedIndex = 0;
+            for (const auto& endpoint : remappedSources)
+            {
+                RecordProperty(QString("release_remapped_source_%1").arg(remappedIndex++).toStdString(),
+                    (endpoint.GetNodeId().ToString() + "/" + endpoint.GetSlotId().ToString()).c_str());
+            }
+            remappedIndex = 0;
+            for (const auto& endpoint : remappedTargets)
+            {
+                RecordProperty(QString("release_remapped_target_%1").arg(remappedIndex++).toStdString(),
+                    (endpoint.GetNodeId().ToString() + "/" + endpoint.GetSlotId().ToString()).c_str());
+            }
+            const auto sourceDataType = source->GetDataType();
+            const auto targetDataType = target->GetDataType();
+            RecordProperty("release_source_datatype", sourceDataType ? sourceDataType->GetTypeUuidString().c_str() : "null");
+            RecordProperty("release_target_datatype", targetDataType ? targetDataType->GetTypeUuidString().c_str() : "null");
+            RecordProperty("release_datatype_pointer_equal", static_cast<int>(sourceDataType == targetDataType));
+            RecordProperty("release_target_supports_source_type", static_cast<int>(target->IsSupportedDataType(sourceDataType)));
+            const auto sourceParent = source->GetParentNode();
+            const auto targetParent = target->GetParentNode();
+            RecordProperty("release_source_parent_valid", static_cast<int>(sourceParent != nullptr));
+            RecordProperty("release_target_parent_valid", static_cast<int>(targetParent != nullptr));
+            RecordProperty("release_parents_equal", static_cast<int>(sourceParent == targetParent));
+            RecordProperty("release_model_connection_count", static_cast<int>(graph->GetConnectionCount()));
+            auto recordRoundTrip = [&](const char* label, const GraphCanvas::Endpoint& endpoint, const auto& slot)
+            {
+                JE::Editor::Tools::GraphModel::NodePtr mappedNode;
+                JE::Editor::Tools::GraphModel::Integration::GraphControllerRequestBus::EventResult(mappedNode, m_graphId,
+                    &JE::Editor::Tools::GraphModel::Integration::GraphControllerRequests::GetNodeById, endpoint.GetNodeId());
+                const auto mappedSlot = mappedNode ? mappedNode->GetSlot(slot->GetSlotId()) : JE::Editor::Tools::GraphModel::SlotPtr{};
+                GraphCanvas::SlotId roundTrip;
+                if (mappedSlot)
+                {
+                    JE::Editor::Tools::GraphModel::Integration::GraphControllerRequestBus::EventResult(roundTrip, m_graphId,
+                        &JE::Editor::Tools::GraphModel::Integration::GraphControllerRequests::GetSlotIdBySlot, mappedSlot);
+                }
+                RecordProperty(QString("release_%1_node_map_matches").arg(label).toStdString(),
+                    static_cast<int>(mappedNode != nullptr && mappedNode == slot->GetParentNode()));
+                RecordProperty(QString("release_%1_slot_map_matches").arg(label).toStdString(), static_cast<int>(mappedSlot == slot));
+                RecordProperty(QString("release_%1_slot_id_roundtrip").arg(label).toStdString(),
+                    static_cast<int>(roundTrip.IsValid() && roundTrip == endpoint.GetSlotId()));
+            };
+            recordRoundTrip("source", sourceEndpoint, source);
+            recordRoundTrip("target", targetEndpoint, target);
+            ASSERT_TRUE(canCreateConnection) << "Native target slot rejected the source before the gesture.";
+            for (const auto& node : {source->GetParentNode(), target->GetParentNode()})
+            {
+                GraphCanvas::NodeId canvasNode;
+                JE::Editor::Tools::GraphModel::Integration::GraphControllerRequestBus::EventResult(canvasNode, m_graphId,
+                    &JE::Editor::Tools::GraphModel::Integration::GraphControllerRequests::GetNodeIdByNode, node);
+                QGraphicsLayout* nodeLayout = nullptr;
+                GraphCanvas::NodeLayoutRequestBus::EventResult(nodeLayout, canvasNode, &GraphCanvas::NodeLayoutRequests::GetLayout);
+                ASSERT_NE(nodeLayout, nullptr);
+                nodeLayout->activate();
+                GraphCanvas::NodeUIRequestBus::Event(canvasNode, &GraphCanvas::NodeUIRequests::AdjustSize);
+            }
+            QCoreApplication::sendPostedEvents(nullptr, QEvent::PolishRequest);
+            QCoreApplication::sendPostedEvents(nullptr, QEvent::LayoutRequest);
+            QApplication::processEvents(QEventLoop::ExcludeUserInputEvents);
+            view.centerOn(350.0, 150.0);
+            QPointF sourceScenePoint, targetScenePoint;
+            GraphCanvas::SlotUIRequestBus::EventResult(sourceScenePoint, sourceSlot, &GraphCanvas::SlotUIRequests::GetConnectionPoint);
+            GraphCanvas::SlotUIRequestBus::EventResult(targetScenePoint, targetSlot, &GraphCanvas::SlotUIRequests::GetConnectionPoint);
+            const QPoint sourcePoint = view.mapFromScene(sourceScenePoint);
+            const QPoint targetPoint = view.mapFromScene(targetScenePoint);
+            ASSERT_NE(sourcePoint, targetPoint);
+            ASSERT_TRUE(view.viewport()->rect().contains(sourcePoint));
+            ASSERT_TRUE(view.viewport()->rect().contains(targetPoint));
+            ASSERT_NE(view.scene(), nullptr);
+            ASSERT_FALSE(GraphCanvas::AssetEditorRequestBus::HasHandlers(CanvasHistoryToolId));
+            auto sendMouse = [&](QEvent::Type type, const QPoint& point, Qt::MouseButton button, Qt::MouseButtons buttons)
+            {
+                QMouseEvent event(type, QPointF(point), QPointF(view.viewport()->mapToGlobal(point)), button, buttons, Qt::NoModifier);
+                QApplication::sendEvent(view.viewport(), &event);
+            };
+            auto recordPoint = [&](const char* name, const QPointF& point)
+            {
+                RecordProperty(name, QString("%1,%2").arg(point.x(), 0, 'g', 17).arg(point.y(), 0, 'g', 17).toStdString());
+            };
+            RecordProperty("release_control_has_extra_move", static_cast<int>(moveAfterStart));
+            recordPoint("release_source_scene_before_grab", sourceScenePoint);
+            recordPoint("release_target_scene_before_grab", targetScenePoint);
+            recordPoint("release_target_pixel_before_grab", targetPoint);
+            recordPoint("release_target_pixel_mapped_before_grab", view.mapToScene(targetPoint));
+            sendMouse(QEvent::MouseButtonPress, sourcePoint, Qt::LeftButton, Qt::LeftButton);
+            auto* pressedGrabber = view.scene()->mouseGrabberItem();
+            ASSERT_NE(pressedGrabber, nullptr);
+            const QPoint initiatingPoint = moveAfterStart
+                ? QPoint((sourcePoint.x() + targetPoint.x()) / 2, (sourcePoint.y() + targetPoint.y()) / 2)
+                : targetPoint;
+            sendMouse(QEvent::MouseMove, initiatingPoint, Qt::NoButton, Qt::LeftButton);
+            ASSERT_NE(view.scene()->mouseGrabberItem(), nullptr);
+            ASSERT_NE(view.scene()->mouseGrabberItem(), pressedGrabber) << "The initiating move did not transfer the grab to the connection.";
+            QPointF targetAfterGrab;
+            GraphCanvas::SlotUIRequestBus::EventResult(targetAfterGrab, targetSlot, &GraphCanvas::SlotUIRequests::GetConnectionPoint);
+            recordPoint("release_target_scene_after_grab", targetAfterGrab);
+            recordPoint("release_target_pixel_mapped_after_grab", view.mapToScene(targetPoint));
+            ASSERT_EQ(graph->GetConnectionCount(), 0);
+            if (moveAfterStart)
+            {
+                const QPoint evaluationPoint = control == ReleaseControl::ChangedPosition ? initiatingPoint : targetPoint;
+                if (control == ReleaseControl::ChangedPosition)
+                {
+                    const QPointF scenePoint = view.mapToScene(evaluationPoint);
+                    double snapDistance = 10.0;
+                    GraphCanvas::AssetEditorSettingsRequestBus::EventResult(snapDistance, CanvasHistoryToolId,
+                        &GraphCanvas::AssetEditorSettingsRequests::GetSnapDistance);
+                    AZStd::vector<GraphCanvas::Endpoint> endpoints;
+                    GraphCanvas::SceneRequestBus::EventResult(endpoints, m_graphId, &GraphCanvas::SceneRequests::GetEndpointsInRect,
+                        QRectF(scenePoint - QPointF(snapDistance, snapDistance), scenePoint + QPointF(snapDistance, snapDistance)));
+                    ASSERT_TRUE(endpoints.empty()) << "The changed-release control requires an empty last-move candidate area.";
+                    ASSERT_NE(evaluationPoint, targetPoint);
+                }
+                sendMouse(QEvent::MouseMove, evaluationPoint, Qt::NoButton, Qt::LeftButton);
+            }
+            QPointF targetBeforeRelease;
+            GraphCanvas::SlotUIRequestBus::EventResult(targetBeforeRelease, targetSlot, &GraphCanvas::SlotUIRequests::GetConnectionPoint);
+            recordPoint("release_target_scene_before_release", targetBeforeRelease);
+            recordPoint("release_target_pixel_mapped_before_release", view.mapToScene(targetPoint));
+            if (control == ReleaseControl::Cancel)
+            {
+                AZStd::vector<AZ::EntityId> connections;
+                GraphCanvas::SceneRequestBus::EventResult(connections, m_graphId, &GraphCanvas::SceneRequests::GetConnections);
+                ASSERT_EQ(connections.size(), 1);
+                GraphCanvas::Endpoint proposedTarget;
+                GraphCanvas::ConnectionRequestBus::EventResult(proposedTarget, connections.front(),
+                    &GraphCanvas::ConnectionRequests::GetTargetEndpoint);
+                ASSERT_EQ(proposedTarget.GetSlotId(), targetSlot) << "Escape must cancel an actual accepted proposal.";
+                GraphCanvas::ViewNotificationBus::Event(view.GetViewId(), &GraphCanvas::ViewNotifications::OnEscape);
+                sendMouse(QEvent::MouseButtonRelease, targetPoint, Qt::LeftButton, Qt::NoButton);
+                GraphCanvas::SceneRequestBus::EventResult(connections, m_graphId, &GraphCanvas::SceneRequests::GetConnections);
+                EXPECT_TRUE(connections.empty());
+                ASSERT_NO_FATAL_FAILURE(CheckGraph(2.0f, false));
+                EXPECT_FALSE(m_application->GetUndoStack()->CanUndo());
+                return;
+            }
+            // The first move starts the connection at the pin; only the control sends a move to the new connection filter.
+            sendMouse(QEvent::MouseButtonRelease, targetPoint, Qt::LeftButton, Qt::NoButton);
+            ASSERT_EQ(graph->GetConnectionCount(), 1) << "Release must evaluate its actual position even without a post-start move.";
+            ASSERT_NO_FATAL_FAILURE(CheckGraph(2.0f, true));
+            ASSERT_TRUE(m_document->Undo());
+            ASSERT_NO_FATAL_FAILURE(CheckGraph(2.0f, false));
+            ASSERT_TRUE(m_document->Redo());
+            ASSERT_NO_FATAL_FAILURE(CheckGraph(2.0f, true));
+        }
+
+        void CheckExtenderConnectionReleaseGesture(bool changedReleasePoint, bool checkOwnership = false)
+        {
+            ReleaseExtenderNode::Reflect(m_application->GetSerializeContext());
+            ASSERT_TRUE(m_document->BeginEdit());
+            const auto graph = m_document->GetGraph();
+            const auto source = AZStd::make_shared<JE::Editor::Tools::GraphModel::GraphInputNode>(graph, m_graphContext->GetDataType<float>());
+            const auto target = AZStd::make_shared<ReleaseExtenderNode>(graph);
+            source->GetSlot("defaultValue")->SetValue(2.0f);
+            GraphCanvas::NodeId sourceCanvasNode, targetCanvasNode;
+            AZ::Vector2 sourcePosition(24.0f, 48.0f), targetPosition(480.0f, 96.0f);
+            JE::Editor::Tools::GraphModel::Integration::GraphControllerRequestBus::EventResult(sourceCanvasNode, m_graphId,
+                &JE::Editor::Tools::GraphModel::Integration::GraphControllerRequests::AddNode, source, sourcePosition);
+            JE::Editor::Tools::GraphModel::Integration::GraphControllerRequestBus::EventResult(targetCanvasNode, m_graphId,
+                &JE::Editor::Tools::GraphModel::Integration::GraphControllerRequests::AddNode, target, targetPosition);
+            ASSERT_TRUE(sourceCanvasNode.IsValid());
+            ASSERT_TRUE(targetCanvasNode.IsValid());
+            ASSERT_TRUE(m_document->EndEdit());
+            m_application->FlushUndo();
+            ASSERT_TRUE(target->GetExtendableSlots("value").empty());
+            GraphCanvas::GraphCanvasGraphicsView view(nullptr, false);
+            view.resize(1000, 650);
+            view.SetEditorId(CanvasHistoryToolId);
+            view.SetScene(m_graphId);
+            view.show();
+            for (const auto& canvasNode : {sourceCanvasNode, targetCanvasNode})
+            {
+                QGraphicsLayout* layout = nullptr;
+                GraphCanvas::NodeLayoutRequestBus::EventResult(layout, canvasNode, &GraphCanvas::NodeLayoutRequests::GetLayout);
+                ASSERT_NE(layout, nullptr);
+                layout->activate();
+                GraphCanvas::NodeUIRequestBus::Event(canvasNode, &GraphCanvas::NodeUIRequests::AdjustSize);
+            }
+            QCoreApplication::sendPostedEvents(nullptr, QEvent::PolishRequest);
+            QCoreApplication::sendPostedEvents(nullptr, QEvent::LayoutRequest);
+            QApplication::processEvents(QEventLoop::ExcludeUserInputEvents);
+            view.centerOn(350.0, 150.0);
+            GraphCanvas::SlotId sourceSlot, extenderSlot;
+            JE::Editor::Tools::GraphModel::Integration::GraphControllerRequestBus::EventResult(sourceSlot, m_graphId,
+                &JE::Editor::Tools::GraphModel::Integration::GraphControllerRequests::GetSlotIdBySlot, source->GetSlot("value"));
+            AZStd::vector<AZ::EntityId> targetSlots;
+            GraphCanvas::NodeRequestBus::EventResult(targetSlots, targetCanvasNode, &GraphCanvas::NodeRequests::GetSlotIds);
+            for (const auto& slot : targetSlots)
+            {
+                GraphCanvas::SlotType type = GraphCanvas::SlotTypes::Invalid;
+                GraphCanvas::SlotRequestBus::EventResult(type, slot, &GraphCanvas::SlotRequests::GetSlotType);
+                if (type == GraphCanvas::SlotTypes::ExtenderSlot)
+                {
+                    ASSERT_FALSE(extenderSlot.IsValid());
+                    extenderSlot = slot;
+                }
+            }
+            ASSERT_TRUE(sourceSlot.IsValid());
+            ASSERT_TRUE(extenderSlot.IsValid());
+            QPointF sourceScenePoint, extenderScenePoint;
+            GraphCanvas::SlotUIRequestBus::EventResult(sourceScenePoint, sourceSlot, &GraphCanvas::SlotUIRequests::GetConnectionPoint);
+            GraphCanvas::SlotUIRequestBus::EventResult(extenderScenePoint, extenderSlot, &GraphCanvas::SlotUIRequests::GetConnectionPoint);
+            const QPoint sourcePoint = view.mapFromScene(sourceScenePoint);
+            const QPoint extenderPoint = view.mapFromScene(extenderScenePoint);
+            ASSERT_TRUE(view.viewport()->rect().contains(sourcePoint));
+            ASSERT_TRUE(view.viewport()->rect().contains(extenderPoint));
+            ASSERT_NE(sourcePoint, extenderPoint);
+            ASSERT_FALSE(GraphCanvas::AssetEditorRequestBus::HasHandlers(CanvasHistoryToolId));
+            auto sendMouse = [&](QEvent::Type type, const QPoint& point, Qt::MouseButton button, Qt::MouseButtons buttons)
+            {
+                QMouseEvent event(type, QPointF(point), QPointF(view.viewport()->mapToGlobal(point)), button, buttons, Qt::NoModifier);
+                QApplication::sendEvent(view.viewport(), &event);
+            };
+            sendMouse(QEvent::MouseButtonPress, sourcePoint, Qt::LeftButton, Qt::LeftButton);
+            auto* pressedGrabber = view.scene()->mouseGrabberItem();
+            ASSERT_NE(pressedGrabber, nullptr);
+            sendMouse(QEvent::MouseMove, (sourcePoint + extenderPoint) / 2, Qt::NoButton, Qt::LeftButton);
+            ASSERT_NE(view.scene()->mouseGrabberItem(), nullptr);
+            ASSERT_NE(view.scene()->mouseGrabberItem(), pressedGrabber);
+            sendMouse(QEvent::MouseMove, extenderPoint, Qt::NoButton, Qt::LeftButton);
+            ASSERT_EQ(target->GetExtendableSlots("value").size(), 1);
+            ASSERT_EQ(graph->GetConnectionCount(), 0);
+            AZStd::vector<AZ::EntityId> proposals;
+            GraphCanvas::SceneRequestBus::EventResult(proposals, m_graphId, &GraphCanvas::SceneRequests::GetConnections);
+            ASSERT_EQ(proposals.size(), 1);
+            GraphCanvas::SlotId createdSlot;
+            JE::Editor::Tools::GraphModel::Integration::GraphControllerRequestBus::EventResult(createdSlot, m_graphId,
+                &JE::Editor::Tools::GraphModel::Integration::GraphControllerRequests::GetSlotIdBySlot,
+                *target->GetExtendableSlots("value").begin());
+            GraphCanvas::Endpoint proposedTarget;
+            GraphCanvas::ConnectionRequestBus::EventResult(proposedTarget, proposals.front(), &GraphCanvas::ConnectionRequests::GetTargetEndpoint);
+            ASSERT_EQ(proposedTarget.GetSlotId(), createdSlot);
+            if (checkOwnership)
+            {
+                GraphCanvas::ScopedGraphUndoBlocker undoBlocker(m_graphId);
+                const auto ownerId = proposals.front();
+                auto* ownerGrabber = view.scene()->mouseGrabberItem();
+                ASSERT_NE(ownerGrabber, nullptr);
+                GraphCanvas::Endpoint sourceEndpoint;
+                GraphCanvas::SlotRequestBus::EventResult(sourceEndpoint, sourceSlot, &GraphCanvas::SlotRequests::GetEndpoint);
+                ASSERT_TRUE(sourceEndpoint.IsValid());
+                auto checkOwner = [&]()
+                {
+                    ASSERT_TRUE(GraphCanvas::ConnectionRequestBus::HasHandlers(ownerId));
+                    GraphCanvas::GraphId ownerScene;
+                    GraphCanvas::SceneMemberRequestBus::EventResult(ownerScene, ownerId, &GraphCanvas::SceneMemberRequests::GetScene);
+                    EXPECT_EQ(ownerScene, m_graphId);
+                    GraphCanvas::Endpoint actualSource, actualTarget;
+                    GraphCanvas::ConnectionRequestBus::EventResult(actualSource, ownerId, &GraphCanvas::ConnectionRequests::GetSourceEndpoint);
+                    GraphCanvas::ConnectionRequestBus::EventResult(actualTarget, ownerId, &GraphCanvas::ConnectionRequests::GetTargetEndpoint);
+                    EXPECT_EQ(actualSource, sourceEndpoint);
+                    EXPECT_EQ(actualTarget, proposedTarget);
+                    EXPECT_EQ(target->GetExtendableSlots("value").size(), 1);
+                    EXPECT_EQ(graph->GetConnectionCount(), 0);
+                };
+                GraphCanvas::Endpoint reused;
+                GraphCanvas::ExtenderSlotRequestBus::EventResult(reused, extenderSlot,
+                    &GraphCanvas::ExtenderSlotRequests::ExtendForConnectionProposal, ownerId, sourceEndpoint);
+                EXPECT_EQ(reused, proposedTarget);
+                GraphCanvas::ConnectionId foreignId;
+                GraphCanvas::SlotRequestBus::EventResult(foreignId, sourceSlot,
+                    &GraphCanvas::SlotRequests::DisplayConnectionWithEndpoint, proposedTarget);
+                ASSERT_TRUE(foreignId.IsValid());
+                ASSERT_NE(foreignId, ownerId);
+                ASSERT_TRUE(GraphCanvas::ConnectionRequestBus::HasHandlers(foreignId));
+                GraphCanvas::GraphId foreignScene;
+                GraphCanvas::SceneMemberRequestBus::EventResult(foreignScene, foreignId, &GraphCanvas::SceneMemberRequests::GetScene);
+                ASSERT_EQ(foreignScene, m_graphId);
+                ASSERT_NO_FATAL_FAILURE(checkOwner());
+                GraphCanvas::Endpoint rejected;
+                GraphCanvas::ExtenderSlotRequestBus::EventResult(rejected, extenderSlot,
+                    &GraphCanvas::ExtenderSlotRequests::ExtendForConnectionProposal, foreignId, sourceEndpoint);
+                EXPECT_FALSE(rejected.IsValid());
+                ASSERT_NO_FATAL_FAILURE(checkOwner());
+                const AZStd::unordered_set<AZ::EntityId> foreignOnly{foreignId};
+                GraphCanvas::SceneRequestBus::Event(m_graphId, &GraphCanvas::SceneRequests::Delete, foreignOnly);
+                EXPECT_FALSE(GraphCanvas::ConnectionRequestBus::HasHandlers(foreignId));
+                ASSERT_NO_FATAL_FAILURE(checkOwner());
+                AZStd::vector<AZ::EntityId> remaining;
+                GraphCanvas::SceneRequestBus::EventResult(remaining, m_graphId, &GraphCanvas::SceneRequests::GetConnections);
+                ASSERT_EQ(remaining.size(), 1);
+                ASSERT_EQ(remaining.front(), ownerId);
+                ASSERT_EQ(view.scene()->mouseGrabberItem(), ownerGrabber) << "Deleting the foreign connection must restore the owner grab.";
+                GraphCanvas::ExtenderSlotRequestBus::EventResult(reused, extenderSlot,
+                    &GraphCanvas::ExtenderSlotRequests::ExtendForConnectionProposal, ownerId, sourceEndpoint);
+                EXPECT_EQ(reused, proposedTarget);
+                ASSERT_NO_FATAL_FAILURE(checkOwner());
+            }
+            QPoint releasePoint = extenderPoint;
+            if (changedReleasePoint)
+            {
+                GraphCanvas::SlotUIRequestBus::EventResult(extenderScenePoint, extenderSlot, &GraphCanvas::SlotUIRequests::GetConnectionPoint);
+                releasePoint = view.mapFromScene(extenderScenePoint) + QPoint(1, 0);
+                ASSERT_NE(releasePoint, extenderPoint);
+                ASSERT_TRUE(view.viewport()->rect().contains(releasePoint));
+                ASSERT_TRUE(GraphCanvas::GraphUtils::IsSlotVisible(extenderSlot));
+                double snapDistance = 10.0;
+                GraphCanvas::AssetEditorSettingsRequestBus::EventResult(snapDistance, CanvasHistoryToolId,
+                    &GraphCanvas::AssetEditorSettingsRequests::GetSnapDistance);
+                const auto releaseScenePoint = view.mapToScene(releasePoint);
+                AZStd::vector<GraphCanvas::Endpoint> endpoints;
+                GraphCanvas::SceneRequestBus::EventResult(endpoints, m_graphId, &GraphCanvas::SceneRequests::GetEndpointsInRect,
+                    QRectF(releaseScenePoint - QPointF(snapDistance, snapDistance), releaseScenePoint + QPointF(snapDistance, snapDistance)));
+                ASSERT_FALSE(endpoints.empty());
+                ASSERT_EQ(endpoints.front().GetSlotId(), extenderSlot) << "Changed release must still hit the SAME real extender first.";
+            }
+            RecordProperty("extender_changed_release_point", static_cast<int>(changedReleasePoint));
+            sendMouse(QEvent::MouseButtonRelease, releasePoint, Qt::LeftButton, Qt::NoButton);
+            const auto sourceId = source->GetId();
+            const auto targetId = target->GetId();
+            auto checkState = [&](size_t slotCount, size_t connectionCount)
+            {
+                const auto current = m_document->GetGraph();
+                const auto currentSource = current->GetNode(sourceId);
+                const auto currentTarget = current->GetNode(targetId);
+                ASSERT_EQ(current->GetNodeCount(), 2);
+                ASSERT_NE(currentSource, nullptr);
+                ASSERT_NE(currentTarget, nullptr);
+                EXPECT_FLOAT_EQ(currentSource->GetSlot("defaultValue")->GetValue<float>(), 2.0f);
+                ASSERT_EQ(currentTarget->GetExtendableSlots("value").size(), slotCount);
+                ASSERT_EQ(current->GetConnectionCount(), connectionCount);
+                if (connectionCount)
+                {
+                    const auto connection = current->GetConnections().front();
+                    EXPECT_EQ(connection->GetSourceSlot(), currentSource->GetSlot("value"));
+                    EXPECT_EQ(connection->GetTargetSlot(), *currentTarget->GetExtendableSlots("value").begin());
+                }
+            };
+            ASSERT_NO_FATAL_FAILURE(checkState(1, 1));
+            ASSERT_TRUE(m_document->Undo());
+            ASSERT_NO_FATAL_FAILURE(checkState(0, 0));
+            ASSERT_TRUE(m_document->Redo());
+            ASSERT_NO_FATAL_FAILURE(checkState(1, 1));
         }
 
         void CheckGraph(float value, bool connected)
@@ -352,26 +788,26 @@ namespace UnitTest
                 EXPECT_EQ(connection->GetTargetNode(), output);
                 EXPECT_EQ(connection->GetSourceSlot(), source);
                 EXPECT_EQ(connection->GetTargetSlot(), target);
-                EXPECT_EQ(connection->GetSourceEndpoint(), GraphModel::Endpoint(m_inputId, source->GetSlotId()));
-                EXPECT_EQ(connection->GetTargetEndpoint(), GraphModel::Endpoint(m_outputId, target->GetSlotId()));
+                EXPECT_EQ(connection->GetSourceEndpoint(), JE::Editor::Tools::GraphModel::Endpoint(m_inputId, source->GetSlotId()));
+                EXPECT_EQ(connection->GetTargetEndpoint(), JE::Editor::Tools::GraphModel::Endpoint(m_outputId, target->GetSlotId()));
             }
             for (auto node : {input, output})
             {
                 GraphCanvas::NodeId canvasId;
-                GraphModelIntegration::GraphControllerRequestBus::EventResult(canvasId, m_graphId,
-                    &GraphModelIntegration::GraphControllerRequests::GetNodeIdByNode, node);
+                JE::Editor::Tools::GraphModel::Integration::GraphControllerRequestBus::EventResult(canvasId, m_graphId,
+                    &JE::Editor::Tools::GraphModel::Integration::GraphControllerRequests::GetNodeIdByNode, node);
                 ASSERT_TRUE(canvasId.IsValid());
-                GraphModel::NodePtr mapped;
-                GraphModelIntegration::GraphControllerRequestBus::EventResult(mapped, m_graphId,
-                    &GraphModelIntegration::GraphControllerRequests::GetNodeById, canvasId);
+                JE::Editor::Tools::GraphModel::NodePtr mapped;
+                JE::Editor::Tools::GraphModel::Integration::GraphControllerRequestBus::EventResult(mapped, m_graphId,
+                    &JE::Editor::Tools::GraphModel::Integration::GraphControllerRequests::GetNodeById, canvasId);
                 EXPECT_EQ(mapped, node);
                 GraphCanvas::SlotId canvasSlot;
-                GraphModelIntegration::GraphControllerRequestBus::EventResult(canvasSlot, m_graphId,
-                    &GraphModelIntegration::GraphControllerRequests::GetSlotIdBySlot, node->GetSlot("value"));
+                JE::Editor::Tools::GraphModel::Integration::GraphControllerRequestBus::EventResult(canvasSlot, m_graphId,
+                    &JE::Editor::Tools::GraphModel::Integration::GraphControllerRequests::GetSlotIdBySlot, node->GetSlot("value"));
                 EXPECT_TRUE(canvasSlot.IsValid());
                 AZ::Vector2 position;
-                GraphModelIntegration::GraphControllerRequestBus::EventResult(position, m_graphId,
-                    &GraphModelIntegration::GraphControllerRequests::GetPosition, node);
+                JE::Editor::Tools::GraphModel::Integration::GraphControllerRequestBus::EventResult(position, m_graphId,
+                    &JE::Editor::Tools::GraphModel::Integration::GraphControllerRequests::GetPosition, node);
                 EXPECT_TRUE(position.IsClose(node == input ? m_inputPosition : m_outputPosition));
             }
         }
@@ -389,13 +825,13 @@ namespace UnitTest
         AZStd::unique_ptr<CanvasHistoryApplication> m_application;
         AZStd::vector<AZStd::shared_ptr<AZ::ModuleData>> m_modules;
         AZStd::unique_ptr<GraphCanvas::StyleManager> m_styleManager;
-        GraphModel::GraphContextPtr m_graphContext;
+        JE::Editor::Tools::GraphModel::GraphContextPtr m_graphContext;
         JE::Editor::Tools::DocumentHistoryPolicy m_policy;
         AZStd::unique_ptr<CanvasHistorySourceFolder> m_sourceFolder;
         AZStd::unique_ptr<JE::Editor::Tools::GraphDocument> m_document;
         AZStd::string m_path;
         GraphCanvas::GraphId m_graphId;
-        GraphModel::NodeId m_inputId = 0, m_outputId = 0;
+        JE::Editor::Tools::GraphModel::NodeId m_inputId = 0, m_outputId = 0;
         AZ::Vector2 m_inputPosition, m_outputPosition;
     };
 
@@ -472,10 +908,10 @@ namespace UnitTest
             m_fileIO->SetAlias("@engroot@", AZ::Test::GetEngineRootPath().c_str());
             m_nodeManager = AZStd::make_unique<JE::Editor::Tools::DynamicNodeManager>(CanvasHistoryToolId);
             m_nodeManager->RegisterDataTypes({
-                AZStd::make_shared<GraphModel::DataType>(AZ_CRC_CE("bool"), false, "bool"),
-                AZStd::make_shared<GraphModel::DataType>(AZ_CRC_CE("float"), 0.0f, "float"),
-                AZStd::make_shared<GraphModel::DataType>(AZ_CRC_CE("float3"), AZ::Vector3::CreateZero(), "float3"),
-                AZStd::make_shared<GraphModel::DataType>(AZ_CRC_CE("string"), AZStd::string{}, "string")});
+                AZStd::make_shared<JE::Editor::Tools::GraphModel::DataType>(AZ_CRC_CE("bool"), false, "bool"),
+                AZStd::make_shared<JE::Editor::Tools::GraphModel::DataType>(AZ_CRC_CE("float"), 0.0f, "float"),
+                AZStd::make_shared<JE::Editor::Tools::GraphModel::DataType>(AZ_CRC_CE("float3"), AZ::Vector3::CreateZero(), "float3"),
+                AZStd::make_shared<JE::Editor::Tools::GraphModel::DataType>(AZ_CRC_CE("string"), AZStd::string{}, "string")});
             m_templates = AZStd::make_unique<JE::Editor::Tools::GraphTemplateFileDataCache>(CanvasHistoryToolId);
             const auto assets = AZ::Test::GetEngineRootPath() + "/Editor/Materials/Assets/MaterialCanvas/GraphData/Nodes/";
             ASSERT_TRUE(m_constantConfig.Load(assets + "Constants/float.materialgraphnode"));
@@ -524,9 +960,9 @@ namespace UnitTest
             }
             ASSERT_TRUE(m_nodeManager->RegisterConfig(m_constantConfig));
             ASSERT_TRUE(m_nodeManager->RegisterConfig(m_outputConfig));
-            m_generationContext = AZStd::make_shared<GraphModel::GraphContext>(
+            m_generationContext = AZStd::make_shared<JE::Editor::Tools::GraphModel::GraphContext>(
                 "Material Graph", ".materialgraph", m_nodeManager->GetRegisteredDataTypes());
-            GraphModel::Graph initial(m_generationContext);
+            JE::Editor::Tools::GraphModel::Graph initial(m_generationContext);
             ASSERT_TRUE(AZ::JsonSerializationUtils::SaveObjectToFile(&initial, m_generationPath).IsSuccess());
             m_compiler = AZStd::make_shared<JE::Editor::MaterialGraphCompiler>(CanvasHistoryToolId);
             const auto type = JE::Editor::Tools::GraphDocument::BuildDocumentTypeInfo(
@@ -550,13 +986,13 @@ namespace UnitTest
             {
                 GraphCanvas::NodeId canvasId;
                 AZ::Vector2 position = AZ::Vector2::CreateZero();
-                GraphModelIntegration::GraphControllerRequestBus::EventResult(canvasId, graphId,
-                    &GraphModelIntegration::GraphControllerRequests::AddNode, node, position);
+                JE::Editor::Tools::GraphModel::Integration::GraphControllerRequestBus::EventResult(canvasId, graphId,
+                    &JE::Editor::Tools::GraphModel::Integration::GraphControllerRequests::AddNode, node, position);
                 ASSERT_TRUE(canvasId.IsValid());
             }
-            GraphModel::ConnectionPtr connection;
-            GraphModelIntegration::GraphControllerRequestBus::EventResult(connection, graphId,
-                &GraphModelIntegration::GraphControllerRequests::AddConnection,
+            JE::Editor::Tools::GraphModel::ConnectionPtr connection;
+            JE::Editor::Tools::GraphModel::Integration::GraphControllerRequestBus::EventResult(connection, graphId,
+                &JE::Editor::Tools::GraphModel::Integration::GraphControllerRequests::AddConnection,
                 constant->GetSlot("outValue"), output->GetSlot("inRoughness"));
             ASSERT_NE(connection, nullptr);
             EXPECT_EQ(connection->GetSourceSlot(), constant->GetSlot("outValue"));
@@ -569,11 +1005,11 @@ namespace UnitTest
         AZStd::unique_ptr<JE::Editor::Tools::DynamicNodeManager> m_nodeManager;
         AZStd::unique_ptr<JE::Editor::Tools::GraphTemplateFileDataCache> m_templates;
         JE::Editor::Tools::DynamicNodeConfig m_constantConfig, m_outputConfig;
-        GraphModel::GraphContextPtr m_generationContext;
+        JE::Editor::Tools::GraphModel::GraphContextPtr m_generationContext;
         AZStd::shared_ptr<JE::Editor::MaterialGraphCompiler> m_compiler;
         AZStd::unique_ptr<JE::Editor::Tools::GraphDocument> m_generationDocument;
         AZStd::string m_generationPath;
-        GraphModel::NodeId m_constantId = 0;
+        JE::Editor::Tools::GraphModel::NodeId m_constantId = 0;
     };
 
     TEST_F(MaterialGraphCompilerGenerationTests, ConnectedStandardPBRGeneratesRealSourcesWithoutClaimingAPSuccess)
@@ -758,7 +1194,7 @@ namespace UnitTest
         AZ::Uuid OpenGraph(JE::Editor::MaterialGraphEnvironment::GraphKind kind)
         {
             auto& environment = m_session->EnableGraphDocuments();
-            GraphModel::Graph initial(environment.GetGraphContext(kind));
+            JE::Editor::Tools::GraphModel::Graph initial(environment.GetGraphContext(kind));
             const auto path = m_directory->Resolve(kind == JE::Editor::MaterialGraphEnvironment::GraphKind::RenderPass
                 ? "source/test.passgraph" : "source/test.materialgraph").Native();
             EXPECT_TRUE(AZ::JsonSerializationUtils::SaveObjectToFile(&initial, path).IsSuccess());
@@ -777,7 +1213,7 @@ namespace UnitTest
         {
             id = OpenGraph(JE::Editor::MaterialGraphEnvironment::GraphKind::Material);
             ASSERT_FALSE(id.IsNull());
-            GraphModel::GraphPtr graph;
+            JE::Editor::Tools::GraphModel::GraphPtr graph;
             JE::Editor::Tools::GraphDocumentRequestBus::EventResult(
                 graph, id, &JE::Editor::Tools::GraphDocumentRequests::GetGraph);
             JE::Editor::Tools::GraphDocumentRequestBus::EventResult(
@@ -788,11 +1224,11 @@ namespace UnitTest
             JE::Editor::Tools::AtomToolsDocumentRequestBus::EventResult(
                 success, id, &JE::Editor::Tools::AtomToolsDocumentRequests::BeginEdit);
             ASSERT_TRUE(success);
-            auto node = AZStd::make_shared<GraphModel::GraphInputNode>(graph, graph->GetContext()->GetDataType<float>());
+            auto node = AZStd::make_shared<JE::Editor::Tools::GraphModel::GraphInputNode>(graph, graph->GetContext()->GetDataType<float>());
             AZ::Vector2 position(460.0f, 300.0f);
             GraphCanvas::NodeId canvasNode;
-            GraphModelIntegration::GraphControllerRequestBus::EventResult(
-                canvasNode, scene, &GraphModelIntegration::GraphControllerRequests::AddNode, node, position);
+            JE::Editor::Tools::GraphModel::Integration::GraphControllerRequestBus::EventResult(
+                canvasNode, scene, &JE::Editor::Tools::GraphModel::Integration::GraphControllerRequests::AddNode, node, position);
             ASSERT_TRUE(canvasNode.IsValid());
             JE::Editor::Tools::AtomToolsDocumentRequestBus::EventResult(
                 success, id, &JE::Editor::Tools::AtomToolsDocumentRequests::EndEdit);
@@ -829,7 +1265,7 @@ namespace UnitTest
     {
         const auto id = OpenGraph(JE::Editor::MaterialGraphEnvironment::GraphKind::Material);
         ASSERT_FALSE(id.IsNull());
-        GraphModel::GraphPtr graph;
+        JE::Editor::Tools::GraphModel::GraphPtr graph;
         GraphCanvas::GraphId scene;
         JE::Editor::Tools::GraphDocumentRequestBus::EventResult(
             graph, id, &JE::Editor::Tools::GraphDocumentRequests::GetGraph);
@@ -841,11 +1277,11 @@ namespace UnitTest
         JE::Editor::Tools::AtomToolsDocumentRequestBus::EventResult(
             success, id, &JE::Editor::Tools::AtomToolsDocumentRequests::BeginEdit);
         ASSERT_TRUE(success);
-        auto node = AZStd::make_shared<GraphModel::GraphInputNode>(graph, graph->GetContext()->GetDataType<float>());
+        auto node = AZStd::make_shared<JE::Editor::Tools::GraphModel::GraphInputNode>(graph, graph->GetContext()->GetDataType<float>());
         AZ::Vector2 position(460.0f, 300.0f);
         GraphCanvas::NodeId canvasNode;
-        GraphModelIntegration::GraphControllerRequestBus::EventResult(
-            canvasNode, scene, &GraphModelIntegration::GraphControllerRequests::AddNode, node, position);
+        JE::Editor::Tools::GraphModel::Integration::GraphControllerRequestBus::EventResult(
+            canvasNode, scene, &JE::Editor::Tools::GraphModel::Integration::GraphControllerRequests::AddNode, node, position);
         ASSERT_TRUE(canvasNode.IsValid());
         JE::Editor::Tools::AtomToolsDocumentRequestBus::EventResult(
             success, id, &JE::Editor::Tools::AtomToolsDocumentRequests::EndEdit);
@@ -1066,7 +1502,7 @@ namespace UnitTest
         }
         const auto id = OpenGraph(JE::Editor::MaterialGraphEnvironment::GraphKind::RenderPass);
         ASSERT_FALSE(id.IsNull());
-        GraphModel::GraphPtr graph;
+        JE::Editor::Tools::GraphModel::GraphPtr graph;
         GraphCanvas::GraphId scene;
         JE::Editor::Tools::GraphDocumentRequestBus::EventResult(graph, id, &JE::Editor::Tools::GraphDocumentRequests::GetGraph);
         JE::Editor::Tools::GraphDocumentRequestBus::EventResult(scene, id, &JE::Editor::Tools::GraphDocumentRequests::GetGraphId);
@@ -1075,12 +1511,12 @@ namespace UnitTest
         bool success = false;
         JE::Editor::Tools::AtomToolsDocumentRequestBus::EventResult(success, id, &JE::Editor::Tools::AtomToolsDocumentRequests::BeginEdit);
         ASSERT_TRUE(success);
-        auto node = AZStd::make_shared<GraphModel::GraphInputNode>(graph, graph->GetContext()->GetDataType<float>());
+        auto node = AZStd::make_shared<JE::Editor::Tools::GraphModel::GraphInputNode>(graph, graph->GetContext()->GetDataType<float>());
         node->GetSlot("defaultValue")->SetValue(0.375f);
         AZ::Vector2 position(24.0f, 48.0f);
         GraphCanvas::NodeId canvasNode;
-        GraphModelIntegration::GraphControllerRequestBus::EventResult(canvasNode, scene,
-            &GraphModelIntegration::GraphControllerRequests::AddNode, node, position);
+        JE::Editor::Tools::GraphModel::Integration::GraphControllerRequestBus::EventResult(canvasNode, scene,
+            &JE::Editor::Tools::GraphModel::Integration::GraphControllerRequests::AddNode, node, position);
         ASSERT_TRUE(canvasNode.IsValid());
         const auto logicalId = node->GetId();
         JE::Editor::Tools::AtomToolsDocumentRequestBus::EventResult(success, id, &JE::Editor::Tools::AtomToolsDocumentRequests::EndEdit);
@@ -1287,6 +1723,143 @@ namespace UnitTest
         EXPECT_EQ(palette.FindItemWithName(QStringLiteral("Only Pass")), nullptr);
     }
 
+    TEST_F(GraphDocumentHistoryTests, ConnectionReleaseWithoutPostStartMoveUsesReleasePosition)
+    {
+        ASSERT_NO_FATAL_FAILURE(CheckConnectionReleaseGesture(false));
+    }
+
+    TEST_F(GraphDocumentHistoryTests, ConnectionReleaseAfterMouseMovePreservesConnectionAndUndo)
+    {
+        ASSERT_NO_FATAL_FAILURE(CheckConnectionReleaseGesture(true));
+    }
+
+    TEST_F(GraphDocumentHistoryTests, ConnectionReleaseAfterDifferentLastMoveUsesReleasePosition)
+    {
+        ASSERT_NO_FATAL_FAILURE(CheckConnectionReleaseGesture(true, ReleaseControl::ChangedPosition));
+    }
+
+    TEST_F(GraphDocumentHistoryTests, ConnectionEscapeWithActiveProposalPreservesGraph)
+    {
+        ASSERT_NO_FATAL_FAILURE(CheckConnectionReleaseGesture(true, ReleaseControl::Cancel));
+    }
+
+    TEST_F(GraphDocumentHistoryTests, ExtenderReleaseAtEvaluatedPointCreatesOneSlotAndConnection)
+    {
+        ASSERT_NO_FATAL_FAILURE(CheckExtenderConnectionReleaseGesture(false));
+    }
+
+    TEST_F(GraphDocumentHistoryTests, ExtenderReleaseAtChangedPointPreservesSingleProposal)
+    {
+        ASSERT_NO_FATAL_FAILURE(CheckExtenderConnectionReleaseGesture(true));
+    }
+
+    TEST_F(GraphDocumentHistoryTests, ExtenderProposalReuseRejectsForeignConnectionAndPreservesOwner)
+    {
+        ASSERT_NO_FATAL_FAILURE(CheckExtenderConnectionReleaseGesture(false, true));
+    }
+
+    TEST_F(GraphDocumentHistoryTests, ModuleSlotTypesRemainCanonicalAcrossSerializationAndHistory)
+    {
+        ASSERT_NO_FATAL_FAILURE(AddNodes());
+        auto checkCanonicalTypes = [&]()
+        {
+            const auto graph = m_document->GetGraph();
+            const auto contextType = graph->GetContext()->GetDataType<float>();
+            const auto input = azrtti_cast<JE::Editor::Tools::GraphModel::GraphInputNode*>(graph->GetNode(m_inputId));
+            const auto output = azrtti_cast<JE::Editor::Tools::GraphModel::GraphOutputNode*>(graph->GetNode(m_outputId));
+            ASSERT_NE(contextType, nullptr);
+            ASSERT_NE(input, nullptr);
+            ASSERT_NE(output, nullptr);
+            EXPECT_EQ(input->GetNodeDataType(), contextType);
+            EXPECT_EQ(output->GetNodeDataType(), contextType);
+            EXPECT_EQ(input->GetSlot("value")->GetDataType(), contextType);
+            EXPECT_EQ(output->GetSlot("value")->GetDataType(), contextType);
+            EXPECT_TRUE(output->GetSlot("value")->IsSupportedDataType(input->GetSlot("value")->GetDataType()));
+        };
+        ASSERT_NO_FATAL_FAILURE(checkCanonicalTypes());
+        ASSERT_NO_FATAL_FAILURE(CheckGraph(2.0f, false));
+        {
+            const auto input = azrtti_cast<JE::Editor::Tools::GraphModel::GraphInputNode*>(m_document->GetGraph()->GetNode(m_inputId));
+            AZStd::unique_ptr<JE::Editor::Tools::GraphModel::GraphInputNode> detached(
+                m_application->GetSerializeContext()->CloneObject(input.get()));
+            ASSERT_NE(detached, nullptr);
+            EXPECT_EQ(detached->GetGraph(), nullptr);
+            ASSERT_NE(detached->GetNodeDataType(), nullptr);
+            EXPECT_EQ(detached->GetNodeDataType()->GetTypeEnum(), input->GetNodeDataType()->GetTypeEnum());
+            EXPECT_EQ(detached->GetNodeDataType()->GetTypeUuid(), input->GetNodeDataType()->GetTypeUuid());
+            EXPECT_FLOAT_EQ(AZStd::any_cast<float>(detached->GetNodeDataType()->GetDefaultValue()), 0.0f);
+        }
+        ASSERT_TRUE(m_document->BeginEdit());
+        const auto graph = m_document->GetGraph();
+        const auto source = graph->GetNode(m_inputId)->GetSlot("value");
+        const auto target = graph->GetNode(m_outputId)->GetSlot("value");
+        GraphCanvas::SlotId sourceSlot, targetSlot;
+        JE::Editor::Tools::GraphModel::Integration::GraphControllerRequestBus::EventResult(sourceSlot, m_graphId,
+            &JE::Editor::Tools::GraphModel::Integration::GraphControllerRequests::GetSlotIdBySlot, source);
+        JE::Editor::Tools::GraphModel::Integration::GraphControllerRequestBus::EventResult(targetSlot, m_graphId,
+            &JE::Editor::Tools::GraphModel::Integration::GraphControllerRequests::GetSlotIdBySlot, target);
+        GraphCanvas::Endpoint sourceEndpoint;
+        GraphCanvas::SlotRequestBus::EventResult(sourceEndpoint, sourceSlot, &GraphCanvas::SlotRequests::GetEndpoint);
+        bool canCreate = false;
+        GraphCanvas::SlotRequestBus::EventResult(canCreate, targetSlot, &GraphCanvas::SlotRequests::CanCreateConnectionTo, sourceEndpoint);
+        ASSERT_TRUE(canCreate);
+        graph->GetNode(m_inputId)->GetSlot("defaultValue")->SetValue(7.0f);
+        JE::Editor::Tools::GraphModel::ConnectionPtr connection;
+        JE::Editor::Tools::GraphModel::Integration::GraphControllerRequestBus::EventResult(connection, m_graphId,
+            &JE::Editor::Tools::GraphModel::Integration::GraphControllerRequests::AddConnection, source, target);
+        ASSERT_NE(connection, nullptr);
+        ASSERT_TRUE(m_document->EndEdit());
+        ASSERT_TRUE(m_document->Save());
+        ASSERT_TRUE(m_document->Reopen());
+        ASSERT_NO_FATAL_FAILURE(checkCanonicalTypes());
+        ASSERT_NO_FATAL_FAILURE(CheckGraph(7.0f, true));
+        ASSERT_TRUE(m_document->Undo());
+        ASSERT_NO_FATAL_FAILURE(checkCanonicalTypes());
+        ASSERT_NO_FATAL_FAILURE(CheckGraph(2.0f, false));
+        ASSERT_TRUE(m_document->Redo());
+        ASSERT_NO_FATAL_FAILURE(checkCanonicalTypes());
+        ASSERT_NO_FATAL_FAILURE(CheckGraph(7.0f, true));
+    }
+
+    TEST_F(GraphDocumentHistoryTests, ModuleSlotTypesRejectDifferentUuidAndUnregisteredEnum)
+    {
+        ASSERT_NO_FATAL_FAILURE(AddNodes());
+        const auto graph = m_document->GetGraph();
+        const auto target = graph->GetNode(m_outputId)->GetSlot("value");
+        GraphCanvas::SlotId targetSlot;
+        JE::Editor::Tools::GraphModel::Integration::GraphControllerRequestBus::EventResult(targetSlot, m_graphId,
+            &JE::Editor::Tools::GraphModel::Integration::GraphControllerRequests::GetSlotIdBySlot, target);
+        ASSERT_TRUE(targetSlot.IsValid());
+        const JE::Editor::Tools::GraphModel::DataTypeList rejectedTypes{
+            m_graphContext->GetDataType<AZStd::string>(),
+            AZStd::make_shared<JE::Editor::Tools::GraphModel::DataType>(1, AZStd::string{}, "Enum collision"),
+            AZStd::make_shared<JE::Editor::Tools::GraphModel::DataType>(99, 0.0f, "Unregistered enum")};
+        for (const auto& dataType : rejectedTypes)
+        {
+            const auto input = AZStd::make_shared<JE::Editor::Tools::GraphModel::GraphInputNode>(graph, dataType);
+            ASSERT_NE(input->GetNodeDataType(), nullptr);
+            EXPECT_EQ(input->GetNodeDataType()->GetTypeEnum(), dataType->GetTypeEnum());
+            EXPECT_EQ(input->GetNodeDataType()->GetTypeUuid(), dataType->GetTypeUuid());
+            EXPECT_FALSE(target->IsSupportedDataType(input->GetSlot("value")->GetDataType()));
+            AZ::Vector2 position(24.0f, 400.0f);
+            GraphCanvas::NodeId nodeId;
+            JE::Editor::Tools::GraphModel::Integration::GraphControllerRequestBus::EventResult(nodeId, m_graphId,
+                &JE::Editor::Tools::GraphModel::Integration::GraphControllerRequests::AddNode, input, position);
+            ASSERT_TRUE(nodeId.IsValid());
+            GraphCanvas::SlotId sourceSlot;
+            JE::Editor::Tools::GraphModel::Integration::GraphControllerRequestBus::EventResult(sourceSlot, m_graphId,
+                &JE::Editor::Tools::GraphModel::Integration::GraphControllerRequests::GetSlotIdBySlot, input->GetSlot("value"));
+            ASSERT_TRUE(sourceSlot.IsValid());
+            GraphCanvas::Endpoint sourceEndpoint;
+            GraphCanvas::SlotRequestBus::EventResult(sourceEndpoint, sourceSlot, &GraphCanvas::SlotRequests::GetEndpoint);
+            ASSERT_TRUE(sourceEndpoint.IsValid());
+            bool canCreate = true;
+            GraphCanvas::SlotRequestBus::EventResult(canCreate, targetSlot, &GraphCanvas::SlotRequests::CanCreateConnectionTo, sourceEndpoint);
+            EXPECT_FALSE(canCreate);
+            EXPECT_EQ(graph->GetConnectionCount(), 0);
+        }
+    }
+
     TEST_F(GraphDocumentHistoryTests, RealCanvasReplayAndReopenPreserveLogicalReferencesAndGlobalChronology)
     {
         AddNodes();
@@ -1301,9 +1874,9 @@ namespace UnitTest
         ASSERT_TRUE(m_document->BeginEdit());
         auto graph = m_document->GetGraph();
         graph->GetNode(m_inputId)->GetSlot("defaultValue")->SetValue(7.0f);
-        GraphModel::ConnectionPtr connection;
-        GraphModelIntegration::GraphControllerRequestBus::EventResult(connection, m_graphId,
-            &GraphModelIntegration::GraphControllerRequests::AddConnection,
+        JE::Editor::Tools::GraphModel::ConnectionPtr connection;
+        JE::Editor::Tools::GraphModel::Integration::GraphControllerRequestBus::EventResult(connection, m_graphId,
+            &JE::Editor::Tools::GraphModel::Integration::GraphControllerRequests::AddConnection,
             graph->GetNode(m_inputId)->GetSlot("value"), graph->GetNode(m_outputId)->GetSlot("value"));
         ASSERT_NE(connection, nullptr);
         ASSERT_TRUE(m_document->EndEdit());

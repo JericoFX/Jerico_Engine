@@ -30,7 +30,7 @@ namespace LandscapeCanvas
 
     const char* InvertGradientModifierNode::TITLE = "Invert";
 
-    InvertGradientModifierNode::InvertGradientModifierNode(GraphModel::GraphPtr graph)
+    InvertGradientModifierNode::InvertGradientModifierNode(JE::Editor::Tools::GraphModel::GraphPtr graph)
         : BaseGradientModifierNode(graph)
     {
     }

@@ -15,8 +15,8 @@
 #include <AzCore/std/smart_ptr/make_shared.h>
 
 // Graph Model
-#include <GraphModel/Integration/Helpers.h>
-#include <GraphModel/Model/Slot.h>
+#include <JE/Editor/Tools/GraphModel/Integration/Helpers.h>
+#include <JE/Editor/Tools/GraphModel/Model/Slot.h>
 
 // Landscape Canvas
 #include "BaseShapeNode.h"
@@ -43,13 +43,13 @@ namespace LandscapeCanvas
                 editContext->Class<BaseShapeNode>(
                     QT_TRANSLATE_NOOP("LandscapeCanvas", "BaseShapeNode"), "")->
                     ClassElement(AZ::Edit::ClassElements::EditorData, "")->
-                    Attribute(GraphModelIntegration::Attributes::TitlePaletteOverride, "ShapeNodeTitlePalette")
+                    Attribute(JE::Editor::Tools::GraphModel::Integration::Attributes::TitlePaletteOverride, "ShapeNodeTitlePalette")
                     ;
             }
         }
     }
 
-    BaseShapeNode::BaseShapeNode(GraphModel::GraphPtr graph)
+    BaseShapeNode::BaseShapeNode(JE::Editor::Tools::GraphModel::GraphPtr graph)
         : BaseNode(graph)
     {
         RegisterSlots();
@@ -60,14 +60,14 @@ namespace LandscapeCanvas
     {
         CreateEntityNameSlot();
 
-        GraphModel::DataTypePtr dataType = GetGraphContext()->GetDataType(LandscapeCanvasDataTypeEnum::Bounds);
+        JE::Editor::Tools::GraphModel::DataTypePtr dataType = GetGraphContext()->GetDataType(LandscapeCanvasDataTypeEnum::Bounds);
 
-        RegisterSlot(AZStd::make_shared<GraphModel::SlotDefinition>(
-            GraphModel::SlotDirection::Output,
-            GraphModel::SlotType::Data,
+        RegisterSlot(AZStd::make_shared<JE::Editor::Tools::GraphModel::SlotDefinition>(
+            JE::Editor::Tools::GraphModel::SlotDirection::Output,
+            JE::Editor::Tools::GraphModel::SlotType::Data,
             BOUNDS_SLOT_ID,
             BOUNDS_SLOT_LABEL.toUtf8().constData(),
             BOUNDS_OUTPUT_SLOT_DESCRIPTION.toUtf8().constData(),
-            GraphModel::DataTypeList{ dataType }));
+            JE::Editor::Tools::GraphModel::DataTypeList{ dataType }));
     }
 } // namespace LandscapeCanvas

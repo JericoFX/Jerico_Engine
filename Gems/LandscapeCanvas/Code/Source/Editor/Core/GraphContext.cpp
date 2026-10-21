@@ -12,7 +12,7 @@
 #include <AzCore/std/smart_ptr/make_shared.h>
 
 // Graph Model
-#include <GraphModel/Model/Module/ModuleGraphManager.h>
+#include <JE/Editor/Tools/GraphModel/Model/Module/ModuleGraphManager.h>
 
 // Landscape Canvas
 #include <Editor/Core/GraphContext.h>
@@ -38,17 +38,17 @@ namespace LandscapeCanvas
     }
 
     GraphContext::GraphContext()
-        : GraphModel::GraphContext(SYSTEM_NAME, MODULE_FILE_EXTENSION, {})
+        : JE::Editor::Tools::GraphModel::GraphContext(SYSTEM_NAME, MODULE_FILE_EXTENSION, {})
     {
         // Construct our custom data types
         const AZStd::string cppName = "AZ::EntityId";
-        m_dataTypes.push_back(AZStd::make_shared<GraphModel::DataType>(LandscapeCanvasDataTypeEnum::Bounds, BoundsTypeId, AZStd::any(AZ::EntityId()), "Bounds", cppName));
-        m_dataTypes.push_back(AZStd::make_shared<GraphModel::DataType>(LandscapeCanvasDataTypeEnum::Gradient, GradientTypeId, AZStd::any(AZ::EntityId()), "Gradient", cppName));
-        m_dataTypes.push_back(AZStd::make_shared<GraphModel::DataType>(LandscapeCanvasDataTypeEnum::Area, AreaTypeId, AZStd::any(AZ::EntityId()), "Area", cppName));
-        m_dataTypes.push_back(AZStd::make_shared<GraphModel::DataType>(LandscapeCanvasDataTypeEnum::Path, PathTypeId, AZStd::any(AZ::IO::Path()), "Path", "AZ::IO::Path"));
+        m_dataTypes.push_back(AZStd::make_shared<JE::Editor::Tools::GraphModel::DataType>(LandscapeCanvasDataTypeEnum::Bounds, BoundsTypeId, AZStd::any(AZ::EntityId()), "Bounds", cppName));
+        m_dataTypes.push_back(AZStd::make_shared<JE::Editor::Tools::GraphModel::DataType>(LandscapeCanvasDataTypeEnum::Gradient, GradientTypeId, AZStd::any(AZ::EntityId()), "Gradient", cppName));
+        m_dataTypes.push_back(AZStd::make_shared<JE::Editor::Tools::GraphModel::DataType>(LandscapeCanvasDataTypeEnum::Area, AreaTypeId, AZStd::any(AZ::EntityId()), "Area", cppName));
+        m_dataTypes.push_back(AZStd::make_shared<JE::Editor::Tools::GraphModel::DataType>(LandscapeCanvasDataTypeEnum::Path, PathTypeId, AZStd::any(AZ::IO::Path()), "Path", "AZ::IO::Path"));
 
         // Construct basic data types
         const AZ::Uuid stringTypeUuid = azrtti_typeid<AZStd::string>();
-        m_dataTypes.push_back(AZStd::make_shared<GraphModel::DataType>(LandscapeCanvasDataTypeEnum::String, stringTypeUuid, AZStd::any(AZStd::string("")), "String", "AZStd::string"));
+        m_dataTypes.push_back(AZStd::make_shared<JE::Editor::Tools::GraphModel::DataType>(LandscapeCanvasDataTypeEnum::String, stringTypeUuid, AZStd::any(AZStd::string("")), "String", "AZStd::string"));
     }
 } // namespace LandscapeCanvas

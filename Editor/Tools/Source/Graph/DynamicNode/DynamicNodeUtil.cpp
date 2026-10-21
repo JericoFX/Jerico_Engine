@@ -134,7 +134,7 @@ namespace JE::Editor::Tools
 
     AZStd::vector<AZStd::string> GetRegisteredDataTypeNames()
     {
-        GraphModel::DataTypeList registeredDataTypes;
+        JE::Editor::Tools::GraphModel::DataTypeList registeredDataTypes;
         DynamicNodeManagerRequestBus::BroadcastResult(registeredDataTypes, &DynamicNodeManagerRequestBus::Events::GetRegisteredDataTypes);
 
         AZStd::vector<AZStd::string> names;

@@ -32,7 +32,7 @@ namespace LandscapeCanvas
         static void Reflect(AZ::ReflectContext* context);
 
         PerlinNoiseGradientNode() = default;
-        explicit PerlinNoiseGradientNode(GraphModel::GraphPtr graph);
+        explicit PerlinNoiseGradientNode(JE::Editor::Tools::GraphModel::GraphPtr graph);
 
         static const char* TITLE;
         const char* GetTitle() const override { return TITLE; }

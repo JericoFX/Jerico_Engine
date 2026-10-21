@@ -29,7 +29,7 @@ namespace LandscapeCanvas
         static void Reflect(AZ::ReflectContext* context);
 
         GradientBakerNode() = default;
-        explicit GradientBakerNode(GraphModel::GraphPtr graph);
+        explicit GradientBakerNode(JE::Editor::Tools::GraphModel::GraphPtr graph);
 
         static const char* TITLE;
         const char* GetTitle() const override;

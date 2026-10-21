@@ -30,7 +30,7 @@ namespace LandscapeCanvas
 
     const char* TubeShapeNode::TITLE = "Tube Shape";
 
-    TubeShapeNode::TubeShapeNode(GraphModel::GraphPtr graph)
+    TubeShapeNode::TubeShapeNode(JE::Editor::Tools::GraphModel::GraphPtr graph)
         : BaseShapeNode(graph)
     {
     }

@@ -30,7 +30,7 @@ namespace LandscapeCanvas
 
     const char* PosterizeGradientModifierNode::TITLE = "Posterize";
 
-    PosterizeGradientModifierNode::PosterizeGradientModifierNode(GraphModel::GraphPtr graph)
+    PosterizeGradientModifierNode::PosterizeGradientModifierNode(JE::Editor::Tools::GraphModel::GraphPtr graph)
         : BaseGradientModifierNode(graph)
     {
     }

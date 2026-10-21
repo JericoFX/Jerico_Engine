@@ -23,7 +23,7 @@
 #include <AzFramework/StringFunc/StringFunc.h>
 #include <AzToolsFramework/API/EditorAssetSystemAPI.h>
 #include <GraphCanvas/Widgets/NodePalette/TreeItems/IconDecoratedNodePaletteTreeItem.h>
-#include <GraphModel/Integration/NodePalette/GraphCanvasNodePaletteItems.h>
+#include <JE/Editor/Tools/GraphModel/Integration/NodePalette/GraphCanvasNodePaletteItems.h>
 
 namespace JE::Editor::Tools
 {
@@ -63,12 +63,12 @@ namespace JE::Editor::Tools
         DynamicNodeManagerRequestBus::Handler::BusDisconnect();
     }
 
-    void DynamicNodeManager::RegisterDataTypes(const GraphModel::DataTypeList& dataTypes)
+    void DynamicNodeManager::RegisterDataTypes(const JE::Editor::Tools::GraphModel::DataTypeList& dataTypes)
     {
         m_registeredDataTypes.insert(m_registeredDataTypes.end(), dataTypes.begin(), dataTypes.end());
     }
 
-    GraphModel::DataTypeList DynamicNodeManager::GetRegisteredDataTypes()
+    JE::Editor::Tools::GraphModel::DataTypeList DynamicNodeManager::GetRegisteredDataTypes()
     {
         return m_registeredDataTypes;
     }
@@ -162,21 +162,21 @@ namespace JE::Editor::Tools
             categoryItr->second->CreateChildNode<DynamicNodePaletteItem>(m_toolId, config);
         }
 
-        GraphModelIntegration::AddCommonNodePaletteUtilities(rootItem, m_toolId);
+        JE::Editor::Tools::GraphModel::Integration::AddCommonNodePaletteUtilities(rootItem, m_toolId);
         return rootItem;
     }
 
-    GraphModel::NodePtr DynamicNodeManager::CreateNodeById(GraphModel::GraphPtr graph, const AZ::Uuid& configId)
+    JE::Editor::Tools::GraphModel::NodePtr DynamicNodeManager::CreateNodeById(JE::Editor::Tools::GraphModel::GraphPtr graph, const AZ::Uuid& configId)
     {
         const auto configItr = m_nodeConfigMap.find(configId);
         if (configItr != m_nodeConfigMap.end())
         {
             return AZStd::make_shared<DynamicNode>(graph, m_toolId, configItr->first);
         }
-        return GraphModel::NodePtr();
+        return JE::Editor::Tools::GraphModel::NodePtr();
     }
 
-    GraphModel::NodePtr DynamicNodeManager::CreateNodeByName(GraphModel::GraphPtr graph, const AZStd::string& name)
+    JE::Editor::Tools::GraphModel::NodePtr DynamicNodeManager::CreateNodeByName(JE::Editor::Tools::GraphModel::GraphPtr graph, const AZStd::string& name)
     {
         const auto configItr = AZStd::find_if(
             m_nodeConfigMap.begin(),
@@ -190,7 +190,7 @@ namespace JE::Editor::Tools
         {
             return AZStd::make_shared<DynamicNode>(graph, m_toolId, configItr->first);
         }
-        return GraphModel::NodePtr();
+        return JE::Editor::Tools::GraphModel::NodePtr();
     }
 
     void DynamicNodeManager::RegisterEditDataForSetting(const AZStd::string& settingName, const AZ::Edit::ElementData& editData)

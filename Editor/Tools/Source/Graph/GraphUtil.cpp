@@ -10,7 +10,7 @@
 
 namespace JE::Editor::Tools
 {
-    AZStd::string GetStringValueFromSlot(GraphModel::ConstSlotPtr slot, const AZStd::string& defaultValue)
+    AZStd::string GetStringValueFromSlot(JE::Editor::Tools::GraphModel::ConstSlotPtr slot, const AZStd::string& defaultValue)
     {
         const auto& value = slot ? slot->GetValue<AZStd::string>() : "";
         return !value.empty() ? value : defaultValue;

@@ -42,7 +42,7 @@ namespace LandscapeCanvas
         static void Reflect(AZ::ReflectContext* context);
 
         BaseShapeNode() = default;
-        explicit BaseShapeNode(GraphModel::GraphPtr graph);
+        explicit BaseShapeNode(JE::Editor::Tools::GraphModel::GraphPtr graph);
 
         const char* GetSubTitle() const override { return SHAPE_CATEGORY_TITLE; }
 

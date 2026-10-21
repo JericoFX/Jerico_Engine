@@ -30,7 +30,7 @@ namespace LandscapeCanvas
         static void Reflect(AZ::ReflectContext* context);
 
         PhysXHeightfieldColliderNode() = default;
-        explicit PhysXHeightfieldColliderNode(GraphModel::GraphPtr graph);
+        explicit PhysXHeightfieldColliderNode(JE::Editor::Tools::GraphModel::GraphPtr graph);
 
         const BaseNodeType GetBaseNodeType() const override;
 

@@ -31,7 +31,7 @@ namespace LandscapeCanvas
 
     const char* ConstantGradientNode::TITLE = "Constant";
 
-    ConstantGradientNode::ConstantGradientNode(GraphModel::GraphPtr graph)
+    ConstantGradientNode::ConstantGradientNode(JE::Editor::Tools::GraphModel::GraphPtr graph)
         : BaseGradientNode(graph)
     {
         RegisterSlots();

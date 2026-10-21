@@ -16,6 +16,7 @@ namespace UnitTest
             { "AtomToolsMainWindowSystemComponent", "{6E42380B-4ECD-47CF-B904-E16AB4E87D0D}", "AtomToolsMainWindowSystemService" },
             { "PerformanceMonitorSystemComponent", "{C2F54D1B-A106-4922-82BE-ACB7A168D4AF}", "PerformanceMonitorService" },
             { "PreviewRendererSystemComponent", "{E9F79FD8-82F2-4C80-966D-95F28484F229}", "PreviewRendererSystem" },
+            { "GraphModelSystemComponent", "{58CE2D43-2DDC-4CEB-BB9F-61B77C50C35D}", "GraphModelService" },
         };
         for (int cycle = 0; cycle != 2; ++cycle)
         {
@@ -30,7 +31,7 @@ namespace UnitTest
             EXPECT_EQ(module->RTTI_GetType(), AZ::Uuid("{B58B7CA8-98C9-4DC8-8607-E094989BBBE2}"));
             EXPECT_EQ(AZStd::string_view(module->RTTI_GetTypeName()), "AtomToolsFrameworkModule");
             const auto descriptors = module->GetComponentDescriptors();
-            ASSERT_EQ(descriptors.size(), 4);
+            ASSERT_EQ(descriptors.size(), 5);
             AZ::ComponentTypeList required;
             size_t index = 0;
             for (auto* descriptor : descriptors)

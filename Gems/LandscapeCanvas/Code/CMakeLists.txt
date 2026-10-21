@@ -31,7 +31,7 @@ if(PAL_TRAIT_BUILD_HOST_TOOLS)
                 AZ::AzToolsFramework
                 Legacy::CryCommon
                 Legacy::Editor.Headers
-                Gem::GraphModel.Editor.Static
+                JE::EditorTools
                 Gem::GradientSignal.Editor
                 Gem::SurfaceData.Editor
                 Gem::LmbrCentral.Editor
@@ -60,12 +60,11 @@ if(PAL_TRAIT_BUILD_HOST_TOOLS)
                 AZ::AzCore
                 AZ::AzToolsFramework
                 Legacy::Editor.Headers
-                Gem::GraphModel.Editor.Static
+                JE::EditorTools
                 Gem::${gem_name}.Editor.Static
         RUNTIME_DEPENDENCIES
             Gem::GraphCanvas.Editor
             Gem::LmbrCentral.Editor
-            Gem::GraphModel.Editor
             Gem::GradientSignal.Editor
             Gem::SurfaceData.Editor
     )
@@ -108,7 +107,7 @@ if(PAL_TRAIT_BUILD_TESTS_SUPPORTED)
                     AZ::AzTest
                     AZ::AzFramework
                     AZ::AzToolsFramework
-                    Gem::GraphModel.Editor.Static
+                    JE::EditorTools
                     Gem::${gem_name}.Editor.Static
             RUNTIME_DEPENDENCIES
                 Gem::GraphCanvasWidgets

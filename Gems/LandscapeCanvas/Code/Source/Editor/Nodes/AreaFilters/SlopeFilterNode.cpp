@@ -31,7 +31,7 @@ namespace LandscapeCanvas
 
     const char* SlopeFilterNode::TITLE = "Slope Filter";
 
-    SlopeFilterNode::SlopeFilterNode(GraphModel::GraphPtr graph)
+    SlopeFilterNode::SlopeFilterNode(JE::Editor::Tools::GraphModel::GraphPtr graph)
         : BaseAreaFilterNode(graph)
     {
         CreateSlotData();

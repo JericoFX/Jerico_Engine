@@ -226,6 +226,7 @@ namespace GraphCanvas
 
         //! Information needed to handle the dragging aspect of the connections
         QPointF m_mousePoint;
+        bool m_movePositionEvaluated = false;
 
         DragContext m_dragContext;
         Endpoint m_previousEndPoint;

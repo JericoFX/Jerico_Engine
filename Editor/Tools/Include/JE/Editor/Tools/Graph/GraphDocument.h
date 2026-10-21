@@ -16,9 +16,9 @@
 #include <AzCore/Component/TickBus.h>
 #include <AzCore/RTTI/RTTI.h>
 #include <GraphCanvas/GraphCanvasBus.h>
-#include <GraphModel/GraphModelBus.h>
-#include <GraphModel/Model/GraphContext.h>
-#include <GraphModel/Model/Node.h>
+#include <JE/Editor/Tools/GraphModel/GraphModelBus.h>
+#include <JE/Editor/Tools/GraphModel/Model/GraphContext.h>
+#include <JE/Editor/Tools/GraphModel/Model/Node.h>
 
 namespace JE::Editor::Tools
 {
@@ -26,7 +26,7 @@ namespace JE::Editor::Tools
     class GraphDocument
         : public AtomToolsDocument
         , public GraphDocumentRequestBus::Handler
-        , public GraphModelIntegration::GraphControllerNotificationBus::Handler
+        , public JE::Editor::Tools::GraphModel::Integration::GraphControllerNotificationBus::Handler
         , public GraphCanvas::SceneNotificationBus::Handler
         , public AZ::SystemTickBus::Handler
     {
@@ -41,7 +41,7 @@ namespace JE::Editor::Tools
         GraphDocument(
             const AZ::Crc32& toolId,
             const DocumentTypeInfo& documentTypeInfo,
-            AZStd::shared_ptr<GraphModel::GraphContext> graphContext,
+            AZStd::shared_ptr<JE::Editor::Tools::GraphModel::GraphContext> graphContext,
             AZStd::shared_ptr<GraphCompiler> graphCompiler);
         virtual ~GraphDocument();
 
@@ -51,7 +51,7 @@ namespace JE::Editor::Tools
             const AZStd::vector<AZStd::string>& documentTypeExtensions,
             const AZStd::vector<AZStd::string>& documentTypeTemplateExtensions,
             const AZStd::string& defaultDocumentTypeTemplatePath,
-            AZStd::shared_ptr<GraphModel::GraphContext> graphContext,
+            AZStd::shared_ptr<JE::Editor::Tools::GraphModel::GraphContext> graphContext,
             AZStd::function<AZStd::shared_ptr<GraphCompiler>()> graphCompilerCreateFn = {});
 
         DocumentObjectInfoVector GetObjectInfo() const override;
@@ -67,7 +67,7 @@ namespace JE::Editor::Tools
         void Clear() override;
 
         // GraphDocumentRequestBus::Handler overrides...
-        GraphModel::GraphPtr GetGraph() const override;
+        JE::Editor::Tools::GraphModel::GraphPtr GetGraph() const override;
         GraphCanvas::GraphId GetGraphId() const override;
         AZStd::string GetGraphName() const override;
         void SetGeneratedFilePaths(const AZStd::vector<AZStd::string>& pathas) override;
@@ -81,7 +81,7 @@ namespace JE::Editor::Tools
         void OnSystemTick() override;
 
         // GraphModelIntegration::GraphControllerNotificationBus::Handler overrides...
-        void OnGraphModelSlotModified(GraphModel::SlotPtr slot) override;
+        void OnGraphModelSlotModified(JE::Editor::Tools::GraphModel::SlotPtr slot) override;
         void OnGraphModelRequestUndoPoint() override;
         void OnGraphModelTriggerUndo() override;
         void OnGraphModelTriggerRedo() override;
@@ -92,7 +92,7 @@ namespace JE::Editor::Tools
         void RecordGraphState();
         void RestoreGraphState(const AZStd::vector<AZ::u8>& graphState);
 
-        void CreateGraph(GraphModel::GraphPtr graph);
+        void CreateGraph(JE::Editor::Tools::GraphModel::GraphPtr graph);
         void DestroyGraph();
 
         void BuildEditablePropertyGroups();
@@ -101,8 +101,8 @@ namespace JE::Editor::Tools
 
         AZ::Entity* m_sceneEntity = {};
         GraphCanvas::GraphId m_graphId;
-        GraphModel::GraphPtr m_graph;
-        AZStd::shared_ptr<GraphModel::GraphContext> m_graphContext;
+        JE::Editor::Tools::GraphModel::GraphPtr m_graph;
+        AZStd::shared_ptr<JE::Editor::Tools::GraphModel::GraphContext> m_graphContext;
         AZStd::vector<AZ::u8> m_graphStateForUndoRedo;
         bool m_modified = {};
 

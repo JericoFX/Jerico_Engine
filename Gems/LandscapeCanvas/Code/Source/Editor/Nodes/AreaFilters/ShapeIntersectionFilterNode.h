@@ -31,7 +31,7 @@ namespace LandscapeCanvas
         static void Reflect(AZ::ReflectContext* context);
 
         ShapeIntersectionFilterNode() = default;
-        explicit ShapeIntersectionFilterNode(GraphModel::GraphPtr graph);
+        explicit ShapeIntersectionFilterNode(JE::Editor::Tools::GraphModel::GraphPtr graph);
 
         static const char* TITLE;
         const char* GetTitle() const override

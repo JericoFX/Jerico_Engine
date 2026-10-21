@@ -30,6 +30,6 @@ namespace JE::Editor::Materials
 
         // AtomToolsFramework::GraphCompiler overrides...
         AZStd::string GetGraphPath() const;
-        bool CompileGraph(GraphModel::GraphPtr graph, const AZStd::string& graphName, const AZStd::string& graphPath) override;
+        bool CompileGraph(JE::Editor::Tools::GraphModel::GraphPtr graph, const AZStd::string& graphName, const AZStd::string& graphPath) override;
     };
 } // namespace JE::Editor::Materials

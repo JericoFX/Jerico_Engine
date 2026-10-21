@@ -31,7 +31,7 @@ namespace LandscapeCanvas
         static void Reflect(AZ::ReflectContext* context);
 
         FastNoiseGradientNode() = default;
-        explicit FastNoiseGradientNode(GraphModel::GraphPtr graph);
+        explicit FastNoiseGradientNode(JE::Editor::Tools::GraphModel::GraphPtr graph);
 
         static const char* TITLE;
         const char* GetTitle() const override { return TITLE; }

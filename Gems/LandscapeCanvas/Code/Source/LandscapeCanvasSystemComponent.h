@@ -57,8 +57,8 @@ namespace LandscapeCanvas
 
         ////////////////////////////////////////////////////////////////////////
         // LandscapeCanvas::LandscapeCanvasNodeFactoryRequestBus::Handler overrides
-        BaseNode::BaseNodePtr CreateNodeForType(GraphModel::GraphPtr graph, const AZ::TypeId& typeId) override;
-        GraphModel::NodePtr CreateNodeForTypeName(GraphModel::GraphPtr graph, AZStd::string_view nodeName) override;
+        BaseNode::BaseNodePtr CreateNodeForType(JE::Editor::Tools::GraphModel::GraphPtr graph, const AZ::TypeId& typeId) override;
+        JE::Editor::Tools::GraphModel::NodePtr CreateNodeForTypeName(JE::Editor::Tools::GraphModel::GraphPtr graph, AZStd::string_view nodeName) override;
         const AZ::TypeId GetComponentTypeId(const AZ::TypeId& nodeTypeId) override;
         int GetNodeRegisteredIndex(const AZ::TypeId& nodeTypeId) const override;
         ////////////////////////////////////////////////////////////////////////
@@ -69,12 +69,12 @@ namespace LandscapeCanvas
         void SetDeserializedEntities(const AZStd::unordered_map<AZ::EntityId, AZ::EntityId>& entities) override;
         ////////////////////////////////////////////////////////////////////////
 
-        using NodeFactoryFunction = AZStd::function<BaseNode::BaseNodePtr(GraphModel::GraphPtr)>;
+        using NodeFactoryFunction = AZStd::function<BaseNode::BaseNodePtr(JE::Editor::Tools::GraphModel::GraphPtr)>;
 
         template<typename NodeType>
         void RegisterFactoryMethod(const AZ::TypeId& typeId)
         {
-            NodeFactoryFunction factory = [](GraphModel::GraphPtr graph)
+            NodeFactoryFunction factory = [](JE::Editor::Tools::GraphModel::GraphPtr graph)
             {
                 return AZStd::make_shared<NodeType>(graph);
             };

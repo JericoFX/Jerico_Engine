@@ -30,7 +30,7 @@ namespace LandscapeCanvas
 
     const char* BoxShapeNode::TITLE = "Box Shape";
 
-    BoxShapeNode::BoxShapeNode(GraphModel::GraphPtr graph)
+    BoxShapeNode::BoxShapeNode(JE::Editor::Tools::GraphModel::GraphPtr graph)
         : BaseShapeNode(graph)
     {
     }

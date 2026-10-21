@@ -16,8 +16,8 @@
 #include <AzCore/Serialization/SerializeContext.h>
 
 // Graph Model
-#include <GraphModel/Integration/Helpers.h>
-#include <GraphModel/Model/Slot.h>
+#include <JE/Editor/Tools/GraphModel/Integration/Helpers.h>
+#include <JE/Editor/Tools/GraphModel/Model/Slot.h>
 
 // Landscape Canvas
 #include <Editor/Core/GraphContext.h>
@@ -41,7 +41,7 @@ namespace LandscapeCanvas
                 editContext->Class<TerrainLayerSpawnerNode>(
                     QT_TRANSLATE_NOOP("LandscapeCanvas", "TerrainLayerSpawnerNode"), "")->
                     ClassElement(AZ::Edit::ClassElements::EditorData, "")->
-                    Attribute(GraphModelIntegration::Attributes::TitlePaletteOverride, "TerrainNodeTitlePalette")
+                    Attribute(JE::Editor::Tools::GraphModel::Integration::Attributes::TitlePaletteOverride, "TerrainNodeTitlePalette")
                     ;
             }
         }
@@ -49,7 +49,7 @@ namespace LandscapeCanvas
 
     const char* TerrainLayerSpawnerNode::TITLE = "Terrain Layer Spawner";
 
-    TerrainLayerSpawnerNode::TerrainLayerSpawnerNode(GraphModel::GraphPtr graph)
+    TerrainLayerSpawnerNode::TerrainLayerSpawnerNode(JE::Editor::Tools::GraphModel::GraphPtr graph)
         : BaseNode(graph)
     {
         RegisterSlots();
@@ -66,9 +66,9 @@ namespace LandscapeCanvas
         return LandscapeCanvas::TERRAIN_TITLE;
     }
 
-    GraphModel::NodeType TerrainLayerSpawnerNode::GetNodeType() const
+    JE::Editor::Tools::GraphModel::NodeType TerrainLayerSpawnerNode::GetNodeType() const
     {
-        return GraphModel::NodeType::WrapperNode;
+        return JE::Editor::Tools::GraphModel::NodeType::WrapperNode;
     }
 
     const BaseNode::BaseNodeType TerrainLayerSpawnerNode::GetBaseNodeType() const

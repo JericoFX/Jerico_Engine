@@ -12,8 +12,8 @@
 #include <AzCore/Serialization/SerializeContext.h>
 #include <AzCore/std/smart_ptr/make_shared.h>
 
-#include <GraphModel/Integration/Helpers.h>
-#include <GraphModel/Model/Slot.h>
+#include <JE/Editor/Tools/GraphModel/Integration/Helpers.h>
+#include <JE/Editor/Tools/GraphModel/Model/Slot.h>
 
 #include "ReferenceShapeNode.h"
 #include <Editor/Core/Core.h>
@@ -35,7 +35,7 @@ namespace LandscapeCanvas
                 editContext->Class<ReferenceShapeNode>(
                     QT_TRANSLATE_NOOP("LandscapeCanvas", "ReferenceShapeNode"), "")->
                     ClassElement(AZ::Edit::ClassElements::EditorData, "")->
-                    Attribute(GraphModelIntegration::Attributes::TitlePaletteOverride, "ShapeNodeTitlePalette")
+                    Attribute(JE::Editor::Tools::GraphModel::Integration::Attributes::TitlePaletteOverride, "ShapeNodeTitlePalette")
                     ;
             }
         }
@@ -43,7 +43,7 @@ namespace LandscapeCanvas
 
     const char* ReferenceShapeNode::TITLE = "Shape Reference";
 
-    ReferenceShapeNode::ReferenceShapeNode(GraphModel::GraphPtr graph)
+    ReferenceShapeNode::ReferenceShapeNode(JE::Editor::Tools::GraphModel::GraphPtr graph)
         : BaseNode(graph)
     {
         RegisterSlots();
@@ -69,23 +69,23 @@ namespace LandscapeCanvas
     {
         CreateEntityNameSlot();
 
-        GraphModel::DataTypePtr boundsDataType = GetGraphContext()->GetDataType(LandscapeCanvasDataTypeEnum::Bounds);
+        JE::Editor::Tools::GraphModel::DataTypePtr boundsDataType = GetGraphContext()->GetDataType(LandscapeCanvasDataTypeEnum::Bounds);
 
-        RegisterSlot(AZStd::make_shared<GraphModel::SlotDefinition>(
-            GraphModel::SlotDirection::Input,
-            GraphModel::SlotType::Data,
+        RegisterSlot(AZStd::make_shared<JE::Editor::Tools::GraphModel::SlotDefinition>(
+            JE::Editor::Tools::GraphModel::SlotDirection::Input,
+            JE::Editor::Tools::GraphModel::SlotType::Data,
             INBOUND_SHAPE_SLOT_ID,
             INBOUND_SHAPE_SLOT_LABEL.toUtf8().constData(),
             INBOUND_SHAPE_INPUT_SLOT_DESCRIPTION.toUtf8().constData(),
-            GraphModel::DataTypeList{ boundsDataType },
+            JE::Editor::Tools::GraphModel::DataTypeList{ boundsDataType },
             AZStd::any(AZ::EntityId())));
 
-        RegisterSlot(AZStd::make_shared<GraphModel::SlotDefinition>(
-            GraphModel::SlotDirection::Output,
-            GraphModel::SlotType::Data,
+        RegisterSlot(AZStd::make_shared<JE::Editor::Tools::GraphModel::SlotDefinition>(
+            JE::Editor::Tools::GraphModel::SlotDirection::Output,
+            JE::Editor::Tools::GraphModel::SlotType::Data,
             BaseShapeNode::BOUNDS_SLOT_ID,
             BaseShapeNode::BOUNDS_SLOT_LABEL.toUtf8().constData(),
             BaseShapeNode::BOUNDS_OUTPUT_SLOT_DESCRIPTION.toUtf8().constData(),
-            GraphModel::DataTypeList{ boundsDataType }));
+            JE::Editor::Tools::GraphModel::DataTypeList{ boundsDataType }));
     }
 } // namespace LandscapeCanvas

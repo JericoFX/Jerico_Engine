@@ -31,7 +31,7 @@
 #include <GradientSignal/Editor/EditorGradientTypeIds.h>
 
 // Graph Model
-#include <GraphModel/Integration/NodePalette/StandardNodePaletteItem.h>
+#include <JE/Editor/Tools/GraphModel/Integration/NodePalette/StandardNodePaletteItem.h>
 
 // Landscape Canvas
 #include "LandscapeCanvasSystemComponent.h"
@@ -198,7 +198,7 @@ namespace LandscapeCanvas
     template<typename NodeType>
     void RegisterNode([[maybe_unused]] const AZ::TypeId& typeId, AZ::ReflectContext* context)
     {
-        GraphModelIntegration::ReflectAndCreateNodeMimeEvent<NodeType>(context);
+        JE::Editor::Tools::GraphModel::Integration::ReflectAndCreateNodeMimeEvent<NodeType>(context);
     }
 
     void LandscapeCanvasSystemComponent::NotifyRegisterViews()
@@ -341,7 +341,7 @@ namespace LandscapeCanvas
         AzToolsFramework::EditorEvents::Bus::Handler::BusDisconnect();
     }
 
-    BaseNode::BaseNodePtr LandscapeCanvasSystemComponent::CreateNodeForType(GraphModel::GraphPtr graph, const AZ::TypeId& typeId)
+    BaseNode::BaseNodePtr LandscapeCanvasSystemComponent::CreateNodeForType(JE::Editor::Tools::GraphModel::GraphPtr graph, const AZ::TypeId& typeId)
     {
         auto it = m_nodeFactory.find(typeId);
         if (it == m_nodeFactory.end())
@@ -352,13 +352,13 @@ namespace LandscapeCanvas
         return it->second(graph);
     }
 
-    GraphModel::NodePtr LandscapeCanvasSystemComponent::CreateNodeForTypeName(GraphModel::GraphPtr graph, AZStd::string_view nodeName)
+    JE::Editor::Tools::GraphModel::NodePtr LandscapeCanvasSystemComponent::CreateNodeForTypeName(JE::Editor::Tools::GraphModel::GraphPtr graph, AZStd::string_view nodeName)
     {
         AZ::TypeId nodeTypeId = AZ::TypeId::CreateNull();
 
         // Search through all registered Nodes to find the TypeId for one that
         // matches the requested class name.
-        m_serializeContext->EnumerateDerived<GraphModel::Node>(
+        m_serializeContext->EnumerateDerived<JE::Editor::Tools::GraphModel::Node>(
             [&nodeTypeId, nodeName](const AZ::SerializeContext::ClassData* componentClass, const AZ::Uuid& knownType) -> bool
         {
             AZ_UNUSED(knownType);

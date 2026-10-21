@@ -538,7 +538,7 @@ function(get_external_subdirectories_in_use output_subdirs)
     if(PAL_TRAIT_BUILD_HOST_TOOLS)
         get_all_external_subdirectories(native_editor_registered_subdirs)
         query_gem_paths_from_external_subdirs(native_editor_tool_subdirs
-            "GraphCanvas;GraphModel" "${native_editor_registered_subdirs}")
+            "GraphCanvas" "${native_editor_registered_subdirs}")
         list(APPEND all_external_subdirs ${native_editor_tool_subdirs})
     endif()
     JE_collect_active_external_subdirectories(all_external_subdirs "${all_external_subdirs}")

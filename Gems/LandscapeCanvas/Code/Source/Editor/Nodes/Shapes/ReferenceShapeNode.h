@@ -21,7 +21,7 @@ namespace LandscapeCanvas
         static void Reflect(AZ::ReflectContext* context);
 
         ReferenceShapeNode() = default;
-        explicit ReferenceShapeNode(GraphModel::GraphPtr graph);
+        explicit ReferenceShapeNode(JE::Editor::Tools::GraphModel::GraphPtr graph);
 
         static const char* TITLE;
         const char* GetTitle() const override;

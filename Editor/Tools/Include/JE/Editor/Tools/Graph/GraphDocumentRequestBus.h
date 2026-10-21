@@ -10,7 +10,7 @@
 
 #include <AzCore/EBus/EBus.h>
 #include <GraphCanvas/Editor/EditorTypes.h>
-#include <GraphModel/Model/DataType.h>
+#include <JE/Editor/Tools/GraphModel/Model/DataType.h>
 
 namespace JE::Editor::Tools
 {
@@ -23,7 +23,7 @@ namespace JE::Editor::Tools
         typedef AZ::Uuid BusIdType;
 
         // Get the graph model graph pointer for this document.
-        virtual GraphModel::GraphPtr GetGraph() const = 0;
+        virtual JE::Editor::Tools::GraphModel::GraphPtr GetGraph() const = 0;
 
         // Get the graph canvas scene ID for this document.
         virtual GraphCanvas::GraphId GetGraphId() const = 0;

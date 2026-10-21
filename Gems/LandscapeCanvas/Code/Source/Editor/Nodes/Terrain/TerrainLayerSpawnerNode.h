@@ -28,12 +28,12 @@ namespace LandscapeCanvas
         static void Reflect(AZ::ReflectContext* context);
 
         TerrainLayerSpawnerNode() = default;
-        explicit TerrainLayerSpawnerNode(GraphModel::GraphPtr graph);
+        explicit TerrainLayerSpawnerNode(JE::Editor::Tools::GraphModel::GraphPtr graph);
 
         static const char* TITLE;
         const char* GetTitle() const override;
         const char* GetSubTitle() const override;
-        GraphModel::NodeType GetNodeType() const override;
+        JE::Editor::Tools::GraphModel::NodeType GetNodeType() const override;
         const BaseNodeType GetBaseNodeType() const override;
 
     protected:

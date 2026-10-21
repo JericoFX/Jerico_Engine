@@ -31,7 +31,7 @@ namespace LandscapeCanvas
 
     const char* SurfaceMaskGradientNode::TITLE = "Surface Mask";
 
-    SurfaceMaskGradientNode::SurfaceMaskGradientNode(GraphModel::GraphPtr graph)
+    SurfaceMaskGradientNode::SurfaceMaskGradientNode(JE::Editor::Tools::GraphModel::GraphPtr graph)
         : BaseGradientNode(graph)
     {
         RegisterSlots();

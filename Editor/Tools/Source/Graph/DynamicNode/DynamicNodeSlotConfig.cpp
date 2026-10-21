@@ -181,7 +181,7 @@ namespace JE::Editor::Tools
         return dataType ? dataType->GetDisplayName() : AZStd::string();
     }
 
-    GraphModel::DataTypePtr DynamicNodeSlotConfig::GetDefaultDataType() const
+    JE::Editor::Tools::GraphModel::DataTypePtr DynamicNodeSlotConfig::GetDefaultDataType() const
     {
         const auto& supportedDataTypes = GetSupportedDataTypes();
         for (const auto& dataType : supportedDataTypes)
@@ -191,7 +191,7 @@ namespace JE::Editor::Tools
                 return dataType;
             }
         }
-        return !supportedDataTypes.empty() ? supportedDataTypes.front() : GraphModel::DataTypePtr();
+        return !supportedDataTypes.empty() ? supportedDataTypes.front() : JE::Editor::Tools::GraphModel::DataTypePtr();
     }
 
     AZStd::vector<AZStd::string> DynamicNodeSlotConfig::GetSupportedDataTypeNames() const
@@ -204,9 +204,9 @@ namespace JE::Editor::Tools
         return dataTypeNames;
     }
 
-    GraphModel::DataTypeList DynamicNodeSlotConfig::GetSupportedDataTypes() const
+    JE::Editor::Tools::GraphModel::DataTypeList DynamicNodeSlotConfig::GetSupportedDataTypes() const
     {
-        GraphModel::DataTypeList supportedDataTypes;
+        JE::Editor::Tools::GraphModel::DataTypeList supportedDataTypes;
         if (!m_supportedDataTypeRegex.empty())
         {
             DynamicNodeManagerRequestBus::BroadcastResult(supportedDataTypes, &DynamicNodeManagerRequestBus::Events::GetRegisteredDataTypes);

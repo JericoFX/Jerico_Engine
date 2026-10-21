@@ -13,7 +13,7 @@
 #include <AzCore/Component/EntityId.h>
 #include <AzCore/std/smart_ptr/shared_ptr.h>
 
-#include <GraphModel/Model/Node.h>
+#include <JE/Editor/Tools/GraphModel/Model/Node.h>
 
 namespace AZ
 {
@@ -28,7 +28,7 @@ namespace LandscapeCanvas
      * tracking the associated vegetation Entity that holds the node, and other
      * common functionality
      */
-    class BaseNode : public GraphModel::Node
+    class BaseNode : public JE::Editor::Tools::GraphModel::Node
     {
     public:
         AZ_CLASS_ALLOCATOR(BaseNode, AZ::SystemAllocator);
@@ -55,7 +55,7 @@ namespace LandscapeCanvas
         static void Reflect(AZ::ReflectContext* context);
 
         BaseNode() = default;
-        explicit BaseNode(GraphModel::GraphPtr graph);
+        explicit BaseNode(JE::Editor::Tools::GraphModel::GraphPtr graph);
 
         virtual const BaseNodeType GetBaseNodeType() const { return Invalid; }
 
@@ -78,7 +78,7 @@ namespace LandscapeCanvas
         bool IsAreaExtender() const;
 
         /// Override the PostLoadSetup calls to ensure the entity name is refreshed correctly.
-        void PostLoadSetup(GraphModel::GraphPtr graph, GraphModel::NodeId id) override;
+        void PostLoadSetup(JE::Editor::Tools::GraphModel::GraphPtr graph, JE::Editor::Tools::GraphModel::NodeId id) override;
         void PostLoadSetup() override;
 
     protected:

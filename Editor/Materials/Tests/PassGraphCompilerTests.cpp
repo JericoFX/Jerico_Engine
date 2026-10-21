@@ -12,7 +12,7 @@
 #include <AzCore/std/smart_ptr/make_shared.h>
 #include <AzTest/AzTest.h>
 #include <AzTest/Utils.h>
-#include <GraphModel/Model/GraphContext.h>
+#include <JE/Editor/Tools/GraphModel/Model/GraphContext.h>
 
 namespace UnitTest
 {
@@ -35,9 +35,9 @@ namespace UnitTest
         JE::Editor::Tools::DynamicNodeConfig config;
         config.m_title = "Pass";
         ASSERT_TRUE(nodeManager.RegisterConfig(config));
-        const auto context = AZStd::make_shared<GraphModel::GraphContext>(
-            "Pass Graph", ".passgraph", GraphModel::DataTypeList{});
-        const auto graph = AZStd::make_shared<GraphModel::Graph>(context);
+        const auto context = AZStd::make_shared<JE::Editor::Tools::GraphModel::GraphContext>(
+            "Pass Graph", ".passgraph", JE::Editor::Tools::GraphModel::DataTypeList{});
+        const auto graph = AZStd::make_shared<JE::Editor::Tools::GraphModel::Graph>(context);
         graph->AddNode(AZStd::make_shared<JE::Editor::Tools::DynamicNode>(graph, toolId, config.m_id));
         ASSERT_EQ(graph->GetNodeCount(), 1);
         const AZStd::string path = directory.Resolve("Valid.passgraph").Native();

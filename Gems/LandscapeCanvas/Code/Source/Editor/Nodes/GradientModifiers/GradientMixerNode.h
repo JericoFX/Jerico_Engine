@@ -28,7 +28,7 @@ namespace LandscapeCanvas
         static void Reflect(AZ::ReflectContext* context);
 
         GradientMixerNode() = default;
-        explicit GradientMixerNode(GraphModel::GraphPtr graph);
+        explicit GradientMixerNode(JE::Editor::Tools::GraphModel::GraphPtr graph);
 
         static const char* TITLE;
         const char* GetTitle() const override;

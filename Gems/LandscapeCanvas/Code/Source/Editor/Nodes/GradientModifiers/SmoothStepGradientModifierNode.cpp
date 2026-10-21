@@ -30,7 +30,7 @@ namespace LandscapeCanvas
 
     const char* SmoothStepGradientModifierNode::TITLE = "Smooth-Step";
 
-    SmoothStepGradientModifierNode::SmoothStepGradientModifierNode(GraphModel::GraphPtr graph)
+    SmoothStepGradientModifierNode::SmoothStepGradientModifierNode(JE::Editor::Tools::GraphModel::GraphPtr graph)
         : BaseGradientModifierNode(graph)
     {
     }

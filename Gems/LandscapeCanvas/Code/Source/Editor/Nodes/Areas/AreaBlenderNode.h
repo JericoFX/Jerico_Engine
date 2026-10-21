@@ -32,7 +32,7 @@ namespace LandscapeCanvas
         static void Reflect(AZ::ReflectContext* context);
 
         AreaBlenderNode() = default;
-        explicit AreaBlenderNode(GraphModel::GraphPtr graph);
+        explicit AreaBlenderNode(JE::Editor::Tools::GraphModel::GraphPtr graph);
 
         static const char* TITLE;
         const char* GetTitle() const override { return TITLE; }

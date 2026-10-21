@@ -11,9 +11,9 @@
 #include <JE/Editor/Tools/Graph/DynamicNode/DynamicNodeManagerRequestBus.h>
 #include <JE/Editor/Tools/Util/Util.h>
 #include <AzCore/std/smart_ptr/make_shared.h>
-#include <GraphModel/Model/Graph.h>
-#include <GraphModel/Model/GraphContext.h>
-#include <GraphModel/Model/Slot.h>
+#include <JE/Editor/Tools/GraphModel/Model/Graph.h>
+#include <JE/Editor/Tools/GraphModel/Model/GraphContext.h>
+#include <JE/Editor/Tools/GraphModel/Model/Slot.h>
 
 namespace JE::Editor::Tools
 {
@@ -25,7 +25,7 @@ namespace JE::Editor::Tools
 
         if (auto serializeContext = azrtti_cast<AZ::SerializeContext*>(context))
         {
-            serializeContext->Class<DynamicNode, GraphModel::Node>()
+            serializeContext->Class<DynamicNode, JE::Editor::Tools::GraphModel::Node>()
                 ->Version(0)
                 ->Field("toolId", &DynamicNode::m_toolId)
                 ->Field("configId", &DynamicNode::m_configId)
@@ -41,8 +41,8 @@ namespace JE::Editor::Tools
         }
     }
 
-    DynamicNode::DynamicNode(GraphModel::GraphPtr ownerGraph, const AZ::Crc32& toolId, const AZ::Uuid& configId)
-        : GraphModel::Node(ownerGraph)
+    DynamicNode::DynamicNode(JE::Editor::Tools::GraphModel::GraphPtr ownerGraph, const AZ::Crc32& toolId, const AZ::Uuid& configId)
+        : JE::Editor::Tools::GraphModel::Node(ownerGraph)
         , m_toolId(toolId)
         , m_configId(configId)
     {
@@ -110,9 +110,9 @@ namespace JE::Editor::Tools
                 continue;
             }
 
-            RegisterSlot(AZStd::make_shared<GraphModel::SlotDefinition>(
-                GraphModel::SlotDirection::Input,
-                GraphModel::SlotType::Property,
+            RegisterSlot(AZStd::make_shared<JE::Editor::Tools::GraphModel::SlotDefinition>(
+                JE::Editor::Tools::GraphModel::SlotDirection::Input,
+                JE::Editor::Tools::GraphModel::SlotType::Property,
                 slotConfig.m_name,
                 slotConfig.m_displayName,
                 slotConfig.m_description,
@@ -152,9 +152,9 @@ namespace JE::Editor::Tools
                 continue;
             }
 
-            RegisterSlot(AZStd::make_shared<GraphModel::SlotDefinition>(
-                GraphModel::SlotDirection::Input,
-                GraphModel::SlotType::Data,
+            RegisterSlot(AZStd::make_shared<JE::Editor::Tools::GraphModel::SlotDefinition>(
+                JE::Editor::Tools::GraphModel::SlotDirection::Input,
+                JE::Editor::Tools::GraphModel::SlotType::Data,
                 slotConfig.m_name,
                 slotConfig.m_displayName,
                 slotConfig.m_description,
@@ -180,9 +180,9 @@ namespace JE::Editor::Tools
                 continue;
             }
 
-            RegisterSlot(AZStd::make_shared<GraphModel::SlotDefinition>(
-                GraphModel::SlotDirection::Output,
-                GraphModel::SlotType::Data,
+            RegisterSlot(AZStd::make_shared<JE::Editor::Tools::GraphModel::SlotDefinition>(
+                JE::Editor::Tools::GraphModel::SlotDirection::Output,
+                JE::Editor::Tools::GraphModel::SlotType::Data,
                 slotConfig.m_name,
                 slotConfig.m_displayName,
                 slotConfig.m_description,

@@ -30,7 +30,7 @@ namespace LandscapeCanvas
 
     const char* SphereShapeNode::TITLE = "Sphere Shape";
 
-    SphereShapeNode::SphereShapeNode(GraphModel::GraphPtr graph)
+    SphereShapeNode::SphereShapeNode(JE::Editor::Tools::GraphModel::GraphPtr graph)
         : BaseShapeNode(graph)
     {
     }

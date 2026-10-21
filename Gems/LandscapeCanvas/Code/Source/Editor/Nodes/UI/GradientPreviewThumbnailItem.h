@@ -17,18 +17,18 @@
 #include <GradientSignal/Editor/EditorGradientPreviewRenderer.h>
 
 // Graph Model
-#include <GraphModel/Integration/ThumbnailItem.h>
+#include <JE/Editor/Tools/GraphModel/Integration/ThumbnailItem.h>
 
 namespace LandscapeCanvasEditor
 {
     class GradientPreviewThumbnailItem
-        : public GraphModelIntegration::ThumbnailItem
+        : public JE::Editor::Tools::GraphModel::Integration::ThumbnailItem
         , public GradientSignal::EditorGradientPreviewRenderer
         , public LmbrCentral::DependencyNotificationBus::Handler
         , public GradientSignal::GradientPreviewRequestBus::Handler
     {
     public:
-        AZ_RTTI(GradientPreviewThumbnailItem, "{D2FA7FB4-9E47-41AD-95A2-818910B09A67}", GraphModelIntegration::ThumbnailItem);
+        AZ_RTTI(GradientPreviewThumbnailItem, "{D2FA7FB4-9E47-41AD-95A2-818910B09A67}", JE::Editor::Tools::GraphModel::Integration::ThumbnailItem);
 
         using SampleFilterFunc = AZStd::function<float(float)>;
 

@@ -30,7 +30,7 @@ namespace LandscapeCanvas
         static void Reflect(AZ::ReflectContext* context);
 
         TerrainSurfaceMaterialsListNode() = default;
-        explicit TerrainSurfaceMaterialsListNode(GraphModel::GraphPtr graph);
+        explicit TerrainSurfaceMaterialsListNode(JE::Editor::Tools::GraphModel::GraphPtr graph);
 
         const BaseNodeType GetBaseNodeType() const override;
 

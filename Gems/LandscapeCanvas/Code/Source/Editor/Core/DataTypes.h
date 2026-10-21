@@ -13,7 +13,7 @@
 #include <AzCore/std/string/string_view.h>
 
 // GraphModel
-#include <GraphModel/Model/DataType.h>
+#include <JE/Editor/Tools/GraphModel/Model/DataType.h>
 
 namespace LandscapeCanvas
 {

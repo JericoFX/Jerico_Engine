@@ -14,7 +14,7 @@
 #include <AzCore/std/smart_ptr/make_shared.h>
 
 // Graph Model
-#include <GraphModel/Model/Slot.h>
+#include <JE/Editor/Tools/GraphModel/Model/Slot.h>
 
 // Landscape Canvas
 #include "ShapeIntersectionFilterNode.h"
@@ -35,7 +35,7 @@ namespace LandscapeCanvas
 
     const char* ShapeIntersectionFilterNode::TITLE = "Shape Intersection Filter";
 
-    ShapeIntersectionFilterNode::ShapeIntersectionFilterNode(GraphModel::GraphPtr graph)
+    ShapeIntersectionFilterNode::ShapeIntersectionFilterNode(JE::Editor::Tools::GraphModel::GraphPtr graph)
         : BaseAreaFilterNode(graph)
     {
         RegisterSlots();
@@ -44,15 +44,15 @@ namespace LandscapeCanvas
 
     void ShapeIntersectionFilterNode::RegisterSlots()
     {
-        GraphModel::DataTypePtr boundsDataType = GetGraphContext()->GetDataType(LandscapeCanvasDataTypeEnum::Bounds);
+        JE::Editor::Tools::GraphModel::DataTypePtr boundsDataType = GetGraphContext()->GetDataType(LandscapeCanvasDataTypeEnum::Bounds);
 
-        RegisterSlot(AZStd::make_shared<GraphModel::SlotDefinition>(
-            GraphModel::SlotDirection::Input,
-            GraphModel::SlotType::Data,
+        RegisterSlot(AZStd::make_shared<JE::Editor::Tools::GraphModel::SlotDefinition>(
+            JE::Editor::Tools::GraphModel::SlotDirection::Input,
+            JE::Editor::Tools::GraphModel::SlotType::Data,
             INBOUND_SHAPE_SLOT_ID,
             INBOUND_SHAPE_SLOT_LABEL.toUtf8().constData(),
             INBOUND_SHAPE_INPUT_SLOT_DESCRIPTION.toUtf8().constData(),
-            GraphModel::DataTypeList{ boundsDataType },
+            JE::Editor::Tools::GraphModel::DataTypeList{ boundsDataType },
             AZStd::any(AZ::EntityId())));
     }
 } // namespace LandscapeCanvas

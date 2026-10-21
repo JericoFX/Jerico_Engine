@@ -10,7 +10,7 @@
 #include <AzToolsFramework/API/ToolsApplicationAPI.h>
 
 // GraphModel
-#include <GraphModel/GraphModelBus.h>
+#include <JE/Editor/Tools/GraphModel/GraphModelBus.h>
 
 // Landscape Canvas
 #include <Editor/Core/Core.h>
@@ -49,11 +49,11 @@ namespace LandscapeCanvasEditor
         AzToolsFramework::ToolsApplicationRequests::Bus::BroadcastResult(selectedEntities, &AzToolsFramework::ToolsApplicationRequests::GetSelectedEntities);
 
         // Retrieve all the nodes in our scene
-        GraphModel::NodePtrList nodeList;
-        GraphModelIntegration::GraphControllerRequestBus::EventResult(nodeList, graphId, &GraphModelIntegration::GraphControllerRequests::GetNodes);
+        JE::Editor::Tools::GraphModel::NodePtrList nodeList;
+        JE::Editor::Tools::GraphModel::Integration::GraphControllerRequestBus::EventResult(nodeList, graphId, &JE::Editor::Tools::GraphModel::Integration::GraphControllerRequests::GetNodes);
 
         // Find the nodes in our scene that correspond to the Entities
-        GraphModel::NodePtrList nodesToSelect;
+        JE::Editor::Tools::GraphModel::NodePtrList nodesToSelect;
         for (const auto& node : nodeList)
         {
             auto baseNodePtr = static_cast<LandscapeCanvas::BaseNode*>(node.get());
@@ -71,9 +71,9 @@ namespace LandscapeCanvasEditor
         }
         else
         {
-            GraphModelIntegration::GraphControllerRequestBus::Event(graphId, &GraphModelIntegration::GraphControllerRequests::ClearSelection);
-            GraphModelIntegration::GraphControllerRequestBus::Event(graphId, &GraphModelIntegration::GraphControllerRequests::SetSelected, nodesToSelect, true);
-            GraphModelIntegration::GraphControllerRequestBus::Event(graphId, &GraphModelIntegration::GraphControllerRequests::CenterOnNodes, nodesToSelect);
+            JE::Editor::Tools::GraphModel::Integration::GraphControllerRequestBus::Event(graphId, &JE::Editor::Tools::GraphModel::Integration::GraphControllerRequests::ClearSelection);
+            JE::Editor::Tools::GraphModel::Integration::GraphControllerRequestBus::Event(graphId, &JE::Editor::Tools::GraphModel::Integration::GraphControllerRequests::SetSelected, nodesToSelect, true);
+            JE::Editor::Tools::GraphModel::Integration::GraphControllerRequestBus::Event(graphId, &JE::Editor::Tools::GraphModel::Integration::GraphControllerRequests::CenterOnNodes, nodesToSelect);
         }
 
         return GraphCanvas::ContextMenuAction::SceneReaction::Nothing;

@@ -28,7 +28,7 @@ namespace LandscapeCanvas
         static void Reflect(AZ::ReflectContext* context);
 
         BaseGradientNode() = default;
-        explicit BaseGradientNode(GraphModel::GraphPtr graph);
+        explicit BaseGradientNode(JE::Editor::Tools::GraphModel::GraphPtr graph);
 
         const BaseNodeType GetBaseNodeType() const override { return BaseNode::Gradient; }
 

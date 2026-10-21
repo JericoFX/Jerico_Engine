@@ -16,7 +16,7 @@
 #include <AzCore/std/containers/set.h>
 #include <AzCore/std/containers/unordered_map.h>
 #include <AzCore/std/string/string.h>
-#include <GraphModel/Model/DataType.h>
+#include <JE/Editor/Tools/GraphModel/Model/DataType.h>
 
 namespace JE::Editor::Tools
 {
@@ -59,14 +59,14 @@ namespace JE::Editor::Tools
         AZStd::string GetDefaultDataTypeName() const;
 
         //! @returns the first register data type matching the default data type name.
-        GraphModel::DataTypePtr GetDefaultDataType() const;
+        JE::Editor::Tools::GraphModel::DataTypePtr GetDefaultDataType() const;
 
         //! @returns a vector of names of all the data types returned from GetSupportedDataTypes, primarily used to feed options into the
         //! property editor for selection.
         AZStd::vector<AZStd::string> GetSupportedDataTypeNames() const;
 
         //! @returns a list of all registered graph model data types with names matching the supported data type regular expression.
-        GraphModel::DataTypeList GetSupportedDataTypes() const;
+        JE::Editor::Tools::GraphModel::DataTypeList GetSupportedDataTypes() const;
 
         //! @returns the name of this object that will be displayed in the reflected property editor.
         AZStd::string GetDisplayNameForEditor() const;

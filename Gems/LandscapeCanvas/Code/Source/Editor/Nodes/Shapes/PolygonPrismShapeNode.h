@@ -22,7 +22,7 @@ namespace LandscapeCanvas
         static void Reflect(AZ::ReflectContext* context);
 
         PolygonPrismShapeNode() = default;
-        explicit PolygonPrismShapeNode(GraphModel::GraphPtr graph);
+        explicit PolygonPrismShapeNode(JE::Editor::Tools::GraphModel::GraphPtr graph);
 
         static const char* TITLE;
         const char* GetTitle() const override { return TITLE; }

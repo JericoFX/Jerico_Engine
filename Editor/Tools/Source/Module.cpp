@@ -6,6 +6,7 @@
 #include <Window/AtomToolsMainWindowSystemComponent.h>
 #include <PerformanceMonitor/PerformanceMonitorSystemComponent.h>
 #include <PreviewRenderer/PreviewRendererSystemComponent.h>
+#include <GraphModel/GraphModelSystemComponent.h>
 
 namespace JE::Editor::Tools
 {
@@ -22,6 +23,7 @@ namespace JE::Editor::Tools
                 AtomToolsMainWindowSystemComponent::CreateDescriptor(),
                 PerformanceMonitorSystemComponent::CreateDescriptor(),
                 PreviewRendererSystemComponent::CreateDescriptor(),
+                GraphModel::GraphModelSystemComponent::CreateDescriptor(),
             });
         }
 
@@ -32,6 +34,7 @@ namespace JE::Editor::Tools
                 azrtti_typeid<AtomToolsMainWindowSystemComponent>(),
                 azrtti_typeid<PerformanceMonitorSystemComponent>(),
                 azrtti_typeid<PreviewRendererSystemComponent>(),
+                azrtti_typeid<GraphModel::GraphModelSystemComponent>(),
             };
         }
     };

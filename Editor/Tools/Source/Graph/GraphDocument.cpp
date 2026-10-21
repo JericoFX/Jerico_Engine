@@ -29,8 +29,8 @@
 #include <GraphCanvas/Components/GraphCanvasPropertyBus.h>
 #include <GraphCanvas/Components/SceneBus.h>
 #include <GraphCanvas/GraphCanvasBus.h>
-#include <GraphModel/Model/Connection.h>
-#include <GraphModel/Model/Graph.h>
+#include <JE/Editor/Tools/GraphModel/Model/Connection.h>
+#include <JE/Editor/Tools/GraphModel/Model/Graph.h>
 
 namespace JE::Editor::Tools
 {
@@ -63,7 +63,7 @@ namespace JE::Editor::Tools
     GraphDocument::GraphDocument(
         const AZ::Crc32& toolId,
         const DocumentTypeInfo& documentTypeInfo,
-        AZStd::shared_ptr<GraphModel::GraphContext> graphContext,
+        AZStd::shared_ptr<JE::Editor::Tools::GraphModel::GraphContext> graphContext,
         AZStd::shared_ptr<GraphCompiler> graphCompiler)
         : AtomToolsDocument(toolId, documentTypeInfo)
         , m_graphContext(graphContext)
@@ -72,11 +72,11 @@ namespace JE::Editor::Tools
         AZ_Assert(m_graphContext, "Graph context must be valid in order to create a graph document.");
 
         // Creating the scene entity and graph for this document. This may end up moving to the view.
-        m_graph = AZStd::make_shared<GraphModel::Graph>(m_graphContext);
+        m_graph = AZStd::make_shared<JE::Editor::Tools::GraphModel::Graph>(m_graphContext);
         AZ_Assert(m_graph, "Failed to create graph object.");
 
-        GraphModelIntegration::GraphManagerRequestBus::BroadcastResult(
-            m_sceneEntity, &GraphModelIntegration::GraphManagerRequests::CreateScene, m_graph, m_toolId);
+        JE::Editor::Tools::GraphModel::Integration::GraphManagerRequestBus::BroadcastResult(
+            m_sceneEntity, &JE::Editor::Tools::GraphModel::Integration::GraphManagerRequests::CreateScene, m_graph, m_toolId);
         AZ_Assert(m_sceneEntity, "Failed to create graph scene entity.");
 
         m_graphId = m_sceneEntity->GetId();
@@ -85,7 +85,7 @@ namespace JE::Editor::Tools
         RecordGraphState();
 
         // Listen for GraphController notifications on the new graph.
-        GraphModelIntegration::GraphControllerNotificationBus::Handler::BusConnect(m_graphId);
+        JE::Editor::Tools::GraphModel::Integration::GraphControllerNotificationBus::Handler::BusConnect(m_graphId);
         GraphCanvas::SceneNotificationBus::Handler::BusConnect(m_graphId);
         GraphDocumentRequestBus::Handler::BusConnect(m_id);
         AZ::SystemTickBus::Handler::BusConnect();
@@ -130,7 +130,7 @@ namespace JE::Editor::Tools
         AZ::SystemTickBus::Handler::BusDisconnect();
         GraphDocumentRequestBus::Handler::BusDisconnect();
         GraphCanvas::SceneNotificationBus::Handler::BusDisconnect();
-        GraphModelIntegration::GraphControllerNotificationBus::Handler::BusDisconnect();
+        JE::Editor::Tools::GraphModel::Integration::GraphControllerNotificationBus::Handler::BusDisconnect();
 
         DestroyGraph();
 
@@ -144,7 +144,7 @@ namespace JE::Editor::Tools
         const AZStd::vector<AZStd::string>& documentTypeExtensions,
         const AZStd::vector<AZStd::string>& documentTypeTemplateExtensions,
         const AZStd::string& defaultDocumentTypeTemplatePath,
-        AZStd::shared_ptr<GraphModel::GraphContext> graphContext,
+        AZStd::shared_ptr<JE::Editor::Tools::GraphModel::GraphContext> graphContext,
         AZStd::function<AZStd::shared_ptr<GraphCompiler>()> graphCompilerCreateFn)
     {
         DocumentTypeInfo documentType;
@@ -207,7 +207,7 @@ namespace JE::Editor::Tools
         }
 
         auto loadResult = AZ::JsonSerializationUtils::LoadAnyObjectFromFile(m_absolutePath);
-        if (!loadResult || !loadResult.GetValue().is<GraphModel::Graph>())
+        if (!loadResult || !loadResult.GetValue().is<JE::Editor::Tools::GraphModel::Graph>())
         {
             return OpenFailed();
         }
@@ -217,8 +217,8 @@ namespace JE::Editor::Tools
         AZ::ComponentApplicationBus::BroadcastResult(serializeContext, &AZ::ComponentApplicationRequests::GetSerializeContext);
         AZ_Assert(serializeContext, "Failed to acquire application serialize context.");
 
-        GraphModel::GraphPtr graph;
-        graph.reset(serializeContext->CloneObject(AZStd::any_cast<const GraphModel::Graph>(&loadResult.GetValue())));
+        JE::Editor::Tools::GraphModel::GraphPtr graph;
+        graph.reset(serializeContext->CloneObject(AZStd::any_cast<const JE::Editor::Tools::GraphModel::Graph>(&loadResult.GetValue())));
 
         m_modified = false;
         CreateGraph(graph);
@@ -339,7 +339,7 @@ namespace JE::Editor::Tools
         AtomToolsDocument::Clear();
     }
 
-    GraphModel::GraphPtr GraphDocument::GetGraph() const
+    JE::Editor::Tools::GraphModel::GraphPtr GraphDocument::GetGraph() const
     {
         return m_graph;
     }
@@ -396,7 +396,7 @@ namespace JE::Editor::Tools
                              graphPath = GetAbsolutePath()]()
         {
             // Deserialize the buffer to create a copy of the graph that can be safely transformed from the job thread.
-            GraphModel::GraphPtr graph = AZStd::make_shared<GraphModel::Graph>(graphContext);
+            JE::Editor::Tools::GraphModel::GraphPtr graph = AZStd::make_shared<JE::Editor::Tools::GraphModel::Graph>(graphContext);
             AZ::Utils::LoadObjectFromBufferInPlace(graphBuffer.data(), graphBuffer.size(), *graph.get());
             graph->PostLoadSetup(graphContext);
 
@@ -439,7 +439,7 @@ namespace JE::Editor::Tools
         }
     }
 
-    void GraphDocument::OnGraphModelSlotModified([[maybe_unused]] GraphModel::SlotPtr slot)
+    void GraphDocument::OnGraphModelSlotModified([[maybe_unused]] JE::Editor::Tools::GraphModel::SlotPtr slot)
     {
         m_modified = true;
         m_buildPropertiesQueued = true;
@@ -508,7 +508,7 @@ namespace JE::Editor::Tools
         }
         if (GetHistoryState() != expected)
         {
-            auto expectedGraph = AZStd::make_shared<GraphModel::Graph>(m_graphContext);
+            auto expectedGraph = AZStd::make_shared<JE::Editor::Tools::GraphModel::Graph>(m_graphContext);
             if (!AZ::Utils::LoadObjectFromBufferInPlace(expected.data(), expected.size(), *expectedGraph))
             {
                 AZ_Error("GraphDocument", false, "Cannot replay graph edit: expected snapshot could not be loaded.");
@@ -529,7 +529,7 @@ namespace JE::Editor::Tools
             }
         }
         // Do not clear the canvas or replace its graph until the complete snapshot is loaded.
-        auto candidate = AZStd::make_shared<GraphModel::Graph>(m_graphContext);
+        auto candidate = AZStd::make_shared<JE::Editor::Tools::GraphModel::Graph>(m_graphContext);
         if (!AZ::Utils::LoadObjectFromBufferInPlace(target.data(), target.size(), *candidate))
         {
             AZ_Error("GraphDocument", false, "Cannot replay graph edit: snapshot could not be loaded.");
@@ -558,7 +558,7 @@ namespace JE::Editor::Tools
     {
         // Restore a version of the graph that was previously serialized to a byte stream
         m_graphStateForUndoRedo = graphState;
-        GraphModel::GraphPtr graph = AZStd::make_shared<GraphModel::Graph>(m_graphContext);
+        JE::Editor::Tools::GraphModel::GraphPtr graph = AZStd::make_shared<JE::Editor::Tools::GraphModel::Graph>(m_graphContext);
         AZ::Utils::LoadObjectFromBufferInPlace(m_graphStateForUndoRedo.data(), m_graphStateForUndoRedo.size(), *graph.get());
 
         m_modified = true;
@@ -567,7 +567,7 @@ namespace JE::Editor::Tools
         m_compileGraphQueued |= GetSettingsValue("/O3DE/AtomToolsFramework/GraphCompiler/CompileOnEdit", true);
     }
 
-    void GraphDocument::CreateGraph(GraphModel::GraphPtr graph)
+    void GraphDocument::CreateGraph(JE::Editor::Tools::GraphModel::GraphPtr graph)
     {
         DestroyGraph();
 
@@ -577,8 +577,8 @@ namespace JE::Editor::Tools
             m_graph->PostLoadSetup(m_graphContext);
 
             // The graph controller will create all of the scene items on construction.
-            GraphModelIntegration::GraphManagerRequestBus::Broadcast(
-                &GraphModelIntegration::GraphManagerRequests::CreateGraphController, m_graphId, m_graph);
+            JE::Editor::Tools::GraphModel::Integration::GraphManagerRequestBus::Broadcast(
+                &JE::Editor::Tools::GraphModel::Integration::GraphManagerRequests::CreateGraphController, m_graphId, m_graph);
 
             RecordGraphState();
             m_buildPropertiesQueued = true;
@@ -588,8 +588,8 @@ namespace JE::Editor::Tools
     void GraphDocument::DestroyGraph()
     {
         // The graph controller does not currently delete all of the scene items when it's destroyed.
-        GraphModelIntegration::GraphManagerRequestBus::Broadcast(
-            &GraphModelIntegration::GraphManagerRequests::DeleteGraphController, m_graphId);
+        JE::Editor::Tools::GraphModel::Integration::GraphManagerRequestBus::Broadcast(
+            &JE::Editor::Tools::GraphModel::Integration::GraphManagerRequests::DeleteGraphController, m_graphId);
         m_graph.reset();
 
         // This needs to be done whenever the graph is destroyed during undo and redo so that the previous version of the data is deleted.
@@ -603,9 +603,9 @@ namespace JE::Editor::Tools
         m_buildPropertiesQueued = false;
 
         // Sort nodes according to their connection so they appear in a consistent order in the inspector
-        GraphModel::NodePtrList selectedNodes;
-        GraphModelIntegration::GraphControllerRequestBus::EventResult(
-            selectedNodes, m_graphId, &GraphModelIntegration::GraphControllerRequests::GetSelectedNodes);
+        JE::Editor::Tools::GraphModel::NodePtrList selectedNodes;
+        JE::Editor::Tools::GraphModel::Integration::GraphControllerRequestBus::EventResult(
+            selectedNodes, m_graphId, &JE::Editor::Tools::GraphModel::Integration::GraphControllerRequests::GetSelectedNodes);
 
         SortNodesInExecutionOrder(selectedNodes);
 
@@ -627,7 +627,7 @@ namespace JE::Editor::Tools
             {
                 if (auto currentSlot = currentNode->GetSlot(slotDefinition->GetName()))
                 {
-                    if (currentSlot->GetSlotDirection() == GraphModel::SlotDirection::Input)
+                    if (currentSlot->GetSlotDirection() == JE::Editor::Tools::GraphModel::SlotDirection::Input)
                     {
                         // Create and add a dynamic property for each input slot on the node
                         DynamicPropertyConfig propertyConfig;
@@ -653,8 +653,8 @@ namespace JE::Editor::Tools
 
                             // Retrieve and refresh the node property displays with the updated slot value.
                             GraphCanvas::SlotId slotId{};
-                            GraphModelIntegration::GraphControllerRequestBus::EventResult(
-                                slotId, graphId, &GraphModelIntegration::GraphControllerRequests::GetSlotIdBySlot, currentSlot);
+                            JE::Editor::Tools::GraphModel::Integration::GraphControllerRequestBus::EventResult(
+                                slotId, graphId, &JE::Editor::Tools::GraphModel::Integration::GraphControllerRequests::GetSlotIdBySlot, currentSlot);
 
                             GraphCanvas::NodePropertyRequestBus::Event(slotId, [](GraphCanvas::NodePropertyRequests* nodePropertyRequests) {
                                 if (auto display = nodePropertyRequests->GetNodePropertyDisplay())

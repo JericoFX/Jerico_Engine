@@ -22,7 +22,7 @@ namespace LandscapeCanvas
         static void Reflect(AZ::ReflectContext* context);
 
         TubeShapeNode() = default;
-        explicit TubeShapeNode(GraphModel::GraphPtr graph);
+        explicit TubeShapeNode(JE::Editor::Tools::GraphModel::GraphPtr graph);
 
         static const char* TITLE;
         const char* GetTitle() const override { return TITLE; }

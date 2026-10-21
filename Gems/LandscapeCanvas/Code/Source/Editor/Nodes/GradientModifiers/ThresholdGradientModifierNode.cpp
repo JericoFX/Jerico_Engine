@@ -30,7 +30,7 @@ namespace LandscapeCanvas
 
     const char* ThresholdGradientModifierNode::TITLE = "Threshold";
 
-    ThresholdGradientModifierNode::ThresholdGradientModifierNode(GraphModel::GraphPtr graph)
+    ThresholdGradientModifierNode::ThresholdGradientModifierNode(JE::Editor::Tools::GraphModel::GraphPtr graph)
         : BaseGradientModifierNode(graph)
     {
     }

@@ -25,7 +25,7 @@
 #include <AzToolsFramework/UI/PropertyEditor/PropertyEditorAPI.h>
 
 // GraphModel
-#include <GraphModel/Integration/EditorMainWindow.h>
+#include <JE/Editor/Tools/GraphModel/Integration/EditorMainWindow.h>
 
 // LandscapeCanvas
 #include <LandscapeCanvas/LandscapeCanvasBus.h>
@@ -83,7 +83,7 @@ namespace LandscapeCanvasEditor
     };
 
     class MainWindow
-        : public GraphModelIntegration::EditorMainWindow
+        : public JE::Editor::Tools::GraphModel::Integration::EditorMainWindow
         , protected LandscapeCanvas::LandscapeCanvasRequestBus::Handler
         , private AZ::EntitySystemBus::Handler
         , private AzToolsFramework::EditorEntityContextNotificationBus::Handler
@@ -103,18 +103,18 @@ namespace LandscapeCanvasEditor
         ~MainWindow() override;
 
     private:
-        GraphModel::GraphContextPtr GetGraphContext() const override;
+        JE::Editor::Tools::GraphModel::GraphContextPtr GetGraphContext() const override;
 
         ////////////////////////////////////////////////////////////////////////
         // GraphModelIntegration::GraphControllerNotificationBus::Handler overrides
-        void OnGraphModelNodeAdded(GraphModel::NodePtr node) override;
-        void OnGraphModelNodeRemoved(GraphModel::NodePtr node) override;
-        void PreOnGraphModelNodeRemoved(GraphModel::NodePtr node) override;
-        void OnGraphModelConnectionAdded(GraphModel::ConnectionPtr connection) override;
-        void OnGraphModelConnectionRemoved(GraphModel::ConnectionPtr connection) override;
-        void PreOnGraphModelNodeWrapped(GraphModel::NodePtr wrapperNode, GraphModel::NodePtr node) override;
-        void OnGraphModelNodeWrapped(GraphModel::NodePtr wrapperNode, GraphModel::NodePtr node) override;
-        void OnGraphModelGraphModified(GraphModel::NodePtr node) override;
+        void OnGraphModelNodeAdded(JE::Editor::Tools::GraphModel::NodePtr node) override;
+        void OnGraphModelNodeRemoved(JE::Editor::Tools::GraphModel::NodePtr node) override;
+        void PreOnGraphModelNodeRemoved(JE::Editor::Tools::GraphModel::NodePtr node) override;
+        void OnGraphModelConnectionAdded(JE::Editor::Tools::GraphModel::ConnectionPtr connection) override;
+        void OnGraphModelConnectionRemoved(JE::Editor::Tools::GraphModel::ConnectionPtr connection) override;
+        void PreOnGraphModelNodeWrapped(JE::Editor::Tools::GraphModel::NodePtr wrapperNode, JE::Editor::Tools::GraphModel::NodePtr node) override;
+        void OnGraphModelNodeWrapped(JE::Editor::Tools::GraphModel::NodePtr wrapperNode, JE::Editor::Tools::GraphModel::NodePtr node) override;
+        void OnGraphModelGraphModified(JE::Editor::Tools::GraphModel::NodePtr node) override;
         ////////////////////////////////////////////////////////////////////////
 
         ////////////////////////////////////////////////////////////////////////
@@ -129,7 +129,7 @@ namespace LandscapeCanvasEditor
         QAction* AddEditCutAction(QMenu* menu) override;
         QAction* AddEditCopyAction(QMenu* menu) override;
         QAction* AddEditPasteAction(QMenu* menu) override;
-        void HandleWrapperNodeActionWidgetClicked(GraphModel::NodePtr wrapperNode, const QRect& actionWidgetBoundingRect, const QPointF& scenePoint, const QPoint& screenPoint) override;
+        void HandleWrapperNodeActionWidgetClicked(JE::Editor::Tools::GraphModel::NodePtr wrapperNode, const QRect& actionWidgetBoundingRect, const QPointF& scenePoint, const QPoint& screenPoint) override;
         GraphCanvas::Endpoint CreateNodeForProposal(const AZ::EntityId& connectionId, const GraphCanvas::Endpoint& endpoint, const QPointF& scenePoint, const QPoint& screenPoint) override;
         void OnSelectionChanged() override;
         void OnEntitiesDeserialized(const GraphCanvas::GraphSerialization& serializationTarget) override;
@@ -151,14 +151,14 @@ namespace LandscapeCanvasEditor
         ////////////////////////////////////////////////////////////////////////
         // LandscapeCanvas::LandscapeCanvasRequestBus::Handler overrides
         GraphCanvas::GraphId OnGraphEntity(const AZ::EntityId& entityId) override;
-        GraphModel::NodePtr GetNodeMatchingEntityInGraph(const GraphCanvas::GraphId& graphId, const AZ::EntityId& entityId) override;
-        GraphModel::NodePtr GetNodeMatchingEntityComponentInGraph(const GraphCanvas::GraphId& graphId, const AZ::EntityComponentIdPair& entityComponentId) override;
-        GraphModel::NodePtrList GetAllNodesMatchingEntity(const AZ::EntityId& entityId) override;
-        GraphModel::NodePtrList GetAllNodesMatchingEntityComponent(const AZ::EntityComponentIdPair& entityComponentId) override;
+        JE::Editor::Tools::GraphModel::NodePtr GetNodeMatchingEntityInGraph(const GraphCanvas::GraphId& graphId, const AZ::EntityId& entityId) override;
+        JE::Editor::Tools::GraphModel::NodePtr GetNodeMatchingEntityComponentInGraph(const GraphCanvas::GraphId& graphId, const AZ::EntityComponentIdPair& entityComponentId) override;
+        JE::Editor::Tools::GraphModel::NodePtrList GetAllNodesMatchingEntity(const AZ::EntityId& entityId) override;
+        JE::Editor::Tools::GraphModel::NodePtrList GetAllNodesMatchingEntityComponent(const AZ::EntityComponentIdPair& entityComponentId) override;
         ////////////////////////////////////////////////////////////////////////
 
-        GraphModel::NodePtrList GetAllNodesMatchingEntityInGraph(const GraphCanvas::GraphId& graphId, const AZ::EntityId& entityId);
-        GraphModel::NodePtrList GetAllNodesMatchingEntityComponentInGraph(
+        JE::Editor::Tools::GraphModel::NodePtrList GetAllNodesMatchingEntityInGraph(const GraphCanvas::GraphId& graphId, const AZ::EntityId& entityId);
+        JE::Editor::Tools::GraphModel::NodePtrList GetAllNodesMatchingEntityComponentInGraph(
             const GraphCanvas::GraphId& graphId, const AZ::EntityComponentIdPair& entityComponentId);
 
         ////////////////////////////////////////////////////////////////////////
@@ -222,11 +222,11 @@ namespace LandscapeCanvasEditor
 
         void GetChildrenTree(const AZ::EntityId& rootEntityId, AzToolsFramework::EntityIdList& childrenList);
 
-        QString GetPropertyPathForSlot(GraphModel::SlotPtr slot, GraphModel::DataType::Enum dataType, int elementIndex = 0);
-        void UpdateConnectionData(GraphModel::ConnectionPtr connection, bool added);
+        QString GetPropertyPathForSlot(JE::Editor::Tools::GraphModel::SlotPtr slot, JE::Editor::Tools::GraphModel::DataType::Enum dataType, int elementIndex = 0);
+        void UpdateConnectionData(JE::Editor::Tools::GraphModel::ConnectionPtr connection, bool added);
         void HandleSetImageAssetPath(const AZ::EntityId& sourceEntityId, const AZ::EntityId& targetEntityId);
 
-        AZ::u32 GetWrappedNodeLayoutOrder(GraphModel::NodePtr node);
+        AZ::u32 GetWrappedNodeLayoutOrder(JE::Editor::Tools::GraphModel::NodePtr node);
 
         AZ::EntityId GetRootEntityIdForGraphId(const GraphCanvas::GraphId& graphId);
 
@@ -234,11 +234,11 @@ namespace LandscapeCanvasEditor
             const AZ::EntityId& entityId,
             AZ::TypeId componentToAddTypeId,
             AZStd::span<const AZ::ComponentServiceType> optionalServices = {});
-        void AddComponentForNode(GraphModel::NodePtr node, const AZ::EntityId& entityId);
-        void HandleNodeCreated(GraphModel::NodePtr node);
-        void HandleNodeAdded(GraphModel::NodePtr node);
+        void AddComponentForNode(JE::Editor::Tools::GraphModel::NodePtr node, const AZ::EntityId& entityId);
+        void HandleNodeCreated(JE::Editor::Tools::GraphModel::NodePtr node);
+        void HandleNodeAdded(JE::Editor::Tools::GraphModel::NodePtr node);
 
-        using EntityIdNodeMap = AZStd::unordered_map<AZ::EntityId, GraphModel::NodePtr>;
+        using EntityIdNodeMap = AZStd::unordered_map<AZ::EntityId, JE::Editor::Tools::GraphModel::NodePtr>;
         using EntityIdNodeMaps = AZStd::vector<EntityIdNodeMap>;
         enum EntityIdNodeMapEnum
         {
@@ -250,19 +250,19 @@ namespace LandscapeCanvasEditor
         };
 
         using EntityComponentCallback = AZStd::function<void(const AZ::EntityId& entityId, AZ::Component* component, bool isDisabled)>;
-        using NodeSlotPair = AZStd::pair<GraphModel::NodePtr, GraphModel::SlotPtr>;
+        using NodeSlotPair = AZStd::pair<JE::Editor::Tools::GraphModel::NodePtr, JE::Editor::Tools::GraphModel::SlotPtr>;
         using ConnectionsList = AZStd::vector<AZStd::pair<NodeSlotPair, NodeSlotPair>>;
-        void UpdateEntityIdNodeMap(GraphCanvas::GraphId, GraphModel::NodePtr node);
-        EntityIdNodeMap* GetEntityIdNodeMap(GraphCanvas::GraphId, GraphModel::NodePtr node);
-        void ParseNodeConnections(GraphCanvas::GraphId graphId, GraphModel::NodePtr node, ConnectionsList& connections);
-        void UpdateConnections(GraphModel::NodePtr node);
+        void UpdateEntityIdNodeMap(GraphCanvas::GraphId, JE::Editor::Tools::GraphModel::NodePtr node);
+        EntityIdNodeMap* GetEntityIdNodeMap(GraphCanvas::GraphId, JE::Editor::Tools::GraphModel::NodePtr node);
+        void ParseNodeConnections(GraphCanvas::GraphId graphId, JE::Editor::Tools::GraphModel::NodePtr node, ConnectionsList& connections);
+        void UpdateConnections(JE::Editor::Tools::GraphModel::NodePtr node);
         GraphCanvas::GraphId FindGraphContainingEntity(const AZ::EntityId& entityId);
         void EnumerateEntityComponentTree(const AZ::EntityId& rootEntityId, EntityComponentCallback callback);
         void InitialEntityGraph(const AZ::EntityId& entityId, GraphCanvas::GraphId graphId);
-        GraphModel::NodePtrList RefreshEntityComponentNodes(const AZ::EntityId& targetEntityId, GraphCanvas::GraphId graphId);
+        JE::Editor::Tools::GraphModel::NodePtrList RefreshEntityComponentNodes(const AZ::EntityId& targetEntityId, GraphCanvas::GraphId graphId);
         void PlaceNewNode(GraphCanvas::GraphId graphId, LandscapeCanvas::BaseNode::BaseNodePtr node);
-        int GetInboundDataSlotIndex(GraphModel::NodePtr node, GraphModel::DataTypePtr dataType, GraphModel::SlotPtr targetSlot);
-        void HandleImageAssetSlot(GraphModel::NodePtr targetNode, const EntityIdNodeMap& gradientNodeMap, ConnectionsList& connections);
+        int GetInboundDataSlotIndex(JE::Editor::Tools::GraphModel::NodePtr node, JE::Editor::Tools::GraphModel::DataTypePtr dataType, JE::Editor::Tools::GraphModel::SlotPtr targetSlot);
+        void HandleImageAssetSlot(JE::Editor::Tools::GraphModel::NodePtr targetNode, const EntityIdNodeMap& gradientNodeMap, ConnectionsList& connections);
         void HandleDeserializedNodes();
 
         //! Determines whether or not we should allow the user to interact with the graph
@@ -272,7 +272,7 @@ namespace LandscapeCanvasEditor
         //! Return the input data slot on the node that matches the specified data type for the specified index.
         //!   - If this is a normal slot, it will just return the appropriate slot that is found.
         //!   - If this is an extendable slot, then slot(s) may need to be added in order to satisfy the requested index.
-        GraphModel::SlotPtr EnsureInboundDataSlotWithIndex(GraphCanvas::GraphId graphId, GraphModel::NodePtr node, GraphModel::DataTypePtr dataType, int index);
+        JE::Editor::Tools::GraphModel::SlotPtr EnsureInboundDataSlotWithIndex(GraphCanvas::GraphId graphId, JE::Editor::Tools::GraphModel::NodePtr node, JE::Editor::Tools::GraphModel::DataTypePtr dataType, int index);
 
         AZ::SerializeContext* m_serializeContext = nullptr;
 
@@ -287,9 +287,9 @@ namespace LandscapeCanvasEditor
 
         using DeletedNodePositionsMap = AZStd::unordered_map<AZ::EntityComponentIdPair, AZ::Vector2>;
         AZStd::unordered_map<GraphCanvas::GraphId, DeletedNodePositionsMap> m_deletedNodePositions;
-        GraphModel::NodePtrList m_addedWrappedNodes;
-        GraphModel::NodePtrList m_deletedWrappedNodes;
-        GraphModel::NodePtrList m_deserializedNodes;
+        JE::Editor::Tools::GraphModel::NodePtrList m_addedWrappedNodes;
+        JE::Editor::Tools::GraphModel::NodePtrList m_deletedWrappedNodes;
+        JE::Editor::Tools::GraphModel::NodePtrList m_deserializedNodes;
         AzToolsFramework::EntityIdList m_queuedEntityDeletes;
         AzToolsFramework::EntityIdList m_queuedEntityRefresh;
 

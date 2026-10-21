@@ -1,0 +1,64 @@
+#
+# Copyright (c) Contributors to the Open 3D Engine Project.
+# For complete copyright and license terms please see the LICENSE at the root of this distribution.
+#
+# SPDX-License-Identifier: Apache-2.0 OR MIT
+#
+#
+
+set(FILES
+    Include/JE/Editor/Tools/GraphModel/GraphModelBus.h
+    Include/JE/Editor/Tools/GraphModel/Model/Common.h
+    Include/JE/Editor/Tools/GraphModel/Model/Connection.h
+    Include/JE/Editor/Tools/GraphModel/Model/DataType.h
+    Include/JE/Editor/Tools/GraphModel/Model/Graph.h
+    Include/JE/Editor/Tools/GraphModel/Model/GraphElement.h
+    Include/JE/Editor/Tools/GraphModel/Model/GraphContext.h
+    Include/JE/Editor/Tools/GraphModel/Model/Node.h
+    Include/JE/Editor/Tools/GraphModel/Model/Slot.h
+    Include/JE/Editor/Tools/GraphModel/Model/Module/InputOutputNodes.h
+    Include/JE/Editor/Tools/GraphModel/Model/Module/ModuleGraphManager.h
+    Include/JE/Editor/Tools/GraphModel/Model/Module/ModuleNode.h
+    Include/JE/Editor/Tools/GraphModel/Integration/EditorMainWindow.h
+    Include/JE/Editor/Tools/GraphModel/Integration/ReadOnlyDataInterface.h
+    Include/JE/Editor/Tools/GraphModel/Integration/ThumbnailItem.h
+    Include/JE/Editor/Tools/GraphModel/Integration/ThumbnailImageItem.h
+    Include/JE/Editor/Tools/GraphModel/Integration/GraphCanvasMetadata.h
+    Include/JE/Editor/Tools/GraphModel/Integration/GraphController.h
+    Include/JE/Editor/Tools/GraphModel/Integration/GraphControllerManager.h
+    Include/JE/Editor/Tools/GraphModel/Integration/Helpers.h
+    Include/JE/Editor/Tools/GraphModel/Integration/BooleanDataInterface.h
+    Include/JE/Editor/Tools/GraphModel/Integration/FloatDataInterface.h
+    Include/JE/Editor/Tools/GraphModel/Integration/IntegerDataInterface.h
+    Include/JE/Editor/Tools/GraphModel/Integration/StringDataInterface.h
+    Include/JE/Editor/Tools/GraphModel/Integration/VectorDataInterface.inl
+    Include/JE/Editor/Tools/GraphModel/Integration/IntegrationBus.h
+    Include/JE/Editor/Tools/GraphModel/Integration/NodePalette/InputOutputNodePaletteItem.h
+    Include/JE/Editor/Tools/GraphModel/Integration/NodePalette/ModuleNodePaletteItem.h
+    Include/JE/Editor/Tools/GraphModel/Integration/NodePalette/StandardNodePaletteItem.h
+    Include/JE/Editor/Tools/GraphModel/Integration/NodePalette/GraphCanvasNodePaletteItems.h
+    Source/GraphModel/GraphModelSystemComponent.cpp
+    Source/GraphModel/GraphModelSystemComponent.h
+    Source/GraphModel/Model/Connection.cpp
+    Source/GraphModel/Model/DataType.cpp
+    Source/GraphModel/Model/Graph.cpp
+    Source/GraphModel/Model/GraphContext.cpp
+    Source/GraphModel/Model/GraphElement.cpp
+    Source/GraphModel/Model/Node.cpp
+    Source/GraphModel/Model/Slot.cpp
+    Source/GraphModel/Model/Module/InputOutputNodes.cpp
+    Source/GraphModel/Model/Module/ModuleGraphManager.cpp
+    Source/GraphModel/Model/Module/ModuleNode.cpp
+    Source/GraphModel/Integration/EditorMainWindow.cpp
+    Source/GraphModel/Integration/ReadOnlyDataInterface.cpp
+    Source/GraphModel/Integration/ThumbnailItem.cpp
+    Source/GraphModel/Integration/ThumbnailImageItem.cpp
+    Source/GraphModel/Integration/GraphCanvasMetadata.cpp
+    Source/GraphModel/Integration/GraphController.cpp
+    Source/GraphModel/Integration/GraphControllerManager.cpp
+    Source/GraphModel/Integration/BooleanDataInterface.cpp
+    Source/GraphModel/Integration/FloatDataInterface.cpp
+    Source/GraphModel/Integration/IntegerDataInterface.cpp
+    Source/GraphModel/Integration/StringDataInterface.cpp
+    Source/GraphModel/Integration/NodePalette/GraphCanvasNodePaletteItems.cpp
+)

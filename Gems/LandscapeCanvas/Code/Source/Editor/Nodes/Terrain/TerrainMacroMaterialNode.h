@@ -30,7 +30,7 @@ namespace LandscapeCanvas
         static void Reflect(AZ::ReflectContext* context);
 
         TerrainMacroMaterialNode() = default;
-        explicit TerrainMacroMaterialNode(GraphModel::GraphPtr graph);
+        explicit TerrainMacroMaterialNode(JE::Editor::Tools::GraphModel::GraphPtr graph);
 
         const BaseNodeType GetBaseNodeType() const override;
 

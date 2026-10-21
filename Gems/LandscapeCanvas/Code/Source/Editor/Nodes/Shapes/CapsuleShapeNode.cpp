@@ -30,7 +30,7 @@ namespace LandscapeCanvas
 
     const char* CapsuleShapeNode::TITLE = "Capsule Shape";
 
-    CapsuleShapeNode::CapsuleShapeNode(GraphModel::GraphPtr graph)
+    CapsuleShapeNode::CapsuleShapeNode(JE::Editor::Tools::GraphModel::GraphPtr graph)
         : BaseShapeNode(graph)
     {
     }

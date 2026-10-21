@@ -31,7 +31,7 @@ namespace LandscapeCanvas
         static void Reflect(AZ::ReflectContext* context);
 
         SlopeFilterNode() = default;
-        explicit SlopeFilterNode(GraphModel::GraphPtr graph);
+        explicit SlopeFilterNode(JE::Editor::Tools::GraphModel::GraphPtr graph);
 
         static const char* TITLE;
         const char* GetTitle() const override

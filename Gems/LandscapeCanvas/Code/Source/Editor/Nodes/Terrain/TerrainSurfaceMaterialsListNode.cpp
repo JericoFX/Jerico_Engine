@@ -11,7 +11,7 @@
 #include <AzCore/Serialization/EditContext.h>
 #include <AzCore/Serialization/SerializeContext.h>
 
-#include <GraphModel/Integration/Helpers.h>
+#include <JE/Editor/Tools/GraphModel/Integration/Helpers.h>
 
 #include <Editor/Core/GraphContext.h>
 #include <Editor/Nodes/Terrain/TerrainSurfaceMaterialsListNode.h>
@@ -32,7 +32,7 @@ namespace LandscapeCanvas
                 editContext->Class<TerrainSurfaceMaterialsListNode>(
                     QT_TRANSLATE_NOOP("LandscapeCanvas", "TerrainSurfaceMaterialsListNode"), "")->
                     ClassElement(AZ::Edit::ClassElements::EditorData, "")->
-                    Attribute(GraphModelIntegration::Attributes::TitlePaletteOverride, "TerrainNodeTitlePalette")
+                    Attribute(JE::Editor::Tools::GraphModel::Integration::Attributes::TitlePaletteOverride, "TerrainNodeTitlePalette")
                     ;
             }
         }
@@ -40,7 +40,7 @@ namespace LandscapeCanvas
 
     const char* TerrainSurfaceMaterialsListNode::TITLE = "Terrain Surface Materials List";
 
-    TerrainSurfaceMaterialsListNode::TerrainSurfaceMaterialsListNode(GraphModel::GraphPtr graph)
+    TerrainSurfaceMaterialsListNode::TerrainSurfaceMaterialsListNode(JE::Editor::Tools::GraphModel::GraphPtr graph)
         : BaseNode(graph)
     {
         RegisterSlots();

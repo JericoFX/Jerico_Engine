@@ -55,11 +55,11 @@
 #include <GraphCanvas/Widgets/GraphCanvasEditor/GraphCanvasEditorDockWidget.h>
 
 // GraphModel
-#include <GraphModel/Integration/NodePalette/GraphCanvasNodePaletteItems.h>
-#include <GraphModel/Integration/NodePalette/StandardNodePaletteItem.h>
-#include <GraphModel/Integration/ReadOnlyDataInterface.h>
-#include <GraphModel/Model/Connection.h>
-#include <GraphModel/Model/Slot.h>
+#include <JE/Editor/Tools/GraphModel/Integration/NodePalette/GraphCanvasNodePaletteItems.h>
+#include <JE/Editor/Tools/GraphModel/Integration/NodePalette/StandardNodePaletteItem.h>
+#include <JE/Editor/Tools/GraphModel/Integration/ReadOnlyDataInterface.h>
+#include <JE/Editor/Tools/GraphModel/Model/Connection.h>
+#include <JE/Editor/Tools/GraphModel/Model/Slot.h>
 
 // Landscape Canvas
 #include <Editor/Core/Core.h>
@@ -145,12 +145,12 @@ namespace LandscapeCanvasEditor
     struct NodePoint
     {
         NodePoint* parent = nullptr;
-        GraphModel::NodePtr node = nullptr;
+        JE::Editor::Tools::GraphModel::NodePtr node = nullptr;
         AZ::EntityId vegetationEntityId;
         AZStd::vector<NodePoint*> children;
     };
 
-    NodePoint* FindNodePoint(const AZStd::vector<NodePoint*>& points, const AZStd::unordered_map<AZ::EntityId, GraphModel::NodePtrList>& nodeWrappings, GraphModel::NodePtr node)
+    NodePoint* FindNodePoint(const AZStd::vector<NodePoint*>& points, const AZStd::unordered_map<AZ::EntityId, JE::Editor::Tools::GraphModel::NodePtrList>& nodeWrappings, JE::Editor::Tools::GraphModel::NodePtr node)
     {
         for (auto it : points)
         {
@@ -162,7 +162,7 @@ namespace LandscapeCanvasEditor
             // we need to check if any of its wrapped nodes match the node we are
             // looking for as well, since they will be in the same position as
             // their wrapper node parent
-            else if (it->node->GetNodeType() == GraphModel::NodeType::WrapperNode)
+            else if (it->node->GetNodeType() == JE::Editor::Tools::GraphModel::NodeType::WrapperNode)
             {
                 const AZ::EntityId& entityId = it->vegetationEntityId;
                 auto nodeWrapIt = nodeWrappings.find(entityId);
@@ -192,7 +192,7 @@ namespace LandscapeCanvasEditor
 
         if (point->node)
         {
-            GraphModelIntegration::GraphControllerRequestBus::Event(sceneId, &GraphModelIntegration::GraphControllerRequests::AddNode, point->node, offset);
+            JE::Editor::Tools::GraphModel::Integration::GraphControllerRequestBus::Event(sceneId, &JE::Editor::Tools::GraphModel::Integration::GraphControllerRequests::AddNode, point->node, offset);
             offset.SetX(offset.GetX() + NODE_OFFSET_X_PIXELS);
         }
 
@@ -310,7 +310,7 @@ namespace LandscapeCanvasEditor
     }
 
 #define REGISTER_NODE_PALETTE_ITEM(category, TYPE, editorId) \
-    category->CreateChildNode<GraphModelIntegration::StandardNodePaletteItem<TYPE>>(TYPE::TITLE, editorId);
+    category->CreateChildNode<JE::Editor::Tools::GraphModel::Integration::StandardNodePaletteItem<TYPE>>(TYPE::TITLE, editorId);
 
     GraphCanvas::GraphCanvasTreeItem* LandscapeCanvasConfig::CreateNodePaletteRoot()
     {
@@ -387,7 +387,7 @@ namespace LandscapeCanvasEditor
             REGISTER_NODE_PALETTE_ITEM(terrainCategory, TerrainSurfaceMaterialsListNode, editorId);
         }
 
-        GraphModelIntegration::AddCommonNodePaletteUtilities(rootItem, editorId);
+        JE::Editor::Tools::GraphModel::Integration::AddCommonNodePaletteUtilities(rootItem, editorId);
 
         return rootItem;
     }
@@ -402,7 +402,7 @@ namespace LandscapeCanvasEditor
     LandscapeCanvas::LandscapeCanvasNodeFactoryRequestBus::BroadcastResult(componentTypeId, &LandscapeCanvas::LandscapeCanvasNodeFactoryRequests::GetComponentTypeId, azrtti_typeid<TYPE>()); \
     if (!AzToolsFramework::EntityHasComponentOfType(entityId, componentTypeId)) \
     { \
-        category->CreateChildNode<GraphModelIntegration::StandardNodePaletteItem<TYPE>>(TYPE::TITLE, editorId); \
+        category->CreateChildNode<JE::Editor::Tools::GraphModel::Integration::StandardNodePaletteItem<TYPE>>(TYPE::TITLE, editorId); \
     } \
 } \
 
@@ -478,7 +478,7 @@ namespace LandscapeCanvasEditor
     AzFramework::EntityContextId MainWindow::s_editorEntityContextId = AzFramework::EntityContextId::CreateNull();
     
     MainWindow::MainWindow(QWidget* parent)
-        : GraphModelIntegration::EditorMainWindow(GetDefaultConfig(), parent)
+        : JE::Editor::Tools::GraphModel::Integration::EditorMainWindow(GetDefaultConfig(), parent)
     {
         AZ::ComponentApplicationBus::BroadcastResult(m_serializeContext, &AZ::ComponentApplicationRequests::GetSerializeContext);
         AZ_Assert(m_serializeContext, "Failed to acquire application serialize context.");
@@ -549,12 +549,12 @@ namespace LandscapeCanvasEditor
         LandscapeCanvas::LandscapeCanvasRequestBus::Handler::BusDisconnect();
     }
 
-    GraphModel::GraphContextPtr MainWindow::GetGraphContext() const
+    JE::Editor::Tools::GraphModel::GraphContextPtr MainWindow::GetGraphContext() const
     {
         return LandscapeCanvas::GraphContext::GetInstance();
     }
 
-    void MainWindow::OnGraphModelNodeAdded(GraphModel::NodePtr node)
+    void MainWindow::OnGraphModelNodeAdded(JE::Editor::Tools::GraphModel::NodePtr node)
     {
         // If we weren't graphing a scene, then this new node was dragged in from the Node Palette,
         // so we need to create the appropriate underlying Entity/Component(s)
@@ -567,10 +567,10 @@ namespace LandscapeCanvasEditor
         HandleNodeAdded(node);
     }
 
-    void MainWindow::OnGraphModelNodeRemoved(GraphModel::NodePtr node)
+    void MainWindow::OnGraphModelNodeRemoved(JE::Editor::Tools::GraphModel::NodePtr node)
     {
         // Remove the cached EntityId mapping for this node
-        GraphCanvas::GraphId graphId = (*GraphModelIntegration::GraphControllerNotificationBus::GetCurrentBusId());
+        GraphCanvas::GraphId graphId = (*JE::Editor::Tools::GraphModel::Integration::GraphControllerNotificationBus::GetCurrentBusId());
         auto nodeMap = GetEntityIdNodeMap(graphId, node);
         if (nodeMap)
         {
@@ -621,15 +621,15 @@ namespace LandscapeCanvasEditor
         }
     }
 
-    void MainWindow::PreOnGraphModelNodeRemoved(GraphModel::NodePtr node)
+    void MainWindow::PreOnGraphModelNodeRemoved(JE::Editor::Tools::GraphModel::NodePtr node)
     {
-        GraphCanvas::GraphId graphId = (*GraphModelIntegration::GraphControllerNotificationBus::GetCurrentBusId());
+        GraphCanvas::GraphId graphId = (*JE::Editor::Tools::GraphModel::Integration::GraphControllerNotificationBus::GetCurrentBusId());
 
         // We need to track any wrapped nodes before the actually get deleted so we can handle
         // their deletion properly, because once the OnGraphModelNodeRemoved is called
         // the wrapped information is lost.
         bool isNodeWrapped = false;
-        GraphModelIntegration::GraphControllerRequestBus::EventResult(isNodeWrapped, graphId, &GraphModelIntegration::GraphControllerRequests::IsNodeWrapped, node);
+        JE::Editor::Tools::GraphModel::Integration::GraphControllerRequestBus::EventResult(isNodeWrapped, graphId, &JE::Editor::Tools::GraphModel::Integration::GraphControllerRequests::IsNodeWrapped, node);
         if (isNodeWrapped)
         {
             m_deletedWrappedNodes.push_back(node);
@@ -647,12 +647,12 @@ namespace LandscapeCanvasEditor
             AZ::EntityComponentIdPair pair(baseNodePtr->GetVegetationEntityId(), baseNodePtr->GetComponentId());
 
             AZ::Vector2 position;
-            GraphModelIntegration::GraphControllerRequestBus::EventResult(position, graphId, &GraphModelIntegration::GraphControllerRequests::GetPosition, node);
+            JE::Editor::Tools::GraphModel::Integration::GraphControllerRequestBus::EventResult(position, graphId, &JE::Editor::Tools::GraphModel::Integration::GraphControllerRequests::GetPosition, node);
             deletedNodePositionMap[pair] = position;
         }
     }
 
-    void MainWindow::OnGraphModelConnectionAdded(GraphModel::ConnectionPtr connection)
+    void MainWindow::OnGraphModelConnectionAdded(JE::Editor::Tools::GraphModel::ConnectionPtr connection)
     {
         // Don't need to act on connections that aren't added by the user
         if (m_ignoreGraphUpdates)
@@ -663,7 +663,7 @@ namespace LandscapeCanvasEditor
         UpdateConnectionData(connection, true /* added */);
     }
 
-    void MainWindow::OnGraphModelConnectionRemoved(GraphModel::ConnectionPtr connection)
+    void MainWindow::OnGraphModelConnectionRemoved(JE::Editor::Tools::GraphModel::ConnectionPtr connection)
     {
         // Don't need to act on connections that aren't removed by the user
         if (m_ignoreGraphUpdates)
@@ -674,7 +674,7 @@ namespace LandscapeCanvasEditor
         UpdateConnectionData(connection, false /* added */);
     }
 
-    void MainWindow::PreOnGraphModelNodeWrapped([[maybe_unused]] GraphModel::NodePtr wrapperNode, GraphModel::NodePtr node)
+    void MainWindow::PreOnGraphModelNodeWrapped([[maybe_unused]] JE::Editor::Tools::GraphModel::NodePtr wrapperNode, JE::Editor::Tools::GraphModel::NodePtr node)
     {
         if (m_ignoreGraphUpdates)
         {
@@ -686,7 +686,7 @@ namespace LandscapeCanvasEditor
         m_addedWrappedNodes.push_back(node);
     }
 
-    void MainWindow::OnGraphModelNodeWrapped(GraphModel::NodePtr wrapperNode, GraphModel::NodePtr node)
+    void MainWindow::OnGraphModelNodeWrapped(JE::Editor::Tools::GraphModel::NodePtr wrapperNode, JE::Editor::Tools::GraphModel::NodePtr node)
     {
         // We only need to add components when nodes are created by the user,
         // not when we are parsing/graphing an existing setup
@@ -731,8 +731,8 @@ namespace LandscapeCanvasEditor
             return;
         }
 
-        GraphModel::NodePtrList nodeList;
-        GraphModelIntegration::GraphControllerRequestBus::EventResult(nodeList, GetActiveGraphCanvasGraphId(), &GraphModelIntegration::GraphControllerRequests::GetSelectedNodes);
+        JE::Editor::Tools::GraphModel::NodePtrList nodeList;
+        JE::Editor::Tools::GraphModel::Integration::GraphControllerRequestBus::EventResult(nodeList, GetActiveGraphCanvasGraphId(), &JE::Editor::Tools::GraphModel::Integration::GraphControllerRequests::GetSelectedNodes);
 
         // Iterate through the selected nodes to find their corresponding vegetation entities
         AzToolsFramework::EntityIdSet vegetationEntityIdsToSelect;
@@ -795,8 +795,8 @@ namespace LandscapeCanvasEditor
 
             // Ignore any nodes serialized by GraphCanvas that aren't GraphModel nodes (e.g. comments/node groups), since they
             // don't have an actual Entity/Component tied to them that we'll need to duplicate
-            GraphModel::NodePtr node;
-            GraphModelIntegration::GraphControllerRequestBus::EventResult(node, graphId, &GraphModelIntegration::GraphControllerRequests::GetNodeById, nodeUiId);
+            JE::Editor::Tools::GraphModel::NodePtr node;
+            JE::Editor::Tools::GraphModel::Integration::GraphControllerRequestBus::EventResult(node, graphId, &JE::Editor::Tools::GraphModel::Integration::GraphControllerRequests::GetNodeById, nodeUiId);
             if (!node)
             {
                 continue;
@@ -844,7 +844,7 @@ namespace LandscapeCanvasEditor
         m_ignoreGraphUpdates = false;
     }
 
-    void MainWindow::OnGraphModelGraphModified(GraphModel::NodePtr node)
+    void MainWindow::OnGraphModelGraphModified(JE::Editor::Tools::GraphModel::NodePtr node)
     {
         AZ_UNUSED(node);
 
@@ -960,7 +960,7 @@ namespace LandscapeCanvasEditor
 
                 // Serialize the graph into the Landscape Canvas component on the root Entity that
                 // corresponds to this graph
-                GraphModel::GraphPtr graph = GetGraphById(graphId);
+                JE::Editor::Tools::GraphModel::GraphPtr graph = GetGraphById(graphId);
                 auto landscapeCanvasComponent = azrtti_cast<LandscapeCanvas::EditorLandscapeCanvasComponent*>(entity->FindComponent(LandscapeCanvas::EditorLandscapeCanvasComponentTypeId));
                 if (landscapeCanvasComponent)
                 {
@@ -987,12 +987,12 @@ namespace LandscapeCanvasEditor
         }
 
         // Do this last so that the graph isn't closed before we get a chance to save it
-        GraphModelIntegration::EditorMainWindow::OnEditorClosing(dockWidget);
+        JE::Editor::Tools::GraphModel::Integration::EditorMainWindow::OnEditorClosing(dockWidget);
     }
 
     QAction* MainWindow::AddFileNewAction(QMenu* menu)
     {
-        m_fileNewAction = GraphModelIntegration::EditorMainWindow::AddFileNewAction(menu);
+        m_fileNewAction = JE::Editor::Tools::GraphModel::Integration::EditorMainWindow::AddFileNewAction(menu);
 
         // Disable our file menu action for creating a new graph if a level isn't loaded
         m_fileNewAction->setEnabled(GetLegacyEditor()->IsLevelLoaded());
@@ -1020,7 +1020,7 @@ namespace LandscapeCanvasEditor
 
     QMenu* MainWindow::AddEditMenu()
     {
-        QMenu* menu = GraphModelIntegration::EditorMainWindow::AddEditMenu();
+        QMenu* menu = JE::Editor::Tools::GraphModel::Integration::EditorMainWindow::AddEditMenu();
 
         // Temporarily add our own Undo/Redo menu actions that will just trigger the main Editor's
         // Undo/Redo actions, since our graphs are listening/responding to Editor Entity/Component
@@ -1067,7 +1067,7 @@ namespace LandscapeCanvasEditor
         return nullptr;
     }
 
-    void MainWindow::HandleWrapperNodeActionWidgetClicked(GraphModel::NodePtr wrapperNode, [[maybe_unused]] const QRect& actionWidgetBoundingRect, const QPointF& scenePoint, const QPoint& screenPoint)
+    void MainWindow::HandleWrapperNodeActionWidgetClicked(JE::Editor::Tools::GraphModel::NodePtr wrapperNode, [[maybe_unused]] const QRect& actionWidgetBoundingRect, const QPointF& scenePoint, const QPoint& screenPoint)
     {
         auto baseNode = static_cast<LandscapeCanvas::BaseNode*>(wrapperNode.get());
         AZ::EntityId entityId = baseNode->GetVegetationEntityId();
@@ -1111,8 +1111,8 @@ namespace LandscapeCanvasEditor
             {
                 GraphCanvas::NodeId nodeId = mimeEvent->GetCreatedNodeId();
 
-                GraphModel::NodePtr node;
-                GraphModelIntegration::GraphControllerRequestBus::EventResult(node, graphId, &GraphModelIntegration::GraphControllerRequests::GetNodeById, nodeId);
+                JE::Editor::Tools::GraphModel::NodePtr node;
+                JE::Editor::Tools::GraphModel::Integration::GraphControllerRequestBus::EventResult(node, graphId, &JE::Editor::Tools::GraphModel::Integration::GraphControllerRequests::GetNodeById, nodeId);
 
                 // Stop ignoring the graph updates once the node has been created so that the OnGraphModelNodeWrapped
                 // will get called once we wrap the node in the next step
@@ -1120,7 +1120,7 @@ namespace LandscapeCanvasEditor
 
                 // Wrap the extender node on its parent wrapped node.
                 AZ::u32 layoutOrder = GetWrappedNodeLayoutOrder(node);
-                GraphModelIntegration::GraphControllerRequestBus::Event(graphId, &GraphModelIntegration::GraphControllerRequests::WrapNodeOrdered, wrapperNode, node, layoutOrder);
+                JE::Editor::Tools::GraphModel::Integration::GraphControllerRequestBus::Event(graphId, &JE::Editor::Tools::GraphModel::Integration::GraphControllerRequests::WrapNodeOrdered, wrapperNode, node, layoutOrder);
             }
             else
             {
@@ -1135,29 +1135,29 @@ namespace LandscapeCanvasEditor
 
         if (createdEndpoint.IsValid())
         {
-            GraphModel::NodePtr sourceNode;
-            GraphModelIntegration::GraphControllerRequestBus::EventResult(sourceNode, GetActiveGraphCanvasGraphId(), &GraphModelIntegration::GraphControllerRequests::GetNodeById, endpoint.GetNodeId());
+            JE::Editor::Tools::GraphModel::NodePtr sourceNode;
+            JE::Editor::Tools::GraphModel::Integration::GraphControllerRequestBus::EventResult(sourceNode, GetActiveGraphCanvasGraphId(), &JE::Editor::Tools::GraphModel::Integration::GraphControllerRequests::GetNodeById, endpoint.GetNodeId());
 
-            GraphModel::NodePtr createdNode;
-            GraphModelIntegration::GraphControllerRequestBus::EventResult(createdNode, GetActiveGraphCanvasGraphId(), &GraphModelIntegration::GraphControllerRequests::GetNodeById, createdEndpoint.GetNodeId());
+            JE::Editor::Tools::GraphModel::NodePtr createdNode;
+            JE::Editor::Tools::GraphModel::Integration::GraphControllerRequestBus::EventResult(createdNode, GetActiveGraphCanvasGraphId(), &JE::Editor::Tools::GraphModel::Integration::GraphControllerRequests::GetNodeById, createdEndpoint.GetNodeId());
 
             AZ_Assert(sourceNode && createdNode, "Unable to find GraphModel::Node for associated Endpoint.");
 
             // If the source node and the created node both have preview bounds slots,
             // then automatically connect the preview bounds on the created node to the
             // same slot as the one on the source node (if it is connected to something)
-            GraphModel::SlotPtr sourcePreviewBoundsSlot = sourceNode->GetSlot(LandscapeCanvas::PREVIEW_BOUNDS_SLOT_ID);
-            GraphModel::SlotPtr createdPreviewBoundsSlot = createdNode->GetSlot(LandscapeCanvas::PREVIEW_BOUNDS_SLOT_ID);
+            JE::Editor::Tools::GraphModel::SlotPtr sourcePreviewBoundsSlot = sourceNode->GetSlot(LandscapeCanvas::PREVIEW_BOUNDS_SLOT_ID);
+            JE::Editor::Tools::GraphModel::SlotPtr createdPreviewBoundsSlot = createdNode->GetSlot(LandscapeCanvas::PREVIEW_BOUNDS_SLOT_ID);
             if (sourcePreviewBoundsSlot && createdPreviewBoundsSlot)
             {
                 // The preview bounds is an input slot, so it will only have 1 connection (if any)
-                GraphModel::Slot::ConnectionList connections = sourcePreviewBoundsSlot->GetConnections();
+                JE::Editor::Tools::GraphModel::Slot::ConnectionList connections = sourcePreviewBoundsSlot->GetConnections();
                 if (connections.size() == 1)
                 {
-                    GraphModel::ConnectionPtr connection = *connections.begin();
-                    GraphModel::SlotPtr previewBoundsSourceSlot = connection->GetSourceSlot();
+                    JE::Editor::Tools::GraphModel::ConnectionPtr connection = *connections.begin();
+                    JE::Editor::Tools::GraphModel::SlotPtr previewBoundsSourceSlot = connection->GetSourceSlot();
 
-                    GraphModelIntegration::GraphControllerRequestBus::Event(GetActiveGraphCanvasGraphId(), &GraphModelIntegration::GraphControllerRequests::AddConnection, previewBoundsSourceSlot, createdPreviewBoundsSlot);
+                    JE::Editor::Tools::GraphModel::Integration::GraphControllerRequestBus::Event(GetActiveGraphCanvasGraphId(), &JE::Editor::Tools::GraphModel::Integration::GraphControllerRequests::AddConnection, previewBoundsSourceSlot, createdPreviewBoundsSlot);
                 }
             }
         }
@@ -1178,7 +1178,7 @@ namespace LandscapeCanvasEditor
         // to determine when to re-check component state, since the Entity gets deactivated/re-activated when
         // making component changes, so this is when we should update the enabled/disabled state of any nodes
         // associated with this Entity.
-        GraphModel::NodePtrList matchingNodes = GetAllNodesMatchingEntity(entityId);
+        JE::Editor::Tools::GraphModel::NodePtrList matchingNodes = GetAllNodesMatchingEntity(entityId);
         for (auto node : matchingNodes)
         {
             GraphCanvas::GraphId graphId = GetGraphId(node->GetGraph());
@@ -1186,11 +1186,11 @@ namespace LandscapeCanvasEditor
             auto baseNodePtr = static_cast<LandscapeCanvas::BaseNode*>(node.get());
             if (baseNodePtr->GetComponent())
             {
-                GraphModelIntegration::GraphControllerRequestBus::Event(graphId, &GraphModelIntegration::GraphControllerRequests::EnableNode, node);
+                JE::Editor::Tools::GraphModel::Integration::GraphControllerRequestBus::Event(graphId, &JE::Editor::Tools::GraphModel::Integration::GraphControllerRequests::EnableNode, node);
             }
             else
             {
-                GraphModelIntegration::GraphControllerRequestBus::Event(graphId, &GraphModelIntegration::GraphControllerRequests::DisableNode, node);
+                JE::Editor::Tools::GraphModel::Integration::GraphControllerRequestBus::Event(graphId, &JE::Editor::Tools::GraphModel::Integration::GraphControllerRequests::DisableNode, node);
             }
         }
     }
@@ -1200,7 +1200,7 @@ namespace LandscapeCanvasEditor
         // Update the entity name slot on any nodes for this entity across all graphs.
         for (GraphCanvas::GraphId graphId : GetOpenGraphIds())
         {
-            GraphModel::NodePtrList nodes = GetAllNodesMatchingEntityInGraph(graphId, entityId);
+            JE::Editor::Tools::GraphModel::NodePtrList nodes = GetAllNodesMatchingEntityInGraph(graphId, entityId);
 
             for (auto& node : nodes)
             {
@@ -1210,11 +1210,11 @@ namespace LandscapeCanvasEditor
                     baseNodePtr->RefreshEntityName();
 
                     // Refresh the display for the entity name on this node.
-                    if (GraphModel::SlotPtr slot = node->GetSlot(LandscapeCanvas::ENTITY_NAME_SLOT_ID); slot)
+                    if (JE::Editor::Tools::GraphModel::SlotPtr slot = node->GetSlot(LandscapeCanvas::ENTITY_NAME_SLOT_ID); slot)
                     {
                         GraphCanvas::SlotId slotId;
-                        GraphModelIntegration::GraphControllerRequestBus::EventResult(
-                            slotId, graphId, &GraphModelIntegration::GraphControllerRequests::GetSlotIdBySlot, slot);
+                        JE::Editor::Tools::GraphModel::Integration::GraphControllerRequestBus::EventResult(
+                            slotId, graphId, &JE::Editor::Tools::GraphModel::Integration::GraphControllerRequests::GetSlotIdBySlot, slot);
 
                         AZ::EBusAggregateResults<GraphCanvas::NodePropertyDisplay*> nodePropertyDisplays;
                         GraphCanvas::NodePropertyRequestBus::EventResult(
@@ -1258,8 +1258,8 @@ namespace LandscapeCanvasEditor
         AZ_Assert(landscapeCanvasComponent, "Missing Landscape Canvas component on EntityId = %s", rootEntityId.ToString().c_str());
 
         bool isNewGraph = false;
-        GraphModel::GraphPtr graph = AZStd::make_shared<GraphModel::Graph>(GetGraphContext());
-        GraphModel::Graph& savedGraph = landscapeCanvasComponent->m_graph;
+        JE::Editor::Tools::GraphModel::GraphPtr graph = AZStd::make_shared<JE::Editor::Tools::GraphModel::Graph>(GetGraphContext());
+        JE::Editor::Tools::GraphModel::Graph& savedGraph = landscapeCanvasComponent->m_graph;
         if (savedGraph.GetNodes().empty())
         {
             // If this graph has never been saved before, then there won't be any nodes in
@@ -1279,10 +1279,10 @@ namespace LandscapeCanvasEditor
         m_graphs[graphId] = graph;
 
         // Listen for GraphController notifications on the new graph.
-        GraphModelIntegration::GraphControllerNotificationBus::MultiHandler::BusConnect(graphId);
+        JE::Editor::Tools::GraphModel::Integration::GraphControllerNotificationBus::MultiHandler::BusConnect(graphId);
 
         // Create the controller for the new graph.
-        GraphModelIntegration::GraphManagerRequestBus::Broadcast(&GraphModelIntegration::GraphManagerRequests::CreateGraphController, graphId, graph);
+        JE::Editor::Tools::GraphModel::Integration::GraphManagerRequestBus::Broadcast(&JE::Editor::Tools::GraphModel::Integration::GraphManagerRequests::CreateGraphController, graphId, graph);
 
         // If we loaded a saved graph, we need to make sure all the loaded nodes Entity/Components still exist,
         // and also look for any new components that have been added that need new nodes created for them
@@ -1313,7 +1313,7 @@ namespace LandscapeCanvasEditor
         }
     }
 
-    QString MainWindow::GetPropertyPathForSlot(GraphModel::SlotPtr slot, GraphModel::DataType::Enum dataType, int elementIndex)
+    QString MainWindow::GetPropertyPathForSlot(JE::Editor::Tools::GraphModel::SlotPtr slot, JE::Editor::Tools::GraphModel::DataType::Enum dataType, int elementIndex)
     {
         static const char* ConfigurationPropertyPrefix = "Configuration|";
         static const char* PreviewEntityIdPropertyPath = "Previewer|Preview Settings|Pin Preview to Shape";
@@ -1324,7 +1324,7 @@ namespace LandscapeCanvasEditor
         static const char* VegetationAreasPropertyPath = "Vegetation Areas";
         static const char* TerrainSurfaceEntityIdPropertyPath = "Gradient Entity";
 
-        const GraphModel::SlotName& slotName = slot->GetName();
+        const JE::Editor::Tools::GraphModel::SlotName& slotName = slot->GetName();
         QString propertyPath;
         bool useConfigurationPrefix = true;
         switch (dataType)
@@ -1352,7 +1352,7 @@ namespace LandscapeCanvasEditor
         } break;
         case LandscapeCanvas::LandscapeCanvasDataTypeEnum::Gradient:
         {
-            GraphModel::NodePtr targetNode = slot->GetParentNode();
+            JE::Editor::Tools::GraphModel::NodePtr targetNode = slot->GetParentNode();
             auto targetBaseNode = static_cast<LandscapeCanvas::BaseNode*>(targetNode.get());
             auto targetBaseNodeType = targetBaseNode->GetBaseNodeType();
 
@@ -1418,14 +1418,14 @@ namespace LandscapeCanvasEditor
         return propertyPath;
     }
 
-    void MainWindow::UpdateConnectionData(GraphModel::ConnectionPtr connection, bool added)
+    void MainWindow::UpdateConnectionData(JE::Editor::Tools::GraphModel::ConnectionPtr connection, bool added)
     {
         if (!connection)
         {
             return;
         }
 
-        GraphCanvas::GraphId graphId = (*GraphModelIntegration::GraphControllerNotificationBus::GetCurrentBusId());
+        GraphCanvas::GraphId graphId = (*JE::Editor::Tools::GraphModel::Integration::GraphControllerNotificationBus::GetCurrentBusId());
 
         // Similarly as below, this protects against the edge case where this logic gets hit if the node and/or
         // slot belonging to this connection got deleted before this was executed.
@@ -1436,9 +1436,9 @@ namespace LandscapeCanvasEditor
 
         // Figure out the element index we need to update based on the index of the
         // target slot on the target node that have the same data type
-        GraphModel::NodePtr targetNode = connection->GetTargetNode();
-        GraphModel::SlotPtr targetSlot = connection->GetTargetSlot();
-        GraphModel::DataTypePtr dataType = connection->GetSourceSlot()->GetDataType();
+        JE::Editor::Tools::GraphModel::NodePtr targetNode = connection->GetTargetNode();
+        JE::Editor::Tools::GraphModel::SlotPtr targetSlot = connection->GetTargetSlot();
+        JE::Editor::Tools::GraphModel::DataTypePtr dataType = connection->GetSourceSlot()->GetDataType();
         int elementIndexToModify = GetInboundDataSlotIndex(targetNode, dataType, targetSlot);
         if (elementIndexToModify == InvalidSlotIndex)
         {
@@ -1458,7 +1458,7 @@ namespace LandscapeCanvasEditor
         }
 
         // Figure out the property path we are looking for based on the data type of the slot
-        GraphModel::DataType::Enum dataTypeEnum = dataType->GetTypeEnum();
+        JE::Editor::Tools::GraphModel::DataType::Enum dataTypeEnum = dataType->GetTypeEnum();
         QString propertyPath = GetPropertyPathForSlot(targetSlot, dataTypeEnum, elementIndexToModify);
         if (propertyPath.isEmpty())
         {
@@ -1642,7 +1642,7 @@ namespace LandscapeCanvasEditor
 
                         if (container->IsFixedCapacity() && !container->IsSmartPointer() && requiredSize >= container->Capacity(instance))
                         {
-                            GraphModel::GraphPtr graph = GetGraphById(GetActiveGraphCanvasGraphId());
+                            JE::Editor::Tools::GraphModel::GraphPtr graph = GetGraphById(GetActiveGraphCanvasGraphId());
                             AZ_Warning(graph->GetSystemName(), false, "Cannot add additional entries to the container as it is at its capacity of %zu", container->Capacity(instance));
 
                             return true;
@@ -1748,8 +1748,8 @@ namespace LandscapeCanvasEditor
         // connections 
         else
         {
-            GraphModel::NodePtrList nodes;
-            GraphModelIntegration::GraphControllerRequestBus::EventResult(nodes, graphId, &GraphModelIntegration::GraphControllerRequests::GetNodes);
+            JE::Editor::Tools::GraphModel::NodePtrList nodes;
+            JE::Editor::Tools::GraphModel::Integration::GraphControllerRequestBus::EventResult(nodes, graphId, &JE::Editor::Tools::GraphModel::Integration::GraphControllerRequests::GetNodes);
             for (auto node : nodes)
             {
                 UpdateConnections(node);
@@ -1760,7 +1760,7 @@ namespace LandscapeCanvasEditor
 
         // Clear the selection once we have added all the nodes, because by default nodes get
         // selected when they are added to the graph
-        GraphModelIntegration::GraphControllerRequestBus::Event(graphId, &GraphModelIntegration::GraphControllerRequests::ClearSelection);
+        JE::Editor::Tools::GraphModel::Integration::GraphControllerRequestBus::Event(graphId, &JE::Editor::Tools::GraphModel::Integration::GraphControllerRequests::ClearSelection);
 
         return graphId;
     }
@@ -1836,9 +1836,9 @@ namespace LandscapeCanvasEditor
         // Refresh the Entity/Component tree for this entity to create any nodes that may
         // have been added by this change.  We only need to update all connections if node(s)
         // were actually created.
-        GraphModel::NodePtrList createdNodes = RefreshEntityComponentNodes(entityId, graphId);
-        GraphModel::NodePtrList nodes;
-        GraphModelIntegration::GraphControllerRequestBus::EventResult(nodes, graphId, &GraphModelIntegration::GraphControllerRequests::GetNodes);
+        JE::Editor::Tools::GraphModel::NodePtrList createdNodes = RefreshEntityComponentNodes(entityId, graphId);
+        JE::Editor::Tools::GraphModel::NodePtrList nodes;
+        JE::Editor::Tools::GraphModel::Integration::GraphControllerRequestBus::EventResult(nodes, graphId, &JE::Editor::Tools::GraphModel::Integration::GraphControllerRequests::GetNodes);
         if (!createdNodes.empty())
         {
             for (auto node : nodes)
@@ -1922,8 +1922,8 @@ namespace LandscapeCanvasEditor
         {
             for (GraphCanvas::GraphId graphId : GetOpenGraphIds())
             {
-                GraphModel::NodePtrList nodes;
-                GraphModelIntegration::GraphControllerRequestBus::EventResult(nodes, graphId, &GraphModelIntegration::GraphControllerRequests::GetNodes);
+                JE::Editor::Tools::GraphModel::NodePtrList nodes;
+                JE::Editor::Tools::GraphModel::Integration::GraphControllerRequestBus::EventResult(nodes, graphId, &JE::Editor::Tools::GraphModel::Integration::GraphControllerRequests::GetNodes);
 
                 for (auto node : nodes)
                 {
@@ -1931,7 +1931,7 @@ namespace LandscapeCanvasEditor
                     auto baseNodePtr = static_cast<LandscapeCanvas::BaseNode*>(node.get());
                     if (baseNodePtr->GetVegetationEntityId() == entityId && !baseNodePtr->IsAreaExtender())
                     {
-                        GraphModelIntegration::GraphControllerRequestBus::Event(graphId, &GraphModelIntegration::GraphControllerRequests::RemoveNode, node);
+                        JE::Editor::Tools::GraphModel::Integration::GraphControllerRequestBus::Event(graphId, &JE::Editor::Tools::GraphModel::Integration::GraphControllerRequests::RemoveNode, node);
                     }
                 }
             }
@@ -1950,16 +1950,16 @@ namespace LandscapeCanvasEditor
         m_inObjectPickMode = false;
     }
 
-    GraphModel::NodePtrList MainWindow::GetAllNodesMatchingEntityInGraph(const GraphCanvas::GraphId& graphId, const AZ::EntityId& entityId)
+    JE::Editor::Tools::GraphModel::NodePtrList MainWindow::GetAllNodesMatchingEntityInGraph(const GraphCanvas::GraphId& graphId, const AZ::EntityId& entityId)
     {
-        GraphModel::NodePtrList nodes;
-        GraphModelIntegration::GraphControllerRequestBus::EventResult(
-            nodes, graphId, &GraphModelIntegration::GraphControllerRequests::GetNodes);
+        JE::Editor::Tools::GraphModel::NodePtrList nodes;
+        JE::Editor::Tools::GraphModel::Integration::GraphControllerRequestBus::EventResult(
+            nodes, graphId, &JE::Editor::Tools::GraphModel::Integration::GraphControllerRequests::GetNodes);
 
         nodes.erase(AZStd::remove_if(
             nodes.begin(),
             nodes.end(),
-            [entityId](const GraphModel::NodePtr& nodePtr)
+            [entityId](const JE::Editor::Tools::GraphModel::NodePtr& nodePtr)
             {
                 auto baseNodePtr = static_cast<LandscapeCanvas::BaseNode*>(nodePtr.get());
                 return (!baseNodePtr) || (entityId != baseNodePtr->GetVegetationEntityId());
@@ -1969,11 +1969,11 @@ namespace LandscapeCanvasEditor
         return nodes;
     }
 
-    GraphModel::NodePtrList MainWindow::GetAllNodesMatchingEntityComponentInGraph(
+    JE::Editor::Tools::GraphModel::NodePtrList MainWindow::GetAllNodesMatchingEntityComponentInGraph(
         const GraphCanvas::GraphId& graphId, const AZ::EntityComponentIdPair& entityComponentId)
     {
-        GraphModel::NodePtrList nodes;
-        GraphModelIntegration::GraphControllerRequestBus::EventResult(nodes, graphId, &GraphModelIntegration::GraphControllerRequests::GetNodes);
+        JE::Editor::Tools::GraphModel::NodePtrList nodes;
+        JE::Editor::Tools::GraphModel::Integration::GraphControllerRequestBus::EventResult(nodes, graphId, &JE::Editor::Tools::GraphModel::Integration::GraphControllerRequests::GetNodes);
 
         const AZ::EntityId& entityId = entityComponentId.GetEntityId();
         const AZ::ComponentId& componentId = entityComponentId.GetComponentId();
@@ -1981,7 +1981,7 @@ namespace LandscapeCanvasEditor
         nodes.erase(AZStd::remove_if(
             nodes.begin(),
             nodes.end(),
-            [entityId, componentId](const GraphModel::NodePtr& nodePtr)
+            [entityId, componentId](const JE::Editor::Tools::GraphModel::NodePtr& nodePtr)
             {
                 auto baseNodePtr = static_cast<LandscapeCanvas::BaseNode*>(nodePtr.get());
                 return (!baseNodePtr)
@@ -1992,45 +1992,45 @@ namespace LandscapeCanvasEditor
         return nodes;
     }
 
-    GraphModel::NodePtr MainWindow::GetNodeMatchingEntityInGraph(const GraphCanvas::GraphId& graphId, const AZ::EntityId& entityId)
+    JE::Editor::Tools::GraphModel::NodePtr MainWindow::GetNodeMatchingEntityInGraph(const GraphCanvas::GraphId& graphId, const AZ::EntityId& entityId)
     {
-        GraphModel::NodePtrList nodes = GetAllNodesMatchingEntityInGraph(graphId, entityId);
+        JE::Editor::Tools::GraphModel::NodePtrList nodes = GetAllNodesMatchingEntityInGraph(graphId, entityId);
         return nodes.empty() ? nullptr : nodes.front();
     }
 
-    GraphModel::NodePtr MainWindow::GetNodeMatchingEntityComponentInGraph(const GraphCanvas::GraphId& graphId, const AZ::EntityComponentIdPair& entityComponentId)
+    JE::Editor::Tools::GraphModel::NodePtr MainWindow::GetNodeMatchingEntityComponentInGraph(const GraphCanvas::GraphId& graphId, const AZ::EntityComponentIdPair& entityComponentId)
     {
-        GraphModel::NodePtrList nodes = GetAllNodesMatchingEntityComponentInGraph(graphId, entityComponentId);
+        JE::Editor::Tools::GraphModel::NodePtrList nodes = GetAllNodesMatchingEntityComponentInGraph(graphId, entityComponentId);
         return nodes.empty() ? nullptr : nodes.front();
     }
 
-    GraphModel::NodePtrList MainWindow::GetAllNodesMatchingEntity(const AZ::EntityId& entityId)
+    JE::Editor::Tools::GraphModel::NodePtrList MainWindow::GetAllNodesMatchingEntity(const AZ::EntityId& entityId)
     {
-        GraphModel::NodePtrList matchingNodes;
+        JE::Editor::Tools::GraphModel::NodePtrList matchingNodes;
 
         for (GraphCanvas::GraphId graphId : GetOpenGraphIds())
         {
-            GraphModel::NodePtrList nodes = GetAllNodesMatchingEntityInGraph(graphId, entityId);
+            JE::Editor::Tools::GraphModel::NodePtrList nodes = GetAllNodesMatchingEntityInGraph(graphId, entityId);
             matchingNodes.insert(matchingNodes.end(), nodes.begin(), nodes.end());
         }
 
         return matchingNodes;
     }
 
-    GraphModel::NodePtrList MainWindow::GetAllNodesMatchingEntityComponent(const AZ::EntityComponentIdPair& entityComponentId)
+    JE::Editor::Tools::GraphModel::NodePtrList MainWindow::GetAllNodesMatchingEntityComponent(const AZ::EntityComponentIdPair& entityComponentId)
     {
-        GraphModel::NodePtrList matchingNodes;
+        JE::Editor::Tools::GraphModel::NodePtrList matchingNodes;
 
         for (GraphCanvas::GraphId graphId : GetOpenGraphIds())
         {
-            GraphModel::NodePtrList nodes = GetAllNodesMatchingEntityComponentInGraph(graphId, entityComponentId);
+            JE::Editor::Tools::GraphModel::NodePtrList nodes = GetAllNodesMatchingEntityComponentInGraph(graphId, entityComponentId);
             matchingNodes.insert(matchingNodes.end(), nodes.begin(), nodes.end());
         }
 
         return matchingNodes;
     }
 
-    void MainWindow::UpdateConnections(GraphModel::NodePtr node)
+    void MainWindow::UpdateConnections(JE::Editor::Tools::GraphModel::NodePtr node)
     {
         // Retrieve all the input data connections for this node that would be expected
         // based on the component property fields.  If this differs from what is actually
@@ -2045,12 +2045,12 @@ namespace LandscapeCanvasEditor
         // remove any current connections that aren't in our expected list.
         for (auto slotPair : node->GetSlots())
         {
-            GraphModel::SlotPtr slot = slotPair.second;
+            JE::Editor::Tools::GraphModel::SlotPtr slot = slotPair.second;
 
             // We only care about input data slots because those are the only slots
             // that could be modified when a Component on an Entity is changed,
             // which is what triggers OnEntityComponentPropertyChanged
-            if (!slot->Is(GraphModel::SlotDirection::Input, GraphModel::SlotType::Data))
+            if (!slot->Is(JE::Editor::Tools::GraphModel::SlotDirection::Input, JE::Editor::Tools::GraphModel::SlotType::Data))
             {
                 continue;
             }
@@ -2063,7 +2063,7 @@ namespace LandscapeCanvasEditor
             }
 
             // Input data slots will only have one connection
-            GraphModel::ConnectionPtr connection = *slotConnections.begin();
+            JE::Editor::Tools::GraphModel::ConnectionPtr connection = *slotConnections.begin();
 
             // Check if this connection matches one in our list of expected connections
             bool matchesExisting = false;
@@ -2089,7 +2089,7 @@ namespace LandscapeCanvasEditor
             // If this connection doesn't match an expected connection, then it needs to be removed
             if (!matchesExisting)
             {
-                GraphModelIntegration::GraphControllerRequestBus::Event(graphId, &GraphModelIntegration::GraphControllerRequests::RemoveConnection, connection);
+                JE::Editor::Tools::GraphModel::Integration::GraphControllerRequestBus::Event(graphId, &JE::Editor::Tools::GraphModel::Integration::GraphControllerRequests::RemoveConnection, connection);
             }
         }
 
@@ -2097,10 +2097,10 @@ namespace LandscapeCanvasEditor
         // so we need to create them
         for (auto it : expectedConnections)
         {
-            GraphModel::SlotPtr sourceSlot = it.first.second;
-            GraphModel::SlotPtr targetSlot = it.second.second;
+            JE::Editor::Tools::GraphModel::SlotPtr sourceSlot = it.first.second;
+            JE::Editor::Tools::GraphModel::SlotPtr targetSlot = it.second.second;
 
-            GraphModelIntegration::GraphControllerRequestBus::Event(graphId, &GraphModelIntegration::GraphControllerRequests::AddConnection, sourceSlot, targetSlot);
+            JE::Editor::Tools::GraphModel::Integration::GraphControllerRequestBus::Event(graphId, &JE::Editor::Tools::GraphModel::Integration::GraphControllerRequests::AddConnection, sourceSlot, targetSlot);
         }
     }
 
@@ -2195,7 +2195,7 @@ namespace LandscapeCanvasEditor
 
         // Keep track of any node wrappings we will need to setup after the nodes
         // have been added to the graph
-        AZStd::unordered_map<AZ::EntityId, GraphModel::NodePtrList> nodeWrappings;
+        AZStd::unordered_map<AZ::EntityId, JE::Editor::Tools::GraphModel::NodePtrList> nodeWrappings;
 
         // We don't need to cache a mapping of the area extenders since they don't have
         // output slots that connect to other nodes
@@ -2203,8 +2203,8 @@ namespace LandscapeCanvasEditor
 
         // Iterate through our entity hierarchy to look for components that
         // correspond with nodes we know how to graph
-        GraphModel::NodePtrList disabledNodes;
-        GraphModel::GraphPtr graph = GetGraphById(graphId);
+        JE::Editor::Tools::GraphModel::NodePtrList disabledNodes;
+        JE::Editor::Tools::GraphModel::GraphPtr graph = GetGraphById(graphId);
         EnumerateEntityComponentTree(entityId, [this, graph, graphId, rootPoint, &nodePointMap, &nodeWrappings, &areaExtenders, &disabledNodes](const AZ::EntityId& entityId, AZ::Component* component, bool isDisabled) {
             const AZ::TypeId& componentTypeId = component->RTTI_GetType();
 
@@ -2279,7 +2279,7 @@ namespace LandscapeCanvasEditor
             const EntityIdNodeMap& nodeMap = nodeMaps[nodeType];
             for (const auto& it : nodeMap)
             {
-                GraphModel::NodePtr node = it.second;
+                JE::Editor::Tools::GraphModel::NodePtr node = it.second;
                 ParseNodeConnections(graphId, node, connections);
             }
         }
@@ -2302,8 +2302,8 @@ namespace LandscapeCanvasEditor
         // connections, they will automatically be handled by this logic.
         for (auto it : connections)
         {
-            GraphModel::NodePtr sourceNode = it.first.first;
-            GraphModel::NodePtr targetNode = it.second.first;
+            JE::Editor::Tools::GraphModel::NodePtr sourceNode = it.first.first;
+            JE::Editor::Tools::GraphModel::NodePtr targetNode = it.second.first;
 
             auto sourceBaseNodePtr = static_cast<LandscapeCanvas::BaseNode*>(sourceNode.get());
             auto targetBaseNodePtr = static_cast<LandscapeCanvas::BaseNode*>(targetNode.get());
@@ -2344,7 +2344,7 @@ namespace LandscapeCanvasEditor
 
         // Place the nodes in a tree layout grouped by their connections
         AZ::Vector2 gridMajorPitch;
-        GraphModelIntegration::GraphControllerRequestBus::EventResult(gridMajorPitch, graphId, &GraphModelIntegration::GraphControllerRequests::GetMajorPitch);
+        JE::Editor::Tools::GraphModel::Integration::GraphControllerRequestBus::EventResult(gridMajorPitch, graphId, &JE::Editor::Tools::GraphModel::Integration::GraphControllerRequests::GetMajorPitch);
         PlaceNodes(graphId, rootPoint, gridMajorPitch);
 
         // Setup the node wrappings now that the nodes have been placed in the graph
@@ -2359,28 +2359,28 @@ namespace LandscapeCanvasEditor
 
             // Find the wrapper node for this EntityId. There could be multiple nodes with the same
             // EntityId (e.g. box shapes), but there can't be multiple wrapper nodes on the same Entity.
-            GraphModel::NodePtr wrapperNode = nullptr;
+            JE::Editor::Tools::GraphModel::NodePtr wrapperNode = nullptr;
             for (auto nodePoint : nodePointIt->second)
             {
-                if (nodePoint->node->GetNodeType() == GraphModel::NodeType::WrapperNode)
+                if (nodePoint->node->GetNodeType() == JE::Editor::Tools::GraphModel::NodeType::WrapperNode)
                 {
                     wrapperNode = nodePoint->node;
                     break;
                 }
             }
 
-            GraphModel::NodePtrList wrappedNodes = it.second;
-            for (GraphModel::NodePtr node : wrappedNodes)
+            JE::Editor::Tools::GraphModel::NodePtrList wrappedNodes = it.second;
+            for (JE::Editor::Tools::GraphModel::NodePtr node : wrappedNodes)
             {
                 // Wrap the node using its preferred layout order (if it has one)
                 AZ::u32 layoutOrder = GetWrappedNodeLayoutOrder(node);
-                if (layoutOrder != GraphModel::DefaultWrappedNodeLayoutOrder)
+                if (layoutOrder != JE::Editor::Tools::GraphModel::DefaultWrappedNodeLayoutOrder)
                 {
-                    GraphModelIntegration::GraphControllerRequestBus::Event(graphId, &GraphModelIntegration::GraphControllerRequests::WrapNodeOrdered, wrapperNode, node, layoutOrder);
+                    JE::Editor::Tools::GraphModel::Integration::GraphControllerRequestBus::Event(graphId, &JE::Editor::Tools::GraphModel::Integration::GraphControllerRequests::WrapNodeOrdered, wrapperNode, node, layoutOrder);
                 }
                 else
                 {
-                    GraphModelIntegration::GraphControllerRequestBus::Event(graphId, &GraphModelIntegration::GraphControllerRequests::WrapNode, wrapperNode, node);
+                    JE::Editor::Tools::GraphModel::Integration::GraphControllerRequestBus::Event(graphId, &JE::Editor::Tools::GraphModel::Integration::GraphControllerRequests::WrapNode, wrapperNode, node);
                 }
             }
         }
@@ -2398,24 +2398,24 @@ namespace LandscapeCanvasEditor
         // Disable any nodes that came from disabled components now that they've all been added to the graph
         for (auto node : disabledNodes)
         {
-            GraphModelIntegration::GraphControllerRequestBus::Event(graphId, &GraphModelIntegration::GraphControllerRequests::DisableNode, node);
+            JE::Editor::Tools::GraphModel::Integration::GraphControllerRequestBus::Event(graphId, &JE::Editor::Tools::GraphModel::Integration::GraphControllerRequests::DisableNode, node);
         }
 
         // Create the connections now, after placing the nodes, since the
         // connection data is used for appropriate node placement
         for (auto it : connections)
         {
-            GraphModel::SlotPtr sourceSlot = it.first.second;
-            GraphModel::SlotPtr targetSlot = it.second.second;
-            GraphModelIntegration::GraphControllerRequestBus::Event(graphId, &GraphModelIntegration::GraphControllerRequests::AddConnection, sourceSlot, targetSlot);
+            JE::Editor::Tools::GraphModel::SlotPtr sourceSlot = it.first.second;
+            JE::Editor::Tools::GraphModel::SlotPtr targetSlot = it.second.second;
+            JE::Editor::Tools::GraphModel::Integration::GraphControllerRequestBus::Event(graphId, &JE::Editor::Tools::GraphModel::Integration::GraphControllerRequests::AddConnection, sourceSlot, targetSlot);
         }
     }
 
-    GraphModel::NodePtrList MainWindow::RefreshEntityComponentNodes(const AZ::EntityId& targetEntityId, GraphCanvas::GraphId graphId)
+    JE::Editor::Tools::GraphModel::NodePtrList MainWindow::RefreshEntityComponentNodes(const AZ::EntityId& targetEntityId, GraphCanvas::GraphId graphId)
     {
-        GraphModel::GraphPtr graph = GetGraphById(graphId);
-        GraphModel::NodePtrList loadedNodes, disabledNodes, createdNodes;
-        GraphModelIntegration::GraphControllerRequestBus::EventResult(loadedNodes, graphId, &GraphModelIntegration::GraphControllerRequests::GetNodes);
+        JE::Editor::Tools::GraphModel::GraphPtr graph = GetGraphById(graphId);
+        JE::Editor::Tools::GraphModel::NodePtrList loadedNodes, disabledNodes, createdNodes;
+        JE::Editor::Tools::GraphModel::Integration::GraphControllerRequestBus::EventResult(loadedNodes, graphId, &JE::Editor::Tools::GraphModel::Integration::GraphControllerRequests::GetNodes);
 
         EnumerateEntityComponentTree(
             targetEntityId,
@@ -2423,12 +2423,12 @@ namespace LandscapeCanvasEditor
                 const AZ::EntityId& entityId, AZ::Component* component, bool isDisabled)
             {
             bool foundMatch = false;
-            GraphModel::NodePtr validNode = nullptr;
+            JE::Editor::Tools::GraphModel::NodePtr validNode = nullptr;
 
             // Check if this component matches a node that was already loaded in the graph
             for (auto it = loadedNodes.begin(); it != loadedNodes.end(); ++it)
             {
-                GraphModel::NodePtr node = *it;
+                JE::Editor::Tools::GraphModel::NodePtr node = *it;
                 auto baseNodePtr = static_cast<LandscapeCanvas::BaseNode*>(node.get());
                 AZ::ComponentId componentId = component->GetId();
                 if (entityId == baseNodePtr->GetVegetationEntityId() && componentId == baseNodePtr->GetComponentId())
@@ -2481,7 +2481,7 @@ namespace LandscapeCanvasEditor
         // Disable any nodes that came from disabled components now that they've all been added to the graph
         for (auto node : disabledNodes)
         {
-            GraphModelIntegration::GraphControllerRequestBus::Event(graphId, &GraphModelIntegration::GraphControllerRequests::DisableNode, node);
+            JE::Editor::Tools::GraphModel::Integration::GraphControllerRequestBus::Event(graphId, &JE::Editor::Tools::GraphModel::Integration::GraphControllerRequests::DisableNode, node);
         }
 
         // Anything left in 'loadedNodes' at this point after the enumerate is done can be
@@ -2491,7 +2491,7 @@ namespace LandscapeCanvasEditor
         {
             for (auto node : loadedNodes)
             {
-                GraphModelIntegration::GraphControllerRequestBus::Event(graphId, &GraphModelIntegration::GraphControllerRequests::RemoveNode, node);
+                JE::Editor::Tools::GraphModel::Integration::GraphControllerRequestBus::Event(graphId, &JE::Editor::Tools::GraphModel::Integration::GraphControllerRequests::RemoveNode, node);
             }
         }
 
@@ -2534,7 +2534,7 @@ namespace LandscapeCanvasEditor
         // Create the node for the given component type.
         // If we don't support a node for this component type, it will just return nullptr.
         LandscapeCanvas::BaseNode::BaseNodePtr node;
-        GraphModel::GraphPtr graph = GetGraphById(graphId);
+        JE::Editor::Tools::GraphModel::GraphPtr graph = GetGraphById(graphId);
         const AZ::TypeId& componentTypeId = component->RTTI_GetType();
         LandscapeCanvas::LandscapeCanvasNodeFactoryRequestBus::BroadcastResult(node, &LandscapeCanvas::LandscapeCanvasNodeFactoryRequests::CreateNodeForType, graph, componentTypeId);
 
@@ -2559,14 +2559,14 @@ namespace LandscapeCanvasEditor
 
         // Disable this node for now since it's pending when OnEntityComponentAdded is called, it will be enabled
         // after if it becomes enabled
-        GraphModelIntegration::GraphControllerRequestBus::Event(graphId, &GraphModelIntegration::GraphControllerRequests::DisableNode, node);
+        JE::Editor::Tools::GraphModel::Integration::GraphControllerRequestBus::Event(graphId, &JE::Editor::Tools::GraphModel::Integration::GraphControllerRequests::DisableNode, node);
 
         // Create connections if any exist (e.g. if a component was copied/pasted with existing configuration)
         for (auto it : connections)
         {
-            GraphModel::SlotPtr sourceSlot = it.first.second;
-            GraphModel::SlotPtr targetSlot = it.second.second;
-            GraphModelIntegration::GraphControllerRequestBus::Event(graphId, &GraphModelIntegration::GraphControllerRequests::AddConnection, sourceSlot, targetSlot);
+            JE::Editor::Tools::GraphModel::SlotPtr sourceSlot = it.first.second;
+            JE::Editor::Tools::GraphModel::SlotPtr targetSlot = it.second.second;
+            JE::Editor::Tools::GraphModel::Integration::GraphControllerRequestBus::Event(graphId, &JE::Editor::Tools::GraphModel::Integration::GraphControllerRequests::AddConnection, sourceSlot, targetSlot);
         }
 
         m_ignoreGraphUpdates = false;
@@ -2585,7 +2585,7 @@ namespace LandscapeCanvasEditor
             if (component)
             {
                 // If FindComponent succeeds, then the component has been enabled
-                GraphModelIntegration::GraphControllerRequestBus::Event(graphId, &GraphModelIntegration::GraphControllerRequests::EnableNode, node);
+                JE::Editor::Tools::GraphModel::Integration::GraphControllerRequestBus::Event(graphId, &JE::Editor::Tools::GraphModel::Integration::GraphControllerRequests::EnableNode, node);
 
                 // Also check if any other previously deactivated (pending) components on this same Entity were activated
                 // when this new component was added (e.g. a random noise gradient component being activated once the
@@ -2600,14 +2600,14 @@ namespace LandscapeCanvasEditor
                         auto it = nodeMap.find(entityId);
                         if (it != nodeMap.end())
                         {
-                            GraphModel::NodePtr cachedNode = it->second;
+                            JE::Editor::Tools::GraphModel::NodePtr cachedNode = it->second;
                             auto baseNodePtr = static_cast<LandscapeCanvas::BaseNode*>(cachedNode.get());
 
                             // Ignore node matching the same componentId as the component that was directly added
                             // If the GetComponent() method returns a valid pointer, it means the component is enabled now
                             if ((baseNodePtr->GetComponentId() != componentId) && baseNodePtr->GetComponent())
                             {
-                                GraphModelIntegration::GraphControllerRequestBus::Event(graphId, &GraphModelIntegration::GraphControllerRequests::EnableNode, cachedNode);
+                                JE::Editor::Tools::GraphModel::Integration::GraphControllerRequestBus::Event(graphId, &JE::Editor::Tools::GraphModel::Integration::GraphControllerRequests::EnableNode, cachedNode);
                             }
                         }
                     }
@@ -2632,9 +2632,9 @@ namespace LandscapeCanvasEditor
             auto it = wrapperNodeMap.find(node->GetVegetationEntityId());
             if (it != wrapperNodeMap.end())
             {
-                GraphModel::NodePtr wrapperNode = it->second;
+                JE::Editor::Tools::GraphModel::NodePtr wrapperNode = it->second;
                 AZ::u32 layoutOrder = GetWrappedNodeLayoutOrder(node);
-                GraphModelIntegration::GraphControllerRequestBus::Event(graphId, &GraphModelIntegration::GraphControllerRequests::WrapNodeOrdered, wrapperNode, node, layoutOrder);
+                JE::Editor::Tools::GraphModel::Integration::GraphControllerRequestBus::Event(graphId, &JE::Editor::Tools::GraphModel::Integration::GraphControllerRequests::WrapNodeOrdered, wrapperNode, node, layoutOrder);
 
                 // Some nodes could be wrapped or free floating, so if this was a wrapped node, we can stop now
                 // Otherwise, we need to fall-through and just place it in the graph
@@ -2666,7 +2666,7 @@ namespace LandscapeCanvasEditor
             }
         }
 
-        GraphModelIntegration::GraphControllerRequestBus::Event(graphId, &GraphModelIntegration::GraphControllerRequests::AddNode, node, nodePosition);
+        JE::Editor::Tools::GraphModel::Integration::GraphControllerRequestBus::Event(graphId, &JE::Editor::Tools::GraphModel::Integration::GraphControllerRequests::AddNode, node, nodePosition);
     }
 
     void MainWindow::OnEntityComponentRemoved(const AZ::EntityId& entityId, const AZ::ComponentId& componentId)
@@ -2680,15 +2680,15 @@ namespace LandscapeCanvasEditor
 
         for (GraphCanvas::GraphId graphId : GetOpenGraphIds())
         {
-            GraphModel::NodePtrList nodes;
-            GraphModelIntegration::GraphControllerRequestBus::EventResult(nodes, graphId, &GraphModelIntegration::GraphControllerRequests::GetNodes);
+            JE::Editor::Tools::GraphModel::NodePtrList nodes;
+            JE::Editor::Tools::GraphModel::Integration::GraphControllerRequestBus::EventResult(nodes, graphId, &JE::Editor::Tools::GraphModel::Integration::GraphControllerRequests::GetNodes);
 
             for (auto node : nodes)
             {
                 auto baseNodePtr = static_cast<LandscapeCanvas::BaseNode*>(node.get());
                 if (baseNodePtr->GetVegetationEntityId() == entityId && baseNodePtr->GetComponentId() == componentId)
                 {
-                    GraphModelIntegration::GraphControllerRequestBus::Event(graphId, &GraphModelIntegration::GraphControllerRequests::RemoveNode, node);
+                    JE::Editor::Tools::GraphModel::Integration::GraphControllerRequestBus::Event(graphId, &JE::Editor::Tools::GraphModel::Integration::GraphControllerRequests::RemoveNode, node);
                     break;
                 }
             }
@@ -2700,22 +2700,22 @@ namespace LandscapeCanvasEditor
     void MainWindow::OnEntityComponentEnabled(const AZ::EntityId& entityId, const AZ::ComponentId& componentId)
     {
         AZ::EntityComponentIdPair entityComponentId(entityId, componentId);
-        GraphModel::NodePtrList matchingNodes = GetAllNodesMatchingEntityComponent(entityComponentId);
+        JE::Editor::Tools::GraphModel::NodePtrList matchingNodes = GetAllNodesMatchingEntityComponent(entityComponentId);
         for (auto node : matchingNodes)
         {
             GraphCanvas::GraphId graphId = GetGraphId(node->GetGraph());
-            GraphModelIntegration::GraphControllerRequestBus::Event(graphId, &GraphModelIntegration::GraphControllerRequests::EnableNode, node);
+            JE::Editor::Tools::GraphModel::Integration::GraphControllerRequestBus::Event(graphId, &JE::Editor::Tools::GraphModel::Integration::GraphControllerRequests::EnableNode, node);
         }
     }
 
     void MainWindow::OnEntityComponentDisabled(const AZ::EntityId& entityId, const AZ::ComponentId& componentId)
     {
         AZ::EntityComponentIdPair entityComponentId(entityId, componentId);
-        GraphModel::NodePtrList matchingNodes = GetAllNodesMatchingEntityComponent(entityComponentId);
+        JE::Editor::Tools::GraphModel::NodePtrList matchingNodes = GetAllNodesMatchingEntityComponent(entityComponentId);
         for (auto node : matchingNodes)
         {
             GraphCanvas::GraphId graphId = GetGraphId(node->GetGraph());
-            GraphModelIntegration::GraphControllerRequestBus::Event(graphId, &GraphModelIntegration::GraphControllerRequests::DisableNode, node);
+            JE::Editor::Tools::GraphModel::Integration::GraphControllerRequestBus::Event(graphId, &JE::Editor::Tools::GraphModel::Integration::GraphControllerRequests::DisableNode, node);
         }
     }
 
@@ -2731,7 +2731,7 @@ namespace LandscapeCanvasEditor
             return;
         }
 
-        GraphModel::NodePtrList matchingNodes = GetAllNodesMatchingEntity(changedEntityId);
+        JE::Editor::Tools::GraphModel::NodePtrList matchingNodes = GetAllNodesMatchingEntity(changedEntityId);
         for (auto node : matchingNodes)
         {
             // Re-parse any input connections for this node to add/remove any connections
@@ -2899,9 +2899,9 @@ namespace LandscapeCanvasEditor
         OnSelectionChanged();
     }
 
-    AZ::u32 MainWindow::GetWrappedNodeLayoutOrder(GraphModel::NodePtr node)
+    AZ::u32 MainWindow::GetWrappedNodeLayoutOrder(JE::Editor::Tools::GraphModel::NodePtr node)
     {
-        AZ::u32 layoutOrder = GraphModel::DefaultWrappedNodeLayoutOrder;
+        AZ::u32 layoutOrder = JE::Editor::Tools::GraphModel::DefaultWrappedNodeLayoutOrder;
         if (!node)
         {
             return layoutOrder;
@@ -3044,7 +3044,7 @@ namespace LandscapeCanvasEditor
         return requestedComponentId;
     }
 
-    void MainWindow::HandleNodeCreated(GraphModel::NodePtr node)
+    void MainWindow::HandleNodeCreated(JE::Editor::Tools::GraphModel::NodePtr node)
     {
         using namespace LandscapeCanvas;
 
@@ -3068,7 +3068,7 @@ namespace LandscapeCanvasEditor
             return;
         }
 
-        GraphCanvas::GraphId graphId = (*GraphModelIntegration::GraphControllerNotificationBus::GetCurrentBusId());
+        GraphCanvas::GraphId graphId = (*JE::Editor::Tools::GraphModel::Integration::GraphControllerNotificationBus::GetCurrentBusId());
         AZ::EntityId rootEntityId = GetRootEntityIdForGraphId(graphId);
         if (!rootEntityId.IsValid())
         {
@@ -3106,7 +3106,7 @@ namespace LandscapeCanvasEditor
         m_ignoreGraphUpdates = false;
     }
 
-    void MainWindow::AddComponentForNode(GraphModel::NodePtr node, const AZ::EntityId& entityId)
+    void MainWindow::AddComponentForNode(JE::Editor::Tools::GraphModel::NodePtr node, const AZ::EntityId& entityId)
     {
         auto* baseNodePtr = static_cast<LandscapeCanvas::BaseNode*>(node.get());
         if (!baseNodePtr)
@@ -3129,7 +3129,7 @@ namespace LandscapeCanvasEditor
         baseNodePtr->SetComponentId(newComponentId);
     }
 
-    void MainWindow::HandleNodeAdded(GraphModel::NodePtr node)
+    void MainWindow::HandleNodeAdded(JE::Editor::Tools::GraphModel::NodePtr node)
     {
         auto* baseNodePtr = static_cast<LandscapeCanvas::BaseNode*>(node.get());
         if (!baseNodePtr)
@@ -3138,7 +3138,7 @@ namespace LandscapeCanvasEditor
         }
 
         // Update our EntityId/Node mappings when a new node is added
-        GraphCanvas::GraphId graphId = (*GraphModelIntegration::GraphControllerNotificationBus::GetCurrentBusId());
+        GraphCanvas::GraphId graphId = (*JE::Editor::Tools::GraphModel::Integration::GraphControllerNotificationBus::GetCurrentBusId());
         if (!m_ignoreGraphUpdates)
         {
             UpdateEntityIdNodeMap(graphId, node);
@@ -3148,18 +3148,18 @@ namespace LandscapeCanvasEditor
         // instead until we have support for listening for GraphModel slot value changes.  We need to delay this because
         // when the node is added, the slots haven't been added to the element map yet.
         QTimer::singleShot(0, [node, graphId]() {
-            GraphModel::SlotPtr slot = node->GetSlot(LandscapeCanvas::ENTITY_NAME_SLOT_ID);
+            JE::Editor::Tools::GraphModel::SlotPtr slot = node->GetSlot(LandscapeCanvas::ENTITY_NAME_SLOT_ID);
             if (slot)
             {
                 GraphCanvas::NodeId nodeId;
-                GraphModelIntegration::GraphControllerRequestBus::EventResult(nodeId, graphId, &GraphModelIntegration::GraphControllerRequests::GetNodeIdByNode, node);
+                JE::Editor::Tools::GraphModel::Integration::GraphControllerRequestBus::EventResult(nodeId, graphId, &JE::Editor::Tools::GraphModel::Integration::GraphControllerRequests::GetNodeIdByNode, node);
 
                 GraphCanvas::SlotId slotId;
-                GraphModelIntegration::GraphControllerRequestBus::EventResult(slotId, graphId, &GraphModelIntegration::GraphControllerRequests::GetSlotIdBySlot, slot);
+                JE::Editor::Tools::GraphModel::Integration::GraphControllerRequestBus::EventResult(slotId, graphId, &JE::Editor::Tools::GraphModel::Integration::GraphControllerRequests::GetSlotIdBySlot, slot);
 
                 // If this is a wrapped node, then remove the Entity Name property slot since the wrapper node will already have one
                 bool isNodeWrapped = false;
-                GraphModelIntegration::GraphControllerRequestBus::EventResult(isNodeWrapped, graphId, &GraphModelIntegration::GraphControllerRequests::IsNodeWrapped, node);
+                JE::Editor::Tools::GraphModel::Integration::GraphControllerRequestBus::EventResult(isNodeWrapped, graphId, &JE::Editor::Tools::GraphModel::Integration::GraphControllerRequests::IsNodeWrapped, node);
                 if (isNodeWrapped)
                 {
                     GraphCanvas::NodeRequestBus::Event(nodeId, &GraphCanvas::NodeRequests::RemoveSlot, slotId);
@@ -3168,7 +3168,7 @@ namespace LandscapeCanvasEditor
 
                 // The ownership of the new data interface and property display get passed to the node property display widget
                 // when we call SetNodePropertyDisplay
-                auto dataInterface = aznew GraphModelIntegration::ReadOnlyDataInterface(slot);
+                auto dataInterface = aznew JE::Editor::Tools::GraphModel::Integration::ReadOnlyDataInterface(slot);
                 GraphCanvas::NodePropertyDisplay* readOnlyPropertyDisplay = nullptr;
                 GraphCanvas::GraphCanvasRequestBus::BroadcastResult(readOnlyPropertyDisplay, &GraphCanvas::GraphCanvasRequests::CreateReadOnlyNodePropertyDisplay, static_cast<GraphCanvas::ReadOnlyDataInterface*>(dataInterface));
 
@@ -3192,7 +3192,7 @@ namespace LandscapeCanvasEditor
             if (!entityIconPath.empty())
             {
                 QPixmap iconPixmap(entityIconPath.c_str());
-                GraphModelIntegration::GraphControllerRequestBus::Event(graphId, &GraphModelIntegration::GraphControllerRequests::SetThumbnailImageOnNode, node, iconPixmap);
+                JE::Editor::Tools::GraphModel::Integration::GraphControllerRequestBus::Event(graphId, &JE::Editor::Tools::GraphModel::Integration::GraphControllerRequests::SetThumbnailImageOnNode, node, iconPixmap);
             }
         }
         else if (nodeType == LandscapeCanvas::BaseNode::Gradient || nodeType == LandscapeCanvas::BaseNode::GradientGenerator || nodeType == LandscapeCanvas::BaseNode::GradientModifier)
@@ -3201,15 +3201,15 @@ namespace LandscapeCanvasEditor
             // The node layout takes ownership of the thumbnail, so it will be deleted whenever the node is deleted
             const AZ::EntityId& gradientEntityId = baseNodePtr->GetVegetationEntityId();
             GradientPreviewThumbnailItem* previewThumbnail = new GradientPreviewThumbnailItem(gradientEntityId);
-            GraphModelIntegration::GraphControllerRequestBus::Event(graphId, &GraphModelIntegration::GraphControllerRequests::SetThumbnailOnNode, node, previewThumbnail);
+            JE::Editor::Tools::GraphModel::Integration::GraphControllerRequestBus::Event(graphId, &JE::Editor::Tools::GraphModel::Integration::GraphControllerRequests::SetThumbnailOnNode, node, previewThumbnail);
         }
-        else if ((nodeType == LandscapeCanvas::BaseNode::VegetationArea || nodeType == LandscapeCanvas::BaseNode::TerrainArea) && (node->GetNodeType() == GraphModel::NodeType::WrapperNode))
+        else if ((nodeType == LandscapeCanvas::BaseNode::VegetationArea || nodeType == LandscapeCanvas::BaseNode::TerrainArea) && (node->GetNodeType() == JE::Editor::Tools::GraphModel::NodeType::WrapperNode))
         {
-            GraphModelIntegration::GraphControllerRequestBus::Event(graphId, &GraphModelIntegration::GraphControllerRequests::SetWrapperNodeActionString, node, QObject::tr("Add Extenders").toUtf8().constData());
+            JE::Editor::Tools::GraphModel::Integration::GraphControllerRequestBus::Event(graphId, &JE::Editor::Tools::GraphModel::Integration::GraphControllerRequests::SetWrapperNodeActionString, node, QObject::tr("Add Extenders").toUtf8().constData());
         }
     }
 
-    void MainWindow::UpdateEntityIdNodeMap(GraphCanvas::GraphId graphId, GraphModel::NodePtr node)
+    void MainWindow::UpdateEntityIdNodeMap(GraphCanvas::GraphId graphId, JE::Editor::Tools::GraphModel::NodePtr node)
     {
         auto baseNodePtr = static_cast<LandscapeCanvas::BaseNode*>(node.get());
         const AZ::EntityId& entityId = baseNodePtr->GetVegetationEntityId();
@@ -3220,7 +3220,7 @@ namespace LandscapeCanvasEditor
         }
     }
 
-    MainWindow::EntityIdNodeMap* MainWindow::GetEntityIdNodeMap(GraphCanvas::GraphId graphId, GraphModel::NodePtr node)
+    MainWindow::EntityIdNodeMap* MainWindow::GetEntityIdNodeMap(GraphCanvas::GraphId graphId, JE::Editor::Tools::GraphModel::NodePtr node)
     {
         auto nodeMapsIt = m_entityIdNodeMapsByGraph.find(graphId);
         if (nodeMapsIt == m_entityIdNodeMapsByGraph.end())
@@ -3257,7 +3257,7 @@ namespace LandscapeCanvasEditor
         return nullptr;
     }
 
-    void MainWindow::ParseNodeConnections(GraphCanvas::GraphId graphId, GraphModel::NodePtr node, ConnectionsList& connections)
+    void MainWindow::ParseNodeConnections(GraphCanvas::GraphId graphId, JE::Editor::Tools::GraphModel::NodePtr node, ConnectionsList& connections)
     {
         auto baseNodePtr = static_cast<LandscapeCanvas::BaseNode*>(node.get());
         AZ::Component* component = baseNodePtr->GetComponent();
@@ -3328,7 +3328,7 @@ namespace LandscapeCanvasEditor
             AZ::SerializeContext::ENUM_ACCESS_FOR_READ, nullptr/* errorHandler */);
 
         // Connect any preview entities to the corresponding shape bounds
-        AZStd::vector<AZStd::pair<GraphModel::SlotId, AZ::EntityId>> shapeSlotEntityPairs;
+        AZStd::vector<AZStd::pair<JE::Editor::Tools::GraphModel::SlotId, AZ::EntityId>> shapeSlotEntityPairs;
         if (previewEntityId.IsValid())
         {
             shapeSlotEntityPairs.emplace_back(LandscapeCanvas::PREVIEW_BOUNDS_SLOT_ID, previewEntityId);
@@ -3339,13 +3339,13 @@ namespace LandscapeCanvasEditor
         {
             // We have multiple inbound shape slots that share the same underlying property,
             // so we need to figure out which kind of inbound shape slot this node has
-            GraphModel::SlotId shapeSlotId(LandscapeCanvas::INBOUND_SHAPE_SLOT_ID);
+            JE::Editor::Tools::GraphModel::SlotId shapeSlotId(LandscapeCanvas::INBOUND_SHAPE_SLOT_ID);
             if (!node->GetSlot(shapeSlotId))
             {
-                shapeSlotId = GraphModel::SlotId(LandscapeCanvas::PIN_TO_SHAPE_SLOT_ID);
+                shapeSlotId = JE::Editor::Tools::GraphModel::SlotId(LandscapeCanvas::PIN_TO_SHAPE_SLOT_ID);
                 if (!node->GetSlot(shapeSlotId))
                 {
-                    shapeSlotId = GraphModel::SlotId(LandscapeCanvas::INPUT_BOUNDS_SLOT_ID);
+                    shapeSlotId = JE::Editor::Tools::GraphModel::SlotId(LandscapeCanvas::INPUT_BOUNDS_SLOT_ID);
                 }
             }
 
@@ -3359,7 +3359,7 @@ namespace LandscapeCanvasEditor
         AZ::EntityId placementBoundsEntityId;
         if (baseNodePtr->GetBaseNodeType() == LandscapeCanvas::BaseNode::BaseNodeType::VegetationArea)
         {
-            GraphModel::SlotPtr placementBoundsSlot = node->GetSlot(LandscapeCanvas::PLACEMENT_BOUNDS_SLOT_ID);
+            JE::Editor::Tools::GraphModel::SlotPtr placementBoundsSlot = node->GetSlot(LandscapeCanvas::PLACEMENT_BOUNDS_SLOT_ID);
             if (placementBoundsSlot)
             {
                 // Retrieve the Placement Bounds slot value from the Reference Shape component if it exists
@@ -3388,7 +3388,7 @@ namespace LandscapeCanvasEditor
                     auto shapeIt = shapeNodeMap.find(entityId);
                     if (shapeIt != shapeNodeMap.end())
                     {
-                        GraphModel::NodePtr shapeNode = (*shapeIt).second;
+                        JE::Editor::Tools::GraphModel::NodePtr shapeNode = (*shapeIt).second;
                         auto baseShapeNodePtr = static_cast<LandscapeCanvas::BaseNode*>(shapeNode.get());
                         if (baseShapeNodePtr->GetComponent())
                         {
@@ -3410,9 +3410,9 @@ namespace LandscapeCanvasEditor
                 continue;
             }
 
-            GraphModel::NodePtr shapeNode = (*shapeIt).second;
-            GraphModel::SlotPtr shapeBoundsSlot = shapeNode->GetSlot(LandscapeCanvas::BaseShapeNode::BOUNDS_SLOT_ID);
-            GraphModel::SlotPtr shapeTargetSlot = node->GetSlot(slotEntityPair.first);
+            JE::Editor::Tools::GraphModel::NodePtr shapeNode = (*shapeIt).second;
+            JE::Editor::Tools::GraphModel::SlotPtr shapeBoundsSlot = shapeNode->GetSlot(LandscapeCanvas::BaseShapeNode::BOUNDS_SLOT_ID);
+            JE::Editor::Tools::GraphModel::SlotPtr shapeTargetSlot = node->GetSlot(slotEntityPair.first);
 
             auto source = AZStd::make_pair(shapeNode, shapeBoundsSlot);
             auto target = AZStd::make_pair(node, shapeTargetSlot);
@@ -3425,7 +3425,7 @@ namespace LandscapeCanvasEditor
         auto handleIndexedSlots = [this, graphId, node, &connections](
                                       const AzToolsFramework::EntityIdList& entityIds,
                                       const EntityIdNodeMap& sourceNodeMap,
-                                      const GraphModel::SlotName& outboundSlotId,
+                                      const JE::Editor::Tools::GraphModel::SlotName& outboundSlotId,
                                       LandscapeCanvas::LandscapeCanvasDataTypeEnum slotDataType)
         {
             if (entityIds.empty())
@@ -3443,7 +3443,7 @@ namespace LandscapeCanvasEditor
                 }
 
                 // Find the source node
-                GraphModel::NodePtr sourceNode;
+                JE::Editor::Tools::GraphModel::NodePtr sourceNode;
                 auto nodeIt = sourceNodeMap.find(entityId);
                 if (nodeIt != sourceNodeMap.end())
                 {
@@ -3458,11 +3458,11 @@ namespace LandscapeCanvasEditor
                         continue;
                     }
 
-                    GraphModel::SlotPtr outboundSlot = sourceNode->GetSlot(outboundSlotId);
+                    JE::Editor::Tools::GraphModel::SlotPtr outboundSlot = sourceNode->GetSlot(outboundSlotId);
 
                     // Find the corresponding input slot based on the index
-                    GraphModel::DataTypePtr dataType = GetGraphContext()->GetDataType(slotDataType);
-                    GraphModel::SlotPtr inboundSlot = EnsureInboundDataSlotWithIndex(graphId, node, dataType, i);
+                    JE::Editor::Tools::GraphModel::DataTypePtr dataType = GetGraphContext()->GetDataType(slotDataType);
+                    JE::Editor::Tools::GraphModel::SlotPtr inboundSlot = EnsureInboundDataSlotWithIndex(graphId, node, dataType, i);
                     if (!inboundSlot)
                     {
                         AZ_Assert(false, "Unhandled inbound slot mapping.");
@@ -3483,7 +3483,7 @@ namespace LandscapeCanvasEditor
         handleIndexedSlots(vegetationAreaIds, nodeMaps[EntityIdNodeMapEnum::WrapperNodes], LandscapeCanvas::OUTBOUND_AREA_SLOT_ID, LandscapeCanvas::LandscapeCanvasDataTypeEnum::Area);
     }
 
-    void MainWindow::HandleImageAssetSlot(GraphModel::NodePtr targetNode, const EntityIdNodeMap& gradientNodeMap, ConnectionsList& connections)
+    void MainWindow::HandleImageAssetSlot(JE::Editor::Tools::GraphModel::NodePtr targetNode, const EntityIdNodeMap& gradientNodeMap, ConnectionsList& connections)
     {
         auto baseNode = static_cast<LandscapeCanvas::BaseNode*>(targetNode.get());
         const AZ::EntityId& entityId = baseNode->GetVegetationEntityId();
@@ -3504,11 +3504,11 @@ namespace LandscapeCanvasEditor
             for (auto it = gradientNodeMap.begin(); it != gradientNodeMap.end(); ++it)
             {
                 const AZ::EntityId& nodeEntityId = it->first;
-                GraphModel::NodePtr sourceNode = it->second;
+                JE::Editor::Tools::GraphModel::NodePtr sourceNode = it->second;
 
                 // If this node doesn't have an output image slot, it's not a Gradient Baker
                 // so keep looking
-                GraphModel::SlotPtr outputImageSlot = sourceNode->GetSlot(LandscapeCanvas::OUTPUT_IMAGE_SLOT_ID);
+                JE::Editor::Tools::GraphModel::SlotPtr outputImageSlot = sourceNode->GetSlot(LandscapeCanvas::OUTPUT_IMAGE_SLOT_ID);
                 if (!outputImageSlot)
                 {
                     continue;
@@ -3520,7 +3520,7 @@ namespace LandscapeCanvasEditor
 
                 if (imageSourceAssetPath == outputImagePath)
                 {
-                    GraphModel::SlotPtr imageAssetSlot = targetNode->GetSlot(LandscapeCanvas::IMAGE_ASSET_SLOT_ID);
+                    JE::Editor::Tools::GraphModel::SlotPtr imageAssetSlot = targetNode->GetSlot(LandscapeCanvas::IMAGE_ASSET_SLOT_ID);
                     auto source = AZStd::make_pair(sourceNode, outputImageSlot);
                     auto target = AZStd::make_pair(targetNode, imageAssetSlot);
                     connections.push_back(AZStd::make_pair(source, target));
@@ -3613,7 +3613,7 @@ namespace LandscapeCanvasEditor
                 }
 
                 // If the component for this node is disabled, then the node needs to be disabled as well
-                GraphModelIntegration::GraphControllerRequestBus::Event(graphId, &GraphModelIntegration::GraphControllerRequests::DisableNode, node);
+                JE::Editor::Tools::GraphModel::Integration::GraphControllerRequestBus::Event(graphId, &JE::Editor::Tools::GraphModel::Integration::GraphControllerRequests::DisableNode, node);
             }
 
             AZ_Assert(newComponent, "Deserialized Entity missing component matching node");
@@ -3628,7 +3628,7 @@ namespace LandscapeCanvasEditor
         m_ignoreGraphUpdates = false;
     }
 
-    int MainWindow::GetInboundDataSlotIndex(GraphModel::NodePtr node, GraphModel::DataTypePtr dataType, GraphModel::SlotPtr targetSlot)
+    int MainWindow::GetInboundDataSlotIndex(JE::Editor::Tools::GraphModel::NodePtr node, JE::Editor::Tools::GraphModel::DataTypePtr dataType, JE::Editor::Tools::GraphModel::SlotPtr targetSlot)
     {
         if (!node)
         {
@@ -3639,9 +3639,9 @@ namespace LandscapeCanvasEditor
         int index = 0;
         for (auto& it : node->GetSlots())
         {
-            GraphModel::SlotPtr slot = it.second;
+            JE::Editor::Tools::GraphModel::SlotPtr slot = it.second;
 
-            if (slot->Is(GraphModel::SlotDirection::Input, GraphModel::SlotType::Data))
+            if (slot->Is(JE::Editor::Tools::GraphModel::SlotDirection::Input, JE::Editor::Tools::GraphModel::SlotType::Data))
             {
                 // Our Bounds and Gradient data types are both AZ::EntityId under the hood, so there is
                 // some magic that takes place where they each support an Invalid data type as well as
@@ -3666,15 +3666,15 @@ namespace LandscapeCanvasEditor
         return InvalidSlotIndex;
     }
 
-    GraphModel::SlotPtr MainWindow::EnsureInboundDataSlotWithIndex(GraphCanvas::GraphId graphId, GraphModel::NodePtr node, GraphModel::DataTypePtr dataType, int index)
+    JE::Editor::Tools::GraphModel::SlotPtr MainWindow::EnsureInboundDataSlotWithIndex(GraphCanvas::GraphId graphId, JE::Editor::Tools::GraphModel::NodePtr node, JE::Editor::Tools::GraphModel::DataTypePtr dataType, int index)
     {
         // Iterate through all the slots on the node to find an input data slot that matches the specified data type for the specified index
         int currentIndex = 0;
-        for (GraphModel::SlotDefinitionPtr slotDefinition : node->GetSlotDefinitions())
+        for (JE::Editor::Tools::GraphModel::SlotDefinitionPtr slotDefinition : node->GetSlotDefinitions())
         {
-            if (slotDefinition->Is(GraphModel::SlotDirection::Input, GraphModel::SlotType::Data))
+            if (slotDefinition->Is(JE::Editor::Tools::GraphModel::SlotDirection::Input, JE::Editor::Tools::GraphModel::SlotType::Data))
             {
-                const GraphModel::SlotName& slotName = slotDefinition->GetName();
+                const JE::Editor::Tools::GraphModel::SlotName& slotName = slotDefinition->GetName();
                 const auto& dataTypes = slotDefinition->GetSupportedDataTypes();
                 auto iter = AZStd::find(dataTypes.begin(), dataTypes.end(), dataType);
                 if (iter != dataTypes.end())
@@ -3688,12 +3688,12 @@ namespace LandscapeCanvasEditor
                         auto extendableSlots = node->GetExtendableSlots(slotName);
                         if (!extendableSlots.empty())
                         {
-                            GraphModel::SlotPtr firstSlot = *extendableSlots.begin();
+                            JE::Editor::Tools::GraphModel::SlotPtr firstSlot = *extendableSlots.begin();
                             subIdOffset = firstSlot->GetSlotSubId();
                             index += subIdOffset;
                         }
 
-                        GraphModel::SlotId slotId(slotName, index);
+                        JE::Editor::Tools::GraphModel::SlotId slotId(slotName, index);
 
                         // If it's an extendable slot, we need to add enough to be able to accommodate the specified index.
                         for (int i = node->GetExtendableSlotCount(slotName) + subIdOffset; i < index + 1; ++i)
@@ -3704,13 +3704,13 @@ namespace LandscapeCanvasEditor
                             // we are just updating the data model, whereas in the latter case the node already exists in the graph and so
                             // we need to use the GraphController API so that the UI gets updated properly.
                             bool success = false;
-                            if (node->GetId() == GraphModel::Node::INVALID_NODE_ID)
+                            if (node->GetId() == JE::Editor::Tools::GraphModel::Node::INVALID_NODE_ID)
                             {
                                 success = node->AddExtendedSlot(slotName);
                             }
                             else
                             {
-                                GraphModelIntegration::GraphControllerRequestBus::EventResult(slotId, graphId, &GraphModelIntegration::GraphControllerRequests::ExtendSlot, node, slotName);
+                                JE::Editor::Tools::GraphModel::Integration::GraphControllerRequestBus::EventResult(slotId, graphId, &JE::Editor::Tools::GraphModel::Integration::GraphControllerRequests::ExtendSlot, node, slotName);
                                 success = slotId.IsValid();
                             }
                             

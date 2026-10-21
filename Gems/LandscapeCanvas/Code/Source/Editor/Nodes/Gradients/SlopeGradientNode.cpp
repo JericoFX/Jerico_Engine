@@ -31,7 +31,7 @@ namespace LandscapeCanvas
 
     const char* SlopeGradientNode::TITLE = "Slope";
 
-    SlopeGradientNode::SlopeGradientNode(GraphModel::GraphPtr graph)
+    SlopeGradientNode::SlopeGradientNode(JE::Editor::Tools::GraphModel::GraphPtr graph)
         : BaseGradientNode(graph)
     {
         RegisterSlots();

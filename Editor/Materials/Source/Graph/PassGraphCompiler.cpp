@@ -43,7 +43,7 @@ namespace JE::Editor::Materials
         return AZStd::string::format("%s/Assets/Passes/Generated/untitled.passgraph", AZ::Utils::GetProjectPath().c_str());
     }
 
-    bool PassGraphCompiler::CompileGraph(GraphModel::GraphPtr graph, const AZStd::string& graphName, const AZStd::string& graphPath)
+    bool PassGraphCompiler::CompileGraph(JE::Editor::Tools::GraphModel::GraphPtr graph, const AZStd::string& graphName, const AZStd::string& graphPath)
     {
         if (!JE::Editor::Tools::GraphCompiler::CompileGraph(graph, graphName, graphPath))
         {

@@ -30,7 +30,7 @@ namespace LandscapeCanvas
 
     const char* DiskShapeNode::TITLE = "Disk Shape";
 
-    DiskShapeNode::DiskShapeNode(GraphModel::GraphPtr graph)
+    DiskShapeNode::DiskShapeNode(JE::Editor::Tools::GraphModel::GraphPtr graph)
         : BaseShapeNode(graph)
     {
     }

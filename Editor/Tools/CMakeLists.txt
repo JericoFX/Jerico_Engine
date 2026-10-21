@@ -15,9 +15,10 @@ ly_add_target(
     AUTORCC
     FILES_CMAKE
         editor_tools_files.cmake
+        graphmodel_files.cmake
         ${tools_pal_dir}/platform_${PAL_PLATFORM_NAME_LOWERCASE}_files.cmake
     INCLUDE_DIRECTORIES
-        PRIVATE Source ${tools_pal_dir}
+        PRIVATE Source Source/GraphModel ${tools_pal_dir}
         PUBLIC Include
     BUILD_DEPENDENCIES
         PUBLIC
@@ -39,14 +40,14 @@ ly_add_target(
             Gem::Atom_RHI.Reflect
             JE::RenderIntegration
             Gem::GraphCanvasWidgets
-            Gem::GraphModel.Editor.Static
             Gem::ImageProcessingAtom.Headers
+        PRIVATE
+            AZ::AzFramework
     RUNTIME_DEPENDENCIES
         JE::RenderIntegration
         Gem::Atom_RHI.Private
         Gem::GraphCanvas.Editor
         Gem::GraphCanvasWidgets
-        Gem::GraphModel.Editor
         Gem::ImageProcessingAtom.Editor
 )
 
@@ -55,7 +56,7 @@ foreach(editor_tools_host IN ITEMS Editor MaterialCanvas MaterialEditor PassCanv
     if(TARGET ${editor_tools_host})
         ly_add_target_dependencies(
             TARGETS ${editor_tools_host}
-            DEPENDENT_TARGETS Gem::GraphCanvas.Editor Gem::GraphModel.Editor
+            DEPENDENT_TARGETS Gem::GraphCanvas.Editor
             GEM_VARIANT Tools
         )
     endif()
@@ -64,7 +65,7 @@ foreach(editor_tools_host IN ITEMS AssetProcessor AssetProcessorBatch AssetBuild
     if(TARGET ${editor_tools_host})
         ly_add_target_dependencies(
             TARGETS ${editor_tools_host}
-            DEPENDENT_TARGETS Gem::GraphCanvas.Editor Gem::GraphModel.Editor
+            DEPENDENT_TARGETS Gem::GraphCanvas.Editor
             GEM_VARIANT Builders
         )
     endif()
@@ -88,4 +89,21 @@ if(PAL_TRAIT_BUILD_TESTS_SUPPORTED)
     )
     set_target_properties(EditorTools.Tests PROPERTIES JE_EXCLUDE_FROM_SDK TRUE)
     ly_add_googletest(NAME JE::EditorTools.Tests LABELS REQUIRES_tiaf)
+
+    # GraphModel retains its own existing test environment and unit-test hook.
+    ly_add_target(
+        NAME EditorGraphModel.Tests MODULE
+        NAMESPACE JE
+        FILES_CMAKE graphmodel_tests_files.cmake
+        INCLUDE_DIRECTORIES PRIVATE Source Tests
+        BUILD_DEPENDENCIES
+            PRIVATE
+                AZ::AzTest
+                AZ::AzFramework
+                AZ::AzToolsFramework
+                Gem::GraphCanvasWidgets
+                JE::EditorTools
+    )
+    set_target_properties(EditorGraphModel.Tests PROPERTIES JE_EXCLUDE_FROM_SDK TRUE)
+    ly_add_googletest(NAME JE::EditorGraphModel.Tests LABELS REQUIRES_tiaf)
 endif()

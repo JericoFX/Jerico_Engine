@@ -31,7 +31,7 @@ namespace LandscapeCanvas
         static void Reflect(AZ::ReflectContext* context);
 
         RotationModifierNode() = default;
-        explicit RotationModifierNode(GraphModel::GraphPtr graph);
+        explicit RotationModifierNode(JE::Editor::Tools::GraphModel::GraphPtr graph);
 
         static const char* TITLE;
         const char* GetTitle() const override

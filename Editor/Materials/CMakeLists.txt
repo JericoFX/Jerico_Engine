@@ -37,13 +37,12 @@ if(PAL_TRAIT_BUILD_TESTS_SUPPORTED)
         NAMESPACE JE
         AUTOMOC
         FILES_CMAKE materials_tests_files.cmake
-        INCLUDE_DIRECTORIES PRIVATE Source ${LY_ROOT_FOLDER}/Code/Framework/AzToolsFramework
+        INCLUDE_DIRECTORIES PRIVATE Source ${LY_ROOT_FOLDER}/Code/Framework/AzToolsFramework ${LY_ROOT_FOLDER}/Editor/Tools/Source/GraphModel
         BUILD_DEPENDENCIES
             PRIVATE JE::EditorMaterials AZ::AzToolsFramework AZ::AzTest AZ::AzTestShared
                 Gem::ImageProcessingAtom.Headers
         RUNTIME_DEPENDENCIES
             Gem::GraphCanvas.Editor
-            Gem::GraphModel.Editor
     )
     set_target_properties(EditorMaterials.Tests PROPERTIES UNITY_BUILD OFF)
     ly_add_googletest(NAME JE::EditorMaterials.Tests)

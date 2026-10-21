@@ -683,6 +683,7 @@ namespace GraphCanvas
 
     void ConnectionComponent::StartMove()
     {
+        m_movePositionEvaluated = false;
         QGraphicsItem* connectionGraphicsItem = nullptr;
         SceneMemberUIRequestBus::EventResult(connectionGraphicsItem, GetEntityId(), &SceneMemberUIRequests::GetRootGraphicsItem);
 
@@ -925,6 +926,7 @@ namespace GraphCanvas
             m_mousePoint = position;
 
             ConnectionCandidate connectionCandidate = FindConnectionCandidateAt(m_mousePoint);
+            m_movePositionEvaluated = true;
 
             bool updateConnection = false;
             if (m_dragContext == DragContext::MoveSource)
@@ -980,6 +982,11 @@ namespace GraphCanvas
         {
             AZ_Error("Graph Canvas", false, "Receiving MouseRelease event in invalid drag state.");
             return;
+        }
+
+        if (!m_movePositionEvaluated || scenePos != m_mousePoint)
+        {
+            UpdateMovePosition(scenePos);
         }
 
         DisplayConnectionToolTip(scenePos, Endpoint());

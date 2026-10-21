@@ -20,7 +20,7 @@ namespace LandscapeCanvasEditor
     static const QSize PREVIEW_MARGIN = QSize(40, 40);
 
     GradientPreviewThumbnailItem::GradientPreviewThumbnailItem(const AZ::EntityId& gradientId, QGraphicsItem* parent)
-        : GraphModelIntegration::ThumbnailItem(parent)
+        : JE::Editor::Tools::GraphModel::Integration::ThumbnailItem(parent)
     {
         // Dependency monitor must be connected to an owner/observer as a target for notifications.
         // Generating a place holder entity

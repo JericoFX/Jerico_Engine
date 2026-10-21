@@ -32,7 +32,7 @@ namespace LandscapeCanvas
         static void Reflect(AZ::ReflectContext* context);
 
         AssetWeightSelectorNode() = default;
-        explicit AssetWeightSelectorNode(GraphModel::GraphPtr graph);
+        explicit AssetWeightSelectorNode(JE::Editor::Tools::GraphModel::GraphPtr graph);
 
         const BaseNodeType GetBaseNodeType() const override;
 

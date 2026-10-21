@@ -30,7 +30,7 @@ namespace LandscapeCanvas
 
     const char* CylinderShapeNode::TITLE = "Cylinder Shape";
 
-    CylinderShapeNode::CylinderShapeNode(GraphModel::GraphPtr graph)
+    CylinderShapeNode::CylinderShapeNode(JE::Editor::Tools::GraphModel::GraphPtr graph)
         : BaseShapeNode(graph)
     {
     }

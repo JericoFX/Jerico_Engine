@@ -14,7 +14,7 @@
 #include <AzCore/std/smart_ptr/make_shared.h>
 
 // Graph Model
-#include <GraphModel/Model/Slot.h>
+#include <JE/Editor/Tools/GraphModel/Model/Slot.h>
 
 // Landscape Canvas
 #include "AreaBlenderNode.h"
@@ -35,7 +35,7 @@ namespace LandscapeCanvas
 
     const char* AreaBlenderNode::TITLE = "Vegetation Layer Blender";
 
-    AreaBlenderNode::AreaBlenderNode(GraphModel::GraphPtr graph)
+    AreaBlenderNode::AreaBlenderNode(JE::Editor::Tools::GraphModel::GraphPtr graph)
         : BaseAreaNode(graph)
     {
         RegisterSlots();
@@ -46,27 +46,27 @@ namespace LandscapeCanvas
     {
         CreateEntityNameSlot();
 
-        GraphModel::DataTypePtr areaDataType = GetGraphContext()->GetDataType(LandscapeCanvasDataTypeEnum::Area);
+        JE::Editor::Tools::GraphModel::DataTypePtr areaDataType = GetGraphContext()->GetDataType(LandscapeCanvasDataTypeEnum::Area);
 
-        RegisterSlot(AZStd::make_shared<GraphModel::SlotDefinition>(
-            GraphModel::SlotDirection::Input,
-            GraphModel::SlotType::Data,
+        RegisterSlot(AZStd::make_shared<JE::Editor::Tools::GraphModel::SlotDefinition>(
+            JE::Editor::Tools::GraphModel::SlotDirection::Input,
+            JE::Editor::Tools::GraphModel::SlotType::Data,
             INBOUND_AREA_SLOT_ID,
             INBOUND_AREA_SLOT_LABEL.toUtf8().constData(),
             INBOUND_AREA_INPUT_SLOT_DESCRIPTION.toUtf8().constData(),
-            GraphModel::DataTypeList{ areaDataType },
+            JE::Editor::Tools::GraphModel::DataTypeList{ areaDataType },
             AZStd::any(AZ::EntityId()),
             1,
             100,
             QObject::tr("Add Area").toUtf8().constData(),
             QObject::tr("Add a layer area to the blender").toUtf8().constData()));
 
-        RegisterSlot(AZStd::make_shared<GraphModel::SlotDefinition>(
-            GraphModel::SlotDirection::Output,
-            GraphModel::SlotType::Data,
+        RegisterSlot(AZStd::make_shared<JE::Editor::Tools::GraphModel::SlotDefinition>(
+            JE::Editor::Tools::GraphModel::SlotDirection::Output,
+            JE::Editor::Tools::GraphModel::SlotType::Data,
             OUTBOUND_AREA_SLOT_ID,
             OUTBOUND_AREA_SLOT_LABEL.toUtf8().constData(),
             OUTBOUND_AREA_OUTPUT_SLOT_DESCRIPTION.toUtf8().constData(),
-            GraphModel::DataTypeList{ areaDataType }));
+            JE::Editor::Tools::GraphModel::DataTypeList{ areaDataType }));
     }
 } // namespace LandscapeCanvas

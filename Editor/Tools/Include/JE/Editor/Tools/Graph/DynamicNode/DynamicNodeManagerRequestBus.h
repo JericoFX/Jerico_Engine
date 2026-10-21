@@ -13,8 +13,8 @@
 #include <AzCore/Serialization/EditContext.h>
 #include <AzCore/std/string/string.h>
 #include <GraphCanvas/Widgets/NodePalette/TreeItems/NodePaletteTreeItem.h>
-#include <GraphModel/Model/DataType.h>
-#include <GraphModel/Model/Node.h>
+#include <JE/Editor/Tools/GraphModel/Model/DataType.h>
+#include <JE/Editor/Tools/GraphModel/Model/Node.h>
 
 namespace JE::Editor::Tools
 {
@@ -31,10 +31,10 @@ namespace JE::Editor::Tools
 
         //! Register data types needed by the dynamic node manager and graph contexts
         //! @param dataTypes Container of data type pointers
-        virtual void RegisterDataTypes(const GraphModel::DataTypeList& dataTypes) = 0;
+        virtual void RegisterDataTypes(const JE::Editor::Tools::GraphModel::DataTypeList& dataTypes) = 0;
 
         //! Get a container of all data types registered with the dynamic node manager
-        virtual GraphModel::DataTypeList GetRegisteredDataTypes() = 0;
+        virtual JE::Editor::Tools::GraphModel::DataTypeList GetRegisteredDataTypes() = 0;
 
         //! Loads and registers all of the DynamicNodeConfig files matching given extensions
         //! @param extension Extension to enumerate DynamicNodeConfig files
@@ -56,10 +56,10 @@ namespace JE::Editor::Tools
         virtual GraphCanvas::GraphCanvasTreeItem* CreateNodePaletteTree() const = 0;
 
         //! Create a dynamic node from the configuration matching the specified id.
-        virtual GraphModel::NodePtr CreateNodeById(GraphModel::GraphPtr graph, const AZ::Uuid& configId) = 0;
+        virtual JE::Editor::Tools::GraphModel::NodePtr CreateNodeById(JE::Editor::Tools::GraphModel::GraphPtr graph, const AZ::Uuid& configId) = 0;
 
         //! Create a dynamic node from the configuration matching the specified name.
-        virtual GraphModel::NodePtr CreateNodeByName(GraphModel::GraphPtr graph, const AZStd::string& name) = 0;
+        virtual JE::Editor::Tools::GraphModel::NodePtr CreateNodeByName(JE::Editor::Tools::GraphModel::GraphPtr graph, const AZStd::string& name) = 0;
 
         //! Register dynamic edit data for dynamic node settings so that the edit context handler and attribute can be overridden for a
         //! particular settings group.

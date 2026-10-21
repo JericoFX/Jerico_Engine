@@ -43,7 +43,7 @@ namespace LandscapeCanvas
         static void Reflect(AZ::ReflectContext* context);
 
         BaseAreaModifierNode() = default;
-        explicit BaseAreaModifierNode(GraphModel::GraphPtr graph);
+        explicit BaseAreaModifierNode(JE::Editor::Tools::GraphModel::GraphPtr graph);
 
         const BaseNodeType GetBaseNodeType() const override
         {

@@ -30,7 +30,7 @@ namespace LandscapeCanvas
 
     const char* MeshBlockerAreaNode::TITLE = "Vegetation Layer Blocker (Mesh)";
 
-    MeshBlockerAreaNode::MeshBlockerAreaNode(GraphModel::GraphPtr graph)
+    MeshBlockerAreaNode::MeshBlockerAreaNode(JE::Editor::Tools::GraphModel::GraphPtr graph)
         : BaseAreaNode(graph)
     {
         RegisterSlots();

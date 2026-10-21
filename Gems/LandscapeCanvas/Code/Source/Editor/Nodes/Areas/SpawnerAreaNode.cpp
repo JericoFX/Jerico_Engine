@@ -30,7 +30,7 @@ namespace LandscapeCanvas
 
     const char* SpawnerAreaNode::TITLE = "Vegetation Layer Spawner";
 
-    SpawnerAreaNode::SpawnerAreaNode(GraphModel::GraphPtr graph)
+    SpawnerAreaNode::SpawnerAreaNode(JE::Editor::Tools::GraphModel::GraphPtr graph)
         : BaseAreaNode(graph)
     {
         RegisterSlots();

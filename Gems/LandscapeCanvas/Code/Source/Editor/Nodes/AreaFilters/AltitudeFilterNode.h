@@ -31,7 +31,7 @@ namespace LandscapeCanvas
         static void Reflect(AZ::ReflectContext* context);
 
         AltitudeFilterNode() = default;
-        explicit AltitudeFilterNode(GraphModel::GraphPtr graph);
+        explicit AltitudeFilterNode(JE::Editor::Tools::GraphModel::GraphPtr graph);
 
         static const char* TITLE;
         const char* GetTitle() const override

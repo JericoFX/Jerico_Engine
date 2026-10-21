@@ -124,7 +124,7 @@ namespace JE::Editor::Tools
         return false;
     }
 
-    bool GraphCompiler::CompileGraph(GraphModel::GraphPtr graph, const AZStd::string& graphName, const AZStd::string& graphPath)
+    bool GraphCompiler::CompileGraph(JE::Editor::Tools::GraphModel::GraphPtr graph, const AZStd::string& graphName, const AZStd::string& graphPath)
     {
         if (!CanCompileGraph())
         {

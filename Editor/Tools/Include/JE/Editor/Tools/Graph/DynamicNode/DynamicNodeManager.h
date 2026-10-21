@@ -30,15 +30,15 @@ namespace JE::Editor::Tools
         virtual ~DynamicNodeManager();
 
         //! DynamicNodeManagerRequestBus::Handler overrides...
-        void RegisterDataTypes(const GraphModel::DataTypeList& dataTypes) override;
-        GraphModel::DataTypeList GetRegisteredDataTypes() override;
+        void RegisterDataTypes(const JE::Editor::Tools::GraphModel::DataTypeList& dataTypes) override;
+        JE::Editor::Tools::GraphModel::DataTypeList GetRegisteredDataTypes() override;
         void LoadConfigFiles(const AZStd::string& extension) override;
         bool RegisterConfig(const DynamicNodeConfig& config) override;
         DynamicNodeConfig GetConfigById(const AZ::Uuid& configId) const override;
         void Clear() override;
         GraphCanvas::GraphCanvasTreeItem* CreateNodePaletteTree() const override;
-        GraphModel::NodePtr CreateNodeById(GraphModel::GraphPtr graph, const AZ::Uuid& configId) override;
-        GraphModel::NodePtr CreateNodeByName(GraphModel::GraphPtr graph, const AZStd::string& name) override;
+        JE::Editor::Tools::GraphModel::NodePtr CreateNodeById(JE::Editor::Tools::GraphModel::GraphPtr graph, const AZ::Uuid& configId) override;
+        JE::Editor::Tools::GraphModel::NodePtr CreateNodeByName(JE::Editor::Tools::GraphModel::GraphPtr graph, const AZStd::string& name) override;
         void RegisterEditDataForSetting(const AZStd::string& settingName, const AZ::Edit::ElementData& editData) override;
         AZStd::vector<AZStd::string> GetRegisteredEditDataSettingNames() const override;
         const AZ::Edit::ElementData* GetEditDataForSetting(const AZStd::string& settingName) const override;
@@ -51,7 +51,7 @@ namespace JE::Editor::Tools
         bool IsNodeConfigLoggingEnabled() const;
 
         const AZ::Crc32 m_toolId = {};
-        GraphModel::DataTypeList m_registeredDataTypes;
+        JE::Editor::Tools::GraphModel::DataTypeList m_registeredDataTypes;
         AZStd::unordered_map<AZ::Uuid, DynamicNodeConfig> m_nodeConfigMap;
         AZStd::unordered_map<AZStd::string, AZ::Edit::ElementData> m_editDataForSettingName;
     };

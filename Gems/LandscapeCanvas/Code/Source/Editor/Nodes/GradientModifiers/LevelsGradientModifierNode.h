@@ -31,7 +31,7 @@ namespace LandscapeCanvas
         static void Reflect(AZ::ReflectContext* context);
 
         LevelsGradientModifierNode() = default;
-        explicit LevelsGradientModifierNode(GraphModel::GraphPtr graph);
+        explicit LevelsGradientModifierNode(JE::Editor::Tools::GraphModel::GraphPtr graph);
 
         static const char* TITLE;
         const char* GetTitle() const override { return TITLE; }

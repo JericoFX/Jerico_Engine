@@ -12,7 +12,7 @@
 #include <JE/Editor/Tools/EntityPreviewViewport/EntityPreviewViewportSettingsSystem.h>
 #include <JE/Editor/Tools/Graph/DynamicNode/DynamicNodeManager.h>
 #include <AzToolsFramework/API/EditorWindowRequestBus.h>
-#include <GraphModel/Model/GraphContext.h>
+#include <JE/Editor/Tools/GraphModel/Model/GraphContext.h>
 #include <Window/PassCanvasMainWindow.h>
 
 namespace PassCanvas
@@ -59,7 +59,7 @@ namespace PassCanvas
         AZStd::unique_ptr<PassCanvasMainWindow> m_window;
         AZStd::unique_ptr<JE::Editor::Tools::EntityPreviewViewportSettingsSystem> m_viewportSettingsSystem;
         AZStd::unique_ptr<JE::Editor::Tools::DynamicNodeManager> m_dynamicNodeManager;
-        AZStd::shared_ptr<GraphModel::GraphContext> m_graphContext;
+        AZStd::shared_ptr<JE::Editor::Tools::GraphModel::GraphContext> m_graphContext;
         JE::Editor::Tools::GraphViewSettingsPtr m_graphViewSettingsPtr;
     };
 } // namespace PassCanvas

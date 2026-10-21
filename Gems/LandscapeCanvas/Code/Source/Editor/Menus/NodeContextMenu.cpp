@@ -13,7 +13,7 @@
 #include <QAction>
 
 // GraphModel
-#include <GraphModel/GraphModelBus.h>
+#include <JE/Editor/Tools/GraphModel/GraphModelBus.h>
 
 // Landscape Canvas
 #include <Editor/Core/Core.h>
@@ -26,8 +26,8 @@ namespace LandscapeCanvasEditor
     QAction* GetNodeSelectInEditorAction(const AZ::EntityId& sceneId, QObject* parent)
     {
         // Retrieve the selected nodes in our scene
-        GraphModel::NodePtrList nodeList;
-        GraphModelIntegration::GraphControllerRequestBus::EventResult(nodeList, sceneId, &GraphModelIntegration::GraphControllerRequests::GetSelectedNodes);
+        JE::Editor::Tools::GraphModel::NodePtrList nodeList;
+        JE::Editor::Tools::GraphModel::Integration::GraphControllerRequestBus::EventResult(nodeList, sceneId, &JE::Editor::Tools::GraphModel::Integration::GraphControllerRequests::GetSelectedNodes);
 
         // Iterate through the selected nodes to find their corresponding vegetation entities
         AzToolsFramework::EntityIdList vegetationEntityIdsToSelect;
@@ -71,8 +71,8 @@ namespace LandscapeCanvasEditor
 
         // Don't allow cut/copy/paste/duplicate on our area extender nodes because they can't
         // exist without being wrapped on an area (e.g. spawner) node
-        GraphModel::NodePtr node;
-        GraphModelIntegration::GraphControllerRequestBus::EventResult(node, graphId, &GraphModelIntegration::GraphControllerRequests::GetNodeById, targetMemberId);
+        JE::Editor::Tools::GraphModel::NodePtr node;
+        JE::Editor::Tools::GraphModel::Integration::GraphControllerRequestBus::EventResult(node, graphId, &JE::Editor::Tools::GraphModel::Integration::GraphControllerRequests::GetNodeById, targetMemberId);
         if (node)
         {
             auto baseNodePtr = static_cast<LandscapeCanvas::BaseNode*>(node.get());

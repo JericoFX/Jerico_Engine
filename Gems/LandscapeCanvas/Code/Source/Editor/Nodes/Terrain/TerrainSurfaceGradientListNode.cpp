@@ -15,8 +15,8 @@
 #include <AzCore/std/smart_ptr/make_shared.h>
 
 // Graph Model
-#include <GraphModel/Integration/Helpers.h>
-#include <GraphModel/Model/Slot.h>
+#include <JE/Editor/Tools/GraphModel/Integration/Helpers.h>
+#include <JE/Editor/Tools/GraphModel/Model/Slot.h>
 
 // Landscape Canvas
 #include <Editor/Core/GraphContext.h>
@@ -38,7 +38,7 @@ namespace LandscapeCanvas
                 editContext->Class<TerrainSurfaceGradientListNode>(
                     QT_TRANSLATE_NOOP("LandscapeCanvas", "TerrainSurfaceGradientListNode"), "")->
                     ClassElement(AZ::Edit::ClassElements::EditorData, "")->
-                    Attribute(GraphModelIntegration::Attributes::TitlePaletteOverride, "TerrainNodeTitlePalette")
+                    Attribute(JE::Editor::Tools::GraphModel::Integration::Attributes::TitlePaletteOverride, "TerrainNodeTitlePalette")
                     ;
             }
         }
@@ -46,7 +46,7 @@ namespace LandscapeCanvas
 
     const char* TerrainSurfaceGradientListNode::TITLE = "Terrain Surface Gradient List";
 
-    TerrainSurfaceGradientListNode::TerrainSurfaceGradientListNode(GraphModel::GraphPtr graph)
+    TerrainSurfaceGradientListNode::TerrainSurfaceGradientListNode(JE::Editor::Tools::GraphModel::GraphPtr graph)
         : BaseNode(graph)
     {
         RegisterSlots();
@@ -65,15 +65,15 @@ namespace LandscapeCanvas
 
     void TerrainSurfaceGradientListNode::RegisterSlots()
     {
-        GraphModel::DataTypePtr gradientDataType = GetGraphContext()->GetDataType(LandscapeCanvasDataTypeEnum::Gradient);
+        JE::Editor::Tools::GraphModel::DataTypePtr gradientDataType = GetGraphContext()->GetDataType(LandscapeCanvasDataTypeEnum::Gradient);
 
-        RegisterSlot(AZStd::make_shared<GraphModel::SlotDefinition>(
-            GraphModel::SlotDirection::Input,
-            GraphModel::SlotType::Data,
+        RegisterSlot(AZStd::make_shared<JE::Editor::Tools::GraphModel::SlotDefinition>(
+            JE::Editor::Tools::GraphModel::SlotDirection::Input,
+            JE::Editor::Tools::GraphModel::SlotType::Data,
             INBOUND_GRADIENT_SLOT_ID,
             INBOUND_GRADIENT_SLOT_LABEL.toUtf8().constData(),
             INBOUND_GRADIENT_INPUT_SLOT_DESCRIPTION.toUtf8().constData(),
-            GraphModel::DataTypeList{ gradientDataType },
+            JE::Editor::Tools::GraphModel::DataTypeList{ gradientDataType },
             AZStd::any(AZ::EntityId()),
             1,
             100,

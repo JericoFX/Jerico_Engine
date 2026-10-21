@@ -14,7 +14,7 @@
 
 #include <AzCore/std/smart_ptr/make_shared.h>
 
-#include <GraphModel/Model/Slot.h>
+#include <JE/Editor/Tools/GraphModel/Model/Slot.h>
 
 #include <Editor/Core/GraphContext.h>
 
@@ -33,7 +33,7 @@ namespace LandscapeCanvas
 
     const char* GradientBakerNode::TITLE = "Gradient Baker";
 
-    GradientBakerNode::GradientBakerNode(GraphModel::GraphPtr graph)
+    GradientBakerNode::GradientBakerNode(JE::Editor::Tools::GraphModel::GraphPtr graph)
         : BaseGradientNode(graph)
     {
         RegisterSlots();
@@ -59,34 +59,34 @@ namespace LandscapeCanvas
     {
         CreateEntityNameSlot();
 
-        GraphModel::DataTypePtr boundsDataType = GraphContext::GetInstance()->GetDataType(LandscapeCanvasDataTypeEnum::Bounds);
-        GraphModel::DataTypePtr gradientDataType = GraphContext::GetInstance()->GetDataType(LandscapeCanvasDataTypeEnum::Gradient);
-        GraphModel::DataTypePtr pathDataType = GraphContext::GetInstance()->GetDataType(LandscapeCanvasDataTypeEnum::Path);
+        JE::Editor::Tools::GraphModel::DataTypePtr boundsDataType = GraphContext::GetInstance()->GetDataType(LandscapeCanvasDataTypeEnum::Bounds);
+        JE::Editor::Tools::GraphModel::DataTypePtr gradientDataType = GraphContext::GetInstance()->GetDataType(LandscapeCanvasDataTypeEnum::Gradient);
+        JE::Editor::Tools::GraphModel::DataTypePtr pathDataType = GraphContext::GetInstance()->GetDataType(LandscapeCanvasDataTypeEnum::Path);
 
-        RegisterSlot(AZStd::make_shared<GraphModel::SlotDefinition>(
-            GraphModel::SlotDirection::Input,
-            GraphModel::SlotType::Data,
+        RegisterSlot(AZStd::make_shared<JE::Editor::Tools::GraphModel::SlotDefinition>(
+            JE::Editor::Tools::GraphModel::SlotDirection::Input,
+            JE::Editor::Tools::GraphModel::SlotType::Data,
             INPUT_BOUNDS_SLOT_ID,
             INPUT_BOUNDS_SLOT_LABEL.toUtf8().constData(),
             INPUT_BOUNDS_INPUT_SLOT_DESCRIPTION.toUtf8().constData(),
-            GraphModel::DataTypeList{ boundsDataType },
+            JE::Editor::Tools::GraphModel::DataTypeList{ boundsDataType },
             AZStd::any(AZ::EntityId())));
 
-        RegisterSlot(AZStd::make_shared<GraphModel::SlotDefinition>(
-            GraphModel::SlotDirection::Input,
-            GraphModel::SlotType::Data,
+        RegisterSlot(AZStd::make_shared<JE::Editor::Tools::GraphModel::SlotDefinition>(
+            JE::Editor::Tools::GraphModel::SlotDirection::Input,
+            JE::Editor::Tools::GraphModel::SlotType::Data,
             INBOUND_GRADIENT_SLOT_ID,
             INBOUND_GRADIENT_SLOT_LABEL.toUtf8().constData(),
             INBOUND_GRADIENT_INPUT_SLOT_DESCRIPTION.toUtf8().constData(),
-            GraphModel::DataTypeList{ gradientDataType },
+            JE::Editor::Tools::GraphModel::DataTypeList{ gradientDataType },
             AZStd::any(AZ::EntityId())));
 
-        RegisterSlot(AZStd::make_shared<GraphModel::SlotDefinition>(
-            GraphModel::SlotDirection::Output,
-            GraphModel::SlotType::Data,
+        RegisterSlot(AZStd::make_shared<JE::Editor::Tools::GraphModel::SlotDefinition>(
+            JE::Editor::Tools::GraphModel::SlotDirection::Output,
+            JE::Editor::Tools::GraphModel::SlotType::Data,
             OUTPUT_IMAGE_SLOT_ID,
             OUTPUT_IMAGE_SLOT_LABEL.toUtf8().constData(),
             OUTPUT_IMAGE_SLOT_DESCRIPTION.toUtf8().constData(),
-            GraphModel::DataTypeList{ pathDataType }));
+            JE::Editor::Tools::GraphModel::DataTypeList{ pathDataType }));
     }
 } // namespace LandscapeCanvas

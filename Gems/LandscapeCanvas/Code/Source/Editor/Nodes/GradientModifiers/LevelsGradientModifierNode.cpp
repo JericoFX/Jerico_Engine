@@ -30,7 +30,7 @@ namespace LandscapeCanvas
 
     const char* LevelsGradientModifierNode::TITLE = "Levels";
 
-    LevelsGradientModifierNode::LevelsGradientModifierNode(GraphModel::GraphPtr graph)
+    LevelsGradientModifierNode::LevelsGradientModifierNode(JE::Editor::Tools::GraphModel::GraphPtr graph)
         : BaseGradientModifierNode(graph)
     {
     }

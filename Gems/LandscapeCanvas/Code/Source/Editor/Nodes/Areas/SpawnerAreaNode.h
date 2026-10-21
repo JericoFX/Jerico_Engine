@@ -32,7 +32,7 @@ namespace LandscapeCanvas
         static void Reflect(AZ::ReflectContext* context);
 
         SpawnerAreaNode() = default;
-        explicit SpawnerAreaNode(GraphModel::GraphPtr graph);
+        explicit SpawnerAreaNode(JE::Editor::Tools::GraphModel::GraphPtr graph);
 
         static const char* TITLE;
         const char* GetTitle() const override { return TITLE; }

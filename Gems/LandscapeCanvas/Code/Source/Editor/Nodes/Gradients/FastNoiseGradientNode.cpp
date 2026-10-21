@@ -31,7 +31,7 @@ namespace LandscapeCanvas
 
     const char* FastNoiseGradientNode::TITLE = "FastNoise";
 
-    FastNoiseGradientNode::FastNoiseGradientNode(GraphModel::GraphPtr graph)
+    FastNoiseGradientNode::FastNoiseGradientNode(JE::Editor::Tools::GraphModel::GraphPtr graph)
         : BaseGradientNode(graph)
     {
         RegisterSlots();

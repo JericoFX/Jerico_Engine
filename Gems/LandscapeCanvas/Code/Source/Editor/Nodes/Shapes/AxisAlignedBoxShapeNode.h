@@ -22,7 +22,7 @@ namespace LandscapeCanvas
         static void Reflect(AZ::ReflectContext* context);
 
         AxisAlignedBoxShapeNode() = default;
-        explicit AxisAlignedBoxShapeNode(GraphModel::GraphPtr graph);
+        explicit AxisAlignedBoxShapeNode(JE::Editor::Tools::GraphModel::GraphPtr graph);
 
         static const char* TITLE;
         const char* GetTitle() const override { return TITLE; }

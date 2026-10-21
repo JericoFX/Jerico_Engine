@@ -14,7 +14,7 @@
 #include <AzCore/std/smart_ptr/make_shared.h>
 
 // Graph Model
-#include <GraphModel/Model/Slot.h>
+#include <JE/Editor/Tools/GraphModel/Model/Slot.h>
 
 // Landscape Canvas
 #include "SlopeAlignmentModifierNode.h"
@@ -35,7 +35,7 @@ namespace LandscapeCanvas
 
     const char* SlopeAlignmentModifierNode::TITLE = "Slope Alignment Modifier";
 
-    SlopeAlignmentModifierNode::SlopeAlignmentModifierNode(GraphModel::GraphPtr graph)
+    SlopeAlignmentModifierNode::SlopeAlignmentModifierNode(JE::Editor::Tools::GraphModel::GraphPtr graph)
         : BaseAreaModifierNode(graph)
     {
         RegisterSlots();
@@ -44,15 +44,15 @@ namespace LandscapeCanvas
 
     void SlopeAlignmentModifierNode::RegisterSlots()
     {
-        GraphModel::DataTypePtr gradientDataType = GetGraphContext()->GetDataType(LandscapeCanvasDataTypeEnum::Gradient);
+        JE::Editor::Tools::GraphModel::DataTypePtr gradientDataType = GetGraphContext()->GetDataType(LandscapeCanvasDataTypeEnum::Gradient);
 
-        RegisterSlot(AZStd::make_shared<GraphModel::SlotDefinition>(
-            GraphModel::SlotDirection::Input,
-            GraphModel::SlotType::Data,
+        RegisterSlot(AZStd::make_shared<JE::Editor::Tools::GraphModel::SlotDefinition>(
+            JE::Editor::Tools::GraphModel::SlotDirection::Input,
+            JE::Editor::Tools::GraphModel::SlotType::Data,
             INBOUND_GRADIENT_SLOT_ID,
             INBOUND_GRADIENT_SLOT_LABEL.toUtf8().constData(),
             INBOUND_GRADIENT_INPUT_SLOT_DESCRIPTION.toUtf8().constData(),
-            GraphModel::DataTypeList{ gradientDataType },
+            JE::Editor::Tools::GraphModel::DataTypeList{ gradientDataType },
             AZStd::any(AZ::EntityId())));
     }
 } // namespace LandscapeCanvas

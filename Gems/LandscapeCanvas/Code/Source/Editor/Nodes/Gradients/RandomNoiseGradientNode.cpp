@@ -31,7 +31,7 @@ namespace LandscapeCanvas
 
     const char* RandomNoiseGradientNode::TITLE = "Random Noise";
 
-    RandomNoiseGradientNode::RandomNoiseGradientNode(GraphModel::GraphPtr graph)
+    RandomNoiseGradientNode::RandomNoiseGradientNode(JE::Editor::Tools::GraphModel::GraphPtr graph)
         : BaseGradientNode(graph)
     {
         RegisterSlots();

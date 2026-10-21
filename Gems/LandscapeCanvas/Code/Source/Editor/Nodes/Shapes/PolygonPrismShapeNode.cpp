@@ -30,7 +30,7 @@ namespace LandscapeCanvas
 
     const char* PolygonPrismShapeNode::TITLE = "Polygon Prism Shape";
 
-    PolygonPrismShapeNode::PolygonPrismShapeNode(GraphModel::GraphPtr graph)
+    PolygonPrismShapeNode::PolygonPrismShapeNode(JE::Editor::Tools::GraphModel::GraphPtr graph)
         : BaseShapeNode(graph)
     {
     }

@@ -16,7 +16,7 @@
 #include <QString>
 
 // Graph Model
-#include <GraphModel/Model/Slot.h>
+#include <JE/Editor/Tools/GraphModel/Model/Slot.h>
 
 // Landscape Canvas
 #include "BaseNode.h"
@@ -30,7 +30,7 @@ namespace LandscapeCanvas
         AZ::SerializeContext* serializeContext = azrtti_cast<AZ::SerializeContext*>(context);
         if (serializeContext)
         {
-            serializeContext->Class<BaseNode, GraphModel::Node>()
+            serializeContext->Class<BaseNode, JE::Editor::Tools::GraphModel::Node>()
                 ->Version(0)
                 ->Field("m_vegetationEntityId", &BaseNode::m_vegetationEntityId)
                 ->Field("m_componentId", &BaseNode::m_componentId)
@@ -38,12 +38,12 @@ namespace LandscapeCanvas
         }
     }
 
-    BaseNode::BaseNode(GraphModel::GraphPtr graph)
+    BaseNode::BaseNode(JE::Editor::Tools::GraphModel::GraphPtr graph)
         : Node(graph)
     {
     }
 
-    void BaseNode::PostLoadSetup(GraphModel::GraphPtr graph, GraphModel::NodeId id)
+    void BaseNode::PostLoadSetup(JE::Editor::Tools::GraphModel::GraphPtr graph, JE::Editor::Tools::GraphModel::NodeId id)
     {
         Node::PostLoadSetup(graph, id);
 
@@ -62,15 +62,15 @@ namespace LandscapeCanvas
     void BaseNode::CreateEntityNameSlot()
     {
         // Property field to show the name of the corresponding Vegetation Entity
-        GraphModel::DataTypePtr stringDataType = GetGraphContext()->GetDataType(LandscapeCanvasDataTypeEnum::String);
+        JE::Editor::Tools::GraphModel::DataTypePtr stringDataType = GetGraphContext()->GetDataType(LandscapeCanvasDataTypeEnum::String);
 
-        RegisterSlot(AZStd::make_shared<GraphModel::SlotDefinition>(
-            GraphModel::SlotDirection::Input,
-            GraphModel::SlotType::Property,
+        RegisterSlot(AZStd::make_shared<JE::Editor::Tools::GraphModel::SlotDefinition>(
+            JE::Editor::Tools::GraphModel::SlotDirection::Input,
+            JE::Editor::Tools::GraphModel::SlotType::Property,
             ENTITY_NAME_SLOT_ID,
             ENTITY_NAME_SLOT_LABEL.toUtf8().constData(),
             ENTITY_NAME_SLOT_DESCRIPTION.toUtf8().constData(),
-            GraphModel::DataTypeList{ stringDataType },
+            JE::Editor::Tools::GraphModel::DataTypeList{ stringDataType },
             stringDataType->GetDefaultValue()));
     }
 
@@ -83,7 +83,7 @@ namespace LandscapeCanvas
     void BaseNode::RefreshEntityName()
     {
         // Update the Entity Name (if we have the property slot)
-        GraphModel::SlotPtr slot = GetSlot(ENTITY_NAME_SLOT_ID);
+        JE::Editor::Tools::GraphModel::SlotPtr slot = GetSlot(ENTITY_NAME_SLOT_ID);
         if (slot)
         {
             AZStd::string name;

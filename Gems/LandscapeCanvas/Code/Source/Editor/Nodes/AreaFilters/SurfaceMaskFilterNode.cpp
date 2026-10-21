@@ -31,7 +31,7 @@ namespace LandscapeCanvas
 
     const char* SurfaceMaskFilterNode::TITLE = "Surface Mask Filter";
 
-    SurfaceMaskFilterNode::SurfaceMaskFilterNode(GraphModel::GraphPtr graph)
+    SurfaceMaskFilterNode::SurfaceMaskFilterNode(JE::Editor::Tools::GraphModel::GraphPtr graph)
         : BaseAreaFilterNode(graph)
     {
         CreateSlotData();

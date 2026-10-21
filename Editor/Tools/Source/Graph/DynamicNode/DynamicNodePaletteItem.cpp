@@ -11,8 +11,8 @@
 #include <AzCore/std/smart_ptr/make_shared.h>
 #include <AzFramework/StringFunc/StringFunc.h>
 #include <GraphCanvas/Utils/GraphUtils.h>
-#include <GraphModel/GraphModelBus.h>
-#include <GraphModel/Model/Common.h>
+#include <JE/Editor/Tools/GraphModel/GraphModelBus.h>
+#include <JE/Editor/Tools/GraphModel/Model/Common.h>
 
 namespace JE::Editor::Tools
 {
@@ -36,9 +36,9 @@ namespace JE::Editor::Tools
     bool CreateDynamicNodeMimeEvent::ExecuteEvent(
         [[maybe_unused]] const AZ::Vector2& mouseDropPosition, AZ::Vector2& dropPosition, const AZ::EntityId& graphCanvasSceneId)
     {
-        GraphModel::GraphPtr graph;
-        GraphModelIntegration::GraphManagerRequestBus::BroadcastResult(
-            graph, &GraphModelIntegration::GraphManagerRequests::GetGraph, graphCanvasSceneId);
+        JE::Editor::Tools::GraphModel::GraphPtr graph;
+        JE::Editor::Tools::GraphModel::Integration::GraphManagerRequestBus::BroadcastResult(
+            graph, &JE::Editor::Tools::GraphModel::Integration::GraphManagerRequests::GetGraph, graphCanvasSceneId);
 
         if (graph)
         {
@@ -47,8 +47,8 @@ namespace JE::Editor::Tools
                 // Handle undo/redo adding a single node. This will need to be done at a higher level for multiple nodes.
                 GraphCanvas::ScopedGraphUndoBatch undoBatch(graphCanvasSceneId);
 
-                GraphModelIntegration::GraphControllerRequestBus::EventResult(
-                    m_createdNodeId, graphCanvasSceneId, &GraphModelIntegration::GraphControllerRequests::AddNode, node, dropPosition);
+                JE::Editor::Tools::GraphModel::Integration::GraphControllerRequestBus::EventResult(
+                    m_createdNodeId, graphCanvasSceneId, &JE::Editor::Tools::GraphModel::Integration::GraphControllerRequests::AddNode, node, dropPosition);
                 return true;
             }
         }

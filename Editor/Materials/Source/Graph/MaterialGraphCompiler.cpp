@@ -35,7 +35,7 @@
 #include <AzCore/std/string/regex.h>
 #include <AzToolsFramework/API/EditorAssetSystemAPI.h>
 #include <JE/Editor/Materials/Graph/MaterialGraphCompiler.h>
-#include <GraphModel/Model/Connection.h>
+#include <JE/Editor/Tools/GraphModel/Model/Connection.h>
 
 namespace JE::Editor
 {
@@ -68,7 +68,7 @@ namespace JE::Editor
         return AZStd::string::format("%s/Assets/Materials/Generated/untitled.materialgraph", AZ::Utils::GetProjectPath().c_str());
     }
 
-    bool MaterialGraphCompiler::CompileGraph(GraphModel::GraphPtr graph, const AZStd::string& graphName, const AZStd::string& graphPath)
+    bool MaterialGraphCompiler::CompileGraph(JE::Editor::Tools::GraphModel::GraphPtr graph, const AZStd::string& graphName, const AZStd::string& graphPath)
     {
         if (!JE::Editor::Tools::GraphCompiler::CompileGraph(graph, graphName, graphPath))
         {
@@ -230,7 +230,7 @@ namespace JE::Editor
                     for (const auto& currentSlotPair : currentNode->GetSlots())
                     {
                         const auto& currentSlot = currentSlotPair.second;
-                        if (currentSlot->GetSlotDirection() == GraphModel::SlotDirection::Input &&
+                        if (currentSlot->GetSlotDirection() == JE::Editor::Tools::GraphModel::SlotDirection::Input &&
                             AZStd::regex_match(currentSlot->GetName(), slotDataTypeGroupRegex))
                         {
                             const auto& currentSlotValue = GetValueFromSlotOrConnection(currentSlot);
@@ -284,7 +284,7 @@ namespace JE::Editor
         }
     }
 
-    void MaterialGraphCompiler::BuildTemplatePathsForCurrentNode(const GraphModel::ConstNodePtr& currentNode)
+    void MaterialGraphCompiler::BuildTemplatePathsForCurrentNode(const JE::Editor::Tools::GraphModel::ConstNodePtr& currentNode)
     {
         m_templatePathsForCurrentNode.clear();
         if (auto dynamicNode = azrtti_cast<const JE::Editor::Tools::DynamicNode*>(currentNode.get()))
@@ -423,7 +423,7 @@ namespace JE::Editor
             });
     }
 
-    void MaterialGraphCompiler::BuildInstructionsForCurrentNode(const GraphModel::ConstNodePtr& currentNode)
+    void MaterialGraphCompiler::BuildInstructionsForCurrentNode(const JE::Editor::Tools::GraphModel::ConstNodePtr& currentNode)
     {
         if (!m_graph)
         {
@@ -447,7 +447,7 @@ namespace JE::Editor
                         AZStd::vector<AZStd::string> inputSlotNames;
                         AZ::StringFunc::Tokenize(blockHeader, inputSlotNames, ";:, \t\r\n\\/", false, false);
 
-                        AZStd::vector<GraphModel::ConstNodePtr> instructionNodesForBlock;
+                        AZStd::vector<JE::Editor::Tools::GraphModel::ConstNodePtr> instructionNodesForBlock;
                         instructionNodesForBlock.reserve(m_graph->GetNodeCount());
                         const auto& lines = GetInstructionsFromConnectedNodes(currentNode, inputSlotNames, instructionNodesForBlock);
 
@@ -485,7 +485,7 @@ namespace JE::Editor
             });
     }
 
-    bool MaterialGraphCompiler::BuildMaterialTypeForCurrentNode(const GraphModel::ConstNodePtr& currentNode)
+    bool MaterialGraphCompiler::BuildMaterialTypeForCurrentNode(const JE::Editor::Tools::GraphModel::ConstNodePtr& currentNode)
     {
         for (const auto& templatePath : m_templatePathsForCurrentNode)
         {
@@ -629,13 +629,13 @@ namespace JE::Editor
         }
     }
 
-    AZStd::any MaterialGraphCompiler::GetValueFromSlot(GraphModel::ConstSlotPtr slot) const
+    AZStd::any MaterialGraphCompiler::GetValueFromSlot(JE::Editor::Tools::GraphModel::ConstSlotPtr slot) const
     {
         const auto& slotItr = m_slotValueTable.find(slot);
         return slotItr != m_slotValueTable.end() ? slotItr->second : slot->GetValue();
     }
 
-    AZStd::any MaterialGraphCompiler::GetValueFromSlotOrConnection(GraphModel::ConstSlotPtr slot) const
+    AZStd::any MaterialGraphCompiler::GetValueFromSlotOrConnection(JE::Editor::Tools::GraphModel::ConstSlotPtr slot) const
     {
          for (const auto& connection : slot->GetConnections())
         {
@@ -650,7 +650,7 @@ namespace JE::Editor
         return GetValueFromSlot(slot);
     }
 
-    AZStd::string MaterialGraphCompiler::GetAzslTypeFromSlot(GraphModel::ConstSlotPtr slot) const
+    AZStd::string MaterialGraphCompiler::GetAzslTypeFromSlot(JE::Editor::Tools::GraphModel::ConstSlotPtr slot) const
     {
         const auto& slotValue = GetValueFromSlot(slot);
         const auto& slotDataType = slot->GetGraphContext()->GetDataTypeForValue(slotValue);
@@ -664,7 +664,7 @@ namespace JE::Editor
         return slotDataTypeName;
     }
 
-    AZStd::string MaterialGraphCompiler::GetAzslValueFromSlot(GraphModel::ConstSlotPtr slot) const
+    AZStd::string MaterialGraphCompiler::GetAzslValueFromSlot(JE::Editor::Tools::GraphModel::ConstSlotPtr slot) const
     {
         const auto& slotValue = GetValueFromSlot(slot);
 
@@ -797,7 +797,7 @@ namespace JE::Editor
     }
 
     AZStd::string MaterialGraphCompiler::GetAzslSrgMemberFromSlot(
-        GraphModel::ConstNodePtr node, const JE::Editor::Tools::DynamicNodeSlotConfig& slotConfig) const
+        JE::Editor::Tools::GraphModel::ConstNodePtr node, const JE::Editor::Tools::DynamicNodeSlotConfig& slotConfig) const
     {
         if (const auto& slot = node->GetSlot(slotConfig.m_name))
         {
@@ -838,7 +838,7 @@ namespace JE::Editor
     }
 
     AZStd::vector<AZStd::pair<AZStd::string, AZStd::string>> MaterialGraphCompiler::GetSubstitutionSymbolsFromNode(
-        GraphModel::ConstNodePtr node) const
+        JE::Editor::Tools::GraphModel::ConstNodePtr node) const
     {
         AZStd::vector<AZStd::pair<AZStd::string, AZStd::string>> substitutionSymbols;
 
@@ -865,14 +865,14 @@ namespace JE::Editor
     }
 
     AZStd::vector<AZStd::string> MaterialGraphCompiler::GetInstructionsFromSlot(
-        GraphModel::ConstNodePtr node,
+        JE::Editor::Tools::GraphModel::ConstNodePtr node,
         const JE::Editor::Tools::DynamicNodeSlotConfig& slotConfig,
         const AZStd::vector<AZStd::pair<AZStd::string, AZStd::string>>& substitutionSymbols) const
     {
         AZStd::vector<AZStd::string> instructionsForSlot;
 
         auto slot = node->GetSlot(slotConfig.m_name);
-        if (slot && (slot->GetSlotDirection() != GraphModel::SlotDirection::Output || !slot->GetConnections().empty()))
+        if (slot && (slot->GetSlotDirection() != JE::Editor::Tools::GraphModel::SlotDirection::Output || !slot->GetConnections().empty()))
         {
             JE::Editor::Tools::CollectDynamicNodeSettings(slotConfig.m_settings, "instructions", instructionsForSlot);
 
@@ -886,7 +886,7 @@ namespace JE::Editor
     }
 
     bool MaterialGraphCompiler::ShouldUseInstructionsFromInputNode(
-        GraphModel::ConstNodePtr outputNode, GraphModel::ConstNodePtr inputNode, const AZStd::vector<AZStd::string>& inputSlotNames) const
+        JE::Editor::Tools::GraphModel::ConstNodePtr outputNode, JE::Editor::Tools::GraphModel::ConstNodePtr inputNode, const AZStd::vector<AZStd::string>& inputSlotNames) const
     {
         if (inputNode == outputNode)
         {
@@ -897,7 +897,7 @@ namespace JE::Editor
         {
             if (const auto slot = outputNode->GetSlot(inputSlotName))
             {
-                if (slot->GetSlotDirection() == GraphModel::SlotDirection::Input)
+                if (slot->GetSlotDirection() == JE::Editor::Tools::GraphModel::SlotDirection::Input)
                 {
                     for (const auto& connection : slot->GetConnections())
                     {
@@ -915,9 +915,9 @@ namespace JE::Editor
         return false;
     }
 
-    AZStd::vector<GraphModel::ConstNodePtr> MaterialGraphCompiler::GetAllNodesInExecutionOrder() const
+    AZStd::vector<JE::Editor::Tools::GraphModel::ConstNodePtr> MaterialGraphCompiler::GetAllNodesInExecutionOrder() const
     {
-        AZStd::vector<GraphModel::ConstNodePtr> nodes;
+        AZStd::vector<JE::Editor::Tools::GraphModel::ConstNodePtr> nodes;
 
         if (!m_graph)
         {
@@ -935,10 +935,10 @@ namespace JE::Editor
         return nodes;
     }
 
-    AZStd::vector<GraphModel::ConstNodePtr> MaterialGraphCompiler::GetInstructionNodesInExecutionOrder(
-        GraphModel::ConstNodePtr outputNode, const AZStd::vector<AZStd::string>& inputSlotNames) const
+    AZStd::vector<JE::Editor::Tools::GraphModel::ConstNodePtr> MaterialGraphCompiler::GetInstructionNodesInExecutionOrder(
+        JE::Editor::Tools::GraphModel::ConstNodePtr outputNode, const AZStd::vector<AZStd::string>& inputSlotNames) const
     {
-        AZStd::vector<GraphModel::ConstNodePtr> nodes = GetAllNodesInExecutionOrder();
+        AZStd::vector<JE::Editor::Tools::GraphModel::ConstNodePtr> nodes = GetAllNodesInExecutionOrder();
         AZStd::erase_if(nodes, [this, &outputNode, &inputSlotNames](const auto& node) {
             return !ShouldUseInstructionsFromInputNode(outputNode, node, inputSlotNames);
         });
@@ -946,9 +946,9 @@ namespace JE::Editor
     }
 
     AZStd::vector<AZStd::string> MaterialGraphCompiler::GetInstructionsFromConnectedNodes(
-        GraphModel::ConstNodePtr outputNode,
+        JE::Editor::Tools::GraphModel::ConstNodePtr outputNode,
         const AZStd::vector<AZStd::string>& inputSlotNames,
-        AZStd::vector<GraphModel::ConstNodePtr>& instructionNodes) const
+        AZStd::vector<JE::Editor::Tools::GraphModel::ConstNodePtr>& instructionNodes) const
     {
         AZStd::vector<AZStd::string> instructions;
 
@@ -1014,12 +1014,12 @@ namespace JE::Editor
         return instructions;
     }
 
-    AZStd::string MaterialGraphCompiler::GetSymbolNameFromNode(GraphModel::ConstNodePtr node) const
+    AZStd::string MaterialGraphCompiler::GetSymbolNameFromNode(JE::Editor::Tools::GraphModel::ConstNodePtr node) const
     {
         return JE::Editor::Tools::GetSymbolNameFromText(AZStd::string::format("node%u_%s", node->GetId(), node->GetTitle()));
     }
 
-    AZStd::string MaterialGraphCompiler::GetSymbolNameFromSlot(GraphModel::ConstSlotPtr slot) const
+    AZStd::string MaterialGraphCompiler::GetSymbolNameFromSlot(JE::Editor::Tools::GraphModel::ConstSlotPtr slot) const
     {
         bool allowNameSubstitution = true;
         if (auto dynamicNode = azrtti_cast<const JE::Editor::Tools::DynamicNode*>(slot->GetParentNode().get()))
@@ -1051,7 +1051,7 @@ namespace JE::Editor
     }
 
     AZStd::vector<AZStd::string> MaterialGraphCompiler::GetMaterialPropertySrgMemberFromSlot(
-        GraphModel::ConstNodePtr node,
+        JE::Editor::Tools::GraphModel::ConstNodePtr node,
         const JE::Editor::Tools::DynamicNodeSlotConfig& slotConfig,
         const AZStd::vector<AZStd::pair<AZStd::string, AZStd::string>>& substitutionSymbols) const
     {
@@ -1072,7 +1072,7 @@ namespace JE::Editor
     }
 
     AZStd::vector<AZStd::string> MaterialGraphCompiler::GetMaterialPropertySrgMemberFromNodes(
-        const AZStd::vector<GraphModel::ConstNodePtr>& instructionNodes) const
+        const AZStd::vector<JE::Editor::Tools::GraphModel::ConstNodePtr>& instructionNodes) const
     {
         if (!m_graph)
         {
@@ -1116,8 +1116,8 @@ namespace JE::Editor
     }
 
     bool MaterialGraphCompiler::BuildMaterialTypeFromTemplate(
-        GraphModel::ConstNodePtr templateNode,
-        const AZStd::vector<GraphModel::ConstNodePtr>& instructionNodes,
+        JE::Editor::Tools::GraphModel::ConstNodePtr templateNode,
+        const AZStd::vector<JE::Editor::Tools::GraphModel::ConstNodePtr>& instructionNodes,
         const AZStd::string& templateInputPath,
         const AZStd::string& templateOutputPath) const
     {
@@ -1155,7 +1155,7 @@ namespace JE::Editor
             // Search for all slots with settings indicating that material type properties should be generated. The settings can correspond
             // to shader inputs, shader options, and other material property values that may or may not have matching entries in the
             // material SRG.
-            AZStd::vector<AZStd::pair<GraphModel::ConstSlotPtr, DynamicNodeSlotConfig>> materialPropertyValueSlots;
+            AZStd::vector<AZStd::pair<JE::Editor::Tools::GraphModel::ConstSlotPtr, DynamicNodeSlotConfig>> materialPropertyValueSlots;
             if (auto dynamicNode = azrtti_cast<const DynamicNode*>(inputNode.get()))
             {
                 VisitDynamicNodeSlotConfigs(

@@ -31,7 +31,7 @@ namespace LandscapeCanvas
         static void Reflect(AZ::ReflectContext* context);
 
         SurfaceMaskDepthFilterNode() = default;
-        explicit SurfaceMaskDepthFilterNode(GraphModel::GraphPtr graph);
+        explicit SurfaceMaskDepthFilterNode(JE::Editor::Tools::GraphModel::GraphPtr graph);
 
         static const char* TITLE;
         const char* GetTitle() const override

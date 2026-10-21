@@ -11,7 +11,7 @@
 #include <JE/Editor/Tools/Graph/DynamicNode/DynamicNode.h>
 #include <GraphCanvas/Widgets/GraphCanvasMimeEvent.h>
 #include <GraphCanvas/Widgets/NodePalette/TreeItems/DraggableNodePaletteTreeItem.h>
-#include <GraphModel/Model/Common.h>
+#include <JE/Editor/Tools/GraphModel/Model/Common.h>
 
 namespace JE::Editor::Tools
 {

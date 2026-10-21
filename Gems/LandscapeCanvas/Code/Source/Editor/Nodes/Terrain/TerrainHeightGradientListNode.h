@@ -32,7 +32,7 @@ namespace LandscapeCanvas
         static void Reflect(AZ::ReflectContext* context);
 
         TerrainHeightGradientListNode() = default;
-        explicit TerrainHeightGradientListNode(GraphModel::GraphPtr graph);
+        explicit TerrainHeightGradientListNode(JE::Editor::Tools::GraphModel::GraphPtr graph);
 
         const BaseNodeType GetBaseNodeType() const override;
 

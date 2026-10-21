@@ -31,7 +31,7 @@ namespace LandscapeCanvas
 
     const char* DistanceBetweenFilterNode::TITLE = "Distance Between Filter";
 
-    DistanceBetweenFilterNode::DistanceBetweenFilterNode(GraphModel::GraphPtr graph)
+    DistanceBetweenFilterNode::DistanceBetweenFilterNode(JE::Editor::Tools::GraphModel::GraphPtr graph)
         : BaseAreaFilterNode(graph)
     {
         CreateSlotData();

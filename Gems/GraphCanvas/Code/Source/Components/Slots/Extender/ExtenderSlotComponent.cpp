@@ -229,9 +229,13 @@ namespace GraphCanvas
 
     Endpoint ExtenderSlotComponent::ExtendForConnectionProposal(const ConnectionId& connectionId, const Endpoint& endpoint)
     {
-        // Don't want to extend if we are already extended.
+        // Repeated evaluations may reuse only the pending extension owned by this connection.
         if (m_createdSlot.IsValid())
         {
+            if (m_proposedSlot && connectionId.IsValid() && m_trackedConnectionId == connectionId)
+            {
+                return Endpoint(GetNode(), m_createdSlot);
+            }
             return Endpoint();
         }
 

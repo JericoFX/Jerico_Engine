@@ -86,7 +86,7 @@ namespace GraphCanvas
         void EraseSlot();
         void CleanupProposedSlot();
 
-        bool m_proposedSlot;
+        bool m_proposedSlot = false;
         
         AZ::Entity* ConstructConnectionEntity(const Endpoint& sourceEndpoint, const Endpoint& targetEndpoint, bool createModelConnection) override;
         

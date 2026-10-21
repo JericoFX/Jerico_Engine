@@ -30,7 +30,7 @@ namespace LandscapeCanvas
 
     const char* DitherGradientModifierNode::TITLE = "Dither";
 
-    DitherGradientModifierNode::DitherGradientModifierNode(GraphModel::GraphPtr graph)
+    DitherGradientModifierNode::DitherGradientModifierNode(JE::Editor::Tools::GraphModel::GraphPtr graph)
         : BaseGradientModifierNode(graph)
     {
     }

@@ -11,7 +11,7 @@
 #include <AzCore/Serialization/EditContext.h>
 #include <AzCore/Serialization/SerializeContext.h>
 
-#include <GraphModel/Integration/Helpers.h>
+#include <JE/Editor/Tools/GraphModel/Integration/Helpers.h>
 
 #include <Editor/Core/GraphContext.h>
 #include <Editor/Nodes/Terrain/TerrainPhysicsHeightfieldColliderNode.h>
@@ -32,7 +32,7 @@ namespace LandscapeCanvas
                 editContext->Class<TerrainPhysicsHeightfieldColliderNode>(
                     QT_TRANSLATE_NOOP("LandscapeCanvas", "TerrainPhysicsHeightfieldColliderNode"), "")->
                     ClassElement(AZ::Edit::ClassElements::EditorData, "")->
-                    Attribute(GraphModelIntegration::Attributes::TitlePaletteOverride, "TerrainNodeTitlePalette")
+                    Attribute(JE::Editor::Tools::GraphModel::Integration::Attributes::TitlePaletteOverride, "TerrainNodeTitlePalette")
                     ;
             }
         }
@@ -40,7 +40,7 @@ namespace LandscapeCanvas
 
     const char* TerrainPhysicsHeightfieldColliderNode::TITLE = "Terrain Heightfield Physics Collider";
 
-    TerrainPhysicsHeightfieldColliderNode::TerrainPhysicsHeightfieldColliderNode(GraphModel::GraphPtr graph)
+    TerrainPhysicsHeightfieldColliderNode::TerrainPhysicsHeightfieldColliderNode(JE::Editor::Tools::GraphModel::GraphPtr graph)
         : BaseNode(graph)
     {
         RegisterSlots();

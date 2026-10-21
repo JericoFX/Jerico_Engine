@@ -30,7 +30,7 @@ namespace LandscapeCanvas
 
     const char* CompoundShapeNode::TITLE = "Compound Shape";
 
-    CompoundShapeNode::CompoundShapeNode(GraphModel::GraphPtr graph)
+    CompoundShapeNode::CompoundShapeNode(JE::Editor::Tools::GraphModel::GraphPtr graph)
         : BaseShapeNode(graph)
     {
     }

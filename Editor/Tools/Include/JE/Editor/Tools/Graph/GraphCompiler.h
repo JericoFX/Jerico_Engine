@@ -11,7 +11,7 @@
 #include <AzCore/Math/Crc.h>
 #include <AzCore/RTTI/RTTI.h>
 #include <AzCore/std/functional.h>
-#include <GraphModel/Model/Graph.h>
+#include <JE/Editor/Tools/GraphModel/Model/Graph.h>
 
 namespace JE::Editor::Tools
 {
@@ -70,7 +70,7 @@ namespace JE::Editor::Tools
         virtual bool CanCompileGraph() const;
 
         //! Dysfunction initiates and executes the graph compile, changing states accordingly.
-        virtual bool CompileGraph(GraphModel::GraphPtr graph, const AZStd::string& graphName, const AZStd::string& graphPath);
+        virtual bool CompileGraph(JE::Editor::Tools::GraphModel::GraphPtr graph, const AZStd::string& graphName, const AZStd::string& graphPath);
 
     protected:
         // Helper function to log and report status messages.
@@ -83,7 +83,7 @@ namespace JE::Editor::Tools
         const AZ::Crc32 m_toolId = {};
 
         // The source graph that is being compiled and transformed into generated files
-        GraphModel::GraphPtr m_graph;
+        JE::Editor::Tools::GraphModel::GraphPtr m_graph;
 
         // The unique name of the graph
         AZStd::string m_graphName;

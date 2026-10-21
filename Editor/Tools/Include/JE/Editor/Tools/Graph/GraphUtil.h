@@ -14,14 +14,14 @@
 #include <AzCore/std/parallel/scoped_lock.h>
 #include <AzCore/std/sort.h>
 #include <AzCore/std/tuple.h>
-#include <GraphModel/Model/Connection.h>
-#include <GraphModel/Model/Node.h>
-#include <GraphModel/Model/Slot.h>
+#include <JE/Editor/Tools/GraphModel/Model/Connection.h>
+#include <JE/Editor/Tools/GraphModel/Model/Node.h>
+#include <JE/Editor/Tools/GraphModel/Model/Slot.h>
 
 namespace JE::Editor::Tools
 {
     //! Get the value from a slot as a string
-    AZStd::string GetStringValueFromSlot(GraphModel::ConstSlotPtr slot, const AZStd::string& defaultValue = {});
+    AZStd::string GetStringValueFromSlot(JE::Editor::Tools::GraphModel::ConstSlotPtr slot, const AZStd::string& defaultValue = {});
 
     // Sort a container of nodes by depth, considering the number and state of input and output slots and connections, for consistent
     // display and execution order. The function is templatized to account for different container types and constness. 
@@ -32,7 +32,7 @@ namespace JE::Editor::Tools
 
         // Pre-calculate and cache sorting scores for all nodes to avoid reprocessing during the sort
         AZStd::mutex nodeScoreMapMutex;
-        AZStd::unordered_map<GraphModel::NodeId, AZStd::tuple<bool, bool, uint32_t>> nodeScoreMap;
+        AZStd::unordered_map<JE::Editor::Tools::GraphModel::NodeId, AZStd::tuple<bool, bool, uint32_t>> nodeScoreMap;
         nodeScoreMap.reserve(nodes.size());
 
         AZ::parallel_for_each(nodes.begin(), nodes.end(), [&](NodeValueTypeRef node) {

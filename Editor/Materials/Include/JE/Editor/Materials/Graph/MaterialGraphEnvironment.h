@@ -9,7 +9,7 @@
 #include <AzCore/RTTI/ReflectContext.h>
 #include <AzCore/std/smart_ptr/unique_ptr.h>
 #include <AzCore/std/containers/vector.h>
-#include <GraphModel/Model/GraphContext.h>
+#include <JE/Editor/Tools/GraphModel/Model/GraphContext.h>
 
 class QTranslator;
 namespace GraphCanvas { class StyleManager; class GraphCanvasTreeItem; }
@@ -36,7 +36,7 @@ namespace JE::Editor
         ~MaterialGraphEnvironment();
         AZ_DISABLE_COPY_MOVE(MaterialGraphEnvironment);
 
-        const AZStd::shared_ptr<GraphModel::GraphContext>& GetGraphContext(GraphKind kind = GraphKind::Material) const;
+        const AZStd::shared_ptr<JE::Editor::Tools::GraphModel::GraphContext>& GetGraphContext(GraphKind kind = GraphKind::Material) const;
         GraphCanvas::GraphCanvasTreeItem* CreateNodePaletteTree(GraphKind kind) const;
         void SetActiveGraphKind(GraphKind kind);
         const JE::Editor::Tools::GraphViewSettingsPtr& GetViewSettings() const;
@@ -56,8 +56,8 @@ namespace JE::Editor
         AZStd::unique_ptr<JE::Editor::Tools::DynamicNodeManager> m_dynamicNodeManager;
         AZStd::unique_ptr<JE::Editor::Tools::AssetStatusReporterSystem> m_assetStatusReporterSystem;
         AZStd::shared_ptr<JE::Editor::Tools::GraphTemplateFileDataCache> m_graphTemplateFileDataCache;
-        AZStd::shared_ptr<GraphModel::GraphContext> m_graphContext;
-        AZStd::shared_ptr<GraphModel::GraphContext> m_passGraphContext;
+        AZStd::shared_ptr<JE::Editor::Tools::GraphModel::GraphContext> m_graphContext;
+        AZStd::shared_ptr<JE::Editor::Tools::GraphModel::GraphContext> m_passGraphContext;
         AZStd::vector<AZ::Uuid> m_materialNodeConfigs;
         AZStd::vector<AZ::Uuid> m_passNodeConfigs;
         GraphKind m_activeGraphKind = GraphKind::Material;

@@ -28,7 +28,7 @@ namespace LandscapeCanvas
         static void Reflect(AZ::ReflectContext* context);
 
         BaseAreaFilterNode() = default;
-        explicit BaseAreaFilterNode(GraphModel::GraphPtr graph);
+        explicit BaseAreaFilterNode(JE::Editor::Tools::GraphModel::GraphPtr graph);
 
         const BaseNodeType GetBaseNodeType() const override
         {

@@ -22,7 +22,7 @@ namespace LandscapeCanvas
         static void Reflect(AZ::ReflectContext* context);
 
         CapsuleShapeNode() = default;
-        explicit CapsuleShapeNode(GraphModel::GraphPtr graph);
+        explicit CapsuleShapeNode(JE::Editor::Tools::GraphModel::GraphPtr graph);
 
         static const char* TITLE;
         const char* GetTitle() const override { return TITLE; }

@@ -12,7 +12,7 @@
 #include <AzFramework/Translation/TranslationDef.h>
 
 // Graph Model
-#include <GraphModel/Integration/Helpers.h>
+#include <JE/Editor/Tools/GraphModel/Integration/Helpers.h>
 
 // Landscape Canvas
 #include "BaseAreaModifierNode.h"
@@ -43,13 +43,13 @@ namespace LandscapeCanvas
                 editContext->Class<BaseAreaModifierNode>(
                     QT_TRANSLATE_NOOP("LandscapeCanvas", "BaseAreaModifierNode"), "")->
                     ClassElement(AZ::Edit::ClassElements::EditorData, "")->
-                    Attribute(GraphModelIntegration::Attributes::TitlePaletteOverride, "VegetationAreaNodeTitlePalette")
+                    Attribute(JE::Editor::Tools::GraphModel::Integration::Attributes::TitlePaletteOverride, "VegetationAreaNodeTitlePalette")
                     ;
             }
         }
     }
 
-    BaseAreaModifierNode::BaseAreaModifierNode(GraphModel::GraphPtr graph)
+    BaseAreaModifierNode::BaseAreaModifierNode(JE::Editor::Tools::GraphModel::GraphPtr graph)
         : BaseNode(graph)
     {
     }

@@ -13,8 +13,8 @@
 #include <AzCore/Serialization/SerializeContext.h>
 #include <AzCore/std/smart_ptr/make_shared.h>
 
-#include <GraphModel/Integration/Helpers.h>
-#include <GraphModel/Model/Slot.h>
+#include <JE/Editor/Tools/GraphModel/Integration/Helpers.h>
+#include <JE/Editor/Tools/GraphModel/Model/Slot.h>
 
 // Landscape Canvas
 #include "ImageGradientNode.h"
@@ -35,7 +35,7 @@ namespace LandscapeCanvas
 
     const char* ImageGradientNode::TITLE = "Image";
 
-    ImageGradientNode::ImageGradientNode(GraphModel::GraphPtr graph)
+    ImageGradientNode::ImageGradientNode(JE::Editor::Tools::GraphModel::GraphPtr graph)
         : BaseGradientNode(graph)
     {
         RegisterSlots();
@@ -47,15 +47,15 @@ namespace LandscapeCanvas
         BaseGradientNode::RegisterSlots();
 
         // Image Gradient has an additional input slot for the image asset
-        GraphModel::DataTypePtr pathDataType = GetGraphContext()->GetDataType(LandscapeCanvasDataTypeEnum::Path);
+        JE::Editor::Tools::GraphModel::DataTypePtr pathDataType = GetGraphContext()->GetDataType(LandscapeCanvasDataTypeEnum::Path);
 
-        RegisterSlot(AZStd::make_shared<GraphModel::SlotDefinition>(
-            GraphModel::SlotDirection::Input,
-            GraphModel::SlotType::Data,
+        RegisterSlot(AZStd::make_shared<JE::Editor::Tools::GraphModel::SlotDefinition>(
+            JE::Editor::Tools::GraphModel::SlotDirection::Input,
+            JE::Editor::Tools::GraphModel::SlotType::Data,
             IMAGE_ASSET_SLOT_ID,
             IMAGE_ASSET_SLOT_LABEL.toUtf8().constData(),
             IMAGE_ASSET_SLOT_DESCRIPTION.toUtf8().constData(),
-            GraphModel::DataTypeList{ pathDataType },
+            JE::Editor::Tools::GraphModel::DataTypeList{ pathDataType },
             pathDataType->GetDefaultValue()));
     }
 } // namespace LandscapeCanvas

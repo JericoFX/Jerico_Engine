@@ -28,16 +28,16 @@ namespace LandscapeCanvas
         static void Reflect(AZ::ReflectContext* context);
 
         BaseAreaNode() = default;
-        explicit BaseAreaNode(GraphModel::GraphPtr graph);
+        explicit BaseAreaNode(JE::Editor::Tools::GraphModel::GraphPtr graph);
 
         const char* GetSubTitle() const override
         {
             return LandscapeCanvas::VEGETATION_AREA_TITLE;
         }
 
-        GraphModel::NodeType GetNodeType() const override
+        JE::Editor::Tools::GraphModel::NodeType GetNodeType() const override
         {
-            return GraphModel::NodeType::WrapperNode;
+            return JE::Editor::Tools::GraphModel::NodeType::WrapperNode;
         }
 
         const BaseNodeType GetBaseNodeType() const override

@@ -22,7 +22,7 @@ namespace LandscapeCanvas
         static void Reflect(AZ::ReflectContext* context);
 
         CylinderShapeNode() = default;
-        explicit CylinderShapeNode(GraphModel::GraphPtr graph);
+        explicit CylinderShapeNode(JE::Editor::Tools::GraphModel::GraphPtr graph);
 
         static const char* TITLE;
         const char* GetTitle() const override { return TITLE; }

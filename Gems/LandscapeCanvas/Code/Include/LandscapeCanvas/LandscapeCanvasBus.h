@@ -13,7 +13,7 @@
 
 #include <GraphCanvas/Editor/EditorTypes.h>
 
-#include <GraphModel/Model/Graph.h>
+#include <JE/Editor/Tools/GraphModel/Model/Graph.h>
 
 #include <Editor/Nodes/BaseNode.h>
 
@@ -62,16 +62,16 @@ namespace LandscapeCanvas
         virtual GraphCanvas::GraphId OnGraphEntity(const AZ::EntityId& entityId) = 0;
 
         //! Return the node (if any) matching a particular EntityId in a specified graph
-        virtual GraphModel::NodePtr GetNodeMatchingEntityInGraph(const GraphCanvas::GraphId& graphId, const AZ::EntityId& entityId) = 0;
+        virtual JE::Editor::Tools::GraphModel::NodePtr GetNodeMatchingEntityInGraph(const GraphCanvas::GraphId& graphId, const AZ::EntityId& entityId) = 0;
 
         //! Return the node (if any) matching a particular EntityId and ComponentId in a specified graph
-        virtual GraphModel::NodePtr GetNodeMatchingEntityComponentInGraph(const GraphCanvas::GraphId& graphId, const AZ::EntityComponentIdPair& entityComponentId) = 0;
+        virtual JE::Editor::Tools::GraphModel::NodePtr GetNodeMatchingEntityComponentInGraph(const GraphCanvas::GraphId& graphId, const AZ::EntityComponentIdPair& entityComponentId) = 0;
 
         //! Return a list of all nodes matching a particular EntityId in all currently open graphs
-        virtual GraphModel::NodePtrList GetAllNodesMatchingEntity(const AZ::EntityId& entityId) = 0;
+        virtual JE::Editor::Tools::GraphModel::NodePtrList GetAllNodesMatchingEntity(const AZ::EntityId& entityId) = 0;
 
         //! Return a list of all nodes matching a particular EntityId and ComponentId in all currently open graphs
-        virtual GraphModel::NodePtrList GetAllNodesMatchingEntityComponent(const AZ::EntityComponentIdPair& entityComponentId) = 0;
+        virtual JE::Editor::Tools::GraphModel::NodePtrList GetAllNodesMatchingEntityComponent(const AZ::EntityComponentIdPair& entityComponentId) = 0;
     };
     using LandscapeCanvasRequestBus = AZ::EBus<LandscapeCanvasRequests>;
 
@@ -86,10 +86,10 @@ namespace LandscapeCanvas
         //////////////////////////////////////////////////////////////////////////
 
         //! Create a node for the given type in the specified graph
-        virtual BaseNode::BaseNodePtr CreateNodeForType(GraphModel::GraphPtr graph, const AZ::TypeId& typeId) = 0;
+        virtual BaseNode::BaseNodePtr CreateNodeForType(JE::Editor::Tools::GraphModel::GraphPtr graph, const AZ::TypeId& typeId) = 0;
 
         //! Create a node using a given type name in the specified graph
-        virtual GraphModel::NodePtr CreateNodeForTypeName(GraphModel::GraphPtr graph, AZStd::string_view nodeName) = 0;
+        virtual JE::Editor::Tools::GraphModel::NodePtr CreateNodeForTypeName(JE::Editor::Tools::GraphModel::GraphPtr graph, AZStd::string_view nodeName) = 0;
 
         //! Get the corresponding component TypeId for a given node type
         virtual const AZ::TypeId GetComponentTypeId(const AZ::TypeId& nodeTypeId) = 0;

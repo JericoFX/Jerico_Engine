@@ -31,7 +31,7 @@ namespace LandscapeCanvas
         static void Reflect(AZ::ReflectContext* context);
 
         PositionModifierNode() = default;
-        explicit PositionModifierNode(GraphModel::GraphPtr graph);
+        explicit PositionModifierNode(JE::Editor::Tools::GraphModel::GraphPtr graph);
 
         static const char* TITLE;
         const char* GetTitle() const override

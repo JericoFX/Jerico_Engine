@@ -31,7 +31,7 @@ namespace LandscapeCanvas
 
     const char* PerlinNoiseGradientNode::TITLE = "Perlin Noise";
 
-    PerlinNoiseGradientNode::PerlinNoiseGradientNode(GraphModel::GraphPtr graph)
+    PerlinNoiseGradientNode::PerlinNoiseGradientNode(JE::Editor::Tools::GraphModel::GraphPtr graph)
         : BaseGradientNode(graph)
     {
         RegisterSlots();

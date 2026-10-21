@@ -31,7 +31,7 @@ namespace LandscapeCanvas
         static void Reflect(AZ::ReflectContext* context);
 
         DistanceBetweenFilterNode() = default;
-        explicit DistanceBetweenFilterNode(GraphModel::GraphPtr graph);
+        explicit DistanceBetweenFilterNode(JE::Editor::Tools::GraphModel::GraphPtr graph);
 
         static const char* TITLE;
         const char* GetTitle() const override

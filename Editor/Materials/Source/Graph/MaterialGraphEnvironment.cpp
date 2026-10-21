@@ -25,8 +25,8 @@
 #include <AzCore/std/containers/unordered_map.h>
 #include <GraphCanvas/Styling/StyleManager.h>
 #include <GraphCanvas/Widgets/NodePalette/TreeItems/IconDecoratedNodePaletteTreeItem.h>
-#include <GraphModel/Integration/NodePalette/GraphCanvasNodePaletteItems.h>
-#include <GraphModel/Model/DataType.h>
+#include <JE/Editor/Tools/GraphModel/Integration/NodePalette/GraphCanvasNodePaletteItems.h>
+#include <JE/Editor/Tools/GraphModel/Model/DataType.h>
 #include <QApplication>
 #include <QTranslator>
 
@@ -112,7 +112,7 @@ namespace JE::Editor
         qApp->removeTranslator(m_translator.get());
     }
 
-    const AZStd::shared_ptr<GraphModel::GraphContext>& MaterialGraphEnvironment::GetGraphContext(GraphKind kind) const
+    const AZStd::shared_ptr<JE::Editor::Tools::GraphModel::GraphContext>& MaterialGraphEnvironment::GetGraphContext(GraphKind kind) const
     {
         return kind == GraphKind::RenderPass ? m_passGraphContext : m_graphContext;
     }
@@ -135,7 +135,7 @@ namespace JE::Editor
             }
             category->second->CreateChildNode<JE::Editor::Tools::DynamicNodePaletteItem>(m_toolId, config);
         }
-        GraphModelIntegration::AddCommonNodePaletteUtilities(root, m_toolId);
+        JE::Editor::Tools::GraphModel::Integration::AddCommonNodePaletteUtilities(root, m_toolId);
         return root;
     }
 
@@ -180,21 +180,21 @@ namespace JE::Editor
 
         // Register all data types required by Material Canvas nodes with the dynamic node manager
         m_dynamicNodeManager->RegisterDataTypes({
-            AZStd::make_shared<GraphModel::DataType>(AZ_CRC_CE("bool"), bool{}, "bool"),
-            AZStd::make_shared<GraphModel::DataType>(AZ_CRC_CE("int"), int32_t{}, "int"),
-            AZStd::make_shared<GraphModel::DataType>(AZ_CRC_CE("uint"), uint32_t{}, "uint"),
-            AZStd::make_shared<GraphModel::DataType>(AZ_CRC_CE("float"), float{}, "float"),
-            AZStd::make_shared<GraphModel::DataType>(AZ_CRC_CE("float2"), AZ::Vector2{}, "float2"),
-            AZStd::make_shared<GraphModel::DataType>(AZ_CRC_CE("float3"), AZ::Vector3{}, "float3"),
-            AZStd::make_shared<GraphModel::DataType>(AZ_CRC_CE("float4"), AZ::Vector4{}, "float4"),
-            AZStd::make_shared<GraphModel::DataType>(AZ_CRC_CE("float2x2"), AZStd::array<AZ::Vector2, 2>{ AZ::Vector2(1.0f, 0.0f), AZ::Vector2(0.0f, 1.0f) }, "float2x2"),
-            AZStd::make_shared<GraphModel::DataType>(AZ_CRC_CE("float3x3"), AZStd::array<AZ::Vector3, 3>{ AZ::Vector3(1.0f, 0.0f, 0.0f), AZ::Vector3(0.0f, 1.0f, 0.0f), AZ::Vector3(0.0f, 0.0f, 1.0f) }, "float3x3"),
-            AZStd::make_shared<GraphModel::DataType>(AZ_CRC_CE("float4x3"), AZStd::array<AZ::Vector4, 3>{ AZ::Vector4(1.0f, 0.0f, 0.0f, 0.0f), AZ::Vector4(0.0f, 1.0f, 0.0f, 0.0f), AZ::Vector4(0.0f, 0.0f, 1.0f, 0.0f) }, "float4x3"),
-            AZStd::make_shared<GraphModel::DataType>(AZ_CRC_CE("float4x4"), AZStd::array<AZ::Vector4, 4>{ AZ::Vector4(1.0f, 0.0f, 0.0f, 0.0f), AZ::Vector4(0.0f, 1.0f, 0.0f, 0.0f), AZ::Vector4(0.0f, 0.0f, 1.0f, 0.0f), AZ::Vector4(0.0f, 0.0f, 0.0f, 1.0f) }, "float4x4"),
-            AZStd::make_shared<GraphModel::DataType>(AZ_CRC_CE("color"), AZ::Color::CreateOne(), "color"),
-            AZStd::make_shared<GraphModel::DataType>(AZ_CRC_CE("string"), AZStd::string{}, "string"),
-            AZStd::make_shared<GraphModel::DataType>(AZ_CRC_CE("image"), AZ::Data::Asset<JE::Render::RPI::StreamingImageAsset>{ AZ::Data::AssetLoadBehavior::NoLoad }, "image"),
-            AZStd::make_shared<GraphModel::DataType>(AZ_CRC_CE("sampler"), defaultSamplerState, "sampler"),
+            AZStd::make_shared<JE::Editor::Tools::GraphModel::DataType>(AZ_CRC_CE("bool"), bool{}, "bool"),
+            AZStd::make_shared<JE::Editor::Tools::GraphModel::DataType>(AZ_CRC_CE("int"), int32_t{}, "int"),
+            AZStd::make_shared<JE::Editor::Tools::GraphModel::DataType>(AZ_CRC_CE("uint"), uint32_t{}, "uint"),
+            AZStd::make_shared<JE::Editor::Tools::GraphModel::DataType>(AZ_CRC_CE("float"), float{}, "float"),
+            AZStd::make_shared<JE::Editor::Tools::GraphModel::DataType>(AZ_CRC_CE("float2"), AZ::Vector2{}, "float2"),
+            AZStd::make_shared<JE::Editor::Tools::GraphModel::DataType>(AZ_CRC_CE("float3"), AZ::Vector3{}, "float3"),
+            AZStd::make_shared<JE::Editor::Tools::GraphModel::DataType>(AZ_CRC_CE("float4"), AZ::Vector4{}, "float4"),
+            AZStd::make_shared<JE::Editor::Tools::GraphModel::DataType>(AZ_CRC_CE("float2x2"), AZStd::array<AZ::Vector2, 2>{ AZ::Vector2(1.0f, 0.0f), AZ::Vector2(0.0f, 1.0f) }, "float2x2"),
+            AZStd::make_shared<JE::Editor::Tools::GraphModel::DataType>(AZ_CRC_CE("float3x3"), AZStd::array<AZ::Vector3, 3>{ AZ::Vector3(1.0f, 0.0f, 0.0f), AZ::Vector3(0.0f, 1.0f, 0.0f), AZ::Vector3(0.0f, 0.0f, 1.0f) }, "float3x3"),
+            AZStd::make_shared<JE::Editor::Tools::GraphModel::DataType>(AZ_CRC_CE("float4x3"), AZStd::array<AZ::Vector4, 3>{ AZ::Vector4(1.0f, 0.0f, 0.0f, 0.0f), AZ::Vector4(0.0f, 1.0f, 0.0f, 0.0f), AZ::Vector4(0.0f, 0.0f, 1.0f, 0.0f) }, "float4x3"),
+            AZStd::make_shared<JE::Editor::Tools::GraphModel::DataType>(AZ_CRC_CE("float4x4"), AZStd::array<AZ::Vector4, 4>{ AZ::Vector4(1.0f, 0.0f, 0.0f, 0.0f), AZ::Vector4(0.0f, 1.0f, 0.0f, 0.0f), AZ::Vector4(0.0f, 0.0f, 1.0f, 0.0f), AZ::Vector4(0.0f, 0.0f, 0.0f, 1.0f) }, "float4x4"),
+            AZStd::make_shared<JE::Editor::Tools::GraphModel::DataType>(AZ_CRC_CE("color"), AZ::Color::CreateOne(), "color"),
+            AZStd::make_shared<JE::Editor::Tools::GraphModel::DataType>(AZ_CRC_CE("string"), AZStd::string{}, "string"),
+            AZStd::make_shared<JE::Editor::Tools::GraphModel::DataType>(AZ_CRC_CE("image"), AZ::Data::Asset<JE::Render::RPI::StreamingImageAsset>{ AZ::Data::AssetLoadBehavior::NoLoad }, "image"),
+            AZStd::make_shared<JE::Editor::Tools::GraphModel::DataType>(AZ_CRC_CE("sampler"), defaultSamplerState, "sampler"),
         });
 
         // Search the project and gems for dynamic node configurations and register them with the manager
@@ -255,10 +255,10 @@ namespace JE::Editor
     void MaterialGraphEnvironment::InitSharedGraphContext()
     {
         // Each graph document creates its own graph context but we want to use a shared graph context instead to avoid data duplication
-        m_graphContext = AZStd::make_shared<GraphModel::GraphContext>(
+        m_graphContext = AZStd::make_shared<JE::Editor::Tools::GraphModel::GraphContext>(
             "Material Graph", ".materialgraph", m_dynamicNodeManager->GetRegisteredDataTypes());
         m_graphContext->CreateModuleGraphManager();
-        m_passGraphContext = AZStd::make_shared<GraphModel::GraphContext>(
+        m_passGraphContext = AZStd::make_shared<JE::Editor::Tools::GraphModel::GraphContext>(
             "Pass Graph", ".passgraph", m_dynamicNodeManager->GetRegisteredDataTypes());
         m_passGraphContext->CreateModuleGraphManager();
     }

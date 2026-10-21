@@ -30,7 +30,7 @@ namespace LandscapeCanvas
 
     const char* AxisAlignedBoxShapeNode::TITLE = "Axis Aligned Box Shape";
 
-    AxisAlignedBoxShapeNode::AxisAlignedBoxShapeNode(GraphModel::GraphPtr graph)
+    AxisAlignedBoxShapeNode::AxisAlignedBoxShapeNode(JE::Editor::Tools::GraphModel::GraphPtr graph)
         : BaseShapeNode(graph)
     {
     }
