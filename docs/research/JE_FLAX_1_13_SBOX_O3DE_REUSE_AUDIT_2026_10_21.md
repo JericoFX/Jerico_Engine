@@ -38,7 +38,7 @@ La documentación actual de s&box distingue **Scene Mapping moderno** de **Hamme
 | Herramienta o experiencia s&box | Base O3DE / JE disponible | Decisión |
 | --- | --- | --- |
 | Scene Mapping con primitivas, vertex/edge/face, UV/texturas y gizmos | **Engine/Geometry** ya contiene EditorWhiteBoxComponent y WhiteBoxToolApi, junto a AzToolsFramework Component Modes. | **ALTA PRIORIDAD DE UX**. Aprovechar White Box/BSP; mejorar modo de edición y tests de geometría, materiales por cara y persistencia. No otro mesh editor. |
-| Vertex Paint, Displacement y brushes | AzFramework/PaintBrush, GradientSignal, Terrain y TerrrainMacroMaterial; RBrush y geología en GOAL. | **PARCIAL.** Reutilizar brush, filtros y dirty regions; integrar en tools JE con Undo/cook, sin evaluación paralela permanente. |
+| Vertex Paint, Displacement y brushes | AzFramework/PaintBrush, GradientSignal, Terrain y TerrainMacroMaterial; RBrush y geología en GOAL. | **PARCIAL.** Reutilizar brush, filtros y dirty regions; integrar en tools JE con Undo/cook, sin evaluación paralela permanente. |
 | Texture Generators (color, degradado, texto, SVG, generators C#), CacheToDisk | Asset Processor, C++ Asset Builders, ImageProcessingAtom y OIIO/OCIO nativo en JE. | **OPORTUNIDAD REAL.** Diseñar autoría C++ de textura procedural cocinada y cacheada si un consumidor lo pide; no meter C# ni Python runtime. |
 | Shader Graph, Material Editor, editor de variables y errores | Atom Material Canvas + Material Editor + GraphCanvas; integración focal GraphModel105/EditorTools/AtomToolsFramework. | **REUTILIZAR.** Conectar Propiedades y Nodos al mismo asset/material existente, respetando grafo, constantes, Save/reopen y preview. |
 | ModelDoc nodal y edición de assets de modelos | Scene Processing, EMotionFX, Scene Settings, material slots, skeleton/rig. | **MEJORAR WORKFLOW**, no importar herramientas nativas de Source 2. Reusar origen de datos, colisiones, sockets, import y preview JE. |
@@ -61,7 +61,7 @@ La documentación actual de s&box distingue **Scene Mapping moderno** de **Hamme
 - **Materiales:** MaterialCanvas/GraphModel, Material Editor, ImageProcessing y AssetProcessor antes de un sistema de texturas o graph nuevo.
 - **Render:** DDGI, SSR, probes, shadows, culling, instancing y TAA existentes antes de módulos duplicados.
 - **Animación/secuencias:** Maestro, TrackView y EMotionFX antes de sustituirlos por un Movie Maker propio completo.
-- **Sistema de mundos:** Prefab/Overrides/Spawnables/UID/AssetManager antes de tablas propias paralelas.
+- **Sistema de mundos:** Prefab/Overrides/Spawnables/GUID/AssetManager antes de tablas propias paralelas.
 - **MCP:** si se autoriza en una etapa futura, una interfaz local sobre comandos JE existentes; nunca otro editor, otro mundo ni un servidor de escucha pública.
 
 ## IV. Fixtures propuestos — NO EJECUTADOS
