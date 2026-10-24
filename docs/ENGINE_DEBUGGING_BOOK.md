@@ -1,3 +1,11 @@
+## 2026-10-24 — CDB finito: fechas JSON UTC y ConsoleHost con identidad verificada
+
+En materialcanvas-local-symbol-discovery-r1-attempt1, ConvertFrom-Json produjo DateTime UTC; DateTime.Parse recibió después texto localizado es-UY y falló antes de CDB. Normalizar DateTime UTC directamente o cadena ISO mediante ParseExact invariante; comparar creación CIM con CIM, conservando aparte la identidad del handle nativo. Prueba de deserialización real: RED6/11, GREEN11/11; no aceptar fechas futuras, vencidas o identidad distinta.
+
+Attempt2 inició CDB con CreateNoWindow=true, pero Windows creó conhost13088 hijo de CDB9532. El supervisor lo rechazó y ejecutó cleanup; no atribuirlo a crash del editor. R4 admite ConsoleHost sólo bajo AssetBuilder o CdbDiscovery registrado, conservando ejecutable pinneado, firma Microsoft, owner, creación y handle. RED8/9, GREEN9/9. No permitir hijos arbitrarios de CDB ni cerrar por nombre.
+
+Attempt3 ejecutó hasta marcador final y qd, exit0; CDB y conhost terminaron, UI respondió y AP/Editor cerraron normalmente. Postflight19/19 sin cambios y censo vacío. Evidencia local: build/n0-validation/native-corefeature102/materialcanvas-local-symbol-discovery-r1-attempt3, log SHA256 8462A9C29CA8283DA44A4DED17E18C7E13F841DB981F5EA80396DAACE28BB6C4. El aviso de proceso no adjunto como debuggee es esperable con -pv; no justifica attach invasivo. PDB privado cargado y exit0 no prueban identidad de MaterialInstance ni eventos tardíos; revisar consultas ambiguas y correlación antes de observarlos.
+
 ## GraphModel105 — integración focal verificada y publicada en development (2026-10-21)
 
 La validación ejecutada sobre la cohorte canónica congelada queda completada para su alcance: Materials 99/99, GraphModel 13/13 y EditorTools 18/18; release, Escape, extender, ownership, tipos y Undo/Redo aprobados. EditorLib relink exit 0 / 14.0899401 s y siete targets consumidores exit 0 / 113.6376576 s. GUI R6 verificó conexión real, Undo/Redo y Save (exit 0 / 608.096897 s); R7 recargó en nueva sesión sin Save (exit 0 / 78.3938536 s), copia 18203 B/C987D5 idéntica. Esas evidencias no se convierten en prueba del árbol WIP restaurado ni de todos los gates de Gem.
