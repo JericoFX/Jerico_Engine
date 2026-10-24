@@ -1,23 +1,49 @@
-# JericoEngine — JE
+<p align="center">
+  <img src="docs/branding/jerico-j.svg" alt="Jerico modular J logo" width="104">
+</p>
 
-Base de desarrollo O3DE adaptada hacia JericoEngine. **Rama única de trabajo: `development`.**
+<h1 align="center">JericoEngine</h1>
 
-## Dirección vigente
+<p align="center"><em>An O3DE-derived engine and integrated editor under active development.</em></p>
 
-Código propio/adaptado con nomenclatura `JE::`; subsistemas necesarios integrados dentro del engine a partir de sus implementaciones Gem. Sin AWS, multiplayer ni plataformas online. Sólo DirectX 12 y Vulkan como backends gráficos: Windows ambos, Linux Vulkan.
+> **Project status — October 24, 2026:** Work is ongoing on the `development` branch. Focused Windows/Vulkan editor, rendering, geometry and tooling checks have been recorded. JericoEngine is **not yet a production-ready or fully validated engine**; those checks do not establish a complete build, cross-platform support or a shipping release.
 
-Prioridad: editor/UI Jerico y BSP útil, materiales/formatos propios, colisión, geología nativa y herramientas modulares, con resultados visibles y optimización SIGGRAPH desde las primeras escenas. Luau/Jolt/animación/UI/audio/VFX/IA/OpenXR y demás capacidades locales existentes se conservan. Ideas de otros engines permitidas con procedencia/licencia y prueba de utilidad.
+## Direction
 
-**Estado actual: auditoría y planificación; no se afirma migración de source, build, rendimiento ni independencia de dependencias ya completados.**
+JericoEngine is transforming an Open 3D Engine (O3DE) codebase into a coherent, locally operated `JE::` engine and JericoEditor. The priority is a useful world-authoring workflow—BSP/CSG, materials, assets, physics and persistence—with additional systems integrated into the same editor and runtime.
 
-## Entradas
+- **Native ownership:** migrate adapted systems, build targets, registrations and public APIs into `JE::` modules. The transition from inherited O3DE structures is ongoing; a namespace alias alone is not considered completion.
+- **Rendering:** Vulkan is the active development and validation backend. DirectX 12 remains in the intended Windows architecture but is currently inactive for build/cook/distribution. Windows/Vulkan, Linux/Vulkan and eventual Windows/DX12 acceptance are separate milestones.
+- **Lighting and XR:** retain Atom's DDGI and ray tracing paths on Vulkan. OpenXR/VR remains required, but a desktop rendering test is not a headset validation.
+- **Offline and single-player by design:** the intended product excludes AWS services/SDKs, multiplayer, matchmaking and online accounts. Cleanup of inherited dependencies and download paths is still being audited.
+- **Lean, integrated tooling:** reuse proven O3DE components under engine ownership, remove unnecessary runtime/editor overhead with measurements, and keep authoring work out of source-free Shipping where possible.
 
-[CODEX_START](CODEX_START.md) · [GOAL](GOAL.md) · [AGENTS](AGENTS.md) · [Documentación](docs/README.md) · [Roadmap](docs/ROADMAP.md) · [Contrato JE](docs/architecture/JE_IDENTITY_AND_NATIVE_MODULES.md) · [Auditoría de dependencias](docs/research/JE_DEPENDENCY_AUDIT_2026_10_10.md).
+## Current evidence versus targets
 
-El default administrativo de GitHub puede diferir; trabajar explícitamente en development. No crear ramas adicionales ni borrar las históricas. No ejecutar instrucciones de descarga upstream sin revisar endpoints/cache/licencias: .lfsconfig y package defaults heredados requieren adaptación, no uso ciego.
+| Area | What can be said today |
+| --- | --- |
+| Native editor tools | Selected editor-tool, GraphModel/GraphCanvas and material-editor integration slices have passed focused Windows/Profile/Vulkan build, GUI and persistence checks. This does not close the entire editor. |
+| Renderer | Focused Vulkan runtime and DDGI/RT-related integration tests exist; global image quality, performance, Linux and VR acceptance remain open. |
+| BSP / geometry | Native CSG and geometry work has verified bounded test cases. The complete room/corridor/door/window authoring-to-cook-to-runtime workflow is still an acceptance target. |
+| Materials and assets | Work includes explicit PBR channel assignment, arbitrary source texture names, image processing and graph tooling. End-to-end format coverage, KTX/KTX2, reimport, cooking and shipping are not fully certified. |
+| Procedural authoring | Procedural Studio, Geology, RBrush, PWAS (placement/assembly) and EPLS (environmental layers) have defined ownership and technical contracts. Their complete integrated workflows are **not** verified engine features. |
+| Interaction and content | Jolt physics, Luau, Motion Studio, Sequencer, UI, audio, VFX, AI/navigation and other local systems remain on the roadmap; individual inherited or experimental components do not prove full Jerico integration. |
 
-## Procedencia y licencias
+The separate [Jerico Playground](https://github.com/JericoFX/JericoGeologyPlayground) contains mathematical experiments and historical test evidence. Its code and application are **not** part of the production JE runtime; any useful algorithm must be reviewed, adapted and retested in the current engine.
 
-El source inicial corresponde a O3DE commit `241c78b8064898a709cf1c5dd3535c6406763ef3`. Copyright de sus contribuidores y condiciones originales se conservan en [LICENSE.txt](LICENSE.txt), [LICENSE_APACHE2.TXT](LICENSE_APACHE2.TXT), [LICENSE_MIT.TXT](LICENSE_MIT.TXT) y avisos de terceros. Jerico no se atribuye autoría exclusiva del código O3DE. La migración a JE no cambia por sí misma obligaciones legales ni relicencia CryEngine 5.7.
+## Start here
 
-Las instrucciones/documentación originales permanecen en el historial de esa base y en el upstream oficial `o3de/o3de`. Los requisitos efectivos del build, toolchain y bibliotecas se inspeccionan según N0; no se reutilizan comandos de un README antiguo como prueba de compatibilidad actual.
+- [Current goal and product constraints](GOAL.md)
+- [Contributor and branch rules](AGENTS.md) · [Codex starting point](CODEX_START.md)
+- [Documentation index](docs/README.md) · [Roadmap](docs/ROADMAP.md)
+- [Active work and recorded results](docs/work/ACTIVE_SLICE.md) · [Handoff](docs/work/HANDOFF.md)
+- [Native ownership contract](docs/architecture/JE_IDENTITY_AND_NATIVE_MODULES.md)
+- [PWAS technical contract](docs/PWAS_TECHNICAL_MASTER.md) · [EPLS technical contract](docs/EPLS_TECHNICAL_MASTER.md)
+- [Playground-to-JE integration gates](docs/PLAYGROUND_TO_JE_INTEGRATION_MASTER.md)
+- [Third-party licensing and release checklist](docs/legal/O3DE_LICENSE_COMPLIANCE_CHECKLIST_2026_10_13.md)
+
+**Branch policy:** `development` is the sole working and publication branch. Historical branches and earlier Jerico repositories are reference material, not alternative active engines. Read `GOAL.md`, `AGENTS.md` and the active work records before attempting builds or changes; inherited dependency/download settings must not be used blindly.
+
+## Origin and licenses
+
+This repository began from O3DE source commit `241c78b8064898a709cf1c5dd3535c6406763ef3`. Original contributors retain attribution and applicable license rights. The codebase includes [LICENSE.txt](LICENSE.txt), [Apache 2.0](LICENSE_APACHE2.TXT), [MIT](LICENSE_MIT.TXT) and third-party notices. Renaming or integrating code does not erase those obligations; the project has not declared legal/release compliance complete.
