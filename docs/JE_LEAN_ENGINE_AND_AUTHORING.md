@@ -27,6 +27,8 @@ EPLS es el nombre canónico presente en los documentos originales. `ELSP` en las
 
 ## 2. Integración PWAS/EPLS, sin reescribir lo que ya sirve
 
+Los contratos detallados y sus pruebas están en [PWAS_TECHNICAL_MASTER](PWAS_TECHNICAL_MASTER.md) y [EPLS_TECHNICAL_MASTER](EPLS_TECHNICAL_MASTER.md); el inventario y el camino de extracción del [Playground](PLAYGROUND_TO_JE_INTEGRATION_MASTER.md) fijan source SHA, ownership, versión de Manifold y evidencia histórica. El Playground **no** es autoridad del motor nuevo: usar matemáticas/fixtures auditados por vertical, nunca copiar su UI ImGui/Diligent o dar por aprobada una integración O3DE. Los requisitos históricos M7D/E/F del donor se adaptan al World/Geometry/Materials/Assets JE, no reactivan Cry ni Gems productivas.
+
 Flujo de autoría compartido, no un pipeline rígido que obligue a ejecutar todo:
 
 ```text

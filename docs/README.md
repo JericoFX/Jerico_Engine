@@ -8,6 +8,9 @@
 | [AGENTS](../AGENTS.md) | Roles, Git, método y evidencia |
 | [CODEX_START](../CODEX_START.md) | Inicio seguro y prioridad visible |
 | [Motor ligero y PWAS/EPLS](JE_LEAN_ENGINE_AND_AUTHORING.md) | Reducir peso sin recortar herramientas; Studio/PWAS/EPLS, cook y demos integradas |
+| [PWAS contrato técnico](PWAS_TECHNICAL_MASTER.md) | Placement determinista, máscaras/locks/overrides, semántica de IDs, UI, cook y gates PWAS-01..12 |
+| [EPLS contrato técnico](EPLS_TECHNICAL_MASTER.md) | Capas ambientales, inputs/fields, máscaras, composición PBR, prioridades, lineage y gates EPLS-01..14 |
+| [Playground → JE](PLAYGROUND_TO_JE_INTEGRATION_MASTER.md) | Inventario fijado, evidencia real, ownership y migración por verticales sin duplicar engine |
 | [Contrato JE](architecture/JE_IDENTITY_AND_NATIVE_MODULES.md) | Namespace real, CMake/codegen/UUID, Gems dentro del engine |
 | [Arquitectura](architecture/O3DE_NATIVE_TRANSFORMATION.md) | Owners y disposición de capacidades |
 | [Auditoría de dependencias](research/JE_DEPENDENCY_AUDIT_2026_10_10.md) | Hallazgos DEP-01..12 con source/blobs y límites |

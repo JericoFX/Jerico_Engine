@@ -56,8 +56,8 @@
 | JER-050 | Routes/fittings/manual intersections/flanges/hysteresis | Procedural N8 | T/U/cruz/empates/locked parts |
 | JER-051 | Soportes floor/wall/ceiling/obstacles por queries | Procedural N8 | Sin soportes flotantes/world paralelo |
 | JER-052 | UV/arc-length/RMF/catenaria/cadenas/edge chains | Procedural N8 | Curva degenerada y 16/32/64 links |
-| JER-053 | PWAS proposals/masks/locks/seeds/overrides/GUID | Procedural N8 | Layout manual conservado al cambiar seed |
-| JER-054 | EPLS señales/capas, sin segundo sistema ELSP | Environment N8 | Owners/datos canónicos |
+| JER-053 | PWAS proposals/masks/locks/seeds/overrides/GUID ([master](PWAS_TECHNICAL_MASTER.md)) | Procedural N8 | PWAS-01..12: layout manual, determinismo, ID, Cancel/Undo/Save/Cook/source-free |
+| JER-054 | EPLS señales/capas, sin segundo sistema ELSP ([master](EPLS_TECHNICAL_MASTER.md)) | Environment N8 | EPLS-01..14: fields/PBR/manual/lineage, no doble placement, Cook y dirty-region |
 | JER-055 | Prefracture/bonds/anchors/interiores/fragmentos | Physics/Geometry N8 | Activación local Jolt y debris VFX |
 | JER-056 | Environment/clock/sun/sky/weather/wind único | Environment N2/N8 | No duplicar clocks/exposure/campos |
 | JER-057 | Physical wind opt-in y fan local | Physics N8 | Incluido/excluido; emitter retirado cero fuerza extra |
