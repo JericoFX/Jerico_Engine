@@ -1,6 +1,6 @@
 # Documentación vigente — JericoEngine / JE
 
-**2026-10-10: una rama development; JE::; sin AWS/multiplayer; DX12 y Vulkan; BSP/UI primero y geología activa.** [N0 ejecutado](evidence/n0/N0_EXECUTION_2026_10_10.md) incluye resolver offline, paquetes locales/consumers y núcleo BSP con UV/superficies verificados. Baseline completo, editor visible y runtime siguen pendientes.
+**Vigente 2026-10-15: una rama development; JE::; sin AWS/multiplayer; sólo Vulkan activo por ahora, DX12 preservado e inactivo; BSP/UI primero, geología y VR/OpenXR activos.** [N0 ejecutado](evidence/n0/N0_EXECUTION_2026_10_10.md) incluye resolver offline, paquetes locales/consumers y núcleo BSP con UV/superficies verificados. Baseline completo, editor visible y runtime siguen pendientes.
 
 | Documento | Uso |
 |---|---|
@@ -23,7 +23,7 @@
 | [Editor/assets/world](EDITOR_ASSET_WORLD_MASTER.md) | UX/transacciones/identidad/asset pipeline |
 | [Materiales/formatos/epak](ASSET_MATERIALS_FORMATS_EPAK_MASTER.md) | PBR/ORM/r*/cooked packages locales |
 | [BSP/geología/procedural/física](PROCEDURAL_PHYSICS_ENVIRONMENT_MASTER.md) | Geometry/Geology/RMod/RBrush/PWAS/Jolt |
-| [Renderer/SIGGRAPH](RENDERING_RASTER_SIGGRAPH_MASTER.md) | Dos backends, fuente de ideas y mejoras medibles |
+| [Renderer/SIGGRAPH](RENDERING_RASTER_SIGGRAPH_MASTER.md) | Vulkan activo, fuente de ideas y mejoras medibles |
 | [Scripting/AI/gameplay](SCRIPTING_AI_GAMEPLAY_MASTER.md) | Luau/Store/HTN/ref/input/save locales |
 | [Motion/UI/audio/XR](ANIMATION_UI_AUDIO_XR_MASTER.md) | Rig/IK/Fit/sequences/UI/audio/VFX/OpenXR |
 | [Perfiles](PRESENTATION_PROFILES_MASTER.md) | 2D/2.5D/isométrico/vehículos sin engines paralelos |
@@ -36,4 +36,4 @@
 | [HANDOFF](work/HANDOFF.md) | Hecho real, límites y siguiente acción |
 | [Verificación](work/VERIFICATION_REPORT.md) | Alcance comprobado de publicación |
 
-GOAL define destino, masters contratos, ROADMAP orden y ACTIVE_SLICE trabajo actual. No reconstruir decisiones desde chats ni dejar dos masters de ejecución contradictorios. El historial previo conserva detalles útiles, pero no puede reactivar Vulkan-only/DX12-deferred, cancelación total de geología, multiplayer optional o AZ como nomenclatura propia final. Fichas de papers/ramas anteriores son evidencia de lectura histórica, no órdenes de implementación.
+GOAL define destino, masters contratos, ROADMAP orden y ACTIVE_SLICE trabajo actual. No reconstruir decisiones desde chats ni dejar dos masters de ejecución contradictorios. La orden posterior de 2026-10-15 deja Vulkan como único backend activo y conserva DX12 inactivo; sustituye la exigencia gráfica anterior. El historial previo conserva detalles útiles, pero no puede reactivar cancelación total de geología, multiplayer optional o AZ como nomenclatura propia final. Fichas de papers/ramas anteriores son evidencia de lectura histórica, no órdenes de implementación.

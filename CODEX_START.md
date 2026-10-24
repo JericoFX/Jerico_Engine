@@ -4,9 +4,9 @@ Repositorio `JericoFX/Jerico_Engine`, **development** exclusivamente. Leer `GOAL
 
 ## Última orden, no interpretar desde documentos antiguos
 
-JE:: real en código propio, sin AWS ni multiplayer, solo DX12/Vulkan, Gem capabilities dentro del engine. Geología reactivada. BSP/UI/materiales primero, optimizaciones SIGGRAPH visibles y medibles. Ideas de otros engines permitidas según licencia. No RT de render ni reactivar flotabilidad DESIGN ONLY. No implementar plataforma de cuentas/red/cloud/DLC commerce.
+JE:: real en código propio, sin AWS ni multiplayer, sólo Vulkan activo por orden del propietario de 2026-10-15, DX12 preservado e inactivo, Gem capabilities dentro del engine. Geología reactivada. BSP/UI/materiales primero, optimizaciones SIGGRAPH visibles y medibles. Ideas de otros engines permitidas según licencia. Conservar DDGI y ray tracing de Atom sobre Vulkan por orden del propietario de 2026-10-19; no reactivar flotabilidad DESIGN ONLY. No implementar plataforma de cuentas/red/cloud/DLC commerce.
 
-No repetir la fase antigua Vulkan-only ni retrasar BSP hasta N8. Conservar capacidades técnicas del resto de masters bajo la precedencia de GOAL y el mapa de overrides de REQUIREMENTS_MATRIX. No tratar la presencia de una clase AZ o un Gem como destino final autorizado.
+La nueva orden de 2026-10-15 deja sólo Vulkan activo; sustituye la exigencia previa de trabajar también DX12. VR/OpenXR sigue en el GOAL con Vulkan. No retrasar BSP hasta N8. Conservar capacidades técnicas del resto de masters bajo la precedencia de GOAL y el mapa de overrides de REQUIREMENTS_MATRIX. No tratar la presencia de una clase AZ o un Gem como destino final autorizado.
 
 ## Git seguro
 
@@ -16,7 +16,7 @@ El default administrativo puede seguir siendo optimize_scriptcanvas_1. No lo con
 
 ## Primer trabajo
 
-Ejecutar N0 con dependencias permitidas y locales. No usar endpoints de .lfsconfig o CloudFront/S3 por defecto ni enviarles credenciales. Identificar paquete que falte en vez de auto-descargar. Registrar target/dependencia bloqueante y continuar auditoría/otros pasos viables. Mostrar pronto escena Vulkan/DX12 de base en los pares disponibles, con baseline de coste.
+Ejecutar N0 con dependencias permitidas y locales. No usar endpoints de .lfsconfig o CloudFront/S3 por defecto ni enviarles credenciales. Identificar paquete que falte en vez de auto-descargar. Registrar target/dependencia bloqueante y continuar auditoría/otros pasos viables. Mostrar pronto escena Vulkan de base en las plataformas disponibles, con baseline de coste; Linux y visor ausentes siguen NOT TESTED, no aprobados por documentación.
 
 Luego N1: UI Jerico con BSP real dentro del editor existente; construir habitación/corredor/apertura de puerta/ventana, UV/material, Undo/Save/reopen. Migración de ese owner a JE y composición nativa. No empezar por un panel sin consumidor ni por renombrar todo el engine. La nueva geología se integra como productor del mismo Geometry/Asset/Material pipeline, con checkpoints de roca/cliff/cueva, no un engine/playground separado.
 

@@ -1,5 +1,7 @@
 # Matriz JE de requisitos y exclusiones
 
+**Directiva posterior del propietario, 2026-10-15 — Vulkan único por ahora:** concentrar compilación, editor, runtime, cook y distribución en Vulkan. Windows-Vulkan y Linux-Vulkan se verifican por separado; no se presume portabilidad ni soporte de cualquier GPU. DX12 queda conservado en fuente e historial, fuera del perfil activo y de sus pruebas hasta nueva orden. VR/OpenXR sigue obligatorio con binding Vulkan y visor/runtime reales. Esta orden sustituye la exigencia anterior de trabajar en ambos backends; no cambia el resto del GOAL ni acredita una migración ya verificada.
+
 **Actualización del propietario 2026-10-10, posterior a a536fb7.** IDs existentes conservados; semánticas que cambiaron se corrigen aquí. Estado global de filas activas: CONTRACT ADOPTED / IMPLEMENTATION NOT VERIFIED; evidencia parcial ejecutada al final. Ninguna fila completa se cierra por un test focal. EXCLUDED no significa DEFERRED.
 
 | ID | Contrato | Owner/etapa | Evidencia mínima |
@@ -8,7 +10,7 @@
 | JER-002 | Rama única development, un integrador | Continuo | Ref/publicación, sin branches/worktrees |
 | JER-003 | Funciones nativas dentro del engine, sin activar Gems por proyecto | Core/Editor N1→N11 | Proyecto limpio sin Gem install/catalog |
 | JER-004 | Un World/identity/asset graph/undo/physics/render owner | Arquitectura | Producers/consumers/lifetimes únicos |
-| JER-005 | DX12 y Vulkan; Windows ambos, Linux Vulkan | Render N0/N2/N12 | Tres pares probados separadamente |
+| JER-005 | Sólo Vulkan activo por ahora; Windows/Linux, DX12 preservado e inactivo | Render N0/N2/N12 | Dos pares Vulkan probados separadamente; build/cook/package sin DX12 activo |
 | JER-006 | Atom adaptado a JE::Render, sin Diligent debajo | Render | Un graph/device/submit, identidad migrada |
 | JER-007 | Qt6 Widgets Jerico, viewport compartido/docking | Editor N1 | Tabs conservan scene/selection/undo |
 | JER-008 | Diálogos/DPI/layout/save/close/recovery | Editor N1/N12 | Recorridos reales y corrupt/error |
@@ -85,7 +87,7 @@
 | JER-079 | Buoyancy/Enable Buoyancy por WaterVolume | DESIGN ONLY | Permiso propio requerido |
 | JER-080 | Underwater/costa Horizon | DEFERRED | No bloquean BSP ni reabren pruebas Cry |
 | JER-081 | Geología integral REACTIVADA: roca/cliff/cueva/stack | Geology N8 adelantado | Showcases/topología/material/collision/cook; sólo BSP→VDB sigue cancelado |
-| JER-082 | Metal/WebGPU/DX11/OpenGL/móvil excluidos; render RT fuera de fase | Render | Build/selector/package, DX12 NO está excluido |
+| JER-082 | Metal/WebGPU/DX11/OpenGL/móvil excluidos; DDGI y ray tracing de Atom conservados sobre Vulkan | Render | Build/selector/package Vulkan; DX12 preservado fuera del perfil activo |
 | JER-083 | Facial/neural/motion matching/per-finger no foundation | DEFERRED | Multiplayer sessions EXCLUDED, no una extensión futura |
 | JER-084 | JE Material Graph/instances sobre implementation Atom | Materials N2 | rmat cooked/variant sin source compiler |
 | JER-085 | ORM R=AO/G=roughness/B=metal y normal/color-space | Materials N2 | Equivalencia mapas separados/reimport/scalars |
@@ -100,7 +102,7 @@
 | JER-094 | JE:: también en internals adaptados, no JE=AZ | Identity continuo | Namespace/codegen/type-ID/export migration real |
 | JER-095 | Absorción source/assets/builders/registro de Gems en engine | Native N1→N11 | Lifecycle/consumer/removal tests y proyecto sin Gem manager |
 | JER-096 | Multiplayer/servers/session/replication/cloud excluidos | Build/Core N0→N11 | No linked/deployed/runtime authorities ni optional flags para ellos |
-| JER-097 | Windows DX12/Vulkan + Linux Vulkan, Null solo test | Render N0/N2/N12 | Selector negativos y evidencia por par |
+| JER-097 | Windows Vulkan + Linux Vulkan, Null sólo test/headless; OpenXR Vulkan | Render N0/N2/N12 | Selector negativos, evidencia por par y gate XR con visor/runtime real |
 | JER-098 | Fuentes/paquetes controlados y build offline fail-closed | Dependencies N0/N11 | Cache completa/incompleta, sin fallback externo silencioso |
 | JER-099 | BSP/UI producen primer progreso visible | Editor N1 | Cuarto/corredor/aperturas/materials/Undo/Save/runtime |
 | JER-100 | Geología forma/material comparten campos semánticos | Geometry/Material N8 | Strata/erosión/depósito/interior concuerdan visualmente |
@@ -120,5 +122,5 @@ Ver [expediente 2026-10-10](evidence/n0/N0_EXECUTION_2026_10_10.md), source/log 
 | JER-071/098 | Resolver 24/24 y LFS focal; zlib/FT/Python consumers PASS, Qt/PySide exactos auditados; root instala Python/requisitos/cuatro editables sin índices, pip check/imports y ausencia boto3/botocore/s3transfer PASS | Grafo/link/deploy/runtime, rutas transitivas CMake/pip/PATCH_FILES, licencias/SBOM y offline completo |
 | JER-076/094 | Núcleo productivo real JE::BSP::Csg std+Manifold compilado, sin alias; adapters migrados por fuente | Resto del engine, UUID/codegen/export/serialización y consumers reales |
 | JER-099 | Kernel real: cuarto/corredor/aperturas, UV/costuras e identidad de superficies, 117 checks GREEN | Adapters/serialización/material Atom por cara, Editor real, Undo/save/reopen/cook/runtime e imagen |
-| JER-005/097 | Root48 argv/freeze2532 exit1/13,138s por Assimp offline; ANTLR/JSONCpp/CLI11 locales resueltos; inputs/cache/paquetes sin delta; sin targets/build; GPU/Vulkan enumerados | Windows-DX12, Windows-Vulkan y Linux-Vulkan render reales |
+| JER-005/097 | Root48 argv/freeze2532 exit1/13,138s por Assimp offline; ANTLR/JSONCpp/CLI11 locales resueltos; inputs/cache/paquetes sin delta; sin targets/build; GPU/Vulkan enumerados | Windows-Vulkan y Linux-Vulkan render reales según orden posterior de 2026-10-15; DX12 inactivo |
 | JER-101 | Bytes source/LFS y tiempos focales medidos | Métricas/coste/calidad comparables del producto, sin ahorro afirmado |
