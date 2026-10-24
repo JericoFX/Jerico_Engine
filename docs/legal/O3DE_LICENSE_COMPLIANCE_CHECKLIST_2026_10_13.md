@@ -5,6 +5,10 @@
 
 **Autoridad y contexto:** `GOAL.md`, `AGENTS.md`, `CODEX_START.md`, `docs/architecture/JE_IDENTITY_AND_NATIVE_MODULES.md`, `docs/legal/PROVENANCE_AND_DEPENDENCIES.md` y `docs/research/JE_DEPENDENCY_AUDIT_2026_10_10.md`. No sustituir esos contratos ni activar trabajo técnico ajeno al slice vigente.
 
+## Actualización de licencia del propietario — 2026-10-24
+
+El código original y los cambios de los que JericoFX sea titular pasan a ofrecerse bajo **GNU GPL v3.0 solamente** (`GPL-3.0-only`), conforme al nuevo [LICENSE](../../LICENSE) y [LICENSE_POLICY](../../LICENSE_POLICY.md). **No se relicencia automáticamente el código O3DE original ni se retiran Apache-2.0/MIT, copyright, NOTICE o excepciones de terceros**. El inventario y la comprobación de compatibilidad de cada distribución permanecen pendientes: este cambio de política no constituye `LEGAL RELEASE PASS`.
+
 ## 0. Alcance y principios
 
 - Auditar por **componente y archivo/artefacto efectivamente utilizado**: código O3DE y Gems absorbidas, paquetes 3P directos/transitivos, Qt/plugins, herramientas, SDK, shaders, codecs, tipografías, escenas, modelos, texturas, muestras, documentación incorporada y código generado.
@@ -20,7 +24,7 @@
 ### LIC-01 — Licencia base y procedencia
 
 - [ ] Confirmar la base O3DE (commit/tree) usada por `development` y conservar el texto original de `LICENSE.txt`, `LICENSE_APACHE2.TXT`, `LICENSE_MIT.TXT` y los NOTICE/cabeceras aplicables.
-- [ ] Registrar la elección Apache-2.0 o MIT para código O3DE cubierto; listar cualquier archivo/componente excluido de esa elección por licencia independiente.
+- [ ] Registrar la opción Apache-2.0 o MIT que cubre cada parte O3DE original y su coexistencia con cambios originales GPL-3.0-only de JericoFX; listar archivos/componentes sujetos a licencias independientes.
 - [ ] Revisar los archivos JE modificados desde O3DE: avisos de copyright, SPDX, atribución original y señalamiento de cambios exigible (especialmente si se usa Apache-2.0). No afirmar que el renombrado elimina esos derechos.
 
 ### LIC-02 — Inventario completo de código, Gems y transitivas
@@ -34,7 +38,7 @@
 
 - [ ] Auditar módulos **Qt 6 realmente utilizados**, plugins de plataforma, imageformats, contribuciones 3P, versión/build, licencia de cada módulo y método de enlace/distribución. No asumir que todo Qt es LGPL ni que enlace dinámico resuelve automáticamente el cumplimiento.
 - [ ] Si hay LGPL: documentar derechos de sustitución/re-enlace aplicables, atribuciones, licencia, disponibilidad de fuente correspondiente y cambios en la propia biblioteca; revisar el tipo de producto y la distribución concreta. Si no se cumplen, evaluar licencia comercial u otra biblioteca.
-- [ ] Localizar GPL/AGPL, LGPL, licencias con excepción de runtime, bibliotecas propietarias y componentes con cláusulas especiales; analizar *por uso y distribución*, incluidas herramientas solo de build. **No** integrar GPL/AGPL en núcleo/shipping sin revisión jurídica/arquitectónica expresa.
+- [ ] Localizar GPL/AGPL, LGPL, licencias con excepción de runtime, bibliotecas propietarias y componentes con cláusulas especiales; analizar *por uso y distribución*, incluidas herramientas solo de build. La licencia propia GPL-3.0-only **no** autoriza automáticamente copiar componentes GPL/AGPL ajenos ni resuelve compatibilidad por versión, excepciones, enlace y distribución; exigir revisión jurídica/arquitectónica expresa.
 - [ ] Verificar condiciones independientes de Jolt, Luau, ufbx, Manifold, OpenMesh, Recast, codecs/audio, OpenSSL y restantes paquetes **efectivamente presentes**. No presuponer licencia a partir del nombre.
 
 ### LIC-04 — AWS, red y origen del software
@@ -68,7 +72,7 @@
 | --- | --- | --- |
 | Apache-2.0 / MIT / BSD / ISC / Zlib / Boost y similares | Normalmente admitidas | Texto/copyright/NOTICE, condiciones específicas y procedencia preservados. |
 | LGPL (por ejemplo ciertos módulos Qt) | Revisión obligatoria | Obligaciones de LGPL y forma real de enlace/modificación/distribución satisfechas, documentadas y verificadas. |
-| GPL / AGPL y excepciones especiales | Bloqueo preventivo en núcleo/shipping | Análisis legal de la obra/distribución concreta y excepción aplicable; herramientas externas pueden evaluarse por separado. |
+| GPLv3 y otro copyleft con excepciones | Revisión específica de compatibilidad con GPL-3.0-only y distribución real | Identificar versión, titulares, excepciones, fuente y obligaciones por artefacto; AGPL y términos incompatibles quedan bloqueados sin resolución explícita. |
 | Propietaria / freeware / asset marketplace | Bloqueada por defecto | Licencia/permiso explícito para **este uso** y distribución, con pruebas. |
 | Sin licencia identificada o procedencia dudosa | BLOCKED | Evidencia verificable de derechos y condiciones. |
 

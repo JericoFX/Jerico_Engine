@@ -44,6 +44,8 @@ The separate [Jerico Playground](https://github.com/JericoFX/JericoGeologyPlaygr
 
 **Branch policy:** `development` is the sole working and publication branch. Historical branches and earlier Jerico repositories are reference material, not alternative active engines. Read `GOAL.md`, `AGENTS.md` and the active work records before attempting builds or changes; inherited dependency/download settings must not be used blindly.
 
-## Origin and licenses
+## License and origin
 
-This repository began from O3DE source commit `241c78b8064898a709cf1c5dd3535c6406763ef3`. Original contributors retain attribution and applicable license rights. The codebase includes [LICENSE.txt](LICENSE.txt), [Apache 2.0](LICENSE_APACHE2.TXT), [MIT](LICENSE_MIT.TXT) and third-party notices. Renaming or integrating code does not erase those obligations; the project has not declared legal/release compliance complete.
+JericoFX-owned original code and copyrightable modifications are offered under **GNU GPL v3.0 only** ([full GPLv3 license](LICENSE); [scope and exceptions](LICENSE_POLICY.md)). This does **not** revoke or replace the original licensing of inherited and third-party material.
+
+This repository began from O3DE source commit `241c78b8064898a709cf1c5dd3535c6406763ef3`. O3DE-covered source retains its original Apache-2.0 or MIT terms and notices ([O3DE license statement](LICENSE.txt), [Apache 2.0](LICENSE_APACHE2.TXT), [MIT](LICENSE_MIT.TXT)); other dependencies and assets have separate licenses. A GPLv3-compatible, redistributable engine build still requires the pending component-by-component legal audit.

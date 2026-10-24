@@ -14,6 +14,7 @@
 | [Contrato JE](architecture/JE_IDENTITY_AND_NATIVE_MODULES.md) | Namespace real, CMake/codegen/UUID, Gems dentro del engine |
 | [Arquitectura](architecture/O3DE_NATIVE_TRANSFORMATION.md) | Owners y disposición de capacidades |
 | [Auditoría de dependencias](research/JE_DEPENDENCY_AUDIT_2026_10_10.md) | Hallazgos DEP-01..12 con source/blobs y límites |
+| [Licencia Jerico GPLv3](../LICENSE_POLICY.md) | Alcance GPL-3.0-only y conservación de licencias originales de O3DE y terceros |
 | [Legal/dependencias](legal/PROVENANCE_AND_DEPENDENCIES.md) | Licencias, bibliotecas privadas, offline y exclusiones |
 | [Checklist legal O3DE/terceros](legal/O3DE_LICENSE_COMPLIANCE_CHECKLIST_2026_10_13.md) | LIC-01…07: atribuciones, Gems, LGPL/Qt, assets, avisos y bloqueo de release |
 | [Roadmap](ROADMAP.md) | N1/N2/N4/N8 adelantados, resto de capacidades conservadas |

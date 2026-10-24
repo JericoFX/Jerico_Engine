@@ -12,6 +12,9 @@ Motor, juego y editor sin Python por orden del propietario. CPython y wheelhouse
 
 ## O3DE no relicencia CryEngine
 
+**Decisión posterior del propietario (2026-10-24):** JericoFX licencia sus aportaciones originales bajo `GPL-3.0-only`; [LICENSE_POLICY](../../LICENSE_POLICY.md) y [LICENSE](../../LICENSE) fijan el alcance. La base O3DE mantiene sus derechos Apache-2.0/MIT y los componentes terceros sus propios avisos. La combinación y distribución siguen sujetas al inventario LIC-01…07, sin `PASS` automático.
+
+
 La licencia raíz O3DE permite Apache-2.0 o MIT para el código cubierto, con condiciones separadas para terceros. Preservar LICENSE/NOTICE/SPDX/créditos y modificaciones debidamente identificadas. `JE::` es identidad de código propio/adaptado, no certificado de autoría original ni permiso para eliminar avisos.
 
 No copiar CryEngine 5.7, source/shaders traducidos de Cry, MNM/SVOGI, binarios/SDKs/assets restringidos, Unreal propietario o addons por tener acceso. Requisitos e ideas observables pueden documentarse; código/math/test de Jerico antiguo necesitan auditoría por archivo/derivación/fixture y licencia. No merge/cherry-pick del historial Cry a esta base. Historial/evidencia previa se conserva en su repo, no acredita resultados aquí.
