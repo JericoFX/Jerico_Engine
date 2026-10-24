@@ -1,3 +1,8 @@
+## 2026-10-24 — Una consola solicitada no demuestra una consola controlable
+
+materialcanvas-local-symbol-observation-r1-attempt1: Start-Process -WindowStyle Normal sin NoNewWindow/redirecciones inició CDB y conhost con HWND0; el inventario CUA no mostró consola. El prearm local terminó, pero no existía canal comprobado para Ctrl+C/qd. No armar bp ni g en esa condición ni repetir un lease del editor para probar el transporte. Probar primero canal y cierre sobre target desechable desde el mismo contexto de lanzamiento. Una prueba ConPTY desde otro lanzador no acredita ventana interactiva del supervisor.
+
+Cierre de emergencia con -pd y cero breakpoints: identidad CDB revalidada, terminación del auxiliar exacto, seguida de cleanup de cohorte por el runner. No equivale a detach normal ni aceptación. Log B21CE2A370AF486807CEBF00BB9F9C825E96FC4F07E9C4A41490EDCD9A78AB75; postflight sin drift ni cambios autorizados,19/19 hashes confirmados por padre, auxiliares propios ausentes. El mismo log sí resuelve fixed_vector<unsigned int,4> m_data +0 y m_size UChar +0x10; comparar sólo elementos activos, nunca padding como identidad lógica.
 ## 2026-10-24 — CDB finito: fechas JSON UTC y ConsoleHost con identidad verificada
 
 En materialcanvas-local-symbol-discovery-r1-attempt1, ConvertFrom-Json produjo DateTime UTC; DateTime.Parse recibió después texto localizado es-UY y falló antes de CDB. Normalizar DateTime UTC directamente o cadena ISO mediante ParseExact invariante; comparar creación CIM con CIM, conservando aparte la identidad del handle nativo. Prueba de deserialización real: RED6/11, GREEN11/11; no aceptar fechas futuras, vencidas o identidad distinta.
