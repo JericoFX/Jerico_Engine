@@ -143,6 +143,13 @@ namespace AZ
             heapMemoryUsage.m_usedResidentInBytes -= sizeInBytes;
             heapMemoryUsage.m_totalResidentInBytes -= sizeInBytes;
 
+            // Retain the AS and its BLAS dependencies until GPU retirement.
+            if (buffer.m_nativeAccelerationStructure)
+            {
+                device.QueueForRelease(buffer.m_nativeAccelerationStructure);
+                buffer.m_nativeAccelerationStructure = nullptr;
+            }
+
             // Deallocate the BufferMemory
             device.QueueForRelease(buffer.m_memoryView.GetAllocation());
             buffer.m_memoryView = BufferMemoryView();
