@@ -8,7 +8,10 @@
 
 #include <AzTest/AzTest.h>
 #include <AzCore/Asset/AssetManagerBus.h>
+#include <AzCore/Asset/AssetManager.h>
 #include <AzCore/Component/TickBus.h>
+#include <JE/Render/Materials/MaterialComponentBus.h>
+#include <JE/Render/Materials/MaterialComponentController.h>
 #include <AzCore/std/smart_ptr/unique_ptr.h>
 #include <Common/RHI/Factory.h>
 #include <Common/RHI/Stubs.h>
@@ -629,6 +632,113 @@ namespace UnitTest
         EXPECT_EQ(deviceSrg->GetData().GetConstant<uint32_t>(constantIndex), replacementIndex);
         EXPECT_EQ(material->GetPropertyValue<Data::Instance<Image>>(material->FindPropertyIndex(Name("TestImage"))).get(), image.get());
         EXPECT_TRUE(imageAsset.IsReady());
+    }
+
+    TEST_F(MaterialTests, DormantOverrideDoesNotBlockActiveMaterialsAndSurvivesSlotRestore)
+    {
+        using Assignment = JE::Render::MaterialAssignment;
+        using AssignmentId = JE::Render::MaterialAssignmentId;
+        using AssignmentMap = JE::Render::MaterialAssignmentMap;
+        const EntityId entityId(191);
+        const auto activeSlot = AssignmentId::CreateFromStableIdOnly(4);
+        const auto dormantSlot = AssignmentId::CreateFromStableIdOnly(3);
+        const Data::AssetId dormantId(Uuid::CreateRandom());
+        const Name propertyName("MyFloat");
+        ASSERT_TRUE(m_testMaterialAsset.IsReady());
+
+        struct Consumer final : JE::Render::MaterialConsumerRequestBus::Handler
+        {
+            explicit Consumer(EntityId id) { BusConnect(id); }
+            ~Consumer() override { BusDisconnect(); }
+            AssignmentId FindMaterialAssignmentId(JE::Render::MaterialAssignmentLodIndex, const AZStd::string&) const override { return {}; }
+            JE::Render::MaterialAssignmentLabelMap GetMaterialLabels() const override { return {}; }
+            AssignmentMap GetDefaultMaterialMap() const override { return m_slots; }
+            AZStd::unordered_set<Name> GetModelUvNames() const override { return {}; }
+            AssignmentMap m_slots;
+        } consumer(entityId);
+        consumer.m_slots.emplace(AssignmentId::CreateDefault(), Assignment{});
+        consumer.m_slots.emplace(activeSlot, Assignment(m_testMaterialAsset));
+        consumer.m_slots.emplace(AssignmentId::CreateFromLodAndStableId(0, 4), Assignment(m_testMaterialAsset));
+
+        struct Notifications final : JE::Render::MaterialComponentNotificationBus::Handler
+        {
+            explicit Notifications(EntityId id) { BusConnect(id); }
+            ~Notifications() override { BusDisconnect(); }
+            void OnMaterialsUpdated(const AssignmentMap& materials) override
+            {
+                ++m_updates;
+                m_materials = materials;
+            }
+            int m_updates = 0;
+            AssignmentMap m_materials;
+        } notifications(entityId);
+
+        JE::Render::MaterialComponentConfig config;
+        config.m_materials[activeSlot] = Assignment(m_testMaterialAsset);
+        config.m_materials[dormantSlot] = Assignment(Data::Asset<MaterialAsset>(dormantId, azrtti_typeid<MaterialAsset>()));
+        config.m_materials[dormantSlot].m_propertyOverrides[propertyName] = 0.875f;
+        JE::Render::MaterialComponentController controller(config);
+        controller.Activate(entityId);
+        struct DeactivateController
+        {
+            ~DeactivateController() { m_controller.Deactivate(); }
+            JE::Render::MaterialComponentController& m_controller;
+        } controllerLifetime{controller};
+        auto& manager = Data::AssetManager::Instance();
+        const auto processNotifications = [&manager]()
+        {
+            // Ready assets notify on bus connection; dispatch and advance the native controller, without sleeps or private callbacks.
+            manager.DispatchEvents();
+            SystemTickBus::Broadcast(&SystemTickBus::Events::OnSystemTick);
+            manager.DispatchEvents();
+            SystemTickBus::Broadcast(&SystemTickBus::Events::OnSystemTick);
+        };
+        processNotifications();
+
+        // Slot3 is no longer in the model, but its serialized override must survive for a future model/Undo restore.
+        const auto state = controller.GetMaterialMapCopy();
+        ASSERT_NE(state.find(activeSlot), state.end());
+        ASSERT_NE(state.find(dormantSlot), state.end());
+        EXPECT_GT(notifications.m_updates, 0);
+        EXPECT_EQ(state.at(activeSlot).m_materialAsset.GetId(), m_testMaterialAsset.GetId());
+        EXPECT_NE(state.at(activeSlot).m_materialInstance.get(), nullptr);
+        if (notifications.m_updates > 0)
+        {
+            ASSERT_NE(notifications.m_materials.find(activeSlot), notifications.m_materials.end());
+            EXPECT_NE(notifications.m_materials.at(activeSlot).m_materialInstance.get(), nullptr);
+        }
+        EXPECT_EQ(state.at(dormantSlot).m_materialAsset.GetId(), dormantId);
+        EXPECT_FALSE(state.at(dormantSlot).m_materialAsset.IsReady());
+        EXPECT_FALSE(state.at(dormantSlot).m_materialAsset.IsLoading());
+        EXPECT_FALSE(state.at(dormantSlot).m_materialAsset.IsError());
+        EXPECT_EQ(manager.FindAsset<MaterialAsset>(dormantId, Data::AssetLoadBehavior::NoLoad).Get(), nullptr);
+        const auto* preserved = AZStd::any_cast<float>(&state.at(dormantSlot).m_propertyOverrides.at(propertyName));
+        ASSERT_NE(preserved, nullptr);
+        EXPECT_FLOAT_EQ(*preserved, 0.875f);
+
+        // Restore the model slot using an in-memory asset with the same dormant ID; no disk load or fabricated asset status.
+        MaterialAssetCreator creator;
+        creator.Begin(dormantId, m_testMaterialTypeAsset);
+        Data::Asset<MaterialAsset> restoredMaterial;
+        ASSERT_TRUE(creator.End(restoredMaterial));
+        ASSERT_TRUE(restoredMaterial.IsReady());
+        consumer.m_slots.emplace(dormantSlot, Assignment(restoredMaterial));
+        consumer.m_slots.emplace(AssignmentId::CreateFromLodAndStableId(0, 3), Assignment(restoredMaterial));
+        JE::Render::MaterialConsumerNotificationBus::Event(
+            entityId, &JE::Render::MaterialConsumerNotifications::OnMaterialAssignmentSlotsChanged);
+        processNotifications();
+        const auto restored = controller.GetMaterialMapCopy();
+        ASSERT_NE(restored.find(dormantSlot), restored.end());
+        EXPECT_EQ(restored.at(dormantSlot).m_materialAsset.GetId(), dormantId);
+        EXPECT_TRUE(restored.at(dormantSlot).m_materialAsset.IsReady());
+        ASSERT_NE(restored.at(dormantSlot).m_materialInstance.get(), nullptr);
+        const auto* restoredValue = AZStd::any_cast<float>(&restored.at(dormantSlot).m_propertyOverrides.at(propertyName));
+        ASSERT_NE(restoredValue, nullptr);
+        EXPECT_FLOAT_EQ(*restoredValue, 0.875f);
+        const auto propertyIndex = restored.at(dormantSlot).m_materialInstance->FindPropertyIndex(propertyName);
+        ASSERT_TRUE(propertyIndex.IsValid());
+        EXPECT_FLOAT_EQ(restored.at(dormantSlot).m_materialInstance->GetPropertyValue<float>(propertyIndex), 0.875f);
+        EXPECT_NE(restored.at(activeSlot).m_materialInstance.get(), nullptr);
     }
 
     TEST_F(MaterialTests, BindlessImageReloadPublishesReplacementIndexWithoutPropertyEdit)

@@ -363,7 +363,10 @@ namespace JE
                     materialAsset = asset;
                 }
 
-                if (materialAsset.GetId().IsValid() && !materialAsset.IsReady() && !materialAsset.IsError())
+                // Overrides for absent model slots remain serialized for later restoration, but are not loaded.
+                // Only assets requested by LoadMaterials can block the current material instances.
+                if (m_uniqueMaterialMap.contains(materialAsset.GetId()) &&
+                    materialAsset.GetId().IsValid() && !materialAsset.IsReady() && !materialAsset.IsError())
                 {
                     allReady = false;
                 }

@@ -82,7 +82,7 @@ if(PAL_TRAIT_BUILD_TESTS_SUPPORTED AND PAL_TRAIT_BUILD_HOST_TOOLS)
             AZ::AzTest AZ::AzTestShared AZ::AzFramework AZ::AzToolsFramework Legacy::CryCommon
             Gem::Atom_RHI.Public Gem::Atom_Utils.TestUtils.Static
             JE::EditorRenderIntegration JE::RenderIntegration JE::RenderRpi.TestUtils
-            JE::RenderFeatures JE::RenderFeatures.TestPrivate Gem::LmbrCentral.API
+            JE::RenderFeatures JE::RenderFeatures.TestPrivate Gem::LmbrCentral.API JE::RenderMaterials
     )
     set_target_properties(RenderRpi.Tests PROPERTIES JE_EXCLUDE_FROM_SDK TRUE)
     ly_add_googletest(NAME JE::RenderRpi.Tests LABELS REQUIRES_tiaf)
