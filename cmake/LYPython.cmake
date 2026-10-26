@@ -372,9 +372,18 @@ if (NOT CMAKE_SCRIPT_MODE_FILE)
         # pip installation modules and lead to machine-specific config problems
         # it also uses our wrapper python, which can add additional paths to the python path
         if (${CMAKE_HOST_SYSTEM_NAME} STREQUAL "Windows")
+            cmake_path(SET _ly_python_comspec "$ENV{ComSpec}")
+            if (NOT IS_ABSOLUTE "${_ly_python_comspec}")
+                set(_ly_python_comspec cmd.exe)
+            endif()
+            cmake_path(NATIVE_PATH _ly_python_comspec _ly_python_comspec)
+            cmake_path(SET _ly_python_wrapper "${LY_ROOT_FOLDER}/python/python.cmd")
+            cmake_path(NATIVE_PATH _ly_python_wrapper _ly_python_wrapper)
             set(LY_PYTHON_CMD "${CMAKE_COMMAND}" -E env "JE_PYTHON_ROOT=${PYTHON_ROOT_PATH}"
                 "PIP_NO_INDEX=1" "PIP_FIND_LINKS=" "PIP_CONFIG_FILE=NUL" "PIP_DISABLE_PIP_VERSION_CHECK=1"
-                "${LY_ROOT_FOLDER}/python/python.cmd" "-s")
+                "${_ly_python_comspec}" /D /C call "${_ly_python_wrapper}" "-s")
+            unset(_ly_python_comspec)
+            unset(_ly_python_wrapper)
         else()
             set(LY_PYTHON_CMD "${CMAKE_COMMAND}" -E env "JE_PYTHON_ROOT=${PYTHON_ROOT_PATH}"
                 "PIP_NO_INDEX=1" "PIP_FIND_LINKS=" "PIP_CONFIG_FILE=/dev/null" "PIP_DISABLE_PIP_VERSION_CHECK=1"
