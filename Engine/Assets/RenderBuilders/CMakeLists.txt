@@ -53,6 +53,20 @@ else()
 endif()
 
 ly_add_target(
+    NAME SceneProcessing.Private.Object OBJECT
+    NAMESPACE JE
+    AUTOMOC
+    FILES_CMAKE scene_processing_files.cmake
+    INCLUDE_DIRECTORIES PRIVATE Source Source/SceneProcessing PUBLIC Include
+    COMPILE_DEFINITIONS PRIVATE JE_RENDER_ASSET_BUILDERS_EXPORTS
+    BUILD_DEPENDENCIES PUBLIC
+        3rdParty::Qt::Widgets 3rdParty::mikktspace
+        AZ::AzCore AZ::SceneCore AZ::SceneData AZ::AzFramework
+        AZ::SceneBuilder AZ::AssetBuilderSDK
+)
+set_target_properties(SceneProcessing.Private.Object PROPERTIES UNITY_BUILD OFF)
+
+ly_add_target(
     NAME RenderAssetBuilders ${PAL_TRAIT_MONOLITHIC_DRIVEN_LIBRARY_TYPE}
     NAMESPACE JE
     FILES_CMAKE render_asset_builders_shared_files.cmake
@@ -60,9 +74,10 @@ ly_add_target(
     COMPILE_DEFINITIONS PRIVATE JE_RENDER_ASSET_BUILDERS_EXPORTS
     BUILD_DEPENDENCIES
         PUBLIC AZ::AzCore AZ::SceneCore JE::RenderIntegration
-        PRIVATE JE::RenderAssetBuilders.Private.Object JE::ShaderCompiler.Private.Object
+        PRIVATE JE::RenderAssetBuilders.Private.Object JE::ShaderCompiler.Private.Object JE::SceneProcessing.Private.Object
     RUNTIME_DEPENDENCIES
         3rdParty::DirectXShaderCompilerDxc AZ::Azslc
+        AZ::SceneCore AZ::SceneData AZ::SceneUI
 )
 set_target_properties(RenderAssetBuilders PROPERTIES UNITY_BUILD OFF)
 
@@ -83,6 +98,20 @@ endif()
 include(${CMAKE_CURRENT_LIST_DIR}/shader_compiler_resources.cmake)
 # Source-free SDKs need the same native build-option configuration as the engine.
 ly_install_directory(DIRECTORIES Assets EXCLUDE_PATTERNS Android Emscripten iOS Mac dx12)
+
+if(PAL_TRAIT_BUILD_TESTS_SUPPORTED)
+    ly_add_target(
+        NAME SceneProcessing.Tests ${PAL_TRAIT_TEST_TARGET_TYPE}
+        NAMESPACE JE
+        FILES_CMAKE scene_processing_tests_files.cmake
+        INCLUDE_DIRECTORIES PRIVATE Tests/SceneProcessing Source Source/SceneProcessing
+        BUILD_DEPENDENCIES PRIVATE
+            AZ::AzTest AZ::SceneData AZ::AzToolsFrameworkTestCommon
+            JE::SceneProcessing.Private.Object JE::RenderAssetBuilders
+    )
+    set_target_properties(SceneProcessing.Tests PROPERTIES UNITY_BUILD OFF)
+    ly_add_googletest(NAME JE::SceneProcessing.Tests LABELS REQUIRES_tiaf)
+endif()
 
 if(PAL_TRAIT_BUILD_TESTS_SUPPORTED)
     ly_add_target(

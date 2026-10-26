@@ -1,0 +1,51 @@
+# Copyright (c) Contributors to the Open 3D Engine Project.
+# SPDX-License-Identifier: Apache-2.0 OR MIT
+set(FILES
+    Include/JE/Assets/RenderBuilders/SceneProcessing/Config/SceneProcessingConfigBus.h
+    Source/SceneProcessing/Config/Components/SceneProcessingConfigSystemComponent.h
+    Source/SceneProcessing/Config/Components/SceneProcessingConfigSystemComponent.cpp
+    Source/SceneProcessing/Config/Components/SoftNameBehavior.h
+    Source/SceneProcessing/Config/Components/SoftNameBehavior.cpp
+    Source/SceneProcessing/Generation/Components/TangentGenerator/TangentGenerateComponent.h
+    Source/SceneProcessing/Generation/Components/TangentGenerator/TangentGenerateComponent.cpp
+    Source/SceneProcessing/Generation/Components/TangentGenerator/TangentPreExportComponent.h
+    Source/SceneProcessing/Generation/Components/TangentGenerator/TangentPreExportComponent.cpp
+    Source/SceneProcessing/Generation/Components/TangentGenerator/TangentGenerators/MikkTGenerator.h
+    Source/SceneProcessing/Generation/Components/TangentGenerator/TangentGenerators/MikkTGenerator.cpp
+    Source/SceneProcessing/Generation/Components/TangentGenerator/TangentGenerators/BlendShapeMikkTGenerator.h
+    Source/SceneProcessing/Generation/Components/TangentGenerator/TangentGenerators/BlendShapeMikkTGenerator.cpp
+    Source/SceneProcessing/Generation/Components/UVsGenerator/UVsGenerateComponent.h
+    Source/SceneProcessing/Generation/Components/UVsGenerator/UVsGenerateComponent.cpp
+    Source/SceneProcessing/Generation/Components/UVsGenerator/UVsPreExportComponent.h
+    Source/SceneProcessing/Generation/Components/UVsGenerator/UVsPreExportComponent.cpp
+    Source/SceneProcessing/Generation/Components/UVsGenerator/UVsGenerators/SphereMappingUVsGenerator.h
+    Source/SceneProcessing/Generation/Components/UVsGenerator/UVsGenerators/SphereMappingUVsGenerator.cpp
+    Source/SceneProcessing/Generation/Components/MeshOptimizer/MeshBuilder.cpp
+    Source/SceneProcessing/Generation/Components/MeshOptimizer/MeshBuilder.h
+    Source/SceneProcessing/Generation/Components/MeshOptimizer/MeshBuilderInvalidIndex.h
+    Source/SceneProcessing/Generation/Components/MeshOptimizer/MeshBuilderSkinningInfo.cpp
+    Source/SceneProcessing/Generation/Components/MeshOptimizer/MeshBuilderSkinningInfo.h
+    Source/SceneProcessing/Generation/Components/MeshOptimizer/MeshBuilderSubMesh.cpp
+    Source/SceneProcessing/Generation/Components/MeshOptimizer/MeshBuilderSubMesh.h
+    Source/SceneProcessing/Generation/Components/MeshOptimizer/MeshBuilderVertexAttributeLayers.cpp
+    Source/SceneProcessing/Generation/Components/MeshOptimizer/MeshBuilderVertexAttributeLayers.h
+    Source/SceneProcessing/Generation/Components/MeshOptimizer/MeshOptimizerComponent.cpp
+    Source/SceneProcessing/Generation/Components/MeshOptimizer/MeshOptimizerComponent.h
+    Source/SceneProcessing/Config/SettingsObjects/SoftNameSetting.h
+    Source/SceneProcessing/Config/SettingsObjects/SoftNameSetting.cpp
+    Source/SceneProcessing/Config/SettingsObjects/NodeSoftNameSetting.h
+    Source/SceneProcessing/Config/SettingsObjects/NodeSoftNameSetting.cpp
+    Source/SceneProcessing/Config/SettingsObjects/FileSoftNameSetting.h
+    Source/SceneProcessing/Config/SettingsObjects/FileSoftNameSetting.cpp
+    Source/SceneProcessing/Config/Widgets/GraphTypeSelector.h
+    Source/SceneProcessing/Config/Widgets/GraphTypeSelector.cpp
+    Source/SceneProcessing/SceneBuilder/SceneBuilderComponent.h
+    Source/SceneProcessing/SceneBuilder/SceneBuilderComponent.cpp
+    Source/SceneProcessing/SceneBuilder/SceneBuilderWorker.h
+    Source/SceneProcessing/SceneBuilder/SceneBuilderWorker.cpp
+    Source/SceneProcessing/SceneBuilder/SceneSerializationHandler.h
+    Source/SceneProcessing/SceneBuilder/SceneSerializationHandler.cpp
+    Source/SceneProcessing/SceneBuilder/TraceMessageHook.h
+    Source/SceneProcessing/SceneBuilder/TraceMessageHook.cpp
+    Source/SceneProcessing/SceneProcessingModuleState.h
+)

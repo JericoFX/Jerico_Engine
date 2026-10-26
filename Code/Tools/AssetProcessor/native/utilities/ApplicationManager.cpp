@@ -241,6 +241,7 @@ void AssetProcessorAZApplication::CreateStaticModules(AZStd::vector<AZ::Module*>
     outModules.emplace_back(JE::Assets::Prefab::CreateToolsModule());
     outModules.emplace_back(JE::Assets::RenderBuilders::CreateToolsModule());
     outModules.emplace_back(JE::Assets::RenderBuilders::CreateShaderCompilerToolsModule());
+    outModules.emplace_back(JE::Assets::RenderBuilders::CreateSceneProcessingToolsModule());
     outModules.emplace_back(JE::Debug::CreateToolsModule());
     outModules.emplace_back(JE::Debug::Profiler::CreateCaptureModule());
 }

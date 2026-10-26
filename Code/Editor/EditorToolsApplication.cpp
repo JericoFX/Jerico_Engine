@@ -136,6 +136,7 @@ namespace EditorInternal
         outModules.emplace_back(JE::Assets::Prefab::CreateToolsModule());
         outModules.emplace_back(JE::Assets::RenderBuilders::CreateToolsModule());
         outModules.emplace_back(JE::Assets::RenderBuilders::CreateShaderCompilerToolsModule());
+        outModules.emplace_back(JE::Assets::RenderBuilders::CreateSceneProcessingToolsModule());
         outModules.emplace_back(JE::Debug::CreateToolsModule());
         outModules.emplace_back(JE::Debug::Profiler::CreateVisualModule());
         outModules.emplace_back(JE::Render::Debug::CreateViewportModule());

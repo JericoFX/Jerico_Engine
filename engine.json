@@ -58,7 +58,6 @@
         "Gems/RemoteTools",
         "Gems/SaveData",
         "Gems/SceneLoggingExample",
-        "Gems/SceneProcessing",
         "Gems/ScriptAutomation",
         "Gems/ScriptCanvas",
         "Gems/ScriptCanvasDeveloper",
@@ -88,8 +87,7 @@
         "LmbrCentral",
         "GradientSignal",
         "SurfaceData",
-        "Maestro",
-        "SceneProcessing"
+        "Maestro"
     ],
     "projects": [
         "AutomatedTesting"

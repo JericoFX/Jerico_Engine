@@ -279,6 +279,36 @@ void AssetBuilderApplication::StartCommon(AZ::Entity* systemEntity)
     // for each instantiated module class
     LoadDynamicModules();
 
+    // Scene processing keeps SceneAPI loaded, but its configuration is created by
+    // the scene builder entity. Preserve descriptor-only registration in this host.
+    AZ::ModuleManagerRequests::LoadModulesResult sceneProcessingModules;
+    AZ::ModuleManagerRequestBus::BroadcastResult(
+        sceneProcessingModules, &AZ::ModuleManagerRequests::LoadStaticModules,
+        [](AZStd::vector<AZ::Module*>& modules)
+        {
+            modules.emplace_back(JE::Assets::RenderBuilders::CreateSceneProcessingToolsModule());
+        },
+        AZ::ModuleInitializationSteps::RegisterComponentDescriptors);
+    if (sceneProcessingModules.size() != 1)
+    {
+        AZ_Error("AssetBuilder", false, "Failed to load the native scene processing module.");
+        ExitMainLoop();
+        return;
+    }
+    const auto& sceneProcessingModule = sceneProcessingModules.front();
+    if (!sceneProcessingModule.IsSuccess())
+    {
+        AZ_Error("AssetBuilder", false, "%s", sceneProcessingModule.GetError().c_str());
+        ExitMainLoop();
+        return;
+    }
+    if (sceneProcessingModule.GetValue()->GetEntity() != nullptr)
+    {
+        AZ_Error("AssetBuilder", false, "Native scene processing descriptor-only module unexpectedly created an entity.");
+        ExitMainLoop();
+        return;
+    }
+
     // RHI types are now reflected. Register builders without a module entity;
     // InitializeBuilderComponents activates their AssetBuilder-tagged components exactly once.
     AZ::ModuleManagerRequests::LoadModulesResult builderModules;

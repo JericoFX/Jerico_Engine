@@ -108,13 +108,6 @@
                     }
                 }
             },
-            "SceneProcessing": {
-                "Targets": {
-                    "SceneProcessing.Editor": {
-                        "AutoLoad": false
-                    }
-                }
-            },
             "ScriptEvents": {
                 "Targets": {
                     "ScriptEvents.Editor": {

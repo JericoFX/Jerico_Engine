@@ -5,4 +5,5 @@ set(FILES
     Include/JE/Assets/RenderBuilders/RenderAssetBuildersModule.h
     Source/RenderAssetBuildersModule.cpp
     Source/ShaderCompilerToolsModule.cpp
+    Source/SceneProcessingToolsModule.cpp
 )

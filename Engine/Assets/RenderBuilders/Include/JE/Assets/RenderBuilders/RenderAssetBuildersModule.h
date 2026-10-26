@@ -25,4 +25,5 @@ namespace JE::Assets::RenderBuilders
 
     JE_RENDER_ASSET_BUILDERS_API AZ::Module* CreateToolsModule();
     JE_RENDER_ASSET_BUILDERS_API AZ::Module* CreateShaderCompilerToolsModule();
+    JE_RENDER_ASSET_BUILDERS_API AZ::Module* CreateSceneProcessingToolsModule();
 } // namespace JE::Assets::RenderBuilders
