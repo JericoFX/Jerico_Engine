@@ -85,13 +85,21 @@ namespace JE::Render::RPI
         }
 
         AZ::RHI::ImageViewDescriptor imageViewDescriptor;
-        for (uint32_t mipIndex = 0; mipIndex < AZ::GetMin(mipLevelCount, SpdMipLevelCountMax); ++mipIndex)
+        const uint32_t boundMipCount = AZ::GetMin(mipLevelCount, SpdMipLevelCountMax);
+        for (uint32_t mipIndex = 0; mipIndex < boundMipCount; ++mipIndex)
         {
             imageViewDescriptor.m_mipSliceMin = static_cast<uint16_t>(mipIndex);
             imageViewDescriptor.m_mipSliceMax = static_cast<uint16_t>(mipIndex);
             Ptr<AZ::RHI::ImageView> imageView = rhiImage->GetImageView(imageViewDescriptor);
             srg.SetImageView(m_imageDestinationIndex, imageView.get(), mipIndex);
             m_imageViews[mipIndex] = imageView;
+        }
+
+        // A smaller mip chain must not keep views from the previous attachment.
+        for (uint32_t mipIndex = boundMipCount; mipIndex < SpdMipLevelCountMax; ++mipIndex)
+        {
+            srg.SetImageView(m_imageDestinationIndex, nullptr, mipIndex);
+            m_imageViews[mipIndex] = nullptr;
         }
 
         // Set Globally coherent image view.
