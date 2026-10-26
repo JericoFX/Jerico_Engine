@@ -45,7 +45,7 @@ ShaderResourceGroup PassSrg : SRG_PerPass
     Texture2D<float>       m_linearDepthTexture;
     Texture2D<float3>     m_scatterDistanceTexture;
     
-    RWTexture2D<float4>  m_outputTexture;
+    [[vk::image_format("rgba16f")]] RWTexture2D<float4>  m_outputTexture;
 
     // Passed by SubsurfaceScatterPass.cpp from cpu
     float2 m_screenSize;

@@ -66,7 +66,7 @@ ShaderResourceGroup PassSrg : SRG_PerPass
 {
     Texture2D<float> m_linearDepth;
     Texture2D<float> m_blurSource;
-    RWTexture2D<float> m_blurTarget;
+    [[vk::image_format("r8")]] RWTexture2D<float> m_blurTarget;
 
     // Must match the struct in FastDepthAwareBlurPasses.cpp
     struct FastDepthAwareBlurPassConstants

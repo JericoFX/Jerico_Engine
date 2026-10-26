@@ -13,7 +13,7 @@
 ShaderResourceGroup PassSrg : SRG_PerPass
 {
     Texture2D<float2> m_inputVelocity;
-    RWTexture2D<float2> m_outputVelocity;
+    [[vk::image_format("rg16f")]] RWTexture2D<float2> m_outputVelocity;
 }
 
 // This shader applies a 3x3 max filter to tile max velocities, 

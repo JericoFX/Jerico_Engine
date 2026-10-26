@@ -76,7 +76,7 @@ static const int2 localSamplesForLDS[] = {
 ShaderResourceGroup PassSrg : SRG_PerPass
 {
     Texture2D<float> m_linearDepth;
-    RWTexture2D<float> m_ssaoOutput;
+    [[vk::image_format("r8")]] RWTexture2D<float> m_ssaoOutput;
 
     // Must match the struct in SsaoPasses.cpp
     struct SsaoConstants

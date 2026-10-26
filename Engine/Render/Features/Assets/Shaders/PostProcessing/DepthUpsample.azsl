@@ -87,7 +87,7 @@ ShaderResourceGroup PassSrg : SRG_PerPass
     Texture2D<float> m_depthFullRes;
     Texture2D<float> m_depthHalfRes;
     Texture2D<float> m_sourceHalfRes;
-    RWTexture2D<float> m_outputFullRes;
+    [[vk::image_format("r8")]] RWTexture2D<float> m_outputFullRes;
 
     // Must match the struct in DepthDownsamplePasses.cpp
     struct UpsampleConstants

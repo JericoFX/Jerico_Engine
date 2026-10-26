@@ -11,7 +11,7 @@
 ShaderResourceGroup PassSrg : SRG_PerPass
 {
     Texture2D<float> m_modifier;
-    RWTexture2D<float4> m_inputOutput;
+    [[vk::image_format("rgba16f")]] RWTexture2D<float4> m_inputOutput;
 
     Sampler LinearSampler
     {

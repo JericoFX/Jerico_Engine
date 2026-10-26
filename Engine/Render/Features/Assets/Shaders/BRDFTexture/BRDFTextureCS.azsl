@@ -13,7 +13,7 @@
 
 ShaderResourceGroup PassSrg : SRG_PerPass
 {
-    RWTexture2D<float2> m_outputTexture;
+    [[vk::image_format("rg16f")]] RWTexture2D<float2> m_outputTexture;
 } 
 
 // See Real Shading in Unreal Engine 4 (page 7)
