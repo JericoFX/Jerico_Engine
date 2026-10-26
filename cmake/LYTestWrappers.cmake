@@ -351,6 +351,22 @@ function(ly_add_pytest)
     set_tests_properties(${LY_ADDED_TEST_NAME} PROPERTIES RUN_SERIAL "${ly_add_pytest_TEST_SERIAL}")
 endfunction()
 
+#! ly_exclude_test_target_from_sdk: Keep registered native suites in the build, not in the product SDK.
+function(ly_exclude_test_target_from_sdk test_target)
+    if(NOT TARGET "${test_target}")
+        return()
+    endif()
+    get_target_property(aliased_test_target "${test_target}" ALIASED_TARGET)
+    if(aliased_test_target)
+        set(test_target "${aliased_test_target}")
+    endif()
+    get_target_property(test_target_type "${test_target}" TYPE)
+    set(native_test_target_types EXECUTABLE MODULE_LIBRARY SHARED_LIBRARY STATIC_LIBRARY)
+    if(test_target_type IN_LIST native_test_target_types)
+        set_property(TARGET "${test_target}" PROPERTY JE_EXCLUDE_FROM_SDK TRUE)
+    endif()
+endfunction()
+
 #! ly_add_googletest: Adds a new RUN_TEST using for the specified target using the supplied command or fallback to running
 #                     googletest tests through AzTestRunner
 # \arg:NAME Name to for the test run target
@@ -379,6 +395,7 @@ function(ly_add_googletest)
         set(target_name ${ly_add_googletest_NAME})
     endif()
 
+    ly_exclude_test_target_from_sdk("${target_name}")
 
     # AzTestRunner modules only supports google test libraries, regardless of whether or not
     # google test suites are supported
@@ -465,6 +482,13 @@ function(ly_add_googlebenchmark)
     set(one_value_args NAME TARGET OUTPUT_FILE_FORMAT TIMEOUT)
     set(multi_value_args TEST_REQUIRES TEST_COMMAND COMPONENT)
     cmake_parse_arguments(ly_add_googlebenchmark "${options}" "${one_value_args}" "${multi_value_args}" ${ARGN})
+
+    if(ly_add_googlebenchmark_TARGET)
+        set(sdk_test_target "${ly_add_googlebenchmark_TARGET}")
+    else()
+        set(sdk_test_target "${ly_add_googlebenchmark_NAME}")
+    endif()
+    ly_exclude_test_target_from_sdk("${sdk_test_target}")
 
     ly_strip_target_namespace(TARGET ${ly_add_googlebenchmark_NAME} OUTPUT_VARIABLE stripped_name)
     string(TOLOWER "${ly_add_googlebenchmark_OUTPUT_FILE_FORMAT}" output_file_format_lower)
