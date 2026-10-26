@@ -13,6 +13,11 @@
 #include <AzCore/Serialization/SerializeContext.h>
 #include <AzCore/Settings/SettingsRegistryImpl.h>
 #include <JE/Editor/Tools/Util/Util.h>
+#include <JE/Editor/Tools/DynamicProperty/DynamicProperty.h>
+#include <AzCore/Serialization/EditContext.h>
+#include <AzCore/Math/Vector2.h>
+#include <AzCore/RTTI/AttributeReader.h>
+#include <AzCore/UnitTest/TestTypes.h>
 #include <JE/Editor/Tools/Graph/AssetStatusReporter.h>
 #include <AzCore/Debug/TraceMessageBus.h>
 #include <AzCore/std/string/string_view.h>
@@ -91,6 +96,118 @@ namespace UnitTest
         AZ::IO::FileIOBase* m_priorFileIO = nullptr;
         AZStd::unique_ptr<AZ::IO::FileIOBase> m_localFileIO;
     };
+
+    class DynamicPropertyLifetimeTest : public LeakDetectionFixture
+    {
+    };
+
+    TEST_F(DynamicPropertyLifetimeTest, CopyMoveAndRebuildOwnEditAttributes)
+    {
+        int changeCount = 0;
+        JE::Editor::Tools::DynamicPropertyConfig config;
+        config.m_name = "value";
+        config.m_displayName = "Authored value";
+        config.m_originalValue = 0.25f;
+        config.m_dataChangeCallback = [&changeCount](const AZStd::any&)
+        {
+            ++changeCount;
+            return AZ::Edit::PropertyRefreshLevels::AttributesAndValues;
+        };
+        auto checkProperty = [&changeCount](JE::Editor::Tools::DynamicProperty& property, const char* name, float value)
+        {
+            const auto* data = JE::Editor::Tools::DynamicProperty::GetPropertyEditData(
+                &property, AZStd::any_cast<void>(&property.GetValue()), property.GetValue().type());
+            ASSERT_NE(data, nullptr);
+            auto* label = azrtti_cast<AZ::AttributeFunction<AZStd::string()>*>(
+                data->FindAttribute(AZ::Edit::Attributes::NameLabelOverride));
+            auto* changed = azrtti_cast<AZ::AttributeFunction<AZ::u32()>*>(
+                data->FindAttribute(AZ::Edit::Attributes::ChangeNotify));
+            ASSERT_NE(label, nullptr);
+            ASSERT_NE(changed, nullptr);
+            EXPECT_EQ(label->Invoke(nullptr), name);
+            EXPECT_FLOAT_EQ(AZStd::any_cast<float>(property.GetValue()), value);
+            const int previousCount = changeCount;
+            EXPECT_EQ(changed->Invoke(nullptr), AZ::Edit::PropertyRefreshLevels::AttributesAndValues);
+            EXPECT_EQ(changeCount, previousCount + 1);
+        };
+        JE::Editor::Tools::DynamicProperty survivor(config);
+        survivor.UpdateEditData();
+        {
+            JE::Editor::Tools::DynamicProperty original(config);
+            original.SetValue(7.0f);
+            original.UpdateEditData();
+            JE::Editor::Tools::DynamicProperty copied(original);
+            ASSERT_NO_FATAL_FAILURE(checkProperty(copied, "Authored value", 7.0f));
+            JE::Editor::Tools::DynamicProperty assigned(config);
+            assigned.UpdateEditData();
+            assigned = original;
+            ASSERT_NO_FATAL_FAILURE(checkProperty(assigned, "Authored value", 7.0f));
+            auto* self = &assigned;
+            assigned = *self;
+            assigned = AZStd::move(*self);
+            ASSERT_NO_FATAL_FAILURE(checkProperty(assigned, "Authored value", 7.0f));
+            JE::Editor::Tools::DynamicProperty moved(AZStd::move(copied));
+            ASSERT_NO_FATAL_FAILURE(checkProperty(moved, "Authored value", 7.0f));
+            survivor = AZStd::move(moved);
+        }
+        ASSERT_NO_FATAL_FAILURE(checkProperty(survivor, "Authored value", 7.0f));
+        config.m_displayName = "Changed configuration";
+        survivor.SetConfig(config);
+        ASSERT_NO_FATAL_FAILURE(checkProperty(survivor, "Changed configuration", 7.0f));
+    }
+
+    TEST_F(DynamicPropertyLifetimeTest, ReusingMovedFromPropertyRebuildsCacheForItsCurrentValue)
+    {
+        JE::Editor::Tools::DynamicPropertyConfig config;
+        config.m_originalValue = 0.25f;
+        config.m_min = -2.0f;
+        config.m_max = 9.0f;
+        auto checkReusedSource = [](JE::Editor::Tools::DynamicProperty& source)
+        {
+            // Vector values accept the same float bounds but need attributes absent from the old scalar cache.
+            source.SetValue(AZ::Vector2(3.0f, 4.0f));
+            JE::Editor::Tools::DynamicProperty control(source.GetConfig());
+            control.SetValue(source.GetValue());
+            auto getData = [](JE::Editor::Tools::DynamicProperty& property)
+            {
+                return JE::Editor::Tools::DynamicProperty::GetPropertyEditData(
+                    &property, AZStd::any_cast<void>(&property.GetValue()), property.GetValue().type());
+            };
+            const auto* actual = getData(source);
+            const auto* expected = getData(control);
+            ASSERT_NE(actual, nullptr);
+            ASSERT_NE(expected, nullptr);
+            ASSERT_NE(actual->FindAttribute(AZ::Edit::Attributes::LabelForX), nullptr);
+            for (const auto id : {AZ::Edit::Attributes::Min, AZ::Edit::Attributes::Max})
+            {
+                auto* actualAttribute = actual->FindAttribute(id);
+                auto* expectedAttribute = expected->FindAttribute(id);
+                ASSERT_NE(actualAttribute, nullptr);
+                ASSERT_NE(expectedAttribute, nullptr);
+                float actualBound = 0.0f;
+                float expectedBound = 0.0f;
+                ASSERT_TRUE(AZ::AttributeReader(nullptr, actualAttribute).Read<float>(actualBound));
+                ASSERT_TRUE(AZ::AttributeReader(nullptr, expectedAttribute).Read<float>(expectedBound));
+                EXPECT_FLOAT_EQ(actualBound, expectedBound);
+            }
+        };
+        {
+            JE::Editor::Tools::DynamicProperty source(config);
+            source.UpdateEditData();
+            JE::Editor::Tools::DynamicProperty destination(AZStd::move(source));
+            EXPECT_FLOAT_EQ(AZStd::any_cast<float>(destination.GetValue()), 0.25f);
+            ASSERT_NO_FATAL_FAILURE(checkReusedSource(source));
+        }
+        {
+            JE::Editor::Tools::DynamicProperty source(config);
+            source.UpdateEditData();
+            JE::Editor::Tools::DynamicProperty destination(config);
+            destination.UpdateEditData();
+            destination = AZStd::move(source);
+            EXPECT_FLOAT_EQ(AZStd::any_cast<float>(destination.GetValue()), 0.25f);
+            ASSERT_NO_FATAL_FAILURE(checkReusedSource(source));
+        }
+    }
 
     TEST_F(AtomToolsFrameworkTest, GetPathToExteralReference_Succeeds)
     {

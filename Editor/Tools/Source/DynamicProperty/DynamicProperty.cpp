@@ -103,6 +103,43 @@ namespace JE::Editor::Tools
     {
     }
 
+    DynamicProperty::DynamicProperty(const DynamicProperty& other)
+        : m_value(other.m_value)
+        , m_config(other.m_config)
+    {
+    }
+
+    DynamicProperty::DynamicProperty(DynamicProperty&& other)
+        : m_value(AZStd::move(other.m_value))
+        , m_config(AZStd::move(other.m_config))
+    {
+        other.m_editDataTracker = nullptr;
+    }
+
+    DynamicProperty& DynamicProperty::operator=(const DynamicProperty& other)
+    {
+        if (this != &other)
+        {
+            m_value = other.m_value;
+            SetConfig(other.m_config);
+        }
+        return *this;
+    }
+
+    DynamicProperty& DynamicProperty::operator=(DynamicProperty&& other)
+    {
+        if (this != &other)
+        {
+            m_value = AZStd::move(other.m_value);
+            m_config = AZStd::move(other.m_config);
+            m_editDataTracker = nullptr;
+            other.m_editDataTracker = nullptr;
+        }
+        return *this;
+    }
+
+    DynamicProperty::~DynamicProperty() = default;
+
     void DynamicProperty::SetValue(const AZStd::any& value)
     {
         AZ_Assert(!value.empty(), "DynamicProperty attempting to assign a bad value to: %s", m_config.m_id.GetCStr());
@@ -133,6 +170,7 @@ namespace JE::Editor::Tools
 
             CheckRangeMetaDataValues();
 
+            // The descriptor list borrows objects owned by m_editDataAttributeCache, just like the RPE copies.
             m_editData = {};
             m_editData.m_name = nullptr;
             m_editData.m_elementId = AZ::Edit::UIHandlers::Default;
@@ -316,14 +354,39 @@ namespace JE::Editor::Tools
     template<typename AttributeValueType>
     void DynamicProperty::AddEditDataAttribute(AZ::Crc32 crc, AttributeValueType attribute)
     {
-        m_editData.m_attributes.push_back(AZ::Edit::AttributePair(crc, aznew AZ::AttributeContainerType<AttributeValueType>(attribute)));
+        using AttributeType = AZ::AttributeContainerType<AttributeValueType>;
+        for (const auto& cached : m_editDataAttributeCache)
+        {
+            if (cached.first == crc)
+            {
+                if (auto cachedAttribute = azrtti_cast<AttributeType*>(cached.second.get()))
+                {
+                    *cachedAttribute = attribute;
+                    m_editData.m_attributes.emplace_back(crc, cachedAttribute);
+                    return;
+                }
+            }
+        }
+
+        m_editDataAttributeCache.emplace_back(crc, AZStd::unique_ptr<AZ::Attribute>(aznew AttributeType(attribute)));
+        m_editData.m_attributes.emplace_back(crc, m_editDataAttributeCache.back().second.get());
     }
 
     template<typename AttributeMemberFunctionType>
     void DynamicProperty::AddEditDataAttributeMemberFunction(AZ::Crc32 crc, AttributeMemberFunctionType memberFunction)
     {
-        m_editData.m_attributes.push_back(
-            AZ::Edit::AttributePair(crc, aznew AttributeFixedMemberFunction<AttributeMemberFunctionType>(this, memberFunction)));
+        using AttributeType = AttributeFixedMemberFunction<AttributeMemberFunctionType>;
+        for (const auto& cached : m_editDataAttributeCache)
+        {
+            if (cached.first == crc && azrtti_cast<AttributeType*>(cached.second.get()))
+            {
+                m_editData.m_attributes.emplace_back(crc, cached.second.get());
+                return;
+            }
+        }
+
+        m_editDataAttributeCache.emplace_back(crc, AZStd::unique_ptr<AZ::Attribute>(aznew AttributeType(this, memberFunction)));
+        m_editData.m_attributes.emplace_back(crc, m_editDataAttributeCache.back().second.get());
     }
 
     bool DynamicProperty::ApplyRangeEditDataAttributesToNumericTypes()

@@ -13,6 +13,7 @@
 #include <AzCore/RTTI/RTTI.h>
 #include <AzCore/RTTI/ReflectContext.h>
 #include <AzCore/Serialization/EditContext.h>
+#include <AzCore/std/smart_ptr/unique_ptr.h>
 
 namespace JE::Editor::Tools
 {
@@ -60,6 +61,12 @@ namespace JE::Editor::Tools
 
         DynamicProperty() = default;
         DynamicProperty(const DynamicPropertyConfig& config);
+
+        DynamicProperty(const DynamicProperty& other);
+        DynamicProperty(DynamicProperty&& other);
+        DynamicProperty& operator=(const DynamicProperty& other);
+        DynamicProperty& operator=(DynamicProperty&& other);
+        ~DynamicProperty();
 
         //! Set property value.
         void SetValue(const AZStd::any& value);
@@ -137,6 +144,10 @@ namespace JE::Editor::Tools
         // The entity will be configured based on the data type of the dynamic
         // property and other configuration settings.
         AZ::Edit::ElementData m_editData;
+
+        // RPE hierarchies borrow attributes across edit-data rebuilds. Keep one object per CRC/concrete type
+        // for this property lifetime; supported attribute types are fixed by the registration code below.
+        AZStd::vector<AZStd::pair<AZ::Crc32, AZStd::unique_ptr<AZ::Attribute>>> m_editDataAttributeCache;
 
         // Using the last updated edit data pointer to monitor if the property
         // was copied or moved so the edit data can be rebuilt

@@ -6,6 +6,12 @@
 #include "Workspace/MaterialWorkspaceSession.h"
 #include "Workspace/MaterialGraphWorkspaceWidget.h"
 #include <JE/Editor/Tools/Inspector/InspectorWidget.h>
+#include <JE/Editor/Tools/Inspector/InspectorPropertyGroupWidget.h>
+#include <JE/Editor/Tools/DynamicProperty/DynamicProperty.h>
+#include <JE/Editor/Tools/DynamicProperty/DynamicPropertyGroup.h>
+#include <AzCore/Component/Entity.h>
+#include <AzToolsFramework/UI/PropertyEditor/PropertyManagerComponent.h>
+#include <QComboBox>
 #include <JE/Editor/Render/RPI/Edit/Material/LuaMaterialFunctorSourceData.h>
 #include <JE/Editor/Render/RPI/Edit/Material/MaterialFunctorSourceDataHolder.h>
 #include <JE/Editor/Render/RPI/Edit/Material/MaterialFunctorSourceDataRegistration.h>
@@ -1105,6 +1111,12 @@ namespace UnitTest
             m_document.reset();
             m_styleManager.reset();
             m_graphContext.reset();
+            m_application->RegisterComponentDescriptor(AzToolsFramework::Components::PropertyManagerComponent::CreateDescriptor());
+            m_propertyManagerEntity = AZStd::make_unique<AZ::Entity>("Workspace inspector property manager");
+            ASSERT_NE(m_propertyManagerEntity->CreateComponent<AzToolsFramework::Components::PropertyManagerComponent>(), nullptr);
+            m_propertyManagerEntity->Init();
+            m_propertyManagerEntity->Activate();
+            ASSERT_EQ(m_propertyManagerEntity->GetState(), AZ::Entity::State::Active);
             for (AZ::ReflectContext* context : {static_cast<AZ::ReflectContext*>(m_application->GetSerializeContext()),
                      static_cast<AZ::ReflectContext*>(m_application->GetJsonRegistrationContext())})
             {
@@ -1157,6 +1169,7 @@ namespace UnitTest
         void TearDown() override
         {
             m_session.reset();
+            m_propertyManagerEntity.reset();
             m_application->FlushUndo();
             AZ::SystemTickBus::ExecuteQueuedEvents();
             if (m_globalUserSettings)
@@ -1185,6 +1198,8 @@ namespace UnitTest
         static void ReflectWorkspaceTypes(AZ::ReflectContext* context)
         {
             JE::Editor::Tools::DynamicNode::Reflect(context);
+            JE::Editor::Tools::DynamicProperty::Reflect(context);
+            JE::Editor::Tools::DynamicPropertyGroup::Reflect(context);
             JE::Editor::Tools::GraphCompiler::Reflect(context);
             JE::Editor::Tools::GraphViewSettings::Reflect(context);
             JE::Editor::Tools::InspectorWidget::Reflect(context);
@@ -1254,6 +1269,7 @@ namespace UnitTest
             ASSERT_FALSE(releasedViewId.IsValid());
         }
 
+        AZStd::unique_ptr<AZ::Entity> m_propertyManagerEntity;
         AZStd::unique_ptr<AZ::UserSettingsProvider> m_localUserSettings;
         AZStd::unique_ptr<AZ::UserSettingsProvider> m_globalUserSettings;
         AZStd::unique_ptr<JE::Editor::MaterialWorkspaceSession> m_session;
@@ -1261,6 +1277,51 @@ namespace UnitTest
         bool m_workspaceReflected = false;
     };
 
+    TEST_F(PassGraphWorkspaceTests, DynamicEnumInspectorRefreshAfterSaveConfigKeepsLiveComparisonAttributes)
+    {
+        JE::Editor::Tools::DynamicPropertyConfig config;
+        config.m_name = "blendMode";
+        config.m_displayName = "Vertex Color Blend Mode";
+        config.m_originalValue = AZ::u32{0};
+        config.m_enumValues = {"Disabled", "Enabled"};
+        JE::Editor::Tools::DynamicPropertyGroup group;
+        group.m_properties.emplace_back(config);
+
+        // Use the production panel: its comparison instance is the same live group.
+        // Declare the group first so both RPE hierarchies die before their property owner.
+        JE::Editor::Tools::InspectorPropertyGroupWidget panel(
+            &group, &group, azrtti_typeid<JE::Editor::Tools::DynamicPropertyGroup>(), nullptr, nullptr);
+        auto* editor = panel.GetPropertyEditor();
+        ASSERT_NE(editor, nullptr);
+        editor->ForceQueuedInvalidation();
+        QApplication::processEvents();
+        const auto combos = panel.findChildren<QComboBox*>();
+        ASSERT_EQ(combos.size(), 1);
+        auto* combo = combos.front();
+        ASSERT_EQ(combo->count(), 2);
+        EXPECT_EQ(combo->itemText(0), QStringLiteral("Disabled"));
+        EXPECT_EQ(combo->itemText(1), QStringLiteral("Enabled"));
+        EXPECT_EQ(combo->currentIndex(), 0);
+
+        auto& property = group.m_properties.front();
+        property.SetValue(AZ::u32{1});
+        auto savedConfig = property.GetConfig();
+        savedConfig.m_originalValue = property.GetValue();
+        property.SetConfig(savedConfig); // Same clean-baseline update as MaterialDocument::Save.
+        panel.Refresh();
+        // DoRefresh must rebuild comparison data and consume the existing main hierarchy.
+        // Do not rebuild or clear the main tree first: that hides the lifetime defect.
+        QApplication::processEvents();
+
+        const auto refreshed = panel.findChildren<QComboBox*>();
+        ASSERT_EQ(refreshed.size(), 1);
+        EXPECT_EQ(refreshed.front(), combo);
+        EXPECT_EQ(combo->count(), 2);
+        EXPECT_EQ(combo->itemText(0), QStringLiteral("Disabled"));
+        EXPECT_EQ(combo->itemText(1), QStringLiteral("Enabled"));
+        EXPECT_EQ(combo->currentIndex(), 1);
+        EXPECT_EQ(AZStd::any_cast<AZ::u32>(property.GetConfig().m_originalValue), 1);
+    }
     TEST_F(PassGraphWorkspaceTests, InitialGraphFramingMatchesLayoutReadyControl)
     {
         const auto id = OpenGraph(JE::Editor::MaterialGraphEnvironment::GraphKind::Material);
