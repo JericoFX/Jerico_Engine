@@ -12,6 +12,7 @@
 #include <AzToolsFramework/API/AssetDatabaseBus.h>
 #include <AzToolsFramework/API/EditorAssetSystemAPI.h>
 #include <AzToolsFramework/AssetBrowser/AssetBrowserEntityInspectorWidget.h>
+#include <AzToolsFramework/UI/PropertyEditor/EntityPropertyEditor.hxx>
 #include <AzToolsFramework/AssetBrowser/Views/AssetBrowserViewUtils.h>
 #include <QAction>
 #include <QDesktopServices>
@@ -120,6 +121,7 @@ namespace AzToolsFramework
             : QWidget(parent)
             , m_databaseConnection(aznew AssetDatabase::AssetDatabaseConnection)
         {
+            m_inspectorOwner = parent;
             // Create the empty previewer
             m_emptyLayoutWidget = new QWidget(this);
             auto emptyLayout = new QVBoxLayout(m_emptyLayoutWidget);
@@ -213,7 +215,14 @@ namespace AzToolsFramework
             if (m_sceneSettings)
             {
                 m_settingsSwitcher->addWidget(m_sceneSettings);
-                connect(
+            }
+            m_assetInspectorHost = new QWidget(m_settingsSwitcher);
+            m_assetInspectorLayout = new QStackedLayout(m_assetInspectorHost);
+            m_assetInspectorLayout->setContentsMargins(0, 0, 0, 0);
+            m_settingsSwitcher->addWidget(m_assetInspectorHost);
+            m_detailsButton->setObjectName("AssetInspectorDetails");
+            m_sceneSettingsButton->setObjectName("AssetInspectorSettings");
+            connect(
                     m_detailsButton,
                     &QPushButton::clicked,
                     this,
@@ -224,18 +233,24 @@ namespace AzToolsFramework
                         m_sceneSettingsButton->setChecked(false);
                     });
 
-                connect(
+            connect(
                     m_sceneSettingsButton,
                     &QPushButton::clicked,
                     this,
                     [this]
                     {
-                        AssetBrowserPreviewRequestBus::Broadcast(&AssetBrowserPreviewRequest::PreviewSceneSettings, m_currentEntry);
-                        m_settingsSwitcher->setCurrentIndex(1);
+                        if (m_activeAssetInspector)
+                        {
+                            m_settingsSwitcher->setCurrentWidget(m_assetInspectorHost);
+                        }
+                        else if (m_sceneSettings)
+                        {
+                            AssetBrowserPreviewRequestBus::Broadcast(&AssetBrowserPreviewRequest::PreviewSceneSettings, m_currentEntry);
+                            m_settingsSwitcher->setCurrentWidget(m_sceneSettings);
+                        }
                         m_sceneSettingsButton->setChecked(true);
                         m_detailsButton->setChecked(false);
                     });
-            }
 
             // Create the QSplitter to resize the image preview and the details/settings
             QSplitter* splitter = new QSplitter(m_populatedLayoutWidget);
@@ -302,7 +317,8 @@ namespace AzToolsFramework
 
         void AssetBrowserEntityInspectorWidget::PreviewAsset(const AzToolsFramework::AssetBrowser::AssetBrowserEntry* selectedEntry)
         {
-            if (selectedEntry == nullptr || !m_databaseReady)
+            if (IsInspectorLocked()) { return; }
+            if (selectedEntry == nullptr)
             {
                 ClearPreview();
                 return;
@@ -322,6 +338,25 @@ namespace AzToolsFramework
                 return;
             }
 
+            QWidget* assetInspector = nullptr;
+            bool selectionAccepted = true;
+            AssetBrowserPreviewRequestBus::Broadcast(&AssetBrowserPreviewRequest::GetAssetInspectorWidget,
+                selectedEntry, m_assetInspectorHost, assetInspector, selectionAccepted);
+            if (!selectionAccepted) { return; }
+            m_activeAssetInspector = assetInspector;
+
+            // A native source editor does not need the dependency database used by Asset Details.
+            if (!m_databaseReady)
+            {
+                if (m_activeAssetInspector)
+                {
+                    m_layoutSwitcher->setCurrentWidget(m_populatedLayoutWidget);
+                    ShowAssetInspector();
+                }
+                else { ClearPreview(); }
+                return;
+            }
+
             if (m_layoutSwitcher->currentWidget() != m_populatedLayoutWidget)
             {
                 m_layoutSwitcher->setCurrentWidget(m_populatedLayoutWidget);
@@ -335,9 +370,11 @@ namespace AzToolsFramework
 
             m_previewImage->show();
             m_detailsButton->setChecked(true);
+            m_sceneSettingsButton->setText(QObject::tr("Scene Settings"));
             m_sceneSettingsButton->setChecked(false);
             if (selectedEntry == m_currentEntry)
             {
+                ShowAssetInspector();
                 return;
             }
             m_currentEntry = selectedEntry;
@@ -444,6 +481,36 @@ namespace AzToolsFramework
                 verticesLabel->setText(QString::number(vertices));
                 m_assetDetailLayout->addRow(QObject::tr("<b>Vertices:</b>"), verticesLabel);
             }
+            ShowAssetInspector();
+        }
+
+        void AssetBrowserEntityInspectorWidget::ShowAssetInspector()
+        {
+            if (!m_activeAssetInspector) { return; }
+            if (m_activeAssetInspector->parentWidget() != m_assetInspectorHost)
+            {
+                AZ_Error("AssetBrowser", false, "Editable asset Inspector must belong to its requested host.");
+                m_activeAssetInspector = nullptr;
+                return;
+            }
+            if (m_assetInspectorLayout->indexOf(m_activeAssetInspector) < 0)
+            {
+                m_assetInspectorLayout->addWidget(m_activeAssetInspector);
+            }
+            m_assetInspectorLayout->setCurrentWidget(m_activeAssetInspector);
+            m_settingsSwitcher->setCurrentWidget(m_assetInspectorHost);
+            m_previewImage->hide();
+            m_detailsButton->setVisible(m_databaseReady);
+            m_detailsButton->setChecked(false);
+            m_sceneSettingsButton->setText(QObject::tr("Material Properties"));
+            m_sceneSettingsButton->show();
+            m_sceneSettingsButton->setChecked(true);
+        }
+
+        bool AssetBrowserEntityInspectorWidget::IsInspectorLocked() const
+        {
+            auto* editor = m_inspectorOwner ? m_inspectorOwner->findChild<EntityPropertyEditor*>() : nullptr;
+            return editor && editor->IsLockedToSpecificEntities();
         }
 
         void AssetBrowserEntityInspectorWidget::HandleSourceAsset(const AssetBrowserEntry* selectedEntry, const SourceAssetBrowserEntry* sourceEntry)
@@ -534,6 +601,14 @@ namespace AzToolsFramework
 
         void AssetBrowserEntityInspectorWidget::ClearPreview()
         {
+            if (IsInspectorLocked()) { return; }
+            QWidget* assetInspector = nullptr;
+            bool selectionAccepted = true;
+            AssetBrowserPreviewRequestBus::Broadcast(&AssetBrowserPreviewRequest::GetAssetInspectorWidget,
+                nullptr, m_assetInspectorHost, assetInspector, selectionAccepted);
+            if (!selectionAccepted) { return; }
+            m_activeAssetInspector = nullptr;
+            m_sceneSettingsButton->setText(QObject::tr("Scene Settings"));
             if (m_layoutSwitcher->currentWidget() != m_emptyLayoutWidget)
             {
                 setMinimumWidth(0);

@@ -20,6 +20,7 @@
 #include <QLabel>
 #include <QMainWindow>
 #include <QPushButton>
+#include <QPointer>
 #include <QStackedLayout>
 #include <QStackedWidget>
 #include <QTreeWidget>
@@ -63,6 +64,8 @@ namespace AzToolsFramework
             void HandleSourceAsset(const AssetBrowserEntry* entry, const SourceAssetBrowserEntry* sourceEntry);
             // Processes the product asset
             void HandleProductAsset(const ProductAssetBrowserEntry* productEntry);
+            void ShowAssetInspector();
+            bool IsInspectorLocked() const;
 
             const AssetBrowserEntry* m_currentEntry = nullptr;
 
@@ -79,6 +82,10 @@ namespace AzToolsFramework
 
             QStackedWidget* m_settingsSwitcher = nullptr;
             QWidget* m_detailsWidget = nullptr;
+            QWidget* m_assetInspectorHost = nullptr;
+            QStackedLayout* m_assetInspectorLayout = nullptr;
+            QPointer<QWidget> m_activeAssetInspector;
+            QPointer<QWidget> m_inspectorOwner;
             QMainWindow* m_sceneSettings = nullptr;
 
             AzQtComponents::Card* m_dependentAssetsCard = nullptr;

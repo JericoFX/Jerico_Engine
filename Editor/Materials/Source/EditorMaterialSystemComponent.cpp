@@ -130,6 +130,7 @@ namespace JE
             EditorMaterialSystemComponentRequestBus::Handler::BusConnect();
             JE::Render::MaterialComponentNotificationBus::Router::BusRouterConnect();
             AzToolsFramework::AssetBrowser::AssetBrowserInteractionNotificationBus::Handler::BusConnect();
+            AzToolsFramework::AssetBrowser::AssetBrowserPreviewRequestBus::Handler::BusConnect();
             AzToolsFramework::EditorEvents::Bus::Handler::BusConnect();
             AzToolsFramework::ToolsApplicationNotificationBus::Handler::BusConnect();
             AzToolsFramework::ActionManagerRegistrationNotificationBus::Handler::BusConnect();
@@ -145,6 +146,7 @@ namespace JE
 
         void EditorMaterialSystemComponent::Deactivate()
         {
+            AzToolsFramework::AssetBrowser::AssetBrowserPreviewRequestBus::Handler::BusDisconnect();
             if (m_workspacePaneRegistered)
             {
                 AzToolsFramework::UnregisterViewPane(MaterialWorkspaceWidget::PaneName);
@@ -199,6 +201,17 @@ namespace JE
                 }
             }
             AzToolsFramework::OpenViewPane(MaterialWorkspaceWidget::PaneName);
+        }
+
+        void EditorMaterialSystemComponent::GetAssetInspectorWidget(
+            const AzToolsFramework::AssetBrowser::AssetBrowserEntry* selectedEntry,
+            QWidget* parent, QWidget*& widget, bool& selectionAccepted)
+        {
+            if (m_workspaceSession)
+            {
+                MaterialWorkspaceWidget::GetAssetInspectorWidget(
+                    *m_workspaceSession, selectedEntry, parent, widget, selectionAccepted);
+            }
         }
 
         void EditorMaterialSystemComponent::OpenMaterialCanvas(const AZStd::string& sourcePath)

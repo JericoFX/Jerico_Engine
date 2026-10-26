@@ -42,6 +42,7 @@ namespace JE
             , public EditorMaterialSystemComponentRequestBus::Handler
             , public JE::Render::MaterialComponentNotificationBus::Router
             , public AzToolsFramework::AssetBrowser::AssetBrowserInteractionNotificationBus::Handler
+            , private AzToolsFramework::AssetBrowser::AssetBrowserPreviewRequestBus::Handler
             , public AzToolsFramework::EditorEvents::Bus::Handler
             , public AzToolsFramework::ToolsApplicationNotificationBus::Handler
             , public AZ::SystemTickBus::Handler
@@ -93,6 +94,8 @@ namespace JE
 
             //! AssetBrowserInteractionNotificationBus::Handler overrides...
             AzToolsFramework::AssetBrowser::SourceFileDetails GetSourceFileDetails(const char* fullSourceFileName) override;
+            void GetAssetInspectorWidget(const AzToolsFramework::AssetBrowser::AssetBrowserEntry* selectedEntry,
+                QWidget* parent, QWidget*& widget, bool& selectionAccepted) override;
 
             // AztoolsFramework::EditorEvents::Bus::Handler overrides...
             void NotifyRegisterViews() override;

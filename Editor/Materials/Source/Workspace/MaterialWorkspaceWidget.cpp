@@ -23,6 +23,11 @@
 #include <QFileInfo>
 #include <QKeyEvent>
 #include <QKeySequence>
+#include <QLabel>
+#include <AzCore/IO/FileIO.h>
+#include <AzToolsFramework/AssetBrowser/Entries/SourceAssetBrowserEntry.h>
+#include <AzToolsFramework/AssetBrowser/Entries/ProductAssetBrowserEntry.h>
+#include <JE/Render/RPI/Reflect/Material/MaterialAsset.h>
 #include <QHBoxLayout>
 #include <QPushButton>
 #include <QSignalBlocker>
@@ -31,8 +36,14 @@
 namespace JE::Editor
 {
     MaterialWorkspaceWidget::MaterialWorkspaceWidget(MaterialWorkspaceSession& session, QWidget* parent)
+        : MaterialWorkspaceWidget(session, parent, false)
+    {
+    }
+
+    MaterialWorkspaceWidget::MaterialWorkspaceWidget(MaterialWorkspaceSession& session, QWidget* parent, bool inspectorOnly)
         : QWidget(parent)
         , m_session(&session)
+        , m_inspectorOnly(inspectorOnly)
     {
         auto* layout = new QVBoxLayout(this);
         auto* actions = new QHBoxLayout();
@@ -40,6 +51,16 @@ namespace JE::Editor
         m_save = new QPushButton(tr("Save"), this);
         m_undo = new QPushButton(tr("Undo"), this);
         m_redo = new QPushButton(tr("Redo"), this);
+        m_save->setObjectName("MaterialInspectorSave");
+        open->setVisible(!m_inspectorOnly);
+        m_undo->setVisible(!m_inspectorOnly);
+        m_redo->setVisible(!m_inspectorOnly);
+        m_status = new QLabel(this);
+        m_status->setObjectName("MaterialInspectorStatus");
+        m_status->setTextInteractionFlags(Qt::TextSelectableByMouse);
+        m_status->setWordWrap(true);
+        m_status->setVisible(m_inspectorOnly);
+        layout->addWidget(m_status);
         actions->addWidget(open);
         actions->addWidget(m_save);
         actions->addWidget(m_undo);
@@ -48,33 +69,38 @@ namespace JE::Editor
         layout->addLayout(actions);
         m_documents = new QComboBox(this);
         layout->addWidget(m_documents);
+        m_documents->setVisible(!m_inspectorOnly);
         m_inspector = new JE::Editor::Tools::AtomToolsDocumentInspector(MaterialWorkspaceSession::GetToolId(), this);
+        m_inspector->setObjectName("MaterialDocumentInspector");
         m_inspector->SetDocumentSettingsPrefix("/JE/Editor/MaterialWorkspace/Inspector");
-        auto* splitter = new QSplitter(Qt::Horizontal, this);
-        m_previewHost = new QWidget(splitter);
-        m_previewHost->hide();
-        m_previewLayout = new QVBoxLayout(m_previewHost);
-        m_previewLayout->setContentsMargins(0, 0, 0, 0);
-        splitter->addWidget(m_previewHost);
-        splitter->addWidget(m_inspector);
-        splitter->setStretchFactor(0, 1);
-        splitter->setStretchFactor(1, 1);
-        layout->addWidget(splitter, 1);
+        if (m_inspectorOnly)
+        {
+            layout->addWidget(m_inspector, 1);
+        }
+        else
+        {
+            auto* splitter = new QSplitter(Qt::Horizontal, this);
+            m_previewHost = new QWidget(splitter);
+            m_previewHost->hide();
+            m_previewLayout = new QVBoxLayout(m_previewHost);
+            m_previewLayout->setContentsMargins(0, 0, 0, 0);
+            splitter->addWidget(m_previewHost);
+            splitter->addWidget(m_inspector);
+            splitter->setStretchFactor(0, 1);
+            splitter->setStretchFactor(1, 1);
+            layout->addWidget(splitter, 1);
+        }
 
         connect(open, &QPushButton::clicked, this, [this]() { OpenDocumentDialog(); });
         connect(m_save, &QPushButton::clicked, this, [this]() {
-            FinishEditing();
-            if (m_session && m_session->SelectDocument(m_displayedDocumentId))
-            {
-                m_session->SaveActiveDocument();
-            }
+            SaveDisplayedDocument();
         });
         connect(m_undo, &QPushButton::clicked, this, [this]() {
-            FinishEditing();
+            if (!FinishEditing()) { return; }
             AzToolsFramework::ToolsApplicationRequestBus::Broadcast(&AzToolsFramework::ToolsApplicationRequests::UndoPressed);
         });
         connect(m_redo, &QPushButton::clicked, this, [this]() {
-            FinishEditing();
+            if (!FinishEditing()) { return; }
             AzToolsFramework::ToolsApplicationRequestBus::Broadcast(&AzToolsFramework::ToolsApplicationRequests::RedoPressed);
         });
         connect(m_documents, &QComboBox::currentIndexChanged, this, [this](int index) {
@@ -82,7 +108,7 @@ namespace JE::Editor
             {
                 return;
             }
-            FinishEditing();
+            if (!FinishEditing()) { RefreshDocuments(); return; }
             const auto id = AZ::Uuid::CreateString(m_documents->itemData(index).toString().toUtf8().constData());
             if (m_session->SelectDocument(id))
             {
@@ -103,6 +129,44 @@ namespace JE::Editor
     MaterialWorkspaceWidget::~MaterialWorkspaceWidget()
     {
         OnSessionClosing();
+    }
+
+    void MaterialWorkspaceWidget::GetAssetInspectorWidget(MaterialWorkspaceSession& session,
+        const AzToolsFramework::AssetBrowser::AssetBrowserEntry* entry, QWidget* parent,
+        QWidget*& widget, bool& selectionAccepted)
+    {
+        if (!parent || widget || !selectionAccepted) { return; }
+        using namespace AzToolsFramework::AssetBrowser;
+        auto* view = parent->findChild<MaterialWorkspaceWidget*>("MaterialAssetInspector", Qt::FindDirectChildrenOnly);
+        if (view && view->m_session != &session)
+        {
+            if (view->m_session) { selectionAccepted = false; return; }
+            delete view; // Its prior session already made this retained view inert.
+            view = nullptr;
+        }
+        const auto* source = azrtti_cast<const SourceAssetBrowserEntry*>(entry);
+        if (const auto* product = azrtti_cast<const ProductAssetBrowserEntry*>(entry))
+        {
+            source = product->GetAssetType() == azrtti_typeid<JE::Render::RPI::MaterialAsset>()
+                ? azrtti_cast<const SourceAssetBrowserEntry*>(product->GetParent()) : nullptr;
+        }
+        const AZStd::string sourcePath = source ? source->GetFullPath() : AZStd::string{};
+        if (!source || !QString::fromUtf8(sourcePath.c_str()).endsWith(".material", Qt::CaseInsensitive))
+        {
+            if (view && !view->FinishEditing()) { selectionAccepted = false; }
+            return;
+        }
+        if (!view)
+        {
+            view = new MaterialWorkspaceWidget(session, parent, true);
+            view->setObjectName("MaterialAssetInspector");
+        }
+        if (view->OpenDocument(sourcePath).IsNull())
+        {
+            selectionAccepted = false;
+            return;
+        }
+        widget = view;
     }
 
     void MaterialWorkspaceWidget::ReleasePreview()
@@ -140,7 +204,7 @@ namespace JE::Editor
 
     void MaterialWorkspaceWidget::CreatePreview()
     {
-        if (m_previewViewport || !isVisible() || m_displayedDocumentId.IsNull() || !m_session || !JE::Render::RPI::RPISystemInterface::Get() ||
+        if (m_inspectorOnly || m_previewViewport || !isVisible() || m_displayedDocumentId.IsNull() || !m_session || !JE::Render::RPI::RPISystemInterface::Get() ||
             !AZ::RHI::RHISystemInterface::Get() ||
             !AZ::Interface<JE::Render::RPI::ViewportContextRequestsInterface>::Get())
         {
@@ -164,7 +228,7 @@ namespace JE::Editor
 
     void MaterialWorkspaceWidget::RefreshPreview()
     {
-        if (!m_previewHost)
+        if (m_inspectorOnly || !m_previewHost)
         {
             return;
         }
@@ -197,7 +261,7 @@ namespace JE::Editor
         {
             return;
         }
-        FinishEditing();
+        if (!FinishEditing()) { return; }
         const auto& type = m_session->GetDocumentType();
         const auto paths = JE::Editor::Tools::GetOpenFilePathsFromDialog(
             {}, type.m_supportedExtensionsToOpen, type.m_documentTypeName, false);
@@ -209,11 +273,18 @@ namespace JE::Editor
 
     AZ::Uuid MaterialWorkspaceWidget::OpenDocument(const AZStd::string& sourcePath)
     {
-        FinishEditing();
-        return m_session ? m_session->OpenDocument(sourcePath) : AZ::Uuid::CreateNull();
+        if (!m_session || !FinishEditing()) { return AZ::Uuid::CreateNull(); }
+        const auto id = m_session->OpenDocument(sourcePath);
+        if (m_inspectorOnly && !id.IsNull() && !m_session->IsGraphDocument(id) && m_session->SelectDocument(id))
+        {
+            m_displayedDocumentId = id;
+            m_inspector->SetDocumentId(id);
+            RefreshActions();
+        }
+        return id;
     }
 
-    void MaterialWorkspaceWidget::FinishEditing()
+    bool MaterialWorkspaceWidget::FinishEditing()
     {
         if (auto* focus = QApplication::focusWidget(); focus && (focus == this || isAncestorOf(focus)))
         {
@@ -221,14 +292,21 @@ namespace JE::Editor
         }
         if (!m_displayedDocumentId.IsNull())
         {
-            JE::Editor::Tools::AtomToolsDocumentRequestBus::Event(
-                m_displayedDocumentId, &JE::Editor::Tools::AtomToolsDocumentRequests::EndEdit);
+            bool committed = false;
+            JE::Editor::Tools::AtomToolsDocumentRequestBus::EventResult(
+                committed, m_displayedDocumentId, &JE::Editor::Tools::AtomToolsDocumentRequests::EndEdit);
+            if (!committed && m_inspectorOnly)
+            {
+                m_status->setToolTip(tr("The current edit could not be committed. Selection was preserved."));
+                return false;
+            }
         }
+        return true;
     }
 
     void MaterialWorkspaceWidget::closeEvent(QCloseEvent* event)
     {
-        FinishEditing();
+        if (!FinishEditing()) { event->ignore(); return; }
         // Only the view closes. The session retains the document and its global undo references.
         event->accept();
     }
@@ -240,7 +318,7 @@ namespace JE::Editor
             (event->type() == QEvent::ShortcutOverride || event->type() == QEvent::KeyPress))
         {
             auto* key = static_cast<QKeyEvent*>(event);
-            const bool open = key->matches(QKeySequence::Open);
+            const bool open = !m_inspectorOnly && key->matches(QKeySequence::Open);
             const bool save = key->matches(QKeySequence::Save);
             const bool undo = key->matches(QKeySequence::Undo);
             const bool redo = key->matches(QKeySequence::Redo);
@@ -255,7 +333,7 @@ namespace JE::Editor
                     }
                     else if (undo || redo)
                     {
-                        FinishEditing();
+                        if (!FinishEditing()) { return true; }
                         if (undo)
                         {
                             AzToolsFramework::ToolsApplicationRequestBus::Broadcast(
@@ -267,10 +345,9 @@ namespace JE::Editor
                                 &AzToolsFramework::ToolsApplicationRequests::RedoPressed);
                         }
                     }
-                    else if (m_session && m_session->SelectDocument(m_displayedDocumentId))
+                    else
                     {
-                        FinishEditing();
-                        m_session->SaveActiveDocument();
+                        SaveDisplayedDocument();
                     }
                 }
                 return true;
@@ -281,6 +358,13 @@ namespace JE::Editor
 
     void MaterialWorkspaceWidget::RefreshDocuments(const AZ::Uuid& excludedDocumentId)
     {
+        if (m_inspectorOnly)
+        {
+            if (m_displayedDocumentId == excludedDocumentId) { m_displayedDocumentId = AZ::Uuid::CreateNull(); }
+            m_inspector->SetDocumentId(m_displayedDocumentId);
+            RefreshActions();
+            return;
+        }
         const QSignalBlocker blocker(m_documents);
         m_documents->clear();
         const auto previousId = m_displayedDocumentId;
@@ -333,12 +417,42 @@ namespace JE::Editor
 
     void MaterialWorkspaceWidget::RefreshActions()
     {
-        m_save->setEnabled(m_session && !m_displayedDocumentId.IsNull());
+        bool modified = false;
+        AZStd::string path;
+        if (m_session && !m_displayedDocumentId.IsNull())
+        {
+            JE::Editor::Tools::AtomToolsDocumentRequestBus::EventResult(
+                modified, m_displayedDocumentId, &JE::Editor::Tools::AtomToolsDocumentRequests::IsModified);
+            JE::Editor::Tools::AtomToolsDocumentRequestBus::EventResult(
+                path, m_displayedDocumentId, &JE::Editor::Tools::AtomToolsDocumentRequests::GetAbsolutePath);
+        }
+        auto* fileIO = AZ::IO::FileIOBase::GetInstance();
+        const bool editable = path.empty() || (JE::Editor::Tools::IsDocumentPathEditable(path) &&
+            (!fileIO || !fileIO->IsReadOnly(path.c_str())));
+        if (m_inspectorOnly) { m_inspector->setEnabled(editable); }
+        m_save->setEnabled(m_session && !m_displayedDocumentId.IsNull() && (!m_inspectorOnly || (modified && editable)));
+        m_status->setText(path.empty() ? tr("No material selected") : QFileInfo(QString::fromUtf8(path.c_str())).fileName() +
+            (modified ? " *" : "") + (editable ? "" : tr(" (read only)")));
+        m_status->setToolTip(QString::fromUtf8(path.c_str()));
         AzToolsFramework::UndoSystem::UndoStack* stack = nullptr;
         AzToolsFramework::ToolsApplicationRequestBus::BroadcastResult(
             stack, &AzToolsFramework::ToolsApplicationRequests::GetUndoStack);
         m_undo->setEnabled(stack && stack->CanUndo());
         m_redo->setEnabled(stack && stack->CanRedo());
+    }
+
+    bool MaterialWorkspaceWidget::SaveDisplayedDocument()
+    {
+        if (!m_session || !FinishEditing() || !m_session->SelectDocument(m_displayedDocumentId)) { return false; }
+        if (m_inspectorOnly)
+        {
+            RefreshActions();
+            if (!m_save->isEnabled()) { return false; }
+        }
+        const bool saved = m_session->SaveActiveDocument();
+        RefreshActions();
+        if (!saved) { m_status->setToolTip(tr("Saving failed. The document remains modified.")); }
+        return saved;
     }
 
     void MaterialWorkspaceWidget::RefreshDocumentLabel(const AZ::Uuid& id)
@@ -358,7 +472,7 @@ namespace JE::Editor
 
     void MaterialWorkspaceWidget::OnDocumentOpened(const AZ::Uuid& id)
     {
-        if (m_session && m_session->IsGraphDocument(id))
+        if (m_inspectorOnly || (m_session && m_session->IsGraphDocument(id)))
         {
             return;
         }

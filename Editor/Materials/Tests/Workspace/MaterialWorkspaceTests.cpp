@@ -20,6 +20,7 @@
 
 #include <JE/Editor/Tools/Document/AtomToolsAnyDocument.h>
 #include <JE/Editor/Tools/Document/AtomToolsDocumentInspector.h>
+#include <QSplitter>
 #include <JE/Editor/Tools/Document/CreateDocumentDialog.h>
 #include <JE/Editor/Tools/AssetSelection/AssetSelectionComboBox.h>
 #include <JE/Editor/Tools/Inspector/InspectorWidget.h>
@@ -49,6 +50,10 @@
 #include <QImage>
 #include <QComboBox>
 #include <QDir>
+#include <QFile>
+#include <QKeyEvent>
+#include <QScopeGuard>
+#include <AzToolsFramework/AssetBrowser/AssetBrowserEntityInspectorWidget.h>
 #include <AzToolsFramework/AssetBrowser/Entries/SourceAssetBrowserEntry.h>
 #include <AzToolsFramework/AssetBrowser/Entries/RootAssetBrowserEntry.h>
 #include <AzToolsFramework/AssetBrowser/Entries/AssetBrowserEntryCache.h>
@@ -57,6 +62,7 @@
 #include <AzToolsFramework/AssetDatabase/AssetDatabaseConnection.h>
 #include <QAction>
 #include <QMenu>
+#include <AzToolsFramework/AssetBrowser/Entries/ProductAssetBrowserEntry.h>
 
 namespace UnitTest
 {
@@ -553,6 +559,19 @@ namespace UnitTest
     class TextureContextMenuTests : public GraphDocumentCreationTests
     {
     protected:
+        // Bind the real session-backed provider to the real bus without activating renderer services in this CPU fixture.
+        class InlineInspectorProvider final : public AzToolsFramework::AssetBrowser::AssetBrowserPreviewRequestBus::Handler
+        {
+        public:
+            explicit InlineInspectorProvider(JE::Editor::MaterialWorkspaceSession& session) : m_session(session) { BusConnect(); }
+            ~InlineInspectorProvider() override { BusDisconnect(); }
+            void GetAssetInspectorWidget(const AzToolsFramework::AssetBrowser::AssetBrowserEntry* entry, QWidget* parent,
+                QWidget*& widget, bool& accepted) override
+            {
+                JE::Editor::MaterialWorkspaceWidget::GetAssetInspectorWidget(m_session, entry, parent, widget, accepted);
+            }
+            JE::Editor::MaterialWorkspaceSession& m_session;
+        };
         // Records the image-owner boundary only. Its default false models an already compatible inference;
         // the real owner/preset/cook behavior is verified separately, never simulated as RPI readiness here.
         class PresetBoundary final : public ImageProcessingAtomEditor::ImageProcessingEditorRequestBus::Handler
@@ -671,6 +690,8 @@ namespace UnitTest
                 if (!JE::Render::RPI::MaterialUtils::LoadMaterialSourceData(path).IsSuccess()) { return OpenFailed(); }
                 return OpenSucceeded();
             }
+            // This source-loading boundary exposes no editable fields; a no-op commit succeeds like MaterialDocument.
+            bool EndEdit() override { return true; }
             int& m_opens;
         };
 
@@ -1690,6 +1711,105 @@ namespace UnitTest
         }
     }
 
+    TEST_F(TextureContextMenuTests, MaterialSourceAndProductShareInlineInspectorWithoutOpeningAnotherPane)
+    {
+        int opens = 0;
+        JE::Editor::MaterialWorkspaceSession session(SourceType(opens));
+        const AZStd::string sourcePath = m_directory.filePath("rock.material").toUtf8().constData();
+        const AZStd::string cachePath = m_directory.filePath("inline.azmaterial").toUtf8().constData();
+        ASSERT_TRUE(AZ::Utils::WriteFile(
+            R"({"materialType":"@engroot@/Engine/Render/Features/Assets/Materials/Types/StandardPBR.materialtype","materialTypeVersion":6})",
+            sourcePath).IsSuccess());
+        ASSERT_TRUE(AZ::Utils::WriteFile("cache product sentinel", cachePath).IsSuccess());
+        CachedMaterialModel browser(m_directory.path().toUtf8().constData());
+        ASSERT_TRUE(browser.m_sourceAdded);
+        const auto sourceIndex = browser.GetAssetBrowserModel()->findIndex(
+            QDir::fromNativeSeparators(QString::fromUtf8(sourcePath.c_str())));
+        ASSERT_TRUE(sourceIndex.isValid());
+        const auto* source = azrtti_cast<const AzToolsFramework::AssetBrowser::SourceAssetBrowserEntry*>(
+            sourceIndex.data(AzToolsFramework::AssetBrowser::AssetBrowserModel::Roles::EntryRole)
+                .value<const AzToolsFramework::AssetBrowser::AssetBrowserEntry*>());
+        ASSERT_NE(source, nullptr);
+        AzToolsFramework::AssetBrowser::ProductWithUuid productData;
+        productData.first = source->GetSourceUuid();
+        productData.second.m_productID = 1;
+        productData.second.m_subID = 0;
+        productData.second.m_productName = "pc/inline.azmaterial";
+        productData.second.m_assetType = azrtti_typeid<JE::Render::RPI::MaterialAsset>();
+        ASSERT_TRUE(browser.GetAssetBrowserModel()->GetRootEntry()->AddProduct(productData));
+        auto* product = AzToolsFramework::AssetBrowser::ProductAssetBrowserEntry::GetProductByAssetId(
+            AZ::Data::AssetId(productData.first, productData.second.m_subID));
+        ASSERT_NE(product, nullptr);
+        ASSERT_EQ(product->GetParent(), source);
+        product->SetFullPath(AZ::IO::Path(cachePath));
+        UnopenedPaneRequests panes;
+        InlineInspectorProvider provider(session);
+        AzToolsFramework::AssetBrowser::AssetBrowserEntityInspectorWidget inspector;
+        AzToolsFramework::AssetBrowser::AssetBrowserPreviewRequestBus::Broadcast(
+            &AzToolsFramework::AssetBrowser::AssetBrowserPreviewRequest::PreviewAsset, source);
+        inspector.show();
+        QApplication::processEvents();
+        auto* fromSource = inspector.findChild<QWidget*>("MaterialAssetInspector");
+        ASSERT_NE(fromSource, nullptr);
+        EXPECT_TRUE(fromSource->isVisibleTo(&inspector));
+        const auto id = session.GetActiveDocumentId();
+        ASSERT_FALSE(id.IsNull());
+        AzToolsFramework::AssetBrowser::AssetBrowserPreviewRequestBus::Broadcast(
+            &AzToolsFramework::AssetBrowser::AssetBrowserPreviewRequest::PreviewAsset, product);
+        auto* fromProduct = inspector.findChild<QWidget*>("MaterialAssetInspector");
+        EXPECT_EQ(fromProduct, fromSource);
+        EXPECT_EQ(session.GetActiveDocumentId(), id);
+        EXPECT_EQ(session.GetDocumentIds().size(), 1);
+        EXPECT_EQ(opens, 1);
+        EXPECT_EQ(panes.m_showRequests, 0);
+        EXPECT_EQ(panes.m_widgetRequests, 0);
+        ASSERT_NE(fromSource->findChild<QPushButton*>("MaterialInspectorSave"), nullptr);
+        AZStd::string actualPath;
+        JE::Editor::Tools::AtomToolsDocumentRequestBus::EventResult(
+            actualPath, id, &JE::Editor::Tools::AtomToolsDocumentRequests::GetAbsolutePath);
+        EXPECT_EQ(QDir::fromNativeSeparators(QString::fromUtf8(actualPath.c_str())),
+            QDir::fromNativeSeparators(QString::fromUtf8(sourcePath.c_str())));
+        auto cacheAfter = AZ::Utils::ReadFile<AZStd::string>(cachePath);
+        ASSERT_TRUE(cacheAfter.IsSuccess());
+        EXPECT_EQ(cacheAfter.GetValue(), "cache product sentinel");
+    }
+
+    TEST_F(TextureContextMenuTests, NonMaterialAndClearFallBackWithoutClosingTheInlineDocumentOrWritingItsSource)
+    {
+        int opens = 0;
+        JE::Editor::MaterialWorkspaceSession session(SourceType(opens));
+        const AZStd::string path = m_directory.filePath("retained-inline.material").toUtf8().constData();
+        const AZStd::string sourceText =
+            R"({"materialType":"@engroot@/Engine/Render/Features/Assets/Materials/Types/StandardPBR.materialtype","materialTypeVersion":6})";
+        ASSERT_TRUE(AZ::Utils::WriteFile(sourceText, path).IsSuccess());
+        AzToolsFramework::AssetBrowser::SourceAssetBrowserEntry source;
+        source.SetFullPath(AZ::IO::Path(path));
+        InlineInspectorProvider provider(session);
+        AzToolsFramework::AssetBrowser::AssetBrowserEntityInspectorWidget inspector;
+        AzToolsFramework::AssetBrowser::AssetBrowserPreviewRequestBus::Broadcast(
+            &AzToolsFramework::AssetBrowser::AssetBrowserPreviewRequest::PreviewAsset, &source);
+        inspector.show();
+        QApplication::processEvents();
+        auto* view = inspector.findChild<QWidget*>("MaterialAssetInspector");
+        ASSERT_NE(view, nullptr);
+        const auto id = session.GetActiveDocumentId();
+        AzToolsFramework::AssetBrowser::SourceAssetBrowserEntry other;
+        other.SetFullPath(AZ::IO::Path(m_directory.filePath("model.fbx").toUtf8().constData()));
+        AzToolsFramework::AssetBrowser::AssetBrowserPreviewRequestBus::Broadcast(
+            &AzToolsFramework::AssetBrowser::AssetBrowserPreviewRequest::PreviewAsset, &other);
+        EXPECT_FALSE(view->isVisibleTo(&inspector));
+        const auto* settings = inspector.findChild<QPushButton*>("AssetInspectorSettings");
+        ASSERT_NE(settings, nullptr);
+        EXPECT_EQ(settings->text(), "Scene Settings");
+        AzToolsFramework::AssetBrowser::AssetBrowserPreviewRequestBus::Broadcast(
+            &AzToolsFramework::AssetBrowser::AssetBrowserPreviewRequest::ClearPreview);
+        EXPECT_EQ(session.GetDocumentIds().size(), 1);
+        EXPECT_TRUE(JE::Editor::Tools::AtomToolsDocumentRequestBus::HasHandlers(id));
+        auto after = AZ::Utils::ReadFile<AZStd::string>(path);
+        ASSERT_TRUE(after.IsSuccess());
+        EXPECT_EQ(after.GetValue(), sourceText);
+    }
+
     TEST_F(GraphDocumentCreationTests, CreatesAtTheFinalPathBeforeEditingAndRemovesItsTemporary)
     {
         const AZStd::string path = m_directory.filePath("created.workspace").toUtf8().constData();
@@ -1816,6 +1936,142 @@ namespace UnitTest
         EXPECT_EQ(nextSession.GetDocumentIds().size(), 1);
         EXPECT_TRUE(JE::Editor::Tools::AtomToolsDocumentRequestBus::HasHandlers(nextId));
         pane->hide();
+    }
+
+    TEST_F(GraphDocumentCreationTests, CompactMaterialInspectorSavesItsShownDocumentWithoutSavingAnotherDirtyDocument)
+    {
+        JE::Editor::MaterialWorkspaceSession session(EditableDocumentType());
+        const AZStd::string firstPath = m_directory.filePath("inspector-first.workspace").toUtf8().constData();
+        const AZStd::string secondPath = m_directory.filePath("inspector-second.workspace").toUtf8().constData();
+        const auto first = session.CreateDocument({}, firstPath);
+        const auto second = session.CreateDocument({}, secondPath);
+        ASSERT_FALSE(first.IsNull());
+        ASSERT_FALSE(second.IsNull());
+        JE::Editor::MaterialWorkspaceWidget inspector(session, nullptr, true);
+        ASSERT_EQ(inspector.OpenDocument(firstPath), first);
+        Edit(first);
+        Edit(second);
+        ASSERT_TRUE(session.SelectDocument(second));
+        auto* save = inspector.findChild<QPushButton*>("MaterialInspectorSave");
+        auto* status = inspector.findChild<QLabel*>("MaterialInspectorStatus");
+        ASSERT_NE(save, nullptr);
+        ASSERT_NE(status, nullptr);
+        EXPECT_TRUE(status->text().contains("inspector-first.workspace"));
+        EXPECT_TRUE(status->text().contains('*'));
+        ASSERT_TRUE(save->isEnabled());
+        auto secondBefore = AZ::Utils::ReadFile<AZStd::string>(secondPath);
+        ASSERT_TRUE(secondBefore.IsSuccess());
+        save->click();
+        EXPECT_FALSE(IsModified(first));
+        EXPECT_TRUE(IsModified(second));
+        EXPECT_FALSE(status->text().contains('*'));
+        EXPECT_FALSE(save->isEnabled());
+        auto firstSaved = AZ::Utils::ReadFile<AZStd::string>(firstPath);
+        auto secondAfter = AZ::Utils::ReadFile<AZStd::string>(secondPath);
+        ASSERT_TRUE(firstSaved.IsSuccess());
+        ASSERT_TRUE(secondAfter.IsSuccess());
+        EXPECT_NE(firstSaved.GetValue().find("0.75"), AZStd::string::npos);
+        EXPECT_EQ(secondBefore.GetValue(), secondAfter.GetValue());
+    }
+
+    TEST_F(GraphDocumentCreationTests, CompactMaterialInspectorRetainsDirtyDocumentAndHistoryAcrossRebinding)
+    {
+        JE::Editor::MaterialWorkspaceSession session(EditableDocumentType());
+        const AZStd::string firstPath = m_directory.filePath("dirty-inspector.workspace").toUtf8().constData();
+        const AZStd::string secondPath = m_directory.filePath("other-inspector.workspace").toUtf8().constData();
+        const auto first = session.CreateDocument({}, firstPath);
+        const auto second = session.CreateDocument({}, secondPath);
+        ASSERT_FALSE(first.IsNull());
+        ASSERT_FALSE(second.IsNull());
+        JE::Editor::MaterialWorkspaceWidget inspector(session, nullptr, true);
+        ASSERT_EQ(inspector.OpenDocument(firstPath), first);
+        auto before = AZ::Utils::ReadFile<AZStd::string>(firstPath);
+        ASSERT_TRUE(before.IsSuccess());
+        Edit(first);
+        EXPECT_EQ(inspector.OpenDocument(secondPath), second);
+        EXPECT_TRUE(IsModified(first));
+        EXPECT_EQ(inspector.OpenDocument(firstPath), first);
+        EXPECT_EQ(session.GetDocumentIds().size(), 2);
+        bool canUndo = false;
+        JE::Editor::Tools::AtomToolsDocumentRequestBus::EventResult(
+            canUndo, first, &JE::Editor::Tools::AtomToolsDocumentRequests::CanUndo);
+        EXPECT_TRUE(canUndo);
+        auto after = AZ::Utils::ReadFile<AZStd::string>(firstPath);
+        ASSERT_TRUE(after.IsSuccess());
+        EXPECT_EQ(before.GetValue(), after.GetValue());
+        inspector.show();
+        QApplication::processEvents();
+        EXPECT_TRUE(inspector.findChildren<QSplitter*>(QString(), Qt::FindDirectChildrenOnly).isEmpty());
+    }
+
+    TEST_F(GraphDocumentCreationTests, CompactMaterialInspectorRejectsRebindingWhenEndEditFails)
+    {
+        class CommitBoundary final : public JE::Editor::Tools::AtomToolsAnyDocument
+        {
+        public:
+            AZ_CLASS_ALLOCATOR(CommitBoundary, AZ::SystemAllocator);
+            CommitBoundary(const AZ::Crc32& toolId, const JE::Editor::Tools::DocumentTypeInfo& type, bool& reject)
+                : AtomToolsAnyDocument(toolId, type, AZStd::any(0.25f), AZ::Uuid::CreateNull()), m_reject(reject) {}
+            bool EndEdit() override { return !m_reject && AtomToolsAnyDocument::EndEdit(); }
+            bool& m_reject;
+        };
+        bool reject = false;
+        auto type = EditableDocumentType();
+        type.m_documentFactoryCallback = [&reject](const AZ::Crc32& toolId, const JE::Editor::Tools::DocumentTypeInfo& info)
+            -> JE::Editor::Tools::AtomToolsDocumentRequests* { return aznew CommitBoundary(toolId, info, reject); };
+        JE::Editor::MaterialWorkspaceSession session(type);
+        const AZStd::string firstPath = m_directory.filePath("commit-first.workspace").toUtf8().constData();
+        const AZStd::string secondPath = m_directory.filePath("commit-second.workspace").toUtf8().constData();
+        const auto first = session.CreateDocument({}, firstPath);
+        const auto second = session.CreateDocument({}, secondPath);
+        ASSERT_FALSE(first.IsNull());
+        ASSERT_FALSE(second.IsNull());
+        JE::Editor::MaterialWorkspaceWidget inspector(session, nullptr, true);
+        ASSERT_EQ(inspector.OpenDocument(firstPath), first);
+        Edit(first);
+        ASSERT_TRUE(session.SelectDocument(second));
+        reject = true;
+        EXPECT_TRUE(inspector.OpenDocument(secondPath).IsNull());
+        auto* status = inspector.findChild<QLabel*>("MaterialInspectorStatus");
+        ASSERT_NE(status, nullptr);
+        EXPECT_TRUE(status->text().contains("commit-first.workspace"));
+        EXPECT_TRUE(IsModified(first));
+        EXPECT_EQ(session.GetActiveDocumentId(), second);
+        reject = false;
+    }
+
+    TEST_F(GraphDocumentCreationTests, CompactMaterialInspectorDoesNotOfferOrPerformSaveForReadOnlySource)
+    {
+        JE::Editor::MaterialWorkspaceSession session(EditableDocumentType());
+        const QString filePath = m_directory.filePath("readonly-inspector.workspace");
+        const AZStd::string path = filePath.toUtf8().constData();
+        const auto id = session.CreateDocument({}, path);
+        ASSERT_FALSE(id.IsNull());
+        auto before = AZ::Utils::ReadFile<AZStd::string>(path);
+        ASSERT_TRUE(before.IsSuccess());
+        Edit(id);
+        const auto permissions = QFile::permissions(filePath);
+        const auto restore = qScopeGuard([&]() { QFile::setPermissions(filePath, permissions); });
+        ASSERT_TRUE(QFile::setPermissions(filePath, QFileDevice::ReadOwner | QFileDevice::ReadUser |
+            QFileDevice::ReadGroup | QFileDevice::ReadOther));
+        ASSERT_TRUE(AZ::IO::FileIOBase::GetInstance()->IsReadOnly(path.c_str()));
+        JE::Editor::MaterialWorkspaceWidget inspector(session, nullptr, true);
+        ASSERT_EQ(inspector.OpenDocument(path), id);
+        auto* save = inspector.findChild<QPushButton*>("MaterialInspectorSave");
+        auto* status = inspector.findChild<QLabel*>("MaterialInspectorStatus");
+        auto* properties = inspector.findChild<QWidget*>("MaterialDocumentInspector");
+        ASSERT_NE(save, nullptr);
+        ASSERT_NE(status, nullptr);
+        ASSERT_NE(properties, nullptr);
+        EXPECT_FALSE(save->isEnabled());
+        EXPECT_FALSE(properties->isEnabled());
+        EXPECT_TRUE(status->text().contains("read only"));
+        QKeyEvent shortcut(QEvent::KeyPress, Qt::Key_S, Qt::ControlModifier);
+        QApplication::sendEvent(status, &shortcut);
+        EXPECT_TRUE(IsModified(id));
+        auto after = AZ::Utils::ReadFile<AZStd::string>(path);
+        ASSERT_TRUE(after.IsSuccess());
+        EXPECT_EQ(after.GetValue(), before.GetValue());
     }
 
     TEST_F(GraphDocumentCreationTests, RejectsExistingAndRelativeDestinationsWithoutChangingThem)

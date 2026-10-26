@@ -364,6 +364,12 @@ namespace AzToolsFramework
             //! Clears the asset browser inspector panel
             virtual void ClearPreview(){};
 
+            //! Optional editable view inside the existing Inspector. Defaults must preserve another provider's output.
+            //! A provider may reject rebinding when the current edit cannot be committed. nullptr clears the selection.
+            virtual void GetAssetInspectorWidget(
+                [[maybe_unused]] const AssetBrowserEntry* selectedEntry, [[maybe_unused]] QWidget* parent,
+                [[maybe_unused]] QWidget*& widget, [[maybe_unused]] bool& selectionAccepted) {}
+
             //! Preview the selected entry in the scene settings window, returns true if successful 
             virtual void PreviewSceneSettings([[maybe_unused]]const AzToolsFramework::AssetBrowser::AssetBrowserEntry* selectedEntry){};
 
