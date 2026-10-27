@@ -1,7 +1,8 @@
-# EPLS — contrato técnico de capas ambientales
+# Jerico Surface & Damage (EPLS) — contrato técnico de capas ambientales y daño
 
 **Fecha:** 2026-10-24  
-**Nombre canónico:** Environmental Procedural Layer System (EPLS). `ELSP`/`ELPS` no crean otro módulo.  
+**Nombre canónico histórico:** Environmental Procedural Layer System (EPLS). `ELSP`/`ELPS` no crean otro módulo.
+**Nombre público y del Editor (2026-10-27):** **Jerico Surface & Damage**. `EPLS` permanece como alias técnico histórico hasta migración compatible. Descripción pública: **aplica envejecimiento ambiental y solicita cambios geométricos o fracturas cuando la receta lo requiere**, compartiendo Surface Data, Geometry y Jolt. Cambiar el rótulo no acredita implementación ni autoriza otra registry o sistema físico.  
 **Estado:** SPECIFIED / ENGINE IMPLEMENTATION NOT VERIFIED  
 **Owner previsto:** JE::Surface/Materials + World authoring, usando el único Asset/Transaction/Cook y consumidores runtime de JE.
 
