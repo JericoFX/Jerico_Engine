@@ -2,14 +2,18 @@
 
 **Vigente 2026-10-15: una rama development; JE::; sin AWS/multiplayer; sólo Vulkan activo por ahora, DX12 preservado e inactivo; BSP/UI primero, geología y VR/OpenXR activos.** [N0 ejecutado](evidence/n0/N0_EXECUTION_2026_10_10.md) incluye resolver offline, paquetes locales/consumers y núcleo BSP con UV/superficies verificados. Baseline completo, editor visible y runtime siguen pendientes.
 
+## Nombres públicos de herramientas
+
+En JericoEditor y explicaciones públicas usamos nombres fáciles de recordar: **Jerico Assembly** (PWAS: coloca y ensambla), **Jerico Surface & Damage** (EPLS: envejece y solicita daño geométrico), **Jerico Brush** (RBrush: pinta materiales/máscaras/daño) y **Jerico Modular** (RMod: fabrica piezas y conexiones modulares). Las siglas y nombres de archivos actuales son alias técnicos de compatibilidad; no se duplican los módulos ni se renombran UUID, recursos o formatos sin migración probada.
+
 | Documento | Uso |
 |---|---|
 | [GOAL](../GOAL.md) | Última decisión del propietario, capacidades y exclusiones |
 | [AGENTS](../AGENTS.md) | Roles, Git, método y evidencia |
 | [CODEX_START](../CODEX_START.md) | Inicio seguro y prioridad visible |
-| [Motor ligero y PWAS/EPLS](JE_LEAN_ENGINE_AND_AUTHORING.md) | Reducir peso sin recortar herramientas; Studio/PWAS/EPLS, cook y demos integradas |
-| [PWAS contrato técnico](PWAS_TECHNICAL_MASTER.md) | Placement determinista, máscaras/locks/overrides, semántica de IDs, UI, cook y gates PWAS-01..12 |
-| [EPLS contrato técnico](EPLS_TECHNICAL_MASTER.md) | Capas ambientales, inputs/fields, máscaras, composición PBR, prioridades, lineage y gates EPLS-01..14 |
+| [Motor ligero y Jerico Assembly/Surface & Damage](JE_LEAN_ENGINE_AND_AUTHORING.md) | Reducir peso sin recortar herramientas; Studio, PWAS/EPLS, cook y demos integradas |
+| [Jerico Assembly (PWAS)](PWAS_TECHNICAL_MASTER.md) | Colocación y ensamblado de objetos, reglas deterministas, máscaras/locks/overrides, IDs, UI y cook |
+| [Jerico Surface & Damage (EPLS)](EPLS_TECHNICAL_MASTER.md) | Envejecimiento, materiales, máscaras, solicitud de astillas/agujeros/fracturas y pruebas EPLS |
 | [Playground → JE](PLAYGROUND_TO_JE_INTEGRATION_MASTER.md) | Inventario fijado, evidencia real, ownership y migración por verticales sin duplicar engine |
 | [Contrato JE](architecture/JE_IDENTITY_AND_NATIVE_MODULES.md) | Namespace real, CMake/codegen/UUID, Gems dentro del engine |
 | [Arquitectura](architecture/O3DE_NATIVE_TRANSFORMATION.md) | Owners y disposición de capacidades |
