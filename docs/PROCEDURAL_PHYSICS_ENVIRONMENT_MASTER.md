@@ -1,6 +1,10 @@
-# JE — BSP, geología, RMod, RBrush, Jolt y entorno
+# JE — geometría, Jerico Modular, Jerico Brush, Jolt y entorno
 
 **Geología REACTIVADA por el propietario el 2026-10-10.** Prioridad visible N1/N2/N4/N8 según ROADMAP. Flotabilidad sigue DESIGN ONLY; AWS/multiplayer excluidos. Todo owner propio y adaptación converge a JE::; dependencias auténticas privadas conservan nombres/licencias.
+
+## Nombres públicos y compatibilidad
+
+La interfaz de JericoEditor y la comunicación pública llaman **Jerico Assembly** a PWAS (colocación/ensamblaje), **Jerico Surface & Damage** a EPLS (envejecimiento, capas y solicitudes de ruptura), **Jerico Brush** a RBrush (pintura y máscaras) y **Jerico Modular** a RMod (estructuras, sockets y rutas modulares). Los acrónimos permanecen como identificadores históricos/técnicos mientras los contratos y assets migren de manera controlada; no duplicar owners ni cambiar IDs/serialización por una preferencia de nombre.
 
 ## 1. Geometry Core compartido
 
