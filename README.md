@@ -18,6 +18,17 @@ JericoEngine is transforming an Open 3D Engine (O3DE) codebase into a coherent, 
 - **Offline and single-player by design:** the intended product excludes AWS services/SDKs, multiplayer, matchmaking and online accounts. Cleanup of inherited dependencies and download paths is still being audited.
 - **Lean, integrated tooling:** reuse proven O3DE components under engine ownership, remove unnecessary runtime/editor overhead with measurements, and keep authoring work out of source-free Shipping where possible.
 
+## Authoring tools at a glance
+
+These are the preferred, human-readable product and editor names. Technical acronyms remain searchable aliases during the ongoing integration; renaming a label does not rename serialized types or mark an implementation complete.
+
+| Public name | Technical alias | What it does |
+| --- | --- | --- |
+| **Jerico Assembly** | PWAS | Distributes and assembles scene objects, props and prefabs under placement rules, clearances and artist overrides. |
+| **Jerico Surface & Damage** | EPLS | Applies environmental aging and surface layers, and requests geometric chips or physical fractures from their owning systems. |
+| **Jerico Brush** | RBrush | Paints or edits material, vertex, mask, decal and damage data on selected surfaces. |
+| **Jerico Modular** | RMod | Builds modular pieces and routes such as pipes, rails, connectors and supports using compatible parts and sockets. |
+
 ## Current evidence versus targets
 
 | Area | What can be said today |
@@ -26,7 +37,7 @@ JericoEngine is transforming an Open 3D Engine (O3DE) codebase into a coherent, 
 | Renderer | Focused Vulkan runtime and DDGI/RT-related integration tests exist; global image quality, performance, Linux and VR acceptance remain open. |
 | BSP / geometry | Native CSG and geometry work has verified bounded test cases. The complete room/corridor/door/window authoring-to-cook-to-runtime workflow is still an acceptance target. |
 | Materials and assets | Work includes explicit PBR channel assignment, arbitrary source texture names, image processing and graph tooling. End-to-end format coverage, KTX/KTX2, reimport, cooking and shipping are not fully certified. |
-| Procedural authoring | Procedural Studio, Geology, RBrush, PWAS (placement/assembly) and EPLS (environmental layers) have defined ownership and technical contracts. Their complete integrated workflows are **not** verified engine features. |
+| Procedural authoring | Procedural Studio, Geology, **Jerico Brush (RBrush)**, **Jerico Modular (RMod)**, **Jerico Assembly (PWAS)** and **Jerico Surface & Damage (EPLS)** have defined ownership and technical contracts. Their complete integrated workflows are **not** verified engine features. |
 | Interaction and content | Jolt physics, Luau, Motion Studio, Sequencer, UI, audio, VFX, AI/navigation and other local systems remain on the roadmap; individual inherited or experimental components do not prove full Jerico integration. |
 
 The separate [Jerico Playground](https://github.com/JericoFX/JericoGeologyPlayground) contains mathematical experiments and historical test evidence. Its code and application are **not** part of the production JE runtime; any useful algorithm must be reviewed, adapted and retested in the current engine.
@@ -38,7 +49,7 @@ The separate [Jerico Playground](https://github.com/JericoFX/JericoGeologyPlaygr
 - [Documentation index](docs/README.md) · [Roadmap](docs/ROADMAP.md)
 - [Active work and recorded results](docs/work/ACTIVE_SLICE.md) · [Handoff](docs/work/HANDOFF.md)
 - [Native ownership contract](docs/architecture/JE_IDENTITY_AND_NATIVE_MODULES.md)
-- [PWAS technical contract](docs/PWAS_TECHNICAL_MASTER.md) · [EPLS technical contract](docs/EPLS_TECHNICAL_MASTER.md)
+- [Jerico Assembly (PWAS) contract](docs/PWAS_TECHNICAL_MASTER.md) · [Jerico Surface & Damage (EPLS) contract](docs/EPLS_TECHNICAL_MASTER.md)
 - [Playground-to-JE integration gates](docs/PLAYGROUND_TO_JE_INTEGRATION_MASTER.md)
 - [Third-party licensing and release checklist](docs/legal/O3DE_LICENSE_COMPLIANCE_CHECKLIST_2026_10_13.md)
 
