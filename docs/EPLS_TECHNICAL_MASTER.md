@@ -32,6 +32,32 @@ EPLS describe **historia ambiental observable** y estado físico/material de sup
 
 No usar una normal de sombreado como pendiente estructural sin indicar la fuente. Proyección world-space/triplanar debe conservar semánticas/geometría estables tras LOD/reimport; geometría nueva tiene `FreshInterior` y se evalúa con reglas propias, no hereda automáticamente el desgaste de una cara eliminada.
 
+## 2.1 Surface Data compartido y daño geométrico EPLS — ampliación 2026-10-27
+
+**Directiva de integración complementaria a [PWAS §2.1](PWAS_TECHNICAL_MASTER.md):** EPLS debe usar el **mismo** sistema interno de consultas, etiquetas, proveedores, modificadores, regiones sucias e identidad de superficies proveniente de la absorción de Surface Data de O3DE. Aprovechar la ampliación 3D prevista para PWAS (paredes, techos, cuevas, pisos superpuestos, múltiples impactos del mismo mesh) como **fuente compartida**, no crear otra consulta vertical, registry, Gem instalable o motor de daño separado. Surface Data localiza y describe superficies; **la operación de deformar, cortar o fracturar pertenece a JE::Geometry/Geology/Destruction**.
+
+La aplicación de EPLS tiene **tres niveles de efecto, elegidos explícitamente por receta/material/regla y presupuesto**:
+
+| Nivel | Efecto y salida | Owner que ejecuta | Física/colisión |
+|---|---|---|---|
+| 1. Cobertura visual | Polvo, humedad, óxido, erosión aparente, grietas visuales, normals/decals, masks y edge wear | EPLS solicita a Materials/RBrush/Renderer | No modifica topología, collider ni navegación |
+| 2. Modificación geométrica | Chips, biseles dañados, astillas, hendiduras, cavidades, grietas abiertas y agujeros reales; opcionalmente displacement localizado según coste | EPLS emite una solicitud tipada a Geometry/Geology/Destruction con Surface/Edge ID, región, parámetros, máscaras y revisión | Si cambia silueta/soporte, actualizar mesh, collision, nav y cook por el owner autorizado |
+| 3. Rotura estructural | Fracturas por impacto/estrés, piezas desprendidas, prefracture, bonds/anchors, debris y material interior expuesto | Geometry/Destruction prepara y publica fragmentos; Jolt controla cuerpos/constraints; PWAS coloca escombros persistentes cuando procede; VFX maneja microdebris | Una sola autoridad física Jolt; activar fragmentos localmente y con límites, sin fractura volumétrica general por cada detalle |
+
+**Contrato de datos y secuencia:** Surface Data + `SurfaceFeatureField`/`DamageField` + Material/Environment entregan posición, orientación, curvature/edge distance/cavity/thickness, roles, tags, `SurfaceId`/`FaceId`/`RegionId`, fuente, versión y límites. EPLS calcula máscara y decide un `DamageRequest` explícito (`VisualOnly | GeometryChip | StructuralFracture`, región/local frame, intensidad, seed, presupuesto, derechos de edición, expectedRevision). El owner geométrico valida grosor, topología, zona protegida, material y geometría vecina, calcula **preview** y emite diagnóstico si el corte es imposible. `Apply` publica un único cambio World transaccional con referencias/linaje y persistencia; `Cancel` y `Undo` no dejan fragmentos, colliders ni referencias huérfanas. Geometry/Jolt/Navigation/Surface Data reciben **invalidez localizada y revisión nueva** sólo tras publicar; el cambio no debe realimentar indefinidamente la misma regla EPLS. EPLS reevalúa únicamente máscaras sobre superficies efectivamente modificadas.
+
+**FreshInterior y consecuencias físicas:** una rotura expone caras nuevas con normales, UV/triplanar, material interior, IDs estables y `FreshInterior`; el desgaste anterior se remapea sólo cuando existe linaje inequívoco, sin proyectarse por proximidad a una cara vecina. La humedad/corrosión posterior podrá envejecer las caras nuevas. Fricción, resistencia, sonido de impacto/rotura y colisión provienen de `JE::Physics`/Physical Materials/Audio mediante mapeos explícitos; una etiqueta `wet` o `rust` no rompe por sí sola un objeto. Las reglas de gameplay que requieren ruptura a tiempo real se ejecutan por Geometry/Destruction/Jolt, consumiendo datos EPLS ya preparados cuando correspondan. Evitar hacer depender la simulación de la calidad gráfica.
+
+**Ejemplos de aceptación requeridos:**
+
+- **EPLS-SD-01:** viga de madera podrida y borde astillado: comparar cobertura visual, chip con silueta/collider actualizado y fractura autorizada con fragmentos físicos; cada nivel mantiene su semántica y presupuesto.
+- **EPLS-SD-02:** pared, techo y cavidad dentro de un único mesh: las consultas Surface Data 3D compartidas identifican la cara correcta; las máscaras/roturas respetan orientación y profundidad, sin pintar una superficie oculta equivocada.
+- **EPLS-SD-03:** perforar tabla de corredor y cortar borde de roca: apertura real, `FreshInterior`, normales/material interior correctos; collision/nav/Save/Reopen/Cook/source-free se actualizan donde corresponde.
+- **EPLS-SD-04:** romper un objeto generado por PWAS: autoría/instancia/fragmentos/locks persistentes, sin duplicar owner; Undo restaura geometría, estado físico y referencias.
+- **EPLS-SD-05:** pintura de óxido o humedad sobre material intacto: ni geometry rebuild ni recalculado de nav/placement; invalidación mínima y CPU/GPU/memoria antes/después registrados.
+
+Estos criterios son **PENDIENTES** hasta que el código nativo, la escena de prueba y la evidencia de Editor→Cook→Runtime los demuestren. Como parte del corte actual de Surface Data, comprobar que los providers, consultas 3D, dirty regions e identidad sirven tanto a PWAS como a EPLS. Los algoritmos de daño geométrico siguen el owner Geometry/Destruction y la integración desde Playground requiere procedencia/licencia y regresiones propias.
+
 ## 3. Tipos de capas y salidas permitidas
 
 | Capa | Factores de elegibilidad que deben declararse | Salida habitual / owner |
