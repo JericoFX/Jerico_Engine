@@ -1,9 +1,10 @@
-# PWAS — contrato técnico de autoría y ensamblaje
+# Jerico Assembly (PWAS) — contrato técnico de autoría y ensamblaje
 
 **Fecha:** 2026-10-24  
 **Estado:** SPECIFIED / ENGINE IMPLEMENTATION NOT VERIFIED  
 **Owner previsto:** JE::World + JE::Procedural authoring, con un único World/Asset/Transaction/Cook.  
 **Alcance:** Procedural World Assembly System (PWAS); NO es un generador de geometría, ni un sustituto del diseñador.
+**Nombre público y del Editor (2026-10-27):** **Jerico Assembly**. `PWAS` permanece como alias técnico histórico en documentación, referencias, contratos y código hasta una migración explícita compatible. Descripción pública: **distribuye y ensambla objetos y prefabs en una escena, respetando espacios, máscaras y decisiones del diseñador**. No crear un segundo sistema al cambiar el nombre.
 
 Este master amplía [JE_LEAN_ENGINE_AND_AUTHORING](JE_LEAN_ENGINE_AND_AUTHORING.md), [PROCEDURAL_PHYSICS_ENVIRONMENT_MASTER](PROCEDURAL_PHYSICS_ENVIRONMENT_MASTER.md), [REQUIREMENTS_MATRIX](REQUIREMENTS_MATRIX.md) (JER-053, JER-099, JER-101) y [PLAYGROUND_TO_JE_INTEGRATION_MASTER](PLAYGROUND_TO_JE_INTEGRATION_MASTER.md). En conflicto manda `GOAL.md`. El documento histórico de JericoEngine `docs/PROCEDURAL_PWAS_EPLS_MASTER.md`, blob `4f89d6ba268a78148d40450ae6cdb545d15c1e8f`, es fuente de requisitos y pruebas históricas, NO prueba de implementación O3DE.
 
