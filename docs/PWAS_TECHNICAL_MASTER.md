@@ -40,6 +40,36 @@ La propuesta devuelve **candidatos aceptados/rechazados**, motivo concreto de ca
 
 Los datos de autoría y runtime son distintos. El runtime recibe únicamente instancias, prefabs, relaciones, colliders/materiales y datos cocinados necesarios. No necesita Knowledge Library, generador, UI ni reglas editables para dibujar una sala estática.
 
+## 2.1 Surface Data como núcleo técnico de PWAS — directiva de integración 2026-10-27
+
+**Decisión del propietario:** aprovechar y ampliar la implementación **Surface Data** de O3DE que ya se está integrando, para cubrir las consultas y atributos de superficies que necesita **PWAS**. Esta ampliación pertenece al **mismo corte de integración nativa**: inventariar, implementar y verificar estos requisitos antes de declarar cerrada esa capacidad. No iniciar otro Surface Data paralelo ni convertir PWAS en una Gem instalable. Si el trabajo de Surface Data ya está en curso, reconciliar este apartado con su WIP, plan y responsables antes de editar código; preservar cambios y evidencia existentes.
+
+**Punto de partida comprobado en `development` al 2026-10-27:** `Gems/SurfaceData` todavía expone targets `Gem::SurfaceData.*`; `Engine/Render/Scene/Source/SurfaceData` ya contiene el proveedor para mallas y `JE::RenderScene` consume `Gem::SurfaceData.Static`. El API de `SurfaceDataSystemRequestBus` toma sólo XY en sus consultas de puntos; el proveedor mesh hace un rayo vertical y crea como máximo un punto por malla y posición XY. Distintos proveedores pueden producir varios puntos, pero un único mesh con pisos superpuestos/cavidades no expone automáticamente todos sus impactos. Este estado heredado **no acredita** PWAS implementado, ni que la ampliación siguiente esté programada o verificada.
+
+### Componentes que se deben integrar o ampliar
+
+1. **Proveedor y consulta semántica únicos.** Adaptar los registros, tags, pesos, modificadores, invalidación y batch queries de Surface Data al owner interno `JE::World` / `JE::Procedural` autorizado, sin otra registry de superficies ni alias `AZ::` permanente. BSP publica caras/regiones y roles; Geology publica superficies de roca/estratos/cueva y campos; meshes y prefabs aportan sus superficies; World conserva identidad, cambios y revisiones. No inferir atributos de nombres de textura, sufijos o shader.
+2. **Consultas 3D para PWAS.** Conservar la consulta XY vertical como camino barato compatible, y añadir una interfaz explícita orientada a rayos/dirección, volumen y selección de superficie de soporte. Soportar múltiples impactos ordenables del **mismo mesh**, techos, paredes, cuevas, túneles y pisos superpuestos; devolver posición, normal fiable, entidad/mesh, surface/face/region ID estable, material/role/tags, hit depth y revisión de fuente. No suponer que un hit top-down resuelve un techo o un soporte mural. Resolver en el proveedor competente o mediante consultas acotadas de `JE::Physics` (Jolt); no imponer Terrain heightfield a BSP/Geology.
+3. **Máscaras y distribución reutilizadas.** Integrar las capacidades relevantes de `GradientSignal` (máscaras, densidad, mezcla de campos) y de `Vegetation` (áreas, blockers, asset selection, spacing, slope/altitude filters, alignment, spawners) como infraestructura interna de la propuesta PWAS. Sustituir los supuestos exclusivos de vegetación/terrain por criterios genéricos para prefabs, escombros, rocas, piezas, sockets y ensamblajes; no crear un scatter adicional con otro dueño. `LandscapeCanvas` es referencia opcional para UI de grafos, nunca un segundo editor o requisito runtime.
+4. **Elegibilidad y colocación autorizada.** Surface Data informa superficie y atributos; PWAS resuelve reglas, seed, filtros, `NoGenerate`, protected/locked/manual, tamaño y clearance del **prefab completo**, portales/pasos, orientación y sockets. La selección se materializa mediante la transacción existente de World con preview, motivos de rechazo, Apply/Cancel, Undo/Redo, Save/Reopen y Cook; los resultados no se publican directamente desde el provider.
+5. **Física/materiales/EPLS.** Mantener separados Surface Tag, material visual, material físico y estado ambiental. Traducir explícitamente roles/tags a `JE::Physics` Jolt y a los sound sets si el consumidor lo requiere. Los emisores PhysX heredados se inventarían y migran por consumidores sin simulación doble. EPLS consume las mismas referencias, tags y máscaras para humedad, óxido, polvo, nieve, etc.; la modificación de capas no debe regenerar geometría/placement si no cambia una dependencia real.
+6. **Costo y ciclo de vida.** Batch queries, selección espacial, caché por región/revisión y refresh localizado; límites configurables para impactos/candidatos, y cancelación de jobs obsoletos. Medir consultas XY frente a 3D (CPU p50/p95/p99, memoria, casos densos y escena BSP+caverna). Separar providers mínimos runtime de edición/gradientes/spawners de autoría; Shipping ejecuta instancias cocinadas, no la evaluación procedural completa.
+
+**Dependencias y límites:** inspeccionar CMake/manifest, includes, reflection/UUID, servicios, recursos, activación, prefabs, builders y consumidores antes de retirar `Gem::SurfaceData`, `GradientSignal` o `Vegetation`. Preservar atribuciones O3DE y compatibilidad serializada verificada; no incorporar AWS, Gem Catalog, multiplayer, nuevas bibliotecas remotas ni un sistema World/física paralelo. Registrar integración como **IMPLEMENTADO** sólo con código/cableado real, **VERIFICADO** sólo con pruebas focales y un vertical Editor→Save/Reopen→Cook→Runtime, y **PENDIENTE** para lo demás.
+
+**Regresiones específicas que amplían PWAS-01…12:**
+
+| ID | Fixture | Condición de aprobación |
+|---|---|---|
+| PWAS-SD-01 | Habitación BSP con pared, techo, suelo y dos pisos en la misma X/Y | Consulta orientada devuelve el soporte solicitado con normal, ID y material correctos; el camino XY heredado conserva contrato |
+| PWAS-SD-02 | Mesh único de cueva con entrada, techo, interior y cavidad | Consulta de múltiples impactos no oculta pisos/techos por limitar a un hit top-down |
+| PWAS-SD-03 | Repisa/elemento fijado a muro junto a puerta protegida | Orientación y sockets estables; bloqueo de apertura y clearance por bounds completos |
+| PWAS-SD-04 | Mismo nivel con receta, seed, `NoGenerate`, manual/locks y cambios localizados | Prefabs/IDs/hashes deterministas; Undo/Save/Reopen/Cook equivalentes, sin regenerar regiones ajenas |
+| PWAS-SD-05 | Tag de madera, metal, roca y madera mojada | Material visual, físico, audio y capa EPLS se resuelven por mapeos explícitos; el estado wetness no se pierde al cambiar calidad |
+| PWAS-SD-06 | Escena densa con consultas por lotes y dirty region | Tiempos CPU p50/p95/p99 y memoria registrados; presupuesto/cancelación respetados, sin escanear todas las mallas por frame |
+
+**Alcance:** directiva y criterios nuevos para la integración en curso; las seis regresiones están **PENDIENTES** hasta que existan implementación y resultados reproducibles.
+
 ## 3. Esquema conceptual de receta y resultado
 
 Los nombres siguientes son **campos contractuales**, no clases C++ ya existentes ni un nuevo serializer aprobado. Codex debe mapearlos a los DTO/reflection/versioning de `JE::World`/Assets ya disponibles; antes de fijar ABI o chunks nuevos, escribir el adaptador y sus pruebas.
