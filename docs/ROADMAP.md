@@ -81,3 +81,17 @@ Catálogo `.r*` y `.epak` real, ABI independiente, chunks/deps/hash/bounds/versi
 No es la primera etapa de optimizar. Cada N ya mide y muestra. Aquí cerrar matriz de pares gráficos, recorridos editor/runtime/cook, namespaces/source/generated/ABI, package/link graph, privacidad/offline, crash/hang/soak/fuzz/device/focus/session loss, incremental rebuild, accesibilidad y calidad.
 
 SIGGRAPH desde N1/N2/N8: por escena BSP/geología medir bottleneck, conservar baseline, aplicar algoritmo mínimo, comparar ON/OFF/ON e imagen/timings/memoria. Rechazar mejoras sin beneficio o con deuda de calidad. No adoptar una arquitectura/paper completo ni importar tuning de consolas. Más checks no equivalen a un motor usable.
+
+### Experimento gráfico AMD posterior a la integración de Gems (decisión 2026-10-29; diferido)
+
+**Prioridad: último trabajo, después de absorber y verificar las Gems restantes en los propietarios nativos JE. Estado: BACKLOG / DESIGN ONLY.** El propietario eligió la **opción A**, comparación reversible **dentro de JericoEngine**, no un prototipo Cauldron externo ni sustitución anticipada. Esta decisión no cambia el ACTIVE_SLICE vigente, no habilita ejecución durante la integración de Gems y no acredita efectos adaptados o probados.
+
+Una vez completado el gate de integración nativa de Gems, estudiar y adaptar desde AMD FidelityFX SDK con versión, procedencia y licencia auditadas, dentro de `JE::Render`, sin Gems activables por proyecto ni segundo renderer. Conservar las técnicas existentes para comparación y fallback:
+
+- **Oclusión ambiental:** Disabled / SSAO / GTAO / **AMD CACAO**.
+- **Reflejos:** Disabled / SSR / **AMD SSSR** / ray tracing existente.
+- **Iluminación global:** Disabled / DDGI de Atom / **AMD Brixelizer GI**. No sustituir DDGI ni duplicar su ownership; Brixelizer requiere sus propios campos dispersos, gestión de geometría, caché de radiancia y límites de VRAM.
+
+Orden recomendado al reabrir el trabajo: **CACAO → SSSR → Brixelizer GI**, cada uno como vertical con habilitación/deshabilitación real y sin mantener simultáneamente dos caminos costosos que no se utilicen. La interfaz de comparación selecciona un método por categoría para evitar doble oclusión/reflejo/GI accidental. Cualquier combinación se valida antes de exponerla en Runtime.
+
+**Aceptación futura:** misma escena de mina húmeda/cueva, cámara, resolución, luces, materiales y hardware; capturas nativas comparables y artefactos, timings GPU y CPU p50/p95/p99, VRAM/RAM, calidad temporal, activación/desactivación y fallback. Windows/Vulkan y Linux/Vulkan son gates separados; DX12 se conserva inactivo hasta instrucción posterior. Sin resultados visuales ni benchmarking, el estado sigue NOT TESTED, no integrado. Preparar el diseño detallado y obtener aceptación antes de escribir el primer efecto.
