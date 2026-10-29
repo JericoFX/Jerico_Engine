@@ -193,8 +193,10 @@ namespace AZ::SerializeContextTools
             AZStd::string content;
             content.reserve(1 * 1024 * 1024); // Reserve 1mb to avoid frequently resizing the string.
 
-            auto callback = [&content, &result](void* classPtr, const Uuid& classId, SerializeContext* context)
+            bool rootInspected = false;
+            auto callback = [&content, &result, &rootInspected](void* classPtr, const Uuid& classId, SerializeContext* context)
             {
+                rootInspected = true;
                 result = DumpClassContent(content, classPtr, classId, context) && result;
 
                 const SerializeContext::ClassData* classData = context->FindClassData(classId);
@@ -210,6 +212,13 @@ namespace AZ::SerializeContextTools
             };
             if (!AZ::Utils::InspectSerializedFile(filePath.c_str(), sc, callback))
             {
+                result = false;
+                continue;
+            }
+
+            if (!rootInspected)
+            {
+                AZ_Error("DumpFiles", false, "No root object was inspected in '%s'; check that its types are reflected.", filePath.c_str());
                 result = false;
                 continue;
             }
