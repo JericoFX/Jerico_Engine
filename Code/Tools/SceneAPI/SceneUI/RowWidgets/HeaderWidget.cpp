@@ -7,6 +7,7 @@
  */
 
 #include <QEvent>
+#include <QPointer>
 #include <RowWidgets/ui_HeaderWidget.h>
 #include <AzCore/EBus/EBus.h>
 #include <AzCore/Component/ComponentApplicationBus.h>
@@ -160,7 +161,14 @@ namespace AZ
                     ManifestVectorWidget* manifestVectorWidget = qobject_cast<ManifestVectorWidget*>(widget);
                     if (manifestVectorWidget)
                     {
-                        if (manifestVectorWidget->RemoveManifestObject(m_target))
+                        const QPointer<HeaderWidget> guard(this);
+                        const bool removed = manifestVectorWidget->RemoveManifestObject(m_target);
+                        // Direct modifier notifications may rebuild this collection and destroy its header.
+                        if (!guard)
+                        {
+                            return;
+                        }
+                        if (removed)
                         {
                             m_target = nullptr;
                             // Hide and disable the button so when users spam the delete button only a single click is recorded.
