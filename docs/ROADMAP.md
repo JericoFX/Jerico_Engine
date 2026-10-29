@@ -90,8 +90,20 @@ Una vez completado el gate de integración nativa de Gems, estudiar y adaptar de
 
 - **Oclusión ambiental:** Disabled / SSAO / GTAO / **AMD CACAO**.
 - **Reflejos:** Disabled / SSR / **AMD SSSR** / ray tracing existente.
-- **Iluminación global:** Disabled / DDGI de Atom / **AMD Brixelizer GI**. No sustituir DDGI ni duplicar su ownership; Brixelizer requiere sus propios campos dispersos, gestión de geometría, caché de radiancia y límites de VRAM.
 
-Orden recomendado al reabrir el trabajo: **CACAO → SSSR → Brixelizer GI**, cada uno como vertical con habilitación/deshabilitación real y sin mantener simultáneamente dos caminos costosos que no se utilicen. La interfaz de comparación selecciona un método por categoría para evitar doble oclusión/reflejo/GI accidental. Cualquier combinación se valida antes de exponerla en Runtime.
+Orden recomendado al reabrir el trabajo: **CACAO → SSSR**, cada uno como vertical con habilitación/deshabilitación real y sin mantener simultáneamente dos caminos costosos que no se utilicen. La interfaz de comparación selecciona un método por categoría para evitar doble oclusión o reflejos accidentales. Cualquier combinación se valida antes de exponerla en Runtime.
 
 **Aceptación futura:** misma escena de mina húmeda/cueva, cámara, resolución, luces, materiales y hardware; capturas nativas comparables y artefactos, timings GPU y CPU p50/p95/p99, VRAM/RAM, calidad temporal, activación/desactivación y fallback. Windows/Vulkan y Linux/Vulkan son gates separados; DX12 se conserva inactivo hasta instrucción posterior. Sin resultados visuales ni benchmarking, el estado sigue NOT TESTED, no integrado. Preparar el diseño detallado y obtener aceptación antes de escribir el primer efecto.
+
+### DDGI con cobertura automática tipo Flax (investigación condicionada; después de integrar Gems)
+
+**Objetivo de autoría:** activar GI para una mina/cueva/corredores sin obligar al artista a colocar manualmente `DiffuseProbeGrid` o cubemaps. Los probes internos NO desaparecen: Flax utiliza DDGI con sondas automáticas que siguen la cámara y cascadas, y traza mediante Global SDF y Global Surface Atlas. Los cubemaps/reflection probes son un problema distinto: reflejos especulares. **No copiar el renderer, código o arquitectura de Flax.**
+
+**Base actual:** `JE::Render::Features::DiffuseProbeGrid` deriva del DDGI de Atom y usa volúmenes con espaciado y modos Real-Time RT/Baked/AutoSelect. Conservar ese único propietario, datos, assets y fallback; no declarar que ya existe un sistema Flax-like ni prometer paridad en GPU sin RT.
+
+- **Fase 0 — medir:** fixture con cuarto oscuro, puerta abierta/cerrada, corredor, cueva y cámara en movimiento; comparar DDGI manual vigente contra iluminación sin GI. Registrar GPU p50/p95/p99, memoria, fuga de luz, ghosting, cambios bruscos al mover cámara y latencia al encender/apagar luces.
+- **Fase 1 — automatizar primero:** evaluar un modo `Automatic GI Coverage` que administre/reutilice grids alrededor del jugador/cámara dentro del owner nativo, con presupuesto de probes/rayos y actualización incremental; preservar `Manual/Advanced` para quien necesite control. Estudiar grid desplazable y luego cascadas solo si el renderer actual las admite a coste razonable. No crear entidades por frame, ni reconstruir texturas completas al desplazarse, ni exigir cubemaps de artista para GI difusa.
+- **Fase 2 — compatibilidad:** probar interiores separados por muros/puertas, teletransporte, cambio de nivel y streaming, Editor/Runtime, save/reopen y pérdida de dispositivo; preservar baked/fallback en GPU sin RT. Software tracing con SDF + atlas es una alternativa **independiente, cara y NO aprobada**: solo estudiarla si un caso medido demuestra una ventaja que compensa duplicar geometría/cachés.
+- **Gate de adopción:** aceptar el modo automático únicamente si reduce trabajo de autoría sin regresiones de calidad/rendimiento frente a DDGI manual a igual hardware/escena; si falla, mantener DDGI actual. No desplazar la absorción de Gems ni registrar esta propuesta como implementada o probada.
+
+Referencias técnicas de lectura (no dependencias): [Flax Realtime GI](https://docs.flaxengine.com/manual/graphics/lighting/gi/realtime.html) y [O3DE Diffuse Probe Grid](https://www.docs.o3de.org/docs/user-guide/components/reference/atom/diffuse-probe-grid/).
