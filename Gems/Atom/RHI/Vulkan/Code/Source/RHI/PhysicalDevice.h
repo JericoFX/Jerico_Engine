@@ -73,6 +73,7 @@ namespace AZ
             ExternalMemoryHost,
             ExternalSemaphore,
             SeparateDepthStencilLayouts,
+            SwapchainMaintenance1,
             Count
         };
 
@@ -119,6 +120,7 @@ namespace AZ
             const VkPhysicalDeviceTimelineSemaphoreFeatures& GetPhysicalDeviceTimelineSemaphoreFeatures() const;
             const VkPhysicalDeviceSubpassMergeFeedbackFeaturesEXT& GetPhysicalSubpassMergeFeedbackFeatures() const;
             const VkPhysicalDeviceExternalMemoryHostPropertiesEXT& GetExternalMemoryHostProperties() const;
+            const VkPhysicalDeviceSwapchainMaintenance1FeaturesEXT& GetSwapchainMaintenance1Features() const;
 
             VkFormatProperties GetFormatProperties(RHI::Format format, bool raiseAsserts = true) const;
             StringList GetDeviceLayerNames() const;
@@ -173,6 +175,7 @@ namespace AZ
             VkPhysicalDeviceTimelineSemaphoreFeatures m_timelineSemaphoreFeatures{};
             VkPhysicalDeviceSubpassMergeFeedbackFeaturesEXT m_subpassMergeFeedbackFeatures{};
             VkPhysicalDeviceExternalMemoryHostPropertiesEXT m_externalMemoryHostProperties{};
+            VkPhysicalDeviceSwapchainMaintenance1FeaturesEXT m_swapchainMaintenance1Features{};
             uint32_t m_vulkanVersion = 0;
         };
     }

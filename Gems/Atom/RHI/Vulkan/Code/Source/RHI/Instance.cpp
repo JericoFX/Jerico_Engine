@@ -12,6 +12,7 @@
 #include <Atom/RHI/RHIUtils.h>
 #include <AzCore/Debug/Trace.h>
 #include <AzCore/Utils/Utils.h>
+#include <AzCore/std/string/string_view.h>
 #include <RHI/Device.h>
 #include <RHI/Instance.h>
 #include <RHI/PhysicalDevice.h>
@@ -82,6 +83,8 @@ namespace AZ
 #endif
             m_descriptor.m_optionalExtensions.push_back(VK_EXT_HDR_METADATA_EXTENSION_NAME);
             m_descriptor.m_optionalExtensions.push_back(VK_EXT_SWAPCHAIN_COLOR_SPACE_EXTENSION_NAME);
+            m_descriptor.m_optionalExtensions.push_back(VK_KHR_GET_SURFACE_CAPABILITIES_2_EXTENSION_NAME);
+            m_descriptor.m_optionalExtensions.push_back(VK_EXT_SURFACE_MAINTENANCE_1_EXTENSION_NAME);
 
             uint32_t appApiVersion = VK_API_VERSION_1_0;
             m_instanceVersion = VK_API_VERSION_1_0;
@@ -165,6 +168,19 @@ namespace AZ
             }
 
             RawStringList optionalExtensions = FilterList(m_descriptor.m_optionalExtensions, instanceExtensions);
+            auto enabledOrSelected = [&](const char* name)
+            {
+                auto matches = [name](const char* extension) { return AZStd::string_view(extension) == name; };
+                return AZStd::any_of(m_descriptor.m_requiredExtensions.begin(), m_descriptor.m_requiredExtensions.end(), matches) ||
+                    AZStd::any_of(optionalExtensions.begin(), optionalExtensions.end(), matches);
+            };
+            if (!enabledOrSelected(VK_KHR_SURFACE_EXTENSION_NAME) ||
+                !enabledOrSelected(VK_KHR_GET_SURFACE_CAPABILITIES_2_EXTENSION_NAME))
+            {
+                // Only remove our optional candidate. Explicit third-party requirements remain required.
+                optionalExtensions.erase(AZStd::remove_if(optionalExtensions.begin(), optionalExtensions.end(), [](const char* extension)
+                    { return AZStd::string_view(extension) == VK_EXT_SURFACE_MAINTENANCE_1_EXTENSION_NAME; }), optionalExtensions.end());
+            }
             m_descriptor.m_requiredExtensions.insert(m_descriptor.m_requiredExtensions.end(), optionalExtensions.begin(), optionalExtensions.end());
 
             m_instanceCreateInfo.enabledLayerCount = static_cast<uint32_t>(m_descriptor.m_requiredLayers.size());

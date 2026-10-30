@@ -12,6 +12,7 @@
 #include <AzCore/std/containers/list.h>
 #include <AzCore/std/containers/vector.h>
 #include <AzCore/std/utils.h>
+#include <AzCore/std/smart_ptr/shared_ptr.h>
 #include <RHI/Semaphore.h>
 #include <RHI/Image.h>
 #include <RHI/ImageView.h>
@@ -99,8 +100,10 @@ namespace AZ
 
             //! Destroy the surface.
             void InvalidateSurface();
-            //! Destroy the swapchain.
-            void InvalidateNativeSwapChain(VkSwapchainKHR swapchain);
+            struct PresentationGeneration;
+            void FlushPresentationWork();
+            void RetireCurrentGeneration();
+            void CollectRetiredGenerations(bool waitForCompletion = false);
 
             VkColorSpaceKHR m_colorSpace = VK_COLOR_SPACE_MAX_ENUM_KHR;
 
@@ -108,6 +111,9 @@ namespace AZ
             VkSwapchainKHR m_nativeSwapChain = VK_NULL_HANDLE;
             CommandQueue* m_presentationQueue = nullptr;
             FrameContext m_currentFrameContext;
+            bool m_surfaceNeedsRebuild = false;
+            AZStd::shared_ptr<PresentationGeneration> m_presentationGeneration;
+            AZStd::list<AZStd::shared_ptr<PresentationGeneration>> m_retiredGenerations;
 
             //! Swapchain data
             VkSurfaceFormatKHR m_surfaceFormat = {};

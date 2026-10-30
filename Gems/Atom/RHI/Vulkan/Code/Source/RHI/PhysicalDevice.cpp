@@ -11,6 +11,7 @@
 #include <AzCore/std/containers/set.h>
 #include <AzCore/std/string/conversions.h>
 #include <RHI/Instance.h>
+#include <AzCore/std/string/string_view.h>
 #include <RHI/PhysicalDevice.h>
 #include <Vulkan_Fence_Platform.h>
 #include <Vulkan_Traits_Platform.h>
@@ -380,6 +381,7 @@ namespace AZ
             VK_EXT_EXTERNAL_MEMORY_HOST_EXTENSION_NAME,
             ExternalSemaphoreExtensionName,
             VK_KHR_SEPARATE_DEPTH_STENCIL_LAYOUTS_EXTENSION_NAME,
+            VK_EXT_SWAPCHAIN_MAINTENANCE_1_EXTENSION_NAME,
         };
 
         RawStringList PhysicalDevice::GetEnabledOptionalExtensions()
@@ -395,6 +397,11 @@ namespace AZ
             }
 
             return optionalExtensions;
+        }
+
+        const VkPhysicalDeviceSwapchainMaintenance1FeaturesEXT& PhysicalDevice::GetSwapchainMaintenance1Features() const
+        {
+            return m_swapchainMaintenance1Features;
         }
 
         void PhysicalDevice::EnableSupportedOptionalExtensions()
@@ -454,6 +461,17 @@ namespace AZ
             m_vulkanVersion = AZStd::min(Instance::GetInstance().GetVkAppInfo().apiVersion, m_deviceProperties.apiVersion);
 
             EnableSupportedOptionalExtensions();
+            const auto& loadedInstanceExtensions = Instance::GetInstance().GetLoadedExtensions();
+            auto instanceExtensionEnabled = [&](const char* name)
+            {
+                return AZStd::any_of(loadedInstanceExtensions.begin(), loadedInstanceExtensions.end(),
+                    [name](const char* extension) { return AZStd::string_view(extension) == name; });
+            };
+            if (!instanceExtensionEnabled(VK_EXT_SURFACE_MAINTENANCE_1_EXTENSION_NAME) ||
+                !instanceExtensionEnabled(VK_KHR_GET_SURFACE_CAPABILITIES_2_EXTENSION_NAME))
+            {
+                DisableOptionalDeviceExtension(OptionalDeviceExtension::SwapchainMaintenance1);
+            }
 
             if (VK_INSTANCE_EXTENSION_SUPPORTED(context, KHR_get_physical_device_properties2))
             {
@@ -605,6 +623,11 @@ namespace AZ
                     }
                 }
 
+                if (IsOptionalDeviceExtensionSupported(OptionalDeviceExtension::SwapchainMaintenance1))
+                {
+                    m_swapchainMaintenance1Features.sType = VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_SWAPCHAIN_MAINTENANCE_1_FEATURES_EXT;
+                    deviceFeaturesAppender.append(m_swapchainMaintenance1Features);
+                }
                 deviceFeaturesAppender.finish();
                 context.GetPhysicalDeviceFeatures2KHR(vkPhysicalDevice, &deviceFeatures2);
                 m_deviceFeatures = deviceFeatures2.features;

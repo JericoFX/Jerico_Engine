@@ -28,12 +28,238 @@
 #include <RHI/RenderPass.h>
 #include <RHI/SwapChain.h>
 #include <RHI/ReleaseContainer.h>
+#include <RHI/BinarySemaphore.h>
+#include <RHI/PhysicalDevice.h>
+#include <AzCore/std/parallel/mutex.h>
+#include <AzCore/std/parallel/lock.h>
+#include <AzCore/std/smart_ptr/make_shared.h>
 #include <Atom/RHI.Reflect/VkAllocator.h>
 
 namespace AZ
 {
     namespace Vulkan
     {
+        struct SwapChain::PresentationGeneration
+        {
+            struct ImageSync
+            {
+                RHI::Ptr<Semaphore> m_renderFinished;
+                RHI::Ptr<Semaphore> m_ownershipTransferred;
+                VkFence m_presentFence = VK_NULL_HANDLE;
+                bool m_presentFencePending = false;
+            };
+            struct AcquireSync
+            {
+                VkFence m_fence = VK_NULL_HANDLE;
+                bool m_pending = false;
+            };
+
+            Device* m_device = nullptr;
+            CommandQueue* m_queue = nullptr;
+            RHI::Ptr<WSISurface> m_surface;
+            VkSwapchainKHR m_swapchain = VK_NULL_HANDLE;
+            AZStd::vector<ImageSync> m_images;
+            AZStd::vector<uint32_t> m_nativeImageIndices;
+            AZStd::vector<AcquireSync> m_acquires;
+            AZStd::mutex m_mutex;
+            RHI::Ptr<Semaphore> m_unusedAcquireSemaphore;
+            uint32_t m_firstPresentedImage = UINT32_MAX;
+            VkFence m_firstPresentAcquireFence = VK_NULL_HANDLE;
+            uint32_t m_queuedPresents = 0;
+            bool m_maintenance1 = false;
+            bool m_firstPresentComplete = false;
+            bool m_completeBySuccessor = false;
+            bool m_recreationRequested = false;
+            bool m_deviceLost = false;
+            bool m_surfaceLost = false;
+
+            ~PresentationGeneration()
+            {
+                auto& context = m_device->GetContext();
+                for (const auto& image : m_images)
+                {
+                    if (image.m_presentFence != VK_NULL_HANDLE)
+                    {
+                        context.DestroyFence(m_device->GetNativeDevice(), image.m_presentFence, VkSystemAllocator::Get());
+                    }
+                }
+                for (const auto& acquire : m_acquires)
+                {
+                    if (acquire.m_fence != VK_NULL_HANDLE)
+                    {
+                        context.DestroyFence(m_device->GetNativeDevice(), acquire.m_fence, VkSystemAllocator::Get());
+                    }
+                }
+                if (m_swapchain != VK_NULL_HANDLE)
+                {
+                    context.DestroySwapchainKHR(m_device->GetNativeDevice(), m_swapchain, VkSystemAllocator::Get());
+                }
+            }
+
+            // Called under m_mutex. Acquire fences only witness acquisition; they do not retire GPU rendering.
+            VkResult PollAcquires(bool wait)
+            {
+                for (auto& acquire : m_acquires)
+                {
+                    if (!acquire.m_pending)
+                    {
+                        continue;
+                    }
+                    VkResult result = wait ? m_device->GetContext().WaitForFences(
+                        m_device->GetNativeDevice(), 1, &acquire.m_fence, VK_TRUE, UINT64_MAX) :
+                        m_device->GetContext().GetFenceStatus(m_device->GetNativeDevice(), acquire.m_fence);
+                    if (result == VK_NOT_READY)
+                    {
+                        continue;
+                    }
+                    if (result != VK_SUCCESS)
+                    {
+                        m_deviceLost = result == VK_ERROR_DEVICE_LOST;
+                        return result;
+                    }
+                    if (acquire.m_fence == m_firstPresentAcquireFence)
+                    {
+                        m_firstPresentComplete = true;
+                    }
+                    acquire.m_pending = false;
+                }
+                return VK_SUCCESS;
+            }
+        };
+
+        void SwapChain::FlushPresentationWork()
+        {
+            // Present() itself runs on a command-queue worker. This barrier belongs only to the
+            // caller's frame boundary/resize/shutdown, never to PresentInternal or AcquireNewImage.
+            auto& queues = static_cast<Device&>(GetDevice()).GetCommandQueueContext();
+            for (uint32_t index = 0; index < static_cast<uint32_t>(RHI::HardwareQueueClass::Count); ++index)
+            {
+                queues.GetCommandQueue(static_cast<RHI::HardwareQueueClass>(index)).FlushCommands();
+            }
+            if (m_presentationQueue)
+            {
+                m_presentationQueue->FlushCommands();
+            }
+            for (const auto& generation : m_retiredGenerations)
+            {
+                generation->m_queue->FlushCommands();
+            }
+        }
+
+        void SwapChain::RetireCurrentGeneration()
+        {
+            if (!m_presentationGeneration)
+            {
+                return;
+            }
+            if (m_currentFrameContext.m_imageAvailableSemaphore)
+            {
+                // An acquired image might never reach a compiled scope during recreation. Keep the wrapper alive
+                // until its acquire fence and GPU work have completed; do not recycle a possibly signaled binary.
+                auto* semaphore = m_currentFrameContext.m_imageAvailableSemaphore;
+                semaphore->SetRecycleValue(false);
+                m_presentationGeneration->m_unusedAcquireSemaphore = semaphore;
+                static_cast<Device&>(GetDevice()).GetSwapChainSemaphoreAllocator().DeAllocate(semaphore);
+            }
+            m_currentFrameContext = {};
+            m_swapChainBarrier = {};
+            m_retiredGenerations.push_back(AZStd::move(m_presentationGeneration));
+        }
+
+        void SwapChain::CollectRetiredGenerations(bool waitForCompletion)
+        {
+            auto& device = static_cast<Device&>(GetDevice());
+            if (waitForCompletion)
+            {
+                for (const auto& generation : m_retiredGenerations)
+                {
+                    generation->m_queue->FlushCommands();
+                }
+                device.GetCommandQueueContext().WaitForIdle();
+            }
+            // A completed first presentation of a newer generation proves earlier presentations on that
+            // same presentation queue have passed. Preserve the proof across chains of rapid recreations.
+            auto propagate = [&](const AZStd::shared_ptr<PresentationGeneration>& successor)
+            {
+                AZStd::lock_guard<AZStd::mutex> successorLock(successor->m_mutex);
+                successor->PollAcquires(waitForCompletion);
+                if (!successor->m_firstPresentComplete)
+                {
+                    return;
+                }
+                for (const auto& previous : m_retiredGenerations)
+                {
+                    if (previous == successor)
+                    {
+                        break;
+                    }
+                    if (previous->m_queue == successor->m_queue && previous->m_surface == successor->m_surface)
+                    {
+                        previous->m_completeBySuccessor = true;
+                    }
+                }
+            };
+            for (const auto& generation : m_retiredGenerations)
+            {
+                propagate(generation);
+            }
+            if (m_presentationGeneration)
+            {
+                propagate(m_presentationGeneration);
+            }
+            bool gpuIdle = waitForCompletion;
+            for (auto iterator = m_retiredGenerations.begin(); iterator != m_retiredGenerations.end();)
+            {
+                auto& generation = **iterator;
+                AZStd::unique_lock<AZStd::mutex> lock(generation.m_mutex);
+                bool ready = generation.m_queuedPresents == 0;
+                generation.PollAcquires(waitForCompletion);
+                for (const auto& acquire : generation.m_acquires)
+                {
+                    ready &= !acquire.m_pending;
+                }
+                if (generation.m_maintenance1)
+                {
+                    for (const auto& image : generation.m_images)
+                    {
+                        if (image.m_presentFencePending)
+                        {
+                            VkResult result = waitForCompletion ? device.GetContext().WaitForFences(
+                                device.GetNativeDevice(), 1, &image.m_presentFence, VK_TRUE, UINT64_MAX) :
+                                device.GetContext().GetFenceStatus(device.GetNativeDevice(), image.m_presentFence);
+                            ready &= result == VK_SUCCESS;
+                            generation.m_deviceLost |= result == VK_ERROR_DEVICE_LOST;
+                        }
+                    }
+                }
+                else
+                {
+                    // Final shutdown without maintenance1 has no portable present-completion primitive.
+                    // Preserve the established WaitIdle teardown fallback; do not call it a formal proof.
+                    ready &= waitForCompletion || generation.m_completeBySuccessor ||
+                        generation.m_firstPresentedImage == UINT32_MAX;
+                }
+                ready |= generation.m_deviceLost;
+                lock.unlock();
+                if (ready)
+                {
+                    // Present/acquire evidence alone does not cover unrelated GPU uses of the old image.
+                    if (!gpuIdle)
+                    {
+                        // A real retirement is ready. Drain all CPU queue workers before the device-wide
+                        // GPU idle, including a concurrent newer generation's native QueuePresent call.
+                        FlushPresentationWork();
+                        device.GetCommandQueueContext().WaitForIdle();
+                        gpuIdle = true;
+                    }
+                    iterator = m_retiredGenerations.erase(iterator);
+                }
+                else
+                {
+                    ++iterator;
+                }
+            }
+        }
         static bool IsDefaultSwapChainNeeded()
         {
             auto* xrSystem = RHI::RHISystemInterface::Get()->GetXRSystem();
@@ -75,15 +301,67 @@ namespace AZ
 
         bool SwapChain::ProcessRecreation()
         {
+            if (GetDescriptor().m_isXrSwapChain)
+            {
+                return false;
+            }
+            auto updateRecreationRequests = [this]()
+            {
+                if (m_presentationGeneration)
+                {
+                    AZStd::lock_guard<AZStd::mutex> lock(m_presentationGeneration->m_mutex);
+                    m_pendingRecreation |= m_presentationGeneration->m_recreationRequested;
+                    m_surfaceNeedsRebuild |= m_presentationGeneration->m_surfaceLost;
+                    if (m_presentationGeneration->m_deviceLost)
+                    {
+                        AZ_Error("Vulkan", false, "Cannot recreate swapchain on a lost device.");
+                        return false;
+                    }
+                }
+                return true;
+            };
+            if (!updateRecreationRequests())
+            {
+                return false;
+            }
+            if (!m_pendingRecreation && !m_surfaceNeedsRebuild)
+            {
+                if (!m_retiredGenerations.empty())
+                {
+                    // Poll only. CollectRetiredGenerations drains queues only when a retirement is ready.
+                    CollectRetiredGenerations();
+                }
+                return false;
+            }
+            // Generation replacement is main/caller-owned. A worker may finish or report another error
+            // during this drain, so capture its protected requests again before mutating the generation.
+            FlushPresentationWork();
+            if (!updateRecreationRequests())
+            {
+                return false;
+            }
+            CollectRetiredGenerations();
+            if (m_surfaceNeedsRebuild)
+            {
+                // No further acquisition can witness the old surface. Retire it as a terminal WSI
+                // boundary: present fences when available, documented WaitIdle fallback otherwise.
+                ShutdownImages();
+                RetireCurrentGeneration();
+                m_nativeSwapChain = VK_NULL_HANDLE;
+                CollectRetiredGenerations(true);
+                if (!m_retiredGenerations.empty() || BuildSurface(GetDescriptor()) != RHI::ResultCode::Success)
+                {
+                    return false;
+                }
+                m_surfaceNeedsRebuild = false;
+            }
             if (m_pendingRecreation)
             {
-                VkSwapchainKHR oldSwapchain = m_nativeSwapChain;
-                ShutdownImages();
-                CreateSwapchain();
-                // Destroy the old swapchain AFTER creating the new one (because it's used for building the new one)
-                InvalidateNativeSwapChain(oldSwapchain);
-                InitImages();
-
+                // Base::Resize updates its image count/descriptor and owns ShutdownImages/InitImages.
+                if (Base::Resize(m_dimensions) != RHI::ResultCode::Success)
+                {
+                    return false;
+                }
                 m_pendingRecreation = false;
                 return true;
             }
@@ -148,19 +426,18 @@ namespace AZ
 
         void SwapChain::ShutdownInternal()
         {
-            //Nothing to clean as all the native objects for xr swapchain is handles by xr modules
             if (GetDescriptor().m_isXrSwapChain)
             {
                 return;
             }
-
-            InvalidateNativeSwapChain(m_nativeSwapChain);
+            FlushPresentationWork();
+            RetireCurrentGeneration();
+            CollectRetiredGenerations(true);
+            AZ_Assert(m_retiredGenerations.empty(), "Presentation generation did not finish retiring.");
             m_nativeSwapChain = VK_NULL_HANDLE;
             InvalidateSurface();
             m_presentationQueue = nullptr;
-
             m_swapchainNativeImages.clear();
-            m_currentFrameContext = {};
         }
 
         RHI::ResultCode SwapChain::InitImageInternal(const RHI::DeviceSwapChain::InitImageRequest& request)
@@ -206,14 +483,15 @@ namespace AZ
 
         RHI::ResultCode SwapChain::ResizeInternal(const RHI::SwapChainDimensions& dimensions, RHI::SwapChainDimensions* nativeDimensions)
         {
-            VkSwapchainKHR oldSwapchain = m_nativeSwapChain;
+            FlushPresentationWork();
             auto& device = static_cast<Device&>(GetDevice());
             m_dimensions = dimensions;
 
             auto& presentationQueue = device.GetCommandQueueContext().GetOrCreatePresentationCommandQueue(*this);
             m_presentationQueue = &presentationQueue;
 
-            CreateSwapchain();
+            RHI::ResultCode result = CreateSwapchain();
+            RETURN_RESULT_IF_UNSUCCESSFUL(result);
 
             if (nativeDimensions)
             {
@@ -226,128 +504,134 @@ namespace AZ
                 nativeDimensions->m_imageFormat = ConvertFormat(m_surfaceFormat.format);
             }
 
-            // Destroy the old swapchain AFTER creating the new one (because it's used for building the new one)
-            InvalidateNativeSwapChain(oldSwapchain);
+            CollectRetiredGenerations();
 
             return RHI::ResultCode::Success;
         }
 
         uint32_t SwapChain::PresentInternal()
         {
-            // No need to present a xr swapchain
             if (GetDescriptor().m_isXrSwapChain)
             {
                 return 0;
             }
-
             auto& device = static_cast<Device&>(GetDevice());
-
-            const uint32_t imageIndex = GetCurrentImageIndex();
-
-            auto presentCommand = [this, imageIndex, presentSemaphore = m_currentFrameContext.m_presentableSemaphore, &device](void* queue)
+            auto generation = m_presentationGeneration;
+            AZ_Assert(generation, "No acquired presentation generation.");
+            if (!generation)
             {
-                Queue* vulkanQueue = static_cast<Queue*>(queue);
-                VkSemaphore waitSemaphore = presentSemaphore->GetNativeSemaphore();
-                if (m_swapChainBarrier.m_isValid)
+                return 0;
+            }
+            const uint32_t imageIndex = generation->m_nativeImageIndices[GetCurrentImageIndex()];
+            const auto barrier = m_swapChainBarrier;
+            m_swapChainBarrier.m_isValid = false;
+            {
+                AZStd::lock_guard<AZStd::mutex> lock(generation->m_mutex);
+                ++generation->m_queuedPresents;
+            }
+            auto presentCommand = [generation, imageIndex, barrier, &device](void* queue)
+            {
+                // No pointer to SwapChain: queued work keeps its immutable native generation alive.
+                AZStd::lock_guard<AZStd::mutex> lock(generation->m_mutex);
+                auto& image = generation->m_images[imageIndex];
+                auto* vulkanQueue = static_cast<Queue*>(queue);
+                if (image.m_presentFencePending)
                 {
-                    // The presentation and graphic queue belong to different families so
-                    // we need to add an ownership transfer to the presentation queue.
+                    VkResult result = device.GetContext().WaitForFences(
+                        device.GetNativeDevice(), 1, &image.m_presentFence, VK_TRUE, UINT64_MAX);
+                    if (result != VK_SUCCESS)
+                    {
+                        generation->m_deviceLost = result == VK_ERROR_DEVICE_LOST;
+                        generation->m_recreationRequested = true;
+                        --generation->m_queuedPresents;
+                        VK_RESULT_ASSERT(result);
+                        return;
+                    }
+                    image.m_presentFencePending = false;
+                }
+                if (generation->m_maintenance1)
+                {
+                    VkResult result = device.GetContext().ResetFences(device.GetNativeDevice(), 1, &image.m_presentFence);
+                    if (result != VK_SUCCESS)
+                    {
+                        generation->m_deviceLost = result == VK_ERROR_DEVICE_LOST;
+                        generation->m_recreationRequested = true;
+                        --generation->m_queuedPresents;
+                        VK_RESULT_ASSERT(result);
+                        return;
+                    }
+                }
+                VkSemaphore waitSemaphore = image.m_renderFinished->GetNativeSemaphore();
+                if (barrier.m_isValid)
+                {
                     auto commandList = device.AcquireCommandList(vulkanQueue->GetId().m_familyIndex);
                     commandList->BeginCommandBuffer();
                     device.GetContext().CmdPipelineBarrier(
-                        commandList->GetNativeCommandBuffer(),
-                        m_swapChainBarrier.m_srcPipelineStages,
-                        m_swapChainBarrier.m_dstPipelineStages,
-                        VK_DEPENDENCY_BY_REGION_BIT,
-                        0,
-                        nullptr,
-                        0,
-                        nullptr,
-                        1,
-                        &m_swapChainBarrier.m_barrier);
+                        commandList->GetNativeCommandBuffer(), barrier.m_srcPipelineStages, barrier.m_dstPipelineStages,
+                        VK_DEPENDENCY_BY_REGION_BIT, 0, nullptr, 0, nullptr, 1, &barrier.m_barrier);
                     commandList->EndCommandBuffer();
-
-                    // This semaphore will be signaled once the transfer has completed.
-                    auto transferSemaphore = device.GetSwapChainSemaphoreAllocator().Allocate();
-                    // We wait until the swapchain image has finished being rendered to initialize the
-                    // ownership transfer.
                     vulkanQueue->SubmitCommandBuffers(
-                        AZStd::vector<RHI::Ptr<CommandList>>{ commandList },
-                        AZStd::vector<Semaphore::WaitSemaphore>{ AZStd::make_pair(VK_PIPELINE_STAGE_ALL_COMMANDS_BIT, presentSemaphore) },
-                        AZStd::vector<RHI::Ptr<Semaphore>>{ transferSemaphore },
-                        {},
-                        nullptr);
-
-                    // The presentation engine must wait until the ownership transfer has completed.
-                    waitSemaphore = transferSemaphore->GetNativeSemaphore();
-                    transferSemaphore->SignalEvent();
-                    // This will not deallocate immediately. It has a collect latency.
-                    device.GetSwapChainSemaphoreAllocator().DeAllocate(transferSemaphore);
-                    m_swapChainBarrier.m_isValid = false;
+                        AZStd::vector<RHI::Ptr<CommandList>>{commandList},
+                        AZStd::vector<Semaphore::WaitSemaphore>{AZStd::make_pair(VK_PIPELINE_STAGE_ALL_COMMANDS_BIT, image.m_renderFinished)},
+                        AZStd::vector<RHI::Ptr<Semaphore>>{image.m_ownershipTransferred}, {}, nullptr);
+                    image.m_ownershipTransferred->SignalEvent();
+                    waitSemaphore = image.m_ownershipTransferred->GetNativeSemaphore();
                 }
-
+                VkSwapchainPresentFenceInfoEXT presentFence{};
+                presentFence.sType = VK_STRUCTURE_TYPE_SWAPCHAIN_PRESENT_FENCE_INFO_EXT;
+                presentFence.swapchainCount = 1;
+                presentFence.pFences = &image.m_presentFence;
                 VkPresentInfoKHR info{};
                 info.sType = VK_STRUCTURE_TYPE_PRESENT_INFO_KHR;
-                info.pNext = nullptr;
+                info.pNext = generation->m_maintenance1 ? &presentFence : nullptr;
                 info.waitSemaphoreCount = 1;
                 info.pWaitSemaphores = &waitSemaphore;
                 info.swapchainCount = 1;
-                info.pSwapchains = &m_nativeSwapChain;
+                info.pSwapchains = &generation->m_swapchain;
                 info.pImageIndices = &imageIndex;
-                info.pResults = nullptr;
-
                 const VkResult result = device.GetContext().QueuePresentKHR(vulkanQueue->GetNativeQueue(), &info);
-
-                // Vulkan's definition of the two types of errors.
-                // VK_ERROR_OUT_OF_DATE_KHR: "A surface has changed in such a way that it is no longer compatible with the swapchain,
-                //     and further presentation requests using the swapchain will fail. Applications must query the new surface
-                //     properties and recreate their swapchain if they wish to continue presenting to the surface."
-                // VK_SUBOPTIMAL_KHR: "A swapchain no longer matches the surface properties exactly, but can still be used to
-                //     present to the surface successfully."
-                //
-                // These result values may occur after resizing or some window operation. We should update the surface info and recreate the swapchain.
-                // VK_SUBOPTIMAL_KHR is treated as success, but on non-mobile platforms we better update the surface info as well.
-                if (result == VK_ERROR_OUT_OF_DATE_KHR)
+                // These rejected presentations still enqueue their semaphore waits. OOM does not.
+                const bool enqueued = result == VK_SUCCESS || result == VK_SUBOPTIMAL_KHR ||
+                    result == VK_ERROR_OUT_OF_DATE_KHR || result == VK_ERROR_SURFACE_LOST_KHR ||
+                    result == VK_ERROR_FULL_SCREEN_EXCLUSIVE_MODE_LOST_EXT;
+                image.m_presentFencePending = generation->m_maintenance1 && enqueued;
+                generation->m_surfaceLost |= result == VK_ERROR_SURFACE_LOST_KHR;
+                if (enqueued && generation->m_firstPresentedImage == UINT32_MAX)
                 {
-                    m_pendingRecreation = true;
+                    generation->m_firstPresentedImage = imageIndex;
+                }
+                if (result == VK_ERROR_OUT_OF_DATE_KHR || result == VK_ERROR_SURFACE_LOST_KHR ||
+                    result == VK_ERROR_FULL_SCREEN_EXCLUSIVE_MODE_LOST_EXT ||
+                    result == VK_ERROR_OUT_OF_HOST_MEMORY || result == VK_ERROR_OUT_OF_DEVICE_MEMORY)
+                {
+                    // Retain the generation; an unconsumed signal is never returned to a reusable pool.
+                    generation->m_recreationRequested = true;
                 }
                 else if (result == VK_SUBOPTIMAL_KHR)
                 {
-                    // On mobile platforms the swapchain won't be recreated on VK_SUBOPTIMAL_KHR.
-                    // This is because on mobiles VK_SUBOPTIMAL_KHR is returned when the swapchain's "preTransform"
-                    // doesn't match the rotation of the device and that means its render engine internally will
-                    // perform the rotation and on certain devices that's not as optimal as being handled by O3DE.
-                    // Handling the rotation ourselves is not trivial to achieve, because the viewport dimensions have
-                    // to be flipped (which affects UI operations) and view/projection matrices of 3D and 2D systems
-                    // have to be manipulated in higher level code, which is very intrusive.
 #if AZ_TRAIT_ATOM_VULKAN_RECREATE_SWAPCHAIN_WHEN_SUBOPTIMAL
-                    m_pendingRecreation = true;
+                    generation->m_recreationRequested = true;
 #endif
                 }
-                else
+                else if (result != VK_SUCCESS)
                 {
-                    // Other errors are:
-                    // VK_ERROR_OUT_OF_HOST_MEMORY
-                    // VK_ERROR_OUT_OF_DEVICE_MEMORY
-                    // VK_ERROR_DEVICE_LOST
-                    // VK_ERROR_SURFACE_LOST_KHR
-                    // VK_ERROR_FULL_SCREEN_EXCLUSIVE_MODE_LOST_EXT
-                    AZ_Assert(result == VK_SUCCESS, "Unhandled error for swapchain presentation.");
+                    generation->m_deviceLost = result == VK_ERROR_DEVICE_LOST;
+                    generation->m_recreationRequested = true;
+                    AZ_Assert(false, "Unhandled swapchain presentation result %d.", result);
                 }
+                --generation->m_queuedPresents;
             };
-
+            // Always enqueue this acquired/rendered image, even if acquiring the next image fails.
+            generation->m_queue->QueueCommand(AZStd::move(presentCommand));
             uint32_t acquiredImageIndex = GetCurrentImageIndex();
             RHI::ResultCode result = AcquireNewImage(&acquiredImageIndex);
-            if (result == RHI::ResultCode::Fail)
+            if (result != RHI::ResultCode::Success)
             {
-                m_pendingRecreation = true;
+                AZStd::lock_guard<AZStd::mutex> lock(generation->m_mutex);
+                generation->m_recreationRequested = true;
                 return 0;
             }
-            else
-            {
-                m_presentationQueue->QueueCommand(AZStd::move(presentCommand));
-                return acquiredImageIndex;
-            }
+            return acquiredImageIndex;
         }
 
         void SwapChain::SetHDRMetaData(float maxOutputNits, float minOutputNits, float maxContentLightLevel,
@@ -611,9 +895,19 @@ namespace AZ
             // Pass the current swapchain as the old one
             createInfo.oldSwapchain = m_nativeSwapChain;
 
+            VkSwapchainKHR newSwapchain = VK_NULL_HANDLE;
             const VkResult result =
-                device.GetContext().CreateSwapchainKHR(device.GetNativeDevice(), &createInfo, VkSystemAllocator::Get(), &m_nativeSwapChain);
+                device.GetContext().CreateSwapchainKHR(device.GetNativeDevice(), &createInfo, VkSystemAllocator::Get(), &newSwapchain);
             VK_RESULT_ASSERT(result);
+            if (result != VK_SUCCESS)
+            {
+                // Passing oldSwapchain retires it even when creating the replacement fails.
+                RetireCurrentGeneration();
+                m_nativeSwapChain = VK_NULL_HANDLE;
+                m_pendingRecreation = true;
+                return ConvertResult(result);
+            }
+            m_nativeSwapChain = newSwapchain;
 
             if(hdrEnabled)
             {
@@ -630,53 +924,127 @@ namespace AZ
 
         RHI::ResultCode SwapChain::AcquireNewImage(uint32_t* acquiredImageIndex)
         {
+            auto generation = m_presentationGeneration;
+            if (!generation)
+            {
+                return RHI::ResultCode::Fail;
+            }
             auto& device = static_cast<Device&>(GetDevice());
-            auto& semaphoreAllocator = device.GetSwapChainSemaphoreAllocator();
-            Semaphore* imageAvailableSemaphore = semaphoreAllocator.Allocate();
-            VkResult vkResult = device.GetContext().AcquireNextImageKHR(
-                device.GetNativeDevice(),
-                m_nativeSwapChain,
-                UINT64_MAX,
-                imageAvailableSemaphore->GetNativeSemaphore(),
-                VK_NULL_HANDLE,
-                acquiredImageIndex);
-
-            RHI::ResultCode result = ConvertResult(vkResult);
-            RETURN_RESULT_IF_UNSUCCESSFUL(result);
-
+            VkFence acquireFence = VK_NULL_HANDLE;
+            {
+                AZStd::unique_lock<AZStd::mutex> lock(generation->m_mutex);
+                VkResult result = generation->PollAcquires(false);
+                if (result != VK_SUCCESS)
+                {
+                    return ConvertResult(result);
+                }
+                auto findFreeFence = [&]()
+                {
+                    for (const auto& acquire : generation->m_acquires)
+                    {
+                        if (!acquire.m_pending)
+                        {
+                            return acquire.m_fence;
+                        }
+                    }
+                    return VkFence{VK_NULL_HANDLE};
+                };
+                acquireFence = findFreeFence();
+                if (acquireFence == VK_NULL_HANDLE)
+                {
+                    // Storage is allocated once per generation, not on the render loop. Never wait while
+                    // holding the generation mutex: the presentation worker may be needed for progress.
+                    VkFence pendingFence = generation->m_acquires.front().m_fence;
+                    lock.unlock();
+                    result = device.GetContext().WaitForFences(device.GetNativeDevice(), 1, &pendingFence, VK_TRUE, UINT64_MAX);
+                    lock.lock();
+                    if (result != VK_SUCCESS)
+                    {
+                        generation->m_deviceLost = result == VK_ERROR_DEVICE_LOST;
+                        return ConvertResult(result);
+                    }
+                    result = generation->PollAcquires(false);
+                    if (result != VK_SUCCESS)
+                    {
+                        return ConvertResult(result);
+                    }
+                    acquireFence = findFreeFence();
+                }
+                AZ_Assert(acquireFence != VK_NULL_HANDLE, "No reusable acquire fence after completion.");
+                if (acquireFence == VK_NULL_HANDLE)
+                {
+                    return RHI::ResultCode::Fail;
+                }
+                result = device.GetContext().ResetFences(device.GetNativeDevice(), 1, &acquireFence);
+                if (result != VK_SUCCESS)
+                {
+                    generation->m_deviceLost = result == VK_ERROR_DEVICE_LOST;
+                    return ConvertResult(result);
+                }
+            }
+            auto& allocator = device.GetSwapChainSemaphoreAllocator();
+            Semaphore* imageAvailable = allocator.Allocate();
+            if (!imageAvailable)
+            {
+                return RHI::ResultCode::OutOfMemory;
+            }
+            // Do not hold m_mutex over acquire: a queued presentation must be able to release an image.
+            uint32_t nativeImageIndex = 0;
+            const VkResult result = device.GetContext().AcquireNextImageKHR(
+                device.GetNativeDevice(), generation->m_swapchain, UINT64_MAX,
+                imageAvailable->GetNativeSemaphore(), acquireFence, &nativeImageIndex);
+            if (result != VK_SUCCESS && result != VK_SUBOPTIMAL_KHR)
+            {
+                imageAvailable->SetRecycleValue(false);
+                allocator.DeAllocate(imageAvailable);
+                AZStd::lock_guard<AZStd::mutex> lock(generation->m_mutex);
+                generation->m_deviceLost = result == VK_ERROR_DEVICE_LOST;
+                generation->m_surfaceLost |= result == VK_ERROR_SURFACE_LOST_KHR;
+                generation->m_recreationRequested = true;
+                return RHI::ResultCode::Fail;
+            }
+            {
+                AZStd::lock_guard<AZStd::mutex> lock(generation->m_mutex);
+                for (auto& acquire : generation->m_acquires)
+                {
+                    if (acquire.m_fence == acquireFence)
+                    {
+                        acquire.m_pending = true;
+                        break;
+                    }
+                }
+                AZ_Assert(nativeImageIndex < generation->m_images.size(), "Invalid acquired image index.");
+                if (nativeImageIndex >= generation->m_images.size())
+                {
+                    imageAvailable->SetRecycleValue(false);
+                    generation->m_unusedAcquireSemaphore = imageAvailable;
+                    allocator.DeAllocate(imageAvailable);
+                    return RHI::ResultCode::Fail;
+                }
+                if (!generation->m_firstPresentComplete && generation->m_firstPresentAcquireFence == VK_NULL_HANDLE &&
+                    generation->m_firstPresentedImage == nativeImageIndex)
+                {
+                    generation->m_firstPresentAcquireFence = acquireFence;
+                }
+                generation->m_images[nativeImageIndex].m_renderFinished->Reset();
+                generation->m_images[nativeImageIndex].m_ownershipTransferred->Reset();
+#if AZ_TRAIT_ATOM_VULKAN_RECREATE_SWAPCHAIN_WHEN_SUBOPTIMAL
+                generation->m_recreationRequested |= result == VK_SUBOPTIMAL_KHR;
+#endif
+            }
             if (m_currentFrameContext.m_imageAvailableSemaphore)
             {
-                semaphoreAllocator.DeAllocate(m_currentFrameContext.m_imageAvailableSemaphore);
+                allocator.DeAllocate(m_currentFrameContext.m_imageAvailableSemaphore);
             }
-            if (m_currentFrameContext.m_presentableSemaphore)
-            {
-                semaphoreAllocator.DeAllocate(m_currentFrameContext.m_presentableSemaphore);
-            }
-            m_currentFrameContext.m_imageAvailableSemaphore = imageAvailableSemaphore;
-            m_currentFrameContext.m_presentableSemaphore = semaphoreAllocator.Allocate();
-
-            return result;
+            m_currentFrameContext.m_imageAvailableSemaphore = imageAvailable;
+            m_currentFrameContext.m_presentableSemaphore = generation->m_images[nativeImageIndex].m_renderFinished.get();
+            auto image = AZStd::find(generation->m_nativeImageIndices.begin(), generation->m_nativeImageIndices.end(), nativeImageIndex);
+            *acquiredImageIndex = aznumeric_cast<uint32_t>(image - generation->m_nativeImageIndices.begin());
+            return RHI::ResultCode::Success;
         }
-
         void SwapChain::InvalidateSurface()
         {
             m_surface = nullptr;
-        }
-
-        void SwapChain::InvalidateNativeSwapChain(VkSwapchainKHR swapchain)
-        {
-            auto& device = static_cast<Device&>(GetDevice());
-            auto presentCommand = [&device, swapchain]([[maybe_unused]] void* queue)
-            {
-                device.GetCommandQueueContext().GetCommandQueue(RHI::HardwareQueueClass::Graphics).WaitForIdle();
-                if (swapchain != VK_NULL_HANDLE)
-                {
-                    device.GetContext().DestroySwapchainKHR(device.GetNativeDevice(), swapchain, VkSystemAllocator::Get());
-                }
-            };
-
-            m_presentationQueue->QueueCommand(AZStd::move(presentCommand));
-            m_presentationQueue->FlushCommands();
         }
 
         RHI::ResultCode SwapChain::CreateSwapchain()
@@ -714,16 +1082,15 @@ namespace AZ
             RETURN_RESULT_IF_UNSUCCESSFUL(result);
             AZLOG_DEBUG("Swapchain created. Width: %u, Height: %u.\n", m_dimensions.m_imageWidth, m_dimensions.m_imageHeight);
 
-            // Do not recycle the semaphore because they may not ever get signaled and since
-            // we can't recycle Vulkan semaphores we just delete them.
-            if (m_currentFrameContext.m_imageAvailableSemaphore)
-            {
-                m_currentFrameContext.m_imageAvailableSemaphore->SetRecycleValue(false);
-            }
-            if (m_currentFrameContext.m_presentableSemaphore)
-            {
-                m_currentFrameContext.m_presentableSemaphore->SetRecycleValue(false);
-            }
+            RetireCurrentGeneration();
+            auto generation = AZStd::make_shared<PresentationGeneration>();
+            generation->m_device = &device;
+            generation->m_queue = m_presentationQueue;
+            generation->m_surface = m_surface;
+            generation->m_swapchain = m_nativeSwapChain;
+            const auto& physicalDevice = static_cast<const PhysicalDevice&>(device.GetPhysicalDevice());
+            generation->m_maintenance1 = physicalDevice.IsOptionalDeviceExtensionSupported(OptionalDeviceExtension::SwapchainMaintenance1);
+            m_presentationGeneration = generation;
 
             m_dimensions.m_imageCount = 0;
             VkResult vkResult =
@@ -741,10 +1108,47 @@ namespace AZ
             RETURN_RESULT_IF_UNSUCCESSFUL(ConvertResult(vkResult));
             AZLOG_DEBUG("Obtained presentable images.\n");
 
+            generation->m_images.resize(m_dimensions.m_imageCount);
+            generation->m_nativeImageIndices.resize(m_dimensions.m_imageCount);
+            for (uint32_t index = 0; index < m_dimensions.m_imageCount; ++index)
+            {
+                generation->m_nativeImageIndices[index] = index;
+            }
+            generation->m_acquires.resize(m_dimensions.m_imageCount + 1);
+            VkFenceCreateInfo fenceInfo{};
+            fenceInfo.sType = VK_STRUCTURE_TYPE_FENCE_CREATE_INFO;
+            for (auto& image : generation->m_images)
+            {
+                image.m_renderFinished = BinarySemaphore::Create();
+                image.m_ownershipTransferred = BinarySemaphore::Create();
+                result = image.m_renderFinished->Init(device);
+                RETURN_RESULT_IF_UNSUCCESSFUL(result);
+                result = image.m_ownershipTransferred->Init(device);
+                RETURN_RESULT_IF_UNSUCCESSFUL(result);
+                if (generation->m_maintenance1)
+                {
+                    vkResult = device.GetContext().CreateFence(
+                        device.GetNativeDevice(), &fenceInfo, VkSystemAllocator::Get(), &image.m_presentFence);
+                    VK_RESULT_ASSERT(vkResult);
+                    RETURN_RESULT_IF_UNSUCCESSFUL(ConvertResult(vkResult));
+                }
+            }
+            for (auto& acquire : generation->m_acquires)
+            {
+                vkResult = device.GetContext().CreateFence(
+                    device.GetNativeDevice(), &fenceInfo, VkSystemAllocator::Get(), &acquire.m_fence);
+                VK_RESULT_ASSERT(vkResult);
+                RETURN_RESULT_IF_UNSUCCESSFUL(ConvertResult(vkResult));
+            }
+
             // Acquire the first image
             uint32_t imageIndex = 0;
             result = AcquireNewImage(&imageIndex);
             RETURN_RESULT_IF_UNSUCCESSFUL(result);
+            // DeviceSwapChain::InitImages resets its logical index to zero. Vulkan does not guarantee
+            // the first acquired native index is zero; preserve a generation-local logical mapping.
+            AZStd::swap(m_swapchainNativeImages[0], m_swapchainNativeImages[imageIndex]);
+            AZStd::swap(generation->m_nativeImageIndices[0], generation->m_nativeImageIndices[imageIndex]);
             AZLOG_DEBUG("Acquired the first image.\n");
 
             return RHI::ResultCode::Success;

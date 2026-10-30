@@ -539,6 +539,16 @@ namespace AZ
                 physicalDevice.DisableOptionalDeviceExtension(OptionalDeviceExtension::ClusterAccelerationStructure);
             }
 
+            VkPhysicalDeviceSwapchainMaintenance1FeaturesEXT swapchainMaintenance1 = physicalDevice.GetSwapchainMaintenance1Features();
+            if (physicalDevice.IsOptionalDeviceExtensionSupported(OptionalDeviceExtension::SwapchainMaintenance1) &&
+                swapchainMaintenance1.swapchainMaintenance1)
+            {
+                deviceInfoAppender.append(swapchainMaintenance1);
+            }
+            else
+            {
+                physicalDevice.DisableOptionalDeviceExtension(OptionalDeviceExtension::SwapchainMaintenance1);
+            }
             deviceInfoAppender.finish();
 
 #if defined(USE_NSIGHT_AFTERMATH)
