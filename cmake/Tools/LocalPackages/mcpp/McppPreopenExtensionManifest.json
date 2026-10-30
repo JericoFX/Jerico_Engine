@@ -4,7 +4,7 @@
   "callback": "mcpp_set_resolve_include_callback",
   "basePatchSHA256": "8797760AF297BE90586F03AE69C3FFAEB89591FA69199C4242E05F4DF6EFDC6B",
   "baseManifestSHA256": "9F8522A8A06AB9C4207F5F5EE7E7B41837831118512B07B0A8507BB5997AAEC3",
-  "patchSHA256": "021789ADB3019C6A5E00D018ABDEDAE5A35706ACEE713A5EAF3FCBD5126D938A",
+  "patchSHA256": "5BC75DAF274F94D3E63A9ACD731414089C2FC1E6D757619ABDB46D5AF6DCA2C9",
   "files": [
     {
       "path": "src/mcpp_lib.h",
@@ -73,16 +73,30 @@
     {
       "path": "src/system.c",
       "beforeSHA256": "C32160CF095E0837F024C550C4570B690462DAE8C01259E992BDBEC87DD5F13B",
-      "afterSHA256": "115FF08D4FEDC2750ADFCA9B70C793A80CE8DE5A329FD7203A6994E53391DECE",
+      "afterSHA256": "50080CA47C865F4F465761E4C4C4FD8116FD00366D27CD9E7FF01134CA10E4E7",
       "beforeBytes": 172659,
-      "afterBytes": 173294,
+      "afterBytes": 175729,
       "hunks": [
         {
           "sourceOffset": 112636,
           "oldBytes": 225,
           "newBytes": 860,
-          "patchOffset": 1769,
+          "patchOffset": 1781,
           "patchBytes": 881
+        },
+        {
+          "sourceOffset": 118207,
+          "oldBytes": 192,
+          "newBytes": 2465,
+          "patchOffset": 2711,
+          "patchBytes": 2537
+        },
+        {
+          "sourceOffset": 118878,
+          "oldBytes": 336,
+          "newBytes": 498,
+          "patchOffset": 5295,
+          "patchBytes": 573
         }
       ]
     }

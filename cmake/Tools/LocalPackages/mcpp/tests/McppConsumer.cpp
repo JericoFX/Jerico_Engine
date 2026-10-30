@@ -13,6 +13,7 @@
 #include <cstdarg>
 #include <cstdio>
 #include <filesystem>
+#include <fstream>
 #include <iostream>
 #include <string>
 #include <vector>
@@ -184,6 +185,69 @@ namespace
         return valid;
     }
 
+    bool IncludePathBounds(const std::filesystem::path& root)
+    {
+        // Fixture paths are private. Extended syntax creates an existing long
+        // first candidate; MCPP still receives its original unprefixed argv.
+        const auto extended = [](const std::filesystem::path& path)
+        {
+            auto preferred = path;
+            preferred.make_preferred();
+            return std::filesystem::path(std::wstring(L"\\\\?\\") + preferred.native());
+        };
+        const auto write = [&](const std::filesystem::path& path, const std::string& content)
+        {
+            std::filesystem::create_directories(extended(path.parent_path()));
+            std::ofstream file(extended(path), std::ios::binary | std::ios::trunc);
+            file << content;
+            return file.good();
+        };
+        const auto firstBase = root / "path-bounds-first";
+        if (!Require(firstBase.generic_string().size() < 219, "fixture root must leave room for a bounded long -I"))
+        {
+            return false;
+        }
+        const auto first = firstBase / std::string(219 - firstBase.generic_string().size(), 'd');
+        const auto later = root / "path-bounds-later";
+        const auto shortFirst = root / "path-bounds-short-first";
+        const std::string header = "engine/" + std::string(55, 'h') + ".h";
+        const auto input = root / "path-bounds.azsl";
+        // Remove only this case's previous generated header and empty parent.
+        std::filesystem::remove(extended(first / header));
+        std::filesystem::remove(extended(first / "engine"));
+        std::filesystem::create_directories(first);
+        if (!Require(first.generic_string().size() == 220
+            && (first / header).generic_string().size() >= 260
+            && (later / header).generic_string().size() < 260, "fixture does not cross the actual MSVC PATHMAX boundary")
+            || !Require(write(input, "#include <" + header + ">\n"), "cannot write bounds input")
+            || !Require(write(later / header, "int winner = 17;\n"), "cannot write later provider"))
+        {
+            return false;
+        }
+        const std::vector<std::string> arguments = {"builder", input.generic_string(),
+            "-I" + first.generic_string(), "-I" + later.generic_string(), "-P"};
+        bool valid = Require(Run(arguments) == 0, "absent representable first directory must permit later include")
+            && Require(Compact(output[MCPP_OUT]).find("intwinner=17;") != std::string::npos, "later header was not consumed");
+        valid &= Require(write(later / header, "#error JE_PATH_BOUNDS_EXPECTED_ERROR\n"), "cannot write error provider");
+        valid &= Require(Run(arguments) != 0
+            && output[MCPP_ERR].find("JE_PATH_BOUNDS_EXPECTED_ERROR") != std::string::npos, "later real error was hidden");
+        valid &= Require(write(later / header, "int winner = 17;\n"), "cannot restore later fixture provider");
+        valid &= Require(write(shortFirst / header, "int winner = 23;\n"), "cannot write ordinary first provider");
+        valid &= Require(Run({"builder", input.generic_string(), "-I" + shortFirst.generic_string(),
+            "-I" + later.generic_string(), "-P"}) == 0
+            && Compact(output[MCPP_OUT]).find("intwinner=23;") != std::string::npos
+            && Compact(output[MCPP_OUT]).find("intwinner=17;") == std::string::npos, "ordinary first-I precedence changed");
+        valid &= Require(write(first / header, "int winner = 23;\n"), "cannot create existing long first candidate");
+        valid &= Require(Run(arguments) != 0
+            && output[MCPP_ERR].find("Too long header name") != std::string::npos
+            && Compact(output[MCPP_OUT]).find("intwinner=17;") == std::string::npos, "existing unsupported long first header must not fall through");
+        valid &= Require(write(input, "#include <missing/../" + header + ">\n"), "cannot write dot-traversal fixture");
+        valid &= Require(Run(arguments) != 0
+            && output[MCPP_ERR].find("Too long header name") != std::string::npos
+            && Compact(output[MCPP_OUT]).find("intwinner=17;") == std::string::npos, "missing prefix before dot traversal is not proof of absence");
+        return valid;
+    }
+
     bool Comments(const std::filesystem::path& root)
     {
         if (!Require(Run({"builder", (root / "comments.azsl").generic_string(), "-C", "-P"}) == 0, "comment preprocessing failed"))
@@ -229,7 +293,8 @@ int main(int argc, char** argv)
     const std::string test = argv[1];
     const std::filesystem::path root(argv[2]);
     const bool valid = test == "preprocessing" ? Preprocessing(root) : test == "comments" ? Comments(root)
-        : test == "errors" ? Errors(root) : test == "include-resolution" ? IncludeResolution(root) : false;
+        : test == "errors" ? Errors(root) : test == "include-resolution" ? IncludeResolution(root)
+        : test == "include-path-bounds" ? IncludePathBounds(root) : false;
     std::cout << "JE mcpp " << test << (valid ? " PASS\n" : " FAIL\n");
     return valid ? 0 : 1;
 }

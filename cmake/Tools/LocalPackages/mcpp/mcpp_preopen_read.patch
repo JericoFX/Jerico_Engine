@@ -52,7 +52,7 @@
 +	mcpp_set_resolve_include_callback
 --- a/src/system.c
 +++ b/src/system.c
-@@ -3164,6 +3164,21 @@
+@@ -3164,6 +3164,21 @@ found_name:
  #if SYS_FAMILY == SYS_WIN
      bsl2sl( fname);
  #endif
@@ -74,3 +74,91 @@
      filename = fname;
  #if NO_DIR                              /* Unofficial feature           */
      if (no_dir) {                       /* Strip directory components   */
+@@ -3331,6 +3346,72 @@ static int  is_full_path(
+         return  FALSE;
+ }
+ 
++#if SYS_FAMILY == SYS_WIN && HOST_COMPILER == MSC
++static int  overlong_candidate_is_missing(
++    const char *    dir,
++    const char *    filename
++)
++/*
++ * PATHMAX is unchanged. A representable missing directory prefix proves
++ * this candidate cannot reach a regular header; otherwise retain the fatal.
++ * Only ordinary absolute DOS paths are probed. Dot traversal, ambiguous
++ * trailing characters, non-ASCII names and other namespaces remain rejected.
++ */
++{
++    char    prefix[ PATHMAX];
++    const char *    p;
++    const char *    component;
++    size_t  dir_len = strlen( dir);
++    size_t  length;
++    int     status;
++    int     saved_errno;
++    int     probe_errno;
++    struct _stat    info;
++
++    if (dir_len < 3 || dir_len >= PATHMAX || dir[ 1] != ':'
++            || (dir[ 2] != '/' && dir[ 2] != '\\')
++            || (dir[ dir_len - 1] != '/' && dir[ dir_len - 1] != '\\')
++            || *filename == '/' || *filename == '\\')
++        return  FALSE;
++    for (p = dir; *p; p++)
++        if ((unsigned char) *p >= 0x80)
++            return  FALSE;
++    for (p = component = filename; ; p++) {
++        if ((unsigned char) *p >= 0x80 || *p == ':')
++            return  FALSE;
++        if (*p == '/' || *p == '\\' || *p == EOS) {
++            length = (size_t) (p - component);
++            if ((length == 1 && component[ 0] == '.')
++                    || (length == 2 && component[ 0] == '.' && component[ 1] == '.')
++                    || (length && (component[ length - 1] == '.'
++                                                    || component[ length - 1] == ' ')))
++                return  FALSE;
++            if (*p == EOS)
++                break;
++            component = p + 1;
++        }
++    }
++    memcpy( prefix, dir, dir_len);
++    for (p = filename; *p; p++) {
++        if (*p != '/' && *p != '\\')
++            continue;
++        length = (size_t) (p - filename);
++        if (length >= PATHMAX - dir_len)
++            return  FALSE;
++        memcpy( prefix + dir_len, filename, length);
++        prefix[ dir_len + length] = EOS;
++        saved_errno = errno;
++        errno = 0;
++        status = stat( prefix, & info);
++        probe_errno = errno;
++        errno = saved_errno;
++        if (status != 0)
++            return  probe_errno == ENOENT;
++    }
++    return  FALSE;
++}
++#endif
++
+ static int  search_dir(
+     char *  filename,               /* File name to include         */
+     int     searchlocal,            /* #include "header.h"          */
+@@ -3351,8 +3432,13 @@ static int  search_dir(
+ #endif
+ 
+     for ( ; incptr < incend; incptr++) {
+-        if (strlen( *incptr) + strlen( filename) >= PATHMAX)
++        if (strlen( *incptr) + strlen( filename) >= PATHMAX) {
++#if SYS_FAMILY == SYS_WIN && HOST_COMPILER == MSC
++            if (overlong_candidate_is_missing( *incptr, filename))
++                continue;
++#endif
+             cfatal( toolong_fname, *incptr, 0L, filename);  /* _F_  */
++        }
+ #if SYSTEM == SYS_MAC
+         if (incptr == to_search_framework && ! searchlocal) {
+                                 /* Now search the framework dirs    */

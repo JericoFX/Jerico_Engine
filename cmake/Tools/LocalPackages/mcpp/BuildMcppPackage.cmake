@@ -48,7 +48,7 @@ foreach(JE_FILE IN ITEMS LICENSE README src/main.c src/directive.c src/eval.c sr
     endif()
 endforeach()
 include("${CMAKE_CURRENT_LIST_DIR}/ApplyMcppPatch.cmake")
-JE_python_verify_file("${CMAKE_CURRENT_LIST_DIR}/ApplyMcppPreopenExtension.cmake" "EAAD70EC9FA295D29613A4C8F58FB7A9D250D67C3AA15F2BDDE1D5B124F99CC6" "pre-open apply layer")
+JE_python_verify_file("${CMAKE_CURRENT_LIST_DIR}/ApplyMcppPreopenExtension.cmake" "9BA1CA73649710102D8FB5EB3C133BD531382309CAC4BDDF164D76295716A9A4" "pre-open apply layer")
 include("${CMAKE_CURRENT_LIST_DIR}/ApplyMcppPreopenExtension.cmake")
 execute_process(COMMAND "${CMAKE_COMMAND}" -S "${CMAKE_CURRENT_LIST_DIR}" -B "${JE_BUILD}"
     -G "Visual Studio 17 2022" -A x64 -T v143 "-DJE_MCPP_WORK:PATH=${JE_MCPP_WORK}"
@@ -96,7 +96,7 @@ file(SHA256 "${JE_STAGE}/mcpp/lib/mcpp0.lib" JE_ABI_LIBRARY_HASH)
 file(SHA256 "${JE_STAGE}/mcpp/lib/mcpp0.dll" JE_ABI_DLL_HASH)
 file(WRITE "${JE_STAGE}/mcpp/JEPreopenAbi.json"
     "{\n  \"abiVersion\": 1,\n  \"callback\": \"mcpp_set_resolve_include_callback\",\n"
-    "  \"extensionManifestSHA256\": \"4B060D0BFC905496E43158966A1666C4E4D642A88F739A15647CA456DB2F3A0B\",\n"
+    "  \"extensionManifestSHA256\": \"0102D042875C0F02D7FB6EF578BE1B5827ADCF5DC5D5E3EF906BB9597E29D886\",\n"
     "  \"header\": {\"path\": \"mcpp/include/mcpp_lib.h\", \"sha256\": \"${JE_ABI_HEADER_HASH}\"},\n"
     "  \"importLibrary\": {\"path\": \"mcpp/lib/mcpp0.lib\", \"sha256\": \"${JE_ABI_LIBRARY_HASH}\"},\n"
     "  \"runtimeDLL\": {\"path\": \"mcpp/lib/mcpp0.dll\", \"sha256\": \"${JE_ABI_DLL_HASH}\"}\n}\n")
@@ -111,13 +111,13 @@ file(WRITE "${JE_STAGE}/mcpp/JERecipe.json"
     "  \"recipeSnapshotCommit\": \"70f0b7b5257bf7cf935bf1cfd270e1b53ccead18\",\n"
     "  \"variant\": \"2.7.2_az.2\",\n"
     "  \"patchSHA256\": \"8797760af297be90586f03ae69c3ffaeb89591fa69199c4242e05f4df6efdc6b\",\n"
-    "  \"preopenReadExtensionSHA256\": \"4B060D0BFC905496E43158966A1666C4E4D642A88F739A15647CA456DB2F3A0B\",\n  \"callbackAbiVersion\": 1,\n"
+    "  \"preopenReadExtensionSHA256\": \"0102D042875C0F02D7FB6EF578BE1B5827ADCF5DC5D5E3EF906BB9597E29D886\",\n  \"callbackAbiVersion\": 1,\n"
     "  \"toolset\": \"v143\",\n  \"configuration\": \"Release\",\n"
     "  \"dllRuntimeLibrary\": \"MultiThreadedDLL\",\n  \"cliRuntimeLibrary\": \"MultiThreaded\"\n}\n")
 set(JE_PACKAGE_STAGE "${JE_STAGE}")
-set(JE_PACKAGE_NAME "mcpp-2.7.2_az.2-je-preopen-r32-windows")
+set(JE_PACKAGE_NAME "mcpp-2.7.2_az.2-je-preopen-pathprobe-r1-windows")
 set(JE_PACKAGE_OUTPUT "${JE_MCPP_OUTPUT}/packages")
-set(JE_PACKAGE_VERSION "2.7.2_az.2-je-preopen-r32")
+set(JE_PACKAGE_VERSION "2.7.2_az.2-je-preopen-pathprobe-r1")
 set(JE_PACKAGE_SOURCE_RELEASE "mcpp-2.7.2")
 unset(JE_PACKAGE_SOURCE_COMMIT)
 set(JE_PACKAGE_LICENSE "BSD-2-Clause AND (Apache-2.0 OR MIT)")

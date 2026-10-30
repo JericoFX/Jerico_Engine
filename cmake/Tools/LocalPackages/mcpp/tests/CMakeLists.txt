@@ -53,7 +53,7 @@ file(WRITE "${JE_INPUT}/reset.azsl" "#ifdef JE_FEATURE\n#error macro leaked from
 file(WRITE "${JE_INPUT}/resolver.azsl"
     "#define JE_HEADER <je_callback/native.h>\n#include JE_HEADER\nint resolved = JE_BASE;\n")
 enable_testing()
-foreach(JE_CASE IN ITEMS preprocessing comments errors include-resolution)
+foreach(JE_CASE IN ITEMS preprocessing comments errors include-resolution include-path-bounds)
     add_test(NAME JE.LocalPackages.Mcpp.${JE_CASE} COMMAND JEMcppConsumer "${JE_CASE}" "${JE_INPUT}")
     set_tests_properties(JE.LocalPackages.Mcpp.${JE_CASE} PROPERTIES TIMEOUT 30)
 endforeach()

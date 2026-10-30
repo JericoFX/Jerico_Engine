@@ -43,3 +43,5 @@ five source before/after hashes are recorded separately. Header/importlib/DLL
 hashes in JEPreopenAbi.json bind the artifacts from the same producer. This is
 not the historical je-rev1 binary/archive or its checksum. All license terms
 and contributor notices above remain applicable.
+
+JE bounded include-search adjustment: Windows/MSVC keeps PATHMAX and existing errors. A too-long search trial is skipped only after a representable, normalized directory-prefix stat proves ENOENT; no include reordering, new public API, filename rewriting or universal long-path claim.

@@ -9,7 +9,7 @@ cmake_path(IS_PREFIX JE_BUILD_ROOT "${JE_MCPP_WORK}" NORMALIZE JE_PREOPEN_IN_BUI
 if(NOT JE_PREOPEN_IN_BUILD OR JE_MCPP_WORK STREQUAL JE_BUILD_ROOT)
     message(FATAL_ERROR "JE mcpp extension work must stay beneath checkout/build")
 endif()
-JE_python_verify_file("${CMAKE_CURRENT_LIST_DIR}/McppPreopenExtensionManifest.json" "4B060D0BFC905496E43158966A1666C4E4D642A88F739A15647CA456DB2F3A0B" "pre-open extension manifest")
+JE_python_verify_file("${CMAKE_CURRENT_LIST_DIR}/McppPreopenExtensionManifest.json" "0102D042875C0F02D7FB6EF578BE1B5827ADCF5DC5D5E3EF906BB9597E29D886" "pre-open extension manifest")
 file(READ "${CMAKE_CURRENT_LIST_DIR}/McppPreopenExtensionManifest.json" JE_PREOPEN_MANIFEST)
 string(JSON JE_PREOPEN_PATCH_HASH GET "${JE_PREOPEN_MANIFEST}" patchSHA256)
 JE_python_verify_file("${CMAKE_CURRENT_LIST_DIR}/mcpp_preopen_read.patch" "${JE_PREOPEN_PATCH_HASH}" "pre-open extension patch")

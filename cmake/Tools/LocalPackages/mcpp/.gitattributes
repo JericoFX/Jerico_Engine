@@ -1,0 +1,3 @@
+# Keep hash-pinned recipe inputs byte-exact on Windows checkouts.
+ApplyMcppPreopenExtension.cmake text eol=lf
+McppPreopenExtensionManifest.json text eol=lf
