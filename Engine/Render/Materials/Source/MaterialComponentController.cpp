@@ -360,7 +360,10 @@ namespace JE
             {
                 if (materialAsset.GetId() == asset.GetId())
                 {
+                    // Readiness replaces asset data, not the authored per-reference load policy.
+                    const auto loadBehavior = materialAsset.GetAutoLoadBehavior();
                     materialAsset = asset;
+                    materialAsset.SetAutoLoadBehavior(loadBehavior);
                 }
 
                 // Overrides for absent model slots remain serialized for later restoration, but are not loaded.
