@@ -21,7 +21,7 @@ QT_FORWARD_DECLARE_CLASS(QLabel)
 QT_FORWARD_DECLARE_CLASS(QVBoxLayout)
 
 
-namespace GraphCanvas
+namespace JE::Editor::Tools::GraphCanvas
 {
     class NodePaletteWidget;
 }
@@ -70,7 +70,7 @@ namespace EMStudio
         EventHandler*               m_eventHandler;
         QVBoxLayout*                m_layout;
         QLabel*                     m_initialText;
-        GraphCanvas::NodePaletteWidget* m_palette;
+        JE::Editor::Tools::GraphCanvas::NodePaletteWidget* m_palette;
 
         // Cache the expanded states.
         AZStd::unordered_set<EMotionFX::AnimGraphObject::ECategory> m_expandedCatagory;

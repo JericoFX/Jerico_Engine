@@ -9,7 +9,7 @@
 #pragma once
 
 // Graph Canvas
-#include <GraphCanvas/Components/NodePropertyDisplay/ReadOnlyDataInterface.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/NodePropertyDisplay/ReadOnlyDataInterface.h>
 
 // Graph Model
 #include <JE/Editor/Tools/GraphModel/Model/Slot.h>
@@ -17,7 +17,7 @@
 namespace JE::Editor::Tools::GraphModel::Integration
 {
     //! Satisfies GraphCanvas API requirements for showing read only property widgets in nodes.
-    class ReadOnlyDataInterface : public GraphCanvas::ReadOnlyDataInterface
+    class ReadOnlyDataInterface : public JE::Editor::Tools::GraphCanvas::ReadOnlyDataInterface
     {
     public:
         AZ_CLASS_ALLOCATOR(ReadOnlyDataInterface, AZ::SystemAllocator);

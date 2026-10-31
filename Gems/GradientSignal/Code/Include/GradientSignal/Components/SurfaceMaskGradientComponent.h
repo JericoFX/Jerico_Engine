@@ -14,10 +14,10 @@
 #include <GradientSignal/Ebuses/SurfaceMaskGradientRequestBus.h>
 #include <GradientSignal/GradientSampler.h>
 #include <LmbrCentral/Dependency/DependencyMonitor.h>
-#include <SurfaceData/SurfaceDataSystemNotificationBus.h>
-#include <SurfaceData/SurfaceDataSystemRequestBus.h>
-#include <SurfaceData/SurfaceDataTypes.h>
-#include <SurfaceData/SurfacePointList.h>
+#include <JE/Geometry/SurfaceData/SurfaceDataSystemNotificationBus.h>
+#include <JE/Geometry/SurfaceData/SurfaceDataSystemRequestBus.h>
+#include <JE/Geometry/SurfaceData/SurfaceDataTypes.h>
+#include <JE/Geometry/SurfaceData/SurfacePointList.h>
 
 namespace LmbrCentral
 {
@@ -34,7 +34,7 @@ namespace GradientSignal
         AZ_CLASS_ALLOCATOR(SurfaceMaskGradientConfig, AZ::SystemAllocator);
         AZ_RTTI(SurfaceMaskGradientConfig, "{E59D0A4C-BA3D-4288-B409-A00B7D5566AA}", AZ::ComponentConfig);
         static void Reflect(AZ::ReflectContext* context);
-        SurfaceData::SurfaceTagVector m_surfaceTagList;
+        JE::Geometry::SurfaceData::SurfaceTagVector m_surfaceTagList;
 
         size_t GetNumTags() const;
         AZ::Crc32 GetTag(int tagIndex) const;
@@ -51,7 +51,7 @@ namespace GradientSignal
         : public AZ::Component
         , private GradientRequestBus::Handler
         , private SurfaceMaskGradientRequestBus::Handler
-        , private SurfaceData::SurfaceDataSystemNotificationBus::Handler
+        , private JE::Geometry::SurfaceData::SurfaceDataSystemNotificationBus::Handler
     {
     public:
         template<typename, typename> friend class LmbrCentral::EditorWrappedComponentBase;
@@ -90,7 +90,7 @@ namespace GradientSignal
             const AZ::EntityId& entityId,
             const AZ::Aabb& oldBounds,
             const AZ::Aabb& newBounds,
-            const SurfaceData::SurfaceTagSet& changedSurfaceTags) override;
+            const JE::Geometry::SurfaceData::SurfaceTagSet& changedSurfaceTags) override;
 
     private:
         SurfaceMaskGradientConfig m_configuration;

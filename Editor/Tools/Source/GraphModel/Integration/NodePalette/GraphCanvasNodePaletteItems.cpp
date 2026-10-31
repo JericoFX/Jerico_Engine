@@ -13,9 +13,9 @@
 namespace JE::Editor::Tools::GraphModel::Integration
 {
     /// Add common utilities to a specific Node Palette tree.
-    void AddCommonNodePaletteUtilities(GraphCanvas::GraphCanvasTreeItem* rootItem, const GraphCanvas::EditorId& editorId)
+    void AddCommonNodePaletteUtilities(JE::Editor::Tools::GraphCanvas::GraphCanvasTreeItem* rootItem, const JE::Editor::Tools::GraphCanvas::EditorId& editorId)
     {
-        GraphCanvas::IconDecoratedNodePaletteTreeItem* utilitiesCategory = rootItem->CreateChildNode<GraphCanvas::IconDecoratedNodePaletteTreeItem>("Utilities", editorId);
+        JE::Editor::Tools::GraphCanvas::IconDecoratedNodePaletteTreeItem* utilitiesCategory = rootItem->CreateChildNode<JE::Editor::Tools::GraphCanvas::IconDecoratedNodePaletteTreeItem>("Utilities", editorId);
         utilitiesCategory->SetTitlePalette("UtilityNodeTitlePalette");
         utilitiesCategory->CreateChildNode<CommentNodePaletteTreeItem>("Comment", editorId);
         utilitiesCategory->CreateChildNode<NodeGroupNodePaletteTreeItem>("Node Group", editorId);
@@ -38,7 +38,7 @@ namespace JE::Editor::Tools::GraphModel::Integration
 
         if (serializeContext)
         {
-            serializeContext->Class<CreateGraphCanvasNodeMimeEvent, GraphCanvas::GraphCanvasMimeEvent>()
+            serializeContext->Class<CreateGraphCanvasNodeMimeEvent, JE::Editor::Tools::GraphCanvas::GraphCanvasMimeEvent>()
                 ->Version(0)
                 ;
         }
@@ -50,7 +50,7 @@ namespace JE::Editor::Tools::GraphModel::Integration
 
         if (serializeContext)
         {
-            serializeContext->Class<CreateCommentNodeMimeEvent, GraphCanvas::GraphCanvasMimeEvent>()
+            serializeContext->Class<CreateCommentNodeMimeEvent, JE::Editor::Tools::GraphCanvas::GraphCanvasMimeEvent>()
                 ->Version(0)
                 ;
         }
@@ -62,7 +62,7 @@ namespace JE::Editor::Tools::GraphModel::Integration
 
         if (serializeContext)
         {
-            serializeContext->Class<CreateNodeGroupNodeMimeEvent, GraphCanvas::GraphCanvasMimeEvent>()
+            serializeContext->Class<CreateNodeGroupNodeMimeEvent, JE::Editor::Tools::GraphCanvas::GraphCanvasMimeEvent>()
                 ->Version(0)
                 ;
         }
@@ -74,7 +74,7 @@ namespace JE::Editor::Tools::GraphModel::Integration
 
         if (serializeContext)
         {
-            serializeContext->Class<CreateModuleNodeMimeEvent, GraphCanvas::GraphCanvasMimeEvent>()
+            serializeContext->Class<CreateModuleNodeMimeEvent, JE::Editor::Tools::GraphCanvas::GraphCanvasMimeEvent>()
                 ->Version(0)
                 ->Field("m_sourceFileName", &CreateModuleNodeMimeEvent::m_sourceFileName)
                 ->Field("m_sourceFileId", &CreateModuleNodeMimeEvent::m_sourceFileId)

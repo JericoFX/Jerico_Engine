@@ -11,7 +11,7 @@
 #include <AzCore/EBus/EBus.h>
 #include <AzCore/Component/ComponentBus.h>
 
-#include <GraphCanvas/Editor/EditorTypes.h>
+#include <JE/Editor/Tools/GraphCanvas/Editor/EditorTypes.h>
 
 #include <JE/Editor/Tools/GraphModel/Model/Graph.h>
 
@@ -59,13 +59,13 @@ namespace LandscapeCanvas
 
         // Update the Landscape Canvas to graph the specified entity and return the GraphId
         // of the graph that was opened (or focused if already opened)
-        virtual GraphCanvas::GraphId OnGraphEntity(const AZ::EntityId& entityId) = 0;
+        virtual JE::Editor::Tools::GraphCanvas::GraphId OnGraphEntity(const AZ::EntityId& entityId) = 0;
 
         //! Return the node (if any) matching a particular EntityId in a specified graph
-        virtual JE::Editor::Tools::GraphModel::NodePtr GetNodeMatchingEntityInGraph(const GraphCanvas::GraphId& graphId, const AZ::EntityId& entityId) = 0;
+        virtual JE::Editor::Tools::GraphModel::NodePtr GetNodeMatchingEntityInGraph(const JE::Editor::Tools::GraphCanvas::GraphId& graphId, const AZ::EntityId& entityId) = 0;
 
         //! Return the node (if any) matching a particular EntityId and ComponentId in a specified graph
-        virtual JE::Editor::Tools::GraphModel::NodePtr GetNodeMatchingEntityComponentInGraph(const GraphCanvas::GraphId& graphId, const AZ::EntityComponentIdPair& entityComponentId) = 0;
+        virtual JE::Editor::Tools::GraphModel::NodePtr GetNodeMatchingEntityComponentInGraph(const JE::Editor::Tools::GraphCanvas::GraphId& graphId, const AZ::EntityComponentIdPair& entityComponentId) = 0;
 
         //! Return a list of all nodes matching a particular EntityId in all currently open graphs
         virtual JE::Editor::Tools::GraphModel::NodePtrList GetAllNodesMatchingEntity(const AZ::EntityId& entityId) = 0;

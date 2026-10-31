@@ -8,14 +8,14 @@
 
 #include <AzCore/PlatformIncl.h>
 
-#include <GraphCanvas/Components/SceneBus.h>
-#include <GraphCanvas/Components/Slots/SlotBus.h>
-#include <GraphCanvas/Components/Slots/Data/DataSlotBus.h>
-#include <GraphCanvas/Components/ViewBus.h>
-#include <GraphCanvas/Components/VisualBus.h>
-#include <GraphCanvas/Editor/AssetEditorBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/SceneBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/Slots/SlotBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/Slots/Data/DataSlotBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/ViewBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/VisualBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Editor/AssetEditorBus.h>
 
-#include <GraphCanvas/Utils/ConversionUtils.h>
+#include <JE/Editor/Tools/GraphCanvas/Utils/ConversionUtils.h>
 
 #include <Editor/GraphCanvas/GraphCanvasEditorNotificationBusId.h>
 #include <Editor/View/Widgets/VariablePanel/VariableDockWidget.h>
@@ -37,16 +37,16 @@ namespace ScriptCanvas::Developer
     SelectSceneElementAction::SelectSceneElementAction(AZ::EntityId sceneMemberId)
         : m_sceneMemberId(sceneMemberId)
     {
-        GraphCanvas::SceneMemberRequestBus::EventResult(m_graphId, m_sceneMemberId, &GraphCanvas::SceneMemberRequests::GetScene);
+        JE::Editor::Tools::GraphCanvas::SceneMemberRequestBus::EventResult(m_graphId, m_sceneMemberId, &JE::Editor::Tools::GraphCanvas::SceneMemberRequests::GetScene);
 
-        GraphCanvas::SceneRequestBus::EventResult(m_viewId, m_graphId, &GraphCanvas::SceneRequests::GetViewId);
+        JE::Editor::Tools::GraphCanvas::SceneRequestBus::EventResult(m_viewId, m_graphId, &JE::Editor::Tools::GraphCanvas::SceneRequests::GetViewId);
 
-        if (!GraphCanvas::GraphUtils::IsConnection(sceneMemberId))
+        if (!JE::Editor::Tools::GraphCanvas::GraphUtils::IsConnection(sceneMemberId))
         {
             QRectF boundingRect;
 
             QGraphicsItem* graphicsItem = nullptr;
-            GraphCanvas::VisualRequestBus::EventResult(graphicsItem, sceneMemberId, &GraphCanvas::VisualRequests::AsGraphicsItem);
+            JE::Editor::Tools::GraphCanvas::VisualRequestBus::EventResult(graphicsItem, sceneMemberId, &JE::Editor::Tools::GraphCanvas::VisualRequests::AsGraphicsItem);
 
             if (graphicsItem)
             {
@@ -60,7 +60,7 @@ namespace ScriptCanvas::Developer
         else
         {
             QPainterPath outlinePath;
-            GraphCanvas::SceneMemberUIRequestBus::EventResult(outlinePath, sceneMemberId, &GraphCanvas::SceneMemberUIRequests::GetOutline);
+            JE::Editor::Tools::GraphCanvas::SceneMemberUIRequestBus::EventResult(outlinePath, sceneMemberId, &JE::Editor::Tools::GraphCanvas::SceneMemberUIRequests::GetOutline);
 
             m_scenePoint = outlinePath.pointAtPercent(0.5);
         }
@@ -69,7 +69,7 @@ namespace ScriptCanvas::Developer
     bool SelectSceneElementAction::IsMissingPrecondition()
     {
         QRectF viewableArea;
-        GraphCanvas::ViewRequestBus::EventResult(viewableArea, m_viewId, &GraphCanvas::ViewRequests::GetViewableAreaInSceneCoordinates);
+        JE::Editor::Tools::GraphCanvas::ViewRequestBus::EventResult(viewableArea, m_viewId, &JE::Editor::Tools::GraphCanvas::ViewRequests::GetViewableAreaInSceneCoordinates);
 
         return m_sceneMemberId.IsValid() && m_graphId.IsValid() && !viewableArea.contains(m_scenePoint);
     }
@@ -94,9 +94,9 @@ namespace ScriptCanvas::Developer
         ClearActionQueue();
 
         AZ::Vector2 screenPoint = AZ::Vector2::CreateZero();
-        GraphCanvas::ViewRequestBus::EventResult(screenPoint, m_viewId, &GraphCanvas::ViewRequests::MapToGlobal, GraphCanvas::ConversionUtils::QPointToVector(m_scenePoint));
+        JE::Editor::Tools::GraphCanvas::ViewRequestBus::EventResult(screenPoint, m_viewId, &JE::Editor::Tools::GraphCanvas::ViewRequests::MapToGlobal, JE::Editor::Tools::GraphCanvas::ConversionUtils::QPointToVector(m_scenePoint));
 
-        AddAction(aznew MouseClickAction(Qt::MouseButton::LeftButton, GraphCanvas::ConversionUtils::AZToQPoint(screenPoint).toPoint()));
+        AddAction(aznew MouseClickAction(Qt::MouseButton::LeftButton, JE::Editor::Tools::GraphCanvas::ConversionUtils::AZToQPoint(screenPoint).toPoint()));
         AddAction(aznew ProcessUserEventsAction());
 
         CompoundAction::SetupAction();
@@ -109,16 +109,16 @@ namespace ScriptCanvas::Developer
     AltClickSceneElementAction::AltClickSceneElementAction(AZ::EntityId sceneMemberId)
         : m_sceneMemberId(sceneMemberId)
     {
-        GraphCanvas::SceneMemberRequestBus::EventResult(m_graphId, m_sceneMemberId, &GraphCanvas::SceneMemberRequests::GetScene);
+        JE::Editor::Tools::GraphCanvas::SceneMemberRequestBus::EventResult(m_graphId, m_sceneMemberId, &JE::Editor::Tools::GraphCanvas::SceneMemberRequests::GetScene);
 
-        GraphCanvas::SceneRequestBus::EventResult(m_viewId, m_graphId, &GraphCanvas::SceneRequests::GetViewId);
+        JE::Editor::Tools::GraphCanvas::SceneRequestBus::EventResult(m_viewId, m_graphId, &JE::Editor::Tools::GraphCanvas::SceneRequests::GetViewId);
 
-        if (!GraphCanvas::GraphUtils::IsConnection(sceneMemberId))
+        if (!JE::Editor::Tools::GraphCanvas::GraphUtils::IsConnection(sceneMemberId))
         {
             QRectF boundingRect;
 
             QGraphicsItem* graphicsItem = nullptr;
-            GraphCanvas::VisualRequestBus::EventResult(graphicsItem, sceneMemberId, &GraphCanvas::VisualRequests::AsGraphicsItem);
+            JE::Editor::Tools::GraphCanvas::VisualRequestBus::EventResult(graphicsItem, sceneMemberId, &JE::Editor::Tools::GraphCanvas::VisualRequests::AsGraphicsItem);
 
             if (graphicsItem)
             {
@@ -132,7 +132,7 @@ namespace ScriptCanvas::Developer
         else
         {
             QPainterPath outlinePath;
-            GraphCanvas::SceneMemberUIRequestBus::EventResult(outlinePath, sceneMemberId, &GraphCanvas::SceneMemberUIRequests::GetOutline);
+            JE::Editor::Tools::GraphCanvas::SceneMemberUIRequestBus::EventResult(outlinePath, sceneMemberId, &JE::Editor::Tools::GraphCanvas::SceneMemberUIRequests::GetOutline);
 
             m_scenePoint = outlinePath.pointAtPercent(0.5);
         }
@@ -141,7 +141,7 @@ namespace ScriptCanvas::Developer
     bool AltClickSceneElementAction::IsMissingPrecondition()
     {
         QRectF viewableArea;
-        GraphCanvas::ViewRequestBus::EventResult(viewableArea, m_viewId, &GraphCanvas::ViewRequests::GetViewableAreaInSceneCoordinates);
+        JE::Editor::Tools::GraphCanvas::ViewRequestBus::EventResult(viewableArea, m_viewId, &JE::Editor::Tools::GraphCanvas::ViewRequests::GetViewableAreaInSceneCoordinates);
 
         return !viewableArea.contains(m_scenePoint);
     }
@@ -165,14 +165,14 @@ namespace ScriptCanvas::Developer
     {
         ClearActionQueue();
         m_sceneMemberRemoved = false;
-        GraphCanvas::SceneNotificationBus::Handler::BusConnect(m_graphId);
+        JE::Editor::Tools::GraphCanvas::SceneNotificationBus::Handler::BusConnect(m_graphId);
 #if defined(AZ_COMPILER_MSVC)
         AddAction(aznew KeyPressAction(VK_LMENU));
 
         AZ::Vector2 screenPoint = AZ::Vector2::CreateZero();
-        GraphCanvas::ViewRequestBus::EventResult(screenPoint, m_viewId, &GraphCanvas::ViewRequests::MapToGlobal, GraphCanvas::ConversionUtils::QPointToVector(m_scenePoint));
+        JE::Editor::Tools::GraphCanvas::ViewRequestBus::EventResult(screenPoint, m_viewId, &JE::Editor::Tools::GraphCanvas::ViewRequests::MapToGlobal, JE::Editor::Tools::GraphCanvas::ConversionUtils::QPointToVector(m_scenePoint));
 
-        AddAction(aznew MouseClickAction(Qt::MouseButton::LeftButton, GraphCanvas::ConversionUtils::AZToQPoint(screenPoint).toPoint()));
+        AddAction(aznew MouseClickAction(Qt::MouseButton::LeftButton, JE::Editor::Tools::GraphCanvas::ConversionUtils::AZToQPoint(screenPoint).toPoint()));
         AddAction(aznew KeyReleaseAction(VK_LMENU));
         AddAction(aznew ProcessUserEventsAction(AZStd::chrono::milliseconds(750)));
 #endif
@@ -207,14 +207,14 @@ namespace ScriptCanvas::Developer
 
     void AltClickSceneElementAction::OnActionsComplete()
     {
-        GraphCanvas::SceneNotificationBus::Handler::BusDisconnect();
+        JE::Editor::Tools::GraphCanvas::SceneNotificationBus::Handler::BusDisconnect();
     }
 
     ////////////////////////////////////
     // MouseToNodePropertyEditorAction
     ////////////////////////////////////
 
-    MouseToNodePropertyEditorAction::MouseToNodePropertyEditorAction(GraphCanvas::SlotId slotId)
+    MouseToNodePropertyEditorAction::MouseToNodePropertyEditorAction(JE::Editor::Tools::GraphCanvas::SlotId slotId)
         : m_slotId(slotId)
     {
     }
@@ -223,15 +223,15 @@ namespace ScriptCanvas::Developer
     {
         ClearActionQueue();
 
-        GraphCanvas::NodeId nodeId;
-        GraphCanvas::SlotRequestBus::EventResult(nodeId, m_slotId, &GraphCanvas::SlotRequests::GetNode);
+        JE::Editor::Tools::GraphCanvas::NodeId nodeId;
+        JE::Editor::Tools::GraphCanvas::SlotRequestBus::EventResult(nodeId, m_slotId, &JE::Editor::Tools::GraphCanvas::SlotRequests::GetNode);
 
-        GraphCanvas::GraphId graphId;
-        GraphCanvas::SceneMemberRequestBus::EventResult(graphId, nodeId, &GraphCanvas::SceneMemberRequests::GetScene);
+        JE::Editor::Tools::GraphCanvas::GraphId graphId;
+        JE::Editor::Tools::GraphCanvas::SceneMemberRequestBus::EventResult(graphId, nodeId, &JE::Editor::Tools::GraphCanvas::SceneMemberRequests::GetScene);
 
         QRectF sceneBoundingRect;
-        GraphCanvas::SlotRequestBus::EventResult(nodeId, m_slotId, &GraphCanvas::SlotRequests::GetNode);
-        GraphCanvas::DataSlotLayoutRequestBus::EventResult(sceneBoundingRect, m_slotId, &GraphCanvas::DataSlotLayoutRequests::GetWidgetSceneBoundingRect);
+        JE::Editor::Tools::GraphCanvas::SlotRequestBus::EventResult(nodeId, m_slotId, &JE::Editor::Tools::GraphCanvas::SlotRequests::GetNode);
+        JE::Editor::Tools::GraphCanvas::DataSlotLayoutRequestBus::EventResult(sceneBoundingRect, m_slotId, &JE::Editor::Tools::GraphCanvas::DataSlotLayoutRequests::GetWidgetSceneBoundingRect);
 
         AddAction(aznew SceneMouseMoveAction(graphId, sceneBoundingRect.center()));
 

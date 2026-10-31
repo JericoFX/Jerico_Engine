@@ -84,6 +84,11 @@ namespace AssetProcessor
         AZ_Printf(AssetProcessor::ConsoleChannel, "------------------------------------------------------------\n");
     }
 
+    void RCQueueSortModel::SetSourceAnalysisIdle(bool idle)
+    {
+        m_sourceAnalysisIdle = idle;
+    }
+
     RCJob* RCQueueSortModel::GetNextPendingJob()
     {
         using namespace RCQueueSortModel_Internal;
@@ -234,7 +239,8 @@ namespace AssetProcessor
         // Either there are no jobs to do or there is a cyclic order job dependency or the only jobs left are waiting for other jobs
         // to complete that will never appear.
         // Unblock the first job we can in case this clears the log jam.
-        if (anyPendingJob && m_sourceModel->jobsInFlight() == 0 && !waitingOnCatalog)
+        if (anyPendingJob && m_sourceModel->jobsInFlight() == 0 && m_sourceModel->jobsPendingCatalog() == 0 &&
+            m_sourceAnalysisIdle && !waitingOnCatalog)
         {
             // there's only a tiny amount of space to print things in the log, so keep the message terse but visible!
             AZ_Warning(AssetProcessor::ConsoleChannel, false,

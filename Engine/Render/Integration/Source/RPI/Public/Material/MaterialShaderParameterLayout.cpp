@@ -347,7 +347,7 @@ namespace JE::Render::RPI
 
         MaterialShaderParameterDescriptor* MaterialShaderParameterLayout::GetDescriptor(const Index parameterIndex)
         {
-            if (parameterIndex.IsValid())
+            if (parameterIndex.IsValid() && parameterIndex.GetIndex() < m_descriptors.size())
             {
                 return &m_descriptors[parameterIndex.GetIndex()];
             }
@@ -356,7 +356,7 @@ namespace JE::Render::RPI
 
         const MaterialShaderParameterDescriptor* const MaterialShaderParameterLayout::GetDescriptor(const Index parameterIndex) const
         {
-            if (parameterIndex.IsValid())
+            if (parameterIndex.IsValid() && parameterIndex.GetIndex() < m_descriptors.size())
             {
                 return &m_descriptors[parameterIndex.GetIndex()];
             }
@@ -600,7 +600,8 @@ namespace JE::Render::RPI
 
         bool MaterialShaderParameterNameIndex::ValidateOrFindIndex(const MaterialShaderParameterLayout* layout)
         {
-            if (m_index.IsValid())
+            const auto* descriptor = layout->GetDescriptor(m_index);
+            if (descriptor && descriptor->m_name == m_name.GetStringView())
             {
                 return true;
             }

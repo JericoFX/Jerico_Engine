@@ -364,7 +364,7 @@ namespace Terrain
         return DefaultMaterialIndex;
     }
 
-    AZ::Data::Asset<Physics::MaterialAsset> TerrainPhysicsColliderComponent::FindMaterialAssetForSurfaceTag(const SurfaceData::SurfaceTag tag) const
+    AZ::Data::Asset<Physics::MaterialAsset> TerrainPhysicsColliderComponent::FindMaterialAssetForSurfaceTag(const JE::Geometry::SurfaceData::SurfaceTag tag) const
     {
         AZStd::shared_lock lock(m_stateMutex);
 
@@ -468,7 +468,7 @@ namespace Terrain
 
         // Grab a local copy of the surface tag to material lookup to ensure that modifications on other threads
         // don't affect us while we're in the middle of the query.
-        AZStd::unordered_map<SurfaceData::SurfaceTag, uint8_t> surfaceTagToMaterialIndexLookup;
+        AZStd::unordered_map<JE::Geometry::SurfaceData::SurfaceTag, uint8_t> surfaceTagToMaterialIndexLookup;
         {
             AZStd::shared_lock lock(m_stateMutex);
             surfaceTagToMaterialIndexLookup = m_surfaceTagToMaterialIndexLookup;
@@ -504,7 +504,7 @@ namespace Terrain
             point.m_quadMeshType = terrainExists ? Physics::QuadMeshType::SubdivideUpperLeftToBottomRight : Physics::QuadMeshType::Hole;
 
             // Get the material index for the surface type. If we can't find it, use the default material.
-            if (const auto& entry = surfaceTagToMaterialIndexLookup.find(SurfaceData::SurfaceTag(surfaceWeight.m_surfaceType));
+            if (const auto& entry = surfaceTagToMaterialIndexLookup.find(JE::Geometry::SurfaceData::SurfaceTag(surfaceWeight.m_surfaceType));
                 entry != surfaceTagToMaterialIndexLookup.end())
             {
                 point.m_materialIndex = entry->second;

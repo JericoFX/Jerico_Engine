@@ -11,7 +11,7 @@
 #include <QScopedPointer>
 
 #include <AzCore/Memory/SystemAllocator.h>
-#include <GraphCanvas/Editor/AssetEditorBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Editor/AssetEditorBus.h>
 #include <Editor/View/Widgets/ValidationPanel/GraphValidationDockWidgetBus.h>
 
 namespace Ui

@@ -55,6 +55,7 @@
 #include <SceneAPI/SceneCore/Utilities/SceneGraphSelector.h>
 #include <SceneAPI/SceneData/GraphData/BlendShapeData.h>
 #include <SceneAPI/SceneData/GraphData/CustomPropertyData.h>
+#include <JE/Assets/RenderBuilders/SceneProcessing/Rules/SurfaceIdentityRule.h>
 #include <SceneAPI/SceneData/GraphData/MeshData.h>
 #include <SceneAPI/SceneData/GraphData/MeshVertexBitangentData.h>
 #include <SceneAPI/SceneData/GraphData/MeshVertexColorData.h>
@@ -402,7 +403,8 @@ namespace JE::Assets::RenderBuilders::SceneProcessing::Generation
 
                 const bool hasBlendShapes = HasAnyBlendShapeChild(graph, nodeIndex);
 
-                auto [optimizedMesh, optimizedUVs, optimizedTangents, optimizedBitangents, optimizedVertexColors, optimizedSkinWeights] = OptimizeMesh(mesh, mesh, uvDatas, tangentDatas, bitangentDatas, colorDatas, skinWeightDatas, meshGroup, hasBlendShapes);
+                AZStd::vector<AZ::u32> sourcePolygons;
+                auto [optimizedMesh, optimizedUVs, optimizedTangents, optimizedBitangents, optimizedVertexColors, optimizedSkinWeights] = OptimizeMesh(mesh, mesh, uvDatas, tangentDatas, bitangentDatas, colorDatas, skinWeightDatas, meshGroup, hasBlendShapes, &sourcePolygons);
 
                 AZ_TracePrintf(AZ::SceneAPI::Utilities::LogWindow, "Optimized mesh '%s': Original: %zu vertices -> optimized: %zu vertices, %0.02f%% of the original (hasBlendShapes=%s)",
                     graph.GetNodeName(nodeIndex).GetName(),
@@ -428,6 +430,8 @@ namespace JE::Assets::RenderBuilders::SceneProcessing::Generation
                 // Copy any custom properties from the original mesh to the optimized mesh
                 ICustomPropertyData::PropertyMap& optimizedPropertyMap = FindOrCreateCustomPropertyData(graph, optimizedMeshNodeIndex);
                 optimizedPropertyMap = unoptimizedPropertyMap;
+                // This map is correspondence only. Public identities remain the UUIDs persisted in the MeshGroup rule.
+                optimizedPropertyMap[Rules::SurfaceIdentityRule::SourcePolygonMapKey] = AZStd::make_any<AZStd::vector<AZ::u32>>(AZStd::move(sourcePolygons));
 
                 // Add a mapping from the optimized node back to the original node so it can also be looked up later
                 optimizedPropertyMap[AZ::SceneAPI::Utilities::OriginalUnoptimizedMeshPropertyMapKey] =
@@ -579,7 +583,8 @@ namespace JE::Assets::RenderBuilders::SceneProcessing::Generation
         const AZStd::vector<AZStd::reference_wrapper<const IMeshVertexColorData>>& vertexColors,
         const AZStd::vector<AZStd::reference_wrapper<const ISkinWeightData>>& skinWeights,
         const AZ::SceneAPI::DataTypes::IMeshGroup& meshGroup,
-        bool hasBlendShapes)
+        bool hasBlendShapes,
+        AZStd::vector<AZ::u32>* sourcePolygons)
     {
         const size_t vertexCount = meshData->GetVertexCount();
 
@@ -800,6 +805,10 @@ namespace JE::Assets::RenderBuilders::SceneProcessing::Generation
                     aznumeric_caster(indexOffset + subMesh->GetIndex(polygonIndex * 3 + 2)),
                     aznumeric_caster(subMesh->GetMaterialIndex())
                 );
+                if (sourcePolygons)
+                {
+                    sourcePolygons->push_back(aznumeric_cast<AZ::u32>(subMesh->GetSourcePolygonIndex(polygonIndex)));
+                }
                 const auto& faceInfo = optimizedMesh->GetFaceInfo(optimizedMesh->GetFaceCount() - 1);
                 AZStd::copy(AZStd::begin(faceInfo.vertexIndex), AZStd::end(faceInfo.vertexIndex), AZStd::inserter(usedIndexes, usedIndexes.begin()));
             }

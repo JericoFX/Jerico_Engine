@@ -28,7 +28,7 @@
 #include <EMotionFX/Source/AnimGraphObjectFactory.h>
 #include <EMotionStudio/EMStudioSDK/Source/EMStudioManager.h>
 
-#include <GraphCanvas/Widgets/NodePalette/NodePaletteTreeView.h>
+#include <JE/Editor/Tools/GraphCanvas/Widgets/NodePalette/NodePaletteTreeView.h>
 
 #include <QApplication>
 #include <QModelIndex>
@@ -106,7 +106,7 @@ namespace EMotionFX
         m_blendGraphWidget->OnContextMenuEvent(m_blendGraphWidget, QPoint(0, 0), QPoint(0, 0), m_animGraphPlugin, selectedAnimGraphNodes, true, false, m_animGraphPlugin->GetActionFilter());
 
         // Instantiate the node from the tree in context menu
-        auto* tree = UIFixture::GetFirstChildOfType<GraphCanvas::NodePaletteTreeView>(m_blendGraphWidget);
+        auto* tree = UIFixture::GetFirstChildOfType<JE::Editor::Tools::GraphCanvas::NodePaletteTreeView>(m_blendGraphWidget);
         if (!tree)
         {
             return nullptr;

@@ -7,8 +7,8 @@
  */
 #pragma once
 
-#include <GraphCanvas/Editor/AssetEditorBus.h>
-#include <GraphCanvas/Types/Types.h>
+#include <JE/Editor/Tools/GraphCanvas/Editor/AssetEditorBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Types/Types.h>
 
 #include <ScriptCanvasDeveloperEditor/EditorAutomation/EditorAutomationActions/GenericActions.h>
 
@@ -19,7 +19,7 @@ namespace ScriptCanvas::Developer
     //! has changed, meaning that in the context of these tests, the newly created graph is in focus.
     class WaitForNewGraphAction
         : public EditorAutomationAction
-        , public GraphCanvas::AssetEditorNotificationBus::Handler
+        , public JE::Editor::Tools::GraphCanvas::AssetEditorNotificationBus::Handler
     {
     public:
         AZ_CLASS_ALLOCATOR(WaitForNewGraphAction, AZ::SystemAllocator);
@@ -30,7 +30,7 @@ namespace ScriptCanvas::Developer
 
         bool Tick() override;
 
-        const GraphCanvas::GraphId& GetGraphId() const { return m_graphId; }
+        const JE::Editor::Tools::GraphCanvas::GraphId& GetGraphId() const { return m_graphId; }
 
     private:
 
@@ -56,7 +56,7 @@ namespace ScriptCanvas::Developer
 
         void SetupAction() override;
 
-        GraphCanvas::GraphId GetGraphId() const;
+        JE::Editor::Tools::GraphCanvas::GraphId GetGraphId() const;
 
         ActionReport GenerateReport() const override;
 
@@ -64,7 +64,7 @@ namespace ScriptCanvas::Developer
 
         void OnActionsComplete() override;
 
-        GraphCanvas::GraphId m_graphId;
+        JE::Editor::Tools::GraphCanvas::GraphId m_graphId;
         WaitForNewGraphAction* m_newGraphAction;
     };
 
@@ -89,7 +89,7 @@ namespace ScriptCanvas::Developer
 
     private:
 
-        GraphCanvas::GraphId m_graphId;
+        JE::Editor::Tools::GraphCanvas::GraphId m_graphId;
     };
 
     //! Action that will forcibly close the active graph, bypassing any prompts for saving
@@ -110,7 +110,7 @@ namespace ScriptCanvas::Developer
 
     private:
 
-        GraphCanvas::GraphId m_activeGraphId;
+        JE::Editor::Tools::GraphCanvas::GraphId m_activeGraphId;
 
         bool m_firstTick = false;
     };

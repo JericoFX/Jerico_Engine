@@ -44,7 +44,7 @@ namespace AssetProcessor
             settingsRegistry->Get(m_alwaysUseMaxJobs, settingsRoot + "/Jobs/AlwaysUseMaxJobs");
         }
 
-        bool isDefaultJobCount = m_maxJobs <= 1;
+        bool isDefaultJobCount = m_maxJobs == 0;
 
         if (isDefaultJobCount)
         {
@@ -79,9 +79,9 @@ namespace AssetProcessor
         }
 
         // final fail-safe
-        if (m_maxJobs < 2)
+        if (m_maxJobs < 1)
         {
-            m_maxJobs = 2;
+            m_maxJobs = 1;
         }
         AZ_Printf(ConsoleChannel, "Asset Processor CPU Usage: (settings registry 'Jobs' section):\n");
         AZ_Printf(ConsoleChannel, "    - Process up to %u jobs in parallel\n", m_maxJobs);
@@ -338,6 +338,9 @@ namespace AssetProcessor
             }
         }
 
+        // Publish accepted pending work before finishing the job it replaces.
+        Q_EMIT JobStatusChanged(details.m_jobEntry, AzToolsFramework::AssetSystem::JobStatus::Queued);
+
         if (cancelJob && existingJob && existingJobIndex != -1)
         {
             existingJob->SetState(RCJob::JobState::cancelled);
@@ -377,8 +380,6 @@ namespace AssetProcessor
             m_jobsCountPerPlatform[platformName] = 1;
         }
         Q_EMIT JobsInQueuePerPlatform(platformName, m_jobsCountPerPlatform[platformName]);
-        Q_EMIT JobStatusChanged(rcJob->GetJobEntry(), AzToolsFramework::AssetSystem::JobStatus::Queued);
-
         if (!m_dispatchingPaused)
         {
             Q_EMIT ActiveJobsCountChanged(aznumeric_cast<unsigned int>(m_RCJobListModel.itemCount()));
@@ -553,6 +554,15 @@ namespace AssetProcessor
         
         // escalating a job could free up an idle cpu thats dedicated to critical or escalated jobs.
         DispatchJobs();
+    }
+
+    void RCController::OnSourceAnalysisIdle(bool idle)
+    {
+        m_RCQueueSortModel.SetSourceAnalysisIdle(idle);
+        if (idle)
+        {
+            DispatchJobs();
+        }
     }
 
     void RCController::OnIntermediateSourceAppeared(QString sourceRef)

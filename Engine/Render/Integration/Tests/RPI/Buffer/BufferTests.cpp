@@ -10,6 +10,10 @@
 #include <JE/Render/RPI/Reflect/ResourcePoolAssetCreator.h>
 
 #include <AzTest/AzTest.h>
+#include <AzCore/Serialization/SerializeContext.h>
+#include <AzCore/Asset/AssetDataStream.h>
+#include <AzCore/std/containers/array.h>
+#include <cstring>
 
 #include <Common/RHI/Factory.h>
 #include <Common/RPITestFixture.h>
@@ -137,6 +141,49 @@ namespace UnitTest
             EXPECT_TRUE(assetViewDescriptor.m_elementFormat == expectedViewDescriptor.m_elementFormat);
             EXPECT_TRUE(assetViewDescriptor.m_elementOffset == expectedViewDescriptor.m_elementOffset);
             EXPECT_TRUE(assetViewDescriptor.m_elementSize == expectedViewDescriptor.m_elementSize);
+        }
+
+        void EncodedBufferFixture(
+            uint32_t count, uint32_t stride, const JE::Render::RPI::BufferAsset::BufferData& encoded,
+            JE::Render::RPI::BufferAsset::CompressionFormat compression, AZ::Data::Asset<JE::Render::RPI::BufferAsset>& asset)
+        {
+            using namespace JE::Render::RPI;
+            BufferAssetCreator creator;
+            creator.Begin(AZ::Data::AssetId(AZ::Uuid::CreateRandom()));
+            creator.SetUseCommonPool(CommonBufferPoolType::StaticInputAssembly);
+            creator.SetCompressionFormat(compression);
+            AZ::RHI::BufferDescriptor descriptor; descriptor.m_byteCount = static_cast<uint64_t>(count) * stride;
+            descriptor.m_bindFlags = AZ::RHI::BufferBindFlags::InputAssembly;
+            BufferAsset::BufferData initial(static_cast<size_t>(descriptor.m_byteCount), 0);
+            creator.SetBuffer(initial.data(), initial.size(), descriptor);
+            creator.SetBufferViewDescriptor(AZ::RHI::BufferViewDescriptor::CreateStructured(0, count, stride));
+            ASSERT_TRUE(creator.End(asset));
+            // Serialize enum metadata from the real producer, then replace only the encoded payload.
+            // This seed must not be queried if preparation fails; callers propagate fatal assertions.
+            AZ::SerializeContext::DataElementNode node;
+            ASSERT_TRUE(node.Convert<BufferAsset>(*GetSerializeContext()));
+            ASSERT_TRUE(node.SetData(*GetSerializeContext(), *asset.Get()));
+            const int dataIndex = node.FindElement(AZ_CRC_CE("Buffer"));
+            const int formatIndex = node.FindElement(AZ_CRC_CE("CompressionFormat"));
+            ASSERT_GE(dataIndex, 0); ASSERT_GE(formatIndex, 0);
+            const auto& formatNode = node.GetSubElement(formatIndex);
+            const AZ::Uuid enumTypeId("{D6624140-8972-4356-9A88-56BA8DD24D0A}");
+            ASSERT_EQ(formatNode.GetId(), enumTypeId);
+            ASSERT_EQ(GetSerializeContext()->GetUnderlyingTypeId(enumTypeId), azrtti_typeid<uint8_t>());
+            ASSERT_EQ(formatNode.GetRawDataElement().m_dataSize, sizeof(compression));
+            // Real deserialization covers encoded size > decoded size without weakening Creator validation.
+            ASSERT_TRUE(node.GetSubElement(dataIndex).SetData(*GetSerializeContext(), encoded));
+            ASSERT_TRUE(node.GetData(*asset.Get()));
+            ASSERT_EQ(asset->GetCompressionFormat(), compression);
+        }
+
+        JE::Render::RPI::BufferAsset::BufferData EncodedVertexFixture()
+        {
+            // meshopt v0, stride4: first byte values 0,2,4,6,6..., the other bytes zero.
+            // One 2-bit group with three escaped deltas and three zero channels; 32-byte zero tail.
+            JE::Render::RPI::BufferAsset::BufferData encoded{0xa0, 1, 0x3f, 0, 0, 0, 4, 4, 4, 0, 0, 0};
+            encoded.resize(44, 0);
+            return encoded;
         }
 
         AZStd::unique_ptr<JE::Render::RPI::BufferAssetHandler> m_bufferAssetHandler;
@@ -630,4 +677,125 @@ namespace UnitTest
         EXPECT_EQ(bufferInst->GetBufferView()->GetDescriptor().m_elementSize, bufferInst->GetBufferViewDescriptor().m_elementSize);
     }
     
+
+    TEST_F(BufferTests, DecodedCpuPayloadDoesNotInferCompressionFromSmallerEqualOrLargerByteLengths)
+    {
+        using namespace JE::Render::RPI;
+        const auto encoded = EncodedVertexFixture();
+        for (uint32_t count : {10u, 11u, 12u})
+        {
+            AZ::Data::Asset<BufferAsset> asset;
+            ASSERT_NO_FATAL_FAILURE(EncodedBufferFixture(count, 4, encoded, BufferAsset::CompressionFormat::Vertex, asset));
+            BufferAsset::BufferData scratch;
+            const auto decoded = asset->GetDecodedCpuBuffer(scratch, count * 4);
+            ASSERT_TRUE(decoded) << count;
+            ASSERT_EQ(decoded->size(), count * 4);
+            for (uint32_t i = 0; i != count; ++i)
+            {
+                EXPECT_EQ((*decoded)[i * 4], (i < 3 ? i : 3) * 2);
+                EXPECT_EQ((*decoded)[i * 4 + 1], 0); EXPECT_EQ((*decoded)[i * 4 + 2], 0); EXPECT_EQ((*decoded)[i * 4 + 3], 0);
+            }
+            EXPECT_EQ(asset->GetCompressionFormat(), BufferAsset::CompressionFormat::Vertex);
+            EXPECT_EQ(asset->GetBuffer().size(), 44); // const decoding never rewrites cook bytes or their format.
+            EXPECT_EQ(std::memcmp(asset->GetBuffer().data(), encoded.data(), encoded.size()), 0);
+        }
+    }
+
+    TEST_F(BufferTests, HandlerDecodeSaveAndBothClonePathsKeepResidentBytesAndFormatCoherent)
+    {
+        using namespace JE::Render::RPI;
+        for (uint32_t count : {10u, 11u, 12u})
+        {
+            const size_t decodedBytes = count * 4;
+            AZ::Data::Asset<BufferAsset> asset;
+            ASSERT_NO_FATAL_FAILURE(EncodedBufferFixture(count, 4, EncodedVertexFixture(), BufferAsset::CompressionFormat::Vertex, asset));
+            auto* handler = AZ::Data::AssetManager::Instance().GetHandler(BufferAsset::RTTI_Type());
+            ASSERT_TRUE(handler);
+            for (bool decodedState : {false, true})
+            {
+                BufferAsset::BufferData expectedScratch;
+                const auto expected = asset->GetDecodedCpuBuffer(expectedScratch, decodedBytes); ASSERT_TRUE(expected);
+                auto serializedClone = AZStd::unique_ptr<BufferAsset>(GetSerializeContext()->CloneObject(asset.Get()));
+                ASSERT_TRUE(serializedClone); EXPECT_EQ(serializedClone->GetCompressionFormat(), asset->GetCompressionFormat());
+                BufferAsset::BufferData cloneScratch;
+                const auto serializedDecoded = serializedClone->GetDecodedCpuBuffer(cloneScratch, decodedBytes);
+                ASSERT_TRUE(serializedDecoded); EXPECT_EQ(std::memcmp(serializedDecoded->data(), expected->data(), decodedBytes), 0);
+                // The producer/Creator contract excludes encoded bytes larger than the decoded descriptor.
+                if (decodedState || count >= 11)
+                {
+                    AZ::Data::Asset<BufferAsset> creatorClone; AZ::Data::AssetId next(AZ::Uuid::CreateRandom());
+                    ASSERT_TRUE(BufferAssetCreator::Clone(asset, creatorClone, next));
+                    EXPECT_EQ(creatorClone->GetCompressionFormat(), asset->GetCompressionFormat());
+                    BufferAsset::BufferData creatorScratch;
+                    const auto creatorDecoded = creatorClone->GetDecodedCpuBuffer(creatorScratch, decodedBytes);
+                    ASSERT_TRUE(creatorDecoded); EXPECT_EQ(std::memcmp(creatorDecoded->data(), expected->data(), decodedBytes), 0);
+                }
+                SerializeTester<BufferAsset> tester(GetSerializeContext());
+                tester.SerializeOut(asset.Get(), AZ::DataStream::ST_BINARY);
+                auto genericRoundtrip = tester.SerializeIn(AZ::Data::AssetId(AZ::Uuid::CreateRandom()));
+                EXPECT_EQ(genericRoundtrip->GetCompressionFormat(), asset->GetCompressionFormat());
+                BufferAsset::BufferData genericScratch;
+                const auto genericDecoded = genericRoundtrip->GetDecodedCpuBuffer(genericScratch, decodedBytes);
+                ASSERT_TRUE(genericDecoded); EXPECT_EQ(std::memcmp(genericDecoded->data(), expected->data(), decodedBytes), 0);
+                AZStd::vector<AZ::u8> serialized;
+                AZ::IO::ByteContainerStream<AZStd::vector<AZ::u8>> output(&serialized);
+                ASSERT_TRUE(handler->SaveAssetData(asset, &output));
+                auto input = AZStd::make_shared<AZ::Data::AssetDataStream>(); input->Open(AZStd::move(serialized));
+                ASSERT_EQ(handler->LoadAssetDataFromStream(asset, input, {}), AZ::Data::AssetHandler::LoadResult::LoadComplete);
+                EXPECT_EQ(asset->GetCompressionFormat(), BufferAsset::CompressionFormat::Uncompressed);
+                BufferAsset::BufferData untouched{0xab}; const auto capacity = untouched.capacity();
+                const auto borrowed = asset->GetDecodedCpuBuffer(untouched, decodedBytes); ASSERT_TRUE(borrowed);
+                EXPECT_EQ(borrowed->data(), asset->GetBuffer().data());
+                EXPECT_EQ(untouched.capacity(), capacity); ASSERT_EQ(untouched.size(), 1); EXPECT_EQ(untouched[0], 0xab);
+                EXPECT_EQ(asset->GetBuffer().size(), decodedBytes);
+                // First pass loads encoded bytes; second pass roundtrips normalized bytes without decoding twice.
+            }
+        }
+    }
+
+    TEST_F(BufferTests, DecodeBudgetAndMalformedDescriptorsRejectBeforeAllocationAndNeverPublishPartialPayload)
+    {
+        using namespace JE::Render::RPI;
+        AZ::Data::Asset<BufferAsset> asset;
+        ASSERT_NO_FATAL_FAILURE(EncodedBufferFixture(11, 4, EncodedVertexFixture(), BufferAsset::CompressionFormat::Vertex, asset));
+        BufferAsset::BufferData scratch{0xac}; const auto capacity = scratch.capacity();
+        EXPECT_FALSE(asset->GetDecodedCpuBuffer(scratch, 43));
+        EXPECT_EQ(scratch.capacity(), capacity); ASSERT_EQ(scratch.size(), 1); EXPECT_EQ(scratch[0], 0xac);
+        auto& descriptor = const_cast<AZ::RHI::BufferDescriptor&>(asset->GetBufferDescriptor());
+        ++descriptor.m_byteCount; EXPECT_FALSE(asset->GetDecodedCpuBuffer(scratch, 100)); --descriptor.m_byteCount;
+        auto& view = const_cast<AZ::RHI::BufferViewDescriptor&>(asset->GetBufferViewDescriptor());
+        const auto saved = view;
+        view.m_elementSize = 0; EXPECT_FALSE(asset->GetDecodedCpuBuffer(scratch, 100));
+        view.m_elementSize = 3; EXPECT_FALSE(asset->GetDecodedCpuBuffer(scratch, 100));
+        view.m_elementSize = 512; EXPECT_FALSE(asset->GetDecodedCpuBuffer(scratch, 100));
+        EXPECT_EQ(scratch.capacity(), capacity); view = saved;
+        auto* bytes = const_cast<uint8_t*>(asset->GetBuffer().data()); const uint8_t header = bytes[0]; bytes[0] = 0;
+        EXPECT_FALSE(asset->GetDecodedCpuBuffer(scratch, 44));
+        EXPECT_EQ(asset->GetCompressionFormat(), BufferAsset::CompressionFormat::Vertex);
+        EXPECT_EQ(asset->GetBuffer().size(), 44); EXPECT_EQ(asset->GetBuffer()[0], 0);
+        bytes[0] = header; EXPECT_TRUE(asset->GetDecodedCpuBuffer(scratch, 44));
+    }
+
+    TEST_F(BufferTests, IndexDecodeUsesTriangleCountAndWidthConstraintsBeforeAllocating)
+    {
+        using namespace JE::Render::RPI;
+        // meshoptimizer's published v0 decoder vector; expected triangle order is independent of the implementation.
+        const BufferAsset::BufferData encoded{0xe0, 0xf0, 0x10, 0xfe, 0xff, 0xf0, 0x0c, 0xff, 0x02, 0x02, 0x02, 0x00,
+            0x76, 0x87, 0x56, 0x67, 0x78, 0xa9, 0x86, 0x65, 0x89, 0x68, 0x98, 0x01, 0x69, 0x00, 0x00};
+        const AZStd::array<uint32_t, 12> expected{{0, 1, 2, 2, 1, 3, 4, 6, 5, 7, 8, 9}};
+        for (uint32_t stride : {2u, 4u})
+        {
+            AZ::Data::Asset<BufferAsset> asset;
+            ASSERT_NO_FATAL_FAILURE(EncodedBufferFixture(12, stride, encoded, BufferAsset::CompressionFormat::Index, asset));
+            BufferAsset::BufferData scratch; const auto decoded = asset->GetDecodedCpuBuffer(scratch, 48); ASSERT_TRUE(decoded);
+            for (size_t i = 0; i != expected.size(); ++i)
+            {
+                uint32_t value = 0; std::memcpy(&value, decoded->data() + i * stride, stride); EXPECT_EQ(value, expected[i]);
+            }
+            auto& descriptor = const_cast<AZ::RHI::BufferDescriptor&>(asset->GetBufferDescriptor());
+            descriptor.m_byteCount -= stride;
+            BufferAsset::BufferData denied{0xae}; const auto capacity = denied.capacity();
+            EXPECT_FALSE(asset->GetDecodedCpuBuffer(denied, 48)); EXPECT_EQ(denied.capacity(), capacity);
+        }
+    }
 } // namespace UnitTest

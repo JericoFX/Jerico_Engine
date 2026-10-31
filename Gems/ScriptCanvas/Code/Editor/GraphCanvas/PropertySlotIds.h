@@ -9,14 +9,14 @@
 
 #include <AzCore/Math/Crc.h>
 
-#include <GraphCanvas/Components/Slots/SlotBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/Slots/SlotBus.h>
 
 namespace ScriptCanvasEditor
 {
     namespace SlotGroups
     {
-        static const GraphCanvas::SlotGroup DynamicPropertiesGroup = AZ_CRC_CE("ScriptCanvas_DynamicPropertiesGroup");
-        static const GraphCanvas::SlotGroup EBusConnectionSlotGroup = AZ_CRC_CE("ScriptCanvas_EBusConnectionSlotGroup");
+        static const JE::Editor::Tools::GraphCanvas::SlotGroup DynamicPropertiesGroup = AZ_CRC_CE("ScriptCanvas_DynamicPropertiesGroup");
+        static const JE::Editor::Tools::GraphCanvas::SlotGroup EBusConnectionSlotGroup = AZ_CRC_CE("ScriptCanvas_EBusConnectionSlotGroup");
     }
 
     namespace PropertySlotIds

@@ -7,9 +7,9 @@
  */
 #pragma once
 
-#include <GraphCanvas/Editor/AssetEditorBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Editor/AssetEditorBus.h>
 
-#include <GraphCanvas/Widgets/NodePalette/TreeItems/DraggableNodePaletteTreeItem.h>
+#include <JE/Editor/Tools/GraphCanvas/Widgets/NodePalette/TreeItems/DraggableNodePaletteTreeItem.h>
 #include "CreateNodeMimeEvent.h"
 
 #include "Editor/Undo/ScriptCanvasGraphCommand.h"
@@ -40,11 +40,11 @@ namespace ScriptCanvasEditor
     };
 
     class GetVariableNodePaletteTreeItem
-        : public GraphCanvas::DraggableNodePaletteTreeItem
+        : public JE::Editor::Tools::GraphCanvas::DraggableNodePaletteTreeItem
         , public ScriptCanvas::VariableNotificationBus::Handler
     {
     public:
-        AZ_RTTI(GetVariableNodePaletteTreeItem, "{0589E084-2E57-4650-96BF-E42DA17D7731}", GraphCanvas::DraggableNodePaletteTreeItem)
+        AZ_RTTI(GetVariableNodePaletteTreeItem, "{0589E084-2E57-4650-96BF-E42DA17D7731}", JE::Editor::Tools::GraphCanvas::DraggableNodePaletteTreeItem)
         AZ_CLASS_ALLOCATOR(GetVariableNodePaletteTreeItem, AZ::SystemAllocator);
         static const QString& GetDefaultIcon();
 
@@ -52,7 +52,7 @@ namespace ScriptCanvasEditor
         GetVariableNodePaletteTreeItem(const ScriptCanvas::VariableId& variableId, const ScriptCanvas::ScriptCanvasId& scriptCanvasId);
         ~GetVariableNodePaletteTreeItem();
 
-        GraphCanvas::GraphCanvasMimeEvent* CreateMimeEvent() const override;
+        JE::Editor::Tools::GraphCanvas::GraphCanvasMimeEvent* CreateMimeEvent() const override;
 
         // VariableNotificationBus::Handler
         void OnVariableRenamed(AZStd::string_view variableName) override;
@@ -86,11 +86,11 @@ namespace ScriptCanvasEditor
     };
 
     class SetVariableNodePaletteTreeItem
-        : public GraphCanvas::DraggableNodePaletteTreeItem
+        : public JE::Editor::Tools::GraphCanvas::DraggableNodePaletteTreeItem
         , public ScriptCanvas::VariableNotificationBus::Handler
     {
     public:
-        AZ_RTTI(SetVariableNodePaletteTreeItem, "{BCFD5653-6621-4BAC-BD8E-71EC6190062F}", GraphCanvas::DraggableNodePaletteTreeItem)
+        AZ_RTTI(SetVariableNodePaletteTreeItem, "{BCFD5653-6621-4BAC-BD8E-71EC6190062F}", JE::Editor::Tools::GraphCanvas::DraggableNodePaletteTreeItem)
         AZ_CLASS_ALLOCATOR(SetVariableNodePaletteTreeItem, AZ::SystemAllocator);
         static const QString& GetDefaultIcon();
 
@@ -104,7 +104,7 @@ namespace ScriptCanvasEditor
 
         const ScriptCanvas::VariableId& GetVariableId() const;
 
-        GraphCanvas::GraphCanvasMimeEvent* CreateMimeEvent() const override;
+        JE::Editor::Tools::GraphCanvas::GraphCanvasMimeEvent* CreateMimeEvent() const override;
     private:
         ScriptCanvas::VariableId m_variableId;
     };
@@ -134,11 +134,11 @@ namespace ScriptCanvasEditor
     };
 
     class VariableChangedNodePaletteTreeItem
-        : public GraphCanvas::DraggableNodePaletteTreeItem
+        : public JE::Editor::Tools::GraphCanvas::DraggableNodePaletteTreeItem
         , public ScriptCanvas::VariableNotificationBus::Handler
     {
     public:
-        AZ_RTTI(VariableChangedNodePaletteTreeItem, "{209D877C-9D15-4B4F-ADF0-2D1A127A4A0D}", GraphCanvas::DraggableNodePaletteTreeItem);
+        AZ_RTTI(VariableChangedNodePaletteTreeItem, "{209D877C-9D15-4B4F-ADF0-2D1A127A4A0D}", JE::Editor::Tools::GraphCanvas::DraggableNodePaletteTreeItem);
         AZ_CLASS_ALLOCATOR(VariableChangedNodePaletteTreeItem, AZ::SystemAllocator);
         static const QString& GetDefaultIcon();
 
@@ -152,7 +152,7 @@ namespace ScriptCanvasEditor
 
         const ScriptCanvas::VariableId& GetVariableId() const;
 
-        GraphCanvas::GraphCanvasMimeEvent* CreateMimeEvent() const override;
+        JE::Editor::Tools::GraphCanvas::GraphCanvasMimeEvent* CreateMimeEvent() const override;
     private:
         ScriptCanvas::VariableId m_variableId;
     };
@@ -175,7 +175,7 @@ namespace ScriptCanvasEditor
         bool ExecuteEvent(const AZ::Vector2& mousePosition, AZ::Vector2& sceneDropPosition, const AZ::EntityId& graphCanvasGraphId) override;
         ScriptCanvasEditor::NodeIdPair ConstructNode(const AZ::EntityId& graphCanvasGraphId, const AZ::Vector2& scenePosition) override;
 
-        AZStd::vector< GraphCanvas::GraphCanvasMimeEvent* > CreateMimeEvents() const override;
+        AZStd::vector< JE::Editor::Tools::GraphCanvas::GraphCanvasMimeEvent* > CreateMimeEvents() const override;
 
     private:
 
@@ -185,7 +185,7 @@ namespace ScriptCanvasEditor
 
     // <VariableCategoryNodePaletteTreeItem>
     class VariableCategoryNodePaletteTreeItem
-        : public GraphCanvas::NodePaletteTreeItem
+        : public JE::Editor::Tools::GraphCanvas::NodePaletteTreeItem
     {
     public:
         AZ_CLASS_ALLOCATOR(VariableCategoryNodePaletteTreeItem, AZ::SystemAllocator);
@@ -200,8 +200,8 @@ namespace ScriptCanvasEditor
 
     // <LocalVariablesListNodePaletteTreeItem>
     class LocalVariablesListNodePaletteTreeItem
-        : public GraphCanvas::NodePaletteTreeItem
-        , public GraphCanvas::AssetEditorNotificationBus::Handler
+        : public JE::Editor::Tools::GraphCanvas::NodePaletteTreeItem
+        , public JE::Editor::Tools::GraphCanvas::AssetEditorNotificationBus::Handler
         , public ScriptCanvas::GraphVariableManagerNotificationBus::Handler
         , public GraphItemCommandNotificationBus::Handler
     {
@@ -211,7 +211,7 @@ namespace ScriptCanvasEditor
         ~LocalVariablesListNodePaletteTreeItem() = default;
 
         // GraphCanvas::AssetEditorNotificationBus
-        void OnActiveGraphChanged(const GraphCanvas::GraphId& graphCanvasGraphId) override;
+        void OnActiveGraphChanged(const JE::Editor::Tools::GraphCanvas::GraphId& graphCanvasGraphId) override;
         ////
 
         // GraphItemCommandNotificationBus
@@ -225,7 +225,7 @@ namespace ScriptCanvasEditor
 
     protected:
 
-        void OnChildAdded(GraphCanvas::GraphCanvasTreeItem* treeItem) override;
+        void OnChildAdded(JE::Editor::Tools::GraphCanvas::GraphCanvasTreeItem* treeItem) override;
 
     private:
 
@@ -234,13 +234,13 @@ namespace ScriptCanvasEditor
         ScriptCanvas::ScriptCanvasId m_scriptCanvasId;
 
         bool m_ignoreTreeSignals = false;
-        AZStd::unordered_set<GraphCanvas::GraphCanvasTreeItem*> m_nonVariableTreeItems;
+        AZStd::unordered_set<JE::Editor::Tools::GraphCanvas::GraphCanvasTreeItem*> m_nonVariableTreeItems;
     };
     // </LocalVariablesNodePaletteTreeItem>
 
     // <LocalVariableNodePaletteTreeItem>
     class LocalVariableNodePaletteTreeItem
-        : public GraphCanvas::NodePaletteTreeItem
+        : public JE::Editor::Tools::GraphCanvas::NodePaletteTreeItem
         , public ScriptCanvas::VariableNotificationBus::Handler
     {
     public:

@@ -27,6 +27,11 @@ namespace JE::Editor::Tools
             AzToolsFramework::AssetSystemJobRequestBus::BroadcastResult(
                 jobOutcome, &AzToolsFramework::AssetSystemJobRequestBus::Events::GetAssetJobsInfo, sourcePath, false);
 
+            if (!jobOutcome.IsSuccess() || jobOutcome.GetValue().empty())
+            {
+                return GetCurrentState();
+            }
+
             if (jobOutcome.IsSuccess())
             {
                 for (const auto& job : jobOutcome.GetValue())
@@ -51,6 +56,7 @@ namespace JE::Editor::Tools
                 {
                     switch (job.m_status)
                     {
+                    case AzToolsFramework::AssetSystem::JobStatus::Missing:
                     case AzToolsFramework::AssetSystem::JobStatus::Queued:
                     case AzToolsFramework::AssetSystem::JobStatus::InProgress:
                         // If any of the asset jobs are queued or in progress then return early until the next status request.

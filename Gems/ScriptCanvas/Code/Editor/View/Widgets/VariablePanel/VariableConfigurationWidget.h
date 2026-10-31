@@ -30,13 +30,13 @@
 
 #include <AzQtComponents/Components/StyledDialog.h>
 
-#include <GraphCanvas/Editor/AssetEditorBus.h>
-#include <GraphCanvas/Components/GraphCanvasPropertyBus.h>
-#include <GraphCanvas/Components/SceneBus.h>
-#include <GraphCanvas/Components/Nodes/NodeBus.h>
-#include <GraphCanvas/Components/Nodes/NodeTitleBus.h>
-#include <GraphCanvas/Widgets/GraphCanvasTreeItem.h>
-#include <GraphCanvas/Widgets/GraphCanvasTreeModel.h>
+#include <JE/Editor/Tools/GraphCanvas/Editor/AssetEditorBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/GraphCanvasPropertyBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/SceneBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/Nodes/NodeBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/Nodes/NodeTitleBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Widgets/GraphCanvasTreeItem.h>
+#include <JE/Editor/Tools/GraphCanvas/Widgets/GraphCanvasTreeModel.h>
 
 #include <ScriptCanvas/Bus/RequestBus.h>
 #include <ScriptCanvas/Variable/VariableBus.h>

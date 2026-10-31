@@ -1,0 +1,45 @@
+{
+  "utc": "2026-10-30T15:48:46.4860298Z",
+  "scope": "MaterialCanvas installed BSP Product integration, load-policy preservation",
+  "runtimeDLL": "BAC28FAB01716A27F7F175A6AF6FF7BB546B7874DA568135F25CE2C306544DE7",
+  "binding": "E6321E8B08188E039BB7EEC59120E1448EF9E030EF93D9CC57A845C6269C71AD",
+  "sourceFix": "FDF2C52D2A16C3274A130C8B0FCD4268F5CA0850ACB9F644FAEA6586E6C8EE5A",
+  "regression": "RED1fail then GREEN13/13 same testsDLL4F854",
+  "firstEffectiveApply": "04-product-applied.png",
+  "undo": "05-undo.png",
+  "redo": "06-redo.png",
+  "savedPrefabSHA": "92402F533F8858FBC90DDC8F3AA4D8447F2C3C041D783960300EABD67A941E2E",
+  "semanticReviewSHA": "68036E5543D643C1858FEB0D5EF21C5A55AEED6EE406228019B3676CD12EA11B",
+  "actualReopen": "09-actual-reopened.png",
+  "reopenLog": [
+    "<12:35:50> Successfully opened document F:/JericoEngine/JericoEngine/Projects/JEEditorFixture/Levels/MaterialSurfaceDropValidation-r1/MaterialSurfaceDropValidation-r1.prefab"
+  ],
+  "slot4PreLoadPreserved": true,
+  "otherPrefabValuesPreserved": true,
+  "expectedDeltas": 8,
+  "normalClosure": true,
+  "trackedNativeExit0": 6,
+  "forcedCleanup": false,
+  "protectedRestored": 28,
+  "ownedHelpersRemaining": 0,
+  "errorOr00067Lines": [],
+  "limits": [
+    "No new source-free claim for BAC28; prior SDK249/R5 cohort remains bounded evidence",
+    "No CPU/GPU percentile benchmark; screenshot FPS is not performance acceptance",
+    "03 is ineffective gesture/selection,08 is modal observation, neither credited as apply/reopen",
+    "Not global Vulkan/Linux/VR/Shipping acceptance"
+  ],
+  "functionalGateAccepted": true,
+  "wholeGemPublicationPending": true,
+  "independentFixPublication": {
+    "commit": "0414491c6ffca2b0377bcbfb3b7e7f16161638d2",
+    "parent": "44d1ac36280e369fb96747526f57ca74b58ef3b3",
+    "branch": "development",
+    "force": false,
+    "expectedShaChecked": true,
+    "remoteShaVerified": true,
+    "scope": "Only MaterialComponentController.cpp +3 lines; regression harness remains pending MaterialCanvas integration",
+    "method": "GitHub API tree/commit/ref; no local pull, local HEAD bf7 preserved",
+    "remoteDocumentationDelta": []
+  }
+}

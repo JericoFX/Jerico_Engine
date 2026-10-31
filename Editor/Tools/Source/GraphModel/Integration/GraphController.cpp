@@ -21,16 +21,16 @@
 #include <QGraphicsLinearLayout>
 
 // Graph Canvas
-#include <GraphCanvas/Components/GeometryBus.h>
-#include <GraphCanvas/Components/GridBus.h>
-#include <GraphCanvas/Components/Nodes/NodeBus.h>
-#include <GraphCanvas/Components/Nodes/NodeLayoutBus.h>
-#include <GraphCanvas/Components/Nodes/NodeTitleBus.h>
-#include <GraphCanvas/Components/Nodes/Wrapper/WrapperNodeBus.h>
-#include <GraphCanvas/Components/Slots/Extender/ExtenderSlotBus.h>
-#include <GraphCanvas/Components/ViewBus.h>
-#include <GraphCanvas/GraphCanvasBus.h>
-#include <GraphCanvas/Types/EntitySaveData.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/GeometryBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/GridBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/Nodes/NodeBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/Nodes/NodeLayoutBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/Nodes/NodeTitleBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/Nodes/Wrapper/WrapperNodeBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/Slots/Extender/ExtenderSlotBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/ViewBus.h>
+#include <JE/Editor/Tools/GraphCanvas/GraphCanvasBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Types/EntitySaveData.h>
 
 // Graph Model
 #include <JE/Editor/Tools/GraphModel/Integration/BooleanDataInterface.h>
@@ -223,38 +223,38 @@ namespace JE::Editor::Tools::GraphModel::Integration
     ////////////////////////////////////////////////////////////////////////////////////
     // GraphController
 
-    GraphCanvas::ConnectionType ToGraphCanvasConnectionType(const JE::Editor::Tools::GraphModel::SlotDirection& direction)
+    JE::Editor::Tools::GraphCanvas::ConnectionType ToGraphCanvasConnectionType(const JE::Editor::Tools::GraphModel::SlotDirection& direction)
     {
         switch (direction)
         {
         case JE::Editor::Tools::GraphModel::SlotDirection::Input:
-            return GraphCanvas::ConnectionType::CT_Input;
+            return JE::Editor::Tools::GraphCanvas::ConnectionType::CT_Input;
         case JE::Editor::Tools::GraphModel::SlotDirection::Output:
-            return GraphCanvas::ConnectionType::CT_Output;
+            return JE::Editor::Tools::GraphCanvas::ConnectionType::CT_Output;
         default:
             break;
         }
 
         AZ_Assert(false, "Invalid SlotDirection");
-        return GraphCanvas::ConnectionType::CT_Invalid;
+        return JE::Editor::Tools::GraphCanvas::ConnectionType::CT_Invalid;
     }
 
-    GraphCanvas::SlotGroup ToGraphCanvasSlotGroup(const JE::Editor::Tools::GraphModel::SlotType& slotType)
+    JE::Editor::Tools::GraphCanvas::SlotGroup ToGraphCanvasSlotGroup(const JE::Editor::Tools::GraphModel::SlotType& slotType)
     {
         switch (slotType)
         {
         case JE::Editor::Tools::GraphModel::SlotType::Data:
-            return GraphCanvas::SlotGroups::DataGroup;
+            return JE::Editor::Tools::GraphCanvas::SlotGroups::DataGroup;
         case JE::Editor::Tools::GraphModel::SlotType::Event:
-            return GraphCanvas::SlotGroups::ExecutionGroup;
+            return JE::Editor::Tools::GraphCanvas::SlotGroups::ExecutionGroup;
         case JE::Editor::Tools::GraphModel::SlotType::Property:
-            return GraphCanvas::SlotGroups::PropertyGroup;
+            return JE::Editor::Tools::GraphCanvas::SlotGroups::PropertyGroup;
         default:
             break;
         }
 
         AZ_Assert(false, "Invalid SlotType");
-        return GraphCanvas::SlotGroups::Invalid;
+        return JE::Editor::Tools::GraphCanvas::SlotGroups::Invalid;
     }
 
     GraphController::GraphController(JE::Editor::Tools::GraphModel::GraphPtr graph, AZ::EntityId graphCanvasSceneId)
@@ -264,8 +264,8 @@ namespace JE::Editor::Tools::GraphModel::Integration
         AZ::ComponentApplicationBus::BroadcastResult(m_serializeContext, &AZ::ComponentApplicationRequests::GetSerializeContext);
         AZ_Assert(m_serializeContext, "Failed to acquire application serialize context.");
 
-        GraphCanvas::GraphModelRequestBus::Handler::BusConnect(m_graphCanvasSceneId);
-        GraphCanvas::SceneNotificationBus::Handler::BusConnect(m_graphCanvasSceneId);
+        JE::Editor::Tools::GraphCanvas::GraphModelRequestBus::Handler::BusConnect(m_graphCanvasSceneId);
+        JE::Editor::Tools::GraphCanvas::SceneNotificationBus::Handler::BusConnect(m_graphCanvasSceneId);
         GraphControllerRequestBus::Handler::BusConnect(m_graphCanvasSceneId);
 
         CreateFullGraphUi();
@@ -274,8 +274,8 @@ namespace JE::Editor::Tools::GraphModel::Integration
     GraphController::~GraphController()
     {
         GraphControllerRequestBus::Handler::BusDisconnect();
-        GraphCanvas::SceneNotificationBus::Handler::BusDisconnect();
-        GraphCanvas::GraphModelRequestBus::Handler::BusDisconnect();
+        JE::Editor::Tools::GraphCanvas::SceneNotificationBus::Handler::BusDisconnect();
+        JE::Editor::Tools::GraphCanvas::GraphModelRequestBus::Handler::BusDisconnect();
     }
 
     JE::Editor::Tools::GraphModel::GraphPtr GraphController::GetGraph()
@@ -298,13 +298,13 @@ namespace JE::Editor::Tools::GraphModel::Integration
         using namespace JE::Editor::Tools::GraphModel;
 
         // This notification is needed by the graph canvassing component prior to repopulating the entire scene.
-        GraphCanvas::SceneRequestBus::Event(GetGraphCanvasSceneId(), &GraphCanvas::SceneRequests::SignalLoadStart);
+        JE::Editor::Tools::GraphCanvas::SceneRequestBus::Event(GetGraphCanvasSceneId(), &JE::Editor::Tools::GraphCanvas::SceneRequests::SignalLoadStart);
 
         GraphCanvasMetadata* graphCanvasMetadata = GetGraphMetadata();
 
         // Connect the EntitySaveDataRequestBus using a router. This will allow the graph controller to inject custom selection save
         // data for all graph canvas objects. This should only be connected while serializing save data for the current graph.
-        GraphCanvas::EntitySaveDataRequestBus::Router::BusRouterConnect();
+        JE::Editor::Tools::GraphCanvas::EntitySaveDataRequestBus::Router::BusRouterConnect();
 
         // Create UI for all the Nodes
         for (const auto& pair : m_graph->GetNodes())
@@ -312,7 +312,7 @@ namespace JE::Editor::Tools::GraphModel::Integration
             const NodeId nodeId = pair.first;
             NodePtr node = pair.second;
 
-            AZStd::shared_ptr<GraphCanvas::EntitySaveDataContainer> container;
+            AZStd::shared_ptr<JE::Editor::Tools::GraphCanvas::EntitySaveDataContainer> container;
             auto metadataIter = graphCanvasMetadata->m_nodeMetadata.find(nodeId);
             if (metadataIter != graphCanvasMetadata->m_nodeMetadata.end() && metadataIter->second)
             {
@@ -323,7 +323,7 @@ namespace JE::Editor::Tools::GraphModel::Integration
 
             if (container)
             {
-                GraphCanvas::EntitySaveDataRequestBus::Event(nodeUiId, &GraphCanvas::EntitySaveDataRequests::ReadSaveData, *container);
+                JE::Editor::Tools::GraphCanvas::EntitySaveDataRequestBus::Event(nodeUiId, &JE::Editor::Tools::GraphCanvas::EntitySaveDataRequests::ReadSaveData, *container);
             }
         }
 
@@ -345,24 +345,24 @@ namespace JE::Editor::Tools::GraphModel::Integration
         // Load graph canvas metadata for the scene. This will recreate all of the utility types like comments, bookmarks, groups, etc. 
         if (graphCanvasMetadata->m_sceneMetadata)
         {
-            GraphCanvas::EntitySaveDataRequestBus::Event(
-                GetGraphCanvasSceneId(), &GraphCanvas::EntitySaveDataRequests::ReadSaveData, *graphCanvasMetadata->m_sceneMetadata);
+            JE::Editor::Tools::GraphCanvas::EntitySaveDataRequestBus::Event(
+                GetGraphCanvasSceneId(), &JE::Editor::Tools::GraphCanvas::EntitySaveDataRequests::ReadSaveData, *graphCanvasMetadata->m_sceneMetadata);
         }
 
         // Disconnect the EntitySaveDataRequestBus after save data serialization as completed
-        GraphCanvas::EntitySaveDataRequestBus::Router::BusRouterDisconnect();
+        JE::Editor::Tools::GraphCanvas::EntitySaveDataRequestBus::Router::BusRouterDisconnect();
 
         // After the graph has been reconstructed, this signal will inform the scene, node groups, and other types to update their state
         // after all of the graph elements are in place. This is necessary for node groups to reclaim nodes that were contained within them
         // when the graph was saved.
-        GraphCanvas::SceneRequestBus::Event(GetGraphCanvasSceneId(), &GraphCanvas::SceneRequests::SignalLoadEnd);
+        JE::Editor::Tools::GraphCanvas::SceneRequestBus::Event(GetGraphCanvasSceneId(), &JE::Editor::Tools::GraphCanvas::SceneRequests::SignalLoadEnd);
     }
 
     AZ::Entity* GraphController::CreateSlotUi(JE::Editor::Tools::GraphModel::SlotPtr slot, AZ::EntityId nodeUiId)
     {
         using namespace JE::Editor::Tools::GraphModel;
 
-        GraphCanvas::SlotConfiguration slotConfig;
+        JE::Editor::Tools::GraphCanvas::SlotConfiguration slotConfig;
         slotConfig.m_name = !slot->GetDisplayName().empty() ? slot->GetDisplayName() : slot->GetName();
         slotConfig.m_tooltip = slot->GetDescription();
         slotConfig.m_connectionType = ToGraphCanvasConnectionType(slot->GetSlotDirection());
@@ -375,25 +375,25 @@ namespace JE::Editor::Tools::GraphModel::Integration
         {
         case SlotType::Data:
             {
-                GraphCanvas::DataSlotConfiguration dataConfig(slotConfig);
-                dataConfig.m_dataSlotType = GraphCanvas::DataSlotType::Value;
+                JE::Editor::Tools::GraphCanvas::DataSlotConfiguration dataConfig(slotConfig);
+                dataConfig.m_dataSlotType = JE::Editor::Tools::GraphCanvas::DataSlotType::Value;
                 dataConfig.m_typeId = slot->GetDataType()->GetTypeUuid();
-                GraphCanvas::GraphCanvasRequestBus::BroadcastResult(
-                    graphCanvasSlotEntity, &GraphCanvas::GraphCanvasRequests::CreateSlot, stylingParent, dataConfig);
+                JE::Editor::Tools::GraphCanvas::GraphCanvasRequestBus::BroadcastResult(
+                    graphCanvasSlotEntity, &JE::Editor::Tools::GraphCanvas::GraphCanvasRequests::CreateSlot, stylingParent, dataConfig);
             }
 
             break;
         case SlotType::Event:
             {
-                GraphCanvas::ExecutionSlotConfiguration eventConfig(slotConfig);
-                GraphCanvas::GraphCanvasRequestBus::BroadcastResult(
-                    graphCanvasSlotEntity, &GraphCanvas::GraphCanvasRequests::CreateSlot, stylingParent, eventConfig);
+                JE::Editor::Tools::GraphCanvas::ExecutionSlotConfiguration eventConfig(slotConfig);
+                JE::Editor::Tools::GraphCanvas::GraphCanvasRequestBus::BroadcastResult(
+                    graphCanvasSlotEntity, &JE::Editor::Tools::GraphCanvas::GraphCanvasRequests::CreateSlot, stylingParent, eventConfig);
             }
             break;
         case SlotType::Property:
             {
-                GraphCanvas::GraphCanvasRequestBus::BroadcastResult(
-                    graphCanvasSlotEntity, &GraphCanvas::GraphCanvasRequests::CreatePropertySlot, stylingParent, AZ::Crc32(), slotConfig);
+                JE::Editor::Tools::GraphCanvas::GraphCanvasRequestBus::BroadcastResult(
+                    graphCanvasSlotEntity, &JE::Editor::Tools::GraphCanvas::GraphCanvasRequests::CreatePropertySlot, stylingParent, AZ::Crc32(), slotConfig);
             }
             break;
         default:
@@ -407,7 +407,7 @@ namespace JE::Editor::Tools::GraphModel::Integration
 
         m_elementMap.Add(graphCanvasSlotEntity->GetId(), slot);
 
-        GraphCanvas::NodeRequestBus::Event(nodeUiId, &GraphCanvas::NodeRequests::AddSlot, graphCanvasSlotEntity->GetId());
+        JE::Editor::Tools::GraphCanvas::NodeRequestBus::Event(nodeUiId, &JE::Editor::Tools::GraphCanvas::NodeRequests::AddSlot, graphCanvasSlotEntity->GetId());
 
         return graphCanvasSlotEntity;
     }
@@ -424,13 +424,13 @@ namespace JE::Editor::Tools::GraphModel::Integration
         switch (nodeType)
         {
         case NodeType::GeneralNode:
-            GraphCanvas::GraphCanvasRequestBus::BroadcastResult(
-                graphCanvasNode, &GraphCanvas::GraphCanvasRequests::CreateGeneralNodeAndActivate, nodeStyle);
+            JE::Editor::Tools::GraphCanvas::GraphCanvasRequestBus::BroadcastResult(
+                graphCanvasNode, &JE::Editor::Tools::GraphCanvas::GraphCanvasRequests::CreateGeneralNodeAndActivate, nodeStyle);
             break;
 
         case NodeType::WrapperNode:
-            GraphCanvas::GraphCanvasRequestBus::BroadcastResult(
-                graphCanvasNode, &GraphCanvas::GraphCanvasRequests::CreateWrapperNodeAndActivate, nodeStyle);
+            JE::Editor::Tools::GraphCanvas::GraphCanvasRequestBus::BroadcastResult(
+                graphCanvasNode, &JE::Editor::Tools::GraphCanvas::GraphCanvasRequests::CreateWrapperNodeAndActivate, nodeStyle);
             break;
         }
 
@@ -438,14 +438,14 @@ namespace JE::Editor::Tools::GraphModel::Integration
         const AZ::EntityId nodeUiId = graphCanvasNode->GetId();
         m_elementMap.Add(nodeUiId, node);
 
-        GraphCanvas::NodeTitleRequestBus::Event(nodeUiId, &GraphCanvas::NodeTitleRequests::SetTitle, node->GetTitle());
-        GraphCanvas::NodeTitleRequestBus::Event(nodeUiId, &GraphCanvas::NodeTitleRequests::SetSubTitle, node->GetSubTitle());
+        JE::Editor::Tools::GraphCanvas::NodeTitleRequestBus::Event(nodeUiId, &JE::Editor::Tools::GraphCanvas::NodeTitleRequests::SetTitle, node->GetTitle());
+        JE::Editor::Tools::GraphCanvas::NodeTitleRequestBus::Event(nodeUiId, &JE::Editor::Tools::GraphCanvas::NodeTitleRequests::SetSubTitle, node->GetSubTitle());
 
         // Set the palette override for this node if one has been specified
         AZStd::string paletteOverride = Helpers::GetTitlePaletteOverride(node.get(), azrtti_typeid(node.get()));
         if (!paletteOverride.empty())
         {
-            GraphCanvas::NodeTitleRequestBus::Event(nodeUiId, &GraphCanvas::NodeTitleRequests::SetPaletteOverride, paletteOverride);
+            JE::Editor::Tools::GraphCanvas::NodeTitleRequestBus::Event(nodeUiId, &JE::Editor::Tools::GraphCanvas::NodeTitleRequests::SetPaletteOverride, paletteOverride);
         }
 
         // Create the slots...
@@ -459,7 +459,7 @@ namespace JE::Editor::Tools::GraphModel::Integration
             }
 
             const AZStd::string& slotName = slotDefinition->GetName();
-            GraphCanvas::ExtenderId extenderId;
+            JE::Editor::Tools::GraphCanvas::ExtenderId extenderId;
 
             if (slotDefinition->SupportsExtendability())
             {
@@ -477,7 +477,7 @@ namespace JE::Editor::Tools::GraphModel::Integration
                 }
                 else
                 {
-                    AZStd::unordered_map<GraphCanvas::ExtenderId, JE::Editor::Tools::GraphModel::SlotName> newNodeMap;
+                    AZStd::unordered_map<JE::Editor::Tools::GraphCanvas::ExtenderId, JE::Editor::Tools::GraphModel::SlotName> newNodeMap;
                     newNodeMap[extenderId] = slotName;
 
                     m_nodeExtenderIds[nodeUiId] = newNodeMap;
@@ -492,7 +492,7 @@ namespace JE::Editor::Tools::GraphModel::Integration
             // the user to add more slots
             if (slotDefinition->SupportsExtendability())
             {
-                GraphCanvas::ExtenderSlotConfiguration extenderConfig;
+                JE::Editor::Tools::GraphCanvas::ExtenderSlotConfiguration extenderConfig;
                 extenderConfig.m_extenderId = extenderId;
                 extenderConfig.m_name = slotDefinition->GetExtensionLabel();
                 extenderConfig.m_tooltip = slotDefinition->GetExtensionTooltip();
@@ -501,17 +501,17 @@ namespace JE::Editor::Tools::GraphModel::Integration
 
                 const AZ::EntityId stylingParent = nodeUiId;
                 AZ::Entity* extensionEntity = nullptr;
-                GraphCanvas::GraphCanvasRequestBus::BroadcastResult(
-                    extensionEntity, &GraphCanvas::GraphCanvasRequests::CreateSlot, stylingParent, extenderConfig);
+                JE::Editor::Tools::GraphCanvas::GraphCanvasRequestBus::BroadcastResult(
+                    extensionEntity, &JE::Editor::Tools::GraphCanvas::GraphCanvasRequests::CreateSlot, stylingParent, extenderConfig);
 
                 extensionEntity->Init();
                 extensionEntity->Activate();
 
-                GraphCanvas::NodeRequestBus::Event(nodeUiId, &GraphCanvas::NodeRequests::AddSlot, extensionEntity->GetId());
+                JE::Editor::Tools::GraphCanvas::NodeRequestBus::Event(nodeUiId, &JE::Editor::Tools::GraphCanvas::NodeRequests::AddSlot, extensionEntity->GetId());
             }
         }
 
-        GraphCanvas::SceneRequestBus::Event(GetGraphCanvasSceneId(), &GraphCanvas::SceneRequests::AddNode, nodeUiId, scenePosition, false);
+        JE::Editor::Tools::GraphCanvas::SceneRequestBus::Event(GetGraphCanvasSceneId(), &JE::Editor::Tools::GraphCanvas::SceneRequests::AddNode, nodeUiId, scenePosition, false);
         return nodeUiId;
     }
 
@@ -526,19 +526,19 @@ namespace JE::Editor::Tools::GraphModel::Integration
         m_isCreatingConnectionUi = true;
 
         AZ::EntityId connectionUiId;
-        GraphCanvas::SceneRequestBus::EventResult(
+        JE::Editor::Tools::GraphCanvas::SceneRequestBus::EventResult(
             connectionUiId,
             GetGraphCanvasSceneId(),
-            &GraphCanvas::SceneRequests::CreateConnectionBetween,
-            GraphCanvas::Endpoint(sourceNodeUiId, sourceSlotUiId),
-            GraphCanvas::Endpoint(targetNodeUiId, targetSlotUiId));
+            &JE::Editor::Tools::GraphCanvas::SceneRequests::CreateConnectionBetween,
+            JE::Editor::Tools::GraphCanvas::Endpoint(sourceNodeUiId, sourceSlotUiId),
+            JE::Editor::Tools::GraphCanvas::Endpoint(targetNodeUiId, targetSlotUiId));
 
         m_elementMap.Add(connectionUiId, connection);
 
         m_isCreatingConnectionUi = false;
     }
 
-    GraphCanvas::NodeId GraphController::AddNode(JE::Editor::Tools::GraphModel::NodePtr node, AZ::Vector2& sceneDropPosition)
+    JE::Editor::Tools::GraphCanvas::NodeId GraphController::AddNode(JE::Editor::Tools::GraphModel::NodePtr node, AZ::Vector2& sceneDropPosition)
     {
         AZ_Assert(node, "Node was null");
 
@@ -546,16 +546,16 @@ namespace JE::Editor::Tools::GraphModel::Integration
 
         AZ::EntityId graphCanvasNodeId = CreateNodeUi(nodeId, node, sceneDropPosition);
 
-        GraphCanvas::SceneMemberUIRequestBus::Event(graphCanvasNodeId, &GraphCanvas::SceneMemberUIRequests::SetSelected, true);
+        JE::Editor::Tools::GraphCanvas::SceneMemberUIRequestBus::Event(graphCanvasNodeId, &JE::Editor::Tools::GraphCanvas::SceneMemberUIRequests::SetSelected, true);
 
         SaveMetadata(graphCanvasNodeId);
 
         // Offset the sceneDropPosition so if multiple nodes are dragged into the scene at the same time, the don't stack exactly on top of
         // each other
         AZ::EntityId gridId;
-        GraphCanvas::SceneRequestBus::EventResult(gridId, GetGraphCanvasSceneId(), &GraphCanvas::SceneRequests::GetGrid);
+        JE::Editor::Tools::GraphCanvas::SceneRequestBus::EventResult(gridId, GetGraphCanvasSceneId(), &JE::Editor::Tools::GraphCanvas::SceneRequests::GetGrid);
         AZ::Vector2 offset = AZ::Vector2::CreateZero();
-        GraphCanvas::GridRequestBus::EventResult(offset, gridId, &GraphCanvas::GridRequests::GetMinorPitch);
+        JE::Editor::Tools::GraphCanvas::GridRequestBus::EventResult(offset, gridId, &JE::Editor::Tools::GraphCanvas::GridRequests::GetMinorPitch);
         sceneDropPosition += offset;
 
         return graphCanvasNodeId;
@@ -567,7 +567,7 @@ namespace JE::Editor::Tools::GraphModel::Integration
         if (nodeUiId.IsValid())
         {
             AzToolsFramework::EntityIdSet entityIds = { nodeUiId };
-            GraphCanvas::SceneRequestBus::Event(GetGraphCanvasSceneId(), &GraphCanvas::SceneRequests::Delete, entityIds);
+            JE::Editor::Tools::GraphCanvas::SceneRequestBus::Event(GetGraphCanvasSceneId(), &JE::Editor::Tools::GraphCanvas::SceneRequests::Delete, entityIds);
 
             return true;
         }
@@ -581,7 +581,7 @@ namespace JE::Editor::Tools::GraphModel::Integration
         const AZ::EntityId nodeUiId = m_elementMap.Find(node);
         if (nodeUiId.IsValid())
         {
-            GraphCanvas::GeometryRequestBus::EventResult(position, nodeUiId, &GraphCanvas::GeometryRequests::GetPosition);
+            JE::Editor::Tools::GraphCanvas::GeometryRequestBus::EventResult(position, nodeUiId, &JE::Editor::Tools::GraphCanvas::GeometryRequests::GetPosition);
         }
 
         return position;
@@ -638,8 +638,8 @@ namespace JE::Editor::Tools::GraphModel::Integration
         m_graph->UnwrapNode(node);
 
         // Unwrap the node from the parent WrapperNode
-        GraphCanvas::WrappedNodeConfiguration configuration;
-        GraphCanvas::WrapperNodeRequestBus::Event(wrapperNodeUiId, &GraphCanvas::WrapperNodeRequests::UnwrapNode, nodeUiId);
+        JE::Editor::Tools::GraphCanvas::WrappedNodeConfiguration configuration;
+        JE::Editor::Tools::GraphCanvas::WrapperNodeRequestBus::Event(wrapperNodeUiId, &JE::Editor::Tools::GraphCanvas::WrapperNodeRequests::UnwrapNode, nodeUiId);
 
         GraphControllerNotificationBus::Event(
             m_graphCanvasSceneId, &GraphControllerNotifications::OnGraphModelNodeUnwrapped, wrapperNode, node);
@@ -660,9 +660,9 @@ namespace JE::Editor::Tools::GraphModel::Integration
         }
 
         // Wrap the node in the parent WrapperNode with the given layout order
-        GraphCanvas::WrappedNodeConfiguration configuration;
+        JE::Editor::Tools::GraphCanvas::WrappedNodeConfiguration configuration;
         configuration.m_layoutOrder = layoutOrder;
-        GraphCanvas::WrapperNodeRequestBus::Event(wrapperNodeUiId, &GraphCanvas::WrapperNodeRequests::WrapNode, nodeUiId, configuration);
+        JE::Editor::Tools::GraphCanvas::WrapperNodeRequestBus::Event(wrapperNodeUiId, &JE::Editor::Tools::GraphCanvas::WrapperNodeRequests::WrapNode, nodeUiId, configuration);
     }
 
     void GraphController::SetWrapperNodeActionString(JE::Editor::Tools::GraphModel::NodePtr node, const char* actionString)
@@ -673,7 +673,7 @@ namespace JE::Editor::Tools::GraphModel::Integration
             return;
         }
 
-        GraphCanvas::WrapperNodeRequestBus::Event(nodeUiId, &GraphCanvas::WrapperNodeRequests::SetActionString, actionString);
+        JE::Editor::Tools::GraphCanvas::WrapperNodeRequestBus::Event(nodeUiId, &JE::Editor::Tools::GraphCanvas::WrapperNodeRequests::SetActionString, actionString);
     }
 
     JE::Editor::Tools::GraphModel::ConnectionPtr GraphController::AddConnection(JE::Editor::Tools::GraphModel::SlotPtr sourceSlot, JE::Editor::Tools::GraphModel::SlotPtr targetSlot)
@@ -736,7 +736,7 @@ namespace JE::Editor::Tools::GraphModel::Integration
 
             // This general Delete method will in turn call SceneRequests::RemoveConnection,
             // but just calling RemoveConnection by itself won't actually delete the ConnectionComponent itself.
-            GraphCanvas::SceneRequestBus::Event(GetGraphCanvasSceneId(), &GraphCanvas::SceneRequests::Delete, deleteIds);
+            JE::Editor::Tools::GraphCanvas::SceneRequestBus::Event(GetGraphCanvasSceneId(), &JE::Editor::Tools::GraphCanvas::SceneRequests::Delete, deleteIds);
 
             return true;
         }
@@ -758,12 +758,12 @@ namespace JE::Editor::Tools::GraphModel::Integration
         return JE::Editor::Tools::GraphModel::SlotId();
     }
 
-    JE::Editor::Tools::GraphModel::NodePtr GraphController::GetNodeById(const GraphCanvas::NodeId& nodeId)
+    JE::Editor::Tools::GraphModel::NodePtr GraphController::GetNodeById(const JE::Editor::Tools::GraphCanvas::NodeId& nodeId)
     {
         return m_elementMap.Find<JE::Editor::Tools::GraphModel::Node>(nodeId);
     }
 
-    JE::Editor::Tools::GraphModel::NodePtrList GraphController::GetNodesFromGraphNodeIds(const AZStd::vector<GraphCanvas::NodeId>& nodeIds)
+    JE::Editor::Tools::GraphModel::NodePtrList GraphController::GetNodesFromGraphNodeIds(const AZStd::vector<JE::Editor::Tools::GraphCanvas::NodeId>& nodeIds)
     {
         JE::Editor::Tools::GraphModel::NodePtrList nodeList;
         nodeList.reserve(nodeIds.size());
@@ -779,16 +779,16 @@ namespace JE::Editor::Tools::GraphModel::Integration
         return nodeList;
     }
 
-    GraphCanvas::NodeId GraphController::GetNodeIdByNode(JE::Editor::Tools::GraphModel::NodePtr node) const
+    JE::Editor::Tools::GraphCanvas::NodeId GraphController::GetNodeIdByNode(JE::Editor::Tools::GraphModel::NodePtr node) const
     {
-        const GraphCanvas::NodeId nodeId = m_elementMap.Find(node);
-        return nodeId.IsValid() ? nodeId : GraphCanvas::NodeId();
+        const JE::Editor::Tools::GraphCanvas::NodeId nodeId = m_elementMap.Find(node);
+        return nodeId.IsValid() ? nodeId : JE::Editor::Tools::GraphCanvas::NodeId();
     }
 
-    GraphCanvas::SlotId GraphController::GetSlotIdBySlot(JE::Editor::Tools::GraphModel::SlotPtr slot) const
+    JE::Editor::Tools::GraphCanvas::SlotId GraphController::GetSlotIdBySlot(JE::Editor::Tools::GraphModel::SlotPtr slot) const
     {
-        const GraphCanvas::SlotId slotId = m_elementMap.Find(slot);
-        return slotId.IsValid() ? slotId : GraphCanvas::SlotId();
+        const JE::Editor::Tools::GraphCanvas::SlotId slotId = m_elementMap.Find(slot);
+        return slotId.IsValid() ? slotId : JE::Editor::Tools::GraphCanvas::SlotId();
     }
 
     JE::Editor::Tools::GraphModel::NodePtrList GraphController::GetNodes()
@@ -808,7 +808,7 @@ namespace JE::Editor::Tools::GraphModel::Integration
     JE::Editor::Tools::GraphModel::NodePtrList GraphController::GetSelectedNodes()
     {
         AzToolsFramework::EntityIdList selectedNodeIds;
-        GraphCanvas::SceneRequestBus::EventResult(selectedNodeIds, m_graphCanvasSceneId, &GraphCanvas::SceneRequests::GetSelectedItems);
+        JE::Editor::Tools::GraphCanvas::SceneRequestBus::EventResult(selectedNodeIds, m_graphCanvasSceneId, &JE::Editor::Tools::GraphCanvas::SceneRequests::GetSelectedItems);
 
         return GetNodesFromGraphNodeIds(selectedNodeIds);
     }
@@ -820,7 +820,7 @@ namespace JE::Editor::Tools::GraphModel::Integration
             const AZ::EntityId nodeId = m_elementMap.Find(node);
             if (nodeId.IsValid())
             {
-                GraphCanvas::SceneMemberUIRequestBus::Event(nodeId, &GraphCanvas::SceneMemberUIRequests::SetSelected, selected);
+                JE::Editor::Tools::GraphCanvas::SceneMemberUIRequestBus::Event(nodeId, &JE::Editor::Tools::GraphCanvas::SceneMemberUIRequests::SetSelected, selected);
                 SaveMetadata(nodeId);
             }
         }
@@ -828,7 +828,7 @@ namespace JE::Editor::Tools::GraphModel::Integration
 
     void GraphController::ClearSelection()
     {
-        GraphCanvas::SceneRequestBus::Event(m_graphCanvasSceneId, &GraphCanvas::SceneRequests::ClearSelection);
+        JE::Editor::Tools::GraphCanvas::SceneRequestBus::Event(m_graphCanvasSceneId, &JE::Editor::Tools::GraphCanvas::SceneRequests::ClearSelection);
     }
 
     void GraphController::EnableNode(JE::Editor::Tools::GraphModel::NodePtr node)
@@ -836,7 +836,7 @@ namespace JE::Editor::Tools::GraphModel::Integration
         const AZ::EntityId nodeId = m_elementMap.Find(node);
         if (nodeId.IsValid())
         {
-            GraphCanvas::SceneRequestBus::Event(m_graphCanvasSceneId, &GraphCanvas::SceneRequests::Enable, nodeId);
+            JE::Editor::Tools::GraphCanvas::SceneRequestBus::Event(m_graphCanvasSceneId, &JE::Editor::Tools::GraphCanvas::SceneRequests::Enable, nodeId);
         }
     }
 
@@ -845,7 +845,7 @@ namespace JE::Editor::Tools::GraphModel::Integration
         const AZ::EntityId nodeId = m_elementMap.Find(node);
         if (nodeId.IsValid())
         {
-            GraphCanvas::SceneRequestBus::Event(m_graphCanvasSceneId, &GraphCanvas::SceneRequests::Disable, nodeId);
+            JE::Editor::Tools::GraphCanvas::SceneRequestBus::Event(m_graphCanvasSceneId, &JE::Editor::Tools::GraphCanvas::SceneRequests::Disable, nodeId);
         }
     }
 
@@ -861,7 +861,7 @@ namespace JE::Editor::Tools::GraphModel::Integration
         {
             const AZ::EntityId nodeId = m_elementMap.Find(node);
             AZ::Vector2 position = AZ::Vector2::CreateZero();
-            GraphCanvas::GeometryRequestBus::EventResult(position, nodeId, &GraphCanvas::GeometryRequests::GetPosition);
+            JE::Editor::Tools::GraphCanvas::GeometryRequestBus::EventResult(position, nodeId, &JE::Editor::Tools::GraphCanvas::GeometryRequests::GetPosition);
 
             // Add the top-left corner position of the node
             points.emplace_back(position);
@@ -869,7 +869,7 @@ namespace JE::Editor::Tools::GraphModel::Integration
             // Add the bottom-right corner position of the node as well, so that
             // when we center the view, it will contain the entire node
             QGraphicsItem* nodeItem = nullptr;
-            GraphCanvas::SceneMemberUIRequestBus::EventResult(nodeItem, nodeId, &GraphCanvas::SceneMemberUIRequests::GetRootGraphicsItem);
+            JE::Editor::Tools::GraphCanvas::SceneMemberUIRequestBus::EventResult(nodeItem, nodeId, &JE::Editor::Tools::GraphCanvas::SceneMemberUIRequests::GetRootGraphicsItem);
             if (nodeItem)
             {
                 const QRectF nodeRect = nodeItem->boundingRect();
@@ -884,17 +884,17 @@ namespace JE::Editor::Tools::GraphModel::Integration
         QRectF boundingRect(topLeft.GetX(), topLeft.GetY(), boundingBox.GetXExtent(), boundingBox.GetYExtent());
 
         // Center the view on our desired area
-        GraphCanvas::ViewId viewId;
-        GraphCanvas::SceneRequestBus::EventResult(viewId, m_graphCanvasSceneId, &GraphCanvas::SceneRequests::GetViewId);
-        GraphCanvas::ViewRequestBus::Event(viewId, &GraphCanvas::ViewRequests::CenterOnArea, boundingRect);
+        JE::Editor::Tools::GraphCanvas::ViewId viewId;
+        JE::Editor::Tools::GraphCanvas::SceneRequestBus::EventResult(viewId, m_graphCanvasSceneId, &JE::Editor::Tools::GraphCanvas::SceneRequests::GetViewId);
+        JE::Editor::Tools::GraphCanvas::ViewRequestBus::Event(viewId, &JE::Editor::Tools::GraphCanvas::ViewRequests::CenterOnArea, boundingRect);
     }
 
     AZ::Vector2 GraphController::GetMajorPitch() const
     {
         AZ::EntityId gridId;
         AZ::Vector2 gridMajorPitch;
-        GraphCanvas::SceneRequestBus::EventResult(gridId, m_graphCanvasSceneId, &GraphCanvas::SceneRequests::GetGrid);
-        GraphCanvas::GridRequestBus::EventResult(gridMajorPitch, gridId, &GraphCanvas::GridRequests::GetMajorPitch);
+        JE::Editor::Tools::GraphCanvas::SceneRequestBus::EventResult(gridId, m_graphCanvasSceneId, &JE::Editor::Tools::GraphCanvas::SceneRequests::GetGrid);
+        JE::Editor::Tools::GraphCanvas::GridRequestBus::EventResult(gridMajorPitch, gridId, &JE::Editor::Tools::GraphCanvas::GridRequests::GetMajorPitch);
 
         return gridMajorPitch;
     }
@@ -935,8 +935,8 @@ namespace JE::Editor::Tools::GraphModel::Integration
     {
         if (const JE::Editor::Tools::GraphModel::ConnectionPtr connection = m_elementMap.Find<JE::Editor::Tools::GraphModel::Connection>(connectionUiId))
         {
-            GraphCanvas::NodeUIRequestBus::Event(m_elementMap.Find(connection->GetSourceNode()), &GraphCanvas::NodeUIRequests::AdjustSize);
-            GraphCanvas::NodeUIRequestBus::Event(m_elementMap.Find(connection->GetTargetNode()), &GraphCanvas::NodeUIRequests::AdjustSize);
+            JE::Editor::Tools::GraphCanvas::NodeUIRequestBus::Event(m_elementMap.Find(connection->GetSourceNode()), &JE::Editor::Tools::GraphCanvas::NodeUIRequests::AdjustSize);
+            JE::Editor::Tools::GraphCanvas::NodeUIRequestBus::Event(m_elementMap.Find(connection->GetTargetNode()), &JE::Editor::Tools::GraphCanvas::NodeUIRequests::AdjustSize);
         }
     }
 
@@ -946,14 +946,14 @@ namespace JE::Editor::Tools::GraphModel::Integration
         {
             GraphControllerNotificationBus::Event(
                 m_graphCanvasSceneId, &GraphControllerNotifications::OnGraphModelConnectionRemoved, connection);
-            GraphCanvas::NodeUIRequestBus::Event(m_elementMap.Find(connection->GetSourceNode()), &GraphCanvas::NodeUIRequests::AdjustSize);
-            GraphCanvas::NodeUIRequestBus::Event(m_elementMap.Find(connection->GetTargetNode()), &GraphCanvas::NodeUIRequests::AdjustSize);
+            JE::Editor::Tools::GraphCanvas::NodeUIRequestBus::Event(m_elementMap.Find(connection->GetSourceNode()), &JE::Editor::Tools::GraphCanvas::NodeUIRequests::AdjustSize);
+            JE::Editor::Tools::GraphCanvas::NodeUIRequestBus::Event(m_elementMap.Find(connection->GetTargetNode()), &JE::Editor::Tools::GraphCanvas::NodeUIRequests::AdjustSize);
             m_graph->RemoveConnection(connection);
             m_elementMap.Remove(connection);
         }
     }
 
-    void GraphController::OnEntitiesSerialized(GraphCanvas::GraphSerialization& serializationTarget)
+    void GraphController::OnEntitiesSerialized(JE::Editor::Tools::GraphCanvas::GraphSerialization& serializationTarget)
     {
         GraphModelSerialization serialization;
 
@@ -962,7 +962,7 @@ namespace JE::Editor::Tools::GraphModel::Integration
         const auto& nodeWrappings = m_graph->GetNodeWrappings();
         for (const auto& nodeEntity : serializationTarget.GetGraphData().m_nodes)
         {
-            const GraphCanvas::NodeId nodeUiId = nodeEntity->GetId();
+            const JE::Editor::Tools::GraphCanvas::NodeId nodeUiId = nodeEntity->GetId();
             const JE::Editor::Tools::GraphModel::NodePtr node = m_elementMap.Find<JE::Editor::Tools::GraphModel::Node>(nodeUiId);
 
             if (!node)
@@ -1008,7 +1008,7 @@ namespace JE::Editor::Tools::GraphModel::Integration
         GraphManagerRequestBus::Broadcast(&GraphManagerRequests::SetSerializedMappings, serialization);
     }
 
-    void GraphController::OnEntitiesDeserialized(const GraphCanvas::GraphSerialization& serializationSource)
+    void GraphController::OnEntitiesDeserialized(const JE::Editor::Tools::GraphCanvas::GraphSerialization& serializationSource)
     {
         GraphModelSerialization serialization;
         GraphManagerRequestBus::BroadcastResult(serialization, &GraphManagerRequests::GetSerializedMappings);
@@ -1048,8 +1048,8 @@ namespace JE::Editor::Tools::GraphModel::Integration
                     continue;
                 }
 
-                GraphCanvas::SlotId serializedSlotUiId = slotIt->second;
-                GraphCanvas::SlotId newSlotUiId = serializationSource.FindRemappedEntityId(serializedSlotUiId);
+                JE::Editor::Tools::GraphCanvas::SlotId serializedSlotUiId = slotIt->second;
+                JE::Editor::Tools::GraphCanvas::SlotId newSlotUiId = serializationSource.FindRemappedEntityId(serializedSlotUiId);
                 if (!newSlotUiId.IsValid())
                 {
                     continue;
@@ -1061,7 +1061,7 @@ namespace JE::Editor::Tools::GraphModel::Integration
         }
     }
 
-    void GraphController::OnEntitiesDeserializationComplete(const GraphCanvas::GraphSerialization& serializationSource)
+    void GraphController::OnEntitiesDeserializationComplete(const JE::Editor::Tools::GraphCanvas::GraphSerialization& serializationSource)
     {
         GraphModelSerialization serialization;
         GraphManagerRequestBus::BroadcastResult(serialization, &GraphManagerRequests::GetSerializedMappings);
@@ -1071,8 +1071,8 @@ namespace JE::Editor::Tools::GraphModel::Integration
         // wrapped onto them.
         for (auto it : serialization.m_serializedNodeWrappings)
         {
-            GraphCanvas::NodeId serializedNodeId = it.first;
-            GraphCanvas::NodeId wrapperNodeId = it.second.first;
+            JE::Editor::Tools::GraphCanvas::NodeId serializedNodeId = it.first;
+            JE::Editor::Tools::GraphCanvas::NodeId wrapperNodeId = it.second.first;
             AZ::u32 layoutOrder = it.second.second;
 
             AZ::EntityId newNodeId = serializationSource.FindRemappedEntityId(serializedNodeId);
@@ -1091,23 +1091,23 @@ namespace JE::Editor::Tools::GraphModel::Integration
     {
         if (isBeingEditeed)
         {
-            GraphCanvas::GraphModelRequestBus::Event(
-                m_graphCanvasSceneId, &GraphCanvas::GraphModelRequests::RequestPushPreventUndoStateUpdate);
+            JE::Editor::Tools::GraphCanvas::GraphModelRequestBus::Event(
+                m_graphCanvasSceneId, &JE::Editor::Tools::GraphCanvas::GraphModelRequests::RequestPushPreventUndoStateUpdate);
         }
         else
         {
-            GraphCanvas::GraphModelRequestBus::Event(
-                m_graphCanvasSceneId, &GraphCanvas::GraphModelRequests::RequestPopPreventUndoStateUpdate);
-            GraphCanvas::GraphModelRequestBus::Event(m_graphCanvasSceneId, &GraphCanvas::GraphModelRequests::RequestUndoPoint);
+            JE::Editor::Tools::GraphCanvas::GraphModelRequestBus::Event(
+                m_graphCanvasSceneId, &JE::Editor::Tools::GraphCanvas::GraphModelRequests::RequestPopPreventUndoStateUpdate);
+            JE::Editor::Tools::GraphCanvas::GraphModelRequestBus::Event(m_graphCanvasSceneId, &JE::Editor::Tools::GraphCanvas::GraphModelRequests::RequestUndoPoint);
         }
     }
 
     void GraphController::OnSelectionChanged()
     {
         bool loading = false;
-        GraphCanvas::SceneRequestBus::EventResult(loading, GetGraphCanvasSceneId(), &GraphCanvas::SceneRequests::IsLoading);
+        JE::Editor::Tools::GraphCanvas::SceneRequestBus::EventResult(loading, GetGraphCanvasSceneId(), &JE::Editor::Tools::GraphCanvas::SceneRequests::IsLoading);
         bool pasting = false;
-        GraphCanvas::SceneRequestBus::EventResult(pasting, GetGraphCanvasSceneId(), &GraphCanvas::SceneRequests::IsPasting);
+        JE::Editor::Tools::GraphCanvas::SceneRequestBus::EventResult(pasting, GetGraphCanvasSceneId(), &JE::Editor::Tools::GraphCanvas::SceneRequests::IsPasting);
         if (loading || pasting)
         {
             return;
@@ -1115,9 +1115,9 @@ namespace JE::Editor::Tools::GraphModel::Integration
 
         // Save selection save data and other metadata every time the selection changes unless this is during a reload or a face operation
         SaveMetadata(GetGraphCanvasSceneId());
-        GraphCanvas::SceneRequestBus::Event(
+        JE::Editor::Tools::GraphCanvas::SceneRequestBus::Event(
             GetGraphCanvasSceneId(),
-            [&](GraphCanvas::SceneRequests* scene)
+            [&](JE::Editor::Tools::GraphCanvas::SceneRequests* scene)
             {
                 for (const auto& element : scene->GetNodes())
                 {
@@ -1130,14 +1130,14 @@ namespace JE::Editor::Tools::GraphModel::Integration
             });
     }
 
-    void GraphController::WriteSaveData(GraphCanvas::EntitySaveDataContainer& saveDataContainer) const
+    void GraphController::WriteSaveData(JE::Editor::Tools::GraphCanvas::EntitySaveDataContainer& saveDataContainer) const
     {
         // Store selection save data for the current graph element
-        const AZ::EntityId nodeUiId = *GraphCanvas::EntitySaveDataRequestBus::GetCurrentBusId();
+        const AZ::EntityId nodeUiId = *JE::Editor::Tools::GraphCanvas::EntitySaveDataRequestBus::GetCurrentBusId();
 
         // Save data will only be stored for selected items to minimize file size
         bool selected = false;
-        GraphCanvas::SceneMemberUIRequestBus::EventResult(selected, nodeUiId, &GraphCanvas::SceneMemberUIRequests::IsSelected);
+        JE::Editor::Tools::GraphCanvas::SceneMemberUIRequestBus::EventResult(selected, nodeUiId, &JE::Editor::Tools::GraphCanvas::SceneMemberUIRequests::IsSelected);
         if (selected)
         {
             auto data = saveDataContainer.FindCreateSaveData<GraphCanvasSelectionData>();
@@ -1145,19 +1145,19 @@ namespace JE::Editor::Tools::GraphModel::Integration
         }
     }
 
-    void GraphController::ReadSaveData(const GraphCanvas::EntitySaveDataContainer& saveDataContainer)
+    void GraphController::ReadSaveData(const JE::Editor::Tools::GraphCanvas::EntitySaveDataContainer& saveDataContainer)
     {
         // Restore selection and position data for the current graph element
-        const AZ::EntityId nodeUiId = *GraphCanvas::EntitySaveDataRequestBus::GetCurrentBusId();
+        const AZ::EntityId nodeUiId = *JE::Editor::Tools::GraphCanvas::EntitySaveDataRequestBus::GetCurrentBusId();
 
         if (auto data = saveDataContainer.FindSaveData<GraphCanvasSelectionData>())
         {
-            GraphCanvas::SceneMemberUIRequestBus::Event(nodeUiId, &GraphCanvas::SceneMemberUIRequests::SetSelected, data->m_selected);
+            JE::Editor::Tools::GraphCanvas::SceneMemberUIRequestBus::Event(nodeUiId, &JE::Editor::Tools::GraphCanvas::SceneMemberUIRequests::SetSelected, data->m_selected);
         }
 
-        if (auto data = saveDataContainer.FindSaveData<GraphCanvas::GeometrySaveData>())
+        if (auto data = saveDataContainer.FindSaveData<JE::Editor::Tools::GraphCanvas::GeometrySaveData>())
         {
-            GraphCanvas::GeometryRequestBus::Event(nodeUiId, &GraphCanvas::GeometryRequests::SetPosition, data->m_position);
+            JE::Editor::Tools::GraphCanvas::GeometryRequestBus::Event(nodeUiId, &JE::Editor::Tools::GraphCanvas::GeometryRequests::SetPosition, data->m_position);
         }
     }
 
@@ -1178,13 +1178,13 @@ namespace JE::Editor::Tools::GraphModel::Integration
         JE::Editor::Tools::GraphModel::ConnectionPtr connection = m_graph->AddConnection(sourceSlot, targetSlot);
         GraphControllerNotificationBus::Event(
             m_graphCanvasSceneId, &GraphControllerNotifications::OnGraphModelConnectionAdded, connection);
-        GraphCanvas::NodeUIRequestBus::Event(m_elementMap.Find(connection->GetSourceNode()), &GraphCanvas::NodeUIRequests::AdjustSize);
-        GraphCanvas::NodeUIRequestBus::Event(m_elementMap.Find(connection->GetTargetNode()), &GraphCanvas::NodeUIRequests::AdjustSize);
+        JE::Editor::Tools::GraphCanvas::NodeUIRequestBus::Event(m_elementMap.Find(connection->GetSourceNode()), &JE::Editor::Tools::GraphCanvas::NodeUIRequests::AdjustSize);
+        JE::Editor::Tools::GraphCanvas::NodeUIRequestBus::Event(m_elementMap.Find(connection->GetTargetNode()), &JE::Editor::Tools::GraphCanvas::NodeUIRequests::AdjustSize);
         return connection;
     }
 
     bool GraphController::CreateConnection(
-        const AZ::EntityId& connectionUiId, const GraphCanvas::Endpoint& sourcePoint, const GraphCanvas::Endpoint& targetPoint)
+        const AZ::EntityId& connectionUiId, const JE::Editor::Tools::GraphCanvas::Endpoint& sourcePoint, const JE::Editor::Tools::GraphCanvas::Endpoint& targetPoint)
     {
         using namespace JE::Editor::Tools::GraphModel;
 
@@ -1271,7 +1271,7 @@ namespace JE::Editor::Tools::GraphModel::Integration
         return false;
     }
 
-    bool GraphController::IsValidConnection(const GraphCanvas::Endpoint& sourcePoint, const GraphCanvas::Endpoint& targetPoint) const
+    bool GraphController::IsValidConnection(const JE::Editor::Tools::GraphCanvas::Endpoint& sourcePoint, const JE::Editor::Tools::GraphCanvas::Endpoint& targetPoint) const
     {
         if (!sourcePoint.IsValid() || !targetPoint.IsValid())
         {
@@ -1320,13 +1320,13 @@ namespace JE::Editor::Tools::GraphModel::Integration
     //! \param  inputSlot the input slot
     //! \param  createDisplayFunction  GraphCanvasRequests EBus function for creating the NodePropertyDisplay
     template<typename DataInterfaceType, typename CreateDisplayFunctionType>
-    GraphCanvas::NodePropertyDisplay* CreatePropertyDisplay(JE::Editor::Tools::GraphModel::SlotPtr inputSlot, CreateDisplayFunctionType createDisplayFunction)
+    JE::Editor::Tools::GraphCanvas::NodePropertyDisplay* CreatePropertyDisplay(JE::Editor::Tools::GraphModel::SlotPtr inputSlot, CreateDisplayFunctionType createDisplayFunction)
     {
-        GraphCanvas::NodePropertyDisplay* dataDisplay = nullptr;
+        JE::Editor::Tools::GraphCanvas::NodePropertyDisplay* dataDisplay = nullptr;
         if (inputSlot)
         {
-            GraphCanvas::DataInterface* dataInterface = aznew DataInterfaceType(inputSlot);
-            GraphCanvas::GraphCanvasRequestBus::BroadcastResult(
+            JE::Editor::Tools::GraphCanvas::DataInterface* dataInterface = aznew DataInterfaceType(inputSlot);
+            JE::Editor::Tools::GraphCanvas::GraphCanvasRequestBus::BroadcastResult(
                 dataDisplay, createDisplayFunction, static_cast<DataInterfaceType*>(dataInterface));
             if (!dataDisplay)
             {
@@ -1336,16 +1336,16 @@ namespace JE::Editor::Tools::GraphModel::Integration
         return dataDisplay;
     }
 
-    GraphCanvas::NodePropertyDisplay* GraphController::CreatePropertySlotPropertyDisplay(
+    JE::Editor::Tools::GraphCanvas::NodePropertyDisplay* GraphController::CreatePropertySlotPropertyDisplay(
         [[maybe_unused]] const AZ::Crc32& propertyId,
-        [[maybe_unused]] const GraphCanvas::NodeId& nodeUiId,
-        const GraphCanvas::SlotId& slotUiId) const
+        [[maybe_unused]] const JE::Editor::Tools::GraphCanvas::NodeId& nodeUiId,
+        const JE::Editor::Tools::GraphCanvas::SlotId& slotUiId) const
     {
         // CONST CAST WARNING: The CreatePropertySlotPropertyDisplay graph canvas interface is const, but probably shouldn't be, because it
         // expects a non-const NodePropertyDisplay*. We need non-const version of m_elementMap in order to create a non-const
         // NodePropertyDisplay
         JE::Editor::Tools::GraphModel::SlotPtr inputSlot = const_cast<GraphController*>(this)->m_elementMap.Find<JE::Editor::Tools::GraphModel::Slot>(slotUiId);
-        GraphCanvas::NodePropertyDisplay* display = CreateSlotPropertyDisplay(inputSlot);
+        JE::Editor::Tools::GraphCanvas::NodePropertyDisplay* display = CreateSlotPropertyDisplay(inputSlot);
         if (display)
         {
             display->SetNodeId(nodeUiId);
@@ -1354,10 +1354,10 @@ namespace JE::Editor::Tools::GraphModel::Integration
         return display;
     }
 
-    GraphCanvas::NodePropertyDisplay* GraphController::CreateDataSlotPropertyDisplay(
+    JE::Editor::Tools::GraphCanvas::NodePropertyDisplay* GraphController::CreateDataSlotPropertyDisplay(
         [[maybe_unused]] const AZ::Uuid& dataTypeUuid,
-        [[maybe_unused]] const GraphCanvas::NodeId& nodeUiId,
-        const GraphCanvas::SlotId& slotUiId) const
+        [[maybe_unused]] const JE::Editor::Tools::GraphCanvas::NodeId& nodeUiId,
+        const JE::Editor::Tools::GraphCanvas::SlotId& slotUiId) const
     {
 #if defined(AZ_ENABLE_TRACING)
         JE::Editor::Tools::GraphModel::DataTypePtr dataType = m_graph->GetContext()->GetDataType(dataTypeUuid);
@@ -1373,7 +1373,7 @@ namespace JE::Editor::Tools::GraphModel::Integration
         // expects a non-const NodePropertyDisplay*. We need non-const version of m_elementMap in order to create a non-const
         // NodePropertyDisplay
         JE::Editor::Tools::GraphModel::SlotPtr inputSlot = const_cast<GraphController*>(this)->m_elementMap.Find<JE::Editor::Tools::GraphModel::Slot>(slotUiId);
-        GraphCanvas::NodePropertyDisplay* display = CreateSlotPropertyDisplay(inputSlot);
+        JE::Editor::Tools::GraphCanvas::NodePropertyDisplay* display = CreateSlotPropertyDisplay(inputSlot);
         if (display)
         {
             display->SetNodeId(nodeUiId);
@@ -1382,7 +1382,7 @@ namespace JE::Editor::Tools::GraphModel::Integration
         return display;
     }
 
-    GraphCanvas::NodePropertyDisplay* GraphController::CreateSlotPropertyDisplay(JE::Editor::Tools::GraphModel::SlotPtr inputSlot) const
+    JE::Editor::Tools::GraphCanvas::NodePropertyDisplay* GraphController::CreateSlotPropertyDisplay(JE::Editor::Tools::GraphModel::SlotPtr inputSlot) const
     {
         if (!inputSlot || !inputSlot->IsVisibleOnNode() || !inputSlot->IsEditableOnNode())
         {
@@ -1397,52 +1397,52 @@ namespace JE::Editor::Tools::GraphModel::Integration
         if (dataTypeUuid == azrtti_typeid<bool>())
         {
             return CreatePropertyDisplay<BooleanDataInterface>(
-                inputSlot, &GraphCanvas::GraphCanvasRequests::CreateBooleanNodePropertyDisplay);
+                inputSlot, &JE::Editor::Tools::GraphCanvas::GraphCanvasRequests::CreateBooleanNodePropertyDisplay);
         }
         if (dataTypeUuid == azrtti_typeid<int>())
         {
             return CreatePropertyDisplay<IntegerDataInterface<int>>(
-                inputSlot, &GraphCanvas::GraphCanvasRequests::CreateNumericNodePropertyDisplay);
+                inputSlot, &JE::Editor::Tools::GraphCanvas::GraphCanvasRequests::CreateNumericNodePropertyDisplay);
         }
         if (dataTypeUuid == azrtti_typeid<unsigned int>())
         {
             return CreatePropertyDisplay<IntegerDataInterface<unsigned int>>(
-                inputSlot, &GraphCanvas::GraphCanvasRequests::CreateNumericNodePropertyDisplay);
+                inputSlot, &JE::Editor::Tools::GraphCanvas::GraphCanvasRequests::CreateNumericNodePropertyDisplay);
         }
         if (dataTypeUuid == azrtti_typeid<long>())
         {
             return CreatePropertyDisplay<IntegerDataInterface<long>>(
-                inputSlot, &GraphCanvas::GraphCanvasRequests::CreateNumericNodePropertyDisplay);
+                inputSlot, &JE::Editor::Tools::GraphCanvas::GraphCanvasRequests::CreateNumericNodePropertyDisplay);
         }
         if (dataTypeUuid == azrtti_typeid<unsigned long>())
         {
             return CreatePropertyDisplay<IntegerDataInterface<unsigned long>>(
-                inputSlot, &GraphCanvas::GraphCanvasRequests::CreateNumericNodePropertyDisplay);
+                inputSlot, &JE::Editor::Tools::GraphCanvas::GraphCanvasRequests::CreateNumericNodePropertyDisplay);
         }
         if (dataTypeUuid == azrtti_typeid<float>())
         {
             return CreatePropertyDisplay<FloatDataInterface>(
-                inputSlot, &GraphCanvas::GraphCanvasRequests::CreateNumericNodePropertyDisplay);
+                inputSlot, &JE::Editor::Tools::GraphCanvas::GraphCanvasRequests::CreateNumericNodePropertyDisplay);
         }
         if (dataTypeUuid == azrtti_typeid<AZ::Vector2>())
         {
             return CreatePropertyDisplay<VectorDataInterface<AZ::Vector2, 2>>(
-                inputSlot, &GraphCanvas::GraphCanvasRequests::CreateVectorNodePropertyDisplay);
+                inputSlot, &JE::Editor::Tools::GraphCanvas::GraphCanvasRequests::CreateVectorNodePropertyDisplay);
         }
         if (dataTypeUuid == azrtti_typeid<AZ::Vector3>())
         {
             return CreatePropertyDisplay<VectorDataInterface<AZ::Vector3, 3>>(
-                inputSlot, &GraphCanvas::GraphCanvasRequests::CreateVectorNodePropertyDisplay);
+                inputSlot, &JE::Editor::Tools::GraphCanvas::GraphCanvasRequests::CreateVectorNodePropertyDisplay);
         }
         if (dataTypeUuid == azrtti_typeid<AZ::Vector4>())
         {
             return CreatePropertyDisplay<VectorDataInterface<AZ::Vector4, 4>>(
-                inputSlot, &GraphCanvas::GraphCanvasRequests::CreateVectorNodePropertyDisplay);
+                inputSlot, &JE::Editor::Tools::GraphCanvas::GraphCanvasRequests::CreateVectorNodePropertyDisplay);
         }
         if (dataTypeUuid == azrtti_typeid<AZStd::string>())
         {
             return CreatePropertyDisplay<StringDataInterface>(
-                inputSlot, &GraphCanvas::GraphCanvasRequests::CreateStringNodePropertyDisplay);
+                inputSlot, &JE::Editor::Tools::GraphCanvas::GraphCanvasRequests::CreateStringNodePropertyDisplay);
         }
 
         return nullptr;
@@ -1481,12 +1481,12 @@ namespace JE::Editor::Tools::GraphModel::Integration
         GraphControllerNotificationBus::Event(m_graphCanvasSceneId, &GraphControllerNotifications::OnGraphModelTriggerRedo);
     }
 
-    void GraphController::EnableNodes(const AZStd::unordered_set<GraphCanvas::NodeId>& nodeIds)
+    void GraphController::EnableNodes(const AZStd::unordered_set<JE::Editor::Tools::GraphCanvas::NodeId>& nodeIds)
     {
         AZ_UNUSED(nodeIds);
     }
 
-    void GraphController::DisableNodes(const AZStd::unordered_set<GraphCanvas::NodeId>& nodeIds)
+    void GraphController::DisableNodes(const AZStd::unordered_set<JE::Editor::Tools::GraphCanvas::NodeId>& nodeIds)
     {
         AZ_UNUSED(nodeIds);
     }
@@ -1508,20 +1508,20 @@ namespace JE::Editor::Tools::GraphModel::Integration
         SaveMetadata(savedElement);
     }
 
-    void GraphController::ResetSlotToDefaultValue(const GraphCanvas::Endpoint& endpoint)
+    void GraphController::ResetSlotToDefaultValue(const JE::Editor::Tools::GraphCanvas::Endpoint& endpoint)
     {
         if (auto slot = m_elementMap.Find<JE::Editor::Tools::GraphModel::Slot>(endpoint.GetSlotId()))
         {
-            GraphCanvas::ScopedGraphUndoBatch undoBatch(m_graphCanvasSceneId);
+            JE::Editor::Tools::GraphCanvas::ScopedGraphUndoBatch undoBatch(m_graphCanvasSceneId);
             slot->SetValue(slot->GetDefaultValue());
         }
     }
 
-    void GraphController::RemoveSlot(const GraphCanvas::Endpoint& endpoint)
+    void GraphController::RemoveSlot(const JE::Editor::Tools::GraphCanvas::Endpoint& endpoint)
     {
-        GraphCanvas::ScopedGraphUndoBatch undoBatch(m_graphCanvasSceneId);
-        const GraphCanvas::NodeId& nodeId = endpoint.GetNodeId();
-        const GraphCanvas::SlotId& slotId = endpoint.GetSlotId();
+        JE::Editor::Tools::GraphCanvas::ScopedGraphUndoBatch undoBatch(m_graphCanvasSceneId);
+        const JE::Editor::Tools::GraphCanvas::NodeId& nodeId = endpoint.GetNodeId();
+        const JE::Editor::Tools::GraphCanvas::SlotId& slotId = endpoint.GetSlotId();
         auto node = m_elementMap.Find<JE::Editor::Tools::GraphModel::Node>(nodeId);
         auto slot = m_elementMap.Find<JE::Editor::Tools::GraphModel::Slot>(slotId);
 
@@ -1531,38 +1531,38 @@ namespace JE::Editor::Tools::GraphModel::Integration
 
             // We need to actually remove the slot, the GraphModelRequestBus::RemoveSlot is a request, not a notification that the slot has
             // been removed
-            GraphCanvas::NodeRequestBus::Event(nodeId, &GraphCanvas::NodeRequests::RemoveSlot, slotId);
+            JE::Editor::Tools::GraphCanvas::NodeRequestBus::Event(nodeId, &JE::Editor::Tools::GraphCanvas::NodeRequests::RemoveSlot, slotId);
         }
     }
 
-    bool GraphController::IsSlotRemovable(const GraphCanvas::Endpoint& endpoint) const
+    bool GraphController::IsSlotRemovable(const JE::Editor::Tools::GraphCanvas::Endpoint& endpoint) const
     {
         auto node = m_elementMap.Find<JE::Editor::Tools::GraphModel::Node>(endpoint.GetNodeId());
         auto slot = m_elementMap.Find<JE::Editor::Tools::GraphModel::Slot>(endpoint.GetSlotId());
         return node && slot && node->CanDeleteSlot(slot);
     }
 
-    GraphCanvas::SlotId GraphController::RequestExtension(
-        const GraphCanvas::NodeId& nodeId, const GraphCanvas::ExtenderId& extenderId, GraphModelRequests::ExtensionRequestReason)
+    JE::Editor::Tools::GraphCanvas::SlotId GraphController::RequestExtension(
+        const JE::Editor::Tools::GraphCanvas::NodeId& nodeId, const JE::Editor::Tools::GraphCanvas::ExtenderId& extenderId, GraphModelRequests::ExtensionRequestReason)
     {
-        GraphCanvas::ScopedGraphUndoBatch undoBatch(m_graphCanvasSceneId);
+        JE::Editor::Tools::GraphCanvas::ScopedGraphUndoBatch undoBatch(m_graphCanvasSceneId);
 
         JE::Editor::Tools::GraphModel::NodePtr node = m_elementMap.Find<JE::Editor::Tools::GraphModel::Node>(nodeId);
         if (!node)
         {
-            return GraphCanvas::SlotId{};
+            return JE::Editor::Tools::GraphCanvas::SlotId{};
         }
 
         auto it = m_nodeExtenderIds.find(nodeId);
         if (it == m_nodeExtenderIds.end())
         {
-            return GraphCanvas::SlotId{};
+            return JE::Editor::Tools::GraphCanvas::SlotId{};
         }
 
         auto extenderIt = it->second.find(extenderId);
         if (extenderIt == it->second.end())
         {
-            return GraphCanvas::SlotId{};
+            return JE::Editor::Tools::GraphCanvas::SlotId{};
         }
 
         // The extension request will usually result in a new slot being added, unless
@@ -1573,25 +1573,25 @@ namespace JE::Editor::Tools::GraphModel::Integration
         JE::Editor::Tools::GraphModel::SlotPtr newSlot = node->GetSlot(newSlotId);
         if (!newSlot)
         {
-            return GraphCanvas::SlotId{};
+            return JE::Editor::Tools::GraphCanvas::SlotId{};
         }
 
         return m_elementMap.Find(newSlot);
     }
 
-    bool GraphController::ShouldWrapperAcceptDrop(const GraphCanvas::NodeId& wrapperNode, const QMimeData* mimeData) const
+    bool GraphController::ShouldWrapperAcceptDrop(const JE::Editor::Tools::GraphCanvas::NodeId& wrapperNode, const QMimeData* mimeData) const
     {
         AZ_UNUSED(wrapperNode);
         AZ_UNUSED(mimeData);
         return false;
     }
 
-    void GraphController::AddWrapperDropTarget(const GraphCanvas::NodeId& wrapperNode)
+    void GraphController::AddWrapperDropTarget(const JE::Editor::Tools::GraphCanvas::NodeId& wrapperNode)
     {
         AZ_UNUSED(wrapperNode);
     }
 
-    void GraphController::RemoveWrapperDropTarget(const GraphCanvas::NodeId& wrapperNode)
+    void GraphController::RemoveWrapperDropTarget(const JE::Editor::Tools::GraphCanvas::NodeId& wrapperNode)
     {
         AZ_UNUSED(wrapperNode);
     }
@@ -1599,9 +1599,9 @@ namespace JE::Editor::Tools::GraphModel::Integration
     void GraphController::SaveMetadata(const AZ::EntityId& graphCanvasElement)
     {
         bool loading = false;
-        GraphCanvas::SceneRequestBus::EventResult(loading, GetGraphCanvasSceneId(), &GraphCanvas::SceneRequests::IsLoading);
+        JE::Editor::Tools::GraphCanvas::SceneRequestBus::EventResult(loading, GetGraphCanvasSceneId(), &JE::Editor::Tools::GraphCanvas::SceneRequests::IsLoading);
         bool pasting = false;
-        GraphCanvas::SceneRequestBus::EventResult(pasting, GetGraphCanvasSceneId(), &GraphCanvas::SceneRequests::IsPasting);
+        JE::Editor::Tools::GraphCanvas::SceneRequestBus::EventResult(pasting, GetGraphCanvasSceneId(), &JE::Editor::Tools::GraphCanvas::SceneRequests::IsPasting);
         if (loading || pasting)
         {
             return;
@@ -1612,14 +1612,14 @@ namespace JE::Editor::Tools::GraphModel::Integration
 
         // Connect the EntitySaveDataRequestBus using a router. This will allow the graph controller to inject custom selection save
         // data for all graph canvas objects. This should only be connected while serializing save data for the current graph.
-        GraphCanvas::EntitySaveDataRequestBus::Router::BusRouterConnect();
+        JE::Editor::Tools::GraphCanvas::EntitySaveDataRequestBus::Router::BusRouterConnect();
 
         // Save into m_nodeMetadata
         if (const auto node = m_elementMap.Find<Node>(graphCanvasElement))
         {
-            auto container = AZStd::make_shared<GraphCanvas::EntitySaveDataContainer>();
-            GraphCanvas::EntitySaveDataRequestBus::Event(
-                graphCanvasElement, &GraphCanvas::EntitySaveDataRequests::WriteSaveData, *container);
+            auto container = AZStd::make_shared<JE::Editor::Tools::GraphCanvas::EntitySaveDataContainer>();
+            JE::Editor::Tools::GraphCanvas::EntitySaveDataRequestBus::Event(
+                graphCanvasElement, &JE::Editor::Tools::GraphCanvas::EntitySaveDataRequests::WriteSaveData, *container);
 
             const NodeId nodeId = node->GetId();
             graphCanvasMetadata->m_nodeMetadata[nodeId] = container;
@@ -1629,23 +1629,23 @@ namespace JE::Editor::Tools::GraphModel::Integration
         // Save into m_sceneMetadata
         else if (graphCanvasElement == GetGraphCanvasSceneId())
         {
-            auto container = AZStd::make_shared<GraphCanvas::EntitySaveDataContainer>();
-            GraphCanvas::EntitySaveDataRequestBus::Event(
-                graphCanvasElement, &GraphCanvas::EntitySaveDataRequests::WriteSaveData, *container);
+            auto container = AZStd::make_shared<JE::Editor::Tools::GraphCanvas::EntitySaveDataContainer>();
+            JE::Editor::Tools::GraphCanvas::EntitySaveDataRequestBus::Event(
+                graphCanvasElement, &JE::Editor::Tools::GraphCanvas::EntitySaveDataRequests::WriteSaveData, *container);
             graphCanvasMetadata->m_sceneMetadata = container;
 
             GraphControllerNotificationBus::Event(m_graphCanvasSceneId, &GraphControllerNotifications::OnGraphModelGraphModified, nullptr);
         }
 
         // Disconnect the EntitySaveDataRequestBus after save data serialization as completed
-        GraphCanvas::EntitySaveDataRequestBus::Router::BusRouterDisconnect();
+        JE::Editor::Tools::GraphCanvas::EntitySaveDataRequestBus::Router::BusRouterDisconnect();
     }
 
     QGraphicsLinearLayout* GraphController::GetLayoutFromNode(JE::Editor::Tools::GraphModel::NodePtr node)
     {
         AZ::EntityId nodeUiId = m_elementMap.Find(node);
         QGraphicsLayout* layout = nullptr;
-        GraphCanvas::NodeLayoutRequestBus::EventResult(layout, nodeUiId, &GraphCanvas::NodeLayoutRequests::GetLayout);
+        JE::Editor::Tools::GraphCanvas::NodeLayoutRequestBus::EventResult(layout, nodeUiId, &JE::Editor::Tools::GraphCanvas::NodeLayoutRequests::GetLayout);
         if (layout)
         {
             // We can't do qobject_cast or dynamic_cast here since it doesn't derive from QObject

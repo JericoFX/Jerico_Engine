@@ -20,7 +20,6 @@
     "documentation_url": "",
     "dependencies": [
         "LmbrCentral",
-        "GradientSignal",
-        "SurfaceData"
+        "GradientSignal"
     ]
 }

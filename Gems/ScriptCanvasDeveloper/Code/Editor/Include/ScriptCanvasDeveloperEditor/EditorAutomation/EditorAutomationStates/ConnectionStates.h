@@ -7,8 +7,8 @@
  */
 #pragma once
 
-#include <GraphCanvas/Types/Endpoint.h>
-#include <GraphCanvas/Types/Types.h>
+#include <JE/Editor/Tools/GraphCanvas/Types/Endpoint.h>
+#include <JE/Editor/Tools/GraphCanvas/Types/Types.h>
 
 #include <ScriptCanvasDeveloperEditor/EditorAutomation/EditorAutomationActions/ScriptCanvasActions/ConnectionActions.h>
 
@@ -22,7 +22,7 @@ namespace ScriptCanvas::Developer
     {
     public:
         AZ_CLASS_ALLOCATOR(CoupleNodesState, AZ::SystemAllocator)
-        CoupleNodesState(AutomationStateModelId firstNode, GraphCanvas::ConnectionType connectionType, AutomationStateModelId secondNode, AutomationStateModelId outputId = "");
+        CoupleNodesState(AutomationStateModelId firstNode, JE::Editor::Tools::GraphCanvas::ConnectionType connectionType, AutomationStateModelId secondNode, AutomationStateModelId outputId = "");
         ~CoupleNodesState() override = default;
 
         void OnSetupStateActions(EditorAutomationActionRunner& actionRunner) override;
@@ -33,7 +33,7 @@ namespace ScriptCanvas::Developer
         AutomationStateModelId m_pickUpNode;
         AutomationStateModelId m_targetNode;
 
-        GraphCanvas::ConnectionType m_connectionType;
+        JE::Editor::Tools::GraphCanvas::ConnectionType m_connectionType;
 
         CoupleNodesAction* m_coupleNodesAction = nullptr;
 

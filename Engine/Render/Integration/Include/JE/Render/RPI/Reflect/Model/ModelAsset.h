@@ -14,8 +14,13 @@
 
 #include <AzCore/Asset/AssetCommon.h>
 #include <AzCore/Math/Aabb.h>
+#include <AzCore/Math/Transform.h>
 #include <AzCore/Name/Name.h>
 #include <AzCore/std/containers/vector.h>
+#include <AzCore/std/containers/array.h>
+#include <AzCore/std/optional.h>
+#include <AzCore/std/limits.h>
+#include <AzCore/std/containers/span.h>
 
 namespace AZ
 {
@@ -26,6 +31,54 @@ namespace AZ
 namespace JE::Render::RPI
 {
         class ModelKdTree;
+
+        //! Geometry only: ordinals identify the loaded highest-detail LOD, never a persistent surface/face.
+        enum class ModelRaySidedness : AZ::u8 { FrontFace, DoubleSided, BackFace };
+        enum class ModelRayQueryStatus : AZ::u8 { Complete, Truncated, InvalidInput, InvalidGeometry, Unavailable };
+
+        struct ModelRayHit
+        {
+            float m_distanceNormalized = 0.0f;
+            //! Unit winding normal in model-local space, also for a double-sided back hit.
+            AZ::Vector3 m_normal = AZ::Vector3::CreateZero();
+            AZ::u32 m_meshIndex = AZStd::numeric_limits<AZ::u32>::max();
+            AZ::u32 m_primitiveIndex = AZStd::numeric_limits<AZ::u32>::max();
+            AZStd::optional<ModelMaterialSlot::StableId> m_materialSlotId = AZStd::nullopt;
+        };
+
+        //! Transient LOD0 geometry address only. The provider resolves authenticated identity from the same snapshot.
+        struct ModelVolumeHit
+        {
+            AZ::Vector3 m_worldPosition = AZ::Vector3::CreateZero();
+            AZ::Vector3 m_worldNormal = AZ::Vector3::CreateZero(); //!< Unit source winding, also through reflected transforms.
+            float m_distance = 0.0f; //!< Representative point to box center; NOT penetration or minimum distance.
+            AZ::u32 m_meshIndex = AZStd::numeric_limits<AZ::u32>::max();
+            AZ::u32 m_primitiveIndex = AZStd::numeric_limits<AZ::u32>::max();
+            AZStd::optional<ModelMaterialSlot::StableId> m_materialSlotId = AZStd::nullopt;
+        };
+
+        struct ModelRayQueryResult
+        {
+            ModelRayQueryStatus m_status = ModelRayQueryStatus::Unavailable;
+            size_t m_hitCount = 0;
+            size_t m_discardedHitCount = 0;
+        };
+
+
+        //! Schema-qualified local published-view content, not identity, a sequence number or an authentication token.
+        //! Schema 0/unknown is unavailable. Pose and external materials are separate dependencies.
+        struct ModelContentRevision
+        {
+            AZ_TYPE_INFO(ModelContentRevision, "{6A0B154D-8D46-4F70-A7CF-C12026EF16C8}");
+            //! V1 encodes geometry only; V2 also encodes authored identity tables.
+            static constexpr AZ::u32 GeometrySchema = 1;
+            static constexpr AZ::u32 Schema = 2;
+            AZ::u32 m_schema = 0;
+            AZStd::array<AZ::u32, 5> m_digest{};
+            bool operator==(const ModelContentRevision& other) const
+            { return m_schema == other.m_schema && m_digest == other.m_digest; }
+            bool operator!=(const ModelContentRevision& other) const { return !(*this == other); }
+        };
 
         //! Contains a set of RPI::ModelLodAsset objects.
         //! Serialized to a .azmodel file.
@@ -65,6 +118,18 @@ namespace JE::Render::RPI
             size_t GetLodCount() const;
 
             AZStd::span<const AZ::Data::Asset<ModelLodAsset>> GetLodAssets() const;
+            //! Existing Sha1 encodes only the low 32 bits of message length in bits. This is its byte ceiling, not a tuning budget.
+            static constexpr size_t ContentRevisionMaxEncodedBytes = AZStd::numeric_limits<AZ::u32>::max() / 8;
+            //! Serialized claim only. A consumer must validate the resident snapshot before advertising a content revision.
+            const ModelContentRevision& GetContentRevision() const;
+            //! Explicit bounded work over resident CPU payload only; no load/readback, retained buffer references or per-ray invocation.
+            //! Schema 1 encodes LE metadata and audited semantic payloads; padding, hints and compression bytes are excluded.
+            //! Float32/16 payloads must be finite; signed zero is canonical. Unknown is limited to float3 POSITION stride12/16.
+            //! Requires matching vertex counts and valid triangle indices; this is not full geometric/topology validation.
+            //! Missing/invalid views, unsupported index layouts, released CPU data or exhausted byte budget return nullopt.
+            AZStd::optional<ModelContentRevision> ComputeContentRevision(size_t maxEncodedBytes = ContentRevisionMaxEncodedBytes) const;
+            //! Never stamps or upgrades loaded legacy/unknown claims. Call at the owner's quiescent loaded-snapshot boundary, not per ray.
+            AZStd::optional<ModelContentRevision> ValidateContentRevision(size_t maxEncodedBytes = ContentRevisionMaxEncodedBytes) const;
 
             // These two functions are used to keep references for BufferAssets so we can release them when they are done using after RPI::Model was created
             // Sometime they might need to be stay in memory for certain cpu operations such as ray intersection etc.
@@ -95,10 +160,32 @@ namespace JE::Render::RPI
                 const AZ::Vector3& rayStart, const AZ::Vector3& rayDir, bool allowBruteForce,
                 float& distanceNormalized, AZ::Vector3& normal) const;
 
+            //! Also returns the winning mesh's stable material slot. Empty on a miss or an invalid slot.
+            bool LocalRayIntersectionAgainstModel(
+                const AZ::Vector3& rayStart, const AZ::Vector3& rayDir, bool allowBruteForce,
+                float& distanceNormalized, AZ::Vector3& normal,
+                AZStd::optional<ModelMaterialSlot::StableId>& materialSlotId) const;
+
+            //! Nearest N ordered by normalized distance, mesh and original primitive ordinal in LOD 0.
+            //! A zero-capacity output still reports every discarded hit. Invalid/unavailable queries do not write output.
+            //! Reuses the existing asynchronous KD build and explicit brute-force fallback; no cook identity is implied.
+            ModelRayQueryResult LocalRayIntersectionsAgainstModel(
+                const AZ::Vector3& rayStart, const AZ::Vector3& directionAndLength, bool allowBruteForce,
+                ModelRaySidedness sidedness, AZStd::span<ModelRayHit> output) const;
+
+            //! Exact closed world-AABB/triangle intersections, double sided, ordered by LOD0 mesh/primitive (not distance).
+            //! Pose is worldFromLocal * (localPosition * nonUniformScale). No geometry/identity is generated or retained.
+            //! Same status/count contract as multihit rays; no output on invalid/unavailable. Zero capacity counts discarded hits.
+            //! Reuses the existing KD cache/fallback. Empty Complete says nothing about solid occupancy or clearance.
+            ModelRayQueryResult WorldVolumeIntersectionsAgainstModel(const AZ::Aabb& worldBounds,
+                const AZ::Transform& worldFromLocal, const AZ::Vector3& nonUniformScale,
+                bool allowBruteForce, AZStd::span<ModelVolumeHit> output) const;
+
             //! Returns the model tags
             const AZStd::vector<AZ::Name>& GetTags() const;
 
         private:
+            AZStd::optional<ModelContentRevision> ComputeContentRevisionForSchema(AZ::u32 schema, size_t maxEncodedBytes) const;
             //! Initialize the ModelAsset with the given set of data.
             //! This is used by ModelAssetHelpers to overwrite an already-created ModelAsset.
             //! @param name The name to associate with the model
@@ -128,12 +215,16 @@ namespace JE::Render::RPI
 
             AZ::Name m_name;
             AZ::Aabb m_aabb = AZ::Aabb::CreateNull();
+            ModelContentRevision m_contentRevision{};
             AZStd::fixed_vector<AZ::Data::Asset<ModelLodAsset>, ModelLodAsset::LodCountMax> m_lodAssets;
 
             // mutable method
             void BuildKdTree() const;
             bool BruteForceRayIntersect(
                 const AZ::Vector3& rayStart, const AZ::Vector3& rayDir, float& distanceNormalized, AZ::Vector3& normal) const;
+            bool BruteForceRayIntersect(
+                const AZ::Vector3& rayStart, const AZ::Vector3& rayDir, float& distanceNormalized, AZ::Vector3& normal,
+                AZStd::optional<ModelMaterialSlot::StableId>& materialSlotId) const;
 
             bool LocalRayIntersectionAgainstMesh(
                 const ModelLodAsset::Mesh& mesh,

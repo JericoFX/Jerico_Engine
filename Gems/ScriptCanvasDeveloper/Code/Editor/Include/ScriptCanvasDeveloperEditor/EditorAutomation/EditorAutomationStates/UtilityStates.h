@@ -7,7 +7,7 @@
  */
 #pragma once
 
-#include <GraphCanvas/Types/Types.h>
+#include <JE/Editor/Tools/GraphCanvas/Types/Types.h>
 
 #include <ScriptCanvasDeveloperEditor/EditorAutomation/EditorAutomationActions/EditorKeyActions.h>
 #include <ScriptCanvasDeveloperEditor/EditorAutomation/EditorAutomationActions/EditorMouseActions.h>
@@ -93,7 +93,7 @@ namespace ScriptCanvas::Developer
     public:
         AZ_CLASS_ALLOCATOR(FindEndpointOfTypeState, AZ::SystemAllocator)
 
-        FindEndpointOfTypeState(AutomationStateModelId targetNodeId, AutomationStateModelId outputId, GraphCanvas::ConnectionType connectionType, GraphCanvas::SlotType slotType, int slotNumber = 0);
+        FindEndpointOfTypeState(AutomationStateModelId targetNodeId, AutomationStateModelId outputId, JE::Editor::Tools::GraphCanvas::ConnectionType connectionType, JE::Editor::Tools::GraphCanvas::SlotType slotType, int slotNumber = 0);
         ~FindEndpointOfTypeState() override = default;
 
         void OnCustomAction() override;
@@ -105,8 +105,8 @@ namespace ScriptCanvas::Developer
 
         int m_slotNumber;
 
-        GraphCanvas::ConnectionType m_connectionType = GraphCanvas::ConnectionType::CT_Invalid;
-        GraphCanvas::SlotType       m_slotType       = GraphCanvas::SlotTypes::Invalid;
+        JE::Editor::Tools::GraphCanvas::ConnectionType m_connectionType = JE::Editor::Tools::GraphCanvas::ConnectionType::CT_Invalid;
+        JE::Editor::Tools::GraphCanvas::SlotType       m_slotType       = JE::Editor::Tools::GraphCanvas::SlotTypes::Invalid;
     };
 
     /**

@@ -19,7 +19,7 @@
 #include <GradientSignal/Ebuses/GradientRequestBus.h>
 #include <GradientSignal/Ebuses/GradientTransformRequestBus.h>
 #include <GradientSignal/Util.h>
-#include <SurfaceData/SurfaceDataSystemRequestBus.h>
+#include <JE/Geometry/SurfaceData/SurfaceDataSystemRequestBus.h>
 
 namespace GradientSignal
 {

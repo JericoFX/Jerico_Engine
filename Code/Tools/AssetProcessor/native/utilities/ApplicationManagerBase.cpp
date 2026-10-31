@@ -394,6 +394,9 @@ void ApplicationManagerBase::InitRCController()
     QObject::connect(m_assetProcessorManager, &AssetProcessor::AssetProcessorManager::SourceDeleted, m_rcController, &AssetProcessor::RCController::RemoveJobsBySource);
     QObject::connect(m_assetProcessorManager, &AssetProcessor::AssetProcessorManager::JobComplete, m_rcController, &AssetProcessor::RCController::OnJobComplete);
     QObject::connect(m_assetProcessorManager, &AssetProcessor::AssetProcessorManager::AddedToCatalog, m_rcController, &AssetProcessor::RCController::OnAddedToCatalog);
+    QObject::connect(
+        m_assetProcessorManager, &AssetProcessor::AssetProcessorManager::AssetProcessorManagerIdleState,
+        m_rcController, &AssetProcessor::RCController::OnSourceAnalysisIdle, Qt::QueuedConnection);
 }
 
 void ApplicationManagerBase::DestroyRCController()

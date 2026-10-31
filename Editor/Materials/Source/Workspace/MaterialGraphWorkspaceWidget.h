@@ -4,20 +4,24 @@
 #include "MaterialWorkspaceSession.h"
 #include <AzToolsFramework/API/ToolsApplicationAPI.h>
 #include <QWidget>
+#include <AzCore/std/smart_ptr/shared_ptr.h>
 
 class QComboBox;
-namespace GraphCanvas { class NodePaletteWidget; }
+namespace JE::Editor::Tools::GraphCanvas { class NodePaletteWidget; }
 class QLabel;
 class QPushButton;
+class QSplitter;
 class QVBoxLayout;
 namespace JE::Editor::Tools
 {
     class AtomToolsDocumentInspector;
     class GraphDocumentView;
+    class EntityPreviewViewportWidget;
 }
 
 namespace JE::Editor
 {
+    class MaterialPreviewViewportContent;
     class JE_EDITOR_MATERIALS_API MaterialGraphWorkspaceWidget final
         : public QWidget
         , private JE::Editor::Tools::AtomToolsDocumentNotificationBus::Handler
@@ -33,6 +37,14 @@ namespace JE::Editor
     private:
         bool eventFilter(QObject* watched, QEvent* event) override;
         void closeEvent(QCloseEvent* event) override;
+        void showEvent(QShowEvent* event) override;
+        void hideEvent(QHideEvent* event) override;
+        void CreateMaterialPreview();
+        void InitializeMaterialPreviewSplit();
+        void CloseDocument(const AZ::Uuid& id);
+        void RefreshMaterialPreview();
+        void ReleaseMaterialPreview();
+        void ShowMaterialGraphSettings();
         void NewDocumentDialog();
         void OpenDocumentDialog();
         void FinishEditing();
@@ -55,14 +67,23 @@ namespace JE::Editor
         JE::Editor::Tools::GraphDocumentView* m_graphView = nullptr;
         QVBoxLayout* m_viewLayout = nullptr;
         QWidget* m_propertiesMessage = nullptr;
+        QSplitter* m_propertiesColumn = nullptr;
+        bool m_materialPreviewSplitInitialized = false;
+        bool m_materialPreviewSplitPending = false;
+        QWidget* m_materialPreviewHost = nullptr;
+        QVBoxLayout* m_materialPreviewLayout = nullptr;
+        JE::Editor::Tools::EntityPreviewViewportWidget* m_materialPreviewViewport = nullptr;
+        AZStd::shared_ptr<MaterialPreviewViewportContent> m_materialPreviewContent;
         QComboBox* m_documents = nullptr;
-        GraphCanvas::NodePaletteWidget* m_palette = nullptr;
+        JE::Editor::Tools::GraphCanvas::NodePaletteWidget* m_palette = nullptr;
         QLabel* m_compileStatus = nullptr;
         QPushButton* m_save = nullptr;
         QPushButton* m_compile = nullptr;
+        QPushButton* m_settings = nullptr;
         QPushButton* m_openMaterial = nullptr;
         QPushButton* m_undo = nullptr;
         QPushButton* m_redo = nullptr;
+        bool m_previewClosed = false;
         AZ::Uuid m_displayedDocumentId = AZ::Uuid::CreateNull();
     };
 }

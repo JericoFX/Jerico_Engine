@@ -15,7 +15,7 @@
 #include <AzCore/Asset/AssetCommon.h>
 #include <Core/Node.h>
 
-#include <GraphCanvas/Components/GraphCanvasPropertyBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/GraphCanvasPropertyBus.h>
 
 #include <ScriptCanvas/Core/GraphBus.h>
 
@@ -45,7 +45,7 @@ namespace ScriptCanvasEditor
             , public PropertyGridRequestBus::Handler
             , public ScriptCanvas::EndpointNotificationBus::MultiHandler
             , public ScriptCanvas::NodeNotificationsBus::MultiHandler
-            , public GraphCanvas::GraphCanvasPropertyInterfaceNotificationBus::MultiHandler
+            , public JE::Editor::Tools::GraphCanvas::GraphCanvasPropertyInterfaceNotificationBus::MultiHandler
         {
             Q_OBJECT
 

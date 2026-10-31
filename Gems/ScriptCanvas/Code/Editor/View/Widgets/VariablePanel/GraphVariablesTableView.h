@@ -20,8 +20,8 @@
 #include <ScriptCanvas/Bus/NodeIdPair.h>
 #include <ScriptCanvas/Variable/VariableBus.h>
 
-#include <GraphCanvas/Components/SceneBus.h>
-#include <GraphCanvas/Widgets/StyledItemDelegates/IconDecoratedNameDelegate.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/SceneBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Widgets/StyledItemDelegates/IconDecoratedNameDelegate.h>
 
 namespace ScriptCanvasEditor
 {
@@ -134,7 +134,7 @@ namespace ScriptCanvasEditor
 
     class GraphVariablesTableView
         : public QTableView
-        , public GraphCanvas::SceneNotificationBus::Handler
+        , public JE::Editor::Tools::GraphCanvas::SceneNotificationBus::Handler
     {
         Q_OBJECT
     public:
@@ -196,6 +196,6 @@ namespace ScriptCanvasEditor
         QAction*                             m_previousInstanceAction;
 
         ScriptCanvas::VariableId             m_cyclingVariableId;
-        GraphCanvas::NodeFocusCyclingHelper  m_cyclingHelper;
+        JE::Editor::Tools::GraphCanvas::NodeFocusCyclingHelper  m_cyclingHelper;
     };
 }

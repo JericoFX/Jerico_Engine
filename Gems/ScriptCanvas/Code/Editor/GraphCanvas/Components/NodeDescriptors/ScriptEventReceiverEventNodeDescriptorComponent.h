@@ -8,8 +8,8 @@
 
 #pragma once
 
-#include <GraphCanvas/Components/Nodes/NodeBus.h>
-#include <GraphCanvas/Components/SceneBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/Nodes/NodeBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/SceneBus.h>
 
 #include "Editor/Include/ScriptCanvas/Bus/NodeIdPair.h"
 
@@ -20,10 +20,10 @@ namespace ScriptCanvasEditor
 {
     class ScriptEventReceiverEventNodeDescriptorComponent
         : public NodeDescriptorComponent
-        , protected GraphCanvas::SceneMemberNotificationBus::Handler
+        , protected JE::Editor::Tools::GraphCanvas::SceneMemberNotificationBus::Handler
         , protected ScriptEventReceiverEventNodeDescriptorBus::Handler
         , public EBusHandlerEventNodeDescriptorRequestBus::Handler
-        , public GraphCanvas::ForcedWrappedNodeRequestBus::Handler
+        , public JE::Editor::Tools::GraphCanvas::ForcedWrappedNodeRequestBus::Handler
         , public ScriptEventReceiveNodeDescriptorNotificationBus::Handler
     {
     public:
@@ -50,8 +50,8 @@ namespace ScriptCanvasEditor
         ////
 
         // SceneMemberNotifications
-        void OnSceneMemberAboutToSerialize(GraphCanvas::GraphSerialization& graphSerialization) override;
-        void OnSceneMemberDeserialized(const AZ::EntityId& graphId, const GraphCanvas::GraphSerialization& serializationTarget) override;
+        void OnSceneMemberAboutToSerialize(JE::Editor::Tools::GraphCanvas::GraphSerialization& graphSerialization) override;
+        void OnSceneMemberDeserialized(const AZ::EntityId& graphId, const JE::Editor::Tools::GraphCanvas::GraphSerialization& serializationTarget) override;
         ////
 
         // ScriptEventSenderNodeDescriptorBus::Handler
@@ -79,7 +79,7 @@ namespace ScriptCanvasEditor
 
     protected:
 
-        void OnAddedToGraphCanvasGraph(const GraphCanvas::GraphId& grapphId, const AZ::EntityId& scriptCanvasNodeId) override;
+        void OnAddedToGraphCanvasGraph(const JE::Editor::Tools::GraphCanvas::GraphId& grapphId, const AZ::EntityId& scriptCanvasNodeId) override;
 
     private:
 

@@ -18,7 +18,7 @@ AZ_POP_DISABLE_WARNING
 #include <AzCore/Component/ComponentApplicationBus.h>
 #include <AzToolsFramework/UI/PropertyEditor/ReflectedPropertyEditor.hxx>
 
-#include <GraphCanvas/Editor/AssetEditorBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Editor/AssetEditorBus.h>
 
 #include <Editor/GraphCanvas/GraphCanvasEditorNotificationBusId.h>
 
@@ -78,7 +78,7 @@ namespace ScriptCanvasEditor
     {
         m_revertOnClose = false;
         AZ::UserSettingsOwnerRequestBus::Event(AZ::UserSettings::CT_LOCAL, &AZ::UserSettingsOwnerRequests::SaveSettings);
-        GraphCanvas::AssetEditorSettingsNotificationBus::Event(ScriptCanvasEditor::AssetEditorId, &GraphCanvas::AssetEditorSettingsNotifications::OnSettingsChanged);
+        JE::Editor::Tools::GraphCanvas::AssetEditorSettingsNotificationBus::Event(ScriptCanvasEditor::AssetEditorId, &JE::Editor::Tools::GraphCanvas::AssetEditorSettingsNotifications::OnSettingsChanged);
         accept();
     }
 

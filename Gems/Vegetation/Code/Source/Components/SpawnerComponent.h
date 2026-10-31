@@ -24,7 +24,7 @@
 #include <Vegetation/Ebuses/AreaNotificationBus.h>
 #include <Vegetation/Ebuses/SpawnerRequestBus.h>
 #include <Vegetation/AreaComponentBase.h>
-#include <SurfaceData/SurfaceDataTypes.h>
+#include <JE/Geometry/SurfaceData/SurfaceDataTypes.h>
 
 #define VEG_SPAWNER_ENABLE_CACHING 0
 #define VEG_SPAWNER_ENABLE_RELATIVE 0
@@ -142,7 +142,7 @@ namespace Vegetation
         mutable AZStd::recursive_mutex m_cacheMutex;
 #endif
 
-        SurfaceData::SurfaceTagVector m_inclusiveTagsToConsider;
-        SurfaceData::SurfaceTagVector m_exclusiveTagsToConsider;
+        JE::Geometry::SurfaceData::SurfaceTagVector m_inclusiveTagsToConsider;
+        JE::Geometry::SurfaceData::SurfaceTagVector m_exclusiveTagsToConsider;
     };
 }

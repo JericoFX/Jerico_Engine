@@ -22,8 +22,7 @@
     "dependencies": [
         "PhysXCommon",
         "LmbrCentral",
-        "GradientSignal",
-        "SurfaceData"
+        "GradientSignal"
     ],
     "provided_unique_service": "Physics"
 }

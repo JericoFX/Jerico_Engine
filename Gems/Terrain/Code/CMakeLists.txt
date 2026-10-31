@@ -25,7 +25,7 @@ ly_add_target(
             JE::RenderScene
             JE::RenderMaterials
             Gem::GradientSignal.Static
-            Gem::SurfaceData.Static
+            JE::Geometry
             Gem::LmbrCentral.API
 )
 
@@ -57,9 +57,9 @@ ly_add_source_properties(
             O3DE_GEM_VERSION=${gem_version})
 
 # the above module is for use in all client/server types
-ly_create_alias(NAME ${gem_name}.Servers  NAMESPACE Gem TARGETS Gem::${gem_name} Gem::SurfaceData.Servers Gem::GradientSignal.Servers)
-ly_create_alias(NAME ${gem_name}.Clients  NAMESPACE Gem TARGETS Gem::${gem_name} Gem::SurfaceData.Clients Gem::GradientSignal.Clients)
-ly_create_alias(NAME ${gem_name}.Unified  NAMESPACE Gem TARGETS Gem::${gem_name} Gem::SurfaceData.Unified Gem::GradientSignal.Unified)
+ly_create_alias(NAME ${gem_name}.Servers  NAMESPACE Gem TARGETS Gem::${gem_name} JE::Geometry Gem::GradientSignal.Servers)
+ly_create_alias(NAME ${gem_name}.Clients  NAMESPACE Gem TARGETS Gem::${gem_name} JE::Geometry Gem::GradientSignal.Clients)
+ly_create_alias(NAME ${gem_name}.Unified  NAMESPACE Gem TARGETS Gem::${gem_name} JE::Geometry Gem::GradientSignal.Unified)
 
 # If we are on a host platform, we want to add the host tools targets like the ${gem_name}.Editor target which
 # will also depend on ${gem_name}.Static
@@ -99,8 +99,8 @@ if(PAL_TRAIT_BUILD_HOST_TOOLS)
                 O3DE_GEM_VERSION=${gem_version})
 
     # the above module is for use in dev tool situations
-    ly_create_alias(NAME ${gem_name}.Builders NAMESPACE Gem TARGETS Gem::${gem_name}.Editor Gem::SurfaceData.Builders Gem::GradientSignal.Builders)
-    ly_create_alias(NAME ${gem_name}.Tools    NAMESPACE Gem TARGETS Gem::${gem_name}.Editor Gem::SurfaceData.Tools Gem::GradientSignal.Tools)
+    ly_create_alias(NAME ${gem_name}.Builders NAMESPACE Gem TARGETS Gem::${gem_name}.Editor JE::Geometry.Authoring Gem::GradientSignal.Builders)
+    ly_create_alias(NAME ${gem_name}.Tools    NAMESPACE Gem TARGETS Gem::${gem_name}.Editor JE::Geometry.Authoring Gem::GradientSignal.Tools)
 endif()
 
 ################################################################################
@@ -141,7 +141,7 @@ if(PAL_TRAIT_BUILD_TESTS_SUPPORTED)
         RUNTIME_DEPENDENCIES
             Gem::GradientSignal
             Gem::LmbrCentral
-            Gem::SurfaceData
+            JE::Geometry
     )
 
     # Add ${gem_name}.Tests to googletest

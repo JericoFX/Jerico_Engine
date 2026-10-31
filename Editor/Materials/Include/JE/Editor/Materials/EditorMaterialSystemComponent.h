@@ -9,6 +9,9 @@
 #pragma once
 
 #include <JE/Editor/Materials/Base.h>
+#if !defined(AZ_RELEASE_BUILD)
+#include <AzCore/Console/IConsole.h>
+#endif
 
 #include <JE/Render/RPI/Reflect/Material/MaterialAsset.h>
 #include <JE/Render/RPI/Reflect/Model/ModelAsset.h>
@@ -68,6 +71,15 @@ namespace JE
             void Deactivate() override;
 
         private:
+#if !defined(AZ_RELEASE_BUILD)
+            void JeOpenMaterialGraph(const AZ::ConsoleCommandContainer& arguments);
+            AZ_CONSOLEFUNC(EditorMaterialSystemComponent, JeOpenMaterialGraph, AZ::ConsoleFunctorFlags::DontReplicate,
+                "Editor diagnostic: <absolute .materialgraph source path>, one token without whitespace; paired double quotes allowed. "
+                "Open through the native workspace; does not confirm compilation or preview.");
+            void JeCompileGraphAndSelect(const AZ::ConsoleCommandContainer& arguments);
+            AZ_CONSOLEFUNC(EditorMaterialSystemComponent, JeCompileGraphAndSelect, AZ::ConsoleFunctorFlags::DontReplicate,
+                "Editor diagnostic: <A document UUID> <B document UUID>. Compile selected A and select already-open B without pumping events.");
+#endif
             //! EditorMaterialSystemComponentRequestBus::Handler overrides...
             void OpenMaterialEditor(const AZStd::string& sourcePath) override;
             void OpenMaterialCanvas(const AZStd::string& sourcePath) override;

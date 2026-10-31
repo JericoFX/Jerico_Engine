@@ -76,7 +76,7 @@ namespace AzToolsFramework
         return circleBoundWidth;
     }
 
-    AZStd::optional<AZ::Vector3> FindClosestPickIntersection(const AzFramework::RenderGeometry::RayRequest& rayRequest)
+    AzFramework::RenderGeometry::RayResult FindClosestPickHit(const AzFramework::RenderGeometry::RayRequest& rayRequest)
     {
         using AzFramework::RenderGeometry::IntersectorBus;
         using AzFramework::RenderGeometry::RayResult;
@@ -90,9 +90,15 @@ namespace AzToolsFramework
         TerrainDataRequestBus::BroadcastResult(
             renderGeometryIntersectionResult, &TerrainDataRequestBus::Events::GetClosestIntersection, rayRequest);
 
-        if (renderGeometryIntersectionResult.value)
+        return renderGeometryIntersectionResult.value;
+    }
+
+    AZStd::optional<AZ::Vector3> FindClosestPickIntersection(const AzFramework::RenderGeometry::RayRequest& rayRequest)
+    {
+        const auto hit = FindClosestPickHit(rayRequest);
+        if (hit)
         {
-            return renderGeometryIntersectionResult.value.m_worldPosition;
+            return hit.m_worldPosition;
         }
         else
         {

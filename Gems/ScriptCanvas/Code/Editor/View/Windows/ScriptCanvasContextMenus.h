@@ -14,14 +14,14 @@
 #include <QMenu>
 #include <QWidgetAction>
 
-#include <GraphCanvas/Widgets/EditorContextMenu/EditorContextMenu.h>
-#include <GraphCanvas/Widgets/EditorContextMenu/ContextMenus/SceneContextMenu.h>
-#include <GraphCanvas/Widgets/EditorContextMenu/ContextMenus/ConnectionContextMenu.h>
-#include <GraphCanvas/Widgets/EditorContextMenu/ContextMenus/SlotContextMenu.h>
-#include <GraphCanvas/Widgets/EditorContextMenu/ContextMenus/NodeContextMenu.h>
-#include <GraphCanvas/Widgets/EditorContextMenu/ContextMenuActions/SceneMenuActions/SceneContextMenuAction.h>
-#include <GraphCanvas/Widgets/EditorContextMenu/ContextMenuActions/SlotMenuActions/SlotContextMenuAction.h>
-#include <GraphCanvas/Widgets/EditorContextMenu/ContextMenuActions/NodeMenuActions/NodeContextMenuAction.h>
+#include <JE/Editor/Tools/GraphCanvas/Widgets/EditorContextMenu/EditorContextMenu.h>
+#include <JE/Editor/Tools/GraphCanvas/Widgets/EditorContextMenu/ContextMenus/SceneContextMenu.h>
+#include <JE/Editor/Tools/GraphCanvas/Widgets/EditorContextMenu/ContextMenus/ConnectionContextMenu.h>
+#include <JE/Editor/Tools/GraphCanvas/Widgets/EditorContextMenu/ContextMenus/SlotContextMenu.h>
+#include <JE/Editor/Tools/GraphCanvas/Widgets/EditorContextMenu/ContextMenus/NodeContextMenu.h>
+#include <JE/Editor/Tools/GraphCanvas/Widgets/EditorContextMenu/ContextMenuActions/SceneMenuActions/SceneContextMenuAction.h>
+#include <JE/Editor/Tools/GraphCanvas/Widgets/EditorContextMenu/ContextMenuActions/SlotMenuActions/SlotContextMenuAction.h>
+#include <JE/Editor/Tools/GraphCanvas/Widgets/EditorContextMenu/ContextMenuActions/NodeMenuActions/NodeContextMenuAction.h>
 #include <ScriptCanvas/Core/Slot.h>
 
 namespace AzToolsFramework::AssetBrowser
@@ -44,17 +44,17 @@ namespace ScriptCanvasEditor
     public:
         AZ_CLASS_ALLOCATOR(EndpointSelectionAction, AZ::SystemAllocator);
 
-        EndpointSelectionAction(const GraphCanvas::Endpoint& endpoint);
+        EndpointSelectionAction(const JE::Editor::Tools::GraphCanvas::Endpoint& endpoint);
         ~EndpointSelectionAction() = default;
 
-        const GraphCanvas::Endpoint& GetEndpoint() const;
+        const JE::Editor::Tools::GraphCanvas::Endpoint& GetEndpoint() const;
 
     private:
-        GraphCanvas::Endpoint m_endpoint;
+        JE::Editor::Tools::GraphCanvas::Endpoint m_endpoint;
     };
 
     class RemoveUnusedVariablesMenuAction
-        : public GraphCanvas::SceneContextMenuAction
+        : public JE::Editor::Tools::GraphCanvas::SceneContextMenuAction
     {
     public:
         AZ_CLASS_ALLOCATOR(RemoveUnusedVariablesMenuAction, AZ::SystemAllocator);
@@ -65,15 +65,15 @@ namespace ScriptCanvasEditor
         bool IsInSubMenu() const override;
         AZStd::string GetSubMenuPath() const override;
 
-        using GraphCanvas::SceneContextMenuAction::RefreshAction;
-        void RefreshAction(const GraphCanvas::GraphId& graphId, const AZ::EntityId& targetId) override;
+        using JE::Editor::Tools::GraphCanvas::SceneContextMenuAction::RefreshAction;
+        void RefreshAction(const JE::Editor::Tools::GraphCanvas::GraphId& graphId, const AZ::EntityId& targetId) override;
 
-        using GraphCanvas::SceneContextMenuAction::TriggerAction;
-        GraphCanvas::ContextMenuAction::SceneReaction TriggerAction(const GraphCanvas::GraphId& graphId, const AZ::Vector2& scenePos) override;
+        using JE::Editor::Tools::GraphCanvas::SceneContextMenuAction::TriggerAction;
+        JE::Editor::Tools::GraphCanvas::ContextMenuAction::SceneReaction TriggerAction(const JE::Editor::Tools::GraphCanvas::GraphId& graphId, const AZ::Vector2& scenePos) override;
     };
 
     class ConvertVariableNodeToReferenceAction
-        : public GraphCanvas::ContextMenuAction
+        : public JE::Editor::Tools::GraphCanvas::ContextMenuAction
     {
         Q_OBJECT
     public:
@@ -82,13 +82,13 @@ namespace ScriptCanvasEditor
         ConvertVariableNodeToReferenceAction(QObject* parent);
         virtual ~ConvertVariableNodeToReferenceAction() = default;
 
-        GraphCanvas::ActionGroupId GetActionGroupId() const override;
+        JE::Editor::Tools::GraphCanvas::ActionGroupId GetActionGroupId() const override;
 
-        using GraphCanvas::ContextMenuAction::RefreshAction;
-        void RefreshAction(const GraphCanvas::GraphId& graphId, const AZ::EntityId& targetId) override;
+        using JE::Editor::Tools::GraphCanvas::ContextMenuAction::RefreshAction;
+        void RefreshAction(const JE::Editor::Tools::GraphCanvas::GraphId& graphId, const AZ::EntityId& targetId) override;
 
-        using GraphCanvas::ContextMenuAction::TriggerAction;
-        GraphCanvas::ContextMenuAction::SceneReaction TriggerAction(const GraphCanvas::GraphId& graphId, const AZ::Vector2& scenePos) override;
+        using JE::Editor::Tools::GraphCanvas::ContextMenuAction::TriggerAction;
+        JE::Editor::Tools::GraphCanvas::ContextMenuAction::SceneReaction TriggerAction(const JE::Editor::Tools::GraphCanvas::GraphId& graphId, const AZ::Vector2& scenePos) override;
 
     private:
 
@@ -96,7 +96,7 @@ namespace ScriptCanvasEditor
     };
 
     class SlotManipulationMenuAction
-        : public GraphCanvas::ContextMenuAction
+        : public JE::Editor::Tools::GraphCanvas::ContextMenuAction
     {
         Q_OBJECT
     public:
@@ -104,7 +104,7 @@ namespace ScriptCanvasEditor
 
         SlotManipulationMenuAction(AZStd::string_view actionName, QObject* parent);
 
-        static ScriptCanvas::Slot* GetScriptCanvasSlot(const GraphCanvas::Endpoint& endpoint) ;
+        static ScriptCanvas::Slot* GetScriptCanvasSlot(const JE::Editor::Tools::GraphCanvas::Endpoint& endpoint) ;
     
     };
 
@@ -118,13 +118,13 @@ namespace ScriptCanvasEditor
         ConvertReferenceToVariableNodeAction(QObject* parent);
         virtual ~ConvertReferenceToVariableNodeAction() = default;
 
-        GraphCanvas::ActionGroupId GetActionGroupId() const override;
+        JE::Editor::Tools::GraphCanvas::ActionGroupId GetActionGroupId() const override;
 
         using SlotManipulationMenuAction::RefreshAction;
-        void RefreshAction(const GraphCanvas::GraphId& graphId, const AZ::EntityId& targetId) override;
+        void RefreshAction(const JE::Editor::Tools::GraphCanvas::GraphId& graphId, const AZ::EntityId& targetId) override;
 
         using SlotManipulationMenuAction::TriggerAction;
-        GraphCanvas::ContextMenuAction::SceneReaction TriggerAction(const GraphCanvas::GraphId& graphId, const AZ::Vector2& scenePos) override;
+        JE::Editor::Tools::GraphCanvas::ContextMenuAction::SceneReaction TriggerAction(const JE::Editor::Tools::GraphCanvas::GraphId& graphId, const AZ::Vector2& scenePos) override;
 
     private:
 
@@ -132,7 +132,7 @@ namespace ScriptCanvasEditor
     };
 
     class ExposeSlotMenuAction
-        : public GraphCanvas::SlotContextMenuAction
+        : public JE::Editor::Tools::GraphCanvas::SlotContextMenuAction
     {
     public:
         AZ_CLASS_ALLOCATOR(ExposeSlotMenuAction, AZ::SystemAllocator);
@@ -140,19 +140,19 @@ namespace ScriptCanvasEditor
         ExposeSlotMenuAction(QObject* parent);
         virtual ~ExposeSlotMenuAction() = default;
 
-        using GraphCanvas::SlotContextMenuAction::RefreshAction;
-        void RefreshAction(const GraphCanvas::GraphId& graphId, const AZ::EntityId& targetId) override;
+        using JE::Editor::Tools::GraphCanvas::SlotContextMenuAction::RefreshAction;
+        void RefreshAction(const JE::Editor::Tools::GraphCanvas::GraphId& graphId, const AZ::EntityId& targetId) override;
 
-        using GraphCanvas::SlotContextMenuAction::TriggerAction;
-        GraphCanvas::ContextMenuAction::SceneReaction TriggerAction(const GraphCanvas::GraphId& graphId, const AZ::Vector2& scenePos) override;
+        using JE::Editor::Tools::GraphCanvas::SlotContextMenuAction::TriggerAction;
+        JE::Editor::Tools::GraphCanvas::ContextMenuAction::SceneReaction TriggerAction(const JE::Editor::Tools::GraphCanvas::GraphId& graphId, const AZ::Vector2& scenePos) override;
 
     protected:
 
-        void CreateNodeling(const GraphCanvas::GraphId& graphId, AZ::EntityId scriptCanvasGraphId, GraphCanvas::GraphId slotId, const AZ::Vector2& scenePos, GraphCanvas::ConnectionType connectionType);
+        void CreateNodeling(const JE::Editor::Tools::GraphCanvas::GraphId& graphId, AZ::EntityId scriptCanvasGraphId, JE::Editor::Tools::GraphCanvas::GraphId slotId, const AZ::Vector2& scenePos, JE::Editor::Tools::GraphCanvas::ConnectionType connectionType);
     };
 
     class SetDataSlotTypeMenuAction
-        : public GraphCanvas::SlotContextMenuAction
+        : public JE::Editor::Tools::GraphCanvas::SlotContextMenuAction
     {
     public:
         AZ_CLASS_ALLOCATOR(SetDataSlotTypeMenuAction, AZ::SystemAllocator);
@@ -161,40 +161,40 @@ namespace ScriptCanvasEditor
         virtual ~SetDataSlotTypeMenuAction() = default;
         static bool IsSupportedSlotType(const AZ::EntityId& slotId);
 
-        using GraphCanvas::SlotContextMenuAction::RefreshAction;
-        void RefreshAction(const GraphCanvas::GraphId& graphId, const AZ::EntityId& targetId) override;
+        using JE::Editor::Tools::GraphCanvas::SlotContextMenuAction::RefreshAction;
+        void RefreshAction(const JE::Editor::Tools::GraphCanvas::GraphId& graphId, const AZ::EntityId& targetId) override;
 
-        using GraphCanvas::SlotContextMenuAction::TriggerAction;
-        GraphCanvas::ContextMenuAction::SceneReaction TriggerAction(const GraphCanvas::GraphId& graphId, const AZ::Vector2& scenePos) override;
+        using JE::Editor::Tools::GraphCanvas::SlotContextMenuAction::TriggerAction;
+        JE::Editor::Tools::GraphCanvas::ContextMenuAction::SceneReaction TriggerAction(const JE::Editor::Tools::GraphCanvas::GraphId& graphId, const AZ::Vector2& scenePos) override;
 
     private:
 
-        ScriptCanvas::Slot* GetSlot(const GraphCanvas::GraphId& graphId, const AZ::EntityId& targetId);
+        ScriptCanvas::Slot* GetSlot(const JE::Editor::Tools::GraphCanvas::GraphId& graphId, const AZ::EntityId& targetId);
 
     };
 
     //! Context Menu Action for Creating an AzEventHandler node from a data slot of a Behavior Method node
     //! which returns an AZ::Event<Params...> type
     class CreateAzEventHandlerSlotMenuAction
-        : public GraphCanvas::SlotContextMenuAction
+        : public JE::Editor::Tools::GraphCanvas::SlotContextMenuAction
     {
     public:
         AZ_CLASS_ALLOCATOR(CreateAzEventHandlerSlotMenuAction, AZ::SystemAllocator);
 
         CreateAzEventHandlerSlotMenuAction(QObject* parent);
 
-        using GraphCanvas::SlotContextMenuAction::RefreshAction;
-        void RefreshAction(const GraphCanvas::GraphId& graphId, const AZ::EntityId& targetId) override;
+        using JE::Editor::Tools::GraphCanvas::SlotContextMenuAction::RefreshAction;
+        void RefreshAction(const JE::Editor::Tools::GraphCanvas::GraphId& graphId, const AZ::EntityId& targetId) override;
 
-        using GraphCanvas::SlotContextMenuAction::TriggerAction;
-        GraphCanvas::ContextMenuAction::SceneReaction TriggerAction(const GraphCanvas::GraphId& graphId, const AZ::Vector2& scenePos) override;
+        using JE::Editor::Tools::GraphCanvas::SlotContextMenuAction::TriggerAction;
+        JE::Editor::Tools::GraphCanvas::ContextMenuAction::SceneReaction TriggerAction(const JE::Editor::Tools::GraphCanvas::GraphId& graphId, const AZ::Vector2& scenePos) override;
 
-        static const AZ::BehaviorMethod* FindBehaviorMethodWithAzEventReturn(const GraphCanvas::GraphId& graphId, AZ::EntityId targetId);
+        static const AZ::BehaviorMethod* FindBehaviorMethodWithAzEventReturn(const JE::Editor::Tools::GraphCanvas::GraphId& graphId, AZ::EntityId targetId);
 
     protected:
 
         const AZ::BehaviorMethod* m_methodWithAzEventReturn{};
-        GraphCanvas::Endpoint m_methodNodeAzEventEndpoint;
+        JE::Editor::Tools::GraphCanvas::Endpoint m_methodNodeAzEventEndpoint;
 
     };
 
@@ -203,7 +203,7 @@ namespace ScriptCanvasEditor
     /////////////////
 
     class SceneContextMenu
-        : public GraphCanvas::SceneContextMenu
+        : public JE::Editor::Tools::GraphCanvas::SceneContextMenu
     {
         Q_OBJECT
     public:
@@ -216,7 +216,7 @@ namespace ScriptCanvasEditor
         void FilterForSourceSlot(const AZ::EntityId& scriptCanvasGraphId, const AZ::EntityId& sourceSlotId);
 
         // EditConstructContextMenu
-        void OnRefreshActions(const GraphCanvas::GraphId& graphId, const AZ::EntityId& targetMemberId) override;
+        void OnRefreshActions(const JE::Editor::Tools::GraphCanvas::GraphId& graphId, const AZ::EntityId& targetMemberId) override;
         ////
 
         void SetupDisplayForProposal();
@@ -227,7 +227,7 @@ namespace ScriptCanvasEditor
     };
 
     class ConnectionContextMenu
-        : public GraphCanvas::ConnectionContextMenu
+        : public JE::Editor::Tools::GraphCanvas::ConnectionContextMenu
     {
         Q_OBJECT
     public:
@@ -238,7 +238,7 @@ namespace ScriptCanvasEditor
 
     protected:
 
-        void OnRefreshActions(const GraphCanvas::GraphId& graphId, const AZ::EntityId& targetMemberId);
+        void OnRefreshActions(const JE::Editor::Tools::GraphCanvas::GraphId& graphId, const AZ::EntityId& targetMemberId);
 
     private:
 
@@ -253,7 +253,7 @@ namespace ScriptCanvasEditor
 
     //! Context menu to rename a node
     class RenameFunctionDefinitionNodeAction
-        : public GraphCanvas::NodeContextMenuAction
+        : public JE::Editor::Tools::GraphCanvas::NodeContextMenuAction
     {
     public:
         AZ_CLASS_ALLOCATOR(RenameFunctionDefinitionNodeAction, AZ::SystemAllocator);
@@ -261,11 +261,11 @@ namespace ScriptCanvasEditor
         RenameFunctionDefinitionNodeAction(NodeDescriptorComponent* descriptor, QObject* parent);
         virtual ~RenameFunctionDefinitionNodeAction() = default;
 
-        using GraphCanvas::NodeContextMenuAction::RefreshAction;
-        void RefreshAction(const GraphCanvas::GraphId& graphId, const AZ::EntityId& targetId) override;
+        using JE::Editor::Tools::GraphCanvas::NodeContextMenuAction::RefreshAction;
+        void RefreshAction(const JE::Editor::Tools::GraphCanvas::GraphId& graphId, const AZ::EntityId& targetId) override;
 
-        using GraphCanvas::NodeContextMenuAction::TriggerAction;
-        GraphCanvas::ContextMenuAction::SceneReaction TriggerAction(const GraphCanvas::GraphId& graphId, const AZ::Vector2& scenePos) override;
+        using JE::Editor::Tools::GraphCanvas::NodeContextMenuAction::TriggerAction;
+        JE::Editor::Tools::GraphCanvas::ContextMenuAction::SceneReaction TriggerAction(const JE::Editor::Tools::GraphCanvas::GraphId& graphId, const AZ::Vector2& scenePos) override;
 
         NodeDescriptorComponent* m_descriptor;
     };

@@ -22,9 +22,9 @@ AZ_POP_DISABLE_WARNING
 
 
 
-#include <GraphCanvas/Widgets/GraphCanvasGraphicsView/GraphCanvasGraphicsView.h>
-#include <GraphCanvas/Widgets/MiniMapGraphicsView/MiniMapGraphicsView.h>
-#include <GraphCanvas/GraphCanvasBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Widgets/GraphCanvasGraphicsView/GraphCanvasGraphicsView.h>
+#include <JE/Editor/Tools/GraphCanvas/Widgets/MiniMapGraphicsView/MiniMapGraphicsView.h>
+#include <JE/Editor/Tools/GraphCanvas/GraphCanvasBus.h>
 
 #include <Debugger/Bus.h>
 #include <Core/Graph.h>
@@ -80,7 +80,7 @@ namespace ScriptCanvasEditor
             m_assetId = assetId;
         }
 
-        const GraphCanvas::ViewId& CanvasWidget::GetViewId() const
+        const JE::Editor::Tools::GraphCanvas::ViewId& CanvasWidget::GetViewId() const
         {
             return m_graphicsView->GetViewId();
         }
@@ -93,8 +93,8 @@ namespace ScriptCanvasEditor
 
                 if (m_disabledOverlay.IsValid() && m_graphicsView)
                 {
-                    GraphCanvas::SceneRequestBus::Event(m_graphicsView->GetScene(), &GraphCanvas::SceneRequests::CancelGraphicsEffect, m_disabledOverlay);
-                    m_disabledOverlay = GraphCanvas::GraphicsEffectId();
+                    JE::Editor::Tools::GraphCanvas::SceneRequestBus::Event(m_graphicsView->GetScene(), &JE::Editor::Tools::GraphCanvas::SceneRequests::CancelGraphicsEffect, m_disabledOverlay);
+                    m_disabledOverlay = JE::Editor::Tools::GraphCanvas::GraphicsEffectId();
                 }
             }
         }
@@ -109,14 +109,14 @@ namespace ScriptCanvasEditor
                 {
                     AZ::EntityId graphCanvasSceneId = m_graphicsView->GetScene();
 
-                    GraphCanvas::OccluderConfiguration occluderConfiguration;
+                    JE::Editor::Tools::GraphCanvas::OccluderConfiguration occluderConfiguration;
 
                     occluderConfiguration.m_bounds = m_graphicsView->sceneRect();
                     occluderConfiguration.m_opacity = 0.5f;
                     occluderConfiguration.m_renderColor = QColor(0, 0, 0);
                     occluderConfiguration.m_zValue = 100000;
 
-                    GraphCanvas::SceneRequestBus::EventResult(m_disabledOverlay, graphCanvasSceneId, &GraphCanvas::SceneRequests::CreateOccluder, occluderConfiguration);
+                    JE::Editor::Tools::GraphCanvas::SceneRequestBus::EventResult(m_disabledOverlay, graphCanvasSceneId, &JE::Editor::Tools::GraphCanvas::SceneRequests::CreateOccluder, occluderConfiguration);
                 }
             }
         }
@@ -124,7 +124,7 @@ namespace ScriptCanvasEditor
         void CanvasWidget::SetupGraphicsView()
         {
             const bool registerMenuActions = false;
-            m_graphicsView = aznew GraphCanvas::GraphCanvasGraphicsView(nullptr, registerMenuActions);
+            m_graphicsView = aznew JE::Editor::Tools::GraphCanvas::GraphCanvasGraphicsView(nullptr, registerMenuActions);
 
             AZ_Assert(m_graphicsView, "Could Canvas Widget unable to create CanvasGraphicsView object.");
             if (m_graphicsView)

@@ -8,9 +8,9 @@
 
 #include <AzCore/Component/ComponentApplicationBus.h>
 
-#include <GraphCanvas/Components/Connections/ConnectionBus.h>
-#include <GraphCanvas/Components/Nodes/NodeTitleBus.h>
-#include <GraphCanvas/Components/SceneBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/Connections/ConnectionBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/Nodes/NodeTitleBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/SceneBus.h>
 
 #include <Editor/GraphCanvas/Components/NodeDescriptors/VariableNodeDescriptorComponent.h>
 #include <Editor/Include/ScriptCanvas/Bus/RequestBus.h>
@@ -47,7 +47,7 @@ namespace ScriptCanvasEditor
     {
         NodeDescriptorComponent::Activate();
 
-        GraphCanvas::SceneMemberNotificationBus::Handler::BusConnect(GetEntityId());
+        JE::Editor::Tools::GraphCanvas::SceneMemberNotificationBus::Handler::BusConnect(GetEntityId());
         VariableNodeDescriptorRequestBus::Handler::BusConnect(GetEntityId());
     }
 
@@ -55,7 +55,7 @@ namespace ScriptCanvasEditor
     {
         ScriptCanvas::VariableNodeNotificationBus::Handler::BusDisconnect();
         VariableNodeDescriptorRequestBus::Handler::BusDisconnect();
-        GraphCanvas::SceneMemberNotificationBus::Handler::BusDisconnect();
+        JE::Editor::Tools::GraphCanvas::SceneMemberNotificationBus::Handler::BusDisconnect();
 
         NodeDescriptorComponent::Deactivate();
     }
@@ -71,10 +71,10 @@ namespace ScriptCanvasEditor
         AZStd::unordered_set< AZ::EntityId > deleteIds = { GetEntityId() };
 
         AZ::EntityId graphId;
-        GraphCanvas::SceneMemberRequestBus::EventResult(graphId, GetEntityId(), &GraphCanvas::SceneMemberRequests::GetScene);
+        JE::Editor::Tools::GraphCanvas::SceneMemberRequestBus::EventResult(graphId, GetEntityId(), &JE::Editor::Tools::GraphCanvas::SceneMemberRequests::GetScene);
 
         // After this call the component is no longer valid.
-        GraphCanvas::SceneRequestBus::Event(graphId, &GraphCanvas::SceneRequests::Delete, deleteIds);
+        JE::Editor::Tools::GraphCanvas::SceneRequestBus::Event(graphId, &JE::Editor::Tools::GraphCanvas::SceneRequests::Delete, deleteIds);
     }
 
     void VariableNodeDescriptorComponent::OnVariableIdChanged(const ScriptCanvas::VariableId& /*oldVariableId*/, const ScriptCanvas::VariableId& newVariableId)
@@ -94,10 +94,10 @@ namespace ScriptCanvasEditor
         ScriptCanvas::VariableRequestBus::EventResult(scriptCanvasType, newScopedVariableId, &ScriptCanvas::VariableRequests::GetType);
 
         const AZStd::string typeName = TranslationHelper::GetSafeTypeName(scriptCanvasType);
-        GraphCanvas::NodeTitleRequestBus::Event(GetEntityId(), &GraphCanvas::NodeTitleRequests::SetSubTitle, typeName);
+        JE::Editor::Tools::GraphCanvas::NodeTitleRequestBus::Event(GetEntityId(), &JE::Editor::Tools::GraphCanvas::NodeTitleRequests::SetSubTitle, typeName);
 
         AZ::Uuid dataType = ScriptCanvas::Data::ToAZType(scriptCanvasType);
-        GraphCanvas::NodeTitleRequestBus::Event(GetEntityId(), &GraphCanvas::NodeTitleRequests::SetDataPaletteOverride, dataType);
+        JE::Editor::Tools::GraphCanvas::NodeTitleRequestBus::Event(GetEntityId(), &JE::Editor::Tools::GraphCanvas::NodeTitleRequests::SetDataPaletteOverride, dataType);
 
         AZStd::string_view variableName;
         ScriptCanvas::VariableRequestBus::EventResult(variableName, newScopedVariableId, &ScriptCanvas::VariableRequests::GetName);
@@ -113,7 +113,7 @@ namespace ScriptCanvasEditor
         ScriptCanvas::VariableNodeNotificationBus::Handler::BusConnect(scriptCanvasNodeId);
     }
 
-    void VariableNodeDescriptorComponent::OnSceneMemberAboutToSerialize(GraphCanvas::GraphSerialization& graphSerialization)
+    void VariableNodeDescriptorComponent::OnSceneMemberAboutToSerialize(JE::Editor::Tools::GraphCanvas::GraphSerialization& graphSerialization)
     {
         auto& userDataMapRef = graphSerialization.GetUserDataMapRef();
         
@@ -152,7 +152,7 @@ namespace ScriptCanvasEditor
         }
     }
 
-    void VariableNodeDescriptorComponent::OnSceneMemberDeserialized(const AZ::EntityId& graphCanvasGraphId, const GraphCanvas::GraphSerialization& graphSerialization)
+    void VariableNodeDescriptorComponent::OnSceneMemberDeserialized(const AZ::EntityId& graphCanvasGraphId, const JE::Editor::Tools::GraphCanvas::GraphSerialization& graphSerialization)
     {
         ScriptCanvas::ScriptCanvasId scriptCanvasId;
         GeneralRequestBus::BroadcastResult(scriptCanvasId, &GeneralRequests::GetScriptCanvasId, graphCanvasGraphId);
@@ -199,7 +199,7 @@ namespace ScriptCanvasEditor
         ScriptCanvas::VariableId variableId;
 
         AZStd::any* userData = nullptr;
-        GraphCanvas::NodeRequestBus::EventResult(userData, GetEntityId(), &GraphCanvas::NodeRequests::GetUserData);
+        JE::Editor::Tools::GraphCanvas::NodeRequestBus::EventResult(userData, GetEntityId(), &JE::Editor::Tools::GraphCanvas::NodeRequests::GetUserData);
 
         AZ::EntityId* scNodeId = AZStd::any_cast<AZ::EntityId>(userData);
         if (scNodeId)
@@ -218,7 +218,7 @@ namespace ScriptCanvasEditor
     void VariableNodeDescriptorComponent::SetVariableId(const ScriptCanvas::VariableId& variableId)
     {
         AZStd::any* userData = nullptr;
-        GraphCanvas::NodeRequestBus::EventResult(userData, GetEntityId(), &GraphCanvas::NodeRequests::GetUserData);
+        JE::Editor::Tools::GraphCanvas::NodeRequestBus::EventResult(userData, GetEntityId(), &JE::Editor::Tools::GraphCanvas::NodeRequests::GetUserData);
 
         AZ::EntityId* scNodeId = AZStd::any_cast<AZ::EntityId>(userData);
         if (scNodeId)

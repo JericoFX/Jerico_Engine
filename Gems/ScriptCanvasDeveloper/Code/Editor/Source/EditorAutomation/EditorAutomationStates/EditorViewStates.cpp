@@ -8,12 +8,12 @@
 
 #include <QTableView>
 
-#include <GraphCanvas/Components/Nodes/NodeBus.h>
-#include <GraphCanvas/Components/SceneBus.h>
-#include <GraphCanvas/Components/ViewBus.h>
-#include <GraphCanvas/Components/VisualBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/Nodes/NodeBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/SceneBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/ViewBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/VisualBus.h>
 
-#include <GraphCanvas/Utils/ConversionUtils.h>
+#include <JE/Editor/Tools/GraphCanvas/Utils/ConversionUtils.h>
 
 #include <ScriptCanvasDeveloperEditor/EditorAutomation/EditorAutomationStates/EditorViewStates.h>
 
@@ -37,12 +37,12 @@ namespace ScriptCanvas::Developer
 
     void SceneMouseMoveState::OnSetupStateActions(EditorAutomationActionRunner& actionRunner)
     {
-        const GraphCanvas::GraphId* graphId = GetStateModel()->GetStateDataAs<GraphCanvas::GraphId>(StateModelIds::GraphCanvasId);
+        const JE::Editor::Tools::GraphCanvas::GraphId* graphId = GetStateModel()->GetStateDataAs<JE::Editor::Tools::GraphCanvas::GraphId>(StateModelIds::GraphCanvasId);
         const AZ::Vector2* scenePoint = GetStateModel()->GetStateDataAs<AZ::Vector2>(m_targetPoint);
 
         if (scenePoint && graphId)
         {
-            m_moveAction = aznew SceneMouseMoveAction((*graphId), GraphCanvas::ConversionUtils::AZToQPoint((*scenePoint)));
+            m_moveAction = aznew SceneMouseMoveAction((*graphId), JE::Editor::Tools::GraphCanvas::ConversionUtils::AZToQPoint((*scenePoint)));
             actionRunner.AddAction(m_moveAction);
         }
         else
@@ -80,14 +80,14 @@ namespace ScriptCanvas::Developer
 
     void SceneMouseDragState::OnSetupStateActions(EditorAutomationActionRunner& actionRunner)
     {
-        const GraphCanvas::GraphId* graphId = GetStateModel()->GetStateDataAs<GraphCanvas::GraphId>(StateModelIds::GraphCanvasId);
+        const JE::Editor::Tools::GraphCanvas::GraphId* graphId = GetStateModel()->GetStateDataAs<JE::Editor::Tools::GraphCanvas::GraphId>(StateModelIds::GraphCanvasId);
 
         const AZ::Vector2* startPoint = GetStateModel()->GetStateDataAs<AZ::Vector2>(m_startPoint);
         const AZ::Vector2* endPoint = GetStateModel()->GetStateDataAs<AZ::Vector2>(m_endPoint);
 
         if (startPoint && endPoint && graphId)
         {
-            m_dragAction = aznew SceneMouseDragAction((*graphId), GraphCanvas::ConversionUtils::AZToQPoint((*startPoint)), GraphCanvas::ConversionUtils::AZToQPoint((*endPoint)), m_mouseButton);
+            m_dragAction = aznew SceneMouseDragAction((*graphId), JE::Editor::Tools::GraphCanvas::ConversionUtils::AZToQPoint((*startPoint)), JE::Editor::Tools::GraphCanvas::ConversionUtils::AZToQPoint((*endPoint)), m_mouseButton);
             actionRunner.AddAction(m_dragAction);
         }
         else
@@ -130,14 +130,14 @@ namespace ScriptCanvas::Developer
     {
         if (!m_outputId.empty())
         {
-            const GraphCanvas::ViewId* viewId = GetStateModel()->GetStateDataAs<GraphCanvas::ViewId>(StateModelIds::ViewId);
+            const JE::Editor::Tools::GraphCanvas::ViewId* viewId = GetStateModel()->GetStateDataAs<JE::Editor::Tools::GraphCanvas::ViewId>(StateModelIds::ViewId);
 
             if (viewId)
             {
                 QRectF viewableRect;
-                GraphCanvas::ViewRequestBus::EventResult(viewableRect, (*viewId), &GraphCanvas::ViewRequests::GetViewableAreaInSceneCoordinates);
+                JE::Editor::Tools::GraphCanvas::ViewRequestBus::EventResult(viewableRect, (*viewId), &JE::Editor::Tools::GraphCanvas::ViewRequests::GetViewableAreaInSceneCoordinates);
 
-                AZ::Vector2 viewCenter = GraphCanvas::ConversionUtils::QPointToVector(viewableRect.center());
+                AZ::Vector2 viewCenter = JE::Editor::Tools::GraphCanvas::ConversionUtils::QPointToVector(viewableRect.center());
                 GetStateModel()->SetStateData(m_outputId, viewCenter);
             }
         }

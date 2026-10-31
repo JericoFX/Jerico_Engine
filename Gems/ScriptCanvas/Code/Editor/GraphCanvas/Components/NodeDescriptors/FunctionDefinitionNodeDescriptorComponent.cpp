@@ -11,7 +11,7 @@
 #include <QInputDialog>
 #include <QMainWindow>
 
-#include <GraphCanvas/Components/Nodes/NodeTitleBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/Nodes/NodeTitleBus.h>
 #include <ScriptCanvas/Bus/ScriptCanvasBus.h>
 #include <ScriptCanvas/Core/NodelingBus.h>
 #include <ScriptCanvas/Bus/RequestBus.h>
@@ -28,13 +28,13 @@ namespace ScriptCanvasEditor
     {
         NodelingDescriptorComponent::Activate();
 
-        GraphCanvas::VisualNotificationBus::Handler::BusConnect(GetEntityId());
+        JE::Editor::Tools::GraphCanvas::VisualNotificationBus::Handler::BusConnect(GetEntityId());
     }
 
     void FunctionDefinitionNodeDescriptorComponent::Deactivate()
     {
         NodelingDescriptorComponent::Deactivate();
-        GraphCanvas::VisualNotificationBus::Handler::BusDisconnect();
+        JE::Editor::Tools::GraphCanvas::VisualNotificationBus::Handler::BusDisconnect();
     }
 
     void FunctionDefinitionNodeDescriptorComponent::Reflect(AZ::ReflectContext* reflectContext)
@@ -57,9 +57,9 @@ namespace ScriptCanvasEditor
         AZStd::string inBoxText{};
         AZStd::string defaultName{};
 
-        GraphCanvas::NodeId nodeId = descriptor->GetEntityId();
+        JE::Editor::Tools::GraphCanvas::NodeId nodeId = descriptor->GetEntityId();
 
-        GraphCanvas::NodeTitleRequestBus::EventResult(defaultName, nodeId, &GraphCanvas::NodeTitleRequests::GetTitle);
+        JE::Editor::Tools::GraphCanvas::NodeTitleRequestBus::EventResult(defaultName, nodeId, &JE::Editor::Tools::GraphCanvas::NodeTitleRequests::GetTitle);
 
         QMainWindow* editorWindow = nullptr;
         UIRequestBus::BroadcastResult(editorWindow, &UIRequests::GetMainWindow);
@@ -71,11 +71,11 @@ namespace ScriptCanvasEditor
 
         if (!name.isEmpty() && newName.compare(defaultName) != 0)
         {
-            GraphCanvas::NodeTitleRequestBus::Event(nodeId, &GraphCanvas::NodeTitleRequests::SetTitle, newName);
+            JE::Editor::Tools::GraphCanvas::NodeTitleRequestBus::Event(nodeId, &JE::Editor::Tools::GraphCanvas::NodeTitleRequests::SetTitle, newName);
 
 
             AZ::EntityId graphCanvasGraphId;
-            GraphCanvas::SceneMemberRequestBus::EventResult(graphCanvasGraphId, descriptor->GetEntityId(), &GraphCanvas::SceneMemberRequests::GetScene);
+            JE::Editor::Tools::GraphCanvas::SceneMemberRequestBus::EventResult(graphCanvasGraphId, descriptor->GetEntityId(), &JE::Editor::Tools::GraphCanvas::SceneMemberRequests::GetScene);
 
             ScriptCanvas::ScriptCanvasId scriptCanvasId;
             GeneralRequestBus::BroadcastResult(scriptCanvasId, &GeneralRequests::GetScriptCanvasId, graphCanvasGraphId);

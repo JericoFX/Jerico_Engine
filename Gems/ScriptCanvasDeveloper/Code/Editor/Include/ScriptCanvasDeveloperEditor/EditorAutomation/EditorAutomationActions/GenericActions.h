@@ -10,8 +10,8 @@
 #include <QPoint>
 #include <QWidget>
 
-#include <GraphCanvas/Types/Endpoint.h>
-#include <GraphCanvas/Types/Types.h>
+#include <JE/Editor/Tools/GraphCanvas/Types/Endpoint.h>
+#include <JE/Editor/Tools/GraphCanvas/Types/Types.h>
 
 #include <ScriptCanvasDeveloperEditor/EditorAutomation/EditorAutomationAction.h>
 #include <ScriptCanvasDeveloperEditor/EditorAutomation/EditorAutomationTest.h>

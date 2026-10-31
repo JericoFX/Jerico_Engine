@@ -22,7 +22,7 @@
 #include <EMotionStudio/Plugins/StandardPlugins/Source/AnimGraph/BlendGraphViewWidget.h>
 #include <EMotionStudio/Plugins/StandardPlugins/Source/AnimGraph/BlendGraphWidget.h>
 
-#include <GraphCanvas/Widgets/NodePalette/NodePaletteTreeView.h>
+#include <JE/Editor/Tools/GraphCanvas/Widgets/NodePalette/NodePaletteTreeView.h>
 
 namespace EMotionFX
 {
@@ -44,7 +44,7 @@ namespace EMotionFX
         m_blendGraphWidget->OnContextMenuEvent(m_blendGraphWidget, QPoint(0, 0), QPoint(0, 0), m_animGraphPlugin, selectedAnimGraphNodes, true, false, m_animGraphPlugin->GetActionFilter());
 
         // Add the Reference node through the context menu.
-        auto* tree = UIFixture::GetFirstChildOfType<GraphCanvas::NodePaletteTreeView>(m_blendGraphWidget);
+        auto* tree = UIFixture::GetFirstChildOfType<JE::Editor::Tools::GraphCanvas::NodePaletteTreeView>(m_blendGraphWidget);
         ASSERT_TRUE(tree);
         const QModelIndex idx = UIFixture::GetIndexFromName(tree, "Reference");
         ASSERT_TRUE(idx.isValid());

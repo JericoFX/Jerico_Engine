@@ -10,11 +10,11 @@
 #include <AzCore/RTTI/ReflectContext.h>
 #include <AzCore/std/containers/unordered_map.h>
 
-#include <GraphCanvas/Widgets/GraphCanvasTreeItem.h>
+#include <JE/Editor/Tools/GraphCanvas/Widgets/GraphCanvasTreeItem.h>
 
 #include <ScriptCanvas/Core/Core.h>
 
-namespace GraphCanvas
+namespace JE::Editor::Tools::GraphCanvas
 {
     class NodePaletteTreeItem;
 }
@@ -36,8 +36,8 @@ namespace ScriptCanvasEditor
     class NodeIdentifierFactory
     {
     public:
-        static ScriptCanvas::NodeTypeIdentifier ConstructNodeIdentifier(const GraphCanvas::GraphCanvasTreeItem* treeItem);
-        static AZStd::vector< ScriptCanvas::NodeTypeIdentifier > ConstructNodeIdentifiers(const GraphCanvas::GraphCanvasTreeItem* treeItem);
+        static ScriptCanvas::NodeTypeIdentifier ConstructNodeIdentifier(const JE::Editor::Tools::GraphCanvas::GraphCanvasTreeItem* treeItem);
+        static AZStd::vector< ScriptCanvas::NodeTypeIdentifier > ConstructNodeIdentifiers(const JE::Editor::Tools::GraphCanvas::GraphCanvasTreeItem* treeItem);
     };
     
     class GraphStatisticsHelper

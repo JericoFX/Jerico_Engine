@@ -7,7 +7,7 @@
  */
 #pragma once
 
-#include <GraphCanvas/Components/NodePropertyDisplay/AssetIdDataInterface.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/NodePropertyDisplay/AssetIdDataInterface.h>
 
 #include <Editor/GraphCanvas/DataInterfaces/ScriptCanvasDataInterface.h>
 #include <AzCore/Asset/AssetCommon.h>
@@ -20,7 +20,7 @@
 namespace ScriptCanvasEditor
 {
     class ScriptCanvasAssetIdDataInterface
-        : public ScriptCanvasDataInterface<GraphCanvas::AssetIdDataInterface>
+        : public ScriptCanvasDataInterface<JE::Editor::Tools::GraphCanvas::AssetIdDataInterface>
     {
 
     public:

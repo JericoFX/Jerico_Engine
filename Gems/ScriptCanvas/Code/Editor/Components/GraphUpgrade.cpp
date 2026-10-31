@@ -12,12 +12,12 @@
 #include <Editor/Include/ScriptCanvas/Components/NodeReplacementSystem.h>
 #include <Editor/Nodes/NodeDisplayUtils.h>
 #include <ScriptCanvas/Bus/RequestBus.h>
-#include <GraphCanvas/Components/SceneBus.h>
-#include <GraphCanvas/Components/EntitySaveDataBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/SceneBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/EntitySaveDataBus.h>
 #include <ScriptCanvas/Core/ConnectionBus.h>
 #include <ScriptCanvas/GraphCanvas/MappingBus.h>
 #include <ScriptCanvas/Bus/EditorScriptCanvasBus.h>
-#include <GraphCanvas/GraphCanvasBus.h>
+#include <JE/Editor/Tools/GraphCanvas/GraphCanvasBus.h>
 #include <Editor/GraphCanvas/GraphCanvasEditorNotificationBusId.h>
 
 namespace ScriptCanvasEditor
@@ -50,14 +50,14 @@ namespace ScriptCanvasEditor
         EditorGraphUpgradeMachine* sm = GetStateMachine<EditorGraphUpgradeMachine>();
         auto* graph = sm->m_graph;
 
-        GraphCanvas::GraphCanvasRequestBus::BroadcastResult(graph->m_graphCanvasSceneEntity, &GraphCanvas::GraphCanvasRequests::CreateSceneAndActivate);
+        JE::Editor::Tools::GraphCanvas::GraphCanvasRequestBus::BroadcastResult(graph->m_graphCanvasSceneEntity, &JE::Editor::Tools::GraphCanvas::GraphCanvasRequests::CreateSceneAndActivate);
 
         if (!graph->m_graphCanvasSceneEntity)
         {
             // TODO: Need to shut it all down.
         }
 
-        GraphCanvas::SceneRequestBus::Event(sm->m_graphCanvasGraphId, &GraphCanvas::SceneRequests::SetEditorId, ScriptCanvasEditor::AssetEditorId);
+        JE::Editor::Tools::GraphCanvas::SceneRequestBus::Event(sm->m_graphCanvasGraphId, &JE::Editor::Tools::GraphCanvas::SceneRequests::SetEditorId, ScriptCanvasEditor::AssetEditorId);
     }
 
     void PreventUndo::OnEnter()
@@ -156,13 +156,13 @@ namespace ScriptCanvasEditor
 
         graph->ConnectGraphCanvasBuses();
 
-        GraphCanvas::SceneRequestBus::Event(sm->m_graphCanvasGraphId, &GraphCanvas::SceneRequests::SignalLoadStart);
+        JE::Editor::Tools::GraphCanvas::SceneRequestBus::Event(sm->m_graphCanvasGraphId, &JE::Editor::Tools::GraphCanvas::SceneRequests::SignalLoadStart);
 
         auto saveDataIter = graph->m_graphCanvasSaveData.find(graph->GetEntityId());
 
         if (saveDataIter != graph->m_graphCanvasSaveData.end())
         {
-            GraphCanvas::EntitySaveDataRequestBus::Event(sm->m_graphCanvasGraphId, &GraphCanvas::EntitySaveDataRequests::ReadSaveData, (*saveDataIter->second));
+            JE::Editor::Tools::GraphCanvas::EntitySaveDataRequestBus::Event(sm->m_graphCanvasGraphId, &JE::Editor::Tools::GraphCanvas::EntitySaveDataRequests::ReadSaveData, (*saveDataIter->second));
         }
     }
 
@@ -205,7 +205,7 @@ namespace ScriptCanvasEditor
                 // Since multiple GraphCanvas nodes depict a single ScriptCanvas EBus node.
                 if (EBusHandlerNodeDescriptorRequestBus::FindFirstHandler(graphCanvasSourceNode) != nullptr)
                 {
-                    GraphCanvas::Endpoint graphCanvasEventEndpoint;
+                    JE::Editor::Tools::GraphCanvas::Endpoint graphCanvasEventEndpoint;
                     EBusHandlerNodeDescriptorRequestBus::EventResult(graphCanvasEventEndpoint, graphCanvasSourceNode, &EBusHandlerNodeDescriptorRequests::MapSlotToGraphCanvasEndpoint, scriptCanvasSourceEndpoint.GetSlotId());
 
                     graphCanvasSourceSlotId = graphCanvasEventEndpoint.GetSlotId();
@@ -219,7 +219,7 @@ namespace ScriptCanvasEditor
                 }
             }
 
-            GraphCanvas::Endpoint graphCanvasTargetEndpoint;
+            JE::Editor::Tools::GraphCanvas::Endpoint graphCanvasTargetEndpoint;
 
             scriptCanvasIter = sm->m_scriptCanvasToGraphCanvasMapping.find(scriptCanvasTargetEndpoint.GetNodeId());
 
@@ -252,12 +252,12 @@ namespace ScriptCanvasEditor
             }
 
             AZ::EntityId graphCanvasConnectionId;
-            GraphCanvas::SlotRequestBus::EventResult(graphCanvasConnectionId, graphCanvasSourceSlotId, &GraphCanvas::SlotRequests::DisplayConnectionWithEndpoint, graphCanvasTargetEndpoint);
+            JE::Editor::Tools::GraphCanvas::SlotRequestBus::EventResult(graphCanvasConnectionId, graphCanvasSourceSlotId, &JE::Editor::Tools::GraphCanvas::SlotRequests::DisplayConnectionWithEndpoint, graphCanvasTargetEndpoint);
 
             if (graphCanvasConnectionId.IsValid())
             {
                 AZStd::any* userData = nullptr;
-                GraphCanvas::ConnectionRequestBus::EventResult(userData, graphCanvasConnectionId, &GraphCanvas::ConnectionRequests::GetUserData);
+                JE::Editor::Tools::GraphCanvas::ConnectionRequestBus::EventResult(userData, graphCanvasConnectionId, &JE::Editor::Tools::GraphCanvas::ConnectionRequests::GetUserData);
 
                 if (userData)
                 {
@@ -274,9 +274,9 @@ namespace ScriptCanvasEditor
         EditorGraphUpgradeMachine* sm = GetStateMachine<EditorGraphUpgradeMachine>();
         auto* graph = sm->m_graph;
 
-        GraphCanvas::SceneRequestBus::Event(graph->GetGraphCanvasGraphId(), &GraphCanvas::SceneRequests::ProcessEnableDisableQueue);
+        JE::Editor::Tools::GraphCanvas::SceneRequestBus::Event(graph->GetGraphCanvasGraphId(), &JE::Editor::Tools::GraphCanvas::SceneRequests::ProcessEnableDisableQueue);
 
-        if (graph->m_graphCanvasSaveVersion != GraphCanvas::EntitySaveDataContainer::CurrentVersion)
+        if (graph->m_graphCanvasSaveVersion != JE::Editor::Tools::GraphCanvas::EntitySaveDataContainer::CurrentVersion)
         {
             for (auto saveDataPair : graph->m_graphCanvasSaveData)
             {
@@ -284,7 +284,7 @@ namespace ScriptCanvasEditor
                 graph->OnSaveDataDirtied(graphCanvasIter->second);
             }
 
-            graph->m_graphCanvasSaveVersion = GraphCanvas::EntitySaveDataContainer::CurrentVersion;
+            graph->m_graphCanvasSaveVersion = JE::Editor::Tools::GraphCanvas::EntitySaveDataContainer::CurrentVersion;
             sm->m_graphNeedsDirtying = true;
         }
     }
@@ -311,7 +311,7 @@ namespace ScriptCanvasEditor
     {
         EditorGraphUpgradeMachine* sm = GetStateMachine<EditorGraphUpgradeMachine>();
 
-        GraphCanvas::SceneRequestBus::Event(sm->m_graphCanvasGraphId, &GraphCanvas::SceneRequests::SignalLoadEnd);
+        JE::Editor::Tools::GraphCanvas::SceneRequestBus::Event(sm->m_graphCanvasGraphId, &JE::Editor::Tools::GraphCanvas::SceneRequests::SignalLoadEnd);
         EditorGraphNotificationBus::Event(sm->m_scriptCanvasId, &EditorGraphNotifications::OnGraphCanvasSceneDisplayed);
 
         return IState::ExitStatus::Default;
@@ -410,7 +410,7 @@ namespace ScriptCanvasEditor
                 }
             }
 
-            GraphCanvas::SceneRequestBus::Event(sm->m_graphCanvasGraphId, &GraphCanvas::SceneRequests::Delete, graphCanvasNodesToDelete);
+            JE::Editor::Tools::GraphCanvas::SceneRequestBus::Event(sm->m_graphCanvasGraphId, &JE::Editor::Tools::GraphCanvas::SceneRequests::Delete, graphCanvasNodesToDelete);
         }
     }
 
@@ -495,19 +495,19 @@ namespace ScriptCanvasEditor
 
             if (saveDataIter != graph->m_graphCanvasSaveData.end())
             {
-                GraphCanvas::EntitySaveDataRequestBus::Event(graphCanvasNodeId, &GraphCanvas::EntitySaveDataRequests::ReadSaveData, (*saveDataIter->second));
+                JE::Editor::Tools::GraphCanvas::EntitySaveDataRequestBus::Event(graphCanvasNodeId, &JE::Editor::Tools::GraphCanvas::EntitySaveDataRequests::ReadSaveData, (*saveDataIter->second));
             }
 
             AZ::Vector2 position;
-            GraphCanvas::GeometryRequestBus::EventResult(position, graphCanvasNodeId, &GraphCanvas::GeometryRequests::GetPosition);
+            JE::Editor::Tools::GraphCanvas::GeometryRequestBus::EventResult(position, graphCanvasNodeId, &JE::Editor::Tools::GraphCanvas::GeometryRequests::GetPosition);
 
-            GraphCanvas::SceneRequestBus::Event(sm->m_graphCanvasGraphId, &GraphCanvas::SceneRequests::AddNode, graphCanvasNodeId, position, false);
+            JE::Editor::Tools::GraphCanvas::SceneRequestBus::Event(sm->m_graphCanvasGraphId, &JE::Editor::Tools::GraphCanvas::SceneRequests::AddNode, graphCanvasNodeId, position, false);
 
             // If the node is deprecated, we want to stomp whatever style it had saved and apply the deprecated style
             if (scriptCanvasNode->IsDeprecated())
             {
                 Log("Marking node deprecated: %s\n", scriptCanvasNode->GetNodeName().c_str());
-                GraphCanvas::NodeTitleRequestBus::Event(graphCanvasNodeId, &GraphCanvas::NodeTitleRequests::SetPaletteOverride, "DeprecatedNodeTitlePalette");
+                JE::Editor::Tools::GraphCanvas::NodeTitleRequestBus::Event(graphCanvasNodeId, &JE::Editor::Tools::GraphCanvas::NodeTitleRequests::SetPaletteOverride, "DeprecatedNodeTitlePalette");
             }
         }
     }

@@ -10,7 +10,7 @@
 #include <AzCore/Math/Color.h>
 #include <QObject>
 
-#include <GraphCanvas/Components/NodePropertyDisplay/VectorDataInterface.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/NodePropertyDisplay/VectorDataInterface.h>
 #include <AzQtComponents/Utilities/Conversions.h>
 
 #include <AzQtComponents/Components/Widgets/ColorPicker.h>
@@ -19,7 +19,7 @@
 namespace ScriptCanvasEditor
 {
     class ScriptCanvasColorDataInterface
-        : public ScriptCanvasDataInterface<GraphCanvas::VectorDataInterface>
+        : public ScriptCanvasDataInterface<JE::Editor::Tools::GraphCanvas::VectorDataInterface>
     {
     public:
         AZ_CLASS_ALLOCATOR(ScriptCanvasColorDataInterface, AZ::SystemAllocator);

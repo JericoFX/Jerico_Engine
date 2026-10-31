@@ -20,7 +20,6 @@
     "external_subdirectories": [
         "Asset/ImageProcessingAtom",
         "RHI",
-        "Tools/MaterialCanvas",
         "Tools/MaterialEditor",
         "Tools/PassCanvas",
         "Tools/ShaderManagementConsole"
@@ -32,7 +31,6 @@
         "AtomRenderOptions",
         "LmbrCentral",
         "GradientSignal",
-        "SurfaceData",
         "EMotionFX_Atom",
         "AtomFont",
         "AtomViewportDisplayInfo",

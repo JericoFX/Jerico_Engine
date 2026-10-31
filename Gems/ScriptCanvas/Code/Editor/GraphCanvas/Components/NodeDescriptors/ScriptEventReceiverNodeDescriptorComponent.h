@@ -7,12 +7,12 @@
  */
 #pragma once
 
-#include <GraphCanvas/Components/Nodes/NodeBus.h>
-#include <GraphCanvas/Components/Nodes/Wrapper/WrapperNodeBus.h>
-#include <GraphCanvas/Components/GraphCanvasPropertyBus.h>
-#include <GraphCanvas/Components/Slots/SlotBus.h>
-#include <GraphCanvas/Components/EntitySaveDataBus.h>
-#include <GraphCanvas/Types/EntitySaveData.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/Nodes/NodeBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/Nodes/Wrapper/WrapperNodeBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/GraphCanvasPropertyBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/Slots/SlotBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/EntitySaveDataBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Types/EntitySaveData.h>
 
 #include <Editor/GraphCanvas/Components/NodeDescriptors/NodeDescriptorComponent.h>
 #include <ScriptEvents/ScriptEventsAsset.h>
@@ -24,20 +24,20 @@ namespace ScriptCanvasEditor
         : public NodeDescriptorComponent
         , public EBusHandlerNodeDescriptorRequestBus::Handler
         , public ScriptEventReceiverNodeDescriptorRequestBus::Handler
-        , public GraphCanvas::WrapperNodeNotificationBus::Handler
-        , public GraphCanvas::GraphCanvasPropertyBusHandler
-        , public GraphCanvas::WrapperNodeConfigurationRequestBus::Handler
-        , public GraphCanvas::EntitySaveDataRequestBus::Handler
-        , public GraphCanvas::SceneMemberNotificationBus::Handler
+        , public JE::Editor::Tools::GraphCanvas::WrapperNodeNotificationBus::Handler
+        , public JE::Editor::Tools::GraphCanvas::GraphCanvasPropertyBusHandler
+        , public JE::Editor::Tools::GraphCanvas::WrapperNodeConfigurationRequestBus::Handler
+        , public JE::Editor::Tools::GraphCanvas::EntitySaveDataRequestBus::Handler
+        , public JE::Editor::Tools::GraphCanvas::SceneMemberNotificationBus::Handler
         , public AZ::Data::AssetBus::Handler
         , public EditorNodeNotificationBus::Handler
     {
     public:
         class ScriptEventReceiverHandlerNodeDescriptorSaveData
-            : public GraphCanvas::ComponentSaveData
+            : public JE::Editor::Tools::GraphCanvas::ComponentSaveData
         {
         public:
-            AZ_RTTI(ScriptEventReceiverHandlerNodeDescriptorSaveData, "{D8BBE799-7E4D-495A-B69A-1E3940670891}", GraphCanvas::ComponentSaveData);
+            AZ_RTTI(ScriptEventReceiverHandlerNodeDescriptorSaveData, "{D8BBE799-7E4D-495A-B69A-1E3940670891}", JE::Editor::Tools::GraphCanvas::ComponentSaveData);
             AZ_CLASS_ALLOCATOR(ScriptEventReceiverHandlerNodeDescriptorSaveData, AZ::SystemAllocator);
 
             ScriptEventReceiverHandlerNodeDescriptorSaveData();
@@ -74,12 +74,12 @@ namespace ScriptCanvasEditor
 
         // SceneMemberNotifications
         void OnMemberSetupComplete() override;
-        void OnSceneMemberDeserialized(const AZ::EntityId& graphId, const GraphCanvas::GraphSerialization&) override;
+        void OnSceneMemberDeserialized(const AZ::EntityId& graphId, const JE::Editor::Tools::GraphCanvas::GraphSerialization&) override;
         ////
 
         // GraphCanvas::EntitySaveDataRequestBus::Handler
-        void WriteSaveData(GraphCanvas::EntitySaveDataContainer& saveDataContainer) const override;
-        void ReadSaveData(const GraphCanvas::EntitySaveDataContainer& saveDataContainer) override;
+        void WriteSaveData(JE::Editor::Tools::GraphCanvas::EntitySaveDataContainer& saveDataContainer) const override;
+        void ReadSaveData(const JE::Editor::Tools::GraphCanvas::EntitySaveDataContainer& saveDataContainer) override;
         ////
 
         // ScriptEventReceiverNodeDescriptorRequests
@@ -91,13 +91,13 @@ namespace ScriptCanvasEditor
 
         bool ContainsEvent(const ScriptCanvas::EBusEventId& eventId) const override;
 
-        GraphCanvas::WrappedNodeConfiguration GetEventConfiguration(const ScriptCanvas::EBusEventId& eventId) const override;
+        JE::Editor::Tools::GraphCanvas::WrappedNodeConfiguration GetEventConfiguration(const ScriptCanvas::EBusEventId& eventId) const override;
         AZStd::vector< HandlerEventConfiguration > GetEventConfigurations() const override;
         
         AZ::EntityId FindEventNodeId(const ScriptCanvas::EBusEventId& eventId) const override;
         AZ::EntityId FindGraphCanvasNodeIdForSlot(const ScriptCanvas::SlotId& slotId) const override;
 
-        GraphCanvas::Endpoint MapSlotToGraphCanvasEndpoint(const ScriptCanvas::SlotId& slotId) const override;
+        JE::Editor::Tools::GraphCanvas::Endpoint MapSlotToGraphCanvasEndpoint(const ScriptCanvas::SlotId& slotId) const override;
         ////
 
         // WrapperNodeNotificationBus
@@ -106,7 +106,7 @@ namespace ScriptCanvasEditor
         ////
 
         // WrapperNodeConfigurationRequests
-        GraphCanvas::WrappedNodeConfiguration GetWrappedNodeConfiguration(const AZ::EntityId& wrappedNodeId) const override;
+        JE::Editor::Tools::GraphCanvas::WrappedNodeConfiguration GetWrappedNodeConfiguration(const AZ::EntityId& wrappedNodeId) const override;
         ////
 
         // GraphCanvasPropertyBus
@@ -124,7 +124,7 @@ namespace ScriptCanvasEditor
 
     protected:
 
-        void OnAddedToGraphCanvasGraph(const GraphCanvas::GraphId& graphId, const AZ::EntityId& scriptCanvasNodeId) override;
+        void OnAddedToGraphCanvasGraph(const JE::Editor::Tools::GraphCanvas::GraphId& graphId, const AZ::EntityId& scriptCanvasNodeId) override;
 
     private:
 

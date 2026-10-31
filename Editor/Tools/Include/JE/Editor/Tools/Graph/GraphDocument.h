@@ -15,7 +15,7 @@
 #include <AzCore/Asset/AssetCommon.h>
 #include <AzCore/Component/TickBus.h>
 #include <AzCore/RTTI/RTTI.h>
-#include <GraphCanvas/GraphCanvasBus.h>
+#include <JE/Editor/Tools/GraphCanvas/GraphCanvasBus.h>
 #include <JE/Editor/Tools/GraphModel/GraphModelBus.h>
 #include <JE/Editor/Tools/GraphModel/Model/GraphContext.h>
 #include <JE/Editor/Tools/GraphModel/Model/Node.h>
@@ -27,7 +27,7 @@ namespace JE::Editor::Tools
         : public AtomToolsDocument
         , public GraphDocumentRequestBus::Handler
         , public JE::Editor::Tools::GraphModel::Integration::GraphControllerNotificationBus::Handler
-        , public GraphCanvas::SceneNotificationBus::Handler
+        , public JE::Editor::Tools::GraphCanvas::SceneNotificationBus::Handler
         , public AZ::SystemTickBus::Handler
     {
     public:
@@ -68,7 +68,7 @@ namespace JE::Editor::Tools
 
         // GraphDocumentRequestBus::Handler overrides...
         JE::Editor::Tools::GraphModel::GraphPtr GetGraph() const override;
-        GraphCanvas::GraphId GetGraphId() const override;
+        JE::Editor::Tools::GraphCanvas::GraphId GetGraphId() const override;
         AZStd::string GetGraphName() const override;
         void SetGeneratedFilePaths(const AZStd::vector<AZStd::string>& pathas) override;
         const AZStd::vector<AZStd::string>& GetGeneratedFilePaths() const override;
@@ -100,7 +100,7 @@ namespace JE::Editor::Tools
         DocumentObjectInfoVector GetObjectInfoForGraphCanvasNodes() const;
 
         AZ::Entity* m_sceneEntity = {};
-        GraphCanvas::GraphId m_graphId;
+        JE::Editor::Tools::GraphCanvas::GraphId m_graphId;
         JE::Editor::Tools::GraphModel::GraphPtr m_graph;
         AZStd::shared_ptr<JE::Editor::Tools::GraphModel::GraphContext> m_graphContext;
         AZStd::vector<AZ::u8> m_graphStateForUndoRedo;

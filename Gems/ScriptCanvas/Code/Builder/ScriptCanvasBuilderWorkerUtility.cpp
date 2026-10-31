@@ -181,7 +181,7 @@ namespace ScriptCanvasBuilder
         // the AP is not meant to use.
         for (auto* component : buildEntity->GetComponents())
         {
-            if (component->RTTI_GetType() == azrtti_typeid<GraphCanvas::SceneComponent>())
+            if (component->RTTI_GetType() == azrtti_typeid<JE::Editor::Tools::GraphCanvas::SceneComponent>())
             {
                 buildEntity->RemoveComponent(component);
             }

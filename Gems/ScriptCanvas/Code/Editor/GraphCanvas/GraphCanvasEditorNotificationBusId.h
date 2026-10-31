@@ -9,9 +9,9 @@
 
 #include <AzCore/Math/Crc.h>
 
-#include <GraphCanvas/Editor/EditorTypes.h>
+#include <JE/Editor/Tools/GraphCanvas/Editor/EditorTypes.h>
 
 namespace ScriptCanvasEditor
 {
-    static const GraphCanvas::EditorId AssetEditorId = AZ_CRC_CE("ScriptCanvasEditor");
+    static const JE::Editor::Tools::GraphCanvas::EditorId AssetEditorId = AZ_CRC_CE("ScriptCanvasEditor");
 }

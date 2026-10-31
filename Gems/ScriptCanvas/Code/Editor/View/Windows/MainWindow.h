@@ -32,14 +32,14 @@
 #include <AzQtComponents/Components/WindowDecorationWrapper.h>
 #include <AzQtComponents/Components/ToastNotification.h>
 
-#include <GraphCanvas/Components/Connections/ConnectionBus.h>
-#include <GraphCanvas/Components/SceneBus.h>
-#include <GraphCanvas/Editor/AssetEditorBus.h>
-#include <GraphCanvas/Editor/EditorTypes.h>
-#include <GraphCanvas/Widgets/Bookmarks/BookmarkDockWidget.h>
-#include <GraphCanvas/Widgets/GraphOutliner/GraphOutlinerDockWidget.h>
-#include <GraphCanvas/Widgets/ConstructPresetDialog/ConstructPresetDialog.h>
-#include <GraphCanvas/Styling/StyleManager.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/Connections/ConnectionBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/SceneBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Editor/AssetEditorBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Editor/EditorTypes.h>
+#include <JE/Editor/Tools/GraphCanvas/Widgets/Bookmarks/BookmarkDockWidget.h>
+#include <JE/Editor/Tools/GraphCanvas/Widgets/GraphOutliner/GraphOutlinerDockWidget.h>
+#include <JE/Editor/Tools/GraphCanvas/Widgets/ConstructPresetDialog/ConstructPresetDialog.h>
+#include <JE/Editor/Tools/GraphCanvas/Styling/StyleManager.h>
 
 #include <Core/Core.h>
 
@@ -61,7 +61,7 @@
 #include <Include/EditorCoreAPI.h>
 #endif//#if SCRIPTCANVAS_EDITOR
 
-namespace GraphCanvas
+namespace JE::Editor::Tools::GraphCanvas
 {
     class AssetEditorToolbar;
     class GraphCanvasMimeEvent;
@@ -145,11 +145,11 @@ namespace ScriptCanvasEditor
 
             AzToolsFramework::ToastId validationToastId;
 
-            GraphCanvas::ViewId viewId;
-            GraphCanvas::SceneRequestBus::EventResult(viewId, graphCanvasGraphId, &GraphCanvas::SceneRequests::GetViewId);
+            JE::Editor::Tools::GraphCanvas::ViewId viewId;
+            JE::Editor::Tools::GraphCanvas::SceneRequestBus::EventResult(viewId, graphCanvasGraphId, &JE::Editor::Tools::GraphCanvas::SceneRequests::GetViewId);
             if (viewId.IsValid())
             {
-                GraphCanvas::ViewRequestBus::EventResult(validationToastId, viewId, &GraphCanvas::ViewRequests::ShowToastNotification, toastConfiguration);
+                JE::Editor::Tools::GraphCanvas::ViewRequestBus::EventResult(validationToastId, viewId, &JE::Editor::Tools::GraphCanvas::ViewRequests::ShowToastNotification, toastConfiguration);
             }
         }
     };
@@ -223,9 +223,9 @@ namespace ScriptCanvasEditor
         , private UIRequestBus::Handler
         , private GeneralRequestBus::Handler
         , private UndoNotificationBus::Handler
-        , private GraphCanvas::SceneNotificationBus::MultiHandler
-        , private GraphCanvas::AssetEditorSettingsRequestBus::Handler
-        , private GraphCanvas::AssetEditorRequestBus::Handler
+        , private JE::Editor::Tools::GraphCanvas::SceneNotificationBus::MultiHandler
+        , private JE::Editor::Tools::GraphCanvas::AssetEditorSettingsRequestBus::Handler
+        , private JE::Editor::Tools::GraphCanvas::AssetEditorRequestBus::Handler
         , private VariablePaletteRequestBus::Handler
         , private ScriptCanvas::BatchOperationNotificationBus::Handler
         , private AssetGraphSceneBus::Handler
@@ -235,8 +235,8 @@ namespace ScriptCanvasEditor
         //, public IEditorNotifyListener
 #endif
         , private AutomationRequestBus::Handler
-        , private GraphCanvas::AssetEditorAutomationRequestBus::Handler
-        , private GraphCanvas::ViewNotificationBus::Handler
+        , private JE::Editor::Tools::GraphCanvas::AssetEditorAutomationRequestBus::Handler
+        , private JE::Editor::Tools::GraphCanvas::ViewNotificationBus::Handler
         , public AZ::SystemTickBus::Handler
         , private AzToolsFramework::ToolsApplicationNotificationBus::Handler
         , private AzToolsFramework::AssetSystemBus::Handler
@@ -301,29 +301,29 @@ namespace ScriptCanvasEditor
         void OnSelectionManipulationEnd() override;
 
         AZ::EntityId CreateNewGraph() override;
-        bool ContainsGraph(const GraphCanvas::GraphId& graphId) const override;
-        bool CloseGraph(const GraphCanvas::GraphId& graphId) override;
+        bool ContainsGraph(const JE::Editor::Tools::GraphCanvas::GraphId& graphId) const override;
+        bool CloseGraph(const JE::Editor::Tools::GraphCanvas::GraphId& graphId) override;
 
         void CustomizeConnectionEntity(AZ::Entity* connectionEntity) override;
 
-        void ShowAssetPresetsMenu(GraphCanvas::ConstructType constructType) override;
+        void ShowAssetPresetsMenu(JE::Editor::Tools::GraphCanvas::ConstructType constructType) override;
 
-        GraphCanvas::ContextMenuAction::SceneReaction ShowSceneContextMenuWithGroup(const QPoint& screenPoint, const QPointF& scenePoint, AZ::EntityId groupTarget) override;
+        JE::Editor::Tools::GraphCanvas::ContextMenuAction::SceneReaction ShowSceneContextMenuWithGroup(const QPoint& screenPoint, const QPointF& scenePoint, AZ::EntityId groupTarget) override;
 
-        GraphCanvas::ContextMenuAction::SceneReaction ShowNodeContextMenu(const AZ::EntityId& nodeId, const QPoint& screenPoint, const QPointF& scenePoint) override;
+        JE::Editor::Tools::GraphCanvas::ContextMenuAction::SceneReaction ShowNodeContextMenu(const AZ::EntityId& nodeId, const QPoint& screenPoint, const QPointF& scenePoint) override;
 
-        GraphCanvas::ContextMenuAction::SceneReaction ShowCommentContextMenu(const AZ::EntityId& nodeId, const QPoint& screenPoint, const QPointF& scenePoint) override;
+        JE::Editor::Tools::GraphCanvas::ContextMenuAction::SceneReaction ShowCommentContextMenu(const AZ::EntityId& nodeId, const QPoint& screenPoint, const QPointF& scenePoint) override;
 
-        GraphCanvas::ContextMenuAction::SceneReaction ShowNodeGroupContextMenu(const AZ::EntityId& groupId, const QPoint& screenPoint, const QPointF& scenePoint) override;
-        GraphCanvas::ContextMenuAction::SceneReaction ShowCollapsedNodeGroupContextMenu(const AZ::EntityId& nodeId, const QPoint& screenPoint, const QPointF& scenePoint) override;
+        JE::Editor::Tools::GraphCanvas::ContextMenuAction::SceneReaction ShowNodeGroupContextMenu(const AZ::EntityId& groupId, const QPoint& screenPoint, const QPointF& scenePoint) override;
+        JE::Editor::Tools::GraphCanvas::ContextMenuAction::SceneReaction ShowCollapsedNodeGroupContextMenu(const AZ::EntityId& nodeId, const QPoint& screenPoint, const QPointF& scenePoint) override;
 
-        GraphCanvas::ContextMenuAction::SceneReaction ShowBookmarkContextMenu(const AZ::EntityId& bookmarkId, const QPoint& screenPoint, const QPointF& scenePoint) override;
+        JE::Editor::Tools::GraphCanvas::ContextMenuAction::SceneReaction ShowBookmarkContextMenu(const AZ::EntityId& bookmarkId, const QPoint& screenPoint, const QPointF& scenePoint) override;
 
-        GraphCanvas::ContextMenuAction::SceneReaction ShowConnectionContextMenuWithGroup(const AZ::EntityId& connectionId, const QPoint& screenPoint, const QPointF& scenePoint, AZ::EntityId groupTarget) override;
+        JE::Editor::Tools::GraphCanvas::ContextMenuAction::SceneReaction ShowConnectionContextMenuWithGroup(const AZ::EntityId& connectionId, const QPoint& screenPoint, const QPointF& scenePoint, AZ::EntityId groupTarget) override;
 
-        GraphCanvas::ContextMenuAction::SceneReaction ShowSlotContextMenu(const AZ::EntityId& slotId, const QPoint& screenPoint, const QPointF& scenePoint) override;
+        JE::Editor::Tools::GraphCanvas::ContextMenuAction::SceneReaction ShowSlotContextMenu(const AZ::EntityId& slotId, const QPoint& screenPoint, const QPointF& scenePoint) override;
 
-        GraphCanvas::Endpoint CreateNodeForProposalWithGroup(const AZ::EntityId& connectionId, const GraphCanvas::Endpoint& endpoint, const QPointF& scenePoint, const QPoint& screenPoint, AZ::EntityId groupTarget) override;
+        JE::Editor::Tools::GraphCanvas::Endpoint CreateNodeForProposalWithGroup(const AZ::EntityId& connectionId, const JE::Editor::Tools::GraphCanvas::Endpoint& endpoint, const QPointF& scenePoint, const QPoint& screenPoint, AZ::EntityId groupTarget) override;
         void OnWrapperNodeActionWidgetClicked(const AZ::EntityId& wrapperNode, const QRect& actionWidgetBoundingRect, const QPointF& scenePoint, const QPoint& screenPoint) override;
         ////
 
@@ -380,7 +380,7 @@ namespace ScriptCanvasEditor
         void OnAlignLeft();
         void OnAlignRight();
 
-        void AlignSelected(const GraphCanvas::AlignConfig& alignConfig);
+        void AlignSelected(const JE::Editor::Tools::GraphCanvas::AlignConfig& alignConfig);
 
         // View Menu
         void OnShowEntireGraph();
@@ -459,13 +459,13 @@ namespace ScriptCanvasEditor
 
         void CreateNewRuntimeAsset() override { OnFileNew(); }
 
-        GraphCanvas::GraphId GetActiveGraphCanvasGraphId() const override;
-        ScriptCanvas::ScriptCanvasId GetScriptCanvasId(const GraphCanvas::GraphId& graphCanvasGraphId) const override;
+        JE::Editor::Tools::GraphCanvas::GraphId GetActiveGraphCanvasGraphId() const override;
+        ScriptCanvas::ScriptCanvasId GetScriptCanvasId(const JE::Editor::Tools::GraphCanvas::GraphId& graphCanvasGraphId) const override;
         ScriptCanvas::ScriptCanvasId GetActiveScriptCanvasId() const override;
 
-        GraphCanvas::GraphId GetGraphCanvasGraphId(const ScriptCanvas::ScriptCanvasId& scriptCanvasId) const override;
+        JE::Editor::Tools::GraphCanvas::GraphId GetGraphCanvasGraphId(const ScriptCanvas::ScriptCanvasId& scriptCanvasId) const override;
 
-        GraphCanvas::GraphId FindGraphCanvasGraphIdByAssetId(const SourceHandle& assetId) const override;
+        JE::Editor::Tools::GraphCanvas::GraphId FindGraphCanvasGraphIdByAssetId(const SourceHandle& assetId) const override;
         ScriptCanvas::ScriptCanvasId FindScriptCanvasIdByAssetId(const SourceHandle& assetId) const override;
 
         bool IsInUndoRedo(const AZ::EntityId& graphCanvasGraphId) const override;
@@ -505,19 +505,19 @@ namespace ScriptCanvasEditor
         float GetEdgePanningPercentage() const override;
         float GetEdgePanningScrollSpeed() const override;
 
-        GraphCanvas::EditorConstructPresets* GetConstructPresets() const override;
-        const GraphCanvas::ConstructTypePresetBucket* GetConstructTypePresetBucket(GraphCanvas::ConstructType constructType) const override;
+        JE::Editor::Tools::GraphCanvas::EditorConstructPresets* GetConstructPresets() const override;
+        const JE::Editor::Tools::GraphCanvas::ConstructTypePresetBucket* GetConstructTypePresetBucket(JE::Editor::Tools::GraphCanvas::ConstructType constructType) const override;
 
-        GraphCanvas::Styling::ConnectionCurveType GetConnectionCurveType() const override;
-        GraphCanvas::Styling::ConnectionCurveType GetDataConnectionCurveType() const override;
+        JE::Editor::Tools::GraphCanvas::Styling::ConnectionCurveType GetConnectionCurveType() const override;
+        JE::Editor::Tools::GraphCanvas::Styling::ConnectionCurveType GetDataConnectionCurveType() const override;
 
         bool AllowNodeDisabling() const override;
         bool AllowDataReferenceSlots() const override;
         ////
 
         // AutomationRequestBus
-        NodeIdPair ProcessCreateNodeMimeEvent(GraphCanvas::GraphCanvasMimeEvent* mimeEvent, const AZ::EntityId& graphCanvasGraphId, AZ::Vector2 nodeCreationPos) override;
-        const GraphCanvas::GraphCanvasTreeItem* GetNodePaletteRoot() const override;
+        NodeIdPair ProcessCreateNodeMimeEvent(JE::Editor::Tools::GraphCanvas::GraphCanvasMimeEvent* mimeEvent, const AZ::EntityId& graphCanvasGraphId, AZ::Vector2 nodeCreationPos) override;
+        const JE::Editor::Tools::GraphCanvas::GraphCanvasTreeItem* GetNodePaletteRoot() const override;
 
         void SignalAutomationBegin() override;
         void SignalAutomationEnd() override;
@@ -544,10 +544,10 @@ namespace ScriptCanvasEditor
 
         void DeleteNodes(const AZ::EntityId& sceneId, const AZStd::vector<AZ::EntityId>& nodes) override;
         void DeleteConnections(const AZ::EntityId& sceneId, const AZStd::vector<AZ::EntityId>& connections) override;
-        void DisconnectEndpoints(const AZ::EntityId& sceneId, const AZStd::vector<GraphCanvas::Endpoint>& endpoints) override;
+        void DisconnectEndpoints(const AZ::EntityId& sceneId, const AZStd::vector<JE::Editor::Tools::GraphCanvas::Endpoint>& endpoints) override;
         /////////////////////////////////////////////////////////////////////////////////////////////
 
-        GraphCanvas::Endpoint HandleProposedConnection(const GraphCanvas::GraphId& graphId, const GraphCanvas::ConnectionId& connectionId, const GraphCanvas::Endpoint& endpoint, const GraphCanvas::NodeId& proposedNode, const QPoint& screenPoint);
+        JE::Editor::Tools::GraphCanvas::Endpoint HandleProposedConnection(const JE::Editor::Tools::GraphCanvas::GraphId& graphId, const JE::Editor::Tools::GraphCanvas::ConnectionId& connectionId, const JE::Editor::Tools::GraphCanvas::Endpoint& endpoint, const JE::Editor::Tools::GraphCanvas::NodeId& proposedNode, const QPoint& screenPoint);
 
         //! UndoNotificationBus
         void OnCanUndoChanged(bool canUndo) override;
@@ -558,7 +558,7 @@ namespace ScriptCanvasEditor
         bool CanShowNetworkSettings() override;
         ////
 
-        GraphCanvas::ContextMenuAction::SceneReaction HandleContextMenu(GraphCanvas::EditorContextMenu& editorContextMenu, const AZ::EntityId& memberId, const QPoint& screenPoint, const QPointF& scenePoint) const;
+        JE::Editor::Tools::GraphCanvas::ContextMenuAction::SceneReaction HandleContextMenu(JE::Editor::Tools::GraphCanvas::EditorContextMenu& editorContextMenu, const AZ::EntityId& memberId, const QPoint& screenPoint, const QPointF& scenePoint) const;
 
         void OnAutoSave();
 
@@ -587,7 +587,7 @@ namespace ScriptCanvasEditor
         void RunGraphValidation(bool displayToastNotification);
 
         // ViewNotificationBus
-        void OnViewParamsChanged(const GraphCanvas::ViewParams& viewParams) override;
+        void OnViewParamsChanged(const JE::Editor::Tools::GraphCanvas::ViewParams& viewParams) override;
         void OnZoomChanged(qreal zoomLevel) override;
         ////
 
@@ -669,7 +669,7 @@ namespace ScriptCanvasEditor
 
         AzQtComponents::TabWidget*          m_tabWidget = nullptr;
         Widget::GraphTabBar*                m_tabBar = nullptr;
-        GraphCanvas::AssetEditorToolbar*    m_editorToolbar = nullptr;
+        JE::Editor::Tools::GraphCanvas::AssetEditorToolbar*    m_editorToolbar = nullptr;
 
         QToolButton*                        m_validateGraphToolButton = nullptr;
         QToolButton*                        m_assignToSelectedEntity = nullptr;
@@ -690,16 +690,16 @@ namespace ScriptCanvasEditor
         Widget::LogPanelWidget*             m_logPanel = nullptr;
         Widget::PropertyGrid*               m_propertyGrid = nullptr;
         Widget::CommandLine* m_commandLine = nullptr;
-        GraphCanvas::GraphOutlinerDockWidget* m_graphOutlinerDockWidget = nullptr;
-        GraphCanvas::BookmarkDockWidget*    m_bookmarkDockWidget = nullptr;
-        GraphCanvas::MiniMapDockWidget*     m_minimap = nullptr;
+        JE::Editor::Tools::GraphCanvas::GraphOutlinerDockWidget* m_graphOutlinerDockWidget = nullptr;
+        JE::Editor::Tools::GraphCanvas::BookmarkDockWidget*    m_bookmarkDockWidget = nullptr;
+        JE::Editor::Tools::GraphCanvas::MiniMapDockWidget*     m_minimap = nullptr;
         LoggingWindow*                      m_loggingWindow = nullptr;
         VariableConfigurationWidget*             m_slotTypeSelector = nullptr;
 
         AZStd::unique_ptr<InterpreterWidget> m_interpreterWidget;
 
         AzQtComponents::WindowDecorationWrapper*    m_presetWrapper = nullptr;
-        GraphCanvas::ConstructPresetDialog*         m_presetEditor = nullptr;
+        JE::Editor::Tools::GraphCanvas::ConstructPresetDialog*         m_presetEditor = nullptr;
 
         MainWindowStatusWidget*             m_statusWidget = nullptr;
 
@@ -718,7 +718,7 @@ namespace ScriptCanvasEditor
         // Reusable context menu for adding/removing ebus events from a wrapper node
         EBusHandlerActionMenu* m_ebusHandlerActionMenu;
 
-        GraphCanvas::GraphCanvasEditorEmptyDockWidget* m_emptyCanvas; // Displayed when there is no open graph
+        JE::Editor::Tools::GraphCanvas::GraphCanvasEditorEmptyDockWidget* m_emptyCanvas; // Displayed when there is no open graph
         QVBoxLayout* m_layout;
 
         SourceHandle m_activeGraph;
@@ -771,7 +771,7 @@ namespace ScriptCanvasEditor
         AZStd::unordered_map< SourceHandle, TypeDefs::EntityComponentId > m_assetCreationRequests;
 
         ScriptCanvas::Debugger::ClientTransceiver m_clientTRX;
-        GraphCanvas::StyleManager m_styleManager;
+        JE::Editor::Tools::GraphCanvas::StyleManager m_styleManager;
 
         //! The workspace stores in the user settings which assets were open and which asset was in focus
         //! this object manages the Save/Restore operations

@@ -19,7 +19,7 @@ AZ_POP_DISABLE_WARNING
 #include <Debugger/Bus.h>
 #include <AzCore/Asset/AssetCommon.h>
 
-#include <GraphCanvas/Components/ViewBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/ViewBus.h>
 #include <ScriptCanvas/Core/Core.h>
 
 class QVBoxLayout;
@@ -29,7 +29,7 @@ namespace Ui
     class CanvasWidget;
 }
 
-namespace GraphCanvas
+namespace JE::Editor::Tools::GraphCanvas
 {
     class GraphCanvasGraphicsView;
     class MiniMapGraphicsView;
@@ -53,7 +53,7 @@ namespace ScriptCanvasEditor
 
             void SetAssetId(const SourceHandle& assetId);
 
-            const GraphCanvas::ViewId& GetViewId() const;
+            const JE::Editor::Tools::GraphCanvas::ViewId& GetViewId() const;
 
             void EnableView();
             void DisableView();
@@ -93,11 +93,11 @@ namespace ScriptCanvasEditor
 
             ScriptCanvas::ScriptCanvasId m_scriptCanvasId;
 
-            GraphCanvas::GraphCanvasGraphicsView* m_graphicsView;
-            GraphCanvas::MiniMapGraphicsView* m_miniMapView;
+            JE::Editor::Tools::GraphCanvas::GraphCanvasGraphicsView* m_graphicsView;
+            JE::Editor::Tools::GraphCanvas::MiniMapGraphicsView* m_miniMapView;
             MiniMapPosition m_miniMapPosition = MM_Upper_Left;
 
-            GraphCanvas::GraphicsEffectId m_disabledOverlay;
+            JE::Editor::Tools::GraphCanvas::GraphicsEffectId m_disabledOverlay;
         };
     }
 }

@@ -12,8 +12,8 @@
 #include <AzCore/std/smart_ptr/make_shared.h>
 
 // Graph Canvas
-#include <GraphCanvas/Widgets/NodePalette/TreeItems/DraggableNodePaletteTreeItem.h>
-#include <GraphCanvas/Widgets/GraphCanvasMimeEvent.h>
+#include <JE/Editor/Tools/GraphCanvas/Widgets/NodePalette/TreeItems/DraggableNodePaletteTreeItem.h>
+#include <JE/Editor/Tools/GraphCanvas/Widgets/GraphCanvasMimeEvent.h>
 
 // Graph Model
 #include <JE/Editor/Tools/GraphModel/GraphModelBus.h>
@@ -27,7 +27,7 @@ namespace JE::Editor::Tools::GraphModel::Integration
     //! Provides a common interface for instantiating GraphModel::Node subclasses through the Node Palette
     template<typename NodeType>
     class StandardNodePaletteItem
-        : public GraphCanvas::DraggableNodePaletteTreeItem
+        : public JE::Editor::Tools::GraphCanvas::DraggableNodePaletteTreeItem
     {
     public:
         AZ_CLASS_ALLOCATOR(StandardNodePaletteItem, AZ::SystemAllocator);
@@ -35,7 +35,7 @@ namespace JE::Editor::Tools::GraphModel::Integration
         //! Constructor
         //! \param nodeName Name of the node that will show up in the Palette
         //! \param editorId Unique name of the client system editor (ex: AZ_CRC_CE("ShaderCanvas"))
-        StandardNodePaletteItem(AZStd::string_view nodeName, GraphCanvas::EditorId editorId)
+        StandardNodePaletteItem(AZStd::string_view nodeName, JE::Editor::Tools::GraphCanvas::EditorId editorId)
             : DraggableNodePaletteTreeItem(nodeName, editorId)
         {
             // Setting the palette override (if specified) is mainly used to set the icon color for this
@@ -48,7 +48,7 @@ namespace JE::Editor::Tools::GraphModel::Integration
         }
         ~StandardNodePaletteItem() = default;
 
-        GraphCanvas::GraphCanvasMimeEvent* CreateMimeEvent() const override
+        JE::Editor::Tools::GraphCanvas::GraphCanvasMimeEvent* CreateMimeEvent() const override
         {
             return aznew CreateStandardNodeMimeEvent<NodeType>();
         }
@@ -56,10 +56,10 @@ namespace JE::Editor::Tools::GraphModel::Integration
 
     template<typename NodeType>
     class CreateStandardNodeMimeEvent
-        : public GraphCanvas::GraphCanvasMimeEvent
+        : public JE::Editor::Tools::GraphCanvas::GraphCanvasMimeEvent
     {
     public:
-        AZ_RTTI((CreateStandardNodeMimeEvent, "{DF6213A0-5C60-4C22-88F1-4CEA6D8A17EF}", NodeType), GraphCanvas::GraphCanvasMimeEvent);
+        AZ_RTTI((CreateStandardNodeMimeEvent, "{DF6213A0-5C60-4C22-88F1-4CEA6D8A17EF}", NodeType), JE::Editor::Tools::GraphCanvas::GraphCanvasMimeEvent);
         AZ_CLASS_ALLOCATOR(CreateStandardNodeMimeEvent, AZ::SystemAllocator);
 
         static void Reflect(AZ::ReflectContext* reflectContext)
@@ -68,7 +68,7 @@ namespace JE::Editor::Tools::GraphModel::Integration
 
             if (serializeContext)
             {
-                serializeContext->Class<CreateStandardNodeMimeEvent, GraphCanvas::GraphCanvasMimeEvent>()
+                serializeContext->Class<CreateStandardNodeMimeEvent, JE::Editor::Tools::GraphCanvas::GraphCanvasMimeEvent>()
                     ->Version(0)
                     ;
             }

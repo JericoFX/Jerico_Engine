@@ -20,7 +20,7 @@
 #include <AzCore/Serialization/SerializeContext.h>
 #include <AzCore/Math/MathUtils.h>
 #include <AzCore/IO/SystemFile.h>
-#include <SurfaceData/SurfaceDataSystemRequestBus.h>
+#include <JE/Geometry/SurfaceData/SurfaceDataSystemRequestBus.h>
 #include <AzFramework/StringFunc/StringFunc.h>
 #include <AzFramework/IO/LocalFileIO.h>
 #include <Vegetation/Ebuses/AreaDebugBus.h>
@@ -856,8 +856,8 @@ void DebugComponent::PrepareNextReport()
                                 (sectorSizeInMeters * sectorId.second) + sectorHalfSizeInMeters,
                                 0.0f);
 
-        SurfaceData::SurfacePointList points;
-        AZ::Interface<SurfaceData::SurfaceDataSystem>::Get()->GetSurfacePoints(pos, SurfaceData::SurfaceTagVector(), points);
+        JE::Geometry::SurfaceData::SurfacePointList points;
+        AZ::Interface<JE::Geometry::SurfaceData::SurfaceDataSystem>::Get()->GetSurfacePoints(pos, JE::Geometry::SurfaceData::SurfaceTagVector(), points);
         constexpr size_t inPositionIndex = 0;
         timing.m_worldPosition = points.IsEmpty(inPositionIndex) ? pos : points.GetHighestSurfacePoint(inPositionIndex).m_position;
         return timing;

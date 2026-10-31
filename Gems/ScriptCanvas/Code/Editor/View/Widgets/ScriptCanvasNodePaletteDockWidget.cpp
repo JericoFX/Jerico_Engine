@@ -57,9 +57,9 @@
 #include <Editor/View/Widgets/ScriptCanvasNodePaletteDockWidget.h>
 #include <Editor/View/Widgets/ui_ScriptCanvasNodePaletteToolbar.h>
 
-#include <GraphCanvas/Widgets/NodePalette/NodePaletteTreeView.h>
-#include <GraphCanvas/Widgets/NodePalette/NodePaletteWidget.h>
-#include <GraphCanvas/Widgets/NodePalette/TreeItems/NodePaletteTreeItem.h>
+#include <JE/Editor/Tools/GraphCanvas/Widgets/NodePalette/NodePaletteTreeView.h>
+#include <JE/Editor/Tools/GraphCanvas/Widgets/NodePalette/NodePaletteWidget.h>
+#include <JE/Editor/Tools/GraphCanvas/Widgets/NodePalette/TreeItems/NodePaletteTreeItem.h>
 
 #include <ScriptCanvas/Asset/SubgraphInterfaceAsset.h>
 #include <ScriptCanvas/Core/Attributes.h>
@@ -80,18 +80,18 @@ namespace ScriptCanvasEditor
         // NodePaletteWidget
         //////////////////////
 
-        GraphCanvas::NodePaletteTreeItem* NodePaletteWidget::ExternalCreateNodePaletteRoot(const NodePaletteModel& nodePaletteModel, AzToolsFramework::AssetBrowser::AssetBrowserFilterModel* assetModel)
+        JE::Editor::Tools::GraphCanvas::NodePaletteTreeItem* NodePaletteWidget::ExternalCreateNodePaletteRoot(const NodePaletteModel& nodePaletteModel, AzToolsFramework::AssetBrowser::AssetBrowserFilterModel* assetModel)
         {
             ScriptCanvasRootPaletteTreeItem* root = aznew ScriptCanvasRootPaletteTreeItem(nodePaletteModel, assetModel);
 
             {
-                GraphCanvas::NodePaletteTreeItem* variablesRoot = root->CreateChildNode<LocalVariablesListNodePaletteTreeItem>("Variables");
+                JE::Editor::Tools::GraphCanvas::NodePaletteTreeItem* variablesRoot = root->CreateChildNode<LocalVariablesListNodePaletteTreeItem>("Variables");
                 root->RegisterCategoryNode(variablesRoot, "Variables");
 
-                GraphCanvas::NodePaletteTreeItem* customEventRoot = root->GetCategoryNode("Script Events");
+                JE::Editor::Tools::GraphCanvas::NodePaletteTreeItem* customEventRoot = root->GetCategoryNode("Script Events");
                 customEventRoot->SetAllowPruneOnEmpty(true);
 
-                GraphCanvas::NodePaletteTreeItem* globalFunctionRoot = root->GetCategoryNode("User Functions");
+                JE::Editor::Tools::GraphCanvas::NodePaletteTreeItem* globalFunctionRoot = root->GetCategoryNode("User Functions");
                 globalFunctionRoot->SetAllowPruneOnEmpty(true);
 
             }
@@ -103,8 +103,8 @@ namespace ScriptCanvasEditor
                 
                 const NodePaletteModelInformation* modelInformation = registryPair.second;
 
-                GraphCanvas::GraphCanvasTreeItem* parentItem = root->GetCategoryNode(modelInformation->m_categoryPath.c_str());
-                GraphCanvas::NodePaletteTreeItem* createdItem = nullptr;
+                JE::Editor::Tools::GraphCanvas::GraphCanvasTreeItem* parentItem = root->GetCategoryNode(modelInformation->m_categoryPath.c_str());
+                JE::Editor::Tools::GraphCanvas::NodePaletteTreeItem* createdItem = nullptr;
 
                 if (auto customModelInformation = azrtti_cast<const CustomNodeModelInformation*>(modelInformation))
                 {
@@ -152,7 +152,7 @@ namespace ScriptCanvasEditor
         ////////////////////////////////////
 
         ScriptCanvasRootPaletteTreeItem::ScriptCanvasRootPaletteTreeItem(const NodePaletteModel& nodePaletteModel, AzToolsFramework::AssetBrowser::AssetBrowserFilterModel* assetModel)
-            : GraphCanvas::NodePaletteTreeItem("root", ScriptCanvasEditor::AssetEditorId)
+            : JE::Editor::Tools::GraphCanvas::NodePaletteTreeItem("root", ScriptCanvasEditor::AssetEditorId)
             , m_assetModel(assetModel)
             , m_categorizer(nodePaletteModel)
         {
@@ -199,7 +199,7 @@ namespace ScriptCanvasEditor
             }
         }
 
-        void ScriptCanvasRootPaletteTreeItem::RegisterCategoryNode(GraphCanvas::GraphCanvasTreeItem* treeItem, const char* subCategory, GraphCanvas::NodePaletteTreeItem* parentRoot)
+        void ScriptCanvasRootPaletteTreeItem::RegisterCategoryNode(JE::Editor::Tools::GraphCanvas::GraphCanvasTreeItem* treeItem, const char* subCategory, JE::Editor::Tools::GraphCanvas::NodePaletteTreeItem* parentRoot)
         {
             if (parentRoot == nullptr)
             {
@@ -211,15 +211,15 @@ namespace ScriptCanvasEditor
 
         // Given a category path (e.g. "My/Category") and a parent node, creates the necessary intermediate
         // nodes under the given parent and returns the leaf tree item under the given category path.
-        GraphCanvas::NodePaletteTreeItem* ScriptCanvasRootPaletteTreeItem::GetCategoryNode(const char* categoryPath, GraphCanvas::NodePaletteTreeItem* parentRoot)
+        JE::Editor::Tools::GraphCanvas::NodePaletteTreeItem* ScriptCanvasRootPaletteTreeItem::GetCategoryNode(const char* categoryPath, JE::Editor::Tools::GraphCanvas::NodePaletteTreeItem* parentRoot)
         {
             if (parentRoot)
             {
-                return static_cast<GraphCanvas::NodePaletteTreeItem*>(m_categorizer.GetCategoryNode(categoryPath, parentRoot));
+                return static_cast<JE::Editor::Tools::GraphCanvas::NodePaletteTreeItem*>(m_categorizer.GetCategoryNode(categoryPath, parentRoot));
             }
             else
             {
-                return static_cast<GraphCanvas::NodePaletteTreeItem*>(m_categorizer.GetCategoryNode(categoryPath, this));
+                return static_cast<JE::Editor::Tools::GraphCanvas::NodePaletteTreeItem*>(m_categorizer.GetCategoryNode(categoryPath, this));
             }
         }
 
@@ -435,7 +435,7 @@ namespace ScriptCanvasEditor
 
                     if (data)
                     {
-                        GraphCanvas::NodePaletteTreeItem* categoryRoot = GetCategoryNode(data->m_definition.GetCategory().c_str());
+                        JE::Editor::Tools::GraphCanvas::NodePaletteTreeItem* categoryRoot = GetCategoryNode(data->m_definition.GetCategory().c_str());
                         ScriptEventsPaletteTreeItem* treeItem = categoryRoot->CreateChildNode<ScriptEventsPaletteTreeItem>(asset);
 
                         if (treeItem)
@@ -662,7 +662,7 @@ namespace ScriptCanvasEditor
         //////////////////////////
 
         NodePaletteDockWidget::NodePaletteDockWidget(const QString& windowLabel, QWidget* parent, const ScriptCanvasNodePaletteConfig& paletteConfig)
-            : GraphCanvas::NodePaletteDockWidget(parent, windowLabel, paletteConfig)
+            : JE::Editor::Tools::GraphCanvas::NodePaletteDockWidget(parent, windowLabel, paletteConfig)
             , m_assetModel(paletteConfig.m_assetModel)
             , m_nodePaletteModel(paletteConfig.m_nodePaletteModel)
             , m_nextCycleAction(nullptr)
@@ -670,7 +670,7 @@ namespace ScriptCanvasEditor
             , m_ignoreSelectionChanged(false)
         {
             
-            GraphCanvas::NodePaletteTreeView* treeView = GetTreeView();
+            JE::Editor::Tools::GraphCanvas::NodePaletteTreeView* treeView = GetTreeView();
 
             treeView->setContextMenuPolicy(Qt::ContextMenuPolicy::ActionsContextMenu);
 
@@ -717,7 +717,7 @@ namespace ScriptCanvasEditor
                 }
 
                 QObject::connect(treeView->selectionModel(), &QItemSelectionModel::selectionChanged, this, &NodePaletteDockWidget::OnTreeSelectionChanged);
-                QObject::connect(treeView, &GraphCanvas::NodePaletteTreeView::OnTreeItemDoubleClicked, this, &NodePaletteDockWidget::HandleTreeItemDoubleClicked);
+                QObject::connect(treeView, &JE::Editor::Tools::GraphCanvas::NodePaletteTreeView::OnTreeItemDoubleClicked, this, &NodePaletteDockWidget::HandleTreeItemDoubleClicked);
 
                 {
                     m_openTranslationData = new QAction(treeView);
@@ -739,13 +739,13 @@ namespace ScriptCanvasEditor
 
             ConfigureSearchCustomizationMargins(QMargins(0, 0, 0, 0), 0);
 
-            GraphCanvas::AssetEditorNotificationBus::Handler::BusConnect(ScriptCanvasEditor::AssetEditorId);
+            JE::Editor::Tools::GraphCanvas::AssetEditorNotificationBus::Handler::BusConnect(ScriptCanvasEditor::AssetEditorId);
         }
 
         NodePaletteDockWidget::~NodePaletteDockWidget()
         {
-            GraphCanvas::AssetEditorNotificationBus::Handler::BusDisconnect();
-            GraphCanvas::SceneNotificationBus::Handler::BusDisconnect();
+            JE::Editor::Tools::GraphCanvas::AssetEditorNotificationBus::Handler::BusDisconnect();
+            JE::Editor::Tools::GraphCanvas::SceneNotificationBus::Handler::BusDisconnect();
         }
 
         void NodePaletteDockWidget::OnNewCustomEvent()
@@ -753,10 +753,10 @@ namespace ScriptCanvasEditor
             AzToolsFramework::AssetEditor::AssetEditorRequestsBus::Broadcast(&AzToolsFramework::AssetEditor::AssetEditorRequests::CreateNewAsset, azrtti_typeid<ScriptEvents::ScriptEventsAsset>(), AZ::Uuid::CreateNull());
         }
 
-        void NodePaletteDockWidget::OnActiveGraphChanged(const GraphCanvas::GraphId& graphCanvasGraphId)
+        void NodePaletteDockWidget::OnActiveGraphChanged(const JE::Editor::Tools::GraphCanvas::GraphId& graphCanvasGraphId)
         {
-            GraphCanvas::SceneNotificationBus::Handler::BusDisconnect();
-            GraphCanvas::SceneNotificationBus::Handler::BusConnect(graphCanvasGraphId);
+            JE::Editor::Tools::GraphCanvas::SceneNotificationBus::Handler::BusDisconnect();
+            JE::Editor::Tools::GraphCanvas::SceneNotificationBus::Handler::BusConnect(graphCanvasGraphId);
 
             ScriptCanvas::ScriptCanvasId scriptCanvasId;
             GeneralRequestBus::BroadcastResult(scriptCanvasId, &GeneralRequests::GetScriptCanvasId, graphCanvasGraphId);
@@ -775,7 +775,7 @@ namespace ScriptCanvasEditor
             GetTreeView()->selectionModel()->clearSelection();
         }
 
-        GraphCanvas::GraphCanvasTreeItem* NodePaletteDockWidget::CreatePaletteRoot() const
+        JE::Editor::Tools::GraphCanvas::GraphCanvasTreeItem* NodePaletteDockWidget::CreatePaletteRoot() const
         {
             return NodePaletteWidget::ExternalCreateNodePaletteRoot(m_nodePaletteModel, m_assetModel);
         }
@@ -796,7 +796,7 @@ namespace ScriptCanvasEditor
                 {
                     QModelIndex sourceIndex = filterModel->mapToSource(index);
 
-                    GraphCanvas::NodePaletteTreeItem* nodePaletteItem = static_cast<GraphCanvas::NodePaletteTreeItem*>(sourceIndex.internalPointer());
+                    JE::Editor::Tools::GraphCanvas::NodePaletteTreeItem* nodePaletteItem = static_cast<JE::Editor::Tools::GraphCanvas::NodePaletteTreeItem*>(sourceIndex.internalPointer());
 
                     ParseCycleTargets(nodePaletteItem);
                 }
@@ -848,13 +848,13 @@ namespace ScriptCanvasEditor
             m_cyclingHelper.CycleToPreviousNode();
         }
 
-        void NodePaletteDockWidget::HandleTreeItemDoubleClicked(GraphCanvas::GraphCanvasTreeItem* treeItem)
+        void NodePaletteDockWidget::HandleTreeItemDoubleClicked(JE::Editor::Tools::GraphCanvas::GraphCanvasTreeItem* treeItem)
         {
             ParseCycleTargets(treeItem);
             CycleToNextNode();
         }
 
-        void NodePaletteDockWidget::NavigateToTranslationFile(GraphCanvas::NodePaletteTreeItem* nodePaletteItem)
+        void NodePaletteDockWidget::NavigateToTranslationFile(JE::Editor::Tools::GraphCanvas::NodePaletteTreeItem* nodePaletteItem)
         {
             if (nodePaletteItem)
             {
@@ -877,7 +877,7 @@ namespace ScriptCanvasEditor
             {
                 QModelIndex sourceIndex = filterModel->mapToSource(index);
 
-                GraphCanvas::NodePaletteTreeItem* nodePaletteItem = static_cast<GraphCanvas::NodePaletteTreeItem*>(sourceIndex.internalPointer());
+                JE::Editor::Tools::GraphCanvas::NodePaletteTreeItem* nodePaletteItem = static_cast<JE::Editor::Tools::GraphCanvas::NodePaletteTreeItem*>(sourceIndex.internalPointer());
                 nodePaletteItem->GenerateTranslationData();
             }
 
@@ -886,7 +886,7 @@ namespace ScriptCanvasEditor
                 QModelIndex sourceIndex = filterModel->mapToSource(indexList[0]);
                 if (sourceIndex.isValid())
                 {
-                    GraphCanvas::NodePaletteTreeItem* nodePaletteItem = static_cast<GraphCanvas::NodePaletteTreeItem*>(sourceIndex.internalPointer());
+                    JE::Editor::Tools::GraphCanvas::NodePaletteTreeItem* nodePaletteItem = static_cast<JE::Editor::Tools::GraphCanvas::NodePaletteTreeItem*>(sourceIndex.internalPointer());
                     NavigateToTranslationFile(nodePaletteItem);
                 }
             }
@@ -904,7 +904,7 @@ namespace ScriptCanvasEditor
                 {
                     QModelIndex sourceIndex = filterModel->mapToSource(index);
 
-                    GraphCanvas::NodePaletteTreeItem* nodePaletteItem = static_cast<GraphCanvas::NodePaletteTreeItem*>(sourceIndex.internalPointer());
+                    JE::Editor::Tools::GraphCanvas::NodePaletteTreeItem* nodePaletteItem = static_cast<JE::Editor::Tools::GraphCanvas::NodePaletteTreeItem*>(sourceIndex.internalPointer());
                     NavigateToTranslationFile(nodePaletteItem);
                 }
             }
@@ -922,7 +922,7 @@ namespace ScriptCanvasEditor
 
                 m_cyclingHelper.SetActiveGraph(graphCanvasGraphId);
 
-                AZStd::vector<GraphCanvas::NodeId> cyclingNodes;
+                AZStd::vector<JE::Editor::Tools::GraphCanvas::NodeId> cyclingNodes;
                 AZStd::vector<NodeIdPair> completeNodePairs;
 
                 for (ScriptCanvas::NodeTypeIdentifier nodeTypeIdentifier : m_cyclingIdentifiers)
@@ -945,14 +945,14 @@ namespace ScriptCanvasEditor
                 {
                     // Clean-up Selection to maintain the 'single' selection state throughout the editor
                     QScopedValueRollback<bool> ignoreSelection(m_ignoreSelectionChanged, true);
-                    GraphCanvas::SceneRequestBus::Event(graphCanvasGraphId, &GraphCanvas::SceneRequests::ClearSelection);
+                    JE::Editor::Tools::GraphCanvas::SceneRequestBus::Event(graphCanvasGraphId, &JE::Editor::Tools::GraphCanvas::SceneRequests::ClearSelection);
                 }
 
                 EditorGraphRequestBus::Event(scriptCanvasId, &EditorGraphRequests::HighlightNodes, completeNodePairs);
             }
         }
 
-        void NodePaletteDockWidget::ParseCycleTargets(GraphCanvas::GraphCanvasTreeItem* treeItem)
+        void NodePaletteDockWidget::ParseCycleTargets(JE::Editor::Tools::GraphCanvas::GraphCanvasTreeItem* treeItem)
         {
             AZStd::vector< ScriptCanvas::NodeTypeIdentifier > nodeTypeIdentifiers = NodeIdentifierFactory::ConstructNodeIdentifiers(treeItem);
 

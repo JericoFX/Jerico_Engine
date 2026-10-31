@@ -9,7 +9,7 @@
 
 #include <AzCore/Component/Component.h>
 
-#include <GraphCanvas/Components/Nodes/NodeBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/Nodes/NodeBus.h>
 
 #include <ScriptCanvas/Core/NodeBus.h>
 #include <Editor/Include/ScriptCanvas/GraphCanvas/NodeDescriptorBus.h>
@@ -23,7 +23,7 @@ namespace ScriptCanvasEditor
 {
     class NodeDescriptorComponent
         : public AZ::Component
-        , public GraphCanvas::NodeNotificationBus::Handler
+        , public JE::Editor::Tools::GraphCanvas::NodeNotificationBus::Handler
         , public ScriptCanvas::NodeNotificationsBus::Handler
         , public NodeDescriptorRequestBus::Handler
     {
@@ -55,7 +55,7 @@ namespace ScriptCanvasEditor
 
     protected:
 
-        virtual void OnAddedToGraphCanvasGraph(const GraphCanvas::GraphId& graphId, const AZ::EntityId& scriptCanvasNodeId);
+        virtual void OnAddedToGraphCanvasGraph(const JE::Editor::Tools::GraphCanvas::GraphId& graphId, const AZ::EntityId& scriptCanvasNodeId);
         virtual AZ::EntityId FindScriptCanvasNodeId() const;
 
     private:

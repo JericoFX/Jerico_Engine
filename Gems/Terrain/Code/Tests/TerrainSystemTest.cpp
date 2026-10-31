@@ -22,7 +22,7 @@
 #include <Terrain/MockTerrain.h>
 #include <MockAxisAlignedBoxShapeComponent.h>
 #include <TerrainTestFixtures.h>
-#include <SurfaceData/Utility/SurfaceDataUtility.h>
+#include <JE/Geometry/SurfaceData/Utility/SurfaceDataUtility.h>
 
 #include <random>
 
@@ -133,9 +133,9 @@ namespace UnitTest
 
         void SetupSurfaceWeightMocks(AZ::Entity* entity, AzFramework::SurfaceData::SurfaceTagWeightList& expectedTags)
         {
-            const SurfaceData::SurfaceTag tag1 = SurfaceData::SurfaceTag("tag1");
-            const SurfaceData::SurfaceTag tag2 = SurfaceData::SurfaceTag("tag2");
-            const SurfaceData::SurfaceTag tag3 = SurfaceData::SurfaceTag("tag3");
+            const JE::Geometry::SurfaceData::SurfaceTag tag1 = JE::Geometry::SurfaceData::SurfaceTag("tag1");
+            const JE::Geometry::SurfaceData::SurfaceTag tag2 = JE::Geometry::SurfaceData::SurfaceTag("tag2");
+            const JE::Geometry::SurfaceData::SurfaceTag tag3 = JE::Geometry::SurfaceData::SurfaceTag("tag3");
 
             AzFramework::SurfaceData::SurfaceTagWeight tagWeight1;
             tagWeight1.m_surfaceType = tag1;
@@ -336,7 +336,7 @@ namespace UnitTest
 
                 // Verify that the point either should or shouldn't appear on the box, taking min-inclusive-max-exclusive box ranges
                 // into account.
-                if (SurfaceData::AabbContains2DMaxExclusive(spawnerBox,
+                if (JE::Geometry::SurfaceData::AabbContains2DMaxExclusive(spawnerBox,
                     AZ::Vector3(position.GetX(), position.GetY(), spawnerBox.GetMin().GetZ())))
                 {
                     EXPECT_TRUE(heightQueryTerrainExists);

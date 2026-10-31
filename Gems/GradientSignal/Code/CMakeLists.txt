@@ -21,7 +21,7 @@ ly_add_target(
             AZ::AzCore
             AZ::AzFramework
             JE::RenderIntegration
-            Gem::SurfaceData
+            JE::Geometry
             Gem::ImageProcessingAtom.Headers
             Gem::LmbrCentral
 )
@@ -91,7 +91,7 @@ if(PAL_TRAIT_BUILD_HOST_TOOLS)
                 AZ::AzToolsFramework
                 AZ::AssetBuilderSDK
                 Gem::${gem_name}.Static
-                Gem::SurfaceData
+                JE::Geometry
                 Gem::LmbrCentral.Editor.Static
     )
 
@@ -156,6 +156,8 @@ if(PAL_TRAIT_BUILD_TESTS_SUPPORTED)
                 .
                 Source
         BUILD_DEPENDENCIES
+            PUBLIC
+                JE::Geometry.SurfaceData.TestUtils
             PRIVATE
                 AZ::AzTest
                 AZ::AzTestShared
@@ -165,7 +167,7 @@ if(PAL_TRAIT_BUILD_TESTS_SUPPORTED)
                 Gem::LmbrCentral.Mocks
                 Gem::${gem_name}.Mocks
         RUNTIME_DEPENDENCIES
-            Gem::SurfaceData
+            JE::Geometry
     )
     
     ly_add_target(
@@ -187,7 +189,7 @@ if(PAL_TRAIT_BUILD_TESTS_SUPPORTED)
                 Gem::LmbrCentral.Mocks
                 Gem::${gem_name}.Mocks
         RUNTIME_DEPENDENCIES
-            Gem::SurfaceData
+            JE::Geometry
     )
     ly_add_googletest(
         NAME Gem::${gem_name}.Tests

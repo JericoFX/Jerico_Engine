@@ -7,6 +7,7 @@
 #
 
 set(FILES
+    Tests/ModelSurfaceIdentityTests.cpp
     Tests/AnyAssetBuilderTest.cpp
     Tests/RenderAssetBuildersTests.cpp
     Tests/BuilderTestFixture.cpp

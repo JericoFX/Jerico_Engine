@@ -9,7 +9,7 @@
 #pragma once
 
 // Graph Canvas
-#include <GraphCanvas/Components/NodePropertyDisplay/VectorDataInterface.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/NodePropertyDisplay/VectorDataInterface.h>
 
 // Graph Model
 #include <JE/Editor/Tools/GraphModel/GraphModelBus.h>
@@ -19,7 +19,7 @@
 namespace JE::Editor::Tools::GraphModel::Integration
 {
     template<class Type, int ElementCount>
-    class VectorDataInterface : public GraphCanvas::VectorDataInterface
+    class VectorDataInterface : public JE::Editor::Tools::GraphCanvas::VectorDataInterface
     {
     public:
         AZ_CLASS_ALLOCATOR(VectorDataInterface, AZ::SystemAllocator);
@@ -76,8 +76,8 @@ namespace JE::Editor::Tools::GraphModel::Integration
                 Type vector = slot->GetValue<Type>();
                 if (vector.GetElement(index) != value)
                 {
-                    const GraphCanvas::GraphId graphCanvasSceneId = GetDisplay()->GetSceneId();
-                    GraphCanvas::ScopedGraphUndoBatch undoBatch(graphCanvasSceneId);
+                    const JE::Editor::Tools::GraphCanvas::GraphId graphCanvasSceneId = GetDisplay()->GetSceneId();
+                    JE::Editor::Tools::GraphCanvas::ScopedGraphUndoBatch undoBatch(graphCanvasSceneId);
 
                     vector.SetElement(index, aznumeric_cast<float>(value));
                     slot->SetValue(vector);

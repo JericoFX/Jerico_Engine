@@ -7,6 +7,8 @@
 #include <PerformanceMonitor/PerformanceMonitorSystemComponent.h>
 #include <PreviewRenderer/PreviewRendererSystemComponent.h>
 #include <GraphModel/GraphModelSystemComponent.h>
+#include <GraphCanvas/GraphCanvas.h>
+#include <GraphCanvas/GraphCanvasModuleRegistration.h>
 
 namespace JE::Editor::Tools
 {
@@ -25,6 +27,7 @@ namespace JE::Editor::Tools
                 PreviewRendererSystemComponent::CreateDescriptor(),
                 GraphModel::GraphModelSystemComponent::CreateDescriptor(),
             });
+            GraphCanvas::AppendGraphCanvasDescriptors(m_descriptors);
         }
 
         AZ::ComponentTypeList GetRequiredSystemComponents() const override
@@ -35,6 +38,7 @@ namespace JE::Editor::Tools
                 azrtti_typeid<PerformanceMonitorSystemComponent>(),
                 azrtti_typeid<PreviewRendererSystemComponent>(),
                 azrtti_typeid<GraphModel::GraphModelSystemComponent>(),
+                azrtti_typeid<GraphCanvas::GraphCanvasSystemComponent>(),
             };
         }
     };

@@ -8,19 +8,19 @@
 
 #include <QToolButton>
 
-#include <GraphCanvas/Components/SceneBus.h>
-#include <GraphCanvas/Components/Slots/SlotBus.h>
-#include <GraphCanvas/Components/Slots/Data/DataSlotBus.h>
-#include <GraphCanvas/Components/ViewBus.h>
-#include <GraphCanvas/Components/VisualBus.h>
-#include <GraphCanvas/Editor/AssetEditorBus.h>
-#include <GraphCanvas/Editor/Automation/AutomationIds.h>
-#include <GraphCanvas/Editor/Automation/AutomationUtils.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/SceneBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/Slots/SlotBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/Slots/Data/DataSlotBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/ViewBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/VisualBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Editor/AssetEditorBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Editor/Automation/AutomationIds.h>
+#include <JE/Editor/Tools/GraphCanvas/Editor/Automation/AutomationUtils.h>
 
-#include <GraphCanvas/Widgets/NodePalette/Model/NodePaletteSortFilterProxyModel.h>
-#include <GraphCanvas/Widgets/NodePalette/NodePaletteTreeView.h>
-#include <GraphCanvas/Widgets/NodePalette/TreeItems/NodePaletteTreeItem.h>
-#include <GraphCanvas/Utils/ConversionUtils.h>
+#include <JE/Editor/Tools/GraphCanvas/Widgets/NodePalette/Model/NodePaletteSortFilterProxyModel.h>
+#include <JE/Editor/Tools/GraphCanvas/Widgets/NodePalette/NodePaletteTreeView.h>
+#include <JE/Editor/Tools/GraphCanvas/Widgets/NodePalette/TreeItems/NodePaletteTreeItem.h>
+#include <JE/Editor/Tools/GraphCanvas/Utils/ConversionUtils.h>
 
 #include <Editor/GraphCanvas/GraphCanvasEditorNotificationBusId.h>
 #include <Editor/View/Widgets/VariablePanel/VariableDockWidget.h>
@@ -42,7 +42,7 @@ namespace ScriptCanvas::Developer
     // CreateNodeFromPaletteState
     ///////////////////////////////
 
-    CreateNodeFromPaletteState::CreateNodeFromPaletteState(GraphCanvas::NodePaletteWidget* paletteWidget, const QString& nodeName, CreationType creationType, AutomationStateModelId creationDataId, AutomationStateModelId outputId)
+    CreateNodeFromPaletteState::CreateNodeFromPaletteState(JE::Editor::Tools::GraphCanvas::NodePaletteWidget* paletteWidget, const QString& nodeName, CreationType creationType, AutomationStateModelId creationDataId, AutomationStateModelId outputId)
         : NamedAutomationState("CreateNodeFromPaletteState")
         , m_nodePaletteWidget(paletteWidget)
         , m_nodeName(nodeName)
@@ -58,7 +58,7 @@ namespace ScriptCanvas::Developer
 
     void CreateNodeFromPaletteState::OnSetupStateActions(EditorAutomationActionRunner& actionRunner)
     {
-        const GraphCanvas::GraphId* graphId = GetStateModel()->GetStateDataAs<GraphCanvas::GraphId>(StateModelIds::GraphCanvasId);
+        const JE::Editor::Tools::GraphCanvas::GraphId* graphId = GetStateModel()->GetStateDataAs<JE::Editor::Tools::GraphCanvas::GraphId>(StateModelIds::GraphCanvasId);
 
         if (graphId != nullptr && m_nodePaletteWidget != nullptr)
         {
@@ -77,7 +77,7 @@ namespace ScriptCanvas::Developer
             }
             case CreationType::Splice:
             {
-                const GraphCanvas::ConnectionId* connectionId = GetStateModel()->GetStateDataAs<GraphCanvas::ConnectionId>(m_creationDataId);
+                const JE::Editor::Tools::GraphCanvas::ConnectionId* connectionId = GetStateModel()->GetStateDataAs<JE::Editor::Tools::GraphCanvas::ConnectionId>(m_creationDataId);
 
                 if (connectionId)
                 {
@@ -119,7 +119,7 @@ namespace ScriptCanvas::Developer
         {
             if (!m_outputId.empty())
             {
-                GraphCanvas::NodeId nodeId = m_createNodeAction->GetCreatedNodeId();
+                JE::Editor::Tools::GraphCanvas::NodeId nodeId = m_createNodeAction->GetCreatedNodeId();
                 GetStateModel()->SetStateData(m_outputId, nodeId);
             }
 
@@ -132,7 +132,7 @@ namespace ScriptCanvas::Developer
     // CreateCategoryFromNodePaletteState
     ///////////////////////////////////////
 
-    CreateCategoryFromNodePaletteState::CreateCategoryFromNodePaletteState(GraphCanvas::NodePaletteWidget* paletteWidget, AutomationStateModelId categoryId, AutomationStateModelId scenePoint, AutomationStateModelId outputId)
+    CreateCategoryFromNodePaletteState::CreateCategoryFromNodePaletteState(JE::Editor::Tools::GraphCanvas::NodePaletteWidget* paletteWidget, AutomationStateModelId categoryId, AutomationStateModelId scenePoint, AutomationStateModelId outputId)
         : NamedAutomationState("CreateCategoryFromNodePaletteState")
         , m_paletteWidget(paletteWidget)
         , m_categoryId(categoryId)
@@ -144,13 +144,13 @@ namespace ScriptCanvas::Developer
 
     void CreateCategoryFromNodePaletteState::OnSetupStateActions(EditorAutomationActionRunner& actionRunner)
     {
-        const GraphCanvas::GraphId* graphId = GetStateModel()->GetStateDataAs<GraphCanvas::GraphId>(StateModelIds::GraphCanvasId);
+        const JE::Editor::Tools::GraphCanvas::GraphId* graphId = GetStateModel()->GetStateDataAs<JE::Editor::Tools::GraphCanvas::GraphId>(StateModelIds::GraphCanvasId);
         const AZ::Vector2* scenePoint = GetStateModel()->GetStateDataAs<AZ::Vector2>(m_scenePoint);
         const AZStd::string* category = GetStateModel()->GetStateDataAs<AZStd::string>(m_categoryId);
 
         if (graphId && scenePoint && category)
         {
-            m_creationAction = aznew CreateCategoryFromNodePaletteAction(m_paletteWidget, (*graphId), category->c_str(), GraphCanvas::ConversionUtils::AZToQPoint((*scenePoint)));
+            m_creationAction = aznew CreateCategoryFromNodePaletteAction(m_paletteWidget, (*graphId), category->c_str(), JE::Editor::Tools::GraphCanvas::ConversionUtils::AZToQPoint((*scenePoint)));
             actionRunner.AddAction(m_creationAction);
         }
         else
@@ -206,7 +206,7 @@ namespace ScriptCanvas::Developer
 
     void CreateNodeFromContextMenuState::OnSetupStateActions(EditorAutomationActionRunner& actionRunner)
     {
-        const GraphCanvas::GraphId* graphId = GetStateModel()->GetStateDataAs<GraphCanvas::GraphId>(StateModelIds::GraphCanvasId);
+        const JE::Editor::Tools::GraphCanvas::GraphId* graphId = GetStateModel()->GetStateDataAs<JE::Editor::Tools::GraphCanvas::GraphId>(StateModelIds::GraphCanvasId);
 
         if (graphId != nullptr)
         {
@@ -225,7 +225,7 @@ namespace ScriptCanvas::Developer
             }
             case CreationType::Splice:
             {
-                const GraphCanvas::ConnectionId* connectionId = GetStateModel()->GetStateDataAs<GraphCanvas::ConnectionId>(m_creationDataId);
+                const JE::Editor::Tools::GraphCanvas::ConnectionId* connectionId = GetStateModel()->GetStateDataAs<JE::Editor::Tools::GraphCanvas::ConnectionId>(m_creationDataId);
 
                 if (connectionId)
                 {
@@ -255,7 +255,7 @@ namespace ScriptCanvas::Developer
         {
             if (!m_outputId.empty())
             {
-                GraphCanvas::NodeId nodeId = m_createNodeAction->GetCreatedNodeId();
+                JE::Editor::Tools::GraphCanvas::NodeId nodeId = m_createNodeAction->GetCreatedNodeId();
                 GetStateModel()->SetStateData(m_outputId, nodeId);
             }
 
@@ -283,8 +283,8 @@ namespace ScriptCanvas::Developer
 
     void CreateNodeFromProposalState::OnSetupStateActions(EditorAutomationActionRunner& actionRunner)
     {
-        const GraphCanvas::GraphId* graphId = GetStateModel()->GetStateDataAs<GraphCanvas::GraphId>(StateModelIds::GraphCanvasId);
-        const GraphCanvas::Endpoint* endpoint = GetStateModel()->GetStateDataAs<GraphCanvas::Endpoint>(m_endpointId);
+        const JE::Editor::Tools::GraphCanvas::GraphId* graphId = GetStateModel()->GetStateDataAs<JE::Editor::Tools::GraphCanvas::GraphId>(StateModelIds::GraphCanvasId);
+        const JE::Editor::Tools::GraphCanvas::Endpoint* endpoint = GetStateModel()->GetStateDataAs<JE::Editor::Tools::GraphCanvas::Endpoint>(m_endpointId);
 
         if (graphId && endpoint)
         {
@@ -294,7 +294,7 @@ namespace ScriptCanvas::Developer
 
                 if (scenePoint)
                 {
-                    m_createNodeAction = aznew CreateNodeFromProposalAction((*graphId), (*endpoint), m_nodeName, GraphCanvas::ConversionUtils::AZToQPoint((*scenePoint)));
+                    m_createNodeAction = aznew CreateNodeFromProposalAction((*graphId), (*endpoint), m_nodeName, JE::Editor::Tools::GraphCanvas::ConversionUtils::AZToQPoint((*scenePoint)));
                 }
                 else
                 {
@@ -332,13 +332,13 @@ namespace ScriptCanvas::Developer
         {
             if (!m_nodeOutputId.empty())
             {
-                GraphCanvas::NodeId nodeId = m_createNodeAction->GetCreatedNodeId();
+                JE::Editor::Tools::GraphCanvas::NodeId nodeId = m_createNodeAction->GetCreatedNodeId();
                 GetStateModel()->SetStateData(m_nodeOutputId, nodeId);
             }
 
             if (!m_connectionOutputId.empty())
             {
-                GraphCanvas::ConnectionId connectionId = m_createNodeAction->GetConnectionId();
+                JE::Editor::Tools::GraphCanvas::ConnectionId connectionId = m_createNodeAction->GetConnectionId();
                 GetStateModel()->SetStateData(m_connectionOutputId, connectionId);
             }
 
@@ -351,7 +351,7 @@ namespace ScriptCanvas::Developer
     // CreateGroupState
     /////////////////////
 
-    CreateGroupState::CreateGroupState(GraphCanvas::EditorId editorId, CreateGroupAction::CreationType creationType, AutomationStateModelId outputId)
+    CreateGroupState::CreateGroupState(JE::Editor::Tools::GraphCanvas::EditorId editorId, CreateGroupAction::CreationType creationType, AutomationStateModelId outputId)
         : NamedAutomationState("CreateGroupState")
         , m_editorId(editorId)
         , m_creationType(creationType)
@@ -381,7 +381,7 @@ namespace ScriptCanvas::Developer
 
     void CreateGroupState::OnSetupStateActions(EditorAutomationActionRunner& actionRunner)
     {
-        const GraphCanvas::GraphId* graphId = GetStateModel()->GetStateDataAs<GraphCanvas::GraphId>(StateModelIds::GraphCanvasId);
+        const JE::Editor::Tools::GraphCanvas::GraphId* graphId = GetStateModel()->GetStateDataAs<JE::Editor::Tools::GraphCanvas::GraphId>(StateModelIds::GraphCanvasId);
 
         m_createGroupAction = aznew CreateGroupAction(m_editorId, (*graphId), m_creationType);
 

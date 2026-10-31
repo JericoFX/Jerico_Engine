@@ -12,11 +12,11 @@
 #include <QString>
 #include <QTableView>
 
-#include <GraphCanvas/Components/Nodes/NodeBus.h>
-#include <GraphCanvas/Components/SceneBus.h>
-#include <GraphCanvas/Components/Slots/SlotBus.h>
-#include <GraphCanvas/Components/VisualBus.h>
-#include <GraphCanvas/Utils/ConversionUtils.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/Nodes/NodeBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/SceneBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/Slots/SlotBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/VisualBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Utils/ConversionUtils.h>
 
 #include <ScriptCanvas/Bus/RequestBus.h>
 
@@ -43,7 +43,7 @@ namespace ScriptCanvas::Developer
     {
         class CreateGraphHotKeyState
             : public StaticIdAutomationState<CreateGraphTest_CreateGraphHotKeyStateId>
-            , public GraphCanvas::AssetEditorNotificationBus::Handler
+            , public JE::Editor::Tools::GraphCanvas::AssetEditorNotificationBus::Handler
         {
         public:
             AZ_CLASS_ALLOCATOR(CreateGraphHotKeyState, AZ::SystemAllocator)
@@ -61,7 +61,7 @@ namespace ScriptCanvas::Developer
 
         private:
 
-            GraphCanvas::GraphId m_hotKeyGraphId;
+            JE::Editor::Tools::GraphCanvas::GraphId m_hotKeyGraphId;
 
             KeyPressAction      m_pressControl;
             KeyReleaseAction    m_releaseControl;

@@ -188,11 +188,11 @@ namespace Terrain
         void OnTerrainDefaultSurfaceMaterialCreated(AZ::EntityId entityId, AZ::Data::Instance<JE::Render::RPI::Material> material) override;
         void OnTerrainDefaultSurfaceMaterialDestroyed(AZ::EntityId entityId) override;
         void OnTerrainDefaultSurfaceMaterialChanged(AZ::EntityId entityId, AZ::Data::Instance<JE::Render::RPI::Material> newMaterial) override;
-        void OnTerrainSurfaceMaterialMappingCreated(AZ::EntityId entityId, SurfaceData::SurfaceTag surfaceTag, MaterialInstance material) override;
-        void OnTerrainSurfaceMaterialMappingDestroyed(AZ::EntityId entityId, SurfaceData::SurfaceTag surfaceTag) override;
-        void OnTerrainSurfaceMaterialMappingMaterialChanged(AZ::EntityId entityId, SurfaceData::SurfaceTag surfaceTag, MaterialInstance material) override;
+        void OnTerrainSurfaceMaterialMappingCreated(AZ::EntityId entityId, JE::Geometry::SurfaceData::SurfaceTag surfaceTag, MaterialInstance material) override;
+        void OnTerrainSurfaceMaterialMappingDestroyed(AZ::EntityId entityId, JE::Geometry::SurfaceData::SurfaceTag surfaceTag) override;
+        void OnTerrainSurfaceMaterialMappingMaterialChanged(AZ::EntityId entityId, JE::Geometry::SurfaceData::SurfaceTag surfaceTag, MaterialInstance material) override;
         void OnTerrainSurfaceMaterialMappingTagChanged(
-            AZ::EntityId entityId, SurfaceData::SurfaceTag oldSurfaceTag, SurfaceData::SurfaceTag newSurfaceTag) override;
+            AZ::EntityId entityId, JE::Geometry::SurfaceData::SurfaceTag oldSurfaceTag, JE::Geometry::SurfaceData::SurfaceTag newSurfaceTag) override;
         void OnTerrainSurfaceMaterialMappingRegionCreated(AZ::EntityId entityId, const AZ::Aabb& region) override;
         void OnTerrainSurfaceMaterialMappingRegionDestroyed(AZ::EntityId entityId, const AZ::Aabb& oldRegion) override;
         void OnTerrainSurfaceMaterialMappingRegionChanged(AZ::EntityId entityId, const AZ::Aabb& oldRegion, const AZ::Aabb& newRegion) override;
@@ -230,7 +230,7 @@ namespace Terrain
 
         using DefaultMaterialSurfaceCallback = AZStd::function<void(DetailMaterialSurface&)>;
         bool ForSurfaceTag(DetailMaterialListRegion& materialRegion,
-            SurfaceData::SurfaceTag surfaceTag, DefaultMaterialSurfaceCallback callback);
+            JE::Geometry::SurfaceData::SurfaceTag surfaceTag, DefaultMaterialSurfaceCallback callback);
         DetailMaterialListRegion* FindByEntityId(AZ::EntityId entityId, JE::Render::Features::IndexedDataVector<DetailMaterialListRegion>& container);
         DetailMaterialListRegion& FindOrCreateByEntityId(AZ::EntityId entityId, JE::Render::Features::IndexedDataVector<DetailMaterialListRegion>& container);
         void RemoveByEntityId(AZ::EntityId entityId, JE::Render::Features::IndexedDataVector<DetailMaterialListRegion>& container);

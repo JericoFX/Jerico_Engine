@@ -6,7 +6,7 @@
  *
  */
 
-#include <GraphCanvas/Components/Nodes/NodeBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/Nodes/NodeBus.h>
 
 #include <ScriptCanvas/Core/Slot.h>
 
@@ -38,7 +38,7 @@ namespace ScriptCanvasEditor
     {
     }
 
-    DynamicOrderingDynamicSlotComponent::DynamicOrderingDynamicSlotComponent(GraphCanvas::SlotGroup slotGroup)
+    DynamicOrderingDynamicSlotComponent::DynamicOrderingDynamicSlotComponent(JE::Editor::Tools::GraphCanvas::SlotGroup slotGroup)
         : DynamicSlotComponent(slotGroup)
         , m_deserialized(false)
     {
@@ -61,11 +61,11 @@ namespace ScriptCanvasEditor
                     int priority = static_cast<int>(scriptSlots.size()) - i;
 
                     ScriptCanvas::SlotId scriptCanvasSlotId = scriptSlots[i]->GetId();
-                    GraphCanvas::SlotId graphCanvasSlotId = requestInterface->MapToGraphCanvasId(scriptCanvasSlotId);
+                    JE::Editor::Tools::GraphCanvas::SlotId graphCanvasSlotId = requestInterface->MapToGraphCanvasId(scriptCanvasSlotId);
 
                     if (graphCanvasSlotId.IsValid())
                     {
-                        GraphCanvas::SlotRequestBus::Event(graphCanvasSlotId, &GraphCanvas::SlotRequests::SetLayoutPriority, priority);
+                        JE::Editor::Tools::GraphCanvas::SlotRequestBus::Event(graphCanvasSlotId, &JE::Editor::Tools::GraphCanvas::SlotRequests::SetLayoutPriority, priority);
                     }
                 }
             }
@@ -84,7 +84,7 @@ namespace ScriptCanvasEditor
         }
     }
 
-    void DynamicOrderingDynamicSlotComponent::OnSceneMemberDeserialized(const AZ::EntityId& graphId, const GraphCanvas::GraphSerialization& serializationTarget)
+    void DynamicOrderingDynamicSlotComponent::OnSceneMemberDeserialized(const AZ::EntityId& graphId, const JE::Editor::Tools::GraphCanvas::GraphSerialization& serializationTarget)
     {
         DynamicSlotComponent::OnSceneMemberDeserialized(graphId, serializationTarget);
         m_deserialized = true;
@@ -107,7 +107,7 @@ namespace ScriptCanvasEditor
         }
     }
 
-    void DynamicOrderingDynamicSlotComponent::ConfigureGraphCanvasSlot([[maybe_unused]] const ScriptCanvas::Slot* slot, [[maybe_unused]] const GraphCanvas::SlotId& graphCanvasSlotId)
+    void DynamicOrderingDynamicSlotComponent::ConfigureGraphCanvasSlot([[maybe_unused]] const ScriptCanvas::Slot* slot, [[maybe_unused]] const JE::Editor::Tools::GraphCanvas::SlotId& graphCanvasSlotId)
     {
         AZ::SystemTickBus::Handler::BusConnect();
     }

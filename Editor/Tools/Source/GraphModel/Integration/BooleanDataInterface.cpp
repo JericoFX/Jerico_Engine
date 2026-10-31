@@ -28,8 +28,8 @@ namespace JE::Editor::Tools::GraphModel::Integration
         JE::Editor::Tools::GraphModel::SlotPtr slot = m_slot.lock();
         if (slot && slot->GetValue<bool>() != enabled)
         {
-            const GraphCanvas::GraphId graphCanvasSceneId = GetDisplay()->GetSceneId();
-            GraphCanvas::ScopedGraphUndoBatch undoBatch(graphCanvasSceneId);
+            const JE::Editor::Tools::GraphCanvas::GraphId graphCanvasSceneId = GetDisplay()->GetSceneId();
+            JE::Editor::Tools::GraphCanvas::ScopedGraphUndoBatch undoBatch(graphCanvasSceneId);
 
             slot->SetValue(enabled);
             GraphControllerNotificationBus::Event(graphCanvasSceneId, &GraphControllerNotifications::OnGraphModelSlotModified, slot);

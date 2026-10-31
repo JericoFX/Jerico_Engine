@@ -83,9 +83,9 @@ namespace Terrain
         }
     }
 
-    AZStd::unordered_set<SurfaceData::SurfaceTag> EditorTerrainSurfaceGradientListComponent::GetSurfaceTagsInUse() const
+    AZStd::unordered_set<JE::Geometry::SurfaceData::SurfaceTag> EditorTerrainSurfaceGradientListComponent::GetSurfaceTagsInUse() const
     {
-        AZStd::unordered_set<SurfaceData::SurfaceTag> tagsInUse;
+        AZStd::unordered_set<JE::Geometry::SurfaceData::SurfaceTag> tagsInUse;
 
         for (const TerrainSurfaceGradientMapping& mapping : m_configuration.m_gradientSurfaceMappings)
         {

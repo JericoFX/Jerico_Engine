@@ -8,17 +8,17 @@
 
 #pragma once
 
-#include <GraphCanvas/Widgets/EditorContextMenu/ContextMenus/NodeContextMenu.h>
+#include <JE/Editor/Tools/GraphCanvas/Widgets/EditorContextMenu/ContextMenus/NodeContextMenu.h>
 
 namespace LandscapeCanvasEditor
 {
     class NodeContextMenu
-        : public GraphCanvas::NodeContextMenu
+        : public JE::Editor::Tools::GraphCanvas::NodeContextMenu
     {
     public:
         NodeContextMenu(const AZ::EntityId& sceneId, QWidget* parent = nullptr);
 
     protected:
-        void OnRefreshActions(const GraphCanvas::GraphId& graphId, const AZ::EntityId& targetMemberId) override;
+        void OnRefreshActions(const JE::Editor::Tools::GraphCanvas::GraphId& graphId, const AZ::EntityId& targetMemberId) override;
     };
 }

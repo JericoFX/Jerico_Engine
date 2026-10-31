@@ -30,7 +30,7 @@
 #include <ScriptCanvas/Utils/NodeUtils.h>
 
 #include <ScriptCanvas/Data/Traits.h>
-#include <StaticLib/GraphCanvas/Styling/definitions.h>
+#include <JE/Editor/Tools/GraphCanvas/Styling/definitions.h>
 
 AZ_DEFINE_BUDGET(NodePaletteModel);
 
@@ -526,11 +526,11 @@ namespace
             {
                 AZStd::string categoryPath;
 
-                GraphCanvas::TranslationKey key;
+                JE::Editor::Tools::GraphCanvas::TranslationKey key;
                 key << ScriptCanvasEditor::TranslationHelper::AssetContext::BehaviorClassContext << behaviorClass->m_name.c_str() << "details";
 
-                GraphCanvas::TranslationRequests::Details details;
-                GraphCanvas::TranslationRequestBus::BroadcastResult(details, &GraphCanvas::TranslationRequests::GetDetails, key, details);
+                JE::Editor::Tools::GraphCanvas::TranslationRequests::Details details;
+                JE::Editor::Tools::GraphCanvas::TranslationRequestBus::BroadcastResult(details, &JE::Editor::Tools::GraphCanvas::TranslationRequests::GetDetails, key, details);
 
                 categoryPath = details.m_category;
 
@@ -643,11 +643,11 @@ namespace
             if (!events.empty())
             {
 
-                GraphCanvas::TranslationKey key;
+                JE::Editor::Tools::GraphCanvas::TranslationKey key;
                 key << ScriptCanvasEditor::TranslationHelper::AssetContext::EBusHandlerContext << behaviorEbus.m_name.c_str() << "details";
 
-                GraphCanvas::TranslationRequests::Details details;
-                GraphCanvas::TranslationRequestBus::BroadcastResult(details, &GraphCanvas::TranslationRequests::GetDetails, key, details);
+                JE::Editor::Tools::GraphCanvas::TranslationRequests::Details details;
+                JE::Editor::Tools::GraphCanvas::TranslationRequestBus::BroadcastResult(details, &JE::Editor::Tools::GraphCanvas::TranslationRequests::GetDetails, key, details);
 
                 AZStd::string categoryPath = details.m_category.empty() ? GetCategoryPath(behaviorEbus.m_attributes, behaviorContext) : details.m_category;
 
@@ -688,11 +688,11 @@ namespace
 
         if (!behaviorEbus.m_events.empty())
         {
-            GraphCanvas::TranslationKey key;
+            JE::Editor::Tools::GraphCanvas::TranslationKey key;
             key << ScriptCanvasEditor::TranslationHelper::AssetContext::EBusSenderContext << behaviorEbus.m_name.c_str() << "details";
 
-            GraphCanvas::TranslationRequests::Details details;
-            GraphCanvas::TranslationRequestBus::BroadcastResult(details, &GraphCanvas::TranslationRequests::GetDetails, key, details);
+            JE::Editor::Tools::GraphCanvas::TranslationRequests::Details details;
+            JE::Editor::Tools::GraphCanvas::TranslationRequestBus::BroadcastResult(details, &JE::Editor::Tools::GraphCanvas::TranslationRequests::GetDetails, key, details);
 
             AZStd::string categoryPath = details.m_category.empty() ? GetCategoryPath(behaviorEbus.m_attributes, behaviorContext) : details.m_category;
 
@@ -859,7 +859,7 @@ namespace ScriptCanvasEditor
     ////////////////////////////////
     // NodePaletteModelInformation
     ////////////////////////////////
-    void NodePaletteModelInformation::PopulateTreeItem(GraphCanvas::NodePaletteTreeItem& treeItem) const
+    void NodePaletteModelInformation::PopulateTreeItem(JE::Editor::Tools::GraphCanvas::NodePaletteTreeItem& treeItem) const
     {
         if (!m_toolTip.empty())
         {
@@ -970,11 +970,11 @@ namespace ScriptCanvasEditor
 
             if (classData && classData->m_editData && classData->m_editData->m_name)
             {
-                GraphCanvas::TranslationKey key;
+                JE::Editor::Tools::GraphCanvas::TranslationKey key;
                 key << ScriptCanvasEditor::TranslationHelper::AssetContext::CustomNodeContext << classData->m_typeId.ToString<AZStd::string>().c_str() << "details";
 
-                GraphCanvas::TranslationRequests::Details details;
-                GraphCanvas::TranslationRequestBus::BroadcastResult(details, &GraphCanvas::TranslationRequests::GetDetails, key, details);
+                JE::Editor::Tools::GraphCanvas::TranslationRequests::Details details;
+                JE::Editor::Tools::GraphCanvas::TranslationRequestBus::BroadcastResult(details, &JE::Editor::Tools::GraphCanvas::TranslationRequests::GetDetails, key, details);
 
                 if (details.m_name.empty())
                 {
@@ -1084,12 +1084,12 @@ namespace ScriptCanvasEditor
             methodModelInformation->m_propertyStatus = propertyStatus;
             methodModelInformation->m_titlePaletteOverride = "MethodNodeTitlePalette";
 
-            GraphCanvas::TranslationKey catkey;
+            JE::Editor::Tools::GraphCanvas::TranslationKey catkey;
             catkey << ScriptCanvasEditor::TranslationHelper::AssetContext::BehaviorClassContext << methodClass.c_str() << "details";
-            GraphCanvas::TranslationRequests::Details catdetails;
-            GraphCanvas::TranslationRequestBus::BroadcastResult(catdetails, &GraphCanvas::TranslationRequests::GetDetails, catkey, catdetails);
+            JE::Editor::Tools::GraphCanvas::TranslationRequests::Details catdetails;
+            JE::Editor::Tools::GraphCanvas::TranslationRequestBus::BroadcastResult(catdetails, &JE::Editor::Tools::GraphCanvas::TranslationRequests::GetDetails, catkey, catdetails);
 
-            GraphCanvas::TranslationKey key;
+            JE::Editor::Tools::GraphCanvas::TranslationKey key;
 
             AZStd::string context;
             AZStd::string updatedMethodName;
@@ -1101,8 +1101,8 @@ namespace ScriptCanvasEditor
             updatedMethodName += methodName;
             key << ScriptCanvasEditor::TranslationHelper::AssetContext::BehaviorClassContext << methodClass << "methods" << updatedMethodName << context << "details";
 
-            GraphCanvas::TranslationRequests::Details details;
-            GraphCanvas::TranslationRequestBus::BroadcastResult(details, &GraphCanvas::TranslationRequests::GetDetails, key, details);
+            JE::Editor::Tools::GraphCanvas::TranslationRequests::Details details;
+            JE::Editor::Tools::GraphCanvas::TranslationRequestBus::BroadcastResult(details, &JE::Editor::Tools::GraphCanvas::TranslationRequests::GetDetails, key, details);
 
             methodModelInformation->m_displayName = details.m_name.empty() ? updatedMethodName : details.m_name;
             methodModelInformation->m_toolTip = details.m_tooltip;
@@ -1138,11 +1138,11 @@ namespace ScriptCanvasEditor
             AZ::StringFunc::Replace(name, "::Getter", "");
             AZ::StringFunc::Replace(name, "::Setter", "");
 
-            GraphCanvas::TranslationKey key;
+            JE::Editor::Tools::GraphCanvas::TranslationKey key;
             key << ScriptCanvasEditor::TranslationHelper::AssetContext::BehaviorGlobalPropertyContext << name << "details";
 
-            GraphCanvas::TranslationRequests::Details details;
-            GraphCanvas::TranslationRequestBus::BroadcastResult(details, &GraphCanvas::TranslationRequests::GetDetails, key, details);
+            JE::Editor::Tools::GraphCanvas::TranslationRequests::Details details;
+            JE::Editor::Tools::GraphCanvas::TranslationRequestBus::BroadcastResult(details, &JE::Editor::Tools::GraphCanvas::TranslationRequests::GetDetails, key, details);
 
 
             methodModelInformation->m_displayName = details.m_name;
@@ -1175,11 +1175,11 @@ namespace ScriptCanvasEditor
             methodModelInformation->m_isProperty = false;
             methodModelInformation->m_titlePaletteOverride = "MethodNodeTitlePalette";
 
-            GraphCanvas::TranslationKey key;
+            JE::Editor::Tools::GraphCanvas::TranslationKey key;
             key << ScriptCanvasEditor::TranslationHelper::AssetContext::BehaviorGlobalMethodContext << behaviorMethod.m_name.c_str() << "details";
 
-            GraphCanvas::TranslationRequests::Details details;
-            GraphCanvas::TranslationRequestBus::BroadcastResult(details, &GraphCanvas::TranslationRequests::GetDetails, key, details);
+            JE::Editor::Tools::GraphCanvas::TranslationRequests::Details details;
+            JE::Editor::Tools::GraphCanvas::TranslationRequestBus::BroadcastResult(details, &JE::Editor::Tools::GraphCanvas::TranslationRequests::GetDetails, key, details);
 
             methodModelInformation->m_displayName = details.m_name.empty() ? behaviorMethod.m_name : details.m_name;
             methodModelInformation->m_toolTip = details.m_tooltip.empty() ? "" : details.m_tooltip;
@@ -1217,11 +1217,11 @@ namespace ScriptCanvasEditor
             handlerInformation->m_busId = busId;
             handlerInformation->m_eventId = forwardEvent.m_eventId;
 
-            GraphCanvas::TranslationKey key;
+            JE::Editor::Tools::GraphCanvas::TranslationKey key;
             key << ScriptCanvasEditor::TranslationHelper::AssetContext::EBusHandlerContext << busName << "methods" << eventName << "details";
 
-            GraphCanvas::TranslationRequests::Details details;
-            GraphCanvas::TranslationRequestBus::BroadcastResult(details, &GraphCanvas::TranslationRequests::GetDetails, key, details);
+            JE::Editor::Tools::GraphCanvas::TranslationRequests::Details details;
+            JE::Editor::Tools::GraphCanvas::TranslationRequestBus::BroadcastResult(details, &JE::Editor::Tools::GraphCanvas::TranslationRequests::GetDetails, key, details);
 
             handlerInformation->m_displayName = details.m_name.empty() ? eventName : details.m_name.c_str();
             handlerInformation->m_toolTip = details.m_tooltip.empty() ? "" : details.m_tooltip;
@@ -1260,11 +1260,11 @@ namespace ScriptCanvasEditor
             senderInformation->m_busId = busId;
             senderInformation->m_eventId = eventId;
 
-            GraphCanvas::TranslationKey key;
+            JE::Editor::Tools::GraphCanvas::TranslationKey key;
             key << ScriptCanvasEditor::TranslationHelper::AssetContext::EBusSenderContext << busName << "methods" << eventName << "details";
 
-            GraphCanvas::TranslationRequests::Details details;
-            GraphCanvas::TranslationRequestBus::BroadcastResult(details, &GraphCanvas::TranslationRequests::GetDetails, key, details);
+            JE::Editor::Tools::GraphCanvas::TranslationRequests::Details details;
+            JE::Editor::Tools::GraphCanvas::TranslationRequestBus::BroadcastResult(details, &JE::Editor::Tools::GraphCanvas::TranslationRequests::GetDetails, key, details);
 
             senderInformation->m_displayName = details.m_name.empty() ? eventName : details.m_name.c_str();
             senderInformation->m_toolTip = details.m_tooltip.empty() ? "" : details.m_tooltip;
@@ -1451,9 +1451,9 @@ namespace ScriptCanvasEditor
         return m_registeredNodes;
     }
 
-    GraphCanvas::GraphCanvasTreeItem* NodePaletteModel::CreateCategoryNode(AZStd::string_view categoryPath, AZStd::string_view categoryName, GraphCanvas::GraphCanvasTreeItem* parentItem) const
+    JE::Editor::Tools::GraphCanvas::GraphCanvasTreeItem* NodePaletteModel::CreateCategoryNode(AZStd::string_view categoryPath, AZStd::string_view categoryName, JE::Editor::Tools::GraphCanvas::GraphCanvasTreeItem* parentItem) const
     {
-        GraphCanvas::NodePaletteTreeItem* treeItem = parentItem->CreateChildNode<GraphCanvas::NodePaletteTreeItem>(categoryName, ScriptCanvasEditor::AssetEditorId);
+        JE::Editor::Tools::GraphCanvas::NodePaletteTreeItem* treeItem = parentItem->CreateChildNode<JE::Editor::Tools::GraphCanvas::NodePaletteTreeItem>(categoryName, ScriptCanvasEditor::AssetEditorId);
 
         const CategoryInformation* categoryInformation = FindCategoryInformation(categoryPath);
 

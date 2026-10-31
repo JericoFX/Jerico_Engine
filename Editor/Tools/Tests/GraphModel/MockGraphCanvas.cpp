@@ -27,12 +27,12 @@ namespace MockGraphCanvasServices
         return entity;
     }
 
-    MockSlotComponent::MockSlotComponent(const GraphCanvas::SlotType& slotType)
+    MockSlotComponent::MockSlotComponent(const JE::Editor::Tools::GraphCanvas::SlotType& slotType)
         : m_slotType(slotType)
     {
     }
 
-    MockSlotComponent::MockSlotComponent(const GraphCanvas::SlotType& slotType, const GraphCanvas::SlotConfiguration& configuration)
+    MockSlotComponent::MockSlotComponent(const JE::Editor::Tools::GraphCanvas::SlotType& slotType, const JE::Editor::Tools::GraphCanvas::SlotConfiguration& configuration)
         : m_slotType(slotType)
         , m_slotConfiguration(configuration)
     {
@@ -57,7 +57,7 @@ namespace MockGraphCanvasServices
         }
     }
 
-    AZ::Entity* MockDataSlotComponent::CreateDataSlot(const GraphCanvas::DataSlotConfiguration& dataSlotConfiguration)
+    AZ::Entity* MockDataSlotComponent::CreateDataSlot(const JE::Editor::Tools::GraphCanvas::DataSlotConfiguration& dataSlotConfiguration)
     {
         AZ::Entity* entity = MockSlotComponent::CreateCoreSlotEntity();
 
@@ -74,24 +74,24 @@ namespace MockGraphCanvasServices
     }
 
     MockDataSlotComponent::MockDataSlotComponent()
-        : MockSlotComponent(GraphCanvas::SlotTypes::DataSlot)
+        : MockSlotComponent(JE::Editor::Tools::GraphCanvas::SlotTypes::DataSlot)
     {
     }
 
-    MockDataSlotComponent::MockDataSlotComponent(const GraphCanvas::DataSlotConfiguration& dataSlotConfiguration)
-        : MockSlotComponent(GraphCanvas::SlotTypes::DataSlot, dataSlotConfiguration)
+    MockDataSlotComponent::MockDataSlotComponent(const JE::Editor::Tools::GraphCanvas::DataSlotConfiguration& dataSlotConfiguration)
+        : MockSlotComponent(JE::Editor::Tools::GraphCanvas::SlotTypes::DataSlot, dataSlotConfiguration)
         , m_dataSlotConfiguration(dataSlotConfiguration)
     {
     }
 
     void MockDataSlotComponent::Activate()
     {
-        GraphCanvas::DataSlotRequestBus::Handler::BusConnect(GetEntityId());
+        JE::Editor::Tools::GraphCanvas::DataSlotRequestBus::Handler::BusConnect(GetEntityId());
     }
 
     void MockDataSlotComponent::Deactivate()
     {
-        GraphCanvas::DataSlotRequestBus::Handler::BusDisconnect();
+        JE::Editor::Tools::GraphCanvas::DataSlotRequestBus::Handler::BusDisconnect();
     }
 
     bool MockDataSlotComponent::ConvertToReference([[maybe_unused]] bool isNewSlot)
@@ -119,12 +119,12 @@ namespace MockGraphCanvasServices
         return false;
     }
 
-    GraphCanvas::DataSlotType MockDataSlotComponent::GetDataSlotType() const
+    JE::Editor::Tools::GraphCanvas::DataSlotType MockDataSlotComponent::GetDataSlotType() const
     {
         return m_dataSlotConfiguration.m_dataSlotType;
     }
 
-    GraphCanvas::DataValueType MockDataSlotComponent::GetDataValueType() const
+    JE::Editor::Tools::GraphCanvas::DataValueType MockDataSlotComponent::GetDataValueType() const
     {
         return m_dataSlotConfiguration.m_dataValueType;
     }
@@ -139,7 +139,7 @@ namespace MockGraphCanvasServices
         m_dataSlotConfiguration.m_typeId = typeId;
     }
 
-    const GraphCanvas::Styling::StyleHelper* MockDataSlotComponent::GetDataColorPalette() const
+    const JE::Editor::Tools::GraphCanvas::Styling::StyleHelper* MockDataSlotComponent::GetDataColorPalette() const
     {
         return nullptr;
     }
@@ -154,12 +154,12 @@ namespace MockGraphCanvasServices
         return m_dataSlotConfiguration.m_containerTypeIds[index];
     }
 
-    const GraphCanvas::Styling::StyleHelper* MockDataSlotComponent::GetContainedTypeColorPalette([[maybe_unused]] size_t index) const
+    const JE::Editor::Tools::GraphCanvas::Styling::StyleHelper* MockDataSlotComponent::GetContainedTypeColorPalette([[maybe_unused]] size_t index) const
     {
         return nullptr;
     }
 
-    void MockDataSlotComponent::SetDataAndContainedTypeIds(AZ::Uuid typeId, const AZStd::vector<AZ::Uuid>& typeIds, GraphCanvas::DataValueType valueType)
+    void MockDataSlotComponent::SetDataAndContainedTypeIds(AZ::Uuid typeId, const AZStd::vector<AZ::Uuid>& typeIds, JE::Editor::Tools::GraphCanvas::DataValueType valueType)
     {
         AZ_UNUSED(typeId);
         AZ_UNUSED(typeIds);
@@ -177,7 +177,7 @@ namespace MockGraphCanvasServices
         }
     }
 
-    AZ::Entity* MockExecutionSlotComponent::CreateExecutionSlot(const AZ::EntityId& nodeId, const GraphCanvas::SlotConfiguration& slotConfiguration)
+    AZ::Entity* MockExecutionSlotComponent::CreateExecutionSlot(const AZ::EntityId& nodeId, const JE::Editor::Tools::GraphCanvas::SlotConfiguration& slotConfiguration)
     {
         AZ_UNUSED(nodeId);
 
@@ -196,12 +196,12 @@ namespace MockGraphCanvasServices
     }
 
     MockExecutionSlotComponent::MockExecutionSlotComponent()
-        : MockSlotComponent(GraphCanvas::SlotTypes::ExecutionSlot)
+        : MockSlotComponent(JE::Editor::Tools::GraphCanvas::SlotTypes::ExecutionSlot)
     {
     }
 
-    MockExecutionSlotComponent::MockExecutionSlotComponent(const GraphCanvas::SlotConfiguration& slotConfiguration)
-        : MockSlotComponent(GraphCanvas::SlotTypes::ExecutionSlot, slotConfiguration)
+    MockExecutionSlotComponent::MockExecutionSlotComponent(const JE::Editor::Tools::GraphCanvas::SlotConfiguration& slotConfiguration)
+        : MockSlotComponent(JE::Editor::Tools::GraphCanvas::SlotTypes::ExecutionSlot, slotConfiguration)
         , m_executionSlotConfiguration(slotConfiguration)
     {
     }
@@ -217,7 +217,7 @@ namespace MockGraphCanvasServices
         }
     }
 
-    AZ::Entity* MockExtenderSlotComponent::CreateExtenderSlot(const AZ::EntityId& nodeId, const GraphCanvas::ExtenderSlotConfiguration& slotConfiguration)
+    AZ::Entity* MockExtenderSlotComponent::CreateExtenderSlot(const AZ::EntityId& nodeId, const JE::Editor::Tools::GraphCanvas::ExtenderSlotConfiguration& slotConfiguration)
     {
         AZ_UNUSED(nodeId);
 
@@ -236,36 +236,36 @@ namespace MockGraphCanvasServices
     }
 
     MockExtenderSlotComponent::MockExtenderSlotComponent()
-        : MockSlotComponent(GraphCanvas::SlotTypes::ExtenderSlot)
+        : MockSlotComponent(JE::Editor::Tools::GraphCanvas::SlotTypes::ExtenderSlot)
     {
     }
 
-    MockExtenderSlotComponent::MockExtenderSlotComponent(const GraphCanvas::ExtenderSlotConfiguration& slotConfiguration)
-        : MockSlotComponent(GraphCanvas::SlotTypes::ExtenderSlot, slotConfiguration)
+    MockExtenderSlotComponent::MockExtenderSlotComponent(const JE::Editor::Tools::GraphCanvas::ExtenderSlotConfiguration& slotConfiguration)
+        : MockSlotComponent(JE::Editor::Tools::GraphCanvas::SlotTypes::ExtenderSlot, slotConfiguration)
         , m_extenderSlotConfiguration(slotConfiguration)
     {
     }
 
     void MockExtenderSlotComponent::Activate()
     {
-        GraphCanvas::ExtenderSlotRequestBus::Handler::BusConnect(GetEntityId());
+        JE::Editor::Tools::GraphCanvas::ExtenderSlotRequestBus::Handler::BusConnect(GetEntityId());
     }
 
     void MockExtenderSlotComponent::Deactivate()
     {
-        GraphCanvas::ExtenderSlotRequestBus::Handler::BusDisconnect();
+        JE::Editor::Tools::GraphCanvas::ExtenderSlotRequestBus::Handler::BusDisconnect();
     }
 
     void MockExtenderSlotComponent::TriggerExtension()
     {
     }
 
-    GraphCanvas::Endpoint MockExtenderSlotComponent::ExtendForConnectionProposal(const GraphCanvas::ConnectionId& connectionId, const GraphCanvas::Endpoint& endpoint)
+    JE::Editor::Tools::GraphCanvas::Endpoint MockExtenderSlotComponent::ExtendForConnectionProposal(const JE::Editor::Tools::GraphCanvas::ConnectionId& connectionId, const JE::Editor::Tools::GraphCanvas::Endpoint& endpoint)
     {
         AZ_UNUSED(connectionId);
         AZ_UNUSED(endpoint);
 
-        return GraphCanvas::Endpoint();
+        return JE::Editor::Tools::GraphCanvas::Endpoint();
     }
 
     // MockNodeComponent
@@ -279,7 +279,7 @@ namespace MockGraphCanvasServices
         }
     }
 
-    AZ::Entity* MockNodeComponent::CreateCoreNodeEntity(const GraphCanvas::NodeConfiguration& config)
+    AZ::Entity* MockNodeComponent::CreateCoreNodeEntity(const JE::Editor::Tools::GraphCanvas::NodeConfiguration& config)
     {
         // Create this Node's entity.
         AZ::Entity* entity = aznew AZ::Entity();
@@ -289,19 +289,19 @@ namespace MockGraphCanvasServices
         return entity;
     }
 
-    MockNodeComponent::MockNodeComponent(const GraphCanvas::NodeConfiguration& config)
+    MockNodeComponent::MockNodeComponent(const JE::Editor::Tools::GraphCanvas::NodeConfiguration& config)
         : m_configuration(config)
     {
     }
 
     void MockNodeComponent::Activate()
     {
-        GraphCanvas::NodeRequestBus::Handler::BusConnect(GetEntityId());
+        JE::Editor::Tools::GraphCanvas::NodeRequestBus::Handler::BusConnect(GetEntityId());
     }
 
     void MockNodeComponent::Deactivate()
     {
-        GraphCanvas::NodeRequestBus::Handler::BusDisconnect();
+        JE::Editor::Tools::GraphCanvas::NodeRequestBus::Handler::BusDisconnect();
     }
 
     void MockNodeComponent::SetTooltip(const AZStd::string& tooltip)
@@ -348,14 +348,14 @@ namespace MockGraphCanvasServices
         return m_slotIds;
     }
 
-    AZStd::vector<GraphCanvas::SlotId> MockNodeComponent::GetVisibleSlotIds() const
+    AZStd::vector<JE::Editor::Tools::GraphCanvas::SlotId> MockNodeComponent::GetVisibleSlotIds() const
     {
         return m_slotIds;
     }
 
-    AZStd::vector<GraphCanvas::SlotId> MockNodeComponent::FindVisibleSlotIdsByType([[maybe_unused]] const GraphCanvas::ConnectionType& connectionType, [[maybe_unused]] const GraphCanvas::SlotType& slotType) const
+    AZStd::vector<JE::Editor::Tools::GraphCanvas::SlotId> MockNodeComponent::FindVisibleSlotIdsByType([[maybe_unused]] const JE::Editor::Tools::GraphCanvas::ConnectionType& connectionType, [[maybe_unused]] const JE::Editor::Tools::GraphCanvas::SlotType& slotType) const
     {
-        AZStd::vector<GraphCanvas::SlotId> empty;
+        AZStd::vector<JE::Editor::Tools::GraphCanvas::SlotId> empty;
         return empty;
     }
 
@@ -365,7 +365,7 @@ namespace MockGraphCanvasServices
 
         for (auto slotId : m_slotIds)
         {
-            GraphCanvas::SlotRequestBus::EventResult(hasConnections, slotId, &GraphCanvas::SlotRequests::HasConnections);
+            JE::Editor::Tools::GraphCanvas::SlotRequestBus::EventResult(hasConnections, slotId, &JE::Editor::Tools::GraphCanvas::SlotRequests::HasConnections);
 
             if (hasConnections)
             {
@@ -403,9 +403,9 @@ namespace MockGraphCanvasServices
     {
     }
 
-    GraphCanvas::RootGraphicsItemEnabledState MockNodeComponent::UpdateEnabledState()
+    JE::Editor::Tools::GraphCanvas::RootGraphicsItemEnabledState MockNodeComponent::UpdateEnabledState()
     {
-        return GraphCanvas::RootGraphicsItemEnabledState::ES_Enabled;
+        return JE::Editor::Tools::GraphCanvas::RootGraphicsItemEnabledState::ES_Enabled;
     }
 
     bool MockNodeComponent::IsHidingUnusedSlots() const
@@ -426,7 +426,7 @@ namespace MockGraphCanvasServices
         return false;
     }
 
-    void MockNodeComponent::SignalConnectionMoveBegin([[maybe_unused]] const GraphCanvas::ConnectionId& connectionId)
+    void MockNodeComponent::SignalConnectionMoveBegin([[maybe_unused]] const JE::Editor::Tools::GraphCanvas::ConnectionId& connectionId)
     {
     }
     
@@ -447,11 +447,11 @@ namespace MockGraphCanvasServices
 
     void MockGraphCanvasSystemComponent::Activate()
     {
-        GraphCanvas::GraphCanvasRequestBus::Handler::BusConnect();
+        JE::Editor::Tools::GraphCanvas::GraphCanvasRequestBus::Handler::BusConnect();
     }
     void MockGraphCanvasSystemComponent::Deactivate()
     {
-        GraphCanvas::GraphCanvasRequestBus::Handler::BusDisconnect();
+        JE::Editor::Tools::GraphCanvas::GraphCanvasRequestBus::Handler::BusDisconnect();
     }
 
     AZ::Entity* MockGraphCanvasSystemComponent::CreateBookmarkAnchor() const
@@ -493,22 +493,22 @@ namespace MockGraphCanvasServices
         return nullptr;
     }
 
-    AZ::Entity* MockGraphCanvasSystemComponent::CreateCollapsedNodeGroup([[maybe_unused]] const GraphCanvas::CollapsedNodeGroupConfiguration& groupedNodeConfiguration) const
+    AZ::Entity* MockGraphCanvasSystemComponent::CreateCollapsedNodeGroup([[maybe_unused]] const JE::Editor::Tools::GraphCanvas::CollapsedNodeGroupConfiguration& groupedNodeConfiguration) const
     {
         return nullptr;
     }
 
-    AZ::Entity* MockGraphCanvasSystemComponent::CreateSlot(const AZ::EntityId& nodeId, const GraphCanvas::SlotConfiguration& slotConfiguration) const
+    AZ::Entity* MockGraphCanvasSystemComponent::CreateSlot(const AZ::EntityId& nodeId, const JE::Editor::Tools::GraphCanvas::SlotConfiguration& slotConfiguration) const
     {
-        if (const GraphCanvas::DataSlotConfiguration* dataSlotConfiguration = azrtti_cast<const GraphCanvas::DataSlotConfiguration*>(&slotConfiguration))
+        if (const JE::Editor::Tools::GraphCanvas::DataSlotConfiguration* dataSlotConfiguration = azrtti_cast<const JE::Editor::Tools::GraphCanvas::DataSlotConfiguration*>(&slotConfiguration))
         {
             return MockDataSlotComponent::CreateDataSlot((*dataSlotConfiguration));
         }
-        else if (const GraphCanvas::ExecutionSlotConfiguration* executionSlotConfiguration = azrtti_cast<const GraphCanvas::ExecutionSlotConfiguration*>(&slotConfiguration))
+        else if (const JE::Editor::Tools::GraphCanvas::ExecutionSlotConfiguration* executionSlotConfiguration = azrtti_cast<const JE::Editor::Tools::GraphCanvas::ExecutionSlotConfiguration*>(&slotConfiguration))
         {
             return MockExecutionSlotComponent::CreateExecutionSlot(nodeId, (*executionSlotConfiguration));
         }
-        else if (const GraphCanvas::ExtenderSlotConfiguration* extenderSlotConfiguration = azrtti_cast<const GraphCanvas::ExtenderSlotConfiguration*>(&slotConfiguration))
+        else if (const JE::Editor::Tools::GraphCanvas::ExtenderSlotConfiguration* extenderSlotConfiguration = azrtti_cast<const JE::Editor::Tools::GraphCanvas::ExtenderSlotConfiguration*>(&slotConfiguration))
         {
             return MockExtenderSlotComponent::CreateExtenderSlot(nodeId, (*extenderSlotConfiguration));
         }
@@ -520,47 +520,47 @@ namespace MockGraphCanvasServices
         return nullptr;
     }
 
-    GraphCanvas::NodePropertyDisplay* MockGraphCanvasSystemComponent::CreateBooleanNodePropertyDisplay([[maybe_unused]] GraphCanvas::BooleanDataInterface* dataInterface) const
+    JE::Editor::Tools::GraphCanvas::NodePropertyDisplay* MockGraphCanvasSystemComponent::CreateBooleanNodePropertyDisplay([[maybe_unused]] JE::Editor::Tools::GraphCanvas::BooleanDataInterface* dataInterface) const
     {
         return nullptr;
     }
 
-    GraphCanvas::NodePropertyDisplay* MockGraphCanvasSystemComponent::CreateNumericNodePropertyDisplay([[maybe_unused]] GraphCanvas::NumericDataInterface* dataInterface) const
+    JE::Editor::Tools::GraphCanvas::NodePropertyDisplay* MockGraphCanvasSystemComponent::CreateNumericNodePropertyDisplay([[maybe_unused]] JE::Editor::Tools::GraphCanvas::NumericDataInterface* dataInterface) const
     {
         return nullptr;
     }
 
-    GraphCanvas::NodePropertyDisplay* MockGraphCanvasSystemComponent::CreateComboBoxNodePropertyDisplay([[maybe_unused]] GraphCanvas::ComboBoxDataInterface* dataInterface) const
+    JE::Editor::Tools::GraphCanvas::NodePropertyDisplay* MockGraphCanvasSystemComponent::CreateComboBoxNodePropertyDisplay([[maybe_unused]] JE::Editor::Tools::GraphCanvas::ComboBoxDataInterface* dataInterface) const
     {
         return nullptr;
     }
 
-    GraphCanvas::NodePropertyDisplay* MockGraphCanvasSystemComponent::CreateEntityIdNodePropertyDisplay([[maybe_unused]] GraphCanvas::EntityIdDataInterface* dataInterface) const
+    JE::Editor::Tools::GraphCanvas::NodePropertyDisplay* MockGraphCanvasSystemComponent::CreateEntityIdNodePropertyDisplay([[maybe_unused]] JE::Editor::Tools::GraphCanvas::EntityIdDataInterface* dataInterface) const
     {
         return nullptr;
     }
 
-    GraphCanvas::NodePropertyDisplay* MockGraphCanvasSystemComponent::CreateReadOnlyNodePropertyDisplay([[maybe_unused]] GraphCanvas::ReadOnlyDataInterface* dataInterface) const
+    JE::Editor::Tools::GraphCanvas::NodePropertyDisplay* MockGraphCanvasSystemComponent::CreateReadOnlyNodePropertyDisplay([[maybe_unused]] JE::Editor::Tools::GraphCanvas::ReadOnlyDataInterface* dataInterface) const
     {
         return nullptr;
     }
 
-    GraphCanvas::NodePropertyDisplay* MockGraphCanvasSystemComponent::CreateStringNodePropertyDisplay([[maybe_unused]] GraphCanvas::StringDataInterface* dataInterface) const
+    JE::Editor::Tools::GraphCanvas::NodePropertyDisplay* MockGraphCanvasSystemComponent::CreateStringNodePropertyDisplay([[maybe_unused]] JE::Editor::Tools::GraphCanvas::StringDataInterface* dataInterface) const
     {
         return nullptr;
     }
 
-    GraphCanvas::NodePropertyDisplay* MockGraphCanvasSystemComponent::CreateVectorNodePropertyDisplay([[maybe_unused]] GraphCanvas::VectorDataInterface* dataInterface) const
+    JE::Editor::Tools::GraphCanvas::NodePropertyDisplay* MockGraphCanvasSystemComponent::CreateVectorNodePropertyDisplay([[maybe_unused]] JE::Editor::Tools::GraphCanvas::VectorDataInterface* dataInterface) const
     {
         return nullptr;
     }
 
-    GraphCanvas::NodePropertyDisplay* MockGraphCanvasSystemComponent::CreateAssetIdNodePropertyDisplay([[maybe_unused]] GraphCanvas::AssetIdDataInterface* dataInterface) const
+    JE::Editor::Tools::GraphCanvas::NodePropertyDisplay* MockGraphCanvasSystemComponent::CreateAssetIdNodePropertyDisplay([[maybe_unused]] JE::Editor::Tools::GraphCanvas::AssetIdDataInterface* dataInterface) const
     {
         return nullptr;
     }
 
-    AZ::Entity* MockGraphCanvasSystemComponent::CreatePropertySlot([[maybe_unused]] const AZ::EntityId& nodeId, [[maybe_unused]] const AZ::Crc32& propertyId, [[maybe_unused]] const GraphCanvas::SlotConfiguration& slotConfiguration) const
+    AZ::Entity* MockGraphCanvasSystemComponent::CreatePropertySlot([[maybe_unused]] const AZ::EntityId& nodeId, [[maybe_unused]] const AZ::Crc32& propertyId, [[maybe_unused]] const JE::Editor::Tools::GraphCanvas::SlotConfiguration& slotConfiguration) const
     {
         return nullptr;
     }

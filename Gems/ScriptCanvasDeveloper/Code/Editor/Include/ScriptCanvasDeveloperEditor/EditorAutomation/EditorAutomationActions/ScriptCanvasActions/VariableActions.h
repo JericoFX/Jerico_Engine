@@ -14,9 +14,9 @@
 #include <QString>
 #include <QWidget>
 
-#include <GraphCanvas/Types/Endpoint.h>
-#include <GraphCanvas/Types/Types.h>
-#include <GraphCanvas/Widgets/NodePalette/NodePaletteWidget.h>
+#include <JE/Editor/Tools/GraphCanvas/Types/Endpoint.h>
+#include <JE/Editor/Tools/GraphCanvas/Types/Types.h>
+#include <JE/Editor/Tools/GraphCanvas/Widgets/NodePalette/NodePaletteWidget.h>
 
 #include <ScriptCanvas/Core/Datum.h>
 #include <ScriptCanvas/Variable/VariableCore.h>
@@ -84,13 +84,13 @@ namespace ScriptCanvas::Developer
     */
     class CreateVariableNodeFromGraphPalette
         : public CompoundAction
-        , public GraphCanvas::SceneNotificationBus::Handler
+        , public JE::Editor::Tools::GraphCanvas::SceneNotificationBus::Handler
     {
     public:
         AZ_CLASS_ALLOCATOR(CreateVariableNodeFromGraphPalette, AZ::SystemAllocator);
         AZ_RTTI(CreateVariableNodeFromGraphPalette, "{B0E36790-2BED-4338-A462-7F302AFA5671}", CompoundAction);
 
-        CreateVariableNodeFromGraphPalette(const AZStd::string& variableName, const GraphCanvas::GraphId& graphId, QPoint scenePoint, Qt::KeyboardModifier = Qt::KeyboardModifier::ShiftModifier);
+        CreateVariableNodeFromGraphPalette(const AZStd::string& variableName, const JE::Editor::Tools::GraphCanvas::GraphId& graphId, QPoint scenePoint, Qt::KeyboardModifier = Qt::KeyboardModifier::ShiftModifier);
         ~CreateVariableNodeFromGraphPalette() override = default;
 
         bool IsMissingPrecondition() override;
@@ -124,8 +124,8 @@ namespace ScriptCanvas::Developer
 
         AZStd::string m_variableName;
 
-        GraphCanvas::GraphId m_graphId;
-        GraphCanvas::ViewId m_viewId;
+        JE::Editor::Tools::GraphCanvas::GraphId m_graphId;
+        JE::Editor::Tools::GraphCanvas::ViewId m_viewId;
         QPoint m_scenePoint;
 
         AZ::EntityId m_createdNodeId;

@@ -15,10 +15,10 @@
 #include <QPixmap>
 
 // Graph Canvas
-#include <GraphCanvas/Components/EntitySaveDataBus.h>
-#include <GraphCanvas/Components/SceneBus.h>
-#include <GraphCanvas/Components/Slots/SlotBus.h>
-#include <GraphCanvas/Editor/GraphModelBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/EntitySaveDataBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/SceneBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/Slots/SlotBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Editor/GraphModelBus.h>
 
 // Graph Model
 #include <JE/Editor/Tools/GraphModel/GraphModelBus.h>
@@ -34,9 +34,9 @@ namespace JE::Editor::Tools::GraphModel::Integration
 
     //! This is the main class for binding the node graph data to the UI provided by Graph Canvas
     class GraphController
-        : private GraphCanvas::GraphModelRequestBus::Handler
-        , private GraphCanvas::SceneNotificationBus::Handler
-        , public GraphCanvas::EntitySaveDataRequestBus::Router
+        : private JE::Editor::Tools::GraphCanvas::GraphModelRequestBus::Handler
+        , private JE::Editor::Tools::GraphCanvas::SceneNotificationBus::Handler
+        , public JE::Editor::Tools::GraphCanvas::EntitySaveDataRequestBus::Router
         , public GraphControllerRequestBus::Handler
     {
     public:
@@ -57,7 +57,7 @@ namespace JE::Editor::Tools::GraphModel::Integration
         //! Adds a node to the Graph and creates the corresponding Graph Canvas UI elements
         //! \param node  The node to add. This should be a freshly created Node that hasn't been added to the Graph yet.
         //! \param sceneDropPosition  The position in the Graph Cavnas scene where the Node was dropped
-        GraphCanvas::NodeId AddNode(JE::Editor::Tools::GraphModel::NodePtr node, AZ::Vector2& sceneDropPosition) override;
+        JE::Editor::Tools::GraphCanvas::NodeId AddNode(JE::Editor::Tools::GraphModel::NodePtr node, AZ::Vector2& sceneDropPosition) override;
         bool RemoveNode(JE::Editor::Tools::GraphModel::NodePtr node) override;
         AZ::Vector2 GetPosition(JE::Editor::Tools::GraphModel::NodePtr node) const override;
 
@@ -85,10 +85,10 @@ namespace JE::Editor::Tools::GraphModel::Integration
 
         JE::Editor::Tools::GraphModel::SlotId ExtendSlot(JE::Editor::Tools::GraphModel::NodePtr node, const JE::Editor::Tools::GraphModel::SlotName& slotName) override;
 
-        JE::Editor::Tools::GraphModel::NodePtr GetNodeById(const GraphCanvas::NodeId& nodeId) override;
-        JE::Editor::Tools::GraphModel::NodePtrList GetNodesFromGraphNodeIds(const AZStd::vector<GraphCanvas::NodeId>& nodeIds) override;
-        GraphCanvas::NodeId GetNodeIdByNode(JE::Editor::Tools::GraphModel::NodePtr node) const override;
-        GraphCanvas::SlotId GetSlotIdBySlot(JE::Editor::Tools::GraphModel::SlotPtr slot) const override;
+        JE::Editor::Tools::GraphModel::NodePtr GetNodeById(const JE::Editor::Tools::GraphCanvas::NodeId& nodeId) override;
+        JE::Editor::Tools::GraphModel::NodePtrList GetNodesFromGraphNodeIds(const AZStd::vector<JE::Editor::Tools::GraphCanvas::NodeId>& nodeIds) override;
+        JE::Editor::Tools::GraphCanvas::NodeId GetNodeIdByNode(JE::Editor::Tools::GraphModel::NodePtr node) const override;
+        JE::Editor::Tools::GraphCanvas::SlotId GetSlotIdBySlot(JE::Editor::Tools::GraphModel::SlotPtr slot) const override;
 
         JE::Editor::Tools::GraphModel::NodePtrList GetNodes() override;
         JE::Editor::Tools::GraphModel::NodePtrList GetSelectedNodes() override;
@@ -150,22 +150,22 @@ namespace JE::Editor::Tools::GraphModel::Integration
         void OnNodeRemoved(const AZ::EntityId& nodeUiId) override;
         void OnConnectionAdded(const AZ::EntityId& connectionUiId) override;
         void OnConnectionRemoved(const AZ::EntityId& connectionUiId) override;
-        void OnEntitiesSerialized(GraphCanvas::GraphSerialization& serializationTarget) override;
-        void OnEntitiesDeserialized(const GraphCanvas::GraphSerialization& serializationSource) override;
-        void OnEntitiesDeserializationComplete(const GraphCanvas::GraphSerialization& serializationSource) override;
+        void OnEntitiesSerialized(JE::Editor::Tools::GraphCanvas::GraphSerialization& serializationTarget) override;
+        void OnEntitiesDeserialized(const JE::Editor::Tools::GraphCanvas::GraphSerialization& serializationSource) override;
+        void OnEntitiesDeserializationComplete(const JE::Editor::Tools::GraphCanvas::GraphSerialization& serializationSource) override;
         void OnNodeIsBeingEdited(bool isBeingEditeed) override;
         void OnSelectionChanged() override;
 
         ////////////////////////////////////////////////////////////////////////////////////
         // GraphCanvas::EntitySaveDataRequestBus::Router
-        void WriteSaveData(GraphCanvas::EntitySaveDataContainer& saveDataContainer) const override;
-        void ReadSaveData(const GraphCanvas::EntitySaveDataContainer& saveDataContainer) override;
+        void WriteSaveData(JE::Editor::Tools::GraphCanvas::EntitySaveDataContainer& saveDataContainer) const override;
+        void ReadSaveData(const JE::Editor::Tools::GraphCanvas::EntitySaveDataContainer& saveDataContainer) override;
 
         ////////////////////////////////////////////////////////////////////////////////////
         // GraphCanvas::GraphModelRequestBus, connections
         void DisconnectConnection([[maybe_unused]] const AZ::EntityId& connectionUiId) override {}
-        bool CreateConnection(const AZ::EntityId& connectionUiId, const GraphCanvas::Endpoint& sourcePoint, const GraphCanvas::Endpoint& targetPoint) override;
-        bool IsValidConnection(const GraphCanvas::Endpoint& sourcePoint, const GraphCanvas::Endpoint& targetPoint) const override;
+        bool CreateConnection(const AZ::EntityId& connectionUiId, const JE::Editor::Tools::GraphCanvas::Endpoint& sourcePoint, const JE::Editor::Tools::GraphCanvas::Endpoint& targetPoint) override;
+        bool IsValidConnection(const JE::Editor::Tools::GraphCanvas::Endpoint& sourcePoint, const JE::Editor::Tools::GraphCanvas::Endpoint& targetPoint) const override;
 
         ////////////////////////////////////////////////////////////////////////////////////
         // GraphCanvas::GraphModelRequestBus, undo
@@ -177,8 +177,8 @@ namespace JE::Editor::Tools::GraphModel::Integration
 
         ////////////////////////////////////////////////////////////////////////////////////
         // GraphCanvas::GraphModelRequestBus, other
-        void EnableNodes(const AZStd::unordered_set<GraphCanvas::NodeId>& nodeIds) override;
-        void DisableNodes(const AZStd::unordered_set<GraphCanvas::NodeId>& nodeIds) override;
+        void EnableNodes(const AZStd::unordered_set<JE::Editor::Tools::GraphCanvas::NodeId>& nodeIds) override;
+        void DisableNodes(const AZStd::unordered_set<JE::Editor::Tools::GraphCanvas::NodeId>& nodeIds) override;
 
         AZStd::string GetDataTypeString(const AZ::Uuid& typeId) override;
 
@@ -188,31 +188,31 @@ namespace JE::Editor::Tools::GraphModel::Integration
         void OnRemoveUnusedNodes() override {}
         void OnRemoveUnusedElements() override {}
 
-        void ResetSlotToDefaultValue(const GraphCanvas::Endpoint& endpoint) override;
+        void ResetSlotToDefaultValue(const JE::Editor::Tools::GraphCanvas::Endpoint& endpoint) override;
 
         /// Extendable slot handlers
-        void RemoveSlot(const GraphCanvas::Endpoint& endpoint) override;
-        bool IsSlotRemovable(const GraphCanvas::Endpoint& endpoint) const override;
-        GraphCanvas::SlotId RequestExtension(
-            const GraphCanvas::NodeId& nodeId,
-            const GraphCanvas::ExtenderId& extenderId,
+        void RemoveSlot(const JE::Editor::Tools::GraphCanvas::Endpoint& endpoint) override;
+        bool IsSlotRemovable(const JE::Editor::Tools::GraphCanvas::Endpoint& endpoint) const override;
+        JE::Editor::Tools::GraphCanvas::SlotId RequestExtension(
+            const JE::Editor::Tools::GraphCanvas::NodeId& nodeId,
+            const JE::Editor::Tools::GraphCanvas::ExtenderId& extenderId,
             GraphModelRequests::ExtensionRequestReason) override;
 
-        bool ShouldWrapperAcceptDrop(const GraphCanvas::NodeId& wrapperNode, const QMimeData* mimeData) const override;
-        void AddWrapperDropTarget(const GraphCanvas::NodeId& wrapperNode) override;
-        void RemoveWrapperDropTarget(const GraphCanvas::NodeId& wrapperNode) override;
+        bool ShouldWrapperAcceptDrop(const JE::Editor::Tools::GraphCanvas::NodeId& wrapperNode, const QMimeData* mimeData) const override;
+        void AddWrapperDropTarget(const JE::Editor::Tools::GraphCanvas::NodeId& wrapperNode) override;
+        void RemoveWrapperDropTarget(const JE::Editor::Tools::GraphCanvas::NodeId& wrapperNode) override;
 
         ////////////////////////////////////////////////////////////////////////////////////
         // GraphCanvas::GraphModelRequestBus, node properties
 
         //! Creates a GraphCanvas::NodePropertyDisplay and a data interface for editing input values
-        GraphCanvas::NodePropertyDisplay* CreateDataSlotPropertyDisplay(
-            const AZ::Uuid& dataType, const GraphCanvas::NodeId& nodeId, const GraphCanvas::SlotId& slotId) const override;
-        GraphCanvas::NodePropertyDisplay* CreatePropertySlotPropertyDisplay(
-            const AZ::Crc32& propertyId, const GraphCanvas::NodeId& nodeUiId, const GraphCanvas::SlotId& slotUiId) const override;
+        JE::Editor::Tools::GraphCanvas::NodePropertyDisplay* CreateDataSlotPropertyDisplay(
+            const AZ::Uuid& dataType, const JE::Editor::Tools::GraphCanvas::NodeId& nodeId, const JE::Editor::Tools::GraphCanvas::SlotId& slotId) const override;
+        JE::Editor::Tools::GraphCanvas::NodePropertyDisplay* CreatePropertySlotPropertyDisplay(
+            const AZ::Crc32& propertyId, const JE::Editor::Tools::GraphCanvas::NodeId& nodeUiId, const JE::Editor::Tools::GraphCanvas::SlotId& slotUiId) const override;
 
         //! Common implementation for CreateDataSlotPropertyDisplay and CreatePropertySlotPropertyDisplay
-        GraphCanvas::NodePropertyDisplay* CreateSlotPropertyDisplay(JE::Editor::Tools::GraphModel::SlotPtr inputSlot) const;
+        JE::Editor::Tools::GraphCanvas::NodePropertyDisplay* CreateSlotPropertyDisplay(JE::Editor::Tools::GraphModel::SlotPtr inputSlot) const;
 
         ////////////////////////////////////////////////////////////////////////////////////
 
@@ -296,7 +296,7 @@ namespace JE::Editor::Tools::GraphModel::Integration
         AZ::EntityId m_graphCanvasSceneId;
 
         AZStd::unordered_map<JE::Editor::Tools::GraphModel::NodeId, JE::Editor::Tools::GraphModel::Integration::ThumbnailItem*> m_nodeThumbnails;
-        AZStd::unordered_map<GraphCanvas::NodeId, AZStd::unordered_map<GraphCanvas::ExtenderId, JE::Editor::Tools::GraphModel::SlotName>> m_nodeExtenderIds;
+        AZStd::unordered_map<JE::Editor::Tools::GraphCanvas::NodeId, AZStd::unordered_map<JE::Editor::Tools::GraphCanvas::ExtenderId, JE::Editor::Tools::GraphModel::SlotName>> m_nodeExtenderIds;
 
         bool m_isCreatingConnectionUi = false;
         int m_preventUndoStateUpdateCount = 0;

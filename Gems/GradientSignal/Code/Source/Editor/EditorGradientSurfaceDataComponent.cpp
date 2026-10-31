@@ -13,7 +13,7 @@
 #include <AzFramework/Translation/TranslationDef.h>
 #include <LmbrCentral/Dependency/DependencyNotificationBus.h>
 #include <GradientSignal/Ebuses/GradientPreviewRequestBus.h>
-#include <SurfaceData/SurfacePointList.h>
+#include <JE/Geometry/SurfaceData/SurfacePointList.h>
 
 namespace GradientSignal
 {
@@ -111,11 +111,11 @@ namespace GradientSignal
             AzFramework::SurfaceData::SurfacePoint point;
             point.m_position = params.m_position;
             point.m_normal = AZ::Vector3::CreateAxisZ();
-            SurfaceData::SurfacePointList pointList;
+            JE::Geometry::SurfaceData::SurfacePointList pointList;
 
             // Get the Surface Modifier handle for this component.
-            SurfaceData::SurfaceDataRegistryHandle modifierHandle = SurfaceData::InvalidSurfaceDataRegistryHandle;
-            modifierHandle = AZ::Interface<SurfaceData::SurfaceDataSystem>::Get()->GetSurfaceDataModifierHandle(m_component.GetEntityId());
+            JE::Geometry::SurfaceData::SurfaceDataRegistryHandle modifierHandle = JE::Geometry::SurfaceData::InvalidSurfaceDataRegistryHandle;
+            modifierHandle = AZ::Interface<JE::Geometry::SurfaceData::SurfaceDataSystem>::Get()->GetSurfaceDataModifierHandle(m_component.GetEntityId());
 
             // Send the fake surface point into the component, see what emerges
             pointList.StartListConstruction(AZStd::span<const AzFramework::SurfaceData::SurfacePoint>(&point, 1));
@@ -128,7 +128,7 @@ namespace GradientSignal
             float result = 0.0f;
             pointList.EnumeratePoints([&result](
                 [[maybe_unused]] size_t inPositionIndex, [[maybe_unused]] const AZ::Vector3& position,
-                [[maybe_unused]] const AZ::Vector3& normal, const SurfaceData::SurfaceTagWeights& masks) -> bool
+                [[maybe_unused]] const AZ::Vector3& normal, const JE::Geometry::SurfaceData::SurfaceTagWeights& masks) -> bool
             {
                 masks.EnumerateWeights(
                     [&result]([[maybe_unused]] AZ::Crc32 surfaceType, float weight) -> bool

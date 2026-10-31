@@ -12,9 +12,9 @@
 #include <AzCore/Serialization/EditContext.h>
 #include <AzCore/Serialization/SerializeContext.h>
 #include <AzFramework/Translation/TranslationDef.h>
-#include <SurfaceData/SurfaceDataSystemRequestBus.h>
-#include <SurfaceData/Utility/SurfaceDataUtility.h>
-#include <SurfaceData/MixedStackHeapAllocator.h>
+#include <JE/Geometry/SurfaceData/SurfaceDataSystemRequestBus.h>
+#include <JE/Geometry/SurfaceData/Utility/SurfaceDataUtility.h>
+#include <JE/Geometry/SurfaceData/MixedStackHeapAllocator.h>
 
 namespace GradientSignal
 {
@@ -91,7 +91,7 @@ namespace GradientSignal
 
     void GradientSurfaceDataConfig::AddTag(AZStd::string tag)
     {
-        m_modifierTags.push_back(SurfaceData::SurfaceTag(tag));
+        m_modifierTags.push_back(JE::Geometry::SurfaceData::SurfaceTag(tag));
     }
 
     void GradientSurfaceDataComponent::GetProvidedServices(AZ::ComponentDescriptor::DependencyArrayType& services)
@@ -181,9 +181,9 @@ namespace GradientSignal
         GradientSurfaceDataRequestBus::Handler::BusConnect(GetEntityId());
 
         // Register with the SurfaceData system and update our cached shape information if necessary.
-        m_modifierHandle = SurfaceData::InvalidSurfaceDataRegistryHandle;
+        m_modifierHandle = JE::Geometry::SurfaceData::InvalidSurfaceDataRegistryHandle;
         UpdateRegistryAndCache(m_modifierHandle);
-        SurfaceData::SurfaceDataModifierRequestBus::Handler::BusConnect(m_modifierHandle);
+        JE::Geometry::SurfaceData::SurfaceDataModifierRequestBus::Handler::BusConnect(m_modifierHandle);
     }
 
     void GradientSurfaceDataComponent::Deactivate()
@@ -192,9 +192,9 @@ namespace GradientSignal
 
         LmbrCentral::ShapeComponentNotificationsBus::Handler::BusDisconnect();
         LmbrCentral::DependencyNotificationBus::Handler::BusDisconnect();
-        AZ::Interface<SurfaceData::SurfaceDataSystem>::Get()->UnregisterSurfaceDataModifier(m_modifierHandle);
-        SurfaceData::SurfaceDataModifierRequestBus::Handler::BusDisconnect();
-        m_modifierHandle = SurfaceData::InvalidSurfaceDataRegistryHandle;
+        AZ::Interface<JE::Geometry::SurfaceData::SurfaceDataSystem>::Get()->UnregisterSurfaceDataModifier(m_modifierHandle);
+        JE::Geometry::SurfaceData::SurfaceDataModifierRequestBus::Handler::BusDisconnect();
+        m_modifierHandle = JE::Geometry::SurfaceData::InvalidSurfaceDataRegistryHandle;
     }
 
     bool GradientSurfaceDataComponent::ReadInConfig(const AZ::ComponentConfig* baseConfig)
@@ -220,7 +220,7 @@ namespace GradientSignal
     void GradientSurfaceDataComponent::ModifySurfacePoints(
             AZStd::span<const AZ::Vector3> positions,
             [[maybe_unused]] AZStd::span<const AZ::EntityId> creatorEntityIds,
-            AZStd::span<SurfaceData::SurfaceTagWeights> weights) const
+            AZStd::span<JE::Geometry::SurfaceData::SurfaceTagWeights> weights) const
     {
         AZ_Assert(
             (positions.size() == creatorEntityIds.size()) && (positions.size() == weights.size()),
@@ -248,7 +248,7 @@ namespace GradientSignal
         constexpr size_t SmallQuerySize = 16;
 
         // Start by assuming an unbounded surface modifier and default to allowing *all* points through the shape check.
-        AZStd::vector<bool, SurfaceData::mixed_stack_heap_allocator<bool, SmallQuerySize>> inBounds;
+        AZStd::vector<bool, JE::Geometry::SurfaceData::mixed_stack_heap_allocator<bool, SmallQuerySize>> inBounds;
 
         // If we have an optional shape bounds, adjust the inBounds flags based on whether or not each point is inside the bounds.
         if (shapeConstraintBounds.IsValid())
@@ -272,7 +272,7 @@ namespace GradientSignal
         }
 
         // Get all of the potential gradient values in one bulk call.
-        AZStd::vector<float, SurfaceData::mixed_stack_heap_allocator<float, SmallQuerySize>> gradientValues(positions.size());
+        AZStd::vector<float, JE::Geometry::SurfaceData::mixed_stack_heap_allocator<float, SmallQuerySize>> gradientValues(positions.size());
         m_gradientSampler.GetValues(positions, gradientValues);
 
         for (size_t index = 0; index < positions.size(); index++)
@@ -339,10 +339,10 @@ namespace GradientSignal
         LmbrCentral::DependencyNotificationBus::Event(GetEntityId(), &LmbrCentral::DependencyNotificationBus::Events::OnCompositionChanged);
     }
 
-    void GradientSurfaceDataComponent::UpdateRegistryAndCache(SurfaceData::SurfaceDataRegistryHandle& registryHandle)
+    void GradientSurfaceDataComponent::UpdateRegistryAndCache(JE::Geometry::SurfaceData::SurfaceDataRegistryHandle& registryHandle)
     {
         // Set up the registry information for this component.
-        SurfaceData::SurfaceDataRegistryEntry registryEntry;
+        JE::Geometry::SurfaceData::SurfaceDataRegistryEntry registryEntry;
         registryEntry.m_entityId = GetEntityId();
         registryEntry.m_tags = m_configuration.m_modifierTags;
         registryEntry.m_bounds = AZ::Aabb::CreateNull();
@@ -363,15 +363,15 @@ namespace GradientSignal
 
         // If this is our first time calling this, we need to register with the SurfaceData system.  On subsequent
         // calls, just update the entry that already exists.
-        if (registryHandle == SurfaceData::InvalidSurfaceDataRegistryHandle)
+        if (registryHandle == JE::Geometry::SurfaceData::InvalidSurfaceDataRegistryHandle)
         {
             // Register with the SurfaceData system and get a valid registryHandle.
-            registryHandle = AZ::Interface<SurfaceData::SurfaceDataSystem>::Get()->RegisterSurfaceDataModifier(registryEntry);
+            registryHandle = AZ::Interface<JE::Geometry::SurfaceData::SurfaceDataSystem>::Get()->RegisterSurfaceDataModifier(registryEntry);
         }
         else
         {
             // Update the registry entry with the SurfaceData system using the existing registryHandle.
-            AZ::Interface<SurfaceData::SurfaceDataSystem>::Get()->UpdateSurfaceDataModifier(registryHandle, registryEntry);
+            AZ::Interface<JE::Geometry::SurfaceData::SurfaceDataSystem>::Get()->UpdateSurfaceDataModifier(registryHandle, registryEntry);
         }
     }
 

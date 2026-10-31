@@ -87,9 +87,10 @@ if(PAL_TRAIT_BUILD_TESTS_SUPPORTED)
         NAMESPACE JE
         FILES_CMAKE render_asset_builders_tests_files.cmake
         INCLUDE_DIRECTORIES PRIVATE Tests Source
+        COMPILE_DEFINITIONS PRIVATE JE_RENDER_ASSET_BUILDERS_EXPORTS
         BUILD_DEPENDENCIES PRIVATE
             AZ::AzTest AZ::AzFramework
-            JE::RenderAssetBuilders.Private.Object JE::RenderAssetBuilders
+            JE::RenderAssetBuilders.Private.Object JE::SceneProcessing.Private.Object JE::RenderAssetBuilders
     )
     set_target_properties(RenderAssetBuilders.Tests PROPERTIES UNITY_BUILD OFF)
     ly_add_googletest(NAME JE::RenderAssetBuilders.Tests LABELS REQUIRES_tiaf)

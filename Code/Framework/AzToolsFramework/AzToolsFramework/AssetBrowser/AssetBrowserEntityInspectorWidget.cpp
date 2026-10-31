@@ -7,6 +7,8 @@
  */
 
 #include <AzCore/Asset/AssetTypeInfoBus.h>
+#include <AzCore/EBus/Results.h>
+#include <AzCore/std/functional.h>
 #include <AzQtComponents/Components/Widgets/CardHeader.h>
 #include <AzQtComponents/Components/Widgets/SegmentBar.h>
 #include <AzToolsFramework/API/AssetDatabaseBus.h>
@@ -211,7 +213,13 @@ namespace AzToolsFramework
             m_detailsWidget = new QWidget(m_settingsSwitcher);
             m_detailsWidget->setLayout(cardLayout);
             m_settingsSwitcher->addWidget(m_detailsWidget);
-            AssetBrowserPreviewRequestBus::BroadcastResult(m_sceneSettings, &AssetBrowserPreviewRequest::GetSceneSettings);
+            // This bus has unrelated providers whose default nullptr must not erase a supported window.
+            AZ::EBusAggregateResults<QMainWindow*> sceneSettings;
+            AssetBrowserPreviewRequestBus::BroadcastResult(sceneSettings, &AssetBrowserPreviewRequest::GetSceneSettings);
+            for (QMainWindow* window : sceneSettings.values)
+            {
+                if (window) { m_sceneSettings = window; break; }
+            }
             if (m_sceneSettings)
             {
                 m_settingsSwitcher->addWidget(m_sceneSettings);
@@ -557,10 +565,11 @@ namespace AzToolsFramework
 
             if (m_sceneSettings)
             {
-                bool validSceneSettings = false;
+                // HandleSource is a capability query: a default false is not a veto from another provider.
+                AZ::EBusReduceResult<bool, AZStd::logical_or<bool>> validSceneSettings(false);
                 AssetBrowserPreviewRequestBus::BroadcastResult(
                     validSceneSettings, &AssetBrowserPreviewRequest::HandleSource, selectedEntry);
-                if (validSceneSettings)
+                if (validSceneSettings.value)
                 {
                     QString defaultSettings = fileType.isEmpty() ? "Scene" : fileType;
                     m_sceneSettingsButton->setText(QObject::tr("%1 Settings").arg(fileType.toUpper()));

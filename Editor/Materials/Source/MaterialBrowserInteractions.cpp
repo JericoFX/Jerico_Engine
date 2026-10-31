@@ -45,7 +45,21 @@
 #include <AzCore/Utils/Utils.h>
 #include <AzCore/std/containers/array.h>
 #include <AzCore/std/optional.h>
+#include <AzCore/Interface/Interface.h>
 #include <AzToolsFramework/AssetBrowser/AssetBrowserModel.h>
+#include <AzToolsFramework/AssetBrowser/Entries/AssetBrowserEntryUtils.h>
+#include <AzToolsFramework/AssetBrowser/Entries/ProductAssetBrowserEntry.h>
+#include <AzQtComponents/DragAndDrop/ViewportDragAndDrop.h>
+#include <JE/Geometry/EditorWhiteBoxComponentBus.h>
+#include <JE/Render/Materials/MaterialComponentBus.h>
+#include <JE/Render/Materials/MaterialComponentConstants.h>
+#include <AzToolsFramework/API/EntityCompositionRequestBus.h>
+#include <AzToolsFramework/Entity/EditorEntityInfoBus.h>
+#include <AzToolsFramework/Entity/EditorEntityHelpers.h>
+#include <AzToolsFramework/Entity/ReadOnly/ReadOnlyEntityInterface.h>
+#include <QDragEnterEvent>
+#include <QDragMoveEvent>
+#include <QDropEvent>
 #if defined(AZ_PLATFORM_LINUX)
 #include <sys/stat.h>
 #endif
@@ -573,11 +587,187 @@ namespace JE
         MaterialBrowserInteractions::MaterialBrowserInteractions()
         {
             AzToolsFramework::AssetBrowser::AssetBrowserInteractionNotificationBus::Handler::BusConnect();
+            AzQtComponents::DragAndDropEventsBus::Handler::BusConnect(AzQtComponents::DragAndDropContexts::EditorViewport);
         }
 
         MaterialBrowserInteractions::~MaterialBrowserInteractions()
         {
+            AzQtComponents::DragAndDropEventsBus::Handler::BusDisconnect();
             AzToolsFramework::AssetBrowser::AssetBrowserInteractionNotificationBus::Handler::BusDisconnect();
+        }
+
+        int MaterialBrowserInteractions::GetDragAndDropEventsPriority() const
+        {
+            return AzQtComponents::CommonDragAndDropBusTraits::s_HighPriority;
+        }
+
+        void MaterialBrowserInteractions::DragEnter(QDragEnterEvent* event, AzQtComponents::DragAndDropContextBase& context)
+        {
+            HandleMaterialDrop(event, context, false);
+        }
+
+        void MaterialBrowserInteractions::DragMove(QDragMoveEvent* event, AzQtComponents::DragAndDropContextBase& context)
+        {
+            HandleMaterialDrop(event, context, false);
+        }
+
+        void MaterialBrowserInteractions::Drop(QDropEvent* event, AzQtComponents::DragAndDropContextBase& context)
+        {
+            HandleMaterialDrop(event, context, true);
+        }
+
+        void MaterialBrowserInteractions::HandleMaterialDrop(
+            QDropEvent* event, AzQtComponents::DragAndDropContextBase& context, bool apply)
+        {
+            using namespace AzToolsFramework::AssetBrowser;
+            auto* viewport = azrtti_cast<AzQtComponents::ViewportDragContext*>(&context);
+            if (!event || event->isAccepted() || !viewport)
+            {
+                return;
+            }
+            AZStd::vector<const AssetBrowserEntry*> entries;
+            if (!Utils::FromMimeData(event->mimeData(), entries))
+            {
+                return;
+            }
+            AZStd::vector<const ProductAssetBrowserEntry*> materials;
+            bool materialSource = false;
+            for (const auto* entry : entries)
+            {
+                const bool isMaterialSource = azrtti_istypeof<SourceAssetBrowserEntry>(entry) &&
+                    QString::fromUtf8(entry->GetFullPath().c_str()).endsWith(".material", Qt::CaseInsensitive);
+                materialSource |= isMaterialSource;
+                AZStd::vector<const ProductAssetBrowserEntry*> products;
+                if (const auto* product = azrtti_cast<const ProductAssetBrowserEntry*>(entry))
+                {
+                    products.push_back(product);
+                }
+                else if (isMaterialSource)
+                {
+                    entry->GetChildrenRecursively<ProductAssetBrowserEntry>(products);
+                }
+                for (const auto* product : products)
+                {
+                    if (product->GetAssetType() == azrtti_typeid<JE::Render::RPI::MaterialAsset>())
+                    {
+                        materials.push_back(product);
+                    }
+                }
+            }
+            if (materials.empty() && !materialSource)
+            {
+                return; // Preserve all non-material drop handlers.
+            }
+
+            // Consume unsupported material drops too: the generic handler must not create a material entity.
+            event->setDropAction(Qt::IgnoreAction);
+            event->setAccepted(true);
+            if (entries.size() != 1 || materials.size() != 1 || !materials.front()->GetAssetId().IsValid() ||
+                !viewport->m_hitEntityId.IsValid() ||
+                (!viewport->m_hitMaterialSlotId && !viewport->m_hitSurfaceId))
+            {
+                return;
+            }
+            bool locked = false;
+            AzToolsFramework::EditorEntityInfoRequestBus::EventResult(locked, viewport->m_hitEntityId,
+                &AzToolsFramework::EditorEntityInfoRequests::IsLocked);
+            auto* readOnly = AZ::Interface<AzToolsFramework::ReadOnlyEntityPublicInterface>::Get();
+            if (locked || (readOnly && readOnly->IsReadOnly(viewport->m_hitEntityId)))
+            {
+                return;
+            }
+            if (viewport->m_hitSurfaceId)
+            {
+                const AZ::EntityComponentIdPair target(viewport->m_hitEntityId, viewport->m_hitComponentId);
+                if (viewport->m_hitSurfaceId->IsNull() || viewport->m_hitComponentId == AZ::InvalidComponentId ||
+                    !JE::Geometry::EditorWhiteBoxComponentRequestBus::HasHandlers(target))
+                {
+                    return;
+                }
+                if (!apply)
+                {
+                    event->setDropAction(Qt::CopyAction);
+                    return;
+                }
+                bool queued = false;
+                AZStd::string error;
+                JE::Geometry::EditorWhiteBoxComponentRequestBus::EventResult(queued, target,
+                    &JE::Geometry::EditorWhiteBoxComponentRequests::RequestSurfaceMaterialAsset,
+                    *viewport->m_hitSurfaceId, materials.front()->GetAssetId(), error);
+                if (queued)
+                {
+                    event->setDropAction(Qt::CopyAction);
+                }
+                else
+                {
+                    AZ_Warning("MaterialBrowser", false, "Cannot assign surface material: %s", error.c_str());
+                }
+                return;
+            }
+            const auto slot = JE::Render::MaterialAssignmentId::CreateFromStableIdOnly(*viewport->m_hitMaterialSlotId);
+            JE::Render::MaterialAssignmentMap availableSlots;
+            JE::Render::MaterialConsumerRequestBus::EventResult(availableSlots, viewport->m_hitEntityId,
+                &JE::Render::MaterialConsumerRequests::GetDefaultMaterialMap);
+            if (availableSlots.find(slot) == availableSlots.end())
+            {
+                return;
+            }
+            if (!JE::Render::MaterialComponentRequestBus::HasHandlers(viewport->m_hitEntityId))
+            {
+                AZ::Entity::ComponentArrayType components;
+                AzToolsFramework::GetAllComponentsForEntity(viewport->m_hitEntityId, components);
+                for (const auto* component : components)
+                {
+                    if (component->RTTI_IsTypeOf(AZ::Uuid(JE::Render::EditorMaterialComponentTypeId)))
+                    {
+                        return; // Preserve a deliberately disabled or pending material component.
+                    }
+                }
+            }
+            event->setDropAction(Qt::CopyAction);
+            if (!apply)
+            {
+                return;
+            }
+            AZ::Data::AssetId previous;
+            JE::Render::MaterialComponentRequestBus::EventResult(previous, viewport->m_hitEntityId,
+                &JE::Render::MaterialComponentRequests::GetMaterialAssetId, slot);
+            if (previous == materials.front()->GetAssetId())
+            {
+                return;
+            }
+            AzToolsFramework::ScopedUndoBatch undo("Assign material to surface");
+            if (!JE::Render::MaterialComponentRequestBus::HasHandlers(viewport->m_hitEntityId))
+            {
+                AzToolsFramework::EntityCompositionRequests::AddComponentsOutcome added =
+                    AZ::Failure(AZStd::string("Material component could not be added."));
+                const AzToolsFramework::EntityIdList entities{viewport->m_hitEntityId};
+                const AZ::ComponentTypeList types{AZ::Uuid(JE::Render::EditorMaterialComponentTypeId)};
+                AzToolsFramework::EntityCompositionRequestBus::BroadcastResult(added,
+                    &AzToolsFramework::EntityCompositionRequests::AddComponentsToEntities, entities, types);
+                if (!added.IsSuccess() || !JE::Render::MaterialComponentRequestBus::HasHandlers(viewport->m_hitEntityId))
+                {
+                    // Composition may return a pending component. Remove only what this drop added.
+                    if (added.IsSuccess())
+                    {
+                        const auto result = added.GetValue().find(viewport->m_hitEntityId);
+                        if (result != added.GetValue().end())
+                        {
+                            AzToolsFramework::EntityCompositionRequestBus::Broadcast(
+                                &AzToolsFramework::EntityCompositionRequests::RemoveComponents, result->second.m_componentsAdded);
+                        }
+                    }
+                    event->setDropAction(Qt::IgnoreAction);
+                    AZ_Warning("MaterialBrowser", false, "Cannot assign material: the surface has no active material component.");
+                    return;
+                }
+            }
+            AzToolsFramework::ToolsApplicationRequests::Bus::Broadcast(
+                &AzToolsFramework::ToolsApplicationRequests::AddDirtyEntity, viewport->m_hitEntityId);
+            JE::Render::MaterialComponentRequestBus::Event(viewport->m_hitEntityId,
+                &JE::Render::MaterialComponentRequests::SetMaterialAssetId, slot, materials.front()->GetAssetId());
+            JE::Render::MaterialComponentNotificationBus::Event(viewport->m_hitEntityId,
+                &JE::Render::MaterialComponentNotifications::OnMaterialsEdited);
         }
 
         void MaterialBrowserInteractions::AddContextMenuActions(

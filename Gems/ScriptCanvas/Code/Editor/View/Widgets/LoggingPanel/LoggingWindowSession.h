@@ -21,11 +21,11 @@ AZ_POP_DISABLE_WARNING
 #include <AzCore/Component/NamedEntityId.h>
 #include <AzCore/std/smart_ptr/unique_ptr.h>
 
-#include <GraphCanvas/Components/StyleBus.h>
-#include <GraphCanvas/Editor/AssetEditorBus.h>
-#include <GraphCanvas/Styling/StyleHelper.h>
-#include <GraphCanvas/Widgets/GraphCanvasTreeItem.h>
-#include <GraphCanvas/Widgets/GraphCanvasTreeModel.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/StyleBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Editor/AssetEditorBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Styling/StyleHelper.h>
+#include <JE/Editor/Tools/GraphCanvas/Widgets/GraphCanvasTreeItem.h>
+#include <JE/Editor/Tools/GraphCanvas/Widgets/GraphCanvasTreeModel.h>
 
 #include <Editor/View/Widgets/LoggingPanel/LoggingDataAggregator.h>
 #include <Editor/View/Widgets/LoggingPanel/LoggingWindowTreeItems.h>
@@ -62,8 +62,8 @@ namespace ScriptCanvasEditor
 
     class LoggingWindowSession
         : public QWidget
-        , public GraphCanvas::AssetEditorNotificationBus::Handler
-        , public GraphCanvas::SceneNotificationBus::Handler
+        , public JE::Editor::Tools::GraphCanvas::AssetEditorNotificationBus::Handler
+        , public JE::Editor::Tools::GraphCanvas::SceneNotificationBus::Handler
     {
         Q_OBJECT
     protected:
@@ -131,10 +131,10 @@ namespace ScriptCanvasEditor
 
         DebugLogRootItem*                   m_debugRoot;
 
-        GraphCanvas::GraphCanvasTreeModel*  m_treeModel;
+        JE::Editor::Tools::GraphCanvas::GraphCanvasTreeModel*  m_treeModel;
         LoggingWindowFilterModel*           m_filterModel;
         
-        AZStd::unordered_map< AZ::EntityId, GraphCanvas::GraphicsEffectId > m_highlightEffects;
+        AZStd::unordered_map< AZ::EntityId, JE::Editor::Tools::GraphCanvas::GraphicsEffectId > m_highlightEffects;
 
         QTimer            m_focusDelayTimer;
 

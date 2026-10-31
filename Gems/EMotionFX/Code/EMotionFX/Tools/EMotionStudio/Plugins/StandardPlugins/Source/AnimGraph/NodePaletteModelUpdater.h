@@ -10,7 +10,7 @@
 
 #include <EMotionFX/Source/AnimGraphNode.h>
 
-namespace GraphCanvas
+namespace JE::Editor::Tools::GraphCanvas
 {
     class NodePaletteWidget;
     class NodePaletteTreeItem;
@@ -39,15 +39,15 @@ namespace EMStudio
     {
     public:
         explicit NodePaletteModelUpdater(AnimGraphPlugin* plugin);
-        GraphCanvas::NodePaletteTreeItem* GetRootItem();
+        JE::Editor::Tools::GraphCanvas::NodePaletteTreeItem* GetRootItem();
 
         //! Rebuild the list of available/enabled nodes when a given node is focused
         void InitForNode(EMotionFX::AnimGraphNode* focusNode);
 
     private:
         AnimGraphPlugin* m_plugin;
-        GraphCanvas::NodePaletteTreeItem* m_rootItem;
-        AZStd::map<EMotionFX::AnimGraphNode::ECategory, GraphCanvas::NodePaletteTreeItem*> m_categoryNodes;
+        JE::Editor::Tools::GraphCanvas::NodePaletteTreeItem* m_rootItem;
+        AZStd::map<EMotionFX::AnimGraphNode::ECategory, JE::Editor::Tools::GraphCanvas::NodePaletteTreeItem*> m_categoryNodes;
     };
 
 } // namespace EMStudio

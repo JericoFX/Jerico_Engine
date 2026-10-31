@@ -37,7 +37,7 @@ QT_FORWARD_DECLARE_CLASS(ReselectingTreeView)
 namespace AzToolsFramework { class ReflectedPropertyEditor; }
 namespace AzQtComponents { class WindowDecorationWrapper; }
 namespace AzQtComponents { class TitleBar; }
-namespace GraphCanvas { class NodePaletteTreeView; }
+namespace JE::Editor::Tools::GraphCanvas { class NodePaletteTreeView; }
 
 namespace EMotionFX
 {
@@ -95,7 +95,7 @@ namespace EMotionFX
         }
 
         static QAction* GetNamedAction(const QWidget* widget, const QString& actionName);
-        QModelIndex GetIndexFromName(const GraphCanvas::NodePaletteTreeView* tree, const QString& name);
+        QModelIndex GetIndexFromName(const JE::Editor::Tools::GraphCanvas::NodePaletteTreeView* tree, const QString& name);
         static bool GetActionFromContextMenu(QAction*& action, const QMenu* contextMenu, const QString& actionName);
 
         static void ExecuteCommands(std::vector<std::string> commands);

@@ -8,9 +8,9 @@
 
 #include <AzCore/Serialization/SerializeContext.h>
 
-#include <GraphCanvas/Components/GridBus.h>
-#include <GraphCanvas/Components/SceneBus.h>
-#include <GraphCanvas/GraphCanvasBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/GridBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/SceneBus.h>
+#include <JE/Editor/Tools/GraphCanvas/GraphCanvasBus.h>
 
 
 #include "SpecializedNodePaletteTreeItemTypes.h"
@@ -37,30 +37,30 @@ namespace ScriptCanvasEditor
 
         if (serializeContext)
         {
-            serializeContext->Class<CreateCommentNodeMimeEvent, GraphCanvas::GraphCanvasMimeEvent>()
+            serializeContext->Class<CreateCommentNodeMimeEvent, JE::Editor::Tools::GraphCanvas::GraphCanvasMimeEvent>()
                 ->Version(0)
                 ;
         }
     }
 
-    NodeIdPair CreateCommentNodeMimeEvent::ConstructNode(const GraphCanvas::GraphId& sceneId, const AZ::Vector2& scenePosition)
+    NodeIdPair CreateCommentNodeMimeEvent::ConstructNode(const JE::Editor::Tools::GraphCanvas::GraphId& sceneId, const AZ::Vector2& scenePosition)
     {
         NodeIdPair retVal;
 
         AZ::Entity* graphCanvasEntity = nullptr;
-        GraphCanvas::GraphCanvasRequestBus::BroadcastResult(graphCanvasEntity, &GraphCanvas::GraphCanvasRequests::CreateCommentNodeAndActivate);
+        JE::Editor::Tools::GraphCanvas::GraphCanvasRequestBus::BroadcastResult(graphCanvasEntity, &JE::Editor::Tools::GraphCanvas::GraphCanvasRequests::CreateCommentNodeAndActivate);
 
         if (graphCanvasEntity)
         {
             retVal.m_graphCanvasId = graphCanvasEntity->GetId();
-            GraphCanvas::SceneRequestBus::Event(sceneId, &GraphCanvas::SceneRequests::AddNode, graphCanvasEntity->GetId(), scenePosition, false);
-            GraphCanvas::SceneMemberUIRequestBus::Event(graphCanvasEntity->GetId(), &GraphCanvas::SceneMemberUIRequests::SetSelected, true);
+            JE::Editor::Tools::GraphCanvas::SceneRequestBus::Event(sceneId, &JE::Editor::Tools::GraphCanvas::SceneRequests::AddNode, graphCanvasEntity->GetId(), scenePosition, false);
+            JE::Editor::Tools::GraphCanvas::SceneMemberUIRequestBus::Event(graphCanvasEntity->GetId(), &JE::Editor::Tools::GraphCanvas::SceneMemberUIRequests::SetSelected, true);
         }
 
         return retVal;
     }
 
-    bool CreateCommentNodeMimeEvent::ExecuteEvent([[maybe_unused]] const AZ::Vector2& mousePosition, AZ::Vector2& sceneDropPosition, const GraphCanvas::GraphId& graphId)
+    bool CreateCommentNodeMimeEvent::ExecuteEvent([[maybe_unused]] const AZ::Vector2& mousePosition, AZ::Vector2& sceneDropPosition, const JE::Editor::Tools::GraphCanvas::GraphId& graphId)
     {
         ScriptCanvas::ScriptCanvasId scriptCanvasId;
         GeneralRequestBus::BroadcastResult(scriptCanvasId, &GeneralRequests::GetScriptCanvasId, graphId);
@@ -70,10 +70,10 @@ namespace ScriptCanvasEditor
         if (nodeId.m_graphCanvasId.IsValid())
         {
             AZ::EntityId gridId;
-            GraphCanvas::SceneRequestBus::EventResult(gridId, graphId, &GraphCanvas::SceneRequests::GetGrid);
+            JE::Editor::Tools::GraphCanvas::SceneRequestBus::EventResult(gridId, graphId, &JE::Editor::Tools::GraphCanvas::SceneRequests::GetGrid);
 
             AZ::Vector2 offset;
-            GraphCanvas::GridRequestBus::EventResult(offset, gridId, &GraphCanvas::GridRequests::GetMinorPitch);
+            JE::Editor::Tools::GraphCanvas::GridRequestBus::EventResult(offset, gridId, &JE::Editor::Tools::GraphCanvas::GridRequests::GetMinorPitch);
 
             sceneDropPosition += offset;
         }
@@ -93,7 +93,7 @@ namespace ScriptCanvasEditor
         SetTitlePalette("CommentNodeTitlePalette");
     }
 
-    GraphCanvas::GraphCanvasMimeEvent* CommentNodePaletteTreeItem::CreateMimeEvent() const
+    JE::Editor::Tools::GraphCanvas::GraphCanvasMimeEvent* CommentNodePaletteTreeItem::CreateMimeEvent() const
     {
         return aznew CreateCommentNodeMimeEvent();
     }
@@ -108,7 +108,7 @@ namespace ScriptCanvasEditor
 
         if (serializeContext)
         {
-            serializeContext->Class<CreateNodeGroupMimeEvent, GraphCanvas::GraphCanvasMimeEvent>()
+            serializeContext->Class<CreateNodeGroupMimeEvent, JE::Editor::Tools::GraphCanvas::GraphCanvasMimeEvent>()
                 ->Version(0)
                 ;
         }
@@ -119,13 +119,13 @@ namespace ScriptCanvasEditor
         NodeIdPair retVal;
 
         AZ::Entity* graphCanvasEntity = nullptr;
-        GraphCanvas::GraphCanvasRequestBus::BroadcastResult(graphCanvasEntity, &GraphCanvas::GraphCanvasRequests::CreateNodeGroupAndActivate);
+        JE::Editor::Tools::GraphCanvas::GraphCanvasRequestBus::BroadcastResult(graphCanvasEntity, &JE::Editor::Tools::GraphCanvas::GraphCanvasRequests::CreateNodeGroupAndActivate);
 
         if (graphCanvasEntity)
         {
             retVal.m_graphCanvasId = graphCanvasEntity->GetId();
-            GraphCanvas::SceneRequestBus::Event(graphCanvasGraphId, &GraphCanvas::SceneRequests::AddNode, graphCanvasEntity->GetId(), scenePosition, false);
-            GraphCanvas::SceneMemberUIRequestBus::Event(graphCanvasEntity->GetId(), &GraphCanvas::SceneMemberUIRequests::SetSelected, true);
+            JE::Editor::Tools::GraphCanvas::SceneRequestBus::Event(graphCanvasGraphId, &JE::Editor::Tools::GraphCanvas::SceneRequests::AddNode, graphCanvasEntity->GetId(), scenePosition, false);
+            JE::Editor::Tools::GraphCanvas::SceneMemberUIRequestBus::Event(graphCanvasEntity->GetId(), &JE::Editor::Tools::GraphCanvas::SceneMemberUIRequests::SetSelected, true);
         }
 
         return retVal;
@@ -141,10 +141,10 @@ namespace ScriptCanvasEditor
         if (nodeId.m_graphCanvasId.IsValid())
         {
             AZ::EntityId gridId;
-            GraphCanvas::SceneRequestBus::EventResult(gridId, graphCanvasGraphId, &GraphCanvas::SceneRequests::GetGrid);
+            JE::Editor::Tools::GraphCanvas::SceneRequestBus::EventResult(gridId, graphCanvasGraphId, &JE::Editor::Tools::GraphCanvas::SceneRequests::GetGrid);
 
             AZ::Vector2 offset;
-            GraphCanvas::GridRequestBus::EventResult(offset, gridId, &GraphCanvas::GridRequests::GetMinorPitch);
+            JE::Editor::Tools::GraphCanvas::GridRequestBus::EventResult(offset, gridId, &JE::Editor::Tools::GraphCanvas::GridRequests::GetMinorPitch);
 
             sceneDropPosition += offset;
         }
@@ -161,7 +161,7 @@ namespace ScriptCanvasEditor
     {
     }
 
-    GraphCanvas::GraphCanvasMimeEvent* NodeGroupNodePaletteTreeItem::CreateMimeEvent() const
+    JE::Editor::Tools::GraphCanvas::GraphCanvasMimeEvent* NodeGroupNodePaletteTreeItem::CreateMimeEvent() const
     {
         return aznew CreateNodeGroupMimeEvent();
     }

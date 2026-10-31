@@ -22,7 +22,7 @@ AZ_POP_DISABLE_WARNING
 #include <ScriptCanvas/Core/Core.h>
 #include <ScriptCanvas/Data/Data.h>
 
-#include <GraphCanvas/Widgets/StyledItemDelegates/IconDecoratedNameDelegate.h>
+#include <JE/Editor/Tools/GraphCanvas/Widgets/StyledItemDelegates/IconDecoratedNameDelegate.h>
 
 namespace ScriptCanvasEditor
 { 

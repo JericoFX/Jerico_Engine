@@ -7,9 +7,9 @@
  */
 #pragma once
 
-#include <GraphCanvas/Types/Endpoint.h>
-#include <GraphCanvas/Types/Types.h>
-#include <GraphCanvas/Widgets/NodePalette/NodePaletteWidget.h>
+#include <JE/Editor/Tools/GraphCanvas/Types/Endpoint.h>
+#include <JE/Editor/Tools/GraphCanvas/Types/Types.h>
+#include <JE/Editor/Tools/GraphCanvas/Widgets/NodePalette/NodePaletteWidget.h>
 
 #include <ScriptCanvasDeveloperEditor/EditorAutomation/EditorAutomationModelIds.h>
 #include <ScriptCanvasDeveloperEditor/EditorAutomation/EditorAutomationActions/ScriptCanvasActions/CreateElementsActions.h>
@@ -30,7 +30,7 @@ namespace ScriptCanvas::Developer
             Splice
         };
 
-        CreateNodeFromPaletteState(GraphCanvas::NodePaletteWidget* paletteWidget, const QString& nodeName, CreationType creationType, AutomationStateModelId creationDataId, AutomationStateModelId outputId = "");
+        CreateNodeFromPaletteState(JE::Editor::Tools::GraphCanvas::NodePaletteWidget* paletteWidget, const QString& nodeName, CreationType creationType, AutomationStateModelId creationDataId, AutomationStateModelId outputId = "");
         ~CreateNodeFromPaletteState() override = default;
 
     protected:
@@ -40,7 +40,7 @@ namespace ScriptCanvas::Developer
 
     private:
 
-        GraphCanvas::NodePaletteWidget* m_nodePaletteWidget = nullptr;
+        JE::Editor::Tools::GraphCanvas::NodePaletteWidget* m_nodePaletteWidget = nullptr;
         QString m_nodeName;
 
         CreationType           m_creationType;
@@ -61,7 +61,7 @@ namespace ScriptCanvas::Developer
     public:
         AZ_CLASS_ALLOCATOR(CreateCategoryFromNodePaletteState, AZ::SystemAllocator)
 
-        CreateCategoryFromNodePaletteState(GraphCanvas::NodePaletteWidget* paletteWidget, AutomationStateModelId categoryId, AutomationStateModelId scenePoint, AutomationStateModelId outputId = "");
+        CreateCategoryFromNodePaletteState(JE::Editor::Tools::GraphCanvas::NodePaletteWidget* paletteWidget, AutomationStateModelId categoryId, AutomationStateModelId scenePoint, AutomationStateModelId outputId = "");
         ~CreateCategoryFromNodePaletteState() override = default;
 
         void OnSetupStateActions(EditorAutomationActionRunner& actionRunner) override;
@@ -73,7 +73,7 @@ namespace ScriptCanvas::Developer
         AutomationStateModelId m_scenePoint;
         AutomationStateModelId m_outputId;
 
-        GraphCanvas::NodePaletteWidget* m_paletteWidget = nullptr;
+        JE::Editor::Tools::GraphCanvas::NodePaletteWidget* m_paletteWidget = nullptr;
 
         CreateCategoryFromNodePaletteAction* m_creationAction = nullptr;
     };
@@ -153,7 +153,7 @@ namespace ScriptCanvas::Developer
     {
     public:
         AZ_CLASS_ALLOCATOR(CreateGroupState, AZ::SystemAllocator)
-        CreateGroupState(GraphCanvas::EditorId editorId, CreateGroupAction::CreationType creationType = CreateGroupAction::CreationType::Hotkey, AutomationStateModelId outputId = "");
+        CreateGroupState(JE::Editor::Tools::GraphCanvas::EditorId editorId, CreateGroupAction::CreationType creationType = CreateGroupAction::CreationType::Hotkey, AutomationStateModelId outputId = "");
         ~CreateGroupState() override = default;
 
     protected:
@@ -163,7 +163,7 @@ namespace ScriptCanvas::Developer
 
     private:
 
-        GraphCanvas::EditorId m_editorId;
+        JE::Editor::Tools::GraphCanvas::EditorId m_editorId;
         CreateGroupAction::CreationType m_creationType;
 
         AutomationStateModelId m_outputId;

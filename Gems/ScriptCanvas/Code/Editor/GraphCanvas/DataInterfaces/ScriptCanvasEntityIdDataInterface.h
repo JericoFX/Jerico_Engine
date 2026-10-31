@@ -7,7 +7,7 @@
  */
 #pragma once
 
-#include <GraphCanvas/Components/NodePropertyDisplay/EntityIdDataInterface.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/NodePropertyDisplay/EntityIdDataInterface.h>
 
 #include "ScriptCanvasDataInterface.h"
 
@@ -18,7 +18,7 @@
 namespace ScriptCanvasEditor
 {
     class ScriptCanvasEntityIdDataInterface
-        : public ScriptCanvasDataInterface<GraphCanvas::EntityIdDataInterface>
+        : public ScriptCanvasDataInterface<JE::Editor::Tools::GraphCanvas::EntityIdDataInterface>
     {
     public:
         AZ_CLASS_ALLOCATOR(ScriptCanvasEntityIdDataInterface, AZ::SystemAllocator);

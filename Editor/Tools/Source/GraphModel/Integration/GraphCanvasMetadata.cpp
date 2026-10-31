@@ -10,7 +10,7 @@
 #include <AzCore/Serialization/SerializeContext.h>
 
 // Graph Canvas
-#include <GraphCanvas/Types/EntitySaveData.h>
+#include <JE/Editor/Tools/GraphCanvas/Types/EntitySaveData.h>
 
 // Graph Model
 #include <JE/Editor/Tools/GraphModel/Integration/GraphCanvasMetadata.h>
@@ -33,7 +33,7 @@ namespace JE::Editor::Tools::GraphModel::Integration
     {
         if (auto serializeContext = azrtti_cast<AZ::SerializeContext*>(context))
         {
-            serializeContext->Class<GraphCanvasSelectionData, GraphCanvas::ComponentSaveData>()
+            serializeContext->Class<GraphCanvasSelectionData, JE::Editor::Tools::GraphCanvas::ComponentSaveData>()
                 ->Version(0)
                 ->Field("selected", &GraphCanvasSelectionData::m_selected);
         }

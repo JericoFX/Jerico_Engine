@@ -36,8 +36,8 @@ namespace JE::Editor::Tools::GraphModel::Integration
 
             if (trimValue != slot->GetValue<AZStd::string>())
             {
-                const GraphCanvas::GraphId graphCanvasSceneId = GetDisplay()->GetSceneId();
-                GraphCanvas::ScopedGraphUndoBatch undoBatch(graphCanvasSceneId);
+                const JE::Editor::Tools::GraphCanvas::GraphId graphCanvasSceneId = GetDisplay()->GetSceneId();
+                JE::Editor::Tools::GraphCanvas::ScopedGraphUndoBatch undoBatch(graphCanvasSceneId);
 
                 slot->SetValue(trimValue);
                 GraphControllerNotificationBus::Event(graphCanvasSceneId, &GraphControllerNotifications::OnGraphModelSlotModified, slot);

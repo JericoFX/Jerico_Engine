@@ -19,8 +19,8 @@ AZ_POP_DISABLE_WARNING
 
 #include <AzCore/std/smart_ptr/unique_ptr.h>
 
-#include <GraphCanvas/Widgets/GraphCanvasTreeItem.h>
-#include <GraphCanvas/Widgets/GraphCanvasTreeModel.h>
+#include <JE/Editor/Tools/GraphCanvas/Widgets/GraphCanvasTreeItem.h>
+#include <JE/Editor/Tools/GraphCanvas/Widgets/GraphCanvasTreeModel.h>
 
 #include <Editor/View/Widgets/LoggingPanel/LoggingWindowSession.h>
 
@@ -32,11 +32,11 @@ namespace Ui
 namespace ScriptCanvasEditor
 {
     class PivotTreeItem
-        : public GraphCanvas::GraphCanvasTreeItem
+        : public JE::Editor::Tools::GraphCanvas::GraphCanvasTreeItem
     {
     public:
         AZ_CLASS_ALLOCATOR(PivotTreeItem, AZ::SystemAllocator);
-        AZ_RTTI(PivotTreeItem, "{F310C0EA-9CFE-4A8F-9CDA-46E24673B01A}", GraphCanvas::GraphCanvasTreeItem);
+        AZ_RTTI(PivotTreeItem, "{F310C0EA-9CFE-4A8F-9CDA-46E24673B01A}", JE::Editor::Tools::GraphCanvas::GraphCanvasTreeItem);
 
         enum Column
         {
@@ -197,7 +197,7 @@ namespace ScriptCanvasEditor
 
         PivotTreeRoot* m_pivotRoot;
 
-        GraphCanvas::GraphCanvasTreeModel* m_treeModel;
+        JE::Editor::Tools::GraphCanvas::GraphCanvasTreeModel* m_treeModel;
         PivotTreeSortProxyModel* m_proxyModel;
     };
 }

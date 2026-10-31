@@ -35,9 +35,9 @@
 #include <MCore/Source/StandardHeaders.h>
 #include <MysticQt/Source/KeyboardShortcutManager.h>
 #include <MCore/Source/LogManager.h>
-#include <GraphCanvas/Widgets/GraphCanvasTreeItem.h>
-#include <GraphCanvas/Widgets/GraphCanvasMimeContainer.h>
-#include <GraphCanvas/Widgets/NodePalette/TreeItems/NodePaletteTreeItem.h>
+#include <JE/Editor/Tools/GraphCanvas/Widgets/GraphCanvasTreeItem.h>
+#include <JE/Editor/Tools/GraphCanvas/Widgets/GraphCanvasMimeContainer.h>
+#include <JE/Editor/Tools/GraphCanvas/Widgets/NodePalette/TreeItems/NodePaletteTreeItem.h>
 // qt includes
 #include <QDropEvent>
 #include <QMessageBox>
@@ -52,14 +52,14 @@ namespace EMStudio
     {
         if (auto serializeContext = azrtti_cast<AZ::SerializeContext*>(context))
         {
-            serializeContext->Class<BlendGraphMimeEvent, GraphCanvas::GraphCanvasMimeEvent>()
+            serializeContext->Class<BlendGraphMimeEvent, JE::Editor::Tools::GraphCanvas::GraphCanvasMimeEvent>()
                 ->Version(0)
                 ->Field("typeString", &BlendGraphMimeEvent::m_typeString)
                 ->Field("namePrefix", &BlendGraphMimeEvent::m_namePrefix);
         }
     }
     BlendGraphMimeEvent::BlendGraphMimeEvent(AZStd::string_view typeString, AZStd::string_view namePrefix)
-        : GraphCanvas::GraphCanvasMimeEvent()
+        : JE::Editor::Tools::GraphCanvas::GraphCanvasMimeEvent()
         , m_typeString(typeString)
         , m_namePrefix(namePrefix)
     {
@@ -87,8 +87,8 @@ namespace EMStudio
     }
 
     BlendGraphNodePaletteTreeItem::BlendGraphNodePaletteTreeItem(
-        const AZStd::string_view name, const QString& typeString, GraphCanvas::EditorId editorId, const AZ::Color& color)
-        : GraphCanvas::DraggableNodePaletteTreeItem(name, editorId)
+        const AZStd::string_view name, const QString& typeString, JE::Editor::Tools::GraphCanvas::EditorId editorId, const AZ::Color& color)
+        : JE::Editor::Tools::GraphCanvas::DraggableNodePaletteTreeItem(name, editorId)
         , m_typeString(typeString)
     {
         // Draw a pixmap with the provided color to use as an icon adjacent to the name text
@@ -123,7 +123,7 @@ namespace EMStudio
         {
             return QVariant(m_colorPixmap);
         }
-        return GraphCanvas::DraggableNodePaletteTreeItem::OnData(index, role);
+        return JE::Editor::Tools::GraphCanvas::DraggableNodePaletteTreeItem::OnData(index, role);
     }
 
     BlendGraphMimeEvent* BlendGraphNodePaletteTreeItem::CreateMimeEvent() const
@@ -175,14 +175,14 @@ namespace EMStudio
         // Dragged from node palette
         if (event->mimeData()->hasFormat(BlendGraphMimeEvent::BlendGraphMimeEventType))
         {
-            GraphCanvas::GraphCanvasMimeContainer mimeContainer;
+            JE::Editor::Tools::GraphCanvas::GraphCanvasMimeContainer mimeContainer;
             const QByteArray mimeDataBuffer = event->mimeData()->data(BlendGraphMimeEvent::BlendGraphMimeEventType);
             mimeContainer.FromBuffer(mimeDataBuffer.constData(), mimeDataBuffer.size());
 
             // When adding multiple nodes together, position them a bit differently
             // so they don't end up on top of each other looking like only one was added
             int offset = 0;
-            for (GraphCanvas::GraphCanvasMimeEvent* graphCanvasEvent : mimeContainer.m_mimeEvents)
+            for (JE::Editor::Tools::GraphCanvas::GraphCanvasMimeEvent* graphCanvasEvent : mimeContainer.m_mimeEvents)
             {
                 if (auto* blendGraphEvent = azrtti_cast<BlendGraphMimeEvent*>(graphCanvasEvent))
                 {

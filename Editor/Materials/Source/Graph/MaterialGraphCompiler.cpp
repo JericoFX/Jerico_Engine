@@ -75,6 +75,7 @@ namespace JE::Editor
             return false;
         }
 
+        m_generatedAssetSources.clear();
         m_includePaths.clear();
         m_classDefinitions.clear();
         m_functionDefinitions.clear();
@@ -148,10 +149,10 @@ namespace JE::Editor
 
             // Save all of the generated files except for materials and material types. Generated material type files must be saved after
             // generated shader files to prevent AP errors because of missing dependencies.
-            if (!ExportTemplatesMatchingRegex(".*\\.lua\\b") ||
-                !ExportTemplatesMatchingRegex(".*\\.azsli\\b") ||
-                !ExportTemplatesMatchingRegex(".*\\.azsl\\b") ||
-                !ExportTemplatesMatchingRegex(".*\\.shader\\b"))
+            if (!ExportTemplatesMatchingRegex(".*\\.lua\\b", true) ||
+                !ExportTemplatesMatchingRegex(".*\\.azsli\\b", false) ||
+                !ExportTemplatesMatchingRegex(".*\\.azsl\\b", false) ||
+                !ExportTemplatesMatchingRegex(".*\\.shader\\b", true))
             {
                 SetState(State::Failed);
                 return false;
@@ -165,7 +166,7 @@ namespace JE::Editor
             }
 
             // After the material types have been processed and saved, save the materials that reference them.
-            if (!ExportTemplatesMatchingRegex(".*\\.material\\b"))
+            if (!ExportTemplatesMatchingRegex(".*\\.material\\b", true))
             {
                 SetState(State::Failed);
                 return false;
@@ -175,7 +176,7 @@ namespace JE::Editor
             ++m_templateNodeCount;
         }
 
-        if (!ReportGeneratedFileStatus())
+        if (!ReportGeneratedFileStatus(m_generatedAssetSources))
         {
             SetState(State::Failed);
             return false;
@@ -505,11 +506,12 @@ namespace JE::Editor
             AzFramework::AssetSystemRequestBus::Broadcast(
                 &AzFramework::AssetSystem::AssetSystemRequests::EscalateAssetBySearchTerm, templateOutputPath);
             m_generatedFiles.push_back(templateOutputPath);
+            m_generatedAssetSources.push_back(templateOutputPath);
         }
         return true;
     }
 
-    bool MaterialGraphCompiler::ExportTemplatesMatchingRegex(const AZStd::string& pattern)
+    bool MaterialGraphCompiler::ExportTemplatesMatchingRegex(const AZStd::string& pattern, bool reportAssetJobs)
     {
         const AZStd::regex patternRegex(pattern, AZStd::regex::flag_type::icase);
         for (const auto& templateFileData : m_templateFileDataVecForCurrentNode)
@@ -525,6 +527,10 @@ namespace JE::Editor
                 AzFramework::AssetSystemRequestBus::Broadcast(
                     &AzFramework::AssetSystem::AssetSystemRequests::EscalateAssetBySearchTerm, templateOutputPath);
                 m_generatedFiles.push_back(templateOutputPath);
+                if (reportAssetJobs)
+                {
+                    m_generatedAssetSources.push_back(templateOutputPath);
+                }
             }
         }
         return true;

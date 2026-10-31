@@ -132,11 +132,11 @@ namespace JE::Editor::Tools
                     ->ClassElement(AZ::Edit::ClassElements::Group, QT_TRANSLATE_NOOP("AtomToolsFramework", "Connections"))
                     ->Attribute(AZ::Edit::Attributes::AutoExpand, true)
                     ->DataElement(AZ::Edit::UIHandlers::ComboBox, &GraphViewSettings::m_connectionCurveType, QT_TRANSLATE_NOOP("AtomToolsFramework", "Connection Curve Type"), QT_TRANSLATE_NOOP("AtomToolsFramework", "Style used for drawing lines between non-data connections"))
-                        ->EnumAttribute(GraphCanvas::Styling::ConnectionCurveType::Straight, QT_TRANSLATE_NOOP("AtomToolsFramework", "Straight"))
-                        ->EnumAttribute(GraphCanvas::Styling::ConnectionCurveType::Curved, QT_TRANSLATE_NOOP("AtomToolsFramework", "Curved"))
+                        ->EnumAttribute(JE::Editor::Tools::GraphCanvas::Styling::ConnectionCurveType::Straight, QT_TRANSLATE_NOOP("AtomToolsFramework", "Straight"))
+                        ->EnumAttribute(JE::Editor::Tools::GraphCanvas::Styling::ConnectionCurveType::Curved, QT_TRANSLATE_NOOP("AtomToolsFramework", "Curved"))
                     ->DataElement(AZ::Edit::UIHandlers::ComboBox, &GraphViewSettings::m_dataConnectionCurveType, QT_TRANSLATE_NOOP("AtomToolsFramework", "Data Connection Curve Type"), QT_TRANSLATE_NOOP("AtomToolsFramework", "Style used for drawing lines between data connections"))
-                        ->EnumAttribute(GraphCanvas::Styling::ConnectionCurveType::Straight, QT_TRANSLATE_NOOP("AtomToolsFramework", "Straight"))
-                        ->EnumAttribute(GraphCanvas::Styling::ConnectionCurveType::Curved, QT_TRANSLATE_NOOP("AtomToolsFramework", "Curved"))
+                        ->EnumAttribute(JE::Editor::Tools::GraphCanvas::Styling::ConnectionCurveType::Straight, QT_TRANSLATE_NOOP("AtomToolsFramework", "Straight"))
+                        ->EnumAttribute(JE::Editor::Tools::GraphCanvas::Styling::ConnectionCurveType::Curved, QT_TRANSLATE_NOOP("AtomToolsFramework", "Curved"))
                     ->ClassElement(AZ::Edit::ClassElements::Group, QT_TRANSLATE_NOOP("AtomToolsFramework", "Misc"))
                     ->Attribute(AZ::Edit::Attributes::AutoExpand, true)
                     ->DataElement(AZ::Edit::UIHandlers::Default, &GraphViewSettings::m_groupDoubleClickCollapseEnabled, QT_TRANSLATE_NOOP("AtomToolsFramework", "Group Double Click Collapse Enabled"), QT_TRANSLATE_NOOP("AtomToolsFramework", "Toggle if groups can be expanded or collapsed by double clicking"))
@@ -149,7 +149,7 @@ namespace JE::Editor::Tools
 
     GraphViewSettings::~GraphViewSettings()
     {
-        GraphCanvas::AssetEditorSettingsRequestBus::Handler::BusDisconnect();
+        JE::Editor::Tools::GraphCanvas::AssetEditorSettingsRequestBus::Handler::BusDisconnect();
     }
 
     void GraphViewSettings::Initialize(const AZ::Crc32& toolId, const AZStd::map<AZStd::string, AZ::Color>& defaultGroupPresets)
@@ -157,7 +157,7 @@ namespace JE::Editor::Tools
         m_toolId = toolId;
         m_constructPresets.SetDefaultGroupPresets(defaultGroupPresets);
         m_constructPresets.SetEditorId(m_toolId);
-        GraphCanvas::AssetEditorSettingsRequestBus::Handler::BusConnect(m_toolId);
+        JE::Editor::Tools::GraphCanvas::AssetEditorSettingsRequestBus::Handler::BusConnect(m_toolId);
     }
 
     double GraphViewSettings::GetSnapDistance() const
@@ -265,22 +265,22 @@ namespace JE::Editor::Tools
         return m_edgePanningScrollSpeed;
     }
 
-    GraphCanvas::EditorConstructPresets* GraphViewSettings::GetConstructPresets() const
+    JE::Editor::Tools::GraphCanvas::EditorConstructPresets* GraphViewSettings::GetConstructPresets() const
     {
         return &m_constructPresets;
     }
 
-    const GraphCanvas::ConstructTypePresetBucket* GraphViewSettings::GetConstructTypePresetBucket(GraphCanvas::ConstructType constructType) const
+    const JE::Editor::Tools::GraphCanvas::ConstructTypePresetBucket* GraphViewSettings::GetConstructTypePresetBucket(JE::Editor::Tools::GraphCanvas::ConstructType constructType) const
     {
         return m_constructPresets.FindPresetBucket(constructType);
     }
 
-    GraphCanvas::Styling::ConnectionCurveType GraphViewSettings::GetConnectionCurveType() const
+    JE::Editor::Tools::GraphCanvas::Styling::ConnectionCurveType GraphViewSettings::GetConnectionCurveType() const
     {
         return m_connectionCurveType;
     }
 
-    GraphCanvas::Styling::ConnectionCurveType GraphViewSettings::GetDataConnectionCurveType() const
+    JE::Editor::Tools::GraphCanvas::Styling::ConnectionCurveType GraphViewSettings::GetDataConnectionCurveType() const
     {
         return m_dataConnectionCurveType;
     }

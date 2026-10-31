@@ -15,6 +15,4 @@ set(FILES
 
     Source/Window/MaterialEditorMainWindow.cpp
     Source/Window/MaterialEditorMainWindow.h
-    Source/Window/MaterialEditorViewportContent.cpp
-    Source/Window/MaterialEditorViewportContent.h
 )

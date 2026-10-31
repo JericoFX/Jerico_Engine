@@ -69,7 +69,8 @@ namespace JE::Assets::RenderBuilders::SceneProcessing::Generation
             const AZStd::vector<AZStd::reference_wrapper<const AZ::SceneAPI::DataTypes::IMeshVertexColorData>>& vertexColors,
             const AZStd::vector<AZStd::reference_wrapper<const AZ::SceneAPI::DataTypes::ISkinWeightData>>& skinWeights,
             const AZ::SceneAPI::DataTypes::IMeshGroup& meshGroup,
-            bool hasBlendShapes);
+            bool hasBlendShapes,
+            AZStd::vector<AZ::u32>* sourcePolygons = nullptr);
 
         static void AddFace(AZ::SceneData::GraphData::BlendShapeData* blendShape, unsigned int index1, unsigned int index2, unsigned int index3, unsigned int faceMaterialId);
         static void AddFace(AZ::SceneData::GraphData::MeshData* mesh, unsigned int index1, unsigned int index2, unsigned int index3, unsigned int faceMaterialId);

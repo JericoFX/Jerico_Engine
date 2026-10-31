@@ -7,9 +7,9 @@
  */
 #pragma once
 
-#include <GraphCanvas/Components/SceneBus.h>
-#include <GraphCanvas/Editor/EditorTypes.h>
-#include <GraphCanvas/Types/Types.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/SceneBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Editor/EditorTypes.h>
+#include <JE/Editor/Tools/GraphCanvas/Types/Types.h>
 
 
 #include <ScriptCanvasDeveloperEditor/EditorAutomation/EditorAutomationActions/GenericActions.h>
@@ -39,8 +39,8 @@ namespace ScriptCanvas::Developer
         QPointF m_scenePoint;
 
         AZ::EntityId m_sceneMemberId;
-        GraphCanvas::GraphId m_graphId;
-        GraphCanvas::ViewId m_viewId;
+        JE::Editor::Tools::GraphCanvas::GraphId m_graphId;
+        JE::Editor::Tools::GraphCanvas::ViewId m_viewId;
     };
 
     /**
@@ -49,7 +49,7 @@ namespace ScriptCanvas::Developer
     */
     class AltClickSceneElementAction
         : public CompoundAction
-        , public GraphCanvas::SceneNotificationBus::Handler
+        , public JE::Editor::Tools::GraphCanvas::SceneNotificationBus::Handler
     {
     public:
         AZ_CLASS_ALLOCATOR(AltClickSceneElementAction, AZ::SystemAllocator);
@@ -81,8 +81,8 @@ namespace ScriptCanvas::Developer
 
         bool         m_sceneMemberRemoved = false;
         AZ::EntityId m_sceneMemberId;
-        GraphCanvas::GraphId m_graphId;
-        GraphCanvas::ViewId m_viewId;
+        JE::Editor::Tools::GraphCanvas::GraphId m_graphId;
+        JE::Editor::Tools::GraphCanvas::ViewId m_viewId;
     };
 
     /**
@@ -95,13 +95,13 @@ namespace ScriptCanvas::Developer
         AZ_CLASS_ALLOCATOR(MouseToNodePropertyEditorAction, AZ::SystemAllocator);
         AZ_RTTI(MouseToNodePropertyEditorAction, "{03BE0BBE-B977-4103-BC6D-0357B7CEA46E}", CompoundAction);
 
-        MouseToNodePropertyEditorAction(GraphCanvas::SlotId slotId);
+        MouseToNodePropertyEditorAction(JE::Editor::Tools::GraphCanvas::SlotId slotId);
         ~MouseToNodePropertyEditorAction() override = default;
 
         void SetupAction() override;
 
     private:
 
-        GraphCanvas::SlotId m_slotId;
+        JE::Editor::Tools::GraphCanvas::SlotId m_slotId;
     };
 }

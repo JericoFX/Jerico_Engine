@@ -115,6 +115,20 @@ namespace AzFramework::AssetSystem::Platform
             fullLaunchCommand += '"';
         }
 
+        // Project preference applies only to a new AP; keep existing shader overrides untouched.
+        bool fasterShaderBuilds = false;
+        if (!projectPath.empty())
+        {
+            if (const auto registry = AZ::SettingsRegistry::Get())
+            {
+                registry->Get(fasterShaderBuilds, "/O3DE/Preferences/JE/Materials/EnableFasterShaderBuilds");
+            }
+        }
+        if (fasterShaderBuilds)
+        {
+            fullLaunchCommand += " --regset=/O3DE/Atom/Shaders/BuildVariants=false";
+        }
+
         // Create or retrieve the job handle associated with the asset processor
         HANDLE apJob = nullptr;
 

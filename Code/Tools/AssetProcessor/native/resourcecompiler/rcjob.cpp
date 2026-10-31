@@ -299,10 +299,12 @@ namespace AssetProcessor
         {
             if (jobDependencyInternal.m_isMissingSource)
             {
+                const auto type = jobDependencyInternal.m_jobDependency.m_type;
+                const bool ordered = type == AssetBuilderSDK::JobDependencyType::Order ||
+                    type == AssetBuilderSDK::JobDependencyType::OrderOnce || type == AssetBuilderSDK::JobDependencyType::OrderOnly;
                 SourceAssetReference thisDep(jobDependencyInternal.m_jobDependency.m_sourceFile.m_sourceFileDependencyPath.c_str());
-                if (thisDep == sourceRef)
+                if (!ordered && thisDep == sourceRef)
                 {
-                    // the missing dep is no longer missing.
                     jobDependencyInternal.m_isMissingSource = false;
                     anyChanged = true;
                 }
@@ -314,6 +316,30 @@ namespace AssetProcessor
         }
 
         return !stillHasMissingDep && anyChanged;
+    }
+
+    bool RCJob::UpdateMissingDependencies(const QueueElementID& registeredJob)
+    {
+        bool anyChanged = false;
+        for (JobDependencyInternal& dependency : m_jobDetails.m_jobDependencyList)
+        {
+            const auto& jobDependency = dependency.m_jobDependency;
+            const bool ordered = jobDependency.m_type == AssetBuilderSDK::JobDependencyType::Order ||
+                jobDependency.m_type == AssetBuilderSDK::JobDependencyType::OrderOnce ||
+                jobDependency.m_type == AssetBuilderSDK::JobDependencyType::OrderOnly;
+            if (dependency.m_isMissingSource && ordered)
+            {
+                QueueElementID expectedJob(
+                    SourceAssetReference(jobDependency.m_sourceFile.m_sourceFileDependencyPath.c_str()),
+                    QString::fromUtf8(jobDependency.m_platformIdentifier.c_str()), QString::fromUtf8(jobDependency.m_jobKey.c_str()));
+                if (expectedJob == registeredJob)
+                {
+                    dependency.m_isMissingSource = false;
+                    anyChanged = true;
+                }
+            }
+        }
+        return anyChanged && !HasMissingSourceDependency();
     }
 
     void RCJob::Start()

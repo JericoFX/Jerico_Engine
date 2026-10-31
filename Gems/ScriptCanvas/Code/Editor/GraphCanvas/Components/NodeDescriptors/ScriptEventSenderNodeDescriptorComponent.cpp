@@ -8,8 +8,8 @@
 
 #include <AzCore/Serialization/SerializeContext.h>
 
-#include <GraphCanvas/Components/Slots/SlotBus.h>
-#include <GraphCanvas/Components/Nodes/NodeTitleBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/Slots/SlotBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/Nodes/NodeTitleBus.h>
 
 #include "ScriptEventSenderNodeDescriptorComponent.h"
 
@@ -90,7 +90,7 @@ namespace ScriptCanvasEditor
         DynamicSlotRequestBus::Event(GetEntityId(), &DynamicSlotRequests::StopQueueSlotUpdates);
     }
 
-    void ScriptEventSenderNodeDescriptorComponent::OnAddedToGraphCanvasGraph([[maybe_unused]] const GraphCanvas::GraphId& graphId, const AZ::EntityId& scriptCanvasNodeId)
+    void ScriptEventSenderNodeDescriptorComponent::OnAddedToGraphCanvasGraph([[maybe_unused]] const JE::Editor::Tools::GraphCanvas::GraphId& graphId, const AZ::EntityId& scriptCanvasNodeId)
     {
         m_scriptCanvasId = scriptCanvasNodeId;
         EditorNodeNotificationBus::Handler::BusConnect(scriptCanvasNodeId);
@@ -104,12 +104,12 @@ namespace ScriptCanvasEditor
                 ScriptCanvas::SlotId slotId = method->GetBusSlotId();
 
                 AZStd::vector< AZ::EntityId > graphCanvasSlots;
-                GraphCanvas::NodeRequestBus::EventResult(graphCanvasSlots, GetEntityId(), &GraphCanvas::NodeRequests::GetSlotIds);
+                JE::Editor::Tools::GraphCanvas::NodeRequestBus::EventResult(graphCanvasSlots, GetEntityId(), &JE::Editor::Tools::GraphCanvas::NodeRequests::GetSlotIds);
 
                 for (const AZ::EntityId& graphCanvasId : graphCanvasSlots)
                 {
                     AZStd::any* slotData = nullptr;
-                    GraphCanvas::SlotRequestBus::EventResult(slotData, graphCanvasId, &GraphCanvas::SlotRequests::GetUserData);
+                    JE::Editor::Tools::GraphCanvas::SlotRequestBus::EventResult(slotData, graphCanvasId, &JE::Editor::Tools::GraphCanvas::SlotRequests::GetUserData);
 
                     if (slotData
                         && slotData->is< ScriptCanvas::SlotId >())
@@ -140,14 +140,14 @@ namespace ScriptCanvasEditor
             {
                 const ScriptEvents::ScriptEvent& definition = asset.Get()->m_definition;
 
-                GraphCanvas::NodeTitleRequestBus::Event(GetEntityId(), &GraphCanvas::NodeTitleRequests::SetSubTitle, definition.GetName());
+                JE::Editor::Tools::GraphCanvas::NodeTitleRequestBus::Event(GetEntityId(), &JE::Editor::Tools::GraphCanvas::NodeTitleRequests::SetSubTitle, definition.GetName());
 
                 for (auto eventDefinition : definition.GetMethods())
                 {
                     if (eventDefinition.GetEventId() == m_eventId)
                     {
-                        GraphCanvas::NodeRequestBus::Event(GetEntityId(), &GraphCanvas::NodeRequests::SetTooltip, eventDefinition.GetTooltip());
-                        GraphCanvas::NodeTitleRequestBus::Event(GetEntityId(), &GraphCanvas::NodeTitleRequests::SetTitle, eventDefinition.GetName());
+                        JE::Editor::Tools::GraphCanvas::NodeRequestBus::Event(GetEntityId(), &JE::Editor::Tools::GraphCanvas::NodeRequests::SetTooltip, eventDefinition.GetTooltip());
+                        JE::Editor::Tools::GraphCanvas::NodeTitleRequestBus::Event(GetEntityId(), &JE::Editor::Tools::GraphCanvas::NodeTitleRequests::SetTitle, eventDefinition.GetName());
                     }
                 }
             }
@@ -157,7 +157,7 @@ namespace ScriptCanvasEditor
     void ScriptEventSenderNodeDescriptorComponent::SignalNeedsVersionConversion()
     {
         AZ::EntityId graphCanvasGraphId;
-        GraphCanvas::SceneMemberRequestBus::EventResult(graphCanvasGraphId, GetEntityId(), &GraphCanvas::SceneMemberRequests::GetScene);
+        JE::Editor::Tools::GraphCanvas::SceneMemberRequestBus::EventResult(graphCanvasGraphId, GetEntityId(), &JE::Editor::Tools::GraphCanvas::SceneMemberRequests::GetScene);
 
         ScriptCanvas::ScriptCanvasId scriptCanvasId;
         GeneralRequestBus::BroadcastResult(scriptCanvasId, &GeneralRequests::GetScriptCanvasId, graphCanvasGraphId);

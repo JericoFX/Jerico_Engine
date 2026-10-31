@@ -10,27 +10,27 @@
 #include <JE/Editor/Tools/Util/Util.h>
 #include <AzCore/IO/FileIO.h>
 #include <AzQtComponents/Components/StyleManager.h>
-#include <GraphCanvas/Components/Connections/ConnectionBus.h>
-#include <GraphCanvas/Components/MimeDataHandlerBus.h>
-#include <GraphCanvas/Components/Nodes/NodeBus.h>
-#include <GraphCanvas/Components/SceneBus.h>
-#include <GraphCanvas/Components/ViewBus.h>
-#include <GraphCanvas/GraphCanvasBus.h>
-#include <GraphCanvas/Types/ConstructPresets.h>
-#include <GraphCanvas/Widgets/AssetEditorToolbar/AssetEditorToolbar.h>
-#include <GraphCanvas/Widgets/EditorContextMenu/ContextMenuActions/GeneralMenuActions/GeneralMenuActions.h>
-#include <GraphCanvas/Widgets/EditorContextMenu/ContextMenus/BookmarkContextMenu.h>
-#include <GraphCanvas/Widgets/EditorContextMenu/ContextMenus/CollapsedNodeGroupContextMenu.h>
-#include <GraphCanvas/Widgets/EditorContextMenu/ContextMenus/CommentContextMenu.h>
-#include <GraphCanvas/Widgets/EditorContextMenu/ContextMenus/ConnectionContextMenu.h>
-#include <GraphCanvas/Widgets/EditorContextMenu/ContextMenus/NodeContextMenu.h>
-#include <GraphCanvas/Widgets/EditorContextMenu/ContextMenus/NodeGroupContextMenu.h>
-#include <GraphCanvas/Widgets/EditorContextMenu/ContextMenus/SceneContextMenu.h>
-#include <GraphCanvas/Widgets/EditorContextMenu/ContextMenus/SlotContextMenu.h>
-#include <GraphCanvas/Widgets/EditorContextMenu/EditorContextMenu.h>
-#include <GraphCanvas/Widgets/GraphCanvasMimeContainer.h>
-#include <GraphCanvas/Widgets/NodePalette/TreeItems/IconDecoratedNodePaletteTreeItem.h>
-#include <GraphCanvas/Widgets/NodePalette/TreeItems/NodePaletteTreeItem.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/Connections/ConnectionBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/MimeDataHandlerBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/Nodes/NodeBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/SceneBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/ViewBus.h>
+#include <JE/Editor/Tools/GraphCanvas/GraphCanvasBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Types/ConstructPresets.h>
+#include <JE/Editor/Tools/GraphCanvas/Widgets/AssetEditorToolbar/AssetEditorToolbar.h>
+#include <JE/Editor/Tools/GraphCanvas/Widgets/EditorContextMenu/ContextMenuActions/GeneralMenuActions/GeneralMenuActions.h>
+#include <JE/Editor/Tools/GraphCanvas/Widgets/EditorContextMenu/ContextMenus/BookmarkContextMenu.h>
+#include <JE/Editor/Tools/GraphCanvas/Widgets/EditorContextMenu/ContextMenus/CollapsedNodeGroupContextMenu.h>
+#include <JE/Editor/Tools/GraphCanvas/Widgets/EditorContextMenu/ContextMenus/CommentContextMenu.h>
+#include <JE/Editor/Tools/GraphCanvas/Widgets/EditorContextMenu/ContextMenus/ConnectionContextMenu.h>
+#include <JE/Editor/Tools/GraphCanvas/Widgets/EditorContextMenu/ContextMenus/NodeContextMenu.h>
+#include <JE/Editor/Tools/GraphCanvas/Widgets/EditorContextMenu/ContextMenus/NodeGroupContextMenu.h>
+#include <JE/Editor/Tools/GraphCanvas/Widgets/EditorContextMenu/ContextMenus/SceneContextMenu.h>
+#include <JE/Editor/Tools/GraphCanvas/Widgets/EditorContextMenu/ContextMenus/SlotContextMenu.h>
+#include <JE/Editor/Tools/GraphCanvas/Widgets/EditorContextMenu/EditorContextMenu.h>
+#include <JE/Editor/Tools/GraphCanvas/Widgets/GraphCanvasMimeContainer.h>
+#include <JE/Editor/Tools/GraphCanvas/Widgets/NodePalette/TreeItems/IconDecoratedNodePaletteTreeItem.h>
+#include <JE/Editor/Tools/GraphCanvas/Widgets/NodePalette/TreeItems/NodePaletteTreeItem.h>
 
 #include <QApplication>
 #include <QClipboard>
@@ -45,14 +45,14 @@
 namespace JE::Editor::Tools
 {
     GraphView::GraphView(
-        const AZ::Crc32& toolId, const GraphCanvas::GraphId& activeGraphId, GraphViewSettingsPtr graphViewSettingsPtr, QWidget* parent)
+        const AZ::Crc32& toolId, const JE::Editor::Tools::GraphCanvas::GraphId& activeGraphId, GraphViewSettingsPtr graphViewSettingsPtr, QWidget* parent)
         : QWidget(parent)
         , m_toolId(toolId)
         , m_graphViewSettingsPtr(graphViewSettingsPtr)
     {
         setLayout(new QVBoxLayout());
 
-        m_editorToolbar = aznew GraphCanvas::AssetEditorToolbar(m_toolId);
+        m_editorToolbar = aznew JE::Editor::Tools::GraphCanvas::AssetEditorToolbar(m_toolId);
         m_editorToolbar->setParent(this);
         layout()->addWidget(m_editorToolbar);
 
@@ -62,17 +62,17 @@ namespace JE::Editor::Tools
         m_takeScreenshot->setIcon(QIcon(":/Icons/screenshot.png"));
         m_takeScreenshot->setEnabled(false);
         connect(m_takeScreenshot, &QToolButton::clicked, this, [this](){
-            GraphCanvas::ViewId viewId;
-            GraphCanvas::SceneRequestBus::EventResult(viewId, m_activeGraphId, &GraphCanvas::SceneRequests::GetViewId);
-            GraphCanvas::ViewRequestBus::Event(viewId, &GraphCanvas::ViewRequests::ScreenshotSelection);
+            JE::Editor::Tools::GraphCanvas::ViewId viewId;
+            JE::Editor::Tools::GraphCanvas::SceneRequestBus::EventResult(viewId, m_activeGraphId, &JE::Editor::Tools::GraphCanvas::SceneRequests::GetViewId);
+            JE::Editor::Tools::GraphCanvas::ViewRequestBus::Event(viewId, &JE::Editor::Tools::GraphCanvas::ViewRequests::ScreenshotSelection);
         });
         m_editorToolbar->AddCustomAction(m_takeScreenshot);
 
-        m_graphicsView = new GraphCanvas::GraphCanvasGraphicsView(this, false);
+        m_graphicsView = new JE::Editor::Tools::GraphCanvas::GraphCanvasGraphicsView(this, false);
         m_graphicsView->SetEditorId(m_toolId);
         layout()->addWidget(m_graphicsView);
 
-        m_presetEditor = aznew GraphCanvas::ConstructPresetDialog(this);
+        m_presetEditor = aznew JE::Editor::Tools::GraphCanvas::ConstructPresetDialog(this);
         m_presetEditor->SetEditorId(m_toolId);
 
         m_presetWrapper = new AzQtComponents::WindowDecorationWrapper(AzQtComponents::WindowDecorationWrapper::OptionAutoTitleBarButtons, this);
@@ -81,28 +81,28 @@ namespace JE::Editor::Tools
 
         // Add a node palette for creating new nodes to the default scene context menu,
         // which is what is displayed when right-clicking on an empty space in the graph
-        GraphCanvas::NodePaletteConfig nodePaletteConfig;
+        JE::Editor::Tools::GraphCanvas::NodePaletteConfig nodePaletteConfig;
         nodePaletteConfig.m_editorId = m_toolId;
         nodePaletteConfig.m_mimeType = m_graphViewSettingsPtr->m_nodeMimeType.c_str();
         nodePaletteConfig.m_isInContextMenu = true;
         nodePaletteConfig.m_saveIdentifier = m_graphViewSettingsPtr->m_nodeSaveIdentifier;
         nodePaletteConfig.m_rootTreeItem = m_graphViewSettingsPtr->m_createNodeTreeItemsFn(m_toolId);
-        m_sceneContextMenu = aznew GraphCanvas::SceneContextMenu(m_toolId, this);
+        m_sceneContextMenu = aznew JE::Editor::Tools::GraphCanvas::SceneContextMenu(m_toolId, this);
         m_sceneContextMenu->AddNodePaletteMenuAction(nodePaletteConfig);
 
         // Setup the context menu with node palette for proposing a new node
         // when dropping a connection in an empty space in the graph
         nodePaletteConfig.m_rootTreeItem = m_graphViewSettingsPtr->m_createNodeTreeItemsFn(m_toolId);
-        m_createNodeProposalContextMenu = aznew GraphCanvas::EditorContextMenu(m_toolId, this);
+        m_createNodeProposalContextMenu = aznew JE::Editor::Tools::GraphCanvas::EditorContextMenu(m_toolId, this);
         m_createNodeProposalContextMenu->AddNodePaletteMenuAction(nodePaletteConfig);
 
         // Set up style sheet to fix highlighting in node palettes
         AzQtComponents::StyleManager::setStyleSheet(
-            const_cast<GraphCanvas::NodePaletteWidget*>(m_sceneContextMenu->GetNodePalette()),
+            const_cast<JE::Editor::Tools::GraphCanvas::NodePaletteWidget*>(m_sceneContextMenu->GetNodePalette()),
             QStringLiteral(":/GraphView/GraphView.qss"));
 
         AzQtComponents::StyleManager::setStyleSheet(
-            const_cast<GraphCanvas::NodePaletteWidget*>(m_createNodeProposalContextMenu->GetNodePalette()),
+            const_cast<JE::Editor::Tools::GraphCanvas::NodePaletteWidget*>(m_createNodeProposalContextMenu->GetNodePalette()),
             QStringLiteral(":/GraphView/GraphView.qss"));
 
         CreateActions();
@@ -112,17 +112,17 @@ namespace JE::Editor::Tools
 
     GraphView::~GraphView()
     {
-        SetActiveGraphId(GraphCanvas::GraphId(), false);
+        SetActiveGraphId(JE::Editor::Tools::GraphCanvas::GraphId(), false);
         delete m_presetEditor;
     }
 
-    void GraphView::SetActiveGraphId(const GraphCanvas::GraphId& activeGraphId, bool notify)
+    void GraphView::SetActiveGraphId(const JE::Editor::Tools::GraphCanvas::GraphId& activeGraphId, bool notify)
     {
         // Disconnect from any previously connecting buses.
         // We are enforcing that only one graph is active and connected at any given time.
         AtomToolsMainMenuRequestBus::Handler::BusDisconnect();
-        GraphCanvas::AssetEditorRequestBus::Handler::BusDisconnect();
-        GraphCanvas::SceneNotificationBus::Handler::BusDisconnect();
+        JE::Editor::Tools::GraphCanvas::AssetEditorRequestBus::Handler::BusDisconnect();
+        JE::Editor::Tools::GraphCanvas::SceneNotificationBus::Handler::BusDisconnect();
 
         // Update the value of the active graph ID and only reconnect the buses if it's valid.
         m_activeGraphId = activeGraphId;
@@ -133,20 +133,20 @@ namespace JE::Editor::Tools
         if (m_activeGraphId.IsValid())
         {
             AtomToolsMainMenuRequestBus::Handler::BusConnect(m_toolId);
-            GraphCanvas::AssetEditorRequestBus::Handler::BusConnect(m_toolId);
-            GraphCanvas::SceneNotificationBus::Handler::BusConnect(m_activeGraphId);
+            JE::Editor::Tools::GraphCanvas::AssetEditorRequestBus::Handler::BusConnect(m_toolId);
+            JE::Editor::Tools::GraphCanvas::SceneNotificationBus::Handler::BusConnect(m_activeGraphId);
 
-            GraphCanvas::SceneRequestBus::Event(
-                m_activeGraphId, &GraphCanvas::SceneRequests::SetMimeType, m_graphViewSettingsPtr->m_nodeMimeType.c_str());
+            JE::Editor::Tools::GraphCanvas::SceneRequestBus::Event(
+                m_activeGraphId, &JE::Editor::Tools::GraphCanvas::SceneRequests::SetMimeType, m_graphViewSettingsPtr->m_nodeMimeType.c_str());
         }
 
         if (notify)
         {
             // Notify any observers connected to the asset editor buses that the active graph has changed.
             // We are only managing one graph at a time, not using the asset editor buses, but this will update any other system that is.
-            GraphCanvas::AssetEditorNotificationBus::Event(m_toolId, &GraphCanvas::AssetEditorNotifications::PreOnActiveGraphChanged);
-            GraphCanvas::AssetEditorNotificationBus::Event(m_toolId, &GraphCanvas::AssetEditorNotifications::OnActiveGraphChanged, m_activeGraphId);
-            GraphCanvas::AssetEditorNotificationBus::Event(m_toolId, &GraphCanvas::AssetEditorNotifications::PostOnActiveGraphChanged);
+            JE::Editor::Tools::GraphCanvas::AssetEditorNotificationBus::Event(m_toolId, &JE::Editor::Tools::GraphCanvas::AssetEditorNotifications::PreOnActiveGraphChanged);
+            JE::Editor::Tools::GraphCanvas::AssetEditorNotificationBus::Event(m_toolId, &JE::Editor::Tools::GraphCanvas::AssetEditorNotifications::OnActiveGraphChanged, m_activeGraphId);
+            JE::Editor::Tools::GraphCanvas::AssetEditorNotificationBus::Event(m_toolId, &JE::Editor::Tools::GraphCanvas::AssetEditorNotifications::PostOnActiveGraphChanged);
         }
 
         // Update main window menus with commands from this view.
@@ -179,98 +179,98 @@ namespace JE::Editor::Tools
 
         makeSeperator("menuEdit");
         m_actionCut = makeAction("menuEdit", tr("Cut"), [this](){
-            GraphCanvas::ScopedGraphUndoBatch undoBatch(m_activeGraphId);
-            GraphCanvas::SceneRequestBus::Event(m_activeGraphId, &GraphCanvas::SceneRequests::CutSelection);
+            JE::Editor::Tools::GraphCanvas::ScopedGraphUndoBatch undoBatch(m_activeGraphId);
+            JE::Editor::Tools::GraphCanvas::SceneRequestBus::Event(m_activeGraphId, &JE::Editor::Tools::GraphCanvas::SceneRequests::CutSelection);
         }, QKeySequence::Cut);
         m_actionCopy = makeAction("menuEdit", tr("Copy"), [this](){
-            GraphCanvas::SceneRequestBus::Event(m_activeGraphId, &GraphCanvas::SceneRequests::CopySelection);
+            JE::Editor::Tools::GraphCanvas::SceneRequestBus::Event(m_activeGraphId, &JE::Editor::Tools::GraphCanvas::SceneRequests::CopySelection);
         }, QKeySequence::Copy);
         m_actionPaste = makeAction("menuEdit", tr("Paste"), [this](){
-            GraphCanvas::ScopedGraphUndoBatch undoBatch(m_activeGraphId);
-            GraphCanvas::SceneRequestBus::Event(m_activeGraphId, &GraphCanvas::SceneRequests::Paste);
+            JE::Editor::Tools::GraphCanvas::ScopedGraphUndoBatch undoBatch(m_activeGraphId);
+            JE::Editor::Tools::GraphCanvas::SceneRequestBus::Event(m_activeGraphId, &JE::Editor::Tools::GraphCanvas::SceneRequests::Paste);
         }, QKeySequence::Paste);
         m_actionDuplicate = makeAction("menuEdit", tr("Duplicate"), [this](){
-            GraphCanvas::ScopedGraphUndoBatch undoBatch(m_activeGraphId);
-            GraphCanvas::SceneRequestBus::Event(m_activeGraphId, &GraphCanvas::SceneRequests::DuplicateSelection);
+            JE::Editor::Tools::GraphCanvas::ScopedGraphUndoBatch undoBatch(m_activeGraphId);
+            JE::Editor::Tools::GraphCanvas::SceneRequestBus::Event(m_activeGraphId, &JE::Editor::Tools::GraphCanvas::SceneRequests::DuplicateSelection);
         }, QKeySequence(0x0 | Qt::CTRL | Qt::Key_D));
         m_actionDelete = makeAction("menuEdit", tr("Delete"), [this](){
-            GraphCanvas::ScopedGraphUndoBatch undoBatch(m_activeGraphId);
-            GraphCanvas::SceneRequestBus::Event(m_activeGraphId, &GraphCanvas::SceneRequests::DeleteSelection);
+            JE::Editor::Tools::GraphCanvas::ScopedGraphUndoBatch undoBatch(m_activeGraphId);
+            JE::Editor::Tools::GraphCanvas::SceneRequestBus::Event(m_activeGraphId, &JE::Editor::Tools::GraphCanvas::SceneRequests::DeleteSelection);
         }, QKeySequence::Delete);
 
         makeSeperator("menuEdit");
         m_actionRemoveUnusedNodes = makeAction("menuEdit", tr("Remove Unused Nodes"), [this](){
-            GraphCanvas::ScopedGraphUndoBatch undoBatch(m_activeGraphId);
-            GraphCanvas::SceneRequestBus::Event(m_activeGraphId, &GraphCanvas::SceneRequests::RemoveUnusedNodes);
+            JE::Editor::Tools::GraphCanvas::ScopedGraphUndoBatch undoBatch(m_activeGraphId);
+            JE::Editor::Tools::GraphCanvas::SceneRequestBus::Event(m_activeGraphId, &JE::Editor::Tools::GraphCanvas::SceneRequests::RemoveUnusedNodes);
         }, {});
         m_actionRemoveUnusedElements = makeAction("menuEdit", tr("Remove Unused Elements"), [this](){
-            GraphCanvas::ScopedGraphUndoBatch undoBatch(m_activeGraphId);
-            GraphCanvas::SceneRequestBus::Event(m_activeGraphId, &GraphCanvas::SceneRequests::RemoveUnusedElements);
+            JE::Editor::Tools::GraphCanvas::ScopedGraphUndoBatch undoBatch(m_activeGraphId);
+            JE::Editor::Tools::GraphCanvas::SceneRequestBus::Event(m_activeGraphId, &JE::Editor::Tools::GraphCanvas::SceneRequests::RemoveUnusedElements);
         }, {});
 
         makeSeperator("menuEdit");
         m_actionSelectAll = makeAction("menuEdit", tr("Select All"), [this](){
-            GraphCanvas::SceneRequestBus::Event(m_activeGraphId, &GraphCanvas::SceneRequests::SelectAll);
+            JE::Editor::Tools::GraphCanvas::SceneRequestBus::Event(m_activeGraphId, &JE::Editor::Tools::GraphCanvas::SceneRequests::SelectAll);
         }, QKeySequence::SelectAll);
         m_actionSelectInputs = makeAction("menuEdit", tr("Select Inputs"), [this](){
-            GraphCanvas::SceneRequestBus::Event(
-                m_activeGraphId, &GraphCanvas::SceneRequests::SelectAllRelative, GraphCanvas::ConnectionType::CT_Input);
+            JE::Editor::Tools::GraphCanvas::SceneRequestBus::Event(
+                m_activeGraphId, &JE::Editor::Tools::GraphCanvas::SceneRequests::SelectAllRelative, JE::Editor::Tools::GraphCanvas::ConnectionType::CT_Input);
         }, QKeySequence(0x0 | Qt::CTRL | Qt::Key_Left));
         m_actionSelectOutputs = makeAction("menuEdit", tr("Select Outputs"), [this](){
-            GraphCanvas::SceneRequestBus::Event(
-                m_activeGraphId, &GraphCanvas::SceneRequests::SelectAllRelative, GraphCanvas::ConnectionType::CT_Output);
+            JE::Editor::Tools::GraphCanvas::SceneRequestBus::Event(
+                m_activeGraphId, &JE::Editor::Tools::GraphCanvas::SceneRequests::SelectAllRelative, JE::Editor::Tools::GraphCanvas::ConnectionType::CT_Output);
         }, QKeySequence(0x0 | Qt::CTRL | Qt::Key_Right));
         m_actionSelectConnected = makeAction("menuEdit", tr("Select Connected"), [this](){
-            GraphCanvas::SceneRequestBus::Event(m_activeGraphId, &GraphCanvas::SceneRequests::SelectConnectedNodes);
+            JE::Editor::Tools::GraphCanvas::SceneRequestBus::Event(m_activeGraphId, &JE::Editor::Tools::GraphCanvas::SceneRequests::SelectConnectedNodes);
         }, QKeySequence(0x0 | Qt::CTRL | Qt::Key_Up));
         m_actionSelectNone = makeAction("menuEdit", tr("Clear Selection"), [this](){
-            GraphCanvas::SceneRequestBus::Event(m_activeGraphId, &GraphCanvas::SceneRequests::ClearSelection);
+            JE::Editor::Tools::GraphCanvas::SceneRequestBus::Event(m_activeGraphId, &JE::Editor::Tools::GraphCanvas::SceneRequests::ClearSelection);
         }, QKeySequence::Deselect);
         m_actionSelectEnable = makeAction("menuEdit", tr("Enable Selection"), [this](){
-            GraphCanvas::SceneRequestBus::Event(m_activeGraphId, &GraphCanvas::SceneRequests::EnableSelection);
+            JE::Editor::Tools::GraphCanvas::SceneRequestBus::Event(m_activeGraphId, &JE::Editor::Tools::GraphCanvas::SceneRequests::EnableSelection);
         }, QKeySequence(0x0 | Qt::CTRL | Qt::Key_K, 0x0 | Qt::CTRL | Qt::Key_U));
         m_actionSelectDisable = makeAction("menuEdit", tr("Disable Selection"), [this](){
-            GraphCanvas::SceneRequestBus::Event(m_activeGraphId, &GraphCanvas::SceneRequests::DisableSelection);
+            JE::Editor::Tools::GraphCanvas::SceneRequestBus::Event(m_activeGraphId, &JE::Editor::Tools::GraphCanvas::SceneRequests::DisableSelection);
         }, QKeySequence(0x0 | Qt::CTRL | Qt::Key_K, 0x0 | Qt::CTRL | Qt::Key_C));
 
         makeSeperator("menuEdit");
         m_actionScreenShot = makeAction("menuEdit", tr("Screenshot"), [this](){
-            GraphCanvas::ViewId viewId;
-            GraphCanvas::SceneRequestBus::EventResult(viewId, m_activeGraphId, &GraphCanvas::SceneRequests::GetViewId);
-            GraphCanvas::ViewRequestBus::Event(viewId, &GraphCanvas::ViewRequests::ScreenshotSelection);
+            JE::Editor::Tools::GraphCanvas::ViewId viewId;
+            JE::Editor::Tools::GraphCanvas::SceneRequestBus::EventResult(viewId, m_activeGraphId, &JE::Editor::Tools::GraphCanvas::SceneRequests::GetViewId);
+            JE::Editor::Tools::GraphCanvas::ViewRequestBus::Event(viewId, &JE::Editor::Tools::GraphCanvas::ViewRequests::ScreenshotSelection);
         }, QKeySequence(0x0 | Qt::CTRL | Qt::SHIFT | Qt::Key_P));
 
         makeSeperator("menuEdit");
         m_actionAlignTop = makeAction("menuEdit", tr("Align Top"), [this](){
-            GraphCanvas::AlignConfig alignConfig;
-            alignConfig.m_horAlign = GraphCanvas::GraphUtils::HorizontalAlignment::None;
-            alignConfig.m_verAlign = GraphCanvas::GraphUtils::VerticalAlignment::Top;
-            GraphCanvas::AssetEditorSettingsRequestBus::EventResult(
-                alignConfig.m_alignTime, m_toolId, &GraphCanvas::AssetEditorSettingsRequestBus::Events::GetAlignmentTime);
+            JE::Editor::Tools::GraphCanvas::AlignConfig alignConfig;
+            alignConfig.m_horAlign = JE::Editor::Tools::GraphCanvas::GraphUtils::HorizontalAlignment::None;
+            alignConfig.m_verAlign = JE::Editor::Tools::GraphCanvas::GraphUtils::VerticalAlignment::Top;
+            JE::Editor::Tools::GraphCanvas::AssetEditorSettingsRequestBus::EventResult(
+                alignConfig.m_alignTime, m_toolId, &JE::Editor::Tools::GraphCanvas::AssetEditorSettingsRequestBus::Events::GetAlignmentTime);
             AlignSelected(alignConfig);
         }, {});
         m_actionAlignBottom = makeAction("menuEdit", tr("Align Bottom"), [this](){
-            GraphCanvas::AlignConfig alignConfig;
-            alignConfig.m_horAlign = GraphCanvas::GraphUtils::HorizontalAlignment::None;
-            alignConfig.m_verAlign = GraphCanvas::GraphUtils::VerticalAlignment::Bottom;
-            GraphCanvas::AssetEditorSettingsRequestBus::EventResult(
-                alignConfig.m_alignTime, m_toolId, &GraphCanvas::AssetEditorSettingsRequestBus::Events::GetAlignmentTime);
+            JE::Editor::Tools::GraphCanvas::AlignConfig alignConfig;
+            alignConfig.m_horAlign = JE::Editor::Tools::GraphCanvas::GraphUtils::HorizontalAlignment::None;
+            alignConfig.m_verAlign = JE::Editor::Tools::GraphCanvas::GraphUtils::VerticalAlignment::Bottom;
+            JE::Editor::Tools::GraphCanvas::AssetEditorSettingsRequestBus::EventResult(
+                alignConfig.m_alignTime, m_toolId, &JE::Editor::Tools::GraphCanvas::AssetEditorSettingsRequestBus::Events::GetAlignmentTime);
             AlignSelected(alignConfig);
         }, {});
         m_actionAlignLeft = makeAction("menuEdit", tr("Align Left"), [this](){
-            GraphCanvas::AlignConfig alignConfig;
-            alignConfig.m_horAlign = GraphCanvas::GraphUtils::HorizontalAlignment::Left;
-            alignConfig.m_verAlign = GraphCanvas::GraphUtils::VerticalAlignment::None;
-            GraphCanvas::AssetEditorSettingsRequestBus::EventResult(
-                alignConfig.m_alignTime, m_toolId, &GraphCanvas::AssetEditorSettingsRequestBus::Events::GetAlignmentTime);
+            JE::Editor::Tools::GraphCanvas::AlignConfig alignConfig;
+            alignConfig.m_horAlign = JE::Editor::Tools::GraphCanvas::GraphUtils::HorizontalAlignment::Left;
+            alignConfig.m_verAlign = JE::Editor::Tools::GraphCanvas::GraphUtils::VerticalAlignment::None;
+            JE::Editor::Tools::GraphCanvas::AssetEditorSettingsRequestBus::EventResult(
+                alignConfig.m_alignTime, m_toolId, &JE::Editor::Tools::GraphCanvas::AssetEditorSettingsRequestBus::Events::GetAlignmentTime);
             AlignSelected(alignConfig);
         }, {});
         m_actionAlignRight = makeAction("menuEdit", tr("Align Right"), [this](){
-            GraphCanvas::AlignConfig alignConfig;
-            alignConfig.m_horAlign = GraphCanvas::GraphUtils::HorizontalAlignment::Right;
-            alignConfig.m_verAlign = GraphCanvas::GraphUtils::VerticalAlignment::None;
-            GraphCanvas::AssetEditorSettingsRequestBus::EventResult(
-                alignConfig.m_alignTime, m_toolId, &GraphCanvas::AssetEditorSettingsRequestBus::Events::GetAlignmentTime);
+            JE::Editor::Tools::GraphCanvas::AlignConfig alignConfig;
+            alignConfig.m_horAlign = JE::Editor::Tools::GraphCanvas::GraphUtils::HorizontalAlignment::Right;
+            alignConfig.m_verAlign = JE::Editor::Tools::GraphCanvas::GraphUtils::VerticalAlignment::None;
+            JE::Editor::Tools::GraphCanvas::AssetEditorSettingsRequestBus::EventResult(
+                alignConfig.m_alignTime, m_toolId, &JE::Editor::Tools::GraphCanvas::AssetEditorSettingsRequestBus::Events::GetAlignmentTime);
             AlignSelected(alignConfig);
         }, {});
 
@@ -279,36 +279,36 @@ namespace JE::Editor::Tools
 
         makeSeperator("menuView");
         m_actionShowEntireGraph = makeAction("menuView", tr("Show Entire Graph"), [this](){
-            GraphCanvas::ViewId viewId;
-            GraphCanvas::SceneRequestBus::EventResult(viewId, m_activeGraphId, &GraphCanvas::SceneRequests::GetViewId);
-            GraphCanvas::ViewRequestBus::Event(viewId, &GraphCanvas::ViewRequests::ShowEntireGraph);
+            JE::Editor::Tools::GraphCanvas::ViewId viewId;
+            JE::Editor::Tools::GraphCanvas::SceneRequestBus::EventResult(viewId, m_activeGraphId, &JE::Editor::Tools::GraphCanvas::SceneRequests::GetViewId);
+            JE::Editor::Tools::GraphCanvas::ViewRequestBus::Event(viewId, &JE::Editor::Tools::GraphCanvas::ViewRequests::ShowEntireGraph);
         }, QKeySequence(0x0 | Qt::CTRL | Qt::SHIFT | Qt::Key_Down));
         m_actionZoomIn = makeAction("menuView", tr("Zoom In"), [this](){
-            GraphCanvas::ViewId viewId;
-            GraphCanvas::SceneRequestBus::EventResult(viewId, m_activeGraphId, &GraphCanvas::SceneRequests::GetViewId);
-            GraphCanvas::ViewRequestBus::Event(viewId, &GraphCanvas::ViewRequests::ZoomIn);
+            JE::Editor::Tools::GraphCanvas::ViewId viewId;
+            JE::Editor::Tools::GraphCanvas::SceneRequestBus::EventResult(viewId, m_activeGraphId, &JE::Editor::Tools::GraphCanvas::SceneRequests::GetViewId);
+            JE::Editor::Tools::GraphCanvas::ViewRequestBus::Event(viewId, &JE::Editor::Tools::GraphCanvas::ViewRequests::ZoomIn);
         }, QKeySequence::ZoomIn);
         m_actionZoomOut = makeAction("menuView", tr("Zoom Out"), [this](){
-            GraphCanvas::ViewId viewId;
-            GraphCanvas::SceneRequestBus::EventResult(viewId, m_activeGraphId, &GraphCanvas::SceneRequests::GetViewId);
-            GraphCanvas::ViewRequestBus::Event(viewId, &GraphCanvas::ViewRequests::ZoomOut);
+            JE::Editor::Tools::GraphCanvas::ViewId viewId;
+            JE::Editor::Tools::GraphCanvas::SceneRequestBus::EventResult(viewId, m_activeGraphId, &JE::Editor::Tools::GraphCanvas::SceneRequests::GetViewId);
+            JE::Editor::Tools::GraphCanvas::ViewRequestBus::Event(viewId, &JE::Editor::Tools::GraphCanvas::ViewRequests::ZoomOut);
         }, QKeySequence::ZoomOut);
         m_actionZoomSelection = makeAction("menuView", tr("Zoom Selection"), [this](){
-            GraphCanvas::ViewId viewId;
-            GraphCanvas::SceneRequestBus::EventResult(viewId, m_activeGraphId, &GraphCanvas::SceneRequests::GetViewId);
-            GraphCanvas::ViewRequestBus::Event(viewId, &GraphCanvas::ViewRequests::CenterOnSelection);
+            JE::Editor::Tools::GraphCanvas::ViewId viewId;
+            JE::Editor::Tools::GraphCanvas::SceneRequestBus::EventResult(viewId, m_activeGraphId, &JE::Editor::Tools::GraphCanvas::SceneRequests::GetViewId);
+            JE::Editor::Tools::GraphCanvas::ViewRequestBus::Event(viewId, &JE::Editor::Tools::GraphCanvas::ViewRequests::CenterOnSelection);
         }, QKeySequence(0x0 | Qt::CTRL | Qt::SHIFT | Qt::Key_Up));
 
         makeSeperator("menuView");
         m_actionGotoStartOfChain = makeAction("menuView", tr("Goto Start Of Chain"), [this](){
-            GraphCanvas::ViewId viewId;
-            GraphCanvas::SceneRequestBus::EventResult(viewId, m_activeGraphId, &GraphCanvas::SceneRequests::GetViewId);
-            GraphCanvas::ViewRequestBus::Event(viewId, &GraphCanvas::ViewRequests::CenterOnStartOfChain);
+            JE::Editor::Tools::GraphCanvas::ViewId viewId;
+            JE::Editor::Tools::GraphCanvas::SceneRequestBus::EventResult(viewId, m_activeGraphId, &JE::Editor::Tools::GraphCanvas::SceneRequests::GetViewId);
+            JE::Editor::Tools::GraphCanvas::ViewRequestBus::Event(viewId, &JE::Editor::Tools::GraphCanvas::ViewRequests::CenterOnStartOfChain);
         }, QKeySequence(0x0 | Qt::CTRL | Qt::SHIFT | Qt::Key_Left));
         m_actionGotoEndOfChain = makeAction("menuView", tr("Goto End Of Chain"), [this](){
-            GraphCanvas::ViewId viewId;
-            GraphCanvas::SceneRequestBus::EventResult(viewId, m_activeGraphId, &GraphCanvas::SceneRequests::GetViewId);
-            GraphCanvas::ViewRequestBus::Event(viewId, &GraphCanvas::ViewRequests::CenterOnEndOfChain);
+            JE::Editor::Tools::GraphCanvas::ViewId viewId;
+            JE::Editor::Tools::GraphCanvas::SceneRequestBus::EventResult(viewId, m_activeGraphId, &JE::Editor::Tools::GraphCanvas::SceneRequests::GetViewId);
+            JE::Editor::Tools::GraphCanvas::ViewRequestBus::Event(viewId, &JE::Editor::Tools::GraphCanvas::ViewRequests::CenterOnEndOfChain);
         }, QKeySequence(0x0 | Qt::CTRL | Qt::SHIFT | Qt::Key_Right));
     }
 
@@ -335,16 +335,16 @@ namespace JE::Editor::Tools
         if (hasGraph)
         {
             AzToolsFramework::EntityIdList selectedItems;
-            GraphCanvas::SceneRequestBus::EventResult(selectedItems, m_activeGraphId, &GraphCanvas::SceneRequests::GetSelectedItems);
+            JE::Editor::Tools::GraphCanvas::SceneRequestBus::EventResult(selectedItems, m_activeGraphId, &JE::Editor::Tools::GraphCanvas::SceneRequests::GetSelectedItems);
             hasSelection = !selectedItems.empty();
 
-            GraphCanvas::SceneRequestBus::EventResult(
-                hasCopiableSelection, m_activeGraphId, &GraphCanvas::SceneRequests::HasCopiableSelection);
+            JE::Editor::Tools::GraphCanvas::SceneRequestBus::EventResult(
+                hasCopiableSelection, m_activeGraphId, &JE::Editor::Tools::GraphCanvas::SceneRequests::HasCopiableSelection);
         }
 
         // Enable the Paste action if the clipboard (if any) has a mime type that we support
         AZStd::string copyMimeType;
-        GraphCanvas::SceneRequestBus::EventResult(copyMimeType, m_activeGraphId, &GraphCanvas::SceneRequests::GetCopyMimeType);
+        JE::Editor::Tools::GraphCanvas::SceneRequestBus::EventResult(copyMimeType, m_activeGraphId, &JE::Editor::Tools::GraphCanvas::SceneRequests::GetCopyMimeType);
         const bool canPaste = hasGraph && !copyMimeType.empty() && QApplication::clipboard()->mimeData()->hasFormat(copyMimeType.c_str());
 
         m_actionCut->setEnabled(hasCopiableSelection);
@@ -393,17 +393,17 @@ namespace JE::Editor::Tools
         return m_activeGraphId;
     }
 
-    bool GraphView::ContainsGraph([[maybe_unused]] const GraphCanvas::GraphId& graphId) const
+    bool GraphView::ContainsGraph([[maybe_unused]] const JE::Editor::Tools::GraphCanvas::GraphId& graphId) const
     {
         return m_activeGraphId == graphId;
     }
 
-    bool GraphView::CloseGraph([[maybe_unused]] const GraphCanvas::GraphId& graphId)
+    bool GraphView::CloseGraph([[maybe_unused]] const JE::Editor::Tools::GraphCanvas::GraphId& graphId)
     {
         return false;
     }
 
-    GraphCanvas::ContextMenuAction::SceneReaction GraphView::ShowSceneContextMenu(const QPoint& screenPoint, const QPointF& scenePoint)
+    JE::Editor::Tools::GraphCanvas::ContextMenuAction::SceneReaction GraphView::ShowSceneContextMenu(const QPoint& screenPoint, const QPointF& scenePoint)
     {
         m_sceneContextMenu->ResetSourceSlotFilter();
 
@@ -411,91 +411,91 @@ namespace JE::Editor::Tools
         return HandleContextMenu(*m_sceneContextMenu, AZ::EntityId(), screenPoint, scenePoint);
     }
 
-    GraphCanvas::ContextMenuAction::SceneReaction GraphView::ShowNodeContextMenu(
+    JE::Editor::Tools::GraphCanvas::ContextMenuAction::SceneReaction GraphView::ShowNodeContextMenu(
         const AZ::EntityId& nodeId, const QPoint& screenPoint, const QPointF& scenePoint)
     {
-        GraphCanvas::NodeContextMenu contextMenu(m_toolId);
+        JE::Editor::Tools::GraphCanvas::NodeContextMenu contextMenu(m_toolId);
         return HandleContextMenu(contextMenu, nodeId, screenPoint, scenePoint);
     }
 
-    GraphCanvas::ContextMenuAction::SceneReaction GraphView::ShowCommentContextMenu(
+    JE::Editor::Tools::GraphCanvas::ContextMenuAction::SceneReaction GraphView::ShowCommentContextMenu(
         const AZ::EntityId& nodeId, const QPoint& screenPoint, const QPointF& scenePoint)
     {
-        GraphCanvas::CommentContextMenu contextMenu(m_toolId);
+        JE::Editor::Tools::GraphCanvas::CommentContextMenu contextMenu(m_toolId);
         return HandleContextMenu(contextMenu, nodeId, screenPoint, scenePoint);
     }
 
-    GraphCanvas::ContextMenuAction::SceneReaction GraphView::ShowNodeGroupContextMenu(
+    JE::Editor::Tools::GraphCanvas::ContextMenuAction::SceneReaction GraphView::ShowNodeGroupContextMenu(
         const AZ::EntityId& groupId, const QPoint& screenPoint, const QPointF& scenePoint)
     {
-        GraphCanvas::NodeGroupContextMenu contextMenu(m_toolId);
+        JE::Editor::Tools::GraphCanvas::NodeGroupContextMenu contextMenu(m_toolId);
         return HandleContextMenu(contextMenu, groupId, screenPoint, scenePoint);
     }
 
-    GraphCanvas::ContextMenuAction::SceneReaction GraphView::ShowCollapsedNodeGroupContextMenu(
+    JE::Editor::Tools::GraphCanvas::ContextMenuAction::SceneReaction GraphView::ShowCollapsedNodeGroupContextMenu(
         const AZ::EntityId& nodeId, const QPoint& screenPoint, const QPointF& scenePoint)
     {
-        GraphCanvas::CollapsedNodeGroupContextMenu contextMenu(m_toolId);
+        JE::Editor::Tools::GraphCanvas::CollapsedNodeGroupContextMenu contextMenu(m_toolId);
         return HandleContextMenu(contextMenu, nodeId, screenPoint, scenePoint);
     }
 
-    GraphCanvas::ContextMenuAction::SceneReaction GraphView::ShowBookmarkContextMenu(
+    JE::Editor::Tools::GraphCanvas::ContextMenuAction::SceneReaction GraphView::ShowBookmarkContextMenu(
         const AZ::EntityId& bookmarkId, const QPoint& screenPoint, const QPointF& scenePoint)
     {
-        GraphCanvas::BookmarkContextMenu contextMenu(m_toolId);
+        JE::Editor::Tools::GraphCanvas::BookmarkContextMenu contextMenu(m_toolId);
         return HandleContextMenu(contextMenu, bookmarkId, screenPoint, scenePoint);
     }
 
-    GraphCanvas::ContextMenuAction::SceneReaction GraphView::ShowConnectionContextMenu(
+    JE::Editor::Tools::GraphCanvas::ContextMenuAction::SceneReaction GraphView::ShowConnectionContextMenu(
         const AZ::EntityId& connectionId, const QPoint& screenPoint, const QPointF& scenePoint)
     {
-        GraphCanvas::ConnectionContextMenu contextMenu(m_toolId);
+        JE::Editor::Tools::GraphCanvas::ConnectionContextMenu contextMenu(m_toolId);
         return HandleContextMenu(contextMenu, connectionId, screenPoint, scenePoint);
     }
 
-    GraphCanvas::ContextMenuAction::SceneReaction GraphView::ShowSlotContextMenu(
+    JE::Editor::Tools::GraphCanvas::ContextMenuAction::SceneReaction GraphView::ShowSlotContextMenu(
         const AZ::EntityId& slotId, const QPoint& screenPoint, const QPointF& scenePoint)
     {
-        GraphCanvas::SlotContextMenu contextMenu(m_toolId);
+        JE::Editor::Tools::GraphCanvas::SlotContextMenu contextMenu(m_toolId);
         return HandleContextMenu(contextMenu, slotId, screenPoint, scenePoint);
     }
 
-    GraphCanvas::Endpoint GraphView::CreateNodeForProposal(
-        const AZ::EntityId& connectionId, const GraphCanvas::Endpoint& endpoint, const QPointF& scenePoint, const QPoint& screenPoint)
+    JE::Editor::Tools::GraphCanvas::Endpoint GraphView::CreateNodeForProposal(
+        const AZ::EntityId& connectionId, const JE::Editor::Tools::GraphCanvas::Endpoint& endpoint, const QPointF& scenePoint, const QPoint& screenPoint)
     {
-        GraphCanvas::Endpoint retVal;
+        JE::Editor::Tools::GraphCanvas::Endpoint retVal;
 
         m_createNodeProposalContextMenu->FilterForSourceSlot(m_activeGraphId, endpoint.GetSlotId());
         m_createNodeProposalContextMenu->RefreshActions(m_activeGraphId, connectionId);
 
         m_createNodeProposalContextMenu->exec(screenPoint);
 
-        GraphCanvas::GraphCanvasMimeEvent* mimeEvent = m_createNodeProposalContextMenu->GetNodePalette()->GetContextMenuEvent();
+        JE::Editor::Tools::GraphCanvas::GraphCanvasMimeEvent* mimeEvent = m_createNodeProposalContextMenu->GetNodePalette()->GetContextMenuEvent();
         if (mimeEvent)
         {
-            GraphCanvas::ScopedGraphUndoBatch undoBatch(m_activeGraphId);
+            JE::Editor::Tools::GraphCanvas::ScopedGraphUndoBatch undoBatch(m_activeGraphId);
 
             AZ::Vector2 dropPos(aznumeric_cast<float>(scenePoint.x()), aznumeric_cast<float>(scenePoint.y()));
             if (mimeEvent->ExecuteEvent(dropPos, dropPos, m_activeGraphId))
             {
-                GraphCanvas::NodeId nodeId = mimeEvent->GetCreatedNodeId();
+                JE::Editor::Tools::GraphCanvas::NodeId nodeId = mimeEvent->GetCreatedNodeId();
                 if (nodeId.IsValid())
                 {
-                    GraphCanvas::VisualRequestBus::Event(nodeId, &GraphCanvas::VisualRequests::SetVisible, false);
+                    JE::Editor::Tools::GraphCanvas::VisualRequestBus::Event(nodeId, &JE::Editor::Tools::GraphCanvas::VisualRequests::SetVisible, false);
                     retVal = HandleProposedConnection(m_activeGraphId, connectionId, endpoint, nodeId, screenPoint);
                 }
 
                 if (retVal.IsValid())
                 {
-                    GraphCanvas::GraphUtils::CreateOpportunisticConnectionsBetween(endpoint, retVal);
-                    GraphCanvas::VisualRequestBus::Event(nodeId, &GraphCanvas::VisualRequests::SetVisible, true);
+                    JE::Editor::Tools::GraphCanvas::GraphUtils::CreateOpportunisticConnectionsBetween(endpoint, retVal);
+                    JE::Editor::Tools::GraphCanvas::VisualRequestBus::Event(nodeId, &JE::Editor::Tools::GraphCanvas::VisualRequests::SetVisible, true);
 
                     AZ::Vector2 position;
-                    GraphCanvas::GeometryRequestBus::EventResult(position, retVal.GetNodeId(), &GraphCanvas::GeometryRequests::GetPosition);
+                    JE::Editor::Tools::GraphCanvas::GeometryRequestBus::EventResult(position, retVal.GetNodeId(), &JE::Editor::Tools::GraphCanvas::GeometryRequests::GetPosition);
 
                     QPointF connectionPoint;
-                    GraphCanvas::SlotUIRequestBus::EventResult(
-                        connectionPoint, retVal.GetSlotId(), &GraphCanvas::SlotUIRequests::GetConnectionPoint);
+                    JE::Editor::Tools::GraphCanvas::SlotUIRequestBus::EventResult(
+                        connectionPoint, retVal.GetSlotId(), &JE::Editor::Tools::GraphCanvas::SlotUIRequests::GetConnectionPoint);
 
                     qreal verticalOffset = connectionPoint.y() - position.GetY();
                     position.SetY(aznumeric_cast<float>(scenePoint.y() - verticalOffset));
@@ -503,13 +503,13 @@ namespace JE::Editor::Tools
                     qreal horizontalOffset = connectionPoint.x() - position.GetX();
                     position.SetX(aznumeric_cast<float>(scenePoint.x() - horizontalOffset));
 
-                    GraphCanvas::GeometryRequestBus::Event(retVal.GetNodeId(), &GraphCanvas::GeometryRequests::SetPosition, position);
+                    JE::Editor::Tools::GraphCanvas::GeometryRequestBus::Event(retVal.GetNodeId(), &JE::Editor::Tools::GraphCanvas::GeometryRequests::SetPosition, position);
 
-                    GraphCanvas::SceneNotificationBus::Event(m_activeGraphId, &GraphCanvas::SceneNotifications::PostCreationEvent);
+                    JE::Editor::Tools::GraphCanvas::SceneNotificationBus::Event(m_activeGraphId, &JE::Editor::Tools::GraphCanvas::SceneNotifications::PostCreationEvent);
                 }
                 else
                 {
-                    GraphCanvas::GraphUtils::DeleteOutermostNode(m_activeGraphId, nodeId);
+                    JE::Editor::Tools::GraphCanvas::GraphUtils::DeleteOutermostNode(m_activeGraphId, nodeId);
                 }
             }
         }
@@ -530,42 +530,42 @@ namespace JE::Editor::Tools
         AtomToolsMainWindowRequestBus::Event(m_toolId, &AtomToolsMainWindowRequestBus::Events::QueueUpdateMenus, false);
     }
 
-    GraphCanvas::Endpoint GraphView::HandleProposedConnection(
-        [[maybe_unused]] const GraphCanvas::GraphId& graphId,
-        [[maybe_unused]] const GraphCanvas::ConnectionId& connectionId,
-        const GraphCanvas::Endpoint& endpoint,
-        const GraphCanvas::NodeId& proposedNode,
+    JE::Editor::Tools::GraphCanvas::Endpoint GraphView::HandleProposedConnection(
+        [[maybe_unused]] const JE::Editor::Tools::GraphCanvas::GraphId& graphId,
+        [[maybe_unused]] const JE::Editor::Tools::GraphCanvas::ConnectionId& connectionId,
+        const JE::Editor::Tools::GraphCanvas::Endpoint& endpoint,
+        const JE::Editor::Tools::GraphCanvas::NodeId& proposedNode,
         const QPoint& screenPoint)
     {
-        GraphCanvas::Endpoint retVal;
+        JE::Editor::Tools::GraphCanvas::Endpoint retVal;
 
-        GraphCanvas::ConnectionType connectionType = GraphCanvas::ConnectionType::CT_Invalid;
-        GraphCanvas::SlotRequestBus::EventResult(connectionType, endpoint.GetSlotId(), &GraphCanvas::SlotRequests::GetConnectionType);
+        JE::Editor::Tools::GraphCanvas::ConnectionType connectionType = JE::Editor::Tools::GraphCanvas::ConnectionType::CT_Invalid;
+        JE::Editor::Tools::GraphCanvas::SlotRequestBus::EventResult(connectionType, endpoint.GetSlotId(), &JE::Editor::Tools::GraphCanvas::SlotRequests::GetConnectionType);
 
-        GraphCanvas::NodeId currentTarget = proposedNode;
+        JE::Editor::Tools::GraphCanvas::NodeId currentTarget = proposedNode;
 
         while (!retVal.IsValid() && currentTarget.IsValid())
         {
             AZStd::vector<AZ::EntityId> targetSlotIds;
-            GraphCanvas::NodeRequestBus::EventResult(targetSlotIds, currentTarget, &GraphCanvas::NodeRequests::GetSlotIds);
+            JE::Editor::Tools::GraphCanvas::NodeRequestBus::EventResult(targetSlotIds, currentTarget, &JE::Editor::Tools::GraphCanvas::NodeRequests::GetSlotIds);
 
             // Find the list of endpoints on the created node that could create a valid connection
             // with the specified slot
-            AZStd::list<GraphCanvas::Endpoint> endpoints;
+            AZStd::list<JE::Editor::Tools::GraphCanvas::Endpoint> endpoints;
             for (const auto& targetSlotId : targetSlotIds)
             {
-                GraphCanvas::Endpoint proposedEndpoint(currentTarget, targetSlotId);
+                JE::Editor::Tools::GraphCanvas::Endpoint proposedEndpoint(currentTarget, targetSlotId);
 
                 bool canCreate = false;
-                GraphCanvas::SlotRequestBus::EventResult(canCreate, endpoint.GetSlotId(), &GraphCanvas::SlotRequests::CanCreateConnectionTo, proposedEndpoint);
+                JE::Editor::Tools::GraphCanvas::SlotRequestBus::EventResult(canCreate, endpoint.GetSlotId(), &JE::Editor::Tools::GraphCanvas::SlotRequests::CanCreateConnectionTo, proposedEndpoint);
 
                 if (canCreate)
                 {
-                    GraphCanvas::SlotGroup slotGroup = GraphCanvas::SlotGroups::Invalid;
-                    GraphCanvas::SlotRequestBus::EventResult(slotGroup, targetSlotId, &GraphCanvas::SlotRequests::GetSlotGroup);
+                    JE::Editor::Tools::GraphCanvas::SlotGroup slotGroup = JE::Editor::Tools::GraphCanvas::SlotGroups::Invalid;
+                    JE::Editor::Tools::GraphCanvas::SlotRequestBus::EventResult(slotGroup, targetSlotId, &JE::Editor::Tools::GraphCanvas::SlotRequests::GetSlotGroup);
 
-                    bool isVisible = slotGroup != GraphCanvas::SlotGroups::Invalid;
-                    GraphCanvas::SlotLayoutRequestBus::EventResult(isVisible, currentTarget, &GraphCanvas::SlotLayoutRequests::IsSlotGroupVisible, slotGroup);
+                    bool isVisible = slotGroup != JE::Editor::Tools::GraphCanvas::SlotGroups::Invalid;
+                    JE::Editor::Tools::GraphCanvas::SlotLayoutRequestBus::EventResult(isVisible, currentTarget, &JE::Editor::Tools::GraphCanvas::SlotLayoutRequests::IsSlotGroupVisible, slotGroup);
 
                     if (isVisible)
                     {
@@ -587,16 +587,16 @@ namespace JE::Editor::Tools
                 {
                     QMenu menu;
 
-                    for (GraphCanvas::Endpoint proposedEndpoint : endpoints)
+                    for (JE::Editor::Tools::GraphCanvas::Endpoint proposedEndpoint : endpoints)
                     {
-                        menu.addAction(aznew GraphCanvas::EndpointSelectionAction(proposedEndpoint));
+                        menu.addAction(aznew JE::Editor::Tools::GraphCanvas::EndpointSelectionAction(proposedEndpoint));
                     }
 
                     QAction* result = menu.exec(screenPoint);
 
                     if (result)
                     {
-                        auto* selectedEnpointAction = static_cast<GraphCanvas::EndpointSelectionAction*>(result);
+                        auto* selectedEnpointAction = static_cast<JE::Editor::Tools::GraphCanvas::EndpointSelectionAction*>(result);
                         retVal = selectedEnpointAction->GetEndpoint();
                     }
                     else
@@ -609,7 +609,7 @@ namespace JE::Editor::Tools
                 {
                     // Double safety check. This should be guaranteed by the previous checks. But just extra safety.
                     bool canCreateConnection = false;
-                    GraphCanvas::SlotRequestBus::EventResult(canCreateConnection, endpoint.GetSlotId(), &GraphCanvas::SlotRequests::CanCreateConnectionTo, retVal);
+                    JE::Editor::Tools::GraphCanvas::SlotRequestBus::EventResult(canCreateConnection, endpoint.GetSlotId(), &JE::Editor::Tools::GraphCanvas::SlotRequests::CanCreateConnectionTo, retVal);
 
                     if (!canCreateConnection)
                     {
@@ -625,11 +625,11 @@ namespace JE::Editor::Tools
             if (!retVal.IsValid())
             {
                 bool isWrapped = false;
-                GraphCanvas::NodeRequestBus::EventResult(isWrapped, currentTarget, &GraphCanvas::NodeRequests::IsWrapped);
+                JE::Editor::Tools::GraphCanvas::NodeRequestBus::EventResult(isWrapped, currentTarget, &JE::Editor::Tools::GraphCanvas::NodeRequests::IsWrapped);
 
                 if (isWrapped)
                 {
-                    GraphCanvas::NodeRequestBus::EventResult(currentTarget, currentTarget, &GraphCanvas::NodeRequests::GetWrappingNode);
+                    JE::Editor::Tools::GraphCanvas::NodeRequestBus::EventResult(currentTarget, currentTarget, &JE::Editor::Tools::GraphCanvas::NodeRequests::GetWrappingNode);
                 }
                 else
                 {
@@ -641,8 +641,8 @@ namespace JE::Editor::Tools
         return retVal;
     }
 
-    GraphCanvas::ContextMenuAction::SceneReaction GraphView::HandleContextMenu(
-        GraphCanvas::EditorContextMenu& editorContextMenu, const AZ::EntityId& memberId, const QPoint& screenPoint, const QPointF& scenePoint) const
+    JE::Editor::Tools::GraphCanvas::ContextMenuAction::SceneReaction GraphView::HandleContextMenu(
+        JE::Editor::Tools::GraphCanvas::EditorContextMenu& editorContextMenu, const AZ::EntityId& memberId, const QPoint& screenPoint, const QPointF& scenePoint) const
     {
         AZ::Vector2 sceneVector(aznumeric_cast<float>(scenePoint.x()), aznumeric_cast<float>(scenePoint.y()));
 
@@ -650,45 +650,45 @@ namespace JE::Editor::Tools
 
         QAction* result = editorContextMenu.exec(screenPoint);
 
-        if (auto contextMenuAction = qobject_cast<GraphCanvas::ContextMenuAction*>(result))
+        if (auto contextMenuAction = qobject_cast<JE::Editor::Tools::GraphCanvas::ContextMenuAction*>(result))
         {
-            GraphCanvas::ScopedGraphUndoBatch undoBatch(m_activeGraphId);
+            JE::Editor::Tools::GraphCanvas::ScopedGraphUndoBatch undoBatch(m_activeGraphId);
             return contextMenuAction->TriggerAction(m_activeGraphId, sceneVector);
         }
 
         if (editorContextMenu.GetNodePalette())
         {
             // Handle creating node from any node palette embedded in an GraphCanvas::EditorContextMenu.
-            GraphCanvas::GraphCanvasMimeEvent* mimeEvent = editorContextMenu.GetNodePalette()->GetContextMenuEvent();
+            JE::Editor::Tools::GraphCanvas::GraphCanvasMimeEvent* mimeEvent = editorContextMenu.GetNodePalette()->GetContextMenuEvent();
             if (mimeEvent)
             {
-                GraphCanvas::ScopedGraphUndoBatch undoBatch(m_activeGraphId);
+                JE::Editor::Tools::GraphCanvas::ScopedGraphUndoBatch undoBatch(m_activeGraphId);
 
                 AZ::Vector2 dropPos(aznumeric_cast<float>(scenePoint.x()), aznumeric_cast<float>(scenePoint.y()));
                 if (mimeEvent->ExecuteEvent(dropPos, dropPos, m_activeGraphId))
                 {
-                    GraphCanvas::NodeId nodeId = mimeEvent->GetCreatedNodeId();
+                    JE::Editor::Tools::GraphCanvas::NodeId nodeId = mimeEvent->GetCreatedNodeId();
                     if (nodeId.IsValid())
                     {
-                        GraphCanvas::SceneRequestBus::Event(m_activeGraphId, &GraphCanvas::SceneRequests::ClearSelection);
-                        GraphCanvas::VisualRequestBus::Event(nodeId, &GraphCanvas::VisualRequests::SetVisible, true);
-                        GraphCanvas::SceneMemberUIRequestBus::Event(nodeId, &GraphCanvas::SceneMemberUIRequests::SetSelected, true);
-                        GraphCanvas::SceneNotificationBus::Event(m_activeGraphId, &GraphCanvas::SceneNotifications::PostCreationEvent);
+                        JE::Editor::Tools::GraphCanvas::SceneRequestBus::Event(m_activeGraphId, &JE::Editor::Tools::GraphCanvas::SceneRequests::ClearSelection);
+                        JE::Editor::Tools::GraphCanvas::VisualRequestBus::Event(nodeId, &JE::Editor::Tools::GraphCanvas::VisualRequests::SetVisible, true);
+                        JE::Editor::Tools::GraphCanvas::SceneMemberUIRequestBus::Event(nodeId, &JE::Editor::Tools::GraphCanvas::SceneMemberUIRequests::SetSelected, true);
+                        JE::Editor::Tools::GraphCanvas::SceneNotificationBus::Event(m_activeGraphId, &JE::Editor::Tools::GraphCanvas::SceneNotifications::PostCreationEvent);
                     }
                 }
             }
         }
 
-        return GraphCanvas::ContextMenuAction::SceneReaction::Nothing;
+        return JE::Editor::Tools::GraphCanvas::ContextMenuAction::SceneReaction::Nothing;
     }
 
-    void GraphView::AlignSelected(const GraphCanvas::AlignConfig& alignConfig)
+    void GraphView::AlignSelected(const JE::Editor::Tools::GraphCanvas::AlignConfig& alignConfig)
     {
-        GraphCanvas::ScopedGraphUndoBatch undoBatch(m_activeGraphId);
+        JE::Editor::Tools::GraphCanvas::ScopedGraphUndoBatch undoBatch(m_activeGraphId);
 
-        AZStd::vector<GraphCanvas::NodeId> selectedNodes;
-        GraphCanvas::SceneRequestBus::EventResult(selectedNodes, m_activeGraphId, &GraphCanvas::SceneRequests::GetSelectedNodes);
-        GraphCanvas::GraphUtils::AlignNodes(selectedNodes, alignConfig);
+        AZStd::vector<JE::Editor::Tools::GraphCanvas::NodeId> selectedNodes;
+        JE::Editor::Tools::GraphCanvas::SceneRequestBus::EventResult(selectedNodes, m_activeGraphId, &JE::Editor::Tools::GraphCanvas::SceneRequests::GetSelectedNodes);
+        JE::Editor::Tools::GraphCanvas::GraphUtils::AlignNodes(selectedNodes, alignConfig);
     }
 
     void GraphView::OpenPresetsEditor()

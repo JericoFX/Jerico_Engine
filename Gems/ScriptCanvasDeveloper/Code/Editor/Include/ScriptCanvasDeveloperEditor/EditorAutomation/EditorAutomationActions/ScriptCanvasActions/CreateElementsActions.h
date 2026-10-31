@@ -7,9 +7,9 @@
  */
 #pragma once
 
-#include <GraphCanvas/Types/Endpoint.h>
-#include <GraphCanvas/Types/Types.h>
-#include <GraphCanvas/Widgets/NodePalette/NodePaletteWidget.h>
+#include <JE/Editor/Tools/GraphCanvas/Types/Endpoint.h>
+#include <JE/Editor/Tools/GraphCanvas/Types/Types.h>
+#include <JE/Editor/Tools/GraphCanvas/Widgets/NodePalette/NodePaletteWidget.h>
 
 #include <ScriptCanvasDeveloperEditor/EditorAutomation/EditorAutomationModelIds.h>
 #include <ScriptCanvasDeveloperEditor/EditorAutomation/EditorAutomationActions/GenericActions.h>
@@ -21,21 +21,21 @@ namespace ScriptCanvas::Developer
     */
     class CreateNodeFromPaletteAction
         : public CompoundAction
-        , public GraphCanvas::SceneNotificationBus::Handler
+        , public JE::Editor::Tools::GraphCanvas::SceneNotificationBus::Handler
     {
     public:
         AZ_CLASS_ALLOCATOR(CreateNodeFromPaletteAction, AZ::SystemAllocator);
         AZ_RTTI(CreateNodeFromPaletteAction, "{5711220C-48D6-4853-87B9-A9866B82DFCD}", CompoundAction);
 
-        CreateNodeFromPaletteAction(GraphCanvas::NodePaletteWidget* paletteWidget, GraphCanvas::GraphId graphId, QString nodeName, QPointF scenePoint);
-        CreateNodeFromPaletteAction(GraphCanvas::NodePaletteWidget* paletteWidget, GraphCanvas::GraphId graphId, QString nodeName, GraphCanvas::ConnectionId connectionId);
+        CreateNodeFromPaletteAction(JE::Editor::Tools::GraphCanvas::NodePaletteWidget* paletteWidget, JE::Editor::Tools::GraphCanvas::GraphId graphId, QString nodeName, QPointF scenePoint);
+        CreateNodeFromPaletteAction(JE::Editor::Tools::GraphCanvas::NodePaletteWidget* paletteWidget, JE::Editor::Tools::GraphCanvas::GraphId graphId, QString nodeName, JE::Editor::Tools::GraphCanvas::ConnectionId connectionId);
 
         bool IsMissingPrecondition() override;
         EditorAutomationAction* GenerateMissingPreconditionAction() override;
 
         void SetupAction() override;
 
-        GraphCanvas::NodeId GetCreatedNodeId() const;
+        JE::Editor::Tools::GraphCanvas::NodeId GetCreatedNodeId() const;
 
         // GraphCanvas::SceneNotificationBus::Handler
         void OnNodeAdded(const AZ::EntityId& nodeId, bool isPaste) override;
@@ -49,17 +49,17 @@ namespace ScriptCanvas::Developer
 
     private:
 
-        GraphCanvas::ConnectionId m_spliceTarget;
-        GraphCanvas::Endpoint     m_sourceEndpoint;
-        GraphCanvas::Endpoint     m_targetEndpoint;
+        JE::Editor::Tools::GraphCanvas::ConnectionId m_spliceTarget;
+        JE::Editor::Tools::GraphCanvas::Endpoint     m_sourceEndpoint;
+        JE::Editor::Tools::GraphCanvas::Endpoint     m_targetEndpoint;
 
-        GraphCanvas::GraphId m_graphId;
+        JE::Editor::Tools::GraphCanvas::GraphId m_graphId;
         QPointF m_scenePoint;
         QString m_nodeName;
 
-        GraphCanvas::NodePaletteWidget* m_paletteWidget;
+        JE::Editor::Tools::GraphCanvas::NodePaletteWidget* m_paletteWidget;
         
-        GraphCanvas::NodeId m_createdNodeId;
+        JE::Editor::Tools::GraphCanvas::NodeId m_createdNodeId;
 
         bool m_centerOnScene = false;
         bool m_writeToSearchFilter =  false;
@@ -70,13 +70,13 @@ namespace ScriptCanvas::Developer
     */
     class CreateCategoryFromNodePaletteAction
         : public CompoundAction
-        , public GraphCanvas::SceneNotificationBus::Handler
+        , public JE::Editor::Tools::GraphCanvas::SceneNotificationBus::Handler
     {
     public:
         AZ_CLASS_ALLOCATOR(CreateCategoryFromNodePaletteAction, AZ::SystemAllocator);
         AZ_RTTI(CreateCategoryFromNodePaletteAction, "{FA073F04-5DE2-4124-9BAB-7507FFD046CD}", CompoundAction);
 
-        CreateCategoryFromNodePaletteAction(GraphCanvas::NodePaletteWidget* nodePalette, GraphCanvas::GraphId graphId, QString category, QPointF scenePoint);
+        CreateCategoryFromNodePaletteAction(JE::Editor::Tools::GraphCanvas::NodePaletteWidget* nodePalette, JE::Editor::Tools::GraphCanvas::GraphId graphId, QString category, QPointF scenePoint);
         ~CreateCategoryFromNodePaletteAction() override = default;
 
         bool IsMissingPrecondition() override;
@@ -88,7 +88,7 @@ namespace ScriptCanvas::Developer
         void OnNodeAdded(const AZ::EntityId& nodeId, bool isPaste) override;
         ////
 
-        AZStd::vector< GraphCanvas::NodeId > GetCreatedNodes() const;
+        AZStd::vector< JE::Editor::Tools::GraphCanvas::NodeId > GetCreatedNodes() const;
 
         ActionReport GenerateReport() const override;
 
@@ -98,15 +98,15 @@ namespace ScriptCanvas::Developer
 
     private:
 
-        GraphCanvas::GraphId m_graphId;
+        JE::Editor::Tools::GraphCanvas::GraphId m_graphId;
         QPointF m_scenePoint;
 
         QString m_categoryName;
 
-        GraphCanvas::NodePaletteWidget* m_paletteWidget;
+        JE::Editor::Tools::GraphCanvas::NodePaletteWidget* m_paletteWidget;
 
         int m_expectedCreations = 0;
-        AZStd::vector< GraphCanvas::NodeId > m_createdNodeIds;
+        AZStd::vector< JE::Editor::Tools::GraphCanvas::NodeId > m_createdNodeIds;
     };
 
     /**
@@ -115,14 +115,14 @@ namespace ScriptCanvas::Developer
     */
     class CreateNodeFromContextMenuAction
         : public CompoundAction
-        , public GraphCanvas::SceneNotificationBus::Handler
+        , public JE::Editor::Tools::GraphCanvas::SceneNotificationBus::Handler
     {
     public:
         AZ_CLASS_ALLOCATOR(CreateNodeFromContextMenuAction, AZ::SystemAllocator);
         AZ_RTTI(CreateNodeFromContextMenuAction, "{0318F9D3-6433-400F-9E29-41B57A8ADB32}", CompoundAction);
 
-        CreateNodeFromContextMenuAction(GraphCanvas::GraphId graphId, QString nodeName, QPointF scenePoint);
-        CreateNodeFromContextMenuAction(GraphCanvas::GraphId graphId, QString nodeName, AZ::EntityId connectionId);
+        CreateNodeFromContextMenuAction(JE::Editor::Tools::GraphCanvas::GraphId graphId, QString nodeName, QPointF scenePoint);
+        CreateNodeFromContextMenuAction(JE::Editor::Tools::GraphCanvas::GraphId graphId, QString nodeName, AZ::EntityId connectionId);
 
         bool IsMissingPrecondition() override;
         EditorAutomationAction* GenerateMissingPreconditionAction() override;
@@ -144,14 +144,14 @@ namespace ScriptCanvas::Developer
     private:
 
         AZ::EntityId m_spliceTarget;
-        GraphCanvas::Endpoint m_sourceEndpoint;
-        GraphCanvas::Endpoint m_targetEndpoint;
+        JE::Editor::Tools::GraphCanvas::Endpoint m_sourceEndpoint;
+        JE::Editor::Tools::GraphCanvas::Endpoint m_targetEndpoint;
 
-        GraphCanvas::GraphId m_graphId;
+        JE::Editor::Tools::GraphCanvas::GraphId m_graphId;
         QPointF m_scenePoint;
         QString m_nodeName;
 
-        GraphCanvas::NodeId m_createdNodeId;
+        JE::Editor::Tools::GraphCanvas::NodeId m_createdNodeId;
 
         bool m_centerOnScene = false;
     };
@@ -162,14 +162,14 @@ namespace ScriptCanvas::Developer
     */
     class CreateNodeFromProposalAction
         : public CompoundAction
-        , public GraphCanvas::SceneNotificationBus::Handler
+        , public JE::Editor::Tools::GraphCanvas::SceneNotificationBus::Handler
     {
     public:
         AZ_CLASS_ALLOCATOR(CreateNodeFromProposalAction, AZ::SystemAllocator);
         AZ_RTTI(CreateNodeFromProposalAction, "{236A56E5-73A8-42B0-9239-77670DD4EA44}", CompoundAction);
 
-        CreateNodeFromProposalAction(GraphCanvas::GraphId graphId, GraphCanvas::Endpoint endpoint, QString nodeName);
-        CreateNodeFromProposalAction(GraphCanvas::GraphId graphId, GraphCanvas::Endpoint endpoint, QString nodeName, QPointF scenePoint);
+        CreateNodeFromProposalAction(JE::Editor::Tools::GraphCanvas::GraphId graphId, JE::Editor::Tools::GraphCanvas::Endpoint endpoint, QString nodeName);
+        CreateNodeFromProposalAction(JE::Editor::Tools::GraphCanvas::GraphId graphId, JE::Editor::Tools::GraphCanvas::Endpoint endpoint, QString nodeName, QPointF scenePoint);
 
         bool IsMissingPrecondition() override;
         EditorAutomationAction* GenerateMissingPreconditionAction() override;
@@ -191,14 +191,14 @@ namespace ScriptCanvas::Developer
 
     private:
 
-        GraphCanvas::GraphId m_graphId;
+        JE::Editor::Tools::GraphCanvas::GraphId m_graphId;
 
-        GraphCanvas::Endpoint m_endpoint;
+        JE::Editor::Tools::GraphCanvas::Endpoint m_endpoint;
 
         QPointF m_scenePoint;
         QString m_nodeName;
 
-        GraphCanvas::NodeId m_createdNodeId;
+        JE::Editor::Tools::GraphCanvas::NodeId m_createdNodeId;
     };
 
     /**
@@ -206,7 +206,7 @@ namespace ScriptCanvas::Developer
     */
     class CreateGroupAction
         : public CompoundAction
-        , public GraphCanvas::SceneNotificationBus::Handler
+        , public JE::Editor::Tools::GraphCanvas::SceneNotificationBus::Handler
     {
     public:
 
@@ -219,7 +219,7 @@ namespace ScriptCanvas::Developer
         AZ_CLASS_ALLOCATOR(CreateGroupAction, AZ::SystemAllocator);
         AZ_RTTI(CreateGroupAction, "{853F34EB-F8AB-47E3-A601-35091DC23E11}", CompoundAction);
 
-        CreateGroupAction(GraphCanvas::EditorId editorGraph, GraphCanvas::GraphId graphId, CreationType creationType = CreationType::Hotkey);
+        CreateGroupAction(JE::Editor::Tools::GraphCanvas::EditorId editorGraph, JE::Editor::Tools::GraphCanvas::GraphId graphId, CreationType creationType = CreationType::Hotkey);
         ~CreateGroupAction() override = default;
 
         void SetupAction() override;
@@ -240,8 +240,8 @@ namespace ScriptCanvas::Developer
 
     private:
 
-        GraphCanvas::EditorId m_editorId;
-        GraphCanvas::GraphId  m_graphId;
+        JE::Editor::Tools::GraphCanvas::EditorId m_editorId;
+        JE::Editor::Tools::GraphCanvas::GraphId  m_graphId;
 
         CreationType m_creationType = CreationType::Hotkey;
 

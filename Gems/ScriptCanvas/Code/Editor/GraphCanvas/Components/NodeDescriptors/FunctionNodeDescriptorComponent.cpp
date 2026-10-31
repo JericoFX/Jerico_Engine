@@ -11,8 +11,8 @@
 #include <AzCore/Serialization/SerializeContext.h>
 #include <AzToolsFramework/API/EditorAssetSystemAPI.h>
 
-#include <GraphCanvas/Components/Slots/SlotBus.h>
-#include <GraphCanvas/Components/Nodes/NodeTitleBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/Slots/SlotBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/Nodes/NodeTitleBus.h>
 
 #include <Editor/Translation/TranslationHelper.h>
 
@@ -57,14 +57,14 @@ namespace ScriptCanvasEditor
     void FunctionNodeDescriptorComponent::Activate()
     {
         NodeDescriptorComponent::Activate();
-        GraphCanvas::VisualNotificationBus::Handler::BusConnect(GetEntityId());
+        JE::Editor::Tools::GraphCanvas::VisualNotificationBus::Handler::BusConnect(GetEntityId());
         
         AZ::Data::AssetBus::Handler::BusConnect(m_assetId);
     }
 
     void FunctionNodeDescriptorComponent::Deactivate()
     {
-        GraphCanvas::VisualNotificationBus::Handler::BusDisconnect();
+        JE::Editor::Tools::GraphCanvas::VisualNotificationBus::Handler::BusDisconnect();
         AZ::Data::AssetBus::Handler::BusDisconnect();
     }
 
@@ -94,7 +94,7 @@ namespace ScriptCanvasEditor
         return openOutcome.IsSuccess();
     }
 
-    void FunctionNodeDescriptorComponent::OnAddedToGraphCanvasGraph(const GraphCanvas::GraphId&, const AZ::EntityId& scriptCanvasNodeId)
+    void FunctionNodeDescriptorComponent::OnAddedToGraphCanvasGraph(const JE::Editor::Tools::GraphCanvas::GraphId&, const AZ::EntityId& scriptCanvasNodeId)
     {
         m_scriptCanvasId = scriptCanvasNodeId;
         EditorNodeNotificationBus::Handler::BusConnect(m_scriptCanvasId);
@@ -103,7 +103,7 @@ namespace ScriptCanvasEditor
     void FunctionNodeDescriptorComponent::TriggerUpdate()
     {
         AZ::EntityId graphCanvasGraphId;
-        GraphCanvas::SceneMemberRequestBus::EventResult(graphCanvasGraphId, GetEntityId(), &GraphCanvas::SceneMemberRequests::GetScene);
+        JE::Editor::Tools::GraphCanvas::SceneMemberRequestBus::EventResult(graphCanvasGraphId, GetEntityId(), &JE::Editor::Tools::GraphCanvas::SceneMemberRequests::GetScene);
 
         if (graphCanvasGraphId.IsValid())
         {
@@ -122,7 +122,7 @@ namespace ScriptCanvasEditor
 
     void FunctionNodeDescriptorComponent::UpdateTitles()
     {
-        GraphCanvas::NodeRequestBus::Event(GetEntityId(), &GraphCanvas::NodeRequests::SetTooltip, m_name);
-        GraphCanvas::NodeTitleRequestBus::Event(GetEntityId(), &GraphCanvas::NodeTitleRequests::SetTitle, m_name);
+        JE::Editor::Tools::GraphCanvas::NodeRequestBus::Event(GetEntityId(), &JE::Editor::Tools::GraphCanvas::NodeRequests::SetTooltip, m_name);
+        JE::Editor::Tools::GraphCanvas::NodeTitleRequestBus::Event(GetEntityId(), &JE::Editor::Tools::GraphCanvas::NodeTitleRequests::SetTitle, m_name);
     }
 }

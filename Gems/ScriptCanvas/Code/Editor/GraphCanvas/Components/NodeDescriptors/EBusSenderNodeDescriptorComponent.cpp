@@ -8,7 +8,7 @@
 
 #include <AzCore/Serialization/SerializeContext.h>
 
-#include <GraphCanvas/Components/Slots/SlotBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/Slots/SlotBus.h>
 
 #include "EBusSenderNodeDescriptorComponent.h"
 
@@ -38,7 +38,7 @@ namespace ScriptCanvasEditor
     {
     }
     
-    void EBusSenderNodeDescriptorComponent::OnAddedToGraphCanvasGraph([[maybe_unused]] const GraphCanvas::GraphId& sceneId, const AZ::EntityId& scriptCanvasNodeId)
+    void EBusSenderNodeDescriptorComponent::OnAddedToGraphCanvasGraph([[maybe_unused]] const JE::Editor::Tools::GraphCanvas::GraphId& sceneId, const AZ::EntityId& scriptCanvasNodeId)
     {
         AZ::Entity* entity = nullptr;
         AZ::ComponentApplicationBus::BroadcastResult(entity, &AZ::ComponentApplicationRequests::FindEntity, scriptCanvasNodeId);
@@ -54,12 +54,12 @@ namespace ScriptCanvasEditor
                     ScriptCanvas::SlotId slotId = method->GetBusSlotId();
 
                     AZStd::vector< AZ::EntityId > graphCanvasSlots;
-                    GraphCanvas::NodeRequestBus::EventResult(graphCanvasSlots, GetEntityId(), &GraphCanvas::NodeRequests::GetSlotIds);
+                    JE::Editor::Tools::GraphCanvas::NodeRequestBus::EventResult(graphCanvasSlots, GetEntityId(), &JE::Editor::Tools::GraphCanvas::NodeRequests::GetSlotIds);
 
                     for (const AZ::EntityId& graphCanvasId : graphCanvasSlots)
                     {
                         AZStd::any* slotData = nullptr;
-                        GraphCanvas::SlotRequestBus::EventResult(slotData, graphCanvasId, &GraphCanvas::SlotRequests::GetUserData);
+                        JE::Editor::Tools::GraphCanvas::SlotRequestBus::EventResult(slotData, graphCanvasId, &JE::Editor::Tools::GraphCanvas::SlotRequests::GetUserData);
 
                         if (slotData
                             && slotData->is< ScriptCanvas::SlotId >())

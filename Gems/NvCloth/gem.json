@@ -22,7 +22,6 @@
     "dependencies": [
         "LmbrCentral",
         "GradientSignal",
-        "SurfaceData",
         "EMotionFX"
     ]
 }

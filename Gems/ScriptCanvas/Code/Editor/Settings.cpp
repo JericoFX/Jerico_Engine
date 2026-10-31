@@ -9,7 +9,7 @@
 
 #include <AzCore/UserSettings/UserSettingsProvider.h>
 
-#include <GraphCanvas/Components/Nodes/Comment/CommentBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/Nodes/Comment/CommentBus.h>
 
 #include "Settings.h"
 
@@ -43,11 +43,11 @@ namespace ScriptCanvasEditor
         {
         }
 
-        void ScriptCanvasConstructPresets::InitializeConstructType(GraphCanvas::ConstructType constructType)
+        void ScriptCanvasConstructPresets::InitializeConstructType(JE::Editor::Tools::GraphCanvas::ConstructType constructType)
         {
-            if (constructType == GraphCanvas::ConstructType::NodeGroup)
+            if (constructType == JE::Editor::Tools::GraphCanvas::ConstructType::NodeGroup)
             {
-                GraphCanvas::NodeGroupPresetBucket* nodeGroupPresetBucket = static_cast<GraphCanvas::NodeGroupPresetBucket*>(ModPresetBucket(GraphCanvas::ConstructType::NodeGroup));
+                JE::Editor::Tools::GraphCanvas::NodeGroupPresetBucket* nodeGroupPresetBucket = static_cast<JE::Editor::Tools::GraphCanvas::NodeGroupPresetBucket*>(ModPresetBucket(JE::Editor::Tools::GraphCanvas::ConstructType::NodeGroup));
 
                 if (nodeGroupPresetBucket)
                 {
@@ -63,13 +63,13 @@ namespace ScriptCanvasEditor
 
                     for (auto groupPairing : defaultGroupPresets)
                     {
-                        AZStd::shared_ptr< GraphCanvas::ConstructPreset > initializaitonGroupPreset = nodeGroupPresetBucket->CreateNewPreset(groupPairing.first);
+                        AZStd::shared_ptr< JE::Editor::Tools::GraphCanvas::ConstructPreset > initializaitonGroupPreset = nodeGroupPresetBucket->CreateNewPreset(groupPairing.first);
 
                         if (initializaitonGroupPreset)
                         {
                             const auto& presetSaveData = initializaitonGroupPreset->GetPresetData();
 
-                            GraphCanvas::CommentNodeTextSaveData* saveData = presetSaveData.FindSaveDataAs<GraphCanvas::CommentNodeTextSaveData>();
+                            JE::Editor::Tools::GraphCanvas::CommentNodeTextSaveData* saveData = presetSaveData.FindSaveDataAs<JE::Editor::Tools::GraphCanvas::CommentNodeTextSaveData>();
 
                             if (saveData)
                             {
@@ -79,9 +79,9 @@ namespace ScriptCanvasEditor
                     }
                 }
             }
-            else if (constructType == GraphCanvas::ConstructType::CommentNode)
+            else if (constructType == JE::Editor::Tools::GraphCanvas::ConstructType::CommentNode)
             {
-                GraphCanvas::CommentPresetBucket* commentPresetBucket = static_cast<GraphCanvas::CommentPresetBucket*>(ModPresetBucket(GraphCanvas::ConstructType::CommentNode));
+                JE::Editor::Tools::GraphCanvas::CommentPresetBucket* commentPresetBucket = static_cast<JE::Editor::Tools::GraphCanvas::CommentPresetBucket*>(ModPresetBucket(JE::Editor::Tools::GraphCanvas::ConstructType::CommentNode));
                 commentPresetBucket->ClearPresets();
             }
         }
@@ -217,11 +217,11 @@ namespace ScriptCanvasEditor
                         ->ClassElement(AZ::Edit::ClassElements::EditorData, "")
                             ->Attribute(AZ::Edit::Attributes::AutoExpand, true)
                         ->DataElement(AZ::Edit::UIHandlers::ComboBox, &StylingSettings::m_connectionCurveType, "Connection Curve Type", "Controls the curve style of general connections.")
-                            ->EnumAttribute(GraphCanvas::Styling::ConnectionCurveType::Straight, "Straight")
-                            ->EnumAttribute(GraphCanvas::Styling::ConnectionCurveType::Curved, "Curved")
+                            ->EnumAttribute(JE::Editor::Tools::GraphCanvas::Styling::ConnectionCurveType::Straight, "Straight")
+                            ->EnumAttribute(JE::Editor::Tools::GraphCanvas::Styling::ConnectionCurveType::Curved, "Curved")
                         ->DataElement(AZ::Edit::UIHandlers::ComboBox, &StylingSettings::m_dataConnectionCurveType, "Data Connection Curve Type", "Controls the curve style of data connections.")
-                            ->EnumAttribute(GraphCanvas::Styling::ConnectionCurveType::Straight, "Straight")
-                            ->EnumAttribute(GraphCanvas::Styling::ConnectionCurveType::Curved, "Curved")
+                            ->EnumAttribute(JE::Editor::Tools::GraphCanvas::Styling::ConnectionCurveType::Straight, "Straight")
+                            ->EnumAttribute(JE::Editor::Tools::GraphCanvas::Styling::ConnectionCurveType::Curved, "Curved")
                     ;
                 }
             }
@@ -331,7 +331,7 @@ namespace ScriptCanvasEditor
             AZ::SerializeContext* serialize = azrtti_cast<AZ::SerializeContext*>(context);
             if (serialize)
             {
-                serialize->Class<ScriptCanvasConstructPresets, GraphCanvas::EditorConstructPresets>()
+                serialize->Class<ScriptCanvasConstructPresets, JE::Editor::Tools::GraphCanvas::EditorConstructPresets>()
                     ->Version(1)
                 ;
 
@@ -533,10 +533,10 @@ namespace ScriptCanvasEditor
             , m_saveRawTranslationOuputToFile(ScriptCanvas::Grammar::g_saveRawTranslationOuputToFile)
             , m_printAbstractCodeModel(ScriptCanvas::Grammar::g_printAbstractCodeModel)
         {
-            GraphCanvas::AssetEditorPresetNotificationBus::Handler::BusConnect(ScriptCanvasEditor::AssetEditorId);
+            JE::Editor::Tools::GraphCanvas::AssetEditorPresetNotificationBus::Handler::BusConnect(ScriptCanvasEditor::AssetEditorId);
         }
 
-        void ScriptCanvasEditorSettings::OnConstructPresetsChanged(GraphCanvas::ConstructType /*constructType*/)
+        void ScriptCanvasEditorSettings::OnConstructPresetsChanged(JE::Editor::Tools::GraphCanvas::ConstructType /*constructType*/)
         {
             AZ::UserSettingsOwnerRequestBus::Event(AZ::UserSettings::CT_LOCAL, &AZ::UserSettingsOwnerRequests::SaveSettings);
             SettingsCpp::UpdateProcessingSettings();

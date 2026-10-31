@@ -8,8 +8,8 @@
 
 #include <QToolButton>
 
-#include <GraphCanvas/Components/SceneBus.h>
-#include <GraphCanvas/Editor/Automation/AutomationUtils.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/SceneBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Editor/Automation/AutomationUtils.h>
 
 #include <Editor/GraphCanvas/GraphCanvasEditorNotificationBusId.h>
 
@@ -39,7 +39,7 @@ namespace ScriptCanvas::Developer
 
         ClearActionQueue();
 
-        QToolButton* createNewGraphButton = GraphCanvas::AutomationUtils::FindObjectById<QToolButton>(ScriptCanvasEditor::AssetEditorId, ScriptCanvasEditor::AutomationIds::CreateScriptCanvasButton);
+        QToolButton* createNewGraphButton = JE::Editor::Tools::GraphCanvas::AutomationUtils::FindObjectById<QToolButton>(ScriptCanvasEditor::AssetEditorId, ScriptCanvasEditor::AutomationIds::CreateScriptCanvasButton);
 
         if (createNewGraphButton)
         {
@@ -53,7 +53,7 @@ namespace ScriptCanvas::Developer
         CompoundAction::SetupAction();
     }
 
-    GraphCanvas::GraphId CreateNewGraphAction::GetGraphId() const
+    JE::Editor::Tools::GraphCanvas::GraphId CreateNewGraphAction::GetGraphId() const
     {
         return m_graphId;
     }
@@ -66,7 +66,7 @@ namespace ScriptCanvas::Developer
         }
         else
         {
-            GraphCanvas::GraphId activeGraphCanvasId;
+            JE::Editor::Tools::GraphCanvas::GraphId activeGraphCanvasId;
             ScriptCanvasEditor::GeneralRequestBus::BroadcastResult(activeGraphCanvasId, &ScriptCanvasEditor::GeneralRequests::GetActiveGraphCanvasGraphId);
 
             if (activeGraphCanvasId != m_graphId)
@@ -98,7 +98,7 @@ namespace ScriptCanvas::Developer
 
         ClearActionQueue();
 
-        QToolButton* createNewFunctionButton = GraphCanvas::AutomationUtils::FindObjectById<QToolButton>(ScriptCanvasEditor::AssetEditorId, ScriptCanvasEditor::AutomationIds::CreateScriptCanvasFunctionButton);
+        QToolButton* createNewFunctionButton = JE::Editor::Tools::GraphCanvas::AutomationUtils::FindObjectById<QToolButton>(ScriptCanvasEditor::AssetEditorId, ScriptCanvasEditor::AutomationIds::CreateScriptCanvasFunctionButton);
 
         if (createNewFunctionButton)
         {
@@ -120,7 +120,7 @@ namespace ScriptCanvas::Developer
         }
         else
         {
-            GraphCanvas::GraphId activeGraphCanvasId;
+            JE::Editor::Tools::GraphCanvas::GraphId activeGraphCanvasId;
             ScriptCanvasEditor::GeneralRequestBus::BroadcastResult(activeGraphCanvasId, &ScriptCanvasEditor::GeneralRequests::GetActiveGraphCanvasGraphId);
 
             if (activeGraphCanvasId != m_graphId)
@@ -173,7 +173,7 @@ namespace ScriptCanvas::Developer
 
     ActionReport ForceCloseActiveGraphAction::GenerateReport() const
     {
-        GraphCanvas::GraphId activeGraphCanvasId;
+        JE::Editor::Tools::GraphCanvas::GraphId activeGraphCanvasId;
         ScriptCanvasEditor::GeneralRequestBus::BroadcastResult(activeGraphCanvasId, &ScriptCanvasEditor::GeneralRequests::GetActiveGraphCanvasGraphId);
 
         if (activeGraphCanvasId == m_activeGraphId
@@ -192,12 +192,12 @@ namespace ScriptCanvas::Developer
     WaitForNewGraphAction::WaitForNewGraphAction()
     {
         m_newGraphCreated = false;
-        GraphCanvas::AssetEditorNotificationBus::Handler::BusConnect(ScriptCanvasEditor::AssetEditorId);
+        JE::Editor::Tools::GraphCanvas::AssetEditorNotificationBus::Handler::BusConnect(ScriptCanvasEditor::AssetEditorId);
     }
 
     WaitForNewGraphAction::~WaitForNewGraphAction()
     {
-        GraphCanvas::AssetEditorNotificationBus::Handler::BusDisconnect();
+        JE::Editor::Tools::GraphCanvas::AssetEditorNotificationBus::Handler::BusDisconnect();
     }
 
     bool WaitForNewGraphAction::Tick()
@@ -210,7 +210,7 @@ namespace ScriptCanvas::Developer
         m_graphId = graphId;
         m_newGraphCreated = true;
 
-        GraphCanvas::AssetEditorNotificationBus::Handler::BusDisconnect();
+        JE::Editor::Tools::GraphCanvas::AssetEditorNotificationBus::Handler::BusDisconnect();
     }
 
 }

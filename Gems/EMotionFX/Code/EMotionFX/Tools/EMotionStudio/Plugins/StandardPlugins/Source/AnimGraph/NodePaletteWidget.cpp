@@ -16,8 +16,8 @@
 #include <EMotionFX/Source/AnimGraphStateTransition.h>
 #include <EMotionFX/Source/BlendTreeFinalNode.h>
 #include <EMotionFX/Tools/EMotionStudio/Plugins/StandardPlugins/Source/AnimGraph/BlendGraphWidget.h>
-#include <GraphCanvas/Widgets/NodePalette/NodePaletteWidget.h>
-#include <GraphCanvas/Widgets/NodePalette/TreeItems/NodePaletteTreeItem.h>
+#include <JE/Editor/Tools/GraphCanvas/Widgets/NodePalette/NodePaletteWidget.h>
+#include <JE/Editor/Tools/GraphCanvas/Widgets/NodePalette/TreeItems/NodePaletteTreeItem.h>
 #include <AzQtComponents/Utilities/Conversions.h>
 #include "AnimGraphPlugin.h"
 #include <AzQtComponents/Components/StyleManager.h>
@@ -80,12 +80,12 @@ namespace EMStudio
         // add the initial text in the layout
         m_layout->addWidget(m_initialText);
 
-        GraphCanvas::NodePaletteConfig config;
+        JE::Editor::Tools::GraphCanvas::NodePaletteConfig config;
         config.m_editorId = AnimGraphEditorId;
         config.m_rootTreeItem = m_modelUpdater.GetRootItem();
         config.m_isInContextMenu = false;
         config.m_mimeType = BlendGraphMimeEvent::BlendGraphMimeEventType;
-        m_palette = new GraphCanvas::NodePaletteWidget(this);
+        m_palette = new JE::Editor::Tools::GraphCanvas::NodePaletteWidget(this);
         m_palette->SetupNodePalette(config);
         m_palette->hide();
         m_layout->addWidget(m_palette);

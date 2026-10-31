@@ -203,11 +203,10 @@ if(PAL_TRAIT_BUILD_HOST_TOOLS)
                 ${additional_dependencies}
                 Gem::${gem_name}.API
                 Gem::ScriptEvents.Static
-                Gem::GraphCanvasWidgets
+                JE::EditorTools
                 Gem::ExpressionEvaluation.Static
             PRIVATE
                 Legacy::EditorCore
-                JE::EditorTools
         RUNTIME_DEPENDENCIES
             Gem::${gem_name}
     )
@@ -240,7 +239,6 @@ if(PAL_TRAIT_BUILD_HOST_TOOLS)
             3rdParty::Qt::Widgets
             Legacy::EditorCore
             AZ::AzQtComponents
-            Gem::GraphCanvas.Editor
             Gem::ScriptEvents.Editor
             Gem::ExpressionEvaluation
     )

@@ -11,13 +11,13 @@
 #include <QClipboard>
 #include <QHeaderView>
 
-#include <GraphCanvas/Components/SceneBus.h>
-#include <GraphCanvas/Components/Slots/Data/DataSlotBus.h>
-#include <GraphCanvas/Components/StyleBus.h>
-#include <GraphCanvas/Components/VisualBus.h>
-#include <GraphCanvas/Editor/GraphCanvasProfiler.h>
-#include <GraphCanvas/Utils/QtMimeUtils.h>
-#include <GraphCanvas/Widgets/StyledItemDelegates/GenericComboBoxDelegate.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/SceneBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/Slots/Data/DataSlotBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/StyleBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/VisualBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Editor/GraphCanvasProfiler.h>
+#include <JE/Editor/Tools/GraphCanvas/Utils/QtMimeUtils.h>
+#include <JE/Editor/Tools/GraphCanvas/Widgets/StyledItemDelegates/GenericComboBoxDelegate.h>
 
 #include <Editor/Include/ScriptCanvas/Bus/RequestBus.h>
 
@@ -368,11 +368,11 @@ namespace ScriptCanvasEditor
                             azTypes.push_back(ScriptCanvas::Data::ToAZType(dataType));
                         }
 
-                        GraphCanvas::StyleManagerRequestBus::EventResult(icon, ScriptCanvasEditor::AssetEditorId, &GraphCanvas::StyleManagerRequests::GetMultiDataTypeIcon, azTypes);
+                        JE::Editor::Tools::GraphCanvas::StyleManagerRequestBus::EventResult(icon, ScriptCanvasEditor::AssetEditorId, &JE::Editor::Tools::GraphCanvas::StyleManagerRequests::GetMultiDataTypeIcon, azTypes);
                     }
                     else
                     {
-                        GraphCanvas::StyleManagerRequestBus::EventResult(icon, ScriptCanvasEditor::AssetEditorId, &GraphCanvas::StyleManagerRequests::GetDataTypeIcon, ScriptCanvas::Data::ToAZType(varType));
+                        JE::Editor::Tools::GraphCanvas::StyleManagerRequestBus::EventResult(icon, ScriptCanvasEditor::AssetEditorId, &JE::Editor::Tools::GraphCanvas::StyleManagerRequests::GetDataTypeIcon, ScriptCanvas::Data::ToAZType(varType));
                     }
 
                     if (icon)
@@ -419,7 +419,7 @@ namespace ScriptCanvasEditor
         }
         break;
 
-        case GraphCanvas::GenericComboBoxDelegate::ComboBoxDelegateRole:
+        case JE::Editor::Tools::GraphCanvas::GenericComboBoxDelegate::ComboBoxDelegateRole:
         {
             if (index.column() == ColumnIndex::Scope)
             {
@@ -648,7 +648,7 @@ namespace ScriptCanvasEditor
 
     QMimeData* GraphVariablesModel::mimeData(const QModelIndexList &indexes) const
     {
-        GraphCanvas::GraphCanvasMimeContainer container;
+        JE::Editor::Tools::GraphCanvas::GraphCanvasMimeContainer container;
 
         bool isSet = ((QApplication::keyboardModifiers() & Qt::Modifier::ALT) != 0);
         bool isGet = ((QApplication::keyboardModifiers() & Qt::Modifier::SHIFT) != 0);
@@ -666,7 +666,7 @@ namespace ScriptCanvasEditor
 
             variableId = FindVariableIdForIndex(modelIndex);
 
-            GraphCanvas::GraphCanvasMimeEvent* mimeEvent = nullptr;
+            JE::Editor::Tools::GraphCanvas::GraphCanvasMimeEvent* mimeEvent = nullptr;
 
             if (isSet)
             {
@@ -711,7 +711,7 @@ namespace ScriptCanvasEditor
 
         if (container.m_mimeEvents.size() == 1)
         {
-            GraphCanvas::QtMimeUtils::WriteTypeToMimeData<ScriptCanvas::VariableId>(mimeDataPtr, GraphCanvas::k_ReferenceMimeType, variableId);
+            JE::Editor::Tools::GraphCanvas::QtMimeUtils::WriteTypeToMimeData<ScriptCanvas::VariableId>(mimeDataPtr, JE::Editor::Tools::GraphCanvas::k_ReferenceMimeType, variableId);
         }
 
         return mimeDataPtr;
@@ -1098,9 +1098,9 @@ namespace ScriptCanvasEditor
         setSortingEnabled(true);
 
         ApplyPreferenceSort();
-        setItemDelegateForColumn(GraphVariablesModel::Name, aznew GraphCanvas::IconDecoratedNameDelegate(this));
-        setItemDelegateForColumn(GraphVariablesModel::Scope, aznew GraphCanvas::GenericComboBoxDelegate(this));
-        setItemDelegateForColumn(GraphVariablesModel::InitialValueSource, aznew GraphCanvas::GenericComboBoxDelegate(this));
+        setItemDelegateForColumn(GraphVariablesModel::Name, aznew JE::Editor::Tools::GraphCanvas::IconDecoratedNameDelegate(this));
+        setItemDelegateForColumn(GraphVariablesModel::Scope, aznew JE::Editor::Tools::GraphCanvas::GenericComboBoxDelegate(this));
+        setItemDelegateForColumn(GraphVariablesModel::InitialValueSource, aznew JE::Editor::Tools::GraphCanvas::GenericComboBoxDelegate(this));
 
         horizontalHeader()->setStretchLastSection(false);
         horizontalHeader()->setSectionResizeMode(GraphVariablesModel::Name, QHeaderView::ResizeMode::ResizeToContents);
@@ -1236,7 +1236,7 @@ namespace ScriptCanvasEditor
     {
         QTableView::selectionChanged(selected, deselected);
 
-        GraphCanvas::SceneNotificationBus::Handler::BusDisconnect();
+        JE::Editor::Tools::GraphCanvas::SceneNotificationBus::Handler::BusDisconnect();
 
         AZStd::unordered_set< ScriptCanvas::VariableId > variableSet;
 
@@ -1262,7 +1262,7 @@ namespace ScriptCanvasEditor
 
         if (!selected.isEmpty())
         {
-            GraphCanvas::SceneNotificationBus::Handler::BusConnect(m_graphCanvasGraphId);
+            JE::Editor::Tools::GraphCanvas::SceneNotificationBus::Handler::BusConnect(m_graphCanvasGraphId);
         }
     }
 
@@ -1422,7 +1422,7 @@ namespace ScriptCanvasEditor
             AZStd::vector< NodeIdPair > nodeIds;
             EditorGraphRequestBus::EventResult(nodeIds, m_scriptCanvasId, &EditorGraphRequests::GetVariableNodes, m_cyclingVariableId);
 
-            AZStd::vector< GraphCanvas::NodeId > canvasNodes;
+            AZStd::vector< JE::Editor::Tools::GraphCanvas::NodeId > canvasNodes;
             canvasNodes.reserve(nodeIds.size());
 
             for (const auto& nodeIdPair : nodeIds)

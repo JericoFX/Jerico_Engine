@@ -12,7 +12,7 @@
 #include <JE/Editor/Tools/GraphModel/Model/GraphContext.h>
 
 class QTranslator;
-namespace GraphCanvas { class StyleManager; class GraphCanvasTreeItem; }
+namespace JE::Editor::Tools::GraphCanvas { class StyleManager; class GraphCanvasTreeItem; }
 namespace JE::Editor::Tools
 {
     class DynamicNodeManager;
@@ -37,7 +37,7 @@ namespace JE::Editor
         AZ_DISABLE_COPY_MOVE(MaterialGraphEnvironment);
 
         const AZStd::shared_ptr<JE::Editor::Tools::GraphModel::GraphContext>& GetGraphContext(GraphKind kind = GraphKind::Material) const;
-        GraphCanvas::GraphCanvasTreeItem* CreateNodePaletteTree(GraphKind kind) const;
+        JE::Editor::Tools::GraphCanvas::GraphCanvasTreeItem* CreateNodePaletteTree(GraphKind kind) const;
         void SetActiveGraphKind(GraphKind kind);
         const JE::Editor::Tools::GraphViewSettingsPtr& GetViewSettings() const;
         JE::Editor::Tools::DocumentTypeInfoVector BuildDocumentTypes(HistoryOwner owner = HistoryOwner::Standalone) const;
@@ -62,7 +62,7 @@ namespace JE::Editor
         AZStd::vector<AZ::Uuid> m_passNodeConfigs;
         GraphKind m_activeGraphKind = GraphKind::Material;
         JE::Editor::Tools::GraphViewSettingsPtr m_graphViewSettingsPtr;
-        AZStd::unique_ptr<GraphCanvas::StyleManager> m_styleManager;
+        AZStd::unique_ptr<JE::Editor::Tools::GraphCanvas::StyleManager> m_styleManager;
         AZStd::unique_ptr<QTranslator> m_translator;
     };
 }

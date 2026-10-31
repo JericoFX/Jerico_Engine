@@ -9,7 +9,7 @@
 #include <JE/Editor/Tools/SettingsDialog/SettingsDialog.h>
 #include <AzCore/IO/FileIO.h>
 #include <AzQtComponents/Components/StyleManager.h>
-#include <GraphCanvas/Widgets/NodePalette/TreeItems/NodePaletteTreeItem.h>
+#include <JE/Editor/Tools/GraphCanvas/Widgets/NodePalette/TreeItems/NodePaletteTreeItem.h>
 #include <Window/PassCanvasMainWindow.h>
 #include <Window/PassCanvasViewportContent.h>
 
@@ -67,21 +67,21 @@ namespace PassCanvas
         AddDockWidget("Viewport Settings", m_viewportSettingsInspector, Qt::LeftDockWidgetArea);
         SetDockWidgetVisible("Viewport Settings", false);
 
-        m_bookmarkDockWidget = aznew GraphCanvas::BookmarkDockWidget(m_toolId, this);
+        m_bookmarkDockWidget = aznew JE::Editor::Tools::GraphCanvas::BookmarkDockWidget(m_toolId, this);
         AddDockWidget("Bookmarks", m_bookmarkDockWidget, Qt::BottomDockWidgetArea);
         SetDockWidgetVisible("Bookmarks", false);
 
-        AddDockWidget("MiniMap", aznew GraphCanvas::MiniMapDockWidget(m_toolId, this), Qt::BottomDockWidgetArea);
+        AddDockWidget("MiniMap", aznew JE::Editor::Tools::GraphCanvas::MiniMapDockWidget(m_toolId, this), Qt::BottomDockWidgetArea);
         SetDockWidgetVisible("MiniMap", false);
 
-        GraphCanvas::NodePaletteConfig nodePaletteConfig;
+        JE::Editor::Tools::GraphCanvas::NodePaletteConfig nodePaletteConfig;
         nodePaletteConfig.m_rootTreeItem = m_graphViewSettingsPtr->m_createNodeTreeItemsFn(m_toolId);
         nodePaletteConfig.m_editorId = m_toolId;
         nodePaletteConfig.m_mimeType = m_graphViewSettingsPtr->m_nodeMimeType.c_str();
         nodePaletteConfig.m_isInContextMenu = false;
         nodePaletteConfig.m_saveIdentifier = m_graphViewSettingsPtr->m_nodeSaveIdentifier;
 
-        m_nodePalette = aznew GraphCanvas::NodePaletteDockWidget(this, "Node Palette", nodePaletteConfig);
+        m_nodePalette = aznew JE::Editor::Tools::GraphCanvas::NodePaletteDockWidget(this, "Node Palette", nodePaletteConfig);
         AddDockWidget("Node Palette", m_nodePalette, Qt::LeftDockWidgetArea);
 
         AZ::IO::FixedMaxPath resolvedPath;

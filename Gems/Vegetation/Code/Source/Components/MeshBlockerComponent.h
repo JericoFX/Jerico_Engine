@@ -16,7 +16,7 @@
 #include <Vegetation/Ebuses/MeshBlockerRequestBus.h>
 #include <LmbrCentral/Dependency/DependencyNotificationBus.h>
 #include <JE/Render/Scene/Mesh/MeshComponentBus.h>
-#include <SurfaceData/SurfaceDataSystemNotificationBus.h>
+#include <JE/Geometry/SurfaceData/SurfaceDataSystemNotificationBus.h>
 #include <AzCore/Component/TransformBus.h>
 #include <AzCore/std/containers/unordered_map.h>
 #include <Vegetation/Ebuses/AreaNotificationBus.h>
@@ -52,7 +52,7 @@ namespace Vegetation
         , private JE::Render::Scene::MeshComponentNotificationBus::Handler
         , private AZ::TickBus::Handler
         , private MeshBlockerRequestBus::Handler
-        , private SurfaceData::SurfaceDataSystemNotificationBus::Handler
+        , private JE::Geometry::SurfaceData::SurfaceDataSystemNotificationBus::Handler
     {
     public:
         friend class EditorMeshBlockerComponent;
@@ -94,12 +94,12 @@ namespace Vegetation
         void OnModelReady(const AZ::Data::Asset<JE::Render::RPI::ModelAsset>& modelAsset, const AZ::Data::Instance<JE::Render::RPI::Model>& model) override;
 
         //////////////////////////////////////////////////////////////////////////
-        // SurfaceData::SurfaceDataSystemNotificationBus
+        // JE::Geometry::SurfaceData::SurfaceDataSystemNotificationBus
         void OnSurfaceChanged(
             const AZ::EntityId& entityId,
             const AZ::Aabb& oldBounds,
             const AZ::Aabb& newBounds,
-            const SurfaceData::SurfaceTagSet& changedSurfaceTags) override;
+            const JE::Geometry::SurfaceData::SurfaceTagSet& changedSurfaceTags) override;
 
         ////////////////////////////////////////////////////////////////////////
         // AZ::TickBus

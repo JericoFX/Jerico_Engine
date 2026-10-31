@@ -23,7 +23,7 @@ namespace ScriptCanvasEditor
     /////////////////////////////////
 
     NodePaletteNodeUsageRootItem::NodePaletteNodeUsageRootItem(const NodePaletteModel& nodePaletteModel)
-        : GraphCanvas::NodePaletteTreeItem("root", ScriptCanvasEditor::AssetEditorId)
+        : JE::Editor::Tools::GraphCanvas::NodePaletteTreeItem("root", ScriptCanvasEditor::AssetEditorId)
         , m_categorizer(nodePaletteModel)
     {
     }
@@ -32,15 +32,15 @@ namespace ScriptCanvasEditor
     {
     }
 
-    GraphCanvas::NodePaletteTreeItem* NodePaletteNodeUsageRootItem::GetCategoryNode(const char* categoryPath, GraphCanvas::NodePaletteTreeItem* parentRoot)
+    JE::Editor::Tools::GraphCanvas::NodePaletteTreeItem* NodePaletteNodeUsageRootItem::GetCategoryNode(const char* categoryPath, JE::Editor::Tools::GraphCanvas::NodePaletteTreeItem* parentRoot)
     {
         if (parentRoot)
         {
-            return static_cast<GraphCanvas::NodePaletteTreeItem*>(m_categorizer.GetCategoryNode(categoryPath, parentRoot));
+            return static_cast<JE::Editor::Tools::GraphCanvas::NodePaletteTreeItem*>(m_categorizer.GetCategoryNode(categoryPath, parentRoot));
         }
         else
         {
-            return static_cast<GraphCanvas::NodePaletteTreeItem*>(m_categorizer.GetCategoryNode(categoryPath, this));
+            return static_cast<JE::Editor::Tools::GraphCanvas::NodePaletteTreeItem*>(m_categorizer.GetCategoryNode(categoryPath, this));
         }
     }
 
@@ -54,7 +54,7 @@ namespace ScriptCanvasEditor
     ////////////////////////////////////
 
     NodePaletteNodeUsagePaletteItem::NodePaletteNodeUsagePaletteItem(const ScriptCanvas::NodeTypeIdentifier& nodeIdentifier, AZStd::string_view displayName)
-        : GraphCanvas::IconDecoratedNodePaletteTreeItem(displayName, ScriptCanvasEditor::AssetEditorId)
+        : JE::Editor::Tools::GraphCanvas::IconDecoratedNodePaletteTreeItem(displayName, ScriptCanvasEditor::AssetEditorId)
         , m_nodeIdentifier(nodeIdentifier)
     {
     }
@@ -270,7 +270,7 @@ namespace ScriptCanvasEditor
                     if (AzFramework::StringFunc::Path::StripComponent(relativePath, stripLastComponent))
                     {
                         AzFramework::StringFunc::Replace(relativePath, AZ_CORRECT_FILESYSTEM_SEPARATOR, '/');
-                        GraphCanvas::GraphCanvasTreeItem* treeItem2 = m_categorizer.GetCategoryNode(relativePath.c_str(), this);
+                        JE::Editor::Tools::GraphCanvas::GraphCanvasTreeItem* treeItem2 = m_categorizer.GetCategoryNode(relativePath.c_str(), this);
 
                         if (treeItem2)
                         {
@@ -315,7 +315,7 @@ namespace ScriptCanvasEditor
         return nullptr;
     }
 
-    GraphCanvas::GraphCanvasTreeItem* ScriptCanvasAssetNodeUsageTreeItemRoot::CreateCategoryNode(AZStd::string_view, AZStd::string_view categoryName, GraphCanvasTreeItem* parent) const
+    JE::Editor::Tools::GraphCanvas::GraphCanvasTreeItem* ScriptCanvasAssetNodeUsageTreeItemRoot::CreateCategoryNode(AZStd::string_view, AZStd::string_view categoryName, GraphCanvasTreeItem* parent) const
     {
         return parent->CreateChildNode<ScriptCanvasAssetNodeUsageTreeItem>(categoryName);
     }

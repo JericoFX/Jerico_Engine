@@ -14,7 +14,7 @@
 #include <Vegetation/Ebuses/PositionModifierRequestBus.h>
 #include <GradientSignal/GradientSampler.h>
 #include <LmbrCentral/Dependency/DependencyMonitor.h>
-#include <SurfaceData/SurfaceDataSystemRequestBus.h>
+#include <JE/Geometry/SurfaceData/SurfaceDataSystemRequestBus.h>
 
 namespace LmbrCentral
 {
@@ -33,7 +33,7 @@ namespace Vegetation
         static void Reflect(AZ::ReflectContext* context);
         bool m_allowOverrides = false;
         bool m_autoSnapToSurface = true;
-        SurfaceData::SurfaceTagVector m_surfaceTagsToSnapTo;
+        JE::Geometry::SurfaceData::SurfaceTagVector m_surfaceTagsToSnapTo;
 
         float m_rangeMinX = -0.3f;
         float m_rangeMaxX = 0.3f;
@@ -109,9 +109,9 @@ namespace Vegetation
         LmbrCentral::DependencyMonitor m_dependencyMonitor;
 
         //reserve for masks to re-snap to surface
-        mutable SurfaceData::SurfaceTagVector m_surfaceTagsToSnapToCombined;
+        mutable JE::Geometry::SurfaceData::SurfaceTagVector m_surfaceTagsToSnapToCombined;
 
         //point vector reserved for reuse
-        mutable SurfaceData::SurfacePointList m_points;
+        mutable JE::Geometry::SurfaceData::SurfacePointList m_points;
     };
 }

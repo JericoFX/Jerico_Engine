@@ -10,14 +10,14 @@
 #include <AzCore/Math/Transform.h>
 #include <AzCore/Math/Quaternion.h>
 
-#include <GraphCanvas/Components/NodePropertyDisplay/VectorDataInterface.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/NodePropertyDisplay/VectorDataInterface.h>
 
 #include "ScriptCanvasDataInterface.h"
 
 namespace ScriptCanvasEditor
 {
     class ScriptCanvasQuaternionDataInterface
-        : public ScriptCanvasDataInterface<GraphCanvas::VectorDataInterface>
+        : public ScriptCanvasDataInterface<JE::Editor::Tools::GraphCanvas::VectorDataInterface>
     {
     public:
         AZ_CLASS_ALLOCATOR(ScriptCanvasQuaternionDataInterface, AZ::SystemAllocator);

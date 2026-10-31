@@ -20,7 +20,7 @@
 
 namespace
 {
-    ScriptCanvasEditor::NodePaletteNodeUsageRootItem* ExternalCreatePaletteRoot(const ScriptCanvasEditor::NodePaletteModel& nodePaletteModel, AZStd::unordered_map< ScriptCanvas::NodeTypeIdentifier, GraphCanvas::GraphCanvasTreeItem* >& leafMap)
+    ScriptCanvasEditor::NodePaletteNodeUsageRootItem* ExternalCreatePaletteRoot(const ScriptCanvasEditor::NodePaletteModel& nodePaletteModel, AZStd::unordered_map< ScriptCanvas::NodeTypeIdentifier, JE::Editor::Tools::GraphCanvas::GraphCanvasTreeItem* >& leafMap)
     {
         ScriptCanvasEditor::NodePaletteNodeUsageRootItem* root = aznew ScriptCanvasEditor::NodePaletteNodeUsageRootItem(nodePaletteModel);
 
@@ -30,8 +30,8 @@ namespace
         {
             const ScriptCanvasEditor::NodePaletteModelInformation* modelInformation = registryPair.second;
 
-            GraphCanvas::GraphCanvasTreeItem* parentItem = root->GetCategoryNode(modelInformation->m_categoryPath.c_str());
-            GraphCanvas::NodePaletteTreeItem* createdItem = nullptr;
+            JE::Editor::Tools::GraphCanvas::GraphCanvasTreeItem* parentItem = root->GetCategoryNode(modelInformation->m_categoryPath.c_str());
+            JE::Editor::Tools::GraphCanvas::NodePaletteTreeItem* createdItem = nullptr;
 
             createdItem = parentItem->CreateChildNode<ScriptCanvasEditor::NodePaletteNodeUsagePaletteItem>(modelInformation->m_nodeIdentifier, modelInformation->m_displayName);
 
@@ -219,8 +219,8 @@ namespace ScriptCanvasEditor
             return;
         }
 
-        GraphCanvas::GraphCanvasTreeItem* parentItem = m_treeRoot->GetCategoryNode(modelInformation->m_categoryPath.c_str());
-        GraphCanvas::NodePaletteTreeItem* createdItem = nullptr;
+        JE::Editor::Tools::GraphCanvas::GraphCanvasTreeItem* parentItem = m_treeRoot->GetCategoryNode(modelInformation->m_categoryPath.c_str());
+        JE::Editor::Tools::GraphCanvas::NodePaletteTreeItem* createdItem = nullptr;
 
         createdItem = parentItem->CreateChildNode<ScriptCanvasEditor::NodePaletteNodeUsagePaletteItem>(modelInformation->m_nodeIdentifier, modelInformation->m_displayName);
 
@@ -287,7 +287,7 @@ namespace ScriptCanvasEditor
         m_ui->averageGraphUsages->setText(QString::number(0));
     }
 
-    void StatisticsDialog::OnItemSelected(const GraphCanvas::GraphCanvasTreeItem* treeItem)
+    void StatisticsDialog::OnItemSelected(const JE::Editor::Tools::GraphCanvas::GraphCanvasTreeItem* treeItem)
     {
         const NodePaletteNodeUsagePaletteItem* usageItem = azrtti_cast<const NodePaletteNodeUsagePaletteItem*>(treeItem);
 
@@ -358,7 +358,7 @@ namespace ScriptCanvasEditor
         {
             m_treeRoot = ExternalCreatePaletteRoot(m_nodePaletteModel, m_leafMap);
 
-            GraphCanvas::NodePaletteConfig paletteConfig;
+            JE::Editor::Tools::GraphCanvas::NodePaletteConfig paletteConfig;
 
             paletteConfig.m_rootTreeItem = m_treeRoot;
             paletteConfig.m_editorId = ScriptCanvasEditor::AssetEditorId;
@@ -373,7 +373,7 @@ namespace ScriptCanvasEditor
             m_ui->nodePaletteWidget->SetupNodePalette(paletteConfig);
 
             m_scriptCanvasAssetTreeRoot = aznew ScriptCanvasAssetNodeUsageTreeItemRoot();
-            m_scriptCanvasAssetTree = aznew GraphCanvas::GraphCanvasTreeModel(m_scriptCanvasAssetTreeRoot);
+            m_scriptCanvasAssetTree = aznew JE::Editor::Tools::GraphCanvas::GraphCanvasTreeModel(m_scriptCanvasAssetTreeRoot);
 
             m_scriptCanvasAssetFilterModel = aznew ScriptCanvasAssetNodeUsageFilterModel();
             m_scriptCanvasAssetFilterModel->setSourceModel(m_scriptCanvasAssetTree);
@@ -396,8 +396,8 @@ namespace ScriptCanvasEditor
 
             QObject::connect(m_ui->scriptCanvasAssetTree, &QTreeView::clicked, this, &StatisticsDialog::OnScriptCanvasAssetClicked);
 
-            QObject::connect(m_ui->nodePaletteWidget, &GraphCanvas::NodePaletteWidget::OnSelectionCleared, this, &StatisticsDialog::OnSelectionCleared);
-            QObject::connect(m_ui->nodePaletteWidget, &GraphCanvas::NodePaletteWidget::OnTreeItemSelected, this, &StatisticsDialog::OnItemSelected);
+            QObject::connect(m_ui->nodePaletteWidget, &JE::Editor::Tools::GraphCanvas::NodePaletteWidget::OnSelectionCleared, this, &StatisticsDialog::OnSelectionCleared);
+            QObject::connect(m_ui->nodePaletteWidget, &JE::Editor::Tools::GraphCanvas::NodePaletteWidget::OnTreeItemSelected, this, &StatisticsDialog::OnItemSelected);
 
             QObject::connect(m_ui->searchWidget, &AzQtComponents::FilteredSearchWidget::TextFilterChanged, this, &StatisticsDialog::OnFilterUpdated);
 

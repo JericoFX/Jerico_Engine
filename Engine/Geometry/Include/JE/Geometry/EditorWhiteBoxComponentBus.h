@@ -11,6 +11,14 @@
 #include <JE/Geometry/EditorWhiteBoxDefaultShapeTypes.h>
 
 #include <AzCore/Component/ComponentBus.h>
+#include <AzCore/Asset/AssetCommon.h>
+#include <AzCore/Math/Uuid.h>
+#include <AzCore/std/string/string.h>
+
+namespace JE::Render::RPI
+{
+    class MaterialAsset;
+}
 
 namespace JE::Geometry
 {
@@ -31,6 +39,19 @@ namespace JE::Geometry
 
         //! Return a pointer to the WhiteBoxMesh.
         virtual WhiteBoxMesh* GetWhiteBoxMesh() = 0;
+
+        //! Resolve a complete surface UUID against the current editable mesh before an explicit assignment.
+        //! Address this request to the picked EntityComponentIdPair; never reinterpret a model material slot.
+        //! Queue one material intent per surface. Replacement never redirects to the current selection.
+        virtual bool RequestSurfaceMaterialAsset(
+            const AZ::Uuid& surfaceId, const AZ::Data::AssetId& assetId, AZStd::string& error) = 0;
+
+        //! Internal queued completion; ticket and asset ID must still identify a current owner request.
+        virtual void CompleteSurfaceMaterialAssetRequest(const AZ::Uuid& surfaceId, const AZ::Uuid& ticket,
+            const AZ::Data::AssetId& assetId, const AZ::Data::Asset<AZ::Data::AssetData>& asset) = 0;
+
+        virtual bool AssignSurfaceMaterialAsset(const AZ::Uuid& surfaceId,
+            const AZ::Data::Asset<JE::Render::RPI::MaterialAsset>& material, AZStd::string& error) = 0;
 
         //! Return a handle wrapping the raw address of the WhiteBoxMesh pointer.
         //! @note This is currently used to address the WhiteBoxMesh via script.

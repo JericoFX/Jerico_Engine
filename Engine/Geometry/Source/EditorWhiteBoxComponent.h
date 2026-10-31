@@ -24,12 +24,21 @@
 #include <AzFramework/Entity/EntityDebugDisplayBus.h>
 #include <AzFramework/Visibility/VisibleGeometryBus.h>
 #include <AzFramework/Visibility/BoundsBus.h>
+#include <AzFramework/Render/GeometryIntersectionBus.h>
+#include <AzCore/std/containers/vector.h>
+#include <AzCore/std/containers/unordered_map.h>
+#include <AzCore/std/smart_ptr/shared_ptr.h>
 #include <AzToolsFramework/API/ComponentEntitySelectionBus.h>
 #include <AzToolsFramework/ComponentMode/ComponentModeDelegate.h>
 #include <AzToolsFramework/ToolsComponents/EditorComponentBase.h>
 #include <AzToolsFramework/ToolsComponents/EditorVisibilityBus.h>
 #include <JE/Geometry/EditorWhiteBoxComponentBus.h>
 #include <JE/Geometry/WhiteBoxToolApi.h>
+
+namespace JE::Render::RPI::AssetUtils
+{
+    class AsyncAssetLoader;
+}
 
 namespace JE::Geometry
 {
@@ -42,6 +51,7 @@ namespace JE::Geometry
         , public AzToolsFramework::EditorComponentSelectionRequestsBus::Handler
         , public AzFramework::BoundsRequestBus::Handler
         , public AzFramework::VisibleGeometryRequestBus::Handler
+        , public AzFramework::RenderGeometry::IntersectionRequestBus::Handler
         , public EditorWhiteBoxComponentRequestBus::Handler
         , private EditorWhiteBoxComponentNotificationBus::Handler
         , private AZ::TransformNotificationBus::Handler
@@ -65,6 +75,12 @@ namespace JE::Geometry
 
         // EditorWhiteBoxComponentRequestBus overrides ...
         WhiteBoxMesh* GetWhiteBoxMesh() override;
+        bool RequestSurfaceMaterialAsset(
+            const AZ::Uuid& surfaceId, const AZ::Data::AssetId& assetId, AZStd::string& error) override;
+        void CompleteSurfaceMaterialAssetRequest(const AZ::Uuid& surfaceId, const AZ::Uuid& ticket,
+            const AZ::Data::AssetId& assetId, const AZ::Data::Asset<AZ::Data::AssetData>& asset) override;
+        bool AssignSurfaceMaterialAsset(const AZ::Uuid& surfaceId,
+            const AZ::Data::Asset<JE::Render::RPI::MaterialAsset>& material, AZStd::string& error) override;
         void SerializeWhiteBox() override;
         void DeserializeWhiteBox() override;
         void WriteAssetToComponent() override;
@@ -96,6 +112,10 @@ namespace JE::Geometry
             float& distance) override;
         bool SupportsEditorRayIntersect() override;
 
+        // IntersectionRequestBus override; shares the existing selection intersection implementation.
+        AzFramework::RenderGeometry::RayResult RenderGeometryIntersect(
+            const AzFramework::RenderGeometry::RayRequest& ray) const override;
+
         // BoundsRequestBus overrides ...
         AZ::Aabb GetWorldBounds() const override;
         AZ::Aabb GetLocalBounds() const override;
@@ -113,6 +133,12 @@ namespace JE::Geometry
         void OverrideEditorWhiteBoxMeshAsset(EditorWhiteBoxMeshAsset* editorMeshAsset);
 
     private:
+        bool ResolveSurfaceMaterialPolygons(
+            const AZ::Uuid& surfaceId, Api::PolygonHandles& polygons, AZStd::string& error);
+
+        AzFramework::RenderGeometry::RayResult IntersectWhiteBoxRay(
+            const AzFramework::RenderGeometry::RayRequest& ray) const;
+
         //! Staircase-specific settings for the Draw Shape tool (only relevant when the
         //! draw shape is a Staircase). Grouped to keep the related members together.
         struct DrawStairData
@@ -222,6 +248,21 @@ namespace JE::Geometry
         ComponentModeDelegate m_componentModeDelegate; //!< Responsible for detecting ComponentMode activation
                                                        //!< and creating a concrete ComponentMode.
 
+        struct PendingSurfaceMaterial
+        {
+            AZ::Uuid m_ticket;
+            AZ::Data::AssetId m_assetId;
+            AZStd::shared_ptr<JE::Render::RPI::AssetUtils::AsyncAssetLoader> m_loader;
+        };
+        struct SurfaceMaterialRequestState
+        {
+            AZStd::unordered_map<AZ::Uuid, PendingSurfaceMaterial> m_requests;
+            bool m_active = false;
+            bool m_internalComposition = false;
+        };
+        // A local strong reference survives only our synchronous composition operation, never a queued callback.
+        AZStd::shared_ptr<SurfaceMaterialRequestState> m_surfaceMaterialRequests;
+
         Api::WhiteBoxMeshPtr m_whiteBox; //!< Handle/opaque pointer to the White Box mesh data.
         AZStd::optional<AZStd::unique_ptr<RenderMeshInterface>>
             m_renderMesh; //!< The render mesh to use for the White Box mesh data.
@@ -231,8 +272,15 @@ namespace JE::Geometry
         EditorWhiteBoxMeshAsset* m_editorMeshAsset = nullptr;
         mutable AZStd::optional<AZ::Aabb> m_worldAabb; //!< Cached world aabb (used for selection/view determination).
         mutable AZStd::optional<AZ::Aabb> m_localAabb; //!< Cached local aabb (used for center pivot calculation).
-        AZStd::optional<Api::Faces> m_faces; //!< Cached faces (triangles of mesh used for intersection/selection).
+        struct PickFace
+        {
+            Api::Face m_positions;
+            AZ::Uuid m_surfaceId;
+        };
+        mutable AZStd::optional<AZStd::vector<PickFace>> m_faces; //!< Cached triangle and its complete surface identity.
+        AzFramework::EntityContextId m_intersectionContextId = AzFramework::EntityContextId::CreateNull();
         WhiteBoxRenderData m_renderData; //!< Cached render data constructed from the White Box mesh source data.
+        AZStd::unique_ptr<WhiteBoxSurfaceDataProvider> m_surfaceDataProvider;
         WhiteBoxMaterial m_material = {
             DefaultMaterialTint, DefaultMaterialUseTexture}; //!< Render material for White Box mesh.
         JE::BSP::SurfaceMaterialBindings m_surfaceMaterialBindings; //!< Scene bindings; MaterialComponent owns materials.

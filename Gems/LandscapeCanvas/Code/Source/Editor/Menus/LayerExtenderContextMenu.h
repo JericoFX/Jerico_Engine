@@ -8,18 +8,18 @@
 
 #pragma once
 
-#include <GraphCanvas/Widgets/EditorContextMenu/EditorContextMenu.h>
+#include <JE/Editor/Tools/GraphCanvas/Widgets/EditorContextMenu/EditorContextMenu.h>
 
 namespace LandscapeCanvasEditor
 {
     class LayerExtenderContextMenu
-        : public GraphCanvas::EditorContextMenu
+        : public JE::Editor::Tools::GraphCanvas::EditorContextMenu
     {
         Q_OBJECT
     public:
         AZ_CLASS_ALLOCATOR(LayerExtenderContextMenu, AZ::SystemAllocator);
 
-        LayerExtenderContextMenu(const GraphCanvas::NodePaletteConfig& nodePaletteConfig, QWidget* parent = nullptr);
+        LayerExtenderContextMenu(const JE::Editor::Tools::GraphCanvas::NodePaletteConfig& nodePaletteConfig, QWidget* parent = nullptr);
 
     protected slots:
         void SetupDisplay() override;

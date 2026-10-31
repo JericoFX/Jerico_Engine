@@ -20,8 +20,8 @@
 #include <JE/Render/Scene/Mesh/MeshComponentBus.h>
 #include <AzCore/Math/Random.h>
 #include <GradientSignal/Ebuses/GradientRequestBus.h>
-#include <SurfaceData/SurfaceDataSystemRequestBus.h>
-#include <SurfaceData/Utility/SurfaceDataUtility.h>
+#include <JE/Geometry/SurfaceData/SurfaceDataSystemRequestBus.h>
+#include <JE/Geometry/SurfaceData/Utility/SurfaceDataUtility.h>
 #include <AzCore/Component/TransformBus.h>
 #include <AzCore/std/containers/set.h>
 #include <AzCore/std/smart_ptr/make_shared.h>
@@ -312,25 +312,25 @@ namespace UnitTest
     };
 
     struct MockSurfaceHandler
-        : public SurfaceData::SurfaceDataSystemRequestBus::Handler
+        : public JE::Geometry::SurfaceData::SurfaceDataSystemRequestBus::Handler
     {
     public:
         mutable int m_count = 0;
 
         MockSurfaceHandler()
         {
-            AZ::Interface<SurfaceData::SurfaceDataSystem>::Register(this);
+            AZ::Interface<JE::Geometry::SurfaceData::SurfaceDataSystem>::Register(this);
         }
 
         ~MockSurfaceHandler()
         {
-            AZ::Interface<SurfaceData::SurfaceDataSystem>::Unregister(this);
+            AZ::Interface<JE::Geometry::SurfaceData::SurfaceDataSystem>::Unregister(this);
         }
 
         AZ::Vector3 m_outPosition = {};
         AZ::Vector3 m_outNormal = {};
-        SurfaceData::SurfaceTagWeights m_outMasks;
-        void GetSurfacePoints([[maybe_unused]] const AZ::Vector3& inPosition, [[maybe_unused]] const SurfaceData::SurfaceTagVector& masks, SurfaceData::SurfacePointList& surfacePointList) const override
+        JE::Geometry::SurfaceData::SurfaceTagWeights m_outMasks;
+        void GetSurfacePoints([[maybe_unused]] const AZ::Vector3& inPosition, [[maybe_unused]] const JE::Geometry::SurfaceData::SurfaceTagVector& masks, JE::Geometry::SurfaceData::SurfacePointList& surfacePointList) const override
         {
             ++m_count;
             surfacePointList.Clear();
@@ -339,62 +339,62 @@ namespace UnitTest
             surfacePointList.EndListConstruction();
         }
 
-        void GetSurfacePointsFromRegion([[maybe_unused]] const AZ::Aabb& inRegion, [[maybe_unused]] const AZ::Vector2 stepSize, [[maybe_unused]] const SurfaceData::SurfaceTagVector& desiredTags,
-            [[maybe_unused]] SurfaceData::SurfacePointList& surfacePointListPerPosition) const override
+        void GetSurfacePointsFromRegion([[maybe_unused]] const AZ::Aabb& inRegion, [[maybe_unused]] const AZ::Vector2 stepSize, [[maybe_unused]] const JE::Geometry::SurfaceData::SurfaceTagVector& desiredTags,
+            [[maybe_unused]] JE::Geometry::SurfaceData::SurfacePointList& surfacePointListPerPosition) const override
         {
         }
 
         void GetSurfacePointsFromList(
             [[maybe_unused]] AZStd::span<const AZ::Vector3> inPositions,
-            [[maybe_unused]] const SurfaceData::SurfaceTagVector& desiredTags,
-            [[maybe_unused]] SurfaceData::SurfacePointList& surfacePointLists) const override
+            [[maybe_unused]] const JE::Geometry::SurfaceData::SurfaceTagVector& desiredTags,
+            [[maybe_unused]] JE::Geometry::SurfaceData::SurfacePointList& surfacePointLists) const override
         {
         }
 
-        SurfaceData::SurfaceDataRegistryHandle RegisterSurfaceDataProvider([[maybe_unused]] const SurfaceData::SurfaceDataRegistryEntry& entry) override
-        {
-            ++m_count;
-            return SurfaceData::InvalidSurfaceDataRegistryHandle;
-        }
-
-        void UnregisterSurfaceDataProvider([[maybe_unused]] const SurfaceData::SurfaceDataRegistryHandle& handle) override
+        JE::Geometry::SurfaceData::SurfaceDataRegistryHandle RegisterSurfaceDataProvider([[maybe_unused]] const JE::Geometry::SurfaceData::SurfaceDataRegistryEntry& entry) override
         {
             ++m_count;
+            return JE::Geometry::SurfaceData::InvalidSurfaceDataRegistryHandle;
         }
 
-        void UpdateSurfaceDataProvider([[maybe_unused]] const SurfaceData::SurfaceDataRegistryHandle& handle, [[maybe_unused]] const SurfaceData::SurfaceDataRegistryEntry& entry) override
+        void UnregisterSurfaceDataProvider([[maybe_unused]] const JE::Geometry::SurfaceData::SurfaceDataRegistryHandle& handle) override
         {
             ++m_count;
         }
 
-        SurfaceData::SurfaceDataRegistryHandle RegisterSurfaceDataModifier([[maybe_unused]] const SurfaceData::SurfaceDataRegistryEntry& entry) override
-        {
-            ++m_count;
-            return SurfaceData::InvalidSurfaceDataRegistryHandle;
-        }
-
-        void UnregisterSurfaceDataModifier([[maybe_unused]] const SurfaceData::SurfaceDataRegistryHandle& handle) override
+        void UpdateSurfaceDataProvider([[maybe_unused]] const JE::Geometry::SurfaceData::SurfaceDataRegistryHandle& handle, [[maybe_unused]] const JE::Geometry::SurfaceData::SurfaceDataRegistryEntry& entry) override
         {
             ++m_count;
         }
 
-        void UpdateSurfaceDataModifier([[maybe_unused]] const SurfaceData::SurfaceDataRegistryHandle& handle, [[maybe_unused]] const SurfaceData::SurfaceDataRegistryEntry& entry) override
+        JE::Geometry::SurfaceData::SurfaceDataRegistryHandle RegisterSurfaceDataModifier([[maybe_unused]] const JE::Geometry::SurfaceData::SurfaceDataRegistryEntry& entry) override
+        {
+            ++m_count;
+            return JE::Geometry::SurfaceData::InvalidSurfaceDataRegistryHandle;
+        }
+
+        void UnregisterSurfaceDataModifier([[maybe_unused]] const JE::Geometry::SurfaceData::SurfaceDataRegistryHandle& handle) override
+        {
+            ++m_count;
+        }
+
+        void UpdateSurfaceDataModifier([[maybe_unused]] const JE::Geometry::SurfaceData::SurfaceDataRegistryHandle& handle, [[maybe_unused]] const JE::Geometry::SurfaceData::SurfaceDataRegistryEntry& entry) override
         {
             ++m_count;
         }
 
         void RefreshSurfaceData(
-            [[maybe_unused]] const SurfaceData::SurfaceDataRegistryHandle& handle, [[maybe_unused]] const AZ::Aabb& dirtyBounds) override
+            [[maybe_unused]] const JE::Geometry::SurfaceData::SurfaceDataRegistryHandle& handle, [[maybe_unused]] const AZ::Aabb& dirtyBounds) override
         {
             ++m_count;
         }
 
-        SurfaceData::SurfaceDataRegistryHandle GetSurfaceDataProviderHandle([[maybe_unused]] const AZ::EntityId& providerEntityId) override
+        JE::Geometry::SurfaceData::SurfaceDataRegistryHandle GetSurfaceDataProviderHandle([[maybe_unused]] const AZ::EntityId& providerEntityId) override
         {
             return {};
         }
 
-        SurfaceData::SurfaceDataRegistryHandle GetSurfaceDataModifierHandle([[maybe_unused]] const AZ::EntityId& modifierEntityId) override
+        JE::Geometry::SurfaceData::SurfaceDataRegistryHandle GetSurfaceDataModifierHandle([[maybe_unused]] const AZ::EntityId& modifierEntityId) override
         {
             return {};
         }

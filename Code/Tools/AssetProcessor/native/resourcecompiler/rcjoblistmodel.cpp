@@ -267,6 +267,34 @@ namespace AssetProcessor
             m_jobsInQueueLookup.insert(rcJob->GetElementID(), rcJob);
         }
         endInsertRows();
+
+        const auto& registeredJob = rcJob->GetElementID();
+        for (RCJob* existing : m_jobs)
+        {
+            if (existing->HasMissingSourceDependency())
+            {
+                existing->UpdateMissingDependencies(registeredJob);
+            }
+        }
+
+        if (rcJob->HasMissingSourceDependency())
+        {
+            for (const auto& dependency : rcJob->GetJobDependencies())
+            {
+                if (!dependency.m_isMissingSource)
+                {
+                    continue;
+                }
+                const auto& jobDependency = dependency.m_jobDependency;
+                QueueElementID expectedJob(
+                    SourceAssetReference(jobDependency.m_sourceFile.m_sourceFileDependencyPath.c_str()),
+                    QString::fromUtf8(jobDependency.m_platformIdentifier.c_str()), QString::fromUtf8(jobDependency.m_jobKey.c_str()));
+                if (isInQueue(expectedJob) || isInFlight(expectedJob) || isWaitingOnCatalog(expectedJob))
+                {
+                    rcJob->UpdateMissingDependencies(expectedJob);
+                }
+            }
+        }
     }
 
     void RCJobListModel::markAsProcessing(RCJob* rcJob)
@@ -665,7 +693,32 @@ namespace AssetProcessor
         SourceAssetReference sourceAssetReference(sourceFileName.toUtf8().constData());
         for (RCJob* rcJob : m_jobs)
         {
-            jobsUnblocked = jobsUnblocked || rcJob->UpdateMissingDependencies(sourceAssetReference);
+            if (!rcJob->HasMissingSourceDependency())
+            {
+                continue;
+            }
+            bool unblocked = rcJob->UpdateMissingDependencies(sourceAssetReference);
+            for (const auto& dependency : rcJob->GetJobDependencies())
+            {
+                if (!dependency.m_isMissingSource)
+                {
+                    continue;
+                }
+                const auto& jobDependency = dependency.m_jobDependency;
+                SourceAssetReference dependencySource(jobDependency.m_sourceFile.m_sourceFileDependencyPath.c_str());
+                if (dependencySource != sourceAssetReference)
+                {
+                    continue;
+                }
+                QueueElementID expectedJob(
+                    dependencySource, QString::fromUtf8(jobDependency.m_platformIdentifier.c_str()),
+                    QString::fromUtf8(jobDependency.m_jobKey.c_str()));
+                if (isInQueue(expectedJob) || isInFlight(expectedJob) || isWaitingOnCatalog(expectedJob))
+                {
+                    unblocked = rcJob->UpdateMissingDependencies(expectedJob) || unblocked;
+                }
+            }
+            jobsUnblocked = unblocked || jobsUnblocked;
         }
         return jobsUnblocked;
     }

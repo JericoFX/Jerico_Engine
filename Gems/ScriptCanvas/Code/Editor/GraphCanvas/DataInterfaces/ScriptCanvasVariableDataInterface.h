@@ -13,13 +13,13 @@ AZ_PUSH_DISABLE_WARNING(4251 4800 4244, "-Wunknown-warning-option")
 #include <QString>
 AZ_POP_DISABLE_WARNING
 
-#include <GraphCanvas/Components/Connections/ConnectionBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/Connections/ConnectionBus.h>
 
-#include <GraphCanvas/Components/NodePropertyDisplay/ComboBoxDataInterface.h>
-#include <GraphCanvas/Components/Nodes/NodeTitleBus.h>
-#include <GraphCanvas/Components/Slots/Data/DataSlotBus.h>
-#include <GraphCanvas/Widgets/ComboBox/ComboBoxItemModels.h>
-#include <GraphCanvas/Utils/QtMimeUtils.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/NodePropertyDisplay/ComboBoxDataInterface.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/Nodes/NodeTitleBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/Slots/Data/DataSlotBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Widgets/ComboBox/ComboBoxItemModels.h>
+#include <JE/Editor/Tools/GraphCanvas/Utils/QtMimeUtils.h>
 
 #include <Editor/Include/ScriptCanvas/Bus/EditorSceneVariableManagerBus.h>
 #include <Editor/Include/ScriptCanvas/Bus/RequestBus.h>
@@ -36,7 +36,7 @@ AZ_POP_DISABLE_WARNING
 namespace ScriptCanvasEditor
 {
     class VariableComboBoxDataModel
-        : public GraphCanvas::GraphCanvasListComboBoxModel<ScriptCanvas::VariableId>
+        : public JE::Editor::Tools::GraphCanvas::GraphCanvasListComboBoxModel<ScriptCanvas::VariableId>
         , public ScriptCanvas::GraphVariableManagerNotificationBus::Handler
         , public GeneralEditorNotificationBus::Handler
     {
@@ -147,7 +147,7 @@ namespace ScriptCanvasEditor
     };
 
     class VariableTypeComboBoxFilterModel
-        : public GraphCanvas::GraphCanvasSortFilterComboBoxProxyModel
+        : public JE::Editor::Tools::GraphCanvas::GraphCanvasSortFilterComboBoxProxyModel
     {
     public:
         AZ_CLASS_ALLOCATOR(VariableTypeComboBoxFilterModel, AZ::SystemAllocator);
@@ -230,7 +230,7 @@ namespace ScriptCanvasEditor
     };
 
     class ScriptCanvasGraphScopedVariableDataInterface
-        : public ScriptCanvasDataInterface<GraphCanvas::ComboBoxDataInterface>
+        : public ScriptCanvasDataInterface<JE::Editor::Tools::GraphCanvas::ComboBoxDataInterface>
         , public ScriptCanvas::VariableNotificationBus::Handler        
         , public AZ::SystemTickBus::Handler
     {
@@ -281,12 +281,12 @@ namespace ScriptCanvasEditor
                 RegisterBus();
             }
 
-            ScriptCanvasDataInterface<GraphCanvas::ComboBoxDataInterface>::OnSlotInputChanged(slotId);
+            ScriptCanvasDataInterface<JE::Editor::Tools::GraphCanvas::ComboBoxDataInterface>::OnSlotInputChanged(slotId);
         }
         ////
 
         // GraphCanvas::ComboBoxModelInterface
-        GraphCanvas::ComboBoxItemModelInterface* GetItemInterface() override
+        JE::Editor::Tools::GraphCanvas::ComboBoxItemModelInterface* GetItemInterface() override
         {
             return &m_variableTypeModel;
         }
@@ -360,11 +360,11 @@ namespace ScriptCanvasEditor
             return true;
         }
 
-        AZ::Outcome<GraphCanvas::DragDropState> ShouldAcceptMimeData(const QMimeData* mimeData) override
+        AZ::Outcome<JE::Editor::Tools::GraphCanvas::DragDropState> ShouldAcceptMimeData(const QMimeData* mimeData) override
         {
-            if (mimeData->hasFormat(GraphCanvas::k_ReferenceMimeType))
+            if (mimeData->hasFormat(JE::Editor::Tools::GraphCanvas::k_ReferenceMimeType))
             {
-                return AZ::Success(GraphCanvas::DragDropState::Valid);
+                return AZ::Success(JE::Editor::Tools::GraphCanvas::DragDropState::Valid);
             }
 
             return AZ::Failure();
@@ -372,7 +372,7 @@ namespace ScriptCanvasEditor
 
         bool HandleMimeData(const QMimeData* mimeData) override
         {
-            ScriptCanvas::VariableId variableId = GraphCanvas::QtMimeUtils::ExtractTypeFromMimeData<ScriptCanvas::VariableId>(mimeData, GraphCanvas::k_ReferenceMimeType);
+            ScriptCanvas::VariableId variableId = JE::Editor::Tools::GraphCanvas::QtMimeUtils::ExtractTypeFromMimeData<ScriptCanvas::VariableId>(mimeData, JE::Editor::Tools::GraphCanvas::k_ReferenceMimeType);
             SetVariableId(variableId);
             return true;
         }
@@ -405,7 +405,7 @@ namespace ScriptCanvasEditor
     };
 
     class ScriptCanvasVariableReferenceDataInterface
-        : public ScriptCanvasDataInterface<GraphCanvas::ComboBoxDataInterface>
+        : public ScriptCanvasDataInterface<JE::Editor::Tools::GraphCanvas::ComboBoxDataInterface>
         , public ScriptCanvas::VariableNotificationBus::Handler
         , public ScriptCanvas::EndpointNotificationBus::Handler
         , public AZ::SystemTickBus::Handler
@@ -466,7 +466,7 @@ namespace ScriptCanvasEditor
                 RegisterBus();
             }
 
-            ScriptCanvasDataInterface<GraphCanvas::ComboBoxDataInterface>::OnSlotInputChanged(slotId);
+            ScriptCanvasDataInterface<JE::Editor::Tools::GraphCanvas::ComboBoxDataInterface>::OnSlotInputChanged(slotId);
         }
         ////
 
@@ -504,7 +504,7 @@ namespace ScriptCanvasEditor
         ////
 
         // GraphCanvas::ComboBoxModelInterface
-        GraphCanvas::ComboBoxItemModelInterface* GetItemInterface() override
+        JE::Editor::Tools::GraphCanvas::ComboBoxItemModelInterface* GetItemInterface() override
         {
             return &m_variableTypeModel;
         }

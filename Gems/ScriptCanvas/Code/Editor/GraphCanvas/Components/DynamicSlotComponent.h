@@ -9,8 +9,8 @@
 
 #include <AzCore/Component/Component.h>
 
-#include <GraphCanvas/Components/Slots/SlotBus.h>
-#include <GraphCanvas/Components/SceneBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/Slots/SlotBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/SceneBus.h>
 
 #include <ScriptCanvas/Core/Endpoint.h>
 #include <ScriptCanvas/Core/NodeBus.h>
@@ -20,7 +20,7 @@ namespace ScriptCanvasEditor
 {
     class DynamicSlotComponent
         : public AZ::Component
-        , public GraphCanvas::SceneMemberNotificationBus::Handler
+        , public JE::Editor::Tools::GraphCanvas::SceneMemberNotificationBus::Handler
         , public ScriptCanvas::NodeNotificationsBus::Handler
         , public DynamicSlotRequestBus::Handler
     {
@@ -29,7 +29,7 @@ namespace ScriptCanvasEditor
         static void Reflect(AZ::ReflectContext* serializeContext);
          
         DynamicSlotComponent();
-        DynamicSlotComponent(GraphCanvas::SlotGroup slotGroup);
+        DynamicSlotComponent(JE::Editor::Tools::GraphCanvas::SlotGroup slotGroup);
         ~DynamicSlotComponent() override = default;
         
         // AZ::Component
@@ -56,7 +56,7 @@ namespace ScriptCanvasEditor
 
     protected:
 
-        virtual void ConfigureGraphCanvasSlot(const ScriptCanvas::Slot* slot, const GraphCanvas::SlotId& graphCanvasSlotId);
+        virtual void ConfigureGraphCanvasSlot(const ScriptCanvas::Slot* slot, const JE::Editor::Tools::GraphCanvas::SlotId& graphCanvasSlotId);
 
         const AZ::EntityId& GetScriptCanvasNodeId() const { return m_scriptCanvasNodeId; }
 
@@ -64,7 +64,7 @@ namespace ScriptCanvasEditor
 
         void HandleSlotAdded(const ScriptCanvas::Endpoint& endpoint);
 
-        GraphCanvas::SlotGroup m_slotGroup;
+        JE::Editor::Tools::GraphCanvas::SlotGroup m_slotGroup;
         AZ::EntityId           m_scriptCanvasNodeId;
 
         bool m_queueUpdates;

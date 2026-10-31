@@ -13,7 +13,7 @@
 #include <QPoint>
 #include <QString>
 
-#include <GraphCanvas/Types/Types.h>
+#include <JE/Editor/Tools/GraphCanvas/Types/Types.h>
 
 #include <ScriptCanvasDeveloperEditor/EditorAutomation/EditorAutomationActions/GenericActions.h>
 

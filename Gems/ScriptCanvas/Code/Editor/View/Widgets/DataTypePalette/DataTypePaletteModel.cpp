@@ -16,8 +16,8 @@
 #include <AzCore/Serialization/Utils.h>
 #include <AzCore/UserSettings/UserSettings.h>
 
-#include <GraphCanvas/Components/SceneBus.h>
-#include <GraphCanvas/Components/StyleBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/SceneBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/StyleBus.h>
 
 #include <Editor/View/Widgets/DataTypePalette/DataTypePaletteModel.h>
 
@@ -75,11 +75,11 @@ namespace ScriptCanvasEditor
                 if (AZ::Utils::IsContainerType(typeId) && !AZ::Utils::IsGenericContainerType(typeId))
                 {
                     AZStd::vector<AZ::Uuid> dataTypes = AZ::Utils::GetContainedTypes(typeId);
-                    GraphCanvas::StyleManagerRequestBus::EventResult(icon, ScriptCanvasEditor::AssetEditorId, &GraphCanvas::StyleManagerRequests::GetMultiDataTypeIcon, dataTypes);
+                    JE::Editor::Tools::GraphCanvas::StyleManagerRequestBus::EventResult(icon, ScriptCanvasEditor::AssetEditorId, &JE::Editor::Tools::GraphCanvas::StyleManagerRequests::GetMultiDataTypeIcon, dataTypes);
                 }
                 else
                 {
-                    GraphCanvas::StyleManagerRequestBus::EventResult(icon, ScriptCanvasEditor::AssetEditorId, &GraphCanvas::StyleManagerRequests::GetDataTypeIcon, typeId);
+                    JE::Editor::Tools::GraphCanvas::StyleManagerRequestBus::EventResult(icon, ScriptCanvasEditor::AssetEditorId, &JE::Editor::Tools::GraphCanvas::StyleManagerRequests::GetDataTypeIcon, typeId);
                 }
 
                 if (icon)
@@ -243,14 +243,14 @@ namespace ScriptCanvasEditor
 
     AZStd::string DataTypePaletteModel::FindTypeNameForTypeId(const AZ::TypeId& typeId) const
     {
-        GraphCanvas::TranslationKey key;
+        JE::Editor::Tools::GraphCanvas::TranslationKey key;
         key << "BehaviorType" << typeId.ToString<AZStd::string>() << "details";
 
-        GraphCanvas::TranslationRequests::Details details;
+        JE::Editor::Tools::GraphCanvas::TranslationRequests::Details details;
 
         details.m_name = TranslationHelper::GetSafeTypeName(ScriptCanvas::Data::FromAZType(typeId));
 
-        GraphCanvas::TranslationRequestBus::BroadcastResult(details, &GraphCanvas::TranslationRequests::GetDetails, key, details);
+        JE::Editor::Tools::GraphCanvas::TranslationRequestBus::BroadcastResult(details, &JE::Editor::Tools::GraphCanvas::TranslationRequests::GetDetails, key, details);
 
         return details.m_name;
     }

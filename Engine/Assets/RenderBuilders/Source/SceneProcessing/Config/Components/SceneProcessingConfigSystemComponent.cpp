@@ -22,6 +22,7 @@
 #include <SceneProcessing/Config/SettingsObjects/FileSoftNameSetting.h>
 #include <SceneProcessing/Config/Components/SceneProcessingConfigSystemComponent.h>
 #include <SceneProcessing/Config/Widgets/GraphTypeSelector.h>
+#include <JE/Assets/RenderBuilders/SceneProcessing/Rules/SurfaceIdentityRule.h>
 
 namespace JE::Assets::RenderBuilders::SceneProcessing::Config
 {
@@ -249,6 +250,7 @@ namespace JE::Assets::RenderBuilders::SceneProcessing::Config
         SoftNameSetting::Reflect(context);
         NodeSoftNameSetting::Reflect(context);
         FileSoftNameSetting::Reflect(context);
+        Rules::SurfaceIdentityRule::Reflect(context);
 
         AZ::SerializeContext* serialize = azrtti_cast<AZ::SerializeContext*>(context);
         if (serialize)

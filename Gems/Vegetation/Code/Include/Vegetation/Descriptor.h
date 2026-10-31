@@ -13,7 +13,7 @@
 #include <AzCore/Math/Vector3.h>
 #include <AzCore/RTTI/BehaviorContext.h>
 #include <AzCore/RTTI/ReflectContext.h>
-#include <SurfaceData/SurfaceDataTypes.h>
+#include <JE/Geometry/SurfaceData/SurfaceDataTypes.h>
 #include <Vegetation/InstanceSpawner.h>
 #include <AzCore/std/smart_ptr/shared_ptr.h>
 
@@ -29,7 +29,7 @@ namespace Vegetation
 
         bool operator==(const SurfaceTagDistance& rhs) const;
 
-        SurfaceData::SurfaceTagVector m_tags;
+        JE::Geometry::SurfaceData::SurfaceTagVector m_tags;
         float m_upperDistanceInMeters = s_defaultUpperSurfaceDistanceInMeters;
         float m_lowerDistanceInMeters = s_defaultLowerSurfaceDistanceInMeters;
 
@@ -116,8 +116,8 @@ namespace Vegetation
 
         // surface tag filter settings
         OverrideMode m_surfaceFilterOverrideMode = OverrideMode::Disable;
-        SurfaceData::SurfaceTagVector m_inclusiveSurfaceFilterTags;
-        SurfaceData::SurfaceTagVector m_exclusiveSurfaceFilterTags;
+        JE::Geometry::SurfaceData::SurfaceTagVector m_inclusiveSurfaceFilterTags;
+        JE::Geometry::SurfaceData::SurfaceTagVector m_exclusiveSurfaceFilterTags;
 
         // radius
         bool m_radiusOverrideEnabled = false;

@@ -5,6 +5,7 @@ set(FILES
     ${LY_ROOT_FOLDER}/Editor/Materials/Tests/MaterialsCompatibilityTests.cpp
     Tests/Main.cpp
     Tests/MeshComponentControllerTests.cpp
+    Tests/SurfaceDataMeshQueryTests.cpp
     Tests/JEEditorLutWriterTests.cpp
     Tests/EditorHDRColorGradingComponentTests.cpp
     Tests/EditorAreaLightComponentTests.cpp

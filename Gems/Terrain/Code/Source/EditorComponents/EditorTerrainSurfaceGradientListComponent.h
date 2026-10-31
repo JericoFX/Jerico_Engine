@@ -36,7 +36,7 @@ namespace Terrain
 
     private:
         // EditorSurfaceTagListProvider interface implementation
-        AZStd::unordered_set<SurfaceData::SurfaceTag> GetSurfaceTagsInUse() const override;
+        AZStd::unordered_set<JE::Geometry::SurfaceData::SurfaceTag> GetSurfaceTagsInUse() const override;
 
         AZ::u32 ConfigurationChanged() override;
         void UpdateConfigurationTagProvider();

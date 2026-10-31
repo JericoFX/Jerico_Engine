@@ -31,13 +31,13 @@
 
 #include <AzQtComponents/Components/StyledDockWidget.h>
 
-#include <GraphCanvas/Editor/AssetEditorBus.h>
-#include <GraphCanvas/Components/GraphCanvasPropertyBus.h>
-#include <GraphCanvas/Components/SceneBus.h>
-#include <GraphCanvas/Components/Nodes/NodeBus.h>
-#include <GraphCanvas/Components/Nodes/NodeTitleBus.h>
-#include <GraphCanvas/Widgets/GraphCanvasTreeItem.h>
-#include <GraphCanvas/Widgets/GraphCanvasTreeModel.h>
+#include <JE/Editor/Tools/GraphCanvas/Editor/AssetEditorBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/GraphCanvasPropertyBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/SceneBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/Nodes/NodeBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/Nodes/NodeTitleBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Widgets/GraphCanvasTreeItem.h>
+#include <JE/Editor/Tools/GraphCanvas/Widgets/GraphCanvasTreeModel.h>
 
 #include <ScriptCanvas/Bus/RequestBus.h>
 #include <ScriptCanvas/Bus/UnitTestVerificationBus.h>
@@ -90,7 +90,7 @@ namespace ScriptCanvasEditor
     };
 
     class UnitTestComponent
-        : public GraphCanvas::GraphCanvasPropertyComponent
+        : public JE::Editor::Tools::GraphCanvas::GraphCanvasPropertyComponent
     {
     public:
         AZ_COMPONENT(UnitTestComponent, "{D4C073E6-DBFA-48A0-8B43-0A699A6CE293}", GraphCanvasPropertyComponent);
@@ -119,7 +119,7 @@ namespace ScriptCanvasEditor
 
     class UnitTestDockWidget
         : public AzQtComponents::StyledDockWidget
-        , public GraphCanvas::AssetEditorNotificationBus::Handler
+        , public JE::Editor::Tools::GraphCanvas::AssetEditorNotificationBus::Handler
         , public AzToolsFramework::EditorEvents::Bus::Handler
         , public UnitTestWidgetNotificationBus::Handler
         , private AZ::Data::AssetBus::MultiHandler

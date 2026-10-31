@@ -11,17 +11,17 @@
 #include <QTableView>
 #include <QToolButton>
 
-#include <GraphCanvas/Components/SceneBus.h>
-#include <GraphCanvas/Components/Slots/SlotBus.h>
-#include <GraphCanvas/Components/Slots/Data/DataSlotBus.h>
-#include <GraphCanvas/Components/ViewBus.h>
-#include <GraphCanvas/Components/VisualBus.h>
-#include <GraphCanvas/Editor/AssetEditorBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/SceneBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/Slots/SlotBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/Slots/Data/DataSlotBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/ViewBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/VisualBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Editor/AssetEditorBus.h>
 
-#include <GraphCanvas/Widgets/NodePalette/Model/NodePaletteSortFilterProxyModel.h>
-#include <GraphCanvas/Widgets/NodePalette/NodePaletteTreeView.h>
-#include <GraphCanvas/Widgets/NodePalette/TreeItems/NodePaletteTreeItem.h>
-#include <GraphCanvas/Utils/ConversionUtils.h>
+#include <JE/Editor/Tools/GraphCanvas/Widgets/NodePalette/Model/NodePaletteSortFilterProxyModel.h>
+#include <JE/Editor/Tools/GraphCanvas/Widgets/NodePalette/NodePaletteTreeView.h>
+#include <JE/Editor/Tools/GraphCanvas/Widgets/NodePalette/TreeItems/NodePaletteTreeItem.h>
+#include <JE/Editor/Tools/GraphCanvas/Utils/ConversionUtils.h>
 
 #include <Editor/GraphCanvas/GraphCanvasEditorNotificationBusId.h>
 #include <Editor/View/Widgets/VariablePanel/VariableDockWidget.h>
@@ -226,7 +226,7 @@ namespace ScriptCanvas::Developer
     // CreateVariableNodeFromGraphPalette
     ///////////////////////////////////////
 
-    CreateVariableNodeFromGraphPalette::CreateVariableNodeFromGraphPalette(const AZStd::string& variableName, const GraphCanvas::GraphId& graphId, QPoint scenePoint, Qt::KeyboardModifier modifier)
+    CreateVariableNodeFromGraphPalette::CreateVariableNodeFromGraphPalette(const AZStd::string& variableName, const JE::Editor::Tools::GraphCanvas::GraphId& graphId, QPoint scenePoint, Qt::KeyboardModifier modifier)
         : m_variableName(variableName)
         , m_graphId(graphId)
         , m_modifier(modifier)
@@ -235,7 +235,7 @@ namespace ScriptCanvas::Developer
         ScriptCanvasEditor::VariableAutomationRequestBus::BroadcastResult(m_graphPalette, &ScriptCanvasEditor::VariableAutomationRequests::GetGraphPaletteTableView);
         ScriptCanvasEditor::VariableAutomationRequestBus::BroadcastResult(m_textFilter, &ScriptCanvasEditor::VariableAutomationRequests::GetGraphVariablesFilter);
 
-        GraphCanvas::SceneRequestBus::EventResult(m_viewId, m_graphId, &GraphCanvas::SceneRequests::GetViewId);
+        JE::Editor::Tools::GraphCanvas::SceneRequestBus::EventResult(m_viewId, m_graphId, &JE::Editor::Tools::GraphCanvas::SceneRequests::GetViewId);
     }
 
     bool CreateVariableNodeFromGraphPalette::IsMissingPrecondition()
@@ -281,7 +281,7 @@ namespace ScriptCanvas::Developer
         m_scenePointVisible = false;
 
         QRectF viewableArea;
-        GraphCanvas::ViewRequestBus::EventResult(viewableArea, m_viewId, &GraphCanvas::ViewRequests::GetViewableAreaInSceneCoordinates);
+        JE::Editor::Tools::GraphCanvas::ViewRequestBus::EventResult(viewableArea, m_viewId, &JE::Editor::Tools::GraphCanvas::ViewRequests::GetViewableAreaInSceneCoordinates);
 
         m_scenePointVisible = viewableArea.contains(m_scenePoint);
 
@@ -327,14 +327,14 @@ namespace ScriptCanvas::Developer
     void CreateVariableNodeFromGraphPalette::SetupAction()
     {
         m_createdNodeId.SetInvalid();
-        GraphCanvas::SceneNotificationBus::Handler::BusConnect(m_graphId);
+        JE::Editor::Tools::GraphCanvas::SceneNotificationBus::Handler::BusConnect(m_graphId);
 
         ClearActionQueue();
 
         QPoint screenPoint = m_graphPalette->mapToGlobal(m_graphPalette->visualRect(m_displayIndex).center());
 
         AZ::Vector2 targetPoint;
-        GraphCanvas::ViewRequestBus::EventResult(targetPoint, m_viewId, &GraphCanvas::ViewRequests::MapToGlobal, GraphCanvas::ConversionUtils::QPointToVector(m_scenePoint));
+        JE::Editor::Tools::GraphCanvas::ViewRequestBus::EventResult(targetPoint, m_viewId, &JE::Editor::Tools::GraphCanvas::ViewRequests::MapToGlobal, JE::Editor::Tools::GraphCanvas::ConversionUtils::QPointToVector(m_scenePoint));
 
         AZ::Vector2 flushTarget = targetPoint + AZ::Vector2(1, 1);
 
@@ -351,7 +351,7 @@ namespace ScriptCanvas::Developer
 #endif
         }
 
-        AddAction(aznew MouseDragAction(screenPoint, GraphCanvas::ConversionUtils::AZToQPoint(targetPoint).toPoint()));        
+        AddAction(aznew MouseDragAction(screenPoint, JE::Editor::Tools::GraphCanvas::ConversionUtils::AZToQPoint(targetPoint).toPoint()));        
         AddAction(aznew ProcessUserEventsAction());
 
         if (m_modifier == Qt::ShiftModifier)
@@ -368,7 +368,7 @@ namespace ScriptCanvas::Developer
         }
 
         AddAction(aznew ProcessUserEventsAction());
-        AddAction(aznew MouseMoveAction(GraphCanvas::ConversionUtils::AZToQPoint(flushTarget).toPoint()));
+        AddAction(aznew MouseMoveAction(JE::Editor::Tools::GraphCanvas::ConversionUtils::AZToQPoint(flushTarget).toPoint()));
         AddAction(aznew ProcessUserEventsAction());
 
         CompoundAction::SetupAction();
@@ -381,12 +381,12 @@ namespace ScriptCanvas::Developer
 
     void CreateVariableNodeFromGraphPalette::OnActionsComplete()
     {
-        GraphCanvas::SceneNotificationBus::Handler::BusDisconnect();
+        JE::Editor::Tools::GraphCanvas::SceneNotificationBus::Handler::BusDisconnect();
     }
 
     AZ::EntityId CreateVariableNodeFromGraphPalette::GetCreatedNodeId() const
     {
-        return GraphCanvas::GraphUtils::FindOutermostNode(m_createdNodeId);
+        return JE::Editor::Tools::GraphCanvas::GraphUtils::FindOutermostNode(m_createdNodeId);
     }
 
     ActionReport CreateVariableNodeFromGraphPalette::GenerateReport() const

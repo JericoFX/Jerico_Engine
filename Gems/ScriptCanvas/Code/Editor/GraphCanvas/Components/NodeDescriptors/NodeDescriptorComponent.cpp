@@ -6,7 +6,7 @@
  *
  */
 
-#include <GraphCanvas/Components/SceneBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/SceneBus.h>
 
 
 #include <Editor/GraphCanvas/Components/NodeDescriptors/NodeDescriptorComponent.h>
@@ -44,12 +44,12 @@ namespace ScriptCanvasEditor
     void NodeDescriptorComponent::Activate()
     {
         NodeDescriptorRequestBus::Handler::BusConnect(GetEntityId());
-        GraphCanvas::NodeNotificationBus::Handler::BusConnect(GetEntityId());
+        JE::Editor::Tools::GraphCanvas::NodeNotificationBus::Handler::BusConnect(GetEntityId());
     }
 
     void NodeDescriptorComponent::Deactivate()
     {
-        GraphCanvas::NodeNotificationBus::Handler::BusDisconnect();
+        JE::Editor::Tools::GraphCanvas::NodeNotificationBus::Handler::BusDisconnect();
         NodeDescriptorRequestBus::Handler::BusDisconnect();
     }
 
@@ -66,14 +66,14 @@ namespace ScriptCanvasEditor
 
         if (!isEnabled)
         {
-            GraphCanvas::GraphId graphId;
-            GraphCanvas::SceneMemberRequestBus::EventResult(graphId, GetEntityId(), &GraphCanvas::SceneMemberRequests::GetScene);
+            JE::Editor::Tools::GraphCanvas::GraphId graphId;
+            JE::Editor::Tools::GraphCanvas::SceneMemberRequestBus::EventResult(graphId, GetEntityId(), &JE::Editor::Tools::GraphCanvas::SceneMemberRequests::GetScene);
 
-            GraphCanvas::SceneRequestBus::Event(graphId, &GraphCanvas::SceneRequests::DisableVisualState, GetEntityId());
+            JE::Editor::Tools::GraphCanvas::SceneRequestBus::Event(graphId, &JE::Editor::Tools::GraphCanvas::SceneRequests::DisableVisualState, GetEntityId());
         }
     }
 
-    void NodeDescriptorComponent::OnAddedToGraphCanvasGraph(const GraphCanvas::GraphId& graphId, const AZ::EntityId& scriptCanvasNodeId)
+    void NodeDescriptorComponent::OnAddedToGraphCanvasGraph(const JE::Editor::Tools::GraphCanvas::GraphId& graphId, const AZ::EntityId& scriptCanvasNodeId)
     {
         AZ_UNUSED(graphId);
         AZ_UNUSED(scriptCanvasNodeId);
@@ -81,24 +81,24 @@ namespace ScriptCanvasEditor
 
     void NodeDescriptorComponent::OnNodeDisabled()
     {
-        GraphCanvas::GraphId graphId;
-        GraphCanvas::SceneMemberRequestBus::EventResult(graphId, GetEntityId(), &GraphCanvas::SceneMemberRequests::GetScene);
+        JE::Editor::Tools::GraphCanvas::GraphId graphId;
+        JE::Editor::Tools::GraphCanvas::SceneMemberRequestBus::EventResult(graphId, GetEntityId(), &JE::Editor::Tools::GraphCanvas::SceneMemberRequests::GetScene);
 
-        GraphCanvas::SceneRequestBus::Event(graphId, &GraphCanvas::SceneRequests::DisableVisualState, GetEntityId());
+        JE::Editor::Tools::GraphCanvas::SceneRequestBus::Event(graphId, &JE::Editor::Tools::GraphCanvas::SceneRequests::DisableVisualState, GetEntityId());
     }
 
     void NodeDescriptorComponent::OnNodeEnabled()
     {
-        GraphCanvas::GraphId graphId;
-        GraphCanvas::SceneMemberRequestBus::EventResult(graphId, GetEntityId(), &GraphCanvas::SceneMemberRequests::GetScene);
+        JE::Editor::Tools::GraphCanvas::GraphId graphId;
+        JE::Editor::Tools::GraphCanvas::SceneMemberRequestBus::EventResult(graphId, GetEntityId(), &JE::Editor::Tools::GraphCanvas::SceneMemberRequests::GetScene);
 
-        GraphCanvas::SceneRequestBus::Event(graphId, &GraphCanvas::SceneRequests::EnableVisualState, GetEntityId());
+        JE::Editor::Tools::GraphCanvas::SceneRequestBus::Event(graphId, &JE::Editor::Tools::GraphCanvas::SceneRequests::EnableVisualState, GetEntityId());
     }
 
     AZ::EntityId NodeDescriptorComponent::FindScriptCanvasNodeId() const
     {
         AZStd::any* userData = nullptr;
-        GraphCanvas::NodeRequestBus::EventResult(userData, GetEntityId(), &GraphCanvas::NodeRequests::GetUserData);
+        JE::Editor::Tools::GraphCanvas::NodeRequestBus::EventResult(userData, GetEntityId(), &JE::Editor::Tools::GraphCanvas::NodeRequests::GetUserData);
 
         AZ::EntityId* scNodeId = AZStd::any_cast<AZ::EntityId>(userData);
         if (scNodeId)

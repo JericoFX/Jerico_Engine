@@ -19,7 +19,7 @@
 #include <AzFramework/Translation/TranslationDef.h>
 
 #include <GradientSignal/Ebuses/GradientRequestBus.h>
-#include <SurfaceData/SurfaceDataProviderRequestBus.h>
+#include <JE/Geometry/SurfaceData/SurfaceDataProviderRequestBus.h>
 #include <TerrainSystem/TerrainSystemBus.h>
 
 namespace Terrain

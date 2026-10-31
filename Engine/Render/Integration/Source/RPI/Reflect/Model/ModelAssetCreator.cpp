@@ -85,6 +85,8 @@ namespace JE::Render
                 m_asset->m_aabb.AddAabb(modelLodAsset->GetAabb());
             }
 
+            // Genuine new asset creation only; loading an old cooked product never manufactures a revision.
+            m_asset->m_contentRevision = m_asset->ComputeContentRevision().value_or(ModelContentRevision{});
             m_asset->SetReady();
             return EndCommon(result);
         }

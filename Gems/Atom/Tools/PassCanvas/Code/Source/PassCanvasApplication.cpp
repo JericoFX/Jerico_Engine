@@ -205,7 +205,7 @@ namespace PassCanvas
         m_graphViewSettingsPtr->m_nodeSaveIdentifier = "PassCanvas/ContextMenu";
         m_graphViewSettingsPtr->m_createNodeTreeItemsFn = [](const AZ::Crc32& toolId)
         {
-            GraphCanvas::GraphCanvasTreeItem* rootTreeItem = {};
+            JE::Editor::Tools::GraphCanvas::GraphCanvasTreeItem* rootTreeItem = {};
             JE::Editor::Tools::DynamicNodeManagerRequestBus::EventResult(
                 rootTreeItem, toolId, &JE::Editor::Tools::DynamicNodeManagerRequestBus::Events::CreateNodePaletteTree);
             return rootTreeItem;

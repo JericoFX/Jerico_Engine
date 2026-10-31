@@ -16,8 +16,8 @@
 
 #include <AzToolsFramework/AssetBrowser/AssetBrowserFilterModel.h>
 
-#include <GraphCanvas/Widgets/NodePalette/TreeItems/NodePaletteTreeItem.h>
-#include <GraphCanvas/Widgets/GraphCanvasTreeCategorizer.h>
+#include <JE/Editor/Tools/GraphCanvas/Widgets/NodePalette/TreeItems/NodePaletteTreeItem.h>
+#include <JE/Editor/Tools/GraphCanvas/Widgets/GraphCanvasTreeCategorizer.h>
 
 #include <ScriptEvents/ScriptEventsAsset.h>
 
@@ -41,7 +41,7 @@ namespace ScriptCanvasEditor
 
         virtual ~NodePaletteModelInformation() = default;
 
-        void PopulateTreeItem(GraphCanvas::NodePaletteTreeItem& treeItem) const;
+        void PopulateTreeItem(JE::Editor::Tools::GraphCanvas::NodePaletteTreeItem& treeItem) const;
 
         ScriptCanvas::NodeTypeIdentifier m_nodeIdentifier{};
 
@@ -56,13 +56,13 @@ namespace ScriptCanvasEditor
     struct CategoryInformation
     {
         AZStd::string m_styleOverride;
-        AZStd::string m_paletteOverride = GraphCanvas::NodePaletteTreeItem::DefaultNodeTitlePalette;
+        AZStd::string m_paletteOverride = JE::Editor::Tools::GraphCanvas::NodePaletteTreeItem::DefaultNodeTitlePalette;
 
         AZStd::string m_tooltip;
     };
 
     class NodePaletteModel
-        : public GraphCanvas::CategorizerInterface
+        : public JE::Editor::Tools::GraphCanvas::CategorizerInterface
         , UpgradeNotificationsBus::Handler
     {
     public:
@@ -101,7 +101,7 @@ namespace ScriptCanvasEditor
         const NodePaletteRegistry& GetNodeRegistry() const;
 
         // GraphCanvas::CategorizerInterface
-        GraphCanvas::GraphCanvasTreeItem* CreateCategoryNode(AZStd::string_view categoryPath, AZStd::string_view categoryName, GraphCanvas::GraphCanvasTreeItem* treeItem) const override;
+        JE::Editor::Tools::GraphCanvas::GraphCanvasTreeItem* CreateCategoryNode(AZStd::string_view categoryPath, AZStd::string_view categoryName, JE::Editor::Tools::GraphCanvas::GraphCanvasTreeItem* treeItem) const override;
         ////
 
         void OnUpgradeStart() override

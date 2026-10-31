@@ -28,9 +28,9 @@
 #include <AzToolsFramework/Entity/EditorEntityContextPickingBus.h>
 #include <AzToolsFramework/ToolsComponents/EditorComponentBase.h>
 
-#include <GraphCanvas/Components/VisualBus.h>
-#include <GraphCanvas/Components/SceneBus.h>
-#include <GraphCanvas/Components/StyleBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/VisualBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/SceneBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/StyleBus.h>
 
 #include <Editor/View/Widgets/VariablePanel/VariableConfigurationWidget.h>
 #include <Editor/View/Widgets/VariablePanel/ui_VariableConfigurationWidget.h>

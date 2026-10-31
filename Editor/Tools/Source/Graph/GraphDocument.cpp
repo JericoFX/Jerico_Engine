@@ -26,9 +26,9 @@
 #include <AzCore/std/smart_ptr/make_shared.h>
 #include <AzCore/std/sort.h>
 #include <AzToolsFramework/Entity/EditorEntityHelpers.h>
-#include <GraphCanvas/Components/GraphCanvasPropertyBus.h>
-#include <GraphCanvas/Components/SceneBus.h>
-#include <GraphCanvas/GraphCanvasBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/GraphCanvasPropertyBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/SceneBus.h>
+#include <JE/Editor/Tools/GraphCanvas/GraphCanvasBus.h>
 #include <JE/Editor/Tools/GraphModel/Model/Connection.h>
 #include <JE/Editor/Tools/GraphModel/Model/Graph.h>
 
@@ -86,7 +86,7 @@ namespace JE::Editor::Tools
 
         // Listen for GraphController notifications on the new graph.
         JE::Editor::Tools::GraphModel::Integration::GraphControllerNotificationBus::Handler::BusConnect(m_graphId);
-        GraphCanvas::SceneNotificationBus::Handler::BusConnect(m_graphId);
+        JE::Editor::Tools::GraphCanvas::SceneNotificationBus::Handler::BusConnect(m_graphId);
         GraphDocumentRequestBus::Handler::BusConnect(m_id);
         AZ::SystemTickBus::Handler::BusConnect();
 
@@ -129,12 +129,12 @@ namespace JE::Editor::Tools
     {
         AZ::SystemTickBus::Handler::BusDisconnect();
         GraphDocumentRequestBus::Handler::BusDisconnect();
-        GraphCanvas::SceneNotificationBus::Handler::BusDisconnect();
+        JE::Editor::Tools::GraphCanvas::SceneNotificationBus::Handler::BusDisconnect();
         JE::Editor::Tools::GraphModel::Integration::GraphControllerNotificationBus::Handler::BusDisconnect();
 
         DestroyGraph();
 
-        m_graphId = GraphCanvas::GraphId();
+        m_graphId = JE::Editor::Tools::GraphCanvas::GraphId();
         delete m_sceneEntity;
         m_sceneEntity = {};
     }
@@ -324,7 +324,7 @@ namespace JE::Editor::Tools
 
             m_modified = true;
             AtomToolsDocumentNotificationBus::Event(m_toolId, &AtomToolsDocumentNotificationBus::Events::OnDocumentModified, m_id);
-            GraphCanvas::ViewRequestBus::Event(m_graphId, &GraphCanvas::ViewRequests::RefreshView);
+            JE::Editor::Tools::GraphCanvas::ViewRequestBus::Event(m_graphId, &JE::Editor::Tools::GraphCanvas::ViewRequests::RefreshView);
             m_compileGraphQueued |= GetSettingsValue("/O3DE/AtomToolsFramework/GraphCompiler/CompileOnEdit", true);
         }
         return true;
@@ -344,7 +344,7 @@ namespace JE::Editor::Tools
         return m_graph;
     }
 
-    GraphCanvas::GraphId GraphDocument::GetGraphId() const
+    JE::Editor::Tools::GraphCanvas::GraphId GraphDocument::GetGraphId() const
     {
         return m_graphId;
     }
@@ -546,7 +546,7 @@ namespace JE::Editor::Tools
     {
         // Forcing all of the graph model metadata to be updated before serializing to the binary stream. This will ensure that data for
         // bookmarks, comments, and groups is recorded.
-        GraphCanvas::GraphModelRequestBus::Event(m_graphId, &GraphCanvas::GraphModelRequests::OnSaveDataDirtied, m_graphId);
+        JE::Editor::Tools::GraphCanvas::GraphModelRequestBus::Event(m_graphId, &JE::Editor::Tools::GraphCanvas::GraphModelRequests::OnSaveDataDirtied, m_graphId);
 
         // Serialize the current graph to a byte stream so that it can be restored with undo redo operations.
         m_graphStateForUndoRedo.clear();
@@ -593,9 +593,9 @@ namespace JE::Editor::Tools
         m_graph.reset();
 
         // This needs to be done whenever the graph is destroyed during undo and redo so that the previous version of the data is deleted.
-        GraphCanvas::GraphModelRequestBus::Event(m_graphId, &GraphCanvas::GraphModelRequests::RequestPushPreventUndoStateUpdate);
-        GraphCanvas::SceneRequestBus::Event(m_graphId, &GraphCanvas::SceneRequests::ClearScene);
-        GraphCanvas::GraphModelRequestBus::Event(m_graphId, &GraphCanvas::GraphModelRequests::RequestPopPreventUndoStateUpdate);
+        JE::Editor::Tools::GraphCanvas::GraphModelRequestBus::Event(m_graphId, &JE::Editor::Tools::GraphCanvas::GraphModelRequests::RequestPushPreventUndoStateUpdate);
+        JE::Editor::Tools::GraphCanvas::SceneRequestBus::Event(m_graphId, &JE::Editor::Tools::GraphCanvas::SceneRequests::ClearScene);
+        JE::Editor::Tools::GraphCanvas::GraphModelRequestBus::Event(m_graphId, &JE::Editor::Tools::GraphCanvas::GraphModelRequests::RequestPopPreventUndoStateUpdate);
     }
 
     void GraphDocument::BuildEditablePropertyGroups()
@@ -652,11 +652,11 @@ namespace JE::Editor::Tools
                             currentSlot->SetValue(value);
 
                             // Retrieve and refresh the node property displays with the updated slot value.
-                            GraphCanvas::SlotId slotId{};
+                            JE::Editor::Tools::GraphCanvas::SlotId slotId{};
                             JE::Editor::Tools::GraphModel::Integration::GraphControllerRequestBus::EventResult(
                                 slotId, graphId, &JE::Editor::Tools::GraphModel::Integration::GraphControllerRequests::GetSlotIdBySlot, currentSlot);
 
-                            GraphCanvas::NodePropertyRequestBus::Event(slotId, [](GraphCanvas::NodePropertyRequests* nodePropertyRequests) {
+                            JE::Editor::Tools::GraphCanvas::NodePropertyRequestBus::Event(slotId, [](JE::Editor::Tools::GraphCanvas::NodePropertyRequests* nodePropertyRequests) {
                                 if (auto display = nodePropertyRequests->GetNodePropertyDisplay())
                                 {
                                     display->UpdateDisplay();
@@ -683,14 +683,14 @@ namespace JE::Editor::Tools
         // Reserve and register reflected objects for all of the selected graph canvas nodes that do not mirror any of the graph model nodes
         // that have been added to the graph. This should cover bookmarks, comments, and groups.
         AZStd::vector<AZ::EntityId> selectedItems;
-        GraphCanvas::SceneRequestBus::EventResult(selectedItems, m_graphId, &GraphCanvas::SceneRequests::GetSelectedItems);
+        JE::Editor::Tools::GraphCanvas::SceneRequestBus::EventResult(selectedItems, m_graphId, &JE::Editor::Tools::GraphCanvas::SceneRequests::GetSelectedItems);
 
         // Optimizing the container to only have nodes with property components before sorting.
         AZStd::erase_if(
             selectedItems,
             [](const auto& selectedItem)
             {
-                return GraphCanvas::GraphCanvasPropertyBus::FindFirstHandler(selectedItem) == nullptr;
+                return JE::Editor::Tools::GraphCanvas::GraphCanvasPropertyBus::FindFirstHandler(selectedItem) == nullptr;
             });
 
         objects.reserve(objects.size() + selectedItems.size());
@@ -703,12 +703,12 @@ namespace JE::Editor::Tools
             [](const auto& selectedItem1, const auto& selectedItem2)
             {
                 AZ::Vector2 selectedItemPosition1{};
-                GraphCanvas::GeometryRequestBus::EventResult(
-                    selectedItemPosition1, selectedItem1, &GraphCanvas::GeometryRequests::GetPosition);
+                JE::Editor::Tools::GraphCanvas::GeometryRequestBus::EventResult(
+                    selectedItemPosition1, selectedItem1, &JE::Editor::Tools::GraphCanvas::GeometryRequests::GetPosition);
 
                 AZ::Vector2 selectedItemPosition2{};
-                GraphCanvas::GeometryRequestBus::EventResult(
-                    selectedItemPosition2, selectedItem2, &GraphCanvas::GeometryRequests::GetPosition);
+                JE::Editor::Tools::GraphCanvas::GeometryRequestBus::EventResult(
+                    selectedItemPosition2, selectedItem2, &JE::Editor::Tools::GraphCanvas::GeometryRequests::GetPosition);
 
                 return selectedItemPosition1.IsLessThan(selectedItemPosition2);
             });
@@ -726,9 +726,9 @@ namespace JE::Editor::Tools
             // Some graph canvas nodes have multiple editable property components, like groups and bookmarks. All of the property components
             // will be added in relative order except for those in the ignore list.
             DocumentObjectInfoVector selectedItemObjects;
-            GraphCanvas::GraphCanvasPropertyBus::EnumerateHandlersId(
+            JE::Editor::Tools::GraphCanvas::GraphCanvasPropertyBus::EnumerateHandlersId(
                 selectedItem,
-                [&](GraphCanvas::GraphCanvasPropertyInterface* propertyInterface) -> bool
+                [&](JE::Editor::Tools::GraphCanvas::GraphCanvasPropertyInterface* propertyInterface) -> bool
                 {
                     AZ::Component* component = propertyInterface->GetPropertyComponent();
                     if (AzToolsFramework::ShouldInspectorShowComponent(component) && !ignoredTypeIds.contains(component->RTTI_GetType()))

@@ -23,6 +23,8 @@ namespace JE::Assets::RenderBuilders::SceneProcessing::Mesh
 
         size_t GetNumIndices() const { return m_indices.size(); }
         size_t GetNumPolygons() const { return m_polyVertexCounts.size(); }
+        // Correspondence to the builder input, not a persistent authored face identity.
+        size_t GetSourcePolygonIndex(size_t polyIndex) const { return m_sourcePolygonIndices[polyIndex]; }
         size_t GetNumJoints() const { return m_jointList.size(); }
         size_t GetMaterialIndex() const { return m_materialIndex; }
         size_t GetNumVertices() const { return m_numVertices; }
@@ -41,7 +43,7 @@ namespace JE::Assets::RenderBuilders::SceneProcessing::Mesh
         void SetJoints(const AZStd::vector<size_t>& jointList) { m_jointList = jointList; }
         const AZStd::vector<size_t>& GetJoints() const { return m_jointList; }
 
-        void AddPolygon(const AZStd::vector<MeshBuilderVertexLookup>& indices, const AZStd::vector<size_t>& jointList);
+        void AddPolygon(const AZStd::vector<MeshBuilderVertexLookup>& indices, const AZStd::vector<size_t>& jointList, size_t sourcePolygonIndex);
         bool CanHandlePolygon(const AZStd::vector<size_t>& orgVertexNumbers, size_t materialIndex, AZStd::vector<size_t>& outJointList) const;
 
         size_t CalcNumSimilarJoints(const AZStd::vector<size_t>& jointList) const;
@@ -51,6 +53,7 @@ namespace JE::Assets::RenderBuilders::SceneProcessing::Mesh
         AZStd::vector<MeshBuilderVertexLookup> m_vertexOrder;
         AZStd::vector<size_t> m_jointList;
         AZStd::vector<AZ::u8> m_polyVertexCounts;
+        AZStd::vector<size_t> m_sourcePolygonIndices;
         size_t m_materialIndex = InvalidIndex;
         size_t m_numVertices = 0;
         MeshBuilder* m_mesh = nullptr;

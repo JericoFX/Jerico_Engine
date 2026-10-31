@@ -1,0 +1,44 @@
+{
+  "utc": "2026-10-30T23:47:12.2120026Z",
+  "scope": "Windows Vulkan launcher visible load and normal native close",
+  "accepted": true,
+  "wholeGemAccepted": false,
+  "publicationPending": true,
+  "nativePid": 14452,
+  "nativeExitCode": 0,
+  "timedOut": false,
+  "ramGuardTriggered": false,
+  "inputDrift": 0,
+  "nativeCensusEmpty": true,
+  "observed": [
+    "Visible Vulkan scene before-close.jpg",
+    "System menu Close: WM_SYSCOMMAND SC_CLOSE",
+    "TRACE_WM_CLOSE",
+    "TRACE_BOOTSTRAP_CLOSE",
+    "System Shutdown and level unload",
+    "Original runner session50538 exit0; native result exit0"
+  ],
+  "limits": [
+    "Earlier X and AltF4 gestures did not produce close traces; not proof of product hang",
+    "No TRACE_EXIT_REQUEST or TRACE_LOOP_RETURN observed; do not infer those breakpoint hits",
+    "CDB exit1 after qd/no runnable debuggees is separate from native exit0",
+    "SurfaceData T3 and performance budget remain pending"
+  ],
+  "cleanup": {
+    "ramUsedPercent": 49.01,
+    "freeGiB": 16.27,
+    "absentPids": [
+      14452,
+      10828,
+      17564,
+      21824
+    ],
+    "retainedHostServices": [
+      18364,
+      20584,
+      21588,
+      10532,
+      10592
+    ]
+  }
+}

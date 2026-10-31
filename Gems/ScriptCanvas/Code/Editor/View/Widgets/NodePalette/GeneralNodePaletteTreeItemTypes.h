@@ -7,7 +7,7 @@
  */
 #pragma once
 
-#include <GraphCanvas/Widgets/NodePalette/TreeItems/DraggableNodePaletteTreeItem.h>
+#include <JE/Editor/Tools/GraphCanvas/Widgets/NodePalette/TreeItems/DraggableNodePaletteTreeItem.h>
 
 #include "CreateNodeMimeEvent.h"
 #include "NodePaletteModel.h"
@@ -43,16 +43,16 @@ namespace ScriptCanvasEditor
     };
 
     class ClassMethodEventPaletteTreeItem
-        : public GraphCanvas::DraggableNodePaletteTreeItem
+        : public JE::Editor::Tools::GraphCanvas::DraggableNodePaletteTreeItem
     {
     public:
         AZ_CLASS_ALLOCATOR(ClassMethodEventPaletteTreeItem, AZ::SystemAllocator);
-        AZ_RTTI(ClassMethodEventPaletteTreeItem, "{96F93970-F38A-4F08-8DC5-D52FCCE34E25}", GraphCanvas::DraggableNodePaletteTreeItem);
+        AZ_RTTI(ClassMethodEventPaletteTreeItem, "{96F93970-F38A-4F08-8DC5-D52FCCE34E25}", JE::Editor::Tools::GraphCanvas::DraggableNodePaletteTreeItem);
 
         ClassMethodEventPaletteTreeItem(AZStd::string_view className, AZStd::string_view methodName, bool isOverload, ScriptCanvas::PropertyStatus propertyStatus);
         ~ClassMethodEventPaletteTreeItem() = default;
 
-        GraphCanvas::GraphCanvasMimeEvent* CreateMimeEvent() const override;
+        JE::Editor::Tools::GraphCanvas::GraphCanvasMimeEvent* CreateMimeEvent() const override;
 
         AZStd::string GetClassMethodName() const;
         AZStd::string GetMethodName() const;
@@ -96,15 +96,15 @@ namespace ScriptCanvasEditor
     //! This represents a tree item that can be used to create a ScriptCanvas node
     //! out of a method reflected BehaviorContext instance(i.e a Global Method)
     class GlobalMethodEventPaletteTreeItem
-        : public GraphCanvas::DraggableNodePaletteTreeItem
+        : public JE::Editor::Tools::GraphCanvas::DraggableNodePaletteTreeItem
     {
     public:
         AZ_CLASS_ALLOCATOR(GlobalMethodEventPaletteTreeItem, AZ::SystemAllocator);
-        AZ_RTTI(GlobalMethodEventPaletteTreeItem, "{C6C633FC-605B-4161-8FAE-65E4807D1147}", GraphCanvas::DraggableNodePaletteTreeItem);
+        AZ_RTTI(GlobalMethodEventPaletteTreeItem, "{C6C633FC-605B-4161-8FAE-65E4807D1147}", JE::Editor::Tools::GraphCanvas::DraggableNodePaletteTreeItem);
 
         GlobalMethodEventPaletteTreeItem(const GlobalMethodNodeModelInformation& nodeModelInformation);
 
-        GraphCanvas::GraphCanvasMimeEvent* CreateMimeEvent() const override;
+        JE::Editor::Tools::GraphCanvas::GraphCanvasMimeEvent* CreateMimeEvent() const override;
 
         const AZStd::string& GetMethodName() const;
 
@@ -143,16 +143,16 @@ namespace ScriptCanvasEditor
     };
 
     class CustomNodePaletteTreeItem
-        : public GraphCanvas::DraggableNodePaletteTreeItem
+        : public JE::Editor::Tools::GraphCanvas::DraggableNodePaletteTreeItem
     {
     public:
         AZ_CLASS_ALLOCATOR(CustomNodePaletteTreeItem, AZ::SystemAllocator);
-        AZ_RTTI(CustomNodePaletteTreeItem, "{50E75C4D-F59C-4AF6-A6A3-5BAD557E335C}", GraphCanvas::DraggableNodePaletteTreeItem);
+        AZ_RTTI(CustomNodePaletteTreeItem, "{50E75C4D-F59C-4AF6-A6A3-5BAD557E335C}", JE::Editor::Tools::GraphCanvas::DraggableNodePaletteTreeItem);
 
         explicit CustomNodePaletteTreeItem(const ScriptCanvasEditor::CustomNodeModelInformation&);
         ~CustomNodePaletteTreeItem() = default;
 
-        GraphCanvas::GraphCanvasMimeEvent* CreateMimeEvent() const override;
+        JE::Editor::Tools::GraphCanvas::GraphCanvasMimeEvent* CreateMimeEvent() const override;
 
         AZ::Uuid GetTypeId() const;
         const ScriptCanvasEditor::CustomNodeModelInformation& GetInfo() const { return m_info; }

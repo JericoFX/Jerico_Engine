@@ -11,8 +11,8 @@
 
 #include <AzCore/Asset/AssetCommon.h>
 
-#include <GraphCanvas/Widgets/GraphCanvasMimeEvent.h>
-#include <GraphCanvas/Widgets/NodePalette/TreeItems/DraggableNodePaletteTreeItem.h>
+#include <JE/Editor/Tools/GraphCanvas/Widgets/GraphCanvasMimeEvent.h>
+#include <JE/Editor/Tools/GraphCanvas/Widgets/NodePalette/TreeItems/DraggableNodePaletteTreeItem.h>
 
 #include <ScriptCanvas/Bus/NodeIdPair.h>
 #include <ScriptCanvas/Bus/RequestBus.h>
@@ -40,7 +40,7 @@ namespace ScriptCanvasEditor
         CreateFunctionMimeEvent(const AZ::Data::AssetId& assetId, const AZ::Data::AssetType& assetType, const ScriptCanvas::Grammar::FunctionSourceId& sourceId);
         ~CreateFunctionMimeEvent() = default;
 
-        bool CanGraphHandleEvent(const GraphCanvas::GraphId& graphId) const override;
+        bool CanGraphHandleEvent(const JE::Editor::Tools::GraphCanvas::GraphId& graphId) const override;
         ScriptCanvasEditor::NodeIdPair CreateNode(const AZ::EntityId& graphId) const override;
 
     private:
@@ -50,16 +50,16 @@ namespace ScriptCanvasEditor
     };
 
     class FunctionPaletteTreeItem
-        : public GraphCanvas::DraggableNodePaletteTreeItem
+        : public JE::Editor::Tools::GraphCanvas::DraggableNodePaletteTreeItem
     {
     public:
-        AZ_RTTI(FunctionPaletteTreeItem, "{AF75BBAD-BC8A-46D2-81B6-54C0E6CB3E41}", GraphCanvas::DraggableNodePaletteTreeItem);
+        AZ_RTTI(FunctionPaletteTreeItem, "{AF75BBAD-BC8A-46D2-81B6-54C0E6CB3E41}", JE::Editor::Tools::GraphCanvas::DraggableNodePaletteTreeItem);
         AZ_CLASS_ALLOCATOR(FunctionPaletteTreeItem, AZ::SystemAllocator);
 
         FunctionPaletteTreeItem(const char* name, const ScriptCanvas::Grammar::FunctionSourceId& sourceId, AZ::Data::Asset<AZ::Data::AssetData> asset);
         ~FunctionPaletteTreeItem() = default;
 
-        GraphCanvas::GraphCanvasMimeEvent* CreateMimeEvent() const override;
+        JE::Editor::Tools::GraphCanvas::GraphCanvasMimeEvent* CreateMimeEvent() const override;
         QVariant OnData(const QModelIndex& index, int role) const override;
 
         ScriptCanvas::Grammar::FunctionSourceId GetFunctionSourceId() const;

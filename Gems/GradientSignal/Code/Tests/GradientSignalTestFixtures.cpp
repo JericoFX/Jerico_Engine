@@ -23,8 +23,10 @@
 #include <GradientSignal/Components/GradientTransformComponent.h>
 #include <LmbrCentral/Shape/BoxShapeComponentBus.h>
 #include <LmbrCentral/Shape/SphereShapeComponentBus.h>
-#include <SurfaceData/Components/SurfaceDataShapeComponent.h>
-#include <SurfaceData/Components/SurfaceDataSystemComponent.h>
+#include <JE/Geometry/SurfaceData/Components/SurfaceDataShapeComponent.h>
+#include <JE/Geometry/SurfaceData/Components/SurfaceDataSystemComponent.h>
+#include <JE/Geometry/SurfaceData/SurfaceDataModule.h>
+#include <AzCore/Module/ModuleManagerBus.h>
 
 // Base gradient components
 #include <GradientSignal/Components/ConstantGradientComponent.h>
@@ -52,7 +54,7 @@ namespace UnitTest
 {
     void GradientSignalTestEnvironment::AddGemsAndComponents()
     {
-        AddDynamicModulePaths({ "LmbrCentral", "SurfaceData" });
+        AddDynamicModulePaths({ "LmbrCentral" });
 
         AddComponentDescriptors({
             AzFramework::TransformComponent::CreateDescriptor(),
@@ -92,10 +94,23 @@ namespace UnitTest
 
         // These ebuses need their contexts created here before any of the dependent DLLs get loaded:
         AZ::AssetTypeInfoBus::GetOrCreateContext();
-        SurfaceData::SurfaceDataSystemRequestBus::GetOrCreateContext();
-        SurfaceData::SurfaceDataProviderRequestBus::GetOrCreateContext();
-        SurfaceData::SurfaceDataModifierRequestBus::GetOrCreateContext();
+        JE::Geometry::SurfaceData::SurfaceDataSystemRequestBus::GetOrCreateContext();
+        JE::Geometry::SurfaceData::SurfaceDataProviderRequestBus::GetOrCreateContext();
+        JE::Geometry::SurfaceData::SurfaceDataModifierRequestBus::GetOrCreateContext();
         LmbrCentral::ShapeComponentRequestsBus::GetOrCreateContext();
+
+        // ModuleManager owns the native descriptors and activates Required components with SystemEntity.
+        AZ::ModuleManagerRequests::LoadModulesResult surfaceModules;
+        AZ::ModuleManagerRequestBus::BroadcastResult(surfaceModules, &AZ::ModuleManagerRequests::LoadStaticModules,
+            [](AZStd::vector<AZ::Module*>& modules)
+            {
+                modules.push_back(JE::Geometry::SurfaceData::CreateRuntimeModule());
+            }, AZ::ModuleInitializationSteps::ActivateEntity);
+        ASSERT_EQ(surfaceModules.size(), 1);
+        ASSERT_TRUE(surfaceModules.front().IsSuccess());
+        EXPECT_EQ(surfaceModules.front().GetValue()->GetEntity(), nullptr);
+        EXPECT_EQ(surfaceModules.front().GetValue()->GetModule()->RTTI_GetType(),
+            AZ::Uuid("{B58B7CA8-98C9-4DC8-8607-E094989BBBE2}"));
     }
 
     GradientSignalBaseFixture::GradientSignalBaseFixture()
@@ -401,9 +416,9 @@ namespace UnitTest
         entity->CreateComponent<GradientSignal::SurfaceAltitudeGradientComponent>(config);
 
         // Create a SurfaceDataShape component to provide surface points from this component.
-        SurfaceData::SurfaceDataShapeConfig shapeConfig;
+        JE::Geometry::SurfaceData::SurfaceDataShapeConfig shapeConfig;
         shapeConfig.m_providerTags.emplace_back("test_mask");
-        auto surfaceShapeComponent = entity->CreateComponent(azrtti_typeid<SurfaceData::SurfaceDataShapeComponent>());
+        auto surfaceShapeComponent = entity->CreateComponent(azrtti_typeid<JE::Geometry::SurfaceData::SurfaceDataShapeComponent>());
         surfaceShapeComponent->SetConfiguration(shapeConfig);
 
         ActivateEntity(entity.get());
@@ -419,9 +434,9 @@ namespace UnitTest
         entity->CreateComponent<GradientSignal::SurfaceMaskGradientComponent>(config);
 
         // Create a SurfaceDataShape component to provide surface points from this component.
-        SurfaceData::SurfaceDataShapeConfig shapeConfig;
+        JE::Geometry::SurfaceData::SurfaceDataShapeConfig shapeConfig;
         shapeConfig.m_providerTags.emplace_back("test_mask");
-        auto surfaceShapeComponent = entity->CreateComponent(azrtti_typeid<SurfaceData::SurfaceDataShapeComponent>());
+        auto surfaceShapeComponent = entity->CreateComponent(azrtti_typeid<JE::Geometry::SurfaceData::SurfaceDataShapeComponent>());
         surfaceShapeComponent->SetConfiguration(shapeConfig);
 
         ActivateEntity(entity.get());
@@ -442,9 +457,9 @@ namespace UnitTest
         entity->CreateComponent<GradientSignal::SurfaceSlopeGradientComponent>(config);
 
         // Create a SurfaceDataShape component to provide surface points from this component.
-        SurfaceData::SurfaceDataShapeConfig shapeConfig;
+        JE::Geometry::SurfaceData::SurfaceDataShapeConfig shapeConfig;
         shapeConfig.m_providerTags.emplace_back("test_mask");
-        auto surfaceShapeComponent = entity->CreateComponent(azrtti_typeid<SurfaceData::SurfaceDataShapeComponent>());
+        auto surfaceShapeComponent = entity->CreateComponent(azrtti_typeid<JE::Geometry::SurfaceData::SurfaceDataShapeComponent>());
         surfaceShapeComponent->SetConfiguration(shapeConfig);
 
         ActivateEntity(entity.get());

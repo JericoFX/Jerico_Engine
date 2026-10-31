@@ -7,14 +7,14 @@
  */
 #pragma once
 
-#include <GraphCanvas/Components/NodePropertyDisplay/BooleanDataInterface.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/NodePropertyDisplay/BooleanDataInterface.h>
 
 #include "ScriptCanvasDataInterface.h"
 
 namespace ScriptCanvasEditor
 {
     class ScriptCanvasBoolDataInterface
-        : public ScriptCanvasDataInterface<GraphCanvas::BooleanDataInterface>
+        : public ScriptCanvasDataInterface<JE::Editor::Tools::GraphCanvas::BooleanDataInterface>
     {
     public:
         AZ_CLASS_ALLOCATOR(ScriptCanvasBoolDataInterface, AZ::SystemAllocator);

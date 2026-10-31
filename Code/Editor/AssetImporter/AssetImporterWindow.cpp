@@ -17,8 +17,17 @@
 #include <QFile>
 #include <QFileDialog>
 #include <QLabel>
+#include <QComboBox>
+#include <QLineEdit>
+#include <QPushButton>
+#include <QFormLayout>
+#include <QGroupBox>
+#include <QSignalBlocker>
 #include <QMessageBox>
 #include <QTimer>
+#include <QPointer>
+#include <QThread>
+#include <SceneAPI/SceneCore/DataTypes/Groups/IMeshGroup.h>
 
 class IXMLDOMDocumentPtr; // Needed for settings.h
 class CXTPDockingPaneLayout; // Needed for settings.h
@@ -31,6 +40,8 @@ class CXTPDockingPaneLayout; // Needed for settings.h
 #include <AzCore/Component/ComponentApplicationBus.h>
 #include <AzCore/IO/Path/Path.h>
 #include <AzCore/std/functional.h>
+#include <AzCore/std/smart_ptr/weak_ptr.h>
+#include <AzCore/std/containers/unordered_set.h>
 #include <AzCore/std/string/conversions.h>
 #include <AzCore/Utils/Utils.h>
 #include <AzFramework/StringFunc/StringFunc.h>
@@ -74,6 +85,8 @@ AssetImporterWindow::AssetImporterWindow(QWidget* parent)
 
 AssetImporterWindow::~AssetImporterWindow()
 {
+    m_isClosed = true; ++m_identityOwnerEpoch;
+    AZ::SceneAPI::Events::ManifestMetaInfoBus::Handler::BusDisconnect();
     while (QLayoutItem* cardToDelete = ui->m_cardAreaLayout->takeAt(0))
     {
         delete cardToDelete->widget();
@@ -137,7 +150,7 @@ bool AssetImporterWindow::CanClose()
         return false;
     }
 
-    m_isClosed = true;
+    m_isClosed = true; ++m_identityOwnerEpoch;
     return true;
 }
 
@@ -165,6 +178,9 @@ void AssetImporterWindow::Init()
     //  the Import button & the cancel button, which are handled here by the window.
     m_overlay.reset(aznew AZ::SceneAPI::UI::OverlayWidget(this));
     m_rootDisplay.reset(aznew ImporterRootDisplayWidget(m_serializeContext));
+    connect(m_rootDisplay->GetManifestWidget(), &AZ::SceneAPI::UI::ManifestWidget::RequestModifierChange,
+        this, &AssetImporterWindow::ChangeSurfaceIdentity, Qt::DirectConnection);
+    AZ::SceneAPI::Events::ManifestMetaInfoBus::Handler::BusConnect();
     connect(
         m_rootDisplay.data()->GetManifestWidget(),
         &AZ::SceneAPI::UI::ManifestWidget::SaveClicked,
@@ -196,6 +212,25 @@ void AssetImporterWindow::Init()
 
     m_overlay->SetRoot(m_rootDisplay.data());
     ui->m_settingsAreaLayout->addWidget(m_overlay.data());
+    // Inline authoring in Scene Settings: display names, never editable UUIDs.
+    m_regionPanel = new QGroupBox(tr("Surface Identity — Regions"), this);
+    auto* regionLayout = new QFormLayout(m_regionPanel);
+    regionLayout->setRowWrapPolicy(QFormLayout::WrapLongRows);
+    m_regionGroup = new QComboBox(m_regionPanel); m_regionSurface = new QComboBox(m_regionPanel);
+    m_regionChoice = new QComboBox(m_regionPanel); m_regionName = new QLineEdit(m_regionPanel);
+    m_regionApply = new QPushButton(tr("Apply"), m_regionPanel);
+    m_regionGroup->setObjectName("surfaceRegionMeshGroup"); m_regionSurface->setObjectName("surfaceRegionSurface");
+    m_regionChoice->setObjectName("surfaceRegionChoice"); m_regionName->setObjectName("surfaceRegionName");
+    m_regionApply->setObjectName("surfaceRegionApply");
+    regionLayout->addRow(tr("Mesh group"), m_regionGroup); regionLayout->addRow(tr("Source surface"), m_regionSurface);
+    regionLayout->addRow(tr("Region"), m_regionChoice); regionLayout->addRow(tr("Name"), m_regionName);
+    regionLayout->addRow(m_regionApply);
+    ui->m_settingsAreaLayout->addWidget(m_regionPanel);
+    connect(m_regionGroup, &QComboBox::currentIndexChanged, this, [this]() { RefreshRegionEditor(); });
+    connect(m_regionSurface, &QComboBox::currentIndexChanged, this, [this]() { RefreshRegionEditor(); });
+    connect(m_regionChoice, &QComboBox::currentIndexChanged, this, [this]() { SelectRegionEditorEntry(); });
+    connect(m_regionApply, &QPushButton::clicked, this, &AssetImporterWindow::ApplyRegionEditor);
+    RefreshRegionEditor();
 
     // Filling the initial browse prompt text to be programmatically set from available extensions
     AZStd::unordered_set<AZStd::string> extensions;
@@ -250,6 +285,7 @@ void AssetImporterWindow::Init()
 
 void AssetImporterWindow::OpenFileInternal(const AZStd::string& filePath)
 {
+    ++m_identityOwnerEpoch;
     using namespace AZ::SceneAPI::SceneUI;
 
     // Clear all previously watched files
@@ -328,6 +364,7 @@ void AssetImporterWindow::SceneSettingsCardProcessingCompleted()
     m_isSaving = false;
     m_overlay->PopLayer(m_sceneSettingsCardOverlay);
     m_sceneSettingsCardOverlay = AZ::SceneAPI::UI::OverlayWidget::s_invalidOverlayIndex;
+    RefreshRegionEditor(); // PopLayer emits LayerRemoved before this overlay ID is invalidated.
 }
 
 bool AssetImporterWindow::IsAllowedToChangeSourceFile()
@@ -349,6 +386,7 @@ bool AssetImporterWindow::IsAllowedToChangeSourceFile()
         return true;
     }
     m_isSaving = true;
+    RefreshRegionEditor();
     AZStd::shared_ptr<AZ::ActionOutput> output = AZStd::make_shared<AZ::ActionOutput>();
     m_assetImporterDocument->SaveScene(
         output,
@@ -386,6 +424,7 @@ bool AssetImporterWindow::ShouldSaveBeforeClose()
         return false;
     }
     m_isSaving = true;
+    RefreshRegionEditor();
     AZStd::shared_ptr<AZ::ActionOutput> output = AZStd::make_shared<AZ::ActionOutput>();
     m_assetImporterDocument->SaveScene(
         output,
@@ -450,6 +489,7 @@ void AssetImporterWindow::SaveClicked()
 
     AZStd::shared_ptr<AZ::ActionOutput> output = AZStd::make_shared<AZ::ActionOutput>();
     m_isSaving = true;
+    RefreshRegionEditor();
     m_assetImporterDocument->SaveScene(output,
         [output, this, isSourceControlActive, card](bool wasSuccessful)
         {
@@ -608,6 +648,7 @@ void AssetImporterWindow::OnInspect()
 void AssetImporterWindow::OverlayLayerAdded()
 {
     setCursor(Qt::WaitCursor);
+    if (m_regionPanel) { m_regionPanel->setEnabled(false); }
 }
 
 void AssetImporterWindow::OverlayLayerRemoved()
@@ -624,6 +665,7 @@ void AssetImporterWindow::OverlayLayerRemoved()
         ui->m_initialBrowseContainer->show();
         m_rootDisplay->hide();
     }
+    RefreshRegionEditor();
 }
 
 void AssetImporterWindow::UpdateDefaultSceneDisplay()
@@ -649,6 +691,7 @@ void AssetImporterWindow::UpdateSceneDisplay(const AZStd::shared_ptr<AZ::SceneAP
     }
     
     m_rootDisplay->SetPythonBuilderText(m_scriptProcessorRuleFilename.c_str());
+    RefreshRegionEditor();
 
     // UpdateSceneDisplay gets called both when the file is saved from this tool, as well as when it's modified externally.
     m_rootDisplay->UpdateTimeStamp(m_assetImporterDocument->GetScene()->GetManifestFilename().c_str(), gSettings.enableSceneInspector);
@@ -759,3 +802,248 @@ void AssetImporterWindow::FileChanged([[maybe_unused]] QString path)
     ReloadCurrentScene(true);
 }
 
+
+
+void AssetImporterWindow::GetAvailableModifiers(AZ::SceneAPI::Events::ManifestMetaInfo::ModifiersList& modifiers,
+    const AZ::SceneAPI::Containers::Scene& scene, const AZ::SceneAPI::DataTypes::IManifestObject& target)
+{
+    using Rule = AssetImporterDocument::SurfaceRule;
+    if (QThread::currentThread() != thread() || m_isClosed || m_isSaving ||
+        m_sceneSettingsCardOverlay != AZ::SceneAPI::UI::OverlayWidget::s_invalidOverlayIndex || !m_assetImporterDocument ||
+        m_assetImporterDocument->GetScene().get() != &scene) { return; }
+    const auto* group = azrtti_cast<const AZ::SceneAPI::DataTypes::IMeshGroup*>(&target);
+    if (group && !group->GetRuleContainerConst().ContainsRuleOfType<Rule>())
+    { modifiers.push_back(azrtti_typeid<Rule>()); }
+}
+
+void AssetImporterWindow::ChangeSurfaceIdentity(AZ::SceneAPI::DataTypes::IManifestObject* owner,
+    AZ::SceneAPI::DataTypes::IManifestObject* modifier, bool adding, bool& handled, bool& accepted)
+{
+    using Rule = AssetImporterDocument::SurfaceRule;
+    if (!azrtti_istypeof<Rule>(modifier)) { return; }
+    handled = true; accepted = false; // Never fall back to inserting an empty identity rule.
+    if (QThread::currentThread() != thread() || m_isClosed || m_isSaving ||
+        m_sceneSettingsCardOverlay != AZ::SceneAPI::UI::OverlayWidget::s_invalidOverlayIndex || !m_assetImporterDocument) { return; }
+    const auto scene = m_assetImporterDocument->GetScene();
+    const auto* group = azrtti_cast<const AZ::SceneAPI::DataTypes::IMeshGroup*>(owner);
+    if (!scene || !group || group->GetId().IsNull()) { return; }
+    size_t matchingId = 0; bool exactOwner = false;
+    for (const auto& object : scene->GetManifest().GetValueStorage())
+    {
+        if (const auto* candidate = azrtti_cast<const AZ::SceneAPI::DataTypes::IMeshGroup*>(object.get());
+            candidate && candidate->GetId() == group->GetId())
+        { ++matchingId; exactOwner = exactOwner || candidate == group; }
+    }
+    if (!exactOwner || matchingId != 1) { return; }
+    AZStd::optional<Rule> proposed;
+    if (adding)
+    {
+        const auto prepared = Rule::PrepareForMeshGroup(*scene, *group);
+        if (!prepared.IsSuccess()) { QMessageBox::warning(this, tr("Surface Identity"), QString::fromUtf8(prepared.GetError().c_str())); return; }
+        proposed = prepared.GetValue();
+    }
+    else
+    {
+        bool exactRule = false;
+        for (size_t i = 0; i != group->GetRuleContainerConst().GetRuleCount(); ++i)
+        { exactRule = exactRule || group->GetRuleContainerConst().GetRule(i).get() == modifier; }
+        if (!exactRule) { return; }
+    }
+    const QPointer<AssetImporterWindow> guard(this);
+    const auto ownerEpoch = m_identityOwnerEpoch; const auto documentEpoch = m_assetImporterDocument->GetEpoch();
+    const auto isCurrent = [guard, ownerEpoch, documentEpoch]()
+    {
+        return guard && !guard->m_isClosed && !guard->m_isSaving && guard->m_identityOwnerEpoch == ownerEpoch &&
+            guard->m_sceneSettingsCardOverlay == AZ::SceneAPI::UI::OverlayWidget::s_invalidOverlayIndex &&
+            guard->m_assetImporterDocument && guard->m_assetImporterDocument->GetEpoch() == documentEpoch;
+    };
+    const auto changed = [guard, isCurrent](const AZ::SceneAPI::Containers::Scene& current,
+        const AZ::SceneAPI::DataTypes::IMeshGroup& changedGroup)
+    {
+        if (!isCurrent()) { return; }
+        AZ::SceneAPI::Events::ManifestMetaInfoBus::Broadcast(
+            &AZ::SceneAPI::Events::ManifestMetaInfoBus::Events::ObjectUpdated, current, &changedGroup, guard.data());
+        if (!isCurrent()) { return; } // ObjectUpdated listeners may have closed or reloaded this document.
+        // Do not destroy the row/property control while its Add/Remove callback is on the stack.
+        QTimer::singleShot(0, guard.data(), [guard, isCurrent]()
+        {
+            if (isCurrent())
+            {
+                guard->m_rootDisplay->GetManifestWidget()->BuildFromScene(guard->m_assetImporterDocument->GetScene());
+                if (isCurrent()) { guard->RefreshRegionEditor(); }
+            }
+        });
+    };
+    const auto result = m_assetImporterDocument->ApplySurfaceIdentityChange(group->GetId(), proposed, this, isCurrent, changed);
+    if (!result.IsSuccess()) { QMessageBox::warning(this, tr("Surface Identity"), QString::fromUtf8(result.GetError().c_str())); return; }
+    accepted = true;
+}
+
+namespace
+{
+    const AZ::SceneAPI::DataTypes::IMeshGroup* RegionEditingGroup(const AZ::SceneAPI::Containers::Scene& scene, const QString& id)
+    {
+        const auto text = id.toUtf8();
+        const auto uuid = AZ::Uuid::CreateString(AZStd::string_view(text.constData(), text.size()));
+        if (uuid.IsNull()) { return nullptr; }
+        const AZ::SceneAPI::DataTypes::IMeshGroup* result = nullptr;
+        for (const auto& value : scene.GetManifest().GetValueStorage())
+        {
+            const auto* group = azrtti_cast<const AZ::SceneAPI::DataTypes::IMeshGroup*>(value.get());
+            if (group && group->GetId() == uuid) { if (result) { return nullptr; } result = group; }
+        }
+        return result;
+    }
+}
+void AssetImporterWindow::RefreshRegionEditor() const
+{
+    if (!m_regionPanel) { return; }
+    using Rule = AssetImporterDocument::SurfaceRule;
+    m_regionPanel->setEnabled(false);
+    // Keep the selection while busy; do not read a scene that the loading worker is replacing.
+    if (m_isClosed || m_isSaving || !m_overlay || !m_overlay->IsAtRoot() ||
+        m_sceneSettingsCardOverlay != AZ::SceneAPI::UI::OverlayWidget::s_invalidOverlayIndex || !m_assetImporterDocument) { return; }
+    const auto scene = m_assetImporterDocument->GetScene();
+    if (!scene) { return; }
+    const QSignalBlocker groups(m_regionGroup), surfaces(m_regionSurface), regions(m_regionChoice);
+    const auto groupId = m_regionGroup->currentData().toString(); const auto surfaceId = m_regionSurface->currentData().toString();
+    m_regionGroup->clear(); m_regionSurface->clear(); m_regionChoice->clear(); m_regionName->clear();
+    for (const auto& value : scene->GetManifest().GetValueStorage())
+    {
+        const auto* group = azrtti_cast<const AZ::SceneAPI::DataTypes::IMeshGroup*>(value.get());
+        if (!group) { continue; }
+        const auto rule = group->GetRuleContainerConst().FindFirstByType<Rule>();
+        if (rule && Rule::MatchesMeshGroup(*scene, *group, *rule))
+        {
+            m_regionGroup->addItem(QString::fromUtf8(group->GetName().c_str()), QString::fromUtf8(group->GetId().ToString<AZStd::string>().c_str()));
+        }
+    }
+    if (const int selected = m_regionGroup->findData(groupId); selected >= 0) { m_regionGroup->setCurrentIndex(selected); }
+    const auto* group = RegionEditingGroup(*scene, m_regionGroup->currentData().toString());
+    if (!group) { return; }
+    const auto rule = group->GetRuleContainerConst().FindFirstByType<Rule>();
+    if (!rule || !Rule::MatchesMeshGroup(*scene, *group, *rule)) { return; }
+    AZStd::unordered_set<AZ::Uuid> seen;
+    for (const auto& node : rule->m_nodes)
+    {
+        for (const auto& face : node.m_faces)
+        {
+            if (seen.insert(face.m_surfaceId).second)
+            {
+                // Source paths are authored labels. The UUID stays internal in item data.
+                QString label = QString::fromUtf8(node.m_nodePath.c_str());
+                if (m_regionSurface->findText(label) >= 0) { label += tr(" (surface %1)").arg(m_regionSurface->count() + 1); }
+                m_regionSurface->addItem(label, QString::fromUtf8(face.m_surfaceId.ToString<AZStd::string>().c_str()));
+            }
+        }
+    }
+    if (const int selected = m_regionSurface->findData(surfaceId); selected >= 0) { m_regionSurface->setCurrentIndex(selected); }
+    const auto surfaceText = m_regionSurface->currentData().toString().toUtf8();
+    const auto selectedSurface = AZ::Uuid::CreateString(AZStd::string_view(surfaceText.constData(), surfaceText.size()));
+    AZStd::optional<AZ::Uuid> membership; size_t count = 0; bool mixed = false;
+    m_regionChoice->addItem(tr("No region"), QString());
+    AZStd::unordered_set<AZ::Uuid> regionIds;
+    for (const auto& region : rule->m_regions)
+    {
+        regionIds.insert(region.m_id);
+        m_regionChoice->addItem(QString::fromUtf8(region.m_name.c_str()), QString::fromUtf8(region.m_id.ToString<AZStd::string>().c_str()));
+        m_regionChoice->setItemData(m_regionChoice->count() - 1, QString::fromUtf8(region.m_name.c_str()), Qt::UserRole + 1);
+    }
+    for (const auto& node : rule->m_nodes)
+    {
+        for (const auto& face : node.m_faces)
+        {
+            if (face.m_regionId)
+            {
+                const QString id = QString::fromUtf8(face.m_regionId->ToString<AZStd::string>().c_str());
+                if (regionIds.insert(*face.m_regionId).second)
+                {
+                    // Explicit missing-label status, not an invented persistent region name.
+                    m_regionChoice->addItem(tr("Unnamed region — %1").arg(QString::fromUtf8(node.m_nodePath.c_str())), id);
+                }
+            }
+            if (face.m_surfaceId == selectedSurface)
+            {
+                if (count++ == 0) { membership = face.m_regionId; } else { mixed = mixed || membership != face.m_regionId; }
+            }
+        }
+    }
+    m_regionChoice->addItem(tr("New region…"), QStringLiteral("new"));
+    const QString selectedRegion = membership ? QString::fromUtf8(membership->ToString<AZStd::string>().c_str()) : QString();
+    m_regionChoice->setCurrentIndex(mixed ? -1 : m_regionChoice->findData(selectedRegion));
+    m_regionChoice->setPlaceholderText(tr("Multiple regions"));
+    m_regionPanel->setEnabled(count != 0);
+    SelectRegionEditorEntry();
+}
+void AssetImporterWindow::SelectRegionEditorEntry() const
+{
+    const auto id = m_regionChoice->currentData().toString();
+    m_regionName->setEnabled(!id.isEmpty());
+    m_regionName->setText(m_regionChoice->currentData(Qt::UserRole + 1).toString());
+    m_regionName->setPlaceholderText(tr("Region name"));
+    m_regionApply->setEnabled(m_regionChoice->currentIndex() >= 0);
+    m_regionApply->setText(id == "new" ? tr("Create and assign") : id.isEmpty() ? tr("Clear region") : tr("Apply"));
+}
+void AssetImporterWindow::ApplyRegionEditor()
+{
+    using Rule = AssetImporterDocument::SurfaceRule;
+    if (QThread::currentThread() != thread() || m_isClosed || m_isSaving || !m_assetImporterDocument ||
+        m_sceneSettingsCardOverlay != AZ::SceneAPI::UI::OverlayWidget::s_invalidOverlayIndex || !m_overlay || !m_overlay->IsAtRoot() ||
+        m_regionChoice->currentIndex() < 0) { return; }
+    const auto scene = m_assetImporterDocument->GetScene(); if (!scene) { return; }
+    const auto* group = RegionEditingGroup(*scene, m_regionGroup->currentData().toString()); if (!group) { return; }
+    const auto original = group->GetRuleContainerConst().FindFirstByType<Rule>();
+    if (!original || !Rule::MatchesMeshGroup(*scene, *group, *original)) { return; }
+    const auto encoded = m_regionSurface->currentData().toString().toUtf8();
+    const auto surface = AZ::Uuid::CreateString(AZStd::string_view(encoded.constData(), encoded.size()));
+    bool found = false;
+    for (const auto& node : original->m_nodes) { for (const auto& face : node.m_faces) { found = found || face.m_surfaceId == surface; } }
+    if (!found) { return; }
+    const auto id = m_regionChoice->currentData().toString();
+    Rule proposed = *original; AZStd::optional<AZ::Uuid> region;
+    if (!id.isEmpty())
+    {
+        const auto name = m_regionName->text().trimmed().toUtf8();
+        const AZStd::string_view label(name.constData(), name.size());
+        if (id == "new")
+        {
+            const auto created = proposed.CreateRegion(label);
+            if (!created.IsSuccess()) { QMessageBox::warning(this, tr("Surface regions"), QString::fromUtf8(created.GetError().c_str())); return; }
+            region = created.GetValue();
+        }
+        else
+        {
+            const auto regionText = id.toUtf8(); region = AZ::Uuid::CreateString(AZStd::string_view(regionText.constData(), regionText.size()));
+            const auto named = proposed.SetRegionName(*region, label);
+            if (!named.IsSuccess()) { QMessageBox::warning(this, tr("Surface regions"), QString::fromUtf8(named.GetError().c_str())); return; }
+        }
+    }
+    const auto edited = proposed.SetRegionForSurface(surface, region);
+    if (!edited.IsSuccess()) { QMessageBox::warning(this, tr("Surface regions"), QString::fromUtf8(edited.GetError().c_str())); return; }
+    const QPointer<AssetImporterWindow> guard(this);
+    const auto ownerEpoch = m_identityOwnerEpoch; const auto documentEpoch = m_assetImporterDocument->GetEpoch();
+    const AZStd::weak_ptr<AZ::SceneAPI::Containers::Scene> weakScene = scene;
+    const auto isCurrent = [guard, ownerEpoch, documentEpoch, weakScene]()
+    {
+        const auto expectedScene = weakScene.lock();
+        return expectedScene && guard && !guard->m_isClosed && !guard->m_isSaving && guard->m_identityOwnerEpoch == ownerEpoch &&
+            guard->m_sceneSettingsCardOverlay == AZ::SceneAPI::UI::OverlayWidget::s_invalidOverlayIndex &&
+            guard->m_overlay && guard->m_overlay->IsAtRoot() && guard->m_assetImporterDocument &&
+            guard->m_assetImporterDocument->GetEpoch() == documentEpoch && guard->m_assetImporterDocument->GetScene() == expectedScene;
+    };
+    const auto changed = [guard, isCurrent](const AZ::SceneAPI::Containers::Scene& current, const AZ::SceneAPI::DataTypes::IMeshGroup& changedGroup)
+    {
+        if (!isCurrent()) { return; }
+        AZ::SceneAPI::Events::ManifestMetaInfoBus::Broadcast(&AZ::SceneAPI::Events::ManifestMetaInfoBus::Events::ObjectUpdated, current, &changedGroup, guard.data());
+        if (!isCurrent()) { return; }
+        QTimer::singleShot(0, guard.data(), [guard, isCurrent]()
+        {
+            if (!isCurrent()) { return; }
+            guard->m_rootDisplay->GetManifestWidget()->BuildFromScene(guard->m_assetImporterDocument->GetScene());
+            if (isCurrent()) { guard->RefreshRegionEditor(); }
+        });
+    };
+    const auto result = m_assetImporterDocument->ApplySurfaceIdentityChange(group->GetId(), proposed, this, isCurrent, changed);
+    if (!result.IsSuccess() && guard) { QMessageBox::warning(guard.data(), tr("Surface regions"), QString::fromUtf8(result.GetError().c_str())); }
+    else if (result.IsSuccess() && !result.GetValue() && isCurrent()) { guard->RefreshRegionEditor(); }
+}

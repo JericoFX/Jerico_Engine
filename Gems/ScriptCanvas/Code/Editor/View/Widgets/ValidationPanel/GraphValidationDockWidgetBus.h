@@ -9,7 +9,7 @@
 
 #include <AzCore/EBus/EBus.h>
 
-#include <GraphCanvas/Editor/EditorTypes.h>
+#include <JE/Editor/Tools/GraphCanvas/Editor/EditorTypes.h>
 
 namespace ScriptCanvasEditor
 {
@@ -17,7 +17,7 @@ namespace ScriptCanvasEditor
     {
     public:        
         static const AZ::EBusAddressPolicy AddressPolicy = AZ::EBusAddressPolicy::ById;
-        using BusIdType = GraphCanvas::EditorId;
+        using BusIdType = JE::Editor::Tools::GraphCanvas::EditorId;
         
         virtual void OnResultsChanged(int erorrCount, int warningCount) = 0;
     };

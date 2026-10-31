@@ -10,9 +10,9 @@
 
 #include <QCoreApplication>
 
-#include <GraphCanvas/Components/GridBus.h>
-#include <GraphCanvas/Components/SceneBus.h>
-#include <GraphCanvas/Components/VisualBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/GridBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/SceneBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/VisualBus.h>
 
 #include "EBusNodePaletteTreeItemTypes.h"
 
@@ -42,7 +42,7 @@ namespace ScriptCanvasEditor
 
         if (serializeContext)
         {
-            serializeContext->Class<CreateEBusSenderMimeEvent, GraphCanvas::GraphCanvasMimeEvent>()
+            serializeContext->Class<CreateEBusSenderMimeEvent, JE::Editor::Tools::GraphCanvas::GraphCanvasMimeEvent>()
                 ->Version(0)
                 ->Field("BusName", &CreateEBusSenderMimeEvent::m_busName)
                 ->Field("EventName", &CreateEBusSenderMimeEvent::m_eventName)
@@ -97,14 +97,14 @@ namespace ScriptCanvasEditor
         , m_isOverload(isOverload)
         , m_propertyStatus(propertyStatus)
     {
-        GraphCanvas::TranslationKey key;
+        JE::Editor::Tools::GraphCanvas::TranslationKey key;
         key << ScriptCanvasEditor::TranslationHelper::AssetContext::EBusSenderContext << busName << "methods" << eventName << "details";
 
-        GraphCanvas::TranslationRequests::Details details;
+        JE::Editor::Tools::GraphCanvas::TranslationRequests::Details details;
         details.m_name = eventName;
         details.m_subtitle = busName;
 
-        GraphCanvas::TranslationRequestBus::BroadcastResult(details, &GraphCanvas::TranslationRequests::GetDetails, key, details);
+        JE::Editor::Tools::GraphCanvas::TranslationRequestBus::BroadcastResult(details, &JE::Editor::Tools::GraphCanvas::TranslationRequests::GetDetails, key, details);
 
         SetName(details.m_name.c_str());
         SetToolTip(details.m_tooltip.c_str());
@@ -112,7 +112,7 @@ namespace ScriptCanvasEditor
         SetTitlePalette("MethodNodeTitlePalette");
     }
 
-    GraphCanvas::GraphCanvasMimeEvent* EBusSendEventPaletteTreeItem::CreateMimeEvent() const
+    JE::Editor::Tools::GraphCanvas::GraphCanvasMimeEvent* EBusSendEventPaletteTreeItem::CreateMimeEvent() const
     {
         return aznew CreateEBusSenderMimeEvent(m_busName.toUtf8().data(), m_eventName.toUtf8().data(), m_isOverload, ScriptCanvas::PropertyStatus::None);
     }
@@ -174,7 +174,7 @@ namespace ScriptCanvasEditor
 
         if (serializeContext)
         {
-            serializeContext->Class<CreateEBusHandlerMimeEvent, GraphCanvas::GraphCanvasMimeEvent>()
+            serializeContext->Class<CreateEBusHandlerMimeEvent, JE::Editor::Tools::GraphCanvas::GraphCanvasMimeEvent>()
                 ->Version(0)
                 ->Field("BusName", &CreateEBusHandlerMimeEvent::m_busName)
                 ;
@@ -228,10 +228,10 @@ namespace ScriptCanvasEditor
         {
             NodeIdPair handlerNode = ebusMimeEvent.GetCreatedPair();
 
-            GraphCanvas::WrappedNodeConfiguration configuration;
+            JE::Editor::Tools::GraphCanvas::WrappedNodeConfiguration configuration;
             EBusHandlerNodeDescriptorRequestBus::EventResult(configuration, handlerNode.m_graphCanvasId, &EBusHandlerNodeDescriptorRequests::GetEventConfiguration, m_eventId);
 
-            GraphCanvas::WrapperNodeRequestBus::Event(handlerNode.m_graphCanvasId, &GraphCanvas::WrapperNodeRequests::WrapNode, eventNode.m_graphCanvasId, configuration);
+            JE::Editor::Tools::GraphCanvas::WrapperNodeRequestBus::Event(handlerNode.m_graphCanvasId, &JE::Editor::Tools::GraphCanvas::WrapperNodeRequests::WrapNode, eventNode.m_graphCanvasId, configuration);
         }
 
         return eventNode;
@@ -252,7 +252,7 @@ namespace ScriptCanvasEditor
 
         if (nodeIdPair.m_graphCanvasId.IsValid())
         {
-            GraphCanvas::SceneRequestBus::Event(graphCanvasGraphId, &GraphCanvas::SceneRequests::AddNode, nodeIdPair.m_graphCanvasId, scenePosition, false);
+            JE::Editor::Tools::GraphCanvas::SceneRequestBus::Event(graphCanvasGraphId, &JE::Editor::Tools::GraphCanvas::SceneRequests::AddNode, nodeIdPair.m_graphCanvasId, scenePosition, false);
         }
 
         return nodeIdPair;
@@ -264,7 +264,7 @@ namespace ScriptCanvasEditor
 
         if (eventNode.m_graphCanvasId.IsValid())
         {
-            GraphCanvas::SceneMemberUIRequestBus::Event(eventNode.m_graphCanvasId, &GraphCanvas::SceneMemberUIRequests::SetSelected, true);
+            JE::Editor::Tools::GraphCanvas::SceneMemberUIRequestBus::Event(eventNode.m_graphCanvasId, &JE::Editor::Tools::GraphCanvas::SceneMemberUIRequests::SetSelected, true);
 
             ScriptCanvas::ScriptCanvasId scriptCanvasId;
             GeneralRequestBus::BroadcastResult(scriptCanvasId, &GeneralRequests::GetScriptCanvasId, graphCanvasGraphId);
@@ -272,10 +272,10 @@ namespace ScriptCanvasEditor
             ScriptCanvasEditor::NodeCreationNotificationBus::Event(scriptCanvasId, &ScriptCanvasEditor::NodeCreationNotifications::OnGraphCanvasNodeCreated, eventNode.m_graphCanvasId);
 
             AZ::EntityId gridId;
-            GraphCanvas::SceneRequestBus::EventResult(gridId, graphCanvasGraphId, &GraphCanvas::SceneRequests::GetGrid);
+            JE::Editor::Tools::GraphCanvas::SceneRequestBus::EventResult(gridId, graphCanvasGraphId, &JE::Editor::Tools::GraphCanvas::SceneRequests::GetGrid);
 
             AZ::Vector2 offset;
-            GraphCanvas::GridRequestBus::EventResult(offset, gridId, &GraphCanvas::GridRequests::GetMinorPitch);
+            JE::Editor::Tools::GraphCanvas::GridRequestBus::EventResult(offset, gridId, &JE::Editor::Tools::GraphCanvas::GridRequests::GetMinorPitch);
 
             sceneDropPosition += offset;
         }
@@ -313,12 +313,12 @@ namespace ScriptCanvasEditor
         , m_busId(busId)
         , m_eventId(eventId)
     {
-        GraphCanvas::TranslationKey key;
+        JE::Editor::Tools::GraphCanvas::TranslationKey key;
         key << ScriptCanvasEditor::TranslationHelper::AssetContext::EBusHandlerContext << busName << "methods" << eventName << "details";
 
-        GraphCanvas::TranslationRequests::Details details;
+        JE::Editor::Tools::GraphCanvas::TranslationRequests::Details details;
         details.m_name = m_eventName;
-        GraphCanvas::TranslationRequestBus::BroadcastResult(details, &GraphCanvas::TranslationRequests::GetDetails, key, details);
+        JE::Editor::Tools::GraphCanvas::TranslationRequestBus::BroadcastResult(details, &JE::Editor::Tools::GraphCanvas::TranslationRequests::GetDetails, key, details);
         if (details.m_name.empty())
         {
             details.m_name = m_eventName;
@@ -330,7 +330,7 @@ namespace ScriptCanvasEditor
         SetTitlePalette("HandlerNodeTitlePalette");
     }
 
-    GraphCanvas::GraphCanvasMimeEvent* EBusHandleEventPaletteTreeItem::CreateMimeEvent() const
+    JE::Editor::Tools::GraphCanvas::GraphCanvasMimeEvent* EBusHandleEventPaletteTreeItem::CreateMimeEvent() const
     {
         return aznew CreateEBusHandlerEventMimeEvent(m_busName, m_eventName, m_eventId);
     }

@@ -33,7 +33,7 @@ namespace ScriptCanvasEditor
         ~ScriptCanvasEnumComboBoxPropertyDataInterface() = default;
 
         // GraphCanvas::ComboBoxDataInterface
-        GraphCanvas::ComboBoxItemModelInterface* GetItemInterface() override
+        JE::Editor::Tools::GraphCanvas::ComboBoxItemModelInterface* GetItemInterface() override
         {
             return &m_comboBoxModel;
         }
@@ -60,6 +60,6 @@ namespace ScriptCanvasEditor
     private:
 
         ScriptCanvas::TypedComboBoxNodePropertyInterface<int>* m_propertyInterface;
-        GraphCanvas::GraphCanvasListComboBoxModel<int> m_comboBoxModel;
+        JE::Editor::Tools::GraphCanvas::GraphCanvasListComboBoxModel<int> m_comboBoxModel;
     };    
 }

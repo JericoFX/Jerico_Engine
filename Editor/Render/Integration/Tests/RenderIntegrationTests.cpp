@@ -4,6 +4,10 @@
 #include <JE/Editor/RenderIntegration/AssetProcessingModule.h>
 #include <Atom/RHI/Factory.h>
 #include <JE/Editor/Render/RPI/Edit/Material/MaterialTypeSourceData.h>
+#include <JE/Editor/Render/RPI/Edit/Material/MaterialUtils.h>
+#include <AzCore/Settings/SettingsRegistryMergeUtils.h>
+#include <AzCore/IO/Path/Path.h>
+#include <Tests/AssetSystemMocks.h>
 #include <AzCore/PlatformIncl.h>
 #include <JE/Render/RPI/Reflect/RPISystemDescriptor.h>
 #include <AzCore/Serialization/Json/RegistrationContext.h>
@@ -53,6 +57,116 @@ namespace JE::Editor::RenderIntegration
         bool m_ownsNames{};
     };
 
+    namespace
+    {
+        // Serial CPU fixture: shadow the global registry without writing/deleting the prior owner's data.
+        class ScopedMaterialTypePathServices final
+        {
+        public:
+            ScopedMaterialTypePathServices()
+                : m_previousRegistry(AZ::SettingsRegistry::Get())
+            {
+                if (m_previousRegistry)
+                {
+                    AZ::SettingsRegistry::Unregister(m_previousRegistry);
+                }
+                AZ::SettingsRegistry::Register(&m_registry);
+                m_assetSystem.BusConnect();
+                ON_CALL(m_assetSystem, GetSourceInfoBySourcePath(::testing::_, ::testing::_, ::testing::_))
+                    .WillByDefault([this](const char* sourcePath, AZ::Data::AssetInfo& assetInfo, AZStd::string& watchFolder)
+                    {
+                        m_lastSourcePath = sourcePath ? sourcePath : "";
+                        if (!m_sourceFound)
+                        {
+                            return false;
+                        }
+                        assetInfo.m_relativePath = m_relativePath;
+                        watchFolder = "F:/Installed/Materials/Assets";
+                        return true;
+                    });
+            }
+
+            ~ScopedMaterialTypePathServices()
+            {
+                m_assetSystem.BusDisconnect();
+                AZ::SettingsRegistry::Unregister(&m_registry);
+                if (m_previousRegistry)
+                {
+                    AZ::SettingsRegistry::Register(m_previousRegistry);
+                }
+            }
+
+            AZ::SettingsRegistryImpl m_registry;
+            ::testing::NiceMock<UnitTests::MockAssetSystemRequest> m_assetSystem;
+            AZStd::string m_relativePath = "Materials/Types/StandardPBR.materialtype";
+            AZStd::string m_lastSourcePath;
+            bool m_sourceFound = true;
+
+        private:
+            AZ::SettingsRegistryInterface* m_previousRegistry{};
+        };
+    }
+
+    TEST_F(EditorRenderIntegration, IntermediateMaterialTypePathHonorsConfiguredProjectCache)
+    {
+        ASSERT_FALSE(AzToolsFramework::AssetSystemRequestBus::HasHandlers());
+        auto* previousRegistry = AZ::SettingsRegistry::Get();
+        {
+            ScopedMaterialTypePathServices services;
+            ASSERT_TRUE(services.m_registry.Set(
+                AZ::SettingsRegistryMergeUtils::FilePathKey_ProjectPath, "F:/Validation/Project"));
+            ASSERT_TRUE(services.m_registry.Set(
+                AZ::SettingsRegistryMergeUtils::FilePathKey_CacheProjectRootFolder, "F:/Validation/Mixed Cache/r6"));
+            const char* relativePaths[]{
+                "Materials/Types/StandardPBR.materialtype",
+                "MaterialCanvas/GraphData/Nodes/MaterialOutputs/BasePBR/MaterialGraphName.materialtype",
+                "MaterialCanvas/GraphData/Nodes/MaterialOutputs/StandardPBR/MaterialGraphName.materialtype" };
+            const char* expectedPaths[]{
+                "F:/Validation/Mixed Cache/r6/Intermediate Assets/materials/types/standardpbr_generated.materialtype",
+                "F:/Validation/Mixed Cache/r6/Intermediate Assets/materialcanvas/graphdata/nodes/materialoutputs/basepbr/materialgraphname_generated.materialtype",
+                "F:/Validation/Mixed Cache/r6/Intermediate Assets/materialcanvas/graphdata/nodes/materialoutputs/standardpbr/materialgraphname_generated.materialtype" };
+            for (size_t index = 0; index < AZ_ARRAY_SIZE(relativePaths); ++index)
+            {
+                SCOPED_TRACE(index);
+                services.m_relativePath = relativePaths[index];
+                const AZStd::string sourcePath = "F:/Installed/Materials/Assets/" + services.m_relativePath;
+                const auto actual = JE::Render::RPI::MaterialUtils::PredictIntermediateMaterialTypeSourcePath(sourcePath);
+                const auto expected = AZ::IO::Path(expectedPaths[index]).LexicallyNormal().String();
+                EXPECT_STREQ(actual.c_str(), expected.c_str());
+                EXPECT_STREQ(services.m_lastSourcePath.c_str(), sourcePath.c_str());
+            }
+        }
+        EXPECT_EQ(AZ::SettingsRegistry::Get(), previousRegistry);
+        EXPECT_FALSE(AzToolsFramework::AssetSystemRequestBus::HasHandlers());
+    }
+
+    TEST_F(EditorRenderIntegration, IntermediateMaterialTypePathKeepsDefaultCacheAndMissingSourceBehavior)
+    {
+        ASSERT_FALSE(AzToolsFramework::AssetSystemRequestBus::HasHandlers());
+        ScopedMaterialTypePathServices services;
+        ASSERT_TRUE(services.m_registry.Set(
+            AZ::SettingsRegistryMergeUtils::FilePathKey_ProjectPath, "F:/Validation/Project"));
+        ASSERT_TRUE(services.m_registry.Set(
+            AZ::SettingsRegistryMergeUtils::FilePathKey_CacheProjectRootFolder, "F:/Validation/Project/Cache"));
+        const auto actual = JE::Render::RPI::MaterialUtils::PredictIntermediateMaterialTypeSourcePath("StandardPBR.materialtype");
+        const auto expected = AZ::IO::Path(
+            "F:/Validation/Project/Cache/Intermediate Assets/materials/types/standardpbr_generated.materialtype").LexicallyNormal().String();
+        EXPECT_STREQ(actual.c_str(), expected.c_str());
+        services.m_sourceFound = false;
+        EXPECT_TRUE(JE::Render::RPI::MaterialUtils::PredictIntermediateMaterialTypeSourcePath("missing.materialtype").empty());
+    }
+
+    TEST_F(EditorRenderIntegration, IntermediateMaterialTypePathDoesNotInventMissingOrEmptyCacheRoot)
+    {
+        ASSERT_FALSE(AzToolsFramework::AssetSystemRequestBus::HasHandlers());
+        ScopedMaterialTypePathServices services;
+        ASSERT_TRUE(services.m_registry.Set(
+            AZ::SettingsRegistryMergeUtils::FilePathKey_ProjectPath, "F:/Validation/Project"));
+        EXPECT_TRUE(JE::Render::RPI::MaterialUtils::PredictIntermediateMaterialTypeSourcePath("StandardPBR.materialtype").empty());
+        ASSERT_TRUE(services.m_registry.Set(
+            AZ::SettingsRegistryMergeUtils::FilePathKey_CacheProjectRootFolder, ""));
+        EXPECT_TRUE(JE::Render::RPI::MaterialUtils::PredictIntermediateMaterialTypeSourcePath("StandardPBR.materialtype").empty());
+    }
     TEST_F(EditorRenderIntegration, AuthoringFactoryPreservesRuntimeDescriptorsExactlyOnceAndEditorSchema)
     {
         AZStd::unique_ptr<AZ::Module> module(CreateAuthoringModule());

@@ -13,7 +13,7 @@
 #include <AzCore/Serialization/EditContext.h>
 #include <AzCore/Serialization/SerializeContext.h>
 #include <AzFramework/Translation/TranslationDef.h>
-#include <SurfaceData/SurfaceDataSystemRequestBus.h>
+#include <JE/Geometry/SurfaceData/SurfaceDataSystemRequestBus.h>
 #include <GradientSignal/Util.h>
 #include <LmbrCentral/Dependency/DependencyMonitor.h>
 
@@ -109,7 +109,7 @@ namespace GradientSignal
 
     void SurfaceSlopeGradientConfig::AddTag(AZStd::string tag)
     {
-        m_surfaceTagsToSample.push_back(SurfaceData::SurfaceTag(tag));
+        m_surfaceTagsToSample.push_back(JE::Geometry::SurfaceData::SurfaceTag(tag));
     }
 
     void SurfaceSlopeGradientComponent::GetProvidedServices(AZ::ComponentDescriptor::DependencyArrayType& services)
@@ -232,8 +232,8 @@ namespace GradientSignal
 
         AZStd::shared_lock lock(m_queryMutex);
 
-        SurfaceData::SurfacePointList points;
-        AZ::Interface<SurfaceData::SurfaceDataSystem>::Get()->GetSurfacePointsFromList(
+        JE::Geometry::SurfaceData::SurfacePointList points;
+        AZ::Interface<JE::Geometry::SurfaceData::SurfaceDataSystem>::Get()->GetSurfacePointsFromList(
             positions, m_configuration.m_surfaceTagsToSample, points);
 
         const float angleMin = AZ::DegToRad(AZ::GetClamp(m_configuration.m_slopeMin, 0.0f, 90.0f));

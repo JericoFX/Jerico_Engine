@@ -150,6 +150,21 @@ namespace JE::Render
 
         bool Model::LocalRayIntersection(const AZ::Vector3& rayStart, const AZ::Vector3& rayDir, float& distanceNormalized, AZ::Vector3& normal) const
         {
+            return LocalRayIntersectionImpl(rayStart, rayDir, distanceNormalized, normal, nullptr);
+        }
+
+        bool Model::LocalRayIntersection(
+            const AZ::Vector3& rayStart, const AZ::Vector3& rayDir, float& distanceNormalized, AZ::Vector3& normal,
+            AZStd::optional<ModelMaterialSlot::StableId>& materialSlotId) const
+        {
+            return LocalRayIntersectionImpl(rayStart, rayDir, distanceNormalized, normal, &materialSlotId);
+        }
+
+        bool Model::LocalRayIntersectionImpl(
+            const AZ::Vector3& rayStart, const AZ::Vector3& rayDir, float& distanceNormalized, AZ::Vector3& normal,
+            AZStd::optional<ModelMaterialSlot::StableId>* materialSlotId) const
+        {
+            if (materialSlotId) { materialSlotId->reset(); }
             AZ_PROFILE_SCOPE(RPI, "Model: LocalRayIntersection");
 
             if (!GetModelAsset())
@@ -171,8 +186,12 @@ namespace JE::Render
                     timer.Stamp();
 #endif
                     constexpr bool AllowBruteForce = false;
-                    const bool hit = modelAssetPtr->LocalRayIntersectionAgainstModel(
-                        rayStart, rayDir, AllowBruteForce, distanceNormalized, normal);
+                    // Preserve virtual dispatch for existing callers, including specialized ModelAsset implementations.
+                    const bool hit = materialSlotId
+                        ? modelAssetPtr->LocalRayIntersectionAgainstModel(
+                              rayStart, rayDir, AllowBruteForce, distanceNormalized, normal, *materialSlotId)
+                        : modelAssetPtr->LocalRayIntersectionAgainstModel(
+                              rayStart, rayDir, AllowBruteForce, distanceNormalized, normal);
 #if defined(AZ_RPI_PROFILE_RAYCASTING_AGAINST_MODELS)
                     if (hit)
                     {
@@ -194,6 +213,30 @@ namespace JE::Render
             float& distanceNormalized,
             AZ::Vector3& normal) const
         {
+            return RayIntersectionImpl(modelTransform, nonUniformScale, rayStart, rayDir, distanceNormalized, normal, nullptr);
+        }
+
+        bool Model::RayIntersection(
+            const AZ::Transform& modelTransform,
+            const AZ::Vector3& nonUniformScale,
+            const AZ::Vector3& rayStart,
+            const AZ::Vector3& rayDir,
+            float& distanceNormalized,
+            AZ::Vector3& normal,
+            AZStd::optional<ModelMaterialSlot::StableId>& materialSlotId) const
+        {
+            return RayIntersectionImpl(modelTransform, nonUniformScale, rayStart, rayDir, distanceNormalized, normal, &materialSlotId);
+        }
+
+        bool Model::RayIntersectionImpl(
+            const AZ::Transform& modelTransform,
+            const AZ::Vector3& nonUniformScale,
+            const AZ::Vector3& rayStart,
+            const AZ::Vector3& rayDir,
+            float& distanceNormalized,
+            AZ::Vector3& normal,
+            AZStd::optional<ModelMaterialSlot::StableId>* materialSlotId) const
+        {
             AZ_PROFILE_SCOPE(RPI, "Model: RayIntersection");
             const AZ::Vector3 clampedScale = nonUniformScale.GetMax(AZ::Vector3(AZ::MinTransformScale));
 
@@ -206,7 +249,7 @@ namespace JE::Render
             const AZ::Vector3 rayDestLocal = inverseTM.TransformPoint(rayDest) / clampedScale;
             const AZ::Vector3 rayDirLocal = rayDestLocal - raySrcLocal;
 
-            const bool result = LocalRayIntersection(raySrcLocal, rayDirLocal, distanceNormalized, normal);
+            const bool result = LocalRayIntersectionImpl(raySrcLocal, rayDirLocal, distanceNormalized, normal, materialSlotId);
             normal = (normal * clampedScale).GetNormalized();
             return result;
         }

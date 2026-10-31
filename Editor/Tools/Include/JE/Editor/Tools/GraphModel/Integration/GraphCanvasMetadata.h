@@ -13,7 +13,7 @@
 #include <AzCore/std/containers/map.h>
 
 // Graph Canvas
-#include <GraphCanvas/Types/EntitySaveData.h>
+#include <JE/Editor/Tools/GraphCanvas/Types/EntitySaveData.h>
 
 // Graph Model
 #include <JE/Editor/Tools/GraphModel/Model/Common.h>
@@ -23,7 +23,7 @@ namespace AZ
     class ReflectContext;
 }
 
-namespace GraphCanvas
+namespace JE::Editor::Tools::GraphCanvas
 {
     class EntitySaveDataContainer;
 }
@@ -49,7 +49,7 @@ namespace JE::Editor::Tools::GraphModel::Integration
         friend class GraphController;
 
         // I tried using a unique_ptr but SerializeContext didn't like it
-        using EntitySaveDataContainerPtr = AZStd::shared_ptr<GraphCanvas::EntitySaveDataContainer>;
+        using EntitySaveDataContainerPtr = AZStd::shared_ptr<JE::Editor::Tools::GraphCanvas::EntitySaveDataContainer>;
 
         // Using a map instead of unordered_map for simpler xml diffs
         using NodeMetadataMap = AZStd::map<JE::Editor::Tools::GraphModel::NodeId, EntitySaveDataContainerPtr>;
@@ -63,10 +63,10 @@ namespace JE::Editor::Tools::GraphModel::Integration
     };
 
     //! Structure used to serialize the selection state for nodes and constructs so that it can be restored when loading and undoing operations
-    class GraphCanvasSelectionData : public GraphCanvas::ComponentSaveData
+    class GraphCanvasSelectionData : public JE::Editor::Tools::GraphCanvas::ComponentSaveData
     {
     public:
-        AZ_RTTI(GraphCanvasSelectionData, "{FC18625B-1E97-415D-9832-B222DE054680}", GraphCanvas::ComponentSaveData);
+        AZ_RTTI(GraphCanvasSelectionData, "{FC18625B-1E97-415D-9832-B222DE054680}", JE::Editor::Tools::GraphCanvas::ComponentSaveData);
         AZ_CLASS_ALLOCATOR(GraphCanvasSelectionData, AZ::SystemAllocator);
         static void Reflect(AZ::ReflectContext* context);
 

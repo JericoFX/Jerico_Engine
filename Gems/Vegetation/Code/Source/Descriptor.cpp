@@ -7,7 +7,7 @@
  */
 
 #include <Vegetation/Descriptor.h>
-#include <SurfaceData/SurfaceTag.h>
+#include <JE/Geometry/SurfaceData/SurfaceTag.h>
 #include <AzCore/Asset/AssetManager.h>
 #include <AzCore/Serialization/SerializeContext.h>
 #include <AzCore/Serialization/EditContext.h>
@@ -499,7 +499,7 @@ namespace Vegetation
 
     void SurfaceTagDistance::AddTag(const AZStd::string& tag)
     {
-        m_tags.push_back(SurfaceData::SurfaceTag(tag));
+        m_tags.push_back(JE::Geometry::SurfaceData::SurfaceTag(tag));
     }
 
     bool SurfaceTagDistance::operator==(const SurfaceTagDistance& rhs) const
@@ -607,7 +607,7 @@ namespace Vegetation
 
     void Descriptor::AddInclusiveSurfaceFilterTag(const AZStd::string& tag)
     {
-        m_inclusiveSurfaceFilterTags.push_back(SurfaceData::SurfaceTag(tag));
+        m_inclusiveSurfaceFilterTags.push_back(JE::Geometry::SurfaceData::SurfaceTag(tag));
     }
 
     size_t Descriptor::GetNumExclusiveSurfaceFilterTags() const
@@ -635,7 +635,7 @@ namespace Vegetation
 
     void Descriptor::AddExclusiveSurfaceFilterTag(const AZStd::string& tag)
     {
-        m_exclusiveSurfaceFilterTags.push_back(SurfaceData::SurfaceTag(tag));
+        m_exclusiveSurfaceFilterTags.push_back(JE::Geometry::SurfaceData::SurfaceTag(tag));
     }
 
     AZ::u32 Descriptor::GetAdvancedGroupVisibility() const

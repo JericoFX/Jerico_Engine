@@ -7,7 +7,7 @@
  */
 #pragma once
 
-#include <GraphCanvas/Components/Nodes/NodeBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/Nodes/NodeBus.h>
 
 #include "Editor/Include/ScriptCanvas/Bus/NodeIdPair.h"
 
@@ -18,8 +18,8 @@ namespace ScriptCanvasEditor
     class EBusHandlerEventNodeDescriptorComponent
         : public NodeDescriptorComponent        
         , public EBusHandlerEventNodeDescriptorRequestBus::Handler
-        , public GraphCanvas::ForcedWrappedNodeRequestBus::Handler
-        , public GraphCanvas::SceneMemberNotificationBus::Handler
+        , public JE::Editor::Tools::GraphCanvas::ForcedWrappedNodeRequestBus::Handler
+        , public JE::Editor::Tools::GraphCanvas::SceneMemberNotificationBus::Handler
     {
     public:
         AZ_COMPONENT(EBusHandlerEventNodeDescriptorComponent, "{F08F673C-0815-4CCA-AB9D-21965E9A14F2}", NodeDescriptorComponent);
@@ -46,7 +46,7 @@ namespace ScriptCanvasEditor
         ////
 
         // SceneMemberNotifications
-        void OnSceneMemberAboutToSerialize(GraphCanvas::GraphSerialization& graphSerialization) override;
+        void OnSceneMemberAboutToSerialize(JE::Editor::Tools::GraphCanvas::GraphSerialization& graphSerialization) override;
         ////
 
         // ForcedWrappedNodeRequestBus
@@ -58,7 +58,7 @@ namespace ScriptCanvasEditor
 
     protected:
 
-        void OnAddedToGraphCanvasGraph(const GraphCanvas::GraphId& sceneId, const AZ::EntityId& scriptCanvasNodeId) override;
+        void OnAddedToGraphCanvasGraph(const JE::Editor::Tools::GraphCanvas::GraphId& sceneId, const AZ::EntityId& scriptCanvasNodeId) override;
 
     private:        
 

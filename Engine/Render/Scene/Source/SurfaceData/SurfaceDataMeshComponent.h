@@ -15,9 +15,10 @@
 #include <AzCore/Component/TransformBus.h>
 #include <AzCore/std/containers/unordered_map.h>
 #include <AzCore/std/parallel/shared_mutex.h>
+#include <AzCore/std/parallel/atomic.h>
 #include <JE/Render/Scene/Mesh/MeshComponentBus.h>
-#include <SurfaceData/SurfaceDataProviderRequestBus.h>
-#include <SurfaceData/SurfaceDataTypes.h>
+#include <JE/Geometry/SurfaceData/SurfaceDataProviderRequestBus.h>
+#include <JE/Geometry/SurfaceData/SurfaceDataTypes.h>
 
 namespace LmbrCentral
 {
@@ -36,7 +37,7 @@ namespace JE::Render::Scene
         AZ_CLASS_ALLOCATOR(SurfaceDataMeshConfig, AZ::SystemAllocator);
         AZ_RTTI(SurfaceDataMeshConfig, "{764C602E-7CA8-4BCC-AB2D-3E46623B3A20}", AZ::ComponentConfig);
         static void Reflect(AZ::ReflectContext* context);
-        SurfaceData::SurfaceTagVector m_tags;
+        JE::Geometry::SurfaceData::SurfaceTagVector m_tags;
     };
 
     class SurfaceDataMeshComponent
@@ -44,7 +45,7 @@ namespace JE::Render::Scene
         , public AZ::TickBus::Handler
         , public AZ::TransformNotificationBus::Handler
         , public JE::Render::Scene::MeshComponentNotificationBus::Handler
-        , public SurfaceData::SurfaceDataProviderRequestBus::Handler
+        , public JE::Geometry::SurfaceData::SurfaceDataProviderRequestBus::Handler
     {
     public:
         template<typename, typename> friend class LmbrCentral::EditorWrappedComponentBase;
@@ -70,6 +71,8 @@ namespace JE::Render::Scene
         void OnModelReady(const AZ::Data::Asset<JE::Render::RPI::ModelAsset>& modelAsset, const AZ::Data::Instance<JE::Render::RPI::Model>& model) override;
 
         //////////////////////////////////////////////////////////////////////////
+        void OnModelPreDestroy() override;
+
         // TransformNotificationBus
         void OnTransformChanged(const AZ::Transform& local, const AZ::Transform& world) override;
 
@@ -79,30 +82,46 @@ namespace JE::Render::Scene
 
         ////////////////////////////////////////////////////////////////////////
         // SurfaceDataProviderRequestBus
-        void GetSurfacePoints(const AZ::Vector3& inPosition, SurfaceData::SurfacePointList& surfacePointList) const override;
-        void GetSurfacePointsFromList(AZStd::span<const AZ::Vector3> inPositions, SurfaceData::SurfacePointList& surfacePointList) const override;
+        AZStd::optional<AZ::Aabb> GetSurfaceRayBounds() const override;
+        JE::Geometry::SurfaceData::SurfaceRayQueryResult QueryRay(
+            const JE::Geometry::SurfaceData::SurfaceRayRequest& request,
+            AZStd::span<JE::Geometry::SurfaceData::SurfaceRayHit> output) const override;
+        JE::Geometry::SurfaceData::SurfaceRayQueryResult QueryVolume(
+            const JE::Geometry::SurfaceData::SurfaceVolumeRequest& request,
+            AZStd::span<JE::Geometry::SurfaceData::SurfaceRayHit> output) const override;
+        void GetSurfacePoints(const AZ::Vector3& inPosition, JE::Geometry::SurfaceData::SurfacePointList& surfacePointList) const override;
+        void GetSurfacePointsFromList(AZStd::span<const AZ::Vector3> inPositions, JE::Geometry::SurfaceData::SurfacePointList& surfacePointList) const override;
 
     private:
         void UpdateMeshData();
         void OnCompositionChanged();
+        void OnModelContentChanged();
 
         AZ::Aabb GetSurfaceAabb() const;
-        SurfaceData::SurfaceTagVector GetSurfaceTags() const;
+        JE::Geometry::SurfaceData::SurfaceTagVector GetSurfaceTags() const;
 
         AZ::NonUniformScaleChangedEvent::Handler m_nonUniformScaleChangedHandler; ///< Responds to changes in non-uniform scale.
 
         SurfaceDataMeshConfig m_configuration;
 
-        SurfaceData::SurfaceDataRegistryHandle m_providerHandle = SurfaceData::InvalidSurfaceDataRegistryHandle;
+        JE::Geometry::SurfaceData::SurfaceDataRegistryHandle m_providerHandle = JE::Geometry::SurfaceData::InvalidSurfaceDataRegistryHandle;
 
         // cached data
-        AZStd::atomic_bool m_refresh{ false };
+        // Internal cache invalidation only; not a persistent source/topology revision.
+        AZStd::atomic<AZ::u64> m_requestedGeneration{1};
+        AZStd::atomic<AZ::u64> m_publishedGeneration{0};
+        AZStd::atomic<AZ::u64> m_requestedContentGeneration{1};
+        AZStd::atomic<bool> m_modelPreDestroyPending{false};
         mutable AZStd::shared_mutex m_cacheMutex;
         AZ::Data::Asset<AZ::Data::AssetData> m_meshAssetData;
+        // Guarded by m_cacheMutex; describes the validated content snapshot, never owner pose or a public sequence number.
+        AZ::u64 m_validatedContentGeneration = 0;
+        JE::Geometry::SurfaceData::SurfaceSourceRevision m_meshSourceRevision{};
         AZ::Transform m_meshWorldTM = AZ::Transform::CreateIdentity();
         AZ::Transform m_meshWorldTMInverse = AZ::Transform::CreateIdentity();
         AZ::Vector3 m_meshNonUniformScale = AZ::Vector3::CreateOne();
         AZ::Aabb m_meshBounds = AZ::Aabb::CreateNull();
-        SurfaceData::SurfaceTagWeights m_newPointWeights;
+        JE::Geometry::SurfaceData::SurfaceTagVector m_cachedTags;
+        JE::Geometry::SurfaceData::SurfaceTagWeights m_newPointWeights;
     };
 }

@@ -12,7 +12,7 @@
 #include <AzCore/EBus/EBus.h>
 #include <AzCore/Serialization/EditContext.h>
 #include <AzCore/std/string/string.h>
-#include <GraphCanvas/Widgets/NodePalette/TreeItems/NodePaletteTreeItem.h>
+#include <JE/Editor/Tools/GraphCanvas/Widgets/NodePalette/TreeItems/NodePaletteTreeItem.h>
 #include <JE/Editor/Tools/GraphModel/Model/DataType.h>
 #include <JE/Editor/Tools/GraphModel/Model/Node.h>
 
@@ -53,7 +53,7 @@ namespace JE::Editor::Tools
         virtual void Clear() = 0;
 
         //! Generate the node palette tree from registered DynamicNodeConfig
-        virtual GraphCanvas::GraphCanvasTreeItem* CreateNodePaletteTree() const = 0;
+        virtual JE::Editor::Tools::GraphCanvas::GraphCanvasTreeItem* CreateNodePaletteTree() const = 0;
 
         //! Create a dynamic node from the configuration matching the specified id.
         virtual JE::Editor::Tools::GraphModel::NodePtr CreateNodeById(JE::Editor::Tools::GraphModel::GraphPtr graph, const AZ::Uuid& configId) = 0;

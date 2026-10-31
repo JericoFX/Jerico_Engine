@@ -10,8 +10,8 @@
 
 #include <QCoreApplication>
 
-#include <GraphCanvas/Components/SceneBus.h>
-#include <GraphCanvas/Components/Nodes/NodeUIBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/SceneBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/Nodes/NodeUIBus.h>
 
 #include "GeneralNodePaletteTreeItemTypes.h"
 
@@ -41,7 +41,7 @@ namespace ScriptCanvasEditor
 
         if (serializeContext)
         {
-            serializeContext->Class<CreateClassMethodMimeEvent, GraphCanvas::GraphCanvasMimeEvent>()
+            serializeContext->Class<CreateClassMethodMimeEvent, JE::Editor::Tools::GraphCanvas::GraphCanvasMimeEvent>()
                 ->Version(1)
                 ->Field("ClassName", &CreateClassMethodMimeEvent::m_className)
                 ->Field("MethodName", &CreateClassMethodMimeEvent::m_methodName)
@@ -82,7 +82,7 @@ namespace ScriptCanvasEditor
         , m_isOverload(isOverload)
         , m_propertyStatus(propertyStatus)
     {
-        GraphCanvas::TranslationKey key;
+        JE::Editor::Tools::GraphCanvas::TranslationKey key;
 
 
         AZStd::string updatedMethodName;
@@ -97,11 +97,11 @@ namespace ScriptCanvasEditor
 
         key << ScriptCanvasEditor::TranslationHelper::AssetContext::BehaviorClassContext << className << "methods" << updatedMethodName << methodContext << "details";
 
-        GraphCanvas::TranslationRequests::Details details;
+        JE::Editor::Tools::GraphCanvas::TranslationRequests::Details details;
         details.m_name = methodName;
         details.m_subtitle = className;
 
-        GraphCanvas::TranslationRequestBus::BroadcastResult(details, &GraphCanvas::TranslationRequests::GetDetails, key, details);
+        JE::Editor::Tools::GraphCanvas::TranslationRequestBus::BroadcastResult(details, &JE::Editor::Tools::GraphCanvas::TranslationRequests::GetDetails, key, details);
 
         SetName(details.m_name.c_str());
         SetToolTip(details.m_tooltip.c_str());
@@ -109,7 +109,7 @@ namespace ScriptCanvasEditor
         SetTitlePalette("MethodNodeTitlePalette");
     }
 
-    GraphCanvas::GraphCanvasMimeEvent* ClassMethodEventPaletteTreeItem::CreateMimeEvent() const
+    JE::Editor::Tools::GraphCanvas::GraphCanvasMimeEvent* ClassMethodEventPaletteTreeItem::CreateMimeEvent() const
     {
         return aznew CreateClassMethodMimeEvent(m_className, m_methodName, m_isOverload, m_propertyStatus);
     }
@@ -126,7 +126,7 @@ namespace ScriptCanvasEditor
 
     AZ::IO::Path ClassMethodEventPaletteTreeItem::GetTranslationDataPath() const
     {
-        AZStd::string fileName = GraphCanvas::TranslationKey::Sanitize(GetClassMethodName());
+        AZStd::string fileName = JE::Editor::Tools::GraphCanvas::TranslationKey::Sanitize(GetClassMethodName());
         return ScriptCanvasEditor::TranslationHelper::GetTranslationFilePath(fileName);
     }
 
@@ -162,7 +162,7 @@ namespace ScriptCanvasEditor
 
         if (serializeContext)
         {
-            serializeContext->Class<CreateGlobalMethodMimeEvent, GraphCanvas::GraphCanvasMimeEvent>()
+            serializeContext->Class<CreateGlobalMethodMimeEvent, JE::Editor::Tools::GraphCanvas::GraphCanvasMimeEvent>()
                 ->Version(0)
                 ->Field("MethodName", &CreateGlobalMethodMimeEvent::m_methodName)
                 ->Field("IsProperty", &CreateGlobalMethodMimeEvent::m_isProperty)
@@ -197,7 +197,7 @@ namespace ScriptCanvasEditor
         }
     }
 
-    GraphCanvas::GraphCanvasMimeEvent* GlobalMethodEventPaletteTreeItem::CreateMimeEvent() const
+    JE::Editor::Tools::GraphCanvas::GraphCanvasMimeEvent* GlobalMethodEventPaletteTreeItem::CreateMimeEvent() const
     {
         return aznew CreateGlobalMethodMimeEvent(m_methodName, m_isProperty);
     }
@@ -216,11 +216,11 @@ namespace ScriptCanvasEditor
             AZStd::string propertyName = m_methodName;
             AZ::StringFunc::Replace(propertyName, "::Getter", "");
             AZ::StringFunc::Replace(propertyName, "::Setter", "");
-            fileName = GraphCanvas::TranslationKey::Sanitize(propertyName);
+            fileName = JE::Editor::Tools::GraphCanvas::TranslationKey::Sanitize(propertyName);
         }
         else
         {
-            fileName = GraphCanvas::TranslationKey::Sanitize(m_methodName);
+            fileName = JE::Editor::Tools::GraphCanvas::TranslationKey::Sanitize(m_methodName);
         }
         return ScriptCanvasEditor::TranslationHelper::GetTranslationFilePath(fileName);
     }
@@ -251,7 +251,7 @@ namespace ScriptCanvasEditor
 
         if (serializeContext)
         {
-            serializeContext->Class<CreateCustomNodeMimeEvent, GraphCanvas::GraphCanvasMimeEvent>()
+            serializeContext->Class<CreateCustomNodeMimeEvent, JE::Editor::Tools::GraphCanvas::GraphCanvasMimeEvent>()
                 ->Version(2)
                 ->Field("TypeId", &CreateCustomNodeMimeEvent::m_typeId)
                 ->Field("StyleOverride", &CreateCustomNodeMimeEvent::m_styleOverride)
@@ -293,7 +293,7 @@ namespace ScriptCanvasEditor
     {
     }
 
-    GraphCanvas::GraphCanvasMimeEvent* CustomNodePaletteTreeItem::CreateMimeEvent() const
+    JE::Editor::Tools::GraphCanvas::GraphCanvasMimeEvent* CustomNodePaletteTreeItem::CreateMimeEvent() const
     {
         return aznew CreateCustomNodeMimeEvent(m_typeId, GetStyleOverride(), GetTitlePalette());
     }

@@ -8,11 +8,13 @@
 #pragma once
 
 #include <AzCore/Math/Aabb.h>
+#include <AzCore/Math/Uuid.h>
 #include <AzCore/Math/Vector2.h>
 #include <AzCore/Math/Vector3.h>
 #include <AzCore/Component/ComponentBus.h>
 #include <AzCore/std/containers/unordered_set.h>
 #include <AzCore/std/functional.h>
+#include <AzCore/std/optional.h>
 
 //! Common structures for Render geometry queries
 namespace AzFramework
@@ -75,6 +77,8 @@ namespace AzFramework
             AZ::Vector2 m_uv; //!< UV texture coordinates of the intersected geometry
             AZ::EntityComponentIdPair m_entityAndComponent; //!< Entity and component hit, for non-entity systems this can be invalid
             float m_distance = FLT_MAX; //!< Distance from ray start to hit collision, FLT_MAX if there is no hit
+            AZStd::optional<AZ::u32> m_materialSlotId; //!< Stable visual material slot of the hit, when provided by the geometry owner.
+            AZStd::optional<AZ::Uuid> m_surfaceId; //!< Complete authoring surface identity; independent of visual material slots.
 
             explicit operator bool() const
             {

@@ -7,8 +7,8 @@
  */
 #pragma once
 
-#include <GraphCanvas/Types/Types.h>
-#include <GraphCanvas/Editor/EditorTypes.h>
+#include <JE/Editor/Tools/GraphCanvas/Types/Types.h>
+#include <JE/Editor/Tools/GraphCanvas/Editor/EditorTypes.h>
 
 #include <ScriptCanvasDeveloperEditor/EditorAutomation/EditorAutomationActions/ScriptCanvasActions/ElementInteractions.h>
 

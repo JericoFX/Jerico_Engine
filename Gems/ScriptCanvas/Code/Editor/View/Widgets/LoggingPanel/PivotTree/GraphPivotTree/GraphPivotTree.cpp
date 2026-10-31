@@ -496,7 +496,7 @@ namespace ScriptCanvasEditor
         }
     }
 
-    GraphCanvas::GraphCanvasTreeItem* GraphPivotTreeRoot::CreateCategoryNode([[maybe_unused]] AZStd::string_view categoryPath, AZStd::string_view categoryName, GraphCanvasTreeItem* parent) const
+    JE::Editor::Tools::GraphCanvas::GraphCanvasTreeItem* GraphPivotTreeRoot::CreateCategoryNode([[maybe_unused]] AZStd::string_view categoryPath, AZStd::string_view categoryName, GraphCanvasTreeItem* parent) const
     {
         return parent->CreateChildNode<GraphPivotTreeFolder>(categoryName);
     }
@@ -534,7 +534,7 @@ namespace ScriptCanvasEditor
 
                     if (mapIter != m_graphTreeItemMapping.end() && mapIter->second)
                     {
-                        GraphCanvas::GraphCanvasTreeItem* currentItem = mapIter->second;
+                        JE::Editor::Tools::GraphCanvas::GraphCanvasTreeItem* currentItem = mapIter->second;
                         currentItem->ClearChildren();
 
                         m_graphTreeItemMapping.erase(mapIter);

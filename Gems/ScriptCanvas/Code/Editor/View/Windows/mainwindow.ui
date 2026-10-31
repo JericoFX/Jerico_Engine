@@ -855,7 +855,7 @@
  </widget>
  <resources>
   <include location="ScriptCanvasEditorResources.qrc"/>
-  <include location="../../../../../GraphCanvas/Code/StaticLib/GraphCanvas/Widgets/Resources/GraphCanvasEditorResources.qrc"/>
+  <include location="../../../../../../Editor/Tools/Source/GraphCanvas/Widgets/Resources/GraphCanvasEditorResources.qrc"/>
  </resources>
  <connections/>
 </ui>

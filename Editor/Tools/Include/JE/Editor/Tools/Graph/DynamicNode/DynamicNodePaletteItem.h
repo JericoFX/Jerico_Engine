@@ -9,18 +9,18 @@
 #pragma once
 
 #include <JE/Editor/Tools/Graph/DynamicNode/DynamicNode.h>
-#include <GraphCanvas/Widgets/GraphCanvasMimeEvent.h>
-#include <GraphCanvas/Widgets/NodePalette/TreeItems/DraggableNodePaletteTreeItem.h>
+#include <JE/Editor/Tools/GraphCanvas/Widgets/GraphCanvasMimeEvent.h>
+#include <JE/Editor/Tools/GraphCanvas/Widgets/NodePalette/TreeItems/DraggableNodePaletteTreeItem.h>
 #include <JE/Editor/Tools/GraphModel/Model/Common.h>
 
 namespace JE::Editor::Tools
 {
     //! The logic for this event is executed whenever a node is dragged from the node palette to the graph view. Will attempt to create a
     //! DynamicNode wherever the mouse drop event occurred.
-    class CreateDynamicNodeMimeEvent : public GraphCanvas::GraphCanvasMimeEvent
+    class CreateDynamicNodeMimeEvent : public JE::Editor::Tools::GraphCanvas::GraphCanvasMimeEvent
     {
     public:
-        AZ_RTTI(CreateDynamicNodeMimeEvent, "{9FF18F29-50B9-46A2-B661-9FD81BF9BD2F}", GraphCanvas::GraphCanvasMimeEvent);
+        AZ_RTTI(CreateDynamicNodeMimeEvent, "{9FF18F29-50B9-46A2-B661-9FD81BF9BD2F}", JE::Editor::Tools::GraphCanvas::GraphCanvasMimeEvent);
         AZ_CLASS_ALLOCATOR(CreateDynamicNodeMimeEvent, AZ::SystemAllocator);
         static void Reflect(AZ::ReflectContext* context);
 
@@ -34,7 +34,7 @@ namespace JE::Editor::Tools
     };
 
     //! Item displayed in the node palette for creating a DynamicNode using the configuration settings passed into the constructor
-    class DynamicNodePaletteItem : public GraphCanvas::DraggableNodePaletteTreeItem
+    class DynamicNodePaletteItem : public JE::Editor::Tools::GraphCanvas::DraggableNodePaletteTreeItem
     {
     public:
         AZ_CLASS_ALLOCATOR(DynamicNodePaletteItem, AZ::SystemAllocator);
@@ -45,7 +45,7 @@ namespace JE::Editor::Tools
         DynamicNodePaletteItem(const AZ::Crc32& toolId, const DynamicNodeConfig& config);
         ~DynamicNodePaletteItem() = default;
 
-        GraphCanvas::GraphCanvasMimeEvent* CreateMimeEvent() const override;
+        JE::Editor::Tools::GraphCanvas::GraphCanvasMimeEvent* CreateMimeEvent() const override;
 
     protected:
         AZ::Crc32 m_toolId = {};

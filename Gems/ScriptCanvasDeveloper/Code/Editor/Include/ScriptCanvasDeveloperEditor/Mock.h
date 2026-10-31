@@ -8,8 +8,8 @@
 
 #pragma once
 
-#include <GraphCanvas/Components/Nodes/NodeBus.h>
-#include <GraphCanvas/Components/SceneBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/Nodes/NodeBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/SceneBus.h>
 
 #include <ScriptCanvas/Core/Node.h>
 #include <ScriptCanvas/Bus/EditorScriptCanvasBus.h>
@@ -66,8 +66,8 @@ namespace ScriptCanvas::Developer
         class Mock
             : public Node
             , protected ScriptCanvasEditor::EditorNodeNotificationBus::Handler
-            , protected GraphCanvas::NodeNotificationBus::Handler
-            , protected GraphCanvas::SceneMemberNotificationBus::Handler
+            , protected JE::Editor::Tools::GraphCanvas::NodeNotificationBus::Handler
+            , protected JE::Editor::Tools::GraphCanvas::SceneMemberNotificationBus::Handler
             , protected MockDescriptorRequestBus::Handler
         {
         public:
@@ -94,7 +94,7 @@ namespace ScriptCanvas::Developer
             ////
 
             // SceneMemberNotifications
-            void OnSceneMemberDeserialized(const GraphCanvas::GraphId& grpahId, const GraphCanvas::GraphSerialization& serialization) override;
+            void OnSceneMemberDeserialized(const JE::Editor::Tools::GraphCanvas::GraphId& grpahId, const JE::Editor::Tools::GraphCanvas::GraphSerialization& serialization) override;
             ////
 
             // MockDescriptorRequestBus
@@ -111,7 +111,7 @@ namespace ScriptCanvas::Developer
             AZStd::vector<AZStd::string> GetColorPaletteList() const;
 
             virtual void OnClear();
-            virtual void OnNodeDisplayed(const GraphCanvas::NodeId& graphCanvasEntityId);
+            virtual void OnNodeDisplayed(const JE::Editor::Tools::GraphCanvas::NodeId& graphCanvasEntityId);
 
         private:
             //// ScriptCanvasEditor::EditorGraphNotificationBus

@@ -23,7 +23,7 @@
 #include <JE/Render/RPI/Public/RenderPipeline.h>
 #include <JE/Render/Features/RenderCommon.h>
 
-#include <SurfaceData/SurfaceDataSystemRequestBus.h>
+#include <JE/Geometry/SurfaceData/SurfaceDataSystemRequestBus.h>
 
 #include <JE/Render/RPI/Reflect/Asset/AssetUtils.h>
 #include <JE/Render/RPI/Reflect/Material/MaterialAssetCreator.h>

@@ -41,6 +41,10 @@
 #include <SceneAPI/SceneCore/Events/ExportEventContext.h>
 #include <SceneAPI/SceneCore/Utilities/SceneGraphSelector.h>
 #include <SceneAPI/SceneCore/Utilities/Reporting.h>
+#include <SceneAPI/SceneCore/DataTypes/GraphData/ICustomPropertyData.h>
+#include <JE/Assets/RenderBuilders/SceneProcessing/Rules/SurfaceIdentityRule.h>
+#include <AzCore/std/containers/unordered_set.h>
+#include <AzCore/std/algorithm.h>
 #include <SceneAPI/SceneData/Groups/MeshGroup.h>
 #include <SceneAPI/SceneData/Rules/LodRule.h>
 #include <SceneAPI/SceneData/Rules/StaticMeshAdvancedRule.h>
@@ -153,6 +157,8 @@ namespace JE::Assets::RenderBuilders
     {
         for (ModelAssetBuilderComponent::ProductMeshContent& mesh : lodMeshes)
         {
+            // Simplification/reordering has no authored face remap. Never inherit the previous LOD's references.
+            mesh.m_surfaceIdentities = {};
             AZStd::vector<uint32_t> newIndices;
             newIndices.resize(mesh.m_indices.size());
 
@@ -194,6 +200,70 @@ namespace JE::Assets::RenderBuilders
             meshopt_optimizeVertexCache(mesh.m_indices.data(), mesh.m_indices.data(), newIndicesSize, mesh.m_vertexCount);
             meshopt_optimizeOverdraw(mesh.m_indices.data(), mesh.m_indices.data(), newIndicesSize, mesh.m_positions.data(), mesh.m_vertexCount, sizeof(float) * JE::Render::RPI::PositionFloatsPerVert, 1.0f);
         }
+    }
+
+    JE::Render::RPI::ModelSurfaceIdentityTable ModelAssetBuilderComponent::ResolveSurfaceIdentities(
+        const AZ::SceneAPI::Containers::SceneGraph& graph,
+        AZ::SceneAPI::Containers::SceneGraph::NodeIndex node,
+        const AZ::SceneAPI::DataTypes::IMeshGroup& group)
+    {
+        using Rule = SceneProcessing::Rules::SurfaceIdentityRule;
+        using Mesh = AZ::SceneAPI::DataTypes::IMeshData;
+        using Properties = AZ::SceneAPI::DataTypes::ICustomPropertyData;
+        JE::Render::RPI::ModelSurfaceIdentityTable result;
+        AZStd::shared_ptr<Rule> rule;
+        const auto& rules = group.GetRuleContainerConst();
+        for (size_t i = 0; i != rules.GetRuleCount(); ++i)
+        {
+            const auto candidate = AZStd::rtti_pointer_cast<Rule>(rules.GetRule(i));
+            if (candidate)
+            {
+                if (rule) { return {}; } // Multiple rules cannot silently choose ownership.
+                rule = candidate;
+            }
+        }
+        if (!rule || !node.IsValid() || node.AsNumber() >= graph.GetNodeCount()) { return result; }
+        const auto original = AZ::SceneAPI::Utilities::SceneGraphSelector::RemapToOriginalUnoptimizedMesh(graph, node);
+        if (!original.IsValid() || original.AsNumber() >= graph.GetNodeCount()) { return result; }
+        const auto originalMesh = AZStd::rtti_pointer_cast<const Mesh>(graph.GetNodeContent(original));
+        const auto mesh = AZStd::rtti_pointer_cast<const Mesh>(graph.GetNodeContent(node));
+        if (!originalMesh || !mesh) { return result; }
+        const auto* authored = rule->Resolve(graph.GetNodeName(original).GetPath(), *originalMesh);
+        if (!authored) { return result; }
+        const AZStd::vector<AZ::u32>* mapping = nullptr;
+        if (node != original)
+        {
+            // Read only the generation-owned correspondence; never reconstruct it from positions or equal triangles.
+            auto child = graph.GetNodeChild(node);
+            while (child.IsValid())
+            {
+                const auto properties = AZStd::rtti_pointer_cast<const Properties>(graph.GetNodeContent(child));
+                if (properties)
+                {
+                    const auto& values = properties->GetPropertyMap(); const auto found = values.find(Rule::SourcePolygonMapKey);
+                    if (found != values.end())
+                    {
+                        if (mapping) { return {}; }
+                        mapping = AZStd::any_cast<AZStd::vector<AZ::u32>>(&found->second);
+                        if (!mapping) { return {}; }
+                    }
+                }
+                child = graph.GetNodeSibling(child);
+            }
+            if (!mapping || mapping->size() != mesh->GetFaceCount()) { return {}; }
+        }
+        else if (mesh->GetFaceCount() != authored->m_faces.size()) { return {}; }
+        AZStd::unordered_set<AZ::u32> seen;
+        result.m_schema = JE::Render::RPI::ModelSurfaceIdentityTable::Schema;
+        result.m_entries.reserve(mesh->GetFaceCount());
+        for (AZ::u32 face = 0; face != mesh->GetFaceCount(); ++face)
+        {
+            const auto index = mapping ? (*mapping)[face] : face;
+            if (index >= authored->m_faces.size() || !seen.insert(index).second) { return {}; }
+            const auto& reference = authored->m_faces[index];
+            result.m_entries.push_back({reference.m_surfaceId, reference.m_faceId, reference.m_regionId});
+        }
+        return result;
     }
 
     AZ::SceneAPI::Events::ProcessingResult ModelAssetBuilderComponent::BuildModel(ModelAssetBuilderContext& context)
@@ -371,6 +441,7 @@ namespace JE::Assets::RenderBuilders
 
                 // Add the MeshData to the source mesh
                 AddToMeshContent(viewIt.second, sourceMesh);
+                sourceMesh.m_surfaceIdentities = ResolveSurfaceIdentities(sceneGraph, node, context.m_group);
 
                 // Iterate over the immediate children of the mesh node, looking for additional data like uvs, tangents, etc.
                 auto sibling = sceneGraph.GetNodeChild(node);
@@ -786,6 +857,7 @@ namespace JE::Assets::RenderBuilders
         {
             MaterialUid m_materialUid;
             FaceList m_faceList;
+            JE::Render::RPI::ModelSurfaceIdentityTable m_surfaceIdentities;
         };
         using FacesByMaterialUid = AZStd::vector<UidFaceList>;
         using ProductList = AZStd::vector<FacesByMaterialUid>;
@@ -832,6 +904,7 @@ namespace JE::Assets::RenderBuilders
                 {
                     UidFaceList uidFaceList;
                     uidFaceList.m_materialUid = matUid;
+                    uidFaceList.m_surfaceIdentities.m_schema = sourceMeshContent.m_surfaceIdentities.m_schema;
                     productsByMaterialUid.push_back(uidFaceList);
                     currentMaterialId = matUid;
                 }
@@ -839,6 +912,11 @@ namespace JE::Assets::RenderBuilders
                 // Add the faceinfo to the current product mesh
                 UidFaceList& currentFaceList = productsByMaterialUid.back();
                 currentFaceList.m_faceList.push_back(faceInfo);
+                if (sourceMeshContent.m_surfaceIdentities.m_schema == JE::Render::RPI::ModelSurfaceIdentityTable::Schema)
+                {
+                    if (sourceMeshContent.m_surfaceIdentities.m_entries.size() != faceCount) { return AZ::Failure(); }
+                    currentFaceList.m_surfaceIdentities.m_entries.push_back(sourceMeshContent.m_surfaceIdentities.m_entries[j]);
+                }
             }
 
             productMeshCount += productsByMaterialUid.size();
@@ -896,6 +974,7 @@ namespace JE::Assets::RenderBuilders
                 productMesh.m_name = sourceMesh.m_name;
 
                 productMesh.m_materialUid = it.m_materialUid;
+                productMesh.m_surfaceIdentities = it.m_surfaceIdentities;
 
                 const FaceList& faceInfoList = it.m_faceList;
                 uint32_t indexCount = static_cast<uint32_t>(faceInfoList.size()) * 3;
@@ -1444,9 +1523,10 @@ namespace JE::Assets::RenderBuilders
                     // This could result in multiple meshes that do not match the one before them, but still match each other, not
                     // getting merged. But it's not worth over complicating things by trying to sort and split the meshList when the
                     // common case is that everything assigned to the same material uid likely matches already anyways
-                    if (!VertexStreamLayoutMatches(*meshIter, *(meshIter + 1)))
+                    const bool identityAvailabilityDiffers = meshIter->m_surfaceIdentities.m_schema != (meshIter + 1)->m_surfaceIdentities.m_schema;
+                    if (identityAvailabilityDiffers || !VertexStreamLayoutMatches(*meshIter, *(meshIter + 1)))
                     {
-                        if (mismatchedVertexLayoutsAreErrors)
+                        if (!identityAvailabilityDiffers && mismatchedVertexLayoutsAreErrors)
                         {
                             return AZ::Failure();
                         }
@@ -1661,6 +1741,7 @@ namespace JE::Assets::RenderBuilders
     ModelAssetBuilderComponent::ProductMeshView ModelAssetBuilderComponent::CreateViewToEntireMesh(const ProductMeshContent& mesh)
     {
         ProductMeshView meshView;
+        meshView.m_surfaceIdentities = mesh.m_surfaceIdentities;
         meshView.m_name = mesh.m_name.GetStringView();
 
         auto meshIndexCount = static_cast<uint32_t>(mesh.m_indices.size());
@@ -1795,6 +1876,7 @@ namespace JE::Assets::RenderBuilders
 
             ProductMeshView meshView;
             meshView.m_name = mesh.m_name;
+            meshView.m_surfaceIdentities = mesh.m_surfaceIdentities;
             meshView.m_indexView = AZ::RHI::BufferViewDescriptor::CreateTyped(static_cast<uint32_t>(lodBufferInfo.m_indexCount), meshIndexCount, JE::Render::RPI::IndicesFormat);
             lodBufferInfo.m_indexCount += meshIndexCount;
 
@@ -2037,9 +2119,21 @@ namespace JE::Assets::RenderBuilders
 
         uint32_t tailIndex = 0;
 
+        const bool allIdentified = AZStd::all_of(productMeshList.begin(), productMeshList.end(), [](const ProductMeshContent& mesh)
+        {
+            return mesh.m_surfaceIdentities.m_schema == JE::Render::RPI::ModelSurfaceIdentityTable::Schema &&
+                mesh.m_indices.size() % 3 == 0 && mesh.m_surfaceIdentities.Validate(mesh.m_indices.size() / 3);
+        });
+        if (allIdentified && !productMeshList.empty()) { mergedMesh.m_surfaceIdentities.m_schema = JE::Render::RPI::ModelSurfaceIdentityTable::Schema; }
+
         // Append each common mesh onto this LOD-wide mesh
         for (const ProductMeshContent& mesh : productMeshList)
         {
+            if (allIdentified)
+            {
+                mergedMesh.m_surfaceIdentities.m_entries.insert(mergedMesh.m_surfaceIdentities.m_entries.end(),
+                    mesh.m_surfaceIdentities.m_entries.begin(), mesh.m_surfaceIdentities.m_entries.end());
+            }
             if(mergedMesh.m_name.IsEmpty())
             {
                 mergedMesh.m_name = mesh.m_name;
@@ -2399,6 +2493,7 @@ namespace JE::Assets::RenderBuilders
         const AZ::Aabb& subMeshAabb)
     {
         lodAssetCreator.BeginMesh();
+        lodAssetCreator.SetMeshSurfaceIdentityTable(meshView.m_surfaceIdentities);
 
         if (meshView.m_materialUid != s_invalidMaterialUid)
         {

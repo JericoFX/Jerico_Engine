@@ -30,7 +30,7 @@ ly_add_target(
         PUBLIC
             Gem::ScriptCanvas
             Gem::ScriptCanvas.Editor
-            Gem::GraphCanvasWidgets
+            JE::EditorTools
             Gem::ScriptEvents.Editor
             Gem::ScriptCanvas.Extensions
         PRIVATE
@@ -45,7 +45,6 @@ ly_add_target(
         *.ScriptCanvasFunction.xml,ScriptCanvasFunction_Source.jinja,$path/$fileprefix.generated.cpp
     RUNTIME_DEPENDENCIES
         Gem::ScriptCanvas.Editor
-        Gem::GraphCanvasWidgets
         Gem::ScriptEvents
 )
 
@@ -102,6 +101,7 @@ if(PAL_TRAIT_BUILD_TESTS_SUPPORTED)
                 .
                 Source
                 Tests
+                ${LY_ROOT_FOLDER}/Editor/Tools/Source
         COMPILE_DEFINITIONS
             PRIVATE
                 SCRIPTCANVAS_EDITOR
@@ -116,7 +116,6 @@ if(PAL_TRAIT_BUILD_TESTS_SUPPORTED)
                 Gem::${gem_name}.Editor.Static
                 Gem::ScriptCanvas.Editor
         RUNTIME_DEPENDENCIES
-            Gem::GraphCanvas.Editor
             Gem::ScriptCanvas.Editor
     )
     ly_add_googletest(

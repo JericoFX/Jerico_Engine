@@ -29,7 +29,7 @@
 #include <EMotionFX/Source/AnimGraphStateMachine.h>
 #include <EMotionFX/Tools/EMotionStudio/Plugins/StandardPlugins/Source/AnimGraph/AnimGraphModel.h>
 
-#include <GraphCanvas/Widgets/NodePalette/NodePaletteTreeView.h>
+#include <JE/Editor/Tools/GraphCanvas/Widgets/NodePalette/NodePaletteTreeView.h>
 
 namespace EMotionFX
 {
@@ -86,7 +86,7 @@ namespace EMotionFX
             graphWidget->OnContextMenuEvent(graphWidget, clickPoint, graphWidget->LocalToGlobal(clickPoint), animGraphPlugin, selectedAnimGraphNodes, true, false, animGraphPlugin->GetActionFilter());
 
             // Grab the node index from the tree view in the graphWidget context menu
-            auto* tree = UIFixture::GetFirstChildOfType<GraphCanvas::NodePaletteTreeView>(graphWidget);
+            auto* tree = UIFixture::GetFirstChildOfType<JE::Editor::Tools::GraphCanvas::NodePaletteTreeView>(graphWidget);
             ASSERT_TRUE(tree);
 
             const QModelIndex idx = UIFixture::GetIndexFromName(tree, nodeName);

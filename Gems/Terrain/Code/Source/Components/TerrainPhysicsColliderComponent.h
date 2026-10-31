@@ -15,7 +15,7 @@
 #include <AzFramework/Physics/HeightfieldProviderBus.h>
 #include <AzFramework/Physics/Material/PhysicsMaterialAsset.h>
 #include <AzFramework/Terrain/TerrainDataRequestBus.h>
-#include <SurfaceData/SurfaceTag.h>
+#include <JE/Geometry/SurfaceData/SurfaceTag.h>
 #include <TerrainSystem/TerrainSystemBus.h>
 
 #include <LmbrCentral/Shape/ShapeComponentBus.h>
@@ -42,7 +42,7 @@ namespace Terrain
         AZStd::vector<AZStd::pair<AZ::u32, AZStd::string>> BuildSelectableTagList() const;
         void SetTagListProvider(const EditorSurfaceTagListProvider* tagListProvider);
 
-        SurfaceData::SurfaceTag m_surfaceTag;
+        JE::Geometry::SurfaceData::SurfaceTag m_surfaceTag;
         AZ::Data::Asset<Physics::MaterialAsset> m_materialAsset;
 
     private:
@@ -120,7 +120,7 @@ namespace Terrain
         void Deactivate() override;
 
         uint8_t GetMaterialIndex(const AZ::Data::Asset<Physics::MaterialAsset>& materialAsset, const AZStd::vector<AZ::Data::Asset<Physics::MaterialAsset>>& materialList) const;
-        AZ::Data::Asset<Physics::MaterialAsset> FindMaterialAssetForSurfaceTag(const SurfaceData::SurfaceTag tag) const;
+        AZ::Data::Asset<Physics::MaterialAsset> FindMaterialAssetForSurfaceTag(const JE::Geometry::SurfaceData::SurfaceTag tag) const;
 
         void GenerateHeightsInBounds(AZStd::vector<float>& heights) const;
 
@@ -145,7 +145,7 @@ namespace Terrain
         TerrainPhysicsColliderConfig m_configuration;
         AZStd::atomic_bool m_terrainDataActive = false;
         AzFramework::Terrain::TerrainQueryRegion m_heightfieldRegion;
-        AZStd::unordered_map<SurfaceData::SurfaceTag, uint8_t> m_surfaceTagToMaterialIndexLookup;
+        AZStd::unordered_map<JE::Geometry::SurfaceData::SurfaceTag, uint8_t> m_surfaceTagToMaterialIndexLookup;
 
         // Protect state reads from happening in parallel with state writes.
         mutable AZStd::shared_mutex m_stateMutex;

@@ -12,8 +12,8 @@
 #include <QHeaderView>
 #include <QWidgetAction>
 
-#include <GraphCanvas/Components/StyleBus.h>
-#include <GraphCanvas/Widgets/StyledItemDelegates/IconDecoratedNameDelegate.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/StyleBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Widgets/StyledItemDelegates/IconDecoratedNameDelegate.h>
 
 #include <Editor/View/Dialogs/ContainerWizard/ContainerTypeLineEdit.h>
 #include <Editor/View/Dialogs/ContainerWizard/ui_ContainerTypeLineEdit.h>
@@ -42,7 +42,7 @@ namespace ScriptCanvasEditor
         m_tableView.setSelectionBehavior(QAbstractItemView::SelectRows);
         m_tableView.setSelectionMode(QAbstractItemView::SelectionMode::SingleSelection);
 
-        m_tableView.setItemDelegateForColumn(DataTypePaletteModel::Type, aznew GraphCanvas::IconDecoratedNameDelegate(this));
+        m_tableView.setItemDelegateForColumn(DataTypePaletteModel::Type, aznew JE::Editor::Tools::GraphCanvas::IconDecoratedNameDelegate(this));
 
         m_tableView.setModel(GetProxyModel());
         m_tableView.verticalHeader()->hide();
@@ -177,7 +177,7 @@ namespace ScriptCanvasEditor
         m_tableView.selectionModel()->clearSelection();
     }
 
-    GraphCanvas::StateController<bool>* ContainerTypeMenu::GetStateController()
+    JE::Editor::Tools::GraphCanvas::StateController<bool>* ContainerTypeMenu::GetStateController()
     {
         return &m_disableHiding;
     }
@@ -362,7 +362,7 @@ namespace ScriptCanvasEditor
         m_ui->variableType->setSelection(0, 0);
 
         const QPixmap* pixmapIcon = nullptr;
-        GraphCanvas::StyleManagerRequestBus::EventResult(pixmapIcon, ScriptCanvasEditor::AssetEditorId, &GraphCanvas::StyleManagerRequests::GetDataTypeIcon, m_lastId);
+        JE::Editor::Tools::GraphCanvas::StyleManagerRequestBus::EventResult(pixmapIcon, ScriptCanvasEditor::AssetEditorId, &JE::Editor::Tools::GraphCanvas::StyleManagerRequests::GetDataTypeIcon, m_lastId);
 
         m_ui->iconLabel->setPixmap((*pixmapIcon));
 

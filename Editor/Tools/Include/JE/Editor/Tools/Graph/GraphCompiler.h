@@ -79,6 +79,7 @@ namespace JE::Editor::Tools
         // Requests and reports job status of generated files from the AP
         // Return true if generation and processing is complete. Otherwise, return falss
         bool ReportGeneratedFileStatus();
+        bool ReportGeneratedFileStatus(const AZStd::vector<AZStd::string>& sourcePaths);
 
         const AZ::Crc32 m_toolId = {};
 

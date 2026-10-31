@@ -10,7 +10,7 @@
 
 #include <AzCore/Component/ComponentBus.h>
 
-#include <SurfaceData/SurfaceDataTypes.h>
+#include <JE/Geometry/SurfaceData/SurfaceDataTypes.h>
 
 namespace Terrain
 {
@@ -27,7 +27,7 @@ namespace Terrain
 
         virtual ~TerrainAreaSurfaceRequests() = default;
 
-        virtual void GetSurfaceWeights(const AZ::Vector3& inPosition, SurfaceData::SurfaceTagWeightMap& surfaceWeights) const = 0;
+        virtual void GetSurfaceWeights(const AZ::Vector3& inPosition, JE::Geometry::SurfaceData::SurfaceTagWeightMap& surfaceWeights) const = 0;
     };
 
     using TerrainAreaSurfaceRequestBus = AZ::EBus<TerrainAreaSurfaceRequests>;

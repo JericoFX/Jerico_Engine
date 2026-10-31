@@ -15,8 +15,8 @@
 #include <Vegetation/Ebuses/AreaInfoBus.h>
 #include <Vegetation/Ebuses/DebugNotificationBus.h>
 #include <Vegetation/Ebuses/DebugSystemDataBus.h>
-#include <SurfaceData/SurfaceDataSystemRequestBus.h>
-#include <SurfaceData/Utility/SurfaceDataUtility.h>
+#include <JE/Geometry/SurfaceData/SurfaceDataSystemRequestBus.h>
+#include <JE/Geometry/SurfaceData/Utility/SurfaceDataUtility.h>
 
 #include <AzCore/Debug/Profiler.h>
 #include <AzCore/RTTI/BehaviorContext.h>
@@ -358,7 +358,7 @@ namespace Vegetation
         SystemConfigurationRequestBus::Handler::BusConnect();
         CrySystemEventBus::Handler::BusConnect();
         AzFramework::Terrain::TerrainDataNotificationBus::Handler::BusConnect();
-        SurfaceData::SurfaceDataSystemNotificationBus::Handler::BusConnect();
+        JE::Geometry::SurfaceData::SurfaceDataSystemNotificationBus::Handler::BusConnect();
 
         m_vegTasks.FetchDebugData();
     }
@@ -379,7 +379,7 @@ namespace Vegetation
         SystemConfigurationRequestBus::Handler::BusDisconnect();
         CrySystemEventBus::Handler::BusDisconnect();
         AzFramework::Terrain::TerrainDataNotificationBus::Handler::BusDisconnect();
-        SurfaceData::SurfaceDataSystemNotificationBus::Handler::BusDisconnect();
+        JE::Geometry::SurfaceData::SurfaceDataSystemNotificationBus::Handler::BusDisconnect();
 
         // Clear sector data and any lingering vegetation thread state
         m_vegTasks.ClearSectors();
@@ -597,7 +597,7 @@ namespace Vegetation
         [[maybe_unused]] const AZ::EntityId& entityId,
         const AZ::Aabb& oldBounds,
         const AZ::Aabb& newBounds,
-        [[maybe_unused]] const SurfaceData::SurfaceTagSet& changedSurfaceTags)
+        [[maybe_unused]] const JE::Geometry::SurfaceData::SurfaceTagSet& changedSurfaceTags)
     {
         m_vegTasks.QueueVegetationTask([oldBounds, newBounds](UpdateContext* context, PersistentThreadData* threadData, VegetationThreadTasks* vegTasks)
         {
@@ -1103,7 +1103,7 @@ namespace Vegetation
         // 0 = lower left corner, 0.5 = center
         const float texelOffset = (sectorPointSnapMode == SnapMode::Center) ? 0.5f : 0.0f;
 
-        SurfaceData::SurfacePointList availablePointsPerPosition;
+        JE::Geometry::SurfaceData::SurfacePointList availablePointsPerPosition;
         AZ::Vector2 stepSize(vegStep, vegStep);
         AZ::Vector3 regionOffset(texelOffset * vegStep, texelOffset * vegStep, 0.0f);
         AZ::Aabb regionBounds = sectorInfo.m_bounds;
@@ -1117,16 +1117,16 @@ namespace Vegetation
         regionBounds.SetMax(regionBounds.GetMin() + AZ::Vector3(vegStep * (sectorDensity - 0.5f),
             vegStep * (sectorDensity - 0.5f), 0.0f));
 
-        AZ::Interface<SurfaceData::SurfaceDataSystem>::Get()->GetSurfacePointsFromRegion(
+        AZ::Interface<JE::Geometry::SurfaceData::SurfaceDataSystem>::Get()->GetSurfacePointsFromRegion(
             regionBounds,
             stepSize,
-            SurfaceData::SurfaceTagVector(),
+            JE::Geometry::SurfaceData::SurfaceTagVector(),
             availablePointsPerPosition);
 
         uint claimIndex = 0;
         availablePointsPerPosition.EnumeratePoints([this, &sectorInfo, &claimIndex]
         ([[maybe_unused]] size_t inPositionIndex, const AZ::Vector3& position,
-            const AZ::Vector3& normal, const SurfaceData::SurfaceTagWeights& masks) -> bool
+            const AZ::Vector3& normal, const JE::Geometry::SurfaceData::SurfaceTagWeights& masks) -> bool
             {
                 ClaimPoint& claimPoint = sectorInfo.m_baseContext.m_availablePoints.emplace_back();
                 claimPoint.m_handle = CreateClaimHandle(sectorInfo, ++claimIndex);

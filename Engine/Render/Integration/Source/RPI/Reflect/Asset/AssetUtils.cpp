@@ -144,6 +144,15 @@ namespace JE::Render
                 AZ::SystemTickBus::Handler::BusConnect();
             }
 
+            void AsyncAssetLoader::OnAssetCanceled(AZ::Data::AssetId assetId)
+            {
+                if (assetId != m_asset.GetId()) { return; }
+                AZ::Data::AssetBus::Handler::BusDisconnect();
+                // Keep the asset alive until SystemTick; releasing it under AssetBus can deadlock.
+                m_assetCanceled = true;
+                AZ::SystemTickBus::Handler::BusConnect();
+            }
+
             void AsyncAssetLoader::HandleCallback(AZ::Data::Asset<AZ::Data::AssetData> asset)
             {
                 if (m_callback)
@@ -159,7 +168,7 @@ namespace JE::Render
             void AsyncAssetLoader::OnSystemTick()
             {
                 AZ::SystemTickBus::Handler::BusDisconnect();
-                HandleCallback(m_asset);
+                HandleCallback(m_assetCanceled ? AZ::Data::Asset<AZ::Data::AssetData>{} : m_asset);
             }
 
         } // namespace AssetUtils

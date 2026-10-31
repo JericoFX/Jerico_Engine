@@ -25,8 +25,8 @@
 #include <EMotionStudio/Plugins/StandardPlugins/Source/AnimGraph/NodePaletteModelUpdater.h>
 #include <EMotionStudio/Plugins/StandardPlugins/Source/AnimGraph/SolidColorIconEngine.h>
 #include <EMotionStudio/Plugins/StandardPlugins/Source/MotionSetsWindow/MotionSetsWindowPlugin.h>
-#include <GraphCanvas/Widgets/NodePalette/TreeItems/NodePaletteTreeItem.h>
-#include <GraphCanvas/Widgets/NodePalette/NodePaletteWidget.h>
+#include <JE/Editor/Tools/GraphCanvas/Widgets/NodePalette/TreeItems/NodePaletteTreeItem.h>
+#include <JE/Editor/Tools/GraphCanvas/Widgets/NodePalette/NodePaletteWidget.h>
 #include <QItemSelectionModel>
 #include <QMenu>
 #include <QWidgetAction>
@@ -176,10 +176,10 @@ namespace EMStudio
                     NodePaletteModelUpdater modelUpdater{ plugin };
                     modelUpdater.InitForNode(currentNode);
 
-                    GraphCanvas::NodePaletteConfig config;
+                    JE::Editor::Tools::GraphCanvas::NodePaletteConfig config;
                     config.m_rootTreeItem = modelUpdater.GetRootItem();
                     config.m_isInContextMenu = true;
-                    auto* paletteWidget = new GraphCanvas::NodePaletteWidget(nullptr);
+                    auto* paletteWidget = new JE::Editor::Tools::GraphCanvas::NodePaletteWidget(nullptr);
                     paletteWidget->SetupNodePalette(config);
                     action->setDefaultWidget(paletteWidget);
                     menu->addAction(action);
@@ -194,7 +194,7 @@ namespace EMStudio
                         });
                     connect(
                         paletteWidget,
-                        &GraphCanvas::NodePaletteWidget::OnCreateSelection,
+                        &JE::Editor::Tools::GraphCanvas::NodePaletteWidget::OnCreateSelection,
                         paletteWidget,
                         [paletteWidget, this, menu]()
                         {

@@ -31,15 +31,14 @@ if(PAL_TRAIT_BUILD_HOST_TOOLS)
                 AZ::AzToolsFramework
                 Legacy::CryCommon
                 Legacy::Editor.Headers
-                JE::EditorTools
                 Gem::GradientSignal.Editor
-                Gem::SurfaceData.Editor
+                JE::Geometry.Authoring
                 Gem::LmbrCentral.Editor
             PUBLIC
-                Gem::GraphCanvasWidgets
+                JE::EditorTools
         RUNTIME_DEPENDENCIES
             Gem::GradientSignal.Editor
-            Gem::SurfaceData.Editor
+            JE::Geometry.Authoring
             Gem::LmbrCentral.Editor
     )
     ly_add_target(
@@ -63,10 +62,9 @@ if(PAL_TRAIT_BUILD_HOST_TOOLS)
                 JE::EditorTools
                 Gem::${gem_name}.Editor.Static
         RUNTIME_DEPENDENCIES
-            Gem::GraphCanvas.Editor
             Gem::LmbrCentral.Editor
             Gem::GradientSignal.Editor
-            Gem::SurfaceData.Editor
+            JE::Geometry.Authoring
     )
 
     # Inject the gem name into the Module source file
@@ -109,8 +107,6 @@ if(PAL_TRAIT_BUILD_TESTS_SUPPORTED)
                     AZ::AzToolsFramework
                     JE::EditorTools
                     Gem::${gem_name}.Editor.Static
-            RUNTIME_DEPENDENCIES
-                Gem::GraphCanvasWidgets
         )
         ly_add_googletest(
             NAME Gem::${gem_name}.Editor.Tests

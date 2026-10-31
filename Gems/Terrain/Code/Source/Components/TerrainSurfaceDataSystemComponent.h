@@ -11,9 +11,9 @@
 #include <AzCore/Component/Entity.h>
 #include <AzCore/EBus/EBus.h>
 #include <AzFramework/Terrain/TerrainDataRequestBus.h>
-#include <SurfaceData/SurfaceDataModifierRequestBus.h>
-#include <SurfaceData/SurfaceDataProviderRequestBus.h>
-#include <SurfaceData/SurfaceDataTagProviderRequestBus.h>
+#include <JE/Geometry/SurfaceData/SurfaceDataModifierRequestBus.h>
+#include <JE/Geometry/SurfaceData/SurfaceDataProviderRequestBus.h>
+#include <JE/Geometry/SurfaceData/SurfaceDataTagProviderRequestBus.h>
 
 namespace Terrain
 {
@@ -31,9 +31,9 @@ namespace Terrain
     */
     class TerrainSurfaceDataSystemComponent
         : public AZ::Component
-        , private SurfaceData::SurfaceDataProviderRequestBus::Handler
+        , private JE::Geometry::SurfaceData::SurfaceDataProviderRequestBus::Handler
         , private AzFramework::Terrain::TerrainDataNotificationBus::Handler
-        , private SurfaceData::SurfaceDataTagProviderRequestBus::Handler
+        , private JE::Geometry::SurfaceData::SurfaceDataTagProviderRequestBus::Handler
     {
         friend class EditorTerrainSurfaceDataSystemComponent;
         TerrainSurfaceDataSystemComponent(const TerrainSurfaceDataSystemConfig&);
@@ -58,9 +58,9 @@ namespace Terrain
 
         //////////////////////////////////////////////////////////////////////////
         // SurfaceDataProviderRequestBus
-        void GetSurfacePoints(const AZ::Vector3& inPosition, SurfaceData::SurfacePointList& surfacePointList) const override;
+        void GetSurfacePoints(const AZ::Vector3& inPosition, JE::Geometry::SurfaceData::SurfacePointList& surfacePointList) const override;
         void GetSurfacePointsFromList(
-            AZStd::span<const AZ::Vector3> inPositions, SurfaceData::SurfacePointList& surfacePointList) const override;
+            AZStd::span<const AZ::Vector3> inPositions, JE::Geometry::SurfaceData::SurfacePointList& surfacePointList) const override;
 
         //////////////////////////////////////////////////////////////////////////
         // AzFramework::Terrain::TerrainDataNotificationBus
@@ -69,8 +69,8 @@ namespace Terrain
     private:
         void UpdateTerrainData(const AZ::Aabb& dirtyRegion);
         AZ::Aabb GetSurfaceAabb() const;
-        SurfaceData::SurfaceTagVector GetSurfaceTags() const;
-        SurfaceData::SurfaceDataRegistryHandle m_providerHandle = SurfaceData::InvalidSurfaceDataRegistryHandle;
+        JE::Geometry::SurfaceData::SurfaceTagVector GetSurfaceTags() const;
+        JE::Geometry::SurfaceData::SurfaceDataRegistryHandle m_providerHandle = JE::Geometry::SurfaceData::InvalidSurfaceDataRegistryHandle;
 
         TerrainSurfaceDataSystemConfig m_configuration;
 
@@ -78,7 +78,7 @@ namespace Terrain
         AZStd::atomic_bool m_terrainBoundsIsValid{ false };
 
         //////////////////////////////////////////////////////////////////////////
-        // SurfaceData::SurfaceDataTagProviderRequestBus
-        void GetRegisteredSurfaceTagNames(SurfaceData::SurfaceTagNameSet& names) const override;
+        // JE::Geometry::SurfaceData::SurfaceDataTagProviderRequestBus
+        void GetRegisteredSurfaceTagNames(JE::Geometry::SurfaceData::SurfaceTagNameSet& names) const override;
     };
 }

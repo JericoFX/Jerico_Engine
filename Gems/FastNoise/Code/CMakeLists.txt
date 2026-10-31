@@ -77,7 +77,7 @@ if(PAL_TRAIT_BUILD_HOST_TOOLS)
             PUBLIC
                 Gem::${gem_name}.Static
                 AZ::AzToolsFramework
-                Gem::SurfaceData
+                JE::Geometry
     )
 
     ly_add_target(
@@ -96,7 +96,7 @@ if(PAL_TRAIT_BUILD_HOST_TOOLS)
                 Gem::LmbrCentral.Editor
         RUNTIME_DEPENDENCIES
             Gem::LmbrCentral.Editor
-            Gem::SurfaceData.Editor
+            JE::Geometry.Authoring
     )
 
     # Inject the gem name into the Module source file

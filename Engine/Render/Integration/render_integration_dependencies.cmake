@@ -7,7 +7,7 @@ set(JE_RENDER_INTEGRATION_RUNTIME_DEPENDENCIES
     JE::WorldCamera
     Gem::LmbrCentral.Clients
     Gem::GradientSignal.Clients
-    Gem::SurfaceData.Clients
+    JE::Geometry
     Gem::EMotionFX_Atom
     Gem::AtomFont
     Gem::AtomViewportDisplayInfo
@@ -19,7 +19,7 @@ set(JE_RENDER_INTEGRATION_TOOL_DEPENDENCIES
     Gem::AtomRenderOptions.Editor
     Gem::LmbrCentral.Editor
     Gem::GradientSignal.Editor
-    Gem::SurfaceData.Editor
+    JE::Geometry.Authoring
     Gem::EMotionFX_Atom.Editor
     Gem::ImageProcessingAtom.Editor
     Gem::AtomFont

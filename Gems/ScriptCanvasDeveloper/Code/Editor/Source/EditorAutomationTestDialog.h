@@ -20,7 +20,7 @@
 
 #include <ScriptCanvasDeveloperEditor/EditorAutomation/EditorAutomationTest.h>
 
-#include <GraphCanvas/Editor/EditorTypes.h>
+#include <JE/Editor/Tools/GraphCanvas/Editor/EditorTypes.h>
 
 class QWindow;
 
@@ -32,7 +32,7 @@ namespace ScriptCanvas::Developer
     public:
         static const AZ::EBusHandlerPolicy HandlerPolicy = AZ::EBusHandlerPolicy::Single;
         static const AZ::EBusAddressPolicy AddressPolicy = AZ::EBusAddressPolicy::ById;
-        using BusIdType = GraphCanvas::EditorId;
+        using BusIdType = JE::Editor::Tools::GraphCanvas::EditorId;
 
         virtual void ShowTestDialog() = 0;
     };

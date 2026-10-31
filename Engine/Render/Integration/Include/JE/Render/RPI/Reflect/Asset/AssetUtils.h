@@ -246,6 +246,7 @@ namespace JE::Render
                 // Data::AssetBus::Handler overrides..
                 void OnAssetReady(AZ::Data::Asset<AZ::Data::AssetData> asset) override;
                 void OnAssetError(AZ::Data::Asset<AZ::Data::AssetData> asset) override;
+                void OnAssetCanceled(AZ::Data::AssetId assetId) override;
 
                 // SystemTickBus::Handler overrides..
                 void OnSystemTick() override;
@@ -257,6 +258,7 @@ namespace JE::Render
 
                 AssetCallback m_callback;
                 AZ::Data::Asset<AZ::Data::AssetData> m_asset;
+                bool m_assetCanceled = false;
             };
         } // namespace AssetUtils
     } // namespace RPI

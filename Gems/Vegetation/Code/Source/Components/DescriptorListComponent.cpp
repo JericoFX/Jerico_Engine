@@ -17,7 +17,7 @@
 #include <AzCore/Serialization/SerializeContext.h>
 #include <LmbrCentral/Dependency/DependencyNotificationBus.h>
 #include <Vegetation/Ebuses/InstanceSystemRequestBus.h>
-#include <SurfaceData/Utility/SurfaceDataUtility.h>
+#include <JE/Geometry/SurfaceData/Utility/SurfaceDataUtility.h>
 
 namespace Vegetation
 {
@@ -212,7 +212,7 @@ namespace Vegetation
 
         DescriptorListRequestBus::Handler::BusConnect(GetEntityId());
         DescriptorProviderRequestBus::Handler::BusConnect(GetEntityId());
-        SurfaceData::SurfaceDataTagEnumeratorRequestBus::Handler::BusConnect(GetEntityId());
+        JE::Geometry::SurfaceData::SurfaceDataTagEnumeratorRequestBus::Handler::BusConnect(GetEntityId());
 
         LoadAssets();
     }
@@ -225,7 +225,7 @@ namespace Vegetation
         AZ::Data::AssetBus::MultiHandler::BusDisconnect();
         DescriptorListRequestBus::Handler::BusDisconnect();
         DescriptorProviderRequestBus::Handler::BusDisconnect();
-        SurfaceData::SurfaceDataTagEnumeratorRequestBus::Handler::BusDisconnect();
+        JE::Geometry::SurfaceData::SurfaceDataTagEnumeratorRequestBus::Handler::BusDisconnect();
 
         // Stop listening for descriptor load/unload notifications before unloading the assets
         // to ensure that we don't try to process the changes while deactivating.
@@ -281,7 +281,7 @@ namespace Vegetation
         descriptors.insert(descriptors.end(), m_uniqueDescriptors.begin(), m_uniqueDescriptors.end());
     }
 
-    void DescriptorListComponent::GetInclusionSurfaceTags(SurfaceData::SurfaceTagVector& tags, bool& includeAll) const
+    void DescriptorListComponent::GetInclusionSurfaceTags(JE::Geometry::SurfaceData::SurfaceTagVector& tags, bool& includeAll) const
     {
         if (IsFullyLoaded())
         {
@@ -293,7 +293,7 @@ namespace Vegetation
                     tags.insert(tags.end(), descriptorPtr->m_inclusiveSurfaceFilterTags.begin(), descriptorPtr->m_inclusiveSurfaceFilterTags.end());
 
                     // If we're overriding the include list and the include list has no valid tags, that means "include everything"
-                    if (!SurfaceData::HasValidTags(descriptorPtr->m_inclusiveSurfaceFilterTags))
+                    if (!JE::Geometry::SurfaceData::HasValidTags(descriptorPtr->m_inclusiveSurfaceFilterTags))
                     {
                         includeAll = true;
                     }
@@ -302,7 +302,7 @@ namespace Vegetation
         }
     }
 
-    void DescriptorListComponent::GetExclusionSurfaceTags(SurfaceData::SurfaceTagVector& tags) const
+    void DescriptorListComponent::GetExclusionSurfaceTags(JE::Geometry::SurfaceData::SurfaceTagVector& tags) const
     {
         if (IsFullyLoaded())
         {

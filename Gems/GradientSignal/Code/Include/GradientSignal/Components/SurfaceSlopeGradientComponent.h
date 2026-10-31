@@ -13,8 +13,8 @@
 #include <GradientSignal/Ebuses/GradientRequestBus.h>
 #include <GradientSignal/Ebuses/SmoothStepRequestBus.h>
 #include <GradientSignal/Ebuses/SurfaceSlopeGradientRequestBus.h>
-#include <SurfaceData/SurfaceDataTypes.h>
-#include <SurfaceData/SurfacePointList.h>
+#include <JE/Geometry/SurfaceData/SurfaceDataTypes.h>
+#include <JE/Geometry/SurfaceData/SurfacePointList.h>
 #include <GradientSignal/SmoothStep.h>
 #include <GradientSignal/Util.h>
 
@@ -42,7 +42,7 @@ namespace GradientSignal
         static void Reflect(AZ::ReflectContext* context);
         float m_slopeMin = 0.0f;
         float m_slopeMax = 20.0f;
-        SurfaceData::SurfaceTagVector m_surfaceTagsToSample;
+        JE::Geometry::SurfaceData::SurfaceTagVector m_surfaceTagsToSample;
         RampType m_rampType = RampType::LINEAR_RAMP_DOWN;
         SmoothStep m_smoothStep;
 

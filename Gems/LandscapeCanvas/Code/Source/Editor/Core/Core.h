@@ -13,11 +13,11 @@
 #include <QString>
 
 // Graph Canvas
-#include <GraphCanvas/Editor/EditorTypes.h>
+#include <JE/Editor/Tools/GraphCanvas/Editor/EditorTypes.h>
 
 namespace LandscapeCanvas
 {
-    inline const GraphCanvas::EditorId LANDSCAPE_CANVAS_EDITOR_ID = AZ_CRC_CE("LandscapeCanvasEditor");
+    inline const JE::Editor::Tools::GraphCanvas::EditorId LANDSCAPE_CANVAS_EDITOR_ID = AZ_CRC_CE("LandscapeCanvasEditor");
 
     inline constexpr const char* SYSTEM_NAME = "Landscape Canvas";
     inline constexpr const char* MODULE_FILE_EXTENSION = ".landscapecanvas";

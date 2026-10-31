@@ -57,8 +57,8 @@ namespace ScriptCanvas::Developer
 
         void WrapperMock::OnWrapperAction(const QRect&, const QPointF& scenePoint, const QPoint& screenPoint)
         {
-            GraphCanvas::GraphId graphId;
-            GraphCanvas::SceneMemberRequestBus::EventResult(graphId, GetGraphCanvasNodeId(), &GraphCanvas::SceneMemberRequests::GetScene);
+            JE::Editor::Tools::GraphCanvas::GraphId graphId;
+            JE::Editor::Tools::GraphCanvas::SceneMemberRequestBus::EventResult(graphId, GetGraphCanvasNodeId(), &JE::Editor::Tools::GraphCanvas::SceneMemberRequests::GetScene);
 
             ScriptCanvas::ScriptCanvasId scriptCanvasId;
             ScriptCanvasEditor::GeneralRequestBus::BroadcastResult(scriptCanvasId, &ScriptCanvasEditor::GeneralRequests::GetScriptCanvasId, graphId);
@@ -87,19 +87,19 @@ namespace ScriptCanvas::Developer
                 m_wrappedNodeIds.push_back(nodePair.m_scriptCanvasId);
                 m_graphCanvasMapping[nodePair.m_graphCanvasId] = nodePair.m_scriptCanvasId;
 
-                GraphCanvas::WrappedNodeConfiguration configuration;
+                JE::Editor::Tools::GraphCanvas::WrappedNodeConfiguration configuration;
                 configuration.m_layoutOrder = static_cast<int>(m_wrappedNodeIds.size() - 1);
 
-                GraphCanvas::WrapperNodeRequestBus::Event(GetGraphCanvasNodeId(), &GraphCanvas::WrapperNodeRequests::WrapNode, nodePair.m_graphCanvasId, configuration);
+                JE::Editor::Tools::GraphCanvas::WrapperNodeRequestBus::Event(GetGraphCanvasNodeId(), &JE::Editor::Tools::GraphCanvas::WrapperNodeRequests::WrapNode, nodePair.m_graphCanvasId, configuration);
             }
         }
 
-        void WrapperMock::OnGraphCanvasNodeSetup([[maybe_unused]] const GraphCanvas::NodeId& graphCanvasNodeId)
+        void WrapperMock::OnGraphCanvasNodeSetup([[maybe_unused]] const JE::Editor::Tools::GraphCanvas::NodeId& graphCanvasNodeId)
         {
             AZ::EntityId scriptCanvasNodeId = (*MockDescriptorNotificationBus::GetCurrentBusId());
             MockDescriptorNotificationBus::MultiHandler::BusDisconnect(scriptCanvasNodeId);
 
-            GraphCanvas::NodeId nodeId;
+            JE::Editor::Tools::GraphCanvas::NodeId nodeId;
             MockDescriptorRequestBus::EventResult(nodeId, scriptCanvasNodeId, &MockDescriptorRequests::GetGraphCanvasNodeId);
 
             for (int i = 0; i < m_wrappedNodeIds.size(); ++i)
@@ -108,16 +108,16 @@ namespace ScriptCanvas::Developer
                 {
                     m_graphCanvasMapping[nodeId] = m_wrappedNodeIds[i];
 
-                    GraphCanvas::WrappedNodeConfiguration configuration;
+                    JE::Editor::Tools::GraphCanvas::WrappedNodeConfiguration configuration;
                     configuration.m_layoutOrder = i;
 
-                    GraphCanvas::WrapperNodeRequestBus::Event(GetGraphCanvasNodeId(), &GraphCanvas::WrapperNodeRequests::WrapNode, nodeId, configuration);
+                    JE::Editor::Tools::GraphCanvas::WrapperNodeRequestBus::Event(GetGraphCanvasNodeId(), &JE::Editor::Tools::GraphCanvas::WrapperNodeRequests::WrapNode, nodeId, configuration);
                     break;
                 }
             }
         }
 
-        void WrapperMock::OnNodeRemoved(const GraphCanvas::NodeId& nodeId)
+        void WrapperMock::OnNodeRemoved(const JE::Editor::Tools::GraphCanvas::NodeId& nodeId)
         {
             auto mapIter = m_graphCanvasMapping.find(nodeId);
 
@@ -136,13 +136,13 @@ namespace ScriptCanvas::Developer
 
         void WrapperMock::OnActionNameChanged()
         {
-            GraphCanvas::WrapperNodeRequestBus::Event(GetGraphCanvasNodeId(), &GraphCanvas::WrapperNodeRequests::SetActionString, QString(m_actionName.c_str()));
+            JE::Editor::Tools::GraphCanvas::WrapperNodeRequestBus::Event(GetGraphCanvasNodeId(), &JE::Editor::Tools::GraphCanvas::WrapperNodeRequests::SetActionString, QString(m_actionName.c_str()));
         }
 
         void WrapperMock::OnClear()
         {
-            GraphCanvas::GraphId graphId;
-            GraphCanvas::SceneMemberRequestBus::EventResult(graphId, GetGraphCanvasNodeId(), &GraphCanvas::SceneMemberRequests::GetScene);
+            JE::Editor::Tools::GraphCanvas::GraphId graphId;
+            JE::Editor::Tools::GraphCanvas::SceneMemberRequestBus::EventResult(graphId, GetGraphCanvasNodeId(), &JE::Editor::Tools::GraphCanvas::SceneMemberRequests::GetScene);
 
             AZStd::unordered_set< AZ::EntityId > deleteIds;
 
@@ -151,29 +151,29 @@ namespace ScriptCanvas::Developer
                 deleteIds.erase(mapPair.first);
             }
 
-            GraphCanvas::SceneRequestBus::Event(graphId, &GraphCanvas::SceneRequests::Delete, deleteIds);
+            JE::Editor::Tools::GraphCanvas::SceneRequestBus::Event(graphId, &JE::Editor::Tools::GraphCanvas::SceneRequests::Delete, deleteIds);
             
             m_wrappedNodeIds.clear();
             m_graphCanvasMapping.clear();
         }
 
-        void WrapperMock::OnNodeDisplayed(const GraphCanvas::NodeId& graphCanvasNodeId)
+        void WrapperMock::OnNodeDisplayed(const JE::Editor::Tools::GraphCanvas::NodeId& graphCanvasNodeId)
         {
             ScriptCanvasEditor::ScriptCanvasWrapperNodeDescriptorRequestBus::Handler::BusConnect(graphCanvasNodeId);
 
             for (unsigned int i = 0; i < m_wrappedNodeIds.size(); ++i)
             {
-                GraphCanvas::NodeId nodeId;
+                JE::Editor::Tools::GraphCanvas::NodeId nodeId;
                 MockDescriptorRequestBus::EventResult(nodeId, m_wrappedNodeIds[i], &MockDescriptorRequests::GetGraphCanvasNodeId);
 
                 if (nodeId.IsValid())
                 {
                     m_graphCanvasMapping[nodeId] = m_wrappedNodeIds[i];
 
-                    GraphCanvas::WrappedNodeConfiguration configuration;
+                    JE::Editor::Tools::GraphCanvas::WrappedNodeConfiguration configuration;
                     configuration.m_layoutOrder = i;
 
-                    GraphCanvas::WrapperNodeRequestBus::Event(GetGraphCanvasNodeId(), &GraphCanvas::WrapperNodeRequests::WrapNode, nodeId, configuration);
+                    JE::Editor::Tools::GraphCanvas::WrapperNodeRequestBus::Event(GetGraphCanvasNodeId(), &JE::Editor::Tools::GraphCanvas::WrapperNodeRequests::WrapNode, nodeId, configuration);
                 }
                 else
                 {

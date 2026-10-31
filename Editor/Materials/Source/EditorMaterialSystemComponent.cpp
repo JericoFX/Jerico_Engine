@@ -39,6 +39,16 @@
 #include "Workspace/MaterialWorkspaceWidget.h"
 #include "Workspace/MaterialGraphWorkspaceWidget.h"
 #include <JE/Editor/Materials/Graph/MaterialGraphEnvironment.h>
+#if !defined(AZ_RELEASE_BUILD)
+#include <JE/Editor/Tools/Document/AtomToolsDocumentRequestBus.h>
+#include <JE/Editor/Tools/Graph/GraphDocumentRequestBus.h>
+#include <AzCore/IO/Path/Path.h>
+#include <AzCore/std/algorithm.h>
+#include <AzCore/Interface/Interface.h>
+#include <QComboBox>
+#include <QFileInfo>
+#include <QThread>
+#endif
 
 // Disables warning messages triggered by the Qt library
 // 4251: class needs to have dll-interface to be used by clients of class
@@ -67,7 +77,16 @@ namespace JE
 {
     namespace Editor
     {
-        EditorMaterialSystemComponent::EditorMaterialSystemComponent() = default;
+        EditorMaterialSystemComponent::EditorMaterialSystemComponent()
+        {
+#if !defined(AZ_RELEASE_BUILD)
+            // This native provider is loaded as a dependency, not necessarily as an AZ dynamic module.
+            if (auto* console = AZ::Interface<AZ::IConsole>::Get())
+            {
+                console->LinkDeferredFunctors(AZ::ConsoleFunctorBase::GetDeferredHead());
+            }
+#endif
+        }
         EditorMaterialSystemComponent::~EditorMaterialSystemComponent() = default;
         void EditorMaterialSystemComponent::Reflect(AZ::ReflectContext* context)
         {
@@ -214,8 +233,187 @@ namespace JE
             }
         }
 
+#if !defined(AZ_RELEASE_BUILD)
+        void EditorMaterialSystemComponent::JeOpenMaterialGraph(const AZ::ConsoleCommandContainer& arguments)
+        {
+            const auto reject = [](const char* reason)
+            {
+                AZ_Printf("JE.MaterialGraphOpen", "rejected: %s\n", reason);
+            };
+            if (arguments.size() != 1)
+            {
+                reject("usage EditorMaterialSystemComponent.JeOpenMaterialGraph <absolute .materialgraph source path> "
+                    "(one token without whitespace; optional paired double quotes)");
+                return;
+            }
+            AZStd::string sourcePath(arguments[0]);
+            if (!sourcePath.empty() && (sourcePath.front() == '"' || sourcePath.back() == '"'))
+            {
+                if (sourcePath.size() < 2 || sourcePath.front() != '"' || sourcePath.back() != '"')
+                {
+                    reject("paired outer double quotes required");
+                    return;
+                }
+                sourcePath = sourcePath.substr(1, sourcePath.size() - 2);
+            }
+            if (!AZ::IO::PathView(sourcePath).IsAbsolute())
+            {
+                reject("absolute source path required");
+                return;
+            }
+            if (AZ::IO::PathView(sourcePath).Extension() != ".materialgraph")
+            {
+                reject("materialgraph source extension required");
+                return;
+            }
+            if (!QFileInfo(QString::fromUtf8(sourcePath.c_str())).isFile())
+            {
+                reject("existing source file required");
+                return;
+            }
+            auto* application = qobject_cast<QApplication*>(QCoreApplication::instance());
+            if (!application || QThread::currentThread() != application->thread())
+            {
+                reject("Qt application thread required");
+                return;
+            }
+            const QPointer<MaterialWorkspaceSession> session = m_workspaceSession.get();
+            if (!session)
+            {
+                reject("no active material session");
+                return;
+            }
+            if (session->thread() != application->thread() || !JE::Editor::Tools::ValidateDocumentPath(sourcePath))
+            {
+                reject("current Qt session and editable supported source path required");
+                return;
+            }
+            OpenMaterialCanvas(sourcePath);
+            // Opening may synchronously release the session. Do not reuse component state after the real owner call.
+            if (!session)
+            {
+                AZ_Printf("JE.MaterialGraphOpen", "dispatched=1 opened=0; session released while opening\n");
+                return;
+            }
+            const auto id = session->GetActiveDocumentId();
+            AZStd::string openedPath;
+            bool open = false;
+            JE::Editor::Tools::AtomToolsDocumentRequestBus::EventResult(
+                openedPath, id, &JE::Editor::Tools::AtomToolsDocumentRequests::GetAbsolutePath);
+            JE::Editor::Tools::AtomToolsDocumentRequestBus::EventResult(
+                open, id, &JE::Editor::Tools::AtomToolsDocumentRequests::IsOpen);
+            const bool opened = open && session->IsGraphDocument(id) && AZ::StringFunc::Equal(openedPath, sourcePath);
+            const auto idText = (opened ? id : AZ::Uuid::CreateNull()).ToString<AZStd::string>();
+            AZ_Printf("JE.MaterialGraphOpen", "dispatched=1 opened=%d document=%s path=%s; compilation and preview require observation\n",
+                opened, idText.c_str(), sourcePath.c_str());
+        }
+
+        void EditorMaterialSystemComponent::JeCompileGraphAndSelect(const AZ::ConsoleCommandContainer& arguments)
+        {
+            const auto reject = [](const char* reason)
+            {
+                AZ_Printf("JE.MaterialCompileSelect", "rejected: %s\n", reason);
+            };
+            if (arguments.size() != 2)
+            {
+                reject("usage EditorMaterialSystemComponent.JeCompileGraphAndSelect <A UUID> <B UUID>");
+                return;
+            }
+            const auto canonicalLength = [](AZStd::string_view value) { return value.size() == 36 || value.size() == 38; };
+            if (!canonicalLength(arguments[0]) || !canonicalLength(arguments[1]))
+            {
+                reject("full document UUIDs required");
+                return;
+            }
+            const auto first = AZ::Uuid::CreateString(arguments[0]);
+            const auto second = AZ::Uuid::CreateString(arguments[1]);
+            if (first.IsNull() || second.IsNull() || first == second)
+            {
+                reject("distinct non-null UUIDs required");
+                return;
+            }
+            auto* application = qobject_cast<QApplication*>(QCoreApplication::instance());
+            if (!application || QThread::currentThread() != application->thread())
+            {
+                reject("Qt application thread required");
+                return;
+            }
+            const QPointer<MaterialWorkspaceSession> session = m_workspaceSession.get();
+            if (!session)
+            {
+                reject("no active material session");
+                return;
+            }
+            const QPointer<MaterialGraphWorkspaceWidget> workspace =
+                AzToolsFramework::GetViewPaneWidget<MaterialGraphWorkspaceWidget>(MaterialGraphWorkspaceWidget::PaneName);
+            if (!workspace || workspace->thread() != application->thread() || session->thread() != application->thread())
+            {
+                reject("existing Workspace on the Qt application thread required");
+                return;
+            }
+            const auto ownsMaterialGraph = [&session](const AZ::Uuid& id)
+            {
+                const auto& ids = session->GetDocumentIds();
+                if (AZStd::find(ids.begin(), ids.end(), id) == ids.end()) { return false; }
+                bool open = false;
+                JE::Editor::Tools::DocumentTypeInfo type;
+                JE::Editor::Tools::AtomToolsDocumentRequestBus::EventResult(
+                    open, id, &JE::Editor::Tools::AtomToolsDocumentRequests::IsOpen);
+                JE::Editor::Tools::AtomToolsDocumentRequestBus::EventResult(
+                    type, id, &JE::Editor::Tools::AtomToolsDocumentRequests::GetDocumentTypeInfo);
+                return open && type.m_documentTypeName == "Material Graph" &&
+                    JE::Editor::Tools::GraphDocumentRequestBus::HasHandlers(id);
+            };
+            const QPointer<QComboBox> selector = workspace->findChild<QComboBox*>(QStringLiteral("GraphDocuments"));
+            const auto firstText = first.ToString<AZStd::string>();
+            const auto secondText = second.ToString<AZStd::string>();
+            const QString firstData = QString::fromUtf8(firstText.c_str());
+            const QString secondData = QString::fromUtf8(secondText.c_str());
+            if (!ownsMaterialGraph(first) || !ownsMaterialGraph(second) ||
+                session->GetActiveDocumentId() != first || !selector ||
+                selector->currentData().toString() != firstData || selector->findData(secondData) < 0)
+            {
+                reject("own open Material Graphs A/B, with A selected and B in the existing selector, required");
+                return;
+            }
+            const auto state = session->GetCompileState(first);
+            bool queued = false;
+            JE::Editor::Tools::GraphDocumentRequestBus::EventResult(
+                queued, first, &JE::Editor::Tools::GraphDocumentRequests::IsCompileGraphQueued);
+            if (queued || state == MaterialWorkspaceSession::CompileState::Compiling ||
+                state == MaterialWorkspaceSession::CompileState::CompilingModified)
+            {
+                reject("A already has queued or active compilation");
+                return;
+            }
+            AZ_Printf("JE.MaterialCompileSelect", "request A=%s B=%s\n", firstText.c_str(), secondText.c_str());
+            if (!session->RequestCompile(first))
+            {
+                reject("real compilation request declined; selection unchanged");
+                return;
+            }
+            // RequestCompile emits synchronous state signals. Do not reuse destroyed or rebound UI/session state.
+            if (!session || !workspace || !selector || session->GetActiveDocumentId() != first ||
+                selector->currentData().toString() != firstData || !ownsMaterialGraph(second))
+            {
+                AZ_Printf("JE.MaterialCompileSelect", "started=1 selected=0 context changed after compile request A=%s B=%s\n",
+                    firstText.c_str(), secondText.c_str());
+                return;
+            }
+            const bool selected = session->SelectDocument(second);
+            const bool consistent = selected && session && workspace && selector &&
+                session->GetActiveDocumentId() == second && selector->currentData().toString() == secondData;
+            AZ_Printf("JE.MaterialCompileSelect", "started=1 selected=%d A=%s B=%s; completion and provider require observation\n",
+                consistent, firstText.c_str(), secondText.c_str());
+        }
+#endif
+
         void EditorMaterialSystemComponent::OpenMaterialCanvas(const AZStd::string& sourcePath)
         {
+            if (m_workspaceSession)
+            {
+                m_workspaceSession->PrepareGraphWorkspace(sourcePath);
+            }
             AzToolsFramework::OpenViewPane(MaterialGraphWorkspaceWidget::PaneName);
             if (!sourcePath.empty())
             {
@@ -398,6 +596,7 @@ namespace JE
 
             AzToolsFramework::ViewPaneOptions graphOptions;
             graphOptions.canHaveMultipleInstances = false;
+            graphOptions.showInMenu = false;
             graphOptions.preferedDockingArea = Qt::BottomDockWidgetArea;
             graphOptions.paneRect = QRect(50, 50, 1200, 700);
             AzToolsFramework::RegisterViewPane<MaterialGraphWorkspaceWidget>(MaterialGraphWorkspaceWidget::PaneName,

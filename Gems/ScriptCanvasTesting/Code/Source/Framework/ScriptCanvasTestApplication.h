@@ -14,6 +14,9 @@
 #include <Asset/EditorAssetSystemComponent.h>
 #include <AzFramework/Application/Application.h>
 #include <ScriptCanvas/SystemComponent.h>
+#include <GraphCanvas/GraphCanvasModuleRegistration.h>
+#include <GraphCanvas/GraphCanvas.h>
+#include <AzCore/std/containers/list.h>
 
 namespace ScriptCanvasTests
 {
@@ -28,6 +31,7 @@ namespace ScriptCanvasTests
              {
                  azrtti_typeid<ScriptCanvasTests::TestComponent>(),
                  azrtti_typeid<ScriptCanvasEditor::TraceMessageComponent>(),
+                 azrtti_typeid<JE::Editor::Tools::GraphCanvas::GraphCanvasSystemComponent>(),
              });
 
             return components;
@@ -38,6 +42,12 @@ namespace ScriptCanvasTests
             AzFramework::Application::CreateReflectionManager();
             RegisterComponentDescriptor(ScriptCanvasTests::TestComponent::CreateDescriptor());
             RegisterComponentDescriptor(ScriptCanvasEditor::TraceMessageComponent::CreateDescriptor());
+            AZStd::list<AZ::ComponentDescriptor*> graphCanvasDescriptors;
+            JE::Editor::Tools::GraphCanvas::AppendGraphCanvasDescriptors(graphCanvasDescriptors);
+            for (AZ::ComponentDescriptor* componentDescriptor : graphCanvasDescriptors)
+            {
+                RegisterComponentDescriptor(componentDescriptor);
+            }
         }
     };
 }

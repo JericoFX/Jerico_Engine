@@ -22,15 +22,15 @@
 #include <Editor/Include/ScriptCanvas/Components/EditorUtils.h>
 #include <Editor/Undo/ScriptCanvasGraphCommand.h>
 
-#include <GraphCanvas/Components/Connections/ConnectionBus.h>
-#include <GraphCanvas/Components/EntitySaveDataBus.h>
-#include <GraphCanvas/Components/Nodes/Wrapper/WrapperNodeBus.h>
-#include <GraphCanvas/Components/SceneBus.h>
-#include <GraphCanvas/Components/Slots/Data/DataSlotBus.h>
-#include <GraphCanvas/Types/GraphCanvasGraphSerialization.h>
-#include <GraphCanvas/Editor/GraphModelBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/Connections/ConnectionBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/EntitySaveDataBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/Nodes/Wrapper/WrapperNodeBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/SceneBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/Slots/Data/DataSlotBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Types/GraphCanvasGraphSerialization.h>
+#include <JE/Editor/Tools/GraphCanvas/Editor/GraphModelBus.h>
 
-#include <GraphCanvas/Widgets/NodePropertyBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Widgets/NodePropertyBus.h>
 
 #include <Editor/Include/ScriptCanvas/Components/GraphUpgrade.h>
 #include <Editor/Assets/ScriptCanvasUndoHelper.h>
@@ -52,8 +52,8 @@ namespace ScriptCanvasEditor
         , private NodeCreationNotificationBus::Handler
         , private SceneCounterRequestBus::Handler
         , private EditorGraphRequestBus::Handler
-        , private GraphCanvas::GraphModelRequestBus::Handler
-        , private GraphCanvas::SceneNotificationBus::Handler
+        , private JE::Editor::Tools::GraphCanvas::GraphModelRequestBus::Handler
+        , private JE::Editor::Tools::GraphCanvas::SceneNotificationBus::Handler
         , private GraphItemCommandNotificationBus::Handler
         , private AzToolsFramework::ToastNotificationBus::MultiHandler
         , private GeneralEditorNotificationBus::Handler
@@ -111,7 +111,7 @@ namespace ScriptCanvasEditor
             , m_variableCounter(0)
             , m_graphCanvasSceneEntity(nullptr)
             , m_ignoreSaveRequests(false)
-            , m_graphCanvasSaveVersion(GraphCanvas::EntitySaveDataContainer::CurrentVersion)
+            , m_graphCanvasSaveVersion(JE::Editor::Tools::GraphCanvas::EntitySaveDataContainer::CurrentVersion)
             , m_upgradeSM(this)
         {}
 
@@ -160,62 +160,62 @@ namespace ScriptCanvasEditor
         void TriggerUndo() override;
         void TriggerRedo() override;
 
-        void EnableNodes(const AZStd::unordered_set< GraphCanvas::NodeId >& nodeIds) override;
-        void DisableNodes(const AZStd::unordered_set< GraphCanvas::NodeId >& nodeIds) override;
+        void EnableNodes(const AZStd::unordered_set< JE::Editor::Tools::GraphCanvas::NodeId >& nodeIds) override;
+        void DisableNodes(const AZStd::unordered_set< JE::Editor::Tools::GraphCanvas::NodeId >& nodeIds) override;
 
-        GraphCanvas::NodePropertyDisplay* CreateDataSlotPropertyDisplay(const AZ::Uuid& dataType, const AZ::EntityId& nodeId, const AZ::EntityId& slotId) const override;
-        GraphCanvas::NodePropertyDisplay* CreatePropertySlotPropertyDisplay(const AZ::Crc32& propertyId, const AZ::EntityId& nodeId, const AZ::EntityId& slotId) const override;
+        JE::Editor::Tools::GraphCanvas::NodePropertyDisplay* CreateDataSlotPropertyDisplay(const AZ::Uuid& dataType, const AZ::EntityId& nodeId, const AZ::EntityId& slotId) const override;
+        JE::Editor::Tools::GraphCanvas::NodePropertyDisplay* CreatePropertySlotPropertyDisplay(const AZ::Crc32& propertyId, const AZ::EntityId& nodeId, const AZ::EntityId& slotId) const override;
 
-        void DisconnectConnection(const GraphCanvas::ConnectionId& connectionId) override;
-        bool CreateConnection(const GraphCanvas::ConnectionId& connectionId, const GraphCanvas::Endpoint& sourcePoint, const GraphCanvas::Endpoint& targetPoint) override;
+        void DisconnectConnection(const JE::Editor::Tools::GraphCanvas::ConnectionId& connectionId) override;
+        bool CreateConnection(const JE::Editor::Tools::GraphCanvas::ConnectionId& connectionId, const JE::Editor::Tools::GraphCanvas::Endpoint& sourcePoint, const JE::Editor::Tools::GraphCanvas::Endpoint& targetPoint) override;
 
         // Adds or removes an implicit execution connection between the nodes these endpoints are connected if necessary
         void UpdateCorrespondingImplicitConnection(const ScriptCanvas::Endpoint& sourceEndpoint, const ScriptCanvas::Endpoint& targetEndpoint);
 
-        bool IsValidConnection(const GraphCanvas::Endpoint& sourcePoint, const GraphCanvas::Endpoint& targetPoint) const override;
+        bool IsValidConnection(const JE::Editor::Tools::GraphCanvas::Endpoint& sourcePoint, const JE::Editor::Tools::GraphCanvas::Endpoint& targetPoint) const override;
 
         AZStd::string GetDataTypeString(const AZ::Uuid& typeId) override;
 
         void OnRemoveUnusedNodes() override;
         void OnRemoveUnusedElements() override;
 
-        bool AllowReset(const GraphCanvas::Endpoint& endpoint) const override;
+        bool AllowReset(const JE::Editor::Tools::GraphCanvas::Endpoint& endpoint) const override;
 
-        void ResetSlotToDefaultValue(const GraphCanvas::Endpoint& endpoint) override;
-        void ResetReference(const GraphCanvas::Endpoint& endpoint) override;
-        void ResetProperty(const GraphCanvas::NodeId& nodeId, const AZ::Crc32& propertyId) override;
+        void ResetSlotToDefaultValue(const JE::Editor::Tools::GraphCanvas::Endpoint& endpoint) override;
+        void ResetReference(const JE::Editor::Tools::GraphCanvas::Endpoint& endpoint) override;
+        void ResetProperty(const JE::Editor::Tools::GraphCanvas::NodeId& nodeId, const AZ::Crc32& propertyId) override;
 
-        void RemoveSlot(const GraphCanvas::Endpoint& endpoint) override;
-        bool IsSlotRemovable(const GraphCanvas::Endpoint& endpoint) const override;
+        void RemoveSlot(const JE::Editor::Tools::GraphCanvas::Endpoint& endpoint) override;
+        bool IsSlotRemovable(const JE::Editor::Tools::GraphCanvas::Endpoint& endpoint) const override;
 
-        bool ConvertSlotToReference(const GraphCanvas::Endpoint& endpoint, bool isNewSlot = false) override;
-        bool CanConvertSlotToReference(const GraphCanvas::Endpoint& endpoint, bool isNewSlot = false) override;
-        GraphCanvas::CanHandleMimeEventOutcome CanHandleReferenceMimeEvent(const GraphCanvas::Endpoint& endpoint, const QMimeData* mimeData) override;
-        bool HandleReferenceMimeEvent(const GraphCanvas::Endpoint& endpoint, const QMimeData* mimeData) override;
-        bool CanPromoteToVariable(const GraphCanvas::Endpoint& endpoint, bool isNewSlot = false) const override;
-        bool PromoteToVariableAction(const GraphCanvas::Endpoint& endpoint, bool isNewSlot = false) override;
-        bool SynchronizeReferences(const GraphCanvas::Endpoint& sourceEndpoint, const GraphCanvas::Endpoint& targetEndpoint) override;
+        bool ConvertSlotToReference(const JE::Editor::Tools::GraphCanvas::Endpoint& endpoint, bool isNewSlot = false) override;
+        bool CanConvertSlotToReference(const JE::Editor::Tools::GraphCanvas::Endpoint& endpoint, bool isNewSlot = false) override;
+        JE::Editor::Tools::GraphCanvas::CanHandleMimeEventOutcome CanHandleReferenceMimeEvent(const JE::Editor::Tools::GraphCanvas::Endpoint& endpoint, const QMimeData* mimeData) override;
+        bool HandleReferenceMimeEvent(const JE::Editor::Tools::GraphCanvas::Endpoint& endpoint, const QMimeData* mimeData) override;
+        bool CanPromoteToVariable(const JE::Editor::Tools::GraphCanvas::Endpoint& endpoint, bool isNewSlot = false) const override;
+        bool PromoteToVariableAction(const JE::Editor::Tools::GraphCanvas::Endpoint& endpoint, bool isNewSlot = false) override;
+        bool SynchronizeReferences(const JE::Editor::Tools::GraphCanvas::Endpoint& sourceEndpoint, const JE::Editor::Tools::GraphCanvas::Endpoint& targetEndpoint) override;
 
-        bool ConvertSlotToValue(const GraphCanvas::Endpoint& endpoint) override;
-        bool CanConvertSlotToValue(const GraphCanvas::Endpoint& endpoint) override;
-        GraphCanvas::CanHandleMimeEventOutcome CanHandleValueMimeEvent(const GraphCanvas::Endpoint& endpoint, const QMimeData* mimeData) override;
-        bool HandleValueMimeEvent(const GraphCanvas::Endpoint& endpoint, const QMimeData* mimeData) override;
+        bool ConvertSlotToValue(const JE::Editor::Tools::GraphCanvas::Endpoint& endpoint) override;
+        bool CanConvertSlotToValue(const JE::Editor::Tools::GraphCanvas::Endpoint& endpoint) override;
+        JE::Editor::Tools::GraphCanvas::CanHandleMimeEventOutcome CanHandleValueMimeEvent(const JE::Editor::Tools::GraphCanvas::Endpoint& endpoint, const QMimeData* mimeData) override;
+        bool HandleValueMimeEvent(const JE::Editor::Tools::GraphCanvas::Endpoint& endpoint, const QMimeData* mimeData) override;
 
-        GraphCanvas::SlotId RequestExtension(const GraphCanvas::NodeId& nodeId, const GraphCanvas::ExtenderId& extenderId, GraphModelRequests::ExtensionRequestReason) override;
-        void ExtensionCancelled(const GraphCanvas::NodeId& nodeId, const GraphCanvas::ExtenderId& extenderId) override;
-        void FinalizeExtension(const GraphCanvas::NodeId& nodeId, const GraphCanvas::ExtenderId& extenderId) override;
+        JE::Editor::Tools::GraphCanvas::SlotId RequestExtension(const JE::Editor::Tools::GraphCanvas::NodeId& nodeId, const JE::Editor::Tools::GraphCanvas::ExtenderId& extenderId, GraphModelRequests::ExtensionRequestReason) override;
+        void ExtensionCancelled(const JE::Editor::Tools::GraphCanvas::NodeId& nodeId, const JE::Editor::Tools::GraphCanvas::ExtenderId& extenderId) override;
+        void FinalizeExtension(const JE::Editor::Tools::GraphCanvas::NodeId& nodeId, const JE::Editor::Tools::GraphCanvas::ExtenderId& extenderId) override;
 
-        void AddBreakpoints(const AZStd::unordered_set<GraphCanvas::NodeId>& nodeIds) override;
+        void AddBreakpoints(const AZStd::unordered_set<JE::Editor::Tools::GraphCanvas::NodeId>& nodeIds) override;
 
-        bool ShouldWrapperAcceptDrop(const GraphCanvas::NodeId& wrapperNode, const QMimeData* mimeData) const override;
+        bool ShouldWrapperAcceptDrop(const JE::Editor::Tools::GraphCanvas::NodeId& wrapperNode, const QMimeData* mimeData) const override;
 
-        void AddWrapperDropTarget(const GraphCanvas::NodeId& wrapperNode) override;
-        void RemoveWrapperDropTarget(const GraphCanvas::NodeId& wrapperNode) override;
+        void AddWrapperDropTarget(const JE::Editor::Tools::GraphCanvas::NodeId& wrapperNode) override;
+        void RemoveWrapperDropTarget(const JE::Editor::Tools::GraphCanvas::NodeId& wrapperNode) override;
         ////
 
         // SceneNotificationBus
-        void OnEntitiesSerialized(GraphCanvas::GraphSerialization& serializationTarget) override;
-        void OnEntitiesDeserialized(const GraphCanvas::GraphSerialization& serializationSource) override;
+        void OnEntitiesSerialized(JE::Editor::Tools::GraphCanvas::GraphSerialization& serializationTarget) override;
+        void OnEntitiesDeserialized(const JE::Editor::Tools::GraphCanvas::GraphSerialization& serializationSource) override;
         void OnPreNodeDeleted(const AZ::EntityId& nodeId) override;
         void OnPreConnectionDeleted(const AZ::EntityId& nodeId) override;
 
@@ -257,10 +257,10 @@ namespace ScriptCanvasEditor
         // EditorGraphRequestBus
         void OnGraphCanvasSceneVisible() override;
 
-        GraphCanvas::GraphId GetGraphCanvasGraphId() const override;
+        JE::Editor::Tools::GraphCanvas::GraphId GetGraphCanvasGraphId() const override;
 
-        AZStd::unordered_map< AZ::EntityId, GraphCanvas::EntitySaveDataContainer* > GetGraphCanvasSaveData() override;
-        void UpdateGraphCanvasSaveData(const AZStd::unordered_map< AZ::EntityId, GraphCanvas::EntitySaveDataContainer* >& saveData) override;
+        AZStd::unordered_map< AZ::EntityId, JE::Editor::Tools::GraphCanvas::EntitySaveDataContainer* > GetGraphCanvasSaveData() override;
+        void UpdateGraphCanvasSaveData(const AZStd::unordered_map< AZ::EntityId, JE::Editor::Tools::GraphCanvas::EntitySaveDataContainer* >& saveData) override;
 
         NodeIdPair CreateCustomNode(const AZ::Uuid& typeId, const AZ::Vector2& position) override;
 
@@ -269,7 +269,7 @@ namespace ScriptCanvasEditor
         AZStd::string DecodeCrc(const AZ::Crc32& crcValue) override;
 
         void ClearHighlights() override;
-        void HighlightMembersFromTreeItem(const GraphCanvas::GraphCanvasTreeItem* treeItem) override;
+        void HighlightMembersFromTreeItem(const JE::Editor::Tools::GraphCanvas::GraphCanvasTreeItem* treeItem) override;
         void HighlightVariables(const AZStd::unordered_set< ScriptCanvas::VariableId>& variableIds) override;
         void HighlightNodes(const AZStd::vector<NodeIdPair>& nodes) override;
 
@@ -278,16 +278,16 @@ namespace ScriptCanvasEditor
 
         void RemoveUnusedVariables() override;
 
-        bool CanConvertVariableNodeToReference(const GraphCanvas::NodeId& nodeId) override;
-        bool ConvertVariableNodeToReference(const GraphCanvas::NodeId& nodeId) override;
-        bool ConvertReferenceToVariableNode(const GraphCanvas::Endpoint& endpoint) override;
+        bool CanConvertVariableNodeToReference(const JE::Editor::Tools::GraphCanvas::NodeId& nodeId) override;
+        bool ConvertVariableNodeToReference(const JE::Editor::Tools::GraphCanvas::NodeId& nodeId) override;
+        bool ConvertReferenceToVariableNode(const JE::Editor::Tools::GraphCanvas::Endpoint& endpoint) override;
 
         void QueueVersionUpdate(const AZ::EntityId& graphCanvasNodeId) override;
 
-        bool CanExposeEndpoint(const GraphCanvas::Endpoint& endpoint) override;
+        bool CanExposeEndpoint(const JE::Editor::Tools::GraphCanvas::Endpoint& endpoint) override;
 
-        ScriptCanvas::Endpoint ConvertToScriptCanvasEndpoint(const GraphCanvas::Endpoint& endpoint) const override;
-        GraphCanvas::Endpoint ConvertToGraphCanvasEndpoint(const ScriptCanvas::Endpoint& endpoint) const override;
+        ScriptCanvas::Endpoint ConvertToScriptCanvasEndpoint(const JE::Editor::Tools::GraphCanvas::Endpoint& endpoint) const override;
+        JE::Editor::Tools::GraphCanvas::Endpoint ConvertToGraphCanvasEndpoint(const ScriptCanvas::Endpoint& endpoint) const override;
 
         void SetOriginalToNewIdsMap(const AZStd::unordered_map<AZ::EntityId, AZ::EntityId>& originalIdToNewIds) override;
         void GetOriginalToNewIdsMap(AZStd::unordered_map<AZ::EntityId, AZ::EntityId>& originalIdToNewIdsOut) const override;
@@ -331,9 +331,9 @@ namespace ScriptCanvasEditor
 
         void DisplayUpdateToast();
 
-        AZ::EntityId          ConvertToScriptCanvasNodeId(const GraphCanvas::NodeId& nodeId) const;
+        AZ::EntityId          ConvertToScriptCanvasNodeId(const JE::Editor::Tools::GraphCanvas::NodeId& nodeId) const;
 
-        GraphCanvas::NodePropertyDisplay* CreateDisplayPropertyForSlot(const AZ::EntityId& scriptCanvasNodeId, const ScriptCanvas::SlotId& scriptCanvasSlotId) const;
+        JE::Editor::Tools::GraphCanvas::NodePropertyDisplay* CreateDisplayPropertyForSlot(const AZ::EntityId& scriptCanvasNodeId, const ScriptCanvas::SlotId& scriptCanvasSlotId) const;
 
         void SignalDirty();
 
@@ -343,13 +343,13 @@ namespace ScriptCanvasEditor
         void HighlightScriptCanvasEntity(const AZ::EntityId& scriptCanvasId);
 
         AZ::EntityId FindGraphCanvasSlotId(const AZ::EntityId& graphCanvasNodeId, const ScriptCanvas::SlotId& slotId);
-        bool ConfigureConnectionUserData(const ScriptCanvas::Endpoint& sourceEndpoint, const ScriptCanvas::Endpoint& targetEndpoint, GraphCanvas::ConnectionId connectionId);
+        bool ConfigureConnectionUserData(const ScriptCanvas::Endpoint& sourceEndpoint, const ScriptCanvas::Endpoint& targetEndpoint, JE::Editor::Tools::GraphCanvas::ConnectionId connectionId);
 
         void HandleQueuedUpdates();
         bool IsNodeVersionConverting(const AZ::EntityId& graphCanvasNodeId) const;
 
         // Function Definition Node Extension
-        void HandleFunctionDefinitionExtension(ScriptCanvas::Node* node, GraphCanvas::SlotId graphCanvasSlotId, const GraphCanvas::NodeId& nodeId);
+        void HandleFunctionDefinitionExtension(ScriptCanvas::Node* node, JE::Editor::Tools::GraphCanvas::SlotId graphCanvasSlotId, const JE::Editor::Tools::GraphCanvas::NodeId& nodeId);
 
         // Live node replacement, that is, completely swap out a node, while the user is actively editing (rather then when opening or
         // versioning a graph). The default intention is to retain as much connection and data as is remotely appropriate.
@@ -419,14 +419,14 @@ namespace ScriptCanvasEditor
 
         AZ::Entity* m_graphCanvasSceneEntity;
 
-        GraphCanvas::EntitySaveDataContainer::VersionInformation m_graphCanvasSaveVersion;
-        AZStd::unordered_map< AZ::EntityId, GraphCanvas::EntitySaveDataContainer* > m_graphCanvasSaveData;
+        JE::Editor::Tools::GraphCanvas::EntitySaveDataContainer::VersionInformation m_graphCanvasSaveVersion;
+        AZStd::unordered_map< AZ::EntityId, JE::Editor::Tools::GraphCanvas::EntitySaveDataContainer* > m_graphCanvasSaveData;
 
         AZStd::unordered_map< AZ::Crc32, CRCCache > m_crcCacheMap;
 
-        AZStd::unordered_set< GraphCanvas::GraphicsEffectId > m_highlights;
+        AZStd::unordered_set< JE::Editor::Tools::GraphCanvas::GraphicsEffectId > m_highlights;
 
-        GraphCanvas::NodeFocusCyclingHelper m_focusHelper;
+        JE::Editor::Tools::GraphCanvas::NodeFocusCyclingHelper m_focusHelper;
         GraphStatisticsHelper m_statisticsHelper;
         UndoHelper m_undoHelper;
 

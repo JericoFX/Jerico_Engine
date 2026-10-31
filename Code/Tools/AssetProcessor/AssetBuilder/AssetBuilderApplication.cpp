@@ -10,6 +10,7 @@
 #include <JE/Editor/Tools/Module.h>
 #include <AzCore/Module/ModuleManagerBus.h>
 #include <JE/Geometry/GeometryModule.h>
+#include <JE/Geometry/SurfaceData/SurfaceDataModule.h>
 #include <JE/Editor/Camera/CameraModule.h>
 #include <JE/World/Camera/Debug/DebugCameraModule.h>
 #include <JE/Editor/RenderIntegration/AssetProcessingModule.h>
@@ -217,15 +218,16 @@ void AssetBuilderApplication::StartCommon(AZ::Entity* systemEntity)
         renderModules, &AZ::ModuleManagerRequests::LoadStaticModules,
         [](AZStd::vector<AZ::Module*>& modules)
         {
+            modules.emplace_back(JE::Geometry::SurfaceData::CreateAuthoringModule());
             modules.emplace_back(JE::Editor::RenderIntegration::CreateRpiEditorModule());
             modules.emplace_back(JE::Editor::Render::Scene::CreateModule());
             modules.emplace_back(JE::Editor::Render::Features::CreateModule());
         },
         AZ::ModuleInitializationSteps::RegisterComponentDescriptors);
 
-    if (renderModules.size() != 3)
+    if (renderModules.size() != 4)
     {
-        AZ_Error("AssetBuilder", false, "Failed to register the three native render modules.");
+        AZ_Error("AssetBuilder", false, "Failed to register the four native render/surface modules.");
         ExitMainLoop();
         return;
     }

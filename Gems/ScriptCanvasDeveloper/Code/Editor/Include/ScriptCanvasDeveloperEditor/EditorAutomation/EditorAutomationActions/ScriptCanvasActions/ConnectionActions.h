@@ -7,8 +7,8 @@
  */
 #pragma once
 
-#include <GraphCanvas/Types/Endpoint.h>
-#include <GraphCanvas/Types/Types.h>
+#include <JE/Editor/Tools/GraphCanvas/Types/Endpoint.h>
+#include <JE/Editor/Tools/GraphCanvas/Types/Types.h>
 
 #include <ScriptCanvasDeveloperEditor/EditorAutomation/EditorAutomationActions/GenericActions.h>
 
@@ -19,18 +19,18 @@ namespace ScriptCanvas::Developer
     */
     class CoupleNodesAction
         : public CompoundAction
-        , public GraphCanvas::SceneNotificationBus::Handler
+        , public JE::Editor::Tools::GraphCanvas::SceneNotificationBus::Handler
     {
     public:
         AZ_CLASS_ALLOCATOR(CoupleNodesAction, AZ::SystemAllocator);
         AZ_RTTI(CoupleNodesAction, "{DC6B3198-E127-4833-BC44-B27083A36045}", CompoundAction);
 
-        CoupleNodesAction(GraphCanvas::NodeId nodeToPickUp, GraphCanvas::ConnectionType connectionType, GraphCanvas::NodeId coupleTarget);
+        CoupleNodesAction(JE::Editor::Tools::GraphCanvas::NodeId nodeToPickUp, JE::Editor::Tools::GraphCanvas::ConnectionType connectionType, JE::Editor::Tools::GraphCanvas::NodeId coupleTarget);
 
         bool IsMissingPrecondition() override;
         EditorAutomationAction* GenerateMissingPreconditionAction() override;
 
-        AZStd::vector< GraphCanvas::ConnectionId > GetConnectionIds() const;
+        AZStd::vector< JE::Editor::Tools::GraphCanvas::ConnectionId > GetConnectionIds() const;
 
         // GraphCanvas::SceneNotificaionBus
         void OnConnectionAdded(const AZ::EntityId& connectionId) override;
@@ -49,13 +49,13 @@ namespace ScriptCanvas::Developer
         QRectF m_pickUpRect;
         QRectF m_targetRect;
 
-        GraphCanvas::NodeId m_nodeToPickUp;
+        JE::Editor::Tools::GraphCanvas::NodeId m_nodeToPickUp;
 
-        GraphCanvas::ConnectionType m_connectionType;
+        JE::Editor::Tools::GraphCanvas::ConnectionType m_connectionType;
 
-        GraphCanvas::NodeId m_targetNode;
+        JE::Editor::Tools::GraphCanvas::NodeId m_targetNode;
 
-        AZStd::vector< GraphCanvas::ConnectionId > m_connections;
+        AZStd::vector< JE::Editor::Tools::GraphCanvas::ConnectionId > m_connections;
     };
 
     /**
@@ -68,9 +68,9 @@ namespace ScriptCanvas::Developer
         AZ_CLASS_ALLOCATOR(ConnectEndpointsAction, AZ::SystemAllocator);
         AZ_RTTI(ConnectEndpointsAction, "{94941CCD-D8FA-4B01-8876-5D32723BD0C2}", CompoundAction);
 
-        ConnectEndpointsAction(GraphCanvas::Endpoint startEndpoint, GraphCanvas::Endpoint targetEndpoint);
+        ConnectEndpointsAction(JE::Editor::Tools::GraphCanvas::Endpoint startEndpoint, JE::Editor::Tools::GraphCanvas::Endpoint targetEndpoint);
 
-        GraphCanvas::ConnectionId GetConnectionId() const;
+        JE::Editor::Tools::GraphCanvas::ConnectionId GetConnectionId() const;
 
     protected:
 
@@ -80,9 +80,9 @@ namespace ScriptCanvas::Developer
 
         QRectF m_sceneRect;
 
-        GraphCanvas::ConnectionId m_connectionId;
+        JE::Editor::Tools::GraphCanvas::ConnectionId m_connectionId;
 
-        GraphCanvas::Endpoint m_startEndpoint;
-        GraphCanvas::Endpoint m_targetEndpoint;
+        JE::Editor::Tools::GraphCanvas::Endpoint m_startEndpoint;
+        JE::Editor::Tools::GraphCanvas::Endpoint m_targetEndpoint;
     };
 }

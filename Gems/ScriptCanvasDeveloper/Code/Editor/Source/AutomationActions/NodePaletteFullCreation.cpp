@@ -8,12 +8,12 @@
 
 #include <QMenu>
 
-#include <GraphCanvas/Components/SceneBus.h>
-#include <GraphCanvas/Components/GridBus.h>
-#include <GraphCanvas/Components/VisualBus.h>
-#include <GraphCanvas/Editor/EditorTypes.h>
-#include <GraphCanvas/Widgets/GraphCanvasGraphicsView/GraphCanvasGraphicsView.h>
-#include <GraphCanvas/Widgets/NodePalette/TreeItems/NodePaletteTreeItem.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/SceneBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/GridBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/VisualBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Editor/EditorTypes.h>
+#include <JE/Editor/Tools/GraphCanvas/Widgets/GraphCanvasGraphicsView/GraphCanvasGraphicsView.h>
+#include <JE/Editor/Tools/GraphCanvas/Widgets/NodePalette/TreeItems/NodePaletteTreeItem.h>
 #include <Editor/View/Widgets/NodePalette/CreateNodeMimeEvent.h>
 
 #include <ScriptCanvas/Bus/RequestBus.h>
@@ -36,33 +36,33 @@ namespace ScriptCanvasDeveloperEditor
                 m_graphCanvasGraphId = activeGraphCanvasGraphId;
                 m_scriptCanvasId = scriptCanvasId;
                 
-                GraphCanvas::SceneRequestBus::EventResult(m_viewId, activeGraphCanvasGraphId, &GraphCanvas::SceneRequests::GetViewId);
-                GraphCanvas::SceneRequestBus::EventResult(m_gridId, activeGraphCanvasGraphId, &GraphCanvas::SceneRequests::GetGrid);
+                JE::Editor::Tools::GraphCanvas::SceneRequestBus::EventResult(m_viewId, activeGraphCanvasGraphId, &JE::Editor::Tools::GraphCanvas::SceneRequests::GetViewId);
+                JE::Editor::Tools::GraphCanvas::SceneRequestBus::EventResult(m_gridId, activeGraphCanvasGraphId, &JE::Editor::Tools::GraphCanvas::SceneRequests::GetGrid);
 
-                GraphCanvas::GridRequestBus::EventResult(m_minorPitch, m_gridId, &GraphCanvas::GridRequests::GetMinorPitch);
+                JE::Editor::Tools::GraphCanvas::GridRequestBus::EventResult(m_minorPitch, m_gridId, &JE::Editor::Tools::GraphCanvas::GridRequests::GetMinorPitch);
 
-                GraphCanvas::ViewRequestBus::EventResult(m_nodeCreationPos, m_viewId, &GraphCanvas::ViewRequests::GetViewSceneCenter);
+                JE::Editor::Tools::GraphCanvas::ViewRequestBus::EventResult(m_nodeCreationPos, m_viewId, &JE::Editor::Tools::GraphCanvas::ViewRequests::GetViewSceneCenter);
 
-                GraphCanvas::GraphCanvasGraphicsView* graphicsView = nullptr;
-                GraphCanvas::ViewRequestBus::EventResult(graphicsView, m_viewId, &GraphCanvas::ViewRequests::AsGraphicsView);
+                JE::Editor::Tools::GraphCanvas::GraphCanvasGraphicsView* graphicsView = nullptr;
+                JE::Editor::Tools::GraphCanvas::ViewRequestBus::EventResult(graphicsView, m_viewId, &JE::Editor::Tools::GraphCanvas::ViewRequests::AsGraphicsView);
 
                 m_viewportRectangle = graphicsView->mapToScene(graphicsView->viewport()->geometry()).boundingRect();
             }
             
-            bool ShouldProcessItem([[maybe_unused]] const GraphCanvas::NodePaletteTreeItem* nodePaletteTreeItem) const
+            bool ShouldProcessItem([[maybe_unused]] const JE::Editor::Tools::GraphCanvas::NodePaletteTreeItem* nodePaletteTreeItem) const
             {
                 return true;
             }
             
-            void ProcessItem(const GraphCanvas::NodePaletteTreeItem* nodePaletteTreeItem)
+            void ProcessItem(const JE::Editor::Tools::GraphCanvas::NodePaletteTreeItem* nodePaletteTreeItem)
             {
-                GraphCanvas::GraphCanvasMimeEvent* mimeEvent = nodePaletteTreeItem->CreateMimeEvent();
+                JE::Editor::Tools::GraphCanvas::GraphCanvasMimeEvent* mimeEvent = nodePaletteTreeItem->CreateMimeEvent();
 
                 if (ScriptCanvasEditor::MultiCreateNodeMimeEvent* multiCreateMimeEvent = azrtti_cast<ScriptCanvasEditor::MultiCreateNodeMimeEvent*>(mimeEvent))
                 {
-                    AZStd::vector< GraphCanvas::GraphCanvasMimeEvent* > mimeEvents = multiCreateMimeEvent->CreateMimeEvents();
+                    AZStd::vector< JE::Editor::Tools::GraphCanvas::GraphCanvasMimeEvent* > mimeEvents = multiCreateMimeEvent->CreateMimeEvents();
 
-                    for (GraphCanvas::GraphCanvasMimeEvent* currentEvent : mimeEvents)
+                    for (JE::Editor::Tools::GraphCanvas::GraphCanvasMimeEvent* currentEvent : mimeEvents)
                     {
                         DeveloperUtils::HandleMimeEvent(currentEvent, m_graphCanvasGraphId, m_viewportRectangle, m_widthOffset, m_heightOffset, m_maxRowHeight, m_minorPitch);
                         delete currentEvent;

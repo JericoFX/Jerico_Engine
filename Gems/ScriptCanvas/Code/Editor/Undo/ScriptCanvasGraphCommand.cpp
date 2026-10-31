@@ -14,7 +14,7 @@
 #include <ScriptCanvas/Components/EditorGraph.h>
 #include <ScriptCanvas/Variable/VariableBus.h>
 
-#include <GraphCanvas/Components/SceneBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/SceneBus.h>
 
 #include <Editor/Undo/ScriptCanvasGraphCommand.h>
 

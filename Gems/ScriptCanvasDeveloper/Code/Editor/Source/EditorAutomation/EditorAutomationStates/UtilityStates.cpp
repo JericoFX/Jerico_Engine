@@ -8,13 +8,13 @@
 
 #include <QTableView>
 
-#include <GraphCanvas/Components/Nodes/Group/NodeGroupBus.h>
-#include <GraphCanvas/Components/Nodes/NodeBus.h>
-#include <GraphCanvas/Components/SceneBus.h>
-#include <GraphCanvas/Components/ViewBus.h>
-#include <GraphCanvas/Components/VisualBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/Nodes/Group/NodeGroupBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/Nodes/NodeBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/SceneBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/ViewBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/VisualBus.h>
 
-#include <GraphCanvas/Utils/ConversionUtils.h>
+#include <JE/Editor/Tools/GraphCanvas/Utils/ConversionUtils.h>
 
 #include <ScriptCanvasDeveloperEditor/EditorAutomation/EditorAutomationStates/UtilityStates.h>
 
@@ -37,12 +37,12 @@ namespace ScriptCanvas::Developer
 
     void FindNodePosition::OnCustomAction()
     {
-        const GraphCanvas::NodeId* nodeId = GetStateModel()->GetStateDataAs<GraphCanvas::NodeId>(m_nodeId);
+        const JE::Editor::Tools::GraphCanvas::NodeId* nodeId = GetStateModel()->GetStateDataAs<JE::Editor::Tools::GraphCanvas::NodeId>(m_nodeId);
 
         if (nodeId)
         {
             QGraphicsItem* graphicsItem = nullptr;
-            GraphCanvas::VisualRequestBus::EventResult(graphicsItem, (*nodeId), &GraphCanvas::VisualRequests::AsGraphicsItem);
+            JE::Editor::Tools::GraphCanvas::VisualRequestBus::EventResult(graphicsItem, (*nodeId), &JE::Editor::Tools::GraphCanvas::VisualRequests::AsGraphicsItem);
 
             if (graphicsItem)
             {
@@ -84,7 +84,7 @@ namespace ScriptCanvas::Developer
         if (groupId)
         {
             QRectF groupBoundingBox;
-            GraphCanvas::NodeGroupRequestBus::EventResult(groupBoundingBox, (*groupId), &GraphCanvas::NodeGroupRequests::GetGroupBoundingBox);
+            JE::Editor::Tools::GraphCanvas::NodeGroupRequestBus::EventResult(groupBoundingBox, (*groupId), &JE::Editor::Tools::GraphCanvas::NodeGroupRequests::GetGroupBoundingBox);
 
             qreal horizontalPoint = groupBoundingBox.left() + groupBoundingBox.width() * m_offsets.m_horizontalPosition;
             horizontalPoint += m_offsets.m_horizontalOffset;
@@ -105,7 +105,7 @@ namespace ScriptCanvas::Developer
     // FindEndpointOfTypeState
     ////////////////////////////
 
-    FindEndpointOfTypeState::FindEndpointOfTypeState(AutomationStateModelId targetNodeId, AutomationStateModelId outputId, GraphCanvas::ConnectionType connectionType, GraphCanvas::SlotType slotType, int slotNumber)
+    FindEndpointOfTypeState::FindEndpointOfTypeState(AutomationStateModelId targetNodeId, AutomationStateModelId outputId, JE::Editor::Tools::GraphCanvas::ConnectionType connectionType, JE::Editor::Tools::GraphCanvas::SlotType slotType, int slotNumber)
         : CustomActionState("FindEndpointOfTypeState")
         , m_targetNodeId(targetNodeId)
         , m_outputId(outputId)
@@ -118,12 +118,12 @@ namespace ScriptCanvas::Developer
 
     void FindEndpointOfTypeState::OnCustomAction()
     {
-        const GraphCanvas::NodeId* nodeId = GetStateModel()->GetStateDataAs<GraphCanvas::NodeId>(m_targetNodeId);
+        const JE::Editor::Tools::GraphCanvas::NodeId* nodeId = GetStateModel()->GetStateDataAs<JE::Editor::Tools::GraphCanvas::NodeId>(m_targetNodeId);
 
         if (nodeId)
         {
-            AZStd::vector< GraphCanvas::SlotId > slotIds;
-            GraphCanvas::NodeRequestBus::EventResult(slotIds, (*nodeId), &GraphCanvas::NodeRequests::FindVisibleSlotIdsByType, m_connectionType, m_slotType);
+            AZStd::vector< JE::Editor::Tools::GraphCanvas::SlotId > slotIds;
+            JE::Editor::Tools::GraphCanvas::NodeRequestBus::EventResult(slotIds, (*nodeId), &JE::Editor::Tools::GraphCanvas::NodeRequests::FindVisibleSlotIdsByType, m_connectionType, m_slotType);
 
             if (slotIds.size() <= m_slotNumber)
             {
@@ -131,9 +131,9 @@ namespace ScriptCanvas::Developer
                 return;
             }
 
-            GraphCanvas::SlotId slotId = slotIds[m_slotNumber];
+            JE::Editor::Tools::GraphCanvas::SlotId slotId = slotIds[m_slotNumber];
 
-            GraphCanvas::Endpoint endpoint = GraphCanvas::Endpoint((*nodeId), slotId);
+            JE::Editor::Tools::GraphCanvas::Endpoint endpoint = JE::Editor::Tools::GraphCanvas::Endpoint((*nodeId), slotId);
             GetStateModel()->SetStateData(m_outputId, endpoint);
         }
         else
@@ -156,12 +156,12 @@ namespace ScriptCanvas::Developer
 
     void GetLastConnection::OnCustomAction()
     {
-        const GraphCanvas::Endpoint* targetEndpoint = GetStateModel()->GetStateDataAs<GraphCanvas::Endpoint>(m_targetEndpoint);
+        const JE::Editor::Tools::GraphCanvas::Endpoint* targetEndpoint = GetStateModel()->GetStateDataAs<JE::Editor::Tools::GraphCanvas::Endpoint>(m_targetEndpoint);
 
         if (targetEndpoint)
         {
-            GraphCanvas::ConnectionId connectionId;
-            GraphCanvas::SlotRequestBus::EventResult(connectionId, targetEndpoint->GetSlotId(), &GraphCanvas::SlotRequests::GetLastConnection);
+            JE::Editor::Tools::GraphCanvas::ConnectionId connectionId;
+            JE::Editor::Tools::GraphCanvas::SlotRequestBus::EventResult(connectionId, targetEndpoint->GetSlotId(), &JE::Editor::Tools::GraphCanvas::SlotRequests::GetLastConnection);
 
             GetStateModel()->SetStateData(m_outputId, connectionId);
         }
@@ -251,7 +251,7 @@ namespace ScriptCanvas::Developer
         if (sceneMemberTarget && targetGroupId)
         {
             AZ::EntityId groupId;
-            GraphCanvas::GroupableSceneMemberRequestBus::EventResult(groupId, (*sceneMemberTarget), &GraphCanvas::GroupableSceneMemberRequests::GetGroupId);
+            JE::Editor::Tools::GraphCanvas::GroupableSceneMemberRequestBus::EventResult(groupId, (*sceneMemberTarget), &JE::Editor::Tools::GraphCanvas::GroupableSceneMemberRequests::GetGroupId);
 
             bool groupMatch = groupId == (*targetGroupId);
 

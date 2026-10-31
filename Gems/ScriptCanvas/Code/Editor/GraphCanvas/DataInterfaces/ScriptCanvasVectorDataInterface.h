@@ -7,7 +7,7 @@
  */
 #pragma once
 
-#include <GraphCanvas/Components/NodePropertyDisplay/VectorDataInterface.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/NodePropertyDisplay/VectorDataInterface.h>
 
 #include "ScriptCanvasDataInterface.h"
 
@@ -15,7 +15,7 @@ namespace ScriptCanvasEditor
 {
     template<class Type, int ElementCount>
     class ScriptCanvasVectorizedDataInterface
-        : public ScriptCanvasDataInterface<GraphCanvas::VectorDataInterface>
+        : public ScriptCanvasDataInterface<JE::Editor::Tools::GraphCanvas::VectorDataInterface>
     {
     public:
         AZ_CLASS_ALLOCATOR(ScriptCanvasVectorizedDataInterface, AZ::SystemAllocator);

@@ -1,0 +1,87 @@
+{
+  "utc": "2026-10-30T22:53:28.8568598Z",
+  "scope": "MaterialCanvas private installed readonly graph preview and normal closure",
+  "focalPreviewClosureAccepted": true,
+  "wholeGemAccepted": false,
+  "publicationPending": true,
+  "session": 3049,
+  "nativeExit": 0,
+  "normalClosure": true,
+  "nativeProcesses": 6,
+  "allNativeExitZero": true,
+  "forcedCleanup": false,
+  "inputDrift": 0,
+  "postimageIssues": 0,
+  "protectedCount": 28,
+  "authorizedMutableChanges": 0,
+  "observed": [
+    "Existing JENativeGraphCanvasValidation.materialgraph opened; Float 0.25 connected to Standard PBR Roughness; automatic compilation completed; preview rendered in Vulkan",
+    "Nodes initially outside saved viewport; minimap recentered them without modifying graph",
+    "Asset Processor idle, normal Ctrl+Q then Editor normal close; no Save or property edits"
+  ],
+  "warnings": [
+    "Vulkan unused vertex attributes reported as performance warnings",
+    "Two DynamicDrawContext PipelineState warnings at shutdown retained; no zero-warning claim"
+  ],
+  "screenshots": [
+    "screenshots/material-preview-readonly.png",
+    "screenshots/material-graph-preview-centered.png"
+  ],
+  "ownedKernelCleanup": {
+    "originalsAbsentVerified": true,
+    "freeGiB": 17.19,
+    "pids": [
+      7328,
+      18808
+    ],
+    "ramPercent": 46.14,
+    "supportedReset": true
+  },
+  "retainedHostServices": {
+    "pids": [
+      18364,
+      20584,
+      21588,
+      10532,
+      10592
+    ],
+    "reason": "Host-managed MCP; session/transport safe shutdown not established; not claimed cleaned"
+  },
+  "evidence": [
+    {
+      "sha256": "200F799CF616631E005DACA95CF08BA57EE0E5ED717510067000EA84EB6DB8E6",
+      "path": "result.json",
+      "bytes": 287
+    },
+    {
+      "sha256": "39289BF0EF5543335CEC02E13E83ADE7EA8B3B2F6A4BBBEDA5A8B3DC35DCA32D",
+      "path": "postflight.json",
+      "bytes": 512
+    },
+    {
+      "sha256": "9DEAFA08702810991CA8507EF4E3517BA3E81B4E3CD6003D0EA82E8C44B365D3",
+      "path": "cohort-terminal.json",
+      "bytes": 2173
+    },
+    {
+      "sha256": "24B4DCC1C3B19CD7DF30BDC6254901BDBC09BD827A86CB244B37D7DE05F74B24",
+      "path": "Editor.runtime-module.json",
+      "bytes": 1465
+    },
+    {
+      "sha256": "B457360A0B3ACD17A52718EC7C065D8C4B0B53BA544DE0548C22577A1E210E94",
+      "path": "Editor.full.log",
+      "bytes": 8176
+    },
+    {
+      "sha256": "28C9E240E0B8CAAAED8AA7C0AF7A8C49B34DEC038C24BD4AECD4BC3DC7B738AE",
+      "path": "raw-postimages.json",
+      "bytes": 32107
+    },
+    {
+      "sha256": "30DE71AFF28758CFDEA31F23A484FB2C1A09B14B8360261EE1997341E1C915FF",
+      "path": "screenshots/material-graph-preview-centered.png",
+      "bytes": 188127
+    }
+  ]
+}

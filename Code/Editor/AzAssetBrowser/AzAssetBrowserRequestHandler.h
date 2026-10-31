@@ -62,6 +62,11 @@ public:
     void SelectAsset(QWidget* caller, const AZStd::string& fullFilePath) override;
     void SelectFolderAsset([[maybe_unused]] QWidget* caller, [[maybe_unused]] const AZStd::string& fullFolderPath) override;
 
+    //! Dispatch a source or product through the existing associated-editor bus. Does not open the OS fallback.
+    static bool OpenEntryInAssociatedEditor(const AzToolsFramework::AssetBrowser::AssetBrowserEntry* entry);
+    //! Select an existing source opener by path; true also preserves a veto or user cancellation.
+    static bool OpenSourceFileInAssociatedEditor(const AZStd::string& fullEntryPath, const AZ::Uuid& sourceID);
+
     static bool OpenWithOS(const AZStd::string& fullEntryPath);
     void AddCreateMenu(QMenu* menu, const AZStd::string fullFolderPath);
     void CreateSortAction(

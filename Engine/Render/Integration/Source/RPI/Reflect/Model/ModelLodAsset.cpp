@@ -9,11 +9,80 @@
 #include <JE/Render/RPI/Reflect/Model/ModelLodAsset.h>
 
 #include <AzCore/Asset/AssetSerializer.h>
+#include <AzCore/std/containers/unordered_map.h>
 
 namespace JE::Render
 {
     namespace RPI
     {
+        void ModelSurfaceIdentity::Reflect(AZ::ReflectContext* context)
+        {
+            if (auto* sc = azrtti_cast<AZ::SerializeContext*>(context))
+            {
+                sc->Class<ModelSurfaceIdentity>()->Version(1)
+                    ->Field("SurfaceId", &ModelSurfaceIdentity::m_surfaceId)
+                    ->Field("FaceId", &ModelSurfaceIdentity::m_faceId)
+                    ->Field("RegionId", &ModelSurfaceIdentity::m_regionId);
+            }
+        }
+
+        void ModelSurfaceIdentityTable::Reflect(AZ::ReflectContext* context)
+        {
+            ModelSurfaceIdentity::Reflect(context);
+            if (auto* sc = azrtti_cast<AZ::SerializeContext*>(context))
+            {
+                sc->Class<ModelSurfaceIdentityTable>()->Version(1)
+                    ->Field("Schema", &ModelSurfaceIdentityTable::m_schema)
+                    ->Field("Entries", &ModelSurfaceIdentityTable::m_entries);
+            }
+        }
+
+        bool ModelSurfaceIdentityTable::Validate(size_t triangleCount) const
+        {
+            if (m_schema == 0) { return m_entries.empty(); }
+            if (m_schema != Schema || triangleCount == 0 || m_entries.size() != triangleCount) { return false; }
+            AZStd::unordered_map<AZ::Uuid, AZ::Uuid> ownership;
+            for (const auto& entry : m_entries)
+            {
+                if (entry.m_surfaceId.IsNull() || entry.m_faceId.IsNull() ||
+                    (entry.m_regionId && entry.m_regionId->IsNull())) { return false; }
+                const auto inserted = ownership.emplace(entry.m_faceId, entry.m_surfaceId);
+                if (!inserted.second && inserted.first->second != entry.m_surfaceId) { return false; }
+            }
+            return true;
+        }
+
+        bool ModelLodAsset::Mesh::ValidateSurfaceIdentityTable() const
+        {
+            if (m_surfaceIdentityTable.m_schema == 0 && m_surfaceIdentityTable.m_entries.empty()) { return true; }
+            return GetIndexCount() % 3 == 0 && m_surfaceIdentityTable.Validate(GetIndexCount() / 3);
+        }
+
+        const ModelSurfaceIdentity* ModelLodAsset::Mesh::GetSurfaceIdentity(uint32_t primitiveIndex) const
+        {
+            const auto& table = m_surfaceIdentityTable;
+            if (table.m_schema != ModelSurfaceIdentityTable::Schema || GetIndexCount() % 3 != 0 ||
+                table.m_entries.size() != GetIndexCount() / 3 || primitiveIndex >= table.m_entries.size()) { return nullptr; }
+            const auto& entry = table.m_entries[primitiveIndex];
+            return entry.m_surfaceId.IsNull() || entry.m_faceId.IsNull() ||
+                (entry.m_regionId && entry.m_regionId->IsNull()) ? nullptr : &entry;
+        }
+
+        bool ModelLodAsset::ValidateSurfaceIdentityTables() const
+        {
+            AZStd::unordered_map<AZ::Uuid, AZ::Uuid> ownership;
+            for (const auto& mesh : m_meshes)
+            {
+                if (!mesh.ValidateSurfaceIdentityTable()) { return false; }
+                for (const auto& entry : mesh.GetSurfaceIdentityTable().m_entries)
+                {
+                    const auto inserted = ownership.emplace(entry.m_faceId, entry.m_surfaceId);
+                    if (!inserted.second && inserted.first->second != entry.m_surfaceId) { return false; }
+                }
+            }
+            return true;
+        }
+
         void ModelLodAsset::Reflect(AZ::ReflectContext* context)
         {
             if (auto* serializeContext = azrtti_cast<AZ::SerializeContext*>(context))
@@ -32,15 +101,17 @@ namespace JE::Render
         
         void ModelLodAsset::Mesh::Reflect(AZ::ReflectContext* context)
         {
+            ModelSurfaceIdentityTable::Reflect(context);
             if (auto* serializeContext = azrtti_cast<AZ::SerializeContext*>(context))
             {
                 serializeContext->Class<ModelLodAsset::Mesh>()
-                    ->Version(1)
+                    ->Version(2)
                     ->Field("Name", &ModelLodAsset::Mesh::m_name)
                     ->Field("AABB", &ModelLodAsset::Mesh::m_aabb)
                     ->Field("MaterialSlotId", &ModelLodAsset::Mesh::m_materialSlotId)
                     ->Field("IndexBufferAssetView", &ModelLodAsset::Mesh::m_indexBufferAssetView)
                     ->Field("StreamBufferInfo", &ModelLodAsset::Mesh::m_streamBufferInfo)
+                    ->Field("SurfaceIdentityTable", &ModelLodAsset::Mesh::m_surfaceIdentityTable)
                     ;
             }
 

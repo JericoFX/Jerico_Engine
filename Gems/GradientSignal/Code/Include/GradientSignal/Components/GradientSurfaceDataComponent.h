@@ -11,8 +11,8 @@
 #include <AzCore/Component/Component.h>
 #include <GradientSignal/GradientSampler.h>
 #include <GradientSignal/Ebuses/GradientSurfaceDataRequestBus.h>
-#include <SurfaceData/SurfaceDataModifierRequestBus.h>
-#include <SurfaceData/SurfaceDataTypes.h>
+#include <JE/Geometry/SurfaceData/SurfaceDataModifierRequestBus.h>
+#include <JE/Geometry/SurfaceData/SurfaceDataTypes.h>
 #include <LmbrCentral/Dependency/DependencyNotificationBus.h>
 #include <LmbrCentral/Shape/ShapeComponentBus.h>
 
@@ -33,7 +33,7 @@ namespace GradientSignal
         static void Reflect(AZ::ReflectContext* context);
         float m_thresholdMin = 0.1f;
         float m_thresholdMax = 1.0f;
-        SurfaceData::SurfaceTagVector m_modifierTags;
+        JE::Geometry::SurfaceData::SurfaceTagVector m_modifierTags;
         AZ::EntityId m_shapeConstraintEntityId;
 
         size_t GetNumTags() const;
@@ -46,7 +46,7 @@ namespace GradientSignal
 
     class GradientSurfaceDataComponent
         : public AZ::Component
-        , private SurfaceData::SurfaceDataModifierRequestBus::Handler
+        , private JE::Geometry::SurfaceData::SurfaceDataModifierRequestBus::Handler
         , private LmbrCentral::DependencyNotificationBus::Handler
         , private LmbrCentral::ShapeComponentNotificationsBus::Handler
         , private GradientSurfaceDataRequestBus::Handler
@@ -72,11 +72,11 @@ namespace GradientSignal
         bool WriteOutConfig(AZ::ComponentConfig* outBaseConfig) const override;
 
         ////////////////////////////////////////////////////////////////////////
-        // SurfaceData::SurfaceDataModifierRequestBus
+        // JE::Geometry::SurfaceData::SurfaceDataModifierRequestBus
         void ModifySurfacePoints(
             AZStd::span<const AZ::Vector3> positions,
             AZStd::span<const AZ::EntityId> creatorEntityIds,
-            AZStd::span<SurfaceData::SurfaceTagWeights> weights) const override;
+            AZStd::span<JE::Geometry::SurfaceData::SurfaceTagWeights> weights) const override;
 
         //////////////////////////////////////////////////////////////////////////
         // LmbrCentral::DependencyNotificationBus
@@ -101,9 +101,9 @@ namespace GradientSignal
         void SetShapeConstraintEntityId(AZ::EntityId entityId) override;
 
     private:
-        void UpdateRegistryAndCache(SurfaceData::SurfaceDataRegistryHandle& registryHandle);
+        void UpdateRegistryAndCache(JE::Geometry::SurfaceData::SurfaceDataRegistryHandle& registryHandle);
 
-        SurfaceData::SurfaceDataRegistryHandle m_modifierHandle = SurfaceData::InvalidSurfaceDataRegistryHandle;
+        JE::Geometry::SurfaceData::SurfaceDataRegistryHandle m_modifierHandle = JE::Geometry::SurfaceData::InvalidSurfaceDataRegistryHandle;
         GradientSurfaceDataConfig m_configuration;
         GradientSampler m_gradientSampler;
 

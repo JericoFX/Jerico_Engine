@@ -29,6 +29,7 @@
 #include <AzGameFramework/Application/GameApplication.h>
 
 #include <JE/Geometry/GeometryModule.h>
+#include <JE/Geometry/SurfaceData/SurfaceDataModule.h>
 #include <JE/World/Camera/CameraModule.h>
 #include <JE/Debug/ImGui/ImGuiModule.h>
 #include <JE/Debug/Profiler/ProfilerModule.h>
@@ -75,6 +76,7 @@ namespace JE::Runtime
         {
             AzGameFramework::GameApplication::CreateStaticModules(outModules);
             outModules.emplace_back(JE::Geometry::CreateRuntimeModule());
+            outModules.emplace_back(JE::Geometry::SurfaceData::CreateRuntimeModule());
             outModules.emplace_back(JE::World::Camera::CreateRuntimeModule());
             outModules.emplace_back(JE::Render::Scene::CreateModule());
             outModules.emplace_back(JE::Render::Features::CreateModule());

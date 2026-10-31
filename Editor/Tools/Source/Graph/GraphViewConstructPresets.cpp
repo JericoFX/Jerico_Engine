@@ -7,7 +7,7 @@
  */
 
 #include <JE/Editor/Tools/Graph/GraphViewConstructPresets.h>
-#include <GraphCanvas/Components/Nodes/Comment/CommentBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/Nodes/Comment/CommentBus.h>
 
 #include <AzCore/Serialization/EditContext.h>
 
@@ -17,7 +17,7 @@ namespace JE::Editor::Tools
     {
         if (auto serialize = azrtti_cast<AZ::SerializeContext*>(context))
         {
-            serialize->Class<GraphViewConstructPresets, GraphCanvas::EditorConstructPresets>()
+            serialize->Class<GraphViewConstructPresets, JE::Editor::Tools::GraphCanvas::EditorConstructPresets>()
                 ->Version(0);
 
             if (auto editContext = serialize->GetEditContext())
@@ -29,11 +29,11 @@ namespace JE::Editor::Tools
         }
     }
 
-    void GraphViewConstructPresets::InitializeConstructType(GraphCanvas::ConstructType constructType)
+    void GraphViewConstructPresets::InitializeConstructType(JE::Editor::Tools::GraphCanvas::ConstructType constructType)
     {
-        if (constructType == GraphCanvas::ConstructType::NodeGroup)
+        if (constructType == JE::Editor::Tools::GraphCanvas::ConstructType::NodeGroup)
         {
-            auto presetBucket = static_cast<GraphCanvas::NodeGroupPresetBucket*>(ModPresetBucket(GraphCanvas::ConstructType::NodeGroup));
+            auto presetBucket = static_cast<JE::Editor::Tools::GraphCanvas::NodeGroupPresetBucket*>(ModPresetBucket(JE::Editor::Tools::GraphCanvas::ConstructType::NodeGroup));
             if (presetBucket)
             {
                 presetBucket->ClearPresets();
@@ -44,7 +44,7 @@ namespace JE::Editor::Tools
                     if (auto preset = presetBucket->CreateNewPreset(defaultGroupPresetPair.first))
                     {
                         const auto& presetSaveData = preset->GetPresetData();
-                        if (auto saveData = presetSaveData.FindSaveDataAs<GraphCanvas::CommentNodeTextSaveData>())
+                        if (auto saveData = presetSaveData.FindSaveDataAs<JE::Editor::Tools::GraphCanvas::CommentNodeTextSaveData>())
                         {
                             saveData->m_backgroundColor = defaultGroupPresetPair.second;
                         }
@@ -52,9 +52,9 @@ namespace JE::Editor::Tools
                 }
             }
         }
-        else if (constructType == GraphCanvas::ConstructType::CommentNode)
+        else if (constructType == JE::Editor::Tools::GraphCanvas::ConstructType::CommentNode)
         {
-            auto presetBucket = static_cast<GraphCanvas::CommentPresetBucket*>(ModPresetBucket(GraphCanvas::ConstructType::CommentNode));
+            auto presetBucket = static_cast<JE::Editor::Tools::GraphCanvas::CommentPresetBucket*>(ModPresetBucket(JE::Editor::Tools::GraphCanvas::ConstructType::CommentNode));
             if (presetBucket)
             {
                 presetBucket->ClearPresets();

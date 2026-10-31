@@ -19,8 +19,8 @@
 
 #include <AzToolsFramework/ToolsComponents/EditorComponentBase.h>
 
-#include <GraphCanvas/Components/SceneBus.h>
-#include <GraphCanvas/Components/StyleBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/SceneBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/StyleBus.h>
 
 #include <Editor/GraphCanvas/GraphCanvasEditorNotificationBusId.h>
 #include <Editor/View/Widgets/UnitTestPanel/UnitTestTreeView.h>

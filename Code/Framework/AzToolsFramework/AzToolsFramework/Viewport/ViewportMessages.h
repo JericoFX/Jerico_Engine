@@ -28,6 +28,7 @@ namespace AzFramework
     namespace RenderGeometry
     {
         struct RayRequest;
+        struct RayResult;
     }
 } // namespace AzFramework
 
@@ -372,6 +373,9 @@ namespace AzToolsFramework
 
     //! Utility function to return EntityContextId.
     AZTF_API AzFramework::EntityContextId GetEntityContextId();
+
+    //! Return the closest visible geometry hit, including metadata supplied by its owner. No placement fallback.
+    AZTF_API AzFramework::RenderGeometry::RayResult FindClosestPickHit(const AzFramework::RenderGeometry::RayRequest& rayRequest);
 
     //! Performs an intersection test against meshes in the scene, if there is a hit (the ray intersects
     //! a mesh), that position is returned, otherwise a point projected defaultDistance from the

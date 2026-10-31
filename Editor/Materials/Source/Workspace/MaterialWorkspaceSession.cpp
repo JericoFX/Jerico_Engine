@@ -82,6 +82,25 @@ namespace JE::Editor
         return *m_graphEnvironment;
     }
 
+    void MaterialWorkspaceSession::PrepareGraphWorkspace(const AZStd::string& sourcePath)
+    {
+        const bool firstOpen = !m_graphWorkspaceOpened;
+        m_graphWorkspaceOpened = true;
+        if (!firstOpen || !sourcePath.empty() || !m_documentIds.empty() || !m_activeDocumentId.IsNull() ||
+            !JE::Editor::Tools::GetSettingsValue("/O3DE/Atom/MaterialCanvas/CreateDefaultDocumentOnStart", true))
+        {
+            return;
+        }
+
+        EnableGraphDocuments();
+        const AZ::Uuid id = m_documentSystem->CreateDocumentFromTypeName("Material Graph");
+        if (!id.IsNull())
+        {
+            JE::Editor::Tools::AtomToolsDocumentNotificationBus::Event(GetToolId(),
+                &JE::Editor::Tools::AtomToolsDocumentNotifications::OnDocumentOpened, id);
+        }
+    }
+
     void MaterialWorkspaceSession::EnsureMaterialPreviewSettings()
     {
         if (!JE::Editor::Tools::EntityPreviewViewportSettingsRequestBus::HasHandlers(GetToolId()))
@@ -171,7 +190,11 @@ namespace JE::Editor
         {
             return false;
         }
-        m_activeDocumentId = documentId;
+        if (m_activeDocumentId != documentId)
+        {
+            m_activeDocumentId = documentId;
+            emit DocumentSelected(documentId);
+        }
         return true;
     }
 

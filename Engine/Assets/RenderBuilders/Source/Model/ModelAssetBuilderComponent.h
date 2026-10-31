@@ -10,6 +10,7 @@
 
 #include <JE/Render/RPI/Reflect/Base.h>
 #include <JE/Render/RPI/Reflect/Model/MorphTargetMetaAssetCreator.h>
+#include <JE/Render/RPI/Reflect/Model/ModelLodAsset.h>
 
 #include <SceneAPI/SceneCore/Components/ExportingComponent.h>
 
@@ -65,6 +66,7 @@ namespace JE::Assets::RenderBuilders
     class ModelAssetBuilderComponent
         : public AZ::SceneAPI::SceneCore::ExportingComponent
     {
+        friend class ModelSurfaceIdentityTests;
     public:
         AZ_COMPONENT(
             ModelAssetBuilderComponent,
@@ -94,6 +96,7 @@ namespace JE::Assets::RenderBuilders
             AZStd::vector<AZ::Color> m_meshClothData;
             AZStd::vector<MaterialUid> m_materials;
             bool m_isMorphed = false;
+            JE::Render::RPI::ModelSurfaceIdentityTable m_surfaceIdentities;
 
             MaterialUid GetMaterialUniqueId(uint32_t index) const;
         };
@@ -126,6 +129,7 @@ namespace JE::Assets::RenderBuilders
             MaterialUid m_materialUid;
             uint32_t m_influencesPerVertex = 0;
             size_t m_vertexCount = 0;
+            JE::Render::RPI::ModelSurfaceIdentityTable m_surfaceIdentities;
 
 
             bool CanBeMerged() const
@@ -141,6 +145,11 @@ namespace JE::Assets::RenderBuilders
         static constexpr inline const char* s_defaultVertexBufferPoolSourcePath = "ResourcePools/DefaultVertexBufferPool.resourcepool";
 
     private:
+
+        static JE::Render::RPI::ModelSurfaceIdentityTable ResolveSurfaceIdentities(
+            const AZ::SceneAPI::Containers::SceneGraph& graph,
+            AZ::SceneAPI::Containers::SceneGraph::NodeIndex node,
+            const AZ::SceneAPI::DataTypes::IMeshGroup& group);
 
         //! Used to accumulate info about how much space to allocate when creating a ProductMeshContent structure.
         //!
@@ -174,6 +183,7 @@ namespace JE::Assets::RenderBuilders
         {
             AZ::Name m_name;
             AZ::RHI::BufferViewDescriptor m_indexView;
+            JE::Render::RPI::ModelSurfaceIdentityTable m_surfaceIdentities;
             AZ::RHI::BufferViewDescriptor m_positionView;
             AZ::RHI::BufferViewDescriptor m_normalView;
             AZStd::vector<AZ::RHI::BufferViewDescriptor> m_uvSetViews;

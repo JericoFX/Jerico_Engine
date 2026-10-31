@@ -11,6 +11,7 @@
 #include <AzCore/Component/Entity.h>
 #include <AzCore/Jobs/JobManagerComponent.h>
 #include <AzCore/UnitTest/TestTypes.h>
+#include <AzCore/std/smart_ptr/make_shared.h>
 #include <AzCore/std/smart_ptr/shared_ptr.h>
 #include <AzCore/std/smart_ptr/unique_ptr.h>
 #include <SceneAPI/SceneCore/Containers/Scene.h>
@@ -25,6 +26,9 @@
 #include <SceneProcessing/Generation/Components/MeshOptimizer/MeshOptimizerComponent.h>
 
 #include <InitSceneAPIFixture.h>
+#include <JE/Assets/RenderBuilders/SceneProcessing/Rules/SurfaceIdentityRule.h>
+#include <SceneAPI/SceneCore/DataTypes/GraphData/ICustomPropertyData.h>
+#include <AzCore/std/any.h>
 
 namespace AZ::SceneAPI::DataTypes
 {
@@ -268,5 +272,40 @@ namespace JE::Assets::RenderBuilders::SceneProcessing {
         };
 
         TestSkinDuplication(MakeSkinData(sourceLinks), expectedLinks);
+    }
+    TEST_F(VertexDeduplicationFixture, OptimizedCoincidentFacesRetainSourceOccurrenceAcrossMaterialSplits)
+    {
+        AZ::SceneAPI::Containers::Scene scene("lineage"); auto& graph = scene.GetGraph();
+        auto mesh = AZStd::make_shared<AZ::SceneData::GraphData::MeshData>();
+        mesh->AddPosition(AZ::Vector3(0, 0, 0)); mesh->AddPosition(AZ::Vector3(1, 0, 0)); mesh->AddPosition(AZ::Vector3(0, 1, 0));
+        for (int i = 0; i != 3; ++i) { mesh->AddNormal(AZ::Vector3::CreateAxisZ()); }
+        mesh->AddFace(0, 1, 2, 7); mesh->AddFace(0, 1, 2, 9); mesh->AddFace(0, 1, 2, 7); mesh->AddFace(0, 1, 2, 9);
+        const auto original = graph.AddChild(graph.GetRoot(), "mesh", mesh);
+        auto group = AZStd::make_shared<AZ::SceneAPI::SceneData::MeshGroup>();
+        group->GetSceneNodeSelectionList().AddSelectedNode("mesh"); scene.GetManifest().AddEntry(group);
+        Generation::MeshOptimizerComponent component; AZ::SceneAPI::Events::GenerateSimplificationEventContext context(scene, "pc");
+        ASSERT_EQ(component.OptimizeMeshes(context), AZ::SceneAPI::Events::ProcessingResult::Success);
+        const auto optimized = AZ::SceneAPI::Utilities::SceneGraphSelector::RemapToOptimizedMesh(graph, original);
+        ASSERT_NE(optimized, original); ASSERT_TRUE(optimized.IsValid());
+        const auto optimizedMesh = AZStd::rtti_pointer_cast<AZ::SceneAPI::DataTypes::IMeshData>(graph.GetNodeContent(optimized));
+        ASSERT_TRUE(optimizedMesh); ASSERT_EQ(optimizedMesh->GetFaceCount(), 4);
+        const AZStd::vector<AZ::u32>* mapping = nullptr;
+        auto child = graph.GetNodeChild(optimized);
+        while (child.IsValid())
+        {
+            const auto properties = AZStd::rtti_pointer_cast<AZ::SceneAPI::DataTypes::ICustomPropertyData>(graph.GetNodeContent(child));
+            if (properties)
+            {
+                const auto found = properties->GetPropertyMap().find(Rules::SurfaceIdentityRule::SourcePolygonMapKey);
+                if (found != properties->GetPropertyMap().end()) { mapping = AZStd::any_cast<AZStd::vector<AZ::u32>>(&found->second); }
+            }
+            child = graph.GetNodeSibling(child);
+        }
+        ASSERT_NE(mapping, nullptr); EXPECT_EQ(*mapping, (AZStd::vector<AZ::u32>{0, 2, 1, 3}));
+        for (AZ::u32 face = 0; face != optimizedMesh->GetFaceCount(); ++face)
+        {
+            EXPECT_EQ(optimizedMesh->GetFaceMaterialId(face), mesh->GetFaceMaterialId((*mapping)[face]));
+        }
+        // This proves transport in this generation, not persistent identity between indistinguishable reimports.
     }
 } // namespace SceneProcessing

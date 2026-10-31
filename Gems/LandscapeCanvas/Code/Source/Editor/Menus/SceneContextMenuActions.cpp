@@ -20,7 +20,7 @@
 namespace LandscapeCanvasEditor
 {
     FindSelectedNodesAction::FindSelectedNodesAction(QObject* parent)
-        : GraphCanvas::ContextMenuAction("", parent)
+        : JE::Editor::Tools::GraphCanvas::ContextMenuAction("", parent)
     {
         UpdateActionState();
 
@@ -29,12 +29,12 @@ namespace LandscapeCanvasEditor
         setStatusTip(tooltip);
     }
 
-    GraphCanvas::ActionGroupId FindSelectedNodesAction::GetActionGroupId() const
+    JE::Editor::Tools::GraphCanvas::ActionGroupId FindSelectedNodesAction::GetActionGroupId() const
     {
         return AZ_CRC_CE("SceneActionGroup");
     }
 
-    void FindSelectedNodesAction::RefreshAction(const GraphCanvas::GraphId& graphId, const AZ::EntityId& targetId)
+    void FindSelectedNodesAction::RefreshAction(const JE::Editor::Tools::GraphCanvas::GraphId& graphId, const AZ::EntityId& targetId)
     {
         AZ_UNUSED(graphId);
         AZ_UNUSED(targetId);
@@ -42,7 +42,7 @@ namespace LandscapeCanvasEditor
         UpdateActionState();
     }
 
-    GraphCanvas::ContextMenuAction::SceneReaction FindSelectedNodesAction::TriggerAction(const GraphCanvas::GraphId& graphId, [[maybe_unused]] const AZ::Vector2& scenePos)
+    JE::Editor::Tools::GraphCanvas::ContextMenuAction::SceneReaction FindSelectedNodesAction::TriggerAction(const JE::Editor::Tools::GraphCanvas::GraphId& graphId, [[maybe_unused]] const AZ::Vector2& scenePos)
     {
         // Find the selected Entities in the Editor
         AzToolsFramework::EntityIdList selectedEntities;
@@ -76,7 +76,7 @@ namespace LandscapeCanvasEditor
             JE::Editor::Tools::GraphModel::Integration::GraphControllerRequestBus::Event(graphId, &JE::Editor::Tools::GraphModel::Integration::GraphControllerRequests::CenterOnNodes, nodesToSelect);
         }
 
-        return GraphCanvas::ContextMenuAction::SceneReaction::Nothing;
+        return JE::Editor::Tools::GraphCanvas::ContextMenuAction::SceneReaction::Nothing;
     }
 
     void FindSelectedNodesAction::UpdateActionState()

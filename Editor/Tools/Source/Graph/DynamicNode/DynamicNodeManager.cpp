@@ -22,7 +22,7 @@
 #include <AzCore/std/string/regex.h>
 #include <AzFramework/StringFunc/StringFunc.h>
 #include <AzToolsFramework/API/EditorAssetSystemAPI.h>
-#include <GraphCanvas/Widgets/NodePalette/TreeItems/IconDecoratedNodePaletteTreeItem.h>
+#include <JE/Editor/Tools/GraphCanvas/Widgets/NodePalette/TreeItems/IconDecoratedNodePaletteTreeItem.h>
 #include <JE/Editor/Tools/GraphModel/Integration/NodePalette/GraphCanvasNodePaletteItems.h>
 
 namespace JE::Editor::Tools
@@ -138,11 +138,11 @@ namespace JE::Editor::Tools
         m_nodeConfigMap.clear();
     }
 
-    GraphCanvas::GraphCanvasTreeItem* DynamicNodeManager::CreateNodePaletteTree() const
+    JE::Editor::Tools::GraphCanvas::GraphCanvasTreeItem* DynamicNodeManager::CreateNodePaletteTree() const
     {
-        auto rootItem = aznew GraphCanvas::NodePaletteTreeItem("Root", m_toolId);
+        auto rootItem = aznew JE::Editor::Tools::GraphCanvas::NodePaletteTreeItem("Root", m_toolId);
 
-        AZStd::unordered_map<AZStd::string, GraphCanvas::GraphCanvasTreeItem*> categoryMap;
+        AZStd::unordered_map<AZStd::string, JE::Editor::Tools::GraphCanvas::GraphCanvasTreeItem*> categoryMap;
         categoryMap[""] = rootItem;
 
         // Create the node palette tree by traversing the configuration container, registering any unique categories and child items
@@ -154,7 +154,7 @@ namespace JE::Editor::Tools
             {
                 // Creating a new node palette tree item category and setting the title palette based on the 1st dynamic node config added
                 auto categoryTreeItem =
-                    rootItem->CreateChildNode<GraphCanvas::IconDecoratedNodePaletteTreeItem>(config.m_category, m_toolId);
+                    rootItem->CreateChildNode<JE::Editor::Tools::GraphCanvas::IconDecoratedNodePaletteTreeItem>(config.m_category, m_toolId);
                 categoryTreeItem->SetTitlePalette(config.m_titlePaletteName);
                 categoryItr = categoryMap.emplace(config.m_category, categoryTreeItem).first;
             }

@@ -10,7 +10,7 @@
 
 #include <ScriptCanvas/Bus/UndoBus.h>
 #include <AzToolsFramework/Undo/UndoSystem.h>
-#include <GraphCanvas/Editor/AssetEditorBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Editor/AssetEditorBus.h>
 
 namespace ScriptCanvasEditor
 {

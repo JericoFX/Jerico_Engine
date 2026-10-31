@@ -21,7 +21,7 @@
 #include <JE/Render/Materials/MaterialComponentBus.h>
 
 #include <GradientSignal/Ebuses/GradientRequestBus.h>
-#include <SurfaceData/SurfaceDataProviderRequestBus.h>
+#include <JE/Geometry/SurfaceData/SurfaceDataProviderRequestBus.h>
 #include <TerrainSystem/TerrainSystemBus.h>
 
 namespace Terrain

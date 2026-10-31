@@ -44,6 +44,7 @@ namespace AssetProcessor
 
         void AttachToModel(RCJobListModel* target);
         RCJob* GetNextPendingJob();
+        void SetSourceAnalysisIdle(bool idle);
 
         void AddJobIdEntry(AssetProcessor::RCJob* rcJob);
         void RemoveJobIdEntry(AssetProcessor::RCJob* rcJob);
@@ -74,6 +75,7 @@ namespace AssetProcessor
         void AssetProcessorPlatformDisconnected(const AZStd::string platform) override;
         // -----------
 
+        bool m_sourceAnalysisIdle = true; // Clients without an AssetProcessorManager preserve fallback dispatch.
         RCJobListModel* m_sourceModel;
     private Q_SLOTS:
 

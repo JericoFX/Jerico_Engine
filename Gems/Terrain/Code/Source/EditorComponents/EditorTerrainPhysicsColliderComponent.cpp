@@ -155,9 +155,9 @@ namespace Terrain
         gameEntity->AddComponent(aznew TerrainPhysicsColliderComponent(m_configuration));
     }
 
-    AZStd::unordered_set<SurfaceData::SurfaceTag> EditorTerrainPhysicsColliderComponent::GetSurfaceTagsInUse() const
+    AZStd::unordered_set<JE::Geometry::SurfaceData::SurfaceTag> EditorTerrainPhysicsColliderComponent::GetSurfaceTagsInUse() const
     {
-        AZStd::unordered_set<SurfaceData::SurfaceTag> tagsInUse;
+        AZStd::unordered_set<JE::Geometry::SurfaceData::SurfaceTag> tagsInUse;
 
         for (const TerrainPhysicsSurfaceMaterialMapping& mapping : m_configuration.m_surfaceMaterialMappings)
         {

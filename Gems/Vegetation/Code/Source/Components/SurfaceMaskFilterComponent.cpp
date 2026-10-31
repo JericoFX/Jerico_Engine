@@ -15,7 +15,7 @@
 #include <AzCore/Serialization/EditContext.h>
 #include <AzCore/Serialization/SerializeContext.h>
 #include <AzFramework/Translation/TranslationDef.h>
-#include <SurfaceData/Utility/SurfaceDataUtility.h>
+#include <JE/Geometry/SurfaceData/Utility/SurfaceDataUtility.h>
 #include <Vegetation/InstanceData.h>
 
 #include <Vegetation/Ebuses/DebugNotificationBus.h>
@@ -126,7 +126,7 @@ namespace Vegetation
 
     void SurfaceMaskFilterConfig::AddInclusiveTag(AZStd::string tag)
     {
-        m_inclusiveSurfaceMasks.push_back(SurfaceData::SurfaceTag(tag));
+        m_inclusiveSurfaceMasks.push_back(JE::Geometry::SurfaceData::SurfaceTag(tag));
     }
 
     size_t SurfaceMaskFilterConfig::GetNumExclusiveTags() const
@@ -154,7 +154,7 @@ namespace Vegetation
 
     void SurfaceMaskFilterConfig::AddExclusiveTag(AZStd::string tag)
     {
-        m_exclusiveSurfaceMasks.push_back(SurfaceData::SurfaceTag(tag));
+        m_exclusiveSurfaceMasks.push_back(JE::Geometry::SurfaceData::SurfaceTag(tag));
     }
 
     void SurfaceMaskFilterComponent::GetProvidedServices(AZ::ComponentDescriptor::DependencyArrayType& services)
@@ -220,7 +220,7 @@ namespace Vegetation
         m_dependencyMonitor.ConnectOwner(GetEntityId());
         FilterRequestBus::Handler::BusConnect(GetEntityId());
         SurfaceMaskFilterRequestBus::Handler::BusConnect(GetEntityId());
-        SurfaceData::SurfaceDataTagEnumeratorRequestBus::Handler::BusConnect(GetEntityId());
+        JE::Geometry::SurfaceData::SurfaceDataTagEnumeratorRequestBus::Handler::BusConnect(GetEntityId());
     }
 
     void SurfaceMaskFilterComponent::Deactivate()
@@ -228,7 +228,7 @@ namespace Vegetation
         m_dependencyMonitor.Reset();
         FilterRequestBus::Handler::BusDisconnect();
         SurfaceMaskFilterRequestBus::Handler::BusDisconnect();
-        SurfaceData::SurfaceDataTagEnumeratorRequestBus::Handler::BusDisconnect();
+        JE::Geometry::SurfaceData::SurfaceDataTagEnumeratorRequestBus::Handler::BusDisconnect();
     }
 
     bool SurfaceMaskFilterComponent::ReadInConfig(const AZ::ComponentConfig* baseConfig)
@@ -251,18 +251,18 @@ namespace Vegetation
         return false;
     }
 
-    void SurfaceMaskFilterComponent::GetInclusionSurfaceTags(SurfaceData::SurfaceTagVector& tags, bool& includeAll) const
+    void SurfaceMaskFilterComponent::GetInclusionSurfaceTags(JE::Geometry::SurfaceData::SurfaceTagVector& tags, bool& includeAll) const
     {
         tags.insert(tags.end(), m_configuration.m_inclusiveSurfaceMasks.begin(), m_configuration.m_inclusiveSurfaceMasks.end());
 
         // If the include list has no valid tags, that means "include everything"
-        if (!SurfaceData::HasValidTags(m_configuration.m_inclusiveSurfaceMasks))
+        if (!JE::Geometry::SurfaceData::HasValidTags(m_configuration.m_inclusiveSurfaceMasks))
         {
             includeAll = true;
         }
     }
 
-    void SurfaceMaskFilterComponent::GetExclusionSurfaceTags(SurfaceData::SurfaceTagVector& tags) const
+    void SurfaceMaskFilterComponent::GetExclusionSurfaceTags(JE::Geometry::SurfaceData::SurfaceTagVector& tags) const
     {
         tags.insert(tags.end(), m_configuration.m_exclusiveSurfaceMasks.begin(), m_configuration.m_exclusiveSurfaceMasks.end());
     }
@@ -314,7 +314,7 @@ namespace Vegetation
         }
 
         // at this point, nothing was accepted or rejected, which could mean no tags were specified or found, so reject if the inclusion set wasn't empty
-        const bool result = (!useCompTags || !SurfaceData::HasValidTags(m_configuration.m_inclusiveSurfaceMasks)) && (!useDescTags || !SurfaceData::HasValidTags(instanceData.m_descriptorPtr->m_inclusiveSurfaceFilterTags));
+        const bool result = (!useCompTags || !JE::Geometry::SurfaceData::HasValidTags(m_configuration.m_inclusiveSurfaceMasks)) && (!useDescTags || !JE::Geometry::SurfaceData::HasValidTags(instanceData.m_descriptorPtr->m_inclusiveSurfaceFilterTags));
         if (!result)
         {
             VEG_PROFILE_METHOD(DebugNotificationBus::TryQueueBroadcast(&DebugNotificationBus::Events::FilterInstance, instanceData.m_id, AZStd::string_view("SurfaceMaskFilter")));

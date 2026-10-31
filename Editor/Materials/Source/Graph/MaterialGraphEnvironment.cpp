@@ -23,8 +23,8 @@
 #include <AzCore/std/smart_ptr/make_shared.h>
 #include <AzCore/std/containers/array.h>
 #include <AzCore/std/containers/unordered_map.h>
-#include <GraphCanvas/Styling/StyleManager.h>
-#include <GraphCanvas/Widgets/NodePalette/TreeItems/IconDecoratedNodePaletteTreeItem.h>
+#include <JE/Editor/Tools/GraphCanvas/Styling/StyleManager.h>
+#include <JE/Editor/Tools/GraphCanvas/Widgets/NodePalette/TreeItems/IconDecoratedNodePaletteTreeItem.h>
 #include <JE/Editor/Tools/GraphModel/Integration/NodePalette/GraphCanvasNodePaletteItems.h>
 #include <JE/Editor/Tools/GraphModel/Model/DataType.h>
 #include <QApplication>
@@ -92,7 +92,7 @@ namespace JE::Editor
         InitGraphViewSettings();
         m_assetStatusReporterSystem = AZStd::make_unique<JE::Editor::Tools::AssetStatusReporterSystem>(m_toolId);
         m_graphTemplateFileDataCache = AZStd::make_shared<JE::Editor::Tools::GraphTemplateFileDataCache>(m_toolId);
-        m_styleManager = AZStd::make_unique<GraphCanvas::StyleManager>(m_toolId, m_graphViewSettingsPtr->m_styleManagerPath);
+        m_styleManager = AZStd::make_unique<JE::Editor::Tools::GraphCanvas::StyleManager>(m_toolId, m_graphViewSettingsPtr->m_styleManagerPath);
         m_translator = AZStd::make_unique<QTranslator>();
         const auto translationPath = JE::Editor::Tools::GetPathWithoutAlias(m_graphViewSettingsPtr->m_translationPath);
         if (m_translator->load(QLocale::Language::English, translationPath.c_str()))
@@ -117,10 +117,10 @@ namespace JE::Editor
         return kind == GraphKind::RenderPass ? m_passGraphContext : m_graphContext;
     }
 
-    GraphCanvas::GraphCanvasTreeItem* MaterialGraphEnvironment::CreateNodePaletteTree(GraphKind kind) const
+    JE::Editor::Tools::GraphCanvas::GraphCanvasTreeItem* MaterialGraphEnvironment::CreateNodePaletteTree(GraphKind kind) const
     {
-        auto* root = aznew GraphCanvas::NodePaletteTreeItem("Root", m_toolId);
-        AZStd::unordered_map<AZStd::string, GraphCanvas::GraphCanvasTreeItem*> categories;
+        auto* root = aznew JE::Editor::Tools::GraphCanvas::NodePaletteTreeItem("Root", m_toolId);
+        AZStd::unordered_map<AZStd::string, JE::Editor::Tools::GraphCanvas::GraphCanvasTreeItem*> categories;
         categories[""] = root;
         const auto& ids = kind == GraphKind::RenderPass ? m_passNodeConfigs : m_materialNodeConfigs;
         for (const auto& id : ids)
@@ -129,8 +129,11 @@ namespace JE::Editor
             auto category = categories.find(config.m_category);
             if (category == categories.end())
             {
-                auto* item = root->CreateChildNode<GraphCanvas::IconDecoratedNodePaletteTreeItem>(config.m_category, m_toolId);
-                item->SetTitlePalette(config.m_titlePaletteName);
+                auto* item = root->CreateChildNode<JE::Editor::Tools::GraphCanvas::IconDecoratedNodePaletteTreeItem>(config.m_category, m_toolId);
+                if (!config.m_titlePaletteName.empty())
+                {
+                    item->SetTitlePalette(config.m_titlePaletteName);
+                }
                 category = categories.emplace(config.m_category, item).first;
             }
             category->second->CreateChildNode<JE::Editor::Tools::DynamicNodePaletteItem>(m_toolId, config);

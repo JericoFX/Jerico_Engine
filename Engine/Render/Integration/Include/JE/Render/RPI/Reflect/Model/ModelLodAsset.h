@@ -22,11 +22,39 @@
 #include <AzCore/Asset/AssetCommon.h>
 #include <AzCore/Math/Aabb.h>
 #include <AzCore/Name/Name.h>
+#include <AzCore/Math/Uuid.h>
+#include <AzCore/std/optional.h>
 
 namespace JE::Render
 {
     namespace RPI
     {
+        //! An authored face reference, repeated legitimately by triangulation and material splitting.
+        //! These UUIDs are supplied by the authoring producer, never derived from triangle ordinals.
+        struct JE_RENDER_INTEGRATION_API ModelSurfaceIdentity
+        {
+            AZ_TYPE_INFO(ModelSurfaceIdentity, "{B3AE39D9-16FC-47DE-A2F0-5B8592DE98F1}");
+            static void Reflect(AZ::ReflectContext* context);
+            AZ::Uuid m_surfaceId = AZ::Uuid::CreateNull();
+            AZ::Uuid m_faceId = AZ::Uuid::CreateNull();
+            AZStd::optional<AZ::Uuid> m_regionId;
+            bool operator==(const ModelSurfaceIdentity& rhs) const
+            { return m_surfaceId == rhs.m_surfaceId && m_faceId == rhs.m_faceId && m_regionId == rhs.m_regionId; }
+        };
+
+        struct JE_RENDER_INTEGRATION_API ModelSurfaceIdentityTable
+        {
+            AZ_TYPE_INFO(ModelSurfaceIdentityTable, "{97149B0F-99B3-4181-BCA8-B21D218C301B}");
+            static constexpr AZ::u32 Schema = 1;
+            static void Reflect(AZ::ReflectContext* context);
+            //! Zero and an empty table mean legacy geometry with identity unavailable.
+            AZ::u32 m_schema = 0;
+            AZStd::vector<ModelSurfaceIdentity> m_entries;
+            bool Validate(size_t triangleCount) const;
+            bool operator==(const ModelSurfaceIdentityTable& rhs) const
+            { return m_schema == rhs.m_schema && m_entries == rhs.m_entries; }
+        };
+
         //! Contains a set of ModelLodAsset::Mesh objects and BufferAsset objects, representing the data a single level-of-detail for a Model.
         //! Serialized to a .azlod file.
         //! Actual vertex and index buffer data is stored in the BufferAssets.
@@ -110,6 +138,11 @@ namespace JE::Render
                 //! Return an array view of the list of all stream buffer info (not including the index buffer)
                 AZStd::span<const StreamBufferInfo> GetStreamBufferInfoList() const;
 
+                const ModelSurfaceIdentityTable& GetSurfaceIdentityTable() const { return m_surfaceIdentityTable; }
+                //! Constant-time lookup on a previously validated snapshot. No global validation or IO here.
+                const ModelSurfaceIdentity* GetSurfaceIdentity(uint32_t primitiveIndex) const;
+                bool ValidateSurfaceIdentityTable() const;
+
                 //! A helper method for returning a specific buffer asset view.
                 //! It will return nullptr if the semantic buffer is not found.
                 //! For example, to get a position buffer for a mesh with AZ::Name("POSITION").
@@ -148,10 +181,14 @@ namespace JE::Render
                 // expected that the user calls GetStreamBufferInfo with the required semantics
                 // and pieces the layout together themselves.
                 AZStd::fixed_vector<StreamBufferInfo, AZ::RHI::Limits::Pipeline::StreamCountMax> m_streamBufferInfo;
+                ModelSurfaceIdentityTable m_surfaceIdentityTable;
             };
 
             //! Returns an array view into the collection of meshes owned by this lod
             AZStd::span<const Mesh> GetMeshes() const;
+
+            //! Validates authored face ownership across material submeshes, outside query hot paths.
+            bool ValidateSurfaceIdentityTables() const;
 
             //! Returns the model-space axis-aligned bounding box of all meshes in the lod
             const AZ::Aabb& GetAabb() const;

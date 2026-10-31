@@ -19,6 +19,7 @@ namespace JE::Editor::Tools
     class EntityPreviewViewportSettingsSystem;
 }
 
+
 namespace JE::Editor
 {
     class MaterialGraphEnvironment;
@@ -41,6 +42,9 @@ namespace JE::Editor
         const JE::Editor::Tools::DocumentTypeInfoVector& GetGraphDocumentTypes() const;
         void RegisterGraphDocumentTypes(const JE::Editor::Tools::DocumentTypeInfoVector& types);
         MaterialGraphEnvironment& EnableGraphDocuments();
+        //! Called only for an explicit Graph Workspace request, before its pane is opened.
+        //! An explicit path consumes the default decision; the existing view route opens that path.
+        void PrepareGraphWorkspace(const AZStd::string& sourcePath);
         void EnsureMaterialPreviewSettings();
         bool IsGraphDocument(const AZ::Uuid& documentId) const;
         AZ::Uuid OpenDocument(const AZStd::string& sourcePath);
@@ -55,6 +59,8 @@ namespace JE::Editor
     Q_SIGNALS:
         // Views release renderer-backed resources synchronously before documents and settings are destroyed.
         void AboutToClose();
+        // Successful explicit selection changes; selecting the active document again does not emit.
+        void DocumentSelected(const AZ::Uuid& documentId);
         // Document/compiler notifications are dispatched on the main thread; observers see the updated session state.
         void CompileStateChanged(const AZ::Uuid& documentId);
 
@@ -80,5 +86,6 @@ namespace JE::Editor
         AZ::Uuid m_activeDocumentId = AZ::Uuid::CreateNull();
         QPointer<QWidget> m_mainWindow;
         bool m_confirmingClose = false;
+        bool m_graphWorkspaceOpened = false;
     };
 }

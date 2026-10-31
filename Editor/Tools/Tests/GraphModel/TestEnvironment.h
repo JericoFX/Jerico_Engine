@@ -35,7 +35,7 @@ namespace AZ
 
 namespace GraphModelIntegrationTest
 {
-    static const GraphCanvas::EditorId NODE_GRAPH_TEST_EDITOR_ID = AZ_CRC_CE("GraphModelIntegrationTestEditor");
+    static const JE::Editor::Tools::GraphCanvas::EditorId NODE_GRAPH_TEST_EDITOR_ID = AZ_CRC_CE("GraphModelIntegrationTestEditor");
     static const char* TEST_STRING_INPUT_ID = "inputString";
     static const char* TEST_STRING_OUTPUT_ID = "outputString";
     static const char* TEST_EVENT_INPUT_ID = "inputEvent";

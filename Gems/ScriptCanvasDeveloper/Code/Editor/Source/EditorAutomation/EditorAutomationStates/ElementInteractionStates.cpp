@@ -95,7 +95,7 @@ namespace ScriptCanvas::Developer
 
     void MouseToNodePropertyEditorState::OnSetupStateActions(EditorAutomationActionRunner& actionRunner)
     {
-        const GraphCanvas::SlotId* slotId = GetStateModel()->GetStateDataAs<GraphCanvas::SlotId>(m_slotId);
+        const JE::Editor::Tools::GraphCanvas::SlotId* slotId = GetStateModel()->GetStateDataAs<JE::Editor::Tools::GraphCanvas::SlotId>(m_slotId);
 
         if (slotId)
         {

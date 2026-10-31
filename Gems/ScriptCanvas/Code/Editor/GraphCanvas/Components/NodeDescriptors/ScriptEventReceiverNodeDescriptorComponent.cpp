@@ -12,9 +12,9 @@
 
 #include <QString>
 
-#include <GraphCanvas/Components/SceneBus.h>
-#include <GraphCanvas/Components/Slots/Data/DataSlotBus.h>
-#include <GraphCanvas/Components/Nodes/NodeTitleBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/SceneBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/Slots/Data/DataSlotBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/Nodes/NodeTitleBus.h>
 
 #include <Editor/GraphCanvas/Components/NodeDescriptors/ScriptEventReceiverNodeDescriptorComponent.h>
 #include <Editor/GraphCanvas/PropertySlotIds.h>
@@ -75,7 +75,7 @@ namespace ScriptCanvasEditor
         AZ::SerializeContext* serializeContext = azrtti_cast<AZ::SerializeContext*>(context);
         if (serializeContext)
         {
-            serializeContext->Class<ScriptEventReceiverHandlerNodeDescriptorSaveData, GraphCanvas::ComponentSaveData>()
+            serializeContext->Class<ScriptEventReceiverHandlerNodeDescriptorSaveData, JE::Editor::Tools::GraphCanvas::ComponentSaveData>()
                 ->Version(2)
                 ->Field("DisplayConnections", &ScriptEventReceiverHandlerNodeDescriptorSaveData::m_displayConnections)
                 ->Field("EventNames", &ScriptEventReceiverHandlerNodeDescriptorSaveData::m_enabledEvents)
@@ -128,11 +128,11 @@ namespace ScriptCanvasEditor
         NodeDescriptorComponent::Activate();        
 
         EBusHandlerNodeDescriptorRequestBus::Handler::BusConnect(GetEntityId());        
-        GraphCanvas::WrapperNodeNotificationBus::Handler::BusConnect(GetEntityId());
-        GraphCanvas::GraphCanvasPropertyBusHandler::OnActivate(GetEntityId());
-        GraphCanvas::WrapperNodeConfigurationRequestBus::Handler::BusConnect(GetEntityId());
-        GraphCanvas::EntitySaveDataRequestBus::Handler::BusConnect(GetEntityId());
-        GraphCanvas::SceneMemberNotificationBus::Handler::BusConnect(GetEntityId());
+        JE::Editor::Tools::GraphCanvas::WrapperNodeNotificationBus::Handler::BusConnect(GetEntityId());
+        JE::Editor::Tools::GraphCanvas::GraphCanvasPropertyBusHandler::OnActivate(GetEntityId());
+        JE::Editor::Tools::GraphCanvas::WrapperNodeConfigurationRequestBus::Handler::BusConnect(GetEntityId());
+        JE::Editor::Tools::GraphCanvas::EntitySaveDataRequestBus::Handler::BusConnect(GetEntityId());
+        JE::Editor::Tools::GraphCanvas::SceneMemberNotificationBus::Handler::BusConnect(GetEntityId());
         ScriptEventReceiverNodeDescriptorRequestBus::Handler::BusConnect(GetEntityId());
 
         m_busId = AZ::Crc32(m_scriptEventsAssetId.ToString<AZStd::string>().c_str());
@@ -146,17 +146,17 @@ namespace ScriptCanvasEditor
         AZ::Data::AssetBus::Handler::BusDisconnect();
 
         ScriptEventReceiverNodeDescriptorRequestBus::Handler::BusDisconnect();
-        GraphCanvas::SceneMemberNotificationBus::Handler::BusDisconnect();
-        GraphCanvas::EntitySaveDataRequestBus::Handler::BusDisconnect();
-        GraphCanvas::WrapperNodeConfigurationRequestBus::Handler::BusDisconnect();
-        GraphCanvas::GraphCanvasPropertyBusHandler::OnDeactivate();
-        GraphCanvas::WrapperNodeNotificationBus::Handler::BusDisconnect();        
+        JE::Editor::Tools::GraphCanvas::SceneMemberNotificationBus::Handler::BusDisconnect();
+        JE::Editor::Tools::GraphCanvas::EntitySaveDataRequestBus::Handler::BusDisconnect();
+        JE::Editor::Tools::GraphCanvas::WrapperNodeConfigurationRequestBus::Handler::BusDisconnect();
+        JE::Editor::Tools::GraphCanvas::GraphCanvasPropertyBusHandler::OnDeactivate();
+        JE::Editor::Tools::GraphCanvas::WrapperNodeNotificationBus::Handler::BusDisconnect();        
         EBusHandlerNodeDescriptorRequestBus::Handler::BusDisconnect();
     }
 
     void ScriptEventReceiverNodeDescriptorComponent::OnNodeActivated()
     {
-        GraphCanvas::WrapperNodeRequestBus::Event(GetEntityId(), &GraphCanvas::WrapperNodeRequests::SetWrapperType, m_busId);
+        JE::Editor::Tools::GraphCanvas::WrapperNodeRequestBus::Event(GetEntityId(), &JE::Editor::Tools::GraphCanvas::WrapperNodeRequests::SetWrapperType, m_busId);
     }
 
     void ScriptEventReceiverNodeDescriptorComponent::OnMemberSetupComplete()
@@ -169,7 +169,7 @@ namespace ScriptCanvasEditor
         if (asset.IsReady())
         {
             AZ::EntityId graphCanvasGraphId;
-            GraphCanvas::SceneMemberRequestBus::EventResult(graphCanvasGraphId, GetEntityId(), &GraphCanvas::SceneMemberRequests::GetScene);
+            JE::Editor::Tools::GraphCanvas::SceneMemberRequestBus::EventResult(graphCanvasGraphId, GetEntityId(), &JE::Editor::Tools::GraphCanvas::SceneMemberRequests::GetScene);
 
             ScriptEvents::ScriptEventsAsset* scriptEvent = asset.GetAs<ScriptEvents::ScriptEventsAsset>();
 
@@ -192,10 +192,10 @@ namespace ScriptCanvasEditor
 
                     if (internalNode.IsValid())
                     {
-                        GraphCanvas::SceneRequestBus::Event(graphCanvasGraphId, &GraphCanvas::SceneRequests::Add, internalNode, false);
+                        JE::Editor::Tools::GraphCanvas::SceneRequestBus::Event(graphCanvasGraphId, &JE::Editor::Tools::GraphCanvas::SceneRequests::Add, internalNode, false);
 
-                        GraphCanvas::WrappedNodeConfiguration configuration = GetEventConfiguration(eventId.first);
-                        GraphCanvas::WrapperNodeRequestBus::Event(GetEntityId(), &GraphCanvas::WrapperNodeRequests::WrapNode, internalNode, configuration);
+                        JE::Editor::Tools::GraphCanvas::WrappedNodeConfiguration configuration = GetEventConfiguration(eventId.first);
+                        JE::Editor::Tools::GraphCanvas::WrapperNodeRequestBus::Event(GetEntityId(), &JE::Editor::Tools::GraphCanvas::WrapperNodeRequests::WrapNode, internalNode, configuration);
                     }
                 }
             }
@@ -205,13 +205,13 @@ namespace ScriptCanvasEditor
         }
     }
 
-    void ScriptEventReceiverNodeDescriptorComponent::OnSceneMemberDeserialized(const AZ::EntityId&, const GraphCanvas::GraphSerialization&)
+    void ScriptEventReceiverNodeDescriptorComponent::OnSceneMemberDeserialized(const AZ::EntityId&, const JE::Editor::Tools::GraphCanvas::GraphSerialization&)
     {
         m_saveData.m_enabledEvents.clear();
         AZ::Data::AssetManager::Instance().GetAsset<ScriptEvents::ScriptEventsAsset>(m_scriptEventsAssetId, AZ::Data::AssetLoadBehavior::PreLoad);
     }
 
-    void ScriptEventReceiverNodeDescriptorComponent::WriteSaveData(GraphCanvas::EntitySaveDataContainer& saveDataContainer) const
+    void ScriptEventReceiverNodeDescriptorComponent::WriteSaveData(JE::Editor::Tools::GraphCanvas::EntitySaveDataContainer& saveDataContainer) const
     {
         ScriptEventReceiverHandlerNodeDescriptorSaveData* saveData = saveDataContainer.FindCreateSaveData<ScriptEventReceiverHandlerNodeDescriptorSaveData>();
 
@@ -221,7 +221,7 @@ namespace ScriptCanvasEditor
         }
     }
 
-    void ScriptEventReceiverNodeDescriptorComponent::ReadSaveData(const GraphCanvas::EntitySaveDataContainer& saveDataContainer)
+    void ScriptEventReceiverNodeDescriptorComponent::ReadSaveData(const JE::Editor::Tools::GraphCanvas::EntitySaveDataContainer& saveDataContainer)
     {
         const ScriptEventReceiverHandlerNodeDescriptorSaveData* saveData = saveDataContainer.FindSaveDataAs<ScriptEventReceiverHandlerNodeDescriptorSaveData>();
 
@@ -241,11 +241,11 @@ namespace ScriptCanvasEditor
         return m_busName;
     }
 
-    GraphCanvas::WrappedNodeConfiguration ScriptEventReceiverNodeDescriptorComponent::GetEventConfiguration(const ScriptCanvas::EBusEventId& eventId) const
+    JE::Editor::Tools::GraphCanvas::WrappedNodeConfiguration ScriptEventReceiverNodeDescriptorComponent::GetEventConfiguration(const ScriptCanvas::EBusEventId& eventId) const
     {
         AZ_Warning("ScriptCanvas", m_scriptCanvasId.IsValid(), "Trying to query event list before the node is added to the scene.");
         
-        GraphCanvas::WrappedNodeConfiguration wrappedConfiguration;
+        JE::Editor::Tools::GraphCanvas::WrappedNodeConfiguration wrappedConfiguration;
 
         ScriptCanvas::Nodes::Core::ReceiveScriptEvent* eventHandler = AZ::EntityUtils::FindFirstDerivedComponent<ScriptCanvas::Nodes::Core::ReceiveScriptEvent>(m_scriptCanvasId);
         if (eventHandler)
@@ -346,9 +346,9 @@ namespace ScriptCanvasEditor
         return AZ::EntityId();
     }
 
-    GraphCanvas::Endpoint ScriptEventReceiverNodeDescriptorComponent::MapSlotToGraphCanvasEndpoint(const ScriptCanvas::SlotId& scriptCanvasSlotId) const
+    JE::Editor::Tools::GraphCanvas::Endpoint ScriptEventReceiverNodeDescriptorComponent::MapSlotToGraphCanvasEndpoint(const ScriptCanvas::SlotId& scriptCanvasSlotId) const
     {
-        GraphCanvas::Endpoint endpoint;
+        JE::Editor::Tools::GraphCanvas::Endpoint endpoint;
 
         AZ::EntityId graphCanvasSlotId;
         SlotMappingRequestBus::EventResult(graphCanvasSlotId, GetEntityId(), &SlotMappingRequests::MapToGraphCanvasId, scriptCanvasSlotId);
@@ -362,14 +362,14 @@ namespace ScriptCanvasEditor
 
                 if (graphCanvasSlotId2.IsValid())
                 {
-                    endpoint = GraphCanvas::Endpoint(mapPair.second, graphCanvasSlotId2);
+                    endpoint = JE::Editor::Tools::GraphCanvas::Endpoint(mapPair.second, graphCanvasSlotId2);
                     break;
                 }
             }
         }
         else
         {
-            endpoint = GraphCanvas::Endpoint(GetEntityId(), graphCanvasSlotId);
+            endpoint = JE::Editor::Tools::GraphCanvas::Endpoint(GetEntityId(), graphCanvasSlotId);
         }
 
         return endpoint;
@@ -389,14 +389,14 @@ namespace ScriptCanvasEditor
             m_idToEventType.emplace(wrappedNode, eventId);
 
             AZStd::any* userData = nullptr;
-            GraphCanvas::NodeRequestBus::EventResult(userData, wrappedNode, &GraphCanvas::NodeRequests::GetUserData);
+            JE::Editor::Tools::GraphCanvas::NodeRequestBus::EventResult(userData, wrappedNode, &JE::Editor::Tools::GraphCanvas::NodeRequests::GetUserData);
 
             if (userData)
             {
                 (*userData) = m_scriptCanvasId;
                 DynamicSlotRequestBus::Event(wrappedNode, &DynamicSlotRequests::OnUserDataChanged);
 
-                GraphCanvas::NodeDataSlotRequestBus::Event(wrappedNode, &GraphCanvas::NodeDataSlotRequests::RecreatePropertyDisplay);
+                JE::Editor::Tools::GraphCanvas::NodeDataSlotRequestBus::Event(wrappedNode, &JE::Editor::Tools::GraphCanvas::NodeDataSlotRequests::RecreatePropertyDisplay);
             }
 
             if (!m_loadingEvents)
@@ -411,11 +411,11 @@ namespace ScriptCanvasEditor
             AZ_Error("ScriptCanvas", false, "Trying to wrap two identically named methods under the same EBus Handler. Deleting the second node.");
 
             AZ::EntityId sceneId;
-            GraphCanvas::SceneMemberRequestBus::EventResult(sceneId, GetEntityId(), &GraphCanvas::SceneMemberRequests::GetScene);
+            JE::Editor::Tools::GraphCanvas::SceneMemberRequestBus::EventResult(sceneId, GetEntityId(), &JE::Editor::Tools::GraphCanvas::SceneMemberRequests::GetScene);
 
             AZStd::unordered_set<AZ::EntityId> deleteNodes;
             deleteNodes.insert(wrappedNode);
-            GraphCanvas::SceneRequestBus::Event(sceneId, &GraphCanvas::SceneRequests::Delete, deleteNodes);
+            JE::Editor::Tools::GraphCanvas::SceneRequestBus::Event(sceneId, &JE::Editor::Tools::GraphCanvas::SceneRequests::Delete, deleteNodes);
         }
         else
         {
@@ -446,14 +446,14 @@ namespace ScriptCanvasEditor
         }
     }
 
-    GraphCanvas::WrappedNodeConfiguration ScriptEventReceiverNodeDescriptorComponent::GetWrappedNodeConfiguration(const AZ::EntityId& wrappedNodeId) const
+    JE::Editor::Tools::GraphCanvas::WrappedNodeConfiguration ScriptEventReceiverNodeDescriptorComponent::GetWrappedNodeConfiguration(const AZ::EntityId& wrappedNodeId) const
     {
         ScriptEvents::Method methodDefinition;
         ScriptEventReceiverEventNodeDescriptorBus::EventResult(methodDefinition, wrappedNodeId, &ScriptEventReceiverEventNodeDescriptorRequests::GetMethodDefinition);
 
         if (methodDefinition.GetName().empty())
         {
-            return GraphCanvas::WrappedNodeConfiguration();
+            return JE::Editor::Tools::GraphCanvas::WrappedNodeConfiguration();
         }
         else
         {
@@ -469,7 +469,7 @@ namespace ScriptCanvasEditor
     void ScriptEventReceiverNodeDescriptorComponent::OnAssetReloaded([[maybe_unused]] AZ::Data::Asset<AZ::Data::AssetData> asset)
     {
         AZ::EntityId graphCanvasGraphId;
-        GraphCanvas::SceneMemberRequestBus::EventResult(graphCanvasGraphId, GetEntityId(), &GraphCanvas::SceneMemberRequests::GetScene);
+        JE::Editor::Tools::GraphCanvas::SceneMemberRequestBus::EventResult(graphCanvasGraphId, GetEntityId(), &JE::Editor::Tools::GraphCanvas::SceneMemberRequests::GetScene);
 
         ScriptCanvas::ScriptCanvasId scriptCanvasId;
         GeneralRequestBus::BroadcastResult(scriptCanvasId, &GeneralRequests::GetScriptCanvasId, graphCanvasGraphId);
@@ -485,19 +485,19 @@ namespace ScriptCanvasEditor
     void ScriptEventReceiverNodeDescriptorComponent::OnVersionConversionEnd()
     {
         AZ::EntityId graphCanvasGraphId;
-        GraphCanvas::SceneMemberRequestBus::EventResult(graphCanvasGraphId, GetEntityId(), &GraphCanvas::SceneMemberRequests::GetScene);
+        JE::Editor::Tools::GraphCanvas::SceneMemberRequestBus::EventResult(graphCanvasGraphId, GetEntityId(), &JE::Editor::Tools::GraphCanvas::SceneMemberRequests::GetScene);
 
         ScriptCanvas::ScriptCanvasId scriptCanvasId;
         GeneralRequestBus::BroadcastResult(scriptCanvasId, &GeneralRequests::GetScriptCanvasId, graphCanvasGraphId);        
 
-        AZStd::vector< GraphCanvas::NodeId > wrappedNodes;
-        GraphCanvas::WrapperNodeRequestBus::EventResult(wrappedNodes, GetEntityId(), &GraphCanvas::WrapperNodeRequests::GetWrappedNodeIds);
+        AZStd::vector< JE::Editor::Tools::GraphCanvas::NodeId > wrappedNodes;
+        JE::Editor::Tools::GraphCanvas::WrapperNodeRequestBus::EventResult(wrappedNodes, GetEntityId(), &JE::Editor::Tools::GraphCanvas::WrapperNodeRequests::GetWrappedNodeIds);
 
         AZStd::unordered_set< AZ::EntityId > deletedNodes;
         deletedNodes.insert(wrappedNodes.begin(), wrappedNodes.end());
 
         AZStd::vector<AZStd::pair<ScriptCanvas::EBusEventId, AZStd::string>> enabledEvents = m_saveData.m_enabledEvents;
-        GraphCanvas::SceneRequestBus::Event(graphCanvasGraphId, &GraphCanvas::SceneRequests::Delete, deletedNodes);
+        JE::Editor::Tools::GraphCanvas::SceneRequestBus::Event(graphCanvasGraphId, &JE::Editor::Tools::GraphCanvas::SceneRequests::Delete, deletedNodes);
         
         AZ::Data::Asset<ScriptEvents::ScriptEventsAsset> asset = AZ::Data::AssetManager::Instance().GetAsset<ScriptEvents::ScriptEventsAsset>(m_scriptEventsAssetId, AZ::Data::AssetLoadBehavior::PreLoad);
         asset.BlockUntilLoadComplete();
@@ -517,10 +517,10 @@ namespace ScriptCanvasEditor
 
                 if (graphCanvasNodeId.IsValid())
                 {
-                    GraphCanvas::SceneRequestBus::Event(graphCanvasGraphId, &GraphCanvas::SceneRequests::Add, graphCanvasNodeId, false);
+                    JE::Editor::Tools::GraphCanvas::SceneRequestBus::Event(graphCanvasGraphId, &JE::Editor::Tools::GraphCanvas::SceneRequests::Add, graphCanvasNodeId, false);
 
-                    GraphCanvas::WrappedNodeConfiguration configuration = GetWrappedNodeConfiguration(graphCanvasNodeId);
-                    GraphCanvas::WrapperNodeRequestBus::Event(GetEntityId(), &GraphCanvas::WrapperNodeRequests::WrapNode, graphCanvasNodeId, configuration);
+                    JE::Editor::Tools::GraphCanvas::WrappedNodeConfiguration configuration = GetWrappedNodeConfiguration(graphCanvasNodeId);
+                    JE::Editor::Tools::GraphCanvas::WrapperNodeRequestBus::Event(GetEntityId(), &JE::Editor::Tools::GraphCanvas::WrapperNodeRequests::WrapNode, graphCanvasNodeId, configuration);
                 }
             }
         }
@@ -529,12 +529,12 @@ namespace ScriptCanvasEditor
         DynamicSlotRequestBus::Event(GetEntityId(), &DynamicSlotRequests::StopQueueSlotUpdates);
     }
 
-    void ScriptEventReceiverNodeDescriptorComponent::OnAddedToGraphCanvasGraph(const GraphCanvas::GraphId&, const AZ::EntityId& scriptCanvasNodeId)
+    void ScriptEventReceiverNodeDescriptorComponent::OnAddedToGraphCanvasGraph(const JE::Editor::Tools::GraphCanvas::GraphId&, const AZ::EntityId& scriptCanvasNodeId)
     {
         m_scriptCanvasId = scriptCanvasNodeId;
 
-        GraphCanvas::WrapperNodeRequestBus::Event(GetEntityId(), &GraphCanvas::WrapperNodeRequests::SetActionString, "Add/Remove Events");
-        GraphCanvas::SlotLayoutRequestBus::Event(GetEntityId(), &GraphCanvas::SlotLayoutRequests::SetSlotGroupVisible, SlotGroups::EBusConnectionSlotGroup, m_saveData.m_displayConnections);
+        JE::Editor::Tools::GraphCanvas::WrapperNodeRequestBus::Event(GetEntityId(), &JE::Editor::Tools::GraphCanvas::WrapperNodeRequests::SetActionString, "Add/Remove Events");
+        JE::Editor::Tools::GraphCanvas::SlotLayoutRequestBus::Event(GetEntityId(), &JE::Editor::Tools::GraphCanvas::SlotLayoutRequests::SetSlotGroupVisible, SlotGroups::EBusConnectionSlotGroup, m_saveData.m_displayConnections);
 
         if (m_scriptCanvasId.IsValid())
         {
@@ -550,21 +550,21 @@ namespace ScriptCanvasEditor
                 if (eventHandler && eventHandler->IsIDRequired())
                 {
                     AZStd::vector< AZ::EntityId > slotIds;
-                    GraphCanvas::NodeRequestBus::EventResult(slotIds, GetEntityId(), &GraphCanvas::NodeRequests::GetSlotIds);
+                    JE::Editor::Tools::GraphCanvas::NodeRequestBus::EventResult(slotIds, GetEntityId(), &JE::Editor::Tools::GraphCanvas::NodeRequests::GetSlotIds);
 
                     // Should be exactly one data slot on ourselves. And that is the BusId
                     for (const AZ::EntityId& testSlotId : slotIds)
                     {
-                        GraphCanvas::SlotType slotType;
-                        GraphCanvas::SlotRequestBus::EventResult(slotType, testSlotId, &GraphCanvas::SlotRequests::GetSlotType);
+                        JE::Editor::Tools::GraphCanvas::SlotType slotType;
+                        JE::Editor::Tools::GraphCanvas::SlotRequestBus::EventResult(slotType, testSlotId, &JE::Editor::Tools::GraphCanvas::SlotRequests::GetSlotType);
 
-                        if (slotType == GraphCanvas::SlotTypes::DataSlot)
+                        if (slotType == JE::Editor::Tools::GraphCanvas::SlotTypes::DataSlot)
                         {
-                            GraphCanvas::TranslationKey key;
+                            JE::Editor::Tools::GraphCanvas::TranslationKey key;
                             key << ScriptCanvasEditor::TranslationHelper::GlobalKeys::EBusHandlerIDKey << "details";
-                            GraphCanvas::TranslationRequests::Details details;
-                            GraphCanvas::TranslationRequestBus::BroadcastResult(details, &GraphCanvas::TranslationRequests::GetDetails, key, details);
-                            GraphCanvas::SlotRequestBus::Event(testSlotId, &GraphCanvas::SlotRequests::SetDetails, details.m_name, details.m_tooltip);
+                            JE::Editor::Tools::GraphCanvas::TranslationRequests::Details details;
+                            JE::Editor::Tools::GraphCanvas::TranslationRequestBus::BroadcastResult(details, &JE::Editor::Tools::GraphCanvas::TranslationRequests::GetDetails, key, details);
+                            JE::Editor::Tools::GraphCanvas::SlotRequestBus::Event(testSlotId, &JE::Editor::Tools::GraphCanvas::SlotRequests::SetDetails, details.m_name, details.m_tooltip);
                             break;
                         }
                     }
@@ -623,7 +623,7 @@ namespace ScriptCanvasEditor
             }
         }
 
-        GraphCanvas::SlotLayoutRequestBus::Event(GetEntityId(), &GraphCanvas::SlotLayoutRequests::SetSlotGroupVisible, SlotGroups::EBusConnectionSlotGroup, m_saveData.m_displayConnections);
+        JE::Editor::Tools::GraphCanvas::SlotLayoutRequestBus::Event(GetEntityId(), &JE::Editor::Tools::GraphCanvas::SlotLayoutRequests::SetSlotGroupVisible, SlotGroups::EBusConnectionSlotGroup, m_saveData.m_displayConnections);
     }
 
     void ScriptEventReceiverNodeDescriptorComponent::UpdateTitles(const AZ::Data::Asset<ScriptEvents::ScriptEventsAsset>& asset)
@@ -632,8 +632,8 @@ namespace ScriptCanvasEditor
         {
             const ScriptEvents::ScriptEvent& definition = asset.Get()->m_definition;
 
-            GraphCanvas::NodeRequestBus::Event(GetEntityId(), &GraphCanvas::NodeRequests::SetTooltip, definition.GetTooltip());
-            GraphCanvas::NodeTitleRequestBus::Event(GetEntityId(), &GraphCanvas::NodeTitleRequests::SetTitle, definition.GetName());
+            JE::Editor::Tools::GraphCanvas::NodeRequestBus::Event(GetEntityId(), &JE::Editor::Tools::GraphCanvas::NodeRequests::SetTooltip, definition.GetTooltip());
+            JE::Editor::Tools::GraphCanvas::NodeTitleRequestBus::Event(GetEntityId(), &JE::Editor::Tools::GraphCanvas::NodeTitleRequests::SetTitle, definition.GetName());
         }
     }
 }

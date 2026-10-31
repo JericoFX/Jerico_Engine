@@ -13,6 +13,7 @@
 
 #include <AzToolsFramework/AssetBrowser/AssetBrowserBus.h>
 #include <AzToolsFramework/SourceControl/SourceControlAPI.h>
+#include <AzQtComponents/Buses/DragAndDrop.h>
 
 class QWidget;
 class QMenu;
@@ -34,6 +35,7 @@ namespace JE
     {
         class JE_EDITOR_MATERIALS_API MaterialBrowserInteractions
             : public AzToolsFramework::AssetBrowser::AssetBrowserInteractionNotificationBus::Handler
+            , public AzQtComponents::DragAndDropEventsBus::Handler
         {
         public:
             AZ_CLASS_ALLOCATOR(MaterialBrowserInteractions, AZ::SystemAllocator);
@@ -48,6 +50,12 @@ namespace JE
                 const AZStd::string& materialTypePath, const AZStd::string& materialPath);
 
         private:
+            int GetDragAndDropEventsPriority() const override;
+            void DragEnter(QDragEnterEvent* event, AzQtComponents::DragAndDropContextBase& context) override;
+            void DragMove(QDragMoveEvent* event, AzQtComponents::DragAndDropContextBase& context) override;
+            void Drop(QDropEvent* event, AzQtComponents::DragAndDropContextBase& context) override;
+            void HandleMaterialDrop(QDropEvent* event, AzQtComponents::DragAndDropContextBase& context, bool apply);
+
             //! AssetBrowserInteractionNotificationBus::Handler overrides...
             void AddContextMenuActions(QWidget* caller, QMenu* menu,
                 const AZStd::vector<const AzToolsFramework::AssetBrowser::AssetBrowserEntry*>& entries) override;

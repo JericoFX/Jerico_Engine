@@ -8,7 +8,7 @@
 
 #pragma once
 
-#include <GraphCanvas/Types/ConstructPresets.h>
+#include <JE/Editor/Tools/GraphCanvas/Types/ConstructPresets.h>
 
 #include <AzCore/Memory/Memory.h>
 #include <AzCore/RTTI/TypeInfoSimple.h>
@@ -18,17 +18,17 @@
 namespace JE::Editor::Tools
 {
     //! The implementation of the graph view requires construct presets in order to be able to create node groups and comment blocks.
-    class GraphViewConstructPresets : public GraphCanvas::EditorConstructPresets
+    class GraphViewConstructPresets : public JE::Editor::Tools::GraphCanvas::EditorConstructPresets
     {
     public:
-        AZ_RTTI(GraphViewConstructPresets, "{5A4275ED-994D-403D-8571-7680D11106D4}", GraphCanvas::EditorConstructPresets);
+        AZ_RTTI(GraphViewConstructPresets, "{5A4275ED-994D-403D-8571-7680D11106D4}", JE::Editor::Tools::GraphCanvas::EditorConstructPresets);
         AZ_CLASS_ALLOCATOR(GraphViewConstructPresets, AZ::SystemAllocator);
         static void Reflect(AZ::ReflectContext* context);
 
         GraphViewConstructPresets() = default;
         ~GraphViewConstructPresets() override = default;
         void SetDefaultGroupPresets(const AZStd::map<AZStd::string, AZ::Color>& defaultGroupPresets);
-        void InitializeConstructType(GraphCanvas::ConstructType constructType) override;
+        void InitializeConstructType(JE::Editor::Tools::GraphCanvas::ConstructType constructType) override;
 
     private:
         // Default names and colors for node group presets

@@ -305,8 +305,8 @@ namespace UnitTest
             m_createdCallbackCount = 0;
 
             // Send out a "surface changed" notification, as will as a tick bus tick, to give our mesh blocker a chance to refresh.
-            SurfaceData::SurfaceDataSystemNotificationBus::Broadcast(&SurfaceData::SurfaceDataSystemNotificationBus::Events::OnSurfaceChanged, entity->GetId(),
-                AZ::Aabb::CreateFromPoint(claimPosition1), AZ::Aabb::CreateFromPoint(claimPosition2), SurfaceData::SurfaceTagSet());
+            JE::Geometry::SurfaceData::SurfaceDataSystemNotificationBus::Broadcast(&JE::Geometry::SurfaceData::SurfaceDataSystemNotificationBus::Events::OnSurfaceChanged, entity->GetId(),
+                AZ::Aabb::CreateFromPoint(claimPosition1), AZ::Aabb::CreateFromPoint(claimPosition2), JE::Geometry::SurfaceData::SurfaceTagSet());
             AZ::TickBus::Broadcast(&AZ::TickBus::Events::OnTick, 0.f, AZ::ScriptTimePoint{});
 
             // Try claiming again, this time with the same claim handle, but a different location.

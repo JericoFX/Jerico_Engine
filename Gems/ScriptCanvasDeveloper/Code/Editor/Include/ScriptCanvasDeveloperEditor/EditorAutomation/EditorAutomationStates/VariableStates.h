@@ -14,9 +14,9 @@
 #include <QString>
 #include <QWidget>
 
-#include <GraphCanvas/Types/Endpoint.h>
-#include <GraphCanvas/Types/Types.h>
-#include <GraphCanvas/Widgets/NodePalette/NodePaletteWidget.h>
+#include <JE/Editor/Tools/GraphCanvas/Types/Endpoint.h>
+#include <JE/Editor/Tools/GraphCanvas/Types/Types.h>
+#include <JE/Editor/Tools/GraphCanvas/Widgets/NodePalette/NodePaletteWidget.h>
 
 #include <ScriptCanvas/Core/Datum.h>
 #include <ScriptCanvas/Variable/VariableCore.h>

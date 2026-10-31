@@ -8,8 +8,8 @@
 
 #include <QToolButton>
 
-#include <GraphCanvas/Components/SceneBus.h>
-#include <GraphCanvas/Editor/Automation/AutomationUtils.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/SceneBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Editor/Automation/AutomationUtils.h>
 
 #include <Editor/GraphCanvas/GraphCanvasEditorNotificationBusId.h>
 
@@ -41,18 +41,18 @@ namespace ScriptCanvas::Developer
 
     void CreateRuntimeGraphState::OnStateActionsComplete()
     {
-        GraphCanvas::GraphId graphId = m_createNewGraphAction.GetGraphId();
+        JE::Editor::Tools::GraphCanvas::GraphId graphId = m_createNewGraphAction.GetGraphId();
         SetModelData(StateModelIds::GraphCanvasId, graphId);
 
         ScriptCanvas::ScriptCanvasId scriptCanvasId;
         ScriptCanvasEditor::GeneralRequestBus::BroadcastResult(scriptCanvasId, &ScriptCanvasEditor::GeneralRequests::GetScriptCanvasId, graphId);
         SetModelData(StateModelIds::ScriptCanvasId, scriptCanvasId);
 
-        GraphCanvas::ViewId viewId;
-        GraphCanvas::SceneRequestBus::EventResult(viewId, graphId, &GraphCanvas::SceneRequests::GetViewId);
+        JE::Editor::Tools::GraphCanvas::ViewId viewId;
+        JE::Editor::Tools::GraphCanvas::SceneRequestBus::EventResult(viewId, graphId, &JE::Editor::Tools::GraphCanvas::SceneRequests::GetViewId);
         SetModelData(StateModelIds::ViewId, viewId);
 
-        AZ::Vector2 minorStep = GraphCanvas::GraphUtils::FindMinorStep(graphId);
+        AZ::Vector2 minorStep = JE::Editor::Tools::GraphCanvas::GraphUtils::FindMinorStep(graphId);
         SetModelData(StateModelIds::MinorStep, minorStep);
     } 
 
@@ -72,18 +72,18 @@ namespace ScriptCanvas::Developer
 
     void CreateFunctionGraphState::OnStateActionsComplete()
     {
-        GraphCanvas::GraphId graphId = m_createNewFunctionAction.GetGraphId();
+        JE::Editor::Tools::GraphCanvas::GraphId graphId = m_createNewFunctionAction.GetGraphId();
         SetModelData(StateModelIds::GraphCanvasId, graphId);
 
         ScriptCanvas::ScriptCanvasId scriptCanvasId;
         ScriptCanvasEditor::GeneralRequestBus::BroadcastResult(scriptCanvasId, &ScriptCanvasEditor::GeneralRequests::GetScriptCanvasId, graphId);
         SetModelData(StateModelIds::ScriptCanvasId, scriptCanvasId);
 
-        GraphCanvas::ViewId viewId;
-        GraphCanvas::SceneRequestBus::EventResult(viewId, graphId, &GraphCanvas::SceneRequests::GetViewId);
+        JE::Editor::Tools::GraphCanvas::ViewId viewId;
+        JE::Editor::Tools::GraphCanvas::SceneRequestBus::EventResult(viewId, graphId, &JE::Editor::Tools::GraphCanvas::SceneRequests::GetViewId);
         SetModelData(StateModelIds::ViewId, viewId);
 
-        AZ::Vector2 minorStep = GraphCanvas::GraphUtils::FindMinorStep(graphId);
+        AZ::Vector2 minorStep = JE::Editor::Tools::GraphCanvas::GraphUtils::FindMinorStep(graphId);
         SetModelData(StateModelIds::MinorStep, minorStep);
     }
 

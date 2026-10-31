@@ -8,8 +8,8 @@
 
 #include "NodeUtils.h"
 
-#include <GraphCanvas/Components/Nodes/NodeBus.h>
-#include <GraphCanvas/Components/Slots/SlotBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/Nodes/NodeBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/Slots/SlotBus.h>
 #include <GraphCanvas/Components/DynamicOrderingDynamicSlotComponent.h>
 
 #include <ScriptCanvas/Core/ModifiableDatumView.h>
@@ -20,7 +20,7 @@ namespace ScriptCanvasEditor::Nodes
     void UpdateSlotDatumLabel(const AZ::EntityId& graphCanvasNodeId, ScriptCanvas::SlotId scSlotId, const AZStd::string& name)
     {
         AZStd::any* userData = nullptr;
-        GraphCanvas::NodeRequestBus::EventResult(userData, graphCanvasNodeId, &GraphCanvas::NodeRequests::GetUserData);
+        JE::Editor::Tools::GraphCanvas::NodeRequestBus::EventResult(userData, graphCanvasNodeId, &JE::Editor::Tools::GraphCanvas::NodeRequests::GetUserData);
         AZ::EntityId scNodeEntityId = userData && userData->is<AZ::EntityId>() ? *AZStd::any_cast<AZ::EntityId>(userData) : AZ::EntityId();
         if (scNodeEntityId.IsValid())
         {
@@ -34,16 +34,16 @@ namespace ScriptCanvasEditor::Nodes
     void UpdateSlotDatumLabels(AZ::EntityId graphCanvasNodeId)
     {
         AZStd::vector<AZ::EntityId> graphCanvasSlotIds;
-        GraphCanvas::NodeRequestBus::EventResult(graphCanvasSlotIds, graphCanvasNodeId, &GraphCanvas::NodeRequests::GetSlotIds);
+        JE::Editor::Tools::GraphCanvas::NodeRequestBus::EventResult(graphCanvasSlotIds, graphCanvasNodeId, &JE::Editor::Tools::GraphCanvas::NodeRequests::GetSlotIds);
         for (AZ::EntityId graphCanvasSlotId : graphCanvasSlotIds)
         {
             AZStd::any* slotUserData{};
-            GraphCanvas::SlotRequestBus::EventResult(slotUserData, graphCanvasSlotId, &GraphCanvas::SlotRequests::GetUserData);
+            JE::Editor::Tools::GraphCanvas::SlotRequestBus::EventResult(slotUserData, graphCanvasSlotId, &JE::Editor::Tools::GraphCanvas::SlotRequests::GetUserData);
 
             if (auto scriptCanvasSlotId = AZStd::any_cast<ScriptCanvas::SlotId>(slotUserData))
             {
                 AZStd::string slotName;
-                GraphCanvas::SlotRequestBus::EventResult(slotName, graphCanvasSlotId, &GraphCanvas::SlotRequests::GetName);
+                JE::Editor::Tools::GraphCanvas::SlotRequestBus::EventResult(slotName, graphCanvasSlotId, &JE::Editor::Tools::GraphCanvas::SlotRequests::GetName);
                 UpdateSlotDatumLabel(graphCanvasNodeId, *scriptCanvasSlotId, slotName);
             }
         }

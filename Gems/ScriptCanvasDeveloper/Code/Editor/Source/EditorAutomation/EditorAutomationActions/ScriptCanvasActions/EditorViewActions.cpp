@@ -6,12 +6,12 @@
  *
  */
 
-#include <GraphCanvas/Components/Nodes/NodeBus.h>
-#include <GraphCanvas/Components/SceneBus.h>
-#include <GraphCanvas/Components/ViewBus.h>
-#include <GraphCanvas/Components/VisualBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/Nodes/NodeBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/SceneBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/ViewBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/VisualBus.h>
 
-#include <GraphCanvas/Utils/ConversionUtils.h>
+#include <JE/Editor/Tools/GraphCanvas/Utils/ConversionUtils.h>
 
 #include <ScriptCanvasDeveloperEditor/EditorAutomation/EditorAutomationActions/ScriptCanvasActions/EditorViewActions.h>
 
@@ -23,7 +23,7 @@ namespace ScriptCanvas::Developer
     // CenterOnScenePointAction
     /////////////////////////////
 
-    CenterOnScenePointAction::CenterOnScenePointAction(GraphCanvas::GraphId graphId, QPointF scenePoint)
+    CenterOnScenePointAction::CenterOnScenePointAction(JE::Editor::Tools::GraphCanvas::GraphId graphId, QPointF scenePoint)
         : m_graphId(graphId)
         , m_scenePoint(scenePoint)
     {
@@ -32,12 +32,12 @@ namespace ScriptCanvas::Developer
 
     bool CenterOnScenePointAction::Tick()
     {
-        GraphCanvas::ViewId viewId;
-        GraphCanvas::SceneRequestBus::EventResult(viewId, m_graphId, &GraphCanvas::SceneRequests::GetViewId);
+        JE::Editor::Tools::GraphCanvas::ViewId viewId;
+        JE::Editor::Tools::GraphCanvas::SceneRequestBus::EventResult(viewId, m_graphId, &JE::Editor::Tools::GraphCanvas::SceneRequests::GetViewId);
 
         if (viewId.IsValid())
         {
-            GraphCanvas::ViewRequestBus::Event(viewId, &GraphCanvas::ViewRequests::CenterOn, m_scenePoint);
+            JE::Editor::Tools::GraphCanvas::ViewRequestBus::Event(viewId, &JE::Editor::Tools::GraphCanvas::ViewRequests::CenterOn, m_scenePoint);
         }
 
         return true;
@@ -47,7 +47,7 @@ namespace ScriptCanvas::Developer
     // EnsureSceneRectVisibleAction
     /////////////////////////////////
 
-    EnsureSceneRectVisibleAction::EnsureSceneRectVisibleAction(GraphCanvas::GraphId graphId, QRectF sceneRect)
+    EnsureSceneRectVisibleAction::EnsureSceneRectVisibleAction(JE::Editor::Tools::GraphCanvas::GraphId graphId, QRectF sceneRect)
         : DelayAction(AZStd::chrono::milliseconds(250))
         , m_graphId(graphId)
         , m_sceneRect(sceneRect)
@@ -66,12 +66,12 @@ namespace ScriptCanvas::Developer
         if (m_firstTick)
         {
             m_firstTick = false;
-            GraphCanvas::ViewId viewId;
-            GraphCanvas::SceneRequestBus::EventResult(viewId, m_graphId, &GraphCanvas::SceneRequests::GetViewId);
+            JE::Editor::Tools::GraphCanvas::ViewId viewId;
+            JE::Editor::Tools::GraphCanvas::SceneRequestBus::EventResult(viewId, m_graphId, &JE::Editor::Tools::GraphCanvas::SceneRequests::GetViewId);
 
             if (viewId.IsValid())
             {
-                GraphCanvas::ViewRequestBus::Event(viewId, &GraphCanvas::ViewRequests::CenterOnArea, m_sceneRect);
+                JE::Editor::Tools::GraphCanvas::ViewRequestBus::Event(viewId, &JE::Editor::Tools::GraphCanvas::ViewRequests::CenterOnArea, m_sceneRect);
             }
 
             return false;
@@ -86,11 +86,11 @@ namespace ScriptCanvas::Developer
     // SceneMouseMoveAction
     /////////////////////////
 
-    SceneMouseMoveAction::SceneMouseMoveAction(GraphCanvas::GraphId graphId, QPointF scenePoint)
+    SceneMouseMoveAction::SceneMouseMoveAction(JE::Editor::Tools::GraphCanvas::GraphId graphId, QPointF scenePoint)
         : m_graphId(graphId)
         , m_scenePoint(scenePoint)
     {
-        GraphCanvas::SceneRequestBus::EventResult(m_viewId, m_graphId, &GraphCanvas::SceneRequests::GetViewId);
+        JE::Editor::Tools::GraphCanvas::SceneRequestBus::EventResult(m_viewId, m_graphId, &JE::Editor::Tools::GraphCanvas::SceneRequests::GetViewId);
     }
 
     bool SceneMouseMoveAction::IsMissingPrecondition()
@@ -99,7 +99,7 @@ namespace ScriptCanvas::Developer
         viewableBounds.adjust(-10, -10, 10, 10);
 
         QRectF viewableArea;
-        GraphCanvas::ViewRequestBus::EventResult(viewableArea, m_viewId, &GraphCanvas::ViewRequests::GetViewableAreaInSceneCoordinates);
+        JE::Editor::Tools::GraphCanvas::ViewRequestBus::EventResult(viewableArea, m_viewId, &JE::Editor::Tools::GraphCanvas::ViewRequests::GetViewableAreaInSceneCoordinates);
 
         return !viewableArea.isEmpty() && !viewableArea.contains(viewableBounds);
     }
@@ -119,9 +119,9 @@ namespace ScriptCanvas::Developer
         AZ::Vector2 tempVector = AZ::Vector2::CreateZero();
 
         QPoint screenPoint;
-        GraphCanvas::ViewRequestBus::EventResult(tempVector, m_viewId, &GraphCanvas::ViewRequests::MapToGlobal, GraphCanvas::ConversionUtils::QPointToVector(m_scenePoint));
+        JE::Editor::Tools::GraphCanvas::ViewRequestBus::EventResult(tempVector, m_viewId, &JE::Editor::Tools::GraphCanvas::ViewRequests::MapToGlobal, JE::Editor::Tools::GraphCanvas::ConversionUtils::QPointToVector(m_scenePoint));
 
-        screenPoint = GraphCanvas::ConversionUtils::AZToQPoint(tempVector).toPoint();
+        screenPoint = JE::Editor::Tools::GraphCanvas::ConversionUtils::AZToQPoint(tempVector).toPoint();
 
         AddAction(aznew MouseMoveAction(screenPoint));
 
@@ -132,13 +132,13 @@ namespace ScriptCanvas::Developer
     // SceneMouseDragAction
     /////////////////////////
 
-    SceneMouseDragAction::SceneMouseDragAction(GraphCanvas::GraphId graphId, QPointF sceneStart, QPointF sceneEnd, Qt::MouseButton mouseButton)
+    SceneMouseDragAction::SceneMouseDragAction(JE::Editor::Tools::GraphCanvas::GraphId graphId, QPointF sceneStart, QPointF sceneEnd, Qt::MouseButton mouseButton)
         : m_graphId(graphId)
         , m_sceneStart(sceneStart)
         , m_sceneEnd(sceneEnd)
         , m_mouseButton(mouseButton)
     {
-        GraphCanvas::SceneRequestBus::EventResult(m_viewId, m_graphId, &GraphCanvas::SceneRequests::GetViewId);
+        JE::Editor::Tools::GraphCanvas::SceneRequestBus::EventResult(m_viewId, m_graphId, &JE::Editor::Tools::GraphCanvas::SceneRequests::GetViewId);
     }
 
     bool SceneMouseDragAction::IsMissingPrecondition()
@@ -147,7 +147,7 @@ namespace ScriptCanvas::Developer
         viewableBounds.adjust(-10, -10, 10, 10);
 
         QRectF viewableArea;
-        GraphCanvas::ViewRequestBus::EventResult(viewableArea, m_viewId, &GraphCanvas::ViewRequests::GetViewableAreaInSceneCoordinates);
+        JE::Editor::Tools::GraphCanvas::ViewRequestBus::EventResult(viewableArea, m_viewId, &JE::Editor::Tools::GraphCanvas::ViewRequests::GetViewableAreaInSceneCoordinates);
 
         return !viewableArea.contains(viewableBounds);
     }
@@ -165,16 +165,16 @@ namespace ScriptCanvas::Developer
         AZ::Vector2 tempVector = AZ::Vector2::CreateZero();
 
         QPoint screenStart;
-        GraphCanvas::ViewRequestBus::EventResult(tempVector, m_viewId, &GraphCanvas::ViewRequests::MapToGlobal, GraphCanvas::ConversionUtils::QPointToVector(m_sceneStart));
+        JE::Editor::Tools::GraphCanvas::ViewRequestBus::EventResult(tempVector, m_viewId, &JE::Editor::Tools::GraphCanvas::ViewRequests::MapToGlobal, JE::Editor::Tools::GraphCanvas::ConversionUtils::QPointToVector(m_sceneStart));
 
-        screenStart = GraphCanvas::ConversionUtils::AZToQPoint(tempVector).toPoint();
+        screenStart = JE::Editor::Tools::GraphCanvas::ConversionUtils::AZToQPoint(tempVector).toPoint();
 
         tempVector = AZ::Vector2::CreateZero();
 
         QPoint screenEnd;
-        GraphCanvas::ViewRequestBus::EventResult(tempVector, m_viewId, &GraphCanvas::ViewRequests::MapToGlobal, GraphCanvas::ConversionUtils::QPointToVector(m_sceneEnd));
+        JE::Editor::Tools::GraphCanvas::ViewRequestBus::EventResult(tempVector, m_viewId, &JE::Editor::Tools::GraphCanvas::ViewRequests::MapToGlobal, JE::Editor::Tools::GraphCanvas::ConversionUtils::QPointToVector(m_sceneEnd));
 
-        screenEnd = GraphCanvas::ConversionUtils::AZToQPoint(tempVector).toPoint();
+        screenEnd = JE::Editor::Tools::GraphCanvas::ConversionUtils::AZToQPoint(tempVector).toPoint();
 
         AddAction(aznew MouseDragAction(screenStart, screenEnd, m_mouseButton));
 

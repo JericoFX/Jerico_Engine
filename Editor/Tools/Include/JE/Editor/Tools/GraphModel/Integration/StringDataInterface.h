@@ -9,7 +9,7 @@
 #pragma once
 
 // Graph Canvas
-#include <GraphCanvas/Components/NodePropertyDisplay/StringDataInterface.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/NodePropertyDisplay/StringDataInterface.h>
 
 // Graph Model
 #include <JE/Editor/Tools/GraphModel/Model/Slot.h>
@@ -17,7 +17,7 @@
 namespace JE::Editor::Tools::GraphModel::Integration
 {
     //! Satisfies GraphCanvas API requirements for showing string property widgets in nodes.
-    class StringDataInterface : public GraphCanvas::StringDataInterface
+    class StringDataInterface : public JE::Editor::Tools::GraphCanvas::StringDataInterface
     {
     public:
         AZ_CLASS_ALLOCATOR(StringDataInterface, AZ::SystemAllocator);

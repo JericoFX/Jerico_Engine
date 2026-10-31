@@ -31,13 +31,13 @@ AZ_POP_DISABLE_WARNING
 
 #include <AzQtComponents/Components/StyledDockWidget.h>
 
-#include <GraphCanvas/Editor/AssetEditorBus.h>
-#include <GraphCanvas/Components/GraphCanvasPropertyBus.h>
-#include <GraphCanvas/Components/SceneBus.h>
-#include <GraphCanvas/Components/Nodes/NodeBus.h>
-#include <GraphCanvas/Components/Nodes/NodeTitleBus.h>
-#include <GraphCanvas/Widgets/GraphCanvasTreeItem.h>
-#include <GraphCanvas/Widgets/GraphCanvasTreeModel.h>
+#include <JE/Editor/Tools/GraphCanvas/Editor/AssetEditorBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/GraphCanvasPropertyBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/SceneBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/Nodes/NodeBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/Nodes/NodeTitleBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Widgets/GraphCanvasTreeItem.h>
+#include <JE/Editor/Tools/GraphCanvas/Widgets/GraphCanvasTreeModel.h>
 
 #include <ScriptCanvas/Bus/RequestBus.h>
 #include <ScriptCanvas/Variable/VariableBus.h>
@@ -58,7 +58,7 @@ namespace Ui
 namespace ScriptCanvasEditor
 {
     class VariablePropertiesComponent
-        : public GraphCanvas::GraphCanvasPropertyComponent
+        : public JE::Editor::Tools::GraphCanvas::GraphCanvasPropertyComponent
         , protected ScriptCanvas::VariableNotificationBus::Handler
     {
     public:
@@ -104,7 +104,7 @@ namespace ScriptCanvasEditor
 
     class VariableDockWidget
         : public AzQtComponents::StyledDockWidget
-        , public GraphCanvas::AssetEditorNotificationBus::Handler
+        , public JE::Editor::Tools::GraphCanvas::AssetEditorNotificationBus::Handler
         , public AzToolsFramework::EditorEvents::Bus::Handler
         , public VariableAutomationRequestBus::Handler
     {
@@ -122,7 +122,7 @@ namespace ScriptCanvasEditor
         void PopulateVariablePalette(const AZStd::unordered_set< AZ::Uuid >& objectTypes);
 
         // GraphCanvas::AssetEditorNotificationBus::Handler
-        void OnActiveGraphChanged(const GraphCanvas::GraphId& graphCanvasGraphId) override;
+        void OnActiveGraphChanged(const JE::Editor::Tools::GraphCanvas::GraphId& graphCanvasGraphId) override;
         ////
 
         // VariableAutomationRequestBus

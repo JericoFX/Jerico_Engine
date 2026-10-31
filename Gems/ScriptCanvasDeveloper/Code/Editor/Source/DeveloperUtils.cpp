@@ -6,14 +6,14 @@
  *
  */
 
-#include <GraphCanvas/Components/GridBus.h>
-#include <GraphCanvas/Components/SceneBus.h>
-#include <GraphCanvas/Components/Nodes/NodeBus.h>
-#include <GraphCanvas/Components/VisualBus.h>
-#include <GraphCanvas/Editor/EditorTypes.h>
-#include <GraphCanvas/Components/Nodes/NodeUIBus.h>
-#include <GraphCanvas/Widgets/GraphCanvasGraphicsView/GraphCanvasGraphicsView.h>
-#include <GraphCanvas/Widgets/NodePalette/TreeItems/NodePaletteTreeItem.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/GridBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/SceneBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/Nodes/NodeBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/VisualBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Editor/EditorTypes.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/Nodes/NodeUIBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Widgets/GraphCanvasGraphicsView/GraphCanvasGraphicsView.h>
+#include <JE/Editor/Tools/GraphCanvas/Widgets/NodePalette/TreeItems/NodePaletteTreeItem.h>
 #include <Editor/View/Widgets/NodePalette/CreateNodeMimeEvent.h>
 
 #include <ScriptCanvas/Bus/RequestBus.h>
@@ -28,7 +28,7 @@ namespace ScriptCanvasDeveloperEditor
     // DeveloperUtils
     ///////////////////
     
-    ScriptCanvasEditor::NodeIdPair DeveloperUtils::HandleMimeEvent(GraphCanvas::GraphCanvasMimeEvent* mimeEvent, GraphCanvas::GraphId graphCanvasGraphId, const QRectF& viewportRectangle, int& widthOffset, int& heightOffset, int& maxRowHeight, AZ::Vector2 spacing)
+    ScriptCanvasEditor::NodeIdPair DeveloperUtils::HandleMimeEvent(JE::Editor::Tools::GraphCanvas::GraphCanvasMimeEvent* mimeEvent, JE::Editor::Tools::GraphCanvas::GraphId graphCanvasGraphId, const QRectF& viewportRectangle, int& widthOffset, int& heightOffset, int& maxRowHeight, AZ::Vector2 spacing)
     {
         AZ::Vector2 position(aznumeric_cast<float>(viewportRectangle.x()) + widthOffset, aznumeric_cast<float>(viewportRectangle.y()) + heightOffset);
 
@@ -37,17 +37,17 @@ namespace ScriptCanvasDeveloperEditor
 
         UpdateViewportPositionOffsetForNode(createdPair.m_graphCanvasId, viewportRectangle, widthOffset, heightOffset, maxRowHeight, spacing);        
 
-        GraphCanvas::SceneNotificationBus::Event(graphCanvasGraphId, &GraphCanvas::SceneNotifications::PostCreationEvent);
+        JE::Editor::Tools::GraphCanvas::SceneNotificationBus::Event(graphCanvasGraphId, &JE::Editor::Tools::GraphCanvas::SceneNotifications::PostCreationEvent);
 
         return createdPair;
     }
 
-    void DeveloperUtils::UpdateViewportPositionOffsetForNode(GraphCanvas::NodeId nodeId, const QRectF& viewportRectangle, int& widthOffset, int& heightOffset, int& maxRowHeight, AZ::Vector2 spacing)
+    void DeveloperUtils::UpdateViewportPositionOffsetForNode(JE::Editor::Tools::GraphCanvas::NodeId nodeId, const QRectF& viewportRectangle, int& widthOffset, int& heightOffset, int& maxRowHeight, AZ::Vector2 spacing)
     {
         QGraphicsItem* graphicsWidget = nullptr;
-        GraphCanvas::SceneMemberUIRequestBus::EventResult(graphicsWidget, nodeId, &GraphCanvas::SceneMemberUIRequests::GetRootGraphicsItem);
+        JE::Editor::Tools::GraphCanvas::SceneMemberUIRequestBus::EventResult(graphicsWidget, nodeId, &JE::Editor::Tools::GraphCanvas::SceneMemberUIRequests::GetRootGraphicsItem);
 
-        GraphCanvas::NodeUIRequestBus::Event(nodeId, &GraphCanvas::NodeUIRequests::AdjustSize);
+        JE::Editor::Tools::GraphCanvas::NodeUIRequestBus::Event(nodeId, &JE::Editor::Tools::GraphCanvas::NodeUIRequests::AdjustSize);
 
         if (graphicsWidget)
         {
@@ -89,7 +89,7 @@ namespace ScriptCanvasDeveloperEditor
 
         if (connectionConfig.m_skipHandlers)
         {
-            AZ::EntityId outermostNode = GraphCanvas::GraphUtils::FindOutermostNode(nodeIdPair.m_graphCanvasId);
+            AZ::EntityId outermostNode = JE::Editor::Tools::GraphCanvas::GraphUtils::FindOutermostNode(nodeIdPair.m_graphCanvasId);
 
             bool isHandler = false;
             ScriptCanvasEditor::NodeDescriptorRequestBus::EventResult(isHandler, outermostNode, &ScriptCanvasEditor::NodeDescriptorRequests::IsType, ScriptCanvasEditor::NodeDescriptorType::EBusHandler);
@@ -101,8 +101,8 @@ namespace ScriptCanvasDeveloperEditor
 
             // Hacky way to deal with finding the InputHandler node.
             // And the On Graph Start node that we will stumble into in the middle of the node palette as well
-            AZStd::vector< GraphCanvas::SlotId > executionIns;
-            GraphCanvas::NodeRequestBus::EventResult(executionIns, outermostNode, &GraphCanvas::NodeRequests::FindVisibleSlotIdsByType, GraphCanvas::CT_Input, GraphCanvas::SlotTypes::ExecutionSlot);
+            AZStd::vector< JE::Editor::Tools::GraphCanvas::SlotId > executionIns;
+            JE::Editor::Tools::GraphCanvas::NodeRequestBus::EventResult(executionIns, outermostNode, &JE::Editor::Tools::GraphCanvas::NodeRequests::FindVisibleSlotIdsByType, JE::Editor::Tools::GraphCanvas::CT_Input, JE::Editor::Tools::GraphCanvas::SlotTypes::ExecutionSlot);
 
             if (executionIns.empty() && connectionConfig.m_fallbackNode.m_graphCanvasId != outermostNode)
             {
@@ -110,28 +110,28 @@ namespace ScriptCanvasDeveloperEditor
             }
         }
 
-        AZStd::vector< GraphCanvas::SlotId > executionIns;
-        GraphCanvas::NodeRequestBus::EventResult(executionIns, nodeIdPair.m_graphCanvasId, &GraphCanvas::NodeRequests::FindVisibleSlotIdsByType, GraphCanvas::CT_Input, GraphCanvas::SlotTypes::ExecutionSlot);
+        AZStd::vector< JE::Editor::Tools::GraphCanvas::SlotId > executionIns;
+        JE::Editor::Tools::GraphCanvas::NodeRequestBus::EventResult(executionIns, nodeIdPair.m_graphCanvasId, &JE::Editor::Tools::GraphCanvas::NodeRequests::FindVisibleSlotIdsByType, JE::Editor::Tools::GraphCanvas::CT_Input, JE::Editor::Tools::GraphCanvas::SlotTypes::ExecutionSlot);
 
         if (!executionIns.empty())
         {
-            GraphCanvas::Endpoint executionIn = GraphCanvas::Endpoint(nodeIdPair.m_graphCanvasId, executionIns.front());
+            JE::Editor::Tools::GraphCanvas::Endpoint executionIn = JE::Editor::Tools::GraphCanvas::Endpoint(nodeIdPair.m_graphCanvasId, executionIns.front());
 
             if (connectionConfig.m_previousEndpoint.IsValid())
             {
                 if (connectionConfig.m_connectionStyle == ConnectionStyle::SingleExecutionConnection)
                 {
-                    GraphCanvas::SlotRequestBus::Event(executionIn.GetSlotId(), &GraphCanvas::SlotRequests::CreateConnectionWithEndpoint, connectionConfig.m_previousEndpoint);
+                    JE::Editor::Tools::GraphCanvas::SlotRequestBus::Event(executionIn.GetSlotId(), &JE::Editor::Tools::GraphCanvas::SlotRequests::CreateConnectionWithEndpoint, connectionConfig.m_previousEndpoint);
                 }
             }
         }
 
-        AZStd::vector< GraphCanvas::SlotId > executionOuts;
-        GraphCanvas::NodeRequestBus::EventResult(executionOuts, nodeIdPair.m_graphCanvasId, &GraphCanvas::NodeRequests::FindVisibleSlotIdsByType, GraphCanvas::CT_Output, GraphCanvas::SlotTypes::ExecutionSlot);
+        AZStd::vector< JE::Editor::Tools::GraphCanvas::SlotId > executionOuts;
+        JE::Editor::Tools::GraphCanvas::NodeRequestBus::EventResult(executionOuts, nodeIdPair.m_graphCanvasId, &JE::Editor::Tools::GraphCanvas::NodeRequests::FindVisibleSlotIdsByType, JE::Editor::Tools::GraphCanvas::CT_Output, JE::Editor::Tools::GraphCanvas::SlotTypes::ExecutionSlot);
 
         if (!executionOuts.empty())
         {
-            connectionConfig.m_previousEndpoint = GraphCanvas::Endpoint(nodeIdPair.m_graphCanvasId, executionOuts.front());
+            connectionConfig.m_previousEndpoint = JE::Editor::Tools::GraphCanvas::Endpoint(nodeIdPair.m_graphCanvasId, executionOuts.front());
         }
 
         return true;
@@ -151,15 +151,15 @@ namespace ScriptCanvasDeveloperEditor
 
             ScriptCanvasEditor::GeneralRequestBus::Broadcast(&ScriptCanvasEditor::GeneralRequests::PushPreventUndoStateUpdate);
 
-            const GraphCanvas::GraphCanvasTreeItem* treeItem = nullptr;
+            const JE::Editor::Tools::GraphCanvas::GraphCanvasTreeItem* treeItem = nullptr;
             ScriptCanvasEditor::AutomationRequestBus::BroadcastResult(treeItem, &ScriptCanvasEditor::AutomationRequests::GetNodePaletteRoot);
 
-            AZStd::list< const GraphCanvas::GraphCanvasTreeItem* > expandedItems;
+            AZStd::list< const JE::Editor::Tools::GraphCanvas::GraphCanvasTreeItem* > expandedItems;
             expandedItems.emplace_back(treeItem);
 
             while (!expandedItems.empty())
             {
-                const GraphCanvas::GraphCanvasTreeItem* treeItem2 = expandedItems.front();
+                const JE::Editor::Tools::GraphCanvas::GraphCanvasTreeItem* treeItem2 = expandedItems.front();
                 expandedItems.pop_front();
 
                 for (int i = 0; i < treeItem2->GetChildCount(); ++i)
@@ -167,7 +167,7 @@ namespace ScriptCanvasDeveloperEditor
                     expandedItems.emplace_back(treeItem2->FindChildByRow(i));
                 }
 
-                if (const GraphCanvas::NodePaletteTreeItem* nodePaletteTreeItem = azrtti_cast<const GraphCanvas::NodePaletteTreeItem*>(treeItem2))
+                if (const JE::Editor::Tools::GraphCanvas::NodePaletteTreeItem* nodePaletteTreeItem = azrtti_cast<const JE::Editor::Tools::GraphCanvas::NodePaletteTreeItem*>(treeItem2))
                 {
                     if (processNodePaletteInterface.ShouldProcessItem(nodePaletteTreeItem))
                     {

@@ -20,7 +20,7 @@ ly_add_target(
     INCLUDE_DIRECTORIES PRIVATE . Source PUBLIC Include
     BUILD_DEPENDENCIES PUBLIC
         AZ::AzCore AZ::AzFramework JE::RenderScene.Public
-        Gem::LmbrCentral.Static Gem::GradientSignal.Static Gem::SurfaceData.Static
+        Gem::LmbrCentral.Static Gem::GradientSignal.Static JE::Geometry
         JE::RenderFeatures JE::RenderMaterials
         JE::RenderIntegration.Public JE::RenderDebug
 )

@@ -381,10 +381,10 @@ namespace Terrain
         void OnTerrainDefaultSurfaceMaterialCreated(AZ::EntityId entityId, AZ::Data::Instance<JE::Render::RPI::Material> material) override;
         void OnTerrainDefaultSurfaceMaterialDestroyed(AZ::EntityId entityId) override;
         void OnTerrainDefaultSurfaceMaterialChanged(AZ::EntityId entityId, AZ::Data::Instance<JE::Render::RPI::Material> newMaterial) override;
-        void OnTerrainSurfaceMaterialMappingCreated(AZ::EntityId entityId, SurfaceData::SurfaceTag surfaceTag, AZ::Data::Instance<JE::Render::RPI::Material> material) override;
-        void OnTerrainSurfaceMaterialMappingDestroyed(AZ::EntityId entityId, SurfaceData::SurfaceTag surfaceTag) override;
-        void OnTerrainSurfaceMaterialMappingMaterialChanged(AZ::EntityId entityId, SurfaceData::SurfaceTag surfaceTag, AZ::Data::Instance<JE::Render::RPI::Material> material) override;
-        void OnTerrainSurfaceMaterialMappingTagChanged(AZ::EntityId entityId, SurfaceData::SurfaceTag oldSurfaceTag, SurfaceData::SurfaceTag newSurfaceTag) override;
+        void OnTerrainSurfaceMaterialMappingCreated(AZ::EntityId entityId, JE::Geometry::SurfaceData::SurfaceTag surfaceTag, AZ::Data::Instance<JE::Render::RPI::Material> material) override;
+        void OnTerrainSurfaceMaterialMappingDestroyed(AZ::EntityId entityId, JE::Geometry::SurfaceData::SurfaceTag surfaceTag) override;
+        void OnTerrainSurfaceMaterialMappingMaterialChanged(AZ::EntityId entityId, JE::Geometry::SurfaceData::SurfaceTag surfaceTag, AZ::Data::Instance<JE::Render::RPI::Material> material) override;
+        void OnTerrainSurfaceMaterialMappingTagChanged(AZ::EntityId entityId, JE::Geometry::SurfaceData::SurfaceTag oldSurfaceTag, JE::Geometry::SurfaceData::SurfaceTag newSurfaceTag) override;
         void OnTerrainSurfaceMaterialMappingRegionCreated(AZ::EntityId entityId, const AZ::Aabb& region) override;
         void OnTerrainSurfaceMaterialMappingRegionDestroyed(AZ::EntityId entityId, const AZ::Aabb& oldRegion) override;
         void OnTerrainSurfaceMaterialMappingRegionChanged(AZ::EntityId entityId, const AZ::Aabb& oldRegion, const AZ::Aabb& newRegion) override;

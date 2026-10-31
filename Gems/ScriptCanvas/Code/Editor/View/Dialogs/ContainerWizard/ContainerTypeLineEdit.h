@@ -19,7 +19,7 @@
 
 #include <Editor/View/Widgets/DataTypePalette/DataTypePaletteModel.h>
 
-#include <GraphCanvas/Utils/StateControllers/StackStateController.h>
+#include <JE/Editor/Tools/GraphCanvas/Utils/StateControllers/StackStateController.h>
 
 namespace Ui
 {
@@ -55,7 +55,7 @@ namespace ScriptCanvasEditor
         void showEvent(QShowEvent* showEvent) override;
         void hideEvent(QHideEvent* hideEvent) override;
 
-        GraphCanvas::StateController<bool>* GetStateController();
+        JE::Editor::Tools::GraphCanvas::StateController<bool>* GetStateController();
         
         void SetSelectedRow(int row);
         int GetSelectedRow() const;
@@ -78,8 +78,8 @@ namespace ScriptCanvasEditor
         DataTypePaletteSortFilterProxyModel m_proxyModel;
         DataTypePaletteModel                m_model;
 
-        GraphCanvas::StateSetter<bool> m_disableHidingStateSetter;
-        GraphCanvas::StackStateController<bool> m_disableHiding;
+        JE::Editor::Tools::GraphCanvas::StateSetter<bool> m_disableHidingStateSetter;
+        JE::Editor::Tools::GraphCanvas::StackStateController<bool> m_disableHiding;
 
         bool m_ignoreNextFocusIn;
     };
@@ -143,6 +143,6 @@ namespace ScriptCanvasEditor
         QCompleter m_completer;
         ContainerTypeMenu m_dataTypeMenu;
 
-        GraphCanvas::StateSetter<bool> m_disableHidingStateSetter;
+        JE::Editor::Tools::GraphCanvas::StateSetter<bool> m_disableHidingStateSetter;
     };
 }

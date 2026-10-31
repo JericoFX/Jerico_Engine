@@ -7,7 +7,7 @@
  */
 #pragma once
 
-#include <GraphCanvas/Widgets/NodePalette/TreeItems/DraggableNodePaletteTreeItem.h>
+#include <JE/Editor/Tools/GraphCanvas/Widgets/NodePalette/TreeItems/DraggableNodePaletteTreeItem.h>
 #include "CreateNodeMimeEvent.h"
 
 #include <ScriptCanvas/GraphCanvas/NodeDescriptorBus.h>
@@ -39,19 +39,19 @@ namespace ScriptCanvasEditor
     };
     
     class EBusSendEventPaletteTreeItem
-        : public GraphCanvas::DraggableNodePaletteTreeItem
+        : public JE::Editor::Tools::GraphCanvas::DraggableNodePaletteTreeItem
     {
     private:
         static const QString& GetDefaultIcon();
         
     public:
         AZ_CLASS_ALLOCATOR(EBusSendEventPaletteTreeItem, AZ::SystemAllocator);
-        AZ_RTTI(EBusSendEventPaletteTreeItem, "{26258B0A-8E2C-434D-ACAD-3DE85E64A4F8}", GraphCanvas::DraggableNodePaletteTreeItem);
+        AZ_RTTI(EBusSendEventPaletteTreeItem, "{26258B0A-8E2C-434D-ACAD-3DE85E64A4F8}", JE::Editor::Tools::GraphCanvas::DraggableNodePaletteTreeItem);
 
         EBusSendEventPaletteTreeItem(AZStd::string_view busName, AZStd::string_view eventName, const ScriptCanvas::EBusBusId& busId, const ScriptCanvas::EBusEventId& eventIdentifier, bool isOverload, ScriptCanvas::PropertyStatus propertyStatus);
         ~EBusSendEventPaletteTreeItem() = default;
         
-        GraphCanvas::GraphCanvasMimeEvent* CreateMimeEvent() const override;
+        JE::Editor::Tools::GraphCanvas::GraphCanvasMimeEvent* CreateMimeEvent() const override;
 
         AZStd::string GetBusName() const;
         AZStd::string GetEventName() const;
@@ -138,19 +138,19 @@ namespace ScriptCanvasEditor
     // share slots from the owning EBus Handler node. This creates a bit of weirdness with the general creation, since we no longer have a 1:1
     // and need to create a bus wrapper for these things whenever we try to make them.
     class EBusHandleEventPaletteTreeItem
-        : public GraphCanvas::DraggableNodePaletteTreeItem
+        : public JE::Editor::Tools::GraphCanvas::DraggableNodePaletteTreeItem
     {
     private:
         static const QString& GetDefaultIcon();
         
     public:
         AZ_CLASS_ALLOCATOR(EBusHandleEventPaletteTreeItem, AZ::SystemAllocator);
-        AZ_RTTI(EBusHandleEventPaletteTreeItem, "{99A95EC0-1DF8-45B8-8229-D6D12E32CBED}", GraphCanvas::DraggableNodePaletteTreeItem);
+        AZ_RTTI(EBusHandleEventPaletteTreeItem, "{99A95EC0-1DF8-45B8-8229-D6D12E32CBED}", JE::Editor::Tools::GraphCanvas::DraggableNodePaletteTreeItem);
 
         EBusHandleEventPaletteTreeItem(AZStd::string_view busName, AZStd::string_view eventName, const ScriptCanvas::EBusBusId& busId, const ScriptCanvas::EBusEventId& eventId);
         ~EBusHandleEventPaletteTreeItem() = default;
         
-        GraphCanvas::GraphCanvasMimeEvent* CreateMimeEvent() const override;
+        JE::Editor::Tools::GraphCanvas::GraphCanvasMimeEvent* CreateMimeEvent() const override;
 
         AZStd::string GetBusName() const;
         AZStd::string GetEventName() const;

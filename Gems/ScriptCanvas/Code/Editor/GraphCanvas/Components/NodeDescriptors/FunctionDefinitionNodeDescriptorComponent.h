@@ -14,13 +14,13 @@
 
 #include <ScriptCanvas/Core/NodelingBus.h>
 #include <ScriptCanvas/Core/GraphBus.h>
-#include <GraphCanvas/Components/VisualBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/VisualBus.h>
 
 namespace ScriptCanvasEditor
 {
     class FunctionDefinitionNodeDescriptorComponent
         : public NodelingDescriptorComponent
-        , GraphCanvas::VisualNotificationBus::Handler
+        , JE::Editor::Tools::GraphCanvas::VisualNotificationBus::Handler
     {
     public:
         AZ_COMPONENT(FunctionDefinitionNodeDescriptorComponent, "{F433EC33-D8A7-40E0-97E7-B29C3C68323E}", NodelingDescriptorComponent);

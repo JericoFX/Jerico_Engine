@@ -12,9 +12,9 @@
 
 #include <AzCore/EBus/EBus.h>
 
-#include <GraphCanvas/Components/Nodes/Wrapper/WrapperNodeBus.h>
-#include <GraphCanvas/Types/Endpoint.h>
-#include <GraphCanvas/Editor/EditorTypes.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/Nodes/Wrapper/WrapperNodeBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Types/Endpoint.h>
+#include <JE/Editor/Tools/GraphCanvas/Editor/EditorTypes.h>
 
 #include <Editor/Include/ScriptCanvas/Bus/NodeIdPair.h>
 #include <ScriptCanvas/Core/Core.h>
@@ -24,7 +24,7 @@
 #include <ScriptCanvas/Variable/VariableCore.h>
 #include <ScriptEvents/ScriptEventsAsset.h>
 
-namespace GraphCanvas
+namespace JE::Editor::Tools::GraphCanvas
 {
     class StringDataInterface;
 }
@@ -92,7 +92,7 @@ namespace ScriptCanvasEditor
 
         virtual AZStd::string_view GetBusName() const = 0;
 
-        virtual GraphCanvas::WrappedNodeConfiguration GetEventConfiguration(const ScriptCanvas::EBusEventId& eventId) const = 0;
+        virtual JE::Editor::Tools::GraphCanvas::WrappedNodeConfiguration GetEventConfiguration(const ScriptCanvas::EBusEventId& eventId) const = 0;
         virtual bool ContainsEvent(const ScriptCanvas::EBusEventId& eventId) const = 0;
 
         virtual AZStd::vector< HandlerEventConfiguration > GetEventConfigurations() const = 0;
@@ -100,7 +100,7 @@ namespace ScriptCanvasEditor
         virtual AZ::EntityId FindEventNodeId(const ScriptCanvas::EBusEventId& eventName) const = 0;
         virtual AZ::EntityId FindGraphCanvasNodeIdForSlot(const ScriptCanvas::SlotId& slotId) const = 0;
 
-        virtual GraphCanvas::Endpoint MapSlotToGraphCanvasEndpoint(const ScriptCanvas::SlotId& slotId) const = 0;
+        virtual JE::Editor::Tools::GraphCanvas::Endpoint MapSlotToGraphCanvasEndpoint(const ScriptCanvas::SlotId& slotId) const = 0;
     };
 
     using EBusHandlerNodeDescriptorRequestBus = AZ::EBus<EBusHandlerNodeDescriptorRequests>;
@@ -151,7 +151,7 @@ namespace ScriptCanvasEditor
     {
     public:
         static const AZ::EBusAddressPolicy AddressPolicy = AZ::EBusAddressPolicy::ById;
-        using BusIdType = GraphCanvas::NodeId;
+        using BusIdType = JE::Editor::Tools::GraphCanvas::NodeId;
 
         virtual void OnWrapperAction(const QRect& actionWidgetBoundingRect, const QPointF& scenePoint, const QPoint& screenPoint) = 0;
     };
@@ -162,7 +162,7 @@ namespace ScriptCanvasEditor
     {
     public:
         static const AZ::EBusAddressPolicy AddressPolicy = AZ::EBusAddressPolicy::ById;
-        using BusIdType = GraphCanvas::NodeId;
+        using BusIdType = JE::Editor::Tools::GraphCanvas::NodeId;
 
         virtual AZ::Data::AssetId GetAssetId() const = 0;
     };
@@ -173,7 +173,7 @@ namespace ScriptCanvasEditor
     {
     public:
         static const AZ::EBusAddressPolicy AddressPolicy = AZ::EBusAddressPolicy::ById;
-        using BusIdType = GraphCanvas::NodeId;
+        using BusIdType = JE::Editor::Tools::GraphCanvas::NodeId;
         
         virtual void OnScriptEventReloaded([[maybe_unused]] const AZ::Data::Asset<ScriptEvents::ScriptEventsAsset>& asset) {};
     };

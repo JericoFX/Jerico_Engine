@@ -65,8 +65,6 @@ namespace ScriptCanvasTests
                     descriptor.m_useExistingAllocator = true;
 
                     AZ::DynamicModuleDescriptor dynamicModuleDescriptor;
-                    dynamicModuleDescriptor.m_dynamicLibraryPath = "GraphCanvas.Editor";
-                    descriptor.m_modules.push_back(dynamicModuleDescriptor);
                     dynamicModuleDescriptor.m_dynamicLibraryPath = "ScriptCanvas.Editor";
                     descriptor.m_modules.push_back(dynamicModuleDescriptor);
                     dynamicModuleDescriptor.m_dynamicLibraryPath = "ExpressionEvaluation";
@@ -91,7 +89,6 @@ namespace ScriptCanvasTests
             if (settingsRegistry)
             {
                 AZ::Test::AddActiveGem("ScriptCanvasTesting", *settingsRegistry, fileIO);
-                AZ::Test::AddActiveGem("GraphCanvas", *settingsRegistry, fileIO);
                 AZ::Test::AddActiveGem("ScriptCanvas", *settingsRegistry, fileIO);
                 AZ::Test::AddActiveGem("ScriptEvents", *settingsRegistry, fileIO);
                 AZ::Test::AddActiveGem("ExpressionEvaluation", *settingsRegistry, fileIO);

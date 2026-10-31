@@ -51,6 +51,9 @@ namespace JE::Render
             //! Begin and BeginMesh must be called first
             void SetMeshMaterialSlot(ModelMaterialSlot::StableId id);
 
+            //! Copies producer-authored references; does not generate identities.
+            void SetMeshSurfaceIdentityTable(const ModelSurfaceIdentityTable& table);
+
             //! Sets the given BufferAssetView to the current SubMesh as the index buffer.
             //! Begin and BeginMesh must be called first
             void SetMeshIndexBuffer(const BufferAssetView& bufferAssetView);

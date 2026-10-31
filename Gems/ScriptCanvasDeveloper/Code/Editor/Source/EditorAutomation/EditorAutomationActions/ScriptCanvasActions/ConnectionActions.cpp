@@ -6,13 +6,13 @@
  *
  */
 
-#include <GraphCanvas/Components/SceneBus.h>
-#include <GraphCanvas/Components/Slots/SlotBus.h>
-#include <GraphCanvas/Components/ViewBus.h>
-#include <GraphCanvas/Components/VisualBus.h>
-#include <GraphCanvas/Editor/AssetEditorBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/SceneBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/Slots/SlotBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/ViewBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/VisualBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Editor/AssetEditorBus.h>
 
-#include <GraphCanvas/Utils/ConversionUtils.h>
+#include <JE/Editor/Tools/GraphCanvas/Utils/ConversionUtils.h>
 
 #include <Editor/GraphCanvas/GraphCanvasEditorNotificationBusId.h>
 
@@ -28,7 +28,7 @@ namespace ScriptCanvas::Developer
     // CoupleNodesAction
     //////////////////////
 
-    CoupleNodesAction::CoupleNodesAction(GraphCanvas::NodeId nodeToPickUp, GraphCanvas::ConnectionType connectionType, GraphCanvas::NodeId coupleTarget)
+    CoupleNodesAction::CoupleNodesAction(JE::Editor::Tools::GraphCanvas::NodeId nodeToPickUp, JE::Editor::Tools::GraphCanvas::ConnectionType connectionType, JE::Editor::Tools::GraphCanvas::NodeId coupleTarget)
         : m_nodeToPickUp(nodeToPickUp)
         , m_connectionType(connectionType)
         , m_targetNode(coupleTarget)
@@ -38,7 +38,7 @@ namespace ScriptCanvas::Developer
     bool CoupleNodesAction::IsMissingPrecondition()
     {
         QGraphicsItem* sourceGraphicsItem = nullptr;
-        GraphCanvas::VisualRequestBus::EventResult(sourceGraphicsItem, m_nodeToPickUp, &GraphCanvas::VisualRequests::AsGraphicsItem);
+        JE::Editor::Tools::GraphCanvas::VisualRequestBus::EventResult(sourceGraphicsItem, m_nodeToPickUp, &JE::Editor::Tools::GraphCanvas::VisualRequests::AsGraphicsItem);
 
         if (sourceGraphicsItem)
         {
@@ -46,7 +46,7 @@ namespace ScriptCanvas::Developer
         }
 
         QGraphicsItem* targetGraphicsItem = nullptr;
-        GraphCanvas::VisualRequestBus::EventResult(targetGraphicsItem, m_targetNode, &GraphCanvas::VisualRequests::AsGraphicsItem);
+        JE::Editor::Tools::GraphCanvas::VisualRequestBus::EventResult(targetGraphicsItem, m_targetNode, &JE::Editor::Tools::GraphCanvas::VisualRequests::AsGraphicsItem);
 
         if (targetGraphicsItem)
         {
@@ -59,27 +59,27 @@ namespace ScriptCanvas::Developer
         // Provide some extra spacing just to provide some safety
         m_sceneRect = m_sceneRect.adjusted(-m_sceneRect.width() * 0.25f, -m_sceneRect.height() * 0.25f, m_sceneRect.width() * 0.25f, m_sceneRect.height() * 0.25f);
 
-        GraphCanvas::GraphId graphId;
-        GraphCanvas::SceneMemberRequestBus::EventResult(graphId, m_nodeToPickUp, &GraphCanvas::SceneMemberRequests::GetScene);
+        JE::Editor::Tools::GraphCanvas::GraphId graphId;
+        JE::Editor::Tools::GraphCanvas::SceneMemberRequestBus::EventResult(graphId, m_nodeToPickUp, &JE::Editor::Tools::GraphCanvas::SceneMemberRequests::GetScene);
 
-        GraphCanvas::ViewId viewId;
-        GraphCanvas::SceneRequestBus::EventResult(viewId, graphId, &GraphCanvas::SceneRequests::GetViewId);
+        JE::Editor::Tools::GraphCanvas::ViewId viewId;
+        JE::Editor::Tools::GraphCanvas::SceneRequestBus::EventResult(viewId, graphId, &JE::Editor::Tools::GraphCanvas::SceneRequests::GetViewId);
 
         QRectF viewableArea;
-        GraphCanvas::ViewRequestBus::EventResult(viewableArea, viewId, &GraphCanvas::ViewRequests::GetViewableAreaInSceneCoordinates);
+        JE::Editor::Tools::GraphCanvas::ViewRequestBus::EventResult(viewableArea, viewId, &JE::Editor::Tools::GraphCanvas::ViewRequests::GetViewableAreaInSceneCoordinates);
 
         return !viewableArea.contains(m_sceneRect);
     }
 
     EditorAutomationAction* CoupleNodesAction::GenerateMissingPreconditionAction()
     {
-        GraphCanvas::GraphId graphId;
-        GraphCanvas::SceneMemberRequestBus::EventResult(graphId, m_nodeToPickUp, &GraphCanvas::SceneMemberRequests::GetScene);
+        JE::Editor::Tools::GraphCanvas::GraphId graphId;
+        JE::Editor::Tools::GraphCanvas::SceneMemberRequestBus::EventResult(graphId, m_nodeToPickUp, &JE::Editor::Tools::GraphCanvas::SceneMemberRequests::GetScene);
 
         return aznew EnsureSceneRectVisibleAction(graphId, m_sceneRect);
     }
 
-    AZStd::vector< GraphCanvas::ConnectionId > CoupleNodesAction::GetConnectionIds() const
+    AZStd::vector< JE::Editor::Tools::GraphCanvas::ConnectionId > CoupleNodesAction::GetConnectionIds() const
     {
         return m_connections;
     }
@@ -95,17 +95,17 @@ namespace ScriptCanvas::Developer
 
         QPointF mouseStartPoint = QPointF(m_pickUpRect.center().x(), m_pickUpRect.top() + 5);
 
-        GraphCanvas::GraphId graphId;
-        GraphCanvas::SceneMemberRequestBus::EventResult(graphId, m_nodeToPickUp, &GraphCanvas::SceneMemberRequests::GetScene);
+        JE::Editor::Tools::GraphCanvas::GraphId graphId;
+        JE::Editor::Tools::GraphCanvas::SceneMemberRequestBus::EventResult(graphId, m_nodeToPickUp, &JE::Editor::Tools::GraphCanvas::SceneMemberRequests::GetScene);
 
-        GraphCanvas::ViewId viewId;
-        GraphCanvas::SceneRequestBus::EventResult(viewId, graphId, &GraphCanvas::SceneRequests::GetViewId);
+        JE::Editor::Tools::GraphCanvas::ViewId viewId;
+        JE::Editor::Tools::GraphCanvas::SceneRequestBus::EventResult(viewId, graphId, &JE::Editor::Tools::GraphCanvas::SceneRequests::GetViewId);
 
-        GraphCanvas::ViewRequests* viewRequests = GraphCanvas::ViewRequestBus::FindFirstHandler(viewId);
+        JE::Editor::Tools::GraphCanvas::ViewRequests* viewRequests = JE::Editor::Tools::GraphCanvas::ViewRequestBus::FindFirstHandler(viewId);
 
         if (viewRequests)
         {
-            QPoint initialMousePosition = GraphCanvas::ConversionUtils::AZToQPoint(viewRequests->MapToGlobal(GraphCanvas::ConversionUtils::QPointToVector(mouseStartPoint))).toPoint();
+            QPoint initialMousePosition = JE::Editor::Tools::GraphCanvas::ConversionUtils::AZToQPoint(viewRequests->MapToGlobal(JE::Editor::Tools::GraphCanvas::ConversionUtils::QPointToVector(mouseStartPoint))).toPoint();
             AddAction(aznew MouseMoveAction(initialMousePosition));
             AddAction(aznew PressMouseButtonAction(Qt::MouseButton::LeftButton));
 
@@ -113,11 +113,11 @@ namespace ScriptCanvas::Developer
             QPointF startPoint = m_pickUpRect.center();
 
             // Depending on which side of the pick-up node we want to connect, we need to target a different edge of the target node.
-            if (m_connectionType == GraphCanvas::ConnectionType::CT_Input)
+            if (m_connectionType == JE::Editor::Tools::GraphCanvas::ConnectionType::CT_Input)
             {
                 targetPoint = QPointF(m_targetRect.right(), targetPoint.y());
             }
-            else if (m_connectionType == GraphCanvas::ConnectionType::CT_Output)
+            else if (m_connectionType == JE::Editor::Tools::GraphCanvas::ConnectionType::CT_Output)
             {
                 targetPoint = QPointF(m_targetRect.left(), targetPoint.y());
             }
@@ -126,13 +126,13 @@ namespace ScriptCanvas::Developer
 
             QPointF targetMousePosition = QPointF(mouseStartPoint.x() + lineDelta.x(), mouseStartPoint.y() + lineDelta.y());
 
-            AddAction(aznew MouseMoveAction(GraphCanvas::ConversionUtils::AZToQPoint(viewRequests->MapToGlobal(GraphCanvas::ConversionUtils::QPointToVector(targetMousePosition))).toPoint()));
+            AddAction(aznew MouseMoveAction(JE::Editor::Tools::GraphCanvas::ConversionUtils::AZToQPoint(viewRequests->MapToGlobal(JE::Editor::Tools::GraphCanvas::ConversionUtils::QPointToVector(targetMousePosition))).toPoint()));
 
-            GraphCanvas::EditorId editorId;
-            GraphCanvas::SceneRequestBus::EventResult(editorId, graphId, &GraphCanvas::SceneRequests::GetEditorId);
+            JE::Editor::Tools::GraphCanvas::EditorId editorId;
+            JE::Editor::Tools::GraphCanvas::SceneRequestBus::EventResult(editorId, graphId, &JE::Editor::Tools::GraphCanvas::SceneRequests::GetEditorId);
 
             AZStd::chrono::milliseconds coupleDuration;
-            GraphCanvas::AssetEditorSettingsRequestBus::EventResult(coupleDuration, editorId, &GraphCanvas::AssetEditorSettingsRequests::GetDragCouplingTime);
+            JE::Editor::Tools::GraphCanvas::AssetEditorSettingsRequestBus::EventResult(coupleDuration, editorId, &JE::Editor::Tools::GraphCanvas::AssetEditorSettingsRequests::GetDragCouplingTime);
 
             // Double the couple duration to be safe.
             coupleDuration = coupleDuration + coupleDuration;
@@ -144,43 +144,43 @@ namespace ScriptCanvas::Developer
         }
 
         m_connections.clear();
-        GraphCanvas::SceneNotificationBus::Handler::BusConnect(graphId);
+        JE::Editor::Tools::GraphCanvas::SceneNotificationBus::Handler::BusConnect(graphId);
 
         CompoundAction::SetupAction();
     }
 
     void CoupleNodesAction::OnActionsComplete()
     {
-        GraphCanvas::SceneNotificationBus::Handler::BusDisconnect();
+        JE::Editor::Tools::GraphCanvas::SceneNotificationBus::Handler::BusDisconnect();
     }
 
     ///////////////////////////
     // ConnectEndpointsAction
     ///////////////////////////
 
-    ConnectEndpointsAction::ConnectEndpointsAction(GraphCanvas::Endpoint startEndpoint, GraphCanvas::Endpoint targetEndpoint)
+    ConnectEndpointsAction::ConnectEndpointsAction(JE::Editor::Tools::GraphCanvas::Endpoint startEndpoint, JE::Editor::Tools::GraphCanvas::Endpoint targetEndpoint)
         : m_startEndpoint(startEndpoint)
         , m_targetEndpoint(targetEndpoint)
     {
         QPointF startScenePoint;
-        GraphCanvas::SlotUIRequestBus::EventResult(startScenePoint, startEndpoint.m_slotId, &GraphCanvas::SlotUIRequests::GetPinCenter);
+        JE::Editor::Tools::GraphCanvas::SlotUIRequestBus::EventResult(startScenePoint, startEndpoint.m_slotId, &JE::Editor::Tools::GraphCanvas::SlotUIRequests::GetPinCenter);
 
         QPointF targetScenePoint;
-        GraphCanvas::SlotUIRequestBus::EventResult(targetScenePoint, targetEndpoint.m_slotId, &GraphCanvas::SlotUIRequests::GetPinCenter);
+        JE::Editor::Tools::GraphCanvas::SlotUIRequestBus::EventResult(targetScenePoint, targetEndpoint.m_slotId, &JE::Editor::Tools::GraphCanvas::SlotUIRequests::GetPinCenter);
 
-        GraphCanvas::GraphId graphId;
-        GraphCanvas::SceneMemberRequestBus::EventResult(graphId, startEndpoint.m_nodeId, &GraphCanvas::SceneMemberRequests::GetScene);
+        JE::Editor::Tools::GraphCanvas::GraphId graphId;
+        JE::Editor::Tools::GraphCanvas::SceneMemberRequestBus::EventResult(graphId, startEndpoint.m_nodeId, &JE::Editor::Tools::GraphCanvas::SceneMemberRequests::GetScene);
 
         AddAction(aznew SceneMouseDragAction(graphId, startScenePoint, targetScenePoint, Qt::MouseButton::LeftButton));
     }
 
-    GraphCanvas::ConnectionId ConnectEndpointsAction::GetConnectionId() const
+    JE::Editor::Tools::GraphCanvas::ConnectionId ConnectEndpointsAction::GetConnectionId() const
     {
         return m_connectionId;
     }
 
     void ConnectEndpointsAction::OnActionsComplete()
     {
-        GraphCanvas::SlotRequestBus::EventResult(m_connectionId, m_startEndpoint.GetSlotId(), &GraphCanvas::SlotRequests::GetLastConnection);
+        JE::Editor::Tools::GraphCanvas::SlotRequestBus::EventResult(m_connectionId, m_startEndpoint.GetSlotId(), &JE::Editor::Tools::GraphCanvas::SlotRequests::GetLastConnection);
     }
 }

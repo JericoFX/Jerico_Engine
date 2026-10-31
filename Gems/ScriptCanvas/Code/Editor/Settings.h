@@ -20,8 +20,8 @@ AZ_PUSH_DISABLE_WARNING(4251 4800, "-Wunknown-warning-option")
 #include <QMainWindow>
 AZ_POP_DISABLE_WARNING
 
-#include <GraphCanvas/Editor/AssetEditorBus.h>
-#include <GraphCanvas/Types/ConstructPresets.h>
+#include <JE/Editor/Tools/GraphCanvas/Editor/AssetEditorBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Types/ConstructPresets.h>
 
 namespace AZ
 {
@@ -33,16 +33,16 @@ namespace ScriptCanvasEditor
     namespace EditorSettings
     {
         class ScriptCanvasConstructPresets
-            : public GraphCanvas::EditorConstructPresets
+            : public JE::Editor::Tools::GraphCanvas::EditorConstructPresets
         {
         public:
-            AZ_RTTI(ScriptCanvasConstructPresets, "{191DCCB3-670F-4243-813E-DF23BE838F45}", GraphCanvas::EditorConstructPresets);
+            AZ_RTTI(ScriptCanvasConstructPresets, "{191DCCB3-670F-4243-813E-DF23BE838F45}", JE::Editor::Tools::GraphCanvas::EditorConstructPresets);
             AZ_CLASS_ALLOCATOR(ScriptCanvasConstructPresets, AZ::SystemAllocator);
 
             ScriptCanvasConstructPresets();
             ~ScriptCanvasConstructPresets() override = default;
 
-            void InitializeConstructType(GraphCanvas::ConstructType constructType) override;
+            void InitializeConstructType(JE::Editor::Tools::GraphCanvas::ConstructType constructType) override;
         };
 
         class EditorWorkspace
@@ -285,25 +285,25 @@ namespace ScriptCanvasEditor
             
             virtual ~StylingSettings() = default;
 
-            GraphCanvas::Styling::ConnectionCurveType GetConnectionCurveType() const
+            JE::Editor::Tools::GraphCanvas::Styling::ConnectionCurveType GetConnectionCurveType() const
             {
                 return m_connectionCurveType;
             }
 
-            GraphCanvas::Styling::ConnectionCurveType GetDataConnectionCurveType() const
+            JE::Editor::Tools::GraphCanvas::Styling::ConnectionCurveType GetDataConnectionCurveType() const
             {
                 return m_dataConnectionCurveType;
             }
 
         private:
 
-            GraphCanvas::Styling::ConnectionCurveType m_connectionCurveType = GraphCanvas::Styling::ConnectionCurveType::Straight;
-            GraphCanvas::Styling::ConnectionCurveType m_dataConnectionCurveType = GraphCanvas::Styling::ConnectionCurveType::Straight;
+            JE::Editor::Tools::GraphCanvas::Styling::ConnectionCurveType m_connectionCurveType = JE::Editor::Tools::GraphCanvas::Styling::ConnectionCurveType::Straight;
+            JE::Editor::Tools::GraphCanvas::Styling::ConnectionCurveType m_dataConnectionCurveType = JE::Editor::Tools::GraphCanvas::Styling::ConnectionCurveType::Straight;
         };
 
         class ScriptCanvasEditorSettings
             : public AZ::UserSettings
-            , public GraphCanvas::AssetEditorPresetNotificationBus::Handler
+            , public JE::Editor::Tools::GraphCanvas::AssetEditorPresetNotificationBus::Handler
         {
         public:
             AZ_RTTI(ScriptCanvasEditorSettings, "{D8D5453C-BFB8-4C71-BBAF-0F10FDD69B3F}", AZ::UserSettings);
@@ -315,7 +315,7 @@ namespace ScriptCanvasEditor
             ScriptCanvasEditorSettings();
 
             // GraphCanvas::AssetEditorPResetNotifications
-            void OnConstructPresetsChanged(GraphCanvas::ConstructType constructType) override;
+            void OnConstructPresetsChanged(JE::Editor::Tools::GraphCanvas::ConstructType constructType) override;
             ////
 
             double m_snapDistance;

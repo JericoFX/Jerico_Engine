@@ -10,12 +10,12 @@
 #include <EMotionFX/Source/AnimGraphObjectFactory.h>
 #include <EMotionFX/Tools/EMotionStudio/Plugins/StandardPlugins/Source/AnimGraph/AnimGraphPlugin.h>
 #include <EMotionFX/Tools/EMotionStudio/Plugins/StandardPlugins/Source/AnimGraph/BlendGraphWidget.h>
-#include <GraphCanvas/Widgets/NodePalette/TreeItems/NodePaletteTreeItem.h>
+#include <JE/Editor/Tools/GraphCanvas/Widgets/NodePalette/TreeItems/NodePaletteTreeItem.h>
 
 namespace EMStudio
 {
     NodePaletteModelUpdater::NodePaletteModelUpdater(AnimGraphPlugin* plugin)
-        : m_rootItem(aznew GraphCanvas::NodePaletteTreeItem("root", AnimGraphEditorId))
+        : m_rootItem(aznew JE::Editor::Tools::GraphCanvas::NodePaletteTreeItem("root", AnimGraphEditorId))
         , m_plugin(plugin)
 
     {
@@ -29,12 +29,12 @@ namespace EMStudio
         for (EMotionFX::AnimGraphNode::ECategory category : categories)
         {
             const char* categoryName = EMotionFX::AnimGraphObject::GetCategoryName(category);
-            auto* node = m_rootItem->CreateChildNode<GraphCanvas::NodePaletteTreeItem>(categoryName, AnimGraphEditorId);
+            auto* node = m_rootItem->CreateChildNode<JE::Editor::Tools::GraphCanvas::NodePaletteTreeItem>(categoryName, AnimGraphEditorId);
             m_categoryNodes.insert({ category, node });
         }
     }
 
-    GraphCanvas::NodePaletteTreeItem* NodePaletteModelUpdater::GetRootItem()
+    JE::Editor::Tools::GraphCanvas::NodePaletteTreeItem* NodePaletteModelUpdater::GetRootItem()
     {
         return m_rootItem;
     }

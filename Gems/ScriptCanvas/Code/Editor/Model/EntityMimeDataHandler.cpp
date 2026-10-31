@@ -23,14 +23,14 @@
 #include <AzToolsFramework/API/ToolsApplicationAPI.h>
 #include <AzCore/Component/Entity.h>
 
-#include <GraphCanvas/Components/SceneBus.h>
-#include <GraphCanvas/Components/GridBus.h>
-#include <GraphCanvas/Components/ViewBus.h>
-#include <GraphCanvas/Components/VisualBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/SceneBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/GridBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/ViewBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/VisualBus.h>
 #include <Core/GraphBus.h>
 
 #include <ScriptCanvas/Variable/VariableBus.h>
-#include <GraphCanvas/Utils/GraphUtils.h>
+#include <JE/Editor/Tools/GraphCanvas/Utils/GraphUtils.h>
 
 namespace ScriptCanvasEditor
 {
@@ -60,12 +60,12 @@ namespace ScriptCanvasEditor
 
     void EntityMimeDataHandler::Activate()
     {
-        GraphCanvas::SceneMimeDelegateHandlerRequestBus::Handler::BusConnect(GetEntityId());
+        JE::Editor::Tools::GraphCanvas::SceneMimeDelegateHandlerRequestBus::Handler::BusConnect(GetEntityId());
     }
 
     void EntityMimeDataHandler::Deactivate()
     {
-        GraphCanvas::SceneMimeDelegateHandlerRequestBus::Handler::BusDisconnect();
+        JE::Editor::Tools::GraphCanvas::SceneMimeDelegateHandlerRequestBus::Handler::BusDisconnect();
     }
     
     bool EntityMimeDataHandler::IsInterestedInMimeData(const AZ::EntityId& sceneId, const QMimeData* mimeData)
@@ -115,7 +115,7 @@ namespace ScriptCanvasEditor
         variableIds.reserve(entityIdListContainer.m_entityIds.size());
 
         {
-            GraphCanvas::ScopedGraphUndoBlocker undoBlocker(graphCanvasGraphId);
+            JE::Editor::Tools::GraphCanvas::ScopedGraphUndoBlocker undoBlocker(graphCanvasGraphId);
 
             AZ::Vector2 pos(aznumeric_cast<float>(dropPoint.x()), aznumeric_cast<float>(dropPoint.y()));            
 
@@ -180,15 +180,15 @@ namespace ScriptCanvasEditor
             if (!variableIds.empty())
             {
                 AZ::EntityId gridId;
-                GraphCanvas::SceneRequestBus::EventResult(gridId, graphCanvasGraphId, &GraphCanvas::SceneRequests::GetGrid);
+                JE::Editor::Tools::GraphCanvas::SceneRequestBus::EventResult(gridId, graphCanvasGraphId, &JE::Editor::Tools::GraphCanvas::SceneRequests::GetGrid);
 
                 AZ::Vector2 gridStep;
-                GraphCanvas::GridRequestBus::EventResult(gridStep, gridId, &GraphCanvas::GridRequests::GetMinorPitch);
+                JE::Editor::Tools::GraphCanvas::GridRequestBus::EventResult(gridStep, gridId, &JE::Editor::Tools::GraphCanvas::GridRequests::GetMinorPitch);
 
                 for (const ScriptCanvas::VariableId& variableId : variableIds)
                 {
                     NodeIdPair nodePair = Nodes::CreateGetVariableNode(variableId, scriptCanvasId);
-                    GraphCanvas::SceneRequestBus::Event(graphCanvasGraphId, &GraphCanvas::SceneRequests::AddNode, nodePair.m_graphCanvasId, pos, false);
+                    JE::Editor::Tools::GraphCanvas::SceneRequestBus::Event(graphCanvasGraphId, &JE::Editor::Tools::GraphCanvas::SceneRequests::AddNode, nodePair.m_graphCanvasId, pos, false);
                     pos += gridStep;
                 }
                 

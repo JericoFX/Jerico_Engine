@@ -28,14 +28,14 @@
 #include <Editor/View/Widgets/PropertyGridContextMenu.h>
 #include <ScriptCanvas/Bus/RequestBus.h>
 
-#include <GraphCanvas/Components/Nodes/NodeBus.h>
-#include <GraphCanvas/Components/Nodes/NodeTitleBus.h>
-#include <GraphCanvas/Components/GraphCanvasPropertyBus.h>
-#include <GraphCanvas/Components/SceneBus.h>
-#include <GraphCanvas/Editor/GraphCanvasProfiler.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/Nodes/NodeBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/Nodes/NodeTitleBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/GraphCanvasPropertyBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/SceneBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Editor/GraphCanvasProfiler.h>
 
 #include <ScriptCanvas/Core/Endpoint.h>
-#include <GraphCanvas/Components/Slots/SlotBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/Slots/SlotBus.h>
 
 #include <ScriptCanvas/Libraries/Core/EBusEventHandler.h>
 #include <ScriptCanvas/Libraries/Core/Method.h>
@@ -51,10 +51,10 @@ namespace
         AZStd::string result;
 
         AZStd::string title;
-        GraphCanvas::NodeTitleRequestBus::EventResult(title, entityId, &GraphCanvas::NodeTitleRequests::GetTitle);
+        JE::Editor::Tools::GraphCanvas::NodeTitleRequestBus::EventResult(title, entityId, &JE::Editor::Tools::GraphCanvas::NodeTitleRequests::GetTitle);
 
         AZStd::string subtitle;
-        GraphCanvas::NodeTitleRequestBus::EventResult(subtitle, entityId, &GraphCanvas::NodeTitleRequests::GetSubTitle);
+        JE::Editor::Tools::GraphCanvas::NodeTitleRequestBus::EventResult(subtitle, entityId, &JE::Editor::Tools::GraphCanvas::NodeTitleRequests::GetSubTitle);
         
         // NOT a variable.
         result = title;
@@ -97,7 +97,7 @@ namespace
 
             // Try and get the underlying SC entity
             AZStd::any* userData{};
-            GraphCanvas::NodeRequestBus::EventResult(userData, instance->GetEntityId(), &GraphCanvas::NodeRequests::GetUserData);
+            JE::Editor::Tools::GraphCanvas::NodeRequestBus::EventResult(userData, instance->GetEntityId(), &JE::Editor::Tools::GraphCanvas::NodeRequests::GetUserData);
             AZ::EntityId scriptCanvasId = userData && userData->is<AZ::EntityId>() ? *AZStd::any_cast<AZ::EntityId>(userData) : AZ::EntityId();
             if (scriptCanvasId.IsValid())
             {
@@ -157,8 +157,8 @@ namespace
         GRAPH_CANVAS_DETAILED_PROFILE_FUNCTION();
         AZStd::list<AZ::Component*> result;
 
-        GraphCanvas::GraphCanvasPropertyBus::EnumerateHandlersId(entityId,
-            [&result](GraphCanvas::GraphCanvasPropertyInterface* propertyInterface) -> bool
+        JE::Editor::Tools::GraphCanvas::GraphCanvasPropertyBus::EnumerateHandlersId(entityId,
+            [&result](JE::Editor::Tools::GraphCanvas::GraphCanvasPropertyInterface* propertyInterface) -> bool
             {
                 AZ::Component* component = propertyInterface->GetPropertyComponent();
                 if (AzToolsFramework::ShouldInspectorShowComponent(component))
@@ -179,7 +179,7 @@ namespace
         GRAPH_CANVAS_DETAILED_PROFILE_FUNCTION();
         // GraphCanvas entityId -> scriptCanvasEntity
         AZStd::any* userData {};
-        GraphCanvas::NodeRequestBus::EventResult(userData, entityId, &GraphCanvas::NodeRequests::GetUserData);
+        JE::Editor::Tools::GraphCanvas::NodeRequestBus::EventResult(userData, entityId, &JE::Editor::Tools::GraphCanvas::NodeRequests::GetUserData);
         AZ::EntityId scriptCanvasId = userData && userData->is<AZ::EntityId>() ? *AZStd::any_cast<AZ::EntityId>(userData) : AZ::EntityId();
         if (!scriptCanvasId.IsValid())
         {
@@ -348,7 +348,7 @@ namespace ScriptCanvasEditor
             ScriptCanvas::EndpointNotificationBus::MultiHandler::BusDisconnect();
             ScriptCanvas::NodeNotificationsBus::MultiHandler::BusDisconnect();
 
-            GraphCanvas::GraphCanvasPropertyInterfaceNotificationBus::MultiHandler::BusDisconnect();
+            JE::Editor::Tools::GraphCanvas::GraphCanvasPropertyInterfaceNotificationBus::MultiHandler::BusDisconnect();
         }
 
         void PropertyGrid::OnPropertyComponentChanged()
@@ -420,7 +420,7 @@ namespace ScriptCanvasEditor
                     AZ::EntityId graphCanvasGraphId;
 
                     // GraphCanvas Node
-                    GraphCanvas::SceneMemberRequestBus::EventResult(graphCanvasGraphId, component->GetEntityId(), &GraphCanvas::SceneMemberRequests::GetScene);
+                    JE::Editor::Tools::GraphCanvas::SceneMemberRequestBus::EventResult(graphCanvasGraphId, component->GetEntityId(), &JE::Editor::Tools::GraphCanvas::SceneMemberRequests::GetScene);
                     GeneralRequestBus::BroadcastResult(executionId, &GeneralRequests::GetScriptCanvasId, graphCanvasGraphId);
                 }
             }
@@ -476,7 +476,7 @@ namespace ScriptCanvasEditor
 
             for (const AZ::EntityId& gcEntityId : selectedEntityIds)
             {
-                GraphCanvas::GraphCanvasPropertyInterfaceNotificationBus::MultiHandler::BusConnect(gcEntityId);
+                JE::Editor::Tools::GraphCanvas::GraphCanvasPropertyInterfaceNotificationBus::MultiHandler::BusConnect(gcEntityId);
             }
 
             UpdateContents(selectedEntityIds);
@@ -620,7 +620,7 @@ namespace ScriptCanvasEditor
             {
                 // GC node -> SC node.
                 AZStd::any* nodeUserData = nullptr;
-                GraphCanvas::NodeRequestBus::EventResult(nodeUserData, gcNodeEntityId, &GraphCanvas::NodeRequests::GetUserData);
+                JE::Editor::Tools::GraphCanvas::NodeRequestBus::EventResult(nodeUserData, gcNodeEntityId, &JE::Editor::Tools::GraphCanvas::NodeRequests::GetUserData);
                 AZ::EntityId scNodeEntityId = nodeUserData && nodeUserData->is<AZ::EntityId>() ? *AZStd::any_cast<AZ::EntityId>(nodeUserData) : AZ::EntityId();
 
                 AZ::Entity* nodeEntity{};
@@ -634,13 +634,13 @@ namespace ScriptCanvasEditor
                 ScriptCanvas::NodeNotificationsBus::MultiHandler::BusConnect(node->GetEntityId());
 
                 AZStd::vector<AZ::EntityId> gcSlotEntityIds;
-                GraphCanvas::NodeRequestBus::EventResult(gcSlotEntityIds, gcNodeEntityId, &GraphCanvas::NodeRequests::GetSlotIds);
+                JE::Editor::Tools::GraphCanvas::NodeRequestBus::EventResult(gcSlotEntityIds, gcNodeEntityId, &JE::Editor::Tools::GraphCanvas::NodeRequests::GetSlotIds);
 
                 for (auto& gcSlotEntityId : gcSlotEntityIds)
                 {
                     // GC slot -> SC slot.
                     AZStd::any* slotUserData = nullptr;
-                    GraphCanvas::SlotRequestBus::EventResult(slotUserData, gcSlotEntityId, &GraphCanvas::SlotRequests::GetUserData);
+                    JE::Editor::Tools::GraphCanvas::SlotRequestBus::EventResult(slotUserData, gcSlotEntityId, &JE::Editor::Tools::GraphCanvas::SlotRequests::GetUserData);
                     ScriptCanvas::SlotId scSlotId = slotUserData && slotUserData->is<ScriptCanvas::SlotId>() ? *AZStd::any_cast<ScriptCanvas::SlotId>(slotUserData) : ScriptCanvas::SlotId();
 
                     ScriptCanvas::Slot* slot = node->GetSlot(scSlotId);

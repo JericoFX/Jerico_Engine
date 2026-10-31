@@ -29,11 +29,11 @@ namespace JE::Editor::Tools::GraphModel::Integration
 
         ////////////////////////////////////////////////////////////////////////////////////
         // GraphModelIntegration::GraphManagerRequestBus overrides
-        AZ::Entity* CreateScene(JE::Editor::Tools::GraphModel::GraphPtr graph, const GraphCanvas::EditorId editorId) override;
-        void RemoveScene(const GraphCanvas::GraphId& sceneId) override;
-        void CreateGraphController(const GraphCanvas::GraphId& sceneId, JE::Editor::Tools::GraphModel::GraphPtr graph) override;
-        void DeleteGraphController(const GraphCanvas::GraphId& sceneId) override;
-        JE::Editor::Tools::GraphModel::GraphPtr GetGraph(const GraphCanvas::GraphId& sceneId) override;
+        AZ::Entity* CreateScene(JE::Editor::Tools::GraphModel::GraphPtr graph, const JE::Editor::Tools::GraphCanvas::EditorId editorId) override;
+        void RemoveScene(const JE::Editor::Tools::GraphCanvas::GraphId& sceneId) override;
+        void CreateGraphController(const JE::Editor::Tools::GraphCanvas::GraphId& sceneId, JE::Editor::Tools::GraphModel::GraphPtr graph) override;
+        void DeleteGraphController(const JE::Editor::Tools::GraphCanvas::GraphId& sceneId) override;
+        JE::Editor::Tools::GraphModel::GraphPtr GetGraph(const JE::Editor::Tools::GraphCanvas::GraphId& sceneId) override;
         const GraphModelSerialization& GetSerializedMappings() override;
         void SetSerializedMappings(const GraphModelSerialization& serialization) override;
         ////////////////////////////////////////////////////////////////////////////////////
@@ -41,7 +41,7 @@ namespace JE::Editor::Tools::GraphModel::Integration
     private:
         AZ_DISABLE_COPY_MOVE(GraphControllerManager);
 
-        AZStd::unordered_map<GraphCanvas::GraphId, AZStd::shared_ptr<GraphController>> m_graphControllers;
+        AZStd::unordered_map<JE::Editor::Tools::GraphCanvas::GraphId, AZStd::shared_ptr<GraphController>> m_graphControllers;
 
         GraphModelSerialization m_serialization;
     };

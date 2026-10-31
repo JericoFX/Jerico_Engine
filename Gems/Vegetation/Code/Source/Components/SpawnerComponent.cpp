@@ -20,9 +20,9 @@
 #include <Vegetation/Ebuses/DescriptorProviderRequestBus.h>
 #include <Vegetation/InstanceData.h>
 #include <GradientSignal/Util.h>
-#include <SurfaceData/SurfaceDataTagEnumeratorRequestBus.h>
+#include <JE/Geometry/SurfaceData/SurfaceDataTagEnumeratorRequestBus.h>
 #include <AzCore/std/sort.h>
-#include <SurfaceData/Utility/SurfaceDataUtility.h>
+#include <JE/Geometry/SurfaceData/Utility/SurfaceDataUtility.h>
 #include <Vegetation/Ebuses/DebugNotificationBus.h>
 
 namespace Vegetation
@@ -226,8 +226,8 @@ namespace Vegetation
         m_exclusiveTagsToConsider.clear();
         for (const auto& id : processedIds)
         {
-            SurfaceData::SurfaceDataTagEnumeratorRequestBus::Event(id, &SurfaceData::SurfaceDataTagEnumeratorRequestBus::Events::GetInclusionSurfaceTags, m_inclusiveTagsToConsider, includeAll);
-            SurfaceData::SurfaceDataTagEnumeratorRequestBus::Event(id, &SurfaceData::SurfaceDataTagEnumeratorRequestBus::Events::GetExclusionSurfaceTags, m_exclusiveTagsToConsider);
+            JE::Geometry::SurfaceData::SurfaceDataTagEnumeratorRequestBus::Event(id, &JE::Geometry::SurfaceData::SurfaceDataTagEnumeratorRequestBus::Events::GetInclusionSurfaceTags, m_inclusiveTagsToConsider, includeAll);
+            JE::Geometry::SurfaceData::SurfaceDataTagEnumeratorRequestBus::Event(id, &JE::Geometry::SurfaceData::SurfaceDataTagEnumeratorRequestBus::Events::GetExclusionSurfaceTags, m_exclusiveTagsToConsider);
         }
 
         // If anything is telling us to include all surfaces, clear out our list, as this means "check everything".
@@ -418,7 +418,7 @@ namespace Vegetation
 
         //reject entire spawner if there are inclusion tags to consider that don't exist in the context
         if (context.m_masks.HasValidTags() &&
-            SurfaceData::HasValidTags(m_inclusiveTagsToConsider) &&
+            JE::Geometry::SurfaceData::HasValidTags(m_inclusiveTagsToConsider) &&
             !context.m_masks.HasAnyMatchingTags(m_inclusiveTagsToConsider))
         {
             VEG_PROFILE_METHOD(DebugNotificationBus::TryQueueBroadcast(&DebugNotificationBus::Events::MarkAreaRejectedByMask, GetEntityId()));

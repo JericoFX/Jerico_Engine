@@ -11,8 +11,8 @@
 #include <AzCore/Component/Component.h>
 #include <Vegetation/Ebuses/FilterRequestBus.h>
 #include <Vegetation/Ebuses/SurfaceMaskFilterRequestBus.h>
-#include <SurfaceData/SurfaceDataTypes.h>
-#include <SurfaceData/SurfaceDataTagEnumeratorRequestBus.h>
+#include <JE/Geometry/SurfaceData/SurfaceDataTypes.h>
+#include <JE/Geometry/SurfaceData/SurfaceDataTagEnumeratorRequestBus.h>
 
 namespace LmbrCentral
 {
@@ -35,10 +35,10 @@ namespace Vegetation
         static void Reflect(AZ::ReflectContext* context);
         FilterStage m_filterStage = FilterStage::Default;
         bool m_allowOverrides = false;
-        SurfaceData::SurfaceTagVector m_inclusiveSurfaceMasks;
+        JE::Geometry::SurfaceData::SurfaceTagVector m_inclusiveSurfaceMasks;
         float m_inclusiveWeightMin = 0.1f;
         float m_inclusiveWeightMax = 1.0f;
-        SurfaceData::SurfaceTagVector m_exclusiveSurfaceMasks;
+        JE::Geometry::SurfaceData::SurfaceTagVector m_exclusiveSurfaceMasks;
         float m_exclusiveWeightMin = 0.1f;
         float m_exclusiveWeightMax = 1.0f;
 
@@ -62,7 +62,7 @@ namespace Vegetation
         : public AZ::Component
         , protected FilterRequestBus::Handler
         , private SurfaceMaskFilterRequestBus::Handler
-        , private SurfaceData::SurfaceDataTagEnumeratorRequestBus::Handler
+        , private JE::Geometry::SurfaceData::SurfaceDataTagEnumeratorRequestBus::Handler
     {
     public:
         template<typename, typename> friend class LmbrCentral::EditorWrappedComponentBase;
@@ -84,9 +84,9 @@ namespace Vegetation
         bool WriteOutConfig(AZ::ComponentConfig* outBaseConfig) const override;
 
         //////////////////////////////////////////////////////////////////////////
-        // SurfaceData::SurfaceDataTagEnumeratorRequestBus
-        void GetInclusionSurfaceTags(SurfaceData::SurfaceTagVector& tags, bool& includeAll) const override;
-        void GetExclusionSurfaceTags(SurfaceData::SurfaceTagVector& tags) const override;
+        // JE::Geometry::SurfaceData::SurfaceDataTagEnumeratorRequestBus
+        void GetInclusionSurfaceTags(JE::Geometry::SurfaceData::SurfaceTagVector& tags, bool& includeAll) const override;
+        void GetExclusionSurfaceTags(JE::Geometry::SurfaceData::SurfaceTagVector& tags) const override;
 
         //////////////////////////////////////////////////////////////////////////
         // VegetationFilterRequestBus

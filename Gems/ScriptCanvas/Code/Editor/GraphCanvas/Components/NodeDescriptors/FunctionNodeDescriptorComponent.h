@@ -7,8 +7,8 @@
  */
 #pragma once
 
-#include <GraphCanvas/Components/Nodes/NodeBus.h>
-#include <GraphCanvas/Components/VisualBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/Nodes/NodeBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/VisualBus.h>
 
 #include <Editor/GraphCanvas/Components/NodeDescriptors/NodeDescriptorComponent.h>
 #include <ScriptCanvas/Bus/RequestBus.h>
@@ -20,7 +20,7 @@ namespace ScriptCanvasEditor
         : public NodeDescriptorComponent
         , public AZ::Data::AssetBus::Handler
         , public EditorNodeNotificationBus::Handler
-        , public GraphCanvas::VisualNotificationBus::Handler
+        , public JE::Editor::Tools::GraphCanvas::VisualNotificationBus::Handler
     {
     public:    
         AZ_COMPONENT(FunctionNodeDescriptorComponent, "{B9DA0350-AF62-475E-8DD7-30E8F4F313BB}", NodeDescriptorComponent);
@@ -51,7 +51,7 @@ namespace ScriptCanvasEditor
 
 
     protected:
-        void OnAddedToGraphCanvasGraph(const GraphCanvas::GraphId& graphId, const AZ::EntityId& scriptCanvasNodeId) override;
+        void OnAddedToGraphCanvasGraph(const JE::Editor::Tools::GraphCanvas::GraphId& graphId, const AZ::EntityId& scriptCanvasNodeId) override;
 
     private:
 

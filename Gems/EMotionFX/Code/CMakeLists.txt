@@ -117,7 +117,6 @@ if (PAL_TRAIT_BUILD_HOST_TOOLS)
                 Legacy::Editor.Headers
                 3rdParty::OpenGLInterface
                 JE::EditorTools
-                Gem::GraphCanvasWidgets
         COMPILE_DEFINITIONS
             PUBLIC
                 EMFX_EMSTUDIOLYEMBEDDED

@@ -10,7 +10,7 @@
 #include <AzCore/Component/Component.h>
 #include <AzCore/std/containers/unordered_map.h>
 
-#include <GraphCanvas/Components/Nodes/NodeBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/Nodes/NodeBus.h>
 
 #include <Editor/Include/ScriptCanvas/GraphCanvas/MappingBus.h>
 #include <ScriptCanvas/Core/NodeBus.h>
@@ -21,7 +21,7 @@ namespace ScriptCanvasEditor
         : public AZ::Component
         , public SceneMemberMappingRequestBus::Handler
         , public SceneMemberMappingConfigurationRequestBus::Handler
-        , public GraphCanvas::NodeNotificationBus::Handler
+        , public JE::Editor::Tools::GraphCanvas::NodeNotificationBus::Handler
     {
     public:
         AZ_COMPONENT(SceneMemberMappingComponent, "{145667DE-EBD6-4EC5-B630-7C9B1A5ACFF0}");
@@ -54,7 +54,7 @@ namespace ScriptCanvasEditor
 
     class SlotMappingComponent
         : public AZ::Component
-        , public GraphCanvas::NodeNotificationBus::Handler
+        , public JE::Editor::Tools::GraphCanvas::NodeNotificationBus::Handler
         , public SlotMappingRequestBus::MultiHandler
         , public ScriptCanvas::NodeNotificationsBus::Handler
         , public SceneMemberMappingConfigurationRequestBus::Handler

@@ -7,14 +7,14 @@
  */
 #pragma once
 
-#include <GraphCanvas/Components/NodePropertyDisplay/StringDataInterface.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/NodePropertyDisplay/StringDataInterface.h>
 
 #include "ScriptCanvasPropertyDataInterface.h"
 
 namespace ScriptCanvasEditor
 {
     class ScriptCanvasStringPropertyDataInterface
-        : public ScriptCanvasPropertyDataInterface<GraphCanvas::StringDataInterface, ScriptCanvas::Data::StringType>
+        : public ScriptCanvasPropertyDataInterface<JE::Editor::Tools::GraphCanvas::StringDataInterface, ScriptCanvas::Data::StringType>
     {
     public:
         AZ_CLASS_ALLOCATOR(ScriptCanvasStringPropertyDataInterface, AZ::SystemAllocator);

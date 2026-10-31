@@ -10,9 +10,9 @@
 
 #include <QAction>
 
-#include <GraphCanvas/Components/Slots/SlotBus.h>
-#include <GraphCanvas/Components/Nodes/NodeBus.h>
-#include <GraphCanvas/Components/VisualBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/Slots/SlotBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/Nodes/NodeBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/VisualBus.h>
 #include <ScriptCanvas/Bus/RequestBus.h>
 
 #include <Editor/View/Widgets/PropertyGridContextMenu.h>
@@ -64,31 +64,31 @@ namespace
         SlotInfoList slotsList;
 
         AZStd::vector<AZ::EntityId> slotIds;
-        GraphCanvas::NodeRequestBus::EventResult(slotIds, entityId, &GraphCanvas::NodeRequests::GetSlotIds);
+        JE::Editor::Tools::GraphCanvas::NodeRequestBus::EventResult(slotIds, entityId, &JE::Editor::Tools::GraphCanvas::NodeRequests::GetSlotIds);
         for (AZ::EntityId slotId : slotIds)
         {
-            GraphCanvas::SlotType type(GraphCanvas::SlotTypes::Invalid);
-            GraphCanvas::SlotRequestBus::EventResult(type, slotId, &GraphCanvas::SlotRequests::GetSlotType);
+            JE::Editor::Tools::GraphCanvas::SlotType type(JE::Editor::Tools::GraphCanvas::SlotTypes::Invalid);
+            JE::Editor::Tools::GraphCanvas::SlotRequestBus::EventResult(type, slotId, &JE::Editor::Tools::GraphCanvas::SlotRequests::GetSlotType);
 
-            if (type != GraphCanvas::SlotTypes::DataSlot)
+            if (type != JE::Editor::Tools::GraphCanvas::SlotTypes::DataSlot)
             {
                 // This ISN'T a setter or getter slot.
                 // Nothing to do.
                 continue;
             }
 
-            GraphCanvas::ConnectionType connectionType(GraphCanvas::ConnectionType::CT_None);
-            GraphCanvas::SlotRequestBus::EventResult(connectionType, slotId, &GraphCanvas::SlotRequests::GetConnectionType);
+            JE::Editor::Tools::GraphCanvas::ConnectionType connectionType(JE::Editor::Tools::GraphCanvas::ConnectionType::CT_None);
+            JE::Editor::Tools::GraphCanvas::SlotRequestBus::EventResult(connectionType, slotId, &JE::Editor::Tools::GraphCanvas::SlotRequests::GetConnectionType);
 
             AZStd::string name;
-            GraphCanvas::SlotRequestBus::EventResult(name, slotId, &GraphCanvas::SlotRequests::GetName);
+            JE::Editor::Tools::GraphCanvas::SlotRequestBus::EventResult(name, slotId, &JE::Editor::Tools::GraphCanvas::SlotRequests::GetName);
 
             bool isVisible = false;
-            GraphCanvas::VisualRequestBus::EventResult(isVisible, slotId, &GraphCanvas::VisualRequests::IsVisible);
+            JE::Editor::Tools::GraphCanvas::VisualRequestBus::EventResult(isVisible, slotId, &JE::Editor::Tools::GraphCanvas::VisualRequests::IsVisible);
 
             slotsList.push_back({slotId,
                                  name.c_str(),
-                                 (connectionType == GraphCanvas::ConnectionType::CT_Output),
+                                 (connectionType == JE::Editor::Tools::GraphCanvas::ConnectionType::CT_Output),
                                  isVisible});
         }
 
@@ -114,7 +114,7 @@ namespace
                     // slot.m_isVisible is the current state, and "checked" is the new state.
                     AZ_Assert(checked != slot.m_isVisible, "Visibility out of synch");
 
-                    GraphCanvas::VisualRequestBus::Event(slot.m_id, &GraphCanvas::VisualRequests::SetVisible, !slot.m_isVisible);
+                    JE::Editor::Tools::GraphCanvas::VisualRequestBus::Event(slot.m_id, &JE::Editor::Tools::GraphCanvas::VisualRequests::SetVisible, !slot.m_isVisible);
                 });
             rootMenu->addAction(action);
         }

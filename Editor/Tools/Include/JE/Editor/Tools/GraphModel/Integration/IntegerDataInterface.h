@@ -9,7 +9,7 @@
 #pragma once
 
 // Graph Canvas
-#include <GraphCanvas/Components/NodePropertyDisplay/NumericDataInterface.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/NodePropertyDisplay/NumericDataInterface.h>
 
 // Graph Model
 #include <JE/Editor/Tools/GraphModel/GraphModelBus.h>
@@ -20,7 +20,7 @@ namespace JE::Editor::Tools::GraphModel::Integration
 {
     //! Satisfies GraphCanvas API requirements for showing int property widgets in nodes.
     template<typename T>
-    class IntegerDataInterface : public GraphCanvas::NumericDataInterface
+    class IntegerDataInterface : public JE::Editor::Tools::GraphCanvas::NumericDataInterface
     {
     public:
         AZ_CLASS_ALLOCATOR(IntegerDataInterface, AZ::SystemAllocator);
@@ -43,8 +43,8 @@ namespace JE::Editor::Tools::GraphModel::Integration
             JE::Editor::Tools::GraphModel::SlotPtr slot = m_slot.lock();
             if (slot && slot->GetValue<T>() != static_cast<T>(value))
             {
-                const GraphCanvas::GraphId graphCanvasSceneId = GetDisplay()->GetSceneId();
-                GraphCanvas::ScopedGraphUndoBatch undoBatch(graphCanvasSceneId);
+                const JE::Editor::Tools::GraphCanvas::GraphId graphCanvasSceneId = GetDisplay()->GetSceneId();
+                JE::Editor::Tools::GraphCanvas::ScopedGraphUndoBatch undoBatch(graphCanvasSceneId);
 
                 slot->SetValue(static_cast<T>(value));
                 GraphControllerNotificationBus::Event(graphCanvasSceneId, &GraphControllerNotifications::OnGraphModelSlotModified, slot);

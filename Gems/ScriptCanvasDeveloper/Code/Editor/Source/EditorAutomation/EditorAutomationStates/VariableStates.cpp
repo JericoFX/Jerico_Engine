@@ -11,17 +11,17 @@
 #include <QTableView>
 #include <QToolButton>
 
-#include <GraphCanvas/Components/SceneBus.h>
-#include <GraphCanvas/Components/Slots/SlotBus.h>
-#include <GraphCanvas/Components/Slots/Data/DataSlotBus.h>
-#include <GraphCanvas/Components/ViewBus.h>
-#include <GraphCanvas/Components/VisualBus.h>
-#include <GraphCanvas/Editor/AssetEditorBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/SceneBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/Slots/SlotBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/Slots/Data/DataSlotBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/ViewBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/VisualBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Editor/AssetEditorBus.h>
 
-#include <GraphCanvas/Widgets/NodePalette/Model/NodePaletteSortFilterProxyModel.h>
-#include <GraphCanvas/Widgets/NodePalette/NodePaletteTreeView.h>
-#include <GraphCanvas/Widgets/NodePalette/TreeItems/NodePaletteTreeItem.h>
-#include <GraphCanvas/Utils/ConversionUtils.h>
+#include <JE/Editor/Tools/GraphCanvas/Widgets/NodePalette/Model/NodePaletteSortFilterProxyModel.h>
+#include <JE/Editor/Tools/GraphCanvas/Widgets/NodePalette/NodePaletteTreeView.h>
+#include <JE/Editor/Tools/GraphCanvas/Widgets/NodePalette/TreeItems/NodePaletteTreeItem.h>
+#include <JE/Editor/Tools/GraphCanvas/Utils/ConversionUtils.h>
 
 #include <Editor/GraphCanvas/GraphCanvasEditorNotificationBusId.h>
 #include <Editor/View/Widgets/VariablePanel/VariableDockWidget.h>
@@ -136,13 +136,13 @@ namespace ScriptCanvas::Developer
 
     void CreateVariableNodeFromGraphPaletteState::OnSetupStateActions(EditorAutomationActionRunner& actionRunner)
     {
-        const GraphCanvas::GraphId* graphId = GetStateModel()->GetStateDataAs<GraphCanvas::GraphId>(StateModelIds::GraphCanvasId);
+        const JE::Editor::Tools::GraphCanvas::GraphId* graphId = GetStateModel()->GetStateDataAs<JE::Editor::Tools::GraphCanvas::GraphId>(StateModelIds::GraphCanvasId);
         const AZStd::string* variableName = GetStateModel()->GetStateDataAs<AZStd::string>(m_variableNameId);
         const AZ::Vector2*   scenePoint = GetStateModel()->GetStateDataAs<AZ::Vector2>(m_scenePoint);
 
         if (graphId && variableName && scenePoint)
         {
-            m_createVariable = aznew CreateVariableNodeFromGraphPalette((*variableName), (*graphId), GraphCanvas::ConversionUtils::AZToQPoint((*scenePoint)).toPoint(), m_modifier);
+            m_createVariable = aznew CreateVariableNodeFromGraphPalette((*variableName), (*graphId), JE::Editor::Tools::GraphCanvas::ConversionUtils::AZToQPoint((*scenePoint)).toPoint(), m_modifier);
             actionRunner.AddAction(m_createVariable);
         }
         else

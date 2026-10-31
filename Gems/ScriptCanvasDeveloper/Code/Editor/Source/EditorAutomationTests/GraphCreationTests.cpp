@@ -8,8 +8,8 @@
 
 #include <QPushButton>
 
-#include <GraphCanvas/Components/GridBus.h>
-#include <GraphCanvas/Components/Nodes/Group/NodeGroupBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/GridBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/Nodes/Group/NodeGroupBus.h>
 
 #include <Editor/Source/EditorAutomationTests/GraphCreationTests.h>
 
@@ -48,7 +48,7 @@ namespace ScriptCanvas::Developer
 
     void CreateGraphTest::CreateGraphHotKeyState::OnSetupStateActions(EditorAutomationActionRunner& actionRunner)
     {
-        GraphCanvas::AssetEditorNotificationBus::Handler::BusConnect(ScriptCanvasEditor::AssetEditorId);
+        JE::Editor::Tools::GraphCanvas::AssetEditorNotificationBus::Handler::BusConnect(ScriptCanvasEditor::AssetEditorId);
 
         actionRunner.AddAction(&m_pressControl);
         actionRunner.AddAction(&m_shortProcessEvents);
@@ -68,7 +68,7 @@ namespace ScriptCanvas::Developer
         }
         else
         {
-            GraphCanvas::GraphId activeGraphCanvasId;
+            JE::Editor::Tools::GraphCanvas::GraphId activeGraphCanvasId;
             ScriptCanvasEditor::GeneralRequestBus::BroadcastResult(activeGraphCanvasId, &ScriptCanvasEditor::GeneralRequests::GetActiveGraphCanvasGraphId);
 
             if (activeGraphCanvasId != m_hotKeyGraphId)
@@ -77,7 +77,7 @@ namespace ScriptCanvas::Developer
             }
         }
 
-        GraphCanvas::AssetEditorNotificationBus::Handler::BusDisconnect();
+        JE::Editor::Tools::GraphCanvas::AssetEditorNotificationBus::Handler::BusDisconnect();
     }
 
     ////////////////////

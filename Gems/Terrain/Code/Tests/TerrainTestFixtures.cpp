@@ -20,8 +20,10 @@
 #include <GradientSignal/Components/SurfaceMaskGradientComponent.h>
 #include <LmbrCentral/Shape/BoxShapeComponentBus.h>
 #include <LmbrCentral/Shape/SphereShapeComponentBus.h>
-#include <SurfaceData/Components/SurfaceDataShapeComponent.h>
-#include <SurfaceData/Components/SurfaceDataSystemComponent.h>
+#include <JE/Geometry/SurfaceData/Components/SurfaceDataShapeComponent.h>
+#include <JE/Geometry/SurfaceData/Components/SurfaceDataSystemComponent.h>
+#include <JE/Geometry/SurfaceData/SurfaceDataModule.h>
+#include <AzCore/Module/ModuleManagerBus.h>
 
 #include <Components/TerrainHeightGradientListComponent.h>
 #include <Components/TerrainLayerSpawnerComponent.h>
@@ -43,7 +45,7 @@ namespace UnitTest
 {
     void TerrainTestEnvironment::AddGemsAndComponents()
     {
-        AddDynamicModulePaths({ "LmbrCentral", "SurfaceData", "GradientSignal" });
+        AddDynamicModulePaths({ "LmbrCentral", "GradientSignal" });
 
         AddComponentDescriptors({
             AzFramework::SceneSystemComponent::CreateDescriptor(),
@@ -78,10 +80,23 @@ namespace UnitTest
         // These ebuses need their contexts created here before any of the dependent DLLs get loaded:
         AZ::AssetTypeInfoBus::GetOrCreateContext();
         GradientSignal::GradientRequestBus::GetOrCreateContext();
-        SurfaceData::SurfaceDataSystemRequestBus::GetOrCreateContext();
-        SurfaceData::SurfaceDataProviderRequestBus::GetOrCreateContext();
-        SurfaceData::SurfaceDataModifierRequestBus::GetOrCreateContext();
+        JE::Geometry::SurfaceData::SurfaceDataSystemRequestBus::GetOrCreateContext();
+        JE::Geometry::SurfaceData::SurfaceDataProviderRequestBus::GetOrCreateContext();
+        JE::Geometry::SurfaceData::SurfaceDataModifierRequestBus::GetOrCreateContext();
         LmbrCentral::ShapeComponentRequestsBus::GetOrCreateContext();
+
+        // ModuleManager owns the native descriptors and activates Required components with SystemEntity.
+        AZ::ModuleManagerRequests::LoadModulesResult surfaceModules;
+        AZ::ModuleManagerRequestBus::BroadcastResult(surfaceModules, &AZ::ModuleManagerRequests::LoadStaticModules,
+            [](AZStd::vector<AZ::Module*>& modules)
+            {
+                modules.push_back(JE::Geometry::SurfaceData::CreateRuntimeModule());
+            }, AZ::ModuleInitializationSteps::ActivateEntity);
+        ASSERT_EQ(surfaceModules.size(), 1);
+        ASSERT_TRUE(surfaceModules.front().IsSuccess());
+        EXPECT_EQ(surfaceModules.front().GetValue()->GetEntity(), nullptr);
+        EXPECT_EQ(surfaceModules.front().GetValue()->GetModule()->RTTI_GetType(),
+            AZ::Uuid("{B58B7CA8-98C9-4DC8-8607-E094989BBBE2}"));
 
         // Call the AZ::RPI::RPISystem reflection for use with the terrain rendering component unit tests.
         auto serializeContext = AZ::ReflectionEnvironment::GetReflectionManager()
@@ -232,7 +247,7 @@ namespace UnitTest
 
             // Give each gradient a new surface tag
             surfaceConfig.m_gradientSurfaceMappings.emplace_back(
-                surfaceGradientEntity->GetId(), SurfaceData::SurfaceTag(AZStd::string::format("test%u", surfaces)));
+                surfaceGradientEntity->GetId(), JE::Geometry::SurfaceData::SurfaceTag(AZStd::string::format("test%u", surfaces)));
 
             m_surfaceGradientEntities.emplace_back(AZStd::move(surfaceGradientEntity));
         }
@@ -300,9 +315,9 @@ namespace UnitTest
             sphereCenter.SetZ(belowTerrainZ - sphereRadius);
             auto heightSurfaceEntity = CreateTestSphereEntity(sphereRadius, sphereCenter);
 
-            SurfaceData::SurfaceDataShapeConfig heightSurfaceConfig;
-            heightSurfaceConfig.m_providerTags.push_back(SurfaceData::SurfaceTag("altitude"));
-            heightSurfaceEntity->CreateComponent<SurfaceData::SurfaceDataShapeComponent>(heightSurfaceConfig);
+            JE::Geometry::SurfaceData::SurfaceDataShapeConfig heightSurfaceConfig;
+            heightSurfaceConfig.m_providerTags.push_back(JE::Geometry::SurfaceData::SurfaceTag("altitude"));
+            heightSurfaceEntity->CreateComponent<JE::Geometry::SurfaceData::SurfaceDataShapeComponent>(heightSurfaceConfig);
 
             ActivateEntity(heightSurfaceEntity.get());
             m_heightGradientEntities.push_back(AZStd::move(heightSurfaceEntity));
@@ -321,7 +336,7 @@ namespace UnitTest
 
             GradientSignal::SurfaceAltitudeGradientConfig heightGradientConfig;
             heightGradientConfig.m_shapeEntityId = heightGradientEntity->GetId();
-            heightGradientConfig.m_surfaceTagsToSample.push_back(SurfaceData::SurfaceTag("altitude"));
+            heightGradientConfig.m_surfaceTagsToSample.push_back(JE::Geometry::SurfaceData::SurfaceTag("altitude"));
             heightGradientEntity->CreateComponent<GradientSignal::SurfaceAltitudeGradientComponent>(heightGradientConfig);
 
             ActivateEntity(heightGradientEntity.get());
@@ -355,7 +370,7 @@ namespace UnitTest
             gradientSurfaceConfig.m_shapeConstraintEntityId = m_heightGradientEntities[1]->GetId();
             gradientSurfaceConfig.m_thresholdMin = 0.5f;
             gradientSurfaceConfig.m_thresholdMax = 1.0f;
-            gradientSurfaceConfig.m_modifierTags.push_back(SurfaceData::SurfaceTag("surface"));
+            gradientSurfaceConfig.m_modifierTags.push_back(JE::Geometry::SurfaceData::SurfaceTag("surface"));
             surfaceModifierEntity->CreateComponent<GradientSignal::GradientSurfaceDataComponent>(gradientSurfaceConfig);
 
             ActivateEntity(surfaceModifierEntity.get());
@@ -372,7 +387,7 @@ namespace UnitTest
             auto surfaceGradientEntity = CreateTestBoxEntity(gradientBox);
 
             GradientSignal::SurfaceMaskGradientConfig gradientSurfaceConfig;
-            gradientSurfaceConfig.m_surfaceTagList.push_back(SurfaceData::SurfaceTag("surface"));
+            gradientSurfaceConfig.m_surfaceTagList.push_back(JE::Geometry::SurfaceData::SurfaceTag("surface"));
             surfaceGradientEntity->CreateComponent<GradientSignal::SurfaceMaskGradientComponent>(gradientSurfaceConfig);
 
             ActivateEntity(surfaceGradientEntity.get());
@@ -381,7 +396,7 @@ namespace UnitTest
 
         Terrain::TerrainSurfaceGradientListConfig surfaceConfig;
         surfaceConfig.m_gradientSurfaceMappings.emplace_back(
-                m_surfaceGradientEntities[1]->GetId(), SurfaceData::SurfaceTag("terrain_surface"));
+                m_surfaceGradientEntities[1]->GetId(), JE::Geometry::SurfaceData::SurfaceTag("terrain_surface"));
 
         // Create a single Terrain Layer Spawner that covers the entire terrain world bounds
         // (Do this *after* creating and activating the height and surface gradients)

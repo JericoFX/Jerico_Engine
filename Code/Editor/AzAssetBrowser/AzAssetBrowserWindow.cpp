@@ -907,31 +907,13 @@ void AzAssetBrowserWindow::OnDoubleClick(const AssetBrowserEntry* entry)
     }
     else if (entryType == AssetBrowserEntry::AssetEntryType::Product || entryType == AssetBrowserEntry::AssetEntryType::Source)
     {
-        AZ::Data::AssetId assetIdToOpen;
         AZStd::string fullFilePath;
-
-        if (const AzToolsFramework::AssetBrowser::ProductAssetBrowserEntry* productEntry =
-                azrtti_cast<const AzToolsFramework::AssetBrowser::ProductAssetBrowserEntry*>(entry))
+        if (azrtti_istypeof<AzToolsFramework::AssetBrowser::ProductAssetBrowserEntry>(entry) ||
+            azrtti_istypeof<AzToolsFramework::AssetBrowser::SourceAssetBrowserEntry>(entry))
         {
-            assetIdToOpen = productEntry->GetAssetId();
             fullFilePath = entry->GetFullPath();
         }
-        else if (const AzToolsFramework::AssetBrowser::SourceAssetBrowserEntry* sourceEntry =
-            azrtti_cast<const AzToolsFramework::AssetBrowser::SourceAssetBrowserEntry*>(entry))
-        {
-            // manufacture an empty AssetID with the source's UUID
-            assetIdToOpen = AZ::Data::AssetId(sourceEntry->GetSourceUuid(), 0);
-            fullFilePath = entry->GetFullPath();
-        }
-
-        bool handledBySomeone = false;
-        if (assetIdToOpen.IsValid())
-        {
-            AzToolsFramework::AssetBrowser::AssetBrowserInteractionNotificationBus::Broadcast(
-                &AzToolsFramework::AssetBrowser::AssetBrowserInteractionNotifications::OpenAssetInAssociatedEditor,
-                assetIdToOpen,
-                handledBySomeone);
-        }
+        const bool handledBySomeone = AzAssetBrowserRequestHandler::OpenEntryInAssociatedEditor(entry);
 
         if (!handledBySomeone && !fullFilePath.empty())
         {
@@ -1033,29 +1015,13 @@ void AzAssetBrowserWindow::DoubleClickedItem([[maybe_unused]] const QModelIndex&
 
     for (const AzAssetBrowser::AssetBrowserEntry* entry : selectedAssets)
     {
-        AZ::Data::AssetId assetIdToOpen;
         AZStd::string fullFilePath;
-
-        if (const AzAssetBrowser::ProductAssetBrowserEntry* productEntry =
-                azrtti_cast<const AzAssetBrowser::ProductAssetBrowserEntry*>(entry))
+        if (azrtti_istypeof<AzToolsFramework::AssetBrowser::ProductAssetBrowserEntry>(entry) ||
+            azrtti_istypeof<AzToolsFramework::AssetBrowser::SourceAssetBrowserEntry>(entry))
         {
-            assetIdToOpen = productEntry->GetAssetId();
             fullFilePath = entry->GetFullPath();
         }
-        else if (
-            const AzAssetBrowser::SourceAssetBrowserEntry* sourceEntry = azrtti_cast<const AzAssetBrowser::SourceAssetBrowserEntry*>(entry))
-        {
-            // manufacture an empty AssetID with the source's UUID
-            assetIdToOpen = AZ::Data::AssetId(sourceEntry->GetSourceUuid(), 0);
-            fullFilePath = entry->GetFullPath();
-        }
-
-        bool handledBySomeone = false;
-        if (assetIdToOpen.IsValid())
-        {
-            AzAssetBrowser::AssetBrowserInteractionNotificationBus::Broadcast(
-                &AzAssetBrowser::AssetBrowserInteractionNotifications::OpenAssetInAssociatedEditor, assetIdToOpen, handledBySomeone);
-        }
+        const bool handledBySomeone = AzAssetBrowserRequestHandler::OpenEntryInAssociatedEditor(entry);
 
         if (!handledBySomeone && !fullFilePath.empty())
         {

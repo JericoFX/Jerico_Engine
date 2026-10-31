@@ -14,7 +14,7 @@
 #include <AzCore/Serialization/SerializeContext.h>
 #include <AzFramework/Translation/TranslationDef.h>
 #include <LmbrCentral/Shape/ShapeComponentBus.h>
-#include <SurfaceData/Utility/SurfaceDataUtility.h>
+#include <JE/Geometry/SurfaceData/Utility/SurfaceDataUtility.h>
 #include <Vegetation/Ebuses/AreaRequestBus.h>
 #include <Vegetation/Ebuses/AreaSystemRequestBus.h>
 #include <Vegetation/Ebuses/FilterRequestBus.h>
@@ -160,7 +160,7 @@ namespace Vegetation
 
         MeshBlockerRequestBus::Handler::BusConnect(GetEntityId());
 
-        SurfaceData::SurfaceDataSystemNotificationBus::Handler::BusConnect();
+        JE::Geometry::SurfaceData::SurfaceDataSystemNotificationBus::Handler::BusConnect();
 
         AreaComponentBase::Activate(); //must activate base last to connect AreaRequestBus once everything else is setup
     }
@@ -170,7 +170,7 @@ namespace Vegetation
         AreaComponentBase::Deactivate(); //must deactivate base first to ensure AreaRequestBus disconnect waits for other threads
 
         m_nonUniformScaleChangedHandler.Disconnect();
-        SurfaceData::SurfaceDataSystemNotificationBus::Handler::BusDisconnect();
+        JE::Geometry::SurfaceData::SurfaceDataSystemNotificationBus::Handler::BusDisconnect();
 
         m_refresh = false;
         AZ::TickBus::Handler::BusDisconnect();
@@ -279,7 +279,7 @@ namespace Vegetation
         AZ::Vector3 outNormal;
         const AZ::Vector3 rayStart(point.m_position.GetX(), point.m_position.GetY(), m_meshBoundsForIntersection.GetMax().GetZ());
         const AZ::Vector3 rayEnd(point.m_position.GetX(), point.m_position.GetY(), m_meshBoundsForIntersection.GetMin().GetZ());
-        bool intersected = SurfaceData::GetMeshRayIntersection(
+        bool intersected = JE::Geometry::SurfaceData::GetMeshRayIntersection(
             *mesh, m_meshWorldTM, m_meshWorldTMInverse, m_meshNonUniformScale, rayStart, rayEnd, outPosition, outNormal) &&
             m_meshBoundsForIntersection.Contains(outPosition);
         m_cachedRayHits[point.m_handle] = intersected;
@@ -355,7 +355,7 @@ namespace Vegetation
         [[maybe_unused]] const AZ::EntityId& entityId,
         [[maybe_unused]] const AZ::Aabb& oldBounds,
         [[maybe_unused]] const AZ::Aabb& newBounds,
-        [[maybe_unused]] const SurfaceData::SurfaceTagSet& changedSurfaceTags)
+        [[maybe_unused]] const JE::Geometry::SurfaceData::SurfaceTagSet& changedSurfaceTags)
     {
         // If our surfaces have changed, we will need to refresh our cache.  
         // Our cache performs lookups based on ClaimPoint handles, but the list of handles can potentially change

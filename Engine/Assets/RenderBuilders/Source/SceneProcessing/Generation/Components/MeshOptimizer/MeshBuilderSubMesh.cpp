@@ -48,7 +48,7 @@ namespace JE::Assets::RenderBuilders::SceneProcessing::Mesh
     }
 
     // add a polygon to the submesh
-    void MeshBuilderSubMesh::AddPolygon(const AZStd::vector<MeshBuilderVertexLookup>& indices, const AZStd::vector<size_t>& jointList)
+    void MeshBuilderSubMesh::AddPolygon(const AZStd::vector<MeshBuilderVertexLookup>& indices, const AZStd::vector<size_t>& jointList, size_t sourcePolygonIndex)
     {
         // pre-allocate
         if (m_indices.size() % 10000 == 0)
@@ -58,6 +58,7 @@ namespace JE::Assets::RenderBuilders::SceneProcessing::Mesh
 
         // for all vertices in the poly
         m_polyVertexCounts.emplace_back(aznumeric_caster(indices.size()));
+        m_sourcePolygonIndices.emplace_back(sourcePolygonIndex);
 
         for (const MeshBuilderVertexLookup& index : indices)
         {

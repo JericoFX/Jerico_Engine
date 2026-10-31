@@ -8,19 +8,19 @@
 
 #include <Editor/Core/Core.h>
 #include <Editor/Menus/LayerExtenderContextMenu.h>
-#include <GraphCanvas/Widgets/NodePalette/NodePaletteTreeView.h>
+#include <JE/Editor/Tools/GraphCanvas/Widgets/NodePalette/NodePaletteTreeView.h>
 
 namespace LandscapeCanvasEditor
 {
-    LayerExtenderContextMenu::LayerExtenderContextMenu(const GraphCanvas::NodePaletteConfig& nodePaletteConfig, QWidget* parent)
-        : GraphCanvas::EditorContextMenu(LandscapeCanvas::LANDSCAPE_CANVAS_EDITOR_ID, parent)
+    LayerExtenderContextMenu::LayerExtenderContextMenu(const JE::Editor::Tools::GraphCanvas::NodePaletteConfig& nodePaletteConfig, QWidget* parent)
+        : JE::Editor::Tools::GraphCanvas::EditorContextMenu(LandscapeCanvas::LANDSCAPE_CANVAS_EDITOR_ID, parent)
     {
         AddNodePaletteMenuAction(nodePaletteConfig);
     }
 
     void LayerExtenderContextMenu::SetupDisplay()
     {
-        GraphCanvas::EditorContextMenu::SetupDisplay();
+        JE::Editor::Tools::GraphCanvas::EditorContextMenu::SetupDisplay();
 
         // Expand our node palette by default since it is the only thing showing and we don't have very many nodes to show
         m_nodePalette->GetTreeView()->expandAll();

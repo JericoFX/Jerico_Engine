@@ -7,8 +7,8 @@
  */
 #pragma once
 
-#include <GraphCanvas/Components/NodePropertyDisplay/ComboBoxDataInterface.h>
-#include <GraphCanvas/Components/NodePropertyDisplay/NumericDataInterface.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/NodePropertyDisplay/ComboBoxDataInterface.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/NodePropertyDisplay/NumericDataInterface.h>
 
 #include "ScriptCanvasDataInterface.h"
 
@@ -16,7 +16,7 @@ namespace ScriptCanvasEditor
 {
     // Used for general numeric input.
     class ScriptCanvasNumericDataInterface
-        : public ScriptCanvasDataInterface<GraphCanvas::NumericDataInterface>        
+        : public ScriptCanvasDataInterface<JE::Editor::Tools::GraphCanvas::NumericDataInterface>        
     {
     public:
         AZ_CLASS_ALLOCATOR(ScriptCanvasNumericDataInterface, AZ::SystemAllocator);

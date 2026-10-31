@@ -906,9 +906,10 @@ namespace JE::Render
             {
                 float t;
                 AZ::Vector3 normal;
+                AZStd::optional<JE::Render::RPI::ModelMaterialSlot::StableId> materialSlotId;
                 if (model->RayIntersection(
                         m_transformInterface->GetWorldTM(), m_cachedNonUniformScale, ray.m_startWorldPosition,
-                        ray.m_endWorldPosition - ray.m_startWorldPosition, t, normal))
+                        ray.m_endWorldPosition - ray.m_startWorldPosition, t, normal, materialSlotId))
                 {
                     // fill in ray result structure after successful intersection
                     const auto intersectionLine = (ray.m_endWorldPosition - ray.m_startWorldPosition);
@@ -917,6 +918,7 @@ namespace JE::Render
                     result.m_worldNormal = normal;
                     result.m_distance = intersectionLine.GetLength() * t;
                     result.m_entityAndComponent = m_entityComponentIdPair;
+                    result.m_materialSlotId = materialSlotId;
                 }
             }
 

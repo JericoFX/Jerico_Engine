@@ -8,8 +8,8 @@
 
 #include <QPushButton>
 
-#include <GraphCanvas/Components/GridBus.h>
-#include <GraphCanvas/Components/Nodes/Group/NodeGroupBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/GridBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/Nodes/Group/NodeGroupBus.h>
 
 #include <EditorAutomationTests/InteractionTests.h>
 
@@ -44,14 +44,14 @@ namespace ScriptCanvas::Developer
 
         AutomationStateModelId onGraphStartEndpoint = "OnGraphStart::ExecutionEndpoint";
 
-        AddState(new FindEndpointOfTypeState(onGraphStartId, onGraphStartEndpoint, GraphCanvas::CT_Output, GraphCanvas::SlotTypes::ExecutionSlot));
+        AddState(new FindEndpointOfTypeState(onGraphStartId, onGraphStartEndpoint, JE::Editor::Tools::GraphCanvas::CT_Output, JE::Editor::Tools::GraphCanvas::SlotTypes::ExecutionSlot));
 
         AutomationStateModelId buildStringNodeId = "BuildStringId";
         AddState(new CreateNodeFromProposalState("Build String", onGraphStartEndpoint, "", buildStringNodeId));
 
         AutomationStateModelId buildStringEndpoint = "BuildString::ExecutionEndpoint";
 
-        AddState(new FindEndpointOfTypeState(buildStringNodeId, buildStringEndpoint, GraphCanvas::CT_Output, GraphCanvas::SlotTypes::ExecutionSlot));
+        AddState(new FindEndpointOfTypeState(buildStringNodeId, buildStringEndpoint, JE::Editor::Tools::GraphCanvas::CT_Output, JE::Editor::Tools::GraphCanvas::SlotTypes::ExecutionSlot));
 
         AutomationStateModelId printNodeId = "PrintNodeId";
         AddState(new CreateNodeFromProposalState("Print", buildStringEndpoint, "", printNodeId));
@@ -132,16 +132,16 @@ namespace ScriptCanvas::Developer
     {
         if (stateId == CreateRuntimeGraphStateId::StateID())
         {
-            const GraphCanvas::GraphId* graphId = GetStateDataAs<GraphCanvas::GraphId>(StateModelIds::GraphCanvasId);
+            const JE::Editor::Tools::GraphCanvas::GraphId* graphId = GetStateDataAs<JE::Editor::Tools::GraphCanvas::GraphId>(StateModelIds::GraphCanvasId);
 
             if (graphId)
             {
-                GraphCanvas::SceneNotificationBus::Handler::BusConnect((*graphId));
+                JE::Editor::Tools::GraphCanvas::SceneNotificationBus::Handler::BusConnect((*graphId));
             }
         }
         else if (stateId == m_createNodeState->GetStateId())
         {
-            const GraphCanvas::NodeId* nodeId = GetStateDataAs<GraphCanvas::GraphId>(m_originalNodeId);
+            const JE::Editor::Tools::GraphCanvas::NodeId* nodeId = GetStateDataAs<JE::Editor::Tools::GraphCanvas::GraphId>(m_originalNodeId);
 
             if (nodeId)
             {
@@ -189,7 +189,7 @@ namespace ScriptCanvas::Developer
         }
         else if (stateId == ForceCloseActiveGraphStateId::StateID())
         {
-            GraphCanvas::SceneNotificationBus::Handler::BusDisconnect();
+            JE::Editor::Tools::GraphCanvas::SceneNotificationBus::Handler::BusDisconnect();
         }
     }
 
@@ -197,9 +197,9 @@ namespace ScriptCanvas::Developer
     {
         AZ::EntityId testId;
 
-        for (GraphCanvas::NodeId nodeId : m_createdSet)
+        for (JE::Editor::Tools::GraphCanvas::NodeId nodeId : m_createdSet)
         {
-            if (GraphCanvas::GraphUtils::IsNodeWrapped(nodeId))
+            if (JE::Editor::Tools::GraphCanvas::GraphUtils::IsNodeWrapped(nodeId))
             {
                 continue;
             }
@@ -211,7 +211,7 @@ namespace ScriptCanvas::Developer
         m_createdSet.clear();
 
         bool isSelected = false;
-        GraphCanvas::SceneMemberUIRequestBus::EventResult(isSelected, testId, &GraphCanvas::SceneMemberUIRequests::IsSelected);
+        JE::Editor::Tools::GraphCanvas::SceneMemberUIRequestBus::EventResult(isSelected, testId, &JE::Editor::Tools::GraphCanvas::SceneMemberUIRequests::IsSelected);
 
         if (!isSelected)
         {

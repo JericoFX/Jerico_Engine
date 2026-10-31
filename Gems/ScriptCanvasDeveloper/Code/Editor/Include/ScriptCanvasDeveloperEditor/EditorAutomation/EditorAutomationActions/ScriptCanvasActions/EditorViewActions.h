@@ -7,7 +7,7 @@
  */
 #pragma once
 
-#include <GraphCanvas/Types/Types.h>
+#include <JE/Editor/Tools/GraphCanvas/Types/Types.h>
 
 #include <ScriptCanvasDeveloperEditor/EditorAutomation/EditorAutomationActions/GenericActions.h>
 
@@ -23,14 +23,14 @@ namespace ScriptCanvas::Developer
         AZ_CLASS_ALLOCATOR(CenterOnScenePointAction, AZ::SystemAllocator);
         AZ_RTTI(CenterOnScenePointAction, "{527B3EE0-258F-4D0C-8642-6923D81A9C40}", EditorAutomationAction);
 
-        CenterOnScenePointAction(GraphCanvas::GraphId graphId, QPointF scenePoint);
+        CenterOnScenePointAction(JE::Editor::Tools::GraphCanvas::GraphId graphId, QPointF scenePoint);
         ~CenterOnScenePointAction() override = default;
 
         bool Tick() override;
 
     private:
 
-        GraphCanvas::GraphId m_graphId;
+        JE::Editor::Tools::GraphCanvas::GraphId m_graphId;
         QPointF m_scenePoint;
     };
 
@@ -44,7 +44,7 @@ namespace ScriptCanvas::Developer
         AZ_CLASS_ALLOCATOR(EnsureSceneRectVisibleAction, AZ::SystemAllocator);
         AZ_RTTI(EnsureSceneRectVisibleAction, "{BF412F21-62F1-48AA-891E-266C986820FA}", DelayAction);
 
-        EnsureSceneRectVisibleAction(GraphCanvas::GraphId graphId, QRectF sceneRect);
+        EnsureSceneRectVisibleAction(JE::Editor::Tools::GraphCanvas::GraphId graphId, QRectF sceneRect);
         ~EnsureSceneRectVisibleAction() override = default;
 
         void SetupAction() override;
@@ -54,7 +54,7 @@ namespace ScriptCanvas::Developer
 
         bool m_firstTick = false;
 
-        GraphCanvas::GraphId m_graphId;
+        JE::Editor::Tools::GraphCanvas::GraphId m_graphId;
         QRectF m_sceneRect;
     };
 
@@ -68,7 +68,7 @@ namespace ScriptCanvas::Developer
         AZ_CLASS_ALLOCATOR(SceneMouseMoveAction, AZ::SystemAllocator);
         AZ_RTTI(SceneMouseMoveAction, "{A26D0034-0682-4F61-9425-EF659D1ABAD0}", CompoundAction);
 
-        SceneMouseMoveAction(GraphCanvas::GraphId graphId, QPointF scenePoint);
+        SceneMouseMoveAction(JE::Editor::Tools::GraphCanvas::GraphId graphId, QPointF scenePoint);
         ~SceneMouseMoveAction() override = default;
 
         bool IsMissingPrecondition() override;
@@ -78,8 +78,8 @@ namespace ScriptCanvas::Developer
 
     private:
 
-        GraphCanvas::GraphId m_graphId;
-        GraphCanvas::ViewId  m_viewId;
+        JE::Editor::Tools::GraphCanvas::GraphId m_graphId;
+        JE::Editor::Tools::GraphCanvas::ViewId  m_viewId;
 
         QPointF m_scenePoint;
     };
@@ -94,7 +94,7 @@ namespace ScriptCanvas::Developer
         AZ_CLASS_ALLOCATOR(SceneMouseDragAction, AZ::SystemAllocator);
         AZ_RTTI(SceneMouseDragAction, "{5A422603-1A84-40B2-B051-94D324F94C7A}", CompoundAction);
 
-        SceneMouseDragAction(GraphCanvas::GraphId graphId, QPointF sceneStart, QPointF sceneEnd, Qt::MouseButton mouseButton = Qt::MouseButton::LeftButton);
+        SceneMouseDragAction(JE::Editor::Tools::GraphCanvas::GraphId graphId, QPointF sceneStart, QPointF sceneEnd, Qt::MouseButton mouseButton = Qt::MouseButton::LeftButton);
         ~SceneMouseDragAction() override = default;
 
         bool IsMissingPrecondition() override;
@@ -104,8 +104,8 @@ namespace ScriptCanvas::Developer
 
     private:
 
-        GraphCanvas::GraphId m_graphId;
-        GraphCanvas::ViewId  m_viewId;
+        JE::Editor::Tools::GraphCanvas::GraphId m_graphId;
+        JE::Editor::Tools::GraphCanvas::ViewId  m_viewId;
 
         QPointF m_sceneStart;
         QPointF m_sceneEnd;

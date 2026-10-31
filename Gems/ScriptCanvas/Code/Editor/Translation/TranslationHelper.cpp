@@ -55,14 +55,14 @@ namespace ScriptCanvasEditor::TranslationHelper
 
         AZStd::string azType = dataType.GetAZType().ToString<AZStd::string>();
 
-        GraphCanvas::TranslationKey key;
+        JE::Editor::Tools::GraphCanvas::TranslationKey key;
         key << "BehaviorType" << azType << "details";
 
-        GraphCanvas::TranslationRequests::Details details;
+        JE::Editor::Tools::GraphCanvas::TranslationRequests::Details details;
 
         details.m_name = ScriptCanvas::Data::GetName(dataType);
 
-        GraphCanvas::TranslationRequestBus::BroadcastResult(details, &GraphCanvas::TranslationRequests::GetDetails, key, details);
+        JE::Editor::Tools::GraphCanvas::TranslationRequestBus::BroadcastResult(details, &JE::Editor::Tools::GraphCanvas::TranslationRequests::GetDetails, key, details);
 
         return details.m_name;
     }

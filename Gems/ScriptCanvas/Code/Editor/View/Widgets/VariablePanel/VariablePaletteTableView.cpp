@@ -18,8 +18,8 @@
 
 #include <AzToolsFramework/ToolsComponents/EditorComponentBase.h>
 
-#include <GraphCanvas/Components/SceneBus.h>
-#include <GraphCanvas/Components/StyleBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/SceneBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/StyleBus.h>
 
 #include <Editor/GraphCanvas/GraphCanvasEditorNotificationBusId.h>
 #include <Editor/View/Widgets/VariablePanel/VariablePaletteTableView.h>
@@ -52,7 +52,7 @@ namespace ScriptCanvasEditor
 
         setModel(m_proxyModel);
 
-        setItemDelegateForColumn(DataTypePaletteModel::Type, aznew GraphCanvas::IconDecoratedNameDelegate(this));
+        setItemDelegateForColumn(DataTypePaletteModel::Type, aznew JE::Editor::Tools::GraphCanvas::IconDecoratedNameDelegate(this));
 
         viewport()->installEventFilter(this);
         horizontalHeader()->setSectionResizeMode(DataTypePaletteModel::ColumnIndex::Pinned, QHeaderView::ResizeMode::ResizeToContents);

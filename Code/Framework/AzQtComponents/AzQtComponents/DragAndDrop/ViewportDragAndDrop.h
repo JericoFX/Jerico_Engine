@@ -8,6 +8,10 @@
 
 #include <AzCore/Memory/SystemAllocator.h>
 #include <AzCore/Math/Vector3.h>
+#include <AzCore/Component/EntityId.h>
+#include <AzCore/Component/ComponentBus.h>
+#include <AzCore/Math/Uuid.h>
+#include <AzCore/std/optional.h>
 
 #include <AzQtComponents/Buses/DragAndDrop.h>
 
@@ -32,6 +36,10 @@ namespace AzQtComponents
         AZ_CLASS_ALLOCATOR(ViewportDragContext, AZ::SystemAllocator);
         AZ_RTTI(ViewportDragContext, "{8297256B-8DD4-499C-B564-0EAA829E8ACA}", AzQtComponents::DragAndDropContextBase);
         AZ::Vector3 m_hitLocation;
+        AZ::EntityId m_hitEntityId;
+        AZ::ComponentId m_hitComponentId = AZ::InvalidComponentId;
+        AZStd::optional<AZ::u32> m_hitMaterialSlotId;
+        AZStd::optional<AZ::Uuid> m_hitSurfaceId;
     };
 
 }

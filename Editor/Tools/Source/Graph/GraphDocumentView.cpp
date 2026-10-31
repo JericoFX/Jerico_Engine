@@ -9,7 +9,7 @@
 #include <JE/Editor/Tools/Graph/GraphDocumentRequestBus.h>
 #include <JE/Editor/Tools/Graph/GraphDocumentView.h>
 #include <AzCore/Settings/SettingsRegistryMergeUtils.h>
-#include <GraphCanvas/Widgets/GraphCanvasGraphicsView/GraphCanvasGraphicsView.h>
+#include <JE/Editor/Tools/GraphCanvas/Widgets/GraphCanvasGraphicsView/GraphCanvasGraphicsView.h>
 #include <QEvent>
 #include <QShowEvent>
 #include <QTimer>
@@ -18,7 +18,7 @@ namespace JE::Editor::Tools
 {
     GraphDocumentView::GraphDocumentView(
         const AZ::Crc32& toolId, const AZ::Uuid& documentId, GraphViewSettingsPtr graphViewSettingsPtr, QWidget* parent)
-        : GraphView(toolId, GraphCanvas::GraphId(), graphViewSettingsPtr, parent)
+        : GraphView(toolId, JE::Editor::Tools::GraphCanvas::GraphId(), graphViewSettingsPtr, parent)
         , m_documentId(documentId)
     {
         m_graphicsView->installEventFilter(this);
@@ -73,8 +73,8 @@ namespace JE::Editor::Tools
                     !m_graphicsView->viewport()->size().isEmpty())
                 {
                     m_openedBefore = true;
-                    GraphCanvas::ViewRequestBus::Event(
-                        m_graphicsView->GetViewId(), &GraphCanvas::ViewRequests::ShowEntireGraph);
+                    JE::Editor::Tools::GraphCanvas::ViewRequestBus::Event(
+                        m_graphicsView->GetViewId(), &JE::Editor::Tools::GraphCanvas::ViewRequests::ShowEntireGraph);
                 }
             });
         }
@@ -84,7 +84,7 @@ namespace JE::Editor::Tools
     {
         if (m_documentId == documentId)
         {
-            GraphCanvas::GraphId activeGraphId = GraphCanvas::GraphId();
+            JE::Editor::Tools::GraphCanvas::GraphId activeGraphId = JE::Editor::Tools::GraphCanvas::GraphId();
             GraphDocumentRequestBus::EventResult(activeGraphId, m_documentId, &GraphDocumentRequestBus::Events::GetGraphId);
             SetActiveGraphId(activeGraphId, true);
 
@@ -92,14 +92,14 @@ namespace JE::Editor::Tools
             return;
         }
 
-        SetActiveGraphId(GraphCanvas::GraphId(), false);
+        SetActiveGraphId(JE::Editor::Tools::GraphCanvas::GraphId(), false);
     }
 
     void GraphDocumentView::OnDocumentClosed([[maybe_unused]] const AZ::Uuid& documentId)
     {
         if (m_documentId == documentId)
         {
-            SetActiveGraphId(GraphCanvas::GraphId(), true);
+            SetActiveGraphId(JE::Editor::Tools::GraphCanvas::GraphId(), true);
         }
     }
 
@@ -107,7 +107,7 @@ namespace JE::Editor::Tools
     {
         if (m_documentId == documentId)
         {
-            SetActiveGraphId(GraphCanvas::GraphId(), true);
+            SetActiveGraphId(JE::Editor::Tools::GraphCanvas::GraphId(), true);
         }
     }
 
@@ -115,9 +115,9 @@ namespace JE::Editor::Tools
     {
         if (m_activeGraphId.IsValid())
         {
-            GraphCanvas::AssetEditorSettingsNotificationBus::Event(
-                m_toolId, &GraphCanvas::AssetEditorSettingsNotifications::OnSettingsChanged);
-            GraphCanvas::ViewRequestBus::Event(m_activeGraphId, &GraphCanvas::ViewRequests::RefreshView);
+            JE::Editor::Tools::GraphCanvas::AssetEditorSettingsNotificationBus::Event(
+                m_toolId, &JE::Editor::Tools::GraphCanvas::AssetEditorSettingsNotifications::OnSettingsChanged);
+            JE::Editor::Tools::GraphCanvas::ViewRequestBus::Event(m_activeGraphId, &JE::Editor::Tools::GraphCanvas::ViewRequests::RefreshView);
         }
     }
 } // namespace JE::Editor::Tools

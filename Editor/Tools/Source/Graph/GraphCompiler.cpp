@@ -149,14 +149,19 @@ namespace JE::Editor::Tools
 
     bool GraphCompiler::ReportGeneratedFileStatus()
     {
+        return ReportGeneratedFileStatus(m_generatedFiles);
+    }
+
+    bool GraphCompiler::ReportGeneratedFileStatus(const AZStd::vector<AZStd::string>& sourcePaths)
+    {
         SetState(State::Processing);
 
-        // Start monitoring and reporting AP status for any files generated during this compile.
-        if (!m_generatedFiles.empty())
+        // Monitor sources with asset jobs; generated dependency files need not have jobs of their own.
+        if (!sourcePaths.empty())
         {
             // Begin requesting status from the asset reporting system, which manages a queue of requests from multiple graphs.
             AssetStatusReporterSystemRequestBus::Event(
-                m_toolId, &AssetStatusReporterSystemRequestBus::Events::StartReporting, m_assetReportRequestId, m_generatedFiles);
+                m_toolId, &AssetStatusReporterSystemRequestBus::Events::StartReporting, m_assetReportRequestId, sourcePaths);
 
             while (m_state == State::Processing)
             {

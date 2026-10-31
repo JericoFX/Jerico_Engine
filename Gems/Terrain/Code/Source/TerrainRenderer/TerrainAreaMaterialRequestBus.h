@@ -9,7 +9,7 @@
 #pragma once
 
 #include <AzCore/Component/ComponentBus.h>
-#include <SurfaceData/SurfaceDataTypes.h>
+#include <JE/Geometry/SurfaceData/SurfaceDataTypes.h>
 #include <JE/Render/RPI/Public/Material/Material.h>
 
 namespace Terrain
@@ -71,7 +71,7 @@ namespace Terrain
         //! A loaded material mapped to a valid surface tag has been created
         virtual void OnTerrainSurfaceMaterialMappingCreated(
             [[maybe_unused]] AZ::EntityId entityId,
-            [[maybe_unused]] SurfaceData::SurfaceTag surface,
+            [[maybe_unused]] JE::Geometry::SurfaceData::SurfaceTag surface,
             [[maybe_unused]] AZ::Data::Instance<JE::Render::RPI::Material> material)
         {
         }
@@ -79,22 +79,22 @@ namespace Terrain
         //! Either the material or surface tag was unassigned, making this mapping invalid
         virtual void OnTerrainSurfaceMaterialMappingDestroyed(
             [[maybe_unused]] AZ::EntityId entityId,
-            [[maybe_unused]] SurfaceData::SurfaceTag surface)
+            [[maybe_unused]] JE::Geometry::SurfaceData::SurfaceTag surface)
         {
         }
 
         //! The surface tag has changed to tag for an existing material
         virtual void OnTerrainSurfaceMaterialMappingTagChanged(
             [[maybe_unused]] AZ::EntityId entityId,
-            [[maybe_unused]] SurfaceData::SurfaceTag oldSurface,
-            [[maybe_unused]] SurfaceData::SurfaceTag newSurface)
+            [[maybe_unused]] JE::Geometry::SurfaceData::SurfaceTag oldSurface,
+            [[maybe_unused]] JE::Geometry::SurfaceData::SurfaceTag newSurface)
         {
         }
         
         //! The material has changed for an existing surface tag
         virtual void OnTerrainSurfaceMaterialMappingMaterialChanged(
             [[maybe_unused]] AZ::EntityId entityId,
-            [[maybe_unused]] SurfaceData::SurfaceTag surface,
+            [[maybe_unused]] JE::Geometry::SurfaceData::SurfaceTag surface,
             [[maybe_unused]] AZ::Data::Instance<JE::Render::RPI::Material> material)
         {
         }

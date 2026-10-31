@@ -29,9 +29,9 @@
 
 #include <ScriptCanvas/Bus/RequestBus.h>
 
-#include <GraphCanvas/Components/SceneBus.h>
-#include <GraphCanvas/Components/ViewBus.h>
-#include <GraphCanvas/Components/GeometryBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/SceneBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/ViewBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/GeometryBus.h>
 
 namespace
 {
@@ -94,7 +94,7 @@ namespace
             ScriptCanvasEditor::Nodes::StyleConfiguration styleConfiguration;
 
             NodeIdPair nodePair = ScriptCanvasEditor::Nodes::CreateNode(type, scriptCanvasId, styleConfiguration);
-            GraphCanvas::SceneRequestBus::Event(graphCanvasGraphId, &GraphCanvas::SceneRequests::AddNode, nodePair.m_graphCanvasId, pos, false);
+            JE::Editor::Tools::GraphCanvas::SceneRequestBus::Event(graphCanvasGraphId, &JE::Editor::Tools::GraphCanvas::SceneRequests::AddNode, nodePair.m_graphCanvasId, pos, false);
 
             // The next position to create a node at.
             // IMPORTANT: This SHOULD be using GraphCanvas::GeometryRequests::GetWidth, but
@@ -184,7 +184,7 @@ namespace ScriptCanvasEditor
 
                                 AZ::Vector2 pos(100.0f, 20.0f);
                                 NodeIdPair nodePair = ScriptCanvasEditor::Nodes::CreateNode(nodeTypeToAdd, scriptCanvasId, styleConfiguration);
-                                GraphCanvas::SceneRequestBus::Event(graphCanvasGraphId, &GraphCanvas::SceneRequests::AddNode, nodePair.m_graphCanvasId, pos, false);
+                                JE::Editor::Tools::GraphCanvas::SceneRequestBus::Event(graphCanvasGraphId, &JE::Editor::Tools::GraphCanvas::SceneRequests::AddNode, nodePair.m_graphCanvasId, pos, false);
                             }
                         }
                     }

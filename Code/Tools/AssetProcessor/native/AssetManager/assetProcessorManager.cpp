@@ -666,12 +666,23 @@ namespace AssetProcessor
         AZStd::string logFile = AssetUtilities::ComputeJobLogFolder() + "/" + AssetUtilities::ComputeJobLogFileName(jobEntry);
         EraseLogFile(logFile.c_str());
 
-        // cancelled jobs will be replaced by new jobs to process the same asset (AFTER this call happens)
+        // Any accepted replacement reports its own queued status; this run is no longer active.
         // note that this isn't a failure - the job just isn't there anymore.
         UpdateAnalysisTrackerForFile(jobEntry, AnalysisTrackerUpdateType::JobFinished);
 
-        // When a job is cancelled, it is always because it was replaced by a new job.  The job is still pending.
-        OnJobStatusChanged(jobEntry, JobStatus::Queued);
+        m_jobRunKeyToJobInfoMap.erase(jobEntry.m_jobRunKey);
+        auto found = m_jobKeyToJobRunKeyMap.equal_range(jobEntry.m_jobKey.toUtf8().data());
+        for (auto iter = found.first; iter != found.second;)
+        {
+            if (iter->second == jobEntry.m_jobRunKey)
+            {
+                iter = m_jobKeyToJobRunKeyMap.erase(iter);
+            }
+            else
+            {
+                ++iter;
+            }
+        }
 
         // we know that things have changed at this point; ensure that we check for idle
         QueueIdleCheck();

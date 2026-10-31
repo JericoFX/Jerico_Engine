@@ -16,9 +16,9 @@
 #include <GradientSignal/Util.h>
 #include <LmbrCentral/Dependency/DependencyMonitor.h>
 #include <LmbrCentral/Dependency/DependencyNotificationBus.h>
-#include <SurfaceData/SurfaceDataSystemNotificationBus.h>
-#include <SurfaceData/SurfaceDataTypes.h>
-#include <SurfaceData/SurfacePointList.h>
+#include <JE/Geometry/SurfaceData/SurfaceDataSystemNotificationBus.h>
+#include <JE/Geometry/SurfaceData/SurfaceDataTypes.h>
+#include <JE/Geometry/SurfaceData/SurfacePointList.h>
 
 namespace LmbrCentral
 {
@@ -38,7 +38,7 @@ namespace GradientSignal
         AZ::EntityId m_shapeEntityId;
         float m_altitudeMin = 0.0f;
         float m_altitudeMax = 128.0f;
-        SurfaceData::SurfaceTagVector m_surfaceTagsToSample;
+        JE::Geometry::SurfaceData::SurfaceTagVector m_surfaceTagsToSample;
 
         size_t GetNumTags() const;
         AZ::Crc32 GetTag(int tagIndex) const;
@@ -60,7 +60,7 @@ namespace GradientSignal
         , private SurfaceAltitudeGradientRequestBus::Handler
         , private LmbrCentral::DependencyNotificationBus::Handler
         , private AZ::TickBus::Handler
-        , private SurfaceData::SurfaceDataSystemNotificationBus::Handler
+        , private JE::Geometry::SurfaceData::SurfaceDataSystemNotificationBus::Handler
     {
     public:
         template<typename, typename> friend class LmbrCentral::EditorWrappedComponentBase;
@@ -91,7 +91,7 @@ namespace GradientSignal
             const AZ::EntityId& entityId,
             const AZ::Aabb& oldBounds,
             const AZ::Aabb& newBounds,
-            const SurfaceData::SurfaceTagSet& changedSurfaceTags) override;
+            const JE::Geometry::SurfaceData::SurfaceTagSet& changedSurfaceTags) override;
 
         //////////////////////////////////////////////////////////////////////////
         // AZ::TickBus::Handler

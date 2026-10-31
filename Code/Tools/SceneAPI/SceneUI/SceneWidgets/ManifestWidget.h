@@ -66,6 +66,9 @@ namespace AZ
                 static const ManifestWidget* FindRoot(const QWidget* child);
 
             signals:
+                //! DirectConnection only: handled+accepted prevent a second mutation by the generic row widget.
+                void RequestModifierChange(DataTypes::IManifestObject* owner, DataTypes::IManifestObject* modifier,
+                    bool adding, bool& handled, bool& accepted);
                 void SaveClicked();
                 void OnInspect();
                 void OnSceneResetRequested();

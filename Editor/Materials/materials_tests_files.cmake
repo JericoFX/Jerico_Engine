@@ -8,4 +8,5 @@ set(FILES
     Tests/MaterialDocumentTests.cpp
     Tests/PassGraphCompilerTests.cpp
     Tests/Workspace/MaterialWorkspaceTests.cpp
+    Tests/Workspace/MaterialBspDropIntegrationTests.cpp
 )

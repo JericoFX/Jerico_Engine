@@ -237,7 +237,7 @@ namespace ScriptCanvasEditorTools
 
                 Method methodEntry;
 
-                AZStd::string cleanName = GraphCanvas::TranslationKey::Sanitize(methodPair.first);
+                AZStd::string cleanName = JE::Editor::Tools::GraphCanvas::TranslationKey::Sanitize(methodPair.first);
 
                 methodEntry.m_key = cleanName;
 
@@ -292,7 +292,7 @@ namespace ScriptCanvasEditorTools
 
         translationRoot.m_entries.push_back(entry);
 
-        AZStd::string sanitizedFilename = GraphCanvas::TranslationKey::Sanitize(className);
+        AZStd::string sanitizedFilename = JE::Editor::Tools::GraphCanvas::TranslationKey::Sanitize(className);
         AZStd::string fileName = AZStd::string::format("Classes/%s", sanitizedFilename.c_str());
 
         SaveJSONData(fileName, translationRoot);
@@ -351,7 +351,7 @@ namespace ScriptCanvasEditorTools
         delete node;
 
 
-        AZStd::string filename = GraphCanvas::TranslationKey::Sanitize(entry.m_key);
+        AZStd::string filename = JE::Editor::Tools::GraphCanvas::TranslationKey::Sanitize(entry.m_key);
 
         AZStd::string targetFile = AZStd::string::format("AZEvents/%s", filename.c_str());
 
@@ -365,7 +365,7 @@ namespace ScriptCanvasEditorTools
 
     void TranslationGeneration::TranslateAZEvents()
     {
-        GraphCanvas::TranslationKey translationKey;
+        JE::Editor::Tools::GraphCanvas::TranslationKey translationKey;
         AZStd::vector<AZ::BehaviorMethod*> methods;
 
         // Methods
@@ -393,7 +393,7 @@ namespace ScriptCanvasEditorTools
 
     void TranslationGeneration::TranslateNodes()
     {
-        GraphCanvas::TranslationKey translationKey;
+        JE::Editor::Tools::GraphCanvas::TranslationKey translationKey;
         AZStd::vector<AZ::TypeId> nodes;
 
         auto getNodeClasses = [this, &nodes](const AZ::SerializeContext::ClassData*, const AZ::Uuid& type)
@@ -443,7 +443,7 @@ namespace ScriptCanvasEditorTools
 
             EntryDetails& details = entry.m_details;
 
-            AZStd::string cleanName = GraphCanvas::TranslationKey::Sanitize(classData->m_name);
+            AZStd::string cleanName = JE::Editor::Tools::GraphCanvas::TranslationKey::Sanitize(classData->m_name);
 
             if (classData->m_editData)
             {
@@ -665,7 +665,7 @@ namespace ScriptCanvasEditorTools
                     {
                         Method methodEntry;
 
-                        AZStd::string cleanName = GraphCanvas::TranslationKey::Sanitize(methodPair.first);
+                        AZStd::string cleanName = JE::Editor::Tools::GraphCanvas::TranslationKey::Sanitize(methodPair.first);
 
                         methodEntry.m_key = cleanName;
                         methodEntry.m_context = entry.m_key;
@@ -747,7 +747,7 @@ namespace ScriptCanvasEditorTools
         TranslationFormat translationRoot;
         translationRoot.m_entries.push_back(entry);
 
-        AZStd::string cleanName = GraphCanvas::TranslationKey::Sanitize(behaviorMethod->m_name);
+        AZStd::string cleanName = JE::Editor::Tools::GraphCanvas::TranslationKey::Sanitize(behaviorMethod->m_name);
         AZStd::string fileName = AZStd::string::format("GlobalMethods/%s", cleanName.c_str());
         SaveJSONData(fileName, translationRoot);
     }
@@ -769,7 +769,7 @@ namespace ScriptCanvasEditorTools
         TranslationFormat translationRoot;
         translationRoot.m_entries.push_back(entry);
 
-        AZStd::string cleanName = GraphCanvas::TranslationKey::Sanitize(behaviorProperty->m_name);
+        AZStd::string cleanName = JE::Editor::Tools::GraphCanvas::TranslationKey::Sanitize(behaviorProperty->m_name);
         AZStd::string fileName = AZStd::string::format("Properties/%s", cleanName.c_str());
         SaveJSONData(fileName, translationRoot);
     }
@@ -974,7 +974,7 @@ namespace ScriptCanvasEditorTools
             {
                 Method methodEntry;
 
-                AZStd::string cleanName = GraphCanvas::TranslationKey::Sanitize(event.m_name);
+                AZStd::string cleanName = JE::Editor::Tools::GraphCanvas::TranslationKey::Sanitize(event.m_name);
                 methodEntry.m_key = cleanName;
                 methodEntry.m_details.m_category = "";
                 methodEntry.m_details.m_tooltip = "";
@@ -1093,13 +1093,13 @@ namespace ScriptCanvasEditorTools
             rapidjson::Value value(rapidjson::kStringType);
 
             value.SetString(entrySource.m_key.c_str(), document.GetAllocator());
-            entry.AddMember(GraphCanvas::Schema::Field::key, value, document.GetAllocator());
+            entry.AddMember(JE::Editor::Tools::GraphCanvas::Schema::Field::key, value, document.GetAllocator());
 
             value.SetString(entrySource.m_context.c_str(), document.GetAllocator());
-            entry.AddMember(GraphCanvas::Schema::Field::context, value, document.GetAllocator());
+            entry.AddMember(JE::Editor::Tools::GraphCanvas::Schema::Field::context, value, document.GetAllocator());
 
             value.SetString(entrySource.m_variant.c_str(), document.GetAllocator());
-            entry.AddMember(GraphCanvas::Schema::Field::variant, value, document.GetAllocator());
+            entry.AddMember(JE::Editor::Tools::GraphCanvas::Schema::Field::variant, value, document.GetAllocator());
 
             rapidjson::Value details(rapidjson::kObjectType);
             value.SetString(entrySource.m_details.m_name.c_str(), document.GetAllocator());
@@ -1120,14 +1120,14 @@ namespace ScriptCanvasEditorTools
                     rapidjson::Value theMethod(rapidjson::kObjectType);
 
                     value.SetString(methodSource.m_key.c_str(), document.GetAllocator());
-                    theMethod.AddMember(GraphCanvas::Schema::Field::key, value, document.GetAllocator());
+                    theMethod.AddMember(JE::Editor::Tools::GraphCanvas::Schema::Field::key, value, document.GetAllocator());
 
                     if (!methodSource.m_context.empty())
                     {
                         value.SetString(methodSource.m_context.c_str(), document.GetAllocator());
                         if (value == "Getter" || value == "Setter")
                         {
-                            theMethod.AddMember(GraphCanvas::Schema::Field::context, value, document.GetAllocator());
+                            theMethod.AddMember(JE::Editor::Tools::GraphCanvas::Schema::Field::context, value, document.GetAllocator());
                         }
                     }
 
@@ -1236,7 +1236,7 @@ namespace ScriptCanvasEditorTools
                     rapidjson::Value theSlot(rapidjson::kObjectType);
 
                     value.SetString(slotSource.m_key.c_str(), document.GetAllocator());
-                    theSlot.AddMember(GraphCanvas::Schema::Field::key, value, document.GetAllocator());
+                    theSlot.AddMember(JE::Editor::Tools::GraphCanvas::Schema::Field::key, value, document.GetAllocator());
 
                     rapidjson::Value sloDetails(rapidjson::kObjectType);
                     if (!slotSource.m_details.m_name.empty())

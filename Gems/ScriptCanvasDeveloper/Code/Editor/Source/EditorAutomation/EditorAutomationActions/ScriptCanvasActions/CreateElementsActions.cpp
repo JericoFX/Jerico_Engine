@@ -8,19 +8,19 @@
 
 #include <QToolButton>
 
-#include <GraphCanvas/Components/SceneBus.h>
-#include <GraphCanvas/Components/Slots/SlotBus.h>
-#include <GraphCanvas/Components/Slots/Data/DataSlotBus.h>
-#include <GraphCanvas/Components/ViewBus.h>
-#include <GraphCanvas/Components/VisualBus.h>
-#include <GraphCanvas/Editor/AssetEditorBus.h>
-#include <GraphCanvas/Editor/Automation/AutomationIds.h>
-#include <GraphCanvas/Editor/Automation/AutomationUtils.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/SceneBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/Slots/SlotBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/Slots/Data/DataSlotBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/ViewBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/VisualBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Editor/AssetEditorBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Editor/Automation/AutomationIds.h>
+#include <JE/Editor/Tools/GraphCanvas/Editor/Automation/AutomationUtils.h>
 
-#include <GraphCanvas/Widgets/NodePalette/Model/NodePaletteSortFilterProxyModel.h>
-#include <GraphCanvas/Widgets/NodePalette/NodePaletteTreeView.h>
-#include <GraphCanvas/Widgets/NodePalette/TreeItems/NodePaletteTreeItem.h>
-#include <GraphCanvas/Utils/ConversionUtils.h>
+#include <JE/Editor/Tools/GraphCanvas/Widgets/NodePalette/Model/NodePaletteSortFilterProxyModel.h>
+#include <JE/Editor/Tools/GraphCanvas/Widgets/NodePalette/NodePaletteTreeView.h>
+#include <JE/Editor/Tools/GraphCanvas/Widgets/NodePalette/TreeItems/NodePaletteTreeItem.h>
+#include <JE/Editor/Tools/GraphCanvas/Utils/ConversionUtils.h>
 
 #include <Editor/GraphCanvas/GraphCanvasEditorNotificationBusId.h>
 #include <Editor/View/Widgets/VariablePanel/VariableDockWidget.h>
@@ -41,7 +41,7 @@ namespace ScriptCanvas::Developer
     // CreateNodeFromPaletteAction
     ////////////////////////////////
 
-    CreateNodeFromPaletteAction::CreateNodeFromPaletteAction(GraphCanvas::NodePaletteWidget* paletteWidget, GraphCanvas::GraphId graphId, QString nodeName, QPointF scenePoint)
+    CreateNodeFromPaletteAction::CreateNodeFromPaletteAction(JE::Editor::Tools::GraphCanvas::NodePaletteWidget* paletteWidget, JE::Editor::Tools::GraphCanvas::GraphId graphId, QString nodeName, QPointF scenePoint)
         : m_graphId(graphId)
         , m_scenePoint(scenePoint)
         , m_nodeName(nodeName)
@@ -49,21 +49,21 @@ namespace ScriptCanvas::Developer
     {
     }
 
-    CreateNodeFromPaletteAction::CreateNodeFromPaletteAction(GraphCanvas::NodePaletteWidget* paletteWidget, GraphCanvas::GraphId graphId, QString nodeName, GraphCanvas::ConnectionId connectionId)
+    CreateNodeFromPaletteAction::CreateNodeFromPaletteAction(JE::Editor::Tools::GraphCanvas::NodePaletteWidget* paletteWidget, JE::Editor::Tools::GraphCanvas::GraphId graphId, QString nodeName, JE::Editor::Tools::GraphCanvas::ConnectionId connectionId)
         : m_spliceTarget(connectionId)
         , m_graphId(graphId)
         , m_nodeName(nodeName)
         , m_paletteWidget(paletteWidget)
     {
-        if (GraphCanvas::GraphUtils::IsConnection(connectionId))
+        if (JE::Editor::Tools::GraphCanvas::GraphUtils::IsConnection(connectionId))
         {
             QPainterPath outlinePath;
-            GraphCanvas::SceneMemberUIRequestBus::EventResult(outlinePath, connectionId, &GraphCanvas::SceneMemberUIRequests::GetOutline);
+            JE::Editor::Tools::GraphCanvas::SceneMemberUIRequestBus::EventResult(outlinePath, connectionId, &JE::Editor::Tools::GraphCanvas::SceneMemberUIRequests::GetOutline);
 
             m_scenePoint = outlinePath.pointAtPercent(0.5);
 
-            GraphCanvas::ConnectionRequestBus::EventResult(m_sourceEndpoint, connectionId, &GraphCanvas::ConnectionRequests::GetSourceEndpoint);
-            GraphCanvas::ConnectionRequestBus::EventResult(m_targetEndpoint, connectionId, &GraphCanvas::ConnectionRequests::GetTargetEndpoint);
+            JE::Editor::Tools::GraphCanvas::ConnectionRequestBus::EventResult(m_sourceEndpoint, connectionId, &JE::Editor::Tools::GraphCanvas::ConnectionRequests::GetSourceEndpoint);
+            JE::Editor::Tools::GraphCanvas::ConnectionRequestBus::EventResult(m_targetEndpoint, connectionId, &JE::Editor::Tools::GraphCanvas::ConnectionRequests::GetTargetEndpoint);
         }
         else
         {
@@ -75,13 +75,13 @@ namespace ScriptCanvas::Developer
     {
         if (!m_centerOnScene && !m_writeToSearchFilter)
         {
-            GraphCanvas::ViewId viewId;
-            GraphCanvas::SceneRequestBus::EventResult(viewId, m_graphId, &GraphCanvas::SceneRequests::GetViewId);
+            JE::Editor::Tools::GraphCanvas::ViewId viewId;
+            JE::Editor::Tools::GraphCanvas::SceneRequestBus::EventResult(viewId, m_graphId, &JE::Editor::Tools::GraphCanvas::SceneRequests::GetViewId);
 
             AZ::Vector2 viewCenter;
-            GraphCanvas::ViewRequestBus::EventResult(viewCenter, viewId, &GraphCanvas::ViewRequests::GetViewSceneCenter);
+            JE::Editor::Tools::GraphCanvas::ViewRequestBus::EventResult(viewCenter, viewId, &JE::Editor::Tools::GraphCanvas::ViewRequests::GetViewSceneCenter);
 
-            QRectF viewRect = QRectF(GraphCanvas::ConversionUtils::AZToQPoint(viewCenter), GraphCanvas::ConversionUtils::AZToQPoint(viewCenter));
+            QRectF viewRect = QRectF(JE::Editor::Tools::GraphCanvas::ConversionUtils::AZToQPoint(viewCenter), JE::Editor::Tools::GraphCanvas::ConversionUtils::AZToQPoint(viewCenter));
             viewRect.adjust(-2, -2, 2, 2);
 
             m_centerOnScene = !viewRect.contains(m_scenePoint);
@@ -120,16 +120,16 @@ namespace ScriptCanvas::Developer
     {
         ClearActionQueue();
 
-        GraphCanvas::SceneNotificationBus::Handler::BusConnect(m_graphId);
+        JE::Editor::Tools::GraphCanvas::SceneNotificationBus::Handler::BusConnect(m_graphId);
         m_createdNodeId.SetInvalid();
 
-        GraphCanvas::GraphCanvasTreeItem* paletteItem = m_paletteWidget->FindItemWithName(m_nodeName);
+        JE::Editor::Tools::GraphCanvas::GraphCanvasTreeItem* paletteItem = m_paletteWidget->FindItemWithName(m_nodeName);
 
         if (paletteItem)
         {
             QModelIndex modelIndex = paletteItem->GetIndexFromModel();
 
-            GraphCanvas::NodePaletteSortFilterProxyModel* proxyModel = m_paletteWidget->GetFilterModel();
+            JE::Editor::Tools::GraphCanvas::NodePaletteSortFilterProxyModel* proxyModel = m_paletteWidget->GetFilterModel();
             QModelIndex filteredParentIndex = proxyModel->mapFromSource(paletteItem->GetParent()->GetIndexFromModel());
             QModelIndex filteredElementIndex = proxyModel->mapFromSource(modelIndex);
 
@@ -137,20 +137,20 @@ namespace ScriptCanvas::Developer
             AddAction(aznew PressMouseButtonAction(Qt::MouseButton::LeftButton));
             AddAction(aznew ProcessUserEventsAction());
 
-            GraphCanvas::ViewId viewId;
-            GraphCanvas::SceneRequestBus::EventResult(viewId, m_graphId, &GraphCanvas::SceneRequests::GetViewId);
+            JE::Editor::Tools::GraphCanvas::ViewId viewId;
+            JE::Editor::Tools::GraphCanvas::SceneRequestBus::EventResult(viewId, m_graphId, &JE::Editor::Tools::GraphCanvas::SceneRequests::GetViewId);
 
             AZ::Vector2 screenPoint;
-            GraphCanvas::ViewRequestBus::EventResult(screenPoint, viewId, &GraphCanvas::ViewRequests::MapToGlobal, GraphCanvas::ConversionUtils::QPointToVector(m_scenePoint));
+            JE::Editor::Tools::GraphCanvas::ViewRequestBus::EventResult(screenPoint, viewId, &JE::Editor::Tools::GraphCanvas::ViewRequests::MapToGlobal, JE::Editor::Tools::GraphCanvas::ConversionUtils::QPointToVector(m_scenePoint));
 
-            AddAction(aznew MouseMoveAction(GraphCanvas::ConversionUtils::AZToQPoint(screenPoint).toPoint()));
+            AddAction(aznew MouseMoveAction(JE::Editor::Tools::GraphCanvas::ConversionUtils::AZToQPoint(screenPoint).toPoint()));
             AddAction(aznew ProcessUserEventsAction());
 
             // If we are splicing, we need to hold a little bit before we release the button.
             if (m_spliceTarget.IsValid())
             {
                 AZStd::chrono::milliseconds connectionDelay;
-                GraphCanvas::AssetEditorSettingsRequestBus::EventResult(connectionDelay, ScriptCanvasEditor::AssetEditorId, &GraphCanvas::AssetEditorSettingsRequests::GetDropConnectionSpliceTime);
+                JE::Editor::Tools::GraphCanvas::AssetEditorSettingsRequestBus::EventResult(connectionDelay, ScriptCanvasEditor::AssetEditorId, &JE::Editor::Tools::GraphCanvas::AssetEditorSettingsRequests::GetDropConnectionSpliceTime);
 
                 // Give it some buffer room on the delay before we release.
                 connectionDelay = connectionDelay + connectionDelay / 2;
@@ -160,16 +160,16 @@ namespace ScriptCanvas::Developer
 
             AddAction(aznew ReleaseMouseButtonAction(Qt::MouseButton::LeftButton));
             AddAction(aznew ProcessUserEventsAction());
-            AddAction(aznew MouseMoveAction(GraphCanvas::ConversionUtils::AZToQPoint(screenPoint + AZ::Vector2(1,1)).toPoint()));
+            AddAction(aznew MouseMoveAction(JE::Editor::Tools::GraphCanvas::ConversionUtils::AZToQPoint(screenPoint + AZ::Vector2(1,1)).toPoint()));
             AddAction(aznew ProcessUserEventsAction());
         }
 
         CompoundAction::SetupAction();
     }
 
-    GraphCanvas::NodeId CreateNodeFromPaletteAction::GetCreatedNodeId() const
+    JE::Editor::Tools::GraphCanvas::NodeId CreateNodeFromPaletteAction::GetCreatedNodeId() const
     {
-        return GraphCanvas::GraphUtils::FindOutermostNode(m_createdNodeId);
+        return JE::Editor::Tools::GraphCanvas::GraphUtils::FindOutermostNode(m_createdNodeId);
     }
 
     void CreateNodeFromPaletteAction::OnNodeAdded(const AZ::EntityId& nodeId, bool)
@@ -188,13 +188,13 @@ namespace ScriptCanvas::Developer
         }
         else if (m_spliceTarget.IsValid())
         {
-            GraphCanvas::NodeId nodeId = GetCreatedNodeId();
+            JE::Editor::Tools::GraphCanvas::NodeId nodeId = GetCreatedNodeId();
 
-            GraphCanvas::ConnectionId connectionId;
-            GraphCanvas::SlotRequestBus::EventResult(connectionId, m_sourceEndpoint.m_slotId, &GraphCanvas::SlotRequests::GetLastConnection);
+            JE::Editor::Tools::GraphCanvas::ConnectionId connectionId;
+            JE::Editor::Tools::GraphCanvas::SlotRequestBus::EventResult(connectionId, m_sourceEndpoint.m_slotId, &JE::Editor::Tools::GraphCanvas::SlotRequests::GetLastConnection);
 
-            GraphCanvas::Endpoint otherEndpoint;
-            GraphCanvas::ConnectionRequestBus::EventResult(otherEndpoint, connectionId, &GraphCanvas::ConnectionRequests::FindOtherEndpoint, m_sourceEndpoint);
+            JE::Editor::Tools::GraphCanvas::Endpoint otherEndpoint;
+            JE::Editor::Tools::GraphCanvas::ConnectionRequestBus::EventResult(otherEndpoint, connectionId, &JE::Editor::Tools::GraphCanvas::ConnectionRequests::FindOtherEndpoint, m_sourceEndpoint);
 
             if (!otherEndpoint.IsValid()
                 || otherEndpoint.GetNodeId() != nodeId)
@@ -203,10 +203,10 @@ namespace ScriptCanvas::Developer
             }
 
             connectionId.SetInvalid();
-            GraphCanvas::SlotRequestBus::EventResult(connectionId, m_targetEndpoint.m_slotId, &GraphCanvas::SlotRequests::GetLastConnection);
+            JE::Editor::Tools::GraphCanvas::SlotRequestBus::EventResult(connectionId, m_targetEndpoint.m_slotId, &JE::Editor::Tools::GraphCanvas::SlotRequests::GetLastConnection);
 
-            otherEndpoint = GraphCanvas::Endpoint();
-            GraphCanvas::ConnectionRequestBus::EventResult(otherEndpoint, connectionId, &GraphCanvas::ConnectionRequests::FindOtherEndpoint, m_targetEndpoint);
+            otherEndpoint = JE::Editor::Tools::GraphCanvas::Endpoint();
+            JE::Editor::Tools::GraphCanvas::ConnectionRequestBus::EventResult(otherEndpoint, connectionId, &JE::Editor::Tools::GraphCanvas::ConnectionRequests::FindOtherEndpoint, m_targetEndpoint);
 
             if (!otherEndpoint.IsValid()
                 || otherEndpoint.GetNodeId() != nodeId)
@@ -220,7 +220,7 @@ namespace ScriptCanvas::Developer
 
     void CreateNodeFromPaletteAction::OnActionsComplete()
     {
-        GraphCanvas::SceneNotificationBus::Handler::BusDisconnect();
+        JE::Editor::Tools::GraphCanvas::SceneNotificationBus::Handler::BusDisconnect();
 
         m_centerOnScene = false;
         m_writeToSearchFilter = false;
@@ -230,7 +230,7 @@ namespace ScriptCanvas::Developer
     // CreateCategoryFromNodePaletteAction
     ////////////////////////////////////////
 
-    CreateCategoryFromNodePaletteAction::CreateCategoryFromNodePaletteAction(GraphCanvas::NodePaletteWidget* paletteWidget, GraphCanvas::GraphId graphId, QString category, QPointF scenePoint)
+    CreateCategoryFromNodePaletteAction::CreateCategoryFromNodePaletteAction(JE::Editor::Tools::GraphCanvas::NodePaletteWidget* paletteWidget, JE::Editor::Tools::GraphCanvas::GraphId graphId, QString category, QPointF scenePoint)
         : m_graphId(graphId)
         , m_scenePoint(scenePoint)
         , m_categoryName(category)
@@ -260,19 +260,19 @@ namespace ScriptCanvas::Developer
     {
         ClearActionQueue();
 
-        GraphCanvas::SceneNotificationBus::Handler::BusConnect(m_graphId);
+        JE::Editor::Tools::GraphCanvas::SceneNotificationBus::Handler::BusConnect(m_graphId);
 
-        GraphCanvas::GraphCanvasTreeItem* rootItem = m_paletteWidget->FindItemWithName(m_categoryName);
+        JE::Editor::Tools::GraphCanvas::GraphCanvasTreeItem* rootItem = m_paletteWidget->FindItemWithName(m_categoryName);
 
         AZStd::vector<AZStd::pair<int, QModelIndex>> creationIndexes;
 
         if (rootItem)
         {
-            AZStd::unordered_set< GraphCanvas::GraphCanvasTreeItem* > unexploredItems = { rootItem };
+            AZStd::unordered_set< JE::Editor::Tools::GraphCanvas::GraphCanvasTreeItem* > unexploredItems = { rootItem };
 
             while (!unexploredItems.empty())
             {
-                GraphCanvas::GraphCanvasTreeItem* currentItem = (*unexploredItems.begin());
+                JE::Editor::Tools::GraphCanvas::GraphCanvasTreeItem* currentItem = (*unexploredItems.begin());
                 unexploredItems.erase(unexploredItems.begin());
 
                 if (currentItem)
@@ -325,13 +325,13 @@ namespace ScriptCanvas::Developer
                 AddAction(aznew ProcessUserEventsAction());
             }
 
-            GraphCanvas::ViewId viewId;
-            GraphCanvas::SceneRequestBus::EventResult(viewId, m_graphId, &GraphCanvas::SceneRequests::GetViewId);
+            JE::Editor::Tools::GraphCanvas::ViewId viewId;
+            JE::Editor::Tools::GraphCanvas::SceneRequestBus::EventResult(viewId, m_graphId, &JE::Editor::Tools::GraphCanvas::SceneRequests::GetViewId);
 
             AZ::Vector2 screenPoint;
-            GraphCanvas::ViewRequestBus::EventResult(screenPoint, viewId, &GraphCanvas::ViewRequests::MapToGlobal, GraphCanvas::ConversionUtils::QPointToVector(m_scenePoint));
+            JE::Editor::Tools::GraphCanvas::ViewRequestBus::EventResult(screenPoint, viewId, &JE::Editor::Tools::GraphCanvas::ViewRequests::MapToGlobal, JE::Editor::Tools::GraphCanvas::ConversionUtils::QPointToVector(m_scenePoint));
 
-            AddAction(aznew MouseMoveAction(GraphCanvas::ConversionUtils::AZToQPoint(screenPoint).toPoint()));
+            AddAction(aznew MouseMoveAction(JE::Editor::Tools::GraphCanvas::ConversionUtils::AZToQPoint(screenPoint).toPoint()));
 
             AddAction(aznew ProcessUserEventsAction());
 
@@ -339,7 +339,7 @@ namespace ScriptCanvas::Developer
 
             AddAction(aznew ProcessUserEventsAction());
 
-            AddAction(aznew MouseMoveAction(GraphCanvas::ConversionUtils::AZToQPoint(screenPoint + AZ::Vector2(1, 1)).toPoint()));
+            AddAction(aznew MouseMoveAction(JE::Editor::Tools::GraphCanvas::ConversionUtils::AZToQPoint(screenPoint + AZ::Vector2(1, 1)).toPoint()));
             AddAction(aznew ProcessUserEventsAction());
 
 #if defined(AZ_COMPILER_MSVC)
@@ -356,23 +356,23 @@ namespace ScriptCanvas::Developer
         m_createdNodeIds.emplace_back(nodeId);
     }
 
-    AZStd::vector< GraphCanvas::NodeId > CreateCategoryFromNodePaletteAction::GetCreatedNodes() const
+    AZStd::vector< JE::Editor::Tools::GraphCanvas::NodeId > CreateCategoryFromNodePaletteAction::GetCreatedNodes() const
     {
         return m_createdNodeIds;
     }
 
     void CreateCategoryFromNodePaletteAction::OnActionsComplete()
     {
-        GraphCanvas::SceneNotificationBus::Handler::BusDisconnect();
+        JE::Editor::Tools::GraphCanvas::SceneNotificationBus::Handler::BusDisconnect();
 
-        AZStd::vector< GraphCanvas::NodeId > nodes = m_createdNodeIds;
-        AZStd::unordered_set< GraphCanvas::NodeId > rootNodes;
+        AZStd::vector< JE::Editor::Tools::GraphCanvas::NodeId > nodes = m_createdNodeIds;
+        AZStd::unordered_set< JE::Editor::Tools::GraphCanvas::NodeId > rootNodes;
 
         m_createdNodeIds.clear();
 
-        for (GraphCanvas::NodeId nodeId : nodes)
+        for (JE::Editor::Tools::GraphCanvas::NodeId nodeId : nodes)
         {
-            GraphCanvas::NodeId outermostNode = GraphCanvas::GraphUtils::FindOutermostNode(nodeId);
+            JE::Editor::Tools::GraphCanvas::NodeId outermostNode = JE::Editor::Tools::GraphCanvas::GraphUtils::FindOutermostNode(nodeId);
             rootNodes.insert(outermostNode);
         }
 
@@ -393,28 +393,28 @@ namespace ScriptCanvas::Developer
     // CreateNodeFromContextMenuAction
     ////////////////////////////////////
 
-    CreateNodeFromContextMenuAction::CreateNodeFromContextMenuAction(GraphCanvas::GraphId graphId, QString nodeName, QPointF scenePoint)
+    CreateNodeFromContextMenuAction::CreateNodeFromContextMenuAction(JE::Editor::Tools::GraphCanvas::GraphId graphId, QString nodeName, QPointF scenePoint)
         : m_graphId(graphId)
         , m_scenePoint(scenePoint)
         , m_nodeName(nodeName)
     {
     }
     
-    CreateNodeFromContextMenuAction::CreateNodeFromContextMenuAction(GraphCanvas::GraphId graphId, QString nodeName, AZ::EntityId connectionId)
+    CreateNodeFromContextMenuAction::CreateNodeFromContextMenuAction(JE::Editor::Tools::GraphCanvas::GraphId graphId, QString nodeName, AZ::EntityId connectionId)
         : m_graphId(graphId)
         , m_nodeName(nodeName)
     {
-        if (GraphCanvas::GraphUtils::IsConnection(connectionId))
+        if (JE::Editor::Tools::GraphCanvas::GraphUtils::IsConnection(connectionId))
         {
             QPainterPath outlinePath;
-            GraphCanvas::SceneMemberUIRequestBus::EventResult(outlinePath, connectionId, &GraphCanvas::SceneMemberUIRequests::GetOutline);
+            JE::Editor::Tools::GraphCanvas::SceneMemberUIRequestBus::EventResult(outlinePath, connectionId, &JE::Editor::Tools::GraphCanvas::SceneMemberUIRequests::GetOutline);
 
             m_scenePoint = outlinePath.pointAtPercent(0.5);
 
             m_spliceTarget = connectionId;
 
-            GraphCanvas::ConnectionRequestBus::EventResult(m_sourceEndpoint, connectionId, &GraphCanvas::ConnectionRequests::GetSourceEndpoint);
-            GraphCanvas::ConnectionRequestBus::EventResult(m_targetEndpoint, connectionId, &GraphCanvas::ConnectionRequests::GetTargetEndpoint);
+            JE::Editor::Tools::GraphCanvas::ConnectionRequestBus::EventResult(m_sourceEndpoint, connectionId, &JE::Editor::Tools::GraphCanvas::ConnectionRequests::GetSourceEndpoint);
+            JE::Editor::Tools::GraphCanvas::ConnectionRequestBus::EventResult(m_targetEndpoint, connectionId, &JE::Editor::Tools::GraphCanvas::ConnectionRequests::GetTargetEndpoint);
         }
         else
         {
@@ -440,15 +440,15 @@ namespace ScriptCanvas::Developer
 
         m_createdNodeId.SetInvalid();
 
-        GraphCanvas::SceneNotificationBus::Handler::BusConnect(m_graphId);
+        JE::Editor::Tools::GraphCanvas::SceneNotificationBus::Handler::BusConnect(m_graphId);
 
-        GraphCanvas::ViewId viewId;
-        GraphCanvas::SceneRequestBus::EventResult(viewId, m_graphId, &GraphCanvas::SceneRequests::GetViewId);
+        JE::Editor::Tools::GraphCanvas::ViewId viewId;
+        JE::Editor::Tools::GraphCanvas::SceneRequestBus::EventResult(viewId, m_graphId, &JE::Editor::Tools::GraphCanvas::SceneRequests::GetViewId);
 
         AZ::Vector2 screenPoint;
-        GraphCanvas::ViewRequestBus::EventResult(screenPoint, viewId, &GraphCanvas::ViewRequests::MapToGlobal, GraphCanvas::ConversionUtils::QPointToVector(m_scenePoint));
+        JE::Editor::Tools::GraphCanvas::ViewRequestBus::EventResult(screenPoint, viewId, &JE::Editor::Tools::GraphCanvas::ViewRequests::MapToGlobal, JE::Editor::Tools::GraphCanvas::ConversionUtils::QPointToVector(m_scenePoint));
 
-        AddAction(aznew MouseMoveAction(GraphCanvas::ConversionUtils::AZToQPoint(screenPoint).toPoint()));
+        AddAction(aznew MouseMoveAction(JE::Editor::Tools::GraphCanvas::ConversionUtils::AZToQPoint(screenPoint).toPoint()));
 
         AddAction(aznew MouseClickAction(Qt::MouseButton::RightButton));
         
@@ -476,9 +476,9 @@ namespace ScriptCanvas::Developer
 
     void CreateNodeFromContextMenuAction::OnActionsComplete()
     {
-        m_createdNodeId = GraphCanvas::GraphUtils::FindOutermostNode(m_createdNodeId);
+        m_createdNodeId = JE::Editor::Tools::GraphCanvas::GraphUtils::FindOutermostNode(m_createdNodeId);
 
-        GraphCanvas::SceneNotificationBus::Handler::BusDisconnect();
+        JE::Editor::Tools::GraphCanvas::SceneNotificationBus::Handler::BusDisconnect();
 
         m_centerOnScene = true;
     }
@@ -491,13 +491,13 @@ namespace ScriptCanvas::Developer
         }
         else if (m_spliceTarget.IsValid())
         {
-            GraphCanvas::NodeId nodeId = GetCreatedNodeId();
+            JE::Editor::Tools::GraphCanvas::NodeId nodeId = GetCreatedNodeId();
 
-            GraphCanvas::ConnectionId connectionId;
-            GraphCanvas::SlotRequestBus::EventResult(connectionId, m_sourceEndpoint.m_slotId, &GraphCanvas::SlotRequests::GetLastConnection);
+            JE::Editor::Tools::GraphCanvas::ConnectionId connectionId;
+            JE::Editor::Tools::GraphCanvas::SlotRequestBus::EventResult(connectionId, m_sourceEndpoint.m_slotId, &JE::Editor::Tools::GraphCanvas::SlotRequests::GetLastConnection);
 
-            GraphCanvas::Endpoint otherEndpoint;
-            GraphCanvas::ConnectionRequestBus::EventResult(otherEndpoint, connectionId, &GraphCanvas::ConnectionRequests::FindOtherEndpoint, m_sourceEndpoint);
+            JE::Editor::Tools::GraphCanvas::Endpoint otherEndpoint;
+            JE::Editor::Tools::GraphCanvas::ConnectionRequestBus::EventResult(otherEndpoint, connectionId, &JE::Editor::Tools::GraphCanvas::ConnectionRequests::FindOtherEndpoint, m_sourceEndpoint);
 
             if (!otherEndpoint.IsValid()
                 || otherEndpoint.GetNodeId() != nodeId)
@@ -506,10 +506,10 @@ namespace ScriptCanvas::Developer
             }
 
             connectionId.SetInvalid();
-            GraphCanvas::SlotRequestBus::EventResult(connectionId, m_targetEndpoint.m_slotId, &GraphCanvas::SlotRequests::GetLastConnection);
+            JE::Editor::Tools::GraphCanvas::SlotRequestBus::EventResult(connectionId, m_targetEndpoint.m_slotId, &JE::Editor::Tools::GraphCanvas::SlotRequests::GetLastConnection);
 
-            otherEndpoint = GraphCanvas::Endpoint();
-            GraphCanvas::ConnectionRequestBus::EventResult(otherEndpoint, connectionId, &GraphCanvas::ConnectionRequests::FindOtherEndpoint, m_targetEndpoint);
+            otherEndpoint = JE::Editor::Tools::GraphCanvas::Endpoint();
+            JE::Editor::Tools::GraphCanvas::ConnectionRequestBus::EventResult(otherEndpoint, connectionId, &JE::Editor::Tools::GraphCanvas::ConnectionRequests::FindOtherEndpoint, m_targetEndpoint);
 
             if (!otherEndpoint.IsValid()
                 || otherEndpoint.GetNodeId() != nodeId)
@@ -525,17 +525,17 @@ namespace ScriptCanvas::Developer
     // CreateNodeFromProposalAction
     /////////////////////////////////
 
-    CreateNodeFromProposalAction::CreateNodeFromProposalAction(GraphCanvas::GraphId graphId, GraphCanvas::Endpoint endpoint, QString nodeName)
+    CreateNodeFromProposalAction::CreateNodeFromProposalAction(JE::Editor::Tools::GraphCanvas::GraphId graphId, JE::Editor::Tools::GraphCanvas::Endpoint endpoint, QString nodeName)
         : m_graphId(graphId)
         , m_endpoint(endpoint)
         , m_nodeName(nodeName)
     {
-        AZ::Vector2 stepSize = GraphCanvas::GraphUtils::FindMinorStep(graphId);
+        AZ::Vector2 stepSize = JE::Editor::Tools::GraphCanvas::GraphUtils::FindMinorStep(graphId);
         
-        GraphCanvas::SlotUIRequestBus::EventResult(m_scenePoint, m_endpoint.GetSlotId(), &GraphCanvas::SlotUIRequests::GetConnectionPoint);
+        JE::Editor::Tools::GraphCanvas::SlotUIRequestBus::EventResult(m_scenePoint, m_endpoint.GetSlotId(), &JE::Editor::Tools::GraphCanvas::SlotUIRequests::GetConnectionPoint);
 
         QPointF jutDirection;
-        GraphCanvas::SlotUIRequestBus::EventResult(jutDirection, m_endpoint.GetSlotId(), &GraphCanvas::SlotUIRequests::GetJutDirection);
+        JE::Editor::Tools::GraphCanvas::SlotUIRequestBus::EventResult(jutDirection, m_endpoint.GetSlotId(), &JE::Editor::Tools::GraphCanvas::SlotUIRequests::GetJutDirection);
 
         AZ::Vector2 stepDirection = AZ::Vector2::CreateZero();
 
@@ -545,7 +545,7 @@ namespace ScriptCanvas::Developer
         m_scenePoint.setX(m_scenePoint.x() + stepDirection.GetX() * 2);
     }
 
-    CreateNodeFromProposalAction::CreateNodeFromProposalAction(GraphCanvas::GraphId graphId, GraphCanvas::Endpoint endpoint, QString nodeName, QPointF scenePoint)
+    CreateNodeFromProposalAction::CreateNodeFromProposalAction(JE::Editor::Tools::GraphCanvas::GraphId graphId, JE::Editor::Tools::GraphCanvas::Endpoint endpoint, QString nodeName, QPointF scenePoint)
         : m_graphId(graphId)
         , m_endpoint(endpoint)
         , m_scenePoint(scenePoint)
@@ -555,14 +555,14 @@ namespace ScriptCanvas::Developer
 
     bool CreateNodeFromProposalAction::IsMissingPrecondition()
     {
-        GraphCanvas::ViewId viewId;
-        GraphCanvas::SceneRequestBus::EventResult(viewId, m_graphId, &GraphCanvas::SceneRequests::GetViewId);
+        JE::Editor::Tools::GraphCanvas::ViewId viewId;
+        JE::Editor::Tools::GraphCanvas::SceneRequestBus::EventResult(viewId, m_graphId, &JE::Editor::Tools::GraphCanvas::SceneRequests::GetViewId);
 
         QRectF viewableBounds;
-        GraphCanvas::ViewRequestBus::EventResult(viewableBounds, viewId, &GraphCanvas::ViewRequests::GetViewableAreaInSceneCoordinates);
+        JE::Editor::Tools::GraphCanvas::ViewRequestBus::EventResult(viewableBounds, viewId, &JE::Editor::Tools::GraphCanvas::ViewRequests::GetViewableAreaInSceneCoordinates);
 
         QPointF pinCenter;
-        GraphCanvas::SlotUIRequestBus::EventResult(pinCenter, m_endpoint.GetSlotId(), &GraphCanvas::SlotUIRequests::GetPinCenter);
+        JE::Editor::Tools::GraphCanvas::SlotUIRequestBus::EventResult(pinCenter, m_endpoint.GetSlotId(), &JE::Editor::Tools::GraphCanvas::SlotUIRequests::GetPinCenter);
 
         QRectF sceneRect(pinCenter, m_scenePoint);
         sceneRect.adjust(-10, -10, 10, 10);
@@ -572,14 +572,14 @@ namespace ScriptCanvas::Developer
 
     EditorAutomationAction* CreateNodeFromProposalAction::GenerateMissingPreconditionAction()
     {
-        GraphCanvas::ViewId viewId;
-        GraphCanvas::SceneRequestBus::EventResult(viewId, m_graphId, &GraphCanvas::SceneRequests::GetViewId);
+        JE::Editor::Tools::GraphCanvas::ViewId viewId;
+        JE::Editor::Tools::GraphCanvas::SceneRequestBus::EventResult(viewId, m_graphId, &JE::Editor::Tools::GraphCanvas::SceneRequests::GetViewId);
 
         QRectF viewableBounds;
-        GraphCanvas::ViewRequestBus::EventResult(viewableBounds, viewId, &GraphCanvas::ViewRequests::GetViewableAreaInSceneCoordinates);
+        JE::Editor::Tools::GraphCanvas::ViewRequestBus::EventResult(viewableBounds, viewId, &JE::Editor::Tools::GraphCanvas::ViewRequests::GetViewableAreaInSceneCoordinates);
 
         QPointF pinCenter;
-        GraphCanvas::SlotUIRequestBus::EventResult(pinCenter, m_endpoint.GetSlotId(), &GraphCanvas::SlotUIRequests::GetPinCenter);
+        JE::Editor::Tools::GraphCanvas::SlotUIRequestBus::EventResult(pinCenter, m_endpoint.GetSlotId(), &JE::Editor::Tools::GraphCanvas::SlotUIRequests::GetPinCenter);
 
         QRectF sceneRect(pinCenter, m_scenePoint);
 
@@ -593,7 +593,7 @@ namespace ScriptCanvas::Developer
         m_createdNodeId.SetInvalid();
 
         QPointF pinCenter;
-        GraphCanvas::SlotUIRequestBus::EventResult(pinCenter, m_endpoint.GetSlotId(), &GraphCanvas::SlotUIRequests::GetPinCenter);
+        JE::Editor::Tools::GraphCanvas::SlotUIRequestBus::EventResult(pinCenter, m_endpoint.GetSlotId(), &JE::Editor::Tools::GraphCanvas::SlotUIRequests::GetPinCenter);
 
         AddAction(aznew SceneMouseDragAction(m_graphId, pinCenter, m_scenePoint));
         AddAction(aznew ProcessUserEventsAction());
@@ -604,7 +604,7 @@ namespace ScriptCanvas::Developer
 #endif
         AddAction(aznew ProcessUserEventsAction());
 
-        GraphCanvas::SceneNotificationBus::Handler::BusConnect(m_graphId);
+        JE::Editor::Tools::GraphCanvas::SceneNotificationBus::Handler::BusConnect(m_graphId);
 
         CompoundAction::SetupAction();
     }
@@ -616,13 +616,13 @@ namespace ScriptCanvas::Developer
 
     AZ::EntityId CreateNodeFromProposalAction::GetCreatedNodeId() const
     {
-        return GraphCanvas::GraphUtils::FindOutermostNode(m_createdNodeId);
+        return JE::Editor::Tools::GraphCanvas::GraphUtils::FindOutermostNode(m_createdNodeId);
     }
 
     AZ::EntityId CreateNodeFromProposalAction::GetConnectionId() const
     {
-        GraphCanvas::ConnectionId lastConnectionId;
-        GraphCanvas::SlotRequestBus::EventResult(lastConnectionId, m_endpoint.m_slotId, &GraphCanvas::SlotRequests::GetLastConnection);
+        JE::Editor::Tools::GraphCanvas::ConnectionId lastConnectionId;
+        JE::Editor::Tools::GraphCanvas::SlotRequestBus::EventResult(lastConnectionId, m_endpoint.m_slotId, &JE::Editor::Tools::GraphCanvas::SlotRequests::GetLastConnection);
 
         return lastConnectionId;
     }
@@ -635,11 +635,11 @@ namespace ScriptCanvas::Developer
         }
         else
         {
-            GraphCanvas::ConnectionId lastConnectionId;
-            GraphCanvas::SlotRequestBus::EventResult(lastConnectionId, m_endpoint.m_slotId, &GraphCanvas::SlotRequests::GetLastConnection);
+            JE::Editor::Tools::GraphCanvas::ConnectionId lastConnectionId;
+            JE::Editor::Tools::GraphCanvas::SlotRequestBus::EventResult(lastConnectionId, m_endpoint.m_slotId, &JE::Editor::Tools::GraphCanvas::SlotRequests::GetLastConnection);
 
-            GraphCanvas::Endpoint otherEndpoint;
-            GraphCanvas::ConnectionRequestBus::EventResult(otherEndpoint, lastConnectionId, &GraphCanvas::ConnectionRequests::FindOtherEndpoint, m_endpoint);
+            JE::Editor::Tools::GraphCanvas::Endpoint otherEndpoint;
+            JE::Editor::Tools::GraphCanvas::ConnectionRequestBus::EventResult(otherEndpoint, lastConnectionId, &JE::Editor::Tools::GraphCanvas::ConnectionRequests::FindOtherEndpoint, m_endpoint);
 
             if (otherEndpoint.IsValid())
             {
@@ -661,14 +661,14 @@ namespace ScriptCanvas::Developer
 
     void CreateNodeFromProposalAction::OnActionsComplete()
     {
-        GraphCanvas::SceneNotificationBus::Handler::BusDisconnect();
+        JE::Editor::Tools::GraphCanvas::SceneNotificationBus::Handler::BusDisconnect();
     }
 
     //////////////////////
     // CreateGroupAction
     //////////////////////
 
-    CreateGroupAction::CreateGroupAction(GraphCanvas::EditorId editorId, GraphCanvas::GraphId graphId, CreationType creationType)
+    CreateGroupAction::CreateGroupAction(JE::Editor::Tools::GraphCanvas::EditorId editorId, JE::Editor::Tools::GraphCanvas::GraphId graphId, CreationType creationType)
         : m_editorId(editorId)
         , m_graphId(graphId)
         , m_creationType(creationType)
@@ -681,7 +681,7 @@ namespace ScriptCanvas::Developer
 
     void CreateGroupAction::SetupAction()
     {
-        GraphCanvas::SceneNotificationBus::Handler::BusConnect(m_graphId);
+        JE::Editor::Tools::GraphCanvas::SceneNotificationBus::Handler::BusConnect(m_graphId);
 
         m_createdGroup.SetInvalid();
 
@@ -722,7 +722,7 @@ namespace ScriptCanvas::Developer
 
     void CreateGroupAction::SetupToolbarAction()
     {
-        QToolButton* createGroupButton = GraphCanvas::AutomationUtils::FindObjectById<QToolButton>(m_editorId, GraphCanvas::AutomationIds::GroupButton);
+        QToolButton* createGroupButton = JE::Editor::Tools::GraphCanvas::AutomationUtils::FindObjectById<QToolButton>(m_editorId, JE::Editor::Tools::GraphCanvas::AutomationIds::GroupButton);
 
         if (createGroupButton)
         {
@@ -751,6 +751,6 @@ namespace ScriptCanvas::Developer
 
     void CreateGroupAction::OnActionsComplete()
     {
-        GraphCanvas::SceneNotificationBus::Handler::BusDisconnect();
+        JE::Editor::Tools::GraphCanvas::SceneNotificationBus::Handler::BusDisconnect();
     }
 }

@@ -29,9 +29,9 @@
 #include <AzToolsFramework/Entity/EditorEntityContextPickingBus.h>
 #include <AzToolsFramework/ToolsComponents/EditorComponentBase.h>
 
-#include <GraphCanvas/Components/VisualBus.h>
-#include <GraphCanvas/Components/SceneBus.h>
-#include <GraphCanvas/Components/StyleBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/VisualBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/SceneBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/StyleBus.h>
 
 #include <Editor/View/Widgets/VariablePanel/VariableDockWidget.h>
 #include <Editor/View/Widgets/VariablePanel/ui_VariableDockWidget.h>
@@ -52,7 +52,7 @@
 #include <ScriptCanvas/Data/DataRegistry.h>
 #include <ScriptCanvas/GraphCanvas/NodeDescriptorBus.h>
 #include <ScriptCanvas/Asset/RuntimeAsset.h>
-#include "GraphCanvas/Components/Slots/Data/DataSlotBus.h"
+#include "JE/Editor/Tools/GraphCanvas/Components/Slots/Data/DataSlotBus.h"
 
 namespace ScriptCanvasEditor
 {
@@ -65,7 +65,7 @@ namespace ScriptCanvasEditor
         AZ::SerializeContext* serializeContext = azrtti_cast<AZ::SerializeContext*>(context);
         if (serializeContext)
         {            
-            serializeContext->Class<VariablePropertiesComponent, GraphCanvas::GraphCanvasPropertyComponent>()
+            serializeContext->Class<VariablePropertiesComponent, JE::Editor::Tools::GraphCanvas::GraphCanvasPropertyComponent>()
                 ->Version(1)
                 ->Field("VariableName", &VariablePropertiesComponent::m_variableName)
                 ->Field("VariableDatum", &VariablePropertiesComponent::m_variable)
@@ -217,10 +217,10 @@ namespace ScriptCanvasEditor
             CreateGetVariableNodeMimeEvent mimeEvent(varId);
 
             AZ::EntityId viewId;
-            GraphCanvas::SceneRequestBus::EventResult(viewId, graphCanvasGraphId, &GraphCanvas::SceneRequests::GetViewId);
+            JE::Editor::Tools::GraphCanvas::SceneRequestBus::EventResult(viewId, graphCanvasGraphId, &JE::Editor::Tools::GraphCanvas::SceneRequests::GetViewId);
 
             AZ::Vector2 viewCenter;
-            GraphCanvas::ViewRequestBus::EventResult(viewCenter, viewId, &GraphCanvas::ViewRequests::GetViewSceneCenter);
+            JE::Editor::Tools::GraphCanvas::ViewRequestBus::EventResult(viewCenter, viewId, &JE::Editor::Tools::GraphCanvas::ViewRequests::GetViewSceneCenter);
 
             mimeEvent.ExecuteEvent(viewCenter, viewCenter, graphCanvasGraphId);
         });
@@ -236,10 +236,10 @@ namespace ScriptCanvasEditor
             CreateSetVariableNodeMimeEvent mimeEvent(varId);
 
             AZ::EntityId viewId;
-            GraphCanvas::SceneRequestBus::EventResult(viewId, graphCanvasGraphId, &GraphCanvas::SceneRequests::GetViewId);
+            JE::Editor::Tools::GraphCanvas::SceneRequestBus::EventResult(viewId, graphCanvasGraphId, &JE::Editor::Tools::GraphCanvas::SceneRequests::GetViewId);
 
             AZ::Vector2 viewCenter;
-            GraphCanvas::ViewRequestBus::EventResult(viewCenter, viewId, &GraphCanvas::ViewRequests::GetViewSceneCenter);
+            JE::Editor::Tools::GraphCanvas::ViewRequestBus::EventResult(viewCenter, viewId, &JE::Editor::Tools::GraphCanvas::ViewRequests::GetViewSceneCenter);
 
             mimeEvent.ExecuteEvent(viewCenter, viewCenter, graphCanvasGraphId);
         });
@@ -375,7 +375,7 @@ namespace ScriptCanvasEditor
 
         QObject::connect(&m_filterTimer, &QTimer::timeout, this, &VariableDockWidget::UpdateFilter);
 
-        GraphCanvas::AssetEditorNotificationBus::Handler::BusConnect(ScriptCanvasEditor::AssetEditorId);
+        JE::Editor::Tools::GraphCanvas::AssetEditorNotificationBus::Handler::BusConnect(ScriptCanvasEditor::AssetEditorId);
 
         ShowGraphVariables();
 
@@ -384,7 +384,7 @@ namespace ScriptCanvasEditor
 
     VariableDockWidget::~VariableDockWidget()
     {
-        GraphCanvas::AssetEditorNotificationBus::Handler::BusDisconnect();
+        JE::Editor::Tools::GraphCanvas::AssetEditorNotificationBus::Handler::BusDisconnect();
         VariableAutomationRequestBus::Handler::BusDisconnect();
     }
 
@@ -393,7 +393,7 @@ namespace ScriptCanvasEditor
         ui->variablePalette->PopulateVariablePalette(objectTypes);
     }
 
-    void VariableDockWidget::OnActiveGraphChanged(const GraphCanvas::GraphId& graphCanvasGraphId)
+    void VariableDockWidget::OnActiveGraphChanged(const JE::Editor::Tools::GraphCanvas::GraphId& graphCanvasGraphId)
     {
         ClearFilter();
 
@@ -748,7 +748,7 @@ namespace ScriptCanvasEditor
     {
         if (!variableIds.empty())
         {
-            GraphCanvas::SceneRequestBus::Event(m_graphCanvasGraphId, &GraphCanvas::SceneRequests::ClearSelection);
+            JE::Editor::Tools::GraphCanvas::SceneRequestBus::Event(m_graphCanvasGraphId, &JE::Editor::Tools::GraphCanvas::SceneRequests::ClearSelection);
 
             AZStd::vector<ScriptCanvas::VariableId> deselectedVariableIds;
             for (auto pair : m_usedElements)
@@ -889,7 +889,7 @@ namespace ScriptCanvasEditor
                  if ((output.m_nameChanged && !output.m_name.empty()) || (output.m_typeChanged && output.m_type.IsValid()))
                  {
                      GeneralRequestBus::Broadcast(&GeneralRequests::PostUndoPoint, m_scriptCanvasId);
-                     GraphCanvas::ScopedGraphUndoBlocker undoBlocker(m_graphCanvasGraphId);
+                     JE::Editor::Tools::GraphCanvas::ScopedGraphUndoBlocker undoBlocker(m_graphCanvasGraphId);
 
                      if ((output.m_nameChanged && !output.m_name.empty()))
                      {
@@ -949,7 +949,7 @@ namespace ScriptCanvasEditor
                     }
                 }
 
-                GraphCanvas::SceneRequestBus::Event(m_graphCanvasGraphId, &GraphCanvas::SceneRequests::Delete, memberIds);
+                JE::Editor::Tools::GraphCanvas::SceneRequestBus::Event(m_graphCanvasGraphId, &JE::Editor::Tools::GraphCanvas::SceneRequests::Delete, memberIds);
             }
         }
         else

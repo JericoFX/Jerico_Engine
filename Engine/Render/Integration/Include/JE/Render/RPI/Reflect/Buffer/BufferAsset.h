@@ -19,6 +19,7 @@
 #include <JE/Render/RPI/Reflect/ResourcePoolAsset.h>
 
 #include <AzCore/std/containers/span.h>
+#include <AzCore/std/optional.h>
 
 #include <AzCore/Asset/AssetCommon.h>
 
@@ -43,7 +44,7 @@ namespace JE::Render::RPI
             static constexpr const char* Group{ "Buffer" };
             static constexpr const char* Extension{ "azbuffer" };
 
-            // The compression format on disk, should be decompressed upon loading
+            // Representation of the resident payload; the handler normalizes it to Uncompressed after decoding.
             enum class CompressionFormat : uint8_t
             {
                 Uncompressed,
@@ -60,6 +61,12 @@ namespace JE::Render::RPI
             ~BufferAsset() = default;
 
             AZStd::span<const uint8_t> GetBuffer() const;
+
+            using BufferData = AZStd::vector<uint8_t, BufferAssetAllocator_for_std_t>;
+
+            //! Borrows resident decoded bytes, or decodes the encoded payload into caller-owned scratch.
+            //! Does not load, retain an extra payload, or mutate the asset. The limit is checked before allocation.
+            AZStd::optional<AZStd::span<const uint8_t>> GetDecodedCpuBuffer(BufferData& scratch, size_t maxDecodedBytes) const;
 
             const AZ::RHI::BufferDescriptor& GetBufferDescriptor() const;
 
@@ -93,7 +100,7 @@ namespace JE::Render::RPI
 
             AZStd::string m_name;
 
-            AZStd::vector<uint8_t, Allocator> m_buffer;
+            BufferData m_buffer;
 
             AZ::RHI::BufferDescriptor m_bufferDescriptor;
 

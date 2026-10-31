@@ -8,6 +8,7 @@
 
 #include <Application.h>
 #include <AzCore/IO/FileIO.h>
+#include <AzCore/Serialization/SerializeContext.h>
 #include <AzCore/Settings/SettingsRegistryMergeUtils.h>
 #include <AzCore/StringFunc/StringFunc.h>
 #include <AzCore/Utils/Utils.h>
@@ -15,11 +16,15 @@
 #include <AzToolsFramework/Thumbnails/ThumbnailerNullComponent.h>
 #include <SliceConverterEditorEntityContextComponent.h>
 #include <JE/Geometry/GeometryModule.h>
+#include <JE/Geometry/SurfaceData/SurfaceDataModule.h>
 #include <JE/Editor/Camera/CameraModule.h>
 #include <JE/Assets/Prefab/PrefabBuilderModule.h>
 #include <JE/Assets/RenderBuilders/RenderAssetBuildersModule.h>
 #include <JE/Render/Materials/MaterialsRegistration.h>
 #include <JE/Editor/Materials/MaterialsRegistration.h>
+#include <Atom/RHI.Reflect/ReflectSystemComponent.h>
+#include <JE/Render/RPI/Public/RPISystem.h>
+#include <JE/Render/RPI/Reflect/Model/ModelAsset.h>
 
 namespace AZ::SerializeContextTools
 {
@@ -118,6 +123,7 @@ namespace AZ::SerializeContextTools
     {
         AzToolsFramework::ToolsApplication::CreateStaticModules(outModules);
         outModules.emplace_back(JE::Geometry::CreateAuthoringModule());
+        outModules.emplace_back(JE::Geometry::SurfaceData::CreateAuthoringModule());
         outModules.emplace_back(JE::Editor::Camera::CreateAuthoringModule());
         outModules.emplace_back(JE::Assets::Prefab::CreateToolsModule());
         outModules.emplace_back(JE::Assets::RenderBuilders::CreateToolsModule());
@@ -126,6 +132,17 @@ namespace AZ::SerializeContextTools
     void Application::RegisterCoreComponents()
     {
         AzToolsFramework::ToolsApplication::RegisterCoreComponents();
+
+        // Data reflection only: do not add renderer components to the required/active system entity.
+        AZ::SerializeContext* context = GetSerializeContext();
+        if (!context->FindClassData(azrtti_typeid<AZ::RHI::ReflectSystemComponent>()))
+        {
+            RegisterComponentDescriptor(AZ::RHI::ReflectSystemComponent::CreateDescriptor());
+        }
+        if (!context->FindClassData(azrtti_typeid<JE::Render::RPI::ModelAsset>()))
+        {
+            JE::Render::RPI::RPISystem::Reflect(context);
+        }
 
         // Conversion needs authored and runtime material types, not the preview system.
         RegisterComponentDescriptor(JE::Render::CreateMaterialComponentDescriptor());

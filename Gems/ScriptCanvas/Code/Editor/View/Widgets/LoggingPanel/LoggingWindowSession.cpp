@@ -10,12 +10,12 @@
 #include <QGraphicsItem>
 #include <QScopedValueRollback>
 
-#include <GraphCanvas/Components/Nodes/NodeTitleBus.h>
-#include <GraphCanvas/Components/SceneBus.h>
-#include <GraphCanvas/Components/Slots/SlotBus.h>
-#include <GraphCanvas/Components/VisualBus.h>
-#include <GraphCanvas/Widgets/StyledItemDelegates/IconDecoratedNameDelegate.h>
-#include <GraphCanvas/Utils/GraphUtils.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/Nodes/NodeTitleBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/SceneBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/Slots/SlotBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/VisualBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Widgets/StyledItemDelegates/IconDecoratedNameDelegate.h>
+#include <JE/Editor/Tools/GraphCanvas/Utils/GraphUtils.h>
 
 #include <Editor/View/Widgets/AssetGraphSceneDataBus.h>
 #include <Editor/View/Widgets/LoggingPanel/LoggingWindowSession.h>
@@ -107,7 +107,7 @@ namespace ScriptCanvasEditor
 
         QObject::connect(&m_focusDelayTimer, &QTimer::timeout, this, &LoggingWindowSession::HandleQueuedFocus);
 
-        GraphCanvas::AssetEditorNotificationBus::Handler::BusConnect(ScriptCanvasEditor::AssetEditorId);
+        JE::Editor::Tools::GraphCanvas::AssetEditorNotificationBus::Handler::BusConnect(ScriptCanvasEditor::AssetEditorId);
 
         AZ::EntityId graphCanvasId;
         GeneralRequestBus::BroadcastResult(graphCanvasId, &GeneralRequests::GetActiveGraphCanvasGraphId);
@@ -134,14 +134,14 @@ namespace ScriptCanvasEditor
     {
         ClearLoggingSelection();
 
-        if (GraphCanvas::SceneNotificationBus::Handler::BusIsConnected())
+        if (JE::Editor::Tools::GraphCanvas::SceneNotificationBus::Handler::BusIsConnected())
         {
-            GraphCanvas::SceneNotificationBus::Handler::BusDisconnect();
+            JE::Editor::Tools::GraphCanvas::SceneNotificationBus::Handler::BusDisconnect();
         }
 
         if (graphId.IsValid())
         {
-            GraphCanvas::SceneNotificationBus::Handler::BusConnect(graphId);
+            JE::Editor::Tools::GraphCanvas::SceneNotificationBus::Handler::BusConnect(graphId);
         }
     }
 
@@ -153,7 +153,7 @@ namespace ScriptCanvasEditor
     void LoggingWindowSession::RegisterTreeRoot(DebugLogRootItem* debugRoot)
     {
         m_debugRoot = debugRoot;
-        m_treeModel = aznew GraphCanvas::GraphCanvasTreeModel(debugRoot, this);
+        m_treeModel = aznew JE::Editor::Tools::GraphCanvas::GraphCanvasTreeModel(debugRoot, this);
         m_filterModel = aznew LoggingWindowFilterModel();
 
         m_filterModel->setSourceModel(m_treeModel);
@@ -174,7 +174,7 @@ namespace ScriptCanvasEditor
         m_ui->logTree->header()->setSectionResizeMode(DebugLogTreeItem::Column::SourceEntity, QHeaderView::ResizeMode::Fixed);
         m_ui->logTree->header()->resizeSection(DebugLogTreeItem::Column::SourceEntity, 200);
 
-        m_ui->logTree->setItemDelegateForColumn(DebugLogTreeItem::Column::NodeName, aznew GraphCanvas::IconDecoratedNameDelegate(this));
+        m_ui->logTree->setItemDelegateForColumn(DebugLogTreeItem::Column::NodeName, aznew JE::Editor::Tools::GraphCanvas::IconDecoratedNameDelegate(this));
 
         QObject::connect(m_ui->logTree->selectionModel(), &QItemSelectionModel::selectionChanged, this, &LoggingWindowSession::OnLogSelectionChanged);
     }
@@ -351,40 +351,40 @@ namespace ScriptCanvasEditor
 
     void LoggingWindowSession::FocusOnElement(const AZ::Data::AssetId& assetId, const AZ::EntityId& assetNodeId)
     {
-        GraphCanvas::FocusConfig focusConfig;
+        JE::Editor::Tools::GraphCanvas::FocusConfig focusConfig;
 
         AZ::EntityId scriptCanvasNodeId;
         AssetGraphSceneBus::BroadcastResult(scriptCanvasNodeId, &AssetGraphScene::FindEditorNodeIdByAssetNodeId, SourceHandle(nullptr, assetId.m_guid), assetNodeId);
 
-        GraphCanvas::NodeId graphCanvasNodeId;
+        JE::Editor::Tools::GraphCanvas::NodeId graphCanvasNodeId;
         SceneMemberMappingRequestBus::EventResult(graphCanvasNodeId, scriptCanvasNodeId, &SceneMemberMappingRequests::GetGraphCanvasEntityId);
 
-        if (GraphCanvas::GraphUtils::IsNodeGroup(graphCanvasNodeId))
+        if (JE::Editor::Tools::GraphCanvas::GraphUtils::IsNodeGroup(graphCanvasNodeId))
         {
-            focusConfig.m_spacingType = GraphCanvas::FocusConfig::SpacingType::GridStep;
+            focusConfig.m_spacingType = JE::Editor::Tools::GraphCanvas::FocusConfig::SpacingType::GridStep;
             focusConfig.m_spacingAmount = 1;
         }
         else
         {
-            focusConfig.m_spacingType = GraphCanvas::FocusConfig::SpacingType::Scalar;
+            focusConfig.m_spacingType = JE::Editor::Tools::GraphCanvas::FocusConfig::SpacingType::Scalar;
             focusConfig.m_spacingAmount = 2;
         }
 
         AZStd::vector< AZ::EntityId > memberIds = { graphCanvasNodeId };
 
-        GraphCanvas::GraphUtils::FocusOnElements(memberIds, focusConfig);
+        JE::Editor::Tools::GraphCanvas::GraphUtils::FocusOnElements(memberIds, focusConfig);
 
         {
             QScopedValueRollback<bool> maintainSelection(m_clearSelectionOnSceneSelectionChange, false);
 
             RemoveHighlight(assetId, assetNodeId);
 
-            GraphCanvas::GraphId graphId;
-            GraphCanvas::SceneMemberRequestBus::EventResult(graphId, graphCanvasNodeId, &GraphCanvas::SceneMemberRequests::GetScene);
+            JE::Editor::Tools::GraphCanvas::GraphId graphId;
+            JE::Editor::Tools::GraphCanvas::SceneMemberRequestBus::EventResult(graphId, graphCanvasNodeId, &JE::Editor::Tools::GraphCanvas::SceneMemberRequests::GetScene);
 
-            GraphCanvas::SceneRequestBus::Event(graphId, &GraphCanvas::SceneRequests::ClearSelection);
+            JE::Editor::Tools::GraphCanvas::SceneRequestBus::Event(graphId, &JE::Editor::Tools::GraphCanvas::SceneRequests::ClearSelection);
 
-            GraphCanvas::SceneMemberUIRequestBus::Event(graphCanvasNodeId, &GraphCanvas::SceneMemberUIRequests::SetSelected, true);
+            JE::Editor::Tools::GraphCanvas::SceneMemberUIRequestBus::Event(graphCanvasNodeId, &JE::Editor::Tools::GraphCanvas::SceneMemberUIRequests::SetSelected, true);
         }
     }
 
@@ -398,10 +398,10 @@ namespace ScriptCanvasEditor
             AZ::EntityId scriptCanvasNodeId;
             AssetGraphSceneBus::BroadcastResult(scriptCanvasNodeId, &AssetGraphScene::FindEditorNodeIdByAssetNodeId, SourceHandle(nullptr, assetId.m_guid), assetNodeId);
 
-            GraphCanvas::NodeId graphCanvasNodeId;
+            JE::Editor::Tools::GraphCanvas::NodeId graphCanvasNodeId;
             SceneMemberMappingRequestBus::EventResult(graphCanvasNodeId, scriptCanvasNodeId, &SceneMemberMappingRequests::GetGraphCanvasEntityId);
 
-            GraphCanvas::SceneMemberGlowOutlineConfiguration glowConfiguration;
+            JE::Editor::Tools::GraphCanvas::SceneMemberGlowOutlineConfiguration glowConfiguration;
 
             glowConfiguration.m_sceneMember = graphCanvasNodeId;
 
@@ -414,14 +414,14 @@ namespace ScriptCanvasEditor
             glowConfiguration.m_pulseRate = AZStd::chrono::milliseconds(2500);
             glowConfiguration.m_zValue = 0;
 
-            GraphCanvas::GraphicsEffectId effectId;
-            GraphCanvas::SceneRequestBus::EventResult(effectId, graphCanvasGraphId, &GraphCanvas::SceneRequests::CreateGlowOnSceneMember, glowConfiguration);
+            JE::Editor::Tools::GraphCanvas::GraphicsEffectId effectId;
+            JE::Editor::Tools::GraphCanvas::SceneRequestBus::EventResult(effectId, graphCanvasGraphId, &JE::Editor::Tools::GraphCanvas::SceneRequests::CreateGlowOnSceneMember, glowConfiguration);
 
             auto effectIter = m_highlightEffects.find(assetNodeId);
 
             if (effectIter != m_highlightEffects.end())
             {
-                GraphCanvas::SceneRequestBus::Event(graphCanvasGraphId, &GraphCanvas::SceneRequests::CancelGraphicsEffect, effectIter->second);
+                JE::Editor::Tools::GraphCanvas::SceneRequestBus::Event(graphCanvasGraphId, &JE::Editor::Tools::GraphCanvas::SceneRequests::CancelGraphicsEffect, effectIter->second);
             }
 
             m_highlightEffects[assetNodeId] = effectId;
@@ -439,7 +439,7 @@ namespace ScriptCanvasEditor
 
             if (graphCanvasGraphId.IsValid())
             {
-                GraphCanvas::SceneRequestBus::Event(graphCanvasGraphId, &GraphCanvas::SceneRequests::CancelGraphicsEffect, effectIter->second);
+                JE::Editor::Tools::GraphCanvas::SceneRequestBus::Event(graphCanvasGraphId, &JE::Editor::Tools::GraphCanvas::SceneRequests::CancelGraphicsEffect, effectIter->second);
             }
 
             m_highlightEffects.erase(effectIter);

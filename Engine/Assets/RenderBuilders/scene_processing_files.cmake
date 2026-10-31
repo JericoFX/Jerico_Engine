@@ -1,6 +1,8 @@
 # Copyright (c) Contributors to the Open 3D Engine Project.
 # SPDX-License-Identifier: Apache-2.0 OR MIT
 set(FILES
+    Include/JE/Assets/RenderBuilders/SceneProcessing/Rules/SurfaceIdentityRule.h
+    Source/SceneProcessing/Config/Rules/SurfaceIdentityRule.cpp
     Include/JE/Assets/RenderBuilders/SceneProcessing/Config/SceneProcessingConfigBus.h
     Source/SceneProcessing/Config/Components/SceneProcessingConfigSystemComponent.h
     Source/SceneProcessing/Config/Components/SceneProcessingConfigSystemComponent.cpp

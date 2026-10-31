@@ -25,7 +25,7 @@ namespace UnitTest
             point.m_normal = normal;
             for (auto& tag : tags)
             {
-                point.m_surfaceTags.emplace_back(SurfaceData::SurfaceTag(tag.first), tag.second);
+                point.m_surfaceTags.emplace_back(JE::Geometry::SurfaceData::SurfaceTag(tag.first), tag.second);
             }
         }
 
@@ -55,7 +55,7 @@ namespace UnitTest
         }
 
         bool SurfacePointsAreEqual(
-            const AZ::Vector3& lhsPosition, const AZ::Vector3& lhsNormal, const SurfaceData::SurfaceTagWeights& lhsWeights,
+            const AZ::Vector3& lhsPosition, const AZ::Vector3& lhsNormal, const JE::Geometry::SurfaceData::SurfaceTagWeights& lhsWeights,
             const AzFramework::SurfaceData::SurfacePoint& rhs)
         {
             return ((lhsPosition == rhs.m_position)
@@ -102,19 +102,19 @@ namespace UnitTest
             ActivateEntity(entity.get());
 
             // Get our registered modifier handle (and verify that it's valid)
-            SurfaceData::SurfaceDataRegistryHandle modifierHandle = SurfaceData::InvalidSurfaceDataRegistryHandle;
-            modifierHandle = AZ::Interface<SurfaceData::SurfaceDataSystem>::Get()->GetSurfaceDataModifierHandle(entity->GetId());
-            EXPECT_TRUE(modifierHandle != SurfaceData::InvalidSurfaceDataRegistryHandle);
+            JE::Geometry::SurfaceData::SurfaceDataRegistryHandle modifierHandle = JE::Geometry::SurfaceData::InvalidSurfaceDataRegistryHandle;
+            modifierHandle = AZ::Interface<JE::Geometry::SurfaceData::SurfaceDataSystem>::Get()->GetSurfaceDataModifierHandle(entity->GetId());
+            EXPECT_TRUE(modifierHandle != JE::Geometry::SurfaceData::InvalidSurfaceDataRegistryHandle);
 
             // Call ModifySurfacePoints and verify the results
-            SurfaceData::SurfacePointList pointList;
+            JE::Geometry::SurfaceData::SurfacePointList pointList;
             pointList.StartListConstruction(AZStd::span<const AzFramework::SurfaceData::SurfacePoint>(&input, 1));
             pointList.ModifySurfaceWeights(modifierHandle);
             pointList.EndListConstruction();
             ASSERT_EQ(pointList.GetSize(), 1);
             pointList.EnumeratePoints([this, expectedOutput](
                     [[maybe_unused]] size_t inPositionIndex, const AZ::Vector3& position, const AZ::Vector3& normal,
-                    const SurfaceData::SurfaceTagWeights& masks)
+                    const JE::Geometry::SurfaceData::SurfaceTagWeights& masks)
                 {
                     EXPECT_TRUE(SurfacePointsAreEqual(position, normal, masks, expectedOutput));
                     return true;

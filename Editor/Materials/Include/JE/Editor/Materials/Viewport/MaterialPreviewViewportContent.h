@@ -11,12 +11,14 @@
 #include <JE/Editor/Materials/Base.h>
 #include <JE/Editor/Tools/Document/AtomToolsDocumentNotificationBus.h>
 #include <JE/Editor/Tools/EntityPreviewViewport/EntityPreviewViewportContent.h>
+#include <JE/Editor/Tools/Graph/GraphDocumentNotificationBus.h>
 
 namespace JE::Editor
 {
     class JE_EDITOR_MATERIALS_API MaterialPreviewViewportContent final
         : public JE::Editor::Tools::EntityPreviewViewportContent
         , public JE::Editor::Tools::AtomToolsDocumentNotificationBus::Handler
+        , public JE::Editor::Tools::GraphDocumentNotificationBus::Handler
     {
     public:
         MaterialPreviewViewportContent(
@@ -25,6 +27,7 @@ namespace JE::Editor
             AZStd::shared_ptr<AzFramework::EntityContext> entityContext, bool followOpenedDocuments = true);
         ~MaterialPreviewViewportContent();
         void SetDocumentId(const AZ::Uuid& documentId);
+        void SetGraphDocumentId(const AZ::Uuid& documentId);
 
         AZ::EntityId GetObjectEntityId() const override;
         AZ::EntityId GetEnvironmentEntityId() const override;
@@ -35,11 +38,20 @@ namespace JE::Editor
     private:
         // AtomToolsDocumentNotificationBus::Handler overrides...
         void OnDocumentOpened(const AZ::Uuid& documentId) override;
+        void OnDocumentClosed(const AZ::Uuid& documentId) override;
+        void OnDocumentDestroyed(const AZ::Uuid& documentId) override;
+
+        // GraphDocumentNotificationBus::Handler overrides...
+        void OnCompileGraphStarted(const AZ::Uuid& documentId) override;
+        void OnCompileGraphCompleted(const AZ::Uuid& documentId) override;
+        void OnCompileGraphFailed(const AZ::Uuid& documentId) override;
+        void ApplyGeneratedMaterial(const AZ::Uuid& documentId);
 
         // EntityPreviewViewportSettingsNotificationBus::Handler overrides...
         void OnViewportSettingsChanged() override;
 
         const bool m_followOpenedDocuments = true;
+        AZ::Uuid m_graphDocumentId = AZ::Uuid::CreateNull();
         AZ::Entity* m_environmentEntity = {};
         AZ::Entity* m_gridEntity = {};
         AZ::Entity* m_objectEntity = {};

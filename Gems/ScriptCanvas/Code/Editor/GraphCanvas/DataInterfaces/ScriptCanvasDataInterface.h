@@ -7,7 +7,7 @@
  */
 #pragma once
 
-#include <GraphCanvas/Components/NodePropertyDisplay/DataInterface.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/NodePropertyDisplay/DataInterface.h>
 
 #include "ScriptCanvas/Core/Slot.h"
 #include "ScriptCanvas/Core/NodeBus.h"
@@ -28,7 +28,7 @@ namespace ScriptCanvasEditor
             : m_nodeId(nodeId)
             , m_slotId(slotId)
         {
-            static_assert((AZStd::is_base_of<GraphCanvas::DataInterface, InterfaceType>::value), "ScriptCanvasDataInterface given invalid GraphCanvas::DataInterface to inherit.");
+            static_assert((AZStd::is_base_of<JE::Editor::Tools::GraphCanvas::DataInterface, InterfaceType>::value), "ScriptCanvasDataInterface given invalid GraphCanvas::DataInterface to inherit.");
             ScriptCanvas::NodeNotificationsBus::Handler::BusConnect(nodeId);
         }
 
@@ -45,9 +45,9 @@ namespace ScriptCanvasEditor
             return scriptCanvasId;
         }
 
-        const GraphCanvas::GraphId GetGraphCanvasGraphId() const
+        const JE::Editor::Tools::GraphCanvas::GraphId GetGraphCanvasGraphId() const
         {
-            GraphCanvas::GraphId graphCanvasGraphId;
+            JE::Editor::Tools::GraphCanvas::GraphId graphCanvasGraphId;
             GeneralRequestBus::BroadcastResult(graphCanvasGraphId, &GeneralRequests::GetGraphCanvasGraphId, GetScriptCanvasId());
             return graphCanvasGraphId;
         }

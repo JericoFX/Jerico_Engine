@@ -30,6 +30,16 @@
 #include <AzCore/std/sort.h>
 #include <cmath>
 #include <AzCore/Component/TransformBus.h>
+#include <AzCore/Component/ComponentApplicationBus.h>
+#include <AzCore/Component/Entity.h>
+#include <AzCore/Component/TickBus.h>
+#include <AzCore/Interface/Interface.h>
+#include <AzCore/std/algorithm.h>
+#include <AzCore/std/smart_ptr/make_shared.h>
+#include <JE/Render/Materials/MaterialComponentConstants.h>
+#include <JE/Render/RPI/Reflect/Asset/AssetUtils.h>
+#include <AzToolsFramework/API/EntityCompositionRequestBus.h>
+#include <AzToolsFramework/Entity/ReadOnly/ReadOnlyEntityInterface.h>
 #include <AzCore/Console/Console.h>
 #include <AzCore/Math/IntersectSegment.h>
 #include <AzCore/Memory/Memory.h>
@@ -38,6 +48,7 @@
 #include <AzCore/Asset/AssetManager.h>
 #include <AzCore/Settings/SettingsRegistryMergeUtils.h>
 #include <AzFramework/Translation/TranslationDef.h>
+#include <AzFramework/Entity/EntityContextBus.h>
 #include <AzCore/std/numeric.h>
 #include <AzCore/std/limits.h>
 #include <AzFramework/StringFunc/StringFunc.h>
@@ -66,6 +77,64 @@ AZ_CVAR(bool, cl_whiteBoxDebugAabb, false, nullptr, AZ::ConsoleFunctorFlags::Nul
 namespace JE::Geometry
 {
     static const char* const AssetSavedUndoRedoDesc = "White Box Mesh asset saved";
+
+    namespace
+    {
+        bool IsSurfaceMaterialEntityEditable(AZ::EntityId entityId)
+        {
+            AZ::Entity* entity = nullptr;
+            AZ::ComponentApplicationBus::BroadcastResult(
+                entity, &AZ::ComponentApplicationRequests::FindEntity, entityId);
+            if (!entity || entity->GetState() != AZ::Entity::State::Active) { return false; }
+            bool locked = false;
+            AzToolsFramework::EditorEntityInfoRequestBus::EventResult(
+                locked, entityId, &AzToolsFramework::EditorEntityInfoRequests::IsLocked);
+            const auto readOnly = AZ::Interface<AzToolsFramework::ReadOnlyEntityPublicInterface>::Get();
+            return !locked && (!readOnly || !readOnly->IsReadOnly(entityId));
+        }
+
+        bool RemoveAddedSurfaceMaterialComponents(
+            AZ::EntityId entityId, const AZStd::vector<AZ::ComponentId>& addedIds)
+        {
+            if (addedIds.empty()) { return true; }
+            AZ::Entity::ComponentArrayType current;
+            AzToolsFramework::GetAllComponentsForEntity(entityId, current);
+            AZ::Entity::ComponentArrayType toRemove;
+            for (auto* component : current)
+            {
+                if (AZStd::find(addedIds.begin(), addedIds.end(), component->GetId()) != addedIds.end())
+                {
+                    toRemove.push_back(component);
+                }
+            }
+            if (!toRemove.empty())
+            {
+                AzToolsFramework::EntityCompositionRequests::RemoveComponentsOutcome removed =
+                    AZ::Failure(AZStd::string("No editor composition handler."));
+                AzToolsFramework::EntityCompositionRequestBus::BroadcastResult(
+                    removed, &AzToolsFramework::EntityCompositionRequests::RemoveComponents, toRemove);
+                if (!removed.IsSuccess())
+                {
+                    AZ_Error("WhiteBoxSurfaceMaterial", false,
+                        "Assignment failed and removal of this request's added components failed: %s",
+                        removed.GetError().c_str());
+                    return false;
+                }
+            }
+            current.clear();
+            AzToolsFramework::GetAllComponentsForEntity(entityId, current);
+            for (const auto* component : current)
+            {
+                if (AZStd::find(addedIds.begin(), addedIds.end(), component->GetId()) != addedIds.end())
+                {
+                    AZ_Error("WhiteBoxSurfaceMaterial", false,
+                        "Assignment failed; a component added by this request is still present after removal.");
+                    return false;
+                }
+            }
+            return true;
+        }
+    }
     static const char* const ObjExtension = "obj";
 
     static void RefreshProperties()
@@ -1025,6 +1094,199 @@ namespace JE::Geometry
         return true;
     }
 
+    bool EditorWhiteBoxComponent::ResolveSurfaceMaterialPolygons(
+        const AZ::Uuid& surfaceId, Api::PolygonHandles& polygons, AZStd::string& error)
+    {
+        error.clear();
+        polygons.clear();
+        auto* mesh = GetWhiteBoxMesh();
+        if (!mesh || surfaceId.IsNull())
+        {
+            error = "The picked White Box surface is not available.";
+            return false;
+        }
+
+        for (const auto& polygon : Api::MeshPolygonHandles(*mesh))
+        {
+            bool matches = false;
+            bool differentSurface = false;
+            for (const auto face : polygon.m_faceHandles)
+            {
+                const bool sameSurface = Api::FaceSurfaceId(*mesh, face) == surfaceId;
+                matches |= sameSurface;
+                differentSurface |= !sameSurface;
+            }
+            if (matches)
+            {
+                // The existing planner accepts complete current polygons, never a fabricated face subset.
+                if (differentSurface)
+                {
+                    error = "The picked surface no longer identifies a complete editable polygon.";
+                    return false;
+                }
+                polygons.push_back(polygon);
+            }
+        }
+        if (polygons.empty())
+        {
+            error = "The picked surface is no longer present in the editable White Box mesh.";
+            return false;
+        }
+        return true;
+    }
+
+    bool EditorWhiteBoxComponent::AssignSurfaceMaterialAsset(const AZ::Uuid& surfaceId,
+        const AZ::Data::Asset<JE::Render::RPI::MaterialAsset>& material, AZStd::string& error)
+    {
+        Api::PolygonHandles polygons;
+        return ResolveSurfaceMaterialPolygons(surfaceId, polygons, error)
+            && AssignPolygonMaterialAsset(polygons, material, error);
+    }
+
+    bool EditorWhiteBoxComponent::RequestSurfaceMaterialAsset(
+        const AZ::Uuid& surfaceId, const AZ::Data::AssetId& assetId, AZStd::string& error)
+    {
+        error.clear();
+        const auto ownerPair = AZ::EntityComponentIdPair(GetEntityId(), GetId());
+        auto state = m_surfaceMaterialRequests;
+        if (!state || !state->m_active || !assetId.IsValid() || !IsSurfaceMaterialEntityEditable(ownerPair.GetEntityId()))
+        {
+            error = "The material request requires an active, editable owner and a valid material product.";
+            return false;
+        }
+        Api::PolygonHandles polygons;
+        if (!ResolveSurfaceMaterialPolygons(surfaceId, polygons, error)) { return false; }
+
+        const auto ticket = AZ::Uuid::CreateRandom();
+        // Replacement releases only this surface's loader, outside any loader callback.
+        state->m_requests[surfaceId] = PendingSurfaceMaterial{ticket, assetId, {}};
+        auto loader = JE::Render::RPI::AssetUtils::AsyncAssetLoader::Create<JE::Render::RPI::MaterialAsset>(
+            assetId, [ownerPair, surfaceId, ticket, assetId](AZ::Data::Asset<AZ::Data::AssetData> asset)
+            {
+                // HandleCallback still writes loader members after this callback returns.
+                AZ::SystemTickBus::QueueFunction(
+                    [ownerPair, surfaceId, ticket, assetId, asset = AZStd::move(asset)]()
+                    {
+                        EditorWhiteBoxComponentRequestBus::Event(
+                            ownerPair, &EditorWhiteBoxComponentRequests::CompleteSurfaceMaterialAssetRequest,
+                            surfaceId, ticket, assetId, asset);
+                    });
+            });
+        const auto current = state->m_requests.find(surfaceId);
+        if (!state->m_active || current == state->m_requests.end() || current->second.m_ticket != ticket)
+        {
+            error = "The material request was canceled while starting its load.";
+            return false;
+        }
+        current->second.m_loader = AZStd::move(loader);
+        return true;
+    }
+
+    void EditorWhiteBoxComponent::CompleteSurfaceMaterialAssetRequest(const AZ::Uuid& surfaceId, const AZ::Uuid& ticket,
+        const AZ::Data::AssetId& assetId, const AZ::Data::Asset<AZ::Data::AssetData>& asset)
+    {
+        auto state = m_surfaceMaterialRequests;
+        if (!state || !state->m_active) { return; }
+        const auto request = state->m_requests.find(surfaceId);
+        if (request == state->m_requests.end() || request->second.m_ticket != ticket || request->second.m_assetId != assetId)
+        {
+            return;
+        }
+        // Completion is queued after the loader's callback; release cannot destroy HandleCallback's object in flight.
+        [[maybe_unused]] const auto retainedLoader = AZStd::move(request->second.m_loader);
+        state->m_requests.erase(request);
+        const auto ownerPair = AZ::EntityComponentIdPair(GetEntityId(), GetId());
+        const auto entityId = ownerPair.GetEntityId();
+        if (!asset.IsReady() || asset.GetId() != assetId || asset.GetType() != azrtti_typeid<JE::Render::RPI::MaterialAsset>())
+        {
+            AZ_Warning("WhiteBoxSurfaceMaterial", false, "The material failed or was canceled; no surface was edited.");
+            return;
+        }
+        if (!IsSurfaceMaterialEntityEditable(entityId))
+        {
+            AZ_Warning("WhiteBoxSurfaceMaterial", false, "The surface owner is no longer editable; no surface was edited.");
+            return;
+        }
+        AZStd::string error;
+        Api::PolygonHandles polygons;
+        if (!ResolveSurfaceMaterialPolygons(surfaceId, polygons, error))
+        {
+            AZ_Warning("WhiteBoxSurfaceMaterial", false, "%s", error.c_str());
+            return;
+        }
+
+        const bool needsOwner = !JE::Render::MaterialComponentRequestBus::HasHandlers(entityId);
+        if (needsOwner)
+        {
+            AZ::Entity::ComponentArrayType components;
+            AzToolsFramework::GetAllComponentsForEntity(entityId, components);
+            for (const auto* component : components)
+            {
+                if (component->RTTI_IsTypeOf(AZ::Uuid(JE::Render::EditorMaterialComponentTypeId)))
+                {
+                    AZ_Warning("WhiteBoxSurfaceMaterial", false,
+                        "A disabled or pending material component already exists; it was preserved.");
+                    return;
+                }
+            }
+        }
+
+        AzToolsFramework::ScopedUndoBatch undo("Assign material to White Box surface");
+        AZStd::vector<AZ::ComponentId> addedIds;
+        bool compositionSucceeded = true;
+        if (needsOwner)
+        {
+            AzToolsFramework::EntityCompositionRequests::AddComponentsOutcome added =
+                AZ::Failure(AZStd::string("No editor composition handler."));
+            const AzToolsFramework::EntityIdList entities{entityId};
+            const AZ::ComponentTypeList types{AZ::Uuid(JE::Render::EditorMaterialComponentTypeId)};
+            // Only this synchronous internal recomposition preserves other surface intents.
+            state->m_internalComposition = true;
+            AzToolsFramework::EntityCompositionRequestBus::BroadcastResult(
+                added, &AzToolsFramework::EntityCompositionRequests::AddComponentsToEntities, entities, types);
+            state->m_internalComposition = false;
+            compositionSucceeded = added.IsSuccess();
+            // Do not dereference this after composition: notifications may have destroyed/replaced the owner.
+            if (added.IsSuccess())
+            {
+                const auto entry = added.GetValue().find(entityId);
+                if (entry != added.GetValue().end())
+                {
+                    for (const auto* component : entry->second.m_componentsAdded) { addedIds.push_back(component->GetId()); }
+                }
+            }
+            else
+            {
+                AZ_Warning("WhiteBoxSurfaceMaterial", false, "Material component composition failed: %s", added.GetError().c_str());
+            }
+        }
+        const auto rollbackAdded = [&state, entityId, &addedIds]()
+        {
+            state->m_internalComposition = true;
+            const bool removed = RemoveAddedSurfaceMaterialComponents(entityId, addedIds);
+            state->m_internalComposition = false;
+            if (!state->m_active) { state->m_requests.clear(); }
+            return removed;
+        };
+        if (!compositionSucceeded || !state->m_active || !EditorWhiteBoxComponentRequestBus::HasHandlers(ownerPair) ||
+            !IsSurfaceMaterialEntityEditable(entityId) || !JE::Render::MaterialComponentRequestBus::HasHandlers(entityId))
+        {
+            if (!state->m_active) { state->m_requests.clear(); }
+            rollbackAdded(); // This helper reports failed cleanup and verifies whether any owned component remains.
+            AZ_Warning("WhiteBoxSurfaceMaterial", false, "The surface owner or material provider is no longer available; assignment failed.");
+            return;
+        }
+        const AZ::Data::Asset<JE::Render::RPI::MaterialAsset> material(asset);
+        bool assigned = false;
+        EditorWhiteBoxComponentRequestBus::EventResult(
+            assigned, ownerPair, &EditorWhiteBoxComponentRequests::AssignSurfaceMaterialAsset, surfaceId, material, error);
+        if (!assigned)
+        {
+            rollbackAdded();
+            AZ_Warning("WhiteBoxSurfaceMaterial", false, "Surface assignment failed: %s", error.c_str());
+        }
+    }
+
     void EditorWhiteBoxComponent::AssignSelectedMaterialAsset()
     {
         AZStd::string error;
@@ -1132,10 +1394,15 @@ namespace JE::Geometry
     }
     void EditorWhiteBoxComponent::OnMaterialChange()
     {
-        if (m_renderMesh.has_value())
+        const bool changed = m_renderData.m_material.m_tint != m_material.m_tint ||
+            m_renderData.m_material.m_useTexture != m_material.m_useTexture ||
+            m_renderData.m_material.m_visible != m_material.m_visible;
+        m_renderData.m_material = m_material;
+        if (m_renderMesh.has_value()) { (*m_renderMesh)->UpdateMaterial(m_material); }
+        if (changed)
         {
-            (*m_renderMesh)->UpdateMaterial(m_material);
-            m_renderData.m_material = m_material;
+            UpdateWhiteBoxSourceRevision(m_renderData);
+            if (m_surfaceDataProvider) { m_surfaceDataProvider->Publish(m_renderData, m_worldFromLocal); }
         }
     }
 
@@ -1223,7 +1490,12 @@ namespace JE::Geometry
         const AZ::EntityComponentIdPair entityComponentIdPair{entityId, GetId()};
 
         AzToolsFramework::Components::EditorComponentBase::Activate();
+        if (!m_surfaceMaterialRequests) { m_surfaceMaterialRequests = AZStd::make_shared<SurfaceMaterialRequestState>(); }
+        m_surfaceMaterialRequests->m_active = true;
         EditorWhiteBoxComponentRequestBus::Handler::BusConnect(entityComponentIdPair);
+        AzFramework::EntityIdContextQueryBus::EventResult(
+            m_intersectionContextId, entityId, &AzFramework::EntityIdContextQueries::GetOwningContextId);
+        AzFramework::RenderGeometry::IntersectionRequestBus::Handler::BusConnect({entityId, m_intersectionContextId});
         EditorWhiteBoxComponentNotificationBus::Handler::BusConnect(entityComponentIdPair);
         AZ::TransformNotificationBus::Handler::BusConnect(entityId);
         AzFramework::BoundsRequestBus::Handler::BusConnect(entityId);
@@ -1239,6 +1511,8 @@ namespace JE::Geometry
 
         m_worldFromLocal = AZ::Transform::CreateIdentity();
         AZ::TransformBus::EventResult(m_worldFromLocal, entityId, &AZ::TransformBus::Events::GetWorldTM);
+
+        m_surfaceDataProvider = AZStd::make_unique<WhiteBoxSurfaceDataProvider>(entityComponentIdPair);
 
         m_editorMeshAsset->Associate(entityComponentIdPair);
 
@@ -1257,13 +1531,29 @@ namespace JE::Geometry
             ShowRenderMesh();
             OnMaterialChange();
         }
+        else
+        {
+            RebuildRenderMesh(); // Refresh the evaluated query data even when the editor render mesh is hidden.
+        }
     }
 
     void EditorWhiteBoxComponent::Deactivate()
     {
+        m_surfaceDataProvider.reset();
+        if (m_surfaceMaterialRequests)
+        {
+            m_surfaceMaterialRequests->m_active = false;
+            if (!m_surfaceMaterialRequests->m_internalComposition)
+            {
+                m_surfaceMaterialRequests->m_requests.clear();
+                m_surfaceMaterialRequests.reset();
+            }
+        }
         m_faceMaterialPickerEntity.SetInvalid();
         m_faceMaterialPickerAsset = {};
         AZ::Data::AssetBus::Handler::BusDisconnect();
+        AzFramework::RenderGeometry::IntersectionRequestBus::Handler::BusDisconnect();
+        m_intersectionContextId = AzFramework::EntityContextId::CreateNull();
         AzToolsFramework::EditorVisibilityNotificationBus::Handler::BusDisconnect();
         AzToolsFramework::EditorComponentSelectionRequestsBus::Handler::BusDisconnect();
         AzFramework::EntityDebugDisplayEventBus::Handler::BusDisconnect();
@@ -1365,13 +1655,17 @@ namespace JE::Geometry
         m_faces.reset();
 
         AZ::Interface<AzFramework::IEntityBoundsUnion>::Get()->RefreshEntityLocalBoundsUnion(GetEntityId());
+        AzFramework::RenderGeometry::IntersectionNotificationBus::Event(
+            m_intersectionContextId, &AzFramework::RenderGeometry::IntersectionNotifications::OnGeometryChanged, GetEntityId());
 
-        // must have been created in Activate or have had the Entity made visible again
+        // Evaluate once for both consumers; hiding the editor mesh must not freeze the surface query geometry.
+        const auto* evaluated = EvaluatedMesh();
+        m_renderData = evaluated
+            ? CreateWhiteBoxRenderData(*evaluated, m_material, m_displayMesh ? m_displayMaterialBindings : m_surfaceMaterialBindings)
+            : WhiteBoxRenderData{};
+        UpdateWhiteBoxSourceRevision(m_renderData);
         if (m_renderMesh.has_value())
         {
-            // cache the white box render data
-            m_renderData = CreateWhiteBoxRenderData(*EvaluatedMesh(), m_material, m_displayMesh ? m_displayMaterialBindings : m_surfaceMaterialBindings);
-
             // it's possible the white box mesh data isn't yet ready (for example if it's stored
             // in an asset which hasn't finished loading yet) so don't attempt to create a render
             // mesh with no data
@@ -1389,6 +1683,8 @@ namespace JE::Geometry
                 OnMaterialChange();
             }
         }
+
+        if (m_surfaceDataProvider) { m_surfaceDataProvider->Publish(m_renderData, m_worldFromLocal); }
 
         EditorWhiteBoxComponentModeRequestBus::Event(
             AZ::EntityComponentIdPair{GetEntityId(), GetId()},
@@ -1431,6 +1727,8 @@ namespace JE::Geometry
         m_localAabb.reset();
 
         m_worldFromLocal = world;
+        AzFramework::RenderGeometry::IntersectionNotificationBus::Event(
+            m_intersectionContextId, &AzFramework::RenderGeometry::IntersectionNotifications::OnGeometryChanged, GetEntityId());
 
         if (m_renderMesh.has_value())
         {
@@ -1440,6 +1738,10 @@ namespace JE::Geometry
         if (m_liveBoolean)
         {
             RebuildWhiteBox(); // moving this entity changes the cut relative to the source
+        }
+        else if (m_surfaceDataProvider)
+        {
+            m_surfaceDataProvider->UpdateTransform(world);
         }
     }
 
@@ -1778,48 +2080,87 @@ namespace JE::Geometry
         [[maybe_unused]] const AzFramework::ViewportInfo& viewportInfo, const AZ::Vector3& src, const AZ::Vector3& dir,
         float& distance)
     {
-        AZ_PROFILE_FUNCTION(AzToolsFramework);
+        AzFramework::RenderGeometry::RayRequest ray;
+        ray.m_startWorldPosition = src;
+        ray.m_endWorldPosition = src + dir * 1000.0f;
+        const auto hit = IntersectWhiteBoxRay(ray);
+        if (hit)
+        {
+            // Preserve the legacy selection distance parameterization even for a non-unit direction.
+            const float selectionDistance = hit.m_distance / dir.GetLength();
+            if (selectionDistance < distance)
+            {
+                distance = selectionDistance;
+            }
+        }
+        return static_cast<bool>(hit);
+    }
 
+    AzFramework::RenderGeometry::RayResult EditorWhiteBoxComponent::RenderGeometryIntersect(
+        const AzFramework::RenderGeometry::RayRequest& ray) const
+    {
+        return (!ray.m_onlyVisible || AzToolsFramework::IsEntityVisible(GetEntityId()))
+            ? IntersectWhiteBoxRay(ray) : AzFramework::RenderGeometry::RayResult{};
+    }
+
+    AzFramework::RenderGeometry::RayResult EditorWhiteBoxComponent::IntersectWhiteBoxRay(
+        const AzFramework::RenderGeometry::RayRequest& ray) const
+    {
+        AZ_PROFILE_FUNCTION(AzToolsFramework);
+        AzFramework::RenderGeometry::RayResult result;
+        const auto intersectionLine = ray.m_endWorldPosition - ray.m_startWorldPosition;
+        const float rayLength = intersectionLine.GetLength();
+        if (!std::isfinite(rayLength) || rayLength <= 0.0f)
+        {
+            return result;
+        }
         if (!m_faces.has_value())
         {
-            m_faces = Api::MeshFaces(*EvaluatedMesh());
+            auto* mesh = const_cast<EditorWhiteBoxComponent*>(this)->EvaluatedMesh();
+            if (!mesh)
+            {
+                return result;
+            }
+            const auto faces = Api::MeshFaces(*mesh);
+            const auto handles = Api::MeshFaceHandles(*mesh);
+            // MeshFaces enumerates MeshFaceHandles in this exact order.
+            if (faces.size() != handles.size())
+            {
+                return result;
+            }
+            m_faces.emplace();
+            m_faces->reserve(faces.size());
+            for (size_t index = 0; index < faces.size(); ++index)
+            {
+                m_faces->push_back({faces[index], Api::FaceSurfaceId(*mesh, handles[index])});
+            }
         }
 
-        // must have at least one triangle
-        if (m_faces->empty())
-        {
-            return false;
-        }
-
-        // transform ray into local space
-        const AZ::Transform localFromWorld = m_worldFromLocal.GetInverse();
-
-        // setup beginning/end of segment
-        const float rayLength = 1000.0f;
-        const AZ::Vector3 localRayOrigin = localFromWorld.TransformPoint(src);
-        const AZ::Vector3 localRayDirection = localFromWorld.TransformVector(dir);
-        const AZ::Vector3 localRayEnd = localRayOrigin + localRayDirection * rayLength;
-
-        bool intersection = false;
-        AZ::Intersect::SegmentTriangleHitTester hitTester(localRayOrigin, localRayEnd);
+        const auto localFromWorld = m_worldFromLocal.GetInverse();
+        AZ::Intersect::SegmentTriangleHitTester hitTester(
+            localFromWorld.TransformPoint(ray.m_startWorldPosition),
+            localFromWorld.TransformPoint(ray.m_endWorldPosition));
         for (const auto& face : m_faces.value())
         {
             float t;
             AZ::Vector3 normal;
-            if (hitTester.IntersectSegmentTriangle(face[0], face[1], face[2], normal, t))
+            if (hitTester.IntersectSegmentTriangle(
+                face.m_positions[0], face.m_positions[1], face.m_positions[2], normal, t))
             {
-                intersection = true;
-
-                // find closest intersection
-                const float dist = t * rayLength;
-                if (dist < distance)
+                const float distance = t * rayLength;
+                if (distance < result.m_distance)
                 {
-                    distance = dist;
+                    result.m_worldPosition = ray.m_startWorldPosition + intersectionLine * t;
+                    result.m_worldNormal = m_worldFromLocal.TransformVector(normal).GetNormalized();
+                    result.m_uv = AZ::Vector2::CreateZero();
+                    result.m_distance = distance;
+                    result.m_entityAndComponent = {GetEntityId(), GetId()};
+                    result.m_surfaceId = face.m_surfaceId.IsNull() ? AZStd::nullopt
+                        : AZStd::optional<AZ::Uuid>{face.m_surfaceId};
                 }
             }
         }
-
-        return intersection;
+        return result;
     }
 
     void EditorWhiteBoxComponent::OnEntityVisibilityChanged(const bool visibility)

@@ -17,8 +17,8 @@
 #include <AzQtComponents/Components/StyledDockWidget.h>
 #include <AzToolsFramework/UI/Notifications/ToastBus.h>
 
-#include <GraphCanvas/Editor/AssetEditorBus.h>
-#include <GraphCanvas/Components/SceneBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Editor/AssetEditorBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/SceneBus.h>
 
 #include <ScriptCanvas/Debugger/ValidationEvents/ValidationEvent.h>
 #include <ScriptCanvas/Debugger/StatusBus.h>
@@ -45,7 +45,7 @@ namespace ScriptCanvasEditor
 
         virtual ~ValidationEffect() = default;
 
-        virtual void DisplayEffect(const GraphCanvas::GraphId& graphId) = 0;
+        virtual void DisplayEffect(const JE::Editor::Tools::GraphCanvas::GraphId& graphId) = 0;
         virtual void CancelEffect() = 0;
     };
 
@@ -58,20 +58,20 @@ namespace ScriptCanvasEditor
 
         HighlightElementValidationEffect();
         HighlightElementValidationEffect(const QColor& color);
-        HighlightElementValidationEffect(const GraphCanvas::SceneMemberGlowOutlineConfiguration& glowConfiguration);
+        HighlightElementValidationEffect(const JE::Editor::Tools::GraphCanvas::SceneMemberGlowOutlineConfiguration& glowConfiguration);
 
         void AddTarget(const AZ::EntityId& targetId);
 
-        void DisplayEffect(const GraphCanvas::GraphId& graphId) override;
+        void DisplayEffect(const JE::Editor::Tools::GraphCanvas::GraphId& graphId) override;
         void CancelEffect() override;
 
     private:
         AZStd::vector< AZ::EntityId > m_targets;
 
-        GraphCanvas::GraphId m_graphId;
-        AZStd::vector< GraphCanvas::GraphicsEffectId > m_graphicEffectIds;
+        JE::Editor::Tools::GraphCanvas::GraphId m_graphId;
+        AZStd::vector< JE::Editor::Tools::GraphCanvas::GraphicsEffectId > m_graphicEffectIds;
 
-        GraphCanvas::SceneMemberGlowOutlineConfiguration m_templateConfiguration;
+        JE::Editor::Tools::GraphCanvas::SceneMemberGlowOutlineConfiguration m_templateConfiguration;
     };
 
     //! Effect used to show when a node is unused
@@ -83,7 +83,7 @@ namespace ScriptCanvasEditor
         void AddUnusedNode(const AZ::EntityId& graphCanvasNodeId);
         void RemoveUnusedNode(const AZ::EntityId& graphCanvasNodeId);
 
-        void DisplayEffect(const GraphCanvas::GraphId& graphId) override;
+        void DisplayEffect(const JE::Editor::Tools::GraphCanvas::GraphId& graphId) override;
         void CancelEffect() override;
 
     public:
@@ -189,7 +189,7 @@ namespace ScriptCanvasEditor
         AZ_CLASS_ALLOCATOR(ValidationData, AZ::SystemAllocator);
 
         ValidationData();
-        ValidationData(GraphCanvas::GraphId graphCanvasId, ScriptCanvas::ScriptCanvasId scriptCanvasId);
+        ValidationData(JE::Editor::Tools::GraphCanvas::GraphId graphCanvasId, ScriptCanvas::ScriptCanvasId scriptCanvasId);
         ~ValidationData() override;
 
         // ScriptCanvas::StatusRequestBus
@@ -218,15 +218,15 @@ namespace ScriptCanvasEditor
         using ValidationEffectMap = AZStd::unordered_map< int, ValidationEffect* >;
         ValidationEffectMap m_validationEffects;
 
-        GraphCanvas::GraphId m_graphCanvasId;
+        JE::Editor::Tools::GraphCanvas::GraphId m_graphCanvasId;
 
     };
 
     //! Displays warnings or errors related for a Script Canvas graph
     class GraphValidationDockWidget
         : public AzQtComponents::StyledDockWidget
-        , public GraphCanvas::AssetEditorNotificationBus::Handler
-        , public GraphCanvas::SceneNotificationBus::Handler
+        , public JE::Editor::Tools::GraphCanvas::AssetEditorNotificationBus::Handler
+        , public JE::Editor::Tools::GraphCanvas::SceneNotificationBus::Handler
         , public AzToolsFramework::ToastNotificationBus::Handler
     {
         Q_OBJECT
@@ -237,7 +237,7 @@ namespace ScriptCanvasEditor
         ~GraphValidationDockWidget();
         
         // GraphCanvas::AssetEditorNotificationBus::Handler
-        void OnActiveGraphChanged(const GraphCanvas::GraphId& graphCanvasGraphId) override;
+        void OnActiveGraphChanged(const JE::Editor::Tools::GraphCanvas::GraphId& graphCanvasGraphId) override;
         ////
 
         // GrpahCanvas::SceneNotificationBus
@@ -288,7 +288,7 @@ namespace ScriptCanvasEditor
         //! Every graph will store its own validation model, this makes it possible to display the latest
         //! validation state even if the active graph changes
         using GraphModelPair = AZStd::pair<ScriptCanvas::ScriptCanvasId, AZStd::unique_ptr<ValidationData>>;
-        AZStd::unordered_map<GraphCanvas::GraphId, GraphModelPair> m_models;
+        AZStd::unordered_map<JE::Editor::Tools::GraphCanvas::GraphId, GraphModelPair> m_models;
 
         const GraphValidationModel* GetActiveModel() const;
         GraphModelPair& GetActiveData();
@@ -296,7 +296,7 @@ namespace ScriptCanvasEditor
         // We use the IDs of the active graph for different functions, so we keep both for easy access
         struct IdPair
         {
-            GraphCanvas::GraphId graphCanvasId;
+            JE::Editor::Tools::GraphCanvas::GraphId graphCanvasId;
             ScriptCanvas::ScriptCanvasId scriptCanvasId;
         };
         IdPair m_activeGraphIds;

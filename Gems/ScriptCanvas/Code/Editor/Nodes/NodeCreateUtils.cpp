@@ -11,9 +11,9 @@
 #include <Editor/Nodes/NodeCreateUtils.h>
 #include <Editor/Nodes/NodeDisplayUtils.h>
 
-#include <GraphCanvas/Components/Nodes/NodeBus.h>
-#include <GraphCanvas/Components/Nodes/NodeTitleBus.h>
-#include <GraphCanvas/GraphCanvasBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/Nodes/NodeBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/Nodes/NodeTitleBus.h>
+#include <JE/Editor/Tools/GraphCanvas/GraphCanvasBus.h>
 
 #include <ScriptCanvas/Bus/EditorScriptCanvasBus.h>
 #include <ScriptCanvas/Core/NodelingBus.h>
@@ -87,7 +87,7 @@ namespace ScriptCanvasEditor::Nodes
                 functionDefinitionNode->MarkExecutionExit();
             }
             
-            GraphCanvas::NodeTitleRequestBus::Event(createdPair.m_graphCanvasId, &GraphCanvas::NodeTitleRequests::SetSubTitle, "Function");
+            JE::Editor::Tools::GraphCanvas::NodeTitleRequestBus::Event(createdPair.m_graphCanvasId, &JE::Editor::Tools::GraphCanvas::NodeTitleRequests::SetSubTitle, "Function");
 
         }
 
@@ -125,7 +125,7 @@ namespace ScriptCanvasEditor::Nodes
         {
             if (!styleConfiguration.m_titlePalette.empty())
             {
-                GraphCanvas::NodeTitleRequestBus::Event(nodeIdPair.m_graphCanvasId, &GraphCanvas::NodeTitleRequests::SetPaletteOverride, styleConfiguration.m_titlePalette);
+                JE::Editor::Tools::GraphCanvas::NodeTitleRequestBus::Event(nodeIdPair.m_graphCanvasId, &JE::Editor::Tools::GraphCanvas::NodeTitleRequests::SetPaletteOverride, styleConfiguration.m_titlePalette);
             }
 
             // TODO: Add support for this, but should be mostly irrelevant, as the display node should be the one that handles setting that up.

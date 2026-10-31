@@ -20,8 +20,8 @@ AZ_POP_DISABLE_WARNING
 #include <AzCore/RTTI/RTTI.h>
 #include <AzCore/std/chrono/chrono.h>
 
-#include <GraphCanvas/Widgets/GraphCanvasTreeItem.h>
-#include <GraphCanvas/Components/StyleBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Widgets/GraphCanvasTreeItem.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/StyleBus.h>
 
 #include <ScriptCanvas/Bus/RequestBus.h>
 #include <ScriptCanvas/Core/Endpoint.h>
@@ -46,11 +46,11 @@ namespace ScriptCanvasEditor
     };
 
     class DebugLogTreeItem
-        : public GraphCanvas::GraphCanvasTreeItem
+        : public JE::Editor::Tools::GraphCanvas::GraphCanvasTreeItem
     {
     public:
         AZ_CLASS_ALLOCATOR(DebugLogTreeItem, AZ::SystemAllocator);
-        AZ_RTTI(DebugLogTreeItem, "{E0B2A52B-47A4-40FF-A76F-4655125D01CC}", GraphCanvas::GraphCanvasTreeItem);
+        AZ_RTTI(DebugLogTreeItem, "{E0B2A52B-47A4-40FF-A76F-4655125D01CC}", JE::Editor::Tools::GraphCanvas::GraphCanvasTreeItem);
 
         enum Column
         {
@@ -126,7 +126,7 @@ namespace ScriptCanvasEditor
 
     class ExecutionLogTreeItem
         : public DebugLogTreeItem
-        , public GraphCanvas::StyleManagerNotificationBus::Handler
+        , public JE::Editor::Tools::GraphCanvas::StyleManagerNotificationBus::Handler
         , public EditorGraphNotificationBus::Handler
         , public GeneralAssetNotificationBus::Handler
     {
@@ -174,7 +174,7 @@ namespace ScriptCanvasEditor
         AZ::Data::AssetId GetAssetId() const;
 
         AZ::EntityId        GetScriptCanvasAssetNodeId() const;
-        GraphCanvas::NodeId GetGraphCanvasNodeId() const;
+        JE::Editor::Tools::GraphCanvas::NodeId GetGraphCanvasNodeId() const;
 
     protected:
 
@@ -202,7 +202,7 @@ namespace ScriptCanvasEditor
         AZ::EntityId m_scriptCanvasAssetNodeId;
 
         AZ::EntityId m_scriptCanvasNodeId;
-        GraphCanvas::NodeId m_graphCanvasNodeId;
+        JE::Editor::Tools::GraphCanvas::NodeId m_graphCanvasNodeId;
 
         QString m_displayName;
 
@@ -214,7 +214,7 @@ namespace ScriptCanvasEditor
 
         QString m_timeString;
 
-        GraphCanvas::PaletteIconConfiguration m_paletteConfiguration;
+        JE::Editor::Tools::GraphCanvas::PaletteIconConfiguration m_paletteConfiguration;
         const QPixmap* m_iconPixmap;
     };
 
@@ -239,7 +239,7 @@ namespace ScriptCanvasEditor
     protected:
 
         bool OnMatchesFilter(const DebugLogFilter& treeFilter) override;
-        bool LessThan(const GraphCanvas::GraphCanvasTreeItem* graphItem) const override;
+        bool LessThan(const JE::Editor::Tools::GraphCanvas::GraphCanvasTreeItem* graphItem) const override;
 
     private:
 
@@ -253,7 +253,7 @@ namespace ScriptCanvasEditor
         void ScrapeOutputName();
 
         ScriptCanvas::GraphIdentifier m_graphIdentifier;
-        GraphCanvas::GraphId          m_graphCanvasGraphId;
+        JE::Editor::Tools::GraphCanvas::GraphId          m_graphCanvasGraphId;
 
         ScriptCanvas::Endpoint m_assetInputEndpoint;
         QString          m_inputName;

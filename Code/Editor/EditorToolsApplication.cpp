@@ -12,6 +12,7 @@
 #include "EditorToolsApplication.h"
 
 #include <JE/Geometry/GeometryModule.h>
+#include <JE/Geometry/SurfaceData/SurfaceDataModule.h>
 #include <JE/Editor/Camera/CameraModule.h>
 #include <JE/World/Camera/Debug/DebugCameraModule.h>
 #include <JE/Editor/RenderIntegration/RenderIntegrationModule.h>
@@ -126,6 +127,7 @@ namespace EditorInternal
         AzToolsFramework::ToolsApplication::CreateStaticModules(outModules);
         outModules.emplace_back(JE::Editor::Tools::CreateModule());
         outModules.emplace_back(JE::Geometry::CreateAuthoringModule());
+        outModules.emplace_back(JE::Geometry::SurfaceData::CreateAuthoringModule());
         outModules.emplace_back(JE::Editor::Camera::CreateAuthoringModule());
         outModules.emplace_back(JE::World::Camera::Debug::CreateDebugModule());
         outModules.emplace_back(JE::Editor::RenderIntegration::CreateRpiEditorModule());

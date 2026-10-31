@@ -9,7 +9,7 @@
 
 #include <AzToolsFramework/AssetBrowser/AssetBrowserFilterModel.h>
 
-#include <GraphCanvas/Widgets/GraphCanvasTreeCategorizer.h>
+#include <JE/Editor/Tools/GraphCanvas/Widgets/GraphCanvasTreeCategorizer.h>
 
 #include <Editor/View/Widgets/LoggingPanel/PivotTree/PivotTreeWidget.h>
 
@@ -110,7 +110,7 @@ namespace ScriptCanvasEditor
     class GraphPivotTreeRoot
         : public PivotTreeRoot
         , public LoggingDataNotificationBus::Handler
-        , public GraphCanvas::CategorizerInterface
+        , public JE::Editor::Tools::GraphCanvas::CategorizerInterface
         , public QObject
     {
     public:
@@ -137,7 +137,7 @@ namespace ScriptCanvasEditor
         ////
 
         // Category Interface
-        GraphCanvas::GraphCanvasTreeItem* CreateCategoryNode(AZStd::string_view categoryPath, AZStd::string_view categoryName, GraphCanvasTreeItem* parent) const override;
+        JE::Editor::Tools::GraphCanvas::GraphCanvasTreeItem* CreateCategoryNode(AZStd::string_view categoryPath, AZStd::string_view categoryName, GraphCanvasTreeItem* parent) const override;
         ////
 
     protected:
@@ -155,7 +155,7 @@ namespace ScriptCanvasEditor
         LoggingDataId m_dataSource;
         AZStd::unordered_map< AZ::Data::AssetId, GraphPivotTreeGraphItem* > m_graphTreeItemMapping;
 
-        GraphCanvas::GraphCanvasTreeCategorizer m_categorizer;
+        JE::Editor::Tools::GraphCanvas::GraphCanvasTreeCategorizer m_categorizer;
 
         LoggingDataId m_loggedDataId;
 

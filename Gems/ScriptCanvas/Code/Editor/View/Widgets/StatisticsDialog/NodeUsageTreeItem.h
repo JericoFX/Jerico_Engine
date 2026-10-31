@@ -9,10 +9,10 @@
 
 #include <QIcon>
 
-#include <GraphCanvas/Editor/EditorTypes.h>
-#include <GraphCanvas/Widgets/GraphCanvasTreeCategorizer.h>
-#include <GraphCanvas/Widgets/GraphCanvasTreeItem.h>
-#include <GraphCanvas/Widgets/NodePalette/TreeItems/IconDecoratedNodePaletteTreeItem.h>
+#include <JE/Editor/Tools/GraphCanvas/Editor/EditorTypes.h>
+#include <JE/Editor/Tools/GraphCanvas/Widgets/GraphCanvasTreeCategorizer.h>
+#include <JE/Editor/Tools/GraphCanvas/Widgets/GraphCanvasTreeItem.h>
+#include <JE/Editor/Tools/GraphCanvas/Widgets/NodePalette/TreeItems/IconDecoratedNodePaletteTreeItem.h>
 
 #include <Editor/View/Widgets/NodePalette/NodePaletteModel.h>
 
@@ -22,29 +22,29 @@ namespace ScriptCanvasEditor
 {
     // NodePaletteItems
     class NodePaletteNodeUsageRootItem
-        : public GraphCanvas::NodePaletteTreeItem
+        : public JE::Editor::Tools::GraphCanvas::NodePaletteTreeItem
     {
     public:
         AZ_CLASS_ALLOCATOR(NodePaletteNodeUsageRootItem, AZ::SystemAllocator);
-        AZ_RTTI(NodePaletteNodeUsageRootItem, "{ED21874C-6955-40F0-B451-F5FF5A16CF71}", GraphCanvas::NodePaletteTreeItem);
+        AZ_RTTI(NodePaletteNodeUsageRootItem, "{ED21874C-6955-40F0-B451-F5FF5A16CF71}", JE::Editor::Tools::GraphCanvas::NodePaletteTreeItem);
 
         NodePaletteNodeUsageRootItem(const NodePaletteModel& nodePaletteModel);
         ~NodePaletteNodeUsageRootItem();
 
-        GraphCanvas::NodePaletteTreeItem* GetCategoryNode(const char* categoryPath, GraphCanvas::NodePaletteTreeItem* parentRoot = nullptr);
+        JE::Editor::Tools::GraphCanvas::NodePaletteTreeItem* GetCategoryNode(const char* categoryPath, JE::Editor::Tools::GraphCanvas::NodePaletteTreeItem* parentRoot = nullptr);
         void PruneEmptyNodes();
 
     private:
 
-        GraphCanvas::GraphCanvasTreeCategorizer m_categorizer;
+        JE::Editor::Tools::GraphCanvas::GraphCanvasTreeCategorizer m_categorizer;
     };
 
     class NodePaletteNodeUsagePaletteItem
-        : public GraphCanvas::IconDecoratedNodePaletteTreeItem
+        : public JE::Editor::Tools::GraphCanvas::IconDecoratedNodePaletteTreeItem
     {
     public:
         AZ_CLASS_ALLOCATOR(NodePaletteNodeUsagePaletteItem, AZ::SystemAllocator);
-        AZ_RTTI(NodePaletteNodeUsagePaletteItem, "{CA8E31A8-56CA-49A2-80F2-68A1E3A9EDF6}", GraphCanvas::IconDecoratedNodePaletteTreeItem);
+        AZ_RTTI(NodePaletteNodeUsagePaletteItem, "{CA8E31A8-56CA-49A2-80F2-68A1E3A9EDF6}", JE::Editor::Tools::GraphCanvas::IconDecoratedNodePaletteTreeItem);
 
         NodePaletteNodeUsagePaletteItem(const ScriptCanvas::NodeTypeIdentifier& nodeIdentifier, AZStd::string_view displayName);
         ~NodePaletteNodeUsagePaletteItem();
@@ -59,12 +59,12 @@ namespace ScriptCanvasEditor
 
     // General TreeItems
     class ScriptCanvasAssetNodeUsageTreeItem
-        : public GraphCanvas::GraphCanvasTreeItem
+        : public JE::Editor::Tools::GraphCanvas::GraphCanvasTreeItem
         , public AZ::Data::AssetBus::Handler
     {
     public:
         AZ_CLASS_ALLOCATOR(ScriptCanvasAssetNodeUsageTreeItem, AZ::SystemAllocator);
-        AZ_RTTI(ScriptCanvasAssetNodeUsageTreeItem, "{1FF437D9-5159-49CD-8D80-8AC3334886E8}", GraphCanvas::GraphCanvasTreeItem);
+        AZ_RTTI(ScriptCanvasAssetNodeUsageTreeItem, "{1FF437D9-5159-49CD-8D80-8AC3334886E8}", JE::Editor::Tools::GraphCanvas::GraphCanvasTreeItem);
 
         enum Column
         {
@@ -116,7 +116,7 @@ namespace ScriptCanvasEditor
 
     class ScriptCanvasAssetNodeUsageTreeItemRoot
         : public ScriptCanvasAssetNodeUsageTreeItem
-        , public GraphCanvas::CategorizerInterface
+        , public JE::Editor::Tools::GraphCanvas::CategorizerInterface
         , public AZ::Data::AssetBus::MultiHandler
     {
     public:
@@ -134,7 +134,7 @@ namespace ScriptCanvasEditor
         ScriptCanvasAssetNodeUsageTreeItem* GetAssetItem(const AZ::Data::AssetId& assetId);
 
         // CategorizerInterface
-        GraphCanvas::GraphCanvasTreeItem* CreateCategoryNode(AZStd::string_view categoryPath, AZStd::string_view categoryName, GraphCanvasTreeItem* parent) const override;
+        JE::Editor::Tools::GraphCanvas::GraphCanvasTreeItem* CreateCategoryNode(AZStd::string_view categoryPath, AZStd::string_view categoryName, GraphCanvasTreeItem* parent) const override;
         ////
 
         const ScriptCanvasAssetMap& GetAssetTreeItems() const;
@@ -144,7 +144,7 @@ namespace ScriptCanvasEditor
         // AZ::Data::AssetBus::MultiHandler
         void OnAssetReady(AZ::Data::Asset<AZ::Data::AssetData> asset) override;
 
-        GraphCanvas::GraphCanvasTreeCategorizer m_categorizer;
+        JE::Editor::Tools::GraphCanvas::GraphCanvasTreeCategorizer m_categorizer;
 
         ScriptCanvasAssetMap m_scriptCanvasAssetItems;
     };    

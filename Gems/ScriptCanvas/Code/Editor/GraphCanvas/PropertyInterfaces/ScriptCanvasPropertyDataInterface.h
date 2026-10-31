@@ -7,7 +7,7 @@
  */
 #pragma once
 
-#include <GraphCanvas/Components/NodePropertyDisplay/DataInterface.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/NodePropertyDisplay/DataInterface.h>
 
 #include <ScriptCanvas/Core/Datum.h>
 #include <ScriptCanvas/Core/Node.h>
@@ -17,9 +17,9 @@
 #include <Editor/View/Widgets/PropertyGridBus.h>
 
 // ComboBoxDataInterface
-#include <GraphCanvas/Components/NodePropertyDisplay/ComboBoxDataInterface.h>
-#include <GraphCanvas/Widgets/ComboBox/ComboBoxItemModelInterface.h>
-#include <GraphCanvas/Widgets/ComboBox/ComboBoxItemModels.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/NodePropertyDisplay/ComboBoxDataInterface.h>
+#include <JE/Editor/Tools/GraphCanvas/Widgets/ComboBox/ComboBoxItemModelInterface.h>
+#include <JE/Editor/Tools/GraphCanvas/Widgets/ComboBox/ComboBoxItemModels.h>
 ////
 
 namespace ScriptCanvasEditor
@@ -34,7 +34,7 @@ namespace ScriptCanvasEditor
             : m_nodeId(nodeId)
             , m_nodePropertyInterface(nodePropertyInterface)
         {
-            static_assert((AZStd::is_base_of<GraphCanvas::DataInterface, InterfaceType>::value), "ScriptCanvasPropertyDataInterface given invalid GraphCanvas::DataInterface to inherit.");
+            static_assert((AZStd::is_base_of<JE::Editor::Tools::GraphCanvas::DataInterface, InterfaceType>::value), "ScriptCanvasPropertyDataInterface given invalid GraphCanvas::DataInterface to inherit.");
 
             if (m_nodePropertyInterface)
             {
@@ -55,9 +55,9 @@ namespace ScriptCanvasEditor
             return scriptCanvasId;
         }
 
-        const GraphCanvas::GraphId GetGraphCanvasGraphId() const
+        const JE::Editor::Tools::GraphCanvas::GraphId GetGraphCanvasGraphId() const
         {
-            GraphCanvas::GraphId graphCanvasGraphId;
+            JE::Editor::Tools::GraphCanvas::GraphId graphCanvasGraphId;
             GeneralRequestBus::BroadcastResult(graphCanvasGraphId, &GeneralRequests::GetGraphCanvasGraphId, GetScriptCanvasId());
             return graphCanvasGraphId;
         }
@@ -131,14 +131,14 @@ namespace ScriptCanvasEditor
     // ComboBoxDataInterface
     template<typename DataType>
     class ScriptCanvasComboBoxPropertyDataInterface
-        : public ScriptCanvasPropertyDataInterface<GraphCanvas::ComboBoxDataInterface, DataType>
+        : public ScriptCanvasPropertyDataInterface<JE::Editor::Tools::GraphCanvas::ComboBoxDataInterface, DataType>
     {
     public:
 
         AZ_CLASS_ALLOCATOR(ScriptCanvasComboBoxPropertyDataInterface<DataType>, AZ::SystemAllocator);
 
         ScriptCanvasComboBoxPropertyDataInterface(AZ::EntityId scriptCanvasNodeId, ScriptCanvas::TypedComboBoxNodePropertyInterface<DataType>* propertyInterface)
-            : ScriptCanvasPropertyDataInterface<GraphCanvas::ComboBoxDataInterface, DataType>(scriptCanvasNodeId, propertyInterface)
+            : ScriptCanvasPropertyDataInterface<JE::Editor::Tools::GraphCanvas::ComboBoxDataInterface, DataType>(scriptCanvasNodeId, propertyInterface)
             , m_propertyInterface(propertyInterface)
         {
             const auto& displaySet = m_propertyInterface->GetValueSet();
@@ -155,11 +155,11 @@ namespace ScriptCanvasEditor
         // GraphCanvas::ComboBoxDataInterface
 
         // Necessary to deal with Clang invoking base methods from this templated class
-        using ScriptCanvasPropertyDataInterface<GraphCanvas::ComboBoxDataInterface, DataType>::GetValue;
-        using ScriptCanvasPropertyDataInterface<GraphCanvas::ComboBoxDataInterface, DataType>::SetValue;
+        using ScriptCanvasPropertyDataInterface<JE::Editor::Tools::GraphCanvas::ComboBoxDataInterface, DataType>::GetValue;
+        using ScriptCanvasPropertyDataInterface<JE::Editor::Tools::GraphCanvas::ComboBoxDataInterface, DataType>::SetValue;
 
         // Returns the EnumModel used to populate the DropDown and AutoCompleter Menu
-        GraphCanvas::ComboBoxItemModelInterface* GetItemInterface() override
+        JE::Editor::Tools::GraphCanvas::ComboBoxItemModelInterface* GetItemInterface() override
         {
             return &m_comboBoxModel;
         }
@@ -188,7 +188,7 @@ namespace ScriptCanvasEditor
     private:
 
         ScriptCanvas::TypedComboBoxNodePropertyInterface<DataType>* m_propertyInterface;
-        GraphCanvas::GraphCanvasListComboBoxModel<DataType> m_comboBoxModel;
+        JE::Editor::Tools::GraphCanvas::GraphCanvasListComboBoxModel<DataType> m_comboBoxModel;
     };
     ////
 }

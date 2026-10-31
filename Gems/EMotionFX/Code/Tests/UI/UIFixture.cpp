@@ -31,7 +31,7 @@
 #include <AzQtComponents/Components/WindowDecorationWrapper.h>
 #include <AzQtComponents/Components/StyleManager.h>
 
-#include <GraphCanvas/Widgets/NodePalette/NodePaletteTreeView.h>
+#include <JE/Editor/Tools/GraphCanvas/Widgets/NodePalette/NodePaletteTreeView.h>
 
 #include <Editor/Plugins/ColliderWidgets/SimulatedObjectColliderWidget.h>
 #include <Editor/Plugins/SimulatedObject/SimulatedObjectWidget.h>
@@ -208,7 +208,7 @@ namespace EMotionFX
         return nullptr;
     }
 
-    QModelIndex UIFixture::GetIndexFromName(const GraphCanvas::NodePaletteTreeView* tree, const QString& name)
+    QModelIndex UIFixture::GetIndexFromName(const JE::Editor::Tools::GraphCanvas::NodePaletteTreeView* tree, const QString& name)
     {
         const QAbstractItemModel* model = tree->model();
         const QModelIndexList matches = model->match(model->index(0,0), Qt::DisplayRole, name, 1, Qt::MatchRecursive);

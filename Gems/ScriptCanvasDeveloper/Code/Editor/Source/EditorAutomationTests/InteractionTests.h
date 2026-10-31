@@ -12,11 +12,11 @@
 #include <QString>
 #include <QTableView>
 
-#include <GraphCanvas/Components/Nodes/NodeBus.h>
-#include <GraphCanvas/Components/SceneBus.h>
-#include <GraphCanvas/Components/Slots/SlotBus.h>
-#include <GraphCanvas/Components/VisualBus.h>
-#include <GraphCanvas/Utils/ConversionUtils.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/Nodes/NodeBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/SceneBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/Slots/SlotBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/VisualBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Utils/ConversionUtils.h>
 
 #include <ScriptCanvas/Bus/RequestBus.h>
 
@@ -31,7 +31,7 @@ namespace ScriptCanvas::Developer
     */
     class AltClickDeleteTest
         : public EditorAutomationTest
-        , public GraphCanvas::SceneNotificationBus::Handler
+        , public JE::Editor::Tools::GraphCanvas::SceneNotificationBus::Handler
     {
     public:
         AZ_CLASS_ALLOCATOR(AltClickDeleteTest, AZ::SystemAllocator)
@@ -45,7 +45,7 @@ namespace ScriptCanvas::Developer
     */
     class CutCopyPasteDuplicateTest
         : public EditorAutomationTest
-        , public GraphCanvas::SceneNotificationBus::Handler
+        , public JE::Editor::Tools::GraphCanvas::SceneNotificationBus::Handler
     {
         class CheckpointState
             : public CustomActionState
@@ -77,8 +77,8 @@ namespace ScriptCanvas::Developer
 
         AutomationStateModelId m_originalNodeId;
 
-        GraphCanvas::NodeId   m_removalTarget;
-        AZStd::unordered_set< GraphCanvas::NodeId > m_createdSet;
+        JE::Editor::Tools::GraphCanvas::NodeId   m_removalTarget;
+        AZStd::unordered_set< JE::Editor::Tools::GraphCanvas::NodeId > m_createdSet;
 
         CreateNodeFromContextMenuState* m_createNodeState = nullptr;
 

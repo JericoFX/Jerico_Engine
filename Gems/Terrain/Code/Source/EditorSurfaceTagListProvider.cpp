@@ -13,11 +13,11 @@
 namespace Terrain
 {
     AZStd::vector<AZStd::pair<AZ::u32, AZStd::string>> BuildSelectableTagList(const EditorSurfaceTagListProvider* tagListProvider,
-        const SurfaceData::SurfaceTag& currentTag)
+        const JE::Geometry::SurfaceData::SurfaceTag& currentTag)
     {
-        AZStd::vector<AZStd::pair<AZ::u32, AZStd::string>> availableTags = SurfaceData::SurfaceTag::GetRegisteredTags();
+        AZStd::vector<AZStd::pair<AZ::u32, AZStd::string>> availableTags = JE::Geometry::SurfaceData::SurfaceTag::GetRegisteredTags();
 
-        AZStd::unordered_set<SurfaceData::SurfaceTag> tagsInUse;
+        AZStd::unordered_set<JE::Geometry::SurfaceData::SurfaceTag> tagsInUse;
 
         if (tagListProvider)
         {
@@ -26,7 +26,7 @@ namespace Terrain
             // Filter out all tags in use from the list of registered tags
             AZStd::erase_if(availableTags, [&tagsInUse](const auto& tag)-> bool
             {
-                return tagsInUse.contains(SurfaceData::SurfaceTag(AZ::Crc32(tag.first)));
+                return tagsInUse.contains(JE::Geometry::SurfaceData::SurfaceTag(AZ::Crc32(tag.first)));
             });
         }
 

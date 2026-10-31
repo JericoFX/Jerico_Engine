@@ -9,7 +9,7 @@
 #pragma once
 
 // Graph Canvas
-#include <GraphCanvas/Components/NodePropertyDisplay/BooleanDataInterface.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/NodePropertyDisplay/BooleanDataInterface.h>
 
 // Graph Model
 #include <JE/Editor/Tools/GraphModel/Model/Slot.h>
@@ -17,7 +17,7 @@
 namespace JE::Editor::Tools::GraphModel::Integration
 {
     //! Satisfies GraphCanvas API requirements for showing bool property widgets in nodes.
-    class BooleanDataInterface : public GraphCanvas::BooleanDataInterface
+    class BooleanDataInterface : public JE::Editor::Tools::GraphCanvas::BooleanDataInterface
     {
     public:
         AZ_CLASS_ALLOCATOR(BooleanDataInterface, AZ::SystemAllocator);

@@ -10,7 +10,7 @@
 #include <AzCore/std/smart_ptr/make_shared.h>
 
 // GraphCanvas
-#include <GraphCanvas/Widgets/GraphCanvasEditor/GraphCanvasEditorDockWidget.h>
+#include <JE/Editor/Tools/GraphCanvas/Widgets/GraphCanvasEditor/GraphCanvasEditorDockWidget.h>
 
 // GraphModel
 #include <JE/Editor/Tools/GraphModel/Integration/EditorMainWindow.h>
@@ -18,8 +18,8 @@
 
 namespace JE::Editor::Tools::GraphModel::Integration
 {
-    EditorMainWindow::EditorMainWindow(GraphCanvas::AssetEditorWindowConfig* config, QWidget* parent)
-        : GraphCanvas::AssetEditorMainWindow(config, parent)
+    EditorMainWindow::EditorMainWindow(JE::Editor::Tools::GraphCanvas::AssetEditorWindowConfig* config, QWidget* parent)
+        : JE::Editor::Tools::GraphCanvas::AssetEditorMainWindow(config, parent)
     {
     }
 
@@ -28,7 +28,7 @@ namespace JE::Editor::Tools::GraphModel::Integration
         GraphControllerNotificationBus::MultiHandler::BusDisconnect();
     }
 
-    JE::Editor::Tools::GraphModel::GraphPtr EditorMainWindow::GetGraphById(GraphCanvas::GraphId graphId) const
+    JE::Editor::Tools::GraphModel::GraphPtr EditorMainWindow::GetGraphById(JE::Editor::Tools::GraphCanvas::GraphId graphId) const
     {
         auto it = m_graphs.find(graphId);
         if (it != m_graphs.end())
@@ -39,7 +39,7 @@ namespace JE::Editor::Tools::GraphModel::Integration
         return nullptr;
     }
 
-    GraphCanvas::GraphId EditorMainWindow::GetGraphId(JE::Editor::Tools::GraphModel::GraphPtr graph) const
+    JE::Editor::Tools::GraphCanvas::GraphId EditorMainWindow::GetGraphId(JE::Editor::Tools::GraphModel::GraphPtr graph) const
     {
         auto it = AZStd::find_if(m_graphs.begin(), m_graphs.end(),
             [graph](decltype(m_graphs)::const_reference pair)
@@ -51,14 +51,14 @@ namespace JE::Editor::Tools::GraphModel::Integration
             return it->first;
         }
 
-        return GraphCanvas::GraphId();
+        return JE::Editor::Tools::GraphCanvas::GraphId();
     }
 
-    void EditorMainWindow::OnEditorOpened(GraphCanvas::EditorDockWidget* dockWidget)
+    void EditorMainWindow::OnEditorOpened(JE::Editor::Tools::GraphCanvas::EditorDockWidget* dockWidget)
     {
-        GraphCanvas::AssetEditorMainWindow::OnEditorOpened(dockWidget);
+        JE::Editor::Tools::GraphCanvas::AssetEditorMainWindow::OnEditorOpened(dockWidget);
 
-        GraphCanvas::GraphId graphId = dockWidget->GetGraphId();
+        JE::Editor::Tools::GraphCanvas::GraphId graphId = dockWidget->GetGraphId();
 
         // Create the new graph.
         JE::Editor::Tools::GraphModel::GraphPtr graph = AZStd::make_shared<JE::Editor::Tools::GraphModel::Graph>(GetGraphContext());
@@ -71,11 +71,11 @@ namespace JE::Editor::Tools::GraphModel::Integration
         JE::Editor::Tools::GraphModel::Integration::GraphControllerNotificationBus::MultiHandler::BusConnect(graphId);
     }
 
-    void EditorMainWindow::OnEditorClosing(GraphCanvas::EditorDockWidget* dockWidget)
+    void EditorMainWindow::OnEditorClosing(JE::Editor::Tools::GraphCanvas::EditorDockWidget* dockWidget)
     {
-        GraphCanvas::AssetEditorMainWindow::OnEditorClosing(dockWidget);
+        JE::Editor::Tools::GraphCanvas::AssetEditorMainWindow::OnEditorClosing(dockWidget);
 
-        GraphCanvas::GraphId graphId = dockWidget->GetGraphId();
+        JE::Editor::Tools::GraphCanvas::GraphId graphId = dockWidget->GetGraphId();
 
         // Stop listening for GraphController notifications for this graph.
         JE::Editor::Tools::GraphModel::Integration::GraphControllerNotificationBus::MultiHandler::BusDisconnect(graphId);
@@ -90,7 +90,7 @@ namespace JE::Editor::Tools::GraphModel::Integration
     void EditorMainWindow::OnWrapperNodeActionWidgetClicked(const AZ::EntityId& wrapperNode, const QRect& actionWidgetBoundingRect, const QPointF& scenePoint, const QPoint& screenPoint)
     {
         // Find the GraphModel::NodePtr whose action widget was clicked.
-        GraphCanvas::GraphId graphId = GetActiveGraphCanvasGraphId();
+        JE::Editor::Tools::GraphCanvas::GraphId graphId = GetActiveGraphCanvasGraphId();
         JE::Editor::Tools::GraphModel::NodePtr node;
         GraphControllerRequestBus::EventResult(node, graphId, &GraphControllerRequests::GetNodeById, wrapperNode);
         AZ_Assert(node, "Unable to find NodePtr for the given NodeId");

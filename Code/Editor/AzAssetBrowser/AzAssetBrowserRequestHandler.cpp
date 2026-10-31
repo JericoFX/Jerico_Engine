@@ -1187,6 +1187,43 @@ void AzAssetBrowserRequestHandler::OpenAssetInAssociatedEditor(const AZ::Data::A
         return;
     }
 
+    alreadyHandled = OpenSourceFileInAssociatedEditor(fullEntryPath, sourceID);
+    if (!alreadyHandled)
+    {
+        alreadyHandled = OpenWithOS(fullEntryPath);
+    }
+}
+
+bool AzAssetBrowserRequestHandler::OpenEntryInAssociatedEditor(
+    const AzToolsFramework::AssetBrowser::AssetBrowserEntry* entry)
+{
+    using namespace AzToolsFramework::AssetBrowser;
+    AZ::Data::AssetId assetIdToOpen;
+    if (const auto* productEntry = azrtti_cast<const ProductAssetBrowserEntry*>(entry))
+    {
+        assetIdToOpen = productEntry->GetAssetId();
+    }
+    else if (const auto* sourceEntry = azrtti_cast<const SourceAssetBrowserEntry*>(entry))
+    {
+        assetIdToOpen = AZ::Data::AssetId(sourceEntry->GetSourceUuid(), 0);
+        if (!assetIdToOpen.IsValid())
+        {
+            return OpenSourceFileInAssociatedEditor(sourceEntry->GetFullPath(), sourceEntry->GetSourceUuid());
+        }
+    }
+
+    bool alreadyHandled = false;
+    if (assetIdToOpen.IsValid())
+    {
+        AssetBrowserInteractionNotificationBus::Broadcast(
+            &AssetBrowserInteractionNotifications::OpenAssetInAssociatedEditor, assetIdToOpen, alreadyHandled);
+    }
+    return alreadyHandled;
+}
+
+bool AzAssetBrowserRequestHandler::OpenSourceFileInAssociatedEditor(const AZStd::string& fullEntryPath, const AZ::Uuid& sourceID)
+{
+    using namespace AzToolsFramework::AssetBrowser;
     QWidget* mainWindow = nullptr;
     AzToolsFramework::EditorRequestBus::BroadcastResult(mainWindow, &AzToolsFramework::EditorRequests::GetMainWindow);
 
@@ -1270,12 +1307,10 @@ void AzAssetBrowserRequestHandler::OpenAssetInAssociatedEditor(const AZ::Data::A
         {
             openerToUse->m_opener(fullEntryPath.c_str(), sourceID);
         }
-        alreadyHandled = true;
-        return; // an opener handled this, no need to proceed further.
+        return true; // an opener handled this, no need to proceed further.
     }
 
-    // if we get here, nothing handled it, so try the operating system.
-    alreadyHandled = OpenWithOS(fullEntryPath);
+    return false;
 }
 
 bool AzAssetBrowserRequestHandler::OpenWithOS(const AZStd::string& fullEntryPath)

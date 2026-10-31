@@ -12,7 +12,7 @@
 
 #include <Editor/Nodes/NodeUtils.h>
 
-#include <GraphCanvas/Components/Slots/SlotBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/Slots/SlotBus.h>
 
 #include <ScriptCanvas/Bus/NodeIdPair.h>
 
@@ -63,5 +63,5 @@ namespace ScriptCanvasEditor::Nodes
 
     // SlotGroup will control how elements are grouped.
     // Invalid will cause the slots to put themselves into whatever category they belong to by default.
-    AZ::EntityId DisplayScriptCanvasSlot(AZ::EntityId graphCanvasNodeId, const ScriptCanvas::Slot& slot, int slotIndex, GraphCanvas::SlotGroup group = GraphCanvas::SlotGroups::Invalid);
+    AZ::EntityId DisplayScriptCanvasSlot(AZ::EntityId graphCanvasNodeId, const ScriptCanvas::Slot& slot, int slotIndex, JE::Editor::Tools::GraphCanvas::SlotGroup group = JE::Editor::Tools::GraphCanvas::SlotGroups::Invalid);
 }

@@ -7,7 +7,7 @@
  */
 #pragma once
 
-#include <GraphCanvas/Components/Nodes/NodeBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/Nodes/NodeBus.h>
 
 #include "Editor/GraphCanvas/Components/NodeDescriptors/NodeDescriptorComponent.h"
 
@@ -24,6 +24,6 @@ namespace ScriptCanvasEditor
         ~EBusSenderNodeDescriptorComponent() = default;
 
     protected:
-        void OnAddedToGraphCanvasGraph(const GraphCanvas::GraphId& graphId, const AZ::EntityId& scriptCanvasNodeId) override;
+        void OnAddedToGraphCanvasGraph(const JE::Editor::Tools::GraphCanvas::GraphId& graphId, const AZ::EntityId& scriptCanvasNodeId) override;
     };
 }

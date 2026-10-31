@@ -11,7 +11,7 @@
 #include <AzCore/Component/TickBus.h>
 #include <ScriptCanvas/Core/Core.h>
 #include <ScriptCanvas/Utils/VersioningUtils.h>
-#include <GraphCanvas/Editor/EditorTypes.h>
+#include <JE/Editor/Tools/GraphCanvas/Editor/EditorTypes.h>
 
 namespace ScriptCanvas
 {
@@ -180,7 +180,7 @@ namespace ScriptCanvasEditor
         AZStd::unordered_map< AZ::EntityId, AZ::EntityId > m_scriptCanvasToGraphCanvasMapping;
 
         ScriptCanvas::ScriptCanvasId m_scriptCanvasId;
-        GraphCanvas::GraphId m_graphCanvasGraphId;
+        JE::Editor::Tools::GraphCanvas::GraphId m_graphCanvasGraphId;
 
         AZ::Entity m_scriptCanvasNodeId;
 

@@ -10,7 +10,7 @@
 #include <AzCore/std/smart_ptr/make_shared.h>
 
 // Graph Canvas
-#include <GraphCanvas/GraphCanvasBus.h>
+#include <JE/Editor/Tools/GraphCanvas/GraphCanvasBus.h>
 
 // Graph Model
 #include <JE/Editor/Tools/GraphModel/Integration/GraphControllerManager.h>
@@ -27,14 +27,14 @@ namespace JE::Editor::Tools::GraphModel::Integration
         GraphManagerRequestBus::Handler::BusDisconnect();
     }
 
-    AZ::Entity* GraphControllerManager::CreateScene(JE::Editor::Tools::GraphModel::GraphPtr graph, const GraphCanvas::EditorId editorId)
+    AZ::Entity* GraphControllerManager::CreateScene(JE::Editor::Tools::GraphModel::GraphPtr graph, const JE::Editor::Tools::GraphCanvas::EditorId editorId)
     {
         AZ::Entity* scene = nullptr;
-        GraphCanvas::GraphCanvasRequestBus::BroadcastResult(scene, &GraphCanvas::GraphCanvasRequests::CreateSceneAndActivate);
+        JE::Editor::Tools::GraphCanvas::GraphCanvasRequestBus::BroadcastResult(scene, &JE::Editor::Tools::GraphCanvas::GraphCanvasRequests::CreateSceneAndActivate);
 
         // Set the EditorId for the new scene
         const AZ::EntityId& sceneId = scene->GetId();
-        GraphCanvas::SceneRequestBus::Event(sceneId, &GraphCanvas::SceneRequests::SetEditorId, editorId);
+        JE::Editor::Tools::GraphCanvas::SceneRequestBus::Event(sceneId, &JE::Editor::Tools::GraphCanvas::SceneRequests::SetEditorId, editorId);
 
         // Create a graph controller for the new scene
         CreateGraphController(sceneId, graph);
@@ -42,22 +42,22 @@ namespace JE::Editor::Tools::GraphModel::Integration
         return scene;
     }
 
-    void GraphControllerManager::RemoveScene(const GraphCanvas::GraphId& sceneId)
+    void GraphControllerManager::RemoveScene(const JE::Editor::Tools::GraphCanvas::GraphId& sceneId)
     {
         DeleteGraphController(sceneId);
     }
 
-    void GraphControllerManager::CreateGraphController(const GraphCanvas::GraphId& sceneId, JE::Editor::Tools::GraphModel::GraphPtr graph)
+    void GraphControllerManager::CreateGraphController(const JE::Editor::Tools::GraphCanvas::GraphId& sceneId, JE::Editor::Tools::GraphModel::GraphPtr graph)
     {
         m_graphControllers[sceneId] = AZStd::make_shared<GraphController>(graph, sceneId);
     }
 
-    void GraphControllerManager::DeleteGraphController(const GraphCanvas::GraphId& sceneId)
+    void GraphControllerManager::DeleteGraphController(const JE::Editor::Tools::GraphCanvas::GraphId& sceneId)
     {
         m_graphControllers.erase(sceneId);
     }
 
-    JE::Editor::Tools::GraphModel::GraphPtr GraphControllerManager::GetGraph(const GraphCanvas::GraphId& sceneId)
+    JE::Editor::Tools::GraphModel::GraphPtr GraphControllerManager::GetGraph(const JE::Editor::Tools::GraphCanvas::GraphId& sceneId)
     {
         const auto it = m_graphControllers.find(sceneId);
         return it != m_graphControllers.end() ? it->second->GetGraph() : nullptr;

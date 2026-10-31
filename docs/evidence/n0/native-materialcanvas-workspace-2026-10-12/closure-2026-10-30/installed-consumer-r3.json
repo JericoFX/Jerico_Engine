@@ -1,0 +1,29 @@
+{
+  "utc": "2026-10-30T21:46:17.1045256Z",
+  "reviewer": "parent",
+  "sourcePathReview": "C:\\Users\\Jerico\\AppData\\Local\\JericoEngineValidation\\SurfaceMaterialsVolume-r1\\evidence\\surface-materials-volume-r3\\source-path-review-luna-r3.json",
+  "sourcePathReviewSha": "4B08478079D1D89FCEF46DEB550106650197E1D240D825F27BDBCE1B847F01DB",
+  "reviewedArtifactHashes": 6,
+  "reviewedArtifactHashesMatch": true,
+  "sourcePathReviewPendingResolved": true,
+  "focalWindowsProfileConsumerAccepted": true,
+  "verifiedModes": [
+    "materials file inventory 248 files/8 qrc and factory lifecycle",
+    "surface queries and runtime/authoring factory lifecycle",
+    "ModelAsset/ModelKdTree volume crossing and AABB false-positive"
+  ],
+  "consumerSha": "81DDA69BDCE6600352E0FE1C69930790B2B16A6FC930A31760D4F219CED1012C",
+  "nativeExitCode": 0,
+  "profileDeleted": true,
+  "stageDaclsRestoredByHelper": true,
+  "originalSnapshotsUnchanged": 17,
+  "fullSdkAccepted": false,
+  "wholeGemAccepted": false,
+  "limits": [
+    "Bounded access probes and metadata/copy provenance review, not an OS-wide file-open trace.",
+    "Generated geometry volume consumer does not establish imported S3 or full T3.",
+    "GameLauncher compile metadata is not an executed launcher build.",
+    "Current GUI preview and normal closure remain pending.",
+    "223 LNK4099 missing debug-PDB warnings retained; functional link/run passed."
+  ]
+}

@@ -11,8 +11,8 @@
 
 #include <AzCore/Asset/AssetCommon.h>
 
-#include <GraphCanvas/Widgets/GraphCanvasMimeEvent.h>
-#include <GraphCanvas/Widgets/NodePalette/TreeItems/DraggableNodePaletteTreeItem.h>
+#include <JE/Editor/Tools/GraphCanvas/Widgets/GraphCanvasMimeEvent.h>
+#include <JE/Editor/Tools/GraphCanvas/Widgets/NodePalette/TreeItems/DraggableNodePaletteTreeItem.h>
 
 #include <ScriptCanvas/Bus/NodeIdPair.h>
 #include <ScriptEvents/ScriptEventsAsset.h>
@@ -31,10 +31,10 @@ namespace ScriptCanvasEditor
     // <ScriptEventsHandlerMimeEvent>
     // Handles the EBus wrapper 
     class CreateScriptEventsHandlerMimeEvent
-        : public GraphCanvas::GraphCanvasMimeEvent
+        : public JE::Editor::Tools::GraphCanvas::GraphCanvasMimeEvent
     {
     public:
-        AZ_RTTI(CreateScriptEventsHandlerMimeEvent, "{4734F4B6-5915-4AEF-92A3-25FE3DBB6700}", GraphCanvas::GraphCanvasMimeEvent);
+        AZ_RTTI(CreateScriptEventsHandlerMimeEvent, "{4734F4B6-5915-4AEF-92A3-25FE3DBB6700}", JE::Editor::Tools::GraphCanvas::GraphCanvasMimeEvent);
         AZ_CLASS_ALLOCATOR(CreateScriptEventsHandlerMimeEvent, AZ::SystemAllocator);
 
         static void Reflect(AZ::ReflectContext* reflectContext);
@@ -59,11 +59,11 @@ namespace ScriptCanvasEditor
     };
 
     class ScriptEventsPaletteTreeItem
-        : public GraphCanvas::NodePaletteTreeItem
+        : public JE::Editor::Tools::GraphCanvas::NodePaletteTreeItem
         , public AZ::Data::AssetBus::Handler
     {
     public:
-        AZ_RTTI(ScriptEventsPaletteTreeItem, "{50839A0D-5FD4-4964-BEA2-CB9A74A50477}", GraphCanvas::NodePaletteTreeItem);
+        AZ_RTTI(ScriptEventsPaletteTreeItem, "{50839A0D-5FD4-4964-BEA2-CB9A74A50477}", JE::Editor::Tools::GraphCanvas::NodePaletteTreeItem);
         AZ_CLASS_ALLOCATOR(ScriptEventsPaletteTreeItem, AZ::SystemAllocator);
 
         ScriptEventsPaletteTreeItem(const AZ::Data::Asset<ScriptEvents::ScriptEventsAsset> asset);
@@ -124,16 +124,16 @@ namespace ScriptCanvasEditor
     };
 
     class ScriptEventsHandlerEventPaletteTreeItem
-        : public GraphCanvas::DraggableNodePaletteTreeItem
+        : public JE::Editor::Tools::GraphCanvas::DraggableNodePaletteTreeItem
     {
     public:
-        AZ_RTTI(ScriptEventsHandlerEventPaletteTreeItem, "{0E96CD24-C5DB-491C-9A3E-6EE82F73ADBA}", GraphCanvas::DraggableNodePaletteTreeItem);
+        AZ_RTTI(ScriptEventsHandlerEventPaletteTreeItem, "{0E96CD24-C5DB-491C-9A3E-6EE82F73ADBA}", JE::Editor::Tools::GraphCanvas::DraggableNodePaletteTreeItem);
         AZ_CLASS_ALLOCATOR(ScriptEventsHandlerEventPaletteTreeItem, AZ::SystemAllocator);
 
         ScriptEventsHandlerEventPaletteTreeItem(const AZ::Data::AssetId assetId, const ScriptEvents::Method& m_methodDefinition);
         ~ScriptEventsHandlerEventPaletteTreeItem() = default;
 
-        GraphCanvas::GraphCanvasMimeEvent* CreateMimeEvent() const;
+        JE::Editor::Tools::GraphCanvas::GraphCanvasMimeEvent* CreateMimeEvent() const;
 
     private:
 
@@ -175,16 +175,16 @@ namespace ScriptCanvasEditor
     };
 
     class ScriptEventsSenderPaletteTreeItem
-        : public GraphCanvas::DraggableNodePaletteTreeItem
+        : public JE::Editor::Tools::GraphCanvas::DraggableNodePaletteTreeItem
     {
     public:
-        AZ_RTTI(ScriptEventsSenderPaletteTreeItem, "{0E27EB7A-9F52-4A4E-9D63-28FFAD82310B}", GraphCanvas::DraggableNodePaletteTreeItem);
+        AZ_RTTI(ScriptEventsSenderPaletteTreeItem, "{0E27EB7A-9F52-4A4E-9D63-28FFAD82310B}", JE::Editor::Tools::GraphCanvas::DraggableNodePaletteTreeItem);
         AZ_CLASS_ALLOCATOR(ScriptEventsSenderPaletteTreeItem, AZ::SystemAllocator);
 
         ScriptEventsSenderPaletteTreeItem(const AZ::Data::AssetId assetId, const ScriptEvents::Method& eventDefinition);
         ~ScriptEventsSenderPaletteTreeItem() = default;
 
-        GraphCanvas::GraphCanvasMimeEvent* CreateMimeEvent() const;
+        JE::Editor::Tools::GraphCanvas::GraphCanvasMimeEvent* CreateMimeEvent() const;
 
     private:
 
@@ -212,7 +212,7 @@ namespace ScriptCanvasEditor
         bool ExecuteEvent(const AZ::Vector2& mousePosition, AZ::Vector2& sceneDropPosition, const AZ::EntityId& graphCanvasGraphId) override;
         ScriptCanvasEditor::NodeIdPair ConstructNode(const AZ::EntityId& graphCanvasGraphId, const AZ::Vector2& scenePosition) override;
 
-        AZStd::vector< GraphCanvas::GraphCanvasMimeEvent* > CreateMimeEvents() const override;
+        AZStd::vector< JE::Editor::Tools::GraphCanvas::GraphCanvasMimeEvent* > CreateMimeEvents() const override;
 
     private:
 
@@ -224,15 +224,15 @@ namespace ScriptCanvasEditor
     };
 
     class ScriptEventsEventNodePaletteTreeItem
-        : public GraphCanvas::DraggableNodePaletteTreeItem
+        : public JE::Editor::Tools::GraphCanvas::DraggableNodePaletteTreeItem
     {
     public:
-        AZ_RTTI(ScriptEventsEventNodePaletteTreeItem, "{C6528466-C1FF-43BE-B292-21D8F8AA7C24}", GraphCanvas::DraggableNodePaletteTreeItem);
+        AZ_RTTI(ScriptEventsEventNodePaletteTreeItem, "{C6528466-C1FF-43BE-B292-21D8F8AA7C24}", JE::Editor::Tools::GraphCanvas::DraggableNodePaletteTreeItem);
         AZ_CLASS_ALLOCATOR(ScriptEventsEventNodePaletteTreeItem, AZ::SystemAllocator);
         ScriptEventsEventNodePaletteTreeItem(const AZ::Data::AssetId& m_assetId, const ScriptEvents::Method& methodDefinition, const ScriptCanvas::EBusEventId& eventId);
         ~ScriptEventsEventNodePaletteTreeItem() = default;
 
-        GraphCanvas::GraphCanvasMimeEvent* CreateMimeEvent() const override;
+        JE::Editor::Tools::GraphCanvas::GraphCanvasMimeEvent* CreateMimeEvent() const override;
         QVariant OnData(const QModelIndex& index, int role) const override;
 
         ScriptCanvas::EBusBusId GetBusIdentifier() const;

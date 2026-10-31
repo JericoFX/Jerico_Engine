@@ -94,11 +94,10 @@ if(PAL_TRAIT_BUILD_HOST_TOOLS)
                 AZ::AzToolsFramework
                 Gem::${gem_name}.Static
                 Gem::ScriptCanvas.Editor.Static
-                Gem::GraphCanvasWidgets
+                JE::EditorTools
                 JE::DebugImGui  # Native debug bus interfaces and shared implementation.
         RUNTIME_DEPENDENCIES
             Gem::ScriptCanvas.Editor
-            Gem::GraphCanvasWidgets
     )
 
     # Inject the gem name into the Module source file

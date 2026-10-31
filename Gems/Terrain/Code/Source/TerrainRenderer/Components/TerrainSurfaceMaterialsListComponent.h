@@ -17,7 +17,7 @@
 
 #include <LmbrCentral/Shape/ShapeComponentBus.h>
 
-#include <SurfaceData/SurfaceDataTypes.h>
+#include <JE/Geometry/SurfaceData/SurfaceDataTypes.h>
 #include <TerrainRenderer/TerrainAreaMaterialRequestBus.h>
 
 namespace LmbrCentral
@@ -38,8 +38,8 @@ namespace Terrain
         AZ::Data::Instance<JE::Render::RPI::Material> m_materialInstance;
 
         // Surface tags not used by default material
-        SurfaceData::SurfaceTag m_surfaceTag;
-        SurfaceData::SurfaceTag m_previousTag;
+        JE::Geometry::SurfaceData::SurfaceTag m_surfaceTag;
+        JE::Geometry::SurfaceData::SurfaceTag m_previousTag;
     };
 
     class TerrainSurfaceMaterialsListConfig : public AZ::ComponentConfig

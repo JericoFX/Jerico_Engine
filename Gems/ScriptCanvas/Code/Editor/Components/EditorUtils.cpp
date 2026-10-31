@@ -88,7 +88,7 @@ namespace ScriptCanvasEditor
     // NodeIdentifierFactory
     //////////////////////////
 
-    ScriptCanvas::NodeTypeIdentifier NodeIdentifierFactory::ConstructNodeIdentifier(const GraphCanvas::GraphCanvasTreeItem* treeItem)
+    ScriptCanvas::NodeTypeIdentifier NodeIdentifierFactory::ConstructNodeIdentifier(const JE::Editor::Tools::GraphCanvas::GraphCanvasTreeItem* treeItem)
     {
         ScriptCanvas::NodeTypeIdentifier resultHash = 0;
         if (auto getVariableMethodTreeItem = azrtti_cast<const GetVariableNodePaletteTreeItem*>(treeItem))
@@ -134,7 +134,7 @@ namespace ScriptCanvasEditor
         return resultHash;
     }
 
-    AZStd::vector< ScriptCanvas::NodeTypeIdentifier > NodeIdentifierFactory::ConstructNodeIdentifiers(const GraphCanvas::GraphCanvasTreeItem* treeItem)
+    AZStd::vector< ScriptCanvas::NodeTypeIdentifier > NodeIdentifierFactory::ConstructNodeIdentifiers(const JE::Editor::Tools::GraphCanvas::GraphCanvasTreeItem* treeItem)
     {
         AZStd::vector< ScriptCanvas::NodeTypeIdentifier > nodeIdentifiers;
 
@@ -181,7 +181,7 @@ namespace ScriptCanvasEditor
             {
                 if (auto ebusHandlerNode  = azrtti_cast<ScriptCanvas::Nodes::Core::EBusEventHandler*>(nodeComponent))
                 {
-                    GraphCanvas::NodeId graphCanvasNodeId;
+                    JE::Editor::Tools::GraphCanvas::NodeId graphCanvasNodeId;
                     SceneMemberMappingRequestBus::EventResult(graphCanvasNodeId, nodeEntity->GetId(), &SceneMemberMappingRequests::GetGraphCanvasEntityId);                    
 
                     const ScriptCanvas::Nodes::Core::EBusEventHandler::EventMap& events = ebusHandlerNode->GetEvents();
@@ -203,7 +203,7 @@ namespace ScriptCanvasEditor
                 }
                 else if (auto scriptEventHandler = azrtti_cast<ScriptCanvas::Nodes::Core::ReceiveScriptEvent*>(nodeComponent))
                 {
-                    GraphCanvas::NodeId graphCanvasNodeId;
+                    JE::Editor::Tools::GraphCanvas::NodeId graphCanvasNodeId;
                     SceneMemberMappingRequestBus::EventResult(graphCanvasNodeId, nodeEntity->GetId(), &SceneMemberMappingRequests::GetGraphCanvasEntityId);
 
                     EBusHandlerNodeDescriptorRequests* ebusDescriptorRequests = EBusHandlerNodeDescriptorRequestBus::FindFirstHandler(graphCanvasNodeId);

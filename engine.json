@@ -35,7 +35,6 @@
         "Gems/GameStateSamples",
         "Gems/Gestures",
         "Gems/GradientSignal",
-        "Gems/GraphCanvas",
         "Gems/InAppPurchases",
         "Gems/LandscapeCanvas",
         "Gems/LmbrCentral",
@@ -71,7 +70,6 @@
         "Gems/StartingPointInput",
         "Gems/StartingPointMovement",
         "Gems/Streamer",
-        "Gems/SurfaceData",
         "Gems/Terrain",
         "Gems/TestAssetBuilder",
         "Gems/TextureAtlas",
@@ -86,7 +84,6 @@
         "AudioSystem",
         "LmbrCentral",
         "GradientSignal",
-        "SurfaceData",
         "Maestro"
     ],
     "projects": [

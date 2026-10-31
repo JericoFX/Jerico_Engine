@@ -64,7 +64,7 @@ namespace ScriptCanvasEditor
             int FindSaveOverMatch(SourceHandle assetId) const;
             SourceHandle FindTabByPath(AZStd::string_view path) const;
             SourceHandle FindAssetId(int tabIndex);
-            ScriptCanvas::ScriptCanvasId FindScriptCanvasIdFromGraphCanvasId(const GraphCanvas::GraphId& graphCanvasGraphId) const;
+            ScriptCanvas::ScriptCanvasId FindScriptCanvasIdFromGraphCanvasId(const JE::Editor::Tools::GraphCanvas::GraphId& graphCanvasGraphId) const;
 
             void ClearTabView(int tabIndex);
             CanvasWidget* ModOrCreateTabView(int tabIndex);

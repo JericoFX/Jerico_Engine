@@ -10,7 +10,7 @@
 #include <AzCore/Serialization/SerializeContext.h>
 #include <AzCore/std/smart_ptr/make_shared.h>
 #include <AzFramework/StringFunc/StringFunc.h>
-#include <GraphCanvas/Utils/GraphUtils.h>
+#include <JE/Editor/Tools/GraphCanvas/Utils/GraphUtils.h>
 #include <JE/Editor/Tools/GraphModel/GraphModelBus.h>
 #include <JE/Editor/Tools/GraphModel/Model/Common.h>
 
@@ -20,7 +20,7 @@ namespace JE::Editor::Tools
     {
         if (auto serializeContext = azrtti_cast<AZ::SerializeContext*>(context))
         {
-            serializeContext->Class<CreateDynamicNodeMimeEvent, GraphCanvas::GraphCanvasMimeEvent>()
+            serializeContext->Class<CreateDynamicNodeMimeEvent, JE::Editor::Tools::GraphCanvas::GraphCanvasMimeEvent>()
                 ->Version(0)
                 ->Field("toolId", &CreateDynamicNodeMimeEvent::m_toolId)
                 ->Field("configId", &CreateDynamicNodeMimeEvent::m_configId);
@@ -45,7 +45,7 @@ namespace JE::Editor::Tools
             if (auto node = AZStd::make_shared<DynamicNode>(graph, m_toolId, m_configId))
             {
                 // Handle undo/redo adding a single node. This will need to be done at a higher level for multiple nodes.
-                GraphCanvas::ScopedGraphUndoBatch undoBatch(graphCanvasSceneId);
+                JE::Editor::Tools::GraphCanvas::ScopedGraphUndoBatch undoBatch(graphCanvasSceneId);
 
                 JE::Editor::Tools::GraphModel::Integration::GraphControllerRequestBus::EventResult(
                     m_createdNodeId, graphCanvasSceneId, &JE::Editor::Tools::GraphModel::Integration::GraphControllerRequests::AddNode, node, dropPosition);
@@ -65,7 +65,7 @@ namespace JE::Editor::Tools
         SetToolTip(config.m_description.c_str());
     }
 
-    GraphCanvas::GraphCanvasMimeEvent* DynamicNodePaletteItem::CreateMimeEvent() const
+    JE::Editor::Tools::GraphCanvas::GraphCanvasMimeEvent* DynamicNodePaletteItem::CreateMimeEvent() const
     {
         return aznew CreateDynamicNodeMimeEvent(m_toolId, m_configId);
     }

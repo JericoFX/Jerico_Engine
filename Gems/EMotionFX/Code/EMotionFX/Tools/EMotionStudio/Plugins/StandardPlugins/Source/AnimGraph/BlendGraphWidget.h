@@ -15,8 +15,8 @@
 #include <EMotionStudio/Plugins/StandardPlugins/Source/StandardPluginsConfig.h>
 #include <EMotionStudio/Plugins/StandardPlugins/Source/AnimGraph/AnimGraphModel.h>
 #include <EMotionStudio/Plugins/StandardPlugins/Source/AnimGraph/NodeGraphWidget.h>
-#include <GraphCanvas/Widgets/NodePalette/TreeItems/DraggableNodePaletteTreeItem.h>
-#include <GraphCanvas/Widgets/GraphCanvasMimeEvent.h>
+#include <JE/Editor/Tools/GraphCanvas/Widgets/NodePalette/TreeItems/DraggableNodePaletteTreeItem.h>
+#include <JE/Editor/Tools/GraphCanvas/Widgets/GraphCanvasMimeEvent.h>
 #include <MCore/Source/CommandGroup.h>
 #include <QModelIndex>
 
@@ -35,10 +35,10 @@ namespace EMStudio
     // forward declarations
     class AnimGraphPlugin;
 
-    class BlendGraphMimeEvent : public GraphCanvas::GraphCanvasMimeEvent
+    class BlendGraphMimeEvent : public JE::Editor::Tools::GraphCanvas::GraphCanvasMimeEvent
     {
     public:
-        AZ_RTTI(BlendGraphMimeEvent, "{AA7C8960-C7BA-4F26-B52B-97CF4AC3CB39}", GraphCanvas::GraphCanvasMimeEvent);
+        AZ_RTTI(BlendGraphMimeEvent, "{AA7C8960-C7BA-4F26-B52B-97CF4AC3CB39}", JE::Editor::Tools::GraphCanvas::GraphCanvasMimeEvent);
         AZ_CLASS_ALLOCATOR(BlendGraphMimeEvent, AZ::SystemAllocator);
         static void Reflect(AZ::ReflectContext* context);
 
@@ -57,12 +57,12 @@ namespace EMStudio
         AZStd::string m_namePrefix;
     };
 
-    class BlendGraphNodePaletteTreeItem : public GraphCanvas::DraggableNodePaletteTreeItem
+    class BlendGraphNodePaletteTreeItem : public JE::Editor::Tools::GraphCanvas::DraggableNodePaletteTreeItem
     {
     public:
         AZ_CLASS_ALLOCATOR(BlendGraphNodePaletteTreeItem, AZ::SystemAllocator)
         BlendGraphNodePaletteTreeItem(
-            const AZStd::string_view name, const QString& typeString, GraphCanvas::EditorId editorId, const AZ::Color& color);
+            const AZStd::string_view name, const QString& typeString, JE::Editor::Tools::GraphCanvas::EditorId editorId, const AZ::Color& color);
         BlendGraphMimeEvent* CreateMimeEvent() const override;
 
         void SetTypeString(const QString& typeString);

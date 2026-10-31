@@ -312,7 +312,7 @@ namespace ScriptCanvasEditor
 
         m_pivotRoot = pivotRoot;
 
-        m_treeModel = aznew GraphCanvas::GraphCanvasTreeModel(pivotRoot);
+        m_treeModel = aznew JE::Editor::Tools::GraphCanvas::GraphCanvasTreeModel(pivotRoot);
 
         m_proxyModel = aznew PivotTreeSortProxyModel();
         m_proxyModel->ClearFilter();

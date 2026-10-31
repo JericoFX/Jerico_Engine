@@ -11,7 +11,7 @@
 #include <AzCore/Asset/AssetCommon.h>
 #include <AzCore/Component/Component.h>
 #include <LmbrCentral/Dependency/DependencyMonitor.h>
-#include <SurfaceData/SurfaceDataTagEnumeratorRequestBus.h>
+#include <JE/Geometry/SurfaceData/SurfaceDataTagEnumeratorRequestBus.h>
 #include <Vegetation/DescriptorListAsset.h>
 #include <Vegetation/Ebuses/DescriptorListRequestBus.h>
 #include <Vegetation/Ebuses/DescriptorProviderRequestBus.h>
@@ -60,7 +60,7 @@ namespace Vegetation
         , private AZ::Data::AssetBus::MultiHandler
         , private DescriptorListRequestBus::Handler
         , private DescriptorProviderRequestBus::Handler
-        , private SurfaceData::SurfaceDataTagEnumeratorRequestBus::Handler
+        , private JE::Geometry::SurfaceData::SurfaceDataTagEnumeratorRequestBus::Handler
         , private DescriptorNotificationBus::MultiHandler
     {
     public:
@@ -87,9 +87,9 @@ namespace Vegetation
         void GetDescriptors(DescriptorPtrVec& descriptors) const override;
 
         //////////////////////////////////////////////////////////////////////////
-        // SurfaceData::SurfaceDataTagEnumeratorRequestBus
-        void GetInclusionSurfaceTags(SurfaceData::SurfaceTagVector& tags, bool& includeAll) const override;
-        void GetExclusionSurfaceTags(SurfaceData::SurfaceTagVector& tags) const override;
+        // JE::Geometry::SurfaceData::SurfaceDataTagEnumeratorRequestBus
+        void GetInclusionSurfaceTags(JE::Geometry::SurfaceData::SurfaceTagVector& tags, bool& includeAll) const override;
+        void GetExclusionSurfaceTags(JE::Geometry::SurfaceData::SurfaceTagVector& tags) const override;
 
         //////////////////////////////////////////////////////////////////////////
         // AZ::Data::AssetBus::Handler

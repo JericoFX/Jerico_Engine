@@ -16,6 +16,9 @@
 /////////////////////////////////////////////////////////////////////////////
 
 #include <string>
+#include <AzCore/std/parallel/atomic.h>
+#include <AzCore/std/function/function_fwd.h>
+#include <JE/Assets/RenderBuilders/SceneProcessing/Rules/SurfaceIdentityRule.h>
 #include <AzFramework/StringFunc/StringFunc.h>
 #include <SceneAPI/SceneCore/Containers/Scene.h>
 #include <AzCore/std/string/string.h>
@@ -26,6 +29,7 @@
 #include <AssetImporter/SaveUtilities/AsyncSaveRunner.h>
 
 class QWidget;
+class QObject;
 
 namespace AZ
 {
@@ -56,10 +60,18 @@ public:
     void ClearScene();
 
     AZStd::shared_ptr<AZ::SceneAPI::Containers::Scene>& GetScene();
+    AZ::u64 GetEpoch() const { return m_epoch.load(); }
+    using SurfaceRule = JE::Assets::RenderBuilders::SceneProcessing::Rules::SurfaceIdentityRule;
+    using SurfaceIdentityChanged = AZStd::function<void(const AZ::SceneAPI::Containers::Scene&,
+        const AZ::SceneAPI::DataTypes::IMeshGroup&)>;
+    AZ::Outcome<bool, AZStd::string> ApplySurfaceIdentityChange(const AZ::Uuid& groupId,
+        const AZStd::optional<SurfaceRule>& proposed, QObject* owner, AZStd::function<bool()> ownerIsCurrent,
+        SurfaceIdentityChanged changed);
     
 protected:
     void SaveManifest();
 
+    AZStd::atomic<AZ::u64> m_epoch{0}; // LoadScene also runs on the existing import worker.
     AZStd::shared_ptr<AZ::SceneAPI::Containers::Scene> m_scene;
     AZStd::shared_ptr<AZ::AsyncSaveRunner> m_saveRunner;
 };

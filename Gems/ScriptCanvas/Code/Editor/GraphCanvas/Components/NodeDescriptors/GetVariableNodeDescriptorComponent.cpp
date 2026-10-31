@@ -8,8 +8,8 @@
 
 #include <AzCore/Component/ComponentApplicationBus.h>
 
-#include <GraphCanvas/Components/Connections/ConnectionBus.h>
-#include <GraphCanvas/Components/Nodes/NodeTitleBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/Connections/ConnectionBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/Nodes/NodeTitleBus.h>
 
 #include <Editor/GraphCanvas/Components/NodeDescriptors/GetVariableNodeDescriptorComponent.h>
 #include <Editor/Include/ScriptCanvas/Bus/RequestBus.h>
@@ -47,6 +47,6 @@ namespace ScriptCanvasEditor
     {
         AZStd::string titleName = AZStd::string::format("Get %s", variableName.data());
 
-        GraphCanvas::NodeTitleRequestBus::Event(GetEntityId(), &GraphCanvas::NodeTitleRequests::SetTitle, titleName);
+        JE::Editor::Tools::GraphCanvas::NodeTitleRequestBus::Event(GetEntityId(), &JE::Editor::Tools::GraphCanvas::NodeTitleRequests::SetTitle, titleName);
     }    
 }

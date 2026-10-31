@@ -13,7 +13,7 @@
 #include <AzCore/Serialization/SerializeContext.h>
 #include <AzFramework/Translation/TranslationDef.h>
 #include <LmbrCentral/Shape/ShapeComponentBus.h>
-#include <SurfaceData/SurfaceDataSystemRequestBus.h>
+#include <JE/Geometry/SurfaceData/SurfaceDataSystemRequestBus.h>
 #include <GradientSignal/Util.h>
 #include <LmbrCentral/Dependency/DependencyMonitor.h>
 
@@ -97,7 +97,7 @@ namespace GradientSignal
 
     void SurfaceAltitudeGradientConfig::AddTag(AZStd::string tag)
     {
-        m_surfaceTagsToSample.push_back(SurfaceData::SurfaceTag(tag));
+        m_surfaceTagsToSample.push_back(JE::Geometry::SurfaceData::SurfaceTag(tag));
     }
 
     void SurfaceAltitudeGradientComponent::GetProvidedServices(AZ::ComponentDescriptor::DependencyArrayType& services)
@@ -166,7 +166,7 @@ namespace GradientSignal
         LmbrCentral::DependencyNotificationBus::Handler::BusConnect(GetEntityId());
         AZ::TickBus::Handler::BusConnect();
         SurfaceAltitudeGradientRequestBus::Handler::BusConnect(GetEntityId());
-        SurfaceData::SurfaceDataSystemNotificationBus::Handler::BusConnect();
+        JE::Geometry::SurfaceData::SurfaceDataSystemNotificationBus::Handler::BusConnect();
         UpdateFromShape();
         m_dirty = false;
 
@@ -180,7 +180,7 @@ namespace GradientSignal
         GradientRequestBus::Handler::BusDisconnect();
 
         m_dependencyMonitor.Reset();
-        SurfaceData::SurfaceDataSystemNotificationBus::Handler::BusDisconnect();
+        JE::Geometry::SurfaceData::SurfaceDataSystemNotificationBus::Handler::BusDisconnect();
         LmbrCentral::DependencyNotificationBus::Handler::BusDisconnect();
         AZ::TickBus::Handler::BusDisconnect();
         SurfaceAltitudeGradientRequestBus::Handler::BusDisconnect();
@@ -231,8 +231,8 @@ namespace GradientSignal
 
         AZStd::shared_lock lock(m_queryMutex);
 
-        SurfaceData::SurfacePointList points;
-        AZ::Interface<SurfaceData::SurfaceDataSystem>::Get()->GetSurfacePointsFromList(
+        JE::Geometry::SurfaceData::SurfacePointList points;
+        AZ::Interface<JE::Geometry::SurfaceData::SurfaceDataSystem>::Get()->GetSurfacePointsFromList(
             positions, m_configuration.m_surfaceTagsToSample, points);
 
         // For each position, turn the height into a 0-1 value based on our min/max altitudes.
@@ -284,7 +284,7 @@ namespace GradientSignal
         [[maybe_unused]] const AZ::EntityId& entityId,
         [[maybe_unused]] const AZ::Aabb& oldBounds,
         [[maybe_unused]] const AZ::Aabb& newBounds,
-        [[maybe_unused]] const SurfaceData::SurfaceTagSet& changedSurfaceTags)
+        [[maybe_unused]] const JE::Geometry::SurfaceData::SurfaceTagSet& changedSurfaceTags)
     {
         /* The following logic is currently disabled until we can find a safer way to do this.
            The intent of the logic is to make the SurfaceAltitudeGradient refresh its data if the surface(s) that it depends on changes.

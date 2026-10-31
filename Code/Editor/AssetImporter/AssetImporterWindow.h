@@ -21,6 +21,7 @@
 #include <SceneAPI/SceneUI/CommonWidgets/SceneSettingsCard.h>
 #include <QFileSystemWatcher>
 #include <QMainWindow>
+#include <SceneAPI/SceneCore/Events/ManifestMetaInfoBus.h>
 
 
 namespace AzQtComponents
@@ -60,12 +61,16 @@ class AssetImporterDocument;
 class ImporterRootDisplayWidget;
 class QCloseEvent;
 class QMenu;
+class QComboBox;
+class QLineEdit;
+class QPushButton;
 class QAction;
 class QVBoxLayout;
 class QScrollArea;
 
 class AssetImporterWindow
     : public QMainWindow
+    , private AZ::SceneAPI::Events::ManifestMetaInfoBus::Handler
 {
     Q_OBJECT
 public:
@@ -97,6 +102,20 @@ public slots:
 
 private:
     void Init();
+    void GetAvailableModifiers(AZ::SceneAPI::Events::ManifestMetaInfo::ModifiersList& modifiers,
+        const AZ::SceneAPI::Containers::Scene& scene, const AZ::SceneAPI::DataTypes::IManifestObject& target) override;
+    void ChangeSurfaceIdentity(AZ::SceneAPI::DataTypes::IManifestObject* owner,
+        AZ::SceneAPI::DataTypes::IManifestObject* modifier, bool adding, bool& handled, bool& accepted);
+    void RefreshRegionEditor() const;
+    void SelectRegionEditorEntry() const;
+    void ApplyRegionEditor();
+    QWidget* m_regionPanel = nullptr;
+    QComboBox* m_regionGroup = nullptr;
+    QComboBox* m_regionSurface = nullptr;
+    QComboBox* m_regionChoice = nullptr;
+    QLineEdit* m_regionName = nullptr;
+    QPushButton* m_regionApply = nullptr;
+    AZ::u64 m_identityOwnerEpoch = 0;
     void OpenFileInternal(const AZStd::string& filePath);
     bool IsAllowedToChangeSourceFile();
     bool ShouldSaveBeforeClose();

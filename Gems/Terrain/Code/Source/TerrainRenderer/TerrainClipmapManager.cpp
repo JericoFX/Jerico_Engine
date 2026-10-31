@@ -823,21 +823,21 @@ namespace Terrain
 
     void TerrainClipmapManager::OnTerrainSurfaceMaterialMappingCreated(
         [[maybe_unused]] AZ::EntityId entityId,
-        [[maybe_unused]] SurfaceData::SurfaceTag surfaceTag,
+        [[maybe_unused]] JE::Geometry::SurfaceData::SurfaceTag surfaceTag,
         [[maybe_unused]] AZ::Data::Instance<JE::Render::RPI::Material> material)
     {
         TriggerFullRefresh();
     }
 
     void TerrainClipmapManager::OnTerrainSurfaceMaterialMappingDestroyed(
-        [[maybe_unused]] AZ::EntityId entityId, [[maybe_unused]] SurfaceData::SurfaceTag surfaceTag)
+        [[maybe_unused]] AZ::EntityId entityId, [[maybe_unused]] JE::Geometry::SurfaceData::SurfaceTag surfaceTag)
     {
         TriggerFullRefresh();
     }
 
     void TerrainClipmapManager::OnTerrainSurfaceMaterialMappingMaterialChanged(
         [[maybe_unused]] AZ::EntityId entityId,
-        [[maybe_unused]] SurfaceData::SurfaceTag surfaceTag,
+        [[maybe_unused]] JE::Geometry::SurfaceData::SurfaceTag surfaceTag,
         [[maybe_unused]] AZ::Data::Instance<JE::Render::RPI::Material> material)
     {
         TriggerFullRefresh();
@@ -845,8 +845,8 @@ namespace Terrain
 
     void TerrainClipmapManager::OnTerrainSurfaceMaterialMappingTagChanged(
         [[maybe_unused]] AZ::EntityId entityId,
-        [[maybe_unused]] SurfaceData::SurfaceTag oldSurfaceTag,
-        [[maybe_unused]] SurfaceData::SurfaceTag newSurfaceTag)
+        [[maybe_unused]] JE::Geometry::SurfaceData::SurfaceTag oldSurfaceTag,
+        [[maybe_unused]] JE::Geometry::SurfaceData::SurfaceTag newSurfaceTag)
     {
         TriggerFullRefresh();
     }

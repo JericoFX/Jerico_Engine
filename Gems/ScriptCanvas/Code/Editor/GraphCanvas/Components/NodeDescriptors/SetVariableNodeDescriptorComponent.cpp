@@ -8,7 +8,7 @@
 
 #include <AzCore/Component/ComponentApplicationBus.h>
 
-#include <GraphCanvas/Components/Nodes/NodeTitleBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/Nodes/NodeTitleBus.h>
 
 #include <Editor/GraphCanvas/Components/NodeDescriptors/SetVariableNodeDescriptorComponent.h>
 #include <Editor/Translation/TranslationHelper.h>
@@ -45,6 +45,6 @@ namespace ScriptCanvasEditor
     {
         AZStd::string titleName = AZStd::string::format("Set %s", variableName.data());
 
-        GraphCanvas::NodeTitleRequestBus::Event(GetEntityId(), &GraphCanvas::NodeTitleRequests::SetTitle, titleName);
+        JE::Editor::Tools::GraphCanvas::NodeTitleRequestBus::Event(GetEntityId(), &JE::Editor::Tools::GraphCanvas::NodeTitleRequests::SetTitle, titleName);
     }
 }

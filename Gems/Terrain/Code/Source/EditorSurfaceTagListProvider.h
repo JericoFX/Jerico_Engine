@@ -10,7 +10,7 @@
 #include <AzCore/std/containers/vector.h>
 #include <AzCore/std/string/string.h>
 #include <AzCore/std/containers/unordered_set.h>
-#include <SurfaceData/SurfaceTag.h>
+#include <JE/Geometry/SurfaceData/SurfaceTag.h>
 
 namespace Terrain
 {
@@ -19,11 +19,11 @@ namespace Terrain
     {
     public:
         //! Returns a set of all surface tags currently in use that won't be available for selecting.
-        virtual AZStd::unordered_set<SurfaceData::SurfaceTag> GetSurfaceTagsInUse() const = 0;
+        virtual AZStd::unordered_set<JE::Geometry::SurfaceData::SurfaceTag> GetSurfaceTagsInUse() const = 0;
     };
 
     //! Returns a list of available tags to be selected in the component.
     AZStd::vector<AZStd::pair<AZ::u32, AZStd::string>> BuildSelectableTagList(
         const EditorSurfaceTagListProvider* tagListProvider,
-        const SurfaceData::SurfaceTag& currentTag);
+        const JE::Geometry::SurfaceData::SurfaceTag& currentTag);
 }

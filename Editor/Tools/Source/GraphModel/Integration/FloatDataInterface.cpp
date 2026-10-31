@@ -28,8 +28,8 @@ namespace JE::Editor::Tools::GraphModel::Integration
         JE::Editor::Tools::GraphModel::SlotPtr slot = m_slot.lock();
         if (slot && slot->GetValue<float>() != static_cast<float>(value))
         {
-            const GraphCanvas::GraphId graphCanvasSceneId = GetDisplay()->GetSceneId();
-            GraphCanvas::ScopedGraphUndoBatch undoBatch(graphCanvasSceneId);
+            const JE::Editor::Tools::GraphCanvas::GraphId graphCanvasSceneId = GetDisplay()->GetSceneId();
+            JE::Editor::Tools::GraphCanvas::ScopedGraphUndoBatch undoBatch(graphCanvasSceneId);
 
             slot->SetValue(static_cast<float>(value));
             GraphControllerNotificationBus::Event(graphCanvasSceneId, &GraphControllerNotifications::OnGraphModelSlotModified, slot);

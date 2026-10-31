@@ -9,7 +9,7 @@
 #pragma once
 
 #include <AzCore/EBus/EBus.h>
-#include <GraphCanvas/Editor/EditorTypes.h>
+#include <JE/Editor/Tools/GraphCanvas/Editor/EditorTypes.h>
 #include <JE/Editor/Tools/GraphModel/Model/DataType.h>
 
 namespace JE::Editor::Tools
@@ -26,7 +26,7 @@ namespace JE::Editor::Tools
         virtual JE::Editor::Tools::GraphModel::GraphPtr GetGraph() const = 0;
 
         // Get the graph canvas scene ID for this document.
-        virtual GraphCanvas::GraphId GetGraphId() const = 0;
+        virtual JE::Editor::Tools::GraphCanvas::GraphId GetGraphId() const = 0;
 
         // Convert the document file name into one that can be used as a symbol.
         virtual AZStd::string GetGraphName() const = 0;

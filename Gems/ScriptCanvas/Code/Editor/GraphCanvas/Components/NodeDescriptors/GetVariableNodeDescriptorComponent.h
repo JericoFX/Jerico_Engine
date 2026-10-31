@@ -7,7 +7,7 @@
  */
 #pragma once
 
-#include <GraphCanvas/Components/Nodes/NodeBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/Nodes/NodeBus.h>
 #include <Editor/GraphCanvas/Components/NodeDescriptors/VariableNodeDescriptorComponent.h>
 
 #include <ScriptCanvas/Variable/VariableBus.h>

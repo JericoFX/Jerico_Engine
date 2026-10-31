@@ -9,8 +9,8 @@
 
 #include <AzCore/Component/Component.h>
 #include <Vegetation/Ebuses/FilterRequestBus.h>
-#include <SurfaceData/SurfaceDataTypes.h>
-#include <SurfaceData/SurfacePointList.h>
+#include <JE/Geometry/SurfaceData/SurfaceDataTypes.h>
+#include <JE/Geometry/SurfaceData/SurfacePointList.h>
 #include <Vegetation/Ebuses/SurfaceMaskDepthFilterRequestBus.h>
 #include <LmbrCentral/Dependency/DependencyMonitor.h>
 
@@ -39,7 +39,7 @@ namespace Vegetation
         bool m_allowOverrides = false;
         float m_lowerDistance = s_defaultLowerSurfaceDistance;
         float m_upperDistance = s_defaultUpperSurfaceDistance;
-        SurfaceData::SurfaceTagVector m_depthComparisonTags;
+        JE::Geometry::SurfaceData::SurfaceTagVector m_depthComparisonTags;
 
         size_t GetNumTags() const;
         AZ::Crc32 GetTag(int tagIndex) const;
@@ -105,6 +105,6 @@ namespace Vegetation
         LmbrCentral::DependencyMonitor m_dependencyMonitor;
 
         //point vector reserved for reuse
-        mutable SurfaceData::SurfacePointList m_points;
+        mutable JE::Geometry::SurfaceData::SurfacePointList m_points;
     };
 }

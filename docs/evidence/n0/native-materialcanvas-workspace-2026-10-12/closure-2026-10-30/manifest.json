@@ -1,0 +1,42 @@
+[
+  {
+    "path": "authoring-r2.json",
+    "bytes": 1474,
+    "sha256": "EF6C4F708CE507BF3B724C7D36F6B84459128A4772BC7CADC17C5D6D01F86C89"
+  },
+  {
+    "path": "bsp-r4.json",
+    "bytes": 2203,
+    "sha256": "B33A78FA5A07BC47536DDAF6E6798E6229FED17DEB1F190DEC09CA362539F67C"
+  },
+  {
+    "path": "installed-consumer-r3.json",
+    "bytes": 1444,
+    "sha256": "9067FADC91FA28A58D1F204AEBD1D9B911F55A6CDA58A58BD9D8E17857F84848"
+  },
+  {
+    "path": "material-graph-preview.png",
+    "bytes": 188127,
+    "sha256": "30DE71AFF28758CFDEA31F23A484FB2C1A09B14B8360261EE1997341E1C915FF"
+  },
+  {
+    "path": "preview-gui4.json",
+    "bytes": 2789,
+    "sha256": "F1B4393A0E96824BE297FCD1CA457964BA7E7B50F52FB0E60DA8A395FFEA5D64"
+  },
+  {
+    "path": "runtime-native-result.json",
+    "bytes": 733,
+    "sha256": "C7F831DA7B864714BE219C3309A798B89A908946139C3439FCC77D805AF6BA16"
+  },
+  {
+    "path": "runtime-parent-review.json",
+    "bytes": 1246,
+    "sha256": "65FCFAFC314E622CC239FE188D566014B7C4205C00C3FC3FE1C8496DEDC5BDD1"
+  },
+  {
+    "path": "runtime-postflight.json",
+    "bytes": 168,
+    "sha256": "ABD7F7545BB3D6F7153E366C5794C8461F62B57278C8F2D93E02A0B4C103BC40"
+  }
+]

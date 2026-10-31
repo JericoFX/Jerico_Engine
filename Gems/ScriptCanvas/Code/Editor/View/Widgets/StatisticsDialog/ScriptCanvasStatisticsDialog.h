@@ -20,8 +20,8 @@
 
 #include <AzQtComponents/Components/StyledDockWidget.h>
 
-#include <GraphCanvas/Widgets/GraphCanvasTreeModel.h>
-#include <GraphCanvas/Widgets/GraphCanvasTreeItem.h>
+#include <JE/Editor/Tools/GraphCanvas/Widgets/GraphCanvasTreeModel.h>
+#include <JE/Editor/Tools/GraphCanvas/Widgets/GraphCanvasTreeItem.h>
 
 #include <Editor/View/Widgets/NodePalette/NodePaletteModel.h>
 #include <Editor/View/Widgets/StatisticsDialog/NodeUsageTreeItem.h>
@@ -92,7 +92,7 @@ namespace ScriptCanvasEditor
 
     public slots:
         void OnSelectionCleared();
-        void OnItemSelected(const GraphCanvas::GraphCanvasTreeItem* treeItem);
+        void OnItemSelected(const JE::Editor::Tools::GraphCanvas::GraphCanvasTreeItem* treeItem);
 
         void OnFilterUpdated(const QString& filterText);
         void OnScriptCanvasAssetRowsInserted(QModelIndex modelIndex, int first, int last);
@@ -110,9 +110,9 @@ namespace ScriptCanvasEditor
         AzToolsFramework::AssetBrowser::AssetBrowserFilterModel*     m_scriptCanvasAssetBrowserModel;
 
         ScriptCanvasAssetNodeUsageTreeItemRoot* m_scriptCanvasAssetTreeRoot;
-        GraphCanvas::GraphCanvasTreeModel* m_scriptCanvasAssetTree;
+        JE::Editor::Tools::GraphCanvas::GraphCanvasTreeModel* m_scriptCanvasAssetTree;
         ScriptCanvasAssetNodeUsageFilterModel* m_scriptCanvasAssetFilterModel;
 
-        AZStd::unordered_map< ScriptCanvas::NodeTypeIdentifier, GraphCanvas::GraphCanvasTreeItem* > m_leafMap;
+        AZStd::unordered_map< ScriptCanvas::NodeTypeIdentifier, JE::Editor::Tools::GraphCanvas::GraphCanvasTreeItem* > m_leafMap;
     };
 }

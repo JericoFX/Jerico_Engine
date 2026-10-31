@@ -13,10 +13,10 @@
 #include <AzCore/Serialization/EditContext.h>
 #include <AzCore/Serialization/SerializeContext.h>
 #include <AzFramework/Translation/TranslationDef.h>
-#include <SurfaceData/SurfaceDataSystemRequestBus.h>
-#include <SurfaceData/SurfaceTag.h>
-#include <SurfaceData/Utility/SurfaceDataUtility.h>
-#include <SurfaceData/SurfaceDataTagProviderRequestBus.h>
+#include <JE/Geometry/SurfaceData/SurfaceDataSystemRequestBus.h>
+#include <JE/Geometry/SurfaceData/SurfaceTag.h>
+#include <JE/Geometry/SurfaceData/Utility/SurfaceDataUtility.h>
+#include <JE/Geometry/SurfaceData/SurfaceDataTagProviderRequestBus.h>
 
 namespace Terrain
 {
@@ -100,23 +100,23 @@ namespace Terrain
 
     void TerrainSurfaceDataSystemComponent::Activate()
     {
-        m_providerHandle = SurfaceData::InvalidSurfaceDataRegistryHandle;
+        m_providerHandle = JE::Geometry::SurfaceData::InvalidSurfaceDataRegistryHandle;
         AzFramework::Terrain::TerrainDataNotificationBus::Handler::BusConnect();
-        SurfaceData::SurfaceDataTagProviderRequestBus::Handler::BusConnect();
+        JE::Geometry::SurfaceData::SurfaceDataTagProviderRequestBus::Handler::BusConnect();
 
         UpdateTerrainData(AZ::Aabb::CreateNull());
     }
 
     void TerrainSurfaceDataSystemComponent::Deactivate()
     {
-        if (m_providerHandle != SurfaceData::InvalidSurfaceDataRegistryHandle)
+        if (m_providerHandle != JE::Geometry::SurfaceData::InvalidSurfaceDataRegistryHandle)
         {
-            AZ::Interface<SurfaceData::SurfaceDataSystem>::Get()->UnregisterSurfaceDataProvider(m_providerHandle);
-            m_providerHandle = SurfaceData::InvalidSurfaceDataRegistryHandle;
+            AZ::Interface<JE::Geometry::SurfaceData::SurfaceDataSystem>::Get()->UnregisterSurfaceDataProvider(m_providerHandle);
+            m_providerHandle = JE::Geometry::SurfaceData::InvalidSurfaceDataRegistryHandle;
         }
 
-        SurfaceData::SurfaceDataProviderRequestBus::Handler::BusDisconnect();
-        SurfaceData::SurfaceDataTagProviderRequestBus::Handler::BusDisconnect();
+        JE::Geometry::SurfaceData::SurfaceDataProviderRequestBus::Handler::BusDisconnect();
+        JE::Geometry::SurfaceData::SurfaceDataTagProviderRequestBus::Handler::BusDisconnect();
         AzFramework::Terrain::TerrainDataNotificationBus::Handler::BusDisconnect();
 
         // Clear the cached terrain bounds data
@@ -147,13 +147,13 @@ namespace Terrain
     }
 
     void TerrainSurfaceDataSystemComponent::GetSurfacePoints(
-        const AZ::Vector3& inPosition, SurfaceData::SurfacePointList& surfacePointList) const
+        const AZ::Vector3& inPosition, JE::Geometry::SurfaceData::SurfacePointList& surfacePointList) const
     {
         GetSurfacePointsFromList(AZStd::span<const AZ::Vector3>(&inPosition, 1), surfacePointList);
     }
 
     void TerrainSurfaceDataSystemComponent::GetSurfacePointsFromList(
-        AZStd::span<const AZ::Vector3> inPositions, SurfaceData::SurfacePointList& surfacePointList) const
+        AZStd::span<const AZ::Vector3> inPositions, JE::Geometry::SurfaceData::SurfacePointList& surfacePointList) const
     {
         if (!m_terrainBoundsIsValid)
         {
@@ -170,7 +170,7 @@ namespace Terrain
             {
                 AZ_Assert(inPositionIndex < inPositions.size(), "Too many points returned from QueryList");
 
-                SurfaceData::SurfaceTagWeights weights(surfacePoint.m_surfaceTags);
+                JE::Geometry::SurfaceData::SurfaceTagWeights weights(surfacePoint.m_surfaceTags);
 
                 // Always add a "terrain" or "terrainHole" tag.
                 const AZ::Crc32 terrainTag = terrainExists ? Constants::s_terrainTagCrc : Constants::s_terrainHoleTagCrc;
@@ -191,9 +191,9 @@ namespace Terrain
         return terrain ? terrain->GetTerrainAabb() : AZ::Aabb::CreateNull();
     }
 
-    SurfaceData::SurfaceTagVector TerrainSurfaceDataSystemComponent::GetSurfaceTags() const
+    JE::Geometry::SurfaceData::SurfaceTagVector TerrainSurfaceDataSystemComponent::GetSurfaceTags() const
     {
-        SurfaceData::SurfaceTagVector tags;
+        JE::Geometry::SurfaceData::SurfaceTagVector tags;
         tags.emplace_back(Constants::s_terrainHoleTagCrc);
         tags.emplace_back(Constants::s_terrainTagCrc);
         return tags;
@@ -205,7 +205,7 @@ namespace Terrain
         bool terrainValidAfterUpdate = false;
         AZ::Aabb terrainBoundsBeforeUpdate = m_terrainBounds;
 
-        SurfaceData::SurfaceDataRegistryEntry registryEntry;
+        JE::Geometry::SurfaceData::SurfaceDataRegistryEntry registryEntry;
         registryEntry.m_entityId = GetEntityId();
         registryEntry.m_bounds = GetSurfaceAabb();
         registryEntry.m_tags = GetSurfaceTags();
@@ -218,39 +218,39 @@ namespace Terrain
 
         if (terrainValidBeforeUpdate && terrainValidAfterUpdate)
         {
-            AZ_Assert((m_providerHandle != SurfaceData::InvalidSurfaceDataRegistryHandle), "Invalid surface data handle");
+            AZ_Assert((m_providerHandle != JE::Geometry::SurfaceData::InvalidSurfaceDataRegistryHandle), "Invalid surface data handle");
 
             // Our terrain was valid before and after, it just changed in some way.  If we have a valid dirty region, and the terrain
             // bounds themselves haven't changed, just notify that our terrain data has changed within the bounds.  Otherwise, notify
             // that the entire terrain provider needs to be updated, since it either has new bounds or the entire set of data is dirty.
             if (dirtyRegion.IsValid() && m_terrainBounds.IsClose(terrainBoundsBeforeUpdate))
             {
-                AZ::Interface<SurfaceData::SurfaceDataSystem>::Get()->RefreshSurfaceData(m_providerHandle, dirtyRegion);
+                AZ::Interface<JE::Geometry::SurfaceData::SurfaceDataSystem>::Get()->RefreshSurfaceData(m_providerHandle, dirtyRegion);
             }
             else
             {
-                AZ::Interface<SurfaceData::SurfaceDataSystem>::Get()->UpdateSurfaceDataProvider(m_providerHandle, registryEntry);
+                AZ::Interface<JE::Geometry::SurfaceData::SurfaceDataSystem>::Get()->UpdateSurfaceDataProvider(m_providerHandle, registryEntry);
             }
         }
         else if (!terrainValidBeforeUpdate && terrainValidAfterUpdate)
         {
             // Our terrain has become valid, so register as a provider and save off the registry handles
             AZ_Assert(
-                (m_providerHandle == SurfaceData::InvalidSurfaceDataRegistryHandle),
+                (m_providerHandle == JE::Geometry::SurfaceData::InvalidSurfaceDataRegistryHandle),
                 "Surface Provider data handle is initialized before our terrain became valid");
-            m_providerHandle = AZ::Interface<SurfaceData::SurfaceDataSystem>::Get()->RegisterSurfaceDataProvider(registryEntry);
+            m_providerHandle = AZ::Interface<JE::Geometry::SurfaceData::SurfaceDataSystem>::Get()->RegisterSurfaceDataProvider(registryEntry);
 
             // Start listening for surface data events
-            AZ_Assert((m_providerHandle != SurfaceData::InvalidSurfaceDataRegistryHandle), "Invalid surface data handle");
-            SurfaceData::SurfaceDataProviderRequestBus::Handler::BusConnect(m_providerHandle);
+            AZ_Assert((m_providerHandle != JE::Geometry::SurfaceData::InvalidSurfaceDataRegistryHandle), "Invalid surface data handle");
+            JE::Geometry::SurfaceData::SurfaceDataProviderRequestBus::Handler::BusConnect(m_providerHandle);
         }
         else if (terrainValidBeforeUpdate && !terrainValidAfterUpdate)
         {
             // Our terrain has stopped being valid, so unregister and stop listening for surface data events
-            AZ_Assert((m_providerHandle != SurfaceData::InvalidSurfaceDataRegistryHandle), "Invalid surface data handle");
-            AZ::Interface<SurfaceData::SurfaceDataSystem>::Get()->UnregisterSurfaceDataProvider(m_providerHandle);
-            m_providerHandle = SurfaceData::InvalidSurfaceDataRegistryHandle;
-            SurfaceData::SurfaceDataProviderRequestBus::Handler::BusDisconnect();
+            AZ_Assert((m_providerHandle != JE::Geometry::SurfaceData::InvalidSurfaceDataRegistryHandle), "Invalid surface data handle");
+            AZ::Interface<JE::Geometry::SurfaceData::SurfaceDataSystem>::Get()->UnregisterSurfaceDataProvider(m_providerHandle);
+            m_providerHandle = JE::Geometry::SurfaceData::InvalidSurfaceDataRegistryHandle;
+            JE::Geometry::SurfaceData::SurfaceDataProviderRequestBus::Handler::BusDisconnect();
         }
         else
         {
@@ -265,7 +265,7 @@ namespace Terrain
         UpdateTerrainData(dirtyRegion);
     }
 
-    void TerrainSurfaceDataSystemComponent::GetRegisteredSurfaceTagNames(SurfaceData::SurfaceTagNameSet& names) const
+    void TerrainSurfaceDataSystemComponent::GetRegisteredSurfaceTagNames(JE::Geometry::SurfaceData::SurfaceTagNameSet& names) const
     {
         names.insert(Constants::s_terrainHoleTagName);
         names.insert(Constants::s_terrainTagName);

@@ -14,7 +14,7 @@
 #include <AzFramework/Terrain/TerrainDataRequestBus.h>
 #include <LmbrCentral/Dependency/DependencyMonitor.h>
 #include <LmbrCentral/Dependency/DependencyNotificationBus.h>
-#include <SurfaceData/SurfaceDataTypes.h>
+#include <JE/Geometry/SurfaceData/SurfaceDataTypes.h>
 
 #include <Terrain/Ebuses/TerrainAreaSurfaceRequestBus.h>
 
@@ -36,7 +36,7 @@ namespace Terrain
         static void Reflect(AZ::ReflectContext* context);
 
         TerrainSurfaceGradientMapping() = default;
-        TerrainSurfaceGradientMapping(const AZ::EntityId& entityId, const SurfaceData::SurfaceTag& surfaceTag)
+        TerrainSurfaceGradientMapping(const AZ::EntityId& entityId, const JE::Geometry::SurfaceData::SurfaceTag& surfaceTag)
             : m_gradientEntityId(entityId)
             , m_surfaceTag(surfaceTag)
         {
@@ -46,7 +46,7 @@ namespace Terrain
         void SetTagListProvider(const EditorSurfaceTagListProvider* tagListProvider);
 
         AZ::EntityId m_gradientEntityId;
-        SurfaceData::SurfaceTag m_surfaceTag;
+        JE::Geometry::SurfaceData::SurfaceTag m_surfaceTag;
 
     private:
         const EditorSurfaceTagListProvider* m_tagListProvider = nullptr;

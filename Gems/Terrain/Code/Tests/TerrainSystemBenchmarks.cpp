@@ -24,7 +24,7 @@
 #include <GradientSignal/Components/GradientTransformComponent.h>
 #include <GradientSignal/Ebuses/GradientRequestBus.h>
 
-#include <SurfaceData/SurfaceDataTypes.h>
+#include <JE/Geometry/SurfaceData/SurfaceDataTypes.h>
 
 #include <LmbrCentral/Shape/ShapeComponentBus.h>
 #include <MockAxisAlignedBoxShapeComponent.h>

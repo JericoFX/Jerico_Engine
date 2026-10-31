@@ -13,12 +13,12 @@
 #include <Editor/GraphCanvas/GraphCanvasEditorNotificationBusId.h>
 #include <Editor/Nodes/NodeCreateUtils.h>
 #include <Editor/View/Widgets/NodePalette/FunctionNodePaletteTreeItemTypes.h>
-#include <GraphCanvas/Components/GridBus.h>
-#include <GraphCanvas/Components/Nodes/Wrapper/WrapperNodeBus.h>
-#include <GraphCanvas/Components/SceneBus.h>
-#include <GraphCanvas/Components/StyleBus.h>
-#include <GraphCanvas/Components/VisualBus.h>
-#include <GraphCanvas/Widgets/GraphCanvasGraphicsView/GraphCanvasGraphicsView.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/GridBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/Nodes/Wrapper/WrapperNodeBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/SceneBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/StyleBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/VisualBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Widgets/GraphCanvasGraphicsView/GraphCanvasGraphicsView.h>
 #include <ScriptCanvas/Bus/EditorScriptCanvasBus.h>
 #include <ScriptCanvas/Bus/RequestBus.h>
 #include <ScriptCanvas/Core/SubgraphInterfaceUtility.h>
@@ -50,7 +50,7 @@ namespace ScriptCanvasEditor
     {
     }
 
-    bool CreateFunctionMimeEvent::CanGraphHandleEvent([[maybe_unused]] const GraphCanvas::GraphId& graphId) const
+    bool CreateFunctionMimeEvent::CanGraphHandleEvent([[maybe_unused]] const JE::Editor::Tools::GraphCanvas::GraphId& graphId) const
     {
         return true;
     }
@@ -65,7 +65,7 @@ namespace ScriptCanvasEditor
     /////////////////////////////////////
 
     FunctionPaletteTreeItem::FunctionPaletteTreeItem(const char* name, const ScriptCanvas::Grammar::FunctionSourceId& sourceId, AZ::Data::Asset<AZ::Data::AssetData> asset)
-        : GraphCanvas::DraggableNodePaletteTreeItem(name, ScriptCanvasEditor::AssetEditorId)
+        : JE::Editor::Tools::GraphCanvas::DraggableNodePaletteTreeItem(name, ScriptCanvasEditor::AssetEditorId)
         , m_editIcon(":/ScriptCanvasEditorResources/Resources/edit_icon.png")
         , m_sourceId(sourceId)
         , m_asset(asset)
@@ -75,7 +75,7 @@ namespace ScriptCanvasEditor
         SetTitlePalette("FunctionNodeTitlePalette");
     }
 
-    GraphCanvas::GraphCanvasMimeEvent* FunctionPaletteTreeItem::CreateMimeEvent() const
+    JE::Editor::Tools::GraphCanvas::GraphCanvasMimeEvent* FunctionPaletteTreeItem::CreateMimeEvent() const
     {
         return aznew CreateFunctionMimeEvent(m_asset->GetId(), m_asset->GetType(), m_sourceId);
     }
@@ -97,7 +97,7 @@ namespace ScriptCanvasEditor
             }
         }
 
-        return GraphCanvas::DraggableNodePaletteTreeItem::OnData(index, role);
+        return JE::Editor::Tools::GraphCanvas::DraggableNodePaletteTreeItem::OnData(index, role);
     }
 
     ScriptCanvas::Grammar::FunctionSourceId FunctionPaletteTreeItem::GetFunctionSourceId() const

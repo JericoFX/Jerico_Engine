@@ -31,7 +31,7 @@
 #include <Editor/View/Dialogs/SettingsDialog.h>
 #include <Editor/View/Widgets/SourceHandlePropertyAssetCtrl.h>
 #include <Editor/View/Windows/MainWindow.h>
-#include <GraphCanvas/GraphCanvasBus.h>
+#include <JE/Editor/Tools/GraphCanvas/GraphCanvasBus.h>
 #include <QDir>
 #include <QFileInfo>
 #include <QMenu>
@@ -110,7 +110,7 @@ namespace ScriptCanvasEditor
     void SystemComponent::GetRequiredServices(AZ::ComponentDescriptor::DependencyArrayType& required)
     {
         required.push_back(AZ_CRC_CE("ScriptCanvasService"));
-        required.push_back(GraphCanvas::GraphCanvasRequestsServiceId);
+        required.push_back(JE::Editor::Tools::GraphCanvas::GraphCanvasRequestsServiceId);
         required.push_back(AZ_CRC_CE("ScriptCanvasReflectService"));
     }
 

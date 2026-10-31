@@ -9,7 +9,7 @@
 #include <AzCore/Serialization/SerializeContext.h>
 #include <AzCore/std/any.h>
 
-#include <GraphCanvas/Components/Nodes/NodeBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/Nodes/NodeBus.h>
 
 #include <ScriptCanvas/Core/Slot.h>
 #include <ScriptCanvas/GraphCanvas/NodeDescriptorBus.h>
@@ -38,12 +38,12 @@ namespace ScriptCanvasEditor
     }
 
     DynamicSlotComponent::DynamicSlotComponent()
-        : m_slotGroup(GraphCanvas::SlotGroups::Invalid)
+        : m_slotGroup(JE::Editor::Tools::GraphCanvas::SlotGroups::Invalid)
         , m_queueUpdates(false)
     {
     }
 
-    DynamicSlotComponent::DynamicSlotComponent(GraphCanvas::SlotGroup slotGroup)
+    DynamicSlotComponent::DynamicSlotComponent(JE::Editor::Tools::GraphCanvas::SlotGroup slotGroup)
         : m_slotGroup(slotGroup)
         , m_queueUpdates(false)
     {
@@ -55,19 +55,19 @@ namespace ScriptCanvasEditor
 
     void DynamicSlotComponent::Activate()
     {
-        GraphCanvas::SceneMemberNotificationBus::Handler::BusConnect(GetEntityId());
+        JE::Editor::Tools::GraphCanvas::SceneMemberNotificationBus::Handler::BusConnect(GetEntityId());
         DynamicSlotRequestBus::Handler::BusConnect(GetEntityId());
     }
 
     void DynamicSlotComponent::Deactivate()
     {
-        GraphCanvas::SceneMemberNotificationBus::Handler::BusDisconnect();
+        JE::Editor::Tools::GraphCanvas::SceneMemberNotificationBus::Handler::BusDisconnect();
     }
 
     void DynamicSlotComponent::OnSceneSet(const AZ::EntityId&)
     {
         OnUserDataChanged();
-        GraphCanvas::SceneMemberNotificationBus::Handler::BusDisconnect();
+        JE::Editor::Tools::GraphCanvas::SceneMemberNotificationBus::Handler::BusDisconnect();
     }
 
     void DynamicSlotComponent::OnSlotAdded(const ScriptCanvas::SlotId& slotId)
@@ -108,12 +108,12 @@ namespace ScriptCanvasEditor
         }
 
         AZStd::vector< AZ::EntityId > slotIds;
-        GraphCanvas::NodeRequestBus::EventResult(slotIds, GetEntityId(), &GraphCanvas::NodeRequests::GetSlotIds);
+        JE::Editor::Tools::GraphCanvas::NodeRequestBus::EventResult(slotIds, GetEntityId(), &JE::Editor::Tools::GraphCanvas::NodeRequests::GetSlotIds);
 
         for (AZ::EntityId entityId : slotIds)
         {
             AZStd::any* userData = nullptr;
-            GraphCanvas::SlotRequestBus::EventResult(userData, entityId, &GraphCanvas::SlotRequests::GetUserData);
+            JE::Editor::Tools::GraphCanvas::SlotRequestBus::EventResult(userData, entityId, &JE::Editor::Tools::GraphCanvas::SlotRequests::GetUserData);
 
             if (userData)
             {
@@ -121,7 +121,7 @@ namespace ScriptCanvasEditor
 
                 if (testId && (*testId) == slotId)
                 {
-                    GraphCanvas::NodeRequestBus::Event(GetEntityId(), &GraphCanvas::NodeRequests::RemoveSlot, entityId);
+                    JE::Editor::Tools::GraphCanvas::NodeRequestBus::Event(GetEntityId(), &JE::Editor::Tools::GraphCanvas::NodeRequests::RemoveSlot, entityId);
                 }
             }
         }
@@ -130,7 +130,7 @@ namespace ScriptCanvasEditor
     void DynamicSlotComponent::OnUserDataChanged()
     {
         AZStd::any* userData = nullptr;
-        GraphCanvas::NodeRequestBus::EventResult(userData, GetEntityId(), &GraphCanvas::NodeRequests::GetUserData);
+        JE::Editor::Tools::GraphCanvas::NodeRequestBus::EventResult(userData, GetEntityId(), &JE::Editor::Tools::GraphCanvas::NodeRequests::GetUserData);
 
         if (userData)
         {
@@ -170,7 +170,7 @@ namespace ScriptCanvasEditor
         }
     }
 
-    void DynamicSlotComponent::ConfigureGraphCanvasSlot(const ScriptCanvas::Slot* slot, const GraphCanvas::SlotId& graphCanvasSlotId)
+    void DynamicSlotComponent::ConfigureGraphCanvasSlot(const ScriptCanvas::Slot* slot, const JE::Editor::Tools::GraphCanvas::SlotId& graphCanvasSlotId)
     {
         // By default no further configuration is necessary
         AZ_UNUSED(slot);

@@ -11,8 +11,8 @@
 #include <AzCore/std/smart_ptr/make_shared.h>
 
 // Graph Canvas
-#include <GraphCanvas/Widgets/NodePalette/TreeItems/DraggableNodePaletteTreeItem.h>
-#include <GraphCanvas/Widgets/GraphCanvasMimeEvent.h>
+#include <JE/Editor/Tools/GraphCanvas/Widgets/NodePalette/TreeItems/DraggableNodePaletteTreeItem.h>
+#include <JE/Editor/Tools/GraphCanvas/Widgets/GraphCanvasMimeEvent.h>
 
 // Graph Model
 #include <JE/Editor/Tools/GraphModel/GraphModelBus.h>
@@ -26,7 +26,7 @@ namespace JE::Editor::Tools::GraphModel::Integration
     //! Provides a common interface for instantiating InputGraphNode and OutputGraphNode through the Node Palette
     template<typename NodeType>
     class InputOutputNodePaletteItem
-        : public GraphCanvas::DraggableNodePaletteTreeItem
+        : public JE::Editor::Tools::GraphCanvas::DraggableNodePaletteTreeItem
     {
     public:
         AZ_CLASS_ALLOCATOR(InputOutputNodePaletteItem, AZ::SystemAllocator);
@@ -35,13 +35,13 @@ namespace JE::Editor::Tools::GraphModel::Integration
         //! \param nodeName Name of the node that will show up in the Palette
         //! \param editorId Unique name of the client system editor (ex: AZ_CRC_CE("ShaderCanvas"))
         //! \param dataType The type of data that the InputGraphNode or OutputGraphNode will represent
-        InputOutputNodePaletteItem(AZStd::string_view nodeName, GraphCanvas::EditorId editorId, JE::Editor::Tools::GraphModel::DataTypePtr dataType)
+        InputOutputNodePaletteItem(AZStd::string_view nodeName, JE::Editor::Tools::GraphCanvas::EditorId editorId, JE::Editor::Tools::GraphModel::DataTypePtr dataType)
             : DraggableNodePaletteTreeItem(nodeName, editorId)
             , m_dataType(dataType)
         {}
         ~InputOutputNodePaletteItem() = default;
 
-        GraphCanvas::GraphCanvasMimeEvent* CreateMimeEvent() const override
+        JE::Editor::Tools::GraphCanvas::GraphCanvasMimeEvent* CreateMimeEvent() const override
         {
             return aznew CreateInputOutputNodeMimeEvent<NodeType>(m_dataType);
         }
@@ -53,10 +53,10 @@ namespace JE::Editor::Tools::GraphModel::Integration
 
     template<typename NodeType>
     class CreateInputOutputNodeMimeEvent
-        : public GraphCanvas::GraphCanvasMimeEvent
+        : public JE::Editor::Tools::GraphCanvas::GraphCanvasMimeEvent
     {
     public:
-        AZ_RTTI((CreateInputOutputNodeMimeEvent, "{16BED069-A386-4E5C-8A5A-0827121991E7}", NodeType), GraphCanvas::GraphCanvasMimeEvent);
+        AZ_RTTI((CreateInputOutputNodeMimeEvent, "{16BED069-A386-4E5C-8A5A-0827121991E7}", NodeType), JE::Editor::Tools::GraphCanvas::GraphCanvasMimeEvent);
         AZ_CLASS_ALLOCATOR(CreateInputOutputNodeMimeEvent, AZ::SystemAllocator);
 
         static void Reflect(AZ::ReflectContext* reflectContext)
@@ -65,7 +65,7 @@ namespace JE::Editor::Tools::GraphModel::Integration
 
             if (serializeContext)
             {
-                serializeContext->Class<CreateInputOutputNodeMimeEvent, GraphCanvas::GraphCanvasMimeEvent>()
+                serializeContext->Class<CreateInputOutputNodeMimeEvent, JE::Editor::Tools::GraphCanvas::GraphCanvasMimeEvent>()
                     ->Version(0)
                     ->Field("m_dataType", &CreateInputOutputNodeMimeEvent::m_dataType)
                     ;

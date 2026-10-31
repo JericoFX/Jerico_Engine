@@ -12,7 +12,7 @@
 #include <AzCore/EBus/EBus.h>
 
 // Graph Canvas
-#include <GraphCanvas/Editor/EditorTypes.h>
+#include <JE/Editor/Tools/GraphCanvas/Editor/EditorTypes.h>
 
 namespace JE::Editor::Tools::GraphModel::Integration
 {
@@ -25,10 +25,10 @@ namespace JE::Editor::Tools::GraphModel::Integration
         static const AZ::EBusAddressPolicy AddressPolicy = AZ::EBusAddressPolicy::Single;
 
         //! Return the Graph Canvas EntityId for whichever Graph Canvas scene is active in the Editor
-        virtual GraphCanvas::GraphId GetActiveGraphCanvasSceneId() const = 0;
+        virtual JE::Editor::Tools::GraphCanvas::GraphId GetActiveGraphCanvasSceneId() const = 0;
         
         //! Notifies the client node graph system that the graph data has changed
-        virtual void SignalSceneDirty(GraphCanvas::GraphId graphCanvasSceneId) = 0;
+        virtual void SignalSceneDirty(JE::Editor::Tools::GraphCanvas::GraphId graphCanvasSceneId) = 0;
     };
 
     using IntegrationBus = AZ::EBus<IntegrationBusInterface>;

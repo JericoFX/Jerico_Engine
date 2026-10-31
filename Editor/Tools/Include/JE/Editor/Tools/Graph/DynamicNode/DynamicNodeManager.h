@@ -36,7 +36,7 @@ namespace JE::Editor::Tools
         bool RegisterConfig(const DynamicNodeConfig& config) override;
         DynamicNodeConfig GetConfigById(const AZ::Uuid& configId) const override;
         void Clear() override;
-        GraphCanvas::GraphCanvasTreeItem* CreateNodePaletteTree() const override;
+        JE::Editor::Tools::GraphCanvas::GraphCanvasTreeItem* CreateNodePaletteTree() const override;
         JE::Editor::Tools::GraphModel::NodePtr CreateNodeById(JE::Editor::Tools::GraphModel::GraphPtr graph, const AZ::Uuid& configId) override;
         JE::Editor::Tools::GraphModel::NodePtr CreateNodeByName(JE::Editor::Tools::GraphModel::GraphPtr graph, const AZStd::string& name) override;
         void RegisterEditDataForSetting(const AZStd::string& settingName, const AZ::Edit::ElementData& editData) override;

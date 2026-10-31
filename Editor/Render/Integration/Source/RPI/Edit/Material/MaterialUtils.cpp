@@ -23,6 +23,7 @@
 #include <AzCore/Serialization/Json/JsonSerializationResult.h>
 #include <AzCore/Serialization/Json/JsonImporter.h>
 #include <AzCore/Settings/SettingsRegistry.h>
+#include <AzCore/Settings/SettingsRegistryMergeUtils.h>
 
 #include <AzCore/Utils/Utils.h>
 #include <AzCore/std/string/regex.h>
@@ -346,8 +347,16 @@ namespace JE::Render
                 AZStd::string intermediatePathString = intermediatePath.Native();
                 AZStd::to_lower(intermediatePathString.begin(), intermediatePathString.end());
 
-                AZ::IO::Path intermediateMaterialTypePath = AZ::Utils::GetProjectPath().c_str();
-                intermediateMaterialTypePath /= "Cache";
+                AZ::SettingsRegistryInterface::FixedValueString projectCacheRoot;
+                auto* registry = AZ::SettingsRegistry::Get();
+                if (!registry ||
+                    !registry->Get(projectCacheRoot, AZ::SettingsRegistryMergeUtils::FilePathKey_CacheProjectRootFolder) ||
+                    projectCacheRoot.empty())
+                {
+                    return {};
+                }
+
+                AZ::IO::Path intermediateMaterialTypePath(projectCacheRoot.c_str());
                 intermediateMaterialTypePath /= "Intermediate Assets";
                 intermediateMaterialTypePath /= intermediatePathString;
                 return intermediateMaterialTypePath.LexicallyNormal().String();

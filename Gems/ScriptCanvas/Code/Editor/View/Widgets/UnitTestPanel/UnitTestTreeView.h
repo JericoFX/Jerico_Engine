@@ -21,7 +21,7 @@
 
 #include <AzToolsFramework/AssetBrowser/AssetBrowserEntry.h>
 #include <AzToolsFramework/UI/UICore/QTreeViewStateSaver.hxx>
-#include <GraphCanvas/Widgets/StyledItemDelegates/IconDecoratedNameDelegate.h>
+#include <JE/Editor/Tools/GraphCanvas/Widgets/StyledItemDelegates/IconDecoratedNameDelegate.h>
 #include <AzToolsFramework/AssetBrowser/Search/Filter.h>
 
 namespace AzToolsFramework

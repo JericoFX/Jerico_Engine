@@ -19,8 +19,8 @@
 
 #include <Atom/Utils/MaterialUtils.h>
 
-#include <SurfaceData/SurfaceDataSystemRequestBus.h>
-#include <SurfaceData/Utility/SurfaceDataUtility.h>
+#include <JE/Geometry/SurfaceData/SurfaceDataSystemRequestBus.h>
+#include <JE/Geometry/SurfaceData/Utility/SurfaceDataUtility.h>
 
 namespace Terrain
 {
@@ -327,7 +327,7 @@ namespace Terrain
     }
 
     bool TerrainDetailMaterialManager::ForSurfaceTag(DetailMaterialListRegion& materialRegion,
-        SurfaceData::SurfaceTag surfaceTag, DefaultMaterialSurfaceCallback callback)
+        JE::Geometry::SurfaceData::SurfaceTag surfaceTag, DefaultMaterialSurfaceCallback callback)
     {
         for (DetailMaterialSurface& surface : materialRegion.m_materialsForSurfaces)
         {
@@ -395,7 +395,7 @@ namespace Terrain
         m_dirtyDetailRegion.AddAabb(materialRegion->m_region);
     }
 
-    void TerrainDetailMaterialManager::OnTerrainSurfaceMaterialMappingCreated(AZ::EntityId entityId, SurfaceData::SurfaceTag surfaceTag, MaterialInstance material)
+    void TerrainDetailMaterialManager::OnTerrainSurfaceMaterialMappingCreated(AZ::EntityId entityId, JE::Geometry::SurfaceData::SurfaceTag surfaceTag, MaterialInstance material)
     {
         DetailMaterialListRegion* materialRegion = FindByEntityId(entityId, m_detailMaterialRegions);
         if (materialRegion == nullptr)
@@ -416,7 +416,7 @@ namespace Terrain
         m_dirtyDetailRegion.AddAabb(materialRegion->m_region);
     }
     
-    void TerrainDetailMaterialManager::OnTerrainSurfaceMaterialMappingDestroyed(AZ::EntityId entityId, SurfaceData::SurfaceTag surfaceTag)
+    void TerrainDetailMaterialManager::OnTerrainSurfaceMaterialMappingDestroyed(AZ::EntityId entityId, JE::Geometry::SurfaceData::SurfaceTag surfaceTag)
     {
         DetailMaterialListRegion* materialRegion = FindByEntityId(entityId, m_detailMaterialRegions);
         if (materialRegion == nullptr)
@@ -442,7 +442,7 @@ namespace Terrain
     }
     
     void TerrainDetailMaterialManager::OnTerrainSurfaceMaterialMappingMaterialChanged(
-        AZ::EntityId entityId, SurfaceData::SurfaceTag surfaceTag, MaterialInstance material)
+        AZ::EntityId entityId, JE::Geometry::SurfaceData::SurfaceTag surfaceTag, MaterialInstance material)
     {
         DetailMaterialListRegion* materialRegion = FindByEntityId(entityId, m_detailMaterialRegions);
         if (materialRegion == nullptr)
@@ -472,7 +472,7 @@ namespace Terrain
     }
 
     void TerrainDetailMaterialManager::OnTerrainSurfaceMaterialMappingTagChanged(
-        AZ::EntityId entityId, SurfaceData::SurfaceTag oldTag,  SurfaceData::SurfaceTag newTag)
+        AZ::EntityId entityId, JE::Geometry::SurfaceData::SurfaceTag oldTag,  JE::Geometry::SurfaceData::SurfaceTag newTag)
     {
         DetailMaterialListRegion* materialRegion = FindByEntityId(entityId, m_detailMaterialRegions);
         if (materialRegion == nullptr)
@@ -988,7 +988,7 @@ namespace Terrain
     {
         for (const auto& materialRegion : m_detailMaterialRegions.GetDataVector())
         {
-            if (SurfaceData::AabbContains2D(materialRegion.m_region, position))
+            if (JE::Geometry::SurfaceData::AabbContains2D(materialRegion.m_region, position))
             {
                 return &materialRegion;
             }

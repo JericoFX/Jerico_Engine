@@ -8,8 +8,8 @@
 
 #include <QPushButton>
 
-#include <GraphCanvas/Components/GridBus.h>
-#include <GraphCanvas/Components/Nodes/Group/NodeGroupBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/GridBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/Nodes/Group/NodeGroupBus.h>
 
 #include <EditorAutomationTests/VariableTests.h>
 
@@ -251,7 +251,7 @@ namespace ScriptCanvas::Developer
 
         void ValueInNodeState::OnSetupStateActions(EditorAutomationActionRunner& actionRunner)
         {
-            const GraphCanvas::Endpoint* targetEndpoint = GetStateModel()->GetStateDataAs<GraphCanvas::Endpoint>(m_endpointId);
+            const JE::Editor::Tools::GraphCanvas::Endpoint* targetEndpoint = GetStateModel()->GetStateDataAs<JE::Editor::Tools::GraphCanvas::Endpoint>(m_endpointId);
 
             if (targetEndpoint)
             {
@@ -274,7 +274,7 @@ namespace ScriptCanvas::Developer
 
         void ValueInNodeState::OnStateActionsComplete()
         {
-            const GraphCanvas::Endpoint* targetEndpoint = GetStateModel()->GetStateDataAs<GraphCanvas::Endpoint>(m_endpointId);
+            const JE::Editor::Tools::GraphCanvas::Endpoint* targetEndpoint = GetStateModel()->GetStateDataAs<JE::Editor::Tools::GraphCanvas::Endpoint>(m_endpointId);
             const ScriptCanvas::ScriptCanvasId* scriptCanvasId = GetStateModel()->GetStateDataAs<ScriptCanvas::ScriptCanvasId>(StateModelIds::ScriptCanvasId);
 
             if (targetEndpoint && scriptCanvasId)
@@ -374,7 +374,7 @@ namespace ScriptCanvas::Developer
         AddState(new CreateVariableNodeFromGraphPaletteState(variableNameId, viewCenter, Qt::KeyboardModifier::AltModifier, variableNodeId));
 
         AutomationStateModelId dataSlotId = "DataSlotId";
-        AddState(new FindEndpointOfTypeState(variableNodeId, dataSlotId, GraphCanvas::ConnectionType::CT_Input, GraphCanvas::SlotTypes::DataSlot));
+        AddState(new FindEndpointOfTypeState(variableNodeId, dataSlotId, JE::Editor::Tools::GraphCanvas::ConnectionType::CT_Input, JE::Editor::Tools::GraphCanvas::SlotTypes::DataSlot));
 
         AddState(new EditStringLike::ValueInNodeState(inputString, dataSlotId, datumValidator));
 
@@ -451,7 +451,7 @@ namespace ScriptCanvas::Developer
         AddState(new CreateVariableNodeFromGraphPaletteState(variableNameId, viewCenter, Qt::KeyboardModifier::AltModifier, variableNodeId));
 
         AutomationStateModelId dataSlotId = "DataSlotId";
-        AddState(new FindEndpointOfTypeState(variableNodeId, dataSlotId, GraphCanvas::ConnectionType::CT_Input, GraphCanvas::SlotTypes::DataSlot));
+        AddState(new FindEndpointOfTypeState(variableNodeId, dataSlotId, JE::Editor::Tools::GraphCanvas::ConnectionType::CT_Input, JE::Editor::Tools::GraphCanvas::SlotTypes::DataSlot));
 
         AddState(new EditStringLike::ValueInNodeState(value, dataSlotId, datumValidator));
 
@@ -567,7 +567,7 @@ namespace ScriptCanvas::Developer
     {
         m_scriptCanvasEndpoint = ScriptCanvas::Endpoint();
 
-        const GraphCanvas::Endpoint* gcEndpoint = GetStateModel()->GetStateDataAs<GraphCanvas::Endpoint>(m_endpointId);
+        const JE::Editor::Tools::GraphCanvas::Endpoint* gcEndpoint = GetStateModel()->GetStateDataAs<JE::Editor::Tools::GraphCanvas::Endpoint>(m_endpointId);
         const ScriptCanvas::ScriptCanvasId* scriptCanvasId = GetStateModel()->GetStateDataAs<ScriptCanvas::ScriptCanvasId>(StateModelIds::ScriptCanvasId);
 
         if (gcEndpoint && scriptCanvasId)
@@ -656,7 +656,7 @@ namespace ScriptCanvas::Developer
         AddState(new CreateVariableNodeFromGraphPaletteState(variableNameId, viewCenter, Qt::KeyboardModifier::AltModifier, variableNodeId));
 
         AutomationStateModelId dataSlotId = "DataSlotId";
-        AddState(new FindEndpointOfTypeState(variableNodeId, dataSlotId, GraphCanvas::ConnectionType::CT_Input, GraphCanvas::SlotTypes::DataSlot));
+        AddState(new FindEndpointOfTypeState(variableNodeId, dataSlotId, JE::Editor::Tools::GraphCanvas::ConnectionType::CT_Input, JE::Editor::Tools::GraphCanvas::SlotTypes::DataSlot));
 
         AddState(new ToggleBoolInNodeState(dataSlotId));
 

@@ -113,6 +113,12 @@ namespace AZ
                 {
                     if ((*it).get() == object)
                     {
+                        if (auto* root = ManifestWidget::FindRoot(this))
+                        {
+                            bool handled = false; bool accepted = false;
+                            root->RequestModifierChange(m_ownerObject, it->get(), false, handled, accepted);
+                            if (handled) { return accepted; }
+                        }
                         object->OnUserRemoved();
                         m_manifestVector.erase(it);
                         QTimer::singleShot(0, this, 
@@ -200,10 +206,7 @@ namespace AZ
                 
                 AZ_TraceContext("Object name", objectName);
                 AZStd::shared_ptr<DataTypes::IManifestObject> newObject(static_cast<DataTypes::IManifestObject*>(factory->Create(objectName.c_str())));
-                if (newObject)
-                {
-                    newObject->OnUserAdded();
-                }
+                if (!newObject) { return; }
                 ManifestWidget* root = ManifestWidget::FindRoot(this);
                 AZ_Assert(root, "ManifestVectorWidget is not a child of a ManifestWidget.");
                 if (!root)
@@ -213,6 +216,11 @@ namespace AZ
                 
                 AZ_TraceContext("Object type", newObject->RTTI_GetTypeName());
                 AZStd::shared_ptr<Containers::Scene> scene = root->GetScene();
+                if (!scene) { return; }
+                bool handled = false; bool accepted = false;
+                root->RequestModifierChange(m_ownerObject, newObject.get(), true, handled, accepted);
+                if (handled) { return; }
+                newObject->OnUserAdded();
                 EBUS_EVENT(Events::ManifestMetaInfoBus, InitializeObject, *scene, *newObject);
                 
                 m_manifestVector.push_back(newObject);

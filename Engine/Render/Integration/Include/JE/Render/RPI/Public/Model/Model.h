@@ -19,6 +19,7 @@
 #include <AzCore/Instance/InstanceData.h>
 #include <AzCore/std/containers/fixed_vector.h>
 #include <AzCore/std/containers/unordered_set.h>
+#include <AzCore/std/optional.h>
 
 namespace JE::Render
 {
@@ -70,6 +71,11 @@ namespace JE::Render
             //! @return  True if the ray intersects the mesh.
             bool LocalRayIntersection(const AZ::Vector3& rayStart, const AZ::Vector3& rayDir, float& distanceNormalized, AZ::Vector3& normal) const;
 
+            //! Also returns the winning mesh's stable material slot. Empty on a miss or an invalid slot.
+            bool LocalRayIntersection(
+                const AZ::Vector3& rayStart, const AZ::Vector3& rayDir, float& distanceNormalized, AZ::Vector3& normal,
+                AZStd::optional<ModelMaterialSlot::StableId>& materialSlotId) const;
+
             //! Checks a ray for intersection against this model, where the ray is in a different coordinate space.
             //! Important: only to be used in the Editor, it may kick off a job to calculate spatial information.
             //! [GFX TODO][ATOM-4343 Bake mesh spatial during AP processing]
@@ -90,6 +96,16 @@ namespace JE::Render
                 float& distanceNormalized,
                 AZ::Vector3& normal) const;
 
+            //! Also returns the winning mesh's stable material slot. Empty on a miss or an invalid slot.
+            bool RayIntersection(
+                const AZ::Transform& modelTransform,
+                const AZ::Vector3& nonUniformScale,
+                const AZ::Vector3& rayStart,
+                const AZ::Vector3& rayDir,
+                float& distanceNormalized,
+                AZ::Vector3& normal,
+                AZStd::optional<ModelMaterialSlot::StableId>& materialSlotId) const;
+
             //! Get available UV names from the model and its lods.
             const AZStd::unordered_set<AZ::Name>& GetUvNames() const;
 
@@ -98,6 +114,18 @@ namespace JE::Render
 
             static AZ::Data::Instance<Model> CreateInternal(const AZ::Data::Asset<ModelAsset>& modelAsset);
             AZ::RHI::ResultCode Init(const AZ::Data::Asset<ModelAsset>& modelAsset);
+
+            bool LocalRayIntersectionImpl(
+                const AZ::Vector3& rayStart, const AZ::Vector3& rayDir, float& distanceNormalized, AZ::Vector3& normal,
+                AZStd::optional<ModelMaterialSlot::StableId>* materialSlotId) const;
+            bool RayIntersectionImpl(
+                const AZ::Transform& modelTransform,
+                const AZ::Vector3& nonUniformScale,
+                const AZ::Vector3& rayStart,
+                const AZ::Vector3& rayDir,
+                float& distanceNormalized,
+                AZ::Vector3& normal,
+                AZStd::optional<ModelMaterialSlot::StableId>* materialSlotId) const;
 
             AZStd::fixed_vector<AZ::Data::Instance<ModelLod>, ModelLodAsset::LodCountMax> m_lods;
             AZ::Data::Asset<ModelAsset> m_modelAsset;

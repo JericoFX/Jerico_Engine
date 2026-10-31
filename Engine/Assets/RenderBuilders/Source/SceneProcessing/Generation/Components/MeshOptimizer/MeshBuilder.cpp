@@ -188,7 +188,7 @@ namespace JE::Assets::RenderBuilders::SceneProcessing::Mesh
 
         // add the polygon to the submesh
         ExtractBonesForPolygon(orgVertexNumbers, m_polyJointList);
-        subMesh->AddPolygon(indices, m_polyJointList);
+        subMesh->AddPolygon(indices, m_polyJointList, m_polyVertexCounts.size() - 1);
     }
 
     void MeshBuilder::ExtractBonesForPolygon(const AZStd::vector<size_t>& orgVertexNumbers, AZStd::vector<size_t>& outPolyJointList) const

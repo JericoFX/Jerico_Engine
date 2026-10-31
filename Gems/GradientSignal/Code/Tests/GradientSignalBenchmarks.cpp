@@ -22,8 +22,8 @@
 #include <GradientSignal/Components/GradientSurfaceDataComponent.h>
 #include <LmbrCentral/Shape/BoxShapeComponentBus.h>
 #include <LmbrCentral/Shape/SphereShapeComponentBus.h>
-#include <SurfaceData/Components/SurfaceDataShapeComponent.h>
-#include <SurfaceData/Components/SurfaceDataSystemComponent.h>
+#include <JE/Geometry/SurfaceData/Components/SurfaceDataShapeComponent.h>
+#include <JE/Geometry/SurfaceData/Components/SurfaceDataSystemComponent.h>
 
 namespace UnitTest
 {
@@ -202,10 +202,10 @@ namespace UnitTest
                 auto shapeComponent = surface->CreateComponent(LmbrCentral::BoxShapeComponentTypeId);
                 shapeComponent->SetConfiguration(boxConfig);
 
-                SurfaceData::SurfaceDataShapeConfig surfaceConfig;
-                surfaceConfig.m_providerTags.push_back(SurfaceData::SurfaceTag("surface1"));
-                surfaceConfig.m_providerTags.push_back(SurfaceData::SurfaceTag("surface2"));
-                surface->CreateComponent<SurfaceData::SurfaceDataShapeComponent>(surfaceConfig);
+                JE::Geometry::SurfaceData::SurfaceDataShapeConfig surfaceConfig;
+                surfaceConfig.m_providerTags.push_back(JE::Geometry::SurfaceData::SurfaceTag("surface1"));
+                surfaceConfig.m_providerTags.push_back(JE::Geometry::SurfaceData::SurfaceTag("surface2"));
+                surface->CreateComponent<JE::Geometry::SurfaceData::SurfaceDataShapeComponent>(surfaceConfig);
 
                 surface->Init();
                 surface->Activate();
@@ -232,8 +232,8 @@ namespace UnitTest
 
                 GradientSignal::GradientSurfaceDataConfig modifierConfig;
                 modifierConfig.m_shapeConstraintEntityId = modifier->GetId();
-                modifierConfig.m_modifierTags.push_back(SurfaceData::SurfaceTag("modifier1"));
-                modifierConfig.m_modifierTags.push_back(SurfaceData::SurfaceTag("modifier2"));
+                modifierConfig.m_modifierTags.push_back(JE::Geometry::SurfaceData::SurfaceTag("modifier1"));
+                modifierConfig.m_modifierTags.push_back(JE::Geometry::SurfaceData::SurfaceTag("modifier2"));
                 modifier->CreateComponent<GradientSignal::GradientSurfaceDataComponent>(modifierConfig);
 
                 modifier->Init();
@@ -245,9 +245,9 @@ namespace UnitTest
             return testEntities;
         }
 
-        SurfaceData::SurfaceTagVector CreateBenchmarkTagFilterList()
+        JE::Geometry::SurfaceData::SurfaceTagVector CreateBenchmarkTagFilterList()
         {
-            SurfaceData::SurfaceTagVector tagFilterList;
+            JE::Geometry::SurfaceData::SurfaceTagVector tagFilterList;
             tagFilterList.emplace_back("surface1");
             tagFilterList.emplace_back("surface2");
             tagFilterList.emplace_back("modifier1");
@@ -262,13 +262,13 @@ namespace UnitTest
         // Create our benchmark world
         const float worldSize = aznumeric_cast<float>(state.range(0));
         AZStd::vector<AZStd::unique_ptr<AZ::Entity>> benchmarkEntities = CreateBenchmarkEntities(worldSize);
-        SurfaceData::SurfaceTagVector filterTags = CreateBenchmarkTagFilterList();
+        JE::Geometry::SurfaceData::SurfaceTagVector filterTags = CreateBenchmarkTagFilterList();
 
         // Query every point in our world at 1 meter intervals.
         for ([[maybe_unused]] auto _ : state)
         {
             // This is declared outside the loop so that the list of points doesn't fully reallocate on every query.
-            SurfaceData::SurfacePointList points;
+            JE::Geometry::SurfaceData::SurfacePointList points;
 
             for (float y = 0.0f; y < worldSize; y += 1.0f)
             {
@@ -277,7 +277,7 @@ namespace UnitTest
                     AZ::Vector3 queryPosition(x, y, 0.0f);
                     points.Clear();
 
-                    AZ::Interface<SurfaceData::SurfaceDataSystem>::Get()->GetSurfacePoints(queryPosition, filterTags, points);
+                    AZ::Interface<JE::Geometry::SurfaceData::SurfaceDataSystem>::Get()->GetSurfacePoints(queryPosition, filterTags, points);
                     benchmark::DoNotOptimize(points);
                 }
             }
@@ -291,16 +291,16 @@ namespace UnitTest
         // Create our benchmark world
         float worldSize = aznumeric_cast<float>(state.range(0));
         AZStd::vector<AZStd::unique_ptr<AZ::Entity>> benchmarkEntities = CreateBenchmarkEntities(worldSize);
-        SurfaceData::SurfaceTagVector filterTags = CreateBenchmarkTagFilterList();
+        JE::Geometry::SurfaceData::SurfaceTagVector filterTags = CreateBenchmarkTagFilterList();
 
         // Query every point in our world at 1 meter intervals.
         for ([[maybe_unused]] auto _ : state)
         {
-            SurfaceData::SurfacePointList points;
+            JE::Geometry::SurfaceData::SurfacePointList points;
 
             AZ::Aabb inRegion = AZ::Aabb::CreateFromMinMax(AZ::Vector3(0.0f), AZ::Vector3(worldSize));
             AZ::Vector2 stepSize(1.0f);
-            AZ::Interface<SurfaceData::SurfaceDataSystem>::Get()->GetSurfacePointsFromRegion(inRegion, stepSize, filterTags, points);
+            AZ::Interface<JE::Geometry::SurfaceData::SurfaceDataSystem>::Get()->GetSurfacePointsFromRegion(inRegion, stepSize, filterTags, points);
             benchmark::DoNotOptimize(points);
         }
     }
@@ -313,7 +313,7 @@ namespace UnitTest
         const float worldSize = aznumeric_cast<float>(state.range(0));
         const int64_t worldSizeInt = state.range(0);
         AZStd::vector<AZStd::unique_ptr<AZ::Entity>> benchmarkEntities = CreateBenchmarkEntities(worldSize);
-        SurfaceData::SurfaceTagVector filterTags = CreateBenchmarkTagFilterList();
+        JE::Geometry::SurfaceData::SurfaceTagVector filterTags = CreateBenchmarkTagFilterList();
 
         // Query every point in our world at 1 meter intervals.
         for ([[maybe_unused]] auto _ : state)
@@ -329,9 +329,9 @@ namespace UnitTest
                 }
             }
 
-            SurfaceData::SurfacePointList points;
+            JE::Geometry::SurfaceData::SurfacePointList points;
 
-            AZ::Interface<SurfaceData::SurfaceDataSystem>::Get()->GetSurfacePointsFromList(queryPositions, filterTags, points);
+            AZ::Interface<JE::Geometry::SurfaceData::SurfaceDataSystem>::Get()->GetSurfacePointsFromList(queryPositions, filterTags, points);
             benchmark::DoNotOptimize(points);
         }
     }

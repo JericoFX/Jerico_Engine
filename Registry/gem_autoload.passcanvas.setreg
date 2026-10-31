@@ -101,13 +101,6 @@
                     }
                 }
             },
-            "SurfaceData": {
-                "Targets": {
-                    "SurfaceData.Editor": {
-                        "AutoLoad": false
-                    }
-                }
-            },
             "ScriptEvents": {
                 "Targets": {
                     "ScriptEvents.Editor": {

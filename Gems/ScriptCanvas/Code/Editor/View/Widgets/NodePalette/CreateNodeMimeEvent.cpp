@@ -8,9 +8,9 @@
 
 #include <AzCore/Serialization/SerializeContext.h>
 
-#include <GraphCanvas/Components/GridBus.h>
-#include <GraphCanvas/Components/SceneBus.h>
-#include <GraphCanvas/Components/VisualBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/GridBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/SceneBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/VisualBus.h>
 
 #include "CreateNodeMimeEvent.h"
 
@@ -28,7 +28,7 @@ namespace ScriptCanvasEditor
 
         if (serializeContext)
         {
-            serializeContext->Class<CreateNodeMimeEvent, GraphCanvas::CreateSplicingNodeMimeEvent>()
+            serializeContext->Class<CreateNodeMimeEvent, JE::Editor::Tools::GraphCanvas::CreateSplicingNodeMimeEvent>()
                 ->Version(0)
                 ;
         }
@@ -55,18 +55,18 @@ namespace ScriptCanvasEditor
         {
             m_createdNodeId = m_nodeIdPair.m_graphCanvasId;
 
-            GraphCanvas::SceneRequestBus::Event(graphCanvasGraphId, &GraphCanvas::SceneRequests::AddNode, m_nodeIdPair.m_graphCanvasId, sceneDropPosition, false);
-            GraphCanvas::SceneMemberUIRequestBus::Event(m_nodeIdPair.m_graphCanvasId, &GraphCanvas::SceneMemberUIRequests::SetSelected, true);
+            JE::Editor::Tools::GraphCanvas::SceneRequestBus::Event(graphCanvasGraphId, &JE::Editor::Tools::GraphCanvas::SceneRequests::AddNode, m_nodeIdPair.m_graphCanvasId, sceneDropPosition, false);
+            JE::Editor::Tools::GraphCanvas::SceneMemberUIRequestBus::Event(m_nodeIdPair.m_graphCanvasId, &JE::Editor::Tools::GraphCanvas::SceneMemberUIRequests::SetSelected, true);
 
             ScriptCanvasEditor::NodeCreationNotificationBus::Event(scriptCanvasId, &ScriptCanvasEditor::NodeCreationNotifications::OnGraphCanvasNodeCreated, m_nodeIdPair.m_graphCanvasId);
 
             AZ::EntityId gridId;
-            GraphCanvas::SceneRequestBus::EventResult(gridId, graphCanvasGraphId, &GraphCanvas::SceneRequests::GetGrid);
+            JE::Editor::Tools::GraphCanvas::SceneRequestBus::EventResult(gridId, graphCanvasGraphId, &JE::Editor::Tools::GraphCanvas::SceneRequests::GetGrid);
 
             AZ_Assert(gridId.IsValid(), "Grid must be valid, graphCanvasGraphId is likely incorrect");
 
             AZ::Vector2 offset;
-            GraphCanvas::GridRequestBus::EventResult(offset, gridId, &GraphCanvas::GridRequests::GetMinorPitch);
+            JE::Editor::Tools::GraphCanvas::GridRequestBus::EventResult(offset, gridId, &JE::Editor::Tools::GraphCanvas::GridRequests::GetMinorPitch);
 
             sceneDropPosition += offset;
             return true;
@@ -112,7 +112,7 @@ namespace ScriptCanvasEditor
 
         if (serializeContext)
         {
-            serializeContext->Class<SpecializedCreateNodeMimeEvent, GraphCanvas::GraphCanvasMimeEvent>()
+            serializeContext->Class<SpecializedCreateNodeMimeEvent, JE::Editor::Tools::GraphCanvas::GraphCanvasMimeEvent>()
                 ->Version(0)
                 ;
         }

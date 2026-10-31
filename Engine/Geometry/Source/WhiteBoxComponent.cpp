@@ -61,10 +61,13 @@ namespace JE::Geometry
         AzFramework::VisibleGeometryRequestBus::Handler::BusConnect(entityId);
         AZ::TransformNotificationBus::Handler::BusConnect(entityId);
         WhiteBoxComponentRequestBus::Handler::BusConnect(AZ::EntityComponentIdPair(entityId, GetId()));
+        m_surfaceDataProvider = AZStd::make_unique<WhiteBoxSurfaceDataProvider>(AZ::EntityComponentIdPair(entityId, GetId()));
+        m_surfaceDataProvider->Publish(m_whiteBoxRenderData, worldFromLocal);
     }
 
     void WhiteBoxComponent::Deactivate()
     {
+        m_surfaceDataProvider.reset();
         WhiteBoxComponentRequestBus::Handler::BusDisconnect();
         AZ::TransformNotificationBus::Handler::BusDisconnect();
         AzFramework::VisibleGeometryRequestBus::Handler::BusDisconnect();
@@ -75,11 +78,22 @@ namespace JE::Geometry
     void WhiteBoxComponent::GenerateWhiteBoxMesh(const WhiteBoxRenderData& whiteBoxRenderData)
     {
         m_whiteBoxRenderData = whiteBoxRenderData;
+        if (m_renderMesh)
+        {
+            AZ::Transform world = AZ::Transform::CreateIdentity();
+            AZ::TransformBus::EventResult(world, GetEntityId(), &AZ::TransformBus::Events::GetWorldTM);
+            // Keep the active renderer and query snapshot on the same runtime data, including replacement/empty data.
+            m_renderMesh->BuildMesh(m_whiteBoxRenderData, world);
+            m_renderMesh->UpdateMaterial(m_whiteBoxRenderData.m_material);
+            m_renderMesh->SetVisiblity(m_whiteBoxRenderData.m_material.m_visible);
+            if (m_surfaceDataProvider) { m_surfaceDataProvider->Publish(m_whiteBoxRenderData, world); }
+        }
     }
 
     void WhiteBoxComponent::OnTransformChanged([[maybe_unused]] const AZ::Transform& local, const AZ::Transform& world)
     {
         m_renderMesh->UpdateTransform(world);
+        if (m_surfaceDataProvider) { m_surfaceDataProvider->UpdateTransform(world); }
     }
 
     void WhiteBoxComponent::BuildVisibleGeometry(

@@ -1,0 +1,18 @@
+{
+  "seconds": 437.0906529,
+  "timedOut": false,
+  "stderr": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-corefeature102\\vulkan-runtime-close-r4-attempt1\\vulkan-runtime-close-r4.stderr.log",
+    "bytes": 0,
+    "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+  },
+  "stdout": {
+    "path": "F:\\JericoEngine\\JericoEngine\\build\\n0-validation\\native-corefeature102\\vulkan-runtime-close-r4-attempt1\\vulkan-runtime-close-r4.stdout.log",
+    "bytes": 5440,
+    "sha256": "210FC01C54236CA62EED665ADC2B6E637148002806BD43AA50C352C2037350ED"
+  },
+  "exitCode": 0,
+  "priorityRequested": "BelowNormal",
+  "priorityError": null,
+  "ramGuardTriggered": false
+}

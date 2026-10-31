@@ -14,7 +14,7 @@
 #include <AzCore/EBus/EBus.h>
 #include <AzCore/Math/Vector2.h>
 #include <AzCore/Outcome/Outcome.h>
-#include <GraphCanvas/Types/Types.h>
+#include <JE/Editor/Tools/GraphCanvas/Types/Types.h>
 #include <ScriptCanvas/Bus/NodeIdPair.h>
 #include <ScriptCanvas/Bus/ScriptCanvasBus.h>
 #include <ScriptCanvas/Core/Core.h>
@@ -31,7 +31,7 @@ namespace ScriptCanvas
     class GraphVariable;
 }
 
-namespace GraphCanvas
+namespace JE::Editor::Tools::GraphCanvas
 {
     struct Endpoint;
 
@@ -96,24 +96,24 @@ namespace ScriptCanvasEditor
             return ScriptCanvas::ScriptCanvasId();
         }
 
-        virtual GraphCanvas::GraphId GetActiveGraphCanvasGraphId() const
+        virtual JE::Editor::Tools::GraphCanvas::GraphId GetActiveGraphCanvasGraphId() const
         {
-            return GraphCanvas::GraphId();
+            return JE::Editor::Tools::GraphCanvas::GraphId();
         }
 
-        virtual GraphCanvas::GraphId GetGraphCanvasGraphId([[maybe_unused]] const ScriptCanvas::ScriptCanvasId& scriptCanvasEntityId) const
+        virtual JE::Editor::Tools::GraphCanvas::GraphId GetGraphCanvasGraphId([[maybe_unused]] const ScriptCanvas::ScriptCanvasId& scriptCanvasEntityId) const
         {
-            return GraphCanvas::GraphId();
+            return JE::Editor::Tools::GraphCanvas::GraphId();
         }
 
-        virtual ScriptCanvas::ScriptCanvasId GetScriptCanvasId([[maybe_unused]] const GraphCanvas::GraphId& graphCanvasSceneId) const
+        virtual ScriptCanvas::ScriptCanvasId GetScriptCanvasId([[maybe_unused]] const JE::Editor::Tools::GraphCanvas::GraphId& graphCanvasSceneId) const
         {
             return ScriptCanvas::ScriptCanvasId();
         }
 
-        virtual GraphCanvas::GraphId FindGraphCanvasGraphIdByAssetId([[maybe_unused]] const SourceHandle& assetId) const
+        virtual JE::Editor::Tools::GraphCanvas::GraphId FindGraphCanvasGraphIdByAssetId([[maybe_unused]] const SourceHandle& assetId) const
         {
-            return GraphCanvas::GraphId();
+            return JE::Editor::Tools::GraphCanvas::GraphId();
         }
 
         virtual ScriptCanvas::ScriptCanvasId FindScriptCanvasIdByAssetId([[maybe_unused]] const SourceHandle& assetId) const
@@ -131,7 +131,7 @@ namespace ScriptCanvasEditor
         virtual void DeleteNodes(const AZ::EntityId& /*sceneId*/, const AZStd::vector<AZ::EntityId>& /*nodes*/){}
         virtual void DeleteConnections(const AZ::EntityId& /*sceneId*/, const AZStd::vector<AZ::EntityId>& /*connections*/){}
 
-        virtual void DisconnectEndpoints(const AZ::EntityId& /*sceneId*/, const AZStd::vector<GraphCanvas::Endpoint>& /*endpoints*/) {}
+        virtual void DisconnectEndpoints(const AZ::EntityId& /*sceneId*/, const AZStd::vector<JE::Editor::Tools::GraphCanvas::Endpoint>& /*endpoints*/) {}
 
         virtual void PostUndoPoint(ScriptCanvas::ScriptCanvasId) = 0;
         virtual void SignalSceneDirty(SourceHandle) = 0;
@@ -273,8 +273,8 @@ namespace ScriptCanvasEditor
     public:
         static const AZ::EBusAddressPolicy AddressPolicy = AZ::EBusAddressPolicy::Single;
 
-        virtual NodeIdPair ProcessCreateNodeMimeEvent(GraphCanvas::GraphCanvasMimeEvent* mimeEvent, const AZ::EntityId& graphCanvasGraphId, AZ::Vector2 nodeCreationPos) = 0;
-        virtual const GraphCanvas::GraphCanvasTreeItem* GetNodePaletteRoot() const = 0;
+        virtual NodeIdPair ProcessCreateNodeMimeEvent(JE::Editor::Tools::GraphCanvas::GraphCanvasMimeEvent* mimeEvent, const AZ::EntityId& graphCanvasGraphId, AZ::Vector2 nodeCreationPos) = 0;
+        virtual const JE::Editor::Tools::GraphCanvas::GraphCanvasTreeItem* GetNodePaletteRoot() const = 0;
 
         virtual void SignalAutomationBegin() = 0;
         virtual void SignalAutomationEnd() = 0;

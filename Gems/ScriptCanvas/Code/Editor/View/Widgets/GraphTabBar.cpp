@@ -266,7 +266,7 @@ namespace ScriptCanvasEditor
             return SourceHandle();
         }
 
-        ScriptCanvas::ScriptCanvasId GraphTabBar::FindScriptCanvasIdFromGraphCanvasId(const GraphCanvas::GraphId& graphCanvasGraphId) const
+        ScriptCanvas::ScriptCanvasId GraphTabBar::FindScriptCanvasIdFromGraphCanvasId(const JE::Editor::Tools::GraphCanvas::GraphId& graphCanvasGraphId) const
         {
             for (int index = 0; index < count(); ++index)
             {

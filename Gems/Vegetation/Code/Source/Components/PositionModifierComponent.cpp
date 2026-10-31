@@ -17,7 +17,7 @@
 #include <GradientSignal/Ebuses/GradientRequestBus.h>
 #include <Vegetation/InstanceData.h>
 #include <VegetationProfiler.h>
-#include <SurfaceData/SurfaceDataSystemRequestBus.h>
+#include <JE/Geometry/SurfaceData/SurfaceDataSystemRequestBus.h>
 
 namespace Vegetation
 {
@@ -176,7 +176,7 @@ namespace Vegetation
 
     void PositionModifierConfig::AddTag(AZStd::string tag)
     {
-        m_surfaceTagsToSnapTo.push_back(SurfaceData::SurfaceTag(tag));
+        m_surfaceTagsToSnapTo.push_back(JE::Geometry::SurfaceData::SurfaceTag(tag));
     }
 
     void PositionModifierComponent::GetProvidedServices(AZ::ComponentDescriptor::DependencyArrayType& services)
@@ -321,7 +321,7 @@ namespace Vegetation
 
             //get the intersection data at the new position
             m_points.Clear();
-            AZ::Interface<SurfaceData::SurfaceDataSystem>::Get()->GetSurfacePoints(
+            AZ::Interface<JE::Geometry::SurfaceData::SurfaceDataSystem>::Get()->GetSurfacePoints(
                 instanceData.m_position, m_surfaceTagsToSnapToCombined, m_points);
 
             // Get the point with the closest distance from the new position in case there are multiple intersections at different or
@@ -331,7 +331,7 @@ namespace Vegetation
             m_points.EnumeratePoints(
                 [&instanceData, originalInstanceDataPosition, &closestPointDistanceSq](
                     [[maybe_unused]] size_t inPositionIndex, const AZ::Vector3& position,
-                    const AZ::Vector3& normal, const SurfaceData::SurfaceTagWeights& masks) -> bool
+                    const AZ::Vector3& normal, const JE::Geometry::SurfaceData::SurfaceTagWeights& masks) -> bool
                 {
                     float distanceSq = position.GetDistanceSq(originalInstanceDataPosition);
                     if (distanceSq < closestPointDistanceSq)

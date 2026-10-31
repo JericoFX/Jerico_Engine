@@ -8,8 +8,8 @@
 
 #include <QPushButton>
 
-#include <GraphCanvas/Components/GridBus.h>
-#include <GraphCanvas/Components/Nodes/Group/NodeGroupBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/GridBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/Nodes/Group/NodeGroupBus.h>
 
 #include <EditorAutomationTests/NodeCreationTests.h>
 
@@ -28,7 +28,7 @@ namespace ScriptCanvas::Developer
     // CreateCategoryTest
     ///////////////////////
 
-    CreateCategoryTest::CreateCategoryTest(AZStd::string categoryString, GraphCanvas::NodePaletteWidget* nodePaletteWidget)
+    CreateCategoryTest::CreateCategoryTest(AZStd::string categoryString, JE::Editor::Tools::GraphCanvas::NodePaletteWidget* nodePaletteWidget)
         : EditorAutomationTest(QString("Create %1 Category from Palette").arg(categoryString.c_str()))
     {
         AutomationStateModelId categoryId = "CategoryId";
@@ -61,7 +61,7 @@ namespace ScriptCanvas::Developer
 
         AutomationStateModelId onGraphStartEndpoint = "OnGraphStart::ExecutionEndpoint";
 
-        AddState(new FindEndpointOfTypeState(onGraphStartId, onGraphStartEndpoint, GraphCanvas::CT_Output, GraphCanvas::SlotTypes::ExecutionSlot));
+        AddState(new FindEndpointOfTypeState(onGraphStartId, onGraphStartEndpoint, JE::Editor::Tools::GraphCanvas::CT_Output, JE::Editor::Tools::GraphCanvas::SlotTypes::ExecutionSlot));
 
         AutomationStateModelId printNodeId = "PrintId";
         AutomationStateModelId spliceTargetId = "SpliceTargetId";
@@ -76,7 +76,7 @@ namespace ScriptCanvas::Developer
     // CreateExecutionSplicedNodeTest
     ///////////////////////////////////
 
-    CreateDragDropExecutionSpliceNodeTest::CreateDragDropExecutionSpliceNodeTest(GraphCanvas::NodePaletteWidget* nodePaletteWidget, QString nodeName)
+    CreateDragDropExecutionSpliceNodeTest::CreateDragDropExecutionSpliceNodeTest(JE::Editor::Tools::GraphCanvas::NodePaletteWidget* nodePaletteWidget, QString nodeName)
         : EditorAutomationTest(QString("Create %1 via Dropped Connection Splice").arg(nodeName))
     {
         AddState(new CreateRuntimeGraphState());
@@ -89,7 +89,7 @@ namespace ScriptCanvas::Developer
 
         AutomationStateModelId onGraphStartEndpoint = "OnGraphStart::ExecutionEndpoint";
 
-        AddState(new FindEndpointOfTypeState(onGraphStartId, onGraphStartEndpoint, GraphCanvas::CT_Output, GraphCanvas::SlotTypes::ExecutionSlot));
+        AddState(new FindEndpointOfTypeState(onGraphStartId, onGraphStartEndpoint, JE::Editor::Tools::GraphCanvas::CT_Output, JE::Editor::Tools::GraphCanvas::SlotTypes::ExecutionSlot));
 
         AutomationStateModelId printNodeId = "PrintId";
         AutomationStateModelId spliceTargetId = "SpliceTargetId";

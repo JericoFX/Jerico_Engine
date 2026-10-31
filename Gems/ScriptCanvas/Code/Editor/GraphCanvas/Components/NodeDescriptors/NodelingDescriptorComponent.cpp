@@ -9,7 +9,7 @@
 #include "NodelingDescriptorComponent.h"
 #include "ScriptCanvas/Bus/EditorScriptCanvasBus.h"
 #include "ScriptCanvas/GraphCanvas/MappingBus.h"
-#include <GraphCanvas/Components/Nodes/NodeTitleBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/Nodes/NodeTitleBus.h>
 #include <ScriptCanvas/Bus/RequestBus.h>
 #include <ScriptCanvas/Core/Slot.h>
 #include <ScriptCanvas/Libraries/Core/Nodeling.h>
@@ -46,10 +46,10 @@ namespace ScriptCanvasEditor
 
     void NodelingDescriptorComponent::OnNameChanged(const AZStd::string& displayName)
     {
-        GraphCanvas::NodeTitleRequestBus::Event(GetEntityId(), &GraphCanvas::NodeTitleRequests::SetTitle, displayName);
+        JE::Editor::Tools::GraphCanvas::NodeTitleRequestBus::Event(GetEntityId(), &JE::Editor::Tools::GraphCanvas::NodeTitleRequests::SetTitle, displayName);
     }
     
-    void NodelingDescriptorComponent::OnAddedToGraphCanvasGraph(const GraphCanvas::GraphId& graphId, const AZ::EntityId& scriptCanvasNodeId)
+    void NodelingDescriptorComponent::OnAddedToGraphCanvasGraph(const JE::Editor::Tools::GraphCanvas::GraphId& graphId, const AZ::EntityId& scriptCanvasNodeId)
     {
         ScriptCanvas::ScriptCanvasId scriptCanvasId;
         GeneralRequestBus::BroadcastResult(scriptCanvasId, &GeneralRequests::GetScriptCanvasId, graphId);
@@ -69,17 +69,17 @@ namespace ScriptCanvasEditor
 
     ScriptCanvas::Slot* NodelingDescriptorComponent::GetSlotFromNodeling(const AZ::EntityId& connectionId)
     {
-        GraphCanvas::Endpoint sourceEndpoint;
-        GraphCanvas::ConnectionRequestBus::EventResult(sourceEndpoint, connectionId, &GraphCanvas::ConnectionRequests::GetSourceEndpoint);
+        JE::Editor::Tools::GraphCanvas::Endpoint sourceEndpoint;
+        JE::Editor::Tools::GraphCanvas::ConnectionRequestBus::EventResult(sourceEndpoint, connectionId, &JE::Editor::Tools::GraphCanvas::ConnectionRequests::GetSourceEndpoint);
 
-        GraphCanvas::Endpoint targetEndpoint;
-        GraphCanvas::ConnectionRequestBus::EventResult(targetEndpoint, connectionId, &GraphCanvas::ConnectionRequests::GetTargetEndpoint);
+        JE::Editor::Tools::GraphCanvas::Endpoint targetEndpoint;
+        JE::Editor::Tools::GraphCanvas::ConnectionRequestBus::EventResult(targetEndpoint, connectionId, &JE::Editor::Tools::GraphCanvas::ConnectionRequests::GetTargetEndpoint);
 
         ScriptCanvas::ScriptCanvasId scriptCanvasId;
         AZ::EntityId scriptCanvasNodeId = FindScriptCanvasNodeId();
         ScriptCanvas::NodeRequestBus::EventResult(scriptCanvasId, scriptCanvasNodeId, &ScriptCanvas::NodeRequests::GetOwningScriptCanvasId);
 
-        AZStd::vector<GraphCanvas::Endpoint> endpoints = { sourceEndpoint, targetEndpoint };
+        AZStd::vector<JE::Editor::Tools::GraphCanvas::Endpoint> endpoints = { sourceEndpoint, targetEndpoint };
 
         for (auto& endpoint : endpoints)
         {
@@ -105,7 +105,7 @@ namespace ScriptCanvasEditor
     {
 
         AZStd::vector< AZ::EntityId > graphCanvasSlotIds;
-        GraphCanvas::NodeRequestBus::EventResult(graphCanvasSlotIds, GetEntityId(), &GraphCanvas::NodeRequests::GetSlotIds);
+        JE::Editor::Tools::GraphCanvas::NodeRequestBus::EventResult(graphCanvasSlotIds, GetEntityId(), &JE::Editor::Tools::GraphCanvas::NodeRequests::GetSlotIds);
 
 
         ScriptCanvas::Slot* slot = GetSlotFromNodeling(connectionId);
@@ -132,7 +132,7 @@ namespace ScriptCanvasEditor
                             {
                                 m_removedSlotId = graphCanvasGraphId;
                                 //m_removedSlot = *s; // copy the slot?
-                                GraphCanvas::NodeRequestBus::Event(GetEntityId(), &GraphCanvas::NodeRequests::RemoveSlot, graphCanvasGraphId);
+                                JE::Editor::Tools::GraphCanvas::NodeRequestBus::Event(GetEntityId(), &JE::Editor::Tools::GraphCanvas::NodeRequests::RemoveSlot, graphCanvasGraphId);
                             }
 
                             s->SetVisible(false);
@@ -150,7 +150,7 @@ namespace ScriptCanvasEditor
                             ScriptCanvasEditor::SlotMappingRequestBus::EventResult(graphCanvasGraphId, s->GetNodeId(), &ScriptCanvasEditor::SlotMappingRequests::MapToGraphCanvasId, s->GetId());
                             if (graphCanvasGraphId.IsValid())
                             {
-                                GraphCanvas::NodeRequestBus::Event(GetEntityId(), &GraphCanvas::NodeRequests::RemoveSlot, graphCanvasGraphId);
+                                JE::Editor::Tools::GraphCanvas::NodeRequestBus::Event(GetEntityId(), &JE::Editor::Tools::GraphCanvas::NodeRequests::RemoveSlot, graphCanvasGraphId);
                             }
 
                             s->SetVisible(false);
@@ -185,7 +185,7 @@ namespace ScriptCanvasEditor
                             ScriptCanvasEditor::SlotMappingRequestBus::EventResult(graphCanvasGraphId, s->GetNodeId(), &ScriptCanvasEditor::SlotMappingRequests::MapToGraphCanvasId, s->GetId());
                             if (graphCanvasGraphId.IsValid())
                             {
-                                GraphCanvas::NodeRequestBus::Event(GetEntityId(), &GraphCanvas::NodeRequests::AddSlot, m_removedSlotId);
+                                JE::Editor::Tools::GraphCanvas::NodeRequestBus::Event(GetEntityId(), &JE::Editor::Tools::GraphCanvas::NodeRequests::AddSlot, m_removedSlotId);
                             }
 
                             s->SetVisible(true);
@@ -204,7 +204,7 @@ namespace ScriptCanvasEditor
                             ScriptCanvasEditor::SlotMappingRequestBus::EventResult(graphCanvasGraphId, s->GetNodeId(), &ScriptCanvasEditor::SlotMappingRequests::MapToGraphCanvasId, s->GetId());
                             if (graphCanvasGraphId.IsValid())
                             {
-                                GraphCanvas::NodeRequestBus::Event(GetEntityId(), &GraphCanvas::NodeRequests::AddSlot, graphCanvasGraphId);
+                                JE::Editor::Tools::GraphCanvas::NodeRequestBus::Event(GetEntityId(), &JE::Editor::Tools::GraphCanvas::NodeRequests::AddSlot, graphCanvasGraphId);
                             }
 
                             s->SetVisible(true);

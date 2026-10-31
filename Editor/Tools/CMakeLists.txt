@@ -16,10 +16,13 @@ ly_add_target(
     FILES_CMAKE
         editor_tools_files.cmake
         graphmodel_files.cmake
+        graphcanvas_files.cmake
         ${tools_pal_dir}/platform_${PAL_PLATFORM_NAME_LOWERCASE}_files.cmake
     INCLUDE_DIRECTORIES
-        PRIVATE Source Source/GraphModel ${tools_pal_dir}
+        PRIVATE Source Source/GraphModel Source/GraphCanvas ${tools_pal_dir}
         PUBLIC Include
+    COMPILE_DEFINITIONS
+        PUBLIC GRAPH_CANVAS_ENABLE_DETAILED_PROFILING=0
     BUILD_DEPENDENCIES
         PUBLIC
             3rdParty::Qt::Core
@@ -39,38 +42,16 @@ ly_add_target(
             Gem::Atom_RHI.Public
             Gem::Atom_RHI.Reflect
             JE::RenderIntegration
-            Gem::GraphCanvasWidgets
             Gem::ImageProcessingAtom.Headers
         PRIVATE
             AZ::AzFramework
+            AZ::AssetBuilderSDK
     RUNTIME_DEPENDENCIES
+        3rdParty::Qt::Xml
         JE::RenderIntegration
         Gem::Atom_RHI.Private
-        Gem::GraphCanvas.Editor
-        Gem::GraphCanvasWidgets
         Gem::ImageProcessingAtom.Editor
 )
-
-# Native tool hosts load these graph services independently of project Gem selection.
-foreach(editor_tools_host IN ITEMS Editor MaterialCanvas MaterialEditor PassCanvas ShaderManagementConsole)
-    if(TARGET ${editor_tools_host})
-        ly_add_target_dependencies(
-            TARGETS ${editor_tools_host}
-            DEPENDENT_TARGETS Gem::GraphCanvas.Editor
-            GEM_VARIANT Tools
-        )
-    endif()
-endforeach()
-foreach(editor_tools_host IN ITEMS AssetProcessor AssetProcessorBatch AssetBuilder)
-    if(TARGET ${editor_tools_host})
-        ly_add_target_dependencies(
-            TARGETS ${editor_tools_host}
-            DEPENDENT_TARGETS Gem::GraphCanvas.Editor
-            GEM_VARIANT Builders
-        )
-    endif()
-endforeach()
-unset(editor_tools_host)
 
 if(PAL_TRAIT_BUILD_TESTS_SUPPORTED)
     ly_add_target(
@@ -101,9 +82,18 @@ if(PAL_TRAIT_BUILD_TESTS_SUPPORTED)
                 AZ::AzTest
                 AZ::AzFramework
                 AZ::AzToolsFramework
-                Gem::GraphCanvasWidgets
                 JE::EditorTools
     )
     set_target_properties(EditorGraphModel.Tests PROPERTIES JE_EXCLUDE_FROM_SDK TRUE)
     ly_add_googletest(NAME JE::EditorGraphModel.Tests LABELS REQUIRES_tiaf)
+    # Retain the existing GraphCanvas test environment and unit-test hook.
+    ly_add_target(
+        NAME EditorGraphCanvas.Tests MODULE
+        NAMESPACE JE
+        FILES_CMAKE graphcanvas_tests_files.cmake
+        INCLUDE_DIRECTORIES PRIVATE Source Source/GraphCanvas Tests/GraphCanvas
+        BUILD_DEPENDENCIES PRIVATE AZ::AzTest AZ::AssetBuilderSDK JE::EditorTools
+    )
+    set_target_properties(EditorGraphCanvas.Tests PROPERTIES JE_EXCLUDE_FROM_SDK TRUE)
+    ly_add_googletest(NAME JE::EditorGraphCanvas.Tests LABELS REQUIRES_tiaf)
 endif()

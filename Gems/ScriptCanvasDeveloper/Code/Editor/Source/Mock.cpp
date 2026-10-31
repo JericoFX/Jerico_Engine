@@ -10,10 +10,10 @@
 #include <AzCore/std/containers/set.h>
 #include <AzFramework/Translation/TranslationDef.h>
 #include <Editor/Nodes/NodeUtils.h>
-#include <GraphCanvas/Components/Nodes/NodeTitleBus.h>
-#include <GraphCanvas/Components/Slots/SlotBus.h>
-#include <GraphCanvas/Components/SceneBus.h>
-#include <GraphCanvas/Components/StyleBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/Nodes/NodeTitleBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/Slots/SlotBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/SceneBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/StyleBus.h>
 #include <ScriptCanvas/Data/DataRegistry.h>
 #include <ScriptCanvas/Bus/ScriptCanvasBus.h>
 #include <ScriptCanvasDeveloperEditor/Mock.h>
@@ -134,14 +134,14 @@ namespace ScriptCanvas::Developer
                 auto gcSlotIt = AZStd::find_if(m_owner->m_graphCanvasSlotIds.begin(), m_owner->m_graphCanvasSlotIds.end(), [this](AZ::EntityId testSlotId)
                 {
                     AZStd::any* slotUserData{};
-                    GraphCanvas::SlotRequestBus::EventResult(slotUserData, testSlotId, &GraphCanvas::SlotRequests::GetUserData);
+                    JE::Editor::Tools::GraphCanvas::SlotRequestBus::EventResult(slotUserData, testSlotId, &JE::Editor::Tools::GraphCanvas::SlotRequests::GetUserData);
                     auto scSlotId = AZStd::any_cast<SlotId>(slotUserData);
                     return scSlotId && *scSlotId == m_slotId;
                 });
                 if (gcSlotIt != m_owner->m_graphCanvasSlotIds.end())
                 {
                     AZ::EntityId gcSlotId = *gcSlotIt;
-                    GraphCanvas::SlotRequestBus::Event(gcSlotId, &GraphCanvas::SlotRequests::SetName, m_name);
+                    JE::Editor::Tools::GraphCanvas::SlotRequestBus::Event(gcSlotId, &JE::Editor::Tools::GraphCanvas::SlotRequests::SetName, m_name);
                 }
             }
             return AZ::Edit::PropertyRefreshLevels::AttributesAndValues;
@@ -154,14 +154,14 @@ namespace ScriptCanvas::Developer
                 auto gcSlotIt = AZStd::find_if(m_owner->m_graphCanvasSlotIds.begin(), m_owner->m_graphCanvasSlotIds.end(), [this](AZ::EntityId testSlotId)
                 {
                     AZStd::any* slotUserData{};
-                    GraphCanvas::SlotRequestBus::EventResult(slotUserData, testSlotId, &GraphCanvas::SlotRequests::GetUserData);
+                    JE::Editor::Tools::GraphCanvas::SlotRequestBus::EventResult(slotUserData, testSlotId, &JE::Editor::Tools::GraphCanvas::SlotRequests::GetUserData);
                     auto scSlotId = AZStd::any_cast<SlotId>(slotUserData);
                     return scSlotId && *scSlotId == m_slotId;
                 });
                 if (gcSlotIt != m_owner->m_graphCanvasSlotIds.end())
                 {
                     AZ::EntityId gcSlotId = *gcSlotIt;
-                    GraphCanvas::SlotRequestBus::Event(gcSlotId, &GraphCanvas::SlotRequests::SetTooltip, m_toolTip);
+                    JE::Editor::Tools::GraphCanvas::SlotRequestBus::Event(gcSlotId, &JE::Editor::Tools::GraphCanvas::SlotRequests::SetTooltip, m_toolTip);
                 }
             }
             return AZ::Edit::PropertyRefreshLevels::AttributesAndValues;
@@ -302,7 +302,7 @@ namespace ScriptCanvas::Developer
         Mock::~Mock()
         {
             ScriptCanvasEditor::EditorNodeNotificationBus::Handler::BusDisconnect();
-            GraphCanvas::NodeNotificationBus::Handler::BusDisconnect();
+            JE::Editor::Tools::GraphCanvas::NodeNotificationBus::Handler::BusDisconnect();
         }
 
         void Mock::OnInit()
@@ -311,8 +311,8 @@ namespace ScriptCanvas::Developer
 
             if (m_graphCanvasNodeId.IsValid())
             {
-                GraphCanvas::NodeNotificationBus::Handler::BusConnect(m_graphCanvasNodeId);
-                GraphCanvas::SceneMemberNotificationBus::Handler::BusConnect(m_graphCanvasNodeId);
+                JE::Editor::Tools::GraphCanvas::NodeNotificationBus::Handler::BusConnect(m_graphCanvasNodeId);
+                JE::Editor::Tools::GraphCanvas::SceneMemberNotificationBus::Handler::BusConnect(m_graphCanvasNodeId);
             }
 
             OnNodeTitleChanged();
@@ -347,11 +347,11 @@ namespace ScriptCanvas::Developer
 
         void Mock::SetUiEntityId(AZ::EntityId uiEntityId)
         {
-            GraphCanvas::NodeNotificationBus::Handler::BusDisconnect();
+            JE::Editor::Tools::GraphCanvas::NodeNotificationBus::Handler::BusDisconnect();
             m_graphCanvasNodeId = uiEntityId;
             if (m_graphCanvasNodeId.IsValid())
             {
-                GraphCanvas::NodeNotificationBus::Handler::BusConnect(m_graphCanvasNodeId);
+                JE::Editor::Tools::GraphCanvas::NodeNotificationBus::Handler::BusConnect(m_graphCanvasNodeId);
             }
         }
 
@@ -384,19 +384,19 @@ namespace ScriptCanvas::Developer
         {
         }
 
-        void Mock::OnNodeDisplayed([[maybe_unused]] const GraphCanvas::NodeId& nodeId)
+        void Mock::OnNodeDisplayed([[maybe_unused]] const JE::Editor::Tools::GraphCanvas::NodeId& nodeId)
         {
         }
 
         AZ::Crc32 Mock::OnNodeTitleChanged()
         {
-            GraphCanvas::NodeTitleRequestBus::Event(m_graphCanvasNodeId, &GraphCanvas::NodeTitleRequests::SetTitle, m_nodeTitle);
+            JE::Editor::Tools::GraphCanvas::NodeTitleRequestBus::Event(m_graphCanvasNodeId, &JE::Editor::Tools::GraphCanvas::NodeTitleRequests::SetTitle, m_nodeTitle);
             return AZ::Edit::PropertyRefreshLevels::AttributesAndValues;
         }
 
         AZ::Crc32 Mock::OnNodeSubTitleChanged()
         {
-            GraphCanvas::NodeTitleRequestBus::Event(m_graphCanvasNodeId, &GraphCanvas::NodeTitleRequests::SetSubTitle, m_nodeSubTitle);
+            JE::Editor::Tools::GraphCanvas::NodeTitleRequestBus::Event(m_graphCanvasNodeId, &JE::Editor::Tools::GraphCanvas::NodeTitleRequests::SetSubTitle, m_nodeSubTitle);
             return AZ::Edit::PropertyRefreshLevels::AttributesAndValues;
         }
 
@@ -404,7 +404,7 @@ namespace ScriptCanvas::Developer
         {
             if (!m_nodeColorPaletteOverride.empty())
             {
-                GraphCanvas::NodeTitleRequestBus::Event(m_graphCanvasNodeId, &GraphCanvas::NodeTitleRequests::SetDefaultPalette, m_nodeColorPaletteOverride);
+                JE::Editor::Tools::GraphCanvas::NodeTitleRequestBus::Event(m_graphCanvasNodeId, &JE::Editor::Tools::GraphCanvas::NodeTitleRequests::SetDefaultPalette, m_nodeColorPaletteOverride);
                 return AZ::Edit::PropertyRefreshLevels::AttributesAndValues;
             }
 
@@ -416,11 +416,11 @@ namespace ScriptCanvas::Developer
             AZStd::vector<AZStd::string> colorPaletteOptions;
 
             AZ::EntityId uiSceneId;
-            GraphCanvas::SceneMemberRequestBus::EventResult(uiSceneId, m_graphCanvasNodeId, &GraphCanvas::SceneMemberRequests::GetScene);
+            JE::Editor::Tools::GraphCanvas::SceneMemberRequestBus::EventResult(uiSceneId, m_graphCanvasNodeId, &JE::Editor::Tools::GraphCanvas::SceneMemberRequests::GetScene);
 
-            GraphCanvas::EditorId editorId;
-            GraphCanvas::SceneRequestBus::EventResult(editorId, uiSceneId, &GraphCanvas::SceneRequests::GetEditorId);
-            GraphCanvas::StyleManagerRequestBus::EventResult(colorPaletteOptions, editorId, &GraphCanvas::StyleManagerRequests::GetColorPaletteStyles);
+            JE::Editor::Tools::GraphCanvas::EditorId editorId;
+            JE::Editor::Tools::GraphCanvas::SceneRequestBus::EventResult(editorId, uiSceneId, &JE::Editor::Tools::GraphCanvas::SceneRequests::GetEditorId);
+            JE::Editor::Tools::GraphCanvas::StyleManagerRequestBus::EventResult(colorPaletteOptions, editorId, &JE::Editor::Tools::GraphCanvas::StyleManagerRequests::GetColorPaletteStyles);
             return colorPaletteOptions;
         }
 
@@ -592,7 +592,7 @@ namespace ScriptCanvas::Developer
             MockDescriptorNotificationBus::Event(GetEntityId(), &MockDescriptorNotifications::OnGraphCanvasNodeSetup, m_graphCanvasNodeId);            
         }
 
-        void Mock::OnSceneMemberDeserialized([[maybe_unused]] const GraphCanvas::GraphId& graphId, [[maybe_unused]] const GraphCanvas::GraphSerialization& serialization)
+        void Mock::OnSceneMemberDeserialized([[maybe_unused]] const JE::Editor::Tools::GraphCanvas::GraphId& graphId, [[maybe_unused]] const JE::Editor::Tools::GraphCanvas::GraphSerialization& serialization)
         {
             OnGraphCanvasNodeDisplayed(m_graphCanvasNodeId);
         }

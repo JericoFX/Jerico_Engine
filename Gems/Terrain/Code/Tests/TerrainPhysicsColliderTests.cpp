@@ -356,8 +356,8 @@ TEST_F(TerrainPhysicsColliderComponentTest, TerrainPhysicsColliderReturnsMateria
     const AZ::Data::Asset<Physics::MaterialAsset> mat1(AZ::Data::AssetId(AZ::Uuid::CreateRandom()), {});
     const AZ::Data::Asset<Physics::MaterialAsset> mat2(AZ::Data::AssetId(AZ::Uuid::CreateRandom()), {});
 
-    const SurfaceData::SurfaceTag tag1 = SurfaceData::SurfaceTag("tag1");
-    const SurfaceData::SurfaceTag tag2 = SurfaceData::SurfaceTag("tag2");
+    const JE::Geometry::SurfaceData::SurfaceTag tag1 = JE::Geometry::SurfaceData::SurfaceTag("tag1");
+    const JE::Geometry::SurfaceData::SurfaceTag tag2 = JE::Geometry::SurfaceData::SurfaceTag("tag2");
 
     Terrain::TerrainPhysicsSurfaceMaterialMapping mapping1;
     mapping1.m_materialAsset = mat1;
@@ -411,8 +411,8 @@ TEST_F(TerrainPhysicsColliderComponentTest, TerrainPhysicsColliderGetHeightsAndM
     const AZ::Data::Asset<Physics::MaterialAsset> mat1(AZ::Data::AssetId(AZ::Uuid::CreateRandom()), {});
     const AZ::Data::Asset<Physics::MaterialAsset> mat2(AZ::Data::AssetId(AZ::Uuid::CreateRandom()), {});
 
-    const SurfaceData::SurfaceTag tag1 = SurfaceData::SurfaceTag("tag1");
-    const SurfaceData::SurfaceTag tag2 = SurfaceData::SurfaceTag("tag2");
+    const JE::Geometry::SurfaceData::SurfaceTag tag1 = JE::Geometry::SurfaceData::SurfaceTag("tag1");
+    const JE::Geometry::SurfaceData::SurfaceTag tag2 = JE::Geometry::SurfaceData::SurfaceTag("tag2");
 
     Terrain::TerrainPhysicsSurfaceMaterialMapping mapping1;
     mapping1.m_materialAsset = mat1;
@@ -511,8 +511,8 @@ TEST_F(TerrainPhysicsColliderComponentTest, TerrainPhysicsColliderDefaultMateria
     const AZ::Data::Asset<Physics::MaterialAsset> defaultSurfaceMaterial(AZ::Data::AssetId(AZ::Uuid::CreateRandom()), {});
     const AZ::Data::Asset<Physics::MaterialAsset> mat1(AZ::Data::AssetId(AZ::Uuid::CreateRandom()), {});
 
-    const SurfaceData::SurfaceTag tag1 = SurfaceData::SurfaceTag("tag1");
-    const SurfaceData::SurfaceTag tag2 = SurfaceData::SurfaceTag("tag2");
+    const JE::Geometry::SurfaceData::SurfaceTag tag1 = JE::Geometry::SurfaceData::SurfaceTag("tag1");
+    const JE::Geometry::SurfaceData::SurfaceTag tag2 = JE::Geometry::SurfaceData::SurfaceTag("tag2");
 
     Terrain::TerrainPhysicsSurfaceMaterialMapping mapping1;
     mapping1.m_materialAsset = mat1;
@@ -629,10 +629,10 @@ TEST_F(TerrainPhysicsColliderComponentTest, TerrainPhysicsColliderDefaultMateria
     const float mockHeight = 32768.0f;
     float mockHeightResolution = 1.0f;
 
-    const SurfaceData::SurfaceTag tag1 = SurfaceData::SurfaceTag("tag1");
+    const JE::Geometry::SurfaceData::SurfaceTag tag1 = JE::Geometry::SurfaceData::SurfaceTag("tag1");
     AzFramework::SurfaceData::SurfaceTagWeight tagWeight1(tag1, 1.0f);
 
-    const SurfaceData::SurfaceTag tag2 = SurfaceData::SurfaceTag("tag2");
+    const JE::Geometry::SurfaceData::SurfaceTag tag2 = JE::Geometry::SurfaceData::SurfaceTag("tag2");
     AzFramework::SurfaceData::SurfaceTagWeight tagWeight2(tag2, 1.0f);
 
     AzFramework::SurfaceData::SurfaceTagWeightList surfaceTags = { tagWeight1, tagWeight2 };

@@ -10,7 +10,7 @@
 #include <AzCore/Memory/SystemAllocator.h>
 #include <AzCore/RTTI/ReflectContext.h>
 
-#include <GraphCanvas/Widgets/MimeEvents/CreateSplicingNodeMimeEvent.h>
+#include <JE/Editor/Tools/GraphCanvas/Widgets/MimeEvents/CreateSplicingNodeMimeEvent.h>
 
 #include "ScriptCanvas/Bus/NodeIdPair.h"
 #include <ScriptCanvas/Core/Core.h>
@@ -18,10 +18,10 @@
 namespace ScriptCanvasEditor
 {
     class CreateNodeMimeEvent
-        : public GraphCanvas::CreateSplicingNodeMimeEvent
+        : public JE::Editor::Tools::GraphCanvas::CreateSplicingNodeMimeEvent
     {
     public:
-        AZ_RTTI(CreateNodeMimeEvent, "{95C84213-1FF8-42FF-96F3-37B80B7E2C20}", GraphCanvas::CreateSplicingNodeMimeEvent);
+        AZ_RTTI(CreateNodeMimeEvent, "{95C84213-1FF8-42FF-96F3-37B80B7E2C20}", JE::Editor::Tools::GraphCanvas::CreateSplicingNodeMimeEvent);
         AZ_CLASS_ALLOCATOR(CreateNodeMimeEvent, AZ::SystemAllocator);
             
         static void Reflect(AZ::ReflectContext* reflectContext);
@@ -44,10 +44,10 @@ namespace ScriptCanvasEditor
     // To deal with those cases, we want to make a specialized mime event so we can catch these cases from the context menu
     // and execute the right functions.
     class SpecializedCreateNodeMimeEvent
-        : public GraphCanvas::GraphCanvasMimeEvent
+        : public JE::Editor::Tools::GraphCanvas::GraphCanvasMimeEvent
     {
     public:
-        AZ_RTTI(SpecializedCreateNodeMimeEvent, "{7909C855-B6DA-47E4-97DB-BBC8315C30B1}", GraphCanvas::GraphCanvasMimeEvent);
+        AZ_RTTI(SpecializedCreateNodeMimeEvent, "{7909C855-B6DA-47E4-97DB-BBC8315C30B1}", JE::Editor::Tools::GraphCanvas::GraphCanvasMimeEvent);
         AZ_CLASS_ALLOCATOR(SpecializedCreateNodeMimeEvent, AZ::SystemAllocator);
 
         static void Reflect(AZ::ReflectContext* reflectContext);
@@ -70,6 +70,6 @@ namespace ScriptCanvasEditor
 
         static void Reflect(AZ::ReflectContext* reflectContext);
 
-        virtual AZStd::vector< GraphCanvas::GraphCanvasMimeEvent* > CreateMimeEvents() const = 0;
+        virtual AZStd::vector< JE::Editor::Tools::GraphCanvas::GraphCanvasMimeEvent* > CreateMimeEvents() const = 0;
     };
 }

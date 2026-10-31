@@ -14,11 +14,11 @@
 #include <AzTest/AzTest.h>
 
 // Graph Canvas
-#include <GraphCanvas/Components/Nodes/NodeBus.h>
-#include <GraphCanvas/Components/Slots/SlotBus.h>
-#include <GraphCanvas/Components/Slots/Data/DataSlotBus.h>
-#include <GraphCanvas/Editor/EditorTypes.h>
-#include <GraphCanvas/GraphCanvasBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/Nodes/NodeBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/Slots/SlotBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/Slots/Data/DataSlotBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Editor/EditorTypes.h>
+#include <JE/Editor/Tools/GraphCanvas/GraphCanvasBus.h>
 
 // GraphModel
 #include <JE/Editor/Tools/GraphModel/GraphModelBus.h>
@@ -84,7 +84,7 @@ namespace GraphModelIntegrationTest
 
         // Add our test node to the scene
         AZ::Vector2 offset;
-        GraphCanvas::NodeId nodeId;
+        JE::Editor::Tools::GraphCanvas::NodeId nodeId;
         JE::Editor::Tools::GraphModel::Integration::GraphControllerRequestBus::EventResult(nodeId, m_sceneId, &JE::Editor::Tools::GraphModel::Integration::GraphControllerRequests::AddNode, testNode, offset);
 
         // Make sure the correct node was added to the scene
@@ -107,7 +107,7 @@ namespace GraphModelIntegrationTest
 
         // Add our test node to the scene
         AZ::Vector2 offset;
-        GraphCanvas::NodeId nodeId;
+        JE::Editor::Tools::GraphCanvas::NodeId nodeId;
         JE::Editor::Tools::GraphModel::Integration::GraphControllerRequestBus::EventResult(nodeId, m_sceneId, &JE::Editor::Tools::GraphModel::Integration::GraphControllerRequests::AddNode, testNode, offset);
 
         // Retrieve the data type (string) for the string input slot on our test node
@@ -118,13 +118,13 @@ namespace GraphModelIntegrationTest
 
         // Make sure our node has the expected slots
         AZStd::vector<AZ::EntityId> slotIds;
-        GraphCanvas::NodeRequestBus::EventResult(slotIds, nodeId, &GraphCanvas::NodeRequests::GetSlotIds);
+        JE::Editor::Tools::GraphCanvas::NodeRequestBus::EventResult(slotIds, nodeId, &JE::Editor::Tools::GraphCanvas::NodeRequests::GetSlotIds);
         EXPECT_EQ(slotIds.size(), 4);
 
         // Make sure the data type of the input string slot on our test node matches the expected data type
         AZ::EntityId slotId = slotIds[0];
         AZ::Uuid slotDataTypeId;
-        GraphCanvas::DataSlotRequestBus::EventResult(slotDataTypeId, slotId, &GraphCanvas::DataSlotRequests::GetDataTypeId);
+        JE::Editor::Tools::GraphCanvas::DataSlotRequestBus::EventResult(slotDataTypeId, slotId, &JE::Editor::Tools::GraphCanvas::DataSlotRequests::GetDataTypeId);
         EXPECT_EQ(stringDataTypeId, slotDataTypeId);
     }
 
@@ -136,7 +136,7 @@ namespace GraphModelIntegrationTest
 
         // Add our test node to the scene
         AZ::Vector2 offset;
-        GraphCanvas::NodeId nodeId;
+        JE::Editor::Tools::GraphCanvas::NodeId nodeId;
         JE::Editor::Tools::GraphModel::Integration::GraphControllerRequestBus::EventResult(nodeId, m_sceneId, &JE::Editor::Tools::GraphModel::Integration::GraphControllerRequests::AddNode, testNode, offset);
 
         // Test that we can retrieve the expected node by NodeId
@@ -146,12 +146,12 @@ namespace GraphModelIntegrationTest
 
         // Test requesting an invalid NodeId returns nullptr
         retrievedNode = nullptr;
-        JE::Editor::Tools::GraphModel::Integration::GraphControllerRequestBus::EventResult(retrievedNode, m_sceneId, &JE::Editor::Tools::GraphModel::Integration::GraphControllerRequests::GetNodeById, GraphCanvas::NodeId());
+        JE::Editor::Tools::GraphModel::Integration::GraphControllerRequestBus::EventResult(retrievedNode, m_sceneId, &JE::Editor::Tools::GraphModel::Integration::GraphControllerRequests::GetNodeById, JE::Editor::Tools::GraphCanvas::NodeId());
         EXPECT_EQ(retrievedNode, nullptr);
 
         // Test requesting a valid NodeId but one that doesn't exist in the scene returns nullptr
         retrievedNode = nullptr;
-        JE::Editor::Tools::GraphModel::Integration::GraphControllerRequestBus::EventResult(retrievedNode, m_sceneId, &JE::Editor::Tools::GraphModel::Integration::GraphControllerRequests::GetNodeById, GraphCanvas::NodeId(1234));
+        JE::Editor::Tools::GraphModel::Integration::GraphControllerRequestBus::EventResult(retrievedNode, m_sceneId, &JE::Editor::Tools::GraphModel::Integration::GraphControllerRequests::GetNodeById, JE::Editor::Tools::GraphCanvas::NodeId(1234));
         EXPECT_EQ(retrievedNode, nullptr);
     }
 
@@ -163,14 +163,14 @@ namespace GraphModelIntegrationTest
 
         // Add our test node to the scene
         AZ::Vector2 offset;
-        GraphCanvas::NodeId nodeId;
+        JE::Editor::Tools::GraphCanvas::NodeId nodeId;
         JE::Editor::Tools::GraphModel::Integration::GraphControllerRequestBus::EventResult(nodeId, m_sceneId, &JE::Editor::Tools::GraphModel::Integration::GraphControllerRequests::AddNode, testNode, offset);
 
         // Retrieve Nodes by their NodeId
-        AZStd::vector<GraphCanvas::NodeId> nodeIds = {
+        AZStd::vector<JE::Editor::Tools::GraphCanvas::NodeId> nodeIds = {
             nodeId, // Valid NodeId for a node in the scene
-            GraphCanvas::NodeId(), // Invalid NodeId
-            GraphCanvas::NodeId(1234) // Valid NodeId but not in the scene
+            JE::Editor::Tools::GraphCanvas::NodeId(), // Invalid NodeId
+            JE::Editor::Tools::GraphCanvas::NodeId(1234) // Valid NodeId but not in the scene
         };
         JE::Editor::Tools::GraphModel::NodePtrList retrievedNodes;
         JE::Editor::Tools::GraphModel::Integration::GraphControllerRequestBus::EventResult(retrievedNodes, m_sceneId, &JE::Editor::Tools::GraphModel::Integration::GraphControllerRequests::GetNodesFromGraphNodeIds, nodeIds);
@@ -189,7 +189,7 @@ namespace GraphModelIntegrationTest
 
         // Add our test node to the scene
         AZ::Vector2 offset;
-        GraphCanvas::NodeId nodeId;
+        JE::Editor::Tools::GraphCanvas::NodeId nodeId;
         JE::Editor::Tools::GraphModel::Integration::GraphControllerRequestBus::EventResult(nodeId, m_sceneId, &JE::Editor::Tools::GraphModel::Integration::GraphControllerRequests::AddNode, testNode, offset);
 
         // The input string extendable slot has a minimum of 0 slots, so there should be none
@@ -221,7 +221,7 @@ namespace GraphModelIntegrationTest
 
         // Add our test node to the scene
         AZ::Vector2 offset;
-        GraphCanvas::NodeId nodeId;
+        JE::Editor::Tools::GraphCanvas::NodeId nodeId;
         JE::Editor::Tools::GraphModel::Integration::GraphControllerRequestBus::EventResult(nodeId, m_sceneId, &JE::Editor::Tools::GraphModel::Integration::GraphControllerRequests::AddNode, testNode, offset);
 
         // The input string extendable slot has a minimum of 0 slots, so it starts with 0
@@ -265,7 +265,7 @@ namespace GraphModelIntegrationTest
 
         // Add our test node to the scene
         AZ::Vector2 offset;
-        GraphCanvas::NodeId nodeId;
+        JE::Editor::Tools::GraphCanvas::NodeId nodeId;
         JE::Editor::Tools::GraphModel::Integration::GraphControllerRequestBus::EventResult(nodeId, m_sceneId, &JE::Editor::Tools::GraphModel::Integration::GraphControllerRequests::AddNode, testNode, offset);
 
         // The output string extendable slot has a minimum of 1 slot, so it starts with 1
@@ -308,7 +308,7 @@ namespace GraphModelIntegrationTest
 
         // Add our test node to the scene
         AZ::Vector2 offset;
-        GraphCanvas::NodeId nodeId;
+        JE::Editor::Tools::GraphCanvas::NodeId nodeId;
         JE::Editor::Tools::GraphModel::Integration::GraphControllerRequestBus::EventResult(nodeId, m_sceneId, &JE::Editor::Tools::GraphModel::Integration::GraphControllerRequests::AddNode, testNode, offset);
 
         // Can't add a non-extendable slot, so adding a non-extendable slot will fail
@@ -326,7 +326,7 @@ namespace GraphModelIntegrationTest
 
         // Add our test node to the scene
         AZ::Vector2 offset;
-        GraphCanvas::NodeId nodeId;
+        JE::Editor::Tools::GraphCanvas::NodeId nodeId;
         JE::Editor::Tools::GraphModel::Integration::GraphControllerRequestBus::EventResult(nodeId, m_sceneId, &JE::Editor::Tools::GraphModel::Integration::GraphControllerRequests::AddNode, testNode, offset);
 
         // Can't delete a non-extendable slot, so deleting a non-extendable slot will fail

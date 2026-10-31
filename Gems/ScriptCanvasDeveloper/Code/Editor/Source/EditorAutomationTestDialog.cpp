@@ -18,9 +18,9 @@
 
 #include <AzCore/Casting/numeric_cast.h>
 
-#include <GraphCanvas/Editor/Automation/AutomationUtils.h>
-#include <GraphCanvas/Widgets/NodePalette/NodePaletteDockWidget.h>
-#include <GraphCanvas/Widgets/NodePalette/NodePaletteWidget.h>
+#include <JE/Editor/Tools/GraphCanvas/Editor/Automation/AutomationUtils.h>
+#include <JE/Editor/Tools/GraphCanvas/Widgets/NodePalette/NodePaletteDockWidget.h>
+#include <JE/Editor/Tools/GraphCanvas/Widgets/NodePalette/NodePaletteWidget.h>
 
 #include <ScriptCanvas/Bus/RequestBus.h>
 
@@ -201,10 +201,10 @@ namespace ScriptCanvas::Developer
             }
         }
 
-        QObject* object = GraphCanvas::AutomationUtils::FindObjectById<QObject>(ScriptCanvasEditor::AssetEditorId, ScriptCanvasEditor::AutomationIds::NodePaletteWidget);
+        QObject* object = JE::Editor::Tools::GraphCanvas::AutomationUtils::FindObjectById<QObject>(ScriptCanvasEditor::AssetEditorId, ScriptCanvasEditor::AutomationIds::NodePaletteWidget);
 
         // Can't use qobject_cast, since it is accessing across DLLs
-        GraphCanvas::NodePaletteWidget* nodePaletteWidget = static_cast<GraphCanvas::NodePaletteWidget*>(object);
+        JE::Editor::Tools::GraphCanvas::NodePaletteWidget* nodePaletteWidget = static_cast<JE::Editor::Tools::GraphCanvas::NodePaletteWidget*>(object);
 
         if (nodePaletteWidget == nullptr)
         {

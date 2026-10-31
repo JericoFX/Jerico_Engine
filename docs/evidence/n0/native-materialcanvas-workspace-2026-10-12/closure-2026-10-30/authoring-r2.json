@@ -1,0 +1,50 @@
+{
+  "utc": "2026-10-30T13:36:40.036757Z",
+  "scope": "Installed MaterialCanvas authoring R2",
+  "wholeGemAccepted": false,
+  "checks": {
+    "edit": true,
+    "undo": true,
+    "redo": true,
+    "save": true,
+    "closeDocumentAndReopen": true,
+    "automaticPreviewReversible": true,
+    "manualOpenGeneratedUsed": false
+  },
+  "visual": {
+    "roi": [
+      1258,
+      598,
+      346,
+      302
+    ],
+    "group025": [
+      "01-baseline-025-f05",
+      "04-undo-025-idle"
+    ],
+    "group075": [
+      "02-saved-075-f05",
+      "05-redo-saved-075",
+      "07-reopened-075"
+    ],
+    "withinGroupsPixelExact": true,
+    "crossGroupChangedPixels": 37353,
+    "roiPixels": 104492,
+    "meanAbsoluteRgbDifference": 1.250217,
+    "fixedF0": 0.5,
+    "reviewer": "dependency_writer readonly comparison, parent observed original UI and reversibility"
+  },
+  "limitations": [
+    "Reopened screenshot07 has pending1; does not establish idle at that instant.",
+    "No full Gem acceptance; BSP application and other existing checklist requirements remain.",
+    "Transient process exit codes reviewed separately."
+  ],
+  "restoration": "parent-restoration.json:28 originals exact",
+  "cleanup": "parent-helper-cleanup.json",
+  "normalClosure": true,
+  "inputDrift": 0,
+  "terminalReview": "luna-terminal-review.json",
+  "transientExitUnknownCount": 17,
+  "trackedTerminalExitZeroCount": 115,
+  "remainingNativeProcesses": 0
+}

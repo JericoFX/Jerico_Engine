@@ -24,7 +24,7 @@ namespace ScriptCanvasEditor
         static void Reflect(AZ::ReflectContext* reflectContext);
 
         DynamicOrderingDynamicSlotComponent();
-        DynamicOrderingDynamicSlotComponent(GraphCanvas::SlotGroup slotGroup);
+        DynamicOrderingDynamicSlotComponent(JE::Editor::Tools::GraphCanvas::SlotGroup slotGroup);
         ~DynamicOrderingDynamicSlotComponent() override = default;
 
         // AZ::SystemTickBus
@@ -33,7 +33,7 @@ namespace ScriptCanvasEditor
 
         // SceneMemberNotificationBus
         void OnSceneSet(const AZ::EntityId& sceneId) override;        
-        void OnSceneMemberDeserialized(const AZ::EntityId& graphId, const GraphCanvas::GraphSerialization& serializationTarget) override;
+        void OnSceneMemberDeserialized(const AZ::EntityId& graphId, const JE::Editor::Tools::GraphCanvas::GraphSerialization& serializationTarget) override;
         ////
 
         // NodeNotifications
@@ -46,7 +46,7 @@ namespace ScriptCanvasEditor
 
     protected:
 
-        void ConfigureGraphCanvasSlot(const ScriptCanvas::Slot* slot, const GraphCanvas::SlotId& graphCanvasSlotId) override;
+        void ConfigureGraphCanvasSlot(const ScriptCanvas::Slot* slot, const JE::Editor::Tools::GraphCanvas::SlotId& graphCanvasSlotId) override;
 
     private:
 

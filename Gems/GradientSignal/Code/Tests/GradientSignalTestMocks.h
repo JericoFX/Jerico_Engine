@@ -22,9 +22,9 @@
 #include <GradientSignal/Ebuses/GradientPreviewContextRequestBus.h>
 #include <GradientSignal/GradientSampler.h>
 #include <LmbrCentral/Shape/ShapeComponentBus.h>
-#include <SurfaceData/SurfaceDataProviderRequestBus.h>
-#include <SurfaceData/SurfaceDataSystemRequestBus.h>
-#include <SurfaceData/Tests/SurfaceDataTestMocks.h>
+#include <JE/Geometry/SurfaceData/SurfaceDataProviderRequestBus.h>
+#include <JE/Geometry/SurfaceData/SurfaceDataSystemRequestBus.h>
+#include <SurfaceData/SurfaceDataTestMocks.h>
 
 namespace UnitTest
 {
@@ -128,14 +128,14 @@ namespace UnitTest
     // at which points for our unit tests.
     struct MockSurfaceProviderComponent
         : public AZ::Component
-        , public SurfaceData::SurfaceDataProviderRequestBus::Handler
+        , public JE::Geometry::SurfaceData::SurfaceDataProviderRequestBus::Handler
     {
     public:
         AZ_COMPONENT(MockSurfaceProviderComponent, "{18C71877-DB29-4CEC-B34C-B4B44E05203D}", AZ::Component);
 
         void Activate() override
         {
-            SurfaceData::SurfaceDataRegistryEntry providerRegistryEntry;
+            JE::Geometry::SurfaceData::SurfaceDataRegistryEntry providerRegistryEntry;
             providerRegistryEntry.m_entityId = GetEntityId();
             providerRegistryEntry.m_bounds = m_bounds;
             providerRegistryEntry.m_tags = m_tags;
@@ -152,15 +152,15 @@ namespace UnitTest
                 }
             }
 
-            m_providerHandle = AZ::Interface<SurfaceData::SurfaceDataSystem>::Get()->RegisterSurfaceDataProvider(providerRegistryEntry);
-            SurfaceData::SurfaceDataProviderRequestBus::Handler::BusConnect(m_providerHandle);
+            m_providerHandle = AZ::Interface<JE::Geometry::SurfaceData::SurfaceDataSystem>::Get()->RegisterSurfaceDataProvider(providerRegistryEntry);
+            JE::Geometry::SurfaceData::SurfaceDataProviderRequestBus::Handler::BusConnect(m_providerHandle);
         }
 
         void Deactivate() override
         {
-            AZ::Interface<SurfaceData::SurfaceDataSystem>::Get()->UnregisterSurfaceDataProvider(m_providerHandle);
-            m_providerHandle = SurfaceData::InvalidSurfaceDataRegistryHandle;
-            SurfaceData::SurfaceDataProviderRequestBus::Handler::BusDisconnect();
+            AZ::Interface<JE::Geometry::SurfaceData::SurfaceDataSystem>::Get()->UnregisterSurfaceDataProvider(m_providerHandle);
+            m_providerHandle = JE::Geometry::SurfaceData::InvalidSurfaceDataRegistryHandle;
+            JE::Geometry::SurfaceData::SurfaceDataProviderRequestBus::Handler::BusDisconnect();
         }
 
         static void Reflect([[maybe_unused]] AZ::ReflectContext* reflect)
@@ -172,7 +172,7 @@ namespace UnitTest
             provided.push_back(AZ_CRC_CE("SurfaceDataProviderService"));
         }
 
-        void GetSurfacePoints(const AZ::Vector3& inPosition, SurfaceData::SurfacePointList& surfacePointList) const override
+        void GetSurfacePoints(const AZ::Vector3& inPosition, JE::Geometry::SurfaceData::SurfacePointList& surfacePointList) const override
         {
             auto surfacePoints = m_surfacePoints.find(AZStd::make_pair(inPosition.GetX(), inPosition.GetY()));
 
@@ -182,7 +182,7 @@ namespace UnitTest
                 surfacePoints->second.EnumeratePoints(
                     [inPosition, &surfacePointList](
                         [[maybe_unused]] size_t inPositionIndex, const AZ::Vector3& position, const AZ::Vector3& normal,
-                        const SurfaceData::SurfaceTagWeights& weights) -> bool
+                        const JE::Geometry::SurfaceData::SurfaceTagWeights& weights) -> bool
                     {
                         surfacePointList.AddSurfacePoint(AZ::EntityId(), inPosition, position, normal, weights);
                         return true;
@@ -191,15 +191,15 @@ namespace UnitTest
         }
 
         // m_surfacePoints is a mapping of locations to surface tags / weights that should be returned.
-        AZStd::unordered_map<AZStd::pair<float, float>, SurfaceData::SurfacePointList> m_surfacePoints;
+        AZStd::unordered_map<AZStd::pair<float, float>, JE::Geometry::SurfaceData::SurfacePointList> m_surfacePoints;
 
         // m_bounds is the AABB to use for our mock surface provider.
         AZ::Aabb m_bounds;
 
         // m_tags are the possible set of tags that this provider will return.
-        SurfaceData::SurfaceTagVector m_tags;
+        JE::Geometry::SurfaceData::SurfaceTagVector m_tags;
 
-        SurfaceData::SurfaceDataRegistryHandle m_providerHandle = SurfaceData::InvalidSurfaceDataRegistryHandle;
+        JE::Geometry::SurfaceData::SurfaceDataRegistryHandle m_providerHandle = JE::Geometry::SurfaceData::InvalidSurfaceDataRegistryHandle;
     };
 
 

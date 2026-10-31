@@ -17,8 +17,8 @@
 #include <AzCore/Math/Uuid.h>
 #include <AzCore/Math/Vector2.h>
 
-#include <GraphCanvas/Editor/EditorTypes.h>
-#include <GraphCanvas/Types/EntitySaveData.h>
+#include <JE/Editor/Tools/GraphCanvas/Editor/EditorTypes.h>
+#include <JE/Editor/Tools/GraphCanvas/Types/EntitySaveData.h>
 
 #include <Editor/Include/ScriptCanvas/Bus/NodeIdPair.h>
 #include <ScriptCanvas/Core/ExecutionNotificationsBus.h>
@@ -27,7 +27,7 @@
 
 #include <ScriptCanvas/Core/Core.h>
 
-namespace GraphCanvas
+namespace JE::Editor::Tools::GraphCanvas
 {
     class GraphCanvasTreeItem;
 }
@@ -54,14 +54,14 @@ namespace ScriptCanvasEditor
 
         virtual void CreateGraphCanvasScene() = 0;
         virtual void ClearGraphCanvasScene() = 0;
-        virtual GraphCanvas::GraphId GetGraphCanvasGraphId() const = 0;
+        virtual JE::Editor::Tools::GraphCanvas::GraphId GetGraphCanvasGraphId() const = 0;
 
         virtual void DisplayGraphCanvasScene() = 0;
 
         virtual void OnGraphCanvasSceneVisible() = 0;
 
-        virtual void UpdateGraphCanvasSaveData(const AZStd::unordered_map< AZ::EntityId, GraphCanvas::EntitySaveDataContainer* >& saveData) = 0;
-        virtual AZStd::unordered_map< AZ::EntityId, GraphCanvas::EntitySaveDataContainer* > GetGraphCanvasSaveData() = 0;
+        virtual void UpdateGraphCanvasSaveData(const AZStd::unordered_map< AZ::EntityId, JE::Editor::Tools::GraphCanvas::EntitySaveDataContainer* >& saveData) = 0;
+        virtual AZStd::unordered_map< AZ::EntityId, JE::Editor::Tools::GraphCanvas::EntitySaveDataContainer* > GetGraphCanvasSaveData() = 0;
 
         virtual NodeIdPair CreateCustomNode(const AZ::Uuid& typeId, const AZ::Vector2& position) = 0;
 
@@ -70,7 +70,7 @@ namespace ScriptCanvasEditor
         virtual AZStd::string DecodeCrc(const AZ::Crc32& crcValue) = 0;
 
         virtual void ClearHighlights() = 0;
-        virtual void HighlightMembersFromTreeItem(const GraphCanvas::GraphCanvasTreeItem* treeItem) = 0;
+        virtual void HighlightMembersFromTreeItem(const JE::Editor::Tools::GraphCanvas::GraphCanvasTreeItem* treeItem) = 0;
         virtual void HighlightVariables(const AZStd::unordered_set< ScriptCanvas::VariableId>& variableIds) = 0;
         virtual void HighlightNodes(const AZStd::vector<NodeIdPair>& nodes) = 0;
 
@@ -79,15 +79,15 @@ namespace ScriptCanvasEditor
 
         virtual void RemoveUnusedVariables() = 0;
 
-        virtual bool CanConvertVariableNodeToReference(const GraphCanvas::NodeId& nodeId) = 0;
-        virtual bool ConvertVariableNodeToReference(const GraphCanvas::NodeId& nodeId) = 0;
-        virtual bool ConvertReferenceToVariableNode(const GraphCanvas::Endpoint& endpoint) = 0;
+        virtual bool CanConvertVariableNodeToReference(const JE::Editor::Tools::GraphCanvas::NodeId& nodeId) = 0;
+        virtual bool ConvertVariableNodeToReference(const JE::Editor::Tools::GraphCanvas::NodeId& nodeId) = 0;
+        virtual bool ConvertReferenceToVariableNode(const JE::Editor::Tools::GraphCanvas::Endpoint& endpoint) = 0;
 
         virtual void QueueVersionUpdate(const AZ::EntityId& graphCanvasNodeId) = 0;
-        virtual bool CanExposeEndpoint(const GraphCanvas::Endpoint& endpoint) = 0;
+        virtual bool CanExposeEndpoint(const JE::Editor::Tools::GraphCanvas::Endpoint& endpoint) = 0;
 
-        virtual ScriptCanvas::Endpoint ConvertToScriptCanvasEndpoint(const GraphCanvas::Endpoint& endpoinnt) const = 0;
-        virtual GraphCanvas::Endpoint ConvertToGraphCanvasEndpoint(const ScriptCanvas::Endpoint& endpoint) const = 0;
+        virtual ScriptCanvas::Endpoint ConvertToScriptCanvasEndpoint(const JE::Editor::Tools::GraphCanvas::Endpoint& endpoinnt) const = 0;
+        virtual JE::Editor::Tools::GraphCanvas::Endpoint ConvertToGraphCanvasEndpoint(const ScriptCanvas::Endpoint& endpoint) const = 0;
 
         virtual void SetOriginalToNewIdsMap(const AZStd::unordered_map<AZ::EntityId, AZ::EntityId>& originalIdToNewIds) = 0;
         virtual void GetOriginalToNewIdsMap(AZStd::unordered_map<AZ::EntityId, AZ::EntityId>& originalIdToNewIds) const = 0;

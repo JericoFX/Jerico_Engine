@@ -23,7 +23,7 @@
 #include <LmbrCentral/Dependency/DependencyNotificationBus.h>
 #include <LmbrCentral/Component/EditorWrappedComponentBase.h>
 
-#include <SurfaceData/SurfaceDataSystemRequestBus.h>
+#include <JE/Geometry/SurfaceData/SurfaceDataSystemRequestBus.h>
 
 namespace GradientSignal
 {

@@ -11,11 +11,11 @@
 #include <QMenu>
 #include <QString>
 
-#include <GraphCanvas/Components/Nodes/NodeBus.h>
-#include <GraphCanvas/Components/SceneBus.h>
-#include <GraphCanvas/Components/Slots/SlotBus.h>
-#include <GraphCanvas/Components/VisualBus.h>
-#include <GraphCanvas/Utils/ConversionUtils.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/Nodes/NodeBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/SceneBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/Slots/SlotBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/VisualBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Utils/ConversionUtils.h>
 
 #include <ScriptCanvas/Bus/RequestBus.h>
 
@@ -38,7 +38,7 @@ namespace ScriptCanvas::Developer
     {
     public:
 
-        CreateNodeFromPaletteTest(const AZStd::string& nodeName, GraphCanvas::NodePaletteWidget* paletteWidget)
+        CreateNodeFromPaletteTest(const AZStd::string& nodeName, JE::Editor::Tools::GraphCanvas::NodePaletteWidget* paletteWidget)
             : EditorAutomationTest(AZStd::string::format("Create %s from Node Palette", nodeName.c_str()).c_str())
         {
             AutomationStateModelId viewCenterModelId = "ViewCenter";
@@ -78,7 +78,7 @@ namespace ScriptCanvas::Developer
     {
     public:
 
-        CreateHelloWorldFromPalette(GraphCanvas::NodePaletteWidget* paletteWidget)
+        CreateHelloWorldFromPalette(JE::Editor::Tools::GraphCanvas::NodePaletteWidget* paletteWidget)
             : EditorAutomationTest("Create Hello World From Palette")
         {
             AddState(new CreateRuntimeGraphState());
@@ -99,7 +99,7 @@ namespace ScriptCanvas::Developer
             AddState(new FindNodePosition(onGraphStartId, printTargetPoint, offsets));
             AddState(new CreateNodeFromPaletteState(paletteWidget, "Print", CreateNodeFromPaletteState::CreationType::ScenePosition, printTargetPoint, printId));
 
-            AddState(new CoupleNodesState(onGraphStartId, GraphCanvas::ConnectionType::CT_Output, printId));
+            AddState(new CoupleNodesState(onGraphStartId, JE::Editor::Tools::GraphCanvas::ConnectionType::CT_Output, printId));
             AddState(new ForceCloseActiveGraphState());
         }
     };
@@ -133,7 +133,7 @@ namespace ScriptCanvas::Developer
             AddState(new FindNodePosition(onGraphStartId, printTargetPoint, offsets));
             AddState(new CreateNodeFromContextMenuState("Print", CreateNodeFromContextMenuState::CreationType::ScenePosition, printTargetPoint, printId));
 
-            AddState(new CoupleNodesState(onGraphStartId, GraphCanvas::ConnectionType::CT_Output, printId));
+            AddState(new CoupleNodesState(onGraphStartId, JE::Editor::Tools::GraphCanvas::ConnectionType::CT_Output, printId));
             AddState(new ForceCloseActiveGraphState());
         }
     };
@@ -145,7 +145,7 @@ namespace ScriptCanvas::Developer
         : public EditorAutomationTest
     {
     public:
-        CreateCategoryTest(AZStd::string categoryString, GraphCanvas::NodePaletteWidget* nodePaletteWidget);
+        CreateCategoryTest(AZStd::string categoryString, JE::Editor::Tools::GraphCanvas::NodePaletteWidget* nodePaletteWidget);
         ~CreateCategoryTest() override = default;
     };
 
@@ -167,7 +167,7 @@ namespace ScriptCanvas::Developer
         : public EditorAutomationTest
     {
     public:
-        CreateDragDropExecutionSpliceNodeTest(GraphCanvas::NodePaletteWidget* nodePaletteWidget, QString nodeName);
+        CreateDragDropExecutionSpliceNodeTest(JE::Editor::Tools::GraphCanvas::NodePaletteWidget* nodePaletteWidget, QString nodeName);
         ~CreateDragDropExecutionSpliceNodeTest() override = default;
     };
 }

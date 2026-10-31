@@ -117,7 +117,7 @@ namespace ScriptCanvasEditor
         AZ::SerializeContext* serializeContext = azrtti_cast<AZ::SerializeContext*>(context);
         if (serializeContext)
         {
-            serializeContext->Class<UnitTestComponent, GraphCanvas::GraphCanvasPropertyComponent>()
+            serializeContext->Class<UnitTestComponent, JE::Editor::Tools::GraphCanvas::GraphCanvasPropertyComponent>()
                 ->Version(0)
                 ;
 
@@ -262,7 +262,7 @@ namespace ScriptCanvasEditor
 
     UnitTestDockWidget::~UnitTestDockWidget()
     {
-        GraphCanvas::AssetEditorNotificationBus::Handler::BusDisconnect();
+        JE::Editor::Tools::GraphCanvas::AssetEditorNotificationBus::Handler::BusDisconnect();
         AzToolsFramework::EditorEvents::Bus::Handler::BusDisconnect();
         UnitTestWidgetNotificationBus::Handler::BusDisconnect();
         delete m_itemButtonsDelegate;

@@ -192,6 +192,11 @@ namespace JE::Render
             return true;
         }
 
+        void ModelLodAssetCreator::SetMeshSurfaceIdentityTable(const ModelSurfaceIdentityTable& table)
+        {
+            if (ValidateIsMeshReady()) { m_currentMesh.m_surfaceIdentityTable = table; }
+        }
+
         bool ModelLodAssetCreator::ValidateLod()
         {
             if (m_asset->GetMeshes().empty())
@@ -200,11 +205,22 @@ namespace JE::Render
                 return false;
             }
 
+            if (!m_asset->ValidateSurfaceIdentityTables())
+            {
+                ReportError("Conflicting face ownership in surface identity tables");
+                return false;
+            }
+
             return true;
         }
 
         bool ModelLodAssetCreator::ValidateMesh(const ModelLodAsset::Mesh& mesh)
         {
+            if (!mesh.ValidateSurfaceIdentityTable())
+            {
+                ReportError("Invalid surface identity table");
+                return false;
+            }
             if (mesh.GetVertexCount() == 0)
             {
                 ReportError("Mesh has a vertex count of 0");
@@ -292,6 +308,7 @@ namespace JE::Render
                 creator.SetMeshAabb(aabb);
 
                 creator.SetMeshMaterialSlot(sourceMesh.GetMaterialSlotId());
+                creator.SetMeshSurfaceIdentityTable(sourceMesh.GetSurfaceIdentityTable());
 
                 // Mesh index buffer view
                 const BufferAssetView& sourceIndexBufferView = sourceMesh.GetIndexBufferAssetView();

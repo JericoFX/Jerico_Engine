@@ -14,7 +14,7 @@
 #include <AzCore/Math/Vector2.h>
 
 // Graph Canvas
-#include <GraphCanvas/Editor/EditorTypes.h>
+#include <JE/Editor/Tools/GraphCanvas/Editor/EditorTypes.h>
 
 // Graph Model
 #include <JE/Editor/Tools/GraphModel/Model/Common.h>
@@ -33,15 +33,15 @@ namespace JE::Editor::Tools::GraphModel::Integration
     {
         AZ_TYPE_INFO(GraphModelSerialization, "{0D4D420B-5D9E-429C-A567-DF8596439F5F}");
 
-        using SerializedSlotMapping = AZStd::unordered_map<JE::Editor::Tools::GraphModel::SlotId, GraphCanvas::SlotId>;
+        using SerializedSlotMapping = AZStd::unordered_map<JE::Editor::Tools::GraphModel::SlotId, JE::Editor::Tools::GraphCanvas::SlotId>;
         using SerializedNodeBuffer = AZStd::vector<AZ::u8>;
 
         //! Keep track of any nodes and their slots that have been serialized
-        AZStd::unordered_map<GraphCanvas::NodeId, SerializedNodeBuffer> m_serializedNodes;
-        AZStd::unordered_map<GraphCanvas::NodeId, SerializedSlotMapping> m_serializedSlotMappings;
+        AZStd::unordered_map<JE::Editor::Tools::GraphCanvas::NodeId, SerializedNodeBuffer> m_serializedNodes;
+        AZStd::unordered_map<JE::Editor::Tools::GraphCanvas::NodeId, SerializedSlotMapping> m_serializedSlotMappings;
 
         //! Mapping of serialized nodeIds to their wrapper (parent) nodeId and layout order so they can be restored after deserialization
-        using SerializedNodeWrappingMap = AZStd::unordered_map<GraphCanvas::NodeId, AZStd::pair<GraphCanvas::NodeId, AZ::u32>>;
+        using SerializedNodeWrappingMap = AZStd::unordered_map<JE::Editor::Tools::GraphCanvas::NodeId, AZStd::pair<JE::Editor::Tools::GraphCanvas::NodeId, AZ::u32>>;
         SerializedNodeWrappingMap m_serializedNodeWrappings;
     };
 
@@ -57,19 +57,19 @@ namespace JE::Editor::Tools::GraphModel::Integration
         //////////////////////////////////////////////////////////////////////////
 
         //! Create a scene and a corresponding graph controller
-        virtual AZ::Entity* CreateScene(JE::Editor::Tools::GraphModel::GraphPtr graph, const GraphCanvas::EditorId editorId) = 0;
+        virtual AZ::Entity* CreateScene(JE::Editor::Tools::GraphModel::GraphPtr graph, const JE::Editor::Tools::GraphCanvas::EditorId editorId) = 0;
 
         //! Remove the graph controller for the scene
-        virtual void RemoveScene(const GraphCanvas::GraphId& sceneId) = 0;
+        virtual void RemoveScene(const JE::Editor::Tools::GraphCanvas::GraphId& sceneId) = 0;
 
         //! Create a new Graph Controller for the given scene
-        virtual void CreateGraphController(const GraphCanvas::GraphId& sceneId, JE::Editor::Tools::GraphModel::GraphPtr graph) = 0;
+        virtual void CreateGraphController(const JE::Editor::Tools::GraphCanvas::GraphId& sceneId, JE::Editor::Tools::GraphModel::GraphPtr graph) = 0;
 
         //! Delete the Graph Controller for the given scene
-        virtual void DeleteGraphController(const GraphCanvas::GraphId& sceneId) = 0;
+        virtual void DeleteGraphController(const JE::Editor::Tools::GraphCanvas::GraphId& sceneId) = 0;
 
         //! Retrieve a reference to the Graph object for the specified Graph Controller (if it exists)
-        virtual JE::Editor::Tools::GraphModel::GraphPtr GetGraph(const GraphCanvas::GraphId& sceneId) = 0;
+        virtual JE::Editor::Tools::GraphModel::GraphPtr GetGraph(const JE::Editor::Tools::GraphCanvas::GraphId& sceneId) = 0;
 
         //! Get/set our serialized mappings of the GraphCanvas nodes/slots that correspond to
         //! GraphModel nodes/slots
@@ -92,7 +92,7 @@ namespace JE::Editor::Tools::GraphModel::Integration
         //////////////////////////////////////////////////////////////////////////
 
         //! Add a new node at the specified position
-        virtual GraphCanvas::NodeId AddNode(JE::Editor::Tools::GraphModel::NodePtr node, AZ::Vector2& sceneDropPosition) = 0;
+        virtual JE::Editor::Tools::GraphCanvas::NodeId AddNode(JE::Editor::Tools::GraphModel::NodePtr node, AZ::Vector2& sceneDropPosition) = 0;
 
         //! Remove the specified node
         virtual bool RemoveNode(JE::Editor::Tools::GraphModel::NodePtr node) = 0;
@@ -141,16 +141,16 @@ namespace JE::Editor::Tools::GraphModel::Integration
         virtual JE::Editor::Tools::GraphModel::SlotId ExtendSlot(JE::Editor::Tools::GraphModel::NodePtr node, const JE::Editor::Tools::GraphModel::SlotName& slotName) = 0;
 
         //! Returns a GraphModel::Node that corresponds to the Graph Canvas Node Id
-        virtual JE::Editor::Tools::GraphModel::NodePtr GetNodeById(const GraphCanvas::NodeId& nodeId) = 0;
+        virtual JE::Editor::Tools::GraphModel::NodePtr GetNodeById(const JE::Editor::Tools::GraphCanvas::NodeId& nodeId) = 0;
 
         //! Retrieve the list of GraphModel::Nodes for the specified GraphCanvas node IDs
-        virtual JE::Editor::Tools::GraphModel::NodePtrList GetNodesFromGraphNodeIds(const AZStd::vector<GraphCanvas::NodeId>& nodeIds) = 0;
+        virtual JE::Editor::Tools::GraphModel::NodePtrList GetNodesFromGraphNodeIds(const AZStd::vector<JE::Editor::Tools::GraphCanvas::NodeId>& nodeIds) = 0;
 
         //! Returns the GraphCanvas::NodeId that corresponds to the specified GraphModel::Node
-        virtual GraphCanvas::NodeId GetNodeIdByNode(JE::Editor::Tools::GraphModel::NodePtr node) const = 0;
+        virtual JE::Editor::Tools::GraphCanvas::NodeId GetNodeIdByNode(JE::Editor::Tools::GraphModel::NodePtr node) const = 0;
 
         //! Returns the GraphCanvas::SlotId that corresponds to the specified GraphModel::Slot
-        virtual GraphCanvas::SlotId GetSlotIdBySlot(JE::Editor::Tools::GraphModel::SlotPtr slot) const = 0;
+        virtual JE::Editor::Tools::GraphCanvas::SlotId GetSlotIdBySlot(JE::Editor::Tools::GraphModel::SlotPtr slot) const = 0;
 
         //! Retrieve all of the nodes in our graph
         virtual JE::Editor::Tools::GraphModel::NodePtrList GetNodes() = 0;

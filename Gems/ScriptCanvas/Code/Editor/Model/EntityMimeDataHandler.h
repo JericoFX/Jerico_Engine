@@ -10,13 +10,13 @@
 
 #include <AzCore/Component/EntityId.h>
 #include <AzCore/Component/Component.h>
-#include <GraphCanvas/Components/MimeDataHandlerBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/MimeDataHandlerBus.h>
 
 namespace ScriptCanvasEditor
 {
     class EntityMimeDataHandler
         : public AZ::Component
-        , protected GraphCanvas::SceneMimeDelegateHandlerRequestBus::Handler
+        , protected JE::Editor::Tools::GraphCanvas::SceneMimeDelegateHandlerRequestBus::Handler
     {
     public:
 

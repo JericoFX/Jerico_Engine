@@ -18,6 +18,7 @@
 #include <AzQtComponents/DragAndDrop/ViewportDragAndDrop.h>
 
 #include <AzCore/Math/IntersectSegment.h>
+#include <AzFramework/Render/GeometryIntersectionStructures.h>
 #include <MathConversion.h>
 
 // AzToolsFramework
@@ -44,11 +45,18 @@
 void QtViewport::BuildDragDropContext(
     AzQtComponents::ViewportDragContext& context, const AzFramework::ViewportId viewportId, const QPoint& point)
 {
-    context.m_hitLocation = AzToolsFramework::FindClosestPickIntersection(
-        viewportId,
-        AzToolsFramework::ViewportInteraction::ScreenPointFromQPoint(point * devicePixelRatioF()),
-        AzToolsFramework::EditorPickRayLength,
-        AzToolsFramework::GetDefaultEntityPlacementDistance());
+    const auto screenPoint = AzToolsFramework::ViewportInteraction::ScreenPointFromQPoint(point * devicePixelRatioF());
+    const auto viewportRay = AzToolsFramework::ViewportInteraction::ViewportScreenToWorldRay(viewportId, screenPoint);
+    AzFramework::RenderGeometry::RayRequest ray;
+    AzToolsFramework::RefreshRayRequest(ray, viewportRay, AzToolsFramework::EditorPickRayLength);
+    const auto hit = AzToolsFramework::FindClosestPickHit(ray);
+    context.m_hitLocation = hit ? hit.m_worldPosition
+        : ray.m_startWorldPosition + (ray.m_endWorldPosition - ray.m_startWorldPosition).GetNormalized() *
+            AzToolsFramework::GetDefaultEntityPlacementDistance();
+    context.m_hitEntityId = hit ? hit.m_entityAndComponent.GetEntityId() : AZ::EntityId{};
+    context.m_hitComponentId = hit ? hit.m_entityAndComponent.GetComponentId() : AZ::InvalidComponentId;
+    context.m_hitMaterialSlotId = hit ? hit.m_materialSlotId : AZStd::nullopt;
+    context.m_hitSurfaceId = hit ? hit.m_surfaceId : AZStd::nullopt;
 }
 
 void QtViewport::dragEnterEvent(QDragEnterEvent* event)

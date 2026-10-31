@@ -396,6 +396,11 @@ namespace AzToolsFramework
             const AssetBrowserEntry* item = m_thumbnailViewProxyModel->mapToSource(m_thumbnailViewProxyModel->GetRootIndex())
                                                 .data(AssetBrowserModel::Roles::EntryRole)
                                                 .value<const AssetBrowserEntry*>();
+            if (!item)
+            {
+                event->ignore();
+                return;
+            }
             AZStd::string pathName = item->GetFullPath();
 
 

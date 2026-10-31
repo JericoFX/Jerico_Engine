@@ -157,7 +157,7 @@ namespace Vegetation
         SetupDependencies();
         DescriptorProviderRequestBus::Handler::BusConnect(GetEntityId());
         DescriptorListCombinerRequestBus::Handler::BusConnect(GetEntityId());
-        SurfaceData::SurfaceDataTagEnumeratorRequestBus::Handler::BusConnect(GetEntityId());
+        JE::Geometry::SurfaceData::SurfaceDataTagEnumeratorRequestBus::Handler::BusConnect(GetEntityId());
     }
 
     void DescriptorListCombinerComponent::Deactivate()
@@ -165,7 +165,7 @@ namespace Vegetation
         m_dependencyMonitor.Reset();
         DescriptorProviderRequestBus::Handler::BusDisconnect();
         DescriptorListCombinerRequestBus::Handler::BusDisconnect();
-        SurfaceData::SurfaceDataTagEnumeratorRequestBus::Handler::BusDisconnect();
+        JE::Geometry::SurfaceData::SurfaceDataTagEnumeratorRequestBus::Handler::BusDisconnect();
     }
 
     bool DescriptorListCombinerComponent::ReadInConfig(const AZ::ComponentConfig* baseConfig)
@@ -201,7 +201,7 @@ namespace Vegetation
         }
     }
 
-    void DescriptorListCombinerComponent::GetInclusionSurfaceTags(SurfaceData::SurfaceTagVector& tags, bool& includeAll) const
+    void DescriptorListCombinerComponent::GetInclusionSurfaceTags(JE::Geometry::SurfaceData::SurfaceTagVector& tags, bool& includeAll) const
     {
         AZ_PROFILE_FUNCTION(Vegetation);
 
@@ -209,12 +209,12 @@ namespace Vegetation
         {
             if (entityId != GetEntityId())
             {
-                SurfaceData::SurfaceDataTagEnumeratorRequestBus::Event(entityId, &SurfaceData::SurfaceDataTagEnumeratorRequestBus::Events::GetInclusionSurfaceTags, tags, includeAll);
+                JE::Geometry::SurfaceData::SurfaceDataTagEnumeratorRequestBus::Event(entityId, &JE::Geometry::SurfaceData::SurfaceDataTagEnumeratorRequestBus::Events::GetInclusionSurfaceTags, tags, includeAll);
             }
         }
     }
 
-    void DescriptorListCombinerComponent::GetExclusionSurfaceTags(SurfaceData::SurfaceTagVector& tags) const
+    void DescriptorListCombinerComponent::GetExclusionSurfaceTags(JE::Geometry::SurfaceData::SurfaceTagVector& tags) const
     {
         AZ_PROFILE_FUNCTION(Vegetation);
 
@@ -222,7 +222,7 @@ namespace Vegetation
         {
             if (entityId != GetEntityId())
             {
-                SurfaceData::SurfaceDataTagEnumeratorRequestBus::Event(entityId, &SurfaceData::SurfaceDataTagEnumeratorRequestBus::Events::GetExclusionSurfaceTags, tags);
+                JE::Geometry::SurfaceData::SurfaceDataTagEnumeratorRequestBus::Event(entityId, &JE::Geometry::SurfaceData::SurfaceDataTagEnumeratorRequestBus::Events::GetExclusionSurfaceTags, tags);
             }
         }
     }

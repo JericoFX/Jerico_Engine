@@ -108,6 +108,9 @@ namespace AssetProcessor
         //! That we could not resolve before.
         void OnIntermediateSourceAppeared(QString sourceRef);
 
+        //! Source analysis only gates forced dispatch of jobs with unresolved dependencies.
+        void OnSourceAnalysisIdle(bool idle);
+
     protected:
         AssetProcessor::RCQueueSortModel m_RCQueueSortModel;
 

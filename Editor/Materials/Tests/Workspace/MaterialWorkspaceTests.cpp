@@ -42,6 +42,8 @@
 #include <AzCore/std/smart_ptr/make_shared.h>
 #include <AzTest/AzTest.h>
 #include <QApplication>
+#include <QMainWindow>
+#include <QPointer>
 #include <QAbstractButton>
 #include <QMessageBox>
 #include <QDialog>
@@ -62,7 +64,21 @@
 #include <AzToolsFramework/AssetDatabase/AssetDatabaseConnection.h>
 #include <QAction>
 #include <QMenu>
+#include <QDropEvent>
+#include <QDragEnterEvent>
+#include <QDragMoveEvent>
+#include <QMimeData>
+#include <AzQtComponents/DragAndDrop/ViewportDragAndDrop.h>
+#include <AzToolsFramework/AssetBrowser/Entries/AssetBrowserEntryUtils.h>
 #include <AzToolsFramework/AssetBrowser/Entries/ProductAssetBrowserEntry.h>
+#include <AzToolsFramework/API/EntityCompositionRequestBus.h>
+#include <AzToolsFramework/Entity/EditorEntityInfoBus.h>
+#include <AzToolsFramework/Entity/ReadOnly/ReadOnlyEntityInterface.h>
+#include <JE/Render/Materials/MaterialComponentController.h>
+#include <JE/Render/Materials/MaterialComponentConstants.h>
+#include <JE/Editor/Materials/EditorMaterialComponent.h>
+#include <AzToolsFramework/ToolsComponents/EditorPendingCompositionComponent.h>
+#include <AzToolsFramework/ToolsComponents/EditorDisabledCompositionComponent.h>
 
 namespace UnitTest
 {
@@ -179,6 +195,51 @@ namespace UnitTest
         AZStd::unique_ptr<QApplication> m_qtApplication;
         AZStd::unique_ptr<AZ::ComponentApplication> m_application;
     };
+
+
+    namespace
+    {
+        // Represents the Scene Settings provider's existing window-returning boundary, not its import/document logic.
+        class SceneSettingsResultProviderForTest final
+            : public AzToolsFramework::AssetBrowser::AssetBrowserPreviewRequestBus::Handler
+        {
+        public:
+            SceneSettingsResultProviderForTest() : m_window(new QMainWindow) {}
+            ~SceneSettingsResultProviderForTest() override { BusDisconnect(); delete m_window.data(); }
+            QMainWindow* GetSceneSettings() override { ++m_requests; return m_window.data(); }
+            QPointer<QMainWindow> m_window;
+            int m_requests = 0;
+        };
+        // Real non-Scene handlers inherit these nullptr/false defaults (e.g. the Inspector window/material provider).
+        class DefaultSceneSettingsObserverForTest final
+            : public AzToolsFramework::AssetBrowser::AssetBrowserPreviewRequestBus::Handler {};
+    }
+
+    TEST_F(MaterialWorkspaceTests, SceneSettingsWindowSurvivesDefaultObserversInBothConnectionOrders)
+    {
+        for (bool providerFirst : {false, true})
+        {
+            SceneSettingsResultProviderForTest provider;
+            DefaultSceneSettingsObserverForTest observer;
+            if (providerFirst) { provider.BusConnect(); observer.BusConnect(); }
+            else { observer.BusConnect(); provider.BusConnect(); }
+            {
+                // Constructor, public bus, real stacked-widget attachment and QObject ownership; no private-member seam.
+                AzToolsFramework::AssetBrowser::AssetBrowserEntityInspectorWidget inspector;
+                ASSERT_FALSE(provider.m_window.isNull());
+                EXPECT_TRUE(inspector.isAncestorOf(provider.m_window.data())) << "providerFirst=" << providerFirst;
+                EXPECT_EQ(provider.m_requests, 1) << "Aggregation must not query/create a second window.";
+            }
+            EXPECT_TRUE(provider.m_window.isNull()) << "Attached Scene Settings must follow the Inspector QObject lifetime.";
+        }
+    }
+
+    TEST_F(MaterialWorkspaceTests, DefaultSceneSettingsObserversDoNotCreatePlaceholderWindows)
+    {
+        DefaultSceneSettingsObserverForTest observer; observer.BusConnect();
+        AzToolsFramework::AssetBrowser::AssetBrowserEntityInspectorWidget inspector;
+        EXPECT_TRUE(inspector.findChildren<QMainWindow*>().isEmpty());
+    }
 
     TEST_F(MaterialWorkspaceTests, ColorPickerAlphaResourceIsARealImage)
     {
@@ -555,6 +616,521 @@ namespace UnitTest
         QTemporaryDir m_directory;
         testing::NiceMock<UnitTests::MockAssetSystemRequest> m_assetSystem;
     };
+
+    // Exercise the real browser MIME decoder, ordered viewport bus and material controller.
+    // Composition/permissions are boundaries only; this fixture does not provide editor entity Undo/Redo.
+    class MaterialSurfaceDropTests : public MaterialWorkspaceTests
+    {
+    protected:
+        using SlotId = JE::Render::MaterialAssignmentId;
+        using MaterialMap = JE::Render::MaterialAssignmentMap;
+        using Entry = AzToolsFramework::AssetBrowser::AssetBrowserEntry;
+
+        class Surface final : public JE::Render::MaterialConsumerRequestBus::Handler
+        {
+        public:
+            explicit Surface(AZ::EntityId id)
+            {
+                m_slots.emplace(SlotId::CreateFromStableIdOnly(11), JE::Render::MaterialAssignment{});
+                m_slots.emplace(SlotId::CreateFromStableIdOnly(22), JE::Render::MaterialAssignment{});
+                BusConnect(id);
+            }
+            ~Surface() override { BusDisconnect(); }
+            SlotId FindMaterialAssignmentId(JE::Render::MaterialAssignmentLodIndex, const AZStd::string&) const override { return {}; }
+            JE::Render::MaterialAssignmentLabelMap GetMaterialLabels() const override { return {}; }
+            MaterialMap GetDefaultMaterialMap() const override { return m_slots; }
+            AZStd::unordered_set<AZ::Name> GetModelUvNames() const override { return {}; }
+            MaterialMap m_slots;
+        };
+
+        class DefaultDropRoute final : public AzQtComponents::DragAndDropEventsBus::Handler
+        {
+        public:
+            DefaultDropRoute() { BusConnect(AzQtComponents::DragAndDropContexts::EditorViewport); }
+            ~DefaultDropRoute() override { BusDisconnect(); }
+            void Drop(QDropEvent* event, AzQtComponents::DragAndDropContextBase&) override
+            {
+                if (!event->isAccepted()) { ++m_unhandledDrops; }
+            }
+            int m_unhandledDrops = 0;
+        };
+
+        class EntityInfo : public AzToolsFramework::EditorEntityInfoRequestBus::Handler
+        {
+        public:
+            explicit EntityInfo(AZ::EntityId id) { BusConnect(id); }
+            ~EntityInfo() override { BusDisconnect(); }
+            MOCK_CONST_METHOD0(GetParent, AZ::EntityId());
+            MOCK_CONST_METHOD0(GetChildren, AzToolsFramework::EntityIdList());
+            MOCK_CONST_METHOD1(GetChild, AZ::EntityId(AZStd::size_t));
+            MOCK_CONST_METHOD0(GetChildCount, AZStd::size_t());
+            MOCK_CONST_METHOD1(GetChildIndex, AZ::u64(AZ::EntityId));
+            MOCK_CONST_METHOD0(GetName, AZStd::string());
+            MOCK_CONST_METHOD0(GetSliceAssetName, AZStd::string());
+            MOCK_CONST_METHOD0(IsSliceEntity, bool());
+            MOCK_CONST_METHOD0(IsSubsliceEntity, bool());
+            MOCK_CONST_METHOD0(IsSliceRoot, bool());
+            MOCK_CONST_METHOD0(IsSubsliceRoot, bool());
+            MOCK_CONST_METHOD0(HasSliceEntityAnyChildrenAddedOrDeleted, bool());
+            MOCK_CONST_METHOD0(HasSliceEntityPropertyOverridesInTopLevel, bool());
+            MOCK_CONST_METHOD0(HasSliceEntityOverrides, bool());
+            MOCK_CONST_METHOD0(HasSliceChildrenOverrides, bool());
+            MOCK_CONST_METHOD0(HasSliceAnyOverrides, bool());
+            MOCK_CONST_METHOD0(HasCyclicDependency, bool());
+            MOCK_METHOD1(AddToCyclicDependencyList, void(const AZ::EntityId&));
+            MOCK_METHOD1(RemoveFromCyclicDependencyList, void(const AZ::EntityId&));
+            MOCK_CONST_METHOD0(GetCyclicDependencyList, AzToolsFramework::EntityIdList());
+            MOCK_CONST_METHOD0(GetIndexForSorting, AZ::u64());
+            MOCK_CONST_METHOD0(IsSelected, bool());
+            MOCK_CONST_METHOD0(IsVisible, bool());
+            MOCK_CONST_METHOD0(IsHidden, bool());
+            MOCK_CONST_METHOD0(IsLocked, bool());
+            MOCK_CONST_METHOD0(GetStartStatus, AzToolsFramework::EditorEntityStartStatus());
+            MOCK_CONST_METHOD0(IsJustThisEntityLocked, bool());
+            MOCK_CONST_METHOD1(IsComponentExpanded, bool(AZ::ComponentId));
+            MOCK_METHOD2(SetComponentExpanded, void(AZ::ComponentId, bool));
+        };
+
+        class ReadOnly final : public AzToolsFramework::ReadOnlyEntityPublicInterface
+        {
+        public:
+            ReadOnly() { AZ::Interface<AzToolsFramework::ReadOnlyEntityPublicInterface>::Register(this); }
+            ~ReadOnly() { AZ::Interface<AzToolsFramework::ReadOnlyEntityPublicInterface>::Unregister(this); }
+            bool IsReadOnly(const AZ::EntityId& id) override { return id == AZ::EntityId(101); }
+        };
+
+        class Composition : public AzToolsFramework::EntityCompositionRequestBus::Handler
+        {
+        public:
+            Composition() { BusConnect(); }
+            ~Composition() override { BusDisconnect(); }
+            MOCK_METHOD2(AddComponentsToEntities, AddComponentsOutcome(const AzToolsFramework::EntityIdList&, const AZ::ComponentTypeList&));
+            MOCK_METHOD2(AddExistingComponentsToEntityById, AddExistingComponentsOutcome(const AZ::EntityId&, AZStd::span<AZ::Component* const>));
+            MOCK_METHOD1(RemoveComponents, RemoveComponentsOutcome(AZStd::span<AZ::Component* const>));
+            MOCK_METHOD1(ScrubEntities, ScrubEntitiesOutcome(const AzToolsFramework::EntityList&));
+            MOCK_METHOD1(CutComponents, void(AZStd::span<AZ::Component* const>));
+            MOCK_METHOD1(CopyComponents, void(AZStd::span<AZ::Component* const>));
+            MOCK_METHOD1(PasteComponentsToEntity, void(AZ::EntityId));
+            MOCK_METHOD0(HasComponentsToPaste, bool());
+            MOCK_METHOD1(EnableComponents, void(AZStd::span<AZ::Component* const>));
+            MOCK_METHOD1(DisableComponents, void(AZStd::span<AZ::Component* const>));
+            MOCK_METHOD1(GetPendingComponentInfo, PendingComponentInfo(const AZ::Component*));
+            MOCK_METHOD1(GetComponentName, AZStd::string(const AZ::Component*));
+        };
+
+        class CompositionWarnings final : public AZ::Debug::TraceMessageBus::Handler
+        {
+        public:
+            CompositionWarnings() { BusConnect(); }
+            ~CompositionWarnings() override { BusDisconnect(); }
+            bool OnPreWarning(const char* window, const char*, int, const char*, const char* message) override
+            {
+                if (AZStd::string_view(window) == "MaterialBrowser" && AZStd::string_view(message) ==
+                    "Cannot assign material: the surface has no active material component.")
+                {
+                    ++m_count;
+                    return true;
+                }
+                return false;
+            }
+            int m_count = 0;
+        };
+
+        class PendingComponent final : public AZ::Component
+        {
+        public:
+            AZ_COMPONENT(PendingComponent, "{34D32E99-6EBC-439F-8072-A66D60AA285E}");
+            static void Reflect(AZ::ReflectContext*) {}
+            void Activate() override {}
+            void Deactivate() override {}
+        };
+
+        void SetUp() override
+        {
+            MaterialWorkspaceTests::SetUp();
+            if (!AZ::IO::FileIOBase::GetInstance())
+            {
+                m_fileIO = AZStd::make_unique<AZ::IO::LocalFileIO>();
+                AZ::IO::FileIOBase::SetInstance(m_fileIO.get());
+            }
+            ASSERT_TRUE(m_directory.isValid());
+            ASSERT_EQ(AzToolsFramework::AssetBrowser::EntryCache::GetInstance(), nullptr);
+            m_root = AZStd::make_shared<AzToolsFramework::AssetBrowser::RootAssetBrowserEntry>();
+            m_model = AZStd::make_unique<AzToolsFramework::AssetBrowser::AssetBrowserModel>();
+            m_model->SetRootEntry(m_root);
+            m_root->Update(m_directory.path().toUtf8().constData());
+            AzToolsFramework::AssetDatabase::ScanFolderDatabaseEntry folder;
+            folder.m_scanFolderID = 1;
+            folder.m_scanFolder = m_directory.path().toUtf8().constData();
+            folder.m_displayName = "Material drop fixture";
+            folder.m_isRoot = true;
+            m_root->AddScanFolder(folder);
+            AzToolsFramework::AssetDatabase::FileDatabaseEntry file;
+            file.m_fileID = 77;
+            file.m_scanFolderPK = 1;
+            file.m_fileName = "surface.material";
+            file.m_isFolder = false;
+            m_root->AddFile(file);
+            AzToolsFramework::AssetBrowser::SourceWithFileID source;
+            source.first = 77;
+            source.second.m_sourceID = 77;
+            source.second.m_scanFolderPK = 1;
+            source.second.m_sourceName = "surface.material";
+            source.second.m_sourceGuid = m_source;
+            ASSERT_TRUE(m_root->AddSource(source));
+            m_surface = AZStd::make_unique<Surface>(AZ::EntityId(101));
+            m_otherSurface = AZStd::make_unique<Surface>(AZ::EntityId(202));
+            // No tick is dispatched: native assignment queues loading but never starts asset/GPU work here.
+            m_controller.Activate(AZ::EntityId(101));
+            m_otherController.Activate(AZ::EntityId(202));
+            m_controllerActive = true;
+            m_otherControllerActive = true;
+            m_context.m_hitEntityId = AZ::EntityId(101);
+            m_context.m_hitMaterialSlotId = 11;
+            m_context.m_hitLocation = AZ::Vector3::CreateZero();
+            m_interactions = AZStd::make_unique<JE::Editor::MaterialBrowserInteractions>();
+        }
+
+        void TearDown() override
+        {
+            m_interactions.reset();
+            if (m_controllerActive) { m_controller.Deactivate(); }
+            if (m_otherControllerActive) { m_otherController.Deactivate(); }
+            m_surface.reset();
+            m_otherSurface.reset();
+            m_model.reset();
+            m_root.reset();
+            AzToolsFramework::AssetBrowser::EntryCache::DestroyInstance();
+            AzToolsFramework::AssetBrowser::AssetBrowserFavoritesManager::DestroyInstance();
+            if (m_fileIO)
+            {
+                AZ::IO::FileIOBase::SetInstance(nullptr);
+                m_fileIO.reset();
+            }
+            MaterialWorkspaceTests::TearDown();
+        }
+
+        const Entry* AddProduct(AZ::u32 subId, bool material = true)
+        {
+            AzToolsFramework::AssetBrowser::ProductWithUuid product;
+            product.first = m_source;
+            product.second.m_productID = subId;
+            product.second.m_subID = subId;
+            product.second.m_productName = AZStd::string::format("pc/surface%u.azmaterial", subId);
+            product.second.m_assetType = material ? azrtti_typeid<JE::Render::RPI::MaterialAsset>() : AZ::Uuid::CreateRandom();
+            EXPECT_TRUE(m_root->AddProduct(product));
+            return AzToolsFramework::AssetBrowser::ProductAssetBrowserEntry::GetProductByAssetId(AZ::Data::AssetId(m_source, subId));
+        }
+
+        Qt::DropAction Drop(const AZStd::vector<const Entry*>& entries, bool accepted = false,
+            AzQtComponents::DragAndDropContextBase* context = nullptr)
+        {
+            QMimeData mime;
+            AzToolsFramework::AssetBrowser::Utils::ToMimeData(&mime, entries);
+            QDropEvent event(QPointF(10, 10), Qt::CopyAction, &mime, Qt::LeftButton, Qt::NoModifier);
+            event.setAccepted(accepted);
+            AzQtComponents::DragAndDropEventsBus::Event(AzQtComponents::DragAndDropContexts::EditorViewport,
+                &AzQtComponents::DragAndDropEvents::Drop, &event, context ? *context : m_context);
+            m_lastDropAccepted = event.isAccepted();
+            return event.dropAction();
+        }
+
+        void ExpectUnchanged()
+        {
+            EXPECT_TRUE(m_controller.GetMaterialMap().empty());
+            EXPECT_TRUE(m_otherController.GetMaterialMap().empty());
+        }
+
+        AZStd::unique_ptr<AZ::IO::LocalFileIO> m_fileIO;
+        QTemporaryDir m_directory;
+        const AZ::Uuid m_source = AZ::Uuid::CreateString("{F974D67E-772F-49A2-8718-0944A367329B}");
+        AZStd::shared_ptr<AzToolsFramework::AssetBrowser::RootAssetBrowserEntry> m_root;
+        AZStd::unique_ptr<AzToolsFramework::AssetBrowser::AssetBrowserModel> m_model;
+        AZStd::unique_ptr<JE::Editor::MaterialBrowserInteractions> m_interactions;
+        AZStd::unique_ptr<Surface> m_surface;
+        AZStd::unique_ptr<Surface> m_otherSurface;
+        JE::Render::MaterialComponentController m_controller;
+        JE::Render::MaterialComponentController m_otherController;
+        bool m_controllerActive = false;
+        bool m_otherControllerActive = false;
+        bool m_lastDropAccepted = false;
+        AzQtComponents::ViewportDragContext m_context;
+    };
+
+    TEST_F(MaterialSurfaceDropTests, DragEnterAndMoveDoNotAssignUntilDropThenOnlyHitSlotChanges)
+    {
+        const auto* product = AddProduct(1);
+        ASSERT_NE(product, nullptr);
+        QMimeData mime;
+        AzToolsFramework::AssetBrowser::Utils::ToMimeData(&mime, {product});
+        QDragEnterEvent enter(QPoint(10, 10), Qt::CopyAction, &mime, Qt::LeftButton, Qt::NoModifier);
+        enter.setAccepted(false);
+        AzQtComponents::DragAndDropEventsBus::Event(AzQtComponents::DragAndDropContexts::EditorViewport,
+            &AzQtComponents::DragAndDropEvents::DragEnter, &enter, m_context);
+        EXPECT_TRUE(enter.isAccepted());
+        EXPECT_EQ(enter.dropAction(), Qt::CopyAction);
+        QDragMoveEvent move(QPoint(10, 10), Qt::CopyAction, &mime, Qt::LeftButton, Qt::NoModifier);
+        move.setAccepted(false);
+        AzQtComponents::DragAndDropEventsBus::Event(AzQtComponents::DragAndDropContexts::EditorViewport,
+            &AzQtComponents::DragAndDropEvents::DragMove, &move, m_context);
+        EXPECT_TRUE(move.isAccepted());
+        ExpectUnchanged();
+        DefaultDropRoute fallback;
+        EXPECT_EQ(Drop({product}), Qt::CopyAction);
+        EXPECT_TRUE(m_lastDropAccepted);
+        EXPECT_EQ(m_controller.GetMaterialMap().size(), 1);
+        EXPECT_EQ(m_controller.GetMaterialAssetId(SlotId::CreateFromStableIdOnly(11)), AZ::Data::AssetId(m_source, 1));
+        EXPECT_FALSE(m_controller.GetMaterialAssetId(SlotId::CreateFromStableIdOnly(22)).IsValid());
+        EXPECT_TRUE(m_otherController.GetMaterialMap().empty());
+        EXPECT_EQ(fallback.m_unhandledDrops, 0);
+    }
+
+    TEST_F(MaterialSurfaceDropTests, MissingHitMissingSlotAndStaleSlotConsumeWithoutAssigningOrDefaultDrop)
+    {
+        const auto* product = AddProduct(1);
+        ASSERT_NE(product, nullptr);
+        DefaultDropRoute fallback;
+        m_context.m_hitEntityId = AZ::EntityId{};
+        EXPECT_EQ(Drop({product}), Qt::IgnoreAction);
+        EXPECT_TRUE(m_lastDropAccepted);
+        m_context.m_hitEntityId = AZ::EntityId(101);
+        m_context.m_hitMaterialSlotId.reset();
+        EXPECT_EQ(Drop({product}), Qt::IgnoreAction);
+        EXPECT_TRUE(m_lastDropAccepted);
+        m_context.m_hitMaterialSlotId = 99;
+        EXPECT_EQ(Drop({product}), Qt::IgnoreAction);
+        EXPECT_TRUE(m_lastDropAccepted);
+        EXPECT_EQ(fallback.m_unhandledDrops, 0);
+        ExpectUnchanged();
+    }
+
+    TEST_F(MaterialSurfaceDropTests, MultipleProductsOrAmbiguousSourceConsumeWithoutAssignment)
+    {
+        const auto* first = AddProduct(1);
+        const auto* second = AddProduct(2);
+        ASSERT_NE(first, nullptr);
+        ASSERT_NE(second, nullptr);
+        DefaultDropRoute fallback;
+        EXPECT_EQ(Drop({first, second}), Qt::IgnoreAction);
+        EXPECT_TRUE(m_lastDropAccepted);
+        const auto* source = AzToolsFramework::AssetBrowser::SourceAssetBrowserEntry::GetSourceByUuid(m_source);
+        ASSERT_NE(source, nullptr);
+        EXPECT_EQ(Drop({source}), Qt::IgnoreAction);
+        EXPECT_TRUE(m_lastDropAccepted);
+        EXPECT_EQ(fallback.m_unhandledDrops, 0);
+        ExpectUnchanged();
+    }
+
+    TEST_F(MaterialSurfaceDropTests, MaterialSourceWithoutCookedProductConsumesWithoutAssignment)
+    {
+        const auto* source = AzToolsFramework::AssetBrowser::SourceAssetBrowserEntry::GetSourceByUuid(m_source);
+        ASSERT_NE(source, nullptr);
+        AZStd::vector<const AzToolsFramework::AssetBrowser::ProductAssetBrowserEntry*> products;
+        source->GetChildrenRecursively(products);
+        ASSERT_TRUE(products.empty());
+        DefaultDropRoute fallback;
+        EXPECT_EQ(Drop({source}), Qt::IgnoreAction);
+        EXPECT_TRUE(m_lastDropAccepted);
+        EXPECT_EQ(fallback.m_unhandledDrops, 0);
+        ExpectUnchanged();
+    }
+
+    TEST_F(MaterialSurfaceDropTests, ModelSourceWithMaterialProductPreservesDefaultDropButExplicitMaterialCanAssign)
+    {
+        AzToolsFramework::AssetDatabase::FileDatabaseEntry file;
+        file.m_fileID = 88;
+        file.m_scanFolderPK = 1;
+        file.m_fileName = "mesh.fbx";
+        file.m_isFolder = false;
+        m_root->AddFile(file);
+        AzToolsFramework::AssetBrowser::SourceWithFileID sourceData;
+        sourceData.first = 88;
+        sourceData.second.m_sourceID = 88;
+        sourceData.second.m_scanFolderPK = 1;
+        sourceData.second.m_sourceName = "mesh.fbx";
+        sourceData.second.m_sourceGuid = AZ::Uuid::CreateRandom();
+        ASSERT_TRUE(m_root->AddSource(sourceData));
+        AzToolsFramework::AssetBrowser::ProductWithUuid productData;
+        productData.first = sourceData.second.m_sourceGuid;
+        productData.second.m_productID = 88;
+        productData.second.m_subID = 88;
+        productData.second.m_productName = "pc/mesh.azmaterial";
+        productData.second.m_assetType = azrtti_typeid<JE::Render::RPI::MaterialAsset>();
+        ASSERT_TRUE(m_root->AddProduct(productData));
+        const auto* source = AzToolsFramework::AssetBrowser::SourceAssetBrowserEntry::GetSourceByUuid(productData.first);
+        ASSERT_NE(source, nullptr);
+        DefaultDropRoute fallback;
+        Drop({source});
+        EXPECT_FALSE(m_lastDropAccepted);
+        EXPECT_EQ(fallback.m_unhandledDrops, 1);
+        ExpectUnchanged();
+        const auto assetId = AZ::Data::AssetId(productData.first, 88);
+        const auto* product = AzToolsFramework::AssetBrowser::ProductAssetBrowserEntry::GetProductByAssetId(assetId);
+        ASSERT_NE(product, nullptr);
+        EXPECT_EQ(Drop({product}), Qt::CopyAction);
+        EXPECT_TRUE(m_lastDropAccepted);
+        EXPECT_EQ(fallback.m_unhandledDrops, 1);
+        EXPECT_EQ(m_controller.GetMaterialAssetId(SlotId::CreateFromStableIdOnly(11)), assetId);
+        EXPECT_TRUE(m_otherController.GetMaterialMap().empty());
+    }
+
+    TEST_F(MaterialSurfaceDropTests, LockedAndReadOnlySurfaceConsumeWithoutAssignment)
+    {
+        const auto* product = AddProduct(1);
+        ASSERT_NE(product, nullptr);
+        DefaultDropRoute fallback;
+        {
+            testing::NiceMock<EntityInfo> info(AZ::EntityId(101));
+            EXPECT_CALL(info, IsLocked()).WillOnce(testing::Return(true));
+            EXPECT_EQ(Drop({product}), Qt::IgnoreAction);
+            EXPECT_TRUE(m_lastDropAccepted);
+        }
+        ASSERT_EQ(AZ::Interface<AzToolsFramework::ReadOnlyEntityPublicInterface>::Get(), nullptr);
+        {
+            ReadOnly readOnly;
+            EXPECT_EQ(Drop({product}), Qt::IgnoreAction);
+            EXPECT_TRUE(m_lastDropAccepted);
+        }
+        EXPECT_EQ(fallback.m_unhandledDrops, 0);
+        ExpectUnchanged();
+    }
+
+    TEST_F(MaterialSurfaceDropTests, NonMaterialWrongContextAndPreviouslyAcceptedDropRemainUntouched)
+    {
+        const auto* material = AddProduct(1);
+        const auto* other = AddProduct(2, false);
+        ASSERT_NE(material, nullptr);
+        ASSERT_NE(other, nullptr);
+        DefaultDropRoute fallback;
+        Drop({other});
+        EXPECT_FALSE(m_lastDropAccepted);
+        AzQtComponents::DragAndDropContextBase wrongContext;
+        Drop({material}, false, &wrongContext);
+        EXPECT_FALSE(m_lastDropAccepted);
+        EXPECT_EQ(fallback.m_unhandledDrops, 2);
+        EXPECT_EQ(Drop({material}, true), Qt::CopyAction);
+        EXPECT_TRUE(m_lastDropAccepted);
+        EXPECT_EQ(fallback.m_unhandledDrops, 2);
+        ExpectUnchanged();
+    }
+
+    TEST_F(MaterialSurfaceDropTests, MissingMaterialComponentUsesCompositionThenAssignsTheHitEntity)
+    {
+        const auto* product = AddProduct(1);
+        ASSERT_NE(product, nullptr);
+        m_controller.Deactivate();
+        m_controllerActive = false;
+        testing::StrictMock<Composition> composition;
+        EXPECT_CALL(composition, AddComponentsToEntities(testing::_, testing::_))
+            .WillOnce([this](const AzToolsFramework::EntityIdList& entities, const AZ::ComponentTypeList& types)
+            {
+                EXPECT_EQ(entities, (AzToolsFramework::EntityIdList{AZ::EntityId(101)}));
+                EXPECT_EQ(types, (AZ::ComponentTypeList{AZ::Uuid(JE::Render::EditorMaterialComponentTypeId)}));
+                m_controller.Activate(AZ::EntityId(101));
+                m_controllerActive = true;
+                return AZ::Success(AzToolsFramework::EntityCompositionRequests::EntityToAddedComponentsMap{});
+            });
+        EXPECT_EQ(Drop({product}), Qt::CopyAction);
+        EXPECT_TRUE(m_lastDropAccepted);
+        EXPECT_EQ(m_controller.GetMaterialAssetId(SlotId::CreateFromStableIdOnly(11)), AZ::Data::AssetId(m_source, 1));
+        EXPECT_TRUE(m_otherController.GetMaterialMap().empty());
+    }
+
+    TEST_F(MaterialSurfaceDropTests, FailedCompositionRejectsWithoutAssignment)
+    {
+        const auto* product = AddProduct(1);
+        ASSERT_NE(product, nullptr);
+        m_controller.Deactivate();
+        m_controllerActive = false;
+        testing::StrictMock<Composition> composition;
+        EXPECT_CALL(composition, AddComponentsToEntities(testing::_, testing::_))
+            .WillOnce(testing::Return(AZ::Failure(AZStd::string("Fixture composition failure"))));
+        DefaultDropRoute fallback;
+        CompositionWarnings warnings;
+        EXPECT_EQ(Drop({product}), Qt::IgnoreAction);
+        EXPECT_EQ(warnings.m_count, 1);
+        EXPECT_TRUE(m_lastDropAccepted);
+        EXPECT_FALSE(JE::Render::MaterialComponentRequestBus::HasHandlers(AZ::EntityId(101)));
+        EXPECT_EQ(fallback.m_unhandledDrops, 0);
+        ExpectUnchanged();
+    }
+
+    TEST_F(MaterialSurfaceDropTests, PendingCompositionRemovesOnlyItsReturnedComponentAndRejects)
+    {
+        const auto* product = AddProduct(1);
+        ASSERT_NE(product, nullptr);
+        m_controller.Deactivate();
+        m_controllerActive = false;
+        PendingComponent pending;
+        testing::StrictMock<Composition> composition;
+        AzToolsFramework::EntityCompositionRequests::EntityToAddedComponentsMap added;
+        auto& result = added[AZ::EntityId(101)];
+        result.m_componentsAdded.push_back(&pending);
+        result.m_addedPendingComponents.push_back(&pending);
+        EXPECT_CALL(composition, AddComponentsToEntities(testing::_, testing::_))
+            .WillOnce(testing::Return(AZ::Success(added)));
+        EXPECT_CALL(composition, RemoveComponents(testing::_))
+            .WillOnce([&pending](AZStd::span<AZ::Component* const> components)
+            {
+                EXPECT_EQ(components.size(), 1);
+                if (components.size() == 1) { EXPECT_EQ(components.front(), &pending); }
+                return AZ::Success(AzToolsFramework::EntityCompositionRequests::EntityToRemoveComponentsResultMap{});
+            });
+        DefaultDropRoute fallback;
+        CompositionWarnings warnings;
+        EXPECT_EQ(Drop({product}), Qt::IgnoreAction);
+        EXPECT_EQ(warnings.m_count, 1);
+        EXPECT_TRUE(m_lastDropAccepted);
+        EXPECT_FALSE(JE::Render::MaterialComponentRequestBus::HasHandlers(AZ::EntityId(101)));
+        EXPECT_EQ(fallback.m_unhandledDrops, 0);
+        ExpectUnchanged();
+    }
+
+    TEST_F(MaterialSurfaceDropTests, PreexistingDisabledOrPendingMaterialComponentIsPreservedWithoutComposition)
+    {
+        const auto* product = AddProduct(1);
+        ASSERT_NE(product, nullptr);
+        m_controller.Deactivate();
+        m_controllerActive = false;
+        for (const bool pending : {false, true})
+        {
+            SCOPED_TRACE(pending ? "Pending material" : "Disabled material");
+            AZ::Entity entity(AZ::EntityId(101));
+            auto pendingOwner = AZStd::make_unique<AzToolsFramework::Components::EditorPendingCompositionComponent>();
+            auto disabledOwner = AZStd::make_unique<AzToolsFramework::Components::EditorDisabledCompositionComponent>();
+            // Supply aliases without requesting component names from reflection omitted by this fixture.
+            pendingOwner->SetSerializedIdentifier("PendingStore");
+            disabledOwner->SetSerializedIdentifier("DisabledStore");
+            ASSERT_TRUE(entity.AddComponent(pendingOwner.get()));
+            auto* pendingStore = pendingOwner.release();
+            ASSERT_TRUE(entity.AddComponent(disabledOwner.get()));
+            auto* disabledStore = disabledOwner.release();
+            auto material = AZStd::make_unique<JE::Editor::EditorMaterialComponent>();
+            material->SetSerializedIdentifier("ExistingMaterial");
+            auto* existing = material.get();
+            if (pending) { pendingStore->AddPendingComponent(material.release()); }
+            else { disabledStore->AddDisabledComponent(material.release()); }
+            // Native Init registers Entity101 and both storage buses without activating the material.
+            entity.Init();
+            ASSERT_EQ(m_application->FindEntity(AZ::EntityId(101)), &entity);
+            ASSERT_EQ(existing->GetEntity(), &entity);
+            ASSERT_FALSE(JE::Render::MaterialComponentRequestBus::HasHandlers(AZ::EntityId(101)));
+            testing::StrictMock<Composition> composition; // Neither add nor remove is permitted for an existing component.
+            DefaultDropRoute fallback;
+            EXPECT_EQ(Drop({product}), Qt::IgnoreAction);
+            EXPECT_TRUE(m_lastDropAccepted);
+            EXPECT_EQ(fallback.m_unhandledDrops, 0);
+            AZ::Entity::ComponentArrayType stored;
+            pendingStore->GetPendingComponents(stored);
+            disabledStore->GetDisabledComponents(stored);
+            ASSERT_EQ(stored.size(), 1);
+            EXPECT_EQ(stored.front(), existing);
+            EXPECT_EQ(existing->GetSerializedIdentifier(), "ExistingMaterial");
+            EXPECT_EQ(existing->GetEntity(), &entity);
+            EXPECT_FALSE(JE::Render::MaterialComponentRequestBus::HasHandlers(AZ::EntityId(101)));
+            ExpectUnchanged();
+        }
+    }
 
     class TextureContextMenuTests : public GraphDocumentCreationTests
     {

@@ -20,7 +20,7 @@ namespace ScriptCanvasDeveloperEditor
 {
     void ReloadText(QWidget*)
     {
-        GraphCanvas::TranslationRequestBus::Broadcast(&GraphCanvas::TranslationRequests::Restore);
+        JE::Editor::Tools::GraphCanvas::TranslationRequestBus::Broadcast(&JE::Editor::Tools::GraphCanvas::TranslationRequests::Restore);
     }
 
     QAction* TranslationDatabaseFileAction(QMenu* mainMenu, QWidget* mainWindow)
@@ -48,7 +48,7 @@ namespace ScriptCanvasDeveloperEditor
                     if (!directory.isEmpty())
                     {
                         const QString path = QDir::toNativeSeparators(directory + "/sc_translation.log");
-                        GraphCanvas::TranslationRequestBus::Broadcast(&GraphCanvas::TranslationRequests::DumpDatabase, path.toUtf8().constData());
+                        JE::Editor::Tools::GraphCanvas::TranslationRequestBus::Broadcast(&JE::Editor::Tools::GraphCanvas::TranslationRequests::DumpDatabase, path.toUtf8().constData());
                         QMessageBox::information(
                             mainWindow, QObject::tr("Finished writing translation database"),
                             QObject::tr("Translation database written to:<br/><a href=\"file:///%1\">%1</a>").arg(path));

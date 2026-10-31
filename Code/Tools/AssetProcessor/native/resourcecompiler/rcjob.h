@@ -209,9 +209,11 @@ namespace AssetProcessor
         const JobEntry& GetJobEntry() const;
         bool HasMissingSourceDependency() const;
 
-        // Update a job entry when a new file appears that might satisfy a missing source dependency.
+        // Source appearance resolves only dependencies that do not require an ordered job.
         // Returns true if the job no longer has any missing dependencies AND there were missing ones before.
         bool UpdateMissingDependencies(const SourceAssetReference& sourceRef);
+        // Ordered dependencies require registration of the exact source, job key and platform.
+        bool UpdateMissingDependencies(const QueueElementID& registeredJob);
 
         void Start();
 

@@ -16,7 +16,7 @@
 #include <AzCore/Component/TickBus.h>
 #include <AzCore/std/parallel/thread.h>
 #include <GradientSignal/Ebuses/SectorDataRequestBus.h>
-#include <SurfaceData/SurfaceDataSystemNotificationBus.h>
+#include <JE/Geometry/SurfaceData/SurfaceDataSystemNotificationBus.h>
 #include <CrySystemBus.h>
 #include <ISystem.h>
 #include <AzFramework/Terrain/TerrainDataRequestBus.h>
@@ -82,7 +82,7 @@ namespace Vegetation
         , private SystemConfigurationRequestBus::Handler
         , private CrySystemEventBus::Handler
         , private ISystemEventListener
-        , private SurfaceData::SurfaceDataSystemNotificationBus::Handler
+        , private JE::Geometry::SurfaceData::SurfaceDataSystemNotificationBus::Handler
         , private AzFramework::Terrain::TerrainDataNotificationBus::Handler
     {
     public:
@@ -133,12 +133,12 @@ namespace Vegetation
         void GetSystemConfig(AZ::ComponentConfig* config) const override;
 
         //////////////////////////////////////////////////////////////////////////
-        // SurfaceData::SurfaceDataSystemNotificationBus
+        // JE::Geometry::SurfaceData::SurfaceDataSystemNotificationBus
         void OnSurfaceChanged(
             const AZ::EntityId& entityId,
             const AZ::Aabb& oldBounds,
             const AZ::Aabb& newBounds,
-            const SurfaceData::SurfaceTagSet& changedSurfaceTags) override;
+            const JE::Geometry::SurfaceData::SurfaceTagSet& changedSurfaceTags) override;
 
 
         ////////////////////////////////////////////////////////////////////////////

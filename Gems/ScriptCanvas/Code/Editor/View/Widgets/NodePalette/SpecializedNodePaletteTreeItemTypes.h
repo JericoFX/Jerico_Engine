@@ -7,7 +7,7 @@
  */
 #pragma once
 
-#include <GraphCanvas/Widgets/NodePalette/TreeItems/DraggableNodePaletteTreeItem.h>
+#include <JE/Editor/Tools/GraphCanvas/Widgets/NodePalette/TreeItems/DraggableNodePaletteTreeItem.h>
 #include "CreateNodeMimeEvent.h"
 
 namespace ScriptCanvasEditor
@@ -30,14 +30,14 @@ namespace ScriptCanvasEditor
     };
 
     class CommentNodePaletteTreeItem
-        : public GraphCanvas::DraggableNodePaletteTreeItem
+        : public JE::Editor::Tools::GraphCanvas::DraggableNodePaletteTreeItem
     {
     public:
         AZ_CLASS_ALLOCATOR(CommentNodePaletteTreeItem, AZ::SystemAllocator);
         CommentNodePaletteTreeItem(AZStd::string_view nodeName, const QString& iconPath);
         ~CommentNodePaletteTreeItem() = default;
 
-        GraphCanvas::GraphCanvasMimeEvent* CreateMimeEvent() const override;
+        JE::Editor::Tools::GraphCanvas::GraphCanvasMimeEvent* CreateMimeEvent() const override;
     };    
     // </CommentNode>
 
@@ -54,19 +54,19 @@ namespace ScriptCanvasEditor
         CreateNodeGroupMimeEvent() = default;
         ~CreateNodeGroupMimeEvent() = default;
 
-        NodeIdPair ConstructNode(const GraphCanvas::GraphId& sceneId, const AZ::Vector2& scenePosition) override;
-        bool ExecuteEvent(const AZ::Vector2& mousePosition, AZ::Vector2& sceneDropPosition, const GraphCanvas::GraphId& sceneId) override;
+        NodeIdPair ConstructNode(const JE::Editor::Tools::GraphCanvas::GraphId& sceneId, const AZ::Vector2& scenePosition) override;
+        bool ExecuteEvent(const AZ::Vector2& mousePosition, AZ::Vector2& sceneDropPosition, const JE::Editor::Tools::GraphCanvas::GraphId& sceneId) override;
     };
 
     class NodeGroupNodePaletteTreeItem
-        : public GraphCanvas::DraggableNodePaletteTreeItem
+        : public JE::Editor::Tools::GraphCanvas::DraggableNodePaletteTreeItem
     {
     public:
         AZ_CLASS_ALLOCATOR(NodeGroupNodePaletteTreeItem, AZ::SystemAllocator);
         NodeGroupNodePaletteTreeItem(AZStd::string_view nodeName, const QString& iconPath);
         ~NodeGroupNodePaletteTreeItem() = default;
 
-        GraphCanvas::GraphCanvasMimeEvent* CreateMimeEvent() const override;
+        JE::Editor::Tools::GraphCanvas::GraphCanvasMimeEvent* CreateMimeEvent() const override;
     };
     // </NodeGroup>
 }

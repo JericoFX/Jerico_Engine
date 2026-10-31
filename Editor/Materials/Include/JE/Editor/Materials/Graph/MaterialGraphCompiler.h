@@ -52,7 +52,7 @@ namespace JE::Editor
         //! @deprecated Material SRG members are created by the Material-Pipeline.
         void BuildMaterialSrgForCurrentNode();
         bool BuildMaterialTypeForCurrentNode(const JE::Editor::Tools::GraphModel::ConstNodePtr& currentNode);
-        bool ExportTemplatesMatchingRegex(const AZStd::string& pattern);
+        bool ExportTemplatesMatchingRegex(const AZStd::string& pattern, bool reportAssetJobs);
 
         // Convert the template file path into a save file path based on the document name.
         AZStd::string GetOutputPathFromTemplatePath(const AZStd::string& templatePath) const;
@@ -137,6 +137,9 @@ namespace JE::Editor
 
         // Returns the name that will be used to replace material graph name during any substitutions
         AZStd::string GetUniqueGraphName() const;
+
+        // Only generated sources with builders are monitored; dependency files remain in m_generatedFiles.
+        AZStd::vector<AZStd::string> m_generatedAssetSources;
 
         // All slots and nodes will be visited to collect all of the unique include paths.
         AZStd::set<AZStd::string> m_includePaths;

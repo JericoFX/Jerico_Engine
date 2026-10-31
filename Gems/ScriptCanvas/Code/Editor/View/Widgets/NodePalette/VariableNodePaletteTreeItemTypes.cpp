@@ -11,11 +11,11 @@
 #include <QCoreApplication>
 #include <QMenu>
 
-#include <GraphCanvas/Components/GridBus.h>
-#include <GraphCanvas/Components/SceneBus.h>
-#include <GraphCanvas/Components/StyleBus.h>
-#include <GraphCanvas/Components/VisualBus.h>
-#include <GraphCanvas/Widgets/GraphCanvasGraphicsView/GraphCanvasGraphicsView.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/GridBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/SceneBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/StyleBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/VisualBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Widgets/GraphCanvasGraphicsView/GraphCanvasGraphicsView.h>
 
 #include "VariableNodePaletteTreeItemTypes.h"
 
@@ -103,7 +103,7 @@ namespace ScriptCanvasEditor
             AZ::Uuid azType = ScriptCanvas::Data::ToAZType(scriptCanvasType);
 
             AZStd::string colorPalette;
-            GraphCanvas::StyleManagerRequestBus::EventResult(colorPalette, ScriptCanvasEditor::AssetEditorId, &GraphCanvas::StyleManagerRequests::GetDataPaletteStyle, azType);
+            JE::Editor::Tools::GraphCanvas::StyleManagerRequestBus::EventResult(colorPalette, ScriptCanvasEditor::AssetEditorId, &JE::Editor::Tools::GraphCanvas::StyleManagerRequests::GetDataPaletteStyle, azType);
 
             SetTitlePalette(colorPalette);
         }
@@ -128,7 +128,7 @@ namespace ScriptCanvasEditor
         return m_variableId;
     }
 
-    GraphCanvas::GraphCanvasMimeEvent* GetVariableNodePaletteTreeItem::CreateMimeEvent() const
+    JE::Editor::Tools::GraphCanvas::GraphCanvasMimeEvent* GetVariableNodePaletteTreeItem::CreateMimeEvent() const
     {
         return aznew CreateGetVariableNodeMimeEvent(m_variableId);
     }
@@ -177,13 +177,13 @@ namespace ScriptCanvasEditor
     }
 
     SetVariableNodePaletteTreeItem::SetVariableNodePaletteTreeItem()
-        : GraphCanvas::DraggableNodePaletteTreeItem("Set Variable", ScriptCanvasEditor::AssetEditorId)
+        : JE::Editor::Tools::GraphCanvas::DraggableNodePaletteTreeItem("Set Variable", ScriptCanvasEditor::AssetEditorId)
     {
         SetToolTip("This node changes a variable's values according to the data connected to the input slots");
     }
 
     SetVariableNodePaletteTreeItem::SetVariableNodePaletteTreeItem(const ScriptCanvas::VariableId& variableId, const ScriptCanvas::ScriptCanvasId& scriptCanvasId)
-        : GraphCanvas::DraggableNodePaletteTreeItem("", ScriptCanvasEditor::AssetEditorId)
+        : JE::Editor::Tools::GraphCanvas::DraggableNodePaletteTreeItem("", ScriptCanvasEditor::AssetEditorId)
         , m_variableId(variableId)
     {
         AZStd::string_view variableName;
@@ -200,7 +200,7 @@ namespace ScriptCanvasEditor
             AZ::Uuid azType = ScriptCanvas::Data::ToAZType(scriptCanvasType);
 
             AZStd::string colorPalette;
-            GraphCanvas::StyleManagerRequestBus::EventResult(colorPalette, ScriptCanvasEditor::AssetEditorId, &GraphCanvas::StyleManagerRequests::GetDataPaletteStyle, azType);
+            JE::Editor::Tools::GraphCanvas::StyleManagerRequestBus::EventResult(colorPalette, ScriptCanvasEditor::AssetEditorId, &JE::Editor::Tools::GraphCanvas::StyleManagerRequests::GetDataPaletteStyle, azType);
 
             SetTitlePalette(colorPalette);
         }
@@ -225,7 +225,7 @@ namespace ScriptCanvasEditor
         return m_variableId;
     }
 
-    GraphCanvas::GraphCanvasMimeEvent* SetVariableNodePaletteTreeItem::CreateMimeEvent() const
+    JE::Editor::Tools::GraphCanvas::GraphCanvasMimeEvent* SetVariableNodePaletteTreeItem::CreateMimeEvent() const
     {
         return aznew CreateSetVariableNodeMimeEvent(m_variableId);
     }
@@ -335,13 +335,13 @@ namespace ScriptCanvasEditor
     }
 
     VariableChangedNodePaletteTreeItem::VariableChangedNodePaletteTreeItem()
-        : GraphCanvas::DraggableNodePaletteTreeItem("On Variable Changed", ScriptCanvasEditor::AssetEditorId)
+        : JE::Editor::Tools::GraphCanvas::DraggableNodePaletteTreeItem("On Variable Changed", ScriptCanvasEditor::AssetEditorId)
     {
         SetToolTip("This node changes a variable's values according to the data connected to the input slots");
     }
 
     VariableChangedNodePaletteTreeItem::VariableChangedNodePaletteTreeItem(const ScriptCanvas::VariableId& variableId, const ScriptCanvas::ScriptCanvasId& scriptCanvasId)
-        : GraphCanvas::DraggableNodePaletteTreeItem("", ScriptCanvasEditor::AssetEditorId)
+        : JE::Editor::Tools::GraphCanvas::DraggableNodePaletteTreeItem("", ScriptCanvasEditor::AssetEditorId)
         , m_variableId(variableId)
     {
         AZStd::string_view variableName;
@@ -358,7 +358,7 @@ namespace ScriptCanvasEditor
             AZ::Uuid azType = ScriptCanvas::Data::ToAZType(scriptCanvasType);
 
             AZStd::string colorPalette;
-            GraphCanvas::StyleManagerRequestBus::EventResult(colorPalette, ScriptCanvasEditor::AssetEditorId, &GraphCanvas::StyleManagerRequests::GetDataPaletteStyle, azType);
+            JE::Editor::Tools::GraphCanvas::StyleManagerRequestBus::EventResult(colorPalette, ScriptCanvasEditor::AssetEditorId, &JE::Editor::Tools::GraphCanvas::StyleManagerRequests::GetDataPaletteStyle, azType);
 
             SetTitlePalette(colorPalette);
         }
@@ -383,7 +383,7 @@ namespace ScriptCanvasEditor
         return m_variableId;
     }
 
-    GraphCanvas::GraphCanvasMimeEvent* VariableChangedNodePaletteTreeItem::CreateMimeEvent() const
+    JE::Editor::Tools::GraphCanvas::GraphCanvasMimeEvent* VariableChangedNodePaletteTreeItem::CreateMimeEvent() const
     {
         return aznew CreateVariableChangedNodeMimeEvent(m_variableId);
     }
@@ -420,10 +420,10 @@ namespace ScriptCanvasEditor
         if (nodeId.m_graphCanvasId.IsValid())
         {
             AZ::EntityId gridId;
-            GraphCanvas::SceneRequestBus::EventResult(gridId, graphCanvasGraphId, &GraphCanvas::SceneRequests::GetGrid);
+            JE::Editor::Tools::GraphCanvas::SceneRequestBus::EventResult(gridId, graphCanvasGraphId, &JE::Editor::Tools::GraphCanvas::SceneRequests::GetGrid);
 
             AZ::Vector2 offset;
-            GraphCanvas::GridRequestBus::EventResult(offset, gridId, &GraphCanvas::GridRequests::GetMinorPitch);
+            JE::Editor::Tools::GraphCanvas::GridRequestBus::EventResult(offset, gridId, &JE::Editor::Tools::GraphCanvas::GridRequests::GetMinorPitch);
 
             sceneDropPosition += offset;
         }
@@ -439,10 +439,10 @@ namespace ScriptCanvasEditor
         ScriptCanvasEditor::NodeIdPair nodeIdPair;
 
         AZ::EntityId viewId;
-        GraphCanvas::SceneRequestBus::EventResult(viewId, graphCanvasGraphId, &GraphCanvas::SceneRequests::GetViewId);
+        JE::Editor::Tools::GraphCanvas::SceneRequestBus::EventResult(viewId, graphCanvasGraphId, &JE::Editor::Tools::GraphCanvas::SceneRequests::GetViewId);
 
-        GraphCanvas::GraphCanvasGraphicsView* graphicsView = nullptr;
-        GraphCanvas::ViewRequestBus::EventResult(graphicsView, viewId, &GraphCanvas::ViewRequests::AsGraphicsView);
+        JE::Editor::Tools::GraphCanvas::GraphCanvasGraphicsView* graphicsView = nullptr;
+        JE::Editor::Tools::GraphCanvas::ViewRequestBus::EventResult(graphicsView, viewId, &JE::Editor::Tools::GraphCanvas::ViewRequests::AsGraphicsView);
 
         if (graphicsView)
         {
@@ -480,17 +480,17 @@ namespace ScriptCanvasEditor
 
             if (nodeIdPair.m_graphCanvasId.IsValid() && nodeIdPair.m_scriptCanvasId.IsValid())
             {
-                GraphCanvas::SceneRequestBus::Event(graphCanvasGraphId, &GraphCanvas::SceneRequests::AddNode, nodeIdPair.m_graphCanvasId, scenePosition, false);
-                GraphCanvas::SceneMemberUIRequestBus::Event(nodeIdPair.m_graphCanvasId, &GraphCanvas::SceneMemberUIRequests::SetSelected, true);
+                JE::Editor::Tools::GraphCanvas::SceneRequestBus::Event(graphCanvasGraphId, &JE::Editor::Tools::GraphCanvas::SceneRequests::AddNode, nodeIdPair.m_graphCanvasId, scenePosition, false);
+                JE::Editor::Tools::GraphCanvas::SceneMemberUIRequestBus::Event(nodeIdPair.m_graphCanvasId, &JE::Editor::Tools::GraphCanvas::SceneMemberUIRequests::SetSelected, true);
             }
         }
 
         return nodeIdPair;
     }
 
-    AZStd::vector< GraphCanvas::GraphCanvasMimeEvent* > CreateVariableSpecificNodeMimeEvent::CreateMimeEvents() const
+    AZStd::vector< JE::Editor::Tools::GraphCanvas::GraphCanvasMimeEvent* > CreateVariableSpecificNodeMimeEvent::CreateMimeEvents() const
     {
-        AZStd::vector< GraphCanvas::GraphCanvasMimeEvent* > mimeEvents;
+        AZStd::vector< JE::Editor::Tools::GraphCanvas::GraphCanvasMimeEvent* > mimeEvents;
 
         mimeEvents.push_back(aznew CreateGetVariableNodeMimeEvent(m_variableId));
         mimeEvents.push_back(aznew CreateSetVariableNodeMimeEvent(m_variableId));
@@ -521,7 +521,7 @@ namespace ScriptCanvasEditor
     LocalVariablesListNodePaletteTreeItem::LocalVariablesListNodePaletteTreeItem(AZStd::string_view displayName)
         : NodePaletteTreeItem(displayName, ScriptCanvasEditor::AssetEditorId)
     {
-        GraphCanvas::AssetEditorNotificationBus::Handler::BusConnect(ScriptCanvasEditor::AssetEditorId);
+        JE::Editor::Tools::GraphCanvas::AssetEditorNotificationBus::Handler::BusConnect(ScriptCanvasEditor::AssetEditorId);
 
         SetAllowPruneOnEmpty(false);
     }
@@ -582,7 +582,7 @@ namespace ScriptCanvasEditor
         }
     }
 
-    void LocalVariablesListNodePaletteTreeItem::OnChildAdded(GraphCanvas::GraphCanvasTreeItem* treeItem)
+    void LocalVariablesListNodePaletteTreeItem::OnChildAdded(JE::Editor::Tools::GraphCanvas::GraphCanvasTreeItem* treeItem)
     {
         if (!m_ignoreTreeSignals)
         {
@@ -594,7 +594,7 @@ namespace ScriptCanvasEditor
     {
         QScopedValueRollback<bool> valueRollback(m_ignoreTreeSignals, true);
 
-        for (GraphCanvas::GraphCanvasTreeItem* item : m_nonVariableTreeItems)
+        for (JE::Editor::Tools::GraphCanvas::GraphCanvasTreeItem* item : m_nonVariableTreeItems)
         {
             item->DetachItem();
         }
@@ -614,7 +614,7 @@ namespace ScriptCanvasEditor
             }
         }
 
-        for (GraphCanvas::GraphCanvasTreeItem* item : m_nonVariableTreeItems)
+        for (JE::Editor::Tools::GraphCanvas::GraphCanvasTreeItem* item : m_nonVariableTreeItems)
         {
             AddChild(item);
         }

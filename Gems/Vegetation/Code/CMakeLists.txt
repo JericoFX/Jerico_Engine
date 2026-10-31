@@ -23,7 +23,7 @@ ly_add_target(
     BUILD_DEPENDENCIES
         PRIVATE
             Gem::LmbrCentral.API
-            Gem::SurfaceData.Static
+            JE::Geometry
             Legacy::CryCommon
         PUBLIC
             JE::RenderScene
@@ -46,7 +46,7 @@ ly_add_target(
     RUNTIME_DEPENDENCIES
         Gem::LmbrCentral
         Gem::GradientSignal
-        Gem::SurfaceData
+        JE::Geometry
 )
 
 # Inject the gem name into the Module source file
@@ -86,7 +86,7 @@ if(PAL_TRAIT_BUILD_HOST_TOOLS)
     RUNTIME_DEPENDENCIES
         Gem::LmbrCentral.Editor
         Gem::GradientSignal.Editor
-        Gem::SurfaceData.Editor
+        JE::Geometry.Authoring
     )
 
     # Inject the gem name into the Module source file

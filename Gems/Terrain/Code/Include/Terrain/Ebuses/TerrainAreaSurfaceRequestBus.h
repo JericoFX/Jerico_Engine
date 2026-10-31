@@ -10,7 +10,7 @@
 
 #include <AzCore/Component/ComponentBus.h>
 #include <AzCore/std/containers/span.h>
-#include <SurfaceData/SurfaceDataTypes.h>
+#include <JE/Geometry/SurfaceData/SurfaceDataTypes.h>
 #include <AzCore/EBus/EBusSharedDispatchTraits.h>
 
 namespace Terrain

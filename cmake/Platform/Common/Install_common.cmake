@@ -1078,7 +1078,7 @@ function(ly_setup_assets)
 
         # gem directories and files to install
         get_property(gems_assets_paths DIRECTORY ${gem_candidate_dir} PROPERTY gems_assets_paths)
-        list(FILTER gems_assets_paths EXCLUDE REGEX "/Gems/Atom/Feature/Common(/|$)")
+        list(FILTER gems_assets_paths EXCLUDE REGEX "/Gems/Atom/(Feature/Common|Tools/MaterialCanvas)(/|$)")
         foreach(gem_absolute_path IN LISTS gems_assets_paths)
             # If an external subdirectory is not a subdirectory of the engine root, then
             # prepend "External" to its subdirectory root

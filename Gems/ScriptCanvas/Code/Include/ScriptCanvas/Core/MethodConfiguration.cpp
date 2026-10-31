@@ -13,7 +13,6 @@
 
 #include <ScriptCanvas/Core/Contracts/MethodOverloadContract.h>
 #include <ScriptCanvas/Libraries/Core/Method.h>
-#include "../../GraphCanvas/Code/Source/Translation/TranslationBus.h"
 
 namespace ScriptCanvas
 {

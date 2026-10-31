@@ -9,10 +9,10 @@
 #include <AzFramework/StringFunc/StringFunc.h>
 #include <AzToolsFramework/API/EditorAssetSystemAPI.h>
 
-#include <GraphCanvas/Components/Nodes/NodeTitleBus.h>
-#include <GraphCanvas/Components/Slots/SlotBus.h>
-#include <GraphCanvas/Components/StyleBus.h>
-#include <GraphCanvas/Utils/GraphUtils.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/Nodes/NodeTitleBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/Slots/SlotBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/StyleBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Utils/GraphUtils.h>
 
 #include <Editor/View/Widgets/LoggingPanel/LoggingWindowTreeItems.h>
 
@@ -455,7 +455,7 @@ namespace ScriptCanvasEditor
 
     void ExecutionLogTreeItem::OnStylesLoaded()
     {
-        GraphCanvas::StyleManagerRequestBus::EventResult(m_iconPixmap, ScriptCanvasEditor::AssetEditorId, &GraphCanvas::StyleManagerRequests::GetConfiguredPaletteIcon, m_paletteConfiguration);
+        JE::Editor::Tools::GraphCanvas::StyleManagerRequestBus::EventResult(m_iconPixmap, ScriptCanvasEditor::AssetEditorId, &JE::Editor::Tools::GraphCanvas::StyleManagerRequests::GetConfiguredPaletteIcon, m_paletteConfiguration);
         SignalDataChanged();
     }
 
@@ -527,7 +527,7 @@ namespace ScriptCanvasEditor
         return m_scriptCanvasAssetNodeId;
     }
 
-    GraphCanvas::NodeId ExecutionLogTreeItem::GetGraphCanvasNodeId() const
+    JE::Editor::Tools::GraphCanvas::NodeId ExecutionLogTreeItem::GetGraphCanvasNodeId() const
     {
         return m_graphCanvasNodeId;
     }
@@ -550,7 +550,7 @@ namespace ScriptCanvasEditor
     {
         if (m_graphCanvasNodeId.IsValid())
         {
-            if (GraphCanvas::GraphUtils::IsWrapperNode(m_graphCanvasNodeId))
+            if (JE::Editor::Tools::GraphCanvas::GraphUtils::IsWrapperNode(m_graphCanvasNodeId))
             {
                 AZ::EntityId originalNodeId = m_graphCanvasNodeId;
 
@@ -566,7 +566,7 @@ namespace ScriptCanvasEditor
                     slotId = m_outputSlot;
                 }
 
-                GraphCanvas::Endpoint endpoint;
+                JE::Editor::Tools::GraphCanvas::Endpoint endpoint;
                 EBusHandlerNodeDescriptorRequestBus::EventResult(endpoint, m_graphCanvasNodeId, &EBusHandlerNodeDescriptorRequests::MapSlotToGraphCanvasEndpoint, slotId);
 
                 if (endpoint.IsValid())
@@ -613,7 +613,7 @@ namespace ScriptCanvasEditor
 
             m_displayName = QString(modelInformation->m_displayName.c_str());
             
-            if (categoryInformation && categoryInformation->m_paletteOverride.compare(GraphCanvas::NodePaletteTreeItem::DefaultNodeTitlePalette) != 0)
+            if (categoryInformation && categoryInformation->m_paletteOverride.compare(JE::Editor::Tools::GraphCanvas::NodePaletteTreeItem::DefaultNodeTitlePalette) != 0)
             {
                 m_paletteConfiguration.SetColorPalette(categoryInformation->m_paletteOverride);
             }
@@ -623,7 +623,7 @@ namespace ScriptCanvasEditor
             }
             else
             {
-                m_paletteConfiguration.SetColorPalette(GraphCanvas::NodePaletteTreeItem::DefaultNodeTitlePalette);
+                m_paletteConfiguration.SetColorPalette(JE::Editor::Tools::GraphCanvas::NodePaletteTreeItem::DefaultNodeTitlePalette);
             }
         }
 
@@ -664,14 +664,14 @@ namespace ScriptCanvasEditor
                 ResolveWrapperNode(refreshDisplayData);
 
                 AZStd::string displayName;
-                GraphCanvas::NodeTitleRequestBus::EventResult(displayName, m_graphCanvasNodeId, &GraphCanvas::NodeTitleRequests::GetTitle);
+                JE::Editor::Tools::GraphCanvas::NodeTitleRequestBus::EventResult(displayName, m_graphCanvasNodeId, &JE::Editor::Tools::GraphCanvas::NodeTitleRequests::GetTitle);
 
                 if (!displayName.empty())
                 {
                     m_displayName = displayName.c_str();
                 }
 
-                GraphCanvas::NodeTitleRequestBus::Event(m_graphCanvasNodeId, &GraphCanvas::NodeTitleRequests::ConfigureIconConfiguration, m_paletteConfiguration);
+                JE::Editor::Tools::GraphCanvas::NodeTitleRequestBus::Event(m_graphCanvasNodeId, &JE::Editor::Tools::GraphCanvas::NodeTitleRequests::ConfigureIconConfiguration, m_paletteConfiguration);
 
                 OnStylesLoaded();
 
@@ -687,11 +687,11 @@ namespace ScriptCanvasEditor
     {
         if (m_graphCanvasNodeId.IsValid() && HasExecutionInput())
         {
-            GraphCanvas::SlotId slotId;
+            JE::Editor::Tools::GraphCanvas::SlotId slotId;
             SlotMappingRequestBus::EventResult(slotId, m_graphCanvasNodeId, &SlotMappingRequests::MapToGraphCanvasId, m_inputSlot);
 
             AZStd::string inputName;
-            GraphCanvas::SlotRequestBus::EventResult(inputName, slotId, &GraphCanvas::SlotRequests::GetName);
+            JE::Editor::Tools::GraphCanvas::SlotRequestBus::EventResult(inputName, slotId, &JE::Editor::Tools::GraphCanvas::SlotRequests::GetName);
 
             if (!inputName.empty())
             {
@@ -704,11 +704,11 @@ namespace ScriptCanvasEditor
     {
         if (m_graphCanvasNodeId.IsValid() && HasExecutionOutput())
         {
-            GraphCanvas::SlotId slotId;
+            JE::Editor::Tools::GraphCanvas::SlotId slotId;
             SlotMappingRequestBus::EventResult(slotId, m_graphCanvasNodeId, &SlotMappingRequests::MapToGraphCanvasId, m_outputSlot);
 
             AZStd::string outputName;
-            GraphCanvas::SlotRequestBus::EventResult(outputName, slotId, &GraphCanvas::SlotRequests::GetName);
+            JE::Editor::Tools::GraphCanvas::SlotRequestBus::EventResult(outputName, slotId, &JE::Editor::Tools::GraphCanvas::SlotRequests::GetName);
 
             if (!outputName.empty())
             {
@@ -847,14 +847,14 @@ namespace ScriptCanvasEditor
             AZ::EntityId scriptCanvasNodeId;
             AssetGraphSceneBus::BroadcastResult(scriptCanvasNodeId, &AssetGraphScene::FindEditorNodeIdByAssetNodeId, SourceHandle(nullptr, GetAssetId().m_guid), m_assetInputEndpoint.GetNodeId());
 
-            GraphCanvas::NodeId graphCanvasNodeId;
+            JE::Editor::Tools::GraphCanvas::NodeId graphCanvasNodeId;
             SceneMemberMappingRequestBus::EventResult(graphCanvasNodeId, scriptCanvasNodeId, &SceneMemberMappingRequests::GetGraphCanvasEntityId);
 
-            GraphCanvas::SlotId slotId;
+            JE::Editor::Tools::GraphCanvas::SlotId slotId;
             SlotMappingRequestBus::EventResult(slotId, graphCanvasNodeId, &SlotMappingRequests::MapToGraphCanvasId, m_assetInputEndpoint.GetSlotId());
 
             AZStd::string name;
-            GraphCanvas::SlotRequestBus::EventResult(name, slotId, &GraphCanvas::SlotRequests::GetName);
+            JE::Editor::Tools::GraphCanvas::SlotRequestBus::EventResult(name, slotId, &JE::Editor::Tools::GraphCanvas::SlotRequests::GetName);
 
             if (!name.empty())
             {
@@ -871,14 +871,14 @@ namespace ScriptCanvasEditor
             AssetGraphSceneBus::BroadcastResult(scriptCanvasNodeId, &AssetGraphScene::FindEditorNodeIdByAssetNodeId
                 , SourceHandle(nullptr, GetAssetId().m_guid), m_assetOutputEndpoint.GetNodeId());
             
-            GraphCanvas::NodeId graphCanvasNodeId;
+            JE::Editor::Tools::GraphCanvas::NodeId graphCanvasNodeId;
             SceneMemberMappingRequestBus::EventResult(graphCanvasNodeId, scriptCanvasNodeId, &SceneMemberMappingRequests::GetGraphCanvasEntityId);
 
-            GraphCanvas::SlotId slotId;
+            JE::Editor::Tools::GraphCanvas::SlotId slotId;
             SlotMappingRequestBus::EventResult(slotId, graphCanvasNodeId, &SlotMappingRequests::MapToGraphCanvasId, m_assetOutputEndpoint.GetSlotId());
 
             AZStd::string name;
-            GraphCanvas::SlotRequestBus::EventResult(name, slotId, &GraphCanvas::SlotRequests::GetName);
+            JE::Editor::Tools::GraphCanvas::SlotRequestBus::EventResult(name, slotId, &JE::Editor::Tools::GraphCanvas::SlotRequests::GetName);
 
             if (!name.empty())
             {
@@ -887,7 +887,7 @@ namespace ScriptCanvasEditor
         }
     }
 
-    bool DataLogTreeItem::LessThan(const GraphCanvas::GraphCanvasTreeItem* graphItem) const
+    bool DataLogTreeItem::LessThan(const JE::Editor::Tools::GraphCanvas::GraphCanvasTreeItem* graphItem) const
     {
         return !azrtti_istypeof<const NodeAnnotationTreeItem*>(graphItem);
     }

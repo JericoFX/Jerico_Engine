@@ -8,8 +8,8 @@
 #pragma once
 
 
-#include <GraphCanvas/Types/Endpoint.h>
-#include <GraphCanvas/Widgets/NodePalette/TreeItems/NodePaletteTreeItem.h>
+#include <JE/Editor/Tools/GraphCanvas/Types/Endpoint.h>
+#include <JE/Editor/Tools/GraphCanvas/Widgets/NodePalette/TreeItems/NodePaletteTreeItem.h>
 
 #include <ScriptCanvas/Bus/NodeIdPair.h>
 #include <ScriptCanvas/Core/Endpoint.h>
@@ -28,8 +28,8 @@ namespace ScriptCanvasDeveloperEditor
         : public AutomationInterface
     {
     public:
-        virtual bool ShouldProcessItem(const GraphCanvas::NodePaletteTreeItem* nodePaletteTreeItem) const = 0;
-        virtual void ProcessItem(const GraphCanvas::NodePaletteTreeItem* nodePaletteTreeItem) = 0;
+        virtual bool ShouldProcessItem(const JE::Editor::Tools::GraphCanvas::NodePaletteTreeItem* nodePaletteTreeItem) const = 0;
+        virtual void ProcessItem(const JE::Editor::Tools::GraphCanvas::NodePaletteTreeItem* nodePaletteTreeItem) = 0;
     };
     
     class ProcessVariablePaletteInterface
@@ -55,12 +55,12 @@ namespace ScriptCanvasDeveloperEditor
             ConnectionStyle m_connectionStyle = ConnectionStyle::NoConnections;
 
             ScriptCanvasEditor::NodeIdPair m_fallbackNode;
-            GraphCanvas::Endpoint m_previousEndpoint;            
+            JE::Editor::Tools::GraphCanvas::Endpoint m_previousEndpoint;            
         };
 
-        static ScriptCanvasEditor::NodeIdPair HandleMimeEvent(GraphCanvas::GraphCanvasMimeEvent* mimeEvent, GraphCanvas::GraphId graphCanvasGraphId, const QRectF& viewportRectangle, int& widthOffset, int& heightOffset, int& maxRowHeight, AZ::Vector2 spacing);
+        static ScriptCanvasEditor::NodeIdPair HandleMimeEvent(JE::Editor::Tools::GraphCanvas::GraphCanvasMimeEvent* mimeEvent, JE::Editor::Tools::GraphCanvas::GraphId graphCanvasGraphId, const QRectF& viewportRectangle, int& widthOffset, int& heightOffset, int& maxRowHeight, AZ::Vector2 spacing);
 
-        static void UpdateViewportPositionOffsetForNode(GraphCanvas::NodeId nodeId, const QRectF& viewportRectangle, int& widthOffset, int& heightOffset, int& maxRowHeight, AZ::Vector2 spacing);
+        static void UpdateViewportPositionOffsetForNode(JE::Editor::Tools::GraphCanvas::NodeId nodeId, const QRectF& viewportRectangle, int& widthOffset, int& heightOffset, int& maxRowHeight, AZ::Vector2 spacing);
         static bool CreateConnectedChain(const ScriptCanvasEditor::NodeIdPair& nodeIdPair, CreateConnectedChainConfig& connectionConfig);
 
         static void ProcessNodePalette(ProcessNodePaletteInterface& processNodePaletteInterface);

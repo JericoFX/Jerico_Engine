@@ -13,7 +13,7 @@
 #include <AzCore/std/string/string_view.h>
 #include <AzToolsFramework/Undo/UndoSystem.h>
 
-#include <GraphCanvas/Types/EntitySaveData.h>
+#include <JE/Editor/Tools/GraphCanvas/Types/EntitySaveData.h>
 #include <ScriptCanvas/Core/GraphData.h>
 #include <ScriptCanvas/Variable/VariableData.h>
 
@@ -47,7 +47,7 @@ namespace ScriptCanvasEditor
 
         ScriptCanvas::GraphData             m_graphData;
         ScriptCanvas::VariableData          m_variableData;
-        AZStd::unordered_map< AZ::EntityId, GraphCanvas::EntitySaveDataContainer* > m_visualSaveData;
+        AZStd::unordered_map< AZ::EntityId, JE::Editor::Tools::GraphCanvas::EntitySaveDataContainer* > m_visualSaveData;
     };
 
     class UndoCache;

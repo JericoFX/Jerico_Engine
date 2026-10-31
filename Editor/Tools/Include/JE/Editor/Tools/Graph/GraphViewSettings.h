@@ -9,13 +9,13 @@
 #pragma once
 
 #include <JE/Editor/Tools/Graph/GraphViewConstructPresets.h>
-#include <GraphCanvas/Editor/AssetEditorBus.h>
-#include <GraphCanvas/Widgets/NodePalette/TreeItems/NodePaletteTreeItem.h>
+#include <JE/Editor/Tools/GraphCanvas/Editor/AssetEditorBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Widgets/NodePalette/TreeItems/NodePaletteTreeItem.h>
 
 namespace JE::Editor::Tools
 {
     // Settings for initializing graph canvas and node palettes
-    struct GraphViewSettings : private GraphCanvas::AssetEditorSettingsRequestBus::Handler
+    struct GraphViewSettings : private JE::Editor::Tools::GraphCanvas::AssetEditorSettingsRequestBus::Handler
     {
         AZ_RTTI(GraphViewSettings, "{00E392C7-C372-4E09-9C07-5803B8864B85}");
         AZ_CLASS_ALLOCATOR(GraphViewSettings, AZ::SystemAllocator);
@@ -57,11 +57,11 @@ namespace JE::Editor::Tools
         float GetEdgePanningPercentage() const override;
         float GetEdgePanningScrollSpeed() const override;
 
-        GraphCanvas::EditorConstructPresets* GetConstructPresets() const override;
-        const GraphCanvas::ConstructTypePresetBucket* GetConstructTypePresetBucket(GraphCanvas::ConstructType constructType) const override;
+        JE::Editor::Tools::GraphCanvas::EditorConstructPresets* GetConstructPresets() const override;
+        const JE::Editor::Tools::GraphCanvas::ConstructTypePresetBucket* GetConstructTypePresetBucket(JE::Editor::Tools::GraphCanvas::ConstructType constructType) const override;
 
-        GraphCanvas::Styling::ConnectionCurveType GetConnectionCurveType() const override;
-        GraphCanvas::Styling::ConnectionCurveType GetDataConnectionCurveType() const override;
+        JE::Editor::Tools::GraphCanvas::Styling::ConnectionCurveType GetConnectionCurveType() const override;
+        JE::Editor::Tools::GraphCanvas::Styling::ConnectionCurveType GetDataConnectionCurveType() const override;
 
         bool AllowNodeDisabling() const override;
         bool AllowDataReferenceSlots() const override;
@@ -76,7 +76,7 @@ namespace JE::Editor::Tools
         // String identifier used to save settings for graph canvas context menus
         AZStd::string m_nodeSaveIdentifier;
         // Callback function used to create node palette items
-        AZStd::function<GraphCanvas::GraphCanvasTreeItem*(const AZ::Crc32&)> m_createNodeTreeItemsFn;
+        AZStd::function<JE::Editor::Tools::GraphCanvas::GraphCanvasTreeItem*(const AZ::Crc32&)> m_createNodeTreeItemsFn;
 
         // Settings related to Basic movement and selection
         double m_snapDistance = 20.0;
@@ -106,8 +106,8 @@ namespace JE::Editor::Tools
         bool m_nodeNudgingEnabled = true;
 
         // Settings related to how lines are rendered between connections
-        GraphCanvas::Styling::ConnectionCurveType m_connectionCurveType = GraphCanvas::Styling::ConnectionCurveType::Straight;
-        GraphCanvas::Styling::ConnectionCurveType m_dataConnectionCurveType = GraphCanvas::Styling::ConnectionCurveType::Straight;
+        JE::Editor::Tools::GraphCanvas::Styling::ConnectionCurveType m_connectionCurveType = JE::Editor::Tools::GraphCanvas::Styling::ConnectionCurveType::Straight;
+        JE::Editor::Tools::GraphCanvas::Styling::ConnectionCurveType m_dataConnectionCurveType = JE::Editor::Tools::GraphCanvas::Styling::ConnectionCurveType::Straight;
 
         // Other miscellaneous settings
         bool m_groupDoubleClickCollapseEnabled = true;

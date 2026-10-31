@@ -107,7 +107,7 @@ namespace UnitTest
                 const AZ::Vector3& position,
                 AzFramework::SurfaceData::SurfaceTagWeightList& surfaceWeights)
                 {
-                    const SurfaceData::SurfaceTag tag1 = SurfaceData::SurfaceTag("tag1");
+                    const JE::Geometry::SurfaceData::SurfaceTag tag1 = JE::Geometry::SurfaceData::SurfaceTag("tag1");
 
                     AzFramework::SurfaceData::SurfaceTagWeight tagWeight1;
                     tagWeight1.m_surfaceType = tag1;

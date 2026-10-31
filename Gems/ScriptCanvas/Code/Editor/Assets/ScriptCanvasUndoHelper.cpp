@@ -44,7 +44,7 @@ namespace ScriptCanvasEditor
         AZ::EntityId graphCanvasGraphId = m_graph->GetGraphCanvasGraphId();
         ScriptCanvas::ScriptCanvasId scriptCanvasId = m_graph->GetScriptCanvasId();
 
-        GraphCanvas::GraphModelRequestBus::Event(graphCanvasGraphId, &GraphCanvas::GraphModelRequests::OnSaveDataDirtied, graphCanvasGraphId);
+        JE::Editor::Tools::GraphCanvas::GraphModelRequestBus::Event(graphCanvasGraphId, &JE::Editor::Tools::GraphCanvas::GraphModelRequests::OnSaveDataDirtied, graphCanvasGraphId);
 
         UndoData undoData;
 

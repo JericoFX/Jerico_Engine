@@ -16,7 +16,7 @@
 #include <AzFramework/Translation/TranslationDef.h>
 #include <Vegetation/InstanceData.h>
 #include <Vegetation/Descriptor.h>
-#include <SurfaceData/SurfaceDataSystemRequestBus.h>
+#include <JE/Geometry/SurfaceData/SurfaceDataSystemRequestBus.h>
 #include <AzCore/Debug/Profiler.h>
 #include <AzCore/std/sort.h>
 
@@ -102,7 +102,7 @@ namespace Vegetation
 
     void SurfaceMaskDepthFilterConfig::AddTag(AZStd::string tag)
     {
-        m_depthComparisonTags.push_back(SurfaceData::SurfaceTag(tag));
+        m_depthComparisonTags.push_back(JE::Geometry::SurfaceData::SurfaceTag(tag));
     }
 
 
@@ -207,7 +207,7 @@ namespace Vegetation
         VEGETATION_PROFILE_FUNCTION_VERBOSE
 
         const bool useOverrides = m_configuration.m_allowOverrides && instanceData.m_descriptorPtr && !instanceData.m_descriptorPtr->m_surfaceTagDistance.m_tags.empty();
-        const SurfaceData::SurfaceTagVector& surfaceTagsToCompare = useOverrides ? instanceData.m_descriptorPtr->m_surfaceTagDistance.m_tags : m_configuration.m_depthComparisonTags;
+        const JE::Geometry::SurfaceData::SurfaceTagVector& surfaceTagsToCompare = useOverrides ? instanceData.m_descriptorPtr->m_surfaceTagDistance.m_tags : m_configuration.m_depthComparisonTags;
         float lowerZDistanceRange = useOverrides ? instanceData.m_descriptorPtr->m_surfaceTagDistance.m_lowerDistanceInMeters : m_configuration.m_lowerDistance;
         float upperZDistanceRange = useOverrides ? instanceData.m_descriptorPtr->m_surfaceTagDistance.m_upperDistanceInMeters : m_configuration.m_upperDistance;
 
@@ -216,13 +216,13 @@ namespace Vegetation
         if (!surfaceTagsToCompare.empty())
         {
             m_points.Clear();
-            AZ::Interface<SurfaceData::SurfaceDataSystem>::Get()->GetSurfacePoints(instanceData.m_position, surfaceTagsToCompare, m_points);
+            AZ::Interface<JE::Geometry::SurfaceData::SurfaceDataSystem>::Get()->GetSurfacePoints(instanceData.m_position, surfaceTagsToCompare, m_points);
 
             float instanceZ = instanceData.m_position.GetZ();
             m_points.EnumeratePoints(
                 [instanceZ, lowerZDistanceRange, upperZDistanceRange, &passesFilter](
                     [[maybe_unused]] size_t inPositionIndex, const AZ::Vector3& position,
-                    [[maybe_unused]] const AZ::Vector3& normal, [[maybe_unused]] const SurfaceData::SurfaceTagWeights& masks) -> bool
+                    [[maybe_unused]] const AZ::Vector3& normal, [[maybe_unused]] const JE::Geometry::SurfaceData::SurfaceTagWeights& masks) -> bool
                 {
                     float pointZ = position.GetZ();
                     float zDistance = instanceZ - pointZ;

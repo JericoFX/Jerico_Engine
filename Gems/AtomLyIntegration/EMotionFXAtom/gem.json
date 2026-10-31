@@ -18,7 +18,6 @@
         "EMotionFX",
         "Atom_RHI",
         "LmbrCentral",
-        "GradientSignal",
-        "SurfaceData"
+        "GradientSignal"
     ]
 }

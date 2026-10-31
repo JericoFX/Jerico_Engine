@@ -60,14 +60,14 @@ namespace LandscapeCanvasEditor
     }
 
     NodeContextMenu::NodeContextMenu(const AZ::EntityId& sceneId, QWidget* parent)
-        : GraphCanvas::NodeContextMenu(LandscapeCanvas::LANDSCAPE_CANVAS_EDITOR_ID, parent)
+        : JE::Editor::Tools::GraphCanvas::NodeContextMenu(LandscapeCanvas::LANDSCAPE_CANVAS_EDITOR_ID, parent)
     {
         AddMenuAction(GetNodeSelectInEditorAction(sceneId, this));
     }
 
-    void NodeContextMenu::OnRefreshActions(const GraphCanvas::GraphId& graphId, const AZ::EntityId& targetMemberId)
+    void NodeContextMenu::OnRefreshActions(const JE::Editor::Tools::GraphCanvas::GraphId& graphId, const AZ::EntityId& targetMemberId)
     {
-        GraphCanvas::NodeContextMenu::OnRefreshActions(graphId, targetMemberId);
+        JE::Editor::Tools::GraphCanvas::NodeContextMenu::OnRefreshActions(graphId, targetMemberId);
 
         // Don't allow cut/copy/paste/duplicate on our area extender nodes because they can't
         // exist without being wrapped on an area (e.g. spawner) node

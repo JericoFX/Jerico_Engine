@@ -12,8 +12,8 @@
 #include <QWidgetAction>
 #include <QKeyEvent>
 
-#include <GraphCanvas/Components/SceneBus.h>
-#include <GraphCanvas/Components/Nodes/Wrapper/WrapperNodeBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/SceneBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/Nodes/Wrapper/WrapperNodeBus.h>
 
 #include "Editor/View/Windows/EBusHandlerActionMenu.h"
 #include <Editor/View/Windows/ui_ebushandleractionlistwidget.h>
@@ -113,12 +113,12 @@ namespace ScriptCanvasEditor
             actionItem.m_name = QString(eventConfigurations[i].m_eventName.c_str());
             actionItem.m_eventId = eventConfigurations[i].m_eventId;
 
-            GraphCanvas::TranslationKey key;
+            JE::Editor::Tools::GraphCanvas::TranslationKey key;
             key << "EBusHandler" << m_busName.c_str() << "methods" << eventConfigurations[i].m_eventName << "details";
 
-            GraphCanvas::TranslationRequests::Details details;
+            JE::Editor::Tools::GraphCanvas::TranslationRequests::Details details;
             details.m_name = actionItem.m_name.toUtf8().data();
-            GraphCanvas::TranslationRequestBus::BroadcastResult(details, &GraphCanvas::TranslationRequests::GetDetails, key, details);
+            JE::Editor::Tools::GraphCanvas::TranslationRequestBus::BroadcastResult(details, &JE::Editor::Tools::GraphCanvas::TranslationRequests::GetDetails, key, details);
 
             actionItem.m_displayName = QString(details.m_name.c_str());
             
@@ -152,7 +152,7 @@ namespace ScriptCanvasEditor
     void EBusHandlerActionSourceModel::UpdateEBusItem(EBusHandlerActionItem& actionItem)
     {
         AZ::EntityId graphCanvasGraphId;
-        GraphCanvas::SceneMemberRequestBus::EventResult(graphCanvasGraphId, m_ebusNode, &GraphCanvas::SceneMemberRequests::GetScene);
+        JE::Editor::Tools::GraphCanvas::SceneMemberRequestBus::EventResult(graphCanvasGraphId, m_ebusNode, &JE::Editor::Tools::GraphCanvas::SceneMemberRequests::GetScene);
 
         ScriptCanvas::EBusEventId eventId(actionItem.m_eventId);
 
@@ -191,10 +191,10 @@ namespace ScriptCanvasEditor
                 idPair = mimeEvent.CreateEventNode(graphCanvasGraphId, dummyPosition);                
             }
 
-            GraphCanvas::WrappedNodeConfiguration configuration;
+            JE::Editor::Tools::GraphCanvas::WrappedNodeConfiguration configuration;
 
             EBusHandlerNodeDescriptorRequestBus::EventResult(configuration, m_ebusNode, &EBusHandlerNodeDescriptorRequests::GetEventConfiguration, eventId);
-            GraphCanvas::WrapperNodeRequestBus::Event(m_ebusNode, &GraphCanvas::WrapperNodeRequests::WrapNode, idPair.m_graphCanvasId, configuration);
+            JE::Editor::Tools::GraphCanvas::WrapperNodeRequestBus::Event(m_ebusNode, &JE::Editor::Tools::GraphCanvas::WrapperNodeRequests::WrapNode, idPair.m_graphCanvasId, configuration);
 
             ScriptCanvas::ScriptCanvasId scriptCanvasId;
             GeneralRequestBus::BroadcastResult(scriptCanvasId, &GeneralRequests::GetScriptCanvasId, graphCanvasGraphId);
@@ -211,7 +211,7 @@ namespace ScriptCanvasEditor
                 AZStd::unordered_set<AZ::EntityId> deleteNodes;
                 deleteNodes.insert(nodeId);
 
-                GraphCanvas::SceneRequestBus::Event(graphCanvasGraphId, &GraphCanvas::SceneRequests::Delete, deleteNodes);
+                JE::Editor::Tools::GraphCanvas::SceneRequestBus::Event(graphCanvasGraphId, &JE::Editor::Tools::GraphCanvas::SceneRequests::Delete, deleteNodes);
 
                 actionItem.m_active = false;
             }

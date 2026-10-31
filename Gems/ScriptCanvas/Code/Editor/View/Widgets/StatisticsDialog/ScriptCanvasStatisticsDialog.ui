@@ -128,7 +128,7 @@
                <number>5</number>
               </property>
               <item>
-               <widget class="GraphCanvas::NodePaletteWidget" name="nodePaletteWidget" native="true">
+               <widget class="JE::Editor::Tools::GraphCanvas::NodePaletteWidget" name="nodePaletteWidget" native="true">
                 <property name="minimumSize">
                  <size>
                   <width>200</width>
@@ -572,9 +572,9 @@
    <container>1</container>
   </customwidget>
   <customwidget>
-   <class>GraphCanvas::NodePaletteWidget</class>
+   <class>JE::Editor::Tools::GraphCanvas::NodePaletteWidget</class>
    <extends>QWidget</extends>
-   <header location="global">StaticLib/GraphCanvas/Widgets/NodePalette/NodePaletteWidget.h</header>
+   <header location="global">JE/Editor/Tools/GraphCanvas/Widgets/NodePalette/NodePaletteWidget.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>

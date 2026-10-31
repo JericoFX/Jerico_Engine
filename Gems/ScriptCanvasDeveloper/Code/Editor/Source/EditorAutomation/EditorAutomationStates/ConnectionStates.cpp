@@ -6,13 +6,13 @@
  *
  */
 
-#include <GraphCanvas/Components/SceneBus.h>
-#include <GraphCanvas/Components/Slots/SlotBus.h>
-#include <GraphCanvas/Components/ViewBus.h>
-#include <GraphCanvas/Components/VisualBus.h>
-#include <GraphCanvas/Editor/AssetEditorBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/SceneBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/Slots/SlotBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/ViewBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/VisualBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Editor/AssetEditorBus.h>
 
-#include <GraphCanvas/Utils/ConversionUtils.h>
+#include <JE/Editor/Tools/GraphCanvas/Utils/ConversionUtils.h>
 
 #include <Editor/GraphCanvas/GraphCanvasEditorNotificationBusId.h>
 
@@ -29,7 +29,7 @@ namespace ScriptCanvas::Developer
     // CoupleNodesState
     /////////////////////
 
-    CoupleNodesState::CoupleNodesState(AutomationStateModelId pickUpNode, GraphCanvas::ConnectionType connectionType, AutomationStateModelId targetNode, AutomationStateModelId outputId)
+    CoupleNodesState::CoupleNodesState(AutomationStateModelId pickUpNode, JE::Editor::Tools::GraphCanvas::ConnectionType connectionType, AutomationStateModelId targetNode, AutomationStateModelId outputId)
         : NamedAutomationState("CoupleNodesState")
         , m_pickUpNode(pickUpNode)
         , m_targetNode(targetNode)
@@ -41,8 +41,8 @@ namespace ScriptCanvas::Developer
 
     void CoupleNodesState::OnSetupStateActions(EditorAutomationActionRunner& actionRunner)
     {
-        const GraphCanvas::NodeId* pickUpNodeId = GetStateModel()->GetStateDataAs<GraphCanvas::NodeId>(m_pickUpNode);
-        const GraphCanvas::NodeId* targetNodeId = GetStateModel()->GetStateDataAs<GraphCanvas::NodeId>(m_targetNode);
+        const JE::Editor::Tools::GraphCanvas::NodeId* pickUpNodeId = GetStateModel()->GetStateDataAs<JE::Editor::Tools::GraphCanvas::NodeId>(m_pickUpNode);
+        const JE::Editor::Tools::GraphCanvas::NodeId* targetNodeId = GetStateModel()->GetStateDataAs<JE::Editor::Tools::GraphCanvas::NodeId>(m_targetNode);
 
         if (pickUpNodeId && targetNodeId)
         {
@@ -67,7 +67,7 @@ namespace ScriptCanvas::Developer
     {
         if (!m_outputId.empty())
         {
-            AZStd::vector< GraphCanvas::ConnectionId > connectionId = m_coupleNodesAction->GetConnectionIds();
+            AZStd::vector< JE::Editor::Tools::GraphCanvas::ConnectionId > connectionId = m_coupleNodesAction->GetConnectionIds();
             GetStateModel()->SetStateData(m_outputId, connectionId);
         }
 
@@ -90,8 +90,8 @@ namespace ScriptCanvas::Developer
 
     void ConnectEndpointsState::OnSetupStateActions(EditorAutomationActionRunner& actionRunner)
     {
-        const GraphCanvas::Endpoint* sourceEndpoint = GetStateModel()->GetStateDataAs<GraphCanvas::Endpoint>(m_sourceEndpoint);
-        const GraphCanvas::Endpoint* targetEndpoint = GetStateModel()->GetStateDataAs<GraphCanvas::Endpoint>(m_targetEndpoint);
+        const JE::Editor::Tools::GraphCanvas::Endpoint* sourceEndpoint = GetStateModel()->GetStateDataAs<JE::Editor::Tools::GraphCanvas::Endpoint>(m_sourceEndpoint);
+        const JE::Editor::Tools::GraphCanvas::Endpoint* targetEndpoint = GetStateModel()->GetStateDataAs<JE::Editor::Tools::GraphCanvas::Endpoint>(m_targetEndpoint);
 
         if (sourceEndpoint && targetEndpoint)
         {
@@ -116,7 +116,7 @@ namespace ScriptCanvas::Developer
     {
         if (!m_outputId.empty())
         {
-            GraphCanvas::ConnectionId connectionId = m_connectEndpointsAction->GetConnectionId();
+            JE::Editor::Tools::GraphCanvas::ConnectionId connectionId = m_connectEndpointsAction->GetConnectionId();
             GetStateModel()->SetStateData(m_outputId, connectionId);
         }
 

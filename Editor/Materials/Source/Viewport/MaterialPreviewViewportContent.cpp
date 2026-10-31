@@ -8,6 +8,7 @@
 
 #include <JE/Render/Features/SkyBox/SkyboxConstants.h>
 #include <JE/Render/Features/Utils/ModelPreset.h>
+#include <JE/Editor/Render/RPI/Edit/Common/AssetUtils.h>
 #include <JE/Render/RPI/Reflect/Asset/AssetUtils.h>
 #include <JE/Render/Scene/Grid/GridComponentBus.h>
 #include <JE/Render/Scene/Grid/GridComponentConfig.h>
@@ -25,6 +26,9 @@
 #include <JE/Render/Scene/PostProcess/PostFxLayerComponentConstants.h>
 #include <JE/Render/Scene/SkyBox/HDRiSkyboxBus.h>
 #include <JE/Editor/Tools/EntityPreviewViewport/EntityPreviewViewportSettingsRequestBus.h>
+#include <JE/Editor/Tools/Document/AtomToolsDocumentRequestBus.h>
+#include <JE/Editor/Tools/Graph/GraphDocumentRequestBus.h>
+#include <JE/Editor/Tools/Util/Util.h>
 #include <AzFramework/Components/NonUniformScaleComponent.h>
 #include <AzFramework/Components/TransformComponent.h>
 #include <JE/Editor/Materials/Document/MaterialDocumentRequestBus.h>
@@ -98,6 +102,7 @@ namespace JE::Editor
 
     MaterialPreviewViewportContent::~MaterialPreviewViewportContent()
     {
+        SetDocumentId(AZ::Uuid::CreateNull());
         JE::Editor::Tools::AtomToolsDocumentNotificationBus::Handler::BusDisconnect();
     }
 
@@ -136,6 +141,8 @@ namespace JE::Editor
 
     void MaterialPreviewViewportContent::SetDocumentId(const AZ::Uuid& documentId)
     {
+        JE::Editor::Tools::GraphDocumentNotificationBus::Handler::BusDisconnect();
+        m_graphDocumentId = AZ::Uuid::CreateNull();
         AZ::Data::Instance<JE::Render::RPI::Material> materialInstance;
         JE::Editor::MaterialDocumentRequestBus::EventResult(
             materialInstance, documentId, &JE::Editor::MaterialDocumentRequestBus::Events::GetInstance);
@@ -145,6 +152,94 @@ namespace JE::Editor
         materialAssignment.m_materialInstance = materialInstance;
         materialAssignment.m_materialInstancePreCreated = true;
 
+        JE::Render::MaterialComponentRequestBus::Event(
+            GetObjectEntityId(), &JE::Render::MaterialComponentRequestBus::Events::SetMaterialMap, materials);
+    }
+
+    void MaterialPreviewViewportContent::SetGraphDocumentId(const AZ::Uuid& documentId)
+    {
+        JE::Editor::Tools::DocumentTypeInfo type;
+        JE::Editor::Tools::AtomToolsDocumentRequestBus::EventResult(
+            type, documentId, &JE::Editor::Tools::AtomToolsDocumentRequests::GetDocumentTypeInfo);
+        const AZ::Uuid selectedId = type.m_documentTypeName == "Material Graph" ? documentId : AZ::Uuid::CreateNull();
+        if (!selectedId.IsNull() && selectedId == m_graphDocumentId)
+        {
+            return;
+        }
+        JE::Editor::Tools::GraphDocumentNotificationBus::Handler::BusDisconnect();
+        m_graphDocumentId = selectedId;
+        if (!m_graphDocumentId.IsNull())
+        {
+            JE::Editor::Tools::GraphDocumentNotificationBus::Handler::BusConnect(m_toolId);
+        }
+        ApplyGeneratedMaterial(m_graphDocumentId);
+    }
+
+    void MaterialPreviewViewportContent::OnDocumentClosed(const AZ::Uuid& documentId)
+    {
+        if (!m_graphDocumentId.IsNull() && documentId == m_graphDocumentId)
+        {
+            SetGraphDocumentId(AZ::Uuid::CreateNull());
+        }
+    }
+
+    void MaterialPreviewViewportContent::OnDocumentDestroyed(const AZ::Uuid& documentId)
+    {
+        OnDocumentClosed(documentId);
+    }
+
+    void MaterialPreviewViewportContent::OnCompileGraphStarted(const AZ::Uuid& documentId)
+    {
+        if (!m_graphDocumentId.IsNull() && documentId == m_graphDocumentId &&
+            JE::Editor::Tools::GetSettingsValue("/O3DE/Atom/MaterialCanvas/Viewport/ClearMaterialOnCompileGraphStarted", true))
+        {
+            ApplyGeneratedMaterial(AZ::Uuid::CreateNull());
+        }
+    }
+
+    void MaterialPreviewViewportContent::OnCompileGraphCompleted(const AZ::Uuid& documentId)
+    {
+        if (!m_graphDocumentId.IsNull() && documentId == m_graphDocumentId)
+        {
+            ApplyGeneratedMaterial(documentId);
+        }
+    }
+
+    void MaterialPreviewViewportContent::OnCompileGraphFailed(const AZ::Uuid& documentId)
+    {
+        if (!m_graphDocumentId.IsNull() && documentId == m_graphDocumentId &&
+            JE::Editor::Tools::GetSettingsValue("/O3DE/Atom/MaterialCanvas/Viewport/ClearMaterialOnCompileGraphFailed", true))
+        {
+            ApplyGeneratedMaterial(AZ::Uuid::CreateNull());
+        }
+    }
+
+    void MaterialPreviewViewportContent::ApplyGeneratedMaterial(const AZ::Uuid& documentId)
+    {
+        AZ::Data::AssetId assetId;
+        AZStd::vector<AZStd::string> generatedFiles;
+        if (!documentId.IsNull())
+        {
+            JE::Editor::Tools::GraphDocumentRequestBus::EventResult(
+                generatedFiles, documentId, &JE::Editor::Tools::GraphDocumentRequests::GetGeneratedFilePaths);
+        }
+        for (const auto& path : generatedFiles)
+        {
+            if (path.ends_with(".material"))
+            {
+                if (auto outcome = JE::Render::RPI::AssetUtils::MakeAssetId(path, 0))
+                {
+                    assetId = outcome.GetValue();
+                    break;
+                }
+            }
+        }
+        // Material graph defaults may change only the materialtype, so each completion needs a unique instance.
+        JE::Render::MaterialAssignment assignment;
+        assignment.m_materialAsset.Create(assetId, AZ::Data::AssetLoadBehavior::PreLoad);
+        assignment.m_materialInstanceMustBeUnique = true;
+        JE::Render::MaterialAssignmentMap materials;
+        materials.emplace(JE::Render::DefaultMaterialAssignmentId, assignment);
         JE::Render::MaterialComponentRequestBus::Event(
             GetObjectEntityId(), &JE::Render::MaterialComponentRequestBus::Events::SetMaterialMap, materials);
     }

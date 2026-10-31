@@ -7,7 +7,7 @@
  */
 #pragma once
 
-#include <GraphCanvas/Components/SceneBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/SceneBus.h>
 
 #include <ScriptCanvas/Bus/EditorScriptCanvasBus.h>
 
@@ -25,7 +25,7 @@ namespace ScriptCanvas::Developer
             : public Mock
             , public ScriptCanvasEditor::ScriptCanvasWrapperNodeDescriptorRequestBus::Handler
             , public MockDescriptorNotificationBus::MultiHandler
-            , public GraphCanvas::SceneNotificationBus::Handler
+            , public JE::Editor::Tools::GraphCanvas::SceneNotificationBus::Handler
         {
         public:
             AZ_COMPONENT(WrapperMock, "{14C6CE68-906A-4D2F-89BA-153774CE8015}", Mock);
@@ -39,11 +39,11 @@ namespace ScriptCanvas::Developer
             ////
 
             // MockDescriptorNotificationBus
-            void OnGraphCanvasNodeSetup(const GraphCanvas::NodeId& graphCanvasNodeId) override;
+            void OnGraphCanvasNodeSetup(const JE::Editor::Tools::GraphCanvas::NodeId& graphCanvasNodeId) override;
             ////
 
             // GraphCanvas::NodeNotificationBus
-            void OnNodeRemoved(const GraphCanvas::NodeId& nodeId) override;
+            void OnNodeRemoved(const JE::Editor::Tools::GraphCanvas::NodeId& nodeId) override;
             ////
 
         protected:
@@ -51,13 +51,13 @@ namespace ScriptCanvas::Developer
             void OnActionNameChanged();
 
             void OnClear() override;
-            void OnNodeDisplayed(const GraphCanvas::NodeId& graphCanvasNodeId) override;
+            void OnNodeDisplayed(const JE::Editor::Tools::GraphCanvas::NodeId& graphCanvasNodeId) override;
 
         private:
 
             AZStd::string                 m_actionName;
             AZStd::vector< AZ::EntityId > m_wrappedNodeIds;
-            AZStd::unordered_map< GraphCanvas::NodeId, AZ::EntityId > m_graphCanvasMapping;
+            AZStd::unordered_map< JE::Editor::Tools::GraphCanvas::NodeId, AZ::EntityId > m_graphCanvasMapping;
         };
     }
 }

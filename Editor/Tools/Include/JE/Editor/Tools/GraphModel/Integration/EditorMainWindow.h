@@ -12,7 +12,7 @@
 #include <AzCore/std/containers/unordered_map.h>
 
 // GraphCanvas ...
-#include <GraphCanvas/Widgets/GraphCanvasEditor/GraphCanvasAssetEditorMainWindow.h>
+#include <JE/Editor/Tools/GraphCanvas/Widgets/GraphCanvasEditor/GraphCanvasAssetEditorMainWindow.h>
 
 // GraphModel ...
 #include <JE/Editor/Tools/GraphModel/GraphModelBus.h>
@@ -24,12 +24,12 @@ namespace JE::Editor::Tools::GraphModel::Integration
     *   GraphModel functionality into the generic windowing framework.
     */
     class EditorMainWindow
-        : public GraphCanvas::AssetEditorMainWindow
+        : public JE::Editor::Tools::GraphCanvas::AssetEditorMainWindow
         , protected GraphControllerNotificationBus::MultiHandler
     {
     public:
         AZ_CLASS_ALLOCATOR(EditorMainWindow, AZ::SystemAllocator)
-        explicit EditorMainWindow(GraphCanvas::AssetEditorWindowConfig* config, QWidget* parent = nullptr);
+        explicit EditorMainWindow(JE::Editor::Tools::GraphCanvas::AssetEditorWindowConfig* config, QWidget* parent = nullptr);
         ~EditorMainWindow() override;
 
     protected:
@@ -38,14 +38,14 @@ namespace JE::Editor::Tools::GraphModel::Integration
         virtual JE::Editor::Tools::GraphModel::GraphContextPtr GetGraphContext() const = 0;
 
         /// Helper method for retrieving the graph associated with a graphId.
-        JE::Editor::Tools::GraphModel::GraphPtr GetGraphById(GraphCanvas::GraphId graphId) const;
+        JE::Editor::Tools::GraphModel::GraphPtr GetGraphById(JE::Editor::Tools::GraphCanvas::GraphId graphId) const;
 
         /// Helper method for retrieving the graphId associated with a graph.
-        GraphCanvas::GraphId GetGraphId(JE::Editor::Tools::GraphModel::GraphPtr graph) const;
+        JE::Editor::Tools::GraphCanvas::GraphId GetGraphId(JE::Editor::Tools::GraphModel::GraphPtr graph) const;
 
         // GraphCanvas::AssetEditorMainWindow overrides ...
-        void OnEditorOpened(GraphCanvas::EditorDockWidget* dockWidget) override;
-        void OnEditorClosing(GraphCanvas::EditorDockWidget* dockWidget) override;
+        void OnEditorOpened(JE::Editor::Tools::GraphCanvas::EditorDockWidget* dockWidget) override;
+        void OnEditorClosing(JE::Editor::Tools::GraphCanvas::EditorDockWidget* dockWidget) override;
         void OnWrapperNodeActionWidgetClicked(const AZ::EntityId& wrapperNode, const QRect& actionWidgetBoundingRect, const QPointF& scenePoint, const QPoint& screenPoint) override;
 
         /// Client can override this to handle click events on a wrapper node's action widget
@@ -54,6 +54,6 @@ namespace JE::Editor::Tools::GraphModel::Integration
 
         /// Keep track of the graphs we create on behalf of the client when
         /// new editor dock widgets are created.
-        AZStd::unordered_map<GraphCanvas::GraphId, JE::Editor::Tools::GraphModel::GraphPtr> m_graphs;
+        AZStd::unordered_map<JE::Editor::Tools::GraphCanvas::GraphId, JE::Editor::Tools::GraphModel::GraphPtr> m_graphs;
     };
 }

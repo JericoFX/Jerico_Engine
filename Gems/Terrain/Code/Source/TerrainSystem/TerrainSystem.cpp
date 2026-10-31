@@ -9,9 +9,9 @@
 #include <TerrainSystem/TerrainSystem.h>
 #include <AzCore/std/parallel/shared_mutex.h>
 #include <AzCore/std/sort.h>
-#include <SurfaceData/SurfaceDataTypes.h>
-#include <SurfaceData/SurfaceDataSystemRequestBus.h>
-#include <SurfaceData/Utility/SurfaceDataUtility.h>
+#include <JE/Geometry/SurfaceData/SurfaceDataTypes.h>
+#include <JE/Geometry/SurfaceData/SurfaceDataSystemRequestBus.h>
+#include <JE/Geometry/SurfaceData/Utility/SurfaceDataUtility.h>
 #include <LmbrCentral/Shape/ShapeComponentBus.h>
 
 #include <JE/Render/RPI/Public/Scene.h>
@@ -593,7 +593,7 @@ float TerrainSystem::GetTerrainAreaHeight(float x, float y, bool& terrainExists)
     {
         const float areaMin = areaData.m_areaBounds.GetMin().GetZ();
         inPosition.SetZ(areaMin);
-        if (SurfaceData::AabbContains2DMaxExclusive(areaData.m_areaBounds, inPosition))
+        if (JE::Geometry::SurfaceData::AabbContains2DMaxExclusive(areaData.m_areaBounds, inPosition))
         {
             AZ::Vector3 outPosition;
             Terrain::TerrainAreaHeightRequestBus::Event(
@@ -1251,7 +1251,7 @@ AZ::EntityId TerrainSystem::FindBestAreaEntityAtPosition(const AZ::Vector3& posi
     for (const auto& [areaId, areaData] : m_registeredAreas)
     {
         // We use min-inclusive-max-exclusive so that two spawners with a shared edge will have a single owner for that edge.
-        if (SurfaceData::AabbContains2DMaxExclusive(areaData.m_areaBounds, position))
+        if (JE::Geometry::SurfaceData::AabbContains2DMaxExclusive(areaData.m_areaBounds, position))
         {
             bounds = areaData.m_areaBounds;
             return areaId;

@@ -15,11 +15,11 @@
 #include <JE/Editor/Tools/EntityPreviewViewport/EntityPreviewViewportWidget.h>
 #include <JE/Editor/Tools/Graph/GraphViewSettings.h>
 #include <AzCore/Component/ComponentApplicationBus.h>
-#include <GraphCanvas/Styling/StyleManager.h>
-#include <GraphCanvas/Widgets/Bookmarks/BookmarkDockWidget.h>
-#include <GraphCanvas/Widgets/MiniMapGraphicsView/MiniMapGraphicsView.h>
-#include <GraphCanvas/Widgets/NodePalette/NodePaletteDockWidget.h>
-#include <GraphCanvas/Widgets/NodePalette/NodePaletteWidget.h>
+#include <JE/Editor/Tools/GraphCanvas/Styling/StyleManager.h>
+#include <JE/Editor/Tools/GraphCanvas/Widgets/Bookmarks/BookmarkDockWidget.h>
+#include <JE/Editor/Tools/GraphCanvas/Widgets/MiniMapGraphicsView/MiniMapGraphicsView.h>
+#include <JE/Editor/Tools/GraphCanvas/Widgets/NodePalette/NodePaletteDockWidget.h>
+#include <JE/Editor/Tools/GraphCanvas/Widgets/NodePalette/NodePaletteWidget.h>
 
 #include <QTranslator>
 
@@ -58,9 +58,9 @@ namespace PassCanvas
         JE::Editor::Tools::EntityPreviewViewportToolBar* m_toolBar = {};
         JE::Editor::Tools::EntityPreviewViewportWidget* m_passViewport = {};
         JE::Editor::Tools::GraphViewSettingsPtr m_graphViewSettingsPtr;
-        GraphCanvas::BookmarkDockWidget* m_bookmarkDockWidget = {};
-        GraphCanvas::NodePaletteDockWidget* m_nodePalette = {};
-        GraphCanvas::StyleManager m_styleManager;
+        JE::Editor::Tools::GraphCanvas::BookmarkDockWidget* m_bookmarkDockWidget = {};
+        JE::Editor::Tools::GraphCanvas::NodePaletteDockWidget* m_nodePalette = {};
+        JE::Editor::Tools::GraphCanvas::StyleManager m_styleManager;
         QTranslator m_translator;
         mutable AZStd::shared_ptr<JE::Editor::Tools::DynamicPropertyGroup> m_passCanvasCompileSettingsGroup;
     };

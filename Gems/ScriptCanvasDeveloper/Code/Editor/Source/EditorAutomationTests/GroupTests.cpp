@@ -8,8 +8,8 @@
 
 #include <QPushButton>
 
-#include <GraphCanvas/Components/GridBus.h>
-#include <GraphCanvas/Components/Nodes/Group/NodeGroupBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/GridBus.h>
+#include <JE/Editor/Tools/GraphCanvas/Components/Nodes/Group/NodeGroupBus.h>
 
 #include <EditorAutomationTests/GroupTests.h>
 
@@ -63,7 +63,7 @@ namespace ScriptCanvas::Developer
         if (nodeId && position)
         {
             QGraphicsItem* nodeItem = nullptr;
-            GraphCanvas::VisualRequestBus::EventResult(nodeItem, (*nodeId), &GraphCanvas::VisualRequests::AsGraphicsItem);
+            JE::Editor::Tools::GraphCanvas::VisualRequestBus::EventResult(nodeItem, (*nodeId), &JE::Editor::Tools::GraphCanvas::VisualRequests::AsGraphicsItem);
 
             if (nodeItem)
             {
@@ -90,7 +90,7 @@ namespace ScriptCanvas::Developer
         }
     }
 
-    GroupManipulationTest::GroupManipulationTest(GraphCanvas::NodePaletteWidget* nodePaletteWidget)
+    GroupManipulationTest::GroupManipulationTest(JE::Editor::Tools::GraphCanvas::NodePaletteWidget* nodePaletteWidget)
         : EditorAutomationTest("Group Manipulation Test")
     {
         AddState(new CreateRuntimeGraphState());
@@ -159,7 +159,7 @@ namespace ScriptCanvas::Developer
         AddState(new CheckIsInGroup(buildStringNode, groupId, true, "CheckGroupStatus::DragIntoGroup"));
 
         AutomationStateModelId proposalEndpoint = "ProposalEndpoint";
-        AddState(new FindEndpointOfTypeState(buildStringNode, proposalEndpoint, GraphCanvas::ConnectionType::CT_Output, GraphCanvas::SlotTypes::ExecutionSlot));
+        AddState(new FindEndpointOfTypeState(buildStringNode, proposalEndpoint, JE::Editor::Tools::GraphCanvas::ConnectionType::CT_Output, JE::Editor::Tools::GraphCanvas::SlotTypes::ExecutionSlot));
 
         AutomationStateModelId printNode = "PrintNode";
         AddState(new CreateNodeFromProposalState("Print", proposalEndpoint, envelopDragStart, printNode));

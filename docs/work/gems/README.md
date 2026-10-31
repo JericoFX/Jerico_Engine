@@ -1,3 +1,5 @@
+2026-10-30 — Corte vigente: integración nativa MaterialCanvas Windows/Profile/Vulkan verificada y seleccionada para publicación conjunta con los prerrequisitos GraphCanvas y Geometry/SurfaceData. Autoría R2, BSP R4, consumidor SDK privado R3, preview GUI4 y launcher Vulkan R4 aceptados para sus cohortes; launcher exit0 sin timeout/guard, deriva0 y censo vacío. Owner JE::EditorMaterials; shell legacy y registros redundantes retirados, assets/QRC/identidades preservados. PassCanvas WIP y benchmark S3 excluidos. SurfaceData T3/budgets, teclado físico aplazado GraphCanvas y gates globales Linux/VR/Shipping/N0/SDK siguen pendientes. Sin incremento de Gems completas. Evidencia: docs/evidence/n0/native-materialcanvas-workspace-2026-10-12/closure-2026-10-30/README.md. Los registros siguientes son históricos y conservan sus cohortes.
+
 # Planes de integración por Gem
 
 Cada Gem elegida necesita un plan visible propio, además del [GOAL](../../../GOAL.md), el [roadmap](../../ROADMAP.md) y el corte autorizado en [ACTIVE_SLICE](../ACTIVE_SLICE.md). El plan se escribe y revisa **antes de modificar esa Gem**. Se conserva el contrato de [CODEX_START](../../../CODEX_START.md) y la continuidad de [HANDOFF](../HANDOFF.md). No se generan planes para todas las Gems por adelantado ni se elige aquí el siguiente corte.
@@ -17,6 +19,8 @@ Un plan tiene como máximo tres tareas con interfaces, archivos, responsables y 
 3. **Verificar y cerrar.** Congelar inputs, ejecutar RED/GREEN y gates de producto/paquete afectados con un único dueño, y reutilizar evidencia vigente para inputs intactos. Comparar rutas Windows canonicalizadas, identidad de procesos, exit real y XML fresco; un script nuevo o una configuración correcta no acredita producto. Sólo el padre acepta y publica después de revisar evidencia y pendientes.
 
 Las casillas indican acciones concretas con estado **IMPLEMENTADO**, **VERIFICADO** o **BLOQUEADO/PENDIENTE**. Una casilla de implementación no sustituye aceptación. El cierre identifica evidencia durable, límites y deuda; actualizar el plan cuando el padre cierre un gate, sin inventar una ejecución nueva ni cambiar el criterio de conteo.
+
+| MaterialCanvas, `Gems/Atom/Tools/MaterialCanvas` | [Plan MaterialCanvas](MaterialCanvas.md) | Integración nativa Windows/Profile/Vulkan verificada: autoría R2, BSP R4, consumidor privado R3, preview GUI4 y launcher R4 exit0. Publicación conjunta con prerrequisitos GraphCanvas/Geometry; Pass WIP excluido. Gates globales separados, sin incremento de Gems completas. |
 
 ## Índice
 
